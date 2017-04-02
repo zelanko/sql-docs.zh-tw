@@ -1,0 +1,104 @@
+---
+title: "定義磁帶機的邏輯備份裝置 (SQL Server) | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/14/2017"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "dbe-backup-restore"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "備份裝置 [SQL Server], 定義"
+  - "備份裝置 [SQL Server], 磁帶"
+  - "備份資料庫 [SQL Server], 磁帶"
+  - "資料庫備份 [SQL Server], 磁帶"
+  - "磁帶備份裝置, 建立"
+ms.assetid: 66f36e1d-0287-4fac-8a51-71f9f0d7ad5b
+caps.latest.revision: 38
+author: "JennieHubbard"
+ms.author: "jhubbard"
+manager: "jhubbard"
+caps.handback.revision: 38
+---
+# 定義磁帶機的邏輯備份裝置 (SQL Server)
+  此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中定義磁帶機的邏輯備份裝置。 邏輯裝置是使用者定義名稱，指向特定的實體備份裝置 (磁碟檔案或磁帶機)。  當備份寫入備份裝置後，才會進行實體裝置的初始化。  
+  
+> [!NOTE]  
+>  未來的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本中將會移除磁帶備份裝置的支援。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。  
+  
+ **本主題內容**  
+  
+-   **開始之前：**  
+  
+     [限制事項](#Restrictions)  
+  
+     [安全性](#Security)  
+  
+-   **若要使用下列項目定義磁帶機的邏輯備份裝置：**  
+  
+     [SQL Server Management Studio](#SSMSProcedure)  
+  
+     [Transact-SQL](#TsqlProcedure)  
+  
+##  <a name="BeforeYouBegin"></a> 開始之前  
+  
+###  <a name="Restrictions"></a> 限制事項  
+  
+-   磁帶機必須受到 Microsoft Windows 作業系統支援。  
+  
+-   磁帶裝置必須在實體上連接至執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的電腦。 不支援備份至遠端磁帶裝置。  
+  
+###  <a name="Security"></a> 安全性  
+  
+####  <a name="Permissions"></a> Permissions  
+ 需要 **diskadmin** 固定伺服器角色的成員資格。  
+  
+ 需要寫入磁碟的權限。  
+  
+##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+  
+#### 定義磁帶機的邏輯備份裝置  
+  
+1.  連接到適當的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]執行個體之後，在 [物件總管] 中按一下伺服器名稱展開伺服器樹狀目錄。  
+  
+2.  展開 [伺服器物件]，然後以滑鼠右鍵按一下 [備份裝置]。  
+  
+3.  按一下 **[新增備份裝置]**，開啟 **[備份裝置]** 對話方塊。  
+  
+4.  輸入裝置名稱。  
+  
+5.  在目的地中，請按一下 **[磁帶]** ，選取尚未與其他備份裝置連接的磁帶機。 如果沒有這樣的磁帶機可用， **[磁帶]** 選項會停用。  
+  
+6.  若要定義新裝置，請按一下 **[確定]**。  
+  
+ 若要備份至這個新裝置，請將它加入 [備份資料庫] ([一般]) 對話方塊中的 [備份至:] 欄位。 如需詳細資訊，請參閱[建立完整資料庫備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)。  
+  
+##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+  
+#### 定義磁帶機的邏輯備份裝置  
+  
+1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+  
+2.  在標準列中，按一下 **[新增查詢]**。  
+  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]**。 這個範例示範如何使用 [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)，定義磁帶的邏輯備份裝置。 範例會加入名稱為 `tapedump1` 的磁帶備份裝置，實體名稱是 `\\.\tape0`。  
+  
+```tsql  
+USE AdventureWorks2012 ;  
+GO  
+EXEC sp_addumpdevice 'tape', 'tapedump1', '\\.\tape0' ;  
+GO  
+```  
+  
+## 另請參閱  
+ [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
+ [sys.backup_devices &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md)   
+ [sp_addumpdevice &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)   
+ [sp_dropdevice &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdevice-transact-sql.md)   
+ [備份裝置 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)   
+ [定義磁碟檔案的邏輯備份裝置 &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-disk-file-sql-server.md)   
+ [檢視邏輯備份裝置的屬性和內容 &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
+  
+  

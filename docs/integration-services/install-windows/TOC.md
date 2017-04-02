@@ -1,0 +1,5 @@
+# [並存安裝 Integration Services 版本](installing-integration-services-versions-side-by-side.md)
+# [安裝 Integration Services](install-integration-services.md)
+# [使用 SSIS 封裝升級精靈來升級 Integration Services 封裝](upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)
+# [升級 Integration Services 封裝](upgrade-integration-services-packages.md)
+# [升級 Integration Services](upgrade-integration-services.md)

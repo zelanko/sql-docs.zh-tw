@@ -1,0 +1,8 @@
+# [建立索引檢視表](create-indexed-views.md)
+# [檢視](views.md)
+# [刪除檢視](delete-views.md)
+# [重新命名檢視](rename-views.md)
+# [透過檢視修改資料](modify-data-through-a-view.md)
+# [修改檢視](modify-views.md)
+# [建立檢視表](create-views.md)
+# [取得檢視的資訊](get-information-about-a-view.md)

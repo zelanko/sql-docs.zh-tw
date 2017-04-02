@@ -1,0 +1,1 @@
+<Token>![需要協助嗎？](/Image/Shiproom/needhelp_person_icon.png)**需要協助嗎？**[MSDN 論壇](https://social.msdn.microsoft.com/Forums/sqlserver/en-US/home?forum=SQLServer2016)、[Stackoverflow](http://stackoverflow.com/questions/tagged/sql-server-2016)、[Connect](https://connect.microsoft.com/SQLServer/Feedback)</Token>

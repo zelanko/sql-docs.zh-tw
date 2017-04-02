@@ -1,0 +1,70 @@
+---
+title: "從 Reporting Services 行動報表中的共用資料集取得資料 | Microsoft Docs"
+ms.custom: 
+  - "SQL2016_New_Updated"
+ms.date: "03/30/2017"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "reporting-services-native"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+ms.assetid: 0b846451-c8d0-412c-802d-a42bb1ff8c63
+caps.latest.revision: 18
+author: "maggiesMSFT"
+ms.author: "maggies"
+manager: "erikre"
+caps.handback.revision: 16
+---
+# 從 Reporting Services 行動報表中的共用資料集取得資料
+除了[載入 Excel 檔案資料](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md)，[!INCLUDE[PRODUCT_NAME](../../includes/product-name.md)] 也可以存取幾乎所有來源的資料。 存取資源需有共用的資料來源，在 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 設定。 深入了解[建立共用資料來源](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)和[建立共用資料集](../../reporting-services/report-data/manage-shared-datasets.md)。  
+  
+在 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] 伺服器上設定共用的資料來源和共用的資料集之後，您可以將它們用在以 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] 建立的行動報表中。   
+  
+從 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] 連接到 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] 伺服器之後，即可直接將行動報表連接到共用資料集。   
+  
+1. 在 **[資料]** 索引標籤上，選取 **[加入資料]**。  
+  
+2. 選取 **[報表伺服器]**。   
+  
+3.  如果這是第一次連接到伺服器，請填入伺服器名稱以及您的名稱和密碼。 在 [伺服器位址] 方塊中放入伺服器名稱，其格式如下：  
+  
+    \<"伺服器名稱">/reports/  
+  
+    在此範例中：  
+       
+    ![SSMRP_ConnectToServer](../../reporting-services/mobile-reports/media/ssmrp-connecttoserver.png)  
+      
+  
+4. 當您選取 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] 伺服器時，您會在資料夾中看到可用的資料集。 選取資料要匯入到 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] 的資料集。  
+  
+   ![SS_MRP_ServerData](../../reporting-services/mobile-reports/media/ss-mrp-serverdata.png)  
+  
+匯入資料集之後，您就可以像處理模擬資料，或是處理 Excel 檔案的本機資料一樣，設計自己的行動報表。  
+  
+共用資料集預設保持最新的資料，因為每次有人檢視以資料集為基礎的行動報表，SQL Server 就會執行基礎查詢，並傳回最新的資料。 您可以很清楚地看到，如果有許多人檢視您的行動報表，實在不太理想，所以，您可以設定定期執行查詢並快取結果資料集。 這篇部落格文章說明[快取和資料重新整理如何在 Web 入口網站中運作](http://christopherfinlan.com/2016/02/10/so-refreshinghow-data-refresh-works-with-mobile-reports-and-kpis-in-reporting-services/)。  
+  
+## 加入、編輯或移除報表伺服器  
+  
+如果您已連接到報表伺服器，當您選取 [資料] 索引標籤中的 [加入資料] 時，您不會看到加入其他報表伺服器的選項。 請改為遵循下列步驟。  
+  
+1. 選取左上角的 [連接]。  
+  
+   ![SSMRP_AddConnectionIcon](../../reporting-services/mobile-reports/media/ssmrp-addconnectionicon.png)  
+     
+   隨即會在右側開啟 [伺服器連接] 窗格。  
+     
+   ![SSMRP_ServerConnectnPane](../../reporting-services/mobile-reports/media/ssmrp-serverconnectnpane.png)  
+     
+2. 加入新的伺服器連接，或是編輯或移除現有的連接。  
+  
+### 另請參閱  
+- [使用 SQL Server 行動報表發行工具建立與發行行動報表](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
+-  [Reporting Services Web 服務](../../reporting-services/web-portal-ssrs-native-mode.md)  
+-  在 [iPad app 中檢視 SQL Server 行動報表和 KPI](https://pbiwebprod-docs.azurewebsites.net/en-us/documentation/powerbi-mobile-ipad-kpis-mobile-reports) (Power BI for iOS)  
+-  請參閱 [在 iPhone 應用程式中檢視 SQL Server 行動報表和 KPI (iOS 版 Power BI)](https://pbiwebprod-docs.azurewebsites.net/en-us/documentation/powerbi-mobile-iphone-kpis-mobile-reports) (iOS 版 Power BI)  
+  
+  
+  
+  

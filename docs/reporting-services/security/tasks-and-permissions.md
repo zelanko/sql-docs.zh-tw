@@ -1,0 +1,51 @@
+---
+title: "工作和權限 | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/01/2017"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "reporting-services-sharepoint"
+  - "reporting-services-native"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "權限 [Reporting Services], 工作"
+  - "以角色為基礎的安全性 [Reporting Services], 權限"
+  - "安全性 [Reporting Services], 工作"
+  - "安全性 [Reporting Services], 權限"
+  - "以角色為基礎的安全性 [Reporting Services], 工作"
+  - "預先定義的工作 [Reporting Services]"
+  - "工作 [Reporting Services]"
+ms.assetid: d7ff90b5-b976-4270-b9ad-9d7b801d8263
+caps.latest.revision: 40
+author: "guyinacube"
+ms.author: "asaxton"
+manager: "erikre"
+caps.handback.revision: 40
+---
+# 工作和權限
+  在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中，「工作」(Task) 是使用者或管理員可以執行的動作。 工作是預先定義的。 您無法建立自訂工作或修改以程式設計的方式或透過工具而提供的工作。 總共有 25 種工作。 這些工作構成以角色為基礎之安全性中，可以使用的整個作業集。 工作的範例包括「檢視報表」、「管理報表」以及「管理報表伺服器屬性」。  
+  
+ 每一個工作包含一組也是預先定義的權限。 例如，「管理資料夾」工作包含建立和刪除資料夾，以及檢視和更新資料夾屬性的權限。 每一種工作的權限都有文件說明，以提供每一種工作的更精確描述。 無法直接與權限互動，或在角色指派中指定權限。 使用者是透過包括在角色定義中的工作，間接被授與權限。  
+  
+ 唯有工作屬於角色的一部份，而該角色包含在角色指派中時，才能執行工作。 因此，角色中若未包含檢視模型工作，或該角色未包含在角色指派中，使用者就無法檢視報表模型。 下列圖表顯示如何將權限結合到工作中，以及如何將工作結合到可用於特定角色指派的角色中。  
+  
+ ![權限和工作圖表](../../reporting-services/security/media/report-securityobjects.gif "權限和工作圖表")  
+權限和工作圖表  
+  
+## 系統和項目層級工作  
+ 工作分成兩個類別目錄：系統層級和項目層級。 角色可以包括僅來自單一類別目錄的工作。 下表描述每一種類別目錄的工作。  
+  
+|類別目錄|說明|  
+|--------------|-----------------|  
+|[項目層級工作](../../reporting-services/security/item-level-tasks.md)|在資料夾、報表、報表模型和資源等受到報表伺服器管理之項目上執行的動作。<br /><br /> 項目層級工作的範圍為報表伺服器資料夾命名空間。 您透過報表伺服器上的資料夾，或者透過 URL 存取的所有項目，都受到包含項目層級工作之角色指派的保護。|  
+|[系統層級工作](../../reporting-services/security/system-level-tasks.md)|在系統層級執行的動作，例如管理作業或可以用於許多項目的共用排程。 系統層級工作的範圍是在報表伺服器資料夾命名空間以外。|  
+  
+## 請參閱＜  
+ [角色定義](../../reporting-services/security/role-definitions.md)   
+ [Predefined Roles](../../reporting-services/security/predefined-roles.md)   
+ [在原生模式報表伺服器上授與權限](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
+  
+  

@@ -1,0 +1,1 @@
+<Token>**本主題適用於：**![是](../includes/media/yes.png)SQL Server (從 2008 年起)![是](../includes/media/yes.png)Azure SQL Database![是](../includes/media/yes.png)Azure SQL 資料倉儲 ![是](../includes/media/yes.png)平行處理資料倉儲 </Token> 
