@@ -84,7 +84,7 @@ caps.handback.revision: 15
   
 2.  在內部 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用 **新增訂閱精靈 」** 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式來建立發送訂閱 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
   
-3.  初始資料集通常為由快照集代理程式建立，並由「散發代理程式」散發和套用的快照集。 初始資料集也可透過備份或其他方式 (如 [!INCLUDE[ssNoVersion](。。/Token/ssNoVersion_md。md)][!INCLUDE[ssISnoversion](。。/Token/ssISnoversion_md。md)]。  
+3.  初始資料集通常為由快照集代理程式建立，並由「散發代理程式」散發和套用的快照集。 初始資料集也可透過備份或其他方式 (如 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssISnoversion-md.md)]。  
   
 #### 資料移轉案例  
   

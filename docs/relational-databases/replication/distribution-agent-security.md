@@ -47,7 +47,7 @@ caps.handback.revision: 25
   
  如果是在進行連接時模擬處理帳戶，則需要其他的權限。 請參閱以下的＜ **連接到散發者** ＞和＜ **連接到訂閱者** ＞章節。  
   
- 無法為**** 的提取訂閱指定 [!INCLUDE[msCoName](。。/Token/msCoName_md。md)] [!INCLUDE[ssExpress](。。/Token/ssExpress_md。md)]，因為散發代理程式無法在 [!INCLUDE[ssExpress](。。/Token/ssExpress_md。md)]。  
+ 無法為**** 的提取訂閱指定 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]，因為散發代理程式無法在 [!INCLUDE[ssExpress](../../includes/ssExpress-md.md)]。  
   
  **密碼** 和 **確認密碼**  
  輸入 Windows 帳戶的密碼。  

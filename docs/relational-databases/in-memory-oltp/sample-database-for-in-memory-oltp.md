@@ -302,7 +302,7 @@ caps.handback.revision: 15
     -   此程序依賴協助程式程序 dbo.usp_GenerateCKCheck、dbo.usp_GenerateFKCheck 和 dbo.GenerateUQCheck 來產生執行完整性檢查所需的 T-SQL。  
   
 ##  <a name="a-nameperformancemeasurementsusingthedemoworkloada-performance-measurements-using-the-demo-workload"></a><a name="PerformanceMeasurementsusingtheDemoWorkload"></a> 使用工作負載示範的效能度量  
- Ostress 是由 [!INCLUDE[msCoName](../Token/msCoName_md.md)] CSS [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)] 支援小組所開發的命令列工具。 此工具可用來平行執行查詢或執行預存程序。 您可以設定平行執行給定 T-SQL 陳述式的執行緒數目，以及指定此執行緒上應該執行陳述式的次數，ostress 會加快執行緒的速度，並平行執行所有執行緒上的陳述式。 所有執行緒完成執行之後，ostress 會報告所有執行緒完成執行所花費的時間。  
+ Ostress 是由 [!INCLUDE[msCoName](../../includes/msCoName-md.md)] CSS [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] 支援小組所開發的命令列工具。 此工具可用來平行執行查詢或執行預存程序。 您可以設定平行執行給定 T-SQL 陳述式的執行緒數目，以及指定此執行緒上應該執行陳述式的次數，ostress 會加快執行緒的速度，並平行執行所有執行緒上的陳述式。 所有執行緒完成執行之後，ostress 會報告所有執行緒完成執行所花費的時間。  
   
 ### <a name="installing-ostress"></a>安裝 ostress  
  Ostress 會當做 RML 公用程式的一部分來安裝，您無法獨立安裝 ostress。  
@@ -324,9 +324,9 @@ caps.handback.revision: 15
   
  只需執行 ostress.exe 即可顯示 ostress 的命令列選項，而不需要使用任何命令列選項。 在此範例中執行 ostress 所要考量的主要選項包括：  
   
--   -S 要連接之 [!INCLUDE[msCoName](../Token/msCoName_md.md)][!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)] 執行個體的名稱  
+-   -S 要連接之 [!INCLUDE[msCoName](../../includes/msCoName-md.md)][!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] 執行個體的名稱  
   
--   -E：使用 Windows 驗證進行連接 (預設值)，如果使用 [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)] 驗證，請分別使用 -U 和 -P 選項來指定使用者名稱和密碼  
+-   -E：使用 Windows 驗證進行連接 (預設值)，如果使用 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] 驗證，請分別使用 -U 和 -P 選項來指定使用者名稱和密碼  
   
 -   -d：資料庫的名稱，在此範例中為 AdventureWorks2014  
   
@@ -410,7 +410,7 @@ ostress.exe –n100 –r5000 -S. -E -dAdventureWorks2016CTP3 -q -Q"DECLARE @i in
   
  在具有總數 8 個實體 (16 個邏輯) 核心的測試伺服器上，此作業需要 41 分 25 秒。 在具有 24 個實體 (48 個邏輯) 核心的第二部測試伺服器上，此作業需要 52 分 16 秒。  
   
- 在此測試中，記憶體最佳化資料表與磁碟資料表之間出現效能差異的主要因素，是使用磁碟資料表時， [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)] 無法充分運用 CPU。 原因在於閂鎖競爭：並行交易嘗試寫入相同的資料頁面，使用閂鎖可確保一次只有一筆交易可以寫入頁面。 [!INCLUDE[hek_2](../Token/hek_2_md.md)] 引擎不需閂鎖，且資料列不是以頁面方式組織。 因此，並行交易不會封鎖彼此的插入，而能讓 [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)] 充分運用 CPU。  
+ 在此測試中，記憶體最佳化資料表與磁碟資料表之間出現效能差異的主要因素，是使用磁碟資料表時， [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] 無法充分運用 CPU。 原因在於閂鎖競爭：並行交易嘗試寫入相同的資料頁面，使用閂鎖可確保一次只有一筆交易可以寫入頁面。 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 引擎不需閂鎖，且資料列不是以頁面方式組織。 因此，並行交易不會封鎖彼此的插入，而能讓 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] 充分運用 CPU。  
   
  您可以觀察執行工作負載時的 CPU 使用率，例如使用工作管理員。 您會看到磁碟資料表的 CPU 使用率遠低於 100%。 在具有 16 個邏輯處理器的測試組態中，使用率保持在 24% 左右。  
   
@@ -430,13 +430,13 @@ ostress.exe -S. -E -dAdventureWorks2016CTP3 -Q"EXEC Demo.usp_DemoReset"
 ###  <a name="a-nametroubleshootingslow-runningtestsa-troubleshooting-slow-running-tests"></a><a name="Troubleshootingslow-runningtests"></a> 為執行緩慢的測試進行疑難排解  
  測試結果通常會隨硬體而有所不同，也會隨測試執行中使用並行的程度而有所不同。 如果結果不如預期，可注意下列幾點：  
   
--   並行交易數目：在單一執行緒上執行工作負載時，透過 [!INCLUDE[hek_2](../Token/hek_2_md.md)] 提升的效能可能不到兩倍。 只有在高度並行的情況下，閂鎖競爭才會成為嚴重的問題。  
+-   並行交易數目：在單一執行緒上執行工作負載時，透過 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 提升的效能可能不到兩倍。 只有在高度並行的情況下，閂鎖競爭才會成為嚴重的問題。  
   
--   [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)]可用的核心數目很低：這表示系統中的並行程度不高，因為同時執行的交易數目必須與 SQL 可用的核心數目相同。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)]可用的核心數目很低：這表示系統中的並行程度不高，因為同時執行的交易數目必須與 SQL 可用的核心數目相同。  
   
     -   徵兆：執行磁碟資料表上的工作負載時，如果 CPU 使用率很高，並不是指競爭很多，而是指缺少並行。  
   
--   記錄磁碟機的速度：如果記錄磁碟機跟不上系統中的交易輸送量層級，工作負載會在記錄 IO 上成為瓶頸。 雖然 [!INCLUDE[hek_2](../Token/hek_2_md.md)]的記錄效率較高，一旦記錄 IO 成為瓶頸，將會限制可能提升的效能。  
+-   記錄磁碟機的速度：如果記錄磁碟機跟不上系統中的交易輸送量層級，工作負載會在記錄 IO 上成為瓶頸。 雖然 [!INCLUDE[hek_2](../../includes/hek-2-md.md)]的記錄效率較高，一旦記錄 IO 成為瓶頸，將會限制可能提升的效能。  
   
     -   徵兆：執行記憶體最佳化資料表上的工作負載時，如果 CPU 使用率離 100% 有段距離或急起急落，可能會發生記錄 IO 瓶頸。 您可以開啟資源監視器並查看記錄磁碟機的佇列長度，以確認是否發生此瓶頸。  
   
@@ -446,7 +446,7 @@ ostress.exe -S. -E -dAdventureWorks2016CTP3 -Q"EXEC Demo.usp_DemoReset"
 ###  <a name="a-namememoryutilizationforthememory-optimizedtablesa-memory-utilization-for-the-memory-optimized-tables"></a><a name="Memoryutilizationforthememory-optimizedtables"></a> 記憶體最佳化之資料表的記憶體使用量  
   
 #### <a name="overall-utilization-of-the-database"></a>資料庫的整體使用情況  
- 下列查詢可用來取得系統中 [!INCLUDE[hek_2](../Token/hek_2_md.md)] 的總記憶體使用量。  
+ 下列查詢可用來取得系統中 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 的總記憶體使用量。  
   
 ```  
 SELECT type  
@@ -514,7 +514,7 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
 |MEMORYCLERK_XTP|預設值|0|  
 |MEMORYCLERK_XTP|預設值|0|  
   
- 如您所見， [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)] 針對範例資料庫中的記憶體最佳化資料表和索引使用小於 8GB 的記憶體。  
+ 如您所見， [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] 針對範例資料庫中的記憶體最佳化資料表和索引使用小於 8GB 的記憶體。  
   
  請在執行一個範例之後，查看每個資料表的詳細記憶體使用量：  
   
@@ -543,7 +543,7 @@ WHERE t.type='U'
 #### <a name="after-demo-reset"></a>重設示範之後  
  您可以使用預存程序 Demo.usp_DemoReset 重設示範。 此預存程序會刪除資料表 SalesOrderHeader_inmem 和 SalesOrderDetail_inmem 中的資料，然後重新植入原始資料表 SalesOrderHeader 和 SalesOrderDetail 中的資料。  
   
- 現在，即使已刪除資料表中的資料列，也不表示會立即回收記憶體。 [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)] 會視需要在背景回收記憶體最佳化資料表中已刪除資料列的記憶體。 由於系統上沒有交易式工作負載，因此重設示範之後，您會立即看到系統尚未對已刪除的資料列進行記憶體回收：  
+ 現在，即使已刪除資料表中的資料列，也不表示會立即回收記憶體。 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] 會視需要在背景回收記憶體最佳化資料表中已刪除資料列的記憶體。 由於系統上沒有交易式工作負載，因此重設示範之後，您會立即看到系統尚未對已刪除的資料列進行記憶體回收：  
   
 ```  
 SELECT type  
@@ -636,7 +636,7 @@ ORDER BY state, file_type
 |建構中|DATA|1|128|  
 |建構中|DELTA|1|8|  
   
- 如您所見，預先建立的資料和差異檔案使用了大部分空間。 [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)] 會針對每個邏輯處理器預先建立一組 (資料和差異) 檔案。 此外，系統會為資料檔案預留 128MB 的大小，並為差異檔案預留 8MB 的大小，以便更有效率地將資料插入這些檔案。  
+ 如您所見，預先建立的資料和差異檔案使用了大部分空間。 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] 會針對每個邏輯處理器預先建立一組 (資料和差異) 檔案。 此外，系統會為資料檔案預留 128MB 的大小，並為差異檔案預留 8MB 的大小，以便更有效率地將資料插入這些檔案。  
   
  記憶體最佳化資料表中的實際資料會包含在單一資料檔案中。  
   

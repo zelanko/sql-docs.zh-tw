@@ -74,7 +74,7 @@ caps.handback.revision: 36
   
 2.  在散發資料庫的散發者端，執行 [sp_helprolemember & #40。TRANSACT-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md), ，指定的值為 **replmonitor** 的 **@rolename** 參數。 如果使用者列於結果集中的 **MemberName** ，則該使用者已屬於此角色。  
   
-3.  如果使用者不屬於 **replmonitor** 角色、 執行 [sp_addrolemember & #40。TRANSACT-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) 在散發資料庫的散發者端。 針對 **replmonitor** @rolename **@rolename** 的值，並指定資料庫使用者的名稱或針對 [!INCLUDE[msCoName](。。/Token/msCoName_md。md)] Windows login being added @rolename **所加入的**。  
+3.  如果使用者不屬於 **replmonitor** 角色、 執行 [sp_addrolemember & #40。TRANSACT-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) 在散發資料庫的散發者端。 針對 **replmonitor** @rolename **@rolename** 的值，並指定資料庫使用者的名稱或針對 [!INCLUDE[msCoName](../../../includes/msCoName-md.md)] Windows login being added @rolename **所加入的**。  
   
 #### 若要從 replmonitor 固定資料庫角色移除使用者  
   

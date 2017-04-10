@@ -52,7 +52,7 @@ manager: "jhubbard"
 ## 範例  
  下列範例會啟用 `Xactset` 作業，並在執行之間設定三分鐘的間隔。  
   
- [!code-sql[HowTo#sp_enable_xactsetjob](../../../relational-databases/replication/codesnippet/tsql/configure the transactio_1.sql)]  
+ [!code-sql[HowTo#sp_enable_xactsetjob](../../../relational-databases/replication/codesnippet/tsql/configure-the-transactio_1.sql)]  
   
 ## 另請參閱  
  [Oracle 發行者的效能微調](../../../relational-databases/replication/non-sql/performance-tuning-for-oracle-publishers.md)   

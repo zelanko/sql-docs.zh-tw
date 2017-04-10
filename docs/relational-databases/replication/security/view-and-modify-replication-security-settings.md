@@ -247,7 +247,7 @@ caps.handback.revision: 47
   
 #### 變更複寫伺服器上儲存的所有密碼執行個體  
   
-1.  在 master 資料庫上的複寫拓撲中的伺服器，執行 [sp_changereplicationserverpasswords](../../../relational-databases/system-stored-procedures/sp-changereplicationserverpasswords-transact-sql.md)。 針對 [!INCLUDE[msCoName](。。/Token/msCoName_md。md)] @login [!INCLUDE[msCoName](。。/Token/msCoName_md。md)] [!INCLUDE[ssNoVersion](。。/Token/ssNoVersion_md。md)] Windows 帳戶或 **@login** 登入，並針對 **@password**。 這樣會變更當連接到拓撲中的其他伺服器時，由此伺服器上的所有代理程式所使用的每一個密碼執行個體。  
+1.  在 master 資料庫上的複寫拓撲中的伺服器，執行 [sp_changereplicationserverpasswords](../../../relational-databases/system-stored-procedures/sp-changereplicationserverpasswords-transact-sql.md)。 針對 [!INCLUDE[msCoName](../../../includes/msCoName-md.md)] @login [!INCLUDE[msCoName](../../../includes/msCoName-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssNoVersion-md.md)] Windows 帳戶或 **@login** 登入，並針對 **@password**。 這樣會變更當連接到拓撲中的其他伺服器時，由此伺服器上的所有代理程式所使用的每一個密碼執行個體。  
   
     > [!NOTE]  
     >  只變更登入和密碼連接到特定伺服器在拓撲中 （例如 「 散發者 」 或 「 訂閱者 」），指定此伺服器的名稱 **@server**。  
