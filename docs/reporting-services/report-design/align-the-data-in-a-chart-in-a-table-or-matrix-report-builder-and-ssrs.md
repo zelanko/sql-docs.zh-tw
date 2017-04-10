@@ -1,0 +1,41 @@
+---
+title: "在資料表或矩陣的圖表上對齊資料 (報表產生器及 SSRS) | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/03/2017"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "reporting-services-sharepoint"
+  - "reporting-services-native"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+ms.assetid: 75137575-d1bf-46d6-8527-5afc85eea5e1
+caps.latest.revision: 7
+author: "maggiesMSFT"
+ms.author: "maggies"
+manager: "erikre"
+caps.handback.revision: 7
+---
+# 在資料表或矩陣的圖表上對齊資料 (報表產生器及 SSRS)
+  走勢圖和資料橫條很小，也就是以少量的外來細節傳達許多資訊的簡易圖表。 在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表中，當您核取這個選項時，走勢圖和資料橫條中的值將會跨資料表或矩陣中的不同資料格對齊，即使它們在其依據的資料中有遺漏值也是一樣。  
+  
+ ![rs_SparklineAlignData](../../reporting-services/report-design/media/rs-sparklinealigndata.gif "rs_SparklineAlignData")  
+  
+ 在這個影像中，直條圖會顯示每一個員工的每天銷售量。 請注意，如果是員工沒有任何銷售量的日子，圖表就會留下空白，並將後續的日子水平對齊。 它也會使不同圖表的大小彼此相對，以垂直對齊圖表。 如需詳細資訊，請參閱[走勢圖和資料橫條 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)。  
+  
+## 對齊走勢圖或資料橫條中的資料  
+  
+1.  [加入走勢圖或資料橫條](../../reporting-services/report-design/add-sparklines-and-data-bars-report-builder-and-ssrs.md)至資料表或矩陣。  
+  
+2. 在走勢圖或資料橫條中按一下，然後按一下 **[水平軸屬性]** 或 **[垂直軸屬性]**。  
+  
+2.  在 **[軸選項]** 索引標籤上，核取 **[對齊軸]** 方塊，然後在下拉方塊中，選取要對齊軸的群組。  
+  
+3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+  
+## 請參閱＜  
+ [圖表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [加入走勢圖和資料橫條 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-sparklines-and-data-bars-report-builder-and-ssrs.md)  
+  
+  

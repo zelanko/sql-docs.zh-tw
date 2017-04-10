@@ -1,0 +1,48 @@
+---
+title: "Reporting Services 教學課程 (SSRS) | Microsoft Docs"
+ms.custom: ""
+ms.date: "09/27/2016"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "reporting-services-native"
+  - "reporting-services-sharepoint"
+ms.tgt_pltfrm: ""
+ms.topic: "get-started-article"
+applies_to: 
+  - "SQL Server 2016"
+helpviewer_keywords: 
+  - "tutorials [Reporting Services]"
+ms.assetid: e90cc448-563b-4dbb-9776-defb8640ec66
+caps.latest.revision: 39
+author: "maggiesMSFT"
+ms.author: "maggies"
+manager: "erikre"
+caps.handback.revision: 39
+---
+# Reporting Services 教學課程 (SSRS)
+使用這些教學課程中的範例資料，來探索 [!INCLUDE[ssRSCurrent_md](../includes/ssrscurrent-md.md)]、[!INCLUDE[ssBIDevStudioFull_md](../includes/ssbidevstudiofull-md.md)] 和報表產生器的功能。  
+  
+  
+## [建立基本資料表報表](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)  
+請遵循這個教學課程中的步驟來學習如何建立您的第一份報表。 這個教學課程會為您示範如何使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 來建立資料連接 (資料來源)、定義簡單查詢 (資料集)，以及設定資料區以包含您的資料。  
+  
+## [建立資料驅動訂閱](../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)  
+[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供資料驅動訂閱，讓您可以依據接收報表之訂閱者的動態清單自訂報表的散發。 資料驅動訂閱通常是由報表伺服器管理員來建立和維護。 您必須是建立查詢的專家、擁有包含訂閱者資料之資料來源的知識，且具備較高的報表伺服器權限，才能夠建立資料驅動訂閱。  
+   
+## [使用 ReportViewer 建立包含參數的鑽研 &#40;RDLC&#41; 報表](../reporting-services/create drillthrough (rdlc) report with parameters - reportviewer.md)  
+請遵循此教學課程中的步驟，以了解如何使用 ReportViewer 控制項建立包含參數和篩選的鑽研報表。  
+  
+## [報表產生器教學課程](../reporting-services/report-builder-tutorials.md)  
+這些教學課程介紹您可在報表產生器中建立的各種視覺效果 (例如地圖和走勢圖)，以及如何使用參數和運算式的教學課程。   
+  
+  
+## 另請參閱  
+* [Adventure Works 2014 範例資料庫](https://msftdbprodsamples.codeplex.com/releases/view/125550)  
+* [CodePlex 上的 Reporting Services 範例](http://go.microsoft.com/fwlink/?LinkId=198283)  
+* [TechNet Wiki：SQL Server 2012 範例](http://go.microsoft.com/fwlink/?linkID=220734)  
+ 
+  
+  
+  

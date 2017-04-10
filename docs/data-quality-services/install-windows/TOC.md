@@ -1,0 +1,7 @@
+# [在安裝 SQL Server 更新之後升級 DQS 資料庫結構描述](upgrade-dqs-databases-schema-after-installing-sql-server-update.md)
+# [在 .NET Framework 更新之後升級 SQLCLR 組件](upgrade-sqlclr-assemblies-after-net-framework-update.md)
+# [對使用者授與 DQS 角色](grant-dqs-roles-to-users.md)
+# [存取用於 DQS 作業的資料](access-data-for-the-dqs-operations.md)
+# [使用 DQSInstaller.exe 匯出及匯入 DQS 知識庫](export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)
+# [執行 DQSInstaller.exe 完成 Data Quality Server 安裝](run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)
+# [安裝 Data Quality Services](install-data-quality-services.md)

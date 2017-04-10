@@ -1,0 +1,102 @@
+---
+title: "設定 query wait 伺服器組態選項 | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/02/2017"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "database-engine"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "查詢 [SQL Server]，逾時"
+  - "時間 [SQL Server]，查詢等候時間"
+  - "query wait 選項 [SQL Server]"
+ms.assetid: 0fc4aa01-65a3-4a33-9ef4-caca41add238
+caps.latest.revision: 26
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
+caps.handback.revision: 26
+---
+# 設定 query wait 伺服器組態選項
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+
+  此主題描述如何使用 **或** ，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中設定 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] query wait [!INCLUDE[tsql](../../includes/tsql-md.md)]伺服器組態選項。 如果因為記憶體不足，無法執行會使用大量記憶體的查詢 (例如涉及排序與雜湊的查詢)，則這些查詢會排入佇列中。 **query wait** 選項會指定逾時前，查詢等候資源的秒數 (從 0 到 2147483647)。 這個選項的預設值是 -1。 這表示逾時時間就會是估計查詢成本的 25 倍。  
+  
+> [!IMPORTANT]  
+>  當查詢在等候記憶體時，包含等候中查詢的交易可能會持有鎖定。 在極少數的情況下，可能會發生無法偵測的死結。 減少查詢等候時間會降低發生這類死結的可能性。 最後，等待的查詢會終止，並釋放其交易鎖定。 然而增加等候時間的上限，可能會增加終止前的查詢時間量。 不建議您更改這個選項。  
+  
+ **本主題內容**  
+  
+-   **開始之前：**  
+  
+     [建議](#Recommendations)  
+  
+     [安全性](#Security)  
+  
+-   **若要使用下列項目設定 query wait 選項：**  
+  
+     [SQL Server Management Studio](#SSMSProcedure)  
+  
+     [Transact-SQL](#TsqlProcedure)  
+  
+-   **待處理**  [設定 query wait 選項之後](#FollowUp)  
+  
+##  <a name="BeforeYouBegin"></a> 開始之前  
+  
+###  <a name="Recommendations"></a> 建議  
+  
+-   這個選項是進階選項，只有有經驗的資料庫管理員或通過認證的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 技術人員才可變更。  
+  
+###  <a name="Security"></a> 安全性  
+  
+####  <a name="Permissions"></a> Permissions  
+ 依預設，所有使用者都會取得不含參數或只含第一個參數之 **sp_configure** 的執行權限。 若要執行同時設定了兩個參數的 **sp_configure** 來變更組態選項或執行 RECONFIGURE 陳述式，使用者必須取得 ALTER SETTINGS 伺服器層級權限。 **系統管理員 (sysadmin)** 及 **serveradmin** 固定伺服器角色會隱含 ALTER SETTINGS 權限。  
+  
+##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+  
+#### 若要設定查詢等候選項  
+  
+1.  在物件總管中，以滑鼠右鍵按一下伺服器，然後選取 [屬性]。  
+  
+2.  按一下 **[進階]** 節點。  
+  
+3.  在 **[平行處理原則]**下方，為 **query wait** 選項輸入想要的值。  
+  
+##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+  
+#### 若要設定查詢等候選項  
+  
+1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+  
+2.  在標準列中，按一下 **[新增查詢]**。  
+  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]**。 此範例示範如何使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 將 `query wait` 選項的值設定為 `7500` 秒。  
+  
+```tsql  
+USE AdventureWorks2012 ;  
+GO  
+EXEC sp_configure 'show advanced options', 1;  
+GO  
+RECONFIGURE ;  
+GO  
+EXEC sp_configure 'query wait', 7500 ;  
+GO  
+RECONFIGURE;  
+GO  
+  
+```  
+  
+ 如需詳細資訊，請參閱[伺服器組態選項 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)。  
+  
+##  <a name="FollowUp"></a> 待處理：設定 query wait 選項之後  
+ 設定會立即生效，不需要重新啟動伺服器。  
+  
+## 另請參閱  
+ [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
+ [伺服器組態選項 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
+ [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
+  
+  
