@@ -1,0 +1,1 @@
+**本主題適用於：**![是](media/yes.png)SQL Server 2016![是](media/yes.png)SQL Server Reporting Services 中的 Power BI 報表 2017 年 1 月技術預覽

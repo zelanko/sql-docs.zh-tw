@@ -1,0 +1,1 @@
+**本主題適用於：**![否](media/no.png)SQL Server 2016![否](media/no.png)SQL Server 2017![是](media/yes.png)Power BI 報表伺服器

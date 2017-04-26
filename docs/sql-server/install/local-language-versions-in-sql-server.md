@@ -1,25 +1,29 @@
 ---
 title: "SQL Server 中的地區語言版本 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 20b99363-0490-4aa3-9a3d-262f827d81e8
 caps.latest.revision: 12
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 067307bd3c91b8ac52c7e30f37aa816ca5ca06d9
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server 中的地區語言版本
+# <a name="local-language-versions-in-sql-server"></a>SQL Server 中的地區語言版本
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援 Windows 作業系統所支援的所有語言。  
   
-## 跨語言支援  
+## <a name="cross-language-support"></a>跨語言支援  
   
 -   所有當地語系化版本的作業系統都支援 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的英文版。  
   
@@ -27,10 +31,10 @@ caps.handback.revision: 12
   
 -   當地語系化版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 只能升級到相同語言的當地語系化版本，不能升級到英文版。  
   
--   當地語系化版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 也可以與英文版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體並存安裝。  
+-   當地語系化版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 也可以與英文版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體並存安裝。  
   
-##  <a name="BK_ConfigureOS"></a> 將作業系統設定為支援當地語系化版本  
- 透過使用 Windows 多語系使用者介面 (MUI) 套件設定，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的當地語系化版本可在支援的作業系統英文版上受到支援。  
+##  <a name="BK_ConfigureOS"></a> Configure Operating System to Support Localized Versions  
+ 透過使用 Windows 多語系使用者介面 (MUI) 套件設定， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的當地語系化版本可在支援的作業系統英文版上受到支援。  
   
  不過，在以非英文 MUI 設定執行英文版作業系統的伺服器上安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的當地語系化版本之前，您必須確認某些作業系統設定。 您需要確認下列作業系統設定是否符合要安裝的當地語系化之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的語言：  
   
@@ -45,7 +49,7 @@ caps.handback.revision: 12
 > [!CAUTION]  
 >  不支援在相同電腦上安裝不同語言版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。  
   
-#### 若要變更作業系統使用者介面設定  
+#### <a name="to-change-the-operating-system-user-interface-setting"></a>若要變更作業系統使用者介面設定  
   
 1.  如果尚未安裝，請安裝符合當地語系化版本之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的作業系統 MUI。  
   
@@ -57,7 +61,7 @@ caps.handback.revision: 12
   
 4.  按一下 **[套用]** 來確認變更，並按一下 **[確定]** 來關閉視窗。  
   
-#### 若要變更作業系統使用者地區設定  
+#### <a name="to-change-the-operating-system-user-locale-setting"></a>若要變更作業系統使用者地區設定  
   
 1.  如果尚未安裝，請安裝符合當地語系化版本之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的作業系統 MUI。  
   
@@ -69,7 +73,7 @@ caps.handback.revision: 12
   
 4.  按一下 **[套用]** 來確認變更，並按一下 **[確定]** 來關閉視窗。  
   
-#### 若要變更系統地區設定  
+#### <a name="to-change-the-system-locale-setting"></a>若要變更系統地區設定  
   
 1.  如果尚未安裝，請安裝符合當地語系化版本之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的作業系統 MUI。  
   
@@ -81,8 +85,8 @@ caps.handback.revision: 12
   
 4.  按一下 **[套用]** 來確認變更，並按一下 **[確定]** 來關閉視窗。  
   
-## 另請參閱  
- [安裝 SQL Server 2016 的硬體與軟體需求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2016.md)   
- [安裝 SQL Server 2016](../../database-engine/install-windows/install-sql-server-2016.md)  
+## <a name="see-also"></a>另請參閱  
+ [安裝 SQL Server 2016 的硬體與軟體需求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)   
+ [安裝 SQL Server 2016](../../database-engine/install-windows/install-sql-server.md)  
   
   

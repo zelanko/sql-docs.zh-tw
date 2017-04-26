@@ -1,22 +1,26 @@
 ---
 title: "檢視及閱讀容錯移轉叢集執行個體診斷記錄檔 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 68074bd5-be9d-4487-a320-5b51ef8e2b2d
 caps.latest.revision: 23
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 912c05cd783ead67aaa506f07586387eabcb2ca4
+ms.lasthandoff: 04/11/2017
+
 ---
-# 檢視及閱讀容錯移轉叢集執行個體診斷記錄檔
+# <a name="view-and-read-failover-cluster-instance-diagnostics-log"></a>檢視及閱讀容錯移轉叢集執行個體診斷記錄檔
   SQL Server 資源 DLL 的所有重大錯誤和警告事件都會寫入 Windows 事件記錄檔。 SQL Server 的特定診斷資訊執行記錄檔是由 [sp_server_diagnostics &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) 系統預存程序所擷取，並且會寫入 SQL Server 容錯移轉叢集診斷 (也稱為 *SQLDIAG* 記錄) 記錄檔。  
   
 -   **開始之前**  [建議](#Recommendations)、 [安全性](#Security)  
@@ -28,7 +32,7 @@ caps.handback.revision: 23
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
 ###  <a name="Recommendations"></a> 建議  
- 依預設，SQLDIAG 會儲存在 SQL Server 執行個體目錄的本機 LOG 資料夾下方，例如，AlwaysOn 容錯移轉叢集執行個體 (FCI) 主控節點的 'C\Program Files\Microsoft SQL Server\MSSQL13.\<執行個體名稱>\MSSQL\LOG'。 每個 SQLDIAG 記錄檔的大小會固定為 100 MB。 電腦上會儲存十個此類型的記錄檔，再將它們回收以用於新的記錄檔。  
+ 依預設，SQLDIAG 會儲存在 SQL Server 執行個體目錄的本機 LOG 資料夾下方，例如，AlwaysOn 容錯移轉叢集執行個體 (FCI) 主控節點的 'C\Program Files\Microsoft SQL Server\MSSQL13.\<InstanceName>\MSSQL\LOG'。 每個 SQLDIAG 記錄檔的大小會固定為 100 MB。 電腦上會儲存十個此類型的記錄檔，再將它們回收以用於新的記錄檔。  
   
  記錄檔會使用擴充的事件檔案格式。 **sys.fn_xe_file_target_read_file** 系統函數可用來讀取擴充事件所建立的檔案。 系統會以 XML 格式針對每個資料列傳回一個事件。 查詢系統檢視，即可將 XML 資料剖析為結果集。 如需詳細資訊，請參閱 [sys.fn_xe_file_target_read_file &#40;Transact-SQL&#41;](../../../relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql.md)。  
   
@@ -90,30 +94,30 @@ ORDER BY Time;
  **設定診斷記錄屬性**  
   
 > [!NOTE]  
->  如需這個程序的範例，請參閱本節稍後的[範例 (Transact-SQL)](#TsqlExample)。  
+>  如需這個程序的範例，請參閱本節稍後的 [範例 (Transact-SQL)](#TsqlExample)。  
   
  使用資料定義語言 (DDL) 陳述式 **ALTER SERVER CONFIGURATION**，您可以開始或停止記錄 [sp_server_diagnostics &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) 程序所擷取的診斷資料，並設定 SQLDIAG 記錄組態參數，例如記錄檔換用計數、記錄檔大小和檔案位置。 如需語法的詳細資料，請參閱 [Setting diagnostic log options](../../../t-sql/statements/alter-server-configuration-transact-sql.md#Diagnostic)。  
   
 ###  <a name="ConfigTsqlExample"></a> 範例 (Transact-SQL)  
   
-####  <a name="TsqlExample"></a> 設定診斷記錄檔選項  
+####  <a name="TsqlExample"></a> Setting diagnostic log options  
  本節的範例示範如何設定診斷記錄檔選項的值。  
   
-##### A. 啟動診斷記錄  
+##### <a name="a-starting-diagnostic-logging"></a>A. 啟動診斷記錄  
  下列範例會啟動診斷資料記錄。  
   
 ```  
 ALTER SERVER CONFIGURATION SET DIAGNOSTICS LOG ON;  
 ```  
   
-##### B. 停止診斷記錄  
+##### <a name="b-stopping-diagnostic-logging"></a>B. 停止診斷記錄  
  下列範例會停止診斷資料記錄。  
   
 ```  
 ALTER SERVER CONFIGURATION SET DIAGNOSTICS LOG OFF;  
 ```  
   
-##### C. 指定診斷記錄的位置  
+##### <a name="c-specifying-the-location-of-the-diagnostic-logs"></a>C. 指定診斷記錄的位置  
  下列範例會將診斷記錄檔的位置設定為指定的檔案路徑。  
   
 ```  
@@ -121,7 +125,7 @@ ALTER SERVER CONFIGURATION
 SET DIAGNOSTICS LOG PATH = 'C:\logs';  
 ```  
   
-##### D. 指定每個診斷記錄的大小上限  
+##### <a name="d-specifying-the-maximum-size-of-each-diagnostic-log"></a>D. 指定每個診斷記錄的大小上限  
  下列範例會將每個診斷記錄檔的大小上限設為 10 MB。  
   
 ```  
@@ -129,7 +133,7 @@ ALTER SERVER CONFIGURATION
 SET DIAGNOSTICS LOG MAX_SIZE = 10 MB;  
 ```  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [容錯移轉叢集執行個體的容錯移轉原則](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)  
   
   

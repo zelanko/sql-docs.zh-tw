@@ -1,27 +1,30 @@
 ---
 title: "為資料表啟用 Stretch Database | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "08/05/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.service: "sql-server-stretch-database"
-ms.suite: ""
-ms.technology: 
-  - "dbe-stretch"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Stretch Database, 啟用資料表"
-  - "啟用 Stretch Database 資料表"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 08/05/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-stretch
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Stretch Database, enabling table
+- enabling table for Stretch Database
 ms.assetid: de4ac0c5-46ef-4593-a11e-9dd9bcd3ccdc
 caps.latest.revision: 44
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 43
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 407863b783be38aa9342361778cc22914f805033
+ms.lasthandoff: 04/11/2017
+
 ---
-# 為資料表啟用 Stretch Database
+# <a name="enable-stretch-database-for-a-table"></a>Enable Stretch Database for a table
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   若要設定 Stretch Database 的資料表，請在 SQL Server Management Studio 中為資料表選取 [延展 | 啟用]，開啟 [對資料表啟用延展精靈]。 您也可以使用 Transact-SQL 對現有的資料表啟用 Stretch Database，或建立已啟用 Stretch Database 的新資料表。  
@@ -34,7 +37,8 @@ caps.handback.revision: 43
   
  **權限**。 在資料庫或資料表上啟用 Stretch Database 需要 db_owner 權限。 在資料表上啟用 Stretch Database 也需要資料表的 ALTER 權限。  
 
- >   [!NOTE] 稍後，如果您停用 Stretch Database，請記住針對資料表或資料庫停用 Stretch Database，並不會刪除遠端物件。 若您想要刪除遠端資料表或遠端資料庫，則必須使用 Azure 管理入口網站將其卸除。 遠端物件會繼續產生 Azure 成本，直到您手動將其刪除為止。
+ >   [!NOTE]
+ > 稍後，如果您停用 Stretch Database，請記住針對資料表或資料庫停用 Stretch Database，並不會刪除遠端物件。 若您想要刪除遠端資料表或遠端資料庫，則必須使用 Azure 管理入口網站將其卸除。 遠端物件會繼續產生 Azure 成本，直到您手動將其刪除為止。
  
 ##  <a name="EnableWizardTable"></a> 使用精靈在資料表上啟用 Stretch Database  
  **啟動精靈**  
@@ -52,7 +56,7 @@ caps.handback.revision: 43
   
 -   結束精靈，然後執行 ALTER TABLE 陳述式來啟用資料表的延展功能以及指定篩選函數。  
   
--   結束精靈之後，請執行 ALTER TABLE 陳述式來指定篩選函數。 如需必要的步驟，請參閱 [Add a filter function after running the Wizard](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md#addafterwiz) (在執行精靈後新增篩選函數)。  
+-   結束精靈之後，請執行 ALTER TABLE 陳述式來指定篩選函數。 如需必要的步驟，請參閱 [Add a filter function after running the Wizard](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md#addafterwiz)(在執行精靈後新增篩選函數)。  
   
  本主題稍後將說明 ALTER TABLE 語法。  
   
@@ -65,17 +69,17 @@ caps.handback.revision: 43
 ##  <a name="EnableTSQLTable"></a> 使用 Transact-SQL 在資料表上啟用 Stretch Database  
  您可以對現有的資料表啟用 Stretch Database，或使用 Transact-SQL 建立已啟用 Stretch Database 的新資料表。  
   
-### 選項  
+### <a name="options"></a>選項  
  當您執行 CREATE TABLE 或 ALTER TABLE 在資料表上啟用 Stretch Database 時，請使用下列選項。  
   
--   如果資料表同時包含作用及原始資料，您可以選擇使用 `FILTER_PREDICATE = <function>` 子句指定函數來選取要遷移的資料列。 此述詞必須呼叫內嵌資料表值函數。 如需詳細資訊，請參閱 [Select rows to migrate by using a filter function ](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md) (使用篩選函數選取要移轉的資料列)。 若您未指定篩選函數，則會移轉整個資料表。  
+-   如果資料表同時包含作用及原始資料，您可以選擇使用 `FILTER_PREDICATE = <function>` 子句指定函數來選取要遷移的資料列。 此述詞必須呼叫內嵌資料表值函數。 如需詳細資訊，請參閱 [Select rows to migrate by using a filter function](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md)(使用篩選函數選取要移轉的資料列)。 若您未指定篩選函數，則會移轉整個資料表。  
   
     > [!IMPORTANT]  
     >  若您提供執行狀況不佳的篩選函數，資料移轉也無法順利執行。 Stretch Database 使用 CROSS APPLY 運算子，將篩選函數套用至資料表。  
   
 -   指定 `MIGRATION_STATE = OUTBOUND` 立即啟動資料移轉，或指定  `MIGRATION_STATE = PAUSED` 延後啟動資料移轉。  
   
-### 為現有的資料表啟用 Stretch Database  
+### <a name="enable-stretch-database-for-an-existing-table"></a>為現有的資料表啟用 Stretch Database  
  若要設定現有的 Stretch Database 資料表，請執行 ALTER TABLE 命令。  
   
  以下是移轉整份資料表，並立即開始移轉資料的範例。  
@@ -88,7 +92,7 @@ ALTER TABLE <table name>
 GO
 ```  
   
- 下例只移轉 `dbo.fn_stretchpredicate` 內嵌資料表值函數所識別的資料列，並延後資料移轉。 如需有關篩選函數的詳細資訊，請參閱 [Select rows to migrate by using a filter function ](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md) (使用篩選函數選取要移轉的資料列)。  
+ 下例只移轉 `dbo.fn_stretchpredicate` 內嵌資料表值函數所識別的資料列，並延後資料移轉。 如需有關篩選函數的詳細資訊，請參閱 [Select rows to migrate by using a filter function](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md)(使用篩選函數選取要移轉的資料列)。  
   
 ```tsql  
 USE <Stretch-enabled database name>;
@@ -102,7 +106,7 @@ ALTER TABLE <table name>
   
  如需詳細資訊，請參閱 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)。  
   
-### 建立已啟用 Stretch Database 的新資料表  
+### <a name="create-a-new-table-with-stretch-database-enabled"></a>建立已啟用 Stretch Database 的新資料表  
  若要建立已啟用 Stretch Database 的新資料表，請執行 CREATE TABLE 命令。  
   
  以下是移轉整份資料表，並立即開始移轉資料的範例。  
@@ -116,7 +120,7 @@ CREATE TABLE <table name>
 GO
 ```  
   
- 下例只移轉 `dbo.fn_stretchpredicate` 內嵌資料表值函數所識別的資料列，並延後資料移轉。 如需有關篩選函數的詳細資訊，請參閱 [Select rows to migrate by using a filter function ](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md) (使用篩選函數選取要移轉的資料列)。  
+ 下例只移轉 `dbo.fn_stretchpredicate` 內嵌資料表值函數所識別的資料列，並延後資料移轉。 如需有關篩選函數的詳細資訊，請參閱 [Select rows to migrate by using a filter function](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md)(使用篩選函數選取要移轉的資料列)。  
   
 ```tsql  
 USE <Stretch-enabled database name>;
@@ -129,10 +133,11 @@ CREATE TABLE <table name>
 GO  
 ```  
   
- 如需詳細資訊，請參閱 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)。  
+ 如需詳細資訊，請參閱 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  
   
   
+

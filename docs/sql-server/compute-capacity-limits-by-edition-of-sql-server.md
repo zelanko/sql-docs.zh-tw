@@ -1,26 +1,30 @@
 ---
 title: "SQL Server 版本的計算容量限制 | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "處理器 [SQL Server], 支援的"
-  - "支援的處理器數目"
-  - "支援的處理器數目上限"
+ms.custom: 
+ms.date: 06/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- processors [SQL Server], supported
+- number of processors supported
+- maximum number of processors supported
 ms.assetid: cd308bc9-9468-40cc-ad6e-1a8a69aca6c8
 caps.latest.revision: 60
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 60
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 2f32d9ca838e004676a3cccffbe62bbbc0e46a3f
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server 版本的計算容量限制
+# <a name="compute-capacity-limits-by-edition-of-sql-server"></a>SQL Server 版本的計算容量限制
   本主題討論不同 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 版本的計算容量限制以及它們在具有超執行緒處理器的實體和虛擬化環境中有何差異。  
   
  ![對應至計算容量限制](../sql-server/media/compute-capacity-limits.gif "對應至計算容量限制")  
@@ -75,9 +79,9 @@ caps.handback.revision: 60
   
 2.  作業系統所報告的核心數目上限。  
   
- 這些限制適用於單一 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體。 它們代表單一執行個體將會使用的計算容量上限。 但是，它們不會限制可部署執行個體的伺服器。 實際上，在相同的實體伺服器上部署多個 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體可以有效地使用插槽及/或核心數目超過下列容量限制之實體伺服器的運算容量。  
+ 這些限制適用於單一 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]執行個體。 它們代表單一執行個體將會使用的計算容量上限。 但是，它們不會限制可部署執行個體的伺服器。 實際上，在相同的實體伺服器上部署多個 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體可以有效地使用插槽及/或核心數目超過下列容量限制之實體伺服器的運算容量。  
   
- 下表指定每個 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 版本之單一執行個體的計算容量限制：  
+ 下表指定每個 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]版本之單一執行個體的計算容量限制：  
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本|單一執行個體所使用的計算容量上限 ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)])|單一執行個體所使用的計算容量上限 (AS、RS)|  
 |---------------------------------------|--------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------|  
@@ -91,10 +95,12 @@ caps.handback.revision: 60
   
  當每個虛擬處理器的效能都很重要時，您可能會想要停用超執行緒。 雖然您可以在 BIOS 設定期間使用處理器的 BIOS 設定來啟用或停用超執行緒，不過這種伺服器範圍的作業通常會影響伺服器上執行的所有工作負載。 因此，建議您分隔在虛擬化環境中執行的工作負載以及實體作業系統環境中可從超執行緒效能提升獲益的工作負載。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [SQL Server 2016 的版本和元件](../sql-server/editions-and-components-of-sql-server-2016.md)   
- [SQL Server 2016 版本支援的功能](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)   
+ [SQL Server 2016 版本支援的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)   
  [SQL Server 的最大容量規格](../sql-server/maximum-capacity-specifications-for-sql-server.md)   
- [SQL Server 2016 快速入門安裝](../Topic/Quick-Start%20Installation%20of%20SQL%20Server%202016.md)  
+ [SQL Server 2016 快速入門安裝](http://msdn.microsoft.com/library/672afac9-364d-4946-ad5d-8a2d89cf8d81)  
   
   
+
+

@@ -1,29 +1,33 @@
 ---
 title: "Stretch Database 的擴充事件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/14/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-stretch"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 06/14/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-stretch
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 70485e74-2e25-4e7e-be6c-9dd1780a42e3
 caps.latest.revision: 4
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 4
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: dad6f8bb729bb16121648f01ec046bffc33443ad
+ms.lasthandoff: 04/11/2017
+
 ---
-# Stretch Database 的擴充事件
+# <a name="extended-events-for-stretch-database"></a>Stretch Database 的擴充事件
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
 Stretch Database 提供一組疑難排解用的擴充事件。  
   
-如需詳細資訊，請參閱[擴充事件](../../relational-databases/extended-events/extended-events.md)。 如需如何開始進行疑難排解之擴充事件工作階段的詳細資訊，請參閱[建立擴充事件工作階段](Create%20an%20Extended%20Events%20Session.md)  
+如需詳細資訊，請參閱 [擴充事件](../../relational-databases/extended-events/extended-events.md)。 如需如何開始進行疑難排解之擴充事件工作階段的詳細資訊，請參閱 [建立擴充事件工作階段](http://msdn.microsoft.com/library/34b1e95a-a80e-4aca-9201-abde47f2ca74)  
   
-## Stretch Database 的擴充事件清單  
+## <a name="list-of-extended-events-for-stretch-database"></a>Stretch Database 的擴充事件清單  
   
 事件名稱|事件描述   
 ---------|---------  
@@ -80,5 +84,7 @@ stretch_table_unprovision_completed|回報完成移除未伸展的資料表本�
 stretch_table_validation_error|回報完成使用者啟用伸展時的資料表驗證  
 stretch_unprovision_table_start|回報伸展資料表解除佈建的開始處  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
 [管理 Stretch Database 並對其進行疑難排解](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)  
+
+
