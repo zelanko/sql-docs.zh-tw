@@ -110,7 +110,7 @@ ms.lasthandoff: 04/11/2017
 > 若要使用 **net send**來傳送通知，則必須在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 所在的電腦上啟動 Windows Messenger 服務。  
   
 > [!IMPORTANT]  
-> [呼叫器] 和 [Net Send]**** 選項會從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 未來版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 移除。 請避免在新的開發工作中使用這些功能，並規劃修改目前使用這些功能的應用程式。  
+> [呼叫器] 和 [Net Send] 選項會從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 未來版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 移除。 請避免在新的開發工作中使用這些功能，並規劃修改目前使用這些功能的應用程式。  
   
 若要使用電子郵件或呼叫器來傳送通知給操作員，則必須設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 以使用 Database Mail。 如需詳細資訊，請參閱 [Database Mail](http://msdn.microsoft.com/en-us/9e4563dd-4799-4b32-a78a-048ea44a44c1)。  
   

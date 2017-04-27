@@ -25,7 +25,7 @@ ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="choose-name-dialog-box-visual-database-tools"></a>選擇名稱對話方塊 (Visual Database Tools)
-當您選擇 [檔案]**** 功能表中的 [儲存 \<TableName>]****、[儲存 <DiagramName>]**** 或 [儲存 <ViewName>]**** 時，即會顯示此對話方塊。  
+當您選擇 [檔案] 功能表中的 [儲存 \<TableName>]、[儲存 <DiagramName>] 或 [儲存 <ViewName>] 時，即會顯示此對話方塊。  
   
 **輸入資料表、圖表或檢視的名稱**  
 提供可供您輸入資料表、圖表或檢視名稱的文字方塊。  

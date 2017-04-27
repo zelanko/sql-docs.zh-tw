@@ -29,13 +29,13 @@ ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="connect-to-server-database-engine"></a>連接到伺服器 (Database Engine)
-連接到 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] 時，使用此對話方塊來檢視或指定選項。 在大多數的情況下，您可以在 [伺服器名稱]**** 方塊中輸入資料庫伺服器的電腦名稱，然後按一下 [連接]**** 來進行連接。 如果要連接到 [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)]，請使用電腦名稱並於後面加上 **\sqlexpress**。  
+連接到 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] 時，使用此對話方塊來檢視或指定選項。 在大多數的情況下，您可以在 [伺服器名稱] 方塊中輸入資料庫伺服器的電腦名稱，然後按一下 [連接] 來進行連接。 如果要連接到 [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)]，請使用電腦名稱並於後面加上 **\sqlexpress**。  
   
 許多因素都可能影響連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]的能力。  
   
 ## <a name="options"></a>選項。  
 **伺服器類型**  
-從 [物件總管] 註冊伺服器時，選取要連接的伺服器類型： [!INCLUDE[ssDE](../../includes/ssde_md.md)]、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)]、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion_md.md)]或 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion_md.md)]。 對話方塊的其他部分僅會顯示適用於所選取伺服器類型的選項。 從 [已註冊的伺服器] 註冊伺服器時，[伺服器類型]**** 方塊是唯讀的，且會與 [已註冊的伺服器] 元件中所顯示的伺服器類型相符。 若要註冊不同類型的伺服器，請先從 [已註冊的伺服器] 工具列中選取 [ [!INCLUDE[ssDE](../../includes/ssde_md.md)]]、[ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)]]、[ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion_md.md)]]、[ [!INCLUDE[ssEW](../../includes/ssew_md.md)]] 或 [ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion_md.md)] ]，再開始註冊新的伺服器。  
+從 [物件總管] 註冊伺服器時，選取要連接的伺服器類型： [!INCLUDE[ssDE](../../includes/ssde_md.md)]、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)]、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion_md.md)]或 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion_md.md)]。 對話方塊的其他部分僅會顯示適用於所選取伺服器類型的選項。 從 [已註冊的伺服器] 註冊伺服器時，[伺服器類型] 方塊是唯讀的，且會與 [已註冊的伺服器] 元件中所顯示的伺服器類型相符。 若要註冊不同類型的伺服器，請先從 [已註冊的伺服器] 工具列中選取 [ [!INCLUDE[ssDE](../../includes/ssde_md.md)]]、[ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)]]、[ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion_md.md)]]、[ [!INCLUDE[ssEW](../../includes/ssew_md.md)]] 或 [ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion_md.md)] ]，再開始註冊新的伺服器。  
   
 **伺服器名稱**  
 選取要連接的伺服器執行個體。 預設會顯示上次連接的伺服器執行個體。  
@@ -65,7 +65,7 @@ Azure Active Directory 驗證機制使用 Azure Active Directory (Azure AD) 中�
 Azure Active Directory 驗證機制使用 Azure Active Directory (Azure AD) 中的身分識別連接至 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssSDSfull](../../includes/sssdsfull_md.md)] 。 如果您使用來自同盟網域的 Azure Active Directory 認證登入 Windows，請使用此方法連接至 [!INCLUDE[ssSDS](../../includes/sssds_md.md)] 。 如需詳細資訊，請參閱 [使用 Azure Active Directory 驗證連線到 SQL 資料庫](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)。  
   
 **使用者名稱**  
-要用來連接的 Windows 使用者名稱。 這個選項只有在您選取了使用 [Active Directory 密碼驗證]****連接時才可以使用。 當您選取 [Windows 驗證]**** 時它是唯讀的。  
+要用來連接的 Windows 使用者名稱。 這個選項只有在您選取了使用 [Active Directory 密碼驗證]連接時才可以使用。 當您選取 [Windows 驗證] 時它是唯讀的。  
   
 **登入**  
 輸入要用來連接的登入。 這個選項只有在您選取了使用 [ [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 驗證] 或 [Active Directory 密碼驗證] 連接時才可以使用。  

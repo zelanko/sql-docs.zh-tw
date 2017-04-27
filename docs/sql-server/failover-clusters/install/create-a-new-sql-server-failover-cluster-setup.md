@@ -89,7 +89,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  插入 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝媒體，然後在根資料夾中，按兩下 Setup.exe。 若要從網路共用區進行安裝，請瀏覽到共用區上的根資料夾，然後按兩下 Setup.exe。 如需有關如何安裝必要元件的詳細資訊，請參閱＜ [Before Installing Failover Clustering](../../../sql-server/failover-clusters/install/before-installing-failover-clustering.md)＞。  
   
-2.  安裝精靈會啟動 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝中心。 若要建立新的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 叢集安裝，請在安裝頁面上按一下 新的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [容錯移轉叢集安裝]****。  
+2.  安裝精靈會啟動 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝中心。 若要建立新的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 叢集安裝，請在安裝頁面上按一下 新的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [容錯移轉叢集安裝]。  
   
 3.  系統組態檢查會在電腦上執行探索作業。 若要繼續，請 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]。 您可以按一下 **[顯示詳細資料]**在畫面上檢視詳細資料，或是按一下 **[檢視詳細資料報表]**來以 HTML 報表形式檢視詳細資料。  
   
@@ -134,7 +134,7 @@ ms.lasthandoff: 04/11/2017
      **執行個體識別碼** ：根據預設，此執行個體名稱會當做執行個體識別碼使用。 這是用來識別 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體的安裝目錄和登錄機碼。 這是預設執行個體和具名執行個體的狀況。 如果是預設執行個體，執行個體名稱和執行個體識別碼將會是 MSSQLSERVER。 若要使用非預設的執行個體識別碼，請選取 **[執行個體識別碼]** 方塊並提供值。  
   
     > [!NOTE]  
-    >  標準的獨立 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體 (不論是預設還是具名執行個體) 都不會針對 [執行個體識別碼]**** 方塊使用非預設的值。  
+    >  標準的獨立 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體 (不論是預設還是具名執行個體) 都不會針對 [執行個體識別碼] 方塊使用非預設的值。  
   
      **執行個體根目錄** - 依預設，執行個體根目錄為 C:\Program Files\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]\\。 若要指定非預設的根目錄，請使用提供的欄位，或是按一下省略符號按鈕找出安裝資料夾。  
   
@@ -179,7 +179,7 @@ ms.lasthandoff: 04/11/2017
   
      當您完成針對 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務指定登入資訊之後，請按 **[下一步]**。  
   
-18. 使用 [伺服器組態 - 定序]**** 索引標籤，為 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 和 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 指定非預設的定序。  
+18. 使用 [伺服器組態 - 定序] 索引標籤，為 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 和 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 指定非預設的定序。  
   
 19. 使用 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] [組態 - 帳戶提供] 頁面來指定以下項目：  
   
@@ -197,7 +197,7 @@ ms.lasthandoff: 04/11/2017
     >  如果您要指定非預設的安裝目錄，請確定安裝資料夾對於此 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體是唯一的。 此對話方塊上的任何目錄都不應該與其他 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體中的目錄共用。 資料目錄應該位於容錯移轉叢集的共用叢集磁碟上。  
   
     > [!NOTE]  
-    >  若要指定伺服器訊息區塊 (SMB) 檔案伺服器作為資料目錄，請將 [預設資料根目錄]**** 設為 \\\伺服器名稱\共用名稱\\... 格式的檔案共用  
+    >  若要指定伺服器訊息區塊 (SMB) 檔案伺服器作為資料目錄，請將 [預設資料根目錄] 設為 \\\伺服器名稱\共用名稱\\... 格式的檔案共用  
    
 21. 使用 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] [組態 - FILESTREAM] 頁面來針對 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體啟用 FILESTREAM。 按 **[下一步]** ，繼續進行。  
   
@@ -271,7 +271,7 @@ ms.lasthandoff: 04/11/2017
      **執行個體識別碼** ：根據預設，此執行個體名稱會當做執行個體識別碼使用。 這是用來識別 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體的安裝目錄和登錄機碼。 這是預設執行個體和具名執行個體的狀況。 如果是預設執行個體，執行個體名稱和執行個體識別碼將會是 MSSQLSERVER。 若要使用非預設的執行個體識別碼，請選取 **[執行個體識別碼]** 文字方塊並提供值。  
   
     > [!NOTE]  
-    >  標準的獨立 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體 (不論是預設還是具名執行個體) 都不會針對 [執行個體識別碼]**** 文字方塊使用非預設的值。  
+    >  標準的獨立 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體 (不論是預設還是具名執行個體) 都不會針對 [執行個體識別碼] 文字方塊使用非預設的值。  
   
     > [!IMPORTANT]  
     >  針對容錯移轉叢集預備的所有節點使用相同的執行個體識別碼。  
@@ -302,7 +302,7 @@ ms.lasthandoff: 04/11/2017
   
      當您完成針對 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務指定登入資訊之後，請按 **[下一步]**。  
   
-16. 使用 [伺服器組態 - 定序]**** 索引標籤，為 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 和 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 指定非預設的定序。  
+16. 使用 [伺服器組態 - 定序] 索引標籤，為 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 和 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 指定非預設的定序。  
   
 17. 使用 [Server Configuration - Filestream (伺服器組態 - Filestream)]**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可針對** 的執行個體啟用 FILESTREAM。  按 **[下一步]** ，繼續進行。  
   
@@ -326,7 +326,7 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="advancedenterprise-failover-cluster-install-step-2-complete"></a>進階/企業型容錯移轉叢集安裝步驟 2：完成  
   
-1.  在依照 [準備步驟](#prepare)中所述的內容來準備所有節點之後，請在其中一個備妥的節點上執行安裝程式，最好是在擁有共用磁碟的節點上執行。 在 **** 安裝中心的 [進階] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 頁面上，按一下 **[進階叢集完成]**。  
+1.  在依照 [準備步驟](#prepare)中所述的內容來準備所有節點之後，請在其中一個備妥的節點上執行安裝程式，最好是在擁有共用磁碟的節點上執行。 在  安裝中心的 [進階] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 頁面上，按一下 **[進階叢集完成]**。  
   
 2.  系統組態檢查會在電腦上執行探索作業。 若要繼續，請 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]。 您可以按一下 **[顯示詳細資料]**在畫面上檢視詳細資料，或是按一下 **[檢視詳細資料報表]**來以 HTML 報表形式檢視詳細資料。  
   

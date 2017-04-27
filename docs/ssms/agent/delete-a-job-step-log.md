@@ -58,7 +58,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]的執行個體，然後展開該執行個體。  
   
-2.  展開 [SQL Server Agent]****，展開 [作業]****，以滑鼠右鍵按一下要修改的作業，然後按一下 [屬性]****。  
+2.  展開 [SQL Server Agent]，展開 [作業]，以滑鼠右鍵按一下要修改的作業，然後按一下 [屬性]。  
   
 3.  在 **[作業屬性]** 對話方塊中，刪除選取的作業步驟。  
   

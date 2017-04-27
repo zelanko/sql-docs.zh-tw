@@ -72,7 +72,7 @@ ms.lasthandoff: 04/11/2017
   
 6.  在 **[類型]** 清單中，選取 **[WMI 事件警示]**。  
   
-7.  在 [WMI 事件警示定義]**** 底下的 [命名空間]**** 方塊中，指定 WMI 查詢語言 (WQL) 陳述式的 WMI 命名空間，以識別哪個 WMI 事件將會觸發此警示。  
+7.  在 [WMI 事件警示定義] 底下的 [命名空間] 方塊中，指定 WMI 查詢語言 (WQL) 陳述式的 WMI 命名空間，以識別哪個 WMI 事件將會觸發此警示。  
   
 8.  在 **[查詢]** 方塊中，指定會識別警示所回應之事件的 WQL 陳述式。  
   
@@ -86,7 +86,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] ****。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
   
     ```  
     -- creates a WMI event alert that retrieves all event properties for any ALTER_TABLE event that occurs on table AdventureWorks2012.Sales.SalesOrderDetail  

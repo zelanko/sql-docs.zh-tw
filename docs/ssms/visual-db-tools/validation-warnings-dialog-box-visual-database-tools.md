@@ -53,7 +53,7 @@ ms.lasthandoff: 04/11/2017
 取消儲存動作。  
   
 **儲存為文字檔**  
-顯示 [另存新檔]**** 對話方塊，您可在此為包含警告清單的文字檔指定一個位置。  
+顯示 [另存新檔] 對話方塊，您可在此為包含警告清單的文字檔指定一個位置。  
   
 ## <a name="see-also"></a>另請參閱  
 [設計資料表 &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)  

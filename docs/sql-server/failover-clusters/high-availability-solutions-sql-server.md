@@ -37,7 +37,7 @@ ms.lasthandoff: 04/11/2017
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供幾個選項用於建立伺服器或資料庫的高可用性。 高可用性選項包括下列各項：    
     
 *  AlwaysOn 容錯移轉叢集執行個體    
- AlwaysOn 容錯移轉叢集執行個體是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] AlwaysOn 產品的一部分，會利用 Windows Server 容錯移轉叢集 (WSFC) 功能，透過伺服器執行個體層級 (「容錯移轉叢集執行個體 (FCI)」**) 的備援提供本機高可用性。 FCI 是跨 Windows Server 容錯移轉叢集 (WSFC) 節點且可能跨多個子網路安裝的單一 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 在網路上，FCI 看似單一電腦上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，但是 FCI 提供容錯移轉，可以在目前的 WSFC 節點無法使用時，從該節點容錯移轉到另一個節點。    
+ AlwaysOn 容錯移轉叢集執行個體是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] AlwaysOn 產品的一部分，會利用 Windows Server 容錯移轉叢集 (WSFC) 功能，透過伺服器執行個體層級 (「容錯移轉叢集執行個體 (FCI)」) 的備援提供本機高可用性。 FCI 是跨 Windows Server 容錯移轉叢集 (WSFC) 節點且可能跨多個子網路安裝的單一 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 在網路上，FCI 看似單一電腦上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，但是 FCI 提供容錯移轉，可以在目前的 WSFC 節點無法使用時，從該節點容錯移轉到另一個節點。    
     
  如需詳細資訊，請參閱 [AlwaysOn 容錯移轉叢集執行個體 &#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)執行個體的容錯移轉叢集執行個體。    
     
@@ -51,7 +51,7 @@ ms.lasthandoff: 04/11/2017
 資料庫鏡像是支援近乎瞬間的容錯移轉，進而提高資料庫可用性的方案。 資料庫鏡像可用以維護實際執行的資料庫 (稱為 *「主體資料庫」*) 所對應的單一待命資料庫 (或稱 *「鏡像資料庫」*)。 如需詳細資訊，請參閱[資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)。    
     
 *  記錄傳送    
- 記錄傳送就像 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 與資料庫鏡像一樣，都是在資料庫層級運作。 您可以使用記錄傳送來針對單一實際執行資料庫 (稱為「主要資料庫」**) 維護一個或多個暖待命資料庫 (稱為「次要資料庫」**)。 如需記錄傳送作業的相關資訊，請參閱[關於記錄傳送 &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)。    
+ 記錄傳送就像 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 與資料庫鏡像一樣，都是在資料庫層級運作。 您可以使用記錄傳送來針對單一實際執行資料庫 (稱為「主要資料庫」) 維護一個或多個暖待命資料庫 (稱為「次要資料庫」)。 如需記錄傳送作業的相關資訊，請參閱[關於記錄傳送 &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)。    
     
 ##  <a name="RecommendedSolutions"></a> 使用 SQL Server 保護資料的建議方案    
  為您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 環境提供資料保護的建議：    

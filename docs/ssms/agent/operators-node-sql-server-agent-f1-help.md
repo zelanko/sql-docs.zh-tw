@@ -21,6 +21,6 @@ ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="operators-node-sql-server-agent-f1-help"></a>操作員節點 (SQL Server Agent F1 說明)
-此章節包含 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 中物件總管之 [操作員]**** 節點的 F1 說明。  
+此章節包含 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 中物件總管之 [操作員] 節點的 F1 說明。  
   
 

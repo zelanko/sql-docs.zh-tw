@@ -25,7 +25,7 @@ ms.lasthandoff: 04/11/2017
 # <a name="unsuppress-run-custom-report-warnings"></a>取消隱藏執行自訂報表警告
 自訂報表有兩個警告對話方塊。 此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)]，在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 中取消隱藏這些方塊的顯示。  
   
-根據預設，[執行自訂報表]**** 對話方塊會在自訂報表執行之前顯示。 如果您選取了 [請不要再顯示這個警告]**** 核取方塊，將不再顯示此對話方塊。 此外，根據預設，當您開啟自訂報表，然後按一下連結來開啟另一份自訂報表時，就會顯示 [執行自訂報表]**** 對話方塊。 此對話方塊會顯示鑽研自訂報表檔案的完整路徑。 如果您選取了 [請不要再顯示這個警告]**** 核取方塊，將不再顯示此對話方塊。  
+根據預設，[執行自訂報表] 對話方塊會在自訂報表執行之前顯示。 如果您選取了 [請不要再顯示這個警告] 核取方塊，將不再顯示此對話方塊。 此外，根據預設，當您開啟自訂報表，然後按一下連結來開啟另一份自訂報表時，就會顯示 [執行自訂報表] 對話方塊。 此對話方塊會顯示鑽研自訂報表檔案的完整路徑。 如果您選取了 [請不要再顯示這個警告] 核取方塊，將不再顯示此對話方塊。  
   
 ## <a name="SSMSProcedure"></a>使用 SQL Server Management Studio  
   
@@ -33,7 +33,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  連接至 \<*Server*>\\<*Share*>|\<*Drive*>\Documents and Settings\\<UserProfile>\Application Data\Microsoft\Microsoft SQL Server\130\Tools\Shell\reports.xml。  
   
-2.  以滑鼠右鍵按一下 **reports.xml**，然後按一下 [編輯]****。  
+2.  以滑鼠右鍵按一下 **reports.xml**，然後按一下 [編輯]。  
   
 3.  將**<SuppressWarning>true\<\/SuppressWarning> 變更為 <SuppressWarning>false\<\/SuppressWarning>**。  
   
@@ -43,7 +43,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  連接至 \<*Server*>\\<*Share*>|\<*Drive*>\Documents and Settings\\<UserProfile>\Application Data\Microsoft\Microsoft SQL Server\130\Tools\Shell\reports.xml。  
   
-2.  以滑鼠右鍵按一下 **reports.xml**，然後按一下 [編輯]****。  
+2.  以滑鼠右鍵按一下 **reports.xml**，然後按一下 [編輯]。  
   
 3.  將 **<SuppressDrillthroughWarning>true\<\/SuppressDrillthroughWarning> 變更為 <SuppressDrillthroughWarning>false\<\/SuppressDrillthroughWarning>**。  
   

@@ -39,7 +39,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  如果[準則窗格](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)中沒有您要做為條件基礎的資料行，請新增它。 (條件通常牽涉已經是群組或摘要資料行的資料行)。您無法使用不屬於彙總函式 (Aggregate Function) 或 GROUP BY 子句一部分的資料行。  
   
-3.  在 [篩選條件]**** 欄位中，指定要套用至群組的條件。  
+3.  在 [篩選條件] 欄位中，指定要套用至群組的條件。  
   
     [查詢和檢視表設計工具](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md)會自動在 [SQL 窗格](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md)的陳述式中建立 HAVING 子句，如下列範例所示：  
   

@@ -54,7 +54,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]的執行個體，然後展開該執行個體。  
   
-2.  依序展開 [SQL Server Agent]**** 和 [作業]****、以滑鼠右鍵按一下包含要檢視之作業步驟的作業，然後按一下 [屬性]****。  
+2.  依序展開 [SQL Server Agent] 和 [作業]、以滑鼠右鍵按一下包含要檢視之作業步驟的作業，然後按一下 [屬性]。  
   
 3.  在 **[作業屬性]** 對話方塊中，按一下 **[步驟]** 頁面。  
   

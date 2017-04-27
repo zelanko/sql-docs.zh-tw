@@ -42,7 +42,7 @@ ms.lasthandoff: 04/11/2017
 
 * [**下載 Visual Studio 2017**](https://www.visualstudio.com/) ([依版本比較 Visual Studio 2017 功能 (英文)](https://www.visualstudio.com/vs/compare/))
 
-若要使用關聯式資料庫專案，我們建議在安裝期間檢查「資料儲存和處理」****工作負載。 SSDT 資料庫專案支援也包括一些其他工作負載，包含「Azure」**、「ASP.Net 和網頁程式開發」**，以及「.Net Core 跨平台開發」**。
+若要使用關聯式資料庫專案，我們建議在安裝期間檢查「資料儲存和處理」工作負載。 SSDT 資料庫專案支援也包括一些其他工作負載，包含「Azure」、「ASP.Net 和網頁程式開發」，以及「.Net Core 跨平台開發」。
 
 如果您搭配使用 SSDT 與 Visual Studio 2017，請安裝 AS 和 RS 元件：
 * [Analysis Services (英文)](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftAnalysisServicesModelingProjects)

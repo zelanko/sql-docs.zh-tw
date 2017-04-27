@@ -32,7 +32,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  選取您要調整大小的資料表。  
   
-2.  在選取的資料表上按一下滑鼠右鍵，然後從快速鍵功能表中選取 [自動調整選取資料表的大小]****。  
+2.  在選取的資料表上按一下滑鼠右鍵，然後從快速鍵功能表中選取 [自動調整選取資料表的大小]。  
   
 ## <a name="see-also"></a>另請參閱  
 [使用資料庫圖表 &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  

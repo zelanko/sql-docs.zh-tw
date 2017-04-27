@@ -65,9 +65,9 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] 的執行個體，然後展開該執行個體。  
   
-2.  以滑鼠右鍵按一下 [SQL Server Agent]****，然後按一下 [屬性]****。  
+2.  以滑鼠右鍵按一下 [SQL Server Agent]，然後按一下 [屬性]。  
   
-3.  在 [SQL Server Agent 屬性 <伺服器名稱>]****** 對話方塊的 [選取頁面]**** 底下，選取 [連接]****，然後  
+3.  在 [SQL Server Agent 屬性 <伺服器名稱>] 對話方塊的 [選取頁面] 底下，選取 [連接]，然後  
   
 4.  在 **[別名本機主機伺服器]** 方塊中，輸入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 要連接之伺服器的別名。  
   

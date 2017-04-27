@@ -31,7 +31,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 [資料庫圖表] 視窗的空白空間上按一下滑鼠右鍵。  
   
-2.  從捷徑功能表按一下 [排列資料表]****。  
+2.  從捷徑功能表按一下 [排列資料表]。  
   
 ## <a name="see-also"></a>另請參閱  
 [使用資料庫圖表 &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  

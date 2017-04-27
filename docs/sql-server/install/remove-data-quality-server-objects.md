@@ -36,7 +36,7 @@ ms.lasthandoff: 04/11/2017
   
 -   master 資料庫中的 DQInitDQS_MAIN 預存程序。  
   
- 您可以滑鼠右鍵按一下物件，然後按一下快速鍵功能表中的 [刪除]**** 來刪除 SQL Server Management Studio 中的這些物件。  
+ 您可以滑鼠右鍵按一下物件，然後按一下快速鍵功能表中的 [刪除] 來刪除 SQL Server Management Studio 中的這些物件。  
   
 > [!IMPORTANT]  
 >  如果您只要使用 `–uninstall` 命令列參數解除安裝 SQL Server 執行個體中的 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]，則在解除安裝過程中將刪除所有 DQS 物件。 您不必在解除安裝 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]之後手動刪除這些物件。 若要從命令提示字元解除安裝 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] ，請在命令提示字元中輸入下列命令，然後按 ENTER：   

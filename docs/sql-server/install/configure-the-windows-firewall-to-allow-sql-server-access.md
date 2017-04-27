@@ -43,7 +43,7 @@ ms.lasthandoff: 04/11/2017
 > [!NOTE]  
 >  本主題會提供防火牆組態的概觀，並且摘要列出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理員感興趣的資訊。 如需有關防火牆的詳細資訊以及授權的防火牆資訊，請參閱防火牆文件集，例如 [具有進階安全性的 Windows 防火牆和 IPsec](http://go.microsoft.com/fwlink/?LinkID=116904)。  
   
- 熟悉 [控制台] 中 [Windows 防火牆]**** 項目與 [具有進階安全性的 Windows 防火牆] Microsoft Management Console (MMC) 嵌入式管理單元，以及知道自己想要設定之防火牆設定的使用者，可以直接移至下列清單中的主題：  
+ 熟悉 [控制台] 中 [Windows 防火牆] 項目與 [具有進階安全性的 Windows 防火牆] Microsoft Management Console (MMC) 嵌入式管理單元，以及知道自己想要設定之防火牆設定的使用者，可以直接移至下列清單中的主題：  
   
 -   [設定用於 Database Engine 存取的 Windows 防火牆](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)  
   
@@ -123,7 +123,7 @@ ms.lasthandoff: 04/11/2017
   
     -   設定某些範圍限制  
   
-     [控制台] 中的 **[Windows 防火牆]** 項目最適合沒有防火牆組態設定經驗的使用者，以及針對非行動式電腦設定基本防火牆選項的使用者。 您也可以使用下列程序，透過 **run** 命令開啟 [控制台] 中的 [Windows 防火牆] **** 項目：  
+     [控制台] 中的 **[Windows 防火牆]** 項目最適合沒有防火牆組態設定經驗的使用者，以及針對非行動式電腦設定基本防火牆選項的使用者。 您也可以使用下列程序，透過 **run** 命令開啟 [控制台] 中的 [Windows 防火牆]  項目：  
   
     #### <a name="to-open-the-windows-firewall-item"></a>開啟 Windows 防火牆項目  
   
@@ -182,7 +182,7 @@ ms.lasthandoff: 04/11/2017
 ####  <a name="BKMK_dynamic_ports"></a> 動態通訊埠  
  根據預設，具名執行個體 (包括 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]) 會使用動態通訊埠。 這表示每次 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 啟動時，它就會識別可用的通訊埠並使用該通訊埠編號。 如果具名執行個體是唯一安裝的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體，它可能會使用 TCP 通訊埠 1433。 如果安裝了其他 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體，它可能會使用不同的 TCP 通訊埠。 由於選取的通訊埠可能會在每次 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 啟動時變更，所以很難將防火牆設定成允許存取正確的通訊埠編號。 因此，如果已使用防火牆，我們建議您將 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 重新設定成每次都使用相同的通訊埠編號。 這個通訊埠就稱為固定通訊埠或靜態通訊埠。 如需詳細資訊，請參閱[設定伺服器接聽特定 TCP 通訊埠 &#40;SQL Server 組態管理員&#41;](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md)。  
   
- 另一種設定具名執行個體接聽固定通訊埠的方法，是在防火牆中為 **sqlservr.exe** (適用於[!INCLUDE[ssDE](../../includes/ssde-md.md)]) 一類的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 程式建立例外狀況。 雖然這樣很方便，但當您使用具有進階安全性的 Windows 防火牆 MMC 嵌入式管理單元時，通訊埠編號將不會顯示在 [輸入規則]**** 頁面的 [本機通訊埠]**** 資料行中。 如此一來可能會讓您更難以稽核哪些通訊埠已開啟。 其他考量是 Service Pack 或累積更新可能會變更 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可執行檔的路徑，因而使防火牆規則失效。  
+ 另一種設定具名執行個體接聽固定通訊埠的方法，是在防火牆中為 **sqlservr.exe** (適用於[!INCLUDE[ssDE](../../includes/ssde-md.md)]) 一類的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 程式建立例外狀況。 雖然這樣很方便，但當您使用具有進階安全性的 Windows 防火牆 MMC 嵌入式管理單元時，通訊埠編號將不會顯示在 [輸入規則] 頁面的 [本機通訊埠] 資料行中。 如此一來可能會讓您更難以稽核哪些通訊埠已開啟。 其他考量是 Service Pack 或累積更新可能會變更 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可執行檔的路徑，因而使防火牆規則失效。  
   
 > [!NOTE]  
 >  下列程序會使用 [控制台] 中的 **[Windows 防火牆]** 項目。 [具有進階安全性的 Windows 防火牆] MMC 嵌入式管理單元可以設定更複雜的規則。 這包括設定服務例外，以便用於提供深度防禦。 請參閱下面的 [使用具有進階安全的 Windows 防火牆性嵌入式管理單元](#BKMK_WF_msc) 。  
@@ -191,7 +191,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 [控制台] 中，於 **[Windows 防火牆]** 項目的 **[例外]** 索引標籤上，按一下 **[新增程式]**。  
   
-2.  瀏覽至您要允許其通過防火牆之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的位置，例如 **C:\Program Files\Microsoft SQL Server\MSSQL13.<instance_name>\MSSQL\Binn**，選取 **sqlservr.exe**，然後按一下 [開啟]****。  
+2.  瀏覽至您要允許其通過防火牆之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的位置，例如 **C:\Program Files\Microsoft SQL Server\MSSQL13.<instance_name>\MSSQL\Binn**，選取 **sqlservr.exe**，然後按一下 [開啟]。  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -238,7 +238,7 @@ ms.lasthandoff: 04/11/2017
 |Windows Management Instrumentation<br /><br /> 如需有關 WMI 的詳細資訊，請參閱＜ [WMI Provider for Configuration Management Concepts](../../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md)＞。|WMI 會使用透過 DCOM 所指派的通訊埠，當做共用服務主機執行。 WMI 可能正在使用 TCP 通訊埠 135。<br /><br /> 請參閱「 [通訊埠 135 的特殊考量](#BKMK_port_135)」|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員會使用 WMI 來列出並管理服務。 建議您使用預先設定的規則群組 **Windows Management Instrumentation (WMI)**。 如需詳細資訊，請參閱下面的「 [與其他防火牆規則的互動](#BKMK_other_rules) 」一節。|  
 |[!INCLUDE[msCoName](../../includes/msconame-md.md)] 分散式交易協調器 (MS DTC)|TCP 通訊埠 135<br /><br /> 請參閱「 [通訊埠 135 的特殊考量](#BKMK_port_135)」|如果應用程式使用分散式交易，您可能必須將防火牆設定成允許 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 分散式交易協調器 (MS DTC) 傳輸在個別 MS DTC 執行個體之間，以及在 MS DTC 與資源管理員 (例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) 之間流動。 我們建議您使用預先設定的規則群組 **[分散式交易協調器]** 。<br /><br /> 針對個別資源群組中的整個叢集設定了單一共用 MS DTC 時，您應該將 sqlservr.exe 當做例外加入至防火牆。|  
 |[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中的瀏覽按鈕會使用 UDP 來連接至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服務。 如需詳細資訊，請參閱 [SQL Server Browser 服務 &#40;Database Engine and SSAS&#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)。|UDP 通訊埠 1434|UDP 是一種無連接的通訊協定。<br /><br /> 防火牆具有一項名為 [INetFwProfile 介面的 UnicastResponsesToMulticastBroadcastDisabled 屬性](http://go.microsoft.com/fwlink/?LinkId=118371) 的設定，可在廣播 (或多點傳送) UDP 要求的單點傳送回應方面控制防火牆的行為。  它有兩種行為：<br /><br /> 如果此設定為 TRUE，就完全不允許廣播的任何單點傳送回應。 列舉服務將會失敗。<br /><br /> 如果此設定為 FALSE (預設值)，就允許單點傳送回應 3 秒。 您無法設定時間的長度。 在擁塞或高延遲的網路中，或是負載繁重的伺服器上，嘗試列舉 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體可能會傳回部分清單，因而誤導使用者。|  
-|<a name="BKMK_IPsec"></a> IPsec 傳輸|UDP 通訊埠 500 和 UDP 通訊埠 4500|如果網域原則要求透過 IPsec 完成網路通訊，您也必須將 UDP 通訊埠 4500 和 UDP 通訊埠 500 加入至例外清單。 IPsec 是在 Windows 防火牆嵌入式管理單元中使用 [新增輸入規則精靈]**** 的選項。 如需詳細資訊，請參閱稍後的 [Using the Windows Firewall with Advanced Security Snap-in](#BKMK_WF_msc) (使用具有進階安全性嵌入式管理單元的 Windows 防火牆)。|  
+|<a name="BKMK_IPsec"></a> IPsec 傳輸|UDP 通訊埠 500 和 UDP 通訊埠 4500|如果網域原則要求透過 IPsec 完成網路通訊，您也必須將 UDP 通訊埠 4500 和 UDP 通訊埠 500 加入至例外清單。 IPsec 是在 Windows 防火牆嵌入式管理單元中使用 [新增輸入規則精靈] 的選項。 如需詳細資訊，請參閱稍後的 [Using the Windows Firewall with Advanced Security Snap-in](#BKMK_WF_msc) (使用具有進階安全性嵌入式管理單元的 Windows 防火牆)。|  
 |使用 Windows 驗證搭配信任的網域|防火牆必須設定成允許驗證要求。|如需詳細資訊，請參閱＜ [如何設定網域和信任的防火牆](http://support.microsoft.com/kb/179442/)＞。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 叢集|叢集需要與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]沒有直接相關的其他通訊埠。|如需詳細資訊，請參閱＜ [啟用可供叢集使用的網路](http://go.microsoft.com/fwlink/?LinkId=118372)＞。|  
 |保留在 HTTP 伺服器 API (HTTP.SYS) 中的 URL 命名空間|可能是 TCP 通訊埠 80，但是可以設定成其他通訊埠。 如需一般資訊，請參閱＜ [設定 HTTP 和 HTTPS](http://go.microsoft.com/fwlink/?LinkId=118373)＞。|如需有關使用 HttpCfg.exe 保留 HTTP.SYS 端點的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 特定資訊，請參閱[關於 URL 保留項目和註冊 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md)。|  
@@ -286,7 +286,7 @@ ms.lasthandoff: 04/11/2017
  您加入至防火牆的例外可以限制針對來自特定電腦或區域子網路的內送連接開啟通訊埠。 這種通訊埠開啟範圍的限制可以減少電腦遭受惡意使用者攻擊的風險，而且建議使用這種限制。  
   
 > [!NOTE]  
->  使用 [控制台] 中的 [Windows 防火牆]**** 項目只會設定目前的防火牆設定檔。  
+>  使用 [控制台] 中的 [Windows 防火牆] 項目只會設定目前的防火牆設定檔。  
   
 #### <a name="to-change-the-scope-of-a-firewall-exception-using-the-windows-firewall-item-in-control-panel"></a>使用控制台中的 Windows 防火牆項目來變更防火牆例外的範圍  
   
@@ -306,10 +306,10 @@ ms.lasthandoff: 04/11/2017
   
     -   **自訂清單:**  
   
-     只有具備您所列出之 IP 位址的電腦才能連接。 這可能是比 [只有我的網路 (子網路)]**** 更安全的設定。不過，使用 DHCP 的用戶端電腦可能偶爾會變更其 IP 位址。 接著，預期的電腦將無法連接。 您不想要授權的其他電腦可能會接受列出的 IP 位址，然後就能夠連接。 **[自訂清單]** 選項可能適用於列出設定成使用固定 IP 位址的其他伺服器。不過，入侵者可能會假冒這些 IP 位址。 限制性防火牆規則只會與您的網路基礎結構同樣強固。  
+     只有具備您所列出之 IP 位址的電腦才能連接。 這可能是比 [只有我的網路 (子網路)] 更安全的設定。不過，使用 DHCP 的用戶端電腦可能偶爾會變更其 IP 位址。 接著，預期的電腦將無法連接。 您不想要授權的其他電腦可能會接受列出的 IP 位址，然後就能夠連接。 **[自訂清單]** 選項可能適用於列出設定成使用固定 IP 位址的其他伺服器。不過，入侵者可能會假冒這些 IP 位址。 限制性防火牆規則只會與您的網路基礎結構同樣強固。  
   
 ##  <a name="BKMK_WF_msc"></a> 使用具有進階安全性的 Windows 防火牆嵌入式管理單元  
- 您可以使用具有進階安全性的 Windows 防火牆 MMC 嵌入式管理單元來設定其他進階的防火牆設定。 此嵌入式管理單元包含規則精靈，而且它會公開 [控制台] 中 [Windows 防火牆]**** 項目無法使用的額外設定。 這些設定包括：  
+ 您可以使用具有進階安全性的 Windows 防火牆 MMC 嵌入式管理單元來設定其他進階的防火牆設定。 此嵌入式管理單元包含規則精靈，而且它會公開 [控制台] 中 [Windows 防火牆] 項目無法使用的額外設定。 這些設定包括：  
   
 -   加密設定  
   
@@ -331,7 +331,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 [開始] 功能表上、按一下 **[執行]**輸入 **WF.msc**，然後按一下 **[確定]**。  
   
-2.  在 [具有進階安全性的 Windows 防火牆]**** 的左窗格中，以滑鼠右鍵按一下 [輸入規則]****，然後按一下 [新增規則]****。  
+2.  在 [具有進階安全性的 Windows 防火牆] 的左窗格中，以滑鼠右鍵按一下 [輸入規則]，然後按一下 [新增規則]。  
   
 3.  使用您想要的設定來完成 **[新增輸入規則精靈]** 。  
   

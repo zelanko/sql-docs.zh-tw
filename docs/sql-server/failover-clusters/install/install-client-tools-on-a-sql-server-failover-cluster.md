@@ -36,11 +36,11 @@ ms.lasthandoff: 04/11/2017
   
 1.  插入 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝媒體。 在根安裝資料夾中，按兩下 Setup.exe。 若要從網路共用進行安裝，請找出共用上的根資料夾，然後按兩下 Setup.exe。  
   
-2.  在 [安裝]**** 頁面上，按一下 [新的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 獨立安裝或將功能加入到現有安裝]****。 請不要按 [新的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集安裝]****。  
+2.  在 [安裝] 頁面上，按一下 [新的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 獨立安裝或將功能加入到現有安裝]。 請不要按 [新的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集安裝]。  
   
 3.  系統組態檢查將會先確認電腦的系統狀態，然後安裝程式才會繼續進行。  
   
-4.  在 [安裝類型]**** 頁面上，按一下 [執行 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 的新安裝]****。  
+4.  在 [安裝類型] 頁面上，按一下 [執行 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 的新安裝]。  
   
 5.  在 **[特徵選取]** 頁面上，選取您要安裝的工具，然後遵循安裝程序的其餘步驟進行。  
   

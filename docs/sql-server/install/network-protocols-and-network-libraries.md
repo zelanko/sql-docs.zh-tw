@@ -53,9 +53,9 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="to-disable-smb"></a>若要停用 SMB  
   
-1.  在 [開始]**** 功能表上，指向 [設定]****，然後按一下 [網路和撥號連線]****。  
+1.  在 [開始] 功能表上，指向 [設定]，然後按一下 [網路和撥號連線]。  
   
-     以滑鼠右鍵按一下[網際網路方向連線]，然後按一下 [內容]****。  
+     以滑鼠右鍵按一下[網際網路方向連線]，然後按一下 [內容]。  
   
 2.  選取 **[Client for Microsoft Networks]** 核取方塊，再按一下 **[解除安裝]**。  
   
@@ -67,7 +67,7 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="to-disable-smb-on-servers-accessible-from-the-internet"></a>若要在可從網際網路存取的伺服器上停用 SMB  
   
--   在 [本機區域連線內容] 中，使用 [傳輸控制通訊協定/網際網路通訊協定 (TCP/IP)]**** 內容對話方塊來移除 [File and Printer Sharing for Microsoft Networks]**** 和 [Client for Microsoft Networks]****。  
+-   在 [本機區域連線內容] 中，使用 [傳輸控制通訊協定/網際網路通訊協定 (TCP/IP)] 內容對話方塊來移除 [File and Printer Sharing for Microsoft Networks] 和 [Client for Microsoft Networks]。  
   
 ## <a name="endpoints"></a>端點  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 導入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 連接的新概念；伺服器端的連接是以 [!INCLUDE[tsql](../../includes/tsql-md.md)]*「端點」*(endpoint) 的概念來表示。 可對 [!INCLUDE[tsql](../../includes/tsql-md.md)] 端點授與、撤銷和拒絕權限。 依預設，所有使用者對端點都有存取權限，除非權限遭到系統管理員 (sysadmin) 群組的成員或端點擁有者拒絕或撤銷。 GRANT、REVOKE 和 DENY ENDPOINT 語法使用的是系統管理員必須從端點之目錄檢視中取得的端點識別碼。  
