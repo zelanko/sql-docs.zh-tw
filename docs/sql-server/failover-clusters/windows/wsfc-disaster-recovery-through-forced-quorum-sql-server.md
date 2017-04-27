@@ -1,31 +1,35 @@
 ---
 title: "透過強制仲裁執行 WSFC 災害復原 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "可用性群組 [SQL Server], WSFC 叢集"
-  - "仲裁 [SQL Server], AlwaysOn 和 WSFC 仲裁"
-  - "容錯移轉叢集 [SQL Server], AlwaysOn 可用性群組"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Availability Groups [SQL Server], WSFC clusters
+- quorum [SQL Server], AlwaysOn and WSFC quorum
+- failover clustering [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 6cefdc18-899e-410c-9ae4-d6080f724046
 caps.latest.revision: 21
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: f79077825cabd60fa12cd906ff375d149b29a7d3
+ms.lasthandoff: 04/11/2017
+
 ---
-# 透過強制仲裁執行 WSFC 災害復原 (SQL Server)
+# <a name="wsfc-disaster-recovery-through-forced-quorum-sql-server"></a>透過強制仲裁執行 WSFC 災害復原 (SQL Server)
   仲裁失敗的原因通常是涉及 WSFC 叢集中許多節點的系統損毀、持續性通訊失敗或設定錯誤。  若要從仲裁失敗中復原，您必須進行手動介入。  
   
--   **開始之前：**  [必要條件](#Prerequisites)、 [安全性](#Security)  
+-   **Before you start:**  [Prerequisites](#Prerequisites), [Security](#Security)  
   
--   **透過強制仲裁程序執行 WSFC 災害復原** [透過強制仲裁程序執行 WSFC 災害復原](#Main)  
+-   **WSFC Disaster Recovery through the Forced Quorum Procedure** [WSFC Disaster Recovery through the Forced Quorum Procedure](#Main)  
   
 -   [相關工作](#RelatedTasks)  
   
@@ -37,15 +41,15 @@ caps.handback.revision: 20
  強制仲裁程序會假設仲裁失敗之前存在狀況良好的仲裁。  
   
 > [!WARNING]  
->  使用者應該充分了解 Windows Server 容錯移轉叢集、WSFC 仲裁模型、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以及環境特定部署組態的概念和互動方式。  
+>  使用者應該充分了解 Windows Server 容錯移轉叢集、WSFC 仲裁模型、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]以及環境特定部署組態的概念和互動方式。  
 >   
->  如需詳細資訊，請參閱：[SQL Server 的 Windows Server 容錯移轉叢集 (WSFC)](http://msdn.microsoft.com/library/hh270278\(v=SQL.110\).aspx)和 [WSFC 仲裁模式和投票組態 (SQL Server)](http://msdn.microsoft.com/library/hh270280\(v=SQL.110\).aspx)。  
+>  如需詳細資訊，請參閱：  [SQL Server 的 Windows Server 容錯移轉叢集 (WSFC)](http://msdn.microsoft.com/library/hh270278\(v=SQL.110\).aspx), [WSFC 仲裁模式和投票組態 (SQL Server)](http://msdn.microsoft.com/library/hh270280\(v=SQL.110\).aspx)。  
   
 ###  <a name="Security"></a> 安全性  
  使用者必須是屬於 WSFC 叢集之每一個節點上本機 Administrators 群組成員的網域帳戶。  
   
 ##  <a name="Main"></a> 透過強制仲裁程序執行 WSFC 災害復原  
- 請記住，仲裁失敗會導致 WSFC 叢集中的所有叢集服務、SQL Server 執行個體和 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 設定為離線，因為依照設定，叢集無法確保節點層級的容錯。  仲裁失敗表示 WSFC 叢集中狀況良好的投票節點無法再滿足仲裁模型。 某些節點可能已經完全失敗，而某些節點可能剛關閉 WSFC 服務且其他方面狀況良好，但是喪失與仲裁通訊的功能。  
+ 請記住，仲裁失敗會導致 WSFC 叢集中的所有叢集服務、SQL Server 執行個體和 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]設定為離線，因為依照設定，叢集無法確保節點層級的容錯。  仲裁失敗表示 WSFC 叢集中狀況良好的投票節點無法再滿足仲裁模型。 某些節點可能已經完全失敗，而某些節點可能剛關閉 WSFC 服務且其他方面狀況良好，但是喪失與仲裁通訊的功能。  
   
  若要讓 WSFC 叢集重新上線，您必須在現有的組態下更正仲裁失敗的根本原因、視需要復原受影響的資料庫，而且您可能會想要重新設定 WSFC 叢集中的剩餘節點，以便反映存活叢集拓撲。  
   
@@ -53,12 +57,12 @@ caps.handback.revision: 20
   
  這種類型的災害復原程序應該包括下列步驟：  
   
-#### 若要從仲裁失敗中復原：  
+#### <a name="to-recover-from-quorum-failure"></a>若要從仲裁失敗中復原：  
   
 1.  **判斷失敗的範圍。** 您可以識別哪些可用性群組或 SQL Server 執行個體沒有回應、哪些叢集節點在線上且可供災後使用，並且檢查 Windows 事件記錄檔和 SQL Server 系統記錄檔。  如果可行的話，您應該保留鑑識資料和系統記錄檔，以便日後分析。  
   
     > [!TIP]  
-    >  在有回應的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 執行個體上，您可以藉由查詢 [sys.dm_hadr_availability_group_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-group-states-transact-sql.md) 動態管理檢視 (DMV)，取得有關本機伺服器執行個體上擁有可用性複本之可用性群組的健全狀況資訊。  
+    >  在有回應的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]執行個體上，您可以藉由查詢 [sys.dm_hadr_availability_group_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-group-states-transact-sql.md) 動態管理檢視 (DMV)，取得有關本機伺服器執行個體上擁有可用性複本之可用性群組的健全狀況資訊。  
   
 2.  **在單一節點上使用強制仲裁，藉以啟動 WSFC 叢集。** 除了 WSFC 叢集服務已關閉以外，您可以識別元件失敗數目最少的節點。  請確認此節點能夠與其他大多數節點通訊。  
   
@@ -112,7 +116,7 @@ caps.handback.revision: 20
   
 -   [設定叢集仲裁 NodeWeight 設定](../../../sql-server/failover-clusters/windows/configure-cluster-quorum-nodeweight-settings.md)  
   
--   [使用 AlwaysOn 儀表板 &#40;SQL Server Management Studio&#41;](../Topic/Use%20the%20AlwaysOn%20Dashboard%20\(SQL%20Server%20Management%20Studio\).md)  
+-   [使用 AlwaysOn 儀表板 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)
   
 ##  <a name="RelatedContent"></a> 相關內容  
   
@@ -120,7 +124,7 @@ caps.handback.revision: 20
   
 -   [Get-ClusterLog 容錯移轉叢集指令程式](http://technet.microsoft.com/library/ee461045.aspx)  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [SQL Server 的 Windows Server 容錯移轉叢集 &#40;WSFC&#41;](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)  
   
   

@@ -1,30 +1,34 @@
 ---
-title: "在 SQL Server 容錯移轉叢集 (安裝程式) 中加入或移除節點 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "加入節點"
-  - "節點 [Faillover Clustering], 移除"
-  - "節點 [Faillover Clustering], 加入"
-  - "容錯移轉叢集 [SQL Server], 節點"
-  - "刪除節點"
-  - "叢集維護 [SQL Server]"
-  - "移除節點"
+title: "在 SQL Server 容錯移轉叢集中加入或移除節點 (安裝程式) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- adding nodes
+- nodes [Faillover Clustering], removing
+- nodes [Faillover Clustering], adding
+- failover clustering [SQL Server], nodes
+- deleting nodes
+- cluster maintenance [SQL Server]
+- removing nodes
 ms.assetid: fe20dca9-a4c1-4d32-813d-42f1782dfdd3
 caps.latest.revision: 49
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 49
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 0d61da5ddef04a1edacf6f5b8bf98bb04b53fa5a
+ms.lasthandoff: 04/11/2017
+
 ---
-# 在 SQL Server 容錯移轉叢集 (安裝程式) 中加入或移除節點
+# <a name="add-or-remove-nodes-in-a-sql-server-failover-cluster-setup"></a>在 SQL Server 容錯移轉叢集中加入或移除節點 (安裝程式)
   您可以使用此程序來管理現有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體的節點。  
   
  若要更新或移除 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集，您必須是本機管理員，而且擁有在容錯移轉叢集之所有節點上登入成為服務的權限。 如果是本機安裝，您必須以管理員身分執行安裝程式。 如果您是從遠端共用位置安裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ，則必須使用對遠端共用位置具有讀取和執行權限的網域帳戶。  
@@ -44,11 +48,11 @@ caps.handback.revision: 49
   
 ##  <a name="Add"></a> 加入節點  
   
-#### 將節點加入現有的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集  
+#### <a name="to-add-a-node-to-an-existing-includessnoversionincludesssnoversion-mdmd-failover-cluster"></a>將節點加入現有的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集  
   
 1.  插入 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝媒體，然後在根資料夾中，按兩下 Setup.exe。 若要從網路共用進行安裝，請導覽至共用上的根資料夾，然後按兩下 Setup.exe。  
   
-2.  安裝精靈將會啟動 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝中心。 若要將節點加入至現有的容錯移轉叢集執行個體，請在左側窗格中按一下 [安裝]。 然後，請選取 [將節點加入到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集]。  
+2.  安裝精靈將會啟動 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝中心。 若要將節點加入至現有的容錯移轉叢集執行個體，請在左側窗格中按一下 [安裝]****。 然後，請選取 [將節點加入到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集]****。  
   
 3.  系統組態檢查將會在電腦上執行探索作業。 若要繼續，請 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]。  
   
@@ -64,7 +68,7 @@ caps.handback.revision: 49
   
 8.  在 [叢集節點組態] 頁面上，使用下拉式方塊來指定將要在此安裝程式作業期間修改之 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體的名稱。  
   
-9. 在 [伺服器組態 - 服務帳戶] 頁面中，指定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務的登入帳戶。 在這個頁面上所設定的實際服務隨著您選取要安裝的功能而不同。 若為容錯移轉叢集安裝，系統就會根據針對使用中節點所提供的設定，在這個頁面上預先填入帳戶名稱和啟動類型資訊。 不過，您必須提供每個帳戶的密碼。 如需詳細資訊，請參閱[伺服器組態 - 服務帳戶](../Topic/Server%20Configuration%20-%20Service%20Accounts.md)和[設定 Windows 服務帳戶與權限](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)。  
+9. 在 [伺服器組態 - 服務帳戶] 頁面中，指定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務的登入帳戶。 在這個頁面上所設定的實際服務隨著您選取要安裝的功能而不同。 若為容錯移轉叢集安裝，系統就會根據針對使用中節點所提供的設定，在這個頁面上預先填入帳戶名稱和啟動類型資訊。 不過，您必須提供每個帳戶的密碼。 如需詳細資訊，請參閱 [伺服器組態 - 服務帳戶](http://msdn.microsoft.com/library/c283702d-ab20-4bfa-9272-f0c53c31cb9f) 和 [設定 Windows 服務帳戶與權限](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)。  
   
      **安全性注意事項** [!INCLUDE[ssNoteStrongPass](../../../includes/ssnotestrongpass-md.md)]  
   
@@ -80,15 +84,15 @@ caps.handback.revision: 49
   
 14. 安裝之後，[完成] 頁面會提供安裝和其他重要注意事項之摘要記錄檔的連結。 若要完成 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程序，請按一下 **[關閉]**。  
   
-15. 如果指示您重新啟動電腦，請立刻執行。 當您完成安裝時，請務必閱讀安裝精靈所提供的訊息。 如需安裝程式記錄檔的詳細資訊，請參閱[檢視與讀取 SQL Server 安裝程式記錄檔](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)。  
+15. 如果指示您重新啟動電腦，請立刻執行。 當您完成安裝時，請務必閱讀安裝精靈所提供的訊息。 如需安裝程式記錄檔的詳細資訊，請參閱 [檢視與讀取 SQL Server 安裝程式記錄檔](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)。  
   
 ##  <a name="Remove"></a> 移除節點  
   
-#### 從現有的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集中移除節點  
+#### <a name="to-remove-a-node-from-an-existing-includessnoversionincludesssnoversion-mdmd-failover-cluster"></a>從現有的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集中移除節點  
   
 1.  插入 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝媒體。 在根資料夾中，按兩下 setup.exe。 若要從網路共用進行安裝，請導覽至共用上的根資料夾，然後按兩下 Setup.exe。  
   
-2.  安裝精靈會啟動 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝中心。 若要從現有的容錯移轉叢集執行個體中移除節點，請在左側窗格中按一下 [維護]，然後選取 [從 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集移除節點]。  
+2.  安裝精靈會啟動 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝中心。 若要從現有的容錯移轉叢集執行個體中移除節點，請在左側窗格中按一下 [維護]****，然後選取 [從 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集移除節點]****。  
   
 3.  系統組態檢查將會在電腦上執行探索作業。 若要繼續，請 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]。  
   
@@ -100,9 +104,9 @@ caps.handback.revision: 49
   
 7.  在移除作業期間，[移除節點進度] 頁面將提供狀態。  
   
-8.  [完成] 頁面會提供移除節點作業和其他重要注意事項之摘要記錄檔的連結。 若要完成 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 移除節點作業，請按一下 **[關閉]**。 如需安裝程式記錄檔的詳細資訊，請參閱[檢視與讀取 SQL Server 安裝程式記錄檔](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)。  
+8.  [完成] 頁面會提供移除節點作業和其他重要注意事項之摘要記錄檔的連結。 若要完成 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 移除節點作業，請按一下 **[關閉]**。 如需安裝程式記錄檔的詳細資訊，請參閱 [檢視與讀取 SQL Server 安裝程式記錄檔](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [檢視與讀取 SQL Server 安裝程式記錄檔](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
   
   

@@ -1,22 +1,26 @@
 ---
 title: "適用於 SQL Server 2016 的教學課程 | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/26/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-query-tuning"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 07/26/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-query-tuning
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
 caps.latest.revision: 40
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "erikre"
-caps.handback.revision: 37
+author: BYHAM
+ms.author: rickbyh
+manager: erikre
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 471c0907f32cada232fb899146933f8c052caee8
+ms.lasthandoff: 04/11/2017
+
 ---
-# 適用於 SQL Server 2016 的教學課程
+# <a name="tutorials-for-sql-server-2016"></a>適用於 SQL Server 2016 的教學課程
 [!INCLUDE[feedback_stackoverflow_msdn_connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 引進了許多新技術和新功能。 我們提供三個新的或經過大幅更新的教學課程，幫助您快速開始使用 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]。  
@@ -28,7 +32,7 @@ caps.handback.revision: 37
 
   
 -   若要下載 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 活頁簿和 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 報表搭配 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 教學課程使用，請前往 [SQL Server 2012 的 Power View 範例](http://go.microsoft.com/fwlink/?LinkId=220734)。  
-- 查看 [sql-server-samples](https://github.com/Microsoft/sql-server-samples) GitHub 存放庫上提供的新 [Wide World Importers](https://msdn.microsoft.com/library/mt734199(SQL.1).aspx) 範例。 
+- 查看 [sql-server-samples](https://msdn.microsoft.com/library/mt734199(SQL.1).aspx) GitHub 存放庫上提供的新 [Wide World Importers](https://github.com/Microsoft/sql-server-samples) 範例。 
     
 -   若要下載 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 版本的 [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] 資料庫，請前往 CodePlex 上的 [AdventureWorks Databases and Scripts for SQL Server 2016 CTP3](https://www.microsoft.com/download/details.aspx?id=49502) (適用於 SQL Server 2016 CTP3 的 AdventureWorks 資料庫和指令碼)。  
  
@@ -40,7 +44,7 @@ caps.handback.revision: 37
   
  - [適用於 SQL Server 2008 R2 的教學課程](http://msdn.microsoft.com/library/ms167593.aspx)  
   
-## 2016 教學課程  
+## <a name="2016-tutorials"></a>2016 教學課程  
   
   
 |技術|說明|  
@@ -49,8 +53,10 @@ caps.handback.revision: 37
 |[Reporting Services 教學課程 &#40;SSRS&#41;](../reporting-services/reporting-services-tutorials-ssrs.md)|了解如何建立基本報表和訂閱。|  
 |[Integration Services 教學課程](../integration-services/integration-services-tutorials.md)|了解如何建立及部署 [!INCLUDE[ssIS](../includes/ssis-md.md)] 封裝。|  
 |[Database Engine 教學課程](../relational-databases/database-engine-tutorials.md)|了解如何連接到 Database Engine 的執行個體，然後建立及執行 Transact-SQL 陳述式。|  
-|[複寫教學課程](../relational-databases/replication/replication-tutorials.md)|了解如何使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 來設定及執行複寫拓撲。|  
-|[企業資訊管理教學課程](../Topic/Enterprise%20Information%20Management%20Tutorials.md)|了解如何使用 Microsoft EIM 技術管理企業中的資訊。|  
-|[SQL Server R Services 教學課程](../advanced-analytics/r-services/sql-server-r-services-tutorials.md)|了解如何使用 R 語言處理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料，並從 [!INCLUDE[tsql](../includes/tsql-md.md)] 執行 R 指令碼。|  
+|[複寫教學課程](../relational-databases/replication/replication-tutorials.md)|了解如何使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]來設定及執行複寫拓撲。|  
+|[企業資訊管理教學課程](http://msdn.microsoft.com/library/8745dc80-193d-4de0-9f17-ba648ab1e81c)|了解如何使用 Microsoft EIM 技術管理企業中的資訊。|  
+|[SQL Server R Services 教學課程](../advanced-analytics/r-services/sql-server-r-services-tutorials.md)|了解如何使用 R 語言處理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料，並從 [!INCLUDE[tsql](../includes/tsql-md.md)]執行 R 指令碼。|  
   
   
+
+

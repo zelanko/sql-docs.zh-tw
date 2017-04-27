@@ -1,0 +1,1 @@
+![下載](../ssdt/media/download.png)[安裝 pyodbc Python 驅動程式](../connect/python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development.md) ![下載](../ssdt/media/download.png)[安裝 pyodbc Python 驅動程式](../connect/python/pymssql/step-1-configure-development-environment-for-pymssql-python-development.md) 

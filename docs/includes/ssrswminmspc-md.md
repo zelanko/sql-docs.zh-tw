@@ -1,1 +1,1 @@
-   **root\Microsoft\SqlServer\ReportServer\\<執行個體名稱**>\v13**  
+   **root\Microsoft\SqlServer\ReportServer\\<*InstanceName*>\v13**  

@@ -1,24 +1,28 @@
 ---
 title: "容錯移轉叢集執行個體的容錯移轉原則 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "彈性容錯移轉原則"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- flexible failover policy
 ms.assetid: 39ceaac5-42fa-4b5d-bfb6-54403d7f0dc9
 caps.latest.revision: 45
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 45
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 5f71e743730968231015410177f9bea2d6f00228
+ms.lasthandoff: 04/11/2017
+
 ---
-# 容錯移轉叢集執行個體的容錯移轉原則
+# <a name="failover-policy-for-failover-cluster-instances"></a>容錯移轉叢集執行個體的容錯移轉原則
   在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體 (FCI) 中，一個給定時間只能有一個節點可以擁有 Windows Server 容錯移轉叢集 (WSFC) 叢集資源群組。 用戶端要求都是透過 FCI 中的此節點提供服務。 萬一發生失敗而且重新啟動不成功，群組擁有權會移至 FCI 中的另一個 WSFC 節點。 這項程序就稱為容錯移轉。 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 提高失敗偵測的可靠性，並提供靈活的容錯移轉原則。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI 仰賴基礎 WSFC 服務進行容錯移轉偵測。 因此，兩個機制決定 FCI 的容錯移轉行為：一是原生 WSFC 功能，二是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式所加入的功能。  
@@ -79,7 +83,7 @@ caps.handback.revision: 45
   
  系統、資源和查詢處理序元件會用於失敗偵測。 io_subsytem 和事件元件只會用於診斷用途。  
   
- 每個資訊的資料列集也會寫入至 SQL Server 叢集診斷記錄檔。 如需詳細資訊，請參閱[檢視及閱讀容錯移轉叢集執行個體診斷記錄檔](../../../sql-server/failover-clusters/windows/view-and-read-failover-cluster-instance-diagnostics-log.md)。  
+ 每個資訊的資料列集也會寫入至 SQL Server 叢集診斷記錄檔。 如需詳細資訊，請參閱 [檢視及閱讀容錯移轉叢集執行個體診斷記錄檔](../../../sql-server/failover-clusters/windows/view-and-read-failover-cluster-instance-diagnostics-log.md)。  
   
 > [!TIP]  
 >  sp_server_diagnostic 預存程序可供 SQL Server AlwaysOn 技術使用，它也可供任何 SQL Server 執行個體用於偵測問題及疑難排解。  
@@ -103,11 +107,11 @@ caps.handback.revision: 45
  *預設值  
   
 ####  <a name="respond"></a> 回應失敗  
- 在偵測到一個或多個失敗狀況後，WSFC 服務回應失敗的方式取決於 WSFC 仲裁狀態以及 FCI 資源群組的重新啟動和容錯移轉設定。 如果 FCI 已經失去其 WSFC 仲裁，整個 FCI 就會離線，而且 FCI 已經失去其高可用性。 如果 FCI 仍然保留其 WSFC 仲裁，WSFC 服務的回應方式可能會先嘗試重新啟動失敗的節點，如果重新啟動嘗試不成功則容錯移轉。 重新啟動和容錯移轉設定是在容錯移轉叢集管理員嵌入式管理單元中進行設定。 如需這些設定的詳細資訊，請參閱 [\<Resource> 內容：原則索引標籤](http://technet.microsoft.com/library/cc725685.aspx)。  
+ 在偵測到一個或多個失敗狀況後，WSFC 服務回應失敗的方式取決於 WSFC 仲裁狀態以及 FCI 資源群組的重新啟動和容錯移轉設定。 如果 FCI 已經失去其 WSFC 仲裁，整個 FCI 就會離線，而且 FCI 已經失去其高可用性。 如果 FCI 仍然保留其 WSFC 仲裁，WSFC 服務的回應方式可能會先嘗試重新啟動失敗的節點，如果重新啟動嘗試不成功則容錯移轉。 重新啟動和容錯移轉設定是在容錯移轉叢集管理員嵌入式管理單元中進行設定。 如需有關這些設定的詳細資訊，請參閱 [\<Resource> 內容：原則索引標籤](http://technet.microsoft.com/library/cc725685.aspx)。  
   
  如需維護仲裁健全狀況的詳細資訊，請參閱 [WSFC 仲裁模式和投票組態 &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md)。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-server-configuration-transact-sql.md)  
   
   

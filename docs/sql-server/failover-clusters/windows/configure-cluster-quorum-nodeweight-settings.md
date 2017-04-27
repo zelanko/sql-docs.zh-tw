@@ -1,28 +1,32 @@
 ---
 title: "設定叢集仲裁 NodeWeight 設定 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "可用性群組 [SQL Server], WSFC 叢集"
-  - "仲裁 [SQL Server], AlwaysOn 和 WSFC 仲裁"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Availability Groups [SQL Server], WSFC clusters
+- quorum [SQL Server], AlwaysOn and WSFC quorum
 ms.assetid: cb3fd9a6-39a2-4e9c-9157-619bf3db9951
 caps.latest.revision: 15
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 2c43965a7e6b0021bb4bcf2d6fdca14e66cafa18
+ms.lasthandoff: 04/11/2017
+
 ---
-# 設定叢集仲裁 NodeWeight 設定
+# <a name="configure-cluster-quorum-nodeweight-settings"></a>設定叢集仲裁 NodeWeight 設定
   本主題說明如何設定 Windows Server 容錯移轉叢集 (WSFC) 叢集中成員節點的 NodeWeight 設定。 在仲裁投票期間，使用 NodeWeight 設定來支援 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體的災害復原和多重子網路案例。  
   
--   **開始之前：**  [必要條件](#Prerequisites)、 [安全性](#Security)  
+-   **Before you start:**  [Prerequisites](#Prerequisites), [Security](#Security)  
   
 -   **使用下列工具檢視仲裁 NodeWeight 設定︰**[使用 Powershell](#PowerShellProcedure)、[使用 Cluster.exe](#CommandPromptProcedure)。  
   
@@ -46,7 +50,7 @@ caps.handback.revision: 15
   
 ##  <a name="PowerShellProcedure"></a> 使用 Powershell  
   
-##### 若要設定 NodeWeight 設定  
+##### <a name="to-configure-nodeweight-settings"></a>若要設定 NodeWeight 設定  
   
 1.  透過 **[以系統管理員身分執行]**來啟動更高權限的 Windows PowerShell。  
   
@@ -56,7 +60,7 @@ caps.handback.revision: 15
   
 4.  以可讀格式輸出叢集節點屬性。  
   
-### 範例 (Powershell)  
+### <a name="example-powershell"></a>範例 (Powershell)  
  下列範例會變更 NodeWeight 設定，以便移除 “AlwaysOnSrv1” 節點的仲裁投票，然後輸出叢集中所有節點的設定。  
   
 ```powershell  
@@ -76,13 +80,13 @@ $nodes | Format-Table -property NodeName, State, NodeWeight
 > [!NOTE]  
 >  cluster.exe 公用程式在 [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] 版本中已過時。  在未來的開發中，請搭配容錯移轉叢集使用 PowerShell。  下一版的 Windows Server 將會移除 cluster.exe 公用程式。 如需詳細資訊，請參閱 [針對容錯移轉叢集將 Cluster.exe 命令對應到 Windows PowerShell 指令程式](http://technet.microsoft.com/library/ee619744\(WS.10\).aspx)。  
   
-##### 若要設定 NodeWeight 設定  
+##### <a name="to-configure-nodeweight-settings"></a>若要設定 NodeWeight 設定  
   
 1.  透過 **[以系統管理員身分執行]**來啟動更高權限的命令提示字元。  
   
 2.  使用 **cluster.exe** 設定 `NodeWeight` 值。  
   
-### 範例 (Cluster.exe)  
+### <a name="example-clusterexe"></a>範例 (Cluster.exe)  
  下列範例會變更 NodeWeight 值，以便在 “Cluster001” 叢集中移除 “AlwaysOnSrv1” 節點的仲裁投票。  
   
 ```ms-dos  
@@ -95,9 +99,9 @@ cluster.exe Cluster001 node Always OnSrv1 /prop NodeWeight=0
   
 -   [Get-ClusterLog 容錯移轉叢集指令程式](http://technet.microsoft.com/library/ee461045.aspx)  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [WSFC 仲裁模式和投票組態 &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md)   
  [檢視叢集仲裁 NodeWeight 設定](../../../sql-server/failover-clusters/windows/view-cluster-quorum-nodeweight-settings.md)   
- [Windows PowerShell 中由工作焦點列出的容錯移轉叢集指令程式 ](http://technet.microsoft.com/library/ee619761\(WS.10\).aspx)  
+ [Windows PowerShell 中由工作焦點列出的容錯移轉叢集指令程式](http://technet.microsoft.com/library/ee619761\(WS.10\).aspx)  
   
   
