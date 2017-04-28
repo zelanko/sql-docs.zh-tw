@@ -1,27 +1,31 @@
 ---
 title: "設定事件通知的對話安全性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/09/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "事件通知 [SQL Server], 安全性"
+ms.custom: 
+ms.date: 03/09/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- event notifications [SQL Server], security
 ms.assetid: 12afbc84-2d2a-4452-935e-e1c70e8c53c1
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 473e5873e7a522c691f39c5fa8b68d5eb17ab2ce
+ms.lasthandoff: 04/11/2017
+
 ---
-# 設定事件通知的對話安全性
+# <a name="configure-dialog-security-for-event-notifications"></a>設定事件通知的對話安全性
   [!INCLUDE[ssSB](../../includes/sssb-md.md)] 對話安全性。 對話方塊安全性必須根據 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 對話方塊完整安全性模型來手動設定。 完整安全性模型使傳送到遠端伺服器和自遠端伺服器傳送的訊息得以加密和解密。 雖然事件通知是以單一方向傳送，但也會以相反方向傳回其他訊息 (例如錯誤)。  
   
-## 設定事件通知的對話方塊安全性  
+## <a name="configuring-dialog-security-for-event-notifications"></a>設定事件通知的對話方塊安全性  
  下列步驟描述實作事件通知對話方塊安全性所需的程序。 這些步驟包括要對來源伺服器和目標伺服器採取的動作。 來源伺服器就是建立事件通知的伺服器。 目標伺服器是接收事件通知訊息的伺服器。 在繼續下一步之前，您必須為來源伺服器和目標伺服器完成每一個步驟的動作。  
   
 > [!IMPORTANT]  
@@ -51,12 +55,12 @@ caps.handback.revision: 23
 |來源伺服器|目標伺服器|  
 |-------------------|-------------------|  
 |從目標憑證的備份檔案[建立憑證](../../t-sql/statements/create-certificate-transact-sql.md) 時，指定目標資料庫使用者作為擁有者。|從來源憑證的備份檔案建立憑證時，指定來源資料庫使用者作為擁有者。|  
-|[授與權限](../../t-sql/statements/grant-transact-sql.md) 來建立來源資料庫使用者的事件通知。 如需此權限的詳細資訊，請參閱 [CREATE EVENT NOTIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-notification-transact-sql.md)。|授與 REFERENCES 權限給現有的事件通知 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 合約上的目標資料庫使用者：`http://schemas.microsoft.com/SQL/Notifications/PostEventNotification`。|  
+|[授與權限](../../t-sql/statements/grant-transact-sql.md) 來建立來源資料庫使用者的事件通知。 如需此權限的詳細資訊，請參閱 [CREATE EVENT NOTIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-notification-transact-sql.md)。|授與 REFERENCES 權限給現有的事件通知 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 合約上的目標資料庫使用者： `http://schemas.microsoft.com/SQL/Notifications/PostEventNotification`。|  
 |[建立遠端服務繫結](../../t-sql/statements/create-remote-service-binding-transact-sql.md) 至目標服務，並指定目標資料庫使用者的認證。 遠端服務繫結保證來源資料庫使用者擁有之憑證中的公開金鑰會驗證傳送至目標伺服器的訊息。|[授與](../../t-sql/statements/grant-transact-sql.md) CREATE QUEUE、CREATE SERVICE 和 CREATE SCHEMA 權限給目標資料庫使用者。|  
 ||如果尚未以目標資料庫使用者連接到資料庫，請立刻執行此動作。|  
 ||[建立佇列](../../t-sql/statements/create-queue-transact-sql.md) 來接收事件通知訊息，並 [建立服務](../../t-sql/statements/create-service-transact-sql.md) 來傳遞訊息。|  
 ||在目標服務上[授與 SEND 權限](../../t-sql/statements/grant-transact-sql.md) 給來源資料庫使用者。|  
-|提供來源資料庫的 Service Broker 識別碼給目標伺服器。 此識別碼可利用查詢 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目錄檢視的 **service_broker_guid** 資料行取得。 若為伺服器層級事件通知，請使用 **msdb** 的 Service Broker 識別碼。|提供目標資料庫的 Service Broker 識別碼給來源伺服器。|  
+|提供來源資料庫的 Service Broker 識別碼給目標伺服器。 此識別碼可利用查詢 **sys.databases** 目錄檢視的 [service_broker_guid](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 資料行取得。 若為伺服器層級事件通知，請使用 **msdb**的 Service Broker 識別碼。|提供目標資料庫的 Service Broker 識別碼給來源伺服器。|  
   
  **步驟 4：建立路由及設定伺服器層級驗證。**  
   
@@ -64,7 +68,7 @@ caps.handback.revision: 23
   
 |來源伺服器|目標伺服器|  
 |-------------------|-------------------|  
-|[建立路由](../../t-sql/statements/create-route-transact-sql.md)到目標服務，並指定目標資料庫的 Service Broker 識別碼和已同意的 TCP 通訊埠編號。|建立路由到來源服務，並指定來源資料庫的 Service Broker 識別碼和已同意的 TCP 通訊埠編號。 若要指定來源服務，請使用下列提供的服務：`http://schemas.microsoft.com/SQL/Notifications/EventNotificationService`。|  
+|[建立路由](../../t-sql/statements/create-route-transact-sql.md) 到目標服務，並指定目標資料庫的 Service Broker 識別碼和已同意的 TCP 通訊埠編號。|建立路由到來源服務，並指定來源資料庫的 Service Broker 識別碼和已同意的 TCP 通訊埠編號。 若要指定來源服務，請使用下列提供的服務： `http://schemas.microsoft.com/SQL/Notifications/EventNotificationService`。|  
 |切換到 **master** 資料庫來設定伺服器層級驗證。|切換到 **master** 資料庫來設定伺服器層級驗證。|  
 |如果 **master** 資料庫沒有主要金鑰，請 [建立主要金鑰](../../t-sql/statements/create-master-key-transact-sql.md)。|如果 **master** 資料庫沒有主要金鑰，請建立主要金鑰。|  
 |[建立憑證](../../t-sql/statements/create-certificate-transact-sql.md) 來驗證資料庫。|建立憑證來驗證資料庫。|  
@@ -84,7 +88,7 @@ caps.handback.revision: 23
 |切換到要建立事件通知的來源資料庫，如果您尚未以來源資料庫使用者連接，請立刻執行此動作。|切換到目標資料庫來接收事件通知訊息。|  
 |[建立事件通知](../../t-sql/statements/create-event-notification-transact-sql.md)，並指定 Broker Service 和目標資料庫的識別碼。||  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [BACKUP CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/backup-certificate-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
