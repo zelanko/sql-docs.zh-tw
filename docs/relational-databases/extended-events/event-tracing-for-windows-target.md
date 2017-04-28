@@ -1,27 +1,31 @@
 ---
 title: "Windows 事件追蹤目標 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Windows 事件追蹤目標"
-  - "ETW 目標"
-  - "目標 [SQL Server 擴充事件], windows 目標事件追蹤"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- event tracing for windows target
+- ETW target
+- targets [SQL Server extended events], event tracing for windows target
 ms.assetid: ca2bb295-b7f6-49c3-91ed-0ad4c39f89d5
 caps.latest.revision: 13
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d69eb01f34774812aeaafbddcaa08b17f22ac097
+ms.lasthandoff: 04/11/2017
+
 ---
-# Windows 事件追蹤目標
+# <a name="event-tracing-for-windows-target"></a>Windows 事件追蹤目標
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   使用 Windows 事件追蹤 (ETW) 當做目標之前，我們建議您最好具備 ETW 的實用知識。 ETW 追蹤會搭配擴充事件一起使用，或是當做擴充事件的事件取用者使用。 下列外部連結提供取得有關 ETW 之背景資訊的起點：  
@@ -33,7 +37,7 @@ caps.handback.revision: 13
  ETW 目標是單一目標，但是此目標可加入至許多工作階段。 如果某個事件在許多工作階段上引發，只會在每次發生事件時，將該事件傳播至 ETW 目標一次。 在每一個處理序上，擴充事件引擎則限制為單一執行個體。  
   
 > [!IMPORTANT]  
->  為了讓 ETW 目標運作，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務啟動帳戶必須是 Performance Log Users 群組的成員。  
+>  為了讓 ETW 目標運作， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務啟動帳戶必須是 Performance Log Users 群組的成員。  
   
  ETW 工作階段中的事件組態是由裝載擴充事件引擎的處理序所控制。 此引擎會控制要引發的事件以及讓事件發生所必須符合的條件。  
   
@@ -46,7 +50,7 @@ caps.handback.revision: 13
  ETW 目標不支援來自外部 ETW 控制器的控制，例如 Logman.exe。 若要產生 ETW 追蹤，您必須使用 ETW 目標來建立事件工作階段。 如需詳細資訊，請參閱 [CREATE EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md)。  
   
 > [!NOTE]  
->  啟用 ETW 目標就會建立名為 XE_DEFAULT_ETW_SESSION 的 ETW 工作階段。 如果具有 XE_DEFAULT_ETW_SESSION 名稱的工作階段已經存在，就會使用此工作階段，而不修改現有工作階段的任何屬性。 XE_DEFAULT_ETW_SESSION 會在所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之間共用。 啟動 XE_DEFAULT_ETW_SESSION 之後，您必須使用 Logman 工具等 ETW 控制器來停止它。 例如，您可以在命令提示字元中執行下列命令：**logman stop XE_DEFAULT_ETW_SESSION -ets**。  
+>  啟用 ETW 目標就會建立名為 XE_DEFAULT_ETW_SESSION 的 ETW 工作階段。 如果具有 XE_DEFAULT_ETW_SESSION 名稱的工作階段已經存在，就會使用此工作階段，而不修改現有工作階段的任何屬性。 XE_DEFAULT_ETW_SESSION 會在所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體之間共用。 啟動 XE_DEFAULT_ETW_SESSION 之後，您必須使用 Logman 工具等 ETW 控制器來停止它。 例如，您可以在命令提示字元中執行下列命令： **logman stop XE_DEFAULT_ETW_SESSION -ets**。  
   
  下表描述用於設定 ETW 目標的可用選項。  
   
@@ -79,17 +83,17 @@ caps.handback.revision: 13
   
 -   受管理物件格式 (MOF) 檔案位於 *\<安裝路徑>*\Microsoft SQL Server\Shared 中。 如需詳細資訊，請參閱 MSDN 上的 [Managed Object Format (MOF)](http://go.microsoft.com/fwlink/?LinkId=92851) (管理物件格式)。  
   
-## 將目標加入至工作階段  
+## <a name="adding-the-target-to-a-session"></a>將目標加入至工作階段  
  若要將 ETW 目標加入至擴充事件工作階段，您必須在建立或改變事件工作階段時，加入下列陳述式：  
   
 ```  
 ADD TARGET package0.etw_classic_sync_target  
 ```  
   
- 如需示範如何使用 ETW 目標 (包括如何檢視資料) 之完整範例的詳細資訊，請參閱[使用擴充事件監視系統活動](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md)。  
+ 如需示範如何使用 ETW 目標 (包括如何檢視資料) 之完整範例的詳細資訊，請參閱 [使用擴充事件監視系統活動](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md)。  
   
-## 另請參閱  
- [SQL Server 擴充的事件目標](../Topic/SQL%20Server%20Extended%20Events%20Targets.md)   
+## <a name="see-also"></a>另請參閱  
+ [SQL Server 擴充的事件目標](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)   
  [sys.dm_xe_session_targets &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql.md)   
  [CREATE EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md)   
  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-event-session-transact-sql.md)  

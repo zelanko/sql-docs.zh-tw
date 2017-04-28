@@ -1,40 +1,44 @@
 ---
 title: "匯出資料層應用程式 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-data-tier-apps"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.exportdac.progress.f1"
-  - "sql13.swb.exportdac.summary.f1"
-  - "sql13.swb.exportdac.results.f1"
-  - "sql13.swb. exportdac.results.f1"
-  - "sql13.swb. exportdac.summary.f1"
-  - "sql13.swb. exportdac.settings.f1"
-  - "sql13.swb.exportdac.welcome.f1"
-  - "sql13.swb.exportdac.settings.f1"
-helpviewer_keywords: 
-  - "如何 [DAC], 匯出"
-  - "精靈 [DAC], 匯出"
-  - "匯出 DAC"
-  - "資料層應用程式 [SQL Server], 匯出"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-data-tier-apps
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.exportdac.progress.f1
+- sql13.swb.exportdac.summary.f1
+- sql13.swb.exportdac.results.f1
+- sql13.swb. exportdac.results.f1
+- sql13.swb. exportdac.summary.f1
+- sql13.swb. exportdac.settings.f1
+- sql13.swb.exportdac.welcome.f1
+- sql13.swb.exportdac.settings.f1
+helpviewer_keywords:
+- How to [DAC], export
+- wizard [DAC], export
+- export DAC
+- data-tier application [SQL Server], export
 ms.assetid: 61915bc5-0f5f-45ac-8cfe-3452bc185558
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 6a68d0e0a9347331c31b6e4d09b1ec7e9856742a
+ms.lasthandoff: 04/11/2017
+
 ---
-# 匯出資料層應用程式
-  匯出已部署的資料層應用程式 (DAC) 或資料庫，會建立匯出檔，而此檔案包含資料庫中物件的定義以及資料表中所含的所有資料。 接著，匯出檔可以匯入 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的另一個執行個體或 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]。 您可以合併匯出/匯入作業，以在執行個體之間移轉 DAC、建立封存或針對 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中所部署的資料庫建立內部部署複本。  
+# <a name="export-a-data-tier-application"></a>匯出資料層應用程式
+  匯出已部署的資料層應用程式 (DAC) 或資料庫，會建立匯出檔，而此檔案包含資料庫中物件的定義以及資料表中所含的所有資料。 接著，匯出檔可以匯入 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的另一個執行個體或 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]。 您可以合併匯出/匯入作業，以在執行個體之間移轉 DAC、建立封存或針對 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]中所部署的資料庫建立內部部署複本。  
   
-## 開始之前  
+## <a name="before-you-begin"></a>開始之前  
  匯出程序會使用兩個階段來建立 DAC 匯出檔。  
   
 1.  匯出會在匯出檔 (BACPAC 檔案) 中建立 DAC 定義，其方式相當於 DAC 擷取在 DAC 封裝檔案中建立 DAC 定義。 匯出的 DAC 定義包含目前資料庫中的所有物件。 如果匯出程序是針對原本從 DAC 部署的資料庫來執行，並已在部署之後直接變更資料庫，則匯出的定義會符合資料庫中所設定的物件，而非原始 DAC 中所定義的物件。  
@@ -43,20 +47,19 @@ caps.handback.revision: 19
   
  匯出程序會將 DAC 版本設定為 1.0.0.0，而將匯出檔中的 DAC 描述設定為空字串。 如果已從 DAC 部署資料庫，則匯出檔中的 DAC 定義會包含指定給原始 DAC 的名稱，否則，DAC 名稱會設定為資料庫名稱。  
   
- [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Labs 中有範例應用程式可用來測試 DAC 和資料庫的匯出與匯入。 如需有關如何下載和使用範例的指示，請參閱 [Windows Azure SQL 資料庫的資料庫匯入和匯出](http://go.microsoft.com/fwlink/?LinkId=219404)。  
-  
+
 ###  <a name="LimitationsRestrictions"></a> 限制事項  
- DAC 或資料庫只能從 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 或 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) 或更新版本的資料庫中匯出。  
+ DAC 或資料庫只能從 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]或 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) 或更新版本的資料庫中匯出。  
   
  如果 DAC 或包含的使用者中不支援資料庫的物件，則無法匯出資料庫。 如需有關 DAC 中支援之物件類型的詳細資訊，請參閱＜ [DAC Support For SQL Server Objects and Versions](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)＞。  
   
 ###  <a name="Permissions"></a> Permissions  
- 您至少需具備 ALTER ANY LOGIN 和資料庫範圍 VIEW DEFINITION 權限，以及 **sys.sql_expression_dependencies** 的 SELECT 權限，才能匯出 DAC。 匯出 DAC 可以透過 securityadmin 固定伺服器角色的成員來完成，這個角色的成員也是匯出 DAC 之來源資料庫中 database_owner 固定資料庫角色的成員。 系統管理員 (sysadmin) 固定伺服器角色的成員，或內建 SQL Server 系統管理員帳戶 **sa** 也可以匯出 DAC。  
+ 您至少需具備 ALTER ANY LOGIN 和資料庫範圍 VIEW DEFINITION 權限，以及 **sys.sql_expression_dependencies**的 SELECT 權限，才能匯出 DAC。 匯出 DAC 可以透過 securityadmin 固定伺服器角色的成員來完成，這個角色的成員也是匯出 DAC 之來源資料庫中 database_owner 固定資料庫角色的成員。 系統管理員 (sysadmin) 固定伺服器角色的成員，或內建 SQL Server 系統管理員帳戶 **sa** 也可以匯出 DAC。  
   
 ##  <a name="UsingDeployDACWizard"></a> 使用匯出資料層應用程式精靈  
  **若要使用精靈匯出 DAC**  
   
-1.  連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體 (不論是內部部署或在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中)。  
+1.  連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體 (不論是內部部署或在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]中)。  
   
 2.  在物件總管 中，展開您要匯出 DAC 的執行個體來源節點。  
   
@@ -125,7 +128,7 @@ caps.handback.revision: 19
   
 3.  使用 **Microsoft.SqlServer.Management.Dac.DacStore** 類型的 **Export** 方法，匯出 DAC。 指定要匯出之 DAC 的名稱，以及要放置匯出檔之資料夾的路徑。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [資料層應用程式](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [從資料庫中擷取 DAC](../../relational-databases/data-tier-applications/extract-a-dac-from-a-database.md)  
   

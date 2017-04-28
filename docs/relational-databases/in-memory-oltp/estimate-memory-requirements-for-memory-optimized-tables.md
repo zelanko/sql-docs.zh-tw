@@ -1,33 +1,37 @@
 ---
 title: "估計記憶體最佳化資料表的記憶體需求 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 12/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5c5cc1fc-1fdf-4562-9443-272ad9ab5ba8
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ea8b5ddea3edfbe5d2521bd30e4a51fd62a2b482
+ms.lasthandoff: 04/11/2017
+
 ---
-# 估計記憶體最佳化資料表的記憶體需求
+# <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>估計記憶體最佳化資料表的記憶體需求
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
 記憶體最佳化資料表需要有足夠的記憶體，以將所有資料列和索引保留在記憶體中。 因為記憶體是有限的資源，所以請務必了解並管理系統上的記憶體使用量。 本節的主題涵蓋了常見的記憶體使用與管理案例。
 
 不論是建立新的記憶體最佳化資料表，或是將現有的磁碟資料表移轉至 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 記憶體最佳化資料表，請務必適當地估計每個資料表的記憶體需求，以便您可以佈建具有足夠記憶體的伺服器。 本節描述如何估計保存記憶體最佳化資料表的資料所需的記憶體數目。  
   
-如果您想從磁碟資料表移轉至記憶體最佳化資料表，請在進行本主題之前，先參閱[判斷是否應將資料表或預存程序匯出至記憶體中 OLTP](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md) 主題，以取得最適合移轉之資料表的指引。 [移轉至 In-Memory OLTP](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md) 底下的所有主題，提供從磁碟資料表移轉至記憶體最佳化資料表的指引。 
+如果您想從磁碟資料表移轉至記憶體最佳化資料表，請在進行本主題之前，先參閱 [判斷是否應將資料表或預存程序匯出至記憶體中 OLTP](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md) 主題，以取得最適合移轉之資料表的指引。 [移轉至 In-Memory OLTP](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md) 底下的所有主題，提供從磁碟資料表移轉至記憶體最佳化資料表的指引。 
   
 ## <a name="basic-guidance-for-estimating-memory-requirements"></a>估計記憶體需求的基本指引
 
-從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始，記憶體最佳化資料表的大小沒有任何限制，但資料表需要適合記憶體大小。  在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中，支援的 SCHEMA_AND_DATA 資料表資料大小為 256 GB。
+從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]開始，記憶體最佳化資料表的大小沒有任何限制，但資料表需要適合記憶體大小。  在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中，支援的 SCHEMA_AND_DATA 資料表資料大小為 256 GB。
 
 記憶體最佳化資料表的大小會對應至資料加上一些資料列行首額外負荷的大小。 當移轉至記憶體最佳化的磁碟資料表時，記憶體最佳化資料表的大小會粗略對應至叢集索引或原始磁碟資料表堆積的大小。
 
@@ -50,7 +54,7 @@ caps.handback.revision: 32
   
 - [配置給成長的記憶體](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md#bkmk_MemoryForGrowth)  
   
-###  <a name="a-namebkmkexampletablea-example-memory-optimized-table"></a><a name="bkmk_ExampleTable"></a> 記憶體最佳化資料表範例  
+###  <a name="bkmk_ExampleTable"></a> 記憶體最佳化資料表範例  
 
 請考慮下列記憶體最佳化資料表結構描述：
   
@@ -82,7 +86,7 @@ GO
 
 我們將透過此結構描述，來判斷此記憶體最佳化資料所需的最小記憶體。  
   
-###  <a name="a-namebkmkmemoryfortablea-memory-for-the-table"></a><a name="bkmk_MemoryForTable"></a> 配置給資料表的記憶體  
+###  <a name="bkmk_MemoryForTable"></a> 配置給資料表的記憶體  
 
 記憶體最佳化資料表資料列包含三個部分：
   
@@ -101,7 +105,7 @@ GO
   
 從上述計算得知，記憶體最佳化資料表的每個資料列大小為 24 + 32 + 200 (或 256) 個位元組。  由於我們有 5 百萬個資料列，因此資料表會耗用 5,000,000 * 256 (或 1,280,000,000) 個位元組，大約是 1.28 GB。  
   
-###  <a name="a-namebkmkindexmeemorya-memory-for-indexes"></a><a name="bkmk_IndexMeemory"></a> 配置給索引的記憶體  
+###  <a name="bkmk_IndexMeemory"></a> 配置給索引的記憶體  
 
 #### <a name="memory-for-each-hash-index"></a>配置給每個雜湊索引的記憶體  
   
@@ -130,7 +134,7 @@ SELECT COUNT(DISTINCT [Col2])
   
 如果您想建立新的資料表，則需要估計陣列大小，或在部署前從測試收集資料。  
   
-如需雜湊索引在 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 記憶體最佳化資料表中運作方式的相關資訊，請參閱[雜湊索引](../Topic/Hash%20Indexes.md)。  
+如需雜湊索引在 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 記憶體最佳化資料表中運作方式的相關資訊，請參閱 [雜湊索引](http://msdn.microsoft.com/library/f4bdc9c1-7922-4fac-8183-d11ec58fec4e)。  
   
 #### <a name="setting-the-hash-index-array-size"></a>設定雜湊索引陣列大小  
   
@@ -164,7 +168,7 @@ SELECT * FRON t_hk
    WHERE c2 > 5;  
 ```  
   
-###  <a name="a-namebkmkmemoryforrowversionsa-memory-for-row-versioning"></a><a name="bkmk_MemoryForRowVersions"></a> 配置給資料列版本設定的記憶體
+###  <a name="bkmk_MemoryForRowVersions"></a> 配置給資料列版本設定的記憶體
 
 更新或刪除資料列時，記憶體中 OLTP 會使用開放式並行存取來避免鎖定。 這表示當更新資料列時，會建立該資料列的其他版本。 此外，刪除是邏輯的 - 現有資料列會標示為已刪除，但不會立即予以移除。 在可能使用舊版本的所有交易完成執行之前，系統會保留舊的資料列版本 (包括已刪除的資料列) 可用。 
   
@@ -176,20 +180,22 @@ SELECT * FRON t_hk
   
 `rowVersions = durationOfLongestTransctoinInSeconds * peakNumberOfRowUpdatesOrDeletesPerSecond`  
   
-接著會將過時資料列數目乘以記憶體最佳化的資料表資料列大小，來估計過時資料列所需的記憶體 (請參閱上文的[資料表記憶體](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md#bkmk_MemoryForTable))。  
+接著會將過時資料列數目乘以記憶體最佳化的資料表資料列大小，來估計過時資料列所需的記憶體 (請參閱上文的 [資料表記憶體](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md#bkmk_MemoryForTable) )。  
   
 `memoryForRowVersions = rowVersions * rowSize`  
   
-###  <a name="a-namebkmktablevariablesa-memory-for-table-variables"></a><a name="bkmk_TableVariables"></a> 配置給資料表變數的記憶體
+###  <a name="bkmk_TableVariables"></a> 配置給資料表變數的記憶體
   
 資料表變數所使用的記憶體只會在資料表變數超出範圍時釋出。 從資料表變數中刪除的資料列 (包括隨更新刪除的資料列) 則不受記憶體回收限制。 在資料表變數離開範圍之前，不會釋出記憶體。  
   
 在大型 SQL 批次中定義的資料表變數 (與程序範圍相反) 會在許多交易中使用，且可能會耗用大量的記憶體。 由於它們不會進行記憶體回收，因此資料表變數中已刪除的資料列可能會耗用大量記憶體並降低效能，因為讀取作業需要掃描已刪除的資料列。  
   
-###  <a name="a-namebkmkmemoryforgrowtha-memory-for-growth"></a><a name="bkmk_MemoryForGrowth"></a> 配置給成長的記憶體
+###  <a name="bkmk_MemoryForGrowth"></a> 配置給成長的記憶體
 
 上述計算依資料表的現狀來估計資料表的記憶體需求。 除了此記憶體之外，您還需要估計資料表的成長，並提供足夠的記憶體來容納該成長幅度。  例如，如果您預期會成長 10%，則需要將上述結果乘以 1.1，以取得資料表所需的總記憶體。  
   
 ## <a name="see-also"></a>另請參閱
 
-[移轉至記憶體內部 OLTP](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
+[移轉至 In-Memory OLTP](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
+
+

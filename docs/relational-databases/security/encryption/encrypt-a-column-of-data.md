@@ -1,30 +1,34 @@
 ---
 title: "加密資料行 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/18/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "加密 [SQL Server], 資料行"
-  - "加密 [SQL Server], 資料行"
-  - "資料行層級加密"
-  - "資料格層級加密"
+ms.custom: 
+ms.date: 03/18/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- encryption [SQL Server], columns
+- cryptography [SQL Server], columns
+- column level encryption
+- cell level encryption
 ms.assetid: 38e9bf58-10c6-46ed-83cb-e2d76cda0adc
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1451071485e8994dd90ea447e28d9b32e511dd1a
+ms.lasthandoff: 04/11/2017
+
 ---
-# 加密資料行
+# <a name="encrypt-a-column-of-data"></a>加密資料行
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  此主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 中透過對稱加密來加密資料行。 這有時候稱為資料行層級加密或資料格層級加密。  
+  此主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] ，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中透過對稱加密來加密資料行。 這有時候稱為資料行層級加密或資料格層級加密。  
   
  **本主題內容**  
   
@@ -51,7 +55,7 @@ caps.handback.revision: 27
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 若要使用簡單的對稱加密來加密資料行  
+#### <a name="to-encrypt-a-column-of-data-using-a-simple-symmetric-encryption"></a>若要使用簡單的對稱加密來加密資料行  
   
 1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的執行個體。  
   
@@ -114,7 +118,7 @@ caps.handback.revision: 27
     GO  
     ```  
   
-#### 若要使用包含驗證器的對稱加密來加密資料行  
+#### <a name="to-encrypt-a-column-of-data-using-symmetric-encryption-that-includes-an-authenticator"></a>若要使用包含驗證器的對稱加密來加密資料行  
   
 1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的執行個體。  
   
@@ -188,3 +192,4 @@ caps.handback.revision: 27
 -   [OPEN SYMMETRIC KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/open-symmetric-key-transact-sql.md)  
   
   
+

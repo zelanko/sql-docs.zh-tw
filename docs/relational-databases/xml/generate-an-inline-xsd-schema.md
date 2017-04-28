@@ -1,30 +1,34 @@
 ---
 title: "產生內嵌 XSD 結構描述 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "XSD 結構描述 [SQL Server]"
-  - "XMLSCHEMA 選項"
-  - "結構描述 [SQL Server]，XML"
-  - "XDR 結構描述"
-  - "FOR XML 子句，內嵌 XSD 結構描述產生"
-  - "內嵌 XSD 結構描述產生 [SQL Server]"
-  - "XMLDATA 選項"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- XSD schemas [SQL Server]
+- XMLSCHEMA option
+- schemas [SQL Server], XML
+- XDR schemas
+- FOR XML clause, inline XSD schema generation
+- inline XSD schema generation [SQL Server]
+- XMLDATA option
 ms.assetid: 04b35145-1cca-45f4-9eb7-990abf2e647d
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8290d7fe8b7900291d4afe3c944564d8f2aef608
+ms.lasthandoff: 04/11/2017
+
 ---
-# 產生內嵌 XSD 結構描述
+# <a name="generate-an-inline-xsd-schema"></a>產生內嵌 XSD 結構描述
   在 FOR XML 子句中，您可以要求您的查詢將內嵌結構描述連同查詢結果一起傳回。 如果您要的是 XDR 結構描述，請在 FOR XML 子句中使用 XMLDATA 關鍵字。 而如果您要的是 XSD 結構描述，則請使用 XMLSCHEMA 關鍵字。  
   
  此主題描述 XMLSCHEMA 關鍵字，並說明所產生之內嵌 XSD 結構描述的結構。 以下是要求內嵌結構描述時的一些限制：  
@@ -81,7 +85,7 @@ WHERE ProductModelID=1
 FOR XML AUTO, XMLSCHEMA ('MyURI')  
 ```  
   
-## 實體元素  
+## <a name="entity-elements"></a>實體元素  
  若要討論針對查詢結果而產生之 XSD 結構描述結構的詳細資料，必須先說明實體元素  
   
  由 FOR XML 查詢所傳回之 XML 資料中的實體元素，是從資料表產生的元素，而非從資料行產生。 例如，下列 FOR XML 查詢會從 `Person` 資料庫中的 `AdventureWorks2012` 資料表傳回連絡資訊。  
@@ -159,7 +163,7 @@ FOR XML AUTO, ELEMENTS, XMLSCHEMA
   
 -   <`SalesOrderID`>、<`ProductID`> 和 <`OrderQty`> 不是實體元素，因為它們對應到資料行。 因為 ELEMENTS 指示詞的緣故，資料行的資料是以 XML 中的元素傳回。 這些元素對應至實體元素之複雜類型的本機元素。 請注意，如果未指定 ELEMENTS 指示詞，則 `SalesOrderID`、 `ProductID` 和 `OrderQty` 值會對應至相對應實體元素之複雜類型的本機屬性。  
   
-## 屬性名稱衝突  
+## <a name="attribute-name-clashes"></a>屬性名稱衝突  
  以下討論是以 `CustOrder` 和 `CustOrderDetail` 資料表為基礎。 若要測試下列範例，請建立這些資料表並加入您自己的範例資料：  
   
 ```  
@@ -217,10 +221,10 @@ FOR XML RAW, XMLSCHEMA, ELEMENTS
   
  `</xsd:schema>`  
   
-## 元素名稱衝突  
+## <a name="element-name-clashes"></a>元素名稱衝突  
  在 FOR XML 中，可以使用相同的名稱來表示兩個子元素。 例如，下列查詢會擷取產品的 ListPrice 和 DealerPrice 值，但此查詢對這兩個資料行指定相同的別名：Price。 因此，產生的資料列集將具有兩個相同名稱的資料行。  
   
-### 案例 1：兩個子元素都是相同類型的非索引鍵之索引資料行，而且可以是 NULL  
+### <a name="case-1-both-subelements-are-nonkey-columns-of-the-same-type-and-can-be-null"></a>案例 1：兩個子元素都是相同類型的非索引鍵之索引資料行，而且可以是 NULL  
  在下列查詢中，兩個子元素都是相同類型的非索引鍵之索引資料行，而且可以是 NULL。  
   
 ```  
@@ -312,7 +316,7 @@ for    XML RAW, ELEMENTS, XMLSCHEMA
   
  `</row>`  
   
-### 案例 2：類型相同的索引鍵資料行和非索引鍵之索引資料行  
+### <a name="case-2-one-key-and-one-nonkey-column-of-the-same-type"></a>案例 2：類型相同的索引鍵資料行和非索引鍵之索引資料行  
  下列查詢說明類型相同的索引鍵資料行和非索引鍵之索引資料行。  
   
 ```  
@@ -390,7 +394,7 @@ FOR XML RAW, ELEMENTS, XMLSCHEMA
   
  請注意，在內嵌 XSD 結構描述中，對應於 Col2 的 <`Col`> 元素，其 minOccurs 是設為 0。  
   
-### 案例 3：不同類型的兩個元素，及其對應資料行都可以是 NULL  
+### <a name="case-3-both-elements-of-different-types-and-corresponding-columns-can-be-null"></a>案例 3：不同類型的兩個元素，及其對應資料行都可以是 NULL  
  下列查詢是針對案例 2 所顯示的範例資料表而指定：  
   
 ```  

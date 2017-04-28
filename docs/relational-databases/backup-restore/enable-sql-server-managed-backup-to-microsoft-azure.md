@@ -1,22 +1,26 @@
 ---
 title: "啟用 SQL Server Managed Backup to Microsoft Azure | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/03/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 10/03/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 68ebb53e-d5ad-4622-af68-1e150b94516e
 caps.latest.revision: 25
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: de5d4d788520c9fd8addc98c19be11cf2361456d
+ms.lasthandoff: 04/11/2017
+
 ---
-# 啟用 SQL Server Managed Backup to Microsoft Azure
+# <a name="enable-sql-server-managed-backup-to-microsoft-azure"></a>啟用 SQL Server Managed Backup to Microsoft Azure
   本主題說明如何使用資料庫和執行個體層級的預設設定來啟用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 。 它也會說明啟用電子郵件通知以及監視備份活動的方式。  
   
  本教學課程使用 Azure PowerShell。 開始本教學課程之前，請 [下載並安裝 Azure PowerShell](http://azure.microsoft.com/en-us/documentation/articles/powershell-install-configure/)。  
@@ -24,9 +28,9 @@ caps.handback.revision: 25
 > [!IMPORTANT]  
 >  如果您也想要啟用進階選項或使用自訂排程，則在啟用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]之前，需先進行這些設定。 如需詳細資訊，請參閱 [Configure Advanced Options for SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md)。  
   
-## 啟用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 並使用預設值進行設定  
+## <a name="enable-and-configure-includesssmartbackupincludesss-smartbackup-mdmd-with-default-settings"></a>啟用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 並使用預設值進行設定  
   
-#### 建立 Azure Blob 容器  
+#### <a name="create-the-azure-blob-container"></a>建立 Azure Blob 容器  
   
 1.  **註冊 Azure：** 如果您已經有 Azure 訂用帳戶，請移至下一個步驟。 否則，您可以開始使用 [免費試用版](http://azure.microsoft.com/pricing/free-trial/) 或瀏覽 [購買選項](http://azure.microsoft.com/pricing/purchase-options/)。  
   
@@ -45,7 +49,7 @@ caps.handback.revision: 25
     New-AzureStorageContainer -Name backupcontainer -Context $context  
     ```  
   
-4.  **產生共用存取簽章 (SAS)：**若要存取此容器，您必須建立 SAS。 您可以在某些工具、程式碼和 Azure PowerShell 中完成此動作。 下列 `New-AzureStorageContainerSASToken` 命令可為一年內過期的 `backupcontainer` Blob 容器建立 SAS 權杖。  
+4.  **產生共用存取簽章 (SAS)：** 若要存取此容器，您必須建立 SAS。 您可以在某些工具、程式碼和 Azure PowerShell 中完成此動作。 下列 `New-AzureStorageContainerSASToken` 命令可為一年內過期的 `backupcontainer` Blob 容器建立 SAS 權杖。  
   
     ```powershell  
     $context = New-AzureStorageContext -StorageAccountName managedbackupstorage -StorageAccountKey (Get-AzureStorageKey -StorageAccountName managedbackupstorage).Primary   
@@ -67,7 +71,7 @@ caps.handback.revision: 25
   
      記下容器 URL 和 SAS，以便在建立 SQL 認證時使用。 如需 SAS 的詳細資訊，請參閱 [共用存取簽章，第 1 部分：了解 SAS 模型](http://azure.microsoft.com/en-us/documentation/articles/storage-dotnet-shared-access-signature-part-1/)。  
   
-#### 啟用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]  
+#### <a name="enable-includesssmartbackupincludesss-smartbackup-mdmd"></a>啟用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]  
   
 1.  **建立適用於 SAS URL 的 SQL 認證︰** 使用 SAS 權杖來建立適用於 Blob 容器 URL 的 SQL 認證。 在 SQL Server Management Studio 中，使用下列 TRANSACT-SQL 查詢，根據下列範例來建立適用於 Blob 容器 URL 的認證：  
   
@@ -84,7 +88,7 @@ caps.handback.revision: 25
 4.  **Enable and configure [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] ：** 啟動 SQL Server Management Studio 並連接到目標 SQL Server 執行個體。 在您根據每個需求修改資料庫名稱、容器 URL及保留週期的值之後，從查詢視窗中執行下列陳述式：  
   
     > [!IMPORTANT]  
-    >  若要在執行個體層級啟用受管理的備份，請針對 `database_name` 參數指定 `NULL`。  
+    >  若要在執行個體層級啟用受管理的備份，請針對 `NULL` 參數指定 `database_name` 。  
   
     ```tsql  
     Use msdb;  
@@ -99,7 +103,7 @@ caps.handback.revision: 25
   
      [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 已在您指定的資料庫上啟用。 資料庫上的備份作業可能需要 15 分鐘才會開始執行。  
   
-5.  **檢閱擴充事件預設組態：**執行下列 Transact-SQL 陳述式，以檢閱擴充事件設定。  
+5.  **檢閱擴充事件預設組態：** 執行下列 Transact-SQL 陳述式，以檢閱擴充事件設定。  
   
     ```  
     SELECT * FROM msdb.managed_backup.fn_get_current_xevent_settings()  
@@ -113,7 +117,7 @@ caps.handback.revision: 25
   
     2.  設定 SQL Server Agent 通知使用 Database Mail。 如需詳細資訊，請參閱 [Configure SQL Server Agent Mail to Use Database Mail](../../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md)。  
   
-    3.  **啟用電子郵件通知，以接收備份錯誤及警告：**在查詢視窗中，執行下列 Transact-SQL 陳述式：  
+    3.  **啟用電子郵件通知，以接收備份錯誤及警告：** 在查詢視窗中，執行下列 Transact-SQL 陳述式：  
   
         ```  
         EXEC msdb.managed_backup.sp_set_parameter  
@@ -124,7 +128,7 @@ caps.handback.revision: 25
   
 7.  **檢視 Microsoft Azure 儲存體帳戶中的備份檔案：** 從 SQL Server Management Studio 或 Azure 管理入口網站連接至儲存體帳戶。 您將會看到指定容器中的所有備份檔案。 請注意，您可能會在針對資料庫啟用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 的 5 分鐘內，看到資料庫和記錄備份。  
   
-8.  **監視健全狀態：**您可以透過先前設定的電子郵件通知進行監視，或主動監視記錄的事件。 以下是用於檢視事件的一些 Transact-SQL 陳述式範例：  
+8.  **監視健全狀態：**  您可以透過先前設定的電子郵件通知進行監視，或主動監視記錄的事件。 以下是用於檢視事件的一些 Transact-SQL 陳述式範例：  
   
     ```  
     --  view all admin events  
@@ -171,9 +175,10 @@ caps.handback.revision: 25
   
     ```  
   
- 本節所描述的步驟是針對第一次在資料庫上設定 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]。 您可以使用相同的系統預存程序來修改現有的組態並提供新值。  
+ 本節所描述的步驟是針對第一次在資料庫上設定 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 。 您可以使用相同的系統預存程序來修改現有的組態並提供新值。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
   
   
+

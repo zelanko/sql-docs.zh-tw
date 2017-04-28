@@ -1,27 +1,31 @@
 ---
 title: "SQL:StmtRecompile 事件類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQL:StmtRecompile 事件類別"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL:StmtRecompile event class
 ms.assetid: 3a134751-3e93-4fe8-bf22-1e0561189293
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: dfed0cde775d2274f6a9e09e6f9dc43a9e5def23
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL:StmtRecompile 事件類別
+# <a name="sqlstmtrecompile-event-class"></a>SQL:StmtRecompile 事件類別
   SQL:StmtRecompile 事件類別表示所有批次類型造成的陳述式層級重新編譯：預存程序、觸發程序、特定批次及查詢。 使用 sp_executesql、動態 SQL、Prepare 方法、Execute 方法或類似介面可以提交查詢。 應該使用 SQL:StmtRecompile 事件類別來取代 SP:Recompile 事件類別。  
   
-## SQL:StmtRecompile 事件類別資料行  
+## <a name="sqlstmtrecompile-event-class-data-columns"></a>SQL:StmtRecompile 事件類別資料行  
   
 |資料行名稱|資料類型|描述|資料行識別碼|可篩選|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -47,7 +51,7 @@ caps.handback.revision: 17
 |Offset|**int**|預存程序或批次內造成重新編譯之陳述式的起始位移。|61|是|  
 |RequestID|**int**|包含陳述式之要求的識別碼。|49|是|  
 |ServerName|**nvarchar**|被追蹤的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 名稱。|26|否|  
-|SessionLoginName|**nvarchar**|引發工作階段之使用者的登入名稱。 例如，如果您使用 Login1 連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，並以 Login2 身分執行陳述式，則 SessionLoginName 將顯示 Login1 而 LoginName 則顯示 Login2。 此資料行將同時顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 登入。|64|是|  
+|SessionLoginName|**nvarchar**|引發工作階段之使用者的登入名稱。 例如，如果您使用 Login1 連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，並以 Login2 身分執行陳述式，則 SessionLoginName 將顯示 Login1 而 LoginName 則顯示 Login2。 此資料行將同時顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 登入。|64|是|  
 |SPID|**int**|連接的伺服器處理序識別碼。|12|是|  
 |SqlHandle|**varbinary**|這是一個 64 位元雜湊，以隨選查詢的文字或 SQL 物件的資料庫和物件識別碼為基礎。 這個值可以傳給 sys.dm_exec_sql_text()，以便擷取相關聯的 SQL 文字。|63|否|  
 |StartTime|**datetime**|事件啟動的時間 (如果有的話)。|14|是|  
@@ -55,7 +59,7 @@ caps.handback.revision: 17
 |TransactionID|**bigint**|由系統指派給交易的識別碼。|4|是|  
 |XactSequence|**bigint**|描述目前交易的 Token。|50|是|  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [SP:Recompile 事件類別](../../relational-databases/event-classes/sp-recompile-event-class.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   

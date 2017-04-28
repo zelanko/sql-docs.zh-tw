@@ -1,34 +1,38 @@
 ---
 title: "線上索引作業如何運作 | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "線上索引作業"
-  - "來源索引 [SQL Server]"
-  - "預先存在的索引 [SQL Server]"
-  - "目標索引 [SQL Server]"
-  - "暫存對應索引 [SQL Server]"
-  - "索引暫存對應 [SQL Server]"
+ms.custom: 
+ms.date: 02/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- online index operations
+- source indexes [SQL Server]
+- preexisting indexes [SQL Server]
+- target indexes [SQL Server]
+- temporary mapping index [SQL Server]
+- index temporary mappings [SQL Server]
 ms.assetid: eef0c9d1-790d-46e4-a758-d0bf6742e6ae
 caps.latest.revision: 28
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 838a02643b47162d767e8f3b4191e5e3796adf57
+ms.lasthandoff: 04/11/2017
+
 ---
-# 線上索引作業如何運作
+# <a name="how-online-index-operations-work"></a>線上索引作業如何運作
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   此主題定義線上索引作業期間存在的結構，以及顯示有關這些結構的活動。  
   
-## 線上索引結構  
+## <a name="online-index-structures"></a>線上索引結構  
  為了在索引資料定義語言 (DDL) 的作業期間允許並行的使用者活動，線上索引作業期間會使用下列結構：來源和預先存在的索引、目標，以及用於在線上重建堆積或卸除叢集索引的暫存對應索引。  
   
 -   **來源和預先存在的索引**  
@@ -39,7 +43,7 @@ caps.handback.revision: 28
   
 -   **Target**  
   
-     目標是新的索引 (堆積) 或是一組要建立或重建的新索引。 使用者對來源所進行的插入、更新和刪除作業，會由 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 在索引作業期間套用到目標。 例如，如果線上索引作業要重建叢集索引，目標就是重建的叢集索引；[!INCLUDE[ssDE](../../includes/ssde-md.md)] 重建叢集索引時，不會重建非叢集索引。  
+     目標是新的索引 (堆積) 或是一組要建立或重建的新索引。 使用者對來源所進行的插入、更新和刪除作業，會由 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 在索引作業期間套用到目標。 例如，如果線上索引作業要重建叢集索引，目標就是重建的叢集索引； [!INCLUDE[ssDE](../../includes/ssde-md.md)] 重建叢集索引時，不會重建非叢集索引。  
   
      處理 SELECT 陳述式時，要到索引作業認可之後才會搜尋目標索引。 索引在內部是標示為唯寫。  
   
@@ -47,14 +51,14 @@ caps.handback.revision: 28
   
      建立、卸除或重新叢集索引的線上索引作業，也需要暫存對應索引。 此暫存索引是由並行的交易所使用，以判斷基礎資料表中的資料列被更新或刪除時，要在重建的新索引中刪除哪一筆記錄。 此非叢集索引會以和新叢集索引 (或堆積) 相同的步驟建立，不需要個別的排序作業。 並行交易也可在所有的插入、更新和刪除作業中維護暫存對應索引。  
   
-## 線上索引活動  
+## <a name="online-index-activities"></a>線上索引活動  
  在簡單的線上索引作業期間，例如在沒有索引的資料表 (堆積) 上建立叢集索引，來源和目標會經歷三個階段：準備、建立和完成。  
   
  下圖顯示在線上建立初始叢集索引的過程。 來源物件 (堆積) 沒有其他的索引。 每一個階段都會顯示來源和目標結構活動；也會顯示並行使用者選取、插入、更新和刪除作業。 準備、建立和完成階段會以每個階段使用的鎖定模式一起指示。  
   
  ![在線上索引作業期間執行的活動](../../relational-databases/indexes/media/online-index.gif "在線上索引作業期間執行的活動")  
   
-## 來源結構活動  
+## <a name="source-structure-activities"></a>來源結構活動  
  下表列出索引作業每個階段中，與來源結構有關的活動，以及對應的鎖定策略。  
   
 |階段|來源活動|來源鎖定|  
@@ -69,7 +73,7 @@ caps.handback.revision: 28
   
  上表顯示在牽涉單一索引的線上索引作業建立階段期間所獲得的單一共用 (S) 鎖定。 建立或重建叢集和非叢集索引時，在單一線上索引作業中 (例如在包含一個或多個非叢集索引的資料表上建立初始叢集索引期間)，建立階段期間會先獲得兩個短時間的 S 鎖定，然後是長時間的意圖共用 (IS) 鎖定。 建立叢集索引會先獲得一個 S 鎖定，然後建立叢集索引完成時，就會獲得第二個短時間的 S 鎖定，以建立非叢集索引。 建立非叢集索引之後，S 鎖定就會降級為 IS 鎖定，直到線上索引作業的完成階段為止。  
   
-### 目標結構活動  
+### <a name="target-structure-activities"></a>目標結構活動  
  下表列出索引作業每個階段中，與目標結構有關的活動，以及對應的鎖定策略。  
   
 |階段|目標活動|目標鎖定|  
@@ -84,9 +88,10 @@ caps.handback.revision: 28
   
  與線上索引作業有關的資料表，其宣告的資料指標存留時間會受到線上索引階段的限制。 在每一個階段中，更新資料指標都是無效的。 而只有在完成階段之後，唯讀資料指標才會無效。  
   
-## 相關內容  
+## <a name="related-content"></a>相關內容  
  [線上執行索引作業](../../relational-databases/indexes/perform-index-operations-online.md)  
   
  [線上索引作業的指導方針](../../relational-databases/indexes/guidelines-for-online-index-operations.md)  
   
   
+

@@ -1,27 +1,31 @@
 ---
 title: "啟用或停用計畫指南 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-plan-guides"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "計劃指南 [SQL Server], 停用"
-  - "啟用計畫指南"
-  - "計劃指南 [SQL Server], 啟用"
-  - "停用計畫指南"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-plan-guides
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- plan guides [SQL Server], disabling
+- enabling plan guides
+- plan guides [SQL Server], enabling
+- disabling plan guides
 ms.assetid: b00ab550-5308-4cb8-8330-483cd1d25654
 caps.latest.revision: 6
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c1d76a7087ce1225c2ae3f4f685cb234b53dbf0b
+ms.lasthandoff: 04/11/2017
+
 ---
-# 啟用或停用計畫指南
+# <a name="enable-or-disable-a-plan-guide"></a>啟用或停用計畫指南
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中停用和啟用計畫指南。 您可以啟用或停用資料庫中的單一計畫指南或所有計畫指南。  
   
  **本主題內容**  
@@ -53,7 +57,7 @@ caps.handback.revision: 6
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 若要停用或啟用計畫指南  
+#### <a name="to-disable-or-enable-a-plan-guide"></a>若要停用或啟用計畫指南  
   
 1.  按一下加號，展開您要在其中停用或啟用計畫指南的資料庫，然後按一下加號展開 **[可程式性]** 資料夾。  
   
@@ -63,7 +67,7 @@ caps.handback.revision: 6
   
 4.  在 **[停用計畫指南]** 或 **[啟用計畫指南]** 對話方塊中，確認選擇的動作已成功，然後按一下 **[關閉]**。  
   
-#### 若要停用或啟用資料庫中的所有計畫指南  
+#### <a name="to-disable-or-enable-all-plan-guides-in-a-database"></a>若要停用或啟用資料庫中的所有計畫指南  
   
 1.  按一下加號，展開您要在其中停用或啟用計畫指南的資料庫，然後按一下加號展開 **[可程式性]** 資料夾。  
   
@@ -73,7 +77,7 @@ caps.handback.revision: 6
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 若要停用或啟用計畫指南  
+#### <a name="to-disable-or-enable-a-plan-guide"></a>若要停用或啟用計畫指南  
   
 1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
@@ -117,7 +121,7 @@ caps.handback.revision: 6
   
     ```  
   
-#### 若要停用或啟用資料庫中的所有計畫指南  
+#### <a name="to-disable-or-enable-all-plan-guides-in-a-database"></a>若要停用或啟用資料庫中的所有計畫指南  
   
 1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   

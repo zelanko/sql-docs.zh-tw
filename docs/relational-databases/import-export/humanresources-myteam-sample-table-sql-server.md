@@ -1,30 +1,34 @@
 ---
 title: "HumanResources.myTeam 範例資料表 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-bulk-import-export"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "myTeam 範例資料表 [SQL Server]"
-  - "大量匯入 [SQL Server], 範例"
-  - "大量匯出 [SQL Server], 範例"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-bulk-import-export
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- myTeam sample table [SQL Server]
+- bulk importing [SQL Server], examples
+- bulk exporting [SQL Server], examples
 ms.assetid: 27da45a0-c1f4-4bf4-ab24-6196e80d3834
 caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: dd4e971fa001faeafd26468a80e9a95f18dc261e
+ms.lasthandoff: 04/11/2017
+
 ---
-# HumanResources.myTeam 範例資料表 (SQL Server)
-  [匯入和匯出大量資料](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)中有許多程式碼範例都需要一個特殊用途的測試資料表，此資料表名為 **myTeam**。 執行這些範例前，您必須先在 **資料庫的** HumanResources **結構描述中建立** myTeam [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料表。  
+# <a name="humanresourcesmyteam-sample-table-sql-server"></a>HumanResources.myTeam 範例資料表 (SQL Server)
+  [匯入和匯出大量資料](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md) 中有許多程式碼範例都需要一個特殊用途的測試資料表，此資料表名為 **myTeam**。 執行這些範例前，您必須先在 **資料庫的** HumanResources **結構描述中建立** myTeam [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料表。  
   
 > [!NOTE]  
->  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 是 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的其中一個範例資料庫。  
+>  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 是 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的其中一個範例資料庫。  
   
  **myTeam** 資料表包含下列資料行。  
   
@@ -70,7 +74,7 @@ caps.handback.revision: 35
     > [!NOTE]  
     >  這些陳述式會略過第四個資料行 `Background`。 這有預設值。 略過這個資料行會造成這個 `INSERT` 陳述式將該資料行保留為空白。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [資料的大量匯入及匯出 &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)  
   
   

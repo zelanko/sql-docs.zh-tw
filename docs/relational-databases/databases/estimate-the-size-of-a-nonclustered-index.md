@@ -1,31 +1,35 @@
 ---
 title: "估計非叢集索引的大小 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/13/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "空間配置 [SQL Server], 索引大小"
-  - "大小 [SQL Server], 資料表"
-  - "預測資料表大小 [SQL Server]"
-  - "資料表大小 [SQL Server]"
-  - "估計資料表大小"
-  - "叢集索引, 資料表大小"
-  - "設計資料庫 [SQL Server], 估計大小"
-  - "計算資料表大小"
+ms.custom: 
+ms.date: 03/13/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- space allocation [SQL Server], index size
+- size [SQL Server], tables
+- predicting table size [SQL Server]
+- table size [SQL Server]
+- estimating table size
+- clustered indexes, table size
+- designing databases [SQL Server], estimating size
+- calculating table size
 ms.assetid: c183b0e4-ef4c-4bfc-8575-5ac219c25b0a
 caps.latest.revision: 40
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 40
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8302d2481e9fe2f6d47c87e2fbc9accd2e3c560d
+ms.lasthandoff: 04/11/2017
+
 ---
-# 估計非叢集索引的大小
+# <a name="estimate-the-size-of-a-nonclustered-index"></a>估計非叢集索引的大小
   請遵循下列步驟來估計儲存非叢集索引所需的空間量：  
   
 1.  計算步驟 2 和 3 中所使用的變數。  
@@ -36,24 +40,24 @@ caps.handback.revision: 40
   
 4.  加總計算的值。  
   
-## 步驟 1： 計算步驟 2 和 3 中所使用的變數  
+## <a name="step-1-calculate-variables-for-use-in-steps-2-and-3"></a>步驟 1： 計算步驟 2 和 3 中所使用的變數  
  您可以使用下列步驟來計算變數，以便用於估計儲存索引較高層級所需的空間量。  
   
 1.  指定資料表中將會有的資料列數目：  
   
-     ***Num_Rows*** = 資料表中的資料列數目  
+     ***Num_Rows***  = 資料表中的資料列數目  
   
 2.  指定索引鍵中固定長度和可變長度資料行的數目，並計算儲存它們所需的空間：  
   
      索引的索引鍵資料行可以包含固定長度和可變長度的資料行。 若要估計內部層級的索引資料列大小，請計算這些資料行群組在索引資料列中佔用的空間。 資料行的大小取決於資料類型和長度規格。  
   
-     ***Num_Key_Cols*** = 索引鍵資料行 (固定長度和可變長度) 總數  
+     ***Num_Key_Cols***  = 索引鍵資料行 (固定長度和可變長度) 總數  
   
-     ***Num_Key_Cols*** = 所有固定長度索引鍵資料行的總位元組大小  
+     ***Num_Key_Cols***  = 所有固定長度索引鍵資料行的總位元組大小  
   
-     ***Num_Variable_Key_Cols*** = 可變長度索引鍵資料行的數目  
+     ***Num_Variable_Key_Cols***  = 可變長度索引鍵資料行的數目  
   
-     ***Max_Var_Key_Size*** = 所有可變長度索引鍵資料行的最大位元組大小  
+     ***Max_Var_Key_Size***  = 所有可變長度索引鍵資料行的最大位元組大小  
   
 3.  如果索引不是唯一的，就需說明資料列定位器：  
   
@@ -107,16 +111,16 @@ caps.handback.revision: 40
   
      由於索引資料列並不會跨越分頁，因此每個分頁索引資料列的數目應該捨去小數，而取最接近的整數列數。 公式中的 2 是給分頁位置陣列中的該資料列項目。  
   
-## 步驟 2： 計算在分葉層級中儲存索引資訊所用的空間  
+## <a name="step-2-calculate-the-space-used-to-store-index-information-in-the-leaf-level"></a>步驟 2： 計算在分葉層級中儲存索引資訊所用的空間  
  您可以使用下列步驟來估計儲存索引分葉層級所需的空間量。 您將需要步驟 1 中所保留的值以計算此步驟。  
   
 1.  指定在分葉層級的固定長度和可變長度的資料行數目，並計算儲存它們所需的空間：  
   
     > [!NOTE]  
-    >  除了索引鍵資料行之外，包含非索引鍵資料行將可擴充非叢集索引。 這些額外的資料行只會儲存在非叢集索引的分葉層級。 如需詳細資訊，請參閱[建立內含資料行的索引](../../relational-databases/indexes/create-indexes-with-included-columns.md)。  
+    >  除了索引鍵資料行之外，包含非索引鍵資料行將可擴充非叢集索引。 這些額外的資料行只會儲存在非叢集索引的分葉層級。 如需詳細資訊，請參閱 [建立內含資料行的索引](../../relational-databases/indexes/create-indexes-with-included-columns.md)。  
   
     > [!NOTE]  
-    >  您可以結合使定義的資料表總寬度超過 8,060 個位元組的 **varchar**、**nvarchar**、**varbinary** 或**sql_variant** 資料行。 這些資料行的每個長度必須仍然在 **varchar**、**varbinary** 或**sql_variant** 資料行的 8,000 個位元組限制內，以及 **nvarchar** 資料行的 4,000 個位元組限制。 然而，結合的寬度可能超過資料表中 8,060 位元組的限制。 這也適用於已包含資料行的非叢集索引分葉資料列。  
+    >  您可以結合使定義的資料表總寬度超過 8,060 個位元組的 **varchar**、 **nvarchar**、 **varbinary**或 **sql_variant** 資料行。 這些資料行的每個長度必須仍然在 **varchar**、 **varbinary**或 **sql_variant** 資料行的 8,000 個位元組限制內，以及 **nvarchar** 資料行的 4,000 個位元組限制。 然而，結合的寬度可能超過資料表中 8,060 位元組的限制。 這也適用於已包含資料行的非叢集索引分葉資料列。  
   
      如果非叢集索引沒有任何內含的資料行，請使用步驟 1 的值，包含步驟 1、3 中所決定的任何修改：  
   
@@ -204,7 +208,7 @@ caps.handback.revision: 40
   
      ***Leaf_Space_Used***  = 8192 x ***Num_Leaf_Pages***  
   
-## 步驟 3： 計算在非分葉層級中儲存索引資訊所用的空間  
+## <a name="step-3-calculate-the-space-used-to-store-index-information-in-the-non-leaf-levels"></a>步驟 3： 計算在非分葉層級中儲存索引資訊所用的空間  
  請遵循下列步驟來估計儲存索引之中繼和根層級所需的空間量。 您將需要步驟 2 和 3 中所保留的值來完成此步驟。  
   
 1.  計算索引中的非分葉層級數目：  
@@ -227,7 +231,7 @@ caps.handback.revision: 40
   
      ***Index_Space_Used***  = 8192 x ***Num_Index_Pages***  
   
-## 步驟 4： 加總計算的值  
+## <a name="step-4-total-the-calculated-values"></a>步驟 4： 加總計算的值  
  將前兩個步驟所取得的值加總：  
   
  非叢集索引大小 (位元組) = ***Leaf_Space_Used*** + ***Index_Space_used***  
@@ -244,7 +248,7 @@ caps.handback.revision: 40
   
 -   大型物件 (LOB) 值  
   
-     決定到底要使用多少空間來儲存 LOB 資料類型 **varchar(max)**、**varbinary(max)**、**nvarchar(max)**、**text**、**ntext**、**xml** 和 **image** 值的演算法是很複雜的。 只要加上預期的 LOB 值平均大小，乘以 ***Num_Rows***，再將此值加上非叢集索引總大小，這就足夠。  
+     決定到底要使用多少空間來儲存 LOB 資料類型 **varchar(max)**、 **varbinary(max)**、 **nvarchar(max)**、 **text**、 **ntext**、 **xml**和 **image** 值的演算法是很複雜的。 只要加上預期的 LOB 值平均大小，乘以 ***Num_Rows***，再將此值加上非叢集索引總大小，這就足夠。  
   
 -   壓縮  
   
@@ -254,7 +258,7 @@ caps.handback.revision: 40
   
      如需有關疏鬆資料行空間需求的詳細資訊，請參閱＜ [Use Sparse Columns](../../relational-databases/tables/use-sparse-columns.md)＞。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [叢集與非叢集索引說明](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md)   
  [建立非叢集索引](../../relational-databases/indexes/create-nonclustered-indexes.md)   
  [建立叢集索引](../../relational-databases/indexes/create-clustered-indexes.md)   

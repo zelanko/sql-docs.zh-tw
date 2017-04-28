@@ -1,29 +1,33 @@
 ---
 title: "啟用資源管理員 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "資源管理員, 啟用"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Resource Governor, enabling
 ms.assetid: 4d17af53-cf11-4ce4-aab4-deda94a49836
 caps.latest.revision: 12
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d4bcec1331a7878bf261aea8923fa8f8e66e7299
+ms.lasthandoff: 04/11/2017
+
 ---
-# 啟用資源管理員
+# <a name="enable-resource-governor"></a>啟用資源管理員
   預設會關閉資源管理員。 您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 Transact-SQL 啟用資源管理員。  
   
--   **開始之前：**  [限制事項](#LimitationsRestrictions)、 [權限](#Permissions)  
+-   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
--   **使用下列項目啟用資源管理員：**  [物件總管](#RGOnObjEx)、[資源管理員屬性](#RGOnProp)、[Transact-SQL](#RGOnTSQL)  
+-   **To enable Resource Governorn, using:**  [Object Explorer](#RGOnObjEx), [Resource Governor Properties](#RGOnProp), [Transact-SQL](#RGOnTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
  啟用資源管理員會產生下列結果：  
@@ -61,7 +65,7 @@ caps.handback.revision: 12
   
 1.  執行 **ALTER RESOURCE GOVERNOR RECONFIGURE** 陳述式。  
   
-### 範例 (Transact-SQL)  
+### <a name="example-transact-sql"></a>範例 (Transact-SQL)  
  下列範例會啟用資源管理員。  
   
 ```  
@@ -69,8 +73,8 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-## 另請參閱  
- [資源管理員](../../relational-databases/resource-governor/resource-governor.md)   
+## <a name="see-also"></a>另請參閱  
+ [[資源管理員]](../../relational-databases/resource-governor/resource-governor.md)   
  [停用資源管理員](../../relational-databases/resource-governor/disable-resource-governor.md)   
  [資源管理員資源集區](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
  [資源管理員工作負載群組](../../relational-databases/resource-governor/resource-governor-workload-group.md)   

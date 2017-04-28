@@ -1,33 +1,37 @@
 ---
 title: "加密階層 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "加密 [SQL Server], 階層"
-  - "加密 [SQL Server], 階層"
-  - "加密金鑰 [SQL Server]"
-  - "安全性 [SQL Server], 加密"
-  - "階層 [SQL Server], 加密"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- encryption [SQL Server], hierarchies
+- cryptography [SQL Server], hierarchies
+- encryption keys [SQL Server]
+- security [SQL Server], encryption
+- hierarchies [SQL Server], encryption
 ms.assetid: 96c276d5-1bba-4e95-b678-10f059f1fbcf
 caps.latest.revision: 41
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 93c2bdc00890de016ad26a45786e2d3a9fef9c33
+ms.lasthandoff: 04/11/2017
+
 ---
-# 加密階層
+# <a name="encryption-hierarchy"></a>加密階層
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會使用階層式加密與金鑰管理基礎結構來加密資料。 在某一階層執行加密時，會使用憑證、非對稱金鑰、對稱金鑰的組合來加密該階層下的所有階層。 非對稱金鑰和對稱金鑰可以儲存在可延伸金鑰管理 (EKM) 模組內 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的外部。  
   
  下圖顯示每一層的加密階層為該層以下的所有階層進行加密，並顯示最常見的加密組態。 階層開始的存取通常受到密碼保護。  
   
- ![在堆疊中顯示部分加密組合](../../../relational-databases/security/encryption/media/encryption-hierarchy-stack.gif "在堆疊中顯示部分加密組合")  
+ ![在堆疊中顯示部分加密組合。](../../../relational-databases/security/encryption/media/encryption-hierarchy-stack.gif "在堆疊中顯示部分加密組合。")  
   
  請記住以下概念：  
   
@@ -45,15 +49,15 @@ caps.handback.revision: 41
   
  下圖以其他方式顯示相同的資訊。  
   
- ![在滾輪中顯示部分加密組合](../../../relational-databases/security/encryption/media/encryption-hierarchy-wheel.gif "在滾輪中顯示部分加密組合")  
+ ![在堆疊中顯示部分加密組合。](../../../relational-databases/security/encryption/media/encryption-hierarchy-wheel.gif "在堆疊中顯示部分加密組合。")  
   
  此圖說明下列其他概念：  
   
 -   在此圖中，箭號表示常見的加密階層。  
   
--   EKM 中的對稱和非對稱金鑰可以保護 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 內儲存之對稱和非對稱金鑰的存取。 與 EKM 相關的虛線表示 EKM 內的金鑰可以取代 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 內儲存的對稱和非對稱金鑰。  
+-   EKM 中的對稱和非對稱金鑰可以保護 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]內儲存之對稱和非對稱金鑰的存取。 與 EKM 相關的虛線表示 EKM 內的金鑰可以取代 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]內儲存的對稱和非對稱金鑰。  
   
-## 加密機制  
+## <a name="encryption-mechanisms"></a>加密機制  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 提供下列加密機制：  
   
 -   [!INCLUDE[tsql](../../../includes/tsql-md.md)] 函數  
@@ -66,10 +70,10 @@ caps.handback.revision: 41
   
 -   透明資料加密  
   
-### Transact-SQL 函數  
+### <a name="transact-sql-functions"></a>Transact-SQL 函數  
  當使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 函數插入或更新個別項目時，可以進行加密。 如需詳細資訊，請參閱 [ENCRYPTBYPASSPHRASE &#40;Transact-SQL&#41;](../../../t-sql/functions/encryptbypassphrase-transact-sql.md) 和 [DECRYPTBYPASSPHRASE &#40;Transact-SQL&#41;](../../../t-sql/functions/decryptbypassphrase-transact-sql.md)。  
   
-### 憑證  
+### <a name="certificates"></a>憑證  
  「公開金鑰憑證」(通常只簡稱為「憑證」) 是經過數位簽署的聲明，憑證會將公開金鑰的值繫結到擁有對應私密金鑰之人員、裝置或服務的識別。 憑證是由憑證授權單位 (CA) 所發行與簽署。 收到 CA 發行之憑證的實體稱為憑證的主體。 一般而言，憑證中包含下列資訊。  
   
 -   主體的公開金鑰。  
@@ -94,21 +98,21 @@ caps.handback.revision: 41
   
  由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 建立的自行簽署憑證遵循 X.509 標準，且支援 X.509 v1 欄位。  
   
-### 非對稱金鑰  
- 非對稱金鑰是由私密金鑰與對應的公開金鑰所組成。 每個金鑰都可以用來解密由另一個金鑰所加密的資料。 非對稱加密與解密非常耗資源，但能提供比對稱加密更好的安全性層級。  非對稱金鑰可用來加密對稱金鑰以儲存在資料庫中。  
+### <a name="asymmetric-keys"></a>非對稱金鑰  
+ 非對稱金鑰是由私密金鑰與對應的公開金鑰所組成。 每個金鑰都可以用來解密由另一個金鑰所加密的資料。 非對稱加密與解密非常耗資源，但能提供比對稱加密更好的安全性層級。 非對稱金鑰可用來加密對稱金鑰以儲存在資料庫中。  
   
-### 對稱金鑰  
+### <a name="symmetric-keys"></a>對稱金鑰  
  對稱金鑰是用來加密與解密的一個金鑰。 使用對稱金鑰來加密與解密非常快速，且適合用來針對資料庫中的機密資料進行日常加密。  
   
-### 透明資料加密  
+### <a name="transparent-data-encryption"></a>透明資料加密  
  透明資料加密 (TDE) 是使用對稱金鑰的特殊加密案例。 TDE 會使用稱為資料庫加密金鑰的對稱金鑰加密整個資料庫。 資料庫加密金鑰受到其他金鑰或憑證的保護，這些金鑰或憑證則受到資料庫主要金鑰或是儲存於 EKM 模組內的非對稱金鑰的保護。 如需詳細資訊，請參閱[透明資料加密 &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption-tde.md)。  
   
-## 相關內容  
+## <a name="related-content"></a>相關內容  
  [保護 SQL Server 的安全](../../../relational-databases/security/securing-sql-server.md)  
   
  [安全性函數 &#40;Transact-SQL&#41;](../../../t-sql/functions/security-functions-transact-sql.md)  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [權限階層 &#40;Database Engine&#41;](../../../relational-databases/security/permissions-hierarchy-database-engine.md)   
  [安全性實體](../../../relational-databases/security/securables.md)  
   

@@ -1,29 +1,33 @@
 ---
 title: "啟用及設定 FILESTREAM | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FILESTREAM [SQL Server], 啟用"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FILESTREAM [SQL Server], enabling
 ms.assetid: 78737e19-c65b-48d9-8fa9-aa6f1e1bce73
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 7bee35abc8b2c450a9bd1badb89b18eb31128be8
+ms.lasthandoff: 04/11/2017
+
 ---
-# 啟用及設定 FILESTREAM
-  在您開始使用 FILESTREAM 之前，必須先在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體上啟用 FILESTREAM。 此主題描述如何使用 SQL Server 組態管理員來啟用 FILESTREAM。  
+# <a name="enable-and-configure-filestream"></a>啟用及設定 FILESTREAM
+  在您開始使用 FILESTREAM 之前，必須先在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]執行個體上啟用 FILESTREAM。 此主題描述如何使用 SQL Server 組態管理員來啟用 FILESTREAM。  
   
 ##  <a name="enabling"></a> 啟用 FILESTREAM  
   
-#### 若要啟用和變更 FILESTREAM 設定  
+#### <a name="to-enable-and-change-filestream-settings"></a>若要啟用和變更 FILESTREAM 設定  
   
 1.  指向 [開始] 功能表上的 [所有程式]，然後依序指向 [[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]] 和 [組態工具]，再按一下 [SQL Server 組態管理員]。  
   
@@ -56,7 +60,6 @@ caps.handback.revision: 24
   
 13. 重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務。  
   
- [本主題內容](#TOP)  
   
 ##  <a name="best"></a> 最佳作法  
   
@@ -69,7 +72,7 @@ caps.handback.revision: 24
   
 -   使用 64-KB NTFS 叢集。 壓縮的磁碟區必須設定為 4-KB NTFS 叢集。  
   
--   停用 FILESTREAM 磁碟區上的索引，並設定 **disablelastaccess**。若要設定 **disablelastaccess**，請使用 Windows **fsutil** 公用程式。  
+-   停用 FILESTREAM 磁碟區上的索引，並設定 **disablelastaccess** 。若要設定 **disablelastaccess**，請使用 Windows **fsutil** 公用程式。  
   
 -   在必要的情況下，停用 FILESTREAM 磁碟區的防毒掃描。 如果防毒掃描是必要的功能，請避免設定自動刪除違規檔案的原則。  
   
@@ -82,14 +85,13 @@ caps.handback.revision: 24
 |RAID 0|非常好|非常好|無||  
 |RAID 5 + 條狀配置|非常好|非常好|非常好|成本最高的選項。|  
   
- [本主題內容](#TOP)  
   
 ###  <a name="database"></a> 實體資料庫設計  
  當您設計 FILESTREAM 資料庫時，請考慮下列指導方針：  
   
 -   FILESTREAM 資料行必須附帶對應的 **uniqueidentifier**ROWGUID 資料行。 這些種類的資料表也必須附帶唯一的索引。 一般而言，這個索引不是叢集索引。 如果資料庫商務邏輯需要叢集索引，您就必須確定儲存在索引中的值不是隨機的。 隨機值將會導致每次在資料表中加入或移除資料列時，重新排列索引。  
   
--   基於效能考量，FILESTREAM 檔案群組和容器應該位於作業系統、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記錄、tempdb 或分頁檔以外的磁碟區上。  
+-   基於效能考量，FILESTREAM 檔案群組和容器應該位於作業系統、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記錄、tempdb 或分頁檔以外的磁碟區上。  
   
 -   FILESTREAM 無法直接支援空間管理和原則。 不過，您可以透過將每個 FILESTREAM 檔案群組指派至個別的磁碟區，並使用磁碟區的管理功能，以間接方式管理空間和套用原則。  
   

@@ -1,26 +1,30 @@
 ---
-title: "MSSQL_ENG014114 | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/26/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "MSSQL_ENG014114 錯誤"
+title: MSSQL_ENG014114 | Microsoft Docs
+ms.custom: 
+ms.date: 08/26/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- MSSQL_ENG014114 error
 ms.assetid: f5f04590-e1c6-40d8-ab2b-98c791a0fc44
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0e2f6a83763be1e01adfb8ed08147cc1fb4905d2
+ms.lasthandoff: 04/11/2017
+
 ---
-# MSSQL_ENG014114
+# <a name="mssqleng014114"></a>MSSQL_ENG014114
     
-## 訊息詳細資料  
+## <a name="message-details"></a>訊息詳細資料  
   
 |||  
 |-|-|  
@@ -31,14 +35,14 @@ caps.handback.revision: 18
 |符號名稱||  
 |訊息文字|'%s' 並未設定為散發者。|  
   
-## 說明  
+## <a name="explanation"></a>說明  
  如果錯誤訊息指定了特定的執行個體而非 'null'，則指定的執行個體尚未正確設定，以識別為「散發者」。  
   
- 如果訊息指定 'null' 為「散發者」，則 **master** 資料庫中沒有本機伺服器的項目，或者項目不正確 (可能因為電腦已重新命名)。 針對拓撲中所有伺服器，複寫預計應使用電腦名稱與選擇性的執行個體名稱註冊 (叢集執行個體則為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 虛擬伺服器名稱加上選擇性的執行個體名稱)。 要讓複寫正常運作，`SELECT @@SERVERNAME` 針對拓撲中每部伺服器傳回的值，都應該符合電腦名稱或虛擬伺服器名稱加上選擇性執行個體名稱。  
+ 如果訊息指定 'null' 為「散發者」，則 **master** 資料庫中沒有本機伺服器的項目，或者項目不正確 (可能因為電腦已重新命名)。 針對拓撲中所有伺服器，複寫預計應使用電腦名稱與選擇性的執行個體名稱註冊 (叢集執行個體則為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 虛擬伺服器名稱加上選擇性的執行個體名稱)。 要讓複寫正常運作， `SELECT @@SERVERNAME` 針對拓撲中每部伺服器傳回的值，都應該符合電腦名稱或虛擬伺服器名稱加上選擇性執行個體名稱。  
   
- 若您已透過 IP 位址或完整格式的網域名稱 (FQDN) 註冊任一 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，就不支援複寫。 如果您設定複寫時，依 IP 位址或依 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的 FQDN 註冊了任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，就可能會引發這個錯誤。  
+ 若您已透過 IP 位址或完整格式的網域名稱 (FQDN) 註冊任一 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，就不支援複寫。 如果您設定複寫時，依 IP 位址或依 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的 FQDN 註冊了任何 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 執行個體，就可能會引發這個錯誤。  
   
-## 使用者動作  
+## <a name="user-action"></a>使用者動作  
  如果錯誤訊息指定了特定的執行個體，請將伺服器設定為「散發者」。 如需詳細資訊，請參閱[設定散發](../../relational-databases/replication/configure-distribution.md)。  
   
  如果訊息未指定特定執行個體 ('null')，請確認「散發者」執行個體已正確註冊。 若電腦網路名稱和 SQL Server 執行個體名稱不符，則：  
@@ -49,7 +53,7 @@ caps.handback.revision: 18
   
      10.193.17.129 inst1  
   
--   停用散發，註冊執行個體，然後重新建立散發。 如果 @@SERVERNAME 的值不是非叢集執行個體正確的值，請依循下列步驟：  
+-   停用散發，註冊執行個體，然後重新建立散發。 如果 @@SERVERNAME 的值不是正確的非叢集執行個體值，請依循下列步驟：  
   
     ```  
     sp_dropserver '<old_name>', 'droplogins'  
@@ -60,9 +64,10 @@ caps.handback.revision: 18
   
      執行 [sp_addserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md) 預存程序之後，您必須重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務，@@SERVERNAME 的變更才能生效。  
   
-     如果 @@SERVERNAME 的值不是正確的非叢集執行個體值，則必須使用叢集管理員變更名稱。 如需詳細資訊，請參閱 [一律在容錯移轉叢集執行個體 (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)。  
+     如果 @@SERVERNAME 的值不是正確的非叢集執行個體值，則必須使用叢集管理員變更名稱。 如需詳細資訊，請參閱 [AlwaysOn 容錯移轉叢集執行個體 (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [錯誤和事件參考 &#40;複寫&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)  
   
   
+

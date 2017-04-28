@@ -1,33 +1,37 @@
 ---
 title: "範例：線上還原唯讀檔案 (簡單復原模式) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "還原順序 [SQL Server], 線上"
-  - "線上還原 [SQL Server], 簡單復原模式"
-  - "簡單復原模式 [SQL Server], RESTORE 範例"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- restore sequences [SQL Server], online
+- online restores [SQL Server], simple recovery model
+- simple recovery model [SQL Server], RESTORE examples
 ms.assetid: 0c691fc6-9865-46a7-b055-8097424492d6
 caps.latest.revision: 27
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 54c06105b3d073c3bfa9543db4c3ff96445db536
+ms.lasthandoff: 04/11/2017
+
 ---
-# 範例：線上還原唯讀檔案 (簡單復原模式)
+# <a name="example-online-restore-of-a-read-only-file-simple-recovery-model"></a>範例：線上還原唯讀檔案 (簡單復原模式)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   本主題是關於在簡單復原模式下，包含唯讀檔案群組的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫。 在簡單復原模式下，如果有檔案成為唯讀後保留的備份檔案，就可以線上還原唯讀檔案。  
   
- 在此範例中，名為 `adb` 的資料庫包含三個檔案群組。 檔案群組 `A` 可讀取/寫入，而檔案群組 `B` 和 `C` 則是唯讀的。 所有的檔案群組一開始都是在線上。 在檔案群組 `B` 中，必須還原的是唯讀檔案 `b1`。 資料庫管理員可以使用在檔案成為唯讀後保留的備份進行還原。 檔案群組 `B` 在還原期間會處於離線，但資料庫的其他檔案群組仍會維持線上工作。  
+ 在此範例中，名為 `adb` 的資料庫包含三個檔案群組。 檔案群組 `A` 可讀取/寫入，而檔案群組 `B` 和 `C` 則是唯讀的。 所有的檔案群組一開始都是在線上。 在檔案群組 `B`中，必須還原的是唯讀檔案 `b1`。 資料庫管理員可以使用在檔案成為唯讀後保留的備份進行還原。 檔案群組 `B` 在還原期間會處於離線，但資料庫的其他檔案群組仍會維持線上工作。  
   
-## 還原順序  
+## <a name="restore-sequence"></a>還原順序  
   
 > [!NOTE]  
 >  線上還原順序的語法和離線還原順序的語法相同。  
@@ -41,7 +45,7 @@ WITH RECOVERY
   
  檔案現在已經在線上。  
   
-## 其他範例  
+## <a name="additional-examples"></a>其他範例  
   
 -   [範例：分次還原資料庫 &#40;簡單復原模式&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-database-simple-recovery-model.md)  
   
@@ -55,11 +59,11 @@ WITH RECOVERY
   
 -   [範例：線上還原唯讀檔案 &#40;完整復原模式&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-only-file-full-recovery-model.md)  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [線上還原 &#40;SQL Server&#41;](../../relational-databases/backup-restore/online-restore-sql-server.md)   
  [分次還原 &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)   
  [檔案還原 &#40;簡單復原模式&#41;](../../relational-databases/backup-restore/file-restores-simple-recovery-model.md)   
  [還原和復原概觀 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)  
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
   
   

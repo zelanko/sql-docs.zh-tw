@@ -1,34 +1,38 @@
 ---
 title: "啟用資料表或索引的壓縮 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-data-compression"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.compwiz.compressiontype.f1"
-  - "sql13.swb.compwiz.outputoptions.f1"
-  - "sql13.swb.compwiz.summary.f1"
-  - "sql13.swb.compwiz.scriptfileoption.f1"
-  - "sql13.swb.compwiz.progress.f1"
-  - "sql13.swb.compwiz.welcome.f1"
-  - "sql13.swb.compwiz.createjob.f1"
-  - "sql13.swb.compwiz.selectaction.f1"
-helpviewer_keywords: 
-  - "資料壓縮精靈"
-  - "壓縮 [SQL Server], 啟用"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-data-compression
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.compwiz.compressiontype.f1
+- sql13.swb.compwiz.outputoptions.f1
+- sql13.swb.compwiz.summary.f1
+- sql13.swb.compwiz.scriptfileoption.f1
+- sql13.swb.compwiz.progress.f1
+- sql13.swb.compwiz.welcome.f1
+- sql13.swb.compwiz.createjob.f1
+- sql13.swb.compwiz.selectaction.f1
+helpviewer_keywords:
+- data compression wizard
+- compression [SQL Server], enable
 ms.assetid: b7442cff-e616-475a-9c5a-5a765089e5f2
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7eb93de0ce823f0f7efe02dc1c69b590a317237f
+ms.lasthandoff: 04/11/2017
+
 ---
-# 啟用資料表或索引的壓縮
+# <a name="enable-compression-on-a-table-or-index"></a>啟用資料表或索引的壓縮
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中啟用資料表或索引的壓縮。  
   
  **本主題內容**  
@@ -51,7 +55,7 @@ caps.handback.revision: 10
   
 -   系統資料表無法啟用壓縮。  
   
--   如果資料表是堆積，ONLINE 模式的重建作業將會是單一執行緒。 請針對多執行緒的堆積重建作業使用 OFFLINE 模式。 如需資料壓縮的詳細資訊，請參閱[資料壓縮](../../relational-databases/data-compression/data-compression.md)。  
+-   如果資料表是堆積，ONLINE 模式的重建作業將會是單一執行緒。 請針對多執行緒的堆積重建作業使用 OFFLINE 模式。 如需資料壓縮的詳細資訊，請參閱 [資料壓縮](../../relational-databases/data-compression/data-compression.md)。  
   
 -   您無法在資料表具有非對齊索引時變更單一分割區的壓縮設定。  
   
@@ -62,7 +66,7 @@ caps.handback.revision: 10
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 若要啟用資料表或索引的壓縮  
+#### <a name="to-enable-compression-on-a-table-or-index"></a>若要啟用資料表或索引的壓縮  
   
 1.  在 [物件總管] 中，展開包含您想要壓縮之資料表的資料庫，然後展開 **[資料表]** 資料夾。  
   
@@ -82,7 +86,7 @@ caps.handback.revision: 10
      **資料分割編號**  
      列出資料表或索引中的每個資料分割。 此資料行是唯讀的。  
   
-     **壓縮類型**  
+     **[壓縮類型]**  
      選取每個資料分割的壓縮選項。 在選取 **[所有資料分割使用相同的壓縮類型]** 時無法使用。 清單選項包括 **[無]**、 **[資料列]**和 **[頁面]**。  
   
      **界限**  
@@ -174,7 +178,7 @@ caps.handback.revision: 10
      指定每個動作的類型和名稱。  
   
      **狀態**  
-     指出整個精靈動作是否傳回 [成功] 或 [失敗] 的值。  
+     指出整個精靈動作傳回 [成功] 或 [失敗] 的值。  
   
      **訊息**  
      提供從程序所傳回的任何錯誤或警告訊息。  
@@ -191,14 +195,14 @@ caps.handback.revision: 10
      **複製報表到剪貼簿**  
      將精靈進度報表的結果複製到剪貼簿。  
   
-     **以電子郵件傳送報表**  
+     **[以電子郵件傳送報表]**  
      將精靈進度報表的結果複製到電子郵件。  
   
      完成後，請按一下 **[關閉]**。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 若要啟用資料表的壓縮  
+#### <a name="to-enable-compression-on-a-table"></a>若要啟用資料表的壓縮  
   
 1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
@@ -216,7 +220,7 @@ caps.handback.revision: 10
     GO  
     ```  
   
-#### 若要啟用索引的壓縮  
+#### <a name="to-enable-compression-on-an-index"></a>若要啟用索引的壓縮  
   
 1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
@@ -244,7 +248,7 @@ caps.handback.revision: 10
   
  如需詳細資訊，請參閱 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md) 和 [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [資料壓縮](../../relational-databases/data-compression/data-compression.md)   
  [sp_estimate_data_compression_savings &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md)  
   

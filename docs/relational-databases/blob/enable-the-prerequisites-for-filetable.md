@@ -1,24 +1,28 @@
 ---
 title: "啟用 FileTable 的必要條件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FileTables [SQL Server]，必要條件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FileTables [SQL Server], prerequisites
 ms.assetid: 6286468c-9dc9-4eda-9961-071d2a36ebd6
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ed35c6e65d3c9670ddb59f352451adfde6c37e07
+ms.lasthandoff: 04/11/2017
+
 ---
-# 啟用 FileTable 的必要條件
+# <a name="enable-the-prerequisites-for-filetable"></a>啟用 FileTable 的必要條件
   描述如何啟用建立和使用 FileTable 的必要元件。  
   
 ##  <a name="EnablePrereq"></a> 啟用 FileTable 的必要條件  
@@ -37,10 +41,10 @@ caps.handback.revision: 25
     -   [在資料庫層級指定 FileTable 的目錄](#BasicsDirectory)  
   
 ##  <a name="BasicsFilestream"></a> 在執行個體層級啟用 FILESTREAM  
- FileTable 會擴充 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之 FILESTREAM 功能的能力。 因此，您必須先在 Windows 層級和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上啟用 FILESTREAM 的檔案 I/O 存取，然後才能建立和使用 FileTable。  
+ FileTable 會擴充 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之 FILESTREAM 功能的能力。 因此，您必須先在 Windows 層級和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上啟用 FILESTREAM 的檔案 I/O 存取，然後才能建立和使用 FileTable。  
   
 ###  <a name="HowToFilestream"></a> 如何：在執行個體層級啟用 FILESTREAM  
- 如需如何啟用 FILESTREAM 的資訊，請參閱[啟用及設定 FILESTREAM](../../relational-databases/blob/enable-and-configure-filestream.md)。  
+ 如需如何啟用 FILESTREAM 的資訊，請參閱 [啟用及設定 FILESTREAM](../../relational-databases/blob/enable-and-configure-filestream.md)。  
   
  當您呼叫 **sp_configure** 以在執行個體層級啟用 FILESTREAM 時，必須將 filestream_access_level 選項設定為 2。 如需詳細資訊，請參閱 [Filestream 存取層級伺服器組態選項](../../database-engine/configure-windows/filestream-access-level-server-configuration-option.md)。  
   
@@ -48,10 +52,10 @@ caps.handback.revision: 25
  如需有關如何允許 FILESTREAM 通過防火牆的詳細資訊，請參閱＜ [Configure a Firewall for FILESTREAM Access](../../relational-databases/blob/configure-a-firewall-for-filestream-access.md)＞。  
   
 ##  <a name="filegroup"></a> 在資料庫層級提供 FILESTREAM 檔案群組  
- 資料庫必須具有 FILESTREAM 檔案群組，然後您才能在該資料庫中建立 FileTable。 如需此必要條件的詳細資訊，請參閱[建立啟用 FILESTREAM 的資料庫](../../relational-databases/blob/create-a-filestream-enabled-database.md)。  
+ 資料庫必須具有 FILESTREAM 檔案群組，然後您才能在該資料庫中建立 FileTable。 如需此必要條件的詳細資訊，請參閱 [建立啟用 FILESTREAM 的資料庫](../../relational-databases/blob/create-a-filestream-enabled-database.md)。  
   
 ##  <a name="BasicsNTAccess"></a> 在資料庫層級啟用非交易式存取  
- FileTable 可讓 Windows 應用程式取得 FILESTREAM 資料的 Windows 檔案控制代碼，而不需要使用交易。 若要允許對儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的檔案進行這種非交易式存取，您必須針對將包含 FileTable 的每個資料庫，指定在資料庫層級啟用非交易式存取的所需層級。  
+ FileTable 可讓 Windows 應用程式取得 FILESTREAM 資料的 Windows 檔案控制代碼，而不需要使用交易。 若要允許對儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的檔案進行這種非交易式存取，您必須針對將包含 FileTable 的每個資料庫，指定在資料庫層級啟用非交易式存取的所需層級。  
   
 ###  <a name="HowToCheckAccess"></a> 如何：檢查是否已在資料庫上啟用非交易式存取  
  查詢 [sys.database_filestream_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-filestream-options-transact-sql.md) 目錄檢視，並檢查 **non_transacted_access** 和 **non_transacted_access_desc** 資料行。  
@@ -116,7 +120,7 @@ GO
     GO  
     ```  
   
--   **還原資料庫**時，請使用 **DIRECTORY_NAME** FILESTREAM 選項，呼叫 [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md) 陳述式。  
+-   **還原資料庫**時，請使用 **DIRECTORY_NAME** FILESTREAM 選項，呼叫 [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md) 陳述式。  
   
     ```tsql  
     RESTORE DATABASE database_name  
@@ -138,15 +142,15 @@ GO
   
 ###  <a name="ReqDirectory"></a> 資料庫層級目錄的需求和限制  
   
--   當您呼叫 **CREATE DATABASE** 或 **ALTER DATABASE** 時，**DIRECTORY_NAME** 是選擇性設定。 如果您沒有指定 **DIRECTORY_NAME** 的值，則目錄名稱會維持 Null。 不過，如果您未在資料庫層級中指定 **DIRECTORY_NAME** 的值，就無法在資料庫中建立 FileTable。  
+-   當您呼叫 **CREATE DATABASE** 或 **ALTER DATABASE** 時， **DIRECTORY_NAME**是選擇性設定。 如果您沒有指定 **DIRECTORY_NAME**的值，則目錄名稱會維持 Null。 不過，如果您未在資料庫層級中指定 **DIRECTORY_NAME** 的值，就無法在資料庫中建立 FileTable。  
   
 -   您所提供的目錄名稱必須符合有效目錄名稱的檔案系統需求。  
   
 -   當資料庫包含 FileTable 時，您無法將 **DIRECTORY_NAME** 設定回 Null 值。  
   
--   當您附加或還原資料庫時，如果新的資料庫具有已經存在目標執行個體中的 **DIRECTORY_NAME** 值，此作業就會失敗。 因此，當您呼叫 **CREATE DATABASE FOR ATTACH** 或 **RESTORE DATABASE** 時，請針對 **DIRECTORY_NAME** 指定唯一的值。  
+-   當您附加或還原資料庫時，如果新的資料庫具有已經存在目標執行個體中的 **DIRECTORY_NAME** 值，此作業就會失敗。 因此，當您呼叫 **CREATE DATABASE FOR ATTACH** 或 **RESTORE DATABASE** 時，請針對 **DIRECTORY_NAME**指定唯一的值。  
   
--   當您將現有的資料庫升級為 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 時，**DIRECTORY_NAME** 的值為 Null。  
+-   當您將現有的資料庫升級為 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]時， **DIRECTORY_NAME** 的值為 Null。  
   
 -   當您在資料庫層級中啟用或停用非交易式存取時，此作業不會檢查是否已經指定目錄名稱，或者目錄名稱是否唯一。  
   

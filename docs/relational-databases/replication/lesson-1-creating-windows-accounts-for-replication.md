@@ -1,40 +1,44 @@
 ---
 title: "第 1 課：建立用於複寫的 Windows 帳戶 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
-helpviewer_keywords: 
-  - "複寫 [SQL Server], 教學課程"
-  - "複寫 [SQL Server]，管理"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+applies_to:
+- SQL Server 2016
+helpviewer_keywords:
+- replication [SQL Server], tutorials
+- replication [SQL Server], administering
 ms.assetid: 65c3816b-47f0-448c-a4a4-ebd3e2a58820
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1c15031eb2b01a47a933d899c045db6a7123676a
+ms.lasthandoff: 04/11/2017
+
 ---
-# 第 1 課：建立用於複寫的 Windows 帳戶
+# <a name="lesson-1-creating-windows-accounts-for-replication"></a>第 1 課：建立用於複寫的 Windows 帳戶
 在這一課，您將建立 Windows 帳戶，以執行複寫代理程式。 您將在本機伺服器上，另外為下列代理程式建立 Windows 帳戶：  
   
 |代理程式|位置|帳戶名稱|  
 |---------|------------|----------------|  
-|快照集代理程式|發行者|\<電腦名稱>\repl_snapshot|  
-|記錄讀取器代理程式|發行者|\<電腦名稱>\repl_logreader|  
-|散發代理程式|發行者和訂閱者|\<電腦名稱>\repl_distribution|  
-|[合併代理程式]|發行者和訂閱者|\<電腦名稱>\repl_merge|  
+|快照集代理程式|發行者|\<*電腦名稱*>\repl_snapshot|  
+|記錄讀取器代理程式|發行者|\<*電腦名稱*>\repl_logreader|  
+|散發代理程式|發行者和訂閱者|\<*電腦名稱*>\repl_distribution|  
+|合併代理程式|發行者和訂閱者|\<*電腦名稱*>\repl_merge|  
   
 > [!NOTE]  
-> 在複寫教學課程中，發行者和散發者會共用相同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 發行者和訂閱者可以共用相同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體，但這不是必要條件。 如果發行者和訂閱者共用相同的執行個體，則不需要在訂閱者上建立帳戶的步驟。  
+> 在複寫教學課程中，發行者和散發者會共用相同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體。 發行者和訂閱者可以共用相同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體，但這不是必要條件。 如果發行者和訂閱者共用相同的執行個體，則不需要在訂閱者上建立帳戶的步驟。  
   
-### 在發行者端建立複寫代理程式的本機 Windows 帳戶  
+### <a name="to-create-local-windows-accounts-for-replication-agents-at-the-publisher"></a>在發行者端建立複寫代理程式的本機 Windows 帳戶  
   
 1.  在發行者端，從 [控制台] 中的 [系統管理工具] 開啟 [電腦管理]。  
   
@@ -48,7 +52,7 @@ caps.handback.revision: 17
   
 6.  按一下 [ **關閉**]。  
   
-### 在訂閱者端建立複寫代理程式的本機 Windows 帳戶  
+### <a name="to-create-local-windows-accounts-for-replication-agents-at-the-subscriber"></a>在訂閱者端建立複寫代理程式的本機 Windows 帳戶  
   
 1.  在訂閱者端，從 [控制台] 中的 [系統管理工具] 開啟 [電腦管理]。  
   
@@ -62,11 +66,12 @@ caps.handback.revision: 17
   
 6.  按一下 [ **關閉**]。  
   
-## 後續步驟  
-您已順利建立複寫代理程式的 Windows 帳戶。 下一步，您將設定快照集資料夾。 請參閱[第 2 課：準備快照集資料夾](../../relational-databases/replication/lesson-2-preparing-the-snapshot-folder.md)。  
+## <a name="next-steps"></a>後續步驟  
+您已順利建立複寫代理程式的 Windows 帳戶。 下一步，您將設定快照集資料夾。 請參閱 [第 2 課：準備快照集資料夾](../../relational-databases/replication/lesson-2-preparing-the-snapshot-folder.md)。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
 [複寫代理程式概觀](../../relational-databases/replication/agents/replication-agents-overview.md)  
   
   
   
+

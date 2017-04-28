@@ -1,31 +1,35 @@
 ---
 title: "使用巢狀 AUTO 模式查詢產生同層級 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "查詢 [SQL Server 中的 XML], 巢狀 AUTO 模式"
-  - "巢狀 AUTO 模式查詢"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- queries [XML in SQL Server], nested AUTO mode
+- nested AUTO mode query
 ms.assetid: 748d9899-589d-4420-8048-1258e9e67c20
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6d85a1b59656222cf07338d2eb98925e30a5c658
+ms.lasthandoff: 04/11/2017
+
 ---
-# 使用巢狀 AUTO 模式查詢產生同層級
+# <a name="generate-siblings-with-a-nested-auto-mode-query"></a>使用巢狀 AUTO 模式查詢產生同層級
   以下範例示範如何使用巢狀 AUTO 模式查詢產生同層級。 其他產生這類 XML 的唯一方式是使用 EXPLICIT 模式。 但是，這可能會相當繁雜。  
   
-## 範例  
+## <a name="example"></a>範例  
  此查詢會建構提供銷售訂單資訊的 XML。 這包括下列項目：  
   
--   銷售訂單標頭資訊、`SalesOrderID`、`SalesPersonID` 和 `OrderDate`。 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 會將這些資訊儲存在 `SalesOrderHeader` 資料表中。  
+-   銷售訂單標頭資訊、 `SalesOrderID`、 `SalesPersonID`和 `OrderDate`。 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 會將這些資訊儲存在 `SalesOrderHeader` 資料表中。  
   
 -   銷售訂單詳細資訊。 這包括一或多項已訂購的產品、單價及訂購的數量。 此項資訊是儲存在 `SalesOrderDetail` 資料表中。  
   
@@ -69,9 +73,9 @@ FOR XML AUTO, TYPE
   
 -   包括以逗號分隔的兩個巢狀 `SELECT` 陳述式。 第一個巢狀 `SELECT` 陳述式會擷取銷售訂單資訊、標頭及詳細資料，而第二個巢狀 `SELECT` 陳述式會擷取銷售人員資訊。  
   
-    -   擷取 `SELECT`、`SalesOrderID` 與 `SalesPersonID` 的 `CustomerID` 陳述式本身，包含另一個會傳回銷售訂單詳細資訊的巢狀 `SELECT ... FOR XML` 陳述式 (具有 `AUTO` 模式與 `TYPE` 指示詞)。  
+    -   擷取 `SELECT` 、 `SalesOrderID`與 `SalesPersonID`的 `CustomerID` 陳述式本身，包含另一個會傳回銷售訂單詳細資訊的巢狀 `SELECT ... FOR XML` 陳述式 (具有 `AUTO` 模式與 `TYPE` 指示詞)。  
   
- 擷取銷售人員資訊的 `SELECT` 陳述式，會查詢以 `SalesPerson` 子句建立的資料列集 `FROM`。 為了要使 `FOR XML` 查詢能夠運作，您必須對以 `FROM` 子句產生的匿名資料列集提供名稱。 在此情況下，提供的名稱為 `SalesPerson`。  
+ 擷取銷售人員資訊的 `SELECT` 陳述式，會查詢以 `SalesPerson`子句建立的資料列集 `FROM` 。 為了要使 `FOR XML` 查詢能夠運作，您必須對以 `FROM` 子句產生的匿名資料列集提供名稱。 在此情況下，提供的名稱為 `SalesPerson`。  
   
  以下是部份結果：  
   
@@ -164,7 +168,7 @@ FOR XML AUTO, TYPE
     FOR XML AUTO, TYPE ) as T(XmlCol)  
     ```  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用巢狀 FOR XML 查詢](../../relational-databases/xml/use-nested-for-xml-queries.md)  
   
   

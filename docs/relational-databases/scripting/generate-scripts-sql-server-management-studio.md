@@ -1,35 +1,39 @@
 ---
 title: "產生指令碼 (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9711c617-3c68-4e5a-aea3-befc64d51524
 caps.latest.revision: 6
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1bf73031c7e2e302d6174e6f21a005c3106f4cb2
+ms.lasthandoff: 04/11/2017
+
 ---
-# 產生指令碼 (SQL Server Management Studio)
+# <a name="generate-scripts-sql-server-management-studio"></a>產生指令碼 (SQL Server Management Studio)
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供兩種產生 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼的機制。 您可以使用 [產生和發佈指令碼精靈] 來建立多個物件的指令碼。 您也可以使用**物件總管**中的 [編寫組件的指令碼為] 功能表，為個別物件或多個物件產生指令碼。  
   
 1.  **選擇方法**：[[產生和發佈指令碼精靈]](#GenPubScriptWiz)、[物件總管的 [編寫組件的指令碼為] 功能表](#OEScriptAsMenu)  
   
-2.  **使用 [編寫組件的指令碼為] 功能表**：[編寫單一物件的指令碼](#ScriptSingleObject)、[使用物件總管編寫兩個物件的指令碼](#ScriptTwoObjectsOE)、[使用物件總管詳細資料編寫兩個物件的指令碼](#ScriptTwoObjectsOED)  
+2.  **To use the Script As menu:**  [Script a Single Object](#ScriptSingleObject), [Script Two Objects Using Object Explorer](#ScriptTwoObjectsOE), [Script Two Objects Using Object Explorer Details](#ScriptTwoObjectsOED)  
   
-## 開始之前  
+## <a name="before-you-begin"></a>開始之前  
  選擇最符合您需求的機制。  
   
-###  <a name="GenPubScriptWiz"></a> 產生和發佈指令碼精靈  
- 使用 [產生和發佈指令碼精靈]，為多個物件建立 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼。 此精靈會產生資料庫中所有物件的指令碼，或是您所選取之物件子集的指令碼。 此精靈具有許多適用於指令碼的選項，例如是否要包含權限、定序及條件約束等。 如需有關使用此精靈的指示，請參閱[產生和發佈指令碼精靈](../../relational-databases/scripting/generate-and-publish-scripts-wizard.md)。  
+###  <a name="GenPubScriptWiz"></a> [產生和發佈指令碼精靈]  
+ 使用 [產生和發佈指令碼精靈]，為多個物件建立 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼。 此精靈會產生資料庫中所有物件的指令碼，或是您所選取之物件子集的指令碼。 此精靈具有許多適用於指令碼的選項，例如是否要包含權限、定序及條件約束等。 如需有關使用此精靈的指示，請參閱 [產生和發佈指令碼精靈](../../relational-databases/scripting/generate-and-publish-scripts-wizard.md)。  
   
-###  <a name="OEScriptAsMenu"></a> 物件總管編寫組件的指令碼為功能表  
+###  <a name="OEScriptAsMenu"></a> 物件總管的 [編寫組件的指令碼為] 功能表  
  您可以使用物件總管的 [編寫組件的指令碼為] 功能表，編寫單一物件、多個物件或單一物件之多個陳述式的指令碼。 您可以選擇數種指令碼的其中一種，例如建立、變更或卸除物件。 您可以將指令碼儲存到 [查詢編輯器] 視窗，或是儲存到檔案或剪貼簿。 指令碼是使用 Unicode 格式所建立。  
   
 ##  <a name="ScriptSingleObject"></a> 產生單一物件的指令碼  
@@ -56,11 +60,11 @@ caps.handback.revision: 6
   
 2.  展開 [資料庫]，然後展開含有要編寫指令碼之物件的資料庫。  
   
-3.  以滑鼠右鍵按一下第一個要編寫指令碼的物件，並指向 [產生 \<物件類型> 的指令碼為]，然後在 [另存新檔] 選項中，選擇 [新增查詢編輯器視窗] 作為輸出目的地。  
+3.  以滑鼠右鍵按一下第一個要編寫指令碼的物件，並指向 [產生 \<物件類型> 的指令碼為]，然後在 [另存新檔] 選項中選擇 [新增查詢編輯器視窗] 作為輸出目的地。  
   
 4.  導覽至您想要編寫指令碼的第二個物件。  
   
-5.  以滑鼠右鍵按一下物件，並指向 [產生 \<物件類型> 的指令碼為]，然後在 [另存新檔] 選項中，選擇 [剪貼簿] 作為輸出目的地。  
+5.  以滑鼠右鍵按一下物件，並指向 [產生 \<物件類型> 的指令碼為]，然後在 [另存新檔] 選項中選擇 [剪貼簿] 作為輸出目的地。  
   
 6.  在針對第一個物件開啟的 [查詢編輯器] 視窗中，從剪貼簿貼上第二個物件的指令碼。  
   

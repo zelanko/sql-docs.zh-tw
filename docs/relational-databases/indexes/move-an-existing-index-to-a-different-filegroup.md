@@ -1,28 +1,32 @@
 ---
 title: "將現有的索引移至不同的檔案群組 | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "移動資料表"
-  - "切換索引的檔案群組"
-  - "移動索引"
-  - "索引 [SQL Server], 移動"
-  - "檔案群組 [SQL Server], 切換"
+ms.custom: 
+ms.date: 02/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- moving tables
+- switching filegroups for index
+- moving indexes
+- indexes [SQL Server], moving
+- filegroups [SQL Server], switching
 ms.assetid: 167ebe77-487d-4ca8-9452-4b2c7d5cb96e
 caps.latest.revision: 45
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 44
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: cfc19f15cee7ca1185a2a9177474510c368b56bf
+ms.lasthandoff: 04/11/2017
+
 ---
-# 將現有的索引移至不同的檔案群組
+# <a name="move-an-existing-index-to-a-different-filegroup"></a>將現有的索引移至不同的檔案群組
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中將目前檔案群組的現有索引移到不同的檔案群組。  
@@ -47,16 +51,16 @@ caps.handback.revision: 44
   
 -   如果資料表含有叢集索引，則將叢集索引移到新的檔案群組也會使資料表移到該檔案群組中。  
   
--   您無法使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 移動使用 UNIQUE 或 PRIMARY KEY 條件約束建立的索引。 若要移動這些索引，請使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中的 [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md) 陳述式搭配 (DROP_EXISTING=ON) 選項。  
+-   您無法使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]移動使用 UNIQUE 或 PRIMARY KEY 條件約束建立的索引。 若要移動這些索引，請使用 [中的](../../t-sql/statements/create-index-transact-sql.md) CREATE INDEX [!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式搭配 (DROP_EXISTING=ON) 選項。  
   
 ###  <a name="Security"></a> 安全性  
   
 ####  <a name="Permissions"></a> Permissions  
- 需要資料表或檢視表的 ALTER 權限。 使用者必須是**系統管理員**固定伺服器角色的成員，或是 **db_ddladmin** 和 **db_owner** 固定資料庫角色的成員。  
+ 需要資料表或檢視表的 ALTER 權限。 使用者必須是 **系統管理員** 固定伺服器角色的成員，或是 **db_ddladmin** 和 **db_owner** 固定資料庫角色的成員。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 若要使用資料表設計工具將現有的索引移至不同的檔案群組  
+#### <a name="to-move-an-existing-index-to-a-different-filegroup-using-table-designer"></a>若要使用資料表設計工具將現有的索引移至不同的檔案群組  
   
 1.  在 [物件總管] 中，按一下加號展開資料庫，此資料庫包含的資料表中有您要移動的索引。  
   
@@ -76,7 +80,7 @@ caps.handback.revision: 44
   
 9. 在 [檔案] 功能表上，選取 [儲存 *table_name*]。  
   
-#### 若要在物件總管中將現有的索引移到不同的檔案群組  
+#### <a name="to-move-an-existing-index-to-a-different-filegroup-in-object-explorer"></a>若要在物件總管中將現有的索引移到不同的檔案群組  
   
 1.  在 [物件總管] 中，按一下加號展開資料庫，此資料庫包含的資料表中有您要移動的索引。  
   
@@ -96,7 +100,7 @@ caps.handback.revision: 44
   
      如果您要移動叢集索引，可使用線上處理。 線上處理允許並行使用者在索引作業期間，存取基礎資料和非叢集索引。 如需詳細資訊，請參閱 [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md)。  
   
-     在使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的多處理器電腦上，您可以指定平行處理原則的最大程度值，藉以設定用來執行索引陳述式的處理器數目。 並非每個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本都可使用平行索引作業功能。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本支援的功能清單，請參閱 [SQL Server 2016 版本支援的功能](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)。 如需平行索引作業的詳細資訊，請參閱[設定平行索引作業](../../relational-databases/indexes/configure-parallel-index-operations.md)。  
+     在使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的多處理器電腦上，您可以指定平行處理原則的最大程度值，藉以設定用來執行索引陳述式的處理器數目。 並非每個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本都可使用平行索引作業功能。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本支援的功能清單，請參閱＜SQL Server 2016 版本支援的功能＞。 如需平行索引作業的詳細資訊，請參閱 [設定平行索引作業](../../relational-databases/indexes/configure-parallel-index-operations.md)。  
   
 8.  按一下 **[確定]**。  
   
@@ -128,7 +132,7 @@ caps.handback.revision: 44
  顯示有關資料行的資料類型資訊。  
   
 > [!NOTE]  
->  如果資料表資料行是計算資料行，[資料行資料類型] 就會顯示「計算資料行」。  
+>  如果資料表資料行是計算資料行， **[資料行資料類型]** 就會顯示「計算資料行」。  
   
  **移動索引時，允許線上處理 DML 陳述式**  
  允許使用者在索引作業期間存取基礎資料表或叢集索引資料，以及與非叢集索引相關聯的任何項目。  
@@ -144,7 +148,7 @@ caps.handback.revision: 44
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 若要將現有的索引移至不同的檔案群組  
+#### <a name="to-move-an-existing-index-to-a-different-filegroup"></a>若要將現有的索引移至不同的檔案群組  
   
 1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
@@ -185,3 +189,4 @@ caps.handback.revision: 44
  如需詳細資訊，請參閱 [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)。  
   
   
+

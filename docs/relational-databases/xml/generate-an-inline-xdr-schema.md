@@ -1,27 +1,31 @@
 ---
 title: "產生內嵌 XDR 結構描述 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "XDR 結構描述 [SQL Server]"
-  - "內嵌 XDR 結構描述產生 [SQL Server]"
-  - "XMLDATA 選項"
-  - "FOR XML 子句, 內嵌 XSD 結構描述產生"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- XDR schemas [SQL Server]
+- inline XDR schema generation [SQL Server]
+- XMLDATA option
+- FOR XML clause, inline XDR schema generation
 ms.assetid: 2a40d617-9724-4f7d-80a4-a85c702f14d0
 caps.latest.revision: 32
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2c996d2aeef58a93da05c217e472f626953a0fe6
+ms.lasthandoff: 04/11/2017
+
 ---
-# 產生內嵌 XDR 結構描述
+# <a name="generate-an-inline-xdr-schema"></a>產生內嵌 XDR 結構描述
   FOR XML 中的 **XMLDATA** 指示詞會將內嵌 XDR 結構描述連同查詢結果一起傳回。 不過，XDR 結構描述並不支援 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 及更新版本中引進的所有新資料類型和其他的增強功能。 您可以改用 [XMLSCHEMA 指示詞](../../relational-databases/xml/generate-an-inline-xsd-schema.md)來要求內嵌 XSD 結構描述。  
   
 > [!IMPORTANT]  
@@ -33,7 +37,7 @@ caps.handback.revision: 32
   
 -   **(n)varchar(max)** 和 **(n)varbinary(max)** 類型會分別對應到 **(n)varchar(n)** 和 **varbinary(n)**。  
   
--   當相容性模式設定為 90 或更高時，**timestamp** 值會被視為 **varbinary(8)** 資料並當作二進位資料來處理，且會在結果中傳回，如下所示：  
+-   當相容性模式設定為 90 或更高時， **timestamp** 值會被視為 **varbinary(8)** 資料並當作二進位資料來處理，且會在結果中傳回，如下所示：  
   
     -   如果指定了 **binary base64** ，則會使用 Base 64 編碼。  
   

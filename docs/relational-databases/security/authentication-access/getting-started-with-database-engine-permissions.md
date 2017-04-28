@@ -1,33 +1,37 @@
 ---
-title: "資料庫引擎權限使用者入門 | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-helpviewer_keywords: 
-  - "權限 [SQL Server]，使用者入門"
+title: "Database Engine 權限使用者入門 | Microsoft Docs"
+ms.custom: 
+ms.date: 01/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+helpviewer_keywords:
+- permissions [SQL Server], getting started
 ms.assetid: 051af34e-bb5b-403e-bd33-007dc02eef7b
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 16d16229a267564977addc768e04e804d0b163cf
+ms.lasthandoff: 04/11/2017
+
 ---
-# 資料庫引擎權限使用者入門
+# <a name="getting-started-with-database-engine-permissions"></a>資料庫引擎權限使用者入門
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   透過登入與伺服器角色的伺服器等級，以及資料庫使用者與資料庫角色的資料庫等級，管理 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 中的權限。 適用於 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 的模型會在每個資料庫中公開同個系統，但不提供伺服器等級權限。 本主題會檢閱一些基本的安全性概念，並接著說明典型的權限實作資訊。  
   
-## 安全性主體  
+## <a name="security-principals"></a>安全性主體  
  安全性主體是使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 且可獲指派權限採取動作之身分識別的正式名稱。 這些身分識別通常為人員或人員群組，但亦可為偽裝成人員的其他實體。 您可使用列示的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 或是使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]，建立和管理安全性主體。  
   
  登入  
- 登入係指用於登入 [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] 的個別使用者帳戶。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 支援根據 Windows 驗證的登入，以及根據 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證的登入。 如需有關兩種登入類型的資訊，請參閱 [Choose an Authentication Mode](../../../relational-databases/security/choose-an-authentication-mode.md)。  
+ 登入係指用於登入 [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]的個別使用者帳戶。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 支援根據 Windows 驗證的登入，以及根據 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證的登入。 如需有關兩種登入類型的資訊，請參閱 [Choose an Authentication Mode](../../../relational-databases/security/choose-an-authentication-mode.md)。  
   
  固定伺服器角色  
  在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，固定伺服器角色係指一組預先設定的角色，其提供方便的伺服器等級權限群組。 您可使用 `ALTER SERVER ROLE ... ADD MEMBER` 陳述式將登入新增至角色。 如需詳細資訊，請參閱 [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-server-role-transact-sql.md)。 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 不支援固定伺服器角色，但在 master 資料庫中具有兩個可做為伺服器角色運作的角色 (`dbmanager` 和 `loginmanager`)。  
@@ -38,7 +42,7 @@ caps.handback.revision: 12
  資料庫使用者  
  在資料庫中建立資料庫使用者，並將該資料庫使用者對應至登入，以針對登入授與資料庫存取權。 資料庫使用者名稱通常會與登入名稱相同，但這兩種名稱不一定非得相同。 每個資料庫使用者皆會對應至單一登入。 登入僅可對應至一個資料庫中的單一使用者，但其可對應做為數個不同資料庫中的資料庫使用者。  
   
- 您亦可建立未具備對應登入的資料庫使用者。 這些使用者稱為「自主資料庫使用者」 。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 建議您使用自主資料庫使用者，原因在於其可更輕鬆地將資料庫移至不同的伺服器。 自主資料庫與登入相似，可使用 Windows 驗證或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證。 如需詳細資訊，請參閱[自主的資料庫使用者 - 使資料庫可攜](../../../relational-databases/security/contained-database-users-making-your-database-portable.md)。  
+ 您亦可建立未具備對應登入的資料庫使用者。 這些使用者稱為「自主資料庫使用者」 。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 建議您使用自主資料庫使用者，原因在於其可更輕鬆地將資料庫移至不同的伺服器。 自主資料庫與登入相似，可使用 Windows 驗證或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證。 如需詳細資訊，請參閱 [自主的資料庫使用者 - 使資料庫可攜](../../../relational-databases/security/contained-database-users-making-your-database-portable.md)。  
   
  共有 12 個類型的使用者，其僅在驗證方式與顯示對象方面略有差異。 若要查看使用者清單，請參閱 [CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md)。  
   
@@ -53,10 +57,10 @@ caps.handback.revision: 12
   
  如需顯示 Windows 使用者、Windows 群組、登入和資料庫使用者之間關係的說明圖，請參閱 [Create a Database User](../../../relational-databases/security/authentication-access/create-a-database-user.md)。  
   
-## 典型案例  
+## <a name="typical-scenario"></a>典型案例  
  下列範例表示通用和建議的權限設定方法。  
   
-#### 在 Active Directory 或 Azure Active Directory 中：  
+#### <a name="in-active-directory-or-azure-active-directory"></a>在 Active Directory 或 Azure Active Directory 中：  
   
 1.  針對每個人員建立 Windows 使用者。  
   
@@ -64,7 +68,7 @@ caps.handback.revision: 12
   
 3.  將 Windows 使用者新增至 Windows 群組。  
   
-#### 若連接的人員將會連接至眾多資料庫  
+#### <a name="if-the-person-connecting-will-be-connecting-to-many-databases"></a>若連接的人員將會連接至眾多資料庫  
   
 1.  針對 Windows 群組建立登入。 (若使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證，請略過 Active Directory 步驟，並在此處建立 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證登入。)  
   
@@ -76,7 +80,7 @@ caps.handback.revision: 12
   
 5.  授與權限至使用者定義資料庫角色。  
   
-#### 若連接的人員僅會連接至單一資料庫  
+#### <a name="if-the-person-connecting-will-be-connecting-to-only-one-database"></a>若連接的人員僅會連接至單一資料庫  
   
 1.  針對 Windows 群組建立登入。 (若使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證，請略過 Active Directory 步驟，並在此處建立 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證登入。)  
   
@@ -90,7 +94,7 @@ caps.handback.revision: 12
   
  此時顯示的結果，通常會是屬於 Windows 群組成員的 Windows 使用者。 Windows 群組在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]中具有登入。 登入會對應至使用者資料庫中的使用者身分識別。 使用者是資料庫角色的成員。 現在您必須新增權限至角色。  
   
-## 指派權限  
+## <a name="assigning-permissions"></a>指派權限  
  大部分的權限陳述式皆具有以下格式︰  
   
 ```  
@@ -125,7 +129,7 @@ GRANT UPDATE ON OBJECT::Production.Parts TO PartsTeam;
 > [!NOTE]  
 >  您可使用 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]來設定權限。 在 [物件總管] 中找到安全性實體，以滑鼠右鍵按一下安全性實體，然後按一下 [屬性]。 選取 [權限]  頁面。 如需使用權限頁面的說明，請參閱 [Permissions or Securables Page](../../../relational-databases/security/permissions-or-securables-page.md)。  
   
-## 權限階層  
+## <a name="permission-hierarchy"></a>權限階層  
  權限具有父子式階層。 也就是說，若您在資料庫上授與 `SELECT` 權限，則該權限在資料庫中會包含所有 (子系) 結構描述的 `SELECT` 權限。 若您在結構描述上授與 `SELECT` 權限，則其在結構描述中會包含所有 (子系) 資料表的 `SELECT` 權限。 權限可轉移；亦即若您在資料庫上授與 `SELECT` 權限，則其會包含所有 (子系) 結構描述以及所有 (孫系) 資料表與檢視上的 `SELECT` 權限。  
   
  權限亦具有涵蓋的權限。 物件上的 `CONTROL` 權限通常會提供物件的其他所有權限。  
@@ -152,20 +156,20 @@ GRANT SELECT ON DATABASE::SalesDB TO Ted;
 GRANT CONTROL ON DATABASE::SalesDB TO Ted;  
 ```  
   
-## 授與最小權限  
- 以上所列的第一個權限 (`GRANT SELECT ON OBJECT::Region TO Ted;`) 最為細微，亦即該陳述式是可授與 `SELECT` 的最小權限。 其並無任何從屬物件權限。 一律授與最小權限但處於 (有點衝突) 較高等級是良好的做法，因為這樣可精簡授與系統。 因此，若 Ted 需要整個結構描述的權限，則只要在結構描述等級授與一次 `SELECT` 即可，而無須在資料表或檢視等級多次授與 `SELECT` 。 資料庫設計對於此策略是否獲致成功有極大影響。 若資料庫經過設計，在單一結構描述中包含需要相同權限的物件，則最能發揮此策略的優勢。  
+## <a name="grant-the-least-permission"></a>授與最小權限  
+ 以上所列的第一個權限 (`GRANT SELECT ON OBJECT::Region TO Ted;`) 最為細微，亦即該陳述式是可授與 `SELECT`的最小權限。 其並無任何從屬物件權限。 一律授與最小權限但處於 (有點衝突) 較高等級是良好的做法，因為這樣可精簡授與系統。 因此，若 Ted 需要整個結構描述的權限，則只要在結構描述等級授與一次 `SELECT` 即可，而無須在資料表或檢視等級多次授與 `SELECT` 。 資料庫設計對於此策略是否獲致成功有極大影響。 若資料庫經過設計，在單一結構描述中包含需要相同權限的物件，則最能發揮此策略的優勢。  
   
-## 權限清單  
- [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] 具有 230 個權限。 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 具有 219 個權限。 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 具有 214 個權限。 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] 具有 195 個權限。 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]、 [!INCLUDE[ssDW](../../../includes/ssdw-md.md)]和 [!INCLUDE[ssAPS](../../../includes/ssaps-md.md)] 具有較少的權限，這是因為其僅會公開部分的資料庫引擎，但每個資料庫引擎皆具有不適用於 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的部分權限。 下圖顯示這些權限及其彼此間的關聯性。 一些較高等級的權限 (例如 `CONTROL SERVER`) 會多次列出。 本主題中的海報字級太小，無法閱讀。 請從下列網址下載 Database Engine 權限海報：[http://go.microsoft.com/fwlink/?LinkId=229142](http://go.microsoft.com/fwlink/?LinkId=229142)。  
+## <a name="list-of-permissions"></a>權限清單  
+ [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] 具有 230 個權限。 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 具有 219 個權限。 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 具有 214 個權限。 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] 具有 195 個權限。 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]、 [!INCLUDE[ssDW](../../../includes/ssdw-md.md)]和 [!INCLUDE[ssAPS](../../../includes/ssaps-md.md)] 具有較少的權限，這是因為其僅會公開部分的資料庫引擎，但每個資料庫引擎皆具有不適用於 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的部分權限。 下圖顯示這些權限及其彼此間的關聯性。 一些較高等級的權限 (例如 `CONTROL SERVER`) 會多次列出。 本主題中的海報字級太小，無法閱讀。 按一下影像，以下載 PDF 格式的 **Database Engine 權限海報**。  
   
- ![Database Engine Permissions](../../../relational-databases/security/media/database-engine-permissions.PNG "Database Engine Permissions")  
-  
+[![Database Engine 權限](../../../relational-databases/security/media/database-engine-permissions.PNG)](http://go.microsoft.com/fwlink/?LinkId=229142)
+ 
  如需顯示 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 主體與伺服器和資料庫物件間關係的說明圖，請參閱[權限階層 &#40;Database Engine&#41;](../../../relational-databases/security/permissions-hierarchy-database-engine.md)。  
   
-## 權限與固定伺服器與固定資料庫角色  
+## <a name="permissions-vs-fixed-server-and-fixed-database-roles"></a>權限與固定伺服器與固定資料庫角色  
  固定伺服器角色與固定資料庫角色的權限近似，但並非完全相同的細微權限。 例如， `sysadmin` 固定伺服器角色的成員具有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體的所有權限，這是因為其是以 `CONTROL SERVER` 權限登入。 不過，授與 `CONTROL SERVER` 權限並不會登入 sysadmin 固定伺服器角色成員，而新增登入至  `sysadmin` 固定伺服器角色並不會明確授與登入  `CONTROL SERVER` 權限。 有時，預存程序在檢查權限時會檢查固定角色，但不會檢查細微權限。 例如，卸離資料庫需要具有 `db_owner` 固定資料庫角色的成員資格。 對等的 `CONTROL DATABASE` 權限不足。 這兩個系統採平行方式運作，但彼此鮮少互動。 Microsoft 建議盡可能使用最新且更細微的權限系統，來取代固定角色。  
   
-## 監視權限  
+## <a name="monitoring-permissions"></a>監視權限  
  下列檢視會傳回安全性資訊。  
   
 -   您可使用 `sys.server_principals` 檢視，檢驗伺服器上的登入與使用者定義伺服器角色。 此檢視在 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]中無法使用。  
@@ -180,32 +184,29 @@ GRANT CONTROL ON DATABASE::SalesDB TO Ted;
   
 -   您可使用 `sys.server_role_members` 檢視來檢驗伺服器角色成員資格。 此檢視在 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]中無法使用。  
   
--   如需其他的安全性相關檢視，請參閱[安全性目錄檢視 &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)。  
+-   如需其他的安全性相關檢視，請參閱 [安全性目錄檢視 &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md) ，建立和管理安全性主體。  
   
-### 實用的 Transact-SQL 陳述式  
+### <a name="useful-transact-sql-statements"></a>實用的 Transact-SQL 陳述式  
  下列陳述式會傳回關於權限的實用資訊。  
   
  若要傳回資料庫中已授與或拒絕的明確權限 ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)])，請在資料庫中執行下列陳述式。  
   
-```  
+```tsql  
 SELECT   
     perms.state_desc AS State,   
     permission_name AS [Permission],   
     obj.name AS [on Object],   
-    dPrinc.name AS [to User Name],   
-    sPrinc.name AS [who is Login Name]  
+    dPrinc.name AS [to User Name]  
 FROM sys.database_permissions AS perms  
 JOIN sys.database_principals AS dPrinc  
     ON perms.grantee_principal_id = dPrinc.principal_id  
 JOIN sys.objects AS obj  
-    ON perms.major_id = obj.object_id  
-LEFT OUTER JOIN sys.server_principals AS sPrinc  
-    ON dPrinc.sid = sPrinc.sid;  
+    ON perms.major_id = obj.object_id;  
 ```  
   
- 若要傳回伺服器角色的成員 (僅 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)])，請執行下列陳述式。  
+ 若要傳回伺服器角色的成員 (僅[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] )，請執行下列陳述式。  
   
-```  
+```tsql  
 SELECT sRole.name AS [Server Role Name] , sPrinc.name AS [Members]  
 FROM sys.server_role_members AS sRo  
 JOIN sys.server_principals AS sPrinc  
@@ -214,9 +215,10 @@ JOIN sys.server_principals AS sRole
     ON sRo.role_principal_id = sRole.principal_id;  
 ```  
   
+ 
  若要傳回資料庫角色的成員 ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)])，請在資料庫中執行下列陳述式。  
   
-```  
+```tsql  
 SELECT dRole.name AS [Database Role Name], dPrinc.name AS [Members]  
 FROM sys.database_role_members AS dRo  
 JOIN sys.database_principals AS dPrinc  
@@ -225,20 +227,22 @@ JOIN sys.database_principals AS dRole
     ON dRo.role_principal_id = dRole.principal_id;  
 ```  
   
-## 後續步驟  
+## <a name="next-steps"></a>後續步驟  
  如需更多關於快速入門的主題資訊，請參閱：  
   
--   [教學課程：Database Engine 使用者入門](../../../relational-databases/tutorial-getting-started-with-the-database-engine.md) [建立資料庫 &#40;Tutorial&#41;](../../../t-sql/creating-a-database-tutorial.md)  
+-   [教學課程：Database Engine 使用者入門](../../../relational-databases/tutorial-getting-started-with-the-database-engine.md) [建立資料庫 &#40;Tutorial&#41;](../../../t-sql/lesson-1-1-creating-a-database.md)  
   
 -   [教學課程：SQL Server Management Studio](../../../tools/sql-server-management-studio/tutorial-sql-server-management-studio.md)  
   
 -   [教學課程：撰寫國際性通用的 Transact-SQL 陳述式](../../../t-sql/tutorial-writing-transact-sql-statements.md)  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [SQL Server Database Engine 和 Azure SQL Database 的資訊安全中心](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)   
  [安全性函數 &#40;Transact-SQL&#41;](../../../t-sql/functions/security-functions-transact-sql.md)   
  [安全性相關的動態管理檢視和函數 &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/security-related-dynamic-management-views-and-functions-transact-sql.md)   
  [安全性目錄檢視 &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
- [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](../../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)  
+ [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](../../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
+ [判斷有效的 Database Engine 權限](../../../relational-databases/security/authentication-access/determining-effective-database-engine-permissions.md)
   
   
+
