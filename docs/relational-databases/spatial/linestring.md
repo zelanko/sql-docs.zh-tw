@@ -1,31 +1,35 @@
 ---
-title: "LineString | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-spatial"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "LineString geometry 子類型 [SQL Server]"
-  - "geometry 子類型 [SQL Server]"
+title: LineString | Microsoft Docs
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-spatial
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- LineString geometry subtype [SQL Server]
+- geometry subtypes [SQL Server]
 ms.assetid: e50d0b86-8b31-4285-be71-ad05c7712cbd
 caps.latest.revision: 24
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9132c20fb46f36511a781c934026ebf01503375d
+ms.lasthandoff: 04/11/2017
+
 ---
-# LineString
+# <a name="linestring"></a>LineString
   **LineString** 是代表一連串的點及連接這些點之線段的一維度物件。  
   
-## LineString 執行個體  
+## <a name="linestring-instances"></a>LineString 執行個體  
  下圖顯示 **LineString** 執行個體的範例。  
   
- ![幾何 LineString 執行個體的範例](../../relational-databases/spatial/media/linestring.png "幾何 LineString 執行個體的範例")  
+ ![幾何 LineString 執行個體的範例](../../relational-databases/spatial/media/linestring.gif "幾何 LineString 執行個體的範例")  
   
  如本圖所示：  
   
@@ -37,7 +41,7 @@ caps.handback.revision: 24
   
 -   圖 4 是非簡單、封閉的 **LineString** 執行個體，因此它不是環形。  
   
-### 已接受的執行個體  
+### <a name="accepted-instances"></a>已接受的執行個體  
  您可以將已接受的 **LineString** 執行個體放入 geometry 變數中，但是它們可能不是有效的 **LineString** 執行個體。 若要讓系統接受 **LineString** 執行個體，就必須符合下列準則。 此執行個體至少必須由兩個點所組成，或者它必須是空的。 下面是已接受的 LineString 執行個體。  
   
 ```  
@@ -54,7 +58,7 @@ DECLARE @g3 geometry = 'LINESTRING(1 1, 1 1)';
 DECLARE @g geometry = 'LINESTRING(1 1)';  
 ```  
   
-### 有效的執行個體  
+### <a name="valid-instances"></a>有效的執行個體  
  **LineString** 執行個體必須符合下列準則，才會是有效的。  
   
 1.  系統必須接受 **LineString** 執行個體。  
@@ -85,7 +89,7 @@ SELECT @g1.STIsValid(), @g2.STIsValid();
 > [!WARNING]  
 >  **LineString** 重疊的偵測是以浮點計算為基礎，但這些計算並不精確。  
   
-## 範例  
+## <a name="examples"></a>範例  
  下列範例示範如何建立具有三個點且 SRID 為 0 的 `geometry``LineString` 執行個體：  
   
 ```  
@@ -125,7 +129,7 @@ LINESTRING(1 3, 1 3) is not a valid LineString
 POINT(1 3) is a valid Point.  
 ```  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [STLength &#40;geometry 資料類型&#41;](../../t-sql/spatial-geometry/stlength-geometry-data-type.md)   
  [STStartPoint &#40;geometry 資料類型&#41;](../../t-sql/spatial-geometry/ststartpoint-geometry-data-type.md)   
  [STEndpoint &#40;geometry 資料類型&#41;](../../t-sql/spatial-geometry/stendpoint-geometry-data-type.md)   

@@ -1,40 +1,44 @@
 ---
-title: "建立分割區資料表及索引 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-partition"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.createpartition.progress.f1"
-  - "sql13.swb.createpartition.partitioncolumn.f1"
-  - "sql13.swb.createpartition.createjob.f1"
-  - "sql13.swb.createpartition.finish.f1"
-  - "sql13.swb.createpartition.selectoutput.f1"
-  - "sql13.swb.createpartition.partitionfunction.f1"
-  - "sql13.swb.createpartition.partitionscheme.f1"
-  - "sql13.swb.createpartition.getstart.f1"
-  - "sql13.swb.createpartition.mappartition.f1"
-  - "sql13.swb.createpartition.summary.f1"
-helpviewer_keywords: 
-  - "資料分割索引 [SQL Server], 建立"
-  - "資料分割配置 [SQL Server], 建立"
-  - "資料分割函數 [SQL Server], 建立"
-  - "資料分割資料表 [SQL Server], 建立"
-  - "資料分割函數 [SQL Server]"
-  - "資料分割配置 [SQL Server]"
+title: "建立資料分割資料表及索引 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-partition
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.createpartition.progress.f1
+- sql13.swb.createpartition.partitioncolumn.f1
+- sql13.swb.createpartition.createjob.f1
+- sql13.swb.createpartition.finish.f1
+- sql13.swb.createpartition.selectoutput.f1
+- sql13.swb.createpartition.partitionfunction.f1
+- sql13.swb.createpartition.partitionscheme.f1
+- sql13.swb.createpartition.getstart.f1
+- sql13.swb.createpartition.mappartition.f1
+- sql13.swb.createpartition.summary.f1
+helpviewer_keywords:
+- partitioned indexes [SQL Server], creating
+- partition schemes [SQL Server], creating
+- partition functions [SQL Server], creating
+- partitioned tables [SQL Server], creating
+- partition functions [SQL Server]
+- partition schemes [SQL Server]
 ms.assetid: 7641df10-1921-42a7-ba6e-4cb03b3ba9c8
 caps.latest.revision: 35
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 453f7ed733752453c8de05053fb37527c75d6612
+ms.lasthandoff: 04/11/2017
+
 ---
-# 建立分割區資料表及索引
+# <a name="create-partitioned-tables-and-indexes"></a>建立分割區資料表及索引
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中建立分割區資料表或索引。 分割區資料表及索引中的資料會被水平分割成單元，可散佈在資料庫中的多個檔案群組中。 分割作業可讓大型資料表和索引更容易管理及擴充。  
   
  分割區資料表或索引的建立過程通常分為四個部分：  
@@ -74,7 +78,7 @@ caps.handback.revision: 35
 ####  <a name="Permissions"></a> Permissions  
  建立分割區資料表，需要資料庫中的 CREATE TABLE 權限及建立資料表的結構描述之 ALTER 權限。 建立分割區索引，需要建立索引的資料表或檢視的 ALTER 權限。 建立分割區資料表或索引，還需要下列任何一個附加權限：  
   
--   ALTER ANY DATASPACE 權限。 這個權限預設會授與**系統管理員 (sysadmin)** 固定伺服器角色以及 **db_owner** 和 **db_ddladmin** 固定資料庫角色的成員。  
+-   ALTER ANY DATASPACE 權限。 這個權限預設會授與 **系統管理員 (sysadmin)** 固定伺服器角色以及 **db_owner** 和 **db_ddladmin** 固定資料庫角色的成員。  
   
 -   建立分割區函數和分割區配置之資料庫的 CONTROL 或 ALTER 權限。  
   
@@ -83,11 +87,11 @@ caps.handback.revision: 35
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  請遵循此程序中的步驟，建立一個或多個檔案群組、對應檔案和資料表。 在下一個程序中建立分割區資料表時，您將會參考這些物件。  
   
-#### 為分割區資料表建立新的檔案群組  
+#### <a name="to-create-new-filegroups-for-a-partitioned-table"></a>為分割區資料表建立新的檔案群組  
   
 1.  在物件總管中，以滑鼠右鍵按一下要建立分割區資料表的資料庫，然後選取 [屬性]。  
   
-2.  在 [資料庫屬性 - \<資料庫名稱>] 對話方塊的 [選取頁面] 底下，選取 [檔案群組]。  
+2.  在 [資料庫屬性 - <資料庫名稱>] 對話方塊的 [選取頁面] 底下，選取 [檔案群組]。  
   
 3.  按一下 **[資料列]**底下的 **[加入]**。 在新資料列中，輸入檔案群組名稱。  
   
@@ -106,7 +110,7 @@ caps.handback.revision: 35
   
 9. 展開 **[資料表]** 資料夾，像平常一樣地建立資料表。 如需詳細資訊，請參閱[建立資料表 &#40;Database Engine&#41;](../../relational-databases/tables/create-tables-database-engine.md)。 或者，您可以在下個程序中指定現有的資料表。  
   
-#### 建立分割區資料表  
+#### <a name="to-create-a-partitioned-table"></a>建立分割區資料表  
   
 1.  以滑鼠右鍵按一下要分割的資料表，指向 [儲存體]，然後按一下 [建立分割區]。  
   
@@ -114,7 +118,7 @@ caps.handback.revision: 35
   
 3.  在 **[選取分割資料行]** 頁面的 **[可用的分割資料行]** 方格中，選取要用來分割資料表的資料行。 只有包含可用來分割資料之資料類型的資料行才會顯示在 **[可用的分割資料行]** 方格中。 如果您選取了某個計算資料行當做分割資料行，就必須將此資料行指定為保存的資料行。  
   
-     您對分割資料行和值範圍擁有的選擇主要是由資料可以按邏輯方式分組到什麼程度所決定。 例如，您可能會選擇依據每年的月份或季度，將資料分成邏輯群組。 您打算針對資料進行的查詢將會決定這個邏輯群組是否足夠用於管理資料表分割區。 除了 **text**、**ntext**、**image**、**xml**、**timestamp**、**varchar(max)**、**nvarchar(max)**、**varbinary(max)**、別名資料類型或 CLR 使用者自訂資料類型，所有資料類型都能有效用在分割資料行上。  
+     您對分割資料行和值範圍擁有的選擇主要是由資料可以按邏輯方式分組到什麼程度所決定。 例如，您可能會選擇依據每年的月份或季度，將資料分成邏輯群組。 您打算針對資料進行的查詢將會決定這個邏輯群組是否足夠用於管理資料表分割區。 除了 **text**、 **ntext**、 **image**、 **xml**、 **timestamp**、 **varchar(max)**、 **nvarchar(max)**、 **varbinary(max)**、別名資料類型或 CLR 使用者自訂資料類型，所有資料類型都能有效用在分割資料行上。  
   
      在此頁面上可以使用下列其他選項：  
   
@@ -233,7 +237,7 @@ caps.handback.revision: 35
      指定每個動作的類型和名稱。  
   
      **狀態**  
-     指出整個精靈動作是否傳回 [成功] 或 [失敗] 的值。  
+     指出整個精靈動作傳回 [成功] 或 [失敗] 的值。  
   
      **訊息**  
      提供從程序所傳回的任何錯誤或警告訊息。  
@@ -250,7 +254,7 @@ caps.handback.revision: 35
      **複製報表到剪貼簿**  
      將精靈進度報表的結果複製到剪貼簿。  
   
-     **以電子郵件傳送報表**  
+     **[以電子郵件傳送報表]**  
      將精靈進度報表的結果複製到電子郵件。  
   
      完成後，請按一下 **[關閉]**。  
@@ -259,7 +263,7 @@ caps.handback.revision: 35
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 建立分割區資料表  
+#### <a name="to-create-a-partitioned-table"></a>建立分割區資料表  
   
 1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
@@ -342,7 +346,7 @@ caps.handback.revision: 35
     GO  
     ```  
   
-#### 若要判斷資料表是否已分割  
+#### <a name="to-determine-if-a-table-is-partitioned"></a>若要判斷資料表是否已分割  
   
 1.  下列查詢會在資料表 `PartitionTable` 已分割時，傳回一個或多個資料列。 如果資料表未分割，則不會傳回任何資料列。  
   
@@ -358,7 +362,7 @@ caps.handback.revision: 35
     GO  
     ```  
   
-#### 若要判斷分割資料表的界限值  
+#### <a name="to-determine-the-boundary-values-for-a-partitioned-table"></a>若要判斷分割資料表的界限值  
   
 1.  下列查詢會針對 `PartitionTable` 資料表中的每一個分割區傳回界限值。  
   
@@ -379,9 +383,9 @@ caps.handback.revision: 35
     ORDER BY p.partition_number;  
     ```  
   
-#### 若要判斷分割資料表的分割區資料行  
+#### <a name="to-determine-the-partition-column-for-a-partitioned-table"></a>若要判斷分割資料表的分割區資料行  
   
-1.  下列查詢會傳回資料表之分割區資料行的名稱。 `PartitionTable`。  
+1.  下列查詢會傳回資料表之分割區資料行的名稱。 `PartitionTable`中建立分割區資料表或索引。  
   
     ```  
     SELECT   
@@ -408,7 +412,7 @@ caps.handback.revision: 35
   
  如需詳細資訊，請參閱：  
   
--   [ALTER DATABASE 檔案及檔案群組選項 &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20File%20and%20Filegroup%20Options%20\(Transact-SQL\).md)  
+-   [ALTER DATABASE 檔案及檔案群組選項 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)  
   
 -   [CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-function-transact-sql.md)  
   

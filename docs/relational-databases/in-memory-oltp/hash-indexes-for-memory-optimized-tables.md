@@ -1,25 +1,29 @@
 ---
 title: "記憶體最佳化資料表的雜湊索引 | Microsoft Docs"
-ms.custom: 
-  - "MSDN content"
-  - "MSDN - SQL DB"
-ms.date: "08/29/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.service: "sql-database"
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom:
+- MSDN content
+- MSDN - SQL DB
+ms.date: 08/29/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.service: sql-database
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e922cc3a-3d6e-453b-8d32-f4b176e98488
 caps.latest.revision: 7
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: de23d5625c883792f5c99de75dc90ccd1cabe326
+ms.lasthandoff: 04/11/2017
+
 ---
-# 記憶體最佳化資料表的雜湊索引
+# <a name="hash-indexes-for-memory-optimized-tables"></a>記憶體最佳化資料表的雜湊索引
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   
@@ -27,11 +31,11 @@ caps.handback.revision: 7
   
 - 提供簡短程式碼範例來示範 Transact-SQL 語法。  
 - 描述雜湊索引的基礎觀念。  
-- 描述[如何估計適當的值區計數](#configuring_bucket_count)。  
+- 描述 [如何估計適當的值區計數](#configuring_bucket_count)。  
 - 說明如何設計和管理雜湊索引。  
   
   
-#### 必要條件  
+#### <a name="prerequisite"></a>必要條件  
   
 了解這篇文章的重要內容資訊位於︰  
   
@@ -39,10 +43,10 @@ caps.handback.revision: 7
   
   
   
-## A. 記憶體最佳化索引的語法  
+## <a name="a-syntax-for-memory-optimized-indexes"></a>A. 記憶體最佳化索引的語法  
   
   
-### A.1 語法的程式碼範例  
+### <a name="a1-code-sample-for-syntax"></a>A.1 語法的程式碼範例  
   
 本小節包含 Transact-SQL 程式碼區塊，示範在記憶體最佳化資料表上建立雜湊索引的可用語法：  
   
@@ -73,12 +77,12 @@ caps.handback.revision: 7
     go  
   
 
-若要判斷您資料的正確 `BUCKET_COUNT`，請參閱[設定雜湊索引值區計數](#configuring_bucket_count)。 
+若要判斷您資料的正確 `BUCKET_COUNT` ，請參閱 [設定雜湊索引值區計數](#configuring_bucket_count)。 
   
-## B. 雜湊索引  
+## <a name="b-hash-indexes"></a>B. 雜湊索引  
   
   
-### B.1 效能的基本概念  
+### <a name="b1-performance-basics"></a>B.1 效能的基本概念  
   
 雜湊索引的效能如下︰  
   
@@ -89,7 +93,7 @@ caps.handback.revision: 7
   
 <a name="h3-b2-declaration-limitations"></a>  
   
-### B.2 宣告限制  
+### <a name="b2-declaration-limitations"></a>B.2 宣告限制  
   
 雜湊索引只能存在於記憶體最佳化資料表上。 它無法存在於以磁碟為基礎的資料表上。  
   
@@ -108,7 +112,7 @@ caps.handback.revision: 7
   
   
   
-### B.3 值區和雜湊函數  
+### <a name="b3-buckets-and-hash-function"></a>B.3 值區和雜湊函數  
   
 雜湊索引會將它的索引鍵值錨定在我們所謂的「值區」陣列上︰  
   
@@ -138,11 +142,11 @@ SQL Server 有一個雜湊函式，可用於所有雜湊索引：
 下圖摘要說明雜湊索引和值區的相互作用。  
   
   
-![hekaton_tables_23d](../../relational-databases/in-memory-oltp/media/hekaton-tables-23d.png "Index keys, input into hash function, output is address of a hash bucket, which points to head of chain.")  
+![hekaton_tables_23d](../../relational-databases/in-memory-oltp/media/hekaton-tables-23d.png "輸入至雜湊函式的索引鍵，輸出是指向鏈結前端的雜湊值區位址。")  
   
   
   
-### B.4 資料列版本和記憶體回收  
+### <a name="b4-row-versions-and-garbage-collection"></a>B.4 資料列版本和記憶體回收  
   
   
 在記憶體最佳化資料表中，當資料列受到 SQL UPDATE 影響時，資料表會建立資料列的更新版本。 在更新交易期間，其他工作階段或許能夠讀取舊版資料列，藉此避免發生與資料列鎖定相關聯的效能低落。  
@@ -153,7 +157,7 @@ SQL Server 有一個雜湊函式，可用於所有雜湊索引：
   
 <a name="configuring_bucket_count"></a>
   
-## C. 設定雜湊索引值區計數  
+## <a name="c-configuring-the-hash-index-bucket-count"></a>C. 設定雜湊索引值區計數  
   
 雜湊索引值區計數是在索引建立時間指定，並可使用 ALTER TABLE...ALTER INDEX REBUILD 語法來變更。  
   
@@ -174,15 +178,16 @@ SQL Server 有一個雜湊函式，可用於所有雜湊索引：
   - 空值區會使用記憶體，但每個值區只使用 8 個位元組。  
     
   
-> [AZURE.NOTE] 新增更多值區，對於減少將共用重複值的項目鏈結在一起的情況，沒有任何助益。 您可以使用值重複的比率來決定雜湊是否為適當的索引類型，而不是計算值區計數。  
+> [!NOTE]
+> 新增更多值區，對於減少將共用重複值的項目鏈結在一起的情況，沒有任何助益。 您可以使用值重複的比率來決定雜湊是否為適當的索引類型，而不是計算值區計數。  
   
   
   
-### C.1 實際數字  
+### <a name="c1-practical-numbers"></a>C.1 實際數字  
   
 即使 **BUCKET_COUNT** 是在慣用範圍中間上下，雜湊索引的效能很可能是可容忍或可接受的。 不會產生任何危機。  
   
-為雜湊索引提供 **BUCKET_COUNT**，大約等於您預測記憶體最佳化資料表成長後將擁有的資料列數目。  
+為雜湊索引提供 **BUCKET_COUNT** ，大約等於您預測記憶體最佳化資料表成長後將擁有的資料列數目。  
   
 假設成長中的資料表擁有 2,000,000 個資料列，但您預測數量將成長 10 倍為 20,000,000 個資料列。 值區計數請從資料表中資料列數目的 10 倍開始。 這讓您有空間可容納增加的資料列數。  
   
@@ -193,7 +198,7 @@ SQL Server 有一個雜湊函式，可用於所有雜湊索引：
   
 - 值區計數 2,000,000 正是您可接受的最低限度。 效能降低的程度是在容忍範圍內。  
   
-### C.2 索引中有太多重複的值？  
+### <a name="c2-too-many-duplicate-values-in-the-index"></a>C.2 索引中有太多重複的值？  
   
 如果雜湊索引值有高比率的重複項目，則雜湊值區會受到較長鏈結影響。  
   
@@ -214,13 +219,13 @@ SQL Server 有一個雜湊函式，可用於所有雜湊索引：
   
 - 10.0 或更高的比率表示雜湊是不適用的索引類型。 請考慮改用非叢集索引。   
   
-## D. 疑難排解雜湊索引值區計數  
+## <a name="d-troubleshooting-hash-index-bucket-count"></a>D. 疑難排解雜湊索引值區計數  
   
 本節將討論如何進行雜湊索引值區計數的疑難排解。  
   
-### D.1 監視鏈結和空值區的統計資料  
+### <a name="d1-monitor-statistics-for-chains-and-empty-buckets"></a>D.1 監視鏈結和空值區的統計資料  
   
-您可以執行下列 T-SQL SELECT，來監視雜湊索引的統計健康狀況。 SELECT 會使用名為 **sys.dm_db_xtp_hash_index_stats** 的資料管理檢視 (DMV)。  
+您可以執行下列 T-SQL SELECT，來監視雜湊索引的統計健康狀況。 SELECT 會使用名為 **sys.dm_db_xtp_hash_index_stats**的資料管理檢視 (DMV)。  
   
   
 ```t-sql
@@ -260,7 +265,7 @@ SQL Server 有一個雜湊函式，可用於所有雜湊索引：
   
 
   
-### D.2 鏈結和空值區的示範  
+### <a name="d2-demonstration-of-chains-and-empty-buckets"></a>D.2 鏈結和空值區的示範  
   
   
 下列 T-SQL 程式碼區塊可讓您輕鬆地測試 `SELECT * FROM sys.dm_db_xtp_hash_index_stats;`。 程式碼區塊會在 1 分鐘內完成。 以下是下列程式碼區塊的階段︰  
@@ -268,9 +273,9 @@ SQL Server 有一個雜湊函式，可用於所有雜湊索引：
   
 1. 建立含有數個雜湊索引的記憶體最佳化資料表。  
 2. 在資料表中填入數千個資料列。  
-    a. 模數運算子可用來設定 StatusCode 資料行中重複值的比率。  
-    b. 迴圈大約會在 1 分鐘內插入 (INSERT) 262144 個資料列。  
-3. 列印 (PRINT) 訊息會要求您執行先前來自 **sys.dm_db_xtp_hash_index_stats** 的 SELECT。  
+    A. 模數運算子可用來設定 StatusCode 資料行中重複值的比率。  
+    B. 迴圈大約會在 1 分鐘內插入 (INSERT) 262144 個資料列。  
+3. 列印 (PRINT) 訊息會要求您執行先前來自 **sys.dm_db_xtp_hash_index_stats**的 SELECT。  
   
   
 ```t-sql
@@ -330,7 +335,7 @@ SQL Server 有一個雜湊函式，可用於所有雜湊索引：
 - 針對主索引鍵索引和 IX_OrderSequence 插入唯一值。  
 - 插入數十萬個資料列，其中只針對 StatusCode 顯示 8 個相異值。 因此 ix_StatusCode 索引中，值重複的比率較高。  
   
-若要在值區計數不是最佳選項時進行疑難排解，可檢查下列來自 **sys.dm_db_xtp_hash_index_stats** 之 SELECT 的輸出。 我們對於這些結果將 `WHERE Object_Name(h.object_id) = 'SalesOrder_Mem'` 新增到從 D.1 節複製的 SELECT。  
+若要在值區計數不是最佳選項時進行疑難排解，可檢查下列來自 **sys.dm_db_xtp_hash_index_stats**之 SELECT 的輸出。 我們對於這些結果將 `WHERE Object_Name(h.object_id) = 'SalesOrder_Mem'` 新增到從 D.1 節複製的 SELECT。  
   
   
   
@@ -381,7 +386,7 @@ SQL Server 有一個雜湊函式，可用於所有雜湊索引：
 - 平均鏈結長度為 1，這也很理想。 不需進行任何變更。  
   
   
-### D.3 平衡取捨  
+### <a name="d3-balancing-the-trade-off"></a>D.3 平衡取捨  
   
 OLTP 工作負載專注於個別的資料列。 完整的資料表掃描通常不會在 OLTP 工作負載的關鍵效能路徑中。 因此，您仍必須在下列項目之間平衡取捨︰  
   
@@ -405,7 +410,7 @@ OLTP 工作負載專注於個別的資料列。 完整的資料表掃描通常�
   
   
   
-## E. 雜湊索引的優點  
+## <a name="e-strengths-of-hash-indexes"></a>E. 雜湊索引的優點  
   
   
 在下列情況中，雜湊索引會比非雜湊索引更適合︰  
@@ -419,7 +424,7 @@ OLTP 工作負載專注於個別的資料列。 完整的資料表掃描通常�
   
   
   
-### E.1 多重資料行的雜湊索引鍵  
+### <a name="e1-multi-column-hash-index-keys"></a>E.1 多重資料行的雜湊索引鍵  
   
   
 您的兩個資料行索引可能是非叢集索引或雜湊索引。 假設索引資料行是 col1 和 col2。 假設有下列 SQL SELECT 陳述式，則只有非叢集索引會有助於查詢最佳化工具︰  
@@ -458,3 +463,5 @@ GeneMi  ,  2016-05-05  Thursday  15:01pm
   
   
   
+
+

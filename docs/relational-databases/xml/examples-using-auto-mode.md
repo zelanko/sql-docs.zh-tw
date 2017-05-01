@@ -1,27 +1,31 @@
 ---
 title: "範例：使用 AUTO 模式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "AUTO FOR XML 模式, 範例"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- AUTO FOR XML mode, examples
 ms.assetid: 11e8d0e4-df8a-46f8-aa21-9602d4f26cad
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bd35722bc0392701813ad17877c19c8ef0583988
+ms.lasthandoff: 04/11/2017
+
 ---
-# 範例：使用 AUTO 模式
+# <a name="examples-using-auto-mode"></a>範例：使用 AUTO 模式
   下列範例說明 AUTO 模式的用法。 這些查詢中有許多是針對自行車製造說明的 XML 文件來指定的，而這些文件儲存在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 範例資料庫中 ProductModel 資料表的 Instructions 資料行中。  
   
-## 範例：擷取客戶、訂單及訂單詳細資訊  
+## <a name="example-retrieving-customer-order-and-order-detail-information"></a>範例：擷取客戶、訂單及訂單詳細資訊  
  此查詢會擷取特定客戶的客戶、訂單及訂單詳細資訊。  
   
 ```  
@@ -92,7 +96,7 @@ FOR XML AUTO;
   
  `</Cust>`  
   
-## 範例：指定 GROUP BY 及彙總函式  
+## <a name="example-specifying-group-by-and-aggregate-functions"></a>範例：指定 GROUP BY 及彙總函式  
  下列查詢會傳回個別的客戶識別碼，以及客戶所要求的訂單數量。  
   
 ```  
@@ -112,7 +116,7 @@ FOR XML AUTO;This is the partial result:
   
  `...`  
   
-## 範例：在 AUTO 模式中指定計算資料行  
+## <a name="example-specifying-computed-columns-in-auto-mode"></a>範例：在 AUTO 模式中指定計算資料行  
  此查詢會傳回串連的個別客戶名稱及訂單資訊。 因為計算資料行指派給此時所發現的最內層 (在此範例中為 <`SOH`> 元素)， 因此在結果中，串連的客戶名稱會被當成 <`SOH`> 元素的屬性來加入。  
   
 ```  
@@ -165,8 +169,8 @@ ORDER BY IndividualCustomer.CustomerID, SOH.CustomerIDFOR XML AUTO;
   
  `...`  
   
-## 範例：傳回二進位資料  
- 此查詢會從 `ProductPhoto` 資料表傳回產品相片。 `ThumbNailPhoto` 是 `ProductPhoto` 資料表中的 **varbinary(max)** 資料行。 依預設，`AUTO` 模式會傳回二進位資料的參考，此為執行查詢所在之資料庫虛擬根目錄的相對 URL。 您必須指定 `ProductPhotoID` 索引鍵屬性來識別影像。 如同此範例所說明，在擷取影像參考時，也必須在 `SELECT` 子句中指定資料表的主索引鍵，以識別具唯一性的資料列。  
+## <a name="example-returning-binary-data"></a>範例：傳回二進位資料  
+ 此查詢會從 `ProductPhoto` 資料表傳回產品相片。 `ThumbNailPhoto` 是 **資料表中的** varbinary(max) `ProductPhoto` 資料行。 依預設， `AUTO` 模式會傳回二進位資料的參考，此為執行查詢所在之資料庫虛擬根目錄的相對 URL。 您必須指定 `ProductPhotoID` 索引鍵屬性來識別影像。 如同此範例所說明，在擷取影像參考時，也必須在 `SELECT` 子句中指定資料表的主索引鍵，以識別具唯一性的資料列。  
   
 ```  
 SELECT ProductPhotoID, ThumbNailPhoto  
@@ -221,7 +225,7 @@ FOR XML AUTO;
   
  這可能會是一個問題，尤其是在針對區分大小寫的資料庫執行 dbobject 查詢時。 為了避免發生這個問題，查詢中指定之資料表或資料行名稱的大小寫，應該要與資料庫中資料表或資料行名稱的大小寫相符。  
   
-## 範例：了解編碼方式  
+## <a name="example-understanding-the-encoding"></a>範例：了解編碼方式  
  此範例顯示結果中所出現的各種編碼方式。  
   
  建立下述資料表：  
@@ -264,11 +268,11 @@ SELECT * FROM [Special Chars] FOR XML AUTO;
   
 -   在查詢結果中，所傳回之元素及屬性名稱中的 XML 與 URL 特殊字元，是使用對應之 Unicode 字元的十六進位值來進行編碼。 在上述結果中，元素名稱 <`Special Chars`> 在傳回時會變成 <`Special_x0020_Chars`>。 屬性名稱 <`Col#&2`> 會以 <`Col_x0023__x0026_2`> 形式傳回。 XML 和 URL 特殊字元都會加以編碼。  
   
--   如果元素或屬性的值包含五種標準 XML 字元實體 ('、""、\<、> 及 &) 的其中任何一種，則永遠都會使用 XML 字元編碼方式來將這些 XML 特殊字元編碼。 在上述結果中，<`Col1`> 屬性值中的 `&` 值會編碼成 `&`。 不過，# 字元仍保留為 #，因為它是有效的 XML 字元，並非特殊 XML 字元。  
+-   如果項目或屬性的值包含五種標準 XML 字元實體 ('、""、\<、> 及 &) 的其中任何一種，則一律都會使用 XML 字元編碼方式來將這些 XML 特殊字元編碼。 在上述結果中，<`Col1`> 屬性值中的 `&` 值會編碼成 `&`。 不過，# 字元仍保留為 #，因為它是有效的 XML 字元，並非特殊 XML 字元。  
   
 -   如果元素或屬性的值包含任何於 URL 中是具有特殊意義的 URL 特殊字元，則只有位於 DBOBJECT URL 值內且當特殊字元為資料表或資料行名稱的一部分時，才會對這些字元進行編碼。 在結果中，屬於資料表名稱 `#` 一部分的 `Col#&2` 字元會被編碼成 `_x0023_ in the DBOJBECT URL`。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [搭配 FOR XML 使用 AUTO 模式](../../relational-databases/xml/use-auto-mode-with-for-xml.md)  
   
   

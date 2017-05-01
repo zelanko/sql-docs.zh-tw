@@ -1,26 +1,30 @@
 ---
-title: "檢視預存程序的相依性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-stored-Procs"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "預存程序 [SQL Server], 相依性"
-  - "顯示預存程序相依性"
-  - "檢視預存程序相依性"
+title: "檢視預存程序的相依性 | Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-stored-Procs
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- stored procedures [SQL Server], dependencies
+- displaying stored procedure dependencies
+- viewing stored procedure dependencies
 ms.assetid: 6ae0a369-1bc7-4ae4-be89-2b483697cd1f
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 43bd4ec5070a9174a0cfd488157dd043dc4084bf
+ms.lasthandoff: 04/11/2017
+
 ---
-# 檢視預存程序的相依性
+# <a name="view-the-dependencies-of-a-stored-procedure"></a>檢視預存程序的相依性
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來檢視 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中的預存程序相依性。  
   
 ##  <a name="Top"></a>   
@@ -35,13 +39,13 @@ caps.handback.revision: 26
 ###  <a name="Security"></a> 安全性  
   
 ####  <a name="Permissions"></a> Permissions  
- 系統函數：**sys.dm_sql_referencing_entities**  
+ 系統函數： **sys.dm_sql_referencing_entities**  
  需要受參考實體的 CONTROL 權限和 sys.dm_sql_referencing_entities 的 SELECT 權限。 當受參考實體為資料分割函數時，便需要資料庫的 CONTROL 權限。 根據預設，SELECT 權限會授與 public。  
   
- 系統函數：**sys.dm_sql_referenced_entities**  
+ 系統函數： **sys.dm_sql_referenced_entities**  
  需要 sys.dm_sql_referenced_entities 的 SELECT 權限和參考實體的 VIEW DEFINITION 權限。 根據預設，SELECT 權限會授與 public。 當參考實體為資料庫層級 DDL 觸發程序時，便需要資料庫的 VIEW DEFINITION 權限，或資料庫的 ALTER DATABASE DDL TRIGGER 權限。 當參考實體為伺服器層級 DDL 觸發程序時，便需要伺服器的 VIEW ANY DEFINITION 權限。  
   
- 物件目錄檢視：**sys.sql_expression_dependencies**  
+ 物件目錄檢視： **sys.sql_expression_dependencies**  
  需要資料庫的 VIEW DEFINITION 權限和資料庫之 sys.sql_expression_dependencies 的 SELECT 權限。 根據預設，SELECT 權限只授與 db_owner 固定資料庫角色的成員。 當 SELECT 和 VIEW DEFINITION 權限授與其他使用者時，被授與者就可以檢視資料庫中的所有相依性。  
   
 ##  <a name="Procedures"></a> 如何檢視預存程序的相依性  
@@ -69,7 +73,7 @@ caps.handback.revision: 26
 ###  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **在查詢編輯器中檢視程序的相依性**  
   
- 系統函數：**sys.dm_sql_referencing_entities**  
+ 系統函數： **sys.dm_sql_referencing_entities**  
  此函數用來顯示相依於程序的物件。  
   
 1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體，然後展開該執行個體。  
@@ -113,7 +117,7 @@ caps.handback.revision: 26
   
     ```  
   
- 系統函數：**sys.dm_sql_referenced_entities**  
+ 系統函數： **sys.dm_sql_referenced_entities**  
  此函數用來顯示程序所相依的物件。  
   
 1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體，然後展開該執行個體。  
@@ -158,7 +162,7 @@ caps.handback.revision: 26
     GO  
     ```  
   
- 物件目錄檢視：**sys.sql_expression_dependencies**  
+ 物件目錄檢視： **sys.sql_expression_dependencies**  
  此檢視可用來顯示程序相依的物件或相依於程序的物件。  
   
  顯示相依於程序的物件。  
@@ -262,7 +266,7 @@ caps.handback.revision: 26
     GO  
     ```  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [重新命名預存程序](../../relational-databases/stored-procedures/rename-a-stored-procedure.md)   
  [sys.dm_sql_referencing_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)   
  [sys.dm_sql_referenced_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)   

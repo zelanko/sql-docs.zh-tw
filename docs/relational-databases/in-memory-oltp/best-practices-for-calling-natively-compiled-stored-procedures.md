@@ -1,22 +1,26 @@
 ---
-title: "呼叫原生編譯預存程序的最佳作法 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/24/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "呼叫原生編譯預存程序的最佳做法 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/24/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f39fc1c7-cfec-4a95-97f6-6b95954694bb
 caps.latest.revision: 8
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 2ecd5bafd4a2092ea51556b898284456d8abf2d7
+ms.lasthandoff: 04/11/2017
+
 ---
-# 呼叫原生編譯預存程序的最佳作法
+# <a name="best-practices-for-calling-natively-compiled-stored-procedures"></a>呼叫原生編譯預存程序的最佳作法
   原生編譯預存程序：  
   
 -   通常用於應用程式的關鍵性效能組件中。  
@@ -45,13 +49,11 @@ caps.handback.revision: 8
   
 -   當呼叫原生編譯預存程序時，請使用序數 (無名) 參數。 若要以最有效率方式執行，請勿使用具名參數。  
   
- (無效率) 具名參數與原生編譯的預存程序的使用，可以透過 XEvent **hekaton_slow_parameter_passing**，與 **reason = named_parameters** 加以偵測。  
+ 原生編譯預存程序參數中的無效率情況，可以透過 XEvent **natively_compiled_proc_slow_parameter_passing** 加以偵測：
+ - 類型不符︰**reason=parameter_conversion**
+ - 具名參數：**reason=named_parameters**
+ - 預設值：**reason=default** 
   
- 同樣地，您可以透過相同的 XEvent **hekaton_slow_parameter_passing**，與 **reason = parameter_conversion**，偵測到不相符的類型的使用。  
-  
- 因為在使用記憶體最佳化資料表時必須實作重試邏輯 (在許多案例中)，而且因為您必須避開某些功能限制，所以您可能會想要建立包裝函式解譯的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 預存程序。 如需範例，請參閱 [Transactions with Memory-Optimized Tables](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md) (與記憶體最佳化資料表交易)。  
-  
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [原生編譯的預存程序](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  
-  
-  
+

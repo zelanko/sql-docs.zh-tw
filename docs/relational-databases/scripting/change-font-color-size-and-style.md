@@ -1,32 +1,36 @@
 ---
 title: "變更字型色彩、大小與樣式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "大小 [SQL Server], 字型"
-  - "修改字型"
-  - "字型 [SQL Server Management Studio]"
-  - "自訂字型 [SQL Server]"
-  - "查詢編輯器 [SQL Server Management Studio], 管理字型"
-  - "文字字型 [SQL Server Management Studio]"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- size [SQL Server], fonts
+- modifying fonts
+- fonts [SQL Server Management Studio]
+- customizing fonts [SQL Server]
+- Query Editor [SQL Server Management Studio], managing fonts
+- text fonts [SQL Server Management Studio]
 ms.assetid: 5c3061db-23c5-4d9f-a6ab-6b53a1a83f88
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2017cde2a11a05d47774c6b817b3e10d0785fdab
+ms.lasthandoff: 04/11/2017
+
 ---
-# 變更字型色彩、大小與樣式
-  您可以自訂文字在編輯器及 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的其他位置中之呈現方式。  
+# <a name="change-font-color-size-and-style"></a>變更字型色彩、大小與樣式
+  您可以自訂文字在編輯器及 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的其他位置中之呈現方式。  
   
-### 變更編輯器中的字型色彩、大小和樣式  
+### <a name="to-change-font-color-size-and-style-in-the-editor"></a>變更編輯器中的字型色彩、大小和樣式  
   
 1.  在 **[工具]** 功能表上，按一下 **[選項]** 。 按一下 [環境]，然後按一下 [字型和色彩]。  
   
@@ -41,7 +45,7 @@ caps.handback.revision: 23
   
  文字色彩和字型類型的設定適用於全域的所有文字元素類型，如註解、字串...等。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [列印程式碼與結果](../../relational-databases/scripting/print-code-and-results.md)   
  [查詢編輯器中的色彩編碼](../../relational-databases/scripting/color-coding-in-query-editors.md)  
   

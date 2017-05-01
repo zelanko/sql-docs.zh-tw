@@ -1,28 +1,32 @@
 ---
-title: "控制交易持久性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/16/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-transaction-log"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "延遲的持久性"
-  - "延遲認可"
+title: "控制交易持久性 | Microsoft 文件"
+ms.custom: 
+ms.date: 09/16/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-transaction-log
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- delayed durability
+- Lazy Commit
 ms.assetid: 3ac93b28-cac7-483e-a8ab-ac44e1cc1c76
 caps.latest.revision: 27
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 956e9f95b95aa0ecb99477714e70ac61d29c45e0
+ms.lasthandoff: 04/11/2017
+
 ---
-# 控制交易持久性
+# <a name="control-transaction-durability"></a>控制交易持久性
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 交易認可可能是完全持久 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 預設值) 或延遲的持久 (也稱為延遲認可)。    
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 交易認可可能是完全持久 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 預設值) 或延遲的持久 (也稱為延遲認可)。    
     
  完全持久交易認可是同步認可，而且只有在交易的記錄檔記錄寫入磁碟之後，才會將認可回報為成功並將控制權傳回給用戶端。 延遲的持久交易認可是非同步認可，而且在交易的記錄檔記錄寫入磁碟之前，就會將認可回報為成功。 將交易記錄項目寫入磁碟是讓交易能夠持久的必要條件。 延遲的持久交易會在交易記錄項目排清至磁碟時變成持久。    
     
@@ -35,7 +39,7 @@ caps.handback.revision: 27
  完全持久交易會先將交易記錄寫入磁碟，然後再將控制權傳回給用戶端。 只要符合下列情況，您就應該使用完全持久交易：    
     
 -   您的系統無法容忍任何資料遺失。     
-    如需何時會遺失部分資料的相關資訊，請參閱[我何時會遺失資料？](../../relational-databases/logs/control-transaction-durability.md#bkmk_DataLoss)一節。    
+    如需何時會遺失部分資料的相關資訊，請參閱 [我何時會遺失資料？](../../relational-databases/logs/control-transaction-durability.md#bkmk_DataLoss) 一節。    
     
 -   造成瓶頸的原因不是交易記錄寫入延遲。    
     
@@ -78,17 +82,17 @@ caps.handback.revision: 27
     
     -   相同資料庫中的完全持久交易對資料庫進行變更並且成功認可。   
     
-    -   使用者成功執行系統預存程序 `sp_flush_log`。     
+    -   使用者成功執行系統預存程序 `sp_flush_log` 。     
     
         如果完全持久交易或 sp_flush_log 成功認可，就表示所有先前認可的延遲持久交易保證都已經變成持久。
         
-    - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 嘗試根據記錄產生和時間將記錄檔排清至磁碟，即使所有交易都延遲為持久。 如果 IO 裝置保持啟動，這通常會成功。 但是，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不會提供硬性持久交易和 sp_flush_log 以外的任何持久性保證。      
+    - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 嘗試根據記錄產生和時間將記錄檔排清至磁碟，即使所有交易都延遲為持久。 如果 IO 裝置保持啟動，這通常會成功。 但是， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不會提供硬性持久交易和 sp_flush_log 以外的任何持久性保證。      
     
   
     
 ## <a name="how-to-control-transaction-durability"></a>如何控制交易持久性    
     
-###  <a name="a-namebkmkdbcontrola-database-level-control"></a><a name="bkmk_DbControl"></a> 資料庫層級控制    
+###  <a name="bkmk_DbControl"></a> Database level control    
  身為 DBA 的您，可以控制使用者是否能使用下列陳述式，在資料庫上使用延遲的交易持久性。 您必須使用 ALTER DATABASE 來設定延遲的持久性設定。    
     
 ```tsql    
@@ -99,12 +103,12 @@ ALTER DATABASE … SET DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }
  [預設值] 使用這項設定時，在資料庫上認可的所有交易都是完全持久，不論認可層級設定為何 (DELAYED_DURABILITY=[ON | OFF])。 完全不需要進行預存程序變更和重新編譯。 這可讓您確保任何資料都不會因為延遲的持久性而面臨風險。    
     
  **允許**    
- 使用這項設定時，每筆交易的持久性都是在交易層級上決定的 – DELAYED_DURABILITY = { *OFF* | ON }。 如需詳細資訊，請參閱 [ATOMIC 區塊等級控制 – 原生編譯的預存程序](../../relational-databases/logs/control-transaction-durability.md#CompiledProcControl)和 [COMMIT 等級控制 – Transact-SQL](../../relational-databases/logs/control-transaction-durability.md#bkmk_T-SQLControl)。    
+ 使用這項設定時，每筆交易的持久性都是在交易層級上決定的 – DELAYED_DURABILITY = { *OFF* | ON }。 如需詳細資訊，請參閱 [ATOMIC 區塊等級控制 – 原生編譯的預存程序](../../relational-databases/logs/control-transaction-durability.md#CompiledProcControl) 和 [COMMIT 等級控制 – Transact-SQL](../../relational-databases/logs/control-transaction-durability.md#bkmk_T-SQLControl) 。    
     
  **強制**    
- 使用這項設定時，在資料庫上認可的每筆交易都是延遲的持久。  不論交易是否有指定完全持久 (DELAYED_DURABILITY = OFF) ，交易都是延遲的持久。 當延遲的交易持久性適用於資料庫，而且您不想要變更任何應用程式程式碼時，這項設定就很有用。    
+ 使用這項設定時，在資料庫上認可的每筆交易都是延遲的持久。 不論交易是否有指定完全持久 (DELAYED_DURABILITY = OFF) ，交易都是延遲的持久。 當延遲的交易持久性適用於資料庫，而且您不想要變更任何應用程式程式碼時，這項設定就很有用。    
     
-###  <a name="a-namecompiledproccontrola-atomic-block-level-control-natively-compiled-stored-procedures"></a><a name="CompiledProcControl"></a> 不可部分完成的區塊層級控制 - 原生編譯的預存程序    
+###  <a name="CompiledProcControl"></a> Atomic block level control – Natively Compiled Stored Procedures    
  下列程式碼會進入不可部分完成的區塊內部。    
     
 ```tsql    
@@ -139,7 +143,7 @@ END
 |**DELAYED_DURABILITY = OFF**|不可部分完成的區塊會啟動新的完全持久交易。|不可部分完成的區塊會在現有的交易中建立儲存點，然後開始新的交易。|    
 |**DELAYED_DURABILITY = ON**|不可部分完成的區塊會啟動新的延遲持久交易。|不可部分完成的區塊會在現有的交易中建立儲存點，然後開始新的交易。|    
     
-###  <a name="a-namebkmkt-sqlcontrola-commit-level-control-includetsqltokentsqlmdmd"></a><a name="bkmk_T-SQLControl"></a> COMMIT 層級控制 –[!INCLUDE[tsql](../../includes/tsql-md.md)]    
+###  <a name="bkmk_T-SQLControl"></a> COMMIT level control –[!INCLUDE[tsql](../../includes/tsql-md.md)]    
  COMMIT 語法已擴充，因此您可以強制延遲的交易持久性。 如果資料庫層級的 DELAYED_DURABILITY 是 DISABLED 或 FORCED (請參閱上述說明)，就會忽略這個 COMMIT 選項。    
     
 ```tsql    
@@ -170,7 +174,7 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
     
 -   執行系統預存程序 `sp_flush_log`。 這個程序會強制將所有先前認可之延遲持久交易的記錄檔記錄排清至磁碟。 如需詳細資訊，請參閱 [sys.sp_flush_log &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-flush-log-transact-sql.md)。    
     
-##  <a name="a-namebkmkothersqlfeaturesa-delayed-durability-and-other-includessnoversiontokenssnoversionmdmd-features"></a><a name="bkmk_OtherSQLFeatures"></a> 延遲持久性和其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能    
+##  <a name="bkmk_OtherSQLFeatures"></a> 延遲持久性和其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能    
  **變更追蹤和異動資料擷取**    
  所有具有變更追蹤的交易都是完全持久。 如果某筆交易會對啟用變更追蹤的資料表進行任何寫入作業，它就具有變更追蹤屬性。 不支援使用異動資料擷取 (CDC) 之資料庫的延遲持久性。    
     
@@ -195,16 +199,17 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
  **記錄備份**    
  只有已經變成持久的交易才會包含在備份中。    
     
-##  <a name="a-namebkmkdatalossa-when-can-i-lose-data"></a><a name="bkmk_DataLoss"></a> 我何時會遺失資料？    
+##  <a name="bkmk_DataLoss"></a> When can I lose data?    
  如果您在任何資料表上實作延遲持久性，您應該了解特定環境會導致資料遺失。 如果您無法容忍任何資料遺失，就不應該在資料表中使用延遲持久性。    
     
 ### <a name="catastrophic-events"></a>重大事件    
  發生重大事件 (例如伺服器當機) 時，您將遺失所有尚未儲存到磁碟的已認可交易資料。 每當針對資料表中的任何資料表 (持久性記憶體最佳化或以磁碟為基礎的資料表) 執行完全持久交易，或呼叫 `sp_flush_log` 時，即會將延遲的持久交易儲存到磁碟。 如果您正在使用延遲的持久交易，您可以在資料庫中建立小型資料表，以便定期更新或定期呼叫 `sp_flush_log` 來儲存所有尚未認可完畢的交易。 交易記錄也會在它已滿時排清，但這很難預期且無法控制。    
     
-### <a name="includessnoversiontokenssnoversionmdmd-shutdown-and-restart"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 關機並重新啟動    
- 針對延遲的持久性，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的意外關機與預期的關機/重新啟動之間並無差異。 就像重大事件一樣，您應該針對資料遺失進行規劃。 在規劃好的關機/重新啟動中，部分尚未寫入磁碟的交易可能會先儲存到磁碟，但您不應該規劃相關事項。 對於類似關機/重新啟動的規劃 (不論是規劃或未規劃的) 都會像重大事件一樣遺失資料。    
+### <a name="includessnoversionincludesssnoversion-mdmd-shutdown-and-restart"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 關機並重新啟動    
+ 針對延遲的持久性， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的意外關機與預期的關機/重新啟動之間並無差異。 就像重大事件一樣，您應該針對資料遺失進行規劃。 在規劃好的關機/重新啟動中，部分尚未寫入磁碟的交易可能會先儲存到磁碟，但您不應該規劃相關事項。 對於類似關機/重新啟動的規劃 (不論是規劃或未規劃的) 都會像重大事件一樣遺失資料。    
     
 ## <a name="see-also"></a>另請參閱    
  [與記憶體最佳化資料表的交易](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md)    
     
   
+

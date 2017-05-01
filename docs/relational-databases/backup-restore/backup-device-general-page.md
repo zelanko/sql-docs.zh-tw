@@ -1,24 +1,28 @@
 ---
 title: "備份裝置 (一般頁面) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.backupdevice.general.f1"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.backupdevice.general.f1
 ms.assetid: c557e37d-319e-4adb-a0c1-94189b15d2ac
 caps.latest.revision: 34
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4cca5d50abc9aad1babf20cdbb8566e437aa9236
+ms.lasthandoff: 04/11/2017
+
 ---
-# 備份裝置 (一般頁面)
+# <a name="backup-device-general-page"></a>備份裝置 (一般頁面)
   使用 **[一般]** 頁面，可指定或檢視邏輯備份裝置的一般屬性。  
   
  **若要使用 SQL Server Management Studio 檢視備份裝置的內容**  
@@ -27,7 +31,7 @@ caps.handback.revision: 34
   
 -   [檢視邏輯備份裝置的屬性和內容 &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
-## 選項  
+## <a name="options"></a>選項  
  **裝置名稱**  
  檢視現有邏輯備份裝置的名稱，或是指定新邏輯備份裝置的名稱。  
   
@@ -46,13 +50,13 @@ caps.handback.revision: 34
   
      若要指定邏輯備份檔案，可以按一下 **[檔案]** 文字方塊右邊的 [瀏覽] 按鈕。 接著，您可以在 **[尋找資料庫檔案]** 對話方塊中，導覽至執行伺服器執行個體之電腦中任何固定磁碟機上的任何位置。 如果備份檔案尚不存在，則您必須在該對話方塊的 **[檔案名稱]** 欄位中輸入您要使用的檔名。  
   
-     或者，您可以用手動方式編輯 **[檔案]** 欄位，以覆寫預設的路徑、檔案名稱和副檔名。 若要指定遠端檔案做為備份目的地，請輸入其完整的通用命名慣例 (UNC) 名稱。 如需詳細資訊，請參閱[備份裝置 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)。  
+     或者，您可以用手動方式編輯 **[檔案]** 欄位，以覆寫預設的路徑、檔案名稱和副檔名。 若要指定遠端檔案做為備份目的地，請輸入其完整的通用命名慣例 (UNC) 名稱。 如需詳細資訊，請參閱 [備份裝置 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)之執行個體的電腦上時，此選項才可以使用。  
   
     > [!IMPORTANT]  
-    >  透過網路備份資料可能會受到網路錯誤的影響，因此，建議您在備份作業完成之後要進行確認。 如需詳細資訊，請參閱 [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20VERIFYONLY%20\(Transact-SQL\).md)。  
+    >  透過網路備份資料可能會受到網路錯誤的影響，因此，建議您在備份作業完成之後要進行確認。 如需詳細資訊，請參閱 [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)。  
   
-## 備註  
- 單一媒體集是由一組一個或多個備份裝置上的備份所組成。 *「媒體集」* 是按順序排列的備份媒體集合 (磁帶或磁碟檔案)，由一個或多個的備份作業使用固定的備份裝置類型與數量寫入。 如需媒體集的一般資訊，請參閱[媒體集、媒體家族與備份組 &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)。  
+## <a name="remarks"></a>備註  
+ 單一媒體集是由一組一個或多個備份裝置上的備份所組成。 *「媒體集」* 是按順序排列的備份媒體集合 (磁帶或磁碟檔案)，由一個或多個的備份作業使用固定的備份裝置類型與數量寫入。 如需媒體集的一般資訊，請參閱 [媒體集、媒體家族與備份組 &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)之執行個體的電腦上時，此選項才可以使用。  
   
  將媒體集中的第一個備份寫入邏輯備份裝置時，會初始化對應於邏輯備份裝置的實體備份裝置。 如果實體備份裝置是目前尚不存在的檔案，在初始化時便會建立該檔案。  
   
@@ -76,7 +80,7 @@ caps.handback.revision: 34
   
 -   [從裝置還原備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-backup-from-a-device-sql-server.md)  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [備份裝置 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)   
  [媒體集、媒體家族與備份組 &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)  
   

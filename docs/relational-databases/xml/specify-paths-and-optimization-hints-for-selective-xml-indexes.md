@@ -1,22 +1,26 @@
 ---
 title: "指定選擇性 XML 索引的路徑和最佳化提示 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 486ee339-165b-4aeb-b760-d2ba023d7d0a
 caps.latest.revision: 12
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 3c07b191fe73f8cab21a9f3876230d344ad99968
+ms.lasthandoff: 04/11/2017
+
 ---
-# 指定選擇性 XML 索引的路徑和最佳化提示
+# <a name="specify-paths-and-optimization-hints-for-selective-xml-indexes"></a>指定選擇性 XML 索引的路徑和最佳化提示
   本主題描述如何指定建立或修改選擇性 XML 索引時，要索引的節點路徑以及索引的最佳化提示。  
   
  您會同時在下列其中一個陳述式中指定節點路徑及最佳化提示：  
@@ -25,7 +29,7 @@ caps.handback.revision: 11
   
 -   在 **ALTER** 陳述式的 **ADD** 子句中。 如需詳細資訊，請參閱 [ALTER INDEX &#40;選擇性 XML 索引&#41;](../../t-sql/statements/alter-index-selective-xml-indexes.md)。  
   
- 如需選擇性 XML 索引的詳細資訊，請參閱[選擇性 XML 索引 &#40;SXI&#41;](../../relational-databases/xml/selective-xml-indexes-sxi.md)。  
+ 如需選擇性 XML 索引的詳細資訊，請參閱 [選擇性 XML 索引 &#40;SXI&#41;](../../relational-databases/xml/selective-xml-indexes-sxi.md)。  
   
 ##  <a name="untyped"></a> 了解不具類型之 XML 中的 XQuery 和 SQL Server 類型  
  選擇性 XML 索引支援兩種類型的系統：XQuery 類型和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 類型。 索引路徑可用來比對 XQuery 運算式，或是比對 XML 資料類型之 value() 方法的傳回類型。  
@@ -44,7 +48,7 @@ caps.handback.revision: 11
   
 -   XQuery 浮點資料類型支援 +/- 零和 +/- 無限大這些特殊值。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 浮點資料類型不支援這些特殊值。  
   
-### 不具類型 XML 中的 XQuery 類型  
+### <a name="xquery-types-in-untyped-xml"></a>不具類型 XML 中的 XQuery 類型  
   
 -   XQuery 類型會比對 XML 資料類型之所有方法中的 XQuery 運算式，包含 value() 方法。  
   
@@ -105,7 +109,7 @@ pathY = '/a/b/d' as XQUERY 'xs:string' MAXLENGTH(200) SINGLETON
 -- pathY - Performance is improved; secondary indexes are possible; storage is saved.  
 ```  
   
-### 不具類型 XML 中的 SQL Server 類型  
+### <a name="sql-server-types-in-untyped-xml"></a>不具類型 XML 中的 SQL Server 類型  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 類型會比對 value() 方法的傳回值。  
   
@@ -121,7 +125,7 @@ SELECT T.record,
 FROM myXMLTable T  
 ```  
   
- 指定的查詢會從封裝至 NVARCHAR(200) 資料類型內的路徑 `/a/b/d` 傳回值，因此要為節點指定的資料類型就很明顯。 不過，沒有用來在不具類型的 XML 中指定節點基數的結構描述。 若要指定節點 `d` 在其父節點 `b` 下最多出現一次，請建立使用 SINGLETON 最佳化提示的選擇性 XML 索引，如下所示：  
+ 指定的查詢會從封裝至 NVARCHAR(200) 資料類型內的路徑 `/a/b/d` 傳回值，因此要為節點指定的資料類型就很明顯。 不過，沒有用來在不具類型的 XML 中指定節點基數的結構描述。 若要指定節點 `d` 在其父節點 `b`下最多出現一次，請建立使用 SINGLETON 最佳化提示的選擇性 XML 索引，如下所示：  
   
 ```tsql  
 CREATE SELECTIVE XML INDEX example_sxi_US  
@@ -132,7 +136,6 @@ node1223 = '/a/b/d' as SQL NVARCHAR(200) SINGLETON
 )  
 ```  
   
- [本主題內容](#top)  
   
 ##  <a name="typed"></a> 了解具類型之 XML 的選擇性 XML 索引支援  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中具類型的 XML 是與特定 XML 文件相關聯的結構描述。 結構描述會定義節點的整體文件結構和類型。 如果結構描述存在，選擇性 XML 索引會在使用者升級路徑時套用結構描述結構，因此不需要指定路徑的 XQUERY 類型。  
@@ -206,12 +209,12 @@ node1223 = '/a/b/d' as SQL NVARCHAR(200) SINGLETON
   
 -   MAXLENGTH 最佳化提示可以搭配 xs:string 類型用來縮短索引值。  
   
- 如需最佳化提示的詳細資訊，請參閱[指定最佳化提示](#hints)。  
+ 如需最佳化提示的詳細資訊，請參閱 [指定最佳化提示](#hints)。  
   
 ##  <a name="paths"></a> 指定路徑  
  選擇性 XML 索引可讓您僅索引與預期執行之查詢相關的預存 XML 資料中節點的子集。 如果相關節點的子集大幅少於 XML 文件中節點的總數，選擇性 XML 索引只會儲存相關的節點。 若要利用選擇性 XML 索引的優點，請識別要索引的正確節點子集。  
   
-### 選擇要索引的節點  
+### <a name="choosing-the-nodes-to-index"></a>選擇要索引的節點  
  您可以利用下列兩種簡單的原則，識別要加入至選擇性 XML 索引的正確節點子集。  
   
 1.  **原則 1**：若要評估特定 XQuery 運算式，請為您需要檢查的所有節點編製索引。  
@@ -220,7 +223,7 @@ node1223 = '/a/b/d' as SQL NVARCHAR(200) SINGLETON
   
     -   索引 XQuery 運算式中套用 XQuery 述詞的所有節點。  
   
-     請考慮在本主題中[範例 XML 文件](#sample)上進行下列簡單的查詢：  
+     請考慮在本主題中 [範例 XML 文件](#sample) 上進行下列簡單的查詢：  
   
     ```tsql  
     SELECT T.record FROM myXMLTable T  
@@ -231,7 +234,7 @@ node1223 = '/a/b/d' as SQL NVARCHAR(200) SINGLETON
   
     -   節點 `c`，因為它的值在 XQuery 運算式中使用。  
   
-    -   節點 `b`，因為述詞會在 XQuery 運算式的節點 `b` 上套用。  
+    -   節點 `b`，因為述詞會在 XQuery 運算式的節點`b` 上套用。  
   
 2.  **原則 2**：為了達到最佳效能，請為評估指定 XQuery 運算式所需的所有節點編製索引。 如果您只索引部分節點，則選擇性 XML 索引可改善僅包括索引節點的子運算式評估。  
   
@@ -247,7 +250,7 @@ FOR
 )  
 ```  
   
-### 索引相同路徑  
+### <a name="indexing-identical-paths"></a>索引相同路徑  
  您無法將相同路徑升級為路徑名稱不同的相同類型。 例如，下列查詢會引發錯誤，因為 `pathOne` 和 `pathTwo` 相同：  
   
 ```tsql  
@@ -270,7 +273,7 @@ FOR
 )  
 ```  
   
-### 範例  
+### <a name="examples"></a>範例  
  以下提供一些針對不同 XQuery 類型選取要索引之正確節點的其他範例。  
   
  **範例 1**  
@@ -301,7 +304,7 @@ WHERE T.xmldata.exist('/a/b/c/d/e[./f = "SQL"]') = 1
   
 |要包含在索引中的節點|索引此節點的原因|  
 |----------------------------------|-----------------------------------|  
-|**/a/b/c/d/e**|述詞會套用在節點 `e` 上。|  
+|**/a/b/c/d/e**|述詞會套用在節點 `e`上。|  
 |**/a/b/c/d/e/f**|節點 `f` 的值會在述詞內評估。|  
   
  **範例 3**  
@@ -318,13 +321,13 @@ FROM myXMLTable T
   
 |要包含在索引中的節點|索引此節點的原因|  
 |----------------------------------|-----------------------------------|  
-|**/a/b/c/d/e**|述詞會套用在節點 `e` 上。|  
+|**/a/b/c/d/e**|述詞會套用在節點 `e`上。|  
 |**/a/b/c/d/e/f**|節點 `f` 的值會在述詞內評估。|  
 |**/a/b/c/d/e/g**|節點 `g` 的值是由 value() 方法傳回。|  
   
  **範例 4**  
   
- 以下是在 exist() 子句內使用 FLWOR 子句的查詢  (FLWOR 這個名稱來自五個子句，這五個子句構成 XQuery FLWOR 運算式：for、let、where、order by 和 return)。  
+ 以下是在 exist() 子句內使用 FLWOR 子句的查詢 (FLWOR 這個名稱來自五個子句，這五個子句構成 XQuery FLWOR 運算式：for、let、where、order by 和 return)。  
   
 ```tsql  
 SELECT T.record FROM myXMLTable T  
@@ -343,7 +346,6 @@ WHERE T.xmldata.exist('
 |**/a/b/c/d/e/f**|節點 `f` 的值會在 FLWOR 子句中評估。|  
 |**/a/b/c/d/e/g**|exist() 方法會評估節點 `g` 是否存在。|  
   
- [本主題內容](#top)  
   
 ##  <a name="hints"></a> 指定最佳化提示  
  您可以使用選用的最佳化提示，為藉由選擇性 XML 索引進行索引的節點指定其他對應詳細資料。 例如，您可以指定節點的資料類型和基數，以及有關資料結構的特定資訊。 這項額外資訊可提供更佳的對應。 此外還能獲得效能提升和 (或) 節省儲存空間的結果。  
@@ -352,7 +354,7 @@ WHERE T.xmldata.exist('
   
  某些最佳化提示 (例如，SINGLETON 提示) 會對資料形成條件約束。 在某些情況下，如果不符合這些條件約束，可能會引發錯誤。  
   
-### 最佳化提示的優點  
+### <a name="benefits-of-optimization-hints"></a>最佳化提示的優點  
  下表會識別支援更有效率的儲存或提升效能的最佳化提示。  
   
 |最佳化提示|更有效率的儲存|提升效能|  
@@ -362,7 +364,7 @@ WHERE T.xmldata.exist('
 |**DATA TYPE**|是|是|  
 |**MAXLENGTH**|是|是|  
   
-### 最佳化提示和資料類型  
+### <a name="optimization-hints-and-data-types"></a>最佳化提示和資料類型  
  您可以索引 XQuery 資料類型或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型的節點。 下表顯示每一種資料類型支援的最佳化提示。  
   
 |最佳化提示|XQuery 資料類型|SQL 資料類型|  
@@ -372,10 +374,10 @@ WHERE T.xmldata.exist('
 |**DATA TYPE**|是|否|  
 |**MAXLENGTH**|是|否|  
   
-### node() 最佳化提示  
+### <a name="node-optimization-hint"></a>node() 最佳化提示  
  適用於：XQuery 資料類型  
   
- 您可以使用 node() 最佳化指定評估一般查詢時不需要其值的節點。 這個提示可在一般查詢只需評估節點是否存在時，減少儲存需求  (根據預設，選擇性 XML 索引會儲存所有已升級節點的值，但是不包括複雜的節點類型)。  
+ 您可以使用 node() 最佳化指定評估一般查詢時不需要其值的節點。 這個提示可在一般查詢只需評估節點是否存在時，減少儲存需求 (根據預設，選擇性 XML 索引會儲存所有已升級節點的值，但是不包括複雜的節點類型)。  
   
  請設想下列範例：  
   
@@ -390,32 +392,31 @@ WHERE T.xmldata.exist('/a/b[./c=5]') = 1
   
  如果查詢需要已利用 node() 提示索引之節點的值，則無法使用選擇性 XML 索引。  
   
-### SINGLETON 最佳化提示  
+### <a name="singleton-optimization-hint"></a>SINGLETON 最佳化提示  
  適用於：XQuery 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型  
   
  SINGLETON 最佳化提示會指定節點的基數。 此提示可改善查詢效能，因為事先就已知道節點最多只會在其父系或上階內出現一次。  
   
- 請考慮本主題中的[範例 XML 文件](#sample)。  
+ 請考慮本主題中的 [範例 XML 文件](#sample) 。  
   
  若要使用選擇性 XML 索引查詢此文件，您可以針對節點 `d` 指定 SINGLETON 提示，因為它最多只會在其父系內出現一次。  
   
  如果已指定 SINGLETON 提示，但節點在其父系或上階內不只出現一次，則會在您建立索引 (針對現有資料) 或執行查詢 (針對新資料) 時引發錯誤。  
   
-### DATA TYPE 最佳化提示  
+### <a name="data-type-optimization-hint"></a>DATA TYPE 最佳化提示  
  適用於：XQuery 資料類型  
   
  DATA TYPE 最佳化提示可讓您針對索引的節點指定 XQuery 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型。 資料類型用於對應索引節點的選擇性 XML 索引之資料表中的資料行。  
   
  將現有值轉換成指定的資料類型失敗時，插入作業 (插入索引內) 不會失敗；但是索引的資料表中會插入 null 值。  
   
-### MAXLENGTH 最佳化提示  
+### <a name="maxlength-optimization-hint"></a>MAXLENGTH 最佳化提示  
  適用於：XQuery 資料類型  
   
  MAXLENGTH 最佳化提示可讓您限制 xs:string 資料的長度。 MAXLENGTH 與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型無關，因為您是在指定 VARCHAR 或 NVARCHAR 資料類型時指定長度。  
   
  如果現有的字串長度超過指定的 MAXLENGTH，則將該值插入索引中的作業會失敗。  
   
- [本主題內容](#top)  
   
 ##  <a name="sample"></a> 做為範例的範例 XML 文件  
  下列範例 XML 文件會在本主題的範例中參考：  
@@ -434,9 +435,8 @@ WHERE T.xmldata.exist('/a/b[./c=5]') = 1
 </a>  
 ```  
   
- [本主題內容](#top)  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [選擇性 XML 索引 &#40;SXI&#41;](../../relational-databases/xml/selective-xml-indexes-sxi.md)   
  [建立、修改和卸除選擇性 XML 索引](../../relational-databases/xml/create-alter-and-drop-selective-xml-indexes.md)  
   

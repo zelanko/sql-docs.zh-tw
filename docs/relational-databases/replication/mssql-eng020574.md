@@ -1,26 +1,30 @@
 ---
-title: "MSSQL_ENG020574 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "MSSQL_ENG02574 錯誤"
+title: MSSQL_ENG020574 | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- MSSQL_ENG02574 error
 ms.assetid: 4e98f8de-287c-4090-81ee-dc8f80dfa6a1
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cdc5f18e948011ee6a51db949ce9b4f0471638ba
+ms.lasthandoff: 04/11/2017
+
 ---
-# MSSQL_ENG020574
+# <a name="mssqleng020574"></a>MSSQL_ENG020574
     
-## 訊息詳細資料  
+## <a name="message-details"></a>訊息詳細資料  
   
 |||  
 |-|-|  
@@ -31,10 +35,10 @@ caps.handback.revision: 11
 |符號名稱||  
 |訊息文字|訂閱者 '%s' 訂閱的發行項 '%s' (在發行集 '%s' 中)，未通過資料驗證。|  
   
-## 說明  
- 訂閱者端的資料是依據發行者端的資料進行驗證，而資料不相符，因此驗證失敗。 如需有關驗證的詳細資訊，請參閱 [驗證複寫資料](../../relational-databases/replication/validate-replicated-data.md)。  
+## <a name="explanation"></a>說明  
+ 訂閱者端的資料是依據發行者端的資料進行驗證，而資料不相符，因此驗證失敗。 如需驗證的相關資訊，請參閱 [Validate Replicated Data](../../relational-databases/replication/validate-replicated-data.md)。  
   
-## 使用者動作  
+## <a name="user-action"></a>使用者動作  
  我們建議您執行下列動作：  
   
 -   判斷驗證失敗的原因。  
@@ -43,7 +47,7 @@ caps.handback.revision: 11
   
 -   重新初始化訂閱或透過其他方法，讓資料聚合。  
   
-## 另請參閱  
- [錯誤和事件參考 & #40。複寫 & #41;](../../relational-databases/replication/errors-and-events-reference-replication.md)  
+## <a name="see-also"></a>另請參閱  
+ [錯誤和事件參考 &#40;複寫&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)  
   
   

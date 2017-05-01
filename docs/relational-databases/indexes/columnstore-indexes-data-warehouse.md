@@ -1,22 +1,26 @@
 ---
-title: "資料倉儲的資料行存放區索引 | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/27/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "資料行存放區索引 - 資料倉儲 | Microsoft 文件"
+ms.custom: 
+ms.date: 01/27/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 21fd153b-116d-47fc-a926-f1528299a391
 caps.latest.revision: 15
-author: "barbkess"
-ms.author: "barbkess"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: barbkess
+ms.author: barbkess
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: ba866cdea9d6158affc31e74572bb9610ab94489
+ms.lasthandoff: 04/11/2017
+
 ---
-# 資料倉儲的資料行存放區索引
+# <a name="columnstore-indexes---data-warehouse"></a>資料行存放區索引 - 資料倉儲
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   結合資料分割的資料行存放區索引對於建置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料倉儲非常重要。  
@@ -45,7 +49,7 @@ caps.handback.revision: 14
 -   資料庫相容性等級 130 的快照集隔離  
   
 ## <a name="improve-performance-by-combining-nonclustered-and-columnstore-indexes"></a>透過結合非叢集和資料行存放區索引來改善效能  
- 自 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 起，您可以在叢集資料行存放區索引上定義非叢集索引。  
+ 自 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]起，您可以在叢集資料行存放區索引上定義非叢集索引。  
   
 ### <a name="example-improve-efficiency-of-table-seeks-with-a-nonclustered-index"></a>例如：以非叢集索引改善資料表搜尋的效率  
  若要改善在資料倉儲中搜尋資料表的效率，您可以建立專用的非叢集索引來執行對資料表搜尋有最佳效能的查詢。 例如，針對 btree 索引執行比對值或傳回小範圍值的查詢，其效能會比針對資料行存放區索引執行的好。 它們不需要透過資料行存放區索引的完整資料表掃描，且透過 btree 索引執行二進位搜尋，會較快傳回正確的結果。  
@@ -137,11 +141,12 @@ END TRAN
  使用「快照集隔離」(SI) 來保證交易的一致性，以及「讀取認可快照集隔離」(RCSI) 來確保資料行存放區索引上查詢陳述式層級的一致性。 這可讓查詢執行而不會封鎖資料寫入器。 此非封鎖性的行為也會大幅降低複雜交易發生死結的可能性。 如需詳細資訊，請參閱 MSDN 上的 [SQL Server 中的快照集隔離](http://msdn.microsoft.com/library/tcbchxcb\(v=vs.110\).aspx) 。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料行存放區索引指南](../Topic/Columnstore%20Indexes%20Guide.md)   
- [資料行存放區索引資料載入](../Topic/Columnstore%20Indexes%20Data%20Loading.md)   
- [資料行存放區索引建立版本功能摘要](../Topic/Columnstore%20Indexes%20Versioned%20Feature%20Summary.md)   
+ 資料行存放區索引指南   
+ 資料行存放區索引資料載入   
+ 資料行存放區索引建立版本功能摘要   
  [資料行存放區索引效能](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   
  [開始使用資料行存放區進行即時作業分析](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)   
  [資料行存放區索引重組](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)  
   
   
+

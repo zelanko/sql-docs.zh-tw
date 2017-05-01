@@ -1,43 +1,47 @@
 ---
-title: "使用 BULK INSERT 或 OPENROWSET(BULK...) 匯入大量資料 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/26/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-bulk-import-export"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "BULK INSERT 陳述式, 從遠端資料檔案匯入資料"
-  - "大量匯入 [SQL Server], 方法"
-  - "大量匯出 [SQL Server], 方法"
-  - "OPENROWSET 函數, BULK INSERT"
-  - "大量匯入 [SQL Server], 安全性"
-  - "大量資料列集提供者 [SQL Server]"
-  - "大量匯出 [SQL Server], BULK INSERT 陳述式"
-  - "遠端資料存取 [SQL Server], 大量匯入"
-  - "大量匯入 [SQL Server], BULK INSERT 陳述式"
-  - "Transact-SQL 大量匯出/匯入作業"
+title: "使用 BULK INSERT 或 OPENROWSET (BULK...) 匯入大量資料 (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 07/26/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-bulk-import-export
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- BULK INSERT statement, importing data from a remote data file
+- bulk importing [SQL Server], methods
+- bulk exporting [SQL Server], methods
+- OPENROWSET function, BULK INSERT
+- bulk importing [SQL Server], security
+- bulk rowset providers [SQL Server]
+- bulk exporting [SQL Server], BULK INSERT statement
+- remote data access [SQL Server], bulk importing
+- bulk importing [SQL Server], BULK INSERT statement
+- Transact-SQL bulk export/import operations
 ms.assetid: 18a64236-0285-46ea-8929-6ee9bcc020b9
 caps.latest.revision: 45
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 44
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 3abb7e7f582c7699b128d8b9d70b4aec34041424
+ms.lasthandoff: 04/11/2017
+
 ---
-# 使用 BULK INSERT 或 OPENROWSET(BULK...) 匯入大量資料 (SQL Server)
+# <a name="import-bulk-data-by-using-bulk-insert-or-openrowsetbulk-sql-server"></a>使用 BULK INSERT 或 OPENROWSET(BULK...) 匯入大量資料 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   本主題提供一個概觀，說明如何使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] BULK INSERT 陳述式與 INSERT...SELECT * FROM OPENROWSET(BULK...) 陳述式，從資料檔案大量匯入資料到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表中。 本主題也將說明有關使用 BULK INSERT 和 OPENROWSET(BULK…)，以及使用這些方法從遠端資料來源大量匯入時的安全性考量。  
   
-> **注意**：當您使用 BULK INSERT 或 OPENROWSET(BULK…) 時，了解 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本處理模擬的方式相當重要。 如需詳細資訊，請參閱本主題稍後的「安全性考量」。  
+> **注意** ：當您使用 BULK INSERT 或 OPENROWSET(BULK…) 時，了解 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本處理模擬的方式相當重要。 如需詳細資訊，請參閱本主題稍後的「安全性考量」。  
   
-## BULK INSERT 陳述式  
+## <a name="bulk-insert-statement"></a>BULK INSERT 陳述式  
  BULK INSERT 會從資料檔案將資料載入資料表。 此功能與 **bcp** 命令的 **in** 選項相似，但卻是由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序來讀取資料檔案。 如需 BULK INSERT 語法的描述，請參閱 [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)。  
   
-## BULK INSERT 範例  
+## <a name="bulk-insert-examples"></a>BULK INSERT 範例  
  
   
 -   [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)  
@@ -64,18 +68,20 @@ caps.handback.revision: 44
   
 -   [使用格式檔案將資料表資料行對應至資料檔欄位 &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
-## OPENROWSET(BULK…) 函數  
+## <a name="openrowsetbulk-function"></a>OPENROWSET(BULK…) 函數  
  OPENROWSET BULK 資料列集提供者可透過呼叫 OPENROWSET 函數及指定 BULK 選項加以存取。 OPENROWSET(BULK…) 函數可讓您透過 OLE DB 提供者連接到遠端資料來源 (例如資料檔案)，以存取遠端資料。  
+
+**適用於︰**[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 中無法使用 `OPENROWSET`。
   
  若要大量匯入資料，請從 INSERT 陳述式內的 SELECT…FROM 子句呼叫 OPENROWSET(BULK…)。 大量匯入資料的基本語法是：  
   
  INSERT ...SELECT * FROM OPENROWSET(BULK...)  
   
- 當用於 INSERT 陳述式時，OPENROWSET(BULK...) 支援資料表提示。 除了一般的資料表提示 (例如 TABLOCK) 之外，BULK 子句也接受下列特定的資料表提示：IGNORE_CONSTRAINTS (僅忽略 CHECK 條件約束)、IGNORE_TRIGGERS、KEEPDEFAULTS 和 KEEPIDENTITY。 如需詳細資訊，請參閱[資料表提示 &#40;Transact-SQL&#41;](../Topic/Table%20Hints%20\(Transact-SQL\).md)。  
+ 當用於 INSERT 陳述式時，OPENROWSET(BULK...) 支援資料表提示。 除了一般的資料表提示 (例如 TABLOCK) 之外，BULK 子句也接受下列特定的資料表提示：IGNORE_CONSTRAINTS (僅忽略 CHECK 條件約束)、IGNORE_TRIGGERS、KEEPDEFAULTS 和 KEEPIDENTITY。 如需詳細資訊，請參閱[資料表提示 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)。  
   
  如需 BULK 選項其他用法的資訊，請參閱 [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)。  
   
-## INSERT...SELECT * FROM OPENROWSET(BULK...) 陳述式 - 範例：
+## <a name="insertselect--from-openrowsetbulk-statements---examples"></a>INSERT...SELECT * FROM OPENROWSET(BULK...) 陳述式 - 範例：
   
 -   [大量匯入與匯出 XML 文件的範例 &#40;SQL Server&#41;](../../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)  
   
@@ -91,21 +97,21 @@ caps.handback.revision: 44
   
 -   [使用格式檔案略過資料欄位 &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)  
   
--   [使用格式檔案將資料表資料行對應至資料檔案欄位 &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
+-   [使用格式檔案將資料表資料行對應至資料檔欄位 &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
-## 安全性考量  
+## <a name="security-considerations"></a>安全性考量  
  如果使用者是使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入，則會使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序帳戶的安全性設定檔。 使用 SQL Server 驗證的登入無法於 Database Engine 外部進行驗證。 因此，一旦使用 SQL Server 驗證的登入起始 BULK INSERT 命令，將會使用 SQL Server 處理序帳戶 (即 SQL Server Database Engine 服務所使用的帳戶) 的安全性內容建立與資料的連接。 
  
  為了能夠成功讀取來源資料，您必須授與 SQL Server Database Engine 所使用的帳戶對來源資料的存取權。 相反地，如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用者是使用 Windows 驗證登入，則該使用者只能讀取其使用者帳戶可存取的檔案，而與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序的安全性設定檔無關。  
   
  例如，有個使用者使用 Windows 驗證登入了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 如果這個使用者要用 BULK INSERT 或 OPENROWSET 從資料檔案匯入資料到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表中，則使用者帳戶必須具有資料檔案的讀取權限。 有了資料檔案的存取權之後，即使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序沒有權限存取檔案，使用者還是可以將檔案中的資料匯入到資料表。 使用者不需要將檔案存取權限授與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 可以設定為，透過轉送已驗證 Windows 使用者的認證，讓 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體連接到另一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 此設置也稱為「模擬」或「委派」。 當您使用 BULK INSERT 或 OPENROWSET 時，請務必了解 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本如何處理使用者模擬的安全性。 使用者模擬允許資料檔案位於和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序或使用者不同的電腦上。 例如，如果位於 **Computer_A** 的使用者可以存取 **Computer_B** 上的資料檔案，且已適當設定認證委派，則使用者可以連接到執行於 **Computer_C** 上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，然後存取 **Computer_B** 上的資料檔案，並從該檔案大量匯入資料到 **Computer_C** 上的資料表。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 可以設定為，透過轉送已驗證 Windows 使用者的認證，讓 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體連接到另一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 此設置也稱為「模擬」或「委派」。 當您使用 BULK INSERT 或 OPENROWSET 時，請務必了解 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本如何處理使用者模擬的安全性。 使用者模擬允許資料檔案位於和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序或使用者不同的電腦上。 例如，如果位於 **Computer_A** 的使用者可以存取 **Computer_B**上的資料檔案，且已適當設定認證委派，則使用者可以連接到執行於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Computer_C **上的**執行個體，然後存取 **Computer_B**上的資料檔案，並從該檔案大量匯入資料到 **Computer_C**上的資料表。  
   
-## 從遠端資料檔案大量匯入  
- 若要使用 BULK INSERT 或 INSERT...SELECT \* FROM OPENROWSET(BULK...) 從另一部電腦大量匯入資料，則必須在兩部電腦之間共用資料檔案。 若要指定共用資料檔案，請使用它的通用命名慣例 (UNC) 名稱，其使用一般格式：**\\\\**伺服器名稱**\\**共用名稱**\\**路徑**\\**檔案名稱。 此外，用來存取資料檔案的帳戶必須擁有在遠端磁碟上讀取檔案所需的權限。  
+## <a name="bulk-importing-from-a-remote-data-file"></a>從遠端資料檔案大量匯入  
+ 若要使用 BULK INSERT 或 INSERT...SELECT \* FROM OPENROWSET(BULK...) 從另一部電腦大量匯入資料，則必須在兩部電腦之間共用資料檔案。 若要指定共用資料檔案，請使用它的通用命名慣例 (UNC) 名稱，其使用一般格式：**\\\\**<伺服器名稱>**\\**<共用名稱>**\\**<路徑>**\\**<檔案名稱>。 此外，用來存取資料檔案的帳戶必須擁有在遠端磁碟上讀取檔案所需的權限。  
   
- 例如，下列 `BULK INSERT` 陳述式會從名為 `SalesOrderDetail` 的資料檔案大量匯入資料到 `AdventureWorks` 資料庫的 `newdata.txt` 資料表。 此資料檔案位於 `\dailyorders` 系統上的 `salesforce` 網路共用目錄上的 `computer2` 共用資料夾中。  
+ 例如，下列 `BULK INSERT` 陳述式會從名為 `SalesOrderDetail` 的資料檔案大量匯入資料到 `AdventureWorks` 資料庫的 `newdata.txt`資料表。 此資料檔案位於 `\dailyorders` 系統上的 `salesforce` 網路共用目錄上的 `computer2`共用資料夾中。  
   
 ```  
 BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail  
@@ -113,9 +119,9 @@ BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail
 GO  
 ```  
   
-> **注意**：這個限制並不適用於 **bcp** 公用程式，因為用戶端可以獨立讀取檔案，不受 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 影響。  
+> **注意** ：這個限制並不適用於 **bcp** 公用程式，因為用戶端可以獨立讀取檔案，不受 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]影響。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [SELECT 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-clause-transact-sql.md)   
  [資料的大量匯入及匯出 &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)   
@@ -126,3 +132,4 @@ GO
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)  
   
   
+

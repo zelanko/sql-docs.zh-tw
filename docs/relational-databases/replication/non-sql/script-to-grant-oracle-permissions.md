@@ -1,30 +1,34 @@
 ---
 title: "授與 Oracle 權限的指令碼 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Oracle 發行 [SQL Server 複寫], 授與權限的指令碼"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Oracle publishing [SQL Server replication], script to grant permissions
 ms.assetid: d742fd30-347a-452f-b5fc-b03232360c6b
 caps.latest.revision: 37
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 37
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: dd6d7d2d41813cd3a6748aa6e8bb31e2a09363a7
+ms.lasthandoff: 04/11/2017
+
 ---
-# 授與 Oracle 權限的指令碼
-  本主題中提供的指令碼用來發行資料所使用的 Oracle 資料庫組態設定期間使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 複寫。 此指令碼也會提供下列目錄安裝後︰ *\< 磁碟機>*:\\files\microsoft SQL Server\\*\< e>*\MSSQL\Install\oracleadmin.sql。 如需設定 Oracle 資料庫的詳細資訊，請參閱 [設定 Oracle 發行者](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)。  
+# <a name="script-to-grant-oracle-permissions"></a>授與 Oracle 權限的指令碼
+  此主題中所提供的指令碼用於 Oracle 資料庫的組態期間，該資料庫會使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 複寫發行資料。 安裝後，可在以下目錄中取得此指令碼：*\<磁碟機>*:\\\Program Files\Microsoft SQL Server\\*\<執行個體名稱>*\MSSQL\Install\oracleadmin.sql。 如需設定 Oracle 資料庫的詳細資訊，請參閱[設定 Oracle 發行者](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)。  
   
 > [!NOTE]  
 >  此指令碼包括由異動複寫使用之觸發程序所需要的陳述式 `GRANT CREATE ANY TRIGGER TO &&AdminLogin;`。 如果您僅使用快照式複寫，則從指令碼中移除此行。  
   
- **若要執行指令碼從 Oracle SQL\*Plus 公用程式**  
+ **從 Oracle SQL\*Plus 公用程式執行指令碼**  
   
 1.  在「SQL Server 散發者」上，開啟 [命令提示字元] 視窗。  
   
@@ -34,7 +38,7 @@ caps.handback.revision: 37
     sqlplus system/P@$$W0rd@orcl @"c:\Program Files\Microsoft SQL Server\<InstanceName>\MSSQL\Install\oracleadmin.sql"  
     ```  
   
-     在此範例中，內建的 Oracle 帳戶 **系統** 用來連接到 Oracle 資料庫與網路名稱為 「 orcl 」。  
+     在此範例中，內建的 Oracle 帳戶 **system** 用來連接到網路名稱為「orcl」的 Oracle 資料庫。  
   
 3.  出現提示時，請指定使用者名稱、使用者密碼和預設資料表空間。  
   
@@ -123,7 +127,7 @@ GRANT CREATE VIEW TO &&ReplLogin;
 GRANT CREATE ANY TRIGGER TO &&ReplLogin;  
 ```  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [設定 Oracle 發行者](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)  
   
   

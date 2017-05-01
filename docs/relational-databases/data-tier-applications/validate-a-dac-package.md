@@ -1,34 +1,38 @@
 ---
-title: "驗證 DAC 封裝 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-data-tier-apps"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "資料層應用程式 [SQL Server], 驗證"
-  - "資料層應用程式 [SQL Server], 比較"
-  - "驗證 DAC"
-  - "比較 DAC"
-  - "資料層應用程式 [SQL Server], 檢視"
-  - "檢視 DAC"
+title: "驗證 DAC 封裝 | Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-data-tier-apps
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data-tier application [SQL Server], validate
+- data-tier application [SQL Server], compare
+- validate DAC
+- compare DACs
+- data-tier application [SQL Server], view
+- view DAC
 ms.assetid: 726ffcc2-9221-424a-8477-99e3f85f03bd
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 036df2b92a90337202eb84adb6284169a8f54f76
+ms.lasthandoff: 04/11/2017
+
 ---
-# 驗證 DAC 封裝
+# <a name="validate-a-dac-package"></a>驗證 DAC 封裝
   最好先檢閱 DAC 封裝的內容，再將它部署至實際執行環境，以及先驗證升級動作，再升級現有 DAC。 當您部署的封裝之前不是在組織內開發時，特別會是這個情況。  
   
-1.  **開始之前：**  [必要條件](#Prerequisites)  
+1.  **Before you begin:**  [Prerequisites](#Prerequisites)  
   
-2.  **使用下列項目，升級 DAC**：[檢視 DAC 內容](#ViewDACContents)、[檢視資料庫變更](#ViewDBChanges)、[檢視升級動作](#ViewUpgradeActions)、[比較 DAC](#CompareDACs)  
+2.  **To upgrade a DAC, using:**  [View the Contents of a DAC](#ViewDACContents), [View Database Changes](#ViewDBChanges), [View Upgrade Actions](#ViewUpgradeActions), [Compare DACs](#CompareDACs)  
   
 ##  <a name="Prerequisites"></a> 必要條件  
  建議您不要部署來源不明或來源不受信任的 DAC 封裝。 這類 DAC 可能包含惡意程式碼，因此可能會執行非預期的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼，或是修改結構描述而造成錯誤。 使用來源不明或來源不受信任的 DAC 之前，請先將它部署到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的隔離測試執行個體，並在資料庫上執行 [DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)，然後檢查資料庫中的程式碼，例如預存程序或其他使用者定義的程式碼。  
@@ -71,7 +75,7 @@ caps.handback.revision: 17
   
 3.  如果您不想要繼續升級，請選取 **[取消]** 。  
   
-4.  如需使用精靈的詳細資訊，請參閱[升級資料層應用程式](../../relational-databases/data-tier-applications/upgrade-a-data-tier-application.md)。  
+4.  如需使用精靈的詳細資訊，請參閱 [升級資料層應用程式](../../relational-databases/data-tier-applications/upgrade-a-data-tier-application.md)。  
   
  **使用 PowerShell 檢視資料庫變更**  
   
@@ -83,7 +87,7 @@ caps.handback.revision: 17
   
 4.  使用 **GetDatabaseChanges()** 方法擷取 **ChangeResults** 物件，並將該物件以管道傳送至文字檔以產生新的、已刪除和已變更之物件的簡單報表。  
   
-### 檢視資料庫變更範例 (PowerShell)  
+### <a name="view-database-changes-example-powershell"></a>檢視資料庫變更範例 (PowerShell)  
  **檢視資料庫變更範例 (PowerShell)**  
   
  下列範例報告在已部署的 DAC (名稱為 MyApplicaiton) 中所做的任何資料庫變更。  
@@ -116,7 +120,7 @@ $dacChanges = $dacstore.GetDatabaseChanges($dacName) | Out-File -Filepath C:\DAC
   
 3.  如果您不想要繼續升級，請選取 **[取消]** 。  
   
-4.  如需使用精靈的詳細資訊，請參閱[升級資料層應用程式](../../relational-databases/data-tier-applications/upgrade-a-data-tier-application.md)。  
+4.  如需使用精靈的詳細資訊，請參閱 [升級資料層應用程式](../../relational-databases/data-tier-applications/upgrade-a-data-tier-application.md)。  
   
  **使用 PowerShell 來報告升級動作**  
   
@@ -132,7 +136,7 @@ $dacChanges = $dacstore.GetDatabaseChanges($dacName) | Out-File -Filepath C:\DAC
   
 6.  關閉用來讀取 DAC 封裝檔案的檔案資料流。  
   
-### 檢視升級動作範例 (PowerShell)  
+### <a name="view-upgrade-actions-example-powershell"></a>檢視升級動作範例 (PowerShell)  
  **檢視升級動作範例 (PowerShell)**  
   
  下列範例報告 Transact-SQL 陳述式，可執行以將 DAC (名稱為 MyApplicaiton) 升級至 MyApplicationVNext.dacpac 檔案中所定義的結構描述。  
@@ -162,14 +166,14 @@ $dacstore.GetIncrementalUpgradeScript($dacName, $dacType) | Out-File -Filepath C
 $fileStream.Close()  
 ```  
   
-##  <a name="CompareDACs"></a> 比較 DAC  
+##  <a name="CompareDACs"></a> Compare DACs  
  在升級 DAC 之前，最好先檢閱目前 DAC 與新 DAC 之間的資料庫和執行個體層級物件的差異。 如果您沒有目前 DAC 封裝的複本，您可以從目前的資料庫擷取封裝。  
   
  如果您在 SQL Server Developer Tools 中將這兩個 DAC 封裝匯入至 DAC 專案，則可以使用結構描述比較工具來分析這兩個 DAC 的差異。  
   
  您也可以將 DAC 解除封裝至不同的資料夾。 然後您可以使用差異工具 (如 WinDiff 公用程式) 來分析差異。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [資料層應用程式](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [部署資料層應用程式](../../relational-databases/data-tier-applications/deploy-a-data-tier-application.md)   
  [升級資料層應用程式](../../relational-databases/data-tier-applications/upgrade-a-data-tier-application.md)  

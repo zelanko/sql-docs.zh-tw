@@ -1,35 +1,39 @@
 ---
-title: "在 FOR XML 查詢中的 TYPE 指示詞 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FOR XML 子句, TYPE 指示詞"
-  - "TYPE 指示詞"
+title: "FOR XML 查詢中的 TYPE 指示詞 | Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FOR XML clause, TYPE directive
+- TYPE directive
 ms.assetid: a3df6c30-1f25-45dc-b5a9-bd0e41921293
 caps.latest.revision: 40
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 40
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1e060f93c4aa26d86fbd6683099a66821c38e9b2
+ms.lasthandoff: 04/11/2017
+
 ---
-# 在 FOR XML 查詢中的 TYPE 指示詞
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 對於 [xml &#40;Transact-SQL&#41;](../../t-sql/xml/xml-transact-sql.md) 的支援，可讓您藉由指定 TYPE 指示詞，選擇性地要求以 **xml** 資料類型傳回 FOR XML 查詢的結果。 這將允許您處理伺服器上 FOR XML 查詢的結果。 例如，您可以針對它指定 XQuery、將結果指派至 **xml** 類型變數或撰寫[巢狀 FOR XML 查詢](../../relational-databases/xml/use-nested-for-xml-queries.md)。  
+# <a name="type-directive-in-for-xml-queries"></a>在 FOR XML 查詢中的 TYPE 指示詞
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 對於 [xml &#40;Transact-SQL&#41;](../../t-sql/xml/xml-transact-sql.md) 的支援，可讓您藉由指定 TYPE 指示詞，選擇性地要求以 **xml** 資料類型傳回 FOR XML 查詢的結果。 這將允許您處理伺服器上 FOR XML 查詢的結果。 例如，您可以針對它指定 XQuery、將結果指派至 **xml** 類型變數或撰寫 [巢狀 FOR XML 查詢](../../relational-databases/xml/use-nested-for-xml-queries.md)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會傳回 XML 資料類型的執行個體資料至用戶端，作為不同伺服器建構的結果，例如使用 TYPE 指示詞的 FOR XML 查詢，或使用 **xml** 資料類型從 SQL 資料表資料行和輸出參數傳回 XML 執行個體資料值。 在用戶端應用程式中，ADO.NET 提供者要求以二進位編碼從伺服器傳送此 XML 資料類型資訊。 然而，如果您使用沒有 TYPE 指示詞的 FOR XML，XML 資料會以字串類型傳回。 在任一情況下，用戶端提供者將永遠可以處理任一 XML 形式。 請注意，不含 TYPE 指示詞的最上層 FOR XML 無法與資料指標一起使用。  
   
-## 範例  
+## <a name="examples"></a>範例  
  下列範例說明搭配 FOR XML 查詢使用 TYPE 指示詞。  
   
-### 以 xml 類型擷取 FOR XML 查詢結果  
- 下列查詢將擷取 `Contacts` 資料表中客戶的連絡資訊。 由於 `TYPE` 指示詞是在 `FOR XML` 中指定，因此結果會以 **xml** 類型傳回。  
+### <a name="retrieving-for-xml-query-results-as-xml-type"></a>以 xml 類型擷取 FOR XML 查詢結果  
+ 下列查詢將擷取 `Contacts` 資料表中客戶的連絡資訊。 由於 `TYPE` 指示詞是在 `FOR XML`中指定，因此結果會以 **xml** 類型傳回。  
   
 ```  
 USE AdventureWorks2012;  
@@ -48,8 +52,8 @@ FOR XML AUTO, TYPE;
   
  `...`  
   
-### 將 FOR XML 查詢結果指派給 xml 類型變數  
- 在以下範例中，FOR XML 結果會指派給一個 **xml** 類型變數 `@x`。 此查詢會從 **xml**`TYPE` 的 `AdditionalContactInfo` 資料行擷取連絡資訊，例如 `BusinessEntityID`、`FirstName`、`LastName`，以及其他電話號碼。 由於 `FOR XML` 子句會指定 `TYPE` 指示詞，因此 XML 將以 **xml** 類型傳回並將其指派給變數。  
+### <a name="assigning-for-xml-query-results-to-an-xml-type-variable"></a>將 FOR XML 查詢結果指派給 xml 類型變數  
+ 在以下範例中，FOR XML 結果會指派給一個 **xml** 類型變數 `@x`。 此查詢會從 `BusinessEntityID`xml `FirstName`的 `LastName`資料行擷取連絡資訊，例如 `AdditionalContactInfo` 、 **、**`TYPE`，以及其他電話號碼。 由於 `FOR XML` 子句會指定 `TYPE` 指示詞，因此 XML 將以 **xml** 類型傳回並將其指派給變數。  
   
 ```  
 USE AdventureWorks2012;  
@@ -69,7 +73,7 @@ SELECT @x;
 GO  
 ```  
   
-### 查詢 FOR XML 查詢的結果  
+### <a name="querying-results-of-a-for-xml-query"></a>查詢 FOR XML 查詢的結果  
  FOR XML 查詢會傳回 XML。 因此您可以將 **xml** 類型方法 (例如 **query()** 與 **value()**) 套用至 FOR XML 查詢所傳回的 XML 結果。  
   
  在下列查詢中，**xml** 資料類型的 `query()` 方法是用以查詢 `FOR XML` 查詢的結果。 如需詳細資訊，請參閱 [query&#40;&#41; 方法 &#40;xml 資料類型&#41;](../../t-sql/xml/query-method-xml-data-type.md)。  
@@ -125,10 +129,10 @@ SELECT @FirstPhoneFromAdditionalContactInfo;
  在 `value()` 方法中的 XQuery 路徑運算式會擷取客戶連絡人之 `BusinessEntityID` 為 `1` 的第一個客戶電話號碼。  
   
 > [!NOTE]  
->  由於未指定 TYPE 指示詞，因此 FOR XML 查詢結果會以 **nvarchar(max)** 類型傳回。  
+>  由於未指定 TYPE 指示詞，因此 FOR XML 查詢結果會以 **nvarchar(max)**類型傳回。  
   
-### 使用 INSERT、UPDATE 及 DELETE 中的 FOR XML 查詢結果 (Transact-SQL DML)  
- 下列範例示範如何在「資料管理語言」(DML) 陳述式中使用 FOR XML 查詢。 在下列範例中，`FOR XML` 會傳回 **xml** 類型的執行個體。 `INSERT` 陳述式會將此 XML 插入資料表中。  
+### <a name="using-for-xml-query-results-in-insert-update-and-delete-transact-sql-dml"></a>使用 INSERT、UPDATE 及 DELETE 中的 FOR XML 查詢結果 (Transact-SQL DML)  
+ 下列範例示範如何在「資料管理語言」(DML) 陳述式中使用 FOR XML 查詢。 在下列範例中， `FOR XML` 會傳回 **xml** 類型的執行個體。 `INSERT` 陳述式會將此 XML 插入資料表中。  
   
 ```  
 CREATE TABLE T1(intCol int, XmlCol xml);  
@@ -146,7 +150,7 @@ SELECT (SELECT XmlCol.query('/Root')
 GO  
 ```  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md)  
   
   

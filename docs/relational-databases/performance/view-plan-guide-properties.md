@@ -1,27 +1,31 @@
 ---
-title: "檢視計畫指南屬性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-plan-guides"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.planguideprop.general.f1"
-helpviewer_keywords: 
-  - "計畫指南 [SQL Server], 檢視計畫指南屬性"
-  - "檢視計畫指南屬性"
+title: "檢視計畫指南屬性 | Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-plan-guides
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.planguideprop.general.f1
+helpviewer_keywords:
+- plan guides [SQL Server], view plan guide properties
+- viewing plan guide properties
 ms.assetid: 8c0d2f39-59c1-4168-a649-65473f6a771b
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a68f0e1e0c15000f40de408f41ce4c40f281900e
+ms.lasthandoff: 04/11/2017
+
 ---
-# 檢視計畫指南屬性
+# <a name="view-plan-guide-properties"></a>檢視計畫指南屬性
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]  
   
  **本主題內容**  
@@ -45,7 +49,7 @@ caps.handback.revision: 19
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 檢視計畫指南的屬性  
+#### <a name="to-view-the-properties-of-a-plan-guide"></a>檢視計畫指南的屬性  
   
 1.  按一下加號，展開您要在其中檢視計畫指南屬性的資料庫，然後按一下加號展開 **[可程式性]** 資料夾。  
   
@@ -86,7 +90,7 @@ caps.handback.revision: 19
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 檢視計畫指南的屬性  
+#### <a name="to-view-the-properties-of-a-plan-guide"></a>檢視計畫指南的屬性  
   
 1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   

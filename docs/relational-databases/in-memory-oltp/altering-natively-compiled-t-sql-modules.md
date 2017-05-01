@@ -1,23 +1,27 @@
 ---
-title: "更改原生編譯的 T-SQL 模組 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "改變原生編譯的 T-SQL 模組 | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 010318a0-6807-47c3-8ecc-bb7cb60513f0
 caps.latest.revision: 7
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4696039c56ebf5f1fd6ea440cd27da84721f35b9
+ms.lasthandoff: 04/11/2017
+
 ---
-# 更改原生編譯的 T-SQL 模組
+# <a name="altering-natively-compiled-t-sql-modules"></a>更改原生編譯的 T-SQL 模組
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (和更新版本) 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中，您可以使用 ALTER 陳述式在原生編譯預存程序以及純量 UDF 和觸發程序等其他原生編譯的 T-SQL 模組上執行 ALTER 作業。  
@@ -45,7 +49,7 @@ caps.handback.revision: 7
   
  您可以在原生編譯 T-SQL 模組上執行 sp_recompile，下次執行時就會重新編譯組。  
   
-## 範例  
+## <a name="example"></a>範例  
  下例會建立記憶體最佳化的資料表 (T1)，以及選取所有 T1 資料行的原生編譯預存程序 (SP1)。 然後，更改 SP1 以移除 EXECUTE AS 子句、變更 LANGUAGE，從 T1 只選取有一個資料行 (C1)。  
   
 ```  

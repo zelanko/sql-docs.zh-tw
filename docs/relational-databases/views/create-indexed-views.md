@@ -1,29 +1,33 @@
 ---
 title: "建立索引檢視表 | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/27/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-views"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "索引檢視表 [SQL Server]，建立"
-  - "叢集索引，檢視"
-  - "CREATE INDEX 陳述式"
-  - "large_value_types_out_of_row 選項"
-  - "索引檢視表 [SQL Server]"
-  - "檢視 [SQL Server]，索引檢視"
+ms.custom: 
+ms.date: 05/27/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-views
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- indexed views [SQL Server], creating
+- clustered indexes, views
+- CREATE INDEX statement
+- large_value_types_out_of_row option
+- indexed views [SQL Server]
+- views [SQL Server], indexed views
 ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
 caps.latest.revision: 79
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 79
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 24b4e22249ec7a175dc3ae239dea329c4d18208f
+ms.lasthandoff: 04/11/2017
+
 ---
-# 建立索引檢視表
+# <a name="create-indexed-views"></a>建立索引檢視表
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中建立索引檢視表。 對檢視建立的第一個索引必須是唯一的叢集索引。 建好唯一的叢集索引後，才可以建立其他非叢集索引。 為檢視表建立唯一的叢集索引，可以提升查詢效能，因為檢視表儲存在資料庫中的方式與包含叢集索引之資料表的儲存方式一樣。 查詢最佳化工具可以利用索引檢視表來加快查詢執行的速度。 不必在查詢中參考此檢視表，最佳化工具仍會考慮以該檢視表做為替代方式。  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
@@ -69,7 +73,7 @@ caps.handback.revision: 79
 > [!IMPORTANT]  
 >  強烈建議您在伺服器之任何資料庫的計算資料行上建立第一個索引檢視表或索引之後，立即在伺服器範圍將 ARITHABORT 使用者選項設為 ON。  
   
-### 具決定性的檢視  
+### <a name="deterministic-views"></a>具決定性的檢視  
  索引檢視表的定義必須具決定性。 如果選取清單及 WHERE 和 GROUP BY 子句中的所有運算式都具決定性，則檢視表也具決定性。 每當利用一組特定的輸入值來評估具決定性的運算式時，具決定性的運算式一律傳回相同的結果。 只有具決定性的函數可以參與具決定性的運算式。 例如，DATEADD 函數具決定性，因為它會針對它的三個參數之任何一組給定的引數值一律傳回相同的結果。 GETDATE 不具決定性，因為它一律被相同的引數叫用，但是，每當它被執行時，它所傳回的值都會變更。  
   
  若要判斷檢視表資料行是否具決定性，請使用 **COLUMNPROPERTY** 函數的 [IsDeterministic](../../t-sql/functions/columnproperty-transact-sql.md) 屬性。 若要判斷含有結構描述繫結之檢視表中的具決定性資料行是否為精確資料行，請利用 COLUMNPROPERTY 函數的 **IsPrecise** 屬性。 如果是 TRUE，COLUMNPROPERTY 會傳回 1；如果是 FALSE，則傳回 0；如果輸入無效，則傳回 NULL。 這表示這個資料行不具決定性或不是精確資料行。  
@@ -79,7 +83,7 @@ caps.handback.revision: 79
 > [!NOTE]  
 >  不支援在暫時查詢 (使用 **FOR SYSTEM_TIME** 子句的查詢) 上方的索引檢視表  
   
-### 其他需求  
+### <a name="additional-requirements"></a>其他需求  
  除了 SET 選項和具決定性函數的需求以外，下列需求也必須符合：  
   
 -   執行 CREATE INDEX 的使用者必須是檢視表的擁有者。  
@@ -131,12 +135,12 @@ caps.handback.revision: 79
 -   如果檢視表定義包含 GROUP BY 子句，唯一叢集索引的索引鍵則只能參考 GROUP BY 子句中指定的資料行。  
   
 ###  <a name="Recommendations"></a> 建議  
- 當您在索引檢視中參考 **datetime** 和 **smalldatetime** 字串常值時，我們建議您使用決定性的日期格式樣式，將常值明確轉換成您想要的日期類型。 如需具有決定性之日期格式樣式的清單，請參閱 [CAST 和 CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)。 牽涉到將字元字串隱含轉換成 **datetime** 或 **smalldatetime** 的運算式被視為非決定性的。 這是因為結果需視伺服器工作階段的 LANGUAGE 和 DATEFORMAT 設定而定。 例如，運算式 `CONVERT (datetime, '30 listopad 1996', 113)` 的結果需視 LANGUAGE 設定而定，因為字串 '`listopad`' 在不同的語言中表示不同的月份。 同樣地，在運算式 `DATEADD(mm,3,'2000-12-01')` 中，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會根據 DATEFORMAT 設定解譯字串 `'2000-12-01'`。  
+ 當您在索引檢視中參考 **datetime** 和 **smalldatetime** 字串常值時，我們建議您使用決定性的日期格式樣式，將常值明確轉換成您想要的日期類型。 如需具有決定性之日期格式樣式的清單，請參閱 [CAST 和 CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)。 牽涉到將字元字串隱含轉換成 **datetime** 或 **smalldatetime** 的運算式被視為非決定性的。 這是因為結果需視伺服器工作階段的 LANGUAGE 和 DATEFORMAT 設定而定。 例如，運算式 `CONVERT (datetime, '30 listopad 1996', 113)` 的結果需視 LANGUAGE 設定而定，因為字串 '`listopad`' 在不同的語言中表示不同的月份。 同樣地，在運算式 `DATEADD(mm,3,'2000-12-01')`中， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會根據 DATEFORMAT 設定解譯字串 `'2000-12-01'` 。  
   
  非 Unicode 字元資料與定序之間的隱含轉換也是視為非決定性的。  
   
 ###  <a name="Considerations"></a> 考量  
- 索引檢視表中資料行的 **large_value_types_out_of_row** 選項設定是繼承基底資料表中對應的資料行設定。 此值可透過 [sp_tableoption](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md) 設定。 由運算式形成的資料行其預設值為 0。 這表示大數值類型是以資料列的方式儲存。  
+ 索引檢視表中資料行的 **large_value_types_out_of_row** 選項設定是繼承基底資料表中對應的資料行設定。 此值可透過 [sp_tableoption](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)設定。 由運算式形成的資料行其預設值為 0。 這表示大數值類型是以資料列的方式儲存。  
   
  可以在分割區資料表上建立索引檢視表，且索引檢視表本身也可以分割。  
   
@@ -153,7 +157,7 @@ caps.handback.revision: 79
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 建立索引檢視表  
+#### <a name="to-create-an-indexed-view"></a>建立索引檢視表  
   
 1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
@@ -210,7 +214,7 @@ caps.handback.revision: 79
   
  如需詳細資訊，請參閱 [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [SET ANSI_NULLS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md)   
  [SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md)   
@@ -221,3 +225,4 @@ caps.handback.revision: 79
  [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)  
   
   
+

@@ -1,28 +1,32 @@
 ---
 title: "建立 XML 索引 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "索引 [SQL Server 中的 XML]"
-  - "XML 索引 [SQL Server], 建立"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- indexes [XML in SQL Server]
+- XML indexes [SQL Server], creating
 ms.assetid: 6ecac598-355d-4408-baf7-1b2e8d4cf7c1
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e7dbb0a712f1edbe0234a68e2481915b76bec90a
+ms.lasthandoff: 04/11/2017
+
 ---
-# 建立 XML 索引
+# <a name="create-xml-indexes"></a>建立 XML 索引
   此主題描述如何建立主要和次要 XML 索引。  
   
-## 建立主要 XML 索引  
+## <a name="creating-a-primary-xml-index"></a>建立主要 XML 索引  
  若要建立主要 XML 索引，請使用 [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] DDL 陳述式。 並非所有供 XML 索引使用的選項都有在 XML 索引中受到支援。  
   
  在建立 XML 索引時請注意下列項目：  
@@ -50,11 +54,11 @@ caps.handback.revision: 19
 -   在建立 XML 索引時，必須將 ARITHABORT 選項設定為 ON。 若要使用 XML 資料類型方法查詢、插入、刪除或更新 XML 資料行中的值，必須在連接上設定相同的選項。 若未設定，XML 資料類型方法將會失敗。  
   
     > [!NOTE]  
-    >  在目錄檢視中可以找到關於 XML 索引的相關資訊。 不過，並不支援 **sp_helpindex**。 在本主題後面所提供的範例將示範如何查詢目錄檢視，以尋找 XML 索引資訊。  
+    >  在目錄檢視中可以找到關於 XML 索引的相關資訊。 不過，並不支援 **sp_helpindex** 。 在本主題後面所提供的範例將示範如何查詢目錄檢視，以尋找 XML 索引資訊。  
   
- 在包含 XML 結構描述類型 **xs:date** 或 **xs:dateTime** (或是這些類型的任何子類型) 值 (該值的年份小於 1) 的 XML 資料類型資料行上建立或重新建立主要 XML 索引時，[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更新版本中的索引建立會失敗。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 允許這些值，所以在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中產生之資料庫內建立索引時，可能會發生這個問題。 如需詳細資訊，請參閱[比較具類型的 XML 與不具類型的 XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)。  
+ 在包含 XML 結構描述類型 **xs:date** 或 **xs:dateTime** (或是這些類型的任何子類型) 值 (該值的年份小於 1) 的 XML 資料類型資料行上建立或重新建立主要 XML 索引時， [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更新版本中的索引建立會失敗。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 允許這些值，所以在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]中產生之資料庫內建立索引時，可能會發生這個問題。 如需詳細資訊，請參閱 [比較具類型的 XML 與不具類型的 XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)。  
   
-### 範例：建立主要 XML 索引  
+### <a name="example-creating-a-primary-xml-index"></a>範例：建立主要 XML 索引  
  在大部分的範例中，都是使用資料表 T (pk INT PRIMARY KEY, xCol XML) 和不具類型的 XML 資料行。 這些都可以用一種直接的方法來擴充成具類型的 XML。 為求簡單明瞭，我們針對 XML 資料執行個體來說明查詢，如下所示：  
   
 ```  
@@ -78,7 +82,7 @@ caps.handback.revision: 19
 CREATE PRIMARY XML INDEX idx_xCol on T (xCol)  
 ```  
   
-## 建立次要 XML 索引  
+## <a name="creating-a-secondary-xml-index"></a>建立次要 XML 索引  
  您可以使用 [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] DDL 陳述式來建立次要 XML 索引，並指定您所需的次要 XML 索引類型。  
   
  在建立次要 XML 索引時請注意下列項目：  
@@ -98,7 +102,7 @@ FROM    sys.xml_indexes;
   
  在 **secondary_type_desc** 資料行中傳回的值可以是 NULL、PATH、VALUE 或 PROPERTY。 對於主要 XML 索引而言，傳回的值是 NULL。  
   
-### 範例：建立次要 XML 索引  
+### <a name="example-creating-secondary-xml-indexes"></a>範例：建立次要 XML 索引  
  下列範例說明如何建立次要 XML 索引。 此範例也會顯示您已建立之 XML 索引的相關資訊。  
   
 ```  
@@ -198,7 +202,7 @@ DROP TABLE T;
 Go  
 ```  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [XML 索引 &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md)   
  [XML 資料 &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)  
   

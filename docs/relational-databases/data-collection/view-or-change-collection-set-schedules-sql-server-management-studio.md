@@ -1,32 +1,36 @@
 ---
-title: "檢視或變更收集組排程 (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.dc.collectionsetprop.uploads.f1"
-  - "sql13.swb.dc.collectionsetprop.description.f1"
-  - "sql13.swb.dc.collectionsetprop.general.f1"
-helpviewer_keywords: 
-  - "收集組 [SQL Server], 變更排程"
-  - "排程 [SQL Server], 變更收集組"
-  - "收集組 [SQL Server], 檢視排程"
-  - "排程 [SQL Server], 檢視收集組"
+title: "檢視或變更收集組排程 (SQL Server Management Studio) | Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.dc.collectionsetprop.uploads.f1
+- sql13.swb.dc.collectionsetprop.description.f1
+- sql13.swb.dc.collectionsetprop.general.f1
+helpviewer_keywords:
+- collection sets [SQL Server], changing schedules
+- schedules [SQL Server], changing collection set
+- collection sets [SQL Server], viewing schedules
+- schedules [SQL Server], viewing collection set
 ms.assetid: 26336c98-78c5-414f-8d6a-574fc3af60c4
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b882c8e5f82beb7d467d1063695fa032ed562ca0
+ms.lasthandoff: 04/11/2017
+
 ---
-# 檢視或變更收集組排程 (SQL Server Management Studio)
-  您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來檢視或變更收集組排程。  
+# <a name="view-or-change-collection-set-schedules-sql-server-management-studio"></a>檢視或變更收集組排程 (SQL Server Management Studio)
+  您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]來檢視或變更收集組排程。  
   
  收集模式 (快取或非快取) 可決定您要如何對排程進行變更。 快取模式會使用個別的排程來進行收集和上傳。 非快取模式會使用相同的排程來進行收集和上傳。 每一個系統資料收集組的收集模式類型如下：  
   
@@ -36,13 +40,13 @@ caps.handback.revision: 26
   
 -   **[伺服器活動]** 會使用快取收集模式。  
   
-### 若要檢視收集組排程  
+### <a name="to-view-collection-set-schedules"></a>若要檢視收集組排程  
   
 1.  在 [物件總管] 中，依序展開 **[管理]** 節點、 **[資料收集]**和 **[系統資料收集組]**。  
   
 2.  以滑鼠右鍵按一下收集組名稱，然後按一下 [屬性] 開啟 [[資料收集組屬性]](#CollectionSet) 對話方塊。  
   
-### 若要變更快取模式收集組的排程  
+### <a name="to-change-the-schedules-for-a-cached-mode-collection-set"></a>若要變更快取模式收集組的排程  
   
 1.  在 [物件總管] 中，依序展開 **[管理]** 節點、 **[資料收集]**和 **[系統資料收集組]**。  
   
@@ -62,7 +66,7 @@ caps.handback.revision: 26
   
          **[挑選作業流程]** 對話方塊隨即開啟。 可用的排程會顯示為資料表。  
   
-    3.  按一下含有所需排程的資料列。 例如，若要將排程變更為每 5 分鐘，請按一下排程名稱為 **CollectorSchedule_Every_5min** 的資料列。  
+    3.  按一下含有所需排程的資料列。 例如，若要將排程變更為每 5 分鐘，請按一下排程名稱為 **CollectorSchedule_Every_5min**的資料列。  
   
         > [!NOTE]  
         >  您可以按一下 **[屬性]** 開啟排程的 **[作業排程屬性]** 對話方塊，藉以檢視和編輯選取之排程的屬性。 您可以使用這對話方塊來變更排程資訊，例如頻率。  
@@ -75,7 +79,7 @@ caps.handback.revision: 26
   
 5.  按一下 **[確定]** 儲存對收集頻率和上傳排程所做的變更，並且關閉 **[資料收集組屬性]** 對話方塊。  
   
-### 若要變更非快取模式收集組的排程  
+### <a name="to-change-the-schedule-for-a-non-cached-mode-collection-set"></a>若要變更非快取模式收集組的排程  
   
 1.  在 [物件總管] 中，依序展開 **[管理]** 節點、 **[資料收集]**和 **[系統資料收集組]**。  
   
@@ -87,7 +91,7 @@ caps.handback.revision: 26
   
      **[挑選作業流程]** 對話方塊隨即開啟。 可用的排程會顯示為資料表。  
   
-4.  按一下含有所需排程的資料列。 例如，若要將排程變更為每 5 分鐘，請按一下排程名稱為 **CollectorSchedule_Every_5min** 的資料列。  
+4.  按一下含有所需排程的資料列。 例如，若要將排程變更為每 5 分鐘，請按一下排程名稱為 **CollectorSchedule_Every_5min**的資料列。  
   
     > [!NOTE]  
     >  您可以按一下 **[屬性]** 開啟排程的 **[作業排程屬性]** 對話方塊，藉以檢視和編輯選取之排程的屬性。 您可以使用這對話方塊來變更排程資訊，例如頻率。  
@@ -111,8 +115,8 @@ caps.handback.revision: 26
   
 |||  
 |-|-|  
-|**無快取 -  在相同排程時收集和上傳資料。**|當選取此選項時，請指定下列其中一項：<br /><br /> **排程**。 根據排程收集及上傳資料。 請按一下 **[挑選]** 從預先定義的排程清單中選取，或是按一下 **[新增]** 建立新的排程。<br /><br /> **視需要**。 視需要收集及上傳資料。|  
-|**快取 -  以一組收集頻率來收集和快取資料， 並在個別排程時上傳快取的資料。**|以指定的收集頻率來收集和快取資料。 根據個別排程上傳收集的資料。|  
+|**無快取 - 在相同排程時收集和上傳資料。**|當選取此選項時，請指定下列其中一項：<br /><br /> **排程**。 根據排程收集及上傳資料。 請按一下 **[挑選]** 從預先定義的排程清單中選取，或是按一下 **[新增]** 建立新的排程。<br /><br /> **視需要**。 視需要收集及上傳資料。|  
+|**快取 - 以一組收集頻率來收集和快取資料，並在個別排程時上傳快取的資料。**|以指定的收集頻率來收集和快取資料。 根據個別排程上傳收集的資料。|  
   
  **收集項**  
  顯示收集組中的收集項。 下列資訊是針對每一個收集項所提供：  
@@ -160,8 +164,8 @@ caps.handback.revision: 26
   
  使用此頁面可檢視此屬性頁面參考之收集組的描述。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [管理資料收集](../../relational-databases/data-collection/manage-data-collection.md)   
- [資料收集](../../relational-databases/data-collection/data-collection.md)  
+ [[資料收集]](../../relational-databases/data-collection/data-collection.md)  
   
   

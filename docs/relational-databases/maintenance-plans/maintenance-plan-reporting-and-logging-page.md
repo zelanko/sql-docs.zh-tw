@@ -1,27 +1,31 @@
 ---
 title: "維護計畫 (報告與記錄頁面) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.maint.reportinglogging.f1"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.maint.reportinglogging.f1
 ms.assetid: 3a30b17a-3deb-446f-900a-62f88934a90f
 caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bc79574632edb6fa550c81d66c95616a452ddf38
+ms.lasthandoff: 04/11/2017
+
 ---
-# 維護計畫 (報告與記錄頁面)
+# <a name="maintenance-plan-reporting-and-logging-page"></a>維護計畫 (報告與記錄頁面)
   使用 **[報表與記錄]** 對話方塊設定執行維護計畫時產生的報表和記錄。  
   
-## 選項  
+## <a name="options"></a>選項  
  **產生文字檔報表**  
  指定是否要 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 撰寫文字檔報表。  
   
@@ -49,7 +53,7 @@ caps.handback.revision: 22
  **新增**  
  顯示 [連接屬性] 對話方塊。 用來設定記錄到遠端伺服器的新連接資訊。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [維護計畫](../../relational-databases/maintenance-plans/maintenance-plans.md)   
  [Database Mail](../../relational-databases/database-mail/database-mail.md)  
   

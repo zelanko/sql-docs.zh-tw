@@ -1,27 +1,31 @@
 ---
 title: "Exchange Spill 事件類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Exchange Spill 事件類別"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Exchange Spill event class
 ms.assetid: fb876cec-f88d-4975-b3fd-0fb85dc0a7ff
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 5920469e3f0ff312ac155011300034b8d8f8de50
+ms.lasthandoff: 04/11/2017
+
 ---
-# Exchange Spill 事件類別
+# <a name="exchange-spill-event-class"></a>Exchange Spill 事件類別
   **Exchange Spill** 事件類別指出平行查詢計劃中的通訊緩衝區，已暫時寫入 **tempdb** 資料庫。 這種情況並不常見，只有在查詢計畫有多重範圍掃描時才會發生。  
   
- 通常，產生這類範圍掃描的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢，會有多個 BETWEEN 運算子，而每個運算子都會選取資料表中某個範圍的資料列，或選取某個索引。 或者，您也可以使用像是 (T.a > 10 AND T.a \< 20) OR (T.a > 100 AND T.a \< 120) 這類的運算式取得多個範圍。 此外，查詢計畫一定需要依序掃描這些範圍，這是因為 T.a 上有 ORDER BY 子句，或是計畫中有 Iterator，因此必須以排序順序取用 Tuple 所致。  
+ 通常，產生這類範圍掃描的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢，會有多個 BETWEEN 運算子，而每個運算子都會選取資料表中某個範圍的資料列，或選取某個索引。 或者，您也可以使用像是 (T.a > 10 AND T.a < 20) OR (T.a > 100 AND T.a < 120) 這類的運算式取得多個範圍。 此外，查詢計畫一定需要依序掃描這些範圍，這是因為 T.a 上有 ORDER BY 子句，或是計畫中有 Iterator，因此必須以排序順序取用 Tuple 所致。  
   
  當這類查詢的查詢計劃有多個 **Parallelism** 運算子時，由 **Parallelism** 運算子所使用的記憶體通訊緩衝區將會變滿，因而發生查詢執行進度停止的情況。 這時候，其中一個 **Parallelism** 運算子會將它的輸出緩衝區寫入 **tempdb** (此作業稱為 *Exchange Spill*)，以便從它的部分輸入緩衝區取用資料列。 最後，等到取用者有餘力取用時，轉散出去的資料列就會傳回給取用者。  
   
@@ -39,18 +43,18 @@ caps.handback.revision: 30
   
 -   重寫查詢，以產生不同的查詢執行計畫。  
   
--   將 MAXDOP = 1 選項加入查詢結尾或索引作業，以強制進行查詢的序列執行。 如需詳細資訊，請參閱[設定 max degree of parallelism 伺服器組態選項](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)和[設定平行索引作業](../../relational-databases/indexes/configure-parallel-index-operations.md)。  
+-   將 MAXDOP = 1 選項加入查詢結尾或索引作業，以強制進行查詢的序列執行。 如需詳細資訊，請參閱 [設定 max degree of parallelism 伺服器組態選項](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) 和 [設定平行索引作業](../../relational-databases/indexes/configure-parallel-index-operations.md)。  
   
 > [!IMPORTANT]  
 >  若要判斷查詢最佳化工具產生執行計畫時發生 **Exchange Spill** 事件的位置，您也應在追蹤內收集 Showplan 事件類別。 您可以選擇任何 Showplan 事件類別，但是不包含不會傳回節點識別碼的 **Showplan Text** 及 **Showplan Text (Unencoded)** 事件類別。 Showplan 中的節點識別碼會識別查詢最佳化工具在產生查詢執行計畫時所執行的每項作業。 這些作業稱為「運算子」(Operator)，而 Showplan 中的每個運算子都會有節點識別碼。 **Exchange Spill** 事件類別的 **ObjectID** 資料行會對應到執行程序表中的節點識別碼，因此您可以判斷造成錯誤的運算子或運算。  
   
-## Exchange Spill 事件類別資料行  
+## <a name="exchange-spill-event-class-data-columns"></a>Exchange Spill 事件類別資料行  
   
 |資料行名稱|資料類型|描述|資料行識別碼|可篩選|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**ApplicationName**|**nvarchar**|建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體之連接的用戶端應用程式名稱。 這個資料行會填入應用程式所傳送的值，而非程式的顯示名稱。|10|是|  
 |**ClientProcessID**|**int**|由主機電腦指派給處理序 (用戶端應用程式執行所在) 的識別碼。 如果用戶端提供用戶端處理序識別碼，這個資料行就會擴展。|9|是|  
-|**DatabaseID**|**整數**|由 USE *database* 陳述式所指定的資料庫識別碼，或者如果沒有針對指定執行個體發出 USE *database* 陳述式，則是預設的資料庫。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 資料行，則 **ServerName** 會顯示資料庫的名稱。 請使用 DB_ID 函數判斷資料庫的值。|3|是|  
+|**DatabaseID**|**int**|由 USE *database* 陳述式所指定的資料庫識別碼，或者如果沒有針對指定執行個體發出 USE *database* 陳述式，則是預設的資料庫。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 資料行，則 **ServerName** 會顯示資料庫的名稱。 請使用 DB_ID 函數判斷資料庫的值。|3|是|  
 |**DatabaseName**|**nvarchar**|正在執行使用者陳述式的資料庫名稱。|35|是|  
 |**EventClass**|**int**|事件類型 = 127。|27|否|  
 |**EventSequence**|**int**|要求中的給定事件順序。|51|否|  
@@ -62,7 +66,7 @@ caps.handback.revision: 30
 |**LoginSid**|**image**|已登入之使用者的安全性識別碼 (SID)。 您可以在 **master** 資料庫的 **syslogins** 資料表中找到這項資訊。 伺服器上的每一個登入之 SID 是唯一的。|41|是|  
 |**NTDomainName**|**nvarchar**|使用者所隸屬的 Windows 網域。|7|是|  
 |**NTUserName**|**nvarchar**|Windows 使用者名稱。|6|是|  
-|**ObjectID**|**int**|系統指派給物件的識別碼。 與顯示計畫中的節點識別碼相對應。|22|是|  
+|**Exchange Spill**|**int**|系統指派給物件的識別碼。 與顯示計畫中的節點識別碼相對應。|22|是|  
 |**RequestID**|**int**|包含陳述式之要求的識別碼。|49|是|  
 |**ServerName**|**nvarchar**|正在追蹤之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱。|26|否|  
 |**SessionLoginName**|**nvarchar**|引發工作階段之使用者的登入名稱。 例如，如果您使用 Login1 連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，並以 Login2 執行陳述式，則 **SessionLoginName** 將顯示 Login1 而 **LoginName** 則顯示 Login2。 此資料行將同時顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 登入。|64|是|  
@@ -71,9 +75,10 @@ caps.handback.revision: 30
 |**TransactionID**|**bigint**|由系統指派給交易的識別碼。|4|是|  
 |**XactSequence**|**bigint**|描述目前交易的 Token。|50|是|  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [設定索引選項](../../relational-databases/indexes/set-index-options.md)   
  [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)  
   
   
+

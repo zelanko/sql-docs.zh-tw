@@ -1,28 +1,32 @@
 ---
 title: "建立 XML 資料類型變數與資料行 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "xml 資料類型 [SQL Server], 變數"
-  - "xml 資料類型 [SQL Server], 資料行"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- xml data type [SQL Server], variables
+- xml data type [SQL Server], columns
 ms.assetid: 8994ab6e-5519-4ba2-97a1-fac8af6f72db
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 751fccc2a458239715c187a1925046cdf74de98a
+ms.lasthandoff: 04/11/2017
+
 ---
-# 建立 XML 資料類型變數與資料行
-  **xml** 資料類型是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的內建資料類型，而且與其他內建類型有些相似，例如 **int** 與 **varchar**。 如同其他內建類型，當您建立資料表作為變數類型、參數類型、函數傳回類型，或是在 [CAST 和 CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md) 中建立資料表時，可以使用 **xml** 資料類型作為資料行類型。  
+# <a name="create-xml-data-type-variables-and-columns"></a>建立 XML 資料類型變數與資料行
+  **xml** 資料類型是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的內建資料類型，而且與其他內建類型有些相似，例如 **int** 與 **varchar**。 如同其他內建類型，當您建立資料表作為變數類型、參數類型、函數傳回類型，或是在 **CAST 和 CONVERT** 中建立資料表時，可以使用 [xml](../../t-sql/functions/cast-and-convert-transact-sql.md)資料類型作為資料行類型。  
   
-## 建立資料行和變數  
+## <a name="creating-columns-and-variables"></a>建立資料行和變數  
  若要在資料表中建立 `xml` 類型資料行，請使用 `CREATE TABLE` 陳述式，如下列範例所示：  
   
 ```  
@@ -47,9 +51,9 @@ DECLARE @x xml (Sales.StoreSurveySchemaCollection)
 CREATE PROCEDURE SampleProc(@XmlDoc xml) AS ...   
 ```  
   
- 您可以使用 XQuery 來查詢儲存在資料行、參數或變數中的 XML 執行個體中。 您也可以使用「XML 資料操作語言」(XML DML) 來套用 XML 執行個體的更新。 由於 XQuery 標準在開發時並不會定義 XQuery DML，因此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 引進了 XQuery 的 [XML 資料修改語言](../../t-sql/xml/xml-data-modification-language-xml-dml.md)擴充功能。 這些延伸模組可讓您執行插入、更新和刪除作業。  
+ 您可以使用 XQuery 來查詢儲存在資料行、參數或變數中的 XML 執行個體中。 您也可以使用「XML 資料操作語言」(XML DML) 來套用 XML 執行個體的更新。 由於 XQuery 標準在開發時並不會定義 XQuery DML，因此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 引進了 XQuery 的 [XML 資料修改語言](../../t-sql/xml/xml-data-modification-language-xml-dml.md) 擴充功能。 這些延伸模組可讓您執行插入、更新和刪除作業。  
   
-## 指派預設值  
+## <a name="assigning-defaults"></a>指派預設值  
  在資料表中，您可以將預設的 XML 執行個體指派給 **xml** 類型的資料行。 您可以使用以下兩種方法的其中一種來提供預設的 XML：使用 XML 常數，或是明確轉換成 **xml** 類型。  
   
  若要將預設 XML 提供為 XML 常數，請使用類似以下範例的語法。 請注意，此字串會隱含轉換成 **xml** 類型。  
@@ -71,14 +75,14 @@ CREATE TABLE T (XmlColumn xml
 CREATE TABLE T (XmlColumn xml NOT NULL)  
 ```  
   
-## 指定條件約束  
+## <a name="specifying-constraints"></a>指定條件約束  
  當您建立 **xml** 類型的資料行時，您可以定義資料行層級或資料表層級的條件約束。 在下列情況下，請使用條件約束：  
   
 -   您的商務規則無法以 XML 結構描述來表達。 例如，花店的送貨地址必須在該店的方圓 50 英哩內。 這一點可以在 XML 資料行上寫成條件約束。 條件約束可能會牽涉到 **xml** 資料類型方法。  
   
 -   您的條件約束牽涉到資料表中的其他 XML 或非 XML 資料行。 有一個例子，就是強制 XML 執行個體中的「客戶識別碼」(`/Customer/@CustId`) 要符合關聯式 CustomerID 資料行中的值。  
   
- 您可以為具類型或不具類型的 **xml** 資料類型資料行指定條件約束。 不過，在指定條件約束時無法使用 [XML 資料類型方法](../../t-sql/xml/xml-data-type-methods.md)。 此外，請注意 **xml** 資料類型不支援下列資料行和資料表條件約束：  
+ 您可以為具類型或不具類型的 **xml** 資料類型資料行指定條件約束。 不過，在指定條件約束時無法使用 [XML 資料類型方法](../../t-sql/xml/xml-data-type-methods.md) 。 此外，請注意 **xml** 資料類型不支援下列資料行和資料表條件約束：  
   
 -   PRIMARY KEY/ FOREIGN KEY  
   
@@ -102,7 +106,7 @@ END
 GO  
 ```  
   
- 請注意如果在執行個體中的 `exist()` 元素包含 `xml` 屬性，`1` 資料類型的 `<ProductDescription>` 方法會傳回 `ProductID`。 否則會傳回 `0`。  
+ 請注意如果在執行個體中的 `exist()` 元素包含 `xml` 屬性， `1` 資料類型的 `<ProductDescription>` 方法會傳回 `ProductID` 。 否則會傳回 `0`。  
   
  現在，您可以使用下列資料行層級的條件約束來建立資料表：  
   
@@ -125,7 +129,7 @@ INSERT INTO T values(1,'<ProductDescription ProductID="1" />')
 INSERT INTO T values(1,'<Product />')  
 ```  
   
-## 相同或相異的資料表  
+## <a name="same-or-different-table"></a>相同或相異的資料表  
  **xml** 資料類型資料行可以建立在含有其他關聯式資料行的資料表中，或是建立在與主資料表有外部索引鍵關聯性的另一個資料表中。  
   
  若下列其中一種情況成立，請將 **xml** 資料類型資料行建立在同一個資料表中：  

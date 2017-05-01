@@ -1,24 +1,28 @@
 ---
 title: "管理交易記錄檔的大小 | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/14/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-transaction-log"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "交易記錄 [SQL Server], 大小管理"
+ms.custom: 
+ms.date: 07/14/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-transaction-log
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- transaction logs [SQL Server], size management
 ms.assetid: 3a70e606-303f-47a8-96d4-2456a18d4297
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 5736ae436f7b07bbc7eda9eda301c41969a69cc9
+ms.lasthandoff: 04/11/2017
+
 ---
-# 管理交易記錄檔的大小
+# <a name="manage-the-size-of-the-transaction-log-file"></a>管理交易記錄檔的大小
 本主題包含下列作業的資訊：如何監視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 交易記錄大小、壓縮交易記錄、加入或加大交易記錄檔、最佳化 **tempdb** 交易記錄成長率，以及控制交易記錄檔的成長。  
 
   ##  <a name="MonitorSpaceUse"></a> 監視記錄空間的使用  
@@ -30,7 +34,8 @@ caps.handback.revision: 22
 ##  <a name="ShrinkSize"></a> 壓縮記錄檔大小  
  若要減少實體記錄檔的實體大小，則必須壓縮記錄檔。 當您知道交易記錄檔包含您不需要的未使用空間時，這非常有用。只有當資料庫在線上，而且至少有一個虛擬記錄檔可用時，才可以壓縮記錄檔。 在某些情況下，壓縮記錄可能要等到下一個記錄截斷之後才能進行。  
   
-> [!NOTE]  像長時間執行的交易之類的因素，使虛擬記錄檔保持作用中一段很長的時間，可能限制記錄檔壓縮，甚至完全阻止記錄檔壓縮。 如需延遲記錄截斷可能因素的相關資訊，請參閱[交易記錄 &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)。  
+> [!NOTE]
+>  像長時間執行的交易之類的因素，使虛擬記錄檔保持作用中一段很長的時間，可能限制記錄檔壓縮，甚至完全阻止記錄檔壓縮。 如需延遲記錄截斷可能因素的相關資訊，請參閱[交易記錄 &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)。  
   
  壓縮記錄檔會移除一或多個不保留任何邏輯記錄的虛擬記錄檔 (即「非使用中虛擬記錄檔」)。 當交易記錄檔壓縮之後，就會從記錄檔的結尾移除將記錄縮減至大約目標大小所需的非使用中虛擬記錄檔。  
   
@@ -50,7 +55,8 @@ caps.handback.revision: 22
   
 -   [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) (請參閱一或多個記錄檔的 **size**、**max_size** 和 **growth** 資料行。)  
   
-> [!NOTE]  壓縮資料庫和記錄檔的作業可設定為自動進行。 不過，我們建議您不要進行自動壓縮，而且 **autoshrink** 資料庫屬性預設為 FALSE。 如果 **autoshrink** 設定為 TRUE，只有當超過 25% 的空間未使用時，自動壓縮才會減少檔案的大小。 此時，檔案會壓縮成只有 25% 的檔案是未使用空間的大小，或檔案的原始大小，以較大者為準。 如需變更 **autoshrink** 屬性設定的相關資訊，請參閱[檢視或變更資料庫的屬性](../../relational-databases/databases/view-or-change-the-properties-of-a-database.md)—使用 [選項] 頁面的 **Auto Shrink** 屬性—或 [ALTER DATABASE SET 選項 &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md)—使用 AUTO_SHRINK 選項。  
+> [!NOTE]
+>  壓縮資料庫和記錄檔的作業可設定為自動進行。 不過，我們建議您不要進行自動壓縮，而且 **autoshrink** 資料庫屬性預設為 FALSE。 如果 **autoshrink** 設定為 TRUE，只有當超過 25% 的空間未使用時，自動壓縮才會減少檔案的大小。 此時，檔案會壓縮成只有 25% 的檔案是未使用空間的大小，或檔案的原始大小，以較大者為準。 如需變更 **autoshrink** 屬性設定的相關資訊，請參閱[檢視或變更資料庫的屬性](../../relational-databases/databases/view-or-change-the-properties-of-a-database.md)—使用 [選項] 頁面的 **Auto Shrink** 屬性—或 [ALTER DATABASE SET 選項 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)—使用 AUTO_SHRINK 選項。  
   
 
 ##  <a name="AddOrEnlarge"></a> 加入或加大記錄檔  
@@ -76,8 +82,9 @@ caps.handback.revision: 22
 -   若要控制記錄檔大小的最大值 (單位為 KB、MB、GB 和 TB) 或是將成長設定為 UNLIMITED，請使用 MAXSIZE 選項。  
   
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [為寫滿交易記錄疑難排解 &#40;SQL Server 錯誤 9002&#41;](../../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)  
   
   
+

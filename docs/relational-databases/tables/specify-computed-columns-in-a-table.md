@@ -1,24 +1,28 @@
 ---
 title: "指定資料表中的計算資料行 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "計算資料行, 定義"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- computed columns, define
 ms.assetid: 731a4576-09c1-47f0-a8f6-edd0b55679f4
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a540a749f8682e47215f18ca022fbfc446f93e1d
+ms.lasthandoff: 04/11/2017
+
 ---
-# 指定資料表中的計算資料行
+# <a name="specify-computed-columns-in-a-table"></a>指定資料表中的計算資料行
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   計算資料行是一個虛擬資料行，除非資料行標示了 PERSISTED，否則，並未實際儲存在資料表中。 計算資料行運算式可以使用來自其他資料行的資料來計算其所屬資料行的值。 您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中指定計算資料行的運算式。  
@@ -69,7 +73,7 @@ caps.handback.revision: 19
   
 6.  在 [檔案]  功能表上，按一下 [儲存] *table name*。  
   
-#### 若要將計算資料行定義新增至現有資料行  
+#### <a name="to-add-a-computed-column-definition-to-an-existing-column"></a>若要將計算資料行定義新增至現有資料行  
   
 1.  在物件總管中，以滑鼠右鍵按一下包含您要變更之資料行的資料表，然後展開 [資料行] 資料夾。  
   
@@ -79,7 +83,7 @@ caps.handback.revision: 19
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 建立資料表時加入計算資料行  
+#### <a name="to-add-a-computed-column-when-creating-a-table"></a>建立資料表時加入計算資料行  
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
@@ -106,7 +110,7 @@ caps.handback.revision: 19
   
     ```  
   
-#### 若要將新的計算資料行加入至現有資料表  
+#### <a name="to-add-a-new-computed-column-to-an-existing-table"></a>若要將新的計算資料行加入至現有資料表  
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
@@ -119,7 +123,7 @@ caps.handback.revision: 19
   
     ```  
   
-#### 若要將現有的資料行變更為計算資料行  
+#### <a name="to-change-an-existing-column-to-a-computed-column"></a>若要將現有的資料行變更為計算資料行  
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   

@@ -1,33 +1,37 @@
 ---
 title: "使用變更追蹤 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/08/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "變更追蹤 [SQL Server], 進行變更"
-  - "變更追蹤 [SQL Server], 疑難排解"
-  - "更新資料 [SQL Server]"
-  - "疑難排解 [SQL Server], 變更追蹤"
-  - "資料變更 [SQL Server]"
-  - "追蹤資料變更 [SQL Server]"
-  - "資料 [SQL Server], 變更"
-  - "變更追蹤 [SQL Server], 資料還原"
-  - "變更追蹤 [SQL Server], 確保結果一致"
-  - "變更追蹤 [SQL Server], 處理變更"
+ms.custom: 
+ms.date: 08/08/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- change tracking [SQL Server], making changes
+- change tracking [SQL Server], troubleshooting
+- updating data [SQL Server]
+- troubleshooting [SQL Server], change tracking
+- data changes [SQL Server]
+- tracking data changes [SQL Server]
+- data [SQL Server], changing
+- change tracking [SQL Server], data restore
+- change tracking [SQL Server], ensuring consistent results
+- change tracking [SQL Server], handling changes
 ms.assetid: 5aec22ce-ae6f-4048-8a45-59ed05f04dc5
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f7440e5f259c45a782066ac311a2f9f42c134c25
+ms.lasthandoff: 04/11/2017
+
 ---
-# 使用變更追蹤 (SQL Server)
+# <a name="work-with-change-tracking-sql-server"></a>使用變更追蹤 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   使用變更追蹤的應用程式必須能夠取得追蹤變更、將這些變更套用至另一個資料存放區，以及更新來源資料庫。 此主題描述如何執行這些工作，以及在進行容錯移轉而且必須從備份還原資料庫時，變更追蹤所扮演的角色。  
@@ -35,7 +39,7 @@ caps.handback.revision: 26
 ##  <a name="Obtain"></a> 使用變更追蹤函數來取得變更  
  描述如何使用變更追蹤函數來取得變更以及對資料庫所做變更的相關資訊。  
   
-### 關於變更追蹤函數  
+### <a name="about-the-change-tracking-functions"></a>關於變更追蹤函數  
  應用程式可以使用下列函數來取得在資料庫中所做的變更和這些變更的相關資訊：  
   
  CHANGETABLE(CHANGES …) 函數  
@@ -57,7 +61,7 @@ caps.handback.revision: 26
  CHANGE_TRACKING_MIN_VALID_VERSION() 函數  
  這是用於取得用戶端可以擁有，並仍然可從 CHANGETABLE() 取得有效結果的最小有效版本。 用戶端應該針對此函數所傳回的值，檢查上一次同步處理版本。 如果上一次同步處理版本小於此函數所傳回的版本，用戶端將無法從 CHANGETABLE() 取得有效結果，而且必須重新初始化。  
   
-### 取得初始資料  
+### <a name="obtaining-initial-data"></a>取得初始資料  
  在應用程式首次取得變更之前，應用程式必須先傳送查詢，以便取得初始資料和同步處理版本。 應用程式必須直接從資料表中取得適當的資料，然後使用 CHANGE_TRACKING_CURRENT_VERSION() 來取得初始版本。 這個版本將在首次取得變更時傳遞給 CHANGETABLE(CHANGES …)。  
   
  下列範例將說明如何取得初始同步處理版本和初始資料集。  
@@ -73,7 +77,7 @@ caps.handback.revision: 26
         SalesLT.Product AS P  
 ```  
   
-### 使用變更追蹤函數來取得變更  
+### <a name="using-the-change-tracking-functions-to-obtain-changes"></a>使用變更追蹤函數來取得變更  
  若要取得資料表的變更資料列和這些變更的相關資訊，請使用 CHANGETABLE(CHANGES…)。 例如，下列查詢會取得 `SalesLT.Product` 資料表的變更。  
   
 ```tsql  
@@ -125,10 +129,10 @@ ON
     P.ProductID = CT.ProductID  
 ```  
   
-### 版本號碼  
+### <a name="version-numbers"></a>版本號碼  
  啟用變更追蹤的資料庫所具有的版本計數器，會隨著變更追蹤資料表所做的變更而增加。 每一個變更的資料列都有與它相關聯的版本號碼。 當某個要求傳送至應用程式，以便查詢是否有變更時，系統就會呼叫提供版本號碼的函數。 此函數會傳回自從該版本以來已經進行之所有變更的相關資訊。 變更追蹤版本在某些方面與 **rowversion** 資料類型的概念很相似。  
   
-### 驗證上一次同步處理的版本  
+### <a name="validating-the-last-synchronized-version"></a>驗證上一次同步處理的版本  
  變更的相關資訊會保留一段有限的時間。 此時間長度是由可指定為 ALTER DATABASE 一部分的 CHANGE_RETENTION 參數所控制。  
   
  請注意，針對 CHANGE_RETENTION 所指定的時間會決定所有應用程式必須向資料庫要求變更的頻率。 如果某個應用程式的 *last_synchronization_version* 值早於資料表的最小有效同步處理版本，該應用程式就無法執行有效的變更列舉。 這是因為某些變更資訊可能已經清除了。 在應用程式使用 CHANGETABLE(CHANGES …) 來取得變更之前，此應用程式必須先驗證它計畫傳遞給 CHANGETABLE(CHANGES …) 的 *last_synchronization_version* 值。 如果 *last_synchronization_version* 的值無效，該應用程式就必須重新初始化所有資料。  
@@ -158,14 +162,14 @@ BEGIN
 END  
 ```  
   
-### 使用資料行追蹤  
+### <a name="using-column-tracking"></a>使用資料行追蹤  
  資料行追蹤可讓應用程式僅針對已經變更的資料行 (而非整個資料列) 取得資料。 例如，假設某份資料表具有一個或多個龐大但很少變更的資料行，而且具有其他經常變更的資料行。 如果沒有使用資料行追蹤，應用程式只能判斷出某個資料列已經變更，而且必須同步處理所有資料，包括大型資料行的資料。 不過，透過資料行追蹤，應用程式就可以判斷出大型資料行的資料是否已變更，而且僅同步處理該項資料 (如果已經變更的話)。  
   
  資料行追蹤資訊會顯示在 CHANGETABLE(CHANGES …) 函數所傳回的 SYS_CHANGE_COLUMNS 資料行中。  
   
  您可以使用資料行追蹤，以便針對尚未變更的資料行傳回 NULL。 如果資料行可以變更為 NULL，就必須傳回個別的資料行，以便指出資料行是否變更。  
   
- 在下列範例中，如果 `CT_ThumbnailPhoto` 資料行並未變更，該資料行將成為 `NULL`。 此資料行也可能是 `NULL`，因為它已變更為 `NULL`。應用程式可以使用 `CT_ThumbNailPhoto_Changed` 資料行來判斷此資料行是否變更。  
+ 在下列範例中，如果 `CT_ThumbnailPhoto` 資料行並未變更，該資料行將成為 `NULL` 。 此資料行也可能是 `NULL` ，因為它已變更為 `NULL` 。應用程式可以使用 `CT_ThumbNailPhoto_Changed` 資料行來判斷此資料行是否變更。  
   
 ```tsql  
 DECLARE @PhotoColumnId int = COLUMNPROPERTY(  
@@ -193,7 +197,7 @@ ON
      CT.SYS_CHANGE_OPERATION = 'U'  
 ```  
   
-### 取得一致且正確的結果  
+### <a name="obtaining-consistent-and-correct-results"></a>取得一致且正確的結果  
  取得資料表的變更資料需要進行多項步驟。 請注意，如果您沒有考慮並處理特定問題，就可能會傳回不一致或不正確的結果。  
   
  例如，若要取得已經對 Sales 資料表和 SalesOrders 資料表所做的變更，應用程式會執行下列步驟：  
@@ -220,7 +224,7 @@ ON
   
  若要克服先前列出的挑戰，我們建議您使用快照集隔離。 這樣做有助於確保變更資訊的一致性，並且避免發生與背景清除工作有關的競爭情形。 如果您沒有使用快照集交易，則開發使用變更追蹤的應用程式時，可能需要投入相當多的心力。  
   
-#### 使用快照集隔離  
+#### <a name="using-snapshot-isolation"></a>使用快照集隔離  
  變更追蹤已經設計成可搭配快照集隔離順利運作。 您必須針對資料庫啟用快照集隔離。 取得變更所需的所有步驟都必須包含在快照集交易內部。 這樣做可確保取得變更時，快照集交易內部的查詢看不到對資料所做的所有變更。  
   
  若要取得快照集交易內部的資料，請執行下列步驟：  
@@ -264,12 +268,12 @@ COMMIT TRAN
   
  如需快照集交易的詳細資訊，請參閱 [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)。  
   
-#### 使用快照集隔離的替代方案  
+#### <a name="alternatives-to-using-snapshot-isolation"></a>使用快照集隔離的替代方案  
  雖然我們提供了使用快照集隔離的替代方案，但是這些替代方案需要進行更多工作，才能確保符合所有應用程式需求。 若要確保 *last_synchronization_version* 有效，而且清除處理序不會在取得變更之前移除資料，請執行下列步驟：  
   
-1.  在呼叫 CHANGETABLE() 之後檢查 *last_synchronization_version*。  
+1.  在呼叫 CHANGETABLE() 之後檢查 *last_synchronization_version* 。  
   
-2.  在使用 CHANGETABLE() 來取得變更的每個查詢中檢查 *last_synchronization_version*。  
+2.  在使用 CHANGETABLE() 來取得變更的每個查詢中檢查 *last_synchronization_version* 。  
   
  已經取得下一次列舉的同步處理版本之後，可能會發生變更。 有兩種方式可以處理此情況。 所使用的選項會因應用程式以及它如何處理每個方法的副作用而定：  
   
@@ -309,10 +313,10 @@ COMMIT TRAN
   
      應用程式可以使用這個子句來儲存內容資料。  
   
-### 檢查是否有衝突  
+### <a name="checking-for-conflicts"></a>檢查是否有衝突  
  在雙向同步處理狀況中，用戶端應用程式必須判斷自從應用程式上一次取得變更以來，某個資料列是否尚未更新。  
   
- 下列範例將示範如何使用 CHANGETABLE(VERSION …) 函數，以最有效率的方式 (不需要個別查詢) 檢查是否有衝突。 在此範例中，`CHANGETABLE(VERSION …)`會針對 `SYS_CHANGE_VERSION`所指定的資料列，判斷 `@product id`。 `CHANGETABLE(CHANGES …)` 可以取得相同的資訊，但是這樣做比較沒有效率。 如果資料列的 `SYS_CHANGE_VERSION` 值大於 `@last_sync_version`的值，就表示發生衝突。 如果發生衝突，系統將不會更新此資料列。 `ISNULL()` 檢查是必要的，因為資料列可能沒有任何變更資訊可用。 如果自從啟用變更追蹤或清除變更資訊以來，此資料列尚未更新，就不會有任何變更資訊存在。  
+ 下列範例將示範如何使用 CHANGETABLE(VERSION …) 函數，以最有效率的方式 (不需要個別查詢) 檢查是否有衝突。 在此範例中， `CHANGETABLE(VERSION …)` 會針對 `SYS_CHANGE_VERSION` 所指定的資料列，判斷 `@product id`。 `CHANGETABLE(CHANGES …)` 可以取得相同的資訊，但是這樣做比較沒有效率。 如果資料列的 `SYS_CHANGE_VERSION` 值大於 `@last_sync_version`的值，就表示發生衝突。 如果發生衝突，系統將不會更新此資料列。 `ISNULL()` 檢查是必要的，因為資料列可能沒有任何變更資訊可用。 如果自從啟用變更追蹤或清除變更資訊以來，此資料列尚未更新，就不會有任何變更資訊存在。  
   
 ```tsql  
 -- Assumption: @last_sync_version has been validated.  
@@ -355,7 +359,7 @@ BEGIN
 END  
 ```  
   
-### 設定內容資訊  
+### <a name="setting-context-information"></a>設定內容資訊  
  應用程式可以使用 WITH CHANGE_TRACKING_CONTEXT 子句，將內容資訊與變更資訊儲存在一起。 然後，您就可以從 CHANGETABLE(CHANGES  ) 傳回的 SYS_CHANGE_CONTEXT 資料行中取得這項資訊。  
   
  內容資訊通常是用來識別變更的來源。 如果能夠識別變更的來源，再度同步處理時，資料存放區就可以使用該項資訊來避免取得變更。  
@@ -377,7 +381,7 @@ END
          0)  
 ```  
   
-### 確保一致且正確的結果  
+### <a name="ensuring-consistent-and-correct-results"></a>確保一致且正確的結果  
  當應用程式驗證 @last_sync_version 的值時，必須考慮清除處理序。 這是因為在呼叫 CHANGE_TRACKING_MIN_VALID_VERSION() 之後，但在進行更新之前，可能已經移除資料了。  
   
 > [!IMPORTANT]  
@@ -432,7 +436,7 @@ COMMIT TRAN
   
 -   當用戶端查詢變更時，請在伺服器上記錄每一個用戶端上一次同步處理的版本號碼。 如果資料有問題，上一次同步處理的版本號碼將不會相符。 這表示必須重新初始化。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [追蹤資料變更 &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [關於變更追蹤 &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-tracking-sql-server.md)   
  [管理變更追蹤 &#40;SQL Server&#41;](../../relational-databases/track-changes/manage-change-tracking-sql-server.md)   
@@ -443,3 +447,4 @@ COMMIT TRAN
  [WITH CHANGE_TRACKING_CONTEXT &#40;Transact-SQL&#41;](../../relational-databases/system-functions/with-change-tracking-context-transact-sql.md)  
   
   
+

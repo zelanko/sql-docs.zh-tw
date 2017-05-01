@@ -1,26 +1,30 @@
 ---
 title: "建立預存程序 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-stored-Procs"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-helpviewer_keywords: 
-  - "新的預存程序"
-  - "預存程序 [SQL Server], 建立"
-  - "建立預存程序"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-stored-Procs
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+helpviewer_keywords:
+- new stored procedures
+- stored procedures [SQL Server], creating
+- creating stored procedures
 ms.assetid: 76e8a6ba-1381-4620-b356-4311e1331ca7
 caps.latest.revision: 37
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 37
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0c0095707730da9b840ebf444bdf7500cb634ad3
+ms.lasthandoff: 04/11/2017
+
 ---
-# 建立預存程序
+# <a name="create-a-stored-procedure"></a>建立預存程序
   此主題描述如何使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 及 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] CREATE PROCEDURE 陳述式來建立 [!INCLUDE[tsql](../../includes/tsql-md.md)] 預存程序。  
   
 ##  <a name="Top"></a>   
@@ -128,7 +132,7 @@ caps.handback.revision: 37
     ```  
   
 ##  <a name="PowerShellProcedure"></a>   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)  
   
   

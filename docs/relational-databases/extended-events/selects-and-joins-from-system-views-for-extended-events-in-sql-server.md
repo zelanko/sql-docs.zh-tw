@@ -1,23 +1,27 @@
 ---
 title: "SQL Server 擴充事件系統檢視表中的 SELECT 和 JOIN | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 08/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 04521d7f-588c-4259-abc2-1a2857eb05ec
 caps.latest.revision: 6
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b9a3f027fddc3ab7094b2ca82ae1f9ad3190a886
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server 擴充事件系統檢視表中的 SELECT 和 JOIN
+# <a name="selects-and-joins-from-system-views-for-extended-events-in-sql-server"></a>SQL Server 擴充事件系統檢視表中的 SELECT 和 JOIN
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
 
@@ -32,13 +36,13 @@ caps.handback.revision: 6
 
 
 
-## A. 基本資訊
+## <a name="a-foundational-information"></a>A. 基本資訊
 
 
 擴充事件有兩組系統檢視表︰
 
 
-#### 目錄檢視：
+#### <a name="catalog-views"></a>目錄檢視：
 
 - 這些檢視會儲存[建立事件工作階段](../../t-sql/statements/create-event-session-transact-sql.md)或 SSMS UI 對等項目所建立之每個事件工作階段「定義」的相關資訊。 但是這些檢視卻不知道任一工作階段是否已開始執行。
     - 例如，如果 SSMS [物件總管] 未顯示任何定義的事件工作階段，從 *sys.server_event_session_targets* 檢視中 SELECT 就會傳回零個資料列。
@@ -49,11 +53,11 @@ caps.handback.revision: 6
     - *sys.database\_event\_session\** 是 SQL Database 上的名稱前置詞。
 
 
-#### 動態管理檢視 (DMV)：
+#### <a name="dynamic-management-views-dmvs"></a>動態管理檢視 (DMV)：
 
 - 儲存執行事件工作階段的「目前活動」相關資訊。 但是這些 DMV 對工作階段定義卻知之甚少。
     - 即使所有的事件工作階段目前皆已停止，因為伺服器啟動時會將各種封裝載入到使用中的記憶體，所以從 *sys.dm_xe_packages* 檢視 SELECT 仍會傳回資料列。
-    - 因為同樣的原因，*sys.dm_xe_objects* 和 *sys.dm_xe_object_columns* 也仍會傳回資料列。
+    - 因為同樣的原因， *sys.dm_xe_objects* *sys.dm_xe_object_columns* would also still return rows.
 
 
 - 擴充事件 DMV 的名稱前置詞是︰
@@ -61,7 +65,7 @@ caps.handback.revision: 6
     - *sys.dm\_xe\_database\_\** 通常是 SQL Database 的名稱前置詞。
 
 
-#### 權限:
+#### <a name="permissions"></a>權限:
 
 
 若要從系統檢視表 SELECT，必須有下列權限︰
@@ -72,7 +76,7 @@ caps.handback.revision: 6
 
 <a name="section_B_catalog_views"></a>
 
-## B. 目錄檢視
+## <a name="b-catalog-views"></a>B. 目錄檢視
 
 
 本節會比對同一已定義事件工作階段的三種不同技術檢視方塊，並建立其關聯。 工作階段已定義並顯示在 SQL Server Management Studio (SSMS.exe) 的 [物件總管] 中，但此工作階段目前未執行。
@@ -87,7 +91,7 @@ caps.handback.revision: 6
 
 
 
-#### 節 B 的順序：
+#### <a name="the-sequence-in-this-section-b"></a>節 B 的順序：
 
 
 - [B.1 SSMS UI 檢視方塊](#section_B_1_SSMS_UI_perspective)
@@ -108,19 +112,19 @@ caps.handback.revision: 6
 
 <a name="section_B_1_SSMS_UI_perspective"></a>
 
-### B.1 SSMS UI 檢視方塊
+### <a name="b1-ssms-ui-perspective"></a>B.1 SSMS UI 檢視方塊
 
 
 在 SSMS 的 [物件總管] 中，您可以啟動 [新增工作階段] 對話方塊：請依序展開 [管理] > [擴充事件]，然後以滑鼠右鍵按一下 [工作階段] > [新增工作階段]。
 
 在大型 [新增工作階段] 對話方塊標示為 [一般] 的第一個區段中，我們看到已選取 [在伺服器啟動時啟動事件工作階段] 選項。
 
-![[新增工作階段] > [一般]，[在伺服器啟動時啟動事件工作階段]。](/Image/SQL%20Server/xevents-ssms-ac105-eventname-startup.png)
+![[新增工作階段] > [一般]，[在伺服器啟動時啟動事件工作階段]。](../../relational-databases/extended-events/media/xevents-ssms-ac105-eventname-startup.png)
 
 
 接下來在 [事件] 區段中，我們看到已選擇 [lock_deadlock] 事件。 我們看到該事件已選取三個 [動作]。 這表示已按過 [設定] 按鈕，它在按下後會變成灰色。
 
-![[新增工作階段] > [事件]，[全域欄位 (動作)]。](/Image/SQL%20Server/xevents-ssms-ac110-actions-global.png)
+![[新增工作階段] > [事件]，[全域欄位 (動作)]。](../../relational-databases/extended-events/media/xevents-ssms-ac110-actions-global.png)
 
 
 <a name="resource_type_PAGE_cat_view"></a>
@@ -129,12 +133,12 @@ caps.handback.revision: 6
 
 我們會看到資料庫名稱和計數器的其他述詞篩選。
 
-![[新增工作階段] > [事件]，[Filter Predicate Fields (Actions) (篩選述詞欄位 (動作))]。](/Image/SQL%20Server/xevents-ssms-ac115-predicate-db.png)
+![[新增工作階段] > [事件]，[Filter Predicate Fields (Actions) (篩選述詞欄位 (動作))]。](../../relational-databases/extended-events/media/xevents-ssms-ac115-predicate-db.png)
 
 
 接著在 [資料儲存區] 區段，我們看到 **event_file** 已被選為目標。 而且，我們還看到已選取 [啟用檔案換用] 選項。
 
-![[新增工作階段] > [資料儲存區]，eventfile_enablefilerollover](/Image/SQL%20Server/xevents-ssms-ac120-target-eventfile.png)
+![[新增工作階段] > [資料儲存區]，eventfile_enablefilerollover](../../relational-databases/extended-events/media/xevents-ssms-ac120-target-eventfile.png)
 
 
 最後，在 [進階] 區段看到 [分派延遲上限] 值減少到 4 秒。
@@ -147,7 +151,7 @@ caps.handback.revision: 6
 
 <a name="section_B_2_TSQL_perspective"></a>
 
-### B.2 TRANSACT-SQL 檢視方塊
+### <a name="b2-transact-sql-perspective"></a>B.2 TRANSACT-SQL 檢視方塊
 
 
 不論事件工作階段定義是如何建立的，工作階段可從 SSMS UI 進行還原工程，還原為 TRANSACT-SQL 指令碼完全相符。 您可以檢查前面的 [新增工作階段] 螢幕擷取畫面，比較其可見的規格和下列產生 T-SQL **CREATE EVENT SESSION** 指令碼的子句。
@@ -205,7 +209,7 @@ CREATE EVENT SESSION [event_session_test3]
 
 <a name="section_B_3_Catalog_view_S_J_UNION"></a>
 
-### B.3 目錄檢視的 SELECT JOIN UNION 檢視方塊
+### <a name="b3-catalog-view-select-join-union-perspective"></a>B.3 目錄檢視的 SELECT JOIN UNION 檢視方塊
 
 
 不要怕！ 下列 T-SQL SELECT 陳述式之所以很長，只是因為它將數個小型的 SELECT UNION 在一起。 任何小型的 SELECT 都可以獨立執行。 小型的 SELECT 顯示各種系統類別目錄檢視應該如何 JOIN 在一起。
@@ -343,7 +347,7 @@ ORDER BY
 ```
 
 
-#### 輸出
+#### <a name="output"></a>輸出
 
 
 接下來是執行前述 SELECT JOIN UNION 的實際輸出。 輸出參數的名稱和值會對應至清楚顯示在前一個 CREATE EVENT SESSION 陳述式中的內容。
@@ -373,13 +377,13 @@ event_session_test3   7_WITH_STARTUP_STATE   startup_state                   1
 
 <a name="section_C_DMVs"></a>
 
-## C. 動態管理檢視 (DMV)
+## <a name="c-dynamic-management-views-dmvs"></a>C. 動態管理檢視 (DMV)
 
 
 我們現在轉至 DMV。 本節提供數個各有特定實用商業用途的 Transact-SQL SELECT 陳述式。 此外，SELECT 會示範如何將 DMV JOIN 在一起，以取得您想要的任何新用法。
 
 
-DMV 的參考文件位於[擴充事件動態管理檢視](../../relational-databases/system-dynamic-management-views/extended-events-dynamic-management-views.md)
+DMV 的參考文件位於 [擴充事件動態管理檢視](../../relational-databases/system-dynamic-management-views/extended-events-dynamic-management-views.md)
 
 
 在本文中，除非另有指定，否則下列 SELECT 的所有實際輸出資料列皆是出自 SQL Server 2016。
@@ -400,7 +404,7 @@ DMV 的參考文件位於[擴充事件動態管理檢視](../../relational-datab
 
 <a name="section_C_1_list_packages"></a>
 
-### C.1 所有的封裝清單
+### <a name="c1-list-of-all-packages"></a>C.1 所有的封裝清單
 
 
 所有您可以在擴充事件區域中使用的物件，都來自系統載入的封裝。 本節會列出所有封裝及其說明。
@@ -417,7 +421,7 @@ SELECT  --C.1
 ```
 
 
-#### 輸出
+#### <a name="output"></a>輸出
 
 以下為封裝清單。
 
@@ -456,7 +460,7 @@ XtpRuntime     Extended events for the XTP Runtime
 
 <a name="section_C_2_count_object_type"></a>
 
-### C.2 每個物件類型的計數
+### <a name="c2-count-of-every-object-type"></a>C.2 每個物件類型的計數
 
 
 本節會告訴我們事件封裝包含的物件類型。 顯示 *sys.dm\_xe\_objects* 所有物件類型的完整清單，以及每種類型的計數。
@@ -475,7 +479,7 @@ SELECT  --C.2
 ```
 
 
-#### 輸出
+#### <a name="output"></a>輸出
 
 以下是每個物件類型的物件計數。 約有 1915 個物件。
 
@@ -499,7 +503,7 @@ Count-of-Type   object_type
 
 <a name="section_C_3_select_all_available_objects"></a>
 
-### C.3 SELECT 所有可用的項目依類型排序
+### <a name="c3-select-all-available-items-sorted-by-type"></a>C.3 SELECT 所有可用的項目依類型排序
 
 
 下列的 SELECT 會傳回約 1915 筆資料列，每列一個物件。
@@ -530,7 +534,7 @@ SELECT  --C.3
 ```
 
 
-#### 輸出
+#### <a name="output"></a>輸出
 
 為了挑起您的興趣，接下來是前述 SELECT 傳回之物件的任意取樣。
 
@@ -566,13 +570,13 @@ type           package0       xml                           Well formed XML frag
 
 <a name="section_C_4_data_fields"></a>
 
-### C.4 事件可用的資料欄位
+### <a name="c4-data-fields-available-for-your-event"></a>C.4 事件可用的資料欄位
 
 
 下列的 SELECT 會傳回事件類型特有的所有資料欄位。
 
-- 注意 WHERE 子句項目：*column_type = 'data'*。
-- 您也必須編輯 *o.name =* 的 WHERE 子句值。
+- 注意 WHERE 子句項目： *column_type = 'data'*。
+- 您也必須編輯 *o.name =*的 WHERE 子句值。
 
 
 ```tsql
@@ -595,7 +599,7 @@ SELECT  -- C.4
         AND
         o.object_type = 'event'
         AND
-        o.name        = '<EVENT-NAME-HERE!>'  --'lock_deadlock'
+        o.name        = '\<EVENT-NAME-HERE!>'  --'lock_deadlock'
     ORDER BY
         [Package],
         [Event],
@@ -603,7 +607,7 @@ SELECT  -- C.4
 ```
 
 
-#### 輸出
+#### <a name="output"></a>輸出
 
 以下為前述 SELECT 傳回的資料列 WHERE `o.name = 'lock_deadlock'`：
 
@@ -642,10 +646,10 @@ sqlserver   lock_deadlock   transaction_id
 
 <a name="section_C_5_map_values_fields"></a>
 
-### C.5 *sys.dm_xe_map_values* 和事件欄位
+### <a name="c5-sysdmxemapvalues-and-event-fields"></a>C.5 *sys.dm_xe_map_values* 和事件欄位
 
 
-下列 SELECT 包含名為 *sys.dm_xe_map_values* 之複雜檢視的 JOIN。
+下列 SELECT 包含名為 *sys.dm_xe_map_values*之複雜檢視的 JOIN。
 
 SELECT 旨在顯示您可為事件工作階段選擇的許多欄位。 事件欄位有兩種用法︰
 
@@ -682,7 +686,7 @@ SELECT  --C.5
     WHERE
         do.object_type = 'event'
         AND
-        do.name        = '<YOUR-EVENT-NAME-HERE!>'  --'lock_deadlock'
+        do.name        = '\<YOUR-EVENT-NAME-HERE!>'  --'lock_deadlock'
     ORDER BY
         [Package],
         [Object],
@@ -691,11 +695,11 @@ SELECT  --C.5
 ```
 
 
-#### 輸出
+#### <a name="output"></a>輸出
 
 <a name="resource_type_dmv_actual_row"></a>
 
-接下來是前述 T-SQL SELECT 實際輸出之 153 個資料列的取樣。 **resource_type** 的資料列與本文他處所舉之 **event_session_test3** 範例使用的述詞篩選[相關](#resource_type_PAGE_cat_view)。
+接下來是前述 T-SQL SELECT 實際輸出之 153 個資料列的取樣。 **resource_type** 的資料列與本文他處所舉之 [event_session_test3](#resource_type_PAGE_cat_view) 範例使用的述詞篩選 **相關** 。
 
 
 ```
@@ -719,13 +723,13 @@ you could put:
 
 <a name="section_C_6_parameters_targets"></a>
 
-### C.6 目標的參數
+### <a name="c6-parameters-for-targets"></a>C.6 目標的參數
 
 
 下列 SELECT 會傳回目標的每個參數。 每個參數都會標記，以指出它是否為強制。 您指派給參數的值會影響目標的行為。
 
-- 注意 WHERE 子句項目︰*object_type = 'customizable'*。
-- 您也必須編輯 *o.name =* 的 WHERE 子句值。
+- 注意 WHERE 子句項目︰ *object_type = 'customizable'*。
+- 您也必須編輯 *o.name =*的 WHERE 子句值。
 
 
 ```tsql
@@ -754,7 +758,7 @@ SELECT  --C.6
     WHERE
         o.object_type = 'target'
         AND
-        o.name     LIKE '%'    -- Or '<YOUR-TARGET-NAME-HERE!>'.
+        o.name     LIKE '%'    -- Or '\<YOUR-TARGET-NAME-HERE!>'.
     ORDER BY
         [Package],
         [Target],
@@ -763,7 +767,7 @@ SELECT  --C.6
 ```
 
 
-#### 輸出
+#### <a name="output"></a>輸出
 
 以下為 SQL Server 2016 中前述 SELECT 傳回的參數資料列子集。
 
@@ -784,13 +788,13 @@ package0   event_file   metadatafile         unicode_string_ptr   Not_mandatory 
 
 <a name="section_C_7_dmv_select_target_data_column"></a>
 
-### C.7 DMV SELECT 將 target_data 資料行轉換成 XML
+### <a name="c7-dmv-select-casting-targetdata-column-to-xml"></a>C.7 DMV SELECT 將 target_data 資料行轉換成 XML
 
 
 這個 DMV SELECT 從作用中事件工作階段的目標傳回資料列。 資料會轉換成 XML，使其傳回的資料格為可按式項目，輕鬆以 SSMS 顯示。
 
 - 如果停止事件工作階段，此 SELECT 就不會傳回資料列。
-- 您可能需要編輯 *s.name =* 的 WHERE 子句值。
+- 您可能需要編輯 *s.name =*的 WHERE 子句值。
 
 
 ```tsql
@@ -804,11 +808,11 @@ SELECT  --C.7
 
             ON s.address = t.event_session_address
     WHERE
-        s.name = '<Your-Session-Name-Here!>';
+        s.name = '\<Your-Session-Name-Here!>';
 ```
 
 
-#### 輸出：唯一的資料列，包括其 XML 儲存格。
+#### <a name="output-the-only-row-including-its-xml-cell"></a>輸出：唯一的資料列，包括其 XML 儲存格。
 
 以下是前述 SELECT 輸出的唯一資料列。 資料行「XML 轉換」包含 SSMS 了解其為 XML 的 XML 字串，。 因此 SSMS 了解應該讓「XML 轉換」資料格成為可按式項目。
 
@@ -826,7 +830,7 @@ checkpoint_session_ring_buffer2   ring_buffer   <RingBufferTarget truncated="0" 
 ```
 
 
-#### 輸出：當資料格為可按式項目時，XML 顯示良好。
+#### <a name="output-xml-displayed-pretty-when-cell-is-clicked"></a>輸出：當資料格為可按式項目時，XML 顯示良好。
 
 
 當「XML 轉換」資料格是可按式項目時，即會出現下列良好的畫面。
@@ -852,10 +856,10 @@ checkpoint_session_ring_buffer2   ring_buffer   <RingBufferTarget truncated="0" 
 
 <a name="section_C_8_select_function_disk"></a>
 
-### C.8 函數的 SELECT 從磁碟機擷取 event_file 資料
+### <a name="c8-select-from-a-function-to-retrieve-eventfile-data-from-disk-drive"></a>C.8 函數的 SELECT 從磁碟機擷取 event_file 資料
 
 
-假設事件工作階段在收集了某些資料後停止。 如果您的工作階段已定義為使用 event_file 目標，您仍然可以呼叫 *sys.fn_xe_target_read_file* 函數以擷取資料。
+假設事件工作階段在收集了某些資料後停止。 如果您的工作階段已定義為使用 event_file 目標，您仍然可以呼叫 *sys.fn_xe_target_read_file*函數以擷取資料。
 
 - 您必須先在函數呼叫的參數中編輯路徑和檔案名稱，再執行此 SELECT。
     - 不用理會 SQL 系統在工作階段每次重新啟動時，嵌入到實際 .XEL 檔案名稱中的額外數字。 只要提供標準的根名稱和副檔名即可。
@@ -872,7 +876,7 @@ SELECT  --C.8
     FROM
         sys.fn_xe_file_target_read_file(
 
-            '<YOUR-PATH-FILE-NAME-ROOT-HERE!>*.xel',
+            '\<YOUR-PATH-FILE-NAME-ROOT-HERE!>*.xel',
             --'C:\Junk\Checkpoint_Begins_ES*.xel',  -- Example.
 
             NULL, NULL, NULL
@@ -880,7 +884,7 @@ SELECT  --C.8
 ```
 
 
-#### 輸出：SELECT FROM 函數傳回的資料列。
+#### <a name="output-rows-returned-by-select-from-the-function"></a>輸出：SELECT FROM 函數傳回的資料列。
 
 
 接著是前述 SELECT FROM 函數傳回的資料列。 最右邊的 XML 資料行包含專門針對發生事件的資料。
@@ -896,7 +900,7 @@ D5149520-6282-11DE-8A39-0800200C9A66   03FDA7D0-91BA-45F8-9875-8B6DD0B8E9F2   ch
 ```
 
 
-#### 輸出：一個 XML 資料格。
+#### <a name="output-one-xml-cell"></a>輸出：一個 XML 資料格。
 
 
 以下是第一個 XML 資料格的內容，來自前述的傳回資料列集。
@@ -915,4 +919,6 @@ D5149520-6282-11DE-8A39-0800200C9A66   03FDA7D0-91BA-45F8-9875-8B6DD0B8E9F2   ch
   </action>
 </event>
 ```
+
+
 

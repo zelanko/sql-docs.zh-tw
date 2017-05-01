@@ -1,25 +1,29 @@
 ---
 title: "OLE Automation 範例指令碼 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-ole"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "OLE Automation [SQL Server], 範例"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-ole
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- OLE Automation [SQL Server], examples
 ms.assetid: e59f75a9-ed41-4f12-888e-ffc57f9b3882
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9db090a1bf5d4cf53896bb0de2e7390f426bdb5b
+ms.lasthandoff: 04/11/2017
+
 ---
-# OLE Automation 範例指令碼
-  此主題包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式批次的範例，該批次使用 OLE Automation 預存程序建立並使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 本機執行個體中的 SQL-DMO SQLServer 物件。 部分程式碼是用來當做 OLE Automation 系統預存程序參考主題的範例。  
+# <a name="ole-automation-sample-script"></a>OLE Automation 範例指令碼
+  此主題包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式批次的範例，該批次使用 OLE Automation 預存程序建立並使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)]本機執行個體中的 SQL-DMO SQLServer 物件。 部分程式碼是用來當做 OLE Automation 系統預存程序參考主題的範例。  
   
 ```  
 USE AdventureWorks2012;  
@@ -137,7 +141,7 @@ RETURN;
 GO  
 ```  
   
-## 相關內容  
+## <a name="related-content"></a>相關內容  
  [Transact-SQL 中的 OLE Automation 物件](../../relational-databases/stored-procedures/ole-automation-objects-in-transact-sql.md)  
   
  [sp_OACreate &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-oacreate-transact-sql.md)  

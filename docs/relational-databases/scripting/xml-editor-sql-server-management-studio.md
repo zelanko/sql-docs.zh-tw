@@ -1,29 +1,33 @@
 ---
 title: "XML 編輯器 (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.editor.xml.f1"
-  - "sql13.swb.editorxml.f1"
-  - "vs.xmleditor"
-  - "sql13.swb.xmleditor.f1"
-helpviewer_keywords: 
-  - "XML 設計工具 [SQL Server Management Studio]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.editor.xml.f1
+- sql13.swb.editorxml.f1
+- vs.xmleditor
+- sql13.swb.xmleditor.f1
+helpviewer_keywords:
+- XML Designer [SQL Server Management Studio]
 ms.assetid: 0824a5ce-e67b-4b53-98d9-d371faf2d23c
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: b241ee1d04df5845899810d5f4e839e9f6d22860
+ms.lasthandoff: 04/11/2017
+
 ---
-# XML 編輯器 (SQL Server Management Studio)
+# <a name="xml-editor-sql-server-management-studio"></a>XML 編輯器 (SQL Server Management Studio)
   提供一組視覺化工具，以搭配 XML 結構描述、ADO.NET 資料集以及 XML 文件使用。 XML 設計工具支援全球資訊網協會 (WC3) 定義的 XML 結構描述定義 (XSD) 語言。 設計師不支援 DTD (文件類型定義) 或其他 XML 結構描述語言，例如 XDR (XML-Data Reduced)。  
   
  若要顯示設計師，請在專案中加入資料集、XML 結構描述或 XML 檔案，或開啟下面資料表中所列出的任何檔案類型。  
@@ -40,7 +44,7 @@ caps.handback.revision: 27
 |**XML**|用於編輯 XML；來源編輯器提供色彩編碼和 IntelliSense，其中包括自動完成和列出成員。|.xml .xsd .xslt .wsdl.web.resx.tdl.wsf.hta.disco.vsdisco.config|  
 |**執行程序表**|顯示使用 SET SHOWPLAN_XML ON 選項建立的 xml 查詢計畫。|.showplan|  
   
-## 結構描述檢視  
+## <a name="schema-view"></a>結構描述檢視  
  結構描述檢視提供元素、屬性、類型等等可組成 XML 結構描述和 ADO.NET 資料集的視覺表示法。  
   
  在結構描述檢視中，您可以從工具箱的 XML 結構描述索引標籤，或從伺服器總管，在設計介面上卸除元素，以建構結構描述和資料集。 此外，您可以用滑鼠右鍵按一下設計介面，或者從快速鍵功能表中選取 [加入]，以將元素加入設計師中。  
@@ -58,7 +62,7 @@ caps.handback.revision: 27
 > [!NOTE]  
 >  結構描述檢視中的元素配置儲存在 .xsx 檔案中，只要按一下方案總管工具列的 **[顯示所有檔案]** ，然後展開 .xsd 檔案就能看到。 如果沒有 .xsx 檔案，則表示從未於 XML 設計工具中開啟 .xsd 檔案。  
   
-### 自訂結構描述檢視  
+### <a name="customizing-schema-view"></a>自訂結構描述檢視  
  下列功能可以在結構描述檢視中修改元素的視覺化配置：  
   
 -   顯示比例  
@@ -69,15 +73,15 @@ caps.handback.revision: 27
   
 -   重新設定摺疊元素的預設狀態  
   
-##### 若要展開隱藏的巢狀元素  
+##### <a name="to-expand-hidden-nested-elements"></a>若要展開隱藏的巢狀元素  
   
 -   按一下元素底部的加號圖示。  
   
-##### 若要摺疊巢狀元素  
+##### <a name="to-collapse-nested-elements"></a>若要摺疊巢狀元素  
   
 -   在您要顯示於設計師的最底部元素上，按一下減號圖示。  
   
-## 資料檢視  
+## <a name="data-view"></a>資料檢視  
  資料檢視提供資料方格，可以用來修改 .xml 檔案。 只有 XML 檔案中的內容 (但不包含標記和結構) 可以在資料檢視中編輯。  
   
  資料檢視中有兩個不同的區域： **[資料表]** 與 **[資料]**。 [資料表] 區域是 XML 檔案中定義的關聯清單，以巢狀結構為順序 (從最外層到最內層)。 **[資料]** 區域是資料方格，會根據資料表區域的選擇顯示資料。  
@@ -93,16 +97,17 @@ caps.handback.revision: 27
   
 -   自 XML 文件產生 XML 結構描述  
   
-## XML 檢視  
- XML 檢視提供編輯器來編輯原始 XML，並提供 IntelliSense 和色彩編碼。 在處理具有相關聯之結構描述的 .xsd 檔案與 .xml 檔案時，可以使用陳述式完成。 鍵入 \< 以起始標記，就會出現於該位置可用的元素清單。 鍵入元素名稱並按下空格鍵之後，將會出現該元素所支援的屬性清單。  
+## <a name="xml-view"></a>XML 檢視  
+ XML 檢視提供編輯器來編輯原始 XML，並提供 IntelliSense 和色彩編碼。 在處理具有相關聯之結構描述的 .xsd 檔案與 .xml 檔案時，可以使用陳述式完成。 鍵入 < 以起始標記，就會出現於該位置可用的元素清單。 鍵入元素名稱並按下空格鍵之後，將會出現該元素所支援的屬性清單。  
   
 > [!NOTE]  
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense 選項。 在 XML 編輯器中，若要存取選項，請在 **[編輯]** 功能表上，按一下 **[IntelliSense]**。  
   
-## SHOWPLAN 檢視  
+## <a name="showplan-view"></a>SHOWPLAN 檢視  
  查詢計畫使用 SET SHOWPLAN_XML ON 選項建立時，就可以將查詢計畫以 XML 格式儲存。 在副檔名為 .showplan 的檔案上按兩下，即可開啟查詢計畫。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [以 XML 格式儲存執行計畫](../../relational-databases/performance/save-an-execution-plan-in-xml-format.md)  
   
   
+

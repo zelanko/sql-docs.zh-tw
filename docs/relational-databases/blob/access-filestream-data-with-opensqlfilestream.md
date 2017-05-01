@@ -1,39 +1,43 @@
 ---
 title: "使用 OpenSqlFilestream 存取 FILESTREAM 資料 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "OpenSqlFilestream"
-apilocation: 
-  - "sqlncli11.dll"
-apitype: "DLLExport"
-helpviewer_keywords: 
-  - "OpenSqlFilestream"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- OpenSqlFilestream
+apilocation:
+- sqlncli11.dll
+apitype: DLLExport
+helpviewer_keywords:
+- OpenSqlFilestream
 ms.assetid: d8205653-93dd-4599-8cdf-f9199074025f
 caps.latest.revision: 47
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 47
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6ce631c94bbc15ab1df2450a089c773a960b1401
+ms.lasthandoff: 04/11/2017
+
 ---
-# 使用 OpenSqlFilestream 存取 FILESTREAM 資料
-  OpenSqlFilestream API 會為儲存在檔案系統中的 FILESTREAM 二進位大型物件 (BLOB)，取得與 Win32 相容的檔案控制代碼。 此控制代碼可傳遞給下列任何 Win32 API：[ReadFile](http://go.microsoft.com/fwlink/?LinkId=86422)、[WriteFile](http://go.microsoft.com/fwlink/?LinkId=86423)、[TransmitFile](http://go.microsoft.com/fwlink/?LinkId=86424)、[SetFilePointer](http://go.microsoft.com/fwlink/?LinkId=86425)、[SetEndOfFile](http://go.microsoft.com/fwlink/?LinkId=86426) 或 [FlushFileBuffers](http://go.microsoft.com/fwlink/?LinkId=86427)。 如果您將此控制代碼傳遞給其他任何 Win32 API，將會傳回錯誤 ERROR_ACCESS_DENIED。 在認可或回復交易之前，必須將此控制代碼傳遞給 Win32 的 [CloseHandle API](http://go.microsoft.com/fwlink/?LinkId=86428) 來關閉此控制代碼。 如果無法關閉此控制代碼，將會導致伺服器端資源洩露。  
+# <a name="access-filestream-data-with-opensqlfilestream"></a>使用 OpenSqlFilestream 存取 FILESTREAM 資料
+  OpenSqlFilestream API 會為儲存在檔案系統中的 FILESTREAM 二進位大型物件 (BLOB)，取得與 Win32 相容的檔案控制代碼。 此控制代碼可傳遞給下列任何 Win32 API： [ReadFile](http://go.microsoft.com/fwlink/?LinkId=86422)、 [WriteFile](http://go.microsoft.com/fwlink/?LinkId=86423)、 [TransmitFile](http://go.microsoft.com/fwlink/?LinkId=86424)、 [SetFilePointer](http://go.microsoft.com/fwlink/?LinkId=86425)、 [SetEndOfFile](http://go.microsoft.com/fwlink/?LinkId=86426)或 [FlushFileBuffers](http://go.microsoft.com/fwlink/?LinkId=86427)。 如果您將此控制代碼傳遞給其他任何 Win32 API，將會傳回錯誤 ERROR_ACCESS_DENIED。 在認可或回復交易之前，必須將此控制代碼傳遞給 Win32 的 [CloseHandle API](http://go.microsoft.com/fwlink/?LinkId=86428) 來關閉此控制代碼。 如果無法關閉此控制代碼，將會導致伺服器端資源洩露。  
   
  您必須在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 交易中執行所有的 FILESTREAM 資料容器存取。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式也可在同一交易中執行。 以維護 SQL 資料與 FILESTREAM 資料之間的一致性。  
   
- 若要使用 Win32 存取 FILESTREAM BLOB，必須啟用 [Windows 授權](../../relational-databases/security/choose-an-authentication-mode.md)。  
+ 若要使用 Win32 存取 FILESTREAM BLOB，必須啟用 [Windows 授權](../../relational-databases/security/choose-an-authentication-mode.md) 。  
   
 > [!IMPORTANT]  
 >  當檔案已針對寫入存取開啟時，FILESTREAM 代理程式就會擁有此交易。 在釋放交易之前，僅允許 Win32 檔案 I/O。 若要釋放該異動，您必須關閉寫入控制代碼。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -46,9 +50,9 @@ HANDLE OpenSqlFilestream (
     PLARGE_INTEGER AllocationSize);  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  *FilestreamPath*  
- [in] 這是 [PathName](../../relational-databases/system-functions/pathname-transact-sql.md) 函式傳回的 **nvarchar(max)** 路徑。 PathName 必須從具有 FILESTREAM 資料表與資料行之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SELECT 或 UPDATE 權限的帳戶內容中呼叫。  
+ [in] 這是 **PathName** 函式傳回的 [nvarchar(max)](../../relational-databases/system-functions/pathname-transact-sql.md) 路徑。 PathName 必須從具有 FILESTREAM 資料表與資料行之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SELECT 或 UPDATE 權限的帳戶內容中呼叫。  
   
  *DesiredAccess*  
  [in] 設定用來存取 FILESTREAM BLOB 資料的模式。 此值會傳遞給 [DeviceIoControl 函式](http://go.microsoft.com/fwlink/?LinkId=105527)。  
@@ -83,22 +87,22 @@ HANDLE OpenSqlFilestream (
  *AllocationSize*  
  [in] 指定資料檔的初始配置大小 (以位元組為單位)。 在讀取模式下將會被忽略。 這個參數可以是 NULL，此時會使用預設檔案系統行為。  
   
-## 傳回值  
+## <a name="return-value"></a>傳回值  
  如果此函數成功，傳回值就是指定之檔案的開啟控制代碼。 如果此函數失敗，傳回值就是 INVALID_HANDLE_VALUE。 如需更多的錯誤資訊，可呼叫 GetLastError()。  
   
-## 範例  
+## <a name="examples"></a>範例  
  下列範例將示範如何使用 `OpenSqlFilestream` API 來取得 Win32 控制代碼。  
   
- [!code-csharp[FILESTREAM#FS_CS_ReadAndWriteBLOB](../../relational-databases/blob/codesnippet/csharp/access-filestream-data-w_0_1.cs)]  
+ [!code-cs[FILESTREAM#FS_CS_ReadAndWriteBlob](../../relational-databases/blob/codesnippet/csharp/access-filestream-data-w_0_1.cs)]  
   
- [!code-vb[FILESTREAM#FS_VB_ReadAndWriteBLOB](../../relational-databases/blob/codesnippet/visualbasic/access-filestream-data-w_0_2.vb)]  
+ [!code-vb[FILESTREAM#FS_VB_ReadAndWriteBlob](../../relational-databases/blob/codesnippet/visualbasic/access-filestream-data-w_0_2.vb)]  
   
- [!code-cpp[FILESTREAM#FS_CPP_WriteBLOB](../../relational-databases/blob/codesnippet/cpp/access-filestream-data-w_0_3.cpp)]  
+ [!code-cpp[FILESTREAM#FS_CPP_WriteBlob](../../relational-databases/blob/codesnippet/cpp/access-filestream-data-w_0_3.cpp)]  
   
-## 備註  
- 必須安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client，才能使用此 API。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 會隨 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用戶端工具一起安裝。 如需詳細資訊，請參閱[安裝 SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)。  
+## <a name="remarks"></a>備註  
+ 必須安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client，才能使用此 API。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 會隨 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用戶端工具一起安裝。 如需詳細資訊，請參閱 [安裝 SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [二進位大型物件 &#40;Blob&#41; 資料 &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)   
  [對 FILESTREAM 資料進行部分更新](../../relational-databases/blob/make-partial-updates-to-filestream-data.md)   
  [避免與 FILESTREAM 應用程式中的資料庫作業相衝突](../../relational-databases/blob/avoid-conflicts-with-database-operations-in-filestream-applications.md)  

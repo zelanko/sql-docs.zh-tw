@@ -1,32 +1,36 @@
 ---
-title: "使用 INCLUDE_NULL_VALUES 選項在 JSON 輸出中包含 Null 值 (SQL Server) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "06/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-json"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "INCLUDE_NULL_VALUES (FOR JSON)"
+title: "在 JSON 中包含 Null 值 - INCLUDE_NULL_VALUES 選項 | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 06/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-json
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- INCLUDE_NULL_VALUES (FOR JSON)
 ms.assetid: 06873768-3778-4ed8-a1db-61758726bda0
 caps.latest.revision: 14
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 04389191586bf45a45a1771781858ec31e6f988a
+ms.lasthandoff: 04/11/2017
+
 ---
-# 使用 INCLUDE_NULL_VALUES 選項在 JSON 輸出中包含 Null 值 (SQL Server)
+# <a name="include-null-values-in-json---includenullvalues-option"></a>在 JSON 中包含 Null 值 - INCLUDE_NULL_VALUES 選項
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   若要在 **FOR JSON** 子句的 JSON 輸出中包含 Null 值，請指定 **INCLUDE_NULL_VALUES** 選項。  
   
  如果不指定 **INCLUDE_NULL_VALUES** 選項，JSON 輸出就不會包含查詢結果中的 Null 值屬性。  
   
-## 範例  
+## <a name="examples"></a>範例  
  下列範例顯示使用或不使用 **INCLUDE_NULL_VALUES** 選項的 **FOR JSON** 子句輸出。  
   
 |不使用 **INCLUDE_NULL_VALUES** 選項|使用 **INCLUDE_NULL_VALUES** 選項|  
@@ -40,19 +44,23 @@ caps.handback.revision: 13
 ```tsql  
 SELECT name, surname  
 FROM emp  
-FOR JSON AUTO, INCLUDE_NULL_VALUES  
+FOR JSON AUTO, INCLUDE_NULL_VALUES    
 ```  
   
  **結果**  
   
 ```json  
-[   
-   {"name": "John",  "surname": null },  
-   {"name": "Jane",  "surname": "Doe"}  
-]  
+[{
+    "name": "John",
+    "surname": null
+}, {
+    "name": "Jane",
+    "surname": "Doe"
+}] 
 ```  
   
-## 另請參閱  
- [FOR 子句 &#40;Transact-SQL&#41;](../Topic/FOR%20Clause%20\(Transact-SQL\).md)  
+## <a name="see-also"></a>另請參閱  
+ [FOR 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-for-clause-transact-sql.md)  
   
   
+

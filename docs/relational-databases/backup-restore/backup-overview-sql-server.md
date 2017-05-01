@@ -1,38 +1,42 @@
 ---
-title: "Backup Overview (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/15/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "資料表 [SQL Server]，備份資料"
-  - "備份 [SQL Server]"
-  - "資料庫備份 [SQL Server]"
-  - "備份類型 [SQL Server]"
-  - "資料備份 [SQL Server]"
-  - "備份資料表 [SQL Server]"
-  - "資料庫還原 [SQL Server]，備份"
-  - "備份 [SQL Server]，關於備份"
-  - "還原 [SQL Server]，備份類型"
-  - "備份 [SQL Server]，關於"
-  - "backups [SQL Server], table-level backups unsupported"
+title: "備份概觀 (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 07/15/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- tables [SQL Server], backing up data
+- backups [SQL Server]
+- database backups [SQL Server]
+- backup types [SQL Server]
+- data backups [SQL Server]
+- backing up tables [SQL Server]
+- database restores [SQL Server], backups
+- backing up [SQL Server], about backing up
+- restoring [SQL Server], backup types
+- backups [SQL Server], about
+- backups [SQL Server], table-level backups unsupported
 ms.assetid: 09a6e0c2-d8fd-453f-9aac-4ff24a97dc1f
 caps.latest.revision: 84
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 84
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 6839d0474f1062f5dc0e247e9bb1fdbbf492c9c9
+ms.lasthandoff: 04/11/2017
+
 ---
-# Backup Overview (SQL Server)
+# <a name="backup-overview-sql-server"></a>Backup Overview (SQL Server)
   本主題介紹 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份元件。 備份 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫對於保護資料非常重要。 此討論涵蓋備份類型和備份限制。 本主題同時介紹 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份裝置和備份媒體。  
   
   
-## 詞彙
+## <a name="terms"></a>詞彙
  
  **備份 (back up) [動詞]**  
  將資料或記錄檔記錄從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫或其交易記錄複製至備份裝置 (例如磁碟)，以建立資料備份或記錄備份。  
@@ -44,9 +48,9 @@ caps.handback.revision: 84
  控制資料庫上交易記錄維護的資料庫屬性。 復原模式共有三種：簡單、完整和大量記錄。 資料庫的復原模式決定其備份和還原需求。  
   
  **[還原](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)**  
- 一個多階段的程序，它會將指定之[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份中的所有資料和記錄頁面複製到指定的資料庫中，然後藉由套用所記錄的變更取得前面時段的資料，向前復原備份中記錄的所有交易。  
+ 一個多階段的程序，它會將指定之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份中的所有資料和記錄頁面複製到指定的資料庫中，然後藉由套用所記錄的變更取得前面時段的資料，向前復原備份中記錄的所有交易。  
   
- ## 備份類型  
+ ## <a name="types-of-backups"></a>備份類型  
   
  **[僅複製備份](../../relational-databases/backup-restore/copy-only-backups-sql-server.md)**  
  不受 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 一般備份順序影響的特殊用途備份。  
@@ -74,10 +78,10 @@ caps.handback.revision: 84
  **[部分備份](../../relational-databases/backup-restore/partial-backups-sql-server.md)**  
  僅包含資料庫中某些檔案群組中的資料，包括主要檔案群組、每個讀取/寫入檔案群組，以及任何選擇性指定之唯讀檔案中的資料。  
   
-## 備份媒體詞彙和定義  
+## <a name="backup-media-terms-and-definitions"></a>備份媒體詞彙和定義  
   
  **[備份裝置](../../relational-databases/backup-restore/backup-devices-sql-server.md)**  
- 寫入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份並從中進行還原的磁碟或磁帶裝置。 SQL Server 備份也可以寫入 Microsoft Azure Blob 儲存體服務，而且會使用 **URL** 格式來指定備份檔案的目的地和名稱。 如需詳細資訊，請參閱[使用 Microsoft Azure Blob 儲存體服務進行 SQL Server 備份及還原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
+ 寫入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份並從中進行還原的磁碟或磁帶裝置。 SQL Server 備份也可以寫入 Microsoft Azure Blob 儲存體服務，而且會使用 **URL** 格式來指定備份檔案的目的地和名稱。 如需詳細資訊，請參閱 [使用 Microsoft Azure Blob 儲存體服務進行 SQL Server 備份及還原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
   
  **[備份媒體](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)**  
  已寫入一個或多個備份的一個或多個磁帶或磁碟檔案。  
@@ -100,7 +104,7 @@ caps.handback.revision: 84
 ##  <a name="Restrictions"></a>  備份作業限制 
  可在資料庫仍在線上運作以及正在使用中的時候進行備份。 不過，會有下列限制：  
   
-### 無法備份離線資料  
+### <a name="cannot-back-up-offline-data"></a>無法備份離線資料  
  隱含或明確參考離線資料的任何備份作業都會失敗。 一些典型的例子如下：  
   
 -   要求進行完整資料庫備份，但資料庫的一個檔案群組為離線狀態。 因為所有檔案群組是明確納入在完整資料庫備份中，所以此作業會失敗。  
@@ -113,7 +117,7 @@ caps.handback.revision: 84
   
  一般而言，即使有一個或多個資料檔案無法使用，記錄備份都會成功。 不過，如果在大量記錄復原模式下變更任何包含大量記錄的檔案，則必須所有檔案都在線上，才能讓備份成功。  
   
-### 並行限制   
+### <a name="concurrency-restrictions"></a>並行限制   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 利用線上備份處理序，使您能夠在資料庫處於使用狀態時備份資料庫。 在備份期間，您可以執行大部分的作業；例如，在備份作業期間，您可以執行 INSERT、UPDATE 或 DELETE 陳述式。 不過，如果試圖在建立或刪除資料庫檔案過程中啟動備份作業，則備份作業會等候到建立或刪除作業完成，或備份逾時為止。  
   
  資料庫備份或交易記錄備份期間所無法執行的作業包括：  
@@ -147,7 +151,7 @@ caps.handback.revision: 84
   
 -   [從裝置還原備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-backup-from-a-device-sql-server.md)  
   
--   [教學課程：SQL Server 備份及還原至 Windows Azure Blob 儲存體服務](../Topic/Tutorial:%20SQL%20Server%20Backup%20and%20Restore%20to%20Windows%20Azure%20Blob%20Storage%20Service.md)  
+-   [教學課程：SQL Server 備份及還原至 Windows Azure Blob 儲存體服務](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
  **建立備份**  
   
@@ -166,13 +170,13 @@ caps.handback.revision: 84
   
 -   [在備份或還原期間啟用或停用備份總和檢查碼 &#40;SQL Server&#41;](../../relational-databases/backup-restore/enable-or-disable-backup-checksums-during-backup-or-restore-sql-server.md)  
   
--   [指定在發生錯誤後備份或還原作業應該繼續還是停止 &#40;SQL Server&#41;](../../relational-databases/backup-restore/specify if backup or restore continues or stops after error.md)  
+-   [指定在發生錯誤後備份或還原作業應該繼續還是停止 &#40;SQL Server&#41;](../../relational-databases/backup-restore/specify-if-backup-or-restore-continues-or-stops-after-error.md)  
   
 -   [使用資源管理員進行備份壓縮，以限制 CPU 使用率 &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)  
   
--   [教學課程：SQL Server 備份及還原至 Windows Azure Blob 儲存體服務](../Topic/Tutorial:%20SQL%20Server%20Backup%20and%20Restore%20to%20Windows%20Azure%20Blob%20Storage%20Service.md)  
+-   [教學課程：SQL Server 備份及還原至 Windows Azure Blob 儲存體服務](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
-## 更多！ 
+## <a name="and-more"></a>更多！ 
  [SQL Server 資料庫的備份與還原](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [還原和復原概觀 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)   
  [維護計畫](../../relational-databases/maintenance-plans/maintenance-plans.md)   
@@ -180,3 +184,4 @@ caps.handback.revision: 84
  [復原模式 &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)  
   
   
+

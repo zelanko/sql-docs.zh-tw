@@ -1,33 +1,37 @@
 ---
-title: "Tutorial: Ownership Chains and Context Switching | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
-helpviewer_keywords: 
-  - "context switching [SQL Server], tutorials"
-  - "ownership chains [SQL Server]"
+title: "教學課程：擁有權鏈結和內容切換 | Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
+helpviewer_keywords:
+- context switching [SQL Server], tutorials
+- ownership chains [SQL Server]
 ms.assetid: db5d4cc3-5fc5-4cf5-afc1-8d4edc1d512b
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 858ca3c26c6d5297de86e5b0710a3b464ed4ce18
+ms.lasthandoff: 04/11/2017
+
 ---
-# Tutorial: Ownership Chains and Context Switching
+# <a name="tutorial-ownership-chains-and-context-switching"></a>Tutorial: Ownership Chains and Context Switching
 這個教學課程利用案例來說明涉及擁有權鏈結和使用者內容切換的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 安全性概念。  
   
 > [!NOTE]  
-> 若要執行本教學課程中的程式碼，您必須設定使用混合模式安全性，並已安裝 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 資料庫。 如需混合模式安全性的詳細資訊，請參閱[選擇驗證模式](../relational-databases/security/choose-an-authentication-mode.md)。  
+> 若要執行本教學課程中的程式碼，您必須設定使用混合模式安全性，並已安裝 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 資料庫。 如需混合模式安全性的詳細資訊，請參閱 [選擇驗證模式](../relational-databases/security/choose-an-authentication-mode.md)。  
   
-## 狀況  
+## <a name="scenario"></a>狀況  
 在此狀況中，有兩位使用者需要使用其帳戶來存取 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 資料庫內儲存的採購訂單資料。 需求如下：  
   
 -   第一個帳戶 (TestManagerUser) 必須能夠看見每筆訂單的所有詳細資料。  
@@ -48,7 +52,7 @@ caps.handback.revision: 16
   
 此範例會在每個程式碼區塊中各行附上說明。 若要複製整個範例，請參閱本教學課程結尾處的＜ [完整範例](#CompleteExample) ＞一節。  
   
-## 1.設定環境  
+## <a name="1-configure-the-environment"></a>1.設定環境  
 使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 與下列程式碼開啟 `AdventureWorks2012` 資料庫，然後使用 `CURRENT_USER` [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式檢查 dbo 使用者是否顯示為內容。  
   
 ```  
@@ -98,7 +102,7 @@ GO
   
 如需 GRANT 陳述式的詳細資訊，請參閱 [GRANT &#40;Transact-SQL&#41;](../t-sql/statements/grant-transact-sql.md)。 如需預存程序的詳細資訊，請參閱[預存程序 &#40;Database Engine&#41;](../relational-databases/stored-procedures/stored-procedures-database-engine.md)。 如需所有 [!INCLUDE[ssDE](../includes/ssde-md.md)] 權限的海報，請參閱 [http://go.microsoft.com/fwlink/?LinkId=229142](http://go.microsoft.com/fwlink/?LinkId=229142)。  
   
-## 2.建立預存程序來存取資料  
+## <a name="2-create-a-stored-procedure-to-access-data"></a>2.建立預存程序來存取資料  
 若要在資料庫內切換內容，請使用 EXECUTE AS 陳述式。 EXECUTE AS 則需要 IMPERSONATE 權限。  
   
 下列程式碼使用 `EXECUTE AS` 陳述式將內容變更為 `TestManagerUser` ，並建立預存程序單僅顯示 `TestEmployeeUser`所需的資料。 為了滿足需求，預存程序接受訂單號碼做為變數且並未顯示財務資訊，而 WHERE 子句則將結果限制在已部分送達的貨品。  
@@ -125,7 +129,7 @@ END
 GO  
 ```  
   
-目前 `TestEmployeeUser` 尚無權存取任何資料庫物件。 下列程式碼 (內容仍是 `TestManagerUser`) 將授與該使用者帳戶透過預存程序查詢基底資料表資訊的能力。  
+目前 `TestEmployeeUser` 尚無權存取任何資料庫物件。 下列程式碼 (內容仍是 `TestManagerUser` ) 將授與該使用者帳戶透過預存程序查詢基底資料表資訊的能力。  
   
 ```  
 GRANT EXECUTE  
@@ -156,7 +160,7 @@ GO
   
 如需 REVERT 陳述式的詳細資訊，請參閱 [REVERT &#40;Transact-SQL&#41;](../t-sql/statements/revert-transact-sql.md)。  
   
-## 3.透過預存程序存取資料  
+## <a name="3-access-data-through-the-stored-procedure"></a>3.透過預存程序存取資料  
 `TestEmployeeUser` 除了在 public 資料庫角色中具備登入身分及受指派的權限外，對 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 資料庫物件毫無任何權限。 下列程式碼將因 `TestEmployeeUser` 試圖存取基底資料表而傳回錯誤。  
   
 ```  
@@ -180,7 +184,7 @@ EXEC Purchasing.usp_ShowWaitingItems 952
 GO  
 ```  
   
-## 4.重設環境  
+## <a name="4-reset-the-environment"></a>4.重設環境  
 下列程式碼使用 `REVERT` 命令，將目前帳戶的內容切換回 `dbo`然後重設環境。  
   
 ```  
@@ -322,8 +326,9 @@ DROP LOGIN TestManagerUser;
 GO  
 ```  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
 [SQL Server Database Engine 和 Azure SQL Database 的資訊安全中心](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   
   
+

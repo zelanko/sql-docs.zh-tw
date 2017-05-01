@@ -1,25 +1,29 @@
 ---
 title: "SQL Server Agent、JobSteps 物件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "JobSteps 物件"
-  - "SQLAgent:JobSteps"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- JobSteps object
+- SQLAgent:JobSteps
 ms.assetid: 44f9983c-1753-4fe0-8475-973aa2460b3a
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 61884b4353e065c60f9489eca33a8979cf7d782f
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server Agent、JobSteps 物件
+# <a name="sql-server-agent-jobsteps-object"></a>SQL Server Agent、JobSteps 物件
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 的 **JobSteps** 效能物件包含可報告 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業步驟相關資訊的效能計數器。 下表列出這個物件包含的計數器。  
   
  下表包含 **SQLAgent:JobSteps** 計數器。  
@@ -46,11 +50,11 @@ caps.handback.revision: 23
 |**PowerShell**|使用 **PowerShell** 子系統之作業步驟的資訊。|  
 |**QueueReader**|使用 **QueueReader** 子系統之作業步驟的資訊。|  
 |**快照式**|使用 **Snapshot** 子系統之作業步驟的資訊。|  
-|**TSQL**|執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 之作業步驟的資訊。|  
+|**TSQL**|執行 [!INCLUDE[tsql](../../includes/tsql-md.md)]之作業步驟的資訊。|  
   
-## 另請參閱  
- [管理作業步驟](../../ssms/agent/manage-job-steps.md)   
- [使用效能物件](../../ssms/agent/use-performance-objects.md)   
+## <a name="see-also"></a>另請參閱  
+ [管理作業步驟](http://msdn.microsoft.com/library/51352afc-a0a4-428b-8985-f9e58bb57c31)   
+ [使用效能物件](http://msdn.microsoft.com/library/830b843a-6b2a-4620-a51b-98358e9fc54b)   
  [監視資源使用狀況 &#40;系統監視器&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

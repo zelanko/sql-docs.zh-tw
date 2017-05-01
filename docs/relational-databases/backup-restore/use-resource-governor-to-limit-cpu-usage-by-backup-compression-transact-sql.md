@@ -1,31 +1,35 @@
 ---
-title: "使用資源管理員進行備份壓縮，以限制 CPU 使用率 (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "備份壓縮 [SQL Server], 資源管理員"
-  - "備份壓縮 [SQL Server], CPU 使用量"
-  - "壓縮 [SQL Server], 備份壓縮"
-  - "備份 [SQL Server], 壓縮"
-  - "資源管理員, 備份壓縮"
+title: "使用資源管理員進行備份壓縮，以限制 CPU 使用率 (Transact-SQL) | Microsoft 文件"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- backup compression [SQL Server], Resource Governor
+- backup compression [SQL Server], CPU usage
+- compression [SQL Server], backup compression
+- backups [SQL Server], compression
+- Resource Governor, backup compression
 ms.assetid: 01796551-578d-4425-9b9e-d87210f7ba72
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c981e6d71307a314f39a44e8fc180f77426f1477
+ms.lasthandoff: 04/11/2017
+
 ---
-# 使用資源管理員進行備份壓縮，以限制 CPU 使用率 (Transact-SQL)
+# <a name="use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql"></a>使用資源管理員進行備份壓縮，以限制 CPU 使用率 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  根據預設，使用壓縮來備份會大幅增加 CPU 使用量，而且壓縮程序所耗用的額外 CPU 可能會對並行作業造成不良的影響。 因此，如果發生 CPU 爭用的情況，您可能會想要在[資源管理員](../../relational-databases/resource-governor/resource-governor.md)限制 CPU 使用量的工作階段中，建立低優先權的壓縮備份。 這個主題所展示的狀況會將特定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用者的工作階段對應至在這類情況中限制 CPU 使用量的資源管理員工作負載群組，藉以分類這些工作階段。  
+  根據預設，使用壓縮來備份會大幅增加 CPU 使用量，而且壓縮程序所耗用的額外 CPU 可能會對並行作業造成不良的影響。 因此，如果發生 CPU 爭用的情況，您可能會想要在[資源管理員](../../relational-databases/resource-governor/resource-governor.md) 限制 CPU 使用量的工作階段中，建立低優先權的壓縮備份。 這個主題所展示的狀況會將特定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用者的工作階段對應至在這類情況中限制 CPU 使用量的資源管理員工作負載群組，藉以分類這些工作階段。  
   
 > [!IMPORTANT]  
 >  在給定的資源管理員狀況中，工作階段分類可能會以使用者名稱、應用程式名稱，或可區分連接的其他任何項目為基礎。 如需相關資訊，請參閱 [Resource Governor Classifier Function](../../relational-databases/resource-governor/resource-governor-classifier-function.md) 以及 [Resource Governor Workload Group](../../relational-databases/resource-governor/resource-governor-workload-group.md)。  
@@ -45,7 +49,7 @@ caps.handback.revision: 25
   
  下列程序描述的是針對此目的設定登入和使用者的步驟，後面接著 [!INCLUDE[tsql](../../includes/tsql-md.md)] 範例：「範例 A：設定登入和使用者 (Transact-SQL)」。  
   
-### 設定登入和資料庫使用者以便分類工作階段  
+### <a name="to-set-up-a-login-and-database-user-for-classifying-sessions"></a>設定登入和資料庫使用者以便分類工作階段  
   
 1.  針對建立低優先權壓縮備份，建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。  
   
@@ -77,7 +81,7 @@ caps.handback.revision: 25
   
      如需詳細資訊，請參閱 [GRANT 資料庫主體權限 &#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-principal-permissions-transact-sql.md)。  
   
-### 範例 A：設定登入和使用者 (Transact-SQL)  
+### <a name="example-a-setting-up-a-login-and-user-transact-sql"></a>範例 A：設定登入和使用者 (Transact-SQL)  
  只有當您選擇針對低優先權備份建立新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入和使用者時，下列範例才會相關。 或者，您也可以使用現有的登入和使用者 (如果適當項目存在的話)。  
   
 > [!IMPORTANT]  
@@ -104,7 +108,7 @@ GO
 ##  <a name="configure_RG"></a> 設定資源管理員來限制 CPU 使用量  
   
 > [!NOTE]  
->  請確定資源管理員已啟用。 如需詳細資訊，請參閱[啟用資源管理員](../../relational-databases/resource-governor/enable-resource-governor.md)。  
+>  請確定資源管理員已啟用。 如需詳細資訊，請參閱 [啟用資源管理員](../../relational-databases/resource-governor/enable-resource-governor.md)。  
   
  在這個資源管理員狀況中，組態設定包含下列基本步驟：  
   
@@ -112,14 +116,14 @@ GO
   
 2.  建立和設定使用這個集區的資源管理員工作負載群組。  
   
-3.  建立「分類函數」(Classifier Function)，它是使用者定義的函數 (UDF)，而且資源管理員會使用其傳回值來分類工作階段，以便將它們路由傳送至適當的工作負載群組。  
+3.  建立 *「分類函數」*(Classifier Function)，它是使用者定義的函數 (UDF)，而且資源管理員會使用其傳回值來分類工作階段，以便將它們路由傳送至適當的工作負載群組。  
   
 4.  向資源管理員註冊此分類函數。  
   
 5.  將這些變更套用至資源管理員的記憶體中組態。  
   
 > [!NOTE]  
->  如需有關資源管理員資源集區、工作負載群組和分類的相關資訊，請參閱[資源管理員](../../relational-databases/resource-governor/resource-governor.md)。  
+>  如需有關資源管理員資源集區、工作負載群組和分類的相關資訊，請參閱 [資源管理員](../../relational-databases/resource-governor/resource-governor.md)。  
   
  這些步驟的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式將在「設定資源管理員來限制 CPU 使用量」程序中說明，而且後面接著該程序的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 範例。  
   
@@ -131,7 +135,7 @@ GO
   
 -   [建立工作負載群組](../../relational-databases/resource-governor/create-a-workload-group.md)  
   
-### 設定資源管理員來限制 CPU 使用量 (Transact-SQL)  
+### <a name="to-configure-resource-governor-for-limiting-cpu-usage-transact-sql"></a>設定資源管理員來限制 CPU 使用量 (Transact-SQL)  
   
 1.  發出 [CREATE RESOURCE POOL](../../t-sql/statements/create-resource-pool-transact-sql.md) 陳述式來建立資源集區。 這個程序的範例會使用下列語法：  
   
@@ -170,7 +174,7 @@ GO
     -   [SUSER_SNAME &#40;Transact-SQL&#41;](../../t-sql/functions/suser-sname-transact-sql.md)  
   
         > [!IMPORTANT]  
-        >  SUSER_NAME 只是可用於分類函數的其中一個系統函數。 如需詳細資訊，請參閱[建立和測試分類使用者定義函數](../../relational-databases/resource-governor/create-and-test-a-classifier-user-defined-function.md)。  
+        >  SUSER_NAME 只是可用於分類函數的其中一個系統函數。 如需詳細資訊，請參閱 [建立和測試分類使用者定義函數](../../relational-databases/resource-governor/create-and-test-a-classifier-user-defined-function.md)。  
   
     -   [SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md)。  
   
@@ -184,7 +188,7 @@ GO
     ALTER RESOURCE GOVERNOR RECONFIGURE;  
     ```  
   
-### 範例 B：設定資源管理員 (Transact-SQL)  
+### <a name="example-b-configuring-resource-governor-transact-sql"></a>範例 B：設定資源管理員 (Transact-SQL)  
  下列範例會在單一交易中執行下列步驟：  
   
 1.  建立 `pMAX_CPU_PERCENT_20` 資源集區。  
@@ -257,12 +261,12 @@ GO
 > [!NOTE]  
 >  如需此 SELECT 陳述式呼叫的動態管理檢視相關資訊，請參閱 [sys.dm_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md) 和 [sys.dm_resource_governor_workload_groups &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md)。  
   
- [&#91;回到頁首&#93;](#Top)  
+ [&#91;頁首&#93;](#Top)  
   
 ##  <a name="creating_compressed_backup"></a> 使用含有限制 CPU 的工作階段來壓縮備份  
  若要在含有限制最大 CPU 的工作階段中建立壓縮備份，請以您在分類函數中指定之使用者的身分登入。 在備份命令中，指定 WITH COMPRESSION ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 或選取 [壓縮備份] ([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)])。 若要建立壓縮的資料庫備份，請參閱[建立完整資料庫備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)。  
   
-### 範例 C：建立壓縮備份 (Transact-SQL)  
+### <a name="example-c-creating-a-compressed-backup-transact-sql"></a>範例 C：建立壓縮備份 (Transact-SQL)  
  下列 [BACKUP](../../t-sql/statements/backup-transact-sql.md) 範例會在最近格式化的備份檔案 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 中建立 `Z:\SQLServerBackups\AdvWorksData.bak`資料庫的完整壓縮備份。  
   
 ```tsql  
@@ -278,7 +282,7 @@ GO
   
  [&#91;回到頁首&#93;](#Top)  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [建立和測試分類使用者定義函數](../../relational-databases/resource-governor/create-and-test-a-classifier-user-defined-function.md)   
  [資源管理員](../../relational-databases/resource-governor/resource-governor.md)  
   

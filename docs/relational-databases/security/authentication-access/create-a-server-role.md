@@ -1,28 +1,32 @@
 ---
 title: "建立伺服器角色 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "SQL13.SWB.SERVERROLE.GENERAL.F1"
-  - "sql13.swb.serverrole.memberships.f1"
-  - "sql13.swb.serverrole.members.f1"
-helpviewer_keywords: 
-  - "SERVER ROLE, 建立"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- SQL13.SWB.SERVERROLE.GENERAL.F1
+- sql13.swb.serverrole.memberships.f1
+- sql13.swb.serverrole.members.f1
+helpviewer_keywords:
+- SERVER ROLE, creating
 ms.assetid: 74f19992-8082-4ed7-92a1-04fe676ee82d
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: be798eb132d37378b94659eda0efc1b586e7110a
+ms.lasthandoff: 04/11/2017
+
 ---
-# 建立伺服器角色
+# <a name="create-a-server-role"></a>建立伺服器角色
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中建立新的伺服器角色。  
   
  **本主題內容**  
@@ -50,7 +54,7 @@ caps.handback.revision: 13
   
 -   需要 CREATE SERVER ROLE 權限或系統管理員 (sysadmin) 固定伺服器角色中的成員資格。  
   
--   此外，也需要登入之 *server_principal* 的 IMPERSONATE、作為 *server_principal* 之伺服器角色的 ALTER 權限，或作為 server_principal 之 Windows 群組中的成員資格。  
+-   此外，也需要登入之 *server_principal* 的 IMPERSONATE、作為 *server_principal*之伺服器角色的 ALTER 權限，或作為 server_principal 之 Windows 群組中的成員資格。  
   
 -   當您使用 AUTHORIZATION 選項指派伺服器角色擁有權時，也必須具備下列權限：  
   
@@ -60,7 +64,7 @@ caps.handback.revision: 13
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 若要建立新的伺服器角色  
+#### <a name="to-create-a-new-server-role"></a>若要建立新的伺服器角色  
   
 1.  在 [物件總管] 中，展開要建立新伺服器角色的伺服器。  
   
@@ -68,7 +72,7 @@ caps.handback.revision: 13
   
 3.  以滑鼠右鍵按一下 [伺服器角色] 資料夾，然後選取 [新增伺服器角色]。  
   
-4.  在 [新增伺服器角色 - \<伺服器角色名稱>] 對話方塊中，於 [一般] 頁面的 [伺服器角色名稱] 方塊中輸入新伺服器角色的名稱。  
+4.  在 [新增伺服器角色 - <伺服器角色名稱>] 對話方塊中，於 [一般] 頁面的 [伺服器角色名稱] 方塊中輸入新伺服器角色的名稱。  
   
 5.  在 **[擁有者]** 方塊中，輸入將擁有新角色之伺服器主體的名稱。 或者，按一下省略符號 **(...)**，開啟 [選取伺服器登入或角色] 對話方塊。  
   
@@ -84,7 +88,7 @@ caps.handback.revision: 13
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 若要建立新的伺服器角色  
+#### <a name="to-create-a-new-server-role"></a>若要建立新的伺服器角色  
   
 1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的執行個體。  
   

@@ -1,25 +1,29 @@
 ---
 title: "參數 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-non-specified"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "server-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "預存程序 [SQL Server], 參數"
-  - "使用者定義函數 [SQL Server], 參數"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- server-general
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- stored procedures [SQL Server], parameters
+- user-defined functions [SQL Server], parameters
 ms.assetid: c1f9bd93-3271-4098-a23b-7bd7a19ab65b
 caps.latest.revision: 2
-author: "pmasl"
-ms.author: "pelopes"
-manager: "jhubbard"
-caps.handback.revision: 2
+author: pmasl
+ms.author: pelopes
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 64617ddd4922e7217ac905e92e5d9dfd6ffff7e4
+ms.lasthandoff: 04/11/2017
+
 ---
-# 參數
+# <a name="parameters"></a>參數
 參數是用以交換預存程序和呼叫預存程序的函數、應用程式或工具之間的資料： 
 
 *  輸入參數可讓呼叫者將資料值傳遞給預存程序或函數。

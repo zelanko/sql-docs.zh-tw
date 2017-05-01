@@ -1,28 +1,32 @@
 ---
 title: "為 FILESTREAM 存取設定防火牆 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Windows 防火牆 [Database Engine], FILESTREAM"
-  - "FILESTREAM [SQL Server], Windows 防火牆"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Windows Firewall [Database Engine], FILESTREAM
+- FILESTREAM [SQL Server], Windows Firewall
 ms.assetid: fc52007f-c26f-4f8e-b9d8-55a7978f4d56
 caps.latest.revision: 15
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fbaaa631770966cff9cafa15fffb60b24dcd2767
+ms.lasthandoff: 04/11/2017
+
 ---
-# 為 FILESTREAM 存取設定防火牆
+# <a name="configure-a-firewall-for-filestream-access"></a>為 FILESTREAM 存取設定防火牆
   若要在受防火牆保護的環境中使用 FILESTREAM，用戶端和伺服器都必須能夠將 DNS 名稱解析為包含 FILESTREAM 檔案的伺服器。 FILESTREAM 要求 Windows 檔案共用通訊埠 139 和 445 必須要開啟。  
   
-### 在執行 Windows 7 的電腦上開啟 Windows 檔案共用通訊埠  
+### <a name="to-open-the-windows-file-sharing-ports-on-a-computer-that-is-running-windows-7"></a>在執行 Windows 7 的電腦上開啟 Windows 檔案共用通訊埠  
   
 1.  在 [控制台] 中，開啟 [Windows 防火牆]。  
   

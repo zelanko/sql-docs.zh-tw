@@ -1,25 +1,29 @@
 ---
 title: "設定備份壓縮 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 430905eb-d218-458c-bd48-aeee6fbb7446
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 08c6e1ccb56a08309d2c904a8566884372dc3778
+ms.lasthandoff: 04/11/2017
+
 ---
-# 設定備份壓縮 (SQL Server)
-  進行安裝時，備份壓縮預設是關閉的。 備份壓縮的預設行為是透過 [備份壓縮預設] 伺服器層級組態選項所定義。 不過，您可以在建立單一備份或排程一系列例行備份時，覆寫此伺服器層級預設值。 若要變更伺服器層級的預設值，請參閱[檢視或設定備份壓縮預設伺服器組態選項](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)。  
+# <a name="configure-backup-compression-sql-server"></a>設定備份壓縮 (SQL Server)
+  進行安裝時，備份壓縮預設是關閉的。 備份壓縮的預設行為是透過 [備份壓縮預設] 伺服器層級組態選項所定義。 不過，您可以在建立單一備份或排程一系列例行備份時，覆寫此伺服器層級預設值。 若要變更伺服器層級的預設值，請參閱 [檢視或設定備份壓縮預設伺服器組態選項](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)。  
   
-## 覆寫備份壓縮預設  
+## <a name="override-the-backup-compression-default"></a>覆寫備份壓縮預設  
  您可以針對個別的備份、備份作業或記錄傳送組態來變更備份壓縮行為。  
   
 -   **[!INCLUDE[tsql](../../includes/tsql-md.md)]**  
@@ -50,9 +54,8 @@ caps.handback.revision: 6
   
          您可以控制記錄備份的備份壓縮行為。  
   
- [&#91;回到頁首&#93;](#Top)  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [備份壓縮 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-compression-sql-server.md)  
   
   

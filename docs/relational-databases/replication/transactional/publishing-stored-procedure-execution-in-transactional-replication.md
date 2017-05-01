@@ -1,26 +1,30 @@
 ---
 title: "在異動複寫中發行預存程序執行 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "發行 [SQL Server 複寫], 預存程序執行"
-  - "發行項 [SQL Server 複寫], 預存程序和"
-  - "異動複寫, 發行預存程序執行"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- publishing [SQL Server replication], stored procedure execution
+- articles [SQL Server replication], stored procedures and
+- transactional replication, publishing stored procedure execution
 ms.assetid: f4686f6f-c224-4f07-a7cb-92f4dd483158
 caps.latest.revision: 40
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 40
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3417818eb5ff6f9f5afce213457828844d2912a8
+ms.lasthandoff: 04/11/2017
+
 ---
-# 在異動複寫中發行預存程序執行
+# <a name="publishing-stored-procedure-execution-in-transactional-replication"></a>在異動複寫中發行預存程序執行
   如果您有一或多個預存程序在「發行者」端執行並且影響到已發行的資料表，請考慮在發行集中包含這些預存程序，以做為預存程序執行發行項。 初始化訂閱時，會將程序的定義 (CREATE PROCEDURE 陳述式) 複寫到訂閱者；在發行者端執行程序時，複寫會在訂閱者端執行對應的程序。 這可在執行大批量作業時大幅提升效能，因為只會複寫程序執行，而無需複寫每個資料列的個別變更。 例如，假設您在發行集資料庫中建立了下列預存程序：  
   
 ```  
@@ -49,17 +53,17 @@ EXEC give_raise
   
  **若要發行預存程序的執行**  
   
--   SQL Server Management Studio: [發行預存程序執行交易式發行集與 #40。SQL Server Management Studio & #41;](../../../relational-databases/replication/publish/publish execution of stored procedure in transactional publication.md)  
+-   SQL Server Management Studio：[在交易式發行集中發行預存程序的執行項 &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/publish/publish-execution-of-stored-procedure-in-transactional-publication.md)  
   
--   複寫 TRANSACT-SQL 程式設計︰ 執行 [sp_addarticle & #40。TRANSACT-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 指定一個值 （建議選項） 的 ' serializable proc exec' 或 'proc exec' 參數的 **@type**。 如需有關如何定義發行項的詳細資訊，請參閱 [定義發行項](../../../relational-databases/replication/publish/define-an-article.md)。  
+-   複寫 Transact-SQL 程式設計：執行 [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)，並指定值 'serializable proc exec' (建議) 或為參數 **@type** 指定 'proc exec'。 如需定義發行項的詳細資訊，請參閱[定義發行項](../../../relational-databases/replication/publish/define-an-article.md)。  
   
-## 在訂閱者端修改程序  
- 根據預設值，「發行者」的預存程序定義會傳播到各個「訂閱者」。 但是，您也可以在「訂閱者」端修改預存程序。 若您想在「發行者」和「訂閱者」執行不同的邏輯，這個方式就非常有幫助。 例如，假設 **sp_big_delete**, 、 預存程序，在發行者端有兩個功能︰ 從複寫資料表中刪除 1000000 個資料列 **big_table1** 更新非複寫的資料表和 **big_table2**。 若要降低對網路資源的需求，您應該傳播 1 百萬個資料列刪除做為預存程序透過發行 **sp_big_delete**。 在 「 訂閱者 」，您可以修改 **sp_big_delete** 刪除 1 百萬個資料列並不會執行的後續更新 **big_table2**。  
+## <a name="modifying-the-procedure-at-the-subscriber"></a>在訂閱者端修改程序  
+ 根據預設值，「發行者」的預存程序定義會傳播到各個「訂閱者」。 但是，您也可以在「訂閱者」端修改預存程序。 若您想在「發行者」和「訂閱者」執行不同的邏輯，這個方式就非常有幫助。 例如，考慮 **sp_big_delete**這個「發行者」的預存程序有兩個功能：它會從複寫資料表 **big_table1** 刪除 1,000,000 個資料列，然後更新非複寫的資料表 **big_table2**。 若要降低網路資源的需求，您應該透過發行 **sp_big_delete**，將一百萬個資料列刪除做為預存程序傳播。 在「訂閱者」端，您可以將 **sp_big_delete** 修改為只刪除一百萬個資料列，並且不執行後續對 **big_table2**的更新。  
   
 > [!NOTE]  
->  依預設，使用 ALTER PROCEDURE 在「發行者」上所作的任何變更都將傳播到「訂閱者」。 若要防止發生這種情況，請在執行 ALTER PROCEDURE 之前停用結構描述變更的傳播。 結構描述變更的相關資訊，請參閱 [對發行集資料庫進行結構描述變更](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)。  
+>  依預設，使用 ALTER PROCEDURE 在「發行者」上所作的任何變更都將傳播到「訂閱者」。 若要防止發生這種情況，請在執行 ALTER PROCEDURE 之前停用結構描述變更的傳播。 如需結構描述變更的資訊，請參閱[對發行集資料庫進行結構描述變更](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)。  
   
-## 預存程序執行發行項的類型  
+## <a name="types-of-stored-procedure-execution-articles"></a>預存程序執行發行項的類型  
  可以透過兩種不同方式發行預存程序的執行：序列化程序執行發行項與程序執行發行項。  
   
 -   建議使用序列化方式，因為這種方式只有當程序在序列化交易的內容中執行時，才會複寫程序執行。 若預存程序從序列化交易外部執行時，對已發行的資料表中所做的資料變更，會複寫為一連串的 DML 陳述式。 這個行為保證「訂閱者」的資料可以和「發行者」的資料一致。 這個方法對於批次作業而言特別有用，例如大型的清除作業。  
@@ -87,12 +91,12 @@ COMMIT TRANSACTION T2
   
  當您在序列化交易內執行程序時，鎖定的時間更長且可能導致並行性降低。  
   
-## XACT_ABORT 設定  
- 複寫預存程序執行時，執行預存程序之工作階段的設定應將 XACT_ABORT 指定為 ON。 如果 XACT_ABORT 設定為 OFF，並在「發行者」端執行程序時出現錯誤，則「訂閱者」端也會出現相同的錯誤，導致「散發代理程式」失敗。 將 XACT_ABORT 指定為 ON 可確保「發行者」端執行期間遇到的任何錯誤，都會使整個執行回復，以避免「散發代理程式」失敗。 如需設定 XACT_ABORT 的詳細資訊，請參閱 [SET XACT_ABORT & #40。TRANSACT-SQL & #41;](../../../t-sql/statements/set-xact-abort-transact-sql.md)。  
+## <a name="the-xactabort-setting"></a>XACT_ABORT 設定  
+ 複寫預存程序執行時，執行預存程序之工作階段的設定應將 XACT_ABORT 指定為 ON。 如果 XACT_ABORT 設定為 OFF，並在「發行者」端執行程序時出現錯誤，則「訂閱者」端也會出現相同的錯誤，導致「散發代理程式」失敗。 將 XACT_ABORT 指定為 ON 可確保「發行者」端執行期間遇到的任何錯誤，都會使整個執行回復，以避免「散發代理程式」失敗。 如需設定 XACT_ABORT 的詳細資訊，請參閱 [SET XACT_ABORT &#40;Transact-SQL&#41;](../../../t-sql/statements/set-xact-abort-transact-sql.md)。  
   
- 如果您需要的 XACT_ABORT OFF 的設定，指定 **-SkipErrors** 「 散發代理程式參數。 這將允許代理程式在遇到錯誤後，繼續在「訂閱者」端套用變更。  
+ 如果您需要將 XACT_ABORT 設定為 OFF，請指定「散發代理程式」的 **-SkipErrors** 參數。 這將允許代理程式在遇到錯誤後，繼續在「訂閱者」端套用變更。  
   
-## 另請參閱  
- [異動複寫的發行項選項](../../../relational-databases/replication/transactional/article-options-for-transactional-replication.md)  
+## <a name="see-also"></a>另請參閱  
+ [Article Options for Transactional Replication](../../../relational-databases/replication/transactional/article-options-for-transactional-replication.md)  
   
   

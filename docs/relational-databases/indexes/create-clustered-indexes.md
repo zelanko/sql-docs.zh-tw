@@ -1,31 +1,35 @@
 ---
 title: "建立叢集索引 | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "索引建立 [SQL Server], 叢集索引"
-  - "叢集索引, 建立"
-  - "叢集索引, PRIMARY KEY 條件約束"
-  - "叢集索引, UNIQUE 條件約束"
-  - "索引 [SQL Server], 叢集"
+ms.custom: 
+ms.date: 02/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- index creation [SQL Server], clustered indexes
+- clustered indexes, creating
+- clustered indexes, PRIMARY KEY constraint
+- clustered indexes, UNIQUE constraint
+- indexes [SQL Server], clustered
 ms.assetid: 47148383-c2c7-4f08-a9e4-7016bf2d1d13
 caps.latest.revision: 33
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 309d0fa2603bfa14dc305b73036867c084eab683
+ms.lasthandoff: 04/11/2017
+
 ---
-# 建立叢集索引
+# <a name="create-clustered-indexes"></a>建立叢集索引
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的資料表上建立叢集索引。 除了極少數的例外狀況之外，每個資料表都應該要有叢集索引。 除了可以改善查詢效能以外，叢集索引還能夠視需要加以重建或重新組織，以便控制資料表分散程度。 檢視上也可以建立叢集索引。 (叢集索引是在[叢集與非叢集索引說明](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md)主題中進行定義。)  
+  您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]，在資料表上建立叢集索引。 除了極少數的例外狀況之外，每個資料表都應該要有叢集索引。 除了可以改善查詢效能以外，叢集索引還能夠視需要加以重建或重新組織，以便控制資料表分散程度。 檢視上也可以建立叢集索引。 (叢集索引是在 [叢集與非叢集索引說明](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md)主題中進行定義。)  
   
  **本主題內容**  
   
@@ -73,11 +77,11 @@ caps.handback.revision: 32
 ###  <a name="Security"></a> 安全性  
   
 ####  <a name="Permissions"></a> Permissions  
- 需要資料表或檢視表的 ALTER 權限。 使用者必須是**系統管理員**固定伺服器角色的成員，或是 **db_ddladmin** 和 **db_owner** 固定資料庫角色的成員。  
+ 需要資料表或檢視表的 ALTER 權限。 使用者必須是 **系統管理員** 固定伺服器角色的成員，或是 **db_ddladmin** 和 **db_owner** 固定資料庫角色的成員。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 若要使用物件總管建立叢集索引  
+#### <a name="to-create-a-clustered-index-by-using-object-explorer"></a>若要使用物件總管建立叢集索引  
   
 1.  在 [物件總管] 中，展開要在其中建立叢集索引的資料表。  
   
@@ -87,13 +91,13 @@ caps.handback.revision: 32
   
 4.  按一下 **[索引鍵資料行]**底下的 **[加入]**。  
   
-5.  在 [從 \<資料表名稱> 選取資料行] 對話方塊中，選取要加入叢集索引之資料表資料行的核取方塊。  
+5.  在 [從 <資料表名稱> 選取資料行] 對話方塊中，選取要加入叢集索引之資料表資料行的核取方塊。  
   
 6.  按一下 **[確定]**。  
   
 7.  在 **[新增索引]** 對話方塊中，按一下 **[確定]**。  
   
-#### 若要使用資料表設計工具建立叢集索引  
+#### <a name="to-create-a-clustered-index-by-using-the-table-designer"></a>若要使用資料表設計工具建立叢集索引  
   
 1.  在 [物件總管] 中，展開要在其中建立包含叢集索引之資料表的資料庫。  
   
@@ -113,11 +117,11 @@ caps.handback.revision: 32
   
 9. 按一下 [ **關閉**]。  
   
-10. 在 [檔案] 功能表上，按一下 [儲存 \<資料表名稱>]。  
+10. 在 [檔案] 功能表上，按一下 [儲存 *table_name*]。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 若要建立叢集索引  
+#### <a name="to-create-a-clustered-index"></a>若要建立叢集索引  
   
 1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
@@ -143,8 +147,9 @@ caps.handback.revision: 32
   
  如需詳細資訊，請參閱 [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [建立主索引鍵](../../relational-databases/tables/create-primary-keys.md)   
  [建立唯一的條件約束](../../relational-databases/tables/create-unique-constraints.md)  
   
   
+

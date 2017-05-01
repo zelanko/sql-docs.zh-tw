@@ -1,36 +1,40 @@
 ---
 title: "安全性實體 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "10/18/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.roleproperties.selectobject.f1"
-helpviewer_keywords: 
-  - "安全性實體 [SQL Server]"
-  - "結構描述 [SQL Server], 安全性實體"
-  - "資料庫安全性實體 [SQL Server]"
-  - "階層 [SQL Server], 安全性實體"
-  - "伺服器安全性實體 [SQL Server]"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 10/18/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.roleproperties.selectobject.f1
+helpviewer_keywords:
+- securables [SQL Server]
+- schemas [SQL Server], securables
+- database securables [SQL Server]
+- hierarchies [SQL Server], securables
+- server securables [SQL Server]
 ms.assetid: bfa748f0-70b0-453c-870a-04b7b205b9ff
 caps.latest.revision: 41
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 51db5d7a36569601e7d21d5fc50d16230b85ea5d
+ms.lasthandoff: 04/11/2017
+
 ---
-# 安全性實體
+# <a name="securables"></a>[安全性實體]
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   安全性實體是一種資源， [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 授權系統會管理其存取權。 例如，資料表是安全性實體。 有些安全性實體可以包含在其他安全性實體內，因而建立稱為「範圍」的巢狀階層，以保護它們自己本身的安全。 安全性實體範圍為 **伺服器**、 **資料庫**以及 **結構描述**。  
   
-## 安全性實體範圍：伺服器  
+## <a name="securable-scope-server"></a>安全性實體範圍：伺服器  
  **伺服器** 安全性實體範圍包含下列安全性實體：  
   
 -   可用性群組  
@@ -43,7 +47,7 @@ caps.handback.revision: 41
   
 -   資料庫  
   
-## 安全性實體範圍：資料庫  
+## <a name="securable-scope-database"></a>安全性實體範圍：資料庫  
  **資料庫** 安全性實體範圍包含下列安全性實體：  
   
 -   應用程式角色  
@@ -78,7 +82,7 @@ caps.handback.revision: 41
   
 -   使用者  
   
-## 安全性實體範圍：結構描述  
+## <a name="securable-scope-schema"></a>安全性實體範圍：結構描述  
  **結構描述** 安全性實體範圍包含下列安全性實體：  
   
 -   型別  
@@ -103,13 +107,13 @@ caps.handback.revision: 41
     
     -   外部資料表 
   
-## 控制對安全性實體的存取權  
+## <a name="controlling-access-to-a-securable"></a>控制對安全性實體的存取權  
  接收安全性實體權限的實體稱為主體。 最常見的主體就是登入和資料庫使用者。 安全性實體存取權的控制是透過授與或拒絕權限，或是將登入和使用者加入至具有存取權的角色。 如需控制權限的資訊，請參閱 [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)、[REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-transact-sql.md)、[DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)、[sp_addrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) 和 [sp_droprolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)。  
   
 > [!CAUTION]  
 >  在安裝時為系統物件授與的預設權限，經過仔細評估可能面臨的威脅，因此在強化 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝的過程中無須改變。 系統物件的任何權限變更，都可能會限制或破壞其功效，而可能會讓您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝處於不支援的狀態。  
   
-## 相關內容  
+## <a name="related-content"></a>相關內容  
  [資料庫引擎權限使用者入門](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)  
   
  [保護 SQL Server 的安全](../../relational-databases/security/securing-sql-server.md)  
@@ -125,3 +129,4 @@ caps.handback.revision: 41
  [sys.sql_logins &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-logins-transact-sql.md)  
   
   
+

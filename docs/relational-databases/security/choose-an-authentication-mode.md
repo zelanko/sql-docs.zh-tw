@@ -1,58 +1,62 @@
 ---
 title: "選擇驗證模式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.ins.instwizard.authenticationmode.f1"
-helpviewer_keywords: 
-  - "sa 帳戶"
-  - "驗證模式"
-  - "信任連接"
-  - "SQL Server 安裝精靈, 驗證模式分頁"
-  - "選擇驗證模式"
-  - "驗證 [SQL Server], 選擇模式"
-  - "Windows 驗證 [SQL Server]"
-  - "混合模式驗證"
-  - "混合式驗證模式"
-  - "SQL 驗證模式"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.ins.instwizard.authenticationmode.f1
+helpviewer_keywords:
+- sa account
+- authentication modes
+- trusted connection
+- SQL Server Installation Wizard, Authentication Mode page
+- choose authentication mode
+- authentication [SQL Server], choosing a mode
+- Windows authentication [SQL Server]
+- mixed mode authentication
+- mixed authentication mode
+- SQL authentication mode
 ms.assetid: ff7a6a48-3d38-4209-aa0f-7d6c0a8c64ef
 caps.latest.revision: 45
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 45
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0c13fbf9ffbe2337c1766d7a089c1d8072a17f77
+ms.lasthandoff: 04/11/2017
+
 ---
-# 選擇驗證模式
-  在安裝期間，您必須選取 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的驗證模式。 有兩種可能的模式：Windows 驗證模式和混合模式。 Windows 驗證模式會啟用 Windows 驗證並停用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證。 混合模式會啟用 Windows 驗證及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證。 Windows 驗證一定可用而且無法停用。  
+# <a name="choose-an-authentication-mode"></a>選擇驗證模式
+  在安裝期間，您必須選取 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的驗證模式。 有兩種可能的模式：Windows 驗證模式和混合模式。 Windows 驗證模式會啟用 Windows 驗證並停用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證。 混合模式會啟用 Windows 驗證及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證。 Windows 驗證一定可用而且無法停用。  
   
-## 設定驗證模式  
+## <a name="configuring-the-authentication-mode"></a>設定驗證模式  
  如果您在安裝期間選取混合模式驗證，就必須為名為 sa 的內建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統管理員帳戶提供並確認增強式密碼。 sa 帳戶會使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證進行連接。  
   
- 如果您在安裝期間選取 Windows 驗證，安裝程式就會針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證建立 sa 帳戶，但是此帳戶是停用的。 如果您之後變更為混合模式驗證，而且想要使用 sa 帳戶，就必須啟用此帳戶。 任何 Windows 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 帳戶都可以設定為系統管理員。 由於 sa 帳戶是已知的而且經常成為惡意使用者的攻擊目標，因此除非您的應用程式需要 sa 帳戶，否則請勿啟用此帳戶。 此外，絕對不可針對 sa 帳戶設定空白或弱式密碼。 若要從 Windows 驗證模式變更為混合模式驗證，並且使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證，請參閱[變更伺服器驗證模式](../../database-engine/configure-windows/change-server-authentication-mode.md)。  
+ 如果您在安裝期間選取 Windows 驗證，安裝程式就會針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證建立 sa 帳戶，但是此帳戶是停用的。 如果您之後變更為混合模式驗證，而且想要使用 sa 帳戶，就必須啟用此帳戶。 任何 Windows 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 帳戶都可以設定為系統管理員。 由於 sa 帳戶是已知的而且經常成為惡意使用者的攻擊目標，因此除非您的應用程式需要 sa 帳戶，否則請勿啟用此帳戶。 此外，絕對不可針對 sa 帳戶設定空白或弱式密碼。 若要從 Windows 驗證模式變更為混合模式驗證，並且使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證，請參閱 [變更伺服器驗證模式](../../database-engine/configure-windows/change-server-authentication-mode.md)。  
   
-## 透過 Windows 驗證進行連接  
- 當使用者透過 Windows 使用者帳戶連接時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會使用作業系統中的 Windows 主體 Token 來驗證帳戶名稱和密碼。 這代表 Windows 已確認使用者身分。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不會要求您輸入密碼，而且不會執行身分驗證。 Windows 驗證是預設驗證模式，而且比 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證更安全。 Windows 驗證會使用 Kerberos 安全性通訊協定、在增強式密碼的複雜驗證方面提供密碼原則強化、提供對帳戶鎖定的支援，而且支援密碼逾期。 使用 Windows 驗證所建立的連接有時候稱為信任連接，因為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會信任 Windows 所提供的認證。  
+## <a name="connecting-through-windows-authentication"></a>透過 Windows 驗證進行連接  
+ 當使用者透過 Windows 使用者帳戶連接時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會使用作業系統中的 Windows 主體 Token 來驗證帳戶名稱和密碼。 這代表 Windows 已確認使用者身分。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不會要求您輸入密碼，而且不會執行身分驗證。 Windows 驗證是預設驗證模式，而且比 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證更安全。 Windows 驗證會使用 Kerberos 安全性通訊協定、在增強式密碼的複雜驗證方面提供密碼原則強化、提供對帳戶鎖定的支援，而且支援密碼逾期。 使用 Windows 驗證所建立的連接有時候稱為信任連接，因為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會信任 Windows 所提供的認證。  
   
  使用 Windows 驗證，可以在網域層級建立 Windows 群組，也可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 建立整個群組的登入。 從網域層級管理存取可簡化帳戶管理。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
-## 透過 SQL Server 驗證進行連接  
- 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證時，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中建立不是以 Windows 使用者帳戶為基礎的登入。 其使用者名稱和密碼都是使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所建立而且儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中。 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證進行連接的使用者必須在每次連接時提供其認證 (登入和密碼)。 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證時，所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 帳戶都必須設定增強式密碼。 如需增強式密碼的指導方針，請參閱[增強式密碼](../../relational-databases/security/strong-passwords.md)。  
+## <a name="connecting-through-sql-server-authentication"></a>透過 SQL Server 驗證進行連接  
+ 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證時，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中建立不是以 Windows 使用者帳戶為基礎的登入。 其使用者名稱和密碼都是使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所建立而且儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中。 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證進行連接的使用者必須在每次連接時提供其認證 (登入和密碼)。 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證時，所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 帳戶都必須設定增強式密碼。 如需增強式密碼的指導方針，請參閱 [增強式密碼](../../relational-databases/security/strong-passwords.md)。  
   
  有三個選擇性密碼原則可供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入使用。  
   
 -   使用者必須在下次登入時變更密碼  
   
-     要求使用者在下次連接時變更密碼。 變更密碼的功能是由 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供的。 如果使用這個選項，協力廠商軟體開發人員應該提供這項功能。  
+     要求使用者在下次連接時變更密碼。 變更密碼的功能是由 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]提供的。 如果使用這個選項，協力廠商軟體開發人員應該提供這項功能。  
   
 -   強制執行密碼逾期  
   
@@ -62,7 +66,7 @@ caps.handback.revision: 45
   
      針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入強制執行電腦的 Windows 密碼原則。 這包括密碼長度和複雜性。 這項功能相依於 `NetValidatePasswordPolicy` API，而這個 API 只有 [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] 和更新版本才有。  
   
-#### 判斷本機電腦的密碼原則  
+#### <a name="to-determine-the-password-policies-of-the-local-computer"></a>判斷本機電腦的密碼原則  
   
 1.  在 **[開始]** 功能表上，按一下 **[執行]**。  
   
@@ -72,7 +76,7 @@ caps.handback.revision: 45
   
      密碼原則就會描述在結果窗格中。  
   
-### SQL Server 驗證的缺點  
+### <a name="disadvantages-of-sql-server-authentication"></a>SQL Server 驗證的缺點  
   
 -   如果某位使用者是擁有 Windows 登入和密碼的 Windows 網域使用者，則仍然必須提供其他 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) 登入和密碼才能連接。 追蹤多個名稱和密碼對於許多使用者而言很困難。 此外，每次連接至資料庫就必須提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認證可能會造成困擾。  
   
@@ -82,7 +86,7 @@ caps.handback.revision: 45
   
 -   加密的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證登入密碼在連接時必須透過網路傳遞。 自動連接的某些應用程式會將密碼儲存在用戶端。 這些是額外的攻擊點。  
   
-### SQL Server 驗證的優點  
+### <a name="advantages-of-sql-server-authentication"></a>SQL Server 驗證的優點  
   
 -   可讓 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援需要 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的舊版應用程式以及協力廠商所提供的應用程式。  
   
@@ -97,7 +101,7 @@ caps.handback.revision: 45
     > [!NOTE]  
     >  使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證不會限制安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之電腦上本機管理員的權限。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [SQL Server 安裝的安全性考量](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
   
   

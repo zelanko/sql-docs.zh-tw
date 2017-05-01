@@ -1,27 +1,31 @@
 ---
 title: "Broker:Conversation Group 事件類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Broker:Conversation Group 事件類別"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Broker:Conversation Group event class
 ms.assetid: 6595bef6-9d40-42eb-a934-735622dd23fb
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9208fcec2046feb785e2cedfd0b3a66a851cc7d6
+ms.lasthandoff: 04/11/2017
+
 ---
-# Broker:Conversation Group 事件類別
+# <a name="brokerconversation-group-event-class"></a>Broker:Conversation Group 事件類別
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會產生 **Broker:Conversation Group** 事件。  
   
-## Broker:Conversation Group 事件類別資料行  
+## <a name="brokerconversation-group-event-class-data-columns"></a>Broker:Conversation Group 事件類別資料行  
   
 |資料行|型別|說明|資料行編號|可篩選|  
 |-----------------|----------|-----------------|-------------------|----------------|  

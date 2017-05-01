@@ -1,27 +1,31 @@
 ---
 title: "SQL Server 的 Database Mirroring 物件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQLServer:Database Mirroring"
-  - "資料庫鏡像 [SQL Server], 效能計數器"
-  - "效能計數器 [SQL Server], 資料庫鏡像"
-  - "Database Mirroring 物件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQLServer:Database Mirroring
+- database mirroring [SQL Server], performance counters
+- performance counters [SQL Server], database mirroring
+- Database Mirroring object
 ms.assetid: a27b51ee-7637-4525-9424-bcc16947dc13
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 41cc798b19f243d91b9693ca63c70d1de6661d0c
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server 的 Database Mirroring 物件
+# <a name="sql-server-database-mirroring-object"></a>SQL Server 的 Database Mirroring 物件
   **SQLServer:Database Mirroring** 效能物件含有效能計數器，可報告 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫鏡像的相關資訊。 下表列出這個物件包含的計數器。  
   
 |名稱|描述|  
@@ -51,10 +55,10 @@ caps.handback.revision: 26
 > [!NOTE]  
 >  在每一個夥伴伺服器上，有些計數器會顯示零值，這是依據夥伴伺服器目前正在執行的角色而定。  
   
-## 備註  
+## <a name="remarks"></a>備註  
  效能計數器可讓您監視資料庫鏡像效能。 例如，您可以檢查 **[Transaction Delay]** 計數器，以查看資料庫鏡像是否影響主體伺服器的效能；您可以檢查 **[Redo Queue]** 與 **[Log Send Queue]** 計數器，以查看鏡像資料庫是否跟得上主體資料庫。 您可以檢查 **Log Bytes Sent/sec** 計數器，以監視每秒傳送的記錄量。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [監視資源使用狀況 &#40;系統監視器&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

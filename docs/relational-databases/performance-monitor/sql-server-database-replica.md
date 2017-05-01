@@ -1,27 +1,31 @@
 ---
 title: "SQL Server、資料庫複本 | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/24/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "可用性群組 [SQL Server], 監視"
-  - "SQLServer:資料庫複本"
-  - "效能計數器 [SQL Server], AlwaysOn 可用性群組"
-  - "可用性群組 [SQL Server], 效能計數器"
+ms.custom: 
+ms.date: 08/24/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Availability Groups [SQL Server], monitoring
+- SQLServer:Database Replica
+- performance counters [SQL Server], AlwaysOn Availability Groups
+- Availability Groups [SQL Server], performance counters
 ms.assetid: a5f6bdce-2b13-4924-aaeb-b50b57d624d8
 caps.latest.revision: 27
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fc96130b21ccef9c95dbe8172ef5ef4fc5185616
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server、資料庫複本
+# <a name="sql-server-database-replica"></a>SQL Server、資料庫複本
   **SQLServer:Database Replica** 效能物件包含的效能計數器會報告有關 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中 AlwaysOn 可用性群組之次要資料庫的報表資訊。 這個物件只有在裝載次要複本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上才有效。  
   
 |計數器名稱|描述|檢視位置…|  
@@ -40,10 +44,11 @@ caps.handback.revision: 27
 |**Total Log requiring undo**|必須復原之記錄檔的總 KB 數。|次要複本|  
 |**Transaction Delay**|等候未終止之認可收條的延遲時間 (以毫秒為單位)。|主要複本|  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [監視資源使用狀況 &#40;系統監視器&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
  [SQL Server、可用性複本](../../relational-databases/performance-monitor/sql-server-availability-replica.md)   
  [SQL Server、Databases 物件](../../relational-databases/performance-monitor/sql-server-databases-object.md)   
  [AlwaysOn 可用性群組 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)  
   
   
+

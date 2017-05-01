@@ -1,32 +1,36 @@
 ---
 title: "變更工作負載群組設定 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "工作負載群組 [SQL Server], 改變"
-  - "資源管理員, 工作負載群組改變"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- workload groups [SQL Server], alter
+- Resource Governor, workload group alter
 ms.assetid: 73b6109c-2ad0-4915-b11b-d40d5a0fdc25
 caps.latest.revision: 15
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7ee33f07052addb06e1dd2fe56f6153498fdbc9b
+ms.lasthandoff: 04/11/2017
+
 ---
-# 變更工作負載群組設定
+# <a name="change-workload-group-settings"></a>變更工作負載群組設定
   您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]來變更工作負載群組設定。  
   
--   **開始之前：**  [限制事項](#LimitationsRestrictions)、 [權限](#Permissions)  
+-   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
--   使用 [SQL Server Management Studio](#ChgWGProp)、[Transact-SQL](#ChgWGTSQL) **變更工作負載群組設定**  
+-   **To change the settings for a workload group, using:**  [SQL Server Management Studio](#ChgWGProp), [Transact-SQL](#ChgWGTSQL)  
   
-## 開始之前  
+## <a name="before-you-begin"></a>開始之前  
   
 ###  <a name="LimitationsRestrictions"></a> 限制事項  
  您可以變更預設工作負載群組和使用者定義工作負載群組的設定。  
@@ -37,7 +41,7 @@ caps.handback.revision: 15
   
  允許索引建立使用比一開始授與之記憶體更多的記憶體工作空間來改善效能。 資源管理員支援這種特殊的處理，不過，初始授與和任何額外的記憶體授與都受到工作負載群組和資源集區設定的限制。  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> 權限  
  變更工作負載群組設定需要 CONTROL SERVER 權限。  
   
 ##  <a name="ChgWGProp"></a> 使用 SQL Server Management Studio 變更工作負載群組設定  
@@ -60,8 +64,8 @@ caps.handback.revision: 15
   
 2.  執行 ALTER RESOURCE GOVERNOR RECONFIGURE 陳述式。  
   
-### 範例 (Transact-SQL)  
- 下列範例會變更名為 `groupAdhoc` 的工作負載群組的最大記憶體授與百分比設定。  
+### <a name="example-transact-sql"></a>範例 (Transact-SQL)  
+ 下列範例會變更名為 `groupAdhoc`的工作負載群組的最大記憶體授與百分比設定。  
   
 ```  
 ALTER WORKLOAD GROUP groupAdhoc  
@@ -71,7 +75,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [資源管理員](../../relational-databases/resource-governor/resource-governor.md)   
  [建立工作負載群組](../../relational-databases/resource-governor/create-a-workload-group.md)   
  [建立資源集區](../../relational-databases/resource-governor/create-a-resource-pool.md)   

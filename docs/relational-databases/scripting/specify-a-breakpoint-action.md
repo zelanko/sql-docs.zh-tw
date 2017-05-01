@@ -1,27 +1,31 @@
 ---
 title: "指定中斷點動作 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.debug.breakpt.action"
-helpviewer_keywords: 
-  - "Transact-SQL 偵錯工具, 中斷點動作"
-  - "Transact-SQL 偵錯工具, 叫用動作時的中斷點"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.debug.breakpt.action
+helpviewer_keywords:
+- Transact-SQL debugger, breakpoint action
+- Transact-SQL debugger, breakpoint when hit action
 ms.assetid: f97f0097-6f51-40c1-b2e0-294a93ce1e1b
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1594f724e5020c1678812ff74c55bb1fefe5bf5e
+ms.lasthandoff: 04/11/2017
+
 ---
-# 指定中斷點動作
+# <a name="specify-a-breakpoint-action"></a>指定中斷點動作
   中斷點 [叫用時] 動作指定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具針對中斷點所執行的自訂工作。 如果已到達指定的叫用計數而且滿足任何指定的中斷點條件時，偵錯工具就會執行為中斷點指定的動作。  
   
 ##  <a name="BKMK_ActionConsiderations"></a> 動作考量因素  
@@ -43,11 +47,11 @@ caps.handback.revision: 10
   
     5.  $PID 與 $PNAME 會傳回執行 Database Engine 執行個體且執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 之作業系統處理序的識別碼及名稱。 $PID 和 SERVERPROPERTY(‘ProcessID’) 傳回相同的識別碼，不同之處在於 $PID 是十六進位值，而 SERVERPROPERTY(‘ProcessID’) 是十進位值。  
   
-    6.  $TID 與 $TNAME 會傳回執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批次之作業系統執行緒的識別碼及名稱。 執行緒與執行 Database Engine 執行個體的處理序相關聯。 $TID 和 SELECT kpid FROM sys.sysprocesses WHERE spid = @@SPID 傳回相同的值，不同之處在於 $TID 是十六進位值，而 kpid 是十進位值。  
+    6.  $TID 與 $TNAME 會傳回執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批次之作業系統執行緒的識別碼及名稱。 執行緒與執行 Database Engine 執行個體的處理序相關聯。 $TID 與 SELECT kpid FROM sys.sysprocesses WHERE spid = @@SPID 傳回相同的值，不同之處在於 $TID 是十六進位值，而 kpid 是十進位值。  
   
--   您也可以使用反斜線字元 (\\) 當做逸出字元，允許在訊息中使用大括號和反斜線：\\{、\\} 和 \\\\。  
+-   您也可以使用反斜線字元 (\\) 當做逸出字元，允許在訊息中使用大括號和反斜線： \\{、 \\} 和 \\\\。  
   
-#### 若要指定叫用時動作  
+#### <a name="to-specify-a-when-hit-action"></a>若要指定叫用時動作  
   
 1.  在編輯器視窗中，以滑鼠右鍵按一下中斷點字符，然後按一下捷徑功能表上的 [叫用時]。  
   
@@ -65,7 +69,7 @@ caps.handback.revision: 10
   
 3.  按一下 **[確定]** 實作變更，或按一下 **[取消]** 結束而不套用變更。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [指定中斷點條件](../../relational-databases/scripting/specify-a-breakpoint-condition.md)   
  [指定叫用計數](../../relational-databases/scripting/specify-a-hit-count.md)  
   

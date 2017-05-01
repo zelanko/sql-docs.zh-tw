@@ -1,32 +1,36 @@
 ---
-title: "使用資料表值參數 (Database Engine) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "資料表值參數"
-  - "資料表值參數, 關於資料表值參數"
-  - "參數 [SQL Server], 資料表值"
-  - "TVP，請參閱資料表值參數"
+title: "使用資料表值參數 (Database Engine) | Microsoft 文件"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- table-valued parameters
+- table-valued parameters, about table-valued parameters
+- parameters [SQL Server], table-valued
+- TVP See table-valued parameters
 ms.assetid: 5e95a382-1e01-4c74-81f5-055612c2ad99
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 021177aa350c47474e48453f7d9a5735e1083b04
+ms.lasthandoff: 04/11/2017
+
 ---
-# 使用資料表值參數 (Database Engine)
+# <a name="use-table-valued-parameters-database-engine"></a>使用資料表值參數 (Database Engine)
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   資料表值參數是藉由使用使用者定義的資料表類型來進行宣告。 您可以使用資料表值參數，將多個資料列傳送到 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式或常式 (如預存程序或函數)，而不需要建立暫存資料表或許多參數。  
   
- 資料表值參數就像是 OLE DB 和 ODBC 中的參數陣列，但是提供了更多的彈性，而且與 [!INCLUDE[tsql](../../includes/tsql-md.md)] 更緊密整合在一起。 資料表值參數也會因為能夠參與以集合為基礎的作業而獲益。  
+ 資料表值參數就像是 OLE DB 和 ODBC 中的參數陣列，但是提供了更多的彈性，而且與 [!INCLUDE[tsql](../../includes/tsql-md.md)]更緊密整合在一起。 資料表值參數也會因為能夠參與以集合為基礎的作業而獲益。  
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 會以傳址方式將資料表值參數傳遞給常式，以免產生輸入資料的複本。 您可以使用資料表值參數來建立及執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 常式，然後從 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼 (任何 Managed 語言中的 Managed 和原生用戶端) 呼叫這些常式。  
   
@@ -59,7 +63,7 @@ caps.handback.revision: 31
   
 -   可讓用戶端指定排序次序和唯一索引鍵。  
   
--   在預存程序中使用時，會像暫存資料表一樣被快取。 從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 開始，也會為參數化查詢快取資料表值參數。  
+-   在預存程序中使用時，會像暫存資料表一樣被快取。 從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]開始，也會為參數化查詢快取資料表值參數。  
   
 ##  <a name="Restrictions"></a> 限制  
  資料表值參數有下列限制：  
@@ -117,7 +121,7 @@ EXEC usp_InsertProductionLocation @LocationTVP;
 GO  
 ```  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md)   
  [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
  [sys.types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)   

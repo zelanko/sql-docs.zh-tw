@@ -1,28 +1,32 @@
 ---
-title: "建立差異資料庫備份 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "完整差異備份 [SQL Server]"
-  - "資料庫備份 [SQL Server], 完整差異備份"
-  - "備份資料庫 [SQL Server], 完整差異備份"
-  - "備份 [SQL Server], 建立"
+title: "建立差異資料庫備份 (SQL Server) | Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- full differential backups [SQL Server]
+- database backups [SQL Server], full differential backups
+- backing up databases [SQL Server], full differential backups
+- backups [SQL Server], creating
 ms.assetid: 70f49794-b217-4519-9f2a-76ed61fa9f99
 caps.latest.revision: 34
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 72e15006bdae1d2ae6d33a9780b62f17fd88a69b
+ms.lasthandoff: 04/11/2017
+
 ---
-# 建立差異資料庫備份 (SQL Server)
-  使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中建立差異資料庫備份。  
+# <a name="create-a-differential-database-backup-sql-server"></a>建立差異資料庫備份 (SQL Server)
+  使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中建立差異資料庫備份。  
   
  **本主題的章節**  
   
@@ -44,13 +48,13 @@ caps.handback.revision: 34
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Restrictions"></a> 限制事項  
+###  <a name="Restrictions"></a> Limitations and restrictions  
   
 -   在明確或隱含的交易中，並不允許使用 BACKUP 陳述式。  
   
 ###  <a name="Prerequisites"></a> 必要條件  
   
--   建立差異資料庫備份時，需要有先前的完整資料庫備份。 如果您從未備份過資料庫，在建立任何差異備份之前，請先執行完整資料庫備份。 如需詳細資訊，請參閱[建立完整資料庫備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)。  
+-   建立差異資料庫備份時，需要有先前的完整資料庫備份。 如果您從未備份過資料庫，在建立任何差異備份之前，請先執行完整資料庫備份。 如需詳細資訊，請參閱 [建立完整資料庫備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)中建立差異資料庫備份。  
   
 ###  <a name="Recommendations"></a> 建議  
   
@@ -59,13 +63,13 @@ caps.handback.revision: 34
 ###  <a name="Security"></a> 安全性  
   
 ####  <a name="Permissions"></a> 請先檢查您的權限！  
- BACKUP DATABASE 和 BACKUP LOG 權限預設為 **sysadmin** 固定伺服器角色、**db_owner** 和 **db_backupoperator** 固定資料庫角色的成員。  
+ BACKUP DATABASE 和 BACKUP LOG 權限預設為 **sysadmin** 固定伺服器角色、 **db_owner** 和 **db_backupoperator** 固定資料庫角色的成員。  
   
- 備份裝置實體檔案的擁有權和權限問題會干擾備份作業。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 必須能夠讀取和寫入裝置；執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務的帳戶必須具備寫入權限。 不過，在系統資料表中加入備份裝置項目的 [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md) 並**不會**檢查檔案存取權限。 當您嘗試備份或還原時，在存取實體資源之前，備份裝置實體檔案的權限問題不太明顯。  
+ 備份裝置實體檔案的擁有權和權限問題會干擾備份作業。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 必須能夠讀取和寫入裝置；執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務的帳戶必須具備寫入權限。 不過，在系統資料表中加入備份裝置項目的 [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)並 **不會** 檢查檔案存取權限。 當您嘗試備份或還原時，在存取實體資源之前，備份裝置實體檔案的權限問題不太明顯。  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio  
   
-#### 建立差異資料庫備份  
+#### <a name="create-a-differential-database-backup"></a>建立差異資料庫備份  
   
 1.  連接到適當的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]執行個體之後，在 [物件總管] 中按一下伺服器名稱展開伺服器樹狀目錄。  
   
@@ -125,7 +129,7 @@ caps.handback.revision: 34
     > [!NOTE]  
     >  除非您備份的是交易記錄檔 (依 [一般] 頁面的 [備份類型] 區段中的指定)，否則 [交易記錄檔] 區段中的選項為非使用中。  
   
-15. [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] 和更新的版本支援 [備份壓縮](../../relational-databases/backup-restore/backup-compression-sql-server.md)。 依預設，備份壓縮與否取決於 [備份壓縮預設] 伺服器組態選項的值。 不過，不論目前的伺服器層級預設值為何，您都可以透過核取 [壓縮備份] 壓縮備份，而且可以透過核取 [不要壓縮備份] 防止壓縮。  
+15. [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] 和更新的版本支援 [備份壓縮](../../relational-databases/backup-restore/backup-compression-sql-server.md)。 依預設，備份壓縮與否取決於 **備份壓縮預設** 伺服器組態選項的值。 不過，不論目前的伺服器層級預設值為何，您都可以透過核取 **[壓縮備份]**壓縮備份，而且可以透過核取 **[不要壓縮備份]**防止壓縮。  
   
      **檢視目前的 backup compression default**  
   
@@ -136,7 +140,7 @@ caps.handback.revision: 34
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL  
   
-#### 建立差異資料庫備份  
+#### <a name="create-a-differential-database-backup"></a>建立差異資料庫備份  
   
 1.  執行 BACKUP DATABASE 陳述式以建立差異資料庫備份，請指定：  
   
@@ -148,7 +152,7 @@ caps.handback.revision: 34
   
      必要的語法如下：  
   
-     BACKUP DATABASE \<資料庫名稱> TO \<備份裝置> WITH DIFFERENTIAL  
+     BACKUP DATABASE <資料庫名稱> TO <備份裝置> WITH DIFFERENTIAL  
   
 ###  <a name="TsqlExample"></a> 範例 (Transact-SQL)  
  這個範例會建立 `MyAdvWorks` 資料庫的完整和差異資料庫備份。  
@@ -168,7 +172,7 @@ BACKUP DATABASE MyAdvWorks
 GO  
 ```  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [差異備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md)   
  [建立完整資料庫備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)   
  [備份檔案和檔案群組 &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)   

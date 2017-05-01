@@ -1,29 +1,33 @@
 ---
 title: "Performance 事件類別目錄 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQL Server 事件類別, Performance 事件類別目錄"
-  - "Performance 事件類別目錄 [SQL Server]"
-  - "事件類別 [SQL Server], Performance 事件類別目錄"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Server event classes, Performance event category
+- Performance event category [SQL Server]
+- event classes [SQL Server], Performance event category
 ms.assetid: 708f3585-d8be-4980-bbff-672d7c59397e
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c74104068ce59f26b98d30b9e5af31704347d14a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Performance 事件類別目錄
+# <a name="performance-event-category"></a>Performance 事件類別目錄
   使用 **Performance** 事件類別目錄，可以監視 **Showplan** 事件類別，以及經由 SQL 資料操作語言 (DML) 運算子的執行而產生的事件類別。  
   
-## 本節內容  
+## <a name="in-this-section"></a>本節內容  
   
 |主題|描述|  
 |-----------|-----------------|  
@@ -40,7 +44,7 @@ caps.handback.revision: 32
 |[Plan Guide Successful 事件類別](../../relational-databases/event-classes/plan-guide-successful-event-class.md)|指出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 成功針對包含計畫指南的查詢或批次產生了執行計畫。|  
 |[Plan Guide Unsuccessful 事件類別](../../relational-databases/event-classes/plan-guide-unsuccessful-event-class.md)|指出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 無法針對包含計畫指南的查詢或批次產生執行計畫。|  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [擴充事件](../../relational-databases/extended-events/extended-events.md)  
   
   

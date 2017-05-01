@@ -1,38 +1,42 @@
 ---
-title: "建立新的計畫指南 | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-plan-guides"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.designer.newplanguide.f1"
-helpviewer_keywords: 
-  - "建立計畫指南"
-  - "計劃指南 [SQL Server]。 建立"
+title: "建立新的計畫指南 | Microsoft 文件"
+ms.custom: 
+ms.date: 08/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-plan-guides
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.designer.newplanguide.f1
+helpviewer_keywords:
+- creating plan guides
+- plan guides [SQL Server]. creating
 ms.assetid: e1ad78bb-4857-40ea-a0c6-dcf5c28aef2f
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c0cc530e59007070fba228c06a4f8f2983faa3f3
+ms.lasthandoff: 04/11/2017
+
 ---
-# 建立新的計畫指南
+# <a name="create-a-new-plan-guide"></a>建立新的計畫指南
 計畫指南是將查詢提示或固定的查詢計畫附加至查詢，以影響查詢的最佳化。 在計劃指南中，指定您要最佳化的陳述式或包含您想要使用之查詢提示的 OPTION 子句， 或者是您想要用來將查詢進行最佳化的特定查詢計劃。 在執行查詢的時候，查詢最佳化工具會比對 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式與計畫指南，在執行階段將 OPTION 子句附加至查詢，或是使用特定的查詢計畫。  
 
 計劃指南會將固定查詢計劃及/或查詢提示套用至查詢。
   
 ##  <a name="Restrictions"></a> 限制事項  
   
--   sp_create_plan_guide 的引數必須依照顯示順序提供。 當您提供 **sp_create_plan_guide** 的參數值時，必須明確指定所有的參數名稱，或是完全不指定。 例如，如果指定了 **@name =**，您也必須指定 **@stmt =**、**@type =** 等等。 同樣地，如果省略 **@name =**，而只提供參數值，您也必須省略其餘參數名稱，只提供它們的值。 引數名稱僅供描述用途，以協助您了解語法。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不會驗證指定的參數名稱是否與使用該名稱之位置中的參數名稱相符。  
+-   sp_create_plan_guide 的引數必須依照顯示順序提供。 當您提供 **sp_create_plan_guide**的參數值時，必須明確指定所有的參數名稱，或是完全不指定。 例如，若指定了 **@name =**，您也必須指定 **@stmt =**、**@type =** 等等。 同樣地，如果省略 **@name =**，而只提供參數值，您也必須省略其餘參數名稱，只提供它們的值。 引數名稱僅供描述用途，以協助您了解語法。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不會驗證指定的參數名稱是否與使用該名稱之位置中的參數名稱相符。  
   
 -   您可以針對相同的查詢和批次或模組，建立一個以上的 OBJECT 或 SQL 計畫指南。 但是，在任何指定的時間內，只能啟用一個計畫指南。  
   
--   如果 @module_or_batch 值參考的預存程序、函數或 DML 觸發程序指定了 WITH ENCRYPTION 子句或是暫時的，您就不能為這個值建立 OBJECT 類型的計畫指南。  
+-   若 @module_or_batch 值參考的預存程序、函數或 DML 觸發程序指定了 WITH ENCRYPTION 子句或是暫時項目，您就不能為這個值建立 OBJECT 類型的計畫指南。  
   
 -   試圖卸除或修改計畫指南所參考的函數、預存程序或 DML 觸發程序，不論是已啟用或已停用，都會造成錯誤。 嘗試卸除定義了觸發程序且被計畫指南參考的資料表也會造成錯誤。  
  
@@ -100,3 +104,4 @@ caps.handback.revision: 17
  如需詳細資訊，請參閱 [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)。  
   
   
+

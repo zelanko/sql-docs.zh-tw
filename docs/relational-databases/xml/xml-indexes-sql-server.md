@@ -1,45 +1,49 @@
 ---
 title: "XML 索引 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "移除索引"
-  - "刪除索引"
-  - "次要索引 [SQL Server 中的 XML]"
-  - "xml 資料類型 [SQL Server], 索引"
-  - "卸除索引"
-  - "PATH 索引"
-  - "DROP_EXISTING 子句"
-  - "XML [SQL Server], 索引"
-  - "主要索引 [SQL Server 中的 XML]"
-  - "索引 [SQL Server], XML"
-  - "XML 索引 [SQL Server], 次要"
-  - "BLOB, XML 索引"
-  - "停用索引"
-  - "XML 索引 [SQL Server], 修改"
-  - "XML 索引 [SQL Server]"
-  - "XML 索引 [SQL Server], 主要"
-  - "修改索引"
-  - "XML 索引 [SQL Server], 卸除"
-  - "VALUE 索引"
-  - "XML 索引 [SQL Server], xml 資料類型"
-  - "PROPERTY 索引"
-  - "XML 索引 [SQL Server], 建立"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- removing indexes
+- deleting indexes
+- secondary indexes [XML in SQL Server]
+- xml data type [SQL Server], indexes
+- dropping indexes
+- PATH index
+- DROP_EXISTING clause
+- XML [SQL Server], indexes
+- primary indexes [XML in SQL Server]
+- indexes [SQL Server], XML
+- XML indexes [SQL Server], secondary
+- BLOBs, XML indexes
+- disabling indexes
+- XML indexes [SQL Server], modifying
+- XML indexes [SQL Server]
+- XML indexes [SQL Server], primary
+- modifying indexes
+- XML indexes [SQL Server], dropping
+- VALUE index
+- XML indexes [SQL Server], xml data type
+- PROPERTY index
+- XML indexes [SQL Server], creating
 ms.assetid: f5c9209d-b3f3-4543-b30b-01365a5e7333
 caps.latest.revision: 59
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 59
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5b905c48770f83d3b77e2549466eb2513d270b30
+ms.lasthandoff: 04/11/2017
+
 ---
-# XML 索引 (SQL Server)
+# <a name="xml-indexes-sql-server"></a>XML 索引 (SQL Server)
   可以在 **xml** 資料類型資料行上建立 XML 索引。 它們會在資料行中為整個 XML 執行個體的所有標記、值和路徑編制索引，進而提高查詢效能。 在下列情況下，您的應用程式可從 XML 索引獲益：  
   
 -   在您的工作負載中，經常會查詢 XML 資料行。 必須將資料修改期間的 XML 索引維護成本納入考量。  
@@ -55,7 +59,7 @@ caps.handback.revision: 59
  在 **xml** 類型資料行上的第一個索引必須是主要 XML 索引。 使用主要 XML 索引時，可支援下列次要索引類型：PATH、VALUE 及 PROPERTY。 視查詢類型而定，這些次要索引可協助改善查詢效能。  
   
 > [!NOTE]  
->  除非您已正確設定資料庫選項使其可以處理 **xml** 資料類型，否則無法建立或修改 XML 索引。 如需詳細資訊，請參閱[使用 XML 資料行進行全文檢索搜尋](../../relational-databases/xml/use-full-text-search-with-xml-columns.md)。  
+>  除非您已正確設定資料庫選項使其可以處理 **xml** 資料類型，否則無法建立或修改 XML 索引。 如需詳細資訊，請參閱 [使用 XML 資料行進行全文檢索搜尋](../../relational-databases/xml/use-full-text-search-with-xml-columns.md)。  
   
  XML 執行個體是以大型二進位物件 (BLOB) 儲存在 **xml** 類型資料行中。 這些 XML 執行個體可以是大型的，而且所儲存之 **xml** 資料類型執行個體的二進位表示法最多可達 2 GB。 如果沒有索引，這些二進位大型物件就會在執行階段切割，以便評估查詢。 這項切割作業可能會很費時。 例如，請考慮下列查詢：  
   
@@ -69,14 +73,14 @@ FROM Production.ProductModel
 WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]') = 1  
 ```  
   
- 為了選取符合 `WHERE` 子句中條件的 XML 執行個體，在執行階段會切割 `Production.ProductModel` 資料表之每個資料列中的 XML 二進位大型物件 (BLOB)。 然後，便評估 `(/PD:ProductDescription/@ProductModelID[.="19"]` 方法中的運算式 `exist()`)。 此執行階段的切割可能會非常費時，端視資料行中所儲存的執行個體之大小與數目而定。  
+ 為了選取符合 `WHERE` 子句中條件的 XML 執行個體，在執行階段會切割 `Production.ProductModel` 資料表之每個資料列中的 XML 二進位大型物件 (BLOB)。 然後，便評估 `(/PD:ProductDescription/@ProductModelID[.="19"]`方法中的運算式 `exist()` )。 此執行階段的切割可能會非常費時，端視資料行中所儲存的執行個體之大小與數目而定。  
   
  如果查詢 XML 二進位大型物件 (BLOB) 常在您的應用程式環境中發生，它將可協助索引 **xml** 類型資料行。 但是，在修改資料期間會有維護索引的相關成本。  
   
-## 主要 XML 索引  
+## <a name="primary-xml-index"></a>主要 XML 索引  
  主要 XML 索引會在 XML 資料行中檢索 XML 執行個體內的所有標記、值與路徑。 若要建立主要 XML 索引，出現 XML 資料行之資料表必須在資料表的主索引鍵上，具有叢集索引。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用此主索引鍵，以將主要 XML 索引中的資料列與內含 XML 資料行之資料表中的資料列相互關聯。  
   
- 主要 XML 索引是 **xml** 資料類型資料行中，XML BLOB 的切割和保存的表示法。 對於資料行中的每個 XML 二進位大型物件 (BLOB) 而言，索引可建立幾個資料列。 索引中的資料列數目大約等於 XML 二進位大型物件中的節點數目。 當查詢擷取完整 XML 執行個體時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會從 XML 資料行提供此執行個體。 XML 執行個體中的查詢會使用主要 XML 索引，並使用索引本身來傳回純量值或 XML 子樹。  
+ 主要 XML 索引是 **xml** 資料類型資料行中，XML BLOB 的切割和保存的表示法。 對於資料行中的每個 XML 二進位大型物件 (BLOB) 而言，索引可建立幾個資料列。 索引中的資料列數目大約等於 XML 二進位大型物件中的節點數目。 當查詢擷取完整 XML 執行個體時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會從 XML 資料行提供此執行個體。 XML 執行個體中的查詢會使用主要 XML 索引，並使用索引本身來傳回純量值或 XML 子樹。  
   
  每個資料列都會儲存下列節點資訊：  
   
@@ -100,7 +104,7 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
 -   `/Book/*/Title` 於運算式的中間指定了萬用字元 (`*`)。  
   
- 查詢處理器會使用主要 XML 索引來進行包含 [xml 資料類型方法](../../t-sql/xml/xml-data-type-methods.md)的查詢，並從主要索引本身傳回純量值或 XML 子樹。 (這個索引會儲存重新建構 XML 執行個體的所有必要資訊)。  
+ 查詢處理器會使用主要 XML 索引來進行包含 [xml 資料類型方法](../../t-sql/xml/xml-data-type-methods.md) 的查詢，並從主要索引本身傳回純量值或 XML 子樹。 (這個索引會儲存重新建構 XML 執行個體的所有必要資訊)。  
   
  例如，下列查詢會傳回儲存在 `CatalogDescription`**xml** 類型資料行`ProductModel`資料表中的摘要資訊。 此查詢只會針對目錄描述也儲存 <`Features`> 描述的產品型號傳回其 <`Summary`> 資訊。  
   
@@ -116,7 +120,7 @@ WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-wo
 USE AdventureWorks2012;SELECT InstructionsFROM Production.ProductModel WHERE ProductModelID=7;  
 ```  
   
-## 次要 XML 索引  
+## <a name="secondary-xml-indexes"></a>次要 XML 索引  
  若要增強搜尋效能，您可以建立次要的 XML 索引。 在建立次要索引之前，必須先有主要 XML 索引存在。 以下為其類型：  
   
 -   PATH 次要 XML 索引  
@@ -131,9 +135,9 @@ USE AdventureWorks2012;SELECT InstructionsFROM Production.ProductModel WHERE Pro
   
 -   如果您的工作負載使用路徑運算式，從個別的 XML 執行個體中擷取多個值，則在 PROPERTY 索引中將路徑叢集在每個 XML 執行個體中，可能會有所幫助。 當物件的屬性被提取，且已知其主索引鍵值時，此案例通常會發生在屬性包案例中。  
   
--   如果您的工作負載需要查詢 XML 執行個體中的值，但您不知道含有那些值的元素或屬性名稱，您可能會想要建立 VALUE 索引。 這通常會發生在子系座標軸查閱，例如 //author[last-name="Howard"]，其中 \<author> 元素可出現在階層中的任何層級。 這也會發生在萬用字元查詢中，例如 /book [@* = "novel"]，此查詢是要尋找屬性中具有 "novel" 值的 \<book> 元素。  
+-   如果您的工作負載需要查詢 XML 執行個體中的值，但您不知道含有那些值的元素或屬性名稱，您可能會想要建立 VALUE 索引。 這通常會發生在子系座標軸查閱，例如 //author[last-name="Howard"]，其中 \<author> 項目可出現在階層中的任何層級。 這也會發生在萬用字元查詢中，例如 /book [@* = "novel"]，此查詢是要尋找屬性中具有 "novel" 值的 \<book> 項目。  
   
-### PATH 次要 XML 索引  
+### <a name="path-secondary-xml-index"></a>PATH 次要 XML 索引  
  如果您的查詢通常會在 **xml** 類型資料行上指定路徑運算式，則使用 PATH 次要索引將可使搜尋速度變快。 如本主題前面所述，當您的查詢在 WHERE 子句中指定 **exist()** 方法時，主索引就非常有用。 如果您加入 PATH 次要索引，也可以改善這類查詢的搜尋效能。  
   
  雖然主要 XML 索引可避免必須在執行階段切割 XML 二進位大型物件，但是它可能無法為以路徑運算式為基礎的查詢提供最佳的效能。 由於會針對大型 XML 執行個體，循序搜尋與 XML 二進位大型物件相對應的主要 XML 索引中的所有資料列，因此循序搜尋可能會很慢。 在此情況下，將次要索引建立在主要索引的路徑值與節點值上，將可大幅增加索引搜尋的速度。 在 PATH 次要索引中，路徑與節點值都是索引鍵資料行，可在搜尋路徑時進行更有效率的搜尋。 查詢最佳化工具可以針對如下列所示的運算式使用 PATH 索引：  
@@ -156,18 +160,18 @@ FROM Production.ProductModel
 WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]') = 1  
 ```  
   
- 在查詢中，`exist()` 方法中的路徑運算式 `/PD:ProductDescription/@ProductModelID` 與 `"19"` 值會對應至 PATH 索引的索引鍵欄位。 這允許在 PATH 索引中進行直接搜尋，並對主索引中的路徑值提供比循序搜尋更佳的搜尋效能。  
+ 在查詢中， `/PD:ProductDescription/@ProductModelID` 方法中的路徑運算式 `"19"` 與 `exist()` 值會對應至 PATH 索引的索引鍵欄位。 這允許在 PATH 索引中進行直接搜尋，並對主索引中的路徑值提供比循序搜尋更佳的搜尋效能。  
   
-### VALUE 次要 XML 索引  
- 如果查詢是以值為基礎，例如，`/Root/ProductDescription/@*[. = "Mountain Bike"]` 或 `//ProductDescription[@Name = "Mountain Bike"]`，且並未完整指定路徑，或是路徑中包含萬用字元，您可以透過在主要 XML 索引的節點值上建立次要 XML 索引，以獲得更快的結果。  
+### <a name="value-secondary-xml-index"></a>VALUE 次要 XML 索引  
+ 如果查詢是以值為基礎，例如， `/Root/ProductDescription/@*[. = "Mountain Bike"]` 或 `//ProductDescription[@Name = "Mountain Bike"]`，且並未完整指定路徑，或是路徑中包含萬用字元，您可以透過在主要 XML 索引的節點值上建立次要 XML 索引，以獲得更快的結果。  
   
  VALUE 索引的索引鍵資料行是主要 XML 索引的節點值與路徑。 如果您的工作負載需要在不知道包含值的元素或屬性名稱的情況下，從 XML 執行個體查詢值，VALUE 索引將會非常有用。 例如，下列運算式將可從擁有 VALUE 索引而獲益：  
   
--   `//author[LastName="someName"]` 您知道 <`LastName`> 元素的值，但 <`author`> 父系可發生於任何位置。  
+-   `//author[LastName="someName"]`，其中您知道 <`LastName`> 元素的值，但是 <`author`> 父系可存在於任何位置。  
   
--   `/book[@* = "someValue"]` 當查詢尋找某些屬性具有 `"someValue"` 值的 <`book`> 元素。  
+-   在 `/book[@* = "someValue"]` 中，查詢會尋找某些屬性中包含值 `"someValue"` 的 <`book`> 元素。  
   
- 下列查詢會從 `ContactID` 資料表傳回 `Contact`。 `WHERE` 子句可指定篩選，在 `AdditionalContactInfo` **xml** 類型資料行中尋找值。 如果對應的其他連絡資訊 XML 二進位大型物件包含特定的電話號碼，就會傳回連絡識別碼。 因為 <`telephoneNumber`> 元素有可能出現在 XML 的任何位置，所以路徑運算式會指定 descendent-or-self 軸。  
+ 下列查詢會從 `ContactID` 資料表傳回 `Contact` 。 `WHERE` 子句可指定篩選，在 `AdditionalContactInfo` **xml** 類型資料行中尋找值。 如果對應的其他連絡資訊 XML 二進位大型物件包含特定的電話號碼，就會傳回連絡識別碼。 因為 <`telephoneNumber`> 元素有可能出現在 XML 的任何位置，所以路徑運算式會指定 descendent-or-self 軸。  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -181,7 +185,7 @@ WHERE  AdditionalContactInfo.exist('//ACT:telephoneNumber/ACT:number[.="111-111-
   
  在此情況下，雖然已得知 <`number`> 的搜尋值，但它有可能以 <`telephoneNumber`> 元素的子系出現在 XML 執行個體中的任何位置。 此類的查詢可從以特定值為基礎的索引查閱獲益。  
   
-### PROPERTY 次要索引  
+### <a name="property-secondary-index"></a>PROPERTY 次要索引  
  從個別 XML 執行個體擷取一或多個值的查詢可從 PROPERTY 索引獲益。 當您使用 **xml** 類型的 **value()** 方法擷取物件屬性，且物件的主索引鍵值為已知時，就會發生此情況。  
   
  PROPERTY 索引是建立在主要 XML 索引的資料行 (PK、Path 以及節點值) 上，在主要 XML 索引中 PK 是基底資料表的主索引鍵。  
@@ -197,7 +201,7 @@ FROM Production.ProductModel
 WHERE ProductModelID = 19  
 ```  
   
- 除了本主題後文所述的差異之外，在 **xml**類型資料行上建立 XML 索引與在非 **xml** 類型資料行上建立索引類似。 下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] DDL 陳述式可用以建立及管理 XML 索引：  
+ 除了本主題後文所述的差異之外，在**xml** 類型資料行上建立 XML 索引與在非**xml** 類型資料行上建立索引類似。 下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] DDL 陳述式可用以建立及管理 XML 索引：  
   
 -   [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  
   
@@ -205,14 +209,14 @@ WHERE ProductModelID = 19
   
 -   [DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)  
   
-## 取得有關 XML 索引的資訊  
+## <a name="getting-information-about-xml-indexes"></a>取得有關 XML 索引的資訊  
  XML 索引項目會出現在目錄檢視 sys.indexes 中，且具有索引 "type" 3。 名稱資料行包含此 XML 索引的名稱。  
   
  XML 索引也會記錄在目錄檢視 sys.xml_indexes 中。 其中包含 sys.indexes 的所有資料行，以及對 XML 索引有助益的一些特定資料行。 資料行 secondary_type 中的 NULL 值是指主要 XML 索引；'P'、'R' 和 'V' 這三個值分別代表 PATH、PROPERTY 和 VALUE 次要 XML 索引。  
   
- XML 索引使用的空間可以在資料表值函式 [sys.dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) 中找到。 其提供所有索引類型的資訊，例如：所佔用的磁碟分頁數量、平均資料列大小 (位元組)，以及記錄的數量。 另外還包含 XML 索引。 每個資料庫分割區都有此資訊。 XML 索引使用相同的基底資料表分割區配置及分割區功能。  
+ XML 索引使用的空間可以在資料表值函式 [sys.dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)中找到。 其提供所有索引類型的資訊，例如：所佔用的磁碟分頁數量、平均資料列大小 (位元組)，以及記錄的數量。 另外還包含 XML 索引。 每個資料庫分割區都有此資訊。 XML 索引使用相同的基底資料表分割區配置及分割區功能。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)   
  [XML 資料 &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)  
   

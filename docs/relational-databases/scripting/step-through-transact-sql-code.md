@@ -1,33 +1,37 @@
 ---
 title: "逐步執行 Transact-SQL 程式碼 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Transact-SQL 偵錯工具, 偵錯程式碼"
-  - "Transact-SQL 偵錯工具, 不進入函數"
-  - "Transact-SQL 偵錯工具, 跳離函數"
-  - "Transact-SQL 偵錯工具, 逐步執行"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Transact-SQL debugger, debugging code
+- Transact-SQL debugger, step over
+- Transact-SQL debugger, step out
+- Transact-SQL debugger, step into
 ms.assetid: e09079b8-c4c9-42b4-821b-4ce81a98a086
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 68bc53fbfbe4db76e44042936642ad8541784b36
+ms.lasthandoff: 04/11/2017
+
 ---
-# 逐步執行 Transact-SQL 程式碼
+# <a name="step-through-transact-sql-code"></a>逐步執行 Transact-SQL 程式碼
   [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具可讓您控制哪些 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式要在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器視窗中執行。 您可以在個別的陳述式上暫停偵錯工具，然後在該點檢視程式碼項目的狀態。  
   
-## 中斷點  
- 中斷點會告知偵錯工具要在特定的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式上暫停執行作業。 如需有關中斷點的詳細資訊，請參閱＜使用 Transact-SQL 中斷點＞。  
+## <a name="breakpoints"></a>中斷點  
+ 中斷點會告知偵錯工具要在特定的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式上暫停執行作業。 如需中斷點的詳細資訊，請參閱 [Transact-SQL 中斷點](../../relational-databases/scripting/transact-sql-breakpoints.md)。  
   
-## 控制陳述式執行  
+## <a name="controlling-statement-execution"></a>控制陳述式執行  
  在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具中，您可以指定下列選項，以便在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼中從目前的陳述式執行：  
   
 -   執行到下一個中斷點。  
@@ -56,7 +60,7 @@ caps.handback.revision: 18
 |跳離模組|在 [偵錯] 功能表上，按一下 [跳離函數]。<br /><br /> 在 [偵錯] 工具列上，按一下 [跳離函數] 按鈕。<br /><br /> 按下 SHIFT+F11。|  
 |執行至目前的資料指標位置|在 [查詢編輯器] 視窗中按一下滑鼠右鍵，然後按一下 [執行至資料指標處]。<br /><br /> 按下 CTRL+F10。|  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [Transact-SQL 偵錯工具資訊](../../relational-databases/scripting/transact-sql-debugger-information.md)  
   
   

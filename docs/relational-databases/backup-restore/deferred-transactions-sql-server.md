@@ -1,31 +1,35 @@
 ---
-title: "延遲交易 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "I/O [SQL Server], 資料庫復原"
-  - "還原分頁 [SQL Server]"
-  - "延遲交易"
-  - "修改交易延遲狀態"
+title: "延遲交易 (SQL Server) | Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- I/O [SQL Server], database recovery
+- restoring pages [SQL Server]
+- deferred transactions
+- modifying transaction deferred state
 ms.assetid: 6fc0f9b6-d3ea-4971-9f27-d0195d1ff718
 caps.latest.revision: 45
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 45
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2ee31af10105103d0bccb8c1ff7b48a73086f44d
+ms.lasthandoff: 04/11/2017
+
 ---
-# 延遲交易 (SQL Server)
+# <a name="deferred-transactions-sql-server"></a>延遲交易 (SQL Server)
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise 中，如果在資料庫啟動期間，回復 (復原) 所需的資料已離線，就會延期損毀的交易。 「延遲交易」是在向前復原階段完成時尚未認可，而發生無法回復之錯誤的交易。 因為交易無法回復，所以會延期。  
   
 > [!NOTE]  
->  只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise 才會延期損毀的交易。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的其他版本中，損毀的交易會造成啟動失敗。  
+>  只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise 才會延期損毀的交易。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的其他版本中，損毀的交易會造成啟動失敗。  
   
  發生延遲交易通常是因為，在向前復原資料庫時發生 I/O 錯誤，使得系統無法讀取交易所需的頁面。 不過，檔案層級的錯誤也可能導致交易延遲。 當部分還原順序在需要進行交易回復時停止，且交易所需的資料已離線，就有可能發生交易延遲。  
   
@@ -45,7 +49,7 @@ caps.handback.revision: 45
 |重做資料庫鏡像|延遲交易|  
 |檔案群組離線|延遲交易|  
   
-## 將交易移出 DEFERRED 狀態  
+## <a name="moving-a-transaction-out-of-the-deferred-state"></a>將交易移出 DEFERRED 狀態  
   
 > [!IMPORTANT]  
 >  延遲交易會讓交易記錄保持在使用中狀態。 在這些交易移出延遲狀態之前，將無法截斷含有任何延遲交易的虛擬記錄檔。 如需記錄截斷的詳細資訊，請參閱[交易記錄 &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)。  
@@ -71,7 +75,7 @@ caps.handback.revision: 45
     > [!IMPORTANT]  
     >  無用的檔案群組永遠都不能復原。  
   
-     如需詳細資訊，請參閱[移除無用的檔案群組 &#40;SQL Server &#41;](../../relational-databases/backup-restore/remove-defunct-filegroups-sql-server.md)。  
+     如需詳細資訊，請參閱 [移除無用的檔案群組 &#40;SQL Server&#41;](../../relational-databases/backup-restore/remove-defunct-filegroups-sql-server.md)。  
   
 -   如果交易因錯誤的頁面而延遲，而且資料庫的完好備份不存在，請使用下列程序來修復資料庫：  
   
@@ -81,13 +85,13 @@ caps.handback.revision: 45
         ALTER DATABASE <database_name> SET EMERGENCY  
         ```  
   
-         如需緊急模式的詳細資訊，請參閱[資料庫狀態](../../relational-databases/databases/database-states.md)。  
+         如需緊急模式的詳細資訊，請參閱 [資料庫狀態](../../relational-databases/databases/database-states.md)。  
   
-    -   接著，在下列其中一個 DBCC 陳述式內使用 DBCC REPAIR_ALLOW_DATA_LOSS 選項以修復資料庫：[DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)、[DBCC CHECKALLOC](../../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md) 或 [DBCC CHECKTABLE](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md)。  
+    -   接著，在下列其中一個 DBCC 陳述式內使用 DBCC REPAIR_ALLOW_DATA_LOSS 選項以修復資料庫： [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)、 [DBCC CHECKALLOC](../../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md)或 [DBCC CHECKTABLE](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md)。  
   
          當 DBCC 發現錯誤的頁面時，它會取消配置該頁面，並修復任何相關的錯誤。 此方式可以讓資料庫以實體上一致的狀態回到線上。 不過，很可能遺失其他資料，因此除非不得已，盡量不要使用這個方式。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [還原和復原概觀 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)   
  [移除無用的檔案群組 &#40;SQL Server&#41;](../../relational-databases/backup-restore/remove-defunct-filegroups-sql-server.md)   
  [檔案還原 &#40;完整復原模式&#41;](../../relational-databases/backup-restore/file-restores-full-recovery-model.md)   
@@ -95,6 +99,6 @@ caps.handback.revision: 45
  [還原頁面 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-pages-sql-server.md)   
  [分次還原 &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)  
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
   
   

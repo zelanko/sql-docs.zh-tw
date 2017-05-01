@@ -1,27 +1,31 @@
 ---
-title: "針對擴充事件使用 PowerShell 提供者 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "PowerShell [SQL Server], xevent"
-  - "擴充事件 [SQL Server], PowerShell"
-  - "PowerShell [SQL Server], 擴充事件"
+title: "針對擴充事件使用 PowerShell 提供者 | Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- PowerShell [SQL Server], xevent
+- extended events [SQL Server], PowerShell
+- PowerShell [SQL Server], extended events
 ms.assetid: 0b10016f-a479-4444-a484-46cb4677cf64
 caps.latest.revision: 14
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a89501cc32ec51bd081230ea897058d3956c7a2b
+ms.lasthandoff: 04/11/2017
+
 ---
-# 針對擴充事件使用 PowerShell 提供者
+# <a name="use-the-powershell-provider-for-extended-events"></a>針對擴充事件使用 PowerShell 提供者
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 提供者來管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 擴充事件。 XEvent 子資料夾位於 SQLSERVER 磁碟機底下。 您可以使用下列其中一種方法來存取這個資料夾：  
@@ -41,7 +45,7 @@ caps.handback.revision: 14
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 提供者是一項功能強大的工具，可讓您用來建立、改變和管理擴充事件工作階段。 下列章節將提供使用 PowerShell 指令碼搭配擴充事件的一些基本範例。  
   
-## 範例  
+## <a name="examples"></a>範例  
  在下列範例中，請注意：  
   
 -   您必須從 PS SQLSERVER:\\> 提示字元 (在命令提示字元中輸入 **sqlps** 即可使用) 執行這些指令碼。  
@@ -68,7 +72,7 @@ $event.AddAction("package0.callstack")
 $session.Create()  
 ```  
   
- 下列指令碼會將信號緩衝區目標加入至您在上一則範例中建立的工作階段  (此範例會示範如何使用 **Alter** 方法。 請注意，當您第一次建立工作階段時，可以加入目標)。  
+ 下列指令碼會將信號緩衝區目標加入至您在上一則範例中建立的工作階段 (此範例會示範如何使用 **Alter** 方法。 請注意，當您第一次建立工作階段時，可以加入目標)。  
   
 ```  
 #Script to alter a session.  
@@ -108,10 +112,10 @@ $event.SetPredicate($predicate)
 $session.Create()  
 ```  
   
-## 安全性  
+## <a name="security"></a>安全性  
  若要建立、更改或卸除擴充事件工作階段，您必須擁有 ALTER ANY EVENT SESSION 權限。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)   
  [使用 system_health 工作階段](../../relational-databases/extended-events/use-the-system-health-session.md)   
  [擴充事件工具](../../relational-databases/extended-events/extended-events-tools.md)  

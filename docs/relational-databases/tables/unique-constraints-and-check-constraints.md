@@ -1,25 +1,29 @@
 ---
-title: "唯一條件約束與檢查條件約束 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "條件約束 [SQL Server], Visual Database Tools"
-  - "Visual Database Tools [SQL Server], 條件約束"
+title: "唯一條件約束與檢查條件約束 | Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- constraints [SQL Server], Visual Database Tools
+- Visual Database Tools [SQL Server], constraints
 ms.assetid: 637098af-2567-48f8-90f4-b41df059833e
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b5596207dc1188bd9830c0993402194954737c6a
+ms.lasthandoff: 04/11/2017
+
 ---
-# 唯一條件約束與檢查條件約束
+# <a name="unique-constraints-and-check-constraints"></a>唯一條件約束與檢查條件約束
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   UNIQUE 和 CHECK 是兩種類型的條件約束，可用來強制執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表中的資料完整性。 這些都是重要的資料庫物件。  
@@ -51,7 +55,7 @@ caps.handback.revision: 20
 > [!CAUTION]  
 >  包括明確或隱含資料類型轉換的條件約束可能會導致某些作業失敗。 例如，在資料分割切換來源的資料表上所定義的此類條件約束，可能會導致 ALTER TABLE...SWITCH 作業失敗。 應避免在條件約束定義中進行資料類型轉換。  
   
-### CHECK 條件約束的限制  
+### <a name="limitations-of-check-constraints"></a>CHECK 條件約束的限制  
  CHECK 條件約束會拒絕評估為 FALSE 的值。 因為 Null 值會評估為 UNKNOWN，所以若其出現於運算式中，可能會覆寫條件約束。 例如，假設您將條件約束放在 **int** 資料行 **MyColumn** 中，指定 **MyColumn** 只能包含 10 這個值 (**MyColumn=10**)。 如果您將 NULL 值插入 **MyColumn**，則 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會插入 NULL 且不會傳回錯誤。  
   
  CHECK 條件約束會針對資料表中的所有資料列進行檢查，當檢查的條件不為 FALSE 時，會傳回 TRUE。 CHECK 條件約束可在資料列層級運作。 如果剛建立的資料表沒有任何資料列，則這個資料表上的任何 CHECK 條件約束都將視為有效。 這種情況可能會產生非預期結果，如下列範例所示。  

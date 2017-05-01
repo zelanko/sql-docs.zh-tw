@@ -1,32 +1,36 @@
 ---
 title: "參數資訊 (IntelliSense) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "參數資訊選項 [IntelliSense]"
-  - "儲存的函數參數完成 [IntelliSense]"
-  - "語言參考 [SQL Server]"
-  - "IntelliSense [SQL Server], 參數資訊選項"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Parameter Info option [IntelliSense]
+- stored function parameter completion [Intellisense]
+- language references [SQL Server]
+- IntelliSense [SQL Server], Parameter Info option
 ms.assetid: 56c2aac9-c65c-4679-b62c-d9f689876dde
 caps.latest.revision: 33
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 33
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b76a63705473437b283e104414f3729166ce2338
+ms.lasthandoff: 04/11/2017
+
 ---
-# 參數資訊 (IntelliSense)
+# <a name="parameter-info-intellisense"></a>參數資訊 (IntelliSense)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense 的 [參數資訊] 選項會開啟一個參數清單，為您提供函數或預存程序所需之參數數目、名稱和類型的相關資訊。 粗體的參數表示當您輸入函數或預存程序時所需的下一個參數。  
   
  巢狀函數也有參數清單。 如果您將函數當作參數輸入到另一個函數中，參數清單會顯示內部函數的參數。 之後，當內部函數參數清單完成時，參數清單會回復成顯示外部函數參數。  
   
-#### 檢視函數或預存程序的參數資訊  
+#### <a name="to-view-parameter-info-for-functions-or-stored-procedures"></a>檢視函數或預存程序的參數資訊  
   
 1.  在函數名稱之後，依照通常開啟參數清單時的相同輸入方式，輸入一個左括號。 輸入預存程序的名稱之後，以您通常輸入的方式輸入一個空格，即可取得有關程序參數的資訊。  
   
@@ -38,7 +42,7 @@ caps.handback.revision: 33
   
      如果是函數，當您輸入右括號時，也會關閉參數清單。  
   
-#### 手動啟動參數資訊  
+#### <a name="to-manually-start-parameter-info"></a>手動啟動參數資訊  
   
 1.  按一下 [編輯] 功能表，選取 [IntelliSense]，然後選取 [參數資訊]。  
   

@@ -1,22 +1,26 @@
 ---
 title: "規劃在 SQL Server 中採用記憶體內部 OLTP 功能 | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/05/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 10/05/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 041b428f-781d-4628-9f34-4d697894e61e
 caps.latest.revision: 4
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 3
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 4404ee4d70ed16ddaad5d0600f5d37225897d455
+ms.lasthandoff: 04/11/2017
+
 ---
-# 規劃在 SQL Server 中採用記憶體內部 OLTP 功能
+# <a name="plan-your-adoption-of-in-memory-oltp-features-in-sql-server"></a>規劃在 SQL Server 中採用記憶體內部 OLTP 功能
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
 
@@ -24,7 +28,7 @@ caps.handback.revision: 3
 
 
 
-## A. 採用記憶體內部 OLTP 功能
+## <a name="a-adoption-of-in-memory-oltp-features"></a>A. 採用記憶體內部 OLTP 功能
 
 
 下列小節將討論您計劃採用及實作記憶體內部功能時，您必須考慮的因素。 許多說明資訊位於︰
@@ -33,7 +37,7 @@ caps.handback.revision: 3
 
 
 
-### A.1 必要條件
+### <a name="a1-prerequisites"></a>A.1 必要條件
 
 使用記憶體內部功能的一項必要條件，可能需要 SQL 產品的版本或服務層。 如需這項與其他必要條件，請參閱︰
 
@@ -42,31 +46,31 @@ caps.handback.revision: 3
     - [SQL Database 定價層建議](https://azure.microsoft.com/documentation/articles/sql-database-service-tier-advisor/)
 
 
-### A.2 預測使用中的記憶體數量
+### <a name="a2-forecast-the-amount-of-active-memory"></a>A.2 預測使用中的記憶體數量
 
 您的系統是否有足夠的使用中記憶體，可以支援新的記憶體最佳化資料表？
 
-#### Microsoft SQL Server
+#### <a name="microsoft-sql-server"></a>Microsoft SQL Server
 
 記憶體最佳化資料表，其中包含 200 GB 的資料，需要超過 200 GB 的使用中記憶體專門用來支援它。 實作包含大量資料的記憶體最佳化資料表之前，您必須預測可能需要新增至伺服器電腦的額外使用中記憶體數量。 如需估計指引，請參閱︰
 
 - [估計記憶體最佳化資料表的記憶體需求](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md)
 
-#### Azure SQL Database
+#### <a name="azure-sql-database"></a>Azure SQL Database
 
 對於裝載於 Azure SQL Database 雲端服務的資料庫，您所選的服務層會影響資料庫允許使用的使用中記憶體數量。 您應該規劃使用警示來監視資料庫的記憶體使用量。 如需詳細資料，請參閱：
 
 - [監視記憶體內部 OLTP 儲存體](https://azure.microsoft.com/documentation/articles/sql-database-in-memory-oltp-monitoring/)
 
-#### 記憶體最佳化資料表變數
+#### <a name="memory-optimized-table-variables"></a>記憶體最佳化資料表變數
 
 宣告為記憶體最佳化的資料表變數有時候會比位於 **tempdb** 資料庫的傳統 #TempTable 更適合。 這類資料表變數可以大幅提升效能，而不必使用大量的使用中記憶體。
 
-### A.3 資料表必須離線，才能轉換成記憶體最佳化
+### <a name="a3-table-must-be-offline-to-convert-to-memory-optimized"></a>A.3 資料表必須離線，才能轉換成記憶體最佳化
 
 某些 ALTER TABLE 功能適用於記憶體最佳化資料表。 但您無法發出 ALTER TABLE 陳述式將以磁碟為基礎的資料表轉換成記憶體最佳化資料表。 相反地，您必須使用一組更手動化的步驟。 下面是您可以將以磁碟為基礎的資料表轉換成記憶體最佳化的各種方式。
 
-#### 手動撰寫指令碼
+#### <a name="manual-scripting"></a>手動撰寫指令碼
 
 將以磁碟為基礎的資料表轉換成記憶體最佳化資料表的方法之一，是自行撰寫所需的 Transact-SQL 步驟。
 
@@ -88,7 +92,7 @@ caps.handback.revision: 3
 8. 繼續應用程式活動。
 
 
-#### 記憶體最佳化 Advisor
+#### <a name="memory-optimization-advisor"></a>記憶體最佳化 Advisor
 
 「記憶體最佳化建議程式」工具可以產生指令碼，以協助實作將以磁碟為基礎的資料表轉換成記憶體最佳化資料表。 此工具會在安裝 SQL Server Data Tools (SSDT) 時一起安裝。
 
@@ -96,7 +100,7 @@ caps.handback.revision: 3
 - [下載 SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx)
 
 
-#### .dacpac 檔案
+#### <a name="dacpac-file"></a>.dacpac 檔案
 
 您可以使用由 SSDT 管理的 .dacpac 檔案就地更新資料庫。 在 SSDT 中，您可以指定編碼在 .dacpac 檔案中的結構描述的變更。
 
@@ -106,7 +110,7 @@ caps.handback.revision: 3
 
 
 
-### A.4 記憶體內部 OLTP 功能是否適合您的應用程式的指引
+### <a name="a4-guidance-for-whether-in-memory-oltp-features-are-right-for-your-application"></a>A.4 記憶體內部 OLTP 功能是否適合您的應用程式的指引
 
 如需記憶體內部功能是否可以改善特定應用程式效能的指引，請參閱︰
 
@@ -114,7 +118,7 @@ caps.handback.revision: 3
 
 
 
-## B. 不支援的功能
+## <a name="b-unsupported-features"></a>B. 不支援的功能
 
 特定記憶體內部案例中不支援的功能說明於︰
 
@@ -124,9 +128,9 @@ caps.handback.revision: 3
 下列小節將強調一些更重要的不支援功能。
 
 
-### B.1 資料庫快照集
+### <a name="b1-snapshot-of-a-database"></a>B.1 資料庫快照集
 
-在給定資料庫中第一次建立任何記憶體最佳化資料表或模組之後，無法再取得資料庫的任何[快照集](../../relational-databases/databases/database-snapshots-sql-server.md)。 特定的原因在於︰
+在給定資料庫中第一次建立任何記憶體最佳化資料表或模組之後，無法再取得資料庫的任何 [快照集](../../relational-databases/databases/database-snapshots-sql-server.md) 。 特定的原因在於︰
 
 - 第一個記憶體最佳化的項目，使得完全不可能從記憶體最佳化檔案群組卸除最後一個檔案；且
 - 在記憶體最佳化檔案群組中有檔案的資料庫都無法支援快照集。
@@ -134,21 +138,21 @@ caps.handback.revision: 3
 一般而言，快照集可以方便快速測試反覆運算。
 
 
-### B.2 跨資料庫查詢
+### <a name="b2-cross-database-queries"></a>B.2 跨資料庫查詢
 
-記憶體最佳化資料表不支援[跨資料庫](../../relational-databases/in-memory-oltp/cross-database-queries.md)的交易。 您無法在同時存取記憶體最佳化資料表的相同交易或相同查詢中存取另一個資料庫。
+記憶體最佳化資料表不支援 [跨資料庫](../../relational-databases/in-memory-oltp/cross-database-queries.md) 的交易。 您無法在同時存取記憶體最佳化資料表的相同交易或相同查詢中存取另一個資料庫。
 
-資料表變數並非交易式。 因此，[記憶體最佳化資料表變數](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md)可用於跨資料庫查詢。
+資料表變數並非交易式。 因此， [記憶體最佳化資料表變數](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md) 可用於跨資料庫查詢。
 
 
-### B.3 READPAST 資料表提示
+### <a name="b3-readpast-table-hint"></a>B.3 READPAST 資料表提示
 
-沒有查詢可以將 READPAST [資料表提示](Table%20Hints%20%28Transact-SQL%29.md)套用到任何記憶體最佳化資料表。
+沒有查詢可以將 READPAST [資料表提示](../../t-sql/queries/hints-transact-sql-table.md) 套用到任何記憶體最佳化資料表。
 
 READPAST 提示在一些案例中很有幫助，例如數個工作階段全都存取和修改相同的少量資料列，例如在處理佇列時。
 
 
-### B.4 RowVersion、Sequence
+### <a name="b4-rowversion-sequence"></a>B.4 RowVersion、Sequence
 
 - 無法在記憶體最佳化資料表上針對 [RowVersion](../../t-sql/data-types/rowversion-transact-sql.md) 標記任何資料行。
 
@@ -156,25 +160,25 @@ READPAST 提示在一些案例中很有幫助，例如數個工作階段全都�
 - [SEQUENCE](../../t-sql/statements/create-sequence-transact-sql.md) 物件不能用於任何記憶體最佳化資料表。
 
 
-## C. 管理維護
+## <a name="c-administrative-maintenance"></a>C. 管理維護
 
 
 本節描述使用記憶體最佳化資料表時的資料庫管理差異。
 
 
-### C.1 識別種子重設、遞增 > 1
+### <a name="c1-identity-seed-reset-increment--1"></a>C.1 識別種子重設、遞增 > 1
 
 [DBCC CHECKIDENT](../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md)，以重新植入 IDENTITY 資料行，不能用於記憶體最佳化資料表。
 
 遞增值限制為在記憶體最佳化資料表的 IDENTITY 資料行上恰好為 1。
 
 
-### C.2 DBCC CHECKDB 無法驗證記憶體最佳化資料表
+### <a name="c2-dbcc-checkdb-cannot-validate-memory-optimized-tables"></a>C.2 DBCC CHECKDB 無法驗證記憶體最佳化資料表
 
 [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) 命令在其目標為記憶體最佳化資料表時，不做任何動作。 以下步驟是解決辦法︰
 
 
-1. [備份交易記錄](Back%20Up%20a%20Transaction%20Log%20%28SQL Server%29.md)。
+1. [備份交易記錄](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)。
 
 2. 將記憶體最佳化檔案群組中的檔案備份至空的裝置。 備份程序會叫用總和檢查碼驗證。
 
@@ -190,12 +194,12 @@ READPAST 提示在一些案例中很有幫助，例如數個工作階段全都�
 
 
 
-## D. 效能
+## <a name="d-performance"></a>D. 效能
 
 本節描述記憶體最佳化資料表在哪些情況下能保有優異效能的完整潛力。
 
 
-### D.1 索引考量
+### <a name="d1-index-considerations"></a>D.1 索引考量
 
 資料表相關的陳述式 CREATE TABLE 和 ALTER TABLE 會建立和管理記憶體最佳化資料表上的所有索引。 您無法針對記憶體最佳化資料表使用 CREATE INDEX 陳述式。
 
@@ -208,9 +212,9 @@ READPAST 提示在一些案例中很有幫助，例如數個工作階段全都�
 - [記憶體最佳化資料表的索引](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)
 
 
-#### 雜湊索引
+#### <a name="hash-indexes"></a>雜湊索引
 
-要使用 '**=**' 運算子，以精確的主索引鍵值來存取一個特定資料列時，雜湊索引可能是最快速的格式。。
+要使用 '**=**' 運算子，以精確的主索引鍵值來存取一個特定資料列時，雜湊索引可能是最快速的格式。
 
 - 不精確的運算子，例如 '**!=**'、'**>**'，或 '**BETWEEN**' 會損害效能，如果搭配雜湊索引使用的話。
 
@@ -220,12 +224,12 @@ READPAST 提示在一些案例中很有幫助，例如數個工作階段全都�
     - [記憶體最佳化資料表的雜湊索引](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md)
 
 
-#### 非叢集資料行存放區索引
+#### <a name="nonclustered-columnstore-indexes"></a>非叢集資料行存放區索引
 
-記憶體最佳化資料表提供一般商務交易資料的高輸送量，這個典範我們稱為「線上交易處理」或 *OLTP*。 資料行存放區索引提供彙總與類似處理的高輸送量，我們稱為「分析」。 在過去，滿足 OLTP 和分析的需求最好的方法，是使用個別的資料表，並大量移動資料，且具有某種程度的資料重複。 現在，有更簡單的**混合式解決方案**︰記憶體最佳化資料表的資料行存放區索引。
+記憶體最佳化資料表提供一般商務交易資料的高輸送量，這個典範我們稱為「線上交易處理」或 *OLTP*。 資料行存放區索引提供彙總與類似處理的高輸送量，我們稱為「分析」。 在過去，滿足 OLTP 和分析的需求最好的方法，是使用個別的資料表，並大量移動資料，且具有某種程度的資料重複。 現在，有更簡單的 **混合式解決方案** ︰記憶體最佳化資料表的資料行存放區索引。
 
 
-- [資料行存放區索引](Columnstore%20Indexes%20Guide.md)可以建立在以磁碟為基礎的資料表上，甚至是作為叢集索引。 但是記憶體最佳化資料表的資料行存放區索引無法加入叢集。
+- [資料行存放區索引](../../relational-databases/indexes/columnstore-indexes-overview.md) 可以建立在以磁碟為基礎的資料表上，甚至是作為叢集索引。 但是記憶體最佳化資料表的資料行存放區索引無法加入叢集。
 
 
 - 記憶體最佳化資料表的 LOB 或非資料列資料行會導致無法建立資料表的資料行存放區索引。
@@ -236,7 +240,7 @@ READPAST 提示在一些案例中很有幫助，例如數個工作階段全都�
 
 
 
-### D.2 LOB 和非資料列資料行
+### <a name="d2-lob-and-off-row-columns"></a>D.2 LOB 和非資料列資料行
 
 大型物件 (Lob) 是 varchar(**max**) 等類型的資料行。 在記憶體最佳化資料表上有一些 LOB 資料行，對效能的危害並不會太嚴重。 但是務必避免 LOB 資料行多於您的資料需要。 相同的建議也適用於非資料列資料行。 如果 varchar(512) 就夠了，請勿將資料行定義為 nvarchar(3072)。
 
@@ -248,7 +252,7 @@ READPAST 提示在一些案例中很有幫助，例如數個工作階段全都�
 
 
 
-## E. 原生程序的限制
+## <a name="e-limitations-of-native-procs"></a>E. 原生程序的限制
 
 
 原生編譯的預存程序中不支援 Transact-SQL 的特定元素。
@@ -258,23 +262,23 @@ READPAST 提示在一些案例中很有幫助，例如數個工作階段全都�
 - [原生編譯預存程序的移轉問題](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)
 
 
-### E.1 在原生程序中不可使用 CASE
+### <a name="e1-no-case-in-a-native-proc"></a>E.1 在原生程序中不可使用 CASE
 
 Transact-SQL 中的 CASE 運算式不能用於原生程序內。 您可以採用的解決方法是︰
 
 - [在原生編譯的預存程序中實作 CASE 運算式](../../relational-databases/in-memory-oltp/implementing-a-case-expression-in-a-natively-compiled-stored-procedure.md)
 
 
-### E.2 在原生程序中不可使用 MERGE
+### <a name="e2-no-merge-in-a-native-proc"></a>E.2 在原生程序中不可使用 MERGE
 
 
-Transct-SQL [MERGE 陳述式](../../t-sql/statements/merge-transact-sql.md)與一般所稱的 *upsert* 功能有相似之處。 原生程序不能使用 MERGE 陳述式。 不過，您可以使用 SELECT 加上 UPDATE 加上 INSERT 陳述式的組合，達到與 MERGE 相同的功能。 程式碼範例位於：
+Transct-SQL [MERGE 陳述式](../../t-sql/statements/merge-transact-sql.md) 與一般所稱的 *upsert* 功能有相似之處。 原生程序不能使用 MERGE 陳述式。 不過，您可以使用 SELECT 加上 UPDATE 加上 INSERT 陳述式的組合，達到與 MERGE 相同的功能。 程式碼範例位於：
 
 - [在原生編譯的預存程序中實作 MERGE 功能](../../relational-databases/in-memory-oltp/implementing-merge-functionality-in-a-natively-compiled-stored-procedure.md)
 
 
 
-### E.3 在原生程序的 UPDATE 或 DELETE 陳述式中不可使用聯結
+### <a name="e3-no-joins-in-update-or-delete-statements-in-a-native-proc"></a>E.3 在原生程序的 UPDATE 或 DELETE 陳述式中不可使用聯結
 
 原生程序中的 Transact-SQL 陳述式只能存取記憶體最佳化資料表。 在 UPDATE 和 DELETE 陳述式中，您無法聯結任何資料表。 原生程序中的嘗試會失敗，並有訊例如 Msg 12319 的訊息，說明您︰
 
@@ -287,10 +291,10 @@ Transct-SQL [MERGE 陳述式](../../t-sql/statements/merge-transact-sql.md)與�
 - Transact-SQL 陳述式的解決方法集，達成刪除聯結。
 
 
-*案例︰*TabProjectEmployee 資料表有兩個資料行的唯一索引鍵︰ProjectId 和 EmployeeId。 每個資料列都表示員工指派到使用中專案。 當員工離職時，員工必須從 TabProjectEmployee 資料表中刪除。
+*案例︰* TabProjectEmployee 資料表有兩個資料行的唯一索引鍵︰ProjectId 和 EmployeeId。 每個資料列都表示員工指派到使用中專案。 當員工離職時，員工必須從 TabProjectEmployee 資料表中刪除。
 
 
-#### 無效的 T-SQL, DELETE...JOIN
+#### <a name="invalid-t-sql-deletejoin"></a>無效的 T-SQL, DELETE...JOIN
 
 
 原生程序不能有如下的 DELETE...JOIN。
@@ -309,7 +313,7 @@ DELETE pe
 ```
 
 
-#### 有效解決辦法, 手動 DELETE...JOIN
+#### <a name="valid-work-around-manual-deletejoin"></a>有效解決辦法, 手動 DELETE...JOIN
 
 接下來是解決辦法程式碼範例，分兩個部分︰
 
@@ -364,7 +368,7 @@ END;
 ```
 
 
-### E.4 原生程序的查詢計劃限制
+### <a name="e4-query-plan-limitations-for-native-procs"></a>E.4 原生程序的查詢計劃限制
 
 
 原生程序無法使用某些類型的查詢計劃。 許多詳細資料討論於︰
@@ -372,18 +376,18 @@ END;
 - [記憶體最佳化資料表的查詢處理指南](../../relational-databases/in-memory-oltp/a-guide-to-query-processing-for-memory-optimized-tables.md)
 
 
-#### 原生程序中不可使用平行處理
+#### <a name="no-parallel-processing-in-a-native-proc"></a>原生程序中不可使用平行處理
 
 平行處理不能成為原生程序的任何查詢計劃的一部分。 原生程序一律為單一執行緒。
 
 
-#### 聯結類型
+#### <a name="join-types"></a>聯結類型
 
 
 雜湊聯結或合併聯結都不可以是原生程序的任何查詢計劃的一部分。 使用了巢狀的迴圈聯結。
 
 
-#### 不可使用雜湊彙總
+#### <a name="no-hash-aggregation"></a>不可使用雜湊彙總
 
 原生程序的查詢計劃需要彙總階段時，只能使用資料流彙總。 在原生程序序的查詢計劃中不支援雜湊彙總。
 
@@ -391,7 +395,7 @@ END;
 
 
 
-## F. 應用程式設計︰交易和重試邏輯
+## <a name="f-application-design-transactions-and-retry-logic"></a>F. 應用程式設計︰交易和重試邏輯
 
 牽涉到記憶體最佳化資料表的交易可能會依賴另一個牽涉到相同資料表的交易。 如果相依交易計數到達或超過允許的最大值，所有相依交易都會失敗。
 
@@ -408,7 +412,9 @@ END;
 
 
 
-## 相關連結
+## <a name="related-links"></a>相關連結
 
 - [In-Memory OLTP (記憶體中最佳化)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)
+
+
 

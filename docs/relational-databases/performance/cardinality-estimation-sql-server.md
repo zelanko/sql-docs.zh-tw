@@ -1,26 +1,30 @@
 ---
 title: "基數估計 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/04/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "基數估計工具"
-  - "CE (基數估計工具)"
-  - "estimating cardinality"
+ms.custom: 
+ms.date: 10/04/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- cardinality estimator
+- CE (cardinality estimator)
+- estimating cardinality
 ms.assetid: baa8a304-5713-4cfe-a699-345e819ce6df
 caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e6ef57f8467e87b97024fc08b4916ac4f8e7752b
+ms.lasthandoff: 04/11/2017
+
 ---
-# 基數估計 (SQL Server)
+# <a name="cardinality-estimation-sql-server"></a>基數估計 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   
@@ -34,11 +38,11 @@ caps.handback.revision: 11
 您有幾個方法來指出使用新的 CE 執行較慢的查詢。 您也可以選擇要如何解決此效能問題。  
   
   
-## CE 的版本  
+## <a name="versions-of-the-ce"></a>CE 的版本  
   
  1998 年，Microsoft SQL Server 7.0 隨附提供 CE 的一項重大更新，其相容性層級為 70。 後續更新隨附於 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016，表示相容性層級為 120 和 130。 層級 120 和 130 的 CE 更新併入假設和演算法，適用於新式資料倉儲工作負載和 OLTP (線上交易處理)。  
   
- **相容性層級**︰您可以使用下列有關 [COMPATIBILITY_LEVEL](ALTER%20DATABASE%20Compatibility%20Level%20\(Transact-SQL\).md) 的 Transact-SQL 程式碼，來確保您的資料庫處於特定層級。  
+ **相容性層級** ︰您可以使用下列有關 [COMPATIBILITY_LEVEL](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)的 Transact-SQL 程式碼，來確保您的資料庫處於特定層級。  
 
 ```tsql  
 SELECT ServerProperty('ProductVersion');  
@@ -56,7 +60,7 @@ go
   
  針對相容性層級設定為 120 的 SQL Server 資料庫，啟用追蹤旗標 9481 會強制系統使用層級 70 的 CE。  
   
- **舊版 CE**：針對相容性層級設定為 130 的 SQL Server 資料庫，可使用下列有關 [SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 的 Transact-SQL 陳述式，來啟用層級 70 的 CE。
+ **舊版 CE** ：針對相容性層級設定為 130 的 SQL Server 資料庫，可使用下列有關 [SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 的 Transact-SQL 陳述式，來啟用層級 70 的 CE。
   
 ```tsql  
 ALTER DATABASE
@@ -90,7 +94,7 @@ ALTER DATABASE <yourDatabase>
   
  *提示*︰建議您每個月安裝最新版的 [(SSMS.exe)](http://msdn.microsoft.com/library/mt238290.aspx)。  
   
- 追蹤 CE 基數預測的另一個做法，是使用名為 **query_optimizer_estimate_cardinality** 的擴充事件。  下列 T-SQL 程式碼範例會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上執行。 它會將 .xel 檔案寫入 C:\Temp\ (不過您可以變更此路徑)。 當您在 SSMS 中開啟 .xel 檔案時，會以方便使用的方式來顯示其詳細資訊。  
+ 追蹤 CE 基數預測的另一個做法，是使用名為 **query_optimizer_estimate_cardinality**的擴充事件。  下列 T-SQL 程式碼範例會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上執行。 它會將 .xel 檔案寫入 C:\Temp\ (不過您可以變更此路徑)。 當您在 SSMS 中開啟 .xel 檔案時，會以方便使用的方式來顯示其詳細資訊。  
   
 ```tsql  
 DROP EVENT SESSION Test_the_CE_qoec_1 ON SERVER;  
@@ -122,25 +126,25 @@ go
  如需為 Azure SQL Database 量身訂做之擴充事件的資訊，請參閱 [SQL Database 中的擴充事件](http://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)。  
   
   
-## 評估 CE 版本的步驟  
+## <a name="steps-to-assess-the-ce-version"></a>評估 CE 版本的步驟  
   
  接下來的步驟可讓您用來評估是否有任何最重要查詢在最新 CE 下的執行效能不佳。 其中一些步驟是透過執行上一節所示的程式碼範例來進行。  
   
-1.  開啟 SSMS。 確定您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫已設定為最高可用的相容性層級。  
+1.  開啟 SSMS。 確定您的  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫已設定為最高可用的相容性層級。  
   
 2.  執行下列預備步驟：  
   
     1.  開啟 SSMS。  
   
-    2.  執行 T-SQL，確定您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫已設定為最高可用的相容性層級。  
+    2.  執行 T-SQL，確定您的  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫已設定為最高可用的相容性層級。  
   
     3.  確定您的資料庫已關閉其 LEGACY_CARDINALITY_ESTIMATION 組態。  
   
     4.  「清除」您的查詢存放區。 當然，請確定您的查詢存放區處於開啟狀態。  
   
-    5.  執行陳述式︰\`SET NoCount OFF;`  
+    5.  執行陳述式︰ \`SET NoCount OFF;`  
   
-3.  執行陳述式︰\`SET STATISTICS XML ON;`  
+3.  執行陳述式︰ \`SET STATISTICS XML ON;`  
   
 4.  執行您的重要查詢。  
   
@@ -164,7 +168,7 @@ go
   
 9. 比較估計的資料列數目與實際的資料列數目。 CE 誤差是 1% (高或低)，或是 10%？  
   
-10. 執行：\`SET STATISTICS XML OFF;`  
+10. 執行： \`SET STATISTICS XML OFF;`  
   
 11. 執行 T-SQL 將您的資料庫相容性層級降低一個層級 (例如從 130 降低到 120)。  
   
@@ -184,7 +188,7 @@ go
   
     -   不過，如果您的查詢在舊版 CE 下執行更快速的計劃，請考慮強制系統使用更快速的計劃並忽略此 CE。 如此一來，您不但可以針對所有項目使用最新的 CE，同時也可以在偶爾的情況下保留更快速的計劃。  
   
-## 如何啟用最佳查詢計劃  
+## <a name="how-to-activate-the-best-query-plan"></a>如何啟用最佳查詢計劃  
   
 假設使用新的 CE 會為您的查詢產生速度較慢的查詢計劃。 以下是啟用更快速的計劃的一些選項。  
   
@@ -198,7 +202,7 @@ go
   
 您可以進行最精細的控制，「強制」SQL 系統在測試期間使用透過舊版 CE 所產生的計劃。 「固定」您慣用的計劃之後，您可以將整個資料庫設定為使用最新的相容性層級和 CE。 接下來將會詳細說明這個選項。  
   
-### 如何強制執行特定查詢計劃  
+### <a name="how-to-force-a-particular-query-plan"></a>如何強制執行特定查詢計劃  
   
 查詢存放區提供不同的方式，讓您強制系統使用特定查詢計劃：  
   
@@ -209,11 +213,11 @@ go
  如需查詢存放區的詳細資訊，請參閱[使用查詢存放區監視效能](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)。  
   
   
-## 進階 CE 的描述  
+## <a name="descriptions-of-advance-ce"></a>進階 CE 的描述  
   
 本節描述因實作最新版 CE 的增強功能而受益的範例查詢。 這是背景資訊，不需要您執行特定動作。  
   
-### 範例 A：CE 認為最大值可能比上次收集統計資料時還要高  
+### <a name="example-a-ce-understands-maximum-value-might-be-higher-than-when-statistics-were-last-gathered"></a>範例 A：CE 認為最大值可能比上次收集統計資料時還要高  
   
 假設上次是在 2016 年 4 月 30 日收集 OrderTable 的統計資料，而最大 OrderAddedDate 是 2016 年 4 月 30 日。 相容性層級 120 (及更高層級) 的 CE 認為 OrderTable 中資料行所包含之「遞增」資料的值，可能大於統計資料所記錄的最大值。 此認知改進了類似如下之 SQL SELECT 的查詢計劃。  
   
@@ -223,7 +227,7 @@ SELECT CustomerId, OrderAddedDate
     WHERE OrderAddedDate >= '2016-05-01';  
 ```  
   
-### 範例 B：CE 認為相同資料表上的篩選述詞通常相互關聯  
+### <a name="example-b-ce-understands-that-filtered-predicates-on-the-same-table-are-often-correlated"></a>範例 B：CE 認為相同資料表上的篩選述詞通常相互關聯  
   
 在下列 SELECT 中，我們看到廠牌和型號的篩選述詞。 我們直覺認為當廠牌為 'Honda' 時，型號有可能為 'Civic' (有鑑於 Honda 製造 Civic)。  
   
@@ -237,7 +241,7 @@ SELECT Model_Year, Purchase_Price
         Model = 'Civic';  
 ```  
   
-### 範例 C：CE 不會再假設來自不同資料表的篩選述詞之間有任何相互關聯  
+### <a name="example-c-ce-no-longer-assumes-any-correlation-between-filtered-predicates-from-different-tables"></a>範例 C：CE 不會再假設來自不同資料表的篩選述詞之間有任何相互關聯  
   
 對新式工作負載和實際商務資料的最新詳細研究顯示，來自不同資料表的述詞篩選條件通常彼此沒有關聯。 在下列查詢中，CE 假設 s.type 和 r.date 之間沒有關聯。 因此，CE 所估計的傳回資料列數目比較低。  
   
@@ -253,6 +257,8 @@ SELECT s.ticket, s.customer, r.store
 ```  
   
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [效能的監視與微調](../../relational-databases/performance/monitor-and-tune-for-performance.md)  
   
+
+

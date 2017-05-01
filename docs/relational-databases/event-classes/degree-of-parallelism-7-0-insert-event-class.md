@@ -1,29 +1,33 @@
 ---
-title: "Degree of Parallelism (7.0 Insert) 事件類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Degree of Parallelism 事件類別"
+title: "Degree of Parallelism (7.0 Insert) 事件類別 | Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Degree of Parallelism event class
 ms.assetid: 6753ef30-890f-47a3-b0b6-8abb184e1d83
 caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 58892a606e417bc95b2744fcd3abc1e58ee1ff84
+ms.lasthandoff: 04/11/2017
+
 ---
-# Degree of Parallelism (7.0 Insert) 事件類別
-  每當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行 SELECT、INSERT、UPDATE 或 DELETE 陳述式時，即會發生 **Degree of Parallelism (7.0 Insert)** 事件類別。  
+# <a name="degree-of-parallelism-70-insert-event-class"></a>Degree of Parallelism (7.0 Insert) 事件類別
+  每當 **執行 SELECT、INSERT、UPDATE 或 DELETE 陳述式時，即會發生** Degree of Parallelism (7.0 Insert) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件類別。  
   
  當追蹤包含這個事件類別時，如果這些事件經常發生，產生的負擔可能會大幅降低效能。 為了將產生的負擔降至最低，請將這個事件類別限制使用於短暫監視特定問題的追蹤。  
   
-## Degree of Parallelism (7.0 Insert) 事件類別資料行  
+## <a name="degree-of-parallelism-70-insert-event-class-data-columns"></a>Degree of Parallelism (7.0 Insert) 事件類別資料行  
   
 |資料行名稱|資料類型|描述|資料行識別碼|可篩選|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -39,7 +43,7 @@ caps.handback.revision: 35
 |**HostName**|**nvarchar**|執行用戶端的電腦名稱。 這個資料行會在用戶端提供主機名稱時填入。 若要判斷主機名稱，請使用 HOST_NAME 函數。|8|是|  
 |**Integer Data**|**int**|授與查詢來執行雜湊、排序或建立索引等作業的「工作空間記憶體」數量 (以 KB 為單位)。 執行期間會視需要取得記憶體。|25|是|  
 |**IsSystem**|**int**|指出事件是發生在系統處理序或使用者處理序。 1 = 系統，0 = 使用者。|60|是|  
-|**LoginName**|**nvarchar**|使用者的登入名稱 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全性登入或 DOMAIN\\*username* 格式的 Windows 登入認證)。|11|是|  
+|**LoginName**|**nvarchar**|使用者的登入名稱 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全性登入或 DOMAIN\\*username*格式的 Windows 登入認證)。|11|是|  
 |**LoginSid**|**image**|已登入之使用者的安全性識別碼 (SID)。 您可以在 sys.server_principals 目錄檢視中找到這項資訊。 伺服器上的每一個登入之 SID 是唯一的。|41|是|  
 |**NTDomainName**|**nvarchar**|使用者所隸屬的 Windows 網域。|7|是|  
 |**NTUserName**|**nvarchar**|Windows 使用者名稱。|6|是|  
@@ -50,7 +54,7 @@ caps.handback.revision: 35
 |**StartTime**|**datetime**|事件啟動的時間 (如果有的話)。|14|是|  
 |**TransactionID**|**bigint**|由系統指派給交易的識別碼。|4|是|  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)  
   

@@ -1,32 +1,36 @@
 ---
-title: "Transact-SQL 中斷點 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Transact-SQL 偵錯工具, 中斷點"
+title: "Transact-SQL 中斷點 | Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Transact-SQL debugger, breakpoints
 ms.assetid: c234430f-bd94-4d0d-9e74-2bf11681fa50
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 41f54315c2d72e6bd73fd7499aafa94517fa5908
+ms.lasthandoff: 04/11/2017
+
 ---
-# Transact-SQL 中斷點
+# <a name="transact-sql-breakpoints"></a>Transact-SQL 中斷點
   中斷點指定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具要在特定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式上暫停執行，然後您就可以在該點檢視程式碼元素的狀態。  
   
-## 中斷點  
+## <a name="breakpoints"></a>中斷點  
  執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具時，您可以切換特定陳述式上的中斷點。 執行到具有中斷點的陳述式時，偵錯工具會暫停執行，讓您可以檢視偵錯資訊，例如變數和參數中的值。  
   
  您可以在編輯器視窗中個別管理中斷點，或是使用 [中斷點] 視窗統一進行管理。 您可以編輯中斷點以指定項目，例如應該暫停執行的特定條件，或要在執行中斷點時採取的動作。  
   
-## 中斷點工作  
+## <a name="breakpoint-tasks"></a>中斷點工作  
   
 |工作描述|主題|  
 |----------------------|-----------|  
@@ -38,7 +42,7 @@ caps.handback.revision: 10
 |描述如何指定 [叫用時] 動作，而此動作是在執行中斷點陳述式時執行的自訂作業。 範例為列印訊息。|[指定中斷點動作](../../relational-databases/scripting/specify-a-breakpoint-action.md)|  
 |描述如何編輯中斷點的位置。|[編輯中斷點位置](../../relational-databases/scripting/edit-a-breakpoint-location.md)|  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [Transact-SQL 偵錯工具資訊](../../relational-databases/scripting/transact-sql-debugger-information.md)  
   
   

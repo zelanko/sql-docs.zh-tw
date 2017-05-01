@@ -1,51 +1,55 @@
 ---
 title: "設定 Database Mail | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.sqlimail.profileandaccountmanagement.f1"
-  - "sql13.swb.sqlimail.newaccount.f1"
-  - "sql13.swb.dbmail. manageprofilesecurity.profileview.f1"
-  - "sql13.swb.sqlimail.manageexistingprofile.f1"
-  - "sql13.swb.sqlimail.addaccounttoprofile.f1"
-  - "sql13.swb.dbmail.manageexistingaccount.f1"
-  - "sql13.swb.sqlimail.manageprofilesecurity.profileview.f1"
-  - "sql13.swb.sqlimail.welcome.f1"
-  - "sql13.swb.sqlimail.manageprofilesecurity.principalview.f1"
-  - "sql13.swb.sqlimail.newsqlimailaccount.f1"
-  - "sql13.swb.sqlimail.selectconfiguration.f1"
-  - "sql13.swb.dbmail.completewizard.f1"
-  - "sql13.swb.dbmail.sendtestemail.test.f1"
-  - "sql13.swb.sqlimail.newprofile.f1"
-  - "sql13.swb.dbmail.addaccounttoprofile.f1"
-  - "sql13.swb.dbmail.newprofile.f1"
-  - "sql13.swb.sqlimail.manageexistingaccount.f1"
-  - "sql13.swb.dbmail.welcome.f1"
-  - "sql13.swb.dbmail.newaccount.f1"
-  - "sql13.swb.dbmail.profileandaccountmanagement.f1"
-  - "sql13.swb.dbmail.selectconfiguration.f1"
-  - "sql13.swb.dbmail.sendtestemail.f1"
-  - "sql13.swb.sqlimail.completewizard.f1"
-  - "sql13.swb.dbmail.configuresystem.f1"
-  - "sql13.swb.sqlimail.configuresystem.f1"
-  - "sql13.swb.dbmail.newsqlimailaccount.f1"
-  - "sql13.swb.dbmail.manageexistingprofile.f1"
-  - "sql13.swb.dbmail.manageprofilesecurity.principalview.f1"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.sqlimail.profileandaccountmanagement.f1
+- sql13.swb.sqlimail.newaccount.f1
+- sql13.swb.dbmail. manageprofilesecurity.profileview.f1
+- sql13.swb.sqlimail.manageexistingprofile.f1
+- sql13.swb.sqlimail.addaccounttoprofile.f1
+- sql13.swb.dbmail.manageexistingaccount.f1
+- sql13.swb.sqlimail.manageprofilesecurity.profileview.f1
+- sql13.swb.sqlimail.welcome.f1
+- sql13.swb.sqlimail.manageprofilesecurity.principalview.f1
+- sql13.swb.sqlimail.newsqlimailaccount.f1
+- sql13.swb.sqlimail.selectconfiguration.f1
+- sql13.swb.dbmail.completewizard.f1
+- sql13.swb.dbmail.sendtestemail.test.f1
+- sql13.swb.sqlimail.newprofile.f1
+- sql13.swb.dbmail.addaccounttoprofile.f1
+- sql13.swb.dbmail.newprofile.f1
+- sql13.swb.sqlimail.manageexistingaccount.f1
+- sql13.swb.dbmail.welcome.f1
+- sql13.swb.dbmail.newaccount.f1
+- sql13.swb.dbmail.profileandaccountmanagement.f1
+- sql13.swb.dbmail.selectconfiguration.f1
+- sql13.swb.dbmail.sendtestemail.f1
+- sql13.swb.sqlimail.completewizard.f1
+- sql13.swb.dbmail.configuresystem.f1
+- sql13.swb.sqlimail.configuresystem.f1
+- sql13.swb.dbmail.newsqlimailaccount.f1
+- sql13.swb.dbmail.manageexistingprofile.f1
+- sql13.swb.dbmail.manageprofilesecurity.principalview.f1
 ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 74432814fa4cc99c8ef8ec8c3c63f37ec8b8b25a
+ms.lasthandoff: 04/11/2017
+
 ---
-# 設定 Database Mail
+# <a name="configure-database-mail"></a>設定 Database Mail
   本主題說明如何使用 Database Mail 組態精靈來啟用及設定 Database Mail，並使用範本建立 Database Mail 組態指令碼。  
   
 -   **開始之前：**[限制事項](#Restrictions)、[安全性](#Security)  
@@ -53,13 +57,13 @@ caps.handback.revision: 13
 -   **使用以下方式設定 Database Mail：**[Database Mail 組態精靈](#DBWizard)、[使用範本](#Template)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
- 使用 [DatabaseMail XPs] 選項，可在此伺服器上啟用 Database Mail。 如需詳細資訊，請參閱 [Database Mail XPs 伺服器組態選項](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md)參考主題。  
+ 使用 [DatabaseMail XP] 選項，可在此伺服器上啟用 Database Mail。 如需詳細資訊，請參閱 [Database Mail XPs 伺服器組態選項](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) 參考主題。  
   
 ###  <a name="Restrictions"></a> 限制事項  
- 在任何資料庫中啟用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Broker 都需要資料庫鎖定。 如果已在 **msdb** 中停用 Service Broker，則啟用 Database Mail 的第一步是停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent，好讓 Service Broker 可以取得必要的鎖定。  
+ 在任何資料庫中啟用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Broker 都需要資料庫鎖定。 如果已在 **msdb**中停用 Service Broker，則啟用 Database Mail 的第一步是停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent，好讓 Service Broker 可以取得必要的鎖定。  
   
 ###  <a name="Security"></a> 安全性  
- 若要設定 Database Mail，您必須是**系統管理員**固定伺服器角色的成員。 若要傳送 Database Mail，您必須是 **msdb** 資料庫之 **DatabaseMailUserRole** 資料庫角色的成員。  
+ 若要設定 Database Mail，您必須是 **系統管理員** 固定伺服器角色的成員。 若要傳送 Database Mail，您必須是 **msdb** 資料庫之 **DatabaseMailUserRole** 資料庫角色的成員。  
   
 ##  <a name="DBWizard"></a> 使用 Database Mail 組態精靈  
  **若要使用精靈設定 Database Mail**  
@@ -134,7 +138,7 @@ caps.handback.revision: 13
   
  Database Mail 帳戶包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用來傳送電子郵件訊息到 SMTP 伺服器的資訊。 每個帳戶包含一個電子郵件伺服器的資訊。  
   
- Database Mail 帳戶僅供 Database Mail 使用。 Database Mail 帳戶不會對應至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 帳戶或 Microsoft Windows 帳戶。 Database Mail 可以使用 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的認證、使用您提供的其他認證或以匿名方式傳送。 使用基本驗證時，Database Mail 帳戶中的名稱和密碼僅用於電子郵件伺服器的驗證。 帳戶不需要對應到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用者，或在執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之電腦上的使用者。  
+ Database Mail 帳戶僅供 Database Mail 使用。 Database Mail 帳戶不會對應至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 帳戶或 Microsoft Windows 帳戶。 Database Mail 可以使用 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的認證、使用您提供的其他認證或以匿名方式傳送。 使用基本驗證時，Database Mail 帳戶中的名稱和密碼僅用於電子郵件伺服器的驗證。 帳戶不需要對應到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用者，或在執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之電腦上的使用者。  
   
  **帳戶名稱**  
  輸入新帳戶的名稱。  
@@ -143,16 +147,16 @@ caps.handback.revision: 13
  輸入帳戶的描述。 描述是選擇性的。  
   
  **電子郵件地址**  
- 鍵入帳戶電子郵件地址的名稱。 這是電子郵件傳送來自的電子郵件地址。 例如，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 的帳戶可能會從 SqlAgent@Adventure-Works.com 地址傳送電子郵件。  
+ 鍵入帳戶電子郵件地址的名稱。 這是電子郵件傳送來自的電子郵件地址。 例如，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 的帳戶可能會從 SqlAgent@Adventure-Works.com。  
   
  **顯示名稱**  
- 鍵入顯示於由這個帳戶傳送之電子郵件訊息上的名稱。 顯示名稱是選擇性的。 這是顯示於由這個帳戶傳送之訊息上的名稱。 例如，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 的帳戶在電子郵件訊息上顯示的名稱可能會是「SQL Server Agent Automated Mailer」。  
+ 鍵入顯示於由這個帳戶傳送之電子郵件訊息上的名稱。 顯示名稱是選擇性的。 這是顯示於由這個帳戶傳送之訊息上的名稱。 例如， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 的帳戶在電子郵件訊息上顯示的名稱可能會是「SQL Server Agent Automated Mailer」。  
   
  **回覆電子郵件**  
  鍵入將用來回覆給由這個帳戶傳送之電子郵件訊息的電子郵件地址。 回覆電子郵件是選擇性的。 例如，回覆給 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 帳戶的郵件，可能會傳送給資料庫管理員 danw@Adventure-Works.com。  
   
  **伺服器名稱**  
- 輸入帳戶用來傳送電子郵件的 SMTP 伺服器名稱或 IP 位址。 一般而言，此格式類似於 **smtp.\<貴公司>****.com**。 如需相關說明，請洽詢您的郵件管理員。  
+ 輸入帳戶用來傳送電子郵件的 SMTP 伺服器名稱或 IP 位址。 一般而言，此格式類似於 **smtp.<貴公司>****.com**。 如需相關說明，請洽詢您的郵件管理員。  
   
  **通訊埠編號**  
  輸入此帳戶之 SMTP 伺服器的通訊埠編號。 多數的 SMTP 伺服器使用通訊埠 25。  
@@ -193,16 +197,16 @@ caps.handback.revision: 13
  檢視或更新帳戶的描述。 描述是選擇性的。  
   
  **電子郵件地址**  
- 檢視或更新帳戶之電子郵件地址的名稱。 這是電子郵件傳送來自的電子郵件地址。 例如，Microsoft SQL Server Agent 的帳戶可能會從 **SqlAgent@Adventure-Works.com** 地址傳送電子郵件。  
+ 檢視或更新帳戶之電子郵件地址的名稱。 這是電子郵件傳送來自的電子郵件地址。 例如，Microsoft SQL Server Agent 的帳戶可能會從 **SqlAgent@Adventure-Works.com**之電腦上的使用者。  
   
  **顯示名稱**  
- 檢視或更新名稱，以顯示在由這個帳戶傳送的電子郵件訊息上。 顯示名稱是選擇性的。 這是顯示於由這個帳戶傳送之訊息上的名稱。 例如，SQL Server Agent 的帳戶在電子郵件訊息上顯示的名稱可能會是 **SQL Server Agent Automated Mailer**。  
+ 檢視或更新名稱，以顯示在由這個帳戶傳送的電子郵件訊息上。 顯示名稱是選擇性的。 這是顯示於由這個帳戶傳送之訊息上的名稱。 例如，SQL Server Agent 的帳戶在電子郵件訊息上顯示的名稱可能會是 **SQL Server Agent Automated Mailer** 。  
   
  **回覆電子郵件**  
- 檢視或更新電子郵件地址，這將用於回覆給由這個帳戶傳送的電子郵件訊息。 回覆電子郵件是選擇性的。 例如，回覆給 SQL Server Agent 帳戶的郵件，可能會傳送給資料庫管理員 **danw@Adventure-Works.com**。  
+ 檢視或更新電子郵件地址，這將用於回覆給由這個帳戶傳送的電子郵件訊息。 回覆電子郵件是選擇性的。 例如，回覆給 SQL Server Agent 帳戶的郵件，可能會傳送給資料庫管理員 **danw@Adventure-Works.com**之電腦上的使用者。  
   
  **伺服器名稱**  
- 檢視或更新帳戶用來傳送電子郵件的 SMTP 伺服器名稱。 一般而言，此格式類似於 **smtp.\<貴公司>.com**。 如需相關說明，請洽詢您的郵件管理員。  
+ 檢視或更新帳戶用來傳送電子郵件的 SMTP 伺服器名稱。 一般而言，此格式類似於 **smtp.<貴公司>.com**。 如需相關說明，請洽詢您的郵件管理員。  
   
  **通訊埠編號**  
  檢視或更新此帳戶的 SMTP 伺服器的通訊埠編號。 多數的 SMTP 伺服器使用通訊埠 25。  
@@ -244,7 +248,7 @@ caps.handback.revision: 13
  **SMTP 帳戶**  
  為設定檔選擇一或多個帳戶。 優先權會設定 Database Mail 使用這些帳戶的順序。 如果沒有列出任何帳戶，您必須按一下 [加入] 才能繼續，然後加入新的 SMTP 帳戶。  
   
- **加入**  
+ **[加入]**  
  將帳戶加入至設定檔。  
   
  **移除**  
@@ -269,7 +273,7 @@ caps.handback.revision: 13
  **Delete**  
  刪除選取的設定檔。 系統會提示您選取 [是] 來刪除選取的設定檔，並將任何未送出的郵件設為失敗，或選取 [否]，只有在沒有未送出的郵件時才刪除選取的設定檔。  
   
- **描述**  
+ **說明**  
  檢視或變更選取之設定檔的描述。 描述是選擇性的。  
   
  **SMTP 帳戶**  
@@ -293,12 +297,12 @@ caps.handback.revision: 13
  **帳戶名稱**  
  檢視帳戶的名稱。  
   
- **電子郵件地址**  
+ **E-mail Address**  
  檢視帳戶的電子郵件地址。  
   
  [Database Mail 組態精靈](#DBWizard)  
   
-###  <a name="AddAccount"></a> 將帳戶加入至設定檔頁面  
+###  <a name="AddAccount"></a> Add Account to Profile Page  
  使用此頁面可選擇要加入至設定檔的帳戶。 從 [帳戶名稱] 方塊中選擇現有的帳戶，或是按一下 [新增帳戶]  
   
  **帳戶名稱**  
@@ -327,7 +331,7 @@ caps.handback.revision: 13
  **建立新設定檔**  
  建立新的設定檔。  
   
- **檢視、變更或刪除現有的設定檔。 您也可以管理與設定檔相關聯的帳戶。**  
+ **檢視、變更或刪除現有的設定檔。您也可以管理與設定檔相關聯的帳戶。**  
  更新或刪除現有的設定檔。 此選項也可讓您管理與設定檔相關聯的帳戶。  
   
  [Database Mail 組態精靈](#DBWizard)  
@@ -337,12 +341,12 @@ caps.handback.revision: 13
   
  設定檔是公用或私人的。 私人設定檔只有特定使用者或角色能夠存取。 公用設定檔允許擁有郵件主機資料庫 (**msdb**) 存取權的任何使用者或角色，使用該設定檔傳送電子郵件。  
   
- 設定檔可能是預設設定檔。 在此情況下，使用者或角色不必明確指定設定檔，就能使用設定檔傳送電子郵件。 如果傳送電子郵件訊息的使用者或角色有預設的私人設定檔，Database Mail 就會使用該設定檔。 如果使用者或角色沒有預設的私人設定檔，**sp_send_dbmail** 會使用 **msdb** 資料庫的預設公用設定檔。 如果沒有使用者或角色的預設私人設定檔，而且沒有資料庫的預設公用設定檔，**sp_send_dbmail** 會傳回錯誤。 只有一個設定檔可以標示為預設的設定檔。  
+ 設定檔可能是預設設定檔。 在此情況下，使用者或角色不必明確指定設定檔，就能使用設定檔傳送電子郵件。 如果傳送電子郵件訊息的使用者或角色有預設的私人設定檔，Database Mail 就會使用該設定檔。 如果使用者或角色沒有預設的私人設定檔， **sp_send_dbmail** 會使用 **msdb** 資料庫的預設公用設定檔。 如果沒有使用者或角色的預設私人設定檔，而且沒有資料庫的預設公用設定檔， **sp_send_dbmail** 會傳回錯誤。 只有一個設定檔可以標示為預設的設定檔。  
   
  **公用**  
  選取此選項使指定的設定檔成為公用的。  
   
- **設定檔名稱**  
+ **Profile Name**  
  顯示設定檔的名稱。  
   
  **預設設定檔**  
@@ -358,7 +362,7 @@ caps.handback.revision: 13
   
  設定檔是公用或私人的。 私人設定檔只有特定使用者或角色能夠存取。 公用設定檔允許擁有郵件主機資料庫 (**msdb**) 存取權的任何使用者或角色，使用該設定檔傳送電子郵件。  
   
- 設定檔可能是預設設定檔。 在此情況下，使用者或角色不必明確指定設定檔，就能使用設定檔傳送電子郵件。 如果傳送電子郵件訊息的使用者或角色有預設的私人設定檔，Database Mail 就會使用該設定檔。 如果使用者或角色沒有預設的私人設定檔，**sp_send_dbmail** 會使用 **msdb** 資料庫的預設公用設定檔。 如果沒有使用者或角色的預設私人設定檔，而且沒有資料庫的預設公用設定檔，**sp_send_dbmail** 會傳回錯誤。  
+ 設定檔可能是預設設定檔。 在此情況下，使用者或角色不必明確指定設定檔，就能使用設定檔傳送電子郵件。 如果傳送電子郵件訊息的使用者或角色有預設的私人設定檔，Database Mail 就會使用該設定檔。 如果使用者或角色沒有預設的私人設定檔， **sp_send_dbmail** 會使用 **msdb** 資料庫的預設公用設定檔。 如果沒有使用者或角色的預設私人設定檔，而且沒有資料庫的預設公用設定檔， **sp_send_dbmail** 會傳回錯誤。  
   
  **使用者名稱**  
  選取 **msdb** 資料庫中使用者或角色的名稱。  
@@ -416,8 +420,8 @@ caps.handback.revision: 13
   
  [Database Mail 組態精靈](#DBWizard)  
   
-###  <a name="TestEmail"></a> 傳送測試電子郵件頁面  
- 使用 [從 \<執行個體名稱> 傳送測試電子郵件] 頁面，以使用指定的 Database Mail 設定檔傳送電子郵件訊息。 只有**系統管理員**固定伺服器角色的成員，才可以使用此頁面來傳送測試電子郵件。  
+###  <a name="TestEmail"></a> Send Test E-Mail Page  
+ 使用 [從 <執行個體名稱> 傳送測試電子郵件] 頁面，以使用指定的 Database Mail 設定檔傳送電子郵件訊息。 只有 **系統管理員** 固定伺服器角色的成員，才可以使用此頁面來傳送測試電子郵件。  
   
  **Database Mail 設定檔**  
  從清單中選取 Database Mail 設定檔。 這是必要的欄位。 如果未顯示任何設定檔，就表示沒有設定檔，或者您沒有設定檔的存取權限。 使用 **[Database Mail 組態精靈]** 來建立及設定設定檔。 如果未列出任何設定檔，請使用 Database Mail 組態精靈來建立供您使用的設定檔。  
@@ -434,10 +438,10 @@ caps.handback.revision: 13
  [Database Mail 測試電子郵件] 對話方塊會確認 Database Mail 已嘗試傳送測試訊息，並提供測試電子郵件訊息的 **mailitem_id**。 與收件者聯繫來判斷電子郵件是否送達。 電子郵件一般都會在數分鐘內收到，但是電子郵件可能因為緩慢的網路效能、在郵件伺服器上積存訊息，或伺服器暫時不能使用等原因而延遲。 使用 **mailitem_id** 來進行疑難排解。  
   
  **傳送電子郵件**  
- 測試電子郵件訊息的 **mailitem_id**。  
+ 測試電子郵件訊息的 **mailitem_id** 。  
   
  **疑難排解**  
- 按一下以開啟《線上叢書》的[Database Mail 疑難排解](http://msdn.microsoft.com/library/ms188663.aspx)主題。  
+ 按一下以開啟《線上叢書》的 [Database Mail 疑難排解](http://msdn.microsoft.com/library/ms188663.aspx)主題。  
   
  [Database Mail 組態精靈](#DBWizard)  
   

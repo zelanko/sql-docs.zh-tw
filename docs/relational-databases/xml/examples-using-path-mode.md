@@ -1,27 +1,31 @@
 ---
 title: "範例：使用 PATH 模式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "PATH FOR XML 模式, 範例"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- PATH FOR XML mode, examples
 ms.assetid: 3564e13b-9b97-49ef-8cf9-6a78677b09a3
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 01caa2a86cde9fc2d8e857f1fd04486008d5886c
+ms.lasthandoff: 04/11/2017
+
 ---
-# 範例：使用 PATH 模式
+# <a name="examples-using-path-mode"></a>範例：使用 PATH 模式
   以下範例說明使用 PATH 模式從 SELECT 查詢產生 XML。 這些查詢中有許多是針對自行車製造指示的 XML 文件所指定，這些文件是儲存在 ProductModel 資料表的 Instructions 資料行中。  
   
-## 指定簡單 PATH 模式查詢  
+## <a name="specifying-a-simple-path-mode-query"></a>指定簡單 PATH 模式查詢  
  此查詢指定 FOR XML PATH 模式。  
   
 ```  
@@ -120,7 +124,7 @@ GO
   
  `<Name>Bike Wash</Name>`  
   
-## 指定類似 XPath 的資料行名稱  
+## <a name="specifying-xpath-like-column-names"></a>指定類似 XPath 的資料行名稱  
  在下列查詢中，指定的 `ProductModelID` 資料行名稱是以 '@' 開頭，而且不包含斜線 ('/')。 因此，會在產生的 XML 中建立含有對應資料行值之 <`row`> 元素的屬性。  
   
 ```  
@@ -148,7 +152,7 @@ GO
   
  `</ ProductModelData >`  
   
- 您可以在 `root` 中指定 `FOR XML` 選項，以加入單一最上層元素。  
+ 您可以在 `root` 中指定 `FOR XML`選項，以加入單一最上層元素。  
   
 ```  
 SELECT ProductModelID AS "@id",  
@@ -223,7 +227,7 @@ GO
   
  `</Root>`  
   
- 在上述 FOR XML 查詢中，您可以加入 <`Root`> 與 <`ProductModelData`> 元素的命名空間。 完成此動作的方式是先使用 WITH XMLNAMESPACES 與 FOR XML 查詢中的前置詞，以定義命名空間繫結的前置詞。 如需詳細資訊，請參閱[使用 WITH XMLNAMESPACES 將命名空間加入至查詢](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)。  
+ 在上述 FOR XML 查詢中，您可以加入 <`Root`> 與 <`ProductModelData`> 元素的命名空間。 完成此動作的方式是先使用 WITH XMLNAMESPACES 與 FOR XML 查詢中的前置詞，以定義命名空間繫結的前置詞。 如需詳細資訊，請參閱 [使用 WITH XMLNAMESPACES 將命名空間加入至查詢](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)。  
   
 ```  
 USE AdventureWorks2012;  
@@ -243,7 +247,7 @@ FOR XML PATH ('ns2:ProductInfo'), root('ns1:root');
 GO  
 ```  
   
- 請注意，`MI` 前置詞在 `WITH XMLNAMESPACES` 中也有定義。 因此，指定 **XML** 類型的 **query()** 方法並不會定義查詢初構中的前置詞。 以下是結果：  
+ 請注意， `MI` 前置詞在 `WITH XMLNAMESPACES`中也有定義。 因此，指定 **XML** 類型的 **query()** 方法並不會定義查詢初構中的前置詞。 以下是結果：  
   
  `<ns1:root xmlns:MI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions" xmlns="uri2" xmlns:ns2="uri2" xmlns:ns1="uri1">`  
   
@@ -273,7 +277,7 @@ GO
   
  `</ns1:root>`  
   
-## 使用 PATH 模式產生值清單  
+## <a name="generating-a-value-list-using-path-mode"></a>使用 PATH 模式產生值清單  
  對於每個產品型號，此查詢會建構產品識別碼的值清單。 對於每個產品識別碼，此查詢也會建構 <`ProductName`> 的巢狀元素，如下列 XML 片段所示：  
   
  `<ProductModelData ProductModelID="7" ProductModelName="..."`  
@@ -380,7 +384,7 @@ WHERE ProductModelID= 7 OR ProductModelID=9
 FOR XML PATH('ProductModelData');  
 ```  
   
-## 在產生的 XML 中加入命名空間  
+## <a name="adding-namespaces-in-the-resulting-xml"></a>在產生的 XML 中加入命名空間  
  如＜ [使用 WITH XMLNAMESPACES 新增命名空間](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)＞主題中所述，您可以使用 WITH XMLNAMESPACES 在 PATH 模式查詢中包含命名空間。 例如，SELECT 子句中指定的名稱包括命名空間前置詞。 下列 `PATH` 模式查詢會建構包含命名空間的 XML。  
   
 ```  
@@ -404,7 +408,7 @@ GO
   
  `</Translation>`  
   
- 下列查詢與範例 C 相似，除了它使用 `WITH XMLNAMESPACES` 在 XML 結果中加入命名空間之外。 如需詳細資訊，請參閱[使用 WITH XMLNAMESPACES 將命名空間加入至查詢](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)。  
+ 下列查詢與範例 C 相似，除了它使用 `WITH XMLNAMESPACES` 在 XML 結果中加入命名空間之外。 如需詳細資訊，請參閱 [使用 WITH XMLNAMESPACES 將命名空間加入至查詢](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)。  
   
 ```  
 USE AdventureWorks2012;  
@@ -463,7 +467,7 @@ FOR XML PATH('ProductModelData'), root('root');
   
  `</root>`  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [搭配 FOR XML 使用 PATH 模式](../../relational-databases/xml/use-path-mode-with-for-xml.md)  
   
   

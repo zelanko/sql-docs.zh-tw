@@ -1,36 +1,40 @@
 ---
 title: "資料的大量匯入及匯出 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/28/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-bulk-import-export"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "匯出資料"
-  - "大量匯入 [SQL Server], 關於大量匯入"
-  - "資料 [SQL Server], 大量匯出和匯入"
-  - "傳送資料"
-  - "匯入資料, (請參閱大量匯入 [SQL Server])"
-  - "複製資料 [SQL Server]"
-  - "大量匯出 [SQL Server]"
-  - "匯入資料, 大量匯入"
-  - "複製資料 [SQL Server], 大量匯出和匯入"
-  - "匯出資料, (請參閱大量匯出 [SQL Server])"
-  - "大量匯出 [SQL Server], 關於大量匯出"
-  - "大量匯入 [SQL Server]"
-  - "匯入資料"
+ms.custom: 
+ms.date: 09/28/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-bulk-import-export
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- exporting data
+- bulk importing [SQL Server], about bulk importing
+- data [SQL Server], bulk export and import
+- transferring data
+- importing data, (See also bulk importing [SQL Server])
+- copying data [SQL Server]
+- bulk exporting [SQL Server]
+- importing data, bulk import
+- copying data [SQL Server], bulk export and import
+- exporting data,(See also bulk exporting [SQL Server])
+- bulk exporting [SQL Server], about bulk exporting
+- bulk importing [SQL Server]
+- importing data
 ms.assetid: 19049021-c048-44a2-b38d-186d9f9e4a65
 caps.latest.revision: 61
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 61
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c9526d50311db80bb7a4c8933ed3413436883f0f
+ms.lasthandoff: 04/11/2017
+
 ---
-# 資料的大量匯入及匯出 (SQL Server)
+# <a name="bulk-import-and-export-of-data-sql-server"></a>資料的大量匯入及匯出 (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表匯出大量資料 (「大量資料」)，以及將大量資料匯入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表或未分割的檢視。 
   
  *「大量匯出」* 代表將資料從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表複製到資料檔。 
@@ -48,7 +52,7 @@ caps.handback.revision: 61
 |[SQL Server 匯入和匯出精靈](https://msdn.microsoft.com/library/ms141209.aspx)|精靈會建立簡單套件，以在許多常用的資料格式之間匯入和匯出資料，這些格式包括資料庫、試算表和文字檔。|是|是|  
   
 > [!IMPORTANT]
-> SQL Server 大量匯入作業不支援逗號分隔值 (CSV) 檔案。 不過，在某些情況下，您可以使用 CSV 檔案作為資料檔案，以便將資料大量匯入 SQL Server。 請注意，CSV 檔案的欄位結束字元不必是逗號。 如需詳細資訊，請參閱[準備大量匯出或匯入的資料 (SQL Server)](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md)。
+> SQL Server 大量匯入作業不支援逗號分隔值 (CSV) 檔案。 不過，在某些情況下，您可以使用 CSV 檔案作為資料檔案，以便將資料大量匯入 SQL Server。 請注意，CSV 檔案的欄位結束字元不必是逗號。 如需詳細資訊，請參閱 [準備大量匯出或匯入的資料 (SQL Server)](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md)。
 
 > [!NOTE]
 > Azure SQL Database 和 Azure SQL DW 只支援使用 bcp 公用程式匯入和匯出分隔的檔案。
@@ -60,7 +64,7 @@ caps.handback.revision: 61
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援下列兩種類型的格式檔案：XML 格式檔案和非 XML 格式檔案。  
   
- [bcp 公用程式](../../tools/bcp-utility.md)是唯一可以產生格式檔案的工具。 如需詳細資訊，請參閱[建立格式檔案 &#40;SQL Server&#41;](../../relational-databases/import-export/create-a-format-file-sql-server.md)。 如需格式檔案的詳細資訊，請參閱[匯入或匯出資料的格式檔案 &#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)。  
+ [bcp 公用程式](../../tools/bcp-utility.md) 是唯一可以產生格式檔案的工具。 如需詳細資訊，請參閱[建立格式檔案 &#40;SQL Server&#41;](../../relational-databases/import-export/create-a-format-file-sql-server.md)。 如需格式檔案的詳細資訊，請參閱[匯入或匯出資料的格式檔案 &#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)。  
   
 > [!NOTE]
 > 萬一在大量匯出或匯入作業期間未提供格式檔案，您可以在命令列覆寫預設格式。
@@ -75,7 +79,7 @@ caps.handback.revision: 61
 |[匯入或匯出資料的格式檔案 (SQL Server)](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)<br />&emsp;&#9679;&emsp;[建立格式檔案 (SQL Server)](../../relational-databases/import-export/create-a-format-file-sql-server.md)<br />&emsp;&#9679;&emsp;[使用格式檔案大量匯入資料 (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md)<br />&emsp;&#9679;&emsp;[使用格式檔案略過資料表資料行 (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)<br />&emsp;&#9679;&emsp;[使用格式檔案略過資料欄位 (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)<br />&emsp;&#9679;&emsp;[使用格式檔案將資料表資料行對應至資料檔案的欄位 (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)<p>                                                                                                                                                                                                                  </p>|
  
   
-## 詳細資訊！  
+## <a name="more-information"></a>詳細資訊！  
  [大量匯入採用最低限度記錄的必要條件](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)   
  [大量匯入與匯出 XML 文件的範例 &#40;SQL Server&#41;](../../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)   
  [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)   
@@ -85,3 +89,4 @@ caps.handback.revision: 61
 
   
   
+

@@ -1,29 +1,33 @@
 ---
 title: "儲存死結圖形 (SQL Server Profiler) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "死結 [SQL Server], 儲存死結圖形"
-  - "圖形 [SQL Server]"
-  - "儲存死結圖形"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- deadlocks [SQL Server], saving deadlock graphs
+- graphs [SQL Server]
+- saving deadlock graphs
 ms.assetid: bf1fc906-abd6-4a89-842e-da0d66b2defe
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c89c0ed24b52d89c36fb1f1cce29717988a0d798
+ms.lasthandoff: 04/11/2017
+
 ---
-# 儲存死結圖形 (SQL Server Profiler)
-  此主題描述如何使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 儲存死結圖表。 死結圖表會儲存為 XML 檔。  
+# <a name="save-deadlock-graphs-sql-server-profiler"></a>儲存死結圖形 (SQL Server Profiler)
+  此主題描述如何使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]儲存死結圖表。 死結圖表會儲存為 XML 檔。  
   
-### 若要個別儲存死結圖表事件  
+### <a name="to-save-deadlock-graph-events-separately"></a>若要個別儲存死結圖表事件  
   
 1.  在 **[檔案]** 功能表上按一下 **[新增追蹤]**，然後連接到 SQL Server 的執行個體。  
   
@@ -62,7 +66,7 @@ caps.handback.revision: 26
   
  在儲存了死結檔案之後，您可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中開啟檔案。 如需詳細資訊，請參閱[開啟、檢視及列印死結檔案 &#40;SQL Server Management Studio&#41;](../../relational-databases/performance/open-view-and-print-a-deadlock-file-sql-server-management-studio.md)。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用 SQL Server Profiler 分析死結](../../tools/sql-server-profiler/analyze-deadlocks-with-sql-server-profiler.md)  
   
   

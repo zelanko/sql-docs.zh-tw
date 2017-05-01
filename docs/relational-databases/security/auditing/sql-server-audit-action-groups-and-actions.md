@@ -1,33 +1,37 @@
 ---
 title: "SQL Server Audit 動作群組和動作 | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/19/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "audit"
-helpviewer_keywords: 
-  - "稽核動作 [SQL Server]"
-  - "稽核 [SQL Server], 群組"
-  - "伺服器層級的稽核動作 [SQL Server]"
-  - "SQL Server Audit"
-  - "稽核層級的稽核動作 [SQL Server]"
-  - "資料庫層級的稽核動作 [SQL Server]"
-  - "稽核動作群組 [SQL Server]"
-  - "稽核 [SQL Server], 動作"
+ms.custom: 
+ms.date: 10/19/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- audit
+helpviewer_keywords:
+- audit actions [SQL Server]
+- audits [SQL Server], groups
+- server-level audit actions [SQL Server]
+- SQL Server Audit
+- audit-level audit actions [SQL Server]
+- database-level audit actions [SQL Server]
+- audit action groups [SQL Server]
+- audits [SQL Server], actions
 ms.assetid: b7422911-7524-4bcd-9ab9-e460d5897b3d
 caps.latest.revision: 46
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 46
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d3eb276c9571a168a746e0e422adf426292cfad2
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server Audit 動作群組和動作
+# <a name="sql-server-audit-action-groups-and-actions"></a>SQL Server Audit 動作群組和動作
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit 功能可讓您稽核伺服器層級和資料庫層級的事件群組和個別事件。 如需詳細資訊，請參閱 [SQL Server Audit &#40;Database Engine&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 稽核是由零或多個稽核動作項目所組成。 這些稽核動作項目可以是一組動作 (如 Server_Object_Change_Group) 或個別動作 (如資料表上的 SELECT 作業)。  
@@ -65,7 +69,7 @@ caps.handback.revision: 46
   
  所有稽核在最初建立時都是停用的。  
   
-## 伺服器層級的稽核動作群組  
+## <a name="server-level-audit-action-groups"></a>伺服器層級的稽核動作群組  
  伺服器層級的稽核動作群組和動作類似於 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Security Audit 事件類別。 如需詳細資訊，請參閱 [SQL Server Event Class Reference](../../../relational-databases/event-classes/sql-server-event-class-reference.md)。  
   
  下表說明伺服器層級的稽核動作群組，並提供適用的同等 SQL Server 事件類別。  
@@ -115,12 +119,12 @@ caps.handback.revision: 46
 |USER_CHANGE_PASSWORD_GROUP|每當使用 ALTER USER 陳述式來變更自主資料庫使用者的密碼時，就會引發這個事件。|  
 |USER_DEFINED_AUDIT_GROUP|這個群組會監視使用 [sp_audit_write &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md) 所引發的事件。 觸發程序或預存程序通常會包括 **sp_audit_write** 的呼叫，以便啟用重要事件的稽核。|  
   
-### 考量  
+### <a name="considerations"></a>考量  
  伺服器層級的動作群組涵蓋跨 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的動作。 例如，如果將適當的動作群組加入伺服器稽核規格，就會記錄任何資料庫中的任何結構描述物件存取檢查。 在資料庫稽核規格中，只會記錄該資料庫中的結構描述物件存取。  
   
  伺服器層級的動作不允許詳細篩選資料庫層級的動作。 必須有資料庫層級稽核 (例如 Employee 群組登入之 Customers 資料表的 SELECT 動作稽核)，才能實作詳細動作篩選。 請勿在使用者資料庫稽核規格中包含伺服器範圍的物件，例如系統檢視表。  
   
-## 資料庫層級的稽核動作群組  
+## <a name="database-level-audit-action-groups"></a>資料庫層級的稽核動作群組  
  資料庫層級稽核動作群組是類似 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Security Audit 事件類別的動作。 如需有關事件類別的詳細資訊，請參閱＜ [SQL Server Event Class Reference](../../../relational-databases/event-classes/sql-server-event-class-reference.md)＞。  
   
  下表說明資料庫層級的稽核動作群組，並提供適用的同等 SQL Server 事件類別。  
@@ -152,7 +156,7 @@ caps.handback.revision: 46
 |USER_CHANGE_PASSWORD_GROUP|每當使用 ALTER USER 陳述式來變更自主資料庫使用者的密碼時，就會引發這個事件。|  
 |USER_DEFINED_AUDIT_GROUP|這個群組會監視使用 [sp_audit_write &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md) 所引發的事件。|  
   
-## 資料庫層級的稽核動作  
+## <a name="database-level-audit-actions"></a>資料庫層級的稽核動作  
  資料庫層級的動作支援直接在資料庫結構描述和結構描述物件上稽核特定的動作，例如資料表、檢視表、預存程序、函數、擴充預存程序、佇列、同義字。 類型、XML 結構描述集合、資料庫和結構描述則不會稽核。 可在結構描述和資料庫上設定結構描述物件的稽核，這表示指定之結構描述或資料庫包含的所有結構描述物件上的事件都會稽核。 下表說明資料庫層級的稽核動作。  
   
 |動作|說明|  
@@ -165,21 +169,21 @@ caps.handback.revision: 46
 |RECEIVE|每當發出 RECEIVE 時，就會引發這個事件。|  
 |REFERENCES|每當檢查 REFERENCES 權限時，都會引發這個事件。|  
   
-### 考量  
+### <a name="considerations"></a>考量  
 *  資料庫層級的稽核動作不適用於資料行。  
   
 *  當查詢處理器參數化查詢時，此參數可能會顯示在稽核事件記錄而非查詢的資料行值中。 
  
 *  不會記錄 RPC 陳述式。 
   
-## 稽核層級的稽核動作群組  
+## <a name="audit-level-audit-action-groups"></a>稽核層級的稽核動作群組  
  您也可以在稽核程序中稽核動作， 這可以是伺服器範圍或資料庫範圍。 在資料庫範圍中，只發生於資料庫稽核規格。 下表說明稽核層級的稽核動作群組。  
   
 |動作群組名稱|說明|  
 |-----------------------|-----------------|  
 |AUDIT_ CHANGE_GROUP|每當發出下列其中一個命令時，就會引發這個事件：<br /><br /> CREATE SERVER AUDIT<br /><br /> ALTER SERVER AUDIT<br /><br /> DROP SERVER AUDIT<br /><br /> CREATE SERVER AUDIT SPECIFICATION<br /><br /> ALTER SERVER AUDIT SPECIFICATION<br /><br /> DROP SERVER AUDIT SPECIFICATION<br /><br /> CREATE DATABASE AUDIT SPECIFICATION<br /><br /> ALTER DATABASE AUDIT SPECIFICATION<br /><br /> DROP DATABASE AUDIT SPECIFICATION|  
   
-## 相關內容  
+## <a name="related-content"></a>相關內容  
  [建立伺服器稽核與伺服器稽核規格](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)  
   
  [建立伺服器稽核和資料庫稽核規格](../../../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md)  
@@ -225,3 +229,4 @@ caps.handback.revision: 46
  [sys.dm_audit_class_type_map &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql.md)  
   
   
+

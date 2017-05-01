@@ -1,26 +1,30 @@
 ---
-title: "檢視資料庫快照集 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "資料庫快照集 [SQL Server], 檢視"
-  - "顯示資料庫快照集"
-  - "檢視資料庫快照集"
+title: "檢視資料庫快照集 (SQL Server) | Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database snapshots [SQL Server], viewing
+- displaying database snapshots
+- viewing database snapshots
 ms.assetid: 123f19b2-0850-4033-8507-59ebdfb368ee
 caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c11dd41a0c6077ff1d34b6a1f2b348fed87d92e5
+ms.lasthandoff: 04/11/2017
+
 ---
-# 檢視資料庫快照集 (SQL Server)
+# <a name="view-a-database-snapshot-sql-server"></a>檢視資料庫快照集 (SQL Server)
   此主題說明如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 來檢視 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]資料庫快照集。  
   
 > [!NOTE]  
@@ -50,7 +54,7 @@ caps.handback.revision: 22
   
 2.  在標準列中，按一下 **[新增查詢]**。  
   
-3.  若要列出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的資料庫快照集，請查詢 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目錄檢視的 **source_database_id** 資料行看看是否有非 NULL 值。  
+3.  若要列出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的資料庫快照集，請查詢 **sys.databases** 目錄檢視的 [source_database_id](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 資料行看看是否有非 NULL 值。  
   
 ##  <a name="RelatedTasks"></a> 相關工作  
   
@@ -60,7 +64,7 @@ caps.handback.revision: 22
   
 -   [卸除資料庫快照集 &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [資料庫快照集 &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)  
   
   

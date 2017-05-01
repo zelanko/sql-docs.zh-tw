@@ -1,32 +1,36 @@
 ---
-title: "Transact-SQL 偵錯工具資訊 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Transact-SQL 偵錯工具, 本機視窗"
-  - "Transact-SQL 偵錯工具, 監看式視窗"
-  - "Transact-SQL 偵錯工具, 執行緒視窗"
-  - "Transact-SQL 偵錯工具, 呼叫堆疊視窗"
-  - "Transact-SQL 偵錯工具, QuickWatch"
-  - "Transact-SQL 偵錯工具, 檢視資訊"
+title: "Transact-SQL 偵錯工具資訊 | Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Transact-SQL debugger, Locals Window
+- Transact-SQL debugger, Watch Window
+- Transact-SQL debugger, Threads Window
+- Transact-SQL debugger, Call Stack Window
+- Transact-SQL debugger, QuickWatch
+- Transact-SQL debugger, viewing information
 ms.assetid: b99819cc-f388-41a1-b304-36e78ce24147
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 706952bff0744cb88d12a624ba4c68363cb85652
+ms.lasthandoff: 04/11/2017
+
 ---
-# Transact-SQL 偵錯工具資訊
+# <a name="transact-sql-debugger---information"></a>Transact-SQL 偵錯工具 - 資訊
   每當偵錯工具在特定的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式上暫停執行作業時，您就可以使用各種偵錯工具視窗來檢視目前的執行狀態。  
   
-## 偵錯工具視窗  
+## <a name="debugger-windows"></a>偵錯工具視窗  
  在偵錯工具模式中，偵錯工具會在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 主視窗的底部開啟兩個視窗。 偵錯工具會在這兩個視窗中顯示其所有資訊。 每個偵錯工具視窗都具有一些可讓您選取的索引標籤，以便控制哪一組資訊要顯示在視窗中。 左側的偵錯工具視窗包含 [區域變數]、[監看式 1]、[監看式 2]、[監看式 3] 和 [監看式 4] 索引標籤。 右側的偵錯工具視窗包含 [呼叫堆疊]、[執行緒]、[中斷點]、[命令視窗] 和 [輸出] 索引標籤。  
   
 > [!NOTE]  
@@ -38,7 +42,7 @@ caps.handback.revision: 15
   
 -   在 [偵錯] 工具列上，按一下 [中斷點]，然後選取您想要的視窗。  
   
-## Transact-SQL 運算式  
+## <a name="transact-sql-expressions"></a>Transact-SQL 運算式  
  運算式是評估成單一純量值的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 子句，例如變數或參數。 左側的偵錯工具視窗最多可以在五個索引標籤或視窗中顯示目前指派給運算式的資料值：[區域變數]、[監看式 1]、[監看式 2]、[監看式 3] 和 [監看式 4]。  
   
  [區域變數] 視窗會顯示有關 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具目前範圍中之區域變數的資訊。 [區域變數] 視窗中所列的這組運算式會隨著偵錯工具逐步執行不同的程式碼部分而變更。  
@@ -63,10 +67,10 @@ caps.handback.revision: 15
   
  在偵錯模式中，當您將滑鼠指標移到識別碼上方時，[快速諮詢] 快顯就會顯示運算式的名稱及其目前值。 如需詳細資訊，請參閱[快速諮詢 &#40;IntelliSense&#41;](../../relational-databases/scripting/quick-info-intellisense.md)。  
   
-## 中斷點  
+## <a name="breakpoints"></a>中斷點  
  您可以使用 [中斷點] 視窗來檢視和管理目前已設定的中斷點。 如需詳細資訊，請參閱[逐步執行 TRANSACT-SQL 程式碼](../../relational-databases/scripting/step-through-transact-sql-code.md)。  
   
-## 呼叫堆疊  
+## <a name="call-stacks"></a>呼叫堆疊  
  [呼叫堆疊] 視窗會顯示目前的執行位置，以及有關執行作業如何從原始編輯器視窗通過任何 [!INCLUDE[tsql](../../includes/tsql-md.md)] 模組 (函數、預存程序或觸發程序) 而到達目前執行位置的資訊。 [呼叫堆疊] 視窗中的每個資料列都稱為堆疊框架，而且代表下列任何一個項目：  
   
 -   目前的執行位置。  
@@ -89,19 +93,19 @@ caps.handback.revision: 15
   
  當您以滑鼠右鍵按一下堆疊框架，然後選取 [移至原始程式碼] 時，該框架的程式碼就會顯示在 [查詢編輯器] 視窗中。 不過，該框架不會成為目前的框架，而且 [區域變數]、[監看式] 和 [快速監看式] 視窗的內容不會變更。  
   
-## 系統資訊和 Transact-SQL 結果  
+## <a name="system-information-and-transact-sql-results"></a>系統資訊和 Transact-SQL 結果  
  偵錯工具會在 [輸出] 視窗中列出其狀態和事件訊息。 這包括一些資訊，例如偵錯工具附加至其他處理序的時間，或是偵錯工具執行緒結束的時間。  
   
  在偵錯模式中，[結果] 和 [訊息] 索引標籤仍然會在 [查詢編輯器] 中處於使用中狀態。 [結果] 索引標籤會繼續顯示在偵錯工作階段期間執行之 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的結果集。 [訊息] 索引標籤會繼續顯示系統訊息，例如 *xx* 個資料列受影響，以及 PRINT 和 RAISERROR 陳述式的輸出。  
   
-## 另請參閱  
- [本機視窗](../../relational-databases/scripting/locals-window.md)   
- [監看式視窗](../../relational-databases/scripting/watch-window.md)   
- [快速監看式對話方塊](../../relational-databases/scripting/quickwatch-dialog-box.md)   
- [中斷點視窗](../../relational-databases/scripting/breakpoints-window.md)   
- [呼叫堆疊視窗](../../relational-databases/scripting/call-stack-window.md)   
- [執行緒視窗](../../relational-databases/scripting/threads-window.md)   
- [輸出視窗](../../relational-databases/scripting/output-window.md)   
+## <a name="see-also"></a>另請參閱  
+ [本機視窗](../../relational-databases/scripting/transact-sql-debugger-locals-window.md)   
+ [監看式視窗](../../relational-databases/scripting/transact-sql-debugger-watch-window.md)   
+ [快速監看式對話方塊](../../relational-databases/scripting/transact-sql-debugger-quickwatch-dialog-box.md)   
+ [中斷點視窗](../../relational-databases/scripting/transact-sql-debugger-breakpoints-window.md)   
+ [呼叫堆疊視窗](../../relational-databases/scripting/transact-sql-debugger-call-stack-window.md)   
+ [執行緒視窗](../../relational-databases/scripting/transact-sql-debugger-threads-window.md)   
+ [輸出視窗](../../relational-databases/scripting/transact-sql-debugger-output-window.md)   
  [Transact-SQL 偵錯工具](../../relational-databases/scripting/transact-sql-debugger.md)  
   
   

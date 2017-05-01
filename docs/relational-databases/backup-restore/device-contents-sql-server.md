@@ -1,24 +1,28 @@
 ---
 title: "裝置內容 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.bnrdevicecontents.f1"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.bnrdevicecontents.f1
 ms.assetid: 95e1902e-8c7a-4830-bdf9-1a6aca414a24
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d3a9d57f3c21ffc663d87d10eacaaca183d38ec9
+ms.lasthandoff: 04/11/2017
+
 ---
-# 裝置內容 (SQL Server)
+# <a name="device-contents-sql-server"></a>裝置內容 (SQL Server)
   使用此對話方塊來檢視備份資訊。 這個資訊描述裝置、媒體、媒體集，以及備份組。  
   
  **若要使用 SQL Server Management Studio 檢視備份裝置的內容**  
@@ -27,7 +31,7 @@ caps.handback.revision: 31
   
 -   [檢視邏輯備份裝置的屬性和內容 &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
-## 選項  
+## <a name="options"></a>選項  
  **媒體**  
  儲存備份資訊的磁碟或磁帶集。  
   
@@ -56,7 +60,7 @@ caps.handback.revision: 31
 |------------|------------|  
 |**名稱**|備份組的名稱。|  
 |**型別**|執行的備份類型：完整、差異或交易記錄。|  
-|**元件**|備份元件：資料庫、檔案或 *\<空白>* (針對交易記錄)。|  
+|**元件**|備份的元件：資料庫、檔案或 *\<空白>* (針對交易記錄)。|  
 |**Server**|執行備份作業之 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體的名稱。|  
 |**資料庫**|已備份資料庫的名稱。|  
 |**位置**|備份組在磁碟區中的位置。|  
@@ -65,7 +69,7 @@ caps.handback.revision: 31
 |**使用者名稱**|執行備份作業的使用者名稱。|  
 |**到期**|備份組過期的日期和時間。|  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [媒體集、媒體家族與備份組 &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)  
   
   

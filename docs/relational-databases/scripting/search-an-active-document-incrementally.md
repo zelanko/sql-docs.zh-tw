@@ -1,31 +1,35 @@
 ---
 title: "以累加方式搜尋作用中的文件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "搜尋 [SQL Server Management Studio], 累加"
-  - "查詢編輯器 [SQL Server Management Studio], 累加搜尋"
-  - "累加搜尋 [SQL Server Management Studio]"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- searches [SQL Server Management Studio], incremental
+- Query Editor [SQL Server Management Studio], incremental search
+- incremental searches [SQL Server Management Studio]
 ms.assetid: 490bb36c-dd43-4219-9e2a-ff27046b9395
 caps.latest.revision: 24
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b3d3c79129936f6764261ec3f0ac1e0d54daf03d
+ms.lasthandoff: 04/11/2017
+
 ---
-# 以累加方式搜尋作用中的文件
+# <a name="search-an-active-document-incrementally"></a>以累加方式搜尋作用中的文件
   您可以輸入文字，以累加方式來搜尋單一文件或視窗。 搜尋作業會反白顯示第一組符合文件或視窗中之累加搜尋期間所輸入之字元的字元。 累加搜尋會自動搜尋文件或視窗內的所有文字，不過，隱藏的文字除外。  
   
  對於 **[大小寫須相符]** 選項，累加搜尋會使用上一次搜尋的準則。 例如，如果您利用 [檔案中尋找] 對話方塊搜尋了多個檔案，且選取 [大小寫須相符]，您下次累加搜尋時，搜尋會區分大小寫。  
   
-### 累加搜尋  
+### <a name="to-search-incrementally"></a>累加搜尋  
   
 1.  開啟您要搜尋的檔案或視窗。  
   
@@ -46,7 +50,7 @@ caps.handback.revision: 24
 > [!NOTE]  
 >  如需完整的鍵盤快速鍵清單，請參閱 [SQL Server Management Studio 鍵盤快速鍵](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [搜尋和取代](../../relational-databases/scripting/search-and-replace.md)   
  [以互動方式搜尋文件](../../relational-databases/scripting/search-documents-interactively.md)   
  [使用結果清單搜尋文件](../../relational-databases/scripting/search-documents-using-results-lists.md)   

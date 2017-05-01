@@ -1,25 +1,29 @@
 ---
-title: "刪除工作負載群組 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "工作負載群組 [SQL Server], 刪除"
-  - "資源管理員, 刪除工作負載群組"
+title: "刪除工作負載群組 | Microsoft 文件"
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- workload groups [SQL Server], delete
+- Resource Governor, workload group delete
 ms.assetid: d5902c46-5c28-4ac1-8b56-cb4ca2b072d0
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 498058e4186851b78bf67795828f1a7562794a72
+ms.lasthandoff: 04/11/2017
+
 ---
-# 刪除工作負載群組
+# <a name="delete-a-workload-group"></a>刪除工作負載群組
   您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 Transact-SQL 刪除工作負載群組或資源集區。  
   
 -   **開始之前：**  [限制事項](#LimitationsRestrictions)、 [權限](#Permissions)  
@@ -38,7 +42,7 @@ caps.handback.revision: 19
   
 -   重新啟動伺服器。 重新啟動程序完成後，將不會建立已經刪除的群組，而且已經移動的群組將會使用新的資源集區指派。  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> 權限  
  刪除工作負載群組需要 CONTROL SERVER 權限。  
   
 ##  <a name="DelWGObjEx"></a> 使用物件總管刪除工作負載群組  
@@ -80,8 +84,8 @@ caps.handback.revision: 19
   
 3.  執行 **ALTER RESOURCE GOVERNOR RECONFIGURE** 陳述式。  
   
-### 範例 (Transact-SQL)  
- 下列範例會卸除名稱為 `groupAdhoc` 的工作負載群組。  
+### <a name="example-transact-sql"></a>範例 (Transact-SQL)  
+ 下列範例會卸除名稱為 `groupAdhoc`的工作負載群組。  
   
 ```  
 DROP WORKLOAD GROUP groupAdhoc;  
@@ -90,7 +94,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [資源管理員](../../relational-databases/resource-governor/resource-governor.md)   
  [建立資源集區](../../relational-databases/resource-governor/create-a-resource-pool.md)   
  [建立工作負載群組](../../relational-databases/resource-governor/create-a-workload-group.md)   

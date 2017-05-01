@@ -1,29 +1,33 @@
 ---
 title: "階層式資料 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "階層 [SQL Server], 支援的資料表"
-  - "hierarchyid [Database Engine], 概念"
-  - "階層式資料表 [Database Engine]"
-  - "SqlHierarchyId"
-  - "hierarchyid [Database Engine]"
-  - "階層式查詢 [SQL Server], 使用 hierarchyid 資料類型"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- hierarchies [SQL Server], tables to support
+- hierarchyid [Database Engine], concepts
+- hierarchical tables [Database Engine]
+- SqlHierarchyId
+- hierarchyid [Database Engine]
+- hierarchical queries [SQL Server], using hierarchyid data type
 ms.assetid: 19aefa9a-fbc2-4b22-92cf-67b8bb01671c
 caps.latest.revision: 40
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 502bbf9e763ffc8132e741a33ebe0ec4d0cad499
+ms.lasthandoff: 04/11/2017
+
 ---
-# 階層式資料 (SQL Server)
+# <a name="hierarchical-data-sql-server"></a>階層式資料 (SQL Server)
   內建 **hierarchyid** 資料類型讓儲存與查詢階層式資料更容易。 **hierarchyid** 最適合表示樹狀目錄，這是階層式資料最常見的類型。  
   
  階層式資料的定義為一組資料項目，這些資料項目會依據階層式關聯性，彼此相關。 階層式關聯性表示資料的一個項目是另一個項目的父代。 通常儲存在資料庫的階層式資料範例包含下列：  
@@ -38,7 +42,7 @@ caps.handback.revision: 39
   
 -   網頁之間的連結圖形  
   
- 使用 [hierarchyid](../Topic/hierarchyid%20\(Transact-SQL\).md) 做為資料類型來建立具有階層式結構的資料表，或描述儲存在另一個位置的階層式資料結構。 使用 [中的](../t-sql/data-types/hierarchyid-data-type-method-reference.md) hierarchyid 函數 [!INCLUDE[tsql](../includes/tsql-md.md)] 來查詢及管理階層式資料。  
+ 使用 [hierarchyid](../t-sql/data-types/hierarchyid-data-type-method-reference.md) 做為資料類型來建立具有階層式結構的資料表，或描述儲存在另一個位置的階層式資料結構。 使用 [中的](http://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06) hierarchyid 函數 [!INCLUDE[tsql](../includes/tsql-md.md)] 來查詢及管理階層式資料。  
   
 ##  <a name="keyprops"></a> hierarchyid 的主要屬性  
  **hierarchyid** 資料類型的值代表樹狀目錄階層中的位置。 **hierarchyid** 的值具有下列屬性：  
@@ -55,7 +59,6 @@ caps.handback.revision: 39
   
      透過使用 [GetDescendant](../t-sql/data-types/getdescendant-database-engine.md) 方法，您就一定能夠在任何指定節點的右側、任何指定節點的左側，或任何兩個同層級之間產生同層級。 在階層中插入或刪除任意的節點數目時，比較屬性會保留下來。 大部分的插入和刪除項目都會保留壓縮度屬性。 不過，兩個節點之間的插入項目則會以稍微少的壓縮表示來產生 hierarchyid 值。  
   
- [本主題內容](#top)  
   
 ##  <a name="limits"></a> hierarchyid 的限制  
  **hierarchyid** 資料類型具有下列限制：  
@@ -66,7 +69,6 @@ caps.handback.revision: 39
   
 -   由 **hierarchyid** 值代表的階層式關聯性不會像外部索引鍵關聯性般強制執行。 如果 A 擁有子系 B，然後刪除 A 留下 B，讓關聯性變成不存在的記錄，這種階層式關聯性是可能發生而且有時候是恰當的。 如果無法接受這種行為，應用程式必須在刪除父系前，查詢下階。  
   
- [本主題內容](#top)  
   
 ##  <a name="alternatives"></a> 使用 hierarchyid 替代選項的時機  
  代表階層式資料的兩個 **hierarchyid** 替代選項為：  
@@ -77,7 +79,7 @@ caps.handback.revision: 39
   
  **hierarchyid** 通常優先於這些替代選項。 但是，以下詳述替代選項可能優先於 hierarchyid 的特定情況。  
   
-### 父子式  
+### <a name="parentchild"></a>父子式  
  使用父子式方式時，每個資料列都包含一個父系的參考。 下表定義在父子關聯性中包含父系和子系資料列時所使用的一般資料表：  
   
 ```  
@@ -99,13 +101,13 @@ GO
   
 -   而使用 **hierarchyid**進行直接下階查詢時，速度則稍慢。  
   
--   使用 **hierarchyid** 移動非分葉節點時，速度比較慢。  
+-   使用 **hierarchyid**移動非分葉節點時，速度比較慢。  
   
--   使用 **hierarchyid** 插入非分葉節點與插入或移動分葉節點時，其複雜程度相同。  
+-   使用 **hierarchyid**插入非分葉節點與插入或移動分葉節點時，其複雜程度相同。  
   
  下列狀況存在時，最好使用父子式：  
   
--   索引鍵的大小很重要。 如果節點數目相同，**hierarchyid** 值會等於或大於整數系列 (**smallint**、**int**、**bigint**) 值。 在極少的情況下，這是使用 [父子式] 的唯一原因，因為比起使用 [父子式] 結構時所需要的通用資料表運算式，**hierarchyid** 的 I/O 位置明顯較好，而且 CPU 的複雜性較高。  
+-   索引鍵的大小很重要。 如果節點數目相同， **hierarchyid** 值會等於或大於整數系列 (**smallint**、 **int**、 **bigint**) 值。 在極少的情況下，這是使用 [父子式] 的唯一原因，因為比起使用 [父子式] 結構時所需要的通用資料表運算式， **hierarchyid** 的 I/O 位置明顯較好，而且 CPU 的複雜性較高。  
   
 -   查詢很少會查詢整個階層的區段。 換句話說，查詢通常只處理階層中的單一點。 在這些情況下，共同位置就不重要。 例如，如果組織資料表僅用於處理個別員工的薪資，最好使用 [父子式]。  
   
@@ -121,9 +123,8 @@ GO
     GO  
     ```  
   
- [本主題內容](#top)  
   
-### XML  
+### <a name="xml"></a>XML  
  XML 文件是一個樹狀結構，因此，單一的 XML 資料類型執行個體可以代表一個完整的階層。 In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] when an XML hierarchyid 函數dex is created, **hierarchyid** values are used hierarchyid 函數ternally to represent the position hierarchyid 函數 the hierarchy.  
   
  如果以下所有狀況成立，使用 XML 資料類型可能比較好：  
@@ -145,7 +146,6 @@ CREATE TABLE XMLOrg
 GO  
 ```  
   
- [本主題內容](#top)  
   
 ##  <a name="indexing"></a> 階層式資料的索引策略  
  編製階層式資料索引有兩種策略：  
@@ -164,9 +164,8 @@ GO
   
  不論是讓深度優先、廣度優先，或是兩者，還是那個要產生叢集索引鍵 (如果有的話)，都取決於上述查詢類型的相對重要性，以及 SELECT 和DML 作業的相對重要性。 如需索引策略的詳細範例，請參閱＜ [Tutorial: Using the hierarchyid Data Type](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)＞。  
   
- [本主題內容](#top)  
   
-### 建立索引  
+### <a name="creating-indexes"></a>建立索引  
  GetLevel() 方法可以用來建立廣度優先排序。 在下列範例中，會同時建立廣度優先和深度優先的索引：  
   
 ```wmimof  
@@ -190,11 +189,10 @@ ON Organization(BusinessEntityID) ;
 GO  
 ```  
   
- [本主題內容](#top)  
   
-## 範例  
+## <a name="examples"></a>範例  
   
-### 簡單範例  
+### <a name="simple-example"></a>簡單範例  
  下列範例有意經過簡化以協助您開始使用。 首先，建立資料表以保留一些地理資料。  
   
 ```  
@@ -270,9 +268,8 @@ VALUES ('/', 'Earth', 'Planet');
 ##  <a name="tasks"></a> 相關工作  
   
 ###  <a name="migrating"></a> 從父子式移轉到 hierarchyid  
- 大部分的樹狀目錄都是使用 [父子式] 代表。 從 [父子式] 結構遷移到使用 **hierarchyid** 的資料表最簡單的方式，就是使用暫存資料行或暫存資料表來追蹤每個階層層級的節點數。 如需遷移 [父子式] 資料表的範例，請參閱[教學課程：使用 hierarchyid 資料類型](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)的第 1 課。  
+ 大部分的樹狀目錄都是使用 [父子式] 代表。 從 [父子式] 結構遷移到使用 **hierarchyid** 的資料表最簡單的方式，就是使用暫存資料行或暫存資料表來追蹤每個階層層級的節點數。 如需遷移 [父子式] 資料表的範例，請參閱 [教學課程：使用 hierarchyid 資料類型](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)的第 1 課。  
   
- [本主題內容](#top)  
   
 ###  <a name="BKMK_ManagingTrees"></a> 使用 hierarchyid 管理樹狀結構  
  雖然 **hierarchyid** 資料行不需要代表樹狀結構，但是應用程式可以輕易地確認這就是樹狀結構。  
@@ -289,9 +286,8 @@ VALUES ('/', 'Earth', 'Planet');
   
     -   判斷每個新子節點的唯一性，然後插入該子節點做為可序列化交易的一部分。  
   
- [本主題內容](#top)  
   
-#### 使用錯誤偵測的範例  
+#### <a name="example-using-error-detection"></a>使用錯誤偵測的範例  
  在下列範例中，範例程式碼會計算新子系的 **EmployeeId** 值，然後偵測任何索引鍵違規，並傳回 **INS_EMP** 標記，以便為新的資料列重新計算 **EmployeeId** 值：  
   
 ```  
@@ -324,10 +320,9 @@ END ;
 GO  
 ```  
   
- [本主題內容](#top)  
   
-#### 使用序列化交易的範例  
- **Org_BreadthFirst** 索引可確定判斷 **@last_child** 會使用範圍搜尋。 除了應用程式可能想要檢查的其他錯誤情況之外，插入後的重複索引鍵違規會指出新增多個具有相同識別碼之員工的嘗試，因此必須重新計算 **@last_child**。 下列程式碼使用序列化交易與廣度優先索引來計算新的節點值：  
+#### <a name="example-using-a-serializable-transaction"></a>使用序列化交易的範例  
+ **Org_BreadthFirst** 索引可確定判斷 **@last_child** 會使用範圍搜尋。 除了應用程式可能想要檢查的其他錯誤情況之外，插入後的重複索引鍵違規會指出新增多個具有相同識別碼之員工的嘗試，因此必須重新計算 **@last_child** 。 下列程式碼使用序列化交易與廣度優先索引來計算新的節點值：  
   
 ```  
 CREATE TABLE Org_T2  
@@ -377,7 +372,6 @@ EmployeeId LastChild EmployeeName
 0x5AC0    NULL       Mary  
 ```  
   
- [本主題內容](#top)  
   
 ###  <a name="BKMK_EnforcingTrees"></a> 強制執行樹狀結構  
  以上的範例說明應用程式可以如何確保樹狀結構的維護。 若要透過條件約束強制執行樹狀結構，定義每個節點之父系的計算資料行可以使用傳回主要索引鍵識別碼的外部索引鍵條件約束建立。  
@@ -396,7 +390,6 @@ GO
   
  不信任可以維護階層式樹狀結構的程式碼具有資料表的 DML 直接存取權時，最好使用這個方法強制關聯性。 不過，由於必須針對每個 DML 作業檢查條件約束，這個方法可能會降低效能。  
   
- [本主題內容](#top)  
   
 ###  <a name="findclr"></a> 透過使用 CLR 尋找上階  
  與階層中兩個節點相關的常見作業就是尋找最低通用上階。 這可以寫入 [!INCLUDE[tsql](../includes/tsql-md.md)] 或 CLR，因為這兩者都可以使用 **hierarchyid** 類型。 因為效能將會更快，因此建議使用 CLR。  
@@ -436,7 +429,7 @@ public partial class HierarchyId_Operations
 }  
 ```  
   
- 若要在下列 [!INCLUDE[tsql](../includes/tsql-md.md)] 範例中使用 **ListAncestor** 和 **CommonAncestor** 方法執行類似如下的程式碼，請在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中建置 DLL 並建立 **HierarchyId_Operations** 組件：  
+ 若要在下列 **範例中使用** ListAncestor **和** CommonAncestor [!INCLUDE[tsql](../includes/tsql-md.md)] 方法執行類似如下的程式碼，請在 **中建置 DLL 並建立** HierarchyId_Operations [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組件：  
   
 ```  
 CREATE ASSEMBLY HierarchyId_Operations   
@@ -444,7 +437,6 @@ FROM '<path to DLL>\ListAncestors.dll'
 GO  
 ```  
   
- [本主題內容](#top)  
   
 ###  <a name="ancestors"></a> 列出上階  
  建立節點上階清單是一個常見的作業，例如，在組織中顯示位置。 其中一個方法是，利用以上定義的 **HierarchyId_Operations** 類別，使用資料表值函數：  
@@ -474,7 +466,6 @@ JOIN ListAncestors(@h) AS A
 GO  
 ```  
   
- [本主題內容](#top)  
   
 ###  <a name="lowestcommon"></a> 尋找最低通用上階  
  使用以上定義的 **HierarchyId_Operations** 類別建立下列的 [!INCLUDE[tsql](../includes/tsql-md.md)] 函數，尋找與階層中兩個節點相關的最低通用上階：  
@@ -507,10 +498,9 @@ WHERE OrgNode = dbo.CommonAncestor(@h1, @h2) ;
   
  產生的節點是 /1/1/  
   
- [本主題內容](#top)  
   
 ###  <a name="BKMK_MovingSubtrees"></a> 移動子樹  
- 另一個常見的作業是移動子樹。 以下的程序使用 **@oldMgr** 的樹狀子目錄，並讓其 (包括 **@oldMgr**) 成為 **@newMgr** 的樹狀子目錄。  
+ 另一個常見的作業是移動子樹。 以下的程序使用 **@oldMgr** 的樹狀子目錄，並讓其 (包括 **@oldMgr**) 成為 **@newMgr**進行子樹查詢時，速度明顯加快。  
   
 ```  
 CREATE PROCEDURE MoveOrg(@oldMgr nvarchar(256), @newMgr nvarchar(256) )  
@@ -535,11 +525,10 @@ END ;
 GO  
 ```  
   
- [本主題內容](#top)  
   
-## 另請參閱  
- [Hierarchyid 資料類型方法參考](../t-sql/data-types/hierarchyid-data-type-method-reference.md)   
- [教學課程：使用 hierarchyid 資料類型](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
- [hierarchyid &#40;Transact-SQL&#41;](../Topic/hierarchyid%20\(Transact-SQL\).md)  
+## <a name="see-also"></a>另請參閱  
+ [Hierarchyid 資料類型方法參考](http://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)   
+ [Tutorial: Using the hierarchyid Data Type](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
+ [hierarchyid &#40;Transact-SQL&#41;](../t-sql/data-types/hierarchyid-data-type-method-reference.md)  
   
   

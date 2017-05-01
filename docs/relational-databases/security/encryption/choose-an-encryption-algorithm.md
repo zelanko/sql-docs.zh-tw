@@ -1,36 +1,40 @@
 ---
 title: "選擇加密演算法 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "01/08/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "加密 [SQL Server], 演算法"
-  - "加密 [SQL Server], 演算法"
-  - "安全性 [SQL Server], 加密"
-  - "演算法 [SQL Server 加密]"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 01/08/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- cryptography [SQL Server], algorithms
+- encryption [SQL Server], algorithms
+- security [SQL Server], encryption
+- algorithms [SQL Server encryption]
 ms.assetid: 8227028c-a9c9-489d-bd27-fbf8242634ae
 caps.latest.revision: 36
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a3cb1a59db35025eda9cf6ea68f0897aaecc9caf
+ms.lasthandoff: 04/11/2017
+
 ---
-# 選擇加密演算法
-  加密是全面防禦中的一環，可提供給想要維護 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體安全的管理員使用。  
+# <a name="choose-an-encryption-algorithm"></a>選擇加密演算法
+  加密是全面防禦中的一環，可提供給想要維護 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體安全的管理員使用。  
   
  加密演算法會定義資料轉換，讓未經授權的使用者無法輕鬆地反轉資料轉換。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可讓管理員和開發人員在數種演算法中進行選擇，包括 DES、Triple DES、TRIPLE_DES_3KEY、RC2、RC4、128 位元 RC4、DESX、128 位元 AES、192 位元 AES 和 256 位元 AES。  
   
 > [!NOTE]  
 >  開頭為 [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)]，取代 AES_128、AES_192 和 AES_256 以外的所有演算法。 若要使用較舊的演算法 (不建議使用)，您必須將資料庫相容性層級設定為 120 或更低。  
   
- 同一種演算法不可能適用於所有情況，各種演算法優缺點的指南也超出《[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 線上叢書》的範疇。 不過，下列為一般適用的原則：  
+ 同一種演算法不可能適用於所有情況，各種演算法優缺點的指南也超出《 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 線上叢書》的範疇。 不過，下列為一般適用的原則：  
   
 -   強式加密通常比弱式加密耗用更多 CPU 資源。  
   
@@ -51,7 +55,7 @@ caps.handback.revision: 36
 >   
 >  在不同的資料區塊上重複使用相同的 RC4 或 RC4_128 KEY_GUID，結果會是相同的 RC4 金鑰，因為 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不會自動提供 Salt。 重複使用相同的 RC4 金鑰是已知的錯誤，此錯誤會造成加密變弱。 因此，我們取代了 RC4 和 RC4_128 關鍵字。 [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)]  
   
- 如需加密演算法和加密技術的詳細資訊，請參閱 MSDN 上《.NET Framework 開發人員手冊》中的[重要的安全性概念](http://go.microsoft.com/fwlink/?LinkId=62082)。  
+ 如需加密演算法和加密技術的詳細資訊，請參閱 MSDN 上《.NET Framework 開發人員手冊》中的 [重要的安全性概念](http://go.microsoft.com/fwlink/?LinkId=62082) 。  
   
  **釐清有關 DES 演算法的資訊：**  
   
@@ -61,7 +65,7 @@ caps.handback.revision: 36
   
 -   以 ALGORITHM = TRIPLE_DES 建立的對稱金鑰使用具有 128 位元金鑰的 TRIPLE DES。  
   
-## 相關工作  
+## <a name="related-tasks"></a>相關工作  
   
 |||  
 |-|-|  
@@ -71,8 +75,9 @@ caps.handback.revision: 36
 |使用透明資料加密來加密資料庫檔案。|[透明資料加密 &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption-tde.md)|  
 |如何加密資料表的一個資料行。|[加密資料行](../../../relational-databases/security/encryption/encrypt-a-column-of-data.md)|  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [SQL Server 加密](../../../relational-databases/security/encryption/sql-server-encryption.md)   
  [加密階層](../../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   
+

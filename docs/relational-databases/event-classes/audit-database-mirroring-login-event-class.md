@@ -1,29 +1,33 @@
 ---
 title: "Audit Database Mirroring Login 事件類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "事件通知 [SQL Server], 資料庫鏡像"
-  - "Audit Database Mirroring Login 事件類別"
-  - "資料庫鏡像 [SQL Server], 事件通知"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- event notifications [SQL Server], database mirroring
+- Audit Database Mirroring Login event class
+- database mirroring [SQL Server], event notifications
 ms.assetid: d0bd436d-aade-4208-a7e5-75cf3b5d0ce9
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 68d56190a6435a36e8ca96e0228aae7f19f133d1
+ms.lasthandoff: 04/11/2017
+
 ---
-# Audit Database Mirroring Login 事件類別
+# <a name="audit-database-mirroring-login-event-class"></a>Audit Database Mirroring Login 事件類別
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 建立 **Audit Database Mirroring Login** 事件來報告與資料庫鏡像傳輸安全性有關的稽核訊息。  
   
-## Audit Database Mirroring Login 事件類別資料行  
+## <a name="audit-database-mirroring-login-event-class-data-columns"></a>Audit Database Mirroring Login 事件類別資料行  
   
 |資料行|型別|說明|資料行編號|可篩選|  
 |-----------------|----------|-----------------|-------------------|----------------|  
@@ -61,7 +65,7 @@ caps.handback.revision: 16
 |5|Authentication Failure|Authentication Failure 事件會報告資料庫鏡像端點由於錯誤而無法執行連線驗證。 對於 Windows 驗證，此事件會報告資料庫鏡像端點無法使用 Windows 驗證。 對於以憑證為基礎的驗證，此事件會報告資料庫鏡像端點無法存取憑證。|  
 |6|Authorization Failure|Authorization Failure 事件會報告資料庫鏡像端點拒絕進行連線驗證。 對於 Windows 驗證，此事件是用以報告連接的安全性識別碼與資料庫使用者不相符。 對於以憑證為基礎的驗證，此事件會報告訊息中傳送的公開金鑰不符合 **master** 資料庫中的憑證。|  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md)   
  [ALTER ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md)   
  [資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)  

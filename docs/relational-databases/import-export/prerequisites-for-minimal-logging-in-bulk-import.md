@@ -1,29 +1,33 @@
 ---
 title: "大量匯入採用最低限度記錄的必要條件 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-bulk-import-export"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "最低限度記錄 [SQL Server]"
-  - "記錄的大量複製 [SQL Server]"
-  - "記錄 [SQL Server], 最低限度記錄"
-  - "最低限度記錄作業 [SQL Server]"
-  - "大量匯入 [SQL Server], 最低限度記錄"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-bulk-import-export
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- minimal logging [SQL Server]
+- logged bulk copy [SQL Server]
+- logs [SQL Server], minimal logging
+- minimally logged operations [SQL Server]
+- bulk importing [SQL Server], minimal logging
 ms.assetid: bd1dac6b-6ef8-4735-ad4e-67bb42dc4f66
 caps.latest.revision: 48
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 47
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 1f64cc4fc8ab747d137777e7a14c17ac796eb9ee
+ms.lasthandoff: 04/11/2017
+
 ---
-# 大量匯入採用最低限度記錄的必要條件
+# <a name="prerequisites-for-minimal-logging-in-bulk-import"></a>大量匯入採用最低限度記錄的必要條件
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   如果是完整復原模式之下的資料庫，則大量匯入執行的所有資料列插入作業，都會完整記錄在交易記錄中。 若使用完整復原模式，大型的資料匯入作業可能會使交易記錄檔很快就填滿。 相較之下，在簡單復原模式或大量記錄復原模式之下，大量匯入作業的最少記錄會減少大量匯入作業填滿記錄空間的機會。 最低限度記錄也比完整記錄更有效率。  
@@ -31,7 +35,7 @@ caps.handback.revision: 47
 > [!NOTE]  
 >  大量記錄復原模式的設計目的，是要在大量匯入作業期間暫時取代完整復原模式。  
   
-## 最低限度記錄大量匯入作業的資料表需求  
+## <a name="table-requirements-for-minimally-logging-bulk-import-operations"></a>最低限度記錄大量匯入作業的資料表需求  
  使用最低限度記錄時，目標資料表必須符合下列條件：  
   
 -   資料表未被複寫。  
@@ -39,7 +43,7 @@ caps.handback.revision: 47
 -   已指定資料表鎖定 (使用 TABLOCK)。 對於具有叢集資料行存放區索引的資料表，您不需要 TABLOCK 進行最低限度記錄。  此外，只有在針對載入已壓縮的資料列群組的資料進行最低限度記錄時，需要 102400 或更高的 batchsize。  
   
     > [!NOTE]  
-    >  雖然在最低限度記錄的大量匯入作業期間，交易記錄檔中不會記錄資料插入，但每當有新的範圍配置到資料表時，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 仍會記錄範圍配置。  
+    >  雖然在最低限度記錄的大量匯入作業期間，交易記錄檔中不會記錄資料插入，但每當有新的範圍配置到資料表時， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 仍會記錄範圍配置。  
   
 -   資料表不是記憶體最佳化資料表。  
   
@@ -68,16 +72,15 @@ caps.handback.revision: 47
   
 -   [檢視或變更資料庫的復原模式 &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md)  
   
- ![搭配回到頁首連結使用的箭頭圖示](../../analysis-services/instances/media/uparrow16x16.png "搭配回到頁首連結使用的箭頭圖示") [&#91;回到頁首&#93;](#Top)  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [復原模式 &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)   
  [bcp 公用程式](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [資料表提示 &#40;Transact-SQL&#41;](../Topic/Table%20Hints%20\(Transact-SQL\).md)   
+ [資料表提示 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)  
   
   

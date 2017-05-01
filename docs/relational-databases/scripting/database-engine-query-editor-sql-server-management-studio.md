@@ -1,38 +1,42 @@
 ---
-title: "Database Engine 查詢編輯器 (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.tsqlquery.f1"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "查詢編輯器 [Database Engine]"
-  - "Transact-SQL 編輯器，請參閱查詢編輯器 [Database Engine]"
-  - "Database Engine 查詢編輯器，請參閱查詢編輯器 [Database Engine]"
-  - "查詢編輯器 [資料庫引擎]，工具列"
-  - "編輯器 [SQL Server Management Studio]，資料庫引擎查詢編輯器"
-  - "查詢編輯器 [資料庫引擎]，功能"
-  - "SQL Server Management Studio [SQL Server]，資料庫引擎查詢編輯器"
+title: "Database Engine 查詢編輯器 (SQL Server Management Studio) | Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.tsqlquery.f1
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- Query Editor [Database Engine]
+- Transact-SQL Editor See Query Editor [Database Engine]
+- Database Engine Query Editor See Query Editor [Database Engine]
+- Query Editor [Database Engine], Toolbar
+- editors [SQL Server Management Studio], Database Engine Query Editor
+- Query Editor [Database Engine], Features
+- SQL Server Management Studio [SQL Server], Database Engine Query Editor
 ms.assetid: 05cfae9b-96d5-4a35-a098-0bc3a548bcfc
 caps.latest.revision: 47
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 47
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 40ac7dd736d0366fe5cb564719a375e2e6a6a43d
+ms.lasthandoff: 04/11/2017
+
 ---
-# Database Engine 查詢編輯器 (SQL Server Management Studio)
+# <a name="database-engine-query-editor-sql-server-management-studio"></a>Database Engine 查詢編輯器 (SQL Server Management Studio)
   使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器，建立及執行包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的指令碼。 此編輯器也支援執行包含 **sqlcmd** 命令的指令碼。  
   
-## Transact-SQL F1 說明  
- 當您選取 F1 時，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器支援將您連結至特定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的參考主題。 若要執行這項操作，請反白顯示 Transact-SQL 陳述式的名稱，然後選取 F1。 接著，說明搜尋引擎會搜尋具有符合您反白顯示的字串之 F1 說明屬性的主題。  
+## <a name="transact-sql-f1-help"></a>Transact-SQL F1 說明  
+ 當您選取 F1 時， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器支援將您連結至特定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的參考主題。 若要執行這項操作，請反白顯示 Transact-SQL 陳述式的名稱，然後選取 F1。 接著，說明搜尋引擎會搜尋具有符合您反白顯示的字串之 F1 說明屬性的主題。  
   
  如果說明搜尋引擎找不到具有完全符合您反白顯示的字串之 F1 說明關鍵字的主題，則會顯示此主題。 在這種情況下，有兩種方法可以找到您正在尋找的說明：  
   
@@ -46,10 +50,10 @@ caps.handback.revision: 47
   
     -   系統預存程序資料表的名稱，或是檢視表，例如 sys.data_spaces 或 sp_tableoption。  
   
-## 使用 Database Engine 查詢編輯器  
+## <a name="working-with-the-database-engine-query-editor"></a>使用 Database Engine 查詢編輯器  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器是在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中實作的四個編輯器之一。 如需在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器中實作之功能及您可以使用編輯器執行之主要工作的描述，請參閱[查詢與文字編輯器 &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)。  
   
-## SQL 編輯器工具列  
+## <a name="sql-editor-toolbar"></a>SQL 編輯器工具列  
  當 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器開啟時，SQL 編輯器工具列會顯示下列按鈕。  
   
  **Connect**  
@@ -120,7 +124,7 @@ caps.handback.revision: 47
   
  您也可以加入 SQL 編輯器工具列，其方式是選取 **[檢視]** 功能表、選取 **[工具列]**，然後選取 **[SQL 編輯器]**。 如果您在沒有任何 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器視窗開啟時加入 SQL 編輯器工具列，則所有的按鈕都將無法使用。  
   
-## SQL 編輯器工具列  
+## <a name="sql-editor-toolbar"></a>SQL 編輯器工具列  
  當開啟 [!INCLUDE[ssDE](../../includes/ssde-md.md)] [查詢編輯器] 視窗時，您可以加入 [偵錯] 工具列，其方式是選取 **[檢視]** 功能表、選取 **[工具列]**，然後選取 **[偵錯]**。 如果您在沒有任何 [!INCLUDE[ssDE](../../includes/ssde-md.md)] [查詢編輯器] 視窗開啟時加入 [偵錯] 工具列，則所有的按鈕都將無法使用。  
   
  **Continue**  
@@ -147,7 +151,7 @@ caps.handback.revision: 47
  **視窗**  
  開啟 [中斷點] 視窗或 [即時運算] 視窗。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [SQL Server Management Studio 鍵盤快速鍵](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)  
   
   

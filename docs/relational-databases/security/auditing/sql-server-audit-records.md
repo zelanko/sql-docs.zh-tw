@@ -1,33 +1,37 @@
 ---
-title: "SQL Server Audit 記錄 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "稽核記錄 [SQL Server]"
+title: "SQL Server 稽核記錄 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- audit records [SQL Server]
 ms.assetid: 7a291015-df15-44fe-8d53-c6d90a157118
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 21e4ed91a72a564ec39632899f81131fa4e7caf5
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server Audit 記錄
+# <a name="sql-server-audit-records"></a>SQL Server Audit 記錄
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit 功能可讓您稽核伺服器層級和資料庫層級的事件群組和事件。 如需詳細資訊，請參閱 [SQL Server Audit &#40;Database Engine&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
- 稽核是由零或多個稽核動作項目所組成，這些項目會記錄到稽核*「目標」*(Target)。 稽核目標可以是二進位檔案、Windows 應用程式事件記錄檔或 Windows 安全性事件記錄檔。 傳送給目標的記錄包含下表所述的元素。  
+ 稽核是由零或多個稽核動作項目所組成，這些項目會記錄到稽核 *「目標」*(Target)。 稽核目標可以是二進位檔案、Windows 應用程式事件記錄檔或 Windows 安全性事件記錄檔。 傳送給目標的記錄包含下表所述的元素。  
   
 |資料行名稱|描述|型別|永遠可使用|  
 |-----------------|-----------------|----------|----------------------|  
 |**event_time**|可稽核的動作引發時的日期/時間。|**datetime2**|是|  
 |**sequence_no**|追蹤單一稽核記錄中太長而無法納入稽核寫入緩衝區內的記錄順序。|**int**|是|  
-|**action_id**|動作的識別碼<br /><br /> 提示：若要使用 **action_id** 作為述詞，您必須將它從字元字串轉換為數值。 如需詳細資訊，請參閱[針對 action_id/class_type 述詞篩選 SQL Server Audit](http://blogs.msdn.com/b/sqlsecurity/archive/2012/10/03/filter-sql-server-audit-on-action-id-class-type-predicate.aspx)。|**varchar(4)**|是|  
+|**action_id**|動作的識別碼<br /><br /> 提示：若要使用 **action_id** 作為述詞，您必須將它從字元字串轉換為數值。 如需詳細資訊，請參閱 [針對 action_id/class_type 述詞篩選 SQL Server Audit](http://blogs.msdn.com/b/sqlsecurity/archive/2012/10/03/filter-sql-server-audit-on-action-id-class-type-predicate.aspx)。|**varchar(4)**|是|  
 |**succeeded**|指示觸發此事件的動作是否成功|**bit** – 1 = 成功，0 = 失敗|是|  
 |**permission_bitmask**|當適用時，顯示已授與、拒絕或撤銷的權限|**bigint**|否|  
 |**is_column_permission**|指出資料行層級權限的旗標|**bit** – 1 = True，0 = False|否|  
@@ -52,10 +56,10 @@ caps.handback.revision: 19
 |**陳述式**|TSQL 陳述式 (如果有的話)|**nvarchar(4000)**|否|  
 |**additional_information**|有關儲存為 XML 之事件的任何其他資訊。|**nvarchar(4000)**|否|  
   
-## 備註  
+## <a name="remarks"></a>備註  
  某些動作不會填入資料行的值，因為它可能不適用於此動作。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit 會將字元欄位的 4000 個字元資料儲存在稽核記錄中。 當從可稽核的動作傳回的 **additional_information** 和 **statement** 值傳回 4000 個以上的字元時，**sequence_no** 資料行會用來將多筆記錄寫入單一稽核動作的稽核報表中，以記錄這些資料。 此程序如下：  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit 會將字元欄位的 4000 個字元資料儲存在稽核記錄中。 當從可稽核的動作傳回的 **additional_information** 和 **statement** 值傳回 4000 個以上的字元時， **sequence_no** 資料行會用來將多筆記錄寫入單一稽核動作的稽核報表中，以記錄這些資料。 此程序如下：  
   
 -   **statement** 資料行分成 4000 個字元。  
   
@@ -65,14 +69,14 @@ caps.handback.revision: 19
   
 -   重複執行此程序，直到記錄所有資料為止。  
   
- 您可以使用 **sequence_no** 值、**event_Time**、**action_id** 和 **session_id** 資料行按順序讀取資料列來識別此動作，以便連接資料。  
+ 您可以使用 **sequence_no** 值、 **event_Time**、 **action_id** 和 **session_id** 資料行按順序讀取資料列來識別此動作，以便連接資料。  
   
-## 相關內容  
+## <a name="related-content"></a>相關內容  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../../t-sql/statements/create-server-audit-transact-sql.md)  
   
- [ALTER SERVER AUDIT  &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-server-audit-transact-sql.md)  
+ [ALTER SERVER AUDIT &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-server-audit-transact-sql.md)  
   
- [DROP SERVER AUDIT  &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-server-audit-transact-sql.md)  
+ [DROP SERVER AUDIT &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-server-audit-transact-sql.md)  
   
  [CREATE SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../../t-sql/statements/create-server-audit-specification-transact-sql.md)  
   

@@ -1,25 +1,29 @@
 ---
 title: "SQL Server 擴充的事件引擎 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "擴充事件 [SQL Server], 引擎"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- extended events [SQL Server], engine
 ms.assetid: d74642a5-42b9-4a15-aa3d-f98bfe695050
 caps.latest.revision: 14
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e11bf82e65be3b127ca7ee6c4f43ab2b60531b71
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server 擴充的事件引擎
+# <a name="sql-server-extended-events-engine"></a>SQL Server 擴充的事件引擎
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 擴充的事件引擎是執行以下作業之服務與物件的集合：  
@@ -36,7 +40,7 @@ caps.handback.revision: 14
   
  下圖顯示擴充的事件工作階段的簡化檢視。 如需詳細資訊，請參閱 [SQL Server 擴充的事件工作階段](../../relational-databases/extended-events/sql-server-extended-events-sessions.md)。  
   
- ![詳細的擴充事件高階架構](../../relational-databases/extended-events/media/xearchitecturedetailed.gif "詳細的擴充事件高階架構")  
+ ![詳細的擴充事件架構](../../relational-databases/extended-events/media/xearchitecturedetailed.gif "詳細的擴充事件架構")  
   
  請注意下列事項：  
   
@@ -58,7 +62,7 @@ caps.handback.revision: 14
   
     -   當緩衝區填滿時，會將這些緩衝區分派給目標。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [擴充事件](../../relational-databases/extended-events/extended-events.md)  
   
   

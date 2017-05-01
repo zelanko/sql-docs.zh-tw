@@ -1,28 +1,32 @@
 ---
-title: "完整資料庫還原 (簡單復原模式) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "完整資料庫還原"
-  - "資料庫還原 [SQL Server], 完整資料庫"
-  - "還原資料庫 [SQL Server], 完整資料庫"
-  - "簡單復原模式 [SQL Server]"
-  - "還原 [SQL Server], 資料庫"
+title: "完整的資料庫還原 (簡單復原模式) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- complete database restores
+- database restores [SQL Server], complete database
+- restoring databases [SQL Server], complete database
+- simple recovery model [SQL Server]
+- restoring [SQL Server], database
 ms.assetid: 49828927-1727-4d1d-9ef5-3de43f68c026
 caps.latest.revision: 58
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 58
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d64038885f4344df3fc09c58038a724d5fd11aab
+ms.lasthandoff: 04/11/2017
+
 ---
-# 完整資料庫還原 (簡單復原模式)
+# <a name="complete-database-restores-simple-recovery-model"></a>完整資料庫還原 (簡單復原模式)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   在完整資料庫還原中，目標是還原整個資料庫。 在還原期間，整個資料庫為離線狀態。 在讓資料庫的任何部分上線之前，所有的資料都必須復原到一致的位置；此時資料庫的所有部分都會回到相同的時間點，而且沒有未認可的交易存在。  
@@ -30,7 +34,7 @@ caps.handback.revision: 58
  在簡單復原模式下，無法將資料庫還原到特定備份中的特定時間點。  
   
 > [!IMPORTANT]  
->  建議您不要附加或還原來源不明或來源不受信任的資料庫。 這些資料庫可能包含惡意程式碼，因此可能執行非預期的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼，或是修改結構描述或實體資料庫結構而造成錯誤。 使用來源不明或來源不受信任的資料庫之前，請先在非實際執行伺服器的資料庫上執行 [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)，同時檢查資料庫中的程式碼，例如預存程序或其他使用者定義程式碼。  
+>  建議您不要附加或還原來源不明或來源不受信任的資料庫。 這些資料庫可能包含惡意程式碼，因此可能執行非預期的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼，或是修改結構描述或實體資料庫結構而造成錯誤。 使用來源不明或來源不受信任的資料庫之前，請先在非實際執行伺服器的資料庫上執行 [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) ，同時檢查資料庫中的程式碼，例如預存程序或其他使用者定義程式碼。  
   
  **本主題內容：**  
   
@@ -39,10 +43,10 @@ caps.handback.revision: 58
 -   [相關工作](#RelatedTasks)  
   
 > [!NOTE]  
->  如需舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之備份支援的相關資訊，請參閱 [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md) 的＜相容性支援＞一節。  
+>  如需舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之備份支援的相關資訊，請參閱 [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)的＜相容性支援＞一節。  
   
 ##  <a name="Overview"></a> 簡單復原模式下的資料庫備份概觀  
- 在簡單復原模式下進行完整資料庫還原只需要一個或兩個 [RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md) 陳述式，視是否想要還原差異資料庫備份而定。 如果您只使用完整資料庫備份，則只需要還原最近的備份，如下圖所示。  
+ 在簡單復原模式下進行完整資料庫還原只需要一個或兩個 [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 陳述式，視是否想要還原差異資料庫備份而定。 如果您只使用完整資料庫備份，則只需要還原最近的備份，如下圖所示。  
   
  ![只還原完整資料庫備份](../../relational-databases/backup-restore/media/bnrr-rmsimple1-fulldbbu.gif "只還原完整資料庫備份")  
   
@@ -51,17 +55,17 @@ caps.handback.revision: 58
  ![還原完整和差異資料庫備份](../../relational-databases/backup-restore/media/bnrr-rmsimple2-diffdbbu.gif "還原完整和差異資料庫備份")  
   
 > [!NOTE]  
->  若您想將資料庫備份還原至不同的伺服器執行個體，請參閱[使用備份與還原複製資料庫](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)。  
+>  若您想將資料庫備份還原至不同的伺服器執行個體，請參閱 [使用備份與還原複製資料庫](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)。  
   
 ###  <a name="TsqlSyntax"></a> 基本 Transact-SQL RESTORE 語法  
- 用於還原完整資料庫備份的基本 [!INCLUDE[tsql](../../includes/tsql-md.md)][RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md) 語法為：  
+ 用於還原完整資料庫備份的基本 [!INCLUDE[tsql](../../includes/tsql-md.md)][RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 語法為：  
   
  RESTORE DATABASE *database_name* FROM *backup_device* [ WITH NORECOVERY ]  
   
 > [!NOTE]  
 >  若您也想還原差異資料庫備份，請使用 WITH NORECOVERY。  
   
- 用於還原資料庫備份的基本 [RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md) 語法為：  
+ 用於還原資料庫備份的基本 [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 語法為：  
   
  RESTORE DATABASE *database_name* FROM *backup_device* WITH RECOVERY  
   
@@ -71,7 +75,7 @@ caps.handback.revision: 58
  這個範例顯示在完整資料庫還原實例中，還原順序的一些關鍵選項。 *「還原順序」* (Restore sequence) 包含一個或多個還原作業，會在一個或多個還原階段中移動資料。 會省略與這個檔案還原無關的語法和詳細資料。 為了清楚起見，建議您在復原資料庫時明確指定 RECOVERY 選項，即使它是預設的。  
   
 > [!NOTE]  
->  此範例會從設定復原模式為 `SIMPLE` 的 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 陳述式開始進行。  
+>  此範例會從設定復原模式為 [的](../../t-sql/statements/alter-database-transact-sql.md) ALTER DATABASE `SIMPLE`陳述式開始進行。  
   
 ```  
 USE master;  
@@ -116,8 +120,8 @@ GO
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.SqlRestore%2A>  
   
-## 另請參閱  
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+## <a name="see-also"></a>另請參閱  
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [sp_addumpdevice &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)   
  [完整資料庫備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-database-backups-sql-server.md)   

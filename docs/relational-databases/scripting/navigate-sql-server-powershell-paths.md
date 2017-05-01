@@ -1,25 +1,29 @@
 ---
 title: "導覽 SQL Server PowerShell 路徑 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d68aca48-d161-45ed-9f4f-14122ed30218
 caps.latest.revision: 8
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: dfdebbe0e80cbe5b1b852a86254f577f52d304a4
+ms.lasthandoff: 04/11/2017
+
 ---
-# 導覽 SQL Server PowerShell 路徑
+# <a name="navigate-sql-server-powershell-paths"></a>導覽 SQL Server PowerShell 路徑
   [!INCLUDE[ssDE](../../includes/ssde-md.md)] PowerShell 提供者會公開一組物件，而這組物件位在類似於檔案路徑之結構的 SQL Server 執行個體中。 您可以使用 Windows PowerShell 指令程式導覽提供者路徑，以及建立自訂磁碟機來縮短必須輸入的路徑。  
   
-## 開始之前  
+## <a name="before-you-begin"></a>開始之前  
  Windows PowerShell 實作指令程式以導覽路徑結構，而路徑結構代表 PowerShell 提供者所支援物件的階層。 在您導覽至路徑中的節點時，可以使用其他 Cmdlet 來執行目前物件的基本作業。 由於 Cmdlet 會經常被使用，所以具有簡短、標準的別名。 也有一組別名會將指令程式對應到類似的命令提示字元命令，而且有另一組別名適用於 UNIX Shell 命令。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供者會實作提供者指令程式的子集，如下表所示。  
@@ -36,7 +40,7 @@ caps.handback.revision: 8
 > [!IMPORTANT]  
 >  某些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 識別碼 (物件名稱) 包含 Windows PowerShell 在路徑名稱中不支援的字元。 如需如何使用包含這些字元之名稱的詳細資訊，請參閱 [PowerShell 中的 SQL Server 識別碼](../../relational-databases/scripting/sql-server-identifiers-in-powershell.md)。  
   
-### Get-ChildItem 所傳回的 SQL Server 資訊  
+### <a name="sql-server-information-returned-by-get-childitem"></a>Get-ChildItem 所傳回的 SQL Server 資訊  
  **Get-ChildItem** (或其 **dir** 和 **ls** 別名) 傳回的資訊視您在 SQLSERVER: 路徑中的位置而定。  
   
 |路徑位置|Get-ChildItem 結果|  
@@ -49,15 +53,15 @@ caps.handback.revision: 8
   
  **Get-ChildItem** 預設不會列出任何系統物件。 *Force* 參數可用來查看系統物件，例如 **sys** 結構描述中的物件。  
   
-### 自訂磁碟機  
+### <a name="custom-drives"></a>自訂磁碟機  
  Windows PowerShell 可讓使用者定義稱為 PowerShell 磁碟機的虛擬磁碟機。 這些磁碟機會透過路徑陳述式的開始節點進行對應。 它們通常是用來縮短經常輸入的路徑。 SQLSERVER: 路徑可能會很長，佔據 Windows PowerShell 視窗的空間且需要很長的輸入。 若您要在特定路徑節點上執行很多工作，您可以定義可對應至該節點的自訂 Windows PowerShell 磁碟機。  
   
-## 使用 PowerShell 指令程式別名  
+## <a name="use-powershell-cmdlet-aliases"></a>使用 PowerShell 指令程式別名  
  **使用 Cmdlet 別名**  
   
 -   輸入較短的別名，或對應至熟悉命令提示字元命令的別名，而不要輸入完整 Cmdlet 名稱。  
   
-### 別名範例 (PowerShell)  
+### <a name="alias-example-powershell"></a>別名範例 (PowerShell)  
  例如，您可以使用下列其中一組 Cmdlet 或別名來擷取可用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體清單，方式是導覽至 SQLSERVER:\SQL 資料夾，並要求該資料夾的子項目清單：  
   
 ```  
@@ -78,14 +82,14 @@ cd SQLSERVER:\SQL
 ls  
 ```  
   
-## 使用 Get-ChildItem  
+## <a name="use-get-childitem"></a>使用 Get-ChildItem  
  **使用 Get-ChildItem 傳回資訊**  
   
 1.  導覽至您要其 childrem 清單的節點  
   
 2.  執行 Get-Childitem 以取得清單。  
   
-### Get-ChildItem 範例 (PowerShell)  
+### <a name="get-childitem-example-powershell"></a>Get-ChildItem 範例 (PowerShell)  
  這些範例說明 Get-Childitem 針對 SQL Server 提供者路徑中不同節點所傳回的資訊。  
   
 ```  
@@ -110,14 +114,14 @@ Set-Location SQLSERVER:\SQL\localhost\DEFAULT\Databases
 Get-ChildItem -force  
 ```  
   
-## 建立自訂磁碟機  
+## <a name="create-a-custom-drive"></a>建立自訂磁碟機  
  **建立和使用自訂磁碟機**  
   
 1.  您可以使用 **New-PSDrive** 定義自訂磁碟機。 您可以使用 **Root** 參數指定以自訂磁碟機名稱呈現的路徑。  
   
 2.  參考路徑導覽 Cmdlet (例如 **Set-Location**) 中的自訂磁碟機名稱。  
   
-### 自訂磁碟機範例 (PowerShell)  
+### <a name="custom-drive-example-powershell"></a>自訂磁碟機範例 (PowerShell)  
  此範例會建立名為 AWDB 且對應至已部署 AdventureWorks2012 範例資料庫複本之節點的虛擬磁碟機。 然後，您可以使用虛擬磁碟機來導覽至資料庫中的資料表。  
   
 ```  
@@ -128,7 +132,7 @@ New-PSDrive -Name AWDB -Root SQLSERVER:\SQL\localhost\DEFAULT\Databases\Adventur
 Set-Location AWDB:\Tables\Purchasing.Vendor  
 ```  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [SQL Server PowerShell 提供者](../../relational-databases/scripting/sql-server-powershell-provider.md)   
  [使用 SQL Server PowerShell 路徑](../../relational-databases/scripting/work-with-sql-server-powershell-paths.md)   
  [將 URN 轉換成 SQL Server 提供者路徑](../../relational-databases/scripting/convert-urns-to-sql-server-provider-paths.md)   

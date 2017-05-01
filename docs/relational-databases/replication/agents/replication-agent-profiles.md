@@ -1,35 +1,39 @@
 ---
 title: "複寫代理程式設定檔 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "散發代理程式, 設定檔"
-  - "複寫 [SQL Server], 代理程式和設定檔"
-  - "複寫代理程式設定檔 [SQL Server]"
-  - "合併代理程式, 設定檔"
-  - "代理程式 [SQL Server 複寫], 設定檔"
-  - "佇列讀取器代理程式, 設定檔"
-  - "設定檔 [SQL Server], 複寫代理程式"
-  - "快照集代理程式, 設定檔"
-  - "記錄讀取器代理程式, 設定檔"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Distribution Agent, profiles
+- replication [SQL Server], agents and profiles
+- replication agent profiles [SQL Server]
+- Merge Agent, profiles
+- agents [SQL Server replication], profiles
+- Queue Reader Agent, profiles
+- profiles [SQL Server], replication agents
+- Snapshot Agent, profiles
+- Log Reader Agent, profiles
 ms.assetid: 0e980725-e42f-4283-94cb-d8a6dba5df62
 caps.latest.revision: 44
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 44
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a11a7821231d4c7fa3a8719a05bdd1a7bc49ff47
+ms.lasthandoff: 04/11/2017
+
 ---
-# 複寫代理程式設定檔
+# <a name="replication-agent-profiles"></a>複寫代理程式設定檔
   設定複寫時，會在散發者上安裝一組代理程式設定檔。 代理程式設定檔包含一組參數，代理程式每次執行時都會使用這組參數：每個代理程式在啟動過程中都會登入散發者，並查詢其設定檔內的參數。 針對使用 Web 同步處理的合併訂閱，會下載設定檔並儲存於「訂閱者」。 如果設定檔變更，則「訂閱者」中的設定檔會在下一次「合併代理程式」執行時更新。 如需有關 Web 同步處理的詳細資訊，請參閱＜ [Web Synchronization for Merge Replication](../../../relational-databases/replication/web-synchronization-for-merge-replication.md)＞。  
   
- 複寫為每個代理程式提供預設的設定檔，並為記錄讀取代理程式、散發代理程式及合併代理程式提供其他預先定義的設定檔。 除了提供的設定檔之外，您也可以建立適合自己的應用程式需求的設定檔。 代理程式設定檔可讓您輕易變更關聯該設定檔的所有代理程式的關鍵參數。 例如，如果您有 20 的快照集代理程式而需要變更查詢逾時值 ( **-QueryTimeout** 參數)，您可以更新的快照集代理程式所使用的設定檔，並使用新的值會自動在下一次執行開始該類型的所有代理程式。  
+ 複寫為每個代理程式提供預設的設定檔，並為記錄讀取代理程式、散發代理程式及合併代理程式提供其他預先定義的設定檔。 除了提供的設定檔之外，您也可以建立適合自己的應用程式需求的設定檔。 代理程式設定檔可讓您輕易變更關聯該設定檔的所有代理程式的關鍵參數。 例如，若有 20 個「快照集代理程式」，且必須變更其查詢逾時值 ( **-QueryTimeout** 參數)，則可以更新「快照集代理程式」所用的設定檔，則該類型的所有代理程式都會在下次執行時自動開始使用新值。  
   
  代理程式的不同執行個體也可以具有不同的設定檔。 例如，透過撥號連接來連接「發行者」和「散發者」的「合併代理程式」，可能會藉由使用 **慢速連結** 設定檔使用一組更適合慢速通訊連結的參數。  
   
@@ -38,9 +42,9 @@ caps.handback.revision: 44
   
  **使用及修改代理程式設定檔**  
   
--   [Work with Replication Agent Profiles](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)  
+-   [處理複寫代理程式設定檔](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)  
   
-## 快照集代理程式設定檔  
+## <a name="snapshot-agent-profiles"></a>快照集代理程式設定檔  
  下表顯示於「快照集代理程式」的預設設定檔中定義的參數。 如需這些參數的詳細資訊，請參閱＜ [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)＞。  
   
 ||預設|  
@@ -50,7 +54,7 @@ caps.handback.revision: 44
 |**-LoginTimeout**|15|  
 |**-QueryTimeout**|1800|  
   
-## 記錄讀取器代理程式設定檔  
+## <a name="log-reader-agent-profiles"></a>記錄讀取器代理程式設定檔  
  下表顯示於「記錄讀取器代理程式」的設定檔中定義的參數。 資料表中的每一個資料行代表一個具名設定檔。 如需這些參數的詳細資訊，請參閱＜ [Replication Log Reader Agent](../../../relational-databases/replication/agents/replication-log-reader-agent.md)＞。  
   
 ||預設|詳細資訊記錄|  
@@ -62,7 +66,7 @@ caps.handback.revision: 44
 |**-QueryTimeout**|1800|1800|  
 |**-ReadBatchSize**|500|500|  
   
-## 散發代理程式設定檔  
+## <a name="distribution-agent-profiles"></a>散發代理程式設定檔  
  下表顯示於「散發代理程式」的設定檔中定義的參數。 資料表中的每一個資料行代表一個具名設定檔。 如需這些參數的詳細資訊，請參閱＜ [Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)＞。  
   
 ||預設|詳細資訊記錄|Windows Synchronization Manager|資料一致性錯誤時仍然繼續|OLEDB 資料流的散發設定檔|  
@@ -83,7 +87,7 @@ caps.handback.revision: 44
 |**-TransactionsPerHistory**|100|100|100|100|100|  
 |**-UseOledbStreaming**|NULL|NULL|NULL|NULL|**-UseOledbStreaming**|  
   
-## 合併代理程式設定檔  
+## <a name="merge-agent-profiles"></a>合併代理程式設定檔  
  下表顯示於「合併代理程式」的設定檔中定義的參數。 資料表中的每一個資料行代表一個具名設定檔。 如需這些參數的詳細資訊，請參閱＜ [Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)＞。  
   
 ||預設|詳細資訊記錄|Windows Synchronization Manager|資料列計數驗證|資料列計數與總和檢查碼驗證|慢速連結|高容量伺服器對伺服器|  
@@ -114,7 +118,7 @@ caps.handback.revision: 44
 |**-Validate**|0|0|0|1|3|0|0|  
 |**-ValidateInterval**|60|60|60|60|60|60|60|  
   
-## 佇列讀取器代理程式設定檔  
+## <a name="queue-reader-agent-profiles"></a>佇列讀取器代理程式設定檔  
  下表顯示於「佇列讀取器代理程式」的預設設定檔中定義的參數。 如需這些參數的詳細資訊，請參閱＜ [Replication Queue Reader Agent](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)＞。  
   
 ||預設|  
@@ -124,9 +128,9 @@ caps.handback.revision: 44
 |**-PollingInterval**|5|  
 |**-QueryTimeout**|1800|  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [複寫代理程式管理](../../../relational-databases/replication/agents/replication-agent-administration.md)   
- [檢視及修改複寫代理程式命令提示字元參數 & #40。SQL Server Management Studio & #41;](../../../relational-databases/replication/agents/view and modify replication agent command prompt parameters.md)   
- [複寫代理程式可執行檔概念](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
+ [檢視並修改複寫代理程式命令提示字元參數 &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)   
+ [Replication Agent Executables Concepts](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
   

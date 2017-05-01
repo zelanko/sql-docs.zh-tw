@@ -1,40 +1,44 @@
 ---
-title: "執行 Transact-SQL 偵錯工具 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Transact-SQL 偵錯工具, 系統管理員 (sysadmin) 需求"
-  - "Transact-SQL 偵錯工具, 支援的版本"
-  - "查詢編輯器 [Database Engine], 快顯功能表"
-  - "偵錯 [SQL Server], T-SQL 偵錯工具"
-  - "Transact-SQL 偵錯工具, 查詢編輯器捷徑功能表"
-  - "Transact-SQL 偵錯工具, 停止"
-  - "Transact-SQL 偵錯工具, 偵錯功能表"
-  - "偵錯 [SQL Server]"
-  - "Transact-SQL 偵錯工具, 偵錯工具列"
-  - "Transact-SQL 偵錯工具, 鍵盤快速鍵"
-  - "Transact-SQL 偵錯工具, 啟動"
+title: "執行 Transact-SQL 偵錯工具 | Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Transact-SQL debugger, sysadmin requirement
+- Transact-SQL debugger, supported versions
+- Query Editor [Database Engine], right-click menu
+- debugging [SQL Server], T-SQL debugger
+- Transact-SQL debugger, Query Editor shortcut menu
+- Transact-SQL debugger, stopping
+- Transact-SQL debugger, Debug menu
+- debugging [SQL Server]
+- Transact-SQL debugger, Debug toolbar
+- Transact-SQL debugger, keyboard shortcuts
+- Transact-SQL debugger, starting
 ms.assetid: 386f6d09-dbec-4dc7-9e8a-cd9a4a50168c
 caps.latest.revision: 8
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2a9c2a6c57d74122ff0294bdf0bdccd2193447f8
+ms.lasthandoff: 04/11/2017
+
 ---
-# 執行 Transact-SQL 偵錯工具
+# <a name="run-the-transact-sql-debugger"></a>執行 Transact-SQL 偵錯工具
   在您開啟 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢編輯器視窗之後，就可以啟動 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 偵錯工具。 然後，您可以在偵錯模式中執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼，直到停止偵錯工具為止。 您可以設定選項來自訂偵錯工具的執行方式。  
   
-## 啟動和停止偵錯工具  
+## <a name="starting-and-stopping-the-debugger"></a>啟動和停止偵錯工具  
  啟動 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具的需求如下：  
   
--   如果您的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器連接至另一部電腦上的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體，就必須設定偵錯工具進行遠端偵錯。 如需詳細資訊，請參閱[先設定防火牆規則再執行 TSQL 偵錯工具](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md)。  
+-   如果您的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器連接至另一部電腦上的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體，就必須設定偵錯工具進行遠端偵錯。 如需詳細資訊，請參閱 [先設定防火牆規則再執行 TSQL 偵錯工具](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md)。  
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 必須在屬於系統管理員 (sysadmin) 固定伺服器角色成員的 Windows 帳戶底下執行。  
   
@@ -44,7 +48,7 @@ caps.handback.revision: 8
   
  我們建議您在測試伺服器而非實際伺服器上偵錯 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼，原因如下：  
   
--   偵錯是具有高度權限的作業。 因此，只有系統管理員 (sysadmin) 固定伺服器角色的成員才能在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中偵錯。  
+-   偵錯是具有高度權限的作業。 因此，只有系統管理員 (sysadmin) 固定伺服器角色的成員才能在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中偵錯。  
   
 -   在您調查許多 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的作業時，偵錯工作階段通常會執行一段很長的時間。 工作階段所取得的鎖定 (例如更新鎖定) 可能會長時間保留，直到工作階段結束，或者交易已認可或回復為止。  
   
@@ -62,7 +66,7 @@ caps.handback.revision: 8
   
  您也可以按一下 [!INCLUDE[tsql](../../includes/tsql-md.md)] [偵錯] **功能表上的** [中斷所有連結] **，藉以停止偵錯模式，並且允許其餘** 陳述式完成執行。  
   
-## 控制偵錯工具  
+## <a name="controlling-the-debugger"></a>控制偵錯工具  
  您可以使用下列功能表命令、工具列和快速鍵來控制 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具的運作方式：  
   
 -   **[偵錯]** 功能表和 **[偵錯]** 工具列。 在開啟的 [查詢編輯器] 視窗中放置焦點之前， **[偵錯]** 功能表和 **[偵錯]** 工具列是處於非使用中狀態。 此外，它們會維持使用中狀態，直到目前的專案關閉為止。  
@@ -77,7 +81,7 @@ caps.handback.revision: 8
   
 |偵錯功能表命令|編輯器快速鍵命令|工具列按鈕|鍵盤快速鍵|動作|  
 |------------------------|-----------------------------|--------------------|-----------------------|------------|  
-|**視窗/中斷點**|無法使用|**中斷點**|CTRL+ALT+B|顯示您可以用來檢視和管理中斷點的 **[中斷點]** 視窗。|  
+|**視窗/中斷點**|無法使用|**[中斷點]**|CTRL+ALT+B|顯示您可以用來檢視和管理中斷點的 **[中斷點]** 視窗。|  
 |**視窗/監看式/監看式 1**|無法使用|**中斷點/監看式/監看式 1**|CTRL+ALT+W、1|顯示 **[監看式 1]** 視窗。|  
 |**視窗/監看式/監看式 2**|無法使用|**中斷點/監看式/監看式 2**|CTRL+ALT+W、2|顯示 **[監看式 2]** 視窗。|  
 |**視窗/監看式/監看式 3**|無法使用|**中斷點/監看式/監看式 3**|CTRL+ALT+W、3|顯示 **[監看式 3]** 視窗。|  
@@ -86,10 +90,10 @@ caps.handback.revision: 8
 |**視窗/呼叫堆疊**|無法使用|**中斷點/呼叫堆疊**|CTRL+ALT+C|顯示 **[呼叫堆疊]** 視窗。|  
 |**視窗/執行緒**|無法使用|**中斷點/執行緒**|CTRL+ALT+H|顯示 **[執行緒]** 視窗。|  
 |**Continue**|無法使用|**Continue**|ALT+F5|執行到下一個中斷點。 在處於偵錯模式的 [查詢編輯器] 視窗中放置焦點之前，**[繼續]** 是處於非使用中狀態。|  
-|**[偵錯]**|無法使用|**開始偵錯**|ALT+F5|讓 [查詢編輯器] 視窗進入偵錯模式，並且執行到第一個中斷點。 如果您在處於偵錯模式的 [查詢編輯器] 視窗中放置焦點， **[開始偵錯]** 就會由 **[繼續]**所取代。|  
+|**[偵錯]**|無法使用|**[偵錯]**|ALT+F5|讓 [查詢編輯器] 視窗進入偵錯模式，並且執行到第一個中斷點。 如果您在處於偵錯模式的 [查詢編輯器] 視窗中放置焦點， **[開始偵錯]** 就會由 **[繼續]**所取代。|  
 |**全部中斷**|無法使用|**全部中斷**|CTRL+ALT+BREAK|[!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具不會使用這項功能。|  
-|**停止偵錯**|無法使用|**停止偵錯**|SHIFT+F5|讓 [查詢編輯器] 視窗離開偵錯模式，並且返回一般模式。|  
-|**中斷所有連結**|無法使用|無法使用|無法使用|停止偵錯模式，但在 [查詢編輯器] 視窗中執行其餘陳述式。|  
+|**[停止偵錯]**|無法使用|**[停止偵錯]**|SHIFT+F5|讓 [查詢編輯器] 視窗離開偵錯模式，並且返回一般模式。|  
+|**功能表上的**|無法使用|無法使用|無法使用|停止偵錯模式，但在 [查詢編輯器] 視窗中執行其餘陳述式。|  
 |**逐步執行**|無法使用|**逐步執行**|F11|執行下一個陳述式，而且如果下一個陳述式會執行預存程序、觸發程序或函數，就會在偵錯模式中開啟新的 [查詢編輯器] 視窗。|  
 |**不進入函數**|無法使用|**不進入函數**|F10|與 **[逐步執行]**相同，但是不會偵錯任何函數、預存程序或觸發程序。|  
 |**跳離函數**|無法使用|**跳離函數**|SHIFT+F11|執行觸發程序、函數或預存程序中的其餘程式碼，但是不會針對任何中斷點暫停。 當控制權返回呼叫模組的程式碼時，就會繼續進行一般偵錯模式。|  
@@ -103,7 +107,7 @@ caps.handback.revision: 8
 |**停用所有中斷點**|無法使用|無法使用|無法使用|停用所有中斷點。|  
 |無法使用|**加入監看式**|無法使用|無法使用|將選取的運算式加入至 **[監看式]** 視窗。|  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [Transact-SQL 偵錯工具](../../relational-databases/scripting/transact-sql-debugger.md)   
  [逐步執行 Transact-SQL 程式碼](../../relational-databases/scripting/step-through-transact-sql-code.md)   
  [Transact-SQL 偵錯工具資訊](../../relational-databases/scripting/transact-sql-debugger-information.md)   

@@ -1,30 +1,34 @@
 ---
 title: "增強式密碼 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "登入 [SQL Server], 密碼"
-  - "密碼 [SQL Server], 強式"
-  - "符號 [SQL Server]"
-  - "安全性 [SQL Server], 密碼"
-  - "密碼 [SQL Server], 符號"
-  - "字元 [SQL Server], 密碼原則"
-  - "增強式密碼 [SQL Server]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- logins [SQL Server], passwords
+- passwords [SQL Server], strong
+- symbols [SQL Server]
+- security [SQL Server], passwords
+- passwords [SQL Server], symbols
+- characters [SQL Server], password policies
+- strong passwords [SQL Server]
 ms.assetid: 338548f4-c4d8-47ca-b597-5c9c0f2fa205
 caps.latest.revision: 30
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e58e590b2b57c96a18b8752b33d7b559b375d028
+ms.lasthandoff: 04/11/2017
+
 ---
-# 增強式密碼
+# <a name="strong-passwords"></a>增強式密碼
   密碼會是伺服器安全性部署中最薄弱的連結。 您在選取密碼的時候，應該始終保持小心謹慎的態度。 增強式密碼具有下列特性：  
   
 -   長度至少為 8 個字元。  
@@ -53,7 +57,7 @@ caps.handback.revision: 30
   
  如果是用在 OLE DB 或 ODBC 連接字串中，則登入或密碼中不能包含下列字元：[] {}() , ; ? * ! @. 這些字元是用來初始化連接或分隔連接值。  
   
-## 相關內容  
+## <a name="related-content"></a>相關內容  
  [密碼原則](../../relational-databases/security/password-policy.md)  
   
   

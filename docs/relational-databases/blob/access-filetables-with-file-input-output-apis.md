@@ -1,24 +1,28 @@
 ---
 title: "使用檔案輸入輸出 API 存取 FileTable | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/25/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FileTables [SQL Server], 使用檔案 API 存取檔案"
+ms.custom: 
+ms.date: 08/25/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FileTables [SQL Server], accessing files with file APIs
 ms.assetid: fa504c5a-f131-4781-9a90-46e6c2de27bb
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fee941d70d60091034abfd77998616508fedd611
+ms.lasthandoff: 04/11/2017
+
 ---
-# 使用檔案輸入輸出 API 存取 FileTable
+# <a name="access-filetables-with-file-input-output-apis"></a>使用檔案輸入輸出 API 存取 FileTable
   描述檔案系統 I/O 如何在 FileTable 上運作。  
   
 ##  <a name="accessing"></a> 開始使用 FileTable 檔案的 I/O API  
@@ -37,12 +41,12 @@ caps.handback.revision: 16
   
 -   若為檔案，資料流資料會儲存在 **file_stream** 資料行中；若為目錄，此資料行為 null。  
   
--   若為檔案，**is_directory** 資料行內含 **false**。 若為目錄，此資料行內含 **true**。  
+-   若為檔案， **is_directory** 資料行內含 **false**。 若為目錄，此資料行內含 **true**。  
   
 -   當多個並行的檔案 I/O 作業或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 作業在階層中影響同一個檔案或目錄時，會強制執行共用存取及並行存取。  
   
 ##  <a name="read"></a> 讀取 FileTable 中的檔案和目錄  
- 若為所有資料流及屬性資料的檔案 I/O 存取作業，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會強制執行讀取認可隔離語意。  
+ 若為所有資料流及屬性資料的檔案 I/O 存取作業， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會強制執行讀取認可隔離語意。  
   
 ##  <a name="write"></a> 寫入及更新 FileTable 中的檔案和目錄  
   
@@ -124,10 +128,11 @@ caps.handback.revision: 16
 |**安全性**|否|系統會強制執行 Windows 共用層級安全性和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表與資料行層級安全性。|  
 |**USN 日誌**|否|FileTable 和 DML 作業中檔案和目錄的中繼資料變更為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫上的 DML 作業。 因此，這些會記錄在對應的資料庫記錄檔中。 但是，並不會記錄在 NTFS USN 日誌中 (除非大小有變更)。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 變更追蹤功能可用於取得類似的資訊。|  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [載入檔案至 FileTable](../../relational-databases/blob/load-files-into-filetables.md)   
- [使用 FileTables 中的目錄與路徑](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)   
+ [Work with Directories and Paths in FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)   
  [利用 Transact-SQL 存取 FileTable](../../relational-databases/blob/access-filetables-with-transact-sql.md)   
  [FileTable DDL、函數、預存程序及檢視](../../relational-databases/blob/filetable-ddl-functions-stored-procedures-and-views.md)  
   
   
+

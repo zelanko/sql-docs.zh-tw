@@ -1,42 +1,46 @@
 ---
 title: "使用 Transact-SQL 預存程序來建立和執行追蹤 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 80347417-338d-4bea-8885-91fae5181cfe
 caps.latest.revision: 8
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0af5c400a4973f711b2b3162f6fa05ca0371adeb
+ms.lasthandoff: 04/11/2017
+
 ---
-# 使用 Transact-SQL 預存程序來建立和執行追蹤
+# <a name="create-and-run-traces-using-transact-sql-stored-procedures"></a>使用 Transact-SQL 預存程序來建立和執行追蹤
   SQL 追蹤的追蹤處理，會因您使用 Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 或使用系統預存程序來建立和執行追蹤，而有所不同。  
   
  您可以使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]系統預存程序代替 [!INCLUDE[tsql](../../includes/tsql-md.md)] ，來建立和執行追蹤。 使用系統預存程序的追蹤處理如下：  
   
-1.  使用 **sp_trace_create** 建立追蹤。  
+1.  使用 **sp_trace_create**建立追蹤。  
   
-2.  使用 **sp_trace_setevent** 加入事件。  
+2.  使用 **sp_trace_setevent**加入事件。  
   
-3.  (選擇性) 使用 **sp_trace_setfilter** 設定篩選。  
+3.  (選擇性) 使用 **sp_trace_setfilter**設定篩選。  
   
-4.  使用 **sp_trace_setstatus** 啟動追蹤。  
+4.  使用 **sp_trace_setstatus**啟動追蹤。  
   
-5.  使用 **sp_trace_setstatus** 停止追蹤。  
+5.  使用 **sp_trace_setstatus**停止追蹤。  
   
-6.  使用 **sp_trace_setstatus** 關閉追蹤。  
+6.  使用 **sp_trace_setstatus**關閉追蹤。  
   
     > [!NOTE]  
-    >  使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 系統預存程序會建立伺服器端的追蹤，其保證只要磁碟上有空間且未發生寫入錯誤，就不會遺失事件。 如果磁碟已滿或磁碟錯誤，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體會繼續執行，但追蹤會停止。 如果已設定 **c2 audit mode** ，並且發生寫入失敗，則追蹤會停止且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體會關閉。 如需 **c2 稽核模式**設定的詳細資訊，請參閱 [c2 稽核模式伺服器組態選項](../../database-engine/configure-windows/c2-audit-mode-server-configuration-option.md)。  
+    >  使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 系統預存程序會建立伺服器端的追蹤，其保證只要磁碟上有空間且未發生寫入錯誤，就不會遺失事件。 如果磁碟已滿或磁碟錯誤，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體會繼續執行，但追蹤會停止。 如果已設定 **c2 audit mode** ，並且發生寫入失敗，則追蹤會停止且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體會關閉。 如需 **c2 稽核模式** 設定的詳細資訊，請參閱 [c2 稽核模式伺服器組態選項](../../database-engine/configure-windows/c2-audit-mode-server-configuration-option.md)。  
   
-## 本節內容  
+## <a name="in-this-section"></a>本節內容  
   
 |主題|描述|  
 |-----------|-----------------|  
@@ -45,7 +49,7 @@ caps.handback.revision: 8
 |[限制追蹤檔案和資料表的大小](../../relational-databases/sql-trace/limit-trace-file-and-table-sizes.md)|包含如何限制追蹤資料所寫入之檔案和資料表大小的相關資訊。 請注意，只有 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 可以將追蹤資訊寫入資料表。|  
 |[排程追蹤](../../relational-databases/sql-trace/schedule-traces.md)|包含如何設定追蹤的開始時間和結束時間之相關資訊。|  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [sp_trace_create &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [sp_trace_setfilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   

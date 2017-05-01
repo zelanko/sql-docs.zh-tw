@@ -1,28 +1,32 @@
 ---
 title: "參考內建 XML 結構描述集合 (sys) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "sys XML 結構描述集合 [SQL Server]"
-  - "結構描述集合 [SQL Server], 預先定義"
-  - "預先定義的 XML 結構描述集合 [SQL Server]"
-  - "XML 結構描述集合 [SQL Server], 預先定義"
-  - "內建 XML 結構描述集合 [SQL Server]"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- sys XML schema collections [SQL Server]
+- schema collections [SQL Server], predefined
+- predefined XML schema collections [SQL Server]
+- XML schema collections [SQL Server], predefined
+- built-in XML schema collections [SQL Server]
 ms.assetid: 1e118303-5df0-4ee4-bd8d-14ced7544144
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fa2b103a4c846e52c9af999980bb3c8080a4f6d5
+ms.lasthandoff: 04/11/2017
+
 ---
-# 參考內建 XML 結構描述集合 (sys)
+# <a name="reference-the-built-in-xml-schema-collection-sys"></a>參考內建 XML 結構描述集合 (sys)
   您建立的每一個資料庫，在 **sys** 關聯式結構描述中，都有一個預先定義的 **sys** XML 結構描述集合。 此集合會保留這些預先定義的結構描述，所以從其他使用者建立的任何 XML 結構描述集合都能存取這些結構描述。 這些預先定義的結構描述中使用的前置詞在 XQuery 中是有意義的。 只有 **xml** 是保留的前置詞。  
   
 ```  
@@ -36,7 +40,7 @@ xdt = http://www.w3.org/2004/07/xpath-datatypes
 (no prefix) = http://schemas.microsoft.com/sqlserver/2004/SOAP  
 ```  
   
- 請注意，**sqltypes** 命名空間包含的元件可以從任何使用者建立的 XML 結構描述集合參考。 您可以從 **Microsoft 網站** 下載 [sqltypes](http://go.microsoft.com/fwlink/?linkid=31850)結構描述。 內建的元件包括下列項目：  
+ 請注意， **sqltypes** 命名空間包含的元件可以從任何使用者建立的 XML 結構描述集合參考。 您可以從 **Microsoft 網站** 下載 [sqltypes](http://go.microsoft.com/fwlink/?linkid=31850)結構描述。 內建的元件包括下列項目：  
   
 -   XSD 類型  
   
@@ -148,7 +152,7 @@ GO
   
  `instance of sqltypes:varchar?` 運算式會傳回 TRUE，因為 <`root`> 元素值的類型是由 **varchar** 衍生而來 (根據與 `@var` 變數相關的結構描述而衍生)。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [XML 結構描述集合 &#40;SQL Server&#41;](../../relational-databases/xml/xml-schema-collections-sql-server.md)  
   
   

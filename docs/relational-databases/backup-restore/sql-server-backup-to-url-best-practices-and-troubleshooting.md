@@ -1,22 +1,26 @@
 ---
-title: "SQL Server 備份至 URL 的最佳作法和疑難排解 | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/09/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "SQL Server 備份至 URL 的最佳做法和疑難排解 | Microsoft Docs"
+ms.custom: 
+ms.date: 08/09/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 06e3118f67db6f01dad0344b42024534081433fb
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server 備份至 URL 的最佳作法和疑難排解
+# <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>SQL Server 備份至 URL 的最佳作法和疑難排解
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   本主題包含從 SQL Server 備份及還原至 Windows Azure Blob 服務的最佳作法和疑難排解提示。  
@@ -25,9 +29,9 @@ caps.handback.revision: 26
   
 -   [使用 Microsoft Azure Blob 儲存體服務進行 SQL Server 備份及還原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)  
   
--   [教學課程：SQL Server 備份及還原至 Windows Azure Blob 儲存體服務](../Topic/Tutorial:%20SQL%20Server%20Backup%20and%20Restore%20to%20Windows%20Azure%20Blob%20Storage%20Service.md)  
+-   [教學課程：SQL Server 備份及還原至 Windows Azure Blob 儲存體服務](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
-## 管理備份  
+## <a name="managing-backups"></a>管理備份  
  下列清單包含管理備份的一般建議：  
   
 -   建議針對每個備份使用唯一的檔案名稱，避免不小心覆寫 Blob。  
@@ -40,16 +44,16 @@ caps.handback.revision: 26
   
 -   在備份期間使用 [WITH COMPRESSION] 選項可以將您的儲存體成本和儲存體交易成本降到最低程度。 它也可以減少完成備份程序所需的時間。  
   
-## 處理大型檔案  
+## <a name="handling-large-files"></a>處理大型檔案  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份作業會使用多個執行緒來最佳化 Windows Azure Blob 儲存體服務的資料傳輸。  不過，其效能取決於各種因素，例如 ISV 頻寬和資料庫的大小。 如果您計畫要備份內部部署 SQL Server 資料庫中的大型資料庫或檔案群組，建議您先進行一些輸送量測試。 Azure [儲存體 SLA](http://azure.microsoft.com/support/legal/sla/storage/v1_0/) 具有最大的 Blob 處理時間，您可以參考使用。  
   
 -   備份大型檔案時，務必依照**管理備份**一節中的建議使用 [WITH COMPRESSION] 選項。  
   
-## 疑難排解備份至 URL 或從中還原  
+## <a name="troubleshooting-backup-to-or-restore-from-url"></a>疑難排解備份至 URL 或從中還原  
  以下是一些快速疑難排解備份至 Windows Azure Blob 儲存體服務或從中還原時發生之錯誤的方法。  
   
- 若要避免由於不支援的選項或限制而發生的錯誤，請在[使用 Microsoft Azure Blob 儲存體服務進行 SQL Server 備份及還原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)文章中檢閱限制的清單，以及支援 BACKUP 和 RESTORE 命令的資訊。  
+ 若要避免由於不支援的選項或限制而發生的錯誤，請在 [使用 Microsoft Azure Blob 儲存體服務進行 SQL Server 備份及還原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) 文章中檢閱限制的清單，以及支援 BACKUP 和 RESTORE 命令的資訊。  
   
  **驗證錯誤：**  
   
@@ -66,7 +70,7 @@ caps.handback.revision: 26
   
     ```  
   
--   認證存在，但是用來執行 Backup 命令的登入帳戶沒有存取認證的權限。 請使用具備**更改任何認證**權限的 **db_backupoperator** 角色登入帳戶。  
+-   認證存在，但是用來執行 Backup 命令的登入帳戶沒有存取認證的權限。 請使用具備 **更改任何認證** 權限的 **db_backupoperator** 角色登入帳戶。  
   
 -   確認儲存體帳戶名稱與金鑰值。 儲存在認證中的資訊必須符合您在備份和還原作業中使用之 Windows Azure 儲存體帳戶的屬性值。  
   
@@ -78,7 +82,7 @@ caps.handback.revision: 26
   
     -   您可以使用下列格式來設定追蹤旗標 3051，以便記錄至特定錯誤記錄：  
   
-         BackupToUrl-\<instname>-\<dbname>-action-\<PID>.log Where \<action> 是下列其中之一：  
+         BackupToUrl-\<執行個體>-\<資料庫名稱>-action-\<PID>.log 其中 \<action> 是下列其中之一：  
   
         -   **DB**  
   
@@ -94,8 +98,8 @@ caps.handback.revision: 26
   
 -   從壓縮備份還原時，您可能會看見下列錯誤：  
   
-    -   **發生 SqlException 3284。 嚴重性: 16 狀態: 5**  
-        **尚未調準裝置 'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak' 上的訊息檔案標記。 請以建立備份組所使用的相同區塊大小來重新發出 Restore 陳述式: '65536' 類似可能值。**  
+    -   **發生 SqlException 3284。嚴重性: 16 狀態: 5**  
+        **尚未調準裝置 'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak' 上的訊息檔案標記。請以建立備份組所使用的相同區塊大小來重新發出 Restore 陳述式: '65536' 類似可能值。**  
   
          若要解決此錯誤，請重新發出指定 **BLOCKSIZE = 65536** 的 **BACKUP** 陳述式。  
   
@@ -109,9 +113,9 @@ caps.handback.revision: 26
   
      **例外狀況訊息: 遠端伺服器傳回錯誤: (409) 衝突。**  
   
-     發生這類錯誤時，您必須刪除 Blob 檔案。 如需有關此案例以及如何更正這個問題的詳細資訊，請參閱[刪除擁有使用中租用的備份 Blob 檔案](../../relational-databases/backup-restore/deleting-backup-blob-files-with-active-leases.md)  
+     發生這類錯誤時，您必須刪除 Blob 檔案。 如需有關此案例以及如何更正這個問題的詳細資訊，請參閱 [刪除擁有使用中租用的備份 Blob 檔案](../../relational-databases/backup-restore/deleting-backup-blob-files-with-active-leases.md)  
   
-## Proxy 錯誤  
+## <a name="proxy-errors"></a>Proxy 錯誤  
  如果您使用 Proxy 伺服器存取網際網路，可能會看見下列問題：  
   
  **Proxy 伺服器連線節流：**  
@@ -141,21 +145,22 @@ caps.handback.revision: 26
 1.  建立具有下列 xml 的組態檔，名稱為 BackuptoURL.exe.config：  
   
     ```  
-    <?xml version ="1.0"?>  
+    \<?xml version ="1.0"?>  
     <configuration>   
-                    <system.net>   
+                    \<system.net>   
                                     <defaultProxy enabled="true" useDefaultCredentials="true">   
                                                     <proxy usesystemdefault="true" />   
                                     </defaultProxy>   
-                    </system.net>  
+                    \</system.net>  
     </configuration>  
   
     ```  
   
-2.  將組態檔放在 SQL Server 執行個體的 Binn 資料夾。 例如，如果我的 SQL Server 安裝在電腦的 C 磁碟機上，請將組態檔放在此處：*C:\Program Files\Microsoft SQL Server\MSSQL13.\<InstanceName>\MSSQL\Binn*。  
+2.  將組態檔放在 SQL Server 執行個體的 Binn 資料夾。 例如，如果我的 SQL Server 安裝在電腦的 C 磁碟機上，請將組態檔放在此處：*C:\Program Files\Microsoft SQL Server\MSSQL13.\<執行個體>\MSSQL\Binn*。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [從儲存在 Microsoft Azure 的備份還原](../../relational-databases/backup-restore/restoring-from-backups-stored-in-microsoft-azure.md)  
 [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)  
-[RESTORE (Transact-SQL)](RESTORE%20\(Transact-SQL\).md)
+[RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)
   
+

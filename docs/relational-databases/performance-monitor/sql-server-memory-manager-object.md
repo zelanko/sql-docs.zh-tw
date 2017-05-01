@@ -1,32 +1,36 @@
 ---
 title: "SQL Server 的 Memory Manager 物件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQLServer:Memory Manager"
-  - "Memory Manager 物件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQLServer:Memory Manager
+- Memory Manager object
 ms.assetid: dbf49000-eeb0-4e9c-a361-5092363920dc
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 884e6d05db70f9978b84a3423bdfad748f50b29c
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server 的 Memory Manager 物件
+# <a name="sql-server-memory-manager-object"></a>SQL Server 的 Memory Manager 物件
   Microsoft **中的** Memory Manager [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物件提供計數器，可監視整體的伺服器記憶體使用狀況。 監視整體的伺服器記憶體使用狀況以估計使用者活動和資源使用狀況，可協助您找出效能瓶頸。 監視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體所使用的記憶體，有助於判定：  
   
 -   是否因為實體記憶體不足，無法將經常存取的資料儲存在快取中，而產生瓶頸。 若記憶體不足， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 必須從磁碟擷取資料。  
   
 -   是否可藉由增加更多記憶體，或讓資料快取或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 內部結構可使用更多記憶體，而改善查詢效能。  
   
-## Memory Manager 計數器  
+## <a name="memory-manager-counters"></a>Memory Manager 計數器  
  下表說明 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Memory Manager** 計數器。  
   
 |SQL Server Memory Manager 計數器|描述|  
@@ -46,13 +50,13 @@ caps.handback.revision: 29
 |**Memory Grants Outstanding**|指定成功取得工作空間記憶體授權的處理序總數。|  
 |**Memory Grants Pending**|指定等候工作空間記憶體授權的處理序總數。|  
 |**Optimizer Memory (KB)**|指定伺服器用於查詢最佳化的動態記憶體總數。|  
-|**Reserved Server Memory (KB)**|表示伺服器已保留供未來使用的記憶體數量。 這個計數器會顯示最初授與之記憶體 (**Granted Workspace Memory (KB)** 中所示) 的目前未使用數量。|  
+|**Reserved Server Memory (KB)**|表示伺服器已保留供未來使用的記憶體數量。 這個計數器會顯示最初授與之記憶體 ( **Granted Workspace Memory (KB)**中所示) 的目前未使用數量。|  
 |**SQL Cache Memory (KB)**|指定伺服器用於動態 SQL 快取的動態記憶體總數。|  
 |**Stolen Server Memory (KB)**|指定伺服器用於資料庫頁面以外用途的記憶體數量。|  
 |**Target Server Memory (KB)**|指出伺服器可用的理想記憶體數量。|  
 |**Total Server Memory (KB)**|指定伺服器已使用記憶體管理員認可的記憶體數量。|  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [監視資源使用量 &#40;系統監視器&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
  [SQL Server 的 Buffer Manager 物件](../../relational-databases/performance-monitor/sql-server-buffer-manager-object.md)   
 [sys.dm_os_performance_counters (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)  

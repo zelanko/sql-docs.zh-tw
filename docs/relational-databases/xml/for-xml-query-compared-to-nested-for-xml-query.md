@@ -1,28 +1,32 @@
 ---
 title: "與巢狀 FOR XML 查詢比較的 FOR XML 查詢 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FOR XML 查詢"
-  - "查詢 [SQL Server 中的 XML], 比較查詢類型"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FOR XML query
+- queries [XML in SQL Server], comparing query types
 ms.assetid: 19225b4a-ee3f-47cf-8bcc-52699eeda32c
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2e83d836d3cf5e736847c5ebbb1934e8cde5374a
+ms.lasthandoff: 04/11/2017
+
 ---
-# 與巢狀 FOR XML 查詢比較的 FOR XML 查詢
+# <a name="for-xml-query-compared-to-nested-for-xml-query"></a>與巢狀 FOR XML 查詢比較的 FOR XML 查詢
   本主題會將單一層 FOR XML 查詢與巢狀 FOR XML 查詢做比較。 使用巢狀 FOR XML 查詢的其中一個好處，就是可以針對查詢結果指定屬性中心及元素中心 XML 的組合。 以下範例將提供示範。  
   
-## 範例  
+## <a name="example"></a>範例  
  下列 `SELECT` 查詢會擷取 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫中的產品類別目錄及子類別目錄資訊。 此查詢中沒有巢狀的 FOR XML。  
   
 ```  
@@ -117,7 +121,7 @@ FOR XML AUTO, TYPE
   
 -   內部 `FOR XML` 查詢會擷取產品子類別目錄資訊。 在內部 `ELEMENTS` 中加入 `FOR XML` 指示詞，以產生元素中心的 XML，此 XML 已加入至外部查詢產生的 XML 中。 根據預設，外部查詢會產生屬性中西的 XML。  
   
--   在內部查詢中指定 `TYPE` 指示詞，好讓結果屬於 **xml** 類型。 如果未指定 `TYPE`，則結果會以 **nvarchar(max)** 類型傳回，而 XML 資料會以實體傳回。  
+-   在內部查詢中指定 `TYPE` 指示詞，好讓結果屬於 **xml** 類型。 如果未指定 `TYPE` ，則結果會以 **nvarchar(max)** 類型傳回，而 XML 資料會以實體傳回。  
   
 -   外部查詢也可以指定 `TYPE` 指示詞。 因此，此查詢的結果會以 **xml** 類型傳回給用戶端。  
   
@@ -199,7 +203,7 @@ FOR XML AUTO, TYPE
   
  如果從產生產品子類別目錄的巢狀 `ELEMENTS` 查詢移除 `FOR XML` 指示詞，整個結果將為屬性中心。 然後您可以無套疊的方式撰寫此查詢 加入 `ELEMENTS` 會使 XML 一部份為屬性中心，一部份為元素中心。 此結果無法由單一層 FOR XML 查詢產生。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用巢狀 FOR XML 查詢](../../relational-databases/xml/use-nested-for-xml-queries.md)  
   
   

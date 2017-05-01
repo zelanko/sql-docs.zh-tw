@@ -1,28 +1,32 @@
 ---
 title: "尋找搜尋屬性的屬性集 GUID 與屬性整數識別碼 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-search"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "全文檢索搜尋 [SQL Server], 搜尋屬性清單"
-  - "搜尋屬性清單 [SQL Server], 設定"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-search
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- full-text search [SQL Server], search property lists
+- search property lists [SQL Server], configuring
 ms.assetid: 7db79165-8bcc-4be6-8d40-12d44deda79f
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d234dc5d1d44c11c50483505898586ab5e845a77
+ms.lasthandoff: 04/11/2017
+
 ---
-# 尋找搜尋屬性的屬性集 GUID 與屬性整數識別碼
+# <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>尋找搜尋屬性的屬性集 GUID 與屬性整數識別碼
   本主題將討論如何取得將屬性加入至搜尋屬性清單，使全文檢索搜尋能夠進行搜尋所需的值。 這些值包括文件屬性的屬性集 GUID 和屬性整數識別碼。  
   
- IFilter 從二進位資料 (也就是儲存在 **varbinary**、**varbinary(max)** (包括 **FILESTREAM**) 或 **image** 資料類型資料行中的資料) 擷取的文件屬性可供全文檢索搜尋使用。 若要使擷取的屬性可搜尋，則必須手動將屬性加入至搜尋屬性清單。 同時，搜尋屬性清單必須與一個或多個全文檢索索引產生關聯。 如需詳細資訊，請參閱[使用搜索屬性清單搜索文件屬性](../../relational-databases/search/search-document-properties-with-search-property-lists.md)。  
+ IFilter 從二進位資料 (也就是儲存在 **varbinary**、 **varbinary(max)** (包括 **FILESTREAM**) 或 **image** 資料類型資料行中的資料) 擷取的文件屬性可供全文檢索搜尋使用。 若要使擷取的屬性可搜尋，則必須手動將屬性加入至搜尋屬性清單。 同時，搜尋屬性清單必須與一個或多個全文檢索索引產生關聯。 如需詳細資訊，請參閱 [使用搜索屬性清單搜索文件屬性](../../relational-databases/search/search-document-properties-with-search-property-lists.md)。  
   
  在屬性清單中加入可用屬性之前，您必須先找到有關屬性的兩項資訊：  
   
@@ -48,16 +52,16 @@ caps.handback.revision: 32
   
  特定檔案格式可能會實作三種類型的屬性：  
   
--   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 定義的泛型屬性。  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)]定義的泛型屬性。  
   
--   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 定義的特定類別目錄屬性。  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)]定義的特定類別目錄屬性。  
   
 -   軟體廠商定義的自訂、應用程式專用屬性。  
   
 ##  <a name="filtdump"></a> 使用 FILTDUMP.EXE 尋找可用屬性的詳細資訊  
  若要了解已安裝之 IFilter 所找到和擷取的屬性，您可以安裝並執行 **filtdump.exe** 公用程式 (屬於 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows SDK 的一部分)。  
   
- 您可以從命令提示字元執行 **filtdump.exe**，並提供單一引數。 此引數是個別檔案的名稱，而該檔案具有已安裝 IFilter 的檔案類型。 此公用程式顯示文件中 IFilter 所找到之所有屬性的清單，還包含其屬性集 GUID、整數識別碼和其他資訊。  
+ 您可以從命令提示字元執行 **filtdump.exe** ，並提供單一引數。 此引數是個別檔案的名稱，而該檔案具有已安裝 IFilter 的檔案類型。 此公用程式顯示文件中 IFilter 所找到之所有屬性的清單，還包含其屬性集 GUID、整數識別碼和其他資訊。  
   
  如需安裝此軟體的相關資訊，請參閱 [Microsoft Windows SDK for Windows 7 和 .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=212980)。 在您下載並安裝 SDK 之後，請查看下列資料夾中是否有 filtdump.exe 公用程式。  
   
@@ -66,9 +70,9 @@ caps.handback.revision: 32
 -   針對 32 位版本，請查看 `C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin`。  
   
 ##  <a name="propdesc"></a> 從 Windows 屬性描述尋找搜尋屬性的值  
- 若為已知的 Windows 搜尋屬性 (Property)，您可以從屬性 (Property) 描述 (**propertyDescription**) 的 **formatID** 和 **propID** 屬性 (Attribute) 取得您需要的這項資訊。  
+ 若為已知的 Windows 搜尋屬性 (Property)，您可以從屬性 (Property) 描述 ( **propertyDescription** ) 的 **formatID** 和**propID**屬性 (Attribute) 取得您需要的這項資訊。  
   
- 下列範例將顯示一般 Microsoft 屬性描述的相關部分 (以 `System.Author` 屬性為例)。 `formatID` 屬性 (Attribute) 會指定屬性 (Property) 集 GUID `F29F85E0-4FF9-1068-AB91-08002B27B3D9`，而 `propID` 屬性 (Attribute) 會指定屬性 (Property) 整數識別碼 `4.`。請注意，`name` 屬性 (Attribute) 會指定 Windows 正式屬性 (Property) 名稱 `System.Author`  (這個範例省略了屬性描述中不相關的部分)。  
+ 下列範例將顯示一般 Microsoft 屬性描述的相關部分 (以 `System.Author` 屬性為例)。 `formatID` 屬性 (Attribute) 會指定屬性 (Property) 集 GUID `F29F85E0-4FF9-1068-AB91-08002B27B3D9`，而 `propID` 屬性 (Attribute) 會指定屬性 (Property) 整數識別碼 `4.` 。請注意， `name` 屬性 (Attribute) 會指定 Windows 正式屬性 (Property) 名稱 `System.Author`  (這個範例省略了屬性描述中不相關的部分)。  
   
 ```  
 .  
@@ -80,12 +84,12 @@ propID = 4
 …  
 ```  
   
- 如需此屬性的完整描述，請參閱 Windows Search 文件集中的 [System.Author](http://go.microsoft.com/fwlink/?LinkId=144337)。  
+ 如需此屬性的完整描述，請參閱 Windows Search 文件集中的 [System.Author](http://go.microsoft.com/fwlink/?LinkId=144337) 。  
   
  如需 Windows 屬性的完整清單，請參閱同樣在 Windows Search 文件集中的 [Windows Properties](http://go.microsoft.com/fwlink/?LinkId=215013)Windows 屬性)。  
   
 ##  <a name="examples"></a> 將屬性加入至搜尋屬性清單  
- 下列範例示範如何將屬性加入至搜尋屬性清單。 此範例會使用 [ALTER SEARCH PROPERTY LIST](../../t-sql/statements/alter-search-property-list-transact-sql.md) 陳述式將 `System.Author` 屬性加入名為 `PropertyList1` 的搜尋屬性清單，並且為屬性提供使用者易記名稱 `Author`。  
+ 下列範例示範如何將屬性加入至搜尋屬性清單。 此範例會使用 [ALTER SEARCH PROPERTY LIST](../../t-sql/statements/alter-search-property-list-transact-sql.md) 陳述式將 `System.Author` 屬性加入名為 `PropertyList1`的搜尋屬性清單，並且為屬性提供使用者易記名稱 `Author`。  
   
 ```  
 ALTER SEARCH PROPERTY LIST PropertyList1   
@@ -98,9 +102,9 @@ ALTER SEARCH PROPERTY LIST PropertyList1
 GO  
 ```  
   
- 如需建立搜尋屬性清單並將它與全文檢索索引產生關聯的詳細資訊，請參閱[使用搜索屬性清單搜索文件屬性](../../relational-databases/search/search-document-properties-with-search-property-lists.md)。  
+ 如需建立搜尋屬性清單並將它與全文檢索索引產生關聯的詳細資訊，請參閱 [使用搜索屬性清單搜索文件屬性](../../relational-databases/search/search-document-properties-with-search-property-lists.md)。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用搜索屬性清單搜索文件屬性](../../relational-databases/search/search-document-properties-with-search-property-lists.md)   
  [設定及管理搜尋的篩選](../../relational-databases/search/configure-and-manage-filters-for-search.md)  
   

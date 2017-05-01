@@ -1,30 +1,34 @@
 ---
 title: "準備大量匯入資料 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-bulk-import-export"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "大量匯入 [SQL Server], 關於大量匯入"
-  - "BULK INSERT 陳述式, 指導方針"
-  - "BULK INSERT 陳述式, 限制"
-  - "bcp 公用程式 [SQL Server], 指導方針"
-  - "bcp 公用程式 [SQL Server], 限制"
-  - "隱藏的字元"
-  - "OPENROWSET 函數, BCP 指導方針"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-bulk-import-export
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- bulk importing [SQL Server], about bulk importing
+- BULK INSERT statement, guidelines
+- BULK INSERT statement, restrictions
+- bcp utility [SQL Server], guidelines
+- bcp utility [SQL Server], restrictions
+- hidden characters
+- OPENROWSET function, BCP guidelines
 ms.assetid: a82ef43c-d006-4c71-bfca-f001a3ba1ba0
 caps.latest.revision: 34
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e797c303dff0eef613024752c2788a6480f047ac
+ms.lasthandoff: 04/11/2017
+
 ---
-# 準備大量匯入資料 (SQL Server)
+# <a name="prepare-to-bulk-import-data-sql-server"></a>準備大量匯入資料 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   您可以使用 **bcp** 命令、BULK INSERT 陳述式或 OPENROWSET(BULK) 函數，僅從資料檔案大量匯入資料。  
@@ -35,7 +39,7 @@ caps.handback.revision: 34
 > [!NOTE]  
 >  不支援大量匯入資料到遠端資料表。  
   
- 當您將資料檔案中的資料大量匯入到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體時，請使用下列方針：  
+ 當您將資料檔案中的資料大量匯入到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的執行個體時，請使用下列方針：  
   
 -   為您的使用者帳戶取得必要的權限。  
   
@@ -67,7 +71,7 @@ caps.handback.revision: 34
   
      許多公用程式和文字編輯器會顯示隱藏字元，這些字元通常是在資料檔結尾。 大量匯入作業期間，ASCII 資料檔中的隱藏字元可能會產生問題，造成「發現非預期的 NULL」錯誤。 尋找並移除所有的隱藏字元，應該有助於防止這個問題的發生。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用 bcp 公用程式匯入及匯出大量資料 &#40;SQL Server&#41;](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)   
  [使用 BULK INSERT 或 OPENROWSET&#40;BULK...&#41; 匯入大量資料 &#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)   
  [bcp 公用程式](../../tools/bcp-utility.md)   

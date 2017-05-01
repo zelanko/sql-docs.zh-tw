@@ -1,27 +1,31 @@
 ---
-title: "Audit Broker 登入事件類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Audit Broker 登入事件類別"
+title: "Audit Broker Login 事件類別 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Audit Broker Login event class
 ms.assetid: af9b1153-2791-40ef-a95c-50923cd0cc97
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0b3ba2426634e4cd405d91318cd92de93bfa2c24
+ms.lasthandoff: 04/11/2017
+
 ---
-# Audit Broker 登入事件類別
+# <a name="audit-broker-login-event-class"></a>Audit Broker 登入事件類別
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會建立 **Audit Broker Login** 事件，以報告與 Service Broker 傳輸安全性相關的稽核訊息。  
   
-## Audit Broker 登入事件類別的資料行  
+## <a name="audit-broker-login-event-class-data-columns"></a>Audit Broker 登入事件類別的資料行  
   
 |資料行|型別|說明|資料行編號|可篩選|  
 |-----------------|----------|-----------------|-------------------|----------------|  
@@ -59,7 +63,7 @@ caps.handback.revision: 30
 |5|Authentication Failure|Authentication Failure 事件是用以報告由於發生錯誤，而使 Service Broker 無法執行要連接的驗證。 對於 Windows 驗證而言，此事件是用以報告 Service Broker 無法使用 Windows 驗證。 對於以憑證為基礎的驗證，此事件是用以報告 Service Broker 無法存取憑證。|  
 |6|Authorization Failure|Authorization Failure 事件是用以報告 Service Broker 拒絕連接的授權。 對於 Windows 驗證，此事件是用以報告連接的安全性識別碼與資料庫使用者不相符。 對於以憑證為基礎的驗證，此事件是用以報告訊息中所傳遞的公開金鑰與資料庫中的憑證不一致。|  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md)   
  [ALTER ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md)   
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)  

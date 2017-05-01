@@ -1,30 +1,34 @@
 ---
-title: "刪除資料庫的資料或記錄檔 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "記錄 [SQL Server], 檔案"
-  - "刪除檔案"
-  - "移除檔案"
-  - "移除資料"
-  - "資料刪除 [SQL Server]"
-  - "刪除檔案 [SQL Server]"
-  - "刪除資料"
+title: "刪除資料庫的資料或記錄檔 | Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- logs [SQL Server], files
+- deleting files
+- removing files
+- removing data
+- data deletions [SQL Server]
+- file deletion [SQL Server]
+- deleting data
 ms.assetid: 0db4018c-ce2c-4ba1-bb29-1e4f3791c925
 caps.latest.revision: 33
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 33
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 36e392193602317505657a483e9ffa06c3153993
+ms.lasthandoff: 04/11/2017
+
 ---
-# 刪除資料庫的資料或記錄檔
+# <a name="delete-data-or-log-files-from-a-database"></a>刪除資料庫的資料或記錄檔
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來刪除 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的資料或記錄檔。  
   
  **本主題內容**  
@@ -45,7 +49,7 @@ caps.handback.revision: 33
   
 ###  <a name="Prerequisites"></a> 必要條件  
   
--   在刪除檔案之前，檔案必須空白。 如需詳細資訊，請參閱[壓縮檔案](../../relational-databases/databases/shrink-a-file.md)。  
+-   在刪除檔案之前，檔案必須空白。 如需詳細資訊，請參閱 [壓縮檔案](../../relational-databases/databases/shrink-a-file.md)。  
   
 ###  <a name="Security"></a> 安全性  
   
@@ -54,11 +58,11 @@ caps.handback.revision: 33
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 若要刪除資料庫的資料或記錄檔  
+#### <a name="to-delete-data-or-log-files-from-a-database"></a>若要刪除資料庫的資料或記錄檔  
   
 1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的執行個體，然後展開該執行個體。  
   
-2.  展開 [資料庫]，以滑鼠右鍵按一下要從中刪除檔案的資料庫，然後按一下 [屬性]。  
+2.  展開 **[資料庫]**，以滑鼠右鍵按一下要從中刪除檔案的資料庫，再按一下 **[屬性]**。  
   
 3.  選取 **[檔案]** 頁面。  
   
@@ -68,19 +72,19 @@ caps.handback.revision: 33
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 若要刪除資料庫的資料或記錄檔  
+#### <a name="to-delete-data-or-log-files-from-a-database"></a>若要刪除資料庫的資料或記錄檔  
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
 2.  在標準列中，按一下 **[新增查詢]**。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]**。 這個範例會移除 `test1dat4` 檔案。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]**。 這個範例會移除 `test1dat4`檔案。  
   
  [!code-sql[DatabaseDDL#AlterDatabase4](../../relational-databases/databases/codesnippet/tsql/delete-data-or-log-files_1.sql)]  
   
- 如需其他範例，請參閱 [ALTER DATABASE 檔案及檔案群組選項 &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20File%20and%20Filegroup%20Options%20\(Transact-SQL\).md)。  
+ 如需其他範例，請參閱 [ALTER DATABASE 檔案及檔案群組選項 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [壓縮資料庫](../../relational-databases/databases/shrink-a-database.md)   
  [將資料或記錄檔加入資料庫](../../relational-databases/databases/add-data-or-log-files-to-a-database.md)  
   

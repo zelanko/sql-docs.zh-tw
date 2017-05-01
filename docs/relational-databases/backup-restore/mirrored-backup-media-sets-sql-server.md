@@ -1,38 +1,42 @@
 ---
 title: "鏡像備份媒體集 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "復原 [SQL Server]，鏡像備份"
-  - "鏡像媒體集 [SQL Server]"
-  - "備份鏡像 [SQL Server]"
-  - "重複的備份副本"
-  - "可交換的備份副本 [SQL Server]"
-  - "媒體集 [SQL Server]，鏡像備份媒體集"
-  - "備份媒體 [SQL Server]，鏡像媒體"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- recovery [SQL Server], mirrored backups
+- mirrored media sets [SQL Server]
+- backup mirrors [SQL Server]
+- duplicate backup copies
+- interchangeable backup copies [SQL Server]
+- media sets [SQL Server], mirrored backup media sets
+- backup media [SQL Server], mirrored media
 ms.assetid: 05a0b8d1-3585-4f77-972f-69d1c0d4aa9b
 caps.latest.revision: 38
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5c6bd8f73f549b7869f30576a03f9d90e874398a
+ms.lasthandoff: 04/11/2017
+
 ---
-# 鏡像備份媒體集 (SQL Server)
+# <a name="mirrored-backup-media-sets-sql-server"></a>鏡像備份媒體集 (SQL Server)
     
 > [!NOTE]  
->  只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition 才支援鏡像備份媒體集。  
+>  只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Enterprise Edition 才支援鏡像備份媒體集。  
   
  鏡像媒體集可降低備份裝置功能不正常的影響，進而提高備份可靠性。 這些功能不正常特別嚴重，因為備份是避免資料遺失的最後一道防線。 隨著資料庫增長，備份裝置或媒體失敗導致備份無法還原的機會也越大。 鏡像備份媒體提供的備援性可以提升備份的可靠性。  
   
 > [!NOTE]  
->  如需媒體集的一般資訊，請參閱[媒體集、媒體家族與備份組 &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)。  
+>  如需媒體集的一般資訊，請參閱 [媒體集、媒體家族與備份組 &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)Enterprise Edition 才支援鏡像備份媒體集。  
   
  **本主題內容：**  
   
@@ -49,7 +53,7 @@ caps.handback.revision: 38
   
  下圖提供以兩個鏡像的兩個媒體家族組成的鏡像媒體集範例。 每個媒體家族都包含三個媒體磁碟區，磁碟區是每個鏡像備份一次。  
   
- ![鏡像媒體集：兩個具有兩個鏡像的系列](../../relational-databases/backup-restore/media/bnr-backup-media-mirror.gif "鏡像媒體集：兩個具有兩個鏡像的系列")  
+ ![鏡像媒體集：兩個具有兩個鏡像的家族](../../relational-databases/backup-restore/media/bnr-backup-media-mirror.gif "鏡像媒體集：兩個具有兩個鏡像的家族")  
   
  鏡像上對應磁碟區有相同的內容。 如此可在還原時互換。 例如在之前圖表中，tape2 的第三個磁碟區可與 tape0 的第三個磁碟區互換。  
   
@@ -70,9 +74,9 @@ caps.handback.revision: 38
   
 -   [備份至鏡像媒體集 &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/back-up-to-a-mirrored-media-set-transact-sql.md)  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [備份和還原期間可能發生的媒體錯誤 &#40;SQL Server&#41;](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md)   
- [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20VERIFYONLY%20\(Transact-SQL\).md)   
+ [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)   
  [備份裝置 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)   
  [媒體集、媒體家族與備份組 &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)  
   

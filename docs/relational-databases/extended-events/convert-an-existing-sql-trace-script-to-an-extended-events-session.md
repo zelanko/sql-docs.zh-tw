@@ -1,26 +1,30 @@
 ---
-title: "將現有的 SQL 追蹤指令碼轉換為擴充事件工作階段 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQL 追蹤, 將指令碼轉換為擴充事件"
-  - "擴充事件 [SQL Server], 轉換 SQL 追蹤指令碼"
+title: "將現有的 SQL 追蹤指令碼轉換為擴充事件工作階段 | Microsoft 文件"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Trace, convert script to extended events
+- extended events [SQL Server], convert SQL Trace script
 ms.assetid: 4c8f29e6-0a37-490f-88b3-33493871b3f9
 caps.latest.revision: 21
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3817f8c3c5b3aaa50770b3734974e457a4e802e8
+ms.lasthandoff: 04/11/2017
+
 ---
-# 將現有的 SQL 追蹤指令碼轉換為擴充事件工作階段
+# <a name="convert-an-existing-sql-trace-script-to-an-extended-events-session"></a>將現有的 SQL 追蹤指令碼轉換為擴充事件工作階段
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   如果您有現有的 SQL 追蹤指令碼想要轉換成「擴充事件」工作階段，您可以使用本主題的程序建立同等的「擴充事件」工作階段。 您可以藉由使用 trace_xe_action_map 和 trace_xe_event_map 系統資料表中的資訊來收集執行轉換所必須擁有的資訊。  
@@ -35,7 +39,7 @@ caps.handback.revision: 21
   
 4.  使用同等的「擴充事件」事件、動作和述詞 (篩選器) 手動建立「擴充事件」工作階段。  
   
-## 若要取得追蹤識別碼  
+## <a name="to-obtain-the-trace-id"></a>若要取得追蹤識別碼  
   
 1.  在查詢編輯器中開啟 SQL 追蹤指令碼，並執行此指令碼來建立追蹤工作階段。 請注意，不需要執行追蹤工作階段也可完成此程序。  
   
@@ -49,7 +53,7 @@ caps.handback.revision: 21
     > [!NOTE]  
     >  追蹤識別碼 1 通常表示預設追蹤。  
   
-## 若要判斷擴充事件同等項目  
+## <a name="to-determine-the-extended-events-equivalents"></a>若要判斷擴充事件同等項目  
   
 1.  若要判斷同等的「擴充事件」事件和動作，請執行下列查詢，其中 *trace_id* 設定為您在上一個程序中取得之追蹤識別碼的值。  
   
@@ -79,9 +83,9 @@ caps.handback.revision: 21
   
          例如，您可能已經使用 SP:StmtCompleted 事件類別，並在 Duration 追蹤資料行名稱 (SQL 追蹤事件類別識別碼 45 和 SQL 追蹤資料行識別碼 13) 上指定篩選。 在此情況下，動作名稱會以 NULL 形式出現在查詢結果中。  
   
-    2.  針對您在上一個步驟所識別的每個 SQL 追蹤事件類別，尋找同等的「擴充事件」事件名稱 (如果您不確定同等的事件名稱，請使用[檢視同等於 SQL 追蹤事件類別的擴充事件項目](../../relational-databases/extended-events/view-the-extended-events-equivalents-to-sql-trace-event-classes.md)主題中的查詢)。  
+    2.  針對您在上一個步驟所識別的每個 SQL 追蹤事件類別，尋找同等的「擴充事件」事件名稱 (如果您不確定同等的事件名稱，請使用 [檢視同等於 SQL 追蹤事件類別的擴充事件項目](../../relational-databases/extended-events/view-the-extended-events-equivalents-to-sql-trace-event-classes.md)主題中的查詢)。  
   
-    3.  使用下列查詢來識別正確的資料欄位，這些欄位用於您在上一個步驟所識別的事件。 此查詢會在 "event_field" 資料行中顯示「擴充事件」資料欄位。 在此查詢中，使用您在上一個步驟所指定的事件名稱來取代 \<事件名稱>。  
+    3.  使用下列查詢來識別正確的資料欄位，這些欄位用於您在上一個步驟所識別的事件。 此查詢會在 "event_field" 資料行中顯示「擴充事件」資料欄位。 在此查詢中，使用您在上一個步驟所指定的事件名稱來取代 <事件名稱>。  
   
         ```  
         SELECT xp.name package_name, xe.name event_name  
@@ -99,10 +103,10 @@ caps.handback.revision: 21
   
          例如，SP:StmtCompleted 事件類別會對應到 sp_statement_completed「擴充事件」事件。 如果您指定 sp_statement_completed 當作查詢中的事件名稱，則 "event_field" 資料行會顯示預設隨附在事件中的欄位。 查看欄位時，可以看到「持續時間」欄位。 若要在同等的「擴充事件」工作階段中建立篩選器，您可加入類似 "WHERE duration > 0" 的述詞。 如需範例，請參閱本主題的＜若要建立擴充事件工作階段＞程序。  
   
-## 若要建立擴充事件工作階段  
+## <a name="to-create-the-extended-events-session"></a>若要建立擴充事件工作階段  
  使用查詢編輯器建立「擴充事件」工作階段，並將輸出寫入檔案目標。 下列步驟說明單一查詢，連同示範如何建立查詢的說明。 如需完整查詢範例，請參閱本主題的＜範例＞一節。  
   
-1.  加入陳述式來建立事件工作階段，使用您想要用於「擴充事件」工作階段的名稱來取代 *session_name*。  
+1.  加入陳述式來建立事件工作階段，使用您想要用於「擴充事件」工作階段的名稱來取代*session_name* 。  
   
     ```  
     IF EXISTS(SELECT * FROM sys.server_event_sessions WHERE name='session_name')  
@@ -164,7 +168,7 @@ caps.handback.revision: 21
        SET filename='c:\temp\ExtendedEventsStoredProcs.xel', metadatafile='c:\temp\ExtendedEventsStoredProcs.xem');  
     ```  
   
-## 若要檢視結果  
+## <a name="to-view-the-results"></a>若要檢視結果  
   
 1.  您可以使用 sys.fn_xe_file_target_read_file 函數來檢視輸出。 若要這樣做，請執行下列查詢，使用您指定的路徑來取代檔案路徑：  
   
@@ -213,7 +217,7 @@ caps.handback.revision: 21
        (SET filename='c:\temp\ExtendedEventsStoredProcs.xel', metadatafile='c:\temp\ExtendedEventsStoredProcs.xem');  
     ```  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 IF EXISTS(SELECT * FROM sys.server_event_sessions WHERE name='session_name')  
@@ -249,7 +253,7 @@ ADD TARGET package0.asynchronous_file_target
    (SET filename='c:\temp\ExtendedEventsStoredProcs.xel', metadatafile='c:\temp\ExtendedEventsStoredProcs.xem');  
 ```  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [檢視同等於 SQL 追蹤事件類別的擴充事件項目](../../relational-databases/extended-events/view-the-extended-events-equivalents-to-sql-trace-event-classes.md)  
   
   

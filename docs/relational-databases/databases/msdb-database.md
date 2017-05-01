@@ -1,30 +1,34 @@
 ---
 title: "msdb 資料庫 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/10/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQL Server Agent, msdb 資料庫"
-  - "警示 [SQL Server], msdb 資料庫"
-  - "作業 [SQL Server], msdb 資料庫"
-  - "msdb 資料庫 [SQL Server]"
+ms.custom: 
+ms.date: 11/10/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Server Agent, msdb database
+- alerts [SQL Server], msdb database
+- jobs [SQL Server], msdb database
+- msdb database [SQL Server]
 ms.assetid: 5032cb2d-65a0-40dd-b569-4dcecdd58ceb
 caps.latest.revision: 46
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 46
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d3ea8b1e63f5cc458130e3dd7deeed99be7f53e9
+ms.lasthandoff: 04/11/2017
+
 ---
-# msdb 資料庫
+# <a name="msdb-database"></a>msdb 資料庫
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **msdb** 資料庫供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 用來設定警示和作業排程，以及供 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 和 Database Mail 等其他功能使用。  
+  **msdb** 資料庫供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 用來設定警示和作業排程，以及供 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[ssSB](../../includes/sssb-md.md)] 和 Database Mail 等其他功能使用。  
   
  例如， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會自動在 **msdb**的資料表中維護一份完整的線上備份和還原記錄。 此資訊包括執行備份者的名稱、備份時間，以及在其中儲存備份的裝置或檔案。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 會使用此資訊來提出還原資料庫以及套用任何交易記錄備份的計畫。 即使是以自訂應用程式或協力廠商工具建立備份，所有資料庫的備份事件都會記錄下來。 例如，如果使用會呼叫 SQL Server 管理物件 (SMO) 物件的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 應用程式來執行備份作業，則事件會記錄在 **msdb** 系統資料表、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 應用程式記錄和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄中。 為了協助您保護儲存在 **msdb**中的資訊，我們建議您考慮將 **msdb** 交易記錄放在容錯儲存體上。  
   
@@ -115,3 +119,4 @@ caps.handback.revision: 46
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)  
   
   
+

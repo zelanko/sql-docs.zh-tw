@@ -1,36 +1,40 @@
 ---
 title: "先設定防火牆規則再執行 TSQL 偵錯工具 | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/20/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.debug.error.sqlde_register_failed"
-  - "vs.debug.error.sqlde_accessdenied"
-  - "vs.debug.error.sqlde_firewall.remotemachines"
-helpviewer_keywords: 
-  - "Transact-SQL 偵錯工具, 遠端連線"
-  - "Windows 防火牆 [Database Engine], Transact-SQL 偵錯工具"
-  - "Transact-SQL 偵錯工具, Windows 防火牆"
-  - "Transact-SQL 偵錯工具, 設定"
-  - "連接埠 [SQL Server], Transact-SQL 偵錯工具"
-  - "TCP/IP [SQL Server], 連接埠編號"
+ms.custom: 
+ms.date: 10/20/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.debug.error.sqlde_register_failed
+- vs.debug.error.sqlde_accessdenied
+- vs.debug.error.sqlde_firewall.remotemachines
+helpviewer_keywords:
+- Transact-SQL debugger, remote connections
+- Windows Firewall [Database Engine], Transact-SQL debugger
+- Transact-SQL debugger, Windows Firewall
+- Transact-SQL debugger, configuring
+- ports [SQL Server], Transact-SQL debugger
+- TCP/IP [SQL Server], port numbers
 ms.assetid: f50e0b0d-eaf0-4f4a-be83-96f5be63e7ea
 caps.latest.revision: 43
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 43
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1aec49f13a7e4c37fd9d8212393c5bdc3a5694d0
+ms.lasthandoff: 04/11/2017
+
 ---
-# 先設定防火牆規則再執行 TSQL 偵錯工具
+# <a name="configure-firewall-rules-before-running-the-tsql-debugger"></a>先設定防火牆規則再執行 TSQL 偵錯工具
   當連接的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 執行個體與 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器在不同的電腦上執行時，就必須設定 Windows 防火牆規則才能啟用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 偵錯。  
   
-## 設定 Transact-SQL 偵錯工具  
+## <a name="configuring-the-transact-sql-debugger"></a>設定 Transact-SQL 偵錯工具  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具同時包含伺服器端和用戶端元件。 伺服器端的偵錯工具元件會隨著 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 (SP2) 或更新版本中的每個 Database Engine 執行個體一起安裝。 包括用戶端偵錯工具元件的情況：  
   
 -   當您從 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更新版本安裝用戶端工具時。  
@@ -46,7 +50,7 @@ caps.handback.revision: 43
 > [!CAUTION]  
 >  在 [Windows 防火牆] 中啟用規則可能會讓您的電腦暴露在防火牆設計可封鎖的安全性威脅下。 啟用遠端偵錯規則會解除封鎖本主題中列出的通訊埠和程式。  
   
-## 伺服器上的防火牆規則  
+## <a name="firewall-rules-on-the-server"></a>伺服器上的防火牆規則  
  在執行 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體的電腦上，使用 [具有進階安全性的 Windows 防火牆] 指定下列資訊：  
   
 -   加入 sqlservr.exe 的輸入程式規則。 每一個需要支援遠端偵錯工作階段的執行個體都必須有一項規則。  
@@ -91,7 +95,7 @@ caps.handback.revision: 43
   
 -   如果網域原則要求透過 IPsec 完成網路通訊，您也必須加入開啟 UDP 通訊埠 4500 和 UDP 通訊埠 500 的輸入規則。  
   
-## 用戶端上的防火牆規則  
+## <a name="firewall-rules-on-the-client"></a>用戶端上的防火牆規則  
  在執行 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器的電腦上，SQL Server 安裝程式或 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 安裝程式可能已將 Windows 防火牆設定為允許遠端偵錯。  
   
  如果您嘗試開啟遠端偵錯工作階段時發生錯誤，可以使用 [具有進階安全性的 Windows 防火牆] 設定防火牆規則，手動設定程式和通訊埠例外狀況：  
@@ -146,7 +150,7 @@ caps.handback.revision: 43
   
     9. 在 [通訊協定類型:] 方塊中選取 [TCP]，在 [本機通訊埠:] 方塊中選取 [RPC 動態通訊埠]，按一下 [套用]，再按一下 [確定]。  
   
-## 啟動偵錯工具的需求  
+## <a name="requirements-for-starting-the-debugger"></a>啟動偵錯工具的需求  
  啟動 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具的所有嘗試也必須符合下列需求：  
   
 * [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 必須在屬於系統管理員固定伺服器角色成員的 Windows 帳戶底下執行。  
@@ -157,7 +161,7 @@ caps.handback.revision: 43
 
 * 伺服器必須透過 RPC 回應用戶端。 正在執行之 SQL Server 服務底下的帳戶應該要具有用戶端的驗證權限  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [Transact-SQL 偵錯工具](../../relational-databases/scripting/transact-sql-debugger.md)   
  [執行 Transact-SQL 偵錯工具](../../relational-databases/scripting/run-the-transact-sql-debugger.md)   
  [逐步執行 Transact-SQL 程式碼](../../relational-databases/scripting/step-through-transact-sql-code.md)   
@@ -165,3 +169,4 @@ caps.handback.revision: 43
  [Database Engine 查詢編輯器 &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md)  
   
   
+

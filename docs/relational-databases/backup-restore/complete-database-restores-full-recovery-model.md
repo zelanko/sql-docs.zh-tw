@@ -1,29 +1,33 @@
 ---
 title: "完整的資料庫還原 (完整復原模式) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "完整資料庫還原"
-  - "資料庫還原 [SQL Server], 完整資料庫"
-  - "還原資料庫 [SQL Server], 完整資料庫"
-  - "還原 [SQL Server], 資料庫"
-  - "完整復原模式 [SQL Server], 執行還原"
-  - "記錄備份 [SQL Server]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- complete database restores
+- database restores [SQL Server], complete database
+- restoring databases [SQL Server], complete database
+- restoring [SQL Server], database
+- full recovery model [SQL Server], performing restores
+- log backups [SQL Server[
 ms.assetid: 5b4c471c-b972-498e-aba9-92cf7a0ea881
 caps.latest.revision: 77
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 77
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8b2fe04099e9ec76ea157b1428fa0a4896ad8e78
+ms.lasthandoff: 04/11/2017
+
 ---
-# 完整的資料庫還原 (完整復原模式)
+# <a name="complete-database-restores-full-recovery-model"></a>完整的資料庫還原 (完整復原模式)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   在完整資料庫還原中，目標是還原整個資料庫。 在還原期間，整個資料庫為離線狀態。 在讓資料庫的任何部分上線之前，所有的資料都必須復原到一致的位置；此時資料庫的所有部分都會回到相同的時間點，而且沒有未認可的交易存在。  
@@ -33,7 +37,7 @@ caps.handback.revision: 77
  還原資料庫時 (特別是在完整復原模式或大量記錄復原模式下)，應該使用單一還原順序。 *「還原順序」* (Restore sequence) 包含一個或多個還原作業，會在一個或多個還原階段中移動資料。  
   
 > [!IMPORTANT]  
->  建議您不要附加或還原來源不明或來源不受信任的資料庫。 這些資料庫可能包含惡意程式碼，因此可能執行非預期的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼，或是修改結構描述或實體資料庫結構而造成錯誤。 使用來源不明或來源不受信任的資料庫之前，請先在非實際執行伺服器的資料庫上執行 [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)，同時檢查資料庫中的程式碼，例如預存程序或其他使用者定義程式碼。  
+>  建議您不要附加或還原來源不明或來源不受信任的資料庫。 這些資料庫可能包含惡意程式碼，因此可能執行非預期的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼，或是修改結構描述或實體資料庫結構而造成錯誤。 使用來源不明或來源不受信任的資料庫之前，請先在非實際執行伺服器的資料庫上執行 [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) ，同時檢查資料庫中的程式碼，例如預存程序或其他使用者定義程式碼。  
   
  **本主題內容：**  
   
@@ -44,7 +48,7 @@ caps.handback.revision: 77
 -   [相關工作](#RelatedTasks)  
   
 > [!NOTE]  
->  如需舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之備份支援的資訊，請參閱 [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md) 的＜相容性支援＞一節。  
+>  如需舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之備份支援的資訊，請參閱 [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)的＜相容性支援＞一節。  
   
 ##  <a name="PointOfFailure"></a> 將資料庫還原到失敗點  
  一般而言，將資料庫復原至失敗點的作業，包含下列基本步驟：  
@@ -71,10 +75,10 @@ caps.handback.revision: 77
  ![完成資料庫還原至失敗的時間](../../relational-databases/backup-restore/media/bnrr-rmfull1-db-failure-pt.gif "完成資料庫還原至失敗的時間")  
   
 > [!NOTE]  
->  當您將資料庫備份還原至不同的伺服器執行個體時，請參閱[使用備份與還原複製資料庫](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)。  
+>  當您將資料庫備份還原至不同的伺服器執行個體時，請參閱 [使用備份與還原複製資料庫](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)。  
   
 ###  <a name="TsqlSyntax"></a> 基本 Transact-SQL RESTORE 語法  
- 上圖中還原順序的基本 [RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 語法如下：  
+ 上圖中還原順序的基本 [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 語法如下：  
   
 1.  RESTORE DATABASE *&lt;database&gt;* FROM *full database backup* WITH NORECOVERY;  
   
@@ -90,7 +94,7 @@ caps.handback.revision: 77
  下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 範例顯示將資料庫還原到失敗點之還原順序中的基本選項。 此範例會建立資料庫的結尾記錄備份。 接下來，此範例會還原完整的資料庫備份和記錄備份，然後還原結尾記錄備份。 此範例會在一個不同的最後步驟中復原資料庫。  
   
 > [!NOTE]  
->  此範例使用[完整資料庫備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-database-backups-sql-server.md) 的＜在完整復原模式下使用資料庫備份＞一節中所建立的資料庫備份和記錄備份。 在資料庫備份之前，[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 範例資料庫會設定為使用完整復原模式。  
+>  此範例使用 [完整資料庫備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-database-backups-sql-server.md)的＜相容性支援＞一節。 在資料庫備份之前， [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 範例資料庫會設定為使用完整復原模式。  
   
 ```  
 USE master;  
@@ -125,7 +129,7 @@ GO
 ##  <a name="PointWithinBackup"></a> 將資料庫還原到記錄備份內的時間點  
  在完整復原模式下，完整資料庫還原通常可以復原到某個時間點、標示的交易或記錄備份內的 LSN。 然而，在大量記錄復原模式下，如果記錄備份包含大量記錄的變更，則無法進行時間點復原。  
   
-### 範例時間點還原案例  
+### <a name="sample-point-in-time-restore-scenarios"></a>範例時間點還原案例  
  下列範例假設有一個關鍵任務的資料庫系統，每天午夜時會建立一次完整資料庫備份，從星期一到星期六每小時整點時會建立一次差異資料庫備份，而全天每隔 10 分鐘會建立一次交易記錄備份。 若要將資料庫還原至星期三 5:19 A.M. 時的狀態， 請執行下列工作：  
   
 1.  還原星期二午夜建立的完整資料庫備份。  
@@ -142,12 +146,12 @@ GO
   
 2.  還原星期四上午 2:00 建立的差異資料庫備份 建立的交易記錄備份。  
   
-3.  套用星期四上午 2:10 到  變成上午 3:00。 建立的交易記錄備份。  
+3.  套用星期四上午 2:10 到 變成上午 3:00。 建立的交易記錄備份。  
   
 4.  套用星期四上午 3:10 建立的交易記錄備份， 並在上午 3:04 停止復原程序。  
   
 > [!NOTE]  
->  如需特定時間點還原的範例，請參閱[將 SQL Server 資料庫還原至某個時間點 &#40;完整復原模式&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)。  
+>  如需特定時間點還原的範例，請參閱 [將 SQL Server 資料庫還原至某個時間點 &#40;完整復原模式&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)的＜相容性支援＞一節。  
   
 ##  <a name="RelatedTasks"></a> 相關工作  
  **還原完整資料庫備份**  
@@ -176,8 +180,8 @@ GO
   
 -   [復原到記錄序號 &#40;SQL Server&#41;](../../relational-databases/backup-restore/recover-to-a-log-sequence-number-sql-server.md)  
   
-## 另請參閱  
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+## <a name="see-also"></a>另請參閱  
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [套用交易記錄備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
  [sp_addumpdevice &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)   

@@ -1,28 +1,32 @@
 ---
 title: "複寫代理程式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "代理程式 [SQL Server 複寫]"
-  - "複寫 [SQL Server], 代理程式和設定檔"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- agents [SQL Server replication]
+- replication [SQL Server], agents and profiles
 ms.assetid: e257186c-4af4-4d02-bd4d-712264a9dace
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 581d73167e1e2d650c10a47f1e643787da3c589c
+ms.lasthandoff: 04/11/2017
+
 ---
-# 複寫代理程式
+# <a name="replication-agents"></a>複寫代理程式
   複寫會使用許多名為「代理程式」的獨立程式執行與追蹤變更和散發資料相關的工作。 文件集的這個章節包含下列複寫代理程式的參數參考。  
   
-## 本節內容  
+## <a name="in-this-section"></a>本節內容  
  [複寫代理程式概觀](../../../relational-databases/replication/agents/replication-agents-overview.md)  
   
  [複寫散發代理程式](../../../relational-databases/replication/agents/replication-distribution-agent.md)  

@@ -1,26 +1,30 @@
 ---
 title: "資料表資料行屬性 (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/08/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vdtsql.chm:65558"
-  - "vdtsql.chm:69657"
-  - "vdt.ppg.columns"
+ms.custom: 
+ms.date: 08/08/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vdtsql.chm:65558
+- vdtsql.chm:69657
+- vdt.ppg.columns
 ms.assetid: 09830897-cc10-46b8-95f5-e0e9681b668c
 caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 33
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8eefd641ac7c9672b6e5f52412bd7cafe623ea09
+ms.lasthandoff: 04/11/2017
+
 ---
-# 資料表資料行屬性 (SQL Server Management Studio)
+# <a name="table-column-properties-sql-server-management-studio"></a>資料表資料行屬性 (SQL Server Management Studio)
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   這些屬性會出現在 [資料表設計工具] 的下方窗格中。 已選取資料行時，您可以在 [屬性] 視窗中編輯這些屬性 (除非另有附註)。 可依類別目錄或依字母順序顯示 **[資料行屬性]** 。 且只會出現或只可變更特定資料類型的一些屬性。  
@@ -100,7 +104,7 @@ caps.handback.revision: 33
  如果您在選取 **[統計語意]** 之前選取 **[語言]**，而且選取的語言沒有相關聯的語意語言模型，則 **[統計語意]** 選項會設定為 **[否]** ，而且無法修改。 如果您在選取 **[語言]** 之前針對 **[統計語意]** 選項選取 **[是]**，則 **[語言]** 欄中的可用語言將受限為有語意語言模型支援的語言。  
   
  **有非 SQL Server 訂閱者**  
- 指出是否正在將資料行複寫至不是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的訂閱者。  
+ 指出是否正在將資料行複寫至不是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的訂閱者。  
   
  **識別規格**  
  顯示這個資料行的數值是否強制使用唯一性，以及強制執行方式的相關資訊。 這個屬性的值指示這個資料行是否為識別欄位，以及是否與 [為識別] 子屬性的值相同。  
@@ -136,3 +140,4 @@ caps.handback.revision: 33
 >  每個資料列的 **(max)** 資料類型長度都會不同。 **sp_help** 會傳回 (-1) 當作 **(max)** 資料行的長度。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 會顯示 -1 當作資料行大小。  
   
   
+

@@ -1,29 +1,33 @@
 ---
 title: "停用資源管理員 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "資源管理員, 停用"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Resource Governor, disabling
 ms.assetid: 2c2d2db0-34a5-4f50-b783-17693e3ce3f1
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 47091df9ec1318e7bb66ef1a32346c7445b4abd6
+ms.lasthandoff: 04/11/2017
+
 ---
-# 停用資源管理員
+# <a name="disable-resource-governor"></a>停用資源管理員
   您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 Transact-SQL 停用資源管理員。  
   
 -   **開始之前：**  [限制事項](#LimitationsRestrictions)、 [權限](#Permissions)  
   
--   **使用下列項目停用資源管理員：**物件總管[](#RGOffObjEx)、[資源管理員屬性][](#RGOffProp)、Transact-SQL[](#RGOffTSQL)  
+-   **使用下列項目停用資源管理員：**  [](#RGOffObjEx)、 [](#RGOffProp)、 [](#RGOffTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
  停用資源管理員會產生下列結果：  
@@ -69,7 +73,7 @@ caps.handback.revision: 7
   
 1.  執行 **ALTER RESOURCE GOVERNOR DISABLE** 陳述式。  
   
-### 範例 (Transact-SQL)  
+### <a name="example-transact-sql"></a>範例 (Transact-SQL)  
  下列範例會啟用資源管理員。  
   
 ```  
@@ -77,7 +81,7 @@ ALTER RESOURCE GOVERNOR DISABLE;
 GO  
 ```  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [資源管理員](../../relational-databases/resource-governor/resource-governor.md)   
  [啟用資源管理員](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [資源管理員資源集區](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   

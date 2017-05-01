@@ -1,26 +1,30 @@
 ---
 title: "取得事件通知詳細資訊 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "事件通知 [SQL Server], 中繼資料"
-  - "狀態資訊 [SQL Server], 事件通知"
-  - "中繼資料 [SQL Server], 事件通知"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- event notifications [SQL Server], metadata
+- status information [SQL Server], event notifications
+- metadata [SQL Server], event notifications
 ms.assetid: 8bc10867-66d6-4f57-ac32-a6c29f3327cd
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6e41d81ae5f32fd8d78e1515f17a9229129348df
+ms.lasthandoff: 04/11/2017
+
 ---
-# 取得事件通知詳細資訊
+# <a name="get-information-about-event-notifications"></a>取得事件通知詳細資訊
   下列目錄檢視可用以查詢事件通知的中繼資料。  
   
  **若要取得非伺服器層級的事件通知資訊**  
@@ -35,7 +39,7 @@ caps.handback.revision: 22
 -   [sys.server_event_notifications &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql.md)  
   
 > [!NOTE]  
->  您必須至少具有伺服器的 CONTROL 或 VIEW ANY DEFINITION 權限、身為事件通知的登入或擁有者，或是具有 ALTER ANY EVENT NOTIFICATION 權限，才能檢視 **sys.server_event_notifications** 中任何事件通知的相關中繼資料。  
+>  您必須至少具有伺服器的 CONTROL 或 VIEW ANY DEFINITION 權限、身為事件通知的登入或擁有者，或是具有 ALTER ANY EVENT NOTIFICATION 權限，才能檢視 **sys.server_event_notifications**中任何事件通知的相關中繼資料。  
   
  **若要取得所有可以引發事件通知的事件資訊**  
   
@@ -44,7 +48,7 @@ caps.handback.revision: 22
 > [!NOTE]  
 >  此目錄檢視不會傳回事件群組。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [事件通知](../../relational-databases/service-broker/event-notifications.md)  
   
   

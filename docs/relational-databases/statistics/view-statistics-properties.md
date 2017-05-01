@@ -1,28 +1,32 @@
 ---
-title: "檢視統計資料屬性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-statistics"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.statistics.details.f1"
-helpviewer_keywords: 
-  - "檢視統計資料屬性"
-  - "統計資料 [SQL Server], 檢視屬性"
+title: "檢視統計資料屬性 | Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-statistics
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.statistics.details.f1
+helpviewer_keywords:
+- viewing statistics properties
+- statistics [SQL Server], viewing properties
 ms.assetid: 0eaa2101-006e-4015-9979-3468b50e0aaa
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0418da029159564c125fb89eaed39fdb1d673c65
+ms.lasthandoff: 04/11/2017
+
 ---
-# 檢視統計資料屬性
-  您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中針對資料表或索引檢視表顯示目前的查詢最佳化統計資料。 統計資料物件包含標頭 (其中包含有關統計資料的中繼資料)、長條圖 (包含統計資料物件之第一個索引鍵資料行中的值分佈)，以及用來測量跨資料行關聯的密度向量。 如需長條圖和密度向量的詳細資訊，請參閱 [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)  
+# <a name="view-statistics-properties"></a>檢視統計資料屬性
+  您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中針對資料表或索引檢視表顯示目前的查詢最佳化統計資料。 統計資料物件包含標頭 (其中包含有關統計資料的中繼資料)、長條圖 (包含統計資料物件之第一個索引鍵資料行中的值分佈)，以及用來測量跨資料行關聯的密度向量。 如需長條圖和密度向量的詳細資訊，請參閱 [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)  
   
  **本主題內容**  
   
@@ -41,11 +45,11 @@ caps.handback.revision: 10
 ###  <a name="Security"></a> 安全性  
   
 ####  <a name="Permissions"></a> Permissions  
- 使用者必須擁有資料表，或者使用者必須是**系統管理員**固定伺服器角色、**db_owner** 固定資料庫角色或 **db_ddladmin** 固定資料庫角色的成員，才能檢視統計資料物件。  
+ 使用者必須擁有資料表，或者使用者必須是 **系統管理員** 固定伺服器角色、 **db_owner** 固定資料庫角色或 **db_ddladmin** 固定資料庫角色的成員，才能檢視統計資料物件。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 若要檢視統計資料屬性  
+#### <a name="to-view-statistics-properties"></a>若要檢視統計資料屬性  
   
 1.  在 **[物件總管]**中，按一下加號展開要在其中建立新統計資料的資料庫。  
   
@@ -94,7 +98,7 @@ caps.handback.revision: 10
      針對統計資料物件中的所有索引鍵資料行計算之每個值的平均位元組數。  
   
      **String Index**  
-     Yes 表示統計資料物件包含了字串摘要統計資料來改善使用 LIKE 運算子之查詢述詞的基數預估，例如 `WHERE ProductName LIKE '%Bike'`。 字串摘要統計資料會與長條圖分開儲存，而且會在具有 **char**、**varchar**、**nchar**、**nvarchar**、**varchar(max)**、**nvarchar(max)**、**text** 或 **ntext** 類型時於統計資料物件的第一個索引鍵資料行上建立。  
+     Yes 表示統計資料物件包含了字串摘要統計資料來改善使用 LIKE 運算子之查詢述詞的基數預估，例如 `WHERE ProductName LIKE '%Bike'`。 字串摘要統計資料會與長條圖分開儲存，而且會在具有 **char**、 **varchar**、 **nchar**、 **nvarchar**、 **varchar(max)**、 **nvarchar(max)**、 **text**或 **ntext**類型時於統計資料物件的第一個索引鍵資料行上建立。  
   
      **篩選運算式**  
      包含在統計資料物件中之資料表資料列子集的述詞。 NULL = 非篩選的統計資料。  
@@ -134,7 +138,7 @@ caps.handback.revision: 10
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 若要檢視統計資料屬性  
+#### <a name="to-view-statistics-properties"></a>若要檢視統計資料屬性  
   
 1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
@@ -152,7 +156,7 @@ caps.handback.revision: 10
   
  如需詳細資訊，請參閱 [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)。  
   
-#### 若要尋找資料表或檢視表的所有統計資料  
+#### <a name="to-find-all-of-the-statistics-on-a-table-or-view"></a>若要尋找資料表或檢視表的所有統計資料  
   
 1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   

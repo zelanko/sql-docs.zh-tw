@@ -1,26 +1,30 @@
 ---
-title: "CurvePolygon | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-spatial"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: CurvePolygon | Microsoft Docs
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-spatial
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e000a1d8-a049-4542-bfeb-943fd6ab3969
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: df25fb5e1dd8ddcd426559e1410f32e68575a32b
+ms.lasthandoff: 04/11/2017
+
 ---
-# CurvePolygon
+# <a name="curvepolygon"></a>CurvePolygon
   **CurvePolygon** 是由一個外部週框環形以及零或多個內部環形所定義的拓撲封閉介面。  
   
 > [!IMPORTANT]  
->  如需 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中導入的新空間功能的詳細描述和範例 (包括 **CurvePolygon** 子類型) 的詳細描述和範例，請下載技術白皮書：[SQL Server 2012 中的新空間功能](http://go.microsoft.com/fwlink/?LinkId=226407)。  
+>  如需 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]中導入的新空間功能的詳細描述和範例 (包括 **CurvePolygon** 子類型) 的詳細描述和範例，請下載技術白皮書： [SQL Server 2012 中的新空間功能](http://go.microsoft.com/fwlink/?LinkId=226407)。  
   
  下列準則會定義 **CurvePolygon** 執行個體的屬性：  
   
@@ -28,15 +32,15 @@ caps.handback.revision: 18
   
 -   **CurvePolygon** 執行個體的內部是外部環形與所有內部環形之間的空間。  
   
- **CurvePolygon** 執行個體不同於**多邊形**執行個體，其中 **CurvePolygon** 執行個體可能會包含下列圓弧線段：**CircularString** 和 **CompoundCurve**。  
+ **CurvePolygon** 執行個體不同於 **多邊形** 執行個體，其中 **CurvePolygon** 執行個體可能會包含下列圓弧線段： **CircularString** 和 **CompoundCurve**。  
   
-## CompoundCurve 執行個體  
+## <a name="compoundcurve-instances"></a>CompoundCurve 執行個體  
  下圖顯示了有效的 **CurvePolygon** 圖形：  
   
-### 已接受的執行個體  
+### <a name="accepted-instances"></a>已接受的執行個體  
  若要讓系統接受 **CurvePolygon** 執行個體，其必須為空的，或僅包含已接受的圓弧環形。 已接受的圓弧環形符合下列需求。  
   
-1.  為已接受的 **LineString**、**CircularString**，或 **CompoundCurve** 執行個體。 如需有關已接受之執行個體的詳細資訊，請參閱 [LineString](../../relational-databases/spatial/linestring.md)、[CircularString](../../relational-databases/spatial/circularstring.md)，和 [CompoundCurve](../../relational-databases/spatial/compoundcurve.md)。  
+1.  為已接受的 **LineString**、 **CircularString**，或 **CompoundCurve** 執行個體。 如需有關已接受之執行個體的詳細資訊，請參閱 [LineString](../../relational-databases/spatial/linestring.md)、 [CircularString](../../relational-databases/spatial/circularstring.md)，和 [CompoundCurve](../../relational-databases/spatial/compoundcurve.md)。  
   
 2.  至少具有四個點。  
   
@@ -66,7 +70,7 @@ DECLARE @g2 geometry = 'CURVEPOLYGON((0 0, 0 0, 0 0))';
   
  `@g1` 不被接受，因為起點和終點的 Y 值不相同。 `@g2` 不被接受，因為環形未包含足夠的點。  
   
-### 有效的執行個體  
+### <a name="valid-instances"></a>有效的執行個體  
  若要讓 **CurvePolygon** 執行個體有效，外部與內部環形都必須符合下列準則：  
   
 1.  它們只能在單一正切點接觸。  
@@ -77,9 +81,9 @@ DECLARE @g2 geometry = 'CURVEPOLYGON((0 0, 0 0, 0 0))';
   
 4.  每個環形都必須是可接受的曲線類型。  
   
- 根據 **CurvePolygon** 執行個體是 **geometry** 或 **geography** 資料類型而定，其也必須符合特定準則。  
+ 根據**CurvePolygon** 執行個體是 **geometry** 或 **geography** 資料類型而定，其也必須符合特定準則。  
   
-#### Geometry 資料類型  
+#### <a name="geometry-data-type"></a>Geometry 資料類型  
  有效的 **geometryCurvePolygon** 執行個體必須具有下列屬性：  
   
 1.  所有內部環形都必須包含在外部環形中。  
@@ -102,7 +106,7 @@ SELECT @g1.STIsValid(), @g2.STIsValid();
   
  CurvePolygon 執行個體與 Polygon 執行個體具有相同的有效性規則，不過 CurvePolygon 執行個體可接受新的圓弧線段類型。 如需有效或無效執行個體的其他範例，請參閱 [Polygon](../../relational-databases/spatial/polygon.md)。  
   
-#### Geography 資料類型  
+#### <a name="geography-data-type"></a>Geography 資料類型  
  有效的 **geographyCurvePolygon** 執行個體必須具有下列屬性：  
   
 1.  多邊形的內部是使用左側規則來連接。  
@@ -120,9 +124,9 @@ DECLARE @g geography = 'CURVEPOLYGON((-122.3 47, 122.3 47, 125.7 49, 121 38, -12
 SELECT @g.STIsValid();  
 ```  
   
-## 範例  
+## <a name="examples"></a>範例  
   
-### A. 使用空的 CurvePolygon 來具現化 Geometry 執行個體  
+### <a name="a-instantiating-a-geometry-instance-with-an-empty-curvepolygon"></a>A. 使用空的 CurvePolygon 來具現化 Geometry 執行個體  
  這個範例會示範如何建立空的 **CurvePolygon** 執行個體：  
   
 ```tsql  
@@ -130,21 +134,21 @@ DECLARE @g geometry;
 SET @g = geometry::Parse('CURVEPOLYGON EMPTY');  
 ```  
   
-### B. 在相同的陳述式中使用 CurvePolygon 來宣告和具現化 Geometry 執行個體  
+### <a name="b-declaring-and-instantiating-a-geometry-instance-with-a-curvepolygon-in-the-same-statement"></a>B. 在相同的陳述式中使用 CurvePolygon 來宣告和具現化 Geometry 執行個體  
  這個程式碼片段會示範如何在相同的陳述式中使用 **CurvePolygon** 來宣告 geometry 執行個體並將其初始化：  
   
 ```tsql  
 DECLARE @g geometry = 'CURVEPOLYGON(CIRCULARSTRING(2 4, 4 2, 6 4, 4 6, 2 4))'  
 ```  
   
-### C. 使用 CurvePolygon 來具現化 Geography 執行個體  
- 這個程式碼片段會示範如何在相同的陳述式中使用 **CurvePolygon** 來宣告 **geography** 執行個體並將其初始化：  
+### <a name="c-instantiating-a-geography-instance-with-a-curvepolygon"></a>C. 使用 CurvePolygon 來具現化 Geography 執行個體  
+ 這個程式碼片段會示範如何在相同的陳述式中使用 **CurvePolygon** 來宣告 **geography**執行個體並將其初始化：  
   
 ```tsql  
 DECLARE @g geography = 'CURVEPOLYGON(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))';  
 ```  
   
-### D. 儲存只有一個外部週框環形的 CurvePolygon  
+### <a name="d-storing-a-curvepolygon-with-only-an-exterior-bounding-ring"></a>D. 儲存只有一個外部週框環形的 CurvePolygon  
  這個範例會示範如何將簡單的圓形儲存在 **CurvePolygon** 執行個體中 (只用一個外部週框環形來定義圓形)：  
   
 ```tsql  
@@ -153,7 +157,7 @@ SET @g = geometry::Parse('CURVEPOLYGON(CIRCULARSTRING(2 4, 4 2, 6 4, 4 6, 2 4))'
 SELECT @g.STArea() AS Area;  
 ```  
   
-### E. 儲存包含內部環形的 CurvePolygon  
+### <a name="e-storing-a-curvepolygon-containing-interior-rings"></a>E. 儲存包含內部環形的 CurvePolygon  
  這個範例會在 **CurvePolygon** 執行個體中建立環圈圖 (外部週框環形與內部環形都用來定義環圈圖)：  
   
 ```tsql  
@@ -181,12 +185,12 @@ SELECT @g1.STIsValid() AS G1, @g2.STIsValid() AS G2;
   
  @g1 和 @g2 都會使用相同的外部週框環形：半徑為 5 的圓形，而且它們都使用正方形代表內部環形。  不過，執行個體 @g1 有效，但執行個體 @g2 卻無效。  @g2 無效的原因是，內部環形會將外部環形所限定的內部空間分割成四個不同的區域。  下圖將顯示所發生的情況：  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [多邊形](../../relational-databases/spatial/polygon.md)   
  [CircularString](../../relational-databases/spatial/circularstring.md)   
  [CompoundCurve](../../relational-databases/spatial/compoundcurve.md)   
- [geometry 資料類型方法參考](../Topic/geometry%20Data%20Type%20Method%20Reference.md)   
- [geography 資料類型方法參考](../Topic/geography%20Data%20Type%20Method%20Reference.md)   
+ [geometry 資料類型方法參考](http://msdn.microsoft.com/library/d88e632b-6b2f-4466-a15f-9fbef1a347a7)   
+ [geography 資料類型方法參考](http://msdn.microsoft.com/library/028e6137-7128-4c74-90a7-f7bdd2d79f5e)   
  [空間資料類型概觀](../../relational-databases/spatial/spatial-data-types-overview.md)  
   
   

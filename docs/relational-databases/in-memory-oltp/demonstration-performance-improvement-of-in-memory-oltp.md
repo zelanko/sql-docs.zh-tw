@@ -1,37 +1,41 @@
 ---
-title: "示範：記憶體中 OLTP 的效能改善 | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/19/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "示範：記憶體內部 OLTP 的效能改善 | Microsoft 文件"
+ms.custom: 
+ms.date: 08/19/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c6def45d-d2d4-4d24-8068-fab4cd94d8cc
 caps.latest.revision: 16
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6a6edd38b5efb5b617308b9359eea8d255daeb8d
+ms.lasthandoff: 04/11/2017
+
 ---
-# 示範：記憶體中 OLTP 的效能改善
+# <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>示範：記憶體中 OLTP 的效能改善
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  本主題中的程式碼範例示範記憶體最佳化資料表的快速效能。 從傳統、解譯的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存取記憶體最佳化資料表中的資料時，此效能改善顯而易見。 若從原生編譯的預存程序 (NCSProc) 存取記憶體最佳化資料表中的資料，則此效能改善的幅度甚至更高。  
+  本主題中的程式碼範例示範記憶體最佳化資料表的快速效能。 從傳統、解譯的 [!INCLUDE[tsql](../../includes/tsql-md.md)]存取記憶體最佳化資料表中的資料時，此效能改善顯而易見。 若從原生編譯的預存程序 (NCSProc) 存取記憶體最佳化資料表中的資料，則此效能改善的幅度甚至更高。  
  
-若要查看記憶體中 OLTP 潛在效能改善的更完整示範，請參閱 [In-Memory OLTP Performance Demo v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/in-memory-oltp-demo-v1.0) (記憶體中 OLTP 效能示範 1.0 版)。 
+若要查看記憶體中 OLTP 潛在效能改善的更完整示範，請參閱 [In-Memory OLTP Performance Demo v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/in-memory-oltp-demo-v1.0)(記憶體中 OLTP 效能示範 1.0 版)。 
   
  現有文章中的程式碼範例為單一執行緒，且未利用記憶體內部 OLTP 的並行優點。 工作負載若是使用並行作業，將會有更高幅度的效能提升。 此程式碼範例僅示範某層面的效能改善 (即 INSERT 的資料存取效率)。  
   
  從 NCSProc 存取記憶體最佳化資料表中的資料時，可完全實現記憶體最佳化資料表所提供的效能改善。  
   
-## 程式碼範例  
+## <a name="code-example"></a>程式碼範例  
  下列小節將描述每個步驟。  
   
-### 步驟 1a︰使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
- 此第一個小節中的步驟僅適用於在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中執行時，但不適用於在 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 中執行時。 執行下列動作：  
+### <a name="step-1a-prerequisite-if-using-includessnoversionincludesssnoversion-mdmd"></a>步驟 1a︰使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+ 此第一個小節中的步驟僅適用於在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中執行時，但不適用於在 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]中執行時。 執行下列動作：  
   
 1.  使用 SQL Server Management Studio (SSMS.exe) 連接至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 或者，任何與 SSMS.exe 類似的工具也可以。  
   
@@ -56,8 +60,8 @@ USE imoltp;
 go  
 ```  
   
-### 步驟 1b︰使用 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]  
- 這個小節僅適用於使用 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 時。 執行下列動作：  
+### <a name="step-1b-prerequisite-if-using-includesssdsfullincludessssdsfull-mdmd"></a>步驟 1b︰使用 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]  
+ 這個小節僅適用於使用 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]時。 執行下列動作：  
   
 1.  決定程式碼範例將使用的現有測試資料庫。  
   
@@ -65,7 +69,7 @@ go
   
  如果您想要使用 Azure 入口網站進行這項作業的指示，請參閱 [開始使用 Azure SQL Database](http://azure.microsoft.com/documentation/articles/sql-database-get-started)。  
   
-### 步驟 2：建立記憶體最佳化資料表和 NCSProc  
+### <a name="step-2-create-memory-optimized-tables-and-ncsproc"></a>步驟 2：建立記憶體最佳化資料表和 NCSProc  
  此步驟建立記憶體最佳化資料表和原生編譯的預存程序 (NCSProc)。 執行下列動作：  
   
 1.  使用 SSMS.exe 連接至新的資料庫。  
@@ -115,7 +119,7 @@ END;
 go  
 ```  
   
-### 步驟 3︰執行程式碼  
+### <a name="step-3-run-the-code"></a>步驟 3︰執行程式碼  
  現在，您可以執行可示範記憶體最佳化資料表效能的查詢。 執行下列動作：  
   
 1.  使用 SSMS.exe，在資料庫中執行下列 T-SQL。  
@@ -193,7 +197,8 @@ go
 3937 ms , C: memory-optimized table with hash index and native SP.  
 ```  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [記憶體內部 OLTP &#40;記憶體內部最佳化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   
+

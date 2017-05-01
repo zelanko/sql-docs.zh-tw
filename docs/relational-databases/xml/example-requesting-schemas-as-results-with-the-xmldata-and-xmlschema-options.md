@@ -1,28 +1,32 @@
 ---
-title: "範例：使用 XMLDATA 和 XMLSCHEMA 選項要求結構描述當做結果 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "RAW 模式, 要求結構描述範例"
-  - "RAW 模式, 含 XMLDATA 和 XMLSCHEMA"
+title: "範例：使用 XMLDATA 和 XMLSCHEMA 選項要求結構描述當作結果 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- RAW mode, requesting schema example
+- RAW mode, with XMLDATA and XMLSCHEMA
 ms.assetid: 3504ca38-be66-42b2-8dab-f499c9584840
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bca71096e7e34aa6a72c84f065fd7df76eb6462f
+ms.lasthandoff: 04/11/2017
+
 ---
-# 範例：使用 XMLDATA 和 XMLSCHEMA 選項要求結構描述當做結果
+# <a name="example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options"></a>範例：使用 XMLDATA 和 XMLSCHEMA 選項要求結構描述當做結果
   下列查詢會傳回用於描述文件結構的 XML-DATA 結構描述。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 USE AdventureWorks2012;  
@@ -51,7 +55,7 @@ GO
 ```  
   
 > [!NOTE]  
->  <`Schema`> 會宣告為命名空間。 為了在不同 FOR XML 查詢中要求多個 XML-Data 結構描述時避免命名空間衝突，所以在每次執行查詢時都會變更命名空間識別碼 (此範例中為 `Schema1`)。 命名空間識別碼是由 **Schema*n*** 所組成，其中 ***n*** 是整數。  
+>  <`Schema`> 會宣告為命名空間。 為了在不同 FOR XML 查詢中要求多個 XML-Data 結構描述時避免命名空間衝突，所以在每次執行查詢時都會變更命名空間識別碼 (此範例中為 `Schema1` )。 命名空間識別碼是由 **Schema*n*** 所組成，其中 ***n*** 是整數。  
   
  指定 `XMLSCHEMA` 選項，則可要求結果傳回 XSD 結構描述。  
   
@@ -122,7 +126,7 @@ GO
 <row xmlns="urn:example.com" ProductModelID="119" Name="Bike Wash" />  
 ```  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用 FOR XML 的 RAW 模式](../../relational-databases/xml/use-raw-mode-with-for-xml.md)  
   
   

@@ -1,27 +1,31 @@
 ---
 title: "SQL Server XTP 交易 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 443d67e4-1c7f-41d7-b18d-2d657f58c22a
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 40baae3d8967f5e4f193c1264e30749d291b0b2a
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server XTP 交易
+# <a name="sql-server-xtp-transactions"></a>SQL Server XTP 交易
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  SQL Server XTP Transactions 效能物件包含與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中記憶體內部 OLTP 交易相關的計數器。  
+  SQL Server XTP Transactions 效能物件包含與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中記憶體內部 OLTP 交易相關的計數器。  
   
- 下表描述 **SQL Server XTP Transactions**計數器。  
+ 下表描述 **SQL Server XTP Transactions** 計數器。  
   
 |計數器|描述|  
 |-------------|-----------------|  
@@ -36,7 +40,7 @@ caps.handback.revision: 7
 |**中止的交易/秒**|(平均) 每秒中止的交易數，包括由使用者和系統中止的數目。|  
 |**建立的交易/秒**|(平均) 每秒在系統中建立的交易數目。<br /><br /> XTP 交易的計數方式跟磁碟交易不同 (如 Databases:Transactions/sec 中所反映)。 例如，Transactions created/sec 是計算唯讀交易，Databases:Transactions/sec 則不是。|  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [SQL Server XTP &#40;記憶體內部 OLTP&#41; 效能計數器](../../relational-databases/performance-monitor/sql-server-xtp-in-memory-oltp-performance-counters.md)  
   
   

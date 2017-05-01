@@ -1,33 +1,37 @@
 ---
 title: "使用規則運算式搜尋文字 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vsregularexpressionhelp"
-  - "vs.regularexpressionhelp"
-  - "vs.regularexpressionbuilder"
-helpviewer_keywords: 
-  - "規則運算式 [SQL Server Management Studio]"
-  - "查詢編輯器 [SQL Server Management Studio], 規則運算式搜尋"
-  - "搜尋 [SQL Server Management Studio], 規則運算式"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vsregularexpressionhelp
+- vs.regularexpressionhelp
+- vs.regularexpressionbuilder
+helpviewer_keywords:
+- regular expressions [SQL Server Management Studio]
+- Query Editor [SQL Server Management Studio], regular expression searches
+- searches [SQL Server Management Studio], regular expressions
 ms.assetid: a057690c-d118-4159-8e4d-2ed5ccfe79d3
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 530e940d95c3375b58b494e165cf5a193fdec720
+ms.lasthandoff: 04/11/2017
+
 ---
-# 使用規則運算式搜尋文字
+# <a name="search-text-with-regular-expressions"></a>使用規則運算式搜尋文字
   規則運算式是在尋找及取代文字模式時所使用，為既簡明、又有彈性的標記法。 特定的規則運算式集可用在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [尋找和取代] 對話方塊的 [尋找目標] 欄位。  
   
-#### 若要使用規則運算式來尋找  
+#### <a name="to-find-using-regular-expressions"></a>若要使用規則運算式來尋找  
   
 1.  若要啟用於 [快速尋找]、[檔案中尋找]、[快速取代] 或 [檔案中取代] 等作業期間，在 [尋找目標] 欄位使用規則運算式，請選取 [尋找選項] 之下的 [使用] 選項，然後選擇 [規則運算式]。  
   
@@ -51,7 +55,7 @@ caps.handback.revision: 25
 |集合中的任何單一字元|[]|符合 [] 以內的任何一個字元。 若要指定字元範圍，請列出開始和結束的字元，並以破折號 (-) 分隔，例如 [a-z]。|  
 |非集合中的任何單一字元|[^...]|符合接在 ^ 後面之字元集以外的任何字元。|  
 |或|&#124;|符合 OR 符號 (&#124;) 前後的運算式。 大多用於群組內。 例如 (海綿&#124;泥漿) 浴符合「海綿浴」和「泥漿浴」。|  
-|逸出|\|符合在反斜線 (\\) 之後作為常值的字元。 您可以尋找規則運算式標記法中所使用的字元，例如 { 及 ^。 例如，\\^ 會搜尋 ^ 字元。|  
+|逸出|\|符合在反斜線 (\\) 之後作為常值的字元。 您可以尋找規則運算式標記法中所使用的字元，例如 { 及 ^。 例如， \\^ 會搜尋 ^ 字元。|  
 |標記運算式|{}|符合標示加上引號運算式的文字。|  
 |C/C++ 識別碼|:i|符合運算式 ([a-zA-Z_$][a-zA-Z0-9_$]*)。|  
 |加上引號的字串|:q|符合運算式 (("[^"]*")&#124;('[^']\*'))。|  
@@ -131,7 +135,7 @@ caps.handback.revision: 25
 |片假名|:Ka|符合片假名字元。|  
 |表意/漢字|:Id|符合表意字元，如漢字。|  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [搜尋和取代](../../relational-databases/scripting/search-and-replace.md)   
  [使用萬用字元搜尋文字](../../relational-databases/scripting/search-text-with-wildcards.md)  
   

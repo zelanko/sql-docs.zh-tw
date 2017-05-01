@@ -1,29 +1,33 @@
 ---
 title: "線上索引作業的指導方針 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/09/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "叢集索引, 線上作業"
-  - "線上索引作業"
-  - "索引 [SQL Server], 線上作業"
-  - "磁碟空間 [SQL Server], 索引"
-  - "非叢集索引 [SQL Server], 線上作業"
-  - "交易記錄 [SQL Server], 索引"
+ms.custom: 
+ms.date: 04/09/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- clustered indexes, online operations
+- online index operations
+- indexes [SQL Server], online operations
+- disk space [SQL Server], indexes
+- nonclustered indexes [SQL Server], online operations
+- transaction logs [SQL Server], indexes
 ms.assetid: d82942e0-4a86-4b34-a65f-9f143ebe85ce
 caps.latest.revision: 64
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 60
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 44ef45ea5831186a3b6b7218111444d79ceef128
+ms.lasthandoff: 04/11/2017
+
 ---
-# 線上索引作業的指導方針
+# <a name="guidelines-for-online-index-operations"></a>線上索引作業的指導方針
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   當您執行線上索引作業時，下列指導方針將適用：  
@@ -32,14 +36,14 @@ caps.handback.revision: 60
   
 -   當資料表包含 LOB 資料類型，但這些資料行並未在索引定義中當做索引鍵或非索引鍵 (內含) 資料行使用時，您可以在線上建立非唯一的非叢集索引。  
   
--   您無法在線上建立、重建或卸除本機暫存資料表的索引。 此限制不適用於全域暫存資料表上的索引。  
-  
+-   您無法在線上建立、重建或卸除本機暫存資料表的索引。 此限制不適用於全域暫存資料表上的索引。
+
 > [!NOTE]  
->  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的所有版本都無法使用線上索引作業。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本支援的功能清單，請參閱 [SQL Server 2016 版本支援的功能](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)。  
+>  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的所有版本都無法使用線上索引作業。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本所支援的功能清單，請參閱[版本支援的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
- 下表顯示可以線上執行的索引作業以及從這些線上作業排除的索引。 也包含其他限制。  
+ 下表顯示可在線上執行的索引作業、從這些線上作業排除的索引，以及可繼續的索引限制。 也包含其他限制。  
   
-|線上索引作業|排除索引|其他限制|  
+| 線上索引作業 | 排除索引 | 其他限制 |  
 |----------------------------|----------------------|------------------------|  
 |ALTER INDEX REBUILD|已停用叢集索引或已停用索引檢視<br /><br /> XML 索引<br /><br />資料行存放區索引 <br /><br /> 本機暫存資料表上的索引|當資料表包含排除索引時，指定關鍵字 ALL 可能導致作業失敗。<br /><br /> 重建已停用索引的其他限制也適用。 如需詳細資訊，請參閱 [停用索引和條件約束](../../relational-databases/indexes/disable-indexes-and-constraints.md)。|  
 |CREATE INDEX|XML 索引<br /><br /> 在檢視上的初始唯一叢集索引<br /><br /> 本機暫存資料表上的索引||  
@@ -61,7 +65,12 @@ caps.handback.revision: 60
  如果索引包含大型物件類型的資料行，且在同一交易中另有更新作業早於線上作業，便無法執行該線上作業。 若要解決此問題，請將線上作業移出交易之外，或使其比交易中的任何更新都更早執行。  
   
 ## <a name="disk-space-considerations"></a>磁碟空間考量因素  
- 通常，磁碟空間需求對於線上與離線作業是一樣的。 例外的情形是暫存對應索引需要額外的磁碟空間。 此暫存索引用於建立、重建或卸除叢集索引的線上索引作業。 線上卸除叢集索引與線上建立叢集索引需要一樣多的磁碟空間。 如需詳細資訊，請參閱 [Disk Space Requirements for Index DDL Operations](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md)。  
+ 線上索引作業所需的磁碟空間需求高於離線索引作業。 
+ - 在索引建立和索引重建作業期間，所建置 (或重建) 的索引都需要額外的空間。 
+ - 此外，暫存對應索引需要磁碟空間。 此暫存索引用於建立、重建或卸除叢集索引的線上索引作業。
+- 線上卸除叢集索引與線上建立 (或重建) 叢集索引需要一樣多的磁碟空間。 
+
+如需詳細資訊，請參閱 [Disk Space Requirements for Index DDL Operations](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md)。  
   
 ## <a name="performance-considerations"></a>效能考量  
  雖然線上索引作業允許並行使用者更新活動，但是若更新活動負載繁重，此索引作業將需要更長時間。 一般而言，無論並行更新活動的程度，線上索引作業都將低於同等的離線索引作業。  
@@ -70,7 +79,7 @@ caps.handback.revision: 60
   
  儘管我們推薦線上作業，但您應該評估您的環境與特定要求。 離線執行索引作業可能會是最佳方式。 若要達到這種方式，在作業期間，使用者僅能有限地存取資料，但是將更快完成作業且使用較少的資源。  
   
- 在執行 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的多處理器電腦上，索引陳述式可能會如同其他查詢般，使用更多處理器來執行與索引陳述式相關聯的掃描和排序作業。 您可以使用 MAXDOP 索引選項控制線上索引作業專用的處理器數目。 以此方式，您就可以平衡索引作業所使用的資源以及使用者並行所使用的資源。 如需詳細資訊，請參閱 [線上執行索引作業](../../relational-databases/indexes/configure-parallel-index-operations.md)。 如需有關支援平行索引作業之 SQL Server 版本的詳細資訊，請參閱 [SQL Server 2012 版本支援的功能](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)。  
+ 在執行 SQL Server 2016 的多處理器電腦上，索引陳述式可能會如同其他查詢，使用更多處理器來執行與索引陳述式建立關聯的掃描和排序作業。 您可以使用 MAXDOP 索引選項控制線上索引作業專用的處理器數目。 以此方式，您就可以平衡索引作業所使用的資源以及使用者並行所使用的資源。 如需詳細資訊，請參閱 [線上執行索引作業](../../relational-databases/indexes/configure-parallel-index-operations.md)。 如需支援平行索引作業之 SQL Server 版本的詳細資訊，請參閱[版本支援的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
  因為索引作業的最終階段會保留 S-lock 或 Sch-M 鎖定，所以在明確的使用者交易 (例如 BEGIN TRANSACTION...COMMIT 區塊) 內執行線上索引作業時要特別小心。 這樣做導致交易完後才執行鎖定，而妨礙使用者進行並行作業。  
   
@@ -78,7 +87,7 @@ caps.handback.revision: 60
   
 ## <a name="transaction-log-considerations"></a>交易記錄考量因素  
  大規模的索引作業，無論是離線或線上執行，都會產生大量資料負載，而很快就填滿了交易記錄。 若要確定可以回復索引作業，在索引作業完成以前，不能截斷交易記錄；不過，在索引作業期間可以備份此記錄。 因此，在索引作業期間，交易記錄必須有足夠的空間，才能儲存索引作業交易與任何並行使用者交易。 如需詳細資訊，請參閱 [索引作業的交易記錄磁碟空間](../../relational-databases/indexes/transaction-log-disk-space-for-index-operations.md)。  
-  
+
 ## <a name="related-content"></a>相關內容  
  [線上索引作業如何運作](../../relational-databases/indexes/how-online-index-operations-work.md)  
   
@@ -89,3 +98,4 @@ caps.handback.revision: 60
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  
   
   
+

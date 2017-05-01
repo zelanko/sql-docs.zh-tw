@@ -1,27 +1,31 @@
 ---
-title: "資料庫屬性 (檔案頁面) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/09/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.databaseproperties.files.f1"
+title: "資料庫屬性 (檔案頁面) | Microsoft 文件"
+ms.custom: 
+ms.date: 03/09/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.databaseproperties.files.f1
 ms.assetid: 3c030e51-db82-4b43-b1e5-8547ddd3de87
 caps.latest.revision: 42
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 42
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 96e789d47140459475bdd3b6f36500d0d24492ce
+ms.lasthandoff: 04/11/2017
+
 ---
-# 資料庫屬性 (檔案頁面)
+# <a name="database-properties-files-page"></a>資料庫屬性 (檔案頁面)
   使用此頁面來建立新的資料庫，或者檢視或修改選取之資料庫的屬性。 此主題適用於現有資料庫的 [資料庫屬性 (檔案頁面)]，以及 [新增資料庫 (一般頁面)]。  
   
-## UIElement 清單  
+## <a name="uielement-list"></a>UIElement 清單  
  **資料庫名稱**  
  加入或顯示資料庫的名稱。  
   
@@ -29,7 +33,7 @@ caps.handback.revision: 42
  從清單中選取以指定資料庫的擁有者。  
   
  **使用全文檢索索引**  
- 這個核取方塊會被核取並停用，因為在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，全文檢索索引一定是啟用的。 如需詳細資訊，請參閱[全文檢索搜尋](../../relational-databases/search/full-text-search.md)。  
+ 這個核取方塊會被核取並停用，因為在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中，全文檢索索引一定是啟用的。 如需詳細資訊，請參閱 [全文檢索搜尋](../../relational-databases/search/full-text-search.md)。  
   
  **資料庫檔案**  
  加入、檢視、修改或移除相關聯資料庫的資料庫檔案。 資料庫檔案具有下列屬性：  
@@ -81,7 +85,7 @@ caps.handback.revision: 42
   
  如需有關檔案的詳細資訊，請參閱＜ [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md)＞。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)  
   

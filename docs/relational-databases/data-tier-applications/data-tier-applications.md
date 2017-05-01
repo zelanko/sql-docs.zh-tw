@@ -1,33 +1,37 @@
 ---
 title: "資料層應用程式 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "08/12/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-data-tier-apps"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "設計 DAC"
-  - "如何 [DAC]"
-  - "資料層應用程式 [SQL Server], 設計"
-  - "精靈 [DAC]"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 08/12/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-data-tier-apps
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- designing DACs
+- How to [DAC]
+- data-tier application [SQL Server], designing
+- wizard [DAC]
 ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 319f0adb5f8f537b697caa401efcb3e0054d79ee
+ms.lasthandoff: 04/11/2017
+
 ---
-# 資料層應用程式
+# <a name="data-tier-applications"></a>資料層應用程式
   資料層應用程式 (DAC) 是邏輯資料庫管理實體，會定義與使用者資料庫相關聯的所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物件，如資料表、檢視表，以及包括登入的執行個體物件。 DAC 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫部署的自主單位，可讓資料層開發人員和資料庫管理員將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物件包裝為可攜式成品，稱為 DAC 封裝，又稱為 DACPAC。  
   
  BACPAC 是相關的成品，會封裝資料庫結構描述，以及在資料庫中儲存的資料。  
   
-## 資料層應用程式的優點  
+## <a name="benefits-of-data-tier-applications"></a>資料層應用程式的優點  
  大多數資料庫應用程式的開發週期包含開發人員和 DBA 共用及交換應用程式更新和維護活動的指令碼和特定整合注意事項。 雖然這對小量資料庫是可接受的，但是一旦資料庫數目、大小和複雜性等方面都增加時，這很快會變得無法擴充。  
   
  DAC 是資料庫生命週期管理和生產力工具，讓宣告式資料庫開發可以簡化部署和管理。 開發人員可以在 SQL Server Data Tools 資料庫專案中撰寫資料庫，然後建立資料庫成為 DACPAC 以遞交給 DBA。 DBA 可以使用 SQL Server Management Studio，將 DAC 部署至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 測試或實際執行的執行個體或 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]。 或者，DBA 可以使用 DACPAC 來升級以前使用 SQL Server Management Studio 部署的資料庫。 為了完成開發週期，DBA 可以將資料庫擷取至 DACPAC 並將它遞交給開發人員，以反映測試或實際執行調整，或啟用進一步的資料庫設計變更以回應應用程式變更。  
@@ -36,7 +40,7 @@ caps.handback.revision: 31
   
  DAC 還支援版本設定，協助開發人員和 DBA 維護和管理資料庫生命週期中的資料庫歷程。  
   
-## DAC 概念  
+## <a name="dac-concepts"></a>DAC 概念  
  DAC 會簡化支援應用程式之資料層元素的開發、部署與管理：  
   
 -   資料層應用程式 (DAC) 是邏輯資料庫管理實體，會定義與使用者資料庫相關聯的所有 SQL Server 物件，例如資料表、檢視表和執行個體物件。 它是 SQL Server 資料庫部署的自主單位，可讓資料層開發人員和 DBA 將 SQL Server 物件包裝為可攜式成品，稱為 DAC 封裝或 .dacpac 檔案。  
@@ -55,7 +59,7 @@ caps.handback.revision: 31
   
 -   使用者必須是 dbmanager 角色的成員或被指派 CREATE DATABASE 權限，才能建立資料庫，包括部署 DAC 封裝來建立資料庫。 使用者必須是 dbmanager 角色的成員或被指派 DROP DATABASE 權限，才能卸除資料庫。  
   
-## DAC 工具  
+## <a name="dac-tools"></a>DAC 工具  
  DACPAC 可以橫跨 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 隨附的多個工具緊密地使用。 這些工具將 DACPAC 做為互通性單位，解決不同使用者角色的需求。  
   
 -   應用程式開發人員：  
@@ -66,7 +70,7 @@ caps.handback.revision: 31
   
 SQL Server Data Tools 還支援 Local DB，以進行未連接的用戶端資料庫應用程式開發。 開發人員可以取得此本機資料庫的快照集，以建立包含在 .dacpac 檔案中的 DACPAC。  
   
-    -   Independently, the developer can publish a database project directly to a database without even generating a DACPAC. The publish operation follows similar behavior as the deploy operation from other tools.  
+    -   開發人員可以獨立地將資料庫專案直接發行至資料庫，甚至不需產生 DACPAC。 發行作業遵循類似於其他工具部署作業的行為。  
   
 -   資料庫管理員：  
   
@@ -82,7 +86,7 @@ SQL Server Data Tools 還支援 Local DB，以進行未連接的用戶端資料�
   
     -   IT 系統整合人員和管理員可以使用 SqlPackage.exe 命令列工具執行 DAC 作業。  
   
-## DAC 作業  
+## <a name="dac-operations"></a>DAC 作業  
  DAC 支援下列作業：  
   
 -   **EXTRACT** – 使用者可將資料庫擷取到 DACPAC。  
@@ -95,7 +99,7 @@ SQL Server Data Tools 還支援 Local DB，以進行未連接的用戶端資料�
   
 -   **UPGRADE** – 可以使用 DACPAC 來升級資料庫。 即使以前未註冊為資料層應用程式的資料庫也支援升級，但因為升級，資料庫會隱含註冊。  
   
-## BACPAC  
+## <a name="bacpac"></a>BACPAC  
  BACPAC 是副檔名為 .bacpac 的 Windows 檔案，可封裝資料庫的結構描述和資料。 BACPAC 的主要使用案例是將資料庫從某個伺服器移至另一個伺服器 (或[將資料庫從本機伺服器移轉至雲端](https://azure.microsoft.com/documentation/articles/sql-database-cloud-migrate/))，以及以開放式格式封存現有資料庫。  
   
  類似於 DACPAC，BACPAC 檔案格式是開放式；BACPAC 的結構描述內容與 DACPAC 的結構描述內容相同。 BACPAC 中的資料是以 JSON 格式儲存。  
@@ -110,10 +114,10 @@ SQL Server Data Tools 還支援 Local DB，以進行未連接的用戶端資料�
   
  下列資料庫管理工具支援這兩個功能：SQL Server Management Studio、Azure 入口網站和 DACFx API。  
   
-## Permissions  
+## <a name="permissions"></a>Permissions  
  您必須是 **dbmanager** 角色的成員或被指派 **CREATE DATABASE** 權限，才能建立資料庫，包括部署 DAC 封裝來建立資料庫。 您必須是 **dbmanager** 角色的成員或被指派 **DROP DATABASE** 權限，才能卸除資料庫。  
   
-## 資料層應用程式工作  
+## <a name="data-tier-application-tasks"></a>資料層應用程式工作  
   
 |工作|主題連結|  
 |----------------------|-----------|  
@@ -125,11 +129,12 @@ SQL Server Data Tools 還支援 Local DB，以進行未連接的用戶端資料�
 |描述如何使用 DAC 封存檔案 (.bacpac) 執行 DAC 的邏輯還原，或將 DAC 移轉至另一個 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 或 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 的執行個體。|[匯入 BACPAC 檔案以建立新的使用者資料庫](../../relational-databases/data-tier-applications/import-a-bacpac-file-to-create-a-new-user-database.md)|  
 |描述如何匯入 BACPAC 檔案，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體內建立新的使用者資料庫。|[從資料庫中擷取 DAC](../../relational-databases/data-tier-applications/extract-a-dac-from-a-database.md)|  
 |描述如何將現有的資料庫升級為 DAC 執行個體。 DAC 定義會建立並儲存在系統資料庫中。|[將資料庫註冊為 DAC](../../relational-databases/data-tier-applications/register-a-database-as-a-dac.md)|  
-|描述如何先檢閱 DAC 封裝的內容以及 DAC 升級要執行的動作，再於實際執行系統中使用該封裝。|[驗證 DAC 封裝](../../relational-databases/data-tier-applications/validate-a-dac-package.md)|  
-|描述如何先將 DAC 封裝的內容放入資料庫管理員可以檢閱 DAC 作用的資料夾，再將它部署至實際伺服器。|[解除封裝 DAC 封裝](../../relational-databases/data-tier-applications/unpack-a-dac-package.md)|  
-|描述如何使用精靈來部署現有的資料庫。 精靈會使用 DAC 來執行這種部署。|[使用 DAC 來部署資料庫](../../relational-databases/data-tier-applications/deploy-a-database-by-using-a-dac.md)|  
+|描述如何先檢閱 DAC 封裝的內容以及 DAC 升級要執行的動作，再於實際執行系統中使用該封裝。|[驗證 DAC 套件](../../relational-databases/data-tier-applications/validate-a-dac-package.md)|  
+|描述如何先將 DAC 封裝的內容放入資料庫管理員可以檢閱 DAC 作用的資料夾，再將它部署至實際伺服器。|[解除封裝 DAC 套件](../../relational-databases/data-tier-applications/unpack-a-dac-package.md)|  
+|描述如何使用精靈來部署現有的資料庫。 精靈會使用 DAC 來執行這種部署。|[使用 DAC 部署資料庫](../../relational-databases/data-tier-applications/deploy-a-database-by-using-a-dac.md)|  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [SQL Server 物件與版本的 DAC 支援](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)  
   
   
+

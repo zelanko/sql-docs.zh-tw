@@ -1,38 +1,42 @@
 ---
 title: "語意搜尋 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-search"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "語意搜尋 [SQL Server]"
-  - "語意搜尋 [SQL Server], 概觀"
-  - "統計語意搜尋 [SQL Server]"
-  - "統計語意搜尋 [SQL Server], 概觀"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-search
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- semantic search [SQL Server]
+- semantic search [SQL Server], overview
+- statistical semantic search [SQL Server]
+- statistical semantic search [SQL Server], overview
 ms.assetid: cd8faa9d-07db-420d-93f4-a2ea7c974b97
 caps.latest.revision: 20
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: ca60c4ada6bd908d5401784db74a9b8b0c93396b
+ms.lasthandoff: 04/11/2017
+
 ---
-# 語意搜尋 (SQL Server)
-  統計語意搜尋會擷取統計上相關的「主要片語」並建立其索引，藉以深入解析儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中的非結構化文件。 然後，它也會使用這些主要片語來識別「相似或相關文件」，並建立其索引。  
+# <a name="semantic-search-sql-server"></a>語意搜尋 (SQL Server)
+統計語意搜尋會擷取統計上相關的「主要片語」並建立其索引，藉以深入解析儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中的非結構化文件。 接著使用這些主要片語來識別「相似或相關文件」，並建立其索引。  
   
- 使用三個 Transact-SQL 資料列集函數，以結構化資料形式擷取結果，就可以查詢這些語意索引。  
+##  <a name="whatcanido"></a> 可以使用語意搜尋進行哪些作業？  
+ 雖然語意搜尋是以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中現有的全文檢索搜尋功能為建立基礎，但是可以實現超過關鍵字搜尋的新案例。 全文檢索搜尋可讓您查詢文件中的「字詞」，而語意搜尋則可讓您查詢文件的「意義」。 目前可能的方案包含自動標記擷取、相關內容探索，以及相似內容的階層式導覽。 例如，您可以查詢主要片語的索引來建立組織或文件主體的分類。 或者，您可以查詢文件相似度索引來識別符合工作描述的履歷表。  
   
-##  <a name="whatcanido"></a> 我可以使用語意搜尋進行哪些作業？  
- 雖然語意搜尋是以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中現有的全文檢索搜尋功能為建立基礎，但是可以實現超過關鍵字搜尋的新案例。 全文檢索搜尋可讓您查詢文件中的「字詞」，而語意搜尋則可讓您查詢文件的「意義」。 目前可能的方案包含自動標記擷取、相關內容探索，以及相似內容的階層式導覽。 例如，您可以查詢主要片語的索引來建立組織或文件主體的分類。 或者，您可以查詢文件相似度索引來識別符合工作描述的履歷表。  
+ 下列各範例示範語意搜尋的功能。 同時，這些範例示範用來查詢語意索引並以結構化資料形式擷取結果的三個 Transact-SQL 資料列集函式。  
   
- 下列各範例示範語意搜尋的功能。  
-  
-###  <a name="find1"></a> 在文件中尋找主要片語  
- 下列查詢會取得範例文件中已識別的主要片語。 它會依照排列每個主要片語之統計重要性次序的分數，以遞減順序呈現結果。 此查詢會呼叫 [semantickeyphrasetable &#40;Transact-SQL&#41;](../../relational-databases/system-functions/semantickeyphrasetable-transact-sql.md) 函數。  
+###  <a name="find1"></a> Find the key phrases in a document  
+ 下列查詢會取得範例文件中已識別的主要片語。 它會依照排列每個主要片語之統計重要性次序的分數，以遞減順序呈現結果。
+ 
+ 此查詢會呼叫 [semantickeyphrasetable](../../relational-databases/system-functions/semantickeyphrasetable-transact-sql.md) 函式。  
   
 ```tsql  
 SET @Title = 'Sample Document.docx'  
@@ -47,10 +51,10 @@ SELECT @Title AS Title, keyphrase, score
   
 ```  
   
- [本主題內容](#TOP)  
-  
-###  <a name="find2"></a> 尋找相似或相關的文件  
- 下列查詢會取得識別為與範例文件相似或相關的文件。 它會依照排列這兩份文件之相似度次序的分數，以遞減順序呈現結果。 此查詢會呼叫 [semanticsimilaritytable &#40;Transact-SQL&#41;](../../relational-databases/system-functions/semanticsimilaritytable-transact-sql.md) 函數。  
+###  <a name="find2"></a> Find similar or related documents  
+ 下列查詢會取得識別為與範例文件相似或相關的文件。 它會依照排列這兩份文件之相似度次序的分數，以遞減順序呈現結果。
+ 
+ 此查詢會呼叫 [semanticsimilaritytable](../../relational-databases/system-functions/semanticsimilaritytable-transact-sql.md) 函式。  
   
 ```vb  
 SET @Title = 'Sample Document.docx'  
@@ -67,10 +71,10 @@ SELECT @Title AS SourceTitle, DocumentTitle AS MatchedTitle,
   
 ```  
   
- [本主題內容](#TOP)  
-  
-###  <a name="find3"></a> 尋找讓文件相似或相關的主要片語  
- 下列查詢會取得讓兩份範例文件相似或相關的主要片語。 它會依照排列每個主要片語之加權次序的分數，以遞減順序呈現結果。 此查詢會呼叫 [semanticsimilaritydetailstable &#40;Transact-SQL&#41;](../../relational-databases/system-functions/semanticsimilaritydetailstable-transact-sql.md) 函數。  
+###  <a name="find3"></a> Find the key phrases that make documents similar or related  
+ 下列查詢會取得讓兩份範例文件相似或相關的主要片語。 它會依照排列每個主要片語之加權次序的分數，以遞減順序呈現結果。
+ 
+ 此查詢會呼叫 [semanticsimilaritydetailstable](../../relational-databases/system-functions/semanticsimilaritydetailstable-transact-sql.md) 函式。  
   
 ```tsql  
 SET @SourceTitle = 'first.docx'  
@@ -86,18 +90,14 @@ SELECT @SourceTitle AS SourceTitle, @MatchedTitle AS MatchedTitle, keyphrase, sc
   
 ```  
   
- [本主題內容](#TOP)  
-  
 ##  <a name="store"></a> 在 SQL Server 中儲存文件  
  在您使用語意搜尋索引文件前，必須先將文件儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中。  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中的 FileTable 功能可讓非結構化檔案和文件成為關聯式資料庫的首要成員。 因此，資料庫開發人員可以在 Transact-SQL 集合式作業中，操作文件以及結構化資料。  
+ SQL Server 中的 FileTable 功能可讓非結構化檔案和文件成為關聯式資料庫的首要成員。 因此，資料庫開發人員可以在 Transact-SQL 集合式作業中，操作文件以及結構化資料。  
   
- 如需有關 FileTable 功能的詳細資訊，請參閱 [FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md)。 如需有關 FILESTREAM 功能 (這是將文件儲存至資料庫的另一個選擇) 的詳細資訊，請參閱 [FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md)。  
+ 如需 FileTable 功能的詳細資訊，請參閱 [FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md)。 如需 FILESTREAM 功能 (這是將文件儲存至資料庫的另一個選擇) 的詳細資訊，請參閱 [FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md)。  
   
- [本主題內容](#TOP)  
-  
-##  <a name="reltasks"></a> 相關工作  
+##  <a name="reltasks"></a> Related tasks  
  [安裝及設定語意搜尋](../../relational-databases/search/install-and-configure-semantic-search.md)  
  描述統計語意搜尋的必要元件以及如何安裝或檢查這些必要元件。  
   
@@ -113,7 +113,7 @@ SELECT @SourceTitle AS SourceTitle, @MatchedTitle AS MatchedTitle, keyphrase, sc
  [管理及監視語意搜尋](../../relational-databases/search/manage-and-monitor-semantic-search.md)  
  描述語意索引的程序以及與監視及管理索引相關的工作。  
   
-##  <a name="relcontent"></a> 相關內容  
+##  <a name="relcontent"></a> Related content  
  [語意搜尋 DDL、函數、預存程序及檢視](../../relational-databases/search/semantic-search-ddl-functions-stored-procedures-and-views.md)  
  列出加入或變更以支援統計語意搜尋的 Transact-SQL 陳述式和 SQL Server 資料庫物件。  
   

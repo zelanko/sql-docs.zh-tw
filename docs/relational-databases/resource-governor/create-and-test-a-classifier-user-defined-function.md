@@ -1,28 +1,32 @@
 ---
-title: "建立和測試分類使用者定義函數 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "資源管理員, 分類函數建立"
-  - "分類函數 [SQL Server], 測試"
-  - "分類函數 [SQL Server], 建立"
-  - "資源管理員, 分類函數測試"
+title: "建立和測試分類使用者定義函式 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Resource Governor, classifier function create
+- classifier function [SQL Server], test
+- classifier function [SQL Server], create
+- Resource Governor, classifier function test
 ms.assetid: 7866b3c9-385b-40c6-aca5-32d3337032be
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 097b7e93a82b8f1cc20767c57788eebe8162729a
+ms.lasthandoff: 04/11/2017
+
 ---
-# 建立和測試分類使用者定義函數
-  本主題說明如何建立和測試分類使用者定義函數 (UDF)。 這些步驟將包含在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 查詢編輯器中執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。  
+# <a name="create-and-test-a-classifier-user-defined-function"></a>建立和測試分類使用者定義函數
+  本主題說明如何建立和測試分類使用者定義函數 (UDF)。 這些步驟將包含在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢編輯器中執行 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 陳述式。  
   
  下列程序所示的範例會說明建立相當複雜之分類使用者定義函數的可能性。  
   
@@ -39,7 +43,7 @@ caps.handback.revision: 25
   
  分類函數會延長登入時間。 任何過度複雜的函數都可能會導致登入逾時或降低快速連接的速度。  
   
-### 建立分類使用者定義函數  
+### <a name="to-create-the-classifier-user-defined-function"></a>建立分類使用者定義函數  
   
 1.  建立並設定新的資源集區和工作負載群組。 將每個工作負載群組指派給適當的資源集區。  
   
@@ -150,7 +154,7 @@ caps.handback.revision: 25
     GO  
     ```  
   
-### 確認資源集區、工作負載群組和分類使用者定義函數  
+### <a name="to-verify-the-resource-pools-workload-groups-and-the-classifier-user-defined-function"></a>確認資源集區、工作負載群組和分類使用者定義函數  
   
 1.  使用下列查詢來取得資源集區和工作負載群組組態。  
   
@@ -228,7 +232,7 @@ caps.handback.revision: 25
     GO  
     ```  
   
-### 在分類函數中使用查閱資料表的最佳做法  
+### <a name="best-practices-for-using-lookup-tables-in-a-classifier-function"></a>在分類函數中使用查閱資料表的最佳做法  
   
 1.  除非絕對必要，否則不要使用查閱資料表。 如果您需要使用查閱資料表，它可能以硬編碼的方式將本身寫入函數中；不過它需要與分類函數的複雜度和動態變更相互平衡。  
   
@@ -246,9 +250,9 @@ caps.handback.revision: 25
   
 3.  避免在查閱資料表上進行封鎖。  
   
-    1.  使用 `NOLOCK` 提示避免鎖定，或是在函數中使用最大值 1000 毫秒的 `SET LOCK_TIMEOUT`。  
+    1.  使用 `NOLOCK` 提示避免鎖定，或是在函數中使用最大值 1000 毫秒的 `SET LOCK_TIMEOUT` 。  
   
-    2.  資料表必須在 master 資料庫中  (master 資料庫是在用戶端電腦嘗試連線時，唯一保證可以復原的資料庫)。  
+    2.  資料表必須在 master 資料庫中 (master 資料庫是在用戶端電腦嘗試連線時，唯一保證可以復原的資料庫)。  
   
     3.  務必以結構描述完整限定資料庫名稱。 資料庫名稱並非必要，因為一定要是 master 資料庫。  
   
@@ -261,7 +265,7 @@ caps.handback.revision: 25
         > [!WARNING]  
         >  以下是我們建議的最佳做法。 如果有問題導致無法遵循下列最佳做法，建議您連絡 Microsoft 支援部門，以便主動避免未來發生任何問題。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [資源管理員](../../relational-databases/resource-governor/resource-governor.md)   
  [啟用資源管理員](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [資源管理員資源集區](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   

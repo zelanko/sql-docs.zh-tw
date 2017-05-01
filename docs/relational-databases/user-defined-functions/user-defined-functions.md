@@ -1,28 +1,32 @@
 ---
-title: "使用者定義的函式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/05/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-udf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "使用者定義函數 [SQL Server], 元件"
-  - "user-defined functions [SQL Server], about user-defined functions"
+title: "使用者定義的函式 | Microsoft 文件"
+ms.custom: 
+ms.date: 08/05/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-udf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- user-defined functions [SQL Server], components
+- user-defined functions [SQL Server], about user-defined functions
 ms.assetid: d7ddafab-f5a6-44b0-81d5-ba96425aada4
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: f4c8c44b4c07b26676fd424acb36ea7ccce19df3
+ms.lasthandoff: 04/11/2017
+
 ---
-# 使用者定義的函式
+# <a name="user-defined-functions"></a>使用者定義的函式
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用者定義函數與程式語言函數類似，是可接受參數、執行動作 (如複雜計算) 以及傳回該動作所得值的常式。 傳回值可以是單一純量值或結果集。  
    
-##  <a name="Benefits"></a> 使用者自訂函數  
+##  <a name="Benefits"></a> 使用者定義的函式  
 為什麼要使用？ 
   
 -   可進行模組化的程式撰寫。  
@@ -33,7 +37,7 @@ caps.handback.revision: 23
   
      如同預存程序，[!INCLUDE[tsql](../../includes/tsql-md.md)]  使用者自訂函數可藉由針對重複執行來快取以及重複使用計畫，來降低 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼的編譯成本。 這表示，每次使用時，使用者自訂函數不需要重新剖析和最佳化，所以執行時間可以更快。  
   
-     與 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函數相比，CLR 函數在計算工作、字串處理與商務邏輯等方面提供更顯著的效能優勢。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函數更適用於經常需要存取資料的邏輯。  
+     與 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函數相比，CLR 函數在計算工作、字串處理與商務邏輯等方面提供更顯著的效能優勢。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函數更適用於經常需要存取資料的作業。  
   
 -   可降低網路傳輸量。  
   
@@ -41,19 +45,19 @@ caps.handback.revision: 23
   
 > **注意**：查詢中的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 使用者定義函數只能在單一執行緒上執行 (序列執行計畫)。  
   
-##  <a name="FunctionTypes"></a> 函數類型  
-**純量函數**  
+##  <a name="FunctionTypes"></a> 函式類型  
+**純量函式**  
  使用者定義純量函數會傳回在 RETURNS 子句中所定義之類型的單一資料值。 內嵌純量函數並沒有函數主體；純量值為單一陳述式的結果。 若是多重陳述式純量函數，則定義於 BEGIN...END 區塊中的函數主體，會包含傳回單一值的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式系列。 傳回類型可以是 **text**、 **ntext**、 **image**、 **cursor**和 **timestamp**以外的任何資料類型。 
  **[範例。](https://msdn.microsoft.com/library/bb386973(v=vs.110).aspx)**
   
 **資料表值函式**  
  使用者定義的資料表值函數會傳回 **table** 資料類型。 若是內嵌資料表值函式，則不會有函式主體；資料表會是單一 SELECT 陳述式的結果集。 **[範例。](https://msdn.microsoft.com/library/bb386954(v=vs.110).aspx)**
   
-**系統函數**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供許多可用以執行各種作業的系統函數。 這些函數不能修改。 如需詳細資訊，請參閱[內建函數 &#40;Transact-SQL&#41;](../Topic/Built-in%20Functions%20\(Transact-SQL\).md)、[系統預存函式 &#40;Transact-SQL&#41;](../Topic/System%20Stored%20Functions%20\(Transact-SQL\).md)，和[動態管理檢視與函數 &#40;Transact-SQL&#41;](../Topic/Dynamic%20Management%20Views%20and%20Functions%20\(Transact-SQL\).md)。  
+**系統函式**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供許多可用以執行各種作業的系統函數。 這些函數不能修改。 如需詳細資訊，請參閱[內建函數 &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)、[系統預存函式 &#40;Transact-SQL&#41;](~/relational-databases/system-functions/system-functions-for-transact-sql.md)，和[動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)。  
   
 ##  <a name="Guidelines"></a> 指導方針  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] 造成陳述式取消並且以模組中下一個陳述式繼續 (例如觸發程序或預存程序) 的錯誤會在函數內部以不同方式處理。 在函數中，這樣的錯誤會造成函數停止執行。 進而導致叫用該函數的陳述式取消。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] 造成陳述式取消並且以模組中下一個陳述式繼續 (例如觸發程序或預存程序) 的錯誤會在函式內部以不同方式處理。 在函數中，這樣的錯誤會造成函數停止執行。 進而導致叫用該函數的陳述式取消。  
   
  BEGIN...END 區塊中的陳述式不能有任何副作用。 函數副作用是在函數的範圍外對資源狀態所做的任何永久變更，例如修改資料庫資料表。 在函數中陳述式只能變更函數的區域性物件，例如本機資料指標或變數。 在函數中不得執行的動作包括修改資料庫資料表、對函數的非本機資料指標進行運算、傳送電子郵件、試圖修改目錄，以及產生傳回給使用者的結果集。  
   
@@ -61,7 +65,7 @@ caps.handback.revision: 23
   
  查詢中指定的函數真正執行的次數，會因最佳化工具建立的執行計畫而有不同。 WHERE 子句中的子查詢所叫用的函數就是一個例子。 子查詢及其函數的執行次數，會因最佳化工具選擇的存取路徑而有不同。  
   
-##  <a name="ValidStatements"></a> 函數中有效的陳述式  
+##  <a name="ValidStatements"></a> 函式中有效的陳述式  
  函數中有效的陳述式類型包括：  
   
 -   DECLARE 陳述式，可用來定義對函數而言為本機的資料變數與資料指標。  
@@ -78,7 +82,7 @@ caps.handback.revision: 23
   
 -   呼叫擴充預存程序的 EXECUTE 陳述式。  
   
-### 內建系統函數  
+### <a name="built-in-system-functions"></a>內建系統函數  
  下列非決定性內建函數可用於 Transact-SQL 使用者定義函數中。  
   
 |||  
@@ -102,7 +106,7 @@ caps.handback.revision: 23
   
  如需決定性與非決定性內建系統函數的清單，請參閱[決定性與非決定性函數](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。  
   
-##  <a name="SchemaBound"></a> 結構描述繫結的函數  
+##  <a name="SchemaBound"></a> 結構描述繫結的函式  
  CREATE FUNCTION 支援 SCHEMABINDING 子句，它可將函數與它參考的任何物件之結構描述繫結在一起，例如資料表、檢視及其他使用者自訂函數。 嘗試更改或卸除任何被結構描述繫結函數所參考的物件將會失敗。  
   
  要在 [CREATE FUNCTION](https://msdn.microsoft.com/library/ms186755.aspx) 中指定 SCHEMABINDING，必須先滿足下列條件：  
@@ -123,13 +127,17 @@ caps.handback.revision: 23
 |||  
 |-|-|  
 |**工作描述**|**主題**|  
-|描述如何建立 Transact-SQL 使用者定義函數。|[建立使用者定義函式 &#40;Database Engine&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)|  
-|描述如何建立 CLR 函數。|[建立 CLR 函數](../../relational-databases/user-defined-functions/create-clr-functions.md)|  
+|描述如何建立 Transact-SQL 使用者定義函數。|[建立使用者定義函式 &#40;資料庫引擎&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)|  
+|描述如何建立 CLR 函數。|[建立 CLR 函式](../../relational-databases/user-defined-functions/create-clr-functions.md)|  
 |描述如何建立使用者定義的彙總函式。|[建立使用者定義彙總](../../relational-databases/user-defined-functions/create-user-defined-aggregates.md)|  
-|描述如何修改 Transact-SQL 使用者定義函數。|[修改使用者定義函數](../../relational-databases/user-defined-functions/modify-user-defined-functions.md)|  
-|描述如何刪除使用者定義函數。|[刪除使用者定義函數](../../relational-databases/user-defined-functions/delete-user-defined-functions.md)|  
-|描述如何執行使用者定義函數。|[執行使用者定義函數](../../relational-databases/user-defined-functions/execute-user-defined-functions.md)|  
-|描述如何重新命名使用者定義函數。|[重新命名使用者定義函數](../../relational-databases/user-defined-functions/rename-user-defined-functions.md)|  
-|描述如何檢視使用者定義函數的定義。|[檢視使用者定義函數](../../relational-databases/user-defined-functions/view-user-defined-functions.md)|  
+|描述如何修改 Transact-SQL 使用者定義函數。|[修改使用者定義函式](../../relational-databases/user-defined-functions/modify-user-defined-functions.md)|  
+|描述如何刪除使用者定義函數。|[刪除使用者定義函式](../../relational-databases/user-defined-functions/delete-user-defined-functions.md)|  
+|描述如何執行使用者定義函數。|[執行使用者定義函式](../../relational-databases/user-defined-functions/execute-user-defined-functions.md)|  
+|描述如何重新命名使用者定義函數。|[重新命名使用者定義函式](../../relational-databases/user-defined-functions/rename-user-defined-functions.md)|  
+|描述如何檢視使用者定義函數的定義。|[檢視使用者定義函式](../../relational-databases/user-defined-functions/view-user-defined-functions.md)|  
   
   
+
+
+
+

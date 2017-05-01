@@ -1,32 +1,36 @@
 ---
 title: "開始使用 PolyBase | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "10/25/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-polybase"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-helpviewer_keywords: 
-  - "PolyBase"
-  - "PolyBase, 開始使用"
-  - "Hadoop 匯入"
-  - "Hadoop 匯出"
-  - "Azure Blob 儲存體匯入"
-  - "Azure Blob 儲存體匯出"
-  - "Hadoop 匯入, 開始使用 PolyBase"
-  - "Hadoop 匯出, 開始使用 PolyBase"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 10/25/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-polybase
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+helpviewer_keywords:
+- PolyBase
+- PolyBase, getting started
+- Hadoop import
+- Hadoop export
+- Azure blob storage import
+- Azure blob storage export
+- Hadoop import, PolyBase getting started
+- Hadoop export, Polybase getting started
 ms.assetid: c71ddc50-b4c7-416c-9789-264671bd9ecb
 caps.latest.revision: 78
-author: "barbkess"
-ms.author: "barbkess"
-manager: "jhubbard"
-caps.handback.revision: 73
+author: barbkess
+ms.author: barbkess
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 13d43201a92c729dd3405d2d436942316ebad0e4
+ms.lasthandoff: 04/11/2017
+
 ---
-# 開始使用 PolyBase
+# <a name="get-started-with-polybase"></a>開始使用 PolyBase
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   本主題包含執行 PolyBase 的基本知識。 如需詳細資訊，請參閱 [PolyBase 指南](../../relational-databases/polybase/polybase-guide.md)。  
@@ -42,29 +46,31 @@ caps.handback.revision: 73
 -   使用 PolyBase 物件的查詢範例  
   
 ## <a name="prerequisites"></a>必要條件  
- [SQL Server (64 位元)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) 的執行個體。  
+ [SQL Server (64 位元)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)的執行個體。  
   
 -   Microsoft .NET Framework 4.5。  
   
--   Oracle Java SE RunTime Environment (JRE) 版本 7.51 或更新版本 (64 位元)。 ([JRE](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) 或 [Server JRE](http://www.oracle.com/technetwork/java/javase/downloads/server-jre8-downloads-2133154.html) 都可)。 前往 [Java SE Downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html) (Java SE 下載)。 如果 JRE 不存在，安裝程式將會失敗。   
+-   Oracle Java SE RunTime Environment (JRE) 版本 7.51 或更新版本 (64 位元)。 ( [JRE](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) 或 [Server JRE](http://www.oracle.com/technetwork/java/javase/downloads/server-jre8-downloads-2133154.html) 都可)。 前往 [Java SE Downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html)(Java SE 下載)。 如果 JRE 不存在，安裝程式將會失敗。   
   
 -   最小記憶體︰4 GB  
   
 -   最小硬碟空間︰2 GB  
   
--   必須啟用 TCP/IP 連線。 (請參閱[啟用或停用伺服器網路通訊協定](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)。)  
+-   必須啟用 TCP/IP 連線。 (請參閱 [啟用或停用伺服器網路通訊協定](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)。)  
   
  外部資料來源，下列項目之一：  
   
--   Hadoop 叢集。 如需支援的版本，請參閱[設定 PolyBase](#supported)。  
-  
+-   Hadoop 叢集。 如需支援的版本，請參閱 [設定 PolyBase](#supported)。  
+
 -   Azure BLOB 儲存體。 
+
+-   如果您要針對 Hadoop 使用計算下推功能，則需要確定目標 Hadoop 叢集具有 HDFS 的核心元件：啟用 Jobhistory 伺服器的 Yarn/MapReduce。 PolyBase 透過 MapReduce 來提交下推查詢，並從 JobHistory Server 提取狀態。 如果沒有其中一個元件，查詢將會失敗，並出現錯誤訊息。 
 
 > [!NOTE]
 > HDInsight 叢集會使用 Azure Blob 儲存體作為永久儲存用的檔案系統。 您可以使用 PolyBase 來查詢 HDInsight 叢集所管理的檔案。 若要這樣做，請建立外部資料來源以參考設定為 HDInsight 叢集儲存體的 blob。 
   
 ## <a name="install-polybase"></a>安裝 PolyBase  
- 在安裝 SQL Server 時安裝 PolyBase。 如需詳細資訊，請參閱 [PolyBase installation](../../relational-databases/polybase/polybase-installation.md) (安裝 PolyBase)。  
+ 如果您尚未安裝 PolyBase，請參閱 [PolyBase 安裝](../../relational-databases/polybase/polybase-installation.md)。  
   
 ### <a name="how-to-confirm-installation"></a>如何確認安裝  
  安裝之後，執行下列命令來確認已成功安裝 PolyBase。 如果已安裝 PolyBase 會傳回 1，否則會傳回 0。  
@@ -73,7 +79,7 @@ caps.handback.revision: 73
 SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;  
 ```  
   
-##  <a name="a-namesupporteda-configure-polybase"></a><a name="supported"></a> 設定 PolyBase  
+##  <a name="supported"></a> Configure PolyBase  
  安裝之後，您必須使用 Hadoop 版本或 Azure Blob 儲存體來設定 SQL Server。 PolyBase 支援兩個 Hadoop 提供者：Hortonwork 的 Data Platform (HDP) 和 Cloudera 的 CDH。 您可以在 Windows 或 Linux 電腦上執行 Hortonworks ，而其同時也是組態的一部分。  支援的外部資料來源包括︰  
   
 -   Linux/Windows Server 上的 Hortonworks HDP 1.3  
@@ -84,13 +90,16 @@ SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;
   
 -   Linux 上的 Cloudera CDH 4.3  
   
--   Linux 上的 Cloudera CDH 5.1 – 5.5、5.9  
+-   Cloudera CDH 5.1 – Linux 上的 5.5、5.9、5.10  
   
 -   Azure Blob 儲存體  
   
+>  [!NOTE]
+> Azure SQL Data Warehouse 中唯一支援 Azure Data Lake Store 連線。
+  
 ### <a name="external-data-source-configuration"></a>外部資料來源設定  
   
-1.  執行 [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) ‘hadoop connectivity’ 並設定適當的值。  若要尋找值，請參閱 [PolyBase Connectivity Configuration &#40;Transact-SQL&#41;](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md) (PolyBase 連線組態 &#40;Transact-SQL&#41;)。  
+1.  執行 [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) ‘hadoop connectivity’ 並設定適當的值。 根據預設，Hadoop 連接設為 7。 若要尋找值，請參閱 [PolyBase Connectivity Configuration &#40;Transact-SQL&#41;](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md) (PolyBase 連線組態 &#40;Transact-SQL&#41;)。  
   
     ```tsql  
     -- Values map to various external data sources.  
@@ -108,7 +117,7 @@ SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;
   
     -   SQL Server PolyBase Engine  
   
- ![stop and start PolyBase services in services.msc](../../relational-databases/polybase/media/polybase-stop-start.png "stop and start PolyBase services in services.msc")  
+ ![在 services.msc 中停止和啟動 PolyBase 服務](../../relational-databases/polybase/media/polybase-stop-start.png "在 services.msc 中停止和啟動 PolyBase 服務")  
   
 ### <a name="pushdown-configuration"></a>下推設定  
  為改善查詢效能，請將計算下推到 Hadoop 叢集︰  
@@ -125,6 +134,9 @@ SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;
   
 3.  在 SQL Server 電腦上，尋找 **yarn.site.xml** 檔案中的 **yarn.application.classpath** 屬性。 將 Hadoop 電腦的值貼到 value 元素中。  
   
+4. 針對所有 CDH 5.X 版本，您需要將 mapreduce.application.classpath 組態參數新增至 yarn.site.xml 檔案結尾或 mapred-site.xml 檔案。 HortonWorks 會將這些組態包含在 yarn.application.classpath 組態內。 如需範例，請參閱 [PolyBase 組態](../../relational-databases/polybase/polybase-configuration.md)。
+
+ 
 ## <a name="scale-out-polybase"></a>相應放大 PolyBase  
  PolyBase 群組功能可讓您建立 SQL Server 執行個體的叢集，利用向外延展方式處理來自外部資料來源的大型資料集，以提高查詢效能。  
   
@@ -132,7 +144,7 @@ SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;
   
 2.  選取一個 SQL Server 作為前端節點。  
   
-3.  執行 [sp_polybase_join_group](../Topic/sp_polybase_join_group.md) 將其他執行個體加入作為計算節點。  
+3.  執行 [sp_polybase_join_group](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-join-group.md)將其他執行個體加入作為計算節點。  
   
     ```  
     -- Enter head node details:   
@@ -143,7 +155,7 @@ SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;
   
 4.  重新啟動計算節點上的 PolyBase 資料移動服務。  
   
- 如需詳細資訊，請參閱 [PolyBase scale-out groups](../../relational-databases/polybase/polybase-scale-out-groups.md) (PolyBase 向外延展群組)。  
+ 如需詳細資訊，請參閱 [PolyBase scale-out groups](../../relational-databases/polybase/polybase-scale-out-groups.md)(PolyBase 向外延展群組)。  
   
 ## <a name="create-t-sql-objects"></a>建立 T-SQL 物件  
  根據外部資料來源建立物件，Hadoop 或 Azure 儲存體。  
@@ -337,22 +349,23 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
 ## <a name="managing-polybase-objects-in-ssms"></a>在 SSMS 中管理 PolyBase 物件  
  在 SSMS 中，外部資料表會顯示在個別的資料夾 [外部資料表] 中。 外部資料來源和外部檔案格式會在 [外部資源] 下方的子資料夾中。  
   
- ![PolyBase objects in SSMS](../../relational-databases/polybase/media/polybase-management.png "PolyBase objects in SSMS")  
+ ![SSMS 中的 PolyBase 物件](../../relational-databases/polybase/media/polybase-management.png "SSMS 中的 PolyBase 物件")  
   
 ## <a name="troubleshooting"></a>疑難排解  
- 使用 DMV 疑難排解效能和查詢。 如需詳細資訊，請參閱 [PolyBase troubleshooting](../../relational-databases/polybase/polybase-troubleshooting.md) (疑難排解 PolyBase)。  
+ 使用 DMV 疑難排解效能和查詢。 如需詳細資訊，請參閱 [PolyBase troubleshooting](../../relational-databases/polybase/polybase-troubleshooting.md)(疑難排解 PolyBase)。  
   
  從 SQL Server 2016 RC1 升級至 RC2 或 RC3 之後，查詢可能會失敗。 如需詳細資訊及解決方式，請參閱 [SQL Server 2016 版本資訊](../../sql-server/sql-server-2016-release-notes.md) ，並搜尋 "PolyBase"。  
   
 ## <a name="next-steps"></a>後續的步驟  
- 若要了解向外延展功能，請參閱 [PolyBase scale-out groups](../../relational-databases/polybase/polybase-scale-out-groups.md) (PolyBase 向外延展群組)。  若要監視 PolyBase，請參閱 [PolyBase troubleshooting](../../relational-databases/polybase/polybase-troubleshooting.md) (疑難排解 PolyBase)。 若要疑難排解 PolyBase 效能，請參閱 [PolyBase troubleshooting with dynamic management views](../Topic/PolyBase%20troubleshooting%20with%20dynamic%20management%20views.md)。  
+ 若要了解向外延展功能，請參閱 [PolyBase scale-out groups](../../relational-databases/polybase/polybase-scale-out-groups.md)(PolyBase 向外延展群組)。  若要監視 PolyBase，請參閱 [PolyBase troubleshooting](../../relational-databases/polybase/polybase-troubleshooting.md)(疑難排解 PolyBase)。 若要疑難排解 PolyBase 效能，請參閱 [PolyBase troubleshooting with dynamic management views](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)。  
   
 ## <a name="see-also"></a>另請參閱  
  [PolyBase 指南](../../relational-databases/polybase/polybase-guide.md)   
  [PolyBase 向外延展群組](../../relational-databases/polybase/polybase-scale-out-groups.md)   
- [PolyBase 預存程序](../Topic/PolyBase%20stored%20procedures.md)   
+ [PolyBase 預存程序](http://msdn.microsoft.com/library/a522b303-bd1b-410b-92d1-29c950a15ede)   
  [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)   
  [CREATE EXTERNAL FILE FORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md)   
  [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)  
   
   
+

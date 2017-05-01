@@ -1,35 +1,39 @@
 ---
 title: "監視記憶體使用量 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "微調資料庫 [SQL Server], 記憶體"
-  - "監視伺服器效能 [SQL Server], 記憶體使用量"
-  - "隔離記憶體 [SQL Server]"
-  - "分頁率 [SQL Server]"
-  - "記憶體 [SQL Server], 監視使用量"
-  - "監視 [SQL Server], 記憶體使用量"
-  - "低記憶體情形"
-  - "資料庫監視 [SQL Server], 記憶體使用量"
-  - "可用記憶體 [SQL Server]"
-  - "分頁錯誤 [SQL Server]"
-  - "監視效能 [SQL Server], 記憶體使用量"
-  - "伺服器效能 [SQL Server], 記憶體"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- tuning databases [SQL Server], memory
+- monitoring server performance [SQL Server], memory usage
+- isolating memory [SQL Server]
+- paging rate [SQL Server]
+- memory [SQL Server], monitoring usage
+- monitoring [SQL Server], memory usage
+- low-memory conditions
+- database monitoring [SQL Server], memory usage
+- available memory [SQL Server]
+- page faults [SQL Server]
+- monitoring performance [SQL Server], memory usage
+- server performance [SQL Server], memory
 ms.assetid: 1aee3933-a11c-4b87-91b7-32f5ea38c87f
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b69c5082567467771189cb7f9e781d850680bd34
+ms.lasthandoff: 04/11/2017
+
 ---
-# 監視記憶體使用量
+# <a name="monitor-memory-usage"></a>監視記憶體使用量
   定期監視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，以確認記憶體使用量是在正常範圍內。  
   
  若要監視低記憶體的狀況，請使用以下物件計數器：  
@@ -42,12 +46,12 @@ caps.handback.revision: 26
   
  若 **Available Bytes** 計數器的數值偏低，代表電腦整體地缺乏記憶體，或有某個應用程式沒有釋出記憶體。 **Pages/sec** 計數器數值過高可能代表過度分頁。 監視 **Memory: Page Faults/sec** 計數器可確認磁碟活動並非分頁所造成。  
   
- 分頁率 (連同分頁錯誤) 低是正常的，即使有許多可用記憶體的電腦也是如此。 當「Microsoft Windows 虛擬記憶體管理員 (VMM)」修剪 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和其他處理序的工作集大小時，它會從這些處理序取得分頁。 此 VMM 活動會造成分頁錯誤。 若要判定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或其他處理序是否造成過度分頁，請監視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序執行個體的 **Process: Page Faults/sec** 計數器。  
+ 分頁率 (連同分頁錯誤) 低是正常的，即使有許多可用記憶體的電腦也是如此。 當「Microsoft Windows 虛擬記憶體管理員 (VMM)」修剪 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和其他處理序的工作集大小時，它會從這些處理序取得分頁。 此 VMM 活動會造成分頁錯誤。 若要判定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或其他處理序是否造成過度分頁，請監視 **處理序執行個體的** Process: Page Faults/sec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 計數器。  
   
  如需有關解決過度分頁的詳細資訊，請參閱 Windows 作業系統文件。  
   
-## 隔離 SQL Server 所使用的記憶體  
- 根據預設， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會根據可用的系統資源，動態變更它的記憶體需求。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 需要更多記憶體，它將詢問作業系統以判斷是否有可用的實體記憶體，並使用可用的記憶體。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 並不需要目前配置給它的記憶體，它會釋出記憶體給作業系統。 不過，您可以使用 **minservermemory** 和 **maxservermemory** 伺服器組態選項，覆寫選項以動態使用記憶體。 如需詳細資訊，請參閱＜ [伺服器記憶體選項](../../database-engine/configure-windows/server-memory-server-configuration-options.md)＞。  
+## <a name="isolating-memory-used-by-sql-server"></a>隔離 SQL Server 所使用的記憶體  
+ 根據預設， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會根據可用的系統資源，動態變更它的記憶體需求。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 需要更多記憶體，它將詢問作業系統以判斷是否有可用的實體記憶體，並使用可用的記憶體。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 並不需要目前配置給它的記憶體，它會釋出記憶體給作業系統。 不過，您可以使用 **minservermemory**和 **maxservermemory** 伺服器組態選項，覆寫選項以動態使用記憶體。 如需詳細資訊，請參閱＜ [伺服器記憶體選項](../../database-engine/configure-windows/server-memory-server-configuration-options.md)＞。  
   
  若要監視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所使用的記憶體數量，請檢查下列效能計數器：  
   
@@ -65,7 +69,7 @@ caps.handback.revision: 26
   
  若 **TotalServerMemory (KB)** 計數器和電腦中的實體記憶體數量相比一直很高，可能代表需要更多的記憶體。  
   
-## 決定目前的記憶體配置  
+## <a name="determining-current-memory-allocation"></a>決定目前的記憶體配置  
  以下查詢會傳回目前配置之記憶體的相關資訊。  
   
 ```  

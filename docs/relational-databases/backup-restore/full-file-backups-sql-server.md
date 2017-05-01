@@ -1,31 +1,35 @@
 ---
 title: "完整檔案備份 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "完整備份 [SQL Server]"
-  - "備份 [SQL Server], 檔案或檔案群組"
-  - "備份 [SQL Server], 檔案或檔案群組"
-  - "完整復原模式 [SQL Server], 完整檔案備份"
-  - "檔案備份 [SQL Server], 完整"
-  - "檔案 [SQL Server], 備份"
-  - "檔案群組 [SQL Server], 備份"
-  - "檔案備份 [SQL Server]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- full backups [SQL Server]
+- backing up [SQL Server], files or filegroups
+- backups [SQL Server], files or filegroups
+- full recovery model [SQL Server], full file backups
+- file backups [SQL Server], full
+- files [SQL Server], backing up
+- filegroups [SQL Server], backing up
+- file backups [SQL Server]
 ms.assetid: a716bf8d-0c5a-490d-aadd-597b3b0fac0c
 caps.latest.revision: 62
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 62
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 10cdcff6b30fc1c71943cca5c0675473ea81d0ae
+ms.lasthandoff: 04/11/2017
+
 ---
-# 完整檔案備份 (SQL Server)
+# <a name="full-file-backups-sql-server"></a>完整檔案備份 (SQL Server)
   本主題僅與包含多個檔案或檔案群組的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫有關。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中的檔案可個別進行備份和還原。 而且，您可以指定整個檔案群組，而不是個別指定每個構成的檔案。 請注意，如果檔案群組的任何檔案離線 (例如因為檔案正在還原中)，整個檔案群組就會離線，並且無法進行備份。  
@@ -72,10 +76,10 @@ caps.handback.revision: 62
 > [!NOTE]  
 >  您可以從資料庫備份還原個別檔案；不過，若要尋找並還原一個檔案，從資料庫備份著手會比從檔案備份來得更久。  
   
-### 檔案備份和簡單復原模式  
+### <a name="file-backups-and-the-simple-recovery-model"></a>檔案備份和簡單復原模式  
  在簡單復原模式下，必須將所有的讀取/寫入檔案備份在一起。 這樣可以確保將資料庫還原到一致的時間點。 不要個別指定每一個讀取/寫入檔案或檔案群組，請改用 READ_WRITE_FILEGROUPS 選項。 這個選項會備份資料庫中的所有讀取/寫入檔案群組。 指定 READ_WRITE_FILEGROUPS 所建立的備份即稱為「部分備份」。 如需詳細資訊，請參閱[部分備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/partial-backups-sql-server.md)。  
   
-### 檔案備份和完整復原模式  
+### <a name="file-backups-and-the-full-recovery-model"></a>檔案備份和完整復原模式  
  在完整復原模式下，不論備份策略的其餘部分為何，您都必須備份交易記錄。 一組完整的完整檔案備份，連同足以從第一個檔案備份開始涵蓋所有檔案備份的記錄備份，就相當於一個完整資料庫備份。  
   
  只使用檔案和記錄備份來還原資料庫可能會很複雜。 因此，最好是盡可能執行完整資料庫備份，然後在第一次檔案備份之前啟動記錄備份。 下圖顯示在建立資料庫 (時間 t0) 之後不久即建立完整資料庫備份 (時間 t1) 的策略。 第一個資料庫備份可讓交易記錄備份啟動。 交易記錄備份已排程為依設定的間隔進行。 當間隔最符合資料庫的商務需求時，就會進行檔案備份。 本圖顯示逐一備份的四個檔案群組。 這些檔案群組的備份順序 (A、C、B、A) 反映了資料庫的商務需求。  
@@ -83,7 +87,7 @@ caps.handback.revision: 62
  ![結合資料庫、檔案和記錄備份的策略](../../relational-databases/backup-restore/media/bnr-rmfull-3-fulldb-filegrps-log-backups.gif "結合資料庫、檔案和記錄備份的策略")  
   
 > [!NOTE]  
->  在完整復原模式下，還原讀取/寫入檔案備份時必須向前復原交易記錄，以確保檔案與資料庫其餘部分的一致性。 為了避免向前復原過多的交易記錄備份，請考慮使用差異檔案備份。 如需詳細資訊，請參閱[差異備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md)。  
+>  在完整復原模式下，還原讀取/寫入檔案備份時必須向前復原交易記錄，以確保檔案與資料庫其餘部分的一致性。 為了避免向前復原過多的交易記錄備份，請考慮使用差異檔案備份。 如需詳細資訊，請參閱 [差異備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md)。  
   
 ##  <a name="RelatedTasks"></a> 相關工作  
  **建立檔案或檔案群組備份**  
@@ -95,7 +99,7 @@ caps.handback.revision: 62
 > [!NOTE]  
 >  「維護計畫精靈」不支援檔案備份。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [備份概觀 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
  [備份與還原：互通性與共存性 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-and-restore-interoperability-and-coexistence-sql-server.md)   

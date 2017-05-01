@@ -1,27 +1,31 @@
 ---
-title: "了解 Database Engine 錯誤 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "錯誤 [SQL Server], 關於錯誤"
-  - "錯誤 [SQL Server], Database Engine"
-  - "錯誤 [SQL Server]"
-  - "Database Engine [SQL Server], 錯誤"
+title: "了解資料庫引擎錯誤 | Microsoft 文件"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- errors [SQL Server], about errors
+- errors [SQL Server], Database Engine
+- errors [SQL Server]
+- Database Engine [SQL Server], errors
 ms.assetid: ddaca9d3-956f-46a5-8cd3-a7a15ec75878
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fab32eee7823d80a531503a88b9a58dff06c5b89
+ms.lasthandoff: 04/11/2017
+
 ---
-# 了解 Database Engine 錯誤
+# <a name="understanding-database-engine-errors"></a>了解 Database Engine 錯誤
   下表描述 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 所引發之錯誤的屬性。  
   
 |Attribute|描述|  
@@ -39,7 +43,7 @@ caps.handback.revision: 27
   
  您可以在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼中，使用相關聯之 CATCH 區塊範圍內的 ERROR_LINE、ERROR_MESSAGE、ERROR_NUMBER、ERROR_PROCEDURE、ERROR_SEVERITY 和 ERROR_STATE 等函數，來取得在 TRY…CATCH 建構的 TRY 區塊範圍內出現之錯誤的相關資訊。 如需詳細資訊，請參閱 [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)。  
   
-## 範例  
+## <a name="examples"></a>範例  
  下列範例會查詢 `sys.messages` 目錄檢視，以傳回 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中具有英文文字 (`1033`) 之所有系統和使用者自訂錯誤訊息的清單。  
   
 ```  
@@ -53,10 +57,10 @@ SELECT
   WHERE language_id = 1033;  
 ```  
   
- 如需詳細資訊，請參閱 [sys.messages &#40;Transact-SQL&#41;](../Topic/sys.messages%20\(Transact-SQL\).md)。  
+ 如需詳細資訊，請參閱 [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)。  
   
-## 另請參閱  
- [sys.messages &#40;Transact-SQL&#41;](../Topic/sys.messages%20\(Transact-SQL\).md)   
+## <a name="see-also"></a>另請參閱  
+ [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)   
  [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [@@ERROR &#40;Transact-SQL&#41;](../../t-sql/functions/error-transact-sql.md)   
  [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)   

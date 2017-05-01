@@ -1,25 +1,29 @@
 ---
 title: "第 6 課︰使用檔案快照集備份來產生活動和備份記錄 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+applies_to:
+- SQL Server 2016
 ms.assetid: 26aa534a-afe7-4a14-b99f-a9184fc699bd
 caps.latest.revision: 15
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 8f3ea59fb612ea692b52ab46bb342d8c4031fb71
+ms.lasthandoff: 04/11/2017
+
 ---
-# 第 6 課︰使用檔案快照集備份來產生活動和備份記錄
+# <a name="lesson-6-generate-activity-and-backup-log-using-file-snapshot-backup"></a>第 6 課︰使用檔案快照集備份來產生活動和備份記錄
 在本課程中，您將使用檔案快照集備份，在 AdventureWorks2014 資料庫中產生活動並定期建立交易記錄備份。 如需如何使用檔案快照集備份的詳細資訊，請參閱 [Azure 中資料庫檔案的檔案快照集備份](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)。  
   
 若要使用檔案快照集備份，在 AdventureWorks2014 資料庫中產生活動並定期建立交易記錄備份，請遵循下列步驟：  
@@ -77,21 +81,21 @@ caps.handback.revision: 15
   
 5.  檢閱第一個指令碼的輸出，並注意現在最後的資料列計數是 29,939。  
   
-    ![Row count of 29,939 is displayed](../relational-databases/media/5e2f4229-1970-49c9-89b3-e96b6f7fde83.JPG "Row count of 29,939 is displayed")  
+    ![顯示 29,939 的資料列計數](../relational-databases/media/5e2f4229-1970-49c9-89b3-e96b6f7fde83.JPG "顯示 29,939 的資料列計數")  
   
 6.  檢閱第二個指令碼的輸出，並注意，每次 BACKUP LOG 陳述式執行時，系統都會建立兩個新的檔案快照集：一個記錄檔的檔案快照集和一個資料檔案的檔案快照集，因此每一個資料庫檔案總共會有兩個檔案快照集。 第二個指令碼完成之後，請注意，現在共有 16 個檔案快照集，每一個資料庫檔案總共有 8 個：一個來自 BACKUP DATABASE 陳述式而另一個是每次執行 BACKUP LOG 陳述式時產生。  
   
-    ![results pane showing file snapshots of both data and log file when log backup is taken](../relational-databases/media/acd213b8-895e-425c-bd72-2bf10e65a5ba.JPG "results pane showing file snapshots of both data and log file when log backup is taken")  
+    ![結果窗格，顯示取得記錄檔備份時的資料和記錄檔的檔案快照集](../relational-databases/media/acd213b8-895e-425c-bd72-2bf10e65a5ba.JPG "結果窗格，顯示取得記錄檔備份時之資料和記錄檔的檔案快照集")  
   
-    ![four file snapshots are displayed](../relational-databases/media/e7eff77d-85b9-4e52-abd8-e49952c8118a.JPG "four file snapshots are displayed")  
+    ![顯示四個檔案快照集](../relational-databases/media/e7eff77d-85b9-4e52-abd8-e49952c8118a.JPG "顯示四個檔案快照集")  
   
-    ![results pane showing a total of 16 file snapshots](../relational-databases/media/c3ddff17-a83c-4bf0-a670-a38834f9c922.JPG "results pane showing a total of 16 file snapshots")  
+    ![結果窗格，顯示總共 16 個檔案快照集](../relational-databases/media/c3ddff17-a83c-4bf0-a670-a38834f9c922.JPG "結果窗格，顯示總共 16 個檔案快照集")  
   
 7.  在物件總管中，連接到 Azure 儲存體。  
   
 8.  展開 [容器]，並展開您在第 1 課所建立的容器，並確認其中有顯示 7 個新的備份記錄檔與先前課程的 Blob (您可視需要重新整理)。  
   
-    ![Azure container showing 7 log backup blobs](../relational-databases/media/cfa5a326-87a2-4202-9a04-38bf577d2d0b.JPG "Azure container showing 7 log backup blobs")  
+    ![Azure 容器，顯示 7 個記錄檔備份 Blob](../relational-databases/media/cfa5a326-87a2-4202-9a04-38bf577d2d0b.JPG "Azure 容器，顯示 7 個記錄檔備份 Blob")  
   
 **下一課：**  
   
@@ -99,3 +103,4 @@ caps.handback.revision: 15
   
   
   
+

@@ -1,34 +1,38 @@
 ---
 title: "前置處理結構描述以合併包含的結構描述 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "測試前置處理器工具"
-  - "xsd:include"
-  - "XML 結構描述集合 [SQL Server], 前置處理器工具"
-  - "包含元素"
-  - "XML 結構描述 [SQL Server], 前置處理"
-  - "結構描述集合 [SQL Server], 前置處理器工具"
-  - "前置處理器工具 [XML schemas]"
-  - "XML 結構描述 [SQL Server]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- testing preprocessor tool
+- xsd:include
+- XML schema collections [SQL Server], preprocessor tool
+- include element
+- XML schemas [SQL Server], preprocessing
+- schema collections [SQL Server], preprocessor tool
+- preprocessor tool [XML schemas]
+- XML schemas [SQL Server]
 ms.assetid: cde1de5f-077a-4a6d-8a81-1ecb6e10d549
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 73bb2043bf3e0cb0d8a076a07b4d9c33366c1cf7
+ms.lasthandoff: 04/11/2017
+
 ---
-# 前置處理結構描述以合併包含的結構描述
+# <a name="preprocess-a-schema-to-merge-included-schemas"></a>前置處理結構描述以合併包含的結構描述
   W3C XSD **include** 元素提供結構描述模組化的支援，在模組化中可以將 XML 結構描述分割成一個以上的實體檔案。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目前不支援這個元素。 伺服器將會拒絕包含此元素的 XML 結構描述。  
   
- 可預先處理做為方案且包含 \<xsd:include> 指示詞的 XML 結構描述，以便將任何包含結構描述的內容複製和合併成單一結構描述，以利上傳至伺服器。 下列 C#  程式碼可用以預先處理。 在程式碼開始部份的註解提供如何使用它的資訊。  
+ 可預先處理作為解決方案且包含 \<xsd:include> 指示詞的 XML 結構描述，以便將任何包含結構描述的內容複製和合併成單一結構描述，以利上傳至伺服器。 下列 C#  程式碼可用以預先處理。 在程式碼開始部份的註解提供如何使用它的資訊。  
   
 ```  
 // XSD Schema Include Normalizer  
@@ -186,10 +190,10 @@ public class XmlSchemaIncludeNormalizer
 }  
 ```  
   
-## 測試前置處理器工具  
+## <a name="testing-the-preprocessor-tool"></a>測試前置處理器工具  
  您可以使用下列 XSD 結構描述測試前置處理器工具：  
   
-### books_common.xsd  
+### <a name="bookscommonxsd"></a>books_common.xsd  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -199,7 +203,7 @@ public class XmlSchemaIncludeNormalizer
 </xsd:schema>  
 ```  
   
-### books.xsd  
+### <a name="booksxsd"></a>books.xsd  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -211,7 +215,7 @@ public class XmlSchemaIncludeNormalizer
 </xsd:schema>  
 ```  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [XML 結構描述集合 &#40;SQL Server&#41;](../../relational-databases/xml/xml-schema-collections-sql-server.md)  
   
   

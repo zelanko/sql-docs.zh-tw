@@ -1,29 +1,33 @@
 ---
-title: "使用原生格式匯入或匯出資料 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/30/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-bulk-import-export"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "原生資料格式 [SQL Server]"
-  - "資料格式 [SQL Server], 原生"
+title: "使用原生格式匯入或匯出資料 (SQL Server) | Microsoft 文件"
+ms.custom: 
+ms.date: 09/30/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-bulk-import-export
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- native data format [SQL Server]
+- data formats [SQL Server], native
 ms.assetid: eb279b2f-0f1f-428f-9b8f-2a7fc495b79f
 caps.latest.revision: 43
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 43
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4cb08ec44780935a8340d267fd3790af5150659b
+ms.lasthandoff: 04/11/2017
+
 ---
-# 使用原生格式匯入或匯出資料 (SQL Server)
+# <a name="use-native-format-to-import-or-export-data-sql-server"></a>使用原生格式匯入或匯出資料 (SQL Server)
 在多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之間，使用不包含任何擴充/雙位元組字集 (DBCS) 字元的資料檔傳送大量資料時，建議使用原生格式。  
 
 > [!NOTE]
->  若要在多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之間，使用包含擴充或 DBCS 字元的資料檔大量傳送資料，您應該使用 Unicode 原生格式。 如需詳細資訊，請參閱[使用 Unicode 原生格式匯入或匯出資料 &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)。
+>  若要在多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之間，使用包含擴充或 DBCS 字元的資料檔大量傳送資料，您應該使用 Unicode 原生格式。 如需詳細資訊，請參閱 [使用 Unicode 原生格式匯入或匯出資料 &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)。
 
 原生格式會維持資料庫的原生資料類型。 原生格式的目的是為了在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表之間進行資料的高速資料傳送。 如果您使用格式檔案，則來源與目標資料表不需要相同。 資料傳送包含兩個步驟：  
   
@@ -39,7 +43,7 @@ caps.handback.revision: 43
 |[bcp 如何處理原生格式的資料](#considerations)|
 |[原生格式的命令選項](#command_options)|
 |[範例測試條件](#etc)<br /><br />&emsp;&#9679;&emsp;[範例資料表](#sample_table)<br />&emsp;&#9679;&emsp;[範例非 XML 格式檔案](#nonxml_format_file)|
-|[範例](#examples)<br />&emsp;&#9679;&emsp;[使用 bcp 與原生格式匯出資料](#bcp_native_export)<br />&emsp;&#9679;&emsp;[使用 bcp 與原生格式匯入資料](#bcp_native_import)<br />&emsp;&#9679;&emsp;[使用 bcp 與原生格式匯入非 XML 格式檔案的資料](#bcp_native_import_fmt)<br />&emsp;&#9679;&emsp;[不使用格式檔案而使用 BULK INSERT 與原生格式](#bulk_native)<br />&emsp;&#9679;&emsp;[對非 XML 格式檔案使用 BULK INSERT 與原生格式](#bulk_native_fmt)<br />&emsp;&#9679;&emsp;[對非 XML 格式檔案使用 OPENROWSET 與原生格式](#openrowset_native_fmt)|
+|[範例](#examples)<br />&emsp;&#9679;&emsp;[使用 BCP 與原生格式匯出資料](#bcp_native_export)<br />&emsp;&#9679;&emsp;[不使用格式檔案而使用 BCP 與原生格式匯入資料](#bcp_native_import)<br />&emsp;&#9679;&emsp;[使用 BCP 與原生格式匯入非 XML 格式檔案的資料](#bcp_native_import_fmt)<br />&emsp;&#9679;&emsp;[不使用格式檔案而使用 BULK INSERT 與原生格式](#bulk_native)<br />&emsp;&#9679;&emsp;[對非 XML 格式檔案使用 BULK INSERT 與原生格式](#bulk_native_fmt)<br />&emsp;&#9679;&emsp;[對非 XML 格式檔案使用 OPENROWSET 與原生格式](#openrowset_native_fmt)|
 |[相關工作](#RelatedTasks)<p>                                                                                                                                                                                                                  </p>|
 
 ## 限制<a name="restrictions"></a>  
@@ -61,14 +65,14 @@ caps.handback.revision: 43
   
 -   非字元資料  
   
-     [bcp 公用程式](../../tools/bcp-utility.md)使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的內部二進位資料格式，將資料表中的非字元資料寫入資料檔案。  
+     [bcp 公用程式](../../tools/bcp-utility.md) 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的內部二進位資料格式，將資料表中的非字元資料寫入資料檔案。  
   
 -   [char](../../t-sql/data-types/char-and-varchar-transact-sql.md) 或 [varchar](../../t-sql/data-types/char-and-varchar-transact-sql.md) 資料  
   
-     在每一個 [char](../../t-sql/data-types/char-and-varchar-transact-sql.md) 或 [varchar](../../t-sql/data-types/char-and-varchar-transact-sql.md) 欄位的開頭，[bcp](../../tools/bcp-utility.md) 都會加入前置長度。  
+     在每一個 [char](../../t-sql/data-types/char-and-varchar-transact-sql.md) 或 [varchar](../../t-sql/data-types/char-and-varchar-transact-sql.md) 欄位的開頭， [bcp](../../tools/bcp-utility.md) 都會加入前置長度。  
   
     > [!IMPORTANT]
-    >  使用原生模式時，[bcp 公用程式](../../tools/bcp-utility.md)會先將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的字元轉換為 OEM 字元，然後再複製到資料檔案。 [bcp 公用程式](../../tools/bcp-utility.md)會先將資料檔案中的字元轉換為 ANSI 字元，然後再大量匯入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表。 在進行這些轉換期間，可能會遺失擴充字元。 如有擴充字元，請使用 Unicode 原生格式或指定字碼頁。
+    >  使用原生模式時， [bcp 公用程式](../../tools/bcp-utility.md) 會先將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的字元轉換為 OEM 字元，然後再複製到資料檔案。 [bcp 公用程式](../../tools/bcp-utility.md) 會先將資料檔案中的字元轉換為 ANSI 字元，然後再大量匯入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表。 在進行這些轉換期間，可能會遺失擴充字元。 如有擴充字元，請使用 Unicode 原生格式或指定字碼頁。
   
 -   [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) 資料  
   
@@ -90,17 +94,17 @@ caps.handback.revision: 43
 |OPENROWSET|N/A|必須使用格式檔案|
 
   
- \*若要將原生 (**-n**) 資料載入與舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用戶端相容的格式，請使用 **-V** 參數。 如需詳細資訊，請參閱[從舊版 SQL Server 匯入原生與字元格式資料](../../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)。  
+ \*若要將原生 (**-n**) 資料載入與舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用戶端相容的格式，請使用 **-V** 參數。 如需詳細資訊，請參閱 [從舊版 SQL Server 匯入原生與字元格式資料](../../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)。  
   
 > [!NOTE]
->  或者，您可以在格式檔案中按照每個欄位指定格式。 如需詳細資訊，請參閱[匯入或匯出資料的格式檔案 &#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)。
+>  或者，您可以在格式檔案中按照每個欄位指定格式。 如需詳細資訊，請參閱 [匯入或匯出資料的格式檔案 &#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)＞。
   
 
 ## 範例測試條件<a name="etc"></a>  
 本主題中的範例採用下列定義的資料表、資料檔案與格式檔案。
 
 ### **範例資料表**<a name="sample_table"></a>
-下列指令碼會建立測試資料庫、名為 `myNative`的資料表，以及在資料表中填入一些初始值。  請在 Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) 中執行下列 Transact-SQL：
+下列指令碼會建立測試資料庫、名為 `myNative` 的資料表，以及在資料表中填入一些初始值。  請在 Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) 中執行下列 Transact-SQL：
 ```tsql
 CREATE DATABASE TestDatabase;
 GO
@@ -126,7 +130,7 @@ SELECT * FROM TestDatabase.dbo.myNative;
 ```
 
 ### **範例非 XML 格式檔案**<a name="nonxml_format_file"></a>
-SQL Server 支援兩種類型的格式檔案：非 XML 格式和 XML 格式。  非 XML 格式是舊版 SQL Server 所支援的原始格式。  如需詳細資訊，請參閱[非 XML 格式檔案 (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md)。  下列命令將使用 [bcp 公用程式](../../tools/bcp-utility.md)，根據 `myNative` 的結構描述產生非 XML 格式檔案 `myNative.fmt`。  使用 [bcp](../../tools/bcp-utility.md) 命令建立格式檔案時，請指定 **format** 引數並使用 **nul** 取代資料檔案路徑。  format 選項也需要 **-f** 選項。  此外，以此範例為例，限定詞 **c** 會用於指定字元資料，**T** 會用於指定使用整合式安全性的信任連線。  請在命令提示字元之下，輸入下列命令：
+SQL Server 支援兩種類型的格式檔案：非 XML 格式和 XML 格式。  非 XML 格式是舊版 SQL Server 所支援的原始格式。  如需詳細資訊，請參閱 [非 XML 格式檔案 (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md) 。  下列命令將使用 [bcp 公用程式](../../tools/bcp-utility.md) ，根據 `myNative.fmt`的結構描述產生非 XML 格式檔案 `myNative`。  使用 [bcp](../../tools/bcp-utility.md) 命令建立格式檔案時，請指定 **format** 引數並使用 **nul** 取代資料檔案路徑。  format 選項也需要 **-f** 選項。  此外，以此範例為例，限定詞 **c** 會用於指定字元資料， **T** 會用於指定使用整合式安全性的信任連線。  請在命令提示字元之下，輸入下列命令：
 
 ```
 bcp TestDatabase.dbo.myNative format nul -f D:\BCP\myNative.fmt -T -n 
@@ -153,7 +157,7 @@ REM Review results
 NOTEPAD D:\BCP\myNative.bcp
 ```
 
-### **不使用格式檔案而使用 bcp 與原生格式匯入資料**<a name="bcp_native_import"></a>
+### **使用 bcp 與原生格式匯入資料**<a name="bcp_native_import"></a>
 **-n** 參數與 **IN** 命令。  請在命令提示字元之下，輸入下列命令：
 ```
 REM Truncate table (for testing)
@@ -233,8 +237,8 @@ SELECT * FROM TestDatabase.dbo.myNative;
   
 -   [使用 Unicode 原生格式匯入或匯出資料 &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
-## 另請參閱  
- [bcp 公用程式](../../tools/bcp-utility.md)   
+## <a name="see-also"></a>另請參閱  
+ [bcp Utility](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [sql_variant &#40;Transact-SQL&#41;](../../t-sql/data-types/sql-variant-transact-sql.md)   
@@ -243,3 +247,4 @@ SELECT * FROM TestDatabase.dbo.myNative;
  [使用 Unicode 原生格式匯入或匯出資料 &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
   
+

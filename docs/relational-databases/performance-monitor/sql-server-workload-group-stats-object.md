@@ -1,26 +1,30 @@
 ---
-title: "SQL Server, Workload Group Stats 物件 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "12/04/2015"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Workload Group Stats 物件"
-  - "SQLServer: Workload Group Stats"
+title: "SQL Server 的 Workload Group Stats 物件 | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 12/04/2015
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Workload Group Stats object
+- 'SQLServer: Workload Group Stats'
 ms.assetid: ca20e4f6-50ec-4456-900d-87d280fde2b3
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 668f0f7cf7b38fb18144e58cccbc7e4902a39f75
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server, Workload Group Stats 物件
+# <a name="sql-server-workload-group-stats-object"></a>SQL Server, Workload Group Stats 物件
   SQLServer:Workload Group Stats 物件包含效能計數器，可報告資源管理員工作負載群組統計資料的相關資訊。  
   
  每個作用中工作負載群組都會建立 SQLServer:Workload Group Stats 效能物件的執行個體，而且此執行個體的名稱與資源管理員工作負載群組名稱相同。 下表描述這個執行個體支援的計數器。  
@@ -45,9 +49,10 @@ caps.handback.revision: 14
 |**Requests completed/sec**|在這個工作負載群組中完成的要求數目。 這個數目是累計的。|  
 |**Suboptimal plans/sec**|在這個工作負載群組中每秒產生的次佳計畫數目。|  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [監視資源使用狀況 &#40;系統監視器&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
  [SQL Server, Resource Pool Stats 物件](../../relational-databases/performance-monitor/sql-server-resource-pool-stats-object.md)   
  [資源管理員](../../relational-databases/resource-governor/resource-governor.md)  
   
   
+

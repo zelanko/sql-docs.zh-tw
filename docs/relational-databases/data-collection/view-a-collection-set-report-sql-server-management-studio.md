@@ -1,28 +1,32 @@
 ---
-title: "檢視收集組報表 (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.dc.reporthistory.calendar.f1"
-helpviewer_keywords: 
-  - "收集組 [SQL Server], 檢視報表"
-  - "報表 [SQL Server], 檢視收集組"
+title: "檢視收集組報表 (SQL Server Management Studio) | Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.dc.reporthistory.calendar.f1
+helpviewer_keywords:
+- collection sets [SQL Server], viewing reports
+- reports [SQL Server], viewing collection set
 ms.assetid: c3b1e791-9aa1-4bba-9622-4954568e1820
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: accee6b8a77439781776f82d179a2260d3aa2895
+ms.lasthandoff: 04/11/2017
+
 ---
-# 檢視收集組報表 (SQL Server Management Studio)
-  設定管理資料倉儲之後，您就可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中檢視收集組報表。 這些報表是針對安裝期間所安裝的系統資料收集組提供的。 這些報表包括：  
+# <a name="view-a-collection-set-report-sql-server-management-studio"></a>檢視收集組報表 (SQL Server Management Studio)
+  設定管理資料倉儲之後，您就可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中檢視收集組報表。 這些報表是針對安裝期間所安裝的系統資料收集組提供的。 這些報表包括：  
   
 -   磁碟使用量摘要  
   
@@ -32,7 +36,7 @@ caps.handback.revision: 24
   
  這個程序會顯示 [磁碟使用量] 收集組的報表。 您可以遵循相同的一般程序來檢視其他系統資料收集組的報表。  
   
-### 若要檢視收集組報表  
+### <a name="to-view-a-collection-set-report"></a>若要檢視收集組報表  
   
 1.  報表的資料表是在第一次上傳所收集的資料時建立的。 如果您嘗試在第一次上傳之前檢視報表，將會發生錯誤，而且不會顯示任何報表。 若要上傳 [磁碟使用量] 收集組的資料，請在物件總管中，依序展開 [管理] 資料夾、[資料收集] 和 [系統資料收集組]，以滑鼠右鍵按一下 [磁碟使用量] 收集組，然後按一下 [立即收集和上傳]。  
   
@@ -41,7 +45,7 @@ caps.handback.revision: 24
     > [!NOTE]  
     >  有些報告可能會在資料收集時間表下方顯示行事曆按鈕。 按一下此按鈕可存取 [資料收集報表行事曆]。  
   
-#### 資料收集報表行事曆  
+#### <a name="data-collection-report-calendar"></a>資料收集報表行事曆  
  使用這個對話方塊指定開始日期、開始時間以及您要報告之資料的持續時間。 例如，您可能想要針對上週三的特定 12 小時期間，報告伺服器的磁碟使用量活動。  
   
  **開始日期**  
@@ -53,9 +57,9 @@ caps.handback.revision: 24
  **有效期間**  
  指定報告中要包含的時間範圍。 預設值為 240 分鐘。 可選取的值包括 15 分鐘、60 分鐘、240 分鐘 (4 小時)、720 分鐘 (12 小時) 和 1440 分鐘 (24 小時)。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [資料收集](../../relational-databases/data-collection/data-collection.md)   
- [Management Studio 中的自訂報表](../../ssms/object/custom-reports-in-management-studio.md)   
+ [Management Studio 中的自訂報表](http://msdn.microsoft.com/library/1ba3f758-f39b-4f5f-91ca-516cedc78979)   
  [設定管理資料倉儲 &#40;SQL Server Management Studio&#41;](../../relational-databases/data-collection/configure-the-management-data-warehouse-sql-server-management-studio.md)  
   
   

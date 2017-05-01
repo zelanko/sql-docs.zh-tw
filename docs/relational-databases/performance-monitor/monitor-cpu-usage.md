@@ -1,34 +1,38 @@
 ---
-title: "監視 CPU 使用量 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "監視效能 [SQL Server], CPU 使用量"
-  - "微調資料庫 [SQL Server], CPU 使用量"
-  - "處理器 [SQL Server], 監視使用量"
-  - "資料庫效能 [SQL Server], CPU 使用量"
-  - "監視 CPU 使用率 [SQL Server]"
-  - "伺服器效能 [SQL Server], CPU 使用量"
-  - "資料庫鏡像 [SQL Server], CPU 使用量"
-  - "鏡像 [SQL Server], CPU 使用量"
-  - "處理器 [SQL Server]"
-  - "CPU [SQL Server], 監視"
-  - "監視伺服器效能 [SQL Server], CPU 使用量"
+title: "監視 CPU 使用量 |Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- monitoring performance [SQL Server], CPU usage
+- tuning databases [SQL Server], CPU usage
+- processors [SQL Server], monitoring usage
+- database performance [SQL Server], CPU usage
+- monitoring CPU usage [SQL Server]
+- server performance [SQL Server], CPU usage
+- database monitoring [SQL Server], CPU usage
+- monitoring [SQL Server], CPU usage
+- processors [SQL Server]
+- CPU [SQL Server], monitoring
+- monitoring server performance [SQL Server], CPU usage
 ms.assetid: 2a02a3b6-07b2-4ad0-8a24-670414d19812
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 53ee7928baad42733f9b9cfaaf699153b993a287
+ms.lasthandoff: 04/11/2017
+
 ---
-# 監視 CPU 使用量
+# <a name="monitor-cpu-usage"></a>監視 CPU 使用量
   請定期監視 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，以判定 CPU 使用率是否在正常範圍內。 持續偏高的 CPU 使用量比率可能代表必須將 CPU 升級，或增加多個處理器。 此外，偏高的 CPU 使用率可能代表應用程式的微調或設計不良。 將應用程式最佳化後可降低 CPU 的使用率。  
   
  使用「系統監視器」中的 **Processor:% Processor Time** 計數器是判定 CPU 使用量的一種有效方法。 此計數器可監視 CPU 花費在執行非閒置執行緒上的時間量。 狀態維持在 80% 到 90%，可能代表必須將 CPU 升級或增加更多處理器。 使用多處理器系統時，可針對每個處理器監視此計數器的不同執行個體。 此值代表特定處理器上的處理器時間總和。 若要判定所有處理器的平均值，請改為使用 **System: %Total Processor Time** 計數器。  

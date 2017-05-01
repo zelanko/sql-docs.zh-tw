@@ -1,24 +1,28 @@
 ---
 title: "從 SQL Server 公用程式移除 SQL Server 執行個體 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.utility.remove.f1"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.utility.remove.f1
 ms.assetid: ae1d126a-46d2-47bf-b339-17c743df6491
 caps.latest.revision: 9
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0deccd96e577ceb352ba108e5799cc3e849f08c7
+ms.lasthandoff: 04/11/2017
+
 ---
-# 從 SQL Server 公用程式移除 SQL Server 執行個體
+# <a name="remove-an-instance-of-sql-server-from-the-sql-server-utility"></a>從 SQL Server 公用程式移除 SQL Server 執行個體
   使用下列步驟可從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式中移除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 Managed 執行個體。 這個程序會從 UCP 清單檢視中移除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體，並停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式資料收集。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體則不會解除安裝。  
   
 > [!IMPORTANT]  
@@ -32,7 +36,7 @@ caps.handback.revision: 9
   
 4.  若要確認此作業，請按一下 [確定]。 若要結束此作業，請按一下 [取消]。  
   
-## 從 SQL Server 公用程式中手動移除 SQL Server 的 Managed 執行個體  
+## <a name="manually-remove-a-managed-instance-of-sql-server-from-a-sql-server-utility"></a>從 SQL Server 公用程式中手動移除 SQL Server 的 Managed 執行個體  
  這個程序會從 UCP 清單檢視中移除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體，並停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式資料收集。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體則不會解除安裝。  
   
  使用 PowerShell，從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式中移除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 Managed 執行個體。 此指令碼會執行下列作業：  
@@ -56,7 +60,7 @@ $ManagedInstance = $Utility.ManagedInstances[$ServerInstanceName];
 $ManagedInstance.Remove($InstanceConnection);  
 ```  
   
- 請注意，參考 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱時，必須與儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的形式一模一樣。 在區分大小寫的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中，您必須使用 @@SERVERNAME 傳回的相同大小寫來指定執行個體名稱。 若要取得 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Managed 執行個體的執行個體名稱，請在 Managed 執行個體上執行這個查詢：  
+ 請注意，參考 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱時，必須與儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的形式一模一樣。 在區分大小寫的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中，您必須使用 @@SERVERNAME 傳回的相同大小寫來指定執行個體名稱。 若要取得 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Managed 執行個體的執行個體名稱，請在 Managed 執行個體上執行這個查詢：  
   
 ```  
 select @@SERVERNAME AS instance_name  
@@ -64,8 +68,8 @@ select @@SERVERNAME AS instance_name
   
  此時會從 UCP 中完全移除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 Managed 執行個體。 下次當您重新整理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式的資料時，它就會從清單檢視中消失。 這個狀態表示使用者順利完成在 SSMS 使用者介面中移除 Managed 執行個體的作業。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用公用程式總管來管理 SQL Server 公用程式](../../relational-databases/manage/use-utility-explorer-to-manage-the-sql-server-utility.md)   
- [疑難排解 SQL Server 公用程式](../Topic/Troubleshoot%20the%20SQL%20Server%20Utility.md)  
+ [疑難排解 SQL Server 公用程式](http://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)  
   
   

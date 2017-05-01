@@ -1,23 +1,27 @@
 ---
 title: "建立及管理記憶體最佳化物件的儲存體 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 622aabe6-95c7-42cc-8768-ac2e679c5089
 caps.latest.revision: 64
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 64
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2b955ffcf895f5356b77e0d772b3f1ac0cd9780e
+ms.lasthandoff: 04/11/2017
+
 ---
-# 建立及管理記憶體最佳化物件的儲存體
+# <a name="creating-and-managing-storage-for-memory-optimized-objects"></a>建立及管理記憶體最佳化物件的儲存體
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 引擎已整合到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，讓您在同一資料庫中可擁有記憶體最佳化資料表和 (傳統) 磁碟資料表。 不過，記憶體最佳化資料表的儲存體結構和磁碟資料表不同。  
@@ -40,7 +44,7 @@ caps.handback.revision: 64
   
 -   記憶體最佳化資料表的所有變更，都會以附加至使用中的檔案方式儲存。 讀取和寫入檔案都會循序進行。  
   
--   更新的實作方式為先插入再刪除。 刪除的資料列不會立即從儲存體移除。 刪除的資料列是根據[記憶體最佳化資料表的持久性](../../relational-databases/in-memory-oltp/durability-for-memory-optimized-tables.md)中所述的原則，由背景處理序 MERGE 移除。  
+-   更新的實作方式為先插入再刪除。 刪除的資料列不會立即從儲存體移除。 刪除的資料列是根據 [記憶體最佳化資料表的持久性](../../relational-databases/in-memory-oltp/durability-for-memory-optimized-tables.md)中所述的原則，由背景處理序 MERGE 移除。  
   
 -   和磁碟資料表不同，記憶體最佳化資料表的儲存體不壓縮。 將壓縮的 (資料列或頁面) 磁碟資料表移轉至記憶體最佳化資料表時，您必須考量大小的變更。  
   
@@ -62,7 +66,7 @@ caps.handback.revision: 64
   
 -   [比較以磁碟為基礎的資料表儲存體和記憶體最佳化資料表儲存體](../../relational-databases/in-memory-oltp/comparing-disk-based-table-storage-to-memory-optimized-table-storage.md)  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [記憶體內部 OLTP &#40;記憶體內部最佳化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

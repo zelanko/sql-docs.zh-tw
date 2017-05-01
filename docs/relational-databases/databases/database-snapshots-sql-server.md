@@ -1,30 +1,34 @@
 ---
-title: "資料庫快照集 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/08/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "靜態資料庫檢視"
-  - "快照集 [SQL Server 資料庫快照集]"
-  - "來源資料庫 [SQL Server]"
-  - "快照集 [SQL Server 資料庫快照集], 關於資料庫快照集"
-  - "資料庫快照集 [SQL Server]"
-  - "唯讀資料庫檢視"
-  - "資料庫快照集 [SQL Server], 有關資料庫快照集"
+title: "資料庫快照集 (SQL Server) | Microsoft 文件"
+ms.custom: 
+ms.date: 08/08/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- static database views
+- snapshots [SQL Server database snapshots]
+- source databases [SQL Server]
+- snapshots [SQL Server database snapshots], about database snapshots
+- database snapshots [SQL Server]
+- read-only database views
+- database snapshots [SQL Server], about database snapshots
 ms.assetid: 00179314-f23e-47cb-a35c-da6f180f86d3
 caps.latest.revision: 54
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 54
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 1087898fae9896722e795f2c6c68c5df20d0f3aa
+ms.lasthandoff: 04/11/2017
+
 ---
-# 資料庫快照集 (SQL Server)
+# <a name="database-snapshots-sql-server"></a>資料庫快照集 (SQL Server)
   資料庫快照集是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫 (「來源資料庫」) 的唯讀、靜態檢視。 資料庫快照集會與快照集建立時的來源資料庫維持交易的一致性。 資料庫快照集一律會與其來源資料庫位於相同的伺服器執行個體上。 當來源資料庫更新時，資料庫快照集也會更新。 因此，資料庫快照集存在越久，就越有可能用光其可用的磁碟空間。  
   
  給定來源資料庫中可以存在多個快照集。 每個資料庫快照集會一直保存，直到資料庫擁有者明確卸除為止。  
@@ -63,7 +67,7 @@ caps.handback.revision: 54
   
 -   使用為了可用性用途而維護的鏡像資料庫，以卸載報表。  
   
-     將資料庫快照集與資料庫鏡像一起使用，可讓您存取鏡像伺服器上的資料以供報表使用。 此外，在鏡像資料庫上執行查詢，可以釋放主體伺服器上的資源。 如需詳細資訊，請參閱[資料庫鏡像和資料庫快照集 &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-database-snapshots-sql-server.md)。  
+     將資料庫快照集與資料庫鏡像一起使用，可讓您存取鏡像伺服器上的資料以供報表使用。 此外，在鏡像資料庫上執行查詢，可以釋放主體伺服器上的資源。 如需詳細資訊，請參閱 [資料庫鏡像和資料庫快照集 &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-database-snapshots-sql-server.md)(Sparse file)。  
   
 -   保護資料以防發生管理疏失。  
   
@@ -118,7 +122,7 @@ caps.handback.revision: 54
 ###  <a name="Prerequisites"></a> 必要條件  
  可使用任何復原模式的來源資料庫必須符合下列必要條件：  
   
--   伺服器執行個體必須在支援資料庫快照集的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本上執行。 如需詳細資訊，請參閱 [SQL Server 2016 版本支援的功能](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)。  
+-   伺服器執行個體必須在支援資料庫快照集的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本上執行。 如需詳細資訊，請參閱 [SQL Server 2016 版本支援的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
 -   除非來源資料庫是資料庫鏡像工作階段中的鏡像資料庫，否則該資料庫必須處於線上狀態。  
   
@@ -126,13 +130,13 @@ caps.handback.revision: 54
   
      當您建立資料庫快照集時，建議資料庫同步處理狀態為 SYNCHRONIZING 或 SYNCHRONIZED。 但是，當資料庫同步處理狀態為 NOT SYNCHRONIZING 時，可以建立資料庫快照集。  
   
-     如需詳細資訊，請參閱[資料庫快照集與 AlwaysOn 可用性群組 (SQL Server)](../../database-engine/availability-groups/windows/database-snapshots-with-always-on-availability-groups-sql-server.md)。  
+     如需詳細資訊，請參閱 [資料庫快照集與 AlwaysOn 可用性群組 (SQL Server)](../../database-engine/availability-groups/windows/database-snapshots-with-always-on-availability-groups-sql-server.md)。  
   
 -   若要在鏡像資料庫上建立資料庫快照集，資料庫必須處於「已同步處理」的鏡像狀態。  
   
 -   來源資料庫無法設定為可擴充的共用資料庫。  
 
--   來源資料庫不能包含 MEMORY_OPTIMIZED_DATA 檔案群組。  如需詳細資訊，請參閱[記憶體內部 OLTP 不支援的 SQL Server 功能](../../relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md)。
+-   來源資料庫不能包含 MEMORY_OPTIMIZED_DATA 檔案群組。  如需詳細資訊，請參閱 [記憶體內部 OLTP 不支援的 SQL Server 功能](../../relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md)。
   
 > [!NOTE]  
 >  所有復原模式都支援資料庫快照集。  
@@ -193,7 +197,7 @@ caps.handback.revision: 54
     > [!NOTE]  
     >  針對資料庫快照集執行的 SELECT 陳述式不得指定 FILESTREAM 資料行，否則將會傳回下列錯誤訊息： `Could not continue scan with NOLOCK due to data movement.`  
   
--   如果唯讀快照集上的統計資料遺漏或過時，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會在 tempdb 中建立及維護暫時性統計資料。 如需詳細資訊，請參閱 [Statistics](../../relational-databases/statistics/statistics.md)。  
+-   如果唯讀快照集上的統計資料遺漏或過時， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會在 tempdb 中建立及維護暫時性統計資料。 如需詳細資訊，請參閱 [Statistics](../../relational-databases/statistics/statistics.md)。  
   
 ###  <a name="DiskSpace"></a> 磁碟空間需求  
  資料庫快照集會耗用磁碟空間。 如果資料庫快照集用光磁碟空間，它會標示為有疑問，因此必須卸除  (不過，來源資料庫不受影響，其上的動作會繼續正常執行)。但是，與資料庫的完整副本相比，快照集的空間利用率仍算是很有效率了。 快照集所需儲存空間，只要足夠儲存那些在存留時間內會有變更的頁面即可。 通常，快照集只會保存一段有限的時間，所以其大小不會是大問題。  
@@ -234,7 +238,9 @@ caps.handback.revision: 54
   
 -   [卸除資料庫快照集 &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [資料庫鏡像和資料庫快照集 &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-database-snapshots-sql-server.md)  
   
   
+
+

@@ -1,27 +1,31 @@
 ---
-title: "設定容錯移轉叢集上的 FILESTREAM | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/26/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FILESTREAM [SQL Server], 在容錯移轉叢集上設定"
+title: "設定容錯移轉叢集上的 FILESTREAM | Microsoft 文件"
+ms.custom: 
+ms.date: 08/26/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FILESTREAM [SQL Server], setting up on a failover cluster
 ms.assetid: 6721f780-20b7-4109-8ddb-ac327310699e
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8c5bcc49ace68aaf9d35fd3365e693ddd953a0ce
+ms.lasthandoff: 04/11/2017
+
 ---
-# 設定容錯移轉叢集上的 FILESTREAM
-  此主題描述如何在容錯移轉叢集上設定 FILESTREAM。 在您嘗試進行這個程序之前，應該先了解[容錯移轉叢集](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)並啟用 FILESTREAM。 如需如何啟用 FILESTREAM 的相關資訊，請參閱[啟用及設定 FILESTREAM](../../relational-databases/blob/enable-and-configure-filestream.md)。  
+# <a name="set-up-filestream-on-a-failover-cluster"></a>設定容錯移轉叢集上的 FILESTREAM
+  此主題描述如何在容錯移轉叢集上設定 FILESTREAM。 在您嘗試進行這個程序之前，應該先了解 [容錯移轉叢集](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md) 並啟用 FILESTREAM。 如需如何啟用 FILESTREAM 的相關資訊，請參閱 [啟用及設定 FILESTREAM](../../relational-databases/blob/enable-and-configure-filestream.md)。  
   
-### 在容錯移轉叢集上設定 FILESTREAM  
+### <a name="to-set-up-filestream-on-a-failover-cluster"></a>在容錯移轉叢集上設定 FILESTREAM  
   
 1.  設定容錯移轉叢集的主要節點。  
   
@@ -33,14 +37,15 @@ caps.handback.revision: 20
   
 3.  若要加入更多被動節點，請重複步驟 2。  
   
-4.  加入所有節點之後，請在每個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上執行 sp_configure 預存程序，完成此程序。  
+4.  加入所有節點之後，請在每個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體上執行 sp_configure 預存程序，完成此程序。  
   
 5.  若要隨時在叢集中加入並啟用其他節點，您可以重複步驟 2、3 和 4。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [伺服器組態選項 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [建立新的 SQL Server 容錯移轉叢集 &#40;安裝程式&#41;](../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)   
  [移除 SQL Server 容錯移轉叢集執行個體 &#40;安裝程式&#41;](../../sql-server/failover-clusters/install/remove-a-sql-server-failover-cluster-instance-setup.md)   
  [在 SQL Server 容錯移轉叢集中加入或移除節點 &#40;安裝程式&#41;](../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)  
   
   
+

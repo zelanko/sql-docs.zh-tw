@@ -1,29 +1,33 @@
 ---
 title: "針對異動複寫測量延遲及驗證連接 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "複寫監視器, 效能"
-  - "追蹤 Token [SQL Server 複寫]"
-  - "延遲 [SQL Server 複寫]"
-  - "異動複寫, 追蹤 Token"
-  - "監視效能 [SQL Server 複寫], 追蹤 Token"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Replication Monitor, performance
+- tracer tokens [SQL Server replication]
+- latency [SQL Server replication]
+- transactional replication, tracer tokens
+- monitoring performance [SQL Server replication], tracer tokens
 ms.assetid: 4addd426-7523-4067-8d7d-ca6bae4c9e34
 caps.latest.revision: 36
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b2ef601ab4c3dca3b524805e9cce7798213deab9
+ms.lasthandoff: 04/11/2017
+
 ---
-# 針對異動複寫測量延遲及驗證連接
-  本主題描述如何使用複寫監視器、[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 Replication Management Objects (RMO)，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 中測量延遲及驗證異動複寫的連接。 異動複寫具有追蹤 Token 功能，該功能會提供便利的方式來計算異動複寫拓撲中的延遲並驗證「發行者」、「散發者」及「訂閱者」之間的連接。 Token (即少量的資料) 會寫入發行集資料庫的交易記錄，會標示為典型的已複寫交易並且會透過系統傳送，它可允許計算：  
+# <a name="measure-latency-and-validate-connections-for-transactional-replication"></a>針對異動複寫測量延遲及驗證連接
+  本主題描述如何使用複寫監視器、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 Replication Management Objects (RMO)，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中測量延遲及驗證異動複寫的連接。 異動複寫具有追蹤 Token 功能，該功能會提供便利的方式來計算異動複寫拓撲中的延遲並驗證「發行者」、「散發者」及「訂閱者」之間的連接。 Token (即少量的資料) 會寫入發行集資料庫的交易記錄，會標示為典型的已複寫交易並且會透過系統傳送，它可允許計算：  
   
 -   在發行者端認可交易和在散發者端之散發資料庫插入對應的命令之間，所經過的時間。  
   
@@ -52,7 +56,7 @@ caps.handback.revision: 36
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
 ###  <a name="Restrictions"></a> 限制事項  
- 追蹤 Token 在停止系統時也很有幫助，包括停止所有活動並確認所有節點已接收全部尚未處理的變更。 如需詳細資訊，請參閱 [停止複寫拓樸 & #40。複寫 TRANSACT-SQL 程式設計 & #41;](../../../relational-databases/replication/administration/quiesce-a-replication-topology-replication-transact-sql-programming.md)。  
+ 追蹤 Token 在停止系統時也很有幫助，包括停止所有活動並確認所有節點已接收全部尚未處理的變更。 如需詳細資訊，請參閱[停止複寫拓撲 &#40;複寫 Transact-SQL 程式設計&#41;](../../../relational-databases/replication/administration/quiesce-a-replication-topology-replication-transact-sql-programming.md)。  
   
  若要使用追蹤 Token，您必須使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的特定版本：  
   
@@ -77,9 +81,9 @@ caps.handback.revision: 36
 -   在容錯移轉到次要複本之後，複寫監視器就無法調整 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 發行執行個體的名稱，而且會繼續在原始主要 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體名稱之下顯示複寫資訊。 在容錯移轉之後，便無法使用複寫監視器輸入追蹤 Token，但是可以在複寫監視器中看到在新的發行者端使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)]輸入的追蹤 Token。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server 複寫監視器  
- 如需啟動複寫監視器的詳細資訊，請參閱 [啟動複寫監視器](../../../relational-databases/replication/monitor/start-the-replication-monitor.md)。  
+ 如需啟動複寫監視器的資訊，請參閱[啟動複寫監視器](../../../relational-databases/replication/monitor/start-the-replication-monitor.md)。  
   
-#### 插入追蹤 Token 並檢視 Token 上的資訊  
+#### <a name="to-insert-a-tracer-token-and-view-information-on-the-token"></a>插入追蹤 Token 並檢視 Token 上的資訊  
   
 1.  在左窗格中展開發行者群組，展開發行者，然後按一下發行集。  
   
@@ -89,42 +93,42 @@ caps.handback.revision: 36
   
 4.  在下列資料行中檢視追蹤 Token 的經過時間： **[發行者到散發者]**、 **[散發者到訂閱者]**、 **[延遲總計]**。 **[暫止]** 表示 Token 尚未到達給定點。  
   
-#### 若要檢視先前插入之追蹤 Token 上的訊息  
+#### <a name="to-view-information-on-a-tracer-token-inserted-previously"></a>若要檢視先前插入之追蹤 Token 上的訊息  
   
 1.  在左窗格中展開發行者群組，展開發行者，然後按一下發行集。  
   
 2.  按一下 **[追蹤 Token]** 索引標籤。  
   
-3.  選取一個時間從 **次插入** 下拉式清單。  
+3.  從 **[插入的時間]** 下拉式清單中選取時間。  
   
 4.  在下列資料行中檢視追蹤 Token 的經過時間： **[發行者到散發者]**、 **[散發者到訂閱者]**、 **[延遲總計]**。 **[暫止]** 表示 Token 尚未到達給定點。  
   
     > [!NOTE]  
-    >  追蹤 Token 資訊與其他記錄資料的保留時間週期相同，這會由散發資料庫的記錄保留期限控制。 如需變更散發資料庫屬性的詳細資訊，請參閱 [檢視和修改 「 散發者 」 和 「 發行者 」 屬性](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)。  
+    >  追蹤 Token 資訊與其他記錄資料的保留時間週期相同，這會由散發資料庫的記錄保留期限控制。 如需變更散發資料庫屬性的詳細資訊，請參閱[檢視及修改散發者和發行者屬性](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 若要將追蹤 Token 公佈到交易式發行集  
+#### <a name="to-post-a-tracer-token-to-a-transactional-publication"></a>若要將追蹤 Token 公佈到交易式發行集  
   
-1.  （選擇性）在發行集資料庫的發行者，執行 [sp_helppublication & #40。TRANSACT-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)。 請確認發行集存在且狀態為使用中。  
+1.  (選擇性) 在發行集資料庫的發行者上，執行 [sp_helppublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)。 請確認發行集存在且狀態為使用中。  
   
-2.  （選擇性）在發行集資料庫的發行者，執行 [sp_helpsubscription & #40。TRANSACT-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)。 請確認訂閱存在且狀態為使用中。  
+2.  (選擇性) 在發行集資料庫的發行者上，執行 [sp_helpsubscription &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)。 請確認訂閱存在且狀態為使用中。  
   
-3.  在發行集資料庫的發行者，執行 [sp_posttracertoken & #40。TRANSACT-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-posttracertoken-transact-sql.md), ，並指定 **@publication**。 記下的值 **@tracer_token_id** 輸出參數。  
+3.  在發行集資料庫的發行者上，執行 [sp_posttracertoken &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-posttracertoken-transact-sql.md)，並指定 **@publication**。 請注意 **@tracer_token_id** 輸出參數的值。  
   
-#### 若要針對異動複寫判斷延遲並驗證連接  
+#### <a name="to-determine-latency-and-validate-connections-for-a-transactional-publication"></a>若要針對異動複寫判斷延遲並驗證連接  
   
 1.  使用上一個程序將追蹤 Token 公佈到發行集。  
   
-2.  在發行集資料庫的發行者，執行 [sp_helptracertokens & #40。TRANSACT-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md), ，並指定 **@publication**。 如此會傳回公佈到發行集的所有追蹤 Token 清單。 請注意所需 **tracer_id** 結果集中。  
+2.  在發行集資料庫的發行者上，執行 [sp_helptracertokens &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md)，並指定 **@publication**。 如此會傳回公佈到發行集的所有追蹤 Token 清單。 請注意結果集中所要的 **tracer_id** 。  
   
-3.  在發行集資料庫的發行者，執行 [sp_helptracertokenhistory & #40。TRANSACT-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md), ，並指定 **@publication** 和步驟 2 的追蹤 token 識別碼 **@tracer_id**。 這麼做會傳回所選取追蹤 Token 的延遲資訊。  
+3.  在發行集資料庫的發行者上，執行 [sp_helptracertokenhistory &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md)，並指定 **@publication**，而且針對 **@tracer_id** 指定步驟 2 的追追蹤 Token 識別碼。 這麼做會傳回所選取追蹤 Token 的延遲資訊。  
   
-#### 若要移除追蹤 Token  
+#### <a name="to-remove-tracer-tokens"></a>若要移除追蹤 Token  
   
-1.  在發行集資料庫的發行者，執行 [sp_helptracertokens & #40。TRANSACT-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md), ，並指定 **@publication**。 如此會傳回公佈到發行集的所有追蹤 Token 清單。 請注意 **tracer_id** 追蹤 token，結果中要刪除的設定。  
+1.  在發行集資料庫的發行者上，執行 [sp_helptracertokens &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md)，並指定 **@publication**。 如此會傳回公佈到發行集的所有追蹤 Token 清單。 請注意結果集中要刪除之追蹤 Token 的 **tracer_id** 。  
   
-2.  在發行集資料庫的發行者，執行 [sp_deletetracertokenhistory & #40。TRANSACT-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md), ，並指定 **@publication** 和要刪除的步驟 2 中的追蹤識別碼 **@tracer_id**。  
+2.  在發行集資料庫的發行者上，執行 [sp_deletetracertokenhistory &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md)，並指定 **@publication**，而且針對 **@tracer_id** 指定步驟 2 的要刪除的追蹤識別碼。  
   
 ###  <a name="TsqlExample"></a> 範例 (Transact-SQL)  
  這麼做會公佈追蹤 Token 記錄，並使用傳回的公佈追蹤 Token 識別碼檢視延遲資訊。  
@@ -133,48 +137,48 @@ caps.handback.revision: 36
   
 ##  <a name="RMOProcedure"></a> 使用 Replication Management Objects (RMO)  
   
-#### 若要將追蹤 Token 公佈到交易式發行集  
+#### <a name="to-post-a-tracer-token-to-a-transactional-publication"></a>若要將追蹤 Token 公佈到交易式發行集  
   
-1.  建立連接到 「 發行者 」 使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 類別。  
+1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 類別建立與發行者的連線。  
   
-2.  建立的執行個體 <xref:Microsoft.SqlServer.Replication.TransPublication> 類別。  
+2.  建立 <xref:Microsoft.SqlServer.Replication.TransPublication> 類別的執行個體。  
   
-3.  設定 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> 和 <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> 發行集，並設定屬性 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 在步驟 1 中建立的連接屬性。  
+3.  設定發行集的 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> 和 <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> 屬性，並將 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 屬性設定為在步驟 1 中建立的連接。  
   
-4.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法來取得物件的屬性。 如果此方法傳回 **false**，則表示步驟 3 中的發行集屬性定義不正確，或者該發行集不存在。  
+4.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法以取得物件的屬性。 如果此方法傳回 **false**，則表示步驟 3 中的發行集屬性定義不正確，或者該發行集不存在。  
   
 5.  呼叫 <xref:Microsoft.SqlServer.Replication.TransPublication.PostTracerToken%2A> 方法。 此方法會將追蹤 Token 插入至發行集的交易記錄。  
   
-#### 若要針對異動複寫判斷延遲並驗證連接  
+#### <a name="to-determine-latency-and-validate-connections-for-a-transactional-publication"></a>若要針對異動複寫判斷延遲並驗證連接  
   
-1.  建立連接到散發者 」 使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 類別。  
+1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 類別建立與散發者的連接。  
   
-2.  建立的執行個體 <xref:Microsoft.SqlServer.Replication.PublicationMonitor> 類別。  
+2.  建立 <xref:Microsoft.SqlServer.Replication.PublicationMonitor> 類別的執行個體。  
   
-3.  設定 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A>, ，<xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>, ，<xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A>, ，和 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A> 屬性，以及設定 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 在步驟 1 中建立的連接屬性。  
+3.  設定 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A>、<xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>、<xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A> 和 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A> 屬性，並將 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 屬性設定為在步驟 1 中建立的連接。  
   
-4.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法來取得物件的屬性。 如果此方法傳回 **false**，則表示步驟 3 中的發行集監視器屬性定義不正確，或者該發行集不存在。  
+4.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法以取得物件的屬性。 如果此方法傳回 **false**，則表示步驟 3 中的發行集監視器屬性定義不正確，或者該發行集不存在。  
   
-5.  呼叫 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumTracerTokens%2A> 方法。 轉型傳回 <xref:System.Collections.ArrayList> 物件的陣列 <xref:Microsoft.SqlServer.Replication.TracerToken> 物件。  
+5.  呼叫 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumTracerTokens%2A> 方法。 將傳回的 <xref:System.Collections.ArrayList> 物件轉型為 <xref:Microsoft.SqlServer.Replication.TracerToken> 物件的陣列。  
   
-6.  呼叫 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumTracerTokenHistory%2A> 方法。 將值傳遞 <xref:Microsoft.SqlServer.Replication.TracerToken.TracerTokenId%2A> 從步驟 5 追蹤 token。 這會傳回做為所選取的追蹤 token 的延遲資訊 <xref:System.Data.DataSet> 物件。 如果傳回所有的追蹤 Token，則「發行者」和「散發者」之間的連接以及「散發者」和「訂閱者」之間的連接兩者都存在，且複寫拓撲可以運作。  
+6.  呼叫 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumTracerTokenHistory%2A> 方法。 針對步驟 5 的追蹤 Token 傳遞 <xref:Microsoft.SqlServer.Replication.TracerToken.TracerTokenId%2A> 的值。 這麼做會以 <xref:System.Data.DataSet> 物件傳回所選取追蹤 Token 的延遲資訊。 如果傳回所有的追蹤 Token，則「發行者」和「散發者」之間的連接以及「散發者」和「訂閱者」之間的連接兩者都存在，且複寫拓撲可以運作。  
   
-#### 若要移除追蹤 Token  
+#### <a name="to-remove-tracer-tokens"></a>若要移除追蹤 Token  
   
-1.  建立連接到散發者 」 使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 類別。  
+1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 類別建立與散發者的連接。  
   
-2.  建立的執行個體 <xref:Microsoft.SqlServer.Replication.PublicationMonitor> 類別。  
+2.  建立 <xref:Microsoft.SqlServer.Replication.PublicationMonitor> 類別的執行個體。  
   
-3.  設定 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A>, ，<xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>, ，<xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A>, ，和 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A> 屬性，以及設定 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 在步驟 1 中建立的連接屬性。  
+3.  設定 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A>、<xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>、<xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A> 和 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A> 屬性，並將 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 屬性設定為在步驟 1 中建立的連接。  
   
-4.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法來取得物件的屬性。 如果此方法傳回 **false**，則表示步驟 3 中的發行集監視器屬性定義不正確，或者該發行集不存在。  
+4.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法以取得物件的屬性。 如果此方法傳回 **false**，則表示步驟 3 中的發行集監視器屬性定義不正確，或者該發行集不存在。  
   
-5.  呼叫 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumTracerTokens%2A> 方法。 轉型傳回 <xref:System.Collections.ArrayList> 物件的陣列 <xref:Microsoft.SqlServer.Replication.TracerToken> 物件。  
+5.  呼叫 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumTracerTokens%2A> 方法。 將傳回的 <xref:System.Collections.ArrayList> 物件轉型為 <xref:Microsoft.SqlServer.Replication.TracerToken> 物件的陣列。  
   
 6.  呼叫 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.CleanUpTracerTokenHistory%2A> 方法。 傳遞其中一個值：  
   
-    -    <xref:Microsoft.SqlServer.Replication.TracerToken.TracerTokenId%2A> 從步驟 5 追蹤 token。 這麼做會刪除所選取 Token 的資訊。  
+    -   步驟 5 的追蹤 Token 的 <xref:Microsoft.SqlServer.Replication.TracerToken.TracerTokenId%2A>。 這麼做會刪除所選取 Token 的資訊。  
   
-    -   A <xref:System.DateTime> 物件。 這麼做會刪除所有早於指定日期和時間的 Token 資訊。  
+    -   <xref:System.DateTime> 物件。 這麼做會刪除所有早於指定日期和時間的 Token 資訊。  
   
   

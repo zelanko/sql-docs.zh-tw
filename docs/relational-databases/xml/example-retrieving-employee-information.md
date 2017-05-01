@@ -1,24 +1,28 @@
 ---
 title: "範例：擷取員工資訊 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "EXPLICIT 模式"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- EXPLICIT mode
 ms.assetid: 63cd6569-2600-485b-92b4-1f6ba09db219
 caps.latest.revision: 9
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 01f3d95b92757ba51a7e8466a9c8d9d535a0a773
+ms.lasthandoff: 04/11/2017
+
 ---
-# 範例：擷取員工資訊
+# <a name="example-retrieving-employee-information"></a>範例：擷取員工資訊
   此範例會擷取每個員工的員工識別碼及員工名稱。 在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫中，employeeID 可以從 Employee 資料表中的 BusinessEntityID 資料行取得。 員工名稱可以從 Person 資料表取得。 BusinessEntityID 資料行可用於聯結資料表。  
   
  假設想要 FOR XML EXPLICIT 轉換產生 XML，如下所示：  
@@ -128,7 +132,7 @@ FOR XML EXPLICIT;
   
  這個處理序會對資料列集中其餘的資料列重複進行。 請記下通用資料表中資料列排序的優先順序，如此 FOR XML EXPLICIT 就可以依序處理資料列集，並產生您想要的 XML。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [搭配 FOR XML 使用 EXPLICIT 模式](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)  
   
   

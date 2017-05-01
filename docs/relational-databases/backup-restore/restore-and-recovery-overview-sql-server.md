@@ -1,49 +1,53 @@
 ---
-title: "還原和復原概觀 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "還原資料表 [SQL Server]"
-  - "備份 [SQL Server], 還原案例"
-  - "資料庫備份 [SQL Server], 還原案例"
-  - "資料庫還原 [SQL Server]"
-  - "還原 [SQL Server]"
-  - "還原 [SQL Server]"
-  - "資料表還原 [SQL Server]"
-  - "還原資料庫 [SQL Server], 關於還原資料庫"
-  - "資料庫還原 [SQL Server], 案例"
+title: "還原和復原概觀 (SQL Server) | Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- restoring tables [SQL Server]
+- backups [SQL Server], restore scenarios
+- database backups [SQL Server], restore scenarios
+- database restores [SQL Server]
+- restoring [SQL Server]
+- restores [SQL Server]
+- table restores [SQL Server]
+- restoring databases [SQL Server], about restoring databases
+- database restores [SQL Server], scenarios
 ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
 caps.latest.revision: 46
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 46
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5e04261e1d43b3ca49c1c3d005d7c3ef683964ce
+ms.lasthandoff: 04/11/2017
+
 ---
-# 還原和復原概觀 (SQL Server)
+# <a name="restore-and-recovery-overview-sql-server"></a>還原和復原概觀 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   若要從失敗復原 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫，資料庫管理員必須依邏輯正確和有意義的還原順序來還原一組 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 還原及復原，可從一整個資料庫、單一資料檔或資料頁面的備份還原資料，如下所示：  
   
--   資料庫 (「完整資料庫還原」(Complete database restore))  
+-   資料庫 ( *「完整資料庫還原」*(Complete database restore))  
   
      將會還原並復原整個資料庫，且在還原與復原作業期間，資料庫會離線。  
   
--   資料檔 (「檔案還原」)  
+-   資料檔 ( *「檔案還原」*)  
   
      還原與復原一個資料檔或一組檔案。 在檔案還原過程中，包含該檔案的檔案群組會在還原的持續時間內自動離線。 任何存取離線檔案群組的嘗試都會產生錯誤。  
   
--   資料頁 (「分頁還原」(Page restore))  
+-   資料頁 ( *「分頁還原」*(Page restore))  
   
      在完整復原模式或大量記錄復原模式下，您可以還原各個資料庫。 不論檔案群組的數目為何，在任何資料庫上都可以執行分頁還原。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份與還原可以跨所有支援的作業系統運作。 如需支援的作業系統詳細資訊，請參閱[安裝 SQL Server 2016 的硬體與軟體需求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2016.md)。 如需舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之備份支援的資訊，請參閱 [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md) 的＜相容性支援＞一節。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份與還原可以跨所有支援的作業系統運作。 如需支援的作業系統詳細資訊，請參閱 [安裝 SQL Server 2016 的硬體與軟體需求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)。 如需舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之備份支援的資訊，請參閱 [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)的＜相容性支援＞一節。  
   
  **本主題內容：**  
   
@@ -64,7 +68,7 @@ caps.handback.revision: 46
   
  下表介紹各種復原模式可能支援的還原實例。  
   
-|還原實例|在簡單復原模式下|在完整/大量記錄復原模式下|  
+|中的|在簡單復原模式下|在完整/大量記錄復原模式下|  
 |----------------------|---------------------------------|----------------------------------------------|  
 |完整資料庫還原|這是基本還原策略。 完整資料庫還原可能只包括還原和復原完整資料庫備份。 此外，完整資料庫還原也可能包括還原完整資料庫備份，接著再還原和復原差異備份。<br /><br /> 如需詳細資訊，請參閱[完整資料庫還原 &#40;簡單復原模式&#41;](../../relational-databases/backup-restore/complete-database-restores-simple-recovery-model.md)。|這是基本還原策略。 完整的資料庫還原包括還原完整資料庫備份和選用的差異備份 (如果有的話)，然後依照順序還原所有後續的記錄備份。 復原最後一個記錄備份，並且加以還原 (RESTORE WITH RECOVERY)，即完成完整資料庫還原。<br /><br /> 如需詳細資訊，請參閱[完整資料庫還原 &#40;完整復原模式&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)。|  
 |File restore **\***|還原一個或多個損毀的唯讀檔案，而不還原整個資料庫。 唯有當資料庫至少有一個唯讀檔案群組時，才能使用檔案還原。|還原一個或多個檔案，而不還原整個資料庫。 可以在資料庫離線時，或在資料庫仍在線上時 (適用於某些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本) 執行檔案還原。 在檔案還原期間，包含正在還原中之檔案的檔案群組一律為離線狀態。|  
@@ -75,7 +79,7 @@ caps.handback.revision: 46
   
  不論還原資料的方式如何，在復原資料庫之前， [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 保證整個資料庫在邏輯上是一致的。 例如，如果您要還原檔案，除非您已經將其向前復原到足以和資料庫保持一致的程度，否則無法加以復原並使其回到線上。  
   
-### 檔案或分頁還原的優點  
+### <a name="advantages-of-a-file-or-page-restore"></a>檔案或分頁還原的優點  
  還原與復原檔案或頁面 (而非整個資料庫) 可提供下列優點：  
   
 -   還原較少的資料，可縮短複製和復原資料所需的時間。  
@@ -109,7 +113,7 @@ caps.handback.revision: 46
   
 -   不允許時間點還原。  
   
- 如果這些限制中有任何一項不適合您的復原需要，即建議您考慮使用完整復原模式。 如需詳細資訊，請參閱[備份概觀 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)。  
+ 如果這些限制中有任何一項不適合您的復原需要，即建議您考慮使用完整復原模式。 如需詳細資訊，請參閱 [備份概觀 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)。  
   
 > [!IMPORTANT]  
 >  不論資料庫的復原模式為何，比建立備份之版本還舊的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本，都無法還原 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份。  
@@ -122,10 +126,10 @@ caps.handback.revision: 46
   
  一般而言，大量記錄復原模式與完整復原模式類似，針對完整復原模式所描述的資訊也同時適用於兩者。 但是，大量記錄復原模式會影響時間點復原與線上還原。  
   
-### 時間點復原的限制  
+### <a name="restrictions-for-point-in-time-recovery"></a>時間點復原的限制  
  如果大量記錄復原模式下建立的記錄備份包含大量記錄變更，就不允許時間點復原。 嘗試對包含大量變更的記錄備份執行時間點復原將會造成還原作業失敗。  
   
-### 對線上還原的限制  
+### <a name="restrictions-for-online-restore"></a>對線上還原的限制  
  線上還原順序只有在符合下列條件時才能運作：  
   
 -   必須在開始還原順序之前完成所有必要的記錄備份。  
@@ -144,9 +148,9 @@ caps.handback.revision: 46
 ##  <a name="DRA"></a> Database Recovery Advisor (SQL Server Management Studio)  
  Database Recovery Advisor 有助於建構實作最佳化正確還原順序的還原計畫。 我們已經處理了客戶所要求的許多已知資料庫還原問題和增強功能。 Database Recovery Advisor 導入的主要增強功能包括：  
   
--   **還原計畫演算法：**用來建構還原計畫的演算法已經大幅改善，特別是針對複雜的還原狀況。 相較於舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 而言，可更有效率地處理許多邊緣案例 (包括時間點還原的分岔案例)。  
+-   **還原計畫演算法：**  用來建構還原計畫的演算法已經大幅改善，特別是針對複雜的還原狀況。 相較於舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]而言，可更有效率地處理許多邊緣案例 (包括時間點還原的分岔案例)。  
   
--   **時間點還原：**Database Recovery Advisor 大幅簡化資料庫還原到特定時間點的作業。 視覺備份時間表大幅增強時間點還原的支援。 這個視覺化時間表可讓您識別當做還原資料庫之目標復原點的可行時間點。 時間表可加快周遊分岔復原路徑 (跨多個復原分岔之路徑)。 特定時間點還原計畫會自動包含與還原至目標時間點 (日期和時間) 有關的備份。 如需詳細資訊，請參閱[將 SQL Server 資料庫還原至某個時間點 &#40;完整復原模式&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)。  
+-   **時間點還原：**  Database Recovery Advisor 大幅簡化資料庫還原到特定時間點的作業。 視覺備份時間表大幅增強時間點還原的支援。 這個視覺化時間表可讓您識別當做還原資料庫之目標復原點的可行時間點。 時間表可加快周遊分岔復原路徑 (跨多個復原分岔之路徑)。 特定時間點還原計畫會自動包含與還原至目標時間點 (日期和時間) 有關的備份。 如需詳細資訊，請參閱[將 SQL Server 資料庫還原至某個時間點 &#40;完整復原模式&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)。  
   
  如需有關 Database Recovery Advisor 的詳細資訊，請參閱下列 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理能力部落格：  
   
@@ -157,7 +161,7 @@ caps.handback.revision: 46
 ##  <a name="RelatedContent"></a> 相關內容  
  無。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [備份概觀 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)  
   
   

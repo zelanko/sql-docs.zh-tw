@@ -1,29 +1,33 @@
 ---
-title: "建立認證 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "認證 [SQL Server], 建立"
-  - "驗證 [SQL Server], 認證"
-  - "登入 [SQL Server], 認證"
+title: "建立認證 | Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- credentials [SQL Server], creating
+- authentication [SQL Server], credentials
+- logins [SQL Server], credentials
 ms.assetid: c1e77e91-2a69-40d9-b8b3-97cffc710586
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 80dba3f156735179c0fb016e39f3065acd6f5ac1
+ms.lasthandoff: 04/11/2017
+
 ---
-# 建立認證
+# <a name="create-a-credential"></a>建立認證
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中建立認證。  
   
- 認證提供允許 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證使用者擁有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外之識別的方法。 這主要是用來執行具 EXTERNAL_ACCESS 權限集之組件中的程式碼。 認證也可以在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證使用者需要存取網域資源時使用，例如儲存備份的檔案位置。  
+ 認證提供允許 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證使用者擁有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]以外之識別的方法。 這主要是用來執行具 EXTERNAL_ACCESS 權限集之組件中的程式碼。 認證也可以在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證使用者需要存取網域資源時使用，例如儲存備份的檔案位置。  
   
  認證可以同時對應至數個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登入。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登入每次只能對應至一個認證。 建立認證之後，請使用 [登入屬性 (一般頁面)] 將登入對應至認證。  
   
@@ -56,7 +60,7 @@ caps.handback.revision: 17
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 若要建立認證  
+#### <a name="to-create-a-credential"></a>若要建立認證  
   
 1.  在物件總管中，展開 [安全性]  資料夾。  
   
@@ -76,7 +80,7 @@ caps.handback.revision: 17
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 若要建立認證  
+#### <a name="to-create-a-credential"></a>若要建立認證  
   
 1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的執行個體。  
   

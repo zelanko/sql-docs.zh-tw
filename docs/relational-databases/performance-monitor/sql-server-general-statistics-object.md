@@ -1,26 +1,30 @@
 ---
 title: "SQL Server 的 General Statistics 物件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQLServer:General Statistics"
-  - "General Statistics 物件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQLServer:General Statistics
+- General Statistics object
 ms.assetid: c738e549-d7e7-4211-9ec3-064ac140af7c
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e179c0523d8d406f9413f98a0a5a7acbc7e714a1
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server 的 General Statistics 物件
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 **SQLServer:General Statistics** 物件提供計數器來監視整個伺服器範圍的一般活動，例如目前的連接數目，以及每秒與執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之電腦連接與中斷連接的使用者數目。 當您處理大型線上交易處理 (OLTP) 類型的系統時，這類系統中有許多用戶端會與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體連接與中斷連接，這時就會相當有用。  
+# <a name="sql-server-general-statistics-object"></a>SQL Server 的 General Statistics 物件
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 **SQLServer:General Statistics** 物件提供計數器來監視整個伺服器範圍的一般活動，例如目前的連接數目，以及每秒與執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之電腦連接與中斷連接的使用者數目。 當您處理大型線上交易處理 (OLTP) 類型的系統時，這類系統中有許多用戶端會與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體連接與中斷連接，這時就會相當有用。  
   
  下表描述 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **General Statistics** 計數器。  
   
@@ -30,7 +34,7 @@ caps.handback.revision: 26
 |**Connection resets/sec**|從連接集區啟動的登入總數。|  
 |**Event Notifications Delayed Drop**|等待系統執行緒卸除的事件通知數目。|  
 |**HTTP Authenticated Requests**|每秒啟動的經驗證 HTTP 要求數目。|  
-|**Logical Connections**|系統的邏輯連接數目。<br /><br /> 邏輯連接的主要用途是服務 Multiple Active Result Sets (MARS) 要求。 針對 MARS 要求，每次當應用程式建立連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，可能會有一個以上的邏輯連接對應至該實體連接。<br /><br /> 若不使用 MARS，則實體連接與邏輯連接的比率為 1:1。 因此，每次有應用程式建立連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，邏輯連接數目就會遞增 1。|  
+|**Logical Connections**|系統的邏輯連接數目。<br /><br /> 邏輯連接的主要用途是服務 Multiple Active Result Sets (MARS) 要求。 針對 MARS 要求，每次當應用程式建立連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]時，可能會有一個以上的邏輯連接對應至該實體連接。<br /><br /> 若不使用 MARS，則實體連接與邏輯連接的比率為 1:1。 因此，每次有應用程式建立連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]時，邏輯連接數目就會遞增 1。|  
 |**Logins/sec**|每秒啟動登入總數。 這不包括共用連接。|  
 |**Logouts/sec**|每秒啟動的登出總數。|  
 |**Mars Deadlocks**|偵測到的 MARS 死結數目。|  
@@ -51,7 +55,7 @@ caps.handback.revision: 26
 |**交易**|交易編列數目 (結合本機、DTC、繫結)。|  
 |**User Connections**|計算目前已連線到 SQL Server 的使用者數目。|  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [監視資源使用狀況 &#40;系統監視器&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

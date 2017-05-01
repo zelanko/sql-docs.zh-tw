@@ -1,30 +1,34 @@
 ---
 title: "分次還原 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "部分更新 [SQL Server]"
-  - "階段式還原 [SQL Server]"
-  - "分次還原 [SQL Server]"
-  - "還原 [SQL Server], 分次還原實例"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- partial updates [SQL Server]
+- staged restores [SQL Server]
+- piecemeal restores [SQL Server]
+- restoring [SQL Server], piecemeal restore scenario
 ms.assetid: 208f55e0-0762-4cfb-85c4-d36a76ea0f5b
 caps.latest.revision: 74
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 74
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b1c653a1facffa0c6f6422645f3336120e8864f1
+ms.lasthandoff: 04/11/2017
+
 ---
-# 分次還原 (SQL Server)
+# <a name="piecemeal-restores-sql-server"></a>分次還原 (SQL Server)
   這個主題僅與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise 版中包含多個檔案或檔案群組 (若是簡單模式，僅適用唯讀檔案群組) 的資料庫有關。  
   
- 如需分次還原及記憶體最佳化資料表的詳細資訊，請參閱[分次還原具有記憶體最佳化資料表的資料庫](../../relational-databases/in-memory-oltp/piecemeal-restore-of-databases-with-memory-optimized-tables.md)。  
+ 如需分次還原及記憶體最佳化資料表的詳細資訊，請參閱 [分次還原具有記憶體最佳化資料表的資料庫](../../relational-databases/in-memory-oltp/piecemeal-restore-of-databases-with-memory-optimized-tables.md)。  
   
  *「分次還原」* (Piecemeal Restore) 允許對含有多個檔案群組的資料庫分段進行還原與復原。 分次還原涉及一連串的還原順序，這會從主要檔案群組開始，而在某些情況下，還會從其中一個或多個次要的檔案群組開始。 分次還原會維護各項檢查，以確保最後資料庫能維持一致。 還原順序完成後，就可以直接讓復原的檔案 (如果這些檔案有效，而且與資料庫一致) 上線。  
   
@@ -38,7 +42,7 @@ caps.handback.revision: 74
   
  執行分次還原的實際需求視資料庫的復原模式而定。 如需詳細資訊，請參閱本主題稍後的「在簡單復原模式下分次還原」與「在完整復原模式下分次還原」。  
   
-## 分次還原實例  
+## <a name="piecemeal-restore-scenarios"></a>分次還原實例  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的所有版本都支援離線分次還原。 在 Enterprise 版中，分次還原可以在線上或離線進行。 離線與線上分次還原的含意如下：  
   
 -   離線分次還原實例  
@@ -49,16 +53,16 @@ caps.handback.revision: 74
   
      如果是在部分還原順序之後的線上分次還原中，資料庫會在線上運作，且可使用主要檔案群組和任何復原的次要檔案群組。 尚未還原的檔案群組會保持離線，但資料庫持續在線上運作時可視需要予以還原。  
   
-     線上分次還原可以包括延遲交易。 當只有還原檔案群組的子集時，可能會延遲相依於線上檔案群組之資料庫中的交易。 這是正常狀況，因為整個資料庫必須維持一致。 如需詳細資訊，請參閱[延遲交易 &#40;SQL Server&#41;](../../relational-databases/backup-restore/deferred-transactions-sql-server.md)。  
+     線上分次還原可以包括延遲交易。 當只有還原檔案群組的子集時，可能會延遲相依於線上檔案群組之資料庫中的交易。 這是正常狀況，因為整個資料庫必須維持一致。 如需詳細資訊，請參閱 [延遲交易 &#40;SQL Server&#41;](../../relational-databases/backup-restore/deferred-transactions-sql-server.md)中無用的檔案群組。  
   
 -   [!INCLUDE[hek_1](../../includes/hek-1-md.md)] 分次還原狀況  
   
-     如需記憶體中 OLTP 資料庫之分次還原的相關資訊，請參閱[使用記憶體最佳化資料表分次備份和還原資料庫](../../relational-databases/in-memory-oltp/piecemeal-restore-of-databases-with-memory-optimized-tables.md)。  
+     如需記憶體中 OLTP 資料庫之分次還原的相關資訊，請參閱 [使用記憶體最佳化資料表分次備份和還原資料庫](../../relational-databases/in-memory-oltp/piecemeal-restore-of-databases-with-memory-optimized-tables.md)。  
   
-## 限制  
+## <a name="restrictions"></a>限制  
  如果部分還原順序排除任何 [FILESTREAM](../../relational-databases/blob/filestream-sql-server.md) 檔案群組，則不支援時間點還原。 您可以強制還原順序，以繼續進行。 但是，絕對無法還原 RESTORE 陳述式中省略的 FILESTREAM 檔案群組。 若要強制時間點還原，請指定 CONTINUE_AFTER_ERROR 選項，連同 STOPAT、STOPATMARK 或 STOPBEFOREMARK 選項，而且您也必須在後續的 RESTORE LOG 陳述式中指定這些項目。 如果您指定 CONTINUE_AFTER_ERROR，則部分還原順序會成功，而 FILESTREAM 檔案群組則會變成無法復原。  
   
-## 在簡單復原模式下分次還原  
+## <a name="piecemeal-restore-under-the-simple-recovery-model"></a>在簡單復原模式下分次還原  
  在簡單復原模式下，分次還原順序必須從完整資料庫或部分備份開始。 然後，如果還原備份是差異基底，請接著還原最近一次的差異備份。  
   
  在第一個部分還原順序期間，如果只還原讀取/寫入檔案群組的子集，則當您復原部分還原的資料庫時，任何未還原的檔案群組就會變得無用。 只有下列情況才適合省略部分還原順序中的讀取/寫入檔案群組：  
@@ -69,7 +73,7 @@ caps.handback.revision: 74
   
 -   完整備份是在資料庫使用簡單復原模式當時所進行的，但是復原點則是在資料庫使用完整復原模式的時候。 如需詳細資訊，請參閱本主題稍後的「針對已從簡單復原模式切換到完整復原模式的資料庫執行分次還原」。  
   
-### 在簡單復原模式下分次還原的需求  
+### <a name="requirements-for-piecemeal-restore-under-the-simple-recovery-model"></a>在簡單復原模式下分次還原的需求  
  在簡單復原模式下，初始階段會還原並復原主要檔案群組以及所有的讀取/寫入次要檔案群組。 初始階段完成後，就可以直接讓復原的檔案 (如果這些檔案有效，而且與資料庫一致) 上線。  
   
  此後，可以分一個或多個其他階段來還原唯讀檔案群組。  
@@ -90,7 +94,7 @@ caps.handback.revision: 74
   
 -   若要唯讀檔案的備份與主要檔案群組一致，從備份次要檔案群組開始，到包含主要檔案群組的備份完成為止，次要檔案群組都必須是唯讀。 如果差異檔案備份是在檔案群組成為唯讀之後才建立，您可以使用這些差異檔案備份。  
   
-### 分次還原階段 (簡單復原模式)  
+### <a name="piecemeal-restore-stages-simple-recovery-model"></a>分次還原階段 (簡單復原模式)  
  分次還原實例牽涉到下列階段：  
   
 -   初始階段 (還原並復原主要檔案群組與所有讀取/寫入檔案群組)  
@@ -116,13 +120,13 @@ caps.handback.revision: 74
   
     -   損毀或與資料庫不一致的檔案必須在復原之前予以還原。  
   
-### 範例  
+### <a name="examples"></a>範例  
   
 -   [範例：分次還原資料庫 &#40;簡單復原模式&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-database-simple-recovery-model.md)  
   
 -   [範例：僅限於部分檔案群組的分次還原 &#40;簡單復原模式&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
   
-## 在完整復原模式下分次還原  
+## <a name="piecemeal-restore-under-the-full-recovery-model"></a>在完整復原模式下分次還原  
  在完整復原模式或大量記錄復原模式下，分次還原適用於任何包含多個檔案群組的資料庫，而且您可以將資料庫還原到任何一個時間點。 分次還原的還原順序的運作方式如下：  
   
 -   部分還原順序  
@@ -141,16 +145,16 @@ caps.handback.revision: 74
   
      在 Enterprise 版中，可以在資料庫仍在線上運作時還原並復原任何離線的次要檔案群組。 如果特定唯讀檔案是未受損的，且與資料庫一致，就不需要還原檔案。 如需詳細資訊，請參閱[復原資料庫而不還原資料 &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/recover-a-database-without-restoring-data-transact-sql.md)。  
   
-### 套用記錄備份  
+### <a name="applying-log-backups"></a>套用記錄備份  
  如果唯讀檔案群組從建立檔案備份以前已經是唯讀，就不需要將記錄備份套用到檔案群組，而且檔案還原會將它略過。 如果檔案群組是可讀取/寫入，就必須套用無間斷記錄備份鏈結至最後一個完整或差異還原，才能將檔案群組向前復原到目前的記錄檔。  
   
-### 範例  
+### <a name="examples"></a>範例  
   
 -   [範例：分次還原資料庫 &#40;完整復原模式&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-database-full-recovery-model.md)  
   
 -   [範例：僅限於部分檔案群組的分次還原 &#40;完整復原模式&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-only-some-filegroups-full-recovery-model.md)  
   
-## 針對已從簡單復原模式切換到完整復原模式的資料庫執行分次還原  
+## <a name="performing-a-piecemeal-restore-of-a-database-whose-recovery-model-has-been-switched-from-simple-to-full"></a>針對已從簡單復原模式切換到完整復原模式的資料庫執行分次還原  
  從完整的部分或資料庫備份起，您就可以開始針對已經從簡單復原模式切換到完整復原模式的資料庫執行分次還原。 例如，考慮有個資料庫採取了下列步驟：  
   
 1.  建立簡單模式資料庫的部分備份 (backup_1)。  
@@ -171,9 +175,9 @@ caps.handback.revision: 74
   
 4.  差異備份之後緊接著原始分次還原順序中所還原的任何其他備份，可還原資料直到原始的復原點為止。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [套用交易記錄備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [將 SQL Server 資料庫還原至某個時間點 &#40;完整復原模式&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)   
  [還原和復原概觀 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)   
  [規劃和執行還原順序 &#40;完整復原模式&#41;](../../relational-databases/backup-restore/plan-and-perform-restore-sequences-full-recovery-model.md)  

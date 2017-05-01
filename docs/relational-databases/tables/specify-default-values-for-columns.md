@@ -1,25 +1,29 @@
 ---
 title: "指定資料行的預設值 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "資料行 [SQL Server], 預設值"
-  - "預設值"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- columns [SQL Server], defaults
+- default values
 ms.assetid: 64514aed-b846-407b-992e-cf813f9a1a91
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 956e23e61cb97d5d1adecf4a06f40f734da42948
+ms.lasthandoff: 04/11/2017
+
 ---
-# 指定資料行的預設值
+# <a name="specify-default-values-for-columns"></a>指定資料行的預設值
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中指定將在資料行中輸入的預設值。 如果您沒有指派預設值，而且使用者將資料行保留空白，則：  
@@ -61,7 +65,7 @@ caps.handback.revision: 18
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 若要指定資料行的預設值  
+#### <a name="to-specify-a-default-value-for-a-column"></a>若要指定資料行的預設值  
   
 1.  在物件總管 中，找到要變更小數位數的資料行，以滑鼠右鍵按一下含有這些資料行的資料表，然後按一下 [設計]。  
   
@@ -76,7 +80,7 @@ caps.handback.revision: 18
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 若要指定資料行的預設值  
+#### <a name="to-specify-a-default-value-for-a-column"></a>若要指定資料行的預設值  
   
 1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   

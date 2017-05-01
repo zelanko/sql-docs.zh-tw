@@ -1,22 +1,26 @@
 ---
 title: "從資料存取應用程式呼叫原生編譯預存程序 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9cf6c5ff-4548-401a-b3ec-084f47ff0eb8
 caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0fce8ff8377ee7da4ff7c9d9e57ec01872702abc
+ms.lasthandoff: 04/11/2017
+
 ---
-# 從資料存取應用程式呼叫原生編譯預存程序
+# <a name="calling-natively-compiled-stored-procedures-from-data-access-applications"></a>從資料存取應用程式呼叫原生編譯預存程序
   本主題討論從資料存取應用程式呼叫原生編譯之預存程序的相關指引。  
   
  資料指標無法逐一查看原生編譯的預存程序。  
@@ -41,7 +45,7 @@ caps.handback.revision: 10
   
 -   開啟資料庫的連接。  
   
--   使用 **SQLBindParameter** 繫結參數。  
+-   使用 **SQLBindParameter**繫結參數。  
   
 -   使用 **SQLPrepare**，準備程序呼叫。  
   
@@ -79,12 +83,12 @@ for (unsigned int i = 0; i < order.ItemCount; i++) {
 }  
 ```  
   
-## 使用 ODBC 執行原生編譯的預存程序  
+## <a name="using-odbc-to-execute-a-natively-compiled-stored-procedure"></a>使用 ODBC 執行原生編譯的預存程序  
  此範例示範如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式繫結參數和執行預存程序。  範例會編譯為主控台應用程式，它會使用直接執行的方式插入單一訂單，以及使用備妥的執行插入訂單詳細資料。  
   
  若要執行此範例：  
   
-1.  建立含有記憶體最佳化資料檔案群組的範例資料庫。 如需如何建立具有記憶體最佳化資料檔案群組之資料庫的資訊，請參閱[建立記憶體最佳化資料表和原生編譯的預存程序](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md)。  
+1.  建立含有記憶體最佳化資料檔案群組的範例資料庫。 如需如何建立具有記憶體最佳化資料檔案群組之資料庫的資訊，請參閱 [建立記憶體最佳化資料表和原生編譯的預存程序](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md)。  
   
 2.  建立稱為 PrepExecSample 且指向資料庫的 ODBC 資料來源。 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 驅動程式。 您也可以修改範例並使用 [Microsoft ODBC Driver for SQL Server](http://msdn.microsoft.com/library/jj730314.aspx)。  
   
@@ -391,7 +395,7 @@ int _tmain() {
 }  
 ```  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [原生編譯的預存程序](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  
   
   

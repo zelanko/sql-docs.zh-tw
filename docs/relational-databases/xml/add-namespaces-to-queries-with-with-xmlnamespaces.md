@@ -1,40 +1,44 @@
 ---
-title: "使用 WITH XMLNAMESPACES 將命名空間加入至查詢 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ELEMENTS XSINIL 指示詞"
-  - "加入命名空間"
-  - "XSINIL 指示詞"
-  - "預設命名空間"
-  - "查詢 [SQL Server 中的 XML], WITH XMLNAMESPACES 子句"
-  - "預先定義的命名空間 [SQL Server 中的 XML]"
-  - "FOR XML 子句, WITH XMLNAMESPACES 子句"
-  - "命名空間 [SQL Server 中的 XML]"
-  - "XML 資料類型 [SQL Server], WITH XMLNAMESPACES 子句"
-  - "WITH XMLNAMESPACES 子句"
+title: "使用 WITH XMLNAMESPACES 將命名空間新增至查詢 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ELEMENTS XSINIL directive
+- adding namespaces
+- XSINIL directive
+- default namespaces
+- queries [XML in SQL Server], WITH XMLNAMESPACES clause
+- predefined namespaces [XML in SQL Server]
+- FOR XML clause, WITH XMLNAMESPACES clause
+- namespaces [XML in SQL Server]
+- xml data type [SQL Server], WITH XMLNAMESPACES clause
+- WITH XMLNAMESPACES clause
 ms.assetid: 2189cb5e-4460-46c5-a254-20c833ebbfec
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 63cc371d0a4b1c19971fe7f9e614f10d5c04765f
+ms.lasthandoff: 04/11/2017
+
 ---
-# 使用 WITH XMLNAMESPACES 將命名空間加入至查詢
-  [WITH XMLNAMESPACES &#40;Transact-SQL&#41;](../Topic/WITH%20XMLNAMESPACES%20\(Transact-SQL\).md) 會以下列方式支援命名空間 URI：  
+# <a name="add-namespaces-to-queries-with-with-xmlnamespaces"></a>使用 WITH XMLNAMESPACES 將命名空間加入至查詢
+  [WITH XMLNAMESPACES &#40;Transact-SQL&#41;](../../t-sql/xml/with-xmlnamespaces.md) 會以下列方式支援命名空間 URI：  
   
 -   它可以在 [使用 FOR XML 查詢建構 XML](../../relational-databases/xml/for-xml-sql-server.md) 時，讓命名空間前置詞到 URI 的對應可供使用。  
   
 -   它讓 [xml 資料類型方法](../../t-sql/xml/xml-data-type-methods.md)的靜態命名空間內容，有 URI 對應的命名空間可用。  
   
-## 在 FOR XML 查詢中使用 WITH XMLNAMESPACES  
+## <a name="using-with-xmlnamespaces-in-the-for-xml-queries"></a>在 FOR XML 查詢中使用 WITH XMLNAMESPACES  
  WITH XMLNAMESPACES 讓您可以在 FOR XML 查詢中包括 XML 命名空間。 例如，請看下列的 FOR XML 查詢：  
   
 ```  
@@ -95,7 +99,7 @@ FOR XML RAW ('ns1:Prod'), ELEMENTS
     INSERT INTO T VALUES('<myNS:root/>')  
     ```  
   
-## 使用 XSINIL 指示詞  
+## <a name="using-the-xsinil-directive"></a>使用 XSINIL 指示詞  
  若您正在使用 ELEMENTS XSINIL 指示詞，就無法在 WITH XMLNAMESPACES 子句中定義 xsi 前置詞。 不過，它會在您使用 ELEMENTS XSINIL 時自動加入。 下列查詢會使用 ELEMENTS XSINIL，以產生元素中心的 XML，其中 Null 值會對應到 **xsi:nil** 屬性設為 True 的元素。  
   
 ```  
@@ -118,7 +122,7 @@ FOR XML RAW, ELEMENTS XSINIL
 </row>  
 ```  
   
-## 指定預設命名空間  
+## <a name="specifying-default-namespaces"></a>指定預設命名空間  
  您可以使用 DEFAULT 關鍵字來宣告預設的命名空間，而不需要宣告命名空間前置詞。 在 FOR XML 查詢中，它會將預設的命名空間繫結到產生之 XML 中的 XML 節點。 在下面的範例中，WITH XMLNAMESPACES 定義兩個連同預設命名空間一起定義的命名空間前置詞。  
   
 ```  
@@ -161,7 +165,7 @@ WHERE ProductID=316 or ProductID=317
 FOR XML AUTO, ROOT('ns2:root'), ELEMENTS  
 ```  
   
-## 使用預先定義的命名空間  
+## <a name="using-predefined-namespaces"></a>使用預先定義的命名空間  
  使用預先定義的命名空間時，除了使用 ELEMENTS XSINIL 時的 xml 命名空間及 xsi 命名空間之外，您必須使用 WITH XMLNAMESPACES 明確地指定命名空間繫結。 下列查詢針對預先定義的命名空間 (`urn:schemas-microsoft-com:xml-sql`) 明確地定義了命名空間前置詞到 URI 的繫結。  
   
 ```  
@@ -189,7 +193,7 @@ FOR XML PATH ('Translation')
 go  
 ```  
   
- @xml:lang 屬性會使用預先定義的 xml 命名空間。 因為 XML 1.0 版不需要明確宣告 xml 命名空間繫結，所以結果不會包括命名空間繫結的明確宣告。  
+ @xml:lang 屬性會使用預先定義的 XML 命名空間。 因為 XML 1.0 版不需要明確宣告 xml 命名空間繫結，所以結果不會包括命名空間繫結的明確宣告。  
   
  以下是結果：  
   
@@ -200,7 +204,7 @@ go
 </Translation>  
 ```  
   
-## 將 WITH XMLNAMESPACES 搭配 xml 資料類型方法使用  
+## <a name="using-with-xmlnamespaces-with-the-xml-data-type-methods"></a>將 WITH XMLNAMESPACES 搭配 xml 資料類型方法使用  
  在 SELECT 查詢中指定 [xml 資料類型方法](../../t-sql/xml/xml-data-type-methods.md) (或 UPDATE 中指定 **modify()** 方法) 時，全部都必須在其初構中重複命名空間宣告。 這可能會很費時。 例如，下列查詢會擷取其目錄描述確實包括規格的產品型號識別碼。 也就是說，有 <`Specifications`> 元素。  
   
 ```  
@@ -223,7 +227,7 @@ WHERE CatalogDescription.exist('
 declare namespace pd="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
 ```  
   
- 另外，您也可以先宣告 WITH XMLNAMESPACES，然後在查詢中使用命名空間前置詞。 在此情況中，**query()** 及 **exist()** 方法就不需要在初構中包含命名空間宣告。  
+ 另外，您也可以先宣告 WITH XMLNAMESPACES，然後在查詢中使用命名空間前置詞。 在此情況中， **query()** 及 **exist()** 方法就不需要在初構中包含命名空間宣告。  
   
 ```  
 WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' as pd)  
@@ -241,10 +245,10 @@ Go
   
  請注意，XQuery 初構中的明確宣告會覆寫命名空間前置詞，以及 WITH 子句中定義的預設元素命名空間。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [xml 資料類型方法](../../t-sql/xml/xml-data-type-methods.md)   
  [XQuery 語言參考 &#40;SQL Server&#41;](../../xquery/xquery-language-reference-sql-server.md)   
- [WITH XMLNAMESPACES &#40;Transact-SQL&#41;](../Topic/WITH%20XMLNAMESPACES%20\(Transact-SQL\).md)   
+ [WITH XMLNAMESPACES &#40;Transact-SQL&#41;](../../t-sql/xml/with-xmlnamespaces.md)   
  [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md)  
   
   

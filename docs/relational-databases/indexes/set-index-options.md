@@ -1,35 +1,39 @@
 ---
 title: "設定索引選項 | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ALLOW_ROW_LOCKS 選項"
-  - "SORT_IN_TEMPDB 選項"
-  - "DROP_EXISTING 子句"
-  - "大型資料, 索引"
-  - "PAD_INDEX"
-  - "STATISTICS_NORECOMPUTE"
-  - "MAXDOP 索引選項, 設定"
-  - "索引選項 [SQL Server]"
-  - "MAXDOP 索引選項"
-  - "IGNORE_DUP_KEY 選項"
-  - "ALLOW_PAGE_LOCKS 選項"
-  - "ONLINE"
+ms.custom: 
+ms.date: 02/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ALLOW_ROW_LOCKS option
+- SORT_IN_TEMPDB option
+- DROP_EXISTING clause
+- large data, indexes
+- PAD_INDEX
+- STATISTICS_NORECOMPUTE
+- MAXDOP index option, setting
+- index options [SQL Server]
+- MAXDOP index option
+- IGNORE_DUP_KEY option
+- ALLOW_PAGE_LOCKS option
+- ONLINE
 ms.assetid: 7969af33-e94c-41f7-ab89-9d9a2747cd5c
 caps.latest.revision: 44
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 44
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6cd0050887729a84dfa637ce86e51b5edcc8ee45
+ms.lasthandoff: 04/11/2017
+
 ---
-# 設定索引選項
+# <a name="set-index-options"></a>設定索引選項
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中修改索引的屬性。  
@@ -63,7 +67,7 @@ caps.handback.revision: 44
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 在資料表設計工具中修改索引的屬性  
+#### <a name="to-modify-the-properties-of-an-index-in-table-designer"></a>在資料表設計工具中修改索引的屬性  
   
 1.  在 [物件總管] 中，按一下加號展開資料庫，此資料庫包含您要修改索引屬性的資料表。  
   
@@ -81,7 +85,7 @@ caps.handback.revision: 44
   
 8.  在 [檔案] 功能表上，選取 [儲存 *table_name*]。  
   
-#### 在物件總管中修改索引的屬性  
+#### <a name="to-modify-the-properties-of-an-index-in-object-explorer"></a>在物件總管中修改索引的屬性  
   
 1.  在 [物件總管] 中，按一下加號展開資料庫，此資料庫包含您要修改索引屬性的資料表。  
   
@@ -101,7 +105,7 @@ caps.handback.revision: 44
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 查看資料表中所有索引的屬性  
+#### <a name="to-see-the-properties-of-all-the-indexes-in-a-table"></a>查看資料表中所有索引的屬性  
   
 1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
@@ -135,7 +139,7 @@ caps.handback.revision: 44
   
     ```  
   
-#### 設定索引的屬性  
+#### <a name="to-set-the-properties-of-an-index"></a>設定索引的屬性  
   
 1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
@@ -150,3 +154,4 @@ caps.handback.revision: 44
  如需詳細資訊，請參閱 [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)。  
   
   
+

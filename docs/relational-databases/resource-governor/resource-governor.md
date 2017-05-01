@@ -1,28 +1,32 @@
 ---
-title: "資源管理員 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "資源管理員, 概觀"
-  - "資源管理員"
+title: "資源管理員 | Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Resource Governor, overview
+- Resource Governor
 ms.assetid: 2bc89b66-e801-45ba-b30d-8ed197052212
 caps.latest.revision: 41
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c7bbd2ba4ed132f3e1a795f72667c34f764c0d30
+ms.lasthandoff: 04/11/2017
+
 ---
-# 資源管理員
+# <a name="resource-governor"></a>資源管理員
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資源管理員是一項功能，可讓您用於管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工作負載和系統資源耗用量。 資源管理員可讓您針對內送應用程式要求可用的 CPU、實體 IO 和記憶體數量指定限制。  
   
-## 資源管理員的優點  
+## <a name="benefits-of-resource-governor"></a>資源管理員的優點  
  資源管理員可讓您藉由指定內送要求的資源耗用量限制來管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工作負載和資源。 在「資源管理員」環境中，工作負載是一組大小類似的查詢或要求，可以也應該將其視為單一實體。 這不是一項規定，但是當工作負載的資源使用模式越一致時，您就可以從「資源管理員」得到更多的好處。 可以即時重新設定資源限制，對正在執行的工作負載造成最低的影響。  
   
  在相同伺服器上有多個相異工作負載的環境中，資源管理員可讓您區分這些工作負載，並根據您指定的限制在要求的情況下配置共用資源。 這些資源是 CPU、實體 IO 和記憶體。  
@@ -37,7 +41,7 @@ caps.handback.revision: 41
   
 -   針對資源使用量交易糾紛，加入細部鎖定資源追蹤，並且為伺服器資源的取用者提供預測帳單。  
   
-## 資源管理員條件約束  
+## <a name="resource-governor-constraints"></a>資源管理員條件約束  
  這一版的資源管理員有以下條件約束：  
   
 -   資源管理受限於 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]。 「資源管理員」無法用於 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。  
@@ -50,21 +54,21 @@ caps.handback.revision: 41
   
 -   您無法設定內部資源集區的 IO 臨界值。  
   
-## 資源概念  
+## <a name="resource-concepts"></a>資源概念  
  下列三個概念是了解和使用資源管理員的基礎：  
   
--   **資源集區：** 資源集區代表伺服器的實體資源。 您可以將集區視為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體內部的虛擬 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，系統會建立兩個資源集區 (內部和預設)。 資源管理員也可支援使用者定義的資源集區。 如需詳細資訊，請參閱 [Resource Governor Resource Pool](../../relational-databases/resource-governor/resource-governor-resource-pool.md)。  
+-   **資源集區。** 資源集區代表伺服器的實體資源。 您可以將集區視為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體內部的虛擬 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，系統會建立兩個資源集區 (內部和預設)。 資源管理員也可支援使用者定義的資源集區。 如需詳細資訊，請參閱 [Resource Governor Resource Pool](../../relational-databases/resource-governor/resource-governor-resource-pool.md)。  
   
--   **工作負載群組：** 工作負載群組可做為有類似分類準則之工作階段要求的容器。 工作負載允許對工作階段進行彙總監視，並定義工作階段的原則。 每個工作負載群組各在一個資源集區中。 安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，系統會建立兩個工作負載群組 (內部和預設)，並將其對應至相對應的資源集區。 資源管理員也可支援使用者定義的工作負載群組。 如需相關資訊，請參閱 [Resource Governor Workload Group](../../relational-databases/resource-governor/resource-governor-workload-group.md)。  
+-   **工作負載群組。** 工作負載群組可做為有類似分類準則之工作階段要求的容器。 工作負載允許對工作階段進行彙總監視，並定義工作階段的原則。 每個工作負載群組各在一個資源集區中。 安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，系統會建立兩個工作負載群組 (內部和預設)，並將其對應至相對應的資源集區。 資源管理員也可支援使用者定義的工作負載群組。 如需相關資訊，請參閱 [Resource Governor Workload Group](../../relational-databases/resource-governor/resource-governor-workload-group.md)。  
   
--   **分類：** 分類程序會根據工作階段的特性，將工作階段指派給工作負載群組。 您可以透過撰寫使用者定義函數 (稱為分類函數) 來自訂分類邏輯。 資源管理員也可支援實作分類規則的使用者定義分類函數。 如需詳細資訊，請參閱 [Resource Governor Classifier Function](../../relational-databases/resource-governor/resource-governor-classifier-function.md)。  
+-   **分類。** 分類程序會根據工作階段的特性，將工作階段指派給工作負載群組。 您可以透過撰寫使用者定義函數 (稱為分類函數) 來自訂分類邏輯。 資源管理員也可支援實作分類規則的使用者定義分類函數。 如需詳細資訊，請參閱 [Resource Governor Classifier Function](../../relational-databases/resource-governor/resource-governor-classifier-function.md)。  
   
 > [!NOTE]  
 >  資源管理員不會對專用管理員連接 (DAC) 進行任何控制， 因為根本不需要分類在內部工作負載群組和資源集區中執行的 DAC 查詢。  
   
  在資源管理員的內容中，您可以將上述概念視為元件。 下圖將顯示這些元件以及它們在 Database Engine 環境中存在時，彼此的關聯性。 從處理的觀點而言，簡化的流程如下所示：  
   
--   工作階段 (工作階段 1，共 *n* 個) 的內送連接已存在。  
+-   工作階段 (工作階段 1，共 *n*個) 的內送連接已存在。  
   
 -   工作階段進行分類 (分類)。  
   
@@ -76,7 +80,7 @@ caps.handback.revision: 41
   
  ![資源管理員功能性元件](../../relational-databases/resource-governor/media/rg-basic-funct-components.gif "資源管理員功能性元件")  
   
-## 資源管理員工作  
+## <a name="resource-governor-tasks"></a>資源管理員工作  
   
 |工作描述|主題|  
 |----------------------|-----------|  
@@ -84,11 +88,11 @@ caps.handback.revision: 41
 |描述如何停用資源管理員。|[停用資源管理員](../../relational-databases/resource-governor/disable-resource-governor.md)|  
 |描述如何建立、改變和卸除資源集區。|[資源管理員資源集區](../../relational-databases/resource-governor/resource-governor-resource-pool.md)|  
 |描述如何建立、改變、移動及卸除工作負載群組。|[資源管理員工作負載群組](../../relational-databases/resource-governor/resource-governor-workload-group.md)|  
-|描述如何建立和測試分類使用者定義函數。|[資源管理員分類函數](../../relational-databases/resource-governor/resource-governor-classifier-function.md)|  
+|描述如何建立和測試分類使用者定義函數。|[資源管理員分類函式](../../relational-databases/resource-governor/resource-governor-classifier-function.md)|  
 |描述如何使用範本設定資源管理員。|[使用範本來設定資源管理員](../../relational-databases/resource-governor/configure-resource-governor-using-a-template.md)|  
 |描述如何檢視資源管理員的屬性。|[檢視資源管理員屬性](../../relational-databases/resource-governor/view-resource-governor-properties.md)|  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [Database Engine 執行個體 &#40;SQL Server&#41;](../../database-engine/configure-windows/database-engine-instances-sql-server.md)  
   
   

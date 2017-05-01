@@ -1,28 +1,32 @@
 ---
 title: "建立非叢集索引 | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "索引建立 [SQL Server], 非叢集索引"
-  - "非叢集索引 [SQL Server], 建立"
-  - "非叢集索引 [SQL Server], UNIQUE 條件約束"
-  - "索引 [SQL Server], 非叢集"
-  - "非叢集索引 [SQL Server], PRIMARY KEY 條件約束"
+ms.custom: 
+ms.date: 02/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- index creation [SQL Server], nonclustered indexes
+- nonclustered indexes [SQL Server], creating
+- nonclustered indexes [SQL Server], UNIQUE constraint
+- indexes [SQL Server], nonclustered
+- nonclustered indexes [SQL Server], PRIMARY KEY constraint
 ms.assetid: 9402029a-1227-46c4-93aa-c2122eb1b943
 caps.latest.revision: 41
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 38b54a03706cbb44f0c4001d00d5505201940be6
+ms.lasthandoff: 04/11/2017
+
 ---
-# 建立非叢集索引
+# <a name="create-nonclustered-indexes"></a>建立非叢集索引
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中建立非叢集索引。 非叢集索引是與資料表中所儲存之資料不同的索引結構，可重新排序一個或多個選取的資料行。 非叢集索引經常可協助您以比搜尋基礎資料表更快的速度找到資料；查詢的結果有時會完全來自非叢集索引中的資料，或是非叢集索引可能會將 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 指向基礎資料表中的資料列。 一般而言，建立非叢集索引是為了改善叢集索引未涵蓋但經常使用之查詢的效能，或尋找沒有叢集索引之資料表中的資料列 (稱為堆積)。 您可以在資料表或索引檢視表上建立多個非叢集索引。  
@@ -56,16 +60,16 @@ caps.handback.revision: 41
   
 -   **索引檢視上的非叢集索引**  
   
-     在檢視上建立唯一的叢集索引後，就可以建立非叢集索引。 如需詳細資訊，請參閱[建立索引檢視表](../../relational-databases/views/create-indexed-views.md)。  
+     在檢視上建立唯一的叢集索引後，就可以建立非叢集索引。 如需詳細資訊，請參閱 [建立索引檢視表](../../relational-databases/views/create-indexed-views.md)。  
   
 ###  <a name="Security"></a> 安全性  
   
 ####  <a name="Permissions"></a> Permissions  
- 需要資料表或檢視表的 ALTER 權限。 使用者必須是**系統管理員**固定伺服器角色的成員，或是 **db_ddladmin** 和 **db_owner** 固定資料庫角色的成員。  
+ 需要資料表或檢視表的 ALTER 權限。 使用者必須是 **系統管理員** 固定伺服器角色的成員，或是 **db_ddladmin** 和 **db_owner** 固定資料庫角色的成員。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 若要使用資料表設計工具建立非叢集索引  
+#### <a name="to-create-a-nonclustered-index-by-using-the-table-designer"></a>若要使用資料表設計工具建立非叢集索引  
   
 1.  在 [物件總管] 中，展開包含您要建立非叢集索引之資料表的資料庫。  
   
@@ -83,9 +87,9 @@ caps.handback.revision: 41
   
 8.  按一下 [ **關閉**]。  
   
-9. 在 [檔案] 功能表上，按一下 [儲存 \<資料表名稱>]。  
+9. 在 [檔案] 功能表上，按一下 [儲存 <資料表名稱>]。  
   
-#### 若要使用物件總管建立非叢集索引  
+#### <a name="to-create-a-nonclustered-index-by-using-object-explorer"></a>若要使用物件總管建立非叢集索引  
   
 1.  在 [物件總管] 中，展開包含您要建立非叢集索引之資料表的資料庫。  
   
@@ -107,7 +111,7 @@ caps.handback.revision: 41
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 若要在資料表上建立非叢集索引  
+#### <a name="to-create-a-nonclustered-index-on-a-table"></a>若要在資料表上建立非叢集索引  
   
 1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
@@ -133,3 +137,4 @@ caps.handback.revision: 41
  如需詳細資訊，請參閱 [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)。  
   
   
+

@@ -1,33 +1,37 @@
 ---
 title: "XML 結構描述集合 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "XSD 結構描述 [SQL Server]"
-  - "xml_schema_namespace 函數"
-  - "XML 結構描述集合 [SQL Server], 關於 XML 結構描述集合"
-  - "中繼資料 [SQL Server], XML 結構描述集合"
-  - "查詢 [SQL Server 中的 XML], XML 結構描述集合"
-  - "結構描述集合 [SQL Server]"
-  - "結構描述 [SQL Server], XML"
-  - "XML [SQL Server], 結構描述集合"
-  - "XML 結構描述集合 [SQL Server]"
-  - "結構描述集合 [SQL Server], 關於 XML 結構描述集合"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- XSD schemas [SQL Server]
+- xml_schema_namespace function
+- XML schema collections [SQL Server], about XML schema collections
+- metadata [SQL Server], XML schema collections
+- queries [XML in SQL Server], XML schema collections
+- schema collections [SQL Server]
+- schemas [SQL Server], XML
+- XML [SQL Server], schema collections
+- XML schema collections [SQL Server]
+- schema collections [SQL Server], about XML schema collections
 ms.assetid: 659d41aa-ccec-4554-804a-722a96ef25c2
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5368814b9cd123c0e968ecef14fa236d09b3c57d
+ms.lasthandoff: 04/11/2017
+
 ---
-# XML 結構描述集合 (SQL Server)
+# <a name="xml-schema-collections-sql-server"></a>XML 結構描述集合 (SQL Server)
   如 [xml &#40;Transact-SQL&#41;](../../t-sql/xml/xml-transact-sql.md) 主題所述，SQL Server 是透過 **XML** 資料類型來提供原生的 XML 資料儲存體。 您可以選擇透過 XML 結構描述集合，使 XSD 結構描述與  類型的變數或資料行產生關聯。 XML 結構描述集合會儲存匯入的 XML 結構描述，然後用來執行下列作業：  
   
 -   驗證 XML 執行個體  
@@ -40,9 +44,9 @@ caps.handback.revision: 31
   
  查詢處理引擎也會使用結構描述來檢查類型，以及將查詢和資料修改最佳化。  
   
- 此外，針對具類型的 **xml** 時，SQL Server 還會使用相關聯的 XML 結構描述集合來驗證 XML 執行個體。 如果 XML 執行個體符合結構描述，資料庫就會允許執行個體以其類型資訊儲存在系統中。 否則，資料庫會拒絕該執行個體。  
+ 此外，針對具類型的 **xml**時，SQL Server 還會使用相關聯的 XML 結構描述集合來驗證 XML 執行個體。 如果 XML 執行個體符合結構描述，資料庫就會允許執行個體以其類型資訊儲存在系統中。 否則，資料庫會拒絕該執行個體。  
   
- 您可以使用內建函數 XML_SCHEMA_NAMESPACE 來擷取儲存在資料庫中的結構描述集合。 如需詳細資訊，請參閱[檢視儲存的 XML 結構描述集合](../../relational-databases/xml/view-a-stored-xml-schema-collection.md)。  
+ 您可以使用內建函數 XML_SCHEMA_NAMESPACE 來擷取儲存在資料庫中的結構描述集合。 如需詳細資訊，請參閱 [檢視儲存的 XML 結構描述集合](../../relational-databases/xml/view-a-stored-xml-schema-collection.md)。  
   
  您也可以使用 XML 結構描述集合來輸入 XML 變數、參數及資料行。  
   
@@ -95,9 +99,9 @@ caps.handback.revision: 31
 </xsd:schema>  
 ```  
   
- 以上的結構描述顯示可儲存於資料庫的不同類型元件， 這些元件包括 `SomeAttribute`、`SomeType`、`OrderType`、`CustomerType`、`Customer`、`Order`、`CustomerID`、`OrderID`、`OrderDate`、`RequiredDate` 及 `ShippedDate`。  
+ 以上的結構描述顯示可儲存於資料庫的不同類型元件， 這些元件包括 `SomeAttribute`、 `SomeType`、 `OrderType`、 `CustomerType`、 `Customer`、 `Order`、 `CustomerID`、 `OrderID`、 `OrderDate`、 `RequiredDate`及 `ShippedDate`。  
   
-### 元件類別  
+### <a name="component-categories"></a>元件類別  
  儲存在資料庫中的「結構描述」元件可分成下列類別：  
   
 -   ELEMENT  
@@ -114,11 +118,11 @@ caps.handback.revision: 31
   
 -   **SomeAttribute** 是 ATTRIBUTE 元件。  
   
--   **SomeType**、**OrderType** 和 **CustomerType** 是 TYPE 元件。  
+-   **SomeType**、 **OrderType**和 **CustomerType** 是 TYPE 元件。  
   
 -   **Customer** 是 ELEMENT 元件。  
   
- 當您將結構描述匯入資料庫後，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 並不會儲存結構描述本身。 不過，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會儲存各種個別的元件。 也就是說，並未儲存 \<Schema> 標記，只是保留定義於其中的元件。 所有的結構描述元素都沒有保留。 如果 \<Schema> 標記包含指定其元件預設行為的屬性，則這些屬性會在匯入程序期間移到標記內的結構描述元件，如下表所示。  
+ 當您將結構描述匯入資料庫後， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 並不會儲存結構描述本身。 不過， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會儲存各種個別的元件。 也就是說，並未儲存 \<Schema> 標記，只是保留定義於其中的元件。 所有的結構描述元素都沒有保留。 如果 \<Schema> 標記包含指定其元件預設行為的屬性，則這些屬性會在匯入程序期間移到標記內的結構描述元件，如下表所示。  
   
 |屬性名稱|行為|  
 |--------------------|--------------|  
@@ -160,7 +164,7 @@ caps.handback.revision: 31
 ##  <a name="info"></a> 取得有關 XML 結構描述和結構描述集合的資訊  
  XML 結構描述集合會列舉在目錄檢視 sys.xml_schema_collections 中。 XML 結構描述集合 "sys" 是由系統定義的。 其包含預先定義的命名空間，您不需要明確地將其載入，即可用在所有使用者自訂的 XML 結構描述集合中。 此清單包含 xml、xs、xsi、fn 及 xdt 的命名空間。 另外二個目錄檢視為 sys.xml_schema_namespaces：列舉出每個 XML 結構描述集合中的所有命名空間；以及 sys.xml_components：列舉出每個 XML 結構描述中的所有 XML 結構描述元件。  
   
- 內建函數 **XML_SCHEMA_NAMESPACE** (*schemaName、XmlSchemacollectionName、namespace-uri*) 會產生 **xml** 資料類型執行個體。 此執行個體包含 XML 結構描述集合中所包含之結構描述的 XML 結構描述片段 (預先定義的 XML 結構描述除外)。  
+ 內建函數 **XML_SCHEMA_NAMESPACE**( *schemaName、XmlSchemacollectionName、namespace-uri*) 會產生 **xml** 資料類型執行個體。 此執行個體包含 XML 結構描述集合中所包含之結構描述的 XML 結構描述片段 (預先定義的 XML 結構描述除外)。  
   
  您可以用下列方法來列舉 XML 結構描述集合的內容：  
   
@@ -170,7 +174,7 @@ caps.handback.revision: 31
   
  如下列範例所示。  
   
-### 範例：列舉 XML 結構描述集合中的 XML 命名空間  
+### <a name="example-enumerate-the-xml-namespaces-in-an-xml-schema-collection"></a>範例：列舉 XML 結構描述集合中的 XML 命名空間  
  針對 XML 結構描述集合 "myCollection" 來使用下列查詢：  
   
 ```  
@@ -180,16 +184,16 @@ FROM    sys.xml_schema_collections XSC JOIN sys.xml_schema_namespaces XSN
 WHERE    XSC.name = 'myCollection'     
 ```  
   
-### 範例：列舉 XML 結構描述集合的內容  
+### <a name="example-enumerate-the-contents-of-an-xml-schema-collection"></a>範例：列舉 XML 結構描述集合的內容  
  下列陳述式會列舉關聯式結構描述 dbo 中之 XML 結構描述集合 "myCollection" 的內容。  
   
 ```  
 SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection')  
 ```  
   
- 您可以將目標命名空間指定為 **XML_SCHEMA_NAMESPACE()** 的第三個引數，以 **xml** 資料類型執行個體的型式來取得集合中的個別 XML 結構描述。 下列範例會顯示這一點。  
+ 您可以將目標命名空間指定為 **XML_SCHEMA_NAMESPACE()** 的第三個引數，以 **xml**資料類型執行個體的型式來取得集合中的個別 XML 結構描述。 下列範例會顯示這一點。  
   
-### 範例：從 XML 結構描述集合輸出指定的結構描述  
+### <a name="example-output-a-specified-schema-from-an-xml-schema-collection"></a>範例：從 XML 結構描述集合輸出指定的結構描述  
  下列陳述式會從關聯式結構描述 dbo 中的 XML 結構描述集合 "myCollection"，輸出含有目標命名空間 "http://www.microsoft.com/books" 的 XML 結構描述。  
   
 ```  
@@ -197,14 +201,14 @@ SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection',
 N'http://www.microsoft.com/books')  
 ```  
   
-### 查詢 XML 結構描述  
+### <a name="querying-xml-schemas"></a>查詢 XML 結構描述  
  您可以用下列方法來查詢您已載入至 XML 結構描述集合的 XML 結構描述：  
   
 -   在 XML 結構描述命名空間的目錄檢視上撰寫 Transact-SQL 查詢。  
   
 -   建立一個包含 **xml** 資料類型資料行的資料表來儲存您的 XML 結構描述，並將其載入 XML 類型系統中。 您可以使用 **xml** 資料類型方法來查詢 XML 資料行。 您也可以在此資料行上建立 XML 索引。 然而，使用這個方法時，應用程式必須維護儲存在 XML 資料行中之 XML 結構描述與 XML 類型系統之間的一致性。 例如，若您從 XML 類型系統中卸除 XML 結構描述命名空間，就必須也將它從資料表中卸除，以維持一致性。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [檢視儲存的 XML 結構描述集合](../../relational-databases/xml/view-a-stored-xml-schema-collection.md)   
  [前置處理結構描述以合併包含的結構描述](../../relational-databases/xml/preprocess-a-schema-to-merge-included-schemas.md)   
  [伺服器上 XML 結構描述集合的需求與限制](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  

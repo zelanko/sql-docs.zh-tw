@@ -1,29 +1,33 @@
 ---
 title: "次要資料庫設定 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.databaseproperties.logshipping.settings.dest.f1"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.databaseproperties.logshipping.settings.dest.f1
 ms.assetid: f992ffc9-ee42-43fe-acec-512032f0ded1
 caps.latest.revision: 32
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7ec30a94c58a94d2afad050eab06ecc60432c7b1
+ms.lasthandoff: 04/11/2017
+
 ---
-# 次要資料庫設定
+# <a name="secondary-database-settings"></a>次要資料庫設定
   您可以使用此對話方塊，來設定和修改記錄傳送組態中，次要資料庫的屬性。  
   
- 如需記錄傳送概念的說明，請參閱[關於記錄傳送 &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)。  
+ 如需記錄傳送概念的說明，請參閱 [關於記錄傳送 &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)。  
   
-## 選項  
+## <a name="options"></a>選項  
  **次要伺服器執行個體**  
  顯示目前在記錄傳送組態中設定為次要伺服器的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱。  
   
@@ -51,7 +55,7 @@ caps.handback.revision: 32
  **是，將主要資料庫的現有備份還原到次要資料庫**  
  讓 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 使用主要資料庫的現有備份，以初始化次要資料庫。 在 **[備份檔案]** 方塊中輸入該備份的位置。 如果您在 [次要資料庫] 方塊中輸入新的資料庫名稱，進行還原作業時就會建立此資料庫。  
   
- **備份檔案**  
+ **[備份檔案]**  
  如果您選擇 [是，將主要資料庫的現有備份還原到次要資料庫] 選項，請輸入要用來初始化次要資料庫之完整資料庫備份的路徑與檔案名稱。  
   
  **還原選項**  
@@ -75,7 +79,7 @@ caps.handback.revision: 32
  **排程**  
  顯示用來從主要伺服器複製交易記錄備份至次要伺服器的 SQL Server Agent 複製作業的目前排程。 按一下 **[排程...]**，即可修改此排程。  
   
- **排程...**  
+ **[排程...]**  
  修改用來從主要伺服器複製交易記錄備份至次要伺服器的 SQL Server Agent 作業的參數。  
   
  **停用此作業**  
@@ -108,13 +112,13 @@ caps.handback.revision: 32
  **排程**  
  顯示用來還原交易記錄備份至次要資料庫的 SQL Server Agent 作業的目前排程。 按一下 **[排程...]**，即可修改此選項。  
   
- **排程...**  
+ **[排程...]**  
  修改與 SQL Server Agent 還原作業相關的參數。  
   
  **停用此作業**  
  暫停次要資料庫的還原作業。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [SQL Server 資料庫的備份與還原](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [關於記錄傳送 &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)  
   

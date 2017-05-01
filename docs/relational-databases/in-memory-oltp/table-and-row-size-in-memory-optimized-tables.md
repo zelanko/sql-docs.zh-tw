@@ -1,22 +1,26 @@
 ---
 title: "記憶體最佳化資料表中的資料表和資料列大小 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b0a248a4-4488-4cc8-89fc-46906a8c24a1
 caps.latest.revision: 28
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 57d2a22fc535f3613ce680156a0a6bb55ec62fa1
+ms.lasthandoff: 04/11/2017
+
 ---
-# 記憶體最佳化資料表中的資料表和資料列大小
+# <a name="table-and-row-size-in-memory-optimized-tables"></a>記憶體最佳化資料表中的資料表和資料列大小
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   記憶體最佳化的表格由資料列與索引 (包含資料列的指標) 的集合組成。 在記憶體最佳化的資料表中，in-row 資料的長度不得超過 8,060 個位元組。 不過，啟動 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 時，可能會建立具有多個大型資料行 (例如，多個 varbinary(8000) 資料行) 和 LOB 資料行 (即 varbinary(max)、varchar(max) 和 nvarchar(max)) 的資料表。 超出 in-row 資料最大大小的資料行都會置於特殊內部資料表中的 off-row。 如需這些內部資料表的詳細資訊，請參閱 [sys.memory_optimized_tables_internal_attributes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md)。
@@ -37,7 +41,7 @@ caps.handback.revision: 28
   
  下圖說明包含索引和資料列的資料表，這些索引和資料列各自擁有資料列標頭和主體：  
   
- ![記憶體最佳化資料表。](../../relational-databases/in-memory-oltp/media/hekaton-guide-1.gif "記憶體最佳化資料表。")  
+ ![記憶體最佳化資料表。](../../relational-databases/in-memory-oltp/media/hekaton-guide-1.gif "Memory optimized table.")  
 由索引和資料列組成之記憶體最佳化的資料表。  
   
  資料表的記憶體中大小 (以位元組為單位) 計算如下：  
@@ -96,7 +100,7 @@ caps.handback.revision: 28
   
  下圖說明有兩個索引的資料表之資料列結構：  
   
- ![資料表有兩個索引的資料列結構。](../../relational-databases/in-memory-oltp/media/hekaton-tables-4.gif "資料表有兩個索引的資料列結構。")  
+ ![有兩個索引的資料表資料列結構。](../../relational-databases/in-memory-oltp/media/hekaton-tables-4.gif "有兩個索引的資料表資料列結構。")  
   
  開始和結束時間戳記表示特定資料列版本有效的期間。 在這個間隔中啟動的交易可以看到這個資料列版本。 如需詳細資料，請參閱 [與記憶體最佳化資料表的交易](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md)。  
   
@@ -227,7 +231,7 @@ select * from sys.dm_db_xtp_table_memory_stats
 where object_id = object_id('dbo.Orders')  
 ```  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [記憶體最佳化資料表](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   

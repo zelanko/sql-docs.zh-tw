@@ -1,24 +1,28 @@
 ---
 title: "使用 FileTables 中的目錄與路徑 | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/26/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FileTable [SQL Server], 目錄"
+ms.custom: 
+ms.date: 08/26/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FileTables [SQL Server], directories
 ms.assetid: f1e45900-bea0-4f6f-924e-c11e1f98ab62
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d41410b3da1f823a29da0c5b7bd706dff4ce4584
+ms.lasthandoff: 04/11/2017
+
 ---
-# 使用 FileTables 中的目錄與路徑
+# <a name="work-with-directories-and-paths-in-filetables"></a>使用 FileTables 中的目錄與路徑
   描述在 FileTable 中儲存檔案的目錄結構。  
   
 ##  <a name="HowToDirectories"></a> 如何：使用 FileTables 中的目錄與路徑  
@@ -31,7 +35,7 @@ caps.handback.revision: 25
 |經由提供路徑的方法，取得 FileTable 中指定之檔案或目錄的路徑定位器識別碼值。|[GetPathLocator &#40;Transact-SQL&#41;](../../relational-databases/system-functions/getpathlocator-transact-sql.md)|  
   
 ##  <a name="BestPracticeRelativePaths"></a> 如何：使用可攜式程式碼的相對路徑  
- 若要讓程式碼和應用程式獨立於目前的電腦和資料庫之外，請避免撰寫依賴絕對檔案路徑的程式碼。 相反地，同時使用 [FileTableRootPath &#40;Transact-SQL&#41;](../../relational-databases/system-functions/filetablerootpath-transact-sql.md) 和 [GetFileNamespacePath &#40;Transact-SQL&#41;](../../relational-databases/system-functions/getfilenamespacepath-transact-sql.md) 函數，以取得檔案在執行階段的完整路徑，如下列範例所示。 根據預設， **GetFileNamespacePath** 函數會傳回資料庫根路徑之下的檔案相對路徑。  
+ 若要讓程式碼和應用程式獨立於目前的電腦和資料庫之外，請避免撰寫依賴絕對檔案路徑的程式碼。 相反地，同時使用 [FileTableRootPath &#40;Transact-SQL&#41;](../../relational-databases/system-functions/filetablerootpath-transact-sql.md) 和 [GetFileNamespacePath &#40;Transact-SQL&#41;](../../relational-databases/system-functions/getfilenamespacepath-transact-sql.md)函數，以取得檔案在執行階段的完整路徑，如下列範例所示。 根據預設， **GetFileNamespacePath** 函數會傳回資料庫根路徑之下的檔案相對路徑。  
   
 ```tsql  
 USE database_name;  
@@ -94,9 +98,9 @@ GO
 |-|-|-|  
 |*is_directory* **value**|*file_stream* **value**|**行為**|  
 |FALSE|NULL|此為無效的組合，將由系統定義的條件約束所攔截。|  
-|FALSE|\<value>|該項目代表檔案。|  
+|FALSE|\<值>|該項目代表檔案。|  
 |TRUE|NULL|該項目代表目錄。|  
-|TRUE|\<value>|此為無效的組合，將由系統定義的條件約束所攔截。|  
+|TRUE|\<值>|此為無效的組合，將由系統定義的條件約束所攔截。|  
   
 ##  <a name="alwayson"></a> 使用虛擬網路名稱 (VNN) 搭配 AlwaysOn 可用性群組  
  當包含 FILESTREAM 或 FileTable 資料的資料庫屬於 AlwaysOn 可用性群組時：  
@@ -105,10 +109,11 @@ GO
   
 -   透過檔案系統 API 對 FILESTREAM 或 FileTable 資料進行的所有存取都應該使用 VNN 而非電腦名稱。 如需詳細資訊，請參閱 [FILESTREAM 和 FileTable 與 AlwaysOn 可用性群組 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/filestream-and-filetable-with-always-on-availability-groups-sql-server.md)。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [啟用 FileTable 的必要條件](../../relational-databases/blob/enable-the-prerequisites-for-filetable.md)   
  [建立、改變及卸除 FileTable](../../relational-databases/blob/create-alter-and-drop-filetables.md)   
  [利用 Transact-SQL 存取 FileTable](../../relational-databases/blob/access-filetables-with-transact-sql.md)   
  [使用檔案輸入輸出 API 存取 FileTable](../../relational-databases/blob/access-filetables-with-file-input-output-apis.md)  
   
   
+

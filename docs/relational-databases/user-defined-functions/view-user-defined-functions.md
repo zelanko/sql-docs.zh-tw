@@ -1,31 +1,35 @@
 ---
 title: "檢視使用者定義函數 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-udf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.udfproperties.general.f1"
-  - "sql13.swb.functionproperties.general.f1"
-helpviewer_keywords: 
-  - "顯示使用者定義的函式"
-  - "檢視使用者定義函數"
-  - "使用者定義函數 [SQL Server], 檢視"
-  - "狀態資訊 [SQL Server], 使用者定義函數"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-udf
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.udfproperties.general.f1
+- sql13.swb.functionproperties.general.f1
+helpviewer_keywords:
+- displaying user-defined functions
+- viewing user-defined functions
+- user-defined functions [SQL Server], viewing
+- status information [SQL Server], user-defined functions
 ms.assetid: a45dfab5-6384-4311-b935-2e23a70c5c10
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 16f1c2ed871db93259f87bc2e26dba634a0602d6
+ms.lasthandoff: 04/11/2017
+
 ---
-# 檢視使用者定義函數
-  您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，取得 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中使用者定義函數之定義或屬性的相關資訊。 您可能需要查看函數的定義才能了解如何從來源資料表衍生出資料；或是查看函數所定義的資料。  
+# <a name="view-user-defined-functions"></a>檢視使用者定義函數
+  您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，取得 [!INCLUDE[tsql](../../includes/tsql-md.md)]中使用者定義函數之定義或屬性的相關資訊。 您可能需要查看函數的定義才能了解如何從來源資料表衍生出資料；或是查看函數所定義的資料。  
   
 > [!IMPORTANT]  
 >  如果變更函數所參考的物件名稱，就必須修改該函數，使其文字反映新的名稱。 因此，在改變物件名稱時，首先要檢視此物件的相依性以了解是否有相關的函數受到影響。  
@@ -51,7 +55,7 @@ caps.handback.revision: 30
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 若要顯示使用者定義函數的屬性  
+#### <a name="to-show-a-user-defined-functions-properties"></a>若要顯示使用者定義函數的屬性  
   
 1.  在 **[物件總管]**中，按一下資料庫旁邊的加號，此資料庫包含您要查看其屬性的函數，然後按一下加號展開 **[可程式性]** 資料夾。  
   
@@ -110,7 +114,7 @@ caps.handback.revision: 30
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 若要取得函數定義和屬性  
+#### <a name="to-get-the-definition-and-properties-of-a-function"></a>若要取得函數定義和屬性  
   
 1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
@@ -151,7 +155,7 @@ caps.handback.revision: 30
   
  如需詳細資訊，請參閱 [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) 和 [OBJECT_DEFINITION &#40;Transact-SQL&#41;](../../t-sql/functions/object-definition-transact-sql.md)。  
   
-#### 若要取得函數的相依性  
+#### <a name="to-get-the-dependencies-of-a-function"></a>若要取得函數的相依性  
   
 1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   

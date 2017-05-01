@@ -1,77 +1,81 @@
 ---
 title: "比較複寫資料表的差異 (複寫程式設計) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "tablediff 公用程式"
-  - "比較複寫資料表"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- tablediff utility
+- comparing replicated tables
 ms.assetid: cd253a17-0c85-42b4-912c-690169ebe799
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f53c21103cf05d606ab9a8543606577df097a353
+ms.lasthandoff: 04/11/2017
+
 ---
-# 比較複寫資料表的差異 (複寫程式設計)
-  發行項驗證可用來判斷「發行者」和「訂閱者」端資料表發行項的發行資料是否互異，若有則可能代表無法聚合。 如需詳細資訊，請參閱 [驗證複寫資料](../../../relational-databases/replication/validate-replicated-data.md)。 不過，驗證只會傳回通過或失敗資訊，而不會針對來源及目的地資料表之間的差異提供任何相關資訊。  **Tablediff** 命令提示字元公用程式會傳回詳細資訊，兩個資料表之間的差異和甚至可能產生 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 指令碼，在 「 發行者 」 將訂閱的資料聚合。  
+# <a name="compare-replicated-tables-for-differences-replication-programming"></a>比較複寫資料表的差異 (複寫程式設計)
+  發行項驗證可用來判斷「發行者」和「訂閱者」端資料表發行項的發行資料是否互異，若有則可能代表無法聚合。 如需詳細資訊，請參閱[驗證複寫的資料](../../../relational-databases/replication/validate-replicated-data.md)。 不過，驗證只會傳回通過或失敗資訊，而不會針對來源及目的地資料表之間的差異提供任何相關資訊。 **tablediff** 命令提示字元公用程式會傳回兩個資料表之間差異的詳細資訊，甚至可能產生 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 指令碼，將訂閱向發行者端的資料聚合。  
   
 > [!NOTE]  
->   **Tablediff** 公用程式才支援 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 伺服器。  
+>  只有 **伺服器支援** tablediff [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 公用程式。  
   
-### 若要使用 tablediff 比較複寫資料表的差異  
+### <a name="to-compare-replicated-tables-for-differences-using-tablediff"></a>若要使用 tablediff 比較複寫資料表的差異  
   
-1.  從命令提示中複寫拓撲中的任何伺服器上，執行 [tablediff 公用程式](../../../tools/tablediff-utility.md)。 指定下列參數：  
+1.  從複寫拓撲中任何伺服器的命令提示字元執行 [tablediff Utility](../../../tools/tablediff-utility.md)。 指定下列參數：  
   
-    -   **-sourceserver** -所在資料已知為正確的通常是 「 發行者 」 的伺服器名稱。  
+    -   **-sourceserver** - 已知其上資料正確的伺服器名稱，通常是「發行者」端。  
   
-    -   **-sourcedatabase** -包含正確的資料之資料庫的名稱。  
+    -   **-sourcedatabase** - 包含正確資料之資料庫的名稱。  
   
-    -   **-sourcetable** -所比較發行項的來源資料表的名稱。  
+    -   **-sourcetable** - 所比較發行項之來源資料表的名稱。  
   
-    -   （選擇性） **-sourceschema** -來源資料表中，如果不是預設的結構描述的結構描述擁有者。  
+    -   (選擇性) **-sourceschema** - 來源資料表的結構描述擁有者 (若非預設的結構描述)。  
   
-    -   （選擇性） **-sourceuser** 和 **-sourcepassword** 使用 SQL Server 驗證連接到 「 發行者 」 時。  
-  
-        > [!IMPORTANT]  
-        >  盡可能使用 Windows 驗證。 如果必須使用「[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證」，請提示使用者在執行階段輸入安全性認證。 如果您必須將認證儲存在指令碼檔案中，則必須維護這個檔案的安全性，使他人無法在未獲授權的情況下擅自存取。  
-  
-    -   **-destinationserver** -所比較的資料，通常是 「 訂閱者 」 的伺服器名稱。  
-  
-    -   **-destinationdatabase** -名稱進行比較的資料庫。  
-  
-    -   **-destinationtable** -所比較之資料表的名稱。  
-  
-    -   （選擇性） **-destinationschema** -目的地資料表中，如果不是預設的結構描述的結構描述擁有者。  
-  
-    -   （選擇性） **-使用 「** 和 **-destinationuser** 時使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證來連接到訂閱者。  
+    -   (選擇性) 在使用「SQL Server 驗證」連接到「發行者」時，使用 **-sourceuser** 和 **-sourcepassword** 。  
   
         > [!IMPORTANT]  
-        >  盡可能使用 Windows 驗證。 如果必須使用「[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證」，請提示使用者在執行階段輸入安全性認證。 如果您必須將認證儲存在指令碼檔案中，則必須維護這個檔案的安全性，使他人無法在未獲授權的情況下擅自存取。  
+        >  盡可能使用 Windows 驗證。 如果必須使用「 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證」，請提示使用者在執行階段輸入安全性認證。 如果您必須將認證儲存在指令碼檔案中，則必須維護這個檔案的安全性，使他人無法在未獲授權的情況下擅自存取。  
   
-    -   （選擇性）使用 **-c** 來執行資料行層級比較。  
+    -   **-destinationserver** - 所比較資料所在伺服器的名稱，通常是「訂閱者」。  
   
-    -   （選擇性）使用 **-q** 若要執行快速，資料列計數-和-僅限結構描述比較。  
+    -   **-destinationdatabase** - 所比較資料庫的名稱。  
   
-    -   （選擇性）指定檔案名稱和路徑 **-o** 來輸出結果到檔案。  
+    -   **-destinationtable** - 所比較資料表的名稱。  
   
-    -   （選擇性）指定在訂閱資料庫，其中插入結果 **-et**。 如果資料表已存在，指定 **-dt** 先卸除資料表。  
+    -   (選擇性) **-destinationschema** - 目的地資料表的結構描述擁有者 (若非預設的結構描述)。  
   
-    -   （選擇性）使用 **-f** 產生 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 檔案，以修正 「 訂閱者 」 的資料，使其符合發行者端的資料。 使用 **-df** 以指定的數目 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 每個檔案中的陳述式。  
+    -   (選擇性) 在使用「 **驗證」連接到「訂閱者」時，使用** -destinationuser **和** -destinationpassword [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
-    -   （選擇性）使用 **-rc** 和 **-ri** 指定的作業，但重試間隔重試的次數。  
+        > [!IMPORTANT]  
+        >  盡可能使用 Windows 驗證。 如果必須使用「 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證」，請提示使用者在執行階段輸入安全性認證。 如果您必須將認證儲存在指令碼檔案中，則必須維護這個檔案的安全性，使他人無法在未獲授權的情況下擅自存取。  
   
-    -   （選擇性）使用 **-strict** 來強制執行嚴格的結構描述比較來源和目的地資料表。  
+    -   (選擇性) 使用 **-c** 可執行資料行層級比較。  
   
-## 另請參閱  
+    -   (選擇性) 使用 **-q** 可執行僅限列數和結構描述的快速比較。  
+  
+    -   (選擇性) 針對 **-o** 指定檔案名稱和路徑，以將結果輸出至檔案。  
+  
+    -   (選擇性) 指定訂閱資料庫中的資料表，以在其中插入 **-et**的結果。 如果該資料表已存在，請指定 **-dt** 先將該資料表卸除。  
+  
+    -   (選擇性) 使用 **-f** 可產生 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 檔案，以修正「訂閱者」端的資料，使其符合「發行者」端的資料。 使用 **-df** 可指定每個檔案中的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式數目。  
+  
+    -   (選擇性) 使用 **-rc** 和 **-ri** 可指定重試作業的次數和重試間隔。  
+  
+    -   (選擇性) 使用 **-strict** 可在來源和目的地資料表之間強制執行嚴格的結構描述比較。  
+  
+## <a name="see-also"></a>另請參閱  
  [驗證訂閱者端的資料](../../../relational-databases/replication/validate-data-at-the-subscriber.md)  
   
   

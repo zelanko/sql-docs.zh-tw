@@ -1,36 +1,40 @@
 ---
-title: "多邊形 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-spatial"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "geometry 子類型 [SQL Server]"
-  - "Polygon geometry 子類型 [SQL Server]"
+title: Polygon | Microsoft Docs
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-spatial
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- geometry subtypes [SQL Server]
+- Polygon geometry subtype [SQL Server]
 ms.assetid: b6a21c3c-fdb8-4187-8229-1c488454fdfb
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 08b68a58ad6d835349031de2dcf5c2dea215d188
+ms.lasthandoff: 04/11/2017
+
 ---
-# 多邊形
+# <a name="polygon"></a>多邊形
   **Polygon** 是儲存為一連串點的二維度介面，這些點可定義一個外部週框環形以及零個或多個內部環形。  
   
-## Polygon 執行個體  
+## <a name="polygon-instances"></a>Polygon 執行個體  
  **Polygon** 執行個體可以從環形組成 (此環形至少有三個相異點)。 **Polygon** 執行個體也可以是空的。  
   
- **Polygon** 的外部和任何內部環形定義了它的界限。 此環形內的空間定義了 **Polygon** 的內部。  
+ **Polygon** 的外部和任何內部環形定義了它的界限。 此環形內的空間定義了 **Polygon**的內部。  
   
  下圖顯示 **Polygon** 執行個體的範例。  
   
- ![幾�� Polygon 執行個體的範例](../../relational-databases/spatial/media/polygon.png "幾�� Polygon 執行個體的範例")  
+ ![幾何 Polygon 執行個體的範例](../../relational-databases/spatial/media/polygon.gif "幾何 Polygon 執行個體的範例")  
   
  如本圖所示：  
   
@@ -40,7 +44,7 @@ caps.handback.revision: 27
   
 3.  圖 3 是有效的 **Polygon** 執行個體，因為它的內部環形會在單一正切點上相交。  
   
-### 已接受的執行個體  
+### <a name="accepted-instances"></a>已接受的執行個體  
  已接受的 **Polygon** 執行個體是指可儲存在 **geometry** 或 **geography** 變數中而不會擲回例外狀況的執行個體。 已接受的 **Polygon** 執行個體如下：  
   
 -   空白的 **Polygon** 執行個體  
@@ -67,7 +71,7 @@ DECLARE @g5 geometry = 'POLYGON((1 1, 1 1, 1 1, 1 1))';
   
  如 `@g4` 和 `@g5` 所示，已接受的 **Polygon** 執行個體可能不是有效的 **Polygon** 執行個體。 `@g5` 也會顯示 Polygon 執行個體必須只包含具有任何四個點的環形才能被接受。  
   
- 下列範例會擲回 `System.FormatException`，因為系統不接受 **Polygon** 執行個體。  
+ 下列範例會擲回 `System.FormatException` ，因為系統不接受 **Polygon** 執行個體。  
   
 ```  
 DECLARE @g1 geometry = 'POLYGON((1 1, 3 3, 1 1))';  
@@ -80,7 +84,7 @@ DECLARE @g2 geometry = 'POLYGON((1 1, 3 3, 3 1, 1 5))';
 DECLARE @g geometry = 'POLYGON((-5 -5, -5 5, 5 5, 5 -5, -5 -5),(0 0, 3 0, 0 0))';  
 ```  
   
-### 有效的執行個體  
+### <a name="valid-instances"></a>有效的執行個體  
  **Polygon** 的內部環形可以在單一正切點上接觸其本身及彼此接觸，但是如果 **Polygon** 的內部環形相交，此執行個體就會無效。  
   
  下列範例會顯示有效的 **Polygon** 執行個體。  
@@ -106,7 +110,7 @@ SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid(), @g5.S
   
  `@g1` 無效，因為內部環形與外部環形有兩個接觸點。 `@g2` 無效，因為第二個內部環形位於第一個內部環形的內部。 `@g3` 無效，因為兩個內部環形有多個連續接觸點。 `@g4` 無效，因為兩個內部環形的內部互相重疊。 `@g5` 無效，因為內部環形不是第一個環形。 `@g6` 無效，因為環形並未包含至少三個不同的點。  
   
-## 範例  
+## <a name="examples"></a>範例  
  下列範例會建立包含一個洞及 SRID 10 的簡單 `geometry``Polygon` 執行個體。  
   
 ```  
@@ -114,14 +118,14 @@ DECLARE @g geometry;
 SET @g = geometry::STPolyFromText('POLYGON((0 0, 0 3, 3 3, 3 0, 0 0), (1 1, 1 2, 2 1, 1 1))', 10);  
 ```  
   
- 可輸入無效的執行個體，並將它轉換成有效的 `geometry` 執行個體。 在下列 `Polygon` 範例中，內部和外部環形會重疊，而且此執行個體無效。  
+ 可輸入無效的執行個體，並將它轉換成有效的 `geometry` 執行個體。 在下列 `Polygon`範例中，內部和外部環形會重疊，而且此執行個體無效。  
   
 ```  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('POLYGON((1 0, 0 1, 1 2, 2 1, 1 0), (2 0, 1 1, 2 2, 3 1, 2 0))');  
 ```  
   
- 在下列範例中，會使用 `MakeValid()` 讓無效的執行個體變成有效。  
+ 在下列範例中，會使用 `MakeValid()`讓無效的執行個體變成有效。  
   
 ```  
 SET @g = @g.MakeValid();  
@@ -143,9 +147,9 @@ SET @g = @g.MakeValid();
 SELECT @g.ToString()  
 ```  
   
- 上述傳回的 geometry 執行個體是 `Point(1 3)`。  如果給定的 `Polygon` 為 `POLYGON((1 3, 1 5, 1 3, 1 3))`，則 `MakeValid()` 就會傳回 `LINESTRING(1 3, 1 5)`。  
+ 上述傳回的 geometry 執行個體是 `Point(1 3)`。  如果給定的 `Polygon` 為 `POLYGON((1 3, 1 5, 1 3, 1 3))` ，則 `MakeValid()` 就會傳回 `LINESTRING(1 3, 1 5)`。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [STArea &#40;geometry 資料類型&#41;](../../t-sql/spatial-geometry/starea-geometry-data-type.md)   
  [STExteriorRing &#40;geometry 資料類型&#41;](../../t-sql/spatial-geometry/stexteriorring-geometry-data-type.md)   
  [STNumInteriorRing &#40;geometry 資料類型&#41;](../../t-sql/spatial-geometry/stnuminteriorring-geometry-data-type.md)   

@@ -1,32 +1,36 @@
 ---
-title: "資料列層級安全性 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/29/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "存取控制述詞"
-  - "資料列層級安全性"
-  - "安全性 [SQL Server], 以述詞為基礎的存取控制"
-  - "說明的資料列層級安全性"
-  - "以述詞為基礎的安全性"
+title: "資料列層級安全性 | Microsoft 文件"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/29/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- access control predicates
+- row level security
+- security [SQL Server], predicate based access control
+- row level security described
+- predicate based security
 ms.assetid: 7221fa4e-ca4a-4d5c-9f93-1b8a4af7b9e8
 caps.latest.revision: 47
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 47
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 0141c681779c12bf63162751f93dcd6495fb1a94
+ms.lasthandoff: 04/11/2017
+
 ---
-# 資料列層級安全性
+# <a name="row-level-security"></a>資料列層級安全性
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  ![Row level security graphic](../../relational-databases/security/media/row-level-security-graphic.png "Row level security graphic")  
+  ![資料列層級安全性圖形](../../relational-databases/security/media/row-level-security-graphic.png "資料列層級安全性圖形")  
   
  資料列層級安全性可讓客戶能夠控制存取的使用者執行查詢 (例如，群組成員資格或執行內容) 的特性為基礎的資料庫資料表中的資料列。  
   
@@ -36,30 +40,9 @@ caps.handback.revision: 47
   
  使用 [CREATE SECURITY POLICY](../../t-sql/statements/create-security-policy-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式以及作為[內嵌資料表值函數](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)的述詞來實作 RLS。  
   
-||  
-|-|  
-|：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至[目前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658))、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([](http://azure.micosoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))。|  
+：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至[目前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658))、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([](http://azure.micosoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))。  
   
-##  <a name="Top"></a> 本主題內容  
-  
--   [描述](#Description)  
-  
--   [使用案例](#UseCases)  
-  
--   [Permissions](#Permissions)  
-  
--   [最佳作法](#Best)  
-  
--   [安全性注意事項：側邊通道攻擊](#SecNote)  
-  
--   [跨功能的相容性](#Limitations)  
-  
--   [程式碼範例](#CodeExamples)  
-  
-    -   [A. 直接連接的使用者案例](#Typical)  
-  
-    -   [B. 中介層應用程式案例](#MidTier)  
-  
+
 ##  <a name="Description"></a> 描述  
  RLS 可支援兩種類型的安全性述詞。  
   
@@ -69,7 +52,7 @@ caps.handback.revision: 47
   
  定義為內嵌資料表值函數的安全性述詞，會限制資料表中資料列層級資料的存取權。 然後叫用函式並強制執行安全性原則。 對篩選述詞而言，沒有應用程式指示已從結果集篩選資料列；若所有資料列皆經過篩選，將會傳回 null 設定。 對 Block 述詞而言，任何違反述詞的作業都將會失敗並產生錯誤。  
   
- 篩選器述詞會在讀取資料時從基底資料表中套用，它會影響所有 get 作業：**SELECT**、**DELETE** (亦即， 使用者無法刪除篩選的資料列)，以及 **UPDATE** (亦即， 使用者無法更新資料列篩選，雖然您可以用後續篩選它們的這類方式更新資料列。 Block 述詞會影響所有寫入作業。  
+ 篩選器述詞會在讀取資料時從基底資料表中套用，它會影響所有 get 作業： **SELECT**、 **DELETE** (亦即， 使用者無法刪除篩選的資料列)，以及 **UPDATE** (亦即， 使用者無法更新資料列篩選，雖然您可以用後續篩選它們的這類方式更新資料列。 Block 述詞會影響所有寫入作業。  
   
 -   AFTER INSERT 和 AFTER UPDATE 述詞可以防止使用者將資料列更新為違反述詞的值。  
   
@@ -79,13 +62,13 @@ caps.handback.revision: 47
   
  篩選器述詞、Block 述詞及安全性原則皆具有下列行為：  
   
--   您可定義與另一個資料表聯結和/或叫用函數的述詞函數。 如果以 `SCHEMABINDING = ON` 來建立安全性原則，則聯結或函數可從查詢存取，並且如預期般運作，而不需任何額外的權限檢查。 如果以 `SCHEMABINDING = OFF` 來建立安全性原則，則使用者需要對這些額外的資料表和函數具有 **SELECT** 或 **EXECUTE** 權限，才能查詢目標資料表。  
+-   您可定義與另一個資料表聯結和/或叫用函數的述詞函數。 如果以 `SCHEMABINDING = ON`來建立安全性原則，則聯結或函數可從查詢存取，並且如預期般運作，而不需任何額外的權限檢查。 如果以 `SCHEMABINDING = OFF`來建立安全性原則，則使用者需要對這些額外的資料表和函數具有 **SELECT** 或 **EXECUTE** 權限，才能查詢目標資料表。  
   
      您可定義與另一個資料表聯結和/或叫用函數的述詞函數。 聯結/函式可如預期般從查詢存取，而不需任何額外的權限檢查的運作方式。  
   
 -   可對己定義但停用安全性述詞的資料表發出查詢。 不會影響任何屆時已篩選或封鎖的資料列。  
   
--   若 dbo 使用者、**db_owner** 角色的成員，或資料表擁有者對已定義且啟用安全性原則的資料表進行查詢，資料列便會依安全性原則所定義而受到篩選或封鎖。  
+-   若 dbo 使用者、 **db_owner** 角色的成員，或資料表擁有者對已定義且啟用安全性原則的資料表進行查詢，資料列便會依安全性原則所定義而受到篩選或封鎖。  
   
 -   若您嘗試變更結構描述繫結安全性原則所繫結資料表的結構描述，將會導致錯誤。 不過，您可以改變述詞不參考的資料行。  
   
@@ -107,7 +90,6 @@ caps.handback.revision: 47
   
 -   連同 BULK INSERT 在內的大量 API 皆未變更。 這表示 Block 述詞 AFTER INSERT 會套用至大量插入作業，就如同一般的插入作業。  
   
- [頂端](#Top)  
   
 ##  <a name="UseCases"></a> 使用案例  
  以下是如何使用 RLS 的設計範例：  
@@ -122,7 +104,6 @@ caps.handback.revision: 47
   
  在更正式的用語，RLS 將介紹述詞型的存取控制。 其特色為彈性、 集中式、 述詞性的評估，依據適當情況，考量中繼資料或其他系統管理員決定的準則。 述詞作為準則，以根據使用者屬性判斷使用者是否具有適當的資料存取權。 標籤為基礎的存取控制可以使用述詞為基礎的存取控制來實作。  
   
- [回到頁首](#Top)  
   
 ##  <a name="Permissions"></a> Permissions  
  建立、 改變或卸除安全性原則需要 **ALTER ANY SECURITY POLICY** 權限。 建立或卸除安全性原則需要 **ALTER** 結構描述權限。  
@@ -137,9 +118,8 @@ caps.handback.revision: 47
   
  安全性原則套用到所有使用者，包括資料庫中的 dbo 使用者。 Dbo 使用者可以改變或卸除安全性原則，不過可稽核的安全性原則變更。 若高特殊權限的使用者 (例如系統管理員或 db_owner) 需要查看所有資料列，以進行疑難排解或驗證資料，則安全性原則必須寫入為允許這麼做。  
   
- 如果以 `SCHEMABINDING = OFF` 來建立安全性原則，則為了查詢目標資料表，使用者必須對述詞函數和述詞函數內使用的任何其他資料表、檢視或函數具有 **SELECT** 或 **EXECUTE** 權限。 如果以 `SCHEMABINDING = ON` (預設值) 來建立安全性原則，則當使用者查詢目標資料表時，會略過這些權限檢查。  
+ 如果以 `SCHEMABINDING = OFF`來建立安全性原則，則為了查詢目標資料表，使用者必須對述詞函數和述詞函數內使用的任何其他資料表、檢視或函數具有  **SELECT** 或 **EXECUTE** 權限。 如果以 `SCHEMABINDING = ON` (預設值) 來建立安全性原則，則當使用者查詢目標資料表時，會略過這些權限檢查。  
   
- [頂端](#Top)  
   
 ##  <a name="Best"></a> 最佳作法  
   
@@ -162,18 +142,16 @@ caps.handback.revision: 47
 -   述詞函數不應依賴算術或傳回 **NULL** 的彙總運算式，以避免發生錯誤 (例如溢位或除以零)，因為此行為受到 [SET ANSI_WARNINGS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-warnings-transact-sql.md)、[SET NUMERIC_ROUNDABORT &#40;Transact-SQL&#41;](../../t-sql/statements/set-numeric-roundabort-transact-sql.md) 及 [SET ARITHABORT &#40;Transact-SQL&#41;](../../t-sql/statements/set-arithabort-transact-sql.md) 選項影響。  
   
 -   述詞函數不應比較串連的字串與 **NULL**，因為此行為受到 [SET CONCAT_NULL_YIELDS_NULL &#40;Transact-SQL&#41;](../../t-sql/statements/set-concat-null-yields-null-transact-sql.md) 選項影響。  
-  
- [頂端](#Top)  
+   
   
 ##  <a name="SecNote"></a> 安全性注意事項：側邊通道攻擊  
  **惡意的安全性原則管理員：** 觀察以下所述十分重要：惡意的安全性原則管理員，具有足夠的權限建立安全性原則上之機密的資料行並有權建立或改變內嵌資料表值函數，可以和另一位使用者共謀，該使用者具有資料表上的選擇權限，可惡意建立設計用來在用戶端通道攻擊推斷資料的內嵌資料表值函數，藉此執行資料竊取。 這類攻擊需要夥伴 (或惡意的使用者授與過多的權限)，並可能需要反覆修改原則 (需要移除述詞的權限，才能中斷結構描述繫結)、修改內嵌資料表值函式、並重複執行目標資料表上的 select 陳述式。 強烈建議在必要時限制權限，並監視任何可疑的活動，例如經常變動的原則和內嵌資料表值函式與資料列層級安全性的相關限制。  
   
- **精巧的查詢：** 很可能透過使用精巧的查詢，導致資訊外洩。 例如， `SELECT 1/(SALARY-100000) FROM PAYROLL WHERE NAME='John Doe'`可讓惡意使用者知道 John Doe 薪資為 $100000。 即使有安全性述詞用來防止惡意使用者直接查詢其他人的薪資，當查詢傳回除以零的例外狀況時，使用者仍可以決定。  
-  
- [頂端](#Top)  
+ **精巧的查詢：** 很可能透過使用精巧的查詢，導致資訊外洩。 例如， `SELECT 1/(SALARY-100000) FROM PAYROLL WHERE NAME='John Doe'` 可讓惡意使用者知道 John Doe 薪資為 $100000。 即使有安全性述詞用來防止惡意使用者直接查詢其他人的薪資，當查詢傳回除以零的例外狀況時，使用者仍可以決定。  
+   
   
 ##  <a name="Limitations"></a> 跨功能的相容性  
- 一般情況下，資料列層級安全性將在所有功能下正常運作。 但仍有一些例外狀況。 本節說明搭配 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的特定其他功能使用資料列層級安全性時，數個需要注意的事項及警告。  
+ 一般情況下，資料列層級安全性將在所有功能下正常運作。 但仍有一些例外狀況。 本節說明搭配 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的特定其他功能使用資料列層級安全性時，數個需要注意的事項及警告。  
   
 -   **DBCC SHOW_STATISTICS** 回報關於未篩選資料的統計資料，並可能因此導致洩漏安全性原則所保護的資訊。 有鑑於此，使用者必須擁有資料表，或使用者必須是系統管理員固定伺服器角色、db_owner 固定資料庫角色或 db_ddladmin 固定資料庫角色的成員，才能針對具資料列層級安全性原則的資料表檢視其統計資料物件。  
   
@@ -181,7 +159,7 @@ caps.handback.revision: 47
   
 -   **Polybase** RLS 與 Polybase 不相容。  
   
--   **記憶體最佳化資料表**在記憶體最佳化資料表上作為內嵌資料表值函數的安全性述詞必須使用 `WITH NATIVE_COMPILATION` 選項來定義。 使用此選項將會禁止記憶體最佳化資料表不支援的語言功能，並會在建立階段發出適當的錯誤。 如需詳細資訊，請參閱[記憶體最佳化的資料表簡介](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md)中的**記憶體最佳化資料表中的資料列層級安全性**一節。  
+-   **記憶體最佳化資料表**在記憶體最佳化資料表上作為內嵌資料表值函數的安全性述詞必須使用 `WITH NATIVE_COMPILATION` 選項來定義。 使用此選項將會禁止記憶體最佳化資料表不支援的語言功能，並會在建立階段發出適當的錯誤。 如需詳細資訊，請參閱 **記憶體最佳化的資料表簡介** 中的 [記憶體最佳化資料表中的資料列層級安全性](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md)一節。  
   
 -   **索引檢視表** 一般而言，您可以在檢視上建立安全性原則，並可以在由安全性原則所繫結的資料表上建立檢視。 不過，透過索引的資料列查閱會略過原則，因此您無法在具備安全性原則的資料表上建立索引檢視表。  
   
@@ -197,7 +175,6 @@ caps.handback.revision: 47
   
 -   **時態表** 與 RLS 相容。 不過，目前資料表上的安全性述詞不會自動複製到歷程記錄資料表。 若要將安全性原則套用至目前和歷程記錄資料表，您必須個別在每個資料表上新增安全性述詞。  
   
- [頂端](#Top)  
   
 ##  <a name="CodeExamples"></a> 範例  
   
@@ -206,7 +183,7 @@ caps.handback.revision: 47
   
  建立三個使用者帳戶，將示範不同的存取功能。  
   
-```  
+```sql  
 CREATE USER Manager WITHOUT LOGIN;  
 CREATE USER Sales1 WITHOUT LOGIN;  
 CREATE USER Sales2 WITHOUT LOGIN;  
@@ -296,10 +273,9 @@ WITH (STATE = OFF);
   
  現在 Sales1 和 Sales2 使用者可以看到所有的 6 個資料列。  
   
- [頂端](#Top)  
   
 ###  <a name="MidTier"></a> B. 透過中介層應用程式連接到資料庫的使用者案例  
- 此範例示範中介層應用程式如何實作連線篩選，其中應用程式使用者 (或租用戶) 共用相同的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用者 (應用程式)。 應用程式在連接到資料庫之後，會在 [SESSION_CONTEXT &#40;Transact-SQL&#41;](../../t-sql/functions/session-context-transact-sql.md) 中設定目前應用程式使用者識別碼，然後安全性原則會明確地篩選此 ID 不應該看到的資料列，並同時避免使用者插入錯誤使用者識別碼的資料列。 不需要任何其他的應用程式變更。  
+ 此範例示範中介層應用程式如何實作連線篩選，其中應用程式使用者 (或租用戶) 共用相同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用者 (應用程式)。 應用程式在連接到資料庫之後，會在 [SESSION_CONTEXT &#40;Transact-SQL&#41;](../../t-sql/functions/session-context-transact-sql.md) 中設定目前應用程式使用者識別碼，然後安全性原則會明確地篩選此 ID 不應該看到的資料列，並同時避免使用者插入錯誤使用者識別碼的資料列。 不需要任何其他的應用程式變更。  
   
  建立簡單的資料表來保存資料。  
   
@@ -352,7 +328,7 @@ AS
 GO  
 ```  
   
- 建立安全性原則，作為 `Sales`上的篩選述詞及 Block 篩選述詞新增此函數。 由於 **BEFORE UPDATE** 及 **BEFORE DELETE** 皆已經過篩選，因此 Block 述詞只需要 **AFTER INSERT**，且因為先前設定的資料行權限，`AppUserId` 資料行無法更新為其他值，所以不需要 **AFTER UPDATE**。  
+ 建立安全性原則，作為 `Sales`上的篩選述詞及 Block 篩選述詞新增此函數。 由於 **BEFORE UPDATE**及 **BEFORE DELETE** 皆已經過篩選，因此 Block 述詞只需要 **AFTER INSERT** ，且因為先前設定的資料行權限， **資料行無法更新為其他值，所以不需要** AFTER UPDATE `AppUserId` 。  
   
 ```  
 CREATE SECURITY POLICY Security.SalesFilter  
@@ -363,7 +339,7 @@ CREATE SECURITY POLICY Security.SalesFilter
     WITH (STATE = ON);  
 ```  
   
- 在 **SESSION_CONTEXT** 中設定不同的使用者識別碼之後，現在我們可以從 `Sales` 資料表中選取，以模擬連線篩選。 在實務上，開啟連線後，應用程式負責在 **SESSION_CONTEXT** 設定目前的使用者識別碼。  
+ 在 `Sales` SESSION_CONTEXT **中設定不同的使用者識別碼之後，現在我們可以從**資料表中選取，以模擬連線篩選。 在實務上，開啟連線後，應用程式負責在 **SESSION_CONTEXT** 設定目前的使用者識別碼。  
   
 ```  
 EXECUTE AS USER = 'AppUser';  
@@ -385,7 +361,7 @@ REVERT;
 GO  
 ```  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [CREATE SECURITY POLICY &#40;Transact-SQL&#41;](../../t-sql/statements/create-security-policy-transact-sql.md)   
  [ALTER SECURITY POLICY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-security-policy-transact-sql.md)   
  [DROP SECURITY POLICY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-security-policy-transact-sql.md)   
@@ -397,3 +373,4 @@ GO
  [建立使用者定義函數 &#40;Database Engine&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)  
   
   
+

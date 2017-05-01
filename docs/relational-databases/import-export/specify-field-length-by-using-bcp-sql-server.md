@@ -1,31 +1,35 @@
 ---
-title: "使用 bcp 指定欄位長度 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-bulk-import-export"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "原生資料格式 [SQL Server]"
-  - "預設欄位長度"
-  - "欄位長度 [SQL Server]"
-  - "資料格式 [SQL Server], 欄位長度"
-  - "bcp 公用程式 [SQL Server], 欄位長度"
+title: "使用 BCP 指定欄位長度 (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-bulk-import-export
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- native data format [SQL Server]
+- default field lengths
+- field length [SQL Server]
+- data formats [SQL Server], field length
+- bcp utility [SQL Server], field length
 ms.assetid: 240f33ca-ef4a-413a-a4de-831885cb505b
 caps.latest.revision: 27
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 772ed44be6795e676b18fcfc915f851e4ce24e97
+ms.lasthandoff: 04/11/2017
+
 ---
-# 使用 bcp 指定欄位長度 (SQL Server)
-  欄位長度會指出以字元格式表現資料所需的最大字元數。 如果資料是以原生格式儲存，則欄位長度為已知；例如， **int** 資料類型會佔用 4 個位元組。 如果指出前置長度為 0，**bcp** 命令就會提示您輸入欄位長度 (預設的欄位長度)，以及欄位長度對包含 **char** 資料之資料檔案的資料儲存有何影響。  
+# <a name="specify-field-length-by-using-bcp-sql-server"></a>使用 bcp 指定欄位長度 (SQL Server)
+  欄位長度會指出以字元格式表現資料所需的最大字元數。 如果資料是以原生格式儲存，則欄位長度為已知；例如， **int** 資料類型會佔用 4 個位元組。 如果指出前置長度為 0， **bcp** 命令就會提示您輸入欄位長度 (預設的欄位長度)，以及欄位長度對包含 **char** 資料之資料檔案的資料儲存有何影響。  
   
-## bcp 提示輸入欄位長度  
+## <a name="the-bcp-prompt-for-field-length"></a>bcp 提示輸入欄位長度  
  如果互動式 **bcp** 命令包含 **in** 或 **out** 選項，但沒有格式檔案參數 (**-f**) 或資料格式參數 (**-n**、**-c**、**-w** 或 **-N**)，此命令就會提示您輸入每個資料欄位的欄位長度，如下所示：  
   
  `Enter length of field <field_name> [<default>]:`  
@@ -43,15 +47,15 @@ caps.handback.revision: 27
   
 -   如果是非字元的檔案儲存類型， **bcp** 命令就不會提示輸入欄位長度。 該資料會以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 原生資料表示法 (原生格式) 儲存。  
   
-## 使用預設的欄位長度  
- 一般而言，[!INCLUDE[msCoName](../../includes/msconame-md.md)] 建議您接受 **bcp** 所建議的欄位長度預設值。 已建立字元模式資料檔案時，使用預設的欄位長度可確定不會截斷資料，而且不會發生數值溢位錯誤。  
+## <a name="using-default-field-lengths"></a>使用預設的欄位長度  
+ 一般而言， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 建議您接受 **bcp**所建議的欄位長度預設值。 已建立字元模式資料檔案時，使用預設的欄位長度可確定不會截斷資料，而且不會發生數值溢位錯誤。  
   
  如果指定不正確的欄位長度，就會發生問題。 例如，如果複製數值資料，而對該資料來說指定的欄位長度太短， **bcp** 公用程式就會印出溢位訊息，而且不會複製該資料。 此外，若要匯出 **datetime** 資料，而且指定給字元字串的欄位長度少於 26 個位元組，則 **bcp** 公用程式會直接截斷資料而不會發出錯誤訊息。  
   
 > [!IMPORTANT]  
->  使用預設的大小選項時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 預期會讀取整個字串。 在某些狀況下，使用預設欄位長度卻會導致發生「未預期的檔案結尾」錯誤。 一般來說，當資料檔案中只有部分預期的欄位出現時，**money** 與 **datetime** 資料類型可能會發生此錯誤；例如，指定 *mm*/*dd*/*yy* 的 **datetime** 值而未指定時間元件時，就會比 **char** 格式的 **datetime** 值所預期的 24 個字元長度要短。 若要避免此種錯誤類型，請使用欄位結束字元或固定長度資料欄位，或指定其他的值以變更預設的欄位長度。  
+>  使用預設的大小選項時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 預期會讀取整個字串。 在某些狀況下，使用預設欄位長度卻會導致發生「未預期的檔案結尾」錯誤。 一般來說，當資料檔案中只有部分預期的欄位出現時， **money** 與 **datetime** 資料類型可能會發生此錯誤；例如，指定 **mm** dd *yy*/*的*/*datetime* 值而未指定時間元件時，就會比 **char** 格式的 **datetime** 值所預期的 24 個字元長度要短。 若要避免此種錯誤類型，請使用欄位結束字元或固定長度資料欄位，或指定其他的值以變更預設的欄位長度。  
   
-### 字元檔案儲存的預設欄位長度  
+### <a name="default-field-lengths-for-character-file-storage"></a>字元檔案儲存的預設欄位長度  
  下表列出資料的預設欄位長度，以儲存為字元檔案儲存類型。 可為 Null 的資料長度與非 Null 的資料長度相同。  
   
 |資料類型|預設長度 (字元)|  
@@ -86,12 +90,12 @@ caps.handback.revision: 27
 |UDT|使用者自訂術語 (UDT) 資料行的長度|  
 |XML|0|  
   
- \*如需 **decimal** 與 **numeric** 資料類型的詳細資訊，請參閱 [decimal 和 numeric &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)。  
+ \*如需**小數點**和**數值**資料類型的詳細資訊，請參閱[小數點和數值 &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)。  
   
 > [!NOTE]  
 >  **tinyint** 類型的資料行可包含 0 到 255 的數值；因此代表該範圍內任意數值所需的最大字元數為 3 (代表數值 100 到 255)。  
   
-### 原生檔案儲存的預設欄位長度  
+### <a name="default-field-lengths-for-native-file-storage"></a>原生檔案儲存的預設欄位長度  
  下表列出資料的預設欄位長度，以儲存為原生檔案儲存類型。 可為 Null 的資料長度與非 Null 的資料長度相同，字元資料永遠都會以字元格式儲存。  
   
 |資料類型|預設長度 (字元)|  
@@ -115,11 +119,11 @@ caps.handback.revision: 27
 |**uniqueidentifier**|16|  
 |**timestamp**|8|  
   
- \*如需 **decimal** 與 **numeric** 資料類型的詳細資訊，請參閱 [decimal 和 numeric &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)。  
+ \*如需**小數點**和**數值**資料類型的詳細資訊，請參閱[小數點和數值 &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)。  
   
- 在先前的所有案例中，若要建立一個資料檔案，之後重新載入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，以將所佔用的儲存空間保持在最低，請搭配預設的檔案儲存類型與預設的欄位長度和長度前置詞一起使用。  
+ 在先前的所有案例中，若要建立一個資料檔案，之後重新載入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，以將所佔用的儲存空間保持在最低，請搭配預設的檔案儲存類型與預設的欄位長度和長度前置詞一起使用。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [bcp 公用程式](../../tools/bcp-utility.md)   
  [資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [指定欄位與資料列結束字元 &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)   

@@ -1,29 +1,33 @@
 ---
 title: "備份壓縮 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/08/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "記錄傳送 [SQL Server]，備份壓縮"
-  - "備份壓縮 [SQL Server]，關於備份壓縮"
-  - "壓縮 [SQL Server], 備份壓縮"
-  - "備份 [SQL Server], 壓縮"
-  - "備份 [SQL Server]，備份壓縮"
-  - "備份壓縮 [SQL Server]"
+ms.custom: 
+ms.date: 08/08/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- log shipping [SQL Server], backup compression
+- backup compression [SQL Server], about backup compression
+- compression [SQL Server], backup compression
+- backups [SQL Server], compression
+- backing up [SQL Server], backup compression
+- backup compression [SQL Server]
 ms.assetid: 05bc9c4f-3947-4dd4-b823-db77519bd4d2
 caps.latest.revision: 51
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 51
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 08936c44013d5494c72500f3230a1c90da1e4325
+ms.lasthandoff: 04/11/2017
+
 ---
-# 備份壓縮 (SQL Server)
+# <a name="backup-compression-sql-server"></a>備份壓縮 (SQL Server)
   本主題會說明 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份的壓縮，包括限制、壓縮備份的效能取捨、備份壓縮的組態及壓縮比率。  下列 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本支援備份壓縮︰Enterprise、Standard 和 Developer。  每個 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 版本與更新版本都可以還原壓縮的備份。 
  
   
@@ -45,21 +49,21 @@ caps.handback.revision: 51
   
   
 ##  <a name="PerfImpact"></a> 壓縮備份的效能影響  
- 根據預設，壓縮會大幅增加 CPU 使用量，而且壓縮程序所耗用的額外 CPU 可能會對並行作業造成不良的影響。 因此，您可能會想要在其 CPU 使用量由[資源管理員](../../relational-databases/resource-governor/resource-governor.md)限制的工作階段中，建立低優先權的壓縮備份。 如需詳細資訊，請參閱[使用資源管理員來限制備份壓縮的 CPU 使用量 &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)。  
+ 根據預設，壓縮會大幅增加 CPU 使用量，而且壓縮程序所耗用的額外 CPU 可能會對並行作業造成不良的影響。 因此，您可能會想要在其 CPU 使用量由[資源管理員](../../relational-databases/resource-governor/resource-governor.md)限制的工作階段中，建立低優先權的壓縮備份。 如需詳細資訊，請參閱本主題稍後介紹的＜ [使用資源管理員進行備份壓縮，以限制 CPU 使用率 &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)限制的工作階段中，建立低優先權的壓縮備份。  
   
  若要全盤了解備份 I/O 效能，您可以透過評估下列效能計數器種類，隔離往返裝置之間的備份 I/O：  
   
 -   Windows I/O 效能計數器，例如實體磁碟計數器  
   
--   [SQLServer:Backup Device](../../relational-databases/performance-monitor/sql-server-backup-device-object.md) 物件的 **Device Throughput Bytes/sec** 計數器  
+-   **SQLServer:Backup Device** 物件的 [Device Throughput Bytes/sec](../../relational-databases/performance-monitor/sql-server-backup-device-object.md) 計數器  
   
--   [SQLServer:Databases](../../relational-databases/performance-monitor/sql-server-databases-object.md) 物件的 **Backup/Restore Throughput/sec** 計數器  
+-   **SQLServer:Databases** 物件的 [Backup/Restore Throughput/sec](../../relational-databases/performance-monitor/sql-server-databases-object.md) 計數器  
   
- 如需有關 Windows 計數器的詳細資訊，請參閱 Windows 說明。 如需如何使用 SQL Server 計數器的相關資訊，請參閱[使用 SQL Server 物件](../../relational-databases/performance-monitor/use-sql-server-objects.md)。  
+ 如需有關 Windows 計數器的詳細資訊，請參閱 Windows 說明。 如需如何使用 SQL Server 計數器的相關資訊，請參閱 [使用 SQL Server 物件](../../relational-databases/performance-monitor/use-sql-server-objects.md)。  
   
    
 ##  <a name="CompressionRatio"></a> 計算壓縮備份的壓縮率  
- 若要計算備份的壓縮率，請使用 [backupset](../../relational-databases/system-tables/backupset-transact-sql.md) 記錄資料表的 **backup_size** 和 **compressed_backup_size** 資料行中的備份值，如下所示：  
+ 若要計算備份的壓縮率，請使用 **backupset** 記錄資料表的 **backup_size** 和 [compressed_backup_size](../../relational-databases/system-tables/backupset-transact-sql.md) 資料行中的備份值，如下所示：  
   
  **backup_size**：**compressed_backup_size**  
   
@@ -105,8 +109,9 @@ SELECT backup_size/compressed_backup_size FROM msdb..backupset;
   
 -   [DBCC TRACEOFF &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceoff-transact-sql.md)  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [備份概觀 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
- [追蹤旗標 &#40;Transact-SQL&#41;](../Topic/Trace%20Flags%20\(Transact-SQL\).md)  
+ [追蹤旗標 &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  
   
   
+

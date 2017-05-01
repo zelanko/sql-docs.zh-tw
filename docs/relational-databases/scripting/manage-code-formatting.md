@@ -1,44 +1,48 @@
 ---
 title: "管理程式碼格式設定 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "縮排程式碼 [SQL Server]"
-  - "顯示 URL"
-  - "程式碼格式設定 [SQL Server Management Studio]"
-  - "摺疊文字"
-  - "格式 [SQL Server], SQL Server Management Studio 中的程式碼格式"
-  - "隱藏文字"
-  - "格式 [SQL Server]"
-  - "文字 [SQL Server], 程式碼格式"
-  - "自動縮排"
-  - "將文字轉換成小寫"
-  - "查詢編輯器 [SQL Server Management Studio], 管理程式碼格式"
-  - "顯示於程式碼中的 URL [SQL Server Management Studio]"
-  - "將文字轉換成大寫"
-  - "文字 [SQL Server]"
-  - "取消縮排程式碼"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- indenting code [SQL Server]
+- displaying URLs
+- code formatting [SQL Server Management Studio]
+- collapsing text
+- formats [SQL Server], code formatting in SQL Server Management Studio
+- hiding text
+- formats [SQL Server]
+- text [SQL Server], code formats
+- automatic indentation
+- converting text to lower case
+- Query Editor [SQL Server Management Studio], managing code formats
+- URL displayed in code [SQL Server Management Studio]
+- converting text to upper case
+- text [SQL Server]
+- unindenting code
 ms.assetid: ddbac4d2-6bdc-4467-a352-e869ec880eed
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 57fcddb2d5f87d0b03ab1ed504e07072dc41d367
+ms.lasthandoff: 04/11/2017
+
 ---
-# 管理程式碼格式設定
+# <a name="manage-code-formatting"></a>管理程式碼格式設定
   當使用編輯器時，您可以利用縮排、隱藏文字、URL...等，來建立程式碼的格式。 您也可以利用智慧型縮排 (Smart Indenting) 功能，在輸入程式碼的同時，自動建立程式碼的格式。  
   
-## 縮排  
+## <a name="indenting"></a>縮排  
  您可以選擇三種不同的文字縮排樣式。 您也可以指定幾個空格組成單一縮排和定位點，以及編輯器在縮排時要使用定位字元或空格字元。  
   
-#### 選擇縮排樣式  
+#### <a name="to-choose-an-indenting-style"></a>選擇縮排樣式  
   
 1.  在 **[工具]** 功能表上，按一下 **[選項]**。  
   
@@ -59,7 +63,7 @@ caps.handback.revision: 23
     > [!NOTE]  
     >  有些語言並未完整提供這三個縮排選項。  
   
-#### 變更縮排程位點設定  
+#### <a name="to-change-indent-tab-settings"></a>變更縮排程位點設定  
   
 1.  在 **[工具]** 功能表上，按一下 **[選項]**。  
   
@@ -73,19 +77,19 @@ caps.handback.revision: 23
   
      如果您選取 [插入空格]，請在 [定位點大小] 或 [縮排大小] 之下，分別輸入每個定位點或縮排所代表的空格字元數。  
   
-#### 縮排程式碼  
+#### <a name="to-indent-code"></a>縮排程式碼  
   
 1.  選取您要縮排的文字。  
   
 2.  按 TAB 鍵，或按一下 [標準] 工具列上的 [縮排] 按鈕。  
   
-#### 取消縮排程式碼  
+#### <a name="to-unindent-code"></a>取消縮排程式碼  
   
 1.  選取您要取消縮排的文字。  
   
 2.  按 SHIFT+TAB 鍵，或按一下 [標準] 工具列上的 [取消縮排] 按鈕。  
   
-#### 自動縮排所有程式碼  
+#### <a name="to-automatically-indent-all-of-your-code"></a>自動縮排所有程式碼  
   
 1.  在 **[工具]** 功能表上，按一下 **[選項]**。  
   
@@ -100,13 +104,13 @@ caps.handback.revision: 23
 > [!NOTE]  
 >  有些語言無法使用 [智慧型] 選項。  
   
-#### 將空格轉換成定位點  
+#### <a name="to-convert-white-space-to-tabs"></a>將空格轉換成定位點  
   
 1.  選取空格要轉換成定位點的文字。  
   
 2.  在 [編輯] 功能表上，指向 [進階]，再按一下 [將選取範圍空白鍵轉定點]。  
   
-#### 將定位點轉換成空格  
+#### <a name="to-convert-tabs-to-spaces"></a>將定位點轉換成空格  
   
 1.  選取您要將定位點轉換成空格的文字。  
   
@@ -114,10 +118,10 @@ caps.handback.revision: 23
   
  這些命令的行為會隨著 [選項] 對話方塊中的定位點設定而不同。 例如，如果定位點設定是 4，[將選取範圍空白鍵轉定點] 會每 4 個連續空格建立一個定位點，[選取範圍定位鍵轉空白鍵] 會每個定位點建立 4 個空格。  
   
-## 將文字轉換成大寫和小寫  
+## <a name="converting-text-to-upper-and-lower-case"></a>將文字轉換成大寫和小寫  
  您可以利用命令，將文字轉換成全為大寫或小寫。  
   
-#### 將文字切換成大寫或小寫  
+#### <a name="to-switch-text-to-upper-or-lower-case"></a>將文字切換成大寫或小寫  
   
 1.  選取您要轉換的文字。  
   
@@ -128,7 +132,7 @@ caps.handback.revision: 23
 > [!NOTE]  
 >  如需完整的鍵盤快速鍵清單，請參閱[SQL Server Management Studio 鍵盤快速鍵](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)。  
   
-## 顯示和連結到 URL  
+## <a name="displaying-and-linking-to-urls"></a>顯示和連結到 URL  
  您可以在程式碼中，建立和顯示可點按的 URL。 依預設，這些 URL：  
   
 -   會附加底線。  
@@ -137,7 +141,7 @@ caps.handback.revision: 23
   
 -   如果 URL 有效，當按一下 URL 時，會打開它。  
   
-#### 顯示可點按的 URL  
+#### <a name="to-display-a-clickable-url"></a>顯示可點按的 URL  
   
 1.  在 **[工具]** 功能表上，按一下 **[選項]**。  
   

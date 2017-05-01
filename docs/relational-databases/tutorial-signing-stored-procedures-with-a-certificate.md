@@ -1,27 +1,31 @@
 ---
-title: "教學課程：使用憑證簽署預存程序 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
-helpviewer_keywords: 
-  - "簽署預存程序教學課程 [SQL Server]"
+title: "教學課程：使用憑證簽署預存程序 | Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
+helpviewer_keywords:
+- signing stored procedures tutorial [SQL Server]
 ms.assetid: a4b0f23b-bdc8-425f-b0b9-e0621894f47e
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f0ccfcccf5fbed9a2b0e4f09fdd80e7f3e5dcda9
+ms.lasthandoff: 04/11/2017
+
 ---
-# 教學課程：使用憑證簽署預存程序
-這個教學課程說明如何使用由 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 產生的憑證來簽署預存程序。  
+# <a name="tutorial-signing-stored-procedures-with-a-certificate"></a>教學課程：使用憑證簽署預存程序
+這個教學課程說明如何使用由 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]產生的憑證來簽署預存程序。  
   
 > [!NOTE]  
 > 若要執行本教學課程中的程式碼，您必須設定使用混合模式安全性，並已安裝 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 資料庫。 狀況  
@@ -48,7 +52,7 @@ caps.handback.revision: 11
   
 此範例會在每個程式碼區塊中各行附上說明。 若要複製整個範例，請參閱本教學課程結尾處的＜ [完整範例](#CompleteExample) ＞一節。  
   
-## 1.設定環境  
+## <a name="1-configure-the-environment"></a>1.設定環境  
 為了設定範例的初步內容，請在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中開啟新查詢，然後執行下列程式碼以開啟 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 資料庫。 這段程式碼會將資料庫內容變更為 `AdventureWorks2012`，再建立新的伺服器登入和資料庫使用者帳戶 (`TestCreditRatingUser`)，並且使用了密碼。  
   
 ```  
@@ -65,7 +69,7 @@ GO
   
 如需 CREATE USER 陳述式的詳細資訊，請參閱 [CREATE USER &#40;Transact-SQL&#41;](../t-sql/statements/create-user-transact-sql.md)。 如需 CREATE LOGIN 陳述式的詳細資訊，請參閱 [CREATE LOGIN &#40;Transact-SQL&#41;](../t-sql/statements/create-login-transact-sql.md)。  
   
-## 2.建立憑證  
+## <a name="2-create-a-certificate"></a>2.建立憑證  
 您可以使用 master 資料庫、使用者資料庫或兩者做為內容，在伺服器中建立憑證。 保護憑證可用的選項有很多種。 如需憑證的詳細資訊，請參閱 [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../t-sql/statements/create-certificate-transact-sql.md)。  
   
 執行下列程式碼建立資料庫憑證，並且使用密碼保護該憑證。  
@@ -78,7 +82,7 @@ CREATE CERTIFICATE TestCreditRatingCer
 GO  
 ```  
   
-## 3.建立預存程序並使用憑證進行簽署  
+## <a name="3-create-and-sign-a-stored-procedure-using-the-certificate"></a>3.建立預存程序並使用憑證進行簽署  
 使用下列程式碼來建立預存程序，此預存程序會從 `Vendor` 資料庫結構描述的 `Purchasing` 資料表中選取資料，以限制為只存取信用等級為 1 的公司。 請注意，預存程序的第一個區段會顯示執行預存程序之使用者帳戶的內容，這只能示範概念。 未必能滿足實際需求。  
   
 ```  
@@ -114,7 +118,7 @@ GO
   
 如需簽署預存程序的詳細資訊，請參閱 [ADD SIGNATURE &#40;Transact-SQL&#41;](../t-sql/statements/add-signature-transact-sql.md)。  
   
-## 4.使用憑證建立憑證帳戶  
+## <a name="4-create-a-certificate-account-using-the-certificate"></a>4.使用憑證建立憑證帳戶  
 執行下列程式碼，經由憑證建立資料庫使用者 (`TestCreditRatingcertificateAccount`)。 此帳戶不具有伺服器登入身分，最後將要用來控制基礎資料表的存取。  
   
 ```  
@@ -125,7 +129,7 @@ CREATE USER TestCreditRatingcertificateAccount
 GO  
 ```  
   
-## 5.授與憑證帳戶資料庫權限  
+## <a name="5-grant-the-certificate-account-database-rights"></a>5.授與憑證帳戶資料庫權限  
 執行下列程式碼，授與 `TestCreditRatingcertificateAccount` 使用基底資料表和預存程序的權限。  
   
 ```  
@@ -142,7 +146,7 @@ GO
   
 如需授與物件權限的詳細資訊，請參閱 [GRANT &#40;Transact-SQL&#41;](../t-sql/statements/grant-transact-sql.md)。  
   
-## 6.顯示存取內容  
+## <a name="6-display-the-access-context"></a>6.顯示存取內容  
 為了顯示預存程序的相關存取權限，請執行下列程式碼授與 `TestCreditRatingUser` 使用者執行預存程序的權限。  
   
 ```  
@@ -173,7 +177,7 @@ GO
 > [!NOTE]  
 > 使用 EXECUTE AS 可切換資料庫內的內容。  
   
-## 7.重設環境  
+## <a name="7-reset-the-environment"></a>7.重設環境  
 下列程式碼使用 `REVERT` 陳述式，將目前帳戶的內容切換回 dbo 並重設環境。  
   
 ```  
@@ -289,8 +293,9 @@ DROP CERTIFICATE TestCreditRatingCer;
 GO  
 ```  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
 [SQL Server Database Engine 和 Azure SQL Database 的資訊安全中心](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   
   
+

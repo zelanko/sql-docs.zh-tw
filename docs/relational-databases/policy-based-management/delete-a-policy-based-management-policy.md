@@ -1,25 +1,29 @@
 ---
-title: "刪除原則式管理原則 | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "原則式管理, 刪除原則"
+title: "刪除原則式管理原則 | Microsoft 文件"
+ms.custom: 
+ms.date: 08/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Policy-Based Management, delete policies
 ms.assetid: 488f0305-190c-4223-aa5c-e9bd43b520eb
 caps.latest.revision: 8
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0903ac5f3e339bf884b3b5704bfd7ef5e1b02938
+ms.lasthandoff: 04/11/2017
+
 ---
-# 刪除原則式管理原則
-  本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中刪除原則式管理原則。  
+# <a name="delete-a-policy-based-management-policy"></a>刪除原則式管理原則
+  本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ，在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中刪除原則式管理原則。  
   
  **本主題內容**  
   
@@ -40,7 +44,7 @@ caps.handback.revision: 8
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 刪除原則  
+#### <a name="to-delete-a-policy"></a>刪除原則  
   
 1.  在 [物件總管] 中，按一下加號，展開包含您想要刪除之原則式管理原則的伺服器。  
   
@@ -55,3 +59,4 @@ caps.handback.revision: 8
 6.  在 **[刪除物件]** 對話方塊中，確定已選取正確的條件，然後按一下 **[確定]**。  
   
   
+

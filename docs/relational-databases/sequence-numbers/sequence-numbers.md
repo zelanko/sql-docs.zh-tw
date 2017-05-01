@@ -1,28 +1,32 @@
 ---
 title: "序號 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "序號物件, 概觀"
-  - "順序 [Database Engine]"
-  - "自動編號, 序號"
-  - "序號 [SQL Server]"
-  - "序號物件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- sequence number object, overview
+- sequence [Database Engine]
+- autonumbers, sequences
+- sequence numbers [SQL Server]
+- sequence number object
 ms.assetid: c900e30d-2fd3-4d5f-98ee-7832f37e79d1
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: be2100277326fafec2dd32609b977de0f72cb9b4
+ms.lasthandoff: 04/11/2017
+
 ---
-# 序號
+# <a name="sequence-numbers"></a>序號
   序列是使用者定義的結構描述繫結物件，該物件會根據建立順序所使用的規格產生數值序列。 數值序列是在定義的間隔依照遞增或遞減順序來產生，而且可依照要求循環 (重複)。 與識別欄位不同的是，順序不會與資料表產生關聯。 應用程式會參考順序物件，以擷取它的下一個值。 順序與資料表之間的關聯性是由應用程式所控制。 使用者應用程式可以參考順序物件，並協調跨越多個資料列和資料表的值索引鍵。  
   
  順序是使用 **CREATE SEQUENCE** 陳述式所建立，與資料表無關。 有一些選項可讓您控制遞增、最大和最小值、起點、自動重新啟動功能與快取以改善效能。 如需有關這些選項的詳細資訊，請參閱 [CREATE SEQUENCE](../../t-sql/statements/create-sequence-transact-sql.md)。  
@@ -31,7 +35,7 @@ caps.handback.revision: 31
   
  順序可以定義為任何整數資料類型。 如果沒有指定資料類型，順序就會預設為 **bigint**。  
   
-## 使用順序  
+## <a name="using-sequences"></a>使用順序  
  在下列案例中，您可以使用順序來取代識別欄位：  
   
 -   進行插入資料表的作業之前，應用程式需要一個編號。  
@@ -46,16 +50,16 @@ caps.handback.revision: 31
   
 -   您必須變更順序的規格，例如遞增值。  
   
-## 限制  
+## <a name="limitations"></a>限制  
  不同於無法變更其值的識別欄位，當順序值插入資料表之後，並不會自動受保護。 若要防止順序值變更，請在資料表上使用更新觸發程序來回復變更。  
   
  系統不會針對順序值自動強制執行唯一性。 重複使用順序值的能力是依照設計提供的。 如果資料表中的順序值都必須是唯一的，請針對資料行建立唯一索引。 如果資料表中的順序值在整個資料表群組中必須是唯一的，請建立觸發程序來防止更新陳述式或序號循環所導致的重複項目。  
   
  雖然順序物件會根據其定義產生編號，不過順序物件不會控制編號的使用方式。 當您回復交易時、當多個資料表共用順序物件時，或者當您配置序號而沒有將它們用於資料表時，插入資料表中的序號可能會產生間距。 以 CACHE 選項建立時，非預期關閉 (例如停電) 可能會失去快取中的序號。  
   
- 如果單一 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式具有多個指定相同順序產生器的 **NEXT VALUE FOR** 函數執行個體，所有執行個體都會針對該 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式所處理的給定資料列傳回相同的值。 這種行為與 ANSI 標準一致。  
+ 如果單一 **陳述式具有多個指定相同順序產生器的** NEXT VALUE FOR [!INCLUDE[tsql](../../includes/tsql-md.md)] 函數執行個體，所有執行個體都會針對該 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式所處理的給定資料列傳回相同的值。 這種行為與 ANSI 標準一致。  
   
-## 一般用法  
+## <a name="typical-use"></a>一般用法  
  若要建立從 -2,147,483,648 到 2,147,483,647 且遞增量為 1 的整數序號，請使用下列陳述式。  
   
 ```  
@@ -74,13 +78,13 @@ CREATE SEQUENCE Schema.SequenceName
   
 ```  
   
-## 管理順序  
+## <a name="managing-sequences"></a>管理順序  
  如需有關順序的詳細資訊，請查詢 [sys.sequences](../../relational-databases/system-catalog-views/sys-sequences-transact-sql.md)。  
   
-## 範例  
+## <a name="examples"></a>範例  
  [CREATE SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md)、[NEXT VALUE FOR &#40;Transact-SQL&#41;](../../t-sql/functions/next-value-for-transact-sql.md) 和 [sp_sequence_get_range](../../relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql.md) 主題中有其他範例。  
   
-### A. 在單一資料表中使用序號  
+### <a name="a-using-a-sequence-number-in-a-single-table"></a>A. 在單一資料表中使用序號  
  下列範例會建立名為 Test 的結構描述、名為 Orders 的資料表，以及名為 CountBy1 的順序，然後使用 NEXT VALUE FOR 函數，將資料列插入資料表。  
   
 ```  
@@ -125,8 +129,8 @@ GO
   
  `3        Brake   1`  
   
-### B. 在插入資料列之前呼叫 NEXT VALUE FOR  
- 下列範例會使用在範例 A 中建立的 `Orders` 資料表來宣告名為 `@nextID` 的變數，然後使用 NEXT VALUE FOR 函數，將此變數設定為下一個可用的序號。 應用程式應該會針對訂單進行一些處理，例如為客戶提供其潛在訂單的 `OrderID` 編號，然後驗證訂單。 不論這項處理可能需要多少時間，或者在處理期間加入其他多少訂單，原始的編號都會保留給這個連接使用。 最後，`INSERT` 陳述式會將訂單加入至 `Orders` 資料表。  
+### <a name="b-calling-next-value-for-before-inserting-a-row"></a>B. 在插入資料列之前呼叫 NEXT VALUE FOR  
+ 下列範例會使用在範例 A 中建立的 `Orders` 資料表來宣告名為 `@nextID`的變數，然後使用 NEXT VALUE FOR 函數，將此變數設定為下一個可用的序號。 應用程式應該會針對訂單進行一些處理，例如為客戶提供其潛在訂單的 `OrderID` 編號，然後驗證訂單。 不論這項處理可能需要多少時間，或者在處理期間加入其他多少訂單，原始的編號都會保留給這個連接使用。 最後， `INSERT` 陳述式會將訂單加入至 `Orders` 資料表。  
   
 ```  
 DECLARE @NextID int ;  
@@ -138,8 +142,8 @@ GO
   
 ```  
   
-### C. 在多個資料表中使用序號  
- 這個範例會假設生產線監視處理序接收整個工廠所發生之事件的通知。 每個事件都會接收唯一且單純遞增的 `EventID` 編號。 所有事件都會使用相同的 `EventID` 序號，讓結合所有事件的報表能夠唯一識別每個事件。 不過，事件資料會根據事件的類型儲存在三個不同的資料表中。 此程式碼範例會建立名為 `Audit` 的結構描述、名為 `EventCounter` 的順序，以及三個資料表，而且每個資料表都使用 `EventCounter` 順序作為預設值。 然後，此範例會將資料列加入至三個資料表並查詢結果。  
+### <a name="c-using-a-sequence-number-in-multiple-tables"></a>C. 在多個資料表中使用序號  
+ 這個範例會假設生產線監視處理序接收整個工廠所發生之事件的通知。 每個事件都會接收唯一且單純遞增的 `EventID` 編號。 所有事件都會使用相同的 `EventID` 序號，讓結合所有事件的報表能夠唯一識別每個事件。 不過，事件資料會根據事件的類型儲存在三個不同的資料表中。 此程式碼範例會建立名為 `Audit`的結構描述、名為 `EventCounter`的順序，以及三個資料表，而且每個資料表都使用 `EventCounter` 順序作為預設值。 然後，此範例會將資料列加入至三個資料表並查詢結果。  
   
 ```  
 CREATE SCHEMA Audit ;  
@@ -228,8 +232,8 @@ GO
   
  `7        2009-11-02 15:00:51.180  Central feed in bypass mode.`  
   
-### D. 在結果集中產生重複的序號  
- 下列範例會示範序號的兩種功能：循環以及在 SELECT 陳述式中使用 `NEXT VALUE FOR`。  
+### <a name="d-generating-repeating-sequence-numbers-in-a-result-set"></a>D. 在結果集中產生重複的序號  
+ 下列範例會示範序號的兩種功能：循環以及在 SELECT 陳述式中使用 `NEXT VALUE FOR` 。  
   
 ```  
 CREATE SEQUENCE CountBy5  
@@ -245,7 +249,7 @@ SELECT NEXT VALUE FOR CountBy5 AS SurveyGroup, Name FROM sys.objects ;
 GO  
 ```  
   
-### E. 使用 OVER 子句來產生結果集的序號  
+### <a name="e-generating-sequence-numbers-for-a-result-set-by-using-the-over-clause"></a>E. 使用 OVER 子句來產生結果集的序號  
  下列範例會使用 `OVER` 子句並依照 `Name` 排序結果集，然後再加入序號資料行。  
   
 ```  
@@ -265,7 +269,7 @@ SELECT NEXT VALUE FOR Samples.IDLabel OVER (ORDER BY Name) AS NutID, ProductID, 
 WHERE Name LIKE '%nut%' ;  
 ```  
   
-### F. 重設序號  
+### <a name="f-resetting-the-sequence-number"></a>F. 重設序號  
  範例 E 取用了前 79 個 `Samples.IDLabel` 序號  (您的 `AdventureWorks2012` 版本可能會傳回不同的結果數目)。請執行下列陳述式來取用後續 79 個序號 (80 到 158)。  
   
 ```  
@@ -287,7 +291,7 @@ SELECT NEXT VALUE FOR Samples.IDLabel OVER (ORDER BY Name) AS NutID, ProductID, 
 WHERE Name LIKE '%nut%' ;  
 ```  
   
-### G. 將資料表從識別變更為順序  
+### <a name="g-changing-a-table-from-identity-to-sequence"></a>G. 將資料表從識別變更為順序  
  下列範例會建立結構描述以及包含範例中三個資料列的資料表。 然後，此範例會加入新的資料行並卸除舊的資料行。  
   
 ```  
@@ -386,15 +390,15 @@ GO
   
 ```  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)] 使用 `SELECT *` 的陳述式將收到新的資料行作為最後一個資料行，而非第一個資料行。 如果這是無法接受的資料行，您就必須建立全新的資料表、將資料移入其中，然後重新建立新資料表的權限。  
+ 使用 `SELECT *` 的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式將收到新的資料行做為最後一個資料行，而非第一個資料行。 如果這是無法接受的資料行，您就必須建立全新的資料表、將資料移入其中，然後重新建立新資料表的權限。  
   
-## 相關內容  
+## <a name="related-content"></a>相關內容  
  [CREATE SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md)  
   
  [ALTER SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-sequence-transact-sql.md)  
   
  [DROP SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-sequence-transact-sql.md)  
   
- [IDENTITY &#40;屬性&#41; &#40;Transact-SQL&#41;](../Topic/IDENTITY%20\(Property\)%20\(Transact-SQL\).md)  
+ [IDENTITY &#40;屬性&#41; &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql-identity-property.md)  
   
   

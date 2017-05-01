@@ -1,29 +1,33 @@
 ---
 title: "維護計畫 (設計索引標籤) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.maint.maintplanproperties.optimizations.f1"
-  - "sql13.swb.maint.planeditor.f1"
-  - "sql13.swb.maint.subplaneditor.f1"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.maint.maintplanproperties.optimizations.f1
+- sql13.swb.maint.planeditor.f1
+- sql13.swb.maint.subplaneditor.f1
 ms.assetid: 6d20d4d4-5b3f-454a-8a05-f0aac803c5ad
 caps.latest.revision: 27
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 18b12faae420e8294dc79c15e1e0f168faaa5395
+ms.lasthandoff: 04/11/2017
+
 ---
-# 維護計畫 (設計索引標籤)
+# <a name="maintenance-plan-design-tab"></a>維護計畫 (設計索引標籤)
   使用 [維護計畫 (設計索引標籤)] 可指定維護計畫及其子計畫的屬性。 將工作從工具箱拖曳至計畫設計師。 在工作群組按一下滑鼠右鍵，即可建立分支執行路徑。 維護計畫會儲存為 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝，然後由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業執行。  
   
-## 選項  
+## <a name="options"></a>選項  
  **加入子計畫**  
  新增可設定的子計畫。  
   
@@ -46,12 +50,12 @@ caps.handback.revision: 27
  顯示 [報表與記錄] 對話方塊，用來管理維護計畫活動的相關報表，以及設定記錄到本機或遠端伺服器。  
   
  **伺服器**  
- 顯示 [伺服器] 對話方塊，用來選取將執行子計畫工作的伺服器。 只有多伺服器環境中的主要伺服器才會啟用這個選項。 如需詳細資訊，請參閱[建立多伺服器環境](../../ssms/agent/create-a-multiserver-environment.md)。  
+ 顯示 [伺服器] 對話方塊，用來選取將執行子計畫工作的伺服器。 只有多伺服器環境中的主要伺服器才會啟用這個選項。 如需詳細資訊，請參閱 [建立多伺服器環境](http://msdn.microsoft.com/library/edc2b60d-15da-40a1-8ba3-f1d473366ee6)。  
   
  **名稱**  
  顯示維護計畫名稱。 針對新的維護計畫，名稱會在維護計畫設計師開啟之前，於對話方塊中指定。 若要重新命名維護計畫，請以滑鼠右鍵按一下物件總管中的計畫，然後按一下 [重新命名]。  
   
- **描述**  
+ **說明**  
  檢視或指定維護計畫的描述。 描述的最大長度是 512 個字元。  
   
  **設計師介面**  
@@ -79,7 +83,7 @@ caps.handback.revision: 27
   
  若要指定工作平行處理原則，請將兩個或以上的相依工作連結至單一前導工作。 修改優先順序連結的屬性，使得指向要平行執行的相依工作連結，會有相同的執行結果欄位值。  
   
-## 快速鍵功能表可用的其他功能  
+## <a name="additional-features-available-from-the-shortcut-menu"></a>快速鍵功能表可用的其他功能  
  若要查看其他選項，請在設計介面上選取一個或多個工作，然後按一下滑鼠右鍵以開啟快速鍵功能表。 除了一般的 [剪下]、[複製]、[貼上]、[刪除] 和 [全選] 以外，某些工作還可以使用下列特殊選項。  
   
  **加入註解**  
@@ -112,7 +116,7 @@ caps.handback.revision: 27
  **顯示比例**  
  在設計介面上變更工作的大小  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [維護計畫](../../relational-databases/maintenance-plans/maintenance-plans.md)   
  [建立維護計畫](../../relational-databases/maintenance-plans/create-a-maintenance-plan.md)  
   

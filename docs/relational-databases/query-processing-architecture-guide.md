@@ -1,25 +1,29 @@
 ---
 title: "查詢處理架構指南 | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/26/2016"
-ms.prod: "sql-non-specified"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "指南, 查詢處理架構"
-  - "查詢處理架構指南"
+ms.custom: 
+ms.date: 10/26/2016
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- guide, query processing architecture
+- query processing architecture guide
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 caps.latest.revision: 5
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 5
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 0f2edc5c0bbf2fba20b26826413ee4f659b379b1
+ms.lasthandoff: 04/11/2017
+
 ---
-# 查詢處理架構指南
+# <a name="query-processing-architecture-guide"></a>查詢處理架構指南
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Database Engine 會處理各種資料儲存架構上的查詢，例如本機資料表、資料分割資料表，以及分散到多部伺服器的資料表。 下列主題涵蓋 SQL Server 如何處理查詢，以及透過執行計畫快取來將查詢重複使用最佳化。
@@ -38,21 +42,21 @@ Database Engine 會處理各種資料儲存架構上的查詢，例如本機資�
 `SELECT` 陳述式僅定義下列項目：  
 * 結果集的格式。 這大部份是在選取清單中指定。 不過，其他如 `ORDER BY` 和 `GROUP BY` 等子句也會影響結果集的最後格式。
 * 包含來源資料的資料表。 這指定於 `FROM` 子句中。
-* 資料表如何在邏輯上與 `SELECT` 陳述式的目的產生關聯。 這定義於聯結規格中，其可能出現在 `FROM` 後面的 `WHERE` 子句或 `ON` 子句中。
+* 資料表如何在邏輯上與 `SELECT` 陳述式的目的產生關聯。 這定義於聯結規格中，其可能出現在 `WHERE` 後面的 `ON` 子句或 `FROM`子句中。
 * 來源資料表中的資料列必須滿足才能符合 `SELECT` 陳述式的條件。 這些條件指定於 `WHERE` 和 `HAVING` 子句中。
 
 
 查詢執行計畫是用以定義下列項目： 
 
 * 存取來源資料表的順序。  
-  一般而言，資料庫伺服器存取基底資料表以建立結果集的順序有很多種。 例如，如果 `SELECT` 陳述式參考三個資料表，則資料庫伺服器會先存取 `TableA`、使用 `TableA` 中的資料來擷取 `TableB` 中相符的資料列，然後使用 `TableB` 中的資料來擷取 `TableC` 中的資料。 資料庫伺服器可以存取資料表的其他順序如下：  
-  `TableC`、`TableB`、`TableA` 或  
-  `TableB`、`TableA`、`TableC` 或  
-  `TableB`、`TableC`、`TableA` 或  
-  `TableC`、`TableA`、`TableB`  
+  一般而言，資料庫伺服器存取基底資料表以建立結果集的順序有很多種。 例如，如果 `SELECT` 陳述式參考三個資料表，則資料庫伺服器會先存取 `TableA`、使用 `TableA` 中的資料來擷取 `TableB`中相符的資料列，然後使用 `TableB` 中的資料來擷取 `TableC`中的資料。 資料庫伺服器可以存取資料表的其他順序如下：  
+  `TableC`、 `TableB`、 `TableA`或  
+  `TableB`、 `TableA`、 `TableC`或  
+  `TableB`、 `TableC`、 `TableA`或  
+  `TableC`、 `TableA`、 `TableB`  
 
 * 從各資料表取得資料所用的方法。  
-  一般而言，有各種不同的方式可存取每個資料表中的資料。 如果僅需要特定索引鍵值的一些資料列，則資料庫伺服器可以使用索引。 如果需要資料表中的所有資料列，則資料庫伺服器可以忽略索引，並執行資料表掃描。 如果需要資料表中的所有資料列，但其中有一個索引的索引鍵資料行是在 `ORDER BY` 中，那麼，執行索引掃描來替代資料表掃描，就能儲存不同排序的結果集。 如果資料表非常小，則資料表掃描可能是所有資料表存取中最有效率的方式。 
+  一般而言，有各種不同的方式可存取每個資料表中的資料。 如果僅需要特定索引鍵值的一些資料列，則資料庫伺服器可以使用索引。 如果需要資料表中的所有資料列，則資料庫伺服器可以忽略索引，並執行資料表掃描。 如果需要資料表中的所有資料列，但其中有一個索引的索引鍵資料行是在 `ORDER BY`中，那麼，執行索引掃描來替代資料表掃描，就能儲存不同排序的結果集。 如果資料表非常小，則資料表掃描可能是所有資料表存取中最有效率的方式。 
 
 
 從許多可能的計畫中選擇其中一個執行計畫的程序，便稱為最佳化。 查詢最佳化工具是 SQL 資料庫系統中最重要的元件之一。 因為查詢最佳化工具使用部份負擔來分析查詢並選取計畫，所以當查詢最佳化工具挑出最有效率的執行計畫時，這個負擔通常已經儲存了好幾層。 例如，兩家營造公司可能對同一間房屋有相同的藍圖。 如果有一家公司在剛開始時，願意花幾天的時間計畫將如何建造房屋，而另一家公司則不計畫就開始建造，那麼有花時間規劃其專案的公司，最有可能在第一時間完成。
@@ -77,13 +81,13 @@ SQL Server 用來處理單一 SELECT 陳述式的基本步驟如下：
 
 #### <a name="processing-other-statements"></a>處理其他的陳述式
 
-這裡描述來用以處理 `SELECT` 陳述式的基本步驟適用於其他 SQL 陳述式，例如 `INSERT`、`UPDATE`及 `DELETE`。 `UPDATE` 與 `DELETE` 陳述式都必須將目標設定為要修改或刪除的資料列集合。 識別這些資料列的處理序，與用以識別參與 `SELECT` 陳述式結果集之來源資料列的處理序相同。 `UPDATE` 和 `INSERT` 陳述式可能都包含內嵌的 `SELECT 陳述式，其可提供要更新或插入的資料值。
+這裡描述來用以處理 `SELECT` 陳述式的基本步驟適用於其他 SQL 陳述式，例如 `INSERT`、 `UPDATE`及 `DELETE`。 `UPDATE` 與 `DELETE` 陳述式都必須將目標設定為要修改或刪除的資料列集合。 識別這些資料列的處理序，與用以識別參與 `SELECT` 陳述式結果集之來源資料列的處理序相同。 `UPDATE` 和 `INSERT` 陳述式可能都包含內嵌的 `SELECT 陳述式，其可提供要更新或插入的資料值。
 
 即使資料定義語言 (DDL) 陳述式 (如 `CREATE PROCEDURE` 或 `ALTER TABL`) 最後會解析為系統目錄資料表上一連串的關聯式作業，但有時還是會根據資料表來解析 (如 `ALTER TABLE ADD COLUMN`)。
 
 ### <a name="worktables"></a>工作資料表
 
-關聯式引擎在執行 SQL 陳述式中所指定的邏輯作業前，可能需要先建立一個工作資料表。 工作資料表屬於內部資料表，可用來保存中繼結果。 工作資料表會針對特定的 `GROUP BY`、`ORDER BY` 或 `UNION` 查詢而產生。 例如，如果 `ORDER BY` 子句會參考不在任何索引範圍內的資料行，則關聯式引擎可能需要產生工作資料表，根據所要求的順序來排序結果集。 工作資料表有時候也當作多工緩衝處理使用，可暫時保存執行部份查詢計畫的結果。 工作資料表建置於 `tempdb` 中，並且會在不再需要時自動卸除。
+關聯式引擎在執行 SQL 陳述式中所指定的邏輯作業前，可能需要先建立一個工作資料表。 工作資料表屬於內部資料表，可用來保存中繼結果。 工作資料表會針對特定的 `GROUP BY`、 `ORDER BY`或 `UNION` 查詢而產生。 例如，如果 `ORDER BY` 子句會參考不在任何索引範圍內的資料行，則關聯式引擎可能需要產生工作資料表，根據所要求的順序來排序結果集。 工作資料表有時候也當作多工緩衝處理使用，可暫時保存執行部份查詢計畫的結果。 工作資料表建置於 `tempdb` 中，並且會在不再需要時自動卸除。
 
 ### <a name="view-resolution"></a>檢視解析
 
@@ -153,11 +157,11 @@ FROM Person.AddrState WITH (SERIALIZABLE)
 WHERE StateProvinceCode = 'WA';
 ```
 
-查詢會失敗，因為查詢中 `Person.AddrState` 檢視表上所套用的 `SERIALIZABLE` 提示，會在展開該檢視表時傳播至檢視表的 `Person.Address` 與 `Person.StateProvince` 資料表中。 不過，展開檢視表也會顯示 `Person.Address` 上的 `NOLOCK` 提示。 由於 `SERIALIZABLE` 提示與 `NOLOCK` 提示相衝突，因此會產生不正確的查詢。 
+查詢會失敗，因為查詢中 `SERIALIZABLE` 檢視表上所套用的 `Person.AddrState` 提示，會在展開該檢視表時傳播至檢視表的 `Person.Address` 與 `Person.StateProvince` 資料表中。 不過，展開檢視表也會顯示 `NOLOCK` 上的 `Person.Address`提示。 由於 `SERIALIZABLE` 提示與 `NOLOCK` 提示相衝突，因此會產生不正確的查詢。 
 
-`PAGLOCK`、`NOLOCK`、`ROWLOCK`、`TABLOCK` 或 `TABLOCKX` 資料表提示彼此衝突，如同 `HOLDLOCK`、`NOLOCK`、`READCOMMITTED`、`REPEATABLEREAD`、`SERIALIZABLE` 資料表提示。
+`PAGLOCK`、 `NOLOCK`、 `ROWLOCK`、 `TABLOCK`或 `TABLOCKX` 資料表提示彼此衝突，如同 `HOLDLOCK`、 `NOLOCK`、 `READCOMMITTED`、 `REPEATABLEREAD`、 `SERIALIZABLE` 資料表提示。
 
-提示可以透過巢狀檢視層級來傳播。 例如，假設查詢在 `v1` 檢視表中套用 `HOLDLOCK` 提示。 展開 `v1` 時，發現 `v2` 檢視是其定義的一部份。 `v2` 的定義包括其中一個基底資料表上的 `NOLOCK` 提示。 但此資料表也會繼承 `v1` 檢視表中查詢的 `HOLDLOCK` 提示。 因為 `NOLOCK` 與 `HOLDLOCK` 提示相衝突，所以查詢會失敗。
+提示可以透過巢狀檢視層級來傳播。 例如，假設查詢在 `HOLDLOCK` 檢視表中套用 `v1`提示。 展開 `v1` 時，發現 `v2` 檢視是其定義的一部份。 `v2`的定義包括其中一個基底資料表上的 `NOLOCK` 提示。 但此資料表也會繼承 `HOLDLOCK` 檢視表中查詢的 `v1`提示。 因為 `NOLOCK` 與 `HOLDLOCK` 提示相衝突，所以查詢會失敗。
 
 在包含檢視表的查詢中使用 `FORCE ORDER` 提示時，檢視表中資料表的聯結順序將由依序建構中的檢視表位置來決定。 例如，下列查詢會從三個資料表和一個檢視中選取：
 
@@ -177,7 +181,7 @@ SELECT Colx, Coly FROM TableA, TableB
 WHERE TableA.ColZ = TableB.Colz;
 ```
 
-查詢計畫中的聯結順序為 `Table1`、`Table2`、`TableA`、`TableB`、`Table3`。
+查詢計畫中的聯結順序為 `Table1`、 `Table2`、 `TableA`、 `TableB`、 `Table3`。
 
 ### <a name="resolving-indexes-on-views"></a>解析檢視上的索引
 
@@ -205,7 +209,7 @@ SQL Server 查詢最佳化工具會在符合下列條件時使用索引檢視：
 * 在對應於索引檢視中之資料表參考的查詢中，每個參考的資料表 (直接參考，或藉由展開檢視以存取其基礎資料表) 都必須在查詢中套用同一組提示。
 
 > [!NOTE] 
-。 無論目前的交易隔離等級為何，在此內容中，永遠都會將 `READCOMMITTED` 和 `READCOMMITTEDLOCK` 提示視為不同的提示。
+子句中。 無論目前的交易隔離等級為何，在此內容中，永遠都會將 `READCOMMITTED` 和 `READCOMMITTEDLOCK` 提示視為不同的提示。
  
 除了 `SET` 選項與資料表提示的需求以外，這些也是查詢最佳化工具用來判斷資料表索引是否涵蓋查詢的相同規則。 不需在查詢中指定其他項目，即可使用索引檢視。
 
@@ -215,13 +219,13 @@ SQL Server 查詢最佳化工具會在符合下列條件時使用索引檢視：
 
 #### <a name="using-hints-with-indexed-views"></a>搭配索引檢視使用提示
 
-您可以使用 `EXPAND VIEWS` 查詢提示來防止在查詢中使用檢視表索引，或者可以使用 `NOEXPAND` 資料表提示，針對查詢的 `FROM` 子句所指定的索引檢視表強制使用索引。 然而，您應該讓查詢最佳化工具動態判斷每個查詢最適用的存取方法。 只有在測試已顯現出其大幅改善效能的特定情況下，才能使用 `EXPAND` 和 `NOEXPAND`。
+您可以使用 `EXPAND VIEWS` 查詢提示來防止在查詢中使用檢視表索引，或者可以使用 `NOEXPAND` 資料表提示，針對查詢的 `FROM` 子句所指定的索引檢視表強制使用索引。 然而，您應該讓查詢最佳化工具動態判斷每個查詢最適用的存取方法。 只有在測試已顯現出其大幅改善效能的特定情況下，才能使用 `EXPAND` 和 `NOEXPAND` 。
 
 `EXPAND VIEWS` 選項指定查詢最佳化工具在整個查詢中不會使用任何檢視表索引。 
 
-針對檢視表指定 `NOEXPAND` 時，查詢最佳化工具就會考慮使用檢視表中所定義的任何索引。 (透過選擇性 `INDEX()` 子句來指定 `NOEXPAND`) 將強制查詢最佳化工具使用指定的索引。 `NOEXPAND` 只能指定給索引檢視表，且不得指定給尚未編製索引的檢視表。
+針對檢視表指定 `NOEXPAND` 時，查詢最佳化工具就會考慮使用檢視表中所定義的任何索引。 (透過選擇性`NOEXPAND` 子句來指定 `INDEX()` ) 將強制查詢最佳化工具使用指定的索引。 `NOEXPAND` 只能指定給索引檢視表，且不得指定給尚未編製索引的檢視表。
 
-如果未在含有檢視表的查詢中指定 `NOEXPAND` 或 `EXPAND VIEWS`，即會展開檢視表以存取基礎資料表。 若構成檢視的查詢中含有任何資料表提示，這些提示便會傳播到基礎資料表。 (此處理序在＜檢視解析＞中有較為詳盡的說明。)只要檢視的基礎資料表上所存在的多個提示彼此相同，則查詢即可與索引檢視比對。 這些提示大多會彼此相符，因為它們都直接繼承自檢視。 然而，若查詢參考資料表 (而非檢視) 以及直接套用於這些資料表的提示不相同，這種查詢將無法與索引檢視進行比對。 若 `INDEX`、`PAGLOCK`、`ROWLOCK`、`TABLOCKX`、`UPDLOCK` 或 `XLOCK` 提示會在檢視表展開後套用到查詢中所參考的資料表，查詢就無法與索引檢視表進行比對。
+如果未在含有檢視表的查詢中指定 `NOEXPAND` 或 `EXPAND VIEWS` ，即會展開檢視表以存取基礎資料表。 若構成檢視的查詢中含有任何資料表提示，這些提示便會傳播到基礎資料表。 (此處理序在＜檢視解析＞中有較為詳盡的說明。)只要檢視的基礎資料表上所存在的多個提示彼此相同，則查詢即可與索引檢視比對。 這些提示大多會彼此相符，因為它們都直接繼承自檢視。 然而，若查詢參考資料表 (而非檢視) 以及直接套用於這些資料表的提示不相同，這種查詢將無法與索引檢視進行比對。 若 `INDEX`、 `PAGLOCK`、 `ROWLOCK`、 `TABLOCKX`、 `UPDLOCK`或 `XLOCK` 提示會在檢視表展開後套用到查詢中所參考的資料表，查詢就無法與索引檢視表進行比對。
 
 如果格式為 `INDEX (index_val[ ,...n] )` 的資料表提示會參考查詢中的檢視表，而您也未指定 `NOEXPAND` 提示，則會忽略索引提示。 若要指定使用特定的索引，請使用 `NOEXPAND。 
 
@@ -238,7 +242,7 @@ SQL Server 會建置智慧型動態計畫，有效使用分散式查詢來存取
 * 查詢處理器會先使用 OLE DB 來擷取各成員資料表中的檢查條件約束。 這可以讓查詢處理器將索引鍵值的散發對應到每個成員資料表中。
 * 查詢處理器會將 SQL 陳述式 `WHERE` 子句中指定的索引鍵範圍，與顯示成員資料表中資料列分散情況的對應做比較。 然後，查詢處理器會建立查詢執行計畫，而此計畫的分散式查詢僅會擷取那些完成 SQL 陳述式所需的遠端資料列。 執行計畫也會以系統取得所需的資訊前，對資料或中繼資料延遲遠端成員資料表存取的方法執行。
 
-例如，假設系統中的客戶資料表是跨 Server1 (從 1 到 3299999 的 `CustomerID`)、Server2 (從 3300000 到 6599999 的 `CustomerID`)，以及 Server3 (從 6600000 到 9999999 的 `CustomerID`) 進行資料分割。
+例如，假設系統中的客戶資料表是跨 Server1 (從 1 到 3299999 的`CustomerID` )、Server2 (從 3300000 到 6599999 的`CustomerID` )，以及 Server3 (從 6600000 到 9999999 的`CustomerID` ) 進行資料分割。
 
 請考慮針對這個在 Server1 上執行之查詢所建置的執行計畫：
 
@@ -260,7 +264,7 @@ FROM CompanyData.dbo.Customers
 WHERE CustomerID = @CustomerIDParameter;
 ```
 
-SQL Server 無法預測每次執行程序時，`@CustomerIDParameter` 參數將提供的索引鍵值。 因為索引鍵值無法預測，所以查詢處理器也無法預測必須存取哪個成員資料表。 為了處理這種情形，SQL Server 建立了具有條件式邏輯的執行計畫 (稱為動態篩選)，可根據輸入參數值來控制要存取的成員資料表。 假設 `GetCustomer` 預存程序是在 Server1 上執行，則執行計畫邏輯就能以下列形式來表示：
+SQL Server 無法預測每次執行程序時， `@CustomerIDParameter` 參數將提供的索引鍵值。 因為索引鍵值無法預測，所以查詢處理器也無法預測必須存取哪個成員資料表。 為了處理這種情形，SQL Server 建立了具有條件式邏輯的執行計畫 (稱為動態篩選)，可根據輸入參數值來控制要存取的成員資料表。 假設 `GetCustomer` 預存程序是在 Server1 上執行，則執行計畫邏輯就能以下列形式來表示：
 
 ```
 IF @CustomerIDParameter BETWEEN 1 and 3299999
@@ -315,7 +319,7 @@ Database Engine 會重複檢查執行計畫，直到移除足夠的計畫，可�
 
 為了回應記憶體壓力，Database Engine 會使用資源監視器和使用者執行緒來釋放程序快取中的記憶體。 資源監視器和使用者執行緒可以檢查計畫並同時執行，以便針對每個未使用的執行計畫減少目前成本。 當全域記憶體壓力存在時，資源監視器就會從程序快取中移除執行計畫。 它會釋放記憶體，以便強制執行系統記憶體、處理序記憶體、資源集區記憶體和所有快取大小上限的原則。 
 
-所有快取大小上限是緩衝集區大小的函數，而且不能超過伺服器記憶體的最大值。 如需設定最大伺服器記憶體的詳細資訊，請參閱 `sp_configure` 中的 `max server memory` 設定。 
+所有快取大小上限是緩衝集區大小的函數，而且不能超過伺服器記憶體的最大值。 如需設定最大伺服器記憶體的詳細資訊，請參閱 `max server memory` 中的 `sp_configure`設定。 
 
 當單一快取記憶體壓力存在時，使用者執行緒就會從程序快取中移除執行計畫。 它們會強制執行最大單一快取大小和最大單一快取項目的原則。 
 
@@ -334,7 +338,7 @@ Database Engine 會重複檢查執行計畫，直到移除足夠的計畫，可�
 * 對查詢所參考之資料表或檢視表所做的變更 (`ALTER TABLE` 和 `ALTER VIEW`)。
 * 對單一程序所做的變更，此程序會從快取中卸除該程序的所有計畫 (`ALTER PROCEDURE`)。
 * 對執行計畫所使用之任何索引所做的變更。
-* 對執行計畫所使用之統計資料的更新，這些更新是由 `UPDATE STATISTICS` 之類的陳述式明確產生或自動產生的。
+* 對執行計畫所使用之統計資料的更新，這些更新是由 `UPDATE STATISTICS`之類的陳述式明確產生或自動產生的。
 * 卸除執行計畫所使用的索引。
 * 明確呼叫 `sp_recompile`。
 * 對索引鍵所做的大量變更 (由 `INSERT` 或 `DELETE` 陳述式所產生，而這類陳述式是來自其他修改查詢所參考之資料表的使用者)。
@@ -347,28 +351,28 @@ Database Engine 會重複檢查執行計畫，直到移除足夠的計畫，可�
 
 陳述式層級的重新編譯有益於效能，因為在大部分情況下，只有少量的陳述式會導致重新編譯並造成相關負面影響，也就是 CPU 時間及鎖定。 批次中不必重新編譯的其他陳述式則可避免這些負面影響。
 
-SQL Server Profiler 的 `SP:Recompile` 追蹤事件會報告陳述式層級的重新編譯。 此追蹤事件只會報告 SQL Server 2000 中的批次重新編譯。 不僅如此，還會在此事件的 `TextData` 資料行中填入資料。 因此，在 SQL Server 2000 中必須追蹤 `SP:StmtStarting` 或 `SP:StmtCompleted`，以取得導致重新編譯之 Transact-SQL 文字的作法，現在已不再需要。
+SQL Server Profiler 的 `SP:Recompile` 追蹤事件會報告陳述式層級的重新編譯。 此追蹤事件只會報告 SQL Server 2000 中的批次重新編譯。 不僅如此，還會在此事件的 `TextData` 資料行中填入資料。 因此，在 SQL Server 2000 中必須追蹤 `SP:StmtStarting` 或 `SP:StmtCompleted` ，以取得導致重新編譯之 Transact-SQL 文字的作法，現在已不再需要。
 
-`SQL:StmtRecompile` 追蹤事件會報告陳述式層級的重新編譯。 此追蹤事件可以用來追蹤及偵錯重新編譯。 `SP:Recompile` 只能針對預存程序及觸發程序來產生；相較之下，`SQL:StmtRecompile` 可針對預存程序、觸發程序、特定批次、使用 `sp_executesql` 執行的批次、準備查詢及動態 SQL 來產生。
+`SQL:StmtRecompile` 追蹤事件會報告陳述式層級的重新編譯。 此追蹤事件可以用來追蹤及偵錯重新編譯。 `SP:Recompile` 只能針對預存程序及觸發程序來產生；相較之下， `SQL:StmtRecompile` 可針對預存程序、觸發程序、特定批次、使用 `sp_executesql`執行的批次、準備查詢及動態 SQL 來產生。
 
-`SP:Recompile` 和 `SQL:StmtRecompile` 的 `EventSubClass` 資料行包含一個整數碼，可指出重新編譯的原因。 下表列出每一個代碼的意義。
+`EventSubClass` 和 `SP:Recompile` 的 `SQL:StmtRecompile` 資料行包含一個整數碼，可指出重新編譯的原因。 下表列出每一個代碼的意義。
 
 |EventSubClass 值    |Description    |
 |----|----|
-|1  |結構描述已變更。    |
-|2  |統計資料已變更。    |
-|3  |延遲編譯。  |
-|4  |SET 選項已變更。    |
-|5  |暫存資料表已變更。   |
-|6  |遠端資料列集已變更。 |
-|7  |`FOR BROWSE` 權限已變更。   |
-|8  |查詢通知環境已變更。    |
-|9  |資料分割檢視已變更。  |
-|10 |資料指標選項已變更。    |
-|11 |`OPTION (RECOMPILE)` 要求的 |
+|1    |結構描述已變更。    |
+|2    |統計資料已變更。    |
+|3    |延遲編譯。    |
+|4    |SET 選項已變更。    |
+|5    |暫存資料表已變更。    |
+|6    |遠端資料列集已變更。    |
+|7    |`FOR BROWSE` 權限已變更。    |
+|8    |查詢通知環境已變更。    |
+|9    |資料分割檢視已變更。    |
+|10    |資料指標選項已變更。    |
+|11    |`OPTION (RECOMPILE)` 要求的    |
 
 > [!NOTE]
-> 當 `AUTO_UPDATE_STATISTICS` 資料庫選項 `SET` 為 `ON` 時，若其目標資料表或索引檢視表的統計值或基數明顯和上次執行不同時，就會重新編譯查詢。 此行為適用於標準使用者定義的資料表、暫存資料表，以及 DML 觸發程序所建立的插入和刪除資料表。 如果過多的重新編譯影響了查詢效能，請考慮將此設定值變更為 `OFF`。 當 `AUTO_UPDATE_STATISTICS` 資料庫選項 `SET` 為 `OFF` 時，就不會基於統計資料或基數變更發生重新編譯，但 DML `INSTEAD OF` 觸發程序所建立的插入和刪除資料表例外。 因為這些資料表是在 tempdb 中建立的，所以存取它們的查詢是否要重新編譯，取決於 tempdb 中 `AUTO_UPDATE_STATISTICS` 的設定。 請注意，在 SQL Server 2000 中，即使此設定為 `OFF`，還是會繼續根據 DML 觸發程序之插入和刪除資料表的基數變更來重新編譯查詢。
+> 當 `AUTO_UPDATE_STATISTICS` 資料庫選項 `SET` 為 `ON`時，若其目標資料表或索引檢視表的統計值或基數明顯和上次執行不同時，就會重新編譯查詢。 此行為適用於標準使用者定義的資料表、暫存資料表，以及 DML 觸發程序所建立的插入和刪除資料表。 如果過多的重新編譯影響了查詢效能，請考慮將此設定值變更為 `OFF`。 當 `AUTO_UPDATE_STATISTICS` 資料庫選項 `SET` 為 `OFF`時，就不會基於統計資料或基數變更發生重新編譯，但 DML `INSTEAD OF` 觸發程序所建立的插入和刪除資料表例外。 因為這些資料表是在 tempdb 中建立的，所以存取它們的查詢是否要重新編譯，取決於 tempdb 中 `AUTO_UPDATE_STATISTICS` 的設定。 請注意，在 SQL Server 2000 中，即使此設定為 `OFF`，還是會繼續根據 DML 觸發程序之插入和刪除資料表的基數變更來重新編譯查詢。
  
 
 ### <a name="parameters-and-execution-plan-reuse"></a>參數和執行計畫的重複使用
@@ -376,7 +380,7 @@ SQL Server Profiler 的 `SP:Recompile` 追蹤事件會報告陳述式層級的�
 參數的使用，包括 ADO、OLE DB、和 ODBC 應用程式中的參數標記，可以增加執行計畫的重複使用。
 
 > [!WARNING] 
-> 相較於將值串連到字串，然後使用資料存取 API 方法、`EXECUTE` 陳述式或 `sp_executesql` 預存程序來執行該字串，比較安全的方式是使用參數或參數標記來保留使用者輸入的值。
+> 相較於將值串連到字串，然後使用資料存取 API 方法、 `EXECUTE` 陳述式或 `sp_executesql` 預存程序來執行該字串，比較安全的方式是使用參數或參數標記來保留使用者輸入的值。
  
 下列這兩個 `SELECT` 陳述式的唯一差異在於 `WHERE` 子句中所比較的值：
 
@@ -413,7 +417,7 @@ WHERE ProductSubcategoryID = 4;
 
 * ADO、OLE DB、和 ODBC 使用參數標記。 參數標記是取代 SQL 陳述式中常數的問號 (?)，這些標記將繫結至程式變數。 例如，您可以在 ODBC 應用程式中執行下列動作： 
 
-   * 使用 `SQLBindParameter`，將整數變數繫結到 SQL 陳述式中的第一個參數標記。
+   * 使用 `SQLBindParameter` ，將整數變數繫結到 SQL 陳述式中的第一個參數標記。
    * 在變數中放入整數值。
    * 執行陳述式，指定參數標記 (?)： 
 
@@ -425,11 +429,11 @@ WHERE ProductSubcategoryID = 4;
      SQL_NTS);
    ```
 
-   在應用程式中使用參數標記時，SQL Server 所包含的 SQL Server Native Client OLE DB 提供者和 SQL Server Native Client ODBC 驅動程式，都會使用 `sp_executesql`，將陳述式傳送至 SQL Server。 
+   在應用程式中使用參數標記時，SQL Server 所包含的 SQL Server Native Client OLE DB 提供者和 SQL Server Native Client ODBC 驅動程式，都會使用 `sp_executesql` ，將陳述式傳送至 SQL Server。 
 
 * 設計預存程序，按設計來使用參數。
 
-如果您未明確在應用程式設計中建置參數，也可以仰賴 SQL Server 查詢最佳化工具，利用簡單參數化的預設行為，自動將特定查詢參數化。 另外，您也可以強制查詢最佳化工具考慮將資料庫中的所有查詢參數化，方式是將 `ALTER DATABASE` 陳述式的 `PARAMETERIZATION` 選項設為 `FORCED`。
+如果您未明確在應用程式設計中建置參數，也可以仰賴 SQL Server 查詢最佳化工具，利用簡單參數化的預設行為，自動將特定查詢參數化。 另外，您也可以強制查詢最佳化工具考慮將資料庫中的所有查詢參數化，方式是將 `PARAMETERIZATION` 陳述式的 `ALTER DATABASE` 選項設為 `FORCED`。
 
 啟用強制參數化之後，仍會發生簡單參數化。 例如，根據強制參數化的規則，下列查詢無法參數化：
 
@@ -445,7 +449,7 @@ WHERE AddressID = 1 + 2;
 在 SQL Server 的 Transact-SQL 陳述式中使用參數或參數標記時，可以提升關聯式引擎將新的 SQL 陳述式與先前編譯之現有執行計畫配對的能力。
 
 > [!WARNING] 
-> 相較於將值串連到字串，然後使用資料存取 API 方法、`EXECUTE` 陳述式或 `sp_executesql` 預存程序來執行該字串，比較安全的方式是使用參數或參數標記來保留使用者輸入的值。
+> 相較於將值串連到字串，然後使用資料存取 API 方法、 `EXECUTE` 陳述式或 `sp_executesql` 預存程序來執行該字串，比較安全的方式是使用參數或參數標記來保留使用者輸入的值。
 
 如果在不使用參數的情況下執行 SQL 陳述式，SQL Server 就會在內部將此陳述式參數化，以增加它與現有執行計畫配對的可能性。 此處理序即稱為簡單參數化。 在 SQL Server 2000 中，此處理序就是指自動參數化。
 
@@ -472,22 +476,22 @@ WHERE ProductSubcategoryID = 4;
 > [!NOTE]
 > 使用 +、-、*、/ 或 % 等算術運算子來將 int、smallint、tinyint 或 bigint 常數值隱含或明確轉換為 float、real、decimal 或 numeric 資料類型時，SQL Server 會套用特定的規則來計算運算式結果的類型與有效位數。 不過，這些規則會隨著查詢是否參數化而有所不同。 因此，在某些情況下，查詢中類似的運算式可能會產生不同的結果。
 
-在簡單參數化的預設行為下，SQL Server 可將相對較小的查詢類別參數化。 不過，您可以藉由將 `ALTER DATABASE` 命令的 `PARAMETERIZATION` 選項設為 `FORCED`，來指定資料庫中所有查詢都會依據特定限制進行參數化。 這麼做可降低查詢編譯的頻率，進而改善經歷大量並行查詢的資料庫效能。
+在簡單參數化的預設行為下，SQL Server 可將相對較小的查詢類別參數化。 不過，您可以藉由將 `PARAMETERIZATION` 命令的 `ALTER DATABASE` 選項設為 `FORCED`，來指定資料庫中所有查詢都會依據特定限制進行參數化。 這麼做可降低查詢編譯的頻率，進而改善經歷大量並行查詢的資料庫效能。
 
 此外，您可以指定單一查詢，以及任何其他語法相同但唯有參數值不同的查詢，使其進行參數化。 
 
 
 ### <a name="forced-parameterization"></a>強制參數化
 
-您可以藉由指定將資料庫中所有的 `SELECT`、`INSERT`、`UPDATE` 及 `DELETE` 陳述式依據特定限制進行參數化，以覆寫 SQL Server 預設的簡單參數化行為。 您可以藉由將 `ALTER DATABASE` 陳述式中的 `PARAMETERIZATION` 選項設為 `FORCED`，來啟用強制參數化。 強制參數化可藉由降低查詢編譯與重新編譯的頻率，來增進特定資料庫的效能。 可經由強制參數化獲益的資料庫通常會有來自來源 (如銷售點應用程式) 的大量並行查詢。
+您可以藉由指定將資料庫中所有的 `SELECT`、 `INSERT`、 `UPDATE`及 `DELETE` 陳述式依據特定限制進行參數化，以覆寫 SQL Server 預設的簡單參數化行為。 您可以藉由將 `PARAMETERIZATION` 陳述式中的 `FORCED` 選項設為 `ALTER DATABASE` ，來啟用強制參數化。 強制參數化可藉由降低查詢編譯與重新編譯的頻率，來增進特定資料庫的效能。 可經由強制參數化獲益的資料庫通常會有來自來源 (如銷售點應用程式) 的大量並行查詢。
 
-將 `PARAMETERIZATION` 選項設為 `FORCED` 時，出現在 `SELECT`、`INSERT`、`UPDATE` 或 `DELETE` 陳述式中且以任何形式提交的所有常值，都會在查詢編譯期間轉換為參數。 但出現於下列查詢結構中的常值則為例外： 
+將 `PARAMETERIZATION` 選項設為 `FORCED`時，出現在 `SELECT`、 `INSERT`、 `UPDATE`或 `DELETE` 陳述式中且以任何形式提交的所有常值，都會在查詢編譯期間轉換為參數。 但出現於下列查詢結構中的常值則為例外： 
 
 * `INSERT...EXECUTE` 陳述式。
 * 位於預存程序、觸發程序或使用者自訂函數主體中的陳述式。 SQL Server 已經會重複使用這些常式的查詢計畫。
 * 已在用戶端應用程式上完成參數化的準備陳述式。
 * 含有 XQuery 方法呼叫的陳述式，其方法會出現在引數通常已參數化的內容中，如 `WHERE` 子句。 若此方法出現在引數未參數化的內容中，則該陳述式的其他部分會進行參數化。
-* 位於 Transact-SQL 資料指標內的陳述式 (API 資料指標內的 `SELECT` 陳述式會進行參數化)。
+* 位於 Transact-SQL 資料指標內的陳述式 (API 資料指標內的`SELECT` 陳述式會進行參數化)。
 * 被取代的查詢結構。
 * 將在 `ANSI_PADDING` 或 `ANSI_NULLS` 內容中執行的任何陳述式設為 `OFF`。
 * 包含超過 2,097 個可參數化之常值的陳述式。
@@ -499,9 +503,9 @@ WHERE ProductSubcategoryID = 4;
 另外，下列查詢子句不參數化。 請注意，在這些案例中，只有子句不參數化。 相同查詢內的其他子句可進行強制參數化。
 
 * 任何 `SELECT` 陳述式的 <select_list>。 這包括子查詢的 `SELECT` 清單和 `INSERT` 陳述式內的 `SELECT` 清單。
-* 出現在 `IF` 陳述式內的子查詢 `SELECT` 陳述式。
-* 查詢的 `TOP`、`TABLESAMPLE`、`HAVING`、`GROUP BY`、`ORDER BY`、`OUTPUT...INTO` 或 `FOR XM`L 子句。
-* 傳送至 `OPENROWSET`、`OPENQUERY`、`OPENDATASOURCE`、`OPENXML` 或任何 `FULLTEXT` 運算子的引數 (直接或做為子運算式)。
+* 出現在 `SELECT` 陳述式內的子查詢 `IF` 陳述式。
+* 查詢的 `TOP`、 `TABLESAMPLE`、 `HAVING`、 `GROUP BY`、 `ORDER BY`、 `OUTPUT...INTO`或 `FOR XM`L 子句。
+* 傳送至 `OPENROWSET`、 `OPENQUERY`、 `OPENDATASOURCE`、 `OPENXML`或任何 `FULLTEXT` 運算子的引數 (直接或做為子運算式)。
 * `LIKE` 子句的 pattern 和 escape_character 引數。
 * `CONVERT` 子句的 style 引數。
 * `IDENTITY` 子句中的整數常數。
@@ -509,7 +513,7 @@ WHERE ProductSubcategoryID = 4;
 * 可摺疊常數的運算式，其為 +、-、*、/ 及 % 運算子的引數。 考量是否可進行強制參數化時，若符合下列其中一項條件，SQL Server 就會認定運算式為可摺疊常數的：  
   * 運算式中未出現資料行、變數或子查詢。  
   * 運算式包含 `CASE` 子句。  
-* 查詢提示子句的引數。 這些包括 `FAST` 查詢提示的 `number_of_rows` 引數、`MAXDOP` 查詢提示的 `number_of_processors` 引數，以及 `MAXRECURSION` 查詢提示的 number 引數。
+* 查詢提示子句的引數。 這些包括 `number_of_rows` 查詢提示的 `FAST` 引數、 `number_of_processors` 查詢提示的 `MAXDOP` 引數，以及 `MAXRECURSION` 查詢提示的 number 引數。
 
 
 參數化會發生在個別 Transact-SQL 陳述式層級上。 換句話說，批次中的個別陳述式會進行參數化。 編譯之後，參數化查詢會在最初提交查詢的批次內容中執行。 若已快取查詢的執行計畫，即可藉由參考 sys.syscacheobjects 動態管理檢視表的 sql 資料行，來判斷查詢是否已參數化。 若查詢已參數化，則此資料行中參數的名稱與資料類型會顯示在提交批次的文字之前，如 (@1 tinyint)。
@@ -534,15 +538,15 @@ WHERE ProductSubcategoryID = 4;
 將 `PARAMETERIZATION` 選項設為 FORCED 時，請考量下列事項：
 
 * 強制參數化一旦生效後，會在編譯查詢時將查詢中的常值 (常數) 變更為參數。 因此，查詢最佳化工具可能會選擇到次佳的查詢計畫。 特別是，查詢最佳化工具較不可能比對查詢與索引檢視或計算資料行上的索引。 它也可會為資料分割資料表與分散式資料分割檢視上的查詢選擇次佳的計畫。 針對非常依賴索引檢視或計算資料行上索引的環境，就不應該使用強制參數化。 一般而言，應由具有經驗的資料庫管理員判斷 `PARAMETERIZATION FORCED` 選項的執行不會對效能造成不良影響後，才能使用此選項。
-* 只要在查詢執行之內容所屬的資料庫中，將 `PARAMETERIZATION` 選項設為 `FORCED`，參考多個資料庫的分散式查詢即能使用強制參數化。
-* 將 `PARAMETERIZATION` 選項設為 `FORCED`，就會從資料庫的計畫快取中排清所有查詢計畫，但目前正在編譯、重新編譯或執行的計畫除外。 在設定變更期間編譯或執行的查詢計畫，會在下次執行查詢時進行參數化。
+* 只要在查詢執行之內容所屬的資料庫中，將 `PARAMETERIZATION` 選項設為 `FORCED` ，參考多個資料庫的分散式查詢即能使用強制參數化。
+* 將 `PARAMETERIZATION` 選項設為 `FORCED` ，就會從資料庫的計畫快取中排清所有查詢計畫，但目前正在編譯、重新編譯或執行的計畫除外。 在設定變更期間編譯或執行的查詢計畫，會在下次執行查詢時進行參數化。
 * 設定 `PARAMETERIZATION` 選項是不需要資料庫層級獨佔鎖定的線上作業。
 * 重新附加或還原資料庫時，會保留 `PARAMETERIZATION` 選項目前的設定。
 
-您可以指定在單一查詢以及語法上相同但只有其參數值不同的查詢嘗試簡單參數化，以覆寫強制參數化的行為。 反之，您可以指定只在一組語法相同的查詢嘗試強制參數化，即使資料庫中已停用強制參數化。 此即為[計畫指南](../relational-databases/performance/plan-guides.md)的用途。
+您可以指定在單一查詢以及語法上相同但只有其參數值不同的查詢嘗試簡單參數化，以覆寫強制參數化的行為。 反之，您可以指定只在一組語法相同的查詢嘗試強制參數化，即使資料庫中已停用強制參數化。 此即為[計畫指南](../relational-databases/performance/plan-guides.md) 的用途。
 
 > [!NOTE]
-> 將 `PARAMETERIZATION` 選項設為 `FORCED` 時，錯誤訊息的報告可能與簡單參數化的報告不同：當簡單參數化下報告的訊息較少時，可能會報告多個錯誤訊息，而且發生錯誤的行號報告可能不正確。
+> 將 `PARAMETERIZATION` 選項設為 `FORCED`時，錯誤訊息的報告可能與簡單參數化的報告不同：當簡單參數化下報告的訊息較少時，可能會報告多個錯誤訊息，而且發生錯誤的行號報告可能不正確。
  
 
 ### <a name="preparing-sql-statements"></a>準備 SQL 陳述式
@@ -592,7 +596,7 @@ WHERE ProductID = 63;
 
 SQL Server 提供平行查詢，讓擁有多個處理器 (CPU) 的電腦也能獲得最佳的查詢執行和索引作業。 因為 SQL Server 可利用數個作業系統執行緒平行執行查詢或索引作業，所以可快速且有效率地完成作業。
 
-在查詢最佳化期間，SQL Server 會搜尋可能受益於平行執行的查詢或索引作業。 對於這些查詢，SQL Server 會在查詢執行計畫中插入交換運算子，以準備平行執行的查詢。 所謂的交換運算子，是指查詢執行計畫中，提供存取管理、資料重新散佈以及流量控制的運算子。 交換運算子包括當做子類型的 `Distribute Streams`、`Repartition Streams` 及 `Gather Streams` 邏輯運算子，其中的一或多個可以出現在平行查詢之查詢計畫的執行程序表輸出中。 
+在查詢最佳化期間，SQL Server 會搜尋可能受益於平行執行的查詢或索引作業。 對於這些查詢，SQL Server 會在查詢執行計畫中插入交換運算子，以準備平行執行的查詢。 所謂的交換運算子，是指查詢執行計畫中，提供存取管理、資料重新散佈以及流量控制的運算子。 交換運算子包括當做子類型的 `Distribute Streams`、 `Repartition Streams`及 `Gather Streams` 邏輯運算子，其中的一或多個可以出現在平行查詢之查詢計畫的執行程序表輸出中。 
 
 插入交換運算子之後，結果便是平行查詢執行計畫。 平行查詢執行計畫可以使用一個以上的執行緒。 非平行查詢所使用的序列執行計畫，執行時只會使用一個執行緒。 平行查詢實際所使用的執行緒數目，是在查詢計畫執行初始化時，由計畫的複雜度與平行處理原則的程度決定。 平行處理原則的程度決定將要使用的 CPU 最大數目，而不是將要使用的執行緒數目。 平行處理原則的程度值是在伺服器層級設定的，可以使用 sp_configure 系統預存程序來修改。 您可以指定 `MAXDOP` 查詢提示或 `MAXDOP` 索引選項，來覆寫個別查詢或索引陳述式的這個值。 
 
@@ -614,7 +618,7 @@ SQL Server 會針對平行查詢執行或索引資料定義語言 (DDL) 作業�
   每一個查詢或索引作業都需要某個數目的執行緒來執行。 執行平行計畫所需的執行緒會比執行序列計畫還多，而且所需的執行緒數目會隨著平行處理原則的程度增加。 無法滿足適用於平行處理原則之特定程度的平行計畫執行緒需求時，Database Engine 就會自動降低平行處理原則的程度，或是完全放棄指定工作負載內容中的平行計畫。 然後，它會執行序列計畫 (一個執行緒)。 
 
 3. 已執行的查詢或索引作業類型。  
-  建立或重建索引，或是卸除叢集索引的索引作業，以及大量使用 CPU 循環的查詢，最適合使用平行計畫。 例如，聯結大型資料表、大型彙總及排序大型結果集，皆適用於平行計畫。 經常在交易處理應用程式中發現的簡單查詢，會尋找執行平行查詢時所需的其他協調作業，此平行查詢比潛在的效能提升更為重要。 為了區分能否從平行處理原則中獲益的查詢，Database Engine 會比較執行查詢或索引作業的預估成本與[平行處理原則的成本臨界值](../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md)。 雖然不建議這麼做，但使用者可以使用 [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 來變更預設值 5。 
+  建立或重建索引，或是卸除叢集索引的索引作業，以及大量使用 CPU 循環的查詢，最適合使用平行計畫。 例如，聯結大型資料表、大型彙總及排序大型結果集，皆適用於平行計畫。 經常在交易處理應用程式中發現的簡單查詢，會尋找執行平行查詢時所需的其他協調作業，此平行查詢比潛在的效能提升更為重要。 為了區分能否從平行處理原則中獲益的查詢，Database Engine 會比較執行查詢或索引作業的預估成本與 [平行處理原則的成本臨界值](../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md) 。 雖然不建議這麼做，但使用者可以使用 [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)來變更預設值 5。 
 
 4. 要處理的資料列數目是否足夠。  
   如果查詢最佳化工具判定資料列數目太少，則它不會引進交換運算子來散發資料列。 因此，運算子會循序執行。 在序列計畫中執行運算子，可避免啟動、散發、協調成本超過執行平行運算子所獲得的利益時的案例。
@@ -712,13 +716,13 @@ CREATE UNIQUE INDEX o_datkeyopr_idx
 
 上圖所示為使用平行處理原則程度 4 來執行的查詢最佳化工具計畫，包含兩個資料表的聯結。
 
-平行計畫包含三個 `Parallelism` 運算子。 `o_datkey_ptr` 索引的 `Index Seek` 運算子和 `l_order_dates_idx` 索引的 `Index Scan` 運算子會以平行方式執行。 這會產生數個獨佔的資料流。 這可分別從 `Index Scan` 和 `Index Seek` 運算子上方最接近的 Parallelism 運算子來判斷。 兩者都會重新分割交換類型。 也就是說，它們只是將資料流間的資料重新改組，然後依據其輸入的資料流數量產生等量的輸出資料流。 此資料流數量就等於平行處理原則的程度。
+平行計畫包含三個 `Parallelism` 運算子。 `Index Seek` 索引的 `o_datkey_ptr` 運算子和 `Index Scan` 索引的 `l_order_dates_idx` 運算子會以平行方式執行。 這會產生數個獨佔的資料流。 這可分別從 `Index Scan` 和 `Index Seek` 運算子上方最接近的 Parallelism 運算子來判斷。 兩者都會重新分割交換類型。 也就是說，它們只是將資料流間的資料重新改組，然後依據其輸入的資料流數量產生等量的輸出資料流。 此資料流數量就等於平行處理原則的程度。
 
-位於 `l_order_dates_idx` `Index Scan` 運算子上方的 `Parallelism `運算子會使用 `L_ORDERKEY` 的值做為索引鍵，重新分割其輸入資料流。 利用這種方式，相同的 `L_ORDERKEY` 值也會在相同的輸出資料流中產生相同的結果。 同時，輸出資料流會維持 `L_ORDERKEY` 資料行上的順序，以符合 `Merge Join` 運算子的輸入需求。
+位於 `Parallelism ` `l_order_dates_idx` `Index Scan` operator is repartitioning its input streams using the value of `L_ORDERKEY` as a key. 利用這種方式，相同的 `L_ORDERKEY` 值也會在相同的輸出資料流中產生相同的結果。 同時，輸出資料流會維持 `L_ORDERKEY` 資料行上的順序，以符合 `Merge Join` 運算子的輸入需求。
 
-位於 `Index Seek` 運算子上方的 `Parallelism`運算子會使用 `O_ORDERKEY` 的值，重新分割其輸入資料流。 因為其輸入未在 `O_ORDERKEY` 資料行值上進行排序，而且此為 `Merge Join` 運算子中的聯結資料行，所以介於 `Parallelism` 與 `Merge Join` 運算子之間的 Sort 運算子，可確保會在聯結資料行上針對 `Merge Join` 運算子為輸入進行排序。 `Sort` 運算子 (如 `Merge Join` 運算子) 會以平行方式執行。
+位於 `Parallelism` 運算子上方的 `Index Seek` 運算子會使用 `O_ORDERKEY`的值，重新分割其輸入資料流。 因為其輸入未在 `O_ORDERKEY` 資料行值上進行排序，而且此為 `Merge Join` 運算子中的聯結資料行，所以介於 `Parallelism` 與 `Merge Join` 運算子之間的 Sort 運算子，可確保會在聯結資料行上針對 `Merge Join` 運算子為輸入進行排序。 `Sort` 運算子 (如 `Merge Join` 運算子) 會以平行方式執行。
 
-最頂端的 `Parallelism` 運算子會將數個資料流中的結果集合成單一資料流。 由 `Parallelism` 運算子下方 `Stream Aggregate` 運算子所執行的部分彙總，接著會在 `Parallelism` 運算子上方的 `Stream Aggregate` 運算子中，累積為各個不同 `O_ORDERPRIORITY` 值的單一 `SUM` 值。 由於此計畫具有兩個交換區段，且平行處理原則的程度為 4，因此會使用八個執行緒。
+最頂端的 `Parallelism` 運算子會將數個資料流中的結果集合成單一資料流。 由 `Stream Aggregate` 運算子下方 `Parallelism` 運算子所執行的部分彙總，接著會在 `SUM` 運算子上方的 `O_ORDERPRIORITY` 運算子中，累積為各個不同 `Stream Aggregate` 值的單一 `Parallelism` 值。 由於此計畫具有兩個交換區段，且平行處理原則的程度為 4，因此會使用八個執行緒。
 
 
 ### <a name="parallel-index-operations"></a>平行索引作業
@@ -728,7 +732,7 @@ CREATE UNIQUE INDEX o_datkeyopr_idx
 > [!NOTE]
 > 只有 SQL Server 2008 Enterprise 才支援平行索引作業。
  
-SQL Server 會使用與其他查詢相同的演算法，來判斷索引作業的平行處理原則程度 (要執行的個別執行緒總數)。 索引作業的平行處理原則最大程度受限於[平行處理原則的最大程度](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)伺服器組態選項。 您可以在 CREATE INDEX、ALTER INDEX、DROP INDEX 和 ALTER TABLE 陳述式中設定 MAXDOP 索引選項，來覆寫個別索引作業的 [平行處理原則的最大程度] 值。
+SQL Server 會使用與其他查詢相同的演算法，來判斷索引作業的平行處理原則程度 (要執行的個別執行緒總數)。 索引作業的平行處理原則最大程度受限於 [平行處理原則的最大程度](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) 伺服器組態選項。 您可以在 CREATE INDEX、ALTER INDEX、DROP INDEX 和 ALTER TABLE 陳述式中設定 MAXDOP 索引選項，來覆寫個別索引作業的 [平行處理原則的最大程度] 值。
 
 當 Database Engine 建立索引執行計畫時，會將平行作業的數目設定為下列項目中的最低值： 
 
@@ -778,7 +782,7 @@ SQL Server 會使用 OLE DB，在關聯式引擎與儲存引擎間進行通訊�
 
 針對每個可做為連結伺服器存取的 OLE DB 資料來源，在執行 SQL Server 的伺服器上必須存在 OLE DB 提供者。 這組可根據特定 OLE DB 資料來源使用的 Transact-SQL 作業，取決於 OLE DB 提供者的能力。
 
-對於每個 SQL Server 執行個體，`sysadmin` 固定伺服器角色的成員可藉由使用 SQL Server `DisallowAdhocAccess` 屬性來啟用或停用 OLE DB 提供者的特定連接器名稱的使用。 當啟用特定存取時，任何登入到該執行個體的使用者都可以執行包含特定連接子名稱的 SQL 陳述式，該連接子名稱會參考可使用 OLE DB 提供者存取之網路上的任何資料來源。 若要控制資料來源的存取，`sysadmin` 角色的成員可以停用該 OLE DB 提供者的特定存取，進而限制使用者只能存取由系統管理員定義之連結伺服器名稱所參考的資料來源。 預設會針對 SQL Server OLE DB 提供者啟用特定存取，並針對所有其他的 OLE DB 提供者加以停用。
+對於每個 SQL Server 執行個體， `sysadmin` 固定伺服器角色的成員可藉由使用 SQL Server `DisallowAdhocAccess` 屬性來啟用或停用 OLE DB 提供者的特定連接器名稱的使用。 當啟用特定存取時，任何登入到該執行個體的使用者都可以執行包含特定連接子名稱的 SQL 陳述式，該連接子名稱會參考可使用 OLE DB 提供者存取之網路上的任何資料來源。 若要控制資料來源的存取， `sysadmin` 角色的成員可以停用該 OLE DB 提供者的特定存取，進而限制使用者只能存取由系統管理員定義之連結伺服器名稱所參考的資料來源。 預設會針對 SQL Server OLE DB 提供者啟用特定存取，並針對所有其他的 OLE DB 提供者加以停用。
 
 分散式查詢可使用 Microsoft Windows 帳戶 (SQL Server 服務正在其下執行) 的安全性內容，允許使用者存取其他資料來源 (例如，檔案或 Active Directory 等非關聯式資料來源等)。 SQL Server 會適當地模擬 Windows 登入，但無法模擬 SQL Server 登入。 這可能會允許分散式查詢使用者存取他們沒有使用權限的其他資料來源，但執行 SQL Server 服務的帳戶確實擁有權限。 使用 `sp_addlinkedsrvlogin` 來定義已經授權存取對應連結伺服器的特定登入。 ad hoc 名稱無法使用此控制，所以啟用 ad hoc 存取的 OLE DB 提供者時請特別小心。
 
@@ -796,7 +800,7 @@ SQL Server 2008 已針對許多平行計畫提升了資料分割資料表上的�
 
 ### <a name="new-partition-aware-seek-operation"></a>新資料分割感知的搜尋作業
 
-在 SQL Server 中，資料分割資料表的內部表示法已變更。對於查詢處理器而，資料表看起來像是具有以 `PartitionID` 為開頭資料行的多重資料行索引。 `PartitionID` 是經過計算的隱藏資料行，可在內部用來代表包含特定資料列之資料分割的 `ID`。 例如，假設定義為 `T(a, b, c)` 的資料表 T 已在資料行 a 上進行資料分割，而且資料行 b 上具有叢集索引。 在 SQL Server 中，這個資料分割的資料表會在內部視為非資料分割的資料表，而且具有結構描述 `T(PartitionID, a, b, c)` 及複合索引鍵 `(PartitionID, b)` 上的叢集索引。 如此可讓查詢最佳化工具根據任何資料分割資料表或索引上的 `PartitionID` 來執行搜尋作業。 
+在 SQL Server 中，資料分割資料表的內部表示法已變更。對於查詢處理器而，資料表看起來像是具有以 `PartitionID` 為開頭資料行的多重資料行索引。 `PartitionID` 是經過計算的隱藏資料行，可在內部用來代表包含特定資料列之資料分割的 `ID` 。 例如，假設定義為 `T(a, b, c)`的資料表 T 已在資料行 a 上進行資料分割，而且資料行 b 上具有叢集索引。 在 SQL Server 中，這個資料分割的資料表會在內部視為非資料分割的資料表，而且具有結構描述 `T(PartitionID, a, b, c)` 及複合索引鍵 `(PartitionID, b)`上的叢集索引。 如此可讓查詢最佳化工具根據任何資料分割資料表或索引上的 `PartitionID` 來執行搜尋作業。 
 
 現在完成了此搜尋作業中的資料分割刪除。
 
@@ -806,25 +810,25 @@ SQL Server 2008 已針對許多平行計畫提升了資料分割資料表上的�
 SELECT * FROM T WHERE a < 10 and b = 2;
 ```
 
-在此範例中，假設定義為 `T(a, b, c)` 的資料表 T 已在資料行 a 上進行資料分割，而且資料行 b 上具有叢集索引。 資料表 T 的資料分割界限是由以下資料分割函數所定義：
+在此範例中，假設定義為 `T(a, b, c)`的資料表 T 已在資料行 a 上進行資料分割，而且資料行 b 上具有叢集索引。 資料表 T 的資料分割界限是由以下資料分割函數所定義：
 
 ```
 CREATE PARTITION FUNCTION myRangePF1 (int) AS RANGE LEFT FOR VALUES (3, 7, 10);
 ```
 
-為了解決此查詢，查詢處理器會執行第一層搜尋作業，以尋找包含符合 `T.a < 10` 條件之資料列的每一個資料分割。 這會找出要存取的資料分割。 然後處理器會在每個識別出的資料分割中，於資料行 b 上執行叢集索引內的第二層搜尋，以找出符合 `T.b = 2` 和 `T.a < 10` 條件的資料列。 
+為了解決此查詢，查詢處理器會執行第一層搜尋作業，以尋找包含符合 `T.a < 10`條件之資料列的每一個資料分割。 這會找出要存取的資料分割。 然後處理器會在每個識別出的資料分割中，於資料行 b 上執行叢集索引內的第二層搜尋，以找出符合 `T.b = 2` 和 `T.a < 10`條件的資料列。 
 
-下圖為略過掃描作業的邏輯表示法。 此圖顯示資料表 T，其中的資料行 a 和 b 中有資料。 資料分割以 1 到 4 進行編號，並以垂直虛線來顯示資料分割界限。 對資料分割的第一層搜尋作業 (此圖並未顯示) 已判斷出資料分割 1、2 和 3 符合針對資料行 a 上資料表和述詞定義之資料分割所默許的搜尋條件。 也就是說，`T.a < 10`。 略過掃描作業的第二層搜尋部分所周遊的路徑則以曲線表示。 基本上來說，此略過掃描作業會搜尋每一個資料分割，以找出符合 `b = 2` 條件的資料列。 此略過掃描作業的總成本與三個個別索引搜尋的總成本相同。   
+下圖為略過掃描作業的邏輯表示法。 此圖顯示資料表 T，其中的資料行 a 和 b 中有資料。 資料分割以 1 到 4 進行編號，並以垂直虛線來顯示資料分割界限。 對資料分割的第一層搜尋作業 (此圖並未顯示) 已判斷出資料分割 1、2 和 3 符合針對資料行 a 上資料表和述詞定義之資料分割所默許的搜尋條件。 也就是說， `T.a < 10`。 略過掃描作業的第二層搜尋部分所周遊的路徑則以曲線表示。 基本上來說，此略過掃描作業會搜尋每一個資料分割，以找出符合 `b = 2`條件的資料列。 此略過掃描作業的總成本與三個個別索引搜尋的總成本相同。   
 ![skip_scan](../relational-databases/media/skip-scan.gif)
 
 
 ### <a name="displaying-partitioning-information-in-query-execution-plans"></a>在查詢執行計畫中顯示資料分割資訊
 
-資料分割資料表和索引上的查詢執行計畫可以使用 Transact-SQL `SET` 陳述式 `SET SHOWPLAN_XML` 或 `SET STATISTICS XML`，或是使用 SQL Server Management Studio 中的圖形化執行計畫輸出進行檢查。 例如，您可以在查詢編輯器工具列上，按一下 [顯示估計執行計畫] 來顯示編譯時間執行計畫，以及按一下 [包括實際執行計畫] 來顯示執行階段計畫。 
+資料分割資料表和索引上的查詢執行計畫可以使用 Transact-SQL `SET` 陳述式 `SET SHOWPLAN_XML` 或 `SET STATISTICS XML`，或是使用 SQL Server Management Studio 中的圖形化執行計畫輸出進行檢查。 例如，您可以在查詢編輯器工具列上，按一下 [顯示估計執行計畫]  來顯示編譯時間執行計畫，以及按一下 [包括實際執行計畫] 來顯示執行階段計畫。 
 
 您可以使用這些工具來確定以下資訊：
 
-* 像是可以存取分割資料表或索引的 `scans`、`seeks`、`inserts`、`updates`、`merges` 和 `deletes` 等作業。
+* 像是可以存取分割資料表或索引的 `scans`、 `seeks`、 `inserts`、 `updates`、 `merges`和 `deletes` 等作業。
 * 查詢所存取的資料分割。 例如，所存取的資料分割總計數和所存取的連續資料分割範圍可以在執行階段執行計畫內使用。
 * 當搜尋或掃描作業中使用略過掃描作業來擷取一或多個資料分割中的資料時。
 
@@ -832,11 +836,11 @@ CREATE PARTITION FUNCTION myRangePF1 (int) AS RANGE LEFT FOR VALUES (3, 7, 10);
 
 SQL Server 同時針對編譯時間和執行階段的執行計畫提供了增強的資料分割資訊。 執行計畫現在會提供下列資訊：
 
-* 選擇性的 `Partitioned` 屬性，其指出在資料分割的資料表上執行像是 `seek`、`scan`、`insert`、`update`、`merge` 或 `delete` 等運算子。  
-* 新的 `SeekPredicateNew` 元素搭配 `SeekKeys` 子元素，其中包含 `PartitionID` 做為前置的索引鍵資料行，以及在 `PartitionID` 上指定範圍搜尋的篩選條件。 兩個 `SeekKeys` 子元素的存在表示會使用 `PartitionID` 上的略過掃描作業。   
+* 選擇性的 `Partitioned` 屬性，其指出在資料分割的資料表上執行像是 `seek`、 `scan`、 `insert`、 `update`、 `merge`或 `delete`等運算子。  
+* 新的 `SeekPredicateNew` 元素搭配 `SeekKeys` 子元素，其中包含 `PartitionID` 做為前置的索引鍵資料行，以及在 `PartitionID`上指定範圍搜尋的篩選條件。 兩個 `SeekKeys` 子元素的存在表示會使用 `PartitionID` 上的略過掃描作業。   
 * 提供所存取之資料分割總計數的摘要資訊。 只有在執行階段計畫中才能使用這項資訊。 
 
-為了示範如何在圖形化執行計畫輸出和 XML 執行程序表輸出中顯示這項資訊，假設資料分割資料表 `fact_sales` 上有以下的查詢。 此查詢會更新兩個資料分割中的資料。 
+為了示範如何在圖形化執行計畫輸出和 XML 執行程序表輸出中顯示這項資訊，假設資料分割資料表 `fact_sales`上有以下的查詢。 此查詢會更新兩個資料分割中的資料。 
 
 ```
 UPDATE fact_sales
@@ -849,7 +853,7 @@ WHERE date_id BETWEEN 20080802 AND 20080902;
 
 #### <a name="partitioned-attribute"></a>Partitioned 屬性
 
-在資料分割的資料表或索引上執行類似 `Index Seek` 的運算子時，`Partitioned` 屬性會出現在編譯時間和執行階段的計畫內，而且會設定為 `True` (1)。 當這個屬性設定為 `False` (0) 時，就不會顯示。
+在資料分割的資料表或索引上執行類似 `Index Seek` 的運算子時， `Partitioned` 屬性會出現在編譯時間和執行階段的計畫內，而且會設定為 `True` (1)。 當這個屬性設定為 `False` (0) 時，就不會顯示。
 
 `Partitioned` 屬性可出現在下列實體和邏輯運算子內：  
 * `Table Scan`  
@@ -864,17 +868,17 @@ WHERE date_id BETWEEN 20080802 AND 20080902;
 
 #### <a name="new-seek-predicate"></a>新的搜尋述詞
 
-在 XML 執行程序表輸出中，`SeekPredicateNew` 元素會出現在其定義所在的運算子內。 它最多可包含兩個 `SeekKeys` 子元素。 第一個 `SeekKeys` 項目會在邏輯索引的資料分割識別碼層級上指定第一層搜尋作業。 也就是說，這個搜尋會判斷為了滿足查詢條件所必須存取的資料分割。 第二個 `SeekKeys` 項目會指定略過掃描作業的第二層搜尋部分，其發生於第一層搜尋中識別出的每一個資料分割內。 
+在 XML 執行程序表輸出中， `SeekPredicateNew` 元素會出現在其定義所在的運算子內。 它最多可包含兩個 `SeekKeys` 子元素。 第一個 `SeekKeys` 項目會在邏輯索引的資料分割識別碼層級上指定第一層搜尋作業。 也就是說，這個搜尋會判斷為了滿足查詢條件所必須存取的資料分割。 第二個 `SeekKeys` 項目會指定略過掃描作業的第二層搜尋部分，其發生於第一層搜尋中識別出的每一個資料分割內。 
 
 #### <a name="partition-summary-information"></a>資料分割摘要資訊
 
 在執行階段執行計畫中，資料分割摘要資訊提供了所存取之資料分割以及所存取之實際資料分割識別的計數。 您可以使用這項資訊來確認已存取查詢中的正確資料分割，而且所有其他資料分割都不在考量之內。
 
-系統會提供下列資訊：`Actual Partition Count` 和 `Partitions Accessed`。 
+系統會提供下列資訊： `Actual Partition Count`和 `Partitions Accessed`。 
 
 `Actual Partition Count` 是查詢所存取的資料分割總數。
 
-`Partitions Accessed` (位於 XML 執行程序表輸出內) 為資料分割摘要資訊，會出現在它定義所在之運算子的 `RelOp` 節點內的新 `RuntimePartitionSummary` 元素中。 下列範例會顯示 `RuntimePartitionSummary` 元素的內容，指出總共會存取兩個資料分割 (資料分割 2 和 3)。
+`Partitions Accessed`(位於 XML 執行程序表輸出內) 為資料分割摘要資訊，會出現在它定義所在之運算子的 `RuntimePartitionSummary` 節點內的新 `RelOp` 元素中。 下列範例會顯示 `RuntimePartitionSummary` 元素的內容，指出總共會存取兩個資料分割 (資料分割 2 和 3)。
 ```
 <RunTimePartitionSummary>
 
@@ -889,11 +893,11 @@ WHERE date_id BETWEEN 20080802 AND 20080902;
 
 #### <a name="displaying-partition-information-by-using-other-showplan-methods"></a>使用其他執行程序表方法來顯示資料分割資訊
 
-執行程序表方法 `SHOWPLAN_ALL`、`SHOWPLAN_TEXT` 和 `STATISTICS PROFILE` 不會報告本主題所述的資料分割資訊，但以下情況例外。 要存取的資料分割 (屬於 `SEEK` 述詞的一部分) 是由表示資料分割識別碼之計算資料行上的範圍述詞所識別。 下列範例會顯示 `Clustered Index Seek` 運算子的 `SEEK` 述詞。 系統會存取資料分割 2 和 3，而且搜尋運算子會篩選符合 `date_id BETWEEN 20080802 AND 20080902` 條件的資料列。
+執行程序表方法 `SHOWPLAN_ALL`、 `SHOWPLAN_TEXT`和 `STATISTICS PROFILE` 不會報告本主題所述的資料分割資訊，但以下情況例外。 要存取的資料分割 (屬於 `SEEK` 述詞的一部分) 是由表示資料分割識別碼之計算資料行上的範圍述詞所識別。 下列範例會顯示 `SEEK` 運算子的 `Clustered Index Seek` 述詞。 系統會存取資料分割 2 和 3，而且搜尋運算子會篩選符合 `date_id BETWEEN 20080802 AND 20080902`條件的資料列。
 ```
 |--Clustered Index Seek(OBJECT:([db_sales_test].[dbo].[fact_sales].[ci]), 
 
-        SEEK:([PtnId1000] >= (2) AND [PtnId1000] <= (3) 
+        SEEK:([PtnId1000] >= (2) AND [PtnId1000] \<= (3) 
 
                 AND [db_sales_test].[dbo].[fact_sales].[date_id] >= (20080802) 
 
@@ -904,7 +908,7 @@ WHERE date_id BETWEEN 20080802 AND 20080902;
 
 #### <a name="interpreting-execution-plans-for-partitioned-heaps"></a>解譯資料分割堆積的執行計畫
 
-資料分割的堆積會被視為資料分割識別碼上的邏輯索引。 資料分割堆積上的資料分割刪除會在執行計畫中表示為`Table Scan`運算子 (在資料分割識別碼上具有 `SEEK` 述詞)。 下列範例會顯示所提供的執行程序表資訊：
+資料分割的堆積會被視為資料分割識別碼上的邏輯索引。 資料分割堆積上的資料分割刪除會在執行計畫中表示為 `Table Scan` 運算子 (在資料分割識別碼上具有 `SEEK` 述詞)。 下列範例會顯示所提供的執行程序表資訊：
 ```
 |-- Table Scan (OBJECT: ([db].[dbo].[T]), SEEK: ([PtnId1001]=[Expr1011]) ORDERED FORWARD)
 ```
@@ -913,9 +917,9 @@ WHERE date_id BETWEEN 20080802 AND 20080902;
 
 當使用相同或相當的資料分割函數來分割兩個資料表，而且聯結兩端的資料分割資料行指定於查詢的聯結條件內時，可能會發生聯結共現。 查詢最佳化工具可以產生一個計畫，好讓每一個資料表中具有相同資料分割識別碼的資料分割都會個別聯結。 共置聯結的速度快於非共置聯結，因為共置聯結所需的記憶體和處理時間比較少。 查詢最佳化工具會根據成本估計來選擇非共置計畫或共置計畫。
 
-在共置計畫中，`Nested Loops`聯結會從內部讀取一或多個聯結資料表或索引資料分割。 `Constant Scan`運算子內的數字代表資料分割編號。 
+在共置計畫中， `Nested Loops` 聯結會從內部讀取一或多個聯結資料表或索引資料分割。 `Constant Scan` 運算子內的數字代表資料分割編號。 
 
-當針對資料分割資料表或索引產生共置聯結的平行計畫時，平行處理原則運算子就會出現在`Constant Scan`與`Nested Loops`聯結運算子之間。 在此情況下，聯結外部的多個執行緒每個都會讀取和處理不同的資料分割。 
+當針對資料分割資料表或索引產生共置聯結的平行計畫時，平行處理原則運算子就會出現在 `Constant Scan` 與 `Nested Loops` 聯結運算子之間。 在此情況下，聯結外部的多個執行緒每個都會讀取和處理不同的資料分割。 
 
 下圖將示範共置聯結的平行查詢計畫。   
 ![colocated_join](../relational-databases/media/colocated-join.gif)
@@ -933,12 +937,12 @@ WHERE date_id BETWEEN 20080802 AND 20080902;
 
 再舉一例，假設資料表在資料行 A 上具有四個資料分割，而界限點為 (10、20、30)、在資料行 B 上有一個索引，而且查詢具有述詞子句 `WHERE B IN (50, 100, 150)`。 由於資料表資料分割是以 A 的值為根據，所以 B 的值可能會發生在任何資料表資料分割內。 因此，查詢處理器將會在這四個資料表資料分割的每一個中，搜尋 B (50, 100, 150) 的這三個值的每一個。 查詢處理器會按比例指派執行緒，好讓它可以透過平行方式執行這 12 個查詢掃描的每一個。
 
-|根據資料行 A 的資料表資料分割 |在每一個資料表資料分割中搜尋資料行 B |
+|根據資料行 A 的資料表資料分割    |在每一個資料表資料分割中搜尋資料行 B |
 |----|----|
-|資料表資料分割 1: A \< 10   |B=50, B=100, B=150 |
-|資料表資料分割 2: A >= 10 AND A \< 20   |B=50, B=100, B=150 |
-|資料表資料分割 3: A >= 20 AND A \< 30   |B=50, B=100, B=150 |
-|資料表資料分割 4: A >= 30  |B=50, B=100, B=150 |
+|資料表資料分割 1: A < 10     |B=50, B=100, B=150 |
+|資料表資料分割 2: A >= 10 AND A < 20     |B=50, B=100, B=150 |
+|資料表資料分割 3: A >= 20 AND A < 30     |B=50, B=100, B=150 |
+|資料表資料分割 4: A >= 30     |B=50, B=100, B=150 |
 
 ### <a name="best-practices"></a>最佳作法
 
@@ -950,7 +954,7 @@ WHERE date_id BETWEEN 20080802 AND 20080902;
 * 請使用具有快速處理器的伺服器並盡量多使用您可以負擔的處理器核心，以充分利用平行查詢處理功能。
 * 確定伺服器擁有足夠的 I/O 控制器頻寬。 
 * 在每一個大型資料分割資料表上建立叢集索引，以充分利用 B 型樹狀結構的掃描最佳化。
-* 當您將資料大量載入資料分割資料表時，請遵循[將大量資料載入資料分割資料表](http://go.microsoft.com/fwlink/?LinkId=154561)白皮書 (英文) 中的最佳作法建議。
+* 當您將資料大量載入資料分割資料表時，請遵循 [將大量資料載入資料分割資料表](http://go.microsoft.com/fwlink/?LinkId=154561)白皮書 (英文) 中的最佳作法建議。
 
 ### <a name="example"></a>範例
 
@@ -1021,3 +1025,4 @@ GO
 SET STATISTICS XML OFF;
 GO
 ```
+

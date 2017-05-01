@@ -1,31 +1,35 @@
 ---
-title: "壓縮檔案 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.shrinkfile.f1"
-helpviewer_keywords: 
-  - "壓縮檔案"
-  - "減少檔案大小"
-  - "資料庫 [SQL Server], 壓縮"
-  - "減少檔案大小"
-  - "大小 [SQL Server]，檔案"
-  - "檔案大小 [SQL Server]"
+title: "壓縮檔案 | Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.shrinkfile.f1
+helpviewer_keywords:
+- shrinking files
+- decreasing file size
+- databases [SQL Server], shrinking
+- reducing file size
+- size [SQL Server], files
+- file size [SQL Server]
 ms.assetid: ce5c8798-c039-4ab2-81e7-90a8d688b893
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: aaa485184202b4edb301d3c2429f09625e854771
+ms.lasthandoff: 04/11/2017
+
 ---
-# 壓縮檔案
+# <a name="shrink-a-file"></a>壓縮檔案
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中壓縮資料或記錄檔。  
   
  將資料頁面從檔案結尾移到靠近檔案前端的未使用空間，以壓縮資料並復原儲存空間。 當檔案結尾建立了足夠的可用空間後，檔案結尾的資料頁面便可取消配置並返回檔案系統。  
@@ -59,15 +63,15 @@ caps.handback.revision: 25
 ###  <a name="Security"></a> 安全性  
   
 ####  <a name="Permissions"></a> Permissions  
- 需要**系統管理員**固定伺服器角色或 **db_owner** 固定資料庫角色中的成員資格。  
+ 需要 **系統管理員** 固定伺服器角色或 **db_owner** 固定資料庫角色中的成員資格。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 若要壓縮資料檔或記錄檔  
+#### <a name="to-shrink-a-data-or-log-file"></a>若要壓縮資料檔或記錄檔  
   
 1.  在 [物件總管] 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的執行個體，然後展開該執行個體。  
   
-2.  展開 [資料庫]，然後以滑鼠右鍵按一下您要壓縮的資料庫。  
+2.  展開 **[資料庫]** ，然後以滑鼠右鍵按一下您要壓縮的資料庫。  
   
 3.  指向 **[工作]**，指向 **[壓縮]**，然後按一下 **[檔案]**。  
   
@@ -78,7 +82,7 @@ caps.handback.revision: 25
      選取檔案的檔案類型。 可用的選擇為 **[資料]** 與 **[記錄]** 檔案。 預設的選取項目為 **[資料]**。 若選取不同的檔案群組類型，就會變更其他欄位中的選取項目。  
   
      **檔案群組**  
-     從與上面選取之 [檔案類型] 相關聯的檔案群組清單中選取檔案群組。 若選取不同的檔案群組，就會變更其他欄位中的選取項目。  
+     從與上面選取之 **[檔案類型]** 相關聯的檔案群組清單中選取檔案群組。 若選取不同的檔案群組，就會變更其他欄位中的選取項目。  
   
      **檔案名稱**  
      從選取的檔案群組與檔案類型的可用檔案清單中選取檔案。  
@@ -98,7 +102,7 @@ caps.handback.revision: 25
      **釋放未使用的空間之前，先重新組織頁面**  
      相當於執行指定目標檔案大小的 DBCC SHRINKFILE。 選取此選項時，使用者必須在 **[將檔案壓縮為]** 方塊中指定目標檔案大小。  
   
-     **將檔案壓縮為**  
+     **[將檔案壓縮為]**  
      指定壓縮作業的目標檔案大小。 此大小不可小於目前配置的空間或大於配置給檔案的總範圍。 一旦變更焦點或按一下工具列上的任何按鈕時，輸入超過下限或上限的值將還原為下限或上限。  
   
      **將資料移轉至同一檔案群組中的其他檔案，以清空檔案**  
@@ -124,7 +128,7 @@ caps.handback.revision: 25
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 若要壓縮資料檔或記錄檔  
+#### <a name="to-shrink-a-data-or-log-file"></a>若要壓縮資料檔或記錄檔  
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
@@ -134,7 +138,7 @@ caps.handback.revision: 25
   
  [!code-sql[DBCC#DBCC_SHRINKFILE1](../../relational-databases/databases/codesnippet/tsql/shrink-a-file_1.sql)]  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [DBCC SHRINKDATABASE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md)   
  [壓縮資料庫](../../relational-databases/databases/shrink-a-database.md)   
  [刪除資料庫的資料或記錄檔](../../relational-databases/databases/delete-data-or-log-files-from-a-database.md)   

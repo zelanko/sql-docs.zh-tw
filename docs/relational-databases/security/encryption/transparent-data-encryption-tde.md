@@ -1,31 +1,35 @@
 ---
-title: "透明資料加密 (TDE) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/09/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "透明資料加密"
-  - "資料庫加密金鑰, 關於"
-  - "TDE"
-  - "資料庫加密金鑰"
-  - "TDE, 關於"
-  - "透明資料加密, 關於"
-  - "加密 [SQL Server], 透明資料加密"
+title: "透明資料加密 (TDE) | Microsoft 文件"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/09/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Transparent Data Encryption
+- database encryption key, about
+- TDE
+- database encryption key
+- TDE, about
+- Transparent Data Encryption, about
+- encryption [SQL Server], transparent data encryption
 ms.assetid: c75d0d4b-4008-4e71-9a9d-cee2a566bd3b
 caps.latest.revision: 75
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 74
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 65839223470c8e73e9dfbf27f3fe62b3d127daf2
+ms.lasthandoff: 04/11/2017
+
 ---
-# 透明資料加密 (TDE)
+# <a name="transparent-data-encryption-tde"></a>透明資料加密 (TDE)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   *透明資料加密* (TDE) 會加密 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] 和 [!INCLUDE[ssSDWfull](../../../includes/sssdwfull-md.md)] 資料檔案，一般稱之為靜止的加密資料。 您可以採取幾個預防措施來維護資料庫安全，例如設計安全的系統、加密機密的資產，以及在資料庫伺服器周圍建立防火牆。 但是，當發生實體媒體 (如磁碟機或備份磁帶) 遭竊的狀況時，惡意人士可以還原或附加資料庫，並瀏覽資料。 一個解決方案是加密資料庫中的敏感性資料，並使用憑證來保護用來加密資料的金鑰。 如此可防止沒有金鑰的任何人使用資料，但是這種防護類型必須事先規劃。  
@@ -33,7 +37,7 @@ caps.handback.revision: 74
  TDE 會執行資料和記錄檔的即時 I/O 加密和解密。 此加密會使用資料庫加密金鑰 (DEK)，該金鑰儲存於資料庫開機記錄中，以便在復原期間可供使用。 DEK 是對稱金鑰，而其維護安全的方式是使用儲存於伺服器之 master 資料庫內的憑證或是受到 EKM 模組所保護的非對稱金鑰。 TDE 會保護休眠的資料，也就是資料檔和記錄檔。 它提供了與各個不同業界內建立的許多法令、規章和指導方針相符的能力， 如此可讓軟體開發人員使用 AES 和 3DES 加密演算法加密資料，而不需要變更現有的應用程式。  
   
 > [!IMPORTANT]  
->  TDE 不會提供跨通訊通道的加密。 如需如何跨通訊通道加密資料的詳細資訊，請參閱[啟用 Database Engine 的加密連接 &#40;SQL Server 組態管理員&#41;](../../../database-engine/configure-windows/enable encrypted connections to the database engine.md)。  
+>  TDE 不會提供跨通訊通道的加密。 如需如何跨通訊通道加密資料的詳細資訊，請參閱[啟用 Database Engine 的加密連接 &#40;SQL Server 組態管理員&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)。  
 >   
 >  **相關主題：**  
 >   
@@ -50,7 +54,7 @@ caps.handback.revision: 74
   
  **適用於 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 的資訊**  
   
- 在搭配使用 TDE 與 [!INCLUDE[sqldbesa](../../../includes/sqldbesa-md.md)] V12 時，[!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 會自動為您建立儲存在主要資料庫中的伺服器層級憑證。 若要在 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 上移動 TDE 資料庫，您必須解密資料庫、移動資料庫，然後在目的地 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 上重新啟用 TDE。 如需在 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]上使用 TDE 的逐步解說，請參閱 [Transparent Data Encryption with Azure SQL Database](../../../relational-databases/security/encryption/transparent-data-encryption-with-azure-sql-database.md)＞。  
+ 在搭配使用 TDE 與 [!INCLUDE[sqldbesa](../../../includes/sqldbesa-md.md)] V12 時，[!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 會自動為您建立儲存在主要資料庫中的伺服器層級憑證。 若要在 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 上移動 TDE 資料庫，您必須解密資料庫、移動資料庫，然後在目的地 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]上重新啟用 TDE。 如需在 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]上使用 TDE 的逐步解說，請參閱 [Transparent Data Encryption with Azure SQL Database](../../../relational-databases/security/encryption/transparent-data-encryption-with-azure-sql-database.md)＞。  
   
  **適用於 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的資訊**  
   
@@ -62,7 +66,7 @@ caps.handback.revision: 74
   
  下圖顯示 TDE 加密的架構。 在 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]上使用 TDE 時，只有資料庫層級項目 (資料庫加密金鑰) 和 ALTER DATABASE 部分是使用者可設定的。  
   
- ![在主題中顯示所描述的階層。](../../../relational-databases/security/encryption/media/tde-architecture.gif "在主題中顯示所描述的階層。")  
+ ![顯示主題中所述的階層。](../../../relational-databases/security/encryption/media/tde-architecture.gif "顯示主題中所述的階層。")  
   
 ## <a name="using-transparent-data-encryption"></a>使用透明資料加密  
  若要使用 TDE，請遵循下列步驟。  
@@ -117,7 +121,7 @@ GO
 |[CREATE DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-database-encryption-key-transact-sql.md)|建立用於加密資料庫的金鑰|  
 |[ALTER DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-database-encryption-key-transact-sql.md)|變更用於加密資料庫的金鑰|  
 |[DROP DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-database-encryption-key-transact-sql.md)|移除用於加密資料庫的金鑰。|  
-|[ALTER DATABASE SET 選項 &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md)|說明用來啟用 TDE 的 **ALTER DATABASE** 選項。|  
+|[ALTER DATABASE SET 選項 &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-database-transact-sql-set-options.md)|說明用來啟用 TDE 的 **ALTER DATABASE** 選項。|  
   
 ## <a name="catalog-views-and-dynamic-management-views"></a>目錄檢視和動態管理檢視  
  下表顯示 TDE 目錄檢視和動態管理檢視。  
@@ -144,7 +148,9 @@ GO
   
 > [!IMPORTANT]  
 >  設定資料庫進行加密時，全文檢索索引就會加密。 升級到 SQL Server 2008 或更新版本時，在 SQL Server 2008 之前建立的全文檢索索引會匯入到資料庫，並以 TDE 加密。  
-  
+
+> [!TIP]  
+>  若要監視資料庫的 TDE 狀態中的變更，請使用 SQL Server Audit 或 SQL 資料庫稽核。 對於 SQL Server，您可以使用稽核動作群組 DATABASE_CHANGE_GROUP 來追蹤 TDE，而該群組位於 [SQL Server 稽核動作群組和動作](../../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md)中。
   
 ### <a name="restrictions"></a>限制  
  在初始資料庫加密、金鑰變更或資料庫解密期間，不允許以下作業：  
@@ -221,7 +227,7 @@ GO
  如果 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體上的任何其他資料庫是使用 TDE 進行加密，則 tempdb 系統資料庫將會加密。 這可能會對於相同 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體上未加密的資料庫造成效能上的影響。 如需 tempdb 系統資料庫的詳細資訊，請參閱 [tempdb 資料庫](../../../relational-databases/databases/tempdb-database.md)。  
   
 ### <a name="transparent-data-encryption-and-replication"></a>透明資料加密和複寫  
- 複寫不會自動使用加密形式來複寫啟用 TDE 之資料庫內的資料。 如果您想要保護散發資料庫和訂閱者資料庫，必須個別啟用 TDE。 快照式複寫及異動複寫和合併式複寫之資料的初始散發都可以將資料儲存在未加密的中繼檔案中，例如 bcp 檔案。  在異動複寫或合併式複寫期間，可以啟用加密來保護通訊通道。 如需詳細資訊，請參閱[啟用 Database Engine 的加密連接 &#40;SQL Server 組態管理員&#41;](../../../database-engine/configure-windows/enable encrypted connections to the database engine.md)。  
+ 複寫不會自動使用加密形式來複寫啟用 TDE 之資料庫內的資料。 如果您想要保護散發資料庫和訂閱者資料庫，必須個別啟用 TDE。 快照式複寫及異動複寫和合併式複寫之資料的初始散發都可以將資料儲存在未加密的中繼檔案中，例如 bcp 檔案。  在異動複寫或合併式複寫期間，可以啟用加密來保護通訊通道。 如需詳細資訊，請參閱[啟用 Database Engine 的加密連接 &#40;SQL Server 組態管理員&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)。  
   
 ### <a name="transparent-data-encryption-and-filestream-data"></a>透明資料加密和 FILESTREAM DATA  
  即使啟用了 TDE，FILESTREAM 資料也不會加密。  
@@ -248,3 +254,4 @@ GO
  [FILESTREAM &#40;SQL Server&#41;](../../../relational-databases/blob/filestream-sql-server.md)  
   
   
+

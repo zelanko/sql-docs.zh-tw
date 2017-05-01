@@ -1,29 +1,33 @@
 ---
 title: "索引磁碟空間範例 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "線上索引磁碟空間"
-  - "磁碟空間 [SQL Server], 索引"
-  - "索引磁碟空間 [SQL Server]"
-  - "空間 [SQL Server], 索引"
-  - "索引 [SQL Server], 磁碟空間需求"
-  - "離線索引磁碟空間 [SQL Server]"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- online index disk space
+- disk space [SQL Server], indexes
+- index disk space [SQL Server]
+- space [SQL Server], indexes
+- indexes [SQL Server], disk space requirements
+- offline index disk space [SQL Server]
 ms.assetid: e5c71f55-0be3-4c93-97e9-7b3455c8f581
 caps.latest.revision: 30
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bbc1a254df5ff696cb99c9090aae37da70e8fbbf
+ms.lasthandoff: 04/11/2017
+
 ---
-# 索引磁碟空間範例
+# <a name="index-disk-space-example"></a>索引磁碟空間範例
   無論何時建立、重建或卸除索引，舊結構 (來源) 和新結構 (目標) 兩者在它們適當的檔案和檔案群組中都需要磁碟空間。 舊結構要到索引建立交易認可時才會取消配置。 此時也可能會需要額外暫存磁碟空間，以供排序作業。 如需詳細資訊，請參閱 [Disk Space Requirements for Index DDL Operations](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md)。  
   
  在此範例中，會決定建立叢集索引的磁碟空間需求。  
@@ -43,7 +47,7 @@ caps.handback.revision: 30
     > [!NOTE]  
     >  建立叢集索引之後，必須重建兩個非叢集索引以取代有新的叢集索引鍵的資料列指標。  
   
-## 離線索引作業的磁碟空間計算  
+## <a name="disk-space-calculations-for-an-offline-index-operation"></a>離線索引作業的磁碟空間計算  
  下列步驟中，會計算索引作業期間使用的暫存磁碟空間和儲存新索引的永久磁碟空間。 顯示的計算是近似值；結果是四捨五入並且只考慮索引分葉層級的大小。 波浪號 (~) 是用來表示近似的計算。  
   
 1.  決定來源結構的大小。  
@@ -72,38 +76,38 @@ caps.handback.revision: 30
   
      會顯示在 **tempdb** 排序 (SORT_IN_TEMPDB 設為 ON) 和在目標位置排序 (SORT_IN_TEMPDB 設為 OFF) 的空間需求。  
   
-    1.  當 SORT_IN_TEMPDB 設為 ON 時，**tempdb** 必須有足夠的磁碟空間，才能保留最大的索引 (1 百萬 * 200 位元組 ~ 200 MB)。 在排序作業中不考慮填滿因數。  
+    1.  當 SORT_IN_TEMPDB 設為 ON 時， **tempdb** 必須有足夠的磁碟空間，才能保留最大的索引 (1 百萬 * 200 位元組 ~ 200 MB)。 在排序作業中不考慮填滿因數。  
   
-         額外的磁碟空間 (在 **tempdb** 位置) 等於[設定 index create memory 伺服器組態選項](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md)值 = 2 MB。  
+         額外的磁碟空間 (在 **tempdb** 位置) 等於 [設定 index create memory 伺服器組態選項](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md) 值 = 2 MB。  
   
          當 SORT_IN_TEMPDB 設為 ON 時，暫存磁碟空間的總計大小 ~ 202 MB。  
   
     2.  當 SORT_IN_TEMPDB 設為 OFF (預設) 時，步驟 2 中為新索引所考慮的 250 MB 磁碟空間是用來排序。  
   
-         額外的磁碟空間 (在目標位置) 等於[設定 index create memory 伺服器組態選項](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md)值 = 2 MB。  
+         額外的磁碟空間 (在目標位置) 等於 [設定 index create memory 伺服器組態選項](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md) 值 = 2 MB。  
   
          當 SORT_IN_TEMPDB 設為 OFF 時，暫存磁碟空間的總計大小 = 2 MB。  
   
- 使用 **tempdb**，建立叢集和非叢集索引會需要總共 1018 MB (816 + 202) 的大小。 雖然使用 **tempdb** 會增加建立索引所需的暫存磁碟空間數量，但只要 **tempdb** 所在的磁碟集與使用者資料庫不同，就可以減少建立索引所需的時間。 如需使用 **tempdb** 的詳細資訊，請參閱[索引的 SORT_IN_TEMPDB 選項](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md)。  
+ 使用 **tempdb**，建立叢集和非叢集索引會需要總共 1018 MB (816 + 202) 的大小。 雖然使用 **tempdb** 會增加建立索引所需的暫存磁碟空間數量，但只要 **tempdb** 所在的磁碟集與使用者資料庫不同，就可以減少建立索引所需的時間。 如需使用 **tempdb**的詳細資訊，請參閱 [索引的 SORT_IN_TEMPDB 選項](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md)。  
   
  不使用 **tempdb**，建立叢集和非叢集索引會需要總共 818 MB (816+ 2) 的大小。  
   
-## 線上叢集索引作業的磁碟空間計算  
+## <a name="disk-space-calculations-for-an-online-clustered-index-operation"></a>線上叢集索引作業的磁碟空間計算  
  當您在線上建立、卸除或重建叢集索引時，需要額外的磁碟空間才能建立並維護暫存的對應索引。 此暫存對應索引包含資料表中每一個資料列的一筆記錄，並且其內容是舊的和新的書籤資料行的聯集。  
   
  若要計算線上叢集索引作業所需的磁碟空間，請按照離線索引作業的步驟，並且將結果加到下列步驟的結果。  
   
 -   決定暫存對應索引的空間。  
   
-     在此範例中，舊的書籤是堆積 (8 位元組) 的資料列識別碼 (RID)，而新的書籤是叢集索引鍵 (24 位元組，包括**唯一識別值**)。 舊書籤和新書籤之間沒有重疊的資料行。  
+     在此範例中，舊的書籤是堆積 (8 位元組) 的資料列識別碼 (RID)，而新的書籤是叢集索引鍵 (24 位元組，包括 **唯一識別值**)。 舊書籤和新書籤之間沒有重疊的資料行。  
   
      暫存對應索引大小 = 1 百萬 * (8 位元組 + 24 位元組) / 80% ~ 40 MB。  
   
-     如果 SORT_IN_TEMPDB 設為 OFF，此磁碟空間必須加到目標位置中所需的磁碟空間；如果 SORT_IN_TEMPDB 設為 ON，此磁碟空間必須加到 **tempdb**。  
+     如果 SORT_IN_TEMPDB 設為 OFF，此磁碟空間必須加到目標位置中所需的磁碟空間；如果 SORT_IN_TEMPDB 設為 ON，此磁碟空間必須加到 **tempdb** 。  
   
- 如需暫存對應索引的詳細資訊，請參閱[索引 DDL 作業的磁碟空間需求](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md)。  
+ 如需暫存對應索引的詳細資訊，請參閱 [索引 DDL 作業的磁碟空間需求](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md)。  
   
-## 磁碟空間摘要  
+## <a name="disk-space-summary"></a>磁碟空間摘要  
  下表摘要出磁碟空間計算的結果。  
   
 |索引作業|下列結構中，不同位置的磁碟空間需求|  
@@ -117,8 +121,8 @@ caps.handback.revision: 30
   
  此範例不考慮任何 **tempdb** 中，並行使用者更新及刪除作業建立的版本記錄所需的額外暫存磁碟空間。  
   
-## 相關內容  
- [索引 DDL 作業的磁碟空間需求](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md)  
+## <a name="related-content"></a>相關內容  
+ [Disk Space Requirements for Index DDL Operations](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md)  
   
  [索引作業的交易記錄磁碟空間](../../relational-databases/indexes/transaction-log-disk-space-for-index-operations.md)  
   

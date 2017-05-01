@@ -1,33 +1,37 @@
 ---
 title: "Broker:Conversation 事件類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Broker:Conversation 事件類別"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Broker:Conversation event class
 ms.assetid: 784707b5-cc67-46a3-8ae6-8f8ecf4b27c0
 caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 33
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6e7161ab04ec24504b6ba0a5f6e7cd304166b7b1
+ms.lasthandoff: 04/11/2017
+
 ---
-# Broker:Conversation 事件類別
+# <a name="brokerconversation-event-class"></a>Broker:Conversation 事件類別
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 產生 **Broker:Conversation** 事件以報告 Service Broker 交談的進度。  
   
-## Broker:Conversation 事件類別資料行  
+## <a name="brokerconversation-event-class-data-columns"></a>Broker:Conversation 事件類別資料行  
   
 |資料行|型別|說明|資料行編號|可篩選|  
 |-----------------|----------|-----------------|-------------------|----------------|  
-|**ApplicationName**|**nvarchar**|建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之連接的用戶端應用程式名稱。 這個資料行會填入應用程式所傳送的值，而非程式的顯示名稱。|10|是|  
+|**ApplicationName**|**nvarchar**|建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體之連接的用戶端應用程式名稱。 這個資料行會填入應用程式所傳送的值，而非程式的顯示名稱。|10|是|  
 |**ClientProcessID**|**int**|主機電腦指派給用戶端應用程式執行中處理序的識別碼。 如果用戶端提供處理序識別碼，這個資料行就會擴展。|9|是|  
-|**DatabaseID**|**int**|USE *database* 陳述式指定之資料庫的識別碼。 如果未發出 USE *database* 陳述式，則為預設資料庫的識別碼。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 資料行，則 **ServerName** 會顯示資料庫的名稱。 請使用 **DB_ID** 函數判斷資料庫的值。|3|是|  
+|**DatabaseID**|**int**|USE *database* 陳述式指定之資料庫的識別碼。 如果未發出 USE *database*陳述式，則為預設資料庫的識別碼。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 資料行，則 **ServerName** 會顯示資料庫的名稱。 請使用 **DB_ID** 函數判斷資料庫的值。|3|是|  
 |**EventClass**|**int**|擷取的事件類別類型。 **Broker:Conversation** 永遠為 **124**。|27|否|  
 |**EventSequence**|**int**|此事件的序號。|51|否|  
 |**EventSubClass**|**nvarchar**|事件子類別的類型。 這會提供有關每一個事件類別的詳細資訊。|21|是|  
@@ -59,21 +63,21 @@ caps.handback.revision: 33
   
 |ID|子類別|說明|  
 |--------|--------------|-----------------|  
-|1|SEND Message|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 當 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行 SEND 陳述式時，會產生 **SEND Message** 事件。|  
-|2|END CONVERSATION|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 當 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行未包括 WITH ERROR 子句的 END CONVERSATION 陳述式時，會產生 **END CONVERSATION** 事件。|  
-|3|END CONVERSATION WITH ERROR|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 當 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行包括 WITH ERROR 子句的 END CONVERSATION 陳述式時，會產生 **END CONVERSATION WITH ERROR** 事件。|  
-|4|Broker Initiated Error|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 每當 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 建立錯誤訊息時，會產生 **Broker Initiated Error** 事件。 例如，當 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 未能成功地路由傳送對話的訊息時，Broker 會針對該對話建立一個錯誤訊息，並產生此事件。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如果應用程式結束交談時發生錯誤，不會產生此事件。|  
+|1|SEND Message|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 當 **執行 SEND 陳述式時，會產生** SEND Message [!INCLUDE[ssDE](../../includes/ssde-md.md)] 事件。|  
+|2|END CONVERSATION|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 當 **執行未包括 WITH ERROR 子句的 END CONVERSATION 陳述式時，會產生** END CONVERSATION [!INCLUDE[ssDE](../../includes/ssde-md.md)] 事件。|  
+|3|END CONVERSATION WITH ERROR|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 當 **執行包括 WITH ERROR 子句的 END CONVERSATION 陳述式時，會產生** END CONVERSATION WITH ERROR [!INCLUDE[ssDE](../../includes/ssde-md.md)] 事件。|  
+|4|Broker Initiated Error|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 每當 **建立錯誤訊息時，會產生** Broker Initiated Error [!INCLUDE[ssSB](../../includes/sssb-md.md)] 事件。 例如，當 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 未能成功地路由傳送對話的訊息時，Broker 會針對該對話建立一個錯誤訊息，並產生此事件。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如果應用程式結束交談時發生錯誤，不會產生此事件。|  
 |5|Terminate Dialog|[!INCLUDE[ssSB](../../includes/sssb-md.md)] 會結束此對話。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 對於無法繼續使用對話的情況 (但並不是錯誤或正常結束交談的情況)，會終止對話來加以回應。 例如，卸除服務會導致 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 終止該項服務的所有對話。|  
-|6|Received Sequenced Message|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 收到包含訊息序號的訊息時，會產生 **Received Sequenced Message** 事件類別。 所有使用者定義的訊息類型都是循序訊息。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 會在兩個情況下產生非循序訊息：<br /><br /> 由 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 產生的錯誤訊息即非循序。<br /><br /> 訊息收條可能為非循序。 為了提高效率，[!INCLUDE[ssSB](../../includes/sssb-md.md)] 會將任何可用的收條當做循序訊息的一部分併入訊息中。 但是，如果應用程式未能在某一段時間內，將循序訊息傳送到遠端端點，[!INCLUDE[ssSB](../../includes/sssb-md.md)] 就會為訊息收條建立非循序訊息。|  
+|6|Received Sequenced Message|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 當 **收到包含訊息序號的訊息時，會產生** Received Sequenced Message [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件類別。 所有使用者定義的訊息類型都是循序訊息。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 會在兩個情況下產生非循序訊息：<br /><br /> 由 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 產生的錯誤訊息即非循序。<br /><br /> 訊息收條可能為非循序。 為了提高效率， [!INCLUDE[ssSB](../../includes/sssb-md.md)] 會將任何可用的收條當做循序訊息的一部分併入訊息中。 但是，如果應用程式未能在某一段時間內，將循序訊息傳送到遠端端點， [!INCLUDE[ssSB](../../includes/sssb-md.md)] 就會為訊息收條建立非循序訊息。|  
 |7|Received END CONVERSATION|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 收到交談另一端的「結束對話」訊息時，會產生 Received END CONVERSATION 事件。|  
-|8|Received END CONVERSATION WITH ERROR|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 收到來自交談另一端的使用者定義錯誤時，會產生 **Received END CONVERSATION WITH ERROR** 事件。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 收到 Broker 定義的錯誤時，不會產生此事件。|  
-|9|Received Broker Error Message|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 當 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 收到來自交談另一端的 Broker 定義錯誤訊息時，會產生 **Received Broker Error Message** 事件。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 當 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 收到由應用程式產生的錯誤訊息時，不會產生此事件。<br /><br /> 例如，如果目前的資料庫包含轉寄資料庫的預設路由，[!INCLUDE[ssSB](../../includes/sssb-md.md)] 會以未知的服務名稱將訊息路由傳送到轉寄資料庫。 如果那個資料庫無法路由訊息，則資料庫中的 Broker 就會建立錯誤訊息，然後將該錯誤訊息傳回目前的資料庫。 當目前的資料庫從轉寄資料庫收到 Broker 產生的錯誤，目前的資料庫就會產生 **Received Broker Error Message** 事件。|  
+|8|Received END CONVERSATION WITH ERROR|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 當 **收到來自交談另一端的使用者定義錯誤時，會產生** Received END CONVERSATION WITH ERROR [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 收到 Broker 定義的錯誤時，不會產生此事件。|  
+|9|Received Broker Error Message|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 當 **收到來自交談另一端的 Broker 定義錯誤訊息時，會產生** Received Broker Error Message [!INCLUDE[ssSB](../../includes/sssb-md.md)] 事件。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 當 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 收到由應用程式產生的錯誤訊息時，不會產生此事件。<br /><br /> 例如，如果目前的資料庫包含轉寄資料庫的預設路由， [!INCLUDE[ssSB](../../includes/sssb-md.md)] 會以未知的服務名稱將訊息路由傳送到轉寄資料庫。 如果那個資料庫無法路由訊息，則資料庫中的 Broker 就會建立錯誤訊息，然後將該錯誤訊息傳回目前的資料庫。 當目前的資料庫從轉寄資料庫收到 Broker 產生的錯誤，目前的資料庫就會產生 **Received Broker Error Message** 事件。|  
 |10|Received END CONVERSATION Ack|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 當交談另一端認可由交談這一端傳送的「結束對話」或「錯誤」訊息時，會產生 **Received END CONVERSATION Ack** 事件類別。|  
 |11|BEGIN DIALOG|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 當 Database Engine 執行 BEGIN DIALOG 命令時，會產生 **BEGIN DIALOG** 事件。|  
-|12|Dialog Created|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 當 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 為對話建立端點時，會產生 **Dialog Created** 事件。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 每當建立新的對話時，就會建立一個端點，不論目前的資料庫是否為該對話的起始端或目標。|  
+|12|Dialog Created|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 當 **為對話建立端點時，會產生** Dialog Created [!INCLUDE[ssSB](../../includes/sssb-md.md)] 事件。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 每當建立新的對話時，就會建立一個端點，不論目前的資料庫是否為該對話的起始端或目標。|  
 |13|END CONVERSATION WITH CLEANUP|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 當 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行包括 WITH CLEANUP 子句的 END CONVERSATION 陳述式時，會產生 END CONVERSATION WITH CLEANUP 事件。|  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)  
   
   

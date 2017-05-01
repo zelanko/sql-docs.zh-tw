@@ -1,32 +1,36 @@
 ---
 title: "建立巢狀觸發程序 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-dml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "遞迴 DML 觸發程序 [SQL Server]"
-  - "DML 觸發程序, 巢狀"
-  - "觸發程序 [SQL Server], 巢狀"
-  - "直接遞迴 [SQL Server]"
-  - "觸發程序 [SQL Server], 遞迴"
-  - "DML 觸發程序, 遞迴"
-  - "RECURSIVE_TRIGGERS 選項"
-  - "直接遞迴 [SQL Server]"
-  - "巢狀 DML 觸發程序"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-dml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- recursive DML triggers [SQL Server]
+- DML triggers, nested
+- triggers [SQL Server], nested
+- direct recursion [SQL Server]
+- triggers [SQL Server], recursive
+- DML triggers, recursive
+- RECURSIVE_TRIGGERS option
+- indirect recursion [SQL Server]
+- nested DML triggers
 ms.assetid: cd522dda-b4ab-41b8-82b0-02445bdba7af
 caps.latest.revision: 32
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ed1505ace274659400d797ae5ba8b27dcdf80557
+ms.lasthandoff: 04/11/2017
+
 ---
-# 建立巢狀觸發程序
+# <a name="create-nested-triggers"></a>建立巢狀觸發程序
   觸發程序執行用來起始另一個觸發程序的動作時，DML 和 DDL 觸發程序就是巢狀觸發程序。 這些動作可以起始化其他觸發程序等等。 DML 與 DDL 觸發程序最多可以巢狀方式嵌套多達 32 層。 您可以透過 [巢狀觸發程序] 伺服器組態選項來控制 AFTER 觸發程序是否可為巢狀。 不論此設定為何，INSTEAD OF 觸發程序 (只有 DML 觸發程序可為 INSTEAD OF 觸發程序) 均可為巢狀。  
   
 > [!NOTE]  
@@ -34,7 +38,7 @@ caps.handback.revision: 32
   
  如果允許巢狀觸發程序，但鏈結中的觸發程序形成一個無限迴圈時，則觸發程序會因為超過巢狀層級而終止執行。  
   
- 您可利用巢狀觸發程序來執行實用的內部管理功能，如儲存被前一個觸發程序所影響的資料列備份。 例如，您可在 `PurchaseOrderDetail` 上建立觸發程序，其可儲存經`PurchaseOrderDetail` 觸發程序所刪除的 `delcascadetrig` 資料列備份。 由於 `delcascadetrig` 觸發程序為作用中，刪除 `PurchaseOrderID` 的 `PurchaseOrderHeader` 1965，也會刪除 `PurchaseOrderDetail` 對應的一或多個資料列。 若要儲存資料，您可在 `PurchaseOrderDetail` 上建立 DELETE 觸發程序，將刪除的資料儲存至另外建立的資料表 `del_save`。 例如：  
+ 您可利用巢狀觸發程序來執行實用的內部管理功能，如儲存被前一個觸發程序所影響的資料列備份。 例如，您可在 `PurchaseOrderDetail` 上建立觸發程序，其可儲存經 `PurchaseOrderDetail` 觸發程序所刪除的 `delcascadetrig` 資料列備份。 由於 `delcascadetrig` 觸發程序為作用中，刪除 `PurchaseOrderID` 的 `PurchaseOrderHeader` 1965，也會刪除 `PurchaseOrderDetail`對應的一或多個資料列。 若要儲存資料，您可在 `PurchaseOrderDetail` 上建立 DELETE 觸發程序，將刪除的資料儲存至另外建立的資料表 `del_save`。 例如：  
   
 ```  
 CREATE TRIGGER Purchasing.savedel  
@@ -50,25 +54,25 @@ AS
 > [!NOTE]  
 >  因觸發程序是在交易內執行，所以在整組巢狀觸發程序中，只要有一層在執行時發生錯誤，即會取消整個交易，所有的修改資料均會回復原狀。 您可在觸發程序中加入 PRINT 陳述式，這樣便可知道錯誤發生在那一層級。  
   
-## 遞迴觸發程序  
+## <a name="recursive-triggers"></a>遞迴觸發程序  
  除非設定 RECURSIVE_TRIGGERS 資料庫選項，否則 AFTER 觸發程序不會以遞迴方式自我呼叫。  
   
  而遞迴有以下兩種不同類型：  
   
 -   直接遞迴  
   
-     當觸發程序引發和執行使相同觸發程序再度引發的動作時，就會發生遞迴。 例如，應用程式會更新資料表 **T3**；這將使觸發程序 **Trig3** 引發。 **Trig3** 會再次更新 **T3**；這將使觸發程序 **Trig3** 再度引發。  
+     當觸發程序引發和執行使相同觸發程序再度引發的動作時，就會發生遞迴。 例如，應用程式會更新資料表 **T3**；這將使觸發程序 **Trig3** 引發。 **Trig3** 會再次更新 **T3** ；這將使觸發程序 **Trig3** 再度引發。  
   
-     在呼叫不同類型的觸發程序 (AFTER 或 INSTEAD OF) 之後，再次呼叫相同的觸發程序時，也會發生直接遞迴。 換句話說，即使在第一次與第二次呼叫之間呼叫了一個或多個 AFTER 觸發程序，第二次呼叫相同 INSTEAD OF 觸發程序時，仍會發生 INSTEAD OF 觸發程序的直接遞迴。 同樣地，即使在第一次與第二次呼叫之間呼叫了一或多個 INSTEAD OF 觸發程序，第二次呼叫相同 AFTER 觸發程序時，仍會發生 AFTER 觸發程序的直接遞迴。 例如，應用程式會更新資料表 **T4**。 這項更新會引發 INSTEAD OF 觸發程序 **Trig4**。 **Trig4** 會更新資料表 **T5**。 這項更新會引發 AFTER 觸發程序 **Trig5**。 **Trig5** 會更新資料表 **T4**，而這項更新會再次引發 INSTEAD OF 觸發程序 **Trig4**。 這個事件鏈結被視為 **Trig4** 的直接遞迴。  
+     在呼叫不同類型的觸發程序 (AFTER 或 INSTEAD OF) 之後，再次呼叫相同的觸發程序時，也會發生直接遞迴。 換句話說，即使在第一次與第二次呼叫之間呼叫了一個或多個 AFTER 觸發程序，第二次呼叫相同 INSTEAD OF 觸發程序時，仍會發生 INSTEAD OF 觸發程序的直接遞迴。 同樣地，即使在第一次與第二次呼叫之間呼叫了一或多個 INSTEAD OF 觸發程序，第二次呼叫相同 AFTER 觸發程序時，仍會發生 AFTER 觸發程序的直接遞迴。 例如，應用程式會更新資料表 **T4**。 這項更新會引發 INSTEAD OF 觸發程序 **Trig4** 。 **Trig4** 會更新資料表 **T5**。 這項更新會引發 AFTER 觸發程序 **Trig5** 。 **Trig5** 會更新資料表 **T4**，而這項更新會再次引發 INSTEAD OF 觸發程序 **Trig4** 。 這個事件鏈結被視為 **Trig4**的直接遞迴。  
   
 -   間接遞迴  
   
-     觸發程序引發並執行會引發另一個相同類型之觸發程序 (AFTER 或 INSTEAD OF) 的動作時，會發生這類遞迴。 此第二個觸發程序執行使原始觸發程序再次引發的動作。 換句話說，如果第二次呼叫 INSTEAD OF 觸發程序，則會在第一次與第二次呼叫之間呼叫另一個 INSTEAD OF 觸發程序時，發生間接遞迴。 同樣地，如果第二次呼叫 AFTER 觸發程序，則會在第一次與第二次呼叫之間呼叫另一個 AFTER 觸發程序時，發生間接遞迴。 例如，應用程式會更新資料表 **T1**。 這項更新會引發 AFTER 觸發程序 **Trig1**。 **Trig1** 會更新資料表 **T2**，而這項更新會引發 AFTER 觸發程序 **Trig2**。 接著，**Trig2** 會更新資料表 **T1**，而這會再次引發 AFTER 觸發程序 **Trig1**。  
+     觸發程序引發並執行會引發另一個相同類型之觸發程序 (AFTER 或 INSTEAD OF) 的動作時，會發生這類遞迴。 此第二個觸發程序執行使原始觸發程序再次引發的動作。 換句話說，如果第二次呼叫 INSTEAD OF 觸發程序，則會在第一次與第二次呼叫之間呼叫另一個 INSTEAD OF 觸發程序時，發生間接遞迴。 同樣地，如果第二次呼叫 AFTER 觸發程序，則會在第一次與第二次呼叫之間呼叫另一個 AFTER 觸發程序時，發生間接遞迴。 例如，應用程式會更新資料表 **T1**。 這項更新會引發 AFTER 觸發程序 **Trig1** 。 **Trig1** 會更新資料表 **T2**，而這項更新會引發 AFTER 觸發程序 **Trig2** 。 接著，**Trig2** 會更新資料表 **T1** ，而這會再次引發 AFTER 觸發程序 **Trig1** 。  
   
- RECURSIVE_TRIGGERS 資料庫選項設定為 OFF 時，只能防止 AFTER 觸發程序的直接遞迴。 若要停用 AFTER 觸發程序的間接遞迴，也請將**巢狀觸發程序**伺服器選項設定為 **0**。  
+ RECURSIVE_TRIGGERS 資料庫選項設定為 OFF 時，只能防止 AFTER 觸發程序的直接遞迴。 若要停用 AFTER 觸發程序的間接遞迴，也請將 **巢狀觸發程序** 伺服器選項設定為 **0**。  
   
-## 範例  
- 下列範例顯示如何使用遞迴觸發程序來解決自我參考關聯 (又名為遞移封閉)。 例如，`emp_mgr` 資料表定義下列項目：  
+## <a name="examples"></a>範例  
+ 下列範例顯示如何使用遞迴觸發程序來解決自我參考關聯 (又名為遞移封閉)。 例如， `emp_mgr` 資料表定義下列項目：  
   
 -   公司中的員工 (`emp`)。  
   
@@ -181,9 +185,9 @@ Paul                           Alice                          0
   
  **若要設定 RECURSIVE_TRIGGERS 資料庫選項**  
   
--   [ALTER DATABASE SET 選項 &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md)  
+-   [ALTER DATABASE SET 選項 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [設定 nested triggers 伺服器組態選項](../../database-engine/configure-windows/configure-the-nested-triggers-server-configuration-option.md)  
   

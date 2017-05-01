@@ -1,29 +1,33 @@
 ---
 title: "建立資料表 (Database Engine) | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/22/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "資料表建立 [SQL Server], Visual Database Tools"
+ms.custom: 
+ms.date: 09/22/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- table creation [SQL Server], Visual Database Tools
 ms.assetid: 6f7c6ac5-e6d3-4dca-831e-b28442ba535b
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 57e54a247e190cdf6e52746ca591af5cc4de8507
+ms.lasthandoff: 04/11/2017
+
 ---
-# 建立資料表 (Database Engine)
+# <a name="create-tables-database-engine"></a>建立資料表 (Database Engine)
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中建立新資料表、為資料表命名，並將它加入至現有資料庫。  
   
-> **注意：**如果您連接到 SQL Azure 資料庫，新的資料表選項將會啟動建立資料表範本指令碼。 請編輯參數，然後執行指令碼來建立新的資料表。 如需詳細資訊，請參閱＜ [SQL Azure 概觀](http://go.microsoft.com/fwlink/?LinkId=163948)＞。  
+> **注意：** 如果您連接到 SQL Azure 資料庫，新的資料表選項將會啟動建立資料表範本指令碼。 請編輯參數，然後執行指令碼來建立新的資料表。 如需詳細資訊，請參閱＜ [SQL Azure 概觀](http://go.microsoft.com/fwlink/?LinkId=163948)＞。  
    
  
   
@@ -35,9 +39,9 @@ caps.handback.revision: 19
  如果 CREATE TABLE 陳述式中的任何資料行有相關聯的 XML 結構描述集合，就需要 XML 結構描述集合的擁有權或它的 REFERENCES 權限。  
   
  
-## 使用資料表設計工具  
+## <a name="using-table-designer"></a>使用資料表設計工具  
   
-1.  在 SSMS 的**物件總管**中，連接至包含要修改的資料庫的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體。  
+1.  在 SSMS 的 **物件總管**中，連接至包含要修改的資料庫的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體。  
   
 2.  在 **[物件總管]**中，展開 **[資料庫]** 節點，然後展開將包含新資料表的資料庫。  
   
@@ -55,7 +59,7 @@ caps.handback.revision: 19
   
      ![AddTableObjects](../../relational-databases/tables/media/addtableobjects.gif "AddTableObjects")  
   
-     如需有關這些物件的詳細資訊，請參閱＜ [Create Foreign Key Relationships](../../relational-databases/tables/建立外部索引鍵關聯性.md)＞、＜ [Create Check Constraints](../../relational-databases/tables/create-check-constraints.md) ＞和＜ [Indexes](../../relational-databases/indexes/indexes.md)＞。  
+     如需有關這些物件的詳細資訊，請參閱＜ [Create Foreign Key Relationships](../../relational-databases/tables/create-foreign-key-relationships.md)＞、＜ [Create Check Constraints](../../relational-databases/tables/create-check-constraints.md) ＞和＜ [Indexes](../../relational-databases/indexes/indexes.md)＞。  
   
 8.  依預設，此資料表包含在 **dbo** 結構描述中。 若要為資料表指定不同的結構描述，請在 [資料表設計工具] 窗格中按一下滑鼠右鍵並選取 [屬性]，如下圖所示。 從 [結構描述] 下拉式清單中選取適當的結構描述。  
   
@@ -71,7 +75,7 @@ caps.handback.revision: 19
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-## 使用查詢編輯器  
+## <a name="using-query-editor"></a>使用查詢編輯器  
   
 1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
@@ -96,3 +100,4 @@ caps.handback.revision: 19
  如需更多範例，請參閱 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)。  
   
   
+

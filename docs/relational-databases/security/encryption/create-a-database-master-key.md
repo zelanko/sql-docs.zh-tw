@@ -1,24 +1,28 @@
 ---
-title: "建立資料庫主要金鑰 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "資料庫主要金鑰 [SQL Server], 建立"
+title: "建立資料庫主要金鑰 | Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database master key [SQL Server], creating
 ms.assetid: 8cb24263-e97d-4e4d-9429-6cf494a4d5eb
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e2ea4a853ecc29a2173b9a471cb380fb77ce39c0
+ms.lasthandoff: 04/11/2017
+
 ---
-# 建立資料庫主要金鑰
+# <a name="create-a-database-master-key"></a>建立資料庫主要金鑰
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] ，建立 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中的資料庫主要金鑰。  
   
  **本主題內容**  
@@ -38,7 +42,7 @@ caps.handback.revision: 16
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 若要建立資料庫主要金鑰  
+#### <a name="to-create-a-database-master-key"></a>若要建立資料庫主要金鑰  
   
 1.  選擇密碼以加密即將儲存於資料庫的主要金鑰副本。  
   

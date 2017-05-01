@@ -1,23 +1,27 @@
 ---
 title: "建立記憶體最佳化資料表和原生編譯的預存程序 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 48a9a0a3-930f-477b-bd0f-e82e77999ecc
 caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cf291b900f61590446776dab273d2fcc14509234
+ms.lasthandoff: 04/11/2017
+
 ---
-# 建立記憶體最佳化資料表和原生編譯的預存程序
+# <a name="creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure"></a>建立記憶體最佳化資料表和原生編譯的預存程序
   本主題包含介紹記憶體中 OLTP 語法的範例。  
   
  若要讓應用程式能夠使用記憶體中 OLTP，您需要完成下列工作：  
@@ -26,7 +30,7 @@ caps.handback.revision: 35
   
 -   建立記憶體最佳化資料表及索引 如需詳細資訊，請參閱 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)。  
   
--   將資料載入資料記憶體最佳化資料表，並於載入資料之後及建立編譯的預存程序之前更新統計資料。 如需詳細資訊，請參閱[記憶體最佳化資料表的統計資料](../../relational-databases/in-memory-oltp/statistics-for-memory-optimized-tables.md)。  
+-   將資料載入資料記憶體最佳化資料表，並於載入資料之後及建立編譯的預存程序之前更新統計資料。 如需詳細資訊，請參閱 [記憶體最佳化資料表的統計資料](../../relational-databases/in-memory-oltp/statistics-for-memory-optimized-tables.md)。  
   
 -   建立原生編譯的預存程序來存取記憶體最佳化資料表中的資料。 如需詳細資訊，請參閱 [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)。 您也可以使用傳統的解譯 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存取記憶體最佳化資料表中的資料。  
   
@@ -233,7 +237,7 @@ ORDER BY so.so_id, sod.lineitem_id
   
 ```  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [記憶體中 OLTP 程式碼範例](../../relational-databases/in-memory-oltp/in-memory-oltp-code-samples.md)  
   
   

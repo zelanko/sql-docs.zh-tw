@@ -1,25 +1,29 @@
 ---
 title: "記憶體管理架構指南 | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/21/2016"
-ms.prod: "sql-non-specified"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "指南, 記憶體管理架構"
-  - "記憶體管理架構指南"
+ms.custom: 
+ms.date: 10/21/2016
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- guide, memory management architecture
+- memory management architecture guide
 ms.assetid: 7b0d0988-a3d8-4c25-a276-c1bdba80d6d5
 caps.latest.revision: 6
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d00e5c97e6c27f3fe40b2066b5e194b8011f6b1e
+ms.lasthandoff: 04/11/2017
+
 ---
-# 記憶體管理架構指南
+# <a name="memory-management-architecture-guide"></a>記憶體管理架構指南
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
 ## <a name="memory-architecture"></a>記憶體架構
@@ -33,12 +37,12 @@ caps.handback.revision: 6
 
 
 > [!NOTE]
-> 在工作負載極高的系統上，某些需要大量記憶體來執行的大型查詢因為無法取得要求的最少記憶體，而在等候記憶體資源時發生逾時錯誤。 若要解決這個問題，請增加[查詢等候選項](../database-engine/configure-windows/configure-the-query-wait-server-configuration-option.md)。 如果是平行查詢，請考慮減少[平行處理原則的最大程度選項](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。
+> 在工作負載極高的系統上，某些需要大量記憶體來執行的大型查詢因為無法取得要求的最少記憶體，而在等候記憶體資源時發生逾時錯誤。 若要解決這個問題，請增加 [查詢等候選項](../database-engine/configure-windows/configure-the-query-wait-server-configuration-option.md)。 如果是平行查詢，請考慮減少 [平行處理原則的最大程度選項](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。
  
 > [!NOTE]
 > 在記憶體負載極高的系統中，若在查詢計畫中使用合併聯結、排序與點陣圖的查詢，當查詢無法取得點陣圖所需的最低記憶體時，會卸除點陣圖。 這樣會影響查詢效能，且若排序處理序無法放入記憶體中，它會增加 tempdb 資料庫中工作資料表的使用數目，導致 tempdb 成長。 若要解決此問題，請新增記憶體或微調查詢以使用不同與更快的查詢計畫。
  
-### <a name="providing-the-maximum-amount-of-memory-to-includessnoversiontokenssnoversionmdmd"></a>提供記憶體數量上限給 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
+### <a name="providing-the-maximum-amount-of-memory-to-includessnoversionincludesssnoversion-mdmd"></a>提供記憶體數量上限給 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
 
 透過使用 AWE 與 [鎖定記憶體中的分頁] 權限，您可以為 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Database Engine 提供下列記憶體數量。 (下表中的欄位包含已不再提供的 32 位元版本。)
 
@@ -48,15 +52,15 @@ caps.handback.revision: 6
 |AWE 機制 (允許 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在 32 位元平台上超過處理虛擬位址空間的限制。) |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard、Enterprise 與 Developer 版本：緩衝集區最多可存取 64 GB 的記憶體。|不適用 <sup>5</sup> |
 |鎖定記憶體中的分頁作業系統 (OS) 權限 (允許鎖定實體記憶體，以防止鎖定記憶體的 OS 分頁)。<sup>6</sup> |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard、Enterprise 與 Developer 版本：[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 處理序使用 AWE 機制所需。 透過 AWE 機制配置的記憶體無法分頁。 <br> 授與此權限但未啟用 AWE 對伺服器將沒有作用。 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise 與 Developer 版本：建議使用，以避免作業系統分頁。 視工作負載而定，可以改善效能。 可存取的記憶體量類似於傳統記憶體案例。 |
 
-<sup>1</sup> 從 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 開始不提供 32 位元版本。  
+<sup>1</sup> 從 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]開始不提供 32 位元版本。  
 <sup>2</sup> /3gb 是作業系統開機參數。 如需詳細資訊，請瀏覽 MSDN Library。  
 <sup>3</sup> WOW64 (Windows 64 上的 Windows) 是 32 位元的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在 64 位元作業系統上執行的模式。  
-<sup>4</sup> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard Edition 最多支援 128 GB。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise Edition 支援作業系統最大值的上限。  
-<sup>5</sup> 請注意，sp_configure awe enabled 選項會出現在 64 位元的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 上，但會遭到忽略。    
+<sup>4</sup> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard Edition supports up to 128 GB. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise Edition 支援作業系統最大值的上限。  
+<sup>5</sup> 請注意，sp_configure awe enabled 選項會出現在 64 位元的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]上，但會遭到忽略。    
 <sup>6</sup> 如果(在具有 AWE 支援的 32 位元上或是本身的 64 位元上) 授與鎖定記憶體中的分頁權限 (LPIM)，我們建議另外設定最大伺服器記憶體。
 
 > [!NOTE]
-> 舊版的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 可以在 32 位元作業系統上執行。 在 32 位元作業系統上存取超過 4 GB 的記憶體會需要 Address Windowing Extensions (AWE) 來管理記憶體。 若 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 是在 64 位元作業系統上執行，就沒有這項需要。 如需 AWE 的詳細資訊，請參閱 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2008 文件中的[處理序位址空間](https://msdn.microsoft.com/library/ms189334)及[管理大型資料庫的記憶體](https://msdn.microsoft.com/library/ms191481)。   
+> 舊版的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 可以在 32 位元作業系統上執行。 在 32 位元作業系統上存取超過 4 GB 的記憶體會需要 Address Windowing Extensions (AWE) 來管理記憶體。 若 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 是在 64 位元作業系統上執行，就沒有這項需要。 如需 AWE 的詳細資訊，請參閱 [2008 文件中的](https://msdn.microsoft.com/library/ms189334) 處理序位址空間 [及](https://msdn.microsoft.com/library/ms191481) 管理大型資料庫的記憶體 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。   
 
 
 ## <a name="dynamic-memory-management"></a>動態記憶體管理
@@ -69,9 +73,9 @@ Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Database Engine
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 啟動後，會根據系統上的參數量 (如實體記憶體量)、伺服器執行緒數量和許多的啟動參數，計算緩衝集區的虛擬位址空間的大小。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會為緩衝集區保留計算所得的處理序虛擬位址空間量，但它只會取得 (認可) 目前負載所需的實體記憶體數量。
 
-該執行個體接著會繼續視需要取得記憶體，來支援工作負載。 當有更多使用者連接和執行查詢時，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會依需要取得其他實體記憶體。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體會持續取得實體記憶體，直到達到它的最大伺服器記憶體配置目標，或直到 Windows 指出已無可用記憶體；當擁有的記憶體多於最小伺服器記憶體設定，且 Windows 指出可用記憶體短缺時，它就會釋出記憶體。
+該執行個體接著會繼續視需要取得記憶體，來支援工作負載。 當有更多使用者連接和執行查詢時， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會依需要取得其他實體記憶體。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體會持續取得實體記憶體，直到達到它的最大伺服器記憶體配置目標，或直到 Windows 指出已無可用記憶體；當擁有的記憶體多於最小伺服器記憶體設定，且 Windows 指出可用記憶體短缺時，它就會釋出記憶體。
 
-當其他應用程式開始在執行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]執行個體的電腦上執行時，它們會消耗記憶體，並使可用實體記憶體的數量掉到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 目標以下。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體會調整它的記憶體耗用量。 如果其他應用程式停止而有更多記憶體可供使用，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體就會增加其記憶體配置的大小。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 每秒都可釋放及取得數 MB 的記憶體，使它能隨記憶體配置的變更快速調整。
+當其他應用程式開始在執行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]執行個體的電腦上執行時，它們會消耗記憶體，並使可用實體記憶體的數量掉到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 目標以下。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體會調整它的記憶體耗用量。 如果其他應用程式停止而有更多記憶體可供使用， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體就會增加其記憶體配置的大小。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 每秒都可釋放及取得數 MB 的記憶體，使它能隨記憶體配置的變更快速調整。
 
 
 ## <a name="effects-of-min-and-max-server-memory"></a>最小與最大伺服器記憶體的作用
@@ -79,23 +83,23 @@ Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Database Engine
 最小伺服器記憶體和最大伺服器記憶體組態選項會建立 Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Database Engine 之緩衝集區所使用的記憶體數量上限與下限。 緩衝集區不會立即取得最小伺服器記憶體中指定的記憶體數量。 緩衝集區只會以初始化所需的記憶體啟動。 當 Database Engine 的工作負載增加時，它會持續取得支援工作負載所需的記憶體。 除非緩衝集區達到最小伺服器記憶體中指定的數量，否則它不會釋放取得的任何記憶體。 一旦達到最小伺服器記憶體，緩衝集區便會使用標準演算法來視需要取得及釋放記憶體。 唯一的差別在於緩衝集區絕不會將其記憶體配置降到最小伺服器記憶體中指定的數量以下，也絕不會取得比最大伺服器記憶體中指定的數量還多的記憶體。
 
 > [!NOTE]
-> 做為處理序的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，需要比最大伺服器記憶體選項所指定還多的記憶體。 內部和外部元件都可以在緩衝集區之外配置記憶體 ，這會取用其他記憶體，但是配置給緩衝集區的記憶體通常代表 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 所取用之記憶體的最大部份。
+> 做為處理序的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ，需要比最大伺服器記憶體選項所指定還多的記憶體。 內部和外部元件都可以在緩衝集區之外配置記憶體 ，這會取用其他記憶體，但是配置給緩衝集區的記憶體通常代表 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]所取用之記憶體的最大部份。
 
 
 Database Engine 取得的記憶體數量完全是依據執行個體的工作負載而定。 如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體不需處理許多要求，可能永遠也不會達到最小伺服器記憶體。
 
 如果針對最小伺服器記憶體和最大伺服器記憶體指定相同的值，則一旦配置給 Database Engine 的記憶體達到該值，Database Engine 就會停止動態釋放和取得緩衝集區的記憶體。
 
-如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的執行個體正在電腦上執行，而且電腦上有其他應用程式頻繁地停止或啟動，則 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體配置和取消配置記憶體，可能會延遲其他應用程式啟動的時間。 此外，如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 是在單一電腦上執行的數個伺服器應用程式之一，系統管理員可能需要控制配置給 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的記憶體數量。 在這些情況下，您可以使用最小伺服器記憶體和最大伺服器記憶體選項，來控制 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 可以使用的記憶體數量。 如需詳細資訊，請參閱[伺服器記憶體組態選項](../database-engine/configure-windows/server-memory-server-configuration-options.md)。
+如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的執行個體正在電腦上執行，而且電腦上有其他應用程式頻繁地停止或啟動，則 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體配置和取消配置記憶體，可能會延遲其他應用程式啟動的時間。 此外，如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 是在單一電腦上執行的數個伺服器應用程式之一，系統管理員可能需要控制配置給 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的記憶體數量。 在這些情況下，您可以使用最小伺服器記憶體和最大伺服器記憶體選項，來控制 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 可以使用的記憶體數量。 如需詳細資訊，請參閱 [伺服器記憶體組態選項](../database-engine/configure-windows/server-memory-server-configuration-options.md)。
 
 最小伺服器記憶體與最大伺服器記憶體選項是以 MB 指定。
 
-## <a name="memory-used-by-includessnoversiontokenssnoversionmdmd-objects-specifications"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 物件所使用的記憶體規格
+## <a name="memory-used-by-includessnoversionincludesssnoversion-mdmd-objects-specifications"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 物件所使用的記憶體規格
 
-下列清單將描述 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中不同物件所使用的記憶體大約數量。 所列的數量為估計值，且可能視環境及建立物件的方式而有所不同。
+下列清單將描述 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中不同物件所使用的記憶體大約數量。 所列的數量為估計值，且可能視環境及建立物件的方式而有所不同。
 
 * 鎖定：64 個位元組 + 每個擁有者 32 個位元組   
-* 使用者連接：大約是 (3 network_packet_size + 94 kb)    
+* 使用者連接：大約是 (3* *network_packet_size + 94 kb)    
 
 網路封包大小是表格式資料配置 (TDS) 封包的大小，用於應用程式和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Database Engine 之間的通訊。 預設封包大小是 4 KB，由 network packet size 組態選項所控制。
 
@@ -107,9 +111,9 @@ Database Engine 取得的記憶體數量完全是依據執行個體的工作負�
 
 ### <a name="how-buffer-management-works"></a>緩衝區管理如何運作
 
-緩衝區是 8 KB 的記憶體頁面，大小與資料或索引頁面相同。 因此，緩衝區快取也分成 8 KB 的頁面。 緩衝區管理員管理從資料庫磁碟檔案將資料或索引頁面讀取到緩衝快取中，以及將修改後頁面重新寫入磁碟的功能。 頁面會保留在緩衝區快取中，直到緩衝區管理員需要緩衝區來讀取更多資料為止。 只有資料修改後，才會重新寫入磁碟。 在重新寫入磁碟之前，可以多次修改緩衝區快取中的資料。 如需詳細資訊，請參閱[讀取分頁](../relational-databases/reading-pages.md)和[寫入分頁](../relational-databases/writing-pages.md)。
+緩衝區是 8 KB 的記憶體頁面，大小與資料或索引頁面相同。 因此，緩衝區快取也分成 8 KB 的頁面。 緩衝區管理員管理從資料庫磁碟檔案將資料或索引頁面讀取到緩衝快取中，以及將修改後頁面重新寫入磁碟的功能。 頁面會保留在緩衝區快取中，直到緩衝區管理員需要緩衝區來讀取更多資料為止。 只有資料修改後，才會重新寫入磁碟。 在重新寫入磁碟之前，可以多次修改緩衝區快取中的資料。 如需詳細資訊，請參閱 [讀取分頁](../relational-databases/reading-pages.md) 和 [寫入分頁](../relational-databases/writing-pages.md)。
 
-當 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 啟動時，會根據數種參數 (例如，系統上的實體記憶體數量、設定的最大伺服器執行緒數量，以及各種啟動參數)，計算緩衝區快取的虛擬位址空間大小。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會為緩衝區快取保留此計算所得的處理序虛擬位址空間量 (稱為記憶體目標)，但它只會取得 (認可) 目前負載所需的實體記憶體量。 您可以在 [sys.dm_os_sys_info](../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md) 目錄檢視中查詢 **bpool_commit_target** 和 **bpool_committed** 資料行，以分別傳回保留為記憶體目標的頁數和緩衝區快取中目前認可的頁數。
+當 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 啟動時，會根據數種參數 (例如，系統上的實體記憶體數量、設定的最大伺服器執行緒數量，以及各種啟動參數)，計算緩衝區快取的虛擬位址空間大小。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會為緩衝區快取保留此計算所得的處理序虛擬位址空間量 (稱為記憶體目標)，但它只會取得 (認可) 目前負載所需的實體記憶體量。 您可以在 **sys.dm_os_sys_info** 目錄檢視中查詢 **bpool_commit_target** 和 [bpool_committed](../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md) 資料行，以分別傳回保留為記憶體目標的頁數和緩衝區快取中目前認可的頁數。
 
 在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 啟動時與緩衝區快取取得其記憶體目標時當中的間隔稱為「擴置」(Ramp-up)。 在這段期間，讀取要求會依需要填滿緩衝區。 例如，單頁讀取要求會填滿單一緩衝區頁面。 這表示擴置是依據用戶端要求的數目和類型而定。 擴置會將單頁讀取要求轉換成對齊的八頁要求來加速。 這可讓擴置加快完成，特別是在具有大量記憶體的電腦上。
 
@@ -126,7 +130,7 @@ Database Engine 取得的記憶體數量完全是依據執行個體的工作負�
 * 緩衝區管理員為非統一記憶體存取 (NUMA) 感知。 緩衝快取頁面會分散到硬體 NUMA 節點，這可讓執行緒存取本機 NUMA 節點上配置的緩衝區頁面，而不是從外部記憶體中存取。 
 * 緩衝區管理員支援熱新增記憶體 (Hot Add Memory)，讓使用者不需要重新啟動伺服器即可增加實體記憶體。 
 * 緩衝區管理員在 64 位元平台上支援大型分頁。 Windows 的不同版本各有特定的頁面大小。 
-* 緩衝區管理員提供可透過動態管理檢視公開的額外診斷資訊。 您可以使用這些檢視來監視 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 特定的各種作業系統資源。 例如，您可以使用 sys.dm_os_buffer_descriptors 檢視來監視緩衝快取中的頁面。   
+* 緩衝區管理員提供可透過動態管理檢視公開的額外診斷資訊。 您可以使用這些檢視來監視 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]特定的各種作業系統資源。 例如，您可以使用 sys.dm_os_buffer_descriptors 檢視來監視緩衝快取中的頁面。   
 
 ### <a name="disk-io"></a>磁碟 I/O
 緩衝區管理員僅針對資料庫執行讀取和寫入。 其他檔案及資料庫作業，如開啟、關閉、擴充和壓縮，都是由資料庫管理員和檔案管理員元件來執行。 
@@ -144,7 +148,7 @@ Database Engine 取得的記憶體數量完全是依據執行個體的工作負�
 SQL Server has encountered %d occurrence(s) of I/O requests taking longer than %d seconds to complete on file [%ls] in database [%ls] (%d). The OS file handle is 0x%p. The offset of the latest long I/O is: %#016I64x.
 `` 
 
-長 I/O 可能是讀取或寫入動作；不會在目前的訊息中指出。 長 I/O 訊息是警告，而非錯誤。 這些訊息並不表示 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 有問題。 報告這些訊息的目的是在協助系統管理員更快找到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 回應時間遲緩的原因，並區別 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 控制範圍之外的問題。 因此，不需要對它們採取任何動作，但是系統管理員應該調查 I/O 要求為何會用那麼久的時間，以及這段時間是否合理。
+長 I/O 可能是讀取或寫入動作；不會在目前的訊息中指出。 長 I/O 訊息是警告，而非錯誤。 這些訊息並不表示 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]有問題。 報告這些訊息的目的是在協助系統管理員更快找到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 回應時間遲緩的原因，並區別 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]控制範圍之外的問題。 因此，不需要對它們採取任何動作，但是系統管理員應該調查 I/O 要求為何會用那麼久的時間，以及這段時間是否合理。
 
 #### <a name="causes-of-long-io-requests"></a>長 I/O 要求的原因  
 長 I/O 訊息可能指出 I/O 已遭永久封鎖而永遠無法完成 (稱為遺失 I/O)，或者只是尚未完成。 雖然遺失 I/O 經常導致閂鎖逾時，但也無法從訊息中辨別實際狀況是什麼。
@@ -171,8 +175,10 @@ SQL Server has encountered %d occurrence(s) of I/O requests taking longer than %
 
 ## <a name="understanding-non-uniform-memory-access"></a>了解非統一記憶體存取
 
-Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會感知非統一記憶體存取 (NUMA)，而且不需要特殊組態就可以在 NUMA 硬體上順利執行。 隨著處理器時脈和數目的增加，要降低使用此額外處理能力所需要的記憶體延遲變得越來越困難。 為了避免這個狀況，硬體供應商提供了大型的 L3 快取，但這只是有限的解決方案。 NUMA 架構對這個問題提供了可擴充的解決方案。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 已設計成可利用 NUMA 型電腦的優點，而不需要進行任何應用程式變更。 如需詳細資訊，請參閱[作法：設定 SQL Server 使用軟體 NUMA](../database-engine/configure-windows/soft-numa-sql-server.md)。
+Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會感知非統一記憶體存取 (NUMA)，而且不需要特殊組態就可以在 NUMA 硬體上順利執行。 隨著處理器時脈和數目的增加，要降低使用此額外處理能力所需要的記憶體延遲變得越來越困難。 為了避免這個狀況，硬體供應商提供了大型的 L3 快取，但這只是有限的解決方案。 NUMA 架構對這個問題提供了可擴充的解決方案。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 已設計成可利用 NUMA 型電腦的優點，而不需要進行任何應用程式變更。 如需詳細資訊，請參閱 [作法：設定 SQL Server 使用軟體 NUMA](../database-engine/configure-windows/soft-numa-sql-server.md)。
 
 ## <a name="see-also"></a>另請參閱
 [讀取分頁](../relational-databases/reading-pages.md)   
  [寫入分頁](../relational-databases/writing-pages.md)
+
+

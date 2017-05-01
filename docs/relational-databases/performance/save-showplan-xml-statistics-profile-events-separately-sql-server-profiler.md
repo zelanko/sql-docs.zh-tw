@@ -1,29 +1,33 @@
 ---
 title: "個別儲存 Showplan XML 統計資料設定檔事件 (SQL Server Profiler) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Showplan XML 事件"
-  - "儲存 Showplan XML 事件"
-  - "事件 [SQL Server], 執行程序表 XML"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Showplan XML events
+- saving Showplan XML events
+- events [SQL Server], Showplan XML
 ms.assetid: df393f13-d538-4d94-8155-9c2fdf5f755d
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1f079c68f7f54569dee1a6d9f2e9fa61f1893426
+ms.lasthandoff: 04/11/2017
+
 ---
-# 個別儲存 Showplan XML 統計資料設定檔事件 (SQL Server Profiler)
-  此主題描述如何使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]，將在追蹤中所擷取的 **Showplan XML Statistics Profile** 事件，儲存至個別的 .SQLPlan 檔案中。 您可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中開啟 **Showplan XML Statistics Profile** 事件檔案，以便檢視每個事件的圖形執行計畫。  
+# <a name="save-showplan-xml-statistics-profile-events-separately-sql-server-profiler"></a>個別儲存 Showplan XML 統計資料設定檔事件 (SQL Server Profiler)
+  此主題描述如何使用 **，將在追蹤中所擷取的** Showplan XML Statistics Profile [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]事件，儲存至個別的 .SQLPlan 檔案中。 您可以在 **中開啟** Showplan XML Statistics Profile [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]事件檔案，以便檢視每個事件的圖形執行計畫。  
   
-### 若要個別儲存 Showplan XML Statistics 事件  
+### <a name="to-save-showplan-xml-statistics-events-separately"></a>若要個別儲存 Showplan XML Statistics 事件  
   
 1.  在 [檔案] 功能表上按一下 [新增追蹤]，然後連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。  
   
@@ -62,7 +66,7 @@ caps.handback.revision: 20
   
 11. 若要在 SQL Server Management Studio 中檢視 **Showplan XML Statistics Profile** 事件檔案，請在 [檔案] 功能表上指向 [開啟]，然後按一下 [檔案]。 導覽至您儲存 **Showplan XML Statistics Profile** 事件檔案的目錄，然後選取其中一個檔案並加以開啟。 **Showplan XML Statistics Profile** 事件檔案的副檔名為 .SQLPlan。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [在 SQL Server Profiler 中使用 SHOWPLAN 結果分析查詢](../../tools/sql-server-profiler/analyze-queries-with-showplan-results-in-sql-server-profiler.md)  
   
   

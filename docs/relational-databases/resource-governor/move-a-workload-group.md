@@ -1,32 +1,36 @@
 ---
 title: "移動工作負載群組 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.rg.properties_moveworkloadgroup.f1"
-helpviewer_keywords: 
-  - "工作負載群組 [SQL Server], 移動"
-  - "資源管理員, 工作負載群組移動"
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.rg.properties_moveworkloadgroup.f1
+helpviewer_keywords:
+- workload groups [SQL Server], move
+- Resource Governor, workload group move
 ms.assetid: f2068636-6e53-486a-a6fc-c12de2a38424
 caps.latest.revision: 12
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2e74236a254493b554c34b5f7c729e8cb91868a0
+ms.lasthandoff: 04/11/2017
+
 ---
-# 移動工作負載群組
+# <a name="move-a-workload-group"></a>移動工作負載群組
   您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 Transact-SQL 將資源管理員工作負載群組移至不同的資源集區。  
   
--   **開始之前：**  [限制事項](#LimitationsRestrictions)、 [權限](#Permissions)  
+-   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
--   使用：[SQL Server Management Studio](#MoveWGSSMS)、[Transact-SQL](#MoveWGTSQL) **來移動工作負載群組**  
+-   **To move a workload group, using:**  [SQL Server Management Studio](#MoveWGSSMS), [Transact-SQL](#MoveWGTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
  如果有暫止的資源管理員組態作業，則無法移動工作負載群組。  
@@ -61,7 +65,7 @@ caps.handback.revision: 12
   
 2.  執行 **ALTER RESOURCE GOVERNOR RECONFIGURE** 陳述式。  
   
-### 範例 (Transact-SQL)  
+### <a name="example-transact-sql"></a>範例 (Transact-SQL)  
  下列範例會將名為 `groupAdhoc` 的工作負載群組移至預設資源集區。  
   
 ```  
@@ -72,7 +76,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [資源管理員](../../relational-databases/resource-governor/resource-governor.md)   
  [啟用資源管理員](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [建立資源集區](../../relational-databases/resource-governor/create-a-resource-pool.md)   

@@ -1,24 +1,28 @@
 ---
-title: "撤銷 XML 結構描述集合上的權限 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "撤銷權限 [SQL Server]"
+title: "撤銷 XML 結構描述集合上的權限 | Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- revoking permissions [SQL Server]
 ms.assetid: 4e542b70-2d56-4a65-8a39-96a1ed477ca6
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a3f0db25e7283b594357638bd832c982de0569e0
+ms.lasthandoff: 04/11/2017
+
 ---
-# 撤銷 XML 結構描述集合上的權限
+# <a name="revoke-permissions-on-an-xml-schema-collection"></a>撤銷 XML 結構描述集合上的權限
   建立 XML 結構描述集合的權限可以使用下列其中一種方式來撤銷：  
   
 -   撤銷關聯式結構描述的 ALTER 權限。 然後，主體便無法在關聯式結構描述中建立 XML 結構描述集合。 但是，主體仍然可以在同一資料庫的其他關聯式結構描述中建立 XML 結構描述集合。  
@@ -27,7 +31,7 @@ caps.handback.revision: 25
   
 -   撤銷資料庫上主體的 CREATE XML SCHEMA COLLECTION 或 ALTER XML SCHEMA COLLECTION 權限。 這樣可以防止主體於資料庫中匯入 XML 結構描述集合。 撤銷資料庫上的 ALTER 或 CONTROL 權限也有相同的效果。  
   
-## 撤銷現有 XML 結構描述集合物件上的權限  
+## <a name="revoking-permissions-on-an-existing-xml-schema-collection-object"></a>撤銷現有 XML 結構描述集合物件上的權限  
  下列為可以在 XML 結構描述集合上撤銷的權限，以及其結果：  
   
 -   撤銷 ALTER 權限會讓主體無法修改 XML 結構描述集合的內容。  
@@ -40,10 +44,10 @@ caps.handback.revision: 25
   
 -   撤銷 EXECUTE 權限會讓主體無法插入或更新具類型或受 XML 集合所約束之資料行、變數和參數中的值。 這樣也撤銷了查詢這種 **xml** 類型之資料行、變數或參數的能力。  
   
-## 範例  
+## <a name="examples"></a>範例  
  下列範例中的狀況說明 XML 結構描述權限如何運作。 每個範例都會建立所需的測試資料庫、關聯式結構描述和登入。 將會授與這些登入必要的 XML 結構描述集合權限。 每個範例都會在結束時執行必要的清除。  
   
-### A. 撤銷可建立 XML 結構描述集合的權限  
+### <a name="a-revoking-permissions-to-create-an-xml-schema-collection"></a>A. 撤銷可建立 XML 結構描述集合的權限  
  這個範例將建立登入和範例資料庫， 並在資料庫中加入關聯式結構描述。 首先，登入會被授與兩個關聯式結構描述上的 ALTER 權限，以及其他建立 XML 結構描述集合的必要權限。 然後，此範例會撤銷資料庫中其中一個關聯式結構描述上的 ALTER 權限。 這樣登入就無法建立 XML 結構描述集合。  
   
 ```  
@@ -140,7 +144,7 @@ DROP LOGIN TestLogin1
 Go  
 ```  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [XML 資料 &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)   
  [比較具類型的 XML 與不具類型的 XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [XML 結構描述集合 &#40;SQL Server&#41;](../../relational-databases/xml/xml-schema-collections-sql-server.md)   

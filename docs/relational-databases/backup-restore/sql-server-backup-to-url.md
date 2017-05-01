@@ -1,27 +1,31 @@
 ---
 title: "SQL Server 備份至 URL | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 caps.latest.revision: 44
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 7b520a605648e8619f8462ae9125842fdeb37ebc
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server 備份至 URL
+# <a name="sql-server-backup-to-url"></a>SQL Server 備份至 URL
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   本主題介紹使用 Microsoft Azure Blob 儲存體服務作為備份目的地所需的概念、需求及元件。 使用磁碟或磁帶時，備份和還原功能相同或類似，只有些許的差異。 本主題包含這些差異和一些程式碼範例。  
   
-## 需求、元件和概念  
+## <a name="requirements-components-and-concepts"></a>需求、元件和概念  
  **本節內容：**  
   
 -   [安全性](#security)  
@@ -38,7 +42,7 @@ caps.handback.revision: 41
   
 -   [在 SQL Server Management Studio 中使用備份工作](../../relational-databases/backup-restore/sql-server-backup-to-url.md#BackupTaskSSMS)  
   
--   [使用 [維護計畫精靈] 將 SQL Server 備份至 URL](../Topic/SQL%20Server%20Backup%20to%20URL.md#MaintenanceWiz)  
+-   [使用 [維護計畫精靈] 將 SQL Server 備份至 URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md#MaintenanceWiz)  
   
 -   [使用 SQL Server Management Studio 從 Windows Azure 儲存體還原](../../relational-databases/backup-restore/sql-server-backup-to-url.md#RestoreSSMS)  
   
@@ -50,7 +54,7 @@ caps.handback.revision: 41
     > [!IMPORTANT]  
     >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 需要在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認證中儲存 Windows Azure 帳戶名稱和存取金鑰驗證或共用存取簽章和存取 Token。 當 Windows Azure 帳戶執行備份或還原作業時，這項資訊就會用來驗證該帳戶。  
   
--   用來發出 BACKUP 或 RESTORE 命令的使用者帳戶應該位於擁有**改變任何認證**權限的 **db_backup 運算子**資料庫角色中。  
+-   用來發出 BACKUP 或 RESTORE 命令的使用者帳戶應該位於擁有 **改變任何認證** 權限的 **db_backup 運算子** 資料庫角色中。  
   
 ###  <a name="intorkeyconcepts"></a> 重要元件和概念簡介  
  下列兩節將介紹 Microsoft Azure Blob 儲存體服務，以及備份至 Microsoft Azure Blob 儲存體服務或從中還原時使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件。 為了備份至 Microsoft Azure Blob 儲存體服務或從中還原，請務必了解這些元件以及它們之間的互動方式。  
@@ -62,22 +66,22 @@ caps.handback.revision: 41
   
  **容器** ：容器會提供一組 Blob 的群組，而且可以儲存不限數目的 Blob。 若要將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份寫入 Microsoft Azure Blob 服務，您至少必須建立根容器。 您可以針對容器產生共用存取簽章 Token，並僅對特定容器的物件授與存取權。  
   
- **Blob** ：任何類型和大小的檔案。 Microsoft Azure Blob 儲存體服務可以儲存的 Blob 類型有兩種：區塊和分頁 Blob。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份可以使用這兩種 Blob 類型，視所用的 Transact-SQL 語法而定。 您可以使用下列 URL 格式來定址 Blob：https://\<儲存體帳戶>.blob.core.windows.net/\<容器>/\<blob>。 如需 Microsoft Azure Blob 儲存體服務的詳細資訊，請參閱 [以 .NET 開始使用 Azure Blob 儲存體](http://www.windowsazure.com/develop/net/how-to-guides/blob-storage/)。 如需分頁 Blob 的詳細資訊，請參閱 [了解區塊 Blob、附加 Blob 和分頁 Blob](http://msdn.microsoft.com/library/windowsazure/ee691964.aspx)。  
+ **Blob** ：任何類型和大小的檔案。 Microsoft Azure Blob 儲存體服務可以儲存的 Blob 類型有兩種：區塊和分頁 Blob。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份可以使用這兩種 Blob 類型，視所用的 Transact-SQL 語法而定。 您可以使用下列 URL 格式來定址 Blob：https://\<儲存體帳戶>.blob.core.windows.net/\<容器>/\<Blob>。 如需 Microsoft Azure Blob 儲存體服務的詳細資訊，請參閱 [以 .NET 開始使用 Azure Blob 儲存體](http://www.windowsazure.com/develop/net/how-to-guides/blob-storage/)。 如需分頁 Blob 的詳細資訊，請參閱 [了解區塊 Blob、附加 Blob 和分頁 Blob](http://msdn.microsoft.com/library/windowsazure/ee691964.aspx)。  
   
- ![Azure BLOB 儲存](../../relational-databases/backup-restore/media/backuptocloud-blobarchitecture.gif "Azure BLOB 儲存")  
+ ![Azure Blob 儲存體](../../relational-databases/backup-restore/media/backuptocloud-blobarchitecture.gif "Azure Blob 儲存體")  
   
- **Azure 快照集︰** 在某個時點間取得的 Azure blob 快照集。 如需詳細資訊，請參閱[建立 Blob 的快照集](https://msdn.microsoft.com/library/azure/hh488361.aspx)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份現在支援儲存在 Microsoft Azure Blob 儲存體服務中的資料庫檔案 Azure 快照集備份。 如需詳細資訊，請參閱 [Azure 中資料庫檔案的檔案快照集備份](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)。  
+ **Azure 快照集︰** 在某個時點間取得的 Azure blob 快照集。 如需詳細資訊，請參閱 [建立 Blob 的快照集](https://msdn.microsoft.com/library/azure/hh488361.aspx)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份現在支援儲存在 Microsoft Azure Blob 儲存體服務中的資料庫檔案 Azure 快照集備份。 如需詳細資訊，請參閱 [Azure 中資料庫檔案的檔案快照集備份](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)。  
   
 ###  <a name="sqlserver"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Components  
- **URL：**URL 會指定唯一備份檔案的統一資源識別項 (URI)。 此 URL 是用來提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份檔案的位置和名稱。 此 URL 必須指向實際的 Blob，而非只有容器。 如果 Blob 不存在，就會建立 Blob。 如果指定了現有的 Blob，除非同時指定 “WITH FORMAT” 選項覆寫 Blob 中現有的備份檔，否則 BACKUP 會失敗。  
+ **URL：** URL 會指定唯一備份檔案的統一資源識別項 (URI)。 此 URL 是用來提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份檔案的位置和名稱。 此 URL 必須指向實際的 Blob，而非只有容器。 如果 Blob 不存在，就會建立 Blob。 如果指定了現有的 Blob，除非同時指定 “WITH FORMAT” 選項覆寫 Blob 中現有的備份檔，否則 BACKUP 會失敗。  
   
- 以下是 URL 值範例：http[s]://ACCOUNTNAME.blob.core.windows.net/\<容器>/\<檔名.bak>。 HTTPS 不是必要項目，但是建議使用。  
+ 以下是 URL 值範例：http[s]://ACCOUNTNAME.blob.core.windows.net/\<容器>/\<.bak>。 HTTPS 不是必要項目，但是建議使用。  
   
  **認證** ： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認證是用來儲存連接到 SQL Server 外部資源所需之驗證資訊的物件。 此處， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份和還原程序會使用認證，向 Microsoft Azure Blob 儲存體服務及其容器和 Blob 物件驗證。 認證會儲存儲存體帳戶名稱和儲存體帳戶 **存取金鑰** 值，或容器 URL 及其共用存取簽章 Token。 一旦建立認證，BACKUP/RESTORE 陳述式的語法就會決定 Blob 類型和所需的認證。  
   
  如需如何建立共用存取簽章的範例，請參閱本主題稍後的 [建立共用存取簽章](../../relational-databases/backup-restore/sql-server-backup-to-url.md#SAS) 範例，若要建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認證，請參閱本主題稍後的 [建立認證](../../relational-databases/backup-restore/sql-server-backup-to-url.md#credential) 範例。  
   
- 如需認證的一般資訊，請參閱[認證](http://msdn.microsoft.com/library/ms161950.aspx)  
+ 如需認證的一般資訊，請參閱 [認證](http://msdn.microsoft.com/library/ms161950.aspx)  
   
  如需使用認證之其他範例的資訊，請參閱 [建立 SQL Server Agent Proxy](http://msdn.microsoft.com/library/ms175834.aspx)。  
   
@@ -95,20 +99,19 @@ caps.handback.revision: 41
   
 -   只有使用區塊 Blob 和使用共用存取簽章 (SAS) Token 才支援備份至單一備份作業中的多個 Blob，而不是 SQL 認證的儲存體帳戶金鑰。  
   
--   不支援使用 **BACKUP** 來指定區塊大小。  
+-   針對分頁 Blob，不支援指定 **BLOCKSIZE**。 
   
--   不支援指定 **MAXTRANSFERSIZE** 。  
+-   針對分頁 Blob，不支援指定 **MAXTRANSFERSIZE**。 
   
--   不支援指定備份組選項 - **RETAINDAYS** 和 **EXPIREDATE**。  
+-   不支援指定備份組選項 - **RETAINDAYS** 和 **EXPIREDATE** 。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的備份裝置名稱大小上限為 259 個字元。 BACKUP TO URL 會用 36 個字元的必要元素指定 URL - ‘https://.blob.core.windows.net//.bak’，而保留 223 個字元供帳戶、容器和 Blob 名稱共用。  
   
 ###  <a name="Support"></a> 支援 Backup/Restore 陳述式  
   
-|||||  
-|-|-|-|-|  
-|Backup/Restore 陳述式|支援|例外狀況|註解|  
-|BACKUP|√|不支援 BLOCKSIZE 和 MAXTRANSFERSIZE。|如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認證是使用作為密碼的儲存體帳戶金鑰所定義，則需要定義 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認證，而且需要指定 WITH CREDENTIAL 引數。|  
+|Backup/Restore 陳述式|支援|例外狀況|註解|
+|-|-|-|-|
+|BACKUP|√|針對區塊 Blob，支援指定 BLOCKSIZE 和 MAXTRANSFERSIZE。 它們不支援用於分頁 Blob。 | 備份至區塊 Blob 需要 SQL Server 認證中所儲存的共用存取簽章。 備份至分頁 Blob 需要 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認證中所儲存的儲存體帳戶金鑰，而且需要指定 WITH CREDENTIAL 引數。|  
 |RESTORE|√||如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認證是使用作為密碼的儲存體帳戶金鑰所定義，則需要定義 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認證，而且需要指定 WITH CREDENTIAL 引數。|  
 |RESTORE FILELISTONLY|√||如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認證是使用作為密碼的儲存體帳戶金鑰所定義，則需要定義 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認證，而且需要指定 WITH CREDENTIAL 引數。|  
 |RESTORE HEADERONLY|√||如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認證是使用作為密碼的儲存體帳戶金鑰所定義，則需要定義 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認證，而且需要指定 WITH CREDENTIAL 引數。|  
@@ -118,13 +121,12 @@ caps.handback.revision: 41
   
  如需 Backup 陳述式的語法和一般資訊，請參閱 [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)。  
   
- 如需 Restore 陳述式的語法和一般資訊，請參閱 [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)。  
+ 如需 Restore 陳述式的語法和一般資訊，請參閱 [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)。  
   
-### 支援 Backup 引數  
-  
-|||||  
-|-|-|-|-|  
+### <a name="support-for-backup-arguments"></a>支援 Backup 引數  
+
 |引數|支援|例外狀況|註解|  
+|-|-|-|-|  
 |DATABASE|√|||  
 |LOG|√|||  
 ||  
@@ -133,7 +135,7 @@ caps.handback.revision: 41
 |**WITH 選項：**||||  
 |CREDENTIAL|√||使用 BACKUP TO URL 選項備份至 Microsoft Azure Blob 儲存體服務時，而且只有當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認證是使用作為密碼的儲存體帳戶金鑰定義時，才支援 WITH CREDENTIAL。|  
 |FILE_SNAPSHOT|√|||  
-|ENCRYPTION|√||當指定 **WITH ENCRYPTION** 引數時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 檔案快照集備份會確保整個資料庫先以 TDE 加密再備份；而且在這個情況下，會使用資料庫對 TDE 指定的演算法加密檔案快照集備份檔案本身。 如果整個資料庫中的資料庫所有資料都未加密，則備份會失敗 (例如，加密程序尚未完成)。|  
+|ENCRYPTION|√||當指定 **WITH ENCRYPTION** 引數時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 檔案快照集備份會確保整個資料庫先以 TDE 加密再備份；而且在這個情況下，會使用資料庫對 TDE 指定的演算法加密檔案快照集備份檔案本身。 如果整個資料庫中的資料庫所有資料都未加密，則備份會失敗 (例如，加密程序尚未完成)。|  
 |DIFFERENTIAL|√|||  
 |COPY_ONLY|√|||  
 |COMPRESSION&#124;NO_COMPRESSION|√|不支援檔案快照備份||  
@@ -144,10 +146,10 @@ caps.handback.revision: 41
 |NOSKIP &#124; SKIP|−|||  
 |NOFORMAT &#124; FORMAT|√||除非指定了 **WITH FORMAT** ，否則將備份帶入現有的 Blob 會失敗。 指定 **WITH FORMAT** 時就會覆寫現有的 Blob。 不過，當使用檔案快照集備份時 (使用 **WITH FILE_SNAPSHOT** 引數)，不允許 FORMAT 引數，以避免留下使用原始檔案快照集備份建立的孤立檔案快照集。 不過，當使用檔案快照集備份時 (使用 **WITH FILE_SNAPSHOT** 引數)，不允許 **WITH FORMAT** 引數，以避免留下使用原始備份建立的孤立檔案快照集。|  
 |MEDIADESCRIPTION|√|||  
-|MEDIANAME |√|||  
-|BLOCKSIZE|−|||  
+|MEDIANAME|√|||  
+|BLOCKSIZE|√|不支援用於分頁 Blob。 支援用於區塊 Blob。| 建議使用 BLOCKSIZE=65536，以最佳化使用區塊 Blob 中所允許的 50,000 個區塊。 |  
 |BUFFERCOUNT|√|||  
-|MAXTRANSFERSIZE|−|||  
+|MAXTRANSFERSIZE|√|不支援用於分頁 Blob。 支援用於區塊 Blob。| 預設值為 1048576。 此值的最大範圍為 4 MB，並以 65536 個位元組增量。</br> 建議使用 MAXTRANSFERSIZE=4194304，以最佳化使用區塊 Blob 中所允許的 50,000 個區塊。 |  
 |NO_CHECKSUM &#124; CHECKSUM|√|||  
 |STOP_ON_ERROR &#124; CONTINUE_AFTER_ERROR|√|||  
 |STATS|√|||  
@@ -158,15 +160,14 @@ caps.handback.revision: 41
   
  如需 Backup 引數的詳細資訊，請參閱 [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)。  
   
-### 支援 Restore 引數  
+### <a name="support-for-restore-arguments"></a>支援 Restore 引數  
   
-|||||  
-|-|-|-|-|  
 |引數|支援|例外狀況|註解|  
+|-|-|-|-|  
 |DATABASE|√|||  
 |LOG|√|||  
 |FROM (URL)|√||FROM URL 引數是用來指定備份檔案的 URL 路徑。|  
-|**WITH 選項：**||||  
+|**WITH Options:**||||  
 |CREDENTIAL|√||當您使用 RESTORE FROM URL 選項，從 Microsoft Azure Blob 儲存體服務還原時，才支援 WITH CREDENTIAL。|  
 |PARTIAL|√|||  
 |RECOVERY &#124; NORECOVERY &#124; STANDBY|√|||  
@@ -177,8 +178,8 @@ caps.handback.revision: 41
 |RESTRICTED_USER|√|||  
 |FILE|−|||  
 |PASSWORD|√|||  
-|MEDIANAME |√|||  
-|MEDIAPASSWORD |√|||  
+|MEDIANAME|√|||  
+|MEDIAPASSWORD|√|||  
 |BLOCKSIZE|√|||  
 |BUFFERCOUNT|−|||  
 |MAXTRANSFERSIZE|−|||  
@@ -193,7 +194,7 @@ caps.handback.revision: 41
 |ENABLE_BROKER &#124; ERROR_BROKER_CONVERSATIONS &#124; NEW_BROKER|√|||  
 |STOPAT &#124; STOPATMARK &#124; STOPBEFOREMARK|√|||  
   
- 如需 Restore 引數的詳細資訊，請參閱 [RESTORE 引數 &#40;Transact-SQL&#41;](../Topic/RESTORE%20Arguments%20\(Transact-SQL\).md)。  
+ 如需 Restore 引數的詳細資訊，請參閱 [RESTORE 引數 &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md)。  
   
 ##  <a name="BackupTaskSSMS"></a> 在 SQL Server Management Studio 中使用備份工作  
 您可以在 SQL Server Management Studio 中使用 SQL Server 認證，透過備份工作將資料庫備份至 URL。  
@@ -211,11 +212,11 @@ caps.handback.revision: 41
    
     1.  **Azure 儲存體容器：**儲存備份檔案的 Microsoft Azure 儲存體容器名稱。  從下拉式清單中選取現有的容器，或手動輸入容器。 
   
-    2.  **共用存取原則：**輸入手動輸入之容器的共用存取簽章。  如果已選擇現有的容器，則此欄位無法使用。 
+    2.  **共用存取原則：** 輸入手動輸入之容器的共用存取簽章。  如果已選擇現有的容器，則此欄位無法使用。 
   
-    3.  **備份檔案：**備份檔案的名稱。
+    3.  **備份檔案：** 備份檔案的名稱。
     
-    4.  **新容器：**用來註冊您沒有共用存取簽章的現有容器。  請參閱[連接到 Microsoft Azure 訂用帳戶](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md)。
+    4.  **新容器：** 用來註冊您沒有共用存取簽章的現有容器。  請參閱 [連接到 Microsoft Azure 訂用帳戶](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md)。
   
 > [!NOTE] 
 >  **加入**單一媒體集有多個備份檔案和儲存體容器的支援。
@@ -234,7 +235,7 @@ caps.handback.revision: 41
  與先前所述的備份工作類似，SQL Server Management Studio 中的 [維護計畫精靈] 可包含 **URL** 作為其中一個目的地選項，以及作為備份至 Microsoft Azure 儲存體 (像是 SQL 認證) 所需的其他支援物件。 如需詳細資訊，請參閱 **Using Maintenance Plan Wizard** 中的 [Define Backup Tasks](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure)一節。  
   
 > [!NOTE]  
->  若要建立等量的備份組、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 檔案快照集備份，或使用共用存取權杖的 SQL 認證，您必須在 [維護計畫精靈] 中使用 Transact-SQL、Powershell 或 C#，而不是使用備份工作。  
+>  若要建立等量的備份組、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 檔案快照集備份，或使用共用存取權杖的 SQL 認證，您必須在 [維護計畫精靈] 中使用 Transact-SQL、Powershell 或 C#，而不是使用備份工作。  
   
 ##  <a name="RestoreSSMS"></a> 使用 SQL Server Management Studio 從 Microsoft Azure 儲存體還原  
 還原資料庫工作會包含 **URL** 作為還原裝置的來源。  下列步驟說明使用還原工作，從 Microsoft Azure Blob 儲存體服務還原︰ 
@@ -249,11 +250,11 @@ caps.handback.revision: 41
 
     1.  **Azure 儲存體容器：**包含備份檔案之 Microsoft Azure 儲存體容器的完整名稱。  從下拉式清單中選取現有的容器，或手動輸入完整容器名稱。
       
-    2.  **共用存取簽章：**用來輸入指定容器的共用存取簽章。
+    2.  **共用存取簽章：**  用來輸入指定容器的共用存取簽章。
       
-    3.  **加入：**用來註冊您沒有共用存取簽章的現有容器。  請參閱[連接到 Microsoft Azure 訂用帳戶](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md)。
+    3.  **加入：**  用來註冊您沒有共用存取簽章的現有容器。  請參閱 [連接到 Microsoft Azure 訂用帳戶](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md)。
       
-    4.  **確定：**SQL Server 會使用您提供的 SQL 認證資訊連接到 Microsoft Azure 儲存體，並開啟 [在 Microsoft Azure 中尋找備份檔案] 對話。 位於儲存體容器中的備份檔案，會顯示在此頁面上。 選取您要用以還原的檔案，並按一下 **[確定]**。 如此會讓您回到 [選取備份裝置] 對話方塊，而按一下此對話方塊中的 [確定]，會帶您回到您可完成還原的主要 [還原] 對話方塊。 
+    4.  **確定：**SQL Server 會使用您提供的 SQL 認證資訊連接到 Microsoft Azure 儲存體，並開啟 [在 Microsoft Azure 中尋找備份檔案] 對話方塊。 位於儲存體容器中的備份檔案，會顯示在此頁面上。 選取您要用以還原的檔案，並按一下 **[確定]**。 如此會讓您回到 [選取備份裝置] 對話方塊，而按一下此對話方塊中的 [確定]，會帶您回到您可完成還原的主要 [還原] 對話方塊。 
   
      [還原資料庫 &#40;一般頁面&#41;](../../relational-databases/backup-restore/restore-database-general-page.md)  
   
@@ -271,10 +272,10 @@ caps.handback.revision: 41
 -   [使用 STOPAT 還原至時間點](#PITR)  
   
 > [!NOTE]  
->  如需搭配使用 SQL Server 2016 和 Microsoft Azure Blob 儲存體服務的教學課程，請參閱[教學課程：搭配使用 Microsoft Azure Blob 儲存體服務和 SQL Server 2016 資料庫](https://msdn.microsoft.com/library/dn466438.aspx)  
+>  如需搭配使用 SQL Server 2016 和 Microsoft Azure Blob 儲存體服務的教學課程，請參閱 [教學課程：搭配使用 Microsoft Azure Blob 儲存體服務和 SQL Server 2016 資料庫](https://msdn.microsoft.com/library/dn466438.aspx)  
   
 ###  <a name="SAS"></a> 建立共用存取簽章  
- 下列範例會建立共用存取簽章，可用在新建立的容器上建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認證。 此指令碼會建立關聯到預存存取原則的共用存取簽章。 如需詳細資訊，請參閱 [共用存取簽章，第 1 部分：了解 SAS 模型](http://azure.microsoft.com/en-us/documentation/articles/storage-dotnet-shared-access-signature-part-1/)。 此範例需要 Microsoft Azure Powershell。 如需安裝及使用 Azure Powershell 的資訊，請參閱[如何安裝和設定 Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/)。  
+ 下列範例會建立共用存取簽章，可用在新建立的容器上建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認證。 此指令碼會建立關聯到預存存取原則的共用存取簽章。 如需詳細資訊，請參閱 [共用存取簽章，第 1 部分：了解 SAS 模型](http://azure.microsoft.com/en-us/documentation/articles/storage-dotnet-shared-access-signature-part-1/)。 此範例需要 Microsoft Azure Powershell。 如需安裝及使用 Azure Powershell 的資訊，請參閱 [如何安裝和設定 Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/)。  
 
 > [!NOTE] 
 >  這些指令碼是使用 Azure PowerShell 5.0.10586 所撰寫。
@@ -407,7 +408,7 @@ Write-Host $tSql
     GO  
     ```  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [SQL Server 備份至 URL 的最佳作法和疑難排解](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)   
  [系統資料庫的備份與還原 &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)   
  [教學課程：搭配使用 Microsoft Azure Blob 儲存體服務和 SQL Server 2016 資料庫](https://msdn.microsoft.com/library/dn466438.aspx)  

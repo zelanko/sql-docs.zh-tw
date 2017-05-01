@@ -1,30 +1,34 @@
 ---
 title: "索引屬性 F1 說明 | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "sql13.swb.indexproperties.filter.f1"
-  - "sql13.swb.indexproperties.partitions.f1"
-  - "sql13.swb.indexproperties.general.f1"
-  - "sql13.swb.indexproperties.storage.f1"
-  - "sql13.swb.indexproperties.columns.f1"
-  - "sql13.swb.indexproperties.options.f1"
-  - "sql13.swb.indexproperties.spatial.f1"
+ms.custom: 
+ms.date: 02/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- sql13.swb.indexproperties.filter.f1
+- sql13.swb.indexproperties.partitions.f1
+- sql13.swb.indexproperties.general.f1
+- sql13.swb.indexproperties.storage.f1
+- sql13.swb.indexproperties.columns.f1
+- sql13.swb.indexproperties.options.f1
+- sql13.swb.indexproperties.spatial.f1
 ms.assetid: 45efd81a-3796-4b04-b0cc-f3deec94c733
 caps.latest.revision: 38
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0d646d06bd41ce4db35011d65ecab45109326c15
+ms.lasthandoff: 04/11/2017
+
 ---
-# 索引屬性 F1 說明
+# <a name="index-properties-f1-help"></a>索引屬性 F1 說明
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   本主題中的章節參考使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 對話方塊提供的各種不同索引屬性。  
@@ -63,26 +67,26 @@ caps.handback.revision: 38
  如果您在 **[索引類型]** 欄位中選取 **[空間]** ， **[唯一]** 核取方塊會呈暗灰色。  
   
  **索引鍵資料行**  
- 將想要的資料行加入 [索引鍵資料行] 方格。 加入多個資料行時，必須以想要的順序列出資料行。 索引中的資料行順序對索引效能有很大的影響。  
+ 將想要的資料行加入 **[索引鍵資料行]** 方格。 加入多個資料行時，必須以想要的順序列出資料行。 索引中的資料行順序對索引效能有很大的影響。  
   
  單一複合索引中參與的資料行不能超過 16 個。 如果超過 16 個資料行，請參閱本主題結尾的＜包含的資料行＞。  
   
- 空間索引只能定義在包含空間資料類型的單一資料行上 (「空間資料行」)。  
+ 空間索引只能定義在包含空間資料類型的單一資料行上 ( *「空間資料行」*(Spatial Column))。  
   
  **名稱**  
  顯示參與索引鍵的資料行名稱。  
   
  **排序次序**  
- 指定所選取索引資料行的排序方向為 [遞增] 或 [遞減]。  
+ 指定所選取索引資料行的排序方向為 **[遞增]** 或 **[遞減]**。  
   
 > [!NOTE]  
->  如果索引類型為 [主要 XML] 或 [空間]，此資料行不會出現在資料表中。  
+>  如果索引類型為 **[主要 XML]** 或 **[空間]**，此資料行不會出現在資料表中。  
   
  **資料類型**  
  顯示資料類型資訊。  
   
 > [!NOTE]  
->  如果資料表資料行是計算資料行，[資料類型] 就會顯示「計算資料行」。  
+>  如果資料表資料行是計算資料行， **[資料類型]** 就會顯示「計算資料行」。  
   
  **大小**  
  顯示儲存資料行資料類型所需的最大位元組數。 針對空間或 XML 資料行顯示零 (0)。  
@@ -94,7 +98,7 @@ caps.handback.revision: 38
  顯示參與索引鍵的資料行是否允許在資料表或檢視資料行中儲存 NULL 值。  
   
  **加入**  
- 將資料行加入索引鍵。 請從您按一下 [加入] 時所出現的 [從 *\<資料表名稱>* 選取資料行] 對話方塊中，選取資料表資料行。 如果是空間索引，在您選取一個資料行之後，此按鈕會呈暗灰色。  
+ 將資料行加入索引鍵。 請從您按一下 [新增] 時所出現的 [從 *\<資料表名稱>* 選取資料行] 對話方塊中，選取資料表資料行。 如果是空間索引，在您選取一個資料行之後，此按鈕會呈暗灰色。  
   
  **移除**  
  從索引鍵中的參與裡移除選取的資料行。  
@@ -109,7 +113,7 @@ caps.handback.revision: 38
  按一下 [加入]，選取資料行存放區索引的資料行。 如需資料行存放區索引的限制，請參閱 [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)。  
   
  **包含的資料行**  
- 在非叢集索引中包含非索引鍵資料行。 此選項可藉由在非叢集索引的分葉層級中加入資料行當做非索引鍵資料行，以略過索引鍵大小總計的目前索引限制，以及參與索引鍵的最大資料行數目。 如需詳細資訊，請參閱[建立內含資料行的索引](../../relational-databases/indexes/create-indexes-with-included-columns.md)  
+ 在非叢集索引中包含非索引鍵資料行。 此選項可藉由在非叢集索引的分葉層級中加入資料行當做非索引鍵資料行，以略過索引鍵大小總計的目前索引限制，以及參與索引鍵的最大資料行數目。 如需詳細資訊，請參閱 [建立內含資料行的索引](../../relational-databases/indexes/create-indexes-with-included-columns.md)  
   
 ##  <a name="Columns"></a> 選取 (索引) 資料行對話方塊  
  建立或修改索引時，請使用此頁面來將資料行加入 **[索引屬性一般]** 頁面。  
@@ -127,10 +131,10 @@ caps.handback.revision: 38
  資料行的大小 (以位元組為單位)。  
   
  **識別**  
- 針對識別欄位顯示 [是]，若資料行不是識別欄位，就顯示 [否]。  
+ 針對識別欄位顯示 **[是]** ，若資料行不是識別欄位，就顯示 **[否]** 。  
   
  **允許 Null**  
- 如果資料表定義對於資料行允許 Null 值，就會顯示 [是]。 如果資料表定義對於資料行不允許 Null 值，就會顯示 **[否]** 。  
+ 如果資料表定義對於資料行允許 Null 值，就會顯示 **[是]** 。 如果資料表定義對於資料行不允許 Null 值，就會顯示 **[否]** 。  
   
 ##  <a name="Storage"></a> 儲存頁面選項  
  使用此頁面來檢視或修改選取之索引的檔案群組或資料分割結構描述屬性。 僅顯示與索引類型相關的選項。  
@@ -161,7 +165,7 @@ caps.handback.revision: 38
  顯示有關資料行的資料類型資訊。  
   
 > [!NOTE]  
->  如果資料表資料行是計算資料行，[資料行資料類型] 就會顯示「計算資料行」。  
+>  如果資料表資料行是計算資料行， **[資料行資料類型]** 就會顯示「計算資料行」。  
   
  **移動索引時，允許線上處理 DML 陳述式**  
  允許使用者在索引作業期間存取基礎資料表或叢集索引資料，以及與非叢集索引相關聯的任何項目。 如需詳細資訊，請參閱 [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md)。  
@@ -178,8 +182,8 @@ caps.handback.revision: 38
 ##  <a name="Spatial"></a> 空間頁面索引選項  
  使用 **[空間]** 頁面可檢視或指定空間屬性的值。 如需詳細資訊，請參閱[空間資料 &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)。  
   
-### 週框方塊  
- 「週框方塊」是幾何平面最上層方格的周邊。 週框方塊參數只存在於幾何方格鑲嵌內。 如果 **[鑲嵌式配置]** 為 **[地理方格]**，就無法使用這些參數。  
+### <a name="bounding-box"></a>週框方塊  
+ *「週框方塊」* (Bounding Box) 是幾何平面最上層方格的周邊。 週框方塊參數只存在於幾何方格鑲嵌內。 如果 **[鑲嵌式配置]** 為 **[地理方格]**，就無法使用這些參數。  
   
  此面板會顯示週框方塊的 **(***X-min***,***Y-min***)** 和 **(***X-max***,***Y-max***)** 座標。 沒有預設座標值。 因此，當您在 **geometry** 類型資料行上建立新的空間索引時，您必須指定座標值。  
   
@@ -195,31 +199,31 @@ caps.handback.revision: 38
  **Y-max**  
  週框方塊右上角的 Y 座標。  
   
-### 一般  
- **鑲嵌式配置**  
+### <a name="general"></a>一般  
+ **[鑲嵌式配置]**  
  表示索引的鑲嵌式配置。 支援的鑲嵌式配置如下所示。  
   
  **幾何方格**  
  指定幾何方格鑲嵌式配置，這會套用到 **geometry** 資料類型的資料行。  
   
  **幾何自動方格**  
- 當資料庫相容性層級設定為 110 或更高時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會啟用這個選項。  
+ 當資料庫相容性層級設定為 110 或更高時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會啟用這個選項。  
   
- **地理方格**  
+ **[地理方格]**  
  指定地理方格鑲嵌式配置，這會套用到 **geography** 資料類型的資料行。  
   
  **地理自動方格**  
- 當資料庫相容性層級設定為 110 或更高時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會啟用這個選項。  
+ 當資料庫相容性層級設定為 110 或更高時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會啟用這個選項。  
   
  如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如何實作鑲嵌的資訊，請參閱[空間資料 &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)。  
   
  **每一物件的資料格**  
  指示可用於索引內單一空間物件的鑲嵌式每一物件的資料格數目。 這個數目可以是 1 和 8192 之間 (含) 的任何整數。 當資料庫相容性層級設定為 110 或更高時，舊版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的預設值為 16 和 8。  
   
- 在最上層，如果物件涵蓋的資料格數目要比 *n* 指定的數目還要多，則索引會盡量使用所需的資料格數目來提供完整的最上層鑲嵌。 在這類情況下，物件可能會收到比指定之資料格數目還要多的資料格。 在此情況下，最大數目就是最上層方格產生的資料格數目，該數目取決於 [層級 1] 密度。  
+ 在最上層，如果物件涵蓋的資料格數目要比 *n*指定的數目還要多，則索引會盡量使用所需的資料格數目來提供完整的最上層鑲嵌。 在這類情況下，物件可能會收到比指定之資料格數目還要多的資料格。 在此情況下，最大數目就是最上層方格產生的資料格數目，該數目取決於 **[層級 1]** 密度。  
   
-### 方格  
- 此面板會顯示鑲嵌式配置之每一個層級上的方格密度。 密度會指定為 **[低]**、 **[中]**或 **[高]**。 預設值是 **[中]**。 [低] 代表 4x4 個方格 (16 個資料格)、[中] 代表 8x8 個方格 (64 個資料格)，而 [高] 則代表 16x16 個方格 (256 個資料格)。 當選擇了 **[幾何自動方格]** 或 **[地理自動方格]** 鑲嵌選項時，就無法使用這些選項。  
+### <a name="grids"></a>方格  
+ 此面板會顯示鑲嵌式配置之每一個層級上的方格密度。 密度會指定為 **[低]**、 **[中]**或 **[高]**。 預設值是 **[中]**。 **[低]** 代表 4x4 個方格 (16 個方格)、 **[中]** 代表 8x8 個方格 (64 個方格)，而 **[高]** 則代表 16x16 個方格 (256 個方格)。 當選擇了 **[幾何自動方格]** 或 **[地理自動方格]** 鑲嵌選項時，就無法使用這些選項。  
   
  **層級 1**  
  第一層 (上層) 方格的密度。  
@@ -239,9 +243,10 @@ caps.handback.revision: 38
  **篩選運算式**  
  定義要在篩選索引中包含什麼資料列。 例如， `StartDate > '20000101' AND EndDate IS NOT NULL'.`  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [設定索引選項](../../relational-databases/indexes/set-index-options.md)   
  [INDEXPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/indexproperty-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)  
   
   
+

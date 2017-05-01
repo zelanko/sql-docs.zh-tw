@@ -1,28 +1,32 @@
 ---
-title: "IntelliSense (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: IntelliSense (SQL Server Management Studio) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7d6b0f60-c6ac-4f71-a9d0-fc3c2ffa7e91
 caps.latest.revision: 7
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 145fd074c9c84ce704ba43c9ad3591a324fea507
+ms.lasthandoff: 04/11/2017
+
 ---
-# IntelliSense (SQL Server Management Studio)
+# <a name="intellisense-sql-server-management-studio"></a>IntelliSense (SQL Server Management Studio)
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的編輯器支援 [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense 選項，而此選項可減少輸入、提供語法資訊的快速存取，或簡化複雜運算式之分隔符號的檢視。  
   
-## IntelliSense 的優點  
+## <a name="benefits-of-intellisense"></a>IntelliSense 的優點  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense 提供一組使語言參考更容易存取的選項陣列。 當編碼時，您不需要讓編輯器在語言元素上執行搜尋。 您可以保留您的內容、尋找您需要的資訊、將語言元素直接插入程式碼中，甚至可以讓 IntelliSense 自動完成您的輸入動作。  
   
-## IntelliSense 工作  
+## <a name="intellisense-tasks"></a>IntelliSense 工作  
   
 |工作描述|主題|  
 |----------------------|-----------|  
@@ -33,7 +37,7 @@ caps.handback.revision: 7
 |描述 IntelliSense 如何識別成對分隔符號的兩端，以及如何在該配對的兩端切換。|[語法組的自動比對](../../relational-databases/scripting/automatic-matching-of-syntax-pairs.md)|  
 |描述 IntelliSense 可能無法運作的狀況。|疑難排解 IntelliSense (SQL Server Management Studio)|  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [查詢與文字編輯器 &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)  
   
   

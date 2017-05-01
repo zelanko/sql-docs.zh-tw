@@ -1,29 +1,33 @@
 ---
 title: "重新初始化訂閱 - 所有訂閱 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rep.reinit.all.f1"
-helpviewer_keywords: 
-  - "重新初始化訂閱對話方塊"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rep.reinit.all.f1
+helpviewer_keywords:
+- Reinitialize Subscription(s) dialog box
 ms.assetid: e1122018-9f74-43e3-8489-7eae33ff23d9
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c59e203ad41b511bb82c066d11575006711965d9
+ms.lasthandoff: 04/11/2017
+
 ---
-# 重新初始化訂閱 - 所有訂閱
-   **重新初始化訂閱** 對話方塊可讓您將標示為重新初始化發行集的所有訂閱。 重新初始化會牽涉到將快照集套用到每個訂閱者；對於交易式發行集的訂閱，這是由散發代理程式執行；而對於合併式發行集的訂閱，則是由合併代理程式執行。  
+# <a name="reinitialize-subscriptions---all-subscriptions"></a>重新初始化訂閱 - 所有訂閱
+  **[重新初始化訂閱]** 對話方塊可以讓您標示發行集的所有訂閱，以進行重新初始化。 重新初始化會牽涉到將快照集套用到每個訂閱者；對於交易式發行集的訂閱，這是由散發代理程式執行；而對於合併式發行集的訂閱，則是由合併代理程式執行。  
   
-## 選項  
+## <a name="options"></a>選項  
  **使用目前的快照集**  
  選取即可在散發代理程式或合併代理程式下次針對訂閱執行時，將目前的快照集套用到每個訂閱者。 如果沒有任何有效的快照集可以使用，則不可以選取此選項。  
   
@@ -40,7 +44,7 @@ caps.handback.revision: 11
  **標示為重新初始化**  
  按一下即可標示要重新初始化的每項訂閱。 有效的快照集可以使用之後，下次針對訂閱執行散發代理程式或合併代理程式時，快照集就會在訂閱者端套用。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [重新初始化訂閱](../../relational-databases/replication/reinitialize-subscriptions.md)  
   
   

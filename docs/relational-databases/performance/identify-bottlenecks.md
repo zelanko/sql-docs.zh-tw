@@ -1,33 +1,37 @@
 ---
 title: "找出瓶頸 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "資源瓶頸 [SQL Server]"
-  - "資料庫鏡像 [SQL Server], 瓶頸"
-  - "效能 [SQL Server], 瓶頸"
-  - "微調資料庫 [SQL Server], 瓶頸"
-  - "監視伺服器效能 [SQL Server], 瓶頸"
-  - "監視效能 [SQL Server], 瓶頸"
-  - "資料庫效能 [SQL Server], 瓶頸"
-  - "伺服器效能 [SQL Server], 瓶頸"
-  - "瓶頸 [SQL Server]"
-  - "找出瓶頸 [SQL Server]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- resource bottlenecks [SQL Server]
+- database monitoring [SQL Server], bottlenecks
+- performance [SQL Server], bottlenecks
+- tuning databases [SQL Server], bottlenecks
+- monitoring server performance [SQL Server], bottlenecks
+- monitoring performance [SQL Server], bottlenecks
+- database performance [SQL Server], bottlenecks
+- server performance [SQL Server], bottlenecks
+- bottlenecks [SQL Server]
+- identifying bottlenecks [SQL Server]
 ms.assetid: db079e65-ee80-4105-aec9-f8230d0d6635
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 20ff22698486f5537fc974a91905b9837792aa5d
+ms.lasthandoff: 04/11/2017
+
 ---
-# 找出瓶頸
+# <a name="identify-bottlenecks"></a>找出瓶頸
   同時存取共用資源會產生瓶頸。 通常，每個軟體系統中都會有瓶頸存在，而且這是無法避免的。 但是，過量要求共用資源會讓回應時間變差，這時就必須找出問題並進行微調。  
   
  導致瓶頸的原因包括：  
@@ -40,7 +44,7 @@ caps.handback.revision: 18
   
 -   資源的組態設定不正確。  
   
-## 分析瓶頸  
+## <a name="analyzing-bottlenecks"></a>分析瓶頸  
  各種事件的持續時間過長，是發生瓶頸的指標，這種情況便可進行微調。  
   
  例如：  
@@ -59,7 +63,7 @@ caps.handback.revision: 18
 |使用者連線|過多的使用者同時存取伺服器，會造成效能降低。|  
 |封鎖的鎖定|設計錯誤的應用程式會造成鎖定與阻礙同時發生，而導致回應時間變長，以及交易輸送速度變慢。|  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [監視 CPU 使用量](../../relational-databases/performance-monitor/monitor-cpu-usage.md)   
  [監視磁碟使用量](../../relational-databases/performance-monitor/monitor-disk-usage.md)   
  [監視記憶體使用量](../../relational-databases/performance-monitor/monitor-memory-usage.md)   

@@ -1,28 +1,32 @@
 ---
-title: "刪除檢查條件約束 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "移除條件約束"
-  - "CHECK 條件約束, 刪除"
-  - "條件約束 [SQL Server], 刪除"
-  - "條件約束 [SQL Server]，檢查"
-  - "刪除條件約束"
+title: "刪除檢查條件約束 | Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- removing constraints
+- CHECK constraints, deleting
+- constraints [SQL Server], deleting
+- constraints [SQL Server], check
+- deleting constraints
 ms.assetid: 5f86c1a6-f5fa-4e77-a892-f6ae96fc0ab3
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2447173bd6b35b977fe69aa8f811d3d0198123f9
+ms.lasthandoff: 04/11/2017
+
 ---
-# 刪除檢查條件約束
+# <a name="delete-check-constraints"></a>刪除檢查條件約束
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中刪除檢查條件約束。 刪除檢查條件約束會從條件約束運算式中移除一個或多個資料行所接受資料值的限制。  
@@ -48,7 +52,7 @@ caps.handback.revision: 14
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 若要刪除檢查條件約束  
+#### <a name="to-delete-a-check-constraint"></a>若要刪除檢查條件約束  
   
 1.  在 **[物件總管]**中，展開含有檢查條件約束的資料表。  
   
@@ -60,7 +64,7 @@ caps.handback.revision: 14
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 若要刪除檢查條件約束  
+#### <a name="to-delete-a-check-constraint"></a>若要刪除檢查條件約束  
   
 1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   

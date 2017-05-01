@@ -1,28 +1,32 @@
 ---
 title: "修改外部索引鍵關聯性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vdtsql.chm:65538"
-  - "vdt.ppg.relationships"
-helpviewer_keywords: 
-  - "外部索引鍵 [SQL Server], 修改"
-  - "修改外部索引鍵"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vdtsql.chm:65538
+- vdt.ppg.relationships
+helpviewer_keywords:
+- foreign keys [SQL Server], modifying
+- modifying foreign keys
 ms.assetid: 0c9ca80d-d79b-44c4-a21e-0fce39c398ec
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d938937ff7d4009ec874ebc9bbd33b2e87960def
+ms.lasthandoff: 04/11/2017
+
 ---
-# 修改外部索引鍵關聯性
+# <a name="modify-foreign-key-relationships"></a>修改外部索引鍵關聯性
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中修改關聯性的外部索引鍵端。 修改資料表的外部索引鍵，會變更與主索引鍵資料表中之資料行相關的資料行。  
@@ -59,7 +63,7 @@ caps.handback.revision: 20
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 若要修改外部索引鍵  
+#### <a name="to-modify-a-foreign-key"></a>若要修改外部索引鍵  
   
 1.  在 **[物件總管]**中，展開含有外部索引鍵的資料表，然後展開 **[索引鍵]**。  
   
@@ -145,6 +149,6 @@ caps.handback.revision: 20
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **若要修改外部索引鍵**  
   
- 若要使用 Transact-SQL 修改 FOREIGN KEY 條件約束，您必須先刪除現有的 FOREIGN KEY 條件約束，然後使用新的定義來重新建立。 如需相關資訊，請參閱 [Delete Foreign Key Relationships](../../relational-databases/tables/delete-foreign-key-relationships.md) 及 [Create Foreign Key Relationships](../../relational-databases/tables/建立外部索引鍵關聯性.md)。  
+ 若要使用 Transact-SQL 修改 FOREIGN KEY 條件約束，您必須先刪除現有的 FOREIGN KEY 條件約束，然後使用新的定義來重新建立。 如需相關資訊，請參閱 [Delete Foreign Key Relationships](../../relational-databases/tables/delete-foreign-key-relationships.md) 及 [Create Foreign Key Relationships](../../relational-databases/tables/create-foreign-key-relationships.md)。  
   
 ###  <a name="TsqlExample"></a>  

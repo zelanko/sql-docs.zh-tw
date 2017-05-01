@@ -1,22 +1,26 @@
 ---
 title: "使用記憶體最佳化加快暫存資料表與資料表變數的速度 | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 01/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 38512a22-7e63-436f-9c13-dde7cf5c2202
 caps.latest.revision: 20
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 98f4cf9519987f458c1f053ffe9368776b28cda9
+ms.lasthandoff: 04/11/2017
+
 ---
-# 使用記憶體最佳化加快暫存資料表與資料表變數的速度
+# <a name="faster-temp-table-and-table-variable-by-using-memory-optimization"></a>使用記憶體最佳化加快暫存資料表與資料表變數的速度
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   
@@ -30,7 +34,7 @@ caps.handback.revision: 19
 - 強調記憶體最佳化之效能優點的程式碼範例
   
   
-## A. 記憶體最佳化資料表變數的基本概念  
+## <a name="a-basics-of-memory-optimized-table-variables"></a>A. 記憶體最佳化資料表變數的基本概念  
   
 記憶體最佳化資料表變數使用記憶體最佳化資料表所使用的相同記憶體最佳化演算法和資料結構，來提供最佳效率。 當資料表變數從原生編譯模組內部存取時，其效率最高。  
   
@@ -42,11 +46,11 @@ caps.handback.revision: 19
 - 不需要使用或競爭 tempdb。  
 - 可傳入預存程序作為資料表值參數 (TVP)。  
 - 至少必須有一個雜湊或非叢集索引。  
-  - 若是雜湊索引，值區計數在理想情況下應該是預期唯一索引鍵數目的 1-2 倍，不過高估值區計數通常沒什麼問題 (最多 10 倍)。 如需詳細資訊，請參閱[記憶體最佳化資料表的索引](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)。  
+  - 若是雜湊索引，值區計數在理想情況下應該是預期唯一索引鍵數目的 1-2 倍，不過高估值區計數通常沒什麼問題 (最多 10 倍)。 如需詳細資訊，請參閱 [記憶體最佳化資料表的索引](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)。  
 
   
   
-#### 物件類型  
+#### <a name="object-types"></a>物件類型  
   
 記憶體內部 OLTP 提供可用於記憶體最佳化暫存資料表和資料表變數的下列物件：  
   
@@ -58,7 +62,7 @@ caps.handback.revision: 19
     - `DECLARE @mytablevariable my_type;`。  
   
   
-## B. 案例︰取代全域 tempdb &#x23;&#x23;table  
+## <a name="b-scenario-replace-global-tempdb-x23x23table"></a>B. 案例︰取代全域 tempdb &#x23;&#x23;table  
   
 假設您有下列全域暫存資料表。  
   
@@ -91,7 +95,7 @@ caps.handback.revision: 19
   
   
   
-#### B.1 步驟  
+#### <a name="b1-steps"></a>B.1 步驟  
   
 從全域暫存轉換成 SCHEMA_ONLY 的步驟如下：  
   
@@ -101,7 +105,7 @@ caps.handback.revision: 19
 3. 在 T-SQL 中，以 **dbo.soGlobalB** 取代所有提及的 **&#x23;&#x23;tempGlobalB**。  
   
   
-## C. 案例︰取代工作階段 tempdb &#x23;table  
+## <a name="c-scenario-replace-session-tempdb-x23table"></a>C. 案例︰取代工作階段 tempdb &#x23;table  
   
 取代工作階段暫存資料表的準備工作，需要比先前的全域暫存資料表案例更多的 T-SQL。 幸好額外的 T-SQL 並不表示需要任何更多的工作才能完成轉換。  
   
@@ -119,7 +123,7 @@ caps.handback.revision: 19
   
   
   
-第一步，建立下列資料表值函數，對 **@@spid** 進行篩選。 此函數將可供轉換自工作階段暫存資料表的所有 SCHEMA_ONLY 資料表使用。  
+第一步，建立下列資料表值函式，對 **@@spid** 進行篩選。 此函數將可供轉換自工作階段暫存資料表的所有 SCHEMA_ONLY 資料表使用。  
   
   
   
@@ -159,7 +163,7 @@ caps.handback.revision: 19
         CONSTRAINT CHK_soSessionC_SpidFilter  
             CHECK ( SpidFilter = @@spid ),  
     )  
-        WITH  
+        取代所有提及的  
             (MEMORY_OPTIMIZED = ON,  
              DURABILITY = SCHEMA_ONLY);  
     go  
@@ -176,14 +180,16 @@ caps.handback.revision: 19
   
 第三步，在您的一般 T-SQL 程式碼中：  
   
-1. 清除舊工作階段暫存資料表的任何 CREATE TABLE 陳述式。  
-2. 以新名稱取代舊的資料表名稱：  
-  - _舊名稱︰_&#x23;tempSessionC  
-  - _新名稱︰_dbo.soSessionC  
+1. 將 Transact-SQL 陳述式中之暫存資料表的所有參考都變更為新的記憶體最佳化資料表︰
+    - _舊名稱︰_&#x23;tempSessionC  
+    - _新名稱︰_ dbo.soSessionC  
+2. 將程式碼中的 `CREATE TABLE #tempSessionC` 陳述式取代為 `DELETE FROM dbo.soSessionC`，確保不會將工作階段公開至具有相同 session_id 之前一個工作階段所插入的資料表內容
+3. 從您的程式碼移除 `DROP TABLE #tempSessionC` 陳述式；如果記憶體大小是潛在問題，則也可以選擇性地插入 `DELETE FROM dbo.soSessionC` 陳述式
   
   
   
-## D. 案例︰資料表變數可以是 MEMORY_OPTIMIZED=ON  
+  
+## <a name="d-scenario-table-variable-can-be-memoryoptimizedon"></a>D. 案例︰資料表變數可以是 MEMORY_OPTIMIZED=ON  
   
   
 傳統資料表變數代表 tempdb 資料庫中的資料表。 如需更快的效能，您可以對資料表變數進行記憶體最佳化。  
@@ -200,7 +206,7 @@ caps.handback.revision: 19
   
   
   
-#### D.1 將內嵌轉換成明確  
+#### <a name="d1-convert-inline-to-explicit"></a>D.1 將內嵌轉換成明確  
   
 上述語法適用於建立資料表變數 *inline*。 此內嵌語法不支援記憶體最佳化。 因此請將 TYPE 的內嵌語法轉換成明確語法。  
   
@@ -228,7 +234,7 @@ caps.handback.revision: 19
   
   
   
-#### D.2 將明確磁碟轉換成記憶體最佳化  
+#### <a name="d2-convert-explicit-on-disk-to-memory-optimized"></a>D.2 將明確磁碟轉換成記憶體最佳化  
   
 記憶體最佳化資料表變數不在 tempdb 中。 記憶體最佳化會導致速度加快，通常會加快 10 倍以上。  
   
@@ -246,7 +252,7 @@ caps.handback.revision: 19
             Column1  INT   NOT NULL   INDEX ix1,  
             Column2  CHAR(10)  
         )  
-        WITH  
+        取代所有提及的  
             (MEMORY_OPTIMIZED = ON);  
   
   
@@ -255,14 +261,14 @@ caps.handback.revision: 19
 大功告成。  
   
   
-## E. SQL Server 的必要條件 FILEGROUP  
+## <a name="e-prerequisite-filegroup-for-sql-server"></a>E. SQL Server 的必要條件 FILEGROUP  
   
-在 Microsoft SQL Server 上，若要使用記憶體最佳化功能，您的資料庫必須有以 **MEMORY_OPTIMIZED_DATA** 宣告的 FILEGROUP。  
+在 Microsoft SQL Server 上，若要使用記憶體最佳化功能，您的資料庫必須有以 **MEMORY_OPTIMIZED_DATA**宣告的 FILEGROUP。  
   
 - Azure SQL Database 不需要建立此 FILEGROUP。  
   
   
-*必要條件︰*FILEGROUP 的下列 Transact-SQL 程式碼是本文稍後章節中很長之 T-SQL 程式碼範例的必要條件。  
+*必要條件︰* FILEGROUP 的下列 Transact-SQL 程式碼是本文稍後章節中很長之 T-SQL 程式碼範例的必要條件。  
   
 1. 您必須使用 SSMS.exe 或可提交 T-SQL 的其他工具。  
 2. 將範例 FILEGROUP T-SQL 程式碼貼到 SSMS 中。  
@@ -290,22 +296,22 @@ caps.handback.revision: 19
     go  
   
   
-下列指令碼會為您建立檔案群組，並進行建議之資料庫的設定︰[enable-in-memory-oltp.sql](https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/in-memory/t-sql-scripts/enable-in-memory-oltp.sql)
+下列指令碼會為您建立檔案群組，並進行建議之資料庫的設定︰ [enable-in-memory-oltp.sql](https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/in-memory/t-sql-scripts/enable-in-memory-oltp.sql)
   
 如需 FILE 和 FILEGROUP 之 `ALTER DATABASE ... ADD` 的詳細資訊，請參閱：  
   
-- [ALTER DATABASE 檔案及檔案群組選項 (Transact-SQL)](ALTER%20DATABASE%20File%20and%20Filegroup%20Options%20(Transact-SQL).xml)  
+- [ALTER DATABASE 檔案及檔案群組選項 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)  
 - [記憶體最佳化檔案群組](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md)    
   
   
-## F. 快速測試以證明速度提升  
+## <a name="f-quick-test-to-prove-speed-improvement"></a>F. 快速測試以證明速度提升  
   
   
 本節提供 Transact-SQL 程式碼，您可以執行以測試並比較使用記憶體最佳化資料表變數進行 INSERT-DELETE 所提升的速度。 此程式碼是由兩個幾乎相同的部分所組成，不同之處在於前半部分的資料表類型為記憶體最佳化。  
   
 比較測試會持續約 7 秒。 若要執行範例：  
   
-1. *必要條件︰*您必須已執行上一節中的 FILEGROUP T-SQL。  
+1. *必要條件︰* 您必須已執行上一節中的 FILEGROUP T-SQL。  
 2. 執行下列 T-SQL INSERT-DELETE 指令碼。  
   - 請注意，'GO 5001' 陳述式會重新提交 T-SQL 5001 次。 您可以調整次數，然後重新執行。  
   
@@ -407,7 +413,7 @@ caps.handback.revision: 19
   
   
   
-## G. 預測使用中記憶體耗用量  
+## <a name="g-predict-active-memory-consumption"></a>G. 預測使用中記憶體耗用量  
   
 您可以透過下列資源，了解如何預測記憶體最佳化資料表的使用中記憶體需求：  
   
@@ -418,37 +424,37 @@ caps.handback.revision: 19
   
 如果每次存取只能使用一個索引鍵值來存取記憶體資料表變數，則雜湊索引可能比非叢集索引更適合。 不過，如果您無法估計正確的 BUCKET_COUNT，則非叢集索引是不錯的次要選擇。  
   
-## H. 另請參閱  
+## <a name="h-see-also"></a>H. 另請參閱  
   
-- [記憶體最佳化資料表](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)
+- [Memory-Optimized Tables](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)
 - [為記憶體最佳化的物件定義持久性](../../relational-databases/in-memory-oltp/defining-durability-for-memory-optimized-objects.md)  
   
   
   
   
 \<!--  
-CAPS Title: "Faster temp table and table variable by using memory optimization"  
+CAPS Title: "使用記憶體最佳化加快暫存資料表與資料表變數的速度"  
   
 https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/21/improving-temp-table-and-table-variable-performance-using-memory-optimization/  
   
   
-[ALTER DATABASE File and Filegroup Options (Transact-SQL)](http://msdn.microsoft.com/library/bb522469.aspx)  
+[ALTER DATABASE 檔案及檔案群組選項 (Transact-SQL)](http://msdn.microsoft.com/library/bb522469.aspx)  
   
-[The Memory Optimized Filegroup](http://msdn.microsoft.com/library/dn639109.aspx)  
+[記憶體最佳化檔案群組](http://msdn.microsoft.com/library/dn639109.aspx)  
   
-[Resource Governor Resource Pool](http://msdn.microsoft.com/library/hh510189.aspx)  
-  
-  
-[Memory Optimization Advisor](http://msdn.microsoft.com/library/dn284308.aspx)  
-  
-[Estimate Memory Requirements for Memory-Optimized Tables](http://msdn.microsoft.com/library/dn282389.aspx)  
-  
-[Table and Row Size in Memory-Optimized Tables: Example Calculation](http://msdn.microsoft.com/library/dn205318.aspx)  
+[資源管理員資源集區](http://msdn.microsoft.com/library/hh510189.aspx)  
   
   
-[Durability for Memory-Optimized Tables](http://msdn.microsoft.com/library/dn553125.aspx)  
+[記憶體最佳化 Advisor](http://msdn.microsoft.com/library/dn284308.aspx)  
   
-[Defining Durability for Memory-Optimized Objects](http://msdn.microsoft.com/library/dn553122.aspx)  
+[估計記憶體最佳化資料表的記憶體需求](http://msdn.microsoft.com/library/dn282389.aspx)  
+  
+[記憶體最佳化資料表中的資料表和資料列大小：計算範例](http://msdn.microsoft.com/library/dn205318.aspx)  
+  
+  
+[記憶體最佳化資料表的持久性](http://msdn.microsoft.com/library/dn553125.aspx)  
+  
+[為記憶體最佳化的物件定義持久性](http://msdn.microsoft.com/library/dn553122.aspx)  
   
 [Memory-Optimized Table Variables](http://msdn.microsoft.com/library/dn535766.aspx)  
   
@@ -458,3 +464,5 @@ GeneMi , 2016-05-02  Monday  18:40pm
   
   
   
+
+

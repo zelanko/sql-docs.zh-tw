@@ -1,27 +1,31 @@
 ---
-title: "檢視資料表的相依性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "資料表相依性 [SQL Server]"
-  - "相依性 [SQL Server], 資料表"
-  - "顯示相依性"
-  - "檢視相依性"
+title: "檢視資料表的相依性 | Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- table dependencies [SQL Server]
+- dependencies [SQL Server], tables
+- displaying dependences
+- viewing dependencies
 ms.assetid: c4351ef5-e7d0-46e7-8367-88695e9974f8
 caps.latest.revision: 24
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8359eccee9aeda470c962793d13c85819ef9fe49
+ms.lasthandoff: 04/11/2017
+
 ---
-# 檢視資料表的相依性
+# <a name="view-the-dependencies-of-a-table"></a>檢視資料表的相依性
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中檢視資料表的相依性。  
@@ -47,19 +51,19 @@ caps.handback.revision: 24
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 若要檢視資料表的相依性  
+#### <a name="to-view-the-dependencies-of-a-table"></a>若要檢視資料表的相依性  
   
 1.  在 **[物件總管]**中，展開 **[資料庫]**、展開其中一個資料庫，再展開 **[資料表]**。  
   
 2.  以滑鼠右鍵按一下資料表，然後按一下 [檢視相依性]。  
   
-3.  在 [物件相依性 *\<物件名稱>*] 對話方塊中，選取 [相依於 *\<物件名稱>* 的物件] 或 [*\<物件名稱>* 所相依的物件]。  
+3.  在 [物件相依性\<物件名稱>] 對話方塊中，選取 [相依於 \<物件名稱> 的物件] 或 [\<物件名稱> 所相依的物件]。  
   
 4.  選取 **[相依性]** 方格中的物件。 物件類型 (如「觸發程序」或「預存程序」) 會出現在 [類型] 方塊中。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 若要檢視相依於資料表的物件  
+#### <a name="to-view-the-objects-that-depend-on-a-table"></a>若要檢視相依於資料表的物件  
   
 1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
@@ -76,7 +80,7 @@ caps.handback.revision: 24
   
     ```  
   
-#### 若要檢視資料表所相依的物件  
+#### <a name="to-view-the-objects-on-which-a-table-depends"></a>若要檢視資料表所相依的物件  
   
 1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   

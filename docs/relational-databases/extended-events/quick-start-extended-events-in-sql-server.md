@@ -1,23 +1,27 @@
 ---
 title: "快速入門︰SQL Server 中的擴充事件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/10/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 09/10/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7bb78b25-3433-4edb-a2ec-c8b2fa58dea1
 caps.latest.revision: 10
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 2c02a1b16e4ab6375c0479f494838649ed7a413f
+ms.lasthandoff: 04/11/2017
+
 ---
-# 快速入門︰SQL Server 中的擴充事件
+# <a name="quick-start-extended-events-in-sql-server"></a>快速入門︰SQL Server 中的擴充事件
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
 
@@ -42,28 +46,28 @@ caps.handback.revision: 10
 - 描述可從相關文章了解的其他內容。
 
 
-部落格及其他非正式交談有時會以縮寫 *xevents* 來指稱擴充事件。
+部落格及其他非正式交談有時會以縮寫 *xevents*來指稱擴充事件。
 
 
-> [AZURE.NOTE] 如需 Microsoft SQL Server 與 Azure SQL Database 之間擴充事件差異的相關資訊，請參閱 [SQL Database 中的擴充事件](http://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)。
+> [!NOTE]
+> 如需 Microsoft SQL Server 與 Azure SQL Database 之間擴充事件差異的相關資訊，請參閱 [SQL Database 中的擴充事件](http://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)。
 
 
-## 示範前的準備工作
+## <a name="preparations-before-demo"></a>示範前的準備工作
 
 
 您必須完成下列準備工作，才能實際執行後續的示範。
 
-
 1. [下載 SQL Server Management Studio (SSMS)](http://msdn.microsoft.com/library/mt238290.aspx)
-    - 您應該每個月安裝 SSMS 的最新每月更新。
+  - 您應該每個月安裝 SSMS 的最新每月更新。
 2. 登入 Microsoft SQL Server 2014 或更新版本，或是 Azure SQL Database 資料庫 (其中的 `SELECT @@version` 會傳回其第一個節點為 12 或更高的值)。
-3. 確定您的帳戶具有[伺服器權限](../../t-sql/statements/grant-server-permissions-transact-sql.md)：**ALTER ANY EVENT SESSION**。
-    - 如有興趣，本文結尾的[附錄](#appendix1)將提供可用擴充事件之相關安全性和權限的詳細資訊。
+3. 確定您的帳戶具有 [伺服器權限](../../t-sql/statements/grant-server-permissions-transact-sql.md) ： **ALTER ANY EVENT SESSION**。
+  - 如有興趣，本文結尾的 [附錄](#appendix1)將提供可用擴充事件之相關安全性和權限的詳細資訊。
 
 
 
 
-## SSMS 整合的示範
+## <a name="demo-of-ssms-integration"></a>SSMS 整合的示範
 
 
 SSMS.exe 為擴充事件提供絕佳的使用者介面 (UI)。 此 UI 很理想，許多使用者並不需要使用 Transact-SQL 或以擴充事件為目標的動態管理檢視 (DMV)，就能與擴充事件互動。
@@ -71,7 +75,7 @@ SSMS.exe 為擴充事件提供絕佳的使用者介面 (UI)。 此 UI 很理想�
 在本節中，您會看到建立擴充事件的 UI 步驟，以及它所報告的資料。 在這些步驟之後，您可以閱讀步驟的相關概念，以更深入了解。
 
 
-### 示範的步驟
+### <a name="steps-of-demo"></a>示範的步驟
 
 
 即使您決定不要執行這些步驟，還是可以加以了解。 此示範會啟動 [新增工作階段] 對話方塊。 我們會處理其四個頁面：
@@ -87,13 +91,9 @@ SSMS UI 經年累月的調整結果，可能會造成文字和支援的螢幕擷
 
 1. 連接到 SSMS。
 
-2. 在物件總管中，按一下 [管理] > [擴充事件] > [新增工作階段]。
-    -  使用 [新增工作階段] 對話方塊會比使用 [新增工作階段精靈] 更合適，不過這兩者彼此類似。
+2. 在物件總管中，按一下 [管理] > [擴充事件] > [新增工作階段]。 使用 [新增工作階段] 對話方塊會比使用 [新增工作階段精靈] 更合適，不過這兩者彼此類似。
 
-    ![SSMS 物件總管、[管理]、[擴充事件]、[新增工作階段]。](/Image/SQL%20Server/xevents%2dsession%2dnewsessions%2d05%2dgeneral%2dssms%2drightclick%2dnot%2dwizard%2epng)
-
-3. 按一下左上方的 [一般] 頁面。 然後在 [工作階段名稱] 文字方塊中，輸入「您的工作階段」或任何您想要的名稱。
-    - 還「不要」按下 [確定] 按鈕，只有示範結束時才需要。
+3. 按一下左上方的 [一般] 頁面。 然後在 [工作階段名稱] 文字方塊中，輸入「您的工作階段」或任何您想要的名稱。 還「不要」按下 [確定] 按鈕，只有示範結束時才需要。
 
     ![[新增工作階段] > [一般] > [工作階段名稱]](../../relational-databases/extended-events/media/xevents-session-newsessions-10-general-ssms-yoursessionnode.png)
 
@@ -114,10 +114,11 @@ SSMS UI 經年累月的調整結果，可能會造成文字和支援的螢幕擷
 7. 按一下 [篩選 (述詞)] 索引標籤。 接著，按一下 [請按這裡加入子句]，以擷取具有 HAVING 子句的所有 SQL SELECT 陳述式。
 
 8. 在 [欄位] 下拉式清單中，選擇 **sqlserver.sql_text**。
-  - 針對 [運算子]，選擇 LIKE 運算子。
-  - 針對 [值]，輸入 **%SELECT%HAVING%**。
+   - 針對 [運算子]，選擇 LIKE 運算子。
+   - 針對 [值]，輸入 **%SELECT%HAVING%**。
 
-    > [AZURE.NOTE] 在這個兩部分名稱中，*sqlserver* 是封裝名稱，而 *sql_text* 是欄位名稱。 我們稍早所選擇的事件 *sql_statement_completed* ，必須與所選擇的欄位在相同的封裝中。
+    > [!NOTE]
+    > 在這個兩部分名稱中，*sqlserver* 是封裝名稱，而 *sql_text* 是欄位名稱。 我們稍早所選擇的事件 *sql_statement_completed* ，必須與所選擇的欄位在相同的封裝中。
 
 9. 按一下左上方的 [資料存放區] 頁面。
 
@@ -125,7 +126,7 @@ SSMS UI 經年累月的調整結果，可能會造成文字和支援的螢幕擷
     - 在 [類型] 下拉式清單中，選擇 **event_file**。
     - 這表示事件資料將會儲存在我們可以檢視的檔案中。
 
-    ![[新增工作階段] > [資料存放區] > [目標] > [類型] > event_file](/Image/SQL%20Server/xevents%2dsession%2dnewsessions%2d30%2ddatastorage%2dssms%2dyoursessionnode.png)
+    ![[新增工作階段] > [資料存放區] > [目標] > [類型] > event_file](../../relational-databases/extended-events/media/xevents-session-newsessions-30-datastorage-ssms-yoursessionnode.png)
 
 11. 在 [屬性] 區域的 [伺服器上的檔案名稱] 文字方塊中，輸入完整路徑和檔案名稱。
     - 副檔名必須是 *.xel*。
@@ -139,16 +140,16 @@ SSMS UI 經年累月的調整結果，可能會造成文字和支援的螢幕擷
 
 13. 回到物件總管，展開 [管理] > [工作階段]，即會顯示新節點 [您的工作階段]。
 
-    ![物件總管中的 [管理] > [擴充事件] > [工作階段] 下，名為「您的工作階段」的新「事件工作階段」節點](/Image/SQL%20Server/xevents%2dsession%2dnewsessions%2d50%2dobjectexplorer%2dssms%2dyoursessionnode.png)
+    ![物件總管中的 [管理] > [擴充事件] > [工作階段] 下，名為「您的工作階段」的新「事件工作階段」節點](../../relational-databases/extended-events/media/xevents-session-newsessions-50-objectexplorer-ssms-yoursessionnode.png)
 
 
-#### 編輯您的事件工作階段
+#### <a name="edit-your-event-session"></a>編輯事件工作階段
 
 
 在 SSMS 物件總管中，您可以編輯事件工作階段，方法是以滑鼠右鍵按一下其節點，然後按一下 [屬性]。 這會顯示相同的多頁對話方塊。
 
 
-### 您的事件工作階段的對應 T-SQL
+### <a name="corresponding-t-sql-for-your-event-session"></a>您的事件工作階段的對應 T-SQL
 
 
 您可以使用 SSMS UI，來產生建立事件工作階段的 T-SQL 指令碼。 產生的指令碼如下所示：
@@ -189,12 +190,13 @@ GO
 ```
 
 
-> [AZURE.NOTE] 若為 Azure SQL Database，上述 CREATE EVENT SESSION 陳述式中的 ON SERVER 子句會改為 ON DATABASE。
+> [!NOTE]
+> 若為 Azure SQL Database，上述 CREATE EVENT SESSION 陳述式中的 ON SERVER 子句會改為 ON DATABASE。
 > 
 > 如需 Microsoft SQL Server 與 Azure SQL Database 之間擴充事件差異的詳細資訊，請參閱 [SQL Database 中的擴充事件](http://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)。
 
 
-#### DROP 事件工作階段之前
+#### <a name="pre-drop-of-the-event-session"></a>DROP 事件工作階段之前
 
 
 在 CREATE EVENT SESSION 陳述式之前，您可能想要有條件地發出 DROP EVENT SESSION，以免名稱已經存在。
@@ -214,7 +216,7 @@ go
 ```
 
 
-#### ALTER 以開始和停止事件工作階段
+#### <a name="alter-to-start-and-stop-the-event-session"></a>ALTER 以開始和停止事件工作階段
 
 
 當您建立事件工作階段時，預設為無法自動開始執行。 您可以使用下列 T-SQL ALTER EVENT SESSION 陳述式，隨時開始或停止事件工作階段。
@@ -233,7 +235,7 @@ ALTER EVENT SESSION [YourSession]
 - SSMS UI 在 [新增工作階段] > [一般] 頁面上，提供對應的核取方塊。
 
 
-## 測試您的事件工作階段
+## <a name="test-your-event-session"></a>測試您的事件工作階段
 
 
 利用下列簡單步驟來測試您的事件工作階段：
@@ -288,13 +290,14 @@ trace_event_id         3
 
 <a name="select-the-full-results-xml-37"/>
 
-### 以 XML 形式 SELECT 完整的結果
+### <a name="select-the-full-results-as-xml"></a>以 XML 形式 SELECT 完整的結果
 
 
 在 SSMS 中，執行下列 T-SQL SELECT 以傳回結果，其中每個資料列會提供一個事件項目的相關資料。 CAST AS XML 可讓您輕鬆地檢視結果。
 
 
-> [AZURE.NOTE] 此事件系統一律會在您指定的 *.xel* event_file 檔案名稱前面附加長數字。 您必須複製系統指定的完整名稱並貼到 SELECT 中，才能從檔案執行下列 SELECT。
+> [!NOTE]
+> 此事件系統一律會在您指定的 *.xel* event_file 檔案名稱前面附加長數字。 您必須複製系統指定的完整名稱並貼到 SELECT 中，才能從檔案執行下列 SELECT。
 
 
 ```tsql
@@ -322,10 +325,10 @@ SELECT
 - 從 [event_data] 資料行中的資料格，複製很長的 XML 字串。 貼到任何純文字編輯器中 (例如 Notepad.exe)，並將字串儲存在副檔名為 .XML 的檔案。 然後使用瀏覽器開啟 .XML 檔案。
 
 
-#### 顯示一個事件的結果
+#### <a name="display-of-results-for-one-event"></a>顯示一個事件的結果
 
 
-接下來，我們將看到以 XML 格式表示的部分結果。 為縮短顯示畫面，此處的 XML 已經過編輯。 請注意，`<data name="row_count">` 顯示值為 `6`，符合稍早所顯示的 6 個結果資料列。 此外，我們也會看到整個 SELECT 陳述式。
+接下來，我們將看到以 XML 格式表示的部分結果。 為縮短顯示畫面，此處的 XML 已經過編輯。 請注意， `<data name="row_count">` 顯示值為 `6`，符合稍早所顯示的 6 個結果資料列。 此外，我們也會看到整個 SELECT 陳述式。
 
 
 ```xml
@@ -372,7 +375,7 @@ SELECT
 ```
 
 
-## 使用 SSMS 顯示結果
+## <a name="ssms-to-display-results"></a>使用 SSMS 顯示結果
 
 
 您可以使用 SSMS UI 中的幾項進階功能，來檢視擷取自擴充事件的資料。 詳情請參閱：
@@ -383,7 +386,7 @@ SELECT
 此基本概念會從標示為 [View Target Data (檢視目標資料)] 和 [Watch Live Data (觀看即時資料)] 的操作功能表選項開始。
 
 
-### 檢視目標資料
+### <a name="view-target-data"></a>檢視目標資料
 
 
 在 SSMS 物件總管中，以滑鼠右鍵按一下您的事件工作階段節點下的目標節點。 在操作功能表中，按一下 [View Target Data (檢視目標資料)]。 SSMS 會隨即顯示資料。
@@ -394,7 +397,7 @@ SELECT
 ![在 SSMS 中的 [管理] > [擴充事件] > [工作階段] > [您的工作階段] > package0.event_file，按一下滑鼠右鍵所顯示的 [View Target Data (檢視目標資料)]](../../relational-databases/extended-events/media/xevents-viewtargetdata-ssms-targetnode-61.png)
 
 
-### 觀看即時資料
+### <a name="watch-live-data"></a>觀看即時資料
 
 
 在 SSMS 物件總管中，以滑鼠右鍵按一下您的事件工作階段節點。 在操作功能表中，按一下 [Watch Live Data (觀看即時資料)]。 SSMS 會即時顯示持續送達的內送資料。
@@ -403,7 +406,7 @@ SELECT
 ![在 SSMS 中的 [管理] > [擴充事件] > [工作階段] > [您的工作階段]，按一下滑鼠右鍵所顯示的 [Watch Live Data (觀看即時資料)]](../../relational-databases/extended-events/media/xevents-watchlivedata-ssms-yoursessionnode-63.png)
 
 
-## 案例
+## <a name="scenarios"></a>案例
 
 
 有無數個有效使用擴充事件的案例。 下列文章提供有關查詢期間取得鎖定的範例案例。
@@ -414,10 +417,10 @@ SELECT
 - [尋找持有最多鎖定的物件](../../relational-databases/extended-events/find-the-objects-that-have-the-most-locks-taken-on-them.md)
   - 此案例使用目標 package0.histogram，它會處理未經處理的事件資料，再向您顯示。
 - [判斷哪些查詢持有鎖定](../../relational-databases/extended-events/determine-which-queries-are-holding-locks.md)
-  - 此案例使用[目標 package0.pair_matching](Event%20Pairing%20Target.md)，其中的事件配對為 sqlserver.lock_acquire 和 lock_release。
+  - 此案例使用 [目標 package0.pair_matching](http://msdn.microsoft.com/library/3c87dcfb-543a-4bd8-a73d-1390bdf4ffa3)，其中的事件配對為 sqlserver.lock_acquire 和 lock_release。
 
 
-## 擴充事件的詞彙和概念
+## <a name="terms-and-concepts-in-extended-events"></a>擴充事件的詞彙和概念
 
 
 下表列出用於擴充事件的詞彙，並說明其意義。
@@ -426,14 +429,14 @@ SELECT
 | 詞彙 | 描述 |
 | :--- | :---------- |
 | 事件工作階段 | 目標為以一或多項事件為主的建構，加上支援的項目 (例如動作)。 CREATE EVENT SESSION 陳述式會建構每個事件工作階段。 您可以隨意 ALTER 事件工作階段，以開始和停止工作階段。 <br/> <br/> 如果內容釐清其表示「事件工作階段」，事件工作階段有時簡稱為「工作階段」。 <br/> <br/> 如需事件工作階段的進一步詳細資訊，請參閱︰[SQL Server 擴充事件工作階段](../../relational-databases/extended-events/sql-server-extended-events-sessions.md)。 |
-| event | 使用中的事件工作階段在系統中監看的特定項目。 <br/> <br/> 例如，*sql_statement_completed* 事件代表任何指定 T-SQL 陳述式完成的時間點。 此事件會報告其持續時間和其他資料。 |
-| 目標 | 從所擷取的事件接收輸出資料的項目。 此目標會向您顯示資料。 <br/> <br/> 範例包括 *event_file*，以及其好用的輕量型類似項目 *ring_buffer* 記憶體。 較複雜的「長條圖」目標會對您的資料先執行一些處理，再向您顯示。 <br/> <br/> 任何目標都可以用於任何事件工作階段。 如需詳細資訊，請參閱 [Targets for Extended Events in SQL Server](../../relational-databases/extended-events/targets-for-extended-events-in-sql-server.md) (SQL Server 的擴充事件目標)。 |
+| event | 使用中的事件工作階段在系統中監看的特定項目。 <br/> <br/> 例如， *sql_statement_completed* 事件代表任何指定 T-SQL 陳述式完成的時間點。 此事件會報告其持續時間和其他資料。 |
+| 目標 | 從所擷取的事件接收輸出資料的項目。 此目標會向您顯示資料。 <br/> <br/> 範例包括 *event_file*，以及其好用的輕量型類似項目 *ring_buffer* 記憶體。 較複雜的「長條圖」目標會對您的資料先執行一些處理，再向您顯示。 <br/> <br/> 任何目標都可以用於任何事件工作階段。 如需詳細資訊，請參閱 [Targets for Extended Events in SQL Server](../../relational-databases/extended-events/targets-for-extended-events-in-sql-server.md)(SQL Server 的擴充事件目標)。 |
 | action | 事件已知的欄位。 此欄位中的資料會傳送至目標。 [動作] 欄位與「述詞篩選條件」密切相關。 |
 | 述詞篩選條件 | 事件欄位中的資料測試，以此方式使用時，只會將相關事件項目子集傳送至目標。 <br/> <br/> 例如，篩選可以只包含 *sql_statement_completed* 事件項目，其中 T-SQL 陳述式內含字串 *HAVING*。 |
 | 封裝 | 附加至一組項目中每個項目的名稱限定詞，此限定詞是以事件核心為主。 <br/> <br/> 例如，封裝可能會有 T SQL 文字的相關事件。 一個事件可以與 GO 分隔批次中的所有 T-SQL 相關。 同時有另一個範圍較小的事件與個別 T-SQL 陳述式相關。 此外，任何一個 T-SQL 陳述式都會有開始和完成的事件。 <br/> <br/> 事件的適當欄位也會與事件一起封裝。 大多數目標會在 *package0* 中，並可搭配許多其他封裝中的事件使用。 |
 
 
-## 如何探索封裝中可用的事件
+## <a name="how-to-discover-the-available-events-in-packages"></a>如何探索封裝中可用的事件
 
 
 下列 T-SQL SELECT 會針對每個可用的事件傳回一個資料列，其名稱包含三個字元字串 'sql'。 當然，您可以編輯 LIKE 值來搜尋不同的事件名稱。 這些資料列也會命名包含事件的封裝。
@@ -474,21 +477,21 @@ Package-Guid = 655FD93F-3364-40D5-B2BA-330F7FFB6491
 ```
 
 
-#### 使用 SSMS UI 進行搜尋
+#### <a name="ssms-ui-for-search"></a>使用 SSMS UI 進行搜尋
 
 
 另一個搜尋選項是使用 SSMS UI 中的 [新增工作階段] > [事件] > [事件程式庫] 對話方塊，如上述螢幕擷取畫面所示。
 
 
 
-#### SQL 追蹤事件類別與擴充事件
+#### <a name="sql-trace-event-classes-with-extended-events"></a>SQL 追蹤事件類別與擴充事件
 
 
-如需搭配 SQL 追蹤事件類別和資料行使用擴充事件的說明，請參閱︰[檢視同等於 SQL 追蹤事件類別的擴充事件項目](../../relational-databases/extended-events/view-the-extended-events-equivalents-to-sql-trace-event-classes.md)
+如需搭配 SQL 追蹤事件類別和資料行使用擴充事件的說明，請參閱︰ [檢視同等於 SQL 追蹤事件類別的擴充事件項目](../../relational-databases/extended-events/view-the-extended-events-equivalents-to-sql-trace-event-classes.md)
 
 
 
-#### Windows 事件追蹤 (ETW) 與擴充事件
+#### <a name="event-tracing-for-windows-etw-with-extended-events"></a>Windows 事件追蹤 (ETW) 與擴充事件
 
 
 如需搭配 Windows 事件追蹤 (ETW) 使用擴充事件的說明，請參閱：
@@ -502,13 +505,13 @@ ETW 事件不適用於 Azure SQL Database 上的擴充事件。
 
 
 
-## 其他項目
+## <a name="additional-items"></a>其他項目
 
 
 本節簡短提到一些其他項目。
 
 
-### SQL Server 隨附安裝的事件工作階段
+### <a name="event-sessions-installed-with-sql-server"></a>SQL Server 隨附安裝的事件工作階段
 
 
 SQL Server 中已建立一些擴充事件。 所有事件都已設定為在啟動 SQL 系統時開始。 這些事件工作階段所收集的資料可在發生系統錯誤時提供協助。 如同所有擴充事件，這些事件只會取用極少的資源，因此 Microsoft 建議保持執行這些事件。
@@ -521,13 +524,13 @@ SQL Server 中已建立一些擴充事件。 所有事件都已設定為在啟�
 
 
 
-### 擴充事件的 PowerShell 提供者
+### <a name="powershell-provider-for-extended-events"></a>擴充事件的 PowerShell 提供者
 
 
-您可以使用 SQL Server PowerShell 提供者來管理 SQL Server 擴充事件。 詳情請參閱：[針對擴充事件使用 PowerShell 提供者](../../relational-databases/extended-events/use-the-powershell-provider-for-extended-events.md)
+您可以使用 SQL Server PowerShell 提供者來管理 SQL Server 擴充事件。 詳情請參閱： [針對擴充事件使用 PowerShell 提供者](../../relational-databases/extended-events/use-the-powershell-provider-for-extended-events.md)
 
 
-### 擴充事件的系統檢視表
+### <a name="system-views-for-extended-events"></a>擴充事件的系統檢視表
 
 
 擴充事件的系統檢視表包括：
@@ -553,7 +556,7 @@ SQL Server 中已建立一些擴充事件。 所有事件都已設定為在啟�
 
 
 <a name="appendix1"></a>
-## 附錄︰使用 SELECT 事先確認權限擁有者
+## <a name="appendix-selects-to-ascertain-permission-owner-in-advance"></a>附錄︰使用 SELECT 事先確認權限擁有者
 
 
 本文中提到的權限包括：
@@ -565,7 +568,7 @@ SQL Server 中已建立一些擴充事件。 所有事件都已設定為在啟�
 下列 Transact-SQL SELECT 陳述式可報告哪些人員具有這些權限。
 
 
-#### UNION 直接權限，加上角色衍生的權限
+#### <a name="union-direct-permissions-plus-role-derived-permissions"></a>UNION 直接權限，加上角色衍生的權限
 
 
 下列 SELECT...UNION ALL 陳述式會傳回資料列，顯示哪些人員具有建立事件工作階段，以及查詢系統目錄檢視中的擴充事件時所需的權限。
@@ -621,7 +624,7 @@ SELECT
 ```
 
 
-#### HAS_PERMS_BY_NAME 函數
+#### <a name="haspermsbyname-function"></a>HAS_PERMS_BY_NAME 函數
 
 
 下列 SELECT 會報告您的權限。 它需要內建函數 [HAS_PERMS_BY_NAME](../../t-sql/functions/has-perms-by-name-transact-sql.md)。
@@ -639,22 +642,24 @@ SELECT HAS_PERMS_BY_NAME(
 ```
 
 
-#### 安全性連結
+#### <a name="security-links"></a>安全性連結
 
 以下是與這些 SELECT 和權限相關的文件連結：
 
-- 內建函數 [HAS_PERMS_BY_NAME (TRANSACT-SQL)](../../t-sql/functions/has-perms-by-name-transact-sql.md) 的詳細資料
+- 內建函數 [HAS_PERMS_BY_NAME (TRANSACT-SQL)](../../t-sql/functions/has-perms-by-name-transact-sql.md)的詳細資料
 - [sys.fn_my_permissions (Transact-SQL)](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)
 - [GRANT 伺服器權限 (Transact-SQL)](../../t-sql/statements/grant-server-permissions-transact-sql.md)
 - [sys.server_principals (Transact-SQL)](http://msdn.microsoft.com/library/ms188786.aspx)
-- [sys.database_principals (Transact-SQL)](http://msdn.microsoft.com/library/ms187328.aspx) (特別針對 Azure SQL Database)
-- 部落格︰[Effective Database Engine Permissions](http://social.technet.microsoft.com/wiki/contents/articles/15180.effective-database-engine-permissions.aspx) (有效的 Database Engine 權限)
-- 可縮放的 PDF 格式[海報](http://go.microsoft.com/fwlink/?LinkId=229142)，顯示所有 SQL Server 權限的階層。
+- [sys.database_principals (Transact-SQL)](http://msdn.microsoft.com/library/ms187328.aspx)(特別針對 Azure SQL Database)
+- 部落格︰ [Effective Database Engine Permissions](http://social.technet.microsoft.com/wiki/contents/articles/15180.effective-database-engine-permissions.aspx)(有效的 Database Engine 權限)
+- 可縮放的 PDF 格式 [海報](http://go.microsoft.com/fwlink/?LinkId=229142)，顯示所有 SQL Server 權限的階層。
 
 
 
-## 支援資訊的連結
+## <a name="links-to-supporting-information"></a>支援資訊的連結
 
 
 - [sys.fn_xe_file_target_read_file (Transact-SQL)](../../relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql.md)
+
+
 

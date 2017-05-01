@@ -1,30 +1,34 @@
 ---
-title: "SQL Server, 查詢存放區物件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "查詢存放區物件"
-  - "SQL Server︰查詢存放區"
+title: "SQL Server 的 Query Store 物件 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Query Store object
+- SQL Server:Query Store
 ms.assetid: b4a04acd-0b66-44a5-b72d-1a45b49e13e6
 caps.latest.revision: 8
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1783866c8fe1d1fcddf5d681a5a4ef6d12f91fe4
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server, 查詢存放區物件
+# <a name="sql-server-query-store-object"></a>SQL Server, 查詢存放區物件
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   查詢存放區物件所提供的計數器，可監視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如何使用資源來儲存查詢文字、執行計劃和物件的執行階段統計資料，例如預存程序、特定與備妥 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，以及觸發程序。  
   
- 下表描述 **SQLServer:Query Store** 計數器。  
+ 下表描述 **SQLServer:Query Store**計數器。  
   
 |SQL Server 查詢存放區計數器|描述|  
 |-------------------------------------|-----------------|  
@@ -37,13 +41,14 @@ caps.handback.revision: 8
   
 |查詢存放區執行個體|描述|  
 |--------------------------|-----------------|  
-|**_Total**|此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的查詢存放區資訊。|  
+|**_Total**|此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的查詢存放區資訊。|  
 |\<資料庫名稱>|此資料庫的查詢存放區資訊。|  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用查詢存放區監視效能](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [查詢存放區預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
  [查詢存放區目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
  [監視資源使用狀況 &#40;系統監視器&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   
+

@@ -1,34 +1,38 @@
 ---
 title: "指定欄位與資料列結束字元 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/10/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-bulk-import-export"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "bcp 公用程式 [SQL Server], 結束字元"
-  - "欄位結束字元 [SQL Server]"
-  - "資料格式 [SQL Server], 結束字元"
-  - "資料列結束字元 [SQL Server]"
-  - "結束字元 [SQL Server]"
+ms.custom: 
+ms.date: 08/10/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-bulk-import-export
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- bcp utility [SQL Server], terminators
+- field terminators [SQL Server]
+- data formats [SQL Server], terminators
+- row terminators [SQL Server]
+- terminators [SQL Server]
 ms.assetid: f68b6782-f386-4947-93c4-e89110800704
 caps.latest.revision: 39
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 42c2ee3fe98d6c6fc35d2417469bc3eec9fddd8c
+ms.lasthandoff: 04/11/2017
+
 ---
-# 指定欄位與資料列結束字元 (SQL Server)
+# <a name="specify-field-and-row-terminators-sql-server"></a>指定欄位與資料列結束字元 (SQL Server)
   針對字元資料欄位，選擇性結束字元可讓您使用「欄位結束字元」標示資料檔案中每個欄位的結尾，並使用「資料列結束字元」標示每個資料列的結尾。 結束字元是指示程式從欄位或資料列結束與開始的交接處讀取資料檔的一種方法。  
   
 > [!IMPORTANT]  
 >  在使用原生或 Unicode 原生格式時，請使用長度前置詞，而不使用欄位結束字元。 由於原生格式資料檔案存放格式為 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的內部二進位資料格式，因此原生格式資料可能會與結束字元相衝突。  
   
-## 支援為結束字元的字元  
+## <a name="characters-supported-as-terminators"></a>支援為結束字元的字元  
  **bcp** 命令、BULK INSERT 陳述式與 OPENROWSET 大量資料列集提供者，都支援使用各式字元作為欄位或資料列結束字元，且一律會尋找每個結束字元的第一個執行個體。 下表列出支援作為結束字元的字元。  
   
 |結束字元|表示方式|  
@@ -48,13 +52,13 @@ caps.handback.revision: 39
 > [!IMPORTANT]  
 >  如果在資料內發現結束字元，它會當作結束字元而非當作資料來解譯，而該字元之後的資料則會解譯為屬於下一個欄位或記錄。 因此，請小心選擇結束字元，確定這些結束字元絕不會出現在您的資料中。 例如，如果資料中包含低 Surrogate，此低 surrogate 欄位結束字元就不是欄位結束字元的好選項。  
   
-## 使用資料列結束字元  
+## <a name="using-row-terminators"></a>使用資料列結束字元  
  資料列結束字元可以和最後一個欄位的結束字元相同。 不過，個別的資料列結束字元通常十分有用。 例如，若要產生表格式輸出，請以新行字元 (\n) 結束每個資料列的最後一個欄位，並以定位字元 (Tab) 結束所有其他欄位。 若要將每個資料記錄放在資料檔中自己的那一行，請指定 \r\n 組合做為資料列結束字元。  
   
 > [!NOTE]  
->  以互動方式使用 **bcp** 並指定 \n (新行) 作為資料列結束字元時，**bcp** 會自動以 \r (歸位字元) 字元當作前置詞，而產生資料列結束字元 \r\n。  
+>  以互動方式使用 **bcp** 並指定 \n (新行) 作為資料列結束字元時， **bcp** 會自動以 \r (歸位字元) 字元當作前置詞，而產生資料列結束字元 \r\n。  
   
-## 指定大量匯出的結束字元  
+## <a name="specifying-terminators-for-bulk-export"></a>指定大量匯出的結束字元  
  當您大量匯出 **char** 或 **nchar** 資料，而且想要使用非預設的結束字元時，就必須對 **bcp** 命令指定結束字元。 您可以使用下列方式指定結束字元：  
   
 -   使用格式檔案，按個別欄位逐一指定結束字元。  
@@ -71,7 +75,7 @@ caps.handback.revision: 39
         > [!NOTE]  
         >  如果您指定 **-n** (原生資料) 或 **-N** (Unicode 原生) 參數，則不會插入結束字元。  
   
-    -   如果互動式 **bcp** 命令包含 **in** 或 **out** 選項，但不使用格式檔案參數 (**-f**) 或資料格式參數 (**-n**、**-c**、**-w**，或 **-N**)，而且您選擇不指定前置長度與欄位長度，則該命令會提示輸入每個欄位的欄位結束字元 (預設是無)：  
+    -   如果互動式 **bcp** 命令包含 **in** 或 **out** 選項，但不使用格式檔案參數 (**-f**) 或資料格式參數 (**-n**、 **-c**、 **-w**，或 **-N**)，而且您選擇不指定前置長度與欄位長度，則該命令會提示輸入每個欄位的欄位結束字元 (預設是無)：  
   
          `Enter field terminator [none]:`  
   
@@ -80,7 +84,7 @@ caps.handback.revision: 39
         > [!NOTE]  
         >  以互動方式在 **bcp** 命令中指定所有欄位之後，此命令會提示您將每個欄位的回應以非 XML 格式的檔案加以儲存。 如需非 XML 格式檔案的詳細資訊，請參閱[非 XML 格式檔案 &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md)。  
   
-### 使用結束字元的指導方針  
+### <a name="guidelines-for-using-terminators"></a>使用結束字元的指導方針  
  在某些情況中，結束字元對 **char** 或 **nchar** 資料欄位而言很有用。 例如：  
   
 -   資料檔中的資料行包含 Null 值，而此資料檔將要匯入至不了解前置長度資訊的程式。  
@@ -91,7 +95,7 @@ caps.handback.revision: 39
   
      在這種狀況下，指定結束字元可縮小儲存空間，允許欄位視為可變長度欄位。  
   
-### 範例  
+### <a name="examples"></a>範例  
  此範例會使用字元格式、以逗號作為欄位結束字元，而且以新行字元 (\n) 作為資料列結束字元，將資料從 `AdventureWorks.HumanResources.Department` 資料表大量匯出資料至 `Department-c-t.txt` 資料檔案。  
   
  **bcp** 命令包含下列參數。  
@@ -101,7 +105,7 @@ caps.handback.revision: 39
 |**-c**|指定以字元資料載入資料欄位。|  
 |**-t** `,`|指定逗號 (,) 做為欄位結束字元。|  
 |**-r** \n|指定資料列結束字元為新行字元。 此為預設資料列結束字元，因此可選擇性地加以指定。|  
-|**-T**|指定 **bcp** 公用程式使用整合式安全性的信任連接，連接至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如果未指定 **-T**，則必須指定 **-U** 與 **-P**，才能順利登入。|  
+|**-T**|指定 **bcp** 公用程式使用整合式安全性的信任連接，連接至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如果未指定 **-T** ，則必須指定 **-U** 與 **-P** ，才能順利登入。|  
   
  如需相關資訊，請參閱 [bcp Utility](../../tools/bcp-utility.md)。  
   
@@ -113,7 +117,7 @@ bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, 
   
  這會建立 `Department-c-t.txt`，四個欄位中各包含 16 筆記錄。 這些欄位會以逗號隔開。  
   
-## 指定大量匯入的結束字元  
+## <a name="specifying-terminators-for-bulk-import"></a>指定大量匯入的結束字元  
  當您大量匯入 **char** 或 **nchar** 資料時，大量匯入命令必須辨識資料檔案中使用的結束字元。 指定結束字元的方式取決於大量匯入命令，如下所示：  
   
 -   **bcp**  
@@ -137,8 +141,8 @@ bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, 
   
      如需有關 OPENROWSET BULK 子句的詳細資訊，請參閱 [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)。  
   
-### 範例  
- 這一節中的範例會將字元資料從先前範例中建立的 `Department-c-t.txt` 資料檔，大量匯入到 [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] 範例資料庫中的 `myDepartment` 資料表。 您必須先建立這個資料表，才能執行範例。 在 **dbo** 結構描述下建立這個資料表時，請在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 查詢編輯器中執行下列程式碼：  
+### <a name="examples"></a>範例  
+ 這一節中的範例會將字元資料從先前範例中建立的 `Department-c-t.txt` 資料檔，大量匯入到 `myDepartment` 範例資料庫中的 [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] 資料表。 您必須先建立這個資料表，才能執行範例。 在 **dbo** 結構描述下建立這個資料表時，請在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 查詢編輯器中執行下列程式碼：  
   
 ```tsql  
 USE AdventureWorks;  
@@ -153,7 +157,7 @@ ModifiedDate datetime not NULL CONSTRAINT DF_AddressType_ModifiedDate DEFAULT (G
 GO 
 ```  
   
-#### A. 使用 bcp 以互動方式指定結束字元  
+#### <a name="a-using-bcp-to-interactively-specify-terminators"></a>A. 使用 bcp 以互動方式指定結束字元  
  下列範例會使用 `Department-c-t.txt` 命令，大量匯入 `bcp` 資料檔。 此命令與大量匯出命令使用相同的命令參數。 如需詳細資訊，請參閱本主題前面的「指定大量匯出的結束字元」。  
   
  在 Windows 命令提示字元上輸入：  
@@ -162,7 +166,7 @@ GO
 bcp AdventureWorks..myDepartment in C:\myDepartment-c-t.txt -c -t , -r \n -T  
 ```  
   
-#### B. 使用 BULK INSERT 以互動方式指定結束字元  
+#### <a name="b-using-bulk-insert-to-interactively-specify-terminators"></a>B. 使用 BULK INSERT 以互動方式指定結束字元  
  下列範例會使用 `Department-c-t.txt` 陳述式 (其中使用下表所示的限定詞)，大量匯入 `BULK INSERT` 資料檔。  
   
 |選項|Attribute|  
@@ -185,8 +189,8 @@ BULK INSERT myDepartment FROM 'C:\myDepartment-c-t.txt'
 GO  
 ```  
   
-## 另請參閱  
- [bcp 公用程式](../../tools/bcp-utility.md)   
+## <a name="see-also"></a>另請參閱  
+ [bcp Utility](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
  [使用 bcp 時指定欄位長度 &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-length-by-using-bcp-sql-server.md)   
@@ -194,3 +198,4 @@ GO
  [使用 bcp 時指定檔案儲存類型 &#40;SQL Server&#41;](../../relational-databases/import-export/specify-file-storage-type-by-using-bcp-sql-server.md)  
   
   
+

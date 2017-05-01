@@ -1,31 +1,35 @@
 ---
-title: "修改系統建立版本時態表中的資料 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/28/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "修改系統版本設定時態表中的資料 |Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/28/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5f398470-c531-47b5-84d5-7c67c27df6e5
 caps.latest.revision: 8
-author: "CarlRabeler"
-ms.author: "carlrab"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: CarlRabeler
+ms.author: carlrab
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b3f59affdbe29e3dddf777b22322a5503e69caa1
+ms.lasthandoff: 04/11/2017
+
 ---
-# 修改系統建立版本時態表中的資料
+# <a name="modifying-data-in-a-system-versioned-temporal-table"></a>修改系統建立版本時態表中的資料
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   系統建立版本時態表中的資料是使用一般的 DML 陳述式來修改但有一個重要差異：無法直接修改期間資料行的資料。 更新資料時，即會為它建立版本，將每個更新資料列的舊版本插入至記錄資料表。 刪除資料時，刪除是邏輯性的，會將該資料列從記錄資料表移至目前的資料表 - 不會將它永久刪除。  
   
-## 插入資料  
+## <a name="inserting-data"></a>插入資料  
  當您插入新資料時，必須說明 **PERIOD** 資料行 (如果它們不是 **HIDDEN**)。 您也可以搭配系統建立版本時態表使用資料分割切換。  
   
-### 使用可見的期間資料行插入新資料  
+### <a name="insert-new-data-with-visible-period-columns"></a>使用可見的期間資料行插入新資料  
  當您擁有如下的可見 **PERIOD** 資料行來說明新的 **PERIOD** 資料行時，可以建構 **INSERT** 陳述式︰  
   
 -   如果您在 **INSERT** 陳述式中指定資料行清單，則可省略 **PERIOD** 資料行，因為系統將自動產生這些資料行的值。  
@@ -54,7 +58,7 @@ caps.handback.revision: 8
   
     ```  
   
-### 將資料插入含有 HIDDEN 期間資料行的資料表  
+### <a name="insert-data-into-a-table-with-hidden-period-columns"></a>將資料插入含有 HIDDEN 期間資料行的資料表  
  如果將 **PERIOD** 資料行指定為 HIDDEN，則您只需在使用 INSERT 時指定可見資料行的值，而不需指定資料行清單。 您不需要在 **INSERT** 陳述式中說明新的 **PERIOD** 的資料行。 此行為可確保舊版應用程式在啟用將受益於建立版本的資料表上啟用系統建立版本時仍能繼續運作。  
   
 ```  
@@ -74,9 +78,9 @@ VALUES  ('Headquarters', 'New York');
   
 ```  
   
-### 使用 PARTITION SWITCH 插入資料  
+### <a name="inserting-data-using-partition-switch"></a>使用 PARTITION SWITCH 插入資料  
  如果目前的資料表已進行資料分割，您可以使用資料分割切換做為有效率的機制，來將資料載入至空的分割區，或以平行方式載入至多個分割區。   
-在 **PARTITION SWITCH IN** 陳述式中，與系統設定版本之時態表搭配使用的暫存表格必須定義 **SYSTEM_TIME PERIOD**，但不需是系統設定版本的時態表。    
+在 **PARTITION SWITCH IN** 陳述式中，與系統設定版本之時態表搭配使用的暫存表格必須定義 **SYSTEM_TIME PERIOD** ，但不需是系統設定版本的時態表。    
 這確保時態一致性檢查會在資料插入暫存表格期間執行，或是在將 SYSTEM_TIME 期間加入預先填入的暫存表格時執行。  
   
 ```  
@@ -121,11 +125,11 @@ SWITCH TO [dbo].[Department] PARTITION 2;
   
  如果您嘗試從不含期間定義的資料表執行 PARTITION SWITCH，將會得到錯誤訊息︰ `Msg 13577, Level 16, State 1, Line 25    ALTER TABLE SWITCH statement failed on table 'MyDB.dbo.Staging_Department_2015_09_26' because target table has SYSTEM_TIME PERIOD while source table does not have it.`  
   
-## 更新資料  
- 您可以利用一般的 **UPDATE** 陳述式，來更新目前資料表中的資料。 您可以針對「糟糕」案例從記錄資料表中更新目前資料表中的資料。 但是，您不能更新 **PERIOD** 資料行，而且當 **SYSTEM_VERSIONING = ON** 時，您無法直接更新記錄資料表中的資料。   
+## <a name="updating-data"></a>更新資料  
+ 您可以利用一般的 **UPDATE** 陳述式，來更新目前資料表中的資料。 您可以針對「糟糕」案例從記錄資料表中更新目前資料表中的資料。 但是，您不能更新 **PERIOD** 資料行，而且當 **SYSTEM_VERSIONING = ON**時，您無法直接更新記錄資料表中的資料。   
 設定 **SYSTEM_VERSIONING = OFF** 並從目前和記錄資料表更新資料列，但請注意，這樣一來，系統將不會保留變更的記錄。  
   
-### 更新目前的資料表  
+### <a name="updating-the-current-table"></a>更新目前的資料表  
  在此範例中，針對每個 DeptID = 10 的資料列更新 ManagerID 資料行 。 您不能以任何方式參考 **PERIOD** 資料行。  
   
 ```  
@@ -144,8 +148,8 @@ Cannot update GENERATED ALWAYS columns in table 'TmpDev.dbo.Department'.
   
 ```  
   
-### 從記錄資料表更新目前的資料表  
- 您可以在目前資料表中使用 **UPDATE**，將實際的資料列狀態還原為過去某個特定時間點的有效狀態 (還原為「上次已知良好的資料列版本」)。 下列範例顯示還原至記錄資料表中截至 2015 年 4 月 25 日且 DeptID = 10 的值。  
+### <a name="updating-the-current-table-from-the-history-table"></a>從記錄資料表更新目前的資料表  
+ 您可以在目前資料表中使用 **UPDATE** ，將實際的資料列狀態還原為過去某個特定時間點的有效狀態 (還原為「上次已知良好的資料列版本」)。 下列範例顯示還原至記錄資料表中截至 2015 年 4 月 25 日且 DeptID = 10 的值。  
   
 ```  
 UPDATE Department   
@@ -157,13 +161,13 @@ AND Department.DeptID = 10 ;
   
 ```  
   
-## 刪除資料  
+## <a name="deleting-data"></a>刪除資料  
  您可以利用一般的 **DELETE** 陳述式，來刪除目前資料表中的資料。 已刪除資料列的結束期間資料行將填入基礎交易的開始時間。   
-當 **SYSTEM_VERSIONING = ON** 時，您無法從記錄資料表直接刪除資料列。   
+當 **SYSTEM_VERSIONING = ON**時，您無法從記錄資料表直接刪除資料列。   
 設定 **SYSTEM_VERSIONING = OFF** 並從目前和記錄資料表刪除資料列，但請注意，這樣一來，系統將不會保留變更的記錄。   
-當 **SYSTEM_VERSIONING = ON** 時，不支援目前資料表的 **TRUNCATE**、**SWITCH PARTITION OUT** 和 **SWITCH PARTITION IN** 記錄資料表。  
+當**SWITCH PARTITION IN**, **TRUNCATE** 、 **SWITCH PARTITION OUT** 和 **SWITCH PARTITION IN**記錄資料表。  
   
-## 使用 MERGE 修改時態表中的資料  
+## <a name="using-merge-to-modify-data-in-temporal-table"></a>使用 MERGE 修改時態表中的資料  
  **MERGE** 作業是透過與 **INSERT** 和 **UPDATE** 陳述式都有相關 **PERIOD** 資料行的相同限制來支援。  
   
 ```  
@@ -185,10 +189,10 @@ WHEN NOT MATCHED THEN
   
 ```  
   
-## 這篇文章對您有幫助嗎？ 我們會持續聽取您的意見  
+## <a name="did-this-article-help-you-were-listening"></a>這篇文章對您有幫助嗎？ 我們會持續聽取您的意見  
  您要尋找哪些資訊？找到了嗎？ 我們會持續聽取您的意見來改進內容。 請將您的意見傳送到 [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Modifying%20Data%20in%20a%20System-Versioned%20Temporal%20Table%20page)  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [時態表](../../relational-databases/tables/temporal-tables.md)   
  [建立系統建立版本的時態表](../../relational-databases/tables/creating-a-system-versioned-temporal-table.md)   
  [查詢系統建立版本時態表中的資料](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md)   
@@ -196,3 +200,4 @@ WHEN NOT MATCHED THEN
  [停止系統版本設定時態表上的系統版本設定功能](../../relational-databases/tables/stopping-system-versioning-on-a-system-versioned-temporal-table.md)  
   
   
+

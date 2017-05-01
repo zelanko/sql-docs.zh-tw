@@ -1,28 +1,32 @@
 ---
-title: "刪除備份裝置 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "資料庫備份 [SQL Server], 刪除裝置"
-  - "備份裝置 [SQL Server], 刪除"
-  - "刪除備份裝置"
-  - "移除備份裝置"
-  - "備份資料庫 [SQL Server], 備份裝置"
+title: "刪除備份裝置 (SQL Server) | Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database backups [SQL Server], deleting devices
+- backup devices [SQL Server], deleting
+- deleting backup devices
+- removing backup devices
+- backing up databases [SQL Server], backup devices
 ms.assetid: 7be62480-ed6a-4262-a071-1feba73b1c02
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3d68cd7bdf48e838c060705166f3714eaa7db581
+ms.lasthandoff: 04/11/2017
+
 ---
-# 刪除備份裝置 (SQL Server)
+# <a name="delete-a-backup-device-sql-server"></a>刪除備份裝置 (SQL Server)
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來刪除 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的備份裝置。  
   
  **本主題內容**  
@@ -46,7 +50,7 @@ caps.handback.revision: 30
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 刪除備份裝置  
+#### <a name="to-delete-a-backup-device"></a>刪除備份裝置  
   
 1.  連接到適當的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]執行個體之後，請在物件總管中按一下伺服器名稱以展開伺服器樹狀目錄。  
   
@@ -60,13 +64,13 @@ caps.handback.revision: 30
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 刪除備份裝置  
+#### <a name="to-delete-a-backup-device"></a>刪除備份裝置  
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
 2.  在標準列中，按一下 **[新增查詢]**。  
   
-3.  複製下列範例並貼入查詢中。 此範例示範如何使用 [sp_dropdevice](../../relational-databases/system-stored-procedures/sp-dropdevice-transact-sql.md) 刪除備份裝置。 執行第一個範例，建立 `mybackupdisk` 備份裝置和實體名稱 `c:\backup\backup1.bak`。 執行 **sp_dropdevice** 刪除 `mybackupdisk` 備份裝置。 `delfile`參數會刪除實體名稱。  
+3.  複製下列範例並貼入查詢中。 此範例示範如何使用 [sp_dropdevice](../../relational-databases/system-stored-procedures/sp-dropdevice-transact-sql.md) 刪除備份裝置。 執行第一個範例，建立 `mybackupdisk` 備份裝置和實體名稱 `c:\backup\backup1.bak`。 執行 **sp_dropdevice** 刪除 `mybackupdisk` 備份裝置。 `delfile` 參數會刪除實體名稱。  
   
 ```tsql  
 --Define a backup device and physical name.   
@@ -82,7 +86,7 @@ GO
   
 ```  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [檢視邏輯備份裝置的屬性和內容 &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)   
  [sys.backup_devices &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md)   
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   

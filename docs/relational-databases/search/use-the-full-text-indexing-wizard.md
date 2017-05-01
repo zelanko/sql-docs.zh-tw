@@ -1,38 +1,42 @@
 ---
-title: "使用全文檢索索引精靈 | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/19/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-search"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.fulltextindexingwizard.welcome.f1"
-  - "sql13.swb.fulltextindexingwizard.selectorcreatepopschedules.f1"
-  - "sql13.swb.fulltextindexingwizard.progress.f1"
-  - "sql13.swb.fulltextindexingwizard.selectchangetracking.f1"
-  - "sql13.swb.fulltextindexingwizard.selectacatalog.f1"
-  - "sql13.swb.fulltextindexingwizard.selectatableorview.f1"
-  - "sql13.swb.fulltextindexingwizard.selectanindex.f1"
-  - "sql13.swb.fulltextindexingwizard.summary.f1"
-  - "sql13.swb.fulltextindexingwizard.selecttablecolumns.f1"
-helpviewer_keywords: 
-  - "全文檢索索引精靈"
-  - "全文檢索搜尋 [SQL Server], 全文檢索索引精靈"
+title: "使用全文檢索索引精靈 | Microsoft 文件"
+ms.custom: 
+ms.date: 08/19/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-search
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.fulltextindexingwizard.welcome.f1
+- sql13.swb.fulltextindexingwizard.selectorcreatepopschedules.f1
+- sql13.swb.fulltextindexingwizard.progress.f1
+- sql13.swb.fulltextindexingwizard.selectchangetracking.f1
+- sql13.swb.fulltextindexingwizard.selectacatalog.f1
+- sql13.swb.fulltextindexingwizard.selectatableorview.f1
+- sql13.swb.fulltextindexingwizard.selectanindex.f1
+- sql13.swb.fulltextindexingwizard.summary.f1
+- sql13.swb.fulltextindexingwizard.selecttablecolumns.f1
+helpviewer_keywords:
+- Full-Text Indexing Wizard
+- full-text search [SQL Server], Full-Text Indexing Wizard
 ms.assetid: 3e9d9605-6525-4781-9168-fdaa06db3459
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: dd4ac1d2f93c1fa776473cdc7b1b99a07b5f8164
+ms.lasthandoff: 04/11/2017
+
 ---
-# 使用全文檢索索引精靈
+# <a name="use-the-full-text-indexing-wizard"></a>使用全文檢索索引精靈
   SSMS 中的 [全文檢索索引精靈] 會提供一系列的逐步說明，以協助您建立全文檢索索引。  
   
-## 建立全文檢索索引 
+## <a name="create-a--full-text-index"></a>建立全文檢索索引 
 
 1. 在物件總管中，以滑鼠右鍵按一下您要建立全文檢索索引的資料表、指向 [全文檢索索引]，然後按一下 [Define Full-Text Index (定義全文檢索索引)]。 這個動作會在另一個視窗中啟動精靈。
    按 [下一步] 
@@ -71,15 +75,15 @@ caps.handback.revision: 24
      
      按 [下一步]
   
-## 目錄、索引檔案群組和停用字詞表   
+## <a name="catalog-index-filegroup-and-stoplist"></a>目錄、索引檔案群組和停用字詞表   
   
 9.  **選取全文檢索目錄**  
 
-     **選取目錄：**從清單中選取全文檢索目錄。 資料庫的預設目錄是清單中預設選取的項目。 如果沒有任何目錄可以使用，系統就會停用此清單，而且會核取及停用 **[建立新的目錄]** 核取方塊。  
+     **選取目錄：** 從清單中選取全文檢索目錄。 資料庫的預設目錄是清單中預設選取的項目。 如果沒有任何目錄可以使用，系統就會停用此清單，而且會核取及停用 **[建立新的目錄]** 核取方塊。  
   
   OR
   
- 10. **建立新的目錄**
+ 10. **[建立新的目錄]**
  - 選取全文檢索目錄。  
   
     a. **名稱**  
@@ -97,7 +101,7 @@ caps.handback.revision: 24
      E. 選取值：  
     |Value|描述|  
     |-----------|-----------------|
-      |**\<預設值>**| 如果資料表或檢視未分割，請選取此值，以便與基礎資料表或檢視使用的相同檔案群組。 如果已分割資料表或檢視表，則會使用主要檔案群組|
+      |**<default>**| 如果資料表或檢視未分割，請選取此值，以便與基礎資料表或檢視使用的相同檔案群組。 如果已分割資料表或檢視表，則會使用主要檔案群組|
       |**PRIMARY**|選取即可針對新的全文檢索索引使用主要檔案群組。|
              *使用者指定的預設檔案群組*|如果使用者定義的預設停用字詞表已存在，請從清單中選取其名稱，以便針對新的全文檢索索引使用該檔案群組。|  
   
@@ -109,10 +113,10 @@ caps.handback.revision: 24
   
      選取下列其中一個值：  
   
-   |值|描述|  
+   |Value|描述|  
     |-----------|-----------------|  
-    |**\<系統>**|選取即可針對新的全文檢索索引使用系統停用字詞表。 這是預設值。|  
-    |**\<關閉>**|選取即可針對新的全文檢索索引停用停用字詞表。|  
+    |**<system>**|選取即可針對新的全文檢索索引使用系統停用字詞表。 這是預設值。|  
+    |**<off>**|選取即可針對新的全文檢索索引停用停用字詞表。|  
     |*user-defined-stoplist-name*|此清單會顯示已經在資料庫上建立之每個使用者定義停用字詞表的名稱 (如果有的話)。 選取要針對新的全文檢索索引使用的任何使用者定義停用字詞表。|  
   
   按 [下一步]
@@ -140,3 +144,4 @@ caps.handback.revision: 24
      當所有作業都執行完成後，按一下此按鈕以存取所執行作業的報表。 您可以檢視報表、將其列印至檔案、將其複製到剪貼簿或以電子郵件傳送報表。  
   
   
+

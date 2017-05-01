@@ -1,28 +1,32 @@
 ---
-title: "Transact-SQL 偵錯工具 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Transact-SQL 偵錯工具, 簡介"
+title: "Transact-SQL 偵錯工具 | Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Transact-SQL debugger, introduction
 ms.assetid: 6e914699-0d85-46c2-aa2d-3e339ac2c4ce
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5f9b4dc899901f4306d011838a694381a41fcaf7
+ms.lasthandoff: 04/11/2017
+
 ---
-# Transact-SQL 偵錯工具
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具可協助您透過調查 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼的執行階段行為，找出程式碼中的錯誤。 在您將 [[!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器] 視窗設定成偵錯模式之後，就可以在特定的程式碼行上暫停執行作業，然後檢查這些 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式所使用或傳回的資訊和資料。  
+# <a name="transact-sql-debugger"></a>Transact-SQL 偵錯工具
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具可協助您透過調查 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼的執行階段行為，找出程式碼中的錯誤。 在您將 [ [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器] 視窗設定成偵錯模式之後，就可以在特定的程式碼行上暫停執行作業，然後檢查這些 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式所使用或傳回的資訊和資料。  
   
-## 逐步執行 Transact-SQL 程式碼  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具提供下列選項，可讓您在 [[!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器] 視窗處於偵錯模式時，逐一巡覽 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼：  
+## <a name="stepping-through-transact-sql-code"></a>逐步執行 Transact-SQL 程式碼  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具提供下列選項，可讓您在 [ [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢編輯器] 視窗處於偵錯模式時，逐一巡覽 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 程式碼：  
   
 -   在個別的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式上設定中斷點。  
   
@@ -36,14 +40,14 @@ caps.handback.revision: 16
   
      如果您確定預存程序沒有任何錯誤，就可以不進入此預存程序。 此程序會以完整模式執行，而且結果會傳回程式碼。  
   
-     如果您想要偵錯預存程序或函數，則可以逐步執行模組。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 會開啟新的 [[!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器] 視窗 (填入模組的原始程式碼)，並讓此視窗進入偵錯模式，然後暫停執行模組的第一個陳述式。 接著，您就可以透過設定中斷點或逐步執行程式碼，逐一導覽模組程式碼。  
+     如果您想要偵錯預存程序或函數，則可以逐步執行模組。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 會開啟新的 [ [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器] 視窗 (填入模組的原始程式碼)，並讓此視窗進入偵錯模式，然後暫停執行模組的第一個陳述式。 接著，您就可以透過設定中斷點或逐步執行程式碼，逐一導覽模組程式碼。  
   
- 如需偵錯工具如何讓您巡覽程式碼的詳細資訊，請參閱[逐步執行 Transact-SQL 程式碼](../../relational-databases/scripting/step-through-transact-sql-code.md)。  
+ 如需偵錯工具如何讓您巡覽程式碼的詳細資訊，請參閱 [逐步執行 Transact-SQL 程式碼](../../relational-databases/scripting/step-through-transact-sql-code.md)。  
   
-## 檢視偵錯工具資訊  
+## <a name="viewing-debugger-information"></a>檢視偵錯工具資訊  
  每當偵錯工具在特定的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式上暫停執行作業時，您就可以使用下列偵錯工具視窗來檢視目前的執行狀態：  
   
--   [本機] 和 [監看式]**。** 這些視窗會顯示目前配置的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 運算式。 運算式是評估成單一純量運算式的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 子句。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具支援檢視參考 [!INCLUDE[tsql](../../includes/tsql-md.md)] 變數、參數或內建函數 (名稱以 @@ 為開頭) 的運算式。 這些視窗也會顯示目前指派給運算式的資料值。  
+-   [本機] 和 [監看式]**。** 這些視窗會顯示目前配置的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 運算式。 運算式是評估成單一純量運算式的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 子句。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具支援檢視參考 [!INCLUDE[tsql](../../includes/tsql-md.md)] 變數、參數或內建函式 (名稱以 @@ 為開頭) 的運算式。 這些視窗也會顯示目前指派給運算式的資料值。  
   
 -   **[快速監看式]。** 這個視窗會顯示 [!INCLUDE[tsql](../../includes/tsql-md.md)] 運算式的值，而且可讓您將該運算式儲存至 [監看式] 視窗。  
   
@@ -55,7 +59,7 @@ caps.handback.revision: 16
   
 -   [結果] 和 [訊息]。 [查詢編輯器] 視窗上的這些索引標籤會顯示先前執行之 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的結果。  
   
-## Transact-SQL 偵錯工具工作  
+## <a name="transact-sql-debugger-tasks"></a>Transact-SQL 偵錯工具工作  
   
 |工作描述|主題|  
 |----------------------|-----------|  
@@ -64,7 +68,7 @@ caps.handback.revision: 16
 |描述如何使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具來逐步執行程式碼。|[逐步執行 Transact-SQL 程式碼](../../relational-databases/scripting/step-through-transact-sql-code.md)|  
 |描述如何使用偵錯工具來檢視 [!INCLUDE[tsql](../../includes/tsql-md.md)] 資料 (例如參數和變數) 以及系統資訊。|[Transact-SQL 偵錯工具資訊](../../relational-databases/scripting/transact-sql-debugger-information.md)|  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [查詢與文字編輯器 &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)  
   
   

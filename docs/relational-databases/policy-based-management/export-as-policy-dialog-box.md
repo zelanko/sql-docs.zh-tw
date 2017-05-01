@@ -1,27 +1,31 @@
 ---
 title: "匯出為原則對話方塊 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.dmf.exportaspolicy.f1"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.dmf.exportaspolicy.f1
 ms.assetid: f19a8450-2a28-40a6-8a7d-9f4eaea0447d
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5c62b916532b47d0ad4cd12cf3e64af3d3709510
+ms.lasthandoff: 04/11/2017
+
 ---
-# 匯出為原則對話方塊
-  使用此對話方塊可將一組以原則為基礎之管理 Facet 的屬性儲存為原則。 原則可以儲存在 XML 檔案中，或是直接儲存到目前的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體。  
+# <a name="export-as-policy-dialog-box"></a>匯出為原則對話方塊
+  使用此對話方塊可將一組以原則為基礎之管理 Facet 的屬性儲存為原則。 原則可以儲存在 XML 檔案中，或是直接儲存到目前的 [!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體。  
   
-## 選項  
+## <a name="options"></a>選項  
  **原則定義名稱**  
  輸入原則的名稱。  
   
@@ -34,7 +38,7 @@ caps.handback.revision: 20
  **至檔案**  
  請輸入檔案的路徑與名稱，或使用瀏覽 (**...**) 按鈕，進而將原則儲存為 XML 檔案。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用原則式管理來管理伺服器](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   

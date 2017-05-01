@@ -1,37 +1,41 @@
 ---
-title: "Database Engine 錯誤嚴重性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "使用者自訂錯誤訊息 [SQL Server]"
-  - "嚴重性層級 [SQL Server]"
-  - "擷取錯誤嚴重性"
-  - "錯誤 [SQL Server], 嚴重性"
-  - "TRY...CATCH [SQL Server]"
+title: "Database Engine 錯誤嚴重性 | Microsoft 文件"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- user-defined error messages [SQL Server]
+- severity levels [SQL Server]
+- retrieving error severity
+- errors [SQL Server], severity
+- TRY...CATCH [SQL Server]
 ms.assetid: 3e7f5925-6edd-42e1-bf17-f7deb03993a7
 caps.latest.revision: 21
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f5b2b6fbe1d6d46c045452430067a542a99623bd
+ms.lasthandoff: 04/11/2017
+
 ---
-# Database Engine 錯誤嚴重性
+# <a name="database-engine-error-severities"></a>Database Engine 錯誤嚴重性
   當 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]產生錯誤時，錯誤的嚴重性會指出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]所發生的問題類型。  
   
-## 嚴重性層級  
+## <a name="levels-of-severity"></a>嚴重性層級  
  下表列出和描述 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]所產生之錯誤的嚴重性層級。  
   
 |嚴重性層級|描述|  
 |--------------------|-----------------|  
 |0-9|傳回狀態資訊或報告不嚴重之錯誤的參考訊息。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 不會產生嚴重性 0-9 的系統錯誤。|  
-|10|傳回狀態資訊或報告不嚴重之錯誤的參考訊息。 基於相容性考量，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會先將嚴重性 10 轉換成嚴重性 0，再將錯誤資訊傳回給發出呼叫的應用程式。|  
+|10|傳回狀態資訊或報告不嚴重之錯誤的參考訊息。 基於相容性考量， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會先將嚴重性 10 轉換成嚴重性 0，再將錯誤資訊傳回給發出呼叫的應用程式。|  
 |11-16|指出使用者能夠更正的錯誤。|  
 |11|指出給定的物件或實體不存在。|  
 |12|因特殊查詢提示而不使用鎖定之查詢的特殊嚴重性。 在某些情況下，這些陳述式所執行的讀取作業可能會產生不一致的資料，因為並沒有採取鎖定來保證一致性。|  
@@ -50,27 +54,27 @@ caps.handback.revision: 21
 |23|指出由於硬體或軟體發生問題，因此，整個資料庫的完整性有問題。<br /><br /> 嚴重性層級 23 的錯誤很少發生。 如果發生，請執行 DBCC CHECKDB 來判斷損毀的範圍。 可能只有快取發生問題，磁碟本身並沒有問題。 若是如此，重新啟動 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體便可以更正這個問題。 若要繼續作業，您必須重新連接 [!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體；否則，請利用 DBCC 來修復問題。 在某些情況下，您可能需要還原資料庫。|  
 |24|指出媒體失敗。 系統管理員可能需要還原資料庫。 您也可能需要電洽您的硬體廠商。|  
   
-## 使用者自訂的錯誤訊息嚴重性  
- 您可以利用 **sp_addmessage**，將嚴重性 1-25 的使用者自訂錯誤訊息加入 **sys.messages** 目錄檢視中。 RAISERROR 可以使用這些使用者自訂的錯誤訊息。 如需詳細資訊，請參閱 [sp_addmessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)。  
+## <a name="user-defined-error-message-severity"></a>使用者自訂的錯誤訊息嚴重性  
+ 您可以利用**sp_addmessage** ，將嚴重性 1-25 的使用者自訂錯誤訊息加入 **sys.messages** 目錄檢視中。 RAISERROR 可以使用這些使用者自訂的錯誤訊息。 如需詳細資訊，請參閱 [sp_addmessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)。  
   
  RAISERROR 可以用來產生使用者定義的錯誤訊息，其嚴重性為 1 到 25。 RAISERROR 可以參考儲存在 **sys.messages** 目錄檢視的使用者定義錯誤訊息，或是動態建立訊息。 當在產生錯誤時使用 **sys.messages** 中的使用者自訂錯誤訊息，RAISERROR 指定的嚴重性會覆寫 **sys.messages** 所指定的嚴重性。 如需詳細資訊，請參閱 [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)。  
   
-## 錯誤嚴重性和 TRY…CATCH  
+## <a name="error-severity-and-trycatch"></a>錯誤嚴重性和 TRY…CATCH  
  TRY…CATCH 建構會捕捉嚴重性大於 10 而並未終止資料庫連接的所有執行錯誤。  
   
  嚴重性 0-10 的錯誤是參考訊息，不會使執行動作跳出 TRY…CATCH 建構的 CATCH 區塊。  
   
  CATCH 區塊不會處理嚴重性通常是 20-25 的終止資料庫連接的錯誤，因為在連接終止時，會中止執行動作。  
   
- 如需詳細資訊，請參閱 [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)。  
+ 如需詳細資訊，請參閱 [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)所發生的問題類型。  
   
-## 擷取錯誤嚴重性  
+## <a name="retrieving-error-severity"></a>擷取錯誤嚴重性  
  您可以利用 ERROR_SEVERITY 系統函數來擷取造成執行 TRY…CATCH 建構的 CATCH 區塊之錯誤的嚴重性。 如果是在 CATCH 區塊範圍之外呼叫，ERROR_SEVERITY 會傳回 NULL。 如需詳細資訊，請參閱 [ERROR_SEVERITY &#40;Transact-SQL&#41;](../../t-sql/functions/error-severity-transact-sql.md)。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [了解 Database Engine 錯誤](../../relational-databases/errors-events/understanding-database-engine-errors.md)   
- [sys.messages &#40;Transact-SQL&#41;](../Topic/sys.messages%20\(Transact-SQL\).md)   
- [系統函數 &#40;Transact-SQL&#41;](../../t-sql/functions/system-functions-transact-sql.md)   
+ [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)   
+ [系統函數 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
  [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)  
   
   

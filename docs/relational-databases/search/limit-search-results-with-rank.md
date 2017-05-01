@@ -1,30 +1,34 @@
 ---
-title: "限制 RANK 的搜索結果 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-search"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "資料列次序 [全文檢索搜尋]"
-  - "相關次序值 [全文檢索搜尋]"
-  - "全文檢索搜尋 [SQL Server]，排名"
-  - "索引排名 [全文檢索搜尋]"
-  - "等級排序結果 [全文檢索搜尋]"
-  - "排定等級 [全文檢索搜尋]"
-  - "每列次序值 [全文檢索搜尋]"
+title: "使用 RANK 限制搜索結果 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-search
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- row ranking [full-text search]
+- relevance ranking values [full-text search]
+- full-text search [SQL Server], rankings
+- index rankings [full-text search]
+- ranked results [full-text search]
+- rankings [full-text search]
+- per-row rank values [full-text search]
 ms.assetid: 06a776e6-296c-4ec7-9fa5-0794709ccb17
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 3a33b63a182fe1c7f72e2251c3a835867ae8dcf4
+ms.lasthandoff: 04/11/2017
+
 ---
-# 限制 RANK 的搜索結果
+# <a name="limit-search-results-with-rank"></a>限制 RANK 的搜索結果
   [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 和 [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) 函數會傳回名為 RANK 的資料行，其中包含 0 到 1000 (順位值) 的序數值。 這些值的用途，在根據傳回資料列符合選取準則的程度予以分級。 等級值僅表示結果集中資料列相關性的相對順序，其值越低表示相關性越低。 實際的值並不重要，而且每次執行查詢後該值通常會不一樣。  
   
 > [!NOTE]  
@@ -36,7 +40,7 @@ caps.handback.revision: 19
   
 ##  <a name="examples"></a> 使用 RANK 限制搜尋結果的範例  
   
-### 範例 A：只搜尋前三個相符項目  
+### <a name="example-a-searching-for-only-the-top-three-matches"></a>範例 A：只搜尋前三個相符項目  
  下列範例會使用 CONTAINSTABLE，以便只傳回前三個相符項目。  
   
 ```  
@@ -66,9 +70,8 @@ RANK        Address                          City
 (3 row(s) affected)  
 ```  
   
- [本主題內容](#top)  
   
-### 範例 B：搜尋前十個相符項目  
+### <a name="example-b-searching-for-the-top-ten-matches"></a>範例 B：搜尋前十個相符項目  
  下列範例會使用 CONTAINSTABLE 傳回 `Description` 資料行在 "light" 或 "lightweight" 字附近包含 "aluminum" 一字的前 5 項產品描述。  
   
 ```  
@@ -89,12 +92,11 @@ FROM Production.ProductDescription AS FT_TBL INNER JOIN
 GO  
 ```  
   
- [本主題內容](#top)  
   
 ##  <a name="how"></a> 搜尋查詢結果如何排序次序  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的全文檢索搜尋可以產生選擇性分數 (或次序值)，表示全文檢索查詢傳回之資料的相關性。 這個等級值是針對每個資料列計算的，而且可當做排序準則使用，以便依據相關性排序給定查詢的結果集。 等級值僅表示結果集中資料列相關性的相對順序。 實際的值並不重要，而且每次執行查詢後該值通常會不一樣。 次序值不會在查詢之間保存任何重要性。  
   
-### 排序的統計資料  
+### <a name="statistics-for-ranking"></a>排序的統計資料  
  建立索引時會收集統計資料供評定等級使用。 建立全文檢索目錄的程序並不會直接導致單一索引結構。 相反地，Full-Text Engine for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會在編製資料索引時建立中繼索引。 接著，全文檢索引擎會視需要將這些索引合併到較大的索引。 此程序可以重複許多次。 接著，全文檢索引擎會執行「主要合併」，將所有的中繼索引合併至較大的主索引。  
   
  統計資料是在每個中繼索引層級中收集。 合併索引時會合併統計資料。 某些統計資料值只能在主要合併程序期間產生。  
@@ -138,9 +140,8 @@ GO
  MaxQueryRank  
  全文檢索引擎會傳回最大的等級是 1000。  
   
- [本主題內容](#top)  
   
-### 等級計算問題  
+### <a name="rank-computation-issues"></a>等級計算問題  
  計算等級的程序取決於幾項因素。  不同語言的文字在分隔 Token 化文字的方式上會有所差異。 例如，使用某種文字分隔時會將 "dog-house" 字串分解成 "dog" "house"，而使用另一種文字分隔時會分解成 "dog-house"。 這表示比對和等級會依據指定的語言而異，因為不僅單字不同，而且文件長度也不同。 文件長度的差異會影響所有查詢的等級。  
   
  統計資料 (例如 **IndexRowCount** ) 可能會有很大的差異。 例如，如果某個目錄在主索引中有 20 億個資料列，則會將一個新文件的索引編製到記憶體的中繼索引。而該文件會根據記憶體索引中的文件數目所得的等級，與主索引的文件等級進行非對稱比較。 因此，建議您在執行任何會造成大量資料列編製索引或重新編製索引的母體擴展動作後，使用 ALTER FULLTEXT CATALOG ... REORGANIZE [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式來將這些索引與主要的索引合併。 全文檢索引擎也會根據參數 (例如中繼索引的數目與大小) 來自動合併索引。  
@@ -154,9 +155,8 @@ GO
   
 ```  
   
- [本主題內容](#top)  
   
-### CONTAINSTABLE 的等級  
+### <a name="ranking-of-containstable"></a>CONTAINSTABLE 的等級  
  [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 等級會使用下列演算法：  
   
 ```  
@@ -185,9 +185,8 @@ Rank =  ( MaxQueryRank * WeightedSum ) / ( ( Σ[key=1 to n] ContainsRankKey^2 )
   
 ```  
   
- [本主題內容](#top)  
   
-### FREETEXTTABLE 的等級  
+### <a name="ranking-of-freetexttable"></a>FREETEXTTABLE 的等級  
  [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) 等級是以 OKAPI BM25 等級公式為基礎。 FREETEXTTABLE 查詢會透過變化衍生項 (原始查詢字的變化型式) 將單字加入到查詢中。這些單字會視為個別單字，而且與來源產生字沒有特殊的關聯性。 由「同義字」功能所產生的同義字會視為個別詞彙，且加權值相同的詞彙。 查詢中的每個單字都是計算等級的基礎。  
   
 ```  
@@ -206,9 +205,8 @@ tf is the frequency of the word in the queried property in a specific row.
 qtf is the frequency of the term in the query.   
 ```  
   
- [本主題內容](#top)  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用全文檢索搜尋進行查詢](../../relational-databases/search/query-with-full-text-search.md)  
   
   

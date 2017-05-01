@@ -1,33 +1,37 @@
 ---
-title: "SQL Server, Resource Pool Stats 物件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Resource Pool Stats 物件"
-  - "SQLServer: Resource Pool Stats 物件"
+title: "SQL Server 的 Resource Pool Stats 物件 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Reosurce Pool Stats object
+- 'SQLServer: Resource Pool Stats object'
 ms.assetid: bb46e029-fcf9-4aeb-a066-be41e7668fb9
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1ccd649e92cd416ff086758005f3b5df728dfe1d
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server, Resource Pool Stats 物件
+# <a name="sql-server-resource-pool-stats-object"></a>SQL Server, Resource Pool Stats 物件
   SQLServer:Resource Pool Stats 物件包含效能計數器，可報告資源管理員資源集區統計資料的相關資訊。  
   
  每個作用中資源集區都會建立 SQLServer:Resource Pool Stats 效能物件的執行個體，而且此執行個體的名稱與資源管理員資源集區名稱相同。 下表描述這個執行個體支援的計數器。  
   
 |計數器名稱|說明|  
 |------------------|-----------------|  
-|**Active memory grant amount (KB)**|目前授與記憶體的總數量 (以 KB 為單位)。 您也可以在 [sys.dm_exec_query_resource_semaphores](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql.md) 中取得這項資訊。| 
-|**Active memory grants count**|目前的記憶體授權總計數。 您也可以在 [ sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md) 中取得這項資訊。|  
+|**Active memory grant amount (KB)**|目前授與記憶體的總數量 (以 KB 為單位)。 您也可以在 [sys.dm_exec_query_resource_semaphores](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql.md)中取得這項資訊。| 
+|**Active memory grants count**|目前的記憶體授權總計數。 您也可以在 [sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)中取得這項資訊。|  
 |**平均磁碟讀取 IO (毫秒)**|從磁碟讀取作業的平均時間 (毫秒)。|  
 |**Disk Read IO (ms) Base**|僅供內部使用。|
 |**平均磁碟寫入 IO (毫秒)**|寫入磁碟作業的平均時間 (毫秒)。|  
@@ -52,13 +56,13 @@ caps.handback.revision: 14
 |**Max memory (KB)**|根據資源集區設定和伺服器狀態，資源集區可擁有的最大記憶體數量 (以 KB 為單位)。| 
 |**Memory grant timeouts/sec**|每秒逾時的記憶體授權數目。|
 |**Memory grants/sec**|在這個資源集區中每秒發生的記憶體授權數目。| 
-|**Pending memory grant count**|在佇列中暫止之記憶體授權的要求數目。 您也可以在 [sys.dm_exec_query_resource_semaphores](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql.md) 中取得這項資訊。|
-|**Query exec memory target (KB)**|查詢執行記憶體授權的目前記憶體 Broker 目標 (以 KB 為單位)。 您也可以在 [ sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md) 中取得這項資訊。|  
+|**Pending memory grant count**|在佇列中暫止之記憶體授權的要求數目。 您也可以在 [sys.dm_exec_query_resource_semaphores](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql.md)中取得這項資訊。|
+|**Query exec memory target (KB)**|查詢執行記憶體授權的目前記憶體 Broker 目標 (以 KB 為單位)。 您也可以在 [sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)中取得這項資訊。|  
 |**Target memory (KB)**|根據資源集區設定和伺服器狀態，資源集區正嘗試取得的目標記憶體數量 (以 KB 為單位)。|   
 |**Used memory (KB)**|資源集區所使用的記憶體數量 (以 KB 為單位)。|  
 
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [監視資源使用狀況 &#40;系統監視器&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
  [SQL Server, Workload Group Stats 物件](../../relational-databases/performance-monitor/sql-server-workload-group-stats-object.md)   
  [資源管理員](../../relational-databases/resource-governor/resource-governor.md)  

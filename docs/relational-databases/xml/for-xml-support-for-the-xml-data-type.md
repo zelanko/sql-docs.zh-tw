@@ -1,28 +1,32 @@
 ---
-title: "xml 資料類型的 FOR XML 支援 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "使用者定義函數 [SQL Server], XML"
-  - "XML 資料類型 [SQL Server], FOR XML 子句"
+title: "XML 資料類型的 FOR XML 支援 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- user-defined functions [SQL Server], XML
+- xml data type [SQL Server], FOR XML clause
 ms.assetid: 365de07d-694c-4c8b-b671-8825be27f87c
 caps.latest.revision: 24
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9fcd42a40be7da666ed66dc7eb05600b081457ea
+ms.lasthandoff: 04/11/2017
+
 ---
-# xml 資料類型的 FOR XML 支援
+# <a name="for-xml-support-for-the-xml-data-type"></a>xml 資料類型的 FOR XML 支援
   如果 FOR XML 查詢在 SELECT 子句中指定 **xml** 類型的資料行，無論您是否指定 ELEMENTS 指示詞，資料行值都會對應為傳回的 XML 中之元素。 **xml** 類型資料行中的任何 XML 宣告都沒有序列化。  
   
- 例如，下列查詢會從 **XML** 類型的 `AdditionalContactInfo` 資料行擷取客戶連絡資訊，例如 `BusinessEntityID`、`FirstName` 和 `LastName` 資料行，以及電話號碼。  
+ 例如，下列查詢會從 `BusinessEntityID`XML `FirstName`類型的 `LastName` 資料行擷取客戶連絡資訊，例如 `AdditionalContactInfo` 、 **和** 資料行，以及電話號碼。  
   
 ```  
 USE AdventureWorks2012;  
@@ -140,14 +144,14 @@ for xml auto;
 </root>  
 ```  
   
-## 從使用者自訂函數傳回 XML  
+## <a name="returning-xml-from-a-user-defined-function"></a>從使用者自訂函數傳回 XML  
  可利用 FOR XML 查詢，從傳回下列項目之一的使用者自訂函數，傳回 XML：  
   
 -   具有單一 **xml** 類型資料行的資料表  
   
 -   **xml** 類型的執行個體  
   
- 例如，下列使用者定義函數會傳回具有單一 **XML** 類型資料行的資料表：  
+ 例如，下列使用者定義函數會傳回具有單一 **XML**類型資料行的資料表：  
   
 ```  
 USE AdventureWorks2012;  
@@ -202,7 +206,7 @@ SELECT @x= dbo.MyUDF4 (19) ;
 select @x;  
 ```  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [各個 SQL Server 資料類型的 FOR XML 支援](../../relational-databases/xml/for-xml-support-for-various-sql-server-data-types.md)  
   
   

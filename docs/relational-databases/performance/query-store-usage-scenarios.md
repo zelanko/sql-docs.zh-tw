@@ -1,25 +1,29 @@
 ---
 title: "查詢存放區使用案例 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "04/12/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-query-tuning"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "查詢存放區, 使用案例"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 04/12/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-query-tuning
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Query Store, usage scenarios
 ms.assetid: f5309285-ce93-472c-944b-9014dc8f001d
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ce278d494e2d5ab7dfc82e244a9d6b8821099cc0
+ms.lasthandoff: 04/11/2017
+
 ---
-# 查詢存放區使用案例
+# <a name="query-store-usage-scenarios"></a>查詢存放區使用案例
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   若追蹤並確保可預測的工作負載效能非常重要，就能在整組案例中廣泛使用查詢存放區。 以下是您可以考慮的一些範例︰  
@@ -34,7 +38,7 @@ caps.handback.revision: 11
   
 -   找出並改善特定的工作負載  
   
-## 透過計畫選擇迴歸找出並修正查詢  
+## <a name="pinpoint-and-fix-queries-with-plan-choice-regressions"></a>透過計畫選擇迴歸找出並修正查詢  
  在一般查詢執行期間，查詢最佳化工具可能會決定採取不同的計畫，因為重要的輸入已改變：資料基數已變更；建立、變更或卸除索引；統計資料已更新等。在大多數情況下，比起先前使用的計畫，其挑選的新計畫會更好或不相上下。 不過，還是會出現新計畫明顯比較糟糕的情況，而我們將這類情況稱為計畫選擇變更迴歸。 在查詢存放區之前，很難找出並修正問題，因為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 並未提供內建資料存放區，讓使用者可查看某一段時間內所使用的執行計畫。  
   
  現在，透過查詢存放區，您可以快速地：  
@@ -49,7 +53,7 @@ caps.handback.revision: 11
   
  如需此案例的詳細說明，請參閱 [查詢存放區︰適用於資料庫的飛行資料記錄器](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/) 部落格。  
   
-## 找出並調整熱門資源取用查詢  
+## <a name="identify-and-tune-top-resource-consuming-queries"></a>找出並調整熱門資源取用查詢  
  雖然您的工作負載可能會產生成千上萬個查詢，但通常只有其中幾個實際上最常使用系統資源，因而需要您多加注意。 在熱門資源取用查詢中，您通常會發現這類查詢若不是迴歸的，就是可以透過其他調整來改善的查詢。  
   
  開始探勘的最簡單方式是開啟 **中的 [熱門資源取用查詢]**[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。  使用者介面會分成三個窗格︰代表熱門資源取用查詢的長條圖 (左)、所選取查詢的計畫摘要 (右)，以及所選取計畫的視覺化查詢計畫 (下方)。 按一下 [設定]  按鈕，來控制您想要分析的查詢數量以及感興趣的時間間隔。 此外，您可以在不同的資源耗用維度 (持續時間、CPU、記憶體、IO、執行數目) 和基準 (平均、最小值、最大值、總計、標準差) 之間進行選擇。  
@@ -70,7 +74,7 @@ caps.handback.revision: 11
   
 5.  考慮重寫耗用資源的查詢。 例如，充分利用查詢參數化並減少動態 SQL 的使用。 在讀取資料時實作最佳邏輯 (在資料庫端套用資料篩選，而不是在應用程式端)。  
   
-## A/B 測試  
+## <a name="ab-testing"></a>A/B 測試  
  使用查詢存放區，來比較您計畫引進之應用程式變更前後的工作負載效能。  下列清單包含數個範例，您可以使用查詢存放區，來評估環境或應用程式變更對工作負載效能的影響︰  
   
 -   推出新的應用程式版本。  
@@ -113,7 +117,7 @@ caps.handback.revision: 11
   
  根據分析，您很可能會保留索引，因為查詢效能已改善。  
   
-## 在升級到 SQL Server 2016 期間保持效能穩定性  
+## <a name="keep-performance-stability-during-the-upgrade-to-sql-server-2016"></a>在升級到 SQL Server 2016 期間保持效能穩定性  
  在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]之前，使用者在升級到最新平台版本期間，會暴露在效能衰退的風險中。 原因在於，最新版的查詢最佳化工具會在安裝新的位元之後立即變成使用中狀態。  
   
  從 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 開始，所有的查詢最佳化工具變更都會繫結至最新的 `COMPATIBILITY_LEVEL`，因此，計畫在升級時不會立即變更，而是在使用者將 `COMPATIBILITY_LEVEL` 變更為最新版本時變更。 此功能會結合查詢存放區，可讓您在升級過程中對查詢效能擁有絕佳層級的控制。 下圖顯示建議的升級工作流程：  
@@ -128,7 +132,7 @@ caps.handback.revision: 11
   
 4.  使用查詢存放區進行分析和迴歸修正︰在大多數情況下，新的查詢最佳化工具應該會產生更好的計畫。 不過，查詢存放區可讓您輕鬆找出計畫選擇迴歸，並使用計畫強制執行機制加以修正。  
   
-## 找出並改善特定的工作負載  
+## <a name="identify-and-improve-ad-hoc-workloads"></a>找出並改善特定的工作負載  
  某些工作負載沒有主控查詢，可讓您加以調整來改善整體應用程式效能。 這些工作負載通常是使用相對大量的各種查詢做為特性，這其中每一個查詢都會耗用部分的系統資源。 由於是唯一的，這些查詢很少執行 (通常只執行一次，因此會以特別的方式命名)，所以它們的執行階段耗用量並不重要。 相反地，假設該應用程式會不停地產生全新的查詢，則會在不是最佳化的查詢編譯中耗費絕大部分的系統資源。 這對查詢存放區而言不是理想的情況，假設有更大量的查詢和計畫湧進您所保留的空間，這表示查詢存放區很可能會非常快速地以唯讀模式結束。 若您啟用 [Size Based Cleanup Policy (大小基礎清除原則)] ([強烈建議](https://msdn.microsoft.com/library/mt604821.aspx)持續啟動並執行查詢存放區)，則背景處理程序大部分的時間將會清除查詢存放區結構，並佔用大量系統資源。  
   
  [資源耗用量排名在前的查詢] 檢視會提供您的工作負載的特定本質的初步指示：  
@@ -213,8 +217,9 @@ ALTER DATABASE  [QueryStoreTest] SET QUERY_STORE = ON
     (OPERATION_MODE = READ_WRITE, QUERY_CAPTURE_MODE = AUTO);  
 ```  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用查詢存放區監視效能](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [使用查詢存放區的最佳作法](../../relational-databases/performance/best-practice-with-the-query-store.md)  
   
   
+

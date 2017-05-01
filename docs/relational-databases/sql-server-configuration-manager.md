@@ -1,34 +1,38 @@
 ---
 title: "SQL Server 組態管理員 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "02/25/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "通訊協定 [SQL Server], 管理"
-  - "網路通訊協定 [SQL Server], 管理"
-  - "用戶端網路公用程式"
-  - "帳戶 [SQL Server]"
-  - "SQL Server 組態管理員"
-  - "伺服器網路公用程式"
-  - "帳戶 [SQL Server], 服務"
-  - "服務 [SQL Server], 管理"
-  - "工具 [SQL Server], SQL Server 組態管理員"
-  - "組態管理員 [SQL Server]"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 02/25/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- protocols [SQL Server], managing
+- network protocols [SQL Server], managing
+- Client Network Utility
+- accounts [SQL Server]
+- SQL Server Configuration Manager
+- Server Network Utility
+- accounts [SQL Server], services
+- services [SQL Server], managing
+- tools [SQL Server], SQL Server Configuration Manager
+- configuration manager [SQL Server]
 ms.assetid: e6beaea4-164c-4078-95ae-b9e28b0aefe8
 caps.latest.revision: 58
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 58
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f0710ebf98d2d0260208b594f3260266ddc0ca8c
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server 組態管理員
+# <a name="sql-server-configuration-manager"></a>SQL Server 組態管理員
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員是一個工具，用來管理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的相關服務、設定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]所用的網路通訊協定，以及管理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 用戶端電腦的網路連接組態。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員是一個 [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console 嵌入式管理單元，您可以從 [開始] 功能表存取它，也可以將它加入任何其他 [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console 顯示畫面中。 [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console (**mmc.exe**) 使用 **SQLServerManager\<版本>.msc** 檔案 (例如 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 的 **SQLServerManager13.msc**) 開啟組態管理員。 以下是 Windows 安裝在 C 磁碟機時，最近四個版本的路徑。  
   
 |||  
@@ -42,20 +46,20 @@ caps.handback.revision: 58
 >  由於 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員是 [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console 程式的嵌入式管理單元，而不是獨立的程式，因此 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員在較新版本的 Windows 中不會作為應用程式出現。  
 >   
 >  -   **Windows 10**：  
->          若要開啟 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員，請在**起始頁**上輸入 SQLServerManager13.msc (適用於 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)])。 若為舊版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，則以較小的數字取代 13。 按一下 SQLServerManager13.msc 即可開啟組態管理員。 若要將組態管理員釘選到起始頁或工作列，請以滑鼠右鍵按一下 SQLServerManager13.msc，然後按一下 [開啟檔案位置]。 在 Windows 檔案總管中，以滑鼠右鍵按一下 SQLServerManager13.msc，然後按一下 [釘選到 [開始] 功能表] 或 [釘選到工作列]。  
+>          若要開啟 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員，請在 **起始頁**上輸入 SQLServerManager13.msc (適用於 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)])。 若為舊版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ，則以較小的數字取代 13。 按一下 SQLServerManager13.msc 即可開啟組態管理員。 若要將組態管理員釘選到起始頁或工作列，請以滑鼠右鍵按一下 SQLServerManager13.msc，然後按一下 [開啟檔案位置]。 在 Windows 檔案總管中，以滑鼠右鍵按一下 SQLServerManager13.msc，然後按一下 [釘選到 [開始] 功能表] 或 [釘選到工作列]。  
 > -   **Windows 8**：  
->          若要開啟 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員，請在 [搜尋] 常用鍵的 [應用程式] 下，輸入 **SQLServerManager\<版本>.msc** (例如 **SQLServerManager13.msc**)，然後按 **Enter**。  
+>          若要開啟 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員，請在 [搜尋] 常用鍵的 [應用程式] 下，鍵入 **SQLServerManager\<版本>.msc** (例如 **SQLServerManager13.msc**)，然後按 **Enter**。  
   
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員和 SQL Server Management Studio 利用 Window Management Instrumentation (WMI) 來檢視和變更部份伺服器設定。 WMI 提供統一的方式來協助您連結管理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 工具所要求之登錄作業的 API 呼叫，在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員嵌入式管理單元元件的所選 SQL 服務上，它提供了增強的控制和操作功能。 如需設定 WMI 相關權限的相關資訊，請參閱[設定 WMI 在 SQL Server 工具中顯示伺服器狀態](../ssms/configure-wmi-to-show-server-status-in-sql-server-tools.md)。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員和 SQL Server Management Studio 利用 Window Management Instrumentation (WMI) 來檢視和變更部份伺服器設定。 WMI 提供統一的方式來協助您連結管理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 工具所要求之登錄作業的 API 呼叫，在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員嵌入式管理單元元件的所選 SQL 服務上，它提供了增強的控制和操作功能。 如需設定 WMI 相關權限的相關資訊，請參閱[設定 WMI 在 SQL Server 工具中顯示伺服器狀態](http://msdn.microsoft.com/library/7e97197b-ed4d-40d1-9a52-9ab1d92401d7)。  
   
- 若要利用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員來啟動、停止、暫停、繼續或設定另一部電腦中的服務，請參閱[連接至另一部電腦 &#40;SQL Server 組態管理員&#41;](../database-engine/configure-windows/connect-to-another-computer-sql-server-configuration-manager.md)。  
+ 若要利用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員來啟動、停止、暫停、繼續或設定另一部電腦中的服務，請參閱[連接至另一部電腦 &#40;SQL Server 組態管理員&#41;](../database-engine/configure-windows/scm-services-connect-to-another-computer.md)。  
   
-## 管理服務  
+## <a name="managing-services"></a>管理服務  
  請利用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員來啟動、暫停、繼續或停止服務、檢視服務屬性，或變更服務屬性。  
   
- 使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員利用啟動參數來啟動 [!INCLUDE[ssDE](../includes/ssde-md.md)]。  如需詳細資訊，請參閱[設定伺服器啟動選項 &#40;SQL Server 組態管理員&#41;](../database-engine/configure-windows/configure-server-startup-options-sql-server-configuration-manager.md)。  
+ 使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員利用啟動參數來啟動 [!INCLUDE[ssDE](../includes/ssde-md.md)]。  如需詳細資訊，請參閱[設定伺服器啟動選項 &#40;SQL Server 組態管理員&#41;](../database-engine/configure-windows/scm-services-configure-server-startup-options.md)。  
   
-## 變更服務所用的帳戶  
+## <a name="changing-the-accounts-used-by-the-services"></a>變更服務所用的帳戶  
  利用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員來管理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 服務。  
   
 > [!IMPORTANT]  
@@ -63,8 +67,8 @@ caps.handback.revision: 58
   
  利用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員、SMO 或 WMI 來變更密碼的另一個好處是，會立即生效，不需要重新啟動服務。  
   
-## 管理伺服器和用戶端網路通訊協定  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員可讓您設定伺服器和用戶端網路通訊協定，以及連接選項。 啟用正確的通訊協定之後，您通常不需要變更伺服器網路連接。 不過，如果您需要重新設定伺服器連接，您可以利用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員，使 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 利用特定的網路通訊協定、埠或管道來接聽。 如需啟用通訊協定的詳細資訊，請參閱[啟用或停用伺服器網路通訊協定](../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)。 如需啟用透過防火牆存取通訊協定的相關資訊，請參閱[設定 Windows 防火牆以允許 SQL Server 存取](../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)。  
+## <a name="manage-server--client-network-protocols"></a>管理伺服器和用戶端網路通訊協定  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員可讓您設定伺服器和用戶端網路通訊協定，以及連接選項。 啟用正確的通訊協定之後，您通常不需要變更伺服器網路連接。 不過，如果您需要重新設定伺服器連接，您可以利用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員，使 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 利用特定的網路通訊協定、埠或管道來接聽。 如需啟用通訊協定的詳細資訊，請參閱 [啟用或停用伺服器網路通訊協定](../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)。 如需啟用透過防火牆存取通訊協定的相關資訊，請參閱 [設定 Windows 防火牆以允許 SQL Server 存取](../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)。  
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員可讓您管理伺服器和用戶端網路通訊協定，其中包括強迫加密通訊協定、檢視別名屬性，或啟用/停用通訊協定的功能。  
   
@@ -78,18 +82,19 @@ caps.handback.revision: 58
   
  另外， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員也可讓您檢視容錯移轉叢集執行個體的相關資訊，不過，部份啟動和停止服務之類的動作，應該使用叢集管理員。  
   
-### 可用的網路通訊協定  
+### <a name="available-network-protocols"></a>可用的網路通訊協定  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支援共用記憶體、TCP/IP 與具名管道通訊協定。 如需有關選擇網路通訊協定的詳細資訊，請參閱＜ [Configure Client Protocols](../database-engine/configure-windows/configure-client-protocols.md)＞。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 不支援 VIA、Banyan VINES Sequenced Packet Protocol (SPP)、多重通訊協定、AppleTalk 或 NWLink IPX/SPX 網路通訊協定。 先前連接這些通訊協定的用戶端必須選取不同的通訊協定，才能連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 您不能利用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員來設定 WinSock Proxy。 若要設定 WinSock Proxy，請參閱您的 ISA 伺服器文件集。  
   
-## 相關工作  
- [管理服務的如何主題 &#40;SQL Server 組態管理員&#41;](../Topic/Managing%20Services%20How-to%20Topics%20\(SQL%20Server%20Configuration%20Manager\).md)  
+## <a name="related-tasks"></a>相關工作  
+ [管理服務的如何主題 &#40;SQL Server 組態管理員&#41;](http://msdn.microsoft.com/library/78dee169-df0c-4c95-9af7-bf033bc9fdc6)  
   
- [啟動、停止、暫停、繼續、重新啟動 Database Engine、SQL Server Agent 或 SQL Server Browser 服務](../database-engine/configure-windows/start, stop, pause, resume, restart sql server services.md)  
+ [啟動、停止、暫停、繼續、重新啟動 Database Engine、SQL Server Agent 或 SQL Server Browser 服務](../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)  
   
- [啟動、停止或暫停 SQL Server Agent 服務](../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)  
+ [啟動、停止或暫停 SQL Server Agent 服務](http://msdn.microsoft.com/library/c95a9759-dd30-4ab6-9ab0-087bb3bfb97c)  
   
- [將 SQL Server 執行個體設定為自動啟動 &#40;SQL Server 組態管理員&#41;](../database-engine/configure-windows/scm services - set an instance to start automatically.md)  
+ [將 SQL Server 執行個體設定為自動啟動 &#40;SQL Server 組態管理員&#41;](../database-engine/configure-windows/scm-services-set-an-instance-to-start-automatically.md)  
   
- [避免自動啟動 SQL Server 的執行個體 &#40;SQL Server 組態管理員&#41;](../database-engine/configure-windows/scm services - prevent automatic startup of an instance.md)  
+ [避免自動啟動 SQL Server 的執行個體 &#40;SQL Server 組態管理員&#41;](../database-engine/configure-windows/scm-services-prevent-automatic-startup-of-an-instance.md)  
   
   
+

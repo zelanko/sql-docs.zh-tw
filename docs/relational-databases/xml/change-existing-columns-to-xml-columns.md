@@ -1,24 +1,28 @@
 ---
 title: "將現有資料行變更為 XML 資料行 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "資料表 [XML]"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- tables [XML]
 ms.assetid: 0d951424-9862-41fe-bd46-127f1c059bcb
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d89dc5541f21557cd224f5257a450ccc2cc3365c
+ms.lasthandoff: 04/11/2017
+
 ---
-# 將現有資料行變更為 XML 資料行
+# <a name="change-existing-columns-to-xml-columns"></a>將現有資料行變更為 XML 資料行
   ALTER TABLE 陳述式支援 **xml** 資料類型。 例如，您可以將任何字串類型資料行修改成 **xml** 資料類型。 請注意在這些情況下，資料行中所包含的文件必須格式正確。 另外，如果您要將資料行的類型從字串變更為具 xml 類型，將會根據指定的 XSD 結構描述來驗證資料行中的文件。  
   
 ```  
@@ -49,13 +53,13 @@ GO
 ```  
   
 > [!NOTE]  
->  指令碼將會針對 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫來執行，因為所建立的 XML 結構描述集合 `Production.ProductDescriptionSchemaCollection` 是屬於 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫的一部份。  
+>  指令碼將會針對 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫來執行，因為所建立的 XML 結構描述集合 `Production.ProductDescriptionSchemaCollection`是屬於 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫的一部份。  
   
  在上述範例中，將會根據指定集合中的 XSD 結構描述，來驗證所有儲存在資料行中的執行個體並設定其類型。 根據指定的結構描述，如果資料行包含一個或多個無效的 XML 執行個體， `ALTER TABLE` 陳述式將會失敗，而且將無法使不具類型的 XML 資料行變更為具類型的 XML。  
   
 > [!NOTE]  
 >  如果資料表很大，修改 **xml** 類型的資料行可能會很費時。 這是因為每個文件都必須檢查其格式是否正確、是否具 XML 類型，而且也必須加以驗證。  
   
- 如需具類型之 XML 的詳細資訊，請參閱[比較具類型的 XML 與不具類型的 XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)。  
+ 如需具類型之 XML 的詳細資訊，請參閱 [比較具類型的 XML 與不具類型的 XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)。  
   
   

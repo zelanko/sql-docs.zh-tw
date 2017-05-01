@@ -1,31 +1,35 @@
 ---
 title: "維護計畫 | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.AG.MAINTPLAN.LEGACY.F1"
-helpviewer_keywords: 
-  - "維護計畫 [SQL Server], 關於資料庫維護計畫"
-  - "維護計畫 [SQL Server], 設計工具中顯示的資料庫相容性層級"
-  - "維護計畫 [SQL Server]"
+ms.custom: 
+ms.date: 08/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.AG.MAINTPLAN.LEGACY.F1
+helpviewer_keywords:
+- maintenance plans [SQL Server], about database maintenance plans
+- maintenance plans [SQL Server], database compatibility level displayed in designer
+- maintenance plans [SQL Server]
 ms.assetid: 5982ca65-74fe-44e3-aef9-00a65a0db169
 caps.latest.revision: 44
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 44
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b739e1421507dd0794b732dfc910e5ec3671c235
+ms.lasthandoff: 04/11/2017
+
 ---
-# 維護計畫
+# <a name="maintenance-plans"></a>維護計畫
   維護計畫會建立必要的工作流程，確保資料庫已最佳化、定期備份，而且沒有任何不一致性。 「維護計畫精靈」也會建立核心維護計畫，但手動建立計畫能提供更大的彈性。  
   
-## 維護計畫的優點  
+## <a name="benefits-of-maintenance-plans"></a>維護計畫的優點  
  在 [!INCLUDE[ssDECurrent](../../includes/ssdecurrent-md.md)] 中，維護計畫會建立 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝，再由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業執行。 維護計畫可以依排程間隔手動或自動執行。  
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 維護計畫提供下列功能：  
@@ -40,7 +44,7 @@ caps.handback.revision: 44
   
 -   支援 Windows 驗證和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證。 [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
-## 維護計畫功能  
+## <a name="maintenance-plan-functionality"></a>維護計畫功能  
  您可以建立維護計畫來執行下列工作：  
   
 -   以新的填滿因數重建索引，重新整理資料以及索引頁上的資料。 使用新的填滿因數重建索引時，可以確保資料庫頁面包含平均分佈的資料量和可用空間。 也可以在未來快速擴展。 如需詳細資訊，請參閱[指定索引的填滿因素](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)。  
@@ -57,15 +61,16 @@ caps.handback.revision: 44
   
  維護工作產生的結果可以當作報表寫入文字檔，或寫入 **msdb** 中的維護計畫資料表 (**sysmaintplan_log** 和 **sysmaintplan_logdetail**)。 若要在記錄檔檢視器中檢視結果，請以滑鼠右鍵按一下 [維護計畫]，然後按一下 [檢視記錄]。  
   
-## 相關工作  
+## <a name="related-tasks"></a>相關工作  
  若要開始使用維護計畫，請使用下列主題。  
   
 |||  
 |-|-|  
-|**描述**|**主題**|  
+|**說明**|**主題**|  
 |設定 **Agent XPs** 伺服器組態選項，以啟用 SQL Server Agent 擴充預存程序。|[Agent XPs 伺服器組態選項](../../database-engine/configure-windows/agent-xps-server-configuration-option.md)|
 |描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 建立維護計畫。|[建立維護計畫](../../relational-databases/maintenance-plans/create-a-maintenance-plan.md)|  
 |描述如何使用維護計畫設計介面建立維護計畫。|[建立維護計畫 &#40;維護計畫設計介面&#41;](../../relational-databases/maintenance-plans/create-a-maintenance-plan-maintenance-plan-design-surface.md)|  
 |記載 [物件總管] 中可用的維護計畫功能。|[維護計畫節點 &#40;物件總管&#41;](../../relational-databases/maintenance-plans/maintenance-plans-node-object-explorer.md)|  
   
   
+

@@ -1,79 +1,83 @@
 ---
-title: "伺服器上 XML 結構描述集合的需求與限制 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "識別碼 [XML 結構描述集合]"
-  - "XML 結構描述集合 [SQL Server], 限制"
-  - "替代群組 [SQL Server 中的 XML]"
-  - "XML 結構描述集合 [SQL Server], 指導方針"
-  - "lax 驗證"
-  - "列舉 Facet [SQL Server 中的XML]"
-  - "十進制有效位數 [SQL Server 中的 XML]"
-  - "重複的 XML 結構描述集合值"
-  - "結構描述集合 [SQL Server], 限制"
-  - "時區 [SQL Server 中的 XML]"
-  - "精確度小數位數 [SQL Server 中的XML]"
-  - "結構描述集合 [SQL Server], 指導方針"
-  - "語彙表示法"
+title: "伺服器上 XML 結構描述集合的需求與限制 | Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- identifiers [XML schema collections]
+- XML schema collections [SQL Server], limitations
+- substitution groups [XML in SQL Server]
+- XML schema collections [SQL Server], guidelines
+- lax validation
+- enumeration facets [XML in SQL Server]
+- decimal precision [XML in SQL Server]
+- repeated XML schema collection values
+- schema collections [SQL Server], limitations
+- time zones [XML in SQL Server]
+- precision decimals [XML in SQL Server]
+- schema collections [SQL Server], guidelines
+- lexical representation
 ms.assetid: c2314fd5-4c6d-40cb-a128-07e532b40946
 caps.latest.revision: 84
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 84
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f1cf19211d774242d0f4b88bc089fb8ece06b511
+ms.lasthandoff: 04/11/2017
+
 ---
-# 伺服器上 XML 結構描述集合的需求與限制
-  XML 結構描述定義語言 (XSD) 驗證對於使用 **xml** 資料類型的 SQL 資料行具有某些相關限制。 下表提供這些限制的詳細資料以及修改 XSD 結構描述以便讓它可以搭配 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用的指導方針。 本章節的主題提供有關特定限制的其他資訊，以及處理這些限制的指導方針。  
+# <a name="requirements-and-limitations-for-xml-schema-collections-on-the-server"></a>伺服器上 XML 結構描述集合的需求與限制
+  XML 結構描述定義語言 (XSD) 驗證對於使用 **xml** 資料類型的 SQL 資料行具有某些相關限制。 下表提供這些限制的詳細資料以及修改 XSD 結構描述以便讓它可以搭配 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用的指導方針。 本章節的主題提供有關特定限制的其他資訊，以及處理這些限制的指導方針。  
   
 |項目|限制|  
 |----------|----------------|  
 |**minOccurs** 與 **maxOccurs**|**minOccurs** 與 **maxOccurs** 屬性值必須符合 4 位元組的整數。 伺服器將會拒絕不符合的結構描述。|  
 |**\<xsd:choice>**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會拒絕沒有子系的 **\<xsd:choice>** 物件之結構描述，除非以零的 **minOccurs** 屬性值定義該物件。|  
-|**\<xsd:include>**|目前，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支援這個元素。 伺服器將會拒絕包含此元素的 XML 結構描述。<br /><br /> 若要解決此問題，您可以預先處理包含 **\<xsd:include>** 指示詞的 XML 結構描述，將任何所包含的結構描述內容複製並合併成單一結構描述，以便上傳至伺服器。 如需詳細資訊，請參閱[前置處理結構描述以合併包含的結構描述](../../relational-databases/xml/preprocess-a-schema-to-merge-included-schemas.md)。|  
-|**\<xsd:key>**、**\<xsd:keyref>** 和 **\<xsd:unique>**|目前，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  不支援這些以 XSD 為基礎的條件約束，以強制執行唯一性或建立索引鍵及索引鍵參考。 無法註冊包含這些元素的 XML 結構描述。|  
-|**\<xsd:redefine>**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支援此元素。 如需更新結構描述之其他做法的資訊，請參閱 [&#60;xsd:redefine&#62; 元素](../../relational-databases/xml/the-xsd-redefine-element.md)。|  
-|**\<xsd:simpleType>** 值|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 只支援具有 **xs:time** 和 **xs:dateTime** 以外之第二個元件的簡單類型毫秒有效位數，以及 **xs:time** 和 **xs:dateTime** 100 奈秒的有效位數。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會對所有可辨識的 XSD 簡單類型列舉做出限制。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支援在 **\<xsd:simpleType>** 宣告中使用 "NaN" 值。<br /><br /> 如需詳細資訊，請參閱 [&#60;xsd:simpleType&#62; 宣告的值](../../relational-databases/xml/values-for-xsd-simpletype-declarations.md)。|  
+|**\<xsd:include>**|目前， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支援這個元素。 伺服器將會拒絕包含此元素的 XML 結構描述。<br /><br /> 若要解決此問題，您可以預先處理包含**\<xsd:include>** 指示詞的 XML 結構描述，將任何所包含的結構描述內容複製並合併成單一結構描述，以便上傳至伺服器。 如需詳細資訊，請參閱 [前置處理結構描述以合併包含的結構描述](../../relational-databases/xml/preprocess-a-schema-to-merge-included-schemas.md)。|  
+|**\<xsd:key>**、**\<xsd:keyref>** 和 **\<xsd:unique>**|目前， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支援這些以 XSD 為基礎的條件約束，以強制執行唯一性或建立索引鍵及索引鍵參考。 無法註冊包含這些元素的 XML 結構描述。|  
+|**\<xsd:redefine>**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支援這個元素。 如需更新結構描述之其他做法的資訊，請參閱 [&#60;xsd:redefine&#62; 元素](../../relational-databases/xml/the-xsd-redefine-element.md)使用的指導方針。|  
+|**\<xsd:simpleType>** 值|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 只支援具有 **xs:time** 和 **xs:dateTime**以外之第二個元件的簡單類型毫秒有效位數，以及 **xs:time** 和 **xs:dateTime**100 奈秒的有效位數。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會對所有可辨識的 XSD 簡單類型列舉做出限制。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支援在 **\<xsd:simpleType>** 宣告中使用 "NaN" 值。<br /><br /> 如需詳細資訊，請參閱[&#60;xsd:simpleType&#62; 宣告的值](../../relational-databases/xml/values-for-xsd-simpletype-declarations.md)使用的指導方針。|  
 |**xsi:schemaLocation** 與 **xsi:noNamespaceSchemaLocation**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如果這些屬性出現在插入 **xml** 資料類型之資料行或變數的 XML 執行個體資料中，將會略過這些屬性。|  
 |**xs:QName**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支援使用 XML 結構描述限制元素且從 **xs:QName** 衍生的類型。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支援 **xs:QName** 為成員元素的聯集類型。<br /><br /> 如需詳細資訊，請參閱 [xs:QName 類型](../../relational-databases/xml/the-xs-qname-type.md)。|  
 |將成員加入現有替代群組|您無法在 XML 結構描述集合中將成員加入現有的替代群組。 在 XML 結構描述中的替代群組是限制成標頭元素，而且所有其成員元素都必須定義在相同的 {CREATE &#124; ALTER} XML SCHEMA COLLECTION 陳述式中。|  
-|標準格式與模式限制|值的標準表示法不能違反其類型的模式限制。 如需詳細資訊，請參閱[標準格式與模式限制](../../relational-databases/xml/canonical-forms-and-pattern-restrictions.md)。|  
+|標準格式與模式限制|值的標準表示法不能違反其類型的模式限制。 如需詳細資訊，請參閱 [標準格式與模式限制](../../relational-databases/xml/canonical-forms-and-pattern-restrictions.md)。|  
 |列舉 Facet|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支援類型含有模式 Facet 或列舉違反這些 Facet 的 XML 結構描述。|  
-|Facet 長度|**length**、**minLength** 和 **maxLength** Facet 將會儲存為 **long** 類型。 此類型是 32 位元的類型。 因此，這些值的可接受值範圍為 2^31。|  
+|Facet 長度|**length**、 **minLength**和 **maxLength** Facet 將會儲存為 **long** 類型。 此類型是 32 位元的類型。 因此，這些值的可接受值範圍為 2^31。|  
 |ID 屬性|每個 XML 結構描述元件都可擁有識別碼屬性。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會針對 **ID** 類型的 **\<xsd:attribute>** 宣告強制唯一性，但不會儲存這些值。 唯一性的強制範圍是 {CREATE &#124; ALTER} XML SCHEMA COLLECTION 陳述式。|  
-|ID 類型|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支援 **xs:ID**、**xs:IDREF** 或 **xs:IDREFS** 類型的元素。 結構描述不能宣告此類型的元素，或者宣告由限制此類型或從此類型衍生的元素。|  
-|區域命名空間|您必須為 **\<xsd:any>** 元素明確指定本機命名空間。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會拒絕使用空字串 ("") 作為命名空間屬性值的結構描述。 不過，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會要求明確使用 "##local"，將不完整的元素或屬性指示成萬用字元的執行個體。|  
-|混合的類型與簡單的內容|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支援將混合類型限制為簡單內容。 如需詳細資訊，請參閱[混合的類型與簡單的內容](../../relational-databases/xml/mixed-type-and-simple-content.md)。|  
+|ID 類型|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支援 **xs:ID**、 **xs:IDREF**或 **xs:IDREFS**類型的元素。 結構描述不能宣告此類型的元素，或者宣告由限制此類型或從此類型衍生的元素。|  
+|區域命名空間|您必須為 **\<xsd:any>** 項目明確指定本機命名空間。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會拒絕使用空字串 ("") 作為命名空間屬性值的結構描述。 不過， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會要求明確使用 "##local"，將不完整的元素或屬性指示成萬用字元的執行個體。|  
+|混合的類型與簡單的內容|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支援將混合類型限制為簡單內容。 如需詳細資訊，請參閱 [混合的類型與簡單的內容](../../relational-databases/xml/mixed-type-and-simple-content.md)。|  
 |NOTATION 類型|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支援 NOTATION 類型。|  
-|記憶體不足的情況|在處理大型的 XML 結構描述集合時，有可能發生記憶體不足的情況。 如需這個問題的解決方案，請參閱[大型的 XML 結構描述集合與記憶體不足的情況](../../relational-databases/xml/large-xml-schema-collections-and-out-of-memory-conditions.md)。|  
+|記憶體不足的情況|在處理大型的 XML 結構描述集合時，有可能發生記憶體不足的情況。 如需這個問題的解決方案，請參閱 [大型的 XML 結構描述集合與記憶體不足的情況](../../relational-databases/xml/large-xml-schema-collections-and-out-of-memory-conditions.md)。|  
 |重複值|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會拒絕 block 或 final 屬性有重複值的結構描述，例如 "restriction restriction" 與 "extension extension"。|  
 |結構描述元件識別碼|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會將結構描述元件識別碼的最大長度限制為 1000 個 Unicode 字元。 另外，不支援在識別碼中的 Surrogate 字元組。|  
-|時區資訊|在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更新版本中進行 XML 結構描述驗證時，**xs:date**、**xs:time** 和 **xs:dateTime** 值可完全支援時區資訊。 在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 回溯相容性模式下，時區資訊一定會正規化為國際標準時間 (格林威治標準時間)。 若為 **dateTime** 類型的元素，伺服器就會使用位移值 ("-05:00") 和傳回對應的 GMT 時間，藉以將提供的時間轉換為 GMT。|  
+|時區資訊|在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更新版本中進行 XML 結構描述驗證時， **xs:date**、 **xs:time**和 **xs:dateTime** 值可完全支援時區資訊。 在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 回溯相容性模式下，時區資訊一定會正規化為國際標準時間 (格林威治標準時間)。 若為 **dateTime** 類型的元素，伺服器就會使用位移值 ("-05:00") 和傳回對應的 GMT 時間，藉以將提供的時間轉換為 GMT。|  
 |聯集類型|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支援聯集類型的限制。|  
-|可變的有效位數小數|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支援可變的有效位數小數。 **xs:decimal** 類型表示任意有效位數的小數位數。 符合 XML 處理器的最低限度必須支援最少為 `totalDigits=18` 的十進位數字。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援 `totalDigits=38,`，但是會將小數點後數字限制為 10。 伺服器對於所有的 **xs:decimal** 執行個體值在內部都是使用 SQL 類型數值 (38, 10) 來表示。|  
+|可變的有效位數小數|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支援可變的有效位數小數。 **xs:decimal** 類型表示任意有效位數的小數位數。 符合 XML 處理器的最低限度必須支援最少為 `totalDigits=18`的十進位數字。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援 `totalDigits=38,` ，但是會將小數點後數字限制為 10。 伺服器對於所有的 **xs:decimal** 執行個體值在內部都是使用 SQL 類型數值 (38, 10) 來表示。|  
   
-## 本節內容  
+## <a name="in-this-section"></a>本節內容  
   
 |主題|描述|  
 |-----------|-----------------|  
-|[標準格式與模式限制](../../relational-databases/xml/canonical-forms-and-pattern-restrictions.md)|說明標準格式與模式限制。|  
+|[Canonical Forms and Pattern Restrictions](../../relational-databases/xml/canonical-forms-and-pattern-restrictions.md)|說明標準格式與模式限制。|  
 |[萬用字元元件和內容驗證](../../relational-databases/xml/wildcard-components-and-content-validation.md)|描述搭配 XML 結構描述集合使用萬用字元、Lax 驗證和 anyType 元素的限制。|  
-|[&#60;xsd:redefine&#62; 元素](../../relational-databases/xml/the-xsd-redefine-element.md)|說明使用 \<xsd:redefine> 元素的限制及描述因應措施。|  
+|[&#60;xsd:redefine&#62; 元素](../../relational-databases/xml/the-xsd-redefine-element.md)|說明使用 \<xsd:redefine> 項目的限制及描述因應措施。|  
 |[xs:QName 類型](../../relational-databases/xml/the-xs-qname-type.md)|描述有關 xs:QName 類型的限制。|  
 |[&#60;xsd:simpleType&#62; 宣告的值](../../relational-databases/xml/values-for-xsd-simpletype-declarations.md)|描述適用於 \<xsd:simpleType> 宣告的限制。|  
-|[列舉 Facet](../../relational-databases/xml/enumeration-facets.md)|描述有關列舉 Facet 的限制。|  
-|[混合的類型與簡單的內容](../../relational-databases/xml/mixed-type-and-simple-content.md)|描述將混合類型限制為簡單內容的限制。|  
+|[Enumeration Facets](../../relational-databases/xml/enumeration-facets.md)|描述有關列舉 Facet 的限制。|  
+|[Mixed Type and Simple Content](../../relational-databases/xml/mixed-type-and-simple-content.md)|描述將混合類型限制為簡單內容的限制。|  
 |[大型的 XML 結構描述集合與記憶體不足的情況](../../relational-databases/xml/large-xml-schema-collections-and-out-of-memory-conditions.md)|提供有時在處理大型結構描述集合時，可能發生之記憶體不足狀況的解決方案。|  
 |[不具決定性的內容模型](../../relational-databases/xml/non-deterministic-content-models.md)|描述有關不具決定性之內容模型的限制。|  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [XML 資料 &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)   
  [比較具類型的 XML 與不具類型的 XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [授與 XML 結構描述集合的權限](../../relational-databases/xml/grant-permissions-on-an-xml-schema-collection.md)   

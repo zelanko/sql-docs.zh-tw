@@ -1,27 +1,31 @@
 ---
-title: "解除封裝 DAC 封裝 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-data-tier-apps"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "精靈 [DAC], 解除封裝"
-  - "資料層應用程式 [SQL Server], 解除封裝"
-  - "如何 [DAC], 解除封裝"
-  - "解除封裝 DAC"
+title: "解除封裝 DAC 封裝 | Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-data-tier-apps
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- wizard [DAC], unpack
+- data-tier application [SQL Server], unpack
+- How to [DAC], unpack
+- unpack DAC
 ms.assetid: 697b69b3-f157-4e22-ac4e-f65c5fc2d0ad
 caps.latest.revision: 11
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 417a725dfab59a77714f44bee0be19c544a6e284
+ms.lasthandoff: 04/11/2017
+
 ---
-# 解除封裝 DAC 封裝
+# <a name="unpack-a-dac-package"></a>解除封裝 DAC 封裝
   使用 [解除封裝資料層應用程式] 對話方塊可從資料層應用程式 (DAC) 封裝解壓縮指令碼和檔案。 這些指令碼和檔案會放置在某個資料夾中，使用此封裝來將 DAC 部署到實際執行系統之前便可以進行檢閱。 DAC 的內容也可以與解除封裝到另一個資料夾的另一個封裝內容相比較。  
   
 1.  **開始之前**  [安全性](#Security)  
@@ -29,7 +33,7 @@ caps.handback.revision: 11
 2.  **使用下列項目，解除封裝 DAC：**[解除封裝資料層應用程式對話方塊](#UnpackDACDial)、[檢查 DAC 封裝的內容](#ExamDACPack)  
   
 ##  <a name="Security"></a> 安全性  
- 建議您不要部署來源不明或來源不受信任的 DAC 封裝。 這類 DAC 可能包含惡意程式碼，因此可能會執行非預期的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼，或是修改結構描述而造成錯誤。 在您使用來源不明或來源不受信任的 DAC 之前，請將它部署到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的隔離測試執行個體、解除封裝 DAC 並檢查程式碼，例如預存程序或其他使用者定義的程式碼。  
+ 建議您不要部署來源不明或來源不受信任的 DAC 封裝。 這類 DAC 可能包含惡意程式碼，因此可能會執行非預期的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼，或是修改結構描述而造成錯誤。 在您使用來源不明或來源不受信任的 DAC 之前，請將它部署到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的隔離測試執行個體、解除封裝 DAC 並檢查程式碼，例如預存程序或其他使用者定義的程式碼。  
   
 ##  <a name="UnpackDACDial"></a> 解除封裝資料層應用程式對話方塊  
  **解除封裝 DAC 封裝檔案**  
@@ -81,7 +85,7 @@ caps.handback.revision: 11
   
  如需詳細資訊，請參閱 [Validate a DAC Package](../../relational-databases/data-tier-applications/validate-a-dac-package.md)。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [資料層應用程式](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [部署資料層應用程式](../../relational-databases/data-tier-applications/deploy-a-data-tier-application.md)   
  [升級資料層應用程式](../../relational-databases/data-tier-applications/upgrade-a-data-tier-application.md)  

@@ -1,38 +1,42 @@
 ---
-title: "使用 SQL Server Profiler 建立及測試計畫指南 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-plan-guides"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "檢查計畫指南"
-  - "計畫指南 [SQL Server], 測試"
-  - "計畫指南 [SQL Server]，SQL Server Profiler"
-  - "比對查詢與計畫指南 [SQL Server]"
-  - "測試計畫指南"
-  - "SQL Server Profiler, 計畫指南"
-  - "計畫指南 [SQL Server], 建立"
-  - "擷取查詢文字 [SQL Server]"
-  - "驗證計畫指南"
-  - "Profiler [SQL Server Profiler], 計畫指南"
-  - "比對查詢與計畫指南 [SQL Server]"
+title: "使用 SQL Server Profiler 建立及測試計畫指南 | Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-plan-guides
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- checking plan guides
+- plan guides [SQL Server], testing
+- plan guides [SQL Server], SQL Server Profiler
+- matching queries to plan guides [SQL Server]
+- testing plan guides
+- SQL Server Profiler, plan guides
+- plan guides [SQL Server], creating
+- capturing query text [SQL Server]
+- verifying plan guides
+- Profiler [SQL Server Profiler], plan guides
+- query-to-plan guide matching [SQL Server]
 ms.assetid: 7018dbf0-1a1a-411a-88af-327bedf9cfbd
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 06df9d04d443ee83ab188bf56b08afd7126e70b2
+ms.lasthandoff: 04/11/2017
+
 ---
-# 使用 SQL Server Profiler 建立及測試計畫指南
-  當您建立計畫指南時，可使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 來擷取精確的查詢文字，以供使用於 **sp_create_plan_guide** 預存程序的 \<陳述式文字> 引數。 這有助於確保計畫指南符合編譯時期的查詢。 在建立計畫指南之後，[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 也可用來測試計畫指南實際上是否符合查詢。 一般而言，您應該使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 來測試計畫指南，以確認查詢符合您的計畫指南。  
+# <a name="use-sql-server-profiler-to-create-and-test-plan-guides"></a>使用 SQL Server Profiler 建立及測試計畫指南
+  當您建立計畫指南時，可使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 來擷取精確的查詢文字，以供使用於 **sp_create_plan_guide** 預存程序的 <陳述式文字> 引數。 這有助於確保計畫指南符合編譯時期的查詢。 在建立計畫指南之後， [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 也可用來測試計畫指南實際上是否符合查詢。 一般而言，您應該使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 來測試計畫指南，以確認查詢符合您的計畫指南。  
   
-## 使用 SQL Server Profiler 擷取查詢文字  
- 如果您執行查詢並使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 來擷取與提交至 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 完全相同的文字，您可以建立 SQL 或 TEMPLATE 類型的計畫指南來完全符合查詢文字。 這可確保計畫指南是由查詢最佳化工具使用。  
+## <a name="capturing-query-text-by-using-sql-server-profiler"></a>使用 SQL Server Profiler 擷取查詢文字  
+ 如果您執行查詢並使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 來擷取與提交至 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]完全相同的文字，您可以建立 SQL 或 TEMPLATE 類型的計畫指南來完全符合查詢文字。 這可確保計畫指南是由查詢最佳化工具使用。  
   
  請看應用程式以獨立批次提交的下列查詢：  
   
@@ -65,7 +69,7 @@ WHERE h.OrderDate BETWEEN '20000101' and '20050101';
   
 7.  在 [記事本] 中開啟批次文字檔，將文字複製到「複製與貼上緩衝區」。  
   
-8.  建立計畫指南，並將所複製的文字貼到 **@stmt** 引數所指定的引號內 (**''**)。 您必須在 **@stmt** 引數中的單引號前加上另一個單引號，以免除所有單引號。 當您插入這些單引號的時候，請小心不要加入或移除任何其他字元。 例如，您必須將 **'**20000101**'** 日期常值分隔為 **''**20000101**''**。  
+8.  建立計畫指南，並將所複製的文字貼到**@stmt**引數所指定的引號內 ( **@stmt** )。 您必須在 **@stmt** 引數中的單引號前加上另一個單引號，以免除所有單引號。 當您插入這些單引號的時候，請小心不要加入或移除任何其他字元。 例如，您必須將 **'**20000101**'** 日期常值分隔為 **''**20000101**''**。  
   
  以下是計畫指南：  
   
@@ -79,7 +83,7 @@ EXEC sp_create_plan_guide
     @hints = N'OPTION (MERGE JOIN)';  
 ```  
   
-## 使用 SQL Server Profiler 測試計畫指南  
+## <a name="testing-plan-guides-by-using-sql-server-profiler"></a>使用 SQL Server Profiler 測試計畫指南  
  若要確認計畫指南符合查詢，請遵循這些步驟：  
   
 1.  啟動 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 追蹤，確定已選取 [執行程序表 XML] 事件類型 (位於 [效能] 節點之下)。  
@@ -93,9 +97,9 @@ EXEC sp_create_plan_guide
     > [!NOTE]  
     >  不可使用 [Showplan XML for Query Compile] 事件。 [PlanGuideDB] 不存在該事件中。  
   
-5.  如果計畫指南的類型為 OBJECT 或 SQL，請確認 [執行程序表 XML] 事件包含您預期符合查詢之計畫指南的 **PlanGuideDB** 和 **PlanGuideName** 屬性。 若為 TEMPLATE 計畫指南，則請確認 [執行程序表 XML] 事件包含預期計畫指南的 **TemplatePlanGuideDB** 和 **TemplatePlanGuideName** 屬性。 這可確認計畫指南有用。 這些屬性包含在計畫的 **\<StmtSimple>** 元素之下。  
+5.  如果計畫指南的類型為 OBJECT 或 SQL，請確認 [執行程序表 XML] 事件包含您預期符合查詢之計畫指南的 **PlanGuideDB** 和 **PlanGuideName** 屬性。 若為 TEMPLATE 計畫指南，則請確認 [執行程序表 XML] 事件包含預期計畫指南的 **TemplatePlanGuideDB** 和 **TemplatePlanGuideName** 屬性。 這可確認計畫指南有用。 這些屬性包含在計畫的 **\<StmtSimple>** 項目之下。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)  
   
   

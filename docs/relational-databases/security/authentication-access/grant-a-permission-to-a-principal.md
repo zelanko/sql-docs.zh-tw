@@ -1,24 +1,28 @@
 ---
 title: "為主體授與權限 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "為主體授與權限"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Grant permission to a principal
 ms.assetid: 4107389d-05b6-4aa3-9fa8-95b40cdf05dc
 caps.latest.revision: 12
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 969f70df2cdb72c1fa47e645580ae723fb519864
+ms.lasthandoff: 04/11/2017
+
 ---
-# 為主體授與權限
+# <a name="grant-a-permission-to-a-principal"></a>為主體授與權限
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中為主體授與權限。  
   
  **本主題內容**  
@@ -51,7 +55,7 @@ caps.handback.revision: 12
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 若要為主體授與權限  
+#### <a name="to-grant-permission-to-a-principal"></a>若要為主體授與權限  
   
 1.  在 [物件總管] 中，展開包含您要授與權限之物件的資料庫。  
   
@@ -64,13 +68,13 @@ caps.handback.revision: 12
   
 4.  以滑鼠右鍵按一下預存程序，然後選取 [屬性]。  
   
-5.  在 [預存程序屬性 - \<預存程序名稱>] 對話方塊的 [選取頁面] 底下，選取 [權限]。 使用此頁面將使用者或角色加入至預存程序，並指定這些使用者或角色擁有的權限。  
+5.  在 [預存程序屬性 - <預存程序名稱>] 對話方塊的 [選取頁面] 底下，選取 [權限]。 使用此頁面將使用者或角色加入至預存程序，並指定這些使用者或角色擁有的權限。  
   
 6.  完成後，請按一下 **[確定]**。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 若要為主體授與權限  
+#### <a name="to-grant-permission-to-a-principal"></a>若要為主體授與權限  
   
 1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的執行個體。  
   
@@ -89,7 +93,7 @@ caps.handback.revision: 12
   
  如需詳細資訊，請參閱 [GRANT &#40;Transact-SQL&#41;](../../../t-sql/statements/grant-transact-sql.md) 和[授與物件權限 &#40;Transact-SQL&#41;](../../../t-sql/statements/grant-object-permissions-transact-sql.md)。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [主體 &#40;Database Engine&#41;](../../../relational-databases/security/authentication-access/principals-database-engine.md)  
   
   

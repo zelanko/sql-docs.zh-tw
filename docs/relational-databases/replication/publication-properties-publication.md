@@ -1,25 +1,29 @@
 ---
-title: "發行集屬性 - &lt;Publication&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "發行集屬性對話方塊"
+title: "發行集屬性 - &lt;發行集&gt; | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Publication Properties dialog box
 ms.assetid: 66e845e9-1308-4288-9110-ad2f22f1fc58
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 31f80253fe7e0fa562e67c9bbf8d685fa72ec37d
+ms.lasthandoff: 04/11/2017
+
 ---
-# 發行集屬性 - &lt;Publication&gt;
-  本章節提供所有頁面的資訊 **發行集屬性** ] 對話方塊中︰  
+# <a name="publication-properties----ltpublicationgt"></a>發行集屬性 - &lt;發行集&gt;
+  此章節提供 **[發行集屬性]** 對話方塊之所有頁面的資訊：  
   
 -   [發行集屬性，一般](../../relational-databases/replication/publication-properties-general.md)  
   
@@ -39,10 +43,10 @@ caps.handback.revision: 19
   
 -   [發行集屬性，資料分割](../../relational-databases/replication/publication-properties-data-partitions.md)  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
- [檢視及修改發行集屬性](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
+ [檢視和修改發行集屬性](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [發行資料和資料庫物件](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
- [屬性參考 & #40。複寫 & #41;](../../relational-databases/replication/properties-reference-replication.md)  
+ [屬性參考 &#40;複寫&#41;](../../relational-databases/replication/properties-reference-replication.md)  
   
   

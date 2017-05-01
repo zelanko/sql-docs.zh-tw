@@ -1,27 +1,31 @@
 ---
 title: "PreConnect:Starting 事件類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "PreConnect:Starting 事件類別"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- PreConnect:Starting Event Class
 ms.assetid: d43ed0ad-3dbd-42e0-9cef-8320b8d87497
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: de236e420c1f8f754b4af60a6710a0e9fafc7acf
+ms.lasthandoff: 04/11/2017
+
 ---
-# PreConnect:Starting 事件類別
+# <a name="preconnectstarting-event-class"></a>PreConnect:Starting 事件類別
   PreConnect:Starting 事件類別會指出 LOGON 觸發程序或資源管理員分類函數開始執行。  
   
-## PreConnect:Starting 事件類別資料行  
+## <a name="preconnectstarting-event-class-data-columns"></a>PreConnect:Starting 事件類別資料行  
   
 |資料行名稱|資料類型|描述|資料行識別碼|可篩選|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -32,7 +36,7 @@ caps.handback.revision: 18
 |ObjectID|**int**|使用者定義之分類物件的識別碼。|22|是|  
 |ObjectName|**nvarchar(256)**|使用者定義之分類函數的兩段式名稱。 例如，dbo.classifier。|34|是|  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [擴充事件](../../relational-databases/extended-events/extended-events.md)   
  [PreConnect:Completed 事件類別](../../relational-databases/event-classes/preconnect-completed-event-class.md)   
  [資源管理員](../../relational-databases/resource-governor/resource-governor.md)  

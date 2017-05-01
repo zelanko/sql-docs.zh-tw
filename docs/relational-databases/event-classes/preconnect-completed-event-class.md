@@ -1,27 +1,31 @@
 ---
 title: "PreConnect:Completed 事件類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "PreConnect:Completed 事件類別"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- PreConnect:Completed Event Class
 ms.assetid: 7ed2f620-6511-4985-9961-d2927c2b1759
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5f6bba668ddd25925ede8fe8cf71e4f1775f3dd9
+ms.lasthandoff: 04/11/2017
+
 ---
-# PreConnect:Completed 事件類別
+# <a name="preconnectcompleted-event-class"></a>PreConnect:Completed 事件類別
   PreConnect:Completedevent 類別會指出 LOGON 觸發程序或資源管理員分類函數執行完成。  
   
-## PreConnect:Completed 事件類別資料行  
+## <a name="preconnectcompleted-event-class-data-columns"></a>PreConnect:Completed 事件類別資料行  
   
 |資料行名稱|資料類型|描述|資料行識別碼|可篩選|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -41,7 +45,7 @@ caps.handback.revision: 18
 |TargetUserName|**sysname**|如果系統找不到對應的作用中群組，就是使用者定義分類函數的傳回值 (工作負載群組名稱)。 否則，這個資料行會設定為 NULL。|39|是|  
 |ObjectName|**nvarchar(256)**|使用者定義之分類函數的兩段式名稱。 例如，dbo.classifier。|34|是|  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [擴充事件](../../relational-databases/extended-events/extended-events.md)   
  [PreConnect:Starting 事件類別](../../relational-databases/event-classes/preconnect-starting-event-class.md)   
  [資源管理員](../../relational-databases/resource-governor/resource-governor.md)  

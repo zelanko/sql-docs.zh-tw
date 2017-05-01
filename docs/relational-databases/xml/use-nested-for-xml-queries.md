@@ -1,30 +1,34 @@
 ---
-title: "使用巢狀 FOR XML 查詢 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FOR XML 子句, 巢狀 FOR XML 查詢"
-  - "查詢 [SQL Server 中的 XML], 巢狀 FOR XML"
-  - "巢狀 FOR XML 查詢"
+title: "使用巢狀 FOR XML 查詢 | Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FOR XML clause, nested FOR XML queries
+- queries [XML in SQL Server], nested FOR XML
+- nested FOR XML queries
 ms.assetid: 7604161a-a958-446d-b102-7dee432979d0
 caps.latest.revision: 41
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: af44fc3250f620dcaad219e67b0e414cd76974a7
+ms.lasthandoff: 04/11/2017
+
 ---
-# 使用巢狀 FOR XML 查詢
-  **xml** 資料類型和 [FOR XML 查詢中的 TYPE 指示詞](../../relational-databases/xml/type-directive-in-for-xml-queries.md)可讓 FOR XML 查詢傳回的 XML 在伺服器以及用戶端上進行處理。  
+# <a name="use-nested-for-xml-queries"></a>使用巢狀 FOR XML 查詢
+  **xml** 資料類型和 [FOR XML 查詢中的 TYPE 指示詞](../../relational-databases/xml/type-directive-in-for-xml-queries.md) 可讓 FOR XML 查詢傳回的 XML 在伺服器以及用戶端上進行處理。  
   
-## 處理 xml 類型變數  
- 您可以將 FOR XML 查詢結果指派給 **xml** 類型變數，或是使用 XQuery 以查詢結果，然後將那個結果指派給 **xml**類型變數以進行其他處理。  
+## <a name="processing-with-xml-type-variables"></a>處理 xml 類型變數  
+ 您可以將 FOR XML 查詢結果指派給 **xml** 類型變數，或是使用 XQuery 以查詢結果，然後將那個結果指派給 **xml** 類型變數以進行其他處理。  
   
 ```  
 DECLARE @x xml  
@@ -38,7 +42,7 @@ SELECT @x
 --<row ProductModelID="119" Name="Bike Wash" />  
 ```  
   
- 使用其中一種 **xml** 資料類型方法，您就可以額外處理以變數 `@x` 傳回的 XML。 例如，您可以使用 [value() 方法](../../t-sql/xml/value-method-xml-data-type.md)來擷取 `ProductModelID` 屬性值。  
+ 使用其中一種 `@x`xml **資料類型方法，您就可以額外處理以變數** 傳回的 XML。 例如，您可以使用 `ProductModelID` value() 方法 [來擷取](../../t-sql/xml/value-method-xml-data-type.md)屬性值。  
   
 ```  
 DECLARE @i int;  
@@ -46,7 +50,7 @@ SET @i = (SELECT @x.value('/row[1]/@ProductModelID[1]', 'int'));
 SELECT @i;  
 ```  
   
- 在下列範例中，因為已在 `FOR XML` 子句中指定 `TYPE` 指示詞，所以傳回的 `FOR XML` 查詢結果為 **xml** 類型。  
+ 在下列範例中，因為已在 `FOR XML` 子句中指定 **指示詞，所以傳回的** 查詢結果為 `TYPE` xml `FOR XML` 類型。  
   
 ```  
 SELECT ProductModelID, Name  
@@ -81,7 +85,7 @@ SELECT  (SELECT ProductModelID, Name
 <row ProductModelID="122" Name="All-Purpose Bike Stand" />  
 ```  
   
-## 將內部 FOR XML 查詢結果當做 xml 類型執行個體傳回給外部查詢  
+## <a name="returning-inner-for-xml-query-results-to-outer-queries-as-xml-type-instances"></a>將內部 FOR XML 查詢結果當做 xml 類型執行個體傳回給外部查詢  
  您可以撰寫巢狀 `FOR XML` 查詢，其中的內部查詢結果會以 **xml** 類型傳回給外部查詢。 例如：  
   
 ```  
@@ -99,20 +103,20 @@ FOR XML AUTO, TYPE;
   
  請注意下列項目是從上一個查詢而來：  
   
--   以內部 `FOR XML` 查詢產生的 XML 會加入至外部 `FOR XML` 產生的 XML 中。  
+-   以內部 `FOR XML` 查詢產生的 XML 會加入至外部 `FOR XML`產生的 XML 中。  
   
--   內部查詢指定了 `TYPE` 指示詞。 因此，內部查詢所傳回的 XML 資料為 **xml** 類型。 如果未指定 TYPE 指示詞，則會以 **nvarchar(max)** 傳回內部 `FOR XML` 查詢的結果，並實體化 XML 資料。  
+-   內部查詢指定了 `TYPE` 指示詞。 因此，內部查詢所傳回的 XML 資料為 **xml** 類型。 如果未指定 TYPE 指示詞，則會以 `FOR XML` nvarchar(max) **傳回內部** 查詢的結果，並實體化 XML 資料。  
   
-## 控制產生之 XML 資料的外觀  
+## <a name="controlling-the-shape-of-resulting-xml-data"></a>控制產生之 XML 資料的外觀  
  巢狀 FOR XML 查詢可讓您有更多的控制權，以定義所產生之 XML 資料的外觀。 您可以使用 FOR XML 查詢來建構部分為屬性中心、部分為元素中心的 XML。  
   
- 如需使用巢狀 FOR XML 查詢指定屬性中心及元素中心之 XML 的詳細資訊，請參閱[與巢狀 FOR XML 查詢比較的 FOR XML 查詢](../../relational-databases/xml/for-xml-query-compared-to-nested-for-xml-query.md)和[使用巢狀 FOR XML 查詢組成 XML](../../relational-databases/xml/shape-xml-with-nested-for-xml-queries.md)。  
+ 如需使用巢狀 FOR XML 查詢指定屬性中心及元素中心之 XML 的詳細資訊，請參閱 [與巢狀 FOR XML 查詢比較的 FOR XML 查詢](../../relational-databases/xml/for-xml-query-compared-to-nested-for-xml-query.md) 和 [使用巢狀 FOR XML 查詢組成 XML](../../relational-databases/xml/shape-xml-with-nested-for-xml-queries.md)。  
   
- 您可以指定巢狀 AUTO 模式 FOR XML 查詢來產生含有同層級的 XML 階層。 如需詳細資訊，請參閱[使用巢狀 AUTO 模式查詢產生同層級](../../relational-databases/xml/generate-siblings-with-a-nested-auto-mode-query.md)。  
+ 您可以指定巢狀 AUTO 模式 FOR XML 查詢來產生含有同層級的 XML 階層。 如需詳細資訊，請參閱 [使用巢狀 AUTO 模式查詢產生同層級](../../relational-databases/xml/generate-siblings-with-a-nested-auto-mode-query.md)。  
   
  不論您使用的模式為何，巢狀 FOR XML 查詢都能提供更多的控制權以描述所產生 XML 的形狀。 它們可用來取代 EXPLICIT 模式查詢。  
   
-## 範例  
+## <a name="examples"></a>範例  
  下列主題將提供巢狀 FOR XML 查詢的範例。  
   
  [與巢狀 FOR XML 查詢比較的 FOR XML 查詢](../../relational-databases/xml/for-xml-query-compared-to-nested-for-xml-query.md)  
@@ -122,9 +126,9 @@ FOR XML AUTO, TYPE;
  示範如何使用巢狀 AUTO 模式查詢產生同層級  
   
  [在 ASP.NET 中使用巢狀 FOR XML 查詢](../../relational-databases/xml/use-nested-for-xml-queries-in-asp-net.md)  
- 示範 ASPX 應用程式如何使用 FOR XML，從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中傳回 XML。  
+ 示範 ASPX 應用程式如何使用 FOR XML，從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中傳回 XML。  
   
  [使用巢狀 FOR XML 查詢組成 XML](../../relational-databases/xml/shape-xml-with-nested-for-xml-queries.md)  
- 示範如何使用巢狀 FOR XML 查詢，以控制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 建立之 XML 文件的結構。  
+ 示範如何使用巢狀 FOR XML 查詢，以控制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]建立之 XML 文件的結構。  
   
   

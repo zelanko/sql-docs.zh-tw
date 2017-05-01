@@ -1,23 +1,27 @@
 ---
 title: "原則管理節點 (物件總管) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7f5dfdc1-6693-4b0d-8691-2d6f06913ed9
 caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 075e44b9b50eb356a4eabdebf8524f186db3d527
+ms.lasthandoff: 04/11/2017
+
 ---
-# 原則管理節點 (物件總管)
-  本節包含 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中物件總管之 **PolicyManagement** 節點的 F1 說明主題。  
+# <a name="policy-management-node-object-explorer"></a>原則管理節點 (物件總管)
+  本節包含 **中物件總管之** PolicyManagement [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]節點的 F1 說明主題。  
   
 -   [建立新條件或開啟條件對話方塊，一般頁面](../../relational-databases/policy-based-management/create-new-condition-or-open-condition-dialog-box-general-page.md)  
   
@@ -53,7 +57,7 @@ caps.handback.revision: 22
   
 -   [匯出原則對話方塊](../../relational-databases/policy-based-management/import-policies-dialog-box.md)  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用原則式管理來管理伺服器](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   

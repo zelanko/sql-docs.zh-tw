@@ -1,33 +1,37 @@
 ---
 title: "範例：分次還原資料庫 (完整復原模式) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "完整復原模式 [SQL Server], RESTORE 範例"
-  - "分次還原 [SQL Server], 完整復原模式"
-  - "還原順序 [SQL Server], 分次"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- full recovery model [SQL Server], RESTORE example
+- piecemeal restores [SQL Server], full recovery model
+- restore sequences [SQL Server], piecemeal
 ms.assetid: 0a84892d-2f7a-4e77-b2d0-d68b95595210
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5a939ad4e9e5313961f681c06f896a9f53a906e8
+ms.lasthandoff: 04/11/2017
+
 ---
-# 範例：分次還原資料庫 (完整復原模式)
+# <a name="example-piecemeal-restore-of-database-full-recovery-model"></a>範例：分次還原資料庫 (完整復原模式)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   分次還原順序會在檔案群組層級，分階段地還原與復原資料庫，從主要檔案群組開始，然後才是所有可讀寫的次要檔案群組。  
   
- 在此範例中，資料庫 `adb` 是在損毀之後還原至新的電腦。 資料庫使用完整復原模式，因此開始還原之前，必須對資料庫進行結尾記錄備份。 在損毀之前，所有檔案群組都在線上。 檔案群組 `B` 是唯讀的。 所有的次要檔案群組都必須還原，但是會依照重要性的高低順序來進行：`A` (最高)、`C`，最後是 `B`。 這個範例有四個記錄備份，包括結尾記錄備份。  
+ 在此範例中，資料庫 `adb` 是在損毀之後還原至新的電腦。 資料庫使用完整復原模式，因此開始還原之前，必須對資料庫進行結尾記錄備份。 在損毀之前，所有檔案群組都在線上。 檔案群組 `B` 是唯讀的。 所有的次要檔案群組都必須還原，但是會依照重要性的高低順序來進行： `A` (最高)、 `C`，最後是 `B`。 這個範例有四個記錄備份，包括結尾記錄備份。  
   
-## 結尾記錄備份  
+## <a name="tail-log-backup"></a>結尾記錄備份  
  還原資料庫之前，資料庫管理員必須備份記錄的結尾。 因為資料庫已損毀，必須使用 NO_TRUNCATE 選項來建立結尾記錄備份：  
   
 ```  
@@ -36,7 +40,7 @@ BACKUP LOG adb TO tailLogBackup WITH NORECOVERY, NO_TRUNCATE
   
  結尾記錄備份是下列還原順序中套用的最後一個備份。  
   
-## 還原順序  
+## <a name="restore-sequences"></a>還原順序  
   
 > [!NOTE]  
 >  線上還原順序的語法和離線還原順序的語法相同。  
@@ -82,7 +86,7 @@ BACKUP LOG adb TO tailLogBackup WITH NORECOVERY, NO_TRUNCATE
   
      所有檔案群組現在都已在線上。  
   
-## 其他範例  
+## <a name="additional-examples"></a>其他範例  
   
 -   [範例：分次還原資料庫 &#40;簡單復原模式&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-database-simple-recovery-model.md)  
   
@@ -96,11 +100,11 @@ BACKUP LOG adb TO tailLogBackup WITH NORECOVERY, NO_TRUNCATE
   
 -   [範例：線上還原唯讀檔案 &#40;完整復原模式&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-only-file-full-recovery-model.md)  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [線上還原 &#40;SQL Server&#41;](../../relational-databases/backup-restore/online-restore-sql-server.md)   
  [套用交易記錄備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [分次還原 &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)  
   
   

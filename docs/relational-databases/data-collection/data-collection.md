@@ -1,43 +1,47 @@
 ---
 title: "資料收集 | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/18/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-keywords: 
-  - "資料收集"
-helpviewer_keywords: 
-  - "資料收集 [SQL Server]"
+ms.custom: 
+ms.date: 07/18/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+keywords:
+- "資料收集"
+helpviewer_keywords:
+- data collection [SQL Server]
 ms.assetid: 0cc1f95c-5815-4d78-8868-a900be15e674
 caps.latest.revision: 46
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 46
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 2fd833eaeb6d1473f508967f740ad4ba331ae5e8
+ms.lasthandoff: 04/11/2017
+
 ---
-# 資料收集
+# <a name="data-collection"></a>資料收集
   資料收集器是 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的元件，它會收集不同的資料集。 資料收集會連續執行或依照使用者定義的排程執行。 然後，資料收集器會將收集而來的資料儲存在關聯式資料庫內 (稱為管理資料倉儲)。  
   
-## 什麼是資料收集器？ 
- 資料收集器是 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供之工具的資料收集平台的核心元件。 資料收集器會在資料庫伺服器和應用程式之間提供一個集中的資料收集點。 這個收集點可以從各種來源取得資料，而不只限於效能資料，這點與 SQL 追蹤不同。  
+## <a name="what-is-data-collector"></a>什麼是資料收集器？ 
+ 資料收集器是 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]提供之工具的資料收集平台的核心元件。 資料收集器會在資料庫伺服器和應用程式之間提供一個集中的資料收集點。 這個收集點可以從各種來源取得資料，而不只限於效能資料，這點與 SQL 追蹤不同。  
   
  資料收集器可讓您調整資料收集的範圍，以適合測試與實際環境的需要。 資料收集器也會使用資料倉儲，這是藉由設定不同的資料保留期間而讓您管理所收集之資料的關聯式資料庫。  
   
- 資料收集器支援動態微調資料收集，而且可透過它的 API 加以擴充。 如需詳細資訊，請參閱 [Data Collector Programming](../Topic/Data%20Collector%20Programming.md)。  
+ 資料收集器支援動態微調資料收集，而且可透過它的 API 加以擴充。 如需詳細資訊，請參閱 [Data Collector Programming](http://msdn.microsoft.com/library/53b4752b-055d-4716-b2bc-75b4cce84101)。  
   
- 下圖顯示資料收集器如何納入 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 資料收集和資料管理的整體策略中。  
+ 下圖顯示資料收集器如何納入 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]資料收集和資料管理的整體策略中。  
   
  ![資料管理中的資料收集器角色](../../relational-databases/data-collection/media/datacollectorroleindatastrategy.gif "資料管理中的資料收集器角色")  
   
-## 概念  
+## <a name="concepts"></a>概念  
  資料收集器與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 和 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]整合在一起，而且會廣泛地使用這兩者。 因此，在您使用資料收集器之前，應該要先了解與這些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件有關的某些概念。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 可用來排程及執行收集作業。 您應該了解以下概念：  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 可用來排定和執行收集作業。 您應該了解以下概念：  
   
 -   作業  
   
@@ -49,26 +53,26 @@ caps.handback.revision: 46
   
 -   Proxy 帳戶  
   
- 如需詳細資訊，請參閱[自動化管理工作 &#40;SQL Server Agent&#41;](../../ssms/agent/automated-administration-tasks-sql-server-agent.md)。  
+ 如需詳細資訊，請參閱[自動化管理工作 &#40;SQL Server Agent&#41;](http://msdn.microsoft.com/library/541ee5ac-2c9f-4b74-b4f0-13b7bd5920b0)。  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) 可用來執行從個別資料提供者收集資料的封裝。 您應該要熟悉下列的 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 工具和概念：  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) 可用來執行從個別資料提供者收集資料的套件。 您應該要熟悉下列的 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 工具和概念：  
   
--   [!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝  
+-   [!INCLUDE[ssIS](../../includes/ssis-md.md)] 套件  
   
 -   [!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝組態  
   
  如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 封裝](../../integration-services/integration-services-ssis-packages.md)。  
   
-## 詞彙  
+## <a name="terminology"></a>詞彙  
  **目標**  
- 支援資料收集之 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 版本中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。 如需支援之版本的詳細資訊，請參閱 [SQL Server 2016 版本支援的功能](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)的＜管理能力＞一節。  
+ 支援資料收集之 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 版本中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。 如需支援之版本的詳細資訊，請參閱 [SQL Server 2016 版本支援的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)的＜管理能力＞一節。  
   
- *「目標根」* (Target Root) 會定義目標階層中的子樹。 在這些由目標根定義之子樹上套用篩選後所產生之目標的群組，就是 *「目標集」* (Target Set)。 目標根可以是資料庫、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體或電腦執行個體。  
+ *「目標根」* (Target Root) 會定義目標階層中的子樹。 在這些由目標根定義之子樹上套用篩選後所產生之目標的群組，就是 *「目標集」* (Target Set)。 目標根可以是資料庫、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的執行個體或電腦執行個體。  
   
 **目標類型**  
- 目標的類型，它具有某些特性和行為。 例如，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體目標的特性與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫目標的特性不同。  
+ 目標的類型，它具有某些特性和行為。 例如， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體目標的特性與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫目標的特性不同。  
   
- **資料提供者 (data provider)**  
+ **資料提供者**  
  已知的資料來源，為提供資料給收集器型別的目標類型所特有。  
   
 **收集器類型**  
@@ -90,7 +94,7 @@ caps.handback.revision: 46
   
  ![資料收集器功能相依性](../../relational-databases/data-collection/media/dc-functional-dependencies.gif "資料收集器功能相依性")  
   
- 如圖中所示，資料提供者對於資料收集器而言是外部的，而且依照定義與目標之間有隱含關聯性。 此資料提供者為特定目標所特有 (例如，關聯式引擎之類的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務)，並提供可由資料收集器所使用的資料，例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的系統檢視表、效能監視器計數器和 WMI 提供者。  
+ 如圖中所示，資料提供者對於資料收集器而言是外部的，而且依照定義與目標之間有隱含關聯性。 此資料提供者為特定目標所特有 (例如，關聯式引擎之類的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務)，並提供可由資料收集器所使用的資料，例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的系統檢視表、效能監視器計數器和 WMI 提供者。  
   
  收集器型別是目標類型所特有 (根據資料提供者與目標類型的邏輯關聯)。 收集器型別會定義如何從特定的資料提供者收集資料 (使用系統化的參數) 及指定資料儲存結構描述。 必須要有資料提供者結構描述和儲存結構描述，才能儲存所收集的資料。 收集器型別也會提供管理資料倉儲的位置，此位置可位於執行資料收集的電腦或是另一部電腦上。  
   
@@ -108,7 +112,7 @@ caps.handback.revision: 46
   
  在啟用收集組之後，可以根據排程或是視需要來開始資料收集。 當資料收集開始時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 會針對資料收集器繁衍處理序，接著此處理序會針對收集組載入 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝。 代表集合類型的收集項會從指定目標上的適當資料提供者蒐集資料。 當收集週期結束時，這些資料會上傳到管理資料倉儲。  
   
-## 您可以執行的動作  
+## <a name="things-you-can-do"></a>您可以執行的動作  
   
 |描述|主題|  
 |----------------------|-----------|  
@@ -118,3 +122,5 @@ caps.handback.revision: 46
 |利用 SQL Server Profiler 的伺服器端追蹤功能來匯出追蹤定義，以便用來建立使用一般 SQL 追蹤收集器類型的收集組。| [使用 SQL Server Profiler 來建立 SQL 追蹤收集組 (SQL Server Management Studio)](https://msdn.microsoft.com/library/cc645955(v=sql.130).aspx)
   
   
+
+

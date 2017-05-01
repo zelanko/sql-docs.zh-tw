@@ -1,31 +1,35 @@
 ---
 title: "檔案還原 (完整復原模式) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "檔案還原 [SQL Server]"
-  - "完整復原模式 [SQL Server], 執行還原"
-  - "還原檔案 [SQL Server], Transact-SQL 還原順序"
-  - "還原檔案 [SQL Server]"
-  - "檔案還原 [SQL Server], 完整復原模式"
-  - "還原檔案 [SQL Server], 完整復原模式"
-  - "Transact-SQL 還原順序"
-  - "檔案還原 [SQL Server], Transact-SQL 還原順序"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- file restores [SQL Server]
+- full recovery model [SQL Server], performing restores
+- restoring files [SQL Server], Transact-SQL restore sequence
+- restoring files [SQL Server]
+- file restores [SQL Server], full recovery model
+- restoring files [SQL Server], full recovery model
+- Transact-SQL restore sequence
+- file restores [SQL Server], Transact-SQL restore sequence
 ms.assetid: d2236a2a-4cf1-4c3f-b542-f73f6096e15c
 caps.latest.revision: 42
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 686d6473f247f5b71764c1b4529bdf30c2f2efc1
+ms.lasthandoff: 04/11/2017
+
 ---
-# 檔案還原 (完整復原模式)
+# <a name="file-restores-full-recovery-model"></a>檔案還原 (完整復原模式)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   這個主題僅與在完整或大量載入復原模式下，包含多個檔案或檔案群組的資料庫有關。  
@@ -48,20 +52,15 @@ caps.handback.revision: 41
   
      在 *「線上檔案還原」*(Online File Restore) 中，如果資料庫在還原期間處於線上，則在檔案還原期間也會處於線上。 不過，在還原作業期間，包含正在還原之檔案的每個檔案群組都會離線。 離線檔案群組中的所有檔案都復原後，檔案群組就會自動回到線上。  
   
-     如需線上頁面和檔案還原支援的相關資訊，請參閱 [SQL Server 2016 各版本所支援的功能](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)。 如需線上還原的詳細資訊，請參閱[線上還原 &#40;SQL Server&#41;](../../relational-databases/backup-restore/online-restore-sql-server.md)。  
+     如需線上頁面和檔案還原支援的資訊，請參閱 [SQL Server 2016 版本支援的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。 如需線上還原的詳細資訊，請參閱[線上還原 (SQL Server)](../../relational-databases/backup-restore/online-restore-sql-server.md)。
   
     > [!TIP]  
-    >  若您要讓資料庫離線以進行檔案還原，請在啟動還原順序之前，執行下列 [ALTER DATABASE](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md) 陳述式：ALTER DATABASE *database_name* SET OFFLINE。  
+    >  若您要讓資料庫離線以進行檔案還原，請在啟動還原順序之前，執行下列 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md) 陳述式：ALTER DATABASE *database_name* SET OFFLINE。  
   
- **本主題內容：**  
-  
--   [從檔案備份還原損壞的檔案](#Overview)  
-  
--   [相關工作](#RelatedTasks)  
   
 ##  <a name="Overview"></a> 從檔案備份還原損壞的檔案  
   
-1.  在還原一個或多個損壞的檔案之前，請嘗試建立[結尾記錄備份](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)。  
+1.  在還原一個或多個損壞的檔案之前，請嘗試建立 [結尾記錄備份](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)。  
   
      如果記錄已經損壞，就無法建立結尾記錄備份，而且您必須還原整個資料庫。  
   
@@ -83,12 +82,12 @@ caps.handback.revision: 41
 > [!NOTE]  
 >  檔案備份可以用來將資料庫還原至較早的時間點。 若要這樣做，您必須還原整個檔案備份組，然後依序還原交易記錄備份，以回到上一次還原的檔案備份結尾之後的目標時間點。 如需時間點還原的詳細資訊，請參閱[將 SQL Server 資料庫還原至某個時間點 &#40;完整復原模式&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)。  
   
-## 離線檔案還原的 Transact-SQL 還原順序 (完整復原模式)  
+## <a name="transact-sql-restore-sequence-for-an-offline-file-restore-full-recovery-model"></a>離線檔案還原的 Transact-SQL 還原順序 (完整復原模式)  
  檔案還原實例包含複製、向前復原及復原適當資料的單一還原順序。  
   
- 本節說明檔案還原順序的基本 [RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md) 選項。 會省略與這個檔案還原無關的語法和詳細資料。  
+ 本節說明檔案還原順序的基本 [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 選項。 會省略與這個檔案還原無關的語法和詳細資料。  
   
- 下列範例還原順序顯示如何使用 WITH NORECOVERY 來離線還原兩個次要檔案 (`A` 和 `B`)。 接下來，此範例會以 NORECOVERY 套用這兩個記錄備份，然後再使用 WITH RECOVERY 套用結尾記錄備份以進行還原。  
+ 下列範例還原順序顯示如何使用 WITH NORECOVERY 來離線還原兩個次要檔案 ( `A` 和 `B`)。 接下來，此範例會以 NORECOVERY 套用這兩個記錄備份，然後再使用 WITH RECOVERY 套用結尾記錄備份以進行還原。  
   
 > [!NOTE]  
 >  下列範例還原順序是透過讓檔案離線來啟動，然後建立結尾記錄備份。  
@@ -117,7 +116,7 @@ RESTORE LOG database_name FROM <tail_log_backup>
    WITH RECOVERY;  
 ```  
   
-## 範例  
+## <a name="examples"></a>範例  
   
 -   [範例：線上還原讀寫檔案 &#40;完整復原模式&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-write-file-full-recovery-model.md)  
   
@@ -134,15 +133,14 @@ RESTORE LOG database_name FROM <tail_log_backup>
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.SqlRestore%2A> (SMO)  
   
- [&#91;頁首&#93;](#Top)  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [備份與還原：互通性與共存性 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-and-restore-interoperability-and-coexistence-sql-server.md)   
  [差異備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md)   
  [完整檔案備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-file-backups-sql-server.md)   
  [備份概觀 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
  [還原和復原概觀 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [完整資料庫還原 &#40;簡單復原模式&#41;](../../relational-databases/backup-restore/complete-database-restores-simple-recovery-model.md)   
  [分次還原 &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)  
   

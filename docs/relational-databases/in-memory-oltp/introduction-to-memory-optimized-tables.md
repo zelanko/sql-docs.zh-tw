@@ -1,29 +1,33 @@
 ---
 title: "記憶體最佳化的資料表簡介 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 12/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ef1cc7de-63be-4fa3-a622-6d93b440e3ac
 caps.latest.revision: 22
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 74eceb20d68e928663d35de10d92866c77e6aa25
+ms.lasthandoff: 04/11/2017
+
 ---
-# 記憶體最佳化的資料表簡介
+# <a name="introduction-to-memory-optimized-tables"></a>記憶體最佳化的資料表簡介
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   記憶體最佳化資料表是使用 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) 所建立的資料表。  
   
  記憶體最佳化資料表預設為完全持久，而且就如同 (傳統) 磁碟資料表上的交易，記憶體最佳化資料表上的完全持久交易為完全不可部分完成、一致、隔離且持久 (atomic, consistent, isolated, and durable - ACID)。 記憶體最佳化資料表和原生編譯的預存程序都支援 [!INCLUDE[tsql](../../includes/tsql-md.md)]的子集。
  
-自 SQL Server 2016 開始，Azure SQL Database 中不限制針對記憶體內部 OLTP 的[定序或字碼頁](../../relational-databases/collations/collation-and-unicode-support.md)。
+自 SQL Server 2016 開始，Azure SQL Database 中不限制針對記憶體內部 OLTP 的 [定序或字碼頁](../../relational-databases/collations/collation-and-unicode-support.md) 。
   
  記憶體最佳化資料表的主要存放區是主記憶體，記憶體最佳化資料表位於記憶體中。 資料表中的資料列可從記憶體讀取，並且可寫入記憶體。 整個資料表存在於記憶體中。 資料表資料的第二個副本保留在磁碟上，但僅做為持久性用途。 如需有關持久資料表的詳細資訊，請參閱 [建立及管理記憶體最佳化物件的儲存體](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md) 。 記憶體最佳化資料表中的資料只會在資料庫復原時從磁碟中讀取。 例如，伺服器重新啟動後。  
   
@@ -37,7 +41,7 @@ caps.handback.revision: 22
   
  下圖說明多重版本設定。 此圖顯示一個資料表包含三個資料列，每個資料列各有不同的版本。  
   
-![多重版本設定。](../../relational-databases/in-memory-oltp/media/hekaton-tables-1.png "多重版本設定。")  
+![多重版本設定。](../../relational-databases/in-memory-oltp/media/hekaton-tables-1.gif "多重版本設定。")  
   
  該資料表具有三個資料列：r1、r2 和 r3。 r1 有三個版本、r2 有兩個版本，而 r3 有四個版本。 請注意，相同資料列的不同版本不一定佔用連續記憶體位置。 不同的資料列版本可能分散在資料表資料結構中。  
   
@@ -78,9 +82,9 @@ caps.handback.revision: 22
   - 非叢集索引在 SQL Server 2016 也能以平行方式掃描。
   - 資料行存放區索引自 SQL Server 2014 起始以來，即能以平行方式掃描。
   
-「索引作業」：索引作業不會記錄下來，且只存在於記憶體中。  
+「索引作業」： 索引作業不會記錄下來，且只存在於記憶體中。  
   
-「並行」：效能受到引擎層級並行影響的應用程式，如閂鎖競爭或封鎖，改用記憶體內部 OLTP 之後，將可大幅改善其效能。  
+「並行」： 效能受到引擎層級並行影響的應用程式，如閂鎖競爭或封鎖，改用記憶體內部 OLTP 之後，將可大幅改善其效能。  
   
 下表列出關聯式資料庫中經常發現的效能和延展性問題，以及記憶體中 OLTP 如何改善效能。  
   
@@ -89,7 +93,7 @@ caps.handback.revision: 22
 |效能<br /><br /> 高資源 (CPU、I/O、網路或記憶體) 使用量。|CPU<br /> 原生編譯的預存程序可大幅降低 CPU 使用量，因為它們執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式所需的指令比 (傳統) 解譯的預存程序少了許多。<br /><br /> 記憶體中 OLTP 有助於減少向外延展的工作負載中的硬體投資，因為一部伺服器具有提供五到十部伺服器輸送量的潛力。<br /><br /> I/O<br /> 如果處理資料或索引頁面時遭遇 I/O 瓶頸，記憶體中 OLTP 可減少瓶頸。 此外，記憶體中 OLTP 物件的檢查點是連續的，不會導致 I/O 作業突然增加。 不過，如果效能嚴重不足資料表的工作集無法納入記憶體中，記憶體中 OLTP 將無法改善效能，因為它要求資料必須是記憶體駐留。 如果在記錄時遭遇 I/O 瓶頸，記憶體中 OLTP 可減少瓶頸，因為它進行的記錄較少。 如果將一個或多個記憶體最佳化資料表設為非持久資料表，就可以消除記錄資料的作業。<br /><br /> 記憶體<br /> 記憶體中 OLTP 並未提供任何效能優勢。 此外，記憶體中 OLTP 可能會對記憶體造成額外的壓力，因為物件需駐留在記憶體中。<br /><br /> 網路<br /> 記憶體中 OLTP 並未提供任何效能優勢。 資料需要從資料層到應用程式層之間的通訊。|  
 |延展性<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 應用程式中大多數的擴充問題都是由並行問題所造成，例如競爭鎖定、閂鎖和執行緒同步鎖定。|閂鎖競爭<br /> 典型的案例是以索引鍵順序並行插入資料列時，競爭索引的最後一頁。 由於記憶體中 OLTP 存取資料時不會採用閂鎖，因此可完全消除與執行緒同步鎖定競爭相關的延展性問題。<br /><br /> 執行緒同步鎖定競爭<br /> 由於記憶體中 OLTP 存取資料時不會採用閂鎖，因此可完全消除與同步鎖定競爭相關的延展性問題。<br /><br /> 鎖定相關的競爭<br /> 如果資料庫應用程式在讀取和寫入作業之間發生封鎖問題，記憶體中 OLTP 可解決封鎖問題，因為它使用新的開放式並行控制形式來實作所有交易隔離層級。 記憶體中 OLTP 不會使用 TempDB 儲存資料列版本。<br /><br /> 如果由於兩項寫入作業之間的衝突導致延展問題發生，例如兩項並行交易嘗試更新同一個資料列，記憶體中 OLTP 會讓其中一項交易成功，而讓另一項交易失敗。 失敗的交易必須以明確或隱含的方式重新送出，以重試交易。 不論是哪一種情況，您都必須變更應用程式。<br /><br /> 如果您的應用程式在兩個寫入作業之間遇到常見的衝突，開放式鎖定的值會減少。 此應用程式不適用 In-Memory OLTP。 大部分的 OLTP 應用程式都沒有寫入衝突，除非衝突是由鎖定擴大所引發。|  
   
-##  <a name="a-namerlsa-row-level-security-in-memory-optimized-tables"></a><a name="rls"></a> 記憶體最佳化資料表中的資料列層級安全性  
+##  <a name="rls"></a> Row-Level Security in Memory-Optimized Tables  
 
 記憶體最佳化資料表支援[資料列層級安全性](../../relational-databases/security/row-level-security.md) 。 將資料列層級安全性原則套用到記憶體最佳化資料表基本上與磁碟資料表相同，唯一差異在於當作安全性述詞使用的內嵌資料表值函式必須為原生編譯 (使用 WITH NATIVE_COMPILATION 選項建立)。 如需詳細資料，請參閱 [資料列層級安全性](../../relational-databases/security/row-level-security.md#Limitations) 主題中的 [跨功能的相容性](../../relational-databases/security/row-level-security.md) 一節。  
   
@@ -107,3 +111,4 @@ caps.handback.revision: 22
 [記憶體內部 OLTP &#40;記憶體內部最佳化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   
+

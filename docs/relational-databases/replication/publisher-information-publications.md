@@ -1,27 +1,31 @@
 ---
 title: "發行者資訊，發行集 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rep.monitor.publisherinfo.publications.f1"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rep.monitor.publisherinfo.publications.f1
 ms.assetid: 0b2e3d4e-03b7-4c31-8f96-48648d750010
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 58631a593562e6fc04ddf411128111bed5f847c7
+ms.lasthandoff: 04/11/2017
+
 ---
-# 發行者資訊，發行集
+# <a name="publisher-information-publications"></a>發行者資訊，發行集
   **[發行集]** 索引標籤可以提供在左窗格中所選取發行者之所有發行集的摘要資訊。  
   
-## 選項  
+## <a name="options"></a>選項  
  若要變更方格顯示資料的方式，請以滑鼠右鍵按一下方格，然後按一下下列其中一個選項：  
   
 -   **排序**：在 **[排序資料行]** 對話方塊中排序一個或多個資料行。  
@@ -45,10 +49,10 @@ caps.handback.revision: 27
   
 -   確定  
   
- **[效能嚴重不足]** 狀態值與交易式訂閱和合併訂閱有關；對交易式訂閱而言，唯有已設定臨界值時，才會顯示此狀態值。 如需效能測量和設定臨界值，請參閱 [使用複寫監視器監視效能](../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md) 和 [設定臨界值和複寫監視器 」 中的警告](../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)。  
+ **[效能嚴重不足]** 狀態值與交易式訂閱和合併訂閱有關；對交易式訂閱而言，唯有已設定臨界值時，才會顯示此狀態值。 如需效能測量和設定閾值的資訊，請參閱[使用複寫監視器監視效能](../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md)和[在複寫監視器中設定閾值和警告](../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)。  
   
  **發行集**  
- 每個發行集，在表單中的名稱 *PublicationDatabaseName: PublicationName*。  
+ 每個發行集的名稱，格式為 *PublicationDatabaseName: PublicationName*。  
   
  **訂閱**  
  每一個發行集的訂閱數目。  
@@ -63,7 +67,7 @@ caps.handback.revision: 27
 -   對快照式複寫而言，「正在同步處理」表示散發代理程式正在執行，且目前正在複寫資料。  
   
  **目前的平均效能** 和 **目前最差效能**  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更新版本。 分別代表發行集之所有訂閱的平均效能評比和最差效能評比。 評比是以複寫監視器最近使用的度量單位為基礎，並不反映訂閱經過一段時間的效能。  
+ 僅限[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更新版本。 分別代表發行集之所有訂閱的平均效能評比和最差效能評比。 評比是以複寫監視器最近使用的度量單位為基礎，並不反映訂閱經過一段時間的效能。  
   
  對異動複寫而言，複寫監視器只會顯示已定義效能臨界值之發行集的值。 如果發行集未定義效能臨界值，則此資料行會顯示 **[未啟用]**。 對合併式複寫而言，在相同連接類型 (撥號或 LAN) 上發生過五次同步處理，且每次同步處理都具有 50 或更多個變更之後，複寫監視器才會顯示值。 如果具有 50 或更多個變更的同步處理少於五次，或者最近的同步處理少於 50 個變更，則此資料行為空白。  
   
@@ -79,11 +83,11 @@ caps.handback.revision: 27
   
 -   嚴重  
   
- 如需有關如何定義效能評比和如何設定效能臨界值的詳細資訊，請參閱 [使用複寫監視器監視效能](../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md)。  
+ 如需如何定義效能評比和如何設定效能閾值的詳細資訊，請參閱[使用複寫監視器監視效能](../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md)。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [啟動複寫監視器](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [檢視資訊並執行工作的 「 發行者 」 與 #40;複寫監視器 & #41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)   
+ [檢視發行者的資訊並執行工作 &#40;複寫監視器&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)   
  [監視複寫](../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
   
   

@@ -1,31 +1,35 @@
 ---
-title: "還原交易記錄備份 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.restoretlog.general.f1"
-  - "sql13.swb.restoretlog.options.f1"
-helpviewer_keywords: 
-  - "還原記錄"
-  - "備份交易記錄 [SQL Server], 還原"
-  - "交易記錄備份 [SQL Server], 還原"
-  - "還原交易記錄 [SQL Server], 還原備份"
-  - "交易記錄還原 [SQL Server], SQL Server Management Studio"
+title: "還原交易記錄備份 (SQL Server) | Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.restoretlog.general.f1
+- sql13.swb.restoretlog.options.f1
+helpviewer_keywords:
+- restore log
+- backing up transaction logs [SQL Server], restoring
+- transaction log backups [SQL Server], restoring
+- restoring transaction logs [SQL Server], restoring backups
+- transaction log restores [SQL Server], SQL Server Management Studio
 ms.assetid: 1de2b888-78a6-4fb2-a647-ba4bf097caf3
 caps.latest.revision: 36
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 58f0b1ab65e812e778d630a2a95db8539e1b47eb
+ms.lasthandoff: 04/11/2017
+
 ---
-# 還原交易記錄備份 (SQL Server)
+# <a name="restore-a-transaction-log-backup-sql-server"></a>還原交易記錄備份 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中還原交易記錄備份。  
@@ -61,14 +65,14 @@ caps.handback.revision: 36
 ###  <a name="Security"></a> 安全性  
   
 ####  <a name="Permissions"></a> Permissions  
- RESTORE 權限提供給伺服器隨時可以取得其成員資格資訊的角色。 由於資料庫必須是可存取且未損毀，才能夠檢查固定資料庫角色成員資格，但執行 RESTORE 時未必如此，因此，**db_owner** 固定資料庫角色的成員並沒有 RESTORE 權限。  
+ RESTORE 權限提供給伺服器隨時可以取得其成員資格資訊的角色。 由於資料庫必須是可存取且未損毀，才能夠檢查固定資料庫角色成員資格，但執行 RESTORE 時未必如此，因此， **db_owner** 固定資料庫角色的成員並沒有 RESTORE 權限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 > [!WARNING]  
 >  還原的一般程序是在 [還原資料庫] 對話方塊中選取記錄備份，還有資料與差異備份。  
   
-#### 還原交易記錄備份  
+#### <a name="to-restore-a-transaction-log-backup"></a>還原交易記錄備份  
   
 1.  連接到適當的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]執行個體之後，在 [物件總管] 中按一下伺服器名稱展開伺服器樹狀目錄。  
   
@@ -101,12 +105,12 @@ caps.handback.revision: 36
     |------------|-----------|  
     |**Restore**|選取的核取方塊表示要還原的備份組。|  
     |**名稱**|備份組的名稱。|  
-    |**元件**|備份元件：[資料庫]、[檔案] 或 \<空白> (針對交易記錄)。|  
+    |**元件**|備份元件：[資料庫]、[檔案]或 \<空白> (針對交易記錄)。|  
     |**資料庫**|執行備份所涉及的資料庫名稱。|  
     |**開始日期**|備份作業開始的日期和時間，以用戶端的區域設定表示。|  
     |**完成日期**|備份作業完成的日期和時間，以用戶端的區域設定表示。|  
-    |**第一個 LSN**|備份組內第一筆交易的記錄序號。 針對檔案備份為空白。|  
-    |**最後一個 LSN**|備份組內最後一個交易的記錄序號。 針對檔案備份為空白。|  
+    |**[第一個 LSN]**|備份組內第一筆交易的記錄序號。 針對檔案備份為空白。|  
+    |**[最後一個 LSN]**|備份組內最後一個交易的記錄序號。 針對檔案備份為空白。|  
     |**檢查點 LSN**|在建立備份時，最近的檢查點之記錄序號。|  
     |**完整 LSN**|最近的完整資料庫備份之記錄序號。|  
     |**Server**|執行備份作業之 Database Engine 執行個體的名稱。|  
@@ -129,11 +133,11 @@ caps.handback.revision: 36
   
          下表列出方格的各資料行標頭，並描述各標頭的值。  
   
-        |標頭|值|  
+        |標頭|Value|  
         |------------|-----------|  
         |\<空白>|顯示選取標示的核取方塊。|  
         |**交易標示**|在認可交易時，由使用者所指定之標示交易的名稱。|  
-        |**日期**|認可交易的日期和時間。 交易日期和時間是依照 **msdbgmarkhistory** 資料表中記錄的顯示，而非依照用戶端電腦的日期和時間。|  
+        |**日期**|認可交易的日期和時間。 交易日期和時間是依照 **msdbgmarkhistory** 資料表中的記錄所顯示，而非依照用戶端電腦的日期和時間。|  
         |**描述**|在認可交易時，由使用者所指定之標示交易的描述 (如果有的話)。|  
         |**LSN**|標示之交易的記錄序號。|  
         |**資料庫**|認可標示的交易之資料庫的名稱。|  
@@ -149,7 +153,7 @@ caps.handback.revision: 36
   
          這個選項只能搭配 [回復未認可的交易，讓資料庫保持備妥可用...] 選項使用 (稍後會說明)，這等於使用 **RECOVERY** 選項來還原備份。  
   
-         選取此選項相當於使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]**RESTORE** 陳述式中的 **KEEP_REPLICATION** 選項。  
+         選取此選項相當於使用 **RESTORE** 陳述式中的 [!INCLUDE[tsql](../../includes/tsql-md.md)]**KEEP_REPLICATION** 選項。  
   
     -   **還原每個備份之前先提示**  
   
@@ -161,19 +165,19 @@ caps.handback.revision: 36
   
     -   **限制對還原資料庫的存取 (WITH RESTRICTED_USER)**  
   
-         僅有**資料庫擁有者 (db_owner)**、**資料庫建立者 (dbcreator)** 或**系統管理員 (sysadmin)** 的成員可以使用還原資料庫。  
+         僅有 **資料庫擁有者 (db_owner)**、 **資料庫建立者 (dbcreator)**或 **系統管理員 (sysadmin)**的成員可以使用還原資料庫。  
   
-         選取此選項相當於使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]**RESTORE** 陳述式中的 **RESTRICTED_USER** 選項。  
+         選取此選項相當於使用 **RESTORE** 陳述式中的 [!INCLUDE[tsql](../../includes/tsql-md.md)]**RESTRICTED_USER** 選項。  
   
 10. 針對 **[復原狀態]** 選項，指定資料庫在還原作業之後的狀態。  
   
-    -   **回復未認可的交易，讓資料庫保持備妥可用。 無法還原其他交易記錄。 (RESTORE WITH RECOVERY)**  
+    -   **回復未認可的交易，讓資料庫保持備妥可用。無法還原其他交易記錄。(RESTORE WITH RECOVERY)**  
   
          復原資料庫。 此選項相當於 **RESTORE** 陳述式中的 [!INCLUDE[tsql](../../includes/tsql-md.md)]**RECOVERY** 選項。  
   
          只有當您沒有任何要還原的記錄檔時，才選擇這個選項。  
   
-    -   **讓資料庫保持不運作，且不回復未認可的交易。 可以還原其他交易記錄。 (RESTORE WITH NORECOVERY)**  
+    -   **讓資料庫保持不運作，且不回復未認可的交易。可以還原其他交易記錄。(RESTORE WITH NORECOVERY)**  
   
          讓資料庫處於無法復原狀態，也就是 **RESTORING** 的狀態。 此選項相當於使用 **RESTORE** 陳述式中的 [!INCLUDE[tsql](../../includes/tsql-md.md)]**NORECOVERY** 選項。  
   
@@ -182,7 +186,7 @@ caps.handback.revision: 36
         > [!IMPORTANT]  
         >  若為鏡像或次要資料庫，請一律選取這個選項。  
   
-    -   **讓資料庫保持唯讀模式。 恢復未認可的交易，但是將恢復動作儲存在檔案中，以便能夠反轉復原結果。 (RESTORE WITH STANDBY)**  
+    -   **讓資料庫保持唯讀模式。恢復未認可的交易，但是將恢復動作儲存在檔案中，以便能夠反轉復原結果。(RESTORE WITH STANDBY)**  
   
          讓資料庫處於待命狀態。 此選項相當於使用 **RESTORE** 陳述式中的 [!INCLUDE[tsql](../../includes/tsql-md.md)]**STANDBY** 選項。  
   
@@ -195,7 +199,7 @@ caps.handback.revision: 36
 > [!IMPORTANT]  
 >  我們建議您在每一個 RESTORE 陳述式中永遠明確指定 WITH NORECOVERY 或 WITH RECOVERY，以避免模稜兩可。 這在撰寫指令碼時尤其重要。  
   
-#### 還原交易記錄備份  
+#### <a name="to-restore-a-transaction-log-backup"></a>還原交易記錄備份  
   
 1.  執行 RESTORE LOG 陳述式以套用交易記錄備份，請指定：  
   
@@ -207,9 +211,9 @@ caps.handback.revision: 36
   
      此陳述式的基本語法如下：  
   
-     RESTORE LOG *資料庫名稱* FROM \<備份裝置> WITH NORECOVERY。  
+     RESTORE LOG *資料庫名稱* FROM <備份裝置> WITH NORECOVERY。  
   
-     其中，*資料庫名稱* 為資料庫名稱，而 \<備份裝置> 為裝置名稱 (內含要還原的記錄備份)。  
+     其中，*資料庫名稱* 為資料庫名稱，而 <備份裝置> 為裝置名稱 (內含要還原的記錄備份)。  
   
 2.  對於需要套用的每個交易記錄備份，請重複步驟 1。  
   
@@ -236,13 +240,13 @@ caps.handback.revision: 36
     >  如果您建立鏡像資料庫，請省略復原步驟。 鏡像資料庫必須保留 RESTORING 狀態。  
   
 ###  <a name="TsqlExample"></a> 範例 (Transact-SQL)  
- 根據預設，[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫使用簡單復原模式。 此範例需要修改資料庫以使用完整復原模式，如下所示：  
+ 根據預設， [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫使用簡單復原模式。 此範例需要修改資料庫以使用完整復原模式，如下所示：  
   
 ```tsql  
 ALTER DATABASE AdventureWorks2012 SET RECOVERY FULL;  
 ```  
   
-#### A. 套用單一交易記錄備份  
+#### <a name="a-applying-a-single-transaction-log-backup"></a>A. 套用單一交易記錄備份  
  下列範例一開始會使用名為 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 備份裝置上的完整資料庫備份來還原 `AdventureWorks2012_1`資料庫。 此範例接著套用名為 `AdventureWorks2012_log`備份裝置上的第一個交易記錄備份。 最後，此範例復原了資料庫。  
   
 ```tsql  
@@ -260,7 +264,7 @@ RESTORE DATABASE AdventureWorks2012
 GO  
 ```  
   
-#### B. 套用多個交易記錄備份  
+#### <a name="b-applying-multiple-transaction-log-backups"></a>B. 套用多個交易記錄備份  
  下列範例一開始會使用名為 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 備份裝置上的完整資料庫備份來還原 `AdventureWorks2012_1`資料庫。 此範例接著逐一套用名為 `AdventureWorks2012_log`備份裝置上的前三個交易記錄備份。 最後，此範例復原了資料庫。  
   
 ```tsql  
@@ -294,14 +298,14 @@ GO
   
 -   [Restore a Database Backup Using SSMS](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)  
   
--   [在完整復原模式下將資料庫還原至失敗點 &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/restore database to point of failure - full recovery.md)  
+-   [在完整復原模式下將資料庫還原至失敗點 &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/restore-database-to-point-of-failure-full-recovery.md)  
   
 -   [將 SQL Server 資料庫還原至某個時間點 &#40;完整復原模式&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
   
 -   [還原資料庫至標示的交易 &#40;SQL Server Management Studio&#41;](../../relational-databases/backup-restore/restore-a-database-to-a-marked-transaction-sql-server-management-studio.md)  
   
-## 另請參閱  
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+## <a name="see-also"></a>另請參閱  
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [套用交易記錄備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)  
   
   

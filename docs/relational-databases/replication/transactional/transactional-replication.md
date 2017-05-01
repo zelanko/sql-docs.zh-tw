@@ -1,25 +1,29 @@
 ---
-title: "異動複寫 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "異動複寫, 關於異動複寫"
-  - "異動複寫"
+title: "異動複寫 | Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- transactional replication, about transactional replication
+- transactional replication
 ms.assetid: 3ca82fb9-81e6-4c3c-94b3-b15f852b18bd
 caps.latest.revision: 38
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c496335127a2f2d8acbacec53efa8ecdae697cfc
+ms.lasthandoff: 04/11/2017
+
 ---
-# 異動複寫
+# <a name="transactional-replication"></a>異動複寫
   通常以發行集資料庫物件和資料的快照集啟動異動複寫。 使用初始快照集後，在「發行者」端進行的後續資料變更和結構描述修改，通常會立即 (近乎即時) 傳遞到「訂閱者」。 資料變更會以相同的順序，並且在相同於「發行者」端發生之變更的交易界限內套用到「訂閱者」；因此，在發行集內會保證交易的一致性。  
   
  異動複寫一般用於伺服器對伺服器環境，並適用於下列各案例：  
@@ -32,7 +36,7 @@ caps.handback.revision: 38
   
 -   發行者有極大量的插入、更新和刪除活動。  
   
--   發行者或訂閱者為非 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫，如 Oracle。  
+-   發行者或訂閱者為非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫，如 Oracle。  
   
  依預設，交易式發行集的訂閱者應當成唯讀處理，因為變更並不會傳播回發行者。 不過，異動複寫的確有提供選項讓訂閱者更新。  
   
@@ -64,7 +68,7 @@ caps.handback.revision: 38
   
  當快照集散發並套用至訂閱者時，只有等待初始快照集的訂閱者會受到影響。 該發行集的其他訂閱者 (已初始化的訂閱者) 則不會受影響。  
   
-## 並行快照集處理(Concurrent Snapshot Processing)  
+## <a name="concurrent-snapshot-processing"></a>並行快照集處理(Concurrent Snapshot Processing)  
  快照式複寫將共用鎖定放置於快照集產生期間，作為部份複寫發行的所有資料表中。 這可避免在發行資料表中進行更新。 並行快照集處理 (異動複寫的預設行為) 在整個快照集產生期間不會設定共用鎖定，這讓使用者可在複寫建立初始快照集檔案期間繼續工作而不受中斷。  
   
 ##  <a name="SnapshotAgent"></a> 快照集代理程式  
@@ -73,9 +77,9 @@ caps.handback.revision: 38
  快照集檔案產生之後，您可以使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows Explorer 在快照集資料夾中檢視它們。  
   
 ##  <a name="LogReaderAgent"></a> 修改資料與記錄讀取器代理程式  
- 「記錄讀取器代理程式」在散發者端執行；它通常會連續執行，但也可根據您建立的排程執行。 「記錄讀取器代理程式」執行時，會先讀取發行集的交易記錄檔 (與一般 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Database Engine 作業時，交易追蹤和復原使用的資料庫記錄相同)，然後識別任何 INSERT、UPDATE 及 DELETE 陳述式，或對已標示為複寫之交易資料所作的其他修改。 接下來，此代理程式會將這些交易按批次複製到散發者端的散發資料庫中。 記錄讀取器代理程式會使用內部預存程序 **sp_replcmds** 取得下一個標示為複寫記錄檔中的命令集。 之後散發資料庫即成為儲存及轉送的佇列，變更會從這裡被送至訂閱者端。 只有經過認可的交易才會被送至散發資料庫。  
+ 「記錄讀取器代理程式」在散發者端執行；它通常會連續執行，但也可根據您建立的排程執行。 「記錄讀取器代理程式」執行時，會先讀取發行集的交易記錄檔 (與一般 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Database Engine 作業時，交易追蹤和復原使用的資料庫記錄相同)，然後識別任何 INSERT、UPDATE 及 DELETE 陳述式，或對已標示為複寫之交易資料所作的其他修改。 接下來，此代理程式會將這些交易按批次複製到散發者端的散發資料庫中。 「記錄讀取器代理程式」使用內部預存程序 **sp_replcmds** 從記錄檔中取得標示為要複寫的下一組命令。 之後散發資料庫即成為儲存及轉送的佇列，變更會從這裡被送至訂閱者端。 只有經過認可的交易才會被送至散發資料庫。  
   
- 在整個批次的交易順利地寫入散發資料庫之後，就表示它已經通過認可了。 命令到散發者的每個批次認可，記錄讀取器代理程式會呼叫 **sp_repldone** 標示上次完成複寫。 最後，代理程式會標示出交易記錄檔中有哪些資料列已經備妥可以清除。 仍在等待複寫的資料列不會被清除。  
+ 在整個批次的交易順利地寫入散發資料庫之後，就表示它已經通過認可了。 在每一批次的命令均通過散發者認可之後，「記錄讀取器代理程式」便會呼叫 **sp_repldone** ，以標示最後一次複寫完成之處。 最後，代理程式會標示出交易記錄檔中有哪些資料列已經備妥可以清除。 仍在等待複寫的資料列不會被清除。  
   
  交易命令在傳播到所有訂閱者之前或達到最長散發保留期限之前，會儲存於散發資料庫中。 訂閱者接收交易的順序，與這些交易套用在發行者端時的順序相同。  
   

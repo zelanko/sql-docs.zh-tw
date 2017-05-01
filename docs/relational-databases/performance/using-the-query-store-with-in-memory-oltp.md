@@ -1,25 +1,29 @@
 ---
-title: "使用含有記憶體內部 OLTP 的查詢存放區 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/29/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "查詢存放區, 記憶體內部"
+title: "使用含有記憶體內部 OLTP 的查詢存放區 | Microsoft 文件"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/29/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Query Store, in-memory
 ms.assetid: aae5ae6d-7c90-4661-a1c5-df704319888a
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 31483a4450089f194241f19df0bd0072b5026375
+ms.lasthandoff: 04/11/2017
+
 ---
-# 使用含有記憶體內部 OLTP 的查詢存放區
+# <a name="using-the-query-store-with-in-memory-oltp"></a>使用含有記憶體內部 OLTP 的查詢存放區
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查詢存放區可讓您針對執行記憶體內部 OLTP 的工作負載，監視原生編譯程式碼的效能。  
@@ -52,9 +56,9 @@ caps.handback.revision: 10
   
 -   不會針對原生編譯的查詢填入 [sys.query_store_runtime_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md) 中的記憶體授與計量；其值永遠為 0。 記憶體授與資料行為：avg_query_max_used_memory、last_query_max_used_memory、min_query_max_used_memory、max_query_max_used_memory 和 stdev_query_max_used_memory。  
   
-## 啟用和使用含有記憶體內部 OLTP 的查詢存放區  
+## <a name="enabling-and-using-query-store-with-in-memory-oltp"></a>啟用和使用含有記憶體內部 OLTP 的查詢存放區  
  下列簡單的範例示範如何在端對端使用者案例中，使用含有記憶體內部 OLTP 的查詢存放區。 在此範例中，我們假設資料庫 (`MemoryOLTP`) 已針對記憶體內部 OLTP 啟用。  
-    如需記憶體最佳化資料表之必要條件的詳細資訊，請參閱[建立記憶體最佳化資料表和原生編譯的預存程序](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md)。  
+    如需記憶體最佳化資料表之必要條件的詳細資訊，請參閱 [建立記憶體最佳化資料表和原生編譯的預存程序](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md)。  
   
 ```  
 USE MemoryOLTP;  
@@ -133,11 +137,12 @@ JOIN sys.query_store_runtime_stats_interval AS rsi
 WHERE q.object_id = OBJECT_ID('dbo.OrderInsert');  
 ```  
   
-## 另請參閱  
- [使用查詢存放區監視效能](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
+## <a name="see-also"></a>另請參閱  
+ [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [建立記憶體最佳化資料表和原生編譯的預存程序](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md)   
  [使用查詢存放區的最佳作法](../../relational-databases/performance/best-practice-with-the-query-store.md)   
  [查詢存放區預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
  [查詢存放區目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)  
   
   
+

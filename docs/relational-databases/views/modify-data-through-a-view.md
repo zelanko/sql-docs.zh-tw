@@ -1,26 +1,30 @@
 ---
 title: "透過檢視修改資料 | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/05/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-views"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "資料修改 [SQL Server], 檢視"
-  - "檢視 [SQL Server], 修改資料方式"
-  - "修改資料 [SQL Server], 檢視"
+ms.custom: 
+ms.date: 10/05/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-views
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data modifications [SQL Server], views
+- views [SQL Server], modifying data through
+- modifying data [SQL Server], views
 ms.assetid: 410e2812-4ebe-48b2-b95f-c7784f1c4336
 caps.latest.revision: 35
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 360ab52b8f6f8889311ccbb0fd820493ca01b9a8
+ms.lasthandoff: 04/11/2017
+
 ---
-# 透過檢視修改資料
+# <a name="modify-data-through-a-view"></a>透過檢視修改資料
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中修改基礎基底資料表的資料。  
   
   
@@ -36,7 +40,7 @@ caps.handback.revision: 35
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 透過檢視修改資料表資料  
+#### <a name="to-modify-table-data-through-a-view"></a>透過檢視修改資料表資料  
   
 1.  在 **[物件總管]**中，展開包含檢視的資料庫，然後展開 **[檢視]**。  
   
@@ -54,7 +58,7 @@ caps.handback.revision: 35
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 透過檢視更新資料表資料  
+#### <a name="to-update-table-data-through-a-view"></a>透過檢視更新資料表資料  
   
 1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
@@ -73,7 +77,7 @@ caps.handback.revision: 35
   
  如需詳細資訊，請參閱 [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)。  
   
-#### 透過檢視插入資料表資料  
+#### <a name="to-insert-table-data-through-a-view"></a>透過檢視插入資料表資料  
   
 1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
@@ -92,3 +96,4 @@ caps.handback.revision: 35
  如需詳細資訊，請參閱 [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)。  
   
   
+

@@ -1,26 +1,30 @@
 ---
 title: "載入檔案至 FileTable | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FileTable [SQL Server], 移轉檔案"
-  - "FileTable [SQL Server], 大量載入"
-  - "FileTable [SQL Server], 載入檔案"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FileTables [SQL Server], migrating files
+- FileTables [SQL Server], bulk loading
+- FileTables [SQL Server], loading files
 ms.assetid: dc842a10-0586-4b0f-9775-5ca0ecc761d9
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: aea5bf6d2bbdb455735c589d46ac76f0e587cda3
+ms.lasthandoff: 04/11/2017
+
 ---
-# 載入檔案至 FileTable
+# <a name="load-files-into-filetables"></a>載入檔案至 FileTable
   描述如何載入或移轉檔案至 FileTable 中。  
   
 ##  <a name="BasicsLoadNew"></a> 將檔案載入或移轉至 FileTable  
@@ -43,7 +47,7 @@ caps.handback.revision: 23
 ###  <a name="HowToMigrateFiles"></a> 範例：從檔案系統移轉檔案至 FileTable  
  在此案例中，您的檔案儲存在檔案系統中，而且您在擁有內含指向該檔案之指標的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，具有中繼資料表。 您想要將檔案移入 FileTable，然後使用 FileTable UNC 路徑來取代中繼資料內每個檔案的原始 UNC 路徑。 [GetPathLocator &#40;Transact-SQL&#41;](../../relational-databases/system-functions/getpathlocator-transact-sql.md) 函式可協助您達成此目標。  
   
- 在此範例中，假設存在現有的資料庫資料表 **PhotoMetadata**，其中包含相片的相關資料。 這個資料表中有一個 **varchar**(512) 類型的 **UNCPath** 資料行，其中包含對應至 .jpg 檔案的實際 UNC 路徑。  
+ 在此範例中，假設存在現有的資料庫資料表 **PhotoMetadata**，其中包含相片的相關資料。 這個資料表中有一個 **varchar** (512) 類型的 **UNCPath**資料行，其中包含對應至 .jpg 檔案的實際 UNC 路徑。  
   
  若要將影像檔從檔案系統移轉至 FileTable，您必須進行下列動作：  
   
@@ -117,12 +121,12 @@ UPDATE PhotoMetadata
   
     -   停用 FileTable 命名空間，且不使用 **IGNORE_CONSTRAINTS** 子句進行呼叫。 然後重新啟用 FileTable 命名空間。  
   
- 如需停用 FileTable 條件約束的詳細資訊，請參閱[管理 FileTables](../../relational-databases/blob/manage-filetables.md)。  
+ 如需停用 FileTable 條件約束的詳細資訊，請參閱 [管理 FileTables](../../relational-databases/blob/manage-filetables.md)。  
   
 ###  <a name="disabling"></a> 如何：為大量載入停用 FileTable 條件約束  
- 若不希望大量載入檔案至 FileTable 時發生強制啟動系統定義之條件約束負擔，您可暫時停用該條件約束。 如需詳細資訊，請參閱[管理作業步驟](../../relational-databases/blob/manage-filetables.md)。  
+ 若不希望大量載入檔案至 FileTable 時發生強制啟動系統定義之條件約束負擔，您可暫時停用該條件約束。 如需詳細資訊，請參閱 [管理作業步驟](../../relational-databases/blob/manage-filetables.md)。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [利用 Transact-SQL 存取 FileTable](../../relational-databases/blob/access-filetables-with-transact-sql.md)   
  [使用檔案輸入輸出 API 存取 FileTable](../../relational-databases/blob/access-filetables-with-file-input-output-apis.md)  
   

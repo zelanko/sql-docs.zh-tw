@@ -1,25 +1,29 @@
 ---
-title: "更新統計資料 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-statistics"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "更新統計資料"
-  - "統計資料 [SQL Server], 更新"
+title: "更新統計資料 | Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-statistics
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- updating statistics
+- statistics [SQL Server], updating
 ms.assetid: 4b97c0b4-03ff-4cfb-9c3f-3b33290b7a2c
 caps.latest.revision: 9
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fca31288577f6905b99ac2c76e018ed134f10171
+ms.lasthandoff: 04/11/2017
+
 ---
-# 更新統計資料
+# <a name="update-statistics"></a>更新統計資料
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中針對資料表或索引檢視表更新查詢最佳化統計資料。 根據預設，查詢最佳化工具已經視需要更新統計資料，以便改善查詢計畫。不過，在某些情況下，您可以使用 UPDATE STATISTICS 或 `sp_updatestats` 預存程序，讓統計資料的更新頻率高於預設更新頻率，藉以改善查詢效能。  
   
  更新統計資料可確保查詢使用最新的統計資料進行編譯。 不過，更新統計資料會導致查詢重新編譯。 我們建議您不要太頻繁地更新統計資料，因為改善查詢計劃與重新編譯查詢所花費的時間之間具有效能權衡取捨。 特定的權衡取捨完全取決於您的應用程式。 UPDATE STATISTICS 可以使用 tempdb 來排序資料列的範例，以便建立統計資料。  
@@ -41,11 +45,11 @@ caps.handback.revision: 9
 ###  <a name="Security"></a> 安全性  
   
 ####  <a name="Permissions"></a> Permissions  
- 如果使用 UPDATE STATISTICS 或透過 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 進行變更，需要資料表或檢視表的 ALTER 權限。 如果使用 `sp_updatestats`，需要**系統管理員**固定伺服器角色的成員資格或資料庫 (**dbo**) 的擁有權。  
+ 如果使用 UPDATE STATISTICS 或透過 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]進行變更，需要資料表或檢視表的 ALTER 權限。 如果使用 `sp_updatestats`，需要 **系統管理員** 固定伺服器角色的成員資格或資料庫 (**dbo**) 的擁有權。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 若要更新統計資料物件  
+#### <a name="to-update-a-statistics-object"></a>若要更新統計資料物件  
   
 1.  在 **[物件總管]**中，按一下加號展開要在其中更新統計資料的資料庫。  
   
@@ -57,11 +61,11 @@ caps.handback.revision: 9
   
 5.  以滑鼠右鍵按一下要更新的統計資料物件，然後選取 [屬性]。  
   
-6.  在 [統計資料屬性 - \<統計資料名稱>] 對話方塊中，選取 [更新這些資料行的統計資料] 核取方塊，然後按一下 [確定]。  
+6.  在 [統計資料屬性 - <統計資料名稱>] 對話方塊中，選取 [更新這些資料行的統計資料] 核取方塊，然後按一下 [確定]。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 若要更新特定的統計資料物件  
+#### <a name="to-update-a-specific-statistics-object"></a>若要更新特定的統計資料物件  
   
 1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
@@ -77,7 +81,7 @@ caps.handback.revision: 9
     GO  
     ```  
   
-#### 若要更新資料表中的所有統計資料  
+#### <a name="to-update-all-statistics-in-a-table"></a>若要更新資料表中的所有統計資料  
   
 1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
@@ -95,7 +99,7 @@ caps.handback.revision: 9
   
  如需詳細資訊，請參閱 [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)。  
   
-#### 若要更新資料庫中的所有統計資料  
+#### <a name="to-update-all-statistics-in-a-database"></a>若要更新資料庫中的所有統計資料  
   
 1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   

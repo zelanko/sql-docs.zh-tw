@@ -1,29 +1,33 @@
 ---
 title: "DML 觸發程序 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-dml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "觸發程序 [SQL Server], 關於觸發程序"
-  - "DML 觸發程序, 關於 DML 觸發程序"
-  - "觸發程序 [SQL Server]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-dml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- triggers [SQL Server], about triggers
+- DML triggers, about DML triggers
+- triggers [SQL Server]
 ms.assetid: 298eafca-e01f-4707-8c29-c75546fcd6b0
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 49e88050bea0405d8801a5b53faafcb644a6b62d
+ms.lasthandoff: 04/11/2017
+
 ---
-# DML 觸發程序
+# <a name="dml-triggers"></a>DML 觸發程序
   DML 觸發程序是一種特殊類型的預存程序，會在影響觸發程序中所定義之資料表或檢視表的資料操作語言 (DML) 事件執行時自動執行。 DML 事件包括 INSERT、UPDATE 或 DELETE 陳述式。 DML 觸發程序可用以強制執行商務規則和資料完整性、查詢其他資料表，以及包括複雜的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 觸發程序和引發它的陳述式會被視為單一交易處理，而這樣的交易可以從觸發程序內部回復。 如果偵測到伺服器錯誤 (例如，磁碟空間不足)，整個交易就會自動回復。  
   
-## DML 觸發程序的優點  
+## <a name="dml-trigger-benefits"></a>DML 觸發程序的優點  
  DML 觸發程序與條件約束類似，兩者都可強制執行實體完整性或網域完整性。 實體完整性一般應由最低層級的索引強制執行，且應為 PRIMARY KEY 和 UNIQUE 條件約束的一部分，或是與條件約束完全無關。 網域完整性應透過 CHECK 條件約束來強制執行，而參考完整性 (RI) 則應透過 FOREIGN KEY 條件約束來強制執行。 當條件約束所支援的功能無法滿足應用程式的功能需求時，DML 觸發程序即可發揮它的作用。  
   
  下列清單比較 DML 觸發程序與條件約束，以及識別較適合使用 DML 觸發程序的時間。  
@@ -44,7 +48,7 @@ caps.handback.revision: 27
   
 -   如果觸發資料表有條件約束的話，它們會在執行 INSTEAD OF 觸發程序後，但在執行 AFTER 觸發程序前檢查。 如果違反條件約束的話，即復原 INSTEAD OF 觸發程序動作，並且不執行 AFTER 觸發程序。  
   
-## DML 觸發程序的類型  
+## <a name="types-of-dml-triggers"></a>DML 觸發程序的類型  
  AFTER 觸發程序  
  AFTER 觸發程序會在執行過 INSERT、UPDATE、MERGE 或 DELETE 陳述式的動作後才執行。 發生強制違規時絕對不會執行 AFTER 觸發程序，所以，這些觸發程序無法用於可能妨礙強制違規的任何處理動作。 對於 MERGE 陳述式中指定的每個 INSERT、UPDATE 或 DELETE 動作，會針對每一項 DML 作業引發對應的觸發程序。  
   
@@ -60,13 +64,13 @@ caps.handback.revision: 27
 |串聯參考|沒有限制|INSTEAD OF UPDATE 及 DELETE 觸發程序不允許用於串聯參考完整性條件約束的目標資料表。|  
 |執行|之後：<br /><br /> 條件約束處理<br /><br /> 宣告性參考動作<br /><br /> **inserted** 與 **deleted** 資料表建立<br /><br /> 觸發動作|之前：條件約束處理<br /><br /> 取代：觸發動作<br /><br /> 之後：  **inserted** 與 **deleted** 資料表建立|  
 |執行順序|可指定第一和最後一個執行|不適用|  
-|**已插入**和**已刪除**資料表中的 **varchar(max)**、**nvarchar(max)** 和 **varbinary(max)** 資料行參考|Allowed|Allowed|  
+|**已插入**和 **已刪除**資料表中的 **varchar(max)** 、 **nvarchar(max)** 和 **varbinary(max)** 資料行參考|Allowed|Allowed|  
 |**已插入**和 **已刪除**資料表中的 **text** 、 **ntext** 和 **image** 資料行參考|不允許|Allowed|  
   
  CLR 觸發程序  
  CLR 觸發程序可以是 AFTER 或 INSTEAD OF 觸發程序。 CLR 觸發程序也可以是 DDL 觸發程序。 CLR 觸發程序不執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 預存程序，而是執行以 Managed 程式碼撰寫的一個或多個方法，這些方法是在 .NET Framework 中建立並在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中上傳的組件成員。  
   
-## 相關工作  
+## <a name="related-tasks"></a>相關工作  
   
 |工作|主題|  
 |----------|-----------|  
@@ -81,7 +85,7 @@ caps.handback.revision: 27
 |描述如何刪除或停用 DML 觸發程序。|[刪除或停用 DML 觸發程序](../../relational-databases/triggers/delete-or-disable-dml-triggers.md)|  
 |描述如何管理觸發程序安全性。|[管理觸發程序安全性](../../relational-databases/triggers/manage-trigger-security.md)|  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   
  [DROP TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-trigger-transact-sql.md)   

@@ -1,31 +1,35 @@
 ---
-title: "Table Properties - SSMS | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.tableproperties.storage.f1"
-  - "sql13.swb.tableproperties.changetracking.f1"
-  - "sql13.swb.tableproperties.general.f1"
-  - "sql12.SWB.SELECTCOLUMNS.F1"
-  - "sql13.swb.tableproperties.filetable.f1"
+title: "資料表屬性 - SSMS | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.tableproperties.storage.f1
+- sql13.swb.tableproperties.changetracking.f1
+- sql13.swb.tableproperties.general.f1
+- sql12.SWB.SELECTCOLUMNS.F1
+- sql13.swb.tableproperties.filetable.f1
 ms.assetid: ad8a2fd4-f092-4c0f-be85-54ce8b9d725a
 caps.latest.revision: 43
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 43
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e1bc425e913f88fe7becd220f2275bacf6b21340
+ms.lasthandoff: 04/11/2017
+
 ---
-# Table Properties - SSMS
+# <a name="table-properties---ssms"></a>Table Properties - SSMS
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
-  本主題描述在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 之 [資料表屬性] 對話方塊中顯示的資料表屬性。 如需如何顯示這些屬性的詳細資訊，請參閱[檢視資料表定義](../../relational-databases/tables/view-the-table-definition.md)。  
+  本主題描述在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]之 [資料表屬性] 對話方塊中顯示的資料表屬性。 如需如何顯示這些屬性的詳細資訊，請參閱 [檢視資料表定義](../../relational-databases/tables/view-the-table-definition.md)。  
   
  **本主題內容**  
   
@@ -79,7 +83,7 @@ caps.handback.revision: 43
  不論資料表是否為資料分割，鎖定擴大將在資料表層級的資料粒度完成。 TABLE 為預設值。  
   
  DISABLE  
- 在大多數情況下都避免使用鎖定擴大， 但並非完全不允許資料表層級的鎖定。 例如，當您在可序列化隔離層級下掃描沒有任何叢集索引的資料表時，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 必須採用資料表鎖定以保護資料的完整性。  
+ 在大多數情況下都避免使用鎖定擴大， 但並非完全不允許資料表層級的鎖定。 例如，當您在可序列化隔離層級下掃描沒有任何叢集索引的資料表時， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 必須採用資料表鎖定以保護資料的完整性。  
   
  **資料表有複寫**  
  指出何時使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 複寫，將資料表複寫到另一個資料庫。 可能的值為 **True** 或 **False**。  
@@ -107,12 +111,12 @@ caps.handback.revision: 43
  FileTable 的根資料夾。  
   
  **已啟用 FileTable 命名空間**  
- 當為 **True** 時，這個值表示資料表為 FileTable。 如果您將這個值變更為 **False**，您會將 FileTable 變更為一般使用者資料表。 如果您之後想要將資料表變更回 FileTable，此資料表必須先通過 FileTable 一致性檢查才會轉換成功。  
+ 當為 **True**時，這個值表示資料表為 FileTable。 如果您將這個值變更為 **False**，您會將 FileTable 變更為一般使用者資料表。 如果您之後想要將資料表變更回 FileTable，此資料表必須先通過 FileTable 一致性檢查才會轉換成功。  
   
 ##  <a name="Storage"></a> 儲存體頁面  
  顯示選取之資料表的儲存體相關屬性。  
   
-### 壓縮  
+### <a name="compression"></a>壓縮  
  **壓縮類型**  
  資料表的壓縮類型。 此屬性只適用於沒有資料分割的資料表。 如需詳細資訊，請參閱 [Data Compression](../../relational-databases/data-compression/data-compression.md)。  
   
@@ -125,7 +129,7 @@ caps.handback.revision: 43
  **使用資料列壓縮的資料分割**  
  使用資料列壓縮的資料分割數。 此屬性只適用於資料分割的資料表。  
   
-### 檔案群組  
+### <a name="filegroup"></a>檔案群組  
  **文字檔案群組**  
  包含資料表文字資料之檔案群組的名稱。  
   
@@ -140,12 +144,12 @@ caps.handback.revision: 43
   
  如果資料表不包含 FILESTREAM 資料，則此欄位空白。  
   
-### 一般  
+### <a name="general"></a>一般  
  **Vardecimal 儲存格式已啟用**  
- 如果是 **True**，這個唯讀值表示 **decimal** 和 **numeric** 資料類型會使用 vardecimal 儲存格式來儲存。 若要變更這個選項，請使用 [sp_tableoption](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md) 的 [Vardecimal 儲存格式] 選項。 Vardecimal 儲存格式已被取代。 請改用資料列壓縮。  
+ 如果是 **True**，這個唯讀值表示 **decimal** 和 **numeric** 資料類型會使用 vardecimal 儲存格式來儲存。 若要變更這個選項，請使用 **sp_tableoption** 的 [vardecimal storage format](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)選項。 Vardecimal 儲存格式已被取代。 請改用資料列壓縮。  
   
  **索引空間**  
- 顯示索引在資料表中所佔的空間量 (以 MB 表示)。 這個值不包括資料表的 XML 索引空間使用量。 如果 XML 索引屬於此資料表，請改用 [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)。  
+ 顯示索引在資料表中所佔的空間量 (以 MB 表示)。 這個值不包括資料表的 XML 索引空間使用量。 如果 XML 索引屬於此資料表，請改用 [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) 。  
   
  **資料列計數**  
  資料表中的資料列數。  
@@ -153,7 +157,7 @@ caps.handback.revision: 43
  **資料空間**  
  資料在資料表中所佔的空間量 (以 MB 表示)。  
   
-### 資料分割  
+### <a name="partitioning"></a>資料分割  
  只有在資料表為資料分割時，才能使用此區段。 如需詳細資訊，請參閱 [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)。  
   
  **資料分割資料行**  
@@ -170,7 +174,7 @@ caps.handback.revision: 43
   
  FILESTREAM 資料分割配置必須對稱於在 **[資料分割配置]** 選項中所指定的配置。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [檢視資料表定義](../../relational-databases/tables/view-the-table-definition.md)   
  [修改資料行 &#40;Database Engine&#41;](../../relational-databases/tables/modify-columns-database-engine.md)  
   

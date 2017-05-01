@@ -1,35 +1,39 @@
 ---
 title: "建立效能基準 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "資料庫效能 [SQL Server], 基準"
-  - "監視效能 [SQL Server], 基準"
-  - "微調資料庫 [SQL Server], 基準"
-  - "伺服器效能 [SQL Server], 基準"
-  - "效能 [SQL Server], 基準"
-  - "基準效能 [SQL Server]"
-  - "基準線統計資料的度量單位 [SQL Server]"
-  - "監視伺服器效能 [SQL Server], 建立基準"
-  - "資料庫監視 [SQL Server], 基準"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database performance [SQL Server], baselines
+- monitoring performance [SQL Server], baselines
+- tuning databases [SQL Server], baselines
+- server performance [SQL Server], baselines
+- performance [SQL Server], baselines
+- baseline performance [SQL Server]
+- measurements for baseline statistics [SQL Server]
+- monitoring server performance [SQL Server], establishing baseline
+- database monitoring [SQL Server], baselines
 ms.assetid: dc5aa8d6-2507-448f-ad86-4196443915fc
 caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6d1c546387df6352a1eb59b0c0310d86a630a342
+ms.lasthandoff: 04/11/2017
+
 ---
-# 建立效能基準
+# <a name="establish-a-performance-baseline"></a>建立效能基準
   若要判斷您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統是否以最佳方式執行，請長時間定期測量效能 (即使沒有問題發生)，以建立伺服器效能基準。 請將每個新的組測量的結果與先前的測量進行比較。  
   
- 以下各方面會影響 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的效能：  
+ 以下各方面會影響 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的效能：  
   
 -   系統資源 (硬體)  
   
@@ -51,7 +55,7 @@ caps.handback.revision: 22
   
  建立伺服器效能基準線之後，請將基準線統計資料表與目前的伺服器效能進行比較。 與基準線差距過高或過低的數值即為必須進一步調查的候選項目。 這些項目可能代表必須調整或重設設定的範圍。 例如，當執行一組查詢的時間量增加時，請檢查查詢以判斷是否可以重寫查詢，或者是否必須加入資料行統計資料或新的索引。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
   

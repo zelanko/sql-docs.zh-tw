@@ -1,26 +1,30 @@
 ---
 title: "載入 Windows PowerShell 中的 SMO 組件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8ca42b69-da5a-47f4-9085-34e443f0e389
 caps.latest.revision: 9
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 149ba0be18c46dbf2171f7a1fac0641ae81d3515
+ms.lasthandoff: 04/11/2017
+
 ---
-# 載入 Windows PowerShell 中的 SMO 組件
+# <a name="load-the-smo-assemblies-in-windows-powershell"></a>載入 Windows PowerShell 中的 SMO 組件
   此主題描述如何在未使用 SQL Server PowerShell 提供者的 Windows PowerShell 指令碼中載入 SQL Server 管理物件 (SMO) 組件。  
   
-## 開始之前  
- 載入 SMO 組件的慣用機制是載入 **sqlps** 模組。 模組中所含的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供者會自動載入 SMO 組件，也會實作可擴充 PowerShell 指令碼中 SMO 物件使用性的功能。  如需詳細資訊，請參閱[匯入 SQLPS 模組](../../relational-databases/scripting/import-the-sqlps-module.md)。
+## <a name="before-you-begin"></a>開始之前  
+ 載入 SMO 組件的慣用機制是載入 **sqlps** 模組。 模組中所含的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供者會自動載入 SMO 組件，也會實作可擴充 PowerShell 指令碼中 SMO 物件使用性的功能。  如需詳細資訊，請參閱 [匯入 SQLPS 模組](../../relational-databases/scripting/import-the-sqlps-module.md)。
   
  有兩種情況您可能必須直接載入 SMO 組件：  
   
@@ -28,7 +32,7 @@ caps.handback.revision: 9
   
 -   您想要從不使用提供者或 Cmdlet 的另一個語言 (例如 C# 或 Visual Basic) 移植 SMO 程式碼。  
   
-## 範例：載入 SQL Server 管理物件  
+## <a name="example-loading-the-sql-server-management-objects"></a>範例：載入 SQL Server 管理物件  
  下列程式碼會載入 SMO 組件：  
   
 ```  
@@ -84,7 +88,7 @@ update-FormatData -prependpath SQLProvider.Format.ps1xml
 Pop-Location  
 ```  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)  
   
   

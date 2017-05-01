@@ -1,26 +1,30 @@
 ---
-title: "取得 DDL 觸發程序的詳細資訊 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-ddl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "中繼資料 [SQL Server], 觸發程序"
-  - "狀態資訊 [SQL Server], DDL 觸發程序"
-  - "DDL 觸發程序, 中繼資料"
+title: "取得 DDL 觸發程序的資訊 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-ddl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- metadata [SQL Server], triggers
+- status information [SQL Server], DDL triggers
+- DDL triggers, metadata
 ms.assetid: 462becea-292a-4b9e-bb98-533e89733911
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9a0ce4e36a1b396311938b8d57c6d44bf922ca56
+ms.lasthandoff: 04/11/2017
+
 ---
-# 取得 DDL 觸發程序的詳細資訊
+# <a name="get-information-about-ddl-triggers"></a>取得 DDL 觸發程序的詳細資訊
   本章節所列的目錄檢視可用來取得 DDL 觸發程序的相關資訊。  
   
  **取得 DDL 觸發程序引發所在之事件或事件群組的相關資訊**  
@@ -35,7 +39,7 @@ caps.handback.revision: 31
   
 -   [sys.dm_sql_referencing_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)  
   
-## 資料庫範圍的 DDL 觸發程序  
+## <a name="database-scoped-ddl-triggers"></a>資料庫範圍的 DDL 觸發程序  
  **若要取得資料庫範圍觸發程序的相關資訊**  
   
 -   [sys.triggers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md)  
@@ -52,7 +56,7 @@ caps.handback.revision: 31
   
 -   [sys.assembly_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)  
   
-## 伺服器範圍的 DDL 觸發程序  
+## <a name="server-scoped-ddl-triggers"></a>伺服器範圍的 DDL 觸發程序  
  **若要取得伺服器範圍觸發程序的相關資訊**  
   
 -   [sys.server_triggers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-triggers-transact-sql.md)  
@@ -69,7 +73,7 @@ caps.handback.revision: 31
   
 -   [sys.server_assembly_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-assembly-modules-transact-sql.md)  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [DDL 觸發程序](../../relational-databases/triggers/ddl-triggers.md)  
   
   

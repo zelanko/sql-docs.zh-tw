@@ -1,24 +1,28 @@
 ---
 title: "建立 FILESTREAM 資料的用戶端應用程式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FILESTREAM [SQL Server], Win32"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FILESTREAM [SQL Server], Win32
 ms.assetid: 8a02aff6-e54c-40c6-a066-2083e9b090aa
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c8ae3ba00110ba3441ac5bfa6dc2e06979f59ee0
+ms.lasthandoff: 04/11/2017
+
 ---
-# 建立 FILESTREAM 資料的用戶端應用程式
+# <a name="create-client-applications-for-filestream-data"></a>建立 FILESTREAM 資料的用戶端應用程式
   您可以使用 Win32 來讀取及寫入資料至 FILESTREAM BLOB。 下面是必要的步驟：  
   
 -   讀取 FILESTREAM 檔案路徑。  
@@ -28,10 +32,10 @@ caps.handback.revision: 18
 -   取得 Win32 控制代碼，並且使用此控制代碼來讀取及寫入資料至 FILESTREAM BLOB。  
   
 > [!NOTE]  
->  此主題中的範例需要使用在[建立啟用 FILESTREAM 的資料庫](../../relational-databases/blob/create-a-filestream-enabled-database.md)和[建立儲存 FILESTREAM 資料的資料表](../../relational-databases/blob/create-a-table-for-storing-filestream-data.md)中建立之啟用 FILESTREAM 的資料庫和資料表。  
+>  此主題中的範例需要使用在 [建立啟用 FILESTREAM 的資料庫](../../relational-databases/blob/create-a-filestream-enabled-database.md) 和 [建立儲存 FILESTREAM 資料的資料表](../../relational-databases/blob/create-a-table-for-storing-filestream-data.md)中建立之啟用 FILESTREAM 的資料庫和資料表。  
   
 ##  <a name="func"></a> 使用 FILESTREAM 資料的功能  
- 當您使用 FILESTREAM 來儲存二進位大型物件 (BLOB) 資料時，可以使用 Win32 API 來處理檔案。 為了支援在 Win32 應用程式中使用 FILESTREAM BLOB 資料，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了下列函數和 API：  
+ 當您使用 FILESTREAM 來儲存二進位大型物件 (BLOB) 資料時，可以使用 Win32 API 來處理檔案。 為了支援在 Win32 應用程式中使用 FILESTREAM BLOB 資料， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了下列函數和 API：  
   
 -   [PathName](../../relational-databases/system-functions/pathname-transact-sql.md) 會將路徑當做 Token 傳給 BLOB。 應用程式會使用此 Token 來取得 Win32 控制代碼，並在 BLOB 資料上運作。  
   
@@ -46,7 +50,7 @@ caps.handback.revision: 18
 ##  <a name="steps"></a> 存取 FILESTREAM 資料的步驟  
   
 ###  <a name="path"></a> 讀取 FILESTREAM 檔案路徑  
- FILESTREAM 資料表中的每個資料格都具有與它相關聯的檔案路徑。 若要讀取此路徑，請在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式中使用 **varbinary(max)** 資料行的 **PathName** 屬性。 下列範例將示範如何讀取 **varbinary(max)** 資料行的檔案路徑。  
+ FILESTREAM 資料表中的每個資料格都具有與它相關聯的檔案路徑。 若要讀取此路徑，請在 **陳述式中使用** varbinary(max) **資料行的** PathName [!INCLUDE[tsql](../../includes/tsql-md.md)] 屬性。 下列範例將示範如何讀取 **varbinary(max)** 資料行的檔案路徑。  
   
  [!code-sql[FILESTREAM#FS_PathName](../../relational-databases/blob/codesnippet/tsql/create-client-applicatio_1.sql)]  
   
@@ -58,7 +62,7 @@ caps.handback.revision: 18
 ###  <a name="handle"></a> 取得 Win32 檔案控制代碼  
  若要取得 Win32 檔案控制代碼，請呼叫 OpenSqlFilestream API。 這個 API 是從 sqlncli.dll 檔案中匯出。 傳回的控制代碼可傳遞給下列任何 Win32 API： [ReadFile](http://go.microsoft.com/fwlink/?LinkId=86422)、 [WriteFile](http://go.microsoft.com/fwlink/?LinkId=86423)、 [TransmitFile](http://go.microsoft.com/fwlink/?LinkId=86424)、 [SetFilePointer](http://go.microsoft.com/fwlink/?LinkId=86425)、 [SetEndOfFile](http://go.microsoft.com/fwlink/?LinkId=86426)或 [FlushFileBuffers](http://go.microsoft.com/fwlink/?LinkId=86427)。 下列範例將示範如何取得 Win32 檔案控制代碼，並用它來讀取及寫入資料至 FILESTREAM BLOB。  
   
- [!code-csharp[FILESTREAM#FS_CS_ReadAndWriteBLOB](../../relational-databases/blob/codesnippet/csharp/create-client-applicatio_3.cs)]  
+ [!code-cs[FILESTREAM#FS_CS_ReadAndWriteBLOB](../../relational-databases/blob/codesnippet/csharp/create-client-applicatio_3.cs)]  
   
  [!code-vb[FILESTREAM#FS_VB_ReadAndWriteBLOB](../../relational-databases/blob/codesnippet/visualbasic/create-client-applicatio_4.vb)]  
   
@@ -80,11 +84,11 @@ caps.handback.revision: 18
   
 -   避免將小型 BLOB 更新附加至 FILESTREAM BLOB。 每次附加都會導致系統複製基礎 FILESTREAM 檔案。 如果應用程式必須附加小型 BLOB，請將這些 BLOB 寫入 **varbinary(max)** 資料行，然後在 BLOB 的數目到達預先決定的限制時，針對 FILESTREAM BLOB 執行單一寫入作業。  
   
--   避免在應用程式中擷取大量 BLOB 檔案的資料長度。 這是一項耗時的作業，因為大小不會儲存在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 中。 如果您必須判斷 BLOB 檔案的長度，請使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] DATALENGTH() 函數來判斷 BLOB 的大小 (如果它已關閉的話)。 DATALENGTH() 不會開啟 BLOB 檔案來判斷其大小。  
+-   避免在應用程式中擷取大量 BLOB 檔案的資料長度。 這是一項耗時的作業，因為大小不會儲存在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]中。 如果您必須判斷 BLOB 檔案的長度，請使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] DATALENGTH() 函數來判斷 BLOB 的大小 (如果它已關閉的話)。 DATALENGTH() 不會開啟 BLOB 檔案來判斷其大小。  
   
 -   如果應用程式使用 Message Block1 (SMB1) 通訊協定，您就應該以 60-KB 的倍數來讀取 FILESTREAM BLOB 資料，以便發揮最佳效能。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [避免與 FILESTREAM 應用程式中的資料庫作業相衝突](../../relational-databases/blob/avoid-conflicts-with-database-operations-in-filestream-applications.md)   
  [使用 OpenSqlFilestream 存取 FILESTREAM 資料](../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)   
  [二進位大型物件 &#40;Blob&#41; 資料 &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)   

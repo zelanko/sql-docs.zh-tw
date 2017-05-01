@@ -1,23 +1,27 @@
 ---
-title: "實作 UPDATE 和 FROM 或子查詢 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "11/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "以 FROM 或子查詢實作 UPDATE | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 11/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 138f5b0e-f8a4-400f-b581-8062aebc62b6
 caps.latest.revision: 4
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 4
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c9f044bbde8edd542e3a2a1017a726b8d939654a
+ms.lasthandoff: 04/11/2017
+
 ---
-# 實作 UPDATE 和 FROM 或子查詢
+# <a name="implementing-update-with-from-or-subqueries"></a>以 FROM 或子查詢實作 UPDATE
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
 原生編譯的 T-SQL 模組不支援在 UPDATE 陳述式中使用 FROM 子句和子查詢 (SELECT 中才支援)。 UPDATE 陳述式和 FROM 子句通常可用來根據資料表值參數 (TVP) 更新資料表中的資訊，或在 AFTER 觸發程序中更新資料表中的資料行。 
@@ -157,3 +161,4 @@ caps.handback.revision: 4
   
   
   
+

@@ -1,36 +1,40 @@
 ---
-title: "IntelliSense 所支援的 Transact-SQL 語法 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "Transact-SQL IntelliSense"
-  - "IntelliSense [SQL Server], Transact-SQL 語法"
+title: "IntelliSense 所支援的 Transact-SQL 語法 | Microsoft 文件"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- Transact-SQL IntelliSense
+- IntelliSense [SQL Server], Transact-SQL syntax
 ms.assetid: 194e8f4f-fd7e-4f32-a169-f23531128004
 caps.latest.revision: 28
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 328ed60693a51b4bd081b1089e39e4805124f042
+ms.lasthandoff: 04/11/2017
+
 ---
-# IntelliSense 所支援的 Transact-SQL 語法
+# <a name="transact-sql-syntax-supported-by-intellisense"></a>IntelliSense 所支援的 Transact-SQL 語法
   此主題描述 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中 IntelliSense 所支援的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]陳述式和語法。  
   
-## IntelliSense 所支援的陳述式  
- 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中，IntelliSense 僅支援最常用的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 某些一般的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器條件可能會讓 IntelliSense 無法運作。 如需詳細資訊，請參閱[疑難排解 IntelliSense &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/troubleshooting-intellisense-sql-server-management-studio.md)。  
+## <a name="statements-supported-by-intellisense"></a>IntelliSense 所支援的陳述式  
+ 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中，IntelliSense 僅支援最常用的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 某些一般的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器條件可能會讓 IntelliSense 無法運作。 如需詳細資訊，請參閱[疑難排解 IntelliSense &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/troubleshooting-intellisense.md)。  
   
 > [!NOTE]  
 >  IntelliSense 不適用於已加密的資料庫物件，例如已加密的預存程序或使用者定義函數。 參數說明和快速資訊不適用於擴充預存程序和 CLR 整合使用者定義型別的參數。  
   
-### SELECT 陳述式  
+### <a name="select-statement"></a>SELECT 陳述式  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器會針對 SELECT 陳述式中的下列語法元素提供 IntelliSense 支援：  
   
 |||  
@@ -41,7 +45,7 @@ caps.handback.revision: 28
 |FOR|GROUP BY|  
 |頂端|OPTION (hint)|  
   
-### 其他支援的 Transact-SQL 陳述式  
+### <a name="additional-transact-sql-statements-that-are-supported"></a>其他支援的 Transact-SQL 陳述式  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器也會針對下表所顯示的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式提供 IntelliSense 支援。  
   
 |Transact-SQL 陳述式|支援的語法|例外狀況|  
@@ -49,8 +53,8 @@ caps.handback.revision: 28
 |[INSERT](../../t-sql/statements/insert-transact-sql.md)|所有語法，但 *execute_statement* 子句除外。|無|  
 |[UPDATE](../../t-sql/queries/update-transact-sql.md)|所有語法。|無|  
 |[DELETE](../../t-sql/statements/delete-transact-sql.md)|所有語法。|無|  
-|[DECLARE @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)|所有語法。|無|  
-|[SET @local_variable](../../t-sql/language-elements/set-local-variable-transact-sql.md)|所有語法。|無|  
+|[DECLARE@local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)|所有語法。|無|  
+|[SET@local_variable](../../t-sql/language-elements/set-local-variable-transact-sql.md)|所有語法。|無|  
 |[EXECUTE](../../t-sql/language-elements/execute-transact-sql.md)|可執行使用者定義的預存程序、系統預存程序、使用者定義的函數以及系統函數。|無|  
 |[CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)|所有語法。|無|  
 |[CREATE VIEW](../../t-sql/statements/create-view-transact-sql.md)|所有語法。|無|  
@@ -58,7 +62,7 @@ caps.handback.revision: 28
 |[ALTER PROCEDURE](../../t-sql/statements/alter-procedure-transact-sql.md)|所有語法|EXTERNAL NAME 子句沒有任何 IntelliSense 支援。<br /><br /> 在 AS 子句中，IntelliSense 僅支援本主題所列的陳述式和語法。|  
 |[USE](../../t-sql/language-elements/use-transact-sql.md)|所有語法。|無|  
   
-## 支援陳述式中的 IntelliSense  
+## <a name="intellisense-in-supported-statements"></a>支援陳述式中的 IntelliSense  
  當下列語法元素用於其中一個支援的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 陳述式時， [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢編輯器中的 IntelliSense 便支援這些元素：  
   
 -   所有聯結類型，包括 APPLY  
@@ -92,7 +96,7 @@ caps.handback.revision: 28
   
  當先前所列的元素用於 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式時，系統就不會針對它們提供 IntelliSense。 例如，用於 SELECT 陳述式的資料行名稱具有 IntelliSense 支援，但用於 CREATE FUNCTION 陳述式的資料行則沒有。  
   
-## 範例  
+## <a name="examples"></a>範例  
  在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼或批次中， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器中的 IntelliSense 僅支援本主題所列的陳述式和語法。 下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼範例將說明 IntelliSense 所支援的陳述式和語法元素。 例如，在下列批次中，當 `SELECT` 陳述式只有本身的編碼時，IntelliSense 便適用於此陳述式，但是當 `SELECT` 包含在 `CREATE FUNCTION` 陳述式內部時，則不適用。  
   
 ```  

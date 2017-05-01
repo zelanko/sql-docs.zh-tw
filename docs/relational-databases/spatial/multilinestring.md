@@ -1,31 +1,35 @@
 ---
-title: "MultiLineString | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-spatial"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "MultiLineString geometry 子類型 [SQL Server]"
-  - "geometry 子類型 [SQL Server]"
+title: MultiLineString | Microsoft Docs
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-spatial
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- MultiLineString geometry subtype [SQL Server]
+- geometry subtypes [SQL Server]
 ms.assetid: 95deeefe-d6c5-4a11-b347-379e4486e7b7
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 398a68b50469ffb778434f59b6895435a8da62c6
+ms.lasthandoff: 04/11/2017
+
 ---
-# MultiLineString
+# <a name="multilinestring"></a>MultiLineString
   **MultiLineString** 是零或多個 **geometry** 或 **geographyLineString** 執行個體的集合。  
   
-## MultiLineString 執行個體  
+## <a name="multilinestring-instances"></a>MultiLineString 執行個體  
  下圖顯示 **MultiLineString** 執行個體的範例。  
   
- ![幾何 MultiLineString 執行個體的範例](../../relational-databases/spatial/media/multilinestring.png "幾何 MultiLineString 執行個體的範例")  
+ ![幾何 MultiLineString 執行個體的範例](../../relational-databases/spatial/media/multilinestring.gif "幾何 MultiLineString 執行個體的範例")  
   
  如本圖所示：  
   
@@ -41,7 +45,7 @@ caps.handback.revision: 19
   
 -   圖 6 是簡單、封閉的 **MultiLineString** 執行個體。 它是封閉的，因為它的所有元素都是封閉的。 因為它的所有元素在內部都不相交，所以它是簡單的。  
   
-### 已接受的執行個體  
+### <a name="accepted-instances"></a>已接受的執行個體  
  若要接受 **MultiLineString** 執行個體，則該執行個體必須是空的，或是僅由可接受的 **LineString** 執行個體組成。 如需已接受之 **LineString** 執行個體的詳細資訊，請參閱 [LineString](../../relational-databases/spatial/linestring.md)。 以下為已接受之 **MultiLineString** 執行個體的範例。  
   
 ```  
@@ -51,13 +55,13 @@ DECLARE @g3 geometry = 'MULTILINESTRING((1 1, 5 5), (1 3, 3 1))';
 DECLARE @g4 geometry = 'MULTILINESTRING((1 1, 3 3, 5 5),(3 3, 5 5, 7 7))';  
 ```  
   
- 下列範例會擲回 `System.FormatException`，因為第二個 **LineString** 執行個體無效。  
+ 下列範例會擲回 `System.FormatException` ，因為第二個 **LineString** 執行個體無效。  
   
 ```  
 DECLARE @g geometry = 'MULTILINESTRING((1 1, 3 5),(-5 3))';  
 ```  
   
-### 有效的執行個體  
+### <a name="valid-instances"></a>有效的執行個體  
  **MultiLineString** 執行個體必須符合下列準則，才會是有效的：  
   
 1.  組成 **MultiLineString** 執行個體的所有執行個體必須都是有效的 **LineString** 執行個體。  
@@ -76,15 +80,15 @@ SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid();
   
  `@g4` 無效，因為第二個 **LineString** 執行個體與第一個 **LineString** 執行個體於間隔處重疊。 兩者以無限點數接觸。  
   
-## 範例  
- 下列範例會建立包含兩個具有 SRID 0 之 `LineString` 元素的簡單 `geometry``MultiLineString` 執行個體。  
+## <a name="examples"></a>範例  
+ 下列範例會建立包含兩個具有 SRID 0 之 `geometry``MultiLineString` 元素的簡單 `LineString` 執行個體。  
   
 ```  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('MULTILINESTRING((0 2, 1 1), (1 0, 1 1))');  
 ```  
   
- 若要使用不同的 SRID 來具現化這個執行個體，請使用 `STGeomFromText()` 或 `STMLineStringFromText()`。 您也可以使用 `Parse()`，然後修改 SRID，如下列範例所示。  
+ 若要使用不同的 SRID 來具現化這個執行個體，請使用 `STGeomFromText()` 或 `STMLineStringFromText()`。 您也可以使用 `Parse()` ，然後修改 SRID，如下列範例所示。  
   
 ```  
 DECLARE @g geometry;  
@@ -92,7 +96,7 @@ SET @g = geometry::Parse('MULTILINESTRING((0 2, 1 1), (1 0, 1 1))');
 SET @g.STSrid = 13;  
 ```  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [STLength &#40;geometry 資料類型&#41;](../../t-sql/spatial-geometry/stlength-geometry-data-type.md)   
  [STIsClosed &#40;geometry 資料類型&#41;](../../t-sql/spatial-geometry/stisclosed-geometry-data-type.md)   
  [LineString](../../relational-databases/spatial/linestring.md)   

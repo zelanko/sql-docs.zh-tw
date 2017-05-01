@@ -1,25 +1,29 @@
 ---
 title: "SQL Server 的 Plan Cache 物件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "計畫快取物件"
-  - "SQLServer:Plan Cache"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Plan Cache object
+- SQLServer:Plan Cache
 ms.assetid: 225e2b02-8d2f-4f29-9eba-f5847c36ea99
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6cc9c44a20f2dcf92b403d1d03d77d51ccf0f6d6
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server 的 Plan Cache 物件
+# <a name="sql-server-plan-cache-object"></a>SQL Server 的 Plan Cache 物件
   **Plan Cache** 物件所提供的計數器，可監視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如何使用記憶體來儲存物件，例如預存程序、特定與備妥 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，以及觸發程序。 可同時監視 **Plan Cache** 物件的多個執行個體，每個執行個體都代表所要監視的不同計畫類型。  
   
  下表描述 **SQLServer:Plan Cache**計數器。  
@@ -37,13 +41,13 @@ caps.handback.revision: 25
 |Plan Cache 執行個體|描述|  
 |-------------------------|-----------------|  
 |**_Total**|所有快取執行個體類型的資訊。|  
-|**Sql Plans**|從特定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢 (包括自動參數化查詢) 產生的查詢計劃，或從使用 **sp_prepare** 或 **sp_cursorprepare** 準備之 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式產生的查詢計劃。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會快取特定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的計畫，以便稍後執行相同的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式時重複使用。 使用者的參數化查詢 (即使未確實預備) 也會當作預備的 SQL 計畫來監視。|  
+|**Sql Plans**|從特定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢 (包括自動參數化查詢) 產生的查詢計劃，或從使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] sp_prepare **或** sp_cursorprepare **準備之**陳述式產生的查詢計劃。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會快取特定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的計畫，以便稍後執行相同的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式時重複使用。 使用者的參數化查詢 (即使未確實預備) 也會當作預備的 SQL 計畫來監視。|  
 |**Object Plans**|藉著建立預存程序、函數或觸發程序而產生的查詢計畫。|  
 |**Bound Trees**|檢視、規則、計算資料行與檢查條件約束的正規化樹。|  
 |**擴充預存程序**|擴充預存程序的目錄資訊。|  
 |**暫存資料表 & 資料表變數**|與暫存資料表和資料表變數相關的快取資訊。|  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [伺服器記憶體伺服器組態選項](../../database-engine/configure-windows/server-memory-server-configuration-options.md)   
  [SQL Server 的 Buffer Manager 物件](../../relational-databases/performance-monitor/sql-server-buffer-manager-object.md)   
  [監視資源使用狀況 &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  

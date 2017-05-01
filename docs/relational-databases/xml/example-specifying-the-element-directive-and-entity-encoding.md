@@ -1,26 +1,30 @@
 ---
 title: "範例：指定 ELEMENT 指示詞及實體編碼 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ELEMENT 指示詞"
-  - "實體編碼 [XML]"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ELEMENT directive
+- entity encoding [XML]
 ms.assetid: 50cda5c1-7293-4080-93b3-872e3b8d484e
 caps.latest.revision: 12
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d2ddb67aee711a217bd9f75b62ef14067e4aac55
+ms.lasthandoff: 04/11/2017
+
 ---
-# 範例：指定 ELEMENT 指示詞及實體編碼
-  此範例說明 **ELEMENT** 與 **XML** 指示詞之間的相異處。 **ELEMENT** 指示詞會將資料實體化，但 **XML** 指示詞則否。 已將 \<Summary> 元素指派給查詢中的 XML `<Summary>This is summary description</Summary>`。  
+# <a name="example-specifying-the-element-directive-and-entity-encoding"></a>範例：指定 ELEMENT 指示詞及實體編碼
+  此範例說明 **ELEMENT** 與 **XML** 指示詞之間的相異處。 **ELEMENT** 指示詞會將資料實體化，但 **XML** 指示詞則否。 已將 \<摘要> 項目指派給查詢中的 XML `<Summary>This is summary description</Summary>`。  
   
  請考量這項查詢：  
   
@@ -55,7 +59,7 @@ FOR XML EXPLICIT
 </ProductModel>  
 ```  
   
- 現在，如果您在資料行名稱 `Summary!2!SummaryDescription!XML` 中指定 **XML** 指示詞，而非 **ELEMENT** 指示詞，您將會收到未實體化的摘要描述。  
+ 現在，如果您在資料行名稱 **中指定** XML `Summary!2!SummaryDescription!XML`指示詞，而非 **ELEMENT** 指示詞，您將會收到未實體化的摘要描述。  
   
 ```  
 <ProductModel ProdModelID="19" Name="Mountain-100">  
@@ -91,7 +95,7 @@ ORDER BY [ProductModel!1!ProdModelID],Tag
 FOR XML EXPLICIT  
 ```  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [搭配 FOR XML 使用 EXPLICIT 模式](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)  
   
   

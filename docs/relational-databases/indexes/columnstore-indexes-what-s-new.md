@@ -1,26 +1,30 @@
 ---
-title: "資料行存放區索引建立版本功能摘要 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "11/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "資料行存放區索引 - 新功能 | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 11/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1fe5ea05-5b19-45a4-9b7a-8ae5ca367897
 caps.latest.revision: 28
-author: "barbkess"
-ms.author: "barbkess"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: barbkess
+ms.author: barbkess
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 8dc55e28462cd04a90274ada860fd418bcc54775
+ms.lasthandoff: 04/11/2017
+
 ---
-# 資料行存放區索引建立版本功能摘要
+# <a name="columnstore-indexes---what39s-new"></a>資料行存放區索引 - 新功能
 [!INCLUDE[tsql-appliesto-ss2012-all_md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-  適用於每個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本，以及最新版的 Azure SQL Database Premium Edition、Azure SQL 資料倉儲及平行處理資料倉儲的資料行存放區功能摘要。  
+  適用於每個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本，以及最新版的 Azure SQL Database Premium Edition、Azure SQL 資料倉儲及平行處理資料倉儲的資料行存放區功能摘要。  
 
  >[!NOTE]
  > 針對 Azure SQL Database，資料行存放區索引僅適用於 Premium Edition。
@@ -161,11 +165,12 @@ caps.handback.revision: 27
 -   批次處理序提供 2 倍或更高的查詢效能，但僅供平行查詢執行使用。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料行存放區索引指南](../Topic/Columnstore%20Indexes%20Guide.md)   
- [資料行存放區索引資料載入](../Topic/Columnstore%20Indexes%20Data%20Loading.md)   
+ 資料行存放區索引指南   
+ 資料行存放區索引資料載入   
  [資料行存放區索引效能](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   
  [開始使用資料行存放區進行即時作業分析](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)   
- [資料倉儲的資料行存放區索引](../Topic/Columnstore%20Indexes%20for%20Data%20Warehousing.md)   
+ 資料倉儲的資料行存放區索引   
  [資料行存放區索引重組](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)  
   
   
+

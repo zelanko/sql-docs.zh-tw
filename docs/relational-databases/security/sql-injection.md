@@ -1,28 +1,32 @@
 ---
 title: "SQL 資料隱碼 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-security"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQL 資料隱碼"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-security
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Injection
 ms.assetid: eb507065-ac58-4f18-8601-e5b7f44213ab
 caps.latest.revision: 7
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d415833c9a51fd9b7fcde0b2515183ecc4dfb235
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL 資料隱碼
+# <a name="sql-injection"></a>SQL 資料隱碼
   SQL 插入式攻擊是指將惡意程式碼插入字串中，然後將這些字串傳遞至 SQL Server 的執行個體進行剖析和執行。 建構 SQL 陳述式的任何程序都應該經過檢閱，以確認有無插入弱點，因為 SQL Server 會執行收到的所有語法有效查詢。 即使是參數化資料也可能被技術純熟又執意操作的攻擊者操縱。  
   
-## SQL 插入如何運作  
+## <a name="how-sql-injection-works"></a>SQL 插入如何運作  
  SQL 資料隱碼的主要形式是將程式碼直接插入與 SQL 命令串連並執行的使用者輸入變數。 不直接的攻擊會將惡意程式碼插入用於資料表中儲存目的之字串，或插入做為中繼資料。 當儲存的字串在以後串連成動態 SQL 指令時，就會執行惡意程式碼。  
   
  資料隱碼處理的運作方式是不當地終止文字字串並附加新命令。 因為插入的命令在執行之前可能附加有其他字串，所以不懷好意的人會使用註解標記 "--" 終止插入的字串。 在執行時，後續文字便會被忽略。  
@@ -53,11 +57,11 @@ Redmond'; drop table OrdersTable--
 SELECT * FROM OrdersTable WHERE ShipCity = 'Redmond';drop table OrdersTable--'  
 ```  
   
- 分號 (;) 表示結束一項查詢而開始另一項查詢。 而雙連字號 (--) 表示目前這一行的剩餘部分是註解，而且應該被忽略。 如果修改的程式碼語法正確，伺服器就會執行它。 當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理此陳述式時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會先選取 `OrdersTable` 中的所有記錄，其中 `ShipCity` 是 `Redmond`。 然後，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會卸除 `OrdersTable`。  
+ 分號 (;) 表示結束一項查詢而開始另一項查詢。 而雙連字號 (--) 表示目前這一行的剩餘部分是註解，而且應該被忽略。 如果修改的程式碼語法正確，伺服器就會執行它。 當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理此陳述式時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會先選取 `OrdersTable` 中的所有記錄，其中 `ShipCity` 是 `Redmond`。 然後， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會卸除 `OrdersTable`。  
   
  只要插入的 SQL 程式碼語法正確，就無法以程式設計方式偵測竄改。 因此，您必須驗證所有使用者輸入，並且仔細檢視在您使用的伺服器中執行建構之 SQL 命令的程式碼。 這個主題的下列各節描述編碼的最佳作法。  
   
-## 驗證所有輸入  
+## <a name="validate-all-input"></a>驗證所有輸入  
  透過測試類型、長度、格式和範圍，始終驗證使用者輸入。 當您針對惡意輸入實作一些預防措施時，請考慮您的應用程式的架構和部署狀況。 請記住，設計用在安全環境中執行的程式也可以複製至不安全的環境。 下列建議應視為最佳作法：  
   
 -   對您的應用程式所接收之資料的大小、類型或內容不作任何假設。 例如，您應該做下列評估：  
@@ -95,8 +99,8 @@ SELECT * FROM OrdersTable WHERE ShipCity = 'Redmond';drop table OrdersTable--'
 |**/\*** ... **\*/**|註解分隔符號。 伺服器不會評估 **/\*** 和 **\*/** 之間的文字。|  
 |**xp_**|用在目錄擴充預存程序名稱的開頭，如 `xp_cmdshell`。|  
   
-### 使用類型安全的 SQL 參數  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的 **Parameters** 集合會提供類型檢查和長度驗證。 如果您使用 **Parameters** 集合，會將輸入視為常值，而不是可執行的程式碼。 使用 **Parameters** 集合的另一個優點是您可以強制執行類型和長度檢查。 超出範圍的值會觸發例外狀況。 下列程式碼片段會說明如何使用 **Parameters** 集合：  
+### <a name="use-type-safe-sql-parameters"></a>使用類型安全的 SQL 參數  
+ **中的** Parameters [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 集合會提供類型檢查和長度驗證。 如果您使用 **Parameters** 集合，會將輸入視為常值，而不是可執行的程式碼。 使用 **Parameters** 集合的另一個優點是您可以強制執行類型和長度檢查。 超出範圍的值會觸發例外狀況。 下列程式碼片段會說明如何使用 **Parameters** 集合：  
   
 ```  
 SqlDataAdapter myCommand = new SqlDataAdapter("AuthorLogin", conn);  
@@ -108,7 +112,7 @@ parm.Value = Login.Text;
   
  在此範例中，會將 `@au_id` 參數視為常值，而不是可執行的程式碼。 而且，還會檢查此值的類型和長度。 如果 `@au_id` 的值與指定的類型和長度條件約束不一致，則會發生例外狀況。  
   
-### 與預存程序搭配使用參數化輸入  
+### <a name="use-parameterized-input-with-stored-procedures"></a>與預存程序搭配使用參數化輸入  
  如果預存程序使用未篩選的輸入，則預存程序很可能會受到 SQL 資料隱碼的攻擊。 例如，下列程式碼易受攻擊：  
   
 ```  
@@ -119,7 +123,7 @@ new SqlDataAdapter("LoginStoredProcedure '" +
   
  如果使用預存程序，您應該使用參數做為其輸入。  
   
-### 與動態 SQL 搭配使用 Parameters 集合  
+### <a name="use-the-parameters-collection-with-dynamic-sql"></a>與動態 SQL 搭配使用 Parameters 集合  
  如果無法使用預存程序，您仍然可以使用參數，如下列程式碼範例所示。  
   
 ```  
@@ -130,7 +134,7 @@ SQLParameter parm = myCommand.SelectCommand.Parameters.Add("@au_id",
 Parm.Value = Login.Text;  
 ```  
   
-### 篩選輸入  
+### <a name="filtering-input"></a>篩選輸入  
  篩選輸入可移除逸出字元，對於保護 SQL 資料隱碼也很有幫助。 不過，因為大量字元可能會產生問題，所以這不是可靠的防線。 下列範例會搜尋字元字串分隔符號。  
   
 ```  
@@ -140,7 +144,7 @@ private string SafeSqlLiteral(string inputSQL)
 }  
 ```  
   
-### LIKE 子句  
+### <a name="like-clauses"></a>LIKE 子句  
  請注意，如果您使用 `LIKE` 子句，萬用字元仍必定逸出：  
   
 ```  
@@ -149,8 +153,8 @@ s = s.Replace("%", "[%]");
 s = s.Replace("_", "[_]");  
 ```  
   
-## 檢閱 SQL 資料隱碼的程式碼  
- 您應該檢閱所有呼叫 `EXECUTE`、`EXEC` 或 `sp_executesql` 的程式碼。 您可以使用類似以下的查詢，來幫助您識別包含這些陳述式的程序。 這個查詢會檢查 `EXECUTE` 或 `EXEC` 這些字後面的 1、2、3 或 4 個空格。  
+## <a name="reviewing-code-for-sql-injection"></a>檢閱 SQL 資料隱碼的程式碼  
+ 您應該檢閱所有呼叫 `EXECUTE`、 `EXEC`或 `sp_executesql`的程式碼。 您可以使用類似以下的查詢，來幫助您識別包含這些陳述式的程序。 這個查詢會檢查 `EXECUTE` 或 `EXEC`這些字後面的 1、2、3 或 4 個空格。  
   
 ```  
 SELECT object_Name(id) FROM syscomments  
@@ -165,7 +169,7 @@ OR UPPER(text) LIKE '%EXEC    (%'
 OR UPPER(text) LIKE '%SP_EXECUTESQL%';  
 ```  
   
-### 用 QUOTENAME() 和 REPLACE() 包裝參數  
+### <a name="wrapping-parameters-with-quotename-and-replace"></a>用 QUOTENAME() 和 REPLACE() 包裝參數  
  在每一個選取的預存程序中，驗證動態 Transact-SQL 使用的所有變數都已正確處理。 來自預存程序的輸入參數或從資料表中讀取的資料應該用 QUOTENAME() 或 REPLACE() 包裝。 請記住，傳遞到 QUOTENAME() 的 @variable 值屬於 sysname，其最大長度為 128 個字元。  
   
 |@variable|建議的包裝函數|  
@@ -186,7 +190,7 @@ SET @temp = N'SELECT * FROM authors WHERE au_lname = '''
  + REPLACE(@au_lname,'''','''''') + N'''';  
 ```  
   
-### 資料截斷啟用資料隱碼  
+### <a name="injection-enabled-by-data-truncation"></a>資料截斷啟用資料隱碼  
  任何指派給變數的動態 [!INCLUDE[tsql](../../includes/tsql-md.md)] 若大於該變數已配置的緩衝區，就會被截斷。 能夠非預期傳遞長字串給預存程序來強制執行陳述式截斷的攻擊者，就可以操作此結果。 例如，由下列指令碼建立的預存程序很容易因為截斷而啟用資料隱碼。  
   
 ```  
@@ -224,9 +228,9 @@ EXEC sp_MySetPassword 'sa', 'dummy',
 '123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012'''''''''''''''''''''''''''''''''''''''''''''''''''   
 ```  
   
- 基於這個原因，您應該對命令變數使用大型緩衝區，或直接在 `EXECUTE` 陳述式內執行動態 [!INCLUDE[tsql](../../includes/tsql-md.md)]。  
+ 基於這個原因，您應該對命令變數使用大型緩衝區，或直接在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式內執行動態 `EXECUTE` 。  
   
-### 使用 QUOTENAME(@variable, '''') 和 REPLACE() 時會截斷  
+### <a name="truncation-when-quotenamevariable--and-replace-are-used"></a>使用 QUOTENAME(@variable, '''') 和 REPLACE() 時會截斷  
  如果超過已配置的空間，QUOTENAME() 和 REPLACE() 傳回的字串會自動被截斷。 下列範例所建立的預存程序會顯示可能發生的情況。  
   
 ```  
@@ -307,7 +311,7 @@ EXEC (@command);
 GO  
 ```  
   
- 就像 QUOTENAME() 一樣，也可以藉由宣告大到適合所有情況的暫時變數來避免 REPLACE() 截斷字串。 可能的話，您應該直接在動態 [!INCLUDE[tsql](../../includes/tsql-md.md)] 內呼叫 QUOTENAME() 或 REPLACE()。 否則，您可以計算必要的緩衝區大小如下。 若為 `@outbuffer = QUOTENAME(@input)`，`@outbuffer` 的大小應該為 `2*(len(@input)+1)`。 當您使用 `REPLACE()` 和雙引號時 (如上例所示)，大小為 `2*len(@input)` 的緩衝區已足夠。  
+ 就像 QUOTENAME() 一樣，也可以藉由宣告大到適合所有情況的暫時變數來避免 REPLACE() 截斷字串。 可能的話，您應該直接在動態 [!INCLUDE[tsql](../../includes/tsql-md.md)]內呼叫 QUOTENAME() 或 REPLACE()。 否則，您可以計算必要的緩衝區大小如下。 若為 `@outbuffer = QUOTENAME(@input)`， `@outbuffer` 的大小應該為 `2*(len(@input)+1)`。 當您使用 `REPLACE()` 和雙引號時 (如上例所示)，大小為 `2*len(@input)` 的緩衝區已足夠。  
   
  下列計算可涵蓋所有情況：  
   
@@ -317,8 +321,8 @@ ROUND(LEN(@input)/LEN(@find_string),0) * LEN(@new_string)
  + (LEN(@input) % LEN(@find_string))  
 ```  
   
-### 使用 QUOTENAME(@variable, ']') 時會截斷  
- 當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全性實體的名稱傳遞至使用 `QUOTENAME(@variable, ']')` 格式的陳述式時，會發生截斷。 以下範例說明這點。  
+### <a name="truncation-when-quotenamevariable--is-used"></a>使用 QUOTENAME(@variable, ']') 時會截斷  
+ 當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全性實體的名稱傳遞至使用 `QUOTENAME(@variable, ']')`格式的陳述式時，會發生截斷。 以下範例說明這點。  
   
 ```  
 CREATE PROCEDURE sp_MyProc  
@@ -334,9 +338,9 @@ SET @objectname = QUOTENAME(@schemaname)+'.'+ QUOTENAME(@tablename)
 GO  
 ```  
   
- 當您串連 sysname 類型的值時，應使用夠大的暫存變數來保留每個值最多 128 個的字元。 可能的話，請直接在動態 [!INCLUDE[tsql](../../includes/tsql-md.md)] 內呼叫 `QUOTENAME()`。 否則，您可以計算必要的緩衝區大小，如上一節所述。  
+ 當您串連 sysname 類型的值時，應使用夠大的暫存變數來保留每個值最多 128 個的字元。 可能的話，請直接在動態 `QUOTENAME()` 內呼叫 [!INCLUDE[tsql](../../includes/tsql-md.md)]。 否則，您可以計算必要的緩衝區大小，如上一節所述。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
  [REPLACE &#40;Transact-SQL&#41;](../../t-sql/functions/replace-transact-sql.md)   
  [QUOTENAME &#40;Transact-SQL&#41;](../../t-sql/functions/quotename-transact-sql.md)   

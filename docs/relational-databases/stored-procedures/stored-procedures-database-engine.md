@@ -1,26 +1,30 @@
 ---
 title: "預存程序 (Database Engine) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-stored-Procs"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "將程式儲存為預存程序"
-  - "預存程序 [SQL Server], 關於預存程序"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-stored-Procs
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- storing programs as stored procedures
+- stored procedures [SQL Server], about stored procedures
 ms.assetid: cc6daf62-9663-4c3e-950a-ab42e2830427
 caps.latest.revision: 35
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 14cb04aa946bed3cace30379ca2d78b3cd045b4b
+ms.lasthandoff: 04/11/2017
+
 ---
-# 預存程序 (Database Engine)
-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的預存程序是一個或多個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的群組，或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Common Language Runtime (CLR) 方法的參考。 預存程序類似於其他程式設計語言中的建構，因為這些程序可以：  
+# <a name="stored-procedures-database-engine"></a>預存程序 (Database Engine)
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的預存程序是一個或多個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的群組，或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Common Language Runtime (CLR) 方法的參考。 預存程序類似於其他程式設計語言中的建構，因為這些程序可以：  
   
 -   接受輸入參數，並以輸出參數的形式將多個數值傳回呼叫程式。  
   
@@ -92,6 +96,6 @@ caps.handback.revision: 35
 |描述如何在預存程序中使用參數。|[參數](../../relational-databases/stored-procedures/parameters.md)|  
   
 ## <a name="related-content"></a>相關內容  
- [CLR 預存程序](../Topic/CLR%20Stored%20Procedures.md)  
+ [CLR 預存程序](http://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)  
   
   

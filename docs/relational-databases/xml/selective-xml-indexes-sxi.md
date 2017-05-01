@@ -1,22 +1,26 @@
 ---
 title: "選擇性 XML 索引 (SXI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 598ecdcd-084b-4032-81b2-eed6ae9f5d44
 caps.latest.revision: 9
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 9c9821e721ce4fdc9187bb69c75cf05c74ff3f40
+ms.lasthandoff: 04/11/2017
+
 ---
-# 選擇性 XML 索引 (SXI)
+# <a name="selective-xml-indexes-sxi"></a>選擇性 XML 索引 (SXI)
   選擇性 XML 索引是除了一般 XML 索引之外，另一種可供您使用 XML 索引類型。 選擇性 XML 索引功能的目標如下：  
   
 -   改善 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中所儲存 XML 資料的查詢效能。  
@@ -42,7 +46,6 @@ caps.handback.revision: 8
   
 4.  不需要更新應用程式就能受益於選擇性 XML 索引的優點。  
   
- [本主題內容](#top)  
   
 ##  <a name="compare"></a> 選擇性 XML 索引和主要 XML 索引  
   
@@ -55,7 +58,6 @@ caps.handback.revision: 8
   
 -   在文件結構中支援未知元素或未知位置中元素的查詢。  
   
- [本主題內容](#top)  
   
 ##  <a name="example"></a> 簡單的選擇性 XML 索引範例  
  在大約有 500,000 個資料列的資料表中將下列 XML 片段視為 XML 文件：  
@@ -98,9 +100,8 @@ FOR
   
  如需有關這些元素的詳細資訊，請參閱 [相關工作](#reltasks)。  
   
- [本主題內容](#top)  
   
-## 支援的功能、必要條件和限制  
+## <a name="supported-features-prerequisites-and-limitations"></a>支援的功能、必要條件和限制  
   
 ###  <a name="features"></a> 支援的 XML 功能  
  選擇性 XML 索引在 exist()、value() 和 nodes() 方法內支援 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所支援的 XQuery。  
@@ -113,7 +114,6 @@ FOR
   
 -   對於 modify() 方法，選擇性 XML 索引不會用來更新 XML 文件。  
   
- [本主題內容](#top)  
   
 ###  <a name="unsupported"></a> 不支援的 XML 功能  
  選擇性 XML 索引不支援 XML 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 實作中支援的下列功能：  
@@ -130,7 +130,6 @@ FOR
   
 -   使用 id() 函數指定及擷取節點識別碼。  
   
- [本主題內容](#top)  
   
 ###  <a name="prereq"></a> 必要條件  
  下列必要條件必須存在，您才能在使用者資料表中的 XML 資料行上建立選擇性 XML 索引：  
@@ -141,7 +140,6 @@ FOR
   
 -   搭配選擇性 XML 索引使用時，使用者資料表的叢集索引鍵限制為 15 個資料行。  
   
- [本主題內容](#top)  
   
 ###  <a name="limits"></a> 限制  
  **一般需求與限制**  
@@ -174,9 +172,9 @@ FOR
   
  任一資料列中支援的非 null 資料行數目上限取決於資料行中資料的大小：  
   
--   在最好的情況下，如果所有資料行都是 **bit** 類型，則可支援 1024 個非 null 資料行。  
+-   在最好的情況下，如果所有資料行都是 **bit**類型，則可支援 1024 個非 null 資料行。  
   
--   在最差的情況下，如果所有資料行都是 **varchar** 類型的大型物件，則只能支援 236 個非 null 資料行。  
+-   在最差的情況下，如果所有資料行都是 **varchar**類型的大型物件，則只能支援 236 個非 null 資料行。  
   
  選擇性 XML 索引會在內部針對每一個索引的節點路徑使用一到四個資料行。 依據索引路徑中實際的資料大小而定，可進行索引的節點總數範圍可從 60 個到數百個節點。  
   
@@ -194,7 +192,6 @@ FOR
   
 -   Database Tuning Advisor 中不支援選擇性 XML 索引和次要選擇性 XML 索引。  
   
- [本主題內容](#top)  
   
 ##  <a name="reltasks"></a> 相關工作  
   
@@ -205,6 +202,5 @@ FOR
 |建立、修改或卸除選擇性 XML 索引。|[建立、修改和卸除選擇性 XML 索引](../../relational-databases/xml/create-alter-and-drop-selective-xml-indexes.md)|  
 |建立、修改或卸除次要選擇性 XML 索引。|[建立、修改和卸除次要選擇性 XML 索引](../../relational-databases/xml/create-alter-and-drop-secondary-selective-xml-indexes.md)|  
   
- [本主題內容](#top)  
   
   

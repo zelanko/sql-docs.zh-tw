@@ -1,31 +1,35 @@
 ---
 title: "執行預存程序 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-stored-Procs"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.executeprocedure.general.f1"
-  - "sql13.swb.executeprocedure.f1"
-helpviewer_keywords: 
-  - "預存程序 [SQL Server], 參數"
-  - "擴充預存程序 [SQL Server], 執行"
-  - "系統預存程序 [SQL Server], 執行"
-  - "預存程序 [SQL Server], 執行"
-  - "使用者自訂預存程序 [SQL Server]"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-stored-Procs
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.executeprocedure.general.f1
+- sql13.swb.executeprocedure.f1
+helpviewer_keywords:
+- stored procedures [SQL Server], parameters
+- extended stored procedures [SQL Server], executing
+- system stored procedures [SQL Server], executing
+- stored procedures [SQL Server], executing
+- user-defined stored procedures [SQL Server]
 ms.assetid: a0b1337d-2059-4872-8c62-3f967d8b170f
 caps.latest.revision: 38
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c1e76212425f01aba20c8a0d0fdb548415559be1
+ms.lasthandoff: 04/11/2017
+
 ---
-# 執行預存程序
+# <a name="execute-a-stored-procedure"></a>執行預存程序
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 執行 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的預存程序。  
   
  有兩種不同的方法可執行預存程序。 第一種是最常用的方法，可讓應用程式或使用者呼叫程序。 第二種方法是設定讓程序在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體啟動時自動執行。 當應用程式或使用者呼叫程序時， [!INCLUDE[tsql](../../includes/tsql-md.md)] EXECUTE 或 EXEC 關鍵字會在呼叫中明確陳述。 如果程序是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批次中的第一個陳述式，則呼叫和執行程序時也可以不用關鍵字。  
@@ -64,7 +68,7 @@ caps.handback.revision: 38
   
 -   執行系統預存程序  
   
-     系統程序會以 **sp_** 前置詞開頭。 由於這些程序會以邏輯的方式出現在所有使用者和系統定義的資料庫中，因此可以從任何資料庫中執行，而不必完整限定程序名稱。 不過，我們建議您使用結構描述將所有系統程序名稱限定為 **sys** 結構描述名稱，以避免名稱衝突。 下列範例示範呼叫系統程序的建議方法。  
+     系統程序會以 **sp_**前置詞開頭。 由於這些程序會以邏輯的方式出現在所有使用者和系統定義的資料庫中，因此可以從任何資料庫中執行，而不必完整限定程序名稱。 不過，我們建議您使用結構描述將所有系統程序名稱限定為 **sys** 結構描述名稱，以避免名稱衝突。 下列範例示範呼叫系統程序的建議方法。  
   
     ```tsql  
     EXEC sys.sp_who;  
@@ -74,7 +78,7 @@ caps.handback.revision: 38
   
      當執行使用者定義的程序時，我們建議以結構描述名稱限定程序名稱。 這種作法可稍微提升效能，因為 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 不必搜尋多個結構描述。 如果資料庫在多個結構描述中有相同名稱的程序，它還可以避免執行錯誤的程序。  
   
-     下列範例示範執行使用者定義程序的建議方法。 您會發現程序接受一個輸入參數。 如需指定輸入和輸出參數的相關資訊，請參閱[指定參數](../../relational-databases/stored-procedures/specify-parameters.md)。  
+     下列範例示範執行使用者定義程序的建議方法。 您會發現程序接受一個輸入參數。 如需指定輸入和輸出參數的相關資訊，請參閱 [指定參數](../../relational-databases/stored-procedures/specify-parameters.md)。  
   
     ```tsql  
     USE AdventureWorks2012;  
@@ -99,7 +103,7 @@ caps.handback.revision: 38
   
 -   自動執行預存程序  
   
-     標記為自動執行的程序會在每次 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 啟動時執行，且 **master** 資料庫會在該啟動處理序期間復原。 設定自動執行程序在執行資料庫維護作業或讓程序做為背景處理序連續執行時相當實用。 自動執行的另一個用處就是讓程序執行 **tempdb**中的系統或維護工作，如建立全域的暫存資料表。 這樣可確保在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 啟動期間重新建立 **tempdb** 時，這個暫存資料表一定會存在。  
+     標記為自動執行的程序會在每次 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 啟動時執行，且 **master** 資料庫會在該啟動處理序期間復原。 設定自動執行程序在執行資料庫維護作業或讓程序做為背景處理序連續執行時相當實用。 自動執行的另一個用處就是讓程序執行 **tempdb**中的系統或維護工作，如建立全域的暫存資料表。 這樣可確保在 **啟動期間重新建立** tempdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，這個暫存資料表一定會存在。  
   
      自動執行的程序運作時所使用的權限與 **sysadmin** (系統管理員) 固定伺服器角色的成員相同。 程序所產生的任何錯誤訊息都會寫入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔中。  
   
@@ -122,11 +126,11 @@ caps.handback.revision: 38
  如需詳細資訊，請參閱 [EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-transact-sql.md) 和 [EXECUTE AS 子句 &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md)。  
   
 ####  <a name="Permissions"></a> Permissions  
- 如需詳細資訊，請參閱 [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md) 中的＜權限＞一節。  
+ 如需詳細資訊，請參閱 [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)中的預存程序。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 若要執行預存程序  
+#### <a name="to-execute-a-stored-procedure"></a>若要執行預存程序  
   
 1.  在 [物件總管] 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的執行個體，展開該執行個體，然後展開 [資料庫] 。  
   
@@ -155,7 +159,7 @@ caps.handback.revision: 38
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 若要執行預存程序  
+#### <a name="to-execute-a-stored-procedure"></a>若要執行預存程序  
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
@@ -170,7 +174,7 @@ EXEC dbo.uspGetEmployeeManagers 6;
 GO  
 ```  
   
-#### 若要設定或清除自動執行的程序  
+#### <a name="to-set-or-clear-a-procedure-for-executing-automatically"></a>若要設定或清除自動執行的程序  
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
@@ -186,7 +190,7 @@ EXEC sp_procoption @ProcName = '<procedure name>'
     , @OptionValue = 'on';  
 ```  
   
-#### 若要停止自動執行程序  
+#### <a name="to-stop-a-procedure-from-executing-automatically"></a>若要停止自動執行程序  
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
@@ -203,7 +207,7 @@ EXEC sp_procoption @ProcName = '<procedure name>'
   
 ###  <a name="TsqlExample"></a> 範例 (Transact-SQL)  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [指定參數](../../relational-databases/stored-procedures/specify-parameters.md)   
  [設定 scan for startup procs 伺服器組態選項](../../database-engine/configure-windows/configure-the-scan-for-startup-procs-server-configuration-option.md)   
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   

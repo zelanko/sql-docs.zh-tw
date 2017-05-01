@@ -1,33 +1,37 @@
 ---
 title: "使用原則式管理來管理伺服器 | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/12/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Facet，請參閱 Facet"
-  - "宣告式管理架構，請參閱原則式管理"
-  - "介面區組態 [SQL Server], 原則式管理"
-  - "原則式管理"
-  - "Facet [原則式管理]"
-  - "原則式管理, 管理"
-  - "條件 [原則式管理]"
-  - "Facet [原則式管理], 關於 Facet"
-  - "PolicyAdministratorRole 角色"
+ms.custom: 
+ms.date: 08/12/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- facet See facets
+- Declarative Management Framework See Policy-Based Management
+- surface area configuration [SQL Server], Policy-Based Management
+- Policy-Based Management
+- facets [Policy-Based Management]
+- Policy-Based Management, administering
+- conditions [Policy-Based Management]
+- facets [Policy-Based Management], about facets
+- PolicyAdministratorRole role
 ms.assetid: ef2a7b3b-614b-405d-a04a-2464a019df40
 caps.latest.revision: 76
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 76
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bc3d3e94cd6d5993b9647a394338649fe357f021
+ms.lasthandoff: 04/11/2017
+
 ---
-# 使用原則式管理來管理伺服器
-   原則式管理是用於管理一個或多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的原則式系統。 其用法是為了建立包含條件運算式的條件。 然後，建立將這些條件套用至資料庫目標物件的原則。  
+# <a name="administer-servers-by-using-policy-based-management"></a>使用原則式管理來管理伺服器
+   原則式管理是用於管理一個或多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的原則式系統。 其用法是為了建立包含條件運算式的條件。 然後，建立將這些條件套用至資料庫目標物件的原則。  
 
 例如，身為資料庫管理員，您可能想要確定特定伺服器未啟用 Database Mail，以便建立設定該伺服器選項的條件和原則。 
    
@@ -45,9 +49,9 @@ caps.handback.revision: 76
   
  若為失敗的原則，[物件總管] 會指出嚴重健全狀況警告成為目標旁的紅色圖示以及 [物件總管] 樹狀結構中較高的節點。  
   
-> **注意**：當系統計算原則的物件集時，預設會排除系統物件。  例如，如果原則的物件集是指所有資料表，則原則不會套用至系統資料表。 如果使用者想要對系統物件評估原則，可以明確地將系統物件加入至物件集。 不過，雖然 **check on schedule** 評估模式支援所有原則，但基於效能的考量， **check on change** 評估模式並未支援所有原則與任意物件集搭配使用。 如需詳細資訊，請參閱 [http://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx](http://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx)  
+> **注意** ：當系統計算原則的物件集時，預設會排除系統物件。  例如，如果原則的物件集是指所有資料表，則原則不會套用至系統資料表。 如果使用者想要對系統物件評估原則，可以明確地將系統物件加入至物件集。 不過，雖然 **check on schedule** 評估模式支援所有原則，但基於效能的考量， **check on change** 評估模式並未支援所有原則與任意物件集搭配使用。 如需詳細資訊，請參閱 [http://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx](http://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx)  
   
-## 三個原則式管理元件  
+## <a name="three-policy-based-management-components"></a>三個原則式管理元件  
  原則式管理有三個元件：  
   
 -   原則管理。 原則管理員會建立原則。  
@@ -68,7 +72,7 @@ caps.handback.revision: 76
   
      未啟用自動原則時，原則式管理將不會影響系統效能。  
   
-## 詞彙  
+## <a name="terms"></a>詞彙  
  **原則式管理 Managed 目標** 
 ：以原則式管理所管理的實體，例如 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的執行個體、資料庫、資料表或索引。 伺服器執行個體中的所有目標都會構成目標階層。 目標集是指將一組目標篩選套用至目標階層所產生的目標集，例如 HumanResources 結構描述所擁有之資料庫中的所有資料表。  
   
@@ -101,7 +105,7 @@ caps.handback.revision: 76
   
 -   目標或其中一個目標上階，訂閱了包含此原則的原則群組。  
   
-## 特定工作的連結 
+## <a name="links-to-specific-tasks"></a>特定工作的連結 
 
  - [儲存原則式管理原則。](https://msdn.microsoft.com/library/hh213476.aspx)|  
  - [設定警示以便向原則管理員通知原則失敗](../../relational-databases/policy-based-management/configure-alerts-to-notify-policy-administrators-of-policy-failures.md)  
@@ -115,10 +119,11 @@ caps.handback.revision: 76
  - [使用原則式管理來監視和強制最佳做法](../../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)
 
   
- ## 範例
+ ## <a name="examples"></a>範例
  - [建立依預設為關閉的原則](https://msdn.microsoft.com/library/bb500172.aspx)
   - [將伺服器設定為執行 Off By Default 原則](https://msdn.microsoft.com/library/bb522470.aspx)
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [以原則為基礎的管理檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
   
   
+

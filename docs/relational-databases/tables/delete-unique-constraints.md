@@ -1,28 +1,32 @@
 ---
-title: "刪除唯一的條件約束 | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/12/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "移除條件約束"
-  - "UNIQUE 條件約束 [SQL Server], 刪除"
-  - "條件約束 [SQL Server], 刪除"
-  - "刪除條件約束"
-  - "條件約束 [SQL Server], 唯一"
+title: "刪除唯一的條件約束 | Microsoft 文件"
+ms.custom: 
+ms.date: 10/12/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- removing constraints
+- UNIQUE constraints [SQL Server], deleting
+- constraints [SQL Server], deleting
+- deleting constraints
+- constraints [SQL Server], unique
 ms.assetid: 71e563fc-f5d7-4c2e-a42f-f0695a831f32
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 49169c8ac7e47e6b9d9efff891810c68372aa6c5
+ms.lasthandoff: 04/11/2017
+
 ---
-# 刪除唯一的條件約束
+# <a name="delete-unique-constraints"></a>刪除唯一的條件約束
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中刪除唯一條件約束。 刪除唯一條件約束會移除條件約束運算式所包含之資料行或資料行組合中輸入值的唯一性要求，並且刪除對應的唯一索引。  
@@ -48,7 +52,7 @@ caps.handback.revision: 14
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 若要使用物件總管來刪除唯一條件約束  
+#### <a name="to-delete-a-unique-constraint-using-object-explorer"></a>若要使用物件總管來刪除唯一條件約束  
   
 1.  在 [物件總管] 中，展開包含唯一條件約束的資料表，然後展開 **[條件約束]**。  
   
@@ -56,7 +60,7 @@ caps.handback.revision: 14
   
 3.  在 **[刪除物件]** 對話方塊中，確認指定了正確的索引鍵，然後按一下 **[確定]**。  
   
-#### 若要使用資料表設計工具來刪除唯一條件約束  
+#### <a name="to-delete-a-unique-constraint-using-table-designer"></a>若要使用資料表設計工具來刪除唯一條件約束  
   
 1.  在物件總管中，以滑鼠右鍵按一下含有唯一條件約束的資料表，然後按一下 [設計]。  
   
@@ -70,7 +74,7 @@ caps.handback.revision: 14
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 若要刪除唯一條件約束  
+#### <a name="to-delete-a-unique-constraint"></a>若要刪除唯一條件約束  
   
 1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
@@ -93,3 +97,4 @@ caps.handback.revision: 14
  如需詳細資訊，請參閱 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md) 和 [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)。  
   
 ###  <a name="TsqlExample"></a>  
+

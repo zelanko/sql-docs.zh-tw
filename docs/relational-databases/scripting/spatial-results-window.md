@@ -1,28 +1,32 @@
 ---
 title: "空間結果視窗 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c2d5a477-6496-4d01-adee-7322ebdfadf3
 caps.latest.revision: 8
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 66e1a9e14b4a786e6ca45a9ab0e761975563c415
+ms.lasthandoff: 04/11/2017
+
 ---
-# 空間結果視窗
+# <a name="spatial-results-window"></a>空間結果視窗
   [空間結果] 視窗會提供檢視空間資料的視覺化對應工具。 若要檢視空間結果，您的查詢結果必須包含一個具有幾何或地理位置資料的空間資料行。  
   
 > [!NOTE]  
 >  只有當您的結果傳回至 [結果] 視窗中的方格時，才能使用 [空間結果] 視窗。 如果您指定要將結果傳回成文字，就無法使用這個視窗。  
   
-## 選項  
+## <a name="options"></a>選項  
  **選取空間資料行**  
  在查詢結果的空間資料行中，指定您想要檢視的空間資料行。 一次只能選取一個資料行。  
   
@@ -47,7 +51,7 @@ caps.handback.revision: 8
 > [!NOTE]  
 >  您無法標示 Point 執行個體。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [檢視物件總管中的空間資料](../../relational-databases/scripting/view-spatial-data-in-object-explorer.md)   
  [空間資料 &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)   
  [Database Engine 查詢編輯器 &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md)   

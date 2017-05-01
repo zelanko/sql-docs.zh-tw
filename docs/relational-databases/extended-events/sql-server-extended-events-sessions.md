@@ -1,27 +1,31 @@
 ---
 title: "SQL Server 擴充的事件工作階段 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "xe"
-  - "工作階段"
-  - "擴充的事件 [SQL Server]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- xe
+- sessions
+- extend events [SQL Server]
 ms.assetid: c3c92544-351a-4bce-a06a-1f2a47e494e9
 caps.latest.revision: 20
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ff9ce12cc98171946715d16f18d15885d7098c4f
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server 擴充的事件工作階段
+# <a name="sql-server-extended-events-sessions"></a>SQL Server 擴充的事件工作階段
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 擴充的事件工作階段會建立在主控擴充之事件引擎的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序中。 下列是擴充的事件工作階段的各個層面，可讓您了解擴充的事件基礎結構的來龍去脈以及進行的一般處理：  
@@ -30,7 +34,7 @@ caps.handback.revision: 20
   
 -   工作階段內容和特性。 擴充事件工作階段的內容，例如目標和事件，以及這些物件如何在工作階段內或是工作階段之間相互產生關聯。  
   
-## 工作階段狀態  
+## <a name="session-states"></a>工作階段狀態  
  下圖顯示擴充事件工作階段的各個狀態。  
   
  ![擴充的事件工作階段狀態](../../relational-databases/extended-events/media/xesessionstate.gif "擴充的事件工作階段狀態")  
@@ -47,7 +51,7 @@ caps.handback.revision: 20
 > [!NOTE]  
 >  ALTER EVENT SESSION 和 DROP EVENT SESSION 都可以套用到中繼資料或是使用中工作階段和中繼資料。  
   
-## 工作階段內容和特性  
+## <a name="session-content-and-characteristics"></a>工作階段內容和特性  
  擴充的事件工作階段具有隱含的界限，在此界限下，某個工作階段的組態不會變更另一個工作階段的組態。 但是，這些界限並不會防止事件或目標在一個以上的工作階段內使用。  
   
  下圖顯示工作階段內容以及封裝與工作階段之間的關聯性。  
@@ -76,7 +80,7 @@ caps.handback.revision: 20
   
  擴充的事件基礎結構會提供一個彈性的系統，可讓各種物件一起使用來解決特定的問題。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [擴充事件](../../relational-databases/extended-events/extended-events.md)  
   
   

@@ -1,29 +1,33 @@
 ---
-title: "View Resource Governor Properties | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/18/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.rg.properties.f1"
-helpviewer_keywords: 
-  - "Resource Governor, properties"
+title: "檢視資源管理員屬性 | Microsoft 文件"
+ms.custom: 
+ms.date: 07/18/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.rg.properties.f1
+helpviewer_keywords:
+- Resource Governor, properties
 ms.assetid: de3510df-f792-4a9d-80fa-f198fd36cdc8
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e856286b6048e320481b5983685fbfcd4e838c1d
+ms.lasthandoff: 04/11/2017
+
 ---
-# View Resource Governor Properties
+# <a name="view-resource-governor-properties"></a>View Resource Governor Properties
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的 [資源管理員屬性] 頁面來建立或設定資源管理員實體，例如資源集區和工作負載群組。  
+  您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的 [資源管理員屬性] 頁面來建立或設定資源管理員實體，例如資源集區和工作負載群組。  
   
  ##  <a name="BeforeYouBegin"></a> 相關主題 
  除了檢視資源管理員實體的屬性之外，還可以使用 **[資源管理員屬性]** 頁面執行多個組態工作。 如需詳細資訊，請參閱下列主題：  
@@ -62,7 +66,7 @@ caps.handback.revision: 28
   
 4.  若要儲存任何變更，請按一下 **[確定]**。  
   
-##  <a name="RGProp"></a> Resource Governor 屬性  
+##  <a name="RGProp"></a> Resource Governor properties  
  **分類函數名稱**  
  從清單中選取以指定分類函數。  
   
@@ -115,18 +119,19 @@ caps.handback.revision: 28
   
  如需詳細資訊，請參閱 [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-group-transact-sql.md) (建立可用性群組 (Transact-SQL))。  
   
-## 使用 Transact-SQL 檢視 Resource Governor 屬性  
+## <a name="view-resource-governor-properties-using-transact-sql"></a>使用 Transact-SQL 檢視 Resource Governor 屬性  
  **使用 Transact-SQL 檢視資源管理員屬性**  
   
 1.  若要檢視 Resource Governor 實體的定義，請使用 [Resource Governor 目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)。  
   
 2.  若要檢視 Resource Governor 實體的目前組態，請使用 [Resource Governor 相關的動態管理檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md)。  
   
-## 詳細資訊
- [資源管理員](../../relational-databases/resource-governor/resource-governor.md)   
+## <a name="more-information"></a>詳細資訊
+ [[資源管理員]](../../relational-databases/resource-governor/resource-governor.md)   
  [啟用資源管理員](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [資源管理員資源集區](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
  [資源管理員工作負載群組](../../relational-databases/resource-governor/resource-governor-workload-group.md)   
  [資源管理員分類函數](../../relational-databases/resource-governor/resource-governor-classifier-function.md)  
   
   
+

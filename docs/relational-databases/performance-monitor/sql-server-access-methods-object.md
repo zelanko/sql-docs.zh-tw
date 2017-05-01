@@ -1,25 +1,29 @@
 ---
 title: "SQL Server 的 Access Methods 物件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Access Methods 物件"
-  - "SQLServer:Access Methods"
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Access Methods object
+- SQLServer:Access Methods
 ms.assetid: 27558585-e780-48bb-a042-30d664662ebc
 caps.latest.revision: 36
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 19dcb59cbc63c0c956604fb5745f8446da067642
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server 的 Access Methods 物件
+# <a name="sql-server-access-methods-object"></a>SQL Server 的 Access Methods 物件
   **的** Access Methods [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物件會提供計數器，可監視資料庫內的邏輯資料如何存取。 您可以使用 **Buffer Manager** 計數器來監視實體存取磁碟內的資料庫頁面。 監視用來存取資料庫內儲存之資料的方法，可協助您判定增加或修改索引、新增或移動分割、新增檔案或檔案群組、重組索引或重新撰寫查詢，能否改善查詢效能。 **Access Methods** 計數器也可用來監視資料庫內的資料、索引和可用空間，藉以指出每個伺服器執行個體的資料量和片段。 索引片段過多會影響到效能。  
   
  如需有關資料量、片段與使用量的詳細資訊，請使用下列動態管理檢視：  
@@ -55,8 +59,8 @@ caps.handback.revision: 36
 |**Deferred Dropped rowsets**|可將延遲的已卸除資料列集清除的背景工作，等待卸除的已中止線上索引建置作業所建立的資料列集數目。|  
 |**Dropped rowset cleanups/sec**|可將延遲的已卸除資料列集清除的背景工作，順利卸除的已中止線上索引建置作業所建立的資料列集數目。|  
 |**Dropped rowsets skipped/sec**|可將延遲的已卸除資料列集清除的背景工作，要略過的已中止線上索引建置作業所建立的資料列集數目。|  
-|**Extent Deallocations/sec**|此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的所有資料庫，每秒取消配置的範圍數目。|  
-|**Extents Allocated/sec**|此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的所有資料庫，每秒配置的範圍數目。|  
+|**Extent Deallocations/sec**|此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的所有資料庫，每秒取消配置的範圍數目。|  
+|**Extents Allocated/sec**|此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的所有資料庫，每秒配置的範圍數目。|  
 |**Failed AU cleanup batches/sec**|可將延遲的已卸除配置單位清除的背景工作，每秒內失敗且必須重試的批次數。 可能是由於缺少記憶體或磁碟空間、硬體失敗以及其他原因，才造成失敗。|  
 |**Failed leaf page cookie**|分葉頁面上有所變更後，無法在索引搜尋期間使用分葉頁面 Cookie 的次數。 Cookie 用於加速索引搜尋。|  
 |**Failed tree page cookie**|那些樹狀頁面的父系頁面上有所變更後，無法在索引搜尋期間使用樹狀頁面 Cookie 的次數。 Cookie 用於加速索引搜尋。|  
@@ -72,11 +76,11 @@ caps.handback.revision: 36
 |**LobSS Provider Destroy Count**|終結的 LobSSP 計數。|  
 |**LobSS Provider Truncation Count**|截斷的 LobSSP 計數。|  
 |**Mixed page allocations/sec**|每秒自混合範圍所配置的分頁數。 這些可以用來儲存 IAM 頁面，以及已配置給配置單位的前八個頁面。|  
-|**頁面壓縮嘗試次數/秒**|為頁面層級壓縮評估的頁數。 包括由於可以大量省下頁面所以未壓縮的頁面。 包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中的所有物件。 如需特定物件的資訊，請參閱 [sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)。|  
-|**Page Deallocations/sec**|此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的所有資料庫，每秒取消配置的頁面數目。 這些包括來自混合範圍與統一範圍的頁面。|  
+|**頁面壓縮嘗試次數/秒**|為頁面層級壓縮評估的頁數。 包括由於可以大量省下頁面所以未壓縮的頁面。 包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體中的所有物件。 如需特定物件的資訊，請參閱 [sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)執行個體的所有資料庫，每秒取消配置的範圍數目。|  
+|**Page Deallocations/sec**|此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的所有資料庫，每秒取消配置的頁面數目。 這些包括來自混合範圍與統一範圍的頁面。|  
 |**Page Splits/sec**|每秒由於索引頁面溢位造成的頁面分隔數。|  
-|**Pages Allocated/sec**|此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的所有資料庫，每秒配置的頁面數目。 這些包括來自混合範圍與統一範圍的頁面配置。|  
-|**壓縮的頁面/秒**|使用 PAGE 壓縮所壓縮的資料頁數。 包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中的所有物件。 如需特定物件的資訊，請參閱 [sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)。|  
+|**Pages Allocated/sec**|此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的所有資料庫，每秒配置的頁面數目。 這些包括來自混合範圍與統一範圍的頁面配置。|  
+|**壓縮的頁面/秒**|使用 PAGE 壓縮所壓縮的資料頁數。 包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體中的所有物件。 如需特定物件的資訊，請參閱 [sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)執行個體的所有資料庫，每秒取消配置的範圍數目。|  
 |**Probe Scans/sec**|每秒的探查掃描數目，用以在索引或基底資料表中直接尋找至多一個合格的資料列。|  
 |**Range Scans/sec**|每秒透過索引的合格範圍掃描數。|  
 |**Scan Point Revalidations/sec**|每秒掃描點必須重新驗證以繼續掃描的次數。|  
@@ -89,7 +93,7 @@ caps.handback.revision: 36
 |**Worktables From Cache Base**|僅供內部使用。|  
 |**Worktables From Cache Ratio**|已建立的工作資料表百分比，尚未配置工作資料表的兩個初始頁面，但可從工作表快取立即取得。 卸除工作資料表後，可能會維持配置兩個頁面，而且它們會回到工作資料表快取。 這樣可以增加效能)。|  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [監視資源使用狀況 &#40;系統監視器&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

@@ -1,35 +1,39 @@
 ---
 title: "建立內含資料行的索引 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/09/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "索引大小 [SQL Server]"
-  - "索引鍵 [SQL Server]"
-  - "索引資料行 [SQL Server]"
-  - "大小 [SQL Server], 索引"
-  - "索引鍵資料行 [SQL Server]"
-  - "內含資料行"
-  - "非叢集索引 [SQL Server], 包含資料行"
-  - "設計索引 [SQL Server], 包含資料行"
-  - "非索引鍵之索引資料行"
+ms.custom: 
+ms.date: 03/09/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- index size [SQL Server]
+- index keys [SQL Server]
+- index columns [SQL Server]
+- size [SQL Server], indexes
+- key columns [SQL Server]
+- included columns
+- nonclustered indexes [SQL Server], included columns
+- designing indexes [SQL Server], included columns
+- nonkey columns
 ms.assetid: d198648d-fea5-416d-9f30-f9d4aebbf4ec
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 815756ed3e14540705a1c2cdbab16d5648a6d2ec
+ms.lasthandoff: 04/11/2017
+
 ---
-# 建立內含資料行的索引
+# <a name="create-indexes-with-included-columns"></a>建立內含資料行的索引
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中加入內含 (或非索引鍵) 資料行，以擴充非叢集索引的功能。 藉由加入非索引鍵資料行，您可以建立涵蓋更多查詢的非叢集索引。 這是因為非索引鍵之索引資料行有下列好處：  
+  此主題描述如何使用 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中加入內含 (或非索引鍵) 資料行，以擴充非叢集索引的功能。 藉由加入非索引鍵資料行，您可以建立涵蓋更多查詢的非叢集索引。 這是因為非索引鍵之索引資料行有下列好處：  
   
 -   與索引鍵資料行一樣，它們可以是不允許的資料類型。  
   
@@ -62,7 +66,7 @@ caps.handback.revision: 28
   
 -   重新設計具有大型索引鍵大小的非叢集索引，如此僅有用於搜尋與查閱的資料行才會是索引鍵資料行。 讓涵蓋查詢的所有其他資料行都做為非索引鍵資料行。 如此一來，您將擁有涵蓋查詢所需的所有資料行，但是索引鍵本身會變得很小而且很有效率。  
   
--   在非叢集索引中包含非索引鍵資料行，以避免超出目前索引大小限制 (最大 16 個索引鍵資料行，最大 900 個位元組索引鍵大小) 計算索引鍵資料行數或索引鍵大小時， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 不會考慮非索引鍵之索引資料行。  
+-   在非叢集索引中包含非索引鍵資料行，以避免超出目前索引大小限制：最大 32 個索引鍵資料行，最大 1,700 個位元組索引鍵大小 (在 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 之前為 16 個索引鍵資料行和 900 個位元組)。 計算索引鍵資料行數或索引鍵大小時， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 不會考慮非索引鍵之索引資料行。  
   
 ###  <a name="Restrictions"></a> 限制事項  
   
@@ -70,7 +74,7 @@ caps.handback.revision: 28
   
 -   除了 **text**、 **ntext**和 **image** ，所有資料類型都可以用做非索引鍵資料行。  
   
--   具決定性之精確或非精確的計算資料行都可以當做非索引鍵資料行。 如需詳細資訊，請參閱[計算資料行的索引](../../relational-databases/indexes/indexes-on-computed-columns.md)。  
+-   具決定性之精確或非精確的計算資料行都可以當做非索引鍵資料行。 如需詳細資訊，請參閱 [計算資料行的索引](../../relational-databases/indexes/indexes-on-computed-columns.md)。  
   
 -   只要計算資料行資料類型允許非索引鍵索引資料行，從 **image**、 **ntext**和 **text** 資料類型衍生的計算資料行就可以是非索引鍵資料行。  
   
@@ -85,11 +89,11 @@ caps.handback.revision: 28
 ###  <a name="Security"></a> 安全性  
   
 ####  <a name="Permissions"></a> Permissions  
- 需要資料表或檢視表的 ALTER 權限。 使用者必須是**系統管理員**固定伺服器角色的成員，或是 **db_ddladmin** 和 **db_owner** 固定資料庫角色的成員。  
+ 需要資料表或檢視表的 ALTER 權限。 使用者必須是 **系統管理員** 固定伺服器角色的成員，或是 **db_ddladmin** 和 **db_owner** 固定資料庫角色的成員。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 建立非索引鍵資料行的索引  
+#### <a name="to-create-an-index-with-nonkey-columns"></a>建立非索引鍵資料行的索引  
   
 1.  在 [物件總管] 中，按一下加號展開資料庫，此資料庫包含您要建立非索引鍵資料行之索引的資料表。  
   
@@ -117,7 +121,7 @@ caps.handback.revision: 28
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 建立非索引鍵資料行的索引  
+#### <a name="to-create-an-index-with-nonkey-columns"></a>建立非索引鍵資料行的索引  
   
 1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
@@ -140,3 +144,4 @@ caps.handback.revision: 28
  如需詳細資訊，請參閱 [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)。  
   
   
+

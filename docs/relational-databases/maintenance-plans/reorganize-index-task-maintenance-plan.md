@@ -1,29 +1,33 @@
 ---
 title: "重新組織索引工作 (維護計畫) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.maint.defrag.f1"
-helpviewer_keywords: 
-  - "重新組織索引工作對話方塊"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.maint.defrag.f1
+helpviewer_keywords:
+- Reorganize Index Task dialog box
 ms.assetid: e9cbebbd-f36f-4176-9832-382a46ac946c
 caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 33
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9b9be64710acf299e601582127fa2e326061c5e2
+ms.lasthandoff: 04/11/2017
+
 ---
-# 重新組織索引工作 (維護計畫)
+# <a name="reorganize-index-task-maintenance-plan"></a>重新組織索引工作 (維護計畫)
   使用 [重新組織索引工作] 對話方塊，即可將索引頁面移至更有效率的搜尋順序。 此工作會使用 `ALTER INDEX REORGANIZE` 陳述式搭配 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 資料庫。  
   
-## 選項  
+## <a name="options"></a>選項  
  **連接**  
  選取執行此工作時要使用的伺服器連接。  
   
@@ -39,7 +43,7 @@ caps.handback.revision: 33
   
 -   **所有系統資料庫**  
   
-     產生維護計畫，針對每個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統資料庫執行維護工作，但 **tempdb** 除外。 不會針對使用者建立的資料庫執行維護工作。  
+     產生維護計畫，針對每個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統資料庫執行維護工作，但 **tempdb**除外。 不會針對使用者建立的資料庫執行維護工作。  
   
 -   **所有使用者資料庫**  
   
@@ -64,7 +68,7 @@ caps.handback.revision: 33
 > [!NOTE]  
 >  受影響的物件數目較為大量時，會多花一些時間才會顯示。  
   
-## 新增連接對話方塊  
+## <a name="new-connection-dialog-box"></a>新增連接對話方塊  
  **連接名稱**  
  輸入新連接的名稱。  
   
@@ -78,10 +82,10 @@ caps.handback.revision: 33
  指定如何對伺服器進行驗證。  
   
  **使用 Windows 整合式安全性**  
- 使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 驗證，連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體。  
+ 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 的執行個體。  
   
  **使用特定的使用者名稱和密碼**  
- 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證來連接 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體。 無法使用此選項。  
+ 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 無法使用此選項。  
   
  **使用者名稱**  
  提供驗證時要使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 無法使用此選項。  
@@ -89,7 +93,7 @@ caps.handback.revision: 33
  **密碼**  
  提供驗證時要使用的密碼。 無法使用此選項。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)   
  [DBCC INDEXDEFRAG &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-indexdefrag-transact-sql.md)  
   

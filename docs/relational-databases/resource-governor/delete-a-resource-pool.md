@@ -1,25 +1,29 @@
 ---
-title: "刪除資源集區 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "資源管理員, 資源集區刪除"
-  - "資源集區 [SQL Server], 刪除"
+title: "刪除資源集區 | Microsoft 文件"
+ms.custom: 
+ms.date: 03/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Resource Governor, resource pool delete
+- resource pools [SQL Server], delete
 ms.assetid: 3bdd348b-6582-4ffa-80ef-d49e50596ce5
 caps.latest.revision: 9
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 857ce687209066520bb2ec552b93fd46d547b38e
+ms.lasthandoff: 04/11/2017
+
 ---
-# 刪除資源集區
+# <a name="delete-a-resource-pool"></a>刪除資源集區
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 Transact-SQL 刪除資源集區。  
@@ -56,8 +60,8 @@ caps.handback.revision: 9
   
 2.  執行 **ALTER RESOURCE GOVERNOR RECONFIGURE** 陳述式。  
   
-### 範例 (Transact-SQL)  
- 下列範例會卸除名稱為 `poolAdhoc` 的工作負載群組。  
+### <a name="example-transact-sql"></a>範例 (Transact-SQL)  
+ 下列範例會卸除名稱為 `poolAdhoc`的工作負載群組。  
   
 ```  
 DROP RESOURCE POOL poolAdhoc;  
@@ -66,9 +70,9 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-## 另請參閱  
- [資源管理員](../../relational-databases/resource-governor/resource-governor.md)   
- [資源管理員資源集區](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
+## <a name="see-also"></a>另請參閱  
+ [[資源管理員]](../../relational-databases/resource-governor/resource-governor.md)   
+ [Resource Governor 資源集區](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
  [建立資源集區](../../relational-databases/resource-governor/create-a-resource-pool.md)   
  [變更資源集區設定](../../relational-databases/resource-governor/change-resource-pool-settings.md)   
  [資源管理員工作負載群組](../../relational-databases/resource-governor/resource-governor-workload-group.md)   
@@ -81,3 +85,4 @@ GO
  [ALTER EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-external-resource-pool-transact-sql.md)  
   
   
+

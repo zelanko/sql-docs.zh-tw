@@ -1,22 +1,26 @@
 ---
-title: "記憶體中的 OLTP 不支援 Transact-SQL 建構 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "記憶體內部 OLTP 不支援的 Transact-SQL 建構 | Microsoft 文件"
+ms.custom: 
+ms.date: 12/16/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e3f8009c-319d-4d7b-8993-828e55ccde11
 caps.latest.revision: 51
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 51
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a3539b07a27be375ebfe58e16a4792d9095fce0c
+ms.lasthandoff: 04/11/2017
+
 ---
-# 記憶體中的 OLTP 不支援 Transact-SQL 建構
+# <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>記憶體中的 OLTP 不支援 Transact-SQL 建構
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   記憶體最佳化資料表、原生編譯預存程序和使用者定義函數，不支援磁碟資料表、轉譯過的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 預存程序和使用者定義函數所支援的全部 [!INCLUDE[tsql](../../includes/tsql-md.md)] 介面區。 嘗試使用其中一項不支援的功能時，伺服器會傳回錯誤。  
@@ -51,7 +55,7 @@ caps.handback.revision: 51
 |----------|----------|----------------|  
 |功能|ON|記憶體最佳化資料表不可放置在檔案群組或分割區配置上。 請從 **CREATE TABLE** 陳述式中移除 ON 子句。<br /><br /> 所有記憶體最佳化資料表都會對應到記憶體最佳化檔案群組。|  
 |資料類型|*資料類型名稱*|不支援所指的資料類型。 請用其中一種支援的資料類型取代該類型。 如需詳細資訊，請參閱 [記憶體內部 OLTP 支援的資料類型](../../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md)。|  
-|功能|計算資料行|記憶體最佳化資料表中不支援計算資料行。 請從 **CREATE TABLE** 陳述式中移除計算資料行。<br/><br/>**適用於：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。<br/>從 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 開始，記憶體最佳化的資料表和索引支援計算資料行。|  
+|功能|計算資料行|記憶體最佳化資料表中不支援計算資料行。 請從 **CREATE TABLE** 陳述式中移除計算資料行。<br/><br/>**Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.<br/>從 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 開始，記憶體最佳化的資料表和索引支援計算資料行。|  
 |功能|複寫|記憶體最佳化資料表不支援複寫。|  
 |功能|FILESTREAM|FILESTREAM 儲存體不是記憶體最佳化資料表支援的資料行。 請從資料行定義中移除 **FILESTREAM** 關鍵字。|  
 |功能|SPARSE|記憶體最佳化資料表的資料行不可定義為 SPARSE。 請從資料行定義中移除 **SPARSE** 關鍵字。|  
@@ -136,7 +140,7 @@ caps.handback.revision: 51
 |運算子|OFFSET|不支援此運算子。 請從原生編譯預存程序中移除 **OFFSET** 。|  
 |運算子|INTERSECT|不支援此運算子。 請從原生編譯預存程序中移除 **INTERSECT** 。 在某些情況下，可以使用 INNER JOIN 獲得相同結果。|  
 |運算子|EXCEPT|不支援此運算子。 請從原生編譯預存程序中移除 **EXCEPT** 。|  
-|運算子|APPLY|不支援此運算子。 請從原生編譯預存程序中移除 **APPLY** 。<br/><br/>**適用於：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。<br/>從 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 開始，原生編譯模組支援 APPLY 運算子。|  
+|運算子|APPLY|不支援此運算子。 請從原生編譯預存程序中移除 **APPLY** 。<br/><br/>**Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.<br/>從 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 開始，原生編譯模組支援 APPLY 運算子。|  
 |運算子|PIVOT|不支援此運算子。 請從原生編譯預存程序中移除 **PIVOT** 。|  
 |運算子|UNPIVOT|不支援此運算子。 請從原生編譯預存程序中移除 **UNPIVOT** 。|  
 |運算子|CONTAINS|不支援此運算子。 請從原生編譯預存程序中移除 **CONTAINS** 。|  
@@ -152,20 +156,20 @@ caps.handback.revision: 51
 |選項|FOR XML|不支援這個選項。 請從原生編譯預存程序中移除 **FOR XML** 。|  
 |選項|FOR BROWSE|不支援這個選項。 請從原生編譯預存程序中移除 **FOR BROWSE** 。|  
 |聯結提示|HASH、MERGE|原生編譯預存程序僅支援巢狀迴圈聯結。 不支援雜湊和合併聯結。 請移除聯結提示。|  
-|查詢提示|*查詢提示*|此查詢提示不在原生編譯預存程序內。 如需支援的查詢提示，請參閱[查詢提示 &#40;Transact-SQL&#41;](../Topic/Query%20Hints%20\(Transact-SQL\).md)。|  
+|查詢提示|*查詢提示*|此查詢提示不在原生編譯預存程序內。 如需支援的查詢提示，請參閱[查詢提示 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)。|  
 |選項|PERCENT|**TOP** 子句不支援此選項。 請從原生編譯預存程序的查詢中移除 **PERCENT** 。|  
 |選項|WITH TIES|**TOP** 子句不支援此選項。 請從原生編譯預存程序的查詢中移除 **WITH TIES** 。|  
 |彙總函式|*彙總函式*|不支援此子句。 如需原生編譯預存程序中彙總函式的詳細資訊，請參閱＜ [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)＞。|  
 |排名函數|*次序函數*|原生編譯預存程序中不支援排名函數。 請從程序定義中將它們移除。|  
 |函數|*函數*|不支援此函數。 請從原生編譯預存程序中將它移除。|  
-|Statement|*陳述式*|不支援此陳述式。 請從原生編譯預存程序中將它移除。|  
+|引數|*陳述式*|不支援此陳述式。 請從原生編譯預存程序中將它移除。|  
 |功能|MIN 和 MAX 可與二進位和字元字串並用|彙總函式 **MIN** 和 **MAX** 不可用於原生編譯預存程序內的字元和二進位字串值。|  
 |功能|GROUP BY ALL|在原生編譯的預存程序中，ALL 不得與 GROUP BY 子句並用。 從 GROUP BY 子句中移除 ALL。|  
 |功能|GROUP BY ()|無法使用空白清單做為群組依據。 請移除 GROUP BY 子句，或在群組清單中加入資料行。|  
 |功能|ROLLUP|**ROLLUP** 無法與原生編譯預存程序中的 **GROUP BY** 子句一起使用。 請從程序定義中移除 **ROLLUP** 。|  
 |功能|CUBE|**CUBE** 無法與原生編譯預存程序中的 **GROUP BY** 子句一起使用。 請從程序定義中移除 **CUBE** 。|  
 |功能|GROUPING SETS|**GROUPING SETS** 無法與原生編譯預存程序中的 **GROUP BY** 子句一起使用。 請從程序定義中移除 **GROUPING SETS** 。|  
-|功能|BEGIN TRANSACTION、COMMIT TRANSACTION 與 ROLLBACK TRANSACTION。|使用 ATOMIC 區塊控制交易和錯誤處理。 如需詳細資訊，請參閱 [Atomic Blocks](../../relational-databases/in-memory-oltp/原生程序中不可部分完成的區塊.md)。|  
+|功能|BEGIN TRANSACTION、COMMIT TRANSACTION 與 ROLLBACK TRANSACTION。|使用 ATOMIC 區塊控制交易和錯誤處理。 如需詳細資訊，請參閱 [Atomic Blocks](../../relational-databases/in-memory-oltp/atomic-blocks-in-native-procedures.md)。|  
 |功能|內嵌資料表變數宣告。|資料表變數必須明確參考定義的記憶體最佳化資料表類型。 您應該建立記憶體最佳化資料表的類型，並使用該類型宣告變數，而不要指定內嵌類型。|  
 |功能|磁碟型資料表|磁碟型資料表無法從原生編譯的預存程序中存取。 從原生編譯的預存程序移除磁碟型資料表類型的參考。 或是將磁碟型資料表移轉至經過最佳化的記憶體。|  
 |功能|檢視|檢視無法從原生編譯的預存程序中存取。 請參考基底資料表，而不要使用檢視。|  
@@ -184,6 +188,7 @@ caps.handback.revision: 51
 |功能|DTC|存取記憶體最佳化資料表的交易不可以是分散式交易。|  
   
 ## <a name="see-also"></a>另請參閱  
- [移轉至記憶體內部 OLTP](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
+ [移轉至 In-Memory OLTP](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   
   
+

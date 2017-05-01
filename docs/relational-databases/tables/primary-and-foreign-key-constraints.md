@@ -1,28 +1,32 @@
 ---
 title: "主要與外部索引鍵條件約束 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "06/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "外部索引鍵 [SQL Server], 串聯式參考完整性"
-  - "FOREIGN KEY 條件約束"
-  - "外部索引鍵 [SQL Server]"
-  - "外部索引鍵 [SQL Server], 關於外部索引鍵條件約束"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 06/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- foreign keys [SQL Server], cascading referential integrity
+- FOREIGN KEY constraints
+- foreign keys [SQL Server]
+- foreign keys [SQL Server], about foreign key constraints
 ms.assetid: 31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9d9a08e9dab4377688b994c024c67df607c14879
+ms.lasthandoff: 04/11/2017
+
 ---
-# 主要與外部索引鍵條件約束
+# <a name="primary-and-foreign-key-constraints"></a>主要與外部索引鍵條件約束
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   主索引鍵和外部索引鍵是兩種類型的條件約束，可用以強制執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表中的資料完整性。 這些都是重要的資料庫物件。  
@@ -31,16 +35,16 @@ caps.handback.revision: 20
   
  [主索引鍵條件約束](../../relational-databases/tables/primary-and-foreign-key-constraints.md#PKeys)  
   
- [外部索引鍵條件約束](../../relational-databases/tables/primary-and-foreign-key-constraints.md#FKeys)  
+ [Foreign Key Constraints](../../relational-databases/tables/primary-and-foreign-key-constraints.md#FKeys)  
   
  [相關工作](../../relational-databases/tables/primary-and-foreign-key-constraints.md#Tasks)  
   
 ##  <a name="PKeys"></a> 主索引鍵條件約束  
  資料表中通常會有一個或多個資料行包含可唯一識別資料表中每個資料列的值。 此資料行稱為資料表的主索引鍵 (PK)，強制資料表具有實體完整性。 主索引鍵條件約束保證唯一的資料，因此通常是定義在識別欄位上。  
   
- 當您為資料表指定主索引鍵條件約束時，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會自動為主索引鍵資料行建立唯一的索引，以強制資料的唯一性。 當主索引鍵用於查詢時，此索引也可讓您快速地存取資料。 若主索引鍵條件約束定義於多個資料行，則某個資料行內的值可能會重複，但主索引鍵條件約束定義中所有資料行的每個值組合都必須是唯一的。  
+ 當您為資料表指定主索引鍵條件約束時， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會自動為主索引鍵資料行建立唯一的索引，以強制資料的唯一性。 當主索引鍵用於查詢時，此索引也可讓您快速地存取資料。 若主索引鍵條件約束定義於多個資料行，則某個資料行內的值可能會重複，但主索引鍵條件約束定義中所有資料行的每個值組合都必須是唯一的。  
   
- 如下圖所示，**Purchasing.ProductVendor** 資料表中的 **ProductID** 和 **VendorID** 資料行形成此資料表的複合主索引鍵條件約束。 這樣可確保 **ProductVendor** 資料表中的每個資料列都有唯一的 **ProductID** 和 **VendorID** 組合。 如此可防止插入重複的資料列。  
+ 如下圖所示， **Purchasing.ProductVendor** 資料表中的 **ProductID** 和 **VendorID** 資料行形成此資料表的複合主索引鍵條件約束。 這樣可確保 **ProductVendor** 資料表中的每個資料列都有唯一的 **ProductID** 和 **VendorID**組合。 如此可防止插入重複的資料列。  
   
  ![複合 PRIMARY KEY 條件約束](../../relational-databases/tables/media/fund04.gif "複合 PRIMARY KEY 條件約束")  
   
@@ -56,10 +60,10 @@ caps.handback.revision: 20
   
 -   如果在 CLR 使用者定義的類型資料行上定義主索引鍵，類型的實作必須支援二進位排序。  
   
-##  <a name="FKeys"></a> 外部索引鍵條件約束  
+##  <a name="FKeys"></a> Foreign Key Constraints  
  外部索引鍵 (FK) 是可用來建立與強制兩資料表的資料之間連結的一個資料行或資料行組合，以控制外部索引鍵資料表中可儲存的資料。 在外部索引鍵參考中，當存放一個資料表的主索引鍵值的資料行被另一個資料表的資料行參考時，兩資料表之間會建立連結。 此資料行會成為第二個資料表的外部索引鍵。  
   
- 例如，**Sales.SalesOrderHeader** 資料表具有與 **Sales.SalesPerson** 資料表的外部索引鍵連結，因為銷售訂單與銷售人員之間存在邏輯關聯性。 **SalesOrderHeader** 資料表中的 **SalesPersonID** 資料行符合 **SalesPerson** 資料表的主索引鍵資料行。 **SalesOrderHeader** 資料表中的 **SalesPersonID** 資料行是 **SalesPerson** 資料表的外部索引鍵。 透過建立這個外部索引鍵關聯性，如果 **SalesPersonID** 的值尚未存在於 **SalesPerson** 資料表中，就不能將其插入至 **SalesOrderHeader** 資料表。  
+ 例如， **Sales.SalesOrderHeader** 資料表具有與 **Sales.SalesPerson** 資料表的外部索引鍵連結，因為銷售訂單與銷售人員之間存在邏輯關聯性。 **SalesOrderHeader** 資料表中的 **SalesPersonID** 資料行符合 **SalesPerson** 資料表的主索引鍵資料行。 **SalesOrderHeader** 資料表中的 **SalesPersonID** 資料行是 **SalesPerson** 資料表的外部索引鍵。 透過建立這個外部索引鍵關聯性，如果 **SalesPersonID** 的值尚未存在於 **SalesPerson** 資料表中，就不能將其插入至 **SalesOrderHeader** 資料表。  
   
  一個資料表最多可以參考其他 253 個資料表和資料行作為外部索引鍵 (連出參考)。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 將單一資料表中資料行可以參考的其他資料表和資料行數目限制 (連入參考) 從 253 提高至 10,000。 (至少需要 130 相容性層級)。此增加具有下列限制：  
   
@@ -69,20 +73,20 @@ caps.handback.revision: 20
   
 -   大於 253 的外部索引鍵參考數目目前不適用於資料行存放區索引、記憶體最佳化資料、Stretch Database 或資料分割外部索引鍵資料表。  
   
-### 外部索引鍵條件約束上的索引  
+### <a name="indexes-on-foreign-key-constraints"></a>外部索引鍵條件約束上的索引  
  與主索引鍵條件約束不同，建立外部索引鍵條件約束並不會自動建立對應的索引。 不過，基於下列原因，在外部索引鍵上手動建立索引通常很有幫助：  
   
 -   當關聯資料表的資料藉著將資料表的外部索引鍵條件約束和另一個資料表的主要或唯一索引鍵資料行進行比對，而合併於查詢中時，通常會使用外部索引鍵資料行來聯結準則。 索引可讓 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 在外部索引鍵資料表中快速尋找相關資料。 不過，建立此索引並非必要。 即使資料表之間未定義主索引鍵或外部索引鍵條件約束，仍可合併兩個相關資料表的資料，不過兩個資料表之間的外部索引鍵關聯性代表這兩個資料表已經過最佳化，可合併於使用該索引鍵做為準則的查詢中。  
   
 -   系統會檢查主索引鍵條件約束的變更與相關資料表中的外部索引鍵條件約束。  
   
-### 參考完整性  
+### <a name="referential-integrity"></a>參考完整性  
  雖然外部索引鍵條件約束的主要用途是控制可儲存在外部索引鍵資料表中的資料，但是它也可控制主索引鍵資料表中資料的變更。 例如，將銷售員的資料列從 **Sales.SalesPerson** 資料表中刪除，而該銷售員的識別碼是用於 **Sales.SalesOrderHeader** 資料表的銷售訂單中，則會中斷這兩個資料表的關聯完整性；會遺棄 **SalesOrderHeader** 資料表中所刪除銷售員的銷售訂單，因為無法連結到 **SalesPerson** 資料表中的資料。  
   
  外部索引鍵條件約束可防止這種情況。 若針對主索引鍵資料表的資料所做的變更，會讓指到外部索引鍵資料表內資料的連結無效，則此條件約束會禁止執行此變更，以強制參考完整性。 若您想刪除主索引鍵資料表中的資料列，或變更主索引鍵值，則在刪除或變更的主索引鍵值對應至另一個資料表之外部索引鍵條件約束中的值時，此動作將會失敗。 若要順利變更或刪除外部索引鍵條件約束中的資料列，則必須先刪除外部索引鍵資料表中的外部索引鍵資料，或變更外部索引鍵資料表中的外部索引鍵資料，這樣會將外部索引鍵連結至不同的主索引鍵資料。  
   
-#### 串聯式參考完整性  
- 使用串聯式參考完整性條件約束，就可以定義使用者嘗試刪除或更新現有外部索引鍵所指向的索引鍵時，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 所採取的動作。 可以定義下列串聯式動作。  
+#### <a name="cascading-referential-integrity"></a>串聯式參考完整性  
+ 使用串聯式參考完整性條件約束，就可以定義使用者嘗試刪除或更新現有外部索引鍵所指向的索引鍵時， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 所採取的動作。 可以定義下列串聯式動作。  
   
  NO ACTION  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會引發錯誤，而且會回復對父資料表中資料列的刪除或更新動作。  
@@ -98,12 +102,12 @@ caps.handback.revision: 20
   
  您可以在相互具有參考關聯性的資料表上，組合 CASCADE、SET NULL、SET DEFAULT 和 NO ACTION。 如果 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 發現 NO ACTION，它會停止和回復相關的 CASCADE、SET NULL 和 SET DEFAULT 動作。 當 DELETE 陳述式造成 CASCADE、SET NULL、SET DEFAULT 和 NO ACTION 等動作的組合時，在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 檢查任何 NO ACTION 之前，會先套用 CASCADE、SET NULL 及 SET DEFAULT 等動作。  
   
-### 觸發程序與串聯式參考動作  
+### <a name="triggers-and-cascading-referential-actions"></a>觸發程序與串聯式參考動作  
  串聯式參考動作會以下列方式引發 AFTER UPDATE 或 AFTER DELETE 觸發程序：  
   
 -   直接由原始 DELETE 或 UPDATE 造成的所有串聯式參考動作會最先執行。  
   
--   如果已在受影響的資料表上定義任何 AFTER 觸發程序，這些觸發程序將會在執行所有串聯式動作後引發。 這些觸發程序的引發順序，將會與串聯式動作相反。 如果單一資料表上有多個觸發程序，則除非資料表有專用的第一個或最後一個觸發程序，否則將會以隨機順序引發。 這個順序是使用 [sp_settriggerorder](../../relational-databases/system-stored-procedures/sp-settriggerorder-transact-sql.md) 指定。  
+-   如果已在受影響的資料表上定義任何 AFTER 觸發程序，這些觸發程序將會在執行所有串聯式動作後引發。 這些觸發程序的引發順序，將會與串聯式動作相反。 如果單一資料表上有多個觸發程序，則除非資料表有專用的第一個或最後一個觸發程序，否則將會以隨機順序引發。 這個順序是使用 [sp_settriggerorder](../../relational-databases/system-stored-procedures/sp-settriggerorder-transact-sql.md)指定。  
   
 -   若有多個串聯式鏈結源自 UPDATE 或 DELETE 動作的直接目標資料表，則這些鏈結引發其各自觸發程序的順序未定。 不過，一定會等到一個鏈結引發完其所有觸發程序後，才引發另外一個鏈結。  
   
@@ -125,7 +129,7 @@ caps.handback.revision: 20
 |描述如何建立主索引鍵。|[建立主索引鍵](../../relational-databases/tables/create-primary-keys.md)|  
 |描述如何刪除主索引鍵。|[刪除主索引鍵](../../relational-databases/tables/delete-primary-keys.md)|  
 |描述如何修改主索引鍵。|[修改主索引鍵](../../relational-databases/tables/modify-primary-keys.md)|  
-|描述如何建立外部索引鍵關聯性。|[建立外部索引鍵關聯性](../../relational-databases/tables/建立外部索引鍵關聯性.md)|  
+|描述如何建立外部索引鍵關聯性。|[建立外部索引鍵關聯性](../../relational-databases/tables/create-foreign-key-relationships.md)|  
 |描述如何修改外部索引鍵關聯性。|[修改外部索引鍵關聯性](../../relational-databases/tables/modify-foreign-key-relationships.md)|  
 |描述如何刪除外部索引鍵關聯性。|[刪除外部索引鍵關聯性](../../relational-databases/tables/delete-foreign-key-relationships.md)|  
 |描述如何檢視外部索引鍵屬性。|[檢視外部索引鍵屬性](../../relational-databases/tables/view-foreign-key-properties.md)|  
@@ -133,3 +137,4 @@ caps.handback.revision: 20
 |描述如何在 INSERT 或 UPDATE 陳述式期間停用外部索引鍵條件約束。|[停用 INSERT 和 UPDATE 陳述式的外部索引鍵條件約束](../../relational-databases/tables/disable-foreign-key-constraints-with-insert-and-update-statements.md)|  
   
   
+

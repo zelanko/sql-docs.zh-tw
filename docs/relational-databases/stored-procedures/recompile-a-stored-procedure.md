@@ -1,28 +1,32 @@
 ---
 title: "重新編譯預存程序 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-stored-Procs"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "sp_recompile"
-  - "WITH RECOMPILE 子句"
-  - "重新編譯預存程序"
-  - "預存程序 [SQL Server], 重新編譯"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-stored-Procs
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- sp_recompile
+- WITH RECOMPILE clause
+- recompiling stored procedures
+- stored procedures [SQL Server], recompiling
 ms.assetid: b90deb27-0099-4fe7-ba60-726af78f7c18
 caps.latest.revision: 37
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 37
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e2c8f7940c224d22fc93eea4d2c269658e97f266
+ms.lasthandoff: 04/11/2017
+
 ---
-# 重新編譯預存程序
-  本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 重新編譯 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中的預存程序。 執行這項操作的方法有三種：程序定義中或呼叫程序時的 **WITH RECOMPILE** 選項、個別陳述式上的 **RECOMPILE** 查詢提示，或是藉由使用 **sp_recompile**系統預存程序。 本主題描述在建立程序定義及執行現有程序時使用 WITH RECOMPILE 選項。 另外還會描述使用 sp_recompile 系統預存程序重新編譯現有的程序。  
+# <a name="recompile-a-stored-procedure"></a>重新編譯預存程序
+  本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 重新編譯 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的預存程序。 執行這項操作的方法有三種：程序定義中或呼叫程序時的 **WITH RECOMPILE** 選項、個別陳述式上的 **RECOMPILE** 查詢提示，或是藉由使用 **sp_recompile** 系統預存程序。 本主題描述在建立程序定義及執行現有程序時使用 WITH RECOMPILE 選項。 另外還會描述使用 sp_recompile 系統預存程序重新編譯現有的程序。  
   
  **本主題內容**  
   
@@ -48,7 +52,7 @@ caps.handback.revision: 37
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的特色功能在於程序的陳述式層級重新編譯。 當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 重新編譯預存程序時，只會編譯造成重新編譯的陳述式，而不是完整程序。  
   
--   如果程序中的特定查詢固定使用非典型或暫存值，則可在這些查詢中使用 RECOMPILE 查詢提示來改善程序效能。 由於只會重新編譯使用查詢提示的查詢，而非完整程序，因此會模仿 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的陳述式層級重新編譯行為。 不過，除了使用程序目前的參數值之外，RECOMPILE 查詢提示也會在您編譯陳述式時，使用預存程序內任何區域變數的值。 如需詳細資訊，請參閱[查詢提示 (Transact-SQL)](../Topic/Query%20Hints%20\(Transact-SQL\).md)。  
+-   如果程序中的特定查詢固定使用非典型或暫存值，則可在這些查詢中使用 RECOMPILE 查詢提示來改善程序效能。 由於只會重新編譯使用查詢提示的查詢，而非完整程序，因此會模仿 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的陳述式層級重新編譯行為。 不過，除了使用程序目前的參數值之外，RECOMPILE 查詢提示也會在您編譯陳述式時，使用預存程序內任何區域變數的值。 如需詳細資訊，請參閱 [查詢提示 (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md)。  
   
 ###  <a name="Security"></a> 安全性  
   
@@ -66,7 +70,7 @@ caps.handback.revision: 37
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 若要使用 WITH RECOMPILE 選項重新編譯預存程序  
+#### <a name="to-recompile-a-stored-procedure-by-using-the-with-recompile-option"></a>若要使用 WITH RECOMPILE 選項重新編譯預存程序  
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
@@ -94,7 +98,7 @@ AS
   
 ```  
   
-#### 若要使用 WITH RECOMPILE 選項重新編譯預存程序  
+#### <a name="to-recompile-a-stored-procedure-by-using-the-with-recompile-option"></a>若要使用 WITH RECOMPILE 選項重新編譯預存程序  
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
@@ -112,7 +116,7 @@ GO
   
 ```  
   
-#### 若要使用 sp_recompile 重新編譯預存程序  
+#### <a name="to-recompile-a-stored-procedure-by-using-sprecompile"></a>若要使用 sp_recompile 重新編譯預存程序  
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
@@ -130,7 +134,7 @@ GO
   
 ```  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [建立預存程序](../../relational-databases/stored-procedures/create-a-stored-procedure.md)   
  [修改預存程序](../../relational-databases/stored-procedures/modify-a-stored-procedure.md)   
  [重新命名預存程序](../../relational-databases/stored-procedures/rename-a-stored-procedure.md)   

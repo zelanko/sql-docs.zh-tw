@@ -1,32 +1,36 @@
 ---
 title: "設定 IntelliSense (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "選項 [SQL Server Management Studio], IntelliSense"
-  - "修改 IntelliSense 選項"
-  - "IntelliSense [SQL Server], 修改選項"
+ms.custom: 
+ms.date: 06/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Options [SQL Server Management Studio], IntelliSense
+- modifying IntelliSense options
+- IntelliSense [SQL Server], modifying options
 ms.assetid: 3ffc9f31-4efa-4c1a-a033-ed1dc48b065f
 caps.latest.revision: 30
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 11849de0164d10de523450897b7a106078b8f2be
+ms.lasthandoff: 04/11/2017
+
 ---
-# 設定 IntelliSense (SQL Server Management Studio)
+# <a name="configure-intellisense-sql-server-management-studio"></a>設定 IntelliSense (SQL Server Management Studio)
   依預設，大部分 [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense 選項都是開啟的。 不過，您可以關閉 IntelliSense 選項，再利用功能表命令或按鍵組合來叫用它。  
   
 > [!IMPORTANT]  
 >  目前編輯器工作階段中的某些變更不會生效。  您必須開啟新的 Transact-SQL 編輯器工作階段，才能看到變更。
   
-### 預設關閉陳述式完成選項  
+### <a name="to-turn-statement-completion-options-off-by-default"></a>預設關閉陳述式完成選項  
   
 1.  在 **[工具]** 功能表上，按一下 **[選項]**。  
   
@@ -34,7 +38,7 @@ caps.handback.revision: 30
   
 3.  清除您不需要之 [陳述式完成] 選項的核取方塊，再按一下 **[確定]**。  
   
-### 修改 Transact-SQL IntelliSense 選項  
+### <a name="to-modify-transact-sql-intellisense-options"></a>修改 Transact-SQL IntelliSense 選項  
   
 1.  在 **[工具]** 功能表上，按一下 **[選項]**。  
   
@@ -49,3 +53,4 @@ caps.handback.revision: 30
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
   
+

@@ -1,55 +1,59 @@
 ---
-title: "使用維護計畫精靈 | Microsoft Docs"
-ms.date: "08/19/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.ag.maintwiz.integrity.f1"
-  - "sql13.ag.maintwiz.order.f1"
-  - "sql13.ag.maintwiz.report.f1"
-  - "sql13.ag.maintwiz.updatestats.f1"
-  - "sql13.ag.maintwiz.indexdefrag.f1"
-  - "sql13.ag.maintwiz.progress.f1"
-  - "sql13.ag.maintwiz.maintcleanup.f1"
-  - "sql13.ag.maintwiz.backupfull.f1"
-  - "sql13.ag.maintwiz.task.f1"
-  - "sql13.ag.maintwiz.server.f1"
-  - "sql13.ag.maintwiz.shrinkdb.f1"
-  - "sql13.ag.maintwiz.execagentjob.f1"
-  - "sql13.ag.maintwiz.summary.f1"
-  - "sql13.ag.maintwiz.welcome.f1"
-  - "sql13.ag.maintwiz.planprop.f1"
-  - "sql13.ag.maintwiz.reindex.f1"
-  - "sql13.ag.maintwiz.histcleanup.f1"
-  - "sql13.ag.maintwiz.backuplog.f1"
-  - "sql13.ag.maintwiz.backupdiff.f1"
-helpviewer_keywords: 
-  - "維護計畫精靈"
-  - "資料庫維護計畫精靈"
-  - "資料庫維護計畫精靈, 啟動"
+title: "使用維護計畫精靈 | Microsoft 文件"
+ms.date: 08/19/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.ag.maintwiz.integrity.f1
+- sql13.ag.maintwiz.order.f1
+- sql13.ag.maintwiz.report.f1
+- sql13.ag.maintwiz.updatestats.f1
+- sql13.ag.maintwiz.indexdefrag.f1
+- sql13.ag.maintwiz.progress.f1
+- sql13.ag.maintwiz.maintcleanup.f1
+- sql13.ag.maintwiz.backupfull.f1
+- sql13.ag.maintwiz.task.f1
+- sql13.ag.maintwiz.server.f1
+- sql13.ag.maintwiz.shrinkdb.f1
+- sql13.ag.maintwiz.execagentjob.f1
+- sql13.ag.maintwiz.summary.f1
+- sql13.ag.maintwiz.welcome.f1
+- sql13.ag.maintwiz.planprop.f1
+- sql13.ag.maintwiz.reindex.f1
+- sql13.ag.maintwiz.histcleanup.f1
+- sql13.ag.maintwiz.backuplog.f1
+- sql13.ag.maintwiz.backupdiff.f1
+helpviewer_keywords:
+- Maintenance Plan Wizard
+- Database Maintenance Plan Wizard
+- Database Maintenance Plan Wizard, starting
 ms.assetid: db65c726-9892-480c-873b-3af29afcee44
 caps.latest.revision: 43
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 43
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: f4fa73a78b9f6e32edcf8395b344f1bcb7e8f5cc
+ms.lasthandoff: 04/11/2017
+
 ---
-# 使用維護計畫精靈
-  本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中的維護計畫精靈，建立單一或多部伺服器的維護計畫。 維護計畫精靈會建立可讓 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 定期執行的維護計畫。 這樣可讓您依指定間隔執行各種資料庫管理工作，包括備份、資料庫完整性檢查，或資料庫統計資料更新。  
+# <a name="use-the-maintenance-plan-wizard"></a>使用維護計畫精靈
+  本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中的維護計畫精靈，建立單一或多部伺服器的維護計畫。 維護計畫精靈會建立可讓 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 定期執行的維護計畫。 這樣可讓您依指定間隔執行各種資料庫管理工作，包括備份、資料庫完整性檢查，或資料庫統計資料更新。  
     
  
 ##  <a name="Restrictions"></a> 限制事項  
   
 -   若要建立多伺服器維護計畫，您必須設定多伺服器環境，其中包含一個主要伺服器以及一或多個目標伺服器。 您必須在主要伺服器上建立和維護多伺服器維護計畫。 您可以檢視目標伺服器上的計畫。   
 
--   **db_ssisadmin** 角色和 **dc_admin** 角色的成員可以將其權限提高為**系統管理員**。 能夠提高權限是因為這些角色可以修改 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝；這些封裝可藉由使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 的 **sysadmin** 安全性內容由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行。 
+-   **db_ssisadmin** 角色和 **dc_admin** 角色的成員可以將其權限提高為 **系統管理員**。 能夠提高權限是因為這些角色可以修改 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝；這些封裝可藉由使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 的 **sysadmin** 安全性內容由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行。 
 
-若要在執行維護計畫、資料收集組和其他 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝時預防此權限提高，請將執行封裝的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業設為使用有限權限的 Proxy 帳戶，或是只將**系統管理員**成員加入 **db_ssisadmin** 和 **dc_admin** 角色。  
+若要在執行維護計畫、資料收集組和其他 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝時預防此權限提高，請將執行封裝的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業設為使用有限權限的 Proxy 帳戶，或是只將 **系統管理員** 成員加入 **db_ssisadmin** 和 **dc_admin** 角色。  
 
 ##  <a name="Prerequisite"></a> 必要條件 
 您必須啟用 [Agent XPs 伺服器組態選項](../../database-engine/configure-windows/agent-xps-server-configuration-option.md)。
@@ -133,7 +137,7 @@ caps.handback.revision: 43
   
 6.  在 **[選取目標伺服器]** 頁面上，選取要執行維護計畫所在的伺服器。 只有設定為主要伺服器的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體才會顯示這個頁面。  
   
-    > **注意**：若要建立多伺服器維護計畫，必須設定多伺服器環境，其中包含一個主要伺服器以及一或多個目標伺服器，而且應將本機伺服器設為主要伺服器。 在多伺服器環境中，這個頁面會顯示 (本機)**(local)** 主要伺服器以及所有相對應的目標伺服器。  
+    > **注意** ：若要建立多伺服器維護計畫，必須設定多伺服器環境，其中包含一個主要伺服器以及一或多個目標伺服器，而且應將本機伺服器設為主要伺服器。 在多伺服器環境中，這個頁面會顯示 (本機) **(local)** 主要伺服器以及所有相對應的目標伺服器。  
   
 7.  在 **[選取維護工作]** 頁面上，選取一個或多個要加入至計畫的維護工作。 選取所有必要的工作之後，按 **[下一步]**。  
   
@@ -143,7 +147,7 @@ caps.handback.revision: 43
   
     > **注意**：如果您在上面的 [選取計畫屬性] 頁面中選取了 [對每一項工作個別排程]，您將無法變更此頁面上維護工作的順序。  
   
-## 定義資料庫檢查完整性 (CHECKDB)  
+## <a name="define-database-check-integrity-checkdb"></a>定義資料庫檢查完整性 (CHECKDB)  
   
  在 **[定義資料庫檢查完整性工作]** 頁面上，選擇要檢查其中使用者和系統資料表及索引之配置和結構整合性的資料庫。 藉由執行 `DBCC CHECKDB`[!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，這項工作就可確實回報任何有關資料庫完整性的問題，以便系統管理員或資料庫擁有者稍後解決。 如需詳細資訊，請參閱 [DBCC CHECKDB &#40;TRANSACT-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)完成時，請按一下 [下一步]。  
   
@@ -177,7 +181,7 @@ caps.handback.revision: 43
 **Tablock**  
  - 使 DBCC CHECKDB 取得鎖定，而不使用內部資料庫快照集。 這包括資料庫上的短期獨佔 (X) 鎖定。 使用此選項可協助 DBCC CHECKDB 在大量負載的資料庫上執行得快一些，但 DBCC CHECKDB 執行時，資料庫可用的並行處理能力會降低。  
   
-## 定義資料庫壓縮工作  
+## <a name="define-database-shrink-tasks"></a>定義資料庫壓縮工作  
   
 1.  在 **[定義壓縮資料庫工作]** 頁面上，使用 `DBCC SHRINKDATABASE` 陳述式搭配 `NOTRUNCATE` 或 `TRUNCATEONLY` 選項建立嘗試縮減所選取資料庫大小的工作。 如需詳細資訊，請參閱 [DBCC SHRINKDATABASE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md)。 完成後，按 **[下一步]**。  
   
@@ -200,7 +204,7 @@ caps.handback.revision: 43
      **將釋放的空間交還給作業系統**  
      資料庫會緊縮至連續的分頁，且分頁會釋放給作業系統，以供其他程式使用。 此資料庫檔案會盡可能壓縮。 這會使用 TRUNCATEONLY 選項。 這是預設選項。  
   
-## 定義索引工作  
+## <a name="define-the-index-tasks"></a>定義索引工作  
   
 1.  在 [定義重新組織索引工作]On the  頁面上選取伺服器並移動其中的索引頁面，使其成為更有搜尋效率的順序。 此工作會使用 `ALTER INDEX … REORGANIZE` 陳述式。 如需詳細資訊，請參閱 [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)。 完成後，按 **[下一步]**。  
   
@@ -254,12 +258,12 @@ caps.handback.revision: 43
   
      選取此選項也會啟用 [已使用低優先順序]，其會使用 `WAIT_AT_LOW_PRIORITY` 選項。 線上索引重建作業將會等候 `MAX_DURATION` 分鐘的低優先順序鎖定，讓其他作業在線上索引建立作業等候時繼續進行。  
   
-    > **注意**：[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的所有版本都無法使用線上索引作業。 如需詳細資訊，請參閱 [SQL Server 2016 版本支援的功能](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)。  
+    > **注意** ： [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的所有版本都無法使用線上索引作業。 如需詳細資訊，請參閱 [SQL Server 2016 版本支援的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
      [MAXDOP] 核取方塊  
      只針對作業持續時間覆寫 DBCC CHECKDB 的 sp_configure 組態選項。 如需詳細資訊，請參閱 [DBCC CHECKDB &#40;TRANSACT-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)  
   
-#### 定義更新統計資料工作  
+#### <a name="define-the-update-statistics-task"></a>定義更新統計資料工作  
   
 1.  在 **[定義更新統計資料工作]** 頁面上，定義要更新其中資料表和索引統計資料的資料庫。 此工作會使用 `UPDATE STATISTICS` 陳述式。 如需詳細資訊，請參閱[更新統計資料 &#40;TRANSACT-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md) 完成時，請按一下 [下一步]  
   
@@ -292,7 +296,7 @@ caps.handback.revision: 43
      **取樣者**  
      當收集較大資料表或檢視的統計資料時，指定要取樣的資料表或索引檢視百分比或資料列數。  
   
-#### 定義記錄清除工作  
+#### <a name="define-the-history-cleanup-task"></a>定義記錄清除工作  
   
 1.  在 **[定義記錄清除工作]** 頁面上，定義要捨棄其中舊工作記錄的資料庫。 此工作會使用 `EXEC sp_purge_jobhistory`、 `EXEC sp_maintplan_delete_log`和 `EXEC sp_delete_backuphistory` 陳述式移除 **msdb** 資料表中的記錄資訊。 完成後，請按 **[下一步]**。  
   
@@ -313,11 +317,11 @@ caps.handback.revision: 43
      **移除早於下列時限的記錄資料**  
      指定您想要刪除的項目之存在時間。 您可以指定 [小時]、[天]、[週] (預設)、[月] 或 [年]  
   
-#### 定義執行代理程式作業工作  
+#### <a name="define-the-execute-agent-job-task"></a>定義執行代理程式作業工作  
   
 1.  在 **[定義執行代理程式作業工作]** 頁面的 **[可用的 SQL Server Agent 作業]**底下，選擇要執行的作業。 如果沒有 SQL Agent 作業，就無法使用此選項。 此工作會使用 `EXEC sp_start_job` 陳述式。 如需詳細資訊，請參閱 [sp_start_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md) 完成時，請按一下 [下一步]。  
   
-#### 定義備份工作  
+#### <a name="define-backup-tasks"></a>定義備份工作  
   
 1.  在 [Define Backup Database (Full) Task] (定義備份資料庫 (完整) 工作) 頁面上，選取要執行完整備份的資料庫。 此工作會使用 `BACKUP DATABASE` 陳述式。 如需詳細資訊，請參閱 [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)。 完成後，請按 **[下一步]**。  
   
@@ -371,7 +375,7 @@ caps.handback.revision: 43
      指定 Windows Azure 儲存體容器的名稱  
   
      **URL 前置詞：**  
-     這會根據儲存在 SQL 認證中的儲存體帳戶資訊，以及您指定的 Azure 儲存體容器名稱自動產生。 建議您除非使用的網域採用 **\<storage account>.blob.core.windows.net** 以外的格式，否則請勿編輯此欄位中的資訊。  
+     這會根據儲存在 SQL 認證中的儲存體帳戶資訊，以及您指定的 Azure 儲存體容器名稱自動產生。 建議您除非使用的網域採用 **\<儲存體帳戶>.blob.core.windows.net** 以外的格式，否則請勿編輯此欄位中的資訊。  
   
      [備份副檔名] 方塊  
      指定備份檔案所用的副檔名。 預設值是 .bak。  
@@ -411,19 +415,19 @@ caps.handback.revision: 43
      以位元組為單位，指定要用於 SQL Server 和備份媒體之間的最大傳送單位。  
   
      [設定備份壓縮] 清單  
-     在 [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (或更新的版本) 中，選取下列其中一個 [備份壓縮][](../../relational-databases/backup-restore/backup-compression-sql-server.md "Backup Compression (SQL Server)") 值：  
+     在 [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (或更新的版本) 中，選取下列其中一個 [備份壓縮] [](../../relational-databases/backup-restore/backup-compression-sql-server.md) 值：  
   
     |||  
     |-|-|  
-    |**使用預設伺服器設定**|按一下即可使用伺服器層級的預設值。 此預設值是由 [備份壓縮預設] 伺服器組態選項所設定。 如需如何檢視這個選項目前之設定的資訊，請參閱[檢視或設定備份壓縮預設伺服器組態選項](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)。|  
-    |**壓縮備份**|不論目前的伺服器層級預設值為何，按一下即可壓縮備份。<br /><br /> **\*\*重要\*\***根據預設，壓縮會大幅增加 CPU 使用量，而且壓縮程序所耗用的額外 CPU 可能會對並行作業造成不良的影響。 因此，您可能會想要在資源管理員限制 CPU 使用量的工作階段中建立低優先權的壓縮備份。 如需詳細資訊，請參閱[使用 Resource Governor 來限制備份壓縮的 CPU 使用量 &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)。|  
+    |**使用預設伺服器設定**|按一下即可使用伺服器層級的預設值。 此預設值是由 [備份壓縮預設] 伺服器組態選項所設定。 有關如何檢視這個選項目前之設定的詳細資訊，請參閱 [檢視或設定備份壓縮預設伺服器組態選項](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)。|  
+    |**壓縮備份**|不論目前的伺服器層級預設值為何，按一下即可壓縮備份。<br /><br /> **\*\* 重要 \*\*** 根據預設，壓縮會大幅增加 CPU 使用量，而且壓縮程序所耗用的額外 CPU 可能會對並行作業造成不良的影響。 因此，您可能會想要在資源管理員限制 CPU 使用量的工作階段中建立低優先權的壓縮備份。 如需詳細資訊，請參閱本主題稍後介紹的＜ [使用資源管理員進行備份壓縮，以限制 CPU 使用率 &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)限制的工作階段中，建立低優先權的壓縮備份。|  
     |**不要壓縮備份**|不論目前的伺服器層級預設值為何，按一下即可建立未壓縮備份。|  
   
 2.  在 [Define Backup Database (Differential) Task (定義備份資料庫 (差異式) 工作)] 頁面上，選取要執行部分備份的資料庫。 如需有關此頁面上可用選項的詳細資訊，請參閱上述步驟 16 中的定義清單。 此工作會使用 `BACKUP DATABASE … WITH DIFFERENTIAL` 陳述式。 如需詳細資訊，請參閱 [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)。  完成後，請按 **[下一步]**。  
   
 3.  在 [Define Backup Database (Transaction Log) Task (定義備份資料庫 (交易記錄) 工作)] 頁面上，選取要執行交易記錄備份的資料庫。 如需有關此頁面上可用選項的詳細資訊，請參閱上述步驟 16 中的定義清單。 此工作會使用 `BACKUP LOG` 陳述式。 如需詳細資訊，請參閱 [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)。 完成後，請按 **[下一步]**。  
   
-#### 定義維護清除工作  
+#### <a name="define-maintenance-cleanup-tasks"></a>定義維護清除工作  
   
 1.  在 **[定義維護清除工作]** 頁面上，指定維護計畫中要刪除的檔案類型，包括維護計畫和資料庫備份檔案所建立的文字報表。 此工作會使用 `EXEC xp_delete_file` 陳述式。 完成後，請按 **[下一步]**。  
   
@@ -464,7 +468,7 @@ caps.handback.revision: 43
      **刪除早於下列時限的檔案**  
      提供數字以及時間單位 ([小時]、[日]、[週]、[月] 或 [年])，指定要刪除之檔案的最低存在時間。 存在時間超過指定時間的檔案會遭到刪除。  
   
-#### 選取報表選項  
+#### <a name="select-report-options"></a>選取報表選項  
   
 1.  在 **[選取報表選項]** 頁面上，選取儲存或散發維護計畫動作報表的選項。 此工作會使用 `EXEC sp_notify_operator` 陳述式。 如需詳細資訊，請參閱 [sp_notify_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-notify-operator-transact-sql.md) 完成時，請按一下 [下一步]。  
   
@@ -485,7 +489,7 @@ caps.handback.revision: 43
      **郵件設定檔**  
      指定定義電子郵件寄件者的設定檔。  
   
-#### 完成精靈  
+#### <a name="complete-the-wizard"></a>完成精靈  
   
 1.  在 **[完成精靈]** 頁面上，確認之前所有頁面上的選擇，然後按一下 **[完成]**。  
   
@@ -517,7 +521,9 @@ caps.handback.revision: 43
      **複製報表到剪貼簿**  
      將精靈進度報表的結果複製到剪貼簿。  
   
-     **以電子郵件傳送報表**  
+     **[以電子郵件傳送報表]**  
      將精靈進度報表的結果複製到電子郵件。  
   
   
+
+

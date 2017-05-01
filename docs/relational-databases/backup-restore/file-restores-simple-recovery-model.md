@@ -1,31 +1,35 @@
 ---
 title: "檔案還原 (簡單復原模式) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/24/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "檔案還原 [SQL Server]"
-  - "簡單復原模式 [SQL Server]"
-  - "還原檔案 [SQL Server], Transact-SQL 還原順序"
-  - "還原檔案 [SQL Server]"
-  - "Transact-SQL 還原順序"
-  - "還原檔案 [SQL Server], 簡單復原模式"
-  - "檔案還原 [SQL Server], 簡單復原模式"
-  - "檔案還原 [SQL Server], Transact-SQL 還原順序"
+ms.custom: 
+ms.date: 03/24/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- file restores [SQL Server]
+- simple recovery model [SQL Server]
+- restoring files [SQL Server], Transact-SQL restore sequence
+- restoring files [SQL Server]
+- Transact-SQL restore sequence
+- restoring files [SQL Server], simple recovery model
+- file restores [SQL Server], simple recovery model
+- file restores [SQL Server], Transact-SQL restore sequence
 ms.assetid: b6d07386-7c6f-4cc6-be32-93289adbd3d6
 caps.latest.revision: 57
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 56
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 5fdd6a65718ab54c60fcea09317146aa2342e517
+ms.lasthandoff: 04/11/2017
+
 ---
-# 檔案還原 (簡單復原模式)
+# <a name="file-restores-simple-recovery-model"></a>檔案還原 (簡單復原模式)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   這個主題僅與至少包含一個唯讀次要檔案群組的簡單模式資料庫有關。  
@@ -44,10 +48,10 @@ caps.handback.revision: 56
   
      在 *「線上檔案還原」*(Online File Restore) 中，如果資料庫在還原期間處於線上，則在檔案還原期間也會處於線上。 不過，在還原作業期間，包含正在還原之檔案的每個檔案群組都會離線。 離線檔案群組中的所有檔案都復原後，檔案群組就會自動回到線上。  
   
-     如需線上頁面和檔案還原支援的相關資訊，請參閱 [SQL Server 2016 版本支援的功能](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)。 如需線上還原的詳細資訊，請參閱[線上還原 &#40;SQL Server&#41;](../../relational-databases/backup-restore/online-restore-sql-server.md)。  
+     如需線上頁面和檔案還原支援的資訊，請參閱 [Database Engine 功能及工作](http://msdn.microsoft.com/library/d9efe145-3306-4d61-bd77-e2af43e19c34)。 如需線上還原的詳細資訊，請參閱[線上還原 &#40;SQL Server&#41;](../../relational-databases/backup-restore/online-restore-sql-server.md)。  
   
     > [!TIP]  
-    >  若您要讓資料庫離線以進行檔案還原，請在啟動還原順序之前，執行下列 [ALTER DATABASE](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md) 陳述式：ALTER DATABASE *database_name* SET OFFLINE。  
+    >  若您要讓資料庫離線以進行檔案還原，請在啟動還原順序之前，執行下列 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md) 陳述式：ALTER DATABASE *database_name* SET OFFLINE。  
   
  **本主題內容：**  
   
@@ -62,10 +66,10 @@ caps.handback.revision: 56
   
 2.  針對每個已還原的檔案，還原其最新的差異檔案備份，並復原資料庫。  
   
-### 檔案還原順序的 Transact-SQL 步驟 (簡單復原模式)  
- 本節顯示簡單檔案還原順序的基本 [!INCLUDE[tsql](../../includes/tsql-md.md)][RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md)選項。 會省略與這個檔案還原無關的語法和詳細資料。  
+### <a name="transact-sql-steps-for-file-restore-sequence-simple-recovery-model"></a>檔案還原順序的 Transact-SQL 步驟 (簡單復原模式)  
+ 本節顯示簡單檔案還原順序的基本 [!INCLUDE[tsql](../../includes/tsql-md.md)][RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 選項。 會省略與這個檔案還原無關的語法和詳細資料。  
   
- 還原順序只包含兩個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 第一個陳述式會還原次要檔案 (即 `A` 檔案)，而此檔案是使用 WITH NORECOVERY 進行還原。 第二項作業還原其他兩個檔案 (`B` 和 `C`)，而這些檔案是使用 WITH RECOVERY 從不同的備份裝置進行還原。  
+ 還原順序只包含兩個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 第一個陳述式會還原次要檔案 (即 `A`檔案)，而此檔案是使用 WITH NORECOVERY 進行還原。 第二項作業還原其他兩個檔案 ( `B` 和 `C` )，而這些檔案是使用 WITH RECOVERY 從不同的備份裝置進行還原。  
   
 1.  RESTORE DATABASE *database* FILE **=***name_of_file_A*  
   
@@ -79,7 +83,7 @@ caps.handback.revision: 56
   
      WITH RECOVERY**;**  
   
-### 範例  
+### <a name="examples"></a>範例  
   
 -   [範例：線上還原唯讀檔案 &#40;簡單復原模式&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-only-file-simple-recovery-model.md)  
   
@@ -94,15 +98,15 @@ caps.handback.revision: 56
   
 -   [還原檔案和檔案群組 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-files-and-filegroups-sql-server.md)  
   
--   [Restore.SqlRestore 方法 (伺服器)](../Topic/SqlRestore%20Method.md) (SMO)  
+-   [Restore.SqlRestore 方法 (伺服器) (SMO)](http://msdn.microsoft.com/library/microsoft.sqlserver.management.smo.restore.sqlrestore.aspx)   
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [備份與還原：互通性與共存性 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-and-restore-interoperability-and-coexistence-sql-server.md)   
  [差異備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md)   
  [完整檔案備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-file-backups-sql-server.md)   
  [備份概觀 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
  [還原和復原概觀 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [完整資料庫還原 &#40;簡單復原模式&#41;](../../relational-databases/backup-restore/complete-database-restores-simple-recovery-model.md)   
  [分次還原 &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)  
   

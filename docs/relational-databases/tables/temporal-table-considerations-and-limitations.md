@@ -1,23 +1,27 @@
 ---
 title: "時態表考量與限制 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "01/24/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 01/24/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c8a21481-0f0e-41e3-a1ad-49a84091b422
 caps.latest.revision: 18
-author: "CarlRabeler"
-ms.author: "carlrab"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: CarlRabeler
+ms.author: carlrab
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 22bab0bc2c039e68a336ac827a3e2d028ca77c78
+ms.lasthandoff: 04/11/2017
+
 ---
-# 時態表考量與限制
+# <a name="temporal-table-considerations-and-limitations"></a>時態表考量與限制
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   使用時態表時由於系統版本性質使然，因此需要瞭解某些考量與限制。  
@@ -34,9 +38,9 @@ caps.handback.revision: 17
   
 -   若目前的資料表已分割，則會在預設檔案群組上建立歷程記錄資料表，這是因為資料分割設定不會自動從目前的資料表複寫至歷程記錄資料表。  
   
--   時態表與歷程記錄資料表不可為 **FILETABLE**，且會包含 **FILESTREAM** 以外所有受支援的資料類型資料行，這是因為 **FILETABLE** 和 **FILESTREAM** 允許在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之外操作資料，以致無法保證系統版本設定。  
+-   時態表與歷程記錄資料表不可為 **FILETABLE** ，且會包含 **FILESTREAM** 以外所有受支援的資料類型資料行，這是因為 **FILETABLE** 和 **FILESTREAM** 允許在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之外操作資料，以致無法保證系統版本設定。  
   
--   時態表支援 blob 資料類型 (例如 **(n)varchar(max)**、**varbinary(max)**、**(n)text** 和 **image**)，但會產生龐大的儲存成本，且其大小會影響效能。 因此您在設計系統時，應小心使用這些資料類型。  
+-   時態表支援 Blob 資料類型 (例如 **(n)varchar(max)**、**varbinary(max)**、**(n)text** 和 **image**)，但會產生龐大的儲存成本，且其大小會影響效能。 因此您在設計系統時，應小心使用這些資料類型。  
   
 -   歷程記錄資料表必須建立於與目前資料表相同的資料庫中。 不支援針對 **Linked Server** 的時態查詢。  
   
@@ -48,11 +52,11 @@ caps.handback.revision: 17
   
 -   **INSERT** 和 **UPDATE** 陳述式無法參考 SYSTEM_TIME 期間資料行。 若嘗試將值直接插入這些資料行，則會遭到系統封鎖。  
   
--   當 **SYSTEM_VERSIONING** 為 **ON** 時，不支援**TRUNCATE TABLE**。  
+-   當**TRUNCATE TABLE** 為 **TRUNCATE TABLE** 時，不支援 **TRUNCATE TABLE**。  
   
 -   不允許直接修改歷程記錄資料表中的資料。  
   
--   **ON DELETE CASCADE** 和 **ON UPDATE CASCADE** 不得位於目前資料表。 換言之，若時態表參考外部索引鍵關係中的資料表 (對應至 sys.foreign_keys 中的 *parent_object_id*)，則不允許 CASCADE 選項。 若要解決此限制，請使用應用程式邏輯或 after 觸發程序，以維持在主索引鍵資料表執行刪除的一致性 (對應至 sys.foreign_keys 中的 *referenced_object_id*)。 若主索引鍵資料表為時態，且參考資料表為非時態，則不會有這些限制。  
+-   **ON DELETE CASCADE** 和 **ON UPDATE CASCADE** 不得位於目前資料表。 換言之，若時態表參考外部索引鍵關係中的資料表 (對應至 sys.foreign_keys 中的 *parent_object_id* )，則不允許 CASCADE 選項。 若要解決此限制，請使用應用程式邏輯或 after 觸發程序，以維持在主索引鍵資料表執行刪除的一致性 (對應至 sys.foreign_keys 中的  *referenced_object_id* )。 若主索引鍵資料表為時態，且參考資料表為非時態，則不會有這些限制。  
   
 -   目前或歷程記錄資料表不允許使用**INSTEAD OF** 觸發程序，以避免使 DML 邏輯無效。 **AFTER** 觸發程序僅允許針對目前的資料表使用。 這些觸發程序在歷程記錄資料表上會遭到封鎖，以避免使 DML 邏輯無效。  
   
@@ -93,10 +97,10 @@ caps.handback.revision: 17
   
 -   歷程記錄資料表不可設定為一連串歷程記錄資料表中的目前資料表。  
   
-## 這篇文章對您有幫助嗎？ 我們會持續聽取您的意見  
+## <a name="did-this-article-help-you-were-listening"></a>這篇文章對您有幫助嗎？ 我們會持續聽取您的意見  
  您要尋找哪些資訊？找到了嗎？ 我們會持續聽取您的意見來改進內容。 請將您的意見傳送到 [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Temporal%20Table%20Considerations%20and%20Limitations%20page)  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [時態表](../../relational-databases/tables/temporal-tables.md)   
  [開始使用系統建立版本的時態表](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   
  [時態表系統一致性檢查](../../relational-databases/tables/temporal-table-system-consistency-checks.md)   
@@ -107,3 +111,4 @@ caps.handback.revision: 17
  [暫存資料表中繼資料檢視和函數](../../relational-databases/tables/temporal-table-metadata-views-and-functions.md)  
   
   
+

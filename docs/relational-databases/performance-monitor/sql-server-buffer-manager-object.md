@@ -1,25 +1,29 @@
 ---
 title: "SQL Server 的 Buffer Manager 物件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Buffer Manager 物件"
-  - "SQLServer:Buffer Manager"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Buffer Manager object
+- SQLServer:Buffer Manager
 ms.assetid: 9775ebde-111d-476c-9188-b77805f90e98
 caps.latest.revision: 36
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 29b1764e30fe28153f6f86731f5b6fc520dc9027
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server 的 Buffer Manager 物件
+# <a name="sql-server-buffer-manager-object"></a>SQL Server 的 Buffer Manager 物件
   **Buffer Manager** 物件提供了可監視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用情形的計數器：  
   
 -   要儲存資料頁的記憶體。  
@@ -36,7 +40,7 @@ caps.handback.revision: 36
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 須自磁碟中讀取資料的頻率。 和其他的作業相比 (例如記憶體存取)，實體 I/O 消耗的時間更多。 將實體 I/O 最小化可改善查詢的效能。  
   
-## Buffer Manager 效能物件  
+## <a name="buffer-manager-performance-objects"></a>Buffer Manager 效能物件  
  下表描述 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Buffer Manager** 效能物件。  
   
 |SQL Server Buffer Manager 計數器|說明|  
@@ -66,7 +70,7 @@ caps.handback.revision: 36
 |**Target pages**|緩衝集區的理想分頁數。|
 
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [SQL Server:Buffer Node](../../relational-databases/performance-monitor/sql-server-buffer-node.md)   
  [伺服器記憶體伺服器組態選項](../../database-engine/configure-windows/server-memory-server-configuration-options.md)   
  [SQL Server 的 Plan Cache 物件](../../relational-databases/performance-monitor/sql-server-plan-cache-object.md)   

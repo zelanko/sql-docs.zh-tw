@@ -1,38 +1,42 @@
 ---
 title: "完整資料庫備份 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "完整備份 [SQL Server]"
-  - "備份 [SQL Server], 資料庫"
-  - "備份資料庫 [SQL Server], 完整備份"
-  - "預估資料庫備份大小"
-  - "備份 [SQL Server], 備份的大小"
-  - "資料庫備份 [SQL Server], 完整備份"
-  - "大小 [SQL Server], 備份"
-  - "資料庫備份 [SQL Server], 關於備份資料庫"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- full backups [SQL Server]
+- backups [SQL Server], database
+- backing up databases [SQL Server], full backups
+- estimating database backup size
+- backing up [SQL Server], size of backup
+- database backups [SQL Server], full backups
+- size [SQL Server], backups
+- database backups [SQL Server], about backing up databases
 ms.assetid: 4d933d19-8d21-4aa1-8153-d230cb3a3f99
 caps.latest.revision: 64
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 64
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f5d2d58da7040d54d49ae9f6b3daae5c31024f65
+ms.lasthandoff: 04/11/2017
+
 ---
-# 完整資料庫備份 (SQL Server)
+# <a name="full-database-backups-sql-server"></a>完整資料庫備份 (SQL Server)
   完整資料庫備份會備份整個資料庫。 這包括交易記錄的部分，讓完整資料庫得以在還原完整資料庫備份之後復原。 完整資料庫備份代表備份完成時的資料庫。  
   
 > [!TIP]  
 >  資料庫的大小增加時，完整資料庫備份就需要更多的時間才能完成，同時也需要更多的儲存空間。 因此，若為大型資料庫，您可能會想透過一系列的 *「差異資料庫備份」*(Differential database backups) 補充完整資料庫備份。 如需詳細資訊，請參閱[差異備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md)。  
   
 > [!IMPORTANT]  
->  資料庫備份上的 TRUSTWORTHY 是設為 OFF。 如需如何將 TRUSTWORTHY 設成 ON 的相關資訊，請參閱 [ALTER DATABASE SET 選項 &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md)。  
+>  資料庫備份上的 TRUSTWORTHY 是設為 OFF。 如需如何將 TRUSTWORTHY 設成 ON 的資訊，請參閱 [ALTER DATABASE SET 選項 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)。  
   
  **本主題內容：**  
   
@@ -49,7 +53,7 @@ caps.handback.revision: 64
   
  ![顯示資料庫備份之間的工作損失風險](../../relational-databases/backup-restore/media/bnr-rmsimple-1-fulldb-backups.gif "顯示資料庫備份之間的工作損失風險")  
   
-### 範例 ([!INCLUDE[tsql](../../includes/tsql-md.md)])  
+### <a name="example-includetsqlincludestsql-mdmd"></a>範例 ([!INCLUDE[tsql](../../includes/tsql-md.md)])  
  下列範例顯示如何使用 WITH FORMAT 來覆寫任何現有備份並建立新的媒體集，以建立完整資料庫備份。  
   
 ```  
@@ -63,12 +67,12 @@ GO
 ##  <a name="DbBuRMf"></a> 完整復原模式下的資料庫備份  
  若為使用完整和大量記錄復原的資料庫，資料庫備份是必要的，但還是不足夠。 交易記錄備份也是必要的。 下圖顯示完整復原模式下可行的最不複雜的備份策略。  
   
- ![完整備份和記錄備份系列](../../relational-databases/backup-restore/media/bnr-rmfull-1-fulldb-log-backups.gif "完整備份和記錄備份系列")  
+ ![完整資料庫備份和記錄備份系列](../../relational-databases/backup-restore/media/bnr-rmfull-1-fulldb-log-backups.gif "完整資料庫備份和記錄備份系列")  
   
  如需如何建立記錄備份的相關資訊，請參閱[交易記錄備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)。  
   
-### 範例 ([!INCLUDE[tsql](../../includes/tsql-md.md)])  
- 下列範例顯示如何使用 WITH FORMAT 來覆寫任何現有備份並建立新的媒體集，以建立完整資料庫備份。 然後，此範例會接著備份交易記錄。 在實際的情況下，您必須執行一連串的定期記錄備份。 就此範例而言，[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 範例資料庫會設定為使用完整復原模式。  
+### <a name="example-includetsqlincludestsql-mdmd"></a>範例 ([!INCLUDE[tsql](../../includes/tsql-md.md)])  
+ 下列範例顯示如何使用 WITH FORMAT 來覆寫任何現有備份並建立新的媒體集，以建立完整資料庫備份。 然後，此範例會接著備份交易記錄。 在實際的情況下，您必須執行一連串的定期記錄備份。 就此範例而言， [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 範例資料庫會設定為使用完整復原模式。  
   
 ```  
 USE master;  
@@ -100,7 +104,7 @@ GO
   
  [使用維護計畫精靈](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [SQL Server 資料庫的備份與還原](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [備份概觀 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
  [備份與還原 Analysis Services 資料庫](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  

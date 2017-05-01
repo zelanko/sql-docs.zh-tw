@@ -1,32 +1,36 @@
 ---
-title: "DDL 事件群組 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-ddl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "事件群組"
-  - "DDL 事件群組"
-  - "DDL 觸發程序, 事件群組"
+title: "DDL 事件群組 | Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-ddl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- event groups
+- DDL event groups
+- DDL triggers, event groups
 ms.assetid: 12b45cc3-2f91-4609-bb8a-3e82e28bf642
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ccd63253ce183861e0aef4caafe00179bf00051a
+ms.lasthandoff: 04/11/2017
+
 ---
-# DDL 事件群組
+# <a name="ddl-event-groups"></a>DDL 事件群組
   下表列出可用來執行 DDL 觸發程序或事件通知的 DDL 事件群組，以及它們所涵蓋的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 請注意這些事件群組的內含本質。 例如，指定 FOR DDL_TABLE_EVENTS (10018) 的 DDL 觸發程序或事件通知會涵蓋 CREATE TABLE、ALTER TABLE 和 DROP TABLE [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 指定 FOR DDL_TABLE_VIEW_EVENTS (10017) 的 DDL 觸發程序或事件通知會涵蓋 DDL_TABLE_EVENTS、DDL_VIEW_EVENTS、DDL_INDEX_EVENTS 和 DDL_STATISTICS_EVENTS 類型底下的所有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。  
   
 > [!NOTE]  
 >  執行類似 DDL 作業的某些系統預存程序也可以引發 DDL 觸發程序或事件通知。 請測試 DDL 觸發程序和事件通知，以判斷它們對執行之系統預存程序的回應。 例如，CREATE TYPE 陳述式與 **sp_addtype** 預存程序都會引發在 CREATE_TYPE 事件上建立的 DDL 觸發程序或事件通知。  
   
-## 事件  
+## <a name="events"></a>事件  
  列在 DDL_DATABASE_LEVEL_EVENTS 底下的事件會在伺服器 (執行個體) 或資料庫層級執行。 列在 DDL_SERVER_LEVEL_EVENTS 底下的事件只能在伺服器層級執行。  
   
 ||||  
@@ -314,7 +318,7 @@ FROM DirectReports
 ORDER BY sort;  
 ```  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [事件通知](../../relational-databases/service-broker/event-notifications.md)   
  [DDL 觸發程序](../../relational-databases/triggers/ddl-triggers.md)   
  [DDL 事件](../../relational-databases/triggers/ddl-events.md)  

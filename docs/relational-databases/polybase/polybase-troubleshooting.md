@@ -1,33 +1,37 @@
 ---
-title: "PolyBase, 疑難排解 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "10/25/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-polybase"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "PolyBase, monitoring"
-  - "PolyBase, performance monitoring"
-helpviewer_keywords: 
-  - "PolyBase, 疑難排解"
+title: "PolyBase 疑難排解 | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 10/25/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-polybase
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- PolyBase, monitoring
+- PolyBase, performance monitoring
+helpviewer_keywords:
+- PolyBase, troubleshooting
 ms.assetid: f119e819-c3ae-4e0b-a955-3948388a9cfe
 caps.latest.revision: 22
-author: "barbkess"
-ms.author: "barbkess"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: barbkess
+ms.author: barbkess
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: bef55c15906ea76d2993d41e3eb7cbfd4bac9a4f
+ms.lasthandoff: 04/11/2017
+
 ---
-# PolyBase, 疑難排解
+# <a name="polybase-troubleshooting"></a>PolyBase, 疑難排解
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   可使用您在本主題中找到的技術，為 PolyBase 的問題疑難排解。  
   
-## 目錄檢視  
+## <a name="catalog-views"></a>目錄檢視  
  使用此處所列的類別目錄檢視管理 PolyBase 作業。  
   
 |||  
@@ -37,7 +41,7 @@ caps.handback.revision: 18
 |[sys.external_data_sources &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md)|指定外部資料來源。|  
 |[sys.external_file_formats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md)|指定外部檔案格式。|  
   
-## 動態管理檢視  
+## <a name="dynamic-management-views"></a>動態管理檢視  
   
 |||  
 |-|-|  
@@ -47,7 +51,18 @@ caps.handback.revision: 18
 |[sys.dm_exec_dms_services &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-services-transact-sql.md)|[sys.dm_exec_dms_workers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md)|  
 |[sys.dm_exec_external_operations &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-external-operations-transact-sql.md)|[sys.dm_exec_external_work &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-external-work-transact-sql.md)|  
   
-## 使用 DMV 監視 PolyBase 查詢  
+  PolyBase 查詢會分成 sys.dm_exec_distributed_request_steps 內的一系列步驟。 下表提供步驟名稱與相關聯 DMV 的對應。
+  
+ |PolyBase 步驟|相關聯的 DMV|  
+ |-|-| 
+ |HadoopJobOperation | sys.dm_exec_external_operations|
+ |RandomIdOperation | sys.dm_exec_distributed_request_steps|
+ |HadoopRoundRobinOperation | sys.dm_exec_dms_workers|
+ |StreamingReturnOperation | sys.dm_exec_dms_workers|
+ |OnOperation | sys.dm_exec_distributed_sql_requests |
+  
+  
+## <a name="to-monitor-polybase-queries-using-dmvs"></a>使用 DMV 監視 PolyBase 查詢  
  使用下列 DMV 監視及為 PolyBase 查詢的問題疑難排解。  
   
 1.  **尋找執行時間最長的查詢**  
@@ -125,13 +140,13 @@ caps.handback.revision: 18
   
     ```  
   
-## 檢視 PolyBase 查詢計劃  
+## <a name="to-view-the--polybase-query-plan"></a>檢視 PolyBase 查詢計劃  
   
 1.  在 SSMS 中，啟用 [包括實際執行計畫] (Ctrl + M) 並執行查詢。  
   
 2.  按一下 [執行計劃] 索引標籤。  
   
-     ![PolyBase query plan](../../relational-databases/polybase/media/polybase-query-plan.png "PolyBase query plan")  
+     ![PolyBase 查詢計畫](../../relational-databases/polybase/media/polybase-query-plan.png "PolyBase 查詢計畫")  
   
 3.  在 [遠端查詢運算子] 上按一下滑鼠右鍵，然後選取 [屬性]。  
   
@@ -196,7 +211,7 @@ caps.handback.revision: 18
     </dsql_query>  
     ```  
   
-## 監視 PolyBase 群組中的節點  
+## <a name="to-monitor-nodes-in-a-polybase-group"></a>監視 PolyBase 群組中的節點  
  設定 PolyBase 相應放大群組中的電腦之後，即可監視這些電腦的狀態。 如需建立相應放大群組的詳細資料，請參閱 [PolyBase 相應放大群組](../../relational-databases/polybase/polybase-scale-out-groups.md)。  
   
 1.  連接到群組前端節點上的 SQL Server。  
@@ -205,12 +220,15 @@ caps.handback.revision: 18
   
 3.  執行 DMV [sys.dm_exec_compute_node_status &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-status-transact-sql.md) ，以檢視 PolyBase 群組中所有節點的狀態。  
   
- ## 已知限制
+ ## <a name="known-limitations"></a>已知限制
  
  PolyBase 具有下列限制： 
- - 可能的最大資料列大小 (包括可變長度資料行的完整長度) 不能超過 32,767 個位元組。
+ - 可能的最大資料列大小 (包括可變長度資料行的完整長度) 不能超過 1 MB。 
  - PolyBase 不支援 Hive 0.12 以上的資料類型 (也就是 Char()、VarChar())   
+ - 將資料從 SQL Server 或 Azure SQL 資料倉儲匯出為 ORC 檔案格式時，可以將具有大量文字的資料行限制為最少 50 個資料行，因為會發生 Java 記憶體不足錯誤。 若要解決這個問題，只需要匯出資料行的子集。
+- [將節點新增至 SQL Server 2016 容錯移轉叢集時，不會安裝 PolyBase](https://support.microsoft.com/en-us/help/3173087/fix-polybase-feature-doesn-t-install-when-you-add-a-node-to-a-sql-server-2016-failover-cluster) (機器翻譯)
   
-## 錯誤訊息與可能的解決方案
+## <a name="error-messages-and-possible-solutions"></a>錯誤訊息與可能的解決方案
 
 為外部資料表錯誤疑難排解時，請參閱 Murshed Zaman 的部落格 [https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/](https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/ "PolyBase setup errors and possible solutions")(PolyBase 安裝程式錯誤和可能的解決方案)。
+

@@ -1,30 +1,34 @@
 ---
-title: "將收集項加入收集組 (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "收集項目 [SQL Server]"
-  - "收集組 [SQL Server], 加入項目"
+title: "將收集項新增至收集組 (Transact-SQL) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- collection items [SQL Server]
+- collection sets [SQL Server], adding items
 ms.assetid: 9fe6454e-8c0e-4b50-937b-d9871b20fd13
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 90261ca03da94b15b003da029f07d8804aaa1805
+ms.lasthandoff: 04/11/2017
+
 ---
-# 將收集項加入收集組 (Transact-SQL)
+# <a name="add-a-collection-item-to-a-collection-set-transact-sql"></a>將收集項加入收集組 (Transact-SQL)
   您可以使用資料收集器所提供的預存程序，將收集項加入到現有的收集組中。  
   
- 請在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中使用查詢編輯器來完成以下步驟。  
+ 請在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中使用查詢編輯器來完成以下步驟。  
   
-### 將收集項加入收集組  
+### <a name="add-a-collection-item-to-a-collection-set"></a>將收集項加入收集組  
   
 1.  執行 **sp_syscollector_stop_collection_set** 預存程序，停止您想要加入此項目的收集組。 例如，若要停止名為 "Test Collection Set" 的收集組，請執行下列陳述式：  
   
@@ -39,7 +43,7 @@ caps.handback.revision: 21
     ```  
   
     > [!NOTE]  
-    >  您也可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的 [物件總管] 來停止收集組。 如需詳細資訊，請參閱[啟動或停止收集組](../../relational-databases/data-collection/start-or-stop-a-collection-set.md)。  
+    >  您也可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的 [物件總管] 來停止收集組。 如需詳細資訊，請參閱 [啟動或停止收集組](../../relational-databases/data-collection/start-or-stop-a-collection-set.md)。  
   
 2.  宣告您想要加入收集項的收集組。 下列程式碼會提供如何宣告收集組識別碼的範例。  
   
@@ -96,8 +100,8 @@ caps.handback.revision: 21
   
      收集組及其收集項都會顯示在 [結果] 索引標籤上。  
   
-## 另請參閱  
- [建立使用一般 T-SQL 查詢收集器型別的自訂收集組 &#40;Transact-SQL&#41;](../../relational-databases/data-collection/create custom collection set - generic t-sql query collector type.md)   
+## <a name="see-also"></a>另請參閱  
+ [建立使用一般 T-SQL 查詢收集器型別的自訂收集組 &#40;Transact-SQL&#41;](../../relational-databases/data-collection/create-custom-collection-set-generic-t-sql-query-collector-type.md)   
  [資料收集器預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)  
   
   

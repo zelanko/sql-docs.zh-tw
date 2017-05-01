@@ -1,29 +1,33 @@
 ---
-title: "SQL Server Management Studio 對記憶體中 OLTP 的支援 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "記憶體內部 OLTP 的 SQL Server Management Studio 支援 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ee847b5f-6a1a-448e-a746-d61a023881ff
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 24436bccfa9fd9c61edff66e630dd439041dd61f
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server Management Studio 對記憶體中 OLTP 的支援
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 是用於管理您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 基礎結構的整合式環境。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供工具來設定、監視以及管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 如需詳細資訊，請參閱 [SQL Server Management Studio](../Topic/SQL%20Server%20Management%20Studio.md)  
+# <a name="sql-server-management-studio-support-for-in-memory-oltp"></a>SQL Server Management Studio 對記憶體中 OLTP 的支援
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 是用於管理您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 基礎結構的整合式環境。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供工具來設定、監視以及管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體。 如需詳細資訊，請參閱 [SQL Server Management Studio](http://msdn.microsoft.com/library/66a6b7b1-de6a-4161-82bd-98ded486947b)  
   
  本主題中的工作描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 管理記憶體最佳化資料表、記憶體最佳化資料表上的索引、原生編譯預存程序，以及使用者定義的記憶體最佳化資料表類型。  
   
- 如需有關如何以程式設計方式建立記憶體最佳化資料表的詳細資訊，請參閱[建立記憶體最佳化資料表和原生編譯的預存程序](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md)。  
+ 如需有關如何以程式設計方式建立記憶體最佳化資料表的詳細資訊，請參閱 [建立記憶體最佳化資料表和原生編譯的預存程序](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md)。  
   
-### 若要建立具有記憶體最佳化資料檔案群組的資料庫  
+### <a name="to-create-a-database-with-a-memory-optimized-data-filegroup"></a>若要建立具有記憶體最佳化資料檔案群組的資料庫  
   
 1.  在 [物件總管] 中，連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Database Engine 的執行個體，然後展開該執行個體。  
   
@@ -35,7 +39,7 @@ caps.handback.revision: 31
   
      如需如何使用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]建立新資料庫的詳細資訊，請參閱[建立資料庫](../../relational-databases/databases/create-a-database.md)。  
   
-### 若要建立記憶體最佳化的資料表  
+### <a name="to-create-a-memory-optimized-table"></a>若要建立記憶體最佳化的資料表  
   
 1.  在 [物件總管] 中，以滑鼠右鍵按一下資料庫的 [資料表] 節點，再按一下 [新增]，然後按一下 [記憶體最佳化的資料表]。  
   
@@ -43,11 +47,11 @@ caps.handback.revision: 31
   
 2.  若要取代範本參數，請在 [查詢] 功能表上，按一下 [指定範本參數的值]。  
   
-     如需有關如何使用範本的詳細資訊，請參閱[範本總管](../../ssms/template/template-explorer.md)。  
+     如需有關如何使用範本的詳細資訊，請參閱[範本總管](http://msdn.microsoft.com/library/b9ee55c5-bb44-4f76-90ac-792d8d83b4c8)。  
   
 3.  在 [物件總管] 中，資料表的排序是先按照磁碟資料表，然後再按照記憶體最佳化資料表。 您可以使用 [物件總管詳細資料]查看所有按照名稱排序的資料表。  
   
-### 若要建立原生編譯的預存程序  
+### <a name="to-create-a-natively-compiled-stored-procedure"></a>若要建立原生編譯的預存程序  
   
 1.  在 [物件總管] 中，以滑鼠右鍵按一下資料庫的 [預存程序] 節點，再按一下 [新增]，然後按一下 [原生編譯的預存程序]。  
   
@@ -57,7 +61,7 @@ caps.handback.revision: 31
   
      如需有關如何建立新的預存程序的詳細資訊，請參閱[建立預存程序](../../relational-databases/stored-procedures/create-a-stored-procedure.md)。  
   
-### 若要建立使用者定義的記憶體最佳化資料表類型  
+### <a name="to-create-a-user-defined-memory-optimized-table-type"></a>若要建立使用者定義的記憶體最佳化資料表類型  
   
 1.  在 [物件總管]**物件總管** 中，展開資料庫的 [類型] 節點，以滑鼠右鍵按一下 [使用者定義資料表類型] 節點，按一下 [新增]，然後按一下 [使用者定義的記憶體最佳化資料表類型]。  
   
@@ -67,15 +71,15 @@ caps.handback.revision: 31
   
      如需有關如何建立新的預存程序的詳細資訊，請參閱 [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md)。  
   
-## 記憶體監視  
+## <a name="memory-monitoring"></a>記憶體監視  
   
-#### 檢視依記憶體最佳化物件的記憶體使用量報表  
+#### <a name="view-memory-usage-by-memory-optimized-objects-report"></a>檢視依記憶體最佳化物件的記憶體使用量報表  
   
 -   在 [物件總管] 中，以滑鼠右鍵按一下資料庫，再按一下 [報表]，並按一下 [標準報表]，然後按一下 [依記憶體最佳化物件的記憶體使用量]。  
   
      此報表會提供資料庫中，記憶體最佳化物件使用之記憶體空間的詳細資料。  
   
-#### 檢視資料表、資料庫之「配置的記憶體」與「使用的記憶體」的屬性  
+#### <a name="view-properties-for-allocated-and-used-memory-for-a-table-database"></a>檢視資料表、資料庫之「配置的記憶體」與「使用的記憶體」的屬性  
   
 1.  若要取得記憶體中使用量的相關資訊：  
   
@@ -83,7 +87,7 @@ caps.handback.revision: 31
   
     -   在 [物件總管] 中，以滑鼠右鍵按一下資料庫，按一下 [屬性]，然後按一下 [一般] 頁面。 [配置給記憶體最佳化物件的記憶體] 屬性的值表示配置給資料庫中記憶體最佳化物件的記憶體。 [由記憶體最佳化物件所使用的記憶體] 屬性的值表示資料庫中記憶體最佳化物件所用的記憶體。  
   
-## 下列項目所支援的功能： [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
+## <a name="supported-features-in-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>下列項目所支援的功能： [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 支援具有最佳化資料的檔案群組、記憶體最佳化的資料表、索引與原生編譯的預存程序之資料庫的 Database Engine 所支援的功能和作業。  
   
  下列 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 功能已針對資料庫、資料表、預存程序、使用者定義資料表類型或索引物件更新或擴充，可支援 In-Memory OLTP。  
@@ -149,12 +153,12 @@ caps.handback.revision: 31
   
 -   範本總管  
   
-## 不為下列項目所支援的功能： [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
- 對於記憶體中 OLTP 物件，[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 不支援 Database Engine 所不支援的功能和作業。  
+## <a name="unsupported-features-in-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>不為下列項目所支援的功能： [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
+ 對於記憶體中 OLTP 物件， [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 不支援 Database Engine 所不支援的功能和作業。  
   
- 如需有關不支援的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能的詳細資訊，請參閱[記憶體內部 OLTP 不支援的 SQL Server 功能](../../relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md)。  
+ 如需有關不支援的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能的詳細資訊，請參閱 [記憶體內部 OLTP 不支援的 SQL Server 功能](../../relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md)。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [記憶體中 OLTP 的 SQL Server 支援](../../relational-databases/in-memory-oltp/sql-server-support-for-in-memory-oltp.md)  
   
   

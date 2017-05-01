@@ -1,36 +1,40 @@
 ---
 title: "分頁與範圍架構指南 | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/21/2016"
-ms.prod: "sql-non-specified"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "分頁與範圍架構指南"
-  - "指南，分頁和範圍架構"
+ms.custom: 
+ms.date: 10/21/2016
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- page and extent architecture guide
+- guide, page and extent architecture
 ms.assetid: 83a4aa90-1c10-4de6-956b-7c3cd464c2d2
 caps.latest.revision: 2
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 2
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 970981a0f8db1baa802a68ea1186211f031488e6
+ms.lasthandoff: 04/11/2017
+
 ---
-# 分頁與範圍架構指南
+# <a name="pages-and-extents-architecture-guide"></a>分頁與範圍架構指南
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
 分頁是 SQL Server 中資料儲存的基本單位。 範圍是八個實體連續頁面的集合。 範圍可以協助系統有效地管理頁面。 本指南說明所有 SQL Server 版本中用於管理分頁與範圍的資料結構。 了解頁面與範圍的架構對於設計和開發有效執行的資料庫很重要。
 
-## 分頁與範圍
+## <a name="pages-and-extents"></a>分頁與範圍
 
 SQL Server 中資料儲存的基本單位是分頁。 資料庫中配置給資料檔 (.mdf 或 .ndf) 的磁碟空間會邏輯區分為從 0 連續編號到 n 的分頁。 磁碟 I/O 作業在分頁層次上操作。 也就是說，SQL Server 會讀取或寫入整個資料分頁。
 
 範圍是八個實體連續分頁的集合，用來有效地管理這些分頁。 所有的分頁都儲存在範圍中。
 
-### 頁面
+### <a name="pages"></a>頁面
 
 在 SQL Server 中，分頁大小為 8 KB。 這意味著 SQL Server 資料庫每 MB 有 128 個分頁。 每個分頁的開頭為 96 個位元組的標頭，用來儲存與分頁有關的系統資訊。 此資訊包括頁碼、分頁類型、分頁上可用空間的數量，以及擁有分頁的物件配置單位識別碼。
 
@@ -59,7 +63,7 @@ SQL Server 中資料儲存的基本單位是分頁。 資料庫中配置給資�
 資料列無法跨越分頁，不過資料列的部份可能已經移出資料列的分頁，所以資料列實際可能很大。 最大資料總量與分頁上單一資料列中包含的負擔為 8,060 個位元組 (8 KB)。 但是，這不包括 Text/Image 分頁類型中儲存的資料。 此限制對於包含 varchar、nvarchar、varbinary 或 sql_variant 資料行的資料表將會較為寬鬆。 當資料表中所有固定且可變資料行的資料列總大小超過 8,060 個位元組的限制時，SQL Server 會動態地將一個或多個可變長度資料行，移到 ROW_OVERFLOW_DATA 配置單位中的分頁，從寬度最大的資料行開始。 只要插入或更新作業使得資料列的總大小超過 8,060 個位元組的限制時，就會執行這個動作。 當資料行移至 ROW_OVERFLOW_DATA 配置單位中的分頁時，會保留 IN_ROW_DATA 配置單位中原始頁面上的 24 個位元組指標。 若是後續作業縮小了資料列大小，SQL Server 則會動態地將資料行移回原始資料頁。 
 
 
-### Extents 
+### <a name="extents"></a>Extents 
 
 範圍即管理空間中的基本單位。 一個範圍是 8 個連續實體分頁，也就是 64 KB。 這意味著 SQL Server 資料庫每 MB 有 16 個範圍。
 
@@ -71,9 +75,9 @@ SQL Server 中資料儲存的基本單位是分頁。 資料庫中配置給資�
 
 新的資料表或索引，將自混合的範圍中配置分頁。 當資料表或索引成長至擁有八個分頁之後，接著會為後續配置切換成使用制式的範圍。 如果現有資料表有足夠的資料列可在索引中產生八個分頁，若對該資料表建立索引，索引的所有配置都將採用制式的範圍。
 
-![範圍](../relational-databases/media/extents.gif)
+![Extents](../relational-databases/media/extents.gif)
 
-## 管理範圍配置與可用空間 
+## <a name="managing-extent-allocations-and-free-space"></a>管理範圍配置與可用空間 
 
 管理範圍配置與追蹤可用空間的 SQL Server 資料結構相當簡單。 其優點如下： 
 
@@ -83,7 +87,7 @@ SQL Server 中資料儲存的基本單位是分頁。 資料庫中配置給資�
 * 大部分的配置資訊不會鏈結在一起。 這可以簡化配置資訊的維護工作。    
   每個分頁配置或取消配置都可迅速執行。 這可減少配置或釋出分頁所需之並行工作間的競爭。 
 
-### 管理範圍配置
+### <a name="managing-extent-allocations"></a>管理範圍配置
 
 SQL Server 使用兩種配置對應來記錄範圍的配置： 
 
@@ -103,7 +107,7 @@ SQL Server 使用兩種配置對應來記錄範圍的配置：
  
 如此可產生簡單的範圍管理演算法。 若要配置制式範圍，Database Engine 會搜尋 GAM 的 1 位元並將其設為 0。 若要尋找具有可用分頁的混合範圍，Database Engine 會搜尋 SGAM 的 1 位元。 若要配置混合範圍，Database Engine 會搜尋 GAM 的 1 位元並將其設為 0，然後將 SGAM 中的對應位元也設為 1。 若要取消配置範圍，Database Engine 會確定 GAM 位元已設為 1，且 SGAM 位元已設為 0。 由 Database Engine 在內部使用的演算法，實際上比本主題中所說明的更為複雜，因為 Database Engine 會將資料平均散發到資料庫中。 即使如此，因為實際的演算法不需有管理範圍配置資訊的鏈結，所以可加以簡化。
 
-### 追蹤可用空間
+### <a name="tracking-free-space"></a>追蹤可用空間
 
 「分頁可用空間 (PFS)」分頁會記錄每個分頁的配置狀態、個別分頁是否已配置，以及每個分頁的可用空間量。 PFS 會為每個分頁設定一個位元，以記錄該分頁是否已配置，若已配置，則會記錄分頁是否為空白、已使用 1 至 50%、已使用 51 至 80%、已使用 81 至 95%，還是已使用 96 至 100%。
 
@@ -113,7 +117,7 @@ PFS 分頁是資料檔中檔案標頭分頁之後的第一個分頁 (頁碼為 1
 
 ![manage_extents](../relational-databases/media/manage-extents.gif)
 
-## 管理由物件所使用的空間 
+## <a name="managing-space-used-by-objects"></a>管理由物件所使用的空間 
 
 索引配置對應 (IAM) 頁面會對應配置單位所使用資料庫檔案 4 GB 部分中的範圍。 配置單位為下列三種類型中的一種：
 
@@ -146,7 +150,7 @@ IAM 頁面是視需要配置給每個配置單位，而且在檔案中的位置�
 Database Engine 只在它無法在現有的範圍中找到一個擁有足夠空間來保存插入之資料列的頁面時，才會配置新的範圍給配置單位。 Database Engine 將使用比例式配置演算法，從檔案群組中的可用範圍來配置範圍。 若檔案群組擁有兩個檔案，其中一個檔案的可用空間是另一個檔案的兩倍，系統將從擁有可用空間的檔案中配置兩個頁面，而從另一個檔案中配置一個頁面。 這代表檔案群組中的每個檔案都擁有類似的空間使用百分比。 
 
  
-## 追蹤修改的範圍 
+## <a name="tracking-modified-extents"></a>追蹤修改的範圍 
 
 SQL Server 使用兩個內部資料結構來追蹤大量複製作業修改過的範圍，以及自從上個完整備份之後修改過的範圍。 這些資料結構大幅加速差異備份； 同時也在資料庫使用大量記錄復原模式時，提高了大量複製作業記錄的速度。 就好像整體配置對應 (GAM) 和共用整體配置對應 (SGAM) 分頁一樣，這些結構也是點陣圖，其中每個位元都代表一個範圍。 
 
@@ -160,3 +164,4 @@ DCM 分頁與 BCM 分頁之間的間隔與 GAM 和 SGAM 分頁的間隔一樣，
 
 ![special_page_order](../relational-databases/media/special-page-order.gif)
  
+

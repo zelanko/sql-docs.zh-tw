@@ -1,36 +1,40 @@
 ---
 title: "指定 SQL Server PowerShell 提供者中的執行個體 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9373de68-fd43-45f2-b9a6-149c96610aeb
 caps.latest.revision: 9
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 514ea6e1125e1563f9afe16db4db87e5f17ee6c2
+ms.lasthandoff: 04/11/2017
+
 ---
-# 指定 SQL Server PowerShell 提供者中的執行個體
+# <a name="specify-instances-in-the-sql-server-powershell-provider"></a>指定 SQL Server PowerShell 提供者中的執行個體
   針對 SQL Server PowerShell 提供者指定的路徑必須識別 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體及其執行所在的電腦。 用來指定電腦和執行個體的語法必須符合 SQL Server 識別碼和 Windows PowerShell 路徑的規則。  
   
-1.  **開始之前：**  [限制事項](#LimitationsRestrictions)  
+1.  **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions)  
   
-2.  **若要指定執行個體：**  [範例](#Examples)  
+2.  **To specify an instance:**  [Examples](#Examples)  
   
-## 開始之前  
- SQL Server 提供者路徑中接在 SQLSERVER:\SQL 後面的第一個節點是執行 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體的電腦名稱。例如：  
+## <a name="before-you-begin"></a>開始之前  
+ SQL Server 提供者路徑中接在 SQLSERVER:\SQL 後面的第一個節點是執行 [!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體的電腦名稱。例如：  
   
 ```  
 SQLSERVER:\SQL\MyComputer  
 ```  
   
- 如果您在與 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體相同的電腦上執行 Windows PowerShell，就可以使用 localhost 或 (local) 來取代電腦的名稱。 使用 localhost 或 (local) 的指令碼可以在任何電腦上執行，而不需要變更成反映不同的電腦名稱。  
+ 如果您在與 [!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體相同的電腦上執行 Windows PowerShell，就可以使用 localhost 或 (local) 來取代電腦的名稱。 使用 localhost 或 (local) 的指令碼可以在任何電腦上執行，而不需要變更成反映不同的電腦名稱。  
   
  您可以在相同電腦上執行 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 可執行程式的多個執行個體。 SQL Server 提供者路徑中接在電腦名稱後面的節點可識別執行個體。例如：  
   
@@ -74,7 +78,7 @@ Set-Location SQLSERVER:\SQL\localhost\DEFAULT
     Set-Location SQLSERVER:\SQL\%28local%29\DEFAULT  
     ```  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [PowerShell 中的 SQL Server 識別碼](../../relational-databases/scripting/sql-server-identifiers-in-powershell.md)   
  [SQL Server PowerShell 提供者](../../relational-databases/scripting/sql-server-powershell-provider.md)   
  [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)  

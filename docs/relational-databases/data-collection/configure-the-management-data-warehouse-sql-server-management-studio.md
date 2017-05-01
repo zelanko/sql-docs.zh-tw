@@ -1,41 +1,45 @@
 ---
 title: "設定管理資料倉儲 (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.dc.datacollection.wizard_completecfg.f1"
-  - "sql13.swb.dc.datacollection.wizard_config.f1"
-  - "sql13.swb.dc.datacollection.wizard_finish.f1"
-  - "sql13.swb.dc.datacollection.wizard_maploginuser.f1"
-  - "sql13.swb.dc.datacollection.wizard_choosemdw.f1"
-  - "sql13.swb.dc.datacollection.wizard_welcome.f1"
-  - "sql13.swb.dc.datacollection.wizard_createmdw.f1"
-helpviewer_keywords: 
-  - "資料倉儲 [SQL Server], 多個執行個體"
-  - "資料倉儲 [SQL Server], 設定"
-  - "設定管理資料倉儲精靈"
-  - "管理資料倉儲, 設定"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.dc.datacollection.wizard_completecfg.f1
+- sql13.swb.dc.datacollection.wizard_config.f1
+- sql13.swb.dc.datacollection.wizard_finish.f1
+- sql13.swb.dc.datacollection.wizard_maploginuser.f1
+- sql13.swb.dc.datacollection.wizard_choosemdw.f1
+- sql13.swb.dc.datacollection.wizard_welcome.f1
+- sql13.swb.dc.datacollection.wizard_createmdw.f1
+helpviewer_keywords:
+- data warehouse [SQL Server], multiple instances
+- data warehouse [SQL Server], configuring
+- Configure Management Data Warehouse Wizard
+- management data warehouse, configuring
 ms.assetid: 23a584f3-c5e1-414c-9afe-73cd7efbda4b
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0be7c28ff6d9359ae858902f7b2d07cee6f353f6
+ms.lasthandoff: 04/11/2017
+
 ---
-# 設定管理資料倉儲 (SQL Server Management Studio)
+# <a name="configure-the-management-data-warehouse-sql-server-management-studio"></a>設定管理資料倉儲 (SQL Server Management Studio)
   此主題描述如何設定管理資料倉儲，以支援使用資料收集器之一個或多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的資料儲存體。 這些執行個體可以在相同伺服器或不同伺服器上。 此主題也提供 [設定管理資料倉儲精靈](#Wizard) 對話方塊的使用者介面描述。 如需設定資料收集器的詳細資訊，請參閱＜ [Configure Properties of a Data Collector](../../relational-databases/data-collection/configure-properties-of-a-data-collector.md)＞。  
   
 > [!NOTE]  
 >  如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 設定成使用其中一個系統服務帳戶 (本機系統、網路服務或本機服務) 來執行，而且管理資料倉儲是從資料收集器的另一個執行個體建立，您就必須設定收集組使用 Proxy 將資料上傳到管理資料倉儲。  
   
-### 在一個或多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="configure-the-management-data-warehouse-on-a-single-instance-or-multiple-instances-of-includessnoversionincludesssnoversion-mdmd"></a>在一個或多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 1.  確定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 正在執行中。  
   
@@ -50,7 +54,7 @@ caps.handback.revision: 28
     > [!NOTE]  
     >  公認的最佳作法是將 Proxy 用於在多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體 (使用相同的管理資料倉儲) 上安裝資料收集器的部署中。  
   
-5.  在另一個執行個體上開啟 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，然後進行下列任何一項動作：  
+5.  在另一個執行個體上開啟 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，然後進行下列任何一項動作：  
   
     -   使用「設定管理資料倉儲精靈」來針對現有的管理資料倉儲設定資料收集。  
   
@@ -92,7 +96,7 @@ caps.handback.revision: 28
   
  為登入選取 **[對應]** 核取方塊來指定此登入。  
   
- **資料庫角色成員資格對象:** \<資料倉儲名稱*>*  
+ **資料庫角色成員資格對象:**  *\<資料倉儲名稱>*  
  選取此登入所對應的管理資料倉儲角色，其方式是按一下下列一或多個選項旁邊的核取方塊：  
   
 -   **mdw_admin**  
@@ -132,7 +136,7 @@ caps.handback.revision: 28
  **關閉**  
  關閉精靈。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [sp_syscollector_enable_collector &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-enable-collector-transact-sql.md)   
  [sp_syscollector_disable_collector &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-disable-collector-transact-sql.md)   
  [資料收集](../../relational-databases/data-collection/data-collection.md)   

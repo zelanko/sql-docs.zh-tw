@@ -1,28 +1,32 @@
 ---
-title: "資料行存放區索引重組 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "01/27/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "資料行存放區索引 - 重組 | Microsoft 文件"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 01/27/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d3efda1a-7bdb-47f5-80bf-f075329edee5
 caps.latest.revision: 17
-author: "barbkess"
-ms.author: "barbkess"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: barbkess
+ms.author: barbkess
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: eea1da9c6a3c9dd30b89c72488570ae98737eaa5
+ms.lasthandoff: 04/11/2017
+
 ---
-# 資料行存放區索引重組
+# <a name="columnstore-indexes---defragmentation"></a>資料行存放區索引 - 重組
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   重組資料行存放區索引的工作。  
   
-## 使用 ALTER INDEX REORGANIZE 線上重組資料行存放區索引  
+## <a name="use-alter-index-reorganize-to-defragment-a-columnstore-index-online"></a>使用 ALTER INDEX REORGANIZE 線上重組資料行存放區索引  
  適用於：SQL Server (自 2016 版開始)、Azure SQL Database  
   
   執行任何類型的負載後，您在差異存放區中可能有多個小型的資料列群組。 您可使用 ALTER INDEX REORGANIZE 強制將所有資料列群組存放至資料行存放區，然後再將資料列群組合併成較少資料列的資料列群組。  重新組織作業也會移除已從資料行存放區刪除的資料列。  
@@ -33,12 +37,12 @@ caps.handback.revision: 15
   
 -   [資料行存放區索引和適用於資料列群組的合併原則](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/08/columnstore-index-merge-policy-for-reorganize/)  
   
-### 對重新組織的建議  
+### <a name="recommendations-for-reorganizing"></a>對重新組織的建議  
  在一次或多次資料載入後重新組織資料行存放區索引，以便盡快獲得查詢效能的優勢。 進行重新組織一開始會需要額外的 CPU 資源來壓縮資料，這可能會拖慢整體系統效能。 不過，只要資料壓縮完成，查詢效能就能獲得改善。  
   
  使用 [sys.dm_db_column_store_row_group_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md) 中的範例計算分散。 這可協助您判斷是否需要執行 REORGANIZE 作業。  
   
-### 範例︰重新組織的運作方式  
+### <a name="example-how-reorganizing-works"></a>範例︰重新組織的運作方式  
  本範例展示 ALTER INDEX REORGANIZE 如何將所有差異存放區資料列群組強制放置於資料行存放區，然後再將資料列群組合併。  
   
 1.  執行此 Transact-SQL，建立包含 300,000 個資料列的暫存表格。 我們將使用此暫存表格大量載入資料列至資料行存放區索引中。  
@@ -147,7 +151,7 @@ caps.handback.revision: 15
   
      在此範例中，結果會顯示 8 個 OPEN 資料列群組，其各有 37,500 個資料列。 OPEN 資料列群組的數目，取決於 max_degree_of_parallelism 設定。  
   
-     ![OPEN rowgroups](../../relational-databases/indexes/media/cci-openrowgroups.png "OPEN rowgroups")  
+     ![OPEN 資料列群組](../../relational-databases/indexes/media/cci-openrowgroups.png "OPEN 資料列群組")  
   
 5.  使用 ALTER INDEX REORGANIZE 搭配 COMPRESS_ALL_ROW_GROUPS 選項，將所有資料列群組強制壓縮至資料行存放區。  
   
@@ -165,7 +169,7 @@ caps.handback.revision: 15
   
      結果會顯示 8 個 COMPRESSED 資料列群組以及 8 個 TOMBSTONE 資料列群組。 每個資料列群組皆會壓縮至資料行存放區而無關其大小。 系統將會移除 TOMBSTONE 資料列群組。  
   
-     ![TOMBSTONE and COMPRESSED rowgroups](../../relational-databases/indexes/media/cci-tombstone-compressed-rowgroups.png "TOMBSTONE and COMPRESSED rowgroups")  
+     ![TOMBSTONE 和 COMPRESSED 資料列群組](../../relational-databases/indexes/media/cci-tombstone-compressed-rowgroups.png "TOMBSTONE 和 COMPRESSED 資料列群組")  
   
 6.  針對查詢效能考量，建議您合併所有的小型資料列群組。  ALTER INDEX REORGANIZE 會合併所有的 COMPRESSED 資料列群組。 將差異資料列群組壓縮至資料行存放區後，再次執行 ALTER INDEX REORGANIZE 以合併所有的小型 COMPRESSED 資料列群組。 此時您無須使用 COMPRESS_ALL_ROW_GROUPS 選項。  
   
@@ -182,21 +186,21 @@ caps.handback.revision: 15
   
      結果會顯示現已壓縮為單一 COMPRESSED 資料列群組的 8 個 COMPRESSED 資料列群組。  
   
-     ![Combined rowgroups](../../relational-databases/indexes/media/cci-compressed-rowgroups.png "Combined rowgroups")  
+     ![合併的資料列群組](../../relational-databases/indexes/media/cci-compressed-rowgroups.png "合併的資料列群組")  
   
 ##  <a name="rebuild"></a> 使用 ALTER INDEX REBUILD 離線重組資料行存放區索引  
  若為 SQL Server 2016 和更新版本，則通常無須重建資料行存放區索引，這是因為 REORGANIZE 會在背景以線上作業方式執行必要的重建作業。  
   
  重建資料行存放區索引會移除分散的片段，並將所有資料列移至資料行存放區。 使用 [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md) 或 [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) 完整重建現有的叢集資料行存放區索引。 此外，您可以使用 ALTER INDEX... REBUILD 重建特定分割區。  
   
-### 重建程序  
+### <a name="rebuild-process"></a>重建程序  
  為了重建資料行存放區索引， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]會進行以下作業：  
   
 1.  在進行重建時，取得資料表或分割區上的獨佔鎖定。  在重建期間，資料處於「離線」狀態而且無法使用，即使使用 NOLOCK、RCSI 或 SI 亦然。  
   
 2.  將所有資料重新壓縮到資料行存放區。 當重建進行時，有兩個資料行存放區索引複本存在。 當重建完成時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會刪除原始資料行存放區索引。  
   
-### 重建資料行存放區索引的建議  
+### <a name="recommendations-for-rebuilding-a-columnstore-index"></a>重建資料行存放區索引的建議  
  重建資料行存放區索引對於移除片段以及將所有資料列移入資料行存放區而言相當實用。 以下是我們的建議：  
   
 1.  重建分割區，而非整份資料表。  
@@ -213,13 +217,13 @@ caps.handback.revision: 15
   
     -   如此可確保所有資料都儲存在資料行存放區中。 同時處理將不到 100 萬個資料列載入至相同分割區的每項作業時，分割區最後會具有多個差異存放區。 重建會將所有差異存放區資料列移至資料行存放區。  
   
-## 另請參閱  
- [資料行存放區索引指南](../Topic/Columnstore%20Indexes%20Guide.md)   
- [資料行存放區索引資料載入](../Topic/Columnstore%20Indexes%20Data%20Loading.md)   
- [資料行存放區索引建立版本功能摘要](../Topic/Columnstore%20Indexes%20Versioned%20Feature%20Summary.md)   
- [資料行存放區索引效能](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   
- [開始使用資料行存放區進行即時作業分析](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)   
- [資料倉儲的資料行存放區索引](../Topic/Columnstore%20Indexes%20for%20Data%20Warehousing.md)   
- [資料行存放區索引維護工作](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)  
+## <a name="see-also"></a>另請參閱        
+[資料行存放區索引 - 新功能](../../relational-databases/indexes/columnstore-indexes-what-s-new.md)
+
+[資料行存放區索引 - 查詢效能](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   
+[開始使用資料行存放區進行即時作業分析](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)   
+ [資料行存放區索引 - 資料倉儲](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)   
+   
   
   
+

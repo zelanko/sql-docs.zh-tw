@@ -1,24 +1,28 @@
 ---
-title: "建立資料庫快照集 (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/10/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "資料庫快照集 [SQL Server], 建立"
+title: "建立資料庫快照集 (Transact-SQL) | Microsoft 文件"
+ms.custom: 
+ms.date: 08/10/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database snapshots [SQL Server], creating
 ms.assetid: 187fbba3-c555-4030-9bdf-0f01994c5230
 caps.latest.revision: 56
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 56
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: b3f980ff1cdf0dd08b0970887988eafa245e9622
+ms.lasthandoff: 04/11/2017
+
 ---
-# 建立資料庫快照集 (Transact-SQL)
+# <a name="create-a-database-snapshot-transact-sql"></a>建立資料庫快照集 (Transact-SQL)
   使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是建立 [!INCLUDE[tsql](../../includes/tsql-md.md)]資料庫快照集的唯一方式。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 不支援建立資料庫快照集。  
   
   
@@ -27,18 +31,18 @@ caps.handback.revision: 56
 ###  <a name="Prerequisites"></a> 必要條件  
  可使用任何復原模式的來源資料庫必須符合下列必要條件：  
   
--   伺服器執行個體必須執行支援資料庫快照集的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。 如需 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中資料庫快照集支援的資訊，請參閱 [SQL Server 2016 版本支援的功能](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)。  
+-   伺服器執行個體必須執行支援資料庫快照集的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。 如需 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中資料庫快照集支援的資訊，請參閱 [SQL Server 2016 版本支援的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
 -   除非來源資料庫是資料庫鏡像工作階段中的鏡像資料庫，否則該資料庫必須處於線上狀態。  
   
--   若要在鏡像資料庫上建立資料庫快照集，資料庫必須處於同步處理的[鏡像狀態](../../database-engine/database-mirroring/mirroring-states-sql-server.md)。  
+-   若要在鏡像資料庫上建立資料庫快照集，資料庫必須處於同步處理的 [鏡像狀態](../../database-engine/database-mirroring/mirroring-states-sql-server.md)。  
   
 -   來源資料庫無法設定為可擴充的共用資料庫。  
 
-- 來源資料庫不能包含 MEMORY_OPTIMIZED_DATA 檔案群組。 如需詳細資訊，請參閱[記憶體內部 OLTP 不支援的 SQL Server 功能](../../relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md)。
+- 來源資料庫不能包含 MEMORY_OPTIMIZED_DATA 檔案群組。 如需詳細資訊，請參閱 [記憶體內部 OLTP 不支援的 SQL Server 功能](../../relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md)。
 
 >  [!IMPORTANT]
-> 如需其他重要考量的資訊，請參閱[資料庫快照集 &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)。  
+> 如需其他重要考量的資訊，請參閱 [資料庫快照集 &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)資料庫快照集的唯一方式。  
   
 ##  <a name="Recommendations"></a> 建議  
  本節討論下列最佳作法：  
@@ -91,7 +95,7 @@ AdventureWorks_snapshot_evening
 ##  <a name="TsqlProcedure"></a> 如何建立資料庫快照集 (使用 Transact-SQL)  
  **若要建立資料庫快照集**  
   
->  如需此程序的範例，請參閱本節稍後的[範例 (Transact-SQL)](#TsqlExample)。  
+>  如需此程序的範例，請參閱本節稍後的 [範例 (Transact-SQL)](#TsqlExample)。  
   
 1.  根據來源資料庫的目前大小，確定您擁有足夠的磁碟空間可存放資料庫快照集。 資料庫快照集的大小上限為快照集建立時的來源資料庫大小。 如需詳細資訊，請參閱[檢視資料庫快照集的疏鬆檔案大小 &#40;Transact-SQL&#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md)。  
   
@@ -113,7 +117,7 @@ AdventureWorks_snapshot_evening
   
      [;]  
   
-     其中 *source_**database_name* 是來源資料庫，*logical_file_name* 是參考檔案時 SQL Server 中所使用的邏輯名稱，*os_file_name* 是建立檔案時作業系統所使用的路徑和檔案名稱，而 *database_snapshot_name* 是要還原資料庫的目標快照集名稱。 如需此語法的完整描述，請參閱 [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)。  
+     其中 *source_**database_name* 是來源資料庫， *logical_file_name*是參考檔案時 SQL Server 中所使用的邏輯名稱， *os_file_name* 是建立檔案時作業系統所使用的路徑和檔案名稱，而 *database_snapshot_name* 是要還原資料庫的目標快照集名稱。 如需此語法的完整描述，請參閱 [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)資料庫快照集的唯一方式。  
   
     > [!NOTE]  
     >  建立資料庫快照集時，CREATE DATABASE 陳述式中不允許記錄檔、離線檔案、還原檔案與無用檔案。  
@@ -130,7 +134,7 @@ AdventureWorks_snapshot_evening
 -   B. [在 Sales 資料庫上建立快照集](#Creating_on_Sales)  
   
 ####  <a name="Creating_on_AW"></a> A. 在 AdventureWorks 資料庫上建立快照集  
- 此範例會在 `AdventureWorks` 資料庫上建立資料庫快照集。 快照集名稱 `AdventureWorks_dbss_1800` 與疏鬆檔案的檔案名稱 `AdventureWorks_data_1800.ss`，表示建立時間是 6 P.M (1800 小時)。  
+ 此範例會在 `AdventureWorks` 資料庫上建立資料庫快照集。 快照集名稱 `AdventureWorks_dbss_1800`與疏鬆檔案的檔案名稱 `AdventureWorks_data_1800.ss`，表示建立時間是 6 P.M (1800 小時)。  
   
 ```  
 CREATE DATABASE AdventureWorks_dbss1800 ON  
@@ -141,7 +145,7 @@ GO
 ```  
   
 ####  <a name="Creating_on_Sales"></a> B. 在 Sales 資料庫上建立快照集  
- 此範例會在 `sales_snapshot1200` 資料庫上建立資料庫快照集 `Sales`。 此資料庫是在 [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md) 中的「建立含有檔案群組的資料庫」的範例部分所建立。  
+ 此範例會在 `sales_snapshot1200`資料庫上建立資料庫快照集 `Sales` 。 此資料庫是在 [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)中的「建立含有檔案群組的資料庫」的範例部分所建立。  
   
 ```  
 --Creating sales_snapshot1200 as snapshot of the  
@@ -171,8 +175,10 @@ GO
   
 -   [卸除資料庫快照集 &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [資料庫快照集 &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)  
   
   
+
+

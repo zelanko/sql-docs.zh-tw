@@ -1,22 +1,26 @@
 ---
 title: "分割記憶體最佳化資料表的應用程式模式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3f867763-a8e6-413a-b015-20e9672cc4d1
 caps.latest.revision: 20
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 30bcdf16b27cf4f85fca86c8daeeeec210798c07
+ms.lasthandoff: 04/11/2017
+
 ---
-# 分割記憶體最佳化資料表的應用程式模式
+# <a name="application-pattern-for-partitioning-memory-optimized-tables"></a>分割記憶體最佳化資料表的應用程式模式
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 支援的模式如下：將有限的使用中資料數量保留在記憶體最佳化資料表中，而比較不常存取的資料則在磁碟中處理。 這種情況一般都是根據 **datetime** 索引鍵儲存資料。  
@@ -35,14 +39,14 @@ caps.handback.revision: 20
   
 -   加入使用中分割區。  
   
- ![分割區切換。](../../relational-databases/in-memory-oltp/media/hekaton-partitioned-tables.gif "分割區切換。")  
+ ![分割區切換。](../../relational-databases/in-memory-oltp/media/hekaton-partitioned-tables.gif "Partition switch.")  
 使用中資料維護  
   
  從刪除使用中訂單開始的動作必須在維護期間完成，以免在刪除資料以及在暫存資料表中切換之間會遺失查詢資料。  
   
- 如需相關範例，請參閱[應用程式層級資料分割](../../relational-databases/in-memory-oltp/application-level-partitioning.md)。  
+ 如需相關範例，請參閱 [應用程式層級資料分割](../../relational-databases/in-memory-oltp/application-level-partitioning.md)。  
   
-## 程式碼範例  
+## <a name="code-sample"></a>程式碼範例  
  下列範例示範如何使用具有分割磁碟型資料表之記憶體最佳化的資料表。 經常使用的資料會儲存在記憶體中。 如果要將資料儲存到磁碟，請建立新的磁碟分割區，並將資料複製到分割資料表。  
   
  此範例的第一個部分會建立資料庫和必要的物件。 第二部分會示範如何將資料從記憶體最佳化的資料表，移至分割資料表。  
@@ -210,7 +214,7 @@ SELECT OBJECT_NAME( object_id) , partition_number , row_count  FROM sys.dm_db_pa
   WHERE object_id = OBJECT_ID( 'dbo.SalesOrders_cold') AND index_id = 1;  
 ```  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [記憶體最佳化資料表](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   

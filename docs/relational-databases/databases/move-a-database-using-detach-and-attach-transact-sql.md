@@ -1,39 +1,43 @@
 ---
 title: "使用卸離與附加移動資料庫 (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "資料庫附加 [SQL Server]"
-  - "移動資料庫 [SQL Server]"
-  - "資料庫卸離 [SQL Server]"
-  - "重新放置資料庫 [SQL Server]"
-  - "卸離資料庫 [SQL Server]"
-  - "附加資料庫 [SQL Server]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database attaching [SQL Server]
+- moving databases [SQL Server]
+- database detaching [SQL Server]
+- relocating databases [SQL Server]
+- detaching databases [SQL Server]
+- attaching databases [SQL Server]
 ms.assetid: 6732a431-cdef-4f1e-9262-4ac3b77c275e
 caps.latest.revision: 47
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 47
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e4604a9d4da9360607e31d31b3f160bc0bff2eac
+ms.lasthandoff: 04/11/2017
+
 ---
-# 使用卸離與附加移動資料庫 (Transact-SQL)
-  此主題描述如何將卸離的資料庫移動到另一個位置，再重新附加到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中相同或不同的伺服器執行個體。 不過，建議您使用 ALTER DATABASE 計畫的重新放置程序來移動資料庫，而不要使用卸離和附加。 如需詳細資訊，請參閱[移動使用者資料庫](../../relational-databases/databases/move-user-databases.md)。  
+# <a name="move-a-database-using-detach-and-attach-transact-sql"></a>使用卸離與附加移動資料庫 (Transact-SQL)
+  此主題描述如何將卸離的資料庫移動到另一個位置，再重新附加到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中相同或不同的伺服器執行個體。 不過，建議您使用 ALTER DATABASE 計畫的重新放置程序來移動資料庫，而不要使用卸離和附加。 如需詳細資訊，請參閱 [移動使用者資料庫](../../relational-databases/databases/move-user-databases.md)。  
   
 > [!IMPORTANT]  
->  建議您不要附加或還原來源不明或來源不受信任的資料庫。 這種資料庫可能包含惡意程式碼，因此可能執行非預期的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼，或是修改結構描述或實體資料庫結構而造成錯誤。 使用來源不明或來源不受信任的資料庫之前，請先在非實際執行伺服器的資料庫上執行 [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)，同時檢查資料庫中的程式碼，例如預存程序或其他使用者定義程式碼。  
+>  建議您不要附加或還原來源不明或來源不受信任的資料庫。 這種資料庫可能包含惡意程式碼，因此可能執行非預期的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼，或是修改結構描述或實體資料庫結構而造成錯誤。 使用來源不明或來源不受信任的資料庫之前，請先在非實際執行伺服器的資料庫上執行 [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) ，同時檢查資料庫中的程式碼，例如預存程序或其他使用者定義程式碼。  
   
-## 程序  
+## <a name="procedure"></a>程序  
   
-#### 透過使用卸離和附加來移動資料庫  
+#### <a name="to-move-a-database-by-using-detach-and-attach"></a>透過使用卸離和附加來移動資料庫  
   
-1.  卸離資料庫。 如需詳細資訊，請參閱[卸離資料庫](../../relational-databases/databases/detach-a-database.md)。  
+1.  卸離資料庫。 如需詳細資訊，請參閱 [卸離資料庫](../../relational-databases/databases/detach-a-database.md)。  
   
 2.  在 Windows 檔案總管或 Windows 的 [命令提示字元] 視窗中，將卸離的資料庫檔案和記錄檔移動到新位置。  
   
@@ -47,7 +51,7 @@ caps.handback.revision: 47
   
 3.  附加複製的檔案。 如需相關資訊，請參閱 [Attach a Database](../../relational-databases/databases/attach-a-database.md)。  
   
-## 範例  
+## <a name="example"></a>範例  
  下列範例可為 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫建立名為 `MyAdventureWorks`的副本。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式會在 [查詢編輯器] 視窗中執行，此視窗連接到附加的伺服器執行個體。  
   
 1.  執行下列 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 陳述式卸離 [!INCLUDE[tsql](../../includes/tsql-md.md)] 資料庫：  
@@ -80,7 +84,7 @@ caps.handback.revision: 47
   
      在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，新附加的資料庫無法立即在 [物件總管] 中可見。 若要檢視資料庫，請在 [物件總管] 中按一下 **[檢視]** ，然後按一下 **[重新整理]**。 在 [物件總管] 中展開 **[資料庫]** 節點時，剛才附加的資料庫就會出現在資料庫清單中。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [資料庫卸離與附加 &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)  
   
   

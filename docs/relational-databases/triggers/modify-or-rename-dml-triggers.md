@@ -1,26 +1,30 @@
 ---
 title: "修改或重新命名 DML 觸發程序 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-dml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "重新命名觸發程序"
-  - "修改觸發程序"
-  - "DML 觸發程序，修改"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-dml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- renaming triggers
+- modifying triggers
+- DML triggers, modifying
 ms.assetid: c7317eec-c0e9-479e-a4a7-83b6b6c58d59
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2ac7956829213d52669a3408a9a64c597cafa03d
+ms.lasthandoff: 04/11/2017
+
 ---
-# 修改或重新命名 DML 觸發程序
+# <a name="modify-or-rename-dml-triggers"></a>修改或重新命名 DML 觸發程序
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 修改或重新命名 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的 DML 觸發程序。  
   
  **本主題內容**  
@@ -68,17 +72,17 @@ caps.handback.revision: 29
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 若要修改 DML 觸發程序  
+#### <a name="to-modify-a-dml-trigger"></a>若要修改 DML 觸發程序  
   
 1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體，然後展開該執行個體。  
   
 2.  展開您要的資料庫，展開 **[資料表]**，然後展開包含您要修改之觸發程序的資料表。  
   
-3.  展開 [觸發程序]，以滑鼠右鍵按一下要修改的觸發程序，再按一下 [修改]。  
+3.  展開 **[觸發程序]**，以滑鼠右鍵按一下要修改的觸發程序，再按一下 **[修改]**。  
   
 4.  修改觸發程序，然後按一下 **[執行]**。  
   
-#### 若要重新命名 DML 觸發程序  
+#### <a name="to-rename-a-dml-trigger"></a>若要重新命名 DML 觸發程序  
   
 1.  [刪除觸發程序](../../relational-databases/triggers/delete-or-disable-dml-triggers.md) ，也就是要重新命名的觸發程序。  
   
@@ -86,7 +90,7 @@ caps.handback.revision: 29
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 若要使用 ALTER TRIGGER 修改觸發程序  
+#### <a name="to-modify-a-trigger-using-alter-trigger"></a>若要使用 ALTER TRIGGER 修改觸發程序  
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
@@ -120,7 +124,7 @@ GO
   
 ```  
   
-#### 若要使用 DROP TRIGGER 和 ALTER TRIGGER 重新命名觸發程序  
+#### <a name="to-rename-a-trigger-using-drop-trigger-and-alter-trigger"></a>若要使用 DROP TRIGGER 和 ALTER TRIGGER 重新命名觸發程序  
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
@@ -143,7 +147,7 @@ GO
   
 ```  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [DROP TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-trigger-transact-sql.md)   
  [ENABLE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/enable-trigger-transact-sql.md)   

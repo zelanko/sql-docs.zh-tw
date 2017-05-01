@@ -1,38 +1,42 @@
 ---
 title: "資料壓縮 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "07/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-data-compression"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "頁面壓縮 [Database Engine]"
-  - "索引 [SQL Server], 壓縮"
-  - "壓縮索引 [SQL Server]"
-  - "儲存壓縮 [Database Engine]"
-  - "資料表 [SQL Server], 壓縮"
-  - "儲存體 [SQL Server], 壓縮"
-  - "壓縮 [SQL Server]"
-  - "資料列壓縮 [Database Engine]"
-  - "壓縮 [SQL Server], 關於壓縮資料表及索引"
-  - "資料壓縮 [Database Engine]"
-  - "壓縮資料表 [SQL Server]"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 07/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-data-compression
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- page compression [Database Engine]
+- indexes [SQL Server], compressed
+- compressed indexes [SQL Server]
+- storage compression [Database Engine]
+- tables [SQL Server], compressed
+- storage [SQL Server], compressed
+- compression [SQL Server]
+- row compression [Database Engine]
+- compression [SQL Server], about compressed tables and indexes
+- data compression [Database Engine]
+- compressed tables [SQL Server]
 ms.assetid: 5f33e686-e115-4687-bd39-a00c48646513
 caps.latest.revision: 60
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 60
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 686f793e6579b54278a4d43e11e764efda84972e
+ms.lasthandoff: 04/11/2017
+
 ---
-# 資料壓縮
+# <a name="data-compression"></a>資料壓縮
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 支援資料列和頁面壓縮 (針對資料列存放區的資料表和索引)，亦支援資料行存放區和資料行存放區封存壓縮 (針對資料行存放區的資料表和索引)。  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 支援資料列和頁面壓縮 (針對資料列存放區的資料表和索引)，亦支援資料行存放區和資料行存放區封存壓縮 (針對資料行存放區的資料表和索引)。  
   
  如果是資料列存放區資料表和索引，使用資料壓縮功能有助於減少資料庫的大小。 除了節省空間之外，資料壓縮也有助於改善 I/O 密集型工作負載的效能，因為資料會儲存在更少的頁面中，而且查詢需要從磁碟讀取的頁面也變少了。 但是在與應用程式交換資料時，資料庫伺服器上需要額外的 CPU 資源來壓縮和解壓縮資料。 您可以針對下列資料庫物件來設定資料列和頁面壓縮：  
   
@@ -57,14 +61,14 @@ caps.handback.revision: 60
 > [!NOTE]  
 >  資料也可以使用 GZIP 演算法格式進行壓縮。 這是額外的步驟，最適合在封存舊資料進行長期儲存時壓縮部分資料。 使用 COMPRESS 函數壓縮的資料無法編製索引。 如需詳細資訊，請參閱 [COMPRESS &#40;Transact-SQL&#41;](../../t-sql/functions/compress-transact-sql.md)。  
   
-## 使用資料列和頁面壓縮時的考量  
+## <a name="considerations-for-when-you-use-row-and-page-compression"></a>使用資料列和頁面壓縮時的考量  
  當您使用資料列和頁面壓縮時，請注意以下考量事項：  
   
 -   Service Pack 或後續版本中的資料壓縮詳細資料可能會變更，恕不另行通知。
 
--   壓縮適用於： [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)]  
+-   壓縮適用於 [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)]  
   
--   每一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中都無法使用壓縮。 如需詳細資訊，請參閱 [SQL Server 2016 版本支援的功能](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)。  
+-   每一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本中都無法使用壓縮。 如需詳細資訊，請參閱 [SQL Server 2016 版本支援的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
 -   壓縮不適用於系統資料表。  
   
@@ -111,13 +115,13 @@ caps.handback.revision: 60
     > [!NOTE]  
     >  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支援 Vardecimal 儲存格式；但是，由於資料列層級的壓縮會達成相同的目標，所以 Vardecimal 儲存格式已被取代。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
-## 使用資料行存放區和資料行存放區封存壓縮  
+## <a name="using-columnstore-and-columnstore-archive-compression"></a>使用資料行存放區和資料行存放區封存壓縮  
   
 ||  
 |-|  
-|**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至[目前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658))、[!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)]。|  
+|**適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [目前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658))、 [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)]。|  
   
-### 基本概念  
+### <a name="basics"></a>基本概念  
  資料行存放區資料表和索引永遠都會以資料行存放區壓縮形式來儲存。 您可以進一步減少資料行存放區資料的大小，只要設定稱為封存壓縮的額外壓縮即可。  為了執行封存壓縮， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會針對資料執行 Microsoft XPRESS 壓縮演算法。 您可以使用下列資料壓縮類型來新增或移除封存壓縮：  
   
 -   使用 **COLUMNSTORE_ARCHIVE** 資料壓縮，以封存壓縮來壓縮資料行存放區的資料。  
@@ -166,12 +170,12 @@ REBUILD PARTITION = ALL WITH (
 ) ;  
 ```  
   
-### 效能  
+### <a name="performance"></a>效能  
  以封存壓縮壓縮資料行存放區索引將會造成該索引的效能比沒有封存壓縮的資料行存放區索引還要慢。  只有當您可以負擔使用額外時間和 CPU 資源來壓縮及擷取資料時，才使用封存壓縮。  
   
  效能減緩的好處就是減少儲存體，這對於不常存取的資料很實用。 例如，如果您每個月的資料都有一個資料分割，而您的大多數活動發生在最近的月份，您可以封存較舊的月份來減少儲存需求。  
   
-### 中繼資料  
+### <a name="metadata"></a>中繼資料  
  下列系統檢視表包含叢集索引之資料壓縮的相關資訊：  
   
 -   [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) - **type** 及 **type_desc** 資料行包含 CLUSTERED COLUMNSTORE 和 NONCLUSTERED COLUMNSTORE。  
@@ -180,7 +184,7 @@ REBUILD PARTITION = ALL WITH (
   
  [sp_estimate_data_compression_savings &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md) 程序不適用於資料行存放區索引。  
   
-## 壓縮對分割資料表和索引有何影響  
+## <a name="how-compression-affects-partitioned-tables-and-indexes"></a>壓縮對分割資料表和索引有何影響  
  當您搭配分割資料表和索引使用資料壓縮時，請注意以下考量事項：  
   
 -   當使用 ALTER PARTITION 陳述式分割資料分割時，兩個資料分割都會繼承原始資料分割的資料壓縮屬性。  
@@ -217,10 +221,10 @@ REBUILD PARTITION = ALL WITH (
   
      在線上卸除叢集索引將會是非常快速的作業，因為只會移除叢集索引的上層。 在線上卸除叢集索引時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 必須重建堆積兩次，一次在步驟 1，另一次在步驟 2。  
   
-## 壓縮將如何影響複寫 
+## <a name="how-compression-affects-replication"></a>壓縮將如何影響複寫 
 ||  
 |-|  
-|**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至[目前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658))。|   
+|**適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [目前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658))。|   
  當您搭配複寫使用資料壓縮時，請注意以下考量事項：  
   
 -   當快照集代理程式產生最初的結構描述指令碼時，新的結構描述會將相同的壓縮設定用於資料表和它的索引。 不能只在資料表上啟用壓縮，而不在索引上啟用壓縮。  
@@ -242,10 +246,10 @@ REBUILD PARTITION = ALL WITH (
 |不複寫資料分割配置，而且不壓縮訂閱者上的資料。|False|False|不針對資料分割或壓縮設定編寫指令碼。|  
 |如果所有資料分割都在發行者上壓縮，則壓縮訂閱者上的資料表，但是不複寫資料分割配置。|False|True|檢查所有資料分割是否啟用壓縮。<br /><br /> 針對資料表層級上的壓縮編寫指令碼。|  
   
-## 壓縮對於其他 SQL Server 元件有何影響 
+## <a name="how-compression-affects-other-sql-server-components"></a>壓縮對於其他 SQL Server 元件有何影響 
 ||  
 |-|  
-|**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至[目前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658))。|
+|**適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [目前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658))。|
    
  壓縮會發生在儲存引擎中，而且資料會以非壓縮狀態呈現給 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的大多數其他元件。 這樣會將壓縮對其他元件的影響限制為以下情況：  
   
@@ -265,7 +269,7 @@ REBUILD PARTITION = ALL WITH (
   
 -   啟用壓縮可能會造成查詢計畫變更，因為系統會使用不同的頁數以及每頁不同的資料列數來儲存資料。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [資料列壓縮實作](../../relational-databases/data-compression/row-compression-implementation.md)   
  [頁面壓縮實作](../../relational-databases/data-compression/page-compression-implementation.md)   
  [Unicode 壓縮實作](../../relational-databases/data-compression/unicode-compression-implementation.md)   
@@ -277,3 +281,5 @@ REBUILD PARTITION = ALL WITH (
  [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)  
   
   
+
+

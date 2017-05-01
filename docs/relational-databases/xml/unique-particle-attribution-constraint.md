@@ -1,29 +1,33 @@
 ---
-title: "唯一物件屬性條件約束 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "unique particle attribution"
-helpviewer_keywords: 
-  - "結構描述集合 [SQL Server], 唯一物件屬性"
-  - "XML 結構描述集合 [SQL Server], 唯一物件屬性"
-  - "UPA 條件約束規則"
-  - "唯一物件屬性條件約束規則"
+title: "唯一物件屬性條件約束 | Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- unique particle attribution
+helpviewer_keywords:
+- schema collections [SQL Server], unique particle attribution
+- XML schema collections [SQL Server], unique particle attribution
+- UPA constraint rule
+- unique particle attribution constraint rule
 ms.assetid: 6bb879e9-a5ee-402e-94e4-fe8cec5966b0
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e8b99a18280070f3960e6e9259e36144e22889c2
+ms.lasthandoff: 04/11/2017
+
 ---
-# 唯一物件屬性條件約束
+# <a name="unique-particle-attribution-constraint"></a>唯一物件屬性條件約束
   在 XSD 中，會以唯一物件屬性 (UPA) 條件約束規則來限制複雜的內容模型。 此規則要求執行個體文件中的每個元素，都要明確地對應至其父系內容模型中的一個 `<xsd:element>` 或 `<xsd:any>` 物件。 若有任何結構描述，其包含的類型可能含有模稜兩可的內容模型，都會被拒絕。  
   
  導致內容模型模稜兩可的最常見原因，就是 `<xsd:any>` 萬用字元，以及具有變動出現範圍的物件，例如：minOccurs < maxOccurs。 例如，下列內容模型是模稜兩可的，因為 <`e1`> 元素可以符合 `<xsd:element>`，也可以符合 `<xsd:any>` 元素。  
@@ -74,9 +78,9 @@ caps.handback.revision: 14
 </xsd:element>  
 ```  
   
- 像 `<root><e1/><e3/></root>` 這類文件，序列 `<e1/><e3/>` 明確地符合第二個 `<xsd:sequence>`。 然而，因為 `<xsd:element>` 所對應的 `<e1/>` 在沒有往前查看 `<e3/>` 的情況下，即無法做出判斷，所以內容模型違反了 UPA 條件約束規則。  
+ 像 `<root><e1/><e3/></root>`這類文件，序列 `<e1/><e3/>` 明確地符合第二個 `<xsd:sequence>`。 然而，因為 `<xsd:element>` 所對應的 `<e1/>` 在沒有往前查看 `<e3/>`的情況下，即無法做出判斷，所以內容模型違反了 UPA 條件約束規則。  
   
-## 尋找詳細資訊  
+## <a name="finding-more-information"></a>尋找詳細資訊  
  下列文件是由全球資訊網協會 (W3C) 所發行，其中包含唯一物件屬性條件約束的技術說明：  
   
  ＜XML 結構描述第一部份：結構第二版，W3C 提出的編輯建議＞(英文)：  
@@ -87,7 +91,7 @@ caps.handback.revision: 14
   
  若要參閱該文件，請前往 [http://www.w3.org/TR/xmlschema-1](http://go.microsoft.com/fwlink/?linkid=48881)。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [XML 結構描述集合 &#40;SQL Server&#41;](../../relational-databases/xml/xml-schema-collections-sql-server.md)  
   
   

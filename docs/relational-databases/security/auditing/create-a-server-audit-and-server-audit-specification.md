@@ -1,29 +1,33 @@
 ---
 title: "建立伺服器稽核與伺服器稽核規格 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.SWB.SQLAUDIT.FILTER.F1"
-  - "sql13.swb.sqlaudit.general.f1"
-  - "sql13.swb.sqlaudit.srvaudit.general.f1"
-helpviewer_keywords: 
-  - "伺服器稽核 [SQL Server]"
-  - "稽核 [SQL Server], 規格"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.SWB.SQLAUDIT.FILTER.F1
+- sql13.swb.sqlaudit.general.f1
+- sql13.swb.sqlaudit.srvaudit.general.f1
+helpviewer_keywords:
+- server audit [SQL Server]
+- audits [SQL Server], specification
 ms.assetid: 6624b1ab-7ec8-44ce-8292-397edf644394
 caps.latest.revision: 21
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e33a4ff076039b03c399a0f7868bf697ca1cd8d0
+ms.lasthandoff: 04/11/2017
+
 ---
-# 建立伺服器稽核與伺服器稽核規格
+# <a name="create-a-server-audit-and-server-audit-specification"></a>建立伺服器稽核與伺服器稽核規格
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中建立伺服器稽核和伺服器稽核規格。 *「稽核」* (Audit) [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫的執行個體牽涉到追蹤和記錄系統上所發生的事件。 *SQL Server Audit* 物件會收集要監視之動作和動作群組 (伺服器層級或資料庫層級) 的單一執行個體。 此稽核位於 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體層級。 您可以針對每個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體設有多個稽核。 *「伺服器稽核規格」* (Server Audit Specification) 物件屬於稽核。 您可以針對每個稽核建立一個伺服器稽核規格，因為這兩者都是在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體範圍所建立。 如需詳細資訊，請參閱 [SQL Server Audit &#40;Database Engine&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。  
   
  **本主題內容**  
@@ -60,7 +64,7 @@ caps.handback.revision: 21
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 若要建立伺服器稽核  
+#### <a name="to-create-a-server-audit"></a>若要建立伺服器稽核  
   
 1.  在 [物件總管] 中，展開 **[安全性]** 資料夾。  
   
@@ -82,13 +86,13 @@ caps.handback.revision: 21
      當寫入目標的伺服器執行個體無法將資料寫入稽核目標時，強制伺服器關閉。 發出此內容的登入必須具有 **SHUTDOWN** 權限。 如果登入沒有此權限，這個功能將會失敗，而且將會引發錯誤訊息。 不會發生稽核的事件。 當稽核失敗可能危害系統的安全性或完整性時，請選取此選項。  
   
      **讓作業失敗**  
-     當 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit 無法寫入稽核記錄時，如果資料庫動作會以其他方式導致稽核事件，這個選項就會讓這些動作失敗。 不會發生稽核的事件。 不會導致稽核事件的動作可繼續進行。 稽核會繼續嘗試記錄事件，而且如果失敗狀況已解決，就會恢復稽核。 當維持完整稽核比 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 的完整存取權更重要時，請選取此選項。  
+     當 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit 無法寫入稽核記錄時，如果資料庫動作會以其他方式導致稽核事件，這個選項就會讓這些動作失敗。 不會發生稽核的事件。 不會導致稽核事件的動作可繼續進行。 稽核會繼續嘗試記錄事件，而且如果失敗狀況已解決，就會恢復稽核。 當維持完整稽核比 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的完整存取權更重要時，請選取此選項。  
   
     > [!IMPORTANT]  
     >  當稽核處於失敗狀態時，專用管理員連接可以繼續執行稽核事件。  
   
      [稽核目的地] 清單  
-     指定稽核資料的目標。 可用的選項有二進位檔案、Windows 應用程式記錄檔或 Windows 安全性記錄檔。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 就無法寫入 Windows 安全性記錄檔。 如需詳細資訊，請參閱[將 SQL Server Audit 事件寫入安全性記錄檔](../../../relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log.md)。  
+     指定稽核資料的目標。 可用的選項有二進位檔案、Windows 應用程式記錄檔或 Windows 安全性記錄檔。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 就無法寫入 Windows 安全性記錄檔。 如需詳細資訊，請參閱 [將 SQL Server Audit 事件寫入安全性記錄檔](../../../relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log.md)。  
   
      **檔案路徑**  
      指定當 [稽核目的地] 為檔案時，要寫入稽核資料的資料夾位置。  
@@ -119,7 +123,7 @@ caps.handback.revision: 21
   
 4.  當您完成選取選項之後，按一下 **[確定]**。  
   
-#### 若要建立伺服器稽核規格  
+#### <a name="to-create-a-server-audit-specification"></a>若要建立伺服器稽核規格  
   
 1.  在 [物件總管] 中，按一下加號展開 **[安全性]** 資料夾。  
   
@@ -155,7 +159,7 @@ caps.handback.revision: 21
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 若要建立伺服器稽核  
+#### <a name="to-create-a-server-audit"></a>若要建立伺服器稽核  
   
 1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的執行個體。  
   
@@ -169,7 +173,7 @@ caps.handback.revision: 21
         TO FILE ( FILEPATH ='\\SQLPROD_1\Audit\' );  
     ```  
   
-#### 若要建立伺服器稽核規格  
+#### <a name="to-create-a-server-audit-specification"></a>若要建立伺服器稽核規格  
   
 1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的執行個體。  
   

@@ -1,29 +1,33 @@
 ---
 title: "Cursors 事件類別目錄 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Cursors 事件類別目錄 [SQL Server]"
-  - "事件類別 [SQL Server], Cursors 事件類別目錄"
-  - "SQL Server 事件類別, Cursors 事件類別目錄"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Cursors event category [SQL Server]
+- event classes [SQL Server], Cursors event category
+- SQL Server event classes, Cursors event category
 ms.assetid: 752e0695-b464-4720-93be-5b9b53b7ab21
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bb543d97fb6e5a879bde56591e19a558a1781759
+ms.lasthandoff: 04/11/2017
+
 ---
-# Cursors 事件類別目錄
+# <a name="cursors-event-category"></a>Cursors 事件類別目錄
   **Cursors** 事件類別目錄包含用來監視資料指標行為的事件類別。  
   
-## 本節內容  
+## <a name="in-this-section"></a>本節內容  
   
 |主題|描述|  
 |-----------|-----------------|  
@@ -35,7 +39,7 @@ caps.handback.revision: 23
 |[CursorRecompile 事件類別](../../relational-databases/event-classes/cursorrecompile-event-class.md)|描述 API 資料指標中所發生的資料指標重新編譯事件。|  
 |[CursorUnprepare 事件類別](../../relational-databases/event-classes/cursorunprepare-event-class.md)|描述 API 資料指標中所發生的資料指標取消準備事件。|  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [擴充事件](../../relational-databases/extended-events/extended-events.md)  
   
   

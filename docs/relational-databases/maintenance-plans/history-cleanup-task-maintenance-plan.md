@@ -1,31 +1,35 @@
 ---
 title: "記錄清除工作 (維護計畫) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.maint.historycleanup.f1"
-helpviewer_keywords: 
-  - "記錄清除工作對話方塊"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.maint.historycleanup.f1
+helpviewer_keywords:
+- History Cleanup Task dialog box
 ms.assetid: 66bb6c39-958c-4053-a27f-b1118d2567f5
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fbf4cfd2254dbe3e5f482e603ca7535682102d80
+ms.lasthandoff: 04/11/2017
+
 ---
-# 記錄清除工作 (維護計畫)
-  使用 **[記錄清除工作]** 對話方塊，即可從 msdb 資料庫的資料表中捨棄舊的記錄資訊。 這個工作支援備份和還原記錄、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業記錄，以及維護計畫記錄的刪除。  
+# <a name="history-cleanup-task-maintenance-plan"></a>記錄清除工作 (維護計畫)
+  使用 **[記錄清除工作]** 對話方塊，即可從 msdb 資料庫的資料表中捨棄舊的記錄資訊。 這個工作支援備份和還原記錄、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業記錄，以及維護計畫記錄的刪除。  
   
  此陳述式會使用 **sp_purge_jobhistory** 和 **sp_delete_backuphistory** 陳述式。  
   
-## UIElement 清單  
+## <a name="uielement-list"></a>UIElement 清單  
  **連接**  
  選取執行此工作時要使用的伺服器連接。  
   
@@ -50,7 +54,7 @@ caps.handback.revision: 21
 > [!NOTE]  
 >  受影響的物件數目較為大量時，會多花一些時間才會顯示。  
   
-## 新增連接對話方塊  
+## <a name="new-connection-dialog-box"></a>新增連接對話方塊  
  **連接名稱**  
  輸入新連接的名稱。  
   
@@ -75,7 +79,7 @@ caps.handback.revision: 21
  **密碼**  
  提供驗證時要使用的密碼。 無法使用此選項。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [sp_purge_jobhistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-purge-jobhistory-transact-sql.md)   
  [sp_delete_backuphistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md)  
   

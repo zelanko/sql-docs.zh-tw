@@ -1,39 +1,43 @@
 ---
-title: "PolyBase Queries | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/09/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-polybase"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-keywords: 
-  - "PolyBase"
-helpviewer_keywords: 
-  - "PolyBase, 匯入和匯出"
-  - "Hadoop, 使用 PolyBase 匯入"
-  - "Hadoop, 使用 PolyBase 匯出"
-  - "Azure Blob 儲存體, 使用 PolyBase 匯入"
-  - "Azure Blob 儲存體, 使用 PolyBase 匯出"
+title: "PolyBase 巢狀 | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/09/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-polybase
+ms.tgt_pltfrm: 
+ms.topic: article
+keywords:
+- PolyBase
+helpviewer_keywords:
+- PolyBase, import and export
+- Hadoop, import with PolyBase
+- Hadoop, export with PolyBase
+- Azure blob storage, import with PolyBase
+- Azure blob storage, export with PolyBase
 ms.assetid: 2c5aa2bd-af7d-4f57-9a28-9673c2a4c07e
 caps.latest.revision: 18
-author: "barbkess"
-ms.author: "barbkess"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: barbkess
+ms.author: barbkess
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: d6cc1b4523bdb0b48cfc22b34b205e15613fb290
+ms.lasthandoff: 04/11/2017
+
 ---
-# PolyBase Queries
+# <a name="polybase-queries"></a>PolyBase Queries
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  以下是使用 SQL Server 2016 [PolyBase 指南](../../relational-databases/polybase/polybase-guide.md)功能的範例查詢。 使用這些範例之前，您也必須了解設定 PolyBase 所需的 T-SQL 陳述式 (請參閱 [PolyBase T-SQL 物件](../../relational-databases/polybase/polybase-t-sql-objects.md))。  
+  以下是使用 SQL Server 2016 [PolyBase 指南](../../relational-databases/polybase/polybase-guide.md) 功能的範例查詢。 使用這些範例之前，您也必須了解設定 PolyBase 所需的 T-SQL 陳述式 (請參閱 [PolyBase T-SQL 物件](../../relational-databases/polybase/polybase-t-sql-objects.md))。  
   
-## 查詢  
+## <a name="queries"></a>查詢  
  對外部資料表執行 Transact-SQL 陳述式，或使用 BI 工具來查詢外部資料表。  
   
-## 從外部資料表進行 SELECT  
+## <a name="select-from-external-table"></a>從外部資料表進行 SELECT  
  從已定義外部資料表傳回資料的簡單查詢。  
   
 ```tsql  
@@ -47,7 +51,7 @@ SELECT * FROM [dbo].[SensorData]
 WHERE Speed > 65;   
 ```  
   
-## JOIN 具有本機資料表的外部資料表  
+## <a name="join-external-tables-with-local-tables"></a>JOIN 具有本機資料表的外部資料表  
   
 ```  
 SELECT InsuranceCustomers.FirstName,   
@@ -60,13 +64,13 @@ ORDER BY SensorData.Speed DESC
   
 ```  
   
-## 將計算下推到 Hadoop  
+## <a name="pushdown-computation-to-hadoop"></a>將計算下推到 Hadoop  
  下推變量如下所示。  
   
-### 用於選取資料列子集的下推  
+### <a name="pushdown-for-selecting-a-subset-of-rows"></a>用於選取資料列子集的下推  
  使用述詞下推，來改善從外部資料表選取資料列子集之查詢的效能。  
   
- 在這裡，SQL Server 2016 會起始 map-reduce 工作，來擷取 Hadoop 上符合 customer.account_balance \< 200000 述詞的資料列。 因為查詢可以順利完成，而不需要掃描資料表中的所有資料列，所以只會將符合述詞準則的資料列複製到 SQL Server。 這可以節省大量時間，而且相較於帳戶餘額 >= 200000 的客戶數目，客戶餘額數目 < 200000 需要較少的暫存儲存空間。  
+ 在這裡，SQL Server 2016 會起始 map-reduce 工作，來擷取 Hadoop 上符合 customer.account_balance < 200000 述詞的資料列。 因為查詢可以順利完成，而不需要掃描資料表中的所有資料列，所以只會將符合述詞準則的資料列複製到 SQL Server。 這可以節省大量時間，而且相較於帳戶餘額 >= 200000 的客戶數目，客戶餘額數目 < 200000 需要較少的暫存儲存空間。  
   複製 imageCopy 程式碼   
 SELECT * FROM customer WHERE customer.account_balance < 200000。  
   
@@ -74,7 +78,7 @@ SELECT * FROM customer WHERE customer.account_balance < 200000。
 SELECT * FROM SensorData WHERE Speed > 65;  
 ```  
   
-### 用於選取資料行子集的下推  
+### <a name="pushdown-for-selecting-a-subset-of-columns"></a>用於選取資料行子集的下推  
  使用述詞下推，來改善從外部資料表選取資料行子集之查詢的效能。  
   
  在此查詢中，SQL Server 會起始 map-reduce 工作來前置處理 Hadoop 分隔符號文字檔，只將兩個資料行 (customer.name 和 customer.zip_code) 的資料複製至 SQL Server PDW。  
@@ -84,7 +88,7 @@ SELECT customer.name, customer.zip_code FROM customer WHERE customer.account_bal
   
 ```  
   
-### 基本運算式和運算子的下推  
+### <a name="pushdown-for-basic-expressions-and-operators"></a>基本運算式和運算子的下推  
  SQL Server 允許述詞下推的下列基本運算式和運算子。  
   
 -   數值、日期和時間值的二進位比較運算子 (\<、>、=、!=、<>、>=、<=)。  
@@ -106,7 +110,7 @@ SELECT * FROM customer WHERE customer.account_balance <= 200000 AND customer.zip
   
 ```  
   
-### 強制下推  
+### <a name="force-pushdown"></a>強制下推  
   
 ```  
 SELECT * FROM [dbo].[SensorData]   
@@ -114,7 +118,7 @@ WHERE Speed > 65
 OPTION (FORCE EXTERNALPUSHDOWN);   
 ```  
   
-### 停用下推  
+### <a name="disable-pushdown"></a>停用下推  
   
 ```  
 SELECT * FROM [dbo].[SensorData]   
@@ -122,7 +126,7 @@ WHERE Speed > 65
 OPTION (DISABLE EXTERNALPUSHDOWN);  
 ```  
   
-## 匯入資料  
+## <a name="import-data"></a>匯入資料  
  將資料從 Hadoop 或 Azure 儲存體匯入至 SQL Server 以便持續儲存。 使用 SELECT INTO 將外部資料表所參考的資料匯入至 SQL Server 中的永續性儲存體。 在第二個步驟中，快速建立關聯式資料表，然後在資料表上建立資料行存放區索引。  
   
 ```sql  
@@ -143,7 +147,7 @@ ORDER BY YearlyIncome
 CREATE CLUSTERED COLUMNSTORE INDEX CCI_FastCustomers ON Fast_Customers;  
 ```  
   
-## 匯出資料  
+## <a name="export-data"></a>匯出資料  
 將資料從 SQL Server 匯出至 Hadoop 或 Azure 儲存體。 首先，將 'allow polybase export' 的 sp_configure 值設成 1，以啟用匯出功能。 接下來，建立指向目的地目錄的外部資料表。 然後，使用 INSERT INTO 將資料從本機 SQL Server 資料表匯出至外部資料來源。 如果目的地目錄不存在，INSERT INTO 陳述式會加以建立，並將 SELECT 陳述式的結果以指定檔案格式匯出至指定位置。 外部檔案命名為 *QueryID_date_time_ID.format*，其中 *ID* 是累加識別碼，而 *format* 是匯出的資料格式。 例如，QID776_20160130_182739_0.orc。  
   
 ```sql  
@@ -170,7 +174,7 @@ ON (T1.CustomerKey = T2.CustomerKey)
 WHERE T2.YearMeasured = 2009 and T2.Speed > 40;  
 ```  
   
-## 新目錄檢視  
+## <a name="new-catalog-views"></a>新目錄檢視  
  下列新目錄檢視顯示外部資源。  
   
 ```sql  
@@ -185,7 +189,8 @@ SELECT * FROM sys.external_tables;
 SELECT name, type, is_external FROM sys.tables WHERE name='myTableName'   
 ```  
   
-## 後續的步驟  
+## <a name="next-steps"></a>後續的步驟  
  若要深入了解疑難排解，請參閱 [PolyBase 疑難排解](../../relational-databases/polybase/polybase-troubleshooting.md)。  
   
   
+

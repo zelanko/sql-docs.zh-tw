@@ -1,34 +1,38 @@
 ---
-title: "還原頁面 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.restorepage.general.f1"
-helpviewer_keywords: 
-  - "還原分頁 [SQL Server]"
-  - "分頁 [SQL Server]，還原"
-  - "資料庫 [SQL Server]，損毀"
-  - "分頁還原 [SQL Server]"
-  - "分頁 [SQL Server]，損毀"
-  - "還原 [SQL Server]，分頁"
+title: "還原頁面 (SQL Server) | Microsoft 文件"
+ms.custom: 
+ms.date: 03/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.restorepage.general.f1
+helpviewer_keywords:
+- restoring pages [SQL Server]
+- pages [SQL Server], restoring
+- databases [SQL Server], damaged
+- page restores [SQL Server]
+- pages [SQL Server], damaged
+- restoring [SQL Server], pages
 ms.assetid: 07e40950-384e-4d84-9ac5-84da6dd27a91
 caps.latest.revision: 67
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 67
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1cdf13c937ecdaa54c31831625dc6fc41b35be70
+ms.lasthandoff: 04/11/2017
+
 ---
-# 還原頁面 (SQL Server)
+# <a name="restore-pages-sql-server"></a>還原頁面 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 此主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]，在  中還原頁面。 分頁還原的目標是還原一個或多個受損頁面而毋需還原整個資料庫。 一般而言，選定要還原的頁面會標示為「有疑問」，因為存取該頁面時發生問題。 有疑問的頁面是在 **msdb** 資料庫的 [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) 資料表中識別。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 此主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]，在  中還原頁面。 分頁還原的目標是還原一個或多個受損頁面而毋需還原整個資料庫。 一般而言，選定要還原的頁面會標示為「有疑問」，因為存取該頁面時發生問題。 有疑問的頁面是在 [msdb](../../relational-databases/system-tables/suspect-pages-transact-sql.md) 資料庫的 **suspect_pages** 資料表中識別。  
   
  **本主題內容**  
   
@@ -92,41 +96,41 @@ caps.handback.revision: 67
      [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition 支援線上頁面還原，但是當資料庫目前離線時，該版本會使用離線還原。 在大部分情況下，損毀的頁面可以在資料庫保持上線時還原，包括正進行還原頁面的檔案群組在內。 即使有一個或多個次要檔案群組離線，只要主要檔案群組還在線上，通常就會在線上執行頁面還原。 但是，偶爾損毀的頁面可能需要進行離線還原。 例如，一些重要頁面損毀可能會讓資料庫無法啟動。  
   
     > [!WARNING]  
-    >  若受損的頁面正在儲存重要資料庫中繼資料，則在嘗試線上頁面還原時，中繼資料的必要更新可能會失敗。 在此情況下，您可以執行離線頁面還原，但是您必須先建立[結尾記錄備份](../../relational-databases/backup-restore/tail-log-backups-sql-server.md) (使用 RESTORE WITH NORECOVERY 來備份交易記錄)。  
+    >  若受損的頁面正在儲存重要資料庫中繼資料，則在嘗試線上頁面還原時，中繼資料的必要更新可能會失敗。 在此情況下，您可以執行離線頁面還原，但是您必須先建立 [結尾記錄備份](../../relational-databases/backup-restore/tail-log-backups-sql-server.md) (使用 RESTORE WITH NORECOVERY 來備份交易記錄)。  
   
--   線上分頁還原會利用改良的頁面層級錯誤報告 (包括頁面總和檢查碼) 和追蹤。 因總和檢查碼或寫入損壞偵測為損毀的頁面 (「損毀頁面」) 可由頁面還原作業加以還原。 只有明確指定的頁面才會還原。 每一個指定的頁面都是由指定之資料備份中該頁面的複本所取代。  
+-   線上分頁還原會利用改良的頁面層級錯誤報告 (包括頁面總和檢查碼) 和追蹤。 因總和檢查碼或寫入損壞偵測為損毀的頁面 (「損毀頁面」 ) 可由頁面還原作業加以還原。 只有明確指定的頁面才會還原。 每一個指定的頁面都是由指定之資料備份中該頁面的複本所取代。  
   
      當您還原後續的記錄備份時，這些備份只會套用到至少包含一個正在復原之頁面的資料庫檔案。 必須套用未中斷的記錄備份鏈結至最後一個完整或差異還原，將包含該頁面的檔案群組向前帶到目前的記錄檔。 在檔案還原中，向前復原集會以單一記錄重做行程向前進行。 頁面還原若要成功，還原的頁面必須復原到與資料庫一致的狀態。  
   
 ###  <a name="Security"></a> 安全性  
   
 ####  <a name="Permissions"></a> Permissions  
- 如果還原的資料庫不存在，使用者必須有 CREATE DATABASE 權限，才能執行 RESTORE。 如果資料庫存在，則 RESTORE 權限預設為**系統管理員**和 **dbcreator** 固定伺服器角色的成員，以及資料庫的擁有者 (**dbo**) (對 FROM DATABASE_SNAPSHOT 選項而言，資料庫一律存在)。  
+ 如果還原的資料庫不存在，使用者必須有 CREATE DATABASE 權限，才能執行 RESTORE。 如果資料庫存在 (若是 FROM DATABASE_SNAPSHOT 選項，資料庫一律存在)，預設會將 RESTORE 權限授與 **sysadmin** 和 **dbcreator** 固定伺服器角色的成員，以及資料庫的擁有者 (**dbo**)。  
   
- RESTORE 權限提供給伺服器隨時可以取得其成員資格資訊的角色。 由於資料庫必須是可存取且未損毀，才能夠檢查固定資料庫角色成員資格，但執行 RESTORE 時未必如此；因此，**db_owner** 固定資料庫角色的成員並沒有 RESTORE 權限。  
+ RESTORE 權限提供給伺服器隨時可以取得其成員資格資訊的角色。 由於資料庫必須是可存取且未損毀，才能夠檢查固定資料庫角色成員資格，但執行 RESTORE 時未必如此，因此， **db_owner** 固定資料庫角色的成員並沒有 RESTORE 權限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]從 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 開始， 就會支援頁面還原。  
   
-#### 若要還原頁面  
+#### <a name="to-restore-pages"></a>若要還原頁面  
   
 1.  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]連接到適當的  執行個體，然後在 [物件總管] 中，按一下伺服器名稱以展開伺服器樹狀目錄。  
   
 2.  展開 [資料庫]。 視資料庫而定，選取使用者資料庫，或者展開 [系統資料庫] ，再選取系統資料庫。  
   
-3.  以滑鼠右鍵按一下資料庫，指向 [工作]，再指向 [還原]，然後按一下 [頁面]，這樣會開啟 [還原頁面] 對話方塊。  
+3.  以滑鼠右鍵按一下資料庫，指向 [工作] ，再指向 [還原] ，然後按一下 [頁面] ，這樣會開啟 [還原頁面]  對話方塊。  
   
      **Restore**  
-     此區段與[還原資料庫 (一般頁面)](../../relational-databases/backup-restore/restore-database-general-page.md) 上的 [還原至] 執行相同功能。  
+     此區段與 **還原資料庫 (一般頁面)** 上的 [還原至] [](../../relational-databases/backup-restore/restore-database-general-page.md)執行相同功能。  
   
      **資料庫**  
-     指定要還原的資料庫。 您可以輸入新的資料庫，或者從下拉式清單中選取現有的資料庫。 清單包含伺服器上的所有資料庫，但不含系統資料庫 **master**和 tempdb。  
+     指定要還原的資料庫。 您可以輸入新的資料庫，或者從下拉式清單中選取現有的資料庫。  清單包含伺服器上的所有資料庫，但不含系統資料庫 **master**和 tempdb。  
   
     > [!WARNING]  
-    >  若要還原受密碼保護的備份，必須使用 [RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md) 陳述式。  
+    >  若要還原受密碼保護的備份，必須使用 [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 陳述式。  
   
      **結尾記錄備份**  
-     在 [備份裝置] 中輸入或選取檔案名稱，在這個檔案中將會儲存資料庫的結尾記錄備份。  
+     在 [備份裝置]  中輸入或選取檔案名稱，在這個檔案中將會儲存資料庫的結尾記錄備份。  
   
      **備份組**  
      此區段顯示參與還原的備份組。  
@@ -134,7 +138,7 @@ caps.handback.revision: 67
     |標頭|值|  
     |------------|------------|  
     |**名稱**|備份組的名稱。|  
-    |**元件**|備份元件：[資料庫]、[檔案] 或 \<空白> (針對交易記錄)。|  
+    |**元件**|備份元件：**資料庫**、**檔案**或 **\<空白>** (針對交易記錄)。|  
     |**型別**|執行的備份類型： **[完整]**、 **[差異]**或 **[交易記錄]**。|  
     |**Server**|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行備份作業的  執行個體名稱。|  
     |**資料庫**|備份作業中所含的資料庫名稱。|  
@@ -149,18 +153,18 @@ caps.handback.revision: 67
     |**使用者名稱**|執行備份作業的使用者名稱。|  
     |**到期**|備份組過期的日期和時間。|  
   
-     按一下 [驗證] 來檢查執行頁面還原作業所需之備份檔案的完整性。  
+      按一下 [驗證] 來檢查執行頁面還原作業所需之備份檔案的完整性。  
   
-4.  若要識別損毀頁面，在 **[資料庫]**方塊中已選取正確的資料庫時，按一下 [檢查資料庫頁面]。 這是長時間執行的作業。  
+4.   若要識別損毀頁面，在 **[資料庫]**方塊中已選取正確的資料庫時，按一下 [檢查資料庫頁面]。 這是長時間執行的作業。  
   
     > [!WARNING]  
-    >  若要還原未損毀的特定頁面，請按一下 [加入]，然後輸入要還原之頁面的 [檔案識別碼] 和 [頁面識別碼]。  
+    >  若要還原未損毀的特定頁面，請按一下 [加入]  ，然後輸入要還原之頁面的 [檔案識別碼]  和 [頁面識別碼]  。  
   
-5.  頁面方格會用來識別要還原的頁面。 一開始是從 [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) 系統資料表填入這個方格。 若要從方格中加入或移除頁面，請按一下 **[加入]**或 [移除]。 如需詳細資訊，請參閱[管理 suspect_pages 資料表 &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)。  
+5.  頁面方格會用來識別要還原的頁面。 一開始是從 [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) 系統資料表填入這個方格。  若要從方格中加入或移除頁面，請按一下 **[加入]**或 [移除]。 如需詳細資訊，請參閱 [管理 suspect_pages 資料表 &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)，在  中還原頁面。  
   
-6.  **[備份組]** 方格會列出預設還原計畫中的備份組。 您可以選擇按一下 [確認]，確認備份可讀取而且備份組是完整的，而不需加以還原。 如需詳細資訊，請參閱 [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20VERIFYONLY%20\(Transact-SQL\).md)。  
+6.  **[備份組]** 方格會列出預設還原計畫中的備份組。 您可以選擇按一下 [確認]，確認備份可讀取而且備份組是完整的，而不需加以還原。 如需詳細資訊，請參閱 [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)。  
   
-     **頁數**  
+     **頁面**  
   
 7.  若要還原頁面方格中所列的頁面，請按一下 [確定]。  
   
@@ -175,9 +179,9 @@ caps.handback.revision: 67
   
  `WITH NORECOVERY`  
   
- 如需 PAGE 選項之參數的詳細資訊，請參閱 [RESTORE 引數 &#40;Transact-SQL&#41;](../Topic/RESTORE%20Arguments%20\(Transact-SQL\).md)。 如需 RESTORE DATABASE 語法的詳細資訊，請參閱 [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)。  
+ 如需 PAGE 選項之參數的詳細資訊，請參閱 [RESTORE 引數 &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md)。 如需 RESTORE DATABASE 語法的詳細資訊，請參閱 [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)。  
   
-#### 若要還原頁面  
+#### <a name="to-restore-pages"></a>若要還原頁面  
   
 1.  取得要還原之已損壞頁面的頁面識別碼。 總和檢查碼或分次寫入錯誤會傳回頁面識別碼，提供指定頁面所需的資訊。 若要查閱已損壞頁面的頁面識別碼，請使用下列來源：  
   
@@ -185,7 +189,7 @@ caps.handback.revision: 67
     |-----------------------|-----------|  
     |**msdb..suspect_pages**|[管理 suspect_pages 資料表 &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)|  
     |錯誤記錄檔|[檢視 SQL Server 錯誤記錄檔 &#40;SQL Server Management Studio&#41;](../../relational-databases/performance/view-the-sql-server-error-log-sql-server-management-studio.md)|  
-    |事件追蹤|[監視及回應事件](../../ssms/agent/monitor-and-respond-to-events.md)|  
+    |事件追蹤|[監視及回應事件](http://msdn.microsoft.com/library/f7fbe155-5b68-4777-bc71-a47637471f32)|  
     |DBCC|[DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)|  
     |WMI 提供者|[伺服器事件的 WMI 提供者概念](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)|  
   
@@ -203,7 +207,7 @@ caps.handback.revision: 67
     >  這個順序與檔案還原順序類似。 事實上，分頁還原和檔案還原都可以做為相同順序的一部分來執行。  
   
 ###  <a name="TsqlExample"></a> 範例 (Transact-SQL)  
- 下列範例會以 `B` 還原檔案 `NORECOVERY` 的四個損毀頁面。 接著，兩個記錄備份會套用 `NORECOVERY`，後面接著以 `RECOVERY` 還原的結尾記錄備份。 這個範例會執行線上還原。 在範例中，檔案 `B` 的檔案識別碼是 `1`，而損毀頁面的頁面識別碼是 `57`、`202`、`916` 和 `1016`。  
+ 下列範例會以 `B` 還原檔案 `NORECOVERY`的四個損毀頁面。 接著，兩個記錄備份會套用 `NORECOVERY`，後面接著以 `RECOVERY`還原的結尾記錄備份。 這個範例會執行線上還原。 在範例中，檔案 `B` 的檔案識別碼是 `1`，而損毀頁面的頁面識別碼是 `57`、 `202`、 `916`和 `1016`。  
   
 ```tsql  
 RESTORE DATABASE <database> PAGE='1:57, 1:202, 1:916, 1:1016'  
@@ -218,8 +222,8 @@ RESTORE LOG <database> FROM <new_log_backup> WITH RECOVERY;
 GO  
 ```  
   
-## 另請參閱  
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+## <a name="see-also"></a>另請參閱  
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [套用交易記錄備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
  [管理 suspect_pages 資料表 &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)   
  [SQL Server 資料庫的備份與還原](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)  

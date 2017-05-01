@@ -1,30 +1,34 @@
 ---
 title: "使用結果清單搜尋文件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "搜尋 [SQL Server Management Studio], 結果清單"
-  - "結果清單搜尋 [SQL Server Management Studio]"
-  - "搜尋 [SQL Server Management Studio], 多個檔案"
-  - "查詢編輯器 [SQL Server Management Studio], 搜尋多個檔案"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- searches [SQL Server Management Studio], result lists
+- result list searches [SQL Server Management Studio]
+- searches [SQL Server Management Studio], multiple files
+- Query Editor [SQL Server Management Studio], search multiple files
 ms.assetid: 275e1b6c-fbd0-4408-af77-35903f90657c
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a63ced363f4aee6ece4481f7b89b0ab195b82019
+ms.lasthandoff: 04/11/2017
+
 ---
-# 使用結果清單搜尋文件
+# <a name="search-documents-using-results-lists"></a>使用結果清單搜尋文件
   您可以利用 **[尋找和取代]** 對話方塊來搜尋和取代專案或方案或檔案系統資料夾中之所有檔案內的文字，即使尚未在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中開啟它們，也是如此。 **[尋找和取代]** 對話方塊所執行之搜尋的相符項目會出現在 [尋找結果 1] 和 [尋找結果 2] 視窗中，可讓您檢視相符項目所在字行中的確實文字。  
   
-### 在多個檔案中搜尋  
+### <a name="to-search-in-multiple-files"></a>在多個檔案中搜尋  
   
 1.  在 **[編輯]** 功能表上，指向 **[尋找和取代]** ，再按一下 **[檔案中尋找]**。  
   
@@ -40,7 +44,7 @@ caps.handback.revision: 22
   
  依預設，搜尋的相符項目會出現在 [尋找結果 1] 視窗中。 您可以在 [尋找結果 1] 視窗中，按兩下各個項目來瀏覽搜尋相符項目。 若要在新視窗中檢視搜尋結果，請選取 **[顯示在 [尋找結果 2] 視窗]**。  
   
-#### 跨多個檔案或資料夾取代  
+#### <a name="to-replace-across-multiple-files-or-folders"></a>跨多個檔案或資料夾取代  
   
 1.  在 **[編輯]** 功能表上，指向 **[尋找和取代]** ，再按一下 **[檔案中取代]**。  
   
@@ -61,7 +65,7 @@ caps.handback.revision: 22
   
  依預設，取代資訊會出現在 [尋找結果 1] 視窗中。 您可以在 [尋找結果 1] 視窗中，按兩下各個項目來瀏覽取代項目。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [搜尋和取代](../../relational-databases/scripting/search-and-replace.md)   
  [以互動方式搜尋文件](../../relational-databases/scripting/search-documents-interactively.md)   
  [使用萬用字元搜尋文字](../../relational-databases/scripting/search-text-with-wildcards.md)   

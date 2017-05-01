@@ -1,29 +1,33 @@
 ---
-title: "建立資料庫結構描述 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.schemas.general.f1"
-helpviewer_keywords: 
-  - "使用 Management Studio 來建立結構描述"
-  - "CREATE SCHEMA [Management Studio]"
-  - "資料庫結構描述"
-  - "結構描述 [SQL Server], 建立"
+title: "建立資料庫結構描述 | Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.schemas.general.f1
+helpviewer_keywords:
+- creating schemas with Management Studio
+- CREATE SCHEMA [Management Studio]
+- database schemas
+- schemas [SQL Server], creating
 ms.assetid: ed2a5522-f4d2-4111-95a4-d3e1e5081739
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fe54e464e4aabc53eb8645c1fbf20f509f427978
+ms.lasthandoff: 04/11/2017
+
 ---
-# 建立資料庫結構描述
+# <a name="create-a-database-schema"></a>建立資料庫結構描述
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中建立結構描述。  
   
  **本主題內容**  
@@ -58,7 +62,7 @@ caps.handback.revision: 11
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-##### 若要建立結構描述  
+##### <a name="to-create-a-schema"></a>若要建立結構描述  
   
 1.  在 [物件總管] 中，展開 **[資料庫]** 資料夾。  
   
@@ -72,7 +76,7 @@ caps.handback.revision: 11
   
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-### 其他選項  
+### <a name="additional-options"></a>其他選項  
  **[結構描述 - 新增]** 對話方塊也在其他兩個頁面上提供選項： **[權限]** 和 **[擴充屬性]**。  
   
 -   **[權限]** 頁面列出所有可能的安全性實體以及可授與登入的安全性實體權限。  
@@ -81,7 +85,7 @@ caps.handback.revision: 11
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 若要建立結構描述  
+#### <a name="to-create-a-schema"></a>若要建立結構描述  
   
 1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的執行個體。  
   

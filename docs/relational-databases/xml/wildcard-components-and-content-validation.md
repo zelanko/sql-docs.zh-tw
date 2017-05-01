@@ -1,32 +1,36 @@
 ---
 title: "萬用字元元件和內容驗證 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "萬用字元元件 [XML]"
-  - "內容驗證 [XML]"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- wildcard components [XML]
+- content validation [XML]
 ms.assetid: ffa7d974-3645-446c-8425-f0b22b6b060a
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3eac26ac7add89b64c19672ae9fd34e224c6e7e1
+ms.lasthandoff: 04/11/2017
+
 ---
-# 萬用字元元件和內容驗證
+# <a name="wildcard-components-and-content-validation"></a>萬用字元元件和內容驗證
   萬用字元元件可用以增加可出現在內容模型中的內容彈性。 在 XSD 語言中，可透過下列方式支援這些元件：  
   
--   元素萬用字元元件。 這些是以 **\<xsd:any>** 元素表示。  
+-   元素萬用字元元件。 這些是以 **\<xsd:any>** 項目表示。  
   
--   屬性萬用字元元件。 這些是以 **\<xsd:anyAttribute>** 元素表示。  
+-   屬性萬用字元元件。 這些是以 **\<xsd:anyAttribute>** 項目表示。  
   
- **\<xsd:any>** 和 **\<xsd:anyAttribute>** 這兩個萬用字元元素都支援使用 **processContents** 屬性。 這可讓您指定一個值，以指出 XML 應用程式如何處理與這些萬用字元元素關聯的文件內容驗證。 以下是不同的值所產生的效果：  
+ **\<xsd:any>** 和 **\<xsd:anyAttribute>** 這兩個萬用字元項目都支援使用 **processContents** 屬性。 這可讓您指定一個值，以指出 XML 應用程式如何處理與這些萬用字元元素關聯的文件內容驗證。 以下是不同的值所產生的效果：  
   
 -   **strict** 值指定完整驗證內容。  
   
@@ -34,10 +38,10 @@ caps.handback.revision: 13
   
 -   **lax** 值指定只會驗證可以使用結構描述定義的元素與屬性。  
   
-## Lax 驗證和 xs:anyType 元素  
- XML 結構描述規格會針對 **anyType** 類型的元素使用 **lax** 驗證。 因為 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 不支援 Lax 驗證，因此會對 **anyType** 的元素套用 Strict 驗證。 從 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 開始，Lax 驗證就有受到支援。 **anyType** 類型的元素內容將會使用 Lax 驗證加以驗證。  
+## <a name="lax-validation-and-xsanytype-elements"></a>Lax 驗證和 xs:anyType 元素  
+ XML 結構描述規格會針對 **anyType** 類型的元素使用 **lax** 驗證。 因為 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 不支援 Lax 驗證，因此會對 **anyType**的元素套用 Strict 驗證。 從 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]開始，Lax 驗證就有受到支援。 **anyType** 類型的元素內容將會使用 Lax 驗證加以驗證。  
   
- 下列範例說明 Lax 驗證。 `e` 結構描述元素的類型為 **anyType**。 此範例會建立具類型的 **xml** 變數，並說明 **anyType** 類型元素的 Lax 驗證。  
+ 下列範例說明 Lax 驗證。 `e` 結構描述元素的類型為 **anyType** 。 此範例會建立具類型的 **xml** 變數，並說明 **anyType** 類型元素的 Lax 驗證。  
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS '  
@@ -75,7 +79,7 @@ SELECT @var
 GO  
 ```  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [伺服器上 XML 結構描述集合的需求與限制](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
   
   

@@ -1,28 +1,32 @@
 ---
 title: "授與 XML 結構描述集合的權限 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "授與權限 [SQL Server], XML 結構描述集合"
-  - "ALTER 權限"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- granting permissions [SQL Server], XML schema collections
+- ALTER permission
 ms.assetid: ffbb829c-3b8f-4e5d-97d9-ab4059aab0db
 caps.latest.revision: 32
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7c89c6a8322e8922a7d0a2d59ea686a2d703947a
+ms.lasthandoff: 04/11/2017
+
 ---
-# 授與 XML 結構描述集合的權限
+# <a name="grant-permissions-on-an-xml-schema-collection"></a>授與 XML 結構描述集合的權限
   您可以授與建立 XML 結構描述集合的權限，也可以授與 XML 結構描述集合物件的權限。  
   
-## 授與建立 XML 結構描述集合的權限  
+## <a name="granting-permission-to-create-an-xml-schema-collection"></a>授與建立 XML 結構描述集合的權限  
  若要建立 XML 結構描述集合，將需要下列權限：  
   
 -   主體需要在資料庫層級的 CREATE XML SCHEMA COLLECTION 權限。  
@@ -47,7 +51,7 @@ caps.handback.revision: 32
   
  關聯式結構描述的擁有者變成在該結構描述中建立的 XML 結構描述集合的擁有者。 此擁有者對於 XML 結構描述集合擁有完整的控制權。 因此，此擁有者可修改 XML 結構描述集合、設定 xml 資料行的類型或是卸除 XML 結構描述集合。  
   
-## 授與 XML 結構描述集合物件的權限  
+## <a name="granting-permissions-on-an-xml-schema-collection-object"></a>授與 XML 結構描述集合物件的權限  
  下列權限可用於 XML 結構描述集合：  
   
 -   當使用 ALTER XML SCHEMA COLLECTION 陳述式修改現有 XML 結構描述集合的內容時，就需要 ALTER 權限。  
@@ -62,11 +66,11 @@ caps.handback.revision: 32
   
 -   針對約束 **xml** 類型資料行、變數和參數並設定其類型的 XML 結構描述集合，來驗證主體所插入或更新的值時，將需要 EXECUTE 權限。 當您查詢儲存在這些資料行和變數的 XML 時，您也需要此權限。  
   
-## 範例  
+## <a name="examples"></a>範例  
  下列範例中的狀況說明 XML 結構描述權限如何運作。 每個範例都會建立所需的測試資料庫、關聯式結構描述和登入。 將會授與這些登入必要的 XML 結構描述集合權限。 每個範例都會在結束時執行必要的清除。  
   
-### A. 授與建立 XML 結構描述集合的權限  
- 下列範例將示範如何授與權限，以便讓主體可建立 XML 結構描述集合。 此範例將建立範例資料庫和測試使用者 `TestLogin1`。 `TestLogin1` 接著會被授與關聯式結構描述的 `ALTER` 權限，而且被授與資料庫的 `CREATE XML SCHEMA COLLECTION` 權限。 透過這些權限，`TestLogin1` 可成功地建立範例 XML 結構描述集合。  
+### <a name="a-granting-permissions-to-create-an-xml-schema-collection"></a>A. 授與建立 XML 結構描述集合的權限  
+ 下列範例將示範如何授與權限，以便讓主體可建立 XML 結構描述集合。 此範例將建立範例資料庫和測試使用者 `TestLogin1`。 `TestLogin1` 接著會被授與關聯式結構描述的 `ALTER` 權限，而且被授與資料庫的 `CREATE XML SCHEMA COLLECTION` 權限。 透過這些權限， `TestLogin1` 可成功地建立範例 XML 結構描述集合。  
   
 ```  
 SETUSER  
@@ -119,7 +123,7 @@ DROP LOGIN TestLogin1
 GO  
 ```  
   
-### B. 授與使用現有 XML 結構描述集合的權限  
+### <a name="b-granting-permission-to-use-an-existing-xml-schema-collection"></a>B. 授與使用現有 XML 結構描述集合的權限  
  下列範例進一步說明 XML 結構描述集合的權限模式。 此範例將說明建立和使用 XML 結構描述集合所需的不同權限。  
   
  此範例將建立測試資料庫與登入 `TestLogin1`。 `TestLogin1` 可在資料庫中建立 XML 結構描述集合。 該登入接著會建立資料表，並使用 XML 結構描述集合來建立具類型的 xml 資料行。 然後使用者會插入資料並查詢它。 所有的這些步驟需要必要的結構描述權限，如程式碼所示。  
@@ -236,7 +240,7 @@ DROP LOGIN TestLogin1
 GO  
 ```  
   
-### C. 授與 XML 結構描述集合的 ALTER 權限  
+### <a name="c-granting-alter-permission-on-an-xml-schema-collection"></a>C. 授與 XML 結構描述集合的 ALTER 權限  
  使用者必須擁有 ALTER 權限，才能修改資料庫中的現有 XML 結構描述集合。 下列範例將示範如何授與 `ALTER` 權限。  
   
 ```  
@@ -311,20 +315,20 @@ DROP LOGIN TestLogin1
 GO  
 ```  
   
-### D. 授予 XML 結構描述集合的 TAKE OWNERSHIP 權限  
+### <a name="d-granting-take-ownership-permission-on-an-xml-schema-collection"></a>D. 授予 XML 結構描述集合的 TAKE OWNERSHIP 權限  
  下列範例將示範如何從某個使用者傳送 XML 結構描述的擁有權至另一個使用者。 為了使範例更加有趣，本範例中的使用者分別在不同的預設關聯式結構描述中運作。  
   
  此範例會執行下列各項：  
   
--   使用兩個關聯式結構描述 `dbo` 和 `myOtherDBSchema` 建立資料庫。  
+-   使用兩個關聯式結構描述 `dbo` 和 `myOtherDBSchema`建立資料庫。  
   
--   建立兩個使用者，`TestLogin1` 和 `TestLogin2`。 `TestLogin2` 會成為 `myOtherDBSchema` 關聯式結構描述的擁有者。  
+-   建立兩個使用者， `TestLogin1` 和 `TestLogin2`。 `TestLogin2` 會成為 `myOtherDBSchema` 關聯式結構描述的擁有者。  
   
 -   `TestLogin1` 會在 `dbo` 關聯式結構描述中建立 XML 結構描述集合。  
   
 -   `TestLogin1` 然後會提供 XML 結構描述集合的 `TAKE OWNERSHIP` 權限給 `TestLogin2`。  
   
--   `TestLogin2` 將會變成 `myOtherDBSchema` 中 XML 結構描述集合的擁有者，而不需變更 XML 結構描述集合的關聯式結構描述。  
+-   `TestLogin2` 將會變成 `myOtherDBSchema`中 XML 結構描述集合的擁有者，而不需變更 XML 結構描述集合的關聯式結構描述。  
   
 ```  
 CREATE LOGIN TestLogin1 with password='SQLSvrPwd1'  
@@ -429,7 +433,7 @@ DROP LOGIN TestLogin2
 go   
 ```  
   
-### E. 授與 XML 結構描述集合的 VIEW DEFINITION 權限  
+### <a name="e-granting-view-definition-permission-on-an-xml-schema-collection"></a>E. 授與 XML 結構描述集合的 VIEW DEFINITION 權限  
  下列範例將示範如何授與 XML 結構描述集合的 VIEW DEFINITION 權限。  
   
 ```  
@@ -501,7 +505,7 @@ SELECT XML_SCHEMA_NAMESPACE(N'dbo',N'MySC')
 GO  
 ```  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [XML 資料 &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)   
  [比較具類型的 XML 與不具類型的 XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [XML 結構描述集合 &#40;SQL Server&#41;](../../relational-databases/xml/xml-schema-collections-sql-server.md)   

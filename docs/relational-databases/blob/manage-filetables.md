@@ -1,25 +1,29 @@
 ---
 title: "管理 FileTable | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FileTable [SQL Server], 安全性"
-  - "FileTable [SQL Server], 管理存取"
+ms.custom: 
+ms.date: 06/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FileTables [SQL Server], security
+- FileTables [SQL Server], managing access
 ms.assetid: 93af982c-b4fe-4be0-8268-11f86dae27e1
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2ec52f5b4ebdb3fdd61fda320316186d220b6b53
+ms.lasthandoff: 04/11/2017
+
 ---
-# 管理 FileTable
+# <a name="manage-filetables"></a>管理 FileTable
   描述用於管理 FileTable 的常見管理工作。  
   
 ##  <a name="HowToEnumerate"></a> 如何：取得 FileTable 和相關物件的清單  
@@ -55,13 +59,13 @@ GO
   
     -   將存取權設為 **NONE**時，為所有開啟檔案控制代碼。  
   
-    -   將存取權設為 **READ_ONLY** 時，為所有針對寫入存取所開啟的檔案控制代碼。  
+    -   將存取權設為 **READ_ONLY**時，為所有針對寫入存取所開啟的檔案控制代碼。  
   
      如需有關終止開啟檔案控制代碼的詳細資訊，請參閱本主題中的＜ [終止與 FileTable 相關聯的開啟檔案控制代碼](#BasicsKilling) ＞。  
   
      如果 ALTER DATABASE 命令已取消或因逾時而結束，則交易式存取的層級不會變更。  
   
--   如果您使用 WITH \<termination> 子句 (ROLLBACK AFTER integer [ SECONDS ] | ROLLBACK IMMEDIATE | NO_WAIT) 來呼叫 ALTER DATABASE 陳述式，則系統會終止所有開啟的非交易式檔案控制代碼。  
+-   如果您使用 WITH \<終止> 子句 (ROLLBACK AFTER integer [ SECONDS ] | ROLLBACK IMMEDIATE | NO_WAIT) 來呼叫 ALTER DATABASE 陳述式，則系統會終止所有開啟的非交易式檔案控制代碼。  
   
 > [!WARNING]  
 >  終止開啟檔案控制代碼，可能會導致使用者遺失未儲存的資料。 此行為與檔案系統本身的行為一致。  
@@ -72,14 +76,14 @@ GO
   
 -   將存取權設為 **NONE**時，就無法再存取或看到所有 FileTable 目錄及其內容。  
   
--   將存取權設為 **READ_ONLY** 時，所有 FileTable 目錄和其內容也會是唯讀狀態。  
+-   將存取權設為 **READ_ONLY**時，所有 FileTable 目錄和其內容也會是唯讀狀態。  
   
  停用執行個體層級的 FILESTREAM，會對該執行個體的資料庫層級目錄和其下的 FileTable 目錄造成下列影響：  
   
 -   如果您在執行個體層級停用 FILESTREAM，就不會顯示執行個體上的資料庫層級目錄。  
   
 ###  <a name="HowToDisable"></a> 如何：停用並重新啟用資料庫層級的非交易式存取  
- 如需詳細資訊，請參閱 [ALTER DATABASE SET 選項 &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md)。  
+ 如需詳細資訊，請參閱 [ALTER DATABASE SET 選項 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)。  
   
  **停用完整的非交易式存取**  
  您可以呼叫 **ALTER DATABASE** 陳述式並將 **NON_TRANSACTED_ACCESS** 的值設定為 **READ_ONLY** 或 **OFF**。  
@@ -169,7 +173,7 @@ GO
 ```  
   
 ###  <a name="HowToKill"></a> 如何：終止與 FileTable 相關聯的開啟檔案控制代碼  
- 使用適當的引數來呼叫預存程序 [sp_kill_filestream_non_transacted_handles &#40;Transact-SQL&#41;](../Topic/sp_kill_filestream_non_transacted_handles%20\(Transact-SQL\).md)，可終止資料庫或 FileTable 中的所有開啟檔案控制代碼，或是終止特定控制代碼。  
+ 使用適當的引數來呼叫預存程序 [sp_kill_filestream_non_transacted_handles &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-kill-filestream-non-transacted-handles.md)，可終止資料庫或 FileTable 中的所有開啟檔案控制代碼，或是終止特定控制代碼。  
   
 ```  
 USE database_name;  
@@ -230,8 +234,9 @@ GO
 ##  <a name="OtherDBCC"></a> DBCC 和 FileTable  
  您可以使用 DBCC CHECKCONSTRAINTS 來驗證 FileTable 上的條件約束，包括系統定義的條件約束。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [FileTable 與其他 SQL Server 功能的相容性](../../relational-databases/blob/filetable-compatibility-with-other-sql-server-features.md)   
  [FileTable DDL、函數、預存程序及檢視](../../relational-databases/blob/filetable-ddl-functions-stored-procedures-and-views.md)  
   
   
+

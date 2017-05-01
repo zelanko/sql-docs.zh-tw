@@ -1,28 +1,32 @@
 ---
 title: "無效的字元和逸出規則 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FOR XML 子句, 無效的字元"
-  - "FOR XML 子句, 逸出規則"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FOR XML clause, invalid characters
+- FOR XML clause, escape rules
 ms.assetid: f2e9b997-f400-4963-b225-59d46c6b93e8
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: de1546c1f7adc1671cef873a594b9bc5444bc230
+ms.lasthandoff: 04/11/2017
+
 ---
-# 無效的字元和逸出規則
+# <a name="invalid-characters-and-escape-rules"></a>無效的字元和逸出規則
   此主題描述 FOR XML 子句如何處理無效的 XML 字元，並列出 XML 名稱中無效字元的逸出規則。  
   
-## XML 和無效的字元  
+## <a name="for-xml-and-invalid-characters"></a>XML 和無效的字元  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在不使用 TYPE 指示詞的 FOR XML 查詢中傳回無效的 XML 字元時，會將這些字元實體化。  
   
  雖然不論這些字元是否已實體化，XML 1.0 相容剖析器都會引發剖析錯誤，但實體化格式與 XML 1.1 之間的相容性已有所提升。 實體化格式與未來的 XML 標準版本之間也將具有較好的相容性。 此外，它還可簡化偵錯作業，因為已可看見無效字元的字碼指標。  
@@ -31,13 +35,13 @@ caps.handback.revision: 17
   
  目前已可透過不同的方式在 FOR XML 查詢中實體化下列空白字元，以便在往返過程中保留這些字元：  
   
--   在元素內容和屬性中：**hex(0D)** (歸位字元)  
+-   在元素內容和屬性中： **hex(0D)** (歸位字元)  
   
--   在屬性內容中：**hex(09)** (定位字元)、**hex(0A)** (換行字元)  
+-   在屬性內容中： **hex(09)** (定位字元)、 **hex(0A)** (換行字元)  
   
  輸出中會保留這些字元，且剖析器不會將其正規化。  
   
-## 逸出規則  
+## <a name="escape-rules"></a>逸出規則  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 若名稱中含有對 XML 名稱而言無效的字元 (如空格)，則會在轉譯為 XML 名稱時，將該無效字元轉譯為逸出的數值實體編碼。  
   
  XML 名稱中只允許兩種非字母字元：冒號 (:) 和底線 (_)。 這是因為冒號已保留給命名空間，而底線已被選為逸出字元。 以下是適用於編碼的逸出規則：  
@@ -64,7 +68,7 @@ caps.handback.revision: 17
   
      請注意，建議使用 WITH XMLNAMESPACES 來加入 XML 命名空間。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md)  
   
   

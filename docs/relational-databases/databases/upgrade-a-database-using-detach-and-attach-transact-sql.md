@@ -1,29 +1,33 @@
 ---
-title: "使用卸離與附加來升級資料庫 (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "資料庫附加 [SQL Server]"
-  - "升級資料庫"
-  - "資料庫升級 [SQL Server]"
-  - "資料庫卸離 [SQL Server]"
-  - "卸離資料庫 [SQL Server]"
-  - "附加資料庫 [SQL Server]"
+title: "使用卸離與附加來升級資料庫 (Transact-SQL) | Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database attaching [SQL Server]
+- upgrading databases
+- database upgrades [SQL Server]
+- database detaching [SQL Server]
+- detaching databases [SQL Server]
+- attaching databases [SQL Server]
 ms.assetid: 99f66ed9-3a75-4e38-ad7d-6c27cc3529a9
 caps.latest.revision: 73
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 73
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d99342c070c23962b70592f3607bc17832815cdc
+ms.lasthandoff: 04/11/2017
+
 ---
-# 使用卸離與附加來升級資料庫 (Transact-SQL)
+# <a name="upgrade-a-database-using-detach-and-attach-transact-sql"></a>使用卸離與附加來升級資料庫 (Transact-SQL)
   本主題描述如何使用卸離和附加作業升級 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中的資料庫。 附加至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]之後，資料庫可立即使用並自動進行升級。  
   
  **本主題內容**  
@@ -38,7 +42,7 @@ caps.handback.revision: 73
   
      [使用卸離和附加作業](#SSMSProcedure)  
   
--   **待處理**  [升級 SQL Server 資料庫之後](#FollowUp)  
+-   **Follow Up:**  [After Upgrading a SQL Server Database](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -55,11 +59,11 @@ caps.handback.revision: 73
     -   如果您附加資料庫到不同的伺服器執行個體 (不論版本為何)，則必須在附加作業完成後執行 **sp_removedbreplication** 以移除複寫。 如需詳細資訊，請參閱 [sp_removedbreplication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md)。  
   
 ###  <a name="Recommendations"></a> 建議  
- 建議您不要附加或還原來源不明或來源不受信任的資料庫。 這種資料庫可能包含惡意程式碼，因此可能執行非預期的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼，或是修改結構描述或實體資料庫結構而造成錯誤。 使用來源不明或來源不受信任的資料庫之前，請先在非實際伺服器的資料庫上執行 [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)，同時檢查資料庫中的程式碼，例如預存程序或其他使用者定義程式碼。  
+ 建議您不要附加或還原來源不明或來源不受信任的資料庫。 這種資料庫可能包含惡意程式碼，因此可能執行非預期的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼，或是修改結構描述或實體資料庫結構而造成錯誤。 使用來源不明或來源不受信任的資料庫之前，請先在非實際伺服器的資料庫上執行 [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) ，同時檢查資料庫中的程式碼，例如預存程序或其他使用者定義程式碼。  
   
 ##  <a name="SSMSProcedure"></a> 使用卸離和附加來升級資料庫  
   
-1.  卸離資料庫。 如需詳細資訊，請參閱[卸離資料庫](../../relational-databases/databases/detach-a-database.md)。  
+1.  卸離資料庫。 如需詳細資訊，請參閱 [卸離資料庫](../../relational-databases/databases/detach-a-database.md)。  
   
 2.  另外，也可以移動卸離的資料庫檔案與記錄檔。  
   
@@ -68,9 +72,9 @@ caps.handback.revision: 73
     > [!NOTE]  
     >  如果您嘗試在不指定記錄檔的情形下附加資料庫，附加作業會在其原始位置中尋找記錄檔。 如果記錄的原始副本仍在原處，則會附加該副本。 若要避免使用原始記錄檔，請指定新記錄檔的路徑，或者移除記錄檔的原始副本 (在將記錄檔複製到新位置後)。  
   
-3.  將複製的檔案附加至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 執行個體。 如需詳細資訊，請參閱 [Attach a Database](../../relational-databases/databases/attach-a-database.md)。  
+3.  將複製的檔案附加至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]執行個體。 如需詳細資訊，請參閱 [Attach a Database](../../relational-databases/databases/attach-a-database.md)。  
   
-## 範例  
+## <a name="example"></a>範例  
  下列範例會從舊版 SQL Server 升級資料庫的副本。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式會在 [查詢編輯器] 視窗中執行，此視窗連接到附加的伺服器執行個體。  
   
 1.  執行下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式卸離資料庫：  
@@ -106,13 +110,13 @@ caps.handback.revision: 73
 ##  <a name="FollowUp"></a> 待處理：升級 SQL Server 資料庫之後  
  如果資料庫具有全文檢索索引，升級程序就會根據 **upgrade_option** 伺服器屬性的設定，匯入、重設或重建這些索引。 如果升級選項設定為匯入 (**upgrade_option** = 2) 或重建 (**upgrade_option** = 0)，則全文檢索索引在升級期間將無法使用。 根據進行索引的資料數量而定，匯入可能需要數個小時，而重建可能需要十倍以上的時間。 此外，請注意，當升級選項設定為 [匯入] 時，如果全文檢索目錄無法使用，系統就會重建相關聯的全文檢索索引。 若要變更 **upgrade_option** 伺服器屬性的設定，請使用 [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)。  
   
-### 升級後的資料庫相容性層級  
- 如果使用者資料庫的相容性層級在升級前為 100 或更高層級，則在升級後仍會保持相同。 如果升級前的相容性層級為 90，則在升級後的資料庫中，相容性層級會設定為 100 (這是 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 所支援的最低相容性層級)。 如需詳細資訊，請參閱 [ALTER DATABASE 相容性層級 &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20Compatibility%20Level%20\(Transact-SQL\).md)。  
+### <a name="database-compatibility-level-after-upgrade"></a>升級後的資料庫相容性層級  
+ 如果使用者資料庫的相容性層級在升級前為 100 或更高層級，則在升級後仍會保持相同。 如果升級前的相容性層級為 90，則在升級後的資料庫中，相容性層級會設定為 100 (這是 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 所支援的最低相容性層級)。 如需詳細資訊，請參閱 [ALTER DATABASE 相容性層級 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。  
   
-### 在升級的伺服器執行個體上管理中繼資料  
- 將資料庫附加至另一個伺服器執行個體時，為了提供一致的經驗給使用者和應用程式，您可能需要在其他伺服器執行個體上為資料庫重新建立部分或所有的中繼資料，例如登入、作業和權限。 如需詳細資訊，請參閱[在另一個伺服器執行個體上提供可用的資料庫時，管理中繼資料 &#40;SQL Server&#41;](../../relational-databases/databases/manage metadata when making a database available on another server.md)。  
+### <a name="managing-metadata-on-the-upgraded-server-instance"></a>在升級的伺服器執行個體上管理中繼資料  
+ 將資料庫附加至另一個伺服器執行個體時，為了提供一致的經驗給使用者和應用程式，您可能需要在其他伺服器執行個體上為資料庫重新建立部分或所有的中繼資料，例如登入、作業和權限。 如需詳細資訊，請參閱[在另一個伺服器執行個體上提供可用的資料庫時，管理中繼資料 &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)。  
   
-### 服務主要金鑰和資料庫主要金鑰加密從 3DES 到 AES 的變化  
- [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更新版本會使用 AES 加密演算法來保護服務主要金鑰 (SMK) 及資料庫主要金鑰 (DMK)。 與舊版中使用的 3DES 相比，AES 是一種較新的加密演算法。 當資料庫第一次連接或還原到新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體時，資料庫主要金鑰複本 (由服務主要金鑰加密) 尚未儲存在伺服器中。 您必須利用 **OPEN MASTER KEY** 陳述式來解密資料庫主要金鑰 (DMK)。 DMK 解密之後，您便可以選擇利用 **ALTER MASTER KEY REGENERATE** 陳述式來提供服務主要金鑰 (SMK) 所加密的 DMK 複本給伺服器，以在未來啟用自動解密。 當資料庫從舊版升級時，應該會重新產生 DMK 以使用較新的 AES 演算法。 如需重新產生 DMK 的詳細資訊，請參閱 [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md)。 重新產生 DMK 金鑰以升級至 AES 所需的時間是取決於 DMK 所保護的物件數目而定。 重新產生 DMK 金鑰以升級至 AES 只需執行一次，且不會影響金鑰循環策略中後續的重新產生。  
+### <a name="service-master-key-and-database-master-key-encryption-changes-from-3des-to-aes"></a>服務主要金鑰和資料庫主要金鑰加密從 3DES 到 AES 的變化  
+ [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更新版本會使用 AES 加密演算法來保護服務主要金鑰 (SMK) 及資料庫主要金鑰 (DMK)。 與舊版中使用的 3DES 相比，AES 是一種較新的加密演算法。 當資料庫第一次連接或還原到新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體時，資料庫主要金鑰複本 (由服務主要金鑰加密) 尚未儲存在伺服器中。 您必須利用 **OPEN MASTER KEY** 陳述式來解密資料庫主要金鑰 (DMK)。 DMK 解密之後，您便可以選擇利用 **ALTER MASTER KEY REGENERATE** 陳述式來提供服務主要金鑰 (SMK) 所加密的 DMK 複本給伺服器，以在未來啟用自動解密。 當資料庫從舊版升級時，應該會重新產生 DMK 以使用較新的 AES 演算法。 如需重新產生 DMK 的詳細資訊，請參閱 [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md)。 重新產生 DMK 金鑰以升級至 AES 所需的時間是取決於 DMK 所保護的物件數目而定。 重新產生 DMK 金鑰以升級至 AES 只需執行一次，且不會影響金鑰循環策略中後續的重新產生。  
   
   

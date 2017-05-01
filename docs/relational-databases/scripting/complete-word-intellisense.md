@@ -1,27 +1,31 @@
 ---
 title: "自動完成文字 (IntelliSense) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "文字完成 [Intellisense]"
-  - "IntelliSense [SQL Server], 自動完成文字選項"
-  - "文字完成 [Intellisense]"
-  - "自動完成文字選項 [IntelliSense]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- word completion [IntelliSense]
+- IntelliSense [SQL Server], Complete Word option
+- text completion [IntelliSense]
+- Complete Word option [IntelliSense]
 ms.assetid: ee9c43a6-aae9-4cfa-b18e-1da9266fabcd
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9ae1001b60f61120999ef61b7385464ca7af0fc5
+ms.lasthandoff: 04/11/2017
+
 ---
-# 自動完成文字 (IntelliSense)
+# <a name="complete-word-intellisense"></a>自動完成文字 (IntelliSense)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense 的 [自動完成文字] 選項會在您輸入的字元足以找出單一的變數、命令或函數名稱之後，輸入該字詞的其餘部分。  
   
  您可以利用四種方式來叫用 [自動完成文字] 功能：  

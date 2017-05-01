@@ -1,73 +1,77 @@
 ---
 title: "匯入 BACPAC 檔案以建立新的使用者資料庫 | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/31/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-data-tier-apps"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb. importdac.results.f1"
-  - "sql13.swb.importdac.settings.f1"
-  - "sql13.swb.importdac.storagebrowser.f1"
-  - "sql13.swb.importdac.results.f1"
-  - "sql13.swb.importdac.progress.f1"
-  - "sql13.swb. importdac.summary.f1"
-  - "sql13.swb.importdac.summary.f1"
-  - "sql13.swb. importdac.progress.f1"
-  - "sql13.swb.importdac.welcome.f1"
-  - "sql13.swb. importdac.settings.f1"
-helpviewer_keywords: 
-  - "資料層應用程式"
-  - "SQL Server DAC"
-  - "移轉資料庫"
-  - "DAC"
+ms.custom: 
+ms.date: 01/31/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-data-tier-apps
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb. importdac.results.f1
+- sql13.swb.importdac.settings.f1
+- sql13.swb.importdac.storagebrowser.f1
+- sql13.swb.importdac.results.f1
+- sql13.swb.importdac.progress.f1
+- sql13.swb. importdac.summary.f1
+- sql13.swb.importdac.summary.f1
+- sql13.swb. importdac.progress.f1
+- sql13.swb.importdac.welcome.f1
+- sql13.swb. importdac.settings.f1
+helpviewer_keywords:
+- Data-tier application
+- SQL Server DAC
+- Migrate database
+- DAC
 ms.assetid: 736d8d9a-39f1-4bf8-b81f-2e56c134d12e
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 4226b33bd805aca7e38781d5a55eb990f61e4e69
+ms.lasthandoff: 04/11/2017
+
 ---
-# 匯入 BACPAC 檔案以建立新的使用者資料庫
-  匯入資料層應用程式 (DAC) 檔案 (.bacpac 檔案)，可在新的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體上，建立原始資料庫連同其資的複本，或將該檔案匯入 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]。 匯出-匯入作業可以進行合併以在執行個體之間移轉 DAC 或資料庫，或建立邏輯備份 (例如建立 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中所部署資料庫的內部部署複本)。  
+# <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>匯入 BACPAC 檔案以建立新的使用者資料庫
+  匯入資料層應用程式 (DAC) 檔案 (.bacpac 檔案)，可在新的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體上，建立原始資料庫連同其資的複本，或將該檔案匯入 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]。 匯出-匯入作業可以進行合併以在執行個體之間移轉 DAC 或資料庫，或建立邏輯備份 (例如建立 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]中所部署資料庫的內部部署複本)。  
   
-## 開始之前  
+## <a name="before-you-begin"></a>開始之前  
  匯入程序會使用兩個階段來建立新的 DAC。  
   
 1.  匯入會使用儲存在匯出檔案中的 DAC 定義，建立新的 DAC 及相關聯的資料庫，其方式相當於 DAC 部署從 DAC 封裝檔案中的定義建立新的 DAC。  
   
 2.  匯入會從匯出檔案大量複製資料。  
   
-## SQL Server 公用程式  
- 如果您將 DAC 匯入至 Database Engine 的受管理執行個體，下次從執行個體將公用程式收集組傳送到公用程式控制點時，匯入的 DAC 就會合併至 SQL Server 公用程式。 然後 DAC 會出現在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 公用程式總管的 [部署的資料層應用程式] 節點中，並在 [部署的資料層應用程式] 詳細資料頁面中報告。  
+## <a name="sql-server-utility"></a>SQL Server 公用程式  
+ 如果您將 DAC 匯入至 Database Engine 的受管理執行個體，下次從執行個體將公用程式收集組傳送到公用程式控制點時，匯入的 DAC 就會合併至 SQL Server 公用程式。 然後 DAC 會出現在  [公用程式總管] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **[部署的資料層應用程式]** 節點中，並在  詳細資料頁面中報告。  
   
-## 資料庫選項和設定  
+## <a name="database-options-and-settings"></a>資料庫選項和設定  
  根據預設，匯入期間建立的資料庫將會擁有 CREATE DATABASE 陳述式中的所有預設值，但是資料庫定序和相容性層級會設定為 DAC 匯出檔案中所定義的值。 DAC 匯出檔案使用原始資料庫中的值。  
   
  某些資料庫選項 (例如 TRUSTWORTHY、DB_CHAINING 和 HONOR_BROKER_PRIORITY) 無法在匯入過程中調整。 實體屬性 (如檔案群組數目或檔案數目和大小) 無法在匯入過程中更改。 匯入完成之後，您可以使用 ALTER DATABASE 陳述式、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 來調整資料庫。 如需詳細資訊，請參閱 [Databases](../../relational-databases/databases/databases.md)。  
   
-## 限制事項  
- DAC 可匯入至 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]或執行 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Service Pack 4 (SP4) 或更新版本的 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 執行個體。 如果您從更新版本匯出 DAC，則 DAC 可能會包含 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 不支援的物件。 您無法將這些 DAC 部署至 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]執行個體。  
+## <a name="limitations-and-restrictions"></a>限制事項  
+ DAC 可匯入至 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]或執行 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Service Pack 4 (SP4) 或更新版本的 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 執行個體。 如果您從更新版本匯出 DAC，則 DAC 可能會包含 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]不支援的物件。 您無法將這些 DAC 部署至 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]執行個體。  
   
-## 必要條件  
+## <a name="prerequisites"></a>必要條件  
  建議您不要匯入來源不明或來源不受信任的 DAC 匯出檔案。 這類檔案可能包含惡意程式碼，因此可能會執行非預期的 Transact-SQL 程式碼，或是修改結構描述而造成錯誤。 在您使用來源不明或來源不受信任的匯出檔案之前，請解除封裝 DAC 並檢查程式碼，例如預存程序和其他使用者定義的程式碼。 如需有關如何執行這些檢查的詳細資訊，請參閱＜ [Validate a DAC Package](https://msdn.microsoft.com/library/ee633948(SQL.130).aspx)＞。  
   
-## 安全性  
+## <a name="security"></a>安全性  
  為了提高安全性，SQL Server 驗證登入會儲存在 DAC 匯出檔案中，而且沒有密碼。 當您匯入檔案之後，此登入會建立為停用的登入，而且會產生密碼。 若要啟用登入，請使用具有 ALTER ANY LOGIN 權限的登入進行登入，並使用 ALTER LOGIN 來啟用登入，然後指派可以傳達給使用者的新密碼。 Windows 驗證登入不需要這項處理，因為這類登入的密碼不是由 SQL Server 所管理。  
   
-## Permissions  
- 只有 **系統管理員 (sysadmin)** 或 **serveradmin** 固定伺服器角色的成員，或是具有 **dbcreator** 固定伺服器角色且擁有 ALTER ANY LOGIN 權限的登入，才能匯入 DAC。 內建的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統管理員帳戶 (名稱為 **sa**) 也可以匯入 DAC。 將具有登入的 DAC 匯入至 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]，需要 loginmanager 或 serveradmin 角色的成員資格。 將不具有登入的 DAC 匯入至 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]，需要 dbmanager 或 serveradmin 角色的成員資格。  
+## <a name="permissions"></a>Permissions  
+ 只有 **系統管理員 (sysadmin)** 或 **serveradmin** 固定伺服器角色的成員，或是具有 **dbcreator** 固定伺服器角色且擁有 ALTER ANY LOGIN 權限的登入，才能匯入 DAC。 內建的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統管理員帳戶 (名稱為 **sa** ) 也可以匯入 DAC。 將具有登入的 DAC 匯入至 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ，需要 loginmanager 或 serveradmin 角色的成員資格。 將不具有登入的 DAC 匯入至 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ，需要 dbmanager 或 serveradmin 角色的成員資格。  
   
-## 使用匯入資料層應用程式精靈  
+## <a name="using-the-import-data-tier-application-wizard"></a>使用匯入資料層應用程式精靈  
  **若要啟動此精靈，請使用下列步驟：**  
   
-1.  連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體 (不論是內部部署或在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中)。  
+1.  連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體 (不論是內部部署或在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]中)。  
   
-2.  在物件總管的 [資料庫] 上按一下滑鼠右鍵，然後選取 [匯入資料層應用程式] 功能表項目啟動精靈。  
+2.  在 **[物件總管]**的 **[資料庫]**上按一下滑鼠右鍵，然後選取 **[匯入資料層應用程式]** 功能表項目啟動精靈。  
   
 3.  完成精靈對話方塊：  
   
@@ -121,15 +125,15 @@ caps.handback.revision: 24
  **針對 Azure SQL Database：**  
   
  - **[匯入 BACPAC 檔案以建立新的 Azure SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-import/)** 提供使用 Azure 入口網站、PowerShell、SSMS 或 SqlPackage 的逐步指示。  
- - 請參閱 **[SQL Database 選項和效能︰了解每個服務層的可用項目](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)**，以取得不同服務層的詳細外觀。  
+ - 請參閱 **[SQL Database 選項和效能︰了解每個服務層的可用項目](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)** ，以取得不同服務層的詳細外觀。  
 
-### 驗證頁面  
- 您可以使用此頁面檢閱造成此作業無法執行的任何問題。 若要繼續進行，請解決封鎖問題，然後按一下 [重新執行驗證] 確定驗證成功。  
+### <a name="validation-page"></a>驗證頁面  
+ 您可以使用此頁面檢閱造成此作業無法執行的任何問題。 若要繼續進行，請解決封鎖問題，然後按一下 **[重新執行驗證]** 確定驗證成功。  
   
  若要繼續進行，請按 **[下一步]**。  
   
 ###  <a name="Summary"></a> 摘要頁面  
- 您可以使用此頁面來檢閱作業的指定來源和目標設定。 若要使用指定的設定來完成匯入作業，請按一下 **[完成]**。 若要取消匯入作業並結束精靈，請按一下 [取消] 。  
+ 您可以使用此頁面來檢閱作業的指定來源和目標設定。 若要使用指定的設定來完成匯入作業，請按一下 **[完成]**。 若要取消匯入作業並結束精靈，請按一下 **[取消]**。  
   
 ###  <a name="Progress"></a> 進度頁面  
  此頁面會顯示進度列，指出作業的狀態。 若要檢視詳細狀態，請按一下 **[檢視詳細資料]** 選項。  
@@ -141,9 +145,10 @@ caps.handback.revision: 24
   
  按一下 **[關閉]** ，關閉精靈。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
 [匯入 BACPAC 檔案以建立新的 Azure SQL Database](https://azure.microsoft.com/en-us/documentation/articles/sql-database-import/)  
  [資料層應用程式](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [匯出資料層應用程式](../../relational-databases/data-tier-applications/export-a-data-tier-application.md)  
   
   
+

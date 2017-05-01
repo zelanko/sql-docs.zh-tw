@@ -1,23 +1,27 @@
 ---
 title: "SQL Server 中的擴充事件目標 | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/08/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 08/08/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 47c64144-4432-4778-93b5-00496749665b
 caps.latest.revision: 2
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 2
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 66e1984acfa86bea31f2cedbea70dbac5195a090
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server 中的擴充事件目標
+# <a name="targets-for-extended-events-in-sql-server"></a>SQL Server 中的擴充事件目標
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
 
@@ -27,16 +31,16 @@ caps.handback.revision: 2
 - 它的參數 (其一目了然的參數除外)。
 
 
-#### XQuery 範例
+#### <a name="xquery-example"></a>XQuery 範例
 
 
-[ring_buffer](#h2_target_ring_buffer) 一節包含[在 Transact-SQL 中使用 XQuery](../../xquery/xquery-language-reference-sql-server.md) 將 XML 的字串複製至關聯式資料列集的範例。
+[ring_buffer](#h2_target_ring_buffer) 一節包含 [在 Transact-SQL 中使用 XQuery](../../xquery/xquery-language-reference-sql-server.md) 將 XML 的字串複製至關聯式資料列集的範例。
 
 
-### 必要條件
+### <a name="prerequisites"></a>必要條件
 
 
-- 請熟悉擴充事件基本概念 (如[快速入門︰SQL Server 中的擴充事件](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)中所述)。
+- 請熟悉擴充事件基本概念 (如 [快速入門︰SQL Server 中的擴充事件](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)中所述)。
 
 
 - 已安裝最新版本的經常更新公用程式 SQL Server Management Studio (SSMS.exe)。 如需詳細資料，請參閱：
@@ -45,14 +49,14 @@ caps.handback.revision: 2
 
 - 在 SSMS.exe 中，了解如何使用物件總管以滑鼠右鍵按一下事件工作階段下的目標節點，[輕鬆檢視輸出資料](../../relational-databases/extended-events/advanced-viewing-of-target-data-from-extended-events-in-sql-server.md)。
     - 事件資料會被擷取成 XML 字串。 但在本文中，資料會顯示在關聯式資料列中。 SSMS 是用來檢視資料，然後將其複製並貼入本文中。
-    - [ring_buffer](#h2_target_ring_buffer) 一節說明從 XML 產生資料列集的替代 T-SQL 技巧。 它包含 XQuery。
+    - [ring_buffer](#h2_target_ring_buffer)一節說明從 XML 產生資料列集的替代 T-SQL 技巧。 它包含 XQuery。
 
 
 
-## 參數、動作和欄位
+## <a name="parameters-actions-and-fields"></a>參數、動作和欄位
 
 
-在 Transact-SQL 中，[CREATE EVENT SESSION](CREATE EVENT SESSION %28Transact-SQL%29.md) 陳述式是擴充事件的重要部分。 若要撰寫陳述式，您通常需要下列項目的清單和說明︰
+在 Transact-SQL 中， [CREATE EVENT SESSION](~/t-sql/statements/create-event-session-transact-sql.md) 陳述式是擴充事件的重要部分。 若要撰寫陳述式，您通常需要下列項目的清單和說明︰
 
 - 與所選擇事件相關聯的欄位。
 - 與所選擇目標相關聯的參數。
@@ -65,13 +69,13 @@ caps.handback.revision: 2
     - [C.3](../../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md#section_C_3_select_all_available_objects) SELECT 動作。
 
 
-您可以在[這個連結](../../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md#section_B_2_TSQL_perspective)看到實際 CREATE EVENT SESSION 陳述式的內容中所使用的參數、欄位和動作。
+您可以在 [這個連結](../../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md#section_B_2_TSQL_perspective)看到實際 CREATE EVENT SESSION 陳述式的內容中所使用的參數、欄位和動作。
 
 
 
 <a name="h2_target_etw_classic_sync_target"></a>
 
-## etw_classic_sync_target 目標
+## <a name="etwclassicsynctarget-target"></a>etw_classic_sync_target 目標
 
 
 SQL Server 擴充事件可以與 Windows 事件追蹤 (ETW) 搭配運作，以監視系統活動。 如需詳細資訊，請參閱：
@@ -83,15 +87,14 @@ SQL Server 擴充事件可以與 Windows 事件追蹤 (ETW) 搭配運作，以�
 這個 ETW 目標會「同步」處理所接收到的資料，大部分的目標則會「非同步」處理所接收到的資料。
 
 
-\<!--
-Revisit this ETW section later.
+\<!-- 請稍後重新瀏覽此＜ETW＞一節。
 -->
 
 
 
 <a name="h2_target_event_counter"></a>
 
-## event_counter 目標
+## <a name="eventcounter-target"></a>event_counter 目標
 
 
 event_counter 目標只會計算每個所指定事件的發生次數。
@@ -107,7 +110,7 @@ event_counter 目標只會計算每個所指定事件的發生次數。
     - 資料庫引擎會中斷任何速度太慢的目標，以及因而讓資料庫引擎效能變慢的目標。 這是大多數目標進行「非同步」處理的其中一個原因。
 
 
-#### event_counter 所擷取的範例輸出
+#### <a name="example-output-captured-by-eventcounter"></a>event_counter 所擷取的範例輸出
 
 
 ```
@@ -139,7 +142,7 @@ CREATE EVENT SESSION [event_counter_1]
 
 <a name="h2_target_event_file"></a>
 
-## event_file 目標
+## <a name="eventfile-target"></a>event_file 目標
 
 
 **event_file** 目標會將事件工作階段輸出從緩衝區寫入至磁碟檔案︰
@@ -152,7 +155,7 @@ CREATE EVENT SESSION [event_counter_1]
 - 系統會使用您選擇的檔案名稱作為附加日期時間型 long 整數的前置詞，並且後接 .xel 副檔名。
 
 
-#### 含 **event_file** 目標的 CREATE EVENT SESSION
+#### <a name="create-event-session-with-eventfile-target"></a>含 **event_file** 目標的 CREATE EVENT SESSION
 
 
 接下來是用來進行測試的 CREATE EVENT SESSION。 其中一個 ADD TARGET 子句指定 event_file。
@@ -204,7 +207,7 @@ CREATE EVENT SESSION [locks_acq_rel_eventfile_22]
 ```
 
 
-#### sys.fn_xe_file_target_read_file 函數
+#### <a name="sysfnxefiletargetreadfile-function"></a>sys.fn_xe_file_target_read_file 函數
 
 
 event_file 目標會將接收到的資料儲存為人類無法讀取的二進位格式。 Transact-SQL 可以從 [**sys.fn_xe_file_target_read_file**](../../relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql.md) 函數進行選取，以報告 .xel 檔案的內容。
@@ -240,24 +243,24 @@ SELECT f.*
 當然，您也可以手動使用 SSMS UI 來查看 .xel 資料：
 
 
-#### event_file 目標中所儲存的資料
+#### <a name="data-stored-in-the-eventfile-target"></a>event_file 目標中所儲存的資料
 
 
-接下來是 SQL Server 2016 中從 **sys.fn_xe_file_target_read_file** 中進行選取的報表。
+接下來是 SQL Server 2016 中從 **sys.fn_xe_file_target_read_file**中進行選取的報表。
 
 
 ```
 module_guid                            package_guid                           object_name     event_data                                                                                                                                                                                                                                                                                          file_name                                                      file_offset
 -----------                            ------------                           -----------     ----------                                                                                                                                                                                                                                                                                          ---------                                                      -----------
-D5149520-6282-11DE-8A39-0800200C9A66   03FDA7D0-91BA-45F8-9875-8B6DD0B8E9F2   lock_acquired   <event name="lock_acquired" package="sqlserver" timestamp="2016-08-07T20:13:35.827Z"><action name="transaction_id" package="sqlserver"><value>39194</value></action><action name="sql_text" package="sqlserver"><value><![CDATA[  select top 1 * from dbo.T_Target;  ]]></value></action></event>   C:\junk\locks_acq_rel_eventfile_22-_0_131150744126230000.xel   11776
-D5149520-6282-11DE-8A39-0800200C9A66   03FDA7D0-91BA-45F8-9875-8B6DD0B8E9F2   lock_released   <event name="lock_released" package="sqlserver" timestamp="2016-08-07T20:13:35.832Z"><action name="transaction_id" package="sqlserver"><value>39194</value></action><action name="sql_text" package="sqlserver"><value><![CDATA[  select top 1 * from dbo.T_Target;  ]]></value></action></event>   C:\junk\locks_acq_rel_eventfile_22-_0_131150744126230000.xel   11776
+D5149520-6282-11DE-8A39-0800200C9A66   03FDA7D0-91BA-45F8-9875-8B6DD0B8E9F2   lock_acquired   <event name="lock_acquired" package="sqlserver" timestamp="2016-08-07T20:13:35.827Z"><action name="transaction_id" package="sqlserver"><value>39194</value></action><action name="sql_text" package="sqlserver"><value>\<![CDATA[  select top 1 * from dbo.T_Target;  ]]></value></action></event>   C:\junk\locks_acq_rel_eventfile_22-_0_131150744126230000.xel   11776
+D5149520-6282-11DE-8A39-0800200C9A66   03FDA7D0-91BA-45F8-9875-8B6DD0B8E9F2   lock_released   <event name="lock_released" package="sqlserver" timestamp="2016-08-07T20:13:35.832Z"><action name="transaction_id" package="sqlserver"><value>39194</value></action><action name="sql_text" package="sqlserver"><value>\<![CDATA[  select top 1 * from dbo.T_Target;  ]]></value></action></event>   C:\junk\locks_acq_rel_eventfile_22-_0_131150744126230000.xel   11776
 ```
 
 
 
 <a name="h2_target_histogram"></a>
 
-## histogram 目標
+## <a name="histogram-target"></a>histogram 目標
 
 
 **histogram** 目標比 event_counter 目標更為適合。 histogram 可以執行下列動作：
@@ -280,7 +283,7 @@ D5149520-6282-11DE-8A39-0800200C9A66   03FDA7D0-91BA-45F8-9875-8B6DD0B8E9F2   lo
 - 例如，slots=59 會四捨五入為 =64。
 
 
-### histogram 的「動作」範例
+### <a name="action-example-for-histogram"></a>histogram 的「動作」範例
 
 
 在其 TARGET...SET 子句上，下列 Transact-SQL CREATE EVENT SESSION 陳述式指定 **source_type=1** 的目標參數指派。 1 表示 histogram 目標會追蹤動作。
@@ -310,7 +313,7 @@ CREATE EVENT SESSION [histogram_lockacquired]
         )
     WITH
         (
-        <.... (For brevity, numerous parameter assignments generated by SSMS.exe are not shown here.) ....>
+        \<.... (For brevity, numerous parameter assignments generated by SSMS.exe are not shown here.) ....>
         );
 ```
 
@@ -330,7 +333,7 @@ value   count
 ```
 
 
-#### SELECT 以探索可用的動作
+#### <a name="select-to-discover-available-actions"></a>SELECT 以探索可用的動作
 
 
 [C.3](../../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md#section_C_3_select_all_available_objects) SELECT 陳述式可以找到系統可讓您在 CREATE EVENT SESSION 陳述式上指定的動作。 在 WHERE 子句中，您可以先編輯 **o.name LIKE** 篩選，以符合感興趣的動作。
@@ -349,7 +352,7 @@ sqlserver      create_dump_single_thread   Create mini dump for the current thre
 ```
 
 
-### histogram 的事件「欄位」範例
+### <a name="event-field-example-for-histogram"></a>histogram 的事件「欄位」範例
 
 
 下列範例會設定 **source_type=0**。 指派給 **source=** 的值是事件欄位 (不是動作)。
@@ -368,7 +371,7 @@ CREATE EVENT SESSION [histogram_checkpoint_dbid]
         source_type          = (0)
     )
     WITH
-    ( <....> );
+    ( \<....> );
 ```
 
 
@@ -384,7 +387,7 @@ value   count
 ```
 
 
-#### SELECT 以探索所選擇事件上的可用欄位
+#### <a name="select-to-discover-available-fields-on-your-chosen-event"></a>SELECT 以探索所選擇事件上的可用欄位
 
 
 [C.4](../../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md#section_C_4_data_fields) SELECT 陳述式會顯示您可以從中進行選擇的事件欄位。 您會先將 **o.name LIKE** 篩選編輯成所選擇的事件名稱。
@@ -403,7 +406,7 @@ sqlserver      checkpoint_end     database_id  NULL
 
 <a name="h2_target_pair_matching"></a>
 
-## pair_matching 目標
+## <a name="pairmatching-target"></a>pair_matching 目標
 
 
 pair_matching 目標可讓您偵測沒有對應結束事件的開始事件。 例如，如果發生 lock_acquired 事件，但後面沒有及時跟著相符的 lock_released 事件，則可能會發生問題。
@@ -412,10 +415,10 @@ pair_matching 目標可讓您偵測沒有對應結束事件的開始事件。 �
 系統不會自動比對開始和結束事件。 相反地，您會說明 CREATE EVENT SESSION 陳述式中系統的比對。 比對開始和結束事件時，會捨棄這組配對，讓每個人都可以專注於不成對的開始事件。
 
 
-#### 尋找開始和結束事件配對的可相符欄位
+#### <a name="finding-matchable-fields-for-the-start-and-end-event-pair"></a>尋找開始和結束事件配對的可相符欄位
 
 
-透過使用 [C.4 SELECT](../../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md#section_C_4_data_fields)，會在下列資料列集中看到 lock_acquired 事件大約有 16 個欄位。 這裡顯示的資料列集已手動進行分割，可顯示與我們的範例相符的欄位。 某些欄位會愚蠢地嘗試進行比對，例如兩個事件的 **duration**。
+透過使用 [C.4 SELECT](../../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md#section_C_4_data_fields)，會在下列資料列集中看到 lock_acquired 事件大約有 16 個欄位。 這裡顯示的資料列集已手動進行分割，可顯示與我們的範例相符的欄位。 某些欄位會愚蠢地嘗試進行比對，例如兩個事件的 **duration** 。
 
 
 ```
@@ -441,7 +444,7 @@ sqlserver   lock_acquired   resource_type            NULL
 ```
 
 
-### pair_matching 範例
+### <a name="example-of-pairmatching"></a>pair_matching 範例
 
 
 下列 CREATE EVENT SESSION 陳述式指定兩個事件和兩個目標。 pair_matching 目標指定兩組欄位，以讓這些事件成對。 指派給 **begin_matching_columns=** 和 **end_matching_columns=** 的一串逗號分隔欄位必須相同。 雖然可以使用空格，但是逗號分隔值中所提及的欄位之間不允許定位字元或換行字元。
@@ -539,7 +542,7 @@ sqlserver      lock_acquired   2016-08-05 12:45:47.9980000   InMemTest2      0  
 
 <a name="h2_target_ring_buffer"></a>
 
-## ring_buffer 目標
+## <a name="ringbuffer-target"></a>ring_buffer 目標
 
 
 ring_buffer 目標方便進行快速和簡單事件測試。 當您停止事件工作階段時，會捨棄預存的輸出。
@@ -547,7 +550,7 @@ ring_buffer 目標方便進行快速和簡單事件測試。 當您停止事件�
 在 ring_buffer 這一節中，也會示範如何使用 XQuery 的 Transact-SQL 實作將 ring_buffer 的 XML 內容複製至更容易讀取的關聯式資料列集中。
 
 
-#### 含 ring_buffer 的 CREATE EVENT SESSION
+#### <a name="create-event-session-with-ringbuffer"></a>含 ring_buffer 的 CREATE EVENT SESSION
 
 
 使用 ring_buffer 目標的這個 CREATE EVENT SESSION 陳述式沒有特別需要注意的部分。
@@ -581,7 +584,7 @@ CREATE EVENT SESSION [ring_buffer_lock_acquired_4]
 ```
 
 
-### ring_buffer 針對 lock_acquired 所接收到的 XML 輸出
+### <a name="xml-output-received-for-lockacquired-by-ringbuffer"></a>ring_buffer 針對 lock_acquired 所接收到的 XML 輸出
 
 
 透過 SELECT 陳述式擷取時，內容的格式為 XML 字串。 在測試中，ring_buffer 目標所儲存的 XML 字串顯示如下。 不過，基於下列 XML 顯示的簡潔性，已清除所有項目，但不含 &#x3c;event&#x3e; 這兩個元素。 此外，在每個 &#x3c;event&#x3e; 內，已刪除少數無關的 &#x3c;data&#x3e; 元素。
@@ -593,7 +596,7 @@ CREATE EVENT SESSION [ring_buffer_lock_acquired_4]
     <data name="mode">
       <type name="lock_mode" package="sqlserver"></type>
       <value>1</value>
-      <text><![CDATA[SCH_S]]></text>
+      <text>\<![CDATA[SCH_S]]></text>
     </data>
     <data name="transaction_id">
       <type name="int64" package="package0"></type>
@@ -617,18 +620,18 @@ CREATE EVENT SESSION [ring_buffer_lock_acquired_4]
     </data>
     <data name="database_name">
       <type name="unicode_string" package="package0"></type>
-      <value><![CDATA[]]></value>
+      <value>\<![CDATA[]]></value>
     </data>
     <action name="database_name" package="sqlserver">
       <type name="unicode_string" package="package0"></type>
-      <value><![CDATA[InMemTest2]]></value>
+      <value>\<![CDATA[InMemTest2]]></value>
     </action>
   </event>
   <event name="lock_acquired" package="sqlserver" timestamp="2016-08-05T23:59:56.012Z">
     <data name="mode">
       <type name="lock_mode" package="sqlserver"></type>
       <value>1</value>
-      <text><![CDATA[SCH_S]]></text>
+      <text>\<![CDATA[SCH_S]]></text>
     </data>
     <data name="transaction_id">
       <type name="int64" package="package0"></type>
@@ -652,11 +655,11 @@ CREATE EVENT SESSION [ring_buffer_lock_acquired_4]
     </data>
     <data name="database_name">
       <type name="unicode_string" package="package0"></type>
-      <value><![CDATA[]]></value>
+      <value>\<![CDATA[]]></value>
     </data>
     <action name="database_name" package="sqlserver">
       <type name="unicode_string" package="package0"></type>
-      <value><![CDATA[InMemTest2]]></value>
+      <value>\<![CDATA[InMemTest2]]></value>
     </action>
   </event>
 </RingBufferTarget>
@@ -692,7 +695,7 @@ SELECT * FROM #XmlAsTable;
 ```
 
 
-### 將 XML 當作資料列集查看的 XQuery
+### <a name="xquery-to-see-the-xml-as-a-rowset"></a>將 XML 當作資料列集查看的 XQuery
 
 
 若要將前一個 XML 當作關聯式資料列集查看，請發出下列 T-SQL，以從前一個 SELECT 陳述式繼續。 加上註解的行說明 XQuery 的每次使用。
@@ -723,7 +726,7 @@ SELECT
 ```
 
 
-#### 前一個 SELECT 的 XQuery 附註
+#### <a name="xquery-notes-from-preceding-select"></a>前一個 SELECT 的 XQuery 附註
 
 
 (A)
@@ -749,7 +752,7 @@ SELECT
 - 這適用於前一個 FROM 子句所傳回的 XML。
 
 
-#### XQuery SELECT 的輸出
+#### <a name="output-from-xquery-select"></a>XQuery SELECT 的輸出
 
 
 接下來是前一個包含 XQuery 的 T-SQL 所產生的資料列集。
@@ -764,7 +767,7 @@ OccurredDtTm              Mode    DatabaseName
 
 
 
-## XEvent .NET 命名空間和 C&#x23;
+## <a name="xevent-net-namespaces-and-cx23"></a>XEvent .NET 命名空間和 C&#x23;
 
 
 Package0 有兩個目標，但是不能用在 Transact-SQL 中：
@@ -778,13 +781,16 @@ Package0 有兩個目標，但是不能用在 Transact-SQL 中：
 
 event_stream 目標可以用於 C# 這類語言所撰寫的 .NET 程式。 C# 和其他 .NET 開發人員可以透過 .NET Framework 類別 (例如在 Microsoft.SqlServer.XEvents.Linq 命名空間中) 存取事件資料流。
 
-發生時，**25726** 錯誤表示填入資料速度比用戶端還要快的事件資料流可能會使用資料。 這會讓資料庫引擎中斷與事件資料流的連接，避免降低伺服器的效能。
+發生時， **25726** 錯誤表示填入資料速度比用戶端還要快的事件資料流可能會使用資料。 這會讓資料庫引擎中斷與事件資料流的連接，避免降低伺服器的效能。
 
 
-### XEvent 命名空間
+### <a name="xevent-namespaces"></a>XEvent 命名空間
 
 
 - [Microsoft.SqlServer.Management.XEvent 命名空間](https://msdn.microsoft.com/library/microsoft.sqlserver.management.xevent.aspx)
 
 - [Microsoft.SqlServer.XEvent.Linq 命名空間](https://msdn.microsoft.com/library/microsoft.sqlserver.xevent.linq.aspx)
+
+
+
 

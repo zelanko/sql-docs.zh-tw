@@ -1,22 +1,26 @@
 ---
 title: "備份含有記憶體最佳化資料表的資料庫 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 83d47694-e56d-4dae-b54e-14945bf8ba31
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 43fa6642db8924195fa1291d74291c21d0b064d1
+ms.lasthandoff: 04/11/2017
+
 ---
-# 備份含有記憶體最佳化資料表的資料庫
+# <a name="backing-up-a-database-with-memory-optimized-tables"></a>備份含有記憶體最佳化資料表的資料庫
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   記憶體最佳化資料表會當做正常資料庫備份的一部分進行備份。 如果是磁碟資料表，資料庫備份作業會驗證資料的 CHECKSUM 和差異檔案組，以便偵測是否有儲存體損毀。  
@@ -26,9 +30,9 @@ caps.handback.revision: 18
 >   
 >  若您沒有備份，可以從記憶體最佳化的資料表和磁碟基礎的資料表匯出資料，並在卸除及重新建立資料庫之後重新載入。  
   
- 包含一個或多個記憶體最佳化資料表之資料庫的完整備份是由以下項目所組成：為磁碟資料表配置的儲存體 (如果有的話)、使用中的交易記錄，以及記憶體最佳化資料表的資料和差異檔案組 (又稱為檢查點檔案組)。 不過，如[記憶體最佳化資料表的持久性](../../relational-databases/in-memory-oltp/durability-for-memory-optimized-tables.md)中所述，記憶體最佳化資料表所使用的儲存空間可能會遠超過它在記憶體中的大小，而且會影響資料庫備份的大小。  
+ 包含一個或多個記憶體最佳化資料表之資料庫的完整備份是由以下項目所組成：為磁碟資料表配置的儲存體 (如果有的話)、使用中的交易記錄，以及記憶體最佳化資料表的資料和差異檔案組 (又稱為檢查點檔案組)。 不過，如 [記憶體最佳化資料表的持久性](../../relational-databases/in-memory-oltp/durability-for-memory-optimized-tables.md)中所述，記憶體最佳化資料表所使用的儲存空間可能會遠超過它在記憶體中的大小，而且會影響資料庫備份的大小。  
   
-## 完整資料庫備份  
+## <a name="full-database-backup"></a>完整資料庫備份  
  因為磁碟資料表的備份是相同的，所以此處的討論內容著重於只包含持久性記憶體最佳化資料表之資料庫的資料庫備份。 記憶體最佳化檔案群組中的檢查點檔案組可能處於各種不同狀態。 下表描述備份檔案的哪個部分。  
   
 |檢查點檔案組狀態|Backup|  
@@ -43,7 +47,7 @@ caps.handback.revision: 18
   
  包含一或多個記憶體最佳化資料表之資料庫備份的大小通常超過其在記憶體中的大小，但是小於磁碟儲存體的大小。 額外的大小取決於其他因素之間的已刪除資料列數目。  
   
-### 估計完整資料庫備份的大小  
+### <a name="estimating-size-of-full-database-backup"></a>估計完整資料庫備份的大小  
   
 > [!IMPORTANT]  
 >  建議您不要使用 BackupSizeInBytes 值來估計記憶體中 OLTP 的備份大小。  
@@ -52,8 +56,8 @@ caps.handback.revision: 18
   
  第二個工作負載案例適用於頻繁的插入、刪除與更新作業。 在最糟榚的情況下，在考量已刪除的資料列之後，每一個檢查點檔案組的載入程度為 50%。 資料庫備份的大小至少為記憶體中資料大小的兩倍。  
   
-## 使用記憶體最佳化資料表的資料庫差異備份  
- 記憶體最佳化資料表的儲存體包含資料和差異檔案，如[記憶體最佳化資料表的持久性](../../relational-databases/in-memory-oltp/durability-for-memory-optimized-tables.md)中所述。 具有記憶體最佳化資料表之資料庫的差異備份會包含下列資料：  
+## <a name="differential-backups-of-databases-with-memory-optimized-tables"></a>使用記憶體最佳化資料表的資料庫差異備份  
+ 記憶體最佳化資料表的儲存體包含資料和差異檔案，如 [記憶體最佳化資料表的持久性](../../relational-databases/in-memory-oltp/durability-for-memory-optimized-tables.md)中所述。 具有記憶體最佳化資料表之資料庫的差異備份會包含下列資料：  
   
 -   記憶體最佳化資料表的存在並不會影響儲存磁碟資料表之檔案群組的差異備份。  
   
@@ -67,7 +71,7 @@ caps.handback.revision: 18
   
  如果記憶體最佳化資料表是您資料庫大小的重要部分，則差異備份能夠大幅減少資料庫備份的大小。 如果是一般 OLTP 工作負載，差異備份將會遠小於完整資料庫備份。  
   
-## 另請參閱  
- [備份、還原及復原記憶體最佳化資料表](../Topic/Backup,%20Restore,%20and%20Recovery%20of%20Memory-Optimized%20Tables.md)  
+## <a name="see-also"></a>另請參閱  
+ [備份、還原及復原記憶體最佳化資料表](http://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
   
   

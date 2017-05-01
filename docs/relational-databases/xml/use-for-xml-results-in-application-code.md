@@ -1,30 +1,34 @@
 ---
-title: "在應用程式的程式碼中使用 FOR XML 結果 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FOR XML 子句, 應用程式程式碼使用方式"
-  - "XML [SQL Server], FOR XML 子句"
-  - "ASP.NET [SQL Server]"
-  - ".NET Framework [SQL Server], FOR XML 資料"
-  - "ADO [SQL Server]"
-  - "XML 資料島 [SQL Server]"
-  - "資料島 [SQL Server]"
+title: "在應用程式的程式碼中使用 FOR XML 結果 | Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FOR XML clause, application code usage
+- XML [SQL Server], FOR XML clause
+- ASP.NET [SQL Server]
+- .NET Framework [SQL Server], FOR XML data
+- ADO [SQL Server]
+- XML data islands [SQL Server]
+- data islands [SQL Server]
 ms.assetid: 41ae67bd-ece9-49ea-8062-c8d658ab4154
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f687e8b100ea8810bf92b21b0467932c72d21237
+ms.lasthandoff: 04/11/2017
+
 ---
-# 在應用程式的程式碼中使用 FOR XML 結果
+# <a name="use-for-xml-results-in-application-code"></a>在應用程式的程式碼中使用 FOR XML 結果
   藉由在 SQL 查詢中使用 FOR XML 子句，您就可以將查詢結果擷取為 XML 資料，以及將其轉換為 XML 資料。 如果可以在 XML 應用程式的程式碼中使用 FOR XML 查詢結果，此功能便能讓您執行下列功能：  
   
 -   針對 [XML 資料 &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md) 值的執行個體，查詢 SQL 資料表  
@@ -33,7 +37,7 @@ caps.handback.revision: 23
   
  此主題提供範例來示範這些方式。  
   
-## 以 ADO 和 XML 資料島擷取 FOR XML 資料  
+## <a name="retrieving-for-xml-data-with-ado-and-xml-data-islands"></a>以 ADO 和 XML 資料島擷取 FOR XML 資料  
  當您使用 FOR XML 查詢時，支援 COM **IStream** 介面的 ADO **Stream** 物件或其他物件，例如 Active Server Pages (ASP) **Request** 和 **Response** 物件，可用來包含結果。  
   
  例如，下列 ASP 程式碼顯示在 AdventureWorks 範例資料庫的 Sales.Store 資料表中查詢 **xml** 資料類型資料行 Demographics 的結果。 該查詢尤其會在此資料行的執行個體值中尋找 CustomerID 等於 3 的資料列。  
@@ -121,7 +125,7 @@ caps.handback.revision: 23
   
  此範例 ASP 頁面包含伺服器端 VBScript，它使用 ADO 來執行 FOR XML 查詢，並在 XML 資料島 MyDataIsle 內傳回 XML 結果。 然後此 XML 資料島會傳回瀏覽器中，以進行其他用戶端處理。 接著，會使用其他用戶端 VBScript 程式碼來處理 XML 資料島的內容。 執行此程序之後，才會將內容顯示為結果 DHTML 的一部份，並開啟訊息方塊來顯示 XML 資料島之預先處理過的內容。  
   
-#### 若要測試此範例  
+#### <a name="to-test-this-example"></a>若要測試此範例  
   
 1.  確認已安裝 IIS，而且也為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝了 AdventureWorks 範例資料庫。  
   
@@ -137,7 +141,7 @@ caps.handback.revision: 23
   
  產生的 HTML 頁面結果類似下列範例輸出：  
   
-##### 伺服器端處理  
+##### <a name="server-side-processing"></a>伺服器端處理  
  Page Generated @ 3/11/2006 3:36:02 PM  
   
  Connect String = Provider=SQLOLEDB;Data Source=MyServer;Initial Catalog=AdventureWorks;Integrated Security=SSPI;  
@@ -150,7 +154,7 @@ caps.handback.revision: 23
   
  將 XML 發送至用戶端進行處理  
   
-##### XML 文件 MyDataIsle 的用戶端處理  
+##### <a name="client-side-processing-of-xml-document-mydataisle"></a>XML 文件 MyDataIsle 的用戶端處理  
   
 -   **AnnualSales:** 1500000  
   
@@ -195,7 +199,7 @@ caps.handback.revision: 23
 </ROOT>  
 ```  
   
-## 使用 ASP.NET 和 .NET Framework 來擷取 FOR XML 資料  
+## <a name="retrieving-for-xml-data-with-aspnet-and-the-net-framework"></a>使用 ASP.NET 和 .NET Framework 來擷取 FOR XML 資料  
  如前一範例所示，下列 ASP.NET 程式碼顯示在 AdventureWorks 範例資料庫的 Sales.Store 資料表中查詢 **xml** 資料類型資料行 Demographics 的結果。 如前一範例所示，此查詢會在此資料行的執行個體值中尋找 CustomerID 等於 3 的資料列。  
   
  在此範例中，使用了下列 Microsoft .NET Framework 管理的 API 來完成 FOR XML 查詢結果的傳回和轉譯作業：  
@@ -260,7 +264,7 @@ caps.handback.revision: 23
     </HTML>  
     ```  
   
-#### 若要測試此範例  
+#### <a name="to-test-this-example"></a>若要測試此範例  
   
 1.  確認已安裝 IIS，而且也為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝了 AdventureWorks 範例資料庫。  
   
@@ -276,7 +280,7 @@ caps.handback.revision: 23
   
  產生的 HTML 頁面結果類似下列範例輸出：  
   
-##### 伺服器端處理  
+##### <a name="server-side-processing"></a>伺服器端處理  
   
 ```  
 Page Generated @ 3/11/2006 3:36:02 PM  
@@ -289,9 +293,9 @@ SqlConnection closed.
 ```  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**XML** 資料類型支援可讓您藉由指定 [TYPE 指示詞](../../relational-databases/xml/type-directive-in-for-xml-queries.md)，要求以 **XML** 資料類型的形式傳回 FOR XML 查詢的結果，而不以字串或影像類型資料的形式傳回。 如果在 FOR XML 查詢中使用了 TYPE 指示詞時，它會提供以程式方式存取 FOR XML 結果 (類似[在應用程式中使用 XML 資料](../../relational-databases/xml/use-xml-data-in-applications.md)中所顯示)。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**XML** 資料類型支援可讓您藉由指定 **TYPE 指示詞** ，要求以 [XML](../../relational-databases/xml/type-directive-in-for-xml-queries.md)資料類型的形式傳回 FOR XML 查詢的結果，而不以字串或影像類型資料的形式傳回。 如果在 FOR XML 查詢中使用了 TYPE 指示詞時，它會提供以程式方式存取 FOR XML 結果 (類似 [在應用程式中使用 XML 資料](../../relational-databases/xml/use-xml-data-in-applications.md)中所顯示)。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md)  
   
   

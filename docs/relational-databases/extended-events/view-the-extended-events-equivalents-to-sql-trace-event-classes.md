@@ -1,36 +1,40 @@
 ---
-title: "檢視同等於 SQL 追蹤事件類別的擴充事件項目 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQL 追蹤, 擴充事件對等項目"
-  - "擴充事件 [SQL Server], SQL 追蹤對等項目"
-  - "擴充事件 [SQL Server], 使用者可設定事件"
+title: "檢視同等於 SQL 追蹤事件類別的擴充事件 | Microsoft 文件"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Trace, extended events equivalents
+- extended events [SQL Server], SQL Trace equivalents
+- extended events [SQL Server], user configurable events
 ms.assetid: 7f24104c-201d-4361-9759-f78a27936011
 caps.latest.revision: 13
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bfa6eb722a8dcbd4c3a9e72d731fe8a59d436ba8
+ms.lasthandoff: 04/11/2017
+
 ---
-# 檢視同等於 SQL 追蹤事件類別的擴充事件項目
+# <a name="view-the-extended-events-equivalents-to-sql-trace-event-classes"></a>檢視同等於 SQL 追蹤事件類別的擴充事件項目
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   如果您想要使用「擴充事件」來收集同等於 SQL 追蹤事件類別和資料行的事件資料，了解 SQL 追蹤事件如何對應到「擴充事件」事件和動作會非常實用。  
   
  您可以使用下列程序來檢視同等於每一個 SQL 追蹤事件及其關聯資料行的「擴充事件」事件和動作。  
   
-## 若要使用查詢編輯器檢視相當於 SQL 追蹤事件的擴充事件  
+## <a name="to-view-the-extended-events-equivalents-to-sql-trace-events-using-query-editor"></a>若要使用查詢編輯器檢視相當於 SQL 追蹤事件的擴充事件  
   
--   從 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的查詢編輯器執行下列查詢：  
+-   從 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的查詢編輯器執行下列查詢：  
   
     ```  
     USE MASTER;  
@@ -79,7 +83,7 @@ caps.handback.revision: 13
   
 -   如果是使用者可設定的 SQL 追蹤事件類別 (透過 UserConfigurable:9 的 UserConfigurable:1)，擴充事件會使用單一事件來取代這些項目。 此事件命名為 user_event。 這個事件是使用 sp_trace_generateevent 所引發，這與 SQL 追蹤所使用的預存程序相同。 不論傳遞給預存程序的事件識別碼為何，都會傳回 user_event 事件。 但是，event_id 欄位會當作事件資料的一部分傳回。 這可讓您建立以事件識別碼為基礎的述詞。 例如，如果您在程式碼中使用 UserConfigurable:0 (事件識別碼 = 82)，您可以將 user_event 事件加入至工作階段中，並指定 'event_id = 82' 的述詞。 因此，您不必變更程式碼，因為 sp_trace_generateevent 預存程序會產生擴充事件 user_event 事件及同等的 SQL 追蹤事件類別。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [sp_trace_generateevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)  
   
   

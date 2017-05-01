@@ -1,131 +1,205 @@
 ---
 title: "建立及管理全文檢索索引 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-search"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "全文檢索索引 [SQL Server], 關於"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-search
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- full-text indexes [SQL Server], about
 ms.assetid: f8a98486-5438-44a8-b454-9e6ecbc74f83
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 33ac4c4c97735b494db016df17405eaff9b848c6
+ms.lasthandoff: 04/11/2017
+
 ---
-# 建立及管理全文檢索索引
-  全文檢索引擎會使用全文檢索索引中的資訊來編譯全文檢索查詢，以便快速地在資料表中搜尋特定字詞或字詞組合。 全文檢索索引會儲存重要單字及這些單字在資料庫資料表之一或多個資料行內位置的相關資訊。 全文檢索索引是一種特殊類型的 Token 式功能索引，由 Full-Text Engine for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所建立與維護。 建立全文檢索索引的程序與建立其他索引類型的程序大不相同。 全文檢索引擎會根據個別 Token 從索引中的文字建立反向、堆疊以及壓縮的索引結構，而不是根據特定資料列中所儲存的值來建構 B 型樹狀結構。  全文檢索索引的大小只受限於執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之電腦的可用記憶體資源。  
+# <a name="create-and-manage-full-text-indexes"></a>建立及管理全文檢索索引
+本主題描述如何建立、填入和管理 SQL Server 中的全文檢索索引。
   
- 從 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 開始，全文檢索索引會與 Database Engine 整合在一起，而非位於檔案系統中，如同舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 在新的資料庫中，全文檢索目錄現在是不屬於任何檔案群組的虛擬物件。它只是參考一組全文檢索索引的邏輯概念。 不過，請注意，在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 資料庫 (含有資料檔案的任何全文檢索目錄) 的升級期間，系統會建立新的檔案群組。如需詳細資訊，請參閱[升級全文檢索搜尋](../../relational-databases/search/upgrade-full-text-search.md)。  
+## <a name="prerequisite---create-a-full-text-catalog"></a>先決條件 - 建立全文檢索目錄
+您需要有全文檢索目錄，才能建立全文檢索索引。 目錄是一或多個全文檢索索引的虛擬容器。 如需詳細資訊，請參閱[建立及管理全文檢索目錄](../../relational-databases/search/create-and-manage-full-text-catalogs.md)。
   
-> [!NOTE]  
->  在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新的版本中，全文檢索引擎位於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序中，而非個別的服務中。 將全文檢索引擎整合到 Database Engine 可以改善全文檢索管理能力、混合式查詢的最佳化，以及整體效能。  
-  
- 每個資料表只允許有一個全文檢索索引。 若要對資料表建立全文檢索索引，該資料表必須有單一的非 Null 唯一資料行。 您可以針對 **char**、**varchar**、**nchar**、**nvarchar**、**text**、**ntext**、**image**、**xml**、**varbinary** 和 **varbinary(max)** 類型的資料行建立全文檢索索引，並且建立全文檢索搜尋的索引。 針對資料類型為 **varbinary**、**varbinary(max)**、**image** 或 **xml** 的資料行建立全文檢索索引會要求您指定類型資料行。 「類型資料行」是一個資料表資料行，您可以在每個資料列中儲存文件的副檔名 (.doc、.pdf 與 .xls 等)。  
-  
- 建立與維護全文檢索索引的程序稱為「母體擴展」，也稱為「搜耙」。 全文檢索索引母體擴展有三種類型：完整母體擴展、以變更追蹤為基礎的母體擴展，以及以時間戳記為基礎的累加母體擴展。 如需詳細資訊，請參閱[擴展全文檢索索引](../../relational-databases/search/populate-full-text-indexes.md)。  
-  
-##  <a name="tasks"></a> 一般工作  
- **建立全文檢索索引**  
+##  <a name="tasks"></a> 建立、改變或卸除全文檢索索引  
+### <a name="create-a-full-text-index"></a>建立全文檢索索引  
   
 -   [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md)  
   
- **改變全文檢索索引**  
+### <a name="alter-a-full-text-index"></a>改變全文檢索索引
   
 -   [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-index-transact-sql.md)  
   
- **卸除全文檢索索引**  
+### <a name="drop-a-full-text-index"></a>卸除全文檢索索引 
   
--   [DROP FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-fulltext-index-transact-sql.md)  
+-   [DROP FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-fulltext-index-transact-sql.md)
+
+## <a name="populate-a-full-text-index"></a>擴展全文檢索索引
+建立與維護全文檢索索引的程序稱為「母體擴展」，也稱為「搜耙」。 全文檢索索引母體擴展有三種類型：
+-   完整母體擴展
+-   以變更追蹤為基礎的母體擴展
+-   以時間戳記為基礎的累加母體擴展。
+
+如需詳細資訊，請參閱[擴展全文檢索索引](../../relational-databases/search/populate-full-text-indexes.md)。
+
+##  <a name="view"></a> 檢視全文檢索索引的屬性
+### <a name="view-the-properties-of-a-full-text-index-with-transact-sql"></a>使用 Transact-SQL 檢視全文檢索索引的屬性
+|目錄或動態管理檢視|Description|  
+|----------------------------------------|-----------------|  
+|[sys.fulltext_index_catalog_usages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-catalog-usages-transact-sql.md)|針對通往全文檢索索引參考的每個全文檢索目錄，各傳回一個資料列。|  
+|[sys.fulltext_index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md)|屬於全文檢索索引一部分的每個資料行各有一個資料列。|  
+|[sys.fulltext_index_fragments &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-fragments-transact-sql.md)|全文檢索索引會使用稱為「全文檢索索引片段」的內部資料表來儲存反向索引資料。 此檢視表可用來查詢有關這些片段的中繼資料， 此檢視表針對每一個資料表內包含全文檢索索引的每一個全文檢索索引片段各包含一個資料列。|  
+|[sys.fulltext_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)|針對表格式物件的每個全文檢索索引，各包含一個資料列。|  
+|[sys.dm_fts_index_keywords &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md)|針對指定的資料表傳回全文檢索索引之內容的相關資訊。|  
+|[sys.dm_fts_index_keywords_by_document &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md)|針對指定的資料表傳回全文檢索索引之文件層級內容的相關資訊。 給定的關鍵字可能會出現在許多份文件中。|  
+|[sys.dm_fts_index_population &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md)|傳回有關目前進行中之全文檢索索引母體擴展的資訊。|  
+ 
+### <a name="view-the-properties-of-a-full-text-index-with-management-studio"></a>使用 Management Studio 檢視全文檢索索引的屬性 
+1.  在 Management Studio 中，於物件總管中展開伺服器。  
   
- [本主題內容](#top)  
+2.  展開 [資料庫]，然後展開包含全文檢索索引的資料庫。  
   
-##  <a name="structure"></a> 全文檢索索引結構  
- 若能充分了解全文檢索索引的結構，將有助於了解全文檢索引擎的運作方式。 本主題會使用下列 [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] 之 **Document** 資料表的摘錄當做範例資料表。 這個摘錄只會顯示該資料表中的兩個資料行 (**DocumentID** 資料行和 **Title** 資料行) 和三個資料列。  
+3.  展開 **[資料表]**。  
   
- 就本例而言，我們會假設已經在 **Title** 資料行中建立了全文檢索索引。  
+4.  以滑鼠右鍵按一下已定義全文檢索索引的資料表、選取 [全文檢索索引]，然後按一下 [全文檢索索引] 內容功能表上的 [屬性]。 這樣就會開啟 [全文檢索索引屬性] 對話方塊。  
   
-|DocumentID|Title|  
-|----------------|-----------|  
-|1|Crank Arm and Tire Maintenance|  
-|2|Front Reflector Bracket and Reflector Assembly 3|  
-|3|Front Reflector Bracket Installation|  
+5.  在 **[選取頁面]** 窗格中，您可以選取下列任何頁面：  
   
- 例如，下表 (顯示片段 1) 會描述針對 **Document** 資料表之 **Title** 資料行所建立的全文檢索索引內容。 全文檢索索引所包含的資訊會比顯示在此資料表中的資訊還要多。 此資料表是全文檢索索引的邏輯表示法，僅針對示範目的提供。 這些資料列會以壓縮的格式儲存，以便最佳化磁碟使用量。  
+    |頁面|Description|  
+    |----------|-----------------|  
+    |**一般**|顯示全文檢索索引的基本屬性。 這些屬性包括許多可修改的屬性和一些無法變更的屬性，例如資料庫名稱、資料表名稱，以及全文檢索索引鍵資料行的名稱。 可修改的屬性包括：<br /><br /> **全文檢索索引停用字詞表**<br /><br /> **全文檢索索引已啟用**<br /><br /> **變更追蹤**<br /><br /> **搜尋屬性清單**<br /><br />如需詳細資訊，請參閱[全文檢索索引屬性 &#40;一般頁面&#41;](http://msdn.microsoft.com/library/f4dff61c-8c2f-4ff9-abe4-70a34421448f)。|  
+    |**資料行**|顯示可用於全文檢索索引的資料表資料行。 系統會針對選取的資料行建立全文檢索索引。 您可以選取任意數目的可用資料行，以便包含在全文檢索索引中。 如需詳細資訊，請參閱[全文檢索索引屬性 &#40;資料行頁面&#41;](http://msdn.microsoft.com/library/75e52edb-0d07-4393-9345-8b5af4561e35)。|  
+    |**排程**|您可以使用這個頁面來建立或管理 SQL Server Agent 作業的排程，以便針對全文檢索索引母體擴展啟動累加資料表母體擴展。 如需詳細資訊，請參閱[擴展全文檢索索引](../../relational-databases/search/populate-full-text-indexes.md)。<br /><br /> 注意：在您結束 [全文檢索索引屬性] 對話方塊之後，任何新建立的排程都會與 SQL Server Agent 作業 (針對 *database_name*.*table_name* 啟動 [累加資料表母體]) 相關聯。|  
   
- 請注意，資料已經與原始文件相反。 因為關鍵字會對應至文件識別碼，所以會發生相反的情況。 因此，全文檢索索引通常稱為反向索引。  
+6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] 儲存任何變更並結束 [全文檢索索引屬性] 對話方塊。  
   
- 此外，請注意，關鍵字 "and" 已經從全文檢索索引中移除了。 進行此作業的原因是 "and" 是停用字詞，而且從全文檢索索引中移除停用字詞可能會大幅節省磁碟空間，進而改善查詢效能。 如需停用字詞的詳細資訊，請參閱[設定及管理全文檢索搜尋的停用字詞與停用字詞表](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)。  
+##  <a name="props"></a> 檢視索引資料表和資料行的屬性  
+ 您可以使用許多 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函數 (例如 OBJECTPROPERTYEX) 以取得各種全文檢索索引屬性的值。 此資訊適用於管理和疑難排解全文檢索搜尋。  
   
- **片段 1**  
+ 下表列出索引資料表和資料行的相關全文檢索屬性及其相關的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函數。  
   
-|關鍵字|ColId|DocId|出現次數|  
-|-------------|-----------|-----------|----------------|  
-|Crank|1|1|1|  
-|Arm|1|1|2|  
-|Tire|1|1|4|  
-|維護|1|1|5|  
-|Front|1|2|1|  
-|Front|1|3|1|  
-|Reflector|1|2|2|  
-|Reflector|1|2|5|  
-|Reflector|1|3|2|  
-|Bracket|1|2|3|  
-|Bracket|1|3|3|  
-|組件|1|2|6|  
-|3|1|2|7|  
-|安裝|1|3|4|  
+|屬性|描述|函數|  
+|--------------|-----------------|--------------|  
+|**FullTextTypeColumn**|在資料表中，用來保存資料行文件類型資訊的 TYPE COLUMN。|[COLUMNPROPERTY](../../t-sql/functions/columnproperty-transact-sql.md)|  
+|**IsFulltextIndexed**|資料行是否已啟用全文檢索索引。|COLUMNPROPERTY|  
+|**IsFulltextKey**|索引是否為資料表的全文檢索索引鍵。|[INDEXPROPERTY](../../t-sql/functions/indexproperty-transact-sql.md)|  
+|**TableFulltextBackgroundUpdateIndexOn**|資料表是否擁有全文檢索的背景更新索引。|[OBJECTPROPERTYEX](../../t-sql/functions/objectpropertyex-transact-sql.md)|  
+|**TableFulltextCatalogId**|資料表之全文檢索索引資料所在的全文檢索目錄識別碼。|OBJECTPROPERTYEX|  
+|**TableFulltextChangeTrackingOn**|資料表是否已啟用全文檢索變更追蹤。|OBJECTPROPERTYEX|  
+|**TableFulltextDocsProcessed**|全文檢索索引啟動之後所處理的資料列數。|OBJECTPROPERTYEX|  
+|**TableFulltextFailCount**|全文檢索搜尋未建立索引的資料列數。|OBJECTPROPERTYEX|  
+|**TableFulltextItemCount**|已順利建立全文檢索索引的資料列數。|OBJECTPROPERTYEX|  
+|**TableFulltextKeyColumn**|全文檢索唯一索引鍵資料行的資料行識別碼。|OBJECTPROPERTYEX|  
+|**TableFullTextMergeStatus**|具有全文檢索索引的資料表目前是否正在合併。|OBJECTPROPERTYEX|  
+|**TableFulltextPendingChanges**|要處理的暫止變更追蹤項目數。|OBJECTPROPERTYEX|  
+|**TableFulltextPopulateStatus**|全文檢索資料表的母體擴展狀態。|OBJECTPROPERTYEX|  
+|**TableHasActiveFulltextIndex**|資料表是否擁有使用中全文檢索索引。|OBJECTPROPERTYEX|  
   
- **Keyword** 資料行包含編列索引時所擷取的單一 Token 表示法。 文字分隔會決定 Token 的組成項目。  
+##  <a name="key"></a> 取得全文檢索索引鍵資料行的資訊  
+ 一般而言，CONTAINSTABLE 或 FREETEXTTABLE 資料列集值函數的結果必須與基底資料表聯結。 在這種情況下，您必須知道唯一索引鍵資料行名稱。 您可以查詢給定的唯一索引是否當做全文檢索索引鍵使用，而且可以取得全文檢索索引鍵資料行的識別碼。  
   
- **ColId** 資料行所包含的值會對應到已建立全文檢索索引的特定資料行。  
+### <a name="determine-whether-a-given-unique-index-is-used-as-the-full-text-key-column"></a>判斷給定的唯一索引是否當做全文檢索索引鍵資料行使用  
   
- **DocId** 資料行含有八位元組整數的值，此整數會對應到全文檢索索引資料表中的特定全文檢索索引鍵值。 當全文檢索索引鍵不是整數資料類型時，這項對應就是必要的。 在這類情況下，全文檢索索引鍵值與 **DocId** 值之間的對應會保存在稱為 DocId Mapping 資料表的個別資料表中。 若要查詢這些對應，請使用 [sp_fulltext_keymappings](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md) 系統預存程序。 為了滿足搜尋條件，上述資料表中的 DocId 值必須與 DocId Mapping 資料表聯結，以便從查詢的基底資料表中擷取資料列。 如果基底資料表的全文檢索索引鍵值是整數類型，此值就會直接當做 DocId 而且不需要任何對應。 因此，使用整數全文檢索索引鍵值有助於最佳化全文檢索查詢。  
+使用 [SELECT](../../t-sql/queries/select-transact-sql.md) 陳述式來呼叫 [INDEXPROPERTY](../../t-sql/functions/indexproperty-transact-sql.md) 函數。 在函數呼叫中，使用 OBJECT_ID 函數，將資料表的名稱 (*table_name*) 轉換成資料表識別碼、指定資料表之唯一索引的名稱，以及指定 **IsFulltextKey** 索引屬性，如下所示：  
   
- **Occurrence** 資料行包含整數值。 針對每個 DocId 值，都會有一個對應到該 DocId 內特定關鍵字之相對單字位移的出現次數值清單。 出現次數值有助於決定詞句或相似的相符項目，例如，具有鄰近發生次數值的片語。 它們也有助於計算相關分數。例如，在 DocId 中的關鍵字出現次數可用來計分。  
+```  
+SELECT INDEXPROPERTY( OBJECT_ID('table_name'), 'index_name',  'IsFulltextKey' );  
+```  
   
- [本主題內容](#top)  
+ 如果索引是用來強制全文檢索索引鍵資料行的唯一性，這個陳述式就會傳回 1。如果不是，便傳回 0。  
   
-##  <a name="fragments"></a> 全文檢索索引片段  
- 邏輯全文檢索索引通常會在多份內部資料表之間分割。 每份內部資料表會稱為全文檢索索引片段。 其中某些片段可能包含比其他片段更新的資料。 例如，如果使用者更新 DocId 為 3 的下列資料列，而且資料表已進行自動變更追蹤，就會建立新的片段。  
+ **範例**  
   
-|DocumentID|Title|  
-|----------------|-----------|  
-|3|Rear Reflector|  
+ 下列範例會查詢 `PK_Document_DocumentID` 索引是否用來強制全文檢索索引鍵資料行的唯一性，如下所示：  
   
- 在下列範例 (顯示片段 2) 中，此片段包含的 DocId 3 相關資料比片段 1 更新。 因此，當使用者查詢 "Rear Reflector" 時，片段 2 的資料就會用於 DocId 3。 每個片段都會以建立時間戳記標示，而且您可以使用 [sys.fulltext_index_fragments](../../relational-databases/system-catalog-views/sys-fulltext-index-fragments-transact-sql.md) 目錄檢視，查詢此時間戳記。  
+```  
+USE AdventureWorks  
+GO  
+SELECT INDEXPROPERTY ( OBJECT_ID('Production.Document'), 'PK_Document_DocumentID',  'IsFulltextKey' )  
+```  
   
- **片段 2**  
+ 如果 `PK_Document_DocumentID` 索引是用來強制全文檢索索引鍵資料行的唯一性，這個範例就會傳回 1。 否則，它會傳回 0 或 NULL。 NULL 表示您正在使用無效的索引名稱、索引名稱沒有對應至資料表，或者資料表不存在等。  
   
-|關鍵字|ColId|DocId|Occ|  
-|-------------|-----------|-----------|---------|  
-|Rear|1|3|1|  
-|Reflector|1|3|2|  
+### <a name="find-the-identifier-of-the-full-text-key-column"></a>尋找全文檢索索引鍵資料行的識別碼  
   
- 如片段 2 所示，全文檢索查詢必須在內部查詢每個片段並捨棄較舊的項目。 因此，如果全文檢索索引包含過多全文檢索索引片段，可能會導致查詢效能大幅降低。 若要減少片段的數目，請使用 [ALTER FULLTEXT CATALOG](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的 REORGANIZE 選項來重新組織全文檢索目錄。 這個陳述式會執行「主要合併」，將片段合併成較大的單一片段，然後從全文檢索索引中移除所有已過時的項目。  
+每個啟用全文檢索的資料表都具有一個用來強制資料表之唯一資料列的資料行 (「唯一索引鍵資料行」)。 從 OBJECTPROPERTYEX 函數中取得的 **TableFulltextKeyColumn** 屬性會包含唯一索引鍵資料行的資料行識別碼。  
+ 
+若要取得這個識別碼，您可以使用 SELECT 陳述式來呼叫 OBJECTPROPERTYEX 函數。 請使用 OBJECT_ID 函數，將資料表的名稱 (*table_name*) 轉換成資料表識別碼，並且指定 **TableFulltextKeyColumn** 屬性，如下所示：  
   
- 重新組織之後，範例索引就會包含下列資料列：  
+```  
+SELECT OBJECTPROPERTYEX(OBJECT_ID( 'table_name'), 'TableFulltextKeyColumn' ) AS 'Column Identifier';  
+```  
   
-|關鍵字|ColId|DocId|Occ|  
-|-------------|-----------|-----------|---------|  
-|Crank|1|1|1|  
-|Arm|1|1|2|  
-|Tire|1|1|4|  
-|維護|1|1|5|  
-|Front|1|2|1|  
-|Rear|1|3|1|  
-|Reflector|1|2|2|  
-|Reflector|1|2|5|  
-|Reflector|1|3|2|  
-|Bracket|1|2|3|  
-|組件|1|2|6|  
-|3|1|2|7|  
+ **範例**  
   
- [本主題內容](#top)  
+ 下列範例會傳回全文檢索索引鍵資料行的識別碼或 NULL。 NULL 表示您正在使用無效的索引名稱、索引名稱沒有對應至資料表，或者資料表不存在等。  
+  
+```  
+USE AdventureWorks;  
+GO  
+SELECT OBJECTPROPERTYEX(OBJECT_ID('Production.Document'), 'TableFulltextKeyColumn');  
+GO  
+```  
+  
+ 下列範例顯示如何使用唯一索引鍵資料行的識別碼，以取得資料行的名稱。  
+  
+```  
+USE AdventureWorks;  
+GO  
+DECLARE @key_column sysname  
+SET @key_column = Col_Name(Object_Id('Production.Document'),  
+ObjectProperty(Object_id('Production.Document'),  
+'TableFulltextKeyColumn')   
+)  
+SELECT @key_column AS 'Unique Key Column';  
+GO  
+```  
+  
+ 這個範例會傳回名為 `Unique Key Column`的結果集資料行，其中顯示包含 Document 資料表之唯一索引鍵資料行名稱的單一資料列 DocumentID。 請注意，如果這個查詢包含無效的索引名稱、索引名稱沒有對應至資料表，或者資料表不存在等，它就會傳回 NULL。  
+
+## <a name="index-varbinarymax-and-xml-columns"></a>索引 varbinary(max) 和 xml 資料行  
+ 如果已建立 **varbinary(max)**、**varbinary** 或  資料行的全文檢索索引，您就可以使用全文檢索述詞 (CONTAINS 和 FREETEXT) 與函數 (CONTAINSTABLE 和 FREETEXTTABLE) 來查詢它，就像查詢任何其他全文檢索索引資料行一樣。
+   
+### <a name="index-varbinarymax-or-varbinary-data"></a>索引 varbinary(max) 或 varbinary 資料  
+ 單一 **varbinary(max)** 或 **varbinary** 資料行可以儲存許多類型的文件。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援已在作業系統中安裝並提供篩選的任何文件類型。 每份文件的文件類型都是由文件的副檔名所識別。 例如，全文檢索搜尋會針對 .doc 副檔名使用支援 Microsoft Word 文件的篩選。 如需可用文件類型的清單，請查詢 [sys.fulltext_document_types](../../relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql.md) 目錄檢視。  
+  
+請注意，全文檢索引擎可以運用安裝在作業系統中的現有篩選。 您必須先將作業系統篩選、斷詞工具和字幹分析器載入伺服器執行個體中，然後才能使用它們，如下所示：  
+  
+```tsql  
+EXEC sp_fulltext_service @action='load_os_resources', @value=1  
+```  
+  
+若要針對 **varbinary(max)** 資料行建立全文檢索索引，全文檢索引擎需要 **varbinary(max)** 資料行中文件副檔名的存取權。 這項資訊必須儲存在稱為類型資料行的資料表資料行中，而此資料行必須與全文檢索索引中的 **varbinary(max)** 資料行相關聯。 建立文件的索引時，全文檢索引擎會使用類型資料行中的副檔名來識別要使用的篩選。  
+   
+### <a name="index-xml-data"></a>索引 xml 資料  
+ **xml** 資料類型資料行只會儲存 XML 文件和片段，而且只有 XML 篩選會用於這些文件。 因此，類型資料行是不必要的。 在 **xml** 資料行上，全文檢索索引會建立 XML 元素內容的索引，但忽略 XML 標記。 屬性值是全文檢索索引的值 (除非它們是數值)。 元素標記會當做 Token 界限來使用。 系統支援包含多種語言且格式正確的 XML 或 HTML 文件和片段。  
+  
+ 如需編製索引和查詢 **xml** 資料行的詳細資訊，請參閱[使用 XML 資料行進行全文檢索搜尋](../../relational-databases/xml/use-full-text-search-with-xml-columns.md)。  
+  
+##  <a name="disable"></a> 停用或重新啟用資料表的全文檢索索引   
+ 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，所有使用者建立的資料庫預設都會啟用全文檢索。 此外，個別資料表也會在建立全文檢索索引並將資料行加入索引中後，立即自動啟用全文檢索索引。 從全文檢索索引中卸除最後一個資料行之後，資料表便會自動停用全文檢索索引。  
+  
+ 在具有全文檢索索引的資料表上，您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來手動為資料表停用或重新啟用全文檢索索引。  
+
+1.  展開伺服器群組、展開 [資料庫]，再展開包含您要啟用全文檢索索引之資料表的資料庫。  
+  
+2.  展開 [資料表]，然後以滑鼠右鍵按一下您想要停用或重新啟用全文檢索索引的資料表。  
+  
+3.  選取 [全文檢索索引]，然後按一下 [停用全文檢索索引] 或 [啟用全文檢索索引]。  
+  
+##  <a name="remove"></a> 移除資料表的全文檢索索引  
+  
+1.  在 [物件總管] 中，以滑鼠右鍵按一下含有您要移除其全文檢索索引的資料表。  
+  
+2.  選取 [刪除全文檢索索引]。  
+  
+3.  出現提示要您確認是否要刪除全文檢索索引時，按一下 [確定]。  
   
   

@@ -1,23 +1,27 @@
 ---
 title: "時態表使用案例 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "01/13/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 01/13/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4b8fa2dd-1790-4289-8362-f11e6d63bb09
 caps.latest.revision: 11
-author: "CarlRabeler"
-ms.author: "carlrab"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: CarlRabeler
+ms.author: carlrab
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: bb6a2865838df1d66119f68c6d8cd19809a8f86c
+ms.lasthandoff: 04/11/2017
+
 ---
-# 時態表使用案例
+# <a name="temporal-table-usage-scenarios"></a>時態表使用案例
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   時態表在需要追蹤資料變更歷程記錄的案例中通常很有用。    
@@ -33,8 +37,8 @@ caps.handback.revision: 10
   
 -   [修復資料列層級資料損毀](https://msdn.microsoft.com/library/mt631669.aspx#Anchor_4)  
   
-## 資料稽核  
- 在您儲存重要資訊，並隨時需要追蹤變更內容、變更時間及變更者，以及執行資料鑑識調查的資料表上使用 Temporal 系統版本設定。    
+## <a name="data-audit"></a>資料稽核  
+ 在您儲存重要資訊，並隨時需要追蹤變更內容和變更時間，以及執行資料鑑識調查的資料表上使用暫時性系統版本設定。    
 已 Temporal 系統版本設定的資料表可讓您在開發週期的早期階段針對資料稽核案例進行計畫，或視需要將資料稽核新增到現有應用程式或解決方案。  
   
  下圖顯示「員工」資料表案例，其中的資料樣本包括目前 (以藍色標示) 和歷程記錄的資料列版本 (以灰色標示)。   
@@ -42,7 +46,7 @@ caps.handback.revision: 10
   
  ![TemporalUsageScenario1](../../relational-databases/tables/media/temporalusagescenario1.png "TemporalUsageScenario1")  
   
-### 在新的資料表上針對資料稽核啟用系統版本設定  
+### <a name="enabling-system-versioning-on-a-new-table-for-data-audit"></a>在新的資料表上針對資料稽核啟用系統版本設定  
  如果您已識別出需要進行資料稽核的資訊，請將資料庫資料表建立為已 Temporal 系統版本設定。 下列簡易範例說明在假設性的 HR 資料庫中「員工」資訊的案例：  
   
 ```  
@@ -61,10 +65,10 @@ CREATE TABLE Employee
  WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.EmployeeHistory));  
 ```  
   
- 如需建立系統設定版本之時態表的各種選項，請參閱[建立系統設定版本的時態表](../../relational-databases/tables/creating-a-system-versioned-temporal-table.md)中的說明。  
+ 如需建立系統設定版本之時態表的各種選項，請參閱 [建立系統設定版本的時態表](../../relational-databases/tables/creating-a-system-versioned-temporal-table.md)中的說明。  
   
-### 在現有的資料表上針對資料稽核啟用系統版本設定  
- 如果您需要在現有資料庫中執行資料稽核，請使用 ALTER TABLE 來延伸非時態表以使它成為已系統版本設定。 為了避免中斷您應用程式中的變更，請將期間資料行新增為 HIDDEN，如 [Alter Non-Temporal Table to be System-Versioned Temporal Table](https://msdn.microsoft.com/library/mt590957.aspx#Anchor_3) (將非時態表變更為系統設定版本的時態表) 中所述。 下列範例說明在假設性的 HR 資料庫中於現有「員工」資料表上啟用系統版本設定：  
+### <a name="enabling-system-versioning-on-an-existing-table-for-data-audit"></a>在現有的資料表上針對資料稽核啟用系統版本設定  
+ 如果您需要在現有資料庫中執行資料稽核，請使用 ALTER TABLE 來延伸非時態表以使它成為已系統版本設定。 為了避免中斷您應用程式中的變更，請將期間資料行新增為 HIDDEN，如 [Alter Non-Temporal Table to be System-Versioned Temporal Table](https://msdn.microsoft.com/library/mt590957.aspx#Anchor_3)(將非時態表變更為系統設定版本的時態表) 中所述。 下列範例說明在假設性的 HR 資料庫中於現有「員工」資料表上啟用系統版本設定：  
   
 ```  
 /*   
@@ -87,7 +91,7 @@ ALTER TABLE Employee
  在執行上述指令碼之後，所有資料變更將會在記錄資料表中明確地進行收集。    
 在一般的資料稽核案例中，您會對在感興趣時間週期內套用到個別資料列的所有資料變更進行查詢。 預設的記錄資料表是以叢集資料列存放區 B 型樹狀結構建立，以有效地處理這個使用案例。  
   
-### 執行資料分析  
+### <a name="performing-data-analysis"></a>執行資料分析  
  使用上述的任何一個方式啟用系統版本設定之後，您只需再執行一次查詢，便能開始資料稽核。 下列查詢會搜尋「員工」記錄的資料列版本，搜尋條件為 EmployeeID = 1000，且在 2014 年 1 月 1 日和 2015 年 1 月 1 日之間 (包括上限) 至少有在一段時間為作用中。  
   
 ```  
@@ -145,13 +149,13 @@ FROM Employee
   
 > [!TIP]  
 >  以 FOR SYSTEM_TIME 在 Temporal 子句中指定的篩選條件可進行 SARG (也就是說， SQL Server 可以利用基礎叢集索引來執行搜尋作業，而非掃描作業)。   
-> 如果您直接查詢記錄資料表，請以 \<期間資料行>  {\< | > | =, …} date_condition AT TIME ZONE ‘UTC’ 的格式指定篩選，來確保您的篩選條件也是可進行 SARG 的。  
+> 如果您直接查詢記錄資料表，請以 \<期間資料行>  {< | > | =, …} date_condition AT TIME ZONE ‘UTC’ 的格式指定篩選，來確保您的篩選條件也是可進行 SARG 的。  
 > 如果您將 AT TIME ZONE 套用到期間資料行，SQL Server 將會執行資料表/索引掃描，這可能會耗費相當多的資源。 請在查詢中避免這類條件：  
-> \<期間資料行>  AT TIME ZONE ‘\<您的時區>’  >  {\< | > | =, …} date_condition。  
+> \<期間資料行>  AT TIME ZONE ‘\<您的時區>’  >  {< | > | =, …} date_condition。  
   
- 另請參閱：[查詢系統設定版本時態表中的資料](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md)。  
+ 另請參閱： [查詢系統設定版本時態表中的資料](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md)。  
   
-## 時間點分析 (時間移動)  
+## <a name="point-in-time-analysis-time-travel"></a>時間點分析 (時間移動)  
  資料稽核的焦點通常是在個別記錄所發生的變更上，而對於時間移動案例來說，使用者想要看的是整體資料集經過一段時間的變更方式。 時間移動有時候會包含數個您想要分析的相關時態表，每個時態表皆會以獨立的方式進行變更：  
   
 -   歷程記錄和目前資料中之重要指標的趨勢  
@@ -162,9 +166,9 @@ FROM Employee
   
  有許多實際的案例都會需要進行時間移動分析。 為了說明此使用案例，我們將參考具有自動產生歷程記錄的 OLTP。  
   
-### 具有自動產生資料歷程記錄的 OLTP  
+### <a name="oltp-with-auto-generated-data-history"></a>具有自動產生資料歷程記錄的 OLTP  
  在交易處理系統中，對重要衡量標準在經過一段時間之後的變更方式進行分析，是一件很常見的事。 在理想情況下，分析歷程記錄並不應該影響 OLTP 應用程式的效能，因為該應用程式必須在最低延遲和最少資料鎖定的情況下存取資料的最新狀態。  已系統版本設定的時態表已設計成允許使用者明確地保存完整的變更歷程記錄，來和目前的資料分開並於稍後進行分析，以將對主要 OLTP 工作負載所造成的影響降到最低。  
-針對大量交易處理的工作負載，我們建議您使用[系統版本設定時態表與記憶體最佳化資料表](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)，這能允許您以符合成本效益的方式將目前的資料儲存在記憶體中，並將完整的變更記錄儲存在磁碟上。  
+針對大量交易處理的工作負載，我們建議您使用 [系統版本設定時態表與記憶體最佳化資料表](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)，這能允許您以符合成本效益的方式將目前的資料儲存在記憶體中，並將完整的變更記錄儲存在磁碟上。  
   
  針對記錄資料表，我們建議您使用叢集資料行存放區索引，原因如下：  
   
@@ -184,7 +188,7 @@ FROM Employee
  下列程式碼範例將 ProductInventory 建立為記憶體內已系統版本設定時態表，並在記錄資料表上具有叢集資料行存放區索引 (根據預設，這會取代資料列存放區索引)：  
   
 > [!NOTE]  
->  請確定您的資料庫允許建立記憶體最佳化資料表。 請參閱[建立記憶體最佳化資料表和原生編譯的預存程序](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md)。  
+>  請確定您的資料庫允許建立記憶體最佳化資料表。 請參閱 [建立記憶體最佳化資料表和原生編譯的預存程序](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md)。  
   
 ```  
 USE TemporalProductInventory  
@@ -372,7 +376,7 @@ JOIN vw_ProductInventoryDetails FOR SYSTEM_TIME AS OF @monthAgo AS inventoryMont
     ON inventoryDayAgo.ProductId = inventoryMonthAgo.ProductId AND inventoryDayAgo.LocationId = inventoryMonthAgo.LocationID;  
 ```  
   
-## 異常偵測  
+## <a name="anomaly-detection"></a>異常偵測  
  異常偵測 (或極端值偵測) 為針對不符合預期模式或資料集中其他項目之項目所進行的識別。   
 您可以使用已系統版本設定的時態表來偵測定期發生或不規則發生的異常，因為您可以利用 Temporal 查詢來快速找出特定模式。  
 異常的定義，取決於您所收集的資料類型，以及您的商務邏輯。  
@@ -431,7 +435,7 @@ FROM CTE
 > [!NOTE]  
 >  這個範例已刻意簡化。 在生產案例中，您很有可能會使用進階的統計方法來識別沒有遵循一般模式的樣本。  
   
-## 緩時變維度  
+## <a name="slowly-changing-dimensions"></a>緩時變維度  
  資料倉儲中的維度通常會包含關於實體的相對靜態資料，例如地理位置、客戶或產品。 不過，某些案例也會需要您追蹤維度資料表中的資料變更。 由於維度中發生修改的機率較低、發生方式較無法預期，且不會發生在適用於事實資料表的定期更新排程之內，使這類維度資料表被稱為緩時變維度 (SCD)。  
   
  根據變更歷程記錄保留方式的不同，緩時變維度有數個不同的類別：  
@@ -511,7 +515,7 @@ GROUP BY DimProduct_History.ProductId, DimLocation_History.LocationId ;
   
 -   如果您預期 SCD 資料表中會有大量的歷程記錄資料列，請考慮使用叢集資料行存放區索引做為歷程記錄資料表的主要存放區選項。 那將會減少歷程記錄資料表的使用量，並加快您的分析查詢。  
   
-## 修復資料列層級資料損毀  
+## <a name="repairing-row-level-data-corruption"></a>修復資料列層級資料損毀  
  您可以依靠已系統版本設定時態表中的歷程記錄資料，來快速將個別資料列修復為先前所擷取的任何狀態。 時態表的這個屬性，在您可以找出受影響資料列和/或在您知道發生不想要變更之時間的情況下相當有用，並讓您可以非常有效地執行修復，而不必處理備份。  
   
  這個方法有多項優點：  
@@ -549,7 +553,7 @@ UPDATE Employee
   
 ```  
   
- 這個預存程序接受 @EmployeeID 和 @versionNumber 做為輸入參數。 這個程序根據預設會將資料列狀態還原到歷程記錄的最新版本 (@versionNumber = 1)。  
+ 此預存程序會採用 @EmployeeID 和 @versionNumber 作為輸入參數。 這個程序根據預設會將資料列狀態還原到歷程記錄的最新版本 (@versionNumber = 1)。  
   
  下圖顯示程序引動過程之前和之後的資料列狀態。 紅色矩形標示目前不正確的資料列版本，而綠色矩形則從歷程記錄標示正確的版本。  
   
@@ -580,7 +584,7 @@ UPDATE Employee
   
 ```  
   
- 針對相同的資料範例，下圖說明具有時間條件的修復案例。 醒目提示的項目為 @asOf parameter、在歷程記錄中於提供之時間點作用的選取資料列，以及修復作業後在目前資料表中的新資料列版本：  
+ 針對相同的資料範例，下圖說明具有時間條件的修復案例。 醒目提示的項目為 @asOf 參數、在歷程記錄中於提供之時間點作用的選取資料列，以及修復作業後在目前資料表中的新資料列版本：  
   
  ![TemporalUsageRepair3](../../relational-databases/tables/media/temporalusagerepair3.png "TemporalUsageRepair3")  
   
@@ -589,7 +593,7 @@ UPDATE Employee
   
  ![TemporalUsageRepair4](../../relational-databases/tables/media/temporalusagerepair4.png "TemporalUsageRepair4")  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [時態表](../../relational-databases/tables/temporal-tables.md)   
  [開始使用系統建立版本的時態表](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   
  [時態表系統一致性檢查](../../relational-databases/tables/temporal-table-system-consistency-checks.md)   
@@ -600,3 +604,4 @@ UPDATE Employee
  [暫存資料表中繼資料檢視和函數](../../relational-databases/tables/temporal-table-metadata-views-and-functions.md)  
   
   
+

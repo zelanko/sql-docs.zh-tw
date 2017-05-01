@@ -1,46 +1,50 @@
 ---
 title: "複寫安全性最佳做法 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "安全性 [SQL Server 複寫], 最佳做法"
-  - "安全性 [SQL Server 複寫], 網域之間"
-  - "驗證 [SQL Server 複寫]"
-  - "網際網路 [SQL Server 複寫], 安全性"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- security [SQL Server replication], best practices
+- security [SQL Server replication], between domains
+- authentication [SQL Server replication]
+- Internet [SQL Server replication], security
 ms.assetid: 1ab2635d-0992-4c99-b17d-041d02ec9a7c
 caps.latest.revision: 42
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 42
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a14c884fd9abac0488a2a1cbf2744f52aee34770
+ms.lasthandoff: 04/11/2017
+
 ---
-# 複寫安全性最佳做法
+# <a name="replication-security-best-practices"></a>複寫安全性最佳做法
   複寫會移動分散式環境中的資料，範圍從單一網域上的企業內部網路，乃至於存取未受信任網域之間以及網際網路上資料的應用程式。 因此，了解在這些不同環境下保護複寫連接安全的最佳方法相當重要。  
   
  下列資訊與所有環境中的複寫相關：  
   
--   使用業界標準方法加密複寫拓撲中各電腦之間的連接，例如虛擬私人網路 (Virtual Private Networks，VPN)、安全通訊端層 (Secure Sockets Layer，SSL) 或 IP 安全性 (IPSEC)。 如需詳細資訊，請參閱 [啟用加密連接 Database Engine & #40。SQL Server 組態管理員 & #41;](../../../database-engine/configure-windows/enable encrypted connections to the database engine.md)。 如需有關透過網際網路使用 VPN 與 SSL 複寫資料的資訊，請參閱＜ [Securing Replication Over the Internet](../../../relational-databases/replication/security/securing-replication-over-the-internet.md)＞。  
+-   使用業界標準方法加密複寫拓撲中各電腦之間的連接，例如虛擬私人網路 (Virtual Private Networks，VPN)、安全通訊端層 (Secure Sockets Layer，SSL) 或 IP 安全性 (IPSEC)。 如需詳細資訊，請參閱[啟用 Database Engine 的加密連接 &#40;SQL Server 組態管理員&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)。 如需有關透過網際網路使用 VPN 與 SSL 複寫資料的資訊，請參閱＜ [Securing Replication Over the Internet](../../../relational-databases/replication/security/securing-replication-over-the-internet.md)＞。  
   
-     如果您使用 SSL 保護複寫拓撲中的電腦之間的連接，請指定值為 **1** 或 **2** 的 **-EncryptionLevel** 參數的每個複寫代理程式 (值為 **2** 建議)。 值 **1** 會指定使用加密，但代理程式不會確認 SSL 伺服器憑證是否由受信任簽發者簽署；值 **2** 則會指定對憑證進行確認。 可於代理程式設定檔和命令列中指定代理程式參數。 如需詳細資訊，請參閱：  
+     如果使用 SSL 保護複寫拓撲中電腦之間的連接，請將每個複寫代理程式的 **-EncryptionLevel** 參數值指定為 **1** 或 **2** (建議使用 **2** 值)。 值 **1** 會指定使用加密，但代理程式不會確認 SSL 伺服器憑證是否由受信任簽發者簽署；值 **2** 則會指定對憑證進行確認。 可於代理程式設定檔和命令列中指定代理程式參數。 如需詳細資訊，請參閱：  
   
-    -   [Work with Replication Agent Profiles](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)  
+    -   [處理複寫代理程式設定檔](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)  
   
-    -   [檢視及修改複寫代理程式命令提示字元參數 & #40。SQL Server Management Studio & #41;](../../../relational-databases/replication/agents/view and modify replication agent command prompt parameters.md)  
+    -   [檢視並修改複寫代理程式命令提示字元參數 &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
     -   [複寫代理程式可執行檔概念](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
--   以不同的 Windows 帳戶執行各複寫代理程式，並針對所有複寫代理程式連接使用 Windows 驗證。 如需指定帳戶的詳細資訊，請參閱 [管理登入和密碼的複寫](../../../relational-databases/replication/security/manage-logins-and-passwords-in-replication.md)。  
+-   以不同的 Windows 帳戶執行各複寫代理程式，並針對所有複寫代理程式連接使用 Windows 驗證。 如需指定帳戶的詳細資訊，請參閱[管理複寫的登入與密碼](../../../relational-databases/replication/security/manage-logins-and-passwords-in-replication.md)。  
   
 -   僅對各代理程式授與必要的權限。 如需詳細資訊，請參閱＜ [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md)＞的「代理程式所需的權限」一節。  
   
--   確定發行集存取清單 (PAL) 中包含所有「合併代理程式」及「散發代理程式」。 如需詳細資訊，請參閱 [保護發行者](../../../relational-databases/replication/security/secure-the-publisher.md)。  
+-   確定發行集存取清單 (PAL) 中包含所有「合併代理程式」及「散發代理程式」。 如需詳細資訊，請參閱[保護發行者](../../../relational-databases/replication/security/secure-the-publisher.md)。  
   
 -   僅允許 PAL 中的帳戶擁有執行複寫工作所需的權限，以遵守最低權限原則。 切勿將登入加入至複寫不需要的任何固定伺服器角色。  
   
@@ -64,14 +68,14 @@ caps.handback.revision: 42
   
     -   確認指定的代理程式 (例如，訂閱的「散發代理程式」) 會在每部電腦上以相同的帳戶建立連接。  
   
-    -   在需要 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證的情況下，通常無法存取 UNC 快照集共用 (例如，存取可能遭到防火牆封鎖)。 在這種情況下，您可以透過檔案傳輸通訊協定 (FTP) 將快照集傳送至「訂閱者」。 如需詳細資訊，請參閱 [透過 FTP 傳送快照集](../../../relational-databases/replication/transfer-snapshots-through-ftp.md)。  
+    -   在需要 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證的情況下，通常無法存取 UNC 快照集共用 (例如，存取可能遭到防火牆封鎖)。 在這種情況下，您可以透過檔案傳輸通訊協定 (FTP) 將快照集傳送至「訂閱者」。 如需詳細資訊，請參閱[透過 FTP 傳送快照集](../../../relational-databases/replication/transfer-snapshots-through-ftp.md)。  
   
-## 另請參閱  
- [啟用加密的連接 Database Engine & #40。SQL Server 組態管理員 & #41;](../../../database-engine/configure-windows/enable encrypted connections to the database engine.md)   
+## <a name="see-also"></a>另請參閱  
+ [啟用 Database Engine 的加密連接 &#40;SQL Server 組態管理員&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   
  [透過網際網路的複寫](../../../relational-databases/replication/replication-over-the-internet.md)   
  [保護訂閱者](../../../relational-databases/replication/security/secure-the-subscriber.md)   
  [保護散發者](../../../relational-databases/replication/security/secure-the-distributor.md)   
  [保護發行者](../../../relational-databases/replication/security/secure-the-publisher.md)   
- [安全性和保護 & #40。複寫 & #41;](../../../relational-databases/replication/security/security-and-protection-replication.md)  
+ [安全性與保護 &#40;複寫&#41;](../../../relational-databases/replication/security/security-and-protection-replication.md)  
   
   

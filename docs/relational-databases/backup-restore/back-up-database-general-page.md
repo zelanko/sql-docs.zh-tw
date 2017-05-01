@@ -1,24 +1,28 @@
 ---
 title: "備份資料庫 (一般頁面) | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.backupdatabase.general.f1"
+ms.custom: 
+ms.date: 07/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.backupdatabase.general.f1
 ms.assetid: 5c344dfd-1ad3-41cc-98cd-732973b4a162
 caps.latest.revision: 64
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 64
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 038fa003ad819d89d8739f8cfaac53582f93932a
+ms.lasthandoff: 04/11/2017
+
 ---
-# 備份資料庫 (一般頁面)
+# <a name="back-up-database-general-page"></a>備份資料庫 (一般頁面)
   使用 **[備份資料庫]** 對話方塊上的 **[一般]** 頁面，檢視或修改資料庫備份作業設定。  
   
  如需基本備份概念的詳細資訊，請參閱[備份概觀 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)。  
@@ -39,9 +43,9 @@ caps.handback.revision: 64
   
 -   如需部分備份，您必須使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] [BACKUP](../../t-sql/statements/backup-transact-sql.md) 陳述式搭配 PARTIAL 選項。  
   
-## 選項  
+## <a name="options"></a>選項  
   
-### 來源  
+### <a name="source"></a>來源  
  **[來源]** 面板的選項會識別資料庫，並指定備份作業的備份類型和元件。  
   
  **資料庫**  
@@ -75,7 +79,7 @@ caps.handback.revision: 64
 |**資料庫**|指定備份整個資料庫。|  
 |**檔案與檔案群組**|指定備份指定的檔案和 (或) 檔案群組。<br /><br /> 選取這個選項會開啟 **[選取檔案與檔案群組]** 對話方塊。 在選取了要備份的檔案群組或檔案，並按一下 **[確定]**之後，選取項目就會出現在 **[檔案群組與檔案]** 方塊中。|  
   
-### 目的地  
+### <a name="destination"></a>目的地  
  **[目的地]** 面板的選項可讓您指定備份作業的備份裝置類型，並尋找現有的邏輯或實體備份裝置。  
   
 > [!NOTE]  
@@ -87,25 +91,25 @@ caps.handback.revision: 64
 |||  
 |-|-|  
 |**磁碟**|備份至磁碟。 這可能是針對資料庫所建立的系統檔案，或以磁碟為基礎的邏輯備份裝置。 目前選取的磁碟會出現在 **[備份至]** 清單中。 您最多可以為備份作業選取 64 個磁碟裝置。|  
-|**磁帶**|備份至磁帶。 這可能是針對資料庫所建立的本機磁帶機，或以磁帶為基礎的邏輯備份裝置。 目前選取的磁帶會出現在 **[備份至]** 清單中。 最大數目是 64。 如果伺服器上沒有附加磁帶裝置，則會停用此選項。 您選取的磁帶會列在 **[備份至]** 清單中。<br /><br /> 注意：未來的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中將會移除磁帶備份裝置的支援。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。|  
+|**磁帶**|備份至磁帶。 這可能是針對資料庫所建立的本機磁帶機，或以磁帶為基礎的邏輯備份裝置。 目前選取的磁帶會出現在 **[備份至]** 清單中。 最大數目是 64。 如果伺服器上沒有附加磁帶裝置，則會停用此選項。 您選取的磁帶會列在 **[備份至]** 清單中。<br /><br /> 注意：未來的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本中將會移除磁帶備份裝置的支援。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。|  
 |**URL**|備份至 Microsoft Azure Blob 儲存體。|  
   
  所顯示的下一組選項取決於選取的目的地類型。 如果選取 [磁碟] 或 [磁帶]，則會顯示下列選項。  
   
- **加入**  
- 將檔案或裝置加入至 [備份至] 清單。 您在本機磁碟或遠端磁碟上，最多可以同時備份到 64 個裝置。 若要指定遠端磁碟上的檔案，請使用完整的通用命名慣例 (UNC) 名稱。 如需詳細資訊，請參閱[備份裝置 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)。  
+ **[加入]**  
+ 將檔案或裝置加入至 **[備份至]** 清單。 您在本機磁碟或遠端磁碟上，最多可以同時備份到 64 個裝置。 若要指定遠端磁碟上的檔案，請使用完整的通用命名慣例 (UNC) 名稱。 如需詳細資訊，請參閱 [備份裝置 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)。  
  
  
   
  **移除**  
- 從 [備份至] 清單中，移除一或多個目前選取的裝置。  
+ 從 **[備份至]** 清單中，移除一個或多個目前選取的裝置。  
   
  **目錄**  
 顯示所選裝置的媒體內容 (如果裝置存在)。  當 **URL** 指定時，按鈕不會執行函數。 
    
 [選取備份目的地] 對話方塊：在您選取 [新增] 之後，[選取備份目的地] 對話方塊隨即出現。   所顯示的選項集取決於選取的目的地類型。 
 
-如果選取**磁碟**或**磁帶**作為備份目的地，則會顯示下列選項。  
+如果選取 **磁碟** 或 **磁帶** 作為備份目的地，則會顯示下列選項。  
 
 *
   **檔案名稱**  
@@ -126,9 +130,9 @@ caps.handback.revision: 64
 
 *
   **新增容器：**  
-用來註冊您沒有共用存取簽章的現有容器。  請參閱[連接到 Microsoft Azure 訂用帳戶](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md)。
+用來註冊您沒有共用存取簽章的現有容器。  請參閱 [連接到 Microsoft Azure 訂用帳戶](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md)。
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [備份交易記錄 &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)   
  [備份檔案和檔案群組 &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)   
  [定義磁碟檔案的邏輯備份裝置 &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-disk-file-sql-server.md)   
@@ -136,3 +140,4 @@ caps.handback.revision: 64
  [復原模式 &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)  
   
   
+

@@ -1,24 +1,28 @@
 ---
 title: "OLEDB Provider Information 事件類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "OLEDB Provider Information 事件類別"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- OLEDB Provider Information event class
 ms.assetid: a0316c4e-4b8c-4754-8a35-222f3c0907d1
 caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 60ff0c896be635089acd38d9ade6ec731d526250
+ms.lasthandoff: 04/11/2017
+
 ---
-# OLEDB Provider Information 事件類別
+# <a name="oledb-provider-information-event-class"></a>OLEDB Provider Information 事件類別
   在執行分散式查詢時，就會發生 **OLEDB Provider Information** 事件類別，且會收集對應於提供者連接的資訊。  
   
  這個事件類別包含使用各種屬性集，從遠端提供者收集的所有屬性，其中包括：  
@@ -27,9 +31,9 @@ caps.handback.revision: 22
   
 -   SQLPROPSET_OPTHINTS  
   
--   DBPROPSET_SQLSERVERDATASOURCEINFO (只限 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])  
+-   DBPROPSET_SQLSERVERDATASOURCEINFO (只限[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] )  
   
--   DBPROPSET_SQLSERVERDBINIT (只限 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])  
+-   DBPROPSET_SQLSERVERDBINIT (只限[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] )  
   
 -   DBPROPSET_ROWSET  
   
@@ -37,7 +41,7 @@ caps.handback.revision: 22
   
  查詢最佳化工具會利用這些屬性以及可用的中繼資料，來選擇查詢的最佳執行計畫。 這個資訊有助於追蹤執行及分析分散式查詢 Profiler 追蹤中的 OLE DB 呼叫與事件。  
   
-## OLEDB Provider Information 事件類別資料行  
+## <a name="oledb-provider-information-event-class-data-columns"></a>OLEDB Provider Information 事件類別資料行  
   
 |資料行名稱|資料類型|描述|資料行識別碼|可篩選|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -51,8 +55,8 @@ caps.handback.revision: 22
 |**HostName**|**nvarchar**|執行用戶端的電腦名稱。 如果用戶端提供主機名稱，這個資料行就會擴展。 若要判斷主機名稱，請使用 HOST_NAME 函數。|8|是|  
 |**IsSystem**|**int**|指出事件是發生在系統處理序或使用者處理序。 1 = 系統，0 = 使用者。|60|是|  
 |**LinkedServerName**|**nvarchar**|連結伺服器的名稱。|45|是|  
-|**LoginName**|**nvarchar**|使用者的登入名稱 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全性登入或 DOMAIN\username 格式的 Windows 登入認證)。|11|是|  
-|**LoginSid**|**image**|已登入之使用者的安全性識別碼 (SID)。 您可以在 **sys.server_principals** 目錄檢視中找到這項資訊。 伺服器上的每一個登入之 SID 是唯一的。|41|是|  
+|**LoginName**|**nvarchar**|使用者的登入名稱 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全性登入或 DOMAIN\username 格式的 Windows 登入認證)。|11|是|  
+|**LoginSid**|**image**|已登入之使用者的安全性識別碼 (SID)。 您可以在 **sys.server_principals** 目錄檢視中找到此項資訊。 伺服器上的每一個登入之 SID 是唯一的。|41|是|  
 |**NTDomainName**|**nvarchar**|使用者所隸屬的 Windows 網域。|7|是|  
 |**NTUserName**|**nvarchar**|Windows 使用者名稱。|6|是|  
 |**ProviderName**|**nvarchar**|OLE DB 提供者的名稱。|46|是|  
@@ -63,7 +67,7 @@ caps.handback.revision: 22
 |**TextData**|**ntext**|與追蹤中所擷取的事件類別有關的文字值。|1|是|  
 |**TransactionID**|**bigint**|由系統指派給交易的識別碼。|4|是|  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [擴充事件](../../relational-databases/extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [Transact-SQL 中的 OLE Automation 物件](../../relational-databases/stored-procedures/ole-automation-objects-in-transact-sql.md)  

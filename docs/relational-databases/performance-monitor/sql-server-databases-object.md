@@ -1,27 +1,31 @@
 ---
-title: "SQL Server、Databases 物件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "可用性群組 [SQL Server], 監視"
-  - "Databases 物件"
-  - "SQLServer:Databases"
-  - "可用性群組 [SQL Server], 效能計數器"
+title: "SQL Server 的 Databases 物件 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Availability Groups [SQL Server], monitoring
+- Databases object
+- SQLServer:Databases
+- Availability Groups [SQL Server], performance counters
 ms.assetid: a7f9e7d4-fff4-4c72-8b3e-3f18dffc8919
 caps.latest.revision: 40
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 40
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1b2355b85d82050496d1df27480723a0831e3a60
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server、Databases 物件
+# <a name="sql-server-databases-object"></a>SQL Server、Databases 物件
   SQL Server 中的 **SQLServer:Databases** 物件提供計數器，可用來監視大量複製作業、備份和還原輸送量以及交易記錄活動。 監視交易和交易記錄檔，可以判斷資料庫中有多少使用者活動，以及交易記錄檔有多滿。 使用者活動量可用來判斷資料庫的效能，並且會影響記錄檔大小、鎖定和複寫。 監視低階記錄檔活動，則可量測使用者活動和資源使用量，以協助您找出效能瓶頸。  
   
  您可同時監視 **Databases** 物件的多個執行個體，每個執行個體都代表一個資料庫。  
@@ -35,8 +39,8 @@ caps.handback.revision: 40
 |**Backup/Restore Throughput/sec**|每秒的資料庫備份和還原作業之讀取/寫入輸送量。 例如，您可以測量同時使用更多個備份裝置或是使用了更快的裝置時，資料庫備份作業的效能改變情形。 資料庫備份或還原作業的輸送量，可讓您判斷備份和還原作業的進度和效能。|  
 |**Bulk Copy Rows/sec**|每秒大量複製 (Bulk Copy) 的資料列數。|  
 |**Bulk Copy Throughput/sec**|每秒大量複製的資料量 (以 KB 為單位)。|  
-|**Commit table entries**|資料庫認可資料表之記憶體中部分的大小。 如需詳細資訊，請參閱 [sys.dm_tran_commit_table &#40;Transact-SQL&#41;](../Topic/sys.dm_tran_commit_table%20\(Transact-SQL\).md)。|  
-|**Data File(s) Size (KB)**|資料庫內的所有資料檔案總計大小 (以 KB 為單位)，包含任何自動的成長。 監視此計數器很有用，例如可決定 **tempdb** 的正確大小。|  
+|**Commit table entries**|資料庫認可資料表之記憶體中部分的大小。 如需詳細資訊，請參閱 [sys.dm_tran_commit_table &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/change-tracking-sys-dm-tran-commit-table.md)。|  
+|**Data File(s) Size (KB)**|資料庫內的所有資料檔案總計大小 (以 KB 為單位)，包含任何自動的成長。 監視此計數器很有用，例如可決定 **tempdb**的正確大小。|  
 |**DBCC Logical Scan Bytes/sec**|資料庫主控台命令 (DBCC) 每秒的邏輯讀取掃描位元組數。|  
 |**Group Commit Time/sec**|每秒的群組延遲時間 (百萬分之一秒)。|
 |**Log Bytes Received/sec**|轉存的記錄檔位元組總數。|  
@@ -60,7 +64,7 @@ caps.handback.revision: 40
 |**Log Pool Push Empty FreePool/sec**|因可用集區空白而造成記錄區塊發送失敗的比率。|
 |**Log Pool Push Low Memory/sec**|因記憶體不足而造成記錄區塊發送失敗的比率。|
 |**Log Pool Push No Free Buffer/sec**|因可用緩衝區無法使用而造成記錄區塊發送失敗的比率。|
-|**Log Pool Req. Behind Trunc/sec**|因為要求的區塊在截斷 LSN 後面，所以遺漏了記錄集區快取。|
+|**Log Pool Req.Behind Trunc/sec**|因為要求的區塊在截斷 LSN 後面，所以遺漏了記錄集區快取。|
 |**Log Pool Requests Base**|僅供內部使用。| 
 |**Log Pool Requests Old VLF/sec**|不在日誌最後一個 VLF 中的記錄集區要求。|  
 |**Log Pool Requests/sec**|記錄檔集區處理的記錄檔區塊要求數目。|  
@@ -69,8 +73,8 @@ caps.handback.revision: 40
 |**Log Shrinks**|這個資料庫的記錄壓縮總數。|  
 |**Log Truncations**|交易記錄檔被壓縮的次數。|  
 |**Percent Log Used**|使用中的記錄檔空間百分比。|  
-|**Repl. Pending Xacts**|標示成複寫、但未傳送到散發資料庫的發行集資料庫內的交易記錄檔之交易數。|  
-|**Repl. Trans. Rate**|每秒自發行集資料的交易記錄檔讀取並傳送至散發資料庫的交易數。|  
+|**Repl.Pending Xacts**|標示成複寫、但未傳送到散發資料庫的發行集資料庫內的交易記錄檔之交易數。|  
+|**Repl.Trans.Rate**|每秒自發行集資料的交易記錄檔讀取並傳送至散發資料庫的交易數。|  
 |**Shrink Data Movement Bytes/sec**|經由自動壓縮作業或是 DBCC SHRINKDATABASE 或 DBCC SHRINKFILE 陳述式移動的每秒資料量。|  
 |**Tracked transactions/sec**|資料庫的認可資料表中記錄的已認可交易數目。|  
 |**Transactions/sec**|每秒針對資料庫啟動的交易數。<br /><br /> [Transactions/sec] 並未計入僅限 XTP 交易 (由原生編譯的預存程序啟動的交易)。|  
@@ -81,7 +85,7 @@ caps.handback.revision: 40
 |**XTP Controller Log Processed/sec**|XTP 控制器執行緒每秒處理的記錄檔位元組數量。|
 |**XTP Memory Used (KB)**|資料庫中 XTP 所使用的記憶體數量。| 
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [監視資源使用狀況 &#40;系統監視器&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
  [SQL Server、資料庫複本](../../relational-databases/performance-monitor/sql-server-database-replica.md)  
   

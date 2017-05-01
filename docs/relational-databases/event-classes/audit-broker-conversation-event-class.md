@@ -1,27 +1,31 @@
 ---
-title: "Audit Broker 交談事件類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Audit Broker 交談事件類別"
+title: "Audit Broker Conversation 事件類別 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Audit Broker Conversation event class
 ms.assetid: d58e3577-e297-42e5-b8fe-206665a75d13
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9839fc61788b3bbd3070455fac7ba8d3dcfb5e4a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Audit Broker 交談事件類別
+# <a name="audit-broker-conversation-event-class"></a>Audit Broker 交談事件類別
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會建立 **Audit Broker Conversation** 事件，以報告與 Service Broker 對話安全性相關的稽核訊息。  
   
-## Audit Broker 交談事件類別的資料行  
+## <a name="audit-broker-conversation-event-class-data-columns"></a>Audit Broker 交談事件類別的資料行  
   
 |資料行|型別|說明|資料行編號|可篩選|  
 |-----------------|----------|-----------------|-------------------|----------------|  
@@ -56,7 +60,7 @@ caps.handback.revision: 25
 |3|無效的簽章|Broker 無法使用寄件者憑證中的公開金鑰來驗證寄件者所提供的訊息簽章。 這可能表示訊息已經損毀、訊息已經遭到竄改、遠端服務與本機服務並未以相同的使用者憑證設定，或是憑證已過期。|  
 |4|以目標失敗執行|目的地使用者沒有目的地佇列的接收權限。 為了防止未經授權的使用者接收訊息，不論起始使用者是否擁有將訊息加入佇列的權限，Service Broker 並未將含有無法接收佇列的目的地使用者之訊息加入佇列。|  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)  
   
   

@@ -1,28 +1,32 @@
 ---
 title: "建立檢查條件約束 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "資料表條件約束 [SQL Server]"
-  - "附加檢查條件約束"
-  - "資料行 [SQL Server], 條件約束"
-  - "條件約束 [SQL Server]，檢查"
-  - "檢查條件約束, 附加"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- table constraints [SQL Server]
+- attaching check constraints
+- columns [SQL Server], constraints
+- constraints [SQL Server], check
+- CHECK constraints, attaching
 ms.assetid: b8756304-9454-4d39-996a-64516831b7df
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5a7d6d12e6a2673fd38c8c7341c4703dd7588501
+ms.lasthandoff: 04/11/2017
+
 ---
-# 建立檢查條件約束
+# <a name="create-check-constraints"></a>建立檢查條件約束
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中建立資料表的檢查條件約束，以便指定一個或多個資料行可接受的資料值。  
@@ -48,7 +52,7 @@ caps.handback.revision: 17
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 若要建立新的檢查條件約束  
+#### <a name="to-create-a-new-check-constraint"></a>若要建立新的檢查條件約束  
   
 1.  在 [物件總管] 中，展開您想要加入檢查條件約束的資料表、以滑鼠右鍵按一下 [條件約束]，然後按一下 [新增條件約束]。  
   
@@ -85,7 +89,7 @@ caps.handback.revision: 17
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 若要建立新的檢查條件約束  
+#### <a name="to-create-a-new-check-constraint"></a>若要建立新的檢查條件約束  
   
 1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   

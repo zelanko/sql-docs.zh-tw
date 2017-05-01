@@ -1,22 +1,26 @@
 ---
 title: "原生編譯的 T-SQL 模組支援的功能 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 12/16/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 05515013-28b5-4ccf-9a54-ae861448945b
 caps.latest.revision: 44
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 44
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 16f09bada7bbf3ae964ecfa09aa33208aa2f3acf
+ms.lasthandoff: 04/11/2017
+
 ---
-# 原生編譯的 T-SQL 模組支援的功能
+# <a name="supported-features-for-natively-compiled-t-sql-modules"></a>原生編譯的 T-SQL 模組支援的功能
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
 
@@ -42,7 +46,7 @@ caps.handback.revision: 44
 
  如需有關不支援之建構的完整資訊，以及如何處理某些原生編譯模組不支援功能的相關資訊，請參閱 [Migration Issues for Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)。 如需不支援功能的詳細資訊，請參閱 [記憶體中的 OLTP 不支援 Transact-SQL 建構](../../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md)。  
 
-##  <a name="a-nameqsancspa-query-surface-area-in-native-modules"></a><a name="qsancsp"></a> 原生模組中的查詢介面區  
+##  <a name="qsancsp"></a> 原生模組中的查詢介面區  
 
 以下為支援的查詢結構：  
 
@@ -79,19 +83,19 @@ WHERE 子句：
 -   AND、OR、NOT、IN、EXISTS、BETWEEN  
 
 
-[GROUP BY](../Topic/GROUP%20BY%20%28Transact-SQL%29.md) 子句：
+[GROUP BY](../../t-sql/queries/select-group-by-transact-sql.md) 子句：
 
 - 彙總函數 AVG、COUNT、COUNT_BIG、MIN、MAX 和 SUM。  
 
 - nvarchar、char、varchar、varchar、varbinary 和 binary 類型不支援 MIN 和 MAX。  
 
-[ORDER BY](../Topic/ORDER%20BY%20Clause%20%28Transact-SQL%29.md) 子句：
+[ORDER BY](../../t-sql/queries/select-order-by-clause-transact-sql.md) 子句：
 
 
 - 不支援 **ORDER BY** 子句中的 **DISTINCT** 。
 
 
-- 如果 ORDER BY 清單中的運算式逐字顯示在 GROUP BY 清單中，支援 [GROUP BY &#40;Transact-SQL&#41;](../Topic/GROUP%20BY%20\(Transact-SQL\).md)。
+- 如果 ORDER BY 清單中的運算式逐字顯示在 GROUP BY 清單中，支援 [GROUP BY &#40;Transact-SQL&#41;](../../t-sql/queries/select-group-by-transact-sql.md)。
   - 例如，支援 GROUP BY a + b ORDER BY a + b，但不支援 GROUP BY a, b ORDER BY a + b。  
 
 
@@ -123,7 +127,7 @@ SELECT TOP (@v) … FROM … ORDER BY …
 這些原生編譯限制 [!INCLUDE[tsql](../../includes/tsql-md.md)] 不適用於記憶體最佳化資料表上解譯的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存取。  
 
 
-##  <a name="a-namedmla-data-modification"></a><a name="dml"></a> 資料修改  
+##  <a name="dml"></a> 資料修改  
 
 以下為支援的 DML 陳述式。  
 
@@ -135,7 +139,7 @@ SELECT TOP (@v) … FROM … ORDER BY …
 
 -   UPDATE 和 DELETE 陳述式支援 WHERE。  
 
-##  <a name="a-namecofa-control-of-flow-language"></a><a name="cof"></a> 流程控制語言  
+##  <a name="cof"></a> 流程控制語言  
  支援下列的流程控制語言建構。  
 
 -   [IF...ELSE &#40;Transact-SQL&#41;](../../t-sql/language-elements/if-else-transact-sql.md)  
@@ -154,9 +158,9 @@ SELECT TOP (@v) … FROM … ORDER BY …
 
 -   [THROW &#40;Transact-SQL&#41;](../../t-sql/language-elements/throw-transact-sql.md)  
 
--   BEGIN ATOMIC (在預存程序的外部等級)。 如需詳細資訊，請參閱 [Atomic Blocks](../../relational-databases/in-memory-oltp/原生程序中不可部分完成的區塊.md)。  
+-   BEGIN ATOMIC (在預存程序的外部等級)。 如需詳細資訊，請參閱 [Atomic Blocks](../../relational-databases/in-memory-oltp/atomic-blocks-in-native-procedures.md)。  
 
-##  <a name="a-namesoa-supported-operators"></a><a name="so"></a> 支援的運算子  
+##  <a name="so"></a> 支援的運算子  
  下列為支援的運算子。  
 
 -   [比較運算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/comparison-operators-transact-sql.md) (例如，>、\<、>= 和 <=)  
@@ -172,10 +176,10 @@ SELECT TOP (@v) … FROM … ORDER BY …
 -   位元運算子 ~、&、| 和 ^  
 
 -   APPLY 運算子
-    - **適用於：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。  
+    - **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
       從 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 開始，原生編譯模組支援 APPLY 運算子。
 
-##  <a name="a-namebfncspa-built-in-functions-in-natively-compiled-modules"></a><a name="bfncsp"></a> 原生編譯模組中的內建函數  
+##  <a name="bfncsp"></a> 原生編譯模組中的內建函數  
  記憶體最佳化資料表條件約束和原生編譯 T-SQL 模組支援下列函數。  
 
 -   所有[數學函數 &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
@@ -183,7 +187,7 @@ SELECT TOP (@v) … FROM … ORDER BY …
 -   日期函數：CURRENT_TIMESTAMP、DATEADD、DATEDIFF、DATEFROMPARTS、DATEPART、DATETIME2FROMPARTS、DATETIMEFROMPARTS、DAY、EOMONTH、GETDATE、GETUTCDATE、MONTH、SMALLDATETIMEFROMPARTS、SYSDATETIME、SYSUTCDATETIME 和 YEAR。  
 
 -   字串函數：LEN、LTRIM、RTRIM 和 SUBSTRING。  
-    - **適用於：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。  
+    - **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
       從 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 開始，也支援下列內建函數︰TRIM、TRANSLATE 及 CONCAT_WS。  
 
 -   Identity 函數：SCOPE_IDENTITY  
@@ -193,26 +197,26 @@ SELECT TOP (@v) … FROM … ORDER BY …
 -   Uniqueidentifier 函數：NEWID 和 NEWSEQUENTIALID  
 
 -   JSON 函數  
-    - **適用於：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。  
+    - **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
       從 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 開始，原生編譯模組支援 JSON 函數。
 
 -   錯誤函數：ERROR_LINE、ERROR_MESSAGE、ERROR_NUMBER、ERROR_PROCEDURE、ERROR_SEVERITY 和 ERROR_STATE  
 
--   系統函數：@@rowcount。 原生編譯預存程序內的陳述式會更新 @@rowcount，您可以在原生編譯預存程序中使用 @@rowcount，來判斷該原生編譯預存程序內最後執行之陳述式所影響的資料列數。 不過，@@rowcount 會在原生編譯預存程序開始及結束執行時重設為 0。  
+-   系統函式：@@rowcount。 原生編譯預存程序內的陳述式會更新 @@rowcount，您可以在原生編譯預存程序中使用 @@rowcount，來判斷該原生編譯預存程序內最後執行之陳述式所影響的資料列數。 不過，@@rowcount 會在原生編譯預存程序開始及結束執行時重設為 0。  
 
 -   安全性函數：IS_MEMBER({'group' | 'role'})、IS_ROLEMEMBER ('role' [, 'database_principal'])、IS_SRVROLEMEMBER ('role' [, 'login'])、ORIGINAL_LOGIN()、SESSION_USER、CURRENT_USER、SUSER_ID(['login'])、SUSER_SID(['login'] [, Param2])、SUSER_SNAME([server_user_sid])、SYSTEM_USER、SUSER_NAME、USER、USER_ID(['user'])、USER_NAME([id])、CONTEXT_INFO()。
 
 -   原生模組可以巢狀方式執行。
 
-##  <a name="a-nameauditinga-auditing"></a><a name="auditing"></a> 稽核  
+##  <a name="auditing"></a> 稽核  
  原生編譯預存程序中支援程序層級稽核。  
 
  如需有關稽核的詳細資訊，請參閱＜ [Create a Server Audit and Database Audit Specification](../../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md)＞。  
 
-##  <a name="a-nametqha-table-and-query-hints"></a><a name="tqh"></a> 資料表和查詢提示  
+##  <a name="tqh"></a> 資料表和查詢提示  
  支援下列功能：  
 
--   在資料表提示語法或查詢的 [OPTION 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/option-clause-transact-sql.md) 中的 INDEX、FORCESCAN 和 FORCESEEK 提示。 如需詳細資訊，請參閱[資料表提示 &#40;Transact-SQL&#41;](../Topic/Table%20Hints%20\(Transact-SQL\).md)。  
+-   在資料表提示語法或查詢的 [OPTION 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/option-clause-transact-sql.md) 中的 INDEX、FORCESCAN 和 FORCESEEK 提示。 如需詳細資訊，請參閱[資料表提示 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)。  
 
 -   FORCE ORDER  
 
@@ -220,12 +224,12 @@ SELECT TOP (@v) … FROM … ORDER BY …
 
 -   OPTIMIZE FOR  
 
- 如需詳細資訊，請參閱[查詢提示 &#40;Transact-SQL&#41;](../Topic/Query%20Hints%20\(Transact-SQL\).md)。  
+ 如需詳細資訊，請參閱[查詢提示 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)。  
 
-##  <a name="a-namelosa-limitations-on-sorting"></a><a name="los"></a> 排序的限制  
- 在使用 [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) 和一個 [ORDER BY 子句 &#40;Transact-SQL&#41;](../Topic/ORDER%20BY%20Clause%20\(Transact-SQL\).md) 的查詢中，您可以排序 8000 多個資料列。 但是沒有 [ORDER BY 子句 &#40;Transact-SQL&#41;](../Topic/ORDER%20BY%20Clause%20\(Transact-SQL\).md)，[TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) 最多只能排序 8000 個資料列 (如果有聯結則資料列更少)。  
+##  <a name="los"></a> 排序的限制  
+ 在使用 [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) 和一個 [ORDER BY 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md) 的查詢中，您可以排序 8000 多個資料列。 但是沒有 [ORDER BY 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md)，[TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) 最多只能排序 8000 個資料列 (如果有聯結則資料列更少)。  
 
- 如果查詢同時使用 [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) 運算子和一個 [ORDER BY 子句 &#40;Transact-SQL&#41;](../Topic/ORDER%20BY%20Clause%20\(Transact-SQL\).md)，TOP 運算子最多可以指定 8192 個資料列。 如果您指定超過 8192 個資料列，將會收到錯誤訊息：**Msg 41398，層級 16，狀態 1、程序 \<程序名稱*>*, 行 \<行號*>*。TOP 運算子最多可以傳回 8192 個資料列；要求 \<數字>*\>*。**  
+ 如果查詢同時使用 [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) 運算子和一個 [ORDER BY 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md)，TOP 運算子最多可以指定 8192 個資料列。 如果您指定超過 8192 個資料列，則會收到錯誤訊息：**Msg 41398，層級 16，狀態 1、程序 *\<程序名稱>*、行 *\<行號>*。TOP 運算子最多可以傳回 8192 個資料列；要求 *\<數字>*。**  
 
  如果您沒有 TOP 子句，則可以使用 ORDER BY 排序任意數目的資料列。  
 
@@ -284,4 +288,6 @@ GO
 ## <a name="see-also"></a>另請參閱  
  [原生編譯的預存程序](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)   
  [原生編譯預存程序的移轉問題](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)  
+
+
 

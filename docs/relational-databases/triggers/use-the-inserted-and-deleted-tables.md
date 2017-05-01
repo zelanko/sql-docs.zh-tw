@@ -1,30 +1,34 @@
 ---
-title: "使用插入或刪除的資料表 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-dml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "刪除的資料表"
-  - "UPDATE 陳述式 [SQL Server], DML 觸發程序"
-  - "DELETE 陳述式 [SQL Server], DML 觸發程序"
-  - "INSTEAD OF 觸發程序"
-  - "刪除的資料表"
-  - "INSERT 陳述式 [SQL Server], DML 觸發程序"
-  - "DML 觸發程序, deleted 或 inserted 資料表"
+title: "使用插入或刪除的資料表 | Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-dml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- inserted tables
+- UPDATE statement [SQL Server], DML triggers
+- DELETE statement [SQL Server], DML triggers
+- INSTEAD OF triggers
+- deleted tables
+- INSERT statement [SQL Server], DML triggers
+- DML triggers, deleted or inserted tables
 ms.assetid: ed84567f-7b91-4b44-b5b2-c400bda4590d
 caps.latest.revision: 35
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f7b04d0977ceaa1bde5eddf5246be56822517e84
+ms.lasthandoff: 04/11/2017
+
 ---
-# 使用插入或刪除的資料表
+# <a name="use-the-inserted-and-deleted-tables"></a>使用插入或刪除的資料表
   DML 觸發程序陳述式使用兩個特殊的資料表：已刪除的資料表和已插入的資料表。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會自動建立及管理這些資料表。 您可以使用這些暫存、常駐記憶體的資料表來測試某些資料修改的效果，以及設定 DML 觸發程序動作的條件。 您無法直接修改這些資料表的資料，或是在這些資料表上執行資料定義語言 (DDL) 作業，例如 CREATE INDEX。  
   
  在 DML 觸發程序中，inserted 和 deleted 資料表主要是用來執行下列動作：  
@@ -46,19 +50,19 @@ caps.handback.revision: 35
  設定觸發程序的條件時，可以適當地利用 inserted 與 deleted 資料表設定引發觸發條件的動作。 雖然參考 deleted 資料表來測試 INSERT 陳述式或是參考 inserted 資料表測試 DELETE 陳述式時，並不會有任何錯誤發生，但在這種情形下，觸發程序測試資料表內將不會有任何資料列產生。  
   
 > [!NOTE]  
->  如果觸發程序動作依據被修改的資料列數目來決定啟動與否時，則可利用對多資料列資料修改 (依據 SELECT 陳述式的 INSERT，DELETE 或 UPDATE) 的測試 (如 @@ROWCOUNT 的檢查)，以決定執行何者動作。  
+>  若觸發程序動作依據被修改的資料列數目來決定啟動與否時，則可利用對多資料列資料修改 (依據 SELECT 陳述式的 INSERT、DELETE 或 UPDATE) 的測試 (如 @@ROWCOUNT 的檢查)，以決定執行何者動作。  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] AFTER 觸發程序的已插入或已刪除的資料表中，不允許 **text**、**ntext**，或 **image** 資料行參考。 但還是包含這些資料類型，僅做為回溯相容性的目的使用。 大型資料的慣用儲存體應使用 **varchar(max)**、**nvarchar(max)**，以及 **varbinary(max)** 資料類型。 AFTER 和 INSTEAD OF 兩個觸發程序都支援已插入及已刪除資料表中的 **varchar(max)**、**nvarchar(max)**，和 **varbinary(max)** 資料。 如需詳細資訊，請參閱 [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)。  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] AFTER 觸發程序的已插入或已刪除的資料表中，不允許 **text**、 **ntext**，或 **image** 資料行參考。 但還是包含這些資料類型，僅做為回溯相容性的目的使用。 大型資料的慣用儲存體應使用 **varchar(max)**、 **nvarchar(max)**，以及 **varbinary(max)** 資料類型。 AFTER 和 INSTEAD OF 兩個觸發程序都支援已插入及已刪除資料表中的 **varchar(max)**、**nvarchar(max)**，和 **varbinary(max)** 資料。 如需詳細資訊，請參閱 [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)。  
   
  **在觸發程序中使用 inserted 資料表來強制執行商務規則的範例**  
   
  由於 CHECK 條件約束只能參考定義了資料行層級或資料表層級條件約束的資料行，任何跨資料表的條件約束 (這裡是商務規則) 都必須定義成觸發程序。  
   
- 下列範例會建立一個 DML 觸發程序。 當試圖在 `PurchaseOrderHeader` 資料表中插入新的採購單時，這個觸發程序會檢查確認供應商的信用等級良好。 若要取得對應至剛插入之採購單的供應商信用等級，您必須參考 `Vendor` 資料表，而此資料表也必須與 inserted 資料表聯結。 如果信用等級太低，將會顯示訊息，且不會執行插入動作。 請注意此範例不允許進行多資料列資料修改。 如需詳細資訊，請參閱[建立 DML 觸發程序以處理多重資料列](../../relational-databases/triggers/create-dml-triggers-to-handle-multiple-rows-of-data.md)。  
+ 下列範例會建立一個 DML 觸發程序。 當試圖在 `PurchaseOrderHeader` 資料表中插入新的採購單時，這個觸發程序會檢查確認供應商的信用等級良好。 若要取得對應至剛插入之採購單的供應商信用等級，您必須參考 `Vendor` 資料表，而此資料表也必須與 inserted 資料表聯結。 如果信用等級太低，將會顯示訊息，且不會執行插入動作。 請注意此範例不允許進行多資料列資料修改。 如需詳細資訊，請參閱 [建立 DML 觸發程序以處理多重資料列](../../relational-databases/triggers/create-dml-triggers-to-handle-multiple-rows-of-data.md)。  
   
  [!code-sql[TriggerDDL#CreateTrigger3](../../relational-databases/triggers/codesnippet/tsql/use-the-inserted-and-del_1.sql)]  
   
-## 在 INSTEAD OF 觸發程序中使用已插入與已刪除的資料表  
+## <a name="using-the-inserted-and-deleted-tables-in-instead-of-triggers"></a>在 INSTEAD OF 觸發程序中使用已插入與已刪除的資料表  
  傳遞到依據資料表定義的 INSTEAD OF 觸發程序之 inserted 及 deleted 資料表，會與傳遞到 AFTER 觸發程序的 inserted 及 deleted 資料表遵循相同的規則。 inserted 及 deleted 資料表的格式，與據以定義 INSTEAD OF 觸發程序的資料表格式相同。 inserted 及 deleted 資料表中的每一資料行，都會直接對應到基底資料表中的資料行。  
   
  下列規則是有關參考含 INSTEAD OF 觸發程序之資料表的 INSERT 或 UPDATE 陳述式何時必須提供資料行值，即使資料表不含 INSTEAD OF 觸發程序時也一樣：  
@@ -69,9 +73,9 @@ caps.handback.revision: 35
   
 -   INSERT 陳述式必須為不含 DEFAULT 條件約束的所有 NOT NULL 資料行提供值。  
   
--   除了計算、識別或**時間戳記**資料行之外，只要是任何允許 Null 值的資料行，或含 DEFAULT 定義的任何 NOT NULL 資料行，其值都是有選擇性的。  
+-   除了計算、識別或 **時間戳記** 資料行之外，只要是任何允許 Null 值的資料行，或含 DEFAULT 定義的任何 NOT NULL 資料行，其值都是有選擇性的。  
   
- 當 INSERT、UPDATE 或 DELETE 陳述式參考含有 INSTEAD OF 觸發程序的檢視時，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會呼叫觸發程序，而不會直接對任何資料表採取任何動作。 觸發程序必須使用 inserted 及 deleted 資料表中的資訊，來建立實作基底資料表中要求的動作所需的陳述式，即使為檢視所建立的 inserted 及 deleted 資料表中的資訊格式與基底資料表中的資料格式並不相同也一樣。  
+ 當 INSERT、UPDATE 或 DELETE 陳述式參考含有 INSTEAD OF 觸發程序的檢視時， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會呼叫觸發程序，而不會直接對任何資料表採取任何動作。 觸發程序必須使用 inserted 及 deleted 資料表中的資訊，來建立實作基底資料表中要求的動作所需的陳述式，即使為檢視所建立的 inserted 及 deleted 資料表中的資訊格式與基底資料表中的資料格式並不相同也一樣。  
   
  傳遞給定義在檢視上 INSTEAD OF 觸發程序的 inserted 及 deleted 資料表格式，必須與針對檢視定義的 SELECT 陳述式之選取清單相符。 例如：  
   
@@ -86,7 +90,7 @@ JOIN Person.Person AS p
 ON e.BusinessEntityID = p.BusinessEntityID;  
 ```  
   
- 此檢視設定的結果有三個資料行：一個 **int** 資料行與兩個 **nvarchar** 資料行。 傳遞至檢視所定義的 INSTEAD OF 觸發程序的已插入或已刪除的資料表，也有一個名為`BusinessEntityID`的 **int** 資料表、一個名為`LName`的 **nvarchar** 資料表，以及一個名為`FName`的 **nvarchar** 資料表。  
+ 此檢視設定的結果有三個資料行：一個 **int** 資料行與兩個 **nvarchar** 資料行。 傳遞至檢視所定義的 INSTEAD OF 觸發程序的已插入或已刪除的資料表，也有一個名為 **的** int `BusinessEntityID`資料表、一個名為 **的** nvarchar `LName`資料表，以及一個名為 **的** nvarchar `FName`資料表。  
   
  檢視的選取清單也可以包含不直接對應到單一基底資料表資料行的運算式。 有些檢視運算式，例如條件約束或函數引動過程，無法參考任何資料行且可以被忽略。 複雜運算式可以參考多個資料行，但 inserted 及 deleted 資料表的每個插入資料列只能有一個值。 同樣的原則亦適用於檢視中的簡單運算式，前提是它們參考的計算資料行含有複雜運算式。 檢視的 INSTEAD OF 觸發程序必須處理這些類型的運算式。  
   

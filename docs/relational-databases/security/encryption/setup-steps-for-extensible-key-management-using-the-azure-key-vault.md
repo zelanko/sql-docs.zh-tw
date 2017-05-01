@@ -1,31 +1,35 @@
 ---
-title: "使用 Azure 金鑰保存庫進行可延伸金鑰管理的設定步驟 | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/09/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "EKM, 使用金鑰保存庫設定"
-  - "SQL Server 連接器, 設定"
-  - "SQL Server 連接器"
+title: "使用 Azure 金鑰保存庫進行可延伸金鑰管理的設定步驟 | Microsoft 文件"
+ms.custom: 
+ms.date: 08/09/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- EKM, with key vault setup
+- SQL Server Connector, setup
+- SQL Server Connector
 ms.assetid: c1f29c27-5168-48cb-b649-7029e4816906
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 8b6ddedabeb826caf903701327b6b103666b2abb
+ms.lasthandoff: 04/11/2017
+
 ---
-# 使用 Azure 金鑰保存庫進行可延伸金鑰管理的設定步驟
+# <a name="setup-steps-for-extensible-key-management-using-the-azure-key-vault"></a>使用 Azure 金鑰保存庫進行可延伸金鑰管理的設定步驟
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   下列步驟會逐步解說適用於 Microsoft Azure 金鑰保存庫之 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 連接器的安裝和組態。  
   
-## 開始之前  
+## <a name="before-you-start"></a>開始之前  
  若要搭配使用 Azure 金鑰保存庫與 SQL Server，有幾個先決條件︰  
   
 -   您必須擁有 Azure 訂用帳戶  
@@ -44,20 +48,20 @@ SQL Server 版本  |可轉散發套件的安裝連結
 2016 | [適用於 Visual Studio 2015 的 Visual C++ 可轉散發套件](https://www.microsoft.com/download/details.aspx?id=48145)    
  
   
-## 第 I 部分：設定 Azure Active Directory 服務主體  
+## <a name="part-i-set-up-an-azure-active-directory-service-principal"></a>第 I 部分：設定 Azure Active Directory 服務主體  
  若要將 SQL Server 存取權限授與 Azure 金鑰保存庫，您需要 Azure Active Directory (AAD) 中的服務主體帳戶。  
   
 1.  移至 [Azure 傳統入口網站](https://manage.windowsazure.com)，並登入。  
   
 2.  向 Azure Active Directory 註冊應用程式。 如需註冊應用程式的詳細逐步指示，請參閱 [Azure Key Vault](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/) (Azure 金鑰保存庫) 部落格文章的＜Get an identity for the application＞(取得應用程式的識別) 一節。  
   
-3.  複製**用戶端識別碼**和**用戶端機密**以供後面的步驟使用；在其中，它們將用來授與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 對您金鑰保存庫的存取。  
+3.  複製 **用戶端識別碼** 和 **用戶端機密** 以供後面的步驟使用；在其中，它們將用來授與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 對您金鑰保存庫的存取。  
   
- ![ekm-client-id](../../../relational-databases/security/encryption/media/ekm-client-id.png "ekm-client-id")  
+ ![EKM 用戶端識別碼](../../../relational-databases/security/encryption/media/ekm-client-id.png "EKM 用戶端識別碼")  
   
- ![ekm-key-id](../../../relational-databases/security/encryption/media/ekm-key-id.png "ekm-key-id")  
+ ![EKM 金鑰識別碼](../../../relational-databases/security/encryption/media/ekm-key-id.png "EKM 金鑰識別碼")  
   
-## 第 II 部分︰建立金鑰保存庫和金鑰  
+## <a name="part-ii-create-a-key-vault-and-key"></a>第 II 部分︰建立金鑰保存庫和金鑰  
  SQL Server Database Engine 將使用此處所建立的金鑰保存庫和金鑰來進行加密金鑰保護。  
   
 > [!IMPORTANT]  
@@ -65,7 +69,7 @@ SQL Server 版本  |可轉散發套件的安裝連結
   
 1.  **開啟 PowerShell 並登入**  
   
-     安裝並啟動[最新 Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/) (1.0.1 或更高版本)。 使用下列命令登入您的 Azure 帳戶︰  
+     安裝並啟動 [最新 Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/) (1.0.1 或更高版本)。 使用下列命令登入您的 Azure 帳戶︰  
   
     ```powershell  
     Login-AzureRmAccount  
@@ -86,7 +90,7 @@ SQL Server 版本  |可轉散發套件的安裝連結
   
 2.  **建立新的資源群組**  
   
-     所有透過 Azure Resource Manager 建立的 Azure 資源都必須包含在資源群組中。 建立資源群組來包含您的金鑰保存庫。 此範例會使用 `ContosoDevRG`。 請自行選擇**唯一的**資源群組和金鑰保存庫名稱，因為所有金鑰保存庫名稱都是全域唯一的。  
+     所有透過 Azure Resource Manager 建立的 Azure 資源都必須包含在資源群組中。 建立資源群組來包含您的金鑰保存庫。 此範例會使用 `ContosoDevRG`。 請自行選擇 **唯一的** 資源群組和金鑰保存庫名稱，因為所有金鑰保存庫名稱都是全域唯一的。  
   
     ```powershell  
     New-AzureRmResourceGroup -Name ContosoDevRG -Location 'East Asia'  
@@ -108,7 +112,7 @@ SQL Server 版本  |可轉散發套件的安裝連結
   
 3.  **建立金鑰保存庫**  
   
-     `New-AzureRmKeyVault` Cmdlet 需要資源群組名稱、金鑰保存庫名稱和地理位置。 例如，針對名為 `ContosoDevKeyVault` 的金鑰保存庫，輸入：  
+     `New-AzureRmKeyVault` Cmdlet 需要資源群組名稱、金鑰保存庫名稱和地理位置。 例如，針對名為 `ContosoDevKeyVault`的金鑰保存庫，輸入：  
   
     ```powershell  
     New-AzureRmKeyVault -VaultName 'ContosoDevKeyVault' `  
@@ -149,9 +153,9 @@ SQL Server 版本  |可轉散發套件的安裝連結
     在此情況下，請讓我們使用第 I 部分中所建立的 Azure Active Directory 服務主體來授權 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體。  
   
     > [!IMPORTANT]  
-    >  Azure Active Directory 服務主體必須具有至少金鑰保存庫的 `get`、`list`、`wrapKey` 和 `unwrapKey` 權限。  
+    >  Azure Active Directory 服務主體必須具有至少金鑰保存庫的 `get`、 `list`、 `wrapKey`和 `unwrapKey` 權限。  
   
-     如下所示，針對 `ServicePrincipalName` 參數，使用第 I 部分中的**用戶端識別碼**。 `Set-AzureRmKeyVaultAccessPolicy` 順利執行時，會以沒有輸出的無訊息模式執行。  
+     如下所示，針對 **參數，使用第 I 部分中的** 用戶端識別碼 `ServicePrincipalName` 。 `Set-AzureRmKeyVaultAccessPolicy` 順利執行時，會以沒有輸出的無訊息模式執行。  
   
     ```powershell  
     Set-AzureRmKeyVaultAccessPolicy -VaultName 'ContosoDevKeyVault'`  
@@ -166,7 +170,7 @@ SQL Server 版本  |可轉散發套件的安裝連結
   
      有兩種方式可以在 Azure 金鑰保存庫中產生金鑰︰1) 匯入現有的金鑰，或 2) 建立新的金鑰。  
 
-    ### 最佳做法：
+    ### <a name="best-practice"></a>最佳做法：
     
     若要確保快速修復金鑰，並且能夠在 Azure 之外存取資料，我們建議下列最佳作法︰
  
@@ -178,20 +182,20 @@ SQL Server 版本  |可轉散發套件的安裝連結
         > [!NOTE]  
         >  備份金鑰是 Azure 金鑰保存庫金鑰作業，它會傳回可儲存在任何位置的檔案。
 
-    ### 金鑰的類型︰
+    ### <a name="types-of-keys"></a>金鑰的類型︰
     您可以在 Azure 金鑰保存庫中產生兩種類型的金鑰。 兩者都是非對稱 2048 位元 RSA 金鑰。  
   
-    -   **受軟體保護**：在軟體中處理，並在靜止時加密。 受軟體保護金鑰上的作業發生於 Azure 虛擬機器。 建議用於未在生產環境部署中使用的金鑰。  
+    -   **受軟體保護** ：在軟體中處理，並在靜止時加密。 受軟體保護金鑰上的作業發生於 Azure 虛擬機器。 建議用於未在生產環境部署中使用的金鑰。  
   
-    -   **受 HSM 保護**：由硬體安全模組 (HSM) 所建立和保護，以提供額外安全性。 一個金鑰版本的成本大約美金 $1 元。  
+    -   **受 HSM 保護** ：由硬體安全模組 (HSM) 所建立和保護，以提供額外安全性。 一個金鑰版本的成本大約美金 $1 元。  
   
         > [!IMPORTANT]  
         >  SQL Server 連接器需要金鑰名稱僅使用字元 “a-z”、“A-Z”、“0-9” 和 “-“，且長度限制為 26 個字元。   
-        > Azure 金鑰保存庫中金鑰名稱相同的不同金鑰版本，將不會與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 連接器搭配運作。 若要更換 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 正在使用的 Azure 金鑰保存庫金鑰，請參閱 [SQL Server 連接器維護和疑難排解](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)中的＜金鑰變換＞步驟。  
+        > Azure 金鑰保存庫中金鑰名稱相同的不同金鑰版本，將不會與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 連接器搭配運作。 若要更換 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]正在使用的 Azure 金鑰保存庫金鑰，請參閱 [SQL Server 連接器維護和疑難排解](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)，以熟悉使用 Azure 金鑰保存庫的 EKM 儲存體主體。  
 
-    ### 匯入現有的金鑰   
+    ### <a name="import-an-existing-key"></a>匯入現有的金鑰   
   
-    如果您有現有 2048 位元 RSA 受軟體保護金鑰，則可以將金鑰上傳至 Azure 金鑰保存庫。 或者，如果您的 `C:\\` 磁碟機中已儲存一個 .PFX 檔案 (名為 `softkey.pfx`)，並想要將它上傳到 Azure 金鑰保存庫，請輸入下列內容，將 .PFX 檔案的 `securepfxpwd` 變數設定為密碼 `12987553`：  
+    如果您有現有 2048 位元 RSA 受軟體保護金鑰，則可以將金鑰上傳至 Azure 金鑰保存庫。 或者，如果您的 `C:\\` 磁碟機中已儲存一個 .PFX 檔案 (名為 `softkey.pfx` )，並想要將它上傳到 Azure 金鑰保存庫，請輸入下列內容，將 .PFX 檔案的 `securepfxpwd` 變數設定為密碼 `12987553` ：  
   
     ``` powershell  
     $securepfxpwd = ConvertTo-SecureString –String '12987553' `  
@@ -209,13 +213,13 @@ SQL Server 版本  |可轉散發套件的安裝連結
     > [!IMPORTANT]  
     > 強烈建議在生產案例中匯入非對稱金鑰，因為這樣做可讓系統管理員在金鑰委付系統中委付金鑰。 如果非對稱金鑰是在保存庫中建立，由於私密金鑰永遠不會離開保存庫，因此無法委付金鑰。 您應該委付用來保護重要資料的金鑰。 遺失非對稱金鑰會導致資料永久無法復原。  
 
-    ### 建立新的金鑰
+    ### <a name="create-a-new-key"></a>建立新的金鑰
 
-    ##### 範例  
-    如果您想要，可以直接在 Azure 金鑰保存庫中建立新的加密金鑰，並以軟體或 HSM 保護它。 在此範例中，我們會使用 `Add-AzureRmKeyVaultKey cmdlet` 建立受軟體保護金鑰：  
+    ##### <a name="example"></a>範例  
+    如果您想要，可以直接在 Azure 金鑰保存庫中建立新的加密金鑰，並以軟體或 HSM 保護它。 在此範例中，我們會使用 `Add-AzureKeyVaultKey cmdlet` 建立受軟體保護金鑰：  
 
     ``` powershell  
-    Add-AzureRmKeyVaultKey -VaultName 'ContosoDevKeyVault' `  
+    Add-AzureKeyVaultKey -VaultName 'ContosoDevKeyVault' `  
       -Name 'ContosoRSAKey0' -Destination 'Software'  
     ```  
   
@@ -236,29 +240,29 @@ SQL Server 版本  |可轉散發套件的安裝連結
     >  金鑰保存庫支援多種版本的同名金鑰，但不應該復原 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 連接器所使用的金鑰或建立其版本。 如果系統管理員想要復原 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 加密所使用的金鑰，應該在保存庫中建立不同名稱的新金鑰，用來加密 DEK。  
    
   
-## 第 III 部分：安裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 連接器  
+## <a name="part-iii-install-the-includessnoversionincludesssnoversion-mdmd-connector"></a>第 III 部分：安裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 連接器  
  從 [Microsoft 下載中心](http://go.microsoft.com/fwlink/p/?LinkId=521700)下載 SQL Server 連接器。 (這應該由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 電腦的系統管理員所完成)。  
 
 > [!NOTE]  
->  1.0.0.440 版和較舊版本皆已被取代，而且生產環境也不再支援。 請前往 [Microsoft 下載中心](https://www.microsoft.com/download/details.aspx?id=45344)，使用 [SQL Server 連接器維護和疑難排解](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)頁面之＜SQL Server 連接器的升級＞下的指示，升級為 1.0.1.0 版或更新版本。
+>  1.0.0.440 版和較舊版本皆已被取代，而且生產環境也不再支援。 請前往 [Microsoft 下載中心](https://www.microsoft.com/download/details.aspx?id=45344) ，使用 [SQL Server 連接器維護和疑難排解](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md) 頁面之＜SQL Server 連接器的升級＞下的指示，升級為 1.0.1.0 版或更新版本。
   
- ![ekm-connector-install](../../../relational-databases/security/encryption/media/ekm-connector-install.png "ekm-connector-install")  
+ ![EKM 連接器安裝](../../../relational-databases/security/encryption/media/ekm-connector-install.png "EKM 連接器安裝")  
   
  連接器預設會安裝在 C:\Program Files\SQL Server Connector for Microsoft Azure Key Vault。 這個位置可以在安裝期間變更。 (如果變更，請調整下列指令碼)。  
   
- 連接器沒有介面，但如果安裝成功，電腦上會安裝 **Microsoft.AzureKeyVaultService.EKM.dll**。 這是密碼編譯的 EKM 提供者 DLL，需要使用 `CREATE CRYPTOGRAPHIC PROVIDER` 陳述式向 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 註冊。  
+ 連接器沒有介面，但如果安裝成功，電腦上會安裝 **Microsoft.AzureKeyVaultService.EKM.dll** 。 這是密碼編譯的 EKM 提供者 DLL，需要使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 陳述式向 `CREATE CRYPTOGRAPHIC PROVIDER` 註冊。  
   
  SQL Server 連接器安裝也可讓您選擇性地下載 SQL Server 加密的範例指令碼。  
   
  若要檢視 SQL Server Connector 的錯誤碼說明、組態設定或維護工作，請瀏覽位於這個主題底部的附錄︰  
   
--   [A. SQL Server Connector 的維護指示](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md#AppendixA)  
+-   [A.SQL Server Connector 的維護指示](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md#AppendixA)  
   
--   [C. SQL Server Connector 的錯誤碼說明](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md#AppendixC)  
+-   [C.SQL Server Connector 的錯誤碼說明](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md#AppendixC)  
   
   
-## 第 IV 部分：設定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
- 請參閱 [B. 常見問題集](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md#AppendixB)，以查看本節中每個動作所需最小權限等級的附註。  
+## <a name="part-iv-configure-includessnoversionincludesssnoversion-mdmd"></a>第 IV 部分：設定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
+ 請參閱 [B. 常見問題集](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md#AppendixB) ，以查看本節中每個動作所需最小權限等級的附註。  
   
 1.  **啟動 sqlcmd.exe 或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Studio**  
   
@@ -310,14 +314,14 @@ SQL Server 版本  |可轉散發套件的安裝連結
      使用下列方式修改下面的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 指令碼：  
   
     -   編輯 `IDENTITY` 引數 (`ContosoDevKeyVault`)，以指向您的 Azure 金鑰保存庫。
-        - 如果您使用的是**公用 Azure**，請將 `IDENTITY` 引數取代為第 II 部分中的 Azure 金鑰保存庫名稱。
-        - 如果您使用的是**私人 Azure 雲端** (例如 Azure Government、Azure China 或 Azure Germany)，請將 `IDENTITY` 引數取代為第 II 部分的步驟 3 中所傳回的保存庫 URI。 請不要在保存庫 URI 中包括 "https://"。   
-    -   將 `SECRET` 引數的第一個部分取代為第 I 部分中的 Azure Active Directory **用戶端識別碼**。在此範例中，**用戶端識別碼**是 `EF5C8E094D2A4A769998D93440D8115D`。  
+        - 如果您使用的是 **公用 Azure**，請將 `IDENTITY` 引數取代為第 II 部分中的 Azure 金鑰保存庫名稱。
+        - 如果您使用的是 **私人 Azure 雲端** (例如 Azure Government、Azure China 或 Azure Germany)，請將 `IDENTITY` 引數取代為第 II 部分的步驟 3 中所傳回的保存庫 URI。 請不要在保存庫 URI 中包括 "https://"。   
+    -   將 `SECRET` 引數的第一個部分取代為第 I 部分中的 Azure Active Directory **用戶端識別碼** 。在此範例中， **用戶端識別碼** 是 `EF5C8E094D2A4A769998D93440D8115D`。  
   
         > [!IMPORTANT]  
-        >  您必須移除**用戶端識別碼**中的連字號。  
+        >  您必須移除 **用戶端識別碼**中的連字號。  
   
-    -   使用第 I 部分中的**用戶端密碼**，完成 `SECRET` 引數的第二個部分。在此範例中，第 1 部分中的**用戶端密碼**是 `Replace-With-AAD-Client-Secret`。 `SECRET` 引數的最終字串將是一連串較長的字母和數字，*不含連字號*。  
+    -   使用第 I 部分中的 `SECRET` 用戶端密碼 **，完成** 引數的第二個部分。在此範例中，第 1 部分中的 **用戶端密碼** 是 `Replace-With-AAD-Client-Secret`。 `SECRET` 引數的最終字串將是一連串較長的字母和數字，*不含連字號*。  
   
     ```tsql  
     USE master;  
@@ -340,7 +344,7 @@ SQL Server 版本  |可轉散發套件的安裝連結
   
      如果您已如第 II 部分所述匯入非對稱金鑰，請在下列 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 指令碼中提供您的金鑰名稱來開啟金鑰。  
   
-    -   將 `CONTOSO_KEY` 取代為 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中您想要的金鑰名稱。  
+    -   將 `CONTOSO_KEY` 取代為 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中您想要的金鑰名稱。  
   
     -   將 `ContosoRSAKey0` 取代為 Azure 金鑰保存庫中您金鑰的名稱。  
   
@@ -350,12 +354,13 @@ SQL Server 版本  |可轉散發套件的安裝連結
     WITH PROVIDER_KEY_NAME = 'ContosoRSAKey0',  
     CREATION_DISPOSITION = OPEN_EXISTING;  
     ```  
-## 下一個步驟  
+## <a name="next-step"></a>下一個步驟  
   
-現在您已完成基本組態，請參閱如何[搭配使用 SQL Server 連接器與 SQL 加密功能](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)   
+現在您已完成基本組態，請參閱如何 [搭配使用 SQL Server 連接器與 SQL 加密功能](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)   
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用 Azure Key Vault 進行可延伸金鑰管理](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)   
 [SQL Server 連接器維護和疑難排解](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)  
   
   
+

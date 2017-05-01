@@ -1,24 +1,28 @@
 ---
 title: "管理原則類別目錄 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.dmf.policycategories.f1"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.dmf.policycategories.f1
 ms.assetid: d188a819-731f-4029-98aa-780d3299a0ce
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 952740a7191b43f61f9cff035b0ad944fe802084
+ms.lasthandoff: 04/11/2017
+
 ---
-# 管理原則類別目錄
+# <a name="manage-policy-categories"></a>管理原則類別目錄
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，將某個類別目錄中的任何或所有可用原則套用至 [!INCLUDE[tsql](../../includes/tsql-md.md)]的整個執行個體。  
   
  **本主題內容**  
@@ -50,7 +54,7 @@ caps.handback.revision: 18
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 若要將類別目錄原則套用至 SQL Server 執行個體  
+#### <a name="to-apply-category-policies-to-a-sql-server-instance"></a>若要將類別目錄原則套用至 SQL Server 執行個體  
   
 1.  在 **[物件總管]**中，按一下加號展開要套用類別目錄原則的伺服器。  
   
@@ -63,7 +67,7 @@ caps.handback.revision: 18
      **名稱**  
      原則類別目錄的名稱。  
   
-     **託管資料庫訂閱**  
+     **[託管資料庫訂閱]**  
      強制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上的所有資料庫強制施行原則類別目錄中的原則。  
   
 4.  選取或清除 **[託管資料庫訂閱]** 下的任何或所有核取方塊，將該原則類別目錄套用至 SQL Server 執行個體。  
@@ -72,7 +76,7 @@ caps.handback.revision: 18
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 若要將類別目錄原則套用至 SQL Server 執行個體  
+#### <a name="to-apply-category-policies-to-a-sql-server-instance"></a>若要將類別目錄原則套用至 SQL Server 執行個體  
   
 1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   

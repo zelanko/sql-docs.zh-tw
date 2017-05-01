@@ -1,29 +1,33 @@
 ---
 title: "判斷哪些查詢持有鎖定 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "查詢 [SQL Server], 擴充事件"
-  - "查詢 [SQL Server], 持有鎖定"
-  - "xe"
-  - "擴充事件 [SQL Server], 鎖定"
-  - "擴充事件 [SQL Server], 持有鎖定"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- queries [SQL Server], extended events
+- queries [SQL Server], holding locks
+- xe
+- extended events [SQL Server], locks
+- extended events [SQL Server], holding locks
 ms.assetid: bdfce092-3cf1-4b5e-99d5-fd8c6f9ad560
 caps.latest.revision: 15
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 291043a0e143f876db5091a18c655bcd78a9857f
+ms.lasthandoff: 04/11/2017
+
 ---
-# 判斷哪些查詢持有鎖定
+# <a name="determine-which-queries-are-holding-locks"></a>判斷哪些查詢持有鎖定
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   資料庫管理員經常需要識別阻礙資料庫效能的鎖定來源。  
@@ -39,7 +43,7 @@ caps.handback.revision: 15
 > [!NOTE]  
 >  這個範例會使用 AdventureWorks 資料庫。  
   
-### 判斷哪些查詢持有鎖定  
+### <a name="to-determine-which-queries-are-holding-locks"></a>判斷哪些查詢持有鎖定  
   
 1.  在查詢編輯器中，發出下列陳述式。  
   
@@ -153,7 +157,7 @@ caps.handback.revision: 15
     DROP EVENT SESSION FindBlockers ON SERVER  
     ```  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [CREATE EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md)   
  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-event-session-transact-sql.md)   
  [DROP EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-event-session-transact-sql.md)   

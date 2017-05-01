@@ -1,38 +1,42 @@
 ---
-title: "檢視及處理 Database Engine Tuning Advisor 的輸出 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dta.sessionmonitor.f1"
-  - "sql13.dta.reports.f1"
-  - "sql13.dta.recommendations.f1"
-  - "sql13.dta.applyrecommendations.f1"
-helpviewer_keywords: 
-  - "檢視記錄檔"
-  - "建議 [Database Engine Tuning Advisor]"
-  - "摘要微調資訊 [SQL Server]"
-  - "Database Engine Tuning Advisor [SQL Server], 建議"
-  - "Database Engine Tuning Advisor [SQL Server], 記錄檔"
-  - "Database Engine Tuning Advisor [SQL Server], 檢視輸出"
-  - "Database Engine Tuning Advisor [SQL Server], 報表"
-  - "記錄檔 [SQL Server], 調整"
-  - "報表 [SQL Server], 調整"
-  - "檢視微調輸出"
+title: "檢視及處理 Database Engine Tuning Advisor 的輸出 | Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dta.sessionmonitor.f1
+- sql13.dta.reports.f1
+- sql13.dta.recommendations.f1
+- sql13.dta.applyrecommendations.f1
+helpviewer_keywords:
+- viewing logs
+- recommendations [Database Engine Tuning Advisor]
+- summary tuning information [SQL Server]
+- Database Engine Tuning Advisor [SQL Server], recommendations
+- Database Engine Tuning Advisor [SQL Server], logs
+- Database Engine Tuning Advisor [SQL Server], viewing output
+- Database Engine Tuning Advisor [SQL Server], reports
+- logs [SQL Server], tuning
+- reports [SQL Server], tuning
+- viewing tuning output
 ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
 caps.latest.revision: 34
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ce827e3df11e103bced1b62afb2329db9c81e0f4
+ms.lasthandoff: 04/11/2017
+
 ---
-# 檢視及處理 Database Engine Tuning Advisor 的輸出
+# <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor"></a>檢視及處理 Database Engine Tuning Advisor 的輸出
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Database Engine Tuning Advisor 微調資料庫時，會建立摘要、建議、報表和微調記錄。 您可以使用微調記錄輸出針對 Database Engine Tuning Advisor 的微調工作階段進行疑難排解。 您可以使用摘要、建議和報表來判定是否要實作微調建議，或繼續微調，直到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝的查詢效能改進達到所需的程度為止。 如需有關如何使用 Database Engine Tuning Advisor 來建立工作負載及微調資料庫的詳細資訊，請參閱＜ [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)＞。  
@@ -43,9 +47,9 @@ caps.handback.revision: 34
  您也可以使用 GUI 來檢視由 **dta** 命令列公用程式產生的微調輸出。  
   
 > [!NOTE]  
->  如果您使用 **dta** 命令列公用程式並指定以 **-ox** 引數將輸出寫入到 XML 檔案，則在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的 [檔案] 功能表上按一下 [開啟檔案]，即可開啟並檢視 XML 輸出檔。 如需詳細資訊，請參閱 [Use SQL Server Management Studio](../../ssms/use-sql-server-management-studio.md)。 如需 **dta** 命令列公用程式的相關資訊，請參閱 [dta 公用程式](../../tools/dta/dta-utility.md)。  
+>  如果您使用 **dta** 命令列公用程式並指定以 **-ox** 引數將輸出寫入到 XML 檔案，則在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的 [檔案] 功能表上按一下 [開啟檔案]，即可開啟並檢視 XML 輸出檔。 如需詳細資訊，請參閱 [Use SQL Server Management Studio](http://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)。 如需 **dta** 命令列公用程式的相關資訊，請參閱 [dta 公用程式](../../tools/dta/dta-utility.md)。  
   
-#### 以 Database Engine Tuning Advisor GUI 檢視微調建議  
+#### <a name="to-view-tuning-recommendations-with-the-database-engine-tuning-advisor-gui"></a>以 Database Engine Tuning Advisor GUI 檢視微調建議  
   
 1.  使用 Database Engine Tuning Advisor GUI 或 **dta** 命令列公用程式微調資料庫。 如需詳細資訊，請參閱 [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)。 如果您要使用現有的微調工作階段，請略過這個步驟，繼續執行步驟 2。  
   
@@ -61,7 +65,7 @@ caps.handback.revision: 34
   
 6.  如果您要將所有會建立或卸除此項建議中所有資料庫物件的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼儲存到一個指令碼檔案中，請按一下 **[動作]** 功能表上的 **[儲存建議]** 。  
   
-#### 若要以 Database Engine Tuning Advisor GUI 檢視微調摘要和報表  
+#### <a name="to-view-the-tuning-summary-and-reports-with-the-database-engine-tuning-advisor-gui"></a>若要以 Database Engine Tuning Advisor GUI 檢視微調摘要和報表  
   
 1.  使用 Database Engine Tuning Advisor GUI 或 **dta** 命令列公用程式微調資料庫。 如需詳細資訊，請參閱 [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)。 如果您要使用現有的微調工作階段，請略過這個步驟，繼續執行步驟 2。  
   
@@ -73,7 +77,7 @@ caps.handback.revision: 34
   
 5.  在 **[微調報表]** 窗格中，按一下 **[選取報表]** 來選擇要檢視的微調報表。  
   
-#### 若要以 Database Engine Tuning Advisor GUI 檢視微調記錄  
+#### <a name="to-view-tuning-logs-with-the-database-engine-tuning-advisor-gui"></a>若要以 Database Engine Tuning Advisor GUI 檢視微調記錄  
   
 1.  使用 Database Engine Tuning Advisor GUI 或 **dta** 命令列公用程式微調資料庫。 微調工作負載時請確定您已勾選 **[一般]** 索引標籤上的 **[儲存微調記錄]** 。 如果您要使用現有的微調工作階段，請略過這個步驟，繼續執行步驟 2。  
   
@@ -86,7 +90,7 @@ caps.handback.revision: 34
 ##  <a name="Implement"></a> 實作微調建議  
  您可以手動實作 Database Engine Tuning Advisor 建議，或是作為微調工作階段的一部份自動實作。 如果實作前想要先檢查微調結果，請使用 Database Engine Tuning Advisor GUI。 然後您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來手動執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼，這些指令碼是 Database Engine Tuning Advisor 分析實作建議的工作負載而產生。 如果在實作前不需要檢查結果，可將 **-a** 選項與 **dta** 命令提示字元公用程式一起使用。 這會導致公用程式在分析工作負載後自動執行微調建議。 下列程序解釋如何使用兩種 Database Engine Tuning Advisor 介面，實作微調建議。  
   
-#### 若要使用 Database Engine Tuning Advisor GUI 手動實作微調建議  
+#### <a name="to-manually-implement-tuning-recommendations-with-the-database-engine-tuning-advisor-gui"></a>若要使用 Database Engine Tuning Advisor GUI 手動實作微調建議  
   
 1.  使用 Database Engine Tuning Advisor GUI 或 **dta** 命令提示字元公用程式微調資料庫。 如需詳細資訊，請參閱 [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)。 如果您要使用現有的微調工作階段，請略過這個步驟，繼續執行步驟 2。  
   
@@ -98,7 +102,7 @@ caps.handback.revision: 34
   
 5.  按一下 **[確定]** 以套用建議事項。  
   
-#### 若要使用 dta 命令提示字元公用程式自動實作微調建議  
+#### <a name="to-automatically-implement-tuning-recommendations-using-the-dta-command-prompt-utility"></a>若要使用 dta 命令提示字元公用程式自動實作微調建議  
   
 1.  決定您希望 Database Engine Tuning Advisor 在分析過程中考慮加入、移除或保留的資料庫功能 (索引、索引檢視、分割)。  
   
@@ -114,7 +118,7 @@ caps.handback.revision: 34
     dta -E -D DatabaseName -if WorkloadFile -s SessionName -a  
     ```  
   
-     其中 **-E** 可指定微調工作階段使用信任連接 (而非登入識別碼與密碼)；**-D** 可指定想要微調的資料庫名稱，或工作負載會用到的多個資料庫清單 (以逗號分隔)；**-if** 可指定工作負載檔案的名稱與路徑；**-s** 可指定微調工作階段的名稱，而 **-a** 則指定要讓 **dta** 命令提示字元公用程式在分析過工作負載後，不需提示就自動套用微調建議。 如需有關使用 **dta** 命令提示字元公用程式微調資料庫的詳細資訊，請參閱 [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)。  
+     其中 **-E** 可指定微調工作階段使用信任連接 (而非登入識別碼與密碼)； **-D** 可指定想要微調的資料庫名稱，或工作負載會用到的多個資料庫清單 (以逗號分隔)； **-if** 可指定工作負載檔案的名稱與路徑； **-s** 可指定微調工作階段的名稱，而 **-a** 則指定要讓 **dta** 命令提示字元公用程式在分析過工作負載後，不需提示就自動套用微調建議。 如需有關使用 **dta** 命令提示字元公用程式微調資料庫的詳細資訊，請參閱 [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)。  
   
 3.  按 ENTER 鍵。  
   
@@ -125,10 +129,10 @@ caps.handback.revision: 34
   
  下列程序說明如何以這二種工具介面來應用使用者指定的組態功能。  
   
-### 使用 Database Engine Tuning Advisor GUI 來評估微調建議  
+### <a name="using-database-engine-tuning-advisor-gui-to-evaluate-tuning-recommendations"></a>使用 Database Engine Tuning Advisor GUI 來評估微調建議  
  下列程序說明如何評估 Database Engine Tuning Advisor 所產生的建議，但是 GUI 不能讓您指定新的實體設計結構以供評估。  
   
-##### 若要以 Database Engine Tuning Advisor GUI 評估微調建議  
+##### <a name="to-evaluate-tuning-recommendations-with-the-database-engine-tuning-advisor-gui"></a>若要以 Database Engine Tuning Advisor GUI 評估微調建議  
   
 1.  請使用 Database Engine Tuning Advisor 圖形使用者介面 (GUI) 來微調資料庫。 如需詳細資訊，請參閱 [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)。 若您想要評估現有的微調工作階段，請在 [工作階段監視器] 中按兩下該工作階段。  
   
@@ -140,10 +144,10 @@ caps.handback.revision: 34
   
 5.  按一下工具列上的 **[開始分析]** 按鈕。 Database Engine Tuning Advisor 完成時，您可以在 **[建議]** 索引標籤上檢視結果。  
   
-### 使用 Database Engine Tuning Advisor GUI 匯出微調工作階段結果，以進行假設微調分析  
+### <a name="using-database-engine-tuning-advisor-gui-to-export-tuning-session-results-for-what-if-tuning-analysis"></a>使用 Database Engine Tuning Advisor GUI 匯出微調工作階段結果，以進行假設微調分析  
  下列程序說明如何將 Database Engine Tuning Advisor 微調工作階段結果匯出至 XML 檔案，您可以編輯此檔案，然後以 **dta** 命令列公用程式加以微調。 您可利用此程序針對假設的新款實際設計結構，執行微調分析，而不必在您找出結構是否可產生所需的效能改善之前，將其實作於資料庫中而造成負擔。 對於不熟悉 XML 的使用者來說，若想利用 Database Engine Tuning Advisor XML 結構描述的彈性來執行模擬分析，使用 Database Engine Tuning Advisor GUI 先初步微調資料庫，然後再將微調結果匯出至 **.xml** 檔案，這個方法會很好用。  
   
-##### 若要從 Database Engine Tuning Advisor GUI 匯出微調工作階段結果，以使用 dta 命令列公用程式來進行假設分析  
+##### <a name="to-export-tuning-session-results-from-the-database-engine-tuning-advisor-gui-for-what-if-analysis-with-the-dta-command-line-utility"></a>若要從 Database Engine Tuning Advisor GUI 匯出微調工作階段結果，以使用 dta 命令列公用程式來進行假設分析  
   
 1.  請使用 Database Engine Tuning Advisor 圖形使用者介面 (GUI) 來微調資料庫。 如需詳細資訊，請參閱 [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)。 若您想要評估現有的微調工作階段，請在 [工作階段監視器] 中按兩下該工作階段。  
   
@@ -155,10 +159,10 @@ caps.handback.revision: 34
   
 5.  使用步驟 4 中所建立的 XML 檔案，作為 **dta** 命令列公用程式的輸入檔。 如需有關 XML 輸入檔與此工具一起使用的詳細資訊，請參閱＜ [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)＞中的＜使用 dta 公用程式微調資料庫＞。  
   
-### 以 dta 命令列公用程式來應用使用者指定的組態功能  
+### <a name="using-the-user-specified-configuration-feature-with-the-dta-command-line-utility"></a>以 dta 命令列公用程式來應用使用者指定的組態功能  
  若您是有經驗的 XML 開發人員，您可以建立 Database Engine Tuning Advisor XML 輸入檔，在檔案中指定工作負載及實際資料庫設計結構的假設組態，例如：索引、索引檢視或資料分割。 然後您可以使用 **dta** 命令列公用程式，分析此假設組態對資料庫之查詢效能的影響。 下列程序將逐步說明這項處理：  
   
-##### 若要以 dta 命令列公用程式來應用使用者指定的組態功能  
+##### <a name="to-use-the-user-specified-configuration-feature-with-the-dta-command-line-utility"></a>若要以 dta 命令列公用程式來應用使用者指定的組態功能  
   
 1.  建立微調工作負載。 如需有關執行此工作的資訊，請參閱＜ [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)＞。  
   
@@ -174,7 +178,7 @@ caps.handback.revision: 34
     C:\Program Files\Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd  
     ```  
   
-     您也可以自線上取得 Database Engine Tuning Advisor XML 結構描述：[http://schemas.microsoft.com/sqlserver/2004/07/dta](http://schemas.microsoft.com/sqlserver/2004/07/dta)。  
+     您也可以自線上取得 Database Engine Tuning Advisor XML 結構描述： [http://schemas.microsoft.com/sqlserver/2004/07/dta](http://schemas.microsoft.com/sqlserver/2004/07/dta)。  
   
 6.  建立工作負載及 XML 輸入檔之後，即可準備將輸入檔提交至 **dta** 命令列公用程式，以進行分析。 請確定您有指定 **-ox** 公用程式引數的 XML 輸出檔名稱。 這樣會以 **Configuration** 元素中所指定的建議組態來建立 XML 輸出檔。 若您想再執行一次 Database Engine Tuning Advisor，以檢查另一個以該輸出檔為基礎的假設組態，則您可以複製輸出檔的 **Configuration** 元素內容，並貼到新的 XML 輸入檔或原來的 XML 輸入檔中。 如需有關 XML 輸入檔與 **dta** 公用程式一起使用的資訊，請參閱 [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)中的＜使用 dta 公用程式微調資料庫＞。  
   
@@ -187,10 +191,10 @@ caps.handback.revision: 34
   
  檢閱 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的任何微調工作階段前，您必須使用 Database Engine Tuning Advisor 來微調工作負載，以在伺服器執行個體上建立微調工作階段。 如需詳細資訊，請參閱 [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)。  
   
-### 檢閱現有的微調工作階段  
+### <a name="review-existing-tuning-sessions"></a>檢閱現有的微調工作階段  
  使用下列步驟來瀏覽特定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體上的現有微調工作階段。  
   
-##### 若要檢閱現有的微調工作階段  
+##### <a name="to-review-existing-tuning-sessions"></a>若要檢閱現有的微調工作階段  
   
 1.  開始 Database Engine Tuning Advisor GUI。 如需詳細資訊，請參閱 [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)。  
   
@@ -200,10 +204,10 @@ caps.handback.revision: 34
   
 4.  按兩下微調工作階段名稱，其資訊就會載入到 Database Engine Tuning Advisor。 載入工作階段資訊後，您可以選擇其中任何一個索引標籤來檢視此微調工作階段的相關資訊。  
   
-### 以假設組態評估現有的微調工作階段  
+### <a name="evaluate-existing-tuning-sessions-as-hypothetical-configurations"></a>以假設組態評估現有的微調工作階段  
  使用下列步驟來評估現有的微調工作階段。 評估現有的微調工作階段牽涉到檢視與編輯其建議，然後重新微調。 例如，您決定只要在 **table1**上建立索引，您從現有的微調建議中刪除索引檢視與分割。 接著，Database Engine Tuning Advisor 會建立新的微調工作階段，並使用已編輯的建議作為假設組態，來微調您資料庫的工作負載。 這表示 Database Engine Tuning Advisor 會微調資料庫的工作負載 (就如同已實作編輯後的建議)，讓您可以執行有限的假設條件分析。 稱之為有限的假設條件分析的原因是，當您使用 Database Engine Tuning Advisor GUI 時只能選擇現有建議的子集。 若要執行完整的模擬分析，您必須指定全新的假設組態 (此組態不能是任何先前微調工作階段的子集)，您必須使用 Database Engine Tuning Advisor XML 輸入檔來搭配 **dta** 命令列公用程式。  
   
-##### 若要評估現有的微調工作階段  
+##### <a name="to-evaluate-an-existing-tuning-session"></a>若要評估現有的微調工作階段  
   
 1.  啟動 Database Engine Tuning Advisor 之後，在 [工作階段監視器] 上半部的微調工作階段按兩下，將工作階段資訊載入至 Database Engine Tuning Advisor。  
   
@@ -223,10 +227,10 @@ caps.handback.revision: 34
   
 9. 按一下工具列上的 **[開始分析]** 按鈕。 Database Engine Tuning Advisor 會使用假設組態開始微調資料庫。 當 Database Engine Tuning Advisor 完成時，您可以就像平常對於任何工作階段一樣的檢視這個工作階段的結果。  
   
-### 複製現有的微調工作階段  
+### <a name="clone-existing-tuning-sessions"></a>複製現有的微調工作階段  
  您可以選擇 Database Engine Tuning Advisor 中的複製選項，以根據現有的工作階段來建立新的微調工作階段。 使用複製選項時，您是以現有的工作階段為基礎來建立新的微調工作階段。 接著，您可以視需要變更新工作階段的微調選項。 如前述步驟所述評估現有的工作階段時，Database Engine Tuning Advisor 也會建立新的微調工作階段，但您無法變更微調選項。  
   
-##### 藉由複製現有的工作階段來建立新的微調工作階段  
+##### <a name="to-create-new-tuning-sessions-by-cloning-existing-sessions"></a>藉由複製現有的工作階段來建立新的微調工作階段  
   
 1.  啟動 Database Engine Tuning Advisor 之後，在 [工作階段監視器] 上半部的微調工作階段按兩下，將工作階段資訊載入至 Database Engine Tuning Advisor。  
   
@@ -242,15 +246,15 @@ caps.handback.revision: 34
   
 ##  <a name="UI"></a> 使用者介面描述  
   
-### 工作階段監視器  
+### <a name="sessions-monitor"></a>工作階段監視器  
  **[工作階段監視器]** 會顯示有關 Database Engine Tuning Advisor 中已開啟之工作階段的資訊。 若要顯示屬性視窗中有關工作階段的資訊，請在 **[工作階段監視器]**中選取工作階段名稱。  
   
-### 建議索引標籤  
+### <a name="recommendations-tab"></a>建議索引標籤  
  Database Engine Tuning Advisor 完成工作負載分析後，即顯示 **[建議]** 索引標籤。 此方格包含各考量物件的建議。 如果有資料分割建議，則會出現在上方格，而索引建議會出現在下方格。 如果沒有建議就不會出現方格。  
   
  **[定義]** 資料行包含建議的資料分割或索引的定義，並以超連結方式顯示。 此資料行通常太窄，無法看到整個定義。 按一下超連結以顯示包含完整定義與 **[複製至剪貼簿]** 按鈕的對話方塊。  
   
-#### 資料分割建議  
+#### <a name="partition-recommendations"></a>[資料分割建議]  
  **資料庫名稱**  
  資料庫包含建議要修改的物件。  
   
@@ -263,13 +267,13 @@ caps.handback.revision: 34
  **詳細資料**  
  [建議的目標] 的描述。 可能的值包括資料分割函數的範圍，或資料分割配置為空白。  
   
- **資料分割 的數目**  
+ [資料分割的數目]  
  由建議的資料分割函數所定義之資料分割的數目。 此函數與配置一起使用，並套用至資料表時，資料表中的資料就會劃分為多個資料分割。  
   
- **定義**  
+ **[定義]**  
  [建議的目標] 的定義。 按一下資料行，即可開啟包含建議動作之指令碼的 [SQL 指令碼預覽] 對話方塊。  
   
-##### 索引建議事項  
+##### <a name="index-recommendations"></a>[索引建議]  
  **資料庫名稱**  
  資料庫包含建議要修改的物件。  
   
@@ -291,22 +295,22 @@ caps.handback.revision: 34
  **大小 (KB)**  
  建議的新物件的預期大小。 如果此資料行是空白，請按一下 **[請參閱報表，以取得現有物件的大小]**。  
   
- **定義**  
+ **[定義]**  
  [建議的目標] 的定義。 按一下資料行，即可開啟包含建議動作之指令碼的 [SQL 指令碼預覽] 對話方塊。  
   
- **顯示現有的物件**  
+ **[建議]**  
  選取即可在方格中顯示所有現有的物件，即使 Database Engine Tuning Advisor 沒有與物件相關的建議亦同。  
   
- **請參閱報表，以取得現有物件的大小**  
+ **[請參閱報表，以取得現有物件的大小]**  
  選取即可檢視報表，此報表在建議方格中提供現有物件的大小。  
   
-### 動作功能表/應用建議選項  
+### <a name="actions-menuapply-recommendations-options"></a>動作功能表/應用建議選項  
  在分析了工作負載以及提出了建議之後，請在 **[動作]** 功能表上按一下 **[套用建議]** ，來開啟 **[套用建議]** 對話方塊。  
   
- **立即套用**  
+ **[立即套用]**  
  產生建議的指令碼，並執行該指令碼以實作建議。  
   
- **排程在稍後執行**  
+ **[排程在稍後執行]**  
  產生建議的指令碼，並將動作儲存為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業。  
   
  **日期**  
@@ -315,10 +319,10 @@ caps.handback.revision: 34
  **Time**  
  指定您想要執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業以套用建議的時間。  
   
-### 報表索引標籤選項  
+### <a name="reports-tab-options"></a>報表索引標籤選項  
  Database Engine Tuning Advisor 完成工作負載的分析後，就會出現 **[報表]** 索引標籤。  
   
- **微調摘要**  
+ **[微調摘要]**  
  顯示 Database Engine Tuning Advisor 建議的摘要。  
   
  **日期**  
@@ -339,8 +343,8 @@ caps.handback.revision: 34
  **工作負載資料表**  
  工作負載為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表時顯示。  
   
- **工作負載**  
- 工作負載從 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的查詢編輯器中匯入時顯示。  
+ **[工作負載]**  
+ 工作負載從 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的查詢編輯器中匯入時顯示。  
   
  **最大微調時間**  
  設定 Database Engine Tuning Advisor 分析時可用的最大時間。  
@@ -348,7 +352,7 @@ caps.handback.revision: 34
  **微調花費的時間**  
  Database Engine Tuning Advisor 實際用來分析工作負載的時間。  
   
- **預期的改進百分比**  
+ **[預期的改進百分比]**  
  如果實作所有 Database Engine Tuning Advisor 建議，目標工作負載所預期的改進百分比。  
   
  **建議的最大空間 (MB)**  
@@ -384,11 +388,11 @@ caps.handback.revision: 34
  **建議要建立的統計資料數目**  
  建議要在微調資料庫中建立的統計資料數目。 只有在建議統計資料時才會顯示。  
   
- **選取報表**  
+ **Select Report**  
  查看選取之報表的詳細資料。 各報表的方格資料行有所差異。  
   
-## 另請參閱  
- [啟動及使用 Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)   
+## <a name="see-also"></a>另請參閱  
+ [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)   
  [dta 公用程式](../../tools/dta/dta-utility.md)  
   
   

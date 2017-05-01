@@ -1,26 +1,30 @@
 ---
-title: "SQL Server 擴充的事件封裝 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "擴充事件 [SQL Server], 封裝"
-  - "xe"
+title: "SQL Server 擴充的事件套件 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- extended events [SQL Server], packages
+- xe
 ms.assetid: 6bcb04fc-ca04-48f4-b96a-20b604973447
 caps.latest.revision: 21
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: afb2140445252ca5b3a27f5ec9bf33219e3eef0c
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server 擴充的事件封裝
+# <a name="sql-server-extended-events-packages"></a>SQL Server 擴充的事件封裝
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   封裝是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 擴充事件物件的容器。 有三種擴充事件封裝，包括以下項目：  
@@ -52,12 +56,12 @@ caps.handback.revision: 21
   
  不同封裝中的物件可以混合在事件工作階段中。 如需詳細資訊，請參閱 [SQL Server 擴充的事件工作階段](../../relational-databases/extended-events/sql-server-extended-events-sessions.md)。  
   
-## 封裝內容  
+## <a name="package-contents"></a>封裝內容  
  下圖顯示封裝中可以存在的物件 (包含在模組內)。 模組可以是可執行檔或動態連結程式庫。  
   
- ![模組、封裝和物件的關係](../../relational-databases/extended-events/media/xepackagesobjects.gif "模組、封裝和物件的關係")  
+ ![模組、套件和物件的關係](../../relational-databases/extended-events/media/xepackagesobjects.gif "模組、套件和物件的關係")  
   
-### 事件  
+### <a name="events"></a>事件  
  事件是程式 (例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) 之執行路徑中所要的監視點。 事件引發會夾帶到達所要之點的事實以及事件開始引發之後的狀態資訊。  
   
  事件只能用來追蹤或是觸發動作， 這些動作可以是同步或非同步。  
@@ -69,7 +73,7 @@ caps.handback.revision: 21
   
  所有事件都有定義其內容的版本控制結構描述， 這個結構描述是由具有定義完善之類型的事件資料行所組成。 特定類型的事件一定要依照此結構描述內指定的相同順序來提供其資料。 但是，事件目標不需要使用提供的所有資料。  
   
-#### 事件分類  
+#### <a name="event-categorization"></a>事件分類  
  擴充的事件會使用類似於 Windows 事件追蹤 (ETW) 的事件分類模型。 會有兩個事件屬性用於分類，也就是通道和關鍵字。 使用這些屬性可支援將擴充的事件與 ETW 及其工具整合。  
   
  **通路**  
@@ -95,10 +99,10 @@ where name = 'keyword_map'
 > [!NOTE]  
 >  關鍵字會緊密地對應到 SQL 追蹤事件的目前群組。  
   
-### 目標  
- 目標是事件取用者。 目標會處理事件 (在引發事件的執行緒上同步處理，或是在系統提供的執行緒上非同步處理)。 擴充的事件會提供幾個目標，您可適當地使用這些目標來導向事件輸出。 如需詳細資訊，請參閱＜ [SQL Server Extended Events Targets](../Topic/SQL%20Server%20Extended%20Events%20Targets.md)＞。  
+### <a name="targets"></a>目標  
+ 目標是事件取用者。 目標會處理事件 (在引發事件的執行緒上同步處理，或是在系統提供的執行緒上非同步處理)。 擴充的事件會提供幾個目標，您可適當地使用這些目標來導向事件輸出。 如需詳細資訊，請參閱＜ [SQL Server Extended Events Targets](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)＞。  
   
-### 動作  
+### <a name="actions"></a>動作  
  動作是針對事件的程式設計形式的回應或回應序列。 動作會繫結至事件，而每一個事件都可以有一組獨特的動作。  
   
 > [!NOTE]  
@@ -118,15 +122,15 @@ where name = 'keyword_map'
   
 -   堆疊傾印工具  
   
--   執行計畫偵測 (僅限 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])  
+-   執行計畫偵測 (僅限[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] )  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)] 堆疊集合 (僅限 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)] 堆疊集合 (僅限[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] )  
   
 -   執行階段統計資料計算  
   
 -   在例外狀況發生時蒐集使用者輸入  
   
-### 述詞  
+### <a name="predicates"></a>述詞  
  述詞是一組邏輯規則，這些規則會在處理事件時加以評估。 如此可讓擴充的事件使用者選擇性地擷取以特定準則為根據的事件資料。  
   
  述詞可以在本機環境中儲存資料，本機環境可用來建立述詞，該述詞會在每隔 *n* 分鐘或是每當事件引發 *n* 次時傳回 True 一次。 這個本機環境存放區也可用來動態地更新此述詞，藉以在事件包含類似資料時抑制未來的事件引發。  
@@ -136,7 +140,7 @@ where name = 'keyword_map'
 > [!NOTE]  
 >  如果稍早的述詞檢查失敗，可能就無法評估有副作用的述詞。  
   
-### 類型  
+### <a name="types"></a>類型  
  由於資料是串連在一起的位元組集合，所以需要此位元組集合的長度和特性，以便能夠解譯資料。 這項資訊會封裝在類型物件中。 下列是針對封裝物件所提供的類型：  
   
 -   event  
@@ -153,7 +157,7 @@ where name = 'keyword_map'
   
  如需詳細資訊，請參閱 [sys.dm_xe_objects &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql.md)。  
   
-### 地圖  
+### <a name="maps"></a>地圖  
  對應表會將內部值對應到字串，如此可讓使用者得知該值所表示的意義。 使用者不只能夠取得數值，也可以取得有意義的內部值描述。 下列查詢將示範如何取得對應值。  
   
 ```  
@@ -215,9 +219,9 @@ where name = 'lock_mode'
   
  使用這個表格當做範例，假設您有一個名為 mode 的資料行，而且它的值為 5。 此表格指出 5 對應到 X，這表示鎖定類型為獨佔。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [SQL Server 擴充的事件工作階段](../../relational-databases/extended-events/sql-server-extended-events-sessions.md)   
  [SQL Server 擴充的事件引擎](../../relational-databases/extended-events/sql-server-extended-events-engine.md)   
- [SQL Server 擴充的事件目標](../Topic/SQL%20Server%20Extended%20Events%20Targets.md)  
+ [SQL Server Extended Events Targets](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)  
   
   

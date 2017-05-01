@@ -1,25 +1,29 @@
 ---
 title: "SQL Server 物件與版本的 DAC 支援 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-data-tier-apps"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "資料層應用程式 [SQL Server], 支援物件"
-  - "物件 [SQL Server], 資料層應用程式"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-data-tier-apps
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data-tier application [SQL Server], supported objects
+- objects [SQL Server], data-tier applications
 ms.assetid: b1b78ded-16c0-4d69-8657-ec57925e68fd
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6c6fa912592feefe48ce023f58fbf032d64004e6
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server 物件與版本的 DAC 支援
+# <a name="dac-support-for-sql-server-objects-and-versions"></a>SQL Server 物件與版本的 DAC 支援
   資料層應用程式 (DAC) 支援最常用的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 物件。  
   
  **本主題內容**  
@@ -60,7 +64,7 @@ caps.handback.revision: 19
   
 -   所有支援的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本都支援匯出和擷取。  
   
--   [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]以及所有 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 版本都支援所有作業。  
+-   [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 以及所有 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]和 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]版本都支援所有作業。  
   
 -   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Service Pack 2 (SP2) 或更新版本以及 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP4 或更新版本都支援所有作業。  
   
@@ -81,7 +85,7 @@ caps.handback.revision: 19
 ##  <a name="DeploymentLimitations"></a> 資料部署限制  
  請注意在 SQL Server 2012 SP1 中 DAC Framework 資料部署引擎內的這些精確度限制。 這些限制適用於下列 DAC Framework 動作：部署或發行 .dacpac 檔案，以及匯入 .bacpac 檔案。  
   
-1.  在某些情況下遺失中繼資料及 sql_variant 資料行內的基底類型。 在受影響的案例下，您將會看見包含下列訊息的警告：**當由 DAC Framework 部署時，不會保存 sql_variant 資料行內使用之某些資料類型的某些屬性。**  
+1.  在某些情況下遺失中繼資料及 sql_variant 資料行內的基底類型。 在受影響的案例下，您將會看見包含下列訊息的警告：  **當由 DAC Framework 部署時，不會保存 sql_variant 資料行內使用之某些資料類型的某些屬性。**  
   
     -   MONEY、SMALLMONEY、NUMERIC、DECIMAL 基底類型：不會保存有效位數。  
   
@@ -110,11 +114,11 @@ caps.handback.revision: 19
   
 -   **部署/發行/匯入** - 使用 DAC Framework 將封裝部署到資料庫的動作，例如部署或發行 .dacpac 檔案以及匯入 .bacpac 檔案，這些限制都適用。 目標資料庫中產生的資料可能不包含封裝中資料的不失真表示法。 部署/匯入記錄將會在每個執行個體遇到問題時包含一則訊息 (如上所述)。 錯誤將封鎖此作業 – 請參閱上面的類別目錄 3 - 但是在其他警告的情況下將會繼續。  
   
-     如需此案例中受影響的資料以及如何解決部署/發行/匯入動作之這項限制的詳細資訊，請參閱[這個主題](http://go.microsoft.com/fwlink/?LinkId=267087)。  
+     如需此案例中受影響的資料以及如何解決部署/發行/匯入動作之這項限制的詳細資訊，請參閱 [這個主題](http://go.microsoft.com/fwlink/?LinkId=267087)。  
   
 -   **因應措施** - 擷取和匯出作業會將不失真的 BCP 資料檔寫入 .dacpac 或 .bacpac 檔案中。 為了避免限制，請使用 SQL Server BCP.exe 命令列公用程式，將不失真的資料從 DAC 封裝部署到目標資料庫。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [資料層應用程式](../../relational-databases/data-tier-applications/data-tier-applications.md)  
   
   

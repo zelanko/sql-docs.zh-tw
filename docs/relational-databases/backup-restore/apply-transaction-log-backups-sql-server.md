@@ -1,28 +1,32 @@
 ---
 title: "套用異動記錄備份 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/13/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "還原 [SQL Server], 記錄備份"
-  - "交易記錄備份 [SQL Server], 套用備份"
-  - "線上還原 [SQL Server], 記錄備份"
-  - "交易記錄備份 [SQL Server], 還原順序所需的數量"
-  - "備份 [SQL Server], 記錄備份"
+ms.custom: 
+ms.date: 08/13/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- restoring [SQL Server], log backups
+- transaction log backups [SQL Server], applying backups
+- online restores [SQL Server], log backups
+- transaction log backups [SQL Server], quantity needed for restore sequence
+- backups [SQL Server], log backups
 ms.assetid: 9b12be51-5469-46f9-8e86-e938e10aa3a1
 caps.latest.revision: 38
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 60f9ef5bcf12be3b4a16f6ed56a21da2a2b54501
+ms.lasthandoff: 04/11/2017
+
 ---
-# 套用異動記錄備份 (SQL Server)
+# <a name="apply-transaction-log-backups-sql-server"></a>套用異動記錄備份 (SQL Server)
   本主題僅與完整復原模式和大量記錄復原模式有關。  
   
  此主題描述如何在還原 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的過程中套用交易記錄備份。  
@@ -31,7 +35,7 @@ caps.handback.revision: 38
 ##  <a name="Requirements"></a> 還原交易記錄備份的需求  
  若要套用交易記錄備份，必須符合下列需求：  
   
--   **有足夠的記錄備份供還原順序使用：** 您必須備份了足夠的記錄，才能完成還原順序。 您必須先備妥必要的記錄備份，包括所需的[結尾記錄備份](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)，才開始還原順序。  
+-   **有足夠的記錄備份供還原順序使用：** 您必須備份了足夠的記錄，才能完成還原順序。 您必須先備妥必要的記錄備份，包括所需的 [結尾記錄備份](../../relational-databases/backup-restore/tail-log-backups-sql-server.md) ，才開始還原順序。  
   
 -   **正確的還原順序：**  首先必須還原最新的完整資料庫備份或差異資料庫備份。 接著，必須依時間先後順序，還原在該完整或差異資料庫備份之後建立的所有交易記錄。 如果這個記錄鏈結中的某個交易記錄備份遺失或損毀，您只能還原該遺漏的交易記錄之前的交易記錄。  
   
@@ -44,7 +48,7 @@ caps.handback.revision: 38
   
  例如，一系列交易記錄備份中包含長時間執行的交易。 該交易的開頭記錄在第一個交易記錄備份，但是交易的結尾記錄在第二個交易記錄備份。 那麼一個交易記錄備份中將沒有認可或回復作業的記錄。 如果在套用第一個交易記錄備份時執行復原作業，則會將長時間執行的交易視為未完成，並且回復在交易的第一個交易記錄備份中記錄的資料修改。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不允許在此時間點之後套用第二個交易記錄備份。  
   
-> **注意：**在某些狀況下，您可以在記錄還原期間明確加入檔案。  
+> **注意：** 在某些狀況下，您可以在記錄還原期間明確加入檔案。  
   
 ##  <a name="PITrestore"></a> 使用記錄備份還原到失敗點  
  假設發生下列事件順序。  
@@ -70,7 +74,7 @@ caps.handback.revision: 38
   
  **替代程序 2：使用較早的完整資料庫備份來還原資料庫**  
   
-> **注意：**如果發生問題，讓您無法使用下午 6:00 的 完整資料庫備份進行還原，這個程序需要更多的時間。 比起從下午 6:00 的 完整資料庫備份進行還原，這個程序需要更多的時間。  
+> **注意：** 如果發生問題，讓您無法使用下午 6:00 的 完整資料庫備份進行還原，這個程序需要更多的時間。 比起從下午 6:00 的 完整資料庫備份進行還原，這個程序需要更多的時間。  
   
 1.  將目前使用者中交易記錄的結尾記錄備份建立為失敗點。  
   
@@ -78,7 +82,7 @@ caps.handback.revision: 38
   
      這個替代程序指出維護一系列完整資料庫備份的交易記錄備份鏈結可以提供的額外安全性。  
   
-> **注意：**在某些情況下，您也可以使用交易記錄，將資料庫還原到特定時間點。 如需詳細資訊，請參閱[將 SQL Server 資料庫還原至某個時間點 &#40;完整復原模式&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)。  
+> **注意：** 在某些情況下，您也可以使用交易記錄，將資料庫還原到特定時間點。 如需詳細資訊，請參閱 [將 SQL Server 資料庫還原至某個時間點 &#40;完整復原模式&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)。  
   
 ##  <a name="RelatedTasks"></a> 相關工作  
  **套用交易記錄備份**  
@@ -87,7 +91,7 @@ caps.handback.revision: 38
   
  **還原到您的復原點**  
   
--   [在完整復原模式下將資料庫還原至失敗點 &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/restore database to point of failure - full recovery.md)  
+-   [在完整復原模式下將資料庫還原至失敗點 &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/restore-database-to-point-of-failure-full-recovery.md)  
   
 -   [將 SQL Server 資料庫還原至某個時間點 &#40;完整復原模式&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
   
@@ -101,7 +105,8 @@ caps.handback.revision: 38
   
 -   [在不還原資料的情況下復原資料庫 &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/recover-a-database-without-restoring-data-transact-sql.md)  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [交易記錄 &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)  
   
   
+

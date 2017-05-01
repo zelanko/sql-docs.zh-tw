@@ -1,34 +1,38 @@
 ---
-title: "散發者資訊，代理程式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rep.monitor.Distributor.commonjobs..f1"
+title: "散發者資訊、代理程式 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rep.monitor.Distributor.commonjobs..f1
 ms.assetid: 5d601a64-6af0-42f9-81b1-cf0087f1c50d
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5b1db16b9faf24e2255857203ac4a685d5326ca3
+ms.lasthandoff: 04/11/2017
+
 ---
-# 散發者資訊，代理程式
+# <a name="distributor-information-agents"></a>散發者資訊，代理程式
   **[代理程式]** 索引標籤會顯示與發行者和訂閱者相關聯之代理程式和維護作業的相關資訊。  
   
  專供「散發者」檢視中的「散發者」使用的代理程式會位於 **[代理程式]** 索引標籤中，當中包含了可供「發行者」使用且位於 **[代理程式]** 索引標籤中的所有代理程式。 但是，專供「散發者」檢視中之「散發者」使用的 **[代理程式]** 索引標籤也會包含「散發者代理程式」和「合併代理程式」。  
   
  如需有關「快照集」、「佇列讀取器代理程式」和維護作業的詳細資訊，請參閱＜ [Publisher Information, Agents](../../relational-databases/replication/publisher-information-agents.md)＞。 請注意，當您在 **[代理程式]** 索引標籤上檢視「散發者」的代理程式資訊時，「發行者」資訊也會顯示，以供「快照集」和「記錄讀取器」代理程式使用。 但是，在專供「散發者」檢視中之「散發者」使用的 **[代理程式]** 索引標籤中，您也可以選取 **[散發者代理程式]** 和 **[合併代理程式]**。  
   
-## 選項  
+## <a name="options"></a>選項  
  下列各節將描述這個索引標籤上針對「散發者代理程式」和「合併代理程式」顯示的資料。  
   
-### 散發者代理程式  
+### <a name="distributor-agent"></a>[散發者代理程式]  
  **狀態**  
  代理程式的狀態。 下列清單顯示可能的狀態值：  
   
@@ -49,7 +53,7 @@ caps.handback.revision: 13
  與代理程式相關聯之發行集的名稱。  
   
  **訂閱**  
- 在表單中的訂閱名稱: [*SubscriberName*]。 [*資料庫*]。  
+ 訂閱的名稱，格式應該為：[*SubscriberName*].[*Database*]。  
   
  **型別**  
  複寫類型：發送、提取或匿名。  
@@ -69,16 +73,16 @@ caps.handback.revision: 13
  **延遲**  
  在發行集資料庫中認可的最近一次變更與散發資料庫中認可的對應命令之間經過的時間 (以秒為單位)。  
   
- **#交易**  
+ **交易數**  
  最近一次代理程式執行期間，在散發資料庫中認可的交易數目。  
   
- **#命令**  
+ **命令數**  
  最近一次代理程式執行期間，在散發資料庫中認可的命令數目。 命令與資料變更 (例如更新) 相同。  
   
- **Avg. #命令**  
+ **平均命令數**  
  最近一次代理程式執行期間，每項交易的平均命令數目。  
   
-### 合併代理程式  
+### <a name="merge-agent"></a>[合併代理程式]  
  **狀態**  
  代理程式的狀態。 下列清單顯示可能的狀態值：  
   
@@ -99,7 +103,7 @@ caps.handback.revision: 13
  與代理程式相關聯之發行集的名稱。  
   
  **訂閱**  
- 在表單中的訂閱名稱: [*SubscriberName*]。 [*資料庫*]。  
+ 訂閱的名稱，格式應該為：[*SubscriberName*].[*Database*]。  
   
  **型別**  
  複寫類型：發送、提取或匿名。  
@@ -140,10 +144,10 @@ caps.handback.revision: 13
  **訂閱者衝突**  
  合併處理期間訂閱者端每秒所發生的衝突數。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [啟動複寫監視器](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [檢視資訊並執行工作的 「 發行者 」 與 #40;複寫監視器 & #41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)   
- [檢視資訊並執行工作與發行集和 #40; 相關聯的代理程式複寫監視器 & #41;](../../relational-databases/replication/monitor/view information and perform tasks for publication agents.md)   
+ [檢視發行者的資訊並執行工作 &#40;複寫監視器&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)   
+ [檢視與發行集建立關聯之代理程式的資訊並執行工作 &#40;複寫監視器&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md)   
  [監視複寫](../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
   
   

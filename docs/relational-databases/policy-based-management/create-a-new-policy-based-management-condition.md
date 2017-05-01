@@ -1,25 +1,29 @@
 ---
-title: "建立新的原則式管理條件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "原則式管理, 建立原則條件"
+title: "建立新的原則式管理條件 | Microsoft 文件"
+ms.custom: 
+ms.date: 08/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Policy-Based Management, creating policy conditions
 ms.assetid: 8a612f7e-6c70-49db-a4de-48431e097cc5
 caps.latest.revision: 11
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 656163a8971e279893bd2e7fa9ec382d4c0c95c7
+ms.lasthandoff: 04/11/2017
+
 ---
-# 建立新的原則式管理條件
-  本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中建立原則式管理條件。  
+# <a name="create-a-new-policy-based-management-condition"></a>建立新的原則式管理條件
+  本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ，在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中建立原則式管理條件。  
   
  **本主題內容**  
   
@@ -40,7 +44,7 @@ caps.handback.revision: 11
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 建立條件  
+#### <a name="to-create-a-condition"></a>建立條件  
   
 1.  在物件總管中，按一下加號，展開您想要建立原則式管理條件的伺服器。  
   
@@ -61,3 +65,4 @@ caps.handback.revision: 11
 9. 完成後，請按一下 **[確定]**。  
   
   
+

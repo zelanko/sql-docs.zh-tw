@@ -1,32 +1,36 @@
 ---
 title: "管理資料收集 | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/18/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-keywords: 
-  - "資料收集"
-helpviewer_keywords: 
-  - "資料收集 [SQL Server]"
-  - "資料收集器 [SQL Server], Transact-SQL"
-  - "資料收集器 [SQL Server], SQL Server Management Studio"
+ms.custom: 
+ms.date: 07/18/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+keywords:
+- "資料收集"
+helpviewer_keywords:
+- data collection [SQL Server]
+- data collector [SQL Server], Transact-SQL
+- data collector [SQL Server], SQL Server Management Studio
 ms.assetid: bc137daa-9f37-4c01-9766-8b7350c75af8
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3501375e366cd5c84dd4544d4af0c11f00f2dbb1
+ms.lasthandoff: 04/11/2017
+
 ---
-# 管理資料收集
+# <a name="manage-data-collection"></a>管理資料收集
  您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 預存程序和函數來管理資料收集的不同層面，例如啟用或停用資料收集、變更收集組的組態，或是檢視管理資料倉儲中的資料。  
   
-## 使用 SSMS 管理資料收集  
- 您可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中使用物件總管來執行與資料收集器相關的下列工作：  
+## <a name="manage-data-collection-using-ssms"></a>使用 SSMS 管理資料收集  
+ 您可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中使用物件總管來執行與資料收集器相關的下列工作：  
   
 -   [設定管理資料倉儲 &#40;SQL Server Management Studio&#41;](../../relational-databases/data-collection/configure-the-management-data-warehouse-sql-server-management-studio.md)  
   
@@ -36,7 +40,7 @@ caps.handback.revision: 26
   
 -   [啟動或停止收集組](../../relational-databases/data-collection/start-or-stop-a-collection-set.md)  
   
--   [使用 SQL Server Profiler 來建立 SQL 追蹤收集組 &#40;SQL Server Management Studio&#41;](../../relational-databases/data-collection/use sql server profiler to create a sql trace collection set.md)  
+-   [使用 SQL Server Profiler 來建立 SQL 追蹤收集組 &#40;SQL Server Management Studio&#41;](../../relational-databases/data-collection/use-sql-server-profiler-to-create-a-sql-trace-collection-set.md)  
   
 -   [檢視收集組記錄 &#40;SQL Server Management Studio&#41;](../../relational-databases/data-collection/view-collection-set-logs-sql-server-management-studio.md)  
   
@@ -44,8 +48,8 @@ caps.handback.revision: 26
   
 -   [檢視收集組報表 &#40;SQL Server Management Studio&#41;](../../relational-databases/data-collection/view-a-collection-set-report-sql-server-management-studio.md)  
   
-## 使用 Transact-SQL 管理資料收集  
- 資料收集器會提供預存程序的廣泛集合，您可使用這些預存程序來執行任何資料收集器相關的工作。 例如，您可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 來執行下列工作：  
+## <a name="manage-data-collection-using-transact-sql"></a>使用 Transact-SQL 管理資料收集  
+ 資料收集器會提供預存程序的廣泛集合，您可使用這些預存程序來執行任何資料收集器相關的工作。 例如，您可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]來執行下列工作：  
   
 -   [設定資料收集參數 &#40;Transact-SQL&#41;](../../relational-databases/data-collection/configure-data-collection-parameters-transact-sql.md)  
   
@@ -53,7 +57,7 @@ caps.handback.revision: 26
   
 -   [啟動或停止收集組](../../relational-databases/data-collection/start-or-stop-a-collection-set.md)  
   
--   [建立使用一般 T-SQL 查詢收集器型別的自訂收集組 &#40;Transact-SQL&#41;](../../relational-databases/data-collection/create custom collection set - generic t-sql query collector type.md)  
+-   [建立使用一般 T-SQL 查詢收集器型別的自訂收集組 &#40;Transact-SQL&#41;](../../relational-databases/data-collection/create-custom-collection-set-generic-t-sql-query-collector-type.md)  
   
 -   [將收集項加入收集組 &#40;Transact-SQL&#41;](../../relational-databases/data-collection/add-a-collection-item-to-a-collection-set-transact-sql.md)  
   
@@ -63,9 +67,9 @@ caps.handback.revision: 26
   
 >**重要！！** 不同於一般預存程序，資料收集器的預存程序會使用嚴格類型的參數，而且不支援資料類型的自動轉換。 如果沒有依照引數描述所指定，以正確的輸入參數資料類型來呼叫這些參數，預存程序會傳回錯誤。  
   
- 您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來建立及執行所提供的程式碼範例。 如需詳細資訊，請參閱[物件總管](../../ssms/object/object-explorer.md)。 另一個替代方法是使用任何編輯器建立查詢，並將它儲存為 .sql 副檔名的文字檔。 您可以使用 **sqlcmd** 公用程式，從 Windows 命令提示字元執行查詢。 如需詳細資訊，請參閱[使用 sqlcmd 公用程式](../../relational-databases/scripting/use-the-sqlcmd-utility.md)。  
+ 您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來建立及執行所提供的程式碼範例。 如需詳細資訊，請參閱 [物件總管](http://msdn.microsoft.com/library/469ea8e2-79b9-44c8-bb6f-f0e1c5dbf0f2)。 另一個替代方法是使用任何編輯器建立查詢，並將它儲存為 .sql 副檔名的文字檔。 您可以使用 **sqlcmd** 公用程式，從 Windows 命令提示字元執行查詢。 如需詳細資訊，請參閱 [使用 sqlcmd 公用程式](../../relational-databases/scripting/sqlcmd-use-the-utility.md)。  
   
-### 預存程序和檢視表  
+### <a name="stored-procedures-and-views"></a>預存程序和檢視表  
  **使用資料收集器**  
   
  下表描述的是您可以用來處理資料收集器的預存程序。  
@@ -161,7 +165,7 @@ caps.handback.revision: 26
 |--------------------|-----------------|  
 |[sp_syscollector_delete_execution_log_tree &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-delete-execution-log-tree-transact-sql.md)|從執行記錄中刪除收集組項目。|  
   
-### 函數  
+### <a name="functions"></a>函數  
  下表描述的是您可以用來取得執行和追蹤資訊的函數。  
   
 |函數名稱|描述|  
@@ -170,9 +174,10 @@ caps.handback.revision: 26
 |[fn_syscollector_get_execution_stats &#40;Transact-SQL&#41;](../../relational-databases/system-functions/fn-syscollector-get-execution-stats-transact-sql.md)|取得收集組或封裝的執行統計資料。 這些資訊包含所記錄的錯誤。|  
 |[snapshots.fn_trace_getdata &#40;Transact-SQL&#41;](../../relational-databases/system-functions/snapshots-fn-trace-getdata-transact-sql.md)|取得使用一般 SQL 追蹤收集器型別來收集資料時所記錄的事件。|  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [執行預存程序](../../relational-databases/stored-procedures/execute-a-stored-procedure.md)   
- [使用 SQL Server Management Studio](../../ssms/use-sql-server-management-studio.md)   
+ [使用 SQL Server Management Studio](http://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)   
  [資料收集](../../relational-databases/data-collection/data-collection.md)  
   
   
+

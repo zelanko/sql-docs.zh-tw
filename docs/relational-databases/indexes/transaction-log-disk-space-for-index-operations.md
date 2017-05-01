@@ -1,31 +1,35 @@
 ---
-title: "索引作業的交易記錄磁碟空間 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "索引磁碟空間 [SQL Server]"
-  - "空間 [SQL Server], 索引"
-  - "交易記錄檔 [SQL Server], 磁碟空間"
-  - "磁碟空間 [SQL Server], 交易記錄檔"
-  - "空間 [SQL Server], 交易記錄檔"
+title: "索引作業的交易記錄磁碟空間 | Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- index disk space [SQL Server]
+- space [SQL Server], indexes
+- transaction logs [SQL Server], disk space
+- disk space [SQL Server], transaction logs
+- space [SQL Server], transaction logs
 ms.assetid: 4f8a4922-4507-4072-be67-c690528d5c3b
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a1d06fd19479d11e1705e6c21ed7e1698a89896a
+ms.lasthandoff: 04/11/2017
+
 ---
-# 索引作業的交易記錄磁碟空間
+# <a name="transaction-log-disk-space-for-index-operations"></a>索引作業的交易記錄磁碟空間
   大規模的索引作業會產生大量資料載入，而造成交易記錄檔迅速填滿。 為了確保索引作業可以回復，在索引作業完成之前，交易記錄檔不得遭到截斷；不過，在索引作業期間可以備份記錄檔。 因此，交易記錄檔必須有足夠空間來儲存索引作業交易，以及索引作業期間的任何並行使用者交易。 不管是離線或線上索引作業都是如此。 因為在離線索引作業期間無法存取基礎資料表，所以使用者交易不多，記錄檔應該不會成長太快。 線上索引作業並不禁止並行使用者活動，因此大規模的線上索引作業若再結合大量的並行使用者交易，會造成交易記錄檔持續成長，同時又無法截斷記錄檔。  
   
-## 建議  
+## <a name="recommendations"></a>建議  
  當您執行大規模的索引作業時，請考慮下列建議：  
   
 1.  確定在執行線上大規模索引作業之前已備份及截斷交易記錄檔，且記錄檔有足夠空間可儲存預計的索引和使用者交易。  
@@ -39,7 +43,7 @@ caps.handback.revision: 17
   
 4.  不要在外顯交易中執行線上索引作業。 這樣需等到外顯交易結束之後，才能截斷記錄檔。  
   
-## 相關內容  
+## <a name="related-content"></a>相關內容  
  [索引 DDL 作業的磁碟空間需求](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md)  
   
  [索引磁碟空間範例](../../relational-databases/indexes/index-disk-space-example.md)  

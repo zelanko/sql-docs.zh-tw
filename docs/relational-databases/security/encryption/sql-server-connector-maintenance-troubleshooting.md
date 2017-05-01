@@ -1,24 +1,28 @@
 ---
 title: "SQL Server 連接器維護和疑難排解 | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/27/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQL Server 連接器, 附錄"
+ms.custom: 
+ms.date: 04/05/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Server Connector, appendix
 ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
 caps.latest.revision: 21
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 7d93dd0a6eae5fead834526e86455717c6ed97e6
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server 連接器維護和疑難排解
+# <a name="sql-server-connector-maintenance-amp-troubleshooting"></a>SQL Server 連接器維護和疑難排解
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   本主題提供 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 連接器的補充資訊。 如需 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 連接器的詳細資訊，請參閱[使用 Azure 金鑰保存庫進行可延伸金鑰管理 &#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)、[使用 Azure 金鑰保存庫進行可延伸金鑰管理的設定步驟](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)和[搭配使用 SQL Server 連接器與 SQL 加密功能](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)。  
@@ -26,13 +30,13 @@ caps.handback.revision: 21
   
 ##  <a name="AppendixA"></a> A. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 連接器的維護指示  
   
-### 金鑰變換  
+### <a name="key-rollover"></a>金鑰變換  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 連接器需要金鑰名稱僅使用字元 “a-z”、“A-Z”、“0-9” 和 “-“，且長度限制為 26 個字元。   
-> Azure 金鑰保存庫中金鑰名稱相同的不同金鑰版本，將不會與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 連接器搭配運作。 若要循環使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 正在使用的 Azure 金鑰保存庫金鑰，必須建立具有新金鑰名稱的新金鑰。  
+> Azure 金鑰保存庫中金鑰名稱相同的不同金鑰版本，將不會與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 連接器搭配運作。 若要循環使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]正在使用的 Azure 金鑰保存庫金鑰，必須建立具有新金鑰名稱的新金鑰。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 加密的伺服器非對稱金鑰，通常每隔 1-2 年便需要進行版本設定。 請務必注意，雖然金鑰保存庫允許對金鑰進行版本設定，客戶不應該使用該功能來實作版本設定。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 連接器無法處理金鑰保存庫金鑰版本中的變更。 若要實作金鑰版本設定，客戶必須在金鑰保存庫中建立新的金鑰，然後在 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 中重新加密資料加密金鑰。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 加密的伺服器非對稱金鑰，通常每隔 1-2 年便需要進行版本設定。 請務必注意，雖然金鑰保存庫允許對金鑰進行版本設定，客戶不應該使用該功能來實作版本設定。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 連接器無法處理金鑰保存庫金鑰版本中的變更。 若要實作金鑰版本設定，客戶必須在金鑰保存庫中建立新的金鑰，然後在 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]中重新加密資料加密金鑰。  
   
  針對 TDE，以下是達成此目的的方法：  
   
@@ -93,15 +97,15 @@ caps.handback.revision: 21
     GO  
     ```  
   
-### [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 連接器的升級  
+### <a name="upgrade-of-includessnoversionincludesssnoversion-mdmd-connector"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 連接器的升級  
 
 1.0.0.440 版和較舊版本皆已被取代，而且生產環境也不再支援。 生產環境支援 1.0.1.0 版及更新版本。 請使用下列指示升級至 [Microsoft 下載中心](https://www.microsoft.com/download/details.aspx?id=45344)可用的最新版本。
 
 目前使用的版本若為 1.0.1.0 版或更新版本，請執行下列步驟更新至最新版的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 連接器。 這些指示不需要重新啟動 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體。
  
-1. 從 [Microsoft 下載中心](https://www.microsoft.com/download/details.aspx?id=45344)安裝最新版的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 連接器。 在安裝程式精靈中，將新的 DLL 檔案儲存在和原始 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 連接器 DLL 檔案路徑不同的檔案路徑。 例如，新的檔案路徑可能是︰ `C:\Program Files\SQL Server Connector for Microsoft Azure Key Vault\<latest version number>\Microsoft.AzureKeyVaultService.EKM.dll`
+1. 從 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Microsoft 下載中心 [安裝最新版的](https://www.microsoft.com/download/details.aspx?id=45344)連接器。 在安裝程式精靈中，將新的 DLL 檔案儲存在和原始 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 連接器 DLL 檔案路徑不同的檔案路徑。 例如，新的檔案路徑可能是︰ `C:\Program Files\SQL Server Connector for Microsoft Azure Key Vault\<latest version number>\Microsoft.AzureKeyVaultService.EKM.dll`
  
-2. 在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體中，執行下列 Transact-SQL 命令，將您的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體指向新版的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 連接器︰
+2. 在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體中，執行下列 Transact-SQL 命令，將您的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體指向新版的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 連接器︰
 
     ``` 
     ALTER CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM_Prov   
@@ -112,7 +116,7 @@ caps.handback.revision: 21
 
 目前使用的版本若為 1.0.0.440 版或更舊版本，請執行下列步驟更新至最新版的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 連接器。
   
-1.  停止 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的執行個體。  
+1.  停止 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的執行個體。  
   
 2.  停止 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 連接器服務。  
   
@@ -122,7 +126,7 @@ caps.handback.revision: 21
   
 4.  從 Microsoft 下載中心安裝最新版本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 連接器。  
   
-5.  重新啟動 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的執行個體。  
+5.  重新啟動 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的執行個體。  
   
 6.  執行下列陳述式來改變 EKM 提供者，以開始使用最新版本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 連接器。 請確定檔案路徑指向您下載最新版本的位置。 (如果新版本和原始版本安裝在相同的位置，可略過此步驟。) 
   
@@ -137,10 +141,10 @@ caps.handback.revision: 21
   
 8.  驗證更新運作之後，即可刪除舊 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 連接器資料夾 (如果您選擇將它重新命名，而不是在步驟 3 中解除安裝)。  
   
-### 復原 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務主體  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用 Azure Active Directory 中所建立的服務主體作為存取金鑰保存庫的認證。  服務主體擁有用戶端識別碼和驗證金鑰。  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認證是使用 **VaultName**、**用戶端識別碼**和**驗證金鑰**進行設定。  **驗證金鑰**將於一段時間內有效 (1 或 2 年)。   在時間間隔到期之前，必須在 Azure AD 中為服務主體產生新的金鑰。  然後必須在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中變更認證。    [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 會在目前的工作階段中為認證維持一份快取，因此認證變更時，應該重新啟動 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]。  
+### <a name="rolling-the-includessnoversionincludesssnoversion-mdmd-service-principal"></a>復原 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務主體  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用 Azure Active Directory 中所建立的服務主體作為存取金鑰保存庫的認證。  服務主體擁有用戶端識別碼和驗證金鑰。  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認證是使用 **VaultName**、 **用戶端識別碼**和 **驗證金鑰**進行設定。  **驗證金鑰** 將於一段時間內有效 (1 或 2 年)。   在時間間隔到期之前，必須在 Azure AD 中為服務主體產生新的金鑰。  然後必須在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中變更認證。    [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 會在目前的工作階段中為認證維持一份快取，因此認證變更時，應該重新啟動 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 。  
   
-### 金鑰備份和復原  
+### <a name="key-backup-and-recovery"></a>金鑰備份和復原  
 金鑰保存庫應該要定期備份。 如果遺失保存庫中的非對稱金鑰，便可以從備份還原它。 必須使用與以前相同的名稱來還原金鑰，作用與 [還原 PowerShell] 命令相同 (請參閱下面的步驟)。  
 如果遺失保存庫，您便需要重新建立保存庫，並使用和先前相同的名稱將非對稱金鑰還原至保存庫。 保存庫名稱可以不同 (或是和先前相同)。 您也必須在新的保存庫上設定存取權限，以授與 SQL Server 服務主體針對 SQL Server 加密案例所需的存取權限，然後調整 SQL Server 認證以反映新的保存庫名稱。  
 綜上所述，以下為其步驟：  
@@ -155,7 +159,7 @@ caps.handback.revision: 21
   
   
 ##  <a name="AppendixB"></a> B. 常見問題集  
-### 在 Azure 金鑰保存庫上  
+### <a name="on-azure-key-vault"></a>在 Azure 金鑰保存庫上  
   
 **金鑰作業如何與 Azure 金鑰保存庫搭配運作？**  
  金鑰保存庫中的非對稱金鑰可用來保護 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 加密金鑰。 只有非對稱金鑰的公開部分可離開保存庫，保存庫絕不會匯出私用部分。 所有使用非對稱金鑰的密碼編譯作業都是在 Azure 金鑰保存庫服務內完成，並受到服務安全性的保護。  
@@ -163,14 +167,19 @@ caps.handback.revision: 21
  **什麼是金鑰 URI？**  
  Azure 金鑰保存庫中的每個金鑰都有統一資源識別碼 (URI)，可用來在您的應用程式中參考該金鑰。 使用 **https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey** 的格式來取得目前的版本，並使用 **https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey/cgacf4f763ar42ffb0a1gca546aygd87** 的格式來取得特定版本。  
   
-### 設定時 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
+### <a name="on-configuring-includessnoversionincludesssnoversion-mdmd"></a>設定時 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
+
+**SQL Server 連接器需要存取哪些端點？** 
+ 連接器會與兩個需要設為白名單的端點通訊。 針對 HTTPS，這些其他服務之輸出通訊所需的唯一連接埠是 443：
+-  login.microsoftonline.com/*:443
+-  *.vault.azure.net/*:443
   
-**什麼是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中每個組態步驟所需的最低權限等級？**  
+**什麼是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中每個組態步驟所需的最低權限等級？**  
  雖然您能以 sysadmin 固定伺服器角色的成員身分執行所有設定步驟，但是 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 鼓勵您將自己所使用的權限降至最低。 下列清單定義每個動作的最小權限層級。  
   
 -   若要建立密碼編譯提供者，需要 `CONTROL SERVER` 權限或 **sysadmin** 固定伺服器角色中的成員資格。  
   
--   若要變更組態選項並執行 `RECONFIGURE` 陳述式，您必須獲授與 `ALTER SETTINGS` 伺服器層級權限。 sysadmin 和 **serveradmin** 固定伺服器角色會隱含 `ALTER SETTINGS` 權限。  
+-   若要變更組態選項並執行 `RECONFIGURE` 陳述式，您必須獲授與 `ALTER SETTINGS` 伺服器層級權限。 sysadmin 和 `ALTER SETTINGS` serveradmin **固定伺服器角色會隱含** 權限。  
   
 -   若要建立認證，需要 `ALTER ANY CREDENTIAL` 權限。  
   
@@ -178,7 +187,7 @@ caps.handback.revision: 21
   
 -   若要建立非對稱金鑰，需要 `CREATE ASYMMETRIC KEY` 權限。  
 
-### 如何變更預設的 Active Directory，在相同的訂用帳戶中建立金鑰保存庫，讓 Active Directory 變成我為 [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)] 連接器建立的服務主體？
+**如何變更預設的 Active Directory，在相同的訂用帳戶中建立金鑰保存庫，讓 Active Directory 變成我為 [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)] 連接器建立的服務主體？**
 
 ![aad-change-default-directory-helpsteps](../../../relational-databases/security/encryption/media/aad-change-default-directory-helpsteps.png)
 
@@ -241,7 +250,7 @@ caps.handback.revision: 21
   
 -   Azure 金鑰保存庫服務可能已關閉。 請在其他時間再試一次。  
   
--   您可能已經從 Azure 金鑰保存庫或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 卸除非對稱金鑰。 請還原金鑰。  
+-   您可能已經從 Azure 金鑰保存庫或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]卸除非對稱金鑰。 請還原金鑰。  
   
 -   如果收到「無法載入程式庫」錯誤，請確定您已根據所執行之 SQL Server 版本安裝正確版本的 Visual Studio C++ 可轉散發套件。 下表會指定要從 Microsoft 下載中心安裝的版本。   
   
@@ -251,7 +260,7 @@ SQL Server 版本  |可轉散發套件的安裝連結
 2016 | [適用於 Visual Studio 2015 的 Visual C++ 可轉散發套件](https://www.microsoft.com/download/details.aspx?id=48145)    
   
   
-## 其他參考  
+## <a name="additional-references"></a>其他參考  
  深入了解可延伸金鑰管理  
   
 -   [可延伸金鑰管理 &#40;EKM&#41;](../../../relational-databases/security/encryption/extensible-key-management-ekm.md)  
@@ -288,9 +297,10 @@ SQL Server 版本  |可轉散發套件的安裝連結
   
 -   PowerShell [Azure 金鑰保存庫 Cmdlet](https://msdn.microsoft.com/library/dn868052.aspx) 參考  
   
-## 另請參閱  
- [使用 Azure Key Vault 進行可延伸金鑰管理](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  [搭配使用 SQL Server 連接器與 SQL 加密功能](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)   
+## <a name="see-also"></a>另請參閱  
+ [Extensible Key Management Using Azure Key Vault](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  [Use SQL Server Connector with SQL Encryption Features](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)   
  [EKM provider enabled 伺服器組態選項](../../../database-engine/configure-windows/ekm-provider-enabled-server-configuration-option.md)   
  [使用 Azure 金鑰保存庫進行可延伸金鑰管理的設定步驟](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)  
   
   
+

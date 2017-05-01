@@ -1,36 +1,40 @@
 ---
-title: "在複寫監視器中設定臨界值和警告 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "警示 [SQL Server 複寫]"
-  - "合併代理程式, 臨界值和警告"
-  - "散發代理程式, 臨界值和警告"
-  - "臨界值 [SQL Server 複寫]"
-  - "複寫監視器, 臨界值和警告"
-  - "監視效能 [SQL Server 複寫], 臨界值和警告"
+title: "在複寫監視器中設定閾值和警告 | Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- alerts [SQL Server replication]
+- Merge Agent, thresholds and warnings
+- Distribution Agent, thresholds and warnings
+- thresholds [SQL Server replication]
+- Replication Monitor, thresholds and warnings
+- monitoring performance [SQL Server replication], thresholds and warnings
 ms.assetid: 3a409c2c-b77e-4001-b81a-1dcd918618ec
 caps.latest.revision: 33
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 33
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b47d0b4565cc187ae0746fa7a6c9b5b1f864c3e7
+ms.lasthandoff: 04/11/2017
+
 ---
-# 在複寫監視器中設定臨界值和警告
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 複寫監視器會顯示發行集和訂閱的狀態資訊。 依預設，複寫監視器只針對未初始化的訂閱顯示警告，但您可以啟用於其他條件下發出警告。 建議您啟用拓撲警告，這樣您才能收到即時的狀態和效能資訊。  
+# <a name="set-thresholds-and-warnings-in-replication-monitor"></a>在複寫監視器中設定臨界值和警告
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Replication Monitor displays status information for publications and subscriptions. 依預設，複寫監視器只針對未初始化的訂閱顯示警告，但您可以啟用於其他條件下發出警告。 建議您啟用拓撲警告，這樣您才能收到即時的狀態和效能資訊。  
   
  在您啟用警告時，必須指定臨界值。 達到或超過臨界值時，會顯示警告 (除非有更高優先順序的問題需要顯示)。 除了在複寫監視器顯示警告外，達到臨界值也會觸發警示。 您可啟用滿足下列條件時的警告：  
   
 -   即將發生訂閱過期  
   
-     此條件套用於所有類型的複寫。 如果達到或超過指定的臨界值，訂閱狀態會顯示為 **即將過期/已過期**。  
+     此條件套用於所有類型的複寫。 如果達到或超過指定的臨界值，訂閱狀態會顯示為 **[即將過期/已過期]**。  
   
 -   超過指定的延遲 (交易受發行者認可與對應交易受訂閱者認可之間所經過的時間)。  
   
@@ -38,13 +42,13 @@ caps.handback.revision: 33
   
 -   超過指定的同步處理時間。  
   
-     這可以套用於合併式複寫。 如果達到或超過指定的閾值，狀態會顯示為 **長時間執行的合併**。 您可以為撥號連接和區域網路 (LAN) 連接，指定不同的臨界值。  
+     這可以套用於合併式複寫。 若已達到或超過指定臨界值，狀態顯示為 **[長期執行合併]**。 您可以為撥號連接和區域網路 (LAN) 連接，指定不同的臨界值。  
   
 -   在給定時間內處理的資料列數達不到指定數目。  
   
      這可以套用於合併式複寫。 若已達到或超過指定臨界值，狀態顯示為 **[效能嚴重不足]**。 您可以為撥號連接和 LAN 連接，指定不同的臨界值。  
   
- 如需詳細資訊，警告 **效能嚴重不足** 和 **長時間執行的合併**, ，請參閱 [使用複寫監視器監視效能](../../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md)。  
+ 如需 [效能嚴重不足] 和 [長期執行合併] 警告的詳細資訊，請參閱[使用複寫監視器監視效能](../../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md)。  
   
  **本主題內容**  
   
@@ -66,19 +70,19 @@ caps.handback.revision: 33
   
 5.  按一下 **[儲存變更]**。  
   
-#### 若要設定臨界值的警示  
+#### <a name="to-configure-an-alert-for-a-threshold"></a>若要設定臨界值的警示  
   
 1.  按一下 **[設定警示]**。  
   
 2.  在 **[設定複寫警示]** 對話方塊中選取一個警示，然後按一下 **[設定]**。  
   
-     這個對話方塊會顯示所有發行集類型的警示，包括與監視臨界值無關的警示。 如需詳細資訊，請參閱 [使用警示，複寫代理程式事件的](../../../relational-databases/replication/agents/use-alerts-for-replication-agent-events.md)。  
+     這個對話方塊會顯示所有發行集類型的警示，包括與監視臨界值無關的警示。 如需詳細資訊，請參閱[使用複寫代理程式事件的警示](../../../relational-databases/replication/agents/use-alerts-for-replication-agent-events.md)。  
   
-3.  設定選項 **\< AlertName> 警示屬性** ] 對話方塊中︰  
+3.  在 [\<警示名稱> 警示屬性] 對話方塊中設定選項：  
   
     -   在 **[一般]** 頁面上，按一下 **[啟用]**；指定警示應套用至哪個資料庫。  
   
-    -   在 **回應** 頁面上，指定是否應傳送電子郵件和/或應執行的作業。  
+    -   在 **[回應]** 頁面上，指定是否應傳送電子郵件及 (或) 是否應執行作業。  
   
     -   在 **[選項]** 頁面上，自訂回應的文字。  
   
@@ -108,7 +112,7 @@ caps.handback.revision: 33
   
 5.  按一下 **[儲存變更]**。  
   
-#### 若要設定臨界值的警示  
+#### <a name="to-configure-an-alert-for-a-threshold"></a>若要設定臨界值的警示  
   
 1.  按一下 **[設定警示]**。  
   
@@ -116,11 +120,11 @@ caps.handback.revision: 33
   
      這個對話方塊會顯示所有發行集類型的警示，包括與監視臨界值無關的警示。  
   
-3.  設定選項 **\< AlertName> 警示屬性** ] 對話方塊中︰  
+3.  在 [\<警示名稱> 警示屬性] 對話方塊中設定選項：  
   
     -   在 **[一般]** 頁面上，按一下 **[啟用]**；指定警示應套用至哪個資料庫。  
   
-    -   在 **回應** 頁面上，指定是否應傳送電子郵件和/或應執行的作業。  
+    -   在 **[回應]** 頁面上，指定是否應傳送電子郵件及 (或) 是否應執行作業。  
   
     -   在 **[選項]** 頁面上，自訂回應的文字。  
   
@@ -140,19 +144,19 @@ caps.handback.revision: 33
   
 5.  按一下 **[儲存變更]**。  
   
-#### 若要設定臨界值的警示  
+#### <a name="to-configure-an-alert-for-a-threshold"></a>若要設定臨界值的警示  
   
 1.  按一下 **[設定警示]**。  
   
 2.  在 **[設定複寫警示]** 對話方塊中選取一個警示，然後按一下 **[設定]**。  
   
-     這個對話方塊會顯示所有發行集類型的警示，包括與監視臨界值無關的警示。 如需詳細資訊，請參閱 [使用警示，複寫代理程式事件的](../../../relational-databases/replication/agents/use-alerts-for-replication-agent-events.md)。  
+     這個對話方塊會顯示所有發行集類型的警示，包括與監視臨界值無關的警示。 如需詳細資訊，請參閱[使用複寫代理程式事件的警示](../../../relational-databases/replication/agents/use-alerts-for-replication-agent-events.md)。  
   
-3.  設定選項 **\< AlertName> 警示屬性** ] 對話方塊中︰  
+3.  在 [\<警示名稱> 警示屬性] 對話方塊中設定選項：  
   
     -   在 **[一般]** 頁面上，按一下 **[啟用]**；指定警示應套用至哪個資料庫。  
   
-    -   在 **回應** 頁面上，指定是否應傳送電子郵件和/或應執行的作業。  
+    -   在 **[回應]** 頁面上，指定是否應傳送電子郵件及 (或) 是否應執行作業。  
   
     -   在 **[選項]** 頁面上，自訂回應的文字。  
   
@@ -160,7 +164,7 @@ caps.handback.revision: 33
   
 5.  按一下 [ **關閉**]。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [監視複寫](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
   
   

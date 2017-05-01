@@ -1,24 +1,28 @@
 ---
 title: "發行者資訊，代理程式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rep.monitor.publisherinfo.commonjobs.f1"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rep.monitor.publisherinfo.commonjobs.f1
 ms.assetid: 2346c00d-c269-45a1-af14-68e7fd7ebd7e
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 78e8493ca92ce2877d5fb6cb29fa46c6287dd56a
+ms.lasthandoff: 04/11/2017
+
 ---
-# 發行者資訊，代理程式
+# <a name="publisher-information-agents"></a>發行者資訊，代理程式
   **[代理程式]** 索引標籤會顯示與發行者相關聯之代理程式和維護作業的相關資訊：  
   
 -   快照集代理程式 (針對所有發行集顯示)。  
@@ -41,10 +45,10 @@ caps.handback.revision: 26
   
     -   到期的訂閱清除  
   
- 如需有關這些工作的詳細資訊，請參閱 [複寫代理程式管理](../../relational-databases/replication/agents/replication-agent-administration.md)。  
+ 如需這些作業的詳細資訊，請參閱[複寫代理程式管理](../../relational-databases/replication/agents/replication-agent-administration.md)。  
   
-## 選項  
- 若要顯示在代理程式或工作的相關資訊，請從選取 **代理程式和作業類型** 下拉式選單。 如需更詳細的資訊以及與代理程式或作業相關的工作，請以滑鼠右鍵按一下該代理程式或作業的資料列，然後按一下快速鍵功能表上的選項。 若要變更方格顯示資料的方式，請以滑鼠右鍵按一下方格，然後按一下下列其中一個選項：  
+## <a name="options"></a>選項。  
+ 若要顯示某個代理程式或作業的相關資訊，請從 **[代理程式和作業類型]** 下拉式功能表中選取。 如需更詳細的資訊以及與代理程式或作業相關的工作，請以滑鼠右鍵按一下該代理程式或作業的資料列，然後按一下快速鍵功能表上的選項。 若要變更方格顯示資料的方式，請以滑鼠右鍵按一下方格，然後按一下下列其中一個選項：  
   
 -   **排序**：在 **[排序資料行]** 對話方塊中排序一個或多個資料行。  
   
@@ -58,7 +62,7 @@ caps.handback.revision: 26
   
  下列各節將描述這個索引標籤上針對每個代理程式或作業顯示的資料。  
   
-### 快照集代理程式  
+### <a name="snapshot-agent"></a>快照集代理程式  
  **狀態**  
  代理程式的狀態。 下列清單顯示可能的狀態值：  
   
@@ -85,13 +89,13 @@ caps.handback.revision: 26
  **傳遞速率**  
  最近一次代理程式執行期間，在散發資料庫中認可初始化命令的速率 (以每秒命令數為單位)。  
   
- **#交易**  
+ **交易數**  
  最近一次代理程式執行期間，在散發資料庫中認可的交易數目。  
   
- **#命令**  
+ **命令數**  
  最近一次代理程式執行期間，在散發資料庫中認可的命令數目。 命令就相當於資料變更，例如更新。  
   
-### 記錄讀取器代理程式  
+### <a name="log-reader-agent"></a>記錄讀取器代理程式  
  **狀態**  
  代理程式的狀態。 下列清單顯示可能的狀態值：  
   
@@ -121,16 +125,16 @@ caps.handback.revision: 26
  **延遲**  
  在發行集資料庫中認可的最近一次變更與散發資料庫中認可的對應命令之間經過的時間量 (以秒為單位)。  
   
- **#交易**  
+ **交易數**  
  最近一次代理程式執行期間，在散發資料庫中認可的交易數目。  
   
- **#命令**  
+ **命令數**  
  最近一次代理程式執行期間，在散發資料庫中認可的命令數目。 命令就相當於資料變更，例如更新。  
   
- **Avg. #命令**  
+ **平均命令數**  
  最近一次代理程式執行期間，每項交易的平均命令數目。  
   
-### 佇列讀取器代理程式  
+### <a name="queue-reader-agent"></a>佇列讀取器代理程式  
  **狀態**  
  代理程式的狀態。 下列清單顯示可能的狀態值：  
   
@@ -160,16 +164,16 @@ caps.handback.revision: 26
  **延遲**  
  在訂閱資料庫中認可的最近一次變更與發行集資料庫中認可的對應命令之間經過的時間量 (以秒為單位)。  
   
- **#交易**  
+ **交易數**  
  最近一次代理程式執行期間，在發行集資料庫中認可的交易數目。  
   
- **#命令**  
+ **命令數**  
  最近一次代理程式執行期間，在發行集資料庫中認可的命令數目。 命令就相當於資料變更，例如更新。  
   
- **Avg. #命令**  
+ **平均命令數**  
  最近一次代理程式執行期間，每項交易的平均命令數目。  
   
-### 維護作業  
+### <a name="maintenance-jobs"></a>維護作業  
  **狀態**  
  每一個作業的狀態。 下列清單顯示可能的狀態值：  
   
@@ -193,10 +197,10 @@ caps.handback.revision: 26
  **最後一個動作**  
  最近一次作業執行期間執行的最後一個動作。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [啟動複寫監視器](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [檢視資訊並執行工作的 「 發行者 」 與 #40;複寫監視器 & #41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)   
- [檢視資訊並執行工作與發行集和 #40; 相關聯的代理程式複寫監視器 & #41;](../../relational-databases/replication/monitor/view information and perform tasks for publication agents.md)   
+ [檢視發行者的資訊並執行工作 &#40;複寫監視器&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)   
+ [檢視與發行集建立關聯之代理程式的資訊並執行工作 &#40;複寫監視器&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md)   
  [監視複寫](../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
   
   

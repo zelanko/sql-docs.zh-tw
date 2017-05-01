@@ -1,24 +1,28 @@
 ---
-title: "建立維護計畫 | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "維護計劃 [SQL Server], 建立"
+title: "建立維護計畫 | Microsoft 文件"
+ms.custom: 
+ms.date: 08/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- maintenance plans [SQL Server], creating
 ms.assetid: a945cb65-ba7a-42f4-bbd9-6ec675745523
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: adab1fc3a3a009a4a6fe74ddbe9ee97f8c128bdf
+ms.lasthandoff: 04/11/2017
+
 ---
-# 建立維護計畫
+# <a name="create-a-maintenance-plan"></a>建立維護計畫
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中建立單一伺服器或多伺服器維護計畫。 您可以使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]透過兩種方式的其中一種建立這些維護計畫：使用「維護計畫精靈」或設計介面。 本精靈最適用於建立基本的維護計畫，使用設計介面建立計畫時可讓您利用加強的工作流程。  
   
  **本主題內容**  
@@ -43,7 +47,7 @@ caps.handback.revision: 31
  若要建立多伺服器維護計畫，必須設定多伺服器環境，其中包含一個主要伺服器以及一或多個目標伺服器。 多伺服器維護計畫必須在主要伺服器上建立和維護。 您可以在目標伺服器上檢視這些計畫，但不能加以維護。 
  
 ###  <a name="Prerequisite"></a> 必要條件  
-必須啟用 [Agent XPs 伺服器組態選項](../../database-engine/configure-windows/agent-xps-server-configuration-option.md)。
+必須啟用 [Agent XPs 伺服器組態選項](../../database-engine/configure-windows/agent-xps-server-configuration-option.md) 。
   
 ###  <a name="Security"></a> Security  
   
@@ -52,7 +56,7 @@ caps.handback.revision: 31
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 若要使用維護計畫精靈來建立維護計畫  
+#### <a name="to-create-a-maintenance-plan-using-the-maintenance-plan-wizard"></a>若要使用維護計畫精靈來建立維護計畫  
   
 1.  在 [物件總管] 中，按一下加號以展開您要建立維護計畫的伺服器。  
   
@@ -62,7 +66,7 @@ caps.handback.revision: 31
   
 4.  請遵循精靈的步驟來建立維護計畫。 如需詳細資訊，請參閱 [Use the Maintenance Plan Wizard](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)。  
   
-#### 使用設計介面建立維護計畫  
+#### <a name="to-create-a-maintenance-plan-using-the-design-surface"></a>使用設計介面建立維護計畫  
   
 1.  在 [物件總管] 中，按一下加號以展開您要建立維護計畫的伺服器。  
   
@@ -74,7 +78,7 @@ caps.handback.revision: 31
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 若要建立維護計畫  
+#### <a name="to-create-a-maintenance-plan"></a>若要建立維護計畫  
   
 1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
@@ -150,3 +154,4 @@ caps.handback.revision: 31
 -   [sp_attach_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)  
   
   
+

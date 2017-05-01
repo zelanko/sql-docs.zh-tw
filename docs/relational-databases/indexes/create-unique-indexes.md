@@ -1,29 +1,33 @@
 ---
 title: "建立唯一索引 | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "唯一索引"
-  - "設計索引 [SQL Server], 唯一"
-  - "叢集索引, 唯一"
-  - "索引 [SQL Server], 唯一"
-  - "非叢集索引 [SQL Server], 唯一"
-  - "唯一索引, 設計指導方針"
+ms.custom: 
+ms.date: 02/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- unique indexes
+- designing indexes [SQL Server], unique
+- clustered indexes, unique
+- indexes [SQL Server], unique
+- nonclustered indexes [SQL Server], unique
+- unique indexes, design guidelines
 ms.assetid: 56b5982e-cb94-46c0-8fbb-772fc275354a
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ad915ae7f113e7080f3fe5b7dbd9bb1c233f8bb4
+ms.lasthandoff: 04/11/2017
+
 ---
-# 建立唯一索引
+# <a name="create-unique-indexes"></a>建立唯一索引
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]的資料表建立唯一索引。 唯一索引可保證索引鍵不包含重複值，因此資料表中的每一個資料列在某方面來說是唯一的。 建立 UNIQUE 條件約束與建立獨立於條件約束之外的唯一索引，兩者並無明顯差異。 資料驗證的方式相同，而且查詢最佳化工具不會區分由條件約束建立或由手動建立的唯一索引。 不過，在資料行上建立 UNIQUE 條件約束，會使索引目標更明確。 如需有關 UNIQUE 條件約束的詳細資訊，請參閱＜ [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md)＞。  
@@ -82,22 +86,22 @@ caps.handback.revision: 29
   
 -   **索引檢視表**  
   
-     若要建立索引檢視，您必須在一個或多個檢視資料行上定義唯一的叢集索引。 將會執行檢視，而結果集會以資料表資料儲存在叢集索引中的相同方式，儲存在索引的分葉層級。 如需詳細資訊，請參閱[建立索引檢視表](../../relational-databases/views/create-indexed-views.md)。  
+     若要建立索引檢視，您必須在一個或多個檢視資料行上定義唯一的叢集索引。 將會執行檢視，而結果集會以資料表資料儲存在叢集索引中的相同方式，儲存在索引的分葉層級。 如需詳細資訊，請參閱 [建立索引檢視表](../../relational-databases/views/create-indexed-views.md)。  
   
 ###  <a name="Restrictions"></a> 限制事項  
   
 -   如果資料中已存在重複的索引鍵值，則無法建立唯一索引、UNIQUE 條件約束或 PRIMARY KEY 條件約束。  
   
--   唯一非叢集索引可有內含的非索引鍵之索引資料行。 如需詳細資訊，請參閱[建立內含資料行的索引](../../relational-databases/indexes/create-indexes-with-included-columns.md)。  
+-   唯一非叢集索引可有內含的非索引鍵之索引資料行。 如需詳細資訊，請參閱 [建立內含資料行的索引](../../relational-databases/indexes/create-indexes-with-included-columns.md)。  
   
 ###  <a name="Security"></a> 安全性  
   
 ####  <a name="Permissions"></a> Permissions  
- 需要資料表或檢視表的 ALTER 權限。 使用者必須是**系統管理員**固定伺服器角色的成員，或是 **db_ddladmin** 和 **db_owner** 固定資料庫角色的成員。  
+ 需要資料表或檢視表的 ALTER 權限。 使用者必須是 **系統管理員** 固定伺服器角色的成員，或是 **db_ddladmin** 和 **db_owner** 固定資料庫角色的成員。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 若要使用資料表設計工具建立唯一索引  
+#### <a name="to-create-a-unique-index-by-using-the-table-designer"></a>若要使用資料表設計工具建立唯一索引  
   
 1.  在 [物件總管] 中，展開包含您要建立唯一索引之資料表的資料庫。  
   
@@ -127,7 +131,7 @@ caps.handback.revision: 29
   
 14. 在 [檔案] 功能表上，按一下 [儲存 *資料表名稱*]。  
   
-#### 使用物件總管建立唯一索引  
+#### <a name="create-a-unique-index-by-using-object-explorer"></a>使用物件總管建立唯一索引  
   
 1.  在 [物件總管] 中，展開包含您要建立唯一索引之資料表的資料庫。  
   
@@ -143,7 +147,7 @@ caps.handback.revision: 29
   
 7.  按一下 **[索引鍵資料行]**底下的 **[加入]**。  
   
-8.  在 [從 \<資料表名稱> 選取資料行] 對話方塊中，選取要加入唯一索引之一或多個資料表資料行的核取方塊。  
+8.  在 [從 <資料表名稱> 選取資料行] 對話方塊中，選取要加入唯一索引之一或多個資料表資料行的核取方塊。  
   
 9. 按一下 **[確定]**。  
   
@@ -151,7 +155,7 @@ caps.handback.revision: 29
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 在資料表上建立唯一索引  
+#### <a name="to-create-a-unique-index-on-a-table"></a>在資料表上建立唯一索引  
   
 1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
@@ -177,3 +181,4 @@ caps.handback.revision: 29
  如需詳細資訊，請參閱 [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)。  
   
   
+

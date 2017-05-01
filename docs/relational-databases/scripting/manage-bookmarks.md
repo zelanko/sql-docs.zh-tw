@@ -1,31 +1,35 @@
 ---
 title: "管理書籤 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VS.BookmarkWindow"
-helpviewer_keywords: 
-  - "書籤 [SQL Server Management Studio]"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VS.BookmarkWindow
+helpviewer_keywords:
+- bookmarks [SQL Server Management Studio]
 ms.assetid: 67cc3fd6-3238-4c58-a3ec-2d3b0438143a
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0f77006d812e4ba114f5fc161f3701457f836d62
+ms.lasthandoff: 04/11/2017
+
 ---
-# 管理書籤
+# <a name="manage-bookmarks"></a>管理書籤
   使用程式碼編輯器時，[書籤] 視窗可讓您建立連結至文件內之程式碼的特定行。 您可以從 [檢視] 功能表顯示這個視窗。  
   
  若要建立和巡覽整個書籤，請按一下位於 [文字編輯器] 工具列上和 [書籤] 視窗上方的按鈕。 您可加入和刪除書籤、啟動或停用書籤以及將書籤組織到資料夾中。 [書籤] 視窗的捷徑功能表中，也有一些可用的特定命令。 若要加入或移除書籤，請將插入點放在適用的編輯器行上，然後按一下 [切換書籤]。 若要啟用書籤，請在 [書籤] 視窗中選取其核取方塊；若要停用 (而非移除) 書籤，則請清除其核取方塊。  
   
-## 文字編輯器工具列  
+## <a name="text-editor-toolbar"></a>文字編輯器工具列  
  在編輯器中開啟文字文件時，會啟用 [文字編輯器] 工具列的下列按鈕。 在使用查詢編輯器時，若要顯示 [文字編輯器] 工具列，請在 [檢視] 功能表上指向 [工具列]，然後按一下 [文字編輯器]。  
   
  **在目前的行上切換書籤**  
@@ -43,7 +47,7 @@ caps.handback.revision: 26
 > [!CAUTION]  
 >  您無法恢復此程序。 之後，您必須使用 [在目前這一行切換書籤] 建立新書籤。 若要停用書籤但不將它們移除，請在 [書籤] 視窗中清除其核取方塊。  
   
-## 書籤視窗  
+## <a name="bookmarks-window"></a>書籤視窗  
  若要組織書籤，請在 [書籤] 視窗中建立書籤資料夾。 拖放書籤到資料夾中。 下列按鈕可以在 [書籤] 視窗的上方找到。  
   
  **在目前的行上切換書籤。**  
@@ -76,7 +80,7 @@ caps.handback.revision: 26
  書籤核取方塊  
  每個書籤都有自己的核取方塊。 若要啟用現有的書籤，請在 [書籤] 視窗中選取其核取方塊。 若要隱藏 (但不移除) 現有的書籤，請在 [書籤] 視窗中清除其核取方塊。  
   
-## 書籤視窗快速鍵功能表  
+## <a name="bookmarks-window-shortcut-menu"></a>書籤視窗快速鍵功能表  
  以滑鼠右鍵按一下 [書籤] 視窗中的項目時，可從捷徑功能表使用下列命令。  
   
  **Delete**  
@@ -91,7 +95,7 @@ caps.handback.revision: 26
  **停用/啟用所有書籤**  
  在 [書籤] 視窗中，清除或啟用所有書籤的核取方塊。 這不會移除書籤，或改變它們標示的程式碼行。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [SQL Server Management Studio 鍵盤快速鍵](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)  
   
   

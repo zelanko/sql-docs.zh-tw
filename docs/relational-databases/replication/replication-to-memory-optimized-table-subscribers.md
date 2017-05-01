@@ -1,36 +1,40 @@
 ---
-title: "複寫至記憶體最佳化資料表訂閱者 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "11/21/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "複寫至記憶體最佳化資料表訂閱者 | Microsoft 文件"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 11/21/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1a8e6bc7-433e-471d-b646-092dc80a2d1a
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 38b426bdc8e0485bdbada8c9dbd7371b63612465
+ms.lasthandoff: 04/11/2017
+
 ---
-# 複寫至記憶體最佳化資料表訂閱者
+# <a name="replication-to-memory-optimized-table-subscribers"></a>複寫至記憶體最佳化資料表訂閱者
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   作為快照集和異動複寫訂閱者的資料表 (不包括點對點異動複寫) 可以設定為記憶體最佳化資料表。 其他複寫組態與記憶體最佳化資料表不相容。 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]開始，將提供這項功能。  
   
 ## <a name="two-configurations-are-required"></a>需要兩個組態  
   
--   **設定為支援記憶體最佳化資料表的複寫訂閱者資料庫**  
+-   **將訂閱者資料庫設定為支援對記憶體最佳化資料表的複寫**  
   
-     設定 **@memory_optimized** 屬性 **true**, ，使用 [sp_addsubscription &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) 或 [sp_changesubscription & #40。TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md)。  
+     藉由使用 [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) 或 [sp_changesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md)，將 **@memory_optimized**  屬性設定為 **true**。  
   
--   **設定文件，以支援記憶體最佳化資料表的複寫**  
+-   **將發行項設定為支援對記憶體最佳化資料表的複寫**  
   
-     設定 `@schema_option = 0x40000000000` 使用發行項選項 [sp_addarticle & #40。TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 或 [sp_changearticle & #40。TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)。  
+     使用 [sp_addarticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 或 [sp_changearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) 來設定 `@schema_option = 0x40000000000` 發行項選項。  
   
 #### <a name="to-configure-a-memory-optimized-table-as-a-subscriber"></a>將記憶體最佳化資料表設定為訂閱者  
   
@@ -38,7 +42,7 @@ caps.handback.revision: 23
   
 2.  將發行項加入至發行集。 如需詳細資訊，請參閱 [Define an Article](../../relational-databases/replication/publish/define-an-article.md)。  
   
-     如果使用設定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 設定 **@schema_option** 參數 **sp_addarticle** 預存程序   
+     如果使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] set the **@schema_option** 預存程序的 **@schema_option** 參數為   
     **0x40000000000**開始，將提供這項功能。  
   
 3.  在 [發行項屬性] 視窗中，將 [Enable Memory optimization](啟用記憶體最佳化)  設定為 [true] 。  
@@ -53,16 +57,16 @@ caps.handback.revision: 23
   
 1.  移至 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 的訂閱屬性，並將 [Memory Optimized Subscription](記憶體最佳化訂閱)  設定為 [true] 。 重新初始化訂閱之前，不會套用所做的變更。  
   
-     如果使用設定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 設定新 **@memory_optimized** 參數 **sp_addsubscription** 預存程序設為 true。  
+     如果使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 進行設定的話，設定 **@memory_optimized** 預存程序的 **@memory_optimized** 參數為 true。  
   
 2.  移至 [發行項屬性] 視窗 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 內的發行集，將 [Enable Memory](啟用記憶體)  設定為 [true]。  
   
-     如果使用設定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 設定 **@schema_option** 參數 **sp_addarticle** 預存程序   
+     如果使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] set the **@schema_option** 預存程序的 **@schema_option** 參數為   
     **0x40000000000**開始，將提供這項功能。  
   
 3.  記憶體最佳化資料表不支援叢集索引。 若要藉由在目的地上將複寫轉換為非叢集索引來處理此項目的話，請將 [Convert clustered index to nonclustered for memory optimized article](為記憶體最佳化發行項將叢集索引轉換為非叢集索引)  設定為 [true]。  
   
-     如果使用設定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 設定 **@schema_option** 參數 **sp_addarticle** 預存程序  **0x0000080000000000**。  
+     如果使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] set the **@schema_option** 預存程序的 **@schema_option** 參數為  **0x0000080000000000**開始，將提供這項功能。  
   
 4.  重新產生快照集。  
   
@@ -81,9 +85,9 @@ caps.handback.revision: 23
  
 -   複寫至訂閱者端記憶體最佳化資料表的資料表限制，則為記憶體最佳化資料表中允許的資料類型。 如需詳細資訊，請參閱 [記憶體內部 OLTP 支援的資料類型](../../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md)。  
   
--   並非所有的 TRANSACT-SQL 功能會支援具有記憶體最佳化資料表。 請參閱 [記憶體中 OLTP 不支援 TRANSACT-SQL 建構](../../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md) 如需詳細資訊。  
+-   記憶體最佳化資料表中並未支援所有的 Transact-SQL 功能。 如需詳細資訊，請參閱[記憶體內部 OLTP 不支援的 Transact-SQL 建構](../../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md)。  
   
-##  <a name="a-nameschemaa-modifying-a-schema-file"></a><a name="Schema"></a> 修改結構描述檔案  
+##  <a name="Schema"></a> 修改結構描述檔案  
   
 -   如果使用記憶體最佳化資料表選項 `DURABILITY = SCHEMA_AND_DATA` ，則資料表必須具有非叢集主索引鍵索引。  
   
@@ -93,3 +97,4 @@ caps.handback.revision: 23
  [複寫功能及工作](../../relational-databases/replication/replication-features-and-tasks.md)  
   
   
+

@@ -1,26 +1,30 @@
 ---
-title: "MSSQL_ENG014117 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "MSSQL_ENG014117 錯誤"
+title: MSSQL_ENG014117 | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- MSSQL_ENG014117 error
 ms.assetid: e5906a76-9511-4c47-8826-8c765b58a39d
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: b53e204550ce8f48b14e2b76667eb74fadc86346
+ms.lasthandoff: 04/11/2017
+
 ---
-# MSSQL_ENG014117
+# <a name="mssqleng014117"></a>MSSQL_ENG014117
     
-## 訊息詳細資料  
+## <a name="message-details"></a>訊息詳細資料  
   
 |||  
 |-|-|  
@@ -31,18 +35,18 @@ caps.handback.revision: 17
 |符號名稱||  
 |訊息文字|'%s' 並未設定為散發資料庫。|  
   
-## 說明  
+## <a name="explanation"></a>說明  
  如果下列條件中的一或兩條成立，則會發生此錯誤：  
   
--   從指定的散發資料庫的項目缺少 **msdb...MSdistributiondbs**。  
+-   **msdb..MSdistributiondbs**中遺失指定散發資料庫的項目。  
   
--   不是本機伺服器中的項目 **主要** 資料庫或不正確的項目。  
+-   **master** 資料庫中沒有本機伺服器的項目，或者該項目不正確。  
   
-     針對拓撲中所有伺服器，複寫預計應使用電腦名稱與選擇性的執行個體名稱註冊 (叢集執行個體則為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 虛擬伺服器名稱加上選擇性的執行個體名稱)。 要讓複寫正常運作，`SELECT @@SERVERNAME` 針對拓撲中每部伺服器傳回的值，都應該符合電腦名稱或虛擬伺服器名稱加上選擇性執行個體名稱。  
+     針對拓撲中所有伺服器，複寫預計應使用電腦名稱與選擇性的執行個體名稱註冊 (叢集執行個體則為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 虛擬伺服器名稱加上選擇性的執行個體名稱)。 要讓複寫正常運作， `SELECT @@SERVERNAME` 針對拓撲中每部伺服器傳回的值，都應該符合電腦名稱或虛擬伺服器名稱加上選擇性執行個體名稱。  
   
      若您已透過 IP 位址或完整格式的網域名稱 (FQDN) 註冊任一 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，就不支援複寫。 如果您設定複寫時，依 IP 位址或依 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的 FQDN 註冊了任何 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 執行個體，就可能會引發這個錯誤。  
   
-## 使用者動作  
+## <a name="user-action"></a>使用者動作  
  請確認「散發者」執行個體註冊正確。 若電腦網路名稱和 SQL Server 執行個體名稱不符，則：  
   
 -   加入 SQL Server 執行個體名稱做為有效網路名稱。 設定另一可用網路名稱的方法之一，是將它加入本機主機檔案。 本機主機檔案預設位於 WINDOWS\system32\drivers\etc 或 WINNT\system32\drivers\etc。如需詳細資訊，請參閱 Windows 文件集。  
@@ -51,7 +55,7 @@ caps.handback.revision: 17
   
      10.193.17.129 inst1  
   
--   停用散發，註冊執行個體，然後重新建立散發。 如果 @@SERVERNAME 的值不是非叢集執行個體正確的值，請依循下列步驟：  
+-   停用散發，註冊執行個體，然後重新建立散發。 如果 @@SERVERNAME 的值不是正確的非叢集執行個體值，請依循下列步驟：  
   
     ```  
     sp_dropserver '<old_name>', 'droplogins'  
@@ -60,17 +64,17 @@ caps.handback.revision: 17
     go  
     ```  
   
-     執行之後 [sp_addserver & #40。TRANSACT-SQL & #41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md) 您必須重新啟動預存程序， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務，變更 @@SERVERNAME 才會生效。  
+     執行 [sp_addserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md) 預存程序之後，您必須重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務，@@SERVERNAME 的變更才能生效。  
   
-     如果 @@SERVERNAME 的值不是正確的非叢集執行個體值，則必須使用叢集管理員變更名稱。 如需詳細資訊，請參閱 [AlwaysOn 容錯移轉叢集執行個體 & #40。SQL Server & #41;](../Topic/AlwaysOn%20Failover%20Cluster%20Instances%20\(SQL%20Server\).md)。  
+     如果 @@SERVERNAME 的值不是正確的非叢集執行個體值，則必須使用叢集管理員變更名稱。 如需詳細資訊，請參閱 [AlwaysOn 容錯移轉叢集執行個體 (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)。  
   
- 請確認散發者執行個體已正確註冊之後, 確認 [散發資料庫會列在 **msdb...MSdistributiondbs**。 如果其沒有列在其中：  
+ 在確認「散發者」執行個體已正確註冊之後，請確認散發資料庫是否列在 **msdb..MSdistributiondbs**中。 如果其沒有列在其中：  
   
 1.  為散發組態編寫指令碼。 如需詳細資訊，請參閱 [Scripting Replication](../../relational-databases/replication/scripting-replication.md)。  
   
-2.  停用散發，然後再重新啟用它。 如需詳細資訊，請參閱 [設定散發](../../relational-databases/replication/configure-distribution.md)。  
+2.  停用散發，然後再重新啟用它。 如需詳細資訊，請參閱[設定散發](../../relational-databases/replication/configure-distribution.md)。  
   
-## 另請參閱  
- [錯誤和事件參考 & #40。複寫 & #41;](../../relational-databases/replication/errors-and-events-reference-replication.md)  
+## <a name="see-also"></a>另請參閱  
+ [錯誤和事件參考 &#40;複寫&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)  
   
   

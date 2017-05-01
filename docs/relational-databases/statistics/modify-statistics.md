@@ -1,25 +1,29 @@
 ---
 title: "修改統計資料 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-statistics"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "統計資料 [SQL Server], 修改"
-  - "修改統計資料"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-statistics
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- statistics [SQL Server], modifying
+- modifying statistics
 ms.assetid: b06299ca-ed52-411a-b245-45eac4628c99
 caps.latest.revision: 9
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: dc2ee0a2699bb9f1d2aad02e5777a208e842bef8
+ms.lasthandoff: 04/11/2017
+
 ---
-# 修改統計資料
+# <a name="modify-statistics"></a>修改統計資料
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中修改現有統計資料。  
   
  **本主題內容**  
@@ -43,11 +47,11 @@ caps.handback.revision: 9
   
 -   使用者有資料表或檢視的 ALTER 權限。  
   
--   使用者必須是資料表或索引檢視表擁有者，或是下列其中一個角色的成員：**sysadmin** 固定伺服器角色、**db_owner** 固定資料庫角色或 **db_ddladmin** 固定資料庫角色。  
+-   使用者必須是資料表或索引檢視表擁有者，或是下列其中一個角色的成員： **sysadmin** 固定伺服器角色、 **db_owner** 固定資料庫角色或 **db_ddladmin** 固定資料庫角色。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 若要修改統計資料  
+#### <a name="to-modify-statistics"></a>若要修改統計資料  
   
 1.  在 **[物件總管]**中，按一下加號展開要在其中修改統計資料的資料庫。  
   

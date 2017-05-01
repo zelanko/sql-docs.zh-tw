@@ -1,29 +1,33 @@
 ---
-title: "判斷是否應將資料表或預存程序匯出至記憶體中 OLTP | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "分析、移轉、報告"
-  - "AMR"
+title: "判斷是否應將資料表或預存程序移植至記憶體內部 OLTP | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Analyze, Migrate, Report
+- AMR
 ms.assetid: c1ef96f1-290d-4952-8369-2f49f27afee2
 caps.latest.revision: 39
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a6f70a5be224219a572df858e37ecbfe5f9fde07
+ms.lasthandoff: 04/11/2017
+
 ---
-# 判斷是否應將資料表或預存程序匯出至記憶體中 OLTP
+# <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>判斷是否應將資料表或預存程序匯出至記憶體中 OLTP
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的交易效能分析報表，可協助您評估記憶體內部 OLTP 是否能改善資料庫應用程式的效能。 此報表還能指出在應用程式中啟用記憶體內部 OLTP 所需執行的工作。 識別您要匯出至記憶體內部 OLTP 的磁碟資料表之後，即可使用[記憶體最佳化建議程式](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md)協助您遷移資料表。 同樣地， [Native Compilation Advisor](../../relational-databases/in-memory-oltp/native-compilation-advisor.md) 可協助您將預存程序匯出為原生編譯的預存程序。 如需移轉方法的資訊，請參閱 [In-Memory OLTP – Common Workload Patterns and Migration Considerations](https://msdn.microsoft.com/library/dn673538.aspx) (記憶體內部 OLTP - 一般工作負載模式和移轉考量)。  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的交易效能分析報表，可協助您評估記憶體內部 OLTP 是否能改善資料庫應用程式的效能。 此報表還能指出在應用程式中啟用記憶體內部 OLTP 所需執行的工作。 識別您要匯出至記憶體內部 OLTP 的磁碟資料表之後，即可使用 [記憶體最佳化建議程式](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md)協助您遷移資料表。 同樣地， [Native Compilation Advisor](../../relational-databases/in-memory-oltp/native-compilation-advisor.md) 可協助您將預存程序匯出為原生編譯的預存程序。 如需移轉方法的資訊，請參閱 [In-Memory OLTP – Common Workload Patterns and Migration Considerations](https://msdn.microsoft.com/library/dn673538.aspx)(記憶體內部 OLTP - 一般工作負載模式和移轉考量)。  
   
  直接針對生產資料庫，或是具有類似生產工作負載之作用中工作負載的測試資料庫，執行交易效能分析報表。  
   
@@ -40,7 +44,7 @@ caps.handback.revision: 39
   
  若您在安裝 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或[下載 SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx) 時，選取 [管理工具 - 基本] 或 [管理工具 - 進階]，則會安裝交易效能分析報表和移轉建議程式作為 SQL Server Management Studio (SSMS) 的一部分。  
   
-## 交易效能分析報表  
+## <a name="transaction-performance-analysis-reports"></a>交易效能分析報表  
  若要在**物件總管**中產生交易效能分析報表，請以滑鼠右鍵按一下資料庫，依序選取 [報表]、[標準報表] 和 [交易效能分析概觀]。 資料庫必須具有作用中的工作負載或是最近執行的工作負載，以產生有意義的分析報表。  
   
  資料表的詳細報表包含三個部分：  
@@ -97,10 +101,10 @@ caps.handback.revision: 39
   
  若要查看有關如何將預存程序轉換成原生編譯預存程序的詳細資料，請參閱＜原生編譯建議程式＞。  
   
-## 產生記憶體內部 OLTP 移轉檢查清單  
+## <a name="generating-in-memory-oltp-migration-checklists"></a>產生記憶體內部 OLTP 移轉檢查清單  
  移轉檢查清單可識別不受記憶體最佳化資料表或原生編譯預存程序支援的任何資料表或預存程序功能。 記憶體最佳化和原生編譯建議程式，可產生針對單一磁碟基礎資料表或或解譯 T-SQL 預存程序的檢查清單。 此外，它亦可為資料庫中的多個資料表和預存程序產生移轉檢查清單。  
   
- 若要在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中產生移轉檢查清單，您可使用**產生記憶體內 OLTP 移轉檢查清單**命令或 PowerShell。  
+ 若要在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中產生移轉檢查清單，您可使用 **產生記憶體內 OLTP 移轉檢查清單** 命令或 PowerShell。  
   
  **使用 UI 命令產生移轉檢查清單**  
   
@@ -169,7 +173,7 @@ caps.handback.revision: 39
   
     -   <object_name> 的移轉檢查清單報表，是 folder_path2 所指定位置中的唯一報表。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [移轉至 In-Memory OLTP](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   
   

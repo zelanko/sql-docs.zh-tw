@@ -1,24 +1,28 @@
 ---
 title: "順序屬性 (一般頁面) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.sequence.general.f1"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.sequence.general.f1
 ms.assetid: 0187f413-cdf0-48a2-b2e6-9b3578cd5811
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 46ce2a01967b75aa0fec969d24cf6ad320932ace
+ms.lasthandoff: 04/11/2017
+
 ---
-# 順序屬性 (一般頁面)
+# <a name="sequence-properties-general-page"></a>順序屬性 (一般頁面)
   建立順序物件，並指定其屬性。 序列是使用者定義之結構描述繫結的物件，該物件會根據建立序列所使用的規格產生一連串的數值。 數值序列會在定義的間隔依照遞增或遞減順序來產生，而且在用完時可設定為重新啟動 (循環)。 順序不會與特定資料表產生關聯，與識別欄位不同。 應用程式會參考順序物件，以擷取它的下一個值。 順序與資料表之間的關聯性是由應用程式所控制。 使用者的應用程式可以參考序列物件，並協調跨越多個資料列和資料表的值。  
   
  不同於插入時產生的識別資料行值，應用程式可以藉由呼叫 [NEXT VALUE FOR 函數](../../t-sql/functions/next-value-for-transact-sql.md)取得下一個序數，而不需要插入資料列。 您可以使用 [sp_sequence_get_range](../../relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql.md) 一次取得多個序號。  
@@ -27,7 +31,7 @@ caps.handback.revision: 10
   
  此頁面可經由兩種方式存取：以滑鼠右鍵按一下 [物件總管] 中的 [順序]，然後按一下 [新增順序]，或者以滑鼠右鍵按一下現有的順序，然後按一下 [屬性]。 以滑鼠右鍵按一下現有的順序，然後按一下 [屬性] 時，無法編輯選項。 若要變更順序選項，請使用 [ALTER SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-sequence-transact-sql.md) 陳述式或卸除然後重新建立順序物件。  
   
-## 選項  
+## <a name="options"></a>選項。  
  **順序名稱**  
  在此處輸入順序名稱。  
   
@@ -49,7 +53,7 @@ caps.handback.revision: 10
 -   以這些類型之一為基礎的任何使用者定義的資料類型 (別名類型)。  
   
  **有效位數**  
- **十進位**或**數值**資料類型請指定精確度。 (小數位數一定是 0)。  
+ **十進位** 或 **數值** 資料類型請指定精確度。 (小數位數一定是 0)。  
   
  **開始值**  
  順序物件會傳回的第一個值。 **START** 值必須是小於或等於順序物件的最大值，而且大於或等於最小值。 新順序物件的預設開始值是遞增順序物件的最小值，是遞減順序物件的最大值。  
@@ -82,10 +86,10 @@ caps.handback.revision: 10
   
  如需有關建立順序選項的詳細資訊，請參閱 [CREATE SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md)。  
   
-## Permissions  
+## <a name="permissions"></a>Permissions  
  需要 SCHEMA 的 **CREATE SEQUENCE**、 **ALTER**或 **CONTROL** 權限。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [sys.sequences &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sequences-transact-sql.md)  
   
   

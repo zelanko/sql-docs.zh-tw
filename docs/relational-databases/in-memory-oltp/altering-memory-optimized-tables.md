@@ -1,28 +1,32 @@
 ---
 title: "改變記憶體最佳化資料表 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "10/04/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 10/04/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 690b70b7-5be1-4014-af97-54e531997839
 caps.latest.revision: 20
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e4a8b3f4dabec4d46813c570e1a04fd469075a66
+ms.lasthandoff: 04/11/2017
+
 ---
-# 改變記憶體最佳化資料表
+# <a name="altering-memory-optimized-tables"></a>改變記憶體最佳化資料表
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   使用 ALTER TABLE 陳述式，可以在記憶體最佳化資料表上執行結構描述與索引變更。 資料庫應用程式可以繼續執行，但會封鎖任何存取資料表的作業，直到改變程序完成。  
   
-## ALTER TABLE  
+## <a name="alter-table"></a>ALTER TABLE  
  
 ALTER TABLE 語法用於變更資料表的結構描述，以及加入、刪除和重建索引。 索引視為資料表定義的一部分︰  
   
@@ -75,12 +79,12 @@ ALTER TABLE 語法用於變更資料表的結構描述，以及加入、刪除�
   
  如需 ALTER TABLE 功能和完整語法的詳細資訊，請參閱 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
   
-## 結構描述繫結的相依性  
+## <a name="schema-bound-dependency"></a>結構描述繫結的相依性  
  原生編譯的預存程序必須為結構描述繫結，也就是說這些預存程序會有所存取之記憶體最佳化資料表，以及所參考之資料行的結構描述繫結相依性。 結構描述繫結的相依性是兩個實體間的關聯性，只要參考實體存在，就可以防止受參考的實體遭到卸除或以不相容的方式修改。  
   
- 例如，如果結構描述繫結的原生編譯預存程序參考了資料表 *mytable* 中的資料行 *c1*，則無法卸除資料行 *c1*。 同樣地，如果搭配 INSERT 陳述式的這類程序沒有資料行清單 (例如 `INSERT INTO dbo.mytable VALUES (...)`)，則無法卸除資料表中的資料行。  
+ 例如，如果結構描述繫結的原生編譯預存程序參考了資料表 *mytable* 中的資料行 *c1*，則無法卸除資料行 *c1* 。 同樣地，如果搭配 INSERT 陳述式的這類程序沒有資料行清單 (例如 `INSERT INTO dbo.mytable VALUES (...)`)，則無法卸除資料表中的資料行。  
   
-## 範例  
+## <a name="examples"></a>範例  
  下例會變更現有雜湊索引的值區計數。 這會以新的值區計數重建雜湊索引，但雜湊索引的其他屬性保持不變。  
   
 ```tsql
@@ -145,7 +149,7 @@ GO
 
 <a name="logging-of-alter-table-on-memory-optimized-tables-124"></a>
 
-## 記憶體最佳化資料表上的 ALTER TABLE 記錄
+## <a name="logging-of-alter-table-on-memory-optimized-tables"></a>記憶體最佳化資料表上的 ALTER TABLE 記錄
 
 
 在記憶體最佳化資料表上，大部分的 ALTER TABLE 案例現在會以平行方式執行，並導致對交易記錄的寫入最佳化。 最佳化意指只有中繼資料變更會寫入交易記錄檔。 不過，下列 ALTER TABLE 作業會以單一執行緒執行，而且不會進行記錄檔最佳化。
@@ -164,10 +168,12 @@ GO
 
     - 建立新的 off-row 資料行。
 
-    - *例外狀況︰*會以最佳化方式記錄使已經 off-row 的資料行變長的情況。
+    - *例外狀況︰* 會以最佳化方式記錄使已經 off-row 的資料行變長的情況。
 
 
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
 
 [記憶體最佳化資料表](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
+
+

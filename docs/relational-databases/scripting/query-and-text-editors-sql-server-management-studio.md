@@ -1,45 +1,49 @@
 ---
 title: "查詢與文字編輯器 (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VS.TextEditor"
-helpviewer_keywords: 
-  - "查詢編輯器 [SQL Server Management Studio]"
-  - "程式碼編輯器 [SQL Server Management Studio]，關於查詢編輯器"
-  - "查詢編輯器 [SQL Server Management Studio]，全螢幕模式"
-  - "查詢編輯器 [資料庫引擎]，範本"
-  - "全螢幕模式 [SQL Server Management Studio]"
-  - "SQL Server Management Studio [SQL Server]，範本"
-  - "寫入指令碼"
-  - "修改指令碼"
-  - "SQL Server Management Studio [SQL Server]，查詢編輯器"
-  - "查詢編輯器 [SQL Server Management Studio]，關於查詢編輯器"
-  - "寫入查詢"
-  - "SQL Server Management Studio [SQL Server]，編輯器"
-  - "指令碼 [SQL Server]，SQL Server Management Studio"
-  - "查詢 [SQL Server]，SQL Server Management Studio"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VS.TextEditor
+helpviewer_keywords:
+- Query Editor [SQL Server Management Studio]
+- Code Editor [SQL Server Management Studio], about Query Editor
+- Query Editor [SQL Server Management Studio], full screen mode
+- Query Editor [Database Engine], templates
+- full screen mode [SQL Server Management Studio]
+- SQL Server Management Studio [SQL Server], templates
+- writing scripts
+- modifying scripts
+- SQL Server Management Studio [SQL Server], query editor
+- Query Editor [SQL Server Management Studio], about Query Editor
+- writing queries
+- SQL Server Management Studio [SQL Server], editor
+- scripts [SQL Server], SQL Server Management Studio
+- queries [SQL Server], SQL Server Management Studio
 ms.assetid: 062051e4-4b77-4969-98ae-d2547c24ce3e
 caps.latest.revision: 53
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 53
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7ff32d77b3e1503bd23e4ac0ecf040653265f141
+ms.lasthandoff: 04/11/2017
+
 ---
-# 查詢與文字編輯器 (SQL Server Management Studio)
+# <a name="query-and-text-editors-sql-server-management-studio"></a>查詢與文字編輯器 (SQL Server Management Studio)
   您可以使用其中一個 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 編輯器，以互動方式編輯及測試 [!INCLUDE[tsql](../../includes/tsql-md.md)]、MDX、DMX 或 XML/A 指令碼，或者編輯 XML 或純文字檔。 每個編輯器都會得到一項特定語言專用服務的支援，會將關鍵字著上顏色，且會進行語法和用法錯誤的檢查。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器含有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具，可讓您用來協助修正 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼的問題。  
   
-## SQL Server Management Studio 編輯器  
+## <a name="sql-server-management-studio-editors"></a>SQL Server Management Studio 編輯器  
  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 的四個編輯器共用一個常見架構。 文字編輯器實作基本的功能層級，並可以當做文字檔的基本編輯器使用。 其他三個編輯器 (查詢編輯器) 將此基本功能擴充到包含可定義 SQL Server 支援的其中一種語言之語法的語言服務。 查詢編輯器也會針對 IntelliSense 和偵錯等編輯器功能，實作不同的支援層級。 這些查詢編輯器包括用來建立包含 Transact-SQL 和 XQuery 陳述式之指令碼的 Database Engine 查詢編輯器、MDX 語言適用的 MDX 編輯器、DMX 語言適用的 DMX 編輯器，以及 XML for Analysis 語言適用的 XML/A 編輯器。  
   
-## 一般元件  
+## <a name="common-components"></a>一般元件  
  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 的所有編輯器會共用這些元件：  
   
  **程式碼窗格**  
@@ -59,7 +63,7 @@ caps.handback.revision: 53
  **自動換行**  
  將很長的文字行或程式碼行分成數行來顯示，您便可以看到該文字行或程式碼行中的所有文字。 自動換行不會影響文字執行或列印時所呈現的方式。 請在 **[工具]**的 **[選項]** 對話方塊之 [文字編輯器]、[所有語言]、[一般] 頁面上，或在特定編輯器頁面上，開啟 [自動換行]。  
   
-## 程式碼編輯器元件  
+## <a name="code-editor-components"></a>程式碼編輯器元件  
  程式碼編輯器除了包含與文字和 XML 編輯器共用的功能之外，還包含下列功能：  
   
  **結果**  
@@ -83,7 +87,7 @@ caps.handback.revision: 53
  **狀態列**  
  顯示與 [查詢編輯器] 視窗相關聯的系統資訊，例如查詢編輯器所連接的執行個體。  
   
-## Database Engine 查詢編輯器元件  
+## <a name="database-engine-query-editor-components"></a>Database Engine 查詢編輯器元件  
  只有 Database Engine 查詢編輯器才能使用這些元件：  
   
  **偵錯工具**  
@@ -102,18 +106,18 @@ caps.handback.revision: 53
  當您在 Database Engine 查詢編輯器中加入陳述式時，可以當做起點使用的範本。 您可以插入 SQL Server 所提供的預先定義程式碼片段，或是加入您自己的程式碼片段。  
   
  **SQLCMD 模式**  
- 執行包含一組 sqlcmd 公用程式所支援之命令的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼。 如需詳細資訊，請參閱 [sqlcmd 使用說明主題](../Topic/sqlcmd%20How-to%20Topics.md)。  
+ 執行包含一組 sqlcmd 公用程式所支援之命令的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼。 如需詳細資訊，請參閱 [sqlcmd 使用說明主題](http://msdn.microsoft.com/library/dd7a2d2b-6327-4d77-ac5a-580d36073ad4)。  
   
-## 編輯器工作  
+## <a name="editor-tasks"></a>編輯器工作  
   
 |工作描述|主題|  
 |----------------------|-----------|  
 |描述如何檢視及使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器的基本功能。|[Database Engine 查詢編輯器 &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md)|  
-|描述如何檢視及使用 MDX 查詢編輯器的基本功能。|[MDX 查詢編輯器 &#40;Analysis Services - 多維度資料&#41;](../Topic/MDX%20Query%20Editor%20\(Analysis%20Services%20-%20Multidimensional%20Data\).md)|  
-|描述如何檢視及使用 DMX 查詢編輯器的基本功能。|[DMX 查詢編輯器 &#40;Analysis Services - 資料採礦&#41;](../Topic/DMX%20Query%20Editor%20\(Analysis%20Services%20-%20Data%20Mining\).md)|  
+|描述如何檢視及使用 MDX 查詢編輯器的基本功能。|[MDX 查詢編輯器 &#40;Analysis Services - 多維度資料&#41;](http://msdn.microsoft.com/library/777f2c23-1c1c-4b72-9d19-48a4866551f8)|  
+|描述如何檢視及使用 DMX 查詢編輯器的基本功能。|[DMX 查詢編輯器 &#40;Analysis Services - 資料採礦&#41;](http://msdn.microsoft.com/library/7ac877a1-0f29-46b9-9a51-73b02172bef1)|  
 |描述如何檢視及使用 XML/A 查詢編輯器的基本功能。|[XML 編輯器 &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/xml-editor-sql-server-management-studio.md)|  
 |描述如何設定各種編輯器的選項，例如行號和 IntelliSense 選項。|[設定編輯器 &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/configure-editors-sql-server-management-studio.md)|  
-|描述您可以在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中開啟編輯器的各種方式。|[開啟編輯器 &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/open-an-editor-sql-server-management-studio.md)|  
+|描述您可以在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中開啟編輯器的各種方式。|[開啟編輯器 &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/open-an-editor-sql-server-management-studio.md)|  
 |描述如何管理檢視模式，例如自動換行、分割視窗或索引標籤。|[管理編輯器和檢視模式](../../relational-databases/scripting/manage-the-editor-and-view-mode.md)|  
 |描述如何設定格式選項，例如隱藏的文字或縮排。|[管理程式碼格式設定](../../relational-databases/scripting/manage-code-formatting.md)|  
 |描述如何使用累加搜尋或移至等功能，在編輯器視窗中瀏覽文字。|[導覽程式碼與文字](../../relational-databases/scripting/navigate-code-and-text.md)|  
@@ -127,9 +131,9 @@ caps.handback.revision: 53
 |描述如何使用 IntelliSense 功能，例如在輸入時自動完成物件名稱，或確保中斷點位於有效的位置。|[IntelliSense &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/intellisense-sql-server-management-studio.md)|  
 |描述如何在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器中使用程式碼片段。 程式碼片段是常用陳述式或區塊的範本，可自訂或擴充成包含網站專屬的程式碼片段。|[Transact-SQL 程式碼片段](../../relational-databases/scripting/transact-sql-code-snippets.md)|  
 |描述如何使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具來逐步執行程式碼，以及檢視偵錯資訊 (例如變數和參數中的值)。|[Transact-SQL 偵錯工具](../../relational-databases/scripting/transact-sql-debugger.md)|  
-|描述如何為不同的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體設定自訂色彩，並將這些色彩設為 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器視窗中狀態列的背景。|[狀態列 &#40;Database Engine 查詢編輯器&#41;](../../relational-databases/scripting/status-bar-database-engine-query-editor.md)|  
+|描述如何為不同的 [!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體設定自訂色彩，並將這些色彩設為 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器視窗中狀態列的背景。|[狀態列 &#40;Database Engine 查詢編輯器&#41;](../../relational-databases/scripting/status-bar-database-engine-query-editor.md)|  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [SQL Server Management Studio 鍵盤快速鍵](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)  
   
   

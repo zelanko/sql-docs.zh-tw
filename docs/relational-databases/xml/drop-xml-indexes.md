@@ -1,31 +1,35 @@
 ---
 title: "卸除 XML 索引 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "移除索引"
-  - "卸除索引"
-  - "XML 索引 [SQL Server], 卸除"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- removing indexes
+- dropping indexes
+- XML indexes [SQL Server], dropping
 ms.assetid: 7591ebea-34af-4925-8553-b2adb5b487c2
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1508a40b460939fc1aa4ddfa8271d28a10958bb9
+ms.lasthandoff: 04/11/2017
+
 ---
-# 卸除 XML 索引
+# <a name="drop-xml-indexes"></a>卸除 XML 索引
   [DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式可用以卸除現有的主要或次要 XML 及非 XML 索引。 不過，DROP INDEX 沒有任何選項會套用至 XML 索引。 如果您卸除主要 XML 索引，也會刪除任何存在的次要索引。  
   
  具有 *TableName.IndexName* 的 DROP 語法已捨棄不用，XML 索引也不支援它。  
   
-## 範例：建立和卸除主要 XML 索引  
+## <a name="example-creating-and-dropping-a-primary-xml-index"></a>範例：建立和卸除主要 XML 索引  
  在下列範例中，會在 **xml** 類型資料行上建立 XML 索引。  
   
 ```  
@@ -50,7 +54,7 @@ DROP INDEX PIdx_T_XmlCol ON T
   
  當卸除資料表時，也會自動卸除在該資料表上的所有 XML 索引。 不過，如果在資料行上有 XML 索引，將無法從資料表卸除 XML 資料行。  
   
- 在下列範例中，會在 **xml** 類型資料行上建立 XML 索引。 如需詳細資訊，請參閱[比較具類型的 XML 與不具類型的 XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)。  
+ 在下列範例中，會在 **xml** 類型資料行上建立 XML 索引。 如需詳細資訊，請參閱 [比較具類型的 XML 與不具類型的 XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)。  
   
 ```  
 CREATE TABLE TestTable(  
@@ -59,7 +63,7 @@ CREATE TABLE TestTable(
 GO  
 ```  
   
- 現在，您可以在 `Co12` 上建立主要 XML索引。  
+ 現在，您可以在 `Co12`上建立主要 XML索引。  
   
 ```  
 CREATE PRIMARY XML INDEX PIdx_TestTable_Col2   
@@ -67,7 +71,7 @@ ON TestTable(Col2)
 GO  
 ```  
   
-## 範例：使用 DROP_EXISTING 索引選項建立 XML 索引  
+## <a name="example-creating-an-xml-index-by-using-the-dropexisting-index-option"></a>範例：使用 DROP_EXISTING 索引選項建立 XML 索引  
  在下列範例中，會在資料行 (`XmlColx`) 上建立 XML 索引。 接著，會在不同資料行 (`XmlColy`) 上建立另一個具有相同名稱的 XML 索引。 因為指定了 `DROP_EXISTING` 選項，所以會卸除 (`XmlColx)` 上的現有 XML 索引，並在 (`XmlColy`) 上建立新 XML 索引。  
   
 ```  
@@ -95,7 +99,7 @@ AND    si.object_id=object_id('T')
   
  此查詢會傳回已建立的指定 XML 索引的資料行名稱。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [XML 索引 &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md)  
   
   

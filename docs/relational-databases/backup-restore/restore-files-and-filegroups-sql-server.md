@@ -1,29 +1,33 @@
 ---
-title: "還原檔案和檔案群組 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.restorefilesandfilegrps.general.f1"
-  - "sql13.swb.bselectfilegrpsfiles.f1"
-  - "sql13.swb.restorefilesandfilegrps.options.f1"
-helpviewer_keywords: 
-  - "SQL Server Management Studio [SQL Server], 還原檔案和檔案群組"
-  - "還原 [SQL Server], 檔案"
+title: "還原檔案和檔案群組 (SQL Server) | Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.restorefilesandfilegrps.general.f1
+- sql13.swb.bselectfilegrpsfiles.f1
+- sql13.swb.restorefilesandfilegrps.options.f1
+helpviewer_keywords:
+- SQL Server Management Studio [SQL Server], restoring files and filegroups
+- restoring [SQL Server], files
 ms.assetid: 72603b21-3065-4b56-8b01-11b707911b05
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f0bc8f28aa966b39b9b5c78d681458d6bf25f84f
+ms.lasthandoff: 04/11/2017
+
 ---
-# 還原檔案和檔案群組 (SQL Server)
+# <a name="restore-files-and-filegroups-sql-server"></a>還原檔案和檔案群組 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中還原檔案與檔案群組。  
@@ -52,20 +56,20 @@ caps.handback.revision: 25
   
 -   在簡單復原模式之下，檔案必須屬於唯讀檔案群組。  
   
--   在完整或大量記錄復原模式下，您必須先備份使用中的交易記錄 (也稱為記錄的結尾)，才能還原檔案。 如需詳細資訊，請參閱[備份交易記錄 &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)。  
+-   在完整或大量記錄復原模式下，您必須先備份使用中的交易記錄 (也稱為記錄的結尾)，才能還原檔案。 如需詳細資訊，請參閱 [備份交易記錄 &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)中還原檔案與檔案群組。  
   
 -   若要還原加密的資料庫，您必須能夠存取之前用來加密資料庫的憑證或非對稱金鑰。 如果沒有該憑證或非對稱金鑰，就無法還原資料庫。 因此，只要需要備份，就必須保留用來加密資料庫加密金鑰的憑證。 如需詳細資訊，請參閱 [SQL Server Certificates and Asymmetric Keys](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md)。  
   
 ###  <a name="Security"></a> 安全性  
   
 ####  <a name="Permissions"></a> Permissions  
- 如果還原的資料庫不存在，使用者必須有 CREATE DATABASE 權限，才能執行 RESTORE。 如果資料庫存在 (若是 FROM DATABASE_SNAPSHOT 選項，資料庫一律存在)，預設會將 RESTORE 權限授與**系統管理員 (sysadmin)** 和 **dbcreator** 固定伺服器角色的成員，以及資料庫的擁有者 (**dbo**)。  
+ 如果還原的資料庫不存在，使用者必須有 CREATE DATABASE 權限，才能執行 RESTORE。 如果資料庫存在 (若是 FROM DATABASE_SNAPSHOT 選項，資料庫一律存在)，預設會將 RESTORE 權限授與 **sysadmin** 和 **dbcreator** 固定伺服器角色的成員，以及資料庫的擁有者 (**dbo**)。  
   
- RESTORE 權限提供給伺服器隨時可以取得其成員資格資訊的角色。 由於資料庫必須是可存取且未損毀，才能夠檢查固定資料庫角色成員資格，但執行 RESTORE 時未必如此，因此，**db_owner** 固定資料庫角色的成員並沒有 RESTORE 權限。  
+ RESTORE 權限提供給伺服器隨時可以取得其成員資格資訊的角色。 由於資料庫必須是可存取且未損毀，才能夠檢查固定資料庫角色成員資格，但執行 RESTORE 時未必如此，因此， **db_owner** 固定資料庫角色的成員並沒有 RESTORE 權限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 還原檔案和檔案群組  
+#### <a name="to-restore-files-and-filegroups"></a>還原檔案和檔案群組  
   
 1.  連接到適當的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]執行個體之後，請在 [物件總管] 中按一下伺服器名稱以展開伺服器樹狀目錄。  
   
@@ -123,7 +127,7 @@ caps.handback.revision: 25
      您必須為不同的媒體集交換磁帶時，這個選項特別有用，例如當伺服器只有一個磁帶機時。  
   
      **限制對還原資料庫的存取**  
-     僅有**資料庫擁有者 (db_owner)**、**資料庫建立者 (dbcreator)** 或**系統管理員 (sysadmin)** 的成員可以使用還原資料庫。  
+     僅有 **資料庫擁有者 (db_owner)**、 **資料庫建立者 (dbcreator)**或 **系統管理員 (sysadmin)**的成員可以使用還原資料庫。  
   
      選取此選項相當於使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] RESTORE 陳述式的 RESTRICTED_USER 選項。  
   
@@ -137,15 +141,15 @@ caps.handback.revision: 25
   
 11. **[復原狀態]** 面板可決定資料庫在還原作業之後的狀態。  
   
-     **回復未認可的交易，讓資料庫保持備妥可用。 無法還原其他交易記錄。 (RESTORE WITH RECOVERY)**  
+     **回復未認可的交易，讓資料庫保持備妥可用。無法還原其他交易記錄。(RESTORE WITH RECOVERY)**  
      復原資料庫。 這是預設行為。 只有在您要立即還原所有必要的備份時，才選擇這個選項。 此選項相當於在 [!INCLUDE[tsql](../../includes/tsql-md.md)] RESTORE 陳述式中指定 WITH RECOVERY。  
   
-     **讓資料庫保持不運作，且不回復未認可的交易。 可以還原其他交易記錄。 (RESTORE WITH NORECOVERY)**  
+     **讓資料庫保持不運作，且不回復未認可的交易。可以還原其他交易記錄。(RESTORE WITH NORECOVERY)**  
      讓資料庫保持在還原狀態。 若要復原資料庫，就必須使用先前的 RESTORE WITH RECOVERY 選項 (請參閱上面說明) 執行另一個還原。 此選項相當於在 [!INCLUDE[tsql](../../includes/tsql-md.md)] RESTORE 陳述式中指定 WITH NORECOVERY。  
   
      如果選取此選項，將無法使用 **[保留複寫設定]** 選項。  
   
-     **讓資料庫保持唯讀模式。 回復未認可的交易，但是將回復作業儲存在檔案中，以便能夠恢復復原結果。 (RESTORE WITH STANDBY)**  
+     **讓資料庫保持唯讀模式。回復未認可的交易，但是將回復作業儲存在檔案中，以便能夠恢復復原結果。(RESTORE WITH STANDBY)**  
      讓資料庫處於待命狀態。 此選項相當於在 [!INCLUDE[tsql](../../includes/tsql-md.md)] RESTORE 陳述式中指定 WITH STANDBY。  
   
      您必須指定待命資料庫檔案，才能選擇此選項。  
@@ -155,7 +159,7 @@ caps.handback.revision: 25
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 還原檔案和檔案群組  
+#### <a name="to-restore-files-and-filegroups"></a>還原檔案和檔案群組  
   
 1.  執行 RESTORE DATABASE 陳述式以還原檔案及檔案群組備份，並指定以下項目：  
   
@@ -206,12 +210,12 @@ RESTORE LOG MyDatabase
 GO  
 ```  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [Restore a Database Backup Using SSMS](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)   
  [備份檔案和檔案群組 &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)   
  [建立完整資料庫備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)   
  [備份交易記錄 &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)   
  [還原交易記錄備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)  
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
   
   

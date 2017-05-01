@@ -1,24 +1,28 @@
 ---
-title: "資料庫屬性 (檔案群組頁面) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.databaseproperties.filegroups.f1"
+title: "資料庫屬性 (檔案群組頁面) | Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.databaseproperties.filegroups.f1
 ms.assetid: 8d06e859-73dd-4019-b6e8-99c5c5297697
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 977464bddc01eaa5559962808e9cee4b39651b8f
+ms.lasthandoff: 04/11/2017
+
 ---
-# 資料庫屬性 (檔案群組頁面)
+# <a name="database-properties-filegroups-page"></a>資料庫屬性 (檔案群組頁面)
   使用此頁面來檢視檔案群組或將新的檔案群組加入選取的資料庫中。 檔案群組類型分成「資料列」檔案群組、FILESTREAM 資料和記憶體最佳化檔案群組。  
   
  資料列檔案群組包含一般的資料和記錄檔。 FILESTREAM 資料檔案群組包含 FILESTREAM 資料檔案。 當您使用 FILESTREAM 儲存體時，這些資料檔案會儲存有關二進位大型物件 (BLOB) 資料如何儲存在檔案系統上的資訊。 對於這兩種類型的檔案群組而言，選項都是相同的。  
@@ -29,7 +33,7 @@ caps.handback.revision: 31
   
  記憶體最佳化檔案群組是讓資料庫包含一個或多個記憶體最佳化資料表的必要條件。  
   
-## 資料列和 FILESTREAM 資料檔案群組選項  
+## <a name="row-and-filestream-data-filegroup-options"></a>資料列和 FILESTREAM 資料檔案群組選項  
  **名稱**  
  輸入檔案群組的名稱。  
   
@@ -48,20 +52,20 @@ caps.handback.revision: 31
  **移除**  
  從方格中移除選取的檔案群組資料列。  
   
-## 記憶體最佳化資料檔案群組選項  
+## <a name="memory-optimized-data-filegroup-options"></a>記憶體最佳化資料檔案群組選項  
  **名稱**  
  輸入記憶體最佳化檔案群組的名稱。  
   
  **Filestream 檔案**  
  顯示記憶體最佳化資料檔案群組中的檔案 (容器) 數目。 您可以在 [檔案] 頁面中加入容器。  
   
- **加入**  
+ **[加入]**  
  將新的空白資料列加入列出資料庫之檔案群組的方格中。  
   
  **移除**  
  從方格中移除選取的檔案群組資料列。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)  
   

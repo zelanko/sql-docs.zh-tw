@@ -1,37 +1,41 @@
 ---
 title: "使用搜索屬性清單搜索文件屬性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-search"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "全文檢索搜尋 [SQL Server], 搜尋屬性清單"
-  - "全文檢索搜尋 [SQL Server], 屬性"
-  - "搜尋屬性清單 [SQL Server]"
-  - "屬性搜尋 [SQL Server], 關於"
-  - "全文檢索索引 [SQL Server], 搜尋屬性清單"
-  - "搜尋屬性清單 [SQL Server], 關於"
-  - "屬性搜尋 [SQL Server]"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-search
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- full-text search [SQL Server], search property lists
+- full-text search [SQL Server], properties
+- search property lists [SQL Server]
+- property searching [SQL Server], about
+- full-text indexes [SQL Server], search property lists
+- search property lists [SQL Server], about
+- property searching [SQL Server]
 ms.assetid: ffae5914-b1b2-4267-b927-37e8382e0a9e
 caps.latest.revision: 49
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 49
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e408a414ec070cdef39b69bf535ceb0d45f73435
+ms.lasthandoff: 04/11/2017
+
 ---
-# 使用搜索屬性清單搜索文件屬性
+# <a name="search-document-properties-with-search-property-lists"></a>使用搜索屬性清單搜索文件屬性
   文件屬性的內容與文件本文的內容之間原本無法區別。 這項限制會將全文檢索查詢限制為整個文件的一般搜尋。 不過，現在您可以針對 **varbinary**、**varbinary(max)** (包括 **FILESTREAM**) 或 **image** 二進位資料行中支援的文件類型設定全文檢索索引，以便支援特定屬性 (例如 Author 和 Title) 的屬性範圍搜尋作業。 這種搜尋形式稱為「屬性搜尋」。  
   
  相關聯的[篩選](../../relational-databases/search/configure-and-manage-filters-for-search.md) (IFilter) 會決定是否可對特定文件類型進行屬性搜尋。 對於某些文件類型而言，相關聯的 IFilter 會擷取針對該文件類型定義的部分或全部屬性，以及文件本文的內容。 您可以設定全文檢索索引，以便支援針對 IFilter 在建立全文檢索索引期間所擷取的特定屬性進行屬性搜尋。 適用於 .docx、.xlsx 和 .pptx 等 Microsoft Office 文件類型的 IFilter 就是會擷取許多文件屬性的 IFilter。 另一方面，XML IFilter 不會發出屬性。  
   
 ##  <a name="How_FTS_Works_with_search_properties"></a> 全文檢索搜尋如何使用搜尋屬性  
   
-### 內部屬性識別碼  
+### <a name="internal-property-ids"></a>內部屬性識別碼  
  全文檢索引擎會為每個註冊的屬性任意指派內部屬性識別碼，這個識別碼可在該特定搜尋清單中唯一識別屬性，而且是該搜尋屬性清單特有的。 因此，如果您將某個屬性加入至多個搜尋屬性清單，不同清單之間的內部屬性識別碼可能會有所不同。  
   
  針對搜尋清單註冊屬性時，全文檢索引擎就會將「內部屬性識別碼」任意指派給屬性。 內部屬性識別碼是一個整數，可在該搜尋屬性清單中唯一識別屬性。  
@@ -42,7 +46,7 @@ caps.handback.revision: 49
   
  內部屬性識別碼可能會與屬性的屬性整數識別碼不同。 如果給定屬性已在多個搜尋屬性清單中註冊，可能會為每個搜尋屬性清單指定不同的內部屬性識別碼。 例如，內部屬性識別碼在某個搜尋屬性清單中可能是 4、在另一個清單中可能是 1、在另一個清單中可能是 3，依此類推。 反之，屬性整數識別碼是屬性內建的，而且不論該屬性用於何處，它都會維持相同。  
   
-### 已註冊屬性的索引  
+### <a name="indexing-of-registered-properties"></a>已註冊屬性的索引  
  將全文檢索索引與搜尋屬性清單產生關聯之後，您必須重新擴展索引，以便建立屬性特有搜尋詞彙的索引。 建立全文檢索索引期間，所有屬性的內容以及其他內容都會儲存在全文檢索索引中。 不過，建立在已註冊屬性中找到之搜尋詞彙的索引時，全文檢索索引子也會儲存具有該詞彙的對應內部屬性識別碼。 反之，如果屬性尚未註冊，它就會儲存在全文檢索索引中，就如同它屬於文件本文的一部分，而且其內部屬性識別碼的值為零。  
   
  下圖顯示搜尋詞彙如何顯示在全文檢索索引中的邏輯檢視，該索引與上圖所顯示的搜尋屬性清單相關聯。 範例文件 Document 1 包含三個屬性 (Title、Author 和 Keywords) 以及文件本文。 對於在搜尋屬性清單中指定的 Title 和 Keywords 屬性而言，搜尋詞彙會與全文檢索索引中其對應的內部屬性識別碼相關聯。 反之，Author 屬性的內容會建立索引，就如同它屬於文件本文的一部分。 這表示，註冊屬性會根據屬性中儲存的內容數量，稍微增加全文檢索索引的大小。  
@@ -65,7 +69,7 @@ caps.handback.revision: 49
   
  使用 [CREATE SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/create-search-property-list-transact-sql.md) 陳述式並提供至少一個清單名稱。  
   
-##### 在 Management Studio 中建立搜尋屬性清單  
+##### <a name="to-create-a-search-property-list-in-management-studio"></a>在 Management Studio 中建立搜尋屬性清單  
   
 1.  在 [物件總管] 中，展開伺服器。  
   
@@ -85,7 +89,7 @@ caps.handback.revision: 49
   
     -   **從現有搜尋屬性清單建立**  
   
-     如需詳細資訊，請參閱[新增搜尋屬性清單](../Topic/New%20Search%20Property%20List.md)。  
+     如需詳細資訊，請參閱 [新增搜尋屬性清單](http://msdn.microsoft.com/library/ffca78e9-8608-4b15-bd38-b2d78da4247a)。  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -119,7 +123,7 @@ caps.handback.revision: 49
   
  **若要取得搜尋屬性清單的值**  
   
- 請參閱[尋找搜尋屬性的屬性集 GUID 與屬性整數識別碼](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md)。  
+ 請參閱 [尋找搜尋屬性的屬性集 GUID 與屬性整數識別碼](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md)。  
   
  **若要使用 Transact-SQL 將屬性加入至搜尋屬性清單**  
   
@@ -161,7 +165,7 @@ SELECT column_name FROM table_name
   WHERE CONTAINS ( PROPERTY ( column_name, 'property_name' ), '<contains_search_condition>' )  
 ```  
   
- 例如，下列查詢會在 `Title` 資料庫之 `Document` 資料表的 `Production.Document` 資料行中搜尋索引屬性 `AdventureWorks`。 此查詢只會傳回下列文件：其 `Title` 屬性包含 `Maintenance` 或 `Repair`  
+ 例如，下列查詢會在 `Title`資料庫之 `Document` 資料表的 `Production.Document` 資料行中搜尋索引屬性 `AdventureWorks` 。 此查詢只會傳回下列文件：其 `Title` 屬性包含 `Maintenance` 或 `Repair`  
   
 ```  
 USE AdventureWorks  
@@ -180,7 +184,7 @@ GO
   
  使用 [ALTER SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/alter-search-property-list-transact-sql.md) 陳述式新增或移除搜尋屬性。  
   
-##### 在 Management Studio 中檢視和變更搜尋屬性清單  
+##### <a name="to-view-and-change-a-search-property-list-in-management-studio"></a>在 Management Studio 中檢視和變更搜尋屬性清單  
   
 1.  在 [物件總管] 中，展開伺服器。  
   
@@ -196,9 +200,9 @@ GO
   
     1.  若要移除文件屬性，請按一下屬性左邊的資料列標頭，然後按下 DEL 鍵。  
   
-    2.  若要加入文件屬性，請按一下 **\*** 右邊清單底部的空白資料列，然後輸入新屬性的值。  
+    2.  若要加入文件屬性，請按一下 **\***右邊清單底部的空白資料列，然後輸入新屬性的值。  
   
-         如需這些值的相關資訊，請參閱[搜尋屬性清單編輯器](../Topic/Search%20Property%20List%20Editor.md)。 如需如何取得 Microsoft 所定義之屬性值的詳細資訊，請參閱[尋找搜尋屬性的屬性集 GUID 與屬性整數識別碼](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md)。 如需有關獨立軟體廠商 (ISV) 所定義之屬性的詳細資訊，請參閱該廠商的文件集。  
+         如需這些值的相關資訊，請參閱 [搜尋屬性清單編輯器](http://msdn.microsoft.com/library/0f3ced6e-0dfd-49fc-b175-82378c3d668e)。 如需如何取得 Microsoft 所定義之屬性值的詳細資訊，請參閱 [尋找搜尋屬性的屬性集 GUID 與屬性整數識別碼](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md)。 如需有關獨立軟體廠商 (ISV) 所定義之屬性的詳細資訊，請參閱該廠商的文件集。  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -209,7 +213,7 @@ GO
   
  使用 [DROP SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/drop-search-property-list-transact-sql.md) 陳述式。  
   
-##### 在 Management Studio 中刪除搜尋屬性清單  
+##### <a name="to-delete-a-search-property-list-in-management-studio"></a>在 Management Studio 中刪除搜尋屬性清單  
   
 1.  在 [物件總管] 中，展開伺服器。  
   
@@ -221,7 +225,7 @@ GO
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [尋找搜尋屬性的屬性集 GUID 與屬性整數識別碼](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md)   
  [設定及管理搜尋的篩選](../../relational-databases/search/configure-and-manage-filters-for-search.md)  
   

@@ -1,35 +1,39 @@
 ---
 title: "複寫監視器介面概觀 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "複寫監視器"
-  - "複寫監視器，關於複寫監視器"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Replication Monitor
+- Replication Monitor, about Replication Monitor
 ms.assetid: 078f0e34-7153-45c4-8725-778b5bef88da
 caps.latest.revision: 41
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 85b3b97fa9dc219012727b01a0d8013e0481a85c
+ms.lasthandoff: 04/11/2017
+
 ---
-# 複寫監視器介面概觀
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 複寫監視器會顯示 「 發行者 」 或 「 散發者 」 為焦點的所有複寫活動檢視兩個窗格的格式。 您可將發行者加入監視器的左窗格中，監視器的右窗格便會顯示關於發行者及其發行集、這些發行集的訂閱，以及各種複寫代理程式的資訊。 除了呈現複寫拓撲的資訊外，「複寫監視器」還可讓您執行一些工作，例如啟動和停止代理程式，以及驗證資料。  
+# <a name="overview-of-the-replication-monitor-interface"></a>複寫監視器介面概觀
+  「[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 複寫監視器」採用兩個窗格的格式，呈現所有複寫活動以「發行者」或「散發者」為焦點的檢視。 您可將發行者加入監視器的左窗格中，監視器的右窗格便會顯示關於發行者及其發行集、這些發行集的訂閱，以及各種複寫代理程式的資訊。 除了呈現複寫拓撲的資訊外，「複寫監視器」還可讓您執行一些工作，例如啟動和停止代理程式，以及驗證資料。  
   
-## 檢視整個拓撲的資訊  
+## <a name="viewing-information-for-the-entire-topology"></a>檢視整個拓撲的資訊  
  複寫監視器左邊的窗格會顯示  
   
 -   發行者群組、發行者和發行集。  
   
 -   散發者、發行者和發行集。  
   
- 若要在「複寫監視器」中檢視任何資訊，必須先加入發行者。 如需詳細資訊，請參閱 [新增和移除 「 發行者 」 從 「 複寫監視器](../../../relational-databases/replication/monitor/add-and-remove-publishers-from-replication-monitor.md)。  
+ 若要在「複寫監視器」中檢視任何資訊，必須先加入發行者。 如需詳細資訊，請參閱 [從複寫監視器加入及移除發行者](../../../relational-databases/replication/monitor/add-and-remove-publishers-from-replication-monitor.md)。  
   
  左窗格可協助回答下列問題：  
   
@@ -41,7 +45,7 @@ caps.handback.revision: 41
   
      如果代理程式沒有在特定時間執行，可能是因為並未排程執行或是已發生錯誤。 如果發生錯誤，左窗格中的適當節點上會顯示錯誤圖示。 例如，如果發行集的「快照集代理程式」因錯誤而停止，則發行者群組、發行者和發行集節點上會顯示錯誤圖示。 「快照集代理程式」的摘要資訊會顯示在發行集的 **[代理程式]** 索引標籤上；按兩下此索引標籤上的「快照集代理程式」可取得詳細的錯誤資訊。  
   
-## 檢視與散發者相關的資訊並執行工作  
+## <a name="viewing-information-and-performing-tasks-related-to-distributors"></a>檢視與散發者相關的資訊並執行工作  
  「複寫監視器」會在下列三個索引標籤上顯示散發者的相關資訊：  
   
 -   **[發行集]** 索引標籤  
@@ -76,7 +80,7 @@ caps.handback.revision: 41
   
 -   切換至 [發行者群組] 檢視。  
   
-## 檢視與發行者相關的資訊並執行工作  
+## <a name="viewing-information-and-performing-tasks-related-to-publishers"></a>檢視與發行者相關的資訊並執行工作  
  「複寫監視器」會在下列三個索引標籤上顯示發行者的相關資訊：  
   
 -   **[發行集]** 索引標籤  
@@ -103,7 +107,7 @@ caps.handback.revision: 41
   
      此索引標籤會顯示有關所有複寫類型使用之代理程式和工作的詳細資訊。 您也可以用這個索引標籤來啟動和停止每個代理程式和工作。  
   
- 如需詳細資訊，請參閱 [檢視資訊並執行工作的發行者與 #40;複寫監視器 & #41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)。  
+ 如需詳細資訊，請參閱[檢視發行者的資訊並執行工作 &#40;複寫監視器&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)。  
   
  「複寫監視器」也提供發行者節點的內容功能表。 以滑鼠右鍵按一下左窗格中的發行者可以：  
   
@@ -115,7 +119,7 @@ caps.handback.revision: 41
   
 -   連接到儲存發行者相關資訊的散發者或中斷與散發者的連接  
   
-## 檢視與發行集相關的資訊並執行工作  
+## <a name="viewing-information-and-performing-tasks-related-to-publications"></a>檢視與發行集相關的資訊並執行工作  
  「複寫監視器」會在三個索引標籤上及一些詳細資料視窗中，顯示發行集的相關資訊：  
   
 -   **[所有訂閱]** 索引標籤  
@@ -146,9 +150,9 @@ caps.handback.revision: 41
   
 -   **[警告]** 索引標籤  
   
-     這個索引標籤可用來為代理程式指定警告和警示。 如需詳細資訊，請參閱 [設定臨界值和複寫監視器 」 中的警告](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)。  
+     這個索引標籤可用來為代理程式指定警告和警示。 如需相關資訊，請參閱 [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)。  
   
--   **追蹤 Token** ] 索引標籤 （僅適用於交易式複寫）  
+-   **[追蹤 Token]** 索引標籤 (僅適用於異動複寫)  
   
      這個索引標籤能讓您測量延遲，在發行者端所認可之交易與在訂閱者端所認可之對應交易之間經過的時間。  
   
@@ -158,7 +162,7 @@ caps.handback.revision: 41
   
          檢視交易透過系統傳輸的總時間，並與先前的時間比較。  
   
-     如果散發者執行的是 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 或更早版本，則不會顯示此索引標籤。 如需追蹤 token 的詳細資訊，請參閱 [測量延遲及驗證連線的交易式複寫](../../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)。  
+     如果散發者執行的是 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 或更早版本，則不會顯示此索引標籤。 如需追蹤 Token 的詳細資訊，請參閱[針對異動複寫測量延遲及驗證連線](../../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)。  
   
 -   與發行集相關聯的代理程式之詳細資料視窗。 下列代理程式與發行集相關聯：  
   
@@ -176,7 +180,7 @@ caps.handback.revision: 41
   
          可用的錯誤訊息提供代理程式為何不在執行中的詳細資訊，並提供與發行集相關聯的代理程式問題之疑難排解起點。  
   
- 如需詳細資訊，請參閱 [檢視資訊並執行工作的發行集與 #40。複寫監視器 & #41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md) 和 [檢視資訊並執行工作與發行集和 #40; 相關聯的代理程式複寫監視器 & #41;](../../../relational-databases/replication/monitor/view information and perform tasks for publication agents.md)。  
+ 如需詳細資訊，請參閱[檢視發行集的資訊並執行工作 &#40;複寫監視器&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md) 和[檢視與發行集建立關聯之代理程式的資訊並執行工作 &#40;複寫監視器&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md)。  
   
  「複寫監視器」也提供發行集節點的內容功能表。 以滑鼠右鍵按一下左窗格中的發行集可以：  
   
@@ -188,26 +192,26 @@ caps.handback.revision: 41
   
 -   檢視和編輯發行集屬性  
   
-## 檢視與訂閱相關的資訊並執行工作  
+## <a name="viewing-information-and-performing-tasks-related-to-subscriptions"></a>檢視與訂閱相關的資訊並執行工作  
  「複寫監視器」會在一些不同的索引標籤上顯示與訂閱相關的資訊。 按兩下「複寫監視器」中的訂閱，可在詳細資料視窗中存取這些索引標籤。 所有索引標籤都可協助回答「代理程式為何不在執行中？」的問題。 可用的錯誤訊息提供代理程式為何不在執行中的詳細資訊，並提供與訂閱相關聯的代理程式問題之疑難排解起點。  
   
--   **[所有訂閱]** 及 **[訂閱監看清單]**  
+-   **All Subscriptions tab** and **Subscription Watch List tab.**  
   
      這些索引標籤在本主題前文中說明。  
   
--   **發行者到散發者記錄** ] 索引標籤 （僅適用於交易式複寫）  
+-   **[發行者到散發者記錄]** 索引標籤 (僅適用於異動複寫)  
   
      此索引標籤會顯示關於發行集的「記錄讀取器代理程式」之資訊 (此索引標籤與「記錄讀取器代理程式」詳細資料視窗相同)。  
   
--   **散發者到訂閱者記錄** ] 索引標籤 （快照式複寫和異動複寫）  
+-   **[散發者到訂閱者記錄]** 索引標籤 (快照式複寫和異動複寫)  
   
      此索引標籤會顯示關於訂閱的「散發代理程式」之資訊。  
   
--   **散發命令** ] 索引標籤 （僅適用於交易式複寫）  
+-   **[未散發的命令]** 索引標籤 (僅適用於異動複寫)  
   
      此索引標籤會顯示散發資料庫中尚未傳送到所選訂閱者的命令數目，以及傳送這些命令的預估時間等相關資訊。 此索引標籤可協助回答「我的訂閱落後多少？」的問題。 如果散發者執行的是 SQL Server 2005 之前的版本，則不會顯示此索引標籤。  
   
--   **同步處理記錄** ] 索引標籤 （僅限合併式複寫）  
+-   **[同步處理記錄]** 索引標籤 (僅適用於合併式複寫)  
   
      此索引標籤會顯示關於訂閱的「合併代理程式」之資訊。 此索引標籤可協助回答下列問題：  
   
@@ -215,16 +219,16 @@ caps.handback.revision: 41
   
          此索引標籤提供在同步處理期間處理的每個發行項之詳細統計資料，包括在每個處理階段 (上傳變更、下載變更等等) 內花費的時間量。 這可協助找出導致速度變慢的特定資料表，且最適合在此進行合併訂閱效能問題的疑難排解。  
   
- 如需詳細資訊，請參閱 [檢視資訊並執行工作訂閱 & #40。複寫監視器 & #41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md) 和 [檢視資訊並執行訂閱 & #40; 相關聯的代理程式工作複寫監視器 & #41;](../../../relational-databases/replication/monitor/view information and perform tasks for subscription agents.md)。  
+ 如需詳細資訊，請參閱[檢視訂閱的資訊並執行工作 &#40;複寫監視器&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md) 和[檢視與訂閱建立關聯之代理程式的資訊並執行工作 &#40;複寫監視器&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)。  
   
-## 檢視與代理程式設定檔相關的資訊並執行工作  
+## <a name="viewing-information-and-performing-tasks-related-to-agent-profiles"></a>檢視與代理程式設定檔相關的資訊並執行工作  
  「複寫監視器」包含一些管理代理程式設定檔的對話方塊。 代理程式設定檔是代理程式的參數集合，用於決定代理程式行為。 如需詳細資訊，請參閱 [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md)。 對話方塊包括：  
   
 -   **代理程式設定檔**  
   
      此對話方塊可讓您變更設定檔的屬性、建立及刪除設定檔、指定預設設定檔，以及指定所有特定類型的代理程式 (如快照集代理程式) 都應該使用給定的設定檔。  
   
--   **\< AgentProfileName> 屬性**  
+-   **\<AgentProfileName> 屬性**  
   
      此對話方塊可讓您檢視和編輯設定檔中的參數設定。  
   
@@ -232,7 +236,7 @@ caps.handback.revision: 41
   
      此對話方塊可讓您建立新設定檔，並選擇性地包含現有設定檔中的值。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [監視複寫](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
   
   

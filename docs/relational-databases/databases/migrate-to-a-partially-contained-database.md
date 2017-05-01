@@ -1,24 +1,28 @@
 ---
 title: "移轉至部分自主資料庫 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "自主資料庫, 移轉"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- contained database, migrating to
 ms.assetid: 90faac38-f79e-496d-b589-e8b2fe01c562
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7d2228b3a1baf08376e1cb5ec862bf89f8a4e2d8
+ms.lasthandoff: 04/11/2017
+
 ---
-# 移轉至部分自主資料庫
+# <a name="migrate-to-a-partially-contained-database"></a>移轉至部分自主資料庫
   此主題討論如何準備變更為部分自主資料庫模型，然後提供移轉步驟。  
   
  **本主題內容：**  
@@ -34,7 +38,7 @@ caps.handback.revision: 17
 ##  <a name="prepare"></a> 準備移轉資料庫  
  當您考慮將資料庫移轉至部分自主資料庫模型時，請檢閱下列項目。  
   
--   您應該了解部分自主資料庫模型。 如需詳細資訊，請參閱[自主資料庫](../../relational-databases/databases/contained-databases.md)。  
+-   您應該了解部分自主資料庫模型。 如需詳細資訊，請參閱 [自主資料庫](../../relational-databases/databases/contained-databases.md)。  
   
 -   您應該了解部分自主資料庫獨有的風險。 如需詳細資訊，請參閱 [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md)。  
   
@@ -47,10 +51,10 @@ caps.handback.revision: 17
 -   請監視 **database_uncontained_usage** XEvent 來查看使用非內含性功能的時間。  
   
 ##  <a name="enable"></a> 啟用自主資料庫  
- 您必須先在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體上啟用自主資料庫，然後才能建立自主資料庫。  
+ 您必須先在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]執行個體上啟用自主資料庫，然後才能建立自主資料庫。  
   
-### 使用 Transact-SQL 來啟用自主資料庫  
- 下列範例會在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體上啟用自主資料庫。  
+### <a name="enabling-contained-databases-using-transact-sql"></a>使用 Transact-SQL 來啟用自主資料庫  
+ 下列範例會在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]執行個體上啟用自主資料庫。  
   
 ```tsql  
 sp_configure 'contained database authentication', 1;  
@@ -59,7 +63,7 @@ RECONFIGURE ;
 GO  
 ```  
   
-#### 使用 Management Studio 來啟用自主資料庫  
+#### <a name="enabling-contained-databases-using-management-studio"></a>使用 Management Studio 來啟用自主資料庫  
  下列範例會在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體上啟用自主資料庫。  
   
 1.  在物件總管中，以滑鼠右鍵按一下伺服器名稱，然後按一下 [屬性]。  
@@ -71,7 +75,7 @@ GO
 ##  <a name="convert"></a> 將資料庫轉換成部分自主資料庫  
  您可以透過變更 [內含項目] 選項，將資料庫轉換成自主資料庫。  
   
-### 使用 Transact-SQL，將資料庫轉換成部分自主資料庫  
+### <a name="converting-a-database-to-partially-contained-using-transact-sql"></a>使用 Transact-SQL，將資料庫轉換成部分自主資料庫  
  下列範例會將名為 `Accounting` 的資料庫轉換成部分自主資料庫。  
   
 ```tsql  
@@ -81,7 +85,7 @@ ALTER DATABASE [Accounting] SET CONTAINMENT = PARTIAL
 GO  
 ```  
   
-### 使用 Management Studio，將資料庫轉換成部分自主資料庫  
+### <a name="converting-a-database-to-partially-contained-using-management-studio"></a>使用 Management Studio，將資料庫轉換成部分自主資料庫  
  下列範例會將資料庫轉換成部分自主資料庫。  
   
 1.  在物件總管中，展開 [資料庫]，以滑鼠右鍵按一下要轉換的資料庫，然後按一下 [屬性]。  
@@ -116,7 +120,7 @@ CLOSE user_cursor ;
 DEALLOCATE user_cursor ;  
 ```  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [自主資料庫](../../relational-databases/databases/contained-databases.md)   
  [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)   
  [sys.dm_db_uncontained_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md)  

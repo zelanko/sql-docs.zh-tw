@@ -1,25 +1,29 @@
 ---
-title: "SQL Server 代理程式、作業物件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQLAgent:Jobs"
-  - "作業物件"
+title: "SQL Server Agent、Jobs 物件 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQLAgent:Jobs
+- Jobs object
 ms.assetid: 225b5e2d-4a78-4178-b2b6-b419df83c4aa
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a8f2931c070c0ed3816fb348b4ca41f3705b19a0
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server 代理程式、作業物件
+# <a name="sql-server-agent-jobs-object"></a>SQL Server 代理程式、作業物件
   SQL Server Agent 的「 **作業** 」效能物件包含報告有關 SQL Server Agent 作業資訊的效能計數器。 下表列出這個物件包含的計數器。  
   
  下表包含 **SQLAgent:Jobs** 計數器。  
@@ -39,12 +43,12 @@ caps.handback.revision: 21
 |--------------|-----------------|  
 |**_Total**|所有作業的資訊。|  
 |**警示**|由警示啟動之作業的資訊。|  
-|**其他**|不是由警示或排程啟動之作業的資訊。 一般而言，這些作業是手動使用 **sp_start_job** 來啟動。|  
+|**其他**|不是由警示或排程啟動之作業的資訊。 一般而言，這些作業是手動使用 **sp_start_job**來啟動。|  
 |**排程**|由排程啟動之作業的資訊。|  
   
-## 另請參閱  
- [實作作業](../../ssms/agent/implement-jobs.md)   
- [使用效能物件](../../ssms/agent/use-performance-objects.md)   
- [監視資源使用狀況 &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
+## <a name="see-also"></a>另請參閱  
+ [實作作業](http://msdn.microsoft.com/library/69e06724-25c7-4fb3-8a5b-3d4596f21756)   
+ [使用效能物件](http://msdn.microsoft.com/library/830b843a-6b2a-4620-a51b-98358e9fc54b)   
+ [監視資源使用狀況 &#40;系統監視器&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

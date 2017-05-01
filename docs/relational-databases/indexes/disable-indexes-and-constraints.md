@@ -1,35 +1,39 @@
 ---
 title: "停用索引和條件約束 | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.disableindexes.f1"
-helpviewer_keywords: 
-  - "停用的索引 [SQL Server], 索引作業"
-  - "非叢集索引 [SQL Server], 停用"
-  - "停用的索引 [SQL Server], 指導方針"
-  - "叢集索引, 停用"
-  - "條件約束 [SQL Server], 停用"
-  - "停用的索引 [SQL Server], 檢視"
-  - "FOREIGN KEY 條件約束, 停用"
-  - "統計資訊 [SQL Server], 索引"
-  - "索引停用 [SQL Server]"
-  - "索引檢視 [SQL Server], 停用的索引"
+ms.custom: 
+ms.date: 02/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.disableindexes.f1
+helpviewer_keywords:
+- disabled indexes [SQL Server], index operations
+- nonclustered indexes [SQL Server], disabling
+- disabled indexes [SQL Server], guidelines
+- clustered indexes, disabling
+- constraints [SQL Server], disabling
+- disabled indexes [SQL Server], viewing
+- FOREIGN KEY constraints, disabling
+- statistical information [SQL Server], indexes
+- index disabling [SQL Server]
+- indexed views [SQL Server], disabled indexes
 ms.assetid: 2198f1af-fa44-47e9-92df-f4fde322ba18
 caps.latest.revision: 28
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 02ec61b5f3342ba8c5abd6e5044cd9f6863f6145
+ms.lasthandoff: 04/11/2017
+
 ---
-# 停用索引和條件約束
+# <a name="disable-indexes-and-constraints"></a>停用索引和條件約束
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中停用索引或條件約束。 停用索引會防止使用者存取索引，而停用叢集索引則會防止存取基礎資料表資料。 索引定義會保留在中繼資料內，而索引統計資料會保留在非叢集索引上。 停用檢視上的非叢集或叢集索引，實際上會刪除索引資料。 停用資料表上的叢集索引，則會防止存取資料；這些資料仍留在資料表中，但無法用於資料操作語言 (DML) 作業，除非卸除或重建索引。  
@@ -70,7 +74,7 @@ caps.handback.revision: 28
   
 -   除了用於卸除或重建叢集索引，否則無法存取已停用叢集索引的資料列。  
   
--   當資料表沒有已停用的叢集索引時，您可以在線上重建已停用的非叢集索引。 然而，如果您使用 ALTER INDEX REBUILD 或 CREATE INDEX WITH DROP_EXISTING 陳述式，則一定要以離線方式重建已停用的叢集索引。 如需線上索引作業的詳細資訊，請參閱[線上執行索引作業](../../relational-databases/indexes/perform-index-operations-online.md)。  
+-   當資料表沒有已停用的叢集索引時，您可以在線上重建已停用的非叢集索引。 然而，如果您使用 ALTER INDEX REBUILD 或 CREATE INDEX WITH DROP_EXISTING 陳述式，則一定要以離線方式重建已停用的叢集索引。 如需線上索引作業的詳細資訊，請參閱 [線上執行索引作業](../../relational-databases/indexes/perform-index-operations-online.md)。  
   
 -   在已停用叢集索引的資料表上，CREATE STATISTICS 陳述式無法成功執行。  
   
@@ -93,7 +97,7 @@ caps.handback.revision: 28
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 若要停用索引  
+#### <a name="to-disable-an-index"></a>若要停用索引  
   
 1.  在 [物件總管] 中，按一下加號展開資料庫，此資料庫包含您要停用索引的資料表。  
   
@@ -107,7 +111,7 @@ caps.handback.revision: 28
   
 6.  在 **[停用索引]** 對話方塊中，確認 **[要停用的索引]** 方格中有正確索引，然後按一下 **[確定]**。  
   
-#### 停用資料表上的所有索引  
+#### <a name="to-disable-all-indexes-on-a-table"></a>停用資料表上的所有索引  
   
 1.  在 [物件總管] 中，按一下加號展開資料庫，此資料庫包含您要停用索引的資料表。  
   
@@ -162,7 +166,7 @@ caps.handback.revision: 28
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 若要停用索引  
+#### <a name="to-disable-an-index"></a>若要停用索引  
   
 1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
@@ -179,7 +183,7 @@ caps.handback.revision: 28
     DISABLE;  
     ```  
   
-#### 停用資料表上的所有索引  
+#### <a name="to-disable-all-indexes-on-a-table"></a>停用資料表上的所有索引  
   
 1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
@@ -198,3 +202,4 @@ caps.handback.revision: 28
  如需詳細資訊，請參閱 [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)。  
   
   
+

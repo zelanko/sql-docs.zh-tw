@@ -1,29 +1,33 @@
 ---
-title: "使用計算資料行中的 XML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "計算資料行, XML"
-  - "XML [SQL Server], 計算資料行"
+title: "在計算資料行中使用 XML | Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- computed columns, XML
+- XML [SQL Server], computed columns
 ms.assetid: 1313b889-69b4-4018-9868-0496dd83bf44
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f156afc96d002d1db972fb3060676c7043563a25
+ms.lasthandoff: 04/11/2017
+
 ---
-# 使用計算資料行中的 XML
+# <a name="use-xml-in-computed-columns"></a>使用計算資料行中的 XML
   XML 執行個體可依計算資料行的來源或依計算資料行的類型顯示。 本主題的範例將示範如何搭配計算資料行使用 XML。  
   
-## 從 XML 資料行建立計算資料行  
- 在下列 `CREATE TABLE` 陳述式中，從 `xml` 計算出 `col2` 類型資料行 (`col1`)：  
+## <a name="creating-computed-columns-from-xml-columns"></a>從 XML 資料行建立計算資料行  
+ 在下列 `CREATE TABLE` 陳述式中，從 `xml` 計算出`col2`類型資料行 ( `col1`)：  
   
 ```  
 CREATE TABLE T(col1 varchar(max), col2 AS CAST(col1 AS xml) )    
@@ -55,7 +59,7 @@ FROM T
   
 ```  
   
- 就如同上述範例，下列範例定義一個函數，以傳回計算資料行的 **xml** 類型執行個體。 在函數中，`query()` 資料類型的 `xml` 方法會擷取 `xml` 類型參數中的值。  
+ 就如同上述範例，下列範例定義一個函數，以傳回計算資料行的 **xml** 類型執行個體。 在函數中， `query()` 資料類型的 `xml` 方法會擷取 `xml` 類型參數中的值。  
   
 ```  
 CREATE FUNCTION my_udf(@var xml)   
@@ -65,7 +69,7 @@ BEGIN
 END  
 ```  
   
- 在下列 `CREATE TABLE` 陳述式中，`Col2` 是一個計算資料行，它使用了該函數所傳回的 XML 資料 (`<Features>` 元素)：  
+ 在下列 `CREATE TABLE` 陳述式中， `Col2` 是一個計算資料行，它使用了該函數所傳回的 XML 資料 (`<Features>` 元素)：  
   
 ```  
 CREATE TABLE T (Col1 xml, Col2 as dbo.my_udf(Col1) )  
@@ -82,7 +86,7 @@ SELECT *
 FROM T  
 ```  
   
-### 本節內容  
+### <a name="in-this-section"></a>本節內容  
   
 |主題|描述|  
 |-----------|-----------------|  

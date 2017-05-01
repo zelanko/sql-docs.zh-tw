@@ -1,25 +1,29 @@
 ---
-title: "建立原則式管理原則 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "原則式管理, 建立原則"
+title: "建立原則式管理原則 | Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Policy-Based Management, creating policies
 ms.assetid: b28bf963-89f9-4941-b6c1-6004fec347f1
 caps.latest.revision: 9
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 28d614d27647f0466abd5a6715244b6334ec56be
+ms.lasthandoff: 04/11/2017
+
 ---
-# 建立原則式管理原則
-  本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中建立原則式管理原則。  
+# <a name="create-a-policy-based-management-policy"></a>建立原則式管理原則
+  本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ，在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中建立原則式管理原則。  
   
  **本主題內容**  
   
@@ -40,7 +44,7 @@ caps.handback.revision: 9
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 若要建立原則  
+#### <a name="to-create-a-policy"></a>若要建立原則  
   
 1.  在物件總管中，按一下加號，展開您想要建立新原則式管理原則的伺服器。  
   
@@ -58,7 +62,7 @@ caps.handback.revision: 9
   
 8.  在 **[針對目標]** 方塊中，針對此原則選取一個或多個目標類型。 某些條件和 Facet 只能套用至特定目標類型。 可用的目標集會顯示在相關聯的方塊中。 展開 **[全部]** ，針對某些目標類型選取篩選條件。 如果此方塊中沒有出現任何目標，這表示檢查條件的範圍設定為伺服器層級。  
   
-9. 在 **[評估模式]** 方塊中，選取這個原則的行為方式。 不同的條件可以有不同的有效評估模式。 如需哪些評估模式有效的詳細資訊，請參閱[使用原則式管理來管理伺服器](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)。  
+9. 在 **[評估模式]** 方塊中，選取這個原則的行為方式。 不同的條件可以有不同的有效評估模式。 如需哪些評估模式有效的詳細資訊，請參閱 [使用原則式管理來管理伺服器](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)。  
   
 10. 如果此原則將依排程來評估，請將評估模式設定為 **[按排程時間]**，然後按一下 **[挑選]** 選取排程，或是按一下 **[新增]** 建立新的排程。  
   

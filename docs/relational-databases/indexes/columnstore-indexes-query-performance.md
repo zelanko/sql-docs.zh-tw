@@ -1,33 +1,37 @@
 ---
-title: "資料行存放區索引效能 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "01/27/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "資料行存放區索引 - 查詢效能 | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 01/27/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 83acbcc4-c51e-439e-ac48-6d4048eba189
 caps.latest.revision: 23
-author: "barbkess"
-ms.author: "barbkess"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: barbkess
+ms.author: barbkess
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: b16232d4a183a75dd9cf76e57ca0751df19e3a2f
+ms.lasthandoff: 04/11/2017
+
 ---
-# 資料行存放區索引效能
+# <a name="columnstore-indexes---query-performance"></a>資料行存放區索引 - 查詢效能
 [!INCLUDE[tsql-appliesto-ss2012-all_md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
   針對達到資料行存放區索引設計來提供的快速查詢效能的建議。    
     
  資料行存放區索引的分析和資料倉儲工作負載效能可提升高達 100 倍，且資料壓縮比傳統的資料列存放區索引提升高達 10 倍。   這些建議能讓您的查詢達到資料行存放區索引設計來提供的快速查詢效能。  本文結尾部分有資料行存放區效能的進一步說明。    
     
-## 改善查詢效能的建議    
+## <a name="recommendations-for-improving-query-performance"></a>改善查詢效能的建議    
  以下是針對達到資料行存放區索引設計來提供的高效能的建議。    
     
-### 1.藉由全資料表掃描來組織資料以排除更多資料列群組    
+### <a name="1-organize-data-to-eliminate-more-rowgroups-from-a-full-table-scan"></a>1.藉由全資料表掃描來組織資料以排除更多資料列群組    
     
 -   **運用插入順序。** 在一般的傳統資料倉儲案例中，資料確實是按照時間順序插入且分析是在時間維度中進行。 例如，按照季來分析銷售量。 針對這類型的工作負載，會自動發生列群組刪除。 在 SQL Server 2016 中，您會發現查詢程序略過數字資料列群組。    
     
@@ -35,7 +39,7 @@ caps.handback.revision: 22
     
 -   **運用資料表分割。** 您可以分割資料行存放區索引，然後使用分割區刪除來減少可掃描之資料列群組的數量。 例如，一個事實資料表儲存客戶的購物記錄，及按季尋找特定客戶購物記錄的一般查詢模式，您可以將插入順序與自訂資料行上的分割區結合。 每個分割區會包含特定客戶按時間排序的資料列。    
     
-### 2.規劃足夠的記憶體以平行建立資料行存放區索引    
+### <a name="2-plan-for-enough-memory-to-create-columnstore-indexes-in-parallel"></a>2.規劃足夠的記憶體以平行建立資料行存放區索引    
  除非記憶體受到限制，資料行存放區索引的建立預設都是平行作業。 平行建立索引比循序建立索引需要更多的記憶體。 在記憶體很寬裕的情況下，建立資料行存放區索引花費的時間大約是根據相同的資料行建構 B 型樹狀目錄的 1.5 倍。    
     
  建立資料行存放區索引所需的記憶體取決於資料行數目、字串資料行的數目、平行處理原則的程度 (DOP) 和資料的特性。 例如，假設您的資料表少於一百萬個資料列，SQL Server 便只會使用單一執行緒來建立資料行存放區索引。    
@@ -44,12 +48,12 @@ caps.handback.revision: 22
     
  從 SQL Server 2016 開始，查詢一律會以批次模式進行。 在舊版中，只有當 DOP 大於 1 時才會使用批次執行。    
     
-## 資料行存放區效能說明    
+## <a name="columnstore-performance-explained"></a>資料行存放區效能說明    
  資料行存放區索引結合了高速記憶體內批次模式處理，以及大幅減少 IO 要求的技術，來達到高效能查詢。  由於分析查詢會搜尋大量的資料列 (它們通常與 IO 關聯)，因此減少查詢執行期間的 IO 對於資料行存放區索引的設計相當重要。  一旦將資料讀取到記憶體中，減少記憶體內作業數目就非常重要。    
     
  資料行存放區索引會透過高資料壓縮、資料行存放區刪除、資料列群組刪除和批次處理來減少 IO 並最佳化記憶體內作業。    
     
-### 資料壓縮    
+### <a name="data-compression"></a>資料壓縮    
  資料行存放區索引比資料列存放區索引的資料壓縮提升高達 10 倍。  這樣可以大幅減少執行分析查詢的 IO 要求，因此可改善查詢效能。    
     
 -   資料行存放區索引會讀取來自磁碟機的壓縮資料，這表示需要讀取道記憶體中之資料的位元組更少了。    
@@ -60,14 +64,14 @@ caps.handback.revision: 22
     
 -   例如，如果一個事實資料表儲存客戶的地址，並有國家/地區的資料行，則可能值的總數量小於 200。  某些值會重複許多次。  如果該事實資料表有 1 億個資料列，則輕鬆就能壓縮國家/地區的資料列，且只需非常小的儲存空間。 逐列壓縮無法這樣利用資料行內值的相似性，且壓縮國家/地區資料行內的值會使用更多位元組。    
     
-### 資料行刪除    
+### <a name="column-elimination"></a>資料行刪除    
  資料行存放區索引讀取資料行時會略過查詢結果不需要的值。 這項功能稱為資料行刪除，能夠進一步減少查詢執行的 IO，因而改善查詢效能。    
     
 -   能夠進行資料行刪除的原因是資料以行為單位組織及壓縮。   相較之下，當逐列儲存資料時，每個資料行中的資料列值在實體上已經儲存在一起，且無法輕易分離。 查詢處理器需要讀取整個資料列來抓取特定行的值，這樣會增加 IO，因為不必要的額外資料也會讀取到記憶體中。    
     
 -   例如，如果資料表有 50 個資料行，而查詢只使用其中 5 個資料行，則資料行存放區索引只會從磁碟機擷取那 5 個資料行。 它會略過讀取其他 45 個資料行。 假設所有資料行大小相同，這樣能額外減少 90% 的 IO。  如果是儲存在資料列存放區，則查詢處理器必須讀取額外的 45 個資料行。    
     
-### 資料列群組刪除    
+### <a name="rowgroup-elimination"></a>資料列群組刪除    
  對於完整資料表掃描，大部分的資料通常都不符合查詢述詞準則。 透過使用中繼資料，資料行存放區索引能夠略過讀取不包含查詢結果所需資料的資料列群組，完全不需要實際 IO。  這項功能稱為群組資料列刪除，能夠進一步減少查詢執行的 IO，因而改善查詢效能。    
     
  **資料行存放區索引何時需要執行完整資料表掃描？**    
@@ -82,9 +86,9 @@ caps.handback.revision: 22
     
  資料行存放區索引會使用中繼資料，來針對每個資料列群組排序各資料行區段的最大值和最小值，以決定要刪除的資料列群組。 當沒有資料行區段符合查詢述詞準則時，則會略過整個資料列群組而不進行任何值計的 IO。 能這樣運作是因為載入的資料通常已經排序過，雖然不保證資料列已經排序過，但類似的資料值通常會位於相同或鄰近的資料列群組中。    
     
- 如需資料列群組的詳細資訊，請參閱[資料行存放區索引指南](../Topic/Columnstore%20Indexes%20Guide.md)    
+ 如需資料列群組的詳細資訊，請參閱＜資料行存放區索引指南＞。    
     
-### 批次模式執行    
+### <a name="batch-mode-execution"></a>批次模式執行    
  批次模式執行是指一次處理一組資料列集合 (最多通常 900 個資料列)，以提升執行效率。 例如，查詢  `Select SUM (Sales)from SalesData` 會彙總 SalesData 資料表的總銷售量。    在批次模式執行中，查詢執行引擎會計算群組中 900 個值的彙總。  這會將中繼資料、存取成本和其他類型的負擔分散到批次中的所有資料列上，而不是將成本花費在每個資料列上，因此可以大幅減少程式碼路徑。  當情況允許時，批次模式執行會在壓縮的資料上作業，並刪除某些資料列處理的交換運算子。  這樣能依據重要順序來加快分析查詢的執行。    
     
  並非所有查詢執行操作子都能在批次模式中執行。 例如，Insert、Delete 或 Update 等 DML 作業是以資料列為單位來執行。 批次模式運算子的目標是加速查詢效能的運算子，例如 Scan、Join、Aggregate、Sort 等等。  因為資料行存放區索引是在 SQL Server 2012 引進，所以仍需要一些努力來擴增可在批次模式中執行的運算子。 下表根據產品版本顯示在批次模式中執行的運算子。    
@@ -110,7 +114,7 @@ caps.handback.revision: 22
     
  ¹適用於 SQL Server 2016、SQL Database V12 Premium Edition 和 SQL 資料倉儲    
     
-### 彙總下推    
+### <a name="aggregate-pushdown"></a>彙總下推    
  彙總計算從 SCAN 擷取符合之資料列並在「批次模式」中彙總其值的一般執行路徑。  儘管這提供良好的效能，但在 SQL Server 2016 中，可將彙總作業推入 SCAN 節點，若符合下列條件，則能夠以依據重要順序提升「批次模式」執行上彙總運算的效能    
     
 -   支援的彙總運算子有 MIN、MAX、SUM、COUNT、AVG    
@@ -135,8 +139,8 @@ SELECT  SUM(TotalProductCost)
 FROM FactResellerSalesXL_CCI    
 ```    
     
-### 字串述詞下推    
- 動機：在設計資料倉儲結構描述時，建議的結構描述模型是使用一或多個事實資料表及多個維度資料表的星型結構描述或雪花結構描述。 [事實資料表](https://en.wikipedia.org/wiki/Fact_table)會儲存商務測量或交易，而[維度資料表](https://en.wikipedia.org/wiki/Dimension_table)會儲存要分析之事實間的維度。    
+### <a name="string-predicate-pushdown"></a>字串述詞下推    
+ 動機：在設計資料倉儲結構描述時，建議的結構描述模型是使用一或多個事實資料表及多個維度資料表的星型結構描述或雪花結構描述。 [事實資料表](https://en.wikipedia.org/wiki/Fact_table) 會儲存商務測量或交易，而 [維度資料表](https://en.wikipedia.org/wiki/Dimension_table) 會儲存要分析之事實間的維度。    
     
  例如，事實可以是代表特定產品在特定地區之銷售的記錄，而維度則代表地區、產品等集合。 事實和維度資料表示透過主/外部索引鍵關聯性來連接。 最常使用的分析查詢會聯結一或多個維度資料表和事實資料表。    
     
@@ -154,13 +158,14 @@ FROM FactResellerSalesXL_CCI
     
 -   不支援評估 NULL 的運算式    
     
-## 另請參閱    
- [資料行存放區索引指南](../Topic/Columnstore%20Indexes%20Guide.md)     
- [資料行存放區索引資料載入](../Topic/Columnstore%20Indexes%20Data%20Loading.md)     
- [資料行存放區索引建立版本功能摘要](../Topic/Columnstore%20Indexes%20Versioned%20Feature%20Summary.md)     
+## <a name="see-also"></a>另請參閱    
+ 資料行存放區索引指南     
+ 資料行存放區索引資料載入     
+ 資料行存放區索引建立版本功能摘要     
  [資料行存放區索引效能](../../relational-databases/indexes/columnstore-indexes-query-performance.md)     
  [開始使用資料行存放區進行即時作業分析](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)     
- [資料倉儲的資料行存放區索引](../Topic/Columnstore%20Indexes%20for%20Data%20Warehousing.md)     
+ 資料倉儲的資料行存放區索引     
  [資料行存放區索引重組](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)    
     
   
+

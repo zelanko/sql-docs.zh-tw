@@ -1,27 +1,31 @@
 ---
 title: "將 SQL Server Audit 事件寫入安全性記錄檔 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "記錄檔 [SQL Server], 安全性記錄檔"
-  - "伺服器稽核 [SQL Server]"
-  - "稽核 [SQL Server], 寫入安全性記錄檔"
-  - "安全性記錄 [SQL Server]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- logs [SQL Server], Security Log
+- server audit [SQL Server]
+- audits [SQL Server], writing to Security Log
+- security logs [SQL Server]
 ms.assetid: 6fabeea3-7a42-4769-a0f3-7e04daada314
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 268f1fbd8ea57db8626c84999a3454e4c4459511
+ms.lasthandoff: 04/11/2017
+
 ---
-# 將 SQL Server Audit 事件寫入安全性記錄檔
+# <a name="write-sql-server-audit-events-to-the-security-log"></a>將 SQL Server Audit 事件寫入安全性記錄檔
   在高度安全性的環境中，Windows 安全性記錄檔是寫入記錄物件存取之事件的適當位置。 雖然支援其他稽核位置，但是這些位置容易遭算改。  
   
  將 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 伺服器稽核寫入 Windows 安全性記錄檔有兩個重要需求：  
@@ -116,7 +120,7 @@ caps.handback.revision: 19
   
 7.  關閉安全性原則工具。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [SQL Server Audit &#40;Database Engine&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md)  
   
   

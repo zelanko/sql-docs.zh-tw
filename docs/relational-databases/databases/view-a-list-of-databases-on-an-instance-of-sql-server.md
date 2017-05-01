@@ -1,31 +1,35 @@
 ---
-title: "檢視 SQL Server 執行個體上的資料庫清單 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "目前的資料庫"
-  - "目前位於伺服器上的資料庫 [SQL Server]"
-  - "資料庫清單 [SQL Server]"
-  - "檢視資料庫清單"
-  - "顯示資料庫清單"
-  - "資料庫 [SQL Server], 檢視"
-  - "伺服器 [SQL Server], 列出的資料庫"
-  - "列出資料庫"
+title: "檢視 SQL Server 執行個體上的資料庫清單 | Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- current databases
+- databases currently on server [SQL Server]
+- database list [SQL Server]
+- viewing database list
+- displaying database list
+- databases [SQL Server], viewing
+- servers [SQL Server], databases listed on
+- listing databases
 ms.assetid: 7ee7a789-db36-4be9-8a0e-0362a1e152dd
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: abc61a3002a87583c6b297917ff8f7665472c423
+ms.lasthandoff: 04/11/2017
+
 ---
-# 檢視 SQL Server 執行個體上的資料庫清單
+# <a name="view-a-list-of-databases-on-an-instance-of-sql-server"></a>檢視 SQL Server 執行個體上的資料庫清單
   此主題描述如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來檢視 [!INCLUDE[tsql](../../includes/tsql-md.md)]執行個體上的資料庫清單。  
   
  **本主題內容**  
@@ -49,7 +53,7 @@ caps.handback.revision: 31
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 若要檢視 SQL Server 執行個體上的資料庫清單  
+#### <a name="to-view-a-list-of-databases-on-an-instance-of-sql-server"></a>若要檢視 SQL Server 執行個體上的資料庫清單  
   
 1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的執行個體，然後展開該執行個體。  
   
@@ -57,7 +61,7 @@ caps.handback.revision: 31
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 若要檢視 SQL Server 執行個體上的資料庫清單  
+#### <a name="to-view-a-list-of-databases-on-an-instance-of-sql-server"></a>若要檢視 SQL Server 執行個體上的資料庫清單  
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
@@ -74,7 +78,7 @@ GO
   
 ```  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [資料庫和檔案目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)  
   

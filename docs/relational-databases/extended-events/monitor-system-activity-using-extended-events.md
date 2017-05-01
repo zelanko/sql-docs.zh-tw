@@ -1,33 +1,37 @@
 ---
 title: "使用擴充事件監視系統活動 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "xe"
-  - "擴充事件 [SQL Server], 監視系統活動"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- xe
+- extended events [SQL Server], monitoring system activity
 ms.assetid: d83ad88f-818c-49fe-a9a9-299f704fca53
 caps.latest.revision: 20
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b586a05981139acd687aaf712f01665f1650ac59
+ms.lasthandoff: 04/11/2017
+
 ---
-# 使用擴充事件監視系統活動
+# <a name="monitor-system-activity-using-extended-events"></a>使用擴充事件監視系統活動
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   此程序說明如何搭配 Windows 事件追蹤 (ETW) 來使用擴充的事件，以監視系統活動。 此程序也會示範如何使用 CREATE EVENT SESSION、ALTER EVENT SESSION 和 DROP EVENT SESSION 陳述式。  
   
  完成這些工作需要在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中使用查詢編輯器來進行以下程序。 此程序也需要使用命令提示字元來執行 ETW 命令。  
   
-### 使用擴充的事件監視系統活動  
+### <a name="to-monitor-system-activity-using-extended-events"></a>使用擴充的事件監視系統活動  
   
 1.  在查詢編輯器中，發出下列陳述式來建立事件工作階段及加入兩個事件。 這些 checkpoint_begin 和 checkpoint_end 事件會在資料庫中斷點的開頭和結尾引發。  
   
@@ -117,12 +121,12 @@ caps.handback.revision: 20
     go  
     ```  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [CREATE EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md)   
  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-event-session-transact-sql.md)   
  [DROP EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-event-session-transact-sql.md)   
  [擴充的事件目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)   
  [擴充的事件動態管理檢視](../../relational-databases/system-dynamic-management-views/extended-events-dynamic-management-views.md)   
- [SQL Server 擴充的事件目標](../Topic/SQL%20Server%20Extended%20Events%20Targets.md)  
+ [SQL Server 擴充的事件目標](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)  
   
   

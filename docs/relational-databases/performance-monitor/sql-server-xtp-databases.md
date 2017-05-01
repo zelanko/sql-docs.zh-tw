@@ -1,30 +1,34 @@
 ---
-title: "SQL Server XTP Databases | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQL Server 2016 XTP Databases"
+title: "SQL Server XTP 資料庫 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Server 2016 XTP Databases
 ms.assetid: 488ff55e-173f-43f6-9bdb-67b35e7cebfe
 caps.latest.revision: 3
-author: "dagiro"
-ms.author: "v-dagir"
-manager: "jhubbard"
-caps.handback.revision: 3
+author: dagiro
+ms.author: v-dagir
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e2839d276956db1b82bf6b1f236ceae74b973477
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server XTP Databases
+# <a name="sql-server-xtp-databases"></a>SQL Server XTP Databases
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
 **SQL Server XTP Databases** 效能物件提供記憶體內部 OLTP 資料庫特定的計數器。
 
 > [!NOTE]
->  從 sys.dm_os_performance_counters 目前看不到 SQL Server XTP Databases 計數器。  您可以從[系統監視器](../../relational-databases/performance/start-system-monitor-windows.md)檢視計數器。
+>  從 sys.dm_os_performance_counters 目前看不到 SQL Server XTP Databases 計數器。  您可以從 [系統監視器](../../relational-databases/performance/start-system-monitor-windows.md)檢視計數器。
 
 下表描述 **SQL Server XTP Databases** 計數器。
 
@@ -42,7 +46,7 @@ caps.handback.revision: 3
 |**IoPagePool256K Total Allocated**|後端配置器中 256K IO 分頁集區所配置和保留的分頁總數。 這是層級非常低的計數器，非供客戶使用。|
 |**IoPagePool4K Free List Count**|4K IO 分頁集區可用清單中的分頁數目。 如果這個值會變成零，則會從後端配置器配置更多頁面。 這是層級非常低的計數器，非供客戶使用。|
 |**IoPagePool4K Total Allocated**|後端配置器中 4K IO 分頁集區所配置和保留的分頁總數。 這是層級非常低的計數器，非供客戶使用。|
-|**IoPagePool64K Free List Count**|64K IO 分頁集區可用清單中的分頁數目。 如果這個值變成零，則會從後端配置器配置更多頁面。 這是層級非常低的計數器，非供客戶使用。|
+|**IoPagePool64K Free List Count**|64K IO 分頁集區可用清單中的分頁數目。 如果這個值會變成零，則會從後端配置器配置更多頁面。 這是層級非常低的計數器，非供客戶使用。|
 |**IoPagePool64K Total Allocated**|後端配置器中 64K IO 分頁集區所配置和保留的分頁總數。 這是層級非常低的計數器，非供客戶使用。|
 |**MtLog 256K Expand Count**|展開 256K MtLog 的次數。 這是層級非常低的計數器，非供客戶使用。|
 |**MtLog 256K IOs Outstanding**|MtLog 所發出的未完成 256K IO 要求數目。|
@@ -64,5 +68,5 @@ caps.handback.revision: 3
 |**Tail Cache Page Count Peak**|結尾快取中所配置的最高頁數。 這是層級非常低的計數器，非供客戶使用。|
 
 
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
 [SQL Server XTP &#40;記憶體內部 OLTP&#41; 效能計數器](../../relational-databases/performance-monitor/sql-server-xtp-in-memory-oltp-performance-counters.md)

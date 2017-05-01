@@ -1,31 +1,35 @@
 ---
 title: "使用記憶體最佳化的系統版本設定時態表 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "05/05/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 05/05/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 691d4f80-6754-43f5-8b43-d4facf08f6fc
 caps.latest.revision: 12
-author: "CarlRabeler"
-ms.author: "carlrab"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: CarlRabeler
+ms.author: carlrab
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bc6120bdfcead0939218958888ca3a223a8c1385
+ms.lasthandoff: 04/11/2017
+
 ---
-# 使用記憶體最佳化的系統版本設定時態表
+# <a name="working-with-memory-optimized-system-versioned-temporal-tables"></a>使用記憶體最佳化的系統版本設定時態表
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   本主題討論記憶體最佳化之系統版本設定時態表和以磁碟基礎之系統版本設定時態表的使用方式差異。  
   
 > [!NOTE]  
->  搭配使用 Temporal 和記憶體最佳化資料表僅適用於 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，不適用於 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+>  搭配使用 Temporal 和記憶體最佳化資料表僅適用於 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ，不適用於 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
-## 探索中繼資料  
+## <a name="discovering-metadata"></a>探索中繼資料  
  若要探索記憶體最佳化之系統版本設定時態表的相關中繼資料，您需要結合來自 [sys.tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md) 和 [sys.internal_tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-tables-transact-sql.md) 的資訊。 系統版本設定時態表會呈現為內部記憶體中記錄資料表的 parent_object_id。  
   
  以下範例示範如何查詢及聯結這些資料表。  
@@ -46,7 +50,7 @@ WHERE T1.is_memory_optimized  = 1 AND T1.temporal_type = 2
   
 ```  
   
-## 修改資料  
+## <a name="modifying-data"></a>修改資料  
  原生編譯的預存程序可讓您將非暫時記憶體最佳化的資料表轉換成系統版本設定，並保留現有的原生預存程序，因此您可以透過這些預存程序來修改系統版本設定的記憶體最佳化時態表。  
   
  以下範例展示如何在原生編譯的模組中修改先前建立的資料表。  
@@ -72,10 +76,10 @@ GO ;
   
 ```  
   
-## 這篇文章對您有幫助嗎？ 我們會持續聽取您的意見  
+## <a name="did-this-article-help-you-were-listening"></a>這篇文章對您有幫助嗎？ 我們會持續聽取您的意見  
  您要尋找哪些資訊？找到了嗎？ 我們會持續聽取您的意見來改進內容。 請將您的意見傳送到 [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Working%20with%20Memory-Optimized%20System-Versioned%20Temporal%20Tables%20page)  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [系統版本設定時態表與記憶體最佳化資料表](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)   
  [建立記憶體最佳化的系統版本設定時態表](../../relational-databases/tables/creating-a-memory-optimized-system-versioned-temporal-table.md)   
  [監視記憶體最佳化的系統建立版本時態表](../../relational-databases/tables/monitoring-memory-optimized-system-versioned-temporal-tables.md)   
@@ -86,3 +90,4 @@ GO ;
  [暫存資料表中繼資料檢視和函數](../../relational-databases/tables/temporal-table-metadata-views-and-functions.md)  
   
   
+

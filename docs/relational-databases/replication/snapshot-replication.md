@@ -1,25 +1,29 @@
 ---
-title: "快照式複寫 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "snapshot replication [SQL Server], about snapshot replication"
-  - "快照式複寫 [SQL Server]"
+title: "快照式複寫 | Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- snapshot replication [SQL Server], about snapshot replication
+- snapshot replication [SQL Server]
 ms.assetid: 5d745f22-9c6b-4e11-8c62-bc50e9a8bf38
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6c99d91ab0209eb08c04488ce27043b2ad714781
+ms.lasthandoff: 04/11/2017
+
 ---
-# 快照式複寫
+# <a name="snapshot-replication"></a>快照式複寫
   快照式複寫可以精確地將資料以其特定時點的樣子散發出去，且不監視此資料的更新。 在進行同步處理的時候，會產生整個快照集並傳送至「訂閱者」。  
   
 > [!NOTE]  
@@ -59,7 +63,7 @@ caps.handback.revision: 34
  ![快照式複寫元件和資料流程](../../relational-databases/replication/media/snapshot.gif "快照式複寫元件和資料流程")  
   
 ##  <a name="SnapshotAgent"></a> 快照集代理程式  
- 針對合併式複寫，每次執行快照集代理程式都會產生快照集。 對於異動複寫，產生快照集取決於發行集屬性的設定 **immediate_sync**。 若屬性設定為 TRUE (使用新增發行集精靈的預設)，每次執行快照集代理程式都會產生快照集，同時隨時可套用至訂閱者。 如果此屬性設定為 FALSE (預設值使用時 **sp_addpublication**)，因為最後一個快照集代理程式執行時，已加入新的訂閱時，才會產生快照集「 訂閱者 」 必須等到完成後才可以在同步處理快照集代理程式。  
+ 針對合併式複寫，每次執行快照集代理程式都會產生快照集。 針對異動複寫，是否產生快照集是依照發行集屬性 **immediate_sync**的設定而定。 若屬性設定為 TRUE (使用新增發行集精靈的預設)，每次執行快照集代理程式都會產生快照集，同時隨時可套用至訂閱者。 若屬性設定為 FALSE (使用 **sp_addpublication**時的預設)，則只有在上次執行快照集代理程式後有加入新訂閱的情況下，才會產生快照集。訂閱者必須等待快照集代理程式完成，才能同步處理。  
   
  「快照集代理程式」會執行下列步驟：  
   
@@ -75,7 +79,7 @@ caps.handback.revision: 34
   
 3.  從「發行者」端的已發行資料表複製資料，並將其寫入快照集資料夾。 快照集以一組大量複製程式 (BCP) 檔案的形式產生。  
   
-4.  針對快照式和交易式發行集，快照集代理程式附加至的資料列 **MSrepl_commands** 和 **MSrepl_transactions** 散發資料庫中的資料表。 中的項目 **MSrepl_commands** 資料表為命令，表示.sch 和.bcp 檔案、 其他快照集檔案及參考的任何前置或後快照集指令碼的位置。 中的項目 **MSrepl_transactions** 資料表是 「 訂閱者 」 的同步處理相關的命令。  
+4.  對於快照式和交易式發行集，「快照集代理程式」會附加資料列至散發資料庫中的 **MSrepl_commands** 和 **MSrepl_transactions** 資料表。 **MSrepl_commands** 資料表中的項目為命令，表示 .sch 和 .bcp 檔案的位置、其他快照集檔案，以及對前快照集 (pre-snapshot) 或後快照集 (post-snapshot) 指令碼的參考。 **MSrepl_transactions** 資料表中的項目是與同步處理「訂閱者」相關的命令。  
   
      對於合併式發行集，「快照集代理程式」還執行其他步驟。  
   
@@ -90,7 +94,7 @@ caps.handback.revision: 34
   
 1.  建立與「散發者」的連接。  
   
-2.  檢查 **MSrepl_commands** 和 **MSrepl_transactions** 「 散發者 」 上的散發資料庫中的資料表。 代理程式會從第一個資料表中讀取快照集檔案的位置，並從兩個資料表中讀取「訂閱者」同步處理命令。  
+2.  檢查「散發者」上散發資料庫中的 **MSrepl_commands** 與 **MSrepl_transactions** 資料表。 代理程式會從第一個資料表中讀取快照集檔案的位置，並從兩個資料表中讀取「訂閱者」同步處理命令。  
   
 3.  將結構描述與命令套用至訂閱資料庫上。  
   

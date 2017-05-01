@@ -1,30 +1,34 @@
 ---
-title: "資源管理員分類函數 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "資源管理員, 分類函數"
-  - "使用者自訂函數 [SQL Server], 分類函數"
-  - "分類函數 [SQL Server]"
-  - "分類函數 [SQL Server], 概觀"
+title: "資源管理員分類函式 | Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Resource Governor, classifier function
+- user-defined functions [SQL Server], classifier function
+- classifier function [SQL Server]
+- classifier function [SQL Server], overview
 ms.assetid: 64c25012-7068-476f-afa2-0b4f3adde9a4
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 284ee7a05af7ab73e78dd827269db49c7d3f1e00
+ms.lasthandoff: 04/11/2017
+
 ---
-# 資源管理員分類函數
+# <a name="resource-governor-classifier-function"></a>資源管理員分類函數
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資源管理員分類程序會根據內送工作階段的特性，將工作階段指派給工作負載群組。 您可以透過撰寫使用者定義函數 (稱為分類函數) 來自訂分類邏輯。  
   
-## 分類  
+## <a name="classification"></a>分類  
  資源管理員支援內送工作階段的分類。 分類是以函數中包含的一組使用者撰寫準則為基礎。 函數邏輯的結果可讓資源管理員將工作階段分類至現有的工作負載群組中。  
   
 > [!NOTE]  
@@ -62,9 +66,9 @@ caps.handback.revision: 7
 -   分類函數所傳回工作負載群組位於結構描述繫結限制的範圍以外。 例如，雖然您無法卸除資料表，但是卻能夠卸除工作負載群組。  
   
 > [!IMPORTANT]  
->  我們建議您在伺服器上啟用專用管理員連接 (DAC)。 DAC 不受資源管理員分類限制，而且可用來監視和疑難排解分類函數。 如需詳細資訊，請參閱[資料庫管理員的診斷連接](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)。 如果 DAC 無法用於疑難排解，其他選項就是在單一使用者模式中重新啟動系統。 雖然單一使用者模式不受分類限制，但是您無法在資源管理員分類執行時進行診斷。  
+>  我們建議您在伺服器上啟用專用管理員連接 (DAC)。 DAC 不受資源管理員分類限制，而且可用來監視和疑難排解分類函數。 如需詳細資訊，請參閱 [資料庫管理員的診斷連接](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)。 如果 DAC 無法用於疑難排解，其他選項就是在單一使用者模式中重新啟動系統。 雖然單一使用者模式不受分類限制，但是您無法在資源管理員分類執行時進行診斷。  
   
-### 分類程序  
+### <a name="classification-process"></a>分類程序  
  在資源管理員的內容中，工作階段的登入程序包含下列步驟：  
   
 1.  登入驗證  
@@ -76,15 +80,15 @@ caps.handback.revision: 7
  開始分類時，資源管理員就會執行分類函數並使用此函數所傳回的值，將要求傳送至適當的工作負載群組。  
   
 > [!NOTE]  
->  [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md) 和 [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) 中有公開執行分類函數和 LOGON 觸發程序的相關資訊。  
+>  [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md) 和 [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)中有公開執行分類函數和 LOGON 觸發程序的相關資訊。  
   
-## 分類函數工作  
+## <a name="classification-function-tasks"></a>分類函數工作  
   
 |工作描述|主題|  
 |----------------------|-----------|  
 |描述如何建立和測試分類使用者定義函數。|[建立和測試分類使用者定義函數](../../relational-databases/resource-governor/create-and-test-a-classifier-user-defined-function.md)|  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [資源管理員](../../relational-databases/resource-governor/resource-governor.md)   
  [啟用資源管理員](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [資源管理員資源集區](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   

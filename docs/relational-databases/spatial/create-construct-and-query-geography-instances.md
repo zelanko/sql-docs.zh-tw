@@ -1,27 +1,31 @@
 ---
-title: "建立、建構並查詢地理位置執行個體 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-spatial"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "geography 資料類型 [SQL Server]"
-  - "geodetic 資料類型 [SQL Server]"
-  - "geography 資料類型 [SQL Server], 關於 geography 資料類型"
+title: "建立、建構並查詢 geography 執行個體 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-spatial
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- geography data type [SQL Server]
+- geodetic data type [SQL Server]
+- geography data type [SQL Server], about geography data type
 ms.assetid: b585851e-d15b-411f-adeb-aeabeb777c0b
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 13e7519e11e23d73ff22a3f7d420d0fafc132abf
+ms.lasthandoff: 04/11/2017
+
 ---
-# 建立、建構並查詢地理位置執行個體
-  地理位置空間資料類型 (**geography**) 代表圓形表面座標系統中的資料。 這種類型在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中是實作為 .NET Common Language Runtime (CLR) 資料類型。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** 資料類型會儲存橢圓體 (圓形地球) 資料，例如 GPS 經緯度座標。  
+# <a name="create-construct-and-query-geography-instances"></a>建立、建構並查詢地理位置執行個體
+  地理位置空間資料類型 ( **geography**) 代表圓形表面座標系統中的資料。 這種類型在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中是實作為 .NET Common Language Runtime (CLR) 資料類型。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** 資料類型會儲存橢圓體 (圓形地球) 資料，例如 GPS 經緯度座標。  
   
  **geography** 類型已預先定義，而且可在每一個資料庫中使用。 您可以建立 **geography** 類型的資料表資料行，並使用與其他系統提供之類型相同的方式來操作 **geography** 資料。  
   
@@ -104,7 +108,7 @@ caps.handback.revision: 14
 ###  <a name="gml"></a> 從 GML 文字輸入建構地理位置執行個體  
  **geography** 資料類型提供一種方法，從 GML 產生 **geography** 執行個體，而 GML 是 **geography** 執行個體的 XML 表示法。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可支援 GML 的子集。  
   
- 如需地理標記語言的詳細資訊，請參閱 OGC 規格：[OGC 規格、地理標記語言](http://go.microsoft.com/fwlink/?LinkId=93629)。  
+ 如需地理標記語言的詳細資訊，請參閱 OGC 規格： [OGC 規格、地理標記語言](http://go.microsoft.com/fwlink/?LinkId=93629)。  
   
  **從 GML 輸入建構任何類型的地理位置執行個體**  
  [GeomFromGML &#40;geography 資料類型&#41;](../../t-sql/spatial-geography/geomfromgml-geography-data-type.md)  
@@ -145,7 +149,7 @@ caps.handback.revision: 14
  [STGeometryN &#40;geography 資料類型&#41;](../../t-sql/spatial-geography/stgeometryn-geography-data-type.md)STGeometryN (geography 資料類型)  
   
 ###  <a name="number"></a> 點數  
- 所有非空白的 **geography** 執行個體都是由*「點」*(Point) 所組成。 這些點代表 **geography** 執行個體繪製所在之地球的經緯度座標。 **geography** 資料類型提供了許多內建方法來查詢執行個體的點。  
+ 所有非空白的 **geography** 執行個體都是由 *「點」*(Point) 所組成。 這些點代表 **geography** 執行個體繪製所在之地球的經緯度座標。 **geography** 資料類型提供了許多內建方法來查詢執行個體的點。  
   
  **傳回組成執行個體的點數**  
  [STNumPoints &#40;geography 資料類型&#41;](../../t-sql/spatial-geography/stnumpoints-geography-data-type.md)  
@@ -160,7 +164,7 @@ caps.handback.revision: 14
  [STEndpoint &#40;geography 資料類型&#41;](../../t-sql/spatial-geography/stendpoint-geography-data-type.md)  
   
 ###  <a name="dimension"></a> 維度  
- 非空的 **geography** 執行個體可以是 0 維度、1 維度或 2 維度。 **Point** 和 **MultiPoint** 等零維 **geography** 沒有長度或區域。 **LineString、CircularString**、**CompoundCurve** 和 **MultiLineString** 這類一維物件都有長度。 **Polygon、CurvePolygon** 和 **MultiPolygon** 這類二維執行個體都有區域和長度。 空的執行個體會報告 -1 的維度，而 **GeometryCollection** 則會報告其內容的最大維度。  
+ 非空的 **geography** 執行個體可以是 0 維度、1 維度或 2 維度。 **Point** 和 **MultiPoint** 等零維 **geography**沒有長度或區域。 **LineString、CircularString**、 **CompoundCurve**和 **MultiLineString**這類一維物件都有長度。 **Polygon、CurvePolygon**和 **MultiPolygon**這類二維執行個體都有區域和長度。 空的執行個體會報告 -1 的維度，而 **GeometryCollection** 則會報告其內容的最大維度。  
   
  **傳回執行個體的維度**  
  [STDimension &#40;geography 資料類型&#41;](../../t-sql/spatial-geography/stdimension-geography-data-type.md)  
@@ -224,14 +228,14 @@ caps.handback.revision: 14
  [STSymDifference &#40;geography 資料類型&#41;](../../t-sql/spatial-geography/stsymdifference-geography-data-type.md)  
   
 ##  <a name="supportedsrid"></a> 地理位置執行個體必須使用支援的 SRID  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援以 EPSG 標準為根據的 SRID。 當執行計算或是搭配地理位置空間資料使用方法時，必須使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援之 **geography** 執行個體的 SRID。 SRID 必須符合 **sys.spatial_reference_systems** 目錄檢視中所顯示的其中一個 SRID。 如同之前所述，當您使用 **geography** 資料類型在您的空間資料上執行計算時，您的結果將會依據建立資料時使用哪一個橢圓體而定，因為每一個橢圓體都會指派一個特定的空間參考識別碼 (SRID)。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援以 EPSG 標準為根據的 SRID。 當執行計算或是搭配地理位置空間資料使用方法時，必須使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]支援之 **geography** 執行個體的 SRID。 SRID 必須符合 **sys.spatial_reference_systems** 目錄檢視中所顯示的其中一個 SRID。 如同之前所述，當您使用 **geography** 資料類型在您的空間資料上執行計算時，您的結果將會依據建立資料時使用哪一個橢圓體而定，因為每一個橢圓體都會指派一個特定的空間參考識別碼 (SRID)。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在 **geography** 執行個體上使用方法時，會使用預設 SRID 4326，此 SRID 會對應到 WGS 84 空間參考系統。 如果您使用 WGS 84 (或 SRID 4326) 以外之空間參考系統內的資料，您需要為您的地理位置空間資料決定特定的 SRID。  
   
 ##  <a name="examples"></a> 範例  
  下列範例示範如何加入及查詢地理位置資料。  
   
--   第一個範例會建立具有識別資料行及 `geography` 資料行 `GeogCol1` 的資料表。 第三個資料行會將 `geography` 資料行轉譯成它的開放地理空間協會 (Open Geospatial Consortium，OGC) 已知的文字 (Well-Known Text，WKT) 表示法，並使用 `STAsText()` 方法。 然後會插入兩個資料列：一個資料列包含 `LineString` 的 `geography` 執行個體，另一個資料列包含 `Polygon` 執行個體。  
+-   第一個範例會建立具有識別資料行及 `geography` 資料行 `GeogCol1`的資料表。 第三個資料行會將 `geography` 資料行轉譯成它的開放地理空間協會 (Open Geospatial Consortium，OGC) 已知的文字 (Well-Known Text，WKT) 表示法，並使用 `STAsText()` 方法。 然後會插入兩個資料列：一個資料列包含 `LineString` 的 `geography`執行個體，另一個資料列包含 `Polygon` 執行個體。  
   
     ```  
     IF OBJECT_ID ( 'dbo.SpatialTable', 'U' ) IS NOT NULL   
@@ -265,7 +269,7 @@ caps.handback.revision: 14
     SELECT @result.STAsText();  
     ```  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [空間資料 &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)  
   
   

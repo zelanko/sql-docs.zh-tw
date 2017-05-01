@@ -1,33 +1,37 @@
 ---
-title: "資料庫識別碼 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "標準識別碼 [SQL Server]"
-  - "識別碼 [SQL Server]"
-  - "名稱 [SQL Server], 識別碼"
-  - "識別碼 [SQL Server], 關於識別碼"
-  - "SQL Server 識別碼"
-  - "Transact-SQL 識別碼"
-  - "資料庫物件 [SQL Server], 名稱"
+title: "資料庫識別碼 | Microsoft 文件"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- regular identifiers [SQL Server]
+- identifiers [SQL Server]
+- names [SQL Server], identifiers
+- identifiers [SQL Server], about identifiers
+- SQL Server identifiers
+- Transact-SQL identifiers
+- database objects [SQL Server], names
 ms.assetid: 171291bb-f57f-4ad1-8cea-0b092d5d150c
 caps.latest.revision: 40
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 40
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a6ec8d756aa5aa0c728ba5a3456a30809b4a0484
+ms.lasthandoff: 04/11/2017
+
 ---
-# 資料庫識別碼
-  資料庫物件名稱又稱為識別碼。  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的每一個物件都具有識別碼。 伺服器、資料庫與資料庫物件 (如資料表、檢視、資料行、索引、觸發程序、程序、條件約束、規則) 都可以有識別碼。 大多數物件都需要識別碼，但對部分物件如條件約束，則是選擇性的需求。  
+# <a name="database-identifiers"></a>資料庫識別碼
+  資料庫物件名稱又稱為識別碼。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的每一個物件都具有識別碼。 伺服器、資料庫與資料庫物件 (如資料表、檢視、資料行、索引、觸發程序、程序、條件約束、規則) 都可以有識別碼。 大多數物件都需要識別碼，但對部分物件如條件約束，則是選擇性的需求。  
   
  定義物件時會建立物件識別碼。 之後就可以使用識別碼來參考物件。 例如，以下陳述式會建立具有識別碼 `TableX`的資料表，以及具有識別碼 `KeyCol` 與 `Description`的兩個資料行：  
   
@@ -43,7 +47,7 @@ CREATE TABLE TableX
 > [!NOTE]  
 >  變數名稱或函數和預存程序的參數，必須符合 [!INCLUDE[tsql](../../includes/tsql-md.md)] 識別碼的規則。  
   
-## 識別碼的分類  
+## <a name="classes-of-identifiers"></a>識別碼的分類  
  識別碼分為兩類：  
   
  一般識別碼  
@@ -74,7 +78,7 @@ WHERE [order] = 10   --Identifier is a reserved keyword.
   
  一般識別碼與分隔識別碼都必須包含在 1 到 128 個字元之間。 至於本機暫存資料表，識別碼最多可有 116 個字元。  
   
-## 一般識別碼的規則  
+## <a name="rules-for-regular-identifiers"></a>一般識別碼的規則  
  變數、函數及預存程序的名稱必須符合下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 識別碼規則。  
   
 1.  第一個字元必須是以下任一項：  
@@ -83,7 +87,7 @@ WHERE [order] = 10   --Identifier is a reserved keyword.
   
     -   底線 (_)、@ 符號或數字符號 (#)。  
   
-         識別碼開頭的某些符號在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中有特殊意義。 以 @ 符號開頭的一般識別碼代表本機變數或參數，而且不能做為任何其他類型之物件的名稱。 開頭為 # 符號的識別碼代表暫存資料表或程序。 開頭為兩個 ## 符號的識別碼代表全域暫存物件。 雖然 # 符號或兩個 ## 符號字元可做為其他類型之物件的名稱開頭，但是不建議此用法。  
+         識別碼開頭的某些符號在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中有特殊意義。 以 @ 符號開頭的一般識別碼代表本機變數或參數，而且不能做為任何其他類型之物件的名稱。 開頭為 # 符號的識別碼代表暫存資料表或程序。 開頭為兩個 ## 符號的識別碼代表全域暫存物件。 雖然 # 符號或兩個 ## 符號字元可做為其他類型之物件的名稱開頭，但是不建議此用法。  
   
          部分 [!INCLUDE[tsql](../../includes/tsql-md.md)] 功能的名稱會以兩個 @@ 符號為開頭。 為了避免與這些功能產生混淆，不應該使用以 @@ 為開頭的名稱。  
   
@@ -95,7 +99,7 @@ WHERE [order] = 10   --Identifier is a reserved keyword.
   
     -   @ 符號、錢幣符號 ($)、數字符號或底線。  
   
-3.  識別碼不得為 [!INCLUDE[tsql](../../includes/tsql-md.md)] 保留字。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會保留大小寫版本的保留字。 在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式中使用識別碼時，如果識別碼與上述規則不符，您必須使用雙引號 ("") 或方括號 ([]) 加以分隔。 保留字取決於資料庫相容性層級。 這個層級可以使用 [ALTER DATABASE](../Topic/ALTER%20DATABASE%20Compatibility%20Level%20\(Transact-SQL\).md) 陳述式加以設定。  
+3.  識別碼不得為 [!INCLUDE[tsql](../../includes/tsql-md.md)] 保留字。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會保留大小寫版本的保留字。 在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式中使用識別碼時，如果識別碼與上述規則不符，您必須使用雙引號 ("") 或方括號 ([]) 加以分隔。 保留字取決於資料庫相容性層級。 這個層級可以使用 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) 陳述式加以設定。  
   
 4.  不允許內嵌的空格或特殊字元。  
   
@@ -104,9 +108,9 @@ WHERE [order] = 10   --Identifier is a reserved keyword.
  在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式中使用識別碼時，如果識別碼與上述規則不符，您必須使用雙引號 ("") 或方括號 ([]) 加以分隔。  
   
 > [!NOTE]  
->  某些有關於一般識別碼格式的規則，取決於資料庫的相容性層級。 您可以使用 [ALTER DATABASE](../Topic/ALTER%20DATABASE%20Compatibility%20Level%20\(Transact-SQL\).md)來設定這個層級。  
+>  某些有關於一般識別碼格式的規則，取決於資料庫的相容性層級。 您可以使用 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)來設定這個層級。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [CREATE DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md)   

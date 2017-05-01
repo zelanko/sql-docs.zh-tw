@@ -1,45 +1,49 @@
 ---
-title: "將 SQL Server Database 部署到 Microsoft Azure 虛擬機器 | Microsoft Docs"
-ms.date: "07/29/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.deploymentwizard.deploymentsettings.f1"
-  - "sql13.swb.deploymentwizard.sourcesettings.f1"
-  - "sql13.swb.deploymentwizard.summary.f1"
-  - "sql13.swb.agdashboard.agp9virtualnw.issues.f1"
-  - "sql13.swb.deploymentwizard.f1"
-  - "sql13.swb.deploymentwizard.progress.f1"
-  - "sql13.swb.usevmdialog.f1"
-  - "sql13.swb.newvmdialog.f1"
-  - "sql13.swb.sqlvmdialog.f1"
-  - "sql13.swb.deploymentwizard.results.f1"
-  - "sql13.swb.deploymentwizard.azuresignin.f1"
-helpviewer_keywords: 
-  - "部署資料庫"
-  - "部署到 Azure VM"
-  - "移轉到 Azure"
-  - "Windows Azure 虛擬機器"
-  - "移轉到 Azure VM"
-  - "移轉到雲端"
-  - "SQL Server Management Studio"
-  - "SSMS"
-  - "部署資料庫精靈"
-  - "將 SQL Server 資料庫部署到 Azure"
-  - "Azure VM"
+title: "將 SQL Server Database 部署到 Microsoft Azure 虛擬機器 | Microsoft 件"
+ms.date: 07/29/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.deploymentwizard.deploymentsettings.f1
+- sql13.swb.deploymentwizard.sourcesettings.f1
+- sql13.swb.deploymentwizard.summary.f1
+- sql13.swb.agdashboard.agp9virtualnw.issues.f1
+- sql13.swb.deploymentwizard.f1
+- sql13.swb.deploymentwizard.progress.f1
+- sql13.swb.usevmdialog.f1
+- sql13.swb.newvmdialog.f1
+- sql13.swb.sqlvmdialog.f1
+- sql13.swb.deploymentwizard.results.f1
+- sql13.swb.deploymentwizard.azuresignin.f1
+helpviewer_keywords:
+- Deploy a database
+- Deploy to Azure VM
+- Migrate to Azure
+- Windows Azure virtual machine
+- Migrate to Azure VM
+- Migrate to the cloud
+- SQL Server Management Studio
+- SSMS
+- Deploy database wizard
+- Deploy a SQL Server database to Azure
+- Azure VM
 ms.assetid: 5e82e66a-262e-4d4f-aa89-39cb62696d06
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2aca87c0050dd501c73bb4da8953a93bf40c0c8e
+ms.lasthandoff: 04/11/2017
+
 ---
-# 將 SQL Server Database 部署到 Microsoft Azure 虛擬機器
+# <a name="deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine"></a>將 SQL Server Database 部署到 Microsoft Azure 虛擬機器
   使用 [Deploy a Database to a Windows Azure VM Wizard (將資料庫部署到 Windows Azure VM 精靈)]，將 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體中的資料庫部署到 Windows Azure 虛擬機器 (VM) 中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 此精靈會使用完整的資料庫備份作業，因此它一定會從 SQL Server 使用者資料庫複製完整的資料庫結構描述和資料。 此精靈也會為您執行所有的 Azure VM 組態設定，因此不需要進行 VM 的預先組態設定。  
   
  您無法使用此精靈進行差異備份。 此精靈將不會覆寫資料庫名稱相同的現有資料庫。 若要取代 VM 上現有的資料庫，您必須先卸除現有資料庫或變更資料庫的名稱。 如果進行中部署作業的資料庫名稱與 VM 上的現有資料庫發生名稱衝突，此精靈將會建議針對進行中的資料庫附加資料庫名稱，好讓您完成作業。  
@@ -61,7 +65,7 @@ caps.handback.revision: 30
 -   [精靈頁面](#wizard_pages)  
   
 > [!NOTE]  
->  如需此精靈的詳細逐步解說，請參閱[將 SQL Server 資料庫移轉至 Azure VM 中的 SQL Server](https://azure.microsoft.com/en-us/documentation/articles/virtual-machines-migrate-onpremises-database/)  
+>  如需此精靈的詳細逐步解說，請參閱 [將 SQL Server 資料庫移轉至 Azure VM 中的 SQL Server](https://azure.microsoft.com/en-us/documentation/articles/virtual-machines-migrate-onpremises-database/)  
   
 ##  <a name="before_you_begin"></a> 開始之前  
  若要完成這個精靈，您必須提供下列資訊並且完成以下組態設定：  
@@ -73,7 +77,7 @@ caps.handback.revision: 30
     > [!CAUTION]  
     >  SQL Server 目前支援發行設定檔 2.0 版。 若要下載發行設定檔的支援版本，請參閱＜ [下載發行設定檔 2.0](http://go.microsoft.com/fwlink/?LinkId=396421)＞。  
   
--   上傳至您 Microsoft Azure 訂用帳戶的管理憑證。  使用 Powershell Cmdlet [New-SelfSignedCertificate](https://technet.microsoft.com/library/hh848633(v=wps.630)) 建立管理憑證。  然後，將管理憑證上傳至您的 Microsoft Azure 訂用帳戶。  如需上傳管理憑證的詳細資訊，請參閱[上傳 Azure 管理 API 管理憑證](https://azure.microsoft.com/en-us/documentation/articles/azure-api-management-certs/)。  從 [Azure Cloud Services 的憑證概觀](https://azure.microsoft.com/en-us/documentation/articles/cloud-services-certs-create/)建立管理憑證的範例語法： 
+-   上傳至您 Microsoft Azure 訂用帳戶的管理憑證。  使用 Powershell Cmdlet [New-SelfSignedCertificate](https://technet.microsoft.com/library/hh848633(v=wps.630))建立管理憑證。  然後，將管理憑證上傳至您的 Microsoft Azure 訂用帳戶。  如需上傳管理憑證的詳細資訊，請參閱 [上傳 Azure 管理 API 管理憑證](https://azure.microsoft.com/en-us/documentation/articles/azure-api-management-certs/)。  從 [Azure Cloud Services 的憑證概觀](https://azure.microsoft.com/en-us/documentation/articles/cloud-services-certs-create/)建立管理憑證的範例語法： 
 
     ```powershell  
     $cert = New-SelfSignedCertificate -DnsName yourdomain.cloudapp.net -CertStoreLocation "cert:\LocalMachine\My"
@@ -90,9 +94,9 @@ caps.handback.revision: 30
   
 -   如果您將資料庫部署到現有 VM，則必須設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體來接聽 TCP/IP 通訊埠。  
   
--   您打算用來建立 VM 的 Microsoft Azure VM 或映像庫映像必須已設定並執行[適用 SQL Server 的雲端配接器](Cloud%20Adapter%20for%20SQL%20Server.md)。  
+-   您打算用來建立 VM 的 Microsoft Azure VM 或映像庫映像必須已設定並執行 [適用 SQL Server 的雲端配接器](http://msdn.microsoft.com/library/82ed0d0f-952d-4d49-aa36-3855a3ca9877) 。  
   
--   您必須在採用私用連接埠 11435 的 Microsoft Azure 閘道上，為您的 [適用 SQL Server 的雲端配接器](Cloud%20Adapter%20for%20SQL%20Server.md)設定開放式端點。  
+-   您必須在採用私用連接埠 11435 的 Microsoft Azure 閘道上，為您的 [適用 SQL Server 的雲端配接器](http://msdn.microsoft.com/library/82ed0d0f-952d-4d49-aa36-3855a3ca9877) 設定開放式端點。  
   
  此外，如果您打算將資料庫部署到現有的 Windows Azure VM，您也必須能夠提供：  
   
@@ -100,9 +104,9 @@ caps.handback.revision: 30
   
 -   VM 的系統管理員認證。  
   
--   來自 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的來源執行個體，具有您打算部署之資料庫的備份操作員權限的認證。  
+-   來自 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的來源執行個體，具有您打算部署之資料庫的備份操作員權限的認證。  
   
- 如需在 Windows Azure 虛擬機器中執行 SQL Server 的詳細資訊，請參閱 [Provision a SQL Server virtual machine in the Azure Portal](https://msdn.microsoft.com/library/dn133141.aspx) (佈建 Azure 入口網站中的 SQL Server 虛擬機器) 和 [Migrate a SQL Server database to SQL Server in an Azure VM](http://msdn.microsoft.com/library/dn133142.aspx) (將 SQL Server 資料庫移轉至 Azure VM 中的 SQL Server)。  
+ 如需在 Windows Azure 虛擬機器中執行 SQL Server 的詳細資訊，請參閱 [Provision a SQL Server virtual machine in the Azure Portal](https://msdn.microsoft.com/library/dn133141.aspx) (佈建 Azure 入口網站中的 SQL Server 虛擬機器) 和 [Migrate a SQL Server database to SQL Server in an Azure VM](http://msdn.microsoft.com/library/dn133142.aspx)(將 SQL Server 資料庫移轉至 Azure VM 中的 SQL Server)。  
   
  您在執行 Windows Server 作業系統的電腦上，必須使用下列組態設定執行此精靈：  
   
@@ -115,7 +119,7 @@ caps.handback.revision: 30
 
  此作業的資料庫大小限制為 1 TB。  
   
- 適用於 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 的 SQL Server Management Studio 中提供此部署功能。  
+ 適用於 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]的 SQL Server Management Studio 中提供此部署功能。  
   
  這個部署功能只能搭配使用者資料庫使用，不支援部署系統資料庫。  
   
@@ -247,7 +251,7 @@ caps.handback.revision: 30
 在欄位中，指定可供 Microsoft Azure VM 服務存取的共用資料夾。  
   
 ##  <a name="Azure_sign-in"></a> Microsoft Azure 登入  
- 使用您的 Microsoft 帳戶或您的組織帳戶登入 Microsoft Azure。 您的 Microsoft 或組織帳戶是電子郵件地址格式，例如 patc@contoso.com。 如需 Azure 認證的詳細資訊，請參閱 [Microsoft Account for Organizations FAQ](http://technet.microsoft.com/jj592903) (組織的 Microsoft 帳戶常見問題集) 和 [Troubleshooting Problems](https://technet.microsoft.com/dn197220) (針對問題進行疑難排解)。  
+ 使用您的 Microsoft 帳戶或您的組織帳戶登入 Microsoft Azure。 您的 Microsoft 或組織帳戶是電子郵件地址格式，例如 patc@contoso.com。 如需 Azure 認證的詳細資訊，請參閱 [Microsoft Account for Organizations FAQ](http://technet.microsoft.com/jj592903) (組織的 Microsoft 帳戶常見問題集) 和 [Troubleshooting Problems](https://technet.microsoft.com/dn197220)(針對問題進行疑難排解)。  
   
 ##  <a name="Deployment_settings"></a> 部署設定
  使用此頁面來指定目的地伺服器以及提供新資料庫的詳細資料。  
@@ -257,7 +261,7 @@ caps.handback.revision: 30
 -   **雲端服務名稱**  
 指定裝載 VM 的服務名稱。 若要建立新的雲端服務，請為新的雲端服務指定名稱。  
   
--   **虛擬機器名稱**：指定將裝載 SQL Server 資料庫的 VM 名稱。 若要建立新的 Microsoft Azure VM，請為新的 VM 指定名稱。  
+-   **虛擬機器名稱** ：指定將裝載 SQL Server 資料庫的 VM 名稱。 若要建立新的 Microsoft Azure VM，請為新的 VM 指定名稱。  
   
 -   **儲存體帳戶**  
 從下拉式清單中選取儲存體帳戶。 若要建立新的儲存體帳戶，請為新帳戶指定名稱。 請注意，與相似性群組相關聯的儲存體帳戶將不會在下拉式清單中提供。  
@@ -283,8 +287,8 @@ caps.handback.revision: 30
   
  按一下 **[完成]** 關閉精靈。  
   
-## 另請參閱  
- [適用 SQL Server 的雲端配接器](../Topic/Cloud%20Adapter%20for%20SQL%20Server.md)   
+## <a name="see-also"></a>另請參閱  
+ [適用 SQL Server 的雲端配接器](http://msdn.microsoft.com/library/82ed0d0f-952d-4d49-aa36-3855a3ca9877)   
  [資料庫生命週期管理](../../relational-databases/database-lifecycle-management.md)   
  [匯出資料層應用程式](../../relational-databases/data-tier-applications/export-a-data-tier-application.md)   
  [匯入 BACPAC 檔案以建立新的使用者資料庫](../../relational-databases/data-tier-applications/import-a-bacpac-file-to-create-a-new-user-database.md)   
@@ -293,3 +297,4 @@ caps.handback.revision: 30
  [準備移轉到 Windows Azure 虛擬機器中的 SQL Server](http://msdn.microsoft.com/library/dn133142.aspx)  
   
   
+

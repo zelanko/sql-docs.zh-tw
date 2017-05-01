@@ -1,27 +1,31 @@
 ---
 title: "附加資料庫 | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/24/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.attachdatabase.f1"
-helpviewer_keywords: 
-  - "資料庫附加 [SQL Server]"
-  - "附加資料庫 [SQL Server]"
+ms.custom: 
+ms.date: 10/24/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.attachdatabase.f1
+helpviewer_keywords:
+- database attaching [SQL Server]
+- attaching databases [SQL Server]
 ms.assetid: b4efb0ae-cfe6-4d81-a4b4-6e4916885caa
 caps.latest.revision: 52
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 52
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 50e55a131e303a5303059a51797730f8bfab2581
+ms.lasthandoff: 04/11/2017
+
 ---
-# 附加資料庫
+# <a name="attach-a-database"></a>附加資料庫
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中附加資料庫。 您可以使用此功能來複製、移動或升級 SQL Server 資料庫。  
@@ -42,18 +46,18 @@ caps.handback.revision: 52
 不建議使用卸離和附加進行備份和復原。 這種做法不會有交易記錄檔備份，且可能會不小心刪除檔案。
   
 ###  <a name="Security"></a> 安全性  
- 檔案存取權限是在數個資料庫作業期間設定，包括卸離或附加資料庫。 如需有關卸離和附加資料庫時所設定之檔案權限的詳細資訊，請參閱《[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 線上叢書》中的[保護資料和記錄檔](http://technet.microsoft.com/library/ms189128.aspx) (仍然值得閱讀！) 
+ 檔案存取權限是在數個資料庫作業期間設定，包括卸離或附加資料庫。 如需有關卸離和附加資料庫時所設定之檔案權限的詳細資訊，請參閱《 [線上叢書》中的](http://technet.microsoft.com/library/ms189128.aspx) 保護資料和記錄檔 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] (仍然值得閱讀！) 
   
- 建議您不要附加或還原來源不明或來源不受信任的資料庫。 這種資料庫可能包含惡意程式碼，因此可能執行非預期的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼，或是修改結構描述或實體資料庫結構而造成錯誤。 使用來源不明或來源不受信任的資料庫之前，請先在非實際執行伺服器的資料庫上執行 [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) ，同時檢查資料庫中的程式碼，例如預存程序或其他使用者定義程式碼。 如需附加資料庫的詳細資訊，以及附加資料庫時，對中繼資料所做變更的相關資訊，請參閱[資料庫卸離與附加 (SQL Server)](../../relational-databases/databases/database-detach-and-attach-sql-server.md)。  
+ 建議您不要附加或還原來源不明或來源不受信任的資料庫。 這種資料庫可能包含惡意程式碼，因此可能執行非預期的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼，或是修改結構描述或實體資料庫結構而造成錯誤。 使用來源不明或來源不受信任的資料庫之前，請先在非實際執行伺服器的資料庫上執行 [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) ，同時檢查資料庫中的程式碼，例如預存程序或其他使用者定義程式碼。 如需附加資料庫的詳細資訊，以及附加資料庫時，對中繼資料所做變更的相關資訊，請參閱 [資料庫卸離與附加 (SQL Server)](../../relational-databases/databases/database-detach-and-attach-sql-server.md)。  
   
 ####  <a name="Permissions"></a> Permissions  
  需要 CREATE DATABASE、CREATE ANY DATABASE 或 ALTER ANY DATABASE 權限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 附加資料庫  
+#### <a name="to-attach-a-database"></a>附加資料庫  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的 [物件總管]中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的執行個體，然後按一下以在 SSMS 中展開該執行個體檢視。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的 [物件總管]中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的執行個體，然後按一下以在 SSMS 中展開該執行個體檢視。  
   
 2.  以滑鼠右鍵按一下 **[資料庫]** ，然後按一下 **[附加]**。  
   
@@ -73,7 +77,7 @@ caps.handback.revision: 52
      **MDF 檔案位置**  
      顯示選取之 MDF 檔的路徑和檔案名稱。  
   
-     **[資料庫名稱]**  
+     **Database Name**  
      顯示資料庫的名稱。  
   
      **附加為**  
@@ -123,7 +127,7 @@ caps.handback.revision: 52
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 附加資料庫  
+#### <a name="to-attach-a-database"></a>附加資料庫  
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
@@ -147,7 +151,7 @@ caps.handback.revision: 52
 ##  <a name="FollowUp"></a> 待處理：升級 SQL Server 資料庫之後  
  當您使用附加方法升級資料庫之後，該資料庫會立即可用並自動升級。 如果資料庫具有全文檢索索引，升級程序就會根據 **[全文檢索目錄升級選項]** 伺服器屬性的設定，匯入、重設或重建這些索引。 如果升級選項設定為 **[匯入]** 或 **[重建]**，則全文檢索索引在升級期間將無法使用。 根據進行索引的資料數量而定，匯入可能需要數個小時，而重建可能需要十倍以上的時間。 此外，請注意，當升級選項設定為 **[匯入]**時，如果全文檢索目錄無法使用，系統就會重建相關聯的全文檢索索引。  
   
- 如果使用者資料庫的相容性層級在升級前為 100 或更高層級，則在升級後仍會保持相同。 如果升級前的相容性層級為 90，則在升級後的資料庫中，相容性層級會設定為 100 (這是 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 所支援的最低相容性層級)。 如需詳細資訊，請參閱 [ALTER DATABASE 相容性層級 &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20Compatibility%20Level%20\(Transact-SQL\).md)。  
+ 如果使用者資料庫的相容性層級在升級前為 100 或更高層級，則在升級後仍會保持相同。 如果升級前的相容性層級為 90，則在升級後的資料庫中，相容性層級會設定為 100 (這是 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 所支援的最低相容性層級)。 如需詳細資訊，請參閱 [ALTER DATABASE 相容性層級 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。  
   
   > [!NOTE]
   > 如果您是從執行已啟用異動資料擷取 (CDC) 之 SQL Server 2014 或以下版本的執行個體附加資料庫，則也必須執行下列命令來升級異動資料擷取 (CDC) 中繼資料。
@@ -156,8 +160,9 @@ caps.handback.revision: 52
   EXEC sys.sp_cdc_vupgrade  
   ``` 
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [卸離資料庫](../../relational-databases/databases/detach-a-database.md)  
   
   
+

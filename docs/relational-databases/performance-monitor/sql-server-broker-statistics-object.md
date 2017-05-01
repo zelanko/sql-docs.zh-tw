@@ -1,31 +1,35 @@
 ---
 title: "SQL Server 的 Broker Statistics 物件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQLServer:Broker 統計資料"
-  - "Broker Statistics 物件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQLServer:Broker Statistics
+- Broker Statistics object
 ms.assetid: e9e36f01-93f6-4e6e-90c6-c7f3fd121737
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6f2372e2cc641919957f14145a1e7ff0c96bb74a
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server 的 Broker Statistics 物件
-  SQLServer:Broker Statistics 效能物件包含可針對 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 執行個體報告一般 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 資訊的效能計數器。 下表列出這個物件包含的計數器：  
+# <a name="sql-server-broker-statistics-object"></a>SQL Server 的 Broker Statistics 物件
+  SQLServer:Broker Statistics 效能物件包含可針對 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 執行個體報告一般 [!INCLUDE[ssDE](../../includes/ssde-md.md)]資訊的效能計數器。 下表列出這個物件包含的計數器：  
   
 |SQL Server 的 Broker Statistics 計數器|描述|  
 |-------------------------------------------|-----------------|  
 |**Activation Errors Total**|[!INCLUDE[ssSB](../../includes/sssb-md.md)] 啟用預存程序已結束並發生錯誤的次數。|  
-|**Broker Transaction Rollbacks**|包含與 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 相關之 DML 陳述式 (例如 SEND 和 RECEIVE) 的回復交易數目。|  
+|**Broker Transaction Rollbacks**|包含與 [!INCLUDE[ssSB](../../includes/sssb-md.md)]相關之 DML 陳述式 (例如 SEND 和 RECEIVE) 的回復交易數目。|  
 |**Corrupted Messages Total**|執行個體收到的損毀訊息數目。|  
 |**Dequeued Transmission Msgs/sec**|每秒從 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 傳輸佇列中移除的訊息數目。|  
 |**Dialog timer event count**|在對話通訊協定層中使用中的計時器數目。 此數目與使用中對話的數目一致。|  
@@ -62,8 +66,8 @@ caps.handback.revision: 32
 |**SQL SEND Total**|已執行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] SEND 陳述式總數。|  
 |**SQL SENDs/sec**|每秒已執行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] SEND 陳述式數目。|  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)   
- [監視資源使用狀況 &#40;系統監視器&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
+ [監視資源使用量 &#40;系統監視器&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

@@ -1,29 +1,33 @@
 ---
-title: "資源管理員工作負載群組 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "資源管理員, 工作負載群組"
-  - "工作負載群組 [SQL Server]"
-  - "工作負載群組 [SQL Server], 概觀"
+title: "資源管理員工作負載群組 | Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Resource Governor, workload group
+- workload groups [SQL Server]
+- workload groups [SQL Server], overview
 ms.assetid: a84c3c3f-55b6-4a30-9c42-13f082d9281e
 caps.latest.revision: 6
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f67e0fd5de601ceb4d808f42fa710c02fa23d3d1
+ms.lasthandoff: 04/11/2017
+
 ---
-# 資源管理員工作負載群組
-  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資源管理員中，工作負載群組會當做有類似分類準則之工作階段要求的容器。 工作負載允許對工作階段進行彙總監視，並定義工作階段的原則。 每個工作負載群組都位於資源集區中，資源集區代表 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體的實體資源子集。 在工作階段啟動時，資源管理員分類會將此工作階段指派給特定的工作負載群組，並且此工作階段必須使用指派給該工作負載群組的原則以及為資源集區所定義的資源來執行。  
+# <a name="resource-governor-workload-group"></a>資源管理員工作負載群組
+  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資源管理員中，工作負載群組會當做有類似分類準則之工作階段要求的容器。 工作負載允許對工作階段進行彙總監視，並定義工作階段的原則。 每個工作負載群組都位於資源集區中，資源集區代表 [!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體的實體資源子集。 在工作階段啟動時，資源管理員分類會將此工作階段指派給特定的工作負載群組，並且此工作階段必須使用指派給該工作負載群組的原則以及為資源集區所定義的資源來執行。  
   
-## 工作負載群組概念  
+## <a name="workload-group-concepts"></a>工作負載群組概念  
  根據套用至每個要求的分類準則，工作負載群組會當做類似工作階段要求的容器。 工作負載群組允許進行資源耗用量的彙總監視，以及將統一原則套用至群組中的所有要求。 群組會針對其成員定義原則。  
   
 > [!NOTE]  
@@ -39,7 +43,7 @@ caps.handback.revision: 6
   
  資源管理員也會提供建立、變更和卸除工作負載群組的 DDL 陳述式。  
   
-## 工作負載群組工作  
+## <a name="workload-group-tasks"></a>工作負載群組工作  
   
 |工作描述|主題|  
 |----------------------|-----------|  
@@ -47,7 +51,7 @@ caps.handback.revision: 6
 |描述如何變更工作負載群組設定。|[變更工作負載群組設定](../../relational-databases/resource-governor/change-workload-group-settings.md)|  
 |描述如何刪除工作負載群組。|[刪除工作負載群組](../../relational-databases/resource-governor/delete-a-workload-group.md)|  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [資源管理員](../../relational-databases/resource-governor/resource-governor.md)   
  [啟用資源管理員](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [資源管理員資源集區](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   

@@ -1,33 +1,37 @@
 ---
 title: "同步處理資料 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "同步處理 [SQL Server 複寫], 關於同步處理"
-  - "合併式複寫同步處理 [SQL Server 複寫]"
-  - "指令碼 [SQL Server 複寫], 同步處理和"
-  - "同步處理 [SQL Server 複寫]"
-  - "快照式複寫 [SQL Server 複寫], 同步處理"
-  - "異動複寫, 同步處理"
-  - "訂閱 [SQL Server 複寫], 同步處理"
-  - "視需要指令碼執行"
-  - "複寫 [SQL Server 複寫], 同步處理"
-  - "指令碼 [SQL Server 複寫]"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- synchronization [SQL Server replication], about synchronization
+- merge replication synchronization [SQL Server replication]
+- scripts [SQL Server replication], synchronization and
+- synchronization [SQL Server replication]
+- snapshot replication [SQL Server], synchronization
+- transactional replication, synchronization
+- subscriptions [SQL Server replication], synchronizing
+- on demand script execution
+- replication [SQL Server], synchronization
+- scripts [SQL Server replication]
 ms.assetid: 724802f7-7d69-46d3-a330-bd8aa7f53114
 caps.latest.revision: 36
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ccda32ba9e85f698a2a642d2dd52773e78ae6d06
+ms.lasthandoff: 04/11/2017
+
 ---
-# 同步處理資料
+# <a name="synchronize-data"></a>同步處理資料
   同步資料是指在「訂閱者」端套用初始快照集後，在「發行者」與「訂閱者」之間傳播資料和結構描述變更的處理。 同步處理將會：  
   
 -   連續發生，一般出現在異動複寫中。  
@@ -46,28 +50,28 @@ caps.handback.revision: 36
   
 -   合併式複寫。 同步處理意味著「合併代理程式」將更改從「訂閱者」端上傳到「發行者」端，然後再將更改從「發行者」端下載到「訂閱者」端。 當有衝突時會進行偵測並解決。 資料會被聚合，最終「發行者」端和所有「訂閱者」端都將得到相同的資料值。 如果偵測到並解決了衝突，則將變更一些使用者認可的工作，以根據您定義的原則來解決衝突。  
   
- 每次發生同步處理時，快照式發行集都會在「訂閱者」端重新整理整個結構描述，因此所有結構描述變更都將套用至「訂閱者」。 異動複寫與合併式複寫還支援最常見的結構描述變更。 如需詳細資訊，請參閱 [對發行集資料庫進行結構描述變更](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)。  
+ 每次發生同步處理時，快照式發行集都會在「訂閱者」端重新整理整個結構描述，因此所有結構描述變更都將套用至「訂閱者」。 異動複寫與合併式複寫還支援最常見的結構描述變更。 如需詳細資訊，請參閱[對發行集資料庫進行結構描述變更](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)。  
   
- 若要同步處理發送訂閱，請參閱 [同步處理發送訂閱](../../relational-databases/replication/synchronize-a-push-subscription.md)。  
+ 若要同步處理發送訂閱，請參閱＜ [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md)＞。  
   
- 若要同步處理提取訂閱，請參閱 [同步處理提取訂閱](../../relational-databases/replication/synchronize-a-pull-subscription.md)。  
+ 若要同步處理提取訂閱，請參閱＜ [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md)＞。  
   
- 若要設定同步處理排程，請參閱 [指定同步處理排程](../../relational-databases/replication/specify-synchronization-schedules.md)。  
+ 若要設定同步處理排程，請參閱＜ [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md)＞。  
   
  **若要檢視並解決同步處理衝突**  
   
--   [!包含 [ssManStudioFull] (.../ Token/ssManStudioFull_md.md)]: [View and Resolve Data Conflicts for Merge Publications &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/view and resolve data conflicts for merge publications.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [View and Resolve Data Conflicts for Merge Publications &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/view-and-resolve-data-conflicts-for-merge-publications.md)  
   
--   [!包含 [ssManStudioFull] (.../ Token/ssManStudioFull_md.md)]: [View Data Conflicts for Transactional Publications &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [View Data Conflicts for Transactional Publications &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)  
   
-## 在同步處理期間執行程式碼  
+## <a name="executing-code-during-synchronization"></a>在同步處理期間執行程式碼  
  複寫支援兩種同步處理時的程式碼執行方法  
   
--   異動複寫與合併式複寫支援視需要的指令碼執行。 視需要的指令碼執行可用於指定要在同步處理期間執行的 SQL 指令碼。 此指令碼複製到 「 訂閱者 」，並使用執行 **sqlcmd** 同步處理程序的開頭。 指令碼套用至「訂閱者」後，便不具有對已複寫變更的存取權。 如需詳細資訊，請參閱 [執行指令碼同步處理期間 & #40。複寫 TRANSACT-SQL 程式設計 & #41;](../../relational-databases/replication/execute-scripts-during-synchronization-replication-transact-sql-programming.md)。  
+-   異動複寫與合併式複寫支援視需要的指令碼執行。 視需要的指令碼執行可用於指定要在同步處理期間執行的 SQL 指令碼。 指令碼將複製到「訂閱者」端，並在開始同步處理時使用 **sqlcmd** 來執行。 指令碼套用至「訂閱者」後，便不具有對已複寫變更的存取權。 如需詳細資訊，請參閱[在同步處理期間執行指令碼 &#40;複寫 Transact-SQL 程式設計&#41;](../../relational-databases/replication/execute-scripts-during-synchronization-replication-transact-sql-programming.md)。  
   
--   合併式複寫支援商務邏輯處理常式。 您可以使用商務邏輯處理常式架構來撰寫受管理的程式碼組件，該組件將在合併同步處理期間中被呼叫。 組件包括可對應至幾種同步處理條件的商務邏輯：資料變更、衝突和錯誤。 如需詳細資訊，請參閱 [執行商務邏輯合併同步處理期間](../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md)。  
+-   合併式複寫支援商務邏輯處理常式。 您可以使用商務邏輯處理常式架構來撰寫受管理的程式碼組件，該組件將在合併同步處理期間中被呼叫。 組件包括可對應至幾種同步處理條件的商務邏輯：資料變更、衝突和錯誤。 如需詳細資訊，請參閱[在合併同步處理期間執行商務邏輯](../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md)。  
   
-## 另請參閱  
- [偵測及解決合併式複寫衝突](../../relational-databases/replication/merge/detect-and-resolve-merge-replication-conflicts.md)  
+## <a name="see-also"></a>另請參閱  
+ [偵測及解決合併式複寫衝突](../../relational-databases/replication/merge/advanced-merge-replication-resolve-merge-replication-conflicts.md)  
   
   

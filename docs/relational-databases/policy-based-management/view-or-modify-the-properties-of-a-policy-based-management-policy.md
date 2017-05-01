@@ -1,26 +1,30 @@
 ---
-title: "檢視或修改原則式管理原則的屬性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/06/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "原則式管理, 修改原則"
-  - "原則式管理, 檢視原則"
+title: "檢視或修改原則式管理原則的屬性 | Microsoft 文件"
+ms.custom: 
+ms.date: 10/06/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Policy-Based Management, modify policies
+- Policy-Based Management, view policies
 ms.assetid: ba805504-5db5-4731-a8da-a0e89cb20c37
 caps.latest.revision: 9
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 485dca1df0b2d62fb71b1c51b86fe30e449b7ccf
+ms.lasthandoff: 04/11/2017
+
 ---
-# 檢視或修改原則式管理原則的屬性
-  本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中檢視或修改原則式管理原則的屬性。  
+# <a name="view-or-modify-the-properties-of-a-policy-based-management-policy"></a>檢視或修改原則式管理原則的屬性
+  本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中檢視或修改原則式管理原則的屬性。  
   
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
@@ -31,15 +35,15 @@ caps.handback.revision: 9
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 若要檢視物件之所有原則的屬性  
+#### <a name="to-view-the-properties-of-all-policies-on-an-object"></a>若要檢視物件之所有原則的屬性  
   
 1.  在物件總管中，以滑鼠右鍵按一下伺服器、伺服器物件、資料庫或資料庫物件，指向 [原則]，然後選取 [檢視]。 如需 [檢視原則 - *物件名稱*] 對話方塊可用之選項的詳細資訊，請參閱[檢視原則對話方塊](../../relational-databases/policy-based-management/view-policies-dialog-box.md)。  
   
 2.  完成後，請按一下 **[關閉]**。  
   
-#### 若要檢視或修改特定原則的屬性  
+#### <a name="to-view-or-modify-a-specific-policys-properties"></a>若要檢視或修改特定原則的屬性  
   
-1.  在**物件總管**中，按一下加號，展開包含您想要檢視或修改之原則式管理原則的伺服器。  
+1.  在 **物件總管**中，按一下加號，展開包含您想要檢視或修改之原則式管理原則的伺服器。  
   
 2.  按一下加號展開 **[管理]** 資料夾。  
   
@@ -53,7 +57,7 @@ caps.handback.revision: 9
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 若要檢視原則的屬性  
+#### <a name="to-view-a-policys-properties"></a>若要檢視原則的屬性  
   
 1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
@@ -76,3 +80,4 @@ caps.handback.revision: 9
  如需詳細資訊，請參閱 [syspolicy_policies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syspolicy-policies-transact-sql.md)。  
   
   
+

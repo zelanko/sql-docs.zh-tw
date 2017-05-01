@@ -1,29 +1,33 @@
 ---
 title: "以互動方式搜尋文件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "互動式搜尋 [SQL Server Management Studio]"
-  - "搜尋 [SQL Server Management Studio], 互動式"
-  - "查詢編輯器 [SQL Server Management Studio], 互動式搜尋"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- interactive searches [SQL Server Management Studio]
+- searches [SQL Server Management Studio], interactive
+- Query Editor [SQL Server Management Studio], interactive search
 ms.assetid: dae65ac5-67af-45c6-a6e0-952fea26d680
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a87a33ea63725ae2db48d61d557ff4bf91704490
+ms.lasthandoff: 04/11/2017
+
 ---
-# 以互動方式搜尋文件
+# <a name="search-documents-interactively"></a>以互動方式搜尋文件
   您可以利用 [尋找和取代] 對話方塊，搜尋一或多個開啟的檔案或視窗，並逐一搜尋相符的項目。 這項技術可讓您在環繞相符項目的文字內容中，檢閱每項個別的搜尋相符項目。 您也可以選擇執行大量尋找作業，或利用 [尋找和取代] 對話方塊，以報表格式檢閱搜尋相符項目。  
   
-### 搜尋所有開啟的文件  
+### <a name="to-search-all-open-documents"></a>搜尋所有開啟的文件  
   
 1.  開啟您要搜尋的項目。  
   
@@ -42,7 +46,7 @@ caps.handback.revision: 22
   
  當搜尋通過文件的開頭或結尾時，狀態列會出現一則訊息。 當搜尋到了搜尋的起點時，會出現一個訊息方塊。  
   
-#### 在所有作用檔案中，以互動方式取代  
+#### <a name="to-replace-in-all-active-files-interactively"></a>在所有作用檔案中，以互動方式取代  
   
 1.  在 [編輯] 功能表上，指向 [尋找和取代]，再按一下 [快速尋找]。  
   
@@ -60,7 +64,7 @@ caps.handback.revision: 22
   
  [取代全部] 命令會取代所有搜尋相符項目，其中包括您利用 [尋找下一個] 按鈕所略過的相符項目。 若要取消 [取代全部]，請在關閉任何檔案之前，按一下 [編輯] 功能表中的 [恢復]。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [以累加方式搜尋作用中的文件](../../relational-databases/scripting/search-an-active-document-incrementally.md)   
  [搜尋和取代](../../relational-databases/scripting/search-and-replace.md)   
  [使用結果清單搜尋文件](../../relational-databases/scripting/search-documents-using-results-lists.md)   

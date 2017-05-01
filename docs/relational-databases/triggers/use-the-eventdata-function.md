@@ -1,25 +1,29 @@
 ---
-title: "使用 EVENTDATA 函數 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-ddl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "EVENTDATA 函數"
-  - "DDL 觸發程序, EVENTDATA 函數"
+title: "使用 EVENTDATA 函式 | Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-ddl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- EVENTDATA function
+- DDL triggers, EVENTDATA function
 ms.assetid: 675b8320-9c73-4526-bd2f-91ba42c1b604
 caps.latest.revision: 38
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5cb1a29cd7638f5ec9a4248f615381fe6da721b9
+ms.lasthandoff: 04/11/2017
+
 ---
-# 使用 EVENTDATA 函數
+# <a name="use-the-eventdata-function"></a>使用 EVENTDATA 函數
   使用 EVENTDATA 函數擷取引發 DDL 觸發程序之事件的相關資訊。 此函數會傳回 **xml** 值。 XML 結構描述包括有關下列項目的資訊：  
   
 -   事件的時間。  
@@ -48,7 +52,7 @@ AS
   
  `CREATE TABLE NewTable (Column1 int);`  
   
- DDL 觸發程序中的 `EVENTDATA()` 陳述式，會擷取到不容許的 `CREATE TABLE` 陳述式文字。 對 EVENTDATA 產生的 **xml** 資料使用 XQuery 陳述式並擷取 \<CommandText> 元素，即可完成這項作業。 如需詳細資訊，請參閱 [XQuery 語言參考 &#40;SQL Server&#41;](../../xquery/xquery-language-reference-sql-server.md)。  
+ DDL 觸發程序中的 `EVENTDATA()` 陳述式，會擷取到不容許的 `CREATE TABLE` 陳述式文字。 對 EVENTDATA 產生的 **xml** 資料使用 XQuery 陳述式並擷取 \<CommandText> 項目，即可完成這項作業。 如需詳細資訊，請參閱 [XQuery 語言參考 &#40;SQL Server&#41;](../../xquery/xquery-language-reference-sql-server.md)。  
   
 > [!CAUTION]  
 >  EVENTDATA 會擷取 CREATE_SCHEMA 事件的資料，以及對應之 CREATE SCHEMA 定義的 <schema_element> (如果有的話)。 此外，EVENTDATA 還會將 <schema_element> 定義識別為個別事件。 因此，在 CREATE_SCHEMA 事件和 CREATE SCHEMA 定義之 <schema_element> 代表的事件上建立的 DDL 觸發程序，可能會傳回相同的事件資料兩次，例如 `TSQLCommand` 資料。 例如，假設在 CREATE_SCHEMA 和 CREATE_TABLE 兩個事件上建立 DDL 觸發程序，並執行下列批次：  
@@ -59,7 +63,7 @@ AS
 >   
 >  如果應用程式擷取 CREATE_TABLE 事件的 `TSQLCommand` 資料，請注意這項資料可能會出現兩次：一次是在發生 CREATE_SCHEMA 事件時，另一次則是在發生 CREATE_TABLE 事件時。 請避免同時在 CREATE_SCHEMA 事件和任何對應之 CREATE SCHEMA 定義的 <schema_element> 文字上建立 DDL 觸發程序，或在應用程式中建立邏輯，使應用程式不會重複處理相同的事件。  
   
-## ALTER TABLE 和 ALTER DATABASE 事件  
+## <a name="alter-table-and-alter-database-events"></a>ALTER TABLE 和 ALTER DATABASE 事件  
  ALTER_TABLE 和 ALTER_DATABASE 事件的事件資料也包含受到 DDL 陳述式所影響之其他物件的名稱和類型，以及在這些物件上執行的動作。 ALTER_TABLE 事件資料包含受到 ALTER TABLE 陳述式所影響之資料行、條件約束或觸發程序的名稱，以及在這些受影響物件上執行的動作 (建立、更改、卸除、啟用或停用)。 ALTER_DATABASE 事件資料包含受到 ALTER DATABASE 陳述式所影響之任何檔案或檔案群組的名稱，以及在這些受影響物件上執行的動作 (建立、更改或卸除)。  
   
  例如，您可以在 AdventureWorks 範例資料庫中建立下列 DDL 觸發程序：  
@@ -83,7 +87,7 @@ ALTER TABLE Person.Address ALTER COLUMN ModifiedDate date;
   
  DDL 觸發程序中的 EVENTDATA() 陳述式會擷取不允許的 `ALTER TABLE` 陳述式文字。  
   
-## 範例  
+## <a name="example"></a>範例  
  您可以使用 EVENTDATA 函數來建立事件的記錄。 在下列範例中，會建立儲存事件資訊的資料表。 每次發生資料庫層級 DDL 事件時，便會在使用下列資訊擴展資料表的目前資料庫上建立 DDL 觸發程序：  
   
 -   事件時間 (使用 GETDATE 函數)。  
@@ -124,11 +128,11 @@ GO
 ```  
   
 > [!NOTE]  
->  若要傳回事件資料，建議您使用 **query()** 方法的 XQuery **value()** 方法。 **query()** 方法會在輸出中傳回 XML 和 & 符號逸出歸位字元及換行字元 (CRLF) 執行個體，**value()** 方法則會將 CRLF 執行個體轉譯成在輸出中不可見。  
+>  若要傳回事件資料，建議您使用 **query()** 方法的 XQuery **value()** 方法。 **query()** 方法會在輸出中傳回 XML 和 & 符號逸出歸位字元及換行字元 (CRLF) 執行個體， **value()** 方法則會將 CRLF 執行個體轉譯成在輸出中不可見。  
   
  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 範例資料庫中則提供了相似的 DDL 觸發程序範例。 若要取得此範例，請使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來尋找 [Database Triggers] 資料夾。 這個資料夾位在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫的 [可程式性] 資料夾下。 以滑鼠右鍵按一下 [ddlDatabseTriggerLog]，然後選取 [編寫資料庫觸發程序的指令碼為]。 依預設，會停用 DDL 觸發程序 **ddlDatabseTriggerLog**。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [DDL 事件](../../relational-databases/triggers/ddl-events.md)   
  [DDL 事件群組](../../relational-databases/triggers/ddl-event-groups.md)  
   

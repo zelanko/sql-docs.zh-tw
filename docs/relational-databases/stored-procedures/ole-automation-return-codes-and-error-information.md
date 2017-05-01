@@ -1,27 +1,31 @@
 ---
 title: "OLE Automation 傳回碼與錯誤資訊 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-ole"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "傳回碼 [SQL Server]"
-  - "OLE Automation [SQL Server], 傳回碼"
-  - "OLE Automation [SQL Server], 錯誤"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-ole
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- return codes [SQL Server]
+- OLE Automation [SQL Server], return codes
+- OLE Automation [SQL Server], errors
 ms.assetid: 9696fb05-e9e8-4836-b359-d4de0be0eeb2
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b1a64e9ca8e9999411edf97c76c50f577790af27
+ms.lasthandoff: 04/11/2017
+
 ---
-# OLE Automation 傳回碼與錯誤資訊
-  OLE Automation 系統預存程序將傳回 **int** 傳回碼，這是基礎 OLE Automation 作業所傳回的 HRESULT。 若 HRESULT 為 0 代表成功。 非零的 HRESULT 為十六進位形式 0x800*nnnnn* 的 OLE 錯誤碼，但若以預存程序傳回碼內的 **int** 值傳回，它的形式將為 214*nnnnnnn*。  
+# <a name="ole-automation-return-codes-and-error-information"></a>OLE Automation 傳回碼與錯誤資訊
+  OLE Automation 系統預存程序將傳回 **int** 傳回碼，這是基礎 OLE Automation 作業所傳回的 HRESULT。 若 HRESULT 為 0 代表成功。 非零的 HRESULT 為十六進位形式 0x800*nnnnn*的 OLE 錯誤碼，但若以預存程序傳回碼內的 **int** 值傳回，它的形式將為 214*nnnnnnn*。  
   
  例如，若將無效的物件名稱 (SQLDMO.Xyzzy) 傳給 sp_OACreate 將導致該程序傳回 2147221005 的 **int** HRESULT，若採十六進位形式則為 0x800401f3。  
   
@@ -75,7 +79,7 @@ SELECT @BinVariable AS BinaryValue,
 GO  
 ```  
   
- 您可以使用下列的預存程序範例 (**sp_displayoaerrorinfo**)，在某個 OLE Automation 程序傳回非零的 HRESULT 傳回碼時顯示 OLE Automation 錯誤訊息。 此預存程序範例使用 **HexToChar**。  
+ 您可以使用下列的預存程序範例 ( **sp_displayoaerrorinfo** )，在某個 OLE Automation 程序傳回非零的 HRESULT 傳回碼時顯示 OLE Automation 錯誤訊息。 此預存程序範例使用 **HexToChar**。  
   
 ```  
 CREATE PROCEDURE dbo.sp_DisplayOAErrorInfo  
@@ -111,7 +115,7 @@ AS
 GO  
 ```  
   
-## 相關內容  
+## <a name="related-content"></a>相關內容  
  [sp_OAGetErrorInfo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-oageterrorinfo-transact-sql.md)  
   
   

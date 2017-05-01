@@ -1,26 +1,30 @@
 ---
-title: "建立資料庫 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "資料庫 [SQL Server], 建立"
-  - "資料庫建立 [SQL Server], SQL Server Management Studio"
-  - "建立資料庫"
+title: "建立資料庫 | Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- databases [SQL Server], creating
+- database creation [SQL Server], SQL Server Management Studio
+- creating databases
 ms.assetid: 4c4beea2-6cbc-4352-9db6-49ea8130bb64
 caps.latest.revision: 38
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 06b00c9eceac816935b2c0fa69306a6681383d80
+ms.lasthandoff: 04/11/2017
+
 ---
-# 建立資料庫
+# <a name="create-a-database"></a>建立資料庫
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中建立資料庫。  
   
  **本主題內容**  
@@ -66,7 +70,7 @@ caps.handback.revision: 38
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 若要建立資料庫  
+#### <a name="to-create-a-database"></a>若要建立資料庫  
   
 1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的執行個體，然後展開該執行個體。  
   
@@ -87,7 +91,7 @@ caps.handback.revision: 38
   
 8.  若要變更復原模式，請選取 **[選項]** 頁面，並從清單中選取復原模式。  
   
-9. 若要變更資料庫選項，請選取 **[選項]** 頁面，然後修改資料庫選項。 如需每個選項的說明，請參閱 [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md)。  
+9. 若要變更資料庫選項，請選取 **[選項]** 頁面，然後修改資料庫選項。 如需每個選項的說明，請參閱 [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)。  
   
 10. 若要加入新的檔案群組，請按一下 **[檔案群組]** 頁面。 按一下 **[加入]** ，然後輸入檔案群組的值。  
   
@@ -101,13 +105,13 @@ caps.handback.revision: 38
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 若要建立資料庫  
+#### <a name="to-create-a-database"></a>若要建立資料庫  
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
 2.  在標準列中，按一下 **[新增查詢]**。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]**。 這個範例會建立 `Sales` 資料庫。 因為沒有使用關鍵字 PRIMARY，所以第一個檔案 (`Sales`_`dat`) 會成為主要檔案。 因為 `Sales`\_`dat` 檔的 SIZE 參數中沒有指定 MB 或 KB，所以它會使用 MB 並 MB 來配置。 每當建立、修改或卸除使用者資料庫時，都應該備份 `Sales`\_`log` 檔會以 MB 為單位配置，因為 `MB` 參數中明確陳述 `SIZE` 後置詞。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]**。 這個範例會建立 `Sales`資料庫。 因為沒有使用關鍵字 PRIMARY，所以第一個檔案 (`Sales`_`dat`) 會成為主要檔案。 因為 `Sales`\_`dat` 檔的 SIZE 參數中沒有指定 MB 或 KB，所以它會使用 MB 並 MB 來配置。 每當建立、修改或卸除使用者資料庫時，都應該備份 `Sales`\_`log` 檔會以 MB 為單位配置，因為 `MB` 參數中明確陳述 `SIZE` 後置詞。  
   
 ```tsql  
 USE master ;  
@@ -130,10 +134,10 @@ GO
   
  如需範例，請參閱 [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [資料庫檔案與檔案群組](../../relational-databases/databases/database-files-and-filegroups.md)   
  [資料庫卸離和附加 &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [將資料或記錄檔加入資料庫](../../relational-databases/databases/add-data-or-log-files-to-a-database.md)  
+ [Add Data or Log Files to a Database](../../relational-databases/databases/add-data-or-log-files-to-a-database.md)  
   
   

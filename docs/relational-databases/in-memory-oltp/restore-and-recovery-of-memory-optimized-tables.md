@@ -1,22 +1,26 @@
 ---
-title: "記憶體最佳化資料表的還原與復原 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "記憶體最佳化資料表的還原與復原 | Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 294975b7-e7d1-491b-b66a-fdb1100d2acc
 caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 56e6ac814b90fdd38f21be32f506846e542be977
+ms.lasthandoff: 04/11/2017
+
 ---
-# 記憶體最佳化資料表的還原與復原
+# <a name="restore-and-recovery-of-memory-optimized-tables"></a>記憶體最佳化資料表的還原與復原
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   復原或還原使用記憶體最佳化資料表之資料庫的基本機制，與僅使用磁碟資料表的資料庫類似。 但是與磁碟資料表不同之處在於，記憶體最佳化資料表必須載入記憶體中，資料庫才能供使用者存取。 這會在資料庫復原中加入一個新步驟。  
@@ -47,11 +51,11 @@ caps.handback.revision: 10
   
  將記憶體最佳化資料表載入記憶體中可能會影響復原時間目標 (RTO) 的效能。 為了改善從資料和差異檔案載入記憶體最佳化資料的時間，記憶體中 OLTP 引擎會平行載入資料/差異檔案，如下所示：  
   
--   建立差異對應篩選。 差異檔案會儲存已刪除資料列的參考。 每個容器會有一個執行緒讀取差異檔案，並建立差異對應篩選  (記憶體最佳化資料檔案群組可包含一個或多個容器)。  
+-   建立差異對應篩選。 差異檔案會儲存已刪除資料列的參考。 每個容器會有一個執行緒讀取差異檔案，並建立差異對應篩選 (記憶體最佳化資料檔案群組可包含一個或多個容器)。  
   
 -   將資料檔案做為資料流。  一旦建立差異對應篩選，就會使用與邏輯 CPU 數目相等的執行緒數目讀取資料檔案。 每個讀取資料檔案的執行緒都會讀取資料列、檢查相關聯的差異對應，並且只有在資料列未標示為已刪除時，才會將該資料列插入資料表。 在下述情況下，復原的這個部分可能繫於 CPU。  
   
- ![記憶體最佳化資料表。](../../relational-databases/in-memory-oltp/media/memory-optimized-tables.gif "記憶體最佳化資料表。")  
+ ![記憶體最佳化的資料表。](../../relational-databases/in-memory-oltp/media/memory-optimized-tables.gif "記憶體最佳化的資料表。")  
   
  記憶體最佳化資料表通常能夠以 I/O 速度載入記憶體中，但是在某些情況下將資料列載入記憶體中的速度會變慢。 這些特定情況包括：  
   
@@ -59,7 +63,7 @@ caps.handback.revision: 10
   
 -   具有一個或多個非叢集索引的大型記憶體最佳化資料表，它與值區計數大小已於建立時調整的雜湊索引不同，非叢集索引會動態成長，造成 CPU 使用量增加。  
   
-## 另請參閱  
- [備份、還原及復原記憶體最佳化資料表](../Topic/Backup,%20Restore,%20and%20Recovery%20of%20Memory-Optimized%20Tables.md)  
+## <a name="see-also"></a>另請參閱  
+ [備份、還原及復原記憶體最佳化資料表](http://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
   
   

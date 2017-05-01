@@ -1,28 +1,32 @@
 ---
 title: "處理複寫代理程式設定檔 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "replication [SQL Server], agents and profiles"
-  - "replication agent profiles [SQL Server]"
-  - "agents [SQL Server replication], profiles"
-  - "設定檔 [SQL Server], 複寫代理程式"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- replication [SQL Server], agents and profiles
+- replication agent profiles [SQL Server]
+- agents [SQL Server replication], profiles
+- profiles [SQL Server], replication agents
 ms.assetid: 9c290a88-4e9f-4a7e-aab5-4442137a9918
 caps.latest.revision: 49
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 49
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d47140507a42084ddf60fa9c54ef6abe43c6f8b6
+ms.lasthandoff: 04/11/2017
+
 ---
-# 處理複寫代理程式設定檔
-  本主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]、[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 或 Replication Management Objects (RMO)，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 中處理複寫代理程式設定檔。 每個複寫代理程式的行為由一組可在代理程式設定檔中設定的參數來控制。 各代理程式都有預設的設定檔，某些代理程式還擁有其他預先定義的設定檔；在某一給定時刻，代理程式只使用一個設定檔。  
+# <a name="work-with-replication-agent-profiles"></a>處理複寫代理程式設定檔
+  本主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或 Replication Management Objects (RMO)，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中處理複寫代理程式設定檔。 每個複寫代理程式的行為由一組可在代理程式設定檔中設定的參數來控制。 各代理程式都有預設的設定檔，某些代理程式還擁有其他預先定義的設定檔；在某一給定時刻，代理程式只使用一個設定檔。  
   
  **本主題內容**  
   
@@ -60,23 +64,23 @@ caps.handback.revision: 49
   
     -   刪除設定檔  
   
--   **待處理︰**  [之後變更代理程式參數](#FollowUp)  
+-   **後續操作：**[在變更代理程式參數之後](#FollowUp)  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 ###  <a name="Access_SSMS"></a> 若要透過 SQL Server Management Studio 存取代理程式設定檔對話方塊  
   
-1.  在 **一般** 頁面 **散發者屬性-\< 散發者>** 對話方塊中，按一下 [ **設定檔預設**。  
+1.  在 [散發者屬性 - \<散發者>] 對話方塊的 [一般] 頁面上，按一下 [設定檔預設值]。  
   
-#### 若要透過複寫監視器存取代理程式設定檔對話方塊  
+#### <a name="to-access-the-agent-profiles-dialog-box-from-replication-monitor"></a>若要透過複寫監視器存取代理程式設定檔對話方塊  
   
--   若要開啟所有代理程式] 對話方塊中，「 發行者 」，以滑鼠右鍵按一下，然後按一下 [ **代理程式設定檔**。  
+-   若要開啟所有代理程式的對話方塊，請以滑鼠右鍵按一下「發行者」，然後按一下 **[代理程式設定檔]**。  
   
 -   若要開啟單一代理程式的對話方塊：  
   
     1.  在複寫監視器的左窗格中展開發行者群組，展開發行者，然後按一下發行集。  
   
-    2.  散發代理程式 」 和 「 合併代理程式設定檔，以滑鼠右鍵按一下訂閱 **所有訂閱** 索引標籤，然後再按一下 **代理程式設定檔**。 對於其他代理程式，以滑鼠右鍵按一下代理程式上 **代理程式** 索引標籤，然後再按一下 **代理程式設定檔**。  
+    2.  對於「散發代理程式」和「合併代理程式」設定檔，請以滑鼠右鍵按一下 **[所有訂閱]** 索引標籤上的訂閱，然後按一下 **[代理程式設定檔]**。 對於其他代理程式，請以滑鼠右鍵按一下 **[代理程式]** 索引標籤，然後按一下 **[代理程式設定檔]**。  
   
 ###  <a name="Specify_SSMS"></a> 若要為代理程式指定設定檔  
   
@@ -90,9 +94,9 @@ caps.handback.revision: 49
   
 1.  如果 **[代理程式設定檔]** 對話方塊顯示一個以上的代理程式設定檔，請選取一個代理程式。  
   
-2.  按一下屬性按鈕 (**...**) 設定檔旁邊。  
+2.  按一下設定檔旁邊的屬性按鈕 (**...**)。  
   
-3.  檢視的參數和值在 **\< ProfileName> 設定檔屬性** 對話方塊。  
+3.  檢視 [\<設定檔名稱> 設定檔屬性] 對話方塊中的參數和值。  
   
     -   可以編輯使用者自訂之設定檔中的參數；但無法編輯預先定義之系統設定檔中的參數。  
   
@@ -135,93 +139,93 @@ caps.handback.revision: 49
   
 ###  <a name="Create_tsql"></a> 若要建立新的代理程式設定檔  
   
-1.  在散發者 」 執行 [sp_add_agent_profile & #40。TRANSACT-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md)。 指定 **@name**, ，值為 **1** 的 **@profile_type**, ，和下列其中一個值 **@agent_type**:  
+1.  在散發者端，執行 [sp_add_agent_profile &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md)。 指定 **@name**、針對 **@profile_type** 指定 **@profile_type**的值，並針對 **@agent_type**指定下列其中一個值：  
   
-    -   **1** - [複寫快照集代理程式](../../../relational-databases/replication/agents/replication-snapshot-agent.md)  
+    -   **@profile_type** - [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
-    -   **2** - [複寫記錄讀取器代理程式](../../../relational-databases/replication/agents/replication-log-reader-agent.md)  
+    -   **2** - [Replication Log Reader Agent](../../../relational-databases/replication/agents/replication-log-reader-agent.md)  
   
-    -   **3** - [複寫散發代理程式](../../../relational-databases/replication/agents/replication-distribution-agent.md)  
+    -   **3** - [Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)  
   
-    -   **4** - [複寫合併代理程式](../../../relational-databases/replication/agents/replication-merge-agent.md)  
+    -   **4** - [Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)  
   
-    -   **9** - [複寫佇列讀取器代理程式](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)  
+    -   **9** - [Replication Queue Reader Agent](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)  
   
-     如果此設定檔將成為其複寫代理程式類型的新預設設定檔，請針對 **@default** 指定 **1**的值。 新的設定檔的識別碼會使用傳回 **@profile_id** 輸出參數。 如此會根據給定的代理程式類型，建立具有一組設定檔參數的新設定檔。  
+     如果此設定檔將成為其複寫代理程式類型的新預設設定檔，請針對 **@profile_type** 指定 **@default**。 新設定檔的識別碼會使用 **@profile_id** 輸出參數傳回。 如此會根據給定的代理程式類型，建立具有一組設定檔參數的新設定檔。  
   
 2.  在建立新設定檔之後，可以加入、移除或修改預設的參數來自訂該設定檔。  
   
 ###  <a name="Modify_tsql"></a> 若要修改現有的代理程式設定檔  
   
-1.  在散發者 」 執行 [sp_help_agent_profile & #40。TRANSACT-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md)。 指定下列值的其中一個 **@agent_type**:  
+1.  在散發者端，執行 [sp_help_agent_profile &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md)。 針對 **@agent_type**指定下列其中一個值：  
   
-    -   **1** - [複寫快照集代理程式](../../../relational-databases/replication/agents/replication-snapshot-agent.md)  
+    -   **@profile_type** - [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
-    -   **2** - [複寫記錄讀取器代理程式](../../../relational-databases/replication/agents/replication-log-reader-agent.md)  
+    -   **2** - [Replication Log Reader Agent](../../../relational-databases/replication/agents/replication-log-reader-agent.md)  
   
-    -   **3** - [複寫散發代理程式](../../../relational-databases/replication/agents/replication-distribution-agent.md)  
+    -   **3** - [Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)  
   
-    -   **4** - [複寫合併代理程式](../../../relational-databases/replication/agents/replication-merge-agent.md)  
+    -   **4** - [Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)  
   
-    -   **9** - [複寫佇列讀取器代理程式](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)  
+    -   **9** - [Replication Queue Reader Agent](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)  
   
-     這會傳回指定的代理程式類型的所有設定檔。 記下的值 **profile_id** 結果集中要變更之設定檔。  
+     這會傳回指定的代理程式類型的所有設定檔。 請注意結果集中要變更之設定檔的 **profile_id** 值。  
   
-2.  在散發者 」 執行 [sp_help_agent_parameter & #40。TRANSACT-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql.md)。 指定步驟 1 中的設定檔識別碼 **@profile_id**。 這會傳回設定檔的所有參數。 請注意要在設定檔中修改或移除的任何參數的名稱。  
+2.  在散發者端，執行 [sp_help_agent_parameter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql.md)。 針對 **@profile_id**。 這會傳回設定檔的所有參數。 請注意要在設定檔中修改或移除的任何參數的名稱。  
   
-3.  若要變更設定檔中的參數值，請執行 [sp_change_agent_profile & #40。TRANSACT-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-change-agent-profile-transact-sql.md)。 指定步驟 1 中的設定檔識別碼 **@profile_id**, ，若要變更參數名稱 **@property**, ，和新值之參數的 **@value**。  
+3.  若要變更設定檔中的參數值，請執行 [sp_change_agent_profile &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-change-agent-profile-transact-sql.md)。 針對 **@profile_id**指定步驟 1 中的設定檔識別碼、針對 **@property**指定要變更的參數名稱，並針對 **@value**。  
   
     > [!NOTE]  
     >  您無法變更現有的代理程式設定檔，使其成為代理程式的預設設定檔， 而必須建立新的預設檔當做預設設定檔，如前述程序所示。  
   
-4.  若要從設定檔移除參數，執行 [sp_drop_agent_parameter & #40。TRANSACT-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-drop-agent-parameter-transact-sql.md)。 指定步驟 1 中的設定檔識別碼 **@profile_id** 和要移除的參數名稱 **@parameter_name**。  
+4.  若要從設定檔移除參數，請執行 [sp_drop_agent_parameter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-drop-agent-parameter-transact-sql.md)。 針對 **@profile_id** 指定步驟 1 中的設定檔識別碼，並針對 **@parameter_name**。  
   
 5.  若要在設定檔中加入新參數，您必須執行下列動作：  
   
-    -   查詢 [MSagentparameterlist & #40。TRANSACT-SQL & #41;](../../../relational-databases/system-tables/msagentparameterlist-transact-sql.md) 判斷哪一個設定檔參數可以為每個代理程式類型的散發者端的資料表。  
+    -   查詢「散發者」端的 [MSagentparameterlist &#40;Transact-SQL&#41;](../../../relational-databases/system-tables/msagentparameterlist-transact-sql.md) 資料表，以判斷可針對每個代理程式類型所設定的設定檔參數。  
   
-    -   在散發者 」 執行 [sp_add_agent_parameter & #40。TRANSACT-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)。 指定步驟 1 中的設定檔識別碼 **@profile_id**, ，若要加入的有效參數名稱 **@parameter_name**, ，並為參數的值 **@parameter_value**。  
+    -   在散發者端，執行 [sp_add_agent_parameter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)。 針對 **@profile_id**指定步驟 1 中的設定檔識別碼、針對 **@parameter_name**指定要加入的有效參數的名稱，並針對 **@parameter_value**。  
   
 ###  <a name="Delete_tsql"></a> 若要刪除代理程式設定檔  
   
-1.  在散發者 」 執行 [sp_help_agent_profile & #40。TRANSACT-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md)。 指定下列值的其中一個 **@agent_type**:  
+1.  在散發者端，執行 [sp_help_agent_profile &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md)。 針對 **@agent_type**指定下列其中一個值：  
   
-    -   **1** - [複寫快照集代理程式](../../../relational-databases/replication/agents/replication-snapshot-agent.md)  
+    -   **@profile_type** - [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
-    -   **2** - [複寫記錄讀取器代理程式](../../../relational-databases/replication/agents/replication-log-reader-agent.md)  
+    -   **2** - [Replication Log Reader Agent](../../../relational-databases/replication/agents/replication-log-reader-agent.md)  
   
-    -   **3** - [複寫散發代理程式](../../../relational-databases/replication/agents/replication-distribution-agent.md)  
+    -   **3** - [Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)  
   
-    -   **4** - [複寫合併代理程式](../../../relational-databases/replication/agents/replication-merge-agent.md)  
+    -   **4** - [Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)  
   
-    -   **9** - [複寫佇列讀取器代理程式](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)  
+    -   **9** - [Replication Queue Reader Agent](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)  
   
-     這會傳回指定的代理程式類型的所有設定檔。 記下的值 **profile_id** 結果集中要移除之設定檔。  
+     這會傳回指定的代理程式類型的所有設定檔。 請注意結果集中要移除之設定檔的 **profile_id** 值。  
   
-2.  在散發者 」 執行 [sp_drop_agent_profile & #40。TRANSACT-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-drop-agent-profile-transact-sql.md)。 指定步驟 1 中的設定檔識別碼 **@profile_id**。  
+2.  在散發者端，執行 [sp_drop_agent_profile &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-drop-agent-profile-transact-sql.md)。 針對 **@profile_id**。  
   
 ###  <a name="Synch_tsql"></a> 若要在同步處理期間使用代理程式設定檔  
   
-1.  在散發者 」 執行 [sp_help_agent_profile & #40。TRANSACT-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md)。 指定下列值的其中一個 **@agent_type**:  
+1.  在散發者端，執行 [sp_help_agent_profile &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md)。 針對 **@agent_type**指定下列其中一個值：  
   
-    -   **1** - [複寫快照集代理程式](../../../relational-databases/replication/agents/replication-snapshot-agent.md)  
+    -   **@profile_type** - [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
-    -   **2** - [複寫記錄讀取器代理程式](../../../relational-databases/replication/agents/replication-log-reader-agent.md)  
+    -   **2** - [Replication Log Reader Agent](../../../relational-databases/replication/agents/replication-log-reader-agent.md)  
   
-    -   **3** - [複寫散發代理程式](../../../relational-databases/replication/agents/replication-distribution-agent.md)  
+    -   **3** - [Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)  
   
-    -   **4** - [複寫合併代理程式](../../../relational-databases/replication/agents/replication-merge-agent.md)  
+    -   **4** - [Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)  
   
-    -   **9** - [複寫佇列讀取器代理程式](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)  
+    -   **9** - [Replication Queue Reader Agent](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)  
   
-     這會傳回指定的代理程式類型的所有設定檔。 記下的值 **profile_name** 結果集中使用的設定檔。  
+     這會傳回指定的代理程式類型的所有設定檔。 請注意結果集中要使用之設定檔的 **profile_name** 值。  
   
-2.  如果代理程式已啟動代理程式作業中，編輯啟動代理程式，以指定的值的作業步驟 **profile_name** 之後的步驟 1 中取得 **-ProfileName** 命令列參數。 如需詳細資訊，請參閱 [檢視和修改複寫代理程式命令提示字元參數 & #40。SQL Server Management Studio & #41;](../../../relational-databases/replication/agents/view and modify replication agent command prompt parameters.md)。  
+2.  如果代理程式是從代理程式作業啟動的，請編輯啟動代理程式的作業步驟，在 **-ProfileName** 命令列參數之後指定在步驟 1 中取得的 **profile_name** 值。 如需詳細資訊，請參閱[檢視並修改複寫代理程式命令提示字元參數 &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)。  
   
-3.  從命令提示字元啟動代理程式，當指定的值 **profile_name** 之後的步驟 1 中取得 **-ProfileName** 命令列參數。  
+3.  從命令提示字元啟動代理程式時，在 **-ProfileName** 命令列參數之後指定在步驟 1 中取得的 **profile_name** 值。  
   
 ###  <a name="TsqlExample"></a> 範例 (Transact-SQL)  
- 這個範例會建立名為 「 合併代理程式的自訂設定檔 **custom_merge**, ，變更的值 **-UploadReadChangesPerBatch** 參數，將新 **-ExchangeType** 參數和傳回有關所建立的設定檔。  
+ 此範例會針對名為 **custom_merge**的合併代理程式建立自訂的設定檔、變更 **-UploadReadChangesPerBatch** 參數的值、加入新的 **-ExchangeType** 參數，並傳回所建立之設定檔的相關資訊。  
   
  [!code-sql[HowTo#sp_addagentprofileparam](../../../relational-databases/replication/codesnippet/tsql/work-with-replication-ag_1.sql)]  
   
@@ -229,69 +233,69 @@ caps.handback.revision: 49
   
 ###  <a name="Create_RMO"></a> 若要建立新的代理程式設定檔  
   
-1.  建立連接到散發者 」 使用的執行個體 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 類別。  
+1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 類別的執行個體，以建立與散發者的連線。  
   
-2.  建立的執行個體 <xref:Microsoft.SqlServer.Replication.AgentProfile> 類別。  
+2.  建立 <xref:Microsoft.SqlServer.Replication.AgentProfile> 類別的執行個體。  
   
 3.  設定物件的下列屬性：  
   
-    -   <xref:Microsoft.SqlServer.Replication.AgentProfile.Name%2A> -設定檔的名稱。  
+    -   <xref:Microsoft.SqlServer.Replication.AgentProfile.Name%2A> - 設定檔的名稱。  
   
-    -   <xref:Microsoft.SqlServer.Replication.AgentProfile.AgentType%2A> - <xref:Microsoft.SqlServer.Replication.AgentType> 值，指定複寫代理程式正在建立設定檔的類型。  
+    -   <xref:Microsoft.SqlServer.Replication.AgentProfile.AgentType%2A> - <xref:Microsoft.SqlServer.Replication.AgentType> 值，指定所建立設定檔的複寫代理程式類型。  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> - <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 步驟 1 中建立。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> - 在步驟 1 中建立的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection>。  
   
-    -   （選擇性） <xref:Microsoft.SqlServer.Replication.AgentProfile.Description%2A> -設定檔的描述。  
+    -   (選擇性) <xref:Microsoft.SqlServer.Replication.AgentProfile.Description%2A> - 設定檔的描述。  
   
-    -   （選擇性） <xref:Microsoft.SqlServer.Replication.AgentProfile.Default%2A> -將此屬性設定為 **true** 如果所有的新代理程式作業，這個 <xref:Microsoft.SqlServer.Replication.AgentType> 預設會使用此設定檔。  
+    -   (選擇性) <xref:Microsoft.SqlServer.Replication.AgentProfile.Default%2A> - 如果這個 <xref:Microsoft.SqlServer.Replication.AgentType> 的所有新代理程式作業預設都會使用此設定檔，請將此屬性設定為 **true**。  
   
 4.  呼叫 <xref:Microsoft.SqlServer.Replication.AgentProfile.Create%2A> 方法，以在伺服器上建立設定檔。  
   
 5.  在伺服器上建立設定檔之後，就可以藉由加入、移除或變更複寫代理程式參數的值來加以自訂。  
   
-6.  若要將設定檔指派給現有的複寫代理程式作業，呼叫 <xref:Microsoft.SqlServer.Replication.AgentProfile.AssignToAgent%2A> 方法。 請針對 *distributionDBName* 傳遞散發資料庫的名稱，而針對 *agentID*傳遞作業識別碼。  
+6.  若要將設定檔指派給現有複寫代理程式作業，請呼叫 <xref:Microsoft.SqlServer.Replication.AgentProfile.AssignToAgent%2A> 方法。 請針對 *distributionDBName* 傳遞散發資料庫的名稱，而針對 *agentID*傳遞作業識別碼。  
   
 ###  <a name="Modify_RMO"></a> 若要修改現有的代理程式設定檔  
   
-1.  建立連接到散發者 」 使用的執行個體 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 類別。  
+1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 類別的執行個體，以建立與散發者的連線。  
   
-2.  建立的執行個體 <xref:Microsoft.SqlServer.Replication.ReplicationServer> 類別。 傳遞 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 步驟 1 中建立的物件。  
+2.  建立 <xref:Microsoft.SqlServer.Replication.ReplicationServer> 類別的執行個體。 傳遞在步驟 1 中建立的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 物件。  
   
 3.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法。 如果此方法傳回 **false**，請確認「散發者」存在。  
   
-4.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationServer.EnumAgentProfiles%2A> 方法。 傳遞 <xref:Microsoft.SqlServer.Replication.AgentType> 縮小傳回的特定類型的複寫代理程式設定檔的值。  
+4.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationServer.EnumAgentProfiles%2A> 方法。 傳遞 <xref:Microsoft.SqlServer.Replication.AgentType> 值，將傳回的設定檔縮減為特定的複寫代理程式類型。  
   
-5.  取得想要 <xref:Microsoft.SqlServer.Replication.AgentProfile> 從傳回的物件 <xref:System.Collections.ArrayList>, ，其中 <xref:Microsoft.SqlServer.Replication.AgentProfile.Name%2A> 之物件的屬性會比對設定檔名稱。  
+5.  從傳回的 <xref:System.Collections.ArrayList> 中取得所需的 <xref:Microsoft.SqlServer.Replication.AgentProfile> 物件；其中，物件的 <xref:Microsoft.SqlServer.Replication.AgentProfile.Name%2A> 屬性符合設定檔名稱。  
   
-6.  呼叫下列方法的其中一個 <xref:Microsoft.SqlServer.Replication.AgentProfile> 變更的設定檔︰  
+6.  呼叫 <xref:Microsoft.SqlServer.Replication.AgentProfile> 的下列其中一個方法來變更設定檔：  
   
-    -   <xref:Microsoft.SqlServer.Replication.AgentProfile.AddParameter%2A> -將支援的參數加入至設定檔，其中 *名稱* 是複寫代理程式參數的名稱和 *值* 是指定的值。 若要列舉給定代理程式類型的所有支援的代理程式參數，呼叫 <xref:Microsoft.SqlServer.Replication.AgentProfile.EnumParameterInfo%2A> 方法。 這個方法會傳回 <xref:System.Collections.ArrayList> 的 <xref:Microsoft.SqlServer.Replication.AgentProfileParameterInfo> 物件，表示所有支援的參數。  
+    -   <xref:Microsoft.SqlServer.Replication.AgentProfile.AddParameter%2A> - 將支援的參數新增至設定檔，其中 *name* 是複寫代理程式參數的名稱，*value* 則是指定的值。 若要列舉給定代理程式類型的所有受支援代理程式參數，請呼叫 <xref:Microsoft.SqlServer.Replication.AgentProfile.EnumParameterInfo%2A> 方法。 此方法會傳回 <xref:Microsoft.SqlServer.Replication.AgentProfileParameterInfo> 物件的 <xref:System.Collections.ArrayList>，而這些物件代表所有支援的參數。  
   
-    -   <xref:Microsoft.SqlServer.Replication.AgentProfile.RemoveParameter%2A> -從設定檔，移除現有的參數位置 *名稱* 是複寫代理程式參數的名稱。 若要列舉目前設定檔定義的所有代理程式參數，呼叫 <xref:Microsoft.SqlServer.Replication.AgentProfile.EnumParameters%2A> 方法。 這個方法會傳回 <xref:System.Collections.ArrayList> 的 <xref:Microsoft.SqlServer.Replication.AgentProfileParameter> 代表現有的參數，此設定檔的物件。  
+    -   <xref:Microsoft.SqlServer.Replication.AgentProfile.RemoveParameter%2A> - 從設定檔中移除現有參數，其中 *name* 是複寫代理程式參數的名稱。 若要列舉所有目前為設定檔所定義的代理程式參數，請呼叫 <xref:Microsoft.SqlServer.Replication.AgentProfile.EnumParameters%2A> 方法。 此方法會傳回 <xref:Microsoft.SqlServer.Replication.AgentProfileParameter> 物件的 <xref:System.Collections.ArrayList>，而這些物件代表這個設定檔的現有參數。  
   
-    -   <xref:Microsoft.SqlServer.Replication.AgentProfile.ChangeParameter%2A> -變更現有參數在設定檔，設定其中 *名稱* 是代理程式參數的名稱和 *newValue* 是所要變更參數的值。 若要列舉目前設定檔定義的所有代理程式參數，呼叫 <xref:Microsoft.SqlServer.Replication.AgentProfile.EnumParameters%2A> 方法。 這個方法會傳回 <xref:System.Collections.ArrayList> 的 <xref:Microsoft.SqlServer.Replication.AgentProfileParameter> 代表現有的參數，此設定檔的物件。 若要列舉所有支援的代理程式參數設定，請呼叫 <xref:Microsoft.SqlServer.Replication.AgentProfile.EnumParameterInfo%2A> 方法。 這個方法會傳回 <xref:System.Collections.ArrayList> 的 <xref:Microsoft.SqlServer.Replication.AgentProfileParameterInfo> 代表支援的所有參數值的物件。  
+    -   <xref:Microsoft.SqlServer.Replication.AgentProfile.ChangeParameter%2A> - 變更設定檔中現有參數的設定，其中 *name* 是代理程式參數的名稱，*newValue* 則是參數要變更成的值。 若要列舉所有目前為設定檔所定義的代理程式參數，請呼叫 <xref:Microsoft.SqlServer.Replication.AgentProfile.EnumParameters%2A> 方法。 此方法會傳回 <xref:Microsoft.SqlServer.Replication.AgentProfileParameter> 物件的 <xref:System.Collections.ArrayList>，而這些物件代表這個設定檔的現有參數。 若要列舉所有受支援的代理程式參數設定，請呼叫 <xref:Microsoft.SqlServer.Replication.AgentProfile.EnumParameterInfo%2A> 方法。 此方法會傳回 <xref:Microsoft.SqlServer.Replication.AgentProfileParameterInfo> 物件的 <xref:System.Collections.ArrayList>，而這些物件代表所有參數的支援值。  
   
 ###  <a name="Delete_RMO"></a> 若要刪除代理程式設定檔  
   
-1.  建立連接到散發者 」 使用的執行個體 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 類別。  
+1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 類別的執行個體，以建立與散發者的連線。  
   
-2.  建立的執行個體 <xref:Microsoft.SqlServer.Replication.AgentProfile> 類別。 設定的設定檔名稱 <xref:Microsoft.SqlServer.Replication.AgentProfile.Name%2A> 和 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 步驟 1 中的 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>。  
+2.  建立 <xref:Microsoft.SqlServer.Replication.AgentProfile> 類別的執行個體。 針對 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>，設定步驟 1 中 <xref:Microsoft.SqlServer.Replication.AgentProfile.Name%2A> 和 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 的設定檔名稱。  
   
 3.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法。 如果此方法傳回 **false**，則指定的名稱不正確，或伺服器上不存在該設定檔。  
   
-4.  確認 <xref:Microsoft.SqlServer.Replication.AgentProfile.Type%2A> 屬性設定為 <xref:Microsoft.SqlServer.Replication.AgentProfileTypeOption.User>, ，表示客戶設定檔。 您不應移除的值為設定檔 <xref:Microsoft.SqlServer.Replication.AgentProfileTypeOption.System> 的 <xref:Microsoft.SqlServer.Replication.AgentProfile.Type%2A>。  
+4.  驗證 <xref:Microsoft.SqlServer.Replication.AgentProfile.Type%2A> 屬性設定為 <xref:Microsoft.SqlServer.Replication.AgentProfileTypeOption.User>，這表示客戶設定檔。 您不應該移除 <xref:Microsoft.SqlServer.Replication.AgentProfile.Type%2A> 之 <xref:Microsoft.SqlServer.Replication.AgentProfileTypeOption.System> 值的設定檔。  
   
-5.  呼叫 <xref:Microsoft.SqlServer.Replication.AgentProfile.Remove%2A> 方法以移除此物件代表伺服器的使用者定義設定檔。  
+5.  呼叫 <xref:Microsoft.SqlServer.Replication.AgentProfile.Remove%2A> 方法，從伺服器移除此物件代表的使用者自訂設定檔。  
   
 ##  <a name="FollowUp"></a> 後續操作：在變更代理程式參數之後  
  代理程式參數變更會在代理程式下次啟動時生效。 如果代理程式連續執行，則必須停止代理程式，然後重新啟動它。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [複寫代理程式設定檔](../../../relational-databases/replication/agents/replication-agent-profiles.md)   
- [複寫快照集代理程式](../../../relational-databases/replication/agents/replication-snapshot-agent.md)   
- [複寫記錄讀取器代理程式](../../../relational-databases/replication/agents/replication-log-reader-agent.md)   
- [複寫散發代理程式](../../../relational-databases/replication/agents/replication-distribution-agent.md)   
- [複寫合併代理程式](../../../relational-databases/replication/agents/replication-merge-agent.md)   
- [複寫佇列讀取器代理程式](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)  
+ [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)   
+ [Replication Log Reader Agent](../../../relational-databases/replication/agents/replication-log-reader-agent.md)   
+ [Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)   
+ [Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)   
+ [Replication Queue Reader Agent](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)  
   
   

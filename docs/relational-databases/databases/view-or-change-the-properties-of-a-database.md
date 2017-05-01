@@ -1,28 +1,32 @@
 ---
-title: "檢視或變更資料庫的屬性 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "08/25/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "顯示資料庫"
-  - "資料庫檢視 [SQL Server]"
-  - "資料庫 [SQL Server], 檢視"
-  - "檢視資料庫"
+title: "檢視或變更資料庫的屬性 | Microsoft 文件"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 08/25/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- displaying databases
+- database viewing [SQL Server]
+- databases [SQL Server], viewing
+- viewing databases
 ms.assetid: 9e8ac097-84b7-46c7-85e3-c1e79f94d747
 caps.latest.revision: 42
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 40
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: ead93afe9ce79d5cee37f190f5c2d2707f69b880
+ms.lasthandoff: 04/11/2017
+
 ---
-# 檢視或變更資料庫的屬性
+# <a name="view-or-change-the-properties-of-a-database"></a>檢視或變更資料庫的屬性
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中檢視或變更資料庫的屬性。 變更資料庫屬性之後，修改會立即生效。  
@@ -45,7 +49,7 @@ caps.handback.revision: 40
   
 ###  <a name="Recommendations"></a> 建議  
   
--   當 AUTO_CLOSE 是 ON 時，[sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目錄檢視中的某些資料行及 DATABASEPROPERTYEX 函數會傳回 NULL，因為資料庫無法擷取資料。 若要解決此問題，請開啟資料庫。  
+-   當 AUTO_CLOSE 是 ON 時， [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目錄檢視中的某些資料行及 DATABASEPROPERTYEX 函數會傳回 NULL，因為資料庫無法擷取資料。 若要解決此問題，請開啟資料庫。  
   
 ###  <a name="Security"></a> 安全性  
   
@@ -54,7 +58,7 @@ caps.handback.revision: 40
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 檢視或變更資料庫的屬性  
+#### <a name="to-view-or-change-the-properties-of-a-database"></a>檢視或變更資料庫的屬性  
   
 1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的執行個體，然後展開該執行個體。  
   
@@ -63,11 +67,11 @@ caps.handback.revision: 40
 3.  在 **[資料庫屬性]** 對話方塊中，選取一個頁面以檢視對應的資訊。 例如，選取 **[檔案]** 頁面以檢視資料和記錄檔資訊。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
- Transact-SQL 提供許多不同的方法來檢視資料庫的屬性，以及變更資料庫屬性。 若要檢視資料庫的屬性，您可以使用 [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md) 函數和 [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目錄檢視。 若要變更資料庫的屬性，您可以使用您環境適用的 ALTER DATABASE 陳述式版本：[ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md) 或 [ALTER DATABASE &#40;Azure SQL Database&#41;](../../t-sql/statements/alter-database-azure-sql-database.md)。 若要檢視資料庫範圍的屬性，請使用 [sys.database_scoped_configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) 目錄檢視，若要改變資料庫範圍的屬性，請使用 [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 陳述式。  
+ Transact-SQL 提供許多不同的方法來檢視資料庫的屬性，以及變更資料庫屬性。 若要檢視資料庫的屬性，您可以使用 [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md) 函數和 [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目錄檢視。 若要變更資料庫的屬性，您可以使用您環境適用的 ALTER DATABASE 陳述式版本： [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md) 或 [ALTER DATABASE (Azure SQL Database)](../../t-sql/statements/alter-database-azure-sql-database.md)。 若要檢視資料庫範圍的屬性，請使用 [sys.database_scoped_configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) 目錄檢視，若要改變資料庫範圍的屬性，請使用 [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 陳述式。  
   
-#### 使用 DATABASEPROPERTYEX 函數檢視資料庫的屬性  
+#### <a name="to-view-a-property-of-a-database-by-using-the-databasepropertyex-function"></a>使用 DATABASEPROPERTYEX 函數檢視資料庫的屬性  
   
-1.  連接至 [!INCLUDE[ssDE](../../includes/ssde-md.md)]，然後連接至您要檢視其屬性的資料庫。  
+1.  連接至 [!INCLUDE[ssDE](../../includes/ssde-md.md)] ，然後連接至您要檢視其屬性的資料庫。  
   
 2.  在標準列中，按一下 **[新增查詢]**。  
   
@@ -77,9 +81,9 @@ caps.handback.revision: 40
     SELECT DATABASEPROPERTYEX('AdventureWorks2012', 'IsAutoShrink');  
     ```  
   
-#### 透過查詢 sys.databases 檢視資料庫的屬性  
+#### <a name="to-view-the-properties-of-a-database-by-querying-sysdatabases"></a>透過查詢 sys.databases 檢視資料庫的屬性  
   
-1.  連接至 [!INCLUDE[ssDE](../../includes/ssde-md.md)]，然後連接至您要檢視其屬性的資料庫。  
+1.  連接至 [!INCLUDE[ssDE](../../includes/ssde-md.md)] ，然後連接至您要檢視其屬性的資料庫。  
   
 2.  在標準列中，按一下 **[新增查詢]**。  
   
@@ -90,9 +94,9 @@ caps.handback.revision: 40
     FROM sys.databases WHERE name = 'AdventureWorks2012';  
     ```  
   
-#### 查詢 sys.databases_scoped_configuration 檢視資料庫範圍組態的屬性  
+#### <a name="to-view-the-properties-of-a-database-scoped-configuration-by-querying-sysdatabasesscopedconfiguration"></a>查詢 sys.databases_scoped_configuration 檢視資料庫範圍組態的屬性  
   
-1.  連接至 [!INCLUDE[ssDE](../../includes/ssde-md.md)]，然後連接至您要檢視其屬性的資料庫。  
+1.  連接至 [!INCLUDE[ssDE](../../includes/ssde-md.md)] ，然後連接至您要檢視其屬性的資料庫。  
   
 2.  在標準列中，按一下 **[新增查詢]**。  
   
@@ -103,9 +107,9 @@ caps.handback.revision: 40
     FROM sys.database_scoped_configurations;  
     ```  
   
-     如需其他範例，請參閱 [sys.database_scoped_configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)。  
+     如需其他範例，請參閱 [sys.database_scoped_configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)  
   
-#### 使用 ALTER DATABASE 變更 SQL Server 2016 資料庫的屬性  
+#### <a name="to-change-the-properties-of-a-sql-server-2016-database-using-alter-database"></a>使用 ALTER DATABASE 變更 SQL Server 2016 資料庫的屬性  
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
@@ -121,7 +125,7 @@ caps.handback.revision: 40
   
      [!code-sql[DatabaseDDL#AlterDatabase9](../../relational-databases/databases/codesnippet/tsql/view-or-change-the-prope_1.sql)]  
   
-#### 使用 ALTER DATABASE SCOPED CONFIGURATION 變更資料庫範圍的屬性  
+#### <a name="to-change-the-database-scoped-properties-using-alter-database-scoped-configuration"></a>使用 ALTER DATABASE SCOPED CONFIGURATION 變更資料庫範圍的屬性  
   
 1.  連接至 SQL Server 執行個體中的資料庫。  
   
@@ -133,13 +137,14 @@ caps.handback.revision: 40
     ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP=PRIMARY   
     ```  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [ALTER DATABASE &#40;Azure SQL Database&#41;](../../t-sql/statements/alter-database-azure-sql-database.md)   
+ [ALTER DATABASE (Azure SQL Database)](../../t-sql/statements/alter-database-azure-sql-database.md)   
  [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)   
  [sys.database_scoped_configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)  
 
   
   
+

@@ -1,43 +1,47 @@
 ---
-title: "使用查詢存放區的最佳作法 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "11/24/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "查詢存放區, 最佳作法"
+title: "使用查詢存放區的最佳做法 | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 11/24/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Query Store, best practices
 ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
 caps.latest.revision: 24
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f00c5db3574f21010e682f964d06f3c2b61a1d09
+ms.openlocfilehash: 9cd813b72eda096f780ed7140b6691f528251a30
+ms.lasthandoff: 04/29/2017
+
 ---
-# 使用查詢存放區的最佳作法
+# <a name="best-practice-with-the-query-store"></a>使用查詢存放區的最佳作法
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   本主題概述搭配您的工作負載使用查詢存放區的最佳作法。  
   
-##  <a name="a-namessmsa-use-the-latest-sql-server-management-studio"></a><a name="SSMS"></a> 使用最新的 SQL Server Management Studio  
+##  <a name="SSMS"></a> Use the Latest SQL Server Management Studio  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 擁有一組針對設定查詢存放區，以及耗用有關工作負載之收集資料所設計的使用者介面。  
 請於下列位置下載 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 最新版本：[https://msdn.microsoft.com/library/mt238290.aspx](https://msdn.microsoft.com/library/mt238290.aspx)  
   
  如需有關如何在疑難排解案例中使用查詢存放區的快速說明，請參閱[查詢存放區@Azure 部落格](https://azure.microsoft.com/en-us/blog/query-store-a-flight-data-recorder-for-your-database/)。  
   
-##  <a name="a-nameinsighta-use-query-performance-insight-in-azure-sql-database"></a><a name="Insight"></a> 在 Azure SQL 資料庫中使用查詢效能深入解析  
+##  <a name="Insight"></a> 在 Azure SQL 資料庫中使用查詢效能深入解析  
  如果您在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中執行查詢存放區，您可以使用「查詢效能深入解析」  分析經過一段時間的 DTU 耗用量。  
 雖然您可以使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 取得您所有查詢的資源耗用量詳細資訊 (CPU、記憶體、IO 等等)，「查詢效能深入解析」能提供您一個快速且有效率的方式來判斷資源耗用對您的資料庫之整體 DTU 耗用量的影響。  
 如需詳細資訊，請參閱 [Azure SQL 資料庫查詢效能深入解析](https://azure.microsoft.com/documentation/articles/sql-database-query-performance/)。    
 
 ##  <a name="using-query-store-with-elastic-pool-databases"></a>搭配彈性集區資料庫使用查詢存放區
 您可以放心地在所有資料庫中使用查詢存放區，即使在緊密壓縮的集區中也是一樣。 已經解決所有與過度使用資源有關的問題，這些問題可能發生在彈性集區中大量資料庫已啟用查詢存放區時。
-##  <a name="a-nameconfigurea-keep-query-store-adjusted-to-your-workload"></a><a name="Configure"></a> 針對您的工作負載調整查詢存放區  
+##  <a name="Configure"></a> Keep Query Store Adjusted to your Workload  
  根據您的工作負載和效能疑難排解需求設定查詢存放區。   
 預設的參數雖然適合快速使用，但是您應該監視一段時間的查詢存放區操作方式，並據以調整其設定 ︰  
   
@@ -45,7 +49,7 @@ caps.handback.revision: 24
   
  以下是設定參數值時可遵循的指導方針：  
   
- **大小上限 (MB)：**指定查詢存放區將在您的資料庫內使用的資料空間的上限。  這是最重要的設定，它會直接影響查詢存放區的作業模式。  
+ **大小上限 (MB)：** 指定查詢存放區將在您的資料庫內使用的資料空間的上限。  這是最重要的設定，它會直接影響查詢存放區的作業模式。  
   
  因為查詢存放區會收集查詢、執行計劃和統計資料，它在資料庫中的大小會逐漸增加，直到達到此限制為止。 發生此情況時，查詢存放區會自動將作業模式變更為唯讀，並停止收集新的資料，這表示您的效能分析已不再正確。  
   
@@ -67,13 +71,13 @@ ALTER DATABASE [QueryStoreDB]
 SET QUERY_STORE (MAX_STORAGE_SIZE_MB = 1024);  
 ```  
   
- **統計資料收集間隔：**定義已收集之執行階段統計資料的資料粒度層級 (預設值是 1 小時)。 如果您需要更精細的資料粒度或使用較短的時間偵測與解決問題，請考慮使用較低的值，但請注意，它會直接影響查詢存放區資料的大小。 使用 SSMS 或 Transact-SQL 來針對統計資料收集間隔設定不同的值：  
+ **統計資料收集間隔：** 定義已收集之執行階段統計資料的資料粒度層級 (預設值是 1 小時)。 如果您需要更精細的資料粒度或使用較短的時間偵測與解決問題，請考慮使用較低的值，但請注意，它會直接影響查詢存放區資料的大小。 使用 SSMS 或 Transact-SQL 來針對統計資料收集間隔設定不同的值：  
   
 ```  
 ALTER DATABASE [QueryStoreDB] SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 30);  
 ```  
   
- **過時的查詢臨界值 (天)：**以時間為基礎的清除原則，可控制保存的執行階段統計資料和非使用中查詢的保留期限。  
+ **過時的查詢臨界值 (天)：** 以時間為基礎的清除原則，可控制保存的執行階段統計資料和非使用中查詢的保留期限。  
 根據預設，查詢存放區設定為保留資料 30 天，對您的狀況而言，這可能不必要地過長。  
   
  避免保留您沒有計畫使用的歷程記錄資料。 這會降低變更為唯讀狀態。 查詢存放區資料的大小以及偵測和解決問題的時間會更容易預測。 使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 或下列指令碼來設定以時間為基礎的清除原則：  
@@ -158,7 +162,7 @@ ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;
   
 -   請重寫有問題的查詢。 例如，充分利用查詢參數化，或實作更最多最佳化邏輯。  
   
-##  <a name="a-nameverifya-verify-query-store-is-collecting-query-data-continuously"></a><a name="Verify"></a> 確認查詢存放區會持續收集查詢資料  
+##  <a name="Verify"></a> Verify Query Store is Collecting Query Data Continuously  
  查詢存放區可以無訊息方式變更作業模式。 您應該定期監視查詢存放區的狀態，以確定查詢存放區正在運作，並採取動作避免因為預防因素造成的失敗。 執行下列查詢來判斷作業模式，並檢視最相關的參數：  
   
 ```  
@@ -178,7 +182,7 @@ FROM sys.database_query_store_options;
   
  請考慮下列步驟將查詢存放區切換為讀寫模式並啟用資料收集：  
   
--   使用 **ALTER DATABASE** 的 **MAX_STORAGE_SIZE_MB** 選項增加最大儲存體大小。  
+-   使用 **ALTER DATABASE** 的 **MAX_STORAGE_SIZE_MB**選項增加最大儲存體大小。  
   
 -   使用下列陳述式清除查詢存放區資料：  
   
@@ -239,9 +243,9 @@ FROM sys.database_query_store_options;
   
 |查詢擷取模式|狀況|  
 |------------------------|--------------|  
-|全部|根據所有查詢圖形和其執行頻率和其他統計資料，徹底分析您的工作負載。<br /><br /> 識別您的工作負載中的新查詢。<br /><br /> 偵測特定查詢是否用來識別使用者或自動參數化的機會。|  
+|All|根據所有查詢圖形和其執行頻率和其他統計資料，徹底分析您的工作負載。<br /><br /> 識別您的工作負載中的新查詢。<br /><br /> 偵測特定查詢是否用來識別使用者或自動參數化的機會。|  
 |Auto|將注意力放在相關聯且可採取動作的查詢上；定期執行或耗用大量資源的那些查詢。|  
-|無|您已擷取您想要在執行階段中監視的查詢集，且您想要排除其他查詢可能會造成的分心。<br /><br /> 「無」適合用於測試和效能評定環境。<br /><br /> 「無」也適用於在出貨時已將查詢存放區組態設定為監視其應用程式工作負載的軟體廠商。<br /><br /> 「無」應該謹慎使用，您可能會因此喪失機會來追蹤和最佳化重要的新查詢。 除非您有需要「無」的特定案例，否則請避免使用。|  
+|None|您已擷取您想要在執行階段中監視的查詢集，且您想要排除其他查詢可能會造成的分心。<br /><br /> 「無」適合用於測試和效能評定環境。<br /><br /> 「無」也適用於在出貨時已將查詢存放區組態設定為監視其應用程式工作負載的軟體廠商。<br /><br /> 「無」應該謹慎使用，您可能會因此喪失機會來追蹤和最佳化重要的新查詢。 除非您有需要「無」的特定案例，否則請避免使用。|  
   
 ## <a name="keep-the-most-relevant-data-in-query-store"></a>在查詢存放區中保留最相關的資料  
  設定查詢存放區僅包含相關的資料，且可以持續提供絕佳的疑難排解體驗，對您的一般工作負載的影響最小。  
@@ -253,7 +257,7 @@ FROM sys.database_query_store_options;
 |篩選掉不相關的查詢。|將 [查詢擷取模式] 設定為 [Auto]。|  
 |當到達大小上限時，請刪除比較不相關的查詢。|啟用大小基礎的清除原則。|  
   
-##  <a name="a-nameparameterizea-avoid-using-non-parameterized-queries"></a><a name="Parameterize"></a> 避免使用非參數化查詢  
+##  <a name="Parameterize"></a> Avoid Using Non-Parameterized Queries  
  非絕對必要時，使用非參數化查詢 (例如特定分析的情況) 並不是最佳作法。  快取的計畫無法重複使用，這會強制查詢最佳化工具編譯每一個唯一查詢文字的查詢。  
   此外，查詢存放區可以因為大量潛在不同的查詢文字且因此有大量具有類似圖形的不同執行計畫，而快速超過大小配額。  
 因此，您的工作負載的效能會次佳，而查詢存放區可能會切換到唯讀模式，或可能不斷地刪除嘗試要跟上內送查詢的資料。  
@@ -262,7 +266,7 @@ FROM sys.database_query_store_options;
   
 -   在適用情況下參數化查詢，例如將查詢包裝在預存程序內。  
   
--   如果您的工作負載包含許多搭配不同查詢計劃的單次使用特定批次，請使用 [針對特定工作負載最佳化] 選項。  
+-   如果您的工作負載包含許多搭配不同查詢計劃的單次使用特定批次，請使用 [針對特定工作負載最佳化]  選項。  
   
     -   比較不同 query_hash 值的數目與 sys.query_store_query 中的項目總數。 如果比例接近 1，您的特定工作負載會產生不同的查詢。  
   
@@ -272,12 +276,12 @@ FROM sys.database_query_store_options;
   
     -   如果您的工作負載中有少數不同的查詢計劃，請針對資料庫設定「強制參數化」。 (當不同 query_hash 計數和 sys.query_store_query 中的項目總數之間的比例遠小於 1 時。)  
   
--   將 [查詢擷取模式] 設定為 [自動]，以自動篩選掉小型資源耗用的特定查詢。  
+-   將 [查詢擷取模式]  設定為 [自動]，以自動篩選掉小型資源耗用的特定查詢。  
   
-##  <a name="a-namedropa-avoid-a-drop-and-create-pattern-when-maintaining-containing-objects-for-the-queries"></a><a name="Drop"></a> 維護查詢的包含物件時，避免 DROP 和 CREATE 模式  
+##  <a name="Drop"></a> Avoid a DROP and CREATE Pattern When Maintaining Containing Objects for the Queries  
  查詢存放區會將查詢項目與包含物件 (預存程序、函式和觸發程序) 產生關聯。  當您重新建立一個包含物件時，將會針對相同的查詢文字產生新的查詢項目。 這會防止您針對該查詢追蹤一段時間的效能統計資料，並使用計畫強制機制。 若要避免這個問題，請使用 `ALTER <object>` 程序盡可能變更包含物件定義。  
   
-##  <a name="a-namecheckforceda-check-the-status-of-forced-plans-regularly"></a><a name="CheckForced"></a> 定期檢查強制執行計畫的狀態  
+##  <a name="CheckForced"></a> Check the Status of Forced Plans Regularly  
  強制執行計畫是一個針對重要查詢修正效能的方便的機制，並讓查詢變得更容易預測。 不過，因為有計畫提示與計畫指南，強制執行計畫並不保證它將在未來的執行中使用。 一般而言，當資料庫結構描述都以執行計畫所參考之物件都已改變或卸除的方式變更時，強制執行計畫就會開始失敗。 在此情況下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會退而重新編譯查詢，而實際的強制執行失敗原因會顯示在 [sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md) 中。 下列查詢會傳回強制執行計畫的相關資訊 ︰  
   
 ```  
@@ -293,7 +297,7 @@ WHERE is_forced_plan = 1;
   
  如需完整的原因清單，請參閱 [sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)。 您也可以使用 **query_store_plan_forcing_failed** XEvent 追蹤疑難排解強制執行計畫失敗。  
   
-##  <a name="a-namerenaminga-avoid-renaming-databases-if-you-have-queries-with-forced-plans"></a><a name="Renaming"></a> 如果您有強制計劃的查詢，請避免重新命名資料庫  
+##  <a name="Renaming"></a> Avoid Renaming Databases if you have Queries with Forced Plans  
  執行計畫參考使用三部分名稱 (`database.schema.object`) 的物件。   
 如果您重新命名資料庫，強制執行計畫將會失敗，而導致重新編譯所有後續查詢執行。  
   
@@ -304,3 +308,4 @@ WHERE is_forced_plan = 1;
  [使用查詢存放區監視效能](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
   
   
+

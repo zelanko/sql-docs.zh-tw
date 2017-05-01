@@ -1,27 +1,31 @@
 ---
-title: "監視與疑難排解記憶體使用量 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "監視和針對使用量進行記憶體疑難排解 |Microsoft Docs"
+ms.custom: 
+ms.date: 03/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7a458b9c-3423-4e24-823d-99573544c877
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c5b936bf52653ea81c579c345d09f4f2d0e76339
+ms.lasthandoff: 04/11/2017
+
 ---
-# 監視與疑難排解記憶體使用量
+# <a name="monitor-and-troubleshoot-memory-usage"></a>監視與疑難排解記憶體使用量
   [!INCLUDE[hek_1](../../includes/hek-1-md.md)] 耗用記憶體的模式與磁碟資料表不同。 您可以使用針對記憶體和記憶體回收子系統提供的 DMV 或效能計數器，監視資料庫中記憶體最佳化資料表和索引所配置和使用的記憶體數量。  如此就能讓您同時深入查看系統和資料庫層級，並且讓您防止因記憶體耗盡而發生問題。  
   
  本主題將涵蓋監視您的 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 記憶體使用量。  
   
-## 本主題的章節  
+## <a name="sections-in-this-topic"></a>本主題的章節  
   
 -   [建立含有記憶體最佳化資料表的範例資料庫](../../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md#bkmk_CreateDB)  
   
@@ -127,7 +131,7 @@ caps.handback.revision: 29
 ###  <a name="bkmk_UsingSSMS"></a> 使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 隨附內建的標準報表，可用來監視記憶體中資料表耗用的記憶體。 您可以使用物件總管存取這些報表，如 [此處](http://blogs.msdn.com/b/managingsql/archive/2006/05/16/ssms-reports-1.aspx)所述。 您也可以使用物件總管監視個別記憶體最佳化資料表耗用的記憶體。  
   
-#### 資料庫層級的耗用量  
+#### <a name="consumption-at-the-database-level"></a>資料庫層級的耗用量  
  您可以監視資料庫層級的記憶體使用量，如下所述。  
   
 1.  啟動 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 並連接到伺服器。  
@@ -145,7 +149,7 @@ caps.handback.revision: 29
 ###  <a name="bkmk_UsingDMVs"></a> 使用 DMVs  
  有許多 DMV 可用來監視記憶體最佳化資料表、索引、系統物件及執行階段結構所耗用的記憶體。  
   
-#### 記憶體最佳化資料表和索引的記憶體耗用量  
+#### <a name="memory-consumption-by-memory-optimized-tables-and-indexes"></a>記憶體最佳化資料表和索引的記憶體耗用量  
  您可以藉由查詢 `sys.dm_db_xtp_table_memory_stats` 找到所有使用者資料表、索引和系統物件的記憶體耗用量，如此處所示。  
   
 ```tsql  
@@ -171,7 +175,7 @@ NULL       -2          192                           25                      16 
   
  如需詳細資訊，請參閱 [sys.dm_db_xtp_table_memory_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql.md)。  
   
-#### 內部系統結構的記憶體耗用量  
+#### <a name="memory-consumption-by-internal-system-structures"></a>內部系統結構的記憶體耗用量  
  系統物件也會耗用記憶體，這些系統物件包括交易式結構、資料和差異檔案的緩衝區、記憶體回收結構等。 您可以藉由查詢 `sys.dm_xtp_system_memory_consumers` 找到這些系統物件所使用的記憶體，如此處所示。  
   
 ```tsql  
@@ -210,7 +214,7 @@ PGPOOL:  4K               0                    0                    0
   
  如需詳細資訊，請參閱 [sys.dm_xtp_system_memory_consumers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xtp-system-memory-consumers-transact-sql.md)。  
   
-#### 存取記憶體最佳化資料表時的執行階段記憶體耗用量  
+#### <a name="memory-consumption-at-run-time-when-accessing-memory-optimized-tables"></a>存取記憶體最佳化資料表時的執行階段記憶體耗用量  
  您可以使用下列查詢判斷執行階段結構 (例如程序快取) 所耗用的記憶體：執行此查詢可取得執行階段結構 (例如程序快取) 所使用的記憶體。 所有執行階段結構都會加上 XTP 標記。  
   
 ```tsql  
@@ -243,8 +247,8 @@ memory_object_address pages_ in_bytes bytes_used type
   
  如需詳細資訊，請參閱 [sys.dm_os_memory_objects (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md)。  
   
-#### [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 引擎跨執行個體所耗用的記憶體  
- 管理配置給[!INCLUDE[hek_2](../../includes/hek-2-md.md)] 引擎和記憶體最佳化物件之記憶體的方式，與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中其他任何記憶體取用者的管理方式相同。 MEMORYCLERK_XTP 類型的 Clerk 會考量所有配置給[!INCLUDE[hek_2](../../includes/hek-2-md.md)] 引擎的記憶體。 使用下列查詢可找出[!INCLUDE[hek_2](../../includes/hek-2-md.md)] 引擎所使用的所有記憶體。  
+#### <a name="memory-consumed-by-includehek2includeshek-2-mdmd-engine-across-the-instance"></a>[!INCLUDE[hek_2](../../includes/hek-2-md.md)] 引擎跨執行個體所耗用的記憶體  
+ 管理配置給 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 引擎和記憶體最佳化物件之記憶體的方式，與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中其他任何記憶體取用者的管理方式相同。 MEMORYCLERK_XTP 類型的 Clerk 會考量所有配置給 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 引擎的記憶體。 使用下列查詢可找出 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 引擎所使用的所有記憶體。  
   
 ```tsql  
 -- this DMV accounts for all memory used by the hek_2 engine  
@@ -270,18 +274,18 @@ MEMORYCLERK_XTP      Default    64             0
  如需詳細資訊，請參閱 [sys.dm_os_memory_clerks (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)。  
   
 ##  <a name="bkmk_MemOptObjects"></a> 管理記憶體最佳化物件耗用的記憶體  
- 您可以藉由將記憶體最佳化資料表繫結至具名資源集區的方式，控制資料表耗用的總記憶體，如[將包含記憶體最佳化資料表的資料庫繫結至資源集區](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)主題中所述。  
+ 您可以藉由將記憶體最佳化資料表繫結至具名資源集區的方式，控制資料表耗用的總記憶體，如 [將包含記憶體最佳化資料表的資料庫繫結至資源集區](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)主題中所述。  
   
 ##  <a name="bkmk_Troubleshooting"></a> 進行記憶體問題疑難排解  
  對記憶體問題進行疑難排解是包含三個步驟的程序：  
   
-1.  識別資料庫或執行個體中物件所耗用的記憶體數量。 您可以使用可供記憶體最佳化資料表使用的各種不同監視工具，如前文所述。  例如，`sys.dm_db_xtp_table_memory_stats` 或 `sys.dm_os_memory_clerks` 這兩種 DMV。  
+1.  識別資料庫或執行個體中物件所耗用的記憶體數量。 您可以使用可供記憶體最佳化資料表使用的各種不同監視工具，如前文所述。  例如， `sys.dm_db_xtp_table_memory_stats` 或 `sys.dm_os_memory_clerks`這兩種 DMV。  
   
 2.  判斷記憶體耗用量增加的情況，以及您所剩的預留空間。 透過定期監視記憶體耗用量，就可以得知記憶體使用量成長的情況。 例如，如果您已將資料庫對應至具名資源集區，就可以監視效能計數器 Used Memory (KB)，查看記憶體使用量成長的情況。  
   
-3.  採取動作消除可能發生的記憶體問題。 如需詳細資訊，請參閱[解決記憶體不足問題](../../relational-databases/in-memory-oltp/resolve-out-of-memory-issues.md)。  
+3.  採取動作消除可能發生的記憶體問題。 如需詳細資訊，請參閱 [解決記憶體不足問題](../../relational-databases/in-memory-oltp/resolve-out-of-memory-issues.md)。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [將包含記憶體最佳化資料表的資料庫繫結至資源集區](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
  [變更現有集區上的 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_ChangeAllocation)  
   

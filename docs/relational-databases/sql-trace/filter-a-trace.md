@@ -1,28 +1,32 @@
 ---
 title: "篩選追蹤 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "篩選 [SQL Server]，事件"
-  - "事件 [SQL Server]，篩選"
-  - "篩選 [SQL Server]"
-  - "篩選 [SQL Server]，追蹤"
-  - "追蹤 [SQL Server], 篩選"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- filters [SQL Server], events
+- events [SQL Server], filters
+- filters [SQL Server]
+- filters [SQL Server], traces
+- traces [SQL Server], filters
 ms.assetid: 019c10ab-68f6-4e40-a5e8-735b2e1270db
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6315705010a41afb985682e63338cc95237b5e78
+ms.lasthandoff: 04/11/2017
+
 ---
-# 篩選追蹤
+# <a name="filter-a-trace"></a>篩選追蹤
   篩選可限制追蹤中收集的事件。 如果沒有設定篩選條件，選定事件類別的所有事件都會傳回到追蹤輸出。 例如，限制追蹤裡的 Windows 使用者名稱為特定使用者，可將輸出資料縮小為只有這些使用者。  
   
  替追蹤設定篩選並非強制的。 不過，篩選可以讓追蹤期間造成的負擔降到最低。 篩選會傳回特別關注的資料，而讓效能分析和稽核都變得比較容易。  
@@ -34,7 +38,7 @@ caps.handback.revision: 28
   
  舉個額外的例子說明，如果您要監視查詢以判斷花費最長時間執行的批次，可將追蹤事件條件設定為只監視花費超過 30 秒鐘執行的批次 (亦即 CPU 最小值 30,000 毫秒)。  
   
-## 篩選建立指導方針  
+## <a name="filter-creation-guidelines"></a>篩選建立指導方針  
  一般而言，可依照下列步驟篩選追蹤。  
   
 1.  識別您要在追蹤內包含的事件。  
@@ -61,8 +65,8 @@ caps.handback.revision: 28
   
 |關聯式運算子|運算子符號|描述|  
 |-------------------------|---------------------|-----------------|  
-|相似|LIKE|指定追蹤事件資料必須和輸入的文字相似。 允許多值。|  
-|不相似|NOT LIKE|指定追蹤事件資料絕對必須和輸入的文字不相似。 允許多值。|  
+|相似|相似|指定追蹤事件資料必須和輸入的文字相似。 允許多值。|  
+|不相似|不相似|指定追蹤事件資料絕對必須和輸入的文字不相似。 允許多值。|  
 |等於|=|指定追蹤事件資料必須和輸入的值相等。 允許多值。|  
 |不等於|<>|指定追蹤事件資料絕對必須和輸入的值不相等。 允許多值。|  
 |大於|>|指定追蹤事件資料必須大於輸入的值。|  
@@ -77,7 +81,7 @@ caps.handback.revision: 28
 |**ApplicationName**|LIKE、NOT LIKE|  
 |**BigintData1**|=, <>, >=, <=|  
 |**BigintData2**|=, <>, >=, <=|  
-|**BinaryData**|使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 篩選這個資料行中的事件。 如需詳細資訊，請參閱[使用 SQL Server Profiler 篩選追蹤](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md)。|  
+|**BinaryData**|使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 篩選這個資料行中的事件。 如需詳細資訊，請參閱 [使用 SQL Server Profiler 篩選追蹤](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md)。|  
 |**ClientProcessID**|=, <>, >=, <=|  
 |**ColumnPermissions**|=, <>, >=, <=|  
 |**CPU**|=, <>, >=, <=|  
@@ -89,7 +93,7 @@ caps.handback.revision: 28
 |**錯誤**|=, <>, >=, <=|  
 |**EventSubClass**|=, <>, >=, <=|  
 |**FileName**|LIKE、NOT LIKE|  
-|**GUID**|使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 篩選這個資料行中的事件。 如需詳細資訊，請參閱[使用 SQL Server Profiler 篩選追蹤](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md)。|  
+|**GUID**|使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 篩選這個資料行中的事件。 如需詳細資訊，請參閱 [使用 SQL Server Profiler 篩選追蹤](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md)。|  
 |**Handle**|=, <>, >=, <=|  
 |**HostName**|LIKE、NOT LIKE|  
 |**IndexID**|=, <>, >=, <=|  
@@ -99,13 +103,13 @@ caps.handback.revision: 28
 |**LineNumber**|=, <>, >=, <=|  
 |**LinkedServerName**|LIKE、NOT LIKE|  
 |**LoginName**|LIKE、NOT LIKE|  
-|**LoginSid**|使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 篩選這個資料行中的事件。 如需詳細資訊，請參閱[使用 SQL Server Profiler 篩選追蹤](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md)。|  
+|**LoginSid**|使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 篩選這個資料行中的事件。 如需詳細資訊，請參閱 [使用 SQL Server Profiler 篩選追蹤](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md)。|  
 |**MethodName**|LIKE、NOT LIKE|  
 |**模式**|=, <>, >=, <=|  
 |**NestLevel**|=, <>, >=, <=|  
 |**NTDomainName**|LIKE、NOT LIKE|  
 |**NTUserName**|LIKE、NOT LIKE|  
-|**ObjectID**|=, <>, >=, <=|  
+|**Exchange Spill**|=, <>, >=, <=|  
 |**ObjectID2**|=, <>, >=, <=|  
 |**ObjectName**|LIKE、NOT LIKE|  
 |**ObjectType**|=, <>, >=, <=|  
@@ -123,12 +127,12 @@ caps.handback.revision: 28
 |**Severity**|=, <>, >=, <=|  
 |**SourceDatabaseID**|=, <>, >=, <=|  
 |**SPID**|=, <>, >=, \<=|  
-|**SqlHandle**|使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 篩選這個資料行中的事件。 如需詳細資訊，請參閱[使用 SQL Server Profiler 篩選追蹤](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md)。|  
+|**SqlHandle**|使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 篩選這個資料行中的事件。 如需詳細資訊，請參閱 [使用 SQL Server Profiler 篩選追蹤](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md)。|  
 |**StartTime**|>=, <=|  
 |**State**|=, <>, >=, <=|  
 |**成功**|=, <>, >=, <=|  
 |**TargetLoginName**|LIKE、NOT LIKE|  
-|**TargetLoginSid**|使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 篩選這個資料行中的事件。 如需詳細資訊，請參閱[使用 SQL Server Profiler 篩選追蹤](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md)。|  
+|**TargetLoginSid**|使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 篩選這個資料行中的事件。 如需詳細資訊，請參閱 [使用 SQL Server Profiler 篩選追蹤](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md)。|  
 |**TargetUserName**|LIKE、NOT LIKE|  
 |**TextData** *|LIKE、NOT LIKE|  
 |**TransactionID**|=, <>, >=, <=|  
@@ -136,9 +140,9 @@ caps.handback.revision: 28
 |**Writes**|=, <>, >=, <=|  
 |**XactSequence**|=, <>, >=, <=|  
   
- \* 如果從 **osql** 公用程式或 **sqlcmd** 公用程式追蹤事件，篩選 **TextData** 資料行時一律附加 **%**。  
+ \* 如果從 **osql** 公用程式或 **sqlcmd** 公用程式追蹤事件，篩選 **%** TextData **資料行時一律附加** 。  
   
- 基於安全機制，「SQL 追蹤」會自動把任何與安全性相關、會影響密碼的預存程序的資訊從追蹤省略。 此安全機制無法設定，也永遠有效。 如此可預防有權限追蹤 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上所有活動的使用者擷取到密碼。  
+ 基於安全機制，「SQL 追蹤」會自動把任何與安全性相關、會影響密碼的預存程序的資訊從追蹤省略。 此安全機制無法設定，也永遠有效。 如此可預防有權限追蹤 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上所有活動的使用者擷取到密碼。  
   
  下列與安全性相關的預存程序會受到監視，但是不會將輸出寫入 **TextData** 資料行：  
   

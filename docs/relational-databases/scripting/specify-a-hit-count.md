@@ -1,29 +1,33 @@
 ---
 title: "指定叫用計數 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.debug.breakpt.hitcount"
-helpviewer_keywords: 
-  - "Transact-SQL 偵錯工具, 中斷點叫用計數"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.debug.breakpt.hitcount
+helpviewer_keywords:
+- Transact-SQL debugger, breakpoint hit count
 ms.assetid: 24836939-94ed-4e57-aa85-5d6938d859e4
 caps.latest.revision: 6
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 07a60dfe673b6aba231958324b4e9094fc3dcb38
+ms.lasthandoff: 04/11/2017
+
 ---
-# 指定叫用計數
+# <a name="specify-a-hit-count"></a>指定叫用計數
   中斷點叫用次數是每次到達中斷點時由 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具遞增的計數器。 如果已到達指定的叫用計數而且滿足任何指定的中斷點條件時，偵錯工具就會執行為中斷點指定的動作。  
   
-## 叫用次數考量  
+## <a name="hit-count-considerations"></a>叫用次數考量  
  根據預設，每次叫用中斷點時，執行就會中斷。 您可以選擇下列其中一個選項：  
   
 -   永遠中斷 (預設值)。  
@@ -38,9 +42,9 @@ caps.handback.revision: 6
   
  如果您想要追蹤中斷點的叫用次數，而不讓中斷點中斷執行，請使用非常高的值來指定叫用次數，如此中斷點就絕對不會中斷。  
   
- 中斷點的預設動作是在已滿足叫用計數和中斷點條件時中斷執行。 如需指定其他動作的資訊，請參閱[指定中斷點動作](../../relational-databases/scripting/specify-a-breakpoint-action.md)。  
+ 中斷點的預設動作是在已滿足叫用計數和中斷點條件時中斷執行。 如需指定其他動作的資訊，請參閱 [指定中斷點動作](../../relational-databases/scripting/specify-a-breakpoint-action.md)。  
   
-#### 若要指定叫用次數  
+#### <a name="to-specify-a-hit-count"></a>若要指定叫用次數  
   
 1.  在編輯器視窗中，以滑鼠右鍵按一下中斷點字符，然後按一下捷徑功能表上的 [叫用次數]。  
   
@@ -54,7 +58,7 @@ caps.handback.revision: 6
   
 3.  按一下 **[確定]** 實作變更，或按一下 **[取消]** 結束而不套用變更。  
   
-#### 若要檢視或重設目前叫用次數  
+#### <a name="to-view-or-reset-the-current-hit-count"></a>若要檢視或重設目前叫用次數  
   
 1.  在編輯器視窗中，以滑鼠右鍵按一下中斷點字符，然後按一下捷徑功能表上的 [叫用次數]。  
   
@@ -68,7 +72,7 @@ caps.handback.revision: 6
   
 4.  按一下 **[確定]** 或 **[取消]** 結束對話方塊。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [指定中斷點條件](../../relational-databases/scripting/specify-a-breakpoint-condition.md)  
   
   
