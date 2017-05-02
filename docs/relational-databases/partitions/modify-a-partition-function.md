@@ -46,7 +46,7 @@ ms.lasthandoff: 04/11/2017
   
 -   ALTER PARTITION FUNCTION 只能用來將一個資料分割拆解成兩個，或將兩個資料分割合併為一個。 若要變更資料表或索引的資料分割方式 (例如，從 10 個資料分割變更成 5 個)，您可以使用下列任何一個選項：  
   
-    -   使用所需的資料分割函數來建立新的資料分割資料表，然後再使用 INSERT INTO ...SELECT FROM [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的 [管理資料分割精靈]，將舊資料表中的資料插入新資料表中。  
+    -   使用所需的資料分割函數來建立新的資料分割資料表，然後再使用 INSERT INTO ...SELECT FROM [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的 [管理資料分割精靈]****，將舊資料表中的資料插入新資料表中。  
   
     -   建立堆積的資料分割叢集索引。  
   
@@ -83,7 +83,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  展開 **[資料分割函數]** 資料夾。  
   
-3.  以滑鼠右鍵按一下您想要刪除的資料分割函數，然後選取 [刪除]。  
+3.  以滑鼠右鍵按一下您想要刪除的資料分割函數，然後選取 [刪除]****。  
   
 4.  在 **[刪除物件]** 對話方塊中，確定已選取正確的資料分割函數，然後按一下 **[確定]**。  
   

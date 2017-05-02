@@ -44,7 +44,7 @@ ms.lasthandoff: 04/11/2017
 >  兩個 SQL Server Cmdlet (**Encode-Sqlname** 和 **Decode-Sqlname**) 名稱中所用的動詞，與核准的 Windows PowerShell 動詞不相符。 這不會影響其作業，但是 Windows PowerShell 會在將 **sqlps** 模組匯入工作階段時引發警告。  
   
 ###  <a name="Security"></a> 安全性  
- 根據預設，Windows PowerShell 執行時會將指令碼執行原則設定為 [受限制]，這樣就不會執行任何 Windows PowerShell 指令碼。 若要載入 **sqlps** 模組您可以使用 **Set-ExecutionPolicy** Cmdlet 來允許執行已簽署的指令碼或任何指令碼。 建議您只執行來自信任來源的指令碼，並且利用適當的 NTFS 權限來保護所有輸入檔和輸出檔的安全。 如需啟用 Windows PowerShell 指令碼的詳細資訊，請參閱 [Running Windows PowerShell Scripts](http://www.microsoft.com/technet/scriptcenter/topics/winpsh/manual/run.mspx)(執行 Windows PowerShell 指令碼)。  
+ 根據預設，Windows PowerShell 執行時會將指令碼執行原則設定為 [受限制]****，這樣就不會執行任何 Windows PowerShell 指令碼。 若要載入 **sqlps** 模組您可以使用 **Set-ExecutionPolicy** Cmdlet 來允許執行已簽署的指令碼或任何指令碼。 建議您只執行來自信任來源的指令碼，並且利用適當的 NTFS 權限來保護所有輸入檔和輸出檔的安全。 如需啟用 Windows PowerShell 指令碼的詳細資訊，請參閱 [Running Windows PowerShell Scripts](http://www.microsoft.com/technet/scriptcenter/topics/winpsh/manual/run.mspx)(執行 Windows PowerShell 指令碼)。  
   
 ##  <a name="LoadSqlps"></a> 載入 sqlps 模組  
  **在 Windows PowerShell 中載入 sqlps 模組**  

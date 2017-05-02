@@ -42,7 +42,7 @@ ms.lasthandoff: 04/11/2017
   
 ###  <a name="Recommendations"></a> 建議  
   
--   資料庫的大小增加時，完整資料庫備份就需要更多的時間才能完成，同時也需要更多的儲存空間。 若為大型資料庫，您可能會想透過一系列的「差異資料庫備份」補充完整資料庫備份。 如需詳細資訊，請參閱[差異備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md) 和 [SQL Server 備份至 URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)。  
+-   資料庫的大小增加時，完整資料庫備份就需要更多的時間才能完成，同時也需要更多的儲存空間。 若為大型資料庫，您可能會想透過一系列的「差異資料庫備份」**補充完整資料庫備份。 如需詳細資訊，請參閱[差異備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md) 和 [SQL Server 備份至 URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)。  
   
 -   使用 [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) 系統預存程序來估計完整資料庫備份的大小。  
   
@@ -60,33 +60,33 @@ ms.lasthandoff: 04/11/2017
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
->  使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 指定備份工作時，您按一下 [指令碼] 按鈕，再選取指令碼目的地，即可產生對應的 [!INCLUDE[tsql](../../includes/tsql-md.md)] [BACKUP](../../t-sql/statements/backup-transact-sql.md) 指令碼。  
+>  使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 指定備份工作時，您按一下 [指令碼]**** 按鈕，再選取指令碼目的地，即可產生對應的 [!INCLUDE[tsql](../../includes/tsql-md.md)] [BACKUP](../../t-sql/statements/backup-transact-sql.md) 指令碼。  
   
 ### <a name="back-up-a-database"></a>備份資料庫  
   
-1.  連接到適當的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]執行個體之後，在物件總管中按一下伺服器名稱展開伺服器樹狀目錄。  
+1.  連接到適當的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]執行個體之後，在物件總管****中按一下伺服器名稱展開伺服器樹狀目錄。  
   
-2.  展開 [資料庫]，並選取使用者資料庫或展開 [系統資料庫]，然後選取系統資料庫。  
+2.  展開 [資料庫]****，並選取使用者資料庫或展開 [系統資料庫]****，然後選取系統資料庫。  
   
-3.  以滑鼠右鍵按一下資料庫，指向 [工作]，然後按一下 [備份]。 會出現 **[備份資料庫]** 對話方塊。  
+3.  以滑鼠右鍵按一下資料庫，指向 [工作]****，然後按一下 [備份]****。 會出現 **[備份資料庫]** 對話方塊。  
 
   #### <a name="general-page"></a>**一般頁面**
   
-4.  在 [資料庫] 下拉式清單中，確認資料庫名稱。 您可以選擇性地從清單中選取不同的資料庫。  
+4.  在 [資料庫]**** 下拉式清單中，確認資料庫名稱。 您可以選擇性地從清單中選取不同的資料庫。  
   
-5.  [復原模式] 文字方塊僅供參考。  您可以針對任何復原模式 (**完整**、**大量記錄**或**簡單**) 執行資料庫備份。  
+5.  [復原模式]**** 文字方塊僅供參考。  您可以針對任何復原模式 (**完整**、**大量記錄**或**簡單**) 執行資料庫備份。  
   
-6.  在 [備份類型] 下拉式清單中，選取 [完整]。  
+6.  在 [備份類型]**** 下拉式清單中，選取 [完整]****。  
   
      請注意，您可在建立完整資料庫備份之後，建立差異資料庫備份。如需詳細資訊，請參閱[建立差異資料庫備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-differential-database-backup-sql-server.md)。  
   
-7.  您可以選擇性地選取 [只複製備份] 核取方塊來建立僅限複製備份。 「只複製備份」是與傳統 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份順序無關的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份。 如需詳細資訊，請參閱[只複製備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/copy-only-backups-sql-server.md)。  僅限複製備份不適用於 [差異] 備份類型。  
+7.  您可以選擇性地選取 [只複製備份]**** 核取方塊來建立僅限複製備份。 「只複製備份」**是與傳統 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份順序無關的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份。 如需詳細資訊，請參閱[只複製備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/copy-only-backups-sql-server.md)。  僅限複製備份不適用於 [差異]**** 備份類型。  
 
-8.  針對 [備份元件]，選取 [資料庫] 選項按鈕。  
+8.  針對 [備份元件]****，選取 [資料庫]**** 選項按鈕。  
   
-9. 在 [目的地] 區段中，使用 [備份至] 下拉式清單選取備份目的地。 按一下 [新增] 新增其他備份物件和/或目的地。
+9. 在 [目的地]**** 區段中，使用 [備份至]**** 下拉式清單選取備份目的地。 按一下 [新增]**** 新增其他備份物件和/或目的地。
   
-     若要移除備份目的地，請選取目的地，然後按一下 **[移除]**。 若要檢視現有備份目的地的內容，請選取目的地，然後按一下 [內容]。  
+     若要移除備份目的地，請選取目的地，然後按一下 **[移除]**。 若要檢視現有備份目的地的內容，請選取目的地，然後按一下 [內容]****。  
 
   #### <a name="media-options-page"></a>**媒體選項頁面**  
 10. 若要檢視或選取媒體選項，請按一下 **[選取頁面]** 窗格中的 **[媒體選項]** 。   
@@ -94,7 +94,7 @@ ms.lasthandoff: 04/11/2017
 11. 按下列項目之一，以選取 **[覆寫媒體]** 選項： 
 
     > [!IMPORTANT]  
-    >  如果在 [一般] 頁面中選取 [URL] 作為備份目的地，則會停用 [覆寫媒體] 選項。 如需詳細資訊，請參閱[備份資料庫 &#40;媒體選項頁面&#41;](../../relational-databases/backup-restore/back-up-database-media-options-page.md)  
+    >  如果在 [一般]**** 頁面中選取 [URL]**** 作為備份目的地，則會停用 [覆寫媒體]**** 選項。 如需詳細資訊，請參閱[備份資料庫 &#40;媒體選項頁面&#41;](../../relational-databases/backup-restore/back-up-database-media-options-page.md)  
 
 
   -   **備份至現有的媒體集**  
@@ -118,35 +118,35 @@ ms.lasthandoff: 04/11/2017
   
     -   **寫入媒體之前執行總和檢查碼**。  如需總和檢查碼的資訊，請參閱[在備份和還原期間可能的媒體錯誤 &#40;SQL Server&#41;](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md)。  
     
-    -   [發生錯誤時繼續]。 
+    -   [發生錯誤時繼續]****。 
 
-15. 除非您備份的是交易記錄檔 (如 [一般] 頁面的 [備份類型] 區段中所指定)，否則 [交易記錄檔] 區段為非使用中。  
+15. 除非您備份的是交易記錄檔 (如 [一般]**** 頁面的 [備份類型]**** 區段中所指定)，否則 [交易記錄檔]**** 區段為非使用中。  
       
-16. 如果您要備份至磁帶機 (如 [一般] 頁面的 [目的地] 區段中所指定)，則 [磁帶機] 區段中的 [備份後卸載磁帶] 選項為使用中。 按一下這個選項會啟動 **[卸載之前倒轉磁帶]** 選項。   
+16. 如果您要備份至磁帶機 (如 [一般]**** 頁面的 [目的地]**** 區段中所指定)，則 [磁帶機]**** 區段中的 [備份後卸載磁帶]**** 選項為使用中。 按一下這個選項會啟動 **[卸載之前倒轉磁帶]** 選項。   
 
   #### <a name="backup-options-page"></a>**備份選項頁面**  
 
 17. 若要檢視或選取備份選項，請按一下 **[選取頁面]** 窗格中的 **[備份選項]** 。  
   
-18. 在 [名稱] 文字方塊中，接受預設備份組名稱，或輸入不同的備份組名稱。  
+18. 在 [名稱]**** 文字方塊中，接受預設備份組名稱，或輸入不同的備份組名稱。  
   
-19. 在 [描述] 文字方塊中，您可以選擇性地輸入備份組的描述。  
+19. 在 [描述]**** 文字方塊中，您可以選擇性地輸入備份組的描述。  
   
 20. 指定備份組逾期的時間，和不需明確略過逾期資料的驗證即可覆寫的時間：  
   
-    -   若要讓備份組在特定的天數後過期，請按一下 [之後] (預設選項)，然後輸入備份組建立之後將會過期的天數。 這個值可以介於 0 到 99999 日之間；值為 0 日意指備份組永遠不會過期。  
+    -   若要讓備份組在特定的天數後過期，請按一下 [之後]**** (預設選項)，然後輸入備份組建立之後將會過期的天數。 這個值可以介於 0 到 99999 日之間；值為 0 日意指備份組永遠不會過期。  
   
-         預設值會在 [伺服器屬性] 對話方塊 ([資料庫設定] 頁面) 的 [預設備份媒體保留 (以天為單位)] 選項中設定。 若要存取，請以滑鼠右鍵按一下物件總管中的伺服器名稱並選取 [屬性]，然後選取 [資料庫設定] 頁面。  
+         預設值會在 [伺服器屬性]**** 對話方塊 ([資料庫設定] 頁面) 的 [預設備份媒體保留 (以天為單位)]**** 選項中設定。 若要存取，請以滑鼠右鍵按一下物件總管中的伺服器名稱並選取 [屬性]，然後選取 [資料庫設定]**** 頁面。  
   
     -   若要讓備份組在特定日期過期，請按一下 **[於]**，然後輸入備份組將過期的日期。  
   
          如需備份到期日的詳細資訊，請參閱 [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)。  
   
-21. 在 [壓縮] 區段中，使用 [設定備份壓縮] 下拉式清單選取所要的壓縮層級。  [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] 和更新的版本支援 [備份壓縮](../../relational-databases/backup-restore/backup-compression-sql-server.md)。 依預設，備份壓縮與否取決於 **備份壓縮預設** 伺服器組態選項的值。 不過，不論目前的伺服器層級預設值為何，您都可以透過核取 [壓縮備份] 壓縮備份，而且可以透過核取 [不要壓縮備份] 防止壓縮。  
+21. 在 [壓縮]**** 區段中，使用 [設定備份壓縮]**** 下拉式清單選取所要的壓縮層級。  [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] 和更新的版本支援 [備份壓縮](../../relational-databases/backup-restore/backup-compression-sql-server.md)。 依預設，備份壓縮與否取決於 **備份壓縮預設** 伺服器組態選項的值。 不過，不論目前的伺服器層級預設值為何，您都可以透過核取 [壓縮備份]**** 壓縮備份，而且可以透過核取 [不要壓縮備份]**** 防止壓縮。  
   
      如需備份壓縮設定的詳細資訊，請參閱[檢視或設定備份壓縮預設伺服器組態選項](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)  
   
-22. 在 [加密] 區段中，使用 [加密備份] 核取方塊決定是否加密備份。 使用 [演算法] 下拉式清單，選取加密演算法。  使用 [憑證或非對稱金鑰] 下拉式清單，選取現有憑證或非對稱金鑰。 SQL Server 2014 或更新版本支援加密。 如需加密選項的詳細資訊，請參閱 [備份資料庫 &#40;備份選項頁面&#41;](../../relational-databases/backup-restore/back-up-database-backup-options-page.md)。  
+22. 在 [加密]**** 區段中，使用 [加密備份]**** 核取方塊決定是否加密備份。 使用 [演算法]**** 下拉式清單，選取加密演算法。  使用 [憑證或非對稱金鑰]**** 下拉式清單，選取現有憑證或非對稱金鑰。 SQL Server 2014 或更新版本支援加密。 如需加密選項的詳細資訊，請參閱 [備份資料庫 &#40;備份選項頁面&#41;](../../relational-databases/backup-restore/back-up-database-backup-options-page.md)。  
   
   
 您可以使用 [[維護計畫精靈]](https://msdn.microsoft.com/library/ms191002.aspx) 來建立資料庫備份。 
@@ -154,25 +154,25 @@ ms.lasthandoff: 04/11/2017
 ### <a name="examples"></a>範例  
 #### <a name="a--full-back-up-to-disk-to-default-location"></a>**A.完整備份至預設位置的磁碟**
 在此範例中， `Sales` 資料庫將會備份至預設備份位置的磁碟。  絕不會備份 `Sales`。
-1.  在物件總管中，連接到 SQL Server Database Engine 的執行個體，然後展開該執行個體。
+1.  在物件總管****中，連接到 SQL Server Database Engine 的執行個體，然後展開該執行個體。
 
-2.  展開 [資料庫]，以滑鼠右鍵按一下 `Sales`，指向 [工作]，然後按一下 [備份...]。
+2.  展開 [資料庫]****，以滑鼠右鍵按一下 `Sales`，指向 [工作]****，然後按一下 [備份...]****。
 
 3.  按一下 **[確定]**。
 
 #### <a name="b--full-back-up-to-disk-to-non-default-location"></a>**B.完整備份至非預設位置的磁碟**
 在此範例中， `Sales` 資料庫將會備份至 `E:\MSSQL\BAK`的磁碟。  先前已備份 `Sales`。
-1.  在物件總管中，連接到 SQL Server Database Engine 的執行個體，然後展開該執行個體。
+1.  在物件總管****中，連接到 SQL Server Database Engine 的執行個體，然後展開該執行個體。
 
-2.  展開 [資料庫]，以滑鼠右鍵按一下 `Sales`，指向 [工作]，然後按一下 [備份...]。
+2.  展開 [資料庫]****，以滑鼠右鍵按一下 `Sales`，指向 [工作]****，然後按一下 [備份...]****。
 
-3.  在 [一般] 頁面之 [目的地] 區段的 [備份至] 下拉式清單中，選取 [磁碟]。
+3.  在 [一般]**** 頁面之 [目的地]**** 區段的 [備份至]**** 下拉式清單中，選取 [磁碟]****。
 
-4.  移除所有現有備份檔案之前，請按一下 [移除]。
+4.  移除所有現有備份檔案之前，請按一下 [移除]****。
 
-5.  按一下 [加入]，[選取備份目的地] 對話方塊隨即開啟。
+5.  按一下 [加入]****，[選取備份目的地]**** 對話方塊隨即開啟。
 
-6.  在 [檔案名稱] 文字方塊中，輸入 `E:\MSSQL\BAK\Sales_20160801.bak`。
+6.  在 [檔案名稱]**** 文字方塊中，輸入 `E:\MSSQL\BAK\Sales_20160801.bak`。
 
 7.  按一下 **[確定]**。
 
@@ -180,63 +180,63 @@ ms.lasthandoff: 04/11/2017
 
 #### <a name="c--create-an-encrypted-backup"></a>**C.建立加密的備份**
 在此範例中， `Sales` 資料庫將會使用加密備份至預設備份位置。  已建立  [**資料庫主要金鑰**](../../relational-databases/security/encryption/create-a-database-master-key.md) 。  已建立稱為  [**的**](../../t-sql/statements/create-certificate-transact-sql.md) 憑證 `MyCertificate`。 [建立加密備份](../../relational-databases/backup-restore/create-an-encrypted-backup.md)中提供建立**資料庫主要金鑰**和**憑證**的T-SQL 範例。  
-1.  在物件總管中，連接到 SQL Server Database Engine 的執行個體，然後展開該執行個體。
+1.  在物件總管****中，連接到 SQL Server Database Engine 的執行個體，然後展開該執行個體。
 
-2.  展開 [資料庫]，以滑鼠右鍵按一下 `Sales`，指向 [工作]，然後按一下 [備份...]。
+2.  展開 [資料庫]****，以滑鼠右鍵按一下 `Sales`，指向 [工作]****，然後按一下 [備份...]****。
 
-3.  在 [媒體選項] 頁面的 [覆寫媒體] 區段中，選取 [備份至新的媒體集，並清除所有現有的備份組]。
+3.  在 [媒體選項]**** 頁面的 [覆寫媒體]**** 區段中，選取 [備份至新的媒體集，並清除所有現有的備份組]****。
 
-4.  在 [備份選項] 頁面的 [加密] 區段中，選取 [加密備份] 核取方塊。
+4.  在 [備份選項]**** 頁面的 [加密]**** 區段中，選取 [加密備份]**** 核取方塊。
 
-5.  從 [演算法] 下拉式清單中，選取 [AES 256]。
+5.  從 [演算法]**** 下拉式清單中，選取 [AES 256]****。
 
-6.  從 [憑證或非對稱金鑰] 下拉式清單中，選取 `MyCertificate`。
+6.  從 [憑證或非對稱金鑰]**** 下拉式清單中，選取 `MyCertificate`。
 
 7.  按一下 **[確定]**。
 
 #### <a name="d--backing-up-to-the-microsoft-azure-blob-storage-service"></a>**D.備份至 Microsoft Azure Blob 儲存體服務**
 #### <a name="common-steps"></a>**通用步驟**  
 下列範例會將 `Sales` 資料庫完整備份至 Microsoft Azure Blob 儲存體服務。  儲存體帳戶名稱為 `mystorageaccount`。  容器名稱為 `myfirstcontainer`。  為求簡潔，前四個步驟只會在此列出一次，所有範例將從**步驟 5** 開始進行。
-1.  在物件總管中，連接到 SQL Server Database Engine 的執行個體，然後展開該執行個體。
+1.  在物件總管****中，連接到 SQL Server Database Engine 的執行個體，然後展開該執行個體。
 
-2.  展開 [資料庫]，以滑鼠右鍵按一下 `Sales`，指向 [工作]，然後按一下 [備份...]。
+2.  展開 [資料庫]****，以滑鼠右鍵按一下 `Sales`，指向 [工作]****，然後按一下 [備份...]****。
 
-3.  在 [一般] 頁面之 [目的地] 區段的 [備份至:] 下拉式清單中，選取 [URL]。
+3.  在 [一般]**** 頁面之 [目的地]**** 區段的 [備份至:]**** 下拉式清單中，選取 [URL]****。
 
-4.  按一下 [加入]，[選取備份目的地] 對話方塊隨即開啟。
+4.  按一下 [加入]****，[選取備份目的地]**** 對話方塊隨即開啟。
 
     **D1.等量備份至 URL，而且 SQL Server 認證已經存在**  
 已建立具有讀取、寫入和列出權限的預存存取原則。  使用與此預存存取原則相關聯的共用存取簽章建立了 SQL Server 認證 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`。  
 *
-    5.    從 [Azure 儲存體容器:] 文字方塊中選取 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`
+    5.    從 [Azure 儲存體容器:]**** 文字方塊中選取 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`
 
-    6.  在 [備份檔案:] 文字方塊中，輸入 `Sales_stripe1of2_20160601.bak`。
+    6.  在 [備份檔案:]**** 文字方塊中，輸入 `Sales_stripe1of2_20160601.bak`。
 
     7.  按一下 **[確定]**。
 
     8.  重複步驟 **4** 和 **5**。
 
-    9.  在 [備份檔案:] 文字方塊中，輸入 `Sales_stripe2of2_20160601.bak`。
+    9.  在 [備份檔案:]**** 文字方塊中，輸入 `Sales_stripe2of2_20160601.bak`。
 
     10.  按一下 **[確定]**。
 
     11.   按一下 **[確定]**。
 
     **D2.共用存取簽章存在，但 SQL Server 認證不存在**
-  5.    在 [Azure 儲存體容器:] 文字方塊中，輸入 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`
+  5.    在 [Azure 儲存體容器:]**** 文字方塊中，輸入 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`
   
-  6.    在 [共用存取原則:] 文字方塊中，輸入共用存取簽章。
+  6.    在 [共用存取原則:]**** 文字方塊中，輸入共用存取簽章。
   
   7.    按一下 **[確定]**。
   
   8.    按一下 **[確定]**。
 
     **D3.共用存取簽章不存在**
-  5.    按一下 [新增容器] 按鈕，[連接至 Microsoft 訂用帳戶] 對話方塊隨即開啟。  
+  5.    按一下 [新增容器]**** 按鈕，[連接至 Microsoft 訂用帳戶]**** 對話方塊隨即開啟。  
   
-  6.    完成 [連接至 Microsoft 訂用帳戶] 對話方塊，然後按一下 [確定] 回到 [選取備份目的地] 對話方塊。  如需其他資訊，請參閱[連接到 Microsoft Azure 訂用帳戶](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md)。
+  6.    完成 [連接至 Microsoft 訂用帳戶]**** 對話方塊，然後按一下 [確定]**** 回到 [選取備份目的地]**** 對話方塊。  如需其他資訊，請參閱[連接到 Microsoft Azure 訂用帳戶](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md)。
   
-  7.    在 [選取備份目的地] 對話方塊中，按一下 [確定]。
+  7.    在 [選取備份目的地]**** 對話方塊中，按一下 [確定]****。
   
   8.    按一下 **[確定]**。
 

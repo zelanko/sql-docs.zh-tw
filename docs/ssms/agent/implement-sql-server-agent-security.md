@@ -70,7 +70,7 @@ ms.lasthandoff: 04/11/2017
   
     -   **SCO** - Microsoft.SqlServer.Configuration.Sco.dll，包括虛擬帳戶的新 SCO 驗證  
   
-    -    - Microsoft.SqlServer.Configuration.Cluster.dll  
+    -   **** - Microsoft.SqlServer.Configuration.Cluster.dll  
   
     -   **SFC** - Microsoft.SqlServer.Configuration.SqlConfigBase.dll  
   

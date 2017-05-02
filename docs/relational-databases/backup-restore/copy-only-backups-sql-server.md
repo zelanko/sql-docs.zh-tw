@@ -25,7 +25,7 @@ ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="copy-only-backups-sql-server"></a>只複製備份 (SQL Server)
-  「只複製備份」是與傳統 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份順序無關的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份。 通常，進行備份會變更資料庫，而且會影響往後其他備份的還原方式。 不過，偶爾為了特殊目的在不影響資料庫整體備份及還原程序的情況下進行備份，相當有用。 只複製備份即是供此目的之用。  
+  「只複製備份」**是與傳統 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份順序無關的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份。 通常，進行備份會變更資料庫，而且會影響往後其他備份的還原方式。 不過，偶爾為了特殊目的在不影響資料庫整體備份及還原程序的情況下進行備份，相當有用。 只複製備份即是供此目的之用。  
   
  只複製備份的類型如下所示：  
   
@@ -50,11 +50,11 @@ ms.lasthandoff: 04/11/2017
 ###  <a name="SSMSProcedure"></a> A.  使用 SQL Server Management Studio  
 在此範例中，`Sales` 資料庫的只複製備份將會備份至預設備份位置的磁碟。
 
-1.  在物件總管中，連接到 SQL Server Database Engine 的執行個體，然後展開該執行個體。
+1.  在物件總管****中，連接到 SQL Server Database Engine 的執行個體，然後展開該執行個體。
 
-2.  展開 [資料庫]，以滑鼠右鍵按一下 `Sales`，指向 [工作]，然後按一下 [備份...]。
+2.  展開 [資料庫]****，以滑鼠右鍵按一下 `Sales`，指向 [工作]****，然後按一下 [備份...]****。
 
-3.  在 [一般] 頁面的 [來源] 區段中，核取 [只複製備份] 核取方塊。
+3.  在 [一般]**** 頁面的 [來源]**** 區段中，核取 [只複製備份]**** 核取方塊。
 
 4.  按一下 **[確定]**。
 

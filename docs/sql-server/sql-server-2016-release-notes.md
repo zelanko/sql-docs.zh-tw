@@ -59,7 +59,7 @@ ms.lasthandoff: 04/11/2017
 -   [產品文件 (GA)](#bkmk_ga_docs)
  
 ### ![repl_icon_warn](../database-engine/availability-groups/windows/media/repl-icon-warn.gif) <a name="bkmk_ga_instalpatch"></a> Install Patch Requirement (GA) 
-Microsoft 發現影響 Microsoft VC++ 2013 Runtime 二進位檔的問題，SQL Server 2016 必須安裝這些二進位檔。 已提供修正此問題的更新。 如果不安裝 VC Runtime 二進位檔的這項更新，SQL Server 2016 就可能在特定情況下遇到穩定性問題。 安裝 SQL Server 2016 之前，請先檢查電腦是否需要 [KB 3164398](http://support.microsoft.com/kb/3164398)中所述的填補。 修補程式也包含在 [SQL Server 2016 RTM 的累計更新套件 1 (CU1)](https://www.microsoft.com/en-us/download/details.aspx?id=53338)。 
+****Microsoft 發現影響 Microsoft VC++ 2013 Runtime 二進位檔的問題，SQL Server 2016 必須安裝這些二進位檔。 已提供修正此問題的更新。 如果不安裝 VC Runtime 二進位檔的這項更新，SQL Server 2016 就可能在特定情況下遇到穩定性問題。 安裝 SQL Server 2016 之前，請先檢查電腦是否需要 [KB 3164398](http://support.microsoft.com/kb/3164398)中所述的填補。 修補程式也包含在 [SQL Server 2016 RTM 的累計更新套件 1 (CU1)](https://www.microsoft.com/en-us/download/details.aspx?id=53338)。 
 
 **解決方案：** 執行下列工作之一：
 
@@ -128,9 +128,9 @@ Microsoft 發現影響 Microsoft VC++ 2013 Runtime 二進位檔的問題，SQL S
     
  ![管理適用於 SQL Server 的說明設定](../sql-server/media/docs-sql2016-managehelpsettings.png "管理適用於 SQL Server 的說明設定")    
     
--   使用選項 [選擇線上或本機說明]  ，並設定「我想要使用線上說明」的說明。    
+-   使用選項 [選擇線上或本機說明] **** ，並設定「我想要使用線上說明」的說明。    
     
--   使用選項 [從線上安裝內容]  ，並下載 SQL Server 2014 內容。    
+-   使用選項 [從線上安裝內容] **** ，並下載 SQL Server 2014 內容。    
     
  **F1 說明︰** 依設計，當您在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中 按下 F1 時，瀏覽器即會顯示 F1 說明主題的線上版本。 即使已安裝本機說明也是如此。    
      
@@ -156,9 +156,9 @@ Microsoft 發現影響 Microsoft VC++ 2013 Runtime 二進位檔的問題，SQL S
     
  ![管理適用於 SQL Server 的說明設定](../sql-server/media/docs-sql2016-managehelpsettings.png "管理適用於 SQL Server 的說明設定")    
     
--   使用選項 [選擇線上或本機說明]  ，並設定「我想要使用線上說明」的說明。    
+-   使用選項 [選擇線上或本機說明] **** ，並設定「我想要使用線上說明」的說明。    
     
--   使用選項 [從線上安裝內容]  ，並下載 SQL Server 2014 內容。    
+-   使用選項 [從線上安裝內容] **** ，並下載 SQL Server 2014 內容。    
     
  **F1 說明︰** 依設計，當您在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中 按下 F1 時，瀏覽器即會顯示 F1 說明主題的線上版本。 即使已安裝本機說明也是如此。    
      
@@ -179,7 +179,7 @@ Microsoft 發現影響 Microsoft VC++ 2013 Runtime 二進位檔的問題，SQL S
     
  **因應措施**    
     
--   解除安裝 PolyBase。 在 [控制台] 中，依序按一下 [解除安裝程式] 、[Microsoft SQL Server 2016] 和 [移除] 。 在 [移除 SQL Server 2016 精靈] 中，選取失敗的 PolyBase 安裝的執行個體，然後按 [下一步] 。 在 [功能] 上，按一下 [外部資料的 PolyBase 查詢服務] 。 不需要移除已成功安裝的其他功能。 完成移除 SQL Server 2016 的步驟。    
+-   解除安裝 PolyBase。 在 [控制台] ****中，依序按一下 [解除安裝程式] ****、[Microsoft SQL Server 2016] ****和 [移除] ****。 在 [移除 SQL Server 2016 精靈] 中，選取失敗的 PolyBase 安裝的執行個體，然後按 [下一步] ****。 在 [功能] 上，按一下 [外部資料的 PolyBase 查詢服務] ****。 不需要移除已成功安裝的其他功能。 完成移除 SQL Server 2016 的步驟。    
     
 -   重新安裝 PolyBase。 執行安裝程式，並將 PolyBase 功能加入相同的 SQL Server 執行個體。    
     

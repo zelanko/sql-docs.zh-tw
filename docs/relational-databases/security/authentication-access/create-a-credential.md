@@ -29,7 +29,7 @@ ms.lasthandoff: 04/11/2017
   
  認證提供允許 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證使用者擁有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]以外之識別的方法。 這主要是用來執行具 EXTERNAL_ACCESS 權限集之組件中的程式碼。 認證也可以在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證使用者需要存取網域資源時使用，例如儲存備份的檔案位置。  
   
- 認證可以同時對應至數個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登入。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登入每次只能對應至一個認證。 建立認證之後，請使用 [登入屬性 (一般頁面)] 將登入對應至認證。  
+ 認證可以同時對應至數個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登入。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登入每次只能對應至一個認證。 建立認證之後，請使用 [登入屬性 (一般頁面)]**** 將登入對應至認證。  
   
  **本主題內容**  
   
@@ -62,19 +62,19 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="to-create-a-credential"></a>若要建立認證  
   
-1.  在物件總管中，展開 [安全性]  資料夾。  
+1.  在物件總管中，展開 [安全性] **** 資料夾。  
   
-2.  以滑鼠右鍵按一下 [認證] 資料夾，然後選取 [新增認證…]。  
+2.  以滑鼠右鍵按一下 [認證]**** 資料夾，然後選取 [新增認證…]****。  
   
 3.  在 **[新增認證]** 對話方塊的 **[認證名稱]** 方塊中，輸入認證的名稱。  
   
-4.  在 [識別] 方塊中，輸入用於傳出連線 (離開 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 內容時) 的帳戶名稱。 通常，這將是 Windows 使用者帳戶，但識別可以是另一種類型的帳戶。  
+4.  在 [識別]**** 方塊中，輸入用於傳出連線 (離開 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 內容時) 的帳戶名稱。 通常，這將是 Windows 使用者帳戶，但識別可以是另一種類型的帳戶。  
   
-     或者，按一下省略符號 **(...)** 開啟 [選取使用者或群組] 對話方塊。  
+     或者，按一下省略符號 **(...)** 開啟 [選取使用者或群組]**** 對話方塊。  
   
 5.  在 **[密碼]** 與 **[確認密碼]** 方塊中，輸入 **[識別]** 方塊中所指定的帳戶密碼。 如果 **[識別]** 是 Windows 使用者帳戶，則為 Windows 密碼。 如果不需要密碼， **[密碼]** 可以是空白。  
   
-6.  選取 [使用加密提供者]，設定要由可延伸金鑰管理 (EKM) 提供者所驗證的認證。 如需詳細資訊，請參閱[可延伸金鑰管理 &#40;EKM&#41;](../../../relational-databases/security/encryption/extensible-key-management-ekm.md)  
+6.  選取 [使用加密提供者]****，設定要由可延伸金鑰管理 (EKM) 提供者所驗證的認證。 如需詳細資訊，請參閱[可延伸金鑰管理 &#40;EKM&#41;](../../../relational-databases/security/encryption/extensible-key-management-ekm.md)  
   
 7.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   

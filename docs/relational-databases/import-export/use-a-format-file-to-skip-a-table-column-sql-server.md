@@ -62,7 +62,7 @@ GO
 bcp AdventureWorks2012..myTestSkipCol format nul -f myTestSkipCol_Default.fmt -c -T  
 ```  
   
- 上述命令會建立非 XML 格式檔案 `myTestSkipCol_Default.fmt`。 這個格式檔案稱為「預設格式檔案」(Default Format File)，因為它是 **bcp** 所產生的格式。 一般而言，預設格式檔案描述資料檔欄位與資料表資料行之間的一對一對應。  
+ 上述命令會建立非 XML 格式檔案 `myTestSkipCol_Default.fmt`。 這個格式檔案稱為「預設格式檔案」**(Default Format File)，因為它是 **bcp** 所產生的格式。 一般而言，預設格式檔案描述資料檔欄位與資料表資料行之間的一對一對應。  
   
 > [!IMPORTANT]  
 >  您可能需要指定您要連接的伺服器執行個體的名稱。 此外，也可能需要指定使用者名稱和密碼。 如需相關資訊，請參閱 [bcp Utility](../../tools/bcp-utility.md)。  

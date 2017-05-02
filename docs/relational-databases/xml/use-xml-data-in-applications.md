@@ -1,49 +1,53 @@
 ---
-title: "在應用程式中使用 XML 資料 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "參數 [SQL Server 中的 XML]"
-  - "XML [SQL Server], ADO"
-  - "資料行 [SQL Server 中的 XML], ADO.NET"
-  - "ADO [SQL Server 中的 XML]"
-  - "資料行 [SQL Server 中的 XML], SQL Server Native Client"
-  - "xml 資料類型 [SQL Server], ADO"
-  - "SQLNCLI, XML"
-  - "xml 資料類型 [SQL Server], SQL Server Native Client"
-  - "SQL Server Native Client, XML"
-  - "ADO.NET [SQL Server 中的 XML]"
-  - "XML [SQL Server], ADO.NET"
-  - "資料行 [SQL Server 中的 XML], ADO"
-  - "xml 資料類型 [SQL Server], ADO.NET"
-  - "XML [SQL Server], SQL Server Native Client"
+title: "在應用程式中使用 XML 資料 | Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- parameters [XML in SQL Server]
+- XML [SQL Server], ADO
+- columns [XML in SQL Server], ADO.NET
+- ADO [XML in SQL Server]
+- columns [XML in SQL Server], SQL Server Native Client
+- xml data type [SQL Server], ADO
+- SQLNCLI, XML
+- xml data type [SQL Server], SQL Server Native Client
+- SQL Server Native Client, XML
+- ADO.NET [XML in SQL Server]
+- XML [SQL Server], ADO.NET
+- columns [XML in SQL Server], ADO
+- xml data type [SQL Server], ADO.NET
+- XML [SQL Server], SQL Server Native Client
 ms.assetid: 5dabf7e0-c6df-451d-a070-4661f84607fd
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2ae4b7e7ed2efc44ce1b432313d56288a66e778c
+ms.lasthandoff: 04/11/2017
+
 ---
-# 在應用程式中使用 XML 資料
+# <a name="use-xml-data-in-applications"></a>在應用程式中使用 XML 資料
   此主題描述在您的應用程式中使用 **xml** 資料類型時，可用的選項有哪些。 此主題包括有關下列項目的資訊：  
   
--   使用 ADO 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 處理 **xml** 類型資料行中的 XML  
+-   使用 ADO 和 **Native Client 處理** xml [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 類型資料行中的 XML  
   
 -   使用 ADO.NET 處理 **xml** 類型資料行的 XML  
   
 -   使用 ADO.NET 處理參數中的 **xml** 類型  
   
-## 使用 ADO 和 SQL Server Native Client 處理 xml 類型資料行中的 XML  
- 若要使用 MDAC 元件來存取 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中所引進的類型和功能，您必須在 ADO 連接字串中設定 DataTypeCompatibility 初始化屬性。  
+## <a name="handling-xml-from-an-xml-type-column-by-using-ado-and-sql-server-native-client"></a>使用 ADO 和 SQL Server Native Client 處理 xml 類型資料行中的 XML  
+ 若要使用 MDAC 元件來存取 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]中所引進的類型和功能，您必須在 ADO 連接字串中設定 DataTypeCompatibility 初始化屬性。  
   
- 例如，以下 Visual Basic Scripting Edition (VBScript) 範例顯示查詢 `AdventureWorks2012` 範例資料庫 `Sales.Store` 資料表的 **xml** 資料類型資料行 `Demographics` 的結果。 此查詢特別會尋找此資料行，其資料列的 `CustomerID` 等於 `3` 的例項值。  
+ 例如，以下 Visual Basic Scripting Edition (VBScript) 範例顯示查詢 **範例資料庫** 資料表的 `Demographics`xml `Sales.Store` 資料類型資料行 `AdventureWorks2012` 的結果。 此查詢特別會尋找此資料行，其資料列的 `CustomerID` 等於 `3`的例項值。  
   
 ```  
 Const DS = "MyServer"  
@@ -87,11 +91,11 @@ Set objRs = Nothing
 Set objConn = Nothing  
 ```  
   
- 此範例顯示如何設定資料類型相容性屬性。 當您使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 時，預設會設定為 0。 如果您將此值設定為 80，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 提供者會讓 **xml** 和使用者定義類型的資料行顯示為 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 資料類型。 分別是 DBTYPE_WSTR 和 DBTYPE_BYTES。  
+ 此範例顯示如何設定資料類型相容性屬性。 當您使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 時，預設會設定為 0。 如果您將此值設定為 80， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 提供者會讓 **xml** 和使用者定義類型的資料行顯示為 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 資料類型。 分別是 DBTYPE_WSTR 和 DBTYPE_BYTES。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 您也必須在用戶端電腦上安裝 Native Client，而且連接字串必須以 "`Provider=SQLNCLI11;...`" 指定它當作資料提供者。  
   
-#### 若要測試此範例  
+#### <a name="to-test-this-example"></a>若要測試此範例  
   
 1.  確認已安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client，而且用戶端電腦上可以使用 MDAC 2.6.0 或更新版本。  
   
@@ -143,17 +147,17 @@ Row 2
 </StoreSurvey>  
 ```  
   
-## 使用 ADO.NET 處理 xml 類型資料行的 XML  
- 若要使用 ADO.NET 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 處理 **xml** 資料類型資料行的 XML，您可以使用 **SqlCommand** 類別的標準行為。 例如，使用 **SqlDataReader** 擷取 **xml** 資料類型資料行及其值，就跟擷取 SQL 資料行的方式一樣。不過，如果您想要將 **xml** 資料類型資料行的內容處理為 XML，您就必須先將內容指定為 **XmlReader** 類型。  
+## <a name="handling-xml-from-an-xml-type-column-by-using-adonet"></a>使用 ADO.NET 處理 xml 類型資料行的 XML  
+ 若要使用 ADO.NET 和 **** 處理 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] you can use the standard behavior of the **SqlCommand** class. 例如，使用 **SqlDataReader** 擷取 **xml**資料類型資料行及其值，就跟擷取 SQL 資料行的方式一樣。不過，如果您想要將 **xml** 資料類型資料行的內容處理為 XML，您就必須先將內容指定為 **XmlReader** 類型。  
   
  如需詳細資訊及範例程式碼，請參閱 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] SDK 文件集的 "XML Column Values in a Data Reader"。  
   
-## 使用 ADO.NET 處理參數中的 xml 類型資料行  
- 若要以 ADO.NET 和 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 處理傳遞為參數的 xml 資料類型，您可以提供值作為 **SqlXml** 資料類型的執行個體。 這裡不牽涉特殊的處理，因為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的 **xml** 資料類型資料行可以接受與其他資料行及資料類型 (如 **string** 或 **integer**) 相同方式的參數值。  
+## <a name="handling-an-xml-type-column-in-parameters-by-using-adonet"></a>使用 ADO.NET 處理參數中的 xml 類型資料行  
+ 若要以 ADO.NET 和 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]處理傳遞為參數的 xml 資料類型，您可以提供值作為 **SqlXml** 資料類型的執行個體。 這裡不牽涉特殊的處理，因為 **中的** xml [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型資料行可以接受與其他資料行及資料類型 (如 **string** 或 **integer**) 相同方式的參數值。  
   
  如需詳細資訊及範例程式碼，請參閱 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] SDK 文件集的 "XML Values as Command Parameters"。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [XML 資料 &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)  
   
   

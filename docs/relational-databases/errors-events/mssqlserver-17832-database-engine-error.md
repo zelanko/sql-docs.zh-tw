@@ -54,26 +54,26 @@ ms.lasthandoff: 04/11/2017
 > [!CAUTION]  
 > [!INCLUDE[ssNoteRegistry](../../includes/ssnoteregistry-md.md)]  
   
-**變更伺服器電腦上的 MaxTokenSize**  
+**變更伺服器電腦上的 MaxTokenSize******  
   
 1.  在 **[開始]** 功能表上，按一下 **[執行]**。  
   
-2.  輸入 **regedit**，然後按一下 [確定] (如果出現 [使用者帳戶控制] 對話方塊，請按一下 [繼續])。  
+2.  輸入 **regedit**，然後按一下 [確定]**** (如果出現 [使用者帳戶控制]**** 對話方塊，請按一下 [繼續]****)。  
   
 3.  巡覽至 **HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Lsa\Kerberos\Parameters**。  
   
-4.  如果 **MaxTokenSize** 參數不存在，請以滑鼠右鍵按一下 [參數]，並指向 [新增]，然後按一下 [DWORD (32-位元) 值]。 將此登錄項目命名為 **MaxTokenSize**。  
+4.  如果 **MaxTokenSize** 參數不存在，請以滑鼠右鍵按一下 [參數]****，並指向 [新增]****，然後按一下 [DWORD (32-位元) 值]****。 將此登錄項目命名為 **MaxTokenSize**。  
   
-5.  以滑鼠右鍵按一下 **MaxTokenSize**，然後按一下 [修改]。  
+5.  以滑鼠右鍵按一下 **MaxTokenSize**，然後按一下 [修改]****。  
   
-6.  在 [數值資料] 方塊中，輸入所需的 **MaxTokenSize** 值。  
+6.  在 [數值資料]**** 方塊中，輸入所需的 **MaxTokenSize** 值。  
   
     > [!NOTE]  
     > 十六進位值 ffff (十進位值 65535) 是最大的建議 Token 大小。 雖然提供這個值可能會解決此問題，但是卻可能會對效能造成整部電腦的不良影響。 我們建議您建立允許組織內任何使用者之最大 Token 的最小 **MaxTokenSize** 值並且輸入該值。  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-8.  關閉 [登錄編輯程式]。  
+8.  關閉 [登錄編輯程式]****。  
   
 9. 重新啟動電腦。  
   

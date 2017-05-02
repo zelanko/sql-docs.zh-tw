@@ -116,7 +116,7 @@ ms.lasthandoff: 04/11/2017
     GO  
     ```  
   
-     使用 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]，透過使用物件總管連接到您的資料庫，來確認已開啟 TDE。 以滑鼠右鍵按一下您的資料庫，指向 [工作]，然後按一下 [管理資料庫加密]。  
+     使用 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]，透過使用物件總管連接到您的資料庫，來確認已開啟 TDE。 以滑鼠右鍵按一下您的資料庫，指向 [工作]****，然後按一下 [管理資料庫加密]****。  
   
      ![EKM TDE 物件總管](../../../relational-databases/security/encryption/media/ekm-tde-object-explorer.png "EKM TDE 物件總管")  
   

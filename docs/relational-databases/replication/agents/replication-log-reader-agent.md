@@ -110,7 +110,7 @@ logread [-?]
  指定擴充的事件 XML 組態檔的路徑和檔案名稱。 擴充的事件組態檔可讓您設定工作階段以及啟用事件追蹤。  
   
  **-HistoryVerboseLevel** [ **0**| **1**| **2**]  
- 指定在記錄讀取器作業期間記錄的記錄量。 您可以透過選取 1，盡量減少記錄作業的效能影響。  
+ 指定在記錄讀取器作業期間記錄的記錄量。 ****您可以透過選取 1，盡量減少記錄作業的效能影響。  
   
 |HistoryVerboseLevel 值|說明|  
 |-------------------------------|-----------------|  
@@ -198,7 +198,7 @@ logread [-?]
   
 |更新的內容|  
 |---------------------|  
-| 已加入 -ExtendedEventConfigFile 參數。|  
+|**** 已加入 -ExtendedEventConfigFile 參數。|  
   
 ## <a name="see-also"></a>另請參閱  
  [複寫代理程式管理](../../../relational-databases/replication/agents/replication-agent-administration.md)  

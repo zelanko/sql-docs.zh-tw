@@ -98,7 +98,7 @@ ms.lasthandoff: 04/11/2017
     GO  
     ```  
   
-     收集組及其收集項都會顯示在 [結果] 索引標籤上。  
+     收集組及其收集項都會顯示在 [結果]**** 索引標籤上。  
   
 ## <a name="see-also"></a>另請參閱  
  [建立使用一般 T-SQL 查詢收集器型別的自訂收集組 &#40;Transact-SQL&#41;](../../relational-databases/data-collection/create-custom-collection-set-generic-t-sql-query-collector-type.md)   

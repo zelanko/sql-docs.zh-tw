@@ -52,7 +52,7 @@ sp_settriggerorder @triggername = 'MyTrigger', @order = 'first', @stmttype = 'UP
   
  INSTEAD OF 觸發程序不得被指定為第一個或最後一個觸發程序。 INSTEAD OF 觸發程序必須在更新基礎資料表之前啟動。 如果是由 INSTEAD OF 觸發程序更新基礎資料表，則更新會發生在引發對資料表定義的 AFTER 觸發程序之前。 例如，如果在檢視上的 INSTEAD OF INSERT 觸發程序將資料插入基底資料表，而基底資料表本身包含 INSTEAD OF INSERT 觸發程序和三個 AFTER INSERT 觸發程序，就會引發基底資料表上的 INSTEAD OF INSERT 觸發程序，而不是插入動作，而且在基底資料表上的任何插入動作之後，都會引發基底資料表的 AFTER 觸發程序。 如需詳細資訊，請參閱 [DML Triggers](../../relational-databases/triggers/dml-triggers.md)。  
   
- 如果 ALTER TRIGGER 陳述式變更第一個或最後一個觸發程序，則會捨棄 **First** 或 **Last** 屬性，並且將順序值設為 [None]。 順序必須使用 **sp_settriggerorder** 進行重設。  
+ 如果 ALTER TRIGGER 陳述式變更第一個或最後一個觸發程序，則會捨棄 **First** 或 **Last** 屬性，並且將順序值設為 [None]****。 順序必須使用 **sp_settriggerorder** 進行重設。  
   
  OBJECTPROPERTY 函數也會利用 **ExecIsFirstTrigger** 及 **ExecIsLastTrigger**屬性，來報告觸發程序究竟是第一個或最後一個觸發程序。  
   

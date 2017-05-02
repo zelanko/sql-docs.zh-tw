@@ -33,7 +33,7 @@ ms.lasthandoff: 04/11/2017
 列出所選類型的主體。  
   
 **名稱**  
-選取要授與存取權給該主體的主體名稱，或選取 [名稱] 將存取權授與清單中的所有主體。  
+選取要授與存取權給該主體的主體名稱，或選取 [名稱]**** 將存取權授與清單中的所有主體。  
   
 ## <a name="see-also"></a>另請參閱  
 [建立 SQL Server Agent Proxy](../../ssms/agent/create-a-sql-server-agent-proxy.md)  

@@ -36,7 +36,7 @@ ms.lasthandoff: 04/11/2017
 > 提供的認證名稱必須是現有的認證名稱。 如需如何建立認證的詳細資訊，請參閱 [如何︰建立 Proxy (SQL Server Management Studio)](http://msdn.microsoft.com/en-us/c1e77e91-2a69-40d9-b8b3-97cffc710586)  
   
 **...**  
-啟動 [選取認證] 對話方塊。  
+啟動 [選取認證]**** 對話方塊。  
   
 **說明**  
 輸入 Proxy 的描述。  

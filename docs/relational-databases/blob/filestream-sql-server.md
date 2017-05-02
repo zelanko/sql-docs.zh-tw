@@ -52,7 +52,7 @@ ms.lasthandoff: 04/11/2017
   
  若要指定資料行應該將資料儲存在檔案系統上，請在 **varbinary(max)** 資料行上指定 FILESTREAM 屬性。 如此會讓 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 將該資料行的所有資料都儲存在檔案系統上，而不是儲存在資料庫檔案中。  
   
- FILESTREAM 資料必須儲存在 FILESTREAM 檔案群組中。 FILESTREAM 檔案群組是包含檔案系統目錄 (而非檔案本身) 的特殊檔案群組， 這些檔案系統目錄稱為「資料容器」。 資料容器是 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 儲存體與檔案系統儲存體之間的介面。  
+ FILESTREAM 資料必須儲存在 FILESTREAM 檔案群組中。 FILESTREAM 檔案群組是包含檔案系統目錄 (而非檔案本身) 的特殊檔案群組， 這些檔案系統目錄稱為「資料容器」**。 資料容器是 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 儲存體與檔案系統儲存體之間的介面。  
   
  當您使用 FILESTREAM 儲存體時，請考慮以下事項：  
   

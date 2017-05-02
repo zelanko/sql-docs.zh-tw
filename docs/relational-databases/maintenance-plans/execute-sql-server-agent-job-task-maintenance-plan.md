@@ -25,7 +25,7 @@ ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="execute-sql-server-agent-job-task-maintenance-plan"></a>執行 SQL Server Agent 作業工作 (維護計畫)
-  使用 [執行 SQL Server Agent 作業工作] 對話方塊，即可在維護計畫內執行 Microsoft SQL Server Agent 作業。 如果選取的連接上沒有 SQL Server Agent 作業，將無法使用此選項。  
+  使用 [執行 SQL Server Agent 作業工作]**** 對話方塊，即可在維護計畫內執行 Microsoft SQL Server Agent 作業。 如果選取的連接上沒有 SQL Server Agent 作業，將無法使用此選項。  
   
  此工作使用 **.sp_start_job** 陳述式。  
   
@@ -37,7 +37,7 @@ ms.lasthandoff: 04/11/2017
  建立新的伺服器連接，以便執行此工作時使用。 下面會描述 **[新增連接]** 對話方塊。  
   
  **可用的 SQL 代理程式作業**  
- 選取要執行的作業。 方格提供 [作業名稱] 和 [描述] 來識別作業。  
+ 選取要執行的作業。 方格提供 [作業名稱]**** 和 [描述]**** 來識別作業。  
   
  **檢視 T-SQL**  
  根據選取的選項，檢視此工作在伺服器上執行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。  

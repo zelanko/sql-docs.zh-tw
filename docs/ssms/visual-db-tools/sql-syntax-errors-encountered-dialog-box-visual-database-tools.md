@@ -35,9 +35,9 @@ ms.lasthandoff: 04/11/2017
 -   SQL 陳述式有效，但包含所使用資料連接的特定語法。  
   
 > [!TIP]  
-> 您可以使用 [查詢] 工具列上的 [驗證 SQL 語法] 按鈕，檢查陳述式是否有效。  
+> 您可以使用 [查詢]**** 工具列上的 [驗證 SQL 語法]**** 按鈕，檢查陳述式是否有效。  
   
-對話方塊會顯示 SQL 陳述式無法剖析的原因訊息。 按一下 [確定] 繼續進行。  
+對話方塊會顯示 SQL 陳述式無法剖析的原因訊息。 按一下 [確定]**** 繼續進行。  
   
 ## <a name="see-also"></a>另請參閱  
 [設計查詢和檢視使用說明主題 &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  

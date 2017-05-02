@@ -51,15 +51,15 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="to-import-a-policy-instance"></a>若要匯入原則執行個體  
   
-1.  在物件總管中，按一下加號，展開新匯入之原則執行個體所在的伺服器。  
+1.  在物件總管****中，按一下加號，展開新匯入之原則執行個體所在的伺服器。  
   
 2.  按一下加號展開 **[管理]** 資料夾。  
   
 3.  按一下加號展開 **[原則管理]**。  
   
-4.  以滑鼠右鍵按一下 [原則] 資料夾，然後選取 [匯入原則]。  
+4.  以滑鼠右鍵按一下 [原則]**** 資料夾，然後選取 [匯入原則]****。  
   
-5.  在 [匯入] 對話方塊中，輸入檔案的路徑和名稱，或使用瀏覽 (**...**) 按鈕找出包含原則的 XML 檔案，然後選取此檔案。 如需有關 **[匯入]** 對話方塊可用之選項的詳細資訊，請參閱＜ [Import Policies Dialog Box](../../relational-databases/policy-based-management/import-policies-dialog-box.md)＞。  
+5.  在 [匯入]**** 對話方塊中，輸入檔案的路徑和名稱，或使用瀏覽 (**...**) 按鈕找出包含原則的 XML 檔案，然後選取此檔案。 如需有關 **[匯入]** 對話方塊可用之選項的詳細資訊，請參閱＜ [Import Policies Dialog Box](../../relational-databases/policy-based-management/import-policies-dialog-box.md)＞。  
   
 6.  完成後，請按一下 **[確定]**。  
   

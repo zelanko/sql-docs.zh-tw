@@ -34,10 +34,10 @@ ms.lasthandoff: 04/11/2017
 - 說明每個類型的記憶體最佳化索引的最適用情況。  
   
   
-「雜湊」索引會在[密切相關的文章](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md)中更詳細地討論。  
+「雜湊」**索引會在[密切相關的文章](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md)中更詳細地討論。  
   
   
-「資料行存放區」索引會在[另一篇文章](~/relational-databases/indexes/columnstore-indexes-overview.md)中討論。  
+「資料行存放區」**索引會在[另一篇文章](~/relational-databases/indexes/columnstore-indexes-overview.md)中討論。  
   
   
 ## <a name="a-syntax-for-memory-optimized-indexes"></a>A. 記憶體最佳化索引的語法  

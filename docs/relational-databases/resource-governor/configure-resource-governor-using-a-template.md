@@ -38,9 +38,9 @@ ms.lasthandoff: 04/11/2017
 ##  <a name="ConfRGTemplate"></a> 使用範本來設定資源管理員  
  **若要使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的 [檢視]  功能表上，按一下 [範本總管] 。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的 [檢視] **** 功能表上，按一下 [範本總管] ****。  
   
-2.  在 [範本總管] 中，展開 [Resource Governor]，然後按兩下 [設定 Resource Governor]。  
+2.  在 [範本總管]**** 中，展開 [Resource Governor]****，然後按兩下 [設定 Resource Governor]****。  
   
 3.  在 **[連接到 Database Engine]**中，輸入必要資訊，然後按一下 **[確定]**。 此時，[查詢編輯器] 就會提供 Configure Resource Governor.sql 範本。 您可以使用此範本來建立並設定資源集區、工作負載群組和分類函數。  
   

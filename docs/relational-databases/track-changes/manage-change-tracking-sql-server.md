@@ -1,44 +1,48 @@
 ---
 title: "管理變更追蹤 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/08/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "追蹤資料變更 [SQL Server]"
-  - "變更追蹤 [SQL Server], 負擔"
-  - "變更追蹤 [SQL Server]"
-  - "變更追蹤 [SQL Server], 管理"
+ms.custom: 
+ms.date: 08/08/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- tracking data changes [SQL Server]
+- change tracking [SQL Server], overhead
+- change tracking [SQL Server]
+- change tracking [SQL Server], managing
 ms.assetid: 94a8d361-e897-4d6d-9a8f-1bb652e7a850
 caps.latest.revision: 9
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e6a29f384995058da7b4beef3edc3dac37e3e616
+ms.lasthandoff: 04/11/2017
+
 ---
-# 管理變更追蹤 (SQL Server)
+# <a name="manage-change-tracking-sql-server"></a>管理變更追蹤 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   本主題描述如何管理變更追蹤。 此外，本主題也會描述如何設定安全性，以及判斷使用變更追蹤對儲存和效能產生的影響。  
   
-## 管理變更追縱  
+## <a name="managing-change-tracking"></a>管理變更追縱  
  下列各節將列出與管理變更追蹤有關的目錄檢視、權限和設定。  
   
-### 目錄檢視  
+### <a name="catalog-views"></a>目錄檢視  
  若要判斷哪些資料表和資料庫已啟用變更追蹤，您可以使用下列目錄檢視：  
   
--   [sys.change_tracking_databases &#40;Transact-SQL&#41;](../Topic/sys.change_tracking_databases%20\(Transact-SQL\).md)  
+-   [sys.change_tracking_databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-databases.md)  
   
--   [sys.change_tracking_tables &#40;Transact-SQL&#41;](../Topic/sys.change_tracking_tables%20\(Transact-SQL\).md)  
+-   [sys.change_tracking_tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-tables.md)  
   
- 此外，當針對使用者資料表啟用變更追蹤時，[sys.internal_tables](../../relational-databases/system-catalog-views/sys-internal-tables-transact-sql.md) 目錄檢視也會列出所建立的內部資料表。  
+ 此外，當針對使用者資料表啟用變更追蹤時， [sys.internal_tables](../../relational-databases/system-catalog-views/sys-internal-tables-transact-sql.md) 目錄檢視也會列出所建立的內部資料表。  
   
-### 安全性  
+### <a name="security"></a>安全性  
  若要使用 [變更追蹤函數](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)來存取變更追蹤資訊，主體必須具有以下權限：  
   
 -   在所查詢的資料表上，變更追蹤資料表上至少具有主索引鍵資料行的 SELECT 權限。  
@@ -49,7 +53,7 @@ caps.handback.revision: 9
   
     -   變更追蹤資訊可儲存有關更新作業已變更哪些資料行的資訊。 當資料行包含敏感性資訊時，可能會拒絕主體對此資料行的存取權限。 不過，由於可使用變更追蹤資訊，所以主體可以判斷資料行值已經更新，但是主體無法判斷此資料行的值。  
   
-## 了解變更追蹤負擔  
+## <a name="understanding-change-tracking-overhead"></a>了解變更追蹤負擔  
  在針對資料表啟用變更追蹤時，某些管理作業會受到影響。 下表將列出這些作業以及您應該考量的影響。  
   
 |運算|啟用變更追蹤時|  
@@ -65,7 +69,7 @@ caps.handback.revision: 9
   
  使用變更追蹤並不會對 DML 作業造成額外負擔，因為變更追蹤資訊會儲存成作業的一部分。  
   
-### 對 DML 的影響  
+### <a name="effects-on-dml"></a>對 DML 的影響  
  變更追蹤已經最佳化，可讓 DML 作業的效能負擔降到最低。 與在資料表上使用變更追蹤有關的累加效能負擔，類似於針對資料表建立索引而且需要進行維護時所產生的負擔。  
   
  對於 DML 作業變更的每一個資料列而言，會將一個資料列新增到內部變更追蹤資料表。 這項作業 (相對於 DML 作業) 的影響取決於各種因素，如下列所示：  
@@ -78,7 +82,7 @@ caps.handback.revision: 9
   
  如果您使用了快照隔離，它也會影響所有 DML 作業的效能 (不論是否啟用變更追蹤)。  
   
-### 對儲存的影響  
+### <a name="effects-on-storage"></a>對儲存的影響  
  變更追蹤資料會儲存在下列內部資料表類型中：  
   
 -   內部變更資料表  
@@ -102,15 +106,16 @@ sp_spaceused 'sys.change_tracking_309576141'
 sp_spaceused 'sys.syscommittab'  
 ```  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [追蹤資料變更 &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [資料庫屬性 &#40;變更追蹤頁面&#41;](../../relational-databases/databases/database-properties-changetracking-page.md)   
- [ALTER DATABASE SET 選項 &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md)   
- [sys.change_tracking_databases &#40;Transact-SQL&#41;](../Topic/sys.change_tracking_databases%20\(Transact-SQL\).md)   
- [sys.change_tracking_tables &#40;Transact-SQL&#41;](../Topic/sys.change_tracking_tables%20\(Transact-SQL\).md)   
+ [ALTER DATABASE SET 選項 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
+ [sys.change_tracking_databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-databases.md)   
+ [sys.change_tracking_tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-tables.md)   
  [追蹤資料變更 &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [關於變更追蹤 &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-tracking-sql-server.md)   
  [使用變更資料 &#40;SQL Server&#41;](../../relational-databases/track-changes/work-with-change-data-sql-server.md)  
   
   
+

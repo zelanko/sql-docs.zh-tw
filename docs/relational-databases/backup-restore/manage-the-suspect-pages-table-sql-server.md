@@ -127,11 +127,11 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="to-manage-the-suspectpages-table"></a>若要管理 suspect_pages 資料表  
   
-1.  在 [物件總管] 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的執行個體，展開該執行個體，然後展開 [資料庫] 。  
+1.  在 [物件總管] ****中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的執行個體，展開該執行個體，然後展開 [資料庫] ****。  
   
-2.  依序展開 [系統資料庫] 、[msdb] 、[資料表] 和 [系統資料表] 。  
+2.  依序展開 [系統資料庫] ****、[msdb] ****、[資料表] ****和 [系統資料表] ****。  
   
-3.  展開 **dbo.suspect_pages** ，然後以滑鼠右鍵按一下 [編輯前 200 個資料列] 。  
+3.  展開 **dbo.suspect_pages** ，然後以滑鼠右鍵按一下 [編輯前 200 個資料列] ****。  
   
 4.  在查詢視窗中，編輯、更新或刪除所要的資料列。  
   

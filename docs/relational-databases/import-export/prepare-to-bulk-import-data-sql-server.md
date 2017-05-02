@@ -47,7 +47,7 @@ ms.lasthandoff: 04/11/2017
   
 -   使用大量記錄復原模式。  
   
-     這個指導方針適用於使用完整復原模式的資料庫。 大量記錄復原模式在對未編製索引的資料表 (「堆積」) 執行大量作業時很有用。 因為大量記錄復原不會執行記錄檔資料列插入的作業，所以使用大量記錄復原模式，將有助於防止因記錄交易而用盡空間的情形。 如需大量記錄復原模式的詳細資訊，請參閱[復原模式 &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)。  
+     這個指導方針適用於使用完整復原模式的資料庫。 大量記錄復原模式在對未編製索引的資料表 (「堆積」**) 執行大量作業時很有用。 因為大量記錄復原不會執行記錄檔資料列插入的作業，所以使用大量記錄復原模式，將有助於防止因記錄交易而用盡空間的情形。 如需大量記錄復原模式的詳細資訊，請參閱[復原模式 &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)。  
   
      建議您在大量匯入作業之前，立即將資料庫變更為使用大量記錄復原模式。 事後則應立刻將資料庫重設成完整復原模式。 如需詳細資訊，請參閱[檢視或變更資料庫的復原模式 &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md)。  
   

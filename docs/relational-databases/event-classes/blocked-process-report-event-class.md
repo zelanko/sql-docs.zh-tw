@@ -25,7 +25,7 @@ ms.lasthandoff: 04/11/2017
 # <a name="blocked-process-report-event-class"></a>Blocked Process Report 事件類別
   **Blocked Process Report** 事件類別指出封鎖工作的時間已超過指定的時間量。 這個事件類別不包含系統工作，或在無法偵測死結的資源上等候的工作。  
   
- 若要設定產生報告的臨界值和頻率，請使用 **sp_configure** 命令來設定 [已封鎖的處理序臨界值] 選項。 預設不會針對已封鎖的處理序產生任何報告。 如需設定 [已封鎖的處理序臨界值] 選項的詳細資訊，請參閱[已封鎖的處理序臨界值伺服器組態選項](../../database-engine/configure-windows/blocked-process-threshold-server-configuration-option.md)。  
+ 若要設定產生報告的臨界值和頻率，請使用 **sp_configure** 命令來設定 [已封鎖的處理序臨界值]**** 選項。 預設不會針對已封鎖的處理序產生任何報告。 如需設定 [已封鎖的處理序臨界值]**** 選項的詳細資訊，請參閱[已封鎖的處理序臨界值伺服器組態選項](../../database-engine/configure-windows/blocked-process-threshold-server-configuration-option.md)。  
   
  如需篩選 **Blocked Process Report** 事件類別所傳回資料的詳細資訊，請參閱[篩選追蹤中的事件 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/filter-events-in-a-trace-sql-server-profiler.md)、[設定追蹤篩選 &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/set-a-trace-filter-transact-sql.md) 或 [sp_trace_setfilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)。  
   

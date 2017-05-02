@@ -24,11 +24,11 @@ ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="compress-snapshot-files-sql-server-management-studio"></a>壓縮快照集檔案 (SQL Server Management Studio)
-  在 [發行集屬性 - \<發行集>] 對話方塊的 [快照集] 頁面上，指定要壓縮檔案。 如需有關存取這個對話方塊的詳細資訊，請參閱＜ [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)＞。  
+  在 [發行集屬性 - \<發行集>]**** 對話方塊的 [快照集]**** 頁面上，指定要壓縮檔案。 如需有關存取這個對話方塊的詳細資訊，請參閱＜ [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)＞。  
   
 ### <a name="to-compress-snapshot-files"></a>若要壓縮快照集檔案  
   
-1.  在 [發行集屬性 - \<發行集>] 對話方塊的 [快照集] 頁面上：  
+1.  在 [發行集屬性 - \<發行集>]**** 對話方塊的 [快照集]**** 頁面上：  
   
     1.  選取 **[將檔案放在下列資料夾中]**，然後按一下 **[瀏覽]** 以瀏覽至目錄，或者輸入應儲存快照集檔案之目錄的路徑。  
   

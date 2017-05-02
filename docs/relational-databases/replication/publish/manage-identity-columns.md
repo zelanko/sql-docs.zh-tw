@@ -50,13 +50,13 @@ ms.lasthandoff: 04/11/2017
 -   若要建立可用於多個資料表中或可在不參考任何資料表的情況下從應用程式進行呼叫的自動遞增數字，請參閱[序號](../../../relational-databases/sequence-numbers/sequence-numbers.md)。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 在 [新增發行集精靈] 的 [發行項屬性 - \<發行項>] 對話方塊的 [屬性] 索引標籤上，指定識別欄位管理選項。 如需使用此精靈的詳細資訊，請參閱[建立發行集](../../../relational-databases/replication/publish/create-a-publication.md)。 在「新增發行集精靈」中：  
+ 在 [新增發行集精靈] 的 [發行項屬性 - \<發行項>]**** 對話方塊的 [屬性]**** 索引標籤上，指定識別欄位管理選項。 如需使用此精靈的詳細資訊，請參閱[建立發行集](../../../relational-databases/replication/publish/create-a-publication.md)。 在「新增發行集精靈」中：  
   
 -   如果在 **[發行集類型]** 頁面中選取 **[合併式發行集]** 或 **[具更新訂閱的交易式發行集]** ，請選取自動或手動識別範圍管理 (依預設為自動，建議使用)。 發行資料表後，將無法修改其屬性，但是可以修改其他相關屬性。  
   
 -   如果選取其他發行集類型，應將識別範圍管理設定為手動。  
   
- 在 [發行項屬性 - \<發行項>] 對話方塊的 [屬性] 索引標籤上修改識別範圍和臨界值，其可於 [發行集屬性 - \<發行集>] 對話方塊中提供。 如需有關存取這個對話方塊的詳細資訊，請參閱＜ [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)＞。  
+ 在 [發行項屬性 - \<發行項>]**** 對話方塊的 [屬性]**** 索引標籤上修改識別範圍和臨界值，其可於 [發行集屬性 - \<發行集>]**** 對話方塊中提供。 如需有關存取這個對話方塊的詳細資訊，請參閱＜ [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)＞。  
   
 #### <a name="to-specify-an-identity-column-management-option"></a>若要指定識別欄位管理選項  
   
@@ -66,7 +66,7 @@ ms.lasthandoff: 04/11/2017
   
 3.  按一下 **[發行項屬性]**，然後按一下 **[設定反白顯示資料表發行項的屬性]**。  
   
-4.  在 [發行項屬性 - \<發行項>] 對話方塊的 [屬性] 索引標籤上，於 [識別範圍管理] 區段中，將 [自動管理識別範圍] 屬性設定為 [自動] 或 [手動] (針對執行 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 或更新版本的發行者) 或是 [True] 或 [False] (針對執行 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 之前的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本的發行者)。  
+4.  在 [發行項屬性 - \<發行項>]**** 對話方塊的 [屬性]**** 索引標籤上，於 [識別範圍管理]**** 區段中，將 [自動管理識別範圍]**** 屬性設定為 [自動]**** 或 [手動]**** (針對執行 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 或更新版本的發行者) 或是 [True]**** 或 [False]**** (針對執行 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 之前的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本的發行者)。  
   
 5.  如果在步驟 4 中選取了 **[自動]** 或 **[True]** ，請在下表中輸入選項的值。 如需如何使用這些設定的詳細資訊，請參閱[複寫識別欄位](../../../relational-databases/replication/publish/replicate-identity-columns.md)中的＜指派識別範圍＞一節。  
   
@@ -83,15 +83,15 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="to-modify-identity-ranges-and-thresholds-after-a-table-is-published"></a>若要在發行資料表後修改識別範圍和臨界值  
   
-1.  在 [發行集屬性 - \<發行集>] 對話方塊的 [發行項] 頁面上，選取具有識別欄位的資料表。  
+1.  在 [發行集屬性 - \<發行集>]**** 對話方塊的 [發行項]**** 頁面上，選取具有識別欄位的資料表。  
   
 2.  按一下 **[發行項屬性]**，然後按一下 **[設定反白顯示資料表發行項的屬性]**。  
   
-3.  在 [發行項屬性 - \<發行項>] 對話方塊的 [屬性] 索引標籤上，於 [識別範圍管理] 區段中輸入下列其中一或多個屬性的值：[發行者範圍大小]、[訂閱者範圍大小] 和 [範圍臨界值百分比]。  
+3.  在 [發行項屬性 - \<發行項>]**** 對話方塊的 [屬性]**** 索引標籤上，於 [識別範圍管理]**** 區段中輸入下列其中一或多個屬性的值：[發行者範圍大小]****、[訂閱者範圍大小]**** 和 [範圍臨界值百分比]****。  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  在 [發行集屬性 - \<發行集>] 對話方塊上，按一下 [確定]。  
+5.  在 [發行集屬性 - \<發行集>]**** 對話方塊上，按一下 [確定]****。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  您可以在建立發行項時，使用複寫預存程序來指定識別範圍管理選項。  

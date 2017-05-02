@@ -25,7 +25,7 @@ ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="reorganize-index-task-maintenance-plan"></a>重新組織索引工作 (維護計畫)
-  使用 [重新組織索引工作] 對話方塊，即可將索引頁面移至更有效率的搜尋順序。 此工作會使用 `ALTER INDEX REORGANIZE` 陳述式搭配 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 資料庫。  
+  使用 [重新組織索引工作]**** 對話方塊，即可將索引頁面移至更有效率的搜尋順序。 此工作會使用 `ALTER INDEX REORGANIZE` 陳述式搭配 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 資料庫。  
   
 ## <a name="options"></a>選項  
  **連接**  
@@ -54,10 +54,10 @@ ms.lasthandoff: 04/11/2017
      產生維護計畫，只針對選取的資料庫執行維護工作。 如果選擇此選項，則必須在清單中至少選取一個資料庫。  
   
  **物件**  
- 限制 [選取範圍] 格線僅顯示資料表、檢視或兩者。  
+ 限制 [選取範圍]**** 格線僅顯示資料表、檢視或兩者。  
   
  **選取範圍**  
- 指定受此工作影響的資料表或索引。 [物件] 方塊中的 [資料表和檢視] 為選取狀態時無法使用。  
+ 指定受此工作影響的資料表或索引。 [物件]**** 方塊中的 [資料表和檢視]**** 為選取狀態時無法使用。  
   
  **壓縮大型物件**  
  可能時取消配置給資料表和檢視的空間。 此選項使用 `ALTER INDEX LOB_COMPACTION = ON`。  

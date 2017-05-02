@@ -50,7 +50,7 @@ GO
  開啟 **sys.remote_data_archive_tables** 目錄檢視，並檢查 **filter_predicate** 資料行的值，以識別 Stretch Database 用什麼函數來選取要移轉的資料列。 若值為 Null，則整個資料表都適合進行移轉。 如需詳細資訊，請參閱 [sys.remote_data_archive_tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/stretch-database-catalog-views-sys-remote-data-archive-tables.md) 和[使用篩選函數選取要移轉的資料列](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md)。  
   
 ###  <a name="Migration"></a> 檢查資料移轉狀態  
- 若要在 Stretch Database 監視器中監視資料移轉，請針對 SQL Server Management Studio 中的資料庫，選取 [工作 | 延展 | 監視]。 如需詳細資訊，請參閱 [Monitor and troubleshoot data migration &#40;Stretch Database&#41;](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md) (監視及疑難排解資料移轉 &#40;Stretch Database&#41;)。  
+ 若要在 Stretch Database 監視器中監視資料移轉，請針對 SQL Server Management Studio 中的資料庫，選取 [工作 | 延展 | 監視]****。 如需詳細資訊，請參閱 [Monitor and troubleshoot data migration &#40;Stretch Database&#41;](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md) (監視及疑難排解資料移轉 &#40;Stretch Database&#41;)。  
   
  或者，開啟 **sys.dm_db_rda_migration_status** 動態管理檢視，查看已移轉的批次和資料列數目。  
   

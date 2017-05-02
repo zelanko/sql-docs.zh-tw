@@ -1,25 +1,29 @@
 ---
 title: "線上還原 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "線上還原 [SQL Server]"
-  - "線上還原 [SQL Server], 關於線上還原"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- online restores [SQL Server]
+- online restores [SQL Server], about online restores
 ms.assetid: 7982a687-980a-4eb8-8e9f-6894148e7d8c
 caps.latest.revision: 45
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 45
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 66c1f5169f8978d05f34b19536af54964c3057d9
+ms.lasthandoff: 04/11/2017
+
 ---
-# 線上還原 (SQL Server)
+# <a name="online-restore-sql-server"></a>線上還原 (SQL Server)
   只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition 才支援線上還原。 在此版本中，檔案、分頁或分次還原預設都是在線上進行。 本主題僅與包含多個檔案或檔案群組 (若是簡單復原模式，則只有唯讀檔案群組) 的資料庫有關。  
   
  在資料庫還在線上時還原資料，就稱之為 *「線上還原」*。 即使有一或多個次要檔案群組離線，只要主要檔案群組還在線上，就將資料庫視為在線上。 當資料庫在線上時，您可以在任何復原模式下還原離線的檔案。 當資料庫在線上時，您也可以在完整復原模式下還原頁面。  
@@ -44,9 +48,9 @@ caps.handback.revision: 45
 >  如果備份是在附加至伺服器的多個裝置上進行，則在執行線上還原時，必須有相同數目的裝置可用。  
   
 > [!CAUTION]  
->  使用快照集備份時，您無法執行「線上還原」。 如需**快照集備份**的詳細資訊，請參閱 [Azure 中資料庫檔案的檔案快照集備份](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)。  
+>  使用快照集備份時，您無法執行「線上還原」****。 如需**快照集備份**的詳細資訊，請參閱 [Azure 中資料庫檔案的檔案快照集備份](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)。  
   
-## 線上還原的記錄備份  
+## <a name="log-backups-for-online-restore"></a>線上還原的記錄備份  
  在線上還原中，復原點就是還原的資料變成離線或最後一次設為唯讀的時間點。 能夠重建及包含此復原點的交易記錄備份，必須完整備妥。 一般而言，在該時間點後必須有記錄備份，才能涵蓋檔案的復原點。 唯一的例外就是從資料變成唯讀後建立的資料備份中，對唯讀資料所進行的線上還原。 在這種情況下，您不需要有記錄備份。  
   
  一般而言，即使在還原順序啟動之後，您還是可以在資料庫仍在線上時進行交易記錄備份。 最後記錄備份的時間點取決於要還原之檔案的屬性：  
@@ -56,7 +60,7 @@ caps.handback.revision: 45
     > [!NOTE]  
     >  上述資訊也同樣適用於每個離線檔案。  
   
--   比較特殊的情況是，在發出第一個還原陳述式時仍在線上，但之後因該還原陳述式而自動離線的讀取/寫入檔案。 在此情況下，您必須在第一個「還原順序」(此順序中包含一或多個可還原、向前復原及復原資料的 RESTORE 陳述式) 期間進行記錄備份。 一般而言，必須在還原所有完整備份之後，而且在復原資料之前進行這個記錄備份。 不過，如果特定的檔案群組有多個檔案備份，則記錄備份最晚的時間點是在檔案群組離線之後的時間。 這個資料還原後的記錄備份會擷取檔案離線時的時間點。 資料還原後的記錄備份是必要的，因為 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 無法使用線上記錄進行線上還原。  
+-   比較特殊的情況是，在發出第一個還原陳述式時仍在線上，但之後因該還原陳述式而自動離線的讀取/寫入檔案。 在此情況下，您必須在第一個「還原順序」**(此順序中包含一或多個可還原、向前復原及復原資料的 RESTORE 陳述式) 期間進行記錄備份。 一般而言，必須在還原所有完整備份之後，而且在復原資料之前進行這個記錄備份。 不過，如果特定的檔案群組有多個檔案備份，則記錄備份最晚的時間點是在檔案群組離線之後的時間。 這個資料還原後的記錄備份會擷取檔案離線時的時間點。 資料還原後的記錄備份是必要的，因為 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 無法使用線上記錄進行線上還原。  
   
     > [!NOTE]  
     >  此外，您也可以在還原順序之前手動使檔案離線。 如需詳細資訊，請參閱本主題稍後的「使資料庫或檔案離線」。  
@@ -74,7 +78,7 @@ caps.handback.revision: 45
   
  只要資料庫仍然離線，所有的還原就都是離線還原。  
   
-## 範例  
+## <a name="examples"></a>範例  
   
 > [!NOTE]  
 >  線上還原順序的語法和離線還原順序的語法相同。  
@@ -105,7 +109,7 @@ caps.handback.revision: 45
   
 -   [移除無用的檔案群組 &#40;SQL Server&#41;](../../relational-databases/backup-restore/remove-defunct-filegroups-sql-server.md)  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [檔案還原 &#40;完整復原模式&#41;](../../relational-databases/backup-restore/file-restores-full-recovery-model.md)   
  [檔案還原 &#40;簡單復原模式&#41;](../../relational-databases/backup-restore/file-restores-simple-recovery-model.md)   
  [還原頁面 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-pages-sql-server.md)   

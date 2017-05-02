@@ -32,7 +32,7 @@ ALTER TABLE 語法用於變更資料表的結構描述，以及加入、刪除�
   
 -   語法 ALTER TABLE ... 只有記憶體最佳化資料表支援 ADD/DROP/ALTER INDEX。  
   
--   不使用 ALTER TABLE 陳述式，記憶體最佳化資料表上的索引就「不」支援 CREATE INDEX、DROP INDEX 和 ALTER INDEX 陳述式。  
+-   不使用 ALTER TABLE 陳述式，記憶體最佳化資料表上的索引就「不」**支援 CREATE INDEX、DROP INDEX 和 ALTER INDEX 陳述式。  
   
  以下是 ALTER TABLE 陳述式的 ADD、DROP 和 ALTER INDEX 子句的語法。  
   

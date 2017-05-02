@@ -115,7 +115,7 @@ ms.lasthandoff: 04/11/2017
   
 -   在建立任何訂閱前，必須先啟用點對點複寫的發行集。  
   
--   訂閱必須使用備份或藉由 [僅支援複寫]  選項進行初始化。 如需詳細資訊，請參閱[不使用快照集初始化交易式訂閱](../../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)。  
+-   訂閱必須使用備份或藉由 [僅支援複寫] **** 選項進行初始化。 如需詳細資訊，請參閱[不使用快照集初始化交易式訂閱](../../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)。  
   
 -   我們不建議您使用識別欄位。 使用識別時，您必須手動管理指派給每個參與資料庫中資料表的範圍。 如需詳細資訊，請參閱[複寫識別資料行](../../../relational-databases/replication/publish/replicate-identity-columns.md)中的＜為手動識別範圍管理指派範圍＞一節。  
   

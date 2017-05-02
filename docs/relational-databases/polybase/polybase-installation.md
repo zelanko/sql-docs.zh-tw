@@ -56,18 +56,18 @@ PolyBase 一旦安裝為獨立項目或安裝於向外延展群組中，就無�
 
 ## <a name="install-using-the-installation-wizard"></a>使用安裝精靈安裝  
   
-1.  執行 [SQL Server 安裝中心]。 插入 SQL Server 安裝媒體，然後按兩下 [Setup.exe]。  
+1.  執行 [SQL Server 安裝中心]****。 插入 SQL Server 安裝媒體，然後按兩下 [Setup.exe]****。  
   
-2.  按一下 [安裝] ，然後按一下 [新的獨立 SQL Server 安裝或加入功能] 。  
+2.  按一下 [安裝] ****，然後按一下 [新的獨立 SQL Server 安裝或加入功能] ****。  
   
-3.  在 [特徵選取] 頁面上，選取 [外部資料的 PolyBase 查詢服務] 。  
+3.  在 [特徵選取] 頁面上，選取 [外部資料的 PolyBase 查詢服務] ****。  
   
 4.  在 [伺服器組態] 頁面上，將 **SQL Server PolyBase 引擎服務** 和 SQL Server PolyBase 資料移動服務設定為在同一個帳戶下執行。  
   
     > **重要！！** 在 PolyBase 向外延展群組中，所有節點上的 PolyBase 引擎和 PolyBase 資料移動服務必須在同一個網域帳戶執行。  
     > 請參閱＜向外擴充 PolyBase＞。  
   
-5.  在 [PolyBase 組態頁面] 上，選取兩個選項的其中一個。 如需詳細資訊，請參閱 [PolyBase 向外延展群組](../../relational-databases/polybase/polybase-scale-out-groups.md)。  
+5.  在 [PolyBase 組態頁面] ****上，選取兩個選項的其中一個。 如需詳細資訊，請參閱 [PolyBase 向外延展群組](../../relational-databases/polybase/polybase-scale-out-groups.md)。  
   
     -   使用 SQL Server 執行個體作為已啟用 PolyBase 的獨立執行個體。  
   
@@ -77,7 +77,7 @@ PolyBase 一旦安裝為獨立項目或安裝於向外延展群組中，就無�
   
          選取此選項也會啟用 Microsoft Distributed Transaction Coordinator (MSDTC) 防火牆連線，並修改 MSDTC 登錄設定。  
   
-6.  在 [PolyBase 組態] 頁面上，指定含至少六個連接埠的連接埠範圍。 SQL Server 安裝程式將配置該範圍內前六個可用的連接埠。  
+6.  在 [PolyBase 組態] ****頁面上，指定含至少六個連接埠的連接埠範圍。 SQL Server 安裝程式將配置該範圍內前六個可用的連接埠。  
   
 ##  <a name="installing"></a> 使用命令提示字元安裝  
  使用此資料表中的值來建立安裝指令碼。 **SQL Server PolyBase 引擎** 和 **SQL Server PolyBase 資料移動服務** 這兩項服務必須在同一個帳戶下執行。 在 PolyBase 向外延展群組中，所有節點上的 PolyBase 服務必須在同一個網域帳戶下執行。  
@@ -132,13 +132,13 @@ SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;
   
 #### <a name="to-enable-the-firewall-rules"></a>啟用防火牆規則  
   
--   開啟 [控制台] 。  
+-   開啟 [控制台] ****。  
   
--   按一下 [系統及安全性] ，然後按一下 [Windows 防火牆] 。  
+-   按一下 [系統及安全性] ****，然後按一下 [Windows 防火牆] ****。  
   
--   按一下 [進階設定] ，然後按一下 [輸入規則] 。  
+-   按一下 [進階設定] ****，然後按一下 [輸入規則] ****。  
   
--   以滑鼠右鍵按一下已停用的規則，然後按一下 [啟用規則]。  
+-   以滑鼠右鍵按一下已停用的規則，然後按一下 [啟用規則]****。  
   
 ### <a name="polybase-service-accounts"></a>PolyBase 服務帳戶
 若要變更 PolyBase 引擎和 PolyBase 資料移動服務的服務帳戶，請解除安裝並重新安裝 PolyBase 功能。

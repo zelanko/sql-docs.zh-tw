@@ -102,15 +102,15 @@ Database Engine 會將每個資料行的加密設定儲存在資料庫中繼資�
 > [!NOTE]  
 >  如需使用精靈的影片，請參閱 [Getting Started with Always Encrypted with SSMS](https://channel9.msdn.com/Shows/Data-Exposed/Getting-Started-with-Always-Encrypted-with-SSMS)(搭配 SSMS 開始使用永遠加密)。
 
-1.    您可連接到現有的資料庫，其中包含您想要使用 Management Studio 物件總管  加密之資料行的資料表；或者，建立新的資料庫，再以要加密的資料行建立一或多個資料表，然後連接到該資料庫。
-2.    以滑鼠右鍵按一下您的資料庫，指向 [工作]，然後按一下 [加密資料行] 以開啟 [Always Encrypted 精靈]。
-3.    檢閱[簡介]  頁面，然後按一下 [下一步] 。
-4.    在 [資料行選取]  頁面上，展開資料表，並選取您想要加密的資料行。
-5.    針對每個已選取要進行加密的資料行，將 [加密類型]  設定為 [決定性]  或 [隨機化] 。
-6.    針對每個已選取要進行加密的資料行，選取 [加密金鑰] 。 如果您之前沒有針對此資料庫建立任何加密金鑰，請選取新的自動產生金鑰的預設選項，然後按一下 [下一步] 。
-7.    在 [主要金鑰組態]  頁面上，選取要儲存新金鑰的位置，並選取主要金鑰來源，然後按一下 [下一步] 。
-8.    在 [驗證]  頁面上，選擇是否要立即執行指令碼或建立 PowerShell 指令碼，然後按一下 [下一步] 。
-9.    在 [摘要]  頁面上，檢閱您已選取的選項，然後按一下 [完成] 。 完成時請關閉精靈。
+1.    您可連接到現有的資料庫，其中包含您想要使用 Management Studio 物件總管 **** 加密之資料行的資料表；或者，建立新的資料庫，再以要加密的資料行建立一或多個資料表，然後連接到該資料庫。
+2.    以滑鼠右鍵按一下您的資料庫，指向 [工作]****，然後按一下 [加密資料行]**** 以開啟 [Always Encrypted 精靈]。
+3.    檢閱[簡介] **** 頁面，然後按一下 [下一步] ****。
+4.    在 [資料行選取] **** 頁面上，展開資料表，並選取您想要加密的資料行。
+5.    針對每個已選取要進行加密的資料行，將 [加密類型] **** 設定為 [決定性] ** 或 [隨機化] **。
+6.    針對每個已選取要進行加密的資料行，選取 [加密金鑰] ****。 如果您之前沒有針對此資料庫建立任何加密金鑰，請選取新的自動產生金鑰的預設選項，然後按一下 [下一步] ****。
+7.    在 [主要金鑰組態] **** 頁面上，選取要儲存新金鑰的位置，並選取主要金鑰來源，然後按一下 [下一步] ****。
+8.    在 [驗證] **** 頁面上，選擇是否要立即執行指令碼或建立 PowerShell 指令碼，然後按一下 [下一步] ****。
+9.    在 [摘要] **** 頁面上，檢閱您已選取的選項，然後按一下 [完成] ****。 完成時請關閉精靈。
 
   
 ## <a name="feature-details"></a>功能詳細資料  
@@ -125,7 +125,7 @@ Database Engine 會將每個資料行的加密設定儲存在資料庫中繼資�
 
 -   變更加密物件的定義之後，執行 [sp_refresh_parameter_encryption](../../../relational-databases/system-stored-procedures/sp-refresh-parameter-encryption-transact-sql.md) 更新物件的 Always Encrypted 中繼資料。
   
- 針對具有下列特性的資料行，不支援 Always Encrypted (例如，如果下列任何條件適用於該資料行，加密的 WITH 子句  不能使用於資料行的 **CREATE TABLE/ALTER TABLE** 中)：  
+ 針對具有下列特性的資料行，不支援 Always Encrypted (例如，如果下列任何條件適用於該資料行，加密的 WITH 子句 ** 不能使用於資料行的 **CREATE TABLE/ALTER TABLE** 中)：  
   
 -   使用下列其中一個資料類型的資料行： **xml**、 **timestamp**/**rowversion**、 **image**, **ntext**、 **text**、 **sql_variant**、 **hierarchyid**、 **geography**、 **geometry**、alias、使用者定義的類型。  
   
@@ -165,7 +165,7 @@ Database Engine 會將每個資料行的加密設定儲存在資料庫中繼資�
 
 工具需求
 
-- 如果您在 [連接到伺服器]  對話方塊的 [其他屬性]  索引標籤中，使用 **column encryption setting=enabled** 連接，SQL Server Management Studio 就會解密擷取自加密資料行的結果。 至少需要 SQL Server Management Studio 17 版，才能插入、更新或篩選已加密的資料行。
+- 如果您在 [連接到伺服器] ** 對話方塊的 [其他屬性] **** 索引標籤中，使用 **column encryption setting=enabled** 連接，SQL Server Management Studio 就會解密擷取自加密資料行的結果。 至少需要 SQL Server Management Studio 17 版，才能插入、更新或篩選已加密的資料行。
 
 - 來自 `sqlcmd` 的加密連接需要至少 13.1 版，可從 [下載中心](http://go.microsoft.com/fwlink/?LinkID=825643)取得。
 
@@ -192,11 +192,11 @@ Database Engine 會將每個資料行的加密設定儲存在資料庫中繼資�
   
 -   您可使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] (對話方塊和精靈) 或 PowerShell 將權限套用至動作。  
   
--   選取加密的資料行時需具備這兩種「檢視」  權限 (即使使用者沒有解密資料行的權限亦同)。  
+-   選取加密的資料行時需具備這兩種「檢視」 ** 權限 (即使使用者沒有解密資料行的權限亦同)。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]預設會將這兩個「檢視」  權限授與 `public` 固定資料庫角色。 資料庫管理員可以選擇撤銷 (或拒絕) 授與 *角色的「檢視」*`public` 權限，而將其授與特定角色或使用者，以實作更嚴格的控制。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]預設會將這兩個「檢視」 ** 權限授與 `public` 固定資料庫角色。 資料庫管理員可以選擇撤銷 (或拒絕) 授與 *角色的「檢視」*`public` 權限，而將其授與特定角色或使用者，以實作更嚴格的控制。  
   
--   [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]預設不會將「檢視」  權限授與 `public` 固定資料庫角色。 這可讓某些現有的舊版工具 (使用舊版 DacFx) 正常運作。 因此，若要使用加密的資料行 (即使不要加以解密)，資料庫管理員必須明確授與這兩個「檢視」  權限。  
+-   [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]預設不會將「檢視」 ** 權限授與 `public` 固定資料庫角色。 這可讓某些現有的舊版工具 (使用舊版 DacFx) 正常運作。 因此，若要使用加密的資料行 (即使不要加以解密)，資料庫管理員必須明確授與這兩個「檢視」 ** 權限。  
 
   
 ## <a name="example"></a>範例  

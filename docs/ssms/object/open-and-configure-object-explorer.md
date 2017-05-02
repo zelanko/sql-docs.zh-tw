@@ -21,13 +21,13 @@ ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="open-and-configure-object-explorer"></a>開啟和設定物件總管
-在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 中使用 [檢視] 功能表來開啟物件總管。 使用 [工具] 功能表上的 [選項] 來設定物件總管選項。  
+在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 中使用 [檢視]**** 功能表來開啟物件總管。 使用 [工具]**** 功能表上的 [選項]**** 來設定物件總管選項。  
   
 ## <a name="viewing-object-explorer"></a>檢視物件總管  
-依預設，您可以在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] 中看到物件總管。 如果您看不到物件總管，請在 [檢視] 功能表上，按一下 [物件總管]。  
+依預設，您可以在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] 中看到物件總管。 如果您看不到物件總管，請在 [檢視]**** 功能表上，按一下 [物件總管]****。  
   
 ## <a name="configuring-object-explorer-options"></a>設定物件總管選項  
-若要設定物件總管設定值，請在 [工具] 功能表上按一下 [選項]，然後按一下 [SQL Server 物件總管]。  
+若要設定物件總管設定值，請在 [工具]**** 功能表上按一下 [選項]****，然後按一下 [SQL Server 物件總管]****。  
   
 ## <a name="see-also"></a>另請參閱  
 [物件總管](../../ssms/object/object-explorer.md)  

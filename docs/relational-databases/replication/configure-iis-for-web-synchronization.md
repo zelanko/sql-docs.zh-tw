@@ -103,7 +103,7 @@ ms.lasthandoff: 04/11/2017
         > [!NOTE]  
         >  依預設，SelfSSL 安裝的憑證在七天內有效。  
   
-    -   若要指定一或多個參數值：請按一下 **[開始]**，然後按一下 **[執行]**。 在 [開啟]  方塊中，輸入 **cmd**，然後按一下 [確定] 。 找出 SelfSSL 安裝目錄，輸入 `SelfSSL`，然後指定一或多個參數的值。 如需參數列表，請輸入 `SelfSSL -?`。  
+    -   若要指定一或多個參數值：請按一下 **[開始]**，然後按一下 **[執行]**。 在 [開啟] **** 方塊中，輸入 **cmd**，然後按一下 [確定] ****。 找出 SelfSSL 安裝目錄，輸入 `SelfSSL`，然後指定一或多個參數的值。 如需參數列表，請輸入 `SelfSSL -?`。  
   
 ## <a name="installing-connectivity-components-and-sql-server-management-studio"></a>安裝連接元件和 SQL Server Management Studio  
   
@@ -158,7 +158,7 @@ ms.lasthandoff: 04/11/2017
   
     1.  在 **[別名]** 方塊中輸入虛擬目錄的別名。  
   
-    2.  在 **[路徑]** 方塊中輸入虛擬目錄的路徑。 例如，如果您在 [別名]  方塊中輸入 **websync1** ，請在 [路徑]  方塊中輸入 **C:\Inetpub\wwwroot\websync1** 。 按一下 **[下一步]**。  
+    2.  在 **[路徑]** 方塊中輸入虛擬目錄的路徑。 例如，如果您在 [別名] **** 方塊中輸入 **websync1** ，請在 [路徑] **** 方塊中輸入 **C:\Inetpub\wwwroot\websync1** 。 按一下 **[下一步]**。  
   
     3.  在兩個對話方塊中，按一下 **[是]**。 這會指定您要建立新資料夾，並指定您要複製 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Internet Server API (ISAPI) DLL。 ＞。  
   
@@ -172,7 +172,7 @@ ms.lasthandoff: 04/11/2017
   
 8.  在 **[目錄存取]** 頁面中：  
   
-    1.  按一下 **[加入]**，然後在 **[選取使用者或群組]** 對話方塊中，新增訂閱者將用於連接 IIS 的帳戶。 您可以在 [新增訂閱精靈] 的 [Web 伺服器資訊] 頁面中指定這些帳戶，或者將其指定為 [sp_addmergepullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)*@internet_login* 參數的值。  
+    1.  按一下 **[加入]**，然後在 **[選取使用者或群組]** 對話方塊中，新增訂閱者將用於連接 IIS 的帳戶。 您可以在 [新增訂閱精靈] 的 [Web 伺服器資訊]**** 頁面中指定這些帳戶，或者將其指定為 [sp_addmergepullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)*@internet_login* 參數的值。  
   
 9. 在 **[快照集共用存取]** 頁面中，輸入快照集共用。 在此共用上設定適當的權限，以便訂閱者可以存取快照集檔案。 如需共用權限的詳細資訊，請參閱[保護快照集資料夾](../../relational-databases/replication/security/secure-the-snapshot-folder.md)。  
   
@@ -182,11 +182,11 @@ ms.lasthandoff: 04/11/2017
   
 11. 如果執行 IIS 的電腦執行於 64 位元版本的 Windows 上，則必須將 replisapi.dll 複製到適當的目錄：  
   
-    1.  按一下 **[開始]**，然後按一下 **[執行]**。 在 [開啟]  方塊中，輸入 **iisreset**，然後按一下 [確定] 。  
+    1.  按一下 **[開始]**，然後按一下 **[執行]**。 在 [開啟] **** 方塊中，輸入 **iisreset**，然後按一下 [確定] ****。  
   
     2.  停止並重新啟動 IIS 之後，請將 replisapi.dll 從 [!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]COM\replisapi 複製到步驟 6b 中指定的目錄。  
   
-    3.  按一下 **[開始]**，然後按一下 **[執行]**。 在 [開啟]  方塊中，輸入 **cmd**，然後按一下 [確定] 。  
+    3.  按一下 **[開始]**，然後按一下 **[執行]**。 在 [開啟] **** 方塊中，輸入 **cmd**，然後按一下 [確定] ****。  
   
     4.  於您在步驟 6b 中指定的目錄中，執行下列命令：  
   
@@ -206,7 +206,7 @@ ms.lasthandoff: 04/11/2017
   
 3.  註冊 replisapi.dll：  
   
-    1.  按一下 **[開始]**，然後按一下 **[執行]**。 在 [開啟]  方塊中，輸入 **cmd**，然後按一下 [確定] 。  
+    1.  按一下 **[開始]**，然後按一下 **[執行]**。 在 [開啟] **** 方塊中，輸入 **cmd**，然後按一下 [確定] ****。  
   
     2.  於您在步驟 1 中建立的目錄中，執行下列命令：  
   
@@ -293,7 +293,7 @@ ms.lasthandoff: 04/11/2017
   
     2.  以滑鼠右鍵按一下您先前建立的應用程式集區，然後按一下 **[屬性]**。  
   
-    3.  在 [\<ApplicationPoolName> 屬性] 對話方塊中的 [識別] 索引標籤上，按一下 [可設定]。  
+    3.  在 [\<ApplicationPoolName> 屬性]**** 對話方塊中的 [識別]**** 索引標籤上，按一下 [可設定]****。  
   
     4.  在 **[使用者名稱]** 和 **[密碼]** 欄位中，輸入步驟 1 中建立的帳戶和密碼。  
   
@@ -305,7 +305,7 @@ ms.lasthandoff: 04/11/2017
   
     2.  展開您用於 Web 同步處理的網站，以滑鼠右鍵按一下您為 Web 同步處理建立的虛擬目錄，然後按一下 **[屬性]**。  
   
-    3.  在 [\<VirtualDirectoryName> 屬性] 對話方塊的 [虛擬目錄] 索引標籤上，從 [應用程式集區] 下拉式清單選取步驟 5 中建立的應用程式集區。  
+    3.  在 [\<VirtualDirectoryName> 屬性]**** 對話方塊的 [虛擬目錄]**** 索引標籤上，從 [應用程式集區]**** 下拉式清單選取步驟 5 中建立的應用程式集區。  
   
     4.  按一下 **[確定]**。  
   
@@ -350,7 +350,7 @@ ms.lasthandoff: 04/11/2017
     > [!NOTE]  
     >  將為使用者安裝憑證。 這項處理序必須針對將與 IIS 同步處理的每位使用者執行。  
   
-4.  在 [連接到 \<伺服器名稱>] 對話方塊中，指定合併代理程式要用來連接 IIS 的登入和密碼。 也可以在「新增訂閱精靈」中指定這些認證。  
+4.  在 [連接到 \<伺服器名稱>]**** 對話方塊中，指定合併代理程式要用來連接 IIS 的登入和密碼。 也可以在「新增訂閱精靈」中指定這些認證。  
   
 5.  在稱為 **[SQL Websync 診斷資訊]**的 Internet Explorer 視窗中，確認頁面中每個 **[狀態]** 資料行中的值都是 **[SUCCESS]**。  
   

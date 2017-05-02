@@ -26,7 +26,7 @@ ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="value-for-extended-property-dialog-box"></a>擴充屬性的值對話方塊
-  使用 [\<屬性名稱> 的值] 對話方塊，來輸入或檢視值。 這是一般的對話方塊，可以從數個位置加以開啟。  
+  使用 [\<屬性名稱>** 的值]**** 對話方塊，來輸入或檢視值。 這是一般的對話方塊，可以從數個位置加以開啟。  
   
 ## <a name="uielement-list"></a>UIElement 清單  
  **擴充屬性名稱**  

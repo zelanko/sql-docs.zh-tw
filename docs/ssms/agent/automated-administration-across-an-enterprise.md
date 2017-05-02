@@ -31,7 +31,7 @@ ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="automated-administration-across-an-enterprise"></a>將整個企業的管理自動化
-將多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 執行個體之間的管理自動化，稱為「多伺服器管理」(Multiserver Administration)。 使用多伺服器管理，可進行以下工作：  
+將多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 執行個體之間的管理自動化，稱為「多伺服器管理」**(Multiserver Administration)。 使用多伺服器管理，可進行以下工作：  
   
 -   管理二或多部伺服器。  
   

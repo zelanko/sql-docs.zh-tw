@@ -68,7 +68,7 @@ ALTER DATABASE DB1 SET TRUSTWORTHY ON;
 -   當自主資料庫存在時，非自主資料庫的資料庫使用者應該連接至 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 而不使用初始目錄，或指定非自主資料庫的資料庫名稱做為初始目錄。 這樣可避免連接至 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 系統管理員直接控制權較低之自主資料庫。  
   
 ### <a name="increasing-access-by-changing-the-containment-status-of-a-database"></a>變更資料庫的內含項目狀態來提高存取權  
- 擁有 **ALTER ANY DATABASE** 權限的登入 (例如 **dbcreator** 固定伺服器角色的成員) 以及非自主資料庫中擁有 **CONTROL DATABASE** 權限的使用者 (例如 **db_owner** 固定資料庫角色的成員) 都可以變更資料庫的內含項目設定。 如果資料庫的內含項目設定從 **NONE** 變更為 **PARTIAL** 或 **FULL**，您就可以透過建立具有密碼之自主資料庫使用者，授與使用者存取權。 這樣可能會在未經 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統管理員認可或同意的情況下提供存取權。 若要防止包含任何資料庫，請將 [!INCLUDE[ssDE](../../includes/ssde-md.md)] [自主資料庫驗證] 選項設為 0。 若要針對選取之自主資料庫防止具有密碼之自主資料庫使用者連接，請使用登入觸發程序來取消具有密碼之自主資料庫使用者所進行的登入嘗試。  
+ 擁有 **ALTER ANY DATABASE** 權限的登入 (例如 **dbcreator** 固定伺服器角色的成員) 以及非自主資料庫中擁有 **CONTROL DATABASE** 權限的使用者 (例如 **db_owner** 固定資料庫角色的成員) 都可以變更資料庫的內含項目設定。 如果資料庫的內含項目設定從 **NONE** 變更為 **PARTIAL** 或 **FULL**，您就可以透過建立具有密碼之自主資料庫使用者，授與使用者存取權。 這樣可能會在未經 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統管理員認可或同意的情況下提供存取權。 若要防止包含任何資料庫，請將 [!INCLUDE[ssDE](../../includes/ssde-md.md)] [自主資料庫驗證]**** 選項設為 0。 若要針對選取之自主資料庫防止具有密碼之自主資料庫使用者連接，請使用登入觸發程序來取消具有密碼之自主資料庫使用者所進行的登入嘗試。  
   
 ### <a name="attaching-a-contained-database"></a>附加自主資料庫  
  透過附加自主資料庫，系統管理員可能會將 [!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體的存取權提供給不想要的使用者。 擔心這項風險的系統管理員可以在 **RESTRICTED_USER** 模式下讓資料庫上線，以便防止系統驗證具有密碼之自主資料庫使用者。 此時，只有透過登入授權的主體才能存取 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  

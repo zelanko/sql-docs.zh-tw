@@ -76,7 +76,7 @@ WHERE xe.name = 'system_health'
 ## <a name="restoring-the-systemhealth-session"></a>還原 system_health 工作階段  
  如果您刪除了 system_health 工作階段，可以在 [查詢編輯器] 中執行 **u_tables.sql** 檔案，藉以還原此工作階段。 這個檔案位於下列資料夾，其中 C: 代表您安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 程式檔案的磁碟機：  
   
- C:\Program Files\Microsoft SQL Server\MSSQL13.\<執行個體識別碼>\MSSQL\Install  
+ C:\Program Files\Microsoft SQL Server\MSSQL13.\<執行個體識別碼**>\MSSQL\Install  
   
  請注意，當您還原此工作階段之後，必須使用 ALTER EVENT SESSION 陳述式或 [物件總管] 中的 **[擴充事件]** 節點來啟動此工作階段。 否則，此工作階段會在您下一次重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務時自動啟動。  
   

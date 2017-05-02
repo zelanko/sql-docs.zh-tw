@@ -30,7 +30,7 @@ ms.lasthandoff: 04/11/2017
 # <a name="always-encrypted-wizard"></a>永遠加密精靈
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  使用 [永遠加密精靈]  ，協助保護儲存在 SQL Server 資料庫中的機密資料。 一律加密可讓用戶端將用戶端應用程式內的機密資料進行加密，且永遠不會顯示 SQL Server 的加密金鑰。 如此一來，「永遠加密」功能即可區隔擁有資料 (且可以檢視資料) 的使用者和管理資料 (但不應具備存取權) 的使用者。  如需此功能的完整描述，請參閱 [永遠加密 &#40;Database Engine&#41;](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)。  
+  使用 [永遠加密精靈] **** ，協助保護儲存在 SQL Server 資料庫中的機密資料。 一律加密可讓用戶端將用戶端應用程式內的機密資料進行加密，且永遠不會顯示 SQL Server 的加密金鑰。 如此一來，「永遠加密」功能即可區隔擁有資料 (且可以檢視資料) 的使用者和管理資料 (但不應具備存取權) 的使用者。  如需此功能的完整描述，請參閱 [永遠加密 &#40;Database Engine&#41;](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)。  
   
  如需示範如何透過精靈設定 [永遠加密] 功能，並在用戶端應用程式加以運用的完整逐步解說，請參閱 [SQL Database 教學課程︰透過永遠加密來保護敏感性資料](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)。  
   
@@ -42,10 +42,10 @@ ms.lasthandoff: 04/11/2017
   
 1.  使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的物件總管元件，連接到您的 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]。  
   
-2.  以滑鼠右鍵按一下您的資料庫，指向 [工作]，然後按一下 [加密資料行]。  
+2.  以滑鼠右鍵按一下您的資料庫，指向 [工作]****，然後按一下 [加密資料行]****。  
   
 ## <a name="column-selection-page"></a>資料行選取頁面  
- 找出資料表與資料行，然後針對所選資料行選取加密類型 (確定性或隨機) 和加密金鑰。 若要解密目前加密的資料行，請選取 [純文字] 。 若要旋轉資料行加密金鑰，請選取不同的加密金鑰，精靈即會解密資料行，並以新的金鑰重新加密該資料行。 (雖然 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支援加密時態表和記憶體中的資料表，但精靈無法對此進行設定。)  
+ 找出資料表與資料行，然後針對所選資料行選取加密類型 (確定性或隨機) 和加密金鑰。 若要解密目前加密的資料行，請選取 [純文字] ****。 若要旋轉資料行加密金鑰，請選取不同的加密金鑰，精靈即會解密資料行，並以新的金鑰重新加密該資料行。 (雖然 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支援加密時態表和記憶體中的資料表，但精靈無法對此進行設定。)  
   
 ## <a name="master-key-configuration-page"></a>主要金鑰設定頁面  
  在 Windows 憑證存放區或 Azure 金鑰保存庫中，建立新的資料行主要金鑰。 如需詳細資訊，請參閱 [金鑰儲存] 底下的連結。  

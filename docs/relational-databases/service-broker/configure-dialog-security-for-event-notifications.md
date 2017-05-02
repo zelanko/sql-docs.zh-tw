@@ -73,7 +73,7 @@ ms.lasthandoff: 04/11/2017
 |如果 **master** 資料庫沒有主要金鑰，請 [建立主要金鑰](../../t-sql/statements/create-master-key-transact-sql.md)。|如果 **master** 資料庫沒有主要金鑰，請建立主要金鑰。|  
 |[建立憑證](../../t-sql/statements/create-certificate-transact-sql.md) 來驗證資料庫。|建立憑證來驗證資料庫。|  
 |[備份憑證](../../t-sql/statements/backup-certificate-transact-sql.md) 到可供目標伺服器存取的檔案。|備份憑證到可供來源伺服器存取的檔案。|  
-|[建立端點](../../t-sql/statements/create-endpoint-transact-sql.md)，並指定已同意的 TCP 通訊埠編號、FOR SERVICE_BROKER (AUTHENTICATION = CERTIFICATE 憑證名稱) 和驗證的憑證名稱。|建立端點，並指定已同意的 TCP 通訊埠編號、FOR SERVICE_BROKER (AUTHENTICATION = CERTIFICATE 憑證名稱) 和驗證憑證的名稱。|  
+|[建立端點](../../t-sql/statements/create-endpoint-transact-sql.md)，並指定已同意的 TCP 通訊埠編號、FOR SERVICE_BROKER (AUTHENTICATION = CERTIFICATE 憑證名稱**) 和驗證的憑證名稱。|建立端點，並指定已同意的 TCP 通訊埠編號、FOR SERVICE_BROKER (AUTHENTICATION = CERTIFICATE 憑證名稱**) 和驗證憑證的名稱。|  
 |[建立登入](../../t-sql/statements/create-login-transact-sql.md)，並指定目標伺服器的登入。|建立登入，並指定來源伺服器的登入。|  
 |在端點[授與 CONNECT 權限](../../t-sql/statements/grant-transact-sql.md) 給目標驗證器登入。|在端點授與 CONNECT 權限給來源驗證器登入。|  
 |[建立使用者](../../t-sql/statements/create-user-transact-sql.md)，並指定目標驗證器登入。|建立使用者，並指定來源驗證器登入。|  

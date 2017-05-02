@@ -31,7 +31,7 @@ ms.lasthandoff: 04/11/2017
 從清單中選取要加入資料列的資料表名稱。 您只能為 NSERT RESULTS 查詢指定一個資料表。  
   
 > [!NOTE]  
-> 在 [屬性] 視窗中，您可以變更要插入資料列的資料表。  
+> 在 [屬性]**** 視窗中，您可以變更要插入資料列的資料表。  
   
 ## <a name="see-also"></a>另請參閱  
 [建立插入結果查詢 &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/create-insert-results-queries-visual-database-tools.md)  

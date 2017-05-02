@@ -25,14 +25,14 @@ ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="execute-scripts-before-and-after-a-snapshot-is-applied"></a>在套用快照集之前及之後執行指令碼
-  在 [發行集屬性 - \<發行集>] 對話方塊之 [快照集] 頁面上套用快照集的前後，指定要執行的選擇性指令碼。 如需有關存取這個對話方塊的詳細資訊，請參閱＜ [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)＞。  
+  在 [發行集屬性 - \<發行集>]**** 對話方塊之 [快照集]**** 頁面上套用快照集的前後，指定要執行的選擇性指令碼。 如需有關存取這個對話方塊的詳細資訊，請參閱＜ [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)＞。  
   
 > [!NOTE]  
 >  如果 **[快照集格式]** 選項設定為 **[字元]**，這些選項則不可用。  
   
 ### <a name="to-execute-a-script-before-or-after-a-snapshot-is-applied"></a>若要在套用快照集的前後執行指令碼  
   
-1.  在 [發行集屬性 - \<發行集>] 對話方塊的 [快照集] 頁面上：  
+1.  在 [發行集屬性 - \<發行集>]**** 對話方塊的 [快照集]**** 頁面上：  
   
     -   若要在套用快照集之前指定要執行的指令碼，請按一下 **[瀏覽]** 以瀏覽到指令碼，或在 **[套用快照前執行此指令碼]** 文字方塊中輸入指令碼的路徑。  
   

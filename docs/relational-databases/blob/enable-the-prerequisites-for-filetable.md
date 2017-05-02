@@ -85,7 +85,7 @@ GO
     ```  
   
  **使用 SQL Server Management Studio 指定非交易式存取的層級**  
- 在 [資料庫屬性] 對話方塊中，您可以透過 [選項] 頁面的 [FILESTREAM 非交易式存取] 欄位，來指定非交易式存取的層級。 如需此對話方塊的詳細資訊，請參閱[資料庫屬性 &#40;選項頁面&#41;](../../relational-databases/databases/database-properties-options-page.md)。  
+ 在 [資料庫屬性]**** 對話方塊中，您可以透過 [選項]**** 頁面的 [FILESTREAM 非交易式存取]**** 欄位，來指定非交易式存取的層級。 如需此對話方塊的詳細資訊，請參閱[資料庫屬性 &#40;選項頁面&#41;](../../relational-databases/databases/database-properties-options-page.md)。  
   
 ##  <a name="BasicsDirectory"></a> 在資料庫層級指定 FileTable 的目錄  
  當您在資料庫層級啟用檔案的非交易式存取時，可以選擇性地使用 **DIRECTORY_NAME** 選項，一併提供目錄名稱。 如果您在啟用非交易式存取時沒有提供目錄名稱，則之後必須先提供此名稱，然後才能在資料庫中建立 FileTable。  
@@ -129,7 +129,7 @@ GO
     ```  
   
  **使用 SQL Server Management Studio 指定 FileTable 的目錄**  
- 在 [資料庫屬性] 對話方塊中，您可以透過 [選項] 頁面的 [FILESTREAM 目錄名稱] 欄位，來指定目錄名稱。 如需此對話方塊的詳細資訊，請參閱[資料庫屬性 &#40;選項頁面&#41;](../../relational-databases/databases/database-properties-options-page.md)。  
+ 在 [資料庫屬性]**** 對話方塊中，您可以透過 [選項]**** 頁面的 [FILESTREAM 目錄名稱]**** 欄位，來指定目錄名稱。 如需此對話方塊的詳細資訊，請參閱[資料庫屬性 &#40;選項頁面&#41;](../../relational-databases/databases/database-properties-options-page.md)。  
   
 ###  <a name="viewnames"></a> 如何：檢查執行個體的現有目錄名稱  
  若要檢視執行個體的現有目錄名稱清單，請查詢 [sys.database_filestream_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-filestream-options-transact-sql.md) 目錄檢視，並檢查 **filestream_database_directory_name** 資料行。  

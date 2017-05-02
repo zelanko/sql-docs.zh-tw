@@ -30,9 +30,9 @@ ms.lasthandoff: 04/11/2017
   
 ### <a name="to-change-the-connection-associated-with-a-query"></a>變更查詢的相關連接  
   
-1.  在查詢編輯器中，以滑鼠右鍵按一下查詢編輯器的空白區域，指向 [連接]，再按一下 [變更連接]。  
+1.  在查詢編輯器中，以滑鼠右鍵按一下查詢編輯器的空白區域，指向 [連接]****，再按一下 [變更連接]****。  
   
-2.  在 [連接到 Database Engine] 對話方塊中，提供新的連接資訊，再按一下 [連接]。  
+2.  在 [連接到 Database Engine]**** 對話方塊中，提供新的連接資訊，再按一下 [連接]****。  
   
 ## <a name="see-also"></a>另請參閱  
 [方案總管](../../ssms/solution/solution-explorer.md)  

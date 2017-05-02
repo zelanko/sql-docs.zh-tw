@@ -120,18 +120,18 @@ ElementName!TagNumber!AttributeName!Directive
  是指派給元素的唯一標記值。 此值搭配兩個中繼資料資料行 **Tag** 及 **Parent**，就可以決定結果 XML 中元素的巢狀結構。  
   
  *AttributeName*  
- 提供要在指定的 *ElementName*中建構的屬性名稱。 如果未指定「指示詞」，就會使用這個行為。  
+ 提供要在指定的 *ElementName*中建構的屬性名稱。 如果未指定「指示詞」**，就會使用這個行為。  
   
- 如果指定「指示詞」而且它是 **xml**、**cdata** 或 **element**，就會使用此值建構 *ElementName* 的元素子系，而且會加入資料行值。  
+ 如果指定「指示詞」**而且它是 **xml**、**cdata** 或 **element**，就會使用此值建構 *ElementName* 的元素子系，而且會加入資料行值。  
   
- 如果指定「指示詞」，*AttributeName* 可以為空白。 例如，ElementName!TagNumber!!Directive。 在此情況下， *ElementName*會直接包含資料行值。  
+ 如果指定「指示詞」**，*AttributeName* 可以為空白。 例如，ElementName!TagNumber!!Directive。 在此情況下， *ElementName*會直接包含資料行值。  
   
  *Directive*  
-「指示詞」 ** 是選擇性的，而且您可以用以提供建構 XML 的額外資訊。 「指示詞」有兩種用途。  
+「指示詞」 ** 是選擇性的，而且您可以用以提供建構 XML 的額外資訊。 「指示詞」**有兩種用途。  
   
- 其中一項用途是將值編碼為 ID、IDREF 及 IDREFS。 您可以指定 **ID**、**IDREF** 及 **IDREFS** 關鍵字作為「指示詞」。 這些指示詞會覆寫屬性類型。 您可以藉此建立內部文件連結。  
+ 其中一項用途是將值編碼為 ID、IDREF 及 IDREFS。 您可以指定 **ID**、**IDREF** 及 **IDREFS** 關鍵字作為「指示詞」**。 這些指示詞會覆寫屬性類型。 您可以藉此建立內部文件連結。  
   
- 此外，您可以使用「指示詞」指出要如何將字串資料對應到 XML。 **hide**、**element、elementxsinil**、**xml**、**xmltext** 及 **cdata** 關鍵字可以作為「指示詞」。 **hide** 指示詞會隱藏節點。 只是為了進行排序而擷取值，但不希望產生 XML 時，這就很有用。  
+ 此外，您可以使用「指示詞」**指出要如何將字串資料對應到 XML。 **hide**、**element、elementxsinil**、**xml**、**xmltext** 及 **cdata** 關鍵字可以作為「指示詞」**。 **hide** 指示詞會隱藏節點。 只是為了進行排序而擷取值，但不希望產生 XML 時，這就很有用。  
   
  **element** 指示詞會產生內含元素而不是屬性。 內含的資料會被編碼為實體。 例如， **<** 字元會變成 &lt;。 對於 NULL 資料行值，不會產生任何元素。 如果希望 Null 資料行值會產生一個元素，您可以指定 **elementxsinil** 指示詞。 這將會產生具有屬性 xsi:nil=TRUE 的元素。  
   
@@ -141,7 +141,7 @@ ElementName!TagNumber!AttributeName!Directive
   
  在大部份情況下，您可以合併這兩個群組織間的指示詞，但不可以合併指示詞本身。  
   
- 如果未指定「指示詞」及 *AttributeName* (例如 **Customer!1**)，就會隱含 **element** 指示詞 (例如 **Customer!1!!element**)，而 *ElementName* 中會包含資料行資料。  
+ 如果未指定「指示詞」**及 *AttributeName* (例如 **Customer!1**)，就會隱含 **element** 指示詞 (例如 **Customer!1!!element**)，而 *ElementName* 中會包含資料行資料。  
   
  如果指定 **xmltext** 指示詞，資料行內容會包裝在單一標記中，與文件的其他部分整合。 此指示詞用來取得 OPENXML 儲存在資料行的溢位 (未消耗) XML 資料很有用。 如需詳細資訊，請參閱 [OPENXML &#40;SQL Server&#41;](../../relational-databases/xml/openxml-sql-server.md)。  
   

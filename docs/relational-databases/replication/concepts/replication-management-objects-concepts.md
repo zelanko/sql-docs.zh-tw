@@ -70,17 +70,17 @@ ms.lasthandoff: 04/11/2017
   
 1.  啟動 Visual Studio。  
   
-2.  在 [檔案] 功能表上，按一下 [新增專案]。 [新增專案]  對話方塊隨即出現。  
+2.  在 [檔案]**** 功能表上，按一下 [新增專案]****。 [新增專案] **** 對話方塊隨即出現。  
   
-3.  在 [專案類型] 對話方塊中，選取 [Visual C# 專案]。 在 [範本] 窗格中，選取 [Windows 應用程式]。  
+3.  在 [專案類型]**** 對話方塊中，選取 [Visual C# 專案]****。 在 [範本]**** 窗格中，選取 [Windows 應用程式]****。  
   
-4.  (選擇性) 在 [名稱] 中，鍵入新應用程式的名稱。  
+4.  (選擇性) 在 [名稱]**** 中，鍵入新應用程式的名稱。  
   
-5.  按一下 [確定]，載入 Visual C# Windows 範本。  
+5.  按一下 [確定]****，載入 Visual C# Windows 範本。  
   
-6.  在 [專案] 功能表上，選取 [新增參考] 項目。 [新增參考] 對話方塊隨即出現。  
+6.  在 [專案]**** 功能表上，選取 [新增參考]**** 項目。 [新增參考]**** 對話方塊隨即出現。  
   
-7.  從 [.NET] 索引標籤的清單中選取下列組件，然後按一下 [確定]。  
+7.  從 [.NET]**** 索引標籤的清單中選取下列組件，然後按一下 [確定]****。  
   
     -   Microsoft.SqlServer.Replication .NET 程式設計介面  
   
@@ -91,9 +91,9 @@ ms.lasthandoff: 04/11/2017
     > [!NOTE]  
     >  使用 CTRL 鍵以選取一個以上的檔案。  
   
-8.  (選擇性) 重複步驟 6。 按一下 [瀏覽] 索引標籤，導覽至 [!INCLUDE[ssInstallPath](../../../includes/ssinstallpath-md.md)]COM，選取 Microsoft.SqlServer.Replication.BusinessLogicSupport.dll，然後按一下 [確定]。  
+8.  (選擇性) 重複步驟 6。 按一下 [瀏覽]**** 索引標籤，導覽至 [!INCLUDE[ssInstallPath](../../../includes/ssinstallpath-md.md)]COM，選取 Microsoft.SqlServer.Replication.BusinessLogicSupport.dll，然後按一下 [確定]****。  
   
-9. 在 [檢視] 功能表中，按一下 [程式碼]。  
+9. 在 [檢視]**** 功能表中，按一下 [程式碼]****。  
   
 10. 在程式碼中的命名空間陳述式前面，鍵入下列 **using** 陳述式來限定 RMO 命名空間中的類型：  
   
@@ -110,17 +110,17 @@ ms.lasthandoff: 04/11/2017
   
 1.  啟動 Visual Studio。  
   
-2.  在 [檔案] 功能表上，選取 [新增專案]。 [新增專案]  對話方塊隨即出現。  
+2.  在 [檔案]**** 功能表上，選取 [新增專案]****。 [新增專案] **** 對話方塊隨即出現。  
   
-3.  在 [專案類型] 窗格中，選取 [Visual Basic]。 在 [範本] 窗格中，選取 [Windows 應用程式]。  
+3.  在 [專案類型] 窗格中，選取 [Visual Basic]****。 在 [範本] 窗格中，選取 [Windows 應用程式]****。  
   
-4.  (選擇性) 在 [名稱] 方塊中，鍵入新應用程式的名稱。  
+4.  (選擇性) 在 [名稱]**** 方塊中，鍵入新應用程式的名稱。  
   
-5.  按一下 [確定]，載入 Visual Basic Windows 範本。  
+5.  按一下 [確定]****，載入 Visual Basic Windows 範本。  
   
-6.  在 [專案] 功能表上，選取 [新增參考]。 [新增參考] 對話方塊隨即出現。  
+6.  在 [專案]**** 功能表上，選取 [新增參考]****。 [新增參考]**** 對話方塊隨即出現。  
   
-7.  從 [.NET] 索引標籤的清單中選取下列組件，然後按一下 [確定]。  
+7.  從 [.NET]**** 索引標籤的清單中選取下列組件，然後按一下 [確定]****。  
   
     -   Microsoft.SqlServer.Replication .NET 程式設計介面  
   
@@ -131,9 +131,9 @@ ms.lasthandoff: 04/11/2017
     > [!NOTE]  
     >  使用 CTRL 鍵以選取一個以上的檔案。  
   
-8.  (選擇性) 重複步驟 6。 按一下 [瀏覽] 索引標籤，導覽至 [!INCLUDE[ssInstallPath](../../../includes/ssinstallpath-md.md)]COM，選取 Microsoft.SqlServer.Replication.BusinessLogicSupport.dll，然後按一下 [確定]。  
+8.  (選擇性) 重複步驟 6。 按一下 [瀏覽]**** 索引標籤，導覽至 [!INCLUDE[ssInstallPath](../../../includes/ssinstallpath-md.md)]COM，選取 Microsoft.SqlServer.Replication.BusinessLogicSupport.dll，然後按一下 [確定]****。  
   
-9. 在 [檢視] 功能表中，按一下 [程式碼]。  
+9. 在 [檢視]**** 功能表中，按一下 [程式碼]****。  
   
 10. 在程式碼的任何宣告之前鍵入下列 **Imports** 陳述式，以限定 RMO 命名空間中的類型。  
   

@@ -30,19 +30,19 @@ ms.lasthandoff: 04/11/2017
   
 ### <a name="to-open-and-view-a-deadlock-file"></a>若要開啟和檢視死結檔案  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的 [檔案] 功能表上，指向 [開啟] 並按一下 [檔案]。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的 [檔案]**** 功能表上，指向 [開啟]**** 並按一下 [檔案]****。  
   
-2.  在 [開啟檔案] 對話方塊中，從 [檔案類型] 方塊中選取 .xdl 檔案類型。 您現在會有一份只有死結檔案的篩選清單。  
+2.  在 [開啟檔案]**** 對話方塊中，從 [檔案類型]**** 方塊中選取 .xdl 檔案類型。 您現在會有一份只有死結檔案的篩選清單。  
   
 ### <a name="to-print-a-deadlock-file"></a>若要列印死結檔案  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的 [檔案] 功能表上，指向 [開啟] 並按一下 [檔案]。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的 [檔案]**** 功能表上，指向 [開啟]**** 並按一下 [檔案]****。  
   
-2.  在 [開啟檔案] 對話方塊中，從 [檔案類型] 方塊中選取 .xdl 檔案類型。 您現在會有一份只有死結檔案的篩選清單。  
+2.  在 [開啟檔案]**** 對話方塊中，從 [檔案類型]**** 方塊中選取 .xdl 檔案類型。 您現在會有一份只有死結檔案的篩選清單。  
   
-3.  選取您要列印的死結檔案，並按一下 [開啟]。  
+3.  選取您要列印的死結檔案，並按一下 [開啟]****。  
   
-4.  在 [檔案] 功能表上，按一下 [列印]。  
+4.  在 [檔案]**** 功能表上，按一下 [列印]****。  
   
 ## <a name="see-also"></a>另請參閱  
  [儲存死結圖形 &#40;SQL Server Profiler&#41;](../../relational-databases/performance/save-deadlock-graphs-sql-server-profiler.md)  

@@ -25,9 +25,9 @@ ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="extensible-key-management-ekm"></a>可延伸金鑰管理 (EKM)
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會針對加密和金鑰產生使用「Microsoft 密碼編譯 API」(MSCAPI) 提供者，藉以提供加密功能以及「可延伸金鑰管理」(EKM)。 用於資料和金鑰加密的加密金鑰會建立於暫時性金鑰容器中，而且您必須先從提供者中匯出這些金鑰，然後再將它們儲存於資料庫中。 這個方法會讓 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]處理金鑰管理 (包括加密金鑰階層和金鑰備份)。  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會針對加密和金鑰產生使用「Microsoft 密碼編譯 API」**(MSCAPI) 提供者，藉以提供加密功能以及「可延伸金鑰管理」**(EKM)。 用於資料和金鑰加密的加密金鑰會建立於暫時性金鑰容器中，而且您必須先從提供者中匯出這些金鑰，然後再將它們儲存於資料庫中。 這個方法會讓 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]處理金鑰管理 (包括加密金鑰階層和金鑰備份)。  
   
- 隨著法規相符的需求和資料隱私權的考量逐漸增加，許多組織便運用加密技術來提供「深度防護」解決方案。 這種方法通常不實用，因為它僅使用資料庫加密管理工具。 硬體廠商會提供使用「硬體安全模組」(HSM) 來處理企業金鑰管理的產品。 HSM 裝置會將加密金鑰儲存在硬體或軟體模組上。 這是較安全的解決方案，因為加密金鑰不會與加密資料一起存放。  
+ 隨著法規相符的需求和資料隱私權的考量逐漸增加，許多組織便運用加密技術來提供「深度防護」解決方案。 這種方法通常不實用，因為它僅使用資料庫加密管理工具。 硬體廠商會提供使用「硬體安全模組」**(HSM) 來處理企業金鑰管理的產品。 HSM 裝置會將加密金鑰儲存在硬體或軟體模組上。 這是較安全的解決方案，因為加密金鑰不會與加密資料一起存放。  
   
  目前許多廠商會針對金鑰管理和加密速度提供 HSM。 HSM 裝置會使用硬體介面搭配伺服器處理序，當做應用程式與 HSM 之間的中繼。 此外，廠商也會在模組 (可能是硬體或軟體) 上實作 MSCAPI 提供者。 MSCAPI 通常只會提供 HSM 所提供的部分功能。 而且，廠商也可以針對 HSM、金鑰組態和金鑰存取提供管理軟體。  
   
@@ -90,16 +90,16 @@ GO
  EKM 模組可以支援多種驗證類型。 但是，每個提供者只會公開一種驗證類型給 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，也就是說，如果此模組支援基本驗證或其他驗證類型，它就會公開其中一種驗證類型，而不會同時公開這兩種。  
   
 #### <a name="ekm-device-specific-basic-authentication-using-usernamepassword"></a>使用使用者名稱/密碼的 EKM 裝置特有基本驗證  
- 對於這些使用「使用者名稱/密碼」配對來支援基本驗證的 EKM 模組而言，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會使用認證來提供透明驗證。 如需認證的詳細資訊，請參閱[認證 &#40;Database Engine&#41;](../../../relational-databases/security/authentication-access/credentials-database-engine.md)。  
+ 對於這些使用「使用者名稱/密碼」**配對來支援基本驗證的 EKM 模組而言，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會使用認證來提供透明驗證。 如需認證的詳細資訊，請參閱[認證 &#40;Database Engine&#41;](../../../relational-databases/security/authentication-access/credentials-database-engine.md)。  
   
- 您可以針對 EKM 提供者建立認證，並將它對應至登入 (Windows 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 帳戶)，以便按照登入存取 EKM 模組。 認證的 [身分識別] 欄位包含使用者名稱，而 [密碼] 欄位則包含用來連接至 EKM 模組的密碼。  
+ 您可以針對 EKM 提供者建立認證，並將它對應至登入 (Windows 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 帳戶)，以便按照登入存取 EKM 模組。 認證的 [身分識別]** 欄位包含使用者名稱，而 [密碼]** 欄位則包含用來連接至 EKM 模組的密碼。  
   
  如果 EKM 提供者沒有任何登入對應認證，系統就會使用對應至 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務帳戶的認證。  
   
  一個登入可以具有多個對應認證，只要這些認證用於不同的 EKM 提供者即可。 但是，每個登入的每個 EKM 提供者必須只有一個對應認證。 相同的認證可對應至其他登入。  
   
 #### <a name="other-types-of-ekm-device-specific-authentication"></a>其他 EKM 裝置特有的驗證類型  
- 對於具有 Windows 或「使用者/密碼」組合以外驗證的 EKM 模組而言，就必須獨立於 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外執行驗證。  
+ 對於具有 Windows 或「使用者/密碼」**組合以外驗證的 EKM 模組而言，就必須獨立於 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外執行驗證。  
   
 ### <a name="encryption-and-decryption-by-an-ekm-device"></a>EKM 裝置的加密和解密  
  您可以使用下列函數和功能搭配對稱與非對稱金鑰，加密和解密資料：  

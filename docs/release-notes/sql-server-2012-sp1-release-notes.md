@@ -86,14 +86,14 @@ ms.lasthandoff: 04/11/2017
   
 1.  確認網站集合功能 **[網站集合的 PowerPivot 功能整合]** 為 [使用中]。  
   
-2.  在現有網站的 [網站內容]  頁面中，按一下 [加入應用程式] 。  
+2.  在現有網站的 [網站內容] **** 頁面中，按一下 [加入應用程式] ****。  
   
-3.  按一下 [PowerPivot 圖庫] 。  
+3.  按一下 [PowerPivot 圖庫] ****。  
   
 ### <a name="22-to-use-powerpivot-for-excel-with-excel-2013-you-must-use-the-add-in-that-is-installed-with-excel"></a>2.2 若要使用 PowerPivot for Excel 搭配 Excel 2013，您必須使用與 Excel 一起安裝的增益集  
 **問題** ：在 Office 2010 中，PowerPivot for Excel 是可從 [http://www.microsoft.com/bi/powerpivot.aspx](http://www.microsoft.com/bi/powerpivot.aspx)下載的獨立增益集。 或者，您也可以從 [Microsoft 下載中心](http://www.microsoft.com/download/details.aspx?id=29074)下載此增益集。 請注意，目前可供下載的 PowerPivot 增益集有兩種版本：第一種版本隨附於 SQL Server 2008 R2，而另一種版本則隨附於 SQL Server 2012。 不過，如果是 Office 2013，PowerPivot for Excel 隨附於 Office，而且會在您安裝 Excel 時一併安裝。 雖然 SQL Server 2008 R2 和 SQL Server 2012 版本的 PowerPivot for Excel 2010 與 Excel 2013 不相容，不過如果您想要讓 Excel 2010 與 Excel 2013 並存執行，仍然可以在用戶端電腦上安裝 PowerPivot for Excel 2010。 換言之，這兩種 Excel 版本可以共存，因此對應的 PowerPivot 增益集也可以。  
   
-**因應措施**：若要使用 PowerPivot for Excel 2013，您必須啟用 COM 增益集。 在 Excel 2013 中，選取 [檔案] | [選項] | [增益集]。 在 [管理] 下拉式方塊中，選取 [COM 增益集]，然後按一下 [執行]。 在 [COM 增益集] 中，選取 [Microsoft Office PowerPivot for Excel 2013]  ，然後按一下 [確定] 。  
+**因應措施**：若要使用 PowerPivot for Excel 2013，您必須啟用 COM 增益集。 在 Excel 2013 中，選取 [檔案]**** | [選項]**** | [增益集]****。 在 [管理]**** 下拉式方塊中，選取 [COM 增益集]****，然後按一下 [執行]****。 在 [COM 增益集] ****中，選取 [Microsoft Office PowerPivot for Excel 2013] **** ，然後按一下 [確定] ****。  
   
 ![搭配 [回到頁首] 連結使用的箭號圖示](../release-notes/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示")[內容](#bkmk_top)  
   
@@ -124,7 +124,7 @@ ms.lasthandoff: 04/11/2017
 **因應措施** ：在 SharePoint Server 2013 上安裝 PowerPivot for SharePoint 2013 安裝程式套件 (**spPowerPivot.msi**)。 此安裝程式套件屬於 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 功能套件的一部分。 您可以從 [!INCLUDE[msCoName](../includes/msconame-md.md)] 下載中心的 [SQL Server 2012 SP1 功能套件](http://go.microsoft.com/fwlink/p/?LinkID=268266)下載此功能套件。  
   
 ### <a name="33-power-view-sheets-in-a-powerpivot-workbook-are-deleted-after-a-scheduled-data-refresh"></a>3.3 執行排程的資料重新整理之後，PowerPivot 活頁簿中的 Power View 工作表遭到刪除  
-**問題**：在 PowerPivot for SharePoint 增益集中，如果對含有 Power View 的活頁簿使用 [排定的資料重新整理]  ，將會刪除所有 Power View 工作表。  
+**問題**：在 PowerPivot for SharePoint 增益集中，如果對含有 Power View 的活頁簿使用 [排定的資料重新整理] **** ，將會刪除所有 Power View 工作表。  
   
 **因應措施**：若要搭配含有 Power View 的活頁簿使用 **Scheduled Data Refresh** ，請建立正好是資料模型的 PowerPivot 活頁簿。 建立含有 Excel 工作表及 Power View 工作表的不同活頁簿，讓這個活頁簿透過資料模型連結至 PowerPivot 活頁簿。 只要針對含有資料模型的 PowerPivot 活頁簿來排程資料重新整理即可。  
   

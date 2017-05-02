@@ -50,7 +50,7 @@ ms.lasthandoff: 04/11/2017
   
  若要檢視目前在磁碟上使用的快照集之每個疏鬆檔案的位元組數，請查詢 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][sys.dm_io_virtual_file_stats](../../relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql.md) 動態管理檢視的 **size_on_disk_bytes** 資料行。  
   
- 若要檢視疏鬆檔案使用的磁碟空間，請以滑鼠右鍵按一下 Microsoft Windows 中的檔案，然後按一下 [內容]並查看 [磁碟大小] 值。  
+ 若要檢視疏鬆檔案使用的磁碟空間，請以滑鼠右鍵按一下 Microsoft Windows 中的檔案，然後按一下 [內容]****並查看 [磁碟大小]**** 值。  
   
 ## <a name="find-out-the-maximum-size-of-a-sparse-file"></a>查明疏鬆檔案的大小上限  
  疏鬆檔案的成長大小上限，為建立快照集時對應來源資料庫檔案的大小。 若要知道此大小，您可以使用以下其中一種方式：  

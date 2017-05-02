@@ -67,10 +67,10 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 **[物件總管]**中，按一下加號展開要設定與其 SQL Server Agent 服務連接的伺服器。  
   
-2.  以滑鼠右鍵按一下 [SQL Server Agent]，然後選取 [屬性]。  
+2.  以滑鼠右鍵按一下 [SQL Server Agent]****，然後選取 [屬性]****。  
   
-3.  在 [SQL Server Agent 屬性 <伺服器名稱>] 對話方塊的 [選取頁面] 底下，按一下 [連接]。  
+3.  在 [SQL Server Agent 屬性 <伺服器名稱>]****** 對話方塊的 [選取頁面]**** 底下，按一下 [連接]****。  
   
-4.  在 [SQL Server 連接] 底下選取 [使用 Windows 驗證]，讓 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 利用 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows 驗證連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] [!INCLUDE[ssDE](../../includes/ssde_md.md)] 的執行個體。 連接到 [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] 及更新版本的資料庫需要 Windows 驗證。  
+4.  在 [SQL Server 連接]**** 底下選取 [使用 Windows 驗證]****，讓 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 利用 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows 驗證連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] [!INCLUDE[ssDE](../../includes/ssde_md.md)] 的執行個體。 連接到 [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] 及更新版本的資料庫需要 Windows 驗證。  
   
 

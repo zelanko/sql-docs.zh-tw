@@ -36,17 +36,17 @@ ms.lasthandoff: 04/11/2017
   
   1. 啟動 Database Engine Tuning Advisor，並開啟新的微調工作階段。
   
-  2. 在 [一般] 窗格中選取要微調的資料庫和工作負載。
+  2. 在 [一般]**** 窗格中選取要微調的資料庫和工作負載。
   
-  3. 在 [微調選項] 窗格中選取 [建議資料行存放區索引] 這個核取方塊 (請參閱下圖)。
+  3. 在 [微調選項] 窗格中選取 [建議資料行存放區索引]**** 這個核取方塊 (請參閱下圖)。
   ![DTA 資料行存放區索引微調選項](../../relational-databases/performance/media/dta-columnstore-indexes-tuning-option.gif)
  
-  4. 選取其他微調選項，然後按一下 [開始分析] 按鈕。
+  4. 選取其他微調選項，然後按一下 [開始分析]**** 按鈕。
   
-  5. 完成微調之後，請在 [建議] 窗格中檢視包含任何資料行存放區索引的所有建議 (請參閱下圖)。      
+  5. 完成微調之後，請在 [建議]**** 窗格中檢視包含任何資料行存放區索引的所有建議 (請參閱下圖)。      
   ![DTA 資料行存放區索引建議](../../relational-databases/performance/media/dta-columnstore-index-recommendation.gif)
   
-  6. 按一下 [定義] 超連結，檢視可建立建議索引的 SQL 資料定義語言 (DDL) 陳述式。 依預設，DTA 會在資料行存放區索引名稱中使用後置詞 **col**，以方便識別資料行存放區索引 (請參閱下圖)。
+  6. 按一下 [定義]**** 超連結，檢視可建立建議索引的 SQL 資料定義語言 (DDL) 陳述式。 依預設，DTA 會在資料行存放區索引名稱中使用後置詞 **col**，以方便識別資料行存放區索引 (請參閱下圖)。
   ![DTA 資料行存放區索引定義](../../relational-databases/performance/media/dta-columnstore-index-definition.gif) 
   
   

@@ -48,7 +48,7 @@ ms.lasthandoff: 04/11/2017
 ## <a name="additional-considerations-about-alerts"></a>關於警示的其他考量  
  請注意下列關於警示的其他考量：  
   
--   系統只會針對啟用的原則引發警示。 由於無法啟用 [視需要] 原則，因此無法針對視需要執行的原則引發警示。  
+-   系統只會針對啟用的原則引發警示。 由於無法啟用 [視需要]**** 原則，因此無法針對視需要執行的原則引發警示。  
   
 -   如果您想要採取的動作包含傳送電子郵件訊息，就必須設定郵件帳戶。 我們建議您使用 Database Mail。 如需設定 Database Mail 的詳細資訊，請參閱 [建立 Database Mail 帳戶](../../relational-databases/database-mail/create-a-database-mail-account.md)。  
   

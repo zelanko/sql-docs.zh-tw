@@ -26,7 +26,7 @@ ms.lasthandoff: 04/11/2017
 # <a name="specify-a-merge-subscription-type-and-conflict-resolution-priority"></a>指定合併訂閱類型和衝突解決方法優先權
   在「新增訂閱精靈」的 **[訂閱類型]** 頁面中指定合併訂閱類型和衝突解決優先權。 如需使用此精靈的詳細資訊，請參閱＜ [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md) ＞和＜ [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)＞。  
   
- 訂閱建立後便無法修改其類型，但可以在 [訂閱屬性 - \<發行者>: \<發行集資料庫>] 對話方塊中修改伺服器訂閱類型的優先權。 如需有關存取這個對話方塊的詳細資訊，請參閱＜ [View and Modify Push Subscription Properties](../../relational-databases/replication/view-and-modify-push-subscription-properties.md) ＞與＜ [View and Modify Pull Subscription Properties](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)＞。  
+ 訂閱建立後便無法修改其類型，但可以在 [訂閱屬性 - \<發行者>: \<發行集資料庫>]**** 對話方塊中修改伺服器訂閱類型的優先權。 如需有關存取這個對話方塊的詳細資訊，請參閱＜ [View and Modify Push Subscription Properties](../../relational-databases/replication/view-and-modify-push-subscription-properties.md) ＞與＜ [View and Modify Pull Subscription Properties](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)＞。  
   
 ### <a name="to-specify-a-merge-subscription-type-and-conflict-resolution-priority"></a>若要指定合併訂閱類型與衝突解決優先權  
   
@@ -36,7 +36,7 @@ ms.lasthandoff: 04/11/2017
   
 ### <a name="to-modify-the-conflict-resolution-priority"></a>若要修改衝突解決優先權  
   
-1.  在發行者端的 [訂閱屬性 - \<發行者>: \<發行集資料庫>] 中輸入 [優先權] 選項的值 (0.00 到 99.99)。  
+1.  在發行者端的 [訂閱屬性 - \<發行者>: \<發行集資料庫>]**** 中輸入 [優先權]**** 選項的值 (0.00 到 99.99)。  
   
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

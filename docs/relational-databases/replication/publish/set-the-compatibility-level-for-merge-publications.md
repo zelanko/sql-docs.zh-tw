@@ -36,7 +36,7 @@ ms.lasthandoff: 04/11/2017
      [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 在「新增發行集精靈」的 **[訂閱者類型]** 頁面中設定相容性層級。 如需存取此精靈的詳細資訊，請參閱＜ [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)中設定合併式發行集的相容性層級。 建立發行集快照集後，可以提高相容性層級，但不能降低。 您可以在 [發行集屬性 - \<發行集>] 對話方塊的 [一般] 頁面上，增加相容性層級。 如需有關存取這個對話方塊的詳細資訊，請參閱＜ [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)＞。 如果提高發行集的相容性層級，則對於執行相容性層級之前版本的伺服器，其上的所有現有訂閱均無法再同步處理。  
+ 在「新增發行集精靈」的 **[訂閱者類型]** 頁面中設定相容性層級。 如需存取此精靈的詳細資訊，請參閱＜ [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)中設定合併式發行集的相容性層級。 建立發行集快照集後，可以提高相容性層級，但不能降低。 您可以在 [發行集屬性 - \<發行集>]**** 對話方塊的 [一般]**** 頁面上，增加相容性層級。 如需有關存取這個對話方塊的詳細資訊，請參閱＜ [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)＞。 如果提高發行集的相容性層級，則對於執行相容性層級之前版本的伺服器，其上的所有現有訂閱均無法再同步處理。  
   
 > [!NOTE]  
 >  因為相容性層級對其他發行集屬性有影響，並且發行項屬性對其有效，所以不要變更相容性層級以及對話方塊中相同用途的其他屬性。 發行集的快照集應在變更屬性後重新產生。  
@@ -47,7 +47,7 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="to-increase-the-publication-compatibility-level"></a>若要提高發行集相容性層級  
   
--   您可以在 [發行集屬性 - \<發行集>] 對話方塊的 [一般] 頁面上，選取 [相容性層級]。  
+-   您可以在 [發行集屬性 - \<發行集>]**** 對話方塊的 [一般]**** 頁面上，選取 [相容性層級]****。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  合併式發行集的相容性層級可以在建立發行集時以程式設計方式加以設定，或是在之後以程式設計方式加以修改。 您可以使用複寫預存程序來設定或變更此發行集屬性。  

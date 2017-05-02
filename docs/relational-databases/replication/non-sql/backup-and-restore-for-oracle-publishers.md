@@ -1,27 +1,31 @@
 ---
 title: "Oracle 發行者的備份與還原 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "復原 [SQL Server 複寫], Oracle 發行"
-  - "備份 [SQL Server 複寫], Oracle 發行"
-  - "Oracle 發行 [SQL Server 複寫], 備份與還原"
-  - "還原 [SQL Server 複寫], Oracle 發行"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- recovery [SQL Server replication], Oracle publishing
+- backups [SQL Server replication], Oracle publishing
+- Oracle publishing [SQL Server replication], backup and restore
+- restoring [SQL Server replication], Oracle publishing
 ms.assetid: e5f181d0-cacf-442b-8b7a-202b3cfc358b
 caps.latest.revision: 33
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 33
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 802d157cd886f5656513904c0b519a65b61d67b3
+ms.lasthandoff: 04/11/2017
+
 ---
-# Oracle 發行者的備份與還原
+# <a name="backup-and-restore-for-oracle-publishers"></a>Oracle 發行者的備份與還原
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   在備份與還原時，請遵循下列指導方針：  
@@ -32,7 +36,7 @@ caps.handback.revision: 33
   
 -   如果必須還原「發行者」或「散發者」，請重新初始化所有訂閱。  
   
--   若要從備份還原「訂閱者」(無需重新初始化訂閱)，則在上次訂閱資料庫備份完成後，傳遞到散發資料庫的交易必須仍然可用。 交易的時間長短可視散發保留設定而定。 如需這些設定的詳細資訊，請參閱 [訂閱逾期與停用](../../../relational-databases/replication/subscription-expiration-and-deactivation.md)。  
+-   若要從備份還原「訂閱者」(無需重新初始化訂閱)，則在上次訂閱資料庫備份完成後，傳遞到散發資料庫的交易必須仍然可用。 交易的時間長短可視散發保留設定而定。 如需這些設定的詳細資訊，請參閱[訂閱逾期與停用](../../../relational-databases/replication/subscription-expiration-and-deactivation.md)。  
   
 -   如果「發行者」或「散發者」在還原資料庫後無法變得不一致，則複寫代理程式將記錄錯誤訊息。 此時，您必須卸除並重新建立所有相關的發行集和訂閱：  
   
@@ -44,11 +48,11 @@ caps.handback.revision: 33
   
     3.  執行在步驟 1 中建立的指令碼。  
   
-     如果必須卸除並重新設定 「 發行者 」，卸除 **MSSQLSERVERDISTRIBUTOR** 公用同義字和設定的 Oracle 複寫使用者 **CASCADE** 選項可從 「 Oracle 發行者 」 移除所有複寫物件。  
+     如果必須卸除並重新設定「發行者」，請使用 **CASCADE** 選項卸除 **MSSQLSERVERDISTRIBUTOR** 公用同義字和設定的 Oracle 複寫使用者，以便從「Oracle 發行者」上移除所有複寫物件。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [備份及還原複寫的資料庫](../../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)   
  [設定 Oracle 發行者](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   
- [Oracle 發行概觀](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
+ [Oracle Publishing Overview](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
   
   

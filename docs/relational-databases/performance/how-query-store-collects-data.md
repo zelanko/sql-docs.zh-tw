@@ -61,7 +61,7 @@ ms.lasthandoff: 04/11/2017
   
  ![query-store-process-2processor](../../relational-databases/performance/media/query-store-process-2processor.png "query-store-process-2processor")  
   
- 為了減少 I/O 額外負荷，會從記憶體內部擷取新資料。 寫入作業會排入佇列，隨後排清至磁碟。 查詢和計畫資訊 (見下圖的計劃存放區) 會以最快速度排清。 執行階段統計資料 (執行階段統計資料) 會保留在記憶體中，時間長短依 `SET QUERY_STORE` 陳述式 `DATA_FLUSH_INTERVAL_SECONDS` 選項所定義的期限。 SSMS 的 [查詢存放區] 對話方塊讓您輸入 [資料排清間隔 (分鐘)]，其可轉換為秒。  
+ 為了減少 I/O 額外負荷，會從記憶體內部擷取新資料。 寫入作業會排入佇列，隨後排清至磁碟。 查詢和計畫資訊 (見下圖的計劃存放區) 會以最快速度排清。 執行階段統計資料 (執行階段統計資料) 會保留在記憶體中，時間長短依 `SET QUERY_STORE` 陳述式 `DATA_FLUSH_INTERVAL_SECONDS` 選項所定義的期限。 SSMS 的 [查詢存放區] 對話方塊讓您輸入 [資料排清間隔 (分鐘)]****，其可轉換為秒。  
   
  ![query-store-process-3plan](../../relational-databases/performance/media/query-store-process-3.png "query-store-process-3plan")  
   

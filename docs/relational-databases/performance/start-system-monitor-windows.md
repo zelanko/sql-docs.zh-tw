@@ -29,7 +29,7 @@ ms.lasthandoff: 04/11/2017
   
 ### <a name="to-start-system-monitor-in-windows"></a>若要在 Windows 中啟動系統監視器  
   
-1.  在 [開始] 功能表中指向 [執行]，在 [執行] 對話方塊中輸入 **perfmon**，然後按一下 [確定]。  
+1.  在 [開始]**** 功能表中指向 [執行]****，在 [執行] 對話方塊中輸入 **perfmon**，然後按一下 [確定]****。  
   
 ## <a name="see-also"></a>另請參閱  
  [執行系統監視器](../../relational-databases/performance-monitor/run-system-monitor.md)  

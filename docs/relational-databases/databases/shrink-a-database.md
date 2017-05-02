@@ -86,7 +86,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的執行個體，然後展開該執行個體。  
   
-2.  展開 [資料庫]，然後以滑鼠右鍵按一下您要壓縮的資料庫。  
+2.  展開 [資料庫]****，然後以滑鼠右鍵按一下您要壓縮的資料庫。  
   
 3.  指向 **[工作]**的 **[壓縮]**，然後按一下 **[資料庫]**。  
   
@@ -115,7 +115,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  在標準列中，按一下 **[新增查詢]**。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。 這個範例會使用 [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md) 縮小 `UserDB` 資料庫中的資料和記錄檔大小，使資料庫中能有 `10` % 的可用空間。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] ****。 這個範例會使用 [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md) 縮小 `UserDB` 資料庫中的資料和記錄檔大小，使資料庫中能有 `10` % 的可用空間。  
   
  [!code-sql[DBCC#DBCC_SHRINKDB1](../../relational-databases/databases/codesnippet/tsql/shrink-a-database_1.sql)]  
   

@@ -1,36 +1,40 @@
 ---
-title: "資源管理員資源集區 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "資源管理員, 資源集區"
-  - "資源集區 [SQL Server], 概觀"
-  - "資源集區 [SQL Server]"
+title: "資源管理員資源集區 | Microsoft 文件"
+ms.custom: 
+ms.date: 03/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Resource Governor, resource pool
+- resource pool [SQL Server], overview
+- resource pool [SQL Server]
 ms.assetid: 306b6278-e54f-42e6-b746-95a9315e0cbe
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 10b74a185e59a6b2973ea17fb4c68b61e781953f
+ms.lasthandoff: 04/11/2017
+
 ---
-# 資源管理員資源集區
+# <a name="resource-governor-resource-pool"></a>資源管理員資源集區
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資源管理員中，資源集區代表 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體的實體資源子集。 資源管理員可讓您針對內送應用程式要求可在資源集區使用的 CPU、實體 IO 和記憶體數量指定限制。 每個資源集區都會包含一個或多個工作負載群組。 在工作階段啟動時，資源管理員分類會將此工作階段指派給特定的工作負載群組，並且此工作階段必須使用指派給該工作負載群組的資源來執行。  
+  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資源管理員中，資源集區代表 [!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體的實體資源子集。 資源管理員可讓您針對內送應用程式要求可在資源集區使用的 CPU、實體 IO 和記憶體數量指定限制。 每個資源集區都會包含一個或多個工作負載群組。 在工作階段啟動時，資源管理員分類會將此工作階段指派給特定的工作負載群組，並且此工作階段必須使用指派給該工作負載群組的資源來執行。  
   
-## 資源集區概念  
+## <a name="resource-pool-concepts"></a>資源集區概念  
  資源集區 (或集區) 代表伺服器的實體資源。 您可以將集區視為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體內部的虛擬 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 集區具有兩個部分。 其中一個部分不會與其他集區重疊，以便達到最小資源保留的效果。 另一個部分則與其他集區共用，以便支援最大可能的資源耗用量。 集區資源的定義方式為針對各資源 (CPU、記憶體和實體 IO) 指定下列一個或多個設定：  
   
 -   **MIN_CPU_PERCENT 和 MAX_CPU_PERCENT**  
   
-     這兩個設定是在發生 CPU 競爭時，資源集區中所有要求的保證平均 CPU 頻寬下限和上限。 您可以使用這些設定，根據每個工作負載的需求，為多個工作負載建立可預測的 CPU 資源使用量。 例如，假設公司的銷售和行銷部門共用相同的資料庫。 銷售部門有高查詢優先權的 CPU 運算密集工作負載。 行銷部門也有 CPU 運算密集的工作負載，但是查詢優先權較低。 透過為各部門建立個別的資源集區，您可以指派銷售資源集區的 CPU 百分比「下限」為 70，而行銷資源集區的 CPU 百分比「上限」為 30。 這樣可以確保銷售工作負載接收到其所需的 CPU 資源，而行銷工作負載會與銷售工作負載的 CPU 需求隔離。 請注意，CPU 百分比上限是機率的最大值。 如果有可用的 CPU 容量，工作負載最多可以使用到 100%。 此上限值只適用於發生 CPU 資源競爭時。 在此範例中，如果銷售工作負載關閉，行銷工作負載可在需要時使用 100% 的 CPU。  
+     這兩個設定是在發生 CPU 競爭時，資源集區中所有要求的保證平均 CPU 頻寬下限和上限。 您可以使用這些設定，根據每個工作負載的需求，為多個工作負載建立可預測的 CPU 資源使用量。 例如，假設公司的銷售和行銷部門共用相同的資料庫。 銷售部門有高查詢優先權的 CPU 運算密集工作負載。 行銷部門也有 CPU 運算密集的工作負載，但是查詢優先權較低。 透過為各部門建立個別的資源集區，您可以指派銷售資源集區的 CPU 百分比「下限」**為 70，而行銷資源集區的 CPU 百分比「上限」**為 30。 這樣可以確保銷售工作負載接收到其所需的 CPU 資源，而行銷工作負載會與銷售工作負載的 CPU 需求隔離。 請注意，CPU 百分比上限是機率的最大值。 如果有可用的 CPU 容量，工作負載最多可以使用到 100%。 此上限值只適用於發生 CPU 資源競爭時。 在此範例中，如果銷售工作負載關閉，行銷工作負載可在需要時使用 100% 的 CPU。  
   
 -   **CAP_CPU_PERCENT**  
   
@@ -107,13 +111,13 @@ caps.handback.revision: 17
   
  **外部集區**  
   
- 使用者可以定義外部集區，以定義外部處理序的資源。 針對 R 服務，此會特別用來管理 `rterm.exe`、`BxlServer.exe` 及其所衍生的其他處理序。  
+ 使用者可以定義外部集區，以定義外部處理序的資源。 針對 R 服務，此會特別用來管理 `rterm.exe`、 `BxlServer.exe` 及其所衍生的其他處理序。  
   
  **使用者定義的資源集區**  
   
  使用者定義的資源集區是您為環境中特定的工作負載所建立的資源集區。 資源管理員會針對建立、變更和卸除資源集區提供 DDL 陳述式。  
   
-## 資源集區工作  
+## <a name="resource-pool-tasks"></a>資源集區工作  
   
 |工作描述|主題|  
 |----------------------|-----------|  
@@ -121,7 +125,7 @@ caps.handback.revision: 17
 |描述如何變更資源集區設定。|[變更資源集區設定](../../relational-databases/resource-governor/change-resource-pool-settings.md)|  
 |描述如何刪除資源集區。|[刪除資源集區](../../relational-databases/resource-governor/delete-a-resource-pool.md)|  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [資源管理員](../../relational-databases/resource-governor/resource-governor.md)   
  [資源管理員工作負載群組](../../relational-databases/resource-governor/resource-governor-workload-group.md)   
  [資源管理員分類函數](../../relational-databases/resource-governor/resource-governor-classifier-function.md)   
@@ -129,3 +133,4 @@ caps.handback.revision: 17
  [檢視資源管理員屬性](../../relational-databases/resource-governor/view-resource-governor-properties.md)  
   
   
+

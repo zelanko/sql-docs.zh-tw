@@ -29,7 +29,7 @@ ms.lasthandoff: 04/11/2017
   
 ### <a name="to-insert-a-tracer-token-and-view-information-on-the-token"></a>插入追蹤 Token 並檢視 Token 上的資訊  
   
-1.  連接到 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的「發行者」，展開伺服器節點，再以滑鼠右鍵按一下 [複寫] 資料夾，然後按一下 [啟動複寫監視器]。  
+1.  連接到 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的「發行者」，展開伺服器節點，再以滑鼠右鍵按一下 [複寫]**** 資料夾，然後按一下 [啟動複寫監視器]****。  
   
     複寫監視器隨即啟動。  
   

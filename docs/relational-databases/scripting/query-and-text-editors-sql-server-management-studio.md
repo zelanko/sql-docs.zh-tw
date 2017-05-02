@@ -70,7 +70,7 @@ ms.lasthandoff: 04/11/2017
  這個視窗用來檢視查詢結果。 這個視窗能夠以方格或文字來顯示結果，或者將結果導向至檔案。 結果方格可以顯示為個別的索引標籤視窗。  
   
  **IntelliSense**  
- 在編輯器的 [編輯] 功能表上，指向 [IntelliSense] 來檢視 [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense 選項。  
+ 在編輯器的 [編輯]**** 功能表上，指向 [IntelliSense]**** 來檢視 [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense 選項。  
   
  **色彩編碼**  
  顯示每種語法元素類型的不同色彩，改進了複雜陳述式的可讀性。  

@@ -24,7 +24,7 @@ ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="sort-in-ascending-or-descending-order-visual-database-tools"></a>以遞增或遞減順序排序 (Visual Database Tools)
-您可以使用  或  關鍵字搭配  子句，以遞增或遞減的方式，排序結果集中一個或多個資料行內的查詢結果。  
+您可以使用 **** 或 **** 關鍵字搭配 **** 子句，以遞增或遞減的方式，排序結果集中一個或多個資料行內的查詢結果。  
   
 > [!NOTE]  
 > 排序次序一部份取決於資料行的定序序列。 您可以在 [定序] [](../../ssms/visual-db-tools/collation-dialog-box-visual-database-tools.md)對話方塊中變更定序序列。  
@@ -33,9 +33,9 @@ ms.lasthandoff: 04/11/2017
   
 ### <a name="to-specify-or-change-the-order-in-which-results-are-sorted"></a>指定或變更已經排序結果的順序  
   
-1.  在 [準則窗格](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md) 中，對要重新排序的資料行按一下 [排序類型] 欄位。  
+1.  在 [準則窗格](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md) 中，對要重新排序的資料行按一下 [排序類型]**** 欄位。  
   
-2.  選擇 [遞增] 或 [遞減]以指定資料行的排序順序。  
+2.  選擇 [遞增]**** 或 [遞減]****以指定資料行的排序順序。  
   
 請注意，使用 [準則窗格] 時，查詢的 UNION 子句會變更，以符合您最近的動作。  
   

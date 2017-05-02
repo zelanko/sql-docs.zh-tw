@@ -35,8 +35,8 @@ ms.lasthandoff: 04/11/2017
 
 ### <a name="connection-improvements"></a>連線功能改進
 
-* 在 [瀏覽] 索引標籤中的新搜尋方塊可協助您篩選您的本機伺服器、網路伺服器和 Azure SQL 資料庫。 如果您有大量伺服器或資料庫出現在這些清單中，此功能非常有用。
-* [歷程記錄] 索引標籤有右鍵功能表選項可釘選/取消釘選 [我的最愛]，還有新選項可從歷程記錄移除連線。
+* 在 [瀏覽]**** 索引標籤中的新搜尋方塊可協助您篩選您的本機伺服器、網路伺服器和 Azure SQL 資料庫。 如果您有大量伺服器或資料庫出現在這些清單中，此功能非常有用。
+* [歷程記錄]**** 索引標籤有右鍵功能表選項可釘選/取消釘選 [我的最愛]，還有新選項可從歷程記錄移除連線。
 
 ### <a name="sqlpackage-and-dacfx-api-improvements"></a>SqlPackage 和 DacFx API 功能改進
 
@@ -358,7 +358,7 @@ SSDT 公開上市 (GA) 現在已發行。 2016 年 6 月的 SSDT GA 更新加入
   
 -   **SSIS 封裝專案範本**。 SSIS 目錄效能改善：對於 non-ssis-admin 使用者而言，大部分 SSIS 目錄檢視效能已有改善。  
   
--   **SSAS 專案範本**包括 Analysis Services 中表格式模型專案的增強功能。 您可以使用「檢視程式碼」命令來檢視 JSON 中的模型定義。 如果您並非用 Visual Studio 2015 的完整功能版，可能需要使用此版本才能取得 JSON 編輯器。 您可以免費下載 [Visual Studio Community 版本](https://www.visualstudio.com/downloads/download-visual-studio-vs.aspx)。  
+-   **SSAS 專案範本**包括 Analysis Services 中表格式模型專案的增強功能。 您可以使用「檢視程式碼」****命令來檢視 JSON 中的模型定義。 如果您並非用 Visual Studio 2015 的完整功能版，可能需要使用此版本才能取得 JSON 編輯器。 您可以免費下載 [Visual Studio Community 版本](https://www.visualstudio.com/downloads/download-visual-studio-vs.aspx)。  
   
 ## <a name="ssdt-october-2015-preview"></a>SSDT 2015 年 10 月預覽  
   

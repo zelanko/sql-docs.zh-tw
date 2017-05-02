@@ -23,7 +23,7 @@ ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="sql-comment-dialog-box-visual-database-tools"></a>SQL 註解對話方塊 (Visual Database Tools)
-這個對話方塊提供可編輯區域，您可在其中撰寫查詢的詳細說明。 若要存取此對話方塊，可在查詢和檢視表設計工具中開啟查詢或檢視，然後從 [屬性] 視窗中選取 [SQL 註解]，接著按一下 [屬性] 欄位右方的省略符號 (**…**)。  
+這個對話方塊提供可編輯區域，您可在其中撰寫查詢的詳細說明。 若要存取此對話方塊，可在查詢和檢視表設計工具中開啟查詢或檢視，然後從 [屬性]**** 視窗中選取 [SQL 註解]****，接著按一下 [屬性] 欄位右方的省略符號 (**…**)。  
   
 ## <a name="see-also"></a>另請參閱  
 [顯示查詢屬性 &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/show-query-properties-visual-database-tools.md)  

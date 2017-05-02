@@ -27,7 +27,7 @@ ms.lasthandoff: 04/11/2017
 您可以利用 [說明] 功能表和《[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] 線上叢書》，在 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] 中取得使用者輔助程式。 [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] 中的 [說明] 功能表提供了幾個不同的路徑，供您取得 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)]的相關資訊。 您也可以利用它來存取 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] 社群和 MSDN Online 資源，先前的 [說明] 環境並未提供這項功能。 另外，您現在也可以將 [說明] 環境設定成在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] 環境內啟動，或在它自己的相關外部視窗中啟動。  
   
 ## <a name="the-help-interface"></a>說明介面  
-[內容] 和 [索引] 提供類似於 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] 使用者的功能和介面。 其他選項包括：  
+[內容]**** 和 [索引]**** 提供類似於 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] 使用者的功能和介面。 其他選項包括：  
   
 -   **如何**  
   
@@ -47,7 +47,7 @@ ms.lasthandoff: 04/11/2017
   
     將使用者主題書籤儲存起來，以便日後方便存取。  
   
-[如何使用輔助說明] ([!INCLUDE[msCoName](../includes/msconame_md.md)] Document Explorer 說明) 會將使用者連結到說明檢視器的相關文件集，但主題是在《[!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] 線上叢書》以外的集合中。 如需有關說明檢視器的資訊，請參閱《[!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] 線上叢書》之 [說明] 功能表中的 [如何使用輔助說明]。  
+[如何使用輔助說明] ([!INCLUDE[msCoName](../includes/msconame_md.md)] Document Explorer 說明) 會將使用者連結到說明檢視器的相關文件集，但主題是在《[!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] 線上叢書》以外的集合中。 如需有關說明檢視器的資訊，請參閱《[!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] 線上叢書》之 [說明] 功能表中的 [如何使用輔助說明]****。  
   
 ## <a name="msdn-online-and-sql-server-communities"></a>MSDN Online 和 SQL Server 社群  
 [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] 中的說明也提供了若干方式，供使用者連絡 Web 中的 MSDN Online 和 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)]焦點社群，以取得相關資訊。 您可以：  
@@ -58,9 +58,9 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="to-access-sql-server-focused-communities-from-the-how-do-i-page"></a>從 [如何] 頁面存取 SQL Server 焦點社群  
   
-1.  在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] 的 [說明] 功能表上，按一下 [如何]。  
+1.  在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] 的 [說明]**** 功能表上，按一下 [如何]****。  
   
-2.  此時會開啟 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] 的 [如何] 頁面。 在 [社群連結] 提要欄位中，按一下您要存取的社群網站的名稱。  
+2.  此時會開啟 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] 的 [如何]**** 頁面。 在 [社群連結] 提要欄位中，按一下您要存取的社群網站的名稱。  
   
     > [!NOTE]  
     > 執行 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] 的電腦必須直接連接 Web。  
@@ -69,21 +69,21 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="to-enable-online-search"></a>啟用線上搜尋  
   
-1.  在 **[工具]** 功能表上，按一下 **[選項]**。 在 [選項] 對話方塊中，展開 [環境] 和 [說明] 節點 (必要的話)，再按一下 [線上]。  
+1.  在 **[工具]** 功能表上，按一下 **[選項]**。 在 [選項]**** 對話方塊中，展開 [環境]**** 和 [說明]**** 節點 (必要的話)，再按一下 [線上]****。  
   
-2.  在 [載入說明內容時] 區域中，選取線上選項。  
+2.  在 [載入說明內容時]**** 區域中，選取線上選項。  
   
-3.  在 [搜尋這些提供者] 清單中，選取您要搜尋的搜尋提供者，並清除那些您不想要的提供者。  
+3.  在 [搜尋這些提供者]**** 清單中，選取您要搜尋的搜尋提供者，並清除那些您不想要的提供者。  
   
-4.  如果 [Codezone 社群] 是您選取的其中一個搜尋提供者，請在 [Codezone 社群] 清單中選取及清除適當的項目。  
+4.  如果 [Codezone 社群]**** 是您選取的其中一個搜尋提供者，請在 [Codezone 社群]**** 清單中選取及清除適當的項目。  
   
 5.  按一下 **[確定]**。  
   
 #### <a name="to-search-msdn-online-and-sql-server-focused-communities-from-the-search-page"></a>從 [搜尋] 頁面搜尋 MSDN Online 和 SQL Server 焦點社群  
   
-1.  在 [說明] 功能表上，按一下 [搜尋]。  
+1.  在 [說明]**** 功能表上，按一下 [搜尋]****。  
   
-2.  在 [搜尋] 文字方塊中，輸入您的搜尋詞彙，再按一下 [搜尋]。  
+2.  在 [搜尋]**** 文字方塊中，輸入您的搜尋詞彙，再按一下 [搜尋]****。  
   
 不論您是否利用可用的篩選 (技術、語言和主題類型) 來執行搜尋，此時都會針對所有選取的搜尋提供者來執行您的搜尋。  
   
@@ -93,12 +93,12 @@ ms.lasthandoff: 04/11/2017
 您也可以將線上叢書開啟成為 [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)]內的文件視窗。 當螢幕空間有限，且您想要利用 [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] 及其功能來隱藏視窗時，這個方式是您最佳的選擇。  
   
 > [!NOTE]  
-> 如果線上叢書要完全在 [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] 之外獨立運作，請從 [開始] 功能表中開啟《[!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] 線上叢書》，它不會反應您在 [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] 環境中的動作，當您結束 [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] 時，也不會關閉它。  
+> 如果線上叢書要完全在 [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] 之外獨立運作，請從 [開始]**** 功能表中開啟《[!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] 線上叢書》，它不會反應您在 [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] 環境中的動作，當您結束 [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] 時，也不會關閉它。  
   
 #### <a name="to-configure-help-and-sql-server-books-online-to-launch-inside-the-management-studio-window"></a>設定在 [Management Studio] 視窗內啟動 [說明] 和《SQL Server 線上叢書》  
   
-1.  在 [工具] 功能表上，按一下 [選項]、依序展開 [環境] 和 [說明]，再按一下 [一般]。  
+1.  在 [工具]**** 功能表上，按一下 [選項]****、依序展開 [環境]**** 和 [說明]****，再按一下 [一般]****。  
   
-2.  在 [顯示說明使用的工具] 方塊中，按一下 [整合式說明檢視器]。  
+2.  在 [顯示說明使用的工具]**** 方塊中，按一下 [整合式說明檢視器]****。  
   
 

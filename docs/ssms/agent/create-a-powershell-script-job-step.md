@@ -75,7 +75,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] ****。  
   
     ```  
     -- creates a PowerShell job step that finds the processes

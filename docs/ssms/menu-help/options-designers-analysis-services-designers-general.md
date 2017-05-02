@@ -23,7 +23,7 @@ ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="options-designers---analysis-services-designers---general"></a>選項 (設計工具 - Analysis Services 設計工具 - 一般)
-使用 [設計師]、[維護計畫]、[Analysis Services]、[一般] 頁面，來決定 Analysis Services 設計師的預設行為。  
+使用 [設計師]****、[維護計畫]****、[Analysis Services]****、[一般]**** 頁面，來決定 Analysis Services 設計師的預設行為。  
   
 ## <a name="connectivity"></a>連接性  
 查詢逾時  

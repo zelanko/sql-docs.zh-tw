@@ -210,7 +210,7 @@ ms.lasthandoff: 04/11/2017
   
 上述語法適用於建立資料表變數 *inline*。 此內嵌語法不支援記憶體最佳化。 因此請將 TYPE 的內嵌語法轉換成明確語法。  
   
-範圍︰第一個 go 分隔批次所建立的 TYPE 定義，即使在關閉並重新啟動伺服器之後仍然存在。 但在第一個 go 分隔符號之後，宣告的資料表 @tvTableC 只會保存至達到下一個 go 且批次結束時。  
+範圍**︰第一個 go 分隔批次所建立的 TYPE 定義，即使在關閉並重新啟動伺服器之後仍然存在。 但在第一個 go 分隔符號之後，宣告的資料表 @tvTableC 只會保存至達到下一個 go 且批次結束時。  
   
   
   
@@ -420,7 +420,7 @@ ms.lasthandoff: 04/11/2017
 - [估計記憶體最佳化資料表的記憶體需求](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md)  
 - [記憶體最佳化資料表中的資料表和資料列大小：計算範例](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)  
   
-針對較大的資料表變數，非叢集索引會使用比記憶體最佳化「資料表」更多的記憶體。 資料列計數和索引鍵愈大，所增加的差異愈多。  
+針對較大的資料表變數，非叢集索引會使用比記憶體最佳化「資料表」**更多的記憶體。 資料列計數和索引鍵愈大，所增加的差異愈多。  
   
 如果每次存取只能使用一個索引鍵值來存取記憶體資料表變數，則雜湊索引可能比非叢集索引更適合。 不過，如果您無法估計正確的 BUCKET_COUNT，則非叢集索引是不錯的次要選擇。  
   

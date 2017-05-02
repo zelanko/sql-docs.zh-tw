@@ -38,7 +38,7 @@ INSERT INTO Person VALUES
    ,('P3','Joe',N'<SomeTag attr3="data" PersonID="P">content</SomeTag>');  
 ```  
   
- 此查詢從 `Person` 資料表擷取資料行。 對於 `Overflow` 資料行，並未指定 *AttributeName*，但「指示詞」會將 `XMLTEXT` 設為提供通用資料表資料行名稱的一部分。  
+ 此查詢從 `Person` 資料表擷取資料行。 對於 `Overflow` 資料行，並未指定 *AttributeName*，但「指示詞」**會將 `XMLTEXT` 設為提供通用資料表資料行名稱的一部分。  
   
 ```  
 SELECT 1 as Tag, NULL as parent,  
@@ -101,7 +101,7 @@ FOR XML EXPLICIT;
   
  如果以 `xmltext` 指示詞指定 *AttributeName*，則 <`overflow`> 元素的屬性將會新增為封閉式 <`Parent`> 元素的子元素屬性。 為 *AttributeName* 所指定的名稱將成為子元素的名稱。  
   
- 在此查詢中，*AttributeName* (<`overflow`>) 會與 `xmltext` 指示詞一起指定：  
+ 在此查詢中，*AttributeName* (<`overflow`>) 會與 `xmltext` 指示詞一起指定：**  
   
 ```  
 SELECT 1 as Tag, NULL as parent,  

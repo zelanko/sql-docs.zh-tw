@@ -23,10 +23,10 @@ ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="connect-to-microsoft-azure-storage"></a>連接到 Microsoft Azure 儲存體
-使用 [Windows Azure 儲存體連接] 對話方塊可以指定儲存體帳戶並且驗證 Windows Azure 的連接。  
+使用 [Windows Azure 儲存體連接]**** 對話方塊可以指定儲存體帳戶並且驗證 Windows Azure 的連接。  
   
 ## <a name="options"></a>選項。  
-請指定有關 Windows Azure 帳戶的下列資訊，然後按一下 [下一步] 繼續進行。  
+請指定有關 Windows Azure 帳戶的下列資訊，然後按一下 [下一步]**** 繼續進行。  
   
 1.  **儲存體帳戶** - 指定儲存體帳戶名稱。  
   

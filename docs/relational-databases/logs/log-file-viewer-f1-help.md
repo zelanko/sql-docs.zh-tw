@@ -1,44 +1,48 @@
 ---
 title: "記錄檔檢視器 F1 說明 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "sql13.swb.configurelogs.errorlog.f1"
-helpviewer_keywords: 
-  - "記錄檔檢視器"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- sql13.swb.configurelogs.errorlog.f1
+helpviewer_keywords:
+- Log File Viewer
 ms.assetid: 2243845c-4880-4aa0-9ee8-0a97a128996b
 caps.latest.revision: 38
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 74f75dddf710244e52115612b99483237ce3d7b5
+ms.lasthandoff: 04/11/2017
+
 ---
-# 記錄檔檢視器 F1 說明
+# <a name="log-file-viewer-f1-help"></a>記錄檔檢視器 F1 說明
   記錄檔檢視器會顯示許多不同元件的記錄資訊。 當記錄檔檢視器開啟時，使用 **[選取記錄]** 窗格以選取您要顯示的記錄檔。 每個記錄檔都會顯示適用於該記錄檔類型的資料行。  
   
  可用的記錄檔取決於記錄檔檢視器的開啟方式而定。 如需詳細資訊，請參閱[開啟記錄檔檢視器](../../relational-databases/logs/open-log-file-viewer.md)。  
   
- 您可以在 [工具/選項] 對話方塊的 [SQL Server 物件總管/命令] 頁面中，設定要顯示的稽核記錄檔資料列數目。 如需稽核記錄檔顯示之資料行的描述，請參閱 [sys.fn_get_audit_file &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md)。  
+ 您可以在 [工具/選項]**** 對話方塊的 [SQL Server 物件總管/命令]**** 頁面中，設定要顯示的稽核記錄檔資料列數目。 如需稽核記錄檔顯示之資料行的描述，請參閱 [sys.fn_get_audit_file &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md)。  
   
-## 選項  
+## <a name="options"></a>選項。  
  **載入記錄**  
  開啟對話方塊供您指定所要載入的記錄檔。  
   
  **匯出**  
- 開啟對話方塊，以讓您將 [記錄檔摘要] 格線中所顯示的資訊匯出至文字檔。  
+ 開啟對話方塊，以讓您將 [記錄檔摘要]**** 格線中所顯示的資訊匯出至文字檔。  
   
  **重新整理**  
  重新整理所選取之記錄檔的檢視。 當套用任何篩選設定時， **[重新整理]** 按鈕會從目標伺服器重新讀取選取的記錄檔。  
   
  **篩選**  
- 開啟對話方塊，以讓您指定用來篩選記錄檔的設定，例如 [連接]、[日期] 或其他的 [一般] 篩選準則。  
+ 開啟對話方塊，以讓您指定用來篩選記錄檔的設定，例如 [連接]****、[日期]**** 或其他的 [一般]**** 篩選準則。  
   
  **搜尋**  
  搜尋記錄檔中的特定文字。 不支援使用萬用字元搜尋。  
@@ -53,9 +57,9 @@ caps.handback.revision: 38
  選取資料列以顯示頁面下方有關選取之事件資料列的其他詳細資料。 將資料行拖曳至方格中的新位置，以重新排序資料行。 將方格標頭中的資料行分隔線拖曳至左邊或右邊，以調整資料行大小。 在方格標頭中按兩下資料行分隔線，自動將資料行大小調整為內容寬度。  
   
  **執行個體**  
- 發生事件之執行個體的名稱。 顯示為 *\<電腦名稱*\\*執行個體名稱>*。  
+ 發生事件之執行個體的名稱。 顯示為 *&lt;電腦名稱*\\*執行個體名稱&gt;*。  
   
-## 經常顯示的資料行  
+## <a name="frequently-displayed-columns"></a>經常顯示的資料行  
  **日期**  
  顯示事件的日期。  
   
@@ -71,12 +75,12 @@ caps.handback.revision: 38
  **記錄來源**  
  顯示擷取事件之來源記錄的描述。  
   
-## Permissions  
+## <a name="permissions"></a>Permissions  
  若要存取線上 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的記錄檔，需要 securityadmin 固定伺服器角色的成員資格。  
   
- 若要存取離線 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的記錄檔，您必須具有 **Root\Microsoft\SqlServer\ComputerManagement10** WMI 命名空間以及儲存記錄檔之資料夾的讀取權限。 如需詳細資訊，請參閱[檢視離線記錄檔](../../relational-databases/logs/view-offline-log-files.md)主題中的＜安全性＞一節。  
+ 若要存取離線 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的記錄檔，您必須具有 **Root\Microsoft\SqlServer\ComputerManagement10** WMI 命名空間以及儲存記錄檔之資料夾的讀取權限。 如需詳細資訊，請參閱 [檢視離線記錄檔](../../relational-databases/logs/view-offline-log-files.md)主題中的＜安全性＞一節。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [記錄檔檢視器](../../relational-databases/logs/log-file-viewer.md)   
  [開啟記錄檔檢視器](../../relational-databases/logs/open-log-file-viewer.md)   
  [檢視離線記錄檔](../../relational-databases/logs/view-offline-log-files.md)  

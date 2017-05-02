@@ -55,7 +55,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 [物件總管] 中，選取您想要顯示屬性的資料表。  
   
-2.  以滑鼠右鍵按一下資料表，然後從捷徑功能表中選擇 [屬性]。 如需詳細資訊，請參閱 [資料表屬性 - SSMS](../../relational-databases/tables/table-properties-ssms.md)。  
+2.  以滑鼠右鍵按一下資料表，然後從捷徑功能表中選擇 [屬性]****。 如需詳細資訊，請參閱 [資料表屬性 - SSMS](../../relational-databases/tables/table-properties-ssms.md)。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

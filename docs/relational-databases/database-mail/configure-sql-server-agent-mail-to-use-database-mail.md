@@ -58,7 +58,7 @@ ms.lasthandoff: 04/11/2017
   
 -   在 [物件總管] 中，展開 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。  
   
--   以滑鼠右鍵按一下 [SQL Server Agent]，然後按一下 [屬性]。  
+-   以滑鼠右鍵按一下 [SQL Server Agent]****，然後按一下 [屬性]****。  
   
 -   按一下 **[警示系統]**。  
   

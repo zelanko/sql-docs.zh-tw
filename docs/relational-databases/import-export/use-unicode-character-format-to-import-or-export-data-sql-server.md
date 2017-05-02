@@ -61,7 +61,7 @@ Error = [Microsoft][ODBC Driver 13 for SQL Server]Invalid character value for ca
 
 * 資料檔案中的第一個欄位不是字元。
 
-請考慮下列因應措施是否適用於情況︰
+請考慮下列因應措施是否適用於**情況︰
 * 不使用格式檔案。  以下是此因應措施的範例。您可以參閱 [不使用格式檔案而使用 bcp 與 Unicode 字元格式匯入資料](#bcp_widechar_import)。
 
 * 使用 **-c** 參數而不使用 **-w**。

@@ -21,6 +21,6 @@ ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="alerts-node-sql-server-agent-f1-help"></a>警示節點 (SQL Server Agent F1 說明)
-本節包含 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 中，[物件總管] 之 [警示] 節點的 F1 說明。  
+本節包含 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 中，[物件總管] 之 [警示]**** 節點的 F1 說明。  
   
 

@@ -39,7 +39,7 @@ GO
 ```  
   
 ###  <a name="BasicsSemanticSearch"></a> 安裝語意搜尋  
- 若要安裝語意搜尋，請在安裝 SQL Server 期間選取 [要安裝的功能] 頁面上的 [搜尋的全文檢索和語意擷取]。  
+ 若要安裝語意搜尋，請在安裝 SQL Server 期間選取 [要安裝的功能]**** 頁面上的 [搜尋的全文檢索和語意擷取]****。  
   
  統計語意搜尋相依於全文檢索搜尋。 這兩個選擇性功能會同時安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   

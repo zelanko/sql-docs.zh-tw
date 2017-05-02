@@ -39,7 +39,7 @@ ms.lasthandoff: 04/11/2017
  檔案備份可以當成差異檔案備份的 *「差異基底」* (Differential base)。 如需詳細資訊，請參閱[差異備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md)。  
   
 > [!NOTE]  
->  完整檔案備份通常稱為「檔案備份」，但與「差異檔案備份」明確對照時除外。  
+>  完整檔案備份通常稱為「檔案備份」**，但與「差異檔案備份」**明確對照時除外。  
   
  **本主題內容：**  
   

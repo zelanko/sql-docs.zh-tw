@@ -36,14 +36,14 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="use-the-query-store-page-in-management-studio"></a>使用 Management Studio 中的查詢存放區頁面  
   
-1.  在 [物件總管] 中，以滑鼠右鍵按一下資料庫，然後按一下 [屬性] 。  
+1.  在 [物件總管] 中，以滑鼠右鍵按一下資料庫，然後按一下 [屬性] ****。  
   
     > [!NOTE]  
     >  至少需要 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 的 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]版本。  
   
-2.  在 [資料庫屬性]  對話方塊中，選取 [查詢存放區]  頁面。  
+2.  在 [資料庫屬性] **** 對話方塊中，選取 [查詢存放區] **** 頁面。  
   
-3.  在 [作業模式 (要求)]  方塊中，選取 [開啟] 。  
+3.  在 [作業模式 (要求)] **** 方塊中，選取 [開啟] ****。  
   
 #### <a name="use-transact-sql-statements"></a>使用 Transact-SQL 陳述式  
   
@@ -95,11 +95,11 @@ JOIN sys.query_store_query_text AS Txt
   
  ![物件總管中的查詢存放區樹狀結構](../../relational-databases/performance/media/objectexplorerquerystore.PNG "物件總管中的查詢存放區樹狀結構")  
   
- 選取 [迴歸查詢]  ，開啟 **中的 [迴歸查詢]**[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]窗格。 [迴歸查詢] 窗格會顯示查詢存放區中的查詢與計劃。 頂端的下拉式清單方塊，可供您依據各種條件選取查詢。 選取計劃即可以圖形方式檢視查詢計劃。 提供有按鈕可供檢視來源查詢、強制執行或取消強制執行查詢計劃，以及重新整理顯示畫面。  
+ 選取 [迴歸查詢] **** ，開啟 **中的 [迴歸查詢]**[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]窗格。 [迴歸查詢] 窗格會顯示查詢存放區中的查詢與計劃。 頂端的下拉式清單方塊，可供您依據各種條件選取查詢。 選取計劃即可以圖形方式檢視查詢計劃。 提供有按鈕可供檢視來源查詢、強制執行或取消強制執行查詢計劃，以及重新整理顯示畫面。  
   
  ![物件總管中的迴歸查詢](../../relational-databases/performance/media/objectexplorerregressedqueries.PNG "物件總管中的迴歸查詢")  
   
- 若要強制執行計劃，請選取查詢與計劃，然後按一下 [強制執行計劃] 。 您只可以強制執行由查詢計劃功能所儲存且仍保留在查詢計劃快取中的計劃。  
+ 若要強制執行計劃，請選取查詢與計劃，然後按一下 [強制執行計劃] ****。 您只可以強制執行由查詢計劃功能所儲存且仍保留在查詢計劃快取中的計劃。  
  
   
 ##  <a name="Options"></a> Configuration Options  

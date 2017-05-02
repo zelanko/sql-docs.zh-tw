@@ -37,7 +37,7 @@ ms.lasthandoff: 04/11/2017
 > [!NOTE]
 >  像長時間執行的交易之類的因素，使虛擬記錄檔保持作用中一段很長的時間，可能限制記錄檔壓縮，甚至完全阻止記錄檔壓縮。 如需延遲記錄截斷可能因素的相關資訊，請參閱[交易記錄 &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)。  
   
- 壓縮記錄檔會移除一或多個不保留任何邏輯記錄的虛擬記錄檔 (即「非使用中虛擬記錄檔」)。 當交易記錄檔壓縮之後，就會從記錄檔的結尾移除將記錄縮減至大約目標大小所需的非使用中虛擬記錄檔。  
+ 壓縮記錄檔會移除一或多個不保留任何邏輯記錄的虛擬記錄檔 (即「非使用中虛擬記錄檔」**)。 當交易記錄檔壓縮之後，就會從記錄檔的結尾移除將記錄縮減至大約目標大小所需的非使用中虛擬記錄檔。  
   
  **壓縮記錄檔 (但不壓縮資料庫檔案)**  
   
@@ -56,7 +56,7 @@ ms.lasthandoff: 04/11/2017
 -   [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) (請參閱一或多個記錄檔的 **size**、**max_size** 和 **growth** 資料行。)  
   
 > [!NOTE]
->  壓縮資料庫和記錄檔的作業可設定為自動進行。 不過，我們建議您不要進行自動壓縮，而且 **autoshrink** 資料庫屬性預設為 FALSE。 如果 **autoshrink** 設定為 TRUE，只有當超過 25% 的空間未使用時，自動壓縮才會減少檔案的大小。 此時，檔案會壓縮成只有 25% 的檔案是未使用空間的大小，或檔案的原始大小，以較大者為準。 如需變更 **autoshrink** 屬性設定的相關資訊，請參閱[檢視或變更資料庫的屬性](../../relational-databases/databases/view-or-change-the-properties-of-a-database.md)—使用 [選項] 頁面的 **Auto Shrink** 屬性—或 [ALTER DATABASE SET 選項 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)—使用 AUTO_SHRINK 選項。  
+>  壓縮資料庫和記錄檔的作業可設定為自動進行。 不過，我們建議您不要進行自動壓縮，而且 **autoshrink** 資料庫屬性預設為 FALSE。 如果 **autoshrink** 設定為 TRUE，只有當超過 25% 的空間未使用時，自動壓縮才會減少檔案的大小。 此時，檔案會壓縮成只有 25% 的檔案是未使用空間的大小，或檔案的原始大小，以較大者為準。 如需變更 **autoshrink** 屬性設定的相關資訊，請參閱[檢視或變更資料庫的屬性](../../relational-databases/databases/view-or-change-the-properties-of-a-database.md)—使用 [選項]**** 頁面的 **Auto Shrink** 屬性—或 [ALTER DATABASE SET 選項 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)—使用 AUTO_SHRINK 選項。  
   
 
 ##  <a name="AddOrEnlarge"></a> 加入或加大記錄檔  

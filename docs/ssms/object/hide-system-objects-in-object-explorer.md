@@ -26,7 +26,7 @@ ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="hide-system-objects-in-object-explorer"></a>在物件總管中隱藏系統物件
-此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)]，在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 的 [物件總管] 中隱藏系統物件。 物件總管的 [資料庫] 節點包含諸如系統資料庫的系統物件。 使用 [工具]/[選項] 頁面，隱藏系統物件。 某些系統物件 (如系統函數和系統資料類型) 不受這個設定所影響。  
+此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)]，在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 的 [物件總管] 中隱藏系統物件。 物件總管的 [資料庫]**** 節點包含諸如系統資料庫的系統物件。 使用 [工具]****/[選項]**** 頁面，隱藏系統物件。 某些系統物件 (如系統函數和系統資料類型) 不受這個設定所影響。  
   
 ## <a name="SSMSProcedure"></a>使用 SQL Server Management Studio  
   
@@ -34,9 +34,9 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 **[工具]** 功能表上，按一下 **[選項]**。  
   
-2.  在 [環境/啟動] 頁面上，選取 [在物件總管中隱藏系統物件]，然後按一下 [確定]。  
+2.  在 [環境/啟動]**** 頁面上，選取 [在物件總管中隱藏系統物件]****，然後按一下 [確定]****。  
   
-3.  在 [SQL Server Management Studio] 對話方塊中，按一下 [確定]，以確認必須重新啟動 SQL Server Management Studio，這個變更才會生效。  
+3.  在 [SQL Server Management Studio]**** 對話方塊中，按一下 [確定]****，以確認必須重新啟動 SQL Server Management Studio，這個變更才會生效。  
   
 4.  關閉並重新開啟 SQL Server Management Studio。  
   

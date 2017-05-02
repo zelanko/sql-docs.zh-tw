@@ -1,27 +1,31 @@
 ---
-title: "SQL Server、Deprecated Features 物件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/03/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQLServer:已被取代的功能"
-  - "效能計數器 [SQL Server], 已被取代的功能"
-  - "取代 [SQL Server], 效能計數器"
-  - "已被取代的功能物件"
+title: "SQL Server 的 Deprecated Features 物件 | Microsoft Docs"
+ms.custom: 
+ms.date: 05/03/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQLServer:Deprecated Features
+- performance counters [SQL Server], deprecated features
+- deprecation [SQL Server], performance counters
+- Deprecated Features object
 ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
 caps.latest.revision: 61
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 61
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 1cbdf2dde41142d1b674e71df3a34756e8fcce99
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server、Deprecated Features 物件
+# <a name="sql-server-deprecated-features-object"></a>SQL Server、Deprecated Features 物件
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的 SQLServer:Deprecated Features 物件提供了計數器來監視指定為已被取代的功能。 在每一個案例中，此計數器都會提供一個使用計數，列出上一次啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之後所遇到之已被取代功能的次數。  
@@ -33,7 +37,7 @@ SELECT * FROM sys.dm_os_performance_counters
 WHERE object_name = 'SQLServer:Deprecated Features';  
 ```  
 
-下表描述 SQL Server **已被取代的功能**效能物件。
+下表描述 SQL Server **已被取代的功能** 效能物件。
 
 |**SQL Server 已被取代的功能計數器**|說明|  
 |-------------|-----------------|  
@@ -41,10 +45,10 @@ WHERE object_name = 'SQLServer:Deprecated Features';
   
  下表描述 SQL Server Deprecated Features 計數器執行個體。  
   
-|SQL Server 已被取代的功能計數器執行個體|描述|  
+|SQL Server 已被取代的功能計數器執行個體|說明|  
 |------------------------------------------------------|-----------------|  
 |做為暫存資料表和預存程序名稱的 '#' 和 '##'。|遇到一個不包含 # 以外之任何字元的識別碼。 請至少使用一個其他字元。 每次編譯時發生一次。|  
-|'::' 函數呼叫語法|資料表值函式遇到 :: 函式呼叫語法。 取代為 `SELECT column_list FROM` \<函數名稱>`()`。 例如，以 `SELECT * FROM ::fn_virtualfilestats(2,1)` 取代 `SELECT * FROM sys.fn_virtualfilestats(2,1)`。 每次編譯時發生一次。|  
+|'::' 函數呼叫語法|資料表值函式遇到 :: 函式呼叫語法。 取代為 `SELECT column_list FROM` <函數名稱>**`()`。 例如，以 `SELECT * FROM ::fn_virtualfilestats(2,1)` 取代 `SELECT * FROM sys.fn_virtualfilestats(2,1)`。 每次編譯時發生一次。|  
 |'@' 以及以 '@@' 當做 [!INCLUDE[tsql](../../includes/tsql-md.md)] 識別碼開頭的名稱|遇到了以 @ 或 @@ 開頭的識別碼。 請勿使用 @ 或 @@ 或是以 @@ 當做識別碼開頭的名稱。 每次編譯時發生一次。|  
 |ADDING TAPE DEVICE|遇到已被取代的功能 sp_addumpdevice'**tape**'。 請改用 sp_addumpdevice'**disk**'。 每次使用時發生一次。|  
 |ALL 權限|遇到 GRANT ALL、DENY ALL 或 REVOKE ALL 語法的總次數。 請修改語法來拒絕特定權限。 每次查詢時發生一次。|  
@@ -52,7 +56,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |ALTER LOGIN WITH SET CREDENTIAL|遇到已被取代的功能語法 ALTER LOGIN WITH SET CREDENTIAL 或 ALTER LOGIN WITH NO CREDENTIAL。 請改用 ADD 或 DROP CREDENTIAL 語法。 每次編譯時發生一次。|  
 |Azeri_Cyrilllic_90|每次啟動資料庫及使用定序時，事件會發生一次。 請規劃修改使用此定序的應用程式。|  
 |Azeri_Latin_90|每次啟動資料庫及使用定序時，事件會發生一次。 請規劃修改使用此定序的應用程式。|  
-|BACKUP DATABASE 或 LOG TO TAPE|遇到已被取代的功能 BACKUP { DATABASE &#124; LOG } TO TAPE 或 BACKUP { DATABASE &#124; LOG } TO \<磁帶裝置>。<br /><br /> 請改用 BACKUP { DATABASE &#124; LOG } TO DISK 或 BACKUP { DATABASE &#124; LOG } TO \<磁帶裝置>。 每次使用時發生一次。|  
+|BACKUP DATABASE 或 LOG TO TAPE|遇到已被取代的功能 BACKUP { DATABASE &#124; LOG } TO TAPE 或 BACKUP { DATABASE &#124; LOG } TO <磁帶裝置>**。<br /><br /> 請改用 BACKUP { DATABASE &#124; LOG } TO DISK 或 BACKUP { DATABASE &#124; LOG } TO <磁帶裝置>**。 每次使用時發生一次。|  
 |BACKUP DATABASE 或 LOG WITH MEDIAPASSWORD|遇到了已被取代的功能 BACKUP DATABASE WITH MEDIAPASSWORD 或 BACKUP LOG WITH MEDIAPASSWORD。 請勿使用 WITH MEDIAPASSWORD。|  
 |BACKUP DATABASE 或 LOG WITH PASSWORD|遇到了已被取代的功能 BACKUP DATABASE WITH PASSWORD 或 BACKUP LOG WITH PASSWORD。 請勿使用 WITH PASSWORD。|  
 |COMPUTE [BY]|遇到了 COMPUTE 或 COMPUTE BY 語法。 請重寫查詢，以搭配 ROLLUP 使用 GROUP BY。 每次編譯時發生一次。|  
@@ -60,7 +64,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |CREATE TRIGGER WITH APPEND|遇到了具有 WITH APPEND 子句的 CREATE TRIGGER 陳述式。 請改為重新建立整個觸發程序。 每次在 DDL 陳述式中使用時發生一次。|  
 |CREATE_DROP_DEFAULT|遇到了 CREATE DEFAULT 或 DROP DEFAULT 語法。 請使用 CREATE TABLE 或 ALTER TABLE 的 DEFAULT 選項來重寫命令。 每次編譯時發生一次。|  
 |CREATE_DROP_RULE|遇到了 CREATE RULE 語法。 請使用條件約束重寫命令。 每次編譯時發生一次。|  
-|資料類型：text、ntext 或 image|遇到 **text**、**ntext** 或 **image** 資料類型。 請重寫應用程式來使用 **varchar(max)** 資料類型及移除 **text**、**ntext** 和 **image** 資料類型語法。 每次查詢時發生一次。|  
+|資料類型：text、ntext 或 image|遇到 **text**、 **ntext**或 **image** 資料類型。 請重寫應用程式來使用 **varchar(max)** 資料類型及移除 **text**、 **ntext**和 **image** 資料類型語法。 每次查詢時發生一次。|  
 ||資料庫已變更為相容性層級 80 的總次數。 請在下次發行之前，規劃升級資料庫和應用程式。 啟動相容性層級為 80 的資料庫時也會發生。|  
 |資料庫相容性層級 100、110。 120|資料庫相容性層級變更的總次數。 請針對將來的版本規劃升級資料庫和應用程式。 啟動已被取代的相容性層級的資料庫時也會發生。|  
 |DATABASE_MIRRORING|遇到針對資料庫鏡像功能的參考。 計劃升級至 Always On 可用性群組，如果您執行不支援 Always On 可用性群組的 SQL Server 版本，則計劃移轉至記錄傳送。|  
@@ -85,7 +89,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |dm_fts_active_catalogs.worker_count|遇到了 sys.dm_fts_active_catalogs 動態管理檢視的 worker_count 資料行。 請避免使用這個資料行。 每當伺服器執行個體偵測到此資料行的參考時，都會發生。|  
 |dm_fts_memory_buffers|dm_fts_memory_buffers 計數器一定會保持為 0，因為 sys.dm_fts_memory_buffers 檢視表的大部分資料行都未被取代。 若要監視已被取代的資料行，請使用資料行特定的計數器：dm_fts_memory_buffers.row_count。|  
 |dm_fts_memory_buffers.row_count|遇到了 [sys.dm_fts_memory_buffers](../../relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql.md) 動態管理檢視的 row_count 資料行。 請避免使用這個資料行。 每當伺服器執行個體偵測到此資料行的參考時，都會發生。|  
-|具有兩部分名稱的 DROP INDEX|DROP INDEX 語法在 DROP INDEX 中包含了 \<資料表名稱>.\<索引名稱> 語法格式。 在 DROP INDEX 陳述式中取代為 \<索引名稱> ON \<資料表名稱> 的語法。 每次編譯時發生一次。|  
+|具有兩部分名稱的 DROP INDEX|DROP INDEX 語法在 DROP INDEX 中包含了 <資料表名稱>.<索引名稱>** 語法格式。 在 DROP INDEX 陳述式中取代為 <索引名稱>** ON <資料表名稱>** 的語法。 每次編譯時發生一次。|  
 |EXT_CREATE_ALTER_SOAP_ENDPOINT|遇到了 FOR SOAP 選項的 CREATE 或 ALTER ENDPOINT 陳述式。 原生 XML Web Service 已被取代。 請改用 Windows Communications Foundation (WCF) 或 ASP.NET。|  
 |EXT_endpoint_webmethods|遇到 sys.endpoint_webmethods。 原生 XML Web Service 已被取代。 請改用 Windows Communications Foundation (WCF) 或 ASP.NET。|  
 |EXT_soap_endpoints|遇到 sys.soap_endpoints。 原生 XML Web Service 已被取代。 請改用 Windows Communications Foundation (WCF) 或 ASP.NET。|  
@@ -112,7 +116,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |沒有 COUNT_BIG(*) 的索引檢視表 SELECT 清單|彙總索引檢視表的 SELECT 清單必須包含 COUNT_BIG (*)。|  
 |INDEX_OPTION|遇到 CREATE TABLE、ALTER TABLE 或 CREATE INDEX 語法，但是選項周圍沒有括號。 請重寫陳述式來使用目前的語法。 每次查詢時發生一次。|  
 |INDEXKEY_PROPERTY|遇到 INDEXKEY_PROPERTY 語法。 請重寫陳述式來查詢 sys.index_columns。 每次編譯時發生一次。|  
-|間接 TVF 提示|透過檢視表將資料表提示間接套用到多重陳述式資料表值函式 (TVF) 的引動過程，將從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未來版本中移除。|  
+|間接 TVF 提示|透過檢視表將資料表提示間接套用到多重陳述式資料表值函式 (TVF) 的引動過程，將從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的未來版本中移除。|  
 |INSERT NULL 到 TIMESTAMP 資料行中|已將 NULL 值插入 TIMESTAMP 資料行。 請改用預設值。 每次編譯時發生一次。|  
 |INSERT_HINTS||  
 |Korean_Wansung_Unicode|每次啟動資料庫及使用定序時，事件會發生一次。 請規劃修改使用此定序的應用程式。|  
@@ -264,10 +268,10 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |sysusers|遇到 sysusers 的參考。 請改用 sys.database_principals。 每次編譯時發生一次。|  
 |沒有 WITH 的資料表提示|遇到了一個使用資料表提示但未使用 WITH 關鍵字的陳述式。 請修改陳述式，使其包含 WITH 字。 每次編譯時發生一次。|  
 |Text in row 資料表選項|遇到 'text in row' 資料表選項的參考。 請改用 sp_tableoption 'large value types out of row'。 每次查詢時發生一次。|  
-|TEXTPTR|遇到 TEXTPTR 函數的參考。 請重寫應用程式來使用 **varchar(max)** 資料類型及移除 **text**、**ntext** 和 **image** 資料類型語法。 每次查詢時發生一次。|  
-|TEXTVALID|遇到 TEXTVALID 函數的參考。 請重寫應用程式來使用 **varchar(max)** 資料類型及移除 **text**、**ntext** 和 **image** 資料類型語法。 每次查詢時發生一次。|  
+|TEXTPTR|遇到 TEXTPTR 函數的參考。 請重寫應用程式來使用 **varchar(max)** 資料類型及移除 **text**、 **ntext**和 **image** 資料類型語法。 每次查詢時發生一次。|  
+|TEXTVALID|遇到 TEXTVALID 函數的參考。 請重寫應用程式來使用 **varchar(max)** 資料類型及移除 **text**、 **ntext**和 **image** 資料類型語法。 每次查詢時發生一次。|  
 |TIMESTAMP|DDL 陳述式中遇到之已被取代的 **timestamp** 資料類型的總次數。 請改用 **rowversion** 資料類型。|  
-|UPDATETEXT 或 WRITETEXT|遇到 UPDATETEXT 或 WRITETEXT 陳述式。 請重寫應用程式來使用 **varchar(max)** 資料類型及移除 **text**、**ntext** 和 **image** 資料類型語法。 每次查詢時發生一次。|  
+|UPDATETEXT 或 WRITETEXT|遇到 UPDATETEXT 或 WRITETEXT 陳述式。 請重寫應用程式來使用 **varchar(max)** 資料類型及移除 **text**、 **ntext**和 **image** 資料類型語法。 每次查詢時發生一次。|  
 |USER_ID|遇到 USER_ID 函數的參考。 請改用 DATABASE_PRINCIPAL_ID 函數。 每次編譯時發生一次。|  
 |針對連結的伺服器使用 OLEDB||  
 |Vardecimal 儲存格式|遇到了 **vardecimal** 儲存格式的使用。 請改用資料壓縮。|  
@@ -277,13 +281,14 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |xp_loginconfig|遇到 xp_loginconfig 程序。 請改用 SERVERPROPERTY 的 IsIntegratedSecurityOnly 引數。 每次查詢時發生一次。|  
 |xp_revokelogin|遇到 xp_revokelogin 程序。 請改用 ALTER LOGIN DISABLE 或 DROP LOGIN。 每次編譯時發生一次。|  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [SQL Server 2016 中已被取代的 Database Engine 功能](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)   
  [SQL Server 2016 中已被取代的全文檢索搜尋功能](../../relational-databases/search/deprecated-full-text-search-features-in-sql-server-2016.md)   
  [Deprecation Announcement 事件類別](../../relational-databases/event-classes/deprecation-announcement-event-class.md)   
  [Deprecation Final Support 事件類別](../../relational-databases/event-classes/deprecation-final-support-event-class.md)   
  [SQL Server 2016 中已停止的 Database Engine 功能](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)   
- [SQL Server 2016 內停止的全文檢索搜尋功能](../Topic/Discontinued%20Full-Text%20Search%20Features%20in%20SQL%20Server%202016.md)   
+ [SQL Server 2016 內停止的全文檢索搜尋功能](http://msdn.microsoft.com/library/70587b3c-cc77-4681-924d-a1df7cdf1517)   
  [使用 SQL Server 物件](../../relational-databases/performance-monitor/use-sql-server-objects.md)  
   
   
+

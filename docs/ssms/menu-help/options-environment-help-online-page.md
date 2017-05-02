@@ -23,7 +23,7 @@ ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="options-environment---help---online-page"></a>選項 (環境 - 說明 - 線上頁面)
-[選項] 對話方塊可以讓您指定用於 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 搜尋的說明來源，包括 F1 說明。 在 [工具] 功能表上，按一下 [選項]、展開 [環境] 資料夾、選取 [說明]，然後按一下 [線上]。 如果 [線上] 頁面未出現在清單中，請在 [選項] 對話方塊中選取 [顯示所有設定] 核取方塊。  
+[選項]**** 對話方塊可以讓您指定用於 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 搜尋的說明來源，包括 F1 說明。 在 [工具]**** 功能表上，按一下 [選項]****、展開 [環境]**** 資料夾、選取 [說明]****，然後按一下 [線上]****。 如果 [線上]**** 頁面未出現在清單中，請在 [選項]**** 對話方塊中選取 [顯示所有設定]**** 核取方塊。  
   
 **載入說明內容時**  
 設定說明來源在 F1 說明中的使用順序，並指定要使用哪些說明來源。  
@@ -47,7 +47,7 @@ ms.lasthandoff: 04/11/2017
 列出可以包含在說明搜尋中的可能的 Codezone 社群網站。  
   
 **詳細資料**  
-顯示 [Codezone 社群] 清單中選取的每一個提供者的簡短描述 (如果有的話)。  
+顯示 [Codezone 社群]**** 清單中選取的每一個提供者的簡短描述 (如果有的話)。  
   
 **閱讀隱私權聲明**  
 顯示 [!INCLUDE[msCoName](../../includes/msconame_md.md)] 線上使用的隱私權原則。  

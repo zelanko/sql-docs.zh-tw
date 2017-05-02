@@ -59,7 +59,7 @@ ms.lasthandoff: 04/11/2017
   
 -   執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業。 這可用來建立執行各種動作的作業，以及執行這些作業的維護計畫。  
   
- 維護工作產生的結果可以當作報表寫入文字檔，或寫入 **msdb** 中的維護計畫資料表 (**sysmaintplan_log** 和 **sysmaintplan_logdetail**)。 若要在記錄檔檢視器中檢視結果，請以滑鼠右鍵按一下 [維護計畫]，然後按一下 [檢視記錄]。  
+ 維護工作產生的結果可以當作報表寫入文字檔，或寫入 **msdb** 中的維護計畫資料表 (**sysmaintplan_log** 和 **sysmaintplan_logdetail**)。 若要在記錄檔檢視器中檢視結果，請以滑鼠右鍵按一下 [維護計畫]****，然後按一下 [檢視記錄]****。  
   
 ## <a name="related-tasks"></a>相關工作  
  若要開始使用維護計畫，請使用下列主題。  

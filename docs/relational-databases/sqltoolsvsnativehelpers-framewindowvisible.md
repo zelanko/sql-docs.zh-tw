@@ -44,7 +44,7 @@ BOOL WINAPI IsFrameWindowVisible(IVsWindowFrame* frame)
  Visual Studio WindowFrame 的 IVsWindowFrame* 指標。  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  
- 布林值，這個值會指定「框架」所指定的視窗框架是否可見。  
+ 布林值，這個值會指定「框架」**所指定的視窗框架是否可見。  
   
 ## <a name="see-also"></a>另請參閱  
  [SqlToolsVSNativeHelpers](../relational-databases/sqltoolsvsnativehelpers.md)  

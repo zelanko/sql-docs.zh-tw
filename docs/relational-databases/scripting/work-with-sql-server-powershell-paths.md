@@ -72,7 +72,7 @@ Get-Item . | Get-Member -Type Properties
  若要從 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 提供者路徑對物件進行工作，可以使用 SMO 方法與屬性。  
   
 ### <a name="examples-using-methods-and-properties"></a>範例：使用方法與屬性  
- 此範例會使用 SMO [結構描述] 屬性來取得 AdventureWorks2012中 Sales 結構描述內的資料表清單：  
+ 此範例會使用 SMO [結構描述]**** 屬性來取得 AdventureWorks2012中 Sales 結構描述內的資料表清單：  
   
 ```  
 Set-Location SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012\Tables  

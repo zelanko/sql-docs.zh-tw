@@ -79,7 +79,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  在 [控制台] 中，開啟 **[地區及語言選項]**。  
   
-3.  在 [進階] 索引標籤上，針對 [選擇一個符合於您要使用的非 Unicode 程式語言版本的語言]，從清單中選取一值。  
+3.  在 [進階]**** 索引標籤上，針對 [選擇一個符合於您要使用的非 Unicode 程式語言版本的語言]****，從清單中選取一值。  
   
      這項設定可讓 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝選擇最佳預設定序。  
   

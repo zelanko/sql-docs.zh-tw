@@ -48,7 +48,7 @@ ms.lasthandoff: 04/11/2017
   
          為非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者啟用發行集後建立快照集，以確定「快照集代理程式」會產生適用於非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者的快照集與初始化指令碼。  
   
-3.  使用 [發行集屬性 - \<發行集名稱>] 對話方塊，啟用非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者的發行集。 如需有關此步驟的詳細資訊，請參閱＜ [Publication Properties, Subscription Options](../../relational-databases/replication/publication-properties-subscription-options.md) ＞。  
+3.  使用 [發行集屬性 - \<發行集名稱>]**** 對話方塊，啟用非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者的發行集。 如需有關此步驟的詳細資訊，請參閱＜ [Publication Properties, Subscription Options](../../relational-databases/replication/publication-properties-subscription-options.md) ＞。  
   
 4.  使用「新增訂閱精靈」建立訂閱。 本主題提供有關這個步驟的詳細資訊。  
   
@@ -118,7 +118,7 @@ ms.lasthandoff: 04/11/2017
         Persist Security Info=False;Connection Pooling=True;  
         ```  
   
-         字串中的大多數選項是您設定之 DB2 伺服器的專用選項，但 **將二進位當作字元處理** 選項，應一律設定為 [False] 。 需要為 **初始目錄** 選項指定值，以便識別訂閱資料庫。  
+         字串中的大多數選項是您設定之 DB2 伺服器的專用選項，但 **將二進位當作字元處理** 選項，應一律設定為 [False] ****。 需要為 **初始目錄** 選項指定值，以便識別訂閱資料庫。  
   
 10. 在 **[同步排程]** 頁面中，從 **[代理程式排程]** 功能表中選取「散發代理程式」的排程 (排程通常為 **[連續執行]**)。  
   
@@ -140,7 +140,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  以滑鼠右鍵按一下發行集，然後再按一下 **[檢視快照集代理程式的狀態]**。  
   
-3.  在 [檢視快照集代理程式的狀態 - \<發行集>] 對話方塊中，按一下 [啟動]。  
+3.  在 [檢視快照集代理程式的狀態 - \<發行集>]**** 對話方塊中，按一下 [啟動]****。  
   
  「快照集代理程式」完成產生快照集後，會顯示一個訊息，例如「[100%] 已產生了 17 個發行項的快照集」。  
   

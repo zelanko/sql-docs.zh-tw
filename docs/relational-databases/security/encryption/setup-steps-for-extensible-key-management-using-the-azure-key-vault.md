@@ -53,7 +53,7 @@ SQL Server 版本  |可轉散發套件的安裝連結
   
 1.  移至 [Azure 傳統入口網站](https://manage.windowsazure.com)，並登入。  
   
-2.  向 Azure Active Directory 註冊應用程式。 如需註冊應用程式的詳細逐步指示，請參閱 [Azure Key Vault](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/) (Azure 金鑰保存庫) 部落格文章的＜Get an identity for the application＞(取得應用程式的識別) 一節。  
+2.  向 Azure Active Directory 註冊應用程式。 如需註冊應用程式的詳細逐步指示，請參閱 [Azure Key Vault](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/) (Azure 金鑰保存庫) 部落格文章的＜Get an identity for the application＞(取得應用程式的識別)**** 一節。  
   
 3.  複製 **用戶端識別碼** 和 **用戶端機密** 以供後面的步驟使用；在其中，它們將用來授與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 對您金鑰保存庫的存取。  
   

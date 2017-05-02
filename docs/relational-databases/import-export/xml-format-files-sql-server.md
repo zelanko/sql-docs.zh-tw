@@ -30,7 +30,7 @@ ms.lasthandoff: 04/11/2017
  您可以搭配使用 XML 格式檔案與 **bcp**命令、BULK INSERT 陳述式或 INSERT ...SELECT \* FROM OPENROWSET(BULK...) 陳述式。 **bcp** 命令可讓您自動產生資料表的 XML 格式檔案；如需詳細資訊，請參閱＜ [bcp Utility](../../tools/bcp-utility.md)＞。  
   
 > [!NOTE]  
->  有兩種類型的格式檔案支援大量匯出和匯入：「非 XML 格式檔案」和「XML 格式檔案」。 相較於非 XML 格式檔案而言，XML 格式檔案是較彈性且功能強大的替代方案。 如需非 XML 格式檔案的相關資訊，請參閱 [非 XML 格式檔案 &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md)＞。  
+>  有兩種類型的格式檔案支援大量匯出和匯入：「非 XML 格式檔案」**和「XML 格式檔案」**。 相較於非 XML 格式檔案而言，XML 格式檔案是較彈性且功能強大的替代方案。 如需非 XML 格式檔案的相關資訊，請參閱 [非 XML 格式檔案 &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md)＞。  
   
  **本主題內容：**  
   
@@ -84,7 +84,7 @@ ms.lasthandoff: 04/11/2017
   
      每一個 \<欄位> 項目描述特定資料欄位的內容。 一個欄位只能對應到資料表的一個資料行。 並非所有欄位都需要對應到資料行。  
   
-     資料檔中的欄位可以是固定/可變長度或以字元終止。 「欄位值」可以如此表示：一個字元 (使用單一位元組表示法)、一個寬字元 (使用 Unicode 雙位元組表示法)、原生資料庫格式或一個檔案名稱。 如果欄位值是以檔案名稱表示，則檔案名稱指向包含目標資料表中 BLOB 資料行的值的檔案。  
+     資料檔中的欄位可以是固定/可變長度或以字元終止。 「欄位值」**可以如此表示：一個字元 (使用單一位元組表示法)、一個寬字元 (使用 Unicode 雙位元組表示法)、原生資料庫格式或一個檔案名稱。 如果欄位值是以檔案名稱表示，則檔案名稱指向包含目標資料表中 BLOB 資料行的值的檔案。  
   
 -   \<資料列> 描述當資料檔案中的資料匯入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表的語法。  
   

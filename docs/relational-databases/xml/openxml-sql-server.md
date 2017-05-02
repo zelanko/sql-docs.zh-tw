@@ -116,9 +116,9 @@ EXEC sp_xml_removedocument @docHandle;
  此文件控制代碼是由 **sp_xml_preparedocument** 預存程序傳回。  
   
 ### <a name="xpath-expression-to-identify-the-nodes-to-be-processed-rowpattern"></a>用來識別欲處理之節點的 XPath 運算式 (rowpattern)  
-  指定為 rowpattern的 XPath 運算式識別 XML 文件中的節點集。  每個由 rowpattern 識別的節點，都會對應到由 OPENXML 所產生之資料列集中的單一資料列。  
+ ** 指定為 rowpattern的 XPath 運算式識別 XML 文件中的節點集。 ** 每個由 rowpattern 識別的節點，都會對應到由 OPENXML 所產生之資料列集中的單一資料列。  
   
- 由 XPath 運算式所識別的節點，可以是 XML 文件中的任何 XML 節點。  若 rowpattern 識別 XML 文件中的一組元素，則每個元素節點在資料列集中都有一識別的資料列。  例如，若 *rowpattern*在屬性中結束，將會為每個 rowpattern 所選取的屬性節點建立資料列。  
+ 由 XPath 運算式所識別的節點，可以是 XML 文件中的任何 XML 節點。 ** 若 rowpattern 識別 XML 文件中的一組元素，則每個元素節點在資料列集中都有一識別的資料列。 ** 例如，若 *rowpattern*在屬性中結束，將會為每個 rowpattern 所選取的屬性節點建立資料列。  
   
 ### <a name="description-of-the-rowset-to-be-generated"></a>欲產生的資料列集說明  
  OPENXML 會使用資料列集結構描述，來產生結果資料列集。 指定資料列集結構描述時，可以使用下列選項。  
@@ -143,7 +143,7 @@ EXEC sp_xml_removedocument @docHandle;
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**id**|**bigint**|這是文件節點的唯一識別碼。<br /><br /> 根元素具有識別碼值 0； 負的識別碼值會保留。|  
-|**parentid**|**bigint**|識別節點的父系。 此識別碼所識別的父系，不一定就是父元素； 這一點需根據此識別碼所識別父系的節點 NodeType 而定。 例如，若該節點是文字節點，其父系可能是屬性節點。<br /><br />  如果節點位於 XML 文件的最上層，其 ParentID 為 NULL。|  
+|**parentid**|**bigint**|識別節點的父系。 此識別碼所識別的父系，不一定就是父元素； 這一點需根據此識別碼所識別父系的節點 NodeType 而定。 例如，若該節點是文字節點，其父系可能是屬性節點。<br /><br /> **** 如果節點位於 XML 文件的最上層，其 ParentID 為 NULL。|  
 |**node type**|**int**|用以識別節點類型，而且是對應於 XML 物件模型 (DOM) 節點類型編號的整數。<br /><br /> 以下是可以出現在此資料行中，用來指出節點類型的值：<br /><br /> **1** = 元素節點<br /><br /> **2** = 屬性節點<br /><br /> **3** = 文字節點<br /><br /> **4** = CDATA 區段節點<br /><br /> **5** = 實體參考節點<br /><br /> **6** = 實體節點<br /><br /> **7** = 處理指示節點<br /><br /> **8** = 註解節點<br /><br /> **9** = 文件節點<br /><br /> **10** = 文件類型節點<br /><br /> **11** = 文件片段節點<br /><br /> **12** = 標記法節點<br /><br /> 如需詳細資訊，請參閱 Microsoft XML (MSXML) SDK 中的＜nodeType 屬性＞主題。|  
 |**localname**|**nvarchar(max)**|提供元素或屬性的本機名稱。 如果 DOM 物件不具有名稱，則為 NULL。|  
 |**prefix**|**nvarchar(max)**|這是節點名稱的命名空間前置詞。|  
@@ -167,28 +167,28 @@ EXEC sp_xml_removedocument @docHandle;
   
  您可以用兩種方式來指定對應，也可以兩個項目都指定：  
   
--    使用 flags 參數  
+-   ** 使用 flags 參數  
   
-      由 flags 參數所指定的對應會假設下列條件的名稱對應：XML 節點對應至具有相同名稱的對應資料列集資料行。  
+     ** 由 flags 參數所指定的對應會假設下列條件的名稱對應：XML 節點對應至具有相同名稱的對應資料列集資料行。  
   
--    使用 ColPattern 參數  
+-   ** 使用 ColPattern 參數  
   
-     *ColPattern*為 XPath 運算式，在 WITH 子句中指定為 *SchemaDeclaration* 的一部份。  在 *ColPattern* 中指定的對應，會覆寫由 flags 參數所指定的對應。  
+     *ColPattern*為 XPath 運算式，在 WITH 子句中指定為 *SchemaDeclaration* 的一部份。 ** 在 *ColPattern* 中指定的對應，會覆寫由 flags 參數所指定的對應。  
   
      *ColPattern* 可用來指定對應的類型 (例如：屬性中心或元素中心)，以覆寫或加強 *flags*所指定的預設對應。  
   
-      在下列情況下，會指定 ColPattern：  
+     ** 在下列情況下，會指定 ColPattern：  
   
-    -   資料列集中的資料行名稱，與其對應的元素或屬性名稱不同。  在此情況下，ColPattern 是用來識別資料列集資料行所對應的 XML 元素及屬性名稱。  
+    -   資料列集中的資料行名稱，與其對應的元素或屬性名稱不同。 ** 在此情況下，ColPattern 是用來識別資料列集資料行所對應的 XML 元素及屬性名稱。  
   
-    -   您希望將中繼屬性的屬性對應到資料行。  在此情況下，ColPattern 是用來識別資料列集資料行對應的中繼屬性。 如需如何使用中繼屬性的詳細資訊，請參閱 [在 OPENXML 中指定中繼屬性](../../relational-databases/xml/specify-metaproperties-in-openxml.md)。  
+    -   您希望將中繼屬性的屬性對應到資料行。 ** 在此情況下，ColPattern 是用來識別資料列集資料行對應的中繼屬性。 如需如何使用中繼屬性的詳細資訊，請參閱 [在 OPENXML 中指定中繼屬性](../../relational-databases/xml/specify-metaproperties-in-openxml.md)。  
   
  *flags* 和 *ColPattern* 參數均是選擇性的。 如果未指定對應，則會採用屬性中心對應。 屬性中心對應是 *flags* 參數的預設值。  
   
 #### <a name="attribute-centric-mapping"></a>以屬性為主的對應  
  在 OPENXML 中將 *flags* 參數設為 1 (XML_ATTRIBUTES)，就是指定 **屬性中心** 對應。 如果 *flags* 包含 XML_ATTRIBUTES，所公開的資料列集就會提供或取用以每個 XML 元素各代表一個資料列的資料列。 依據名稱對應，XML 屬性會對應至 SchemaDeclaration 中所定義的屬性，或是對應至由 WITH 子句的 Tablename 所提供的屬性。 名稱對應意味著，特定名稱的 XML 屬性會以相同的名稱儲存在資料列集的資料行中。  
   
-  若資料行名稱與其所對應的屬性名稱不同，則必須指定 ColPattern。  
+ ** 若資料行名稱與其所對應的屬性名稱不同，則必須指定 ColPattern。  
   
  若 XML 屬性具有命名空間限定詞，則資料列集的資料行名稱也必須具有限定詞。  
   

@@ -31,7 +31,7 @@ ms.lasthandoff: 04/11/2017
   
 關於驗證查詢的注意事項：  
   
--   即使在 [圖表] 窗格和 [準則] 窗格中無法表示陳述式，其語法也可以是正確的，因此能夠成功地驗證。  
+-   即使在 [圖表]**** 窗格和 [準則]**** 窗格中無法表示陳述式，其語法也可以是正確的，因此能夠成功地驗證。  
   
 -   [SQL 驗證] 能夠偵測某些，但不是所有的 SQL 錯誤。 如果查詢中包含在 SQL 驗證期間未偵測到的錯誤，當您執行查詢時，資料庫會偵測到錯誤。  
   
@@ -39,7 +39,7 @@ ms.lasthandoff: 04/11/2017
   
 ### <a name="to-verify-an-sql-statement"></a>若要驗證 SQL 陳述式  
   
--   在 [SQL] 窗格按一下滑鼠右鍵，然後從快速鍵功能表選取 [驗證 SQL 語法]。  
+-   在 [SQL]**** 窗格按一下滑鼠右鍵，然後從快速鍵功能表選取 [驗證 SQL 語法]****。  
   
 ## <a name="see-also"></a>另請參閱  
 [執行查詢 &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/run-queries-visual-database-tools.md)  

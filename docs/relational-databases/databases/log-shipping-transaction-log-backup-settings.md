@@ -34,7 +34,7 @@ ms.lasthandoff: 04/11/2017
  **如果備份資料夾位於主要伺服器上，請輸入該資料夾的本機路徑**  
  如果備份資料夾位於主要伺服器上，請輸入備份資料夾的本機磁碟機代號和路徑。 如果備份資料夾不在主要伺服器上，您可以讓此欄位保留空白。  
   
- 如果您在此指定本機路徑，則 BACKUP 命令將使用此路徑來建立交易記錄備份；否則，如果未指定本機路徑，BACKUP 命令將使用 [備份資料夾的網路路徑] 方塊中所指定的網路路徑。  
+ 如果您在此指定本機路徑，則 BACKUP 命令將使用此路徑來建立交易記錄備份；否則，如果未指定本機路徑，BACKUP 命令將使用 [備份資料夾的網路路徑]**** 方塊中所指定的網路路徑。  
   
 > [!NOTE]  
 >  如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務帳戶是在主要伺服器的本機系統帳戶之下執行，您就必須在主要伺服器上建立備份資料夾，然後在此指定該資料夾的本機路徑。 主要伺服器執行個體的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務帳戶必須擁有此資料夾的讀取和寫入權限。  
@@ -49,7 +49,7 @@ ms.lasthandoff: 04/11/2017
  顯示用來建立記錄傳送之交易記錄備份的 SQL Server Agent 作業的名稱。 首次建立作業時，您可以在此方塊中輸入名稱來修改其名稱。  
   
  **排程**  
- 顯示備份主要資料庫之交易記錄的目前排程。 建立備份作業之前，按一下 [排程...] 即可修改此排程。 建立備份作業之後，按一下 [編輯作業...] 即可修改此排程。  
+ 顯示備份主要資料庫之交易記錄的目前排程。 建立備份作業之前，按一下 [排程...]**** 即可修改此排程。 建立備份作業之後，按一下 [編輯作業...]**** 即可修改此排程。  
   
 ### <a name="backup-job"></a>備份作業  
  **排程...**  
@@ -69,7 +69,7 @@ ms.lasthandoff: 04/11/2017
   
 |||  
 |-|-|  
-|**使用預設伺服器設定**|按一下即可使用伺服器層級的預設值。<br /><br /> 此預設值是由 [備份壓縮預設] 伺服器組態選項所設定。 有關如何檢視這個選項目前之設定的詳細資訊，請參閱 [檢視或設定備份壓縮預設伺服器組態選項](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)。|  
+|**使用預設伺服器設定**|按一下即可使用伺服器層級的預設值。<br /><br /> 此預設值是由 [備份壓縮預設]**** 伺服器組態選項所設定。 有關如何檢視這個選項目前之設定的詳細資訊，請參閱 [檢視或設定備份壓縮預設伺服器組態選項](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)。|  
 |**壓縮備份**|不論目前的伺服器層級預設值為何，按一下即可壓縮備份。<br /><br /> **\*\* 重要事項 \*\*** 根據預設，壓縮會大幅增加 CPU 使用量，而且壓縮程序所耗用的額外 CPU 可能會對並行作業造成不良的影響。 因此，您可能會想要在 [資源管理員](../../relational-databases/resource-governor/resource-governor.md)限制 CPU 使用量的工作階段中，建立低優先權的壓縮備份。 如需詳細資訊，請參閱本主題稍後介紹的＜ [使用資源管理員進行備份壓縮，以限制 CPU 使用率 &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)限制的工作階段中，建立低優先權的壓縮備份。|  
 |**不要壓縮備份**|不論目前的伺服器層級預設值為何，按一下即可建立未壓縮備份。|  
   

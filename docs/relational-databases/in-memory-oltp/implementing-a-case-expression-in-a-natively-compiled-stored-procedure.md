@@ -24,7 +24,7 @@ ms.lasthandoff: 04/11/2017
 # <a name="implementing-a-case-expression-in-a-natively-compiled-stored-procedure"></a>在原生編譯的預存程序中實作 CASE 運算式
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
-  原生編譯的預存程序「不」支援 CASE 運算式。 下列範例示範如何在原生編譯的預存程序中實作 CASE 運算式功能。  
+  原生編譯的預存程序「不」**支援 CASE 運算式。 下列範例示範如何在原生編譯的預存程序中實作 CASE 運算式功能。  
   
  此程式碼範例使用一個資料表變數來建構單一結果集。 由於需要建立額外的資料列複本，因此僅適用於處理有限數目的資料列。  
   

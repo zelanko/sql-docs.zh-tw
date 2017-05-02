@@ -69,7 +69,7 @@ ms.lasthandoff: 04/11/2017
   
 3.  [判斷預存程序的相依性](../../relational-databases/stored-procedures/view-the-dependencies-of-a-stored-procedure.md)。  
   
-4.  展開 [預存程序]，以滑鼠右鍵按一下要重新命名的程序，然後按一下 [重新命名]。  
+4.  展開 [預存程序]****，以滑鼠右鍵按一下要重新命名的程序，然後按一下 [重新命名]****。  
   
 5.  修改程序名稱。  
   

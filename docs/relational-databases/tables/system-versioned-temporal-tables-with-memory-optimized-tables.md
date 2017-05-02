@@ -59,7 +59,7 @@ ms.lasthandoff: 04/11/2017
 ## <a name="the-internal-memory-optimized-staging-table"></a>內部記憶體最佳化暫存資料表  
  內部記憶體最佳化暫存資料表是由系統建立的內部物件，用來最佳化 DML 作業。  
   
--   資料表名稱會以下列格式產生：**Memory_Optimized_History_Table_<物件識別碼>**，其中 <物件識別碼> 是目前時態表的識別碼。  
+-   資料表名稱會以下列格式產生：**Memory_Optimized_History_Table_<物件識別碼>**，其中 <物件識別碼>** 是目前時態表的識別碼。  
   
 -   資料表會複寫目前時態表的結構描述，加上一個 BIGINT 資料行。 這個額外的資料行可保證移動到內部歷程記錄緩衝區之資料列的唯一性。  
   

@@ -32,9 +32,9 @@ ms.lasthandoff: 04/11/2017
   
 ### <a name="to-discard-changes-made-to-a-query-definition"></a>若要捨棄對查詢定義所做的變更  
   
-1.  在查詢和檢視表設計工具中開啟查詢時，從 [檔案] 功能表中按一下 [關閉]。  
+1.  在查詢和檢視表設計工具中開啟查詢時，從 [檔案]**** 功能表中按一下 [關閉]****。  
   
-2.  在 [Microsoft SQL Server Management Studio] 對話方塊中，按一下 [否]。  
+2.  在 [Microsoft SQL Server Management Studio]**** 對話方塊中，按一下 [否]****。  
   
     查詢定義會回復為上次儲存時的狀態。  
   

@@ -42,7 +42,7 @@ ms.lasthandoff: 04/11/2017
 ##  <a name="PShellJob"></a> 建立 PowerShell 作業步驟  
  **建立 PowerShell 作業步驟**  
   
-1.  展開 **SQL Server Agent**，建立新作業或以滑鼠右鍵按一下現有作業，然後按一下 [屬性]。 如需建立作業的詳細資訊，請參閱＜ [建立作業](http://msdn.microsoft.com/library/465fb7fc-7622-4252-a178-ea51691c935b)＞。  
+1.  展開 **SQL Server Agent**，建立新作業或以滑鼠右鍵按一下現有作業，然後按一下 [屬性]****。 如需建立作業的詳細資訊，請參閱＜ [建立作業](http://msdn.microsoft.com/library/465fb7fc-7622-4252-a178-ea51691c935b)＞。  
   
 2.  在 **[作業屬性]** 方塊中，按一下 **[步驟]** 頁面，然後按一下 **[新增]**。  
   
@@ -59,13 +59,13 @@ ms.lasthandoff: 04/11/2017
 ##  <a name="CmdExecJob"></a> 建立命令提示字元作業步驟  
  **建立 CmdExec 作業步驟**  
   
-1.  展開 **SQL Server Agent**，建立新作業或以滑鼠右鍵按一下現有作業，然後按一下 [屬性]。 如需建立作業的詳細資訊，請參閱＜ [建立作業](http://msdn.microsoft.com/library/465fb7fc-7622-4252-a178-ea51691c935b)＞。  
+1.  展開 **SQL Server Agent**，建立新作業或以滑鼠右鍵按一下現有作業，然後按一下 [屬性]****。 如需建立作業的詳細資訊，請參閱＜ [建立作業](http://msdn.microsoft.com/library/465fb7fc-7622-4252-a178-ea51691c935b)＞。  
   
 2.  在 **[作業屬性]** 方塊中，按一下 **[步驟]** 頁面，然後按一下 **[新增]**。  
   
 3.  在 **[新增作業步驟]** 對話方塊中，輸入一個作業 **步驟名稱**。  
   
-4.  在 [類型] 清單中，選擇 [作業系統 (CmdExec)]。  
+4.  在 [類型]**** 清單中，選擇 [作業系統 (CmdExec)]****。  
   
 5.  在 **[執行身分]** 清單中，選取具有作業將會使用之認證的 Proxy 帳戶。 根據預設，CmdExec 作業步驟會以 SQL Server Agent 服務帳戶的身分執行。  
   

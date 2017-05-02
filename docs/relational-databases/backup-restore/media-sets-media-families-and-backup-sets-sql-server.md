@@ -52,7 +52,7 @@ ms.lasthandoff: 04/11/2017
   
 
 ##  <a name="OvMediaSetsFamiliesBackupSets"></a> 媒體集、媒體家族和備份組的概觀  
- 單一媒體集是由一組一個或多個備份媒體上的備份組成。 「媒體集」(Media Set) 是按順序排列的「備份媒體」(Backup Media) 集合 (磁帶、磁碟檔案或Azure Blob)，由一個或多個備份作業使用固定的備份裝置類型與數量寫入。 給定的媒體集會使用磁帶機、磁碟機或Azure Blob，但是不得為兩個以上的組合。 
+ 單一媒體集是由一組一個或多個備份媒體上的備份組成。 「媒體集」**(Media Set) 是按順序排列的「備份媒體」**(Backup Media) 集合 (磁帶、磁碟檔案或Azure Blob)，由一個或多個備份作業使用固定的備份裝置類型與數量寫入。 給定的媒體集會使用磁帶機、磁碟機或Azure Blob，但是不得為兩個以上的組合。 
  
 **範例：** 與媒體集相關的備份裝置可能是三個磁帶機，分別稱為 `\\.\TAPE0`、 `\\.\TAPE1`和 `\\.\TAPE2`。 此媒體集僅包含磁帶，一開始最少有三個磁帶 (每個磁帶機一個)。 備份裝置類型與數量是在媒體集建立時確立，而且無法變更。 不過，可在必要時以相同類型的裝置取代備份和還原作業間的指定裝置。  
   
@@ -254,7 +254,7 @@ GO
 ##  <a name="RelatedTasks"></a> 相關工作  
  **建立新的媒體集**  
   
--   [建立完整資料庫備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md) ([備份至新的媒體集，並清除所有現有的備份組] 選項)  
+-   [建立完整資料庫備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md) ([備份至新的媒體集，並清除所有現有的備份組]**** 選項)  
   
 -   [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md) (FORMAT 選項)  
   
@@ -262,13 +262,13 @@ GO
   
  **將新備份附加至現有媒體**  
   
--   [建立完整資料庫備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md) ([附加至現有的備份組] 選項)  
+-   [建立完整資料庫備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md) ([附加至現有的備份組]**** 選項)  
   
 -   [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md) (NOINIT 選項)  
   
  **覆寫現有備份組**  
   
--   [建立完整資料庫備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md) ([覆寫所有現有的備份組] 選項)  
+-   [建立完整資料庫備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md) ([覆寫所有現有的備份組]**** 選項)  
   
 -   [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md) (INIT 選項)  
   

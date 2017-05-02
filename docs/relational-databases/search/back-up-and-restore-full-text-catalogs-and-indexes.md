@@ -1,35 +1,39 @@
 ---
-title: "備份並還原全文檢索目錄與索引。 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-search"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "全文檢索索引 [SQL Server], 備份"
-  - "全文檢索搜尋 [SQL Server], 備份及還原"
-  - "復原 [全文檢索搜尋]"
-  - "備份 [SQL Server], 全文檢索索引"
-  - "全文檢索索引 [SQL Server], 還原"
-  - "還原作業 [全文檢索搜尋]"
+title: "備份並還原全文檢索目錄與索引 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-search
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- full-text indexes [SQL Server], backing up
+- full-text search [SQL Server], back up and restore
+- recovery [full-text search]
+- backups [SQL Server], full-text indexes
+- full-text indexes [SQL Server], restoring
+- restore operations [full-text search]
 ms.assetid: 6a4080d9-e43f-4b7b-a1da-bebf654c1194
 caps.latest.revision: 62
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 61
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 36c621b35e944fe536e3a2983113ba7586e6e461
+ms.lasthandoff: 04/11/2017
+
 ---
-# 備份並還原全文檢索目錄與索引。
+# <a name="back-up-and-restore-full-text-catalogs-and-indexes"></a>備份並還原全文檢索目錄與索引。
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  本主題說明如何備份和還原在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中建立的全文檢索索引。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，全文檢索目錄是邏輯概念，而且不會位於檔案群組中。 因此，若要備份 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的全文檢索目錄，您必須識別包含屬於此目錄之全文檢索索引的每個檔案群組。 然後，您必須逐一備份這些檔案群組。  
+  本主題說明如何備份和還原在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中建立的全文檢索索引。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，全文檢索目錄是邏輯概念，而且不會位於檔案群組中。 因此，若要備份 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的全文檢索目錄，您必須識別包含屬於此目錄之全文檢索索引的每個檔案群組。 然後，您必須逐一備份這些檔案群組。  
   
 > [!IMPORTANT]  
->  您可以在升級 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 資料庫時，匯入全文檢索目錄。 每個匯入的全文檢索目錄都是其檔案群組中的資料庫檔案。 若要備份匯入的目錄，只要備份其檔案群組即可。 如需詳細資訊，請參閱《[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 線上叢書》中的[備份和還原 SQL Server 2008 全文檢索目錄](http://go.microsoft.com/fwlink/?LinkID=121052)。  
+>  您可以在升級 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 資料庫時，匯入全文檢索目錄。 每個匯入的全文檢索目錄都是其檔案群組中的資料庫檔案。 若要備份匯入的目錄，只要備份其檔案群組即可。 如需詳細資訊，請參閱《 [線上叢書》中的](http://go.microsoft.com/fwlink/?LinkID=121052)備份和還原 SQL Server 2008 全文檢索目錄 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。  
   
 ##  <a name="backingup"></a> 備份全文檢索目錄的全文檢索索引  
   
@@ -48,7 +52,6 @@ SELECT object_name(@TableID), i.is_enabled, i.change_tracking_state,
 GO  
 ```  
   
- [本主題內容](#top)  
   
 ###  <a name="Find_FG_of_FTI"></a> 尋找包含全文檢索索引的檔案群組或檔案  
  建立全文檢索索引時，它會放置於下列其中一個位置：  
@@ -72,7 +75,6 @@ GO
   
 ```  
   
- [本主題內容](#top)  
   
 ###  <a name="Back_up_FTIs_of_FTC"></a> 備份包含全文檢索索引的檔案群組  
  尋找包含全文檢索目錄之索引的檔案群組之後，您必須備份每個檔案群組。 在備份程序期間，您可能無法卸除或加入全文檢索目錄。  
@@ -85,7 +87,6 @@ GO
   
 -   [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)  
   
- [本主題內容](#top)  
   
 ##  <a name="Restore_FTI"></a> 還原全文檢索索引  
  還原備份的檔案群組就會還原全文檢索索引檔案，以及檔案群組中的其他檔案。 根據預設，檔案群組會還原至備份檔案群組所在的磁碟位置。  
@@ -100,11 +101,10 @@ GO
   
 -   [將檔案還原到新位置 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-files-to-a-new-location-sql-server.md)  
   
--   [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)  
+-   [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
   
- [本主題內容](#top)  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [管理及監視伺服器執行個體的全文檢索搜尋](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md)   
  [升級全文檢索搜尋](../../relational-databases/search/upgrade-full-text-search.md)  
   

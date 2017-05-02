@@ -1,31 +1,35 @@
 ---
-title: "資料行屬性 (一般頁面) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.columnproperties.general.f1"
+title: "資料行屬性 (一般頁面) | Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.columnproperties.general.f1
 ms.assetid: a745890b-994e-4c23-8028-5c83751e60c4
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 478dc0e10767f9e4e10c5c3ede74aec5ddaddef4
+ms.lasthandoff: 04/11/2017
+
 ---
-# 資料行屬性 (一般頁面)
+# <a name="column-properties-general-page"></a>資料行屬性 (一般頁面)
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   使用此頁面來檢視選取之資料行的屬性。  
   
- 此頁面的資訊是唯讀的。 若要修改資料行，請關閉 [資料行屬性] 對話方塊，展開物件總管中的資料表和資料行，以滑鼠右鍵按一下資料行，然後按一下 [設計]。  
+ 此頁面的資訊是唯讀的。 若要修改資料行，請關閉 [資料行屬性]**** 對話方塊，展開物件總管中的資料表和資料行，以滑鼠右鍵按一下資料行，然後按一下 [設計]****。  
   
-## 選項  
+## <a name="options"></a>選項。  
  **名稱**  
  資料行的名稱。  
   
@@ -36,7 +40,7 @@ caps.handback.revision: 27
  資料行可保存的資料類型。 如果資料類型是系統資料類型，就會顯示系統資料類型。 如果資料類型是使用者自訂的資料類型，就會顯示組成使用者自訂資料類型的系統資料類型。  
   
  **主索引鍵**  
- 指出資料行是否為主索引鍵。 可能的值為 **True** 和 **False**。  
+ 指出資料行是否為主索引鍵。 可能的值為 **True**和 **False**。  
   
  **允許 Null**  
  指出資料行是否接受 Null 值。 可能的值為 **True** 和 **False**。  
@@ -45,7 +49,7 @@ caps.handback.revision: 27
  指出資料行值是否為計算運算式的結果。  
   
  **計算文字**  
- 指出用來計算資料行文字的陳述式。 如需詳細資訊，請參閱[指定資料表中的計算資料行](../../relational-databases/tables/specify-computed-columns-in-a-table.md)。  
+ 指出用來計算資料行文字的陳述式。 如需詳細資訊，請參閱 [指定資料表中的計算資料行](../../relational-databases/tables/specify-computed-columns-in-a-table.md)。  
   
  **識別**  
  表示資料行是否為資料表的識別欄位。 可能的值為 **True** 和 **False**。  
@@ -54,7 +58,7 @@ caps.handback.revision: 27
  指出識別欄位的初始資料列值。  
   
  **識別值增量**  
- [識別值增量] 屬性會指定當 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 為插入的資料列產生識別值時，要加到最大的現有資料列識別值的數值。  
+ [識別值增量]**** 屬性會指定當 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 為插入的資料列產生識別值時，要加到最大的現有資料列識別值的數值。  
   
  **預設繫結**  
  資料行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 預設繫結。 若未繫結預設值，此選項可為空白。  
@@ -90,10 +94,10 @@ caps.handback.revision: 27
 >  有數個通用但意義不同的文字結構描述。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用結構描述來組織資料庫物件。 它類似於擁有權。 XML 使用結構描述，將 XML 資訊的組織定義成一系列的命名空間。 這是將相關的 XML 程式碼群組在一起的方法。  
   
  **為疏鬆**  
- 指出資料行是否為疏鬆資料行。 可能的值為 **True** 和 **False**。 如需詳細資訊，請參閱[使用疏鬆資料行](../../relational-databases/tables/use-sparse-columns.md)。  
+ 指出資料行是否為疏鬆資料行。 可能的值為 **True** 和 **False**。 如需詳細資訊，請參閱 [使用疏鬆資料行](../../relational-databases/tables/use-sparse-columns.md)。  
   
  **是資料行集**  
- 指出資料行是否為資料行集。 可能的值為 **True** 和 **False**。 如需詳細資訊，請參閱[使用資料行集](../../relational-databases/tables/use-column-sets.md)。  
+ 指出資料行是否為資料行集。 可能的值為 **True** 和 **False**。 如需詳細資訊，請參閱 [使用資料行集](../../relational-databases/tables/use-column-sets.md)。  
   
  **ANSI 填補狀態**  
  指出開啟或關閉 ANSI 填補。 如需詳細資訊，請參閱 [SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md)。  

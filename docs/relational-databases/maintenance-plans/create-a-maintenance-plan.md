@@ -62,7 +62,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  按一下加號展開 **[管理]** 資料夾。  
   
-3.  以滑鼠右鍵按一下 [維護計畫] 資料夾，然後選取 [維護計畫精靈]。  
+3.  以滑鼠右鍵按一下 [維護計畫]**** 資料夾，然後選取 [維護計畫精靈]****。  
   
 4.  請遵循精靈的步驟來建立維護計畫。 如需詳細資訊，請參閱 [Use the Maintenance Plan Wizard](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)。  
   
@@ -72,7 +72,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  按一下加號展開 **[管理]** 資料夾。  
   
-3.  以滑鼠右鍵按一下 [維護計畫] 資料夾，然後選取 [新增維護計畫]。  
+3.  以滑鼠右鍵按一下 [維護計畫]**** 資料夾，然後選取 [新增維護計畫]****。  
   
 4.  遵循[建立維護計畫 &#40;維護計畫設計介面&#41;](../../relational-databases/maintenance-plans/create-a-maintenance-plan-maintenance-plan-design-surface.md) 中的步驟建立維護計畫。  
   

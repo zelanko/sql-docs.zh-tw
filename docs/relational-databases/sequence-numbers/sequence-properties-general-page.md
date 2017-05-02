@@ -29,7 +29,7 @@ ms.lasthandoff: 04/11/2017
   
  如需使用 **CREATE SEQUENCE** 和 **NEXT VALUE FOR** 函數的相關資訊和案例，請參閱[序號](../../relational-databases/sequence-numbers/sequence-numbers.md)。  
   
- 此頁面可經由兩種方式存取：以滑鼠右鍵按一下 [物件總管] 中的 [順序]，然後按一下 [新增順序]，或者以滑鼠右鍵按一下現有的順序，然後按一下 [屬性]。 以滑鼠右鍵按一下現有的順序，然後按一下 [屬性] 時，無法編輯選項。 若要變更順序選項，請使用 [ALTER SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-sequence-transact-sql.md) 陳述式或卸除然後重新建立順序物件。  
+ 此頁面可經由兩種方式存取：以滑鼠右鍵按一下 [物件總管] 中的 [順序]****，然後按一下 [新增順序]****，或者以滑鼠右鍵按一下現有的順序，然後按一下 [屬性]****。 以滑鼠右鍵按一下現有的順序，然後按一下 [屬性]**** 時，無法編輯選項。 若要變更順序選項，請使用 [ALTER SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-sequence-transact-sql.md) 陳述式或卸除然後重新建立順序物件。  
   
 ## <a name="options"></a>選項。  
  **順序名稱**  

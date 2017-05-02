@@ -26,7 +26,7 @@ ms.lasthandoff: 04/11/2017
 # <a name="synchronize-a-subscription-using-windows-synchronization-manager"></a>使用 Windows Synchronization Manager 同步處理訂閱
   如果 Microsoft[!INCLUDE[msCoName](../../includes/msconame-md.md)] 與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows Synchronization Manager 在相同的電腦上執行，則 Synchronization Manager 只能用於同步處理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行集的訂閱 (它也可以用於同步處理離線檔案和網頁)。 若要使用 Synchronization Manager：  
   
-1.  在 [訂閱屬性 - \<訂閱者>: \<訂閱資料庫>] 對話方塊中，啟用同步處理提取訂閱與 Windows Synchronization Manager。 如需存取此對話方塊的詳細資訊，請參閱[檢視及修改提取訂閱屬性](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)。  
+1.  在 [訂閱屬性 - \<訂閱者>: \<訂閱資料庫>]**** 對話方塊中，啟用同步處理提取訂閱與 Windows Synchronization Manager。 如需存取此對話方塊的詳細資訊，請參閱[檢視及修改提取訂閱屬性](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)。  
   
 2.  透過 Windows 中的 **[開始]** 功能表存取 Synchronization Manager。  
   
@@ -37,7 +37,7 @@ ms.lasthandoff: 04/11/2017
   
 ### <a name="to-enable-the-synchronization-of-pull-subscriptions-with-windows-synchronization-manager"></a>若要使用 Windows Synchronization Manager 啟用提取訂閱同步處理  
   
-1.  在 [訂閱屬性 - \<訂閱者>: \<訂閱資料庫>] 對話方塊的 [一般] 頁面中，針對 [使用 Windows Synchronization Manager] 選項選取 [啟用]。  
+1.  在 [訂閱屬性 - \<訂閱者>: \<訂閱資料庫>]**** 對話方塊的 [一般]**** 頁面中，針對 [使用 Windows Synchronization Manager]**** 選項選取 [啟用]****。  
   
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -49,7 +49,7 @@ ms.lasthandoff: 04/11/2017
   
     -   按一下 **[開始]**，依序指向 **[程式集]** (或 **[程式集]**) 和 **[附屬應用程式]**，然後按一下 **[同步處理]**。  
   
-    -   按一下 **[開始]**，然後按一下 **[執行]** 在 [執行] 對話方塊的 [開啟] 欄位中，鍵入 **mobsync.exe**，然後按一下 [確定]。  
+    -   按一下 **[開始]**，然後按一下 **[執行]** 在 [執行]**** 對話方塊的 [開啟]**** 欄位中，鍵入 **mobsync.exe**，然後按一下 [確定]****。  
   
 2.  在 **[要同步處理的項目]** 對話方塊中，選取要同步處理的訂閱。 訂閱會列在電腦上安裝的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之下。  
   

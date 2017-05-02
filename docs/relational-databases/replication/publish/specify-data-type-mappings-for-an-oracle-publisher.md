@@ -36,15 +36,15 @@ ms.lasthandoff: 04/11/2017
      [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 您可以在 [發行項屬性 - \<發行項>] 對話方塊的 [資料對應] 索引標籤上，指定資料類型對應。 您可以從 [新增發行集精靈] 的 [發行項] 頁面，以及 [發行集屬性 - \<發行集>] 對話方塊存取這個對話方塊。 如需使用精靈和存取對話方塊的詳細資訊，請參閱[從 Oracle 資料庫建立發行集](../../../relational-databases/replication/publish/create-a-publication-from-an-oracle-database.md)和[檢視及修改發行集屬性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
+ 您可以在 [發行項屬性 - \<發行項>]**** 對話方塊的 [資料對應]**** 索引標籤上，指定資料類型對應。 您可以從 [新增發行集精靈] 的 [發行項]**** 頁面，以及 [發行集屬性 - \<發行集>]**** 對話方塊存取這個對話方塊。 如需使用精靈和存取對話方塊的詳細資訊，請參閱[從 Oracle 資料庫建立發行集](../../../relational-databases/replication/publish/create-a-publication-from-an-oracle-database.md)和[檢視及修改發行集屬性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
   
 #### <a name="to-specify-a-data-type-mapping"></a>若要指定資料類型對應  
   
-1.  在 [新增發行集精靈] 的 [發行項] 頁面上，或是在 [發行集屬性 - \<發行集>] 對話方塊中，選取一個資料表，然後按一下 [發行項屬性]。  
+1.  在 [新增發行集精靈] 的 [發行項]**** 頁面上，或是在 [發行集屬性 - \<發行集>]**** 對話方塊中，選取一個資料表，然後按一下 [發行項屬性]****。  
   
 2.  按一下 **[設定反白顯示資料表發行項的屬性]**。  
   
-3.  在 [發行項屬性 - \<發行項>] 對話方塊的 [資料對應] 索引標籤上，從 [訂閱者資料類型] 資料行選取對應：  
+3.  在 [發行項屬性 - \<發行項>]**** 對話方塊的 [資料對應]**** 索引標籤上，從 [訂閱者資料類型]**** 資料行選取對應：  
   
     -   針對某些資料類型，只有一個可能的對應，在此情況下，屬性方格中的資料行為唯讀。  
   

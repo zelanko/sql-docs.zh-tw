@@ -23,7 +23,7 @@ ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="connect-to-microsoft-azure-storage-restore"></a>連接到 Microsoft Azure 儲存體 (還原)
-  此對話方塊可讓您指定 Windows Azure 儲存體帳戶資訊的連接，以擷取儲存在 Windows Azure 儲存體帳戶中的檔案。 指定必要資訊之後，按一下 [連接] 建立 Windows Azure 儲存體的連接。  
+  此對話方塊可讓您指定 Windows Azure 儲存體帳戶資訊的連接，以擷取儲存在 Windows Azure 儲存體帳戶中的檔案。 指定必要資訊之後，按一下 [連接]**** 建立 Windows Azure 儲存體的連接。  
   
 ## <a name="windows-azure-storage-account"></a>Windows Azure 儲存體帳戶  
  **儲存體帳戶**  
@@ -32,10 +32,10 @@ ms.lasthandoff: 04/11/2017
  **帳戶金鑰**  
  指定 Windows Azure 儲存體帳戶存取金鑰。  
   
- [使用安全端點 (HTTPS)] 核取方塊  
+ [使用安全端點 (HTTPS)]**** 核取方塊  
  選取此選項，以確保 Windows Azure 儲存體的安全連接 (建議使用)。  
   
- [儲存帳戶金鑰]核取方塊  
+ [儲存帳戶金鑰]****核取方塊  
  如果您想要 SQL Server 記住此儲存體帳戶的存取金鑰，請選取此核取方塊。  
   
 ### <a name="sql-credential"></a>SQL 認證  
@@ -43,6 +43,6 @@ ms.lasthandoff: 04/11/2017
  選取符合儲存體帳戶和帳戶金鑰資訊的現有 SQL 認證。  
   
  **建立新認證**  
- 選取此選項，以使用儲存體帳戶和帳戶金鑰資訊建立新認證。 在 [認證名稱] 欄位中指定新認證的名稱。  
+ 選取此選項，以使用儲存體帳戶和帳戶金鑰資訊建立新認證。 在 [認證名稱]**** 欄位中指定新認證的名稱。  
   
   

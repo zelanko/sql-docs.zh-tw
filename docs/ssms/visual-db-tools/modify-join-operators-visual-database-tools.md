@@ -29,11 +29,11 @@ ms.lasthandoff: 04/11/2017
   
 ### <a name="to-modify-join-operators"></a>若要修改聯結運算子  
   
-1.  在 [圖表窗格][](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md) 中，在要修改的聯結線上按一下滑鼠右鍵，然後從捷徑功能表中選取 [屬性]。  
+1.  在 [圖表窗格][](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md) 中，在要修改的聯結線上按一下滑鼠右鍵，然後從捷徑功能表中選取 [屬性]****。  
   
-2.  在 [屬性] 視窗中，按一下 [聯結條件及類型]，再按一下屬性右邊的省略符號 ([…])。  
+2.  在 [屬性] 視窗中，按一下 [聯結條件及類型]****，再按一下屬性右邊的省略符號 ([…])****。  
   
-3.  在 [聯結] 對話方塊中選取新的運算子。  
+3.  在 [聯結]**** 對話方塊中選取新的運算子。  
   
 ## <a name="see-also"></a>另請參閱  
 [自動聯結資料表 &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/join-tables-automatically-visual-database-tools.md)  

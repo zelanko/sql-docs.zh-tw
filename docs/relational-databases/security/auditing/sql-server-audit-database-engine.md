@@ -28,7 +28,7 @@ ms.lasthandoff: 04/29/2017
 # <a name="sql-server-audit-database-engine"></a>SQL Server Audit (Database Engine)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  「稽核」[!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] 執行個體或個別資料庫會在 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 上發生追蹤及記錄事件。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 稽核可讓您建立伺服器稽核，其中可包含伺服器層級事件的伺服器稽核規格，以及資料庫層級事件的資料庫稽核規格。 您可以將稽核事件寫入事件記錄或稽核檔案。  
+  「稽核」**[!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] 執行個體或個別資料庫會在 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 上發生追蹤及記錄事件。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 稽核可讓您建立伺服器稽核，其中可包含伺服器層級事件的伺服器稽核規格，以及資料庫層級事件的資料庫稽核規格。 您可以將稽核事件寫入事件記錄或稽核檔案。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的稽核有幾個層級，需視安裝的管制或標準需求而定。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit 提供了一些工具和程序，您必須擁有這些工具和程序，才能啟用、儲存及檢視各種伺服器和資料庫物件的稽核。  
   
@@ -40,26 +40,26 @@ ms.lasthandoff: 04/29/2017
 >  本主題適用於 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  若是 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]，請參閱 [開始使用 SQL 資料庫稽核](https://azure.microsoft.com/documentation/articles/sql-database-auditing-get-started/)。  
   
 ## <a name="sql-server-audit-components"></a>SQL Server Audit 元件  
- 「稽核」  是針對特定伺服器動作或資料庫動作群組將幾個元素組合成單一封裝的動作。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit 的元件結合起來可產生稱為稽核的輸出，就像是與圖形和資料元素結合的報表定義會產生報表一樣。  
+ 「稽核」 ** 是針對特定伺服器動作或資料庫動作群組將幾個元素組合成單一封裝的動作。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit 的元件結合起來可產生稱為稽核的輸出，就像是與圖形和資料元素結合的報表定義會產生報表一樣。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit 會使用「擴充事件」  來協助建立稽核。 如需擴充事件的詳細資訊，請參閱 [擴充事件](../../../relational-databases/extended-events/extended-events.md)。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit 會使用「擴充事件」 ** 來協助建立稽核。 如需擴充事件的詳細資訊，請參閱 [擴充事件](../../../relational-databases/extended-events/extended-events.md)。  
   
 ### <a name="sql-server-audit"></a>SQL Server Audit  
  *SQL Server Audit* 物件會收集要監視之伺服器或資料庫層級動作和動作群組的單一執行個體。 此稽核位於 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體層級。 您可以針對每個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體設有多個稽核。  
   
- 當您定義稽核時，會針對結果的輸出指定位置， 這就是稽核目的地。 此稽核會在「停用」  狀態下建立，而且不會自動稽核任何動作。 在啟用稽核之後，稽核目的地會從此稽核接收資料。  
+ 當您定義稽核時，會針對結果的輸出指定位置， 這就是稽核目的地。 此稽核會在「停用」 ** 狀態下建立，而且不會自動稽核任何動作。 在啟用稽核之後，稽核目的地會從此稽核接收資料。  
   
 ### <a name="server-audit-specification"></a>伺服器稽核規格  
  *「伺服器稽核規格」* (Server Audit Specification) 物件屬於稽核。 您可以針對每個稽核建立一個伺服器稽核規格，因為這兩者都是在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體範圍所建立。  
   
- 伺服器稽核規格會收集由擴充的事件功能所引發的許多伺服器層級動作群組。 您可以將「稽核動作群組」  併入伺服器稽核規格中。 稽核動作群組是預先定義的動作群組，這些動作是 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]中發生之不可部分完成的事件。 這些動作會傳送給稽核，然後它會在目標中記錄這些動作。  
+ 伺服器稽核規格會收集由擴充的事件功能所引發的許多伺服器層級動作群組。 您可以將「稽核動作群組」 ** 併入伺服器稽核規格中。 稽核動作群組是預先定義的動作群組，這些動作是 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]中發生之不可部分完成的事件。 這些動作會傳送給稽核，然後它會在目標中記錄這些動作。  
   
  伺服器層級的稽核動作群組在 [SQL Server Audit 動作群組和動作](../../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md)主題中有描述。  
   
 ### <a name="database-audit-specification"></a>資料庫稽核規格  
- 「資料庫稽核規格」  物件屬於 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit。 您可以針對每個稽核的每個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫建立一個資料庫稽核規格。  
+ 「資料庫稽核規格」 ** 物件屬於 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit。 您可以針對每個稽核的每個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫建立一個資料庫稽核規格。  
   
- 資料庫稽核規格會收集由擴充的事件功能所引發的資料庫層級稽核動作。 您可以將稽核動作群組或稽核事件加入資料庫稽核規格。 「稽核事件」 是可由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 引擎稽核之不可部分完成的動作。 「稽核動作群組」 是預先定義的動作群組。 這兩者都在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫範圍內。 這些動作會傳送給稽核，然後它會在目標中記錄這些動作。 請勿在使用者資料庫稽核規格中包含伺服器範圍的物件，例如系統檢視表。  
+ 資料庫稽核規格會收集由擴充的事件功能所引發的資料庫層級稽核動作。 您可以將稽核動作群組或稽核事件加入資料庫稽核規格。 「稽核事件」** 是可由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 引擎稽核之不可部分完成的動作。 「稽核動作群組」** 是預先定義的動作群組。 這兩者都在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫範圍內。 這些動作會傳送給稽核，然後它會在目標中記錄這些動作。 請勿在使用者資料庫稽核規格中包含伺服器範圍的物件，例如系統檢視表。  
   
  資料庫層級的稽核動作群組和稽核動作在 [SQL Server Audit 動作群組和動作](../../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md)主題中有描述。  
   
@@ -69,7 +69,7 @@ ms.lasthandoff: 04/29/2017
 > [!IMPORTANT]  
 >  任何經過驗證的使用者都可以讀寫 Windows 應用程式事件記錄檔。 應用程式事件記錄檔所需的權限低於 Windows 安全性事件記錄檔，所以比起 Windows 安全性事件記錄檔是較不安全的。  
   
- 寫入到 Windows 安全性記錄檔需要將 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務帳戶加入 [產生安全性稽核]  原則。 根據預設，本機系統、本機服務和網路服務都是此原則的一部分。 您可以使用安全性原則嵌入式管理單元 (secpol.msc) 來設定這項設定。 此外，[稽核物件存取]  安全性原則必須已啟用 [成功]  和 [失敗] 。 您可以使用安全性原則嵌入式管理單元 (secpol.msc) 來設定這項設定。 在 [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] 或 Windows Server 2008 中，您可以使用稽核原則程式 ( **AuditPol.exe)** 從命令列設定更細微的 [產生的應用程式]原則。 如需啟用寫入 Windows 安全性記錄檔之步驟的詳細資訊，請參閱 [將 SQL Server Audit 事件寫入安全性記錄檔](../../../relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log.md)。 如需 Auditpol.exe 程式的詳細資訊，請參閱知識庫文章 921469： [如何使用「群組原則」進行詳細的安全性稽核設定](http://support.microsoft.com/kb/921469/)。 Windows 事件記錄檔在 Windows 作業系統中為全域的範圍。 如需 Windows 事件記錄檔的詳細資訊，請參閱 [事件檢視器概觀](http://go.microsoft.com/fwlink/?LinkId=101455)。 如果您需要更精確的稽核權限，請使用二進位檔案目標。  
+ 寫入到 Windows 安全性記錄檔需要將 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務帳戶加入 [產生安全性稽核] **** 原則。 根據預設，本機系統、本機服務和網路服務都是此原則的一部分。 您可以使用安全性原則嵌入式管理單元 (secpol.msc) 來設定這項設定。 此外，[稽核物件存取] **** 安全性原則必須已啟用 [成功] **** 和 [失敗] ****。 您可以使用安全性原則嵌入式管理單元 (secpol.msc) 來設定這項設定。 在 [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] 或 Windows Server 2008 中，您可以使用稽核原則程式 ( **AuditPol.exe)** 從命令列設定更細微的 [產生的應用程式]****原則。 如需啟用寫入 Windows 安全性記錄檔之步驟的詳細資訊，請參閱 [將 SQL Server Audit 事件寫入安全性記錄檔](../../../relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log.md)。 如需 Auditpol.exe 程式的詳細資訊，請參閱知識庫文章 921469： [如何使用「群組原則」進行詳細的安全性稽核設定](http://support.microsoft.com/kb/921469/)。 Windows 事件記錄檔在 Windows 作業系統中為全域的範圍。 如需 Windows 事件記錄檔的詳細資訊，請參閱 [事件檢視器概觀](http://go.microsoft.com/fwlink/?LinkId=101455)。 如果您需要更精確的稽核權限，請使用二進位檔案目標。  
   
  當您將稽核資訊儲存到檔案時，為了避免遭到篡改，您可以使用以下方式來限制對檔案位置的存取：  
   
@@ -98,7 +98,7 @@ ms.lasthandoff: 04/29/2017
 ## <a name="overview-of-using-sql-server-audit"></a>使用 SQL Server Audit 的概觀  
  您可以使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 來定義稽核。 在建立及啟用稽核之後，目標將會收到項目。  
   
- 您可以使用 Windows 中的 [事件檢視器]  公用程式來閱讀 Windows 事件記錄檔。 如果是檔案目標，您可以使用 **中的 [記錄檔檢視器]**[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 或是 [fn_get_audit_file](../../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md) 函數來閱讀目標檔案。  
+ 您可以使用 Windows 中的 [事件檢視器] **** 公用程式來閱讀 Windows 事件記錄檔。 如果是檔案目標，您可以使用 **中的 [記錄檔檢視器]**[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 或是 [fn_get_audit_file](../../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md) 函數來閱讀目標檔案。  
   
  建立及使用稽核的一般程序如下所示。  
   
@@ -108,7 +108,7 @@ ms.lasthandoff: 04/29/2017
   
 3.  啟用稽核。  
   
-4.  使用 Windows [事件檢視器] 、[記錄檔檢視器] 或是 fn_get_audit_file 函數來閱讀稽核事件。  
+4.  使用 Windows [事件檢視器] ****、[記錄檔檢視器] ****或是 fn_get_audit_file 函數來閱讀稽核事件。  
   
  如需詳細資訊，請參閱 [建立伺服器稽核與伺服器稽核規格](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md) 和 [建立伺服器稽核和資料庫稽核規格](../../../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md)。  
   
@@ -120,7 +120,7 @@ ms.lasthandoff: 04/29/2017
  如需服務啟動選項的詳細資訊，請參閱 [Database Engine 服務啟動選項](../../../database-engine/configure-windows/database-engine-service-startup-options.md)。  
   
 ### <a name="attaching-a-database-with-an-audit-defined"></a>附加已定義稽核的資料庫  
- 如果附加的資料庫有稽核規格，而且指定了未存在於伺服器上的 GUID 時，將會造成「孤立的」  稽核規格。 因為具有相符 GUID 的稽核不存在於伺服器執行個體上，所以不會記錄任何稽核事件。 若要更正這個狀況，請使用 ALTER DATABASE AUDIT SPECIFICATION 命令，將被遺棄的稽核規格連接到現有的伺服器稽核。 或者，使用 CREATE SERVER AUDIT 命令，建立具有指定之 GUID 的新伺服器稽核。  
+ 如果附加的資料庫有稽核規格，而且指定了未存在於伺服器上的 GUID 時，將會造成「孤立的」 ** 稽核規格。 因為具有相符 GUID 的稽核不存在於伺服器執行個體上，所以不會記錄任何稽核事件。 若要更正這個狀況，請使用 ALTER DATABASE AUDIT SPECIFICATION 命令，將被遺棄的稽核規格連接到現有的伺服器稽核。 或者，使用 CREATE SERVER AUDIT 命令，建立具有指定之 GUID 的新伺服器稽核。  
   
  您可以將有定義稽核規格的資料庫附加到不支援 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit 的另一個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本 (例如 [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)] )，但是它不會記錄稽核事件。  
   

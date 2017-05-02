@@ -53,11 +53,11 @@ ms.lasthandoff: 04/11/2017
     -   您可以將訂閱指定為永不過期，不過強烈建議您不要使用此值，因為如此便無法清除中繼資料了。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 您可以在 [發行集屬性 - \<發行集>] 對話方塊的 [一般] 頁面上，設定訂閱的逾期期限。 如需有關存取這個對話方塊的詳細資訊，請參閱＜ [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)＞。  
+ 您可以在 [發行集屬性 - \<發行集>]**** 對話方塊的 [一般]**** 頁面上，設定訂閱的逾期期限。 如需有關存取這個對話方塊的詳細資訊，請參閱＜ [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)＞。  
   
 #### <a name="to-set-the-expiration-period-for-subscriptions"></a>若要設定訂閱的過期期間  
   
-1.  在 [發行集屬性 - \<發行集>] 對話方塊之 [一般] 頁面的 [訂閱過期] 區段中，指定訂閱是否應過期。  
+1.  在 [發行集屬性 - \<發行集>]**** 對話方塊之 [一般]**** 頁面的 [訂閱過期]**** 區段中，指定訂閱是否應過期。  
   
 2.  如果應過期，則指定過期期間。  
   
