@@ -148,7 +148,7 @@ Row 2
 ```  
   
 ## <a name="handling-xml-from-an-xml-type-column-by-using-adonet"></a>使用 ADO.NET 處理 xml 類型資料行的 XML  
- 若要使用 ADO.NET 和 **** 處理 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] you can use the standard behavior of the **SqlCommand** class. 例如，使用 **SqlDataReader** 擷取 **xml**資料類型資料行及其值，就跟擷取 SQL 資料行的方式一樣。不過，如果您想要將 **xml** 資料類型資料行的內容處理為 XML，您就必須先將內容指定為 **XmlReader** 類型。  
+ 若要使用 ADO.NET 和  處理 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] you can use the standard behavior of the **SqlCommand** class. 例如，使用 **SqlDataReader** 擷取 **xml**資料類型資料行及其值，就跟擷取 SQL 資料行的方式一樣。不過，如果您想要將 **xml** 資料類型資料行的內容處理為 XML，您就必須先將內容指定為 **XmlReader** 類型。  
   
  如需詳細資訊及範例程式碼，請參閱 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] SDK 文件集的 "XML Column Values in a Data Reader"。  
   

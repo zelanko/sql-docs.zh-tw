@@ -140,13 +140,13 @@ ms.lasthandoff: 04/11/2017
   
  Sales.SalesOrderHeader_inmem  
   
--   記憶體最佳化資料表支援「預設條件約束」** ，且大部分的預設條件約束在移轉後會保持原狀。 不過，原始資料表 Sales.SalesOrderHeader 包含兩個預設條件約束，會擷取資料行 OrderDate 和 ModifiedDate 的目前日期。 在具有大量並行的高輸送量訂單處理工作負載中，任何全域資源都可能會成為競爭重點。 系統時間即為這類全域資源。根據觀察，執行插入銷售訂單的記憶體內部 OLTP 工作負載時，系統時間可能會成為瓶頸，特別是在需要針對銷售訂單標頭的多個資料行擷取系統時間，並同時擷取銷售訂單詳細資料時。 這個問題已在此範例中獲得解決，只對每個插入的銷售訂單擷取一次系統時間，然後在預存程序 Sales.usp_InsertSalesOrder_inmem 中，將此值做為 SalesOrderHeader_inmem 和 SalesOrderDetail_inmem 的日期時間資料行使用。  
+-   記憶體最佳化資料表支援「預設條件約束」 ，且大部分的預設條件約束在移轉後會保持原狀。 不過，原始資料表 Sales.SalesOrderHeader 包含兩個預設條件約束，會擷取資料行 OrderDate 和 ModifiedDate 的目前日期。 在具有大量並行的高輸送量訂單處理工作負載中，任何全域資源都可能會成為競爭重點。 系統時間即為這類全域資源。根據觀察，執行插入銷售訂單的記憶體內部 OLTP 工作負載時，系統時間可能會成為瓶頸，特別是在需要針對銷售訂單標頭的多個資料行擷取系統時間，並同時擷取銷售訂單詳細資料時。 這個問題已在此範例中獲得解決，只對每個插入的銷售訂單擷取一次系統時間，然後在預存程序 Sales.usp_InsertSalesOrder_inmem 中，將此值做為 SalesOrderHeader_inmem 和 SalesOrderDetail_inmem 的日期時間資料行使用。  
   
--   「別名 UDT」** - 原始資料表針對資料行 PurchaseOrderNumber 和 AccountNumber，分別使用兩個別名使用者定義資料類型 (UDT) dbo.OrderNumber 和 dbo.AccountNumber。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 不支援在記憶體最佳化資料表中使用別名 UDT，因此新資料表會分別使用系統資料類型 Nvarchar(25) 和 Nvarchar(15)。  
+-   「別名 UDT」 - 原始資料表針對資料行 PurchaseOrderNumber 和 AccountNumber，分別使用兩個別名使用者定義資料類型 (UDT) dbo.OrderNumber 和 dbo.AccountNumber。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 不支援在記憶體最佳化資料表中使用別名 UDT，因此新資料表會分別使用系統資料類型 Nvarchar(25) 和 Nvarchar(15)。  
   
--   「索引鍵中的資料行可為 Null」** - 在原始資料表中，資料行 SalesPersonID 可為 Null，但是在新資料表中，資料行不可為 Null，且預設條件約束必須帶有值 (-1)。 這是因為記憶體最佳化資料表上的索引不可以在索引鍵中有可為 Null 的資料行，在此情況下，-1 會代替 NULL 值。  
+-   「索引鍵中的資料行可為 Null」 - 在原始資料表中，資料行 SalesPersonID 可為 Null，但是在新資料表中，資料行不可為 Null，且預設條件約束必須帶有值 (-1)。 這是因為記憶體最佳化資料表上的索引不可以在索引鍵中有可為 Null 的資料行，在此情況下，-1 會代替 NULL 值。  
   
--   「計算資料行」** - 由於 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 不支援在記憶體最佳化資料表中使用計算資料行，因此會省略計算資料行 SalesOrderNumber 和 TotalDue。 新檢視 Sales.vSalesOrderHeader_extended_inmem 會反映資料行 SalesOrderNumber 和 TotalDue。 因此，如果需要這些資料行，您可以使用此檢視。  
+-   「計算資料行」 - 由於 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 不支援在記憶體最佳化資料表中使用計算資料行，因此會省略計算資料行 SalesOrderNumber 和 TotalDue。 新檢視 Sales.vSalesOrderHeader_extended_inmem 會反映資料行 SalesOrderNumber 和 TotalDue。 因此，如果需要這些資料行，您可以使用此檢視。  
 
     - **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
 從 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 開始，記憶體最佳化資料表和索引支援計算資料行。
@@ -158,15 +158,15 @@ ms.lasthandoff: 04/11/2017
   
  Sales.SalesOrderDetail  
   
--   「預設條件約束」** - 類似 SalesOrderHeader，預設條件約束要求不得移轉系統日期/時間，而是由插入銷售訂單的預存程序在第一次插入時，負責插入目前的系統日期/時間。  
+-   「預設條件約束」 - 類似 SalesOrderHeader，預設條件約束要求不得移轉系統日期/時間，而是由插入銷售訂單的預存程序在第一次插入時，負責插入目前的系統日期/時間。  
   
--   「計算資料行」** – 由於 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]的記憶體最佳化資料表不支援計算資料行，因此不會移轉計算資料行 LineTotal。 若要存取此資料行，請使用 Sales.vSalesOrderDetail_extended_inmem 檢視。  
+-   「計算資料行」 – 由於 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]的記憶體最佳化資料表不支援計算資料行，因此不會移轉計算資料行 LineTotal。 若要存取此資料行，請使用 Sales.vSalesOrderDetail_extended_inmem 檢視。  
   
 -   *Rowguid* - Rowguid 資料行會遭到省略。 如需詳細資訊，請參閱 SalesOrderHeader 資料表的描述。  
   
  Production.Product  
   
--   「別名 UDT」** - 原始資料表使用使用者定義資料類型 dbo.Flag，相當於系統資料類型 bit。 移轉的資料表會改用 bit 資料類型。  
+-   「別名 UDT」 - 原始資料表使用使用者定義資料類型 dbo.Flag，相當於系統資料類型 bit。 移轉的資料表會改用 bit 資料類型。  
   
 -   *Rowguid* - Rowguid 資料行會遭到省略。 如需詳細資訊，請參閱 SalesOrderHeader 資料表的描述。  
   
