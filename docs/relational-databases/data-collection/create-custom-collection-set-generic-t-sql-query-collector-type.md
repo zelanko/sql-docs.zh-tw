@@ -118,7 +118,7 @@ ms.lasthandoff: 04/11/2017
     GO  
     ```  
   
-     您也可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中進行目視檢查。 在物件總管中，展開 [管理]**** 節點，然後展開 [資料收集]****。 將會顯示新的收集組。 收集組的紅色圓圈圖示是表示此收集組已經停止。  
+     您也可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中進行目視檢查。 在物件總管中，展開 [管理] 節點，然後展開 [資料收集]。 將會顯示新的收集組。 收集組的紅色圓圈圖示是表示此收集組已經停止。  
   
 ## <a name="example"></a>範例  
  下列程式碼範例會結合上述步驟所列的範例。 請注意，這時針對收集項所設定的收集頻率 (5 秒) 將會遭到忽略，因為收集組的收集模式設定為 0，而這是快取模式。 如需相關資訊，請參閱 [Data Collection](../../relational-databases/data-collection/data-collection.md)。  

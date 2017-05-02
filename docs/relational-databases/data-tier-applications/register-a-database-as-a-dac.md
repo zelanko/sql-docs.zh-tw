@@ -31,17 +31,17 @@ ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="register-a-database-as-a-dac"></a>將資料庫註冊為 DAC
-  您可以使用 [註冊資料層應用程式精靈]**** 或 Windows PowerShell 指令碼來建立資料層應用程式 (DAC) 定義，以便描述現有資料庫中的物件，並在 **msdb** 系統資料庫 (在 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 中為 **master**) 中註冊 DAC 定義。  
+  您可以使用 [註冊資料層應用程式精靈] 或 Windows PowerShell 指令碼來建立資料層應用程式 (DAC) 定義，以便描述現有資料庫中的物件，並在 **msdb** 系統資料庫 (在 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 中為 **master**) 中註冊 DAC 定義。  
   
 -   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
 -   **To upgrade a DAC, using:**  [The Register Data-tier Application Wizard](#UsingRegisterDACWizard), [PowerShell](#RegisterDACPowerShell)  
   
 ## <a name="before-you-begin"></a>開始之前  
- 註冊程序會建立 DAC 定義，以定義資料庫中的物件。 DAC 定義和資料庫的組合會形成 DAC 執行個體。 如果將資料庫註冊為 Database Engine 之受管理的執行個體上的 DAC，下次從執行個體將公用程式收集組傳送到公用程式控制點時，註冊的 DAC 將會合併到 SQL Server 公用程式中。 然後 DAC 會出現在 **** [公用程式總管] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **[部署的資料層應用程式]** 節點中，並在 **** 詳細資料頁面中報告。  
+ 註冊程序會建立 DAC 定義，以定義資料庫中的物件。 DAC 定義和資料庫的組合會形成 DAC 執行個體。 如果將資料庫註冊為 Database Engine 之受管理的執行個體上的 DAC，下次從執行個體將公用程式收集組傳送到公用程式控制點時，註冊的 DAC 將會合併到 SQL Server 公用程式中。 然後 DAC 會出現在  [公用程式總管] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **[部署的資料層應用程式]** 節點中，並在  詳細資料頁面中報告。  
   
 ###  <a name="LimitationsRestrictions"></a> 限制事項  
- DAC 註冊只能在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]或 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) 或更新版本的資料庫上執行。 如果已經針對資料庫註冊 DAC，將無法執行 DAC 註冊。 例如，如果資料庫是藉由部署 DAC 所建立，您將無法執行 [註冊資料層應用程式精靈]****。  
+ DAC 註冊只能在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]或 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) 或更新版本的資料庫上執行。 如果已經針對資料庫註冊 DAC，將無法執行 DAC 註冊。 例如，如果資料庫是藉由部署 DAC 所建立，您將無法執行 [註冊資料層應用程式精靈]。  
   
  如果 DAC 或包含的使用者中不支援資料庫中的物件，則無法註冊 DAC。 如需有關 DAC 中支援之物件類型的詳細資訊，請參閱＜ [DAC Support For SQL Server Objects and Versions](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)＞。  
   
@@ -55,7 +55,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  展開 **[資料庫]** 節點。  
   
-3.  以滑鼠右鍵按一下要註冊的資料庫，然後指向 [工作]****，再選取 [註冊為資料層應用程式…]****  
+3.  以滑鼠右鍵按一下要註冊的資料庫，然後指向 [工作]，再選取 [註冊為資料層應用程式…]  
   
 4.  完成精靈對話方塊：  
   
@@ -72,7 +72,7 @@ ms.lasthandoff: 04/11/2017
   
  **不要再顯示此頁面。** - 按一下此核取方塊，之後就不會再顯示此頁面。  
   
- **下一步 >** - 繼續進行 [設定屬性]**** 頁面。  
+ **下一步 >** - 繼續進行 [設定屬性] 頁面。  
   
  **取消** - 結束精靈，而不註冊 DAC。  
   
@@ -83,13 +83,13 @@ ms.lasthandoff: 04/11/2017
   
  **應用程式名稱** - 指定用來識別 DAC 定義之名稱的字串，此欄位已經填入資料庫名稱。  
   
- **版本** - 可識別 DAC 版本的數值。 DAC 版本會用於 Visual Studio 中，以便識別開發人員正在處理的 DAC 版本。 部署 DAC 時，此版本會儲存在 **msdb** 資料庫中，而且您之後可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的 [資料層應用程式]**** 節點底下檢視此版本。  
+ **版本** - 可識別 DAC 版本的數值。 DAC 版本會用於 Visual Studio 中，以便識別開發人員正在處理的 DAC 版本。 部署 DAC 時，此版本會儲存在 **msdb** 資料庫中，而且您之後可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的 [資料層應用程式] 節點底下檢視此版本。  
   
- **描述** - 選擇性。 說明 DAC 用途的文字。 部署 DAC 時，此描述會儲存在 **msdb** 資料庫中，而且您之後可以在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 的 [資料層應用程式]**** 節點底下檢視此描述。  
+ **描述** - 選擇性。 說明 DAC 用途的文字。 部署 DAC 時，此描述會儲存在 **msdb** 資料庫中，而且您之後可以在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 的 [資料層應用程式] 節點底下檢視此描述。  
   
- **< 上一步** - 會讓您回到 [簡介]**** 頁面。  
+ **< 上一步** - 會讓您回到 [簡介] 頁面。  
   
- **下一步 >** - 確認 DAC 可以從資料庫的物件建立而來，並在 [驗證與摘要]**** 頁面中顯示結果。  
+ **下一步 >** - 確認 DAC 可以從資料庫的物件建立而來，並在 [驗證與摘要] 頁面中顯示結果。  
   
  **取消** - 結束精靈，而不註冊 DAC。  
   
@@ -103,9 +103,9 @@ ms.lasthandoff: 04/11/2017
 ### <a name="retrieving-objects"></a>擷取物件  
  **擷取資料庫與伺服器物件。** - 當精靈從資料庫及 Database Engine 執行個體擷取所有必要的物件時，將會顯示進度列。  
   
- **< 上一步** - 回到 [設定屬性]**** 頁面來變更輸入。  
+ **< 上一步** - 回到 [設定屬性] 頁面來變更輸入。  
   
- **下一步 >** - 註冊 DAC，並在 [註冊 DAC]**** 頁面中顯示結果。  
+ **下一步 >** - 註冊 DAC，並在 [註冊 DAC] 頁面中顯示結果。  
   
  **取消** - 結束精靈，而不註冊 DAC。  
   
@@ -114,9 +114,9 @@ ms.lasthandoff: 04/11/2017
 ### <a name="validating-objects"></a>驗證物件  
  **Checking**  *SchemaName* **.** *ObjectName* **.** - 當精靈驗證擷取之物件的相依性，並驗證這些對於 DAC 都是有效的物件時，將會顯示進度列。 *SchemaName***.***ObjectName* 識別目前正在驗證哪一個物件。  
   
- **< 上一步** - 回到 [設定屬性]**** 頁面來變更輸入。  
+ **< 上一步** - 回到 [設定屬性] 頁面來變更輸入。  
   
- **下一步 >** - 註冊 DAC，並在 [註冊 DAC]**** 頁面中顯示結果。  
+ **下一步 >** - 註冊 DAC，並在 [註冊 DAC] 頁面中顯示結果。  
   
  **取消** - 結束精靈，而不註冊 DAC。  
   
@@ -127,9 +127,9 @@ ms.lasthandoff: 04/11/2017
   
  **儲存報表** - 選取此按鈕可以將驗證報告複本儲存到 HTML 檔案。 預設資料夾為 Windows 帳戶之 [文件] 資料夾中的 **SQL Server Management Studio\DAC Packages** 資料夾。  
   
- **< 上一步** - 回到 [設定屬性]**** 頁面來變更輸入。  
+ **< 上一步** - 回到 [設定屬性] 頁面來變更輸入。  
   
- **下一步 >** - 註冊 DAC，並在 [註冊 DAC]**** 頁面中顯示結果。  
+ **下一步 >** - 註冊 DAC，並在 [註冊 DAC] 頁面中顯示結果。  
   
  **取消** - 結束精靈，而不註冊 DAC。  
   
