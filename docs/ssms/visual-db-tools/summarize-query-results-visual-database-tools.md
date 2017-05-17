@@ -18,14 +18,15 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: c2192e6a80331af869eb5cf0fcf26c39a47610e1
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="summarize-query-results-visual-database-tools"></a>摘要查詢結果 (Visual Database Tools)
-當您建立彙總查詢時，可以套用某些邏輯原則。 例如，您無法顯示摘要查詢中的個別資料列內容。 查詢和檢視設計工具可協助您依據 [圖表窗格] [](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md) 與 [準則窗格] [](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md) 的運作模式來符合這些原則。  
+當您建立彙總查詢時，可以套用某些邏輯原則。 例如，您無法顯示摘要查詢中的個別資料列內容。 查詢和檢視設計工具可協助您依據 [[圖表窗格](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md)] 與 [[準則窗格](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)] 的運作模式來符合這些原則。  
   
 暸解彙總查詢和查詢和檢視設計工具的作業方式後，您就可以用邏輯方式來建立正確的彙總查詢。 使用彙總查詢的最重要的原則就是只能產生摘要資訊。 因此，其他的原則即說明可用來參考彙總查詢個別資料欄的其他方法。  
   
