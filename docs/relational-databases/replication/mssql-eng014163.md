@@ -16,9 +16,10 @@ caps.latest.revision: 12
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c44159bc8d801c606d2959cc7924fe298f5d0413
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -33,7 +34,7 @@ ms.lasthandoff: 04/11/2017
 |事件來源|MSSQLSERVER|  
 |元件|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
 |符號名稱||  
-|訊息文字|已設定臨界值 [%s:%s] (針對發行集 [%s])。 請確定合併代理程式正在執行，而且符合預期需求。|  
+|訊息文字|已設定臨界值 [%s:%s]\(針對發行集 [%s])。 請確定合併代理程式正在執行，而且符合預期需求。|  
   
 ## <a name="explanation"></a>說明  
  複寫可讓您啟用多個條件的警告。 這包括超出同步處理合併發行者與訂閱者之間變更的指定時間長度。 您可以為 LAN 連接和撥號連接指定不同的時間。  
