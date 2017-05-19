@@ -17,9 +17,10 @@ caps.latest.revision: 10
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 58db786512aa1ed167df55831c6a7cc3c53224bd
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -41,7 +42,7 @@ ms.lasthandoff: 04/11/2017
 |**sys.query_context_settings**|顯示會影響執行查詢之設定的獨特計畫組合。 使用影響設定的不同計畫來執行的相同查詢文字，會在查詢存放區中產生不同的查詢項目，因為 `context_settings_id` 是查詢索引鍵的一部分。|  
 |**sys.query_store_query**|在查詢存放區中個別追蹤和強制執行的查詢項目。 如果它是在不同的內容設定下執行，或是在不同 [!INCLUDE[tsql](../../includes/tsql-md.md)] 模組 (預存程序、觸發程序等) 的內部與外部執行，則單一查詢文字可以產生多個查詢項目。|  
 |**sys.query_store_plan**|顯示查詢的估計計畫以及編譯時間統計資料。 預存的計畫相當於您使用 `SET SHOWPLAN_XML ON`所得到的計畫。|  
-|**sys.query_store_runtime_stats_interval**|查詢存放區會將時間細分為自動產生的時間範圍 (間隔)，並在每個執行計畫的該間隔中儲存彙總統計資料。 間隔的大小是透過組態選項 [統計資料收集間隔] (在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中) 或使用 [ALTER DATABASE SET 選項 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md) 的 `INTERVAL_LENGTH_MINUTES` 來控制。|  
+|**sys.query_store_runtime_stats_interval**|查詢存放區會將時間細分為自動產生的時間範圍 (間隔)，並在每個執行計畫的該間隔中儲存彙總統計資料。 間隔的大小是透過組態選項 [統計資料收集間隔]\(在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中) 或使用 [ALTER DATABASE SET 選項 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md) 的 `INTERVAL_LENGTH_MINUTES` 來控制。|  
 |**sys.query_store_runtime_stats**|針對執行計畫彙總的執行階段統計資料。 所有擷取的計量均會以 4 個統計函數形式來表示︰平均值、最小值、最大值及標準差。|  
   
  如需查詢存放區檢視的詳細資訊，請參閱 **使用查詢存放區監視效能** 中的 [相關檢視、函數與程序](https://msdn.microsoft.com/library/dn817826.aspx)一節。  
@@ -61,7 +62,7 @@ ms.lasthandoff: 04/11/2017
   
  ![query-store-process-2processor](../../relational-databases/performance/media/query-store-process-2processor.png "query-store-process-2processor")  
   
- 為了減少 I/O 額外負荷，會從記憶體內部擷取新資料。 寫入作業會排入佇列，隨後排清至磁碟。 查詢和計畫資訊 (見下圖的計劃存放區) 會以最快速度排清。 執行階段統計資料 (執行階段統計資料) 會保留在記憶體中，時間長短依 `SET QUERY_STORE` 陳述式 `DATA_FLUSH_INTERVAL_SECONDS` 選項所定義的期限。 SSMS 的 [查詢存放區] 對話方塊讓您輸入 [資料排清間隔 (分鐘)]****，其可轉換為秒。  
+ 為了減少 I/O 額外負荷，會從記憶體內部擷取新資料。 寫入作業會排入佇列，隨後排清至磁碟。 查詢和計畫資訊 (見下圖的計劃存放區) 會以最快速度排清。 執行階段統計資料 (執行階段統計資料) 會保留在記憶體中，時間長短依 `SET QUERY_STORE` 陳述式 `DATA_FLUSH_INTERVAL_SECONDS` 選項所定義的期限。 SSMS 的 [查詢存放區] 對話方塊讓您輸入 [資料排清間隔 (分鐘)]，其可轉換為秒。  
   
  ![query-store-process-3plan](../../relational-databases/performance/media/query-store-process-3.png "query-store-process-3plan")  
   
