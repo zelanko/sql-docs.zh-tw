@@ -14,9 +14,10 @@ caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 67e5fad803b006dfe1aaf8794c440747db285c4f
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -35,7 +36,7 @@ ms.lasthandoff: 04/11/2017
   
 - 隨選查詢和管理工作。  
   
-- 報告查詢，通常會使用原生編譯的預存程序中未提供的建構 (例如「視窗」**函數 (有時稱為 [OVER](../../t-sql/queries/select-over-clause-transact-sql.md) 函數))。  
+- 報告查詢，通常會使用原生編譯的預存程序中未提供的建構 (例如「視窗」函數 (有時稱為 [OVER](../../t-sql/queries/select-over-clause-transact-sql.md) 函數))。  
   
 - 為了將應用程式效能嚴重不足部分移轉至記憶體最佳化資料表，應用程式碼變更需求最低或完全不需要。 您可能會從移轉的資料表看到效能提升。 如果您之後將預存程序移轉到以原生方式編譯的預存程序，您可以查看進一步的效能改善情形。  
   
@@ -67,7 +68,7 @@ ms.lasthandoff: 04/11/2017
   
 - 指定 [隔離等級資料表提示](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md) ，如 SNAPSHOT、REPEATABLEREAD 或 SERIALIZABLE。  
   
-- 將 [MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT] [](../../t-sql/statements/alter-database-transact-sql-set-options.md) 資料庫選項設定為 [ON]。  
+- 將 [[MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT](../../t-sql/statements/alter-database-transact-sql-set-options.md)] 資料庫選項設定為 [ON]。  
   
 在 [自動認可模式](http://msdn.microsoft.com/en-us/c8de5b60-d147-492d-b601-2eeae8511d00)下執行之查詢所存取的記憶體最佳化資料表不需要隔離等級資料表提示。  
   

@@ -16,9 +16,10 @@ caps.latest.revision: 36
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 54f93115b0663a033fda00e85a2128a58a3db063
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -27,10 +28,10 @@ ms.lasthandoff: 04/11/2017
   
 ## <a name="options"></a>選項  
  **Source**  
- 指定原則的來源。 若要變更來源，請按一下 [瀏覽] (**...**) 按鈕，開啟 [選取來源]**** 對話方塊。  
+ 指定原則的來源。 若要變更來源，請按一下 [瀏覽]\(...) 按鈕，開啟 [選取來源] 對話方塊。  
   
  **檔案**  
- 輸入包含以原則為基礎之管理原則的檔案路徑，或是使用 [瀏覽] (**...**) 按鈕來選取檔案。  
+ 輸入包含以原則為基礎之管理原則的檔案路徑，或是使用 [瀏覽]\(...) 按鈕來選取檔案。  
   
  **Server**  
  選取此選項可連接包含您想要之原則的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體。  

@@ -16,9 +16,10 @@ caps.latest.revision: 12
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b091848e626d3d27976906db1158769193bcccb0
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -33,7 +34,7 @@ ms.lasthandoff: 04/11/2017
 |事件來源|MSSQLSERVER|  
 |元件|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
 |符號名稱||  
-|訊息文字|已設定臨界值 [%s:%s] (針對發行集 [%s])。 請確定記錄讀取器和散發代理程式正在執行，而且符合延遲需求。|  
+|訊息文字|已設定臨界值 [%s:%s] \(針對發行集 [%s])。 請確定記錄讀取器和散發代理程式正在執行，而且符合延遲需求。|  
   
 ## <a name="explanation"></a>說明  
  複寫可讓您啟用多個條件的警告。 這包括超過指定的交易式訂閱延遲。 延遲是指，資料變更受發行者認可與對應變更受訂閱者認可之間所經過的時間。  
