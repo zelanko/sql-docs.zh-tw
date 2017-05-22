@@ -18,9 +18,10 @@ caps.latest.revision: 21
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 789069f32f8ff5acd7e57ba742768b0ea7e5c3ea
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -47,7 +48,7 @@ ms.lasthandoff: 04/11/2017
   
 >**注意！** bcp 公用程式是透過使用 ODBC 大量複製撰寫的。
   
- 如需 **bcp[ 命令語法的描述，請參閱** bcp 公用程式](../../tools/bcp-utility.md)。  
+ 如需 bcp[命令語法的描述，請參閱 bcp 公用程式](../../tools/bcp-utility.md)。  
   
 ## <a name="examples"></a>範例  
 |下列主題包含使用 bcp 的範例： |
