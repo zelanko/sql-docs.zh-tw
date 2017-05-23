@@ -14,9 +14,10 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: f431174986975cc5b5d6f25c6e9aa89469ee94b4
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -57,9 +58,9 @@ ms.lasthandoff: 04/11/2017
   
 3.  按一下加號展開 **[作業]** 資料夾。  
   
-4.  以滑鼠右鍵按一下您想要修改目標伺服器的作業，然後選取 [屬性]****。  
+4.  以滑鼠右鍵按一下您想要修改目標伺服器的作業，然後選取 [屬性]。  
   
-5.  在 [作業屬性 - <作業名稱>]****** 對話方塊的 [選取頁面]**** 底下，選取 [目標]****。 如需有關此頁面可用之選項的詳細資訊，請參閱[作業屬性 - 新增作業 &#40;目標頁面&#41;](../../ssms/agent/job-properties-new-job-targets-page.md)。  
+5.  在 [作業屬性 - <作業名稱>] 對話方塊的 [選取頁面] 底下，選取 [目標]。 如需有關此頁面可用之選項的詳細資訊，請參閱[作業屬性 - 新增作業 &#40;目標頁面&#41;](../../ssms/agent/job-properties-new-job-targets-page.md)。  
   
 6.  完成後，請按一下 **[確定]**。  
   
@@ -71,7 +72,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] ****。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
   
     ```  
     -- removes the server SEATTLE2 from processing the Weekly Sales Backupsjob   
@@ -93,7 +94,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] ****。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
   
     ```  
     -- assigns the multiserver job Weekly Sales Backups to the server SEATTLE2   
