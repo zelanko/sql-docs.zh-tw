@@ -20,9 +20,10 @@ caps.latest.revision: 25
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 29667a31a69460d6408a84d21035a1a16cf4dc31
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -48,12 +49,12 @@ ms.lasthandoff: 04/11/2017
 |[MSSQL_ENG014151](../../relational-databases/replication/mssql-eng014151.md)|複寫 -%s：代理程式 %s 失敗。 %s|  
 |[MSSQL_ENG014152](../../relational-databases/replication/mssql-eng014152.md)|複寫 -%s：代理程式 %s 已排程重試。 %s|  
 |[MSSQL_ENG014157](../../relational-databases/replication/mssql-eng014157.md)|由訂閱者 '%s' 建立給發行集 '%s' 的訂閱已經過期且已經卸除。|  
-|[MSSQL_ENG014160](../../relational-databases/replication/mssql-eng014160.md)|已設定臨界值 [%s:%s] (針對發行集 [%s])。 此發行集的一個或多個訂閱已經到期。|  
-|[MSSQL_ENG014161](../../relational-databases/replication/mssql-eng014161.md)|已設定臨界值 [%s:%s] (針對發行集 [%s])。 請確定記錄讀取器和散發代理程式正在執行，而且符合延遲需求。|  
-|[MSSQL_ENG014162](../../relational-databases/replication/mssql-eng014162.md)|已設定臨界值 [%s:%s] (針對發行集 [%s])。 請確定合併代理程式正在執行，而且符合預期需求。|  
-|[MSSQL_ENG014163](../../relational-databases/replication/mssql-eng014163.md)|已設定臨界值 [%s:%s] (針對發行集 [%s])。 請確定合併代理程式正在執行，而且符合預期需求。|  
-|[MSSQL_ENG014164](../../relational-databases/replication/mssql-eng014164.md)|已設定臨界值 [%s:%s] (針對發行集 [%s])。 請確定合併代理程式正在執行，而且符合預期需求。|  
-|[MSSQL_ENG014165](../../relational-databases/replication/mssql-eng014165.md)|已設定臨界值 [%s:%s] (針對發行集 [%s])。 請確定合併代理程式正在執行，而且符合預期需求。|  
+|[MSSQL_ENG014160](../../relational-databases/replication/mssql-eng014160.md)|已設定臨界值 [%s:%s]\(針對發行集 [%s])。 此發行集的一個或多個訂閱已經到期。|  
+|[MSSQL_ENG014161](../../relational-databases/replication/mssql-eng014161.md)|已設定臨界值 [%s:%s]\(針對發行集 [%s])。 請確定記錄讀取器和散發代理程式正在執行，而且符合延遲需求。|  
+|[MSSQL_ENG014162](../../relational-databases/replication/mssql-eng014162.md)|已設定臨界值 [%s:%s]\(針對發行集 [%s])。 請確定合併代理程式正在執行，而且符合預期需求。|  
+|[MSSQL_ENG014163](../../relational-databases/replication/mssql-eng014163.md)|已設定臨界值 [%s:%s]\(針對發行集 [%s])。 請確定合併代理程式正在執行，而且符合預期需求。|  
+|[MSSQL_ENG014164](../../relational-databases/replication/mssql-eng014164.md)|已設定臨界值 [%s:%s]\(針對發行集 [%s])。 請確定合併代理程式正在執行，而且符合預期需求。|  
+|[MSSQL_ENG014165](../../relational-databases/replication/mssql-eng014165.md)|已設定臨界值 [%s:%s]\(針對發行集 [%s])。 請確定合併代理程式正在執行，而且符合預期需求。|  
 |[MSSQL_ENG018456](../../relational-databases/replication/mssql-eng018456.md)|使用者 '%.*ls'.%.\*ls 登入失敗|  
 |[MSSQL_ENG018752](../../relational-databases/replication/mssql-eng018752.md)|一次只有一個記錄讀取器代理程式或記錄檔相關程序 (sp_repldone, sp_replcmds, and sp_replshowcmds) 可連接到資料庫。 若您已執行記錄檔相關程序，請卸除執行程序的連接，或者利用該連接執行 sp_replflush 之後，再啟動記錄讀取器代理程式或執行其他記錄檔相關程序。|  
 |[MSSQL_ENG020554](../../relational-databases/replication/mssql-eng020554.md)|複寫代理程式已有 %ld 分鐘未記錄進度訊息。 這可能表示代理程式沒有回應或系統活動量很高。 請確認記錄正在複寫至目的地，而且到訂閱者、發行者及散發者的連接仍在使用中。|  
