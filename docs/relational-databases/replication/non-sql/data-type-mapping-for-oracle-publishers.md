@@ -18,9 +18,10 @@ caps.latest.revision: 47
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 6eb74ce4647046c91fa199c260abeb1ae1845f66
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -79,7 +80,7 @@ ms.lasthandoff: 04/11/2017
 -   使用 REF 的資料行  
   
 ### <a name="the-date-data-type"></a>DATE 資料類型  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的日期範圍是從 1753 A.D. 到 9999 A.D.，而 Oracle 的日期範圍則是從 4712 B.C. 到 4712 A.D.。 如果 DATE 類型的資料行包含的值超出 SQL Server 的範圍，請為此資料行選取替代資料類型，也就是 VARCHAR(19)。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的日期範圍是從 1753 A.D. 到 9999 A.D.，而 Oracle 的日期範圍則是從 4712 B.C. 到 4712 A.D. 如果 DATE 類型的資料行包含的值超出 SQL Server 的範圍，請為此資料行選取替代資料類型，也就是 VARCHAR(19)。  
   
 ### <a name="float-and-number-types"></a>FLOAT 和 NUMBER 類型  
  在對應 FLOAT 和 NUMBER 資料類型期間指定的小數位數與有效位數，取決於為使用 Oracle 資料庫中資料類型的資料行指定的小數位數與有效位數。 位數 (Precision) 是指數字中總共的位數。 小數位數 (Scale) 則是指數字中小數點右方的位數。 例如 123.45 的位數是 5，小數位數是 2。  

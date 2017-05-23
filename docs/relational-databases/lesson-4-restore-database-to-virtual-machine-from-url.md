@@ -17,9 +17,10 @@ caps.latest.revision: 23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 31d30195b648f48b149021a7bf80aba2543a14ea
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -55,7 +56,7 @@ ms.lasthandoff: 04/11/2017
   
     ![Adventure Works 2014 資料庫還原到虛擬機器中的 SQL Server 2016](../relational-databases/media/311f69a6-8443-4df5-8f30-3103c2472300.JPG "Adventure Works 2014 資料庫還原到虛擬機器中的 SQL Server 2016")  
   
-6.  在物件總管中，以滑鼠右鍵按一下 AdventureWorks2014，然後按一下 [屬性] (完成時按一下 [取消])。  
+6.  在物件總管中，以滑鼠右鍵按一下 AdventureWorks2014，然後按一下 [屬性] \(完成時按一下 [取消])。  
   
 7.  按一下 [檔案]，並確認兩個資料庫檔案的路徑是指向 Azure Blob 容器中的 Blob URL。  
   
