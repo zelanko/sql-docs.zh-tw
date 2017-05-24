@@ -22,9 +22,10 @@ caps.latest.revision: 38
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0d646d06bd41ce4db35011d65ecab45109326c15
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -98,7 +99,7 @@ ms.lasthandoff: 04/11/2017
  顯示參與索引鍵的資料行是否允許在資料表或檢視資料行中儲存 NULL 值。  
   
  **加入**  
- 將資料行加入索引鍵。 請從您按一下 [新增]**** 時所出現的 [從 *\<資料表名稱>* 選取資料行]**** 對話方塊中，選取資料表資料行。 如果是空間索引，在您選取一個資料行之後，此按鈕會呈暗灰色。  
+ 將資料行加入索引鍵。 請從您按一下 [新增] 時所出現的 [從 *\<資料表名稱>* 選取資料行] 對話方塊中，選取資料表資料行。 如果是空間索引，在您選取一個資料行之後，此按鈕會呈暗灰色。  
   
  **移除**  
  從索引鍵中的參與裡移除選取的資料行。  
@@ -110,7 +111,7 @@ ms.lasthandoff: 04/11/2017
  在索引鍵方格中將選取的資料行向下移動。  
   
  **資料行存放區資料行**  
- 按一下 [加入]****，選取資料行存放區索引的資料行。 如需資料行存放區索引的限制，請參閱 [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)。  
+ 按一下 [加入]，選取資料行存放區索引的資料行。 如需資料行存放區索引的限制，請參閱 [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)。  
   
  **包含的資料行**  
  在非叢集索引中包含非索引鍵資料行。 此選項可藉由在非叢集索引的分葉層級中加入資料行當做非索引鍵資料行，以略過索引鍵大小總計的目前索引限制，以及參與索引鍵的最大資料行數目。 如需詳細資訊，請參閱 [建立內含資料行的索引](../../relational-databases/indexes/create-indexes-with-included-columns.md)  
@@ -174,7 +175,7 @@ ms.lasthandoff: 04/11/2017
 >  此選項不適用於 XML 索引，或索引為已停用的叢集索引時亦不適用。  
   
  **設定最大平行程度**  
- 限制平行計畫執行期間要使用的處理器數目。 預設值 (0) 會使用實際可用的 CPU 數目。 將值設定為 1 會抑制平行計畫的產生；將值設定為大於 1 的數字則會限制單一查詢執行所使用的處理器最大數目。 此選項僅會在對話方塊處於 **[重建]** 或 **[重新建立]** 狀態時可用。 如需詳細資訊，請參閱 [Set the Max Degree of Parallelism Option for Optimal Performance](../../relational-databases/policy-based-management/set-the-max-degree-of-parallelism-option-for-optimal-performance.md)。  
+ 限制平行計畫執行期間要使用的處理器數目。 預設值 (0) 會使用實際可用的 CPU 數目。 將值設定為 1 會抑制平行計畫的產生；將值設定為大於 1 的數字則會限制單一查詢執行所使用的處理器最大數目。 此選項僅會在對話方塊處於 **[重建]** 或 **[重新建立]** 狀態時可用。 如需詳細資訊，請參閱 [設定平行處理原則的最大程度選項來取得最佳效能](../../relational-databases/policy-based-management/set-the-max-degree-of-parallelism-option-for-optimal-performance.md)。  
   
 > [!NOTE]  
 >  如果指定的數值大於可用的 CPU 數目，就會使用可用 CPU 的實際數目。  

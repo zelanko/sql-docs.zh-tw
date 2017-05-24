@@ -18,19 +18,20 @@ caps.latest.revision: 22
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 4c90dcc58ef2f84d6a2611cda85ef6580df8e174
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="toolbox-component-f1-help"></a>工具箱元件 F1 說明
-  **Toolbox** displays a variety of items for use in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] projects. 您可以從 **[檢視]** 功能表中開啟 **[工具箱]** ，然後將此視窗停駐在您希望的位置。 停駐之後，可以將 **[工具箱]** 固定開啟，或在不使用時將其設定為 **[自動隱藏]** 。  
+  **[工具箱]** 會顯示 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 專案中所使用的各種項目。 您可以從 **[檢視]** 功能表中開啟 **[工具箱]** ，然後將此視窗停駐在您希望的位置。 停駐之後，可以將 **[工具箱]** 固定開啟，或在不使用時將其設定為 **[自動隱藏]** 。  
   
- [工具箱]**** 項目可以拖曳再放置或是複製再貼上至程式碼編輯器，或者至 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 內的設計檢視介面上。  
+ [工具箱] 項目可以拖曳再放置或是複製再貼上至程式碼編輯器，或者至 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 內的設計檢視介面上。  
   
 ## <a name="how-the-toolbox-works"></a>工具箱的運作方式  
- 工具箱是一個滑動的樹狀控制項，其行為很像 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 檔案總管，但是沒有方格或連接線。 [工具箱]**** 的多個區段 (稱為「索引標籤」) 可以同時展開，且整個樹狀結構會在 [工具箱]**** 視窗內捲動。 若要展開 [工具箱]**** 的任何索引標籤，請按一下其名稱旁邊的加號 (**+**)。 若要摺疊已展開的索引標籤，請按一下其名稱旁邊的減號 (**-**)。  
+ 工具箱是一個滑動的樹狀控制項，其行為很像 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 檔案總管，但是沒有方格或連接線。 [工具箱] 的多個區段 (稱為「索引標籤」) 可以同時展開，且整個樹狀結構會在 [工具箱] 視窗內捲動。 若要展開 [工具箱] 的任何索引標籤，請按一下其名稱旁邊的加號 (**+**)。 若要摺疊已展開的索引標籤，請按一下其名稱旁邊的減號 (**-**)。  
   
  每當您回到編輯器或設計師時， **[工具箱]** 會自動捲動到所選之最近使用的索引標籤和項目。 當您轉移焦點至不同的編輯器或設計師時， **[工具箱]** 中目前的選取項目也會隨著您轉移。  
   

@@ -21,9 +21,10 @@ caps.latest.revision: 47
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 0141c681779c12bf63162751f93dcd6495fb1a94
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -40,7 +41,7 @@ ms.lasthandoff: 04/11/2017
   
  使用 [CREATE SECURITY POLICY](../../t-sql/statements/create-security-policy-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式以及作為[內嵌資料表值函數](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)的述詞來實作 RLS。  
   
-****：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至[目前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658))、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([](http://azure.micosoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))。  
+**適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [目前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658))、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([立即取得](http://azure.micosoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))。  
   
 
 ##  <a name="Description"></a> 描述  
@@ -133,7 +134,7 @@ ms.lasthandoff: 04/11/2017
   
 -   請避免在述詞函式中使用過多的資料表聯結，將效能最大化。  
   
- 避免述詞邏輯取決於工作階段特定的 [SET 選項](../../t-sql/statements/set-statements-transact-sql.md)︰雖然不太可能會用於實際的應用程式中，但若述詞函數的邏輯取決於特定工作階段專屬的 **** 選項且使用者能夠執行任何查詢，則可能導致資訊外漏。 例如，若述詞函數能以隱含方式將字串轉換成 **datetime** ，則可根據目前工作階段的 **SET DATEFORMAT** 選項來篩選不同的資料列。 一般情況下，述詞函數應遵守下列規則︰  
+ 避免述詞邏輯取決於工作階段特定的 [SET 選項](../../t-sql/statements/set-statements-transact-sql.md)︰雖然不太可能會用於實際的應用程式中，但若述詞函數的邏輯取決於特定工作階段專屬的  選項且使用者能夠執行任何查詢，則可能導致資訊外漏。 例如，若述詞函數能以隱含方式將字串轉換成 **datetime** ，則可根據目前工作階段的 **SET DATEFORMAT** 選項來篩選不同的資料列。 一般情況下，述詞函數應遵守下列規則︰  
   
 -   述詞函數不應以隱含方式將字元字串轉換為以下格式：**date**、**smalldatetime**、**datetime**、**datetime2** 或 **datetimeoffset**，反之亦然，因為這些轉換會受到 [SET DATEFORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/set-dateformat-transact-sql.md) 和 [SET LANGUAGE &#40;Transact-SQL&#41;](../../t-sql/statements/set-language-transact-sql.md) 選項影響。 請改用 **CONVERT** 函數，並明確指定樣式參數。  
   
@@ -163,11 +164,11 @@ ms.lasthandoff: 04/11/2017
   
 -   **索引檢視表** 一般而言，您可以在檢視上建立安全性原則，並可以在由安全性原則所繫結的資料表上建立檢視。 不過，透過索引的資料列查閱會略過原則，因此您無法在具備安全性原則的資料表上建立索引檢視表。  
   
--   **異動資料擷取**異動資料擷取可能會導致洩漏整個資料列，其中該資料列應篩選至 **db_owner** 的成員，或篩選至啟用資料表的 CDC 時所指定的「控制」角色成員的使用者 (注意︰您可以明確地將這設為 ****讓所有使用者存取異動資料)。 實際上，**db_owner** 及此控制角色的成員皆可以看到資料表上所有的資料變更，即使資料表上具有安全性原則亦然。  
+-   **異動資料擷取**異動資料擷取可能會導致洩漏整個資料列，其中該資料列應篩選至 **db_owner** 的成員，或篩選至啟用資料表的 CDC 時所指定的「控制」角色成員的使用者 (注意︰您可以明確地將這設為 讓所有使用者存取異動資料)。 實際上，**db_owner** 及此控制角色的成員皆可以看到資料表上所有的資料變更，即使資料表上具有安全性原則亦然。  
   
 -   **變更追蹤** 變更追蹤可能會導致洩漏資料列的主索引鍵，其中該資料列應同時使用 **SELECT** 及 **VIEW CHANGE TRACKING** 權限篩選至使用者。 實際資料值不會遭到洩漏；僅為資料列的資料行 A 已利用 B 主索引鍵進行更新/插入/刪除。 若主索引鍵包含像是身分證號碼等機密的項目，便會造成問題。 不過，在實務上，此 **CHANGETABLE** 幾乎一律會與原始資料表聯結，以取得最新的資料。  
   
--   **全文檢索搜尋**：由於引進額外聯結以套用資料列層級安全性及避免洩漏應篩選之資料列的主索引鍵，因此使用下列全文檢索搜尋及語意搜尋函數時，應會對查詢的效能造成衝擊︰**CONTAINSTABLE**、****semantickeyphrasetable、semanticsimilaritydetailstable、semanticsimilaritytable。  
+-   **全文檢索搜尋**：由於引進額外聯結以套用資料列層級安全性及避免洩漏應篩選之資料列的主索引鍵，因此使用下列全文檢索搜尋及語意搜尋函數時，應會對查詢的效能造成衝擊︰**CONTAINSTABLE**、semantickeyphrasetable、semanticsimilaritydetailstable、semanticsimilaritytable。  
   
 -   **資料行存放區索引**RLS 適用於叢集與非叢集資料行存放區索引。 不過，由於資料列層級安全性套用函數，因此最佳化工具可以在不使用批次模式的情況下修改查詢計劃。  
   
