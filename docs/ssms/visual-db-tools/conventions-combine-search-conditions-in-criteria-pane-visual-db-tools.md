@@ -23,9 +23,10 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: c2115ca07d5e726a4bdb1fc3bba5ba8f0d202277
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -125,9 +126,9 @@ WHERE
   
 一般而言，這些規則指示了 AND 和 OR 子句在 [準則窗格] 中顯示的方式：  
   
--   所有使用 AND 連結的條件都會顯示在 [篩選]**** 格線欄或同一個 [或...]**** 資料欄中。  
+-   所有使用 AND 連結的條件都會顯示在 [篩選] 格線欄或同一個 [或...] 資料欄中。  
   
--   所有使用 OR 連結的條件都會顯示在不同的 [或...]**** 資料欄中。  
+-   所有使用 OR 連結的條件都會顯示在不同的 [或...] 資料欄中。  
   
 -   如果 AND 和 OR 子句合併的邏輯結果是 AND 分散至數個 OR 子句，[準則窗格] 會以需要的次數重複 AND 子句，以明確表示這一點。  
   
