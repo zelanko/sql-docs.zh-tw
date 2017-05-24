@@ -14,9 +14,10 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 74eceb20d68e928663d35de10d92866c77e6aa25
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -73,7 +74,7 @@ ms.lasthandoff: 04/11/2017
   
 *通訊：*相較於具有較少呼叫而且每個預存程序中實作更多功能的應用程式，具有簡短預存程序的許多呼叫的應用程式可能會看到較少的效能增益。  
   
-「[!INCLUDE[tsql](../../includes/tsql-md.md)]執行」：**記憶體內部 OLTP 使用原生編譯的預存程序時可達到最佳效能，而不是使用解譯的預存程序或查詢執行時。 從這樣的預存程序存取記憶體最佳化資料表頗有助益。  
+「[!INCLUDE[tsql](../../includes/tsql-md.md)]執行」：記憶體內部 OLTP 使用原生編譯的預存程序時可達到最佳效能，而不是使用解譯的預存程序或查詢執行時。 從這樣的預存程序存取記憶體最佳化資料表頗有助益。  
   
 *範圍掃描與點查閱的比較︰* 記憶體最佳化非叢集索引可支援範圍掃描和排序的掃描。 對於點查閱而言，記憶體最佳化雜湊索引的效能比記憶體最佳化的非叢集索引更好。 記憶體最佳化非叢集索引的效能比以磁碟為基礎的索引更好。
 
@@ -82,9 +83,9 @@ ms.lasthandoff: 04/11/2017
   - 非叢集索引在 SQL Server 2016 也能以平行方式掃描。
   - 資料行存放區索引自 SQL Server 2014 起始以來，即能以平行方式掃描。
   
-「索引作業」：** 索引作業不會記錄下來，且只存在於記憶體中。  
+「索引作業」： 索引作業不會記錄下來，且只存在於記憶體中。  
   
-「並行」：** 效能受到引擎層級並行影響的應用程式，如閂鎖競爭或封鎖，改用記憶體內部 OLTP 之後，將可大幅改善其效能。  
+「並行」： 效能受到引擎層級並行影響的應用程式，如閂鎖競爭或封鎖，改用記憶體內部 OLTP 之後，將可大幅改善其效能。  
   
 下表列出關聯式資料庫中經常發現的效能和延展性問題，以及記憶體中 OLTP 如何改善效能。  
   
