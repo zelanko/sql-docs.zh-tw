@@ -22,9 +22,10 @@ caps.latest.revision: 45
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 3e37e75379dc4fd1722dd660b2c6145c9540732e
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -57,7 +58,7 @@ ms.lasthandoff: 04/11/2017
  可能的話，會在執行階段提示使用者輸入安全性認證。 如果您必須儲存認證，請使用 [Windows .NET Framework 提供的](http://go.microsoft.com/fwlink/?LinkId=34733) 密碼編譯服務 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 使用「新增發行集精靈」建立發行集並定義發行項。 建立發行集之後，您可以在 [發行集屬性 - \<發行集>]**** 對話方塊中，檢視及修改發行集屬性。 如需從 Oracle 資料庫建立發行集的詳細資訊，請參閱[從 Oracle 資料庫建立發行集](../../../relational-databases/replication/publish/create-a-publication-from-an-oracle-database.md)。  
+ 使用「新增發行集精靈」建立發行集並定義發行項。 建立發行集之後，您可以在 [發行集屬性 - \<發行集>] 對話方塊中，檢視及修改發行集屬性。 如需從 Oracle 資料庫建立發行集的詳細資訊，請參閱[從 Oracle 資料庫建立發行集](../../../relational-databases/replication/publish/create-a-publication-from-an-oracle-database.md)。  
   
 #### <a name="to-create-a-publication-and-define-articles"></a>建立發行集並定義發行項  
   
@@ -75,7 +76,7 @@ ms.lasthandoff: 04/11/2017
   
          如果指定另一台伺服器扮演「散發者」角色，則必須在 **[管理密碼]** 頁面輸入密碼才能從「發行者」連接到「散發者」。 此密碼必須符合發行者於遠端散發者啟用時所指定的密碼。  
   
-         如需詳細資訊，請參閱 [Configure Distribution](../../../relational-databases/replication/configure-distribution.md)＞。  
+         如需詳細資訊，請參閱[設定散發](../../../relational-databases/replication/configure-distribution.md)。  
   
     -   選擇發行集資料庫。  
   
@@ -95,22 +96,22 @@ ms.lasthandoff: 04/11/2017
   
          \- 佇列讀取器代理程式 (針對允許更新訂閱的交易式發行集)。  
   
-         如需相關資訊，請參閱 [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md) 以及 [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)。  
+         如需相關資訊，請參閱 [複寫代理程式安全性模型](../../../relational-databases/replication/security/replication-agent-security-model.md) 以及 [複寫安全性最佳做法](../../../relational-databases/replication/security/replication-security-best-practices.md)。  
   
-    -   選擇性地編寫發行集的指令碼。 如需詳細資訊，請參閱 [Scripting Replication](../../../relational-databases/replication/scripting-replication.md)。  
+    -   選擇性地編寫發行集的指令碼。 如需詳細資訊，請參閱 [指令碼複寫](../../../relational-databases/replication/scripting-replication.md)。  
   
     -   指定發行集的名稱。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
- 在建立發行集之後，可以使用複寫預存程序來以程式設計的方式建立發行項。 要使用哪些預存程序來建立發行項，將取決於定義此發行項的發行集類型而定。 如需詳細資訊，請參閱 [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)。  
+ 在建立發行集之後，可以使用複寫預存程序來以程式設計的方式建立發行項。 要使用哪些預存程序來建立發行項，將取決於定義此發行項的發行集類型而定。 如需詳細資訊，請參閱[建立發行集](../../../relational-databases/replication/publish/create-a-publication.md)。  
   
 #### <a name="to-define-an-article-for-a-snapshot-or-transactional-publication"></a>為快照式或交易式發行集定義發行項  
   
 1.  在發行集資料庫的發行者上，執行 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)。 為 **@publication**指定發行項所屬的發行集名稱、為 **@article**指定發行項名稱、為 **@source_object**指定發行的資料庫物件，以及指定其他任何選擇性參數。 使用 **@source_owner** 來指定此物件的結構描述擁有權 (如果不是 **dbo**＞。 如果此發行項不是記錄式資料表發行項，請為 **@type** 指定發行項類型；如需詳細資訊，請參閱[指定發行項類型 &#40;複寫 Transact-SQL 程式設計&#41;](../../../relational-databases/replication/publish/specify-article-types-replication-transact-sql-programming.md)。  
   
-2.  若要以水平方式篩選資料表中的資料列或是檢視發行項，請使用 [sp_articlefilter](../../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md) 來定義篩選子句。 如需詳細資訊，請參閱 [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)。  
+2.  若要以水平方式篩選資料表中的資料列或是檢視發行項，請使用 [sp_articlefilter](../../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md) 來定義篩選子句。 如需詳細資訊，請參閱 [定義及修改靜態資料列篩選](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)。  
   
-3.  若要以垂直方式篩選資料表中的資料行或是檢視發行項，請使用 [sp_articlecolumn](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)。 如需詳細資訊，請參閱 [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)。  
+3.  若要以垂直方式篩選資料表中的資料行或是檢視發行項，請使用 [sp_articlecolumn](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)。 如需詳細資訊，請參閱 [定義及修改資料行篩選](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)。  
   
 4.  如果發行項已經過篩選，請執行 [sp_articleview](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) 。  
   
@@ -123,11 +124,11 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="to-define-an-article-for-a-merge-publication"></a>為合併式發行集定義發行項  
   
-1.  在發行集資料庫的發行者上，執行 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)。 為 **@publication**指定發行集的名稱、為 **@article**指定發行項的名稱，以及為 **@source_object**＞。 若要以水平方式篩選資料表資料列，請指定 **@subset_filterclause**＞。 如需相關資訊，請參閱 [Define and Modify a Parameterized Row Filter for a Merge Article](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md) 以及 [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)。 如果此發行項不是資料表發行項，請為 **@type**＞。 如需詳細資訊，請參閱[指定發行項類型 &#40;複寫 Transact-SQL 程式設計&#41;](../../../relational-databases/replication/publish/specify-article-types-replication-transact-sql-programming.md)。  
+1.  在發行集資料庫的發行者上，執行 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)。 為 **@publication**指定發行集的名稱、為 **@article**指定發行項的名稱，以及為 **@source_object**＞。 若要以水平方式篩選資料表資料列，請指定 **@subset_filterclause**＞。 如需相關資訊，請參閱 [針對合併發行項定義及修改參數化資料列篩選](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md) 以及 [定義及修改靜態資料列篩選](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)。 如果此發行項不是資料表發行項，請為 **@type**＞。 如需詳細資訊，請參閱[指定發行項類型 &#40;複寫 Transact-SQL 程式設計&#41;](../../../relational-databases/replication/publish/specify-article-types-replication-transact-sql-programming.md)。  
   
-2.  (選擇性) 在發行集資料庫的發行者上，執行 [sp_addmergefilter](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md) ，以定義兩個發行項之間的聯結篩選。 如需詳細資訊，請參閱 [Define and Modify a Join Filter Between Merge Articles](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)。  
+2.  (選擇性) 在發行集資料庫的發行者上，執行 [sp_addmergefilter](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md) ，以定義兩個發行項之間的聯結篩選。 如需詳細資訊，請參閱 [定義和修改合併發行項之間的聯結篩選](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)。  
   
-3.  (選擇性) 在發行集資料庫的發行者上，執行 [sp_mergearticlecolumn](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) ，以篩選資料表資料行。 如需詳細資訊，請參閱 [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)。  
+3.  (選擇性) 在發行集資料庫的發行者上，執行 [sp_mergearticlecolumn](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) ，以篩選資料表資料行。 如需詳細資訊，請參閱 [定義及修改資料行篩選](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)。  
   
 ###  <a name="TsqlExample"></a> 範例 (Transact-SQL)  
  此範例是根據交易式發行集的 `Product` 資料表來定義發行項，其中會以水平和垂直方式篩選發行項。  
@@ -155,12 +156,12 @@ ms.lasthandoff: 04/11/2017
  [!code-vb[HowTo#rmo_vb_CreateMergeArticles](../../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_createmergearticles)]  
   
 ## <a name="see-also"></a>另請參閱  
- [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)   
- [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
+ [建立發行集](../../../relational-databases/replication/publish/create-a-publication.md)   
+ [複寫系統預存程序概念](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
  [在現有發行集中加入和卸除發行項](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)   
  [篩選發行的資料](../../../relational-databases/replication/publish/filter-published-data.md)   
  [發行資料和資料庫物件](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
- [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)  
+ [複寫系統預存程序概念](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)  
   
   
 
