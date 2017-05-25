@@ -20,9 +20,10 @@ caps.latest.revision: 47
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e4e8eb9804660085223e0845adeb093511871316
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -65,13 +66,13 @@ ms.lasthandoff: 04/11/2017
   
 1.  **[更新複寫密碼]** 對話方塊，可從 **的** [複寫] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]資料夾開啟。 如果變更複寫拓撲中伺服器上 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 帳戶或 Windows 帳戶的密碼，請使用此對話方塊，而非更新使用該帳戶之每個代理程式的密碼。 如果多個伺服器上的代理程式使用同一個帳戶，則必須連接到每個伺服器並變更密碼。 密碼在複寫使用密碼的所有位置更新。 而並不會在其他位置更新，例如連結的伺服器。  
   
-2.  [發行集屬性 - \<發行集>]**** 對話方塊的 [代理程式安全性]**** 頁面。 如需有關存取這個對話方塊的詳細資訊，請參閱＜ [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)＞。  
+2.  [發行集屬性 - \<發行集>] 對話方塊的 [代理程式安全性] 頁面。 如需有關存取這個對話方塊的詳細資訊，請參閱＜ [檢視和修改發行集屬性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)＞。  
   
-3.  [訂閱屬性 - \<訂閱>]**** 對話方塊。 如需有關存取這個對話方塊的詳細資訊，請參閱＜ [View and Modify Push Subscription Properties](../../../relational-databases/replication/view-and-modify-push-subscription-properties.md) ＞與＜ [View and Modify Pull Subscription Properties](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)＞。  
+3.  [訂閱屬性 - \<訂閱>] 對話方塊。 如需有關存取這個對話方塊的詳細資訊，請參閱＜ [檢視及修改發送訂閱屬性](../../../relational-databases/replication/view-and-modify-push-subscription-properties.md) ＞與＜ [檢視及修改提取訂閱屬性](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)＞。  
   
-4.  [散發者屬性 - \<散發者>]**** 和 [散發資料庫屬性 - \<資料庫>]**** 對話方塊。 如需存取這些對話方塊的詳細資訊，請參閱＜ [View and Modify Distributor and Publisher Properties](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)＞。  
+4.  [散發者屬性 - \<散發者>] 和 [散發資料庫屬性 - \<資料庫>] 對話方塊。 如需存取這些對話方塊的詳細資訊，請參閱＜ [檢視和修改散發者和發行者屬性](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)＞。  
   
-5.  [發行者屬性 - \<發行者>]**** 對話方塊。 如需存取此對話方塊的詳細資訊，請參閱＜ [View and Modify Distributor and Publisher Properties](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)＞。  
+5.  [發行者屬性 - \<發行者>] 對話方塊。 如需存取此對話方塊的詳細資訊，請參閱＜ [檢視及修改散發者和發行者屬性](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)＞。  
   
 #### <a name="to-change-the-password-for-an-account-used-by-one-or-more-agents"></a>若要變更一個或多個代理程式使用的帳戶之密碼  
   
@@ -90,7 +91,7 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="to-change-security-settings-for-the-snapshot-agent"></a>變更快照集代理程式的安全性設定  
   
-1.  在 [發行集屬性 - \<發行集>]**** 對話方塊的 [代理程式安全性]**** 頁面上，按一下 [快照集代理程式]**** 文字方塊旁的 [安全性設定]**** 按鈕。  
+1.  在 [發行集屬性 - \<發行集>] 對話方塊的 [代理程式安全性] 頁面上，按一下 [快照集代理程式] 文字方塊旁的 [安全性設定] 按鈕。  
   
 2.  在 **[快照集代理程式安全性]** 對話方塊中，指定代理程式執行時所使用的帳戶：  
   
@@ -105,13 +106,13 @@ ms.lasthandoff: 04/11/2017
     -   在 **[密碼]** 和 **[確認密碼]** 文字方塊中輸入新的增強式密碼。  
   
     > [!NOTE]  
-    >  若發行者是 Oracle 發行者，則連接內容指定於 [散發者屬性 - \<散發者>]**** 對話方塊中。 請參閱下面用於變更內容的程序。  
+    >  若發行者是 Oracle 發行者，則連接內容指定於 [散發者屬性 - \<散發者>] 對話方塊中。 請參閱下面用於變更內容的程序。  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 #### <a name="to-change-security-settings-for-the-log-reader-agent"></a>變更記錄讀取器代理程式的安全性設定  
   
-1.  在 [發行集屬性 - \<發行集>]**** 對話方塊的 [代理程式安全性]**** 頁面上，按一下 [記錄讀取器代理程式]**** 文字方塊旁的 [安全性設定]**** 按鈕。  
+1.  在 [發行集屬性 - \<發行集>] 對話方塊的 [代理程式安全性] 頁面上，按一下 [記錄讀取器代理程式] 文字方塊旁的 [安全性設定] 按鈕。  
   
 2.  在 **[記錄讀取器代理程式安全性]** 對話方塊中，指定代理程式執行時所使用的帳戶：  
   
@@ -126,7 +127,7 @@ ms.lasthandoff: 04/11/2017
     -   在 **[密碼]** 和 **[確認密碼]** 文字方塊中輸入新的增強式密碼。  
   
     > [!NOTE]  
-    >  若發行者是 Oracle 發行者，則連接內容指定於 [散發者屬性 - \<散發者>]**** 對話方塊中。 使用下一個程序變更內容。  
+    >  若發行者是 Oracle 發行者，則連接內容指定於 [散發者屬性 - \<散發者>] 對話方塊中。 使用下一個程序變更內容。  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -135,7 +136,7 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="to-change-the-context-under-which-the-snapshot-agent-and-log-reader-agent-for-an-oracle-publication-make-connections-to-the-publisher"></a>若要變更 Oracle 發行集的快照集代理程式與記錄讀取器代理程式連接到發行者所使用的內容  
   
-1.  在 [散發者屬性 - \<散發者>]**** 對話方塊的 [發行者]**** 頁面上，按一下發行者旁的屬性按鈕 (**...**)。  
+1.  在 [散發者屬性 - \<散發者>] 對話方塊的 [發行者] 頁面上，按一下發行者旁的屬性按鈕 (**...**)。  
   
 2.  在 **[代理程式至發行者的連接]** 區段，指定您設定的複寫管理使用者結構描述所使用之登入與密碼。 如需詳細資訊，請參閱[設定 Oracle 發行者](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)。  
   
@@ -143,7 +144,7 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="to-change-security-settings-for-the-distribution-agent-for-a-push-subscription"></a>變更發送訂閱之散發代理程式的安全性設定  
   
-1.  在發行者端的 [訂閱屬性 - \<訂閱>]**** 對話方塊中，可做下列變更：  
+1.  在發行者端的 [訂閱屬性 - \<訂閱>] 對話方塊中，可做下列變更：  
   
     -   若要變更「散發代理程式」執行和連接到「散發者」時所使用的帳戶，請按一下 **[代理程式處理帳戶]** 資料列，然後按一下資料列中的屬性 (**...**) 按鈕。 在 **[散發代理程式安全性]** 對話方塊中指定帳戶和密碼。  
   
@@ -155,7 +156,7 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="to-change-security-settings-for-the-distribution-agent-for-a-pull-subscription"></a>變更提取訂閱之散發代理程式的安全性設定  
   
-1.  在訂閱者端的 [訂閱屬性 - \<訂閱>]**** 對話方塊中，可做下列變更：  
+1.  在訂閱者端的 [訂閱屬性 - \<訂閱>] 對話方塊中，可做下列變更：  
   
     -   若要變更散發代理程式執行和連接到訂閱者時所使用的帳戶，請按一下 **[代理程式處理帳戶]** 資料列，然後按一下資料列中的屬性 (**...**) 按鈕。 在 **[散發代理程式安全性]** 對話方塊中指定帳戶和密碼。  
   
@@ -167,7 +168,7 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="to-change-security-settings-for-the-merge-agent-for-a-push-subscription"></a>變更發送訂閱之合併代理程式的安全性設定  
   
-1.  在發行者端的 [訂閱屬性 - \<訂閱>]**** 對話方塊中，可做下列變更：  
+1.  在發行者端的 [訂閱屬性 - \<訂閱>] 對話方塊中，可做下列變更：  
   
     -   若要變更合併代理程式執行和連接到發行者與散發者時所使用的帳戶，請按一下 **[代理程式處理帳戶]** 資料列，然後按一下資料列中的屬性 (**...**) 按鈕。 在 **[合併代理程式安全性]** 對話方塊中指定帳戶和密碼。  
   
@@ -177,7 +178,7 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="to-change-security-settings-for-the-merge-agent-for-a-pull-subscription"></a>變更提取訂閱之合併代理程式的安全性設定  
   
-1.  在訂閱者端的 [訂閱屬性 - \<訂閱>]**** 對話方塊中，可做下列變更：  
+1.  在訂閱者端的 [訂閱屬性 - \<訂閱>] 對話方塊中，可做下列變更：  
   
     -   若要變更合併代理程式執行和連接到訂閱者時所使用的帳戶，請按一下 **[代理程式處理帳戶]** 資料列，然後按一下資料列中的屬性 (**...**) 按鈕。 在 **[合併代理程式安全性]** 對話方塊中指定帳戶和密碼。  
   
@@ -187,9 +188,9 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="to-change-the-account-under-which-the-queue-reader-agent-runs"></a>若要變更佇列讀取器代理程式執行時所使用的帳戶  
   
-1.  在 [散發者屬性 - \<散發者>]**** 對話方塊的 [一般]**** 頁面上，按一下散發資料庫旁的屬性按鈕 (**…**)。  
+1.  在 [散發者屬性 - \<散發者>] 對話方塊的 [一般] 頁面上，按一下散發資料庫旁的屬性按鈕 (**…**)。  
   
-2.  在 [散發資料庫屬性 - \<資料庫>]**** 對話方塊中，按一下 [代理程式處理帳戶]**** 文字方塊旁的 [安全性設定]**** 按鈕。  
+2.  在 [散發資料庫屬性 - \<資料庫>] 對話方塊中，按一下 [代理程式處理帳戶] 文字方塊旁的 [安全性設定] 按鈕。  
   
 3.  在 **[佇列讀取器代理程式安全性]** 對話方塊中，指定代理程式執行和連接到「散發者」時所使用的帳戶：  
   
@@ -204,7 +205,7 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="to-change-the-context-under-which-the-queue-reader-agent-makes-connections-to-the-publisher"></a>若要變更佇列讀取器代理程式連接到發行者所使用的內容  
   
-1.  在 [散發者屬性 - \<散發者>]**** 對話方塊的 [發行者]**** 頁面上，按一下發行者旁的屬性按鈕 (**...**)。  
+1.  在 [散發者屬性 - \<散發者>] 對話方塊的 [發行者] 頁面上，按一下發行者旁的屬性按鈕 (**...**)。  
   
 2.  在 **[代理程式至發行者的連接 ]** 區段，指定 **[代理程式連接模式]** 選項中 **[模擬代理程式處理帳戶]** 或 **[SQL Server 驗證]** 的值。 如果指定 **[SQL Server 驗證]**，還要輸入 **[登入]** 與 **[密碼]**的值。  
   
@@ -219,7 +220,7 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="to-change-security-settings-for-an-immediate-updating-pull-subscription"></a>若要變更立即更新提取訂閱的安全性設定  
   
-1.  在訂閱者端的 [訂閱屬性 - \<訂閱>]**** 對話方塊中，按一下 [發行者連接]**** 資料列，然後按一下資料列中的屬性按鈕 (**…**)。  
+1.  在訂閱者端的 [訂閱屬性 - \<訂閱>] 對話方塊中，按一下 [發行者連接] 資料列，然後按一下資料列中的屬性按鈕 (**…**)。  
   
 2.  在 **[輸入連接資訊]** 對話方塊中，選取下列其中一個選項：  
   
@@ -236,11 +237,11 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="to-change-the-password-for-the-administrative-connection-from-the-publisher-to-the-distributor"></a>變更從發行者到散發者之管理連接的密碼  
   
-1.  在 [散發者屬性 - \<散發者>]**** 對話方塊的 [發行者]**** 頁面上，於 [密碼]**** 與 [確認密碼]**** 文字方塊中輸入強式密碼。  
+1.  在 [散發者屬性 - \<散發者>] 對話方塊的 [發行者] 頁面上，於 [密碼] 與 [確認密碼] 文字方塊中輸入強式密碼。  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-3.  在 [發行者屬性 - \<發行者>]**** 對話方塊的 [一般]**** 頁面上，於 [密碼]**** 與 [確認密碼]**** 文字方塊中輸入強式密碼。  
+3.  在 [發行者屬性 - \<發行者>] 對話方塊的 [一般] 頁面上，於 [密碼] 與 [確認密碼] 文字方塊中輸入強式密碼。  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
