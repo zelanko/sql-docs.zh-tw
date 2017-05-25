@@ -23,9 +23,10 @@ caps.latest.revision: 51
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 9381b69a605ed7928851a18e64d7054d43fcb65c
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -105,7 +106,7 @@ GO
 ## <a name="benefits-and-limits-of-metadata-visibility-configuration"></a>中繼資料可見性組態的優點和限制  
  中繼資料可見性組態在整體安全性計畫中扮演著重要的角色。 但在某些情況中，技術純熟又執意操作的使用者還是能夠強制洩漏某些中繼資料。 我們建議您將中繼資料權限部署為全面防禦中的一環。  
   
- 強制發出錯誤訊息中的中繼資料，理論上是可行的，做法是在查詢中操縱述詞評估的順序。 這種「嘗試與錯誤攻擊」**的可能性不是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所特有。 它由關聯式代數所允許的關聯式和交換式轉換所暗示。 您可以限制錯誤訊息所傳回的資訊來減輕此風險。 若要以此方式進一步限制中繼資料的可見性，您可以用追蹤旗標 3625 來啟動伺服器。 此追蹤旗標限制錯誤訊息所顯示的資訊量。 而這有助於防止強制洩漏。 代價是錯誤訊息會簡單一些，用於偵錯時可能會比較困難。 如需詳細資訊，請參閱 [Database Engine 服務啟動選項](../../database-engine/configure-windows/database-engine-service-startup-options.md)和[追蹤旗標 &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。  
+ 強制發出錯誤訊息中的中繼資料，理論上是可行的，做法是在查詢中操縱述詞評估的順序。 這種「嘗試與錯誤攻擊」的可能性不是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所特有。 它由關聯式代數所允許的關聯式和交換式轉換所暗示。 您可以限制錯誤訊息所傳回的資訊來減輕此風險。 若要以此方式進一步限制中繼資料的可見性，您可以用追蹤旗標 3625 來啟動伺服器。 此追蹤旗標限制錯誤訊息所顯示的資訊量。 而這有助於防止強制洩漏。 代價是錯誤訊息會簡單一些，用於偵錯時可能會比較困難。 如需詳細資訊，請參閱 [Database Engine 服務啟動選項](../../database-engine/configure-windows/database-engine-service-startup-options.md)和[追蹤旗標 &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。  
   
  下列的中繼資料不會被強制洩漏：  
   

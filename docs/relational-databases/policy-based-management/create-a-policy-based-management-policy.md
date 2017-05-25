@@ -16,9 +16,10 @@ caps.latest.revision: 9
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 28d614d27647f0466abd5a6715244b6334ec56be
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -46,19 +47,19 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="to-create-a-policy"></a>若要建立原則  
   
-1.  在物件總管****中，按一下加號，展開您想要建立新原則式管理原則的伺服器。  
+1.  在物件總管中，按一下加號，展開您想要建立新原則式管理原則的伺服器。  
   
 2.  按一下加號展開 **[管理]** 資料夾。  
   
 3.  按一下加號展開 **[原則管理]**。  
   
-4.  以滑鼠右鍵按一下 [原則]**** 資料夾，然後選取 [新增原則]****。  
+4.  以滑鼠右鍵按一下 [原則] 資料夾，然後選取 [新增原則]。  
   
 5.  在 **[建立新原則]** 對話方塊的 **[名稱]** 方塊中，輸入新原則的名稱。  
   
 6.  如果您想要在建立原則時立即啟用原則，請選取 **[已啟用]** 核取方塊。 如果評估模式為 **[視需要]**，就無法使用 **[已啟用]** 核取方塊。  
   
-7.  在 **[檢查條件]** 清單中，選取其中一個現有的條件，或選取 **[新增條件]**。 若要編輯條件，請選取該條件，然後按一下省略符號 (...)****。 如需詳細資訊，請參閱[建立新的原則式管理條件](../../relational-databases/policy-based-management/create-a-new-policy-based-management-condition.md)或[檢視或修改原則式管理條件的屬性](../../relational-databases/policy-based-management/view-or-modify-the-properties-of-a-policy-based-management-condition.md)。  
+7.  在 **[檢查條件]** 清單中，選取其中一個現有的條件，或選取 **[新增條件]**。 若要編輯條件，請選取該條件，然後按一下省略符號 (...)。 如需詳細資訊，請參閱[建立新的原則式管理條件](../../relational-databases/policy-based-management/create-a-new-policy-based-management-condition.md)或[檢視或修改原則式管理條件的屬性](../../relational-databases/policy-based-management/view-or-modify-the-properties-of-a-policy-based-management-condition.md)。  
   
 8.  在 **[針對目標]** 方塊中，針對此原則選取一個或多個目標類型。 某些條件和 Facet 只能套用至特定目標類型。 可用的目標集會顯示在相關聯的方塊中。 展開 **[全部]** ，針對某些目標類型選取篩選條件。 如果此方塊中沒有出現任何目標，這表示檢查條件的範圍設定為伺服器層級。  
   
@@ -68,7 +69,7 @@ ms.lasthandoff: 04/11/2017
   
 11. 若要將此原則限制為目標類型的子集，請在 **[伺服器限制]** 方塊中，選取限制條件或建立新的條件。  
   
-     如需有關 **[建立新原則]** 對話方塊可用之選項的詳細資訊，請參閱＜ [Create New Policy or Open Policy Dialog Box, General Page](../../relational-databases/policy-based-management/create-new-policy-or-open-policy-dialog-box-general-page.md) ＞或＜ [Create New Policy or Open Policy Dialog Box, Description Page](../../relational-databases/policy-based-management/create-new-policy-or-open-policy-dialog-box-description-page.md)＞。  
+     如需有關 **[建立新原則]** 對話方塊可用之選項的詳細資訊，請參閱＜ [建立新原則或開啟原則對話方塊，一般頁面](../../relational-databases/policy-based-management/create-new-policy-or-open-policy-dialog-box-general-page.md) ＞或＜ [建立新原則或開啟原則對話方塊，描述頁面](../../relational-databases/policy-based-management/create-new-policy-or-open-policy-dialog-box-description-page.md)＞。  
   
 12. 完成後，請按一下 **[確定]**。  
   
