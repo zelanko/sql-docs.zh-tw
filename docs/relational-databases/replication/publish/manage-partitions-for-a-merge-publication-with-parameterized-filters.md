@@ -18,9 +18,10 @@ caps.latest.revision: 22
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5718198b2cbfc99a1658a703199bb943fcd73aeb
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -50,11 +51,11 @@ ms.lasthandoff: 04/11/2017
 -   當發行集擁有會產生具有非重疊資料分割之訂閱的參數化篩選時，以及遺失了特定訂閱而需要重新建立時，您必須執行下列作業：移除先前訂閱的資料分割、重新建立訂閱，然後重新建立資料分割。 如需詳細資訊，請參閱 [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)。 複寫會在發行集建立指令碼產生時，針對現有的「訂閱者」資料分割產生建立指令碼。 如需詳細資訊，請參閱 [Scripting Replication](../../../relational-databases/replication/scripting-replication.md)。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 您可以在 [發行集屬性 - \<發行集>]**** 對話方塊的 [資料分割]**** 頁面上，管理資料分割。 如需有關存取這個對話方塊的詳細資訊，請參閱＜ [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)＞。 您可以在此頁面中：建立和刪除資料分割；允許「訂閱者」初始化快照集產生和傳遞；為一個或多個資料分割產生快照集；清除快照集。  
+ 您可以在 [發行集屬性 - \<發行集>] 對話方塊的 [資料分割] 頁面上，管理資料分割。 如需有關存取這個對話方塊的詳細資訊，請參閱＜ [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)＞。 您可以在此頁面中：建立和刪除資料分割；允許「訂閱者」初始化快照集產生和傳遞；為一個或多個資料分割產生快照集；清除快照集。  
   
 #### <a name="to-create-a-partition"></a>若要建立資料分割  
   
-1.  在 [發行集屬性 - \<發行集>]**** 對話方塊的 [資料分割]**** 頁面上，按一下 [新增]****。  
+1.  在 [發行集屬性 - \<發行集>] 對話方塊的 [資料分割] 頁面上，按一下 [新增]。  
   
 2.  在 **[加入資料分割]** 對話方塊中，輸入與您要建立之資料分割相關聯的 **[HOST_NAME()]** 和/或 **[SUSER_SNAME()]** 值。  
   
@@ -113,7 +114,7 @@ ms.lasthandoff: 04/11/2017
   
     -   **@host_name** - 當參數化篩選是由 [HOST_NAME &#40;Transact-SQL&#41;](../../../t-sql/functions/host-name-transact-sql.md) 所傳回的值定義時。  
   
-2.  建立並初始化這個新資料分割的參數化快照集。 如需詳細資訊，請參閱 [Create a Snapshot for a Merge Publication with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)。  
+2.  建立並初始化這個新資料分割的參數化快照集。 如需詳細資訊，請參閱 [使用參數化篩選建立合併式發行集的快照集](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)。  
   
 #### <a name="to-delete-a-partition"></a>若要刪除資料分割  
   
@@ -126,7 +127,7 @@ ms.lasthandoff: 04/11/2017
      這也會移除資料分割的快照集作業和快照集檔案。  
   
 ##  <a name="RMOProcedure"></a> 使用 Replication Management Objects (RMO)  
- 若要使用參數化篩選以更好的方式管理發行集，可以使用 Replication Management Objects (RMO)，以程式設計的方式建立新的「訂閱者」資料分割、列舉現有的「訂閱者」資料分割，以及刪除「訂閱者」資料分割。 如需有關如何建立「訂閱者」資料分割的詳細資訊，請參閱＜ [Create a Snapshot for a Merge Publication with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)＞。 您可取得下列有關現有資料分割的資訊：  
+ 若要使用參數化篩選以更好的方式管理發行集，可以使用 Replication Management Objects (RMO)，以程式設計的方式建立新的「訂閱者」資料分割、列舉現有的「訂閱者」資料分割，以及刪除「訂閱者」資料分割。 如需有關如何建立「訂閱者」資料分割的詳細資訊，請參閱＜ [使用參數化篩選建立合併式發行集的快照集](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)＞。 您可取得下列有關現有資料分割的資訊：  
   
 -   資料分割所根據的值和篩選函數。  
   
