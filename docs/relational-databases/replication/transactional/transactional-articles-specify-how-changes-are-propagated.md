@@ -16,9 +16,10 @@ caps.latest.revision: 48
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 22e745406fe58c38e44e42395844a55efff3f57a
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -35,16 +36,16 @@ ms.lasthandoff: 04/11/2017
   
  依預設，異動複寫會透過每個訂閱者上所安裝的一組預存程序，將變更傳播到訂閱者。 在「發行者」端的資料表中進行插入、更新或刪除操作時，作業會翻譯為對「訂閱者」端預存程序的呼叫。 預存程序接受對應至資料表中資料行的參數，允許在「訂閱者」端變更這些資料行。  
   
- 若要設定對交易式發行項之資料變更的傳播方法，請參閱＜ [Set the Propagation Method for Data Changes to Transactional Articles](../../../relational-databases/replication/publish/set-the-propagation-method-for-data-changes-to-transactional-articles.md)＞。  
+ 若要設定對交易式發行項之資料變更的傳播方法，請參閱＜ [設定對交易式發行項之資料變更的傳播方法](../../../relational-databases/replication/publish/set-the-propagation-method-for-data-changes-to-transactional-articles.md)＞。  
   
 ## <a name="default-and-custom-stored-procedures"></a>預設與自訂預存程序  
  依預設，複寫為每個資料表發行項建立的三個程序為：  
   
--   處理插入的 **sp_MSins_\<**<資料表名稱>** **>**。  
+-   處理插入的 **sp_MSins_\<**<資料表名稱> **>**。  
   
--   處理更新的 **sp_MSupd_\<**<資料表名稱>** **>**。  
+-   處理更新的 **sp_MSupd_\<**<資料表名稱> **>**。  
   
--   處理刪除的 **sp_MSdel_\<**<資料表名稱>** **>**。  
+-   處理刪除的 **sp_MSdel_\<**<資料表名稱> **>**。  
   
  程序中使用的 **\<***tablename***>** 取決於發行項新增至發行集的方式，以及訂閱資料庫是否包含與不同擁有者具有相同名稱的資料表。  
   

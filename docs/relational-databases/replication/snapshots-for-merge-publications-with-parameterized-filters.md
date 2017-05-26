@@ -20,9 +20,10 @@ caps.latest.revision: 37
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 246e2e5db5c3e64973c165be8b03e03b7c8226a5
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -49,7 +50,7 @@ ms.lasthandoff: 04/11/2017
   
  請考慮使用 [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)]，此產品具有行動工作能力，可將庫存傳遞至個別商店。 每個業務員都會收到其登入帳戶的訂閱 (擷取業務員服務之商店的資料)。 管理員選擇預先產生快照集，並在每個週日重新整理這些快照集。 偶而，會有新使用者新增到系統中，並且需要無可用快照集之資料分割中的資料。 管理員也可以選擇允許「訂閱者」初始化的快照集，以避免由於快照集不可用而造成「訂閱者」無法訂閱發行集的情況。 當新的「訂閱者」首次進行連接時，會為指定的資料分割建立快照集，並套用到「訂閱者」(必須在「發行者」端執行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent，才允許產生快照集)。  
   
- 若要為含參數化篩選的發行集建立快照集，請參閱＜ [Create a Snapshot for a Merge Publication with Parameterized Filters](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)＞。  
+ 若要為含參數化篩選的發行集建立快照集，請參閱＜ [使用參數化篩選建立合併式發行集的快照集](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)＞。  
   
 ## <a name="security-settings-for-the-snapshot-agent"></a>快照集代理程式的安全性設定  
  「快照集代理程式」會為每個資料分割建立快照集。 對於預先產生的快照集和「訂閱者」所需的快照集，代理程式會在建立發行集的快照集代理程式作業 (此作業由「新增發行集精靈」或 **sp_addpublication_snapshot**建立) 時指定的認證下執行並進行連接。 若要變更認證，請使用 **sp_changedynamicsnapshot_job**。 如需詳細資訊，請參閱 [sp_changedynamicsnapshot_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedynamicsnapshot-job-transact-sql.md)。  
