@@ -36,7 +36,7 @@ ms.lasthandoff: 04/11/2017
 **因應措施** ：您可以參考系統組態檢查報告，深入了解這些安裝程式規則。 系統組態檢查會產生報告，其中包含每個已執行之規則以及執行狀態的簡短描述。 系統組態檢查報告位於 %programfiles%\Microsoft SQL Server\110\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\。  
   
 ### <a name="12-adding-a-local-user-account-for-the-distributed-replay-controller-service-might-terminate-setup-unexpectedly"></a>1.2 加入 Distributed Replay Controller 服務的本機使用者帳戶可能會非預期地終止安裝程式  
-**問題** ：在 SQL Server 安裝程式的 [Distributed Replay Controller]  頁面中，當您嘗試加入 Distributed Replay Controller 服務的本機使用者帳戶時，安裝程式將會非預期地終止並顯示「SQL Server 安裝程式失敗」錯誤訊息。  
+**問題** ：在 SQL Server 安裝程式的 [Distributed Replay Controller] **** 頁面中，當您嘗試加入 Distributed Replay Controller 服務的本機使用者帳戶時，安裝程式將會非預期地終止並顯示「SQL Server 安裝程式失敗」錯誤訊息。  
   
 **因應措施** ：在安裝 SQL 期間，請勿經由 [加入目前使用者] 或 [加入] 加入本機使用者帳戶。 請在安裝之後，依照下列步驟手動加入本機使用者帳戶：  
   
@@ -44,19 +44,19 @@ ms.lasthandoff: 04/11/2017
   
 2.  在安裝控制器服務的控制器電腦上，於命令提示字元中輸入 dcomcnfg。  
   
-3.  在 [元件服務] 視窗中，導覽至 [主控台根目錄] -> [元件服務] -> [電腦] -> [我的電腦] -> [Dconfig] ->[DReplayController]。  
+3.  在 [元件服務] 視窗中，導覽至 [主控台根目錄]**** -> [元件服務]**** -> [電腦]**** -> [我的電腦]**** -> [Dconfig]**** ->[DReplayController]****。  
   
-4.  以滑鼠右鍵按一下 [DReplayController]，然後按一下 [內容]。  
+4.  以滑鼠右鍵按一下 [DReplayController]****，然後按一下 [內容]****。  
   
-5.  在 [DReplayController 內容]  視窗的 [安全性]  索引標籤上，按一下 [啟動和啟用權限]  區段中的 [編輯]  。  
+5.  在 [DReplayController 內容] **** 視窗的 [安全性] **** 索引標籤上，按一下 [啟動和啟用權限] **** 區段中的 [編輯] **** 。  
   
-6.  將 [本機和遠端啟用]  權限授與本機使用者帳戶，然後按一下 [確定] 。  
+6.  將 [本機和遠端啟用] **** 權限授與本機使用者帳戶，然後按一下 [確定] ****。  
   
-7.  按一下 [存取權限] 區段中的 [編輯]  將 [本機和遠端存取]  權限授與本機使用者帳戶，然後按一下 [確定] 。  
+7.  按一下 [存取權限] 區段中的 [編輯] **** 將 [本機和遠端存取] **** 權限授與本機使用者帳戶，然後按一下 [確定] ****。  
   
-8.  按一下 [確定]  關閉 [DReplayController 內容]  視窗。  
+8.  按一下 [確定] **** 關閉 [DReplayController 內容] **** 視窗。  
   
-9. 在控制器電腦上，將本機使用者帳戶加入至 [Distributed COM Users]  群組。  
+9. 在控制器電腦上，將本機使用者帳戶加入至 [Distributed COM Users] **** 群組。  
   
 10. 啟動 SQL Server Distributed Replay Controller 服務。  
   
@@ -124,21 +124,21 @@ A semantic language statistics database is not registered. Full-text indexes usi
   
         方法 1：使用伺服器管理員  
   
-        1.  在 [伺服器管理員] 中，按一下 [加入功能]  顯示可能的功能清單。  
+        1.  在 [伺服器管理員] 中，按一下 [加入功能] **** 顯示可能的功能清單。  
   
-        2.  在 [選取功能]  介面中，展開 [.NET Framework 3.5.1 功能]  項目。  
+        2.  在 [選取功能] **** 介面中，展開 [.NET Framework 3.5.1 功能] **** 項目。  
   
-        3.  展開 [.NET Framework 3.5.1 功能] 之後，您會看見兩個核取方塊。 一個是 .NET Framework 3.5.1 的核取方塊，另一個則是 WCF 啟動的核取方塊。 選取 [.NET Framework 3.5.1] ，然後按 [下一步] 。 除非您也安裝了必要的角色服務和功能，否則無法安裝 .NET Framework 3.5.1 功能。  
+        3.  展開 [.NET Framework 3.5.1 功能] ****之後，您會看見兩個核取方塊。 一個是 .NET Framework 3.5.1 的核取方塊，另一個則是 WCF 啟動的核取方塊。 選取 [.NET Framework 3.5.1] ****，然後按 [下一步] ****。 除非您也安裝了必要的角色服務和功能，否則無法安裝 .NET Framework 3.5.1 功能。  
   
-        4.  在 [確認安裝選項] 中檢閱選項，然後按一下 [安裝]。  
+        4.  在 [確認安裝選項] ****中檢閱選項，然後按一下 [安裝]。  
   
-        5.  讓安裝程序完成，然後按一下 [關閉] 。  
+        5.  讓安裝程序完成，然後按一下 [關閉] ****。  
   
         方法 2：使用 Windows PowerShell  
   
-        1.  按一下 [開始] | [所有程式] | [附屬應用程式]  
+        1.  按一下 [開始]**** | [所有程式]**** | [附屬應用程式]****  
   
-        2.  展開 [Windows PowerShell]以滑鼠右鍵按一下 [Windows PowerShell]，然後按一下 [以系統管理員身分執行]。 請在 [使用者帳戶控制]  方塊中按一下 [是]  。  
+        2.  展開 [Windows PowerShell]****以滑鼠右鍵按一下 [Windows PowerShell]****，然後按一下 [以系統管理員身分執行]****。 請在 [使用者帳戶控制] **** 方塊中按一下 [是] **** 。  
   
         3.  在 PowerShell 命令提示字元中，輸入下列命令，然後在每個命令後面按下 ENTER：  
   
@@ -149,9 +149,9 @@ A semantic language statistics database is not registered. Full-text indexes usi
   
         **使用以下方法，在 Windows 7 SP1 上啟用 .NET Framework 3.5 SP1：**  
   
-        1.  按一下 [開始] | [控制台] | [程式]，然後按一下 [開啟或關閉 Windows 功能]。 如果系統提示需要系統管理員密碼或確認，請輸入密碼或提供確認。  
+        1.  按一下 [開始]**** | [控制台]**** | [程式]****，然後按一下 [開啟或關閉 Windows 功能]****。 如果系統提示需要系統管理員密碼或確認，請輸入密碼或提供確認。  
   
-        2.  若要啟用 [Microsoft .NET Framework 3.5.1] ，請選取此功能旁的核取方塊。 若要關閉某項 Windows 功能，請清除核取方塊。  
+        2.  若要啟用 [Microsoft .NET Framework 3.5.1] ****，請選取此功能旁的核取方塊。 若要關閉某項 Windows 功能，請清除核取方塊。  
   
         3.  按一下 **[確定]**。  
   
@@ -210,19 +210,19 @@ Windows Vista SP2、Windows Server 2008 SP2、Windows 2008 R2 SP1 和 Windows 7 
   
 1.  從 SQL Server 安裝媒體啟動 SQL Server 安裝程式 (setup.exe)。  
   
-2.  驗證必要元件和系統之後，安裝程式將會顯示 [SQL Server 安裝中心]  頁面。  
+2.  驗證必要元件和系統之後，安裝程式將會顯示 [SQL Server 安裝中心] **** 頁面。  
   
-3.  按一下左側導覽區域中的 [維護]  ，然後按一下 [修復]  啟動修復作業。 如果使用 [開始]  功能表啟動安裝中心，您將需要在這個階段提供安裝媒體的位置。  
+3.  按一下左側導覽區域中的 [維護] **** ，然後按一下 [修復] **** 啟動修復作業。 如果使用 [開始] **** 功能表啟動安裝中心，您將需要在這個階段提供安裝媒體的位置。  
   
 4.  安裝程式支援規則和檔案常式將會執行，以便確保您的系統已安裝必要元件而且電腦通過安裝程式驗證規則。 按一下 **[確定]** 或 **[安裝]** 繼續進行。  
   
-5.  在 [選取執行個體]  頁面上，選取要修復的執行個體，然後按一下 [下一步]  繼續進行。  
+5.  在 [選取執行個體] **** 頁面上，選取要修復的執行個體，然後按一下 [下一步] **** 繼續進行。  
   
 6.  修復規則將會執行，以便驗證作業。 若要繼續進行，請按 **[下一步]**。  
   
-7.  [已完成修復準備工作]  頁面會指出作業準備繼續進行。 若要繼續，請按一下 [修復] 。  
+7.  [已完成修復準備工作] **** 頁面會指出作業準備繼續進行。 若要繼續，請按一下 [修復] ****。  
   
-8.  [修復進度]  頁面會顯示修復作業的狀態。 [完成]  頁面會指出作業已完成。  
+8.  [修復進度] **** 頁面會顯示修復作業的狀態。 [完成] **** 頁面會指出作業已完成。  
   
 如需有關如何修復 SQL Server 執行個體的詳細資訊，請參閱 [修復失敗的 SQL Server 2012 安裝](http://msdn.microsoft.com/library/cc646006(SQL.110).aspx)。  
   
@@ -322,7 +322,7 @@ Analysis Services (AS) 的 SQL Server Integration Services (SSIS) 元件未以�
 ## <a name="DQS"></a>4.0 Data Quality Services  
   
 ### <a name="41-dqs-not-supported-in-a-cluster"></a>4.1 叢集中不支援 DQS  
-**問題** ：SQL Server 叢集安裝中不支援 DQS。 如果您正在安裝 SQL Server 的叢集執行個體，就不得在 [特徵選取]  頁面上選取 [Data Quality Services]  和 [Data Quality Client]  核取方塊。 如果您在叢集執行個體安裝期間選取這兩個核取方塊 (而且您藉由執行 DQSInstaller.exe 檔案完成 Data Quality Server 安裝)，DQS 將會安裝在這個節點上，但是當您在叢集中加入其他節點時無法在其他節點上使用，因此 DQS 無法在其他節點上運作。  
+**問題** ：SQL Server 叢集安裝中不支援 DQS。 如果您正在安裝 SQL Server 的叢集執行個體，就不得在 [特徵選取] **** 頁面上選取 [Data Quality Services] **** 和 [Data Quality Client] **** 核取方塊。 如果您在叢集執行個體安裝期間選取這兩個核取方塊 (而且您藉由執行 DQSInstaller.exe 檔案完成 Data Quality Server 安裝)，DQS 將會安裝在這個節點上，但是當您在叢集中加入其他節點時無法在其他節點上使用，因此 DQS 無法在其他節點上運作。  
   
 **因應措施** ：安裝 SQL Server 2012 累計更新 1 可解決此問題。 如需相關指示，請參閱 [http://support.microsoft.com/kb/2674817](http://support.microsoft.com/kb/2674817)。  
   
@@ -337,12 +337,12 @@ Analysis Services (AS) 的 SQL Server Integration Services (SSIS) 元件未以�
 **因應措施** ：無  
   
 ### <a name="44-a-cancel-operation-discards-work-from-multiple-activities"></a>4.4 取消作業會捨棄多項活動的工作  
-**問題** ：如果您針對執行中的知識探索或網域管理活動按一下 [取消]  ，而在該活動執行時，先前已完成其他活動但未執行發行作業，則從上次發行以來所執行的所有活動工作都會被捨棄，而不只是捨棄目前的活動。  
+**問題** ：如果您針對執行中的知識探索或網域管理活動按一下 [取消] **** ，而在該活動執行時，先前已完成其他活動但未執行發行作業，則從上次發行以來所執行的所有活動工作都會被捨棄，而不只是捨棄目前的活動。  
   
 **因應措施** ：若要避免這種狀況，請發行您需要保存在知識探索中的工作，再啟動新的活動。  
   
 ### <a name="45-controls-do-not-scale-properly-on-large-font-sizes"></a>4.5 控制項無法針對大字型適當縮放  
-**問題** ：如果您將文字大小變更為 [大 - 150%]\(在 Windows Server 2008 或 Windows 7 中)，或將 [自訂 DPI 設定] 變更為 200% (在 Windows 7 中)，便無法存取 [新增知識庫]  頁面上的 [取消]  和 [建立]  按鈕。  
+**問題** ：如果您將文字大小變更為 [大 - 150%]\(在 Windows Server 2008 或 Windows 7 中)，或將 [自訂 DPI 設定] 變更為 200% (在 Windows 7 中)，便無法存取 [新增知識庫] **** 頁面上的 [取消] **** 和 [建立] **** 按鈕。  
   
 **因應措施**：若要解決這個問題，請將字型設定為較小的大小。  
   
@@ -360,10 +360,10 @@ Analysis Services (AS) 的 SQL Server Integration Services (SSIS) 元件未以�
 **因應措施** ：使用 DQS 清理元件來處理這些資料行之前，您必須先使用資料轉換，將它們轉換成 **DT_STR** 或 **DT_WSTR** 資料類型。  
   
 ### <a name="49-the-item-to-run-dqsinstallerexe-on-the-start-menu-is-overwritten-on-new-sql-server-instance-installation"></a>4.9 新的 SQL Server 執行個體安裝會覆寫開始功能表上執行 DQSInstaller.exe 的項目  
-**問題：** 如果您選擇在 SQL Server 執行個體中安裝 Data Quality Services，完成 SQL Server 安裝程式之後，系統會在 [開始]  功能表的 [Data Quality Services]  程式群組底下建立名為 [Data Quality Server 安裝程式]  的項目。 不過，如果您在相同的電腦上安裝多個 SQL Server 執行個體，[開始]  功能表上仍會只有單一 [Data Quality Server 安裝程式]  項目。 只要按一下這個項目，就會在最近安裝的 SQL Server 執行個體中執行 DQSInstaller.exe 檔案。  
+**問題：** 如果您選擇在 SQL Server 執行個體中安裝 Data Quality Services，完成 SQL Server 安裝程式之後，系統會在 [開始] **** 功能表的 [Data Quality Services] **** 程式群組底下建立名為 [Data Quality Server 安裝程式] **** 的項目。 不過，如果您在相同的電腦上安裝多個 SQL Server 執行個體，[開始] **** 功能表上仍會只有單一 [Data Quality Server 安裝程式] **** 項目。 只要按一下這個項目，就會在最近安裝的 SQL Server 執行個體中執行 DQSInstaller.exe 檔案。  
   
 ### <a name="410-activity-monitoring-displays-incorrect-status-for-failed-integration-services-cleansing-activities"></a>4.10 活動監控針對失敗的 Integration Services 清理活動顯示不正確的狀態  
-即使 Integration Services 清理活動失敗，[活動監控] 畫面仍然會在 [目前狀態]  資料行中不正確地顯示 [成功]  。  
+即使 Integration Services 清理活動失敗，[活動監控] 畫面仍然會在 [目前狀態] **** 資料行中不正確地顯示 [成功] **** 。  
   
 ### <a name="411-schema-name-is-not-displayed-as-part-of-tableview-name"></a>4.11 結構描述名稱並未顯示成資料表/檢視表名稱的一部分  
 在 Data Quality Client 的對應階段期間，當您在任何 DQS 活動中選取 SQL Server 資料來源時，就會顯示不含結構描述名稱的資料表和檢視表清單。 因此，如果存在許多名稱相同但結構描述不同的資料表/檢視表，您就只能查看資料預覽，或是選取它們，然後查看要對應的可用欄位，藉以進行區別。  
@@ -372,7 +372,7 @@ Analysis Services (AS) 的 SQL Server Integration Services (SSIS) 元件未以�
 在清理資料品質專案中，如果您將來源資料中的欄位對應至具有日期資料類型之子定義域的複合定義域，清理結果的子定義域輸出就會具有不正確的日期格式，而且匯出至資料庫的作業會失敗。  
   
 ### <a name="413-error-when-mapping-to-an-excel-sheet-that-contains-a--semicolon-in-its-name"></a>4.13 對應至名稱包含 ; (分號) 的 Excel 工作表時發生錯誤  
-**問題** ：在 Data Quality Client 中任何 DQS 活動的 [對應]  頁面上，如果您對應至名稱包含 ; (分號) 的來源 Excel 工作表，則在 [對應]  頁面上按 [下一步]  時，就會顯示無法處理的例外狀況訊息。  
+**問題** ：在 Data Quality Client 中任何 DQS 活動的 [對應] **** 頁面上，如果您對應至名稱包含 ; (分號) 的來源 Excel 工作表，則在 [對應] **** 頁面上按 [下一步] **** 時，就會顯示無法處理的例外狀況訊息。  
   
 **因應措施** ：在包含要對應之來源資料的 Excel 檔案中，移除工作表名稱中的 ; (分號)，然後再試一次。  
   
@@ -383,7 +383,7 @@ Analysis Services (AS) 的 SQL Server Integration Services (SSIS) 元件未以�
   
 -   未對應之 **DateTime** 值的時間值會遺失，而且它們會以 yyyymmdd 格式顯示並匯出。  
   
-**因應措施** ：您可以在清理活動的 [管理和檢視結果]  頁面以及比對活動的 [比對]  頁面上，於右下角的窗格中檢視未對應的欄位值。  
+**因應措施** ：您可以在清理活動的 [管理和檢視結果] **** 頁面以及比對活動的 [比對] **** 頁面上，於右下角的窗格中檢視未對應的欄位值。  
   
 ### <a name="415-cannot-import-domain-values-from-an-excel-file-xls-containing-more-than-255-columns-of-data"></a>4.15 無法從包含超過 255 個資料行的 Excel 檔案 (.xls) 匯入定義域值  
 **問題** ：如果您從包含超過 255 個資料行的 Excel 97-2003 檔案 (.xls)，將值匯入定義域中，就會出現例外狀況訊息，而且匯入會失敗。  
@@ -398,13 +398,13 @@ Analysis Services (AS) 的 SQL Server Integration Services (SSIS) 元件未以�
 活動監控功能只適用於擁有 dqs_administrator 角色的使用者。 如果您的使用者帳戶具有 dqs_kb_editor 或 dqs_kb_operator 角色，則 Data Quality Client 應用程式中將無法使用活動監控功能。  
   
 ### <a name="417-error-on-opening-a-knowledge-base-in-the-recent-knowledge-base-list-for-domain-management"></a>4.17 在最近使用的知識庫清單中針對定義域管理開啟知識庫時發生錯誤  
-問題：如果您在 Data Quality Client 首頁畫面中，於 [最近使用的知識庫]  清單中針對定義域管理活動開啟知識庫，您可能會收到以下錯誤：  
+問題：如果您在 Data Quality Client 首頁畫面中，於 [最近使用的知識庫] **** 清單中針對定義域管理活動開啟知識庫，您可能會收到以下錯誤：  
   
 `"A configuration with name 'RecentList:KB:<domain>\<username>' already exists in the database."`  
   
 發生此錯誤是因為 DQS 在 SQL Server 資料庫中與在 C# 中比較字串的方式不同。 SQL Server 資料庫中的字串比較不區分大小寫，但是在 C# 中則區分大小寫。  
   
-我們使用範例來說明。 假設有使用者 Domain\user1。 此使用者使用 “user1” 帳戶登入 Data Quality Client 電腦，並處理知識庫。 DQS 會針對每一位使用者將最近使用的知識庫儲存為 DQS_MAIN 資料庫中 A_CONFIGURATION 資料表內的記錄。 在此情況下，此記錄將會以下列名稱儲存：RecentList:KB:Domain\user1。 之後，使用者以 “User1” 身分 (請注意 U 為大寫) 登入 Data Quality Client 電腦，並嘗試在 [最近使用的知識庫]  清單中針對定義域管理活動開啟此知識庫。 DQS 中的基礎程式碼將會比較兩個字串 RecentList:KB:DOMAIN\user1 和 DOMAIN\User1，而 C# 中會進行區分大小寫的字串比較，因為這兩個字串不相符，所以 DQS 會嘗試在 DQS_MAIN 資料庫的 A_CONFIGURATION 資料表中為使用者 (User1) 插入一筆新的記錄。 但是，由於 SQL 資料庫中的字串比較不區分大小寫，所以導致該字串已經存在於 DQS_MAIN 資料庫的 A_CONFIGURATION 資料表中，因此插入作業將會失敗。  
+我們使用範例來說明。 假設有使用者 Domain\user1。 此使用者使用 “user1” 帳戶登入 Data Quality Client 電腦，並處理知識庫。 DQS 會針對每一位使用者將最近使用的知識庫儲存為 DQS_MAIN 資料庫中 A_CONFIGURATION 資料表內的記錄。 在此情況下，此記錄將會以下列名稱儲存：RecentList:KB:Domain\user1。 之後，使用者以 “User1” 身分 (請注意 U 為大寫) 登入 Data Quality Client 電腦，並嘗試在 [最近使用的知識庫] **** 清單中針對定義域管理活動開啟此知識庫。 DQS 中的基礎程式碼將會比較兩個字串 RecentList:KB:DOMAIN\user1 和 DOMAIN\User1，而 C# 中會進行區分大小寫的字串比較，因為這兩個字串不相符，所以 DQS 會嘗試在 DQS_MAIN 資料庫的 A_CONFIGURATION 資料表中為使用者 (User1) 插入一筆新的記錄。 但是，由於 SQL 資料庫中的字串比較不區分大小寫，所以導致該字串已經存在於 DQS_MAIN 資料庫的 A_CONFIGURATION 資料表中，因此插入作業將會失敗。  
   
 **因應措施** ：若要修正此問題，您可以進行下列其中一項作業：  
   
@@ -463,7 +463,7 @@ Analysis Services (AS) 的 SQL Server Integration Services (SSIS) 元件未以�
 -   或從 32 位元 Windows PowerShell 2.0 提示匯入 SQLPS 模組。  
   
 ### <a name="54-an-error-might-occur-when-navigating-in-the-generate-script-wizard"></a>5.4 在產生指令碼精靈中導覽時可能會發生錯誤  
-**問題** ：在產生指令碼精靈中，按一下 [儲存或發佈指令碼] 產生指令碼，然後按一下 [選擇選項]  或 [設定指令碼編寫選項] 進行導覽之後，再次按一下 [儲存或發佈指令碼]  可能會產生下列錯誤：  
+**問題** ：在產生指令碼精靈中，按一下 [儲存或發佈指令碼] ****產生指令碼，然後按一下 [選擇選項] **** 或 [設定指令碼編寫選項] ****進行導覽之後，再次按一下 [儲存或發佈指令碼] **** 可能會產生下列錯誤：  
   
 <a name="prean-exception-occurred-while-executing-a-transact-sql-statement-or-batch-microsoftsqlserverconnectioninfo"></a><pre>An exception occurred while executing a Transact-SQL statement or batch. (Microsoft.SqlServer.ConnectionInfo)  
 ------------------------------  
@@ -598,7 +598,7 @@ Oracle CDC 服務是一種 Windows 服務，可掃描 Oracle 交易記錄，並�
 ## <a name="MDS"></a>7.0 Master Data Services  
   
 ### <a name="71-fixing-an-mds-installation-in-a-cluster"></a>7.1 修正叢集中的 MDS 安裝  
-**問題** ：如果您在選取 [Master Data Services]  核取方塊的情況下安裝 RTM 版本的 SQL Server 2012 叢集執行個體，將會在單一節點上安裝 MDS，但是 MDS 將無法在您加入至叢集的其他節點上使用及運作。  
+**問題** ：如果您在選取 [Master Data Services] **** 核取方塊的情況下安裝 RTM 版本的 SQL Server 2012 叢集執行個體，將會在單一節點上安裝 MDS，但是 MDS 將無法在您加入至叢集的其他節點上使用及運作。  
   
 **因應措施**：若要解決此問題，您必須安裝 SQL Server 2012 Cumulative Release 1 (CU1) 並執行下列步驟：  
   
