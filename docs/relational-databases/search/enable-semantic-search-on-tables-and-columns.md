@@ -16,9 +16,10 @@ caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 40724f35684d4da590d02163028a14ef711e392d
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -29,7 +30,7 @@ ms.lasthandoff: 04/11/2017
   
 ##  <a name="BasicEnabling"></a> 建立語意索引  
   
-###  <a name="reqenable"></a> Requirements and restrictions for creating a semantic index  
+###  <a name="reqenable"></a> 建立語意索引的需求和限制  
   
 -   您可以針對支援全文檢索索引的任何資料庫物件建立索引，包括資料表和索引檢視表。  
   
@@ -117,7 +118,7 @@ GO
 ```  
   
 ### <a name="create-a-new-semantic-index-by-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 建立新的語意索引  
- 您可以針對想要建立語意索引的每個資料行執行 [全文檢索索引精靈]，並在 [選取資料表資料行]**** 頁面上啟用 [統計語意]****。 如需詳細資訊，包含如何啟動 [全文檢索索引精靈] 的相關資訊，請參閱 [使用全文檢索索引精靈](../../relational-databases/search/use-the-full-text-indexing-wizard.md)。  
+ 您可以針對想要建立語意索引的每個資料行執行 [全文檢索索引精靈]，並在 [選取資料表資料行] 頁面上啟用 [統計語意]。 如需詳細資訊，包含如何啟動 [全文檢索索引精靈] 的相關資訊，請參閱 [使用全文檢索索引精靈](../../relational-databases/search/use-the-full-text-indexing-wizard.md)。  
   
 ##  <a name="HowToEnableAlter"></a> 在具有現有全文檢索索引時建立語意索引  
  當您使用 **ALTER FULLTEXT INDEX** 陳述式來改變現有的全文檢索索引時，可以加入語意索引。 您也可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的各種對話方塊來加入語意索引。  
@@ -146,11 +147,11 @@ GO
 ```  
   
 ### <a name="add-a-semantic-index-by-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 加入語意索引  
- 您可以在 [全文檢索索引屬性]**** 對話方塊的 [全文檢索索引資料行]**** 頁面上變更已啟用語意和全文檢索索引的資料行。 如需詳細資訊，請參閱 [管理全文檢索索引](http://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1)。  
+ 您可以在 [全文檢索索引屬性] 對話方塊的 [全文檢索索引資料行] 頁面上變更已啟用語意和全文檢索索引的資料行。 如需詳細資訊，請參閱 [管理全文檢索索引](http://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1)。  
 
 ## <a name="alter-a-semantic-index"></a>改變語意索引
   
-###  <a name="addreq"></a> Requirements and restrictions for altering an existing index  
+###  <a name="addreq"></a> 改變現有索引的需求和限制  
   
 -   當現有索引的母體擴展正在進行時，您無法改變該索引。 如需監視索引母體擴展之進度的詳細資訊，請參閱 [管理及監視語意搜尋](../../relational-databases/search/manage-and-monitor-semantic-search.md)。  
   
@@ -185,9 +186,9 @@ GO
 ```  
   
  ### <a name="drop-a-semantic-index-by-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 卸除語意索引  
- 您可以在 [全文檢索索引屬性]**** 對話方塊的 [全文檢索索引資料行]**** 頁面上變更已啟用語意和全文檢索索引的資料行。 如需詳細資訊，請參閱 [管理全文檢索索引](http://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1)。  
+ 您可以在 [全文檢索索引屬性] 對話方塊的 [全文檢索索引資料行] 頁面上變更已啟用語意和全文檢索索引的資料行。 如需詳細資訊，請參閱 [管理全文檢索索引](http://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1)。  
   
-###  <a name="dropreq"></a> Requirements and restrictions for dropping a semantic index  
+###  <a name="dropreq"></a> 卸除語意索引的需求和限制  
   
 -   您無法從資料行中卸除全文檢索索引，而保留語意索引。 語意索引相依於全文檢索索引的文件相似度結果。  
   
@@ -238,7 +239,7 @@ GO
     GO  
     ```  
   
--   在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 的物件總管中，以滑鼠右鍵按一下資料行，然後選取 [屬性]****。 在 **[資料行屬性]** 對話方塊的 **[一般]** 頁面上，檢查 **[Statistical Semantics]** 屬性的值。  
+-   在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 的物件總管中，以滑鼠右鍵按一下資料行，然後選取 [屬性]。 在 **[資料行屬性]** 對話方塊的 **[一般]** 頁面上，檢查 **[Statistical Semantics]** 屬性的值。  
   
      True 值表示指定的資料行除了啟用全文檢索索引以外，也啟用了語意索引。  
   
@@ -276,7 +277,7 @@ GO
   
  如果您想要索引的文件類型不在支援的類型清單中，則可能必須尋找、下載並安裝其他篩選。 如需詳細資訊，請參閱 [View or Change Registered Filters and Word Breakers](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md)。  
   
-##  <a name="BestPracticeFilegroup"></a> Best practice: Consider creating a separate filegroup for the full-text and semantic indexes  
+##  <a name="BestPracticeFilegroup"></a> 最佳作法：考慮針對全文檢索和語意索引建立個別的檔案群組  
  如果您有磁碟空間配置的顧慮，請考慮針對全文檢索和語意索引建立個別的檔案群組。 語意索引與全文檢索索引會建立在相同的檔案群組中。 完整擴展的語意索引可能會包含大量資料。  
  
 ##  <a name="IssueNoResults"></a> 問題：針對特定資料行進行搜尋時未傳回結果  

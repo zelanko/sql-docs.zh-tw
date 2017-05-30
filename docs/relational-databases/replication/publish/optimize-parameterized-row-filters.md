@@ -45,7 +45,7 @@ ms.lasthandoff: 04/11/2017
   
 ###  <a name="Recommendations"></a> 建議  
   
--   在使用參數化篩選器時，您可以在建立發行集時，藉由指定 [使用資料分割群組]  選項或 [保留資料分割變更]  選項來控制合併式複寫要如何處理篩選。 這兩個選項都可以透過在發行集資料庫中儲存其他中繼資料，以提升具有篩選發行項之發行集的同步處理效能。 您可以在建立發行項時，藉由設定 [資料分割選項]  來控制要如何在訂閱者之間共用資料。 如需有關這些需求的詳細資訊，請參閱＜ [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)＞。  
+-   在使用參數化篩選器時，您可以在建立發行集時，藉由指定 [使用資料分割群組]  選項或 [保留資料分割變更]  選項來控制合併式複寫要如何處理篩選。 這兩個選項都可以透過在發行集資料庫中儲存其他中繼資料，以提升具有篩選發行項之發行集的同步處理效能。 您可以在建立發行項時，藉由設定 [資料分割選項]  來控制要如何在訂閱者之間共用資料。 如需有關這些需求的詳細資訊，請參閱＜ [參數化資料列篩選](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)＞。  
   
      對於 [!INCLUDE[ssEW](../../../includes/ssew-md.md)]SQL Server Compact 訂閱者，必須將 keep_partition_changes 設為 true，才能確保正確傳播刪除。 設為 false 時，訂閱者所擁有的資料列可能比預期多。  
   
@@ -67,7 +67,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 [新增發行集精靈] 的 [篩選資料表的資料列] 頁面上，或是在 [發行集屬性 - \<發行集>] 對話方塊的 [篩選資料列] 頁面上，按一下 [新增]，然後按一下 [新增篩選]。  
   
-2.  建立參數化篩選。 如需詳細資訊，請參閱 [Define and Modify a Parameterized Row Filter for a Merge Article](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)。  
+2.  建立參數化篩選。 如需詳細資訊，請參閱 [針對合併發行項定義及修改參數化資料列篩選](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)。  
   
 3.  選取符合資料在訂閱者之間共用資料方式的選項：  
   
@@ -146,7 +146,7 @@ ms.lasthandoff: 04/11/2017
   
 4.  針對發行集中的每一個發行項重複步驟 3。  
   
-5.  (選擇性) 在發行集資料庫的發行者上，執行 [sp_addmergefilter](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md) ，以定義兩個發行項之間的聯結篩選。 如需詳細資訊，請參閱 [Define and Modify a Join Filter Between Merge Articles](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)。  
+5.  (選擇性) 在發行集資料庫的發行者上，執行 [sp_addmergefilter](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md) ，以定義兩個發行項之間的聯結篩選。 如需詳細資訊，請參閱 [定義和修改合併發行項之間的聯結篩選](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)。  
   
 #### <a name="to-view-and-modify-merge-filter-behaviors-for-an-existing-publication"></a>檢視及修改現有發行集的合併篩選行為  
   

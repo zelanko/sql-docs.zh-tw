@@ -357,7 +357,7 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
   
 **因應措施：**  
   
-1.  從 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 功能套件下載 MSOLAP.5 提供者。 在執行 Excel Services 的應用程式伺服器上安裝提供者。 如需詳細資訊，請參閱＜ [Microsoft SQL Server 2012 SP1 功能套件](http://www.microsoft.com/download/details.aspx?id=35580)＞中的＜Microsoft Analysis Services OLE DB Provider for Microsoft SQL Server 2012 SP1＞一節。  
+1.  從 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 功能套件下載 MSOLAP.5 提供者。 在執行 Excel Services 的應用程式伺服器上安裝提供者。 如需詳細資訊，請參閱＜ [Microsoft SQL Server 2012 SP1 功能套件](http://www.microsoft.com/download/details.aspx?id=35580)＞中的＜Microsoft Analysis Services OLE DB 提供者的 Microsoft SQL Server 2012 SP1＞一節。  
   
 2.  向 SharePoint Excel Services 註冊 MSOLAP.5 當做信任的提供者。 如需詳細資訊，請參閱＜ [加入 MSOLAP.5 做為 Excel Services 中受信任的資料提供者](http://technet.microsoft.com/library/hh758436.aspx)＞。  
   
@@ -372,7 +372,7 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
   
 **因應措施：**  
   
-1.  從 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 功能套件下載 MSOLAP.5 提供者。 在執行 Excel Services 的應用程式伺服器上安裝提供者。 如需詳細資訊，請參閱＜ [Microsoft SQL Server 2012 SP1 功能套件](http://www.microsoft.com/download/details.aspx?id=35580)＞中的＜Microsoft Analysis Services OLE DB Provider for Microsoft SQL Server 2012 SP1＞一節。  
+1.  從 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 功能套件下載 MSOLAP.5 提供者。 在執行 Excel Services 的應用程式伺服器上安裝提供者。 如需詳細資訊，請參閱＜ [Microsoft SQL Server 2012 SP1 功能套件](http://www.microsoft.com/download/details.aspx?id=35580)＞中的＜Microsoft Analysis Services OLE DB 提供者的 Microsoft SQL Server 2012 SP1＞一節。  
   
 2.  向 SharePoint Excel Services 註冊 MSOLAP.5 當做信任的提供者。 如需詳細資訊，請參閱＜ [加入 MSOLAP.5 做為 Excel Services 中受信任的資料提供者](http://technet.microsoft.com/library/hh758436.aspx)＞。  
   
