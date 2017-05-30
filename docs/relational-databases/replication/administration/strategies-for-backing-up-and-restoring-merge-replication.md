@@ -37,7 +37,7 @@ ms.lasthandoff: 04/11/2017
   
 -   發行者、散發者及所有訂閱者端的 **master** 與 **msdb** 系統資料庫。 這些資料庫應與其他每個及相關的複寫資料庫同時備份。 例如，在您備份發行集資料庫的同時，在發行者端備份 **master** 與 **msdb** 資料庫。 還原發行集資料庫時，請確定 **master** 與 **msdb** 資料庫的複寫組態與設定和發行集資料庫一致。  
   
- 如果您執行一般記錄備份，就必須在記錄備份中擷取任何複寫相關的變更。 如果您沒有執行記錄備份，每當與複寫相關的設定有所變更，就應該執行備份。 如需相關資訊，請參閱 [Common Actions Requiring an Updated Backup](../../../relational-databases/replication/administration/common-actions-requiring-an-updated-backup.md)。  
+ 如果您執行一般記錄備份，就必須在記錄備份中擷取任何複寫相關的變更。 如果您沒有執行記錄備份，每當與複寫相關的設定有所變更，就應該執行備份。 如需相關資訊，請參閱 [需要更新之備份的常見動作](../../../relational-databases/replication/administration/common-actions-requiring-an-updated-backup.md)。  
   
  選擇下面詳述的方法之一，以備份與還原發行集資料庫，然後遵循為散發資料庫與訂閱資料庫列出的建議。  
   
