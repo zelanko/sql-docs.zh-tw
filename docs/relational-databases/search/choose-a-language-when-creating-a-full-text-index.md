@@ -23,9 +23,10 @@ caps.latest.revision: 49
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 72f8dcb0e0426d8e37ae7284163f841caa478570
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -100,7 +101,7 @@ ms.lasthandoff: 04/11/2017
   
   
 ##  <a name="stemming"></a> 詞幹分析  
- 選擇資料行層級語言時的其他考量是詞幹分析。 在全文檢索查詢中，「詞幹分析」**是指搜尋某特定語言之所有字根 (字形變化) 的過程。 當您使用一般斷詞工具來處理許多語言時，詞幹分析程序只會針對指定給資料行的語言運作，而不會針對資料行中的其他語言運作。 例如，德文字幹分析器不會針對英文或西班牙文 (等語言) 運作。 這可能會影響重新叫用，端視您在查詢時選擇的語言而定。  
+ 選擇資料行層級語言時的其他考量是詞幹分析。 在全文檢索查詢中，「詞幹分析」是指搜尋某特定語言之所有字根 (字形變化) 的過程。 當您使用一般斷詞工具來處理許多語言時，詞幹分析程序只會針對指定給資料行的語言運作，而不會針對資料行中的其他語言運作。 例如，德文字幹分析器不會針對英文或西班牙文 (等語言) 運作。 這可能會影響重新叫用，端視您在查詢時選擇的語言而定。  
   
   
 ##  <a name="type"></a> 資料行類型對全文檢索搜尋的影響  

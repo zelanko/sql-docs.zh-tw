@@ -14,17 +14,18 @@ caps.latest.revision: 8
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 66e1a9e14b4a786e6ca45a9ab0e761975563c415
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="spatial-results-window"></a>空間結果視窗
-  [空間結果]**** 視窗會提供檢視空間資料的視覺化對應工具。 若要檢視空間結果，您的查詢結果必須包含一個具有幾何或地理位置資料的空間資料行。  
+  [空間結果] 視窗會提供檢視空間資料的視覺化對應工具。 若要檢視空間結果，您的查詢結果必須包含一個具有幾何或地理位置資料的空間資料行。  
   
 > [!NOTE]  
->  只有當您的結果傳回至 [結果]**** 視窗中的方格時，才能使用 [空間結果]**** 視窗。 如果您指定要將結果傳回成文字，就無法使用這個視窗。  
+>  只有當您的結果傳回至 [結果] 視窗中的方格時，才能使用 [空間結果] 視窗。 如果您指定要將結果傳回成文字，就無法使用這個視窗。  
   
 ## <a name="options"></a>選項  
  **選取空間資料行**  

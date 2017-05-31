@@ -16,14 +16,15 @@ caps.latest.revision: 31
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: defdcbd68e38e097908dbded5dd28448f09f17fd
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="audit-addlogin-event-class"></a>Audit Addlogin 事件類別
-  當新增或移除 **** 登入時，就會發生 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login is added or removed.  
+  當新增或移除  登入時，就會發生 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login is added or removed.  
   
  在新增登入時如果還有設定其他屬性，例如預設資料庫，您可在這個事件的 **TextData** 資料行中找到這些屬性的相關資訊。 如果在新增登入時設定了這些屬性，就不會發生 **Audit Login Change Property** 事件。  
   

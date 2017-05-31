@@ -17,9 +17,10 @@ caps.latest.revision: 8
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 51349f58a29f7a0702e719f83e5f60632fb8d7c5
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -65,7 +66,7 @@ ms.lasthandoff: 04/11/2017
   
 4.  按一下加號展開 **[統計資料]** 資料夾。  
   
-5.  以滑鼠右鍵按一下您想要刪除的統計資料物件，然後選取 [刪除]****。  
+5.  以滑鼠右鍵按一下您想要刪除的統計資料物件，然後選取 [刪除]。  
   
 6.  在 **[刪除物件]** 對話方塊中，確定已選取正確的統計資料，然後按一下 **[確定]**。  
   

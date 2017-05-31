@@ -20,9 +20,10 @@ caps.latest.revision: 41
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 93c2bdc00890de016ad26a45786e2d3a9fef9c33
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -82,7 +83,7 @@ ms.lasthandoff: 04/11/2017
   
 -   有效期間。 憑證在這段期間內都會視為有效。  
   
-     超過這段期間憑證則無效；每個憑證都包含 [有效期限自]****與 [有效期限至]****日期。 這些日期會指定有效期間。 當憑證的有效期過期時，憑證的主體應該要求取得新憑證。  
+     超過這段期間憑證則無效；每個憑證都包含 [有效期限自]與 [有效期限至]日期。 這些日期會指定有效期間。 當憑證的有效期過期時，憑證的主體應該要求取得新憑證。  
   
 -   簽發者識別資訊。  
   

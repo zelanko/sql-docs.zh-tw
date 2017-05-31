@@ -14,9 +14,10 @@ caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 611fcbd96531e57dd47a7ae61e5b4b32d84dcb46
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -26,12 +27,12 @@ ms.lasthandoff: 04/11/2017
 
 [永遠加密](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)使用兩種密碼編譯金鑰類型來保護您的資料 - 一種金鑰用來加密您的資料，而另一種金鑰則用來對加密資料的金鑰進行加密。 資料行加密金鑰會加密您的資料，而資料行主要金鑰則會加密資料行加密金鑰。 本文提供詳細概觀來說明如何管理這些加密金鑰。
 
-當討論到永遠加密金鑰和金鑰管理時，請務必了解實際的密碼編譯金鑰與「描述」**金鑰的中繼資料物件之間的差異。 我們使用**資料行加密金鑰**和**資料行主要金鑰**等詞彙來表示實際的密碼編譯金鑰，並使用**資料行加密金鑰中繼資料**和**資料行主要金鑰中繼資料**來表示資料庫中的永遠加密金鑰「描述」**。
+當討論到永遠加密金鑰和金鑰管理時，請務必了解實際的密碼編譯金鑰與「描述」金鑰的中繼資料物件之間的差異。 我們使用**資料行加密金鑰**和**資料行主要金鑰**等詞彙來表示實際的密碼編譯金鑰，並使用**資料行加密金鑰中繼資料**和**資料行主要金鑰中繼資料**來表示資料庫中的永遠加密金鑰「描述」。
 
-- 「資料行加密金鑰」******是用來加密資料的內容加密金鑰。 顧名思義，您可以使用資料行加密金鑰來加密資料庫資料行中的資料。 您可以使用相同的資料行加密金鑰來加密一或多個資料行，或根據您的應用程式需求，使用多個資料行加密金鑰。 資料行加密金鑰本身經過加密，只有資料行加密金鑰的加密值會儲存在資料庫中 (當作資料行加密金鑰中繼資料的一部分)。 資料行加密金鑰中繼資料則會儲存在 [sys.column_encryption_keys (TRANSACT-SQL)](../../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) 和 [sys.column_encryption_key_values (TRANSACT-SQL)](../../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md) 目錄檢視中。 搭配 AES-256 演算法使用之資料行加密金鑰的長度為 256 位元。
+- 「資料行加密金鑰」是用來加密資料的內容加密金鑰。 顧名思義，您可以使用資料行加密金鑰來加密資料庫資料行中的資料。 您可以使用相同的資料行加密金鑰來加密一或多個資料行，或根據您的應用程式需求，使用多個資料行加密金鑰。 資料行加密金鑰本身經過加密，只有資料行加密金鑰的加密值會儲存在資料庫中 (當作資料行加密金鑰中繼資料的一部分)。 資料行加密金鑰中繼資料則會儲存在 [sys.column_encryption_keys (TRANSACT-SQL)](../../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) 和 [sys.column_encryption_key_values (TRANSACT-SQL)](../../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md) 目錄檢視中。 搭配 AES-256 演算法使用之資料行加密金鑰的長度為 256 位元。
 
 
-- 「資料行主要金鑰」******是用來加密資料行加密金鑰的金鑰保護型金鑰。 資料行主要金鑰必須儲存在受信任的金鑰存放區中，例如 Windows 憑證存放區、Azure 金鑰保存庫或硬體安全模組。 資料庫只會包含資料行主要金鑰的相關中繼資料 (金鑰存放區類型和位置)。 資料行主要金鑰中繼資料則會儲存在 [sys.column_master_keys (TRANSACT-SQL)](../../../relational-databases/system-catalog-views/sys-column-master-keys-transact-sql.md) 目錄檢視中。  
+- 「資料行主要金鑰」是用來加密資料行加密金鑰的金鑰保護型金鑰。 資料行主要金鑰必須儲存在受信任的金鑰存放區中，例如 Windows 憑證存放區、Azure 金鑰保存庫或硬體安全模組。 資料庫只會包含資料行主要金鑰的相關中繼資料 (金鑰存放區類型和位置)。 資料行主要金鑰中繼資料則會儲存在 [sys.column_master_keys (TRANSACT-SQL)](../../../relational-databases/system-catalog-views/sys-column-master-keys-transact-sql.md) 目錄檢視中。  
 
 請務必注意，資料庫系統中的金鑰中繼資料不包含純文字資料行主要金鑰或純文字資料行加密金鑰。 資料庫只會包含資料行主要金鑰類型和位置的相關資訊，以及資料行加密金鑰的加密值。 這表示永遠不會向資料庫系統公開純文字金鑰，如此可確保使用永遠加密保護的資料安全無虞，即使資料庫系統遭到入侵亦然。 若要確保資料庫系統無法存取純文字金鑰，請務必在與裝載您的資料庫不同的電腦上執行金鑰管理工具 - 如需詳細資訊，請參閱下面的 [金鑰管理的安全性考量](#SecurityForKeyManagement) 一節。
 
@@ -95,7 +96,7 @@ ms.lasthandoff: 04/11/2017
 為了確保永遠加密能夠有效地防止這類攻擊，您的金鑰管理程序必須確保資料行主要金鑰和資料行加密金鑰，以及包含資料行主要金鑰的金鑰存放區認證永遠不會洩漏給潛在攻擊者。 以下是您應該遵循的一些方針：
 
 - 永遠不要在裝載您資料庫的電腦上產生資料行主要金鑰或資料行加密金鑰。 請改為在不同的電腦上產生金鑰，這些電腦可以是金鑰管理的專用電腦，或是裝載無論如何都必須存取金鑰之應用程式的電腦。 這表示 **您永遠都不應該在裝載資料庫的電腦上執行用來產生金鑰的工具** ，因為如果攻擊者存取用來佈建或維護永遠加密金鑰的電腦，攻擊者可能會取得您的金鑰，即使金鑰只短暫地出現在工具的記憶體中亦然。
-- 為了確保您的金鑰管理程序不會不小心洩露資料行主要金鑰或資料行加密金鑰，請務必識別潛在敵人和安全性威脅，再定義及實作金鑰管理程序。 例如，如果您的目標是為了確保 DBA 無法存取敏感性資料，則不能由 DBA 負責產生金鑰。 不過，DBA「可以」**管理資料庫中的金鑰中繼資料，因為中繼資料不包含純文字金鑰。
+- 為了確保您的金鑰管理程序不會不小心洩露資料行主要金鑰或資料行加密金鑰，請務必識別潛在敵人和安全性威脅，再定義及實作金鑰管理程序。 例如，如果您的目標是為了確保 DBA 無法存取敏感性資料，則不能由 DBA 負責產生金鑰。 不過，DBA「可以」管理資料庫中的金鑰中繼資料，因為中繼資料不包含純文字金鑰。
 
 ## <a name="next-steps"></a>後續步驟
 

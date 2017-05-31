@@ -16,9 +16,10 @@ caps.latest.revision: 8
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0903ac5f3e339bf884b3b5704bfd7ef5e1b02938
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -54,7 +55,7 @@ ms.lasthandoff: 04/11/2017
   
 4.  按一下加號展開 **[原則]** 資料夾。  
   
-5.  以滑鼠右鍵按一下您想要刪除的原則，然後選取 [刪除]****。  
+5.  以滑鼠右鍵按一下您想要刪除的原則，然後選取 [刪除]。  
   
 6.  在 **[刪除物件]** 對話方塊中，確定已選取正確的條件，然後按一下 **[確定]**。  
   

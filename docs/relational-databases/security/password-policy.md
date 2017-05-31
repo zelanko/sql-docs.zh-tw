@@ -37,9 +37,10 @@ caps.latest.revision: 41
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 1843956926a6eb59efbc4dc14dc50f1dd3403d07
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -81,7 +82,7 @@ ms.lasthandoff: 04/11/2017
   
     -   密碼記錄會使用目前密碼雜湊的值來初始化。  
   
-    -   [帳戶鎖定期間]****、[帳戶鎖定閾值]**** 和 [重設帳戶鎖定計數器的時間]**** 也會啟用。  
+    -   [帳戶鎖定期間]、[帳戶鎖定閾值] 和 [重設帳戶鎖定計數器的時間] 也會啟用。  
   
 -   當 CHECK_POLICY 改為 OFF 時，會發生下列行為：  
   

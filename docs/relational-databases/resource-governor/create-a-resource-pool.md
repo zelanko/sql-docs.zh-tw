@@ -17,9 +17,10 @@ caps.latest.revision: 19
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3d5262087e05342256bb46c28ea7fd5d2ce1bf54
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -47,11 +48,11 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，開啟 [物件總管]，然後遞迴地向下展開 **[管理]** 節點至 **[資源管理員]**。  
   
-2.  以滑鼠右鍵按一下 [資源管理員]****，然後按一下 [屬性]****。  
+2.  以滑鼠右鍵按一下 [資源管理員]，然後按一下 [屬性]。  
   
 3.  在 **[資源集區]** 方格中，按一下空白資料列的第一個資料行。 這個資料行標示有星號 (*)。  
   
-4.  按兩下 [名稱]**** 資料行中的空白儲存格。 輸入您想要用於資源集區的名稱。  
+4.  按兩下 [名稱] 資料行中的空白儲存格。 輸入您想要用於資源集區的名稱。  
   
 5.  在資料列中按一下或按兩下要變更的任何其他資料格，然後輸入新值。  
   

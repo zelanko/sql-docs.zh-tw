@@ -17,9 +17,10 @@ caps.latest.revision: 15
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 510473a5e51a911d4a642dcc78bc3a3408f65b87
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -49,7 +50,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 [物件總管] 中，遞迴地向下展開 **[管理]** 節點至包含要修改之工作負載群組的資源集區。  
   
-2.  以滑鼠右鍵按一下 [工作負載群組]**** 資料夾，然後按一下 [新增工作負載群組]****。  
+2.  以滑鼠右鍵按一下 [工作負載群組] 資料夾，然後按一下 [新增工作負載群組]。  
   
 3.  在 **[資源集區]** 方格中，確定已反白顯示要新增工作負載群組的資源集區。  
   

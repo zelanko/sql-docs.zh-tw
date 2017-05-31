@@ -18,9 +18,10 @@ caps.latest.revision: 14
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 021ff6838de18ea03a50aae661d543061088ae87
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -31,43 +32,43 @@ ms.lasthandoff: 04/11/2017
   
 1.  連接到 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的發行者，然後展開伺服器節點。  
   
-2.  展開 [複寫]**** 資料夾，然後以滑鼠右鍵按一下 [本機發行集]**** 資料夾，再按一下 [新增發行集]****。  
+2.  展開 [複寫] 資料夾，然後以滑鼠右鍵按一下 [本機發行集] 資料夾，再按一下 [新增發行集]。  
   
     [發行集設定精靈] 隨即啟動。  
   
-3.  在 [發行集資料庫] 頁面上，選取 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]，然後按一下 [下一步]****。  
+3.  在 [發行集資料庫] 頁面上，選取 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]，然後按一下 [下一步]。  
   
-4.  在 [發行集類型] 頁面上，選取 [交易式發行集]****，然後按一下 [下一步]****。  
+4.  在 [發行集類型] 頁面上，選取 [交易式發行集]，然後按一下 [下一步]。  
   
-5.  在 [發行項] 頁面上，展開 [Tables]**** 節點，選取 [Product]**** 核取方塊，然後展開 [Product]****，再清除 [ListPrice]**** 和 [StandardCost]**** 核取方塊。 按一下 **[下一步]**。  
+5.  在 [發行項] 頁面上，展開 [Tables] 節點，選取 [Product] 核取方塊，然後展開 [Product]，再清除 [ListPrice] 和 [StandardCost] 核取方塊。 按一下 **[下一步]**。  
   
-6.  在 [篩選資料表的資料列] 頁面上，按一下 [新增]****。  
+6.  在 [篩選資料表的資料列] 頁面上，按一下 [新增]。  
   
-7.  在 [新增篩選]**** 對話方塊中，按一下 [SafetyStockLevel]**** 資料行，再按一下向右鍵，將資料行新增至篩選查詢的篩選陳述式 WHERE 子句中，並依照下列方式修改 WHERE 子句：  
+7.  在 [新增篩選] 對話方塊中，按一下 [SafetyStockLevel] 資料行，再按一下向右鍵，將資料行新增至篩選查詢的篩選陳述式 WHERE 子句中，並依照下列方式修改 WHERE 子句：  
   
     ```  
     WHERE [SafetyStockLevel] < 500  
     ```  
   
-8.  按一下 [確定]****，然後按一下 [下一步]****。  
+8.  按一下 [確定]，然後按一下 [下一步]。  
   
-9. 選取 [立即建立快照集，並保留快照集為可使用狀態，以初始化訂閱]**** 核取方塊，然後按一下 [下一步]****。  
+9. 選取 [立即建立快照集，並保留快照集為可使用狀態，以初始化訂閱] 核取方塊，然後按一下 [下一步]。  
   
-10. 在 [代理程式安全性] 頁面上，清除 [使用快照集代理程式的安全性設定]**** 核取方塊。  
+10. 在 [代理程式安全性] 頁面上，清除 [使用快照集代理程式的安全性設定] 核取方塊。  
   
-11. 按一下快照集代理程式的 [安全性設定]****，在 [處理帳戶]**** 方塊中輸入 \<*電腦名稱>***\repl_snapshot**，提供此帳戶的密碼，然後按一下 [確定]****。  
+11. 按一下快照集代理程式的 [安全性設定]，在 [處理帳戶] 方塊中輸入 \<*電腦名稱>***\repl_snapshot**，提供此帳戶的密碼，然後按一下 [確定]。  
   
-12. 重複執行先前的步驟，將 repl_logreader 設定為記錄讀取器代理程式的處理帳戶，然後按一下 [完成]****。  
+12. 重複執行先前的步驟，將 repl_logreader 設定為記錄讀取器代理程式的處理帳戶，然後按一下 [完成]。  
   
-13. 在 [完成精靈] 頁面的 [發行集名稱]**** 方塊中輸入 [AdvWorksProductTrans]****，然後按一下 [完成]****。  
+13. 在 [完成精靈] 頁面的 [發行集名稱] 方塊中輸入 [AdvWorksProductTrans]，然後按一下 [完成]。  
   
-14. 建立發行集之後，按一下 [關閉]**** 以完成精靈。  
+14. 建立發行集之後，按一下 [關閉] 以完成精靈。  
   
 ### <a name="to-view-the-status-of-snapshot-generation"></a>檢視快照集產生的狀態  
   
 1.  連接到 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的「發行者」，展開伺服器節點，然後展開 **[複寫]** 資料夾。  
   
-2.  在 [本機發行集]**** 資料夾中，以滑鼠右鍵按一下 [AdvWorksProductTrans]****，然後按一下 [檢視快照集代理程式狀態]****。  
+2.  在 [本機發行集] 資料夾中，以滑鼠右鍵按一下 [AdvWorksProductTrans]，然後按一下 [檢視快照集代理程式狀態]。  
   
 3.  發行集之快照集代理程式作業的目前狀態隨即顯示。 確認快照集作業已成功，再繼續進行下一課。  
   
@@ -75,13 +76,13 @@ ms.lasthandoff: 04/11/2017
   
 1.  連接到 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的「發行者」，展開伺服器節點，然後展開 **[複寫]** 資料夾。  
   
-2.  在 [本機發行集]**** 資料夾中，以滑鼠右鍵按一下 [AdvWorksProductTrans]****，然後按一下 [屬性]****。  
+2.  在 [本機發行集] 資料夾中，以滑鼠右鍵按一下 [AdvWorksProductTrans]，然後按一下 [屬性]。  
   
-    [發行集屬性]**** 對話方塊隨即顯示。  
+    [發行集屬性] 對話方塊隨即顯示。  
   
-3.  選取 [發行集存取清單]**** 頁面，然後按一下 [新增]****。  
+3.  選取 [發行集存取清單] 頁面，然後按一下 [新增]。  
   
-4.  在 [新增發行集存取]**** 對話方塊中，選取 [<電腦名稱>**\repl_distribution]****，然後按一下 [確定]****。 按一下 **[確定]**。  
+4.  在 [新增發行集存取] 對話方塊中，選取 [<電腦名稱>\repl_distribution]，然後按一下 [確定]。 按一下 **[確定]**。  
   
 ## <a name="next-steps"></a>後續步驟  
 您已順利建立交易式發行集。 下一步，您將訂閱此發行集。 請參閱 [第 2 課：建立交易式發行集的訂閱](../../relational-databases/replication/lesson-2-creating-a-subscription-to-the-transactional-publication.md)。  

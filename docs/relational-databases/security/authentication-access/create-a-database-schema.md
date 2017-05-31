@@ -21,9 +21,10 @@ caps.latest.revision: 11
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: fe54e464e4aabc53eb8645c1fbf20f509f427978
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -68,9 +69,9 @@ ms.lasthandoff: 04/11/2017
   
 2.  展開要建立新資料庫結構描述的資料庫。  
   
-3.  以滑鼠右鍵按一下 [安全性]**** 資料夾，指向 [新增]****，然後選取 [結構描述]****。  
+3.  以滑鼠右鍵按一下 [安全性] 資料夾，指向 [新增]，然後選取 [結構描述]。  
   
-4.  在 [結構描述 - 新增]**** 對話方塊的 [一般]**** 頁面上，將新結構描述的名稱輸入 [結構描述名稱]**** 方塊中。  
+4.  在 [結構描述 - 新增] 對話方塊的 [一般] 頁面上，將新結構描述的名稱輸入 [結構描述名稱] 方塊中。  
   
 5.  在 **[結構描述擁有者]** 方塊中，輸入擁有結構描述之資料庫使用者或角色的名稱。 或者，按一下 **[搜尋]** 開啟 **[搜尋角色和使用者]** 對話方塊。  
   

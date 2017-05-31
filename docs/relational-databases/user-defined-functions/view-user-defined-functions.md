@@ -22,9 +22,10 @@ caps.latest.revision: 30
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 16f1c2ed871db93259f87bc2e26dba634a0602d6
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -69,9 +70,9 @@ ms.lasthandoff: 04/11/2017
   
     -   彙總函式  
   
-4.  以滑鼠右鍵按一下要查看其屬性的函數，然後選取 [屬性]****。  
+4.  以滑鼠右鍵按一下要查看其屬性的函數，然後選取 [屬性]。  
   
-     下列屬性會出現在 [函數屬性 - *函數名稱*]**** 對話方塊中。  
+     下列屬性會出現在 [函數屬性 - *函數名稱*] 對話方塊中。  
   
      **資料庫**  
      包含此函數之資料庫的名稱。  

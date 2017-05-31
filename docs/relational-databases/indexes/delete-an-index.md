@@ -20,9 +20,10 @@ caps.latest.revision: 29
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 77d88bfd9ae9cb742bc9dc18f8baffdd32e5ac3e
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -67,7 +68,7 @@ ms.lasthandoff: 04/11/2017
   
 4.  展開 **[索引]** 資料夾。  
   
-5.  以滑鼠右鍵按一下您想刪除的索引，然後選取 [刪除]****。  
+5.  以滑鼠右鍵按一下您想刪除的索引，然後選取 [刪除]。  
   
 6.  在 **[刪除物件]** 對話方塊中，確認 **[要刪除的物件]** 方格中有正確索引，然後按一下 **[確定]**。  
   
@@ -79,15 +80,15 @@ ms.lasthandoff: 04/11/2017
   
 3.  以滑鼠右鍵按一下包含您要刪除索引的資料表，然後按一下 [設計]。  
   
-4.  在 [資料表設計工具]**** 功能表中，按一下 [索引/索引鍵]****。  
+4.  在 [資料表設計工具] 功能表中，按一下 [索引/索引鍵]。  
   
-5.  在 [索引/索引鍵]**** 對話方塊中，選取要刪除的索引。  
+5.  在 [索引/索引鍵] 對話方塊中，選取要刪除的索引。  
   
 6.  按一下 **[刪除]**。  
   
 7.  按一下 [ **關閉**]。  
   
-8.  在 [檔案]**** 功能表上，選取 [儲存 *table_name*]****。  
+8.  在 [檔案] 功能表上，選取 [儲存 *table_name*]。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

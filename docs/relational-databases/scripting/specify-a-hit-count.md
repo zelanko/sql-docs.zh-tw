@@ -18,9 +18,10 @@ caps.latest.revision: 6
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 07a60dfe673b6aba231958324b4e9094fc3dcb38
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -46,11 +47,11 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="to-specify-a-hit-count"></a>若要指定叫用次數  
   
-1.  在編輯器視窗中，以滑鼠右鍵按一下中斷點字符，然後按一下捷徑功能表上的 [叫用次數]****。  
+1.  在編輯器視窗中，以滑鼠右鍵按一下中斷點字符，然後按一下捷徑功能表上的 [叫用次數]。  
   
      -或-  
   
-     在 [中斷點]**** 視窗中，以滑鼠右鍵按一下中斷點字符，然後按一下捷徑功能表上的 [叫用次數]****。  
+     在 [中斷點] 視窗中，以滑鼠右鍵按一下中斷點字符，然後按一下捷徑功能表上的 [叫用次數]。  
   
 2.  在 **[中斷點叫用次數]** 對話方塊的 **[當叫用中斷點時]** 方塊中，選取所要的行為。  
   
@@ -60,11 +61,11 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="to-view-or-reset-the-current-hit-count"></a>若要檢視或重設目前叫用次數  
   
-1.  在編輯器視窗中，以滑鼠右鍵按一下中斷點字符，然後按一下捷徑功能表上的 [叫用次數]****。  
+1.  在編輯器視窗中，以滑鼠右鍵按一下中斷點字符，然後按一下捷徑功能表上的 [叫用次數]。  
   
      -或-  
   
-     在 [中斷點]**** 視窗中，以滑鼠右鍵按一下中斷點字符，然後按一下捷徑功能表上的 [叫用次數]****。  
+     在 [中斷點] 視窗中，以滑鼠右鍵按一下中斷點字符，然後按一下捷徑功能表上的 [叫用次數]。  
   
 2.  在 **[中斷點叫用次數]** 對話方塊中， **[目前叫用次數:]** 就會顯示在 **[重設]** 按鈕的正上方。  
   

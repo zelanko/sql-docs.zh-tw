@@ -17,9 +17,10 @@ caps.latest.revision: 19
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: edde7181074e6d5145cc957fa3ce10fa9b311887
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -61,7 +62,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  確定沒有人使用此資料庫，然後[將資料庫設定為單一使用者模式](../../relational-databases/databases/set-a-database-to-single-user-mode.md)。  
   
-3.  展開 [資料庫]****，以滑鼠右鍵按一下要重新命名的資料庫，然後按一下 [重新命名]****。  
+3.  展開 [資料庫]，以滑鼠右鍵按一下要重新命名的資料庫，然後按一下 [重新命名]。  
   
 4.  輸入新的資料庫名稱，然後按一下 **[確定]**。  
   

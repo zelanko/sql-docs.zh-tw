@@ -16,16 +16,17 @@ caps.latest.revision: 33
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: dd0f291ca7863b653546243d18c3a289f1551a41
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="select-backup-destination"></a>選取備份目的地
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  使用 [選取備份目的地]**** 對話方塊，即可選取裝置作為備份目的地。 備份目的地可以是磁碟或是邏輯備份裝置。  
+  使用 [選取備份目的地] 對話方塊，即可選取裝置作為備份目的地。 備份目的地可以是磁碟或是邏輯備份裝置。  
   
  **若要使用 SQL Server Management Studio 備份資料庫**  
   

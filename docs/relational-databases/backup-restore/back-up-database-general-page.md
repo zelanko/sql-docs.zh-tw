@@ -16,9 +16,10 @@ caps.latest.revision: 64
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 038fa003ad819d89d8739f8cfaac53582f93932a
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -28,7 +29,7 @@ ms.lasthandoff: 04/11/2017
  如需基本備份概念的詳細資訊，請參閱[備份概觀 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)。  
   
 > [!NOTE]  
->  使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 指定備份工作時，可以按一下 [指令碼]**** 按鈕，然後選取指令碼的目的地，以產生對應的 [!INCLUDE[tsql](../../includes/tsql-md.md)] [BACKUP](../../t-sql/statements/backup-transact-sql.md) 指令碼。  
+>  使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 指定備份工作時，可以按一下 [指令碼] 按鈕，然後選取指令碼的目的地，以產生對應的 [!INCLUDE[tsql](../../includes/tsql-md.md)] [BACKUP](../../t-sql/statements/backup-transact-sql.md) 指令碼。  
   
  **若要使用 SQL Server Management Studio 建立備份**  
   
@@ -64,10 +65,10 @@ ms.lasthandoff: 04/11/2017
 |交易記錄|交易記錄|交易記錄備份無法使用於簡單復原模式。|  
   
  **只複製備份**  
- 選取此選項，即可建立只複製備份。 「只複製備份」**是與傳統 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份順序無關的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份。 如需詳細資訊，請參閱[只複製備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/copy-only-backups-sql-server.md)。  
+ 選取此選項，即可建立只複製備份。 「只複製備份」是與傳統 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份順序無關的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份。 如需詳細資訊，請參閱[只複製備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/copy-only-backups-sql-server.md)。  
   
 > [!NOTE]  
->  選取 [差異]**** 選項時，您無法建立只複製備份。  
+>  選取 [差異] 選項時，您無法建立只複製備份。  
   
  **備份元件**  
  選取要備份的資料庫元件。 如果 **[備份類型]** 清單中已選取 **[交易記錄]** ，則不會啟動此選項。  
@@ -107,7 +108,7 @@ ms.lasthandoff: 04/11/2017
  **目錄**  
 顯示所選裝置的媒體內容 (如果裝置存在)。  當 **URL** 指定時，按鈕不會執行函數。 
    
-[選取備份目的地]**** 對話方塊：在您選取 [新增]**** 之後，[選取備份目的地]**** 對話方塊隨即出現。   所顯示的選項集取決於選取的目的地類型。 
+[選取備份目的地] 對話方塊：在您選取 [新增] 之後，[選取備份目的地] 對話方塊隨即出現。   所顯示的選項集取決於選取的目的地類型。 
 
 如果選取 **磁碟** 或 **磁帶** 作為備份目的地，則會顯示下列選項。  
 

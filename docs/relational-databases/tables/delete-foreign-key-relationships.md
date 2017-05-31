@@ -18,9 +18,10 @@ caps.latest.revision: 15
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3187794a4854ed3fa298d8b72d8aae57a8bf21c0
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -54,7 +55,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 **[物件總管]**中，展開含有條件約束的資料表，然後展開 **[索引鍵]**。  
   
-2.  以滑鼠右鍵按一下條件約束，然後按一下 [刪除]****。  
+2.  以滑鼠右鍵按一下條件約束，然後按一下 [刪除]。  
   
 3.  在 **[刪除物件]** 對話方塊中，按一下 **[確定]**。  
   

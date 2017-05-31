@@ -18,9 +18,10 @@ caps.latest.revision: 28
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e856286b6048e320481b5983685fbfcd4e838c1d
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -60,7 +61,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，開啟 [物件總管]，然後遞迴地向下展開 **[管理]** 節點至 **[資源管理員]**。  
   
-2.  以滑鼠右鍵按一下 [Resource Governor]****，然後按一下 [屬性]****，這會開啟 [Resource Governor 屬性]**** 頁面。  
+2.  以滑鼠右鍵按一下 [Resource Governor]，然後按一下 [屬性]，這會開啟 [Resource Governor 屬性] 頁面。  
   
 3.  如需有關該頁中之欄位的說明，請參閱＜ [資源管理員屬性](#RGProp)＞。  
   

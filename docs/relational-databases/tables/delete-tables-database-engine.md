@@ -19,9 +19,10 @@ caps.latest.revision: 19
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ff85fc5a39fbb4c64bd934c98c235c69a2eff514
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -72,7 +73,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 [物件總管] 中選取要刪除的資料表。  
   
-2.  在資料表上按一下滑鼠右鍵，再從快速鍵功能表中選擇 [刪除]****。  
+2.  在資料表上按一下滑鼠右鍵，再從快速鍵功能表中選擇 [刪除]。  
   
 3.  訊息方塊會提示您確認是否刪除。 按一下 **[是]**。  
   

@@ -19,9 +19,10 @@ caps.latest.revision: 6
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c1d76a7087ce1225c2ae3f4f685cb234b53dbf0b
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -63,7 +64,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  按一下加號展開 **[計畫指南]** 資料夾。  
   
-3.  以滑鼠右鍵按一下您想要停用或啟用的計畫指南，然後選取 [停用]**** 或 [啟用]****。  
+3.  以滑鼠右鍵按一下您想要停用或啟用的計畫指南，然後選取 [停用] 或 [啟用]。  
   
 4.  在 **[停用計畫指南]** 或 **[啟用計畫指南]** 對話方塊中，確認選擇的動作已成功，然後按一下 **[關閉]**。  
   
@@ -71,7 +72,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  按一下加號，展開您要在其中停用或啟用計畫指南的資料庫，然後按一下加號展開 **[可程式性]** 資料夾。  
   
-2.  以滑鼠右鍵按一下 [計畫指南]**** 資料夾，然後選取 [全部啟用]**** 或 [全部停用]****。  
+2.  以滑鼠右鍵按一下 [計畫指南] 資料夾，然後選取 [全部啟用] 或 [全部停用]。  
   
 3.  在 **[停用所有計畫指南]** 或 **[啟用所有計畫指南]** 對話方塊中，確認選擇的動作已成功，然後按一下 **[關閉]**。  
   

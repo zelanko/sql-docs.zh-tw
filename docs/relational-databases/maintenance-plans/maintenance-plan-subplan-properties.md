@@ -17,14 +17,15 @@ caps.latest.revision: 7
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b8adb2a4c6f1ddbf04d11413284b500629b911d4
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="maintenance-plan-subplan-properties"></a>維護計畫 (子計畫屬性)
-  使用 [維護計畫 (子計畫屬性)]**** 對話方塊可指定維護計畫子計畫的名稱、描述和排程。 按一下維護計畫 [設計]**** 索引標籤上的 [子計畫屬性]****，或按兩下設計工具方格中的子計畫，來顯示這個對話方塊。  
+  使用 [維護計畫 (子計畫屬性)] 對話方塊可指定維護計畫子計畫的名稱、描述和排程。 按一下維護計畫 [設計] 索引標籤上的 [子計畫屬性]，或按兩下設計工具方格中的子計畫，來顯示這個對話方塊。  
   
 ## <a name="options"></a>選項。  
  **名稱**  

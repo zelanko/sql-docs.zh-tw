@@ -20,9 +20,10 @@ caps.latest.revision: 16
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 7dbc7ae9097c4bd8e6083a9d392b6ae8fc562f4b
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -42,7 +43,7 @@ ms.lasthandoff: 04/11/2017
   
      ![在工具列上的 [即時查詢統計資料] 按鈕](../../relational-databases/performance/media/livequerystatstoolbar.png "在工具列上的 [即時查詢統計資料] 按鈕")  
   
-     您也可以用滑鼠右鍵按一下 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中選取的查詢，檢視存取即時查詢執行計畫，然後按一下 [包含即時查詢統計資料] ****。  
+     您也可以用滑鼠右鍵按一下 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中選取的查詢，檢視存取即時查詢執行計畫，然後按一下 [包含即時查詢統計資料] 。  
   
      ![在快顯功能表上的 [即時查詢統計資料] 按鈕](../../relational-databases/performance/media/livequerystatsmenu.png "在快顯功能表上的 [即時查詢統計資料] 按鈕")  
   
@@ -50,7 +51,7 @@ ms.lasthandoff: 04/11/2017
   
      ![執行程序表中的 [即時查詢統計資料] 按鈕](../../relational-databases/performance/media/livequerystatsplan.png "執行程序表中的 [即時查詢統計資料] 按鈕")  
   
- 以滑鼠右鍵按一下 [使用中的高成本查詢] **** 資料表中的查詢，也可以從 [活動監視器] **** 存取即時執行計畫。  
+ 以滑鼠右鍵按一下 [使用中的高成本查詢]  資料表中的查詢，也可以從 [活動監視器]  存取即時執行計畫。  
   
  ![在 [活動監視器] 的 [即時查詢統計資料] 按鈕](../../relational-databases/performance/media/livequerystatsactmon.png "在 [活動監視器] 的 [即時查詢統計資料] 按鈕")  
   
@@ -77,7 +78,7 @@ ms.lasthandoff: 04/11/2017
  > 不支援原生編譯的預存程序。  
   
 ## <a name="permissions"></a>Permissions  
- 填入 [即時查詢統計資料] **** 結果頁面需要資料庫層級的 **SHOWPLAN** 權限，查看即時統計資料需要伺服器層級的 **VIEW SERVER STATE** 權限，而執行查詢則需要任何必要權限。  
+ 填入 [即時查詢統計資料]  結果頁面需要資料庫層級的 **SHOWPLAN** 權限，查看即時統計資料需要伺服器層級的 **VIEW SERVER STATE** 權限，而執行查詢則需要任何必要權限。  
   
 ## <a name="see-also"></a>另請參閱  
  [效能的監視與微調](../../relational-databases/performance/monitor-and-tune-for-performance.md)   

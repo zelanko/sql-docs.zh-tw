@@ -25,9 +25,10 @@ caps.latest.revision: 24
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e62b052b5d17b5cefb7a2e081cb3b3e5503e9b9f
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -40,7 +41,7 @@ ms.lasthandoff: 04/11/2017
   
 -   滑鼠和導覽鍵。  
   
--   [移至]**** 命令。  
+-   [移至] 命令。  
   
 > [!NOTE]  
 >  如需完整的鍵盤快速鍵清單，請參閱 [SQL Server Management Studio 鍵盤快速鍵](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)。  
@@ -67,11 +68,11 @@ ms.lasthandoff: 04/11/2017
 -   利用 CTRL+向上鍵和 CTRL+向下鍵，在不移動插入點的情況下，捲動檢視。  
   
 ## <a name="go-to-command"></a>[移至] 命令  
- 請使用 [移至]**** 命令移至特定行號。 若要顯示行號，請在 選項**** 對話方塊中，依序按一下 文字編輯器****所有語言****一般****，然後選取 行號****。  
+ 請使用 [移至] 命令移至特定行號。 若要顯示行號，請在 選項 對話方塊中，依序按一下 文字編輯器所有語言一般，然後選取 行號。  
   
  **移至特定行號**  
   
-1.  在 [編輯]**** 功能表上，按一下 [移至]****  
+1.  在 [編輯] 功能表上，按一下 [移至]****  
   
 2.  輸入您想檢視的行號  
   

@@ -31,9 +31,10 @@ caps.latest.revision: 62
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e452cc778a0a677b9cb71e5e60605af436a31d18
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -151,15 +152,15 @@ ms.lasthandoff: 04/11/2017
   
 2.  在 **[SQL Server 服務]** 節點中，以滑鼠右鍵按一下 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體 (例如 **[SQL Server (MSSQLSERVER)]**)，然後選擇 **[屬性]**。  
   
-3.  在 [SQL Server (******) 屬性]**** 對話方塊中，按一下 [啟動參數]**** 索引標籤。  
+3.  在 [SQL Server () 屬性] 對話方塊中，按一下 [啟動參數] 索引標籤。  
   
-4.  在 [現有參數]**** 方塊中，選取 –d 參數來移動 master 資料檔案。 按一下 **[更新]** 來儲存變更。  
+4.  在 [現有參數] 方塊中，選取 –d 參數來移動 master 資料檔案。 按一下 **[更新]** 來儲存變更。  
   
-     在 [指定啟動參數]**** 方塊中，將參數變更為 master 資料庫的新路徑。  
+     在 [指定啟動參數] 方塊中，將參數變更為 master 資料庫的新路徑。  
   
-5.  在 [現有參數]**** 方塊中，選取 –l 參數來移動 master 記錄檔。 按一下 **[更新]** 來儲存變更。  
+5.  在 [現有參數] 方塊中，選取 –l 參數來移動 master 記錄檔。 按一下 **[更新]** 來儲存變更。  
   
-     在 [指定啟動參數]**** 方塊中，將參數變更為 master 資料庫的新路徑。  
+     在 [指定啟動參數] 方塊中，將參數變更為 master 資料庫的新路徑。  
   
      資料檔案的參數值必須遵照 `-d` 參數，而記錄檔的值則必須遵照 `-l` 參數。 下列範例顯示 master 資料檔案的預設位置參數值。  
   
@@ -173,7 +174,7 @@ ms.lasthandoff: 04/11/2017
   
      `-lE:\SQLData\mastlog.ldf`  
   
-6.  以滑鼠右鍵按一下執行個體名稱並選擇 [停止]****，即可停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。  
+6.  以滑鼠右鍵按一下執行個體名稱並選擇 [停止]，即可停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。  
   
 7.  將 master.mdf 和 mastlog.ldf 檔移至新位置。  
   

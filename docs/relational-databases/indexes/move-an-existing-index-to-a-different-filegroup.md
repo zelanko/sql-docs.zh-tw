@@ -20,9 +20,10 @@ caps.latest.revision: 45
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: cfc19f15cee7ca1185a2a9177474510c368b56bf
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -66,9 +67,9 @@ ms.lasthandoff: 04/11/2017
   
 2.  按一下加號展開 **[資料表]** 資料夾。  
   
-3.  以滑鼠右鍵按一下包含您要移動之索引的資料表，然後選取 [設計]****。  
+3.  以滑鼠右鍵按一下包含您要移動之索引的資料表，然後選取 [設計]。  
   
-4.  在 [資料表設計工具]**** 功能表中，按一下 [索引/索引鍵]****。  
+4.  在 [資料表設計工具] 功能表中，按一下 [索引/索引鍵]。  
   
 5.  選取您要移動的索引。  
   
@@ -78,7 +79,7 @@ ms.lasthandoff: 04/11/2017
   
 8.  按一下 [ **關閉**]。  
   
-9. 在 [檔案]**** 功能表上，選取 [儲存 *table_name*]****。  
+9. 在 [檔案] 功能表上，選取 [儲存 *table_name*]。  
   
 #### <a name="to-move-an-existing-index-to-a-different-filegroup-in-object-explorer"></a>若要在物件總管中將現有的索引移到不同的檔案群組  
   
@@ -90,7 +91,7 @@ ms.lasthandoff: 04/11/2017
   
 4.  按一下加號展開 **[索引]** 資料夾。  
   
-5.  以滑鼠右鍵按一下您要移動的索引，然後選取 [屬性]****。  
+5.  以滑鼠右鍵按一下您要移動的索引，然後選取 [屬性]。  
   
 6.  在 **[選取頁面]**底下，選取 **[儲存體]**。  
   
@@ -104,7 +105,7 @@ ms.lasthandoff: 04/11/2017
   
 8.  按一下 **[確定]**。  
   
- 下列資訊可從 [索引屬性 - *index_name*]**** 對話方塊的 [儲存體]**** 頁面取得：  
+ 下列資訊可從 [索引屬性 - *index_name*] 對話方塊的 [儲存體] 頁面取得：  
   
  **檔案群組**  
  在指定的檔案群組中儲存索引。 清單僅顯示標準 (資料列) 檔案群組。 預設清單選取項目為資料庫的 PRIMARY 檔案群組。  

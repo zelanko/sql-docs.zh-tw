@@ -17,9 +17,10 @@ caps.latest.revision: 9
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 857ce687209066520bb2ec552b93fd46d547b38e
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -46,7 +47,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，開啟 [物件總管]，然後遞迴地向下展開 **[管理]** 節點至 **[資源管理員]**。  
   
-2.  以滑鼠右鍵按一下要刪除的資源集區，然後按一下 [刪除]****。  
+2.  以滑鼠右鍵按一下要刪除的資源集區，然後按一下 [刪除]。  
   
 3.  在 **[刪除物件]** 視窗中，資源集區列於 **[要刪除的物件]** 清單內。 若要刪除資源集區，請按一下 **[確定]**。  
   

@@ -19,16 +19,17 @@ caps.latest.revision: 17
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 6d5beb8f3b18bd4dd99039b0f2b38ce731140726
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="create-a-server-audit-and-database-audit-specification"></a>建立伺服器稽核和資料庫稽核規格
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中建立伺服器稽核和資料庫稽核規格。  
   
- *「稽核」* (Audit) [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫的執行個體牽涉到追蹤和記錄系統上所發生的事件。 *SQL Server Audit* 物件會收集要監視之動作和動作群組 (伺服器層級或資料庫層級) 的單一執行個體。 此稽核位於 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體層級。 您可以針對每個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體設有多個稽核。 「資料庫層級稽核規格」**物件屬於稽核。 您可以針對每個稽核的每個 SQL Server 資料庫建立一個資料庫稽核規格。 如需詳細資訊，請參閱 [SQL Server Audit &#40;Database Engine&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。  
+ *「稽核」* (Audit) [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫的執行個體牽涉到追蹤和記錄系統上所發生的事件。 *SQL Server Audit* 物件會收集要監視之動作和動作群組 (伺服器層級或資料庫層級) 的單一執行個體。 此稽核位於 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體層級。 您可以針對每個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體設有多個稽核。 「資料庫層級稽核規格」物件屬於稽核。 您可以針對每個稽核的每個 SQL Server 資料庫建立一個資料庫稽核規格。 如需詳細資訊，請參閱 [SQL Server Audit &#40;Database Engine&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。  
   
  **本主題內容**  
   
@@ -67,7 +68,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 [物件總管] 中，展開 **[安全性]** 資料夾。  
   
-2.  以滑鼠右鍵按一下 [稽核]**** 資料夾，然後選取 [新增稽核…]****。 如需詳細資訊，請參閱 [Create a Server Audit and Server Audit Specification](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)。  
+2.  以滑鼠右鍵按一下 [稽核] 資料夾，然後選取 [新增稽核…]。 如需詳細資訊，請參閱 [Create a Server Audit and Server Audit Specification](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)。  
   
 3.  當您完成選取選項之後，按一下 **[確定]**。  
   
@@ -77,7 +78,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  展開 **[安全性]** 資料夾。  
   
-3.  以滑鼠右鍵按一下 [資料庫稽核規格]**** 資料夾，然後選取 [新增資料庫稽核規格…]****。  
+3.  以滑鼠右鍵按一下 [資料庫稽核規格] 資料夾，然後選取 [新增資料庫稽核規格…]。  
   
      **[建立資料庫稽核規格]** 對話方塊有下列選項。  
   
@@ -91,7 +92,7 @@ ms.lasthandoff: 04/11/2017
      指定要擷取之資料庫層級的稽核動作群組和稽核動作。 如需資料庫層級稽核動作群組和稽核動作的清單以及其所包含的事件描述，請參閱 [SQL Server Audit 動作群組和動作](../../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md)。  
   
      **物件結構描述**  
-     顯示指定之 [物件名稱]**** 的結構描述。  
+     顯示指定之 [物件名稱] 的結構描述。  
   
      **Object Name**  
      要稽核的物件名稱。 這只適用於稽核動作，不適用於稽核群組。  

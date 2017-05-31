@@ -19,9 +19,10 @@ caps.latest.revision: 19
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a68f0e1e0c15000f40de408f41ce4c40f281900e
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -55,7 +56,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  按一下加號展開 **[計畫指南]** 資料夾。  
   
-3.  以滑鼠右鍵按一下要檢視其屬性的計劃指南，然後選取 [屬性]****。  
+3.  以滑鼠右鍵按一下要檢視其屬性的計劃指南，然後選取 [屬性]。  
   
      下列屬性會在 **[計畫指南屬性]** 對話方塊中顯示。  
   

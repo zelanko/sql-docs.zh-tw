@@ -16,9 +16,10 @@ caps.latest.revision: 34
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 4cca5d50abc9aad1babf20cdbb8566e437aa9236
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -36,7 +37,7 @@ ms.lasthandoff: 04/11/2017
  檢視現有邏輯備份裝置的名稱，或是指定新邏輯備份裝置的名稱。  
   
  **Tape**  
- 在 [磁帶]**** 清單中檢視或選取目的地磁帶裝置。 只有當磁帶機已連接到執行 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]之執行個體的電腦上時，此選項才可以使用。  
+ 在 [磁帶] 清單中檢視或選取目的地磁帶裝置。 只有當磁帶機已連接到執行 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]之執行個體的電腦上時，此選項才可以使用。  
   
 > [!NOTE]  
 >  遠端電腦上的磁帶備份裝置並不是有效的備份目的地。  

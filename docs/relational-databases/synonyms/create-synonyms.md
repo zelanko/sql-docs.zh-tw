@@ -19,9 +19,10 @@ caps.latest.revision: 7
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0a3180e86333a329e2f86a45f2728630ce6cf526
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -53,7 +54,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 **[物件總管]**中，展開您要建立新檢視表的資料庫。  
   
-2.  以滑鼠右鍵按一下 [同義字]**** 資料夾，然後按一下 [新增同義字]****。  
+2.  以滑鼠右鍵按一下 [同義字] 資料夾，然後按一下 [新增同義字]。  
   
 3.  在 **[加入新的同義字]** 對話方塊中，輸入下列資訊。  
   

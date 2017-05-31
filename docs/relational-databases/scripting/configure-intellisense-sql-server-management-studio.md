@@ -18,9 +18,10 @@ caps.latest.revision: 30
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 11849de0164d10de523450897b7a106078b8f2be
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -34,7 +35,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 **[工具]** 功能表上，按一下 **[選項]**。  
   
-2.  展開 [文字編輯器]****，展開 [所有語言]****、[Transact-SQL]**** 或 [XML]****，然後按一下 [一般]****。  
+2.  展開 [文字編輯器]，展開 [所有語言]、[Transact-SQL] 或 [XML]，然後按一下 [一般]。  
   
 3.  清除您不需要之 [陳述式完成] 選項的核取方塊，再按一下 **[確定]**。  
   
@@ -42,13 +43,13 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 **[工具]** 功能表上，按一下 **[選項]**。  
   
-2.  依序展開 [文字編輯器]**** 和 [Transact-SQL]****，然後按一下 [IntelliSense]****。  
+2.  依序展開 [文字編輯器] 和 [Transact-SQL]，然後按一下 [IntelliSense]。  
   
 3.  清除您不需要之 [IntelliSense] 選項的核取方塊。  
   
 4.  若要變更停用 IntelliSense 功能的指令碼大小，請從 **[最大指令碼大小]** 清單中選取大小。  
   
-5.  若要變更套用至完成清單之函數名稱的大小寫，請從 [內建函數名稱的大小寫]**** 清單中選取大小寫規格。  
+5.  若要變更套用至完成清單之函數名稱的大小寫，請從 [內建函數名稱的大小寫] 清單中選取大小寫規格。  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

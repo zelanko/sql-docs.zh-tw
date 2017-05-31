@@ -17,9 +17,10 @@ caps.latest.revision: 31
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 5a59c184fc5229797ad83d5334fbb03169b64374
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -39,7 +40,7 @@ GO
 ```  
   
 ###  <a name="BasicsSemanticSearch"></a> 安裝語意搜尋  
- 若要安裝語意搜尋，請在安裝 SQL Server 期間選取 [要安裝的功能]**** 頁面上的 [搜尋的全文檢索和語意擷取]****。  
+ 若要安裝語意搜尋，請在安裝 SQL Server 期間選取 [要安裝的功能] 頁面上的 [搜尋的全文檢索和語意擷取]。  
   
  統計語意搜尋相依於全文檢索搜尋。 這兩個選擇性功能會同時安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   

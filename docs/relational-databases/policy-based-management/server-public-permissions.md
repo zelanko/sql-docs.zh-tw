@@ -16,9 +16,10 @@ caps.latest.revision: 11
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 9ecb6741fae401bd5366e1bf5effdb5bbf0bd969
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -29,7 +30,7 @@ ms.lasthandoff: 04/11/2017
  請勿將伺服器權限授與給伺服器 public 角色。  
   
 > [!IMPORTANT]  
->  在安裝程式完成之後，**PUBLIC** 角色會擁有 [專用管理員連接]**** 以外之所有端點的 **CONNECT** 權限。 這是正常狀況，通常不應該變更  (存取權是使用建立新登入時自動授與的 **CONNECT SQL** 權限來控制)。  
+>  在安裝程式完成之後，**PUBLIC** 角色會擁有 [專用管理員連接] 以外之所有端點的 **CONNECT** 權限。 這是正常狀況，通常不應該變更  (存取權是使用建立新登入時自動授與的 **CONNECT SQL** 權限來控制)。  
   
 ### <a name="for-more-information"></a>如需詳細資訊  
  [保護 SQL Server 的安全](../../relational-databases/security/securing-sql-server.md)  

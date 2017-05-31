@@ -19,9 +19,10 @@ caps.latest.revision: 23
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0bb56046f675b73ee5c37803490b8f62355447b7
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -41,7 +42,7 @@ ms.lasthandoff: 04/11/2017
   
 -   PowerShell 指令碼檔案可以當做依排程間隔或為了回應系統事件而執行指令碼之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent PowerShell 作業步驟的輸入使用。  
   
--   啟動 PowerShell 並匯入 **模組的** sqlps [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式。 然後您可以執行此模組支援的所有動作。 您可以透過命令提示字元，或在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Studio 的物件總管樹狀目錄中以滑鼠右鍵按一下節點並選取 [啟動 PowerShell]****，啟動 **sqlps** 公用程式。  
+-   啟動 PowerShell 並匯入 **模組的** sqlps [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式。 然後您可以執行此模組支援的所有動作。 您可以透過命令提示字元，或在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Studio 的物件總管樹狀目錄中以滑鼠右鍵按一下節點並選取 [啟動 PowerShell]，啟動 **sqlps** 公用程式。  
   
 ## <a name="database-engine-queries"></a>Database Engine 查詢  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢指令碼包含三種元素：  
@@ -60,7 +61,7 @@ ms.lasthandoff: 04/11/2017
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 您通常會使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 查詢編輯器，以互動方式在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中編寫查詢指令碼檔案的程式碼。 然後，您就可以在下列其中一個環境內開啟此檔案：  
   
--   使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的 [檔案]****/[開啟]**** 功能表，在新的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器視窗中開啟此檔案。  
+-   使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的 [檔案]/[開啟] 功能表，在新的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器視窗中開啟此檔案。  
   
 -   使用 **-i***input_file* 參數搭配 **sqlcmd** 公用程式來執行此檔案。  
   
@@ -68,7 +69,7 @@ ms.lasthandoff: 04/11/2017
   
 -   使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent [!INCLUDE[tsql](../../includes/tsql-md.md)] 作業步驟，依排程間隔或為了回應系統事件而執行指令碼。  
   
- 此外，您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [產生指令碼精靈] 來產生 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼。 您可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的物件總管中，以滑鼠右鍵按一下物件，然後選取 [產生指令碼]**** 功能表項目。 [產生指令碼]**** 就會啟動此精靈，並逐步引導您完成建立指令碼的程序。  
+ 此外，您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [產生指令碼精靈] 來產生 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼。 您可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的物件總管中，以滑鼠右鍵按一下物件，然後選取 [產生指令碼] 功能表項目。 [產生指令碼] 就會啟動此精靈，並逐步引導您完成建立指令碼的程序。  
   
 ## <a name="database-engine-scripting-tasks"></a>Database Engine 指令碼工作  
   
@@ -77,7 +78,7 @@ ms.lasthandoff: 04/11/2017
 |描述如何使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中的程式碼和文字編輯器，以互動方式開發、偵錯和執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼。|[查詢與文字編輯器 &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)|  
 |描述如何使用 **sqlcmd** 公用程式，從命令提示字元執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼，包含以互動方式開發指令碼的能力。|[sqlcmd 使用說明主題](http://msdn.microsoft.com/library/dd7a2d2b-6327-4d77-ac5a-580d36073ad4)|  
 |描述如何將 SQL Server 元件整合至 Windows PowerShell 環境，然後建立 PowerShell 指令碼以管理 SQL Server 執行個體和物件。|[SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)|  
-|描述如何使用 [產生和發佈指令碼精靈]****，建立 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼以重新建立資料庫中的一個或多個物件。|[產生指令碼 &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/generate-scripts-sql-server-management-studio.md)|  
+|描述如何使用 [產生和發佈指令碼精靈]，建立 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼以重新建立資料庫中的一個或多個物件。|[產生指令碼 &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/generate-scripts-sql-server-management-studio.md)|  
   
 ## <a name="see-also"></a>另請參閱  
  [sqlcmd 公用程式](../../tools/sqlcmd-utility.md)   

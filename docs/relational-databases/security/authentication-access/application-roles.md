@@ -24,9 +24,10 @@ caps.latest.revision: 31
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a24b143d85660d979e61a103a077bddaef28029b
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -53,7 +54,7 @@ ms.lasthandoff: 04/11/2017
  在舊版 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中，使用者在啟動應用程式角色後要重新取得其原始安全性內容的唯一方式，就是中斷連接並重新連接 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 從 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]開始， **sp_setapprole** 就有一個選項可建立 Cookie。 此 Cookie 包含在啟用應用程式角色之前的內容資訊。 **sp_unsetapprole** 可使用此 Cookie 將工作階段還原為其原始內容。 如需有關這個新選項與範例的詳細資訊，請參閱 [sp_setapprole &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)的權限來存取其他資料庫。  
   
 > [!IMPORTANT]  
->  **SqlClient** 不支援 ODBC [加密]**** 選項。 當您透過網路傳輸機密資訊時，請使用安全通訊端層 (SSL) 或 IPsec 來加密該通道。 如果您必須將認證保存在用戶端應用程式中，請使用 Cypto API 函數來加密認證。 在 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 及更新的版本中， *password* 參數儲存為單向雜湊。  
+>  **SqlClient** 不支援 ODBC [加密] 選項。 當您透過網路傳輸機密資訊時，請使用安全通訊端層 (SSL) 或 IPsec 來加密該通道。 如果您必須將認證保存在用戶端應用程式中，請使用 Cypto API 函數來加密認證。 在 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 及更新的版本中， *password* 參數儲存為單向雜湊。  
   
 ## <a name="related-tasks"></a>相關工作  
   

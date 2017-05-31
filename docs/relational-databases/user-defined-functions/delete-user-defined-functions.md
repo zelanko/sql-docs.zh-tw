@@ -14,9 +14,10 @@ caps.latest.revision: 7
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7731c5fd8d7bc5c62cd7ced03f3ebd638e68e58e
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -66,12 +67,12 @@ ms.lasthandoff: 04/11/2017
   
     -   彙總函式  
   
-4.  以滑鼠右鍵按一下您想刪除的函數，然後選取 [刪除]****。  
+4.  以滑鼠右鍵按一下您想刪除的函數，然後選取 [刪除]。  
   
 5.  在 **[刪除物件]** 對話方塊中，按一下 **[確定]**。  
   
     > [!IMPORTANT]  
-    >  在 [刪除物件]**** 對話方塊中按一下 [顯示相依性]****，開啟 *function_name*[相依性]**** 對話方塊。 這就會顯示相依於函數的所有物件以及函數所相依的所有物件。  
+    >  在 [刪除物件] 對話方塊中按一下 [顯示相依性]，開啟 *function_name*[相依性] 對話方塊。 這就會顯示相依於函數的所有物件以及函數所相依的所有物件。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

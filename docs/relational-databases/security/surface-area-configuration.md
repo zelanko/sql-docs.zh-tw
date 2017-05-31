@@ -21,9 +21,10 @@ caps.latest.revision: 79
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 6ee5522ce1d173dfd979b64d428be2e6e05ded00
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -53,9 +54,9 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，連接至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的元件。  
   
-2.  在 [物件總管] 中，以滑鼠右鍵按一下伺服器，然後按一下 [Facets]****。  
+2.  在 [物件總管] 中，以滑鼠右鍵按一下伺服器，然後按一下 [Facets]。  
   
-3.  在 [檢視 Facets]**** 對話方塊中，展開 [Facet]**** 清單，並選取適當的 [介面區組態]**** Facet ([介面區組態]****、[Analysis Services 的介面區組態]****，或 [Reporting Services 介面區組態]****)。  
+3.  在 [檢視 Facets] 對話方塊中，展開 [Facet] 清單，並選取適當的 [介面區組態] Facet ([介面區組態]、[Analysis Services 的介面區組態]，或 [Reporting Services 介面區組態])。  
   
 4.  在 **Facet 屬性**區域中，選取您想要用於每個屬性的值。  
   
@@ -65,7 +66,7 @@ ms.lasthandoff: 04/11/2017
   
  您也可以使用 **sp_configure** 預存程序來設定 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 選項。 如需詳細資訊，請參閱[伺服器組態選項 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)。  
   
- 變更 [!INCLUDE[ssRS](../../includes/ssrs-md.md)] 的 **EnableIntegrated Security** 屬性時，請使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的屬性設定。 若要變更 [排程事件和報表傳遞]**** 屬性以及 [Web 服務和 HTTP 存取]**** 屬性時，請編輯 **RSReportServer.config** 組態檔。  
+ 變更 [!INCLUDE[ssRS](../../includes/ssrs-md.md)] 的 **EnableIntegrated Security** 屬性時，請使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的屬性設定。 若要變更 [排程事件和報表傳遞] 屬性以及 [Web 服務和 HTTP 存取] 屬性時，請編輯 **RSReportServer.config** 組態檔。  
   
 ## <a name="command-prompt-options"></a>命令提示字元選項  
  您可以使用 **Invoke-PolicyEvaluation**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell Cmdlet 以叫用介面區組態原則。 如需詳細資訊，請參閱 [使用 Database Engine Cmdlet](../../relational-databases/scripting/use-the-database-engine-cmdlets.md)。  

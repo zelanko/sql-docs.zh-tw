@@ -16,9 +16,10 @@ caps.latest.revision: 18
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 952740a7191b43f61f9cff035b0ad944fe802084
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -60,7 +61,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  按一下加號展開 **[管理]** 資料夾。  
   
-3.  以滑鼠右鍵按一下 [原則管理]**** 並選取 [管理類別目錄]****。  
+3.  以滑鼠右鍵按一下 [原則管理] 並選取 [管理類別目錄]。  
   
      **[管理原則類別目錄]** 對話方塊中提供下列資訊：  
   

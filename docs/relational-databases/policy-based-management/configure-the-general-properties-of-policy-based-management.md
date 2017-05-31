@@ -18,9 +18,10 @@ caps.latest.revision: 8
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7f7103ab22a01f6dcb60c31d7ad7fdcc503746db
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -50,11 +51,11 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="to-configure-policy-based-management"></a>設定以原則為基礎的管理  
   
-1.  在物件總管****中，按一下加號，展開您想要設定原則式管理屬性的伺服器。  
+1.  在物件總管中，按一下加號，展開您想要設定原則式管理屬性的伺服器。  
   
 2.  按一下加號展開 **[管理]** 資料夾。  
   
-3.  以滑鼠右鍵按一下 [原則管理]****，然後選取 [屬性]****。  
+3.  以滑鼠右鍵按一下 [原則管理]，然後選取 [屬性]。  
   
      **[原則管理屬性]** 對話方塊有下列選項。  
   

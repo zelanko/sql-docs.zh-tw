@@ -18,9 +18,10 @@ caps.latest.revision: 33
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 5d927fde6997929f3f92870ea55100f64d4b7395
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -57,7 +58,7 @@ ms.lasthandoff: 04/11/2017
 |sp_detach_db 選項：<br /><br /> [ @keepfulltextindexfile = ] '*KeepFulltextIndexFile*'|無。|sp_detach_db @keepfulltextindexfile|226|  
 |sp_fulltext_service 動作值：resource_usage 沒有函數。|無|sp_fulltext_service @action=resource_usage|200|  
   
- ***SQL Server:Deprecated Features** 物件不會監視 CREATE FULLTEXT CATLOG ON FILEGROUP <檔案群組>** 的出現次數。  
+ ***SQL Server:Deprecated Features** 物件不會監視 CREATE FULLTEXT CATLOG ON FILEGROUP <檔案群組> 的出現次數。  
   
   
 

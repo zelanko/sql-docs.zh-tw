@@ -16,9 +16,10 @@ caps.latest.revision: 15
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 8985dc2e2715758797eb253aee8382d68f0f2dd6
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -72,7 +73,7 @@ ms.lasthandoff: 04/11/2017
 |7|已停用登入且密碼不正確。|  
 |8|密碼不正確。|  
 |9|密碼無效。|  
-|11|登入有效，但伺服器存取失敗。 導致此錯誤的一個可能原因是：Windows 使用者可以使用本機 Administrators 群組成員的身分存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，但 Windows 不會提供系統管理員認證。 若要連接，請使用 [以系統管理員身分執行]**** 選項開始連接程式，然後以特定登入，將 Windows 使用者新增至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
+|11|登入有效，但伺服器存取失敗。 導致此錯誤的一個可能原因是：Windows 使用者可以使用本機 Administrators 群組成員的身分存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，但 Windows 不會提供系統管理員認證。 若要連接，請使用 [以系統管理員身分執行] 選項開始連接程式，然後以特定登入，將 Windows 使用者新增至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
 |12|登入是有效的登入，但伺服器存取失敗。|  
 |18|密碼必須變更。|  
   
@@ -108,7 +109,7 @@ ms.lasthandoff: 04/11/2017
   
 如果您的錯誤表示狀態 1，請連絡 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理員。  
   
-如果您正嘗試使用系統管理員認證進行連接，請使用 [以系統管理員身分執行]**** 選項啟動應用程式。 連接之後，請將您的 Windows 使用者當做個別登入加入。  
+如果您正嘗試使用系統管理員認證進行連接，請使用 [以系統管理員身分執行] 選項啟動應用程式。 連接之後，請將您的 Windows 使用者當做個別登入加入。  
   
 如果 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 支援自主資料庫，請確認在移轉至自主資料庫使用者之後，登入不會遭到刪除。  
   

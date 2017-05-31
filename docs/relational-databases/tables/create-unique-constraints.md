@@ -20,9 +20,10 @@ caps.latest.revision: 18
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8721056ce88631e4f86c71d8e557e0badcf13c48
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -54,15 +55,15 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="to-create-a-unique-constraint"></a>若要建立唯一條件約束  
   
-1.  在**物件總管**中，以滑鼠右鍵按一下要加入唯一條件約束的資料表，然後按一下 [設計]****。  
+1.  在**物件總管**中，以滑鼠右鍵按一下要加入唯一條件約束的資料表，然後按一下 [設計]。  
   
-2.  在 [資料表設計工具]**** 功能表上，按一下 [索引/索引鍵]****。  
+2.  在 [資料表設計工具] 功能表上，按一下 [索引/索引鍵]。  
   
-3.  在 [索引/索引鍵]**** 對話方塊中，按一下 [加入]****。  
+3.  在 [索引/索引鍵] 對話方塊中，按一下 [加入]。  
   
-4.  在 [一般]**** 底下的方格中，按一下 [類型]****，然後從屬性右邊的下拉式清單方塊中選擇 [唯一索引鍵]****。  
+4.  在 [一般] 底下的方格中，按一下 [類型]，然後從屬性右邊的下拉式清單方塊中選擇 [唯一索引鍵]。  
   
-5.  在 [檔案] **** 功能表上，按一下 [儲存] *****table name*。  
+5.  在 [檔案]  功能表上，按一下 [儲存] *table name*。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

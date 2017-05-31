@@ -19,9 +19,10 @@ caps.latest.revision: 16
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d65c475509d57577f691e656157c7754c7d8549f
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -61,7 +62,7 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="to-rename-a-table"></a>重新命名資料表  
   
-1.  在物件總管中，以滑鼠右鍵按一下想要重新命名的資料表，然後從快速鍵功能表選擇 [設計]****。  
+1.  在物件總管中，以滑鼠右鍵按一下想要重新命名的資料表，然後從快速鍵功能表選擇 [設計]。  
   
 2.  從 **[檢視]** 功能表中選擇 **[屬性]**。  
   
@@ -69,7 +70,7 @@ ms.lasthandoff: 04/11/2017
   
 4.  若要取消這個動作，請在離開這個欄位之前按 ESC 鍵。  
   
-5.  從 [檔案]**** 功能表中，選擇 [儲存 *table name*]****。  
+5.  從 [檔案] 功能表中，選擇 [儲存 *table name*]。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

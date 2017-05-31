@@ -42,9 +42,10 @@ caps.latest.revision: 49
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 1ccfe7ee55e50f0530b33855f4ad57549a1da712
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -55,7 +56,7 @@ ms.lasthandoff: 04/11/2017
 
 若要新增和移除資料庫角色的使用者，請使用 `ADD MEMBER` ALTER ROLE `DROP MEMBER` 陳述式的 [和](../../../t-sql/statements/alter-role-transact-sql.md) 選項。 [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] 不支援使用 `ALTER ROLE`。 請改用舊版的 [sp_addrolemember](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) 和 [sp_droprolemember](../../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md) 程序。
   
- 資料庫層級角色類型有兩種：在資料庫中預先定義的「固定資料庫角色」 ** 以及您可以建立的「使用者定義資料庫角色」 ** 。  
+ 資料庫層級角色類型有兩種：在資料庫中預先定義的「固定資料庫角色」  以及您可以建立的「使用者定義資料庫角色」  。  
   
  固定資料庫角色義於資料庫層級，並存在每個資料庫中。 **db_owner** 資料庫角色的成員可以管理固定的資料庫角色成員資格。 在 msdb 資料庫中，也有一些特殊用途的資料庫角色。  
   

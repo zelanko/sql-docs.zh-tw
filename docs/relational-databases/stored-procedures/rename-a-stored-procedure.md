@@ -17,9 +17,10 @@ caps.latest.revision: 23
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8082b0cdf5788bd4b96c14ff60dbd9103c27bd74
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -69,7 +70,7 @@ ms.lasthandoff: 04/11/2017
   
 3.  [判斷預存程序的相依性](../../relational-databases/stored-procedures/view-the-dependencies-of-a-stored-procedure.md)。  
   
-4.  展開 [預存程序]****，以滑鼠右鍵按一下要重新命名的程序，然後按一下 [重新命名]****。  
+4.  展開 [預存程序]，以滑鼠右鍵按一下要重新命名的程序，然後按一下 [重新命名]。  
   
 5.  修改程序名稱。  
   

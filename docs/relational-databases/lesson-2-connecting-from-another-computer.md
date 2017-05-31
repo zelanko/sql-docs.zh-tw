@@ -16,9 +16,10 @@ caps.latest.revision: 22
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 1e72554b59c7ecf738235d4c5d74f35915116b4b
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -59,11 +60,11 @@ ms.lasthandoff: 04/11/2017
     |[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|C:\Windows\SysWOW64\SQLServerManager11.msc|  
     |[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]|C:\Windows\SysWOW64\SQLServerManager10.msc|  
   
-2.  在 [SQL Server 組態管理員]**** 中，展開 [SQL Server 網路組態]****，然後按一下 [*<InstanceName>* 的通訊協定]****。  
+2.  在 [SQL Server 組態管理員] 中，展開 [SQL Server 網路組態]，然後按一下 [*<InstanceName>* 的通訊協定]。  
   
     預設執行個體 (未命名的執行個體) 是以 **MSSQLSERVER** 列出。 如果您安裝了具名執行個體，則會列出您所提供的名稱。 [!INCLUDE[ssExpressEd11](../includes/ssexpressed11-md.md)] 會安裝成 **SQLEXPRESS**，除非您在安裝期間變更其名稱。  
   
-3.  在通訊協定清單中，以滑鼠右鍵按一下要啟用的通訊協定 ([TCP/IP]****)，然後按一下 [啟用]****。  
+3.  在通訊協定清單中，以滑鼠右鍵按一下要啟用的通訊協定 ([TCP/IP])，然後按一下 [啟用]。  
   
     > [!NOTE]  
     > 變更網路通訊協定之後，您必須重新啟動 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 服務。不過，此步驟會在下一項工作中完成。  
@@ -76,19 +77,19 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="configure-sql-server-to-listen-on-a-specific-port"></a>設定 SQL Server 在特定通訊埠接聽  
   
-1.  在 [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員] 中，展開 [SQL Server 網路組態]****，然後按一下您要設定的伺服器執行個體。  
+1.  在 [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員] 中，展開 [SQL Server 網路組態]，然後按一下您要設定的伺服器執行個體。  
   
-2.  在右窗格中，按兩下 [TCP/IP]****。  
+2.  在右窗格中，按兩下 [TCP/IP]。  
   
-3.  在 [TCP/IP 屬性]**** 對話方塊中，按一下 [IP 位址]**** 索引標籤。  
+3.  在 [TCP/IP 屬性] 對話方塊中，按一下 [IP 位址] 索引標籤。  
   
-4.  在 [IPAll]**** 區段的 [TCP 通訊埠]**** 方塊中，輸入可用的通訊埠號碼。 在此教學課程中，我們將使用 **49172**。  
+4.  在 [IPAll] 區段的 [TCP 通訊埠] 方塊中，輸入可用的通訊埠號碼。 在此教學課程中，我們將使用 **49172**。  
   
-5.  按一下 [確定]**** 關閉對話方塊，再於提示您必須重新啟動服務的警告中按一下 [確定]****。  
+5.  按一下 [確定] 關閉對話方塊，再於提示您必須重新啟動服務的警告中按一下 [確定]。  
   
 6.  在左窗格中，按一下 **[SQL Server 服務]**。  
   
-7.  在右窗格中，以滑鼠右鍵按一下 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的執行個體，然後按一下 [重新啟動]****。 當 [!INCLUDE[ssDE](../includes/ssde-md.md)] 重新啟動時，它將在通訊埠 **49172**上接聽。  
+7.  在右窗格中，以滑鼠右鍵按一下 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的執行個體，然後按一下 [重新啟動]。 當 [!INCLUDE[ssDE](../includes/ssde-md.md)] 重新啟動時，它將在通訊埠 **49172**上接聽。  
   
 ## <a name="firewall"></a>在防火牆中開啟通訊埠  
 防火牆系統有助於預防未經授權存取電腦資源。 若要在防火牆開啟時從另一部電腦連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ，您必須在防火牆中開啟通訊埠。  
@@ -102,11 +103,11 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 **[開始]** 功能表上、按一下 **[執行]**，輸入 **WF.msc**，然後按一下 **[確定]**。  
   
-2.  在 [具有進階安全性的 Windows 防火牆]**** 的左窗格中，以滑鼠右鍵按一下 [輸入規則]****，再從動作窗格按一下 [新增規則]****。  
+2.  在 [具有進階安全性的 Windows 防火牆] 的左窗格中，以滑鼠右鍵按一下 [輸入規則]，再從動作窗格按一下 [新增規則]。  
   
 3.  在 **[規則類型]** 對話方塊中，選取 **[通訊埠]**，然後按 **[下一步]**。  
   
-4.  在 **[通訊協定及連接埠]** 對話方塊中，選取 **[TCP]**。 選取 [特定本機連接埠]****，然後輸入 [!INCLUDE[ssDE](../includes/ssde-md.md)] 執行個體的通訊埠編號。 輸入 1433 表示預設執行個體。 如果您要設定具名執行個體，而且在上一項工作中已設定固定通訊埠，請輸入 **49172** 。 按一下 **[下一步]**。  
+4.  在 **[通訊協定及連接埠]** 對話方塊中，選取 **[TCP]**。 選取 [特定本機連接埠]，然後輸入 [!INCLUDE[ssDE](../includes/ssde-md.md)] 執行個體的通訊埠編號。 輸入 1433 表示預設執行個體。 如果您要設定具名執行個體，而且在上一項工作中已設定固定通訊埠，請輸入 **49172** 。 按一下 **[下一步]**。  
   
 5.  在 **[執行動作]** 對話方塊中，選取 **[允許連線]**，然後按 **[下一步]**。  
   
@@ -125,14 +126,14 @@ ms.lasthandoff: 04/11/2017
   
 1.  在包含 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 用戶端工具的第二部電腦上，使用經授權連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的帳戶登入，並開啟 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]。  
   
-2.  在 [連接到伺服器]**** 對話方塊中，確認 [伺服器類型]**** 方塊中的 [Database Engine]****。  
+2.  在 [連接到伺服器] 對話方塊中，確認 [伺服器類型] 方塊中的 [Database Engine]。  
   
-3.  在 [伺服器名稱]**** 方塊中，輸入 **tcp:** 以指定通訊協定，後面接著電腦名稱、逗號和通訊埠編號。 若要連接到預設執行個體，通訊埠 1433 是內定通訊埠而且可省略，因此只要輸入 **tcp:***<computer_name>* 即可。 在我們的具名執行個體範例中，請輸入 **tcp:***<computer_name>***,49172**。  
+3.  在 [伺服器名稱] 方塊中，輸入 **tcp:** 以指定通訊協定，後面接著電腦名稱、逗號和通訊埠編號。 若要連接到預設執行個體，通訊埠 1433 是內定通訊埠而且可省略，因此只要輸入 **tcp:***<computer_name>* 即可。 在我們的具名執行個體範例中，請輸入 **tcp:***<computer_name>***,49172**。  
   
     > [!NOTE]  
-    > 如果 [伺服器名稱]**** 方塊中省略了 **tcp:**，用戶端將依照用戶端設定中指定的順序，嘗試所有啟用的通訊協定。  
+    > 如果 [伺服器名稱] 方塊中省略了 **tcp:**，用戶端將依照用戶端設定中指定的順序，嘗試所有啟用的通訊協定。  
   
-4.  在 [驗證]**** 方塊中，確認 [Window 驗證]****，然後按一下 [連接]****。  
+4.  在 [驗證] 方塊中，確認 [Window 驗證]，然後按一下 [連接]。  
   
 ## <a name="browser"></a>使用 SQL Server Browser 服務來連接  
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Browser 服務會接聽 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資源的內容要求，並提供有關電腦上所安裝之 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體的資訊。 當 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Browser 服務執行時，使用者可以提供電腦名稱和執行個體名稱 (而非電腦名稱和通訊埠編號) 來連接到具名執行個體。 因為 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Browser 接收未驗證的 UDP 要求，所以在安裝期間不一定都開啟著。 如需服務的描述及其何時開啟的說明，請參閱 [SQL Server Browser 服務 &#40;Database Engine 和 SSAS&#41;](../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)。  

@@ -16,9 +16,10 @@ caps.latest.revision: 11
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 656163a8971e279893bd2e7fa9ec382d4c0c95c7
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -46,7 +47,7 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="to-create-a-condition"></a>建立條件  
   
-1.  在物件總管****中，按一下加號，展開您想要建立原則式管理條件的伺服器。  
+1.  在物件總管中，按一下加號，展開您想要建立原則式管理條件的伺服器。  
   
 2.  按一下加號展開 **[管理]** 資料夾。  
   
@@ -54,7 +55,7 @@ ms.lasthandoff: 04/11/2017
   
 4.  按一下加號展開 **[Facet]** 資料夾。  
   
-5.  以滑鼠右鍵按一下您想要建立新條件的 Facet，然後選取 [新增條件]****。  
+5.  以滑鼠右鍵按一下您想要建立新條件的 Facet，然後選取 [新增條件]。  
   
 6.  在 **[建立新條件]** 對話方塊的 **[名稱]** 方塊中，輸入新條件的名稱。  
   

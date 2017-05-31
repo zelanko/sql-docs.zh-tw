@@ -16,9 +16,10 @@ caps.latest.revision: 16
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f8cf0bdceabcdb5959572ca45406d5c53833c3f2
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -63,7 +64,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 **[物件總管]**中，展開您要建立新檢視表的資料庫。  
   
-2.  以滑鼠右鍵按一下 [檢視]**** 資料夾，然後按一下 [新增檢視…]****。  
+2.  以滑鼠右鍵按一下 [檢視] 資料夾，然後按一下 [新增檢視…]。  
   
 3.  在 **[加入資料表]** 對話方塊中，從下列索引標籤選取您要包含在新檢視中的元素：[資料表]、[檢視]、[函數] 和 [同義字]。  
   
@@ -73,7 +74,7 @@ ms.lasthandoff: 04/11/2017
   
 6.  在 **[準則]**窗格中，選擇資料行的其他排序或篩選準則。  
   
-7.  在 [檔案] **** 功能表上，按一下 [儲存] *****view name*。  
+7.  在 [檔案]  功能表上，按一下 [儲存] *view name*。  
   
 8.  在 **[選擇名稱]** 對話方塊中，輸入新檢視的名稱，並按一下 **[確定]**。  
   

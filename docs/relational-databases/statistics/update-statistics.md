@@ -17,9 +17,10 @@ caps.latest.revision: 9
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: fca31288577f6905b99ac2c76e018ed134f10171
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -59,9 +60,9 @@ ms.lasthandoff: 04/11/2017
   
 4.  按一下加號展開 **[統計資料]** 資料夾。  
   
-5.  以滑鼠右鍵按一下要更新的統計資料物件，然後選取 [屬性]****。  
+5.  以滑鼠右鍵按一下要更新的統計資料物件，然後選取 [屬性]。  
   
-6.  在 [統計資料屬性 - <統計資料名稱>**]**** 對話方塊中，選取 [更新這些資料行的統計資料]**** 核取方塊，然後按一下 [確定]****。  
+6.  在 [統計資料屬性 - <統計資料名稱>] 對話方塊中，選取 [更新這些資料行的統計資料] 核取方塊，然後按一下 [確定]。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

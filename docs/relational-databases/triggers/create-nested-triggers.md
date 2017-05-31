@@ -24,14 +24,15 @@ caps.latest.revision: 32
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ed1505ace274659400d797ae5ba8b27dcdf80557
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="create-nested-triggers"></a>建立巢狀觸發程序
-  觸發程序執行用來起始另一個觸發程序的動作時，DML 和 DDL 觸發程序就是巢狀觸發程序。 這些動作可以起始化其他觸發程序等等。 DML 與 DDL 觸發程序最多可以巢狀方式嵌套多達 32 層。 您可以透過 [巢狀觸發程序]**** 伺服器組態選項來控制 AFTER 觸發程序是否可為巢狀。 不論此設定為何，INSTEAD OF 觸發程序 (只有 DML 觸發程序可為 INSTEAD OF 觸發程序) 均可為巢狀。  
+  觸發程序執行用來起始另一個觸發程序的動作時，DML 和 DDL 觸發程序就是巢狀觸發程序。 這些動作可以起始化其他觸發程序等等。 DML 與 DDL 觸發程序最多可以巢狀方式嵌套多達 32 層。 您可以透過 [巢狀觸發程序] 伺服器組態選項來控制 AFTER 觸發程序是否可為巢狀。 不論此設定為何，INSTEAD OF 觸發程序 (只有 DML 觸發程序可為 INSTEAD OF 觸發程序) 均可為巢狀。  
   
 > [!NOTE]  
 >  任何從 [!INCLUDE[tsql](../../includes/tsql-md.md)] 觸發程序對 Managed 程式碼的參考，都會算成 32 層巢狀限制中的一層。 從 Managed 程式碼內叫用的方法，不列入這項限制。  

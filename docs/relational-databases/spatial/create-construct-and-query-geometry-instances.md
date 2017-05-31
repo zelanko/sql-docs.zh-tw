@@ -17,9 +17,10 @@ caps.latest.revision: 27
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 67afdd066ed1ecff52f4ce7fecb41d344fb6d20a
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -220,7 +221,7 @@ ms.lasthandoff: 04/11/2017
   
   
 ###  <a name="empty"></a> Empty  
- 「空的」****geometry** 執行個體沒有任何點。 空的 **LineString, CircularString**、 **CompoundCurve**和 **MultiLineString** 執行個體的長度是零。 空的 **Polygon**、 **CurvePolygon**和 **MultiPolygon** 執行個體的區域是 0。  
+ 「空的」**geometry** 執行個體沒有任何點。 空的 **LineString, CircularString**、 **CompoundCurve**和 **MultiLineString** 執行個體的長度是零。 空的 **Polygon**、 **CurvePolygon**和 **MultiPolygon** 執行個體的區域是 0。  
   
  **判斷執行個體是否為空的**  
  [STIsEmpty](../../t-sql/spatial-geometry/stisempty-geometry-data-type.md)。  
@@ -275,7 +276,7 @@ SELECT @g.STBoundary().ToString();
   
   
 ###  <a name="closure"></a> 封閉性  
- 「封閉式」****geometry** 執行個體是起始點與結束點相同的圖形。 **Polygon** 執行個體視為封閉式。 **Point** 執行個體視為非封閉式。  
+ 「封閉式」**geometry** 執行個體是起始點與結束點相同的圖形。 **Polygon** 執行個體視為封閉式。 **Point** 執行個體視為非封閉式。  
   
  環形是簡單、封閉的 **LineString** 執行個體。  
   

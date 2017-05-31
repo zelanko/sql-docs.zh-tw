@@ -17,9 +17,10 @@ caps.latest.revision: 15
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 27adde47bca4c894d044940d00bc6867e6f8e58f
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -45,9 +46,9 @@ ms.lasthandoff: 04/11/2017
 ##  <a name="ChgRPProp"></a> 使用 SQL Server Management Studio 變更資源集區設定  
  **若要使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，開啟 [物件總管]，然後遞迴地向下展開 [管理] **** 節點至 [資源集區] ****。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，開啟 [物件總管]，然後遞迴地向下展開 [管理]  節點至 [資源集區] 。  
   
-2.  以滑鼠右鍵按一下要修改的資源集區，然後按一下 [屬性]****。  
+2.  以滑鼠右鍵按一下要修改的資源集區，然後按一下 [屬性]。  
   
 3.  在 **[資源管理員屬性]** 頁面的 **[資源集區]** 方格中，選取資源集區的資料列 (如果系統沒有自動選取的話)。  
   

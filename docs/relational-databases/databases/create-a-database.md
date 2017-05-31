@@ -18,9 +18,10 @@ caps.latest.revision: 38
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 06b00c9eceac816935b2c0fa69306a6681383d80
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -74,7 +75,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的執行個體，然後展開該執行個體。  
   
-2.  以滑鼠右鍵按一下 [資料庫]****，然後按一下 [新增資料庫]****。  
+2.  以滑鼠右鍵按一下 [資料庫]，然後按一下 [新增資料庫]。  
   
 3.  在 **[新增資料庫]**中，輸入資料庫名稱。  
   
@@ -83,7 +84,7 @@ ms.lasthandoff: 04/11/2017
 5.  若要變更擁有者名稱，請按一下 (**…**) 來選取其他擁有者。  
   
     > [!NOTE]  
-    >  [使用全文檢索索引]**** 選項一定是核取狀態而且呈暗灰色，因為從 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 開始，所有使用者資料庫都會啟用全文檢索。  
+    >  [使用全文檢索索引] 選項一定是核取狀態而且呈暗灰色，因為從 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 開始，所有使用者資料庫都會啟用全文檢索。  
   
 6.  若要變更主要資料與交易記錄檔的預設值，請在 **[資料庫檔案]** 方格中按一下適當的資料格，並輸入新的值。 如需詳細資訊，請參閱 [Add Data or Log Files to a Database](../../relational-databases/databases/add-data-or-log-files-to-a-database.md)。  
   

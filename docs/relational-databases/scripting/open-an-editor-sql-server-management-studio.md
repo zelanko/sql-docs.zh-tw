@@ -14,9 +14,10 @@ caps.latest.revision: 9
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e3f94b815f18075eb769d4537e8af354aa11a297
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -69,12 +70,12 @@ ms.lasthandoff: 04/11/2017
 ### <a name="using-object-explorer"></a>使用物件總管  
  從 **[物件總管]**：  
   
--   以滑鼠右鍵按一下與 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體連接的伺服器節點，然後選取 [新增查詢]****。 這樣會開啟與相同 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體連接的 [[!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器] 視窗，並將此視窗的資料庫內容設定為登入的預設資料庫。  
+-   以滑鼠右鍵按一下與 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體連接的伺服器節點，然後選取 [新增查詢]。 這樣會開啟與相同 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體連接的 [[!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器] 視窗，並將此視窗的資料庫內容設定為登入的預設資料庫。  
   
--   以滑鼠右鍵按一下資料庫節點，然後選取 [新增查詢]****。 這樣會開啟與相同 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體連接的 [[!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器] 視窗，並將此視窗的資料庫內容設定為相同資料庫。  
+-   以滑鼠右鍵按一下資料庫節點，然後選取 [新增查詢]。 這樣會開啟與相同 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體連接的 [[!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器] 視窗，並將此視窗的資料庫內容設定為相同資料庫。  
   
 ### <a name="using-solution-explorer"></a>使用方案總管  
- 從方案總管****中，展開一個資料夾，然後以滑鼠右鍵按一下資料夾內的項目，再按一下 [開啟]**** 或按兩下項目或檔案。  
+ 從方案總管中，展開一個資料夾，然後以滑鼠右鍵按一下資料夾內的項目，再按一下 [開啟] 或按兩下項目或檔案。  
   
 ### <a name="using-template-browser-to-open-the-database-engine-query-editor"></a>使用範本瀏覽器來開啟 Database Engine 查詢編輯器  
   
@@ -82,6 +83,6 @@ ms.lasthandoff: 04/11/2017
   
 -   **[範本瀏覽器]** 視窗即會顯示在右窗格中。  
   
--   按兩下範本，即可開啟含有範本文字的 [Database Engine 查詢] 視窗。 例如，若要開啟 CREATE DATABASE 範本，請開啟 [SQL Server 範本]**** 資料夾、開啟 [資料庫]**** 資料夾，然後按兩下 [建立資料庫]****。  
+-   按兩下範本，即可開啟含有範本文字的 [Database Engine 查詢] 視窗。 例如，若要開啟 CREATE DATABASE 範本，請開啟 [SQL Server 範本] 資料夾、開啟 [資料庫] 資料夾，然後按兩下 [建立資料庫]。  
   
   

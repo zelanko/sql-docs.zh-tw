@@ -14,9 +14,10 @@ caps.latest.revision: 10
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b86537401dc8866f271472e7fa6c1b4eb33d8827
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -33,7 +34,7 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="to-publish-a-database-to-a-web-service"></a>若要將資料庫發行到 Web 服務  
   
-1.  在物件總管中，展開 [資料庫]****，以滑鼠右鍵按一下資料庫，指向 [工作]****，然後按一下 [產生和發佈指令碼]****。 遵循精靈中的步驟，以便編寫要發行之資料庫物件的指令碼。  
+1.  在物件總管中，展開 [資料庫]，以滑鼠右鍵按一下資料庫，指向 [工作]，然後按一下 [產生和發佈指令碼]。 遵循精靈中的步驟，以便編寫要發行之資料庫物件的指令碼。  
   
 2.  在 **[選擇物件]** 頁面上，選取要發行至 Web 主控服務的物件。  
   

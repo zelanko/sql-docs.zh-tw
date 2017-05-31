@@ -19,9 +19,10 @@ caps.latest.revision: 66
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 003196d8c30ca45c54750587c03c8d7d6e5a358d
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -59,7 +60,7 @@ ms.lasthandoff: 04/11/2017
   
 -   會減少 **tempdb** 的記錄負擔。 這會減少 **tempdb** 記錄檔的磁碟 I/O 頻寬耗用量。  
   
--   安裝程式會在新的執行個體安裝期間加入多個 tempdb 資料檔案。 可使用 [資料庫引擎組態]**** 區段上的新 UI 輸入控制項和命令列參數 /SQLTEMPDBFILECOUNT 完成此工作。 根據預設，安裝程式會加入與 CPU 計數一樣多的 (或是 8 個) tempdb 檔案，以較低者為準。  
+-   安裝程式會在新的執行個體安裝期間加入多個 tempdb 資料檔案。 可使用 [資料庫引擎組態] 區段上的新 UI 輸入控制項和命令列參數 /SQLTEMPDBFILECOUNT 完成此工作。 根據預設，安裝程式會加入與 CPU 計數一樣多的 (或是 8 個) tempdb 檔案，以較低者為準。  
   
 -   如果有多個 **tempdb** 資料檔案，則視成長設定而定，所有的檔案會都同時以相同數量自動成長。  不再需要追蹤旗標 1117。  
   

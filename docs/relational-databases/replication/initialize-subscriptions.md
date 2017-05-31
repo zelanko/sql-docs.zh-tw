@@ -16,9 +16,10 @@ caps.latest.revision: 24
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 1dd4015c8247802bb86973673f4942e2f9cb270a
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -29,7 +30,7 @@ ms.lasthandoff: 04/11/2017
  **訂閱屬性**  
  針對每個需要初始資料集的訂閱者，選取 **[初始化]** 資料行中的核取方塊。 如果清除此核取方塊，則只會初始化複寫中繼資料和程序。 如需不使用快照集初始化訂閱的詳細資訊，請參閱[不使用快照集初始化交易式訂閱](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)。  
   
- 在 **[初始化時機]** 資料行的下拉式清單方塊中，選取 **[立即]** ，即可使合併代理程式或散發代理程式在此精靈完成後，將快照集檔案傳送至訂閱者。 選取 **[第一次同步處理時]** ，即可使代理程式在下一個執行排程傳送檔案。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 的提取訂閱無法使用 [立即]**** 選項。 合併代理程式或散發代理程式無法在 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]的執行個體上執行；因此必須經由其他方法初始化訂閱。  
+ 在 **[初始化時機]** 資料行的下拉式清單方塊中，選取 **[立即]** ，即可使合併代理程式或散發代理程式在此精靈完成後，將快照集檔案傳送至訂閱者。 選取 **[第一次同步處理時]** ，即可使代理程式在下一個執行排程傳送檔案。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 的提取訂閱無法使用 [立即] 選項。 合併代理程式或散發代理程式無法在 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]的執行個體上執行；因此必須經由其他方法初始化訂閱。  
   
 > [!NOTE]  
 >  精靈可能會提示散發者的連接，以便為散發者代理程式或合併代理程式啟動適當的作業。  

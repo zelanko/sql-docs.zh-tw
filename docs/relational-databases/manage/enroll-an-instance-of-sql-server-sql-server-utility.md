@@ -24,9 +24,10 @@ caps.latest.revision: 13
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: c5bb6279f7fd96f30aa3f19628e2edc5edb5cc53
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -90,12 +91,12 @@ ms.lasthandoff: 04/11/2017
 -   [正在註冊 SQL Server 的執行個體](#Enrolling)  
   
 ##  <a name="Welcome"></a> 註冊執行個體精靈簡介  
- 若要啟動此精靈，請在公用程式控制點上展開 [公用程式總管] 樹狀目錄，然後以滑鼠右鍵按一下 [受管理的執行個體]****，並選取 [新增受管理的執行個體...]****。  
+ 若要啟動此精靈，請在公用程式控制點上展開 [公用程式總管] 樹狀目錄，然後以滑鼠右鍵按一下 [受管理的執行個體]，並選取 [新增受管理的執行個體...]。  
   
  若要繼續進行，請按 **[下一步]**。  
   
 ##  <a name="Instance_name"></a> 指定 SQL Server 的執行個體  
- 若要從連接對話方塊選取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體，請按一下 [連接...]****。 使用以下格式提供電腦名稱和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱：ComputerName\InstanceName。 如需詳細資訊，請參閱[連接到伺服器 &#40;Database Engine&#41;](http://msdn.microsoft.com/library/ee9017b4-8a19-4360-9003-9e6484082d41)。  
+ 若要從連接對話方塊選取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體，請按一下 [連接...]。 使用以下格式提供電腦名稱和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱：ComputerName\InstanceName。 如需詳細資訊，請參閱[連接到伺服器 &#40;Database Engine&#41;](http://msdn.microsoft.com/library/ee9017b4-8a19-4360-9003-9e6484082d41)。  
   
  若要繼續進行，請按 **[下一步]**。  
   
@@ -163,9 +164,9 @@ ms.lasthandoff: 04/11/2017
   
 -   正在設定公用程式收集組。  
   
- 若要儲存有關註冊作業的報表，請按一下 [儲存報表]****，然後指定檔案的位置。  
+ 若要儲存有關註冊作業的報表，請按一下 [儲存報表]，然後指定檔案的位置。  
   
- 若要完成精靈，請按一下 [完成]****。  
+ 若要完成精靈，請按一下 [完成]。  
   
 > [!NOTE]  
 >  如果您使用 SQL Server 驗證連接到 SQL Server 執行個體進行註冊，並且指定隸屬不同於 UCP 所在位置的其他 Active Directory 網域的 Proxy 帳戶，那麼執行個體驗證會順利進行，但是註冊作業會失敗且出現下列錯誤訊息：  
@@ -179,11 +180,11 @@ ms.lasthandoff: 04/11/2017
 > [!IMPORTANT]  
 >  請勿在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 受管理的執行個體上變更「公用程式資訊」收集組的任何屬性，也請勿手動開啟/關閉資料收集，因為資料收集是由公用程式代理程式作業所控制。  
   
- 完成 [註冊執行個體] 精靈之後，請在 SSMS 的**公用程式總管**瀏覽窗格中，按一下 [受管理的執行個體]**** 節點。 註冊的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體會顯示在 [公用程式總管內容]**** 窗格中的清單檢視內。  
+ 完成 [註冊執行個體] 精靈之後，請在 SSMS 的**公用程式總管**瀏覽窗格中，按一下 [受管理的執行個體] 節點。 註冊的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體會顯示在 [公用程式總管內容] 窗格中的清單檢視內。  
   
- 資料收集程序會立即開始，但是最多需要 30 分鐘的時間，資料才會第一次出現在 [公用程式總管] 內容窗格的儀表板和視點內。 資料收集會持續每隔 15 分鐘進行一次。 若要重新整理資料，請以滑鼠右鍵按一下**公用程式總管**瀏覽窗格中的 [受管理的執行個體]**** 節點，然後選取 [重新整理]****，或是以滑鼠右鍵按一下清單檢視中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱，然後選取 [重新整理]****。  
+ 資料收集程序會立即開始，但是最多需要 30 分鐘的時間，資料才會第一次出現在 [公用程式總管] 內容窗格的儀表板和視點內。 資料收集會持續每隔 15 分鐘進行一次。 若要重新整理資料，請以滑鼠右鍵按一下**公用程式總管**瀏覽窗格中的 [受管理的執行個體] 節點，然後選取 [重新整理]，或是以滑鼠右鍵按一下清單檢視中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱，然後選取 [重新整理]。  
   
- 若要從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式中移除受管理的執行個體，請在**公用程式總管**瀏覽窗格中選取 [受管理的執行個體]**** 來填入受管理執行個體的清單檢視，然後以滑鼠右鍵按一下 [公用程式總管內容]**** 清單檢視中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱，再選取 [將執行個體設為未受管理]****。  
+ 若要從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式中移除受管理的執行個體，請在**公用程式總管**瀏覽窗格中選取 [受管理的執行個體] 來填入受管理執行個體的清單檢視，然後以滑鼠右鍵按一下 [公用程式總管內容] 清單檢視中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱，再選取 [將執行個體設為未受管理]。  
   
 ##  <a name="PowerShell_enroll"></a> 使用 PowerShell 註冊 SQL Server 的執行個體  
  使用下列範例，將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體註冊到現有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式：  

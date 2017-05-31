@@ -18,9 +18,10 @@ caps.latest.revision: 27
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0778c9ac00e6d9c06161ccc8429e0eb9ae4d846d
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -59,11 +60,11 @@ ms.lasthandoff: 04/11/2017
   
 3.  展開 **[角色]** 資料夾。  
   
-4.  以滑鼠右鍵按一下 [應用程式角色]**** 資料夾，然後選取 [新增應用程式角色]****。  
+4.  以滑鼠右鍵按一下 [應用程式角色] 資料夾，然後選取 [新增應用程式角色]。  
   
 5.  在 **[應用程式角色 - 新增]** 對話方塊，於 **[一般]**頁面上的 **[角色名稱]** 方塊中輸入新應用程式角色的名稱。  
   
-6.  在 **[預設結構描述]** 方塊中，透過輸入物件名稱，指定擁有此角色建立的物件之結構描述。 或者，按一下省略符號 **(...)**，開啟 [尋找結構描述]**** 對話方塊。  
+6.  在 **[預設結構描述]** 方塊中，透過輸入物件名稱，指定擁有此角色建立的物件之結構描述。 或者，按一下省略符號 **(...)**，開啟 [尋找結構描述] 對話方塊。  
   
 7.  在 **[密碼]** 方塊中，輸入新角色的密碼。 在 **[確認密碼]** 方塊中重新輸入該密碼。  
   

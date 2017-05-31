@@ -16,9 +16,10 @@ caps.latest.revision: 7
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 47091df9ec1318e7bb66ef1a32346c7445b4abd6
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -27,7 +28,7 @@ ms.lasthandoff: 04/11/2017
   
 -   **開始之前：**  [限制事項](#LimitationsRestrictions)、 [權限](#Permissions)  
   
--   **使用下列項目停用資源管理員：**  [](#RGOffObjEx)、 [](#RGOffProp)、 [](#RGOffTSQL)  
+-   使用[物件總管](#RGOffObjEx)、[資源管理員屬性](#RGOffProp)、[Transact-SQL](#RGOffTSQL) **停用資源管理員**  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
  停用資源管理員會產生下列結果：  
@@ -57,14 +58,14 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，開啟 [物件總管]，然後遞迴地向下展開 **[管理]** 節點至 **[資源管理員]**。  
   
-2.  以滑鼠右鍵按一下 [資源管理員]****，然後按一下 [停用]****。  
+2.  以滑鼠右鍵按一下 [資源管理員]，然後按一下 [停用]。  
   
 ##  <a name="RGOffProp"></a> 使用資源管理員屬性停用資源管理員  
  **若要使用資源管理員屬性頁面來停用資源管理員**  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，開啟 [物件總管]，然後遞迴地向下展開 **[管理]** 節點至 **[資源管理員]**。  
   
-2.  以滑鼠右鍵按一下 [資源管理員]****，然後按一下 [屬性]****，這會開啟 [資源管理員屬性]**** 頁面。  
+2.  以滑鼠右鍵按一下 [資源管理員]，然後按一下 [屬性]，這會開啟 [資源管理員屬性] 頁面。  
   
 3.  按一下 **[啟用資源管理員]** 核取方塊，確定未選取方塊，然後按一下 **[確定]**。  
   

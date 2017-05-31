@@ -17,14 +17,15 @@ caps.latest.revision: 30
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 848c1142c1db178efe9215db06fd326ea4aade6e
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="enable-a-remote-publisher-at-a-distributor-sql-server-management-studio"></a>在散發者端啟用遠端發行者 (SQL Server Management Studio)
-  在 **[發行者]** 頁面中讓「發行者」使用遠端「散發者」。 在 [設定散發精靈] 與 [散發者屬性 - \<散發者>]**** 對話方塊中可取得這個頁面。 如需使用精靈以及存取對話方塊的詳細資訊，請參閱[設定發行和散發](../../relational-databases/replication/configure-publishing-and-distribution.md)和[檢視和修改散發者和發行者屬性](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)。  
+  在 **[發行者]** 頁面中讓「發行者」使用遠端「散發者」。 在 [設定散發精靈] 與 [散發者屬性 - \<散發者>] 對話方塊中可取得這個頁面。 如需使用精靈以及存取對話方塊的詳細資訊，請參閱[設定發行和散發](../../relational-databases/replication/configure-publishing-and-distribution.md)和[檢視和修改散發者和發行者屬性](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)。  
   
 ### <a name="to-enable-a-publisher-in-the-configure-distribution-wizard"></a>若要在設定散發精靈中啟用發行者  
   
@@ -42,7 +43,7 @@ ms.lasthandoff: 04/11/2017
   
 ### <a name="to-enable-a-publisher-in-the-distributor-properties-dialog-box"></a>若要在散發者屬性對話方塊中啟用發行者  
   
-1.  在 [散發者屬性 - \<散發者>]**** 對話方塊的 [發行者]**** 頁面上，按一下 [新增]****。  
+1.  在 [散發者屬性 - \<散發者>] 對話方塊的 [發行者] 頁面上，按一下 [新增]。  
   
 2.  按一下 **[加入 SQL Server 發行者]**。 如需有關啟用 Oracle 發行者以使用散發者的資訊，請參閱＜ [Create a Publication from an Oracle Database](../../relational-databases/replication/publish/create-a-publication-from-an-oracle-database.md)＞。  
   

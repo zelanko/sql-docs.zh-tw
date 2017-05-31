@@ -16,9 +16,10 @@ caps.latest.revision: 7
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 08b43f5dd7f042bc559cede3b6043d737fb71a11
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -52,7 +53,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  按一下加號展開 **[計畫指南]** 資料夾。  
   
-3.  以滑鼠右鍵按一下您想要刪除的計畫指南，然後選取 [刪除]****。  
+3.  以滑鼠右鍵按一下您想要刪除的計畫指南，然後選取 [刪除]。  
   
 4.  在 **[刪除物件]** 對話方塊中，確定已選取正確的計畫指南，然後按一下 **[確定]**。  
   

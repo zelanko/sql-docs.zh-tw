@@ -27,9 +27,10 @@ caps.latest.revision: 45
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0c13fbf9ffbe2337c1766d7a089c1d8072a17f77
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -70,9 +71,9 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 **[開始]** 功能表上，按一下 **[執行]**。  
   
-2.  在 [執行]**** 對話方塊中，輸入 **secpol.msc**，然後按一下 [確定]****。  
+2.  在 [執行] 對話方塊中，輸入 **secpol.msc**，然後按一下 [確定]。  
   
-3.  在 [本機安全性設定]**** 應用程式中，依序展開 [安全性設定]**** 和 [帳戶原則]****，然後按一下 [密碼原則]****。  
+3.  在 [本機安全性設定] 應用程式中，依序展開 [安全性設定] 和 [帳戶原則]，然後按一下 [密碼原則]。  
   
      密碼原則就會描述在結果窗格中。  
   

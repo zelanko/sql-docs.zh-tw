@@ -18,9 +18,10 @@ caps.latest.revision: 15
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 1dbc3eb4968f27665df80e414a590f8b4e3df7b4
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -54,20 +55,20 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 [物件總管] 中，展開包含主索引鍵的資料表，然後展開 **[索引鍵]**。  
   
-2.  以滑鼠右鍵按一下索引鍵，然後選取 [刪除]****。  
+2.  以滑鼠右鍵按一下索引鍵，然後選取 [刪除]。  
   
 3.  在 **[刪除物件]** 對話方塊中，確認指定了正確的索引鍵，然後按一下 **[確定]**。  
   
 #### <a name="to-delete-a-primary-key-constraint-using-table-designer"></a>若要使用資料表設計工具來刪除主索引鍵條件約束  
   
-1.  在物件總管中，以滑鼠右鍵按一下含有主索引鍵的資料表，然後按一下 [設計]****。  
+1.  在物件總管中，以滑鼠右鍵按一下含有主索引鍵的資料表，然後按一下 [設計]。  
   
-2.  在資料表方格中，以滑鼠右鍵按一下包含主索引鍵的資料列，然後選擇 [移除主索引鍵]**** 關閉設定。  
+2.  在資料表方格中，以滑鼠右鍵按一下包含主索引鍵的資料列，然後選擇 [移除主索引鍵] 關閉設定。  
   
     > [!NOTE]  
     >  若要恢復此一動作，可將資料表關閉而不儲存變更。 如果恢復刪除主索引鍵的動作，將會遺失所有對資料表進行的其他變更。  
   
-3.  在 [檔案] **** 功能表上，按一下 [儲存] *****table name*。  
+3.  在 [檔案]  功能表上，按一下 [儲存] *table name*。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

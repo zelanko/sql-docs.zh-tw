@@ -16,9 +16,10 @@ caps.latest.revision: 26
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e92832844968d82686efdcc696294c9ce8ff75f2
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -45,7 +46,7 @@ ms.lasthandoff: 04/11/2017
  按一下此超連結可顯示執行記錄報表。  
   
  **評估**  
- 按一下此超連結可開啟 [評估原則]**** 對話方塊來執行此原則。  
+ 按一下此超連結可開啟 [評估原則] 對話方塊來執行此原則。  
   
  **上次執行**  
  上次執行此原則的日期和時間。  

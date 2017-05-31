@@ -20,9 +20,10 @@ caps.latest.revision: 14
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 2447173bd6b35b977fe69aa8f811d3d0198123f9
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -58,7 +59,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  展開  **[條件約束]**。  
   
-3.  以滑鼠右鍵按一下條件約束，然後按一下 [刪除]****。  
+3.  以滑鼠右鍵按一下條件約束，然後按一下 [刪除]。  
   
 4.  在 **[刪除物件]** 對話方塊中，按一下 **[確定]**。  
   

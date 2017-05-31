@@ -14,9 +14,10 @@ caps.latest.revision: 7
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 6af95b4d0b4bc3b8e652fd40fa1427cd156c1514
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -68,7 +69,7 @@ ms.lasthandoff: 04/11/2017
   
     -   彙總函式  
   
-4.  以滑鼠右鍵按一下您要重新命名的函數，然後選取 [重新命名]****。  
+4.  以滑鼠右鍵按一下您要重新命名的函數，然後選取 [重新命名]。  
   
 5.  輸入函數的新名稱。  
   

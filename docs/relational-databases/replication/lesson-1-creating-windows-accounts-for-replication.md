@@ -19,9 +19,10 @@ caps.latest.revision: 17
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 1c15031eb2b01a47a933d899c045db6a7123676a
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -40,13 +41,13 @@ ms.lasthandoff: 04/11/2017
   
 ### <a name="to-create-local-windows-accounts-for-replication-agents-at-the-publisher"></a>在發行者端建立複寫代理程式的本機 Windows 帳戶  
   
-1.  在發行者端，從 [控制台] 中的 [系統管理工具]**** 開啟 [電腦管理]****。  
+1.  在發行者端，從 [控制台] 中的 [系統管理工具] 開啟 [電腦管理]。  
   
-2.  在 [系統工具]**** 中，展開 [本機使用者和群組]****。  
+2.  在 [系統工具] 中，展開 [本機使用者和群組]。  
   
-3.  以滑鼠右鍵按一下 [使用者]****，然後按一下 [新增使用者]****。  
+3.  以滑鼠右鍵按一下 [使用者]，然後按一下 [新增使用者]。  
   
-4.  在 [使用者名稱]**** 方塊中輸入 **repl_snapshot**，並提供密碼和其他相關資訊，然後按一下 [建立]****，以建立 repl_snapshot 帳戶。  
+4.  在 [使用者名稱] 方塊中輸入 **repl_snapshot**，並提供密碼和其他相關資訊，然後按一下 [建立]，以建立 repl_snapshot 帳戶。  
   
 5.  重複執行先前的步驟，以建立 repl_logreader、repl_distribution 和 repl_merge 帳戶。  
   
@@ -54,13 +55,13 @@ ms.lasthandoff: 04/11/2017
   
 ### <a name="to-create-local-windows-accounts-for-replication-agents-at-the-subscriber"></a>在訂閱者端建立複寫代理程式的本機 Windows 帳戶  
   
-1.  在訂閱者端，從 [控制台] 中的 [系統管理工具]**** 開啟 [電腦管理]****。  
+1.  在訂閱者端，從 [控制台] 中的 [系統管理工具] 開啟 [電腦管理]。  
   
-2.  在 [系統工具]**** 中，展開 [本機使用者和群組]****。  
+2.  在 [系統工具] 中，展開 [本機使用者和群組]。  
   
-3.  以滑鼠右鍵按一下 [使用者]****，然後按一下 [新增使用者]****。  
+3.  以滑鼠右鍵按一下 [使用者]，然後按一下 [新增使用者]。  
   
-4.  在 [使用者名稱]**** 方塊中輸入 **repl_distribution**，並提供密碼和其他相關資訊，然後按一下 [建立]****，以建立 repl_distribution 帳戶。  
+4.  在 [使用者名稱] 方塊中輸入 **repl_distribution**，並提供密碼和其他相關資訊，然後按一下 [建立]，以建立 repl_distribution 帳戶。  
   
 5.  重複執行先前的步驟，以建立 repl_merge 帳戶。  
   

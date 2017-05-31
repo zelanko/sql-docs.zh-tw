@@ -27,9 +27,10 @@ caps.latest.revision: 28
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 02ec61b5f3342ba8c5abd6e5044cd9f6863f6145
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -107,7 +108,7 @@ ms.lasthandoff: 04/11/2017
   
 4.  按一下加號展開 **[索引]** 資料夾。  
   
-5.  以滑鼠右鍵按一下您要停用的索引，然後選取 [停用]****。  
+5.  以滑鼠右鍵按一下您要停用的索引，然後選取 [停用]。  
   
 6.  在 **[停用索引]** 對話方塊中，確認 **[要停用的索引]** 方格中有正確索引，然後按一下 **[確定]**。  
   
@@ -119,7 +120,7 @@ ms.lasthandoff: 04/11/2017
   
 3.  按一下加號展開要停用索引的資料表。  
   
-4.  以滑鼠右鍵按一下 [索引]**** 資料夾，並選取 [全部停用]****。  
+4.  以滑鼠右鍵按一下 [索引] 資料夾，並選取 [全部停用]。  
   
 5.  在 **[停用索引]** 對話方塊中，確認 **[要停用的索引]** 方格中有正確索引，然後按一下 **[確定]**。 若要從 **[要停用的索引]** 方格中移除索引，請選取索引，然後按下 DELETE 鍵。  
   
@@ -132,7 +133,7 @@ ms.lasthandoff: 04/11/2017
  顯示建立索引的資料表名稱或檢視名稱。  
   
  **索引類型**  
- 顯示索引的類型：[叢集]****、[非叢集]****、[空間]**** 或 [XML]****。  
+ 顯示索引的類型：[叢集]、[非叢集]、[空間] 或 [XML]。  
   
  **狀態**  
  顯示停用作業的狀態。 執行之後可能的值：  

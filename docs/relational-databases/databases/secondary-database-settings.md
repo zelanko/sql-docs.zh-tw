@@ -16,9 +16,10 @@ caps.latest.revision: 32
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7ec30a94c58a94d2afad050eab06ecc60432c7b1
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -56,7 +57,7 @@ ms.lasthandoff: 04/11/2017
  讓 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 使用主要資料庫的現有備份，以初始化次要資料庫。 在 **[備份檔案]** 方塊中輸入該備份的位置。 如果您在 [次要資料庫] 方塊中輸入新的資料庫名稱，進行還原作業時就會建立此資料庫。  
   
  **[備份檔案]**  
- 如果您選擇 [是，將主要資料庫的現有備份還原到次要資料庫]**** 選項，請輸入要用來初始化次要資料庫之完整資料庫備份的路徑與檔案名稱。  
+ 如果您選擇 [是，將主要資料庫的現有備份還原到次要資料庫] 選項，請輸入要用來初始化次要資料庫之完整資料庫備份的路徑與檔案名稱。  
   
  **還原選項**  
  請參閱本主題稍早有關此按鈕的描述。  
@@ -98,7 +99,7 @@ ms.lasthandoff: 04/11/2017
  讓次要資料庫維持 STANDBY 模式。 此模式僅允許針對資料庫執行唯讀作業。  
   
 > [!IMPORTANT]  
->  例如，如果將現有的次要資料庫的復原模式從 [不復原模式]**** 變更為 [待命模式]****，則該變更只有在下次記錄備份還原到資料庫之後才會生效。  
+>  例如，如果將現有的次要資料庫的復原模式從 [不復原模式] 變更為 [待命模式]，則該變更只有在下次記錄備份還原到資料庫之後才會生效。  
   
  **延遲還原備份至少**  
  選擇還原交易記錄備份至次要資料庫的延遲 (如果有的話)。  

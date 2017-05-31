@@ -15,9 +15,10 @@ caps.latest.revision: 20
 author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a75bde97eddb1b99546ec4d5ff0dbb33340e19e4
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -60,11 +61,11 @@ WITH (SYSTEM_VERSIONING = ON)
   
 -   匿名的記錄資料表會自動使用與目前資料表或時態表相同的結構描述建立。  
   
--   匿名的記錄資料表名稱具有下列格式︰MSSQL_TemporalHistoryFor_<目前時態表物件識別碼>_[後置詞]**。 後置詞是選用的，只有在資料表名稱前半部分不是唯一的時候，才會加入。  
+-   匿名的記錄資料表名稱具有下列格式︰MSSQL_TemporalHistoryFor_<目前時態表物件識別碼>_[後置詞]。 後置詞是選用的，只有在資料表名稱前半部分不是唯一的時候，才會加入。  
   
 -   記錄資料表會建立為資料列存放區資料表。 如果可能，會套用 PAGE 壓縮，否則不壓縮記錄資料表。 例如，有些資料表組態，像 SPARSE 資料行，就不允許壓縮。  
   
--   為記錄資料表建立的預設叢集索引，會使用自動產生的名稱，格式為：IX_<記錄資料表名稱 >**。 叢集索引包含 **PERIOD** 資料行 (結尾、開頭)。  
+-   為記錄資料表建立的預設叢集索引，會使用自動產生的名稱，格式為：IX_<記錄資料表名稱 >。 叢集索引包含 **PERIOD** 資料行 (結尾、開頭)。  
   
 -   若要將目前的資料表建立為記憶體最佳化資料表，請參閱 [系統版本設定時態表與記憶體最佳化資料表](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)。  
   

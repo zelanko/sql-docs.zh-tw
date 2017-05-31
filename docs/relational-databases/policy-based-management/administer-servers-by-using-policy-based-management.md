@@ -24,9 +24,10 @@ caps.latest.revision: 76
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: bc3d3e94cd6d5993b9647a394338649fe357f021
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -64,7 +65,7 @@ ms.lasthandoff: 04/11/2017
   
     -   **變更時: 避免**。 這種自動模式會使用 DDL 觸發程序來防止原則違規。  
   
-        > **重要！** 如果停用了巢狀觸發程序伺服器組態選項，[變更時: 避免]****將無法正確運作。 以原則為基礎的管理會依賴 DDL 觸發程序來偵測及回復不符合使用此評估模式之原則的 DDL 作業。 移除以原則為基礎的管理 DDL 觸發程序或停用巢狀觸發程序時，將會造成這個評估模式失敗或以非預期的方式執行。  
+        > **重要！** 如果停用了巢狀觸發程序伺服器組態選項，[變更時: 避免]將無法正確運作。 以原則為基礎的管理會依賴 DDL 觸發程序來偵測及回復不符合使用此評估模式之原則的 DDL 作業。 移除以原則為基礎的管理 DDL 觸發程序或停用巢狀觸發程序時，將會造成這個評估模式失敗或以非預期的方式執行。  
   
     -   **變更時: 僅限記錄**。 這種自動模式會在發生相關變更時使用事件通知來評估原則。  
   

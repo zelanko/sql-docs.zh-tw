@@ -16,9 +16,10 @@ caps.latest.revision: 35
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f3a47050dc9ba3b157ac37f3fc0646492d231d47
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -53,7 +54,7 @@ ms.lasthandoff: 04/11/2017
   
  DDL 觸發程序不像 DML 觸發程序，並不以結構描述為範圍。 因此，OBJECT_ID、OBJECT_NAME、OBJECTPROPERTY 和 OBJECTPROPERTYEX 等函數無法用來查詢有關 DDL 觸發程序的中繼資料。 請改用目錄檢視。  
   
- 伺服器範圍的 DDL 觸發程序會出現在 SQL Server Management Studio 物件總管的 [觸發程序]**** 資料夾中。 這個資料夾在 **[伺服器物件]** 資料夾之下。 資料庫範圍的 DDL 觸發程序則是出現在 [資料庫觸發程序]**** 資料夾。 這個資料夾在對應資料庫的 **[可程式性]** 資料夾之下。  
+ 伺服器範圍的 DDL 觸發程序會出現在 SQL Server Management Studio 物件總管的 [觸發程序] 資料夾中。 這個資料夾在 **[伺服器物件]** 資料夾之下。 資料庫範圍的 DDL 觸發程序則是出現在 [資料庫觸發程序] 資料夾。 這個資料夾在對應資料庫的 **[可程式性]** 資料夾之下。  
   
 > [!IMPORTANT]  
 >  觸發程序內的惡意程式碼可能在擴大的權限下執行。 如需如何協助降低此威脅的詳細資訊，請參閱 [管理觸發程序安全性](../../relational-databases/triggers/manage-trigger-security.md)。  

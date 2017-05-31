@@ -14,9 +14,10 @@ caps.latest.revision: 17
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 42b2038121e0bf9179fefafc89a7b17e3c1585c7
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -32,7 +33,7 @@ ms.lasthandoff: 04/11/2017
   
  使用下列步驟建立要存放到本機磁碟的資料庫加密備份。 此範例會使用稱為 MyTestDB 的使用者資料庫。  
   
-1.  **建立主要資料庫的資料庫主要金鑰︰**選擇要儲存在資料庫中之主要金鑰複本的加密密碼。 連接到 Database Engine，再啟動新的查詢視窗，將下列範例複製並貼到新的查詢視窗中，然後按一下 [執行]****。  
+1.  **建立主要資料庫的資料庫主要金鑰︰**選擇要儲存在資料庫中之主要金鑰複本的加密密碼。 連接到 Database Engine，再啟動新的查詢視窗，將下列範例複製並貼到新的查詢視窗中，然後按一下 [執行]。  
   
     ```  
     -- Creates a database master key.   
@@ -75,7 +76,7 @@ ms.lasthandoff: 04/11/2017
  如需加密受 EKM 保護的備份的範例，請參閱[使用 Azure 金鑰保存庫進行可延伸金鑰管理 &#40;SQL Server&#41;](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)。  
   
 ### <a name="backup-to-windows-azure-storage-with-encryption"></a>加密要儲存到 Windows Azure 儲存體的備份  
- 如果使用 [SQL Server 備份至 URL]**** 選項建立要儲存到 Windows Azure 儲存體的備份，其加密步驟完全相同，但您必須使用 URL 作為目的地，並使用 SQL 認證向 Windows Azure 儲存體進行驗證。 如果您要將 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 設定成使用加密選項，請參閱 [啟用 SQL Server Managed Backup 到 Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md)。  
+ 如果使用 [SQL Server 備份至 URL] 選項建立要儲存到 Windows Azure 儲存體的備份，其加密步驟完全相同，但您必須使用 URL 作為目的地，並使用 SQL 認證向 Windows Azure 儲存體進行驗證。 如果您要將 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 設定成使用加密選項，請參閱 [啟用 SQL Server Managed Backup 到 Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md)。  
   
  **必要條件：**  
   
@@ -83,7 +84,7 @@ ms.lasthandoff: 04/11/2017
   
 -   主要資料庫的資料主要金鑰，以及 SQL Server 執行個體的憑證或非對稱金鑰。 如需加密需求及權限的資訊，請參閱[備份加密](../../relational-databases/backup-restore/backup-encryption.md)。  
   
-1.  **建立 SQL Server 認證：**若要建立 SQL Server 認證，請連接到 Database Engine，再開啟新的查詢視窗，複製並貼上下列範例，然後按一下 [執行]****。  
+1.  **建立 SQL Server 認證：**若要建立 SQL Server 認證，請連接到 Database Engine，再開啟新的查詢視窗，複製並貼上下列範例，然後按一下 [執行]。  
   
     ```  
     CREATE CREDENTIAL mycredential   
@@ -91,7 +92,7 @@ ms.lasthandoff: 04/11/2017
     , SECRET = '<storage account access key>' – this should be either the Primary or Secondary Access Key for the storage account  
     ```  
   
-2.  **建立資料庫主要金鑰︰** 選擇要儲存在資料庫中之主要金鑰複本的加密密碼。 連接到 Database Engine，再啟動新的查詢視窗，將下列範例複製並貼到新的查詢視窗中，然後按一下 [執行]****。  
+2.  **建立資料庫主要金鑰︰** 選擇要儲存在資料庫中之主要金鑰複本的加密密碼。 連接到 Database Engine，再啟動新的查詢視窗，將下列範例複製並貼到新的查詢視窗中，然後按一下 [執行]。  
   
     ```  
     -- Creates a database master key.  
@@ -103,7 +104,7 @@ ms.lasthandoff: 04/11/2017
   
     ```  
   
-3.  **建立備份憑證︰**建立主要資料庫的備份憑證。 複製下列範例，並將其貼到查詢視窗中，然後按一下 [執行]****。  
+3.  **建立備份憑證︰**建立主要資料庫的備份憑證。 複製下列範例，並將其貼到查詢視窗中，然後按一下 [執行]。  
   
     ```  
     USE Master;  

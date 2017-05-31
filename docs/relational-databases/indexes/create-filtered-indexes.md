@@ -20,9 +20,10 @@ caps.latest.revision: 73
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: de8d5ce869856d289b70b028ede2bc1009220a38
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -112,13 +113,13 @@ ms.lasthandoff: 04/11/2017
   
 3.  按一下加號展開要建立篩選索引的資料表。  
   
-4.  以滑鼠右鍵按一下 [索引]**** 資料夾，指向 [新增索引]****，然後選取 [非叢集索引…]****。  
+4.  以滑鼠右鍵按一下 [索引] 資料夾，指向 [新增索引]，然後選取 [非叢集索引…]。  
   
 5.  在 **[新增索引]** 對話方塊，於 **[一般]** 頁面上的 **[索引名稱]** 方塊中輸入新索引的名稱。  
   
 6.  按一下 **[索引鍵資料行]**底下的 **[加入]**。  
   
-7.  在 [從 <資料表名稱>** 選取資料行]**** 對話方塊中，選取要加入唯一索引之一或多個資料表資料行的核取方塊。  
+7.  在 [從 <資料表名稱> 選取資料行] 對話方塊中，選取要加入唯一索引之一或多個資料表資料行的核取方塊。  
   
 8.  按一下 **[確定]**。  
   

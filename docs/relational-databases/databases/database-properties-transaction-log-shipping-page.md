@@ -16,9 +16,10 @@ caps.latest.revision: 21
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 11d0b9d1cde11ab1f3a0944c313d4d800e5039b0
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -32,7 +33,7 @@ ms.lasthandoff: 04/11/2017
  啟用此資料庫為記錄傳送的主要資料庫。 先選取它，然後設定此頁面上的其他選項。 如果您清除此核取方塊，就會卸除此資料庫的記錄傳送組態。  
   
  **備份設定**  
- 按一下 [備份設定]**** 即可設定備份排程、位置、警示及封存參數。  
+ 按一下 [備份設定] 即可設定備份排程、位置、警示及封存參數。  
   
  **備份排程**  
  顯示主要資料庫目前選取的備份排程。 按一下 **[備份設定]** 即可修改這些設定。  
@@ -44,7 +45,7 @@ ms.lasthandoff: 04/11/2017
  列出此主要資料庫目前設定的次要伺服器與資料庫。 反白顯示資料庫，然後按一下 **[...]** 即可修改與次要資料庫相關聯的參數。  
   
  **[加入]**  
- 按一下 [加入]****，即可將次要資料庫加入此主要資料庫的記錄傳送組態。  
+ 按一下 [加入]，即可將次要資料庫加入此主要資料庫的記錄傳送組態。  
   
  **移除**  
  從這個記錄傳送組態中，移除選取的資料庫。 先選取資料庫，然後按一下 **[移除]**。  
