@@ -16,9 +16,10 @@ caps.latest.revision: 13
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: bbc752ab48b3295047876f7957aa83abd166facc
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -33,7 +34,7 @@ ms.lasthandoff: 04/11/2017
  指出此原則目前是否已啟用的核取記號。 如果此原則未啟用，則為空白。  
   
  **記錄**  
- 按一下 [檢視記錄]**** 超連結可顯示執行記錄報告。  
+ 按一下 [檢視記錄] 超連結可顯示執行記錄報告。  
   
  **建立日期**  
  這是建立此原則的日期。  

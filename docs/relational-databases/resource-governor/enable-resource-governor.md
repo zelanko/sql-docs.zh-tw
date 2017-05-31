@@ -16,9 +16,10 @@ caps.latest.revision: 12
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d4bcec1331a7878bf261aea8923fa8f8e66e7299
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -49,14 +50,14 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，開啟 [物件總管]，然後遞迴地向下展開 **[管理]** 節點至 **[資源管理員]**。  
   
-2.  以滑鼠右鍵按一下 [資源管理員]****，然後按一下 [啟用]****。  
+2.  以滑鼠右鍵按一下 [資源管理員]，然後按一下 [啟用]。  
   
 ##  <a name="RGOnProp"></a> 使用資源管理員屬性啟用資源管理員  
  **若要使用資源管理員屬性頁面來啟用資源管理員**  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，開啟 [物件總管]，然後遞迴地向下展開 **[管理]** 節點至 **[資源管理員]**。  
   
-2.  以滑鼠右鍵按一下 [資源管理員]****，然後按一下 [屬性]****，這會開啟 [資源管理員屬性]**** 頁面。  
+2.  以滑鼠右鍵按一下 [資源管理員]，然後按一下 [屬性]，這會開啟 [資源管理員屬性] 頁面。  
   
 3.  按一下 **[啟用資源管理員]** 核取方塊，然後按一下 **[確定]**。  
   

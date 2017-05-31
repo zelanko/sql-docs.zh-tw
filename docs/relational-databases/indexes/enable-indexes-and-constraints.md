@@ -21,9 +21,10 @@ caps.latest.revision: 27
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 2e0e171e2cf2bdc35a3e9c3c7e5ed1077aabe4dc
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -90,7 +91,7 @@ ms.lasthandoff: 04/11/2017
   
 4.  按一下加號展開 **[索引]** 資料夾。  
   
-5.  以滑鼠右鍵按一下您要啟用的索引，然後選取 [重建]****。  
+5.  以滑鼠右鍵按一下您要啟用的索引，然後選取 [重建]。  
   
 6.  在 **[重建索引]** 對話方塊中，確認 **[要重建的索引]** 方格中有正確索引，然後按一下 **[確定]**。  
   
@@ -102,7 +103,7 @@ ms.lasthandoff: 04/11/2017
   
 3.  按一下加號展開要啟用索引的資料表。  
   
-4.  以滑鼠右鍵按一下 [索引]**** 資料夾，並選取 [全部重建]****。  
+4.  以滑鼠右鍵按一下 [索引] 資料夾，並選取 [全部重建]。  
   
 5.  在 **[重建索引]** 對話方塊中，確認 **[要重建的索引]** 方格中有正確索引，然後按一下 **[確定]**。 若要從 **[要重建的索引]** 方格中移除索引，請選取索引，然後按下 DELETE 鍵。  
   

@@ -14,9 +14,10 @@ caps.latest.revision: 10
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 685eb349ecbd054ed37b77e6a8472ee47db78e0b
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -66,7 +67,7 @@ ms.lasthandoff: 04/11/2017
   
 3.  按一下加號展開 **[資料分割配置]** 資料夾。  
   
-4.  以滑鼠右鍵按一下您想要刪除的資料分割配置，然後選取 [刪除]****。  
+4.  以滑鼠右鍵按一下您想要刪除的資料分割配置，然後選取 [刪除]。  
   
 5.  在 **[刪除物件]** 對話方塊中，確定已選取正確的資料分割配置，然後按一下 **[確定]**。  
   

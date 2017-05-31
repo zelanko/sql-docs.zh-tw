@@ -18,9 +18,10 @@ caps.latest.revision: 30
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 6eb24cf562396f61af07735fa741e50d447a4b50
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -58,11 +59,11 @@ ms.lasthandoff: 04/11/2017
   
 2.  依序展開 **[資料庫]**、程序所屬的資料庫，以及 **[可程式性]**。  
   
-3.  展開 [預存程序]****，以滑鼠右鍵按一下要修改的程序，然後按一下 [修改]****。  
+3.  展開 [預存程序]，以滑鼠右鍵按一下要修改的程序，然後按一下 [修改]。  
   
 4.  修改預存程序的文字。  
   
-5.  若要測試語法，請在 [查詢] **** 功能表上按一下 [剖析] ****。  
+5.  若要測試語法，請在 [查詢]  功能表上按一下 [剖析] 。  
   
 6.  若要將所做的修改儲存至程序定義，請在 **[查詢]** 功能表上按一下 **[執行]**。  
   

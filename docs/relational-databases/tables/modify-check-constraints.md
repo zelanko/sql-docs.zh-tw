@@ -19,9 +19,10 @@ caps.latest.revision: 18
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 56805de308b7824cbfb948de432131c139db9df0
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -53,7 +54,7 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="to-modify-a-check-constraint"></a>若要修改檢查條件約束  
   
-1.  在 [物件總管]**** 中，以滑鼠右鍵按一下包含檢查條件約束的資料表，並選取 [設計]****。  
+1.  在 [物件總管] 中，以滑鼠右鍵按一下包含檢查條件約束的資料表，並選取 [設計]。  
   
 2.  在 **[資料表設計工具]** 功能表上，按一下 **[檢查條件約束]**。  
   
@@ -74,7 +75,7 @@ ms.lasthandoff: 04/11/2017
   
 5.  按一下 [ **關閉**]。  
   
-6.  在 [檔案] **** 功能表上，按一下 [儲存] *****table name*。  
+6.  在 [檔案]  功能表上，按一下 [儲存] *table name*。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **若要修改檢查條件約束**  
