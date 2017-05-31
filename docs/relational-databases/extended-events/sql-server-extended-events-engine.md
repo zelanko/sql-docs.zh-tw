@@ -17,9 +17,10 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e11bf82e65be3b127ca7ee6c4f43ab2b60531b71
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -44,7 +45,7 @@ ms.lasthandoff: 04/11/2017
   
  請注意下列事項：  
   
--   每一個 Windows 處理序都可以有一或多個模組 (**Win32 處理序**、**Win32 模組**)。 這些也稱為「二進位檔」**或「可執行模組」**。  
+-   每一個 Windows 處理序都可以有一或多個模組 (**Win32 處理序**、**Win32 模組**)。 這些也稱為「二進位檔」或「可執行模組」。  
   
 -   每一個 Windows 處理序模組都可包含一或多個擴充的事件封裝 (**Package**)，其中包含一或多個擴充的事件物件 (**Type**、**Target**、**Action**、**Map**、**Predicate** 和 **Event**)。  
   

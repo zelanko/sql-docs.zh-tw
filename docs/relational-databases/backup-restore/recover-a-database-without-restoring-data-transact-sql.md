@@ -22,14 +22,15 @@ caps.latest.revision: 39
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 06806d82a8075b0aa25bd66028eefee1a83ec2f9
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="recover-a-database-without-restoring-data-transact-sql"></a>在不還原資料的情況下復原資料庫 (Transact-SQL)
-  通常會先還原 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中的所有資料，再復原資料庫。 不過，還原作業可以復原資料庫，而不實際還原備份；例如，復原與資料庫一致的唯讀檔案時即是如此。 這稱為「僅復原的還原」**。 如果離線資料已與資料庫一致，而且只需要回復為可用狀態，僅復原的還原作業就會完成資料庫的復原，並讓資料回到線上。  
+  通常會先還原 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中的所有資料，再復原資料庫。 不過，還原作業可以復原資料庫，而不實際還原備份；例如，復原與資料庫一致的唯讀檔案時即是如此。 這稱為「僅復原的還原」。 如果離線資料已與資料庫一致，而且只需要回復為可用狀態，僅復原的還原作業就會完成資料庫的復原，並讓資料回到線上。  
   
  整個資料庫或一個或多個檔案或檔案群組，都可能發生僅復原的還原。  
   

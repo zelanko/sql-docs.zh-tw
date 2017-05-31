@@ -16,9 +16,10 @@ caps.latest.revision: 24
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0357c3a55855bbc1e9a0b6a86582dcd104de663c
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -32,7 +33,7 @@ ms.lasthandoff: 04/11/2017
  **快照集格式**  
  為快照集格式選取原生模式或字元模式。  
   
--   如果所有的訂閱者都是 **** 的執行個體，而非 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體，請選取 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)]. 原生快照集格式可以提供最佳的效能。  
+-   如果所有的訂閱者都是  的執行個體，而非 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體，請選取 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)]. 原生快照集格式可以提供最佳的效能。  
   
 -   如果有任何訂閱者正在執行 **，或為非** 訂閱者，請選取 [!INCLUDE[ssEW](../../includes/ssew-md.md)] [字元 - 如果發行者或訂閱者沒有執行 SQL Server 則需要][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   

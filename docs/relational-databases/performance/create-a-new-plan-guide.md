@@ -19,9 +19,10 @@ caps.latest.revision: 17
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c0cc530e59007070fba228c06a4f8f2983faa3f3
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -49,7 +50,7 @@ ms.lasthandoff: 04/11/2017
  
 1.  按一下加號，展開您要在其中建立計畫指南的資料庫，然後按一下加號展開 **[可程式性]** 資料夾。  
   
-2.  以滑鼠右鍵按一下 [計畫指南]**** 資料夾，然後選取 [新增計畫指南…]****。
+2.  以滑鼠右鍵按一下 [計畫指南] 資料夾，然後選取 [新增計畫指南…]。
 ![select_plan_guide](../../relational-databases/performance/media/select-plan-guide.png)
   
 3.  在 **[新增維護計畫]** 對話方塊中的 **[名稱]** 方塊，輸入計畫指南的名稱。  
@@ -62,7 +63,7 @@ ms.lasthandoff: 04/11/2017
   
 7.  在 **[範圍結構描述名稱]** 清單中，輸入包含了該物件的結構描述名稱。 **[範圍結構描述名稱]** 方塊只在 **[物件]** 選定為範圍類型時才可供使用。  
   
-8.  在 [範圍物件名稱]**** 方塊中，輸入顯示 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 預存程序名稱、使用者定義純量函數名稱、多重陳述式資料表值函數名稱或 DML 觸發程序名稱。 **[範圍物件名稱]** 方塊只在 **[物件]** 選定為範圍類型時才可供使用。  
+8.  在 [範圍物件名稱] 方塊中，輸入顯示 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 預存程序名稱、使用者定義純量函數名稱、多重陳述式資料表值函數名稱或 DML 觸發程序名稱。 **[範圍物件名稱]** 方塊只在 **[物件]** 選定為範圍類型時才可供使用。  
   
 9. 在 **[參數]** 方塊中，輸入 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式中內嵌的所有參數的參數名稱與資料類型。  
   

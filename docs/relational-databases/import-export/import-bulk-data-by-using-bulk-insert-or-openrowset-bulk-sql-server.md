@@ -25,9 +25,10 @@ caps.latest.revision: 45
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 3abb7e7f582c7699b128d8b9d70b4aec34041424
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -106,10 +107,10 @@ ms.lasthandoff: 04/11/2017
   
  例如，有個使用者使用 Windows 驗證登入了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 如果這個使用者要用 BULK INSERT 或 OPENROWSET 從資料檔案匯入資料到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表中，則使用者帳戶必須具有資料檔案的讀取權限。 有了資料檔案的存取權之後，即使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序沒有權限存取檔案，使用者還是可以將檔案中的資料匯入到資料表。 使用者不需要將檔案存取權限授與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 可以設定為，透過轉送已驗證 Windows 使用者的認證，讓 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體連接到另一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 此設置也稱為「模擬」**或「委派」**。 當您使用 BULK INSERT 或 OPENROWSET 時，請務必了解 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本如何處理使用者模擬的安全性。 使用者模擬允許資料檔案位於和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序或使用者不同的電腦上。 例如，如果位於 **Computer_A** 的使用者可以存取 **Computer_B**上的資料檔案，且已適當設定認證委派，則使用者可以連接到執行於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Computer_C **上的**執行個體，然後存取 **Computer_B**上的資料檔案，並從該檔案大量匯入資料到 **Computer_C**上的資料表。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 可以設定為，透過轉送已驗證 Windows 使用者的認證，讓 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體連接到另一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 此設置也稱為「模擬」或「委派」。 當您使用 BULK INSERT 或 OPENROWSET 時，請務必了解 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本如何處理使用者模擬的安全性。 使用者模擬允許資料檔案位於和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序或使用者不同的電腦上。 例如，如果位於 **Computer_A** 的使用者可以存取 **Computer_B**上的資料檔案，且已適當設定認證委派，則使用者可以連接到執行於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Computer_C **上的**執行個體，然後存取 **Computer_B**上的資料檔案，並從該檔案大量匯入資料到 **Computer_C**上的資料表。  
   
 ## <a name="bulk-importing-from-a-remote-data-file"></a>從遠端資料檔案大量匯入  
- 若要使用 BULK INSERT 或 INSERT...SELECT \* FROM OPENROWSET(BULK...) 從另一部電腦大量匯入資料，則必須在兩部電腦之間共用資料檔案。 若要指定共用資料檔案，請使用它的通用命名慣例 (UNC) 名稱，其使用一般格式：**\\\\**<伺服器名稱>****\\**<共用名稱>****\\**<路徑>****\\**<檔案名稱>**。 此外，用來存取資料檔案的帳戶必須擁有在遠端磁碟上讀取檔案所需的權限。  
+ 若要使用 BULK INSERT 或 INSERT...SELECT \* FROM OPENROWSET(BULK...) 從另一部電腦大量匯入資料，則必須在兩部電腦之間共用資料檔案。 若要指定共用資料檔案，請使用它的通用命名慣例 (UNC) 名稱，其使用一般格式：**\\\\**<伺服器名稱>**\\**<共用名稱>**\\**<路徑>**\\**<檔案名稱>。 此外，用來存取資料檔案的帳戶必須擁有在遠端磁碟上讀取檔案所需的權限。  
   
  例如，下列 `BULK INSERT` 陳述式會從名為 `SalesOrderDetail` 的資料檔案大量匯入資料到 `AdventureWorks` 資料庫的 `newdata.txt`資料表。 此資料檔案位於 `\dailyorders` 系統上的 `salesforce` 網路共用目錄上的 `computer2`共用資料夾中。  
   

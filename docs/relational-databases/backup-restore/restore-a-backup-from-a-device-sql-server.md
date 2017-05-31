@@ -19,9 +19,10 @@ caps.latest.revision: 28
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 1330611f9a861079182566365b7425e7dacbbea3
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -60,9 +61,9 @@ ms.lasthandoff: 04/11/2017
   
 2.  展開 **[資料庫]**，然後視資料庫而定，選取使用者資料庫，或者展開 **[系統資料庫]** 並選取一個系統資料庫。  
   
-3.  以滑鼠右鍵按一下資料庫，指向 [工作]****，然後按一下 [還原]****。  
+3.  以滑鼠右鍵按一下資料庫，指向 [工作]，然後按一下 [還原]。  
   
-4.  按一下您想要的還原作業類型 ([資料庫]****、[檔案和檔案群組]**** 或 [交易記錄檔]****)。 這會開啟對應的還原對話方塊。  
+4.  按一下您想要的還原作業類型 ([資料庫]、[檔案和檔案群組] 或 [交易記錄檔])。 這會開啟對應的還原對話方塊。  
   
 5.  在 **[一般]** 頁面的 **[還原來源]** 區段中，按一下 **[來源裝置]**。  
   

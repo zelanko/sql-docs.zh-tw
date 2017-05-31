@@ -19,9 +19,10 @@ caps.latest.revision: 19
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 268f1fbd8ea57db8626c84999a3454e4c4459511
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -32,7 +33,7 @@ ms.lasthandoff: 04/11/2017
   
 -   稽核物件存取設定必須設定為可擷取事件。 稽核原則工具 (`auditpol.exe`) 會在 **audit object access** 類別目錄中公開各種子原則設定。 若要允許 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 稽核物件存取，請設定 **application generated** 設定。  
   
--   執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務所使用的帳戶必須擁有 [產生安全性稽核] **** 權限，才能寫入 Windows 安全性記錄檔。 根據預設，LOCAL SERVICE 和 NETWORK SERVICE 帳戶都擁有這個權限。 如果 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 是在其中一個帳戶底下執行，就不需要進行這個步驟。  
+-   執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務所使用的帳戶必須擁有 [產生安全性稽核]  權限，才能寫入 Windows 安全性記錄檔。 根據預設，LOCAL SERVICE 和 NETWORK SERVICE 帳戶都擁有這個權限。 如果 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 是在其中一個帳戶底下執行，就不需要進行這個步驟。  
   
  如果 Windows 稽核原則設定為寫入 Windows 安全性記錄檔，它就可能會影響 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 稽核，而且如果稽核原則的設定不正確，甚至可能會遺失事件。 一般而言，Windows 安全性記錄檔會設定為覆寫較舊的事件。 這樣做會保留最近的事件。 不過，如果 Windows 安全性記錄檔並非設定為覆寫較舊的事件，只要安全性記錄檔已滿，系統就會發出 Windows 事件 1104 (記錄檔已滿)。 此時：  
   
@@ -72,7 +73,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  以系統管理權限開啟命令提示字元。  
   
-    1.  在 [開始]**** 功能表上，依序指向 [所有程式]**** 和 [附屬應用程式]****、以滑鼠右鍵按一下 [命令提示字元]****，然後按一下 [以系統管理員身分執行]****。  
+    1.  在 [開始] 功能表上，依序指向 [所有程式] 和 [附屬應用程式]、以滑鼠右鍵按一下 [命令提示字元]，然後按一下 [以系統管理員身分執行]。  
   
     2.  如果開啟 **[使用者帳戶控制]** 對話方塊，請按一下 **[繼續]**。  
   
@@ -92,11 +93,11 @@ ms.lasthandoff: 04/11/2017
   
 3.  在本機安全性原則工具中，依序展開 **[安全性設定]**和 **[本機原則]**，然後按一下 **[使用者權限指派]**。  
   
-4.  在結果窗格中，按兩下 [產生安全性稽核]****。  
+4.  在結果窗格中，按兩下 [產生安全性稽核]。  
   
 5.  在 **[本機安全性設定]** 索引標籤上，按一下 **[新增使用者或群組]**。  
   
-6.  在 [選取使用者、電腦或群組]**** 對話方塊中，輸入使用者帳戶的名稱 (例如 **domain1\user1**) 並按一下 [確定]****，或按一下 [進階]**** 並搜尋帳戶。  
+6.  在 [選取使用者、電腦或群組] 對話方塊中，輸入使用者帳戶的名稱 (例如 **domain1\user1**) 並按一下 [確定]，或按一下 [進階] 並搜尋帳戶。  
   
 7.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -112,7 +113,7 @@ ms.lasthandoff: 04/11/2017
   
 3.  在本機安全性原則工具中，依序展開 **[安全性設定]**和 **[本機原則]**，然後按一下 **[稽核原則]**。  
   
-4.  在結果窗格中，按兩下 [稽核物件存取]****。  
+4.  在結果窗格中，按兩下 [稽核物件存取]。  
   
 5.  在 **[本機安全性設定]** 索引標籤的 **[稽核這些嘗試]** 區域中，同時選取 **[成功]** 和 **[失敗]**。  
   

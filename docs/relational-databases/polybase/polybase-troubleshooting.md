@@ -20,9 +20,10 @@ caps.latest.revision: 22
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: bef55c15906ea76d2993d41e3eb7cbfd4bac9a4f
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -142,13 +143,13 @@ ms.lasthandoff: 04/11/2017
   
 ## <a name="to-view-the--polybase-query-plan"></a>檢視 PolyBase 查詢計劃  
   
-1.  在 SSMS 中，啟用 [包括實際執行計畫]**** (Ctrl + M) 並執行查詢。  
+1.  在 SSMS 中，啟用 [包括實際執行計畫] (Ctrl + M) 並執行查詢。  
   
-2.  按一下 [執行計劃]**** 索引標籤。  
+2.  按一下 [執行計劃] 索引標籤。  
   
      ![PolyBase 查詢計畫](../../relational-databases/polybase/media/polybase-query-plan.png "PolyBase 查詢計畫")  
   
-3.  在 [遠端查詢運算子]**** 上按一下滑鼠右鍵，然後選取 [屬性]****。  
+3.  在 [遠端查詢運算子] 上按一下滑鼠右鍵，然後選取 [屬性]。  
   
 4.  複製遠端查詢值，並將其貼至文字編輯器，以檢視 XML 遠端查詢計劃。  下列為範例。  
   

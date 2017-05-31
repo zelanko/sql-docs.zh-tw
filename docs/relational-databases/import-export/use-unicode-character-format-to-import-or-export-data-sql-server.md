@@ -17,9 +17,10 @@ caps.latest.revision: 37
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 63fb68860ade1e0bd64ce87ca98ec4439bf238fa
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -61,7 +62,7 @@ Error = [Microsoft][ODBC Driver 13 for SQL Server]Invalid character value for ca
 
 * 資料檔案中的第一個欄位不是字元。
 
-請考慮下列因應措施是否適用於**情況︰
+請考慮下列因應措施是否適用於情況︰
 * 不使用格式檔案。  以下是此因應措施的範例。您可以參閱 [不使用格式檔案而使用 bcp 與 Unicode 字元格式匯入資料](#bcp_widechar_import)。
 
 * 使用 **-c** 參數而不使用 **-w**。

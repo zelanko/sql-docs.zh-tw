@@ -16,9 +16,10 @@ caps.latest.revision: 9
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 7f89ed5e87b8fd51e8618a8559679225d91b32de
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -32,7 +33,7 @@ SQL Server 中的[查詢存放區](../../relational-databases/performance/how-qu
   
 <a name="how-to-tune-a-workload-from-query-store-in-database-engine-tuning-advisor-gui"></a>如何在 Database Engine Tuning Advisor GUI 中調整查詢存放區的工作負載
 ---
-從 DTA GUI 中，選取 [一般]****窗格中的 [查詢存放區]**** 選項按鈕，即可啟用此功能 (請參閱下圖)。
+從 DTA GUI 中，選取 [一般]窗格中的 [查詢存放區] 選項按鈕，即可啟用此功能 (請參閱下圖)。
 ![查詢存放區的 DTA 工作負載](../../relational-databases/performance/media/dta-workload-from-query-store.gif)
  
 <a name="how-to-tune-a-workload-from-query-store-in-dtaexe-command-line-utility"></a>如何在 dta.exe 命令列公用程式中調整查詢存放區的工作負載

@@ -14,9 +14,10 @@ caps.latest.revision: 16
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a376ebb734dab193b9cd1118d4c1fe642dc392ab
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -36,10 +37,10 @@ ms.lasthandoff: 04/11/2017
   
 ### <a name="using-sql-server-management-studio"></a>使用 SQL Server Management Studio  
   
--   此還原工作使用 SQL Server Management Studio 來還原資料庫。 備份媒體頁面現在包含 [URL]**** 選項，以顯示儲存在 Windows Azure Blob 儲存體服務中的備份檔案。 您也必須提供用來驗證儲存體帳戶的 SQL 認證。 [要還原的備份組]**** 方格接著會填入 Windows Azure Blob 儲存體中的可用備份。 如需詳細資訊，請參閱[使用 SQL Server Management Studio 從 Windows Azure 儲存體還原](../../relational-databases/backup-restore/sql-server-backup-to-url.md#RestoreSSMS)。  
+-   此還原工作使用 SQL Server Management Studio 來還原資料庫。 備份媒體頁面現在包含 [URL] 選項，以顯示儲存在 Windows Azure Blob 儲存體服務中的備份檔案。 您也必須提供用來驗證儲存體帳戶的 SQL 認證。 [要還原的備份組] 方格接著會填入 Windows Azure Blob 儲存體中的可用備份。 如需詳細資訊，請參閱[使用 SQL Server Management Studio 從 Windows Azure 儲存體還原](../../relational-databases/backup-restore/sql-server-backup-to-url.md#RestoreSSMS)。  
   
 ### <a name="optimizing-restores"></a>最佳化還原  
- 若要減少還原寫入時間，請將 [執行磁碟區維護工作]**** 使用者權限加入至 SQL Server 使用者帳戶。 如需詳細資訊，請參閱[資料庫檔案初始化](http://go.microsoft.com/fwlink/?LinkId=271622)。 如果開啟立即檔案初始化功能之後，還原速度仍然很慢，請查看資料庫備份所在之執行個體上的記錄檔大小。 如果記錄檔大小很大 (數以 GB)，還原速度應該就會很慢。 在還原期間，記錄檔必須歸零，因此需要大量時間。  
+ 若要減少還原寫入時間，請將 [執行磁碟區維護工作] 使用者權限加入至 SQL Server 使用者帳戶。 如需詳細資訊，請參閱[資料庫檔案初始化](http://go.microsoft.com/fwlink/?LinkId=271622)。 如果開啟立即檔案初始化功能之後，還原速度仍然很慢，請查看資料庫備份所在之執行個體上的記錄檔大小。 如果記錄檔大小很大 (數以 GB)，還原速度應該就會很慢。 在還原期間，記錄檔必須歸零，因此需要大量時間。  
   
  若要減少還原時間，建議您使用壓縮的備份。  如果備份大小超過 25 GB，請使用 [AzCopy 公用程式](http://blogs.msdn.com/b/windowsazurestorage/archive/2012/12/03/azcopy-uploading-downloading-files-for-windows-azure-blobs.aspx) 下載到本機磁碟機，然後執行還原。 如需其他備份最佳做法與建議，請參閱 [SQL Server 備份至 URL 的最佳做法和疑難排解](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)。  
   

@@ -15,14 +15,15 @@ caps.latest.revision: 16
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 6daed0f65622cd6a0533db68441021cb8c8f0a1c
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="change-the-target-recovery-time-of-a-database-sql-server"></a>變更資料庫的目標復原時間 (SQL Server)
-  本主題描述如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ，在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中設定或變更 [!INCLUDE[tsql](../../includes/tsql-md.md)]資料庫的目標復原時間。 根據預設，目標復原時間為 60 秒，而且資料庫使用「間接檢查點」**。 目標復原時間會建立此資料庫的復原時間上限。  
+  本主題描述如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ，在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中設定或變更 [!INCLUDE[tsql](../../includes/tsql-md.md)]資料庫的目標復原時間。 根據預設，目標復原時間為 60 秒，而且資料庫使用「間接檢查點」。 目標復原時間會建立此資料庫的復原時間上限。  
   
 > [!NOTE]  
 >  如果長時間執行的交易造成過多的復原次數，可能會超過目標復原時間設定針對給定資料庫所指定的上限。  
@@ -46,13 +47,13 @@ ms.lasthandoff: 04/11/2017
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  **若要變更目標復原時間**  
   
-1.  在 [物件總管] ****中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的執行個體，然後展開該執行個體。  
+1.  在 [物件總管] 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的執行個體，然後展開該執行個體。  
   
-2.  以滑鼠右鍵按一下您想要變更的資料庫，然後按一下 [屬性] **** 命令。  
+2.  以滑鼠右鍵按一下您想要變更的資料庫，然後按一下 [屬性]  命令。  
   
-3.  在 [資料庫屬性] **** 對話方塊中按一下 [選項] **** 頁面。  
+3.  在 [資料庫屬性]  對話方塊中按一下 [選項]  頁面。  
   
-4.  在 [復原] **** 面板的 [目標復原時間 (秒)] **** 欄位中，指定您想要設定為這個資料庫之復原時間上限的秒數。  
+4.  在 [復原]  面板的 [目標復原時間 (秒)]  欄位中，指定您想要設定為這個資料庫之復原時間上限的秒數。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **若要變更目標復原時間**  

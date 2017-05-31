@@ -16,14 +16,15 @@ caps.latest.revision: 44
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 553e8aece3969407a818d98cf69c20bf922d3601
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="advanced-edit-condition-dialog-box"></a>進階編輯 (條件) 對話方塊
-  使用 [進階編輯]**** 對話方塊可針對以原則為基礎的管理條件建立複雜運算式。  
+  使用 [進階編輯] 對話方塊可針對以原則為基礎的管理條件建立複雜運算式。  
   
 ## <a name="options"></a>選項。  
  **資料格值**  

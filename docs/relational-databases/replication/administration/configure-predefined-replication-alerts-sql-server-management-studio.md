@@ -17,9 +17,10 @@ caps.latest.revision: 24
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: fdd1352c4f7f6c62c8adfc5fcf9b2932568c12d1
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -42,7 +43,7 @@ ms.lasthandoff: 04/11/2017
   
 -   **複寫: 代理程式自訂關閉**  
   
- 在 **** 中的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or the **Warnings** tab in Replication Monitor. 如需如何存取此索引標籤的詳細資訊，請參閱[檢視訂閱的資訊並執行工作 &#40;複寫監視器&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)。  
+ 在  中的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or the **Warnings** tab in Replication Monitor. 如需如何存取此索引標籤的詳細資訊，請參閱[檢視訂閱的資訊並執行工作 &#40;複寫監視器&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)。  
   
  除了這些警示外，複寫監視器還提供與狀態和效能相關的警告與警示集合。 如需相關資訊，請參閱 [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)。 您也可以使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 警示基礎結構，為其他複寫事件定義警示。 如需詳細資訊，請參閱[建立使用者定義的事件](http://msdn.microsoft.com/library/03d71a35-97fa-4bba-aa9a-23ac9c9cf879)。  
   
@@ -54,7 +55,7 @@ ms.lasthandoff: 04/11/2017
   
 3.  以滑鼠右鍵按一下複寫警示，然後按一下 **[屬性]**。  
   
-4.  在 [\<警示名稱> 警示屬性]**** 對話方塊中設定選項：  
+4.  在 [\<警示名稱> 警示屬性] 對話方塊中設定選項：  
   
     -   在 **[一般]** 頁面上，按一下 **[啟用]**；指定警示應套用至哪個資料庫。  
   
@@ -72,7 +73,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  在 **[設定複寫警示]** 對話方塊中選取一個警示，然後按一下 **[設定]**。  
   
-3.  在 [\<警示名稱> 警示屬性]**** 對話方塊中設定選項：  
+3.  在 [\<警示名稱> 警示屬性] 對話方塊中設定選項：  
   
     -   在 **[一般]** 頁面上，按一下 **[啟用]**；指定警示應套用至哪個資料庫。  
   

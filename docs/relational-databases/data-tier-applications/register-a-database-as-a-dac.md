@@ -24,9 +24,10 @@ caps.latest.revision: 22
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: af264d24411b3d384abea2723df465dd926232c6
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -55,7 +56,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  展開 **[資料庫]** 節點。  
   
-3.  以滑鼠右鍵按一下要註冊的資料庫，然後指向 [工作]，再選取 [註冊為資料層應用程式…]  
+3.  以滑鼠右鍵按一下要註冊的資料庫，然後指向 [工作]，再選取 [註冊為資料層應用程式…]****  
   
 4.  完成精靈對話方塊：  
   

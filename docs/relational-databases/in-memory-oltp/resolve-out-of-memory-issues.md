@@ -14,9 +14,10 @@ caps.latest.revision: 18
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d6eef790f729a3270c0ba046d6a60114ae2da8dc
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -71,7 +72,7 @@ ms.lasthandoff: 04/11/2017
      如需 MAX_MEMORY_PERCENT 之最大值的資訊，請參閱主題章節： [可用於記憶體最佳化資料表和索引的記憶體百分比](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_PercentAvailable)。  
   
 -   增加**最大伺服器記憶體**。  
-    如需設定 [最大伺服器記憶體]**** 的資訊，請參閱[使用記憶體組態選項最佳化伺服器效能](http://technet.microsoft.com/library/ms177455\(v=SQL.105\).aspx)主題。  
+    如需設定 [最大伺服器記憶體] 的資訊，請參閱[使用記憶體組態選項最佳化伺服器效能](http://technet.microsoft.com/library/ms177455\(v=SQL.105\).aspx)主題。  
   
 ##  <a name="bkmk_recoverFromOOM"></a> 解決低記憶體或 OOM 狀況對於工作負載的影響  
  避免發生低記憶體或 OOM (記憶體不足) 的情況才是最上策。 良好的規劃和監視有助於避免 OOM 情況。 不過，最佳的規劃永遠無法預測實際發生的狀況，而最後可能會導致低記憶體或 OOM。 有兩個步驟可以從 OOM 中復原：  

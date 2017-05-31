@@ -16,9 +16,10 @@ caps.latest.revision: 28
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 08f8762c93f26dc9159328f6aa58b73063234d30
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -62,7 +63,7 @@ ms.lasthandoff: 04/11/2017
   
 -   未進行同步處理  
   
- 當給定訂閱有一個以上的狀態時，排序順序也會決定要顯示哪一個值。 例如，若訂閱有錯誤而且即將過期，則 [狀態] **** 資料行會顯示 [錯誤] ****。  
+ 當給定訂閱有一個以上的狀態時，排序順序也會決定要顯示哪一個值。 例如，若訂閱有錯誤而且即將過期，則 [狀態]  資料行會顯示 [錯誤] 。  
   
  **[效能嚴重不足]**、 **[長時間執行的合併]**、 **[即將過期/已過期]**和 **[未初始化的訂閱]** 等狀態值均為警告。 如果有顯示警告，則 **[狀態]** 資料行也會顯示代理程式是否為同步處理。 例如，狀態可能是 **[正在同步處理，效能嚴重不足]**。  
   

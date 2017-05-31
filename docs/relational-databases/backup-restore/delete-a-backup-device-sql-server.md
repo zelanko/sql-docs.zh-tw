@@ -20,9 +20,10 @@ caps.latest.revision: 30
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3d68cd7bdf48e838c060705166f3714eaa7db581
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -56,7 +57,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  展開 **[伺服器物件]**，然後展開 **[備份裝置]**。  
   
-3.  以滑鼠右鍵按一下所要的裝置，然後按一下 [刪除]****。  
+3.  以滑鼠右鍵按一下所要的裝置，然後按一下 [刪除]。  
   
 4.  在 **[刪除物件]** 對話方塊，確認 **[物件名稱]** 資料行中所顯示的裝置名稱是正確的。  
   

@@ -18,9 +18,10 @@ caps.latest.revision: 20
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: fa6785003c2e66f446cdc3a41960c5e3d18fad69
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -54,7 +55,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  展開 **[資料庫]**，然後視資料庫而定，選取使用者資料庫，或者展開 **[系統資料庫]** 並選取一個系統資料庫。  
   
-3.  以滑鼠右鍵按一下此資料庫，然後按一下 [屬性]****。  
+3.  以滑鼠右鍵按一下此資料庫，然後按一下 [屬性]。  
   
      **[資料庫屬性]** 對話方塊隨即開啟。  
   
@@ -62,7 +63,7 @@ ms.lasthandoff: 04/11/2017
   
      目前的相容性層級會顯示在 **[相容性層級]** 清單方塊中。  
   
-5.  若要變更相容性層級，請從清單中選取其他選項。 這些選項包括 [SQL Server 2008 (100)]****、[SQL Server 2012 (110)]**** 或 [SQL Server 2014 (120)]****。  
+5.  若要變更相容性層級，請從清單中選取其他選項。 這些選項包括 [SQL Server 2008 (100)]、[SQL Server 2012 (110)] 或 [SQL Server 2014 (120)]。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

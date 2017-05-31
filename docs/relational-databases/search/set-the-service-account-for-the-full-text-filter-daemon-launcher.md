@@ -17,9 +17,10 @@ caps.latest.revision: 50
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 4f860080278519f5c9a68619ee5a9e8c0a2292f9
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -34,13 +35,13 @@ SQL 全文檢索篩選背景程式啟動器服務是與特定 [!INCLUDE[ssNoVers
 
 ##  <a name="setting"></a> 設定服務帳戶  
   
-1.  在 [開始]**** 功能表上，指向 [所有程式]****，展開 [[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]，然後按一下 [SQL Server 2016 組態管理員]****。  
+1.  在 [開始] 功能表上，指向 [所有程式]，展開 [[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]，然後按一下 [SQL Server 2016 組態管理員]。  
   
-2.  在 [SQL Server 組態管理員]**** 中，按一下 [SQL Server 服務]****，以滑鼠右鍵按一下 **[SQL 全文檢索篩選背景程式啟動器 (**執行個體名稱****)]**，然後按一下 [屬性]****。  
+2.  在 [SQL Server 組態管理員] 中，按一下 [SQL Server 服務]，以滑鼠右鍵按一下 **[SQL 全文檢索篩選背景程式啟動器 (**執行個體名稱**)]**，然後按一下 [屬性]。  
   
-3.  按一下對話方塊的 [登入]**** 索引標籤，然後選取或輸入用以執行 SQL 全文檢索篩選背景程式啟動器服務所啟動之處理序的帳戶。  
+3.  按一下對話方塊的 [登入] 索引標籤，然後選取或輸入用以執行 SQL 全文檢索篩選背景程式啟動器服務所啟動之處理序的帳戶。  
   
-4.  在您關閉對話方塊之後，請按一下 [重新啟動] **** 重新啟動 SQL 全文檢索篩選背景程式啟動器服務。  
+4.  在您關閉對話方塊之後，請按一下 [重新啟動]  重新啟動 SQL 全文檢索篩選背景程式啟動器服務。  
   
 ![SQL 全文檢索篩選背景程式啟動器處理序屬性](../../relational-databases/search/media/sql-full-text-filter-daemon-launch-process-properties.png)
   

@@ -19,9 +19,10 @@ caps.latest.revision: 40
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 9c556f82f888c3237fcc77e6264aaefb2d67adb9
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -49,7 +50,7 @@ ms.lasthandoff: 04/11/2017
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  在「新增發行集精靈」的 **[發行項]** 頁面中定義資料行篩選。 如需使用「新增發行集精靈」的詳細資訊，請參閱[建立發行集](../../../relational-databases/replication/publish/create-a-publication.md)。  
   
- 在 [發行集屬性 - \<發行集>]**** 對話方塊的 [發行項]**** 頁面上定義及修改資料行篩選。 如需發行集和發行項屬性的詳細資訊，請參閱[檢視及修改發行集屬性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
+ 在 [發行集屬性 - \<發行集>] 對話方塊的 [發行項] 頁面上定義及修改資料行篩選。 如需發行集和發行項屬性的詳細資訊，請參閱[檢視及修改發行集屬性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
   
 #### <a name="to-define-a-column-filter"></a>若要定義資料行篩選  
   
@@ -59,7 +60,7 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="to-modify-column-filtering"></a>若要修改資料行篩選  
   
-1.  在 [發行集屬性 - \<發行集>]**** 對話方塊的 [發行項]**** 頁面中，展開要在 [發行的物件]**** 窗格中篩選的資料表。  
+1.  在 [發行集屬性 - \<發行集>] 對話方塊的 [發行項] 頁面中，展開要在 [發行的物件] 窗格中篩選的資料表。  
   
 2.  清除每個您要篩選之資料行旁邊的核取方塊，並確保為每個應包含在發行項中的資料行選取核取方塊。  
   

@@ -15,9 +15,10 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 9330ef01cb491fef9307149e0cc774fa2b042c52
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -44,13 +45,13 @@ ms.lasthandoff: 04/11/2017
 -   變更進階屬性組態。  
   
 > [!NOTE]  
->  [SQL Server 擴充事件精靈]**** 不支援修改事件工作階段。  
+>  [SQL Server 擴充事件精靈] 不支援修改事件工作階段。  
   
 ## <a name="how-to-alter-an-extended-events-session-using-the-sql-server-extended-events-wizard"></a>如何使用 SQL Server 擴充事件精靈更改擴充事件工作階段  
   
 -   在物件總管中，依序展開 **[管理]**、 **[擴充事件]**和 **[工作階段]**。  
   
--   以滑鼠右鍵按一下您要改變的工作階段，然後按一下 [屬性]****。  
+-   以滑鼠右鍵按一下您要改變的工作階段，然後按一下 [屬性]。  
   
 -   在 **[屬性]** 對話方塊中，進行適當的變更，然後按一下 **[確定]**。  
   

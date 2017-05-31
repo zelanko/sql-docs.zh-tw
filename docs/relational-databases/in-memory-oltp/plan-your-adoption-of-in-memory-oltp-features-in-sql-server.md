@@ -14,9 +14,10 @@ caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 4404ee4d70ed16ddaad5d0600f5d37225897d455
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -104,7 +105,7 @@ ms.lasthandoff: 04/11/2017
 
 您可以使用由 SSDT 管理的 .dacpac 檔案就地更新資料庫。 在 SSDT 中，您可以指定編碼在 .dacpac 檔案中的結構描述的變更。
 
-請在類型為「資料庫」**的 Visual Studio 專案內容中使用 .dacpac 檔案
+請在類型為「資料庫」的 Visual Studio 專案內容中使用 .dacpac 檔案
 
 - [資料層應用程式](../../relational-databases/data-tier-applications/data-tier-applications.md) 和 .dacpac 檔案
 
@@ -220,13 +221,13 @@ READPAST 提示在一些案例中很有幫助，例如數個工作階段全都�
 
 - 如果索引鍵值重複率變得太高，則雜湊索引可能不是最佳的選擇。
 
-- 防堵低估您的雜湊索引可能需要多少「值區」**，以避免在個別值區內產生長鏈。 如需詳細資料，請參閱：
+- 防堵低估您的雜湊索引可能需要多少「值區」，以避免在個別值區內產生長鏈。 如需詳細資料，請參閱：
     - [記憶體最佳化資料表的雜湊索引](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md)
 
 
 #### <a name="nonclustered-columnstore-indexes"></a>非叢集資料行存放區索引
 
-記憶體最佳化資料表提供一般商務交易資料的高輸送量，這個典範我們稱為「線上交易處理」**或 *OLTP*。 資料行存放區索引提供彙總與類似處理的高輸送量，我們稱為「分析」**。 在過去，滿足 OLTP 和分析的需求最好的方法，是使用個別的資料表，並大量移動資料，且具有某種程度的資料重複。 現在，有更簡單的 **混合式解決方案** ︰記憶體最佳化資料表的資料行存放區索引。
+記憶體最佳化資料表提供一般商務交易資料的高輸送量，這個典範我們稱為「線上交易處理」或 *OLTP*。 資料行存放區索引提供彙總與類似處理的高輸送量，我們稱為「分析」。 在過去，滿足 OLTP 和分析的需求最好的方法，是使用個別的資料表，並大量移動資料，且具有某種程度的資料重複。 現在，有更簡單的 **混合式解決方案** ︰記憶體最佳化資料表的資料行存放區索引。
 
 
 - [資料行存放區索引](../../relational-databases/indexes/columnstore-indexes-overview.md) 可以建立在以磁碟為基礎的資料表上，甚至是作為叢集索引。 但是記憶體最佳化資料表的資料行存放區索引無法加入叢集。
@@ -405,7 +406,7 @@ END;
 - 錯誤號碼是 41839。 (在 SQL Server 2014 中的錯誤號碼是 41301。)
 
 
-您可以讓您的 Transact-SQL 指令碼更能應付可能的交易錯誤，方法是在指令碼新增「重試邏輯」**。 在 UPDATE 和 DELETE 呼叫很頻繁時，或是另一個資料表中的外部索引鍵參考了記憶體最佳化的資料表時，重試邏輯更可能有幫助。 如需詳細資料，請參閱：
+您可以讓您的 Transact-SQL 指令碼更能應付可能的交易錯誤，方法是在指令碼新增「重試邏輯」。 在 UPDATE 和 DELETE 呼叫很頻繁時，或是另一個資料表中的外部索引鍵參考了記憶體最佳化的資料表時，重試邏輯更可能有幫助。 如需詳細資料，請參閱：
 
 - [Transactions with Memory-Optimized Tables](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md)
 - [記憶體最佳化資料表的交易相依性限制 – 錯誤 41839](https://blogs.msdn.microsoft.com/sqlcat/2016/07/11/transaction-dependency-limits-with-memory-optimized-tables-error-41839/)

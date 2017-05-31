@@ -20,9 +20,10 @@ caps.latest.revision: 42
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: ead93afe9ce79d5cee37f190f5c2d2707f69b880
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -62,7 +63,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的執行個體，然後展開該執行個體。  
   
-2.  展開 [資料庫]****，並以滑鼠右鍵按一下要檢視的資料庫，然後按一下 [屬性]****。  
+2.  展開 [資料庫]，並以滑鼠右鍵按一下要檢視的資料庫，然後按一下 [屬性]。  
   
 3.  在 **[資料庫屬性]** 對話方塊中，選取一個頁面以檢視對應的資訊。 例如，選取 **[檔案]** 頁面以檢視資料和記錄檔資訊。  
   

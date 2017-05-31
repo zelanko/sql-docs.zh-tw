@@ -16,9 +16,10 @@ caps.latest.revision: 6
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 7e21ddca2057879f3f9cde2bf5decf3c97944269
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -206,7 +207,7 @@ ms.lasthandoff: 04/11/2017
 此範例會建立發行集的立即更新提取訂閱，此發行集可支援立即更新訂閱。 登入和密碼值是在執行階段使用 sqlcmd 指令碼變數提供的。
 
 > [!NOTE]  
->  此指令碼使用 sqlcmd 指令碼變數。 它們的格式為 `$(MyVariable)`。 如需如何在命令列和 SQL Server Management Studio 中，使用指令碼變數的詳細資訊，請參閱[複寫系統預存程序概念](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)主題中的＜執行複寫指令碼＞****一節。
+>  此指令碼使用 sqlcmd 指令碼變數。 它們的格式為 `$(MyVariable)`。 如需如何在命令列和 SQL Server Management Studio 中，使用指令碼變數的詳細資訊，請參閱[複寫系統預存程序概念](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)主題中的＜執行複寫指令碼＞一節。
 
 ```
 -- Execute this batch at the Subscriber.

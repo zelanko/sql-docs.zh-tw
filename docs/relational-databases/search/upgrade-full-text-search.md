@@ -20,9 +20,10 @@ caps.latest.revision: 106
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 33b11df8c6894b8acd24da6afd4e2f825fc93445
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -125,7 +126,7 @@ ms.lasthandoff: 04/11/2017
   
 -   [!INCLUDE[tsql](../../includes/tsql-md.md)]: Use the **upgrade\_option** action of [sp\_fulltext\_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**：**使用 [伺服器屬性]**** 對話方塊的 [全文檢索升級選項]****。 如需詳細資訊，請參閱 [管理及監視伺服器執行個體的全文檢索搜尋](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md)。  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**：**使用 [伺服器屬性] 對話方塊的 [全文檢索升級選項]。 如需詳細資訊，請參閱 [管理及監視伺服器執行個體的全文檢索搜尋](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md)。  
   
 ##  <a name="Considerations_for_Restore"></a> 還原 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 全文檢索目錄的考量 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  將全文檢索資料從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 資料庫升級為 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的其中一種方法是將完整資料庫備份還原至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
@@ -175,7 +176,7 @@ RESTORE DATABASE [ftdb1] FROM  DISK = N'C:\temp\ftdb1.bak' WITH  FILE = 1,
   
  在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 上，每個所附加之全文檢索目錄的狀態都與從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]中卸離資料庫時的狀態相同。 如果卸離作業暫停了任何全文檢索索引母體擴展，就會在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]上繼續進行母體擴展，而且全文檢索索引會變成可用於全文檢索搜尋。  
   
- 如果 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 找不到全文檢索目錄檔案，或者在附加作業期間移動了全文檢索檔案，但沒有指定新的位置，此行為就會取決於選取的全文檢索升級選項。 如果全文檢索升級選項是 [匯入]**** 或 [重建]****，系統就會重建附加的全文檢索目錄。 如果全文檢索升級選項是 [重設]****，系統就會重設附加的全文檢索目錄。  
+ 如果 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 找不到全文檢索目錄檔案，或者在附加作業期間移動了全文檢索檔案，但沒有指定新的位置，此行為就會取決於選取的全文檢索升級選項。 如果全文檢索升級選項是 [匯入] 或 [重建]，系統就會重建附加的全文檢索目錄。 如果全文檢索升級選項是 [重設]，系統就會重設附加的全文檢索目錄。  
   
  如需卸離和附加資料庫的詳細資訊，請參閱[資料庫卸離和附加 &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)、[CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)、[sp_attach_db](../../relational-databases/system-stored-procedures/sp-attach-db-transact-sql.md) 和 [sp_detach_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)。  
   

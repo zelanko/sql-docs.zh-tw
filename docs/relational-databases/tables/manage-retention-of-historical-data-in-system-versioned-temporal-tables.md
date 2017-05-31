@@ -15,9 +15,10 @@ caps.latest.revision: 23
 author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 4c8237dfcc25045fb0fec915c942ea7968e02a13
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -64,26 +65,26 @@ ms.lasthandoff: 04/11/2017
   
 > **注意：** Stretch Database 能將資料移轉到 Azure。 因此，您必須擁有 Azure 帳戶和計費用的訂閱。 若要取得免費試用的 Azure 帳戶，請按一下[免費試用一個月](https://azure.microsoft.com/pricing/free-trial/)。  
   
- 您可以使用延展精靈或 Transact-SQL 來設定 Stretch 的時態歷程記錄資料表，而且可以在系統版本設定功能設定為 [ON]**** 時啟用時態歷程記錄資料表的延展功能。 您無法延展目前的資料表，因為延展目前的資料表不具意義。  
+ 您可以使用延展精靈或 Transact-SQL 來設定 Stretch 的時態歷程記錄資料表，而且可以在系統版本設定功能設定為 [ON] 時啟用時態歷程記錄資料表的延展功能。 您無法延展目前的資料表，因為延展目前的資料表不具意義。  
   
 ### <a name="using-the-stretch-wizard-to-stretch-the-entire-history-table"></a>使用延展精靈來延展整個歷程記錄資料表  
  對初學者來說，最簡單的方法是使用延展精靈來啟用整個資料庫的延展功能，接著在延展精靈中選取時態歷程記錄資料表 (以下範例假設您已將 Department 資料表設定為空資料庫中的系統設定版本時態資料表)。 在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中，您無法以滑鼠右鍵按一下時態歷程記錄資料表本身，然後再按一下 [延展]。  
   
-1.  以滑鼠右鍵按一下資料庫，並指向 [工作]**** 和 [延展]****，然後按一下 [啟用]**** 來啟動精靈。  
+1.  以滑鼠右鍵按一下資料庫，並指向 [工作] 和 [延展]，然後按一下 [啟用] 來啟動精靈。  
   
-2.  在 [選取資料表]**** 視窗中，選取時態歷程記錄資料表的核取方塊，然後按 [下一步]。  
+2.  在 [選取資料表] 視窗中，選取時態歷程記錄資料表的核取方塊，然後按 [下一步]。  
   
      ![在 [選取資料表] 頁面上選取歷程記錄資料表](../../relational-databases/tables/media/stretch-wizard-2-for-temporal.png "在 [選取資料表] 頁面上選取歷程記錄資料表")  
   
-3.  在 [設定 Azure]**** 視窗中，提供您的登入認證。 登入 Microsoft Azure 或註冊帳戶。 選取要使用的訂閱，並選取 Azure 區域。 接下來，建立新伺服器或選取現有伺服器。 按一下 **[下一步]**。  
+3.  在 [設定 Azure] 視窗中，提供您的登入認證。 登入 Microsoft Azure 或註冊帳戶。 選取要使用的訂閱，並選取 Azure 區域。 接下來，建立新伺服器或選取現有伺服器。 按一下 **[下一步]**。  
   
      ![建立新的 Azure 伺服器 - Stretch Database 精靈](../../relational-databases/tables/media/stretch-wizard-4.png "建立新的 Azure 伺服器 - Stretch Database 精靈")  
   
-4.  在 [安全認證]**** 視窗中，提供資料庫主要金鑰的密碼來保護來源 SQL Server 資料庫認證，然後按 [下一步]。  
+4.  在 [安全認證] 視窗中，提供資料庫主要金鑰的密碼來保護來源 SQL Server 資料庫認證，然後按 [下一步]。  
   
      ![Stretch Database 精靈的 [安全認證] 頁面](../../relational-databases/tables/media/stretch-wizard-6.png "Stretch Database 精靈的 [安全認證] 頁面")  
   
-5.  在 [選取 IP 位址]**** 視窗中提供 SQL Server 的 IP 位址範圍，讓 Azure 伺服器得以與您的 SQL Server 通訊 (如果您選取已有防火牆規則的現有伺服器，在這裡只要按 [下一步] 就能使用現有的防火牆規則)。 依序按 [下一步]**** 和 [完成]**** 以啟用 Stretch Database 及延展時態歷程記錄資料表。  
+5.  在 [選取 IP 位址] 視窗中提供 SQL Server 的 IP 位址範圍，讓 Azure 伺服器得以與您的 SQL Server 通訊 (如果您選取已有防火牆規則的現有伺服器，在這裡只要按 [下一步] 就能使用現有的防火牆規則)。 依序按 [下一步] 和 [完成] 以啟用 Stretch Database 及延展時態歷程記錄資料表。  
   
      ![Stretch Database 精靈的 [選取 IP 位址] 頁面](../../relational-databases/tables/media/stretch-wizard-7.png "Stretch Database 精靈的 [選取 IP 位址] 頁面")  
   

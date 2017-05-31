@@ -17,9 +17,10 @@ caps.latest.revision: 18
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 956e23e61cb97d5d1adecf4a06f40f734da42948
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -50,7 +51,7 @@ ms.lasthandoff: 04/11/2017
   
 ###  <a name="Restrictions"></a> 限制事項  
   
--   如果 [預設值]**** 欄位中的輸入內容取代繫結的預設值 (顯示為沒有括弧)，系統會提示您解除繫結預設值，並使用新的預設值加以取代。  
+-   如果 [預設值] 欄位中的輸入內容取代繫結的預設值 (顯示為沒有括弧)，系統會提示您解除繫結預設值，並使用新的預設值加以取代。  
   
 -   若要輸入文字字串，請將此值放在單引號 (') 之中，不要使用雙引號 (")，因為它們是保留供引號識別碼使用。  
   
@@ -67,7 +68,7 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="to-specify-a-default-value-for-a-column"></a>若要指定資料行的預設值  
   
-1.  在物件總管**** 中，找到要變更小數位數的資料行，以滑鼠右鍵按一下含有這些資料行的資料表，然後按一下 [設計]****。  
+1.  在物件總管 中，找到要變更小數位數的資料行，以滑鼠右鍵按一下含有這些資料行的資料表，然後按一下 [設計]。  
   
 2.  選取您要指定預設值的資料行。  
   
@@ -76,7 +77,7 @@ ms.lasthandoff: 04/11/2017
     > [!NOTE]  
     >  若要輸入數字預設值，請輸入數字。 若為物件或函數，請輸入其名稱。 若為英數字元預設值，請在單引號內部輸入值。  
   
-4.  在 [檔案] **** 功能表上，按一下 [儲存] *****table name*。  
+4.  在 [檔案]  功能表上，按一下 [儲存] *table name*。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

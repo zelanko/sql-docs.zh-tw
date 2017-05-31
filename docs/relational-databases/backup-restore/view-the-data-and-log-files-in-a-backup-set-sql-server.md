@@ -21,9 +21,10 @@ caps.latest.revision: 23
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b315b0bc0d56cf0e618869f1eef69278fc0d6988
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -60,7 +61,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  展開 **[資料庫]**，然後視資料庫而定，選取使用者資料庫，或者展開 **[系統資料庫]** 並選取一個系統資料庫。  
   
-3.  以滑鼠右鍵按一下資料庫，然後按一下 [屬性]****，這會開啟 [資料庫屬性]**** 對話方塊。  
+3.  以滑鼠右鍵按一下資料庫，然後按一下 [屬性]，這會開啟 [資料庫屬性] 對話方塊。  
   
 4.  在 **[選取頁面]** 窗格中，按一下 **[檔案]**。  
   

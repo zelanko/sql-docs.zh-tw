@@ -18,14 +18,15 @@ caps.latest.revision: 21
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5c6ca56759235723bf052365e9a4187f41c7ce53
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="new-agent-profile"></a>新增代理程式設定檔
-  使用 **[新增代理程式設定檔]** 對話方塊，即可建立新的設定檔。 新的設定檔一律會以現有設定檔為基礎，但是還可以進行修改來滿足應用程式的需求。 建立了設定檔之後，即可套用到 **[代理程式設定檔]** 對話方塊中之現有及未來的代理程式作業。 代理程式參數值可以在 [\<AgentProfileName> 屬性]**** 對話方塊中進行編輯。  
+  使用 **[新增代理程式設定檔]** 對話方塊，即可建立新的設定檔。 新的設定檔一律會以現有設定檔為基礎，但是還可以進行修改來滿足應用程式的需求。 建立了設定檔之後，即可套用到 **[代理程式設定檔]** 對話方塊中之現有及未來的代理程式作業。 代理程式參數值可以在 [\<AgentProfileName> 屬性] 對話方塊中進行編輯。  
   
 ## <a name="options"></a>選項。  
  **名稱**  

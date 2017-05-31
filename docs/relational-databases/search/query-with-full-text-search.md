@@ -21,9 +21,10 @@ caps.latest.revision: 80
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 5034ce123455c63718fb41b02450c14ca2f68a0b
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -127,7 +128,7 @@ GO
 
 | |CONTAINS/CONTAINSTABLE|FREETEXT/FREETEXTTABLE|
 |---|---|---|
-|**查詢類型**|使用精確或模糊 (較不精確) 的比對，來比對單字和片語。|比對所指定單字、片語或句子 (「Freetext 字串」**) 的意義，而不是確切的用字。<br/><br/>如果在指定之資料行的全文檢索索引中找到任何詞彙或任何形式的詞彙，就會產生相符項目。|
+|**查詢類型**|使用精確或模糊 (較不精確) 的比對，來比對單字和片語。|比對所指定單字、片語或句子 (「Freetext 字串」) 的意義，而不是確切的用字。<br/><br/>如果在指定之資料行的全文檢索索引中找到任何詞彙或任何形式的詞彙，就會產生相符項目。|
 |**其他查詢選項**|您可以指定單字彼此在一定距離內。<br/><br/>您可以傳回加權相符項目。<br/><br/>您可以使用邏輯作業來合併多個搜尋條件。 如需詳細資訊，請參閱本主題後面的[使用布林運算子 (AND、OR 和 NOT)](#Using_Boolean_Operators)。|N/a|
 
 ## <a name="compare-predicates-and-functions"></a>比較述詞和函式
@@ -139,8 +140,8 @@ GO
 | |述詞<br/>CONTAINS/FREETEXT|函數<br/>CONTAINSTABLE/FREETEXTTABLE|
 |---|---|---|
 |**使用方式**|在 SELECT 陳述式的 WHERE 或 HAVING 子句中，使用全文檢索**述詞** CONTAINS 和 FREETEXT。|使用全文檢索**函式** CONTAINSTABLE 和 FREETEXTTABLE 函式，就像 SELECT 陳述式之 FROM 子句中的一般資料表名稱。|
-|**其他查詢選項**|您可以將它們與任何其他 [!INCLUDE[tsql](../../includes/tsql-md.md)] 述詞合併使用，例如 LIKE 和 BETWEEN。<br/><br/>您可以指定要搜尋資料表中的單一資料行、資料行清單或所有資料行。<br/><br/>此外，您可以針對斷詞和詞幹分析、同義字查閱以及非搜尋字移除，指定透過全文檢索查詢將使用之資源的語言。|您必須指定要在使用其中一個函式時所要搜尋的基底資料表。 與述詞一樣，您可以指定要搜尋資料表中的單一資料行、資料行清單或所有資料行，而且可以選擇性地指定給定全文檢索查詢將使用之資源的語言。<br/><br/>一般而言，您必須聯結 CONTAINSTABLE 或 FREETEXTTABLE 的結果與基底資料表。 若要這麼做，您必須知道唯一索引鍵資料行名稱。 這個資料行 (出現在每個啟用全文檢索的資料表中) 是用來強制資料表的唯一資料列 (「唯一索引鍵資料行」****)。 如需索引鍵資料行的詳細資訊，請參閱[建立及管理全文檢索索引](../../relational-databases/search/create-and-manage-full-text-indexes.md)。|
-|**結果**|CONTAINS 和 FREETEXT 述詞會傳回 TRUE 或 FALSE 值，指出給定資料列是否符合全文檢索查詢。 符合的資料列就會傳回結果集中。|這些函式會傳回符合全文檢索查詢之零、一或多個資料列的資料表。 傳回的資料表僅包含基底資料表的資料列，而這些資料列符合函式之全文檢索搜尋條件中指定的選取準則。<br/><br/>使用其中一個函式的查詢也會針對每個傳回的資料列傳回一個相關次序值 (RANK) 和全文檢索索引鍵 (KEY)，如下所示：<br/><ul><li>**KEY** 資料行。 KEY 資料行會傳回所傳回之資料列的唯一值。 KEY 資料行可用來指定選取準則。</li><li>**RANK** 資料行。 RANK 資料行會傳回每個資料列的「等級值」**(Rank Value)，表示資料列與選取準則的符合程度。 資料列中文字或文件的等級值越高，該資料列與給定全文檢索查詢的關聯性就越大。 請注意，不同的資料列可能會以完全相同的方式排序等級。 您可以透過指定選擇性 *top_n_by_rank* 參數，限制要傳回的相符項目數。 如需詳細資訊，請參閱 [限制 RANK 的搜索結果](../../relational-databases/search/limit-search-results-with-rank.md)。</li></ul>|
+|**其他查詢選項**|您可以將它們與任何其他 [!INCLUDE[tsql](../../includes/tsql-md.md)] 述詞合併使用，例如 LIKE 和 BETWEEN。<br/><br/>您可以指定要搜尋資料表中的單一資料行、資料行清單或所有資料行。<br/><br/>此外，您可以針對斷詞和詞幹分析、同義字查閱以及非搜尋字移除，指定透過全文檢索查詢將使用之資源的語言。|您必須指定要在使用其中一個函式時所要搜尋的基底資料表。 與述詞一樣，您可以指定要搜尋資料表中的單一資料行、資料行清單或所有資料行，而且可以選擇性地指定給定全文檢索查詢將使用之資源的語言。<br/><br/>一般而言，您必須聯結 CONTAINSTABLE 或 FREETEXTTABLE 的結果與基底資料表。 若要這麼做，您必須知道唯一索引鍵資料行名稱。 這個資料行 (出現在每個啟用全文檢索的資料表中) 是用來強制資料表的唯一資料列 (「唯一索引鍵資料行」)。 如需索引鍵資料行的詳細資訊，請參閱[建立及管理全文檢索索引](../../relational-databases/search/create-and-manage-full-text-indexes.md)。|
+|**結果**|CONTAINS 和 FREETEXT 述詞會傳回 TRUE 或 FALSE 值，指出給定資料列是否符合全文檢索查詢。 符合的資料列就會傳回結果集中。|這些函式會傳回符合全文檢索查詢之零、一或多個資料列的資料表。 傳回的資料表僅包含基底資料表的資料列，而這些資料列符合函式之全文檢索搜尋條件中指定的選取準則。<br/><br/>使用其中一個函式的查詢也會針對每個傳回的資料列傳回一個相關次序值 (RANK) 和全文檢索索引鍵 (KEY)，如下所示：<br/><ul><li>**KEY** 資料行。 KEY 資料行會傳回所傳回之資料列的唯一值。 KEY 資料行可用來指定選取準則。</li><li>**RANK** 資料行。 RANK 資料行會傳回每個資料列的「等級值」(Rank Value)，表示資料列與選取準則的符合程度。 資料列中文字或文件的等級值越高，該資料列與給定全文檢索查詢的關聯性就越大。 請注意，不同的資料列可能會以完全相同的方式排序等級。 您可以透過指定選擇性 *top_n_by_rank* 參數，限制要傳回的相符項目數。 如需詳細資訊，請參閱 [限制 RANK 的搜索結果](../../relational-databases/search/limit-search-results-with-rank.md)。</li></ul>|
 |**其他選項**|您可以在 CONTAINS 或 FREETEXT 述詞中使用四部分名稱，以便在連結的伺服器上查詢目標資料表的全文檢索索引資料行。 若要準備遠端伺服器來接收全文檢索查詢，請針對遠端伺服器上的目標資料表與資料行建立全文檢索索引，然後加入遠端伺服器成為連結的伺服器。|N/a|
 |**其他資訊**|如需這些述詞的語法和引數詳細資訊，請參閱 [CONTAINS](../../t-sql/queries/contains-transact-sql.md) 和 [FREETEXT](../../t-sql/queries/freetext-transact-sql.md)。|如需這些函式的語法和引數詳細資訊，請參閱[CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 和 [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md)。|
 
@@ -150,12 +151,12 @@ GO
   
 |查詢詞彙形式|Description|支援者|  
 |----------------------|-----------------|------------------|  
-|一或多個特定的單字或片語<br/>(「簡單詞彙」**)|例如，"croissant" 是一個單字，而 "café au lait" 則是一個片語。 這類字詞與片語稱為簡單詞彙。<br /><br /> 在全文檢索搜尋中，「單字」** (或 Token**) 是一種字串，其邊界是由適當的斷詞工具所識別，後面緊接著指定之語言的語言規則。 有效的「片語」**是由多個單字所組成 (不論單字之間是否有標點符號)。<br /><br /> 如需詳細資訊，請參閱本主題稍後的 [搜尋特定字詞或片語 (簡單詞彙)](#Simple_Term)。|[CONTAINS](../../t-sql/queries/contains-transact-sql.md) 和 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 會尋找完全相符的片語。<br /><br /> [FREETEXT](../../t-sql/queries/freetext-transact-sql.md) 和 [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) 會將片語分解成個別的字詞。|  
-|以指定之文字開頭的單字或片語<br/>(「前置詞彙」**)|對於單一前置詞彙而言，任何以指定之詞彙為開頭的單字都會成為結果集的一部分。 例如，詞彙 "auto*" 與 "automatic"、"automobile" 等字相符。<br /><br /> 對於片語而言，片語中的每個單字都會被視為前置詞彙。 例如，"auto tran\*" 詞彙符合 "automatic transmission" 及 "automobile transducer"，但不符合 "automatic motor transmission"。<br /><br /> 「前置詞彙」**是指附加至單字前面以便產生衍生字或字形變化的字串。<br /><br /> 如需詳細資訊，請參閱本主題稍後的 [執行前置詞搜尋 (前置詞彙)](#Prefix_Term)。|[CONTAINS](../../t-sql/queries/contains-transact-sql.md) 和 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)|  
-|特定單字的字形變化<br/>(「衍生詞彙 - 字形變化」**)|例如，搜尋 "drive" 單字的變化形式。 如果資料表的不同資料列中包括 "drive"、"drives"、"drove"、"driving" 及 "driven" 等字，因為所有這些單字都是從 "drive" 這個字所變化產生，所以它們都會出現在結果集中。<br /><br /> 「字形變化」**是指動詞的不同時態和變化或是名詞的單複數。 <br /><br /> 如需詳細資訊，請參閱本主題稍後的 [搜尋特定單字的變化形式 (衍生詞彙)](#Inflectional_Generation_Term)。|[FREETEXT](../../t-sql/queries/freetext-transact-sql.md) 和 [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) 預設會尋找所有指定之單字的變化詞彙。<br /><br /> [CONTAINS](../../t-sql/queries/contains-transact-sql.md) 和 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 支援選擇性 INFLECTIONAL 引數。|  
-|特定單字的同義字變化<br/>(「衍生詞彙 - 同義字」**)|例如，如果將 "{car, automobile, truck, van}" 這個項目加入同義字中，則您可搜尋 "car" 這個字的同義字變化。 由於 "automobile"、"truck"、"van" 或 "car" 這些字都是屬於內含 "car" 這個字的同義字展開集，因此所查詢之資料表中含有這些字的所有資料列都會出現在結果集中。<br /><br />「同義字」**會針對詞彙定義使用者指定的同義字。<br /><br />  如需同義字檔案的結構詳細資訊，請參閱 [設定及管理全文檢索搜尋的同義字檔案](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)。|[FREETEXT](../../t-sql/queries/freetext-transact-sql.md) 和 [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) 預設會使用同義字。<br /><br /> [CONTAINS](../../t-sql/queries/contains-transact-sql.md) 和 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 支援選擇性 THESAURUS 引數。|  
-|靠近另一個單字或片語的單字或片語<br/>(「相近詞彙」**)|例如，您要尋找 "ice" 單字接近 "hockey" 單字或 "ice skating" 片語接近 "ice hockey" 片語的資料列。<br /><br /> 「相近詞彙」**表示彼此互相靠近的字詞或片語。您也可以指定分隔第一個和最後一個搜尋詞彙的非搜尋詞彙數目上限。 此外，您可以依任何順序或是您所指定的順序來搜尋字詞或片語。<br /><br /> 如需詳細資訊，請參閱 [使用 NEAR 搜尋靠近另一個單字的字詞](../../relational-databases/search/search-for-words-close-to-another-word-with-near.md).|[CONTAINS](../../t-sql/queries/contains-transact-sql.md) 和 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)|  
-|使用加權值的單字或片語<br/>(「加權詞彙」**)|例如，在搜尋多個詞彙的查詢中，您可以指派每個搜尋單字的加權值，以指出它與搜尋條件中之其他單字的相對重要性。 這類型之查詢的結果會根據您指派給搜尋單字的相對加權，先傳回最相關的資料列。 結果集包含具有任何指定之詞彙的文件或資料列 (或它們之間的內容)。不過，因為與不同搜尋詞彙相關聯的加權值具有變化，所以某些結果會被視為比其他結果更相關。<br /><br /> 「加權值」**是表示每個單字與片語在一組單字與片語中的重要程度。 最小的加權值是 0.0，最大則為 1.0。<br /><br /> 如需詳細資訊，請參閱本主題稍後的 [使用加權值來搜尋字詞或片語 (加權詞彙)](#Weighted_Term)。|[CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)|  
+|一或多個特定的單字或片語<br/>(「簡單詞彙」)|例如，"croissant" 是一個單字，而 "café au lait" 則是一個片語。 這類字詞與片語稱為簡單詞彙。<br /><br /> 在全文檢索搜尋中，「單字」 (或 Token) 是一種字串，其邊界是由適當的斷詞工具所識別，後面緊接著指定之語言的語言規則。 有效的「片語」是由多個單字所組成 (不論單字之間是否有標點符號)。<br /><br /> 如需詳細資訊，請參閱本主題稍後的 [搜尋特定字詞或片語 (簡單詞彙)](#Simple_Term)。|[CONTAINS](../../t-sql/queries/contains-transact-sql.md) 和 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 會尋找完全相符的片語。<br /><br /> [FREETEXT](../../t-sql/queries/freetext-transact-sql.md) 和 [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) 會將片語分解成個別的字詞。|  
+|以指定之文字開頭的單字或片語<br/>(「前置詞彙」)|對於單一前置詞彙而言，任何以指定之詞彙為開頭的單字都會成為結果集的一部分。 例如，詞彙 "auto*" 與 "automatic"、"automobile" 等字相符。<br /><br /> 對於片語而言，片語中的每個單字都會被視為前置詞彙。 例如，"auto tran\*" 詞彙符合 "automatic transmission" 及 "automobile transducer"，但不符合 "automatic motor transmission"。<br /><br /> 「前置詞彙」是指附加至單字前面以便產生衍生字或字形變化的字串。<br /><br /> 如需詳細資訊，請參閱本主題稍後的 [執行前置詞搜尋 (前置詞彙)](#Prefix_Term)。|[CONTAINS](../../t-sql/queries/contains-transact-sql.md) 和 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)|  
+|特定單字的字形變化<br/>(「衍生詞彙 - 字形變化」)|例如，搜尋 "drive" 單字的變化形式。 如果資料表的不同資料列中包括 "drive"、"drives"、"drove"、"driving" 及 "driven" 等字，因為所有這些單字都是從 "drive" 這個字所變化產生，所以它們都會出現在結果集中。<br /><br /> 「字形變化」是指動詞的不同時態和變化或是名詞的單複數。 <br /><br /> 如需詳細資訊，請參閱本主題稍後的 [搜尋特定單字的變化形式 (衍生詞彙)](#Inflectional_Generation_Term)。|[FREETEXT](../../t-sql/queries/freetext-transact-sql.md) 和 [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) 預設會尋找所有指定之單字的變化詞彙。<br /><br /> [CONTAINS](../../t-sql/queries/contains-transact-sql.md) 和 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 支援選擇性 INFLECTIONAL 引數。|  
+|特定單字的同義字變化<br/>(「衍生詞彙 - 同義字」)|例如，如果將 "{car, automobile, truck, van}" 這個項目加入同義字中，則您可搜尋 "car" 這個字的同義字變化。 由於 "automobile"、"truck"、"van" 或 "car" 這些字都是屬於內含 "car" 這個字的同義字展開集，因此所查詢之資料表中含有這些字的所有資料列都會出現在結果集中。<br /><br />「同義字」會針對詞彙定義使用者指定的同義字。<br /><br />  如需同義字檔案的結構詳細資訊，請參閱 [設定及管理全文檢索搜尋的同義字檔案](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)。|[FREETEXT](../../t-sql/queries/freetext-transact-sql.md) 和 [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) 預設會使用同義字。<br /><br /> [CONTAINS](../../t-sql/queries/contains-transact-sql.md) 和 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 支援選擇性 THESAURUS 引數。|  
+|靠近另一個單字或片語的單字或片語<br/>(「相近詞彙」)|例如，您要尋找 "ice" 單字接近 "hockey" 單字或 "ice skating" 片語接近 "ice hockey" 片語的資料列。<br /><br /> 「相近詞彙」表示彼此互相靠近的字詞或片語。您也可以指定分隔第一個和最後一個搜尋詞彙的非搜尋詞彙數目上限。 此外，您可以依任何順序或是您所指定的順序來搜尋字詞或片語。<br /><br /> 如需詳細資訊，請參閱 [使用 NEAR 搜尋靠近另一個單字的字詞](../../relational-databases/search/search-for-words-close-to-another-word-with-near.md).|[CONTAINS](../../t-sql/queries/contains-transact-sql.md) 和 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)|  
+|使用加權值的單字或片語<br/>(「加權詞彙」)|例如，在搜尋多個詞彙的查詢中，您可以指派每個搜尋單字的加權值，以指出它與搜尋條件中之其他單字的相對重要性。 這類型之查詢的結果會根據您指派給搜尋單字的相對加權，先傳回最相關的資料列。 結果集包含具有任何指定之詞彙的文件或資料列 (或它們之間的內容)。不過，因為與不同搜尋詞彙相關聯的加權值具有變化，所以某些結果會被視為比其他結果更相關。<br /><br /> 「加權值」是表示每個單字與片語在一組單字與片語中的重要程度。 最小的加權值是 0.0，最大則為 1.0。<br /><br /> 如需詳細資訊，請參閱本主題稍後的 [使用加權值來搜尋字詞或片語 (加權詞彙)](#Weighted_Term)。|[CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)|  
 
 ## <a name="examples_specific"></a> 特定搜尋類型的範例
 
@@ -206,7 +207,7 @@ WHERE CONTAINS (Comments, 'FORMSOF(INFLECTIONAL, "foot")')
 GO  
 ```  
   
-全文檢索搜尋會使用字幹分析器**，此工具可讓您搜尋動詞的不同時態和變化或是名詞的單複數形式。 如需字幹分析器的詳細資訊，請參閱 [設定及管理搜尋的斷詞工具與字幹分析器](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)。  
+全文檢索搜尋會使用字幹分析器，此工具可讓您搜尋動詞的不同時態和變化或是名詞的單複數形式。 如需字幹分析器的詳細資訊，請參閱 [設定及管理搜尋的斷詞工具與字幹分析器](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)。  
    
 ###  <a name="Weighted_Term"></a> 使用加權值來搜尋單字或片語 (加權詞彙)  
 您可以使用 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 來搜尋字詞或片語，並指定加權值。 加權值是介於 0.0 到 1.0 之間的數字，用來指示每個字詞與片語在一組字詞與片語中的重要程度。 最小的加權值是 0.0，最大則為 1.0。  
@@ -256,7 +257,7 @@ GO
 
  當您撰寫全文檢索查詢時，也可以指定下列選項。
   
--   [語言]****，含 **LANGUAGE** 選項。 許多查詢詞彙主要取決於斷詞工具行為。 若要確保您使用正確的斷詞工具 (和字幹分析器) 和同義字檔案，我們建議您指定 LANGUAGE 選項。 如需詳細資訊，請參閱 [選擇建立全文檢索索引時的語言](../../relational-databases/search/choose-a-language-when-creating-a-full-text-index.md)。  
+-   [語言]，含 **LANGUAGE** 選項。 許多查詢詞彙主要取決於斷詞工具行為。 若要確保您使用正確的斷詞工具 (和字幹分析器) 和同義字檔案，我們建議您指定 LANGUAGE 選項。 如需詳細資訊，請參閱 [選擇建立全文檢索索引時的語言](../../relational-databases/search/choose-a-language-when-creating-a-full-text-index.md)。  
 
 -   **區分大小寫**。 全文檢索搜尋查詢是不分大小寫的。 但在日文中，有多種發音拼字法，它的拼音正規化概念就類似不區分大小寫 (例如，kana = insensitivity)。 這類拼字法正規化並未支援。  
 

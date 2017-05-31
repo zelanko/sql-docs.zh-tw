@@ -14,9 +14,10 @@ caps.latest.revision: 7
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 34d7a9bfaf04f1ea7d201083201aa3c8a3895061
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -39,7 +40,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 **[物件總管]**中，選取 **[連接]** 按鈕，然後選取 **[Database Engine…]**。  
   
-2.  在 [連接到伺服器]**** 對話方塊中選取 [選項 >>]****。  
+2.  在 [連接到伺服器] 對話方塊中選取 [選項 >>]。  
   
 3.  選取 **[使用自訂色彩]** 核取方塊。  
   
@@ -67,7 +68,7 @@ ms.lasthandoff: 04/11/2017
 ##  <a name="OpenServerColor"></a> 使用伺服器色彩開啟編輯器  
  **使用伺服器色彩開啟編輯器視窗**  
   
--   在 [物件總管]**** 或 [已註冊的伺服器]**** 中，以滑鼠右鍵按一下伺服器節點，然後選取 [新增查詢]****。  
+-   在 [物件總管] 或 [已註冊的伺服器] 中，以滑鼠右鍵按一下伺服器節點，然後選取 [新增查詢]。  
   
 -   或者，反白顯示伺服器節點，然後選取 **[新增查詢]** 工具列按鈕。  
   
@@ -78,7 +79,7 @@ ms.lasthandoff: 04/11/2017
   
 -   在 **[檔案]** 功能表上，選取 **[開新檔案]**，再選取 **[Database Engine 查詢]**。  
   
--   在 [連接到伺服器]**** 對話方塊中選取 [選項 >>]****。  
+-   在 [連接到伺服器] 對話方塊中選取 [選項 >>]。  
   
 -   選取 **[使用自訂色彩]** 核取方塊。  
   

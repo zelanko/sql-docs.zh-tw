@@ -29,9 +29,10 @@ caps.latest.revision: 64
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 26b3c7967d7549f6f192afcac64888dcb68d6c7c
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -302,7 +303,7 @@ ms.lasthandoff: 04/11/2017
 
 1.    在物件總管中，連接到 SQL Server Database Engine 的執行個體，然後展開該執行個體。
 
-2.    展開 [資料庫]，以滑鼠右鍵按一下所需的資料庫，指向 [工作]，然後按一下 [複製資料庫...]
+2.    展開 [資料庫]，以滑鼠右鍵按一下所需的資料庫，指向 [工作]，然後按一下 [複製資料庫...]****
 
 3.    如果出現 [歡迎使用複製資料庫精靈] 開頭顯示頁面，請按一下 [下一步]。
 

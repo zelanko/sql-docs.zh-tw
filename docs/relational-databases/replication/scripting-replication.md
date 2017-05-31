@@ -21,9 +21,10 @@ caps.latest.revision: 36
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a9889d43aeed7cf80f5b28b427787519ab06bd84
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -48,7 +49,7 @@ ms.lasthandoff: 04/11/2017
 5.  在多個「訂閱者」端執行指令碼以產生需要的提取訂閱。  
   
 ## <a name="script-replication-objects"></a>撰寫複寫物件的指令碼  
- 您可以從複寫精靈或從 **** 中的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. 如果您從精靈編寫指令碼，可以選擇建立物件並編寫其指令碼，也可以選擇只編寫其指令碼。  
+ 您可以從複寫精靈或從  中的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. 如果您從精靈編寫指令碼，可以選擇建立物件並編寫其指令碼，也可以選擇只編寫其指令碼。  
   
 > [!IMPORTANT]  
 >  所有密碼的指令碼都會編寫為 NULL。 可能的話，會在執行階段提示使用者輸入安全性認證。 如果您將認證儲存在指令碼檔案中，必須保護該檔案免於未經授權的存取。  
@@ -85,7 +86,7 @@ ms.lasthandoff: 04/11/2017
   
 3.  以滑鼠右鍵按一下發行集或訂閱，然後按一下 **[產生指令碼]**。  
   
-4.  指定 [產生 SQL 指令碼 - \<複寫物件>]**** 對話方塊中的選項。  
+4.  指定 [產生 SQL 指令碼 - \<複寫物件>] 對話方塊中的選項。  
   
 5.  按一下 **[編寫指令碼至檔案]**。  
   

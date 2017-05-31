@@ -14,14 +14,15 @@ caps.latest.revision: 6
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d6f62cfaeeb3be67b2a8e9bcf03b95464738a67c
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="save-trace-results-to-a-file"></a>將追蹤結果儲存至檔案
-  您可以將追蹤結果儲存至檔案。 追蹤檔案是用來寫入追蹤結果的檔案。 追蹤檔案可以位於本機目錄 (例如 C:\\**\\檔案名稱.trc**) 或網路目錄 (例如 \\\電腦名稱\共用名稱\檔案名稱.trc)。  
+  您可以將追蹤結果儲存至檔案。 追蹤檔案是用來寫入追蹤結果的檔案。 追蹤檔案可以位於本機目錄 (例如 C:\\\\檔案名稱.trc) 或網路目錄 (例如 \\\電腦名稱\共用名稱\檔案名稱.trc)。  
   
  您可以使用追蹤檔案來執行下列動作：  
   

@@ -16,9 +16,10 @@ caps.latest.revision: 20
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8c5bcc49ace68aaf9d35fd3365e693ddd953a0ce
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -29,11 +30,11 @@ ms.lasthandoff: 04/11/2017
   
 1.  設定容錯移轉叢集的主要節點。  
   
-     設定完成之後，請使用 [SQL Server 組態管理員]****，在主要節點上啟用 FILESTREAM。 這樣就會啟用需要 Windows Admin 權限的設定。 如果需要進行遠端存取，請選取 [允許遠端用戶端具有 FILESTREAM 資料的資料流存取權]****。 這樣將會建立檔案共用叢集資源。  
+     設定完成之後，請使用 [SQL Server 組態管理員]，在主要節點上啟用 FILESTREAM。 這樣就會啟用需要 Windows Admin 權限的設定。 如果需要進行遠端存取，請選取 [允許遠端用戶端具有 FILESTREAM 資料的資料流存取權]。 這樣將會建立檔案共用叢集資源。  
   
 2.  設定被動節點。  
   
-     設定完成之後，請使用 [SQL Server 組態管理員]****，在被動節點上啟用 FILESTREAM。 您針對 [Windows 共用名稱]**** 指定的名稱必須在叢集的所有節點中相同。  
+     設定完成之後，請使用 [SQL Server 組態管理員]，在被動節點上啟用 FILESTREAM。 您針對 [Windows 共用名稱] 指定的名稱必須在叢集的所有節點中相同。  
   
 3.  若要加入更多被動節點，請重複步驟 2。  
   

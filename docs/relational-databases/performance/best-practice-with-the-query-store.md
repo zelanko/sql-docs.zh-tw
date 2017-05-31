@@ -17,9 +17,10 @@ caps.latest.revision: 24
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f00c5db3574f21010e682f964d06f3c2b61a1d09
 ms.openlocfilehash: 9cd813b72eda096f780ed7140b6691f528251a30
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/29/2017
 
 ---
@@ -35,7 +36,7 @@ ms.lasthandoff: 04/29/2017
  如需有關如何在疑難排解案例中使用查詢存放區的快速說明，請參閱[查詢存放區@Azure 部落格](https://azure.microsoft.com/en-us/blog/query-store-a-flight-data-recorder-for-your-database/)。  
   
 ##  <a name="Insight"></a> 在 Azure SQL 資料庫中使用查詢效能深入解析  
- 如果您在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中執行查詢存放區，您可以使用「查詢效能深入解析」 **** 分析經過一段時間的 DTU 耗用量。  
+ 如果您在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中執行查詢存放區，您可以使用「查詢效能深入解析」  分析經過一段時間的 DTU 耗用量。  
 雖然您可以使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 取得您所有查詢的資源耗用量詳細資訊 (CPU、記憶體、IO 等等)，「查詢效能深入解析」能提供您一個快速且有效率的方式來判斷資源耗用對您的資料庫之整體 DTU 耗用量的影響。  
 如需詳細資訊，請參閱 [Azure SQL 資料庫查詢效能深入解析](https://azure.microsoft.com/documentation/articles/sql-database-query-performance/)。    
 
@@ -266,7 +267,7 @@ FROM sys.database_query_store_options;
   
 -   在適用情況下參數化查詢，例如將查詢包裝在預存程序內。  
   
--   如果您的工作負載包含許多搭配不同查詢計劃的單次使用特定批次，請使用 [針對特定工作負載最佳化] **** 選項。  
+-   如果您的工作負載包含許多搭配不同查詢計劃的單次使用特定批次，請使用 [針對特定工作負載最佳化]  選項。  
   
     -   比較不同 query_hash 值的數目與 sys.query_store_query 中的項目總數。 如果比例接近 1，您的特定工作負載會產生不同的查詢。  
   
@@ -276,7 +277,7 @@ FROM sys.database_query_store_options;
   
     -   如果您的工作負載中有少數不同的查詢計劃，請針對資料庫設定「強制參數化」。 (當不同 query_hash 計數和 sys.query_store_query 中的項目總數之間的比例遠小於 1 時。)  
   
--   將 [查詢擷取模式] **** 設定為 [自動]，以自動篩選掉小型資源耗用的特定查詢。  
+-   將 [查詢擷取模式]  設定為 [自動]，以自動篩選掉小型資源耗用的特定查詢。  
   
 ##  <a name="Drop"></a> Avoid a DROP and CREATE Pattern When Maintaining Containing Objects for the Queries  
  查詢存放區會將查詢項目與包含物件 (預存程序、函式和觸發程序) 產生關聯。  當您重新建立一個包含物件時，將會針對相同的查詢文字產生新的查詢項目。 這會防止您針對該查詢追蹤一段時間的效能統計資料，並使用計畫強制機制。 若要避免這個問題，請使用 `ALTER <object>` 程序盡可能變更包含物件定義。  

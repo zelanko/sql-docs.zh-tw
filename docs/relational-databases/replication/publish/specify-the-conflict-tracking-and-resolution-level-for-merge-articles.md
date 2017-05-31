@@ -18,9 +18,10 @@ caps.latest.revision: 35
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 18b5650ce77b40deb101a16ebd1379600394dcbf
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -50,17 +51,17 @@ ms.lasthandoff: 04/11/2017
 -   若使用資料列層級追蹤和資料行層級追蹤，則衝突解決始終在資料列層級執行：優先資料列會覆寫失敗資料列。 合併式複寫還允許您指定在邏輯記錄層級追蹤並解決衝突，但是 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]中並未提供這些選項。 如需這些設定複寫預存程序之選項的詳細資訊，請參閱＜ [Define a Logical Record Relationship Between Merge Table Articles](../../../relational-databases/replication/publish/define-a-logical-record-relationship-between-merge-table-articles.md)＞。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 在 [發行項屬性]**** 對話方塊的 [屬性]**** 索引標籤上，指定合併發行項的資料列層級追蹤或資料行層級追蹤，[新增發行集精靈] 和 [發行集屬性 - \<發行集>]**** 對話方塊皆提供此對話方塊。 如需使用精靈和存取對話方塊的詳細資訊，請參閱[建立發行集](../../../relational-databases/replication/publish/create-a-publication.md)和[檢視及修改發行集屬性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
+ 在 [發行項屬性] 對話方塊的 [屬性] 索引標籤上，指定合併發行項的資料列層級追蹤或資料行層級追蹤，[新增發行集精靈] 和 [發行集屬性 - \<發行集>] 對話方塊皆提供此對話方塊。 如需使用精靈和存取對話方塊的詳細資訊，請參閱[建立發行集](../../../relational-databases/replication/publish/create-a-publication.md)和[檢視及修改發行集屬性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
   
 #### <a name="to-specify-row--or-column-level-tracking"></a>若要指定資料列層級追蹤或資料行層級追蹤  
   
-1.  在 [新增發行集精靈] 的 [發行項]**** 頁面上，或是在 [發行集屬性 - \<發行集>]**** 對話方塊中，選取一個資料表。  
+1.  在 [新增發行集精靈] 的 [發行項] 頁面上，或是在 [發行集屬性 - \<發行集>] 對話方塊中，選取一個資料表。  
   
 2.  按一下 **[發行項屬性]**，然後按一下 **[設定反白顯示資料表發行項的屬性]** 或 **[設定所有資料表發行項的屬性]**。  
   
-3.  在 [發行項屬性 \<發行項>]**** 對話方塊的 [屬性]**** 索引標籤上，針對 [追蹤層級]**** 屬性選取下列其中一個值：[資料列層級追蹤]**** 或 [資料行層級追蹤]****。  
+3.  在 [發行項屬性 \<發行項>] 對話方塊的 [屬性] 索引標籤上，針對 [追蹤層級] 屬性選取下列其中一個值：[資料列層級追蹤] 或 [資料行層級追蹤]。  
   
-4.  如果您在 [發行集屬性 - \<發行集>]**** 對話方塊中，請按一下 [確定]**** 儲存並關閉對話方塊。  
+4.  如果您在 [發行集屬性 - \<發行集>] 對話方塊中，請按一下 [確定] 儲存並關閉對話方塊。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

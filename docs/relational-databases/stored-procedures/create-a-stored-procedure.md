@@ -18,9 +18,10 @@ caps.latest.revision: 37
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0c0095707730da9b840ebf444bdf7500cb634ad3
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -49,7 +50,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  依序展開 **[資料庫]**、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫，以及 **[Programmability]**。  
   
-3.  以滑鼠右鍵按一下 [預存程序]****，然後按一下 [新增預存程序]****。  
+3.  以滑鼠右鍵按一下 [預存程序]，然後按一下 [新增預存程序]。  
   
 4.  在 **[查詢]** 功能表上，按一下 **[指定範本參數的值]**。  
   
@@ -83,11 +84,11 @@ ms.lasthandoff: 04/11/2017
   
 9. 若要建立程序，請在 **[查詢]** 功能表中，按一下 **[執行]**。 程序也可建立為資料庫中的物件。  
   
-10. 若要查看物件總管中所列的程序，請以滑鼠右鍵按一下 [預存程序]****，然後選取 [重新整理]****。  
+10. 若要查看物件總管中所列的程序，請以滑鼠右鍵按一下 [預存程序]，然後選取 [重新整理]。  
   
-11. 若要執行程序，請在物件總管中，以滑鼠右鍵按一下預存程序名稱 **HumanResources.uspGetEmployeesTest**，然後選取 [執行預存程序]****。  
+11. 若要執行程序，請在物件總管中，以滑鼠右鍵按一下預存程序名稱 **HumanResources.uspGetEmployeesTest**，然後選取 [執行預存程序]。  
   
-12. 在 [執行程序]**** 視窗中，輸入 Margheim 以作為 @LastName 參數值，然後輸入 Diane 值以作為 @FirstName 參數值。  
+12. 在 [執行程序] 視窗中，輸入 Margheim 以作為 @LastName 參數值，然後輸入 Diane 值以作為 @FirstName 參數值。  
   
 > [!WARNING]  
 >  驗證所有使用者輸入。 在使用者輸入完成驗證前，請勿加以串連。 請勿執行由未經驗證之使用者輸入所建構的命令。  

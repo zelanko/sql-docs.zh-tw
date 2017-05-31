@@ -17,9 +17,10 @@ caps.latest.revision: 15
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f9ab22cf6c60bd7d89ff70eba15ca65c731a1fb1
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -43,7 +44,7 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="to-change-the-column-order"></a>若要變更資料行順序  
   
-1.  在 [物件總管]**** 中，以滑鼠右鍵按一下包含要重新排序之資料行的資料表，然後按一下 [設計]****。  
+1.  在 [物件總管] 中，以滑鼠右鍵按一下包含要重新排序之資料行的資料表，然後按一下 [設計]。  
   
 2.  選取要重排順序之資料行名稱左邊的方塊。  
   

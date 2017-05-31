@@ -18,9 +18,10 @@ caps.latest.revision: 37
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f1f7fb4d386936f39a471bae4746fecb42057ee2
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -40,7 +41,7 @@ ms.lasthandoff: 04/11/2017
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  重新初始化訂閱處理分為兩部份：  
   
-1.  *「標示」* 要重新初始化之發行集的單個或所有訂閱。 在 **[重新初始化訂閱]** 對話方塊中標示要進行重新初始化處理的訂閱，此對話方塊在 **** 中的 **[本機發行集]** 資料夾和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. 您也可以從「複寫監視器」中的 **[所有訂閱]** 索引標籤和發行集節點中標示訂閱。 如需啟動複寫監視器的資訊，請參閱[啟動複寫監視器](../../relational-databases/replication/monitor/start-the-replication-monitor.md)。 當您要標示訂閱進行重新初始化時，可用的選項如下：  
+1.  *「標示」* 要重新初始化之發行集的單個或所有訂閱。 在 **[重新初始化訂閱]** 對話方塊中標示要進行重新初始化處理的訂閱，此對話方塊在  中的 **[本機發行集]** 資料夾和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. 您也可以從「複寫監視器」中的 **[所有訂閱]** 索引標籤和發行集節點中標示訂閱。 如需啟動複寫監視器的資訊，請參閱[啟動複寫監視器](../../relational-databases/replication/monitor/start-the-replication-monitor.md)。 當您要標示訂閱進行重新初始化時，可用的選項如下：  
   
      **使用目前的快照集**  
      選取即可將目前的快照集套用至散發代理程式或合併代理程式下一次將執行的訂閱者。 如果沒有任何有效的快照集可以使用，則不可以選取此選項。  

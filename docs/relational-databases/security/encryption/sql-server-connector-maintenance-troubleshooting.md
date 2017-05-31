@@ -16,9 +16,10 @@ caps.latest.revision: 21
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 7d93dd0a6eae5fead834526e86455717c6ed97e6
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -192,11 +193,11 @@ ms.lasthandoff: 04/11/2017
 ![aad-change-default-directory-helpsteps](../../../relational-databases/security/encryption/media/aad-change-default-directory-helpsteps.png)
 
 1. 請前往 Azure 傳統入口網站︰[https://manage.windowsazure.com](https://manage.windowsazure.com)  
-2. 在左側的功能表中，向下捲動並選取 [設定]****。
-3. 選取目前使用的 Azure 訂用帳戶，並按一下畫面底部命令的 [編輯目錄]****。
-4. 在快顯視窗中，使用 [目錄]**** 下拉式清單選取您想使用的 Active Directory。 這樣即可讓它成為預設目錄。
+2. 在左側的功能表中，向下捲動並選取 [設定]。
+3. 選取目前使用的 Azure 訂用帳戶，並按一下畫面底部命令的 [編輯目錄]。
+4. 在快顯視窗中，使用 [目錄] 下拉式清單選取您想使用的 Active Directory。 這樣即可讓它成為預設目錄。
 5. 您必須是新選取之 Active Directory 的全域管理員。 如果您不是全域管理員，就可能會因為切換目錄而遺失管理權限。
-6. 快顯視窗關閉後，如果沒有看到任何訂用帳戶，您可能需要更新畫面右上角功能表中 [訂用帳戶]**** 篩選的 [依目錄篩選]**** 篩選，才能看到使用剛更新之 Active Directory 的訂用帳戶。
+6. 快顯視窗關閉後，如果沒有看到任何訂用帳戶，您可能需要更新畫面右上角功能表中 [訂用帳戶] 篩選的 [依目錄篩選] 篩選，才能看到使用剛更新之 Active Directory 的訂用帳戶。
 
     > [!NOTE] 
     > 您可能無權實際變更 Azure 訂用帳戶的預設目錄。 在此情況下，請在您的預設目錄中建立 AAD 服務主體，讓它和稍後要用的 Azure 金鑰保存庫位於相同的目錄。

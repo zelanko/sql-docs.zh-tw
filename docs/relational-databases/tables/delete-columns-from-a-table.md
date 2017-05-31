@@ -19,9 +19,10 @@ caps.latest.revision: 16
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 20aa31c62de21e9718f504538ae4199395a5dab0
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -65,7 +66,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在**物件總管**中，以滑鼠右鍵按一下您想要從中刪除資料行的資料表，然後選擇 [刪除]****。  
+2.  在**物件總管**中，以滑鼠右鍵按一下您想要從中刪除資料行的資料表，然後選擇 [刪除]。  
   
 3.  在 **[刪除物件]** 對話方塊中，按一下 **[確定]**。  
   
@@ -73,9 +74,9 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="to-delete-columns-by-using-table-designer"></a>若要使用資料表設計工具來刪除資料行  
   
-1.  在**物件總管**中，以滑鼠右鍵按一下您想要從中刪除資料行的資料表，然後選擇 [設計]****。  
+1.  在**物件總管**中，以滑鼠右鍵按一下您想要從中刪除資料行的資料表，然後選擇 [設計]。  
   
-2.  以滑鼠右鍵按一下您想要刪除的資料行，然後從捷徑功能表中選擇 [刪除資料行]****。  
+2.  以滑鼠右鍵按一下您想要刪除的資料行，然後從捷徑功能表中選擇 [刪除資料行]。  
   
 3.  如果資料行參與關聯性 (FOREIGN KEY 或 PRIMARY KEY)，則會有訊息提示您確認是否要刪除選取的資料行及其關聯性。 選擇 [ **是**]。  
   

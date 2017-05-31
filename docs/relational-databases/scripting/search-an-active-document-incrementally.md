@@ -18,16 +18,17 @@ caps.latest.revision: 24
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b3d3c79129936f6764261ec3f0ac1e0d54daf03d
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="search-an-active-document-incrementally"></a>以累加方式搜尋作用中的文件
   您可以輸入文字，以累加方式來搜尋單一文件或視窗。 搜尋作業會反白顯示第一組符合文件或視窗中之累加搜尋期間所輸入之字元的字元。 累加搜尋會自動搜尋文件或視窗內的所有文字，不過，隱藏的文字除外。  
   
- 對於 **[大小寫須相符]** 選項，累加搜尋會使用上一次搜尋的準則。 例如，如果您利用 [檔案中尋找]**** 對話方塊搜尋了多個檔案，且選取 [大小寫須相符]****，您下次累加搜尋時，搜尋會區分大小寫。  
+ 對於 **[大小寫須相符]** 選項，累加搜尋會使用上一次搜尋的準則。 例如，如果您利用 [檔案中尋找] 對話方塊搜尋了多個檔案，且選取 [大小寫須相符]，您下次累加搜尋時，搜尋會區分大小寫。  
   
 ### <a name="to-search-incrementally"></a>累加搜尋  
   

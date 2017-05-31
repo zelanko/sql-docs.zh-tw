@@ -16,9 +16,10 @@ caps.latest.revision: 20
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 56ad4058339f59a69409ef1c0319f9b41354823c
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -52,7 +53,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  按一下加號展開 **[資料庫]** 資料夾。  
   
-3.  以滑鼠右鍵按一下要管理其中類別目錄訂閱的資料庫，指向 [原則]**** 並選取 [類別目錄]****。  
+3.  以滑鼠右鍵按一下要管理其中類別目錄訂閱的資料庫，指向 [原則] 並選取 [類別目錄]。  
   
      **[類別目錄]** 對話方塊有下列選項：  
   
@@ -77,7 +78,7 @@ ms.lasthandoff: 04/11/2017
      **記錄**  
      按一下 [檢視記錄] 超連結可開啟記錄檔檢視器，以查看原則記錄。  
   
-4.  若要訂閱原則式管理類別目錄，請選取 [已訂閱]**** 資料行下類別目錄的對話方塊。 若要取消訂閱類別目錄，請清除核取方塊。  
+4.  若要訂閱原則式管理類別目錄，請選取 [已訂閱] 資料行下類別目錄的對話方塊。 若要取消訂閱類別目錄，請清除核取方塊。  
   
 5.  完成後，請按一下 **[確定]**。  
   

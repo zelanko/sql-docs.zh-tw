@@ -14,9 +14,10 @@ caps.latest.revision: 8
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 5345501c146c5d48d8d7f8cd5fd06f4fc9dfc749
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -29,13 +30,13 @@ ms.lasthandoff: 04/11/2017
   
 1.  從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式中移除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的受管理的執行個體。  
   
-    -   在 SSMS 內的 [公用程式總管]**** 中，按一下 [受管理的執行個體]**** 節點。  
+    -   在 SSMS 內的 [公用程式總管] 中，按一下 [受管理的執行個體] 節點。  
   
-    -   在 [公用程式總管]**** 清單檢視中，以滑鼠右鍵按一下 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱，然後選取 [移除受管理的執行個體]****。 如需詳細資訊，請參閱[從 SQL Server 公用程式中移除 SQL Server 執行個體](../../relational-databases/manage/remove-an-instance-of-sql-server-from-the-sql-server-utility.md)。  
+    -   在 [公用程式總管] 清單檢視中，以滑鼠右鍵按一下 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱，然後選取 [移除受管理的執行個體]。 如需詳細資訊，請參閱[從 SQL Server 公用程式中移除 SQL Server 執行個體](../../relational-databases/manage/remove-an-instance-of-sql-server-from-the-sql-server-utility.md)。  
   
 2.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式內再次註冊 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。  
   
-    -   在 SSMS 內的 [公用程式總管]**** 中，以滑鼠右鍵按一下 [受管理的執行個體]**** 節點，然後選取 [新增受管理的執行個體]****。  
+    -   在 SSMS 內的 [公用程式總管] 中，以滑鼠右鍵按一下 [受管理的執行個體] 節點，然後選取 [新增受管理的執行個體]。  
   
     -   依照提示完成精靈，指定新的 Proxy 帳戶。  
   

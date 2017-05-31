@@ -20,9 +20,10 @@ caps.latest.revision: 43
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 3e68d3b1d6d08153e24ec3afdb5102e5c1ae6c46
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -95,7 +96,7 @@ ms.lasthandoff: 04/11/2017
   
 4.  展開 **[索引]** 資料夾。  
   
-5.  以滑鼠右鍵按一下要設定平行處理原則最大程度的索引，然後選取 [屬性]****。  
+5.  以滑鼠右鍵按一下要設定平行處理原則最大程度的索引，然後選取 [屬性]。  
   
 6.  在 **[選取頁面]**底下，選取 **[選項]**。  
   

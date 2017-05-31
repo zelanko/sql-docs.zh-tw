@@ -19,9 +19,10 @@ caps.latest.revision: 40
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 1b2355b85d82050496d1df27480723a0831e3a60
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -54,7 +55,7 @@ ms.lasthandoff: 04/11/2017
 |**Log Flush Write Time (ms)**|執行在最後一筆記錄中完成之記錄檔排清寫入的時間 (以毫秒為單位)。|  
 |**Log Flushes/sec**|每秒的記錄檔排清數目。|  
 |**Log Growths**|資料庫之交易記錄檔的擴大總次數。|  
-|**Log Pool Cache Misses/sec**|記錄檔區塊無法在記錄檔集區中使用的要求數目。 「記錄集區」**是交易記錄的記憶體中快取。 此快取是用來最佳化記錄的讀取，以便進行復原、交易複寫、回復和 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]。|  
+|**Log Pool Cache Misses/sec**|記錄檔區塊無法在記錄檔集區中使用的要求數目。 「記錄集區」是交易記錄的記憶體中快取。 此快取是用來最佳化記錄的讀取，以便進行復原、交易複寫、回復和 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]。|  
 |**Log Pool Disk Reads/sec**|由記錄檔集區發出來提取記錄檔區塊的磁碟讀取數目。|  
 |**Log Pool Hash Deletes/sec**|從記錄集區刪除原始雜湊項目的比率。|
 |**Log Pool Hash Inserts/sec**|原始雜湊項目插入記錄集區的速率。|
@@ -77,7 +78,7 @@ ms.lasthandoff: 04/11/2017
 |**Repl.Trans.Rate**|每秒自發行集資料的交易記錄檔讀取並傳送至散發資料庫的交易數。|  
 |**Shrink Data Movement Bytes/sec**|經由自動壓縮作業或是 DBCC SHRINKDATABASE 或 DBCC SHRINKFILE 陳述式移動的每秒資料量。|  
 |**Tracked transactions/sec**|資料庫的認可資料表中記錄的已認可交易數目。|  
-|**Transactions/sec**|每秒針對資料庫啟動的交易數。<br /><br /> [Transactions/sec]**** 並未計入僅限 XTP 交易 (由原生編譯的預存程序啟動的交易)。|  
+|**Transactions/sec**|每秒針對資料庫啟動的交易數。<br /><br /> [Transactions/sec] 並未計入僅限 XTP 交易 (由原生編譯的預存程序啟動的交易)。|  
 |**Write Transactions/sec**|上一秒寫入資料庫並認可的交易數目。|  
 |**XTP Controller DLC Latency Base**|僅供內部使用。| 
 |**XTP Controller DLC Latency/Fetch**|從記錄區塊輸入直接記錄取用者到 XTP 控制器加以擷取之間，每秒的平均延遲 (微秒)。|

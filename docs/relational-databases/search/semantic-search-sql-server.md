@@ -19,17 +19,18 @@ caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: ca60c4ada6bd908d5401784db74a9b8b0c93396b
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="semantic-search-sql-server"></a>語意搜尋 (SQL Server)
-統計語意搜尋會擷取統計上相關的「主要片語」**並建立其索引，藉以深入解析儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中的非結構化文件。 接著使用這些主要片語來識別「相似或相關文件」**，並建立其索引。  
+統計語意搜尋會擷取統計上相關的「主要片語」並建立其索引，藉以深入解析儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中的非結構化文件。 接著使用這些主要片語來識別「相似或相關文件」，並建立其索引。  
   
 ##  <a name="whatcanido"></a> 可以使用語意搜尋進行哪些作業？  
- 雖然語意搜尋是以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中現有的全文檢索搜尋功能為建立基礎，但是可以實現超過關鍵字搜尋的新案例。 全文檢索搜尋可讓您查詢文件中的「字詞」**，而語意搜尋則可讓您查詢文件的「意義」**。 目前可能的方案包含自動標記擷取、相關內容探索，以及相似內容的階層式導覽。 例如，您可以查詢主要片語的索引來建立組織或文件主體的分類。 或者，您可以查詢文件相似度索引來識別符合工作描述的履歷表。  
+ 雖然語意搜尋是以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中現有的全文檢索搜尋功能為建立基礎，但是可以實現超過關鍵字搜尋的新案例。 全文檢索搜尋可讓您查詢文件中的「字詞」，而語意搜尋則可讓您查詢文件的「意義」。 目前可能的方案包含自動標記擷取、相關內容探索，以及相似內容的階層式導覽。 例如，您可以查詢主要片語的索引來建立組織或文件主體的分類。 或者，您可以查詢文件相似度索引來識別符合工作描述的履歷表。  
   
  下列各範例示範語意搜尋的功能。 同時，這些範例示範用來查詢語意索引並以結構化資料形式擷取結果的三個 Transact-SQL 資料列集函式。  
   

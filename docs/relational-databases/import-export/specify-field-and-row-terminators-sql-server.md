@@ -20,14 +20,15 @@ caps.latest.revision: 39
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 42c2ee3fe98d6c6fc35d2417469bc3eec9fddd8c
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>指定欄位與資料列結束字元 (SQL Server)
-  針對字元資料欄位，選擇性結束字元可讓您使用「欄位結束字元」**標示資料檔案中每個欄位的結尾，並使用「資料列結束字元」**標示每個資料列的結尾。 結束字元是指示程式從欄位或資料列結束與開始的交接處讀取資料檔的一種方法。  
+  針對字元資料欄位，選擇性結束字元可讓您使用「欄位結束字元」標示資料檔案中每個欄位的結尾，並使用「資料列結束字元」標示每個資料列的結尾。 結束字元是指示程式從欄位或資料列結束與開始的交接處讀取資料檔的一種方法。  
   
 > [!IMPORTANT]  
 >  在使用原生或 Unicode 原生格式時，請使用長度前置詞，而不使用欄位結束字元。 由於原生格式資料檔案存放格式為 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的內部二進位資料格式，因此原生格式資料可能會與結束字元相衝突。  

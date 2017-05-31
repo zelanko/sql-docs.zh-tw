@@ -17,9 +17,10 @@ caps.latest.revision: 5
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 2a0aad98c302e55b3edc76b01fc0c5eae4e249ac
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -39,10 +40,10 @@ ms.lasthandoff: 04/11/2017
  顯示用於管理資料倉儲的關聯式資料庫名稱。  
   
  **測試連接**  
- 使用設定資料收集時所提供的資訊，測試與指定之 [伺服器]**** 的連接。  
+ 使用設定資料收集時所提供的資訊，測試與指定之 [伺服器] 的連接。  
   
  **快取目錄**  
- 指定在收集而來的資料上傳到管理資料倉儲之前，應該將這些資料儲存在收集資料之系統上的哪一個目錄。 如果未指定 [快取目錄]****，資料收集器會嘗試尋找 %TEMP% 和 %TMP% 環境變數的位置，並使用其中一個位置當做暫存區的預設位置。 如果未設定這些環境變數，就會發生錯誤，而且系統會提示您建立快取目錄。  
+ 指定在收集而來的資料上傳到管理資料倉儲之前，應該將這些資料儲存在收集資料之系統上的哪一個目錄。 如果未指定 [快取目錄]，資料收集器會嘗試尋找 %TEMP% 和 %TMP% 環境變數的位置，並使用其中一個位置當做暫存區的預設位置。 如果未設定這些環境變數，就會發生錯誤，而且系統會提示您建立快取目錄。  
   
 ## <a name="data-collection-properties-advanced-tab"></a>資料收集屬性 (進階索引標籤)  
  使用這個頁面可針對管理資料倉儲的連接來設定重試設定。  

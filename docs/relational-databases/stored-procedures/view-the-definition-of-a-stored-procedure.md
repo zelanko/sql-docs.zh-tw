@@ -19,9 +19,10 @@ caps.latest.revision: 29
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7c47576b90eb7b14738d8612b99f36ed8a5ccb12
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -59,7 +60,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 [物件總管] 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體，然後展開該執行個體。  
   
-2.  依序展開 [資料庫] ****、程序所屬的資料庫，以及 [可程式性] ****。  
+2.  依序展開 [資料庫] 、程序所屬的資料庫，以及 [可程式性] 。  
   
 3.  展開 **[預存程序]**，以滑鼠右鍵按一下程序，然後按一下 **[產生預存程序的指令碼為]**，再按一下下列其中一個選項： **[CREATE 至]**、 **[ALTER 至]**或 **[DROP 並 CREATE 至]**。  
   

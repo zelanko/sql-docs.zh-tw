@@ -14,9 +14,10 @@ caps.latest.revision: 44
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 7b520a605648e8619f8462ae9125842fdeb37ebc
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -49,7 +50,7 @@ ms.lasthandoff: 04/11/2017
 ###  <a name="security"></a> 安全性  
  以下是備份至 Microsoft Azure Blob 儲存體服務或從中還原時的安全性考量和需求。  
   
--   建立 Microsoft Azure Blob 儲存體服務的容器時，建議您將存取權設為 [私用] ****。 將存取權設定為 [私用] 可將存取對象限制為能夠提供必要資訊來驗證 Windows Azure 帳戶的使用者或帳戶。  
+-   建立 Microsoft Azure Blob 儲存體服務的容器時，建議您將存取權設為 [私用] 。 將存取權設定為 [私用] 可將存取對象限制為能夠提供必要資訊來驗證 Windows Azure 帳戶的使用者或帳戶。  
   
     > [!IMPORTANT]  
     >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 需要在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認證中儲存 Windows Azure 帳戶名稱和存取金鑰驗證或共用存取簽章和存取 Token。 當 Windows Azure 帳戶執行備份或還原作業時，這項資訊就會用來驗證該帳戶。  
@@ -204,11 +205,11 @@ ms.lasthandoff: 04/11/2017
   
  下列步驟說明在 SQL Server Management Studio 中對備份資料庫工作進行變更，以允許備份至 Windows Azure 儲存體：  
   
-1.  在物件總管****中，連接到 SQL Server Database Engine 的執行個體，然後展開該執行個體。
+1.  在物件總管中，連接到 SQL Server Database Engine 的執行個體，然後展開該執行個體。
 
-2.  展開 [資料庫]****，以滑鼠右鍵按一下所需的資料庫，指向 [工作]****，然後按一下 [備份...]****。
+2.  展開 [資料庫]，以滑鼠右鍵按一下所需的資料庫，指向 [工作]，然後按一下 [備份...]。
   
-3.  [一般]**** 頁面之 [目的地]**** 區段的 [備份至:]**** 下拉式清單中提供 [URL]**** 選項。  [URL]**** 選項可用以建立備份至 Microsoft Azure 儲存體。 按一下 [加入]****，[選取備份目的地]**** 對話方塊隨即開啟：
+3.  [一般] 頁面之 [目的地] 區段的 [備份至:] 下拉式清單中提供 [URL] 選項。  [URL] 選項可用以建立備份至 Microsoft Azure 儲存體。 按一下 [加入]，[選取備份目的地] 對話方塊隨即開啟：
    
     1.  **Azure 儲存體容器：**儲存備份檔案的 Microsoft Azure 儲存體容器名稱。  從下拉式清單中選取現有的容器，或手動輸入容器。 
   
@@ -221,7 +222,7 @@ ms.lasthandoff: 04/11/2017
 > [!NOTE] 
 >  **加入**單一媒體集有多個備份檔案和儲存體容器的支援。
   
- 當您選取 **URL** 作為目的地時，[媒體選項]**** 頁面中的某些選項會停用。  下列主題包含有關備份資料庫對話方塊的詳細資訊：  
+ 當您選取 **URL** 作為目的地時，[媒體選項] 頁面中的某些選項會停用。  下列主題包含有關備份資料庫對話方塊的詳細資訊：  
   
  [備份資料庫 &#40;一般頁面&#41;](../../relational-databases/backup-restore/back-up-database-general-page.md)  
   
@@ -240,13 +241,13 @@ ms.lasthandoff: 04/11/2017
 ##  <a name="RestoreSSMS"></a> 使用 SQL Server Management Studio 從 Microsoft Azure 儲存體還原  
 還原資料庫工作會包含 **URL** 作為還原裝置的來源。  下列步驟說明使用還原工作，從 Microsoft Azure Blob 儲存體服務還原︰ 
   
-1.  以滑鼠右鍵按一下 [資料庫]****，然後選取 [還原資料庫...]****。 
+1.  以滑鼠右鍵按一下 [資料庫]，然後選取 [還原資料庫...]。 
   
-2.  在 [一般]**** 頁面上，選取 [來源]**** 區段下的 [裝置]****。
+2.  在 [一般] 頁面上，選取 [來源] 區段下的 [裝置]。
   
-3.  按一下瀏覽 (...) 按鈕，開啟 [選取備份裝置]**** 對話方塊。 
+3.  按一下瀏覽 (...) 按鈕，開啟 [選取備份裝置] 對話方塊。 
 
-4.  從 [備份媒體類型:]**** 下拉式清單中選取 [URL]****。  按一下 [加入]**** 開啟 [選取備份檔案位置]**** 對話方塊。
+4.  從 [備份媒體類型:] 下拉式清單中選取 [URL]。  按一下 [加入] 開啟 [選取備份檔案位置] 對話方塊。
 
     1.  **Azure 儲存體容器：**包含備份檔案之 Microsoft Azure 儲存體容器的完整名稱。  從下拉式清單中選取現有的容器，或手動輸入完整容器名稱。
       
@@ -254,7 +255,7 @@ ms.lasthandoff: 04/11/2017
       
     3.  **加入：**  用來註冊您沒有共用存取簽章的現有容器。  請參閱 [連接到 Microsoft Azure 訂用帳戶](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md)。
       
-    4.  **確定：**SQL Server 會使用您提供的 SQL 認證資訊連接到 Microsoft Azure 儲存體，並開啟 [在 Microsoft Azure 中尋找備份檔案****] 對話方塊。 位於儲存體容器中的備份檔案，會顯示在此頁面上。 選取您要用以還原的檔案，並按一下 **[確定]**。 如此會讓您回到 [選取備份裝置]**** 對話方塊，而按一下此對話方塊中的 [確定]****，會帶您回到您可完成還原的主要 [還原]**** 對話方塊。 
+    4.  **確定：**SQL Server 會使用您提供的 SQL 認證資訊連接到 Microsoft Azure 儲存體，並開啟 [在 Microsoft Azure 中尋找備份檔案] 對話方塊。 位於儲存體容器中的備份檔案，會顯示在此頁面上。 選取您要用以還原的檔案，並按一下 **[確定]**。 如此會讓您回到 [選取備份裝置] 對話方塊，而按一下此對話方塊中的 [確定]，會帶您回到您可完成還原的主要 [還原] 對話方塊。 
   
      [還原資料庫 &#40;一般頁面&#41;](../../relational-databases/backup-restore/restore-database-general-page.md)  
   

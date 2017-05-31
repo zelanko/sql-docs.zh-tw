@@ -18,9 +18,10 @@ caps.latest.revision: 45
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 38b72e808e19854400bf8d4baa867148f4c5a867
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -50,7 +51,7 @@ ms.lasthandoff: 04/11/2017
   
 3.  以滑鼠右鍵按一下您要同步處理的訂閱，然後按一下 **[檢視同步處理的狀態]**。  
   
-4.  在 [檢視同步處理的狀態 - \<訂閱者>:\<訂閱資料庫>]**** 對話方塊中，按一下 [啟動]****。 同步處理完成後，會顯示 **[同步處理已完成]** 的訊息。  
+4.  在 [檢視同步處理的狀態 - \<訂閱者>:\<訂閱資料庫>] 對話方塊中，按一下 [啟動]。 同步處理完成後，會顯示 **[同步處理已完成]** 的訊息。  
   
 5.  按一下 [ **關閉**]。  
   

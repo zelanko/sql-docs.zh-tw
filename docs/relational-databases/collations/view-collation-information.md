@@ -16,9 +16,10 @@ caps.latest.revision: 11
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: eebc43acb7df6cf2d63dbc6d8e0d1c4f25fa9476
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -38,13 +39,13 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 [物件總管] 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在執行個體上按一下滑鼠右鍵，然後選取 [屬性]****。  
+2.  在執行個體上按一下滑鼠右鍵，然後選取 [屬性]。  
   
  **在 [物件總管] 中檢視資料庫的定序設定**  
   
 1.  在物件總管中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體，然後展開該執行個體。  
   
-2.  展開 [資料庫] ****，然後在資料庫上按一下滑鼠右鍵，再選取 [屬性]****。  
+2.  展開 [資料庫] ，然後在資料庫上按一下滑鼠右鍵，再選取 [屬性]。  
   
  **在 [物件總管] 中檢視資料行的定序設定**  
   
@@ -54,7 +55,7 @@ ms.lasthandoff: 04/11/2017
   
 3.  展開包含資料行的資料表，然後展開 **[資料行]**。  
   
-4.  在資料行上按一下滑鼠右鍵，然後選取 [屬性]****。 如果定序屬性為空白，則資料行不是字元資料類型。  
+4.  在資料行上按一下滑鼠右鍵，然後選取 [屬性]。 如果定序屬性為空白，則資料行不是字元資料類型。  
   
 ###  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **檢視伺服器的定序設定**  

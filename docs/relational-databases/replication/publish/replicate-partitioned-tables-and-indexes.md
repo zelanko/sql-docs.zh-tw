@@ -20,9 +20,10 @@ caps.latest.revision: 20
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ca19ef9e234653e490e8c9b92bcf221b2175a341
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -40,7 +41,7 @@ ms.lasthandoff: 04/11/2017
   
  與資料分割有關的第一組屬性是發行項結構描述選項，這些選項可決定是否應將資料分割物件複製到訂閱者。 可透過下列方式來設定這些結構描述選項：  
   
--   在新增發行集精靈的 **[發行項屬性]** 頁面中，或是在 [發行集屬性] 對話方塊中。 若要複製上表所列的物件，請針對 **[複製資料表資料分割配置]** 和 **[複製索引資料分割配置]** 屬性指定 **true**的值。 如需如何存取 [發行項屬性]**** 頁面的詳細資訊，請參閱[檢視和修改發行集屬性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
+-   在新增發行集精靈的 **[發行項屬性]** 頁面中，或是在 [發行集屬性] 對話方塊中。 若要複製上表所列的物件，請針對 **[複製資料表資料分割配置]** 和 **[複製索引資料分割配置]** 屬性指定 **true**的值。 如需如何存取 [發行項屬性] 頁面的詳細資訊，請參閱[檢視和修改發行集屬性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
   
 -   藉由使用下列其中一個預存程序的 *schema_option* 參數：  
   

@@ -20,9 +20,10 @@ caps.latest.revision: 38
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: aecc25b2c402c27d2a425107565573ba0390effa
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -50,7 +51,7 @@ ms.lasthandoff: 04/11/2017
   
 -   欄位結束字元  
   
-     針對字元資料欄位，選擇性的結束字元讓您可以標示資料檔中每個欄位的結尾 (使用「欄位結束字元」**)，以及每個資料列的結尾 (使用「資料列結束字元」**)。 結束字元可讓讀取資料檔的程式知道某個欄位或資料列在何處結束，另一個在何處開始。 如需詳細資訊，請參閱 [指定欄位與資料列結束字元 &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)。  
+     針對字元資料欄位，選擇性的結束字元讓您可以標示資料檔中每個欄位的結尾 (使用「欄位結束字元」)，以及每個資料列的結尾 (使用「資料列結束字元」)。 結束字元可讓讀取資料檔的程式知道某個欄位或資料列在何處結束，另一個在何處開始。 如需詳細資訊，請參閱 [指定欄位與資料列結束字元 &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)。  
   
   
 ##  <a name="FieldSpecificPrompts"></a> 欄位專用提示字元的概觀  
@@ -103,7 +104,7 @@ bcp AdventureWorks.HumanResources.myTeam out myTeam.txt -T
  格式檔案的預設名稱為 bcp.fmt，但您也可以選擇指定不同的檔案名稱。  
   
 > [!NOTE]  
->  若為使用單一資料格式作為檔案儲存類型的資料檔 (例如字元或原生格式)，您可以快速建立格式檔案，而不需透過 [格式]**** 選項來匯出或匯入資料。 此方法的優點是容易使用，並且可讓您建立 XML 格式檔案或非 XML 格式檔案。 如需詳細資訊，請參閱[建立格式檔案 &#40;SQL Server&#41;](../../relational-databases/import-export/create-a-format-file-sql-server.md)。  
+>  若為使用單一資料格式作為檔案儲存類型的資料檔 (例如字元或原生格式)，您可以快速建立格式檔案，而不需透過 [格式] 選項來匯出或匯入資料。 此方法的優點是容易使用，並且可讓您建立 XML 格式檔案或非 XML 格式檔案。 如需詳細資訊，請參閱[建立格式檔案 &#40;SQL Server&#41;](../../relational-databases/import-export/create-a-format-file-sql-server.md)。  
   
   
 ## <a name="related-tasks"></a>相關工作  

@@ -22,9 +22,10 @@ caps.latest.revision: 38
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5c6bd8f73f549b7869f30576a03f9d90e874398a
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -47,7 +48,7 @@ ms.lasthandoff: 04/11/2017
 -   [相關工作](#RelatedTasks)  
   
 ##  <a name="OverviewofMirroredMediaSets"></a> 鏡像媒體集概觀  
- 媒體鏡像是媒體集的一種屬性。 「鏡像媒體集」**是由多份媒體集複本 (「鏡像」**) 組成。 媒體集包含一個或多個媒體家族，其中每一個都對應到備份裝置。 例如，如果 BACKUP DATABASE 陳述式的 TO 子句列出三個裝置，BACKUP 會將資料分散在三個媒體家族中，每個裝置一份資料。 建立媒體集 (由 BACKUP DATABASE 陳述式指定 WITH FORMAT) 時，就會定義媒體家族和鏡像的數目。  
+ 媒體鏡像是媒體集的一種屬性。 「鏡像媒體集」是由多份媒體集複本 (「鏡像」) 組成。 媒體集包含一個或多個媒體家族，其中每一個都對應到備份裝置。 例如，如果 BACKUP DATABASE 陳述式的 TO 子句列出三個裝置，BACKUP 會將資料分散在三個媒體家族中，每個裝置一份資料。 建立媒體集 (由 BACKUP DATABASE 陳述式指定 WITH FORMAT) 時，就會定義媒體家族和鏡像的數目。  
   
  鏡像媒體集包含二到四個鏡像。 每個鏡像都包含媒體集中的所有媒體家族。 鏡像需要相同數目的裝置，每個媒體家族有一個裝置。 每個鏡像需要每個媒體家族有不同的備份裝置。 例如，由四個媒體家族而有三個鏡像組成的鏡像媒體集需要十二個備份裝置。 所有裝置都必須相同。 例如，相同製造商所提供的相同型號磁帶機。  
   

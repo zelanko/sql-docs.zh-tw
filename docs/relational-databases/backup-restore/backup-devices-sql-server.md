@@ -29,14 +29,15 @@ caps.latest.revision: 93
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 49a10147e48ece974a5ac64bead3b626556ad29c
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="backup-devices-sql-server"></a>備份裝置 (SQL Server)
-  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫上進行備份作業期間，備份的資料 (「備份」**) 會寫入至實體備份裝置。 當媒體集的第一個備份寫入此實體備份裝置時，此裝置就會初始化。 單一媒體集是由一組一個或多個備份裝置上的備份所組成。  
+  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫上進行備份作業期間，備份的資料 (「備份」) 會寫入至實體備份裝置。 當媒體集的第一個備份寫入此實體備份裝置時，此裝置就會初始化。 單一媒體集是由一組一個或多個備份裝置上的備份所組成。  
    
 ##  <a name="TermsAndDefinitions"></a> 詞彙和定義  
  備份磁碟  
@@ -118,7 +119,7 @@ GO
     > **重要！** 透過網路備份資料可能會受到網路問題的影響。因此，我們建議您在使用遠端磁碟時，於備份作業完成後進行驗證。 如需詳細資訊，請參閱 [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)。  
   
 ## <a name="specify-a-universal-naming-convention-unc-name"></a>指定通用命名慣例 (UNC) 名稱  
- 若要在備份或還原命令中指定網路共用，請使用備份裝置檔案的完整通用命名慣例 (UNC) 名稱。 UNC 名稱的格式為 **\\\\**<系統名稱>****\\**<共用名稱>****\\**<路徑>****\\**<檔案名稱>**。  
+ 若要在備份或還原命令中指定網路共用，請使用備份裝置檔案的完整通用命名慣例 (UNC) 名稱。 UNC 名稱的格式為 **\\\\**<系統名稱>**\\**<共用名稱>**\\**<路徑>**\\**<檔案名稱>。  
   
  例如：  
   

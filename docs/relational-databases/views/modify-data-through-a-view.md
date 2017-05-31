@@ -18,9 +18,10 @@ caps.latest.revision: 35
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 360ab52b8f6f8889311ccbb0fd820493ca01b9a8
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -44,11 +45,11 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 **[物件總管]**中，展開包含檢視的資料庫，然後展開 **[檢視]**。  
   
-2.  以滑鼠右鍵按一下檢視，然後選取 [編輯前 200 個資料列]****。  
+2.  以滑鼠右鍵按一下檢視，然後選取 [編輯前 200 個資料列]。  
   
 3.  您可能需要修改 **[SQL]** 窗格中的 SELECT 陳述式，才能傳回要修改的資料列。  
   
-4.  在 **[結果]** 窗格中，尋找要變更或刪除的資料列。 若要刪除資料列，請以滑鼠右鍵按一下此資料列，然後選取 [刪除]****。 若要變更一個或多個資料行中的資料，請修改資料行中的資料。  
+4.  在 **[結果]** 窗格中，尋找要變更或刪除的資料列。 若要刪除資料列，請以滑鼠右鍵按一下此資料列，然後選取 [刪除]。 若要變更一個或多個資料行中的資料，請修改資料行中的資料。  
   
     > **重要！！** 如果檢視參考多個基底資料表，就不能刪除資料列。 您只可以更新屬於單一基底資料表的資料行。  
   

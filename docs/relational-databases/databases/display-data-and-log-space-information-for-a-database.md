@@ -23,9 +23,10 @@ caps.latest.revision: 28
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 81963fea993101e8483d8a00a45bf72e822bb1b1
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -48,7 +49,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  展開 **[資料庫]**。  
   
-3.  以滑鼠右鍵按一下資料庫，然後依序指向 [報表]****、[標準報表]****，再按一下 [磁碟使用量]****。  
+3.  以滑鼠右鍵按一下資料庫，然後依序指向 [報表]、[標準報表]，再按一下 [磁碟使用量]。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

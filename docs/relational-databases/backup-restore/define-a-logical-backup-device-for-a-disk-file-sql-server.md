@@ -20,9 +20,10 @@ caps.latest.revision: 39
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: bd550f0690603132f53452f064af24e05426398a
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -68,7 +69,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  連接到適當的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]執行個體之後，在 [物件總管] 中按一下伺服器名稱展開伺服器樹狀目錄。  
   
-2.  展開 [伺服器物件]****，然後以滑鼠右鍵按一下 [備份裝置]****。  
+2.  展開 [伺服器物件]，然後以滑鼠右鍵按一下 [備份裝置]。  
   
 3.  按一下 **[新增備份裝置]**。 會開啟 **[備份裝置]** 對話方塊。  
   
@@ -78,7 +79,7 @@ ms.lasthandoff: 04/11/2017
   
 6.  若要定義新裝置，請按一下 **[確定]**。  
   
- 若要備份至這個新裝置，請將它加入 [備份資料庫]**** ([一般]****) 對話方塊中的 [備份至:]**** 欄位。 如需詳細資訊，請參閱 [建立完整資料庫備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)中建立差異資料庫備份。  
+ 若要備份至這個新裝置，請將它加入 [備份資料庫] ([一般]) 對話方塊中的 [備份至:] 欄位。 如需詳細資訊，請參閱 [建立完整資料庫備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)中建立差異資料庫備份。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

@@ -19,9 +19,10 @@ caps.latest.revision: 2
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: f1e6d604647070e6789fd9a49a7825a3ae3c7e1b
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -37,7 +38,7 @@ ms.lasthandoff: 04/11/2017
 下列所有範例都需要參考一個共用存取簽章的資料庫範圍認證。   
 
 >  [!IMPORTANT]
->  必須透過使用 `SHARED ACCESS SIGNATURE` 識別的資料庫範圍認證建立外部資料來源。 若要建立儲存體帳戶的共用存取簽章，請參閱 Azure 入口網站之儲存體帳戶屬性頁面上的 [共用存取簽章]**** 屬性。 如需共用存取簽章的詳細資訊，請參閱[使用共用存取簽章 (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)。 如需認證的詳細資訊，請參閱 [CREATE DATABASE SCOPED CREDENTIAL](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)。  
+>  必須透過使用 `SHARED ACCESS SIGNATURE` 識別的資料庫範圍認證建立外部資料來源。 若要建立儲存體帳戶的共用存取簽章，請參閱 Azure 入口網站之儲存體帳戶屬性頁面上的 [共用存取簽章] 屬性。 如需共用存取簽章的詳細資訊，請參閱[使用共用存取簽章 (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)。 如需認證的詳細資訊，請參閱 [CREATE DATABASE SCOPED CREDENTIAL](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)。  
  
 使用必須為 `SHARED ACCESS SIGNATURE` 的 `IDENTITY` 建立資料庫範圍認證。 使用 Azure 入口網站中的密碼。 例如：  
 

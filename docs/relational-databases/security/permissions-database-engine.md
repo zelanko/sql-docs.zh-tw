@@ -23,9 +23,10 @@ caps.latest.revision: 76
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: e1c8c3f3c82e39da5e5f3b1cd018af8b3b2d26d7
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -56,11 +57,11 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
   
      授與變更特定安全性實體之屬性 (除了擁有權之外) 的能力。 在特定範圍授與 ALTER 權限時，也會一併授與改變、建立或卸除該範圍內包含之任何安全性實體的能力。 例如，結構描述上的 ALTER 權限包括建立、改變與卸除結構描述之物件的能力。  
   
--   ALTER ANY \<*伺服器安全性實體*>，其中「伺服器安全性實體」**可以是任何伺服器安全性實體。  
+-   ALTER ANY \<*伺服器安全性實體*>，其中「伺服器安全性實體」可以是任何伺服器安全性實體。  
   
      授與 *伺服器安全性實體*的 CREATE、ALTER 或 DROP 個別執行個體的能力。 例如，ALTER ANY LOGIN 會授與建立、改變或卸除執行個體中任何登入的能力。  
   
--   ALTER ANY \<*資料庫安全性實體*>，其中「資料庫安全性實體」**可以是資料庫層級上的任何安全性實體。  
+-   ALTER ANY \<*資料庫安全性實體*>，其中「資料庫安全性實體」可以是資料庫層級上的任何安全性實體。  
   
      授與 *資料庫安全性實體*的 CREATE、ALTER 或 DROP 個別執行個體能力。 例如，ALTER ANY SCHEMA 會授與建立、改變或卸除資料庫中任何結構描述的能力。  
   

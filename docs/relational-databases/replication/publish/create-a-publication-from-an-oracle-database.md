@@ -17,9 +17,10 @@ caps.latest.revision: 39
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 40e0df4262f227aa3a457f43ca137bbc1d9fa6e2
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -47,7 +48,7 @@ ms.lasthandoff: 04/11/2017
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  使用「新增發行集精靈」從「Oracle 資料庫」建立快照式或交易式發行集。  
   
- 第一次從 Oracle 資料庫建立發行集時，必須在「 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 散發者」端識別「Oracle 發行者」(如果是同一資料庫的後續發行集，則不需要執行這個動作)。 可以從 [新增發行集精靈] 或 [散發者屬性 - \<散發者>]**** 對話方塊來完成 Oracle 發行者的識別；本主題會顯示 [散發者屬性 - \<散發者>]**** 對話方塊。  
+ 第一次從 Oracle 資料庫建立發行集時，必須在「 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 散發者」端識別「Oracle 發行者」(如果是同一資料庫的後續發行集，則不需要執行這個動作)。 可以從 [新增發行集精靈] 或 [散發者屬性 - \<散發者>] 對話方塊來完成 Oracle 發行者的識別；本主題會顯示 [散發者屬性 - \<散發者>] 對話方塊。  
   
 #### <a name="to-identify-the-oracle-publisher-at-the-sql-server-distributor"></a>若要在 SQL Server 散發者端識別 Oracle 發行者  
   
@@ -55,7 +56,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  以滑鼠右鍵按一下 **[複寫]** 資料夾，然後按一下 **[散發者屬性]**。  
   
-3.  在 [散發者屬性 - \<散發者>]**** 對話方塊的 [發行者]**** 頁面上，按一下 [加入]****，然後按一下 [加入 Oracle 發行者]****。  
+3.  在 [散發者屬性 - \<散發者>] 對話方塊的 [發行者] 頁面上，按一下 [加入]，然後按一下 [加入 Oracle 發行者]。  
   
 4.  在 **[連接到伺服器]** 對話方塊上，按一下 **[選項]** 按鈕。  
   
@@ -71,9 +72,9 @@ ms.lasthandoff: 04/11/2017
   
 6.  在 **[連接屬性]** 索引標籤上，選取 **[閘道]** 或 **[完整]**的「發行者」類型。  
   
-     [完整] **** 選項可以為 Oracle 發行提供具有完整支援功能的快照式和交易式發行集。 [閘道] **** 選項可以在複寫作為系統之間的閘道時，提供特定的設計最佳化以提升效能。 如果您計畫在多個交易式發行集內發行相同的資料表，就無法使用 [閘道] **** 選項。 如果您選取 **[閘道]**，則資料表最多只能在一個交易式發行集裡出現，但可以在任意數目的快照式發行集裡出現。  
+     [完整]  選項可以為 Oracle 發行提供具有完整支援功能的快照式和交易式發行集。 [閘道]  選項可以在複寫作為系統之間的閘道時，提供特定的設計最佳化以提升效能。 如果您計畫在多個交易式發行集內發行相同的資料表，就無法使用 [閘道]  選項。 如果您選取 **[閘道]**，則資料表最多只能在一個交易式發行集裡出現，但可以在任意數目的快照式發行集裡出現。  
   
-7.  按一下 **[連接]**，建立與「Oracle 發行者」的連接，並為複寫設定該連接。 [連接到伺服器]**** 對話方塊隨即關閉，並將您返回至 [散發者屬性 - \<散發者>]**** 對話方塊。  
+7.  按一下 **[連接]**，建立與「Oracle 發行者」的連接，並為複寫設定該連接。 [連接到伺服器] 對話方塊隨即關閉，並將您返回至 [散發者屬性 - \<散發者>] 對話方塊。  
   
     > [!NOTE]  
     >  如果網路組態有問題，此時您會收到一條錯誤訊息。 如果您遇到連接到 Oracle 資料庫的問題，請參閱在＜ [Troubleshooting Oracle Publishers](../../../relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md)＞中的「SQL Server 散發者無法連接到 Oracle 資料庫執行個體」一節。  

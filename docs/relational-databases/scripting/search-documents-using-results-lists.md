@@ -19,9 +19,10 @@ caps.latest.revision: 22
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a63ced363f4aee6ece4481f7b89b0ab195b82019
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -36,7 +37,7 @@ ms.lasthandoff: 04/11/2017
   
 3.  在 **[查詢]** 清單中，按一下 **[所有開啟的文件]**、 **[目前的專案]**或 **[整個方案]**，或輸入目錄路徑。  
   
-4.  在 **[檔案類型]** 清單中，選取列出的各組副檔名之一，或用分號分隔來輸入要搜尋之檔案類型的副檔名。 使用 \*。\* 搜尋 [查詢]**** 下拉式清單列出的目錄中的所有檔案。  
+4.  在 **[檔案類型]** 清單中，選取列出的各組副檔名之一，或用分號分隔來輸入要搜尋之檔案類型的副檔名。 使用 \*。\* 搜尋 [查詢] 下拉式清單列出的目錄中的所有檔案。  
   
 5.  選取其餘搜尋選項來改進搜尋的精確度。  
   

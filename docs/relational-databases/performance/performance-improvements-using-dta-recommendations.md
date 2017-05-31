@@ -16,9 +16,10 @@ caps.latest.revision: 3
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 7722ff42ebc2e4e4515a3097a6b8d1106f5e1287
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -27,7 +28,7 @@ ms.lasthandoff: 04/11/2017
 
 
 ---
-資料倉儲和分析工作負載的效能可大幅獲益於「資料行存放區」****索引，特別是針對需要掃描大型資料表的查詢。 如果查詢存取相對少量的資料來搜尋特定值或某範圍值，則「資料列存放區」**** (B+-樹狀結構) 索引最具效率。 因為資料列存放區索引可依排序順序傳遞資料列，所以也可以減少查詢執行計畫中的排序成本。 因此，資料列存放區與資料行存放區索引組合的建置選擇，是取決於應用程式工作負載。
+資料倉儲和分析工作負載的效能可大幅獲益於「資料行存放區」索引，特別是針對需要掃描大型資料表的查詢。 如果查詢存取相對少量的資料來搜尋特定值或某範圍值，則「資料列存放區」 (B+-樹狀結構) 索引最具效率。 因為資料列存放區索引可依排序順序傳遞資料列，所以也可以減少查詢執行計畫中的排序成本。 因此，資料列存放區與資料行存放區索引組合的建置選擇，是取決於應用程式工作負載。
 
 Database Engine Tuning Advisor (DTA) 是在 SQL Server 2016 中引進，透過分析給定的資料庫工作負載，來建議適合的**資料列存放區與資料行存放區索引組合**。 
 

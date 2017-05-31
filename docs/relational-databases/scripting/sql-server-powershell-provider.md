@@ -21,9 +21,10 @@ caps.latest.revision: 61
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 40b88611b6d25c2908a679b84f73ccad5b12cfbe
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -49,7 +50,7 @@ ms.lasthandoff: 04/11/2017
 |SQLSERVER:\IntegrationServices|<xref:Microsoft.SqlServer.Management.IntegrationServices>|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 物件，例如專案、封裝和環境。|  
 |SQLSERVER:\SQLAS|<xref:Microsoft.AnalysisServices>|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 物件，例如 Cube、彙總和維度。|  
   
- 例如，您可以使用 SQLSERVER:\SQL 資料夾來當做可代表 SMO 物件模型所支援之任何物件的路徑開頭。 SQLSERVER:\SQL 路徑的前置部分是 SQLSERVER:\SQL\\*ComputerName*\\*InstanceName*。 執行個體名稱之後的節點會在物件集合 (例如「資料庫」**或「檢視」**) 和物件名稱 (例如 AdventureWorks2012) 之間輪替。 結構描述不會表示為物件類別。 當您在結構描述中指定最上層物件的節點 (如資料表或檢視表) 時，必須使用 *SchemaName.ObjectName*格式來指定物件名稱。  
+ 例如，您可以使用 SQLSERVER:\SQL 資料夾來當做可代表 SMO 物件模型所支援之任何物件的路徑開頭。 SQLSERVER:\SQL 路徑的前置部分是 SQLSERVER:\SQL\\*ComputerName*\\*InstanceName*。 執行個體名稱之後的節點會在物件集合 (例如「資料庫」或「檢視」) 和物件名稱 (例如 AdventureWorks2012) 之間輪替。 結構描述不會表示為物件類別。 當您在結構描述中指定最上層物件的節點 (如資料表或檢視表) 時，必須使用 *SchemaName.ObjectName*格式來指定物件名稱。  
   
  這是本機電腦上預設 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體中 AdventureWorks2012 資料庫之 Purchasing 結構描述的 Vendor 資料表路徑：  
   

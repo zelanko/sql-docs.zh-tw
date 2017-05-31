@@ -18,9 +18,10 @@ caps.latest.revision: 19
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 657d78f548e8368ad2ff4c554fc6f731d7fb27fa
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -38,9 +39,9 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="to-view-and-change-server-properties-for-full-text-search"></a>檢視與變更全文檢索搜尋的伺服器屬性  
   
-1.  在物件總管中，以滑鼠右鍵按一下伺服器，然後按一下 [屬性]****。  
+1.  在物件總管中，以滑鼠右鍵按一下伺服器，然後按一下 [屬性]。  
   
-2.  在 [伺服器屬性]**** 對話方塊中，按一下 [進階]**** 頁面檢視全文檢索搜尋的相關伺服器資訊。 全文檢索屬性如下所示：  
+2.  在 [伺服器屬性] 對話方塊中，按一下 [進階] 頁面檢視全文檢索搜尋的相關伺服器資訊。 全文檢索屬性如下所示：  
   
     -   **預設全文檢索語言**  
   

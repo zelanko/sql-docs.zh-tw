@@ -20,9 +20,10 @@ caps.latest.revision: 46
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: f568f9e74e17bce1d2e5af044e8820e49203a210
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -74,7 +75,7 @@ ms.lasthandoff: 04/11/2017
   
 3.  以滑鼠右鍵按一下 **[區域訂閱]** 資料夾，然後按一下 **[新增訂閱]**。  
   
-4.  在 [新增訂閱精靈] 的 [發行集]**** 頁面上，從 [發行者]**** 下拉式清單中選取 [\<尋找 SQL Server 發行者>]**** 或 [\<尋找 Oracle 發行者>]****。  
+4.  在 [新增訂閱精靈] 的 [發行集] 頁面上，從 [發行者] 下拉式清單中選取 [\<尋找 SQL Server 發行者>] 或 [\<尋找 Oracle 發行者>]。  
   
 5.  連接到 **[連接到伺服器]** 對話方塊中的發行者。  
   

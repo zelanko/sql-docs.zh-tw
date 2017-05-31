@@ -37,14 +37,15 @@ caps.latest.revision: 30
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 2aca87c0050dd501c73bb4da8953a93bf40c0c8e
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine"></a>將 SQL Server Database 部署到 Microsoft Azure 虛擬機器
-  使用 [Deploy a Database to a Windows Azure VM Wizard (將資料庫部署到 Windows Azure VM 精靈)]****，將 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體中的資料庫部署到 Windows Azure 虛擬機器 (VM) 中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 此精靈會使用完整的資料庫備份作業，因此它一定會從 SQL Server 使用者資料庫複製完整的資料庫結構描述和資料。 此精靈也會為您執行所有的 Azure VM 組態設定，因此不需要進行 VM 的預先組態設定。  
+  使用 [Deploy a Database to a Windows Azure VM Wizard (將資料庫部署到 Windows Azure VM 精靈)]，將 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體中的資料庫部署到 Windows Azure 虛擬機器 (VM) 中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 此精靈會使用完整的資料庫備份作業，因此它一定會從 SQL Server 使用者資料庫複製完整的資料庫結構描述和資料。 此精靈也會為您執行所有的 Azure VM 組態設定，因此不需要進行 VM 的預先組態設定。  
   
  您無法使用此精靈進行差異備份。 此精靈將不會覆寫資料庫名稱相同的現有資料庫。 若要取代 VM 上現有的資料庫，您必須先卸除現有資料庫或變更資料庫的名稱。 如果進行中部署作業的資料庫名稱與 VM 上的現有資料庫發生名稱衝突，此精靈將會建議針對進行中的資料庫附加資料庫名稱，好讓您完成作業。  
   
@@ -110,9 +111,9 @@ ms.lasthandoff: 04/11/2017
   
  您在執行 Windows Server 作業系統的電腦上，必須使用下列組態設定執行此精靈：  
   
--   關閉增強式安全性設定：使用 [伺服器管理員] > [本機伺服器]，將 Internet Explorer 增強式安全性設定 (ESC) 設為 [關閉]****。  
+-   關閉增強式安全性設定：使用 [伺服器管理員] > [本機伺服器]，將 Internet Explorer 增強式安全性設定 (ESC) 設為 [關閉]。  
   
--   啟用 JavaScript：[Internet Explorer] > [網際網路選項] > [安全性] > [自訂等級] > [指令碼處理] > [動態指令碼處理]：[啟用]****。  
+-   啟用 JavaScript：[Internet Explorer] > [網際網路選項] > [安全性] > [自訂等級] > [指令碼處理] > [動態指令碼處理]：[啟用]。  
   
 ###  <a name="limitations"></a> 限制事項  
 這個部署功能只適用於透過服務管理 (傳統) 部署模型建立的 Azure 儲存體帳戶。 如需有關 Azure 部署模型的詳細資訊，請參閱 [Azure Resource Manager vs. 傳統部署：了解資源的部署模型和狀態](https://azure.microsoft.com/en-us/documentation/articles/resource-manager-deployment-model/)。
@@ -123,7 +124,7 @@ ms.lasthandoff: 04/11/2017
   
  這個部署功能只能搭配使用者資料庫使用，不支援部署系統資料庫。  
   
- 此部署功能不支援與相似性群組相關聯的託管服務。 例如，不能選取與相似性群組相關聯的儲存體帳戶用於此精靈的 [部署設定] **** 頁面。  
+ 此部署功能不支援與相似性群組相關聯的託管服務。 例如，不能選取與相似性群組相關聯的儲存體帳戶用於此精靈的 [部署設定]  頁面。  
   
  可以使用此精靈部署到 Windows Azure VM 的 SQL Server 資料庫版本：  
   
@@ -206,7 +207,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  在 **[物件總管]**中，展開執行個體名稱，然後展開 **[資料庫]** 節點。  
   
-3.  以滑鼠右鍵按一下您要部署的資料庫，選取 [工作]****，然後選取 [將資料庫部署到 Microsoft Azure VM]****  
+3.  以滑鼠右鍵按一下您要部署的資料庫，選取 [工作]，然後選取 [將資料庫部署到 Microsoft Azure VM]****  
   
 ##  <a name="wizard_pages"></a> 精靈頁面  
  下列章節提供有關組態設定的其他資訊以及此作業的組態詳細資料。  
@@ -224,13 +225,13 @@ ms.lasthandoff: 04/11/2017
 -   [結果](#Results)  
   
 ##  <a name="Introduction"></a> 簡介 
- 此頁面描述 [將資料庫部署到 Microsoft Azure VM 精靈]****。  
+ 此頁面描述 [將資料庫部署到 Microsoft Azure VM 精靈]。  
   
 -   **不要再顯示此頁面。**  
   按一下此核取方塊，之後就不會再顯示 [簡介] 頁面。  
   
 -   **下一個**  
-繼續進行 [來源設定]**** 頁面。  
+繼續進行 [來源設定] 頁面。  
   
 -   **取消**  
   取消作業，並關閉精靈。  
@@ -242,7 +243,7 @@ ms.lasthandoff: 04/11/2017
  使用此頁面可連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，此執行個體會裝載您要部署至 Microsoft Azure VM 的資料庫。 您也將指定一個暫存位置給要從本機電腦儲存的檔案使用，然後檔案才會傳送到 Microsoft Azure。 這個位置可以是共用的網路位置。  
  
 - **SQL Server**    
-按一下 [連接]****，然後針對裝載要部署之資料庫的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體指定連接詳細資料。  
+按一下 [連接]，然後針對裝載要部署之資料庫的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體指定連接詳細資料。  
   
 -   **選取資料庫**  
 使用下拉式清單來指定要部署的資料庫。  
@@ -278,7 +279,7 @@ ms.lasthandoff: 04/11/2017
 指定或確認新資料庫的名稱。 如果目的地 SQL Server 執行個體上已經有該資料庫名稱存在，建議您指定另一個修改的資料庫名稱。  
   
 ##  <a name="Summary"></a> 摘要
- 使用此頁面可檢閱此作業的指定設定。 若要使用指定的設定來完成部署作業，請按一下 **[完成]**。 若要取消部署作業並結束精靈，請按一下 **[取消]**。  按一下 [完成]**** 將會啟動 [部署進度]**** 頁面。  您也可以從 `"%LOCALAPPDATA%\SQL Server\Deploy to SQL in WA VM"` 中的記錄檔檢視進度。
+ 使用此頁面可檢閱此作業的指定設定。 若要使用指定的設定來完成部署作業，請按一下 **[完成]**。 若要取消部署作業並結束精靈，請按一下 **[取消]**。  按一下 [完成] 將會啟動 [部署進度] 頁面。  您也可以從 `"%LOCALAPPDATA%\SQL Server\Deploy to SQL in WA VM"` 中的記錄檔檢視進度。
   
  將資料庫詳細資料部署到 Windows Azure VM 上的 SQL Server 資料庫可能需要進行手動步驟。 我們將會詳細說明這些步驟。  
   

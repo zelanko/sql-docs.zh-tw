@@ -16,9 +16,10 @@ caps.latest.revision: 29
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: bb16d09a04e082148579c409c0353deed3aeb8ea
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -60,7 +61,7 @@ ms.lasthandoff: 04/11/2017
   
  當給定訂閱有一個以上的狀態時，排序順序也會決定要顯示哪一個值。 例如，若訂閱有錯誤而且即將過期，則 **[狀態]** 資料行會顯示 **[錯誤]**。  
   
- **[即將過期/已過期]** 和 **[未初始化的訂閱]** 狀態值均為警告。 顯示警告時，如果代理程式正在執行，則 [狀態] **** 資料行也會顯示。 例如，狀態可能是 **[執行中，即將過期/已過期]**。  
+ **[即將過期/已過期]** 和 **[未初始化的訂閱]** 狀態值均為警告。 顯示警告時，如果代理程式正在執行，則 [狀態]  資料行也會顯示。 例如，狀態可能是 **[執行中，即將過期/已過期]**。  
   
  唯有設定了臨界值時，才會顯示 **[即將過期/已過期]** 狀態值。 如需設定閾值的資訊，請參閱[在複寫監視器中設定閾值和警告](../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)。  
   

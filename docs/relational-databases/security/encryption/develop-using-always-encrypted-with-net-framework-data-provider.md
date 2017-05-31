@@ -14,9 +14,10 @@ caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 09253894ace06e9bd0b6a515e133eb8e2f5860a1
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -37,7 +38,7 @@ ms.lasthandoff: 04/11/2017
 > 特定版本的 .NET Framework 版本永遠加密支援層級各異。 如需詳細資訊，請參閱下文的＜永遠加密 API 參考＞一節。 
 
 ## <a name="enabling-always-encrypted-for-application-queries"></a>為應用程式查詢啟用 [永遠加密]
-加密參數及解密加密資料行查詢結果，最簡單的方式是將資料行加密設定連接字串關鍵字的值設為 [啟用]****。
+加密參數及解密加密資料行查詢結果，最簡單的方式是將資料行加密設定連接字串關鍵字的值設為 [啟用]。
 
 可啟用永遠加密的連接字串範例如下：
 ```
@@ -58,7 +59,7 @@ SqlConnection connection = new SqlConnection(strbldr.ConnectionString);
 
 個別查詢也可以啟用 [永遠加密]。 請參閱後文的 **控制永遠加密的影響效能** 一節。
 請注意，啟用 [永遠加密] 並不足以保證加密或解密成功。 您還需要確定︰
-- 應用程式要有 [檢視任何資料行的主要金鑰定義]** 和 [檢視任何資料行的加密金鑰定義]** 資料庫權限，才能存取資料庫中永遠加密金鑰的相關中繼資料。 如需詳細資料，請參閱[一律加密 (Database Engine) ](https://msdn.microsoft.com/library/mt163865.aspx#Anchor_7)的＜權限＞一節。
+- 應用程式要有 [檢視任何資料行的主要金鑰定義] 和 [檢視任何資料行的加密金鑰定義] 資料庫權限，才能存取資料庫中永遠加密金鑰的相關中繼資料。 如需詳細資料，請參閱[一律加密 (Database Engine) ](https://msdn.microsoft.com/library/mt163865.aspx#Anchor_7)的＜權限＞一節。
 - 應用程式可以加密查詢的資料庫資料行，存取保護資料行加密金鑰的資料行主要金鑰。
 
 ## <a name="retrieving-and-modifying-data-in-encrypted-columns"></a>擷取和修改加密資料行中的資料
@@ -393,11 +394,11 @@ static byte[]  GetEncryptedColumnEncryptonKey()
 
 若要控制個別查詢的 [永遠加密] 行為，您需要使用  [SqlCommand](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcommand.aspx) 和 [SqlCommandColumnEncryptionSetting](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcommandcolumnencryptionsetting.aspx)的這個建構函式。 以下是一些實用的方針：
 - 如果用戶端應用程式透過資料庫連接傳送的大多數查詢都會存取加密資料行：
-    - 將**資料行加密設定**連接字串關鍵字設為 [啟用]**。
+    - 將**資料行加密設定**連接字串關鍵字設為 [啟用]。
     - 對不會存取任何加密資料行的個別查詢設定 **SqlCommandColumnEncryptionSetting.Disabled**。 這會停用呼叫 sys.sp_describe_parameter_encryption 以及嘗試解密結果集內的任何值。
     - 對沒有任何參數要求加密，但會從加密資料行擷取資料的個別查詢設定 **SqlCommandColumnEncryptionSetting.ResultSet** 。 這會停用呼叫 sys.sp_describe_parameter_encryption 和參數加密。 查詢將能夠解密來自加密資料行的結果。
 - 如果用戶端應用程式透過資料庫連接傳送的大多數查詢都不會存取加密資料行：
-    - 將**資料行加密設定**連接字串關鍵字設為 [停用]****。
+    - 將**資料行加密設定**連接字串關鍵字設為 [停用]。
     - 對有任何參數需要加密的個別查詢設定 **SqlCommandColumnEncryptionSetting.Enabled**。 這可以呼叫 sys.sp_describe_parameter_encryption 以及解密擷取自加密資料行的任何查詢結果。
     - 對沒有任何參數要求加密，但會從加密資料行擷取資料的查詢設定 **SqlCommandColumnEncryptionSetting.ResultSet** 。 這會停用呼叫 sys.sp_describe_parameter_encryption 和參數加密。 查詢將能夠解密來自加密資料行的結果。
 

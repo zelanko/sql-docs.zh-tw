@@ -16,14 +16,15 @@ caps.latest.revision: 18
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f716257324f24b9401a71a3cedd0010a56e6fe11
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="sql-server-certificates-and-asymmetric-keys"></a>SQL Server 憑證與非對稱金鑰
-  公開金鑰加密 (PKI) 是一種訊息加密形式，使用者可用此加密形式來建立「公開」**(Public) 金鑰和「私密」**(Private) 金鑰。 私密金鑰會保留在私密位置，而公開金鑰則可以散發給使用者。 雖然這些金鑰在數學上具有相關性，但是私密金鑰無法使用公開金鑰來輕鬆地衍生。 公開金鑰是用來加密資料，而私密金鑰則是用來解密資料。 使用公開金鑰加密的訊息只能使用正確的私密金鑰來加以解密。 由於有兩種不同的金鑰，所以這些金鑰為「非對稱」**(Asymmetric)。  
+  公開金鑰加密 (PKI) 是一種訊息加密形式，使用者可用此加密形式來建立「公開」(Public) 金鑰和「私密」(Private) 金鑰。 私密金鑰會保留在私密位置，而公開金鑰則可以散發給使用者。 雖然這些金鑰在數學上具有相關性，但是私密金鑰無法使用公開金鑰來輕鬆地衍生。 公開金鑰是用來加密資料，而私密金鑰則是用來解密資料。 使用公開金鑰加密的訊息只能使用正確的私密金鑰來加以解密。 由於有兩種不同的金鑰，所以這些金鑰為「非對稱」(Asymmetric)。  
   
  憑證和非對稱金鑰是使用非對稱加密的兩種方式。 憑證經常當做非對稱金鑰的容器使用，因為它們可以包含類似到期日和簽發者等其他資訊。 密碼編譯演算法的兩個機制之間沒有任何差異，而且當提供相同的金鑰長度時，強度不會有任何差異。 一般來說，您可以使用憑證來加密資料庫中的其他加密金鑰類型，或是簽署程式碼模組。  
   

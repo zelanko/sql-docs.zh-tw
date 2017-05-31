@@ -14,9 +14,10 @@ caps.latest.revision: 26
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: f04f47c6230a65140c405db039ce737ad3aa7762
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -133,7 +134,7 @@ ON
 ### <a name="sql-server-management-studio-support"></a>SQL Server Management Studio 支援  
  SQL Server Management Studio 可讓您經由許多對話方塊視窗使用此功能。 例如，您可以在幾個對話方塊視窗中，輸入儲存體容器的 URL 路徑 (例如 https://teststorageaccnt.blob.core.windows.net/testcontainer/)
  
- 作為**路徑**，例如 [新增資料庫]****、[附加資料庫]**** 和 [還原資料庫]****。 如需詳細資訊，請參閱[教學課程：搭配使用 Microsoft Azure Blob 儲存體服務和 SQL Server 2016 資料庫](https://msdn.microsoft.com/library/dn466438.aspx)。  
+ 作為**路徑**，例如 [新增資料庫]、[附加資料庫] 和 [還原資料庫]。 如需詳細資訊，請參閱[教學課程：搭配使用 Microsoft Azure Blob 儲存體服務和 SQL Server 2016 資料庫](https://msdn.microsoft.com/library/dn466438.aspx)。  
   
 ### <a name="sql-server-management-objects-support"></a>SQL Server 管理物件支援  
  使用 Azure 功能中的 SQL Server 資料檔案時，可支援所有 SQL Server 管理物件 (SMO)。 如果 SMO 物件需要檔案路徑，請使用 BLOB URL 格式而非本機檔案路徑，例如 `https://teststorageaccnt.blob.core.windows.net/testcontainer/`。 如需 SQL Server 管理物件 (SMO) 的詳細資訊，請參閱《SQL Server 線上叢書》中的 [SQL Server 管理物件 &#40;SMO&#41; 程式設計指南](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)。  
@@ -157,7 +158,7 @@ ON
      解決方式：請確定您已經在容器上正確建立共用存取簽章。 請檢閱 [教學課程：搭配使用 Microsoft Azure Blob 儲存體服務和 SQL Server 2016 資料庫 ](https://msdn.microsoft.com/library/dn466435.aspx)中第 2 課所提供的指示。  
   
 -   *尚未正確建立 SQL Server 認證。*   
-    解決方式：請確定您已經針對 [識別]**** 欄位使用「共用存取簽章」並且正確建立密碼。 請檢閱 [教學課程：搭配使用 Microsoft Azure Blob 儲存體服務和 SQL Server 2016 資料庫](https://msdn.microsoft.com/library/dn466436.aspx)中第 3 課所提供的指示。  
+    解決方式：請確定您已經針對 [識別] 欄位使用「共用存取簽章」並且正確建立密碼。 請檢閱 [教學課程：搭配使用 Microsoft Azure Blob 儲存體服務和 SQL Server 2016 資料庫](https://msdn.microsoft.com/library/dn466436.aspx)中第 3 課所提供的指示。  
   
  **租用 Blob 錯誤：**  
   

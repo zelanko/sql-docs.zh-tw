@@ -19,16 +19,17 @@ caps.latest.revision: 42
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 3d8dd428e1aded14e6e75c338b12c8b04cf722a8
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="rebuild-index-task-maintenance-plan"></a>重建索引工作 (維護計畫)
-  使用 [重建索引工作]**** 對話方塊，以新的填滿因數重新建立資料庫資料表上的索引。 填滿因數會決定索引中每頁的空白數量，以配合未來擴充需要。 將資料加入資料表時，因為沒有維護填滿因數，所以可用空間都會填滿。 重新組織資料與索引頁面可以重新建立可用空間。  
+  使用 [重建索引工作] 對話方塊，以新的填滿因數重新建立資料庫資料表上的索引。 填滿因數會決定索引中每頁的空白數量，以配合未來擴充需要。 將資料加入資料表時，因為沒有維護填滿因數，所以可用空間都會填滿。 重新組織資料與索引頁面可以重新建立可用空間。  
   
- [重建索引工作]**** 會使用 ALTER INDEX 陳述式。 如需此頁面所描述之選項的詳細資訊，請參閱 [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)。  
+ [重建索引工作] 會使用 ALTER INDEX 陳述式。 如需此頁面所描述之選項的詳細資訊，請參閱 [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)。  
   
 ## <a name="options"></a>選項  
  **連接**  
@@ -60,7 +61,7 @@ ms.lasthandoff: 04/11/2017
     >  維護計畫只針對相容性層級設為 80 (含) 以上的資料庫來執行。 不會顯示相容性層級設為 70 或更低的資料庫。  
   
  **物件**  
- 限制 [選取範圍]**** 格線僅顯示資料表、檢視或兩者。  
+ 限制 [選取範圍] 格線僅顯示資料表、檢視或兩者。  
   
  **選取範圍**  
  指定受此工作影響的資料表或索引。 [物件] 方塊中的 **[資料表和檢視]** 為選取狀態時無法使用。  
@@ -93,7 +94,7 @@ ms.lasthandoff: 04/11/2017
  選取此選項以等候低優先權鎖定。  
   
  **在等候之後中止**  
- 指定經過 [持續時間上限]**** 所指定的時間之後該怎麼做。  
+ 指定經過 [持續時間上限] 所指定的時間之後該怎麼做。  
   
  **持續時間上限**  
  指定等候低優先權鎖定的時間上限。  

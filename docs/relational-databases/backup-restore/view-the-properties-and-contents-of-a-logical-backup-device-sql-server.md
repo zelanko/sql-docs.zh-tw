@@ -24,9 +24,10 @@ caps.latest.revision: 22
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 1e0a3fad1cc54f9367d95ac36c903deeede0814b
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -63,7 +64,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  展開 **[伺服器物件]**，然後展開 **[備份裝置]**。  
   
-3.  按一下裝置，然後以滑鼠右鍵按一下 [屬性]****，這時會開啟 [備份裝置]**** 對話方塊。  
+3.  按一下裝置，然後以滑鼠右鍵按一下 [屬性]，這時會開啟 [備份裝置] 對話方塊。  
   
 4.  **[一般]** 頁面會顯示裝置名稱和目的地 (可能是磁帶裝置或檔案路徑)。  
   

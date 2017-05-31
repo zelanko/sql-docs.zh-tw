@@ -16,9 +16,10 @@ caps.latest.revision: 16
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7dd390bcb61a1e8f320fb6aa3a4c0209dfab3d77
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -29,7 +30,7 @@ ms.lasthandoff: 04/11/2017
   
 ### <a name="to-create-a-table-to-store-filestream-data"></a>建立可儲存 FILESTREAM 資料的資料表  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，按一下 [新增查詢] **** 顯示 [查詢編輯器]。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，按一下 [新增查詢]  顯示 [查詢編輯器]。  
   
 2.  將下列範例的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼複製到 [查詢編輯器] 中。 這個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼會建立稱為 Records 的啟用 FILESTREAM 資料表。  
   

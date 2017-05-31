@@ -18,9 +18,10 @@ caps.latest.revision: 65
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: d23b661d9fd99090a5140100513886d8351460b9
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -118,7 +119,7 @@ ms.lasthandoff: 04/11/2017
 |14|OTHER_TRANSIENT|這個值目前尚未使用。|  
   
 ##  <a name="MinimallyLogged"></a> Operations that can be minimally logged  
- 「最低限度記錄」** 包含僅記錄復原交易所需的資訊，不支援時間點復原。 這個主題將識別在大量記錄 [復原模式](https://msdn.microsoft.com/library/ms189275.aspx) 下 (以及簡單復原模式下，但備份正在執行時除外) 會進行最低限度記錄的作業。  
+ 「最低限度記錄」 包含僅記錄復原交易所需的資訊，不支援時間點復原。 這個主題將識別在大量記錄 [復原模式](https://msdn.microsoft.com/library/ms189275.aspx) 下 (以及簡單復原模式下，但備份正在執行時除外) 會進行最低限度記錄的作業。  
   
 > **注意！！** 記憶體最佳化資料表不支援最低限度記錄。  
   
@@ -146,7 +147,7 @@ ms.lasthandoff: 04/11/2017
   
     -   [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) REBUILD 或 DBCC DBREINDEX 作業。  
   
-        > 「DBCC DBREINDEX 陳述式」 **** 已「被取代」 ****；請勿將它用於新的應用程式。  
+        > 「DBCC DBREINDEX 陳述式」  已「被取代」 ；請勿將它用於新的應用程式。  
   
     -   DROP INDEX 新堆積重建 (如果適用)。 [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) 作業期間的索引頁取消配置 **永遠** 都是完整記錄。
   

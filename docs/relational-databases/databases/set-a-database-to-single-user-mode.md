@@ -16,9 +16,10 @@ caps.latest.revision: 22
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 600766dbf1449ead6dce5d1e9d4c33d808ef4567
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -64,9 +65,9 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的執行個體，然後展開該執行個體。  
   
-2.  以滑鼠右鍵按一下要變更的資料庫，然後按一下 [屬性]****。  
+2.  以滑鼠右鍵按一下要變更的資料庫，然後按一下 [屬性]。  
   
-3.  在 [資料庫屬性] **** 對話方塊中按一下 [選項] **** 頁面。  
+3.  在 [資料庫屬性]  對話方塊中按一下 [選項]  頁面。  
   
 4.  從 **[限制存取]** 選項中，選取 **[單一]**。  
   

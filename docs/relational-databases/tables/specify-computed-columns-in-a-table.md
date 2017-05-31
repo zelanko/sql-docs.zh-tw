@@ -16,9 +16,10 @@ caps.latest.revision: 19
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a540a749f8682e47215f18ca022fbfc446f93e1d
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -58,26 +59,26 @@ ms.lasthandoff: 04/11/2017
   
 ###  <a name="NewColumn"></a> 若要加入新的計算資料行  
   
-1.  在 **[物件總管]**中，展開要在其中加入新的計算資料行的資料表。 以滑鼠右鍵按一下 [資料行]****，然後選取 [新增資料行]****。  
+1.  在 **[物件總管]**中，展開要在其中加入新的計算資料行的資料表。 以滑鼠右鍵按一下 [資料行]，然後選取 [新增資料行]。  
   
 2.  輸入資料行名稱並接受預設資料類型 (**nchar**(10))。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會判斷計算資料行的資料類型，方法是將資料類型優先順序規則套用至公式中指定的運算式。 例如，如果公式參考 **money** 類型的資料行以及 **int**類型的資料行，則計算資料行會是 **money** 類型，因為該資料類型的優先順序較高。 如需詳細資訊，請參閱[資料類型優先順序 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)。  
   
 3.  在 **[資料行屬性]** 索引標籤中，展開 **[計算資料行規格]** 屬性。  
   
-4.  在 [(Formula)]**** 子屬性右邊的方格資料格中，輸入此資料行的運算式。 例如，在 `SalesTotal` 資料行中，您輸入的公式可能是 `SubTotal+TaxAmt+Freight`，該公式會將資料表中每一個資料列的這些資料行中的值相加。  
+4.  在 [(Formula)] 子屬性右邊的方格資料格中，輸入此資料行的運算式。 例如，在 `SalesTotal` 資料行中，您輸入的公式可能是 `SubTotal+TaxAmt+Freight`，該公式會將資料表中每一個資料列的這些資料行中的值相加。  
   
     > [!IMPORTANT]  
     >  當一個公式結合兩個不同資料類型的運算式時，資料類型優先順序的規則，會指定將低優先順序的資料類型，轉換為高優先順序的資料類型。 如果轉換不是支援的隱含轉換，就會傳回錯誤 "`Error validating the formula for column column_name.`"。 使用 CAST 或 CONVERT 函數解決資料類型衝突。 例如，如果 **nvarchar** 類型的資料行與 **int**類型的資料行結合，則整數類型必須轉換為 **nvarchar** ，如 `('Prod'+CONVERT(nvarchar(23),ProductID))`這個公式所示。 如需詳細資訊，請參閱 [CAST 和 CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)。  
   
-5.  藉由從 [Is Persisted]**** 子屬性的下拉式清單中選擇 [是]**** 或 [否]****，指示資料是否為永續性。  
+5.  藉由從 [Is Persisted] 子屬性的下拉式清單中選擇 [是] 或 [否]，指示資料是否為永續性。  
   
-6.  在 [檔案] **** 功能表上，按一下 [儲存] *****table name*。  
+6.  在 [檔案]  功能表上，按一下 [儲存] *table name*。  
   
 #### <a name="to-add-a-computed-column-definition-to-an-existing-column"></a>若要將計算資料行定義新增至現有資料行  
   
-1.  在物件總管****中，以滑鼠右鍵按一下包含您要變更之資料行的資料表，然後展開 [資料行]**** 資料夾。  
+1.  在物件總管中，以滑鼠右鍵按一下包含您要變更之資料行的資料表，然後展開 [資料行] 資料夾。  
   
-2.  以滑鼠右鍵按一下要指定其計算資料行公式的資料行，然後按一下 [刪除]****。 按一下 **[確定]**。  
+2.  以滑鼠右鍵按一下要指定其計算資料行公式的資料行，然後按一下 [刪除]。 按一下 **[確定]**。  
   
 3.  加入新的資料行，並依照上述程序加入新的計算料行，藉此指定計算資料行公式。  
   

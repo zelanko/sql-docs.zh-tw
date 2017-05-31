@@ -21,9 +21,10 @@ caps.latest.revision: 73
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d99342c070c23962b70592f3607bc17832815cdc
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -50,7 +51,7 @@ ms.lasthandoff: 04/11/2017
   
 -   您無法附加系統資料庫。  
   
--   若將資料庫的 [跨資料庫擁有權鏈結]**** 選項設為 0，附加與卸離會停用資料庫的跨資料庫擁有權鏈結。 如需啟用鏈結的資訊，請參閱[跨資料庫擁有權鏈結伺服器組態選項](../../database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option.md)。  
+-   若將資料庫的 [跨資料庫擁有權鏈結] 選項設為 0，附加與卸離會停用資料庫的跨資料庫擁有權鏈結。 如需啟用鏈結的資訊，請參閱[跨資料庫擁有權鏈結伺服器組態選項](../../database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option.md)。  
   
 -   當附加複製的而非卸離的複寫資料庫時：  
   

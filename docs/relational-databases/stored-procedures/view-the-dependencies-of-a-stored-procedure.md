@@ -18,9 +18,10 @@ caps.latest.revision: 26
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 43bd4ec5070a9174a0cfd488157dd043dc4084bf
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -62,7 +63,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  依序展開 **[資料庫]**、程序所屬的資料庫，以及 **[可程式性]**。  
   
-3.  展開 [預存程序]****，以滑鼠右鍵按一下程序，然後按一下 [檢視相依性]****。  
+3.  展開 [預存程序]，以滑鼠右鍵按一下程序，然後按一下 [檢視相依性]。  
   
 4.  檢視相依於程序的物件清單。  
   

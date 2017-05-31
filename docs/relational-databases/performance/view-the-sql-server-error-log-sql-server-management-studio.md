@@ -20,9 +20,10 @@ caps.latest.revision: 14
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 4acdc87a3317c38b5b19235dae681bce426244e3
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -36,11 +37,11 @@ ms.lasthandoff: 04/11/2017
 >**開啟** 物件總管：鍵盤快速鍵是 **F8**。 或者，在上層功能表上，按一下 [檢視]/物件總管 ![Object_explorer](../../relational-databases/performance/media/object-explorer.png) 
 
 
-2.  在物件總管****中，連接到 SQL Server 執行個體，然後展開該執行個體。
+2.  在物件總管中，連接到 SQL Server 執行個體，然後展開該執行個體。
   
-3.  尋找並展開 [管理]**** 區段 (假設您有權限可以看到它)。
+3.  尋找並展開 [管理] 區段 (假設您有權限可以看到它)。
 
-4.  以滑鼠右鍵按一下 [SQL Server 記錄檔]****，並選取 [檢視]，然後選擇 [檢視 SQL Server 記錄檔]****。
+4.  以滑鼠右鍵按一下 [SQL Server 記錄檔]，並選取 [檢視]，然後選擇 [檢視 SQL Server 記錄檔]。
  ![View_SQLServer_Log_SSMS](../../relational-databases/performance/media/view-sqlserver-log-ssms.png) 
  
 5.  將會出現記錄檔檢視器 (可能需要一分鐘)，內含可供您檢視的記錄檔清單。

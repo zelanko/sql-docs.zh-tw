@@ -22,9 +22,10 @@ caps.latest.revision: 29
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 97826d94662c704199c48929d0be00a09e478b09
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -70,9 +71,9 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="to-restore-files-and-filegroups-over-existing-files"></a>若要以覆蓋現有檔案的方式還原檔案與檔案群組  
   
-1.  在 [物件總管] ****中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的執行個體，展開該執行個體，然後展開 [資料庫] ****。  
+1.  在 [物件總管] 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的執行個體，展開該執行個體，然後展開 [資料庫] 。  
   
-2.  以滑鼠右鍵按一下所要的資料庫，依序指向 [工作]**** 與 [還原]****，然後按一下 [檔案與檔案群組]****。  
+2.  以滑鼠右鍵按一下所要的資料庫，依序指向 [工作] 與 [還原]，然後按一下 [檔案與檔案群組]。  
   
 3.  在 **[一般]** 頁面上的 **[目的地資料庫]** 清單方塊，輸入要還原的資料庫。 您可以輸入新的資料庫，或者從下拉式清單中選擇現有的資料庫。 清單包含伺服器上的所有資料庫，排除系統資料庫 **master** 和 **tempdb**。  
   
@@ -94,7 +95,7 @@ ms.lasthandoff: 04/11/2017
     |-----------------|------------|  
     |**Restore**|選取的核取方塊會指出要還原的備份組。|  
     |**名稱**|備份組的名稱。|  
-    |**檔案類型**|指定備份中的資料類型： **[資料]**、 **[記錄檔]**或 **[檔案資料流資料]**。 資料表中所包含的資料位於 **[資料]** 檔案中。 交易記錄資料位於 **[記錄檔]** 中。 儲存在檔案系統上的二進位大型物件 (BLOB) 資料位於 [Filestream 資料]**** 檔案中。|  
+    |**檔案類型**|指定備份中的資料類型： **[資料]**、 **[記錄檔]**或 **[檔案資料流資料]**。 資料表中所包含的資料位於 **[資料]** 檔案中。 交易記錄資料位於 **[記錄檔]** 中。 儲存在檔案系統上的二進位大型物件 (BLOB) 資料位於 [Filestream 資料] 檔案中。|  
     |**型別**|執行的備份類型： **[完整]**、 **[差異]**或 **[交易記錄]**。|  
     |**Server**|執行備份作業的 Database Engine 執行個體名稱。|  
     |**檔案邏輯名稱**|檔案的邏輯名稱。|  
@@ -106,7 +107,7 @@ ms.lasthandoff: 04/11/2017
   
 6.  在 **[選取頁面]** 窗格中，按一下 **[選項]** 頁面。  
   
-7.  在 [還原選項]**** 面板中，選取 [覆寫現有的資料庫 (WITH REPLACE)]****。 還原作業會覆寫任何現有的資料庫及其相關檔案，即使已經有另一個資料庫或檔案具有相同名稱也一樣。  
+7.  在 [還原選項] 面板中，選取 [覆寫現有的資料庫 (WITH REPLACE)]。 還原作業會覆寫任何現有的資料庫及其相關檔案，即使已經有另一個資料庫或檔案具有相同名稱也一樣。  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

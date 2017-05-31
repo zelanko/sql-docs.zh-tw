@@ -19,9 +19,10 @@ caps.latest.revision: 36
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d592322676ddae7d6cc0ef145fcb0210d0dbe3cb
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -108,7 +109,7 @@ qrdrsvc [-?]
  這是代理程式輸出檔的路徑。 如果未提供檔案名稱，輸出將傳送至主控台。 如果指定的檔案名稱存在，輸出就會附加至該檔案。  
   
  **-OutputVerboseLevel** [ **0**| **1**| **2**]  
- 指定輸出是否應該詳細。 ****如果詳細資訊層級為 0，系統就只會列印錯誤訊息。 ****如果詳細資訊層級為 1，系統就會列印所有進度報表訊息。 **** 如果詳細資訊層級為 2 (預設值)，系統就會列印所有錯誤訊息和進度報表訊息 (可用於偵錯)。  
+ 指定輸出是否應該詳細。 如果詳細資訊層級為 0，系統就只會列印錯誤訊息。 如果詳細資訊層級為 1，系統就會列印所有進度報表訊息。  如果詳細資訊層級為 2 (預設值)，系統就會列印所有錯誤訊息和進度報表訊息 (可用於偵錯)。  
   
  **-PollingInterval** *polling_interval*  
  這僅與使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 架構佇列的更新訂閱有關。 指定針對暫止佇列交易輪詢 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 佇列的頻率 (以秒為單位)。 此值可介於 0 與 240 秒之間。 預設值是 5 秒。  

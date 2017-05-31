@@ -20,14 +20,15 @@ caps.latest.revision: 28
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3e067169014c05c90b04d9f757fcae397cb1834b
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="shrink-database-task-maintenance-plan"></a>壓縮資料庫工作 (維護計畫)
-  使用 [壓縮資料庫工作]**** 對話方塊來建立嘗試縮減選取之資料庫大小的工作。 使用下列選項以決定將資料庫縮小之後，要在資料庫中保留的未使用空間數量 (百分比愈大，資料庫可縮小的程度愈小)。 這個值是根據資料庫中實際資料的百分比而取得。 例如：一個 100 MB 的資料庫，包含 60 MB 的資料及 40 MB 的可用空間，設定可用空間的百分比為 50 時，則結果為 60 MB 的資料及 30 MB 的可用空間 (因為 60 MB 的百分之 50 為 30 MB)。 只有資料庫中超出的空間會被刪除。 有效的數值範圍為 0 到 100。  
+  使用 [壓縮資料庫工作] 對話方塊來建立嘗試縮減選取之資料庫大小的工作。 使用下列選項以決定將資料庫縮小之後，要在資料庫中保留的未使用空間數量 (百分比愈大，資料庫可縮小的程度愈小)。 這個值是根據資料庫中實際資料的百分比而取得。 例如：一個 100 MB 的資料庫，包含 60 MB 的資料及 40 MB 的可用空間，設定可用空間的百分比為 50 時，則結果為 60 MB 的資料及 30 MB 的可用空間 (因為 60 MB 的百分之 50 為 30 MB)。 只有資料庫中超出的空間會被刪除。 有效的數值範圍為 0 到 100。  
   
  將資料頁面從檔案結尾移到靠近檔案前端的未使用空間，以壓縮資料並復原儲存空間。 當檔案結尾建立了足夠的可用空間後，檔案結尾的資料頁面便可取消配置並返回檔案系統。  
   

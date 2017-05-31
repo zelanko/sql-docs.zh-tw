@@ -15,9 +15,10 @@ caps.latest.revision: 47
 author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: a4cdbe630a64ce01c6319dcc5791c0f3f9b3176b
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -144,8 +145,8 @@ SELECT * FROM Employee
   
 |運算式|查詢資料列|描述|  
 |----------------|---------------------|-----------------|  
-|**AS OF**<日期時間>|SysStartTime \<= date_time AND SysEndTime > date_time|傳回含有資料列的資料表，資料列內含的值是過去指定時間點的實際 (目前) 值。 就內部而言，時態表和其歷程記錄資料表之間會執行等位，且會將結果篩選為傳回資料列中的值，該資料列在 <日期時間>** 參數所指定的時間點為有效。 資料列的值會被視為有效，如果 *system_start_time_column_name* 值小於或等於 <日期時間>** 參數值，且 *system_end_time_column_name* 值大於 <日期時間>** 參數值。|  
-|**FROM**<開始日期時間>**TO**<結束日期時間>|SysStartTime < end_date_time AND SysEndTime > start_date_time|傳回資料表，其中內含所有資料列版本的值，該值在所指定的時間範圍內有效，而不論其是否在 FROM 引數的 <開始日期時間>** 參數值之前為作用中，或是在 TO 引數的 <結束日期時間>** 參數值之後就不在作用中。 就內部而言，時態表和其歷程記錄資料表之間會執行等位，且會將結果篩選為傳回所有資料列版本的值，該值在指定的時間範圍任何時間點內皆為作用中。 不包含恰好在 FROM 端點所定義的範圍下限變為作用中的資料列，也不包含恰好在 TO 端點所定義的範圍上限變為作用中的資料列。|  
+|**AS OF**<日期時間>|SysStartTime \<= date_time AND SysEndTime > date_time|傳回含有資料列的資料表，資料列內含的值是過去指定時間點的實際 (目前) 值。 就內部而言，時態表和其歷程記錄資料表之間會執行等位，且會將結果篩選為傳回資料列中的值，該資料列在 <日期時間> 參數所指定的時間點為有效。 資料列的值會被視為有效，如果 *system_start_time_column_name* 值小於或等於 <日期時間> 參數值，且 *system_end_time_column_name* 值大於 <日期時間> 參數值。|  
+|**FROM**<開始日期時間>**TO**<結束日期時間>|SysStartTime < end_date_time AND SysEndTime > start_date_time|傳回資料表，其中內含所有資料列版本的值，該值在所指定的時間範圍內有效，而不論其是否在 FROM 引數的 <開始日期時間> 參數值之前為作用中，或是在 TO 引數的 <結束日期時間> 參數值之後就不在作用中。 就內部而言，時態表和其歷程記錄資料表之間會執行等位，且會將結果篩選為傳回所有資料列版本的值，該值在指定的時間範圍任何時間點內皆為作用中。 不包含恰好在 FROM 端點所定義的範圍下限變為作用中的資料列，也不包含恰好在 TO 端點所定義的範圍上限變為作用中的資料列。|  
 |**BETWEEN**<開始日期時間>**AND**<結束日期時間>|SysStartTime \<= end_date_time AND SysEndTime > start_date_time|如同上方 **FOR SYSTEM_TIME FROM**<開始日期時間>**TO**<結束日期時間> 中的描述，唯一的差別在於所傳回資料列的資料表內含的資料列，在 <結束日期時間> 端點所定義的範圍上限變為作用中。|  
 |**CONTAINED IN** (<開始日期時間> , <結束日期時間>)|SysStartTime >= start_date_time AND SysEndTime \<= end_date_time|傳回資料表，其中內含所有資料列版本的值，該值在 CONTAINED IN 引數兩個日期時間值所定義的指定時間範圍內為開啟及關閉。 包含恰好在範圍下限變為作用中的資料列，或是恰好在範圍上限就不在作用中的資料列。|  
 |**ALL**|所有資料列|傳回屬於目前和歷程記錄資料表的資料列聯集。|  

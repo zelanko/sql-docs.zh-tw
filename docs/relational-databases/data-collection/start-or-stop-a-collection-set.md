@@ -17,9 +17,10 @@ caps.latest.revision: 20
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 91f96d4ac8b7403e0d214625925403950e386dc2
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -71,7 +72,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 [物件總管] 中，依序展開 **[管理]** 節點、 **[資料收集]**和 **[系統資料收集組]**。  
   
-2.  以滑鼠右鍵按一下您要啟動的收集組，然後按一下 [啟動資料收集組]****。  
+2.  以滑鼠右鍵按一下您要啟動的收集組，然後按一下 [啟動資料收集組]。  
   
      訊息方塊會顯示此動作的結果，而此收集組圖示上的綠色箭頭會指示此收集組已經啟動。  
   
@@ -79,7 +80,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 [物件總管] 中，依序展開 **[管理]** 節點、 **[資料收集]**和 **[系統資料收集組]**。  
   
-2.  以滑鼠右鍵按一下您要停止的收集組，然後按一下 [停止資料收集組]****。  
+2.  以滑鼠右鍵按一下您要停止的收集組，然後按一下 [停止資料收集組]。  
   
      訊息方塊會顯示此動作的結果，而此收集組圖示上的紅色圓圈會指示此收集組已經停止。  
   

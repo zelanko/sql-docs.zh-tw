@@ -16,9 +16,10 @@ caps.latest.revision: 23
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3f29e1319d78cb2fadca134b78abdfc748e11c67
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -29,7 +30,7 @@ ms.lasthandoff: 04/11/2017
   
 -   選取 **[發行者屬性]** 對話方塊中的資料庫。  
   
--   執行 **sp_replicationdboption** 並將 [發行] **** 選項 (適用於快照集或交易式發行集) 或 [合併發行] **** 選項 (適用於合併式發行集) 設定為 [True] ****。  
+-   執行 **sp_replicationdboption** 並將 [發行]  選項 (適用於快照集或交易式發行集) 或 [合併發行]  選項 (適用於合併式發行集) 設定為 [True] 。  
   
 ## <a name="options"></a>選項  
  **資料庫**  

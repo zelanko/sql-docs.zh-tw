@@ -18,9 +18,10 @@ caps.latest.revision: 11
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 9dd8e345930a2e4ed7d036e9969ec8600f85853e
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -89,7 +90,7 @@ WHERE ProductID = 520
 FOR XML AUTO, TYPE  
 ```  
   
- 先前的範例使用 **** 資料類型的 **query()** 方法，以查詢內部 FOR XML 查詢傳回的 XML，並建構預期的結果。  
+ 先前的範例使用  資料類型的 **query()** 方法，以查詢內部 FOR XML 查詢傳回的 XML，並建構預期的結果。  
   
  以下是結果：  
   

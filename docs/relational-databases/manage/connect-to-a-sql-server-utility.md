@@ -14,9 +14,10 @@ caps.latest.revision: 7
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 456ae933f5c94e11a80e2748254dbd020490a8f6
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -31,11 +32,11 @@ ms.lasthandoff: 04/11/2017
   
 2.  在 SSMS 中，連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。  
   
-3.  按一下 [檢視]****，然後按一下 [公用程式總管]****。  
+3.  按一下 [檢視]，然後按一下 [公用程式總管]。  
   
-4.  在公用程式總管導覽窗格中，按一下 ![](../../relational-databases/manage/media/connect-to-utility.gif "Connect_to_Utility")[連接到公用程式]****。  
+4.  在公用程式總管導覽窗格中，按一下 ![](../../relational-databases/manage/media/connect-to-utility.gif "Connect_to_Utility")[連接到公用程式]。  
   
-5.  在 [連接到伺服器]**** 對話方塊中，指定 UCP 執行個體名稱，然後按一下 [連接]****。  
+5.  在 [連接到伺服器] 對話方塊中，指定 UCP 執行個體名稱，然後按一下 [連接]。  
   
 6.  檢視公用程式總管導覽窗格，以查看 UCP 中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資源的樹狀檢視。  
   

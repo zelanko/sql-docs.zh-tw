@@ -19,9 +19,10 @@ caps.latest.revision: 20
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: d297ff12aedfdbdf4e5e50c6656c3d208ecb260d
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -87,11 +88,11 @@ ms.lasthandoff: 04/11/2017
   
 1.  執行 setup.exe。  
   
-2.  在 [特徵選取] 頁面上，選取 [外部資料的 PolyBase 查詢服務] ****。  
+2.  在 [特徵選取] 頁面上，選取 [外部資料的 PolyBase 查詢服務] 。  
   
 3.  在 [伺服器組態] 頁面上，SQL Server PolyBase 引擎和 SQL Server PolyBase 資料移動服務請使用**網域帳戶** PQTH4A\PolybaseUser。  
   
-4.  在 [PolyBase 組態] 頁面上，選取 [Use the SQL Server instance as part of a PolyBase scale-out group (使用此 SQL Server 執行個體作為 PolyBase 向外延展群組的一部分)]****。 這會開啟防火牆，以允許 PolyBase 服務的連入連線。  
+4.  在 [PolyBase 組態] 頁面上，選取 [Use the SQL Server instance as part of a PolyBase scale-out group (使用此 SQL Server 執行個體作為 PolyBase 向外延展群組的一部分)]。 這會開啟防火牆，以允許 PolyBase 服務的連入連線。  
   
 5.  安裝程式完成之後，執行 **services.msc**。 確認 SQL Server、PolyBase Engine 和 PolyBase Data Movement Service 正在執行中。  
   

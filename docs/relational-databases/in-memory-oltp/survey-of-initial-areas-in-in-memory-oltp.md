@@ -14,9 +14,10 @@ caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 82286b0d52ff37697ad9197b88c45935137a8dae
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -71,9 +72,9 @@ SQL Server 提供記憶體內部功能，以大幅改進許多應用程式系統
   
 有兩個主要案例︰  
   
-- 「批次作業分析」** 指的是在營業時間後或在具有交易資料複本的次要硬體上執行的彙總程序。  
+- 「批次作業分析」 指的是在營業時間後或在具有交易資料複本的次要硬體上執行的彙總程序。  
   - [Azure SQL 資料倉儲](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-overview-what-is/) 也與批次作業分析有關。  
-- 「即時作業分析」** 指的是在營業時間內以及在用於交易工作量的主要硬體上執行的彙總程序。  
+- 「即時作業分析」 指的是在營業時間內以及在用於交易工作量的主要硬體上執行的彙總程序。  
   
   
 目前文章的焦點是放在 OLTP，而不是分析。 如需資料行存放區索引如何將分析帶入 SQL 的資訊，請參閱：  

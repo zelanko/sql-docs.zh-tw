@@ -14,9 +14,10 @@ caps.latest.revision: 26
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 06e3118f67db6f01dad0344b42024534081433fb
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -36,19 +37,19 @@ ms.lasthandoff: 04/11/2017
   
 -   建議針對每個備份使用唯一的檔案名稱，避免不小心覆寫 Blob。  
   
--   建立容器時，建議您將存取層級設定為 [私用]****，如此只有能夠提供必要驗證資訊的使用者或帳戶才能讀取或寫入容器中的 Blob。  
+-   建立容器時，建議您將存取層級設定為 [私用]，如此只有能夠提供必要驗證資訊的使用者或帳戶才能讀取或寫入容器中的 Blob。  
   
 -   如果 SQL Server 資料庫位於 Windows Azure 虛擬機器中執行的 SQL Server 執行個體上，請使用與虛擬機器位於相同地區的儲存體帳戶，避免產生不同地區之間的資料傳輸成本。 使用相同的地區也可以確保備份與還原作業達到最佳效能。  
   
 -   失敗的備份活動可能會產生無效的備份檔案。 我們建議您定期識別失敗的備份並刪除 Blob 檔案。 如需詳細資訊，請參閱[刪除擁有使用中租用的備份 Blob 檔案](../../relational-databases/backup-restore/deleting-backup-blob-files-with-active-leases.md)  
   
--   在備份期間使用 [WITH COMPRESSION]**** 選項可以將您的儲存體成本和儲存體交易成本降到最低程度。 它也可以減少完成備份程序所需的時間。  
+-   在備份期間使用 [WITH COMPRESSION] 選項可以將您的儲存體成本和儲存體交易成本降到最低程度。 它也可以減少完成備份程序所需的時間。  
   
 ## <a name="handling-large-files"></a>處理大型檔案  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份作業會使用多個執行緒來最佳化 Windows Azure Blob 儲存體服務的資料傳輸。  不過，其效能取決於各種因素，例如 ISV 頻寬和資料庫的大小。 如果您計畫要備份內部部署 SQL Server 資料庫中的大型資料庫或檔案群組，建議您先進行一些輸送量測試。 Azure [儲存體 SLA](http://azure.microsoft.com/support/legal/sla/storage/v1_0/) 具有最大的 Blob 處理時間，您可以參考使用。  
   
--   備份大型檔案時，務必依照**管理備份**一節中的建議使用 [WITH COMPRESSION]**** 選項。  
+-   備份大型檔案時，務必依照**管理備份**一節中的建議使用 [WITH COMPRESSION] 選項。  
   
 ## <a name="troubleshooting-backup-to-or-restore-from-url"></a>疑難排解備份至 URL 或從中還原  
  以下是一些快速疑難排解備份至 Windows Azure Blob 儲存體服務或從中還原時發生之錯誤的方法。  
@@ -76,7 +77,7 @@ ms.lasthandoff: 04/11/2017
   
  **備份錯誤/失敗：**  
   
--   相同 Blob 的平行備份會導致其中一個備份失敗並出現 [初始化失敗]**** 錯誤。  
+-   相同 Blob 的平行備份會導致其中一個備份失敗並出現 [初始化失敗] 錯誤。  
   
 -   使用下列錯誤記錄來協助疑難排解備份錯誤：  
   

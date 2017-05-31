@@ -16,9 +16,10 @@ caps.latest.revision: 24
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: c8ead370baae4066fecdc6545636668958991adf
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -27,9 +28,9 @@ ms.lasthandoff: 04/11/2017
   
 ### <a name="to-subscribe-to-the-finance-policy-category"></a>訂閱 Finance 原則類別目錄  
   
-1.  在物件總管中，展開 [資料庫]****、以滑鼠右鍵按一下 **Finance**、指向 [原則]****，然後按一下 [類別目錄]****。  
+1.  在物件總管中，展開 [資料庫]、以滑鼠右鍵按一下 **Finance**、指向 [原則]，然後按一下 [類別目錄]。  
   
-2.  針對 **Finance** 類別目錄，選取 [已訂閱]**** 核取方塊。  
+2.  針對 **Finance** 類別目錄，選取 [已訂閱] 核取方塊。  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -63,9 +64,9 @@ ms.lasthandoff: 04/11/2017
   
 ### <a name="to-apply-the-policy-to-the-whole-server"></a>將原則套用至整個伺服器  
   
-1.  目前，只有 Finance 資料庫訂閱 Finance 原則類別目錄。 在許多情況下，將原則類別目錄套用至整個伺服器是比較簡單的方式。 在物件總管中，展開 [管理]****，以滑鼠右鍵按一下 [原則管理]****，然後按一下 [管理類別目錄]****。  
+1.  目前，只有 Finance 資料庫訂閱 Finance 原則類別目錄。 在許多情況下，將原則類別目錄套用至整個伺服器是比較簡單的方式。 在物件總管中，展開 [管理]，以滑鼠右鍵按一下 [原則管理]，然後按一下 [管理類別目錄]。  
   
-2.  在 [管理原則類別目錄]**** 對話方塊中，找出 Finance 類別目錄，然後針對 Finance 類別目錄選取 [託管資料庫訂閱]**** 核取方塊。  
+2.  在 [管理原則類別目錄] 對話方塊中，找出 Finance 類別目錄，然後針對 Finance 類別目錄選取 [託管資料庫訂閱] 核取方塊。  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] 此時，Finance 類別目錄會套用至所有資料庫，但是您已建立的條件會將 Finance Name 原則限制為 Finance 資料庫。 這點就說明了如何以將在許多伺服器上正確套用的方式，使用複雜的條件組合來建立原則的目標。  
   

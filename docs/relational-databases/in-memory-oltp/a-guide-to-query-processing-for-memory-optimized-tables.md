@@ -14,9 +14,10 @@ caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a09967430cc92c19a48d7559b3f0783a71f4bb6e
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -244,7 +245,7 @@ END
  參數探測不會用於編譯原生編譯的預存程序。 預存程序的所有參數都會視為具有 UNKNOWN 值。 與解譯的預存程序相同，原生編譯的預存程序也支援 **OPTIMIZE FOR** 提示。 如需詳細資訊，請參閱[查詢提示 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)。  
   
 ### <a name="retrieving-a-query-execution-plan-for-natively-compiled-stored-procedures"></a>擷取原生編譯預存程序的查詢執行計畫  
- 原生編譯預存程序的查詢執行計畫，可以使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中的 [Estimated Execution Plan (估計的執行計畫)]**** 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中的 SHOWPLAN_XML 選項加以擷取。 例如：  
+ 原生編譯預存程序的查詢執行計畫，可以使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中的 [Estimated Execution Plan (估計的執行計畫)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中的 SHOWPLAN_XML 選項加以擷取。 例如：  
   
 ```tsql  
 SET SHOWPLAN_XML ON  

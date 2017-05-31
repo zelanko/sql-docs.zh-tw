@@ -18,9 +18,10 @@ caps.latest.revision: 25
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 774fe7654f9a67ae7e149b80b05e047ac958c10b
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -58,7 +59,7 @@ ms.lasthandoff: 04/11/2017
  **附註** 維護計畫只針對相容性層級設為 80 (含) 以上的資料庫來執行。 不會顯示相容性層級設為 70 或更低的資料庫。  
   
  **物件**  
- 限制 [選取範圍]**** 格線僅顯示資料表、檢視或兩者。  
+ 限制 [選取範圍] 格線僅顯示資料表、檢視或兩者。  
   
  **選取範圍**  
  指定受此工作影響的資料表或索引。 [物件] 方塊中的 **[資料表和檢視]** 為選取狀態時無法使用。  

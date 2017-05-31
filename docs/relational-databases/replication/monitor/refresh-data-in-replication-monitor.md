@@ -16,9 +16,10 @@ caps.latest.revision: 17
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7b58ebcc0ce0f46fd2818ae87f8093da1c3bb086
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -45,7 +46,7 @@ ms.lasthandoff: 04/11/2017
   
     3.  以滑鼠右鍵按一下訂閱，然後按一下 **[檢視詳細資料]**。  
   
-2.  在 [訂閱 \<訂閱名稱>]**** 視窗中，按一下 [動作]****，然後按一下 [自動重新整理]****。 重新整理速率將由 **[發行者設定]** 對話方塊中的 **[重新整理的速率]** 設定決定。  
+2.  在 [訂閱 \<訂閱名稱>] 視窗中，按一下 [動作]，然後按一下 [自動重新整理]。 重新整理速率將由 **[發行者設定]** 對話方塊中的 **[重新整理的速率]** 設定決定。  
   
 ## <a name="see-also"></a>另請參閱  
  [監視複寫](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  

@@ -21,9 +21,10 @@ caps.latest.revision: 33
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b47d0b4565cc187ae0746fa7a6c9b5b1f864c3e7
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -48,7 +49,7 @@ ms.lasthandoff: 04/11/2017
   
      這可以套用於合併式複寫。 若已達到或超過指定臨界值，狀態顯示為 **[效能嚴重不足]**。 您可以為撥號連接和 LAN 連接，指定不同的臨界值。  
   
- 如需 [效能嚴重不足]**** 和 [長期執行合併]**** 警告的詳細資訊，請參閱[使用複寫監視器監視效能](../../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md)。  
+ 如需 [效能嚴重不足] 和 [長期執行合併] 警告的詳細資訊，請參閱[使用複寫監視器監視效能](../../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md)。  
   
  **本主題內容**  
   
@@ -78,7 +79,7 @@ ms.lasthandoff: 04/11/2017
   
      這個對話方塊會顯示所有發行集類型的警示，包括與監視臨界值無關的警示。 如需詳細資訊，請參閱[使用複寫代理程式事件的警示](../../../relational-databases/replication/agents/use-alerts-for-replication-agent-events.md)。  
   
-3.  在 [\<警示名稱> 警示屬性]**** 對話方塊中設定選項：  
+3.  在 [\<警示名稱> 警示屬性] 對話方塊中設定選項：  
   
     -   在 **[一般]** 頁面上，按一下 **[啟用]**；指定警示應套用至哪個資料庫。  
   
@@ -120,7 +121,7 @@ ms.lasthandoff: 04/11/2017
   
      這個對話方塊會顯示所有發行集類型的警示，包括與監視臨界值無關的警示。  
   
-3.  在 [\<警示名稱> 警示屬性]**** 對話方塊中設定選項：  
+3.  在 [\<警示名稱> 警示屬性] 對話方塊中設定選項：  
   
     -   在 **[一般]** 頁面上，按一下 **[啟用]**；指定警示應套用至哪個資料庫。  
   
@@ -152,7 +153,7 @@ ms.lasthandoff: 04/11/2017
   
      這個對話方塊會顯示所有發行集類型的警示，包括與監視臨界值無關的警示。 如需詳細資訊，請參閱[使用複寫代理程式事件的警示](../../../relational-databases/replication/agents/use-alerts-for-replication-agent-events.md)。  
   
-3.  在 [\<警示名稱> 警示屬性]**** 對話方塊中設定選項：  
+3.  在 [\<警示名稱> 警示屬性] 對話方塊中設定選項：  
   
     -   在 **[一般]** 頁面上，按一下 **[啟用]**；指定警示應套用至哪個資料庫。  
   

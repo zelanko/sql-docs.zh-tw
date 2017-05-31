@@ -19,9 +19,10 @@ caps.latest.revision: 24
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8359eccee9aeda470c962793d13c85819ef9fe49
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -55,11 +56,11 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 **[物件總管]**中，展開 **[資料庫]**、展開其中一個資料庫，再展開 **[資料表]**。  
   
-2.  以滑鼠右鍵按一下資料表，然後按一下 [檢視相依性]****。  
+2.  以滑鼠右鍵按一下資料表，然後按一下 [檢視相依性]。  
   
-3.  在 [物件相依性****\<物件名稱>]** 對話方塊中，選取 [相依於**** \<物件名稱>** 的物件] 或 [****\<物件名稱> 所相依的物件]******。  
+3.  在 [物件相依性\<物件名稱>] 對話方塊中，選取 [相依於 \<物件名稱> 的物件] 或 [\<物件名稱> 所相依的物件]。  
   
-4.  選取 **[相依性]** 方格中的物件。 物件類型 (如「觸發程序」或「預存程序」) 會出現在 [類型]**** 方塊中。  
+4.  選取 **[相依性]** 方格中的物件。 物件類型 (如「觸發程序」或「預存程序」) 會出現在 [類型] 方塊中。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

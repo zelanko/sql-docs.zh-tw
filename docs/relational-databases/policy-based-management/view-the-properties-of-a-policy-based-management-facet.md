@@ -16,9 +16,10 @@ caps.latest.revision: 7
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 673586c308ec38088788112ec3e0c9a5730fff9e
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -54,7 +55,7 @@ ms.lasthandoff: 04/11/2017
   
 4.  按一下加號展開 **[Facet]** 資料夾。  
   
-5.  以滑鼠右鍵按一下您想要檢視其屬性的 Facet，然後選取 [屬性]****。 如需 [Facet 屬性-*facet_name*]**** 對話方塊中可用選項的詳細資訊，請參閱 [Facet 屬性對話方塊、一般頁面](../../relational-databases/policy-based-management/facet-properties-dialog-box-general-page.md)；[Facet 屬性對話方塊、相依原則頁面](../../relational-databases/policy-based-management/facet-properties-dialog-box-dependent-policies-page.md)；和 [Facet 屬性對話方塊，相依條件頁面](../../relational-databases/policy-based-management/facet-properties-dialog-box-dependent-conditions-page.md)。  
+5.  以滑鼠右鍵按一下您想要檢視其屬性的 Facet，然後選取 [屬性]。 如需 [Facet 屬性-*facet_name*] 對話方塊中可用選項的詳細資訊，請參閱 [Facet 屬性對話方塊、一般頁面](../../relational-databases/policy-based-management/facet-properties-dialog-box-general-page.md)；[Facet 屬性對話方塊、相依原則頁面](../../relational-databases/policy-based-management/facet-properties-dialog-box-dependent-policies-page.md)；和 [Facet 屬性對話方塊，相依條件頁面](../../relational-databases/policy-based-management/facet-properties-dialog-box-dependent-conditions-page.md)。  
   
 6.  完成後，請按一下 **[關閉]**。  
   

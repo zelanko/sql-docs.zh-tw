@@ -22,9 +22,10 @@ caps.latest.revision: 47
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: e951423b908dacc56729ede2fcca7339ce83acf0
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -52,7 +53,7 @@ ms.lasthandoff: 04/11/2017
 5.  **:Setvar** X Y  
   
 > [!NOTE]  
->  若要檢視環境變數，請在 [控制台]**** 中開啟 [系統]****，然後按一下 [進階]**** 索引標籤。  
+>  若要檢視環境變數，請在 [控制台] 中開啟 [系統]，然後按一下 [進階] 索引標籤。  
   
 ## <a name="implicitly-setting-scripting-variables"></a>隱含設定指令碼變數  
  當您透過含有 **sqlcmd** 相關變數的選項啟動 **sqlcmd** 時，會將 **sqlcmd** 變數隱含設定為使用該選項所指定的值。 在下列範例中， `sqlcmd` 透過 `-l` 選項啟動。 這將會隱含地設定 SQLLOGINTIMEOUT 變數。  
@@ -190,7 +191,7 @@ ms.lasthandoff: 04/11/2017
  `4> GO`  
   
 ### <a name="d-using-user-level-environment-variables-within-sqlcmd"></a>D. 在 sqlcmd 內使用使用者層級環境變數  
- 下列範例在命令提示字元中設定了使用者層級環境變數 `%Temp%`，並將其傳遞至 `sqlcmd` 輸入檔。 若要取得使用者層級環境變數，請在 [控制台]**** 中按兩下 [系統]****。 按一下 [進階]**** 索引標籤，然後按一下 [環境變數]****。  
+ 下列範例在命令提示字元中設定了使用者層級環境變數 `%Temp%`，並將其傳遞至 `sqlcmd` 輸入檔。 若要取得使用者層級環境變數，請在 [控制台] 中按兩下 [系統]。 按一下 [進階] 索引標籤，然後按一下 [環境變數]。  
   
  下列程式碼是在輸入檔 `c:\testscript.txt`中：  
   

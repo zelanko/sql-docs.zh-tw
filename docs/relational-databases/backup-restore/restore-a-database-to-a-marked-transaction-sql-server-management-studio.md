@@ -20,14 +20,15 @@ caps.latest.revision: 21
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 48529229420d7c2dafad334f3104e01add1a6746
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="restore-a-database-to-a-marked-transaction-sql-server-management-studio"></a>還原資料庫至標示的異動 (SQL Server Management Studio)
-  當資料庫處於還原中狀態時，您可以利用 [還原交易記錄]**** 對話方塊，將資料庫還原成可用記錄備份中標示的交易。  
+  當資料庫處於還原中狀態時，您可以利用 [還原交易記錄] 對話方塊，將資料庫還原成可用記錄備份中標示的交易。  
   
 > [!NOTE]  
 >  如需詳細資訊，請參閱[使用標示的交易以一致的方式復原相關資料庫 &#40;完整復原模式&#41;](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md) 和[復原包含標示之交易的相關資料庫](../../relational-databases/backup-restore/recovery-of-related-databases-that-contain-marked-transaction.md)。  
@@ -38,11 +39,11 @@ ms.lasthandoff: 04/11/2017
   
 2.  展開 **[資料庫]**，然後視資料庫而定，選取使用者資料庫，或者展開 **[系統資料庫]** 並選取一個系統資料庫。  
   
-3.  以滑鼠右鍵按一下資料庫，指向 [工作]****，然後按一下 [還原]****。  
+3.  以滑鼠右鍵按一下資料庫，指向 [工作]，然後按一下 [還原]。  
   
-4.  按一下 [交易記錄]****，這會開啟 [還原交易記錄]**** 對話方塊。  
+4.  按一下 [交易記錄]，這會開啟 [還原交易記錄] 對話方塊。  
   
-5.  在 [一般]**** 頁面的 [還原至]**** 區段中，選取 [標示的交易]****，這會開啟 [選取標示的交易]**** 對話方塊。 這個對話方塊會顯示一個方格，其中列出在選取的交易記錄備份中，可用之標示的交易。  
+5.  在 [一般] 頁面的 [還原至] 區段中，選取 [標示的交易]，這會開啟 [選取標示的交易] 對話方塊。 這個對話方塊會顯示一個方格，其中列出在選取的交易記錄備份中，可用之標示的交易。  
   
      依預設，會還原到標示的交易，但是不含該交易。 若也要還原標示的交易，請選取 **[包含標示的交易]**。  
   

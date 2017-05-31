@@ -18,9 +18,10 @@ caps.latest.revision: 20
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d1bdb75de2db0eba015500fa9a80ef44937727c7
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -43,7 +44,7 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="to-insert-columns-into-a-table-with-table-designer"></a>若要使用資料表設計工具將資料行插入資料表中  
   
-1.  在物件總管**** 中，以滑鼠右鍵按一下要加入資料行的資料表，然後選擇 [設計]****。  
+1.  在物件總管 中，以滑鼠右鍵按一下要加入資料行的資料表，然後選擇 [設計]。  
   
 2.  在 **[資料行名稱]** 資料行中，按一下第一個空白資料格。  
   
@@ -52,14 +53,14 @@ ms.lasthandoff: 04/11/2017
 4.  按下 TAB 鍵以移至 [ **資料類型** ] 資料格，然後從下拉式清單中選取資料類型。 此為必要值。若未加以選擇，將會指派預設值。  
   
     > [!NOTE]  
-    >  您可以在 [資料庫工具]**** 的 [選項]**** 對話方塊中變更預設值。  
+    >  您可以在 [資料庫工具] 的 [選項] 對話方塊中變更預設值。  
   
 5.  在 [ **資料行屬性** ] 索引標籤中繼續定義其他任何的資料行屬性。  
   
     > [!NOTE]  
-    >  資料行屬性的預設值會在您建立新資料行時加入，但是您可以在 [資料行屬性]**** 索引標籤中變更預設值。  
+    >  資料行屬性的預設值會在您建立新資料行時加入，但是您可以在 [資料行屬性] 索引標籤中變更預設值。  
   
-6.  新增資料行之後，請從 [檔案]**** 功能表中，選擇 [儲存**資料表**] **。  
+6.  新增資料行之後，請從 [檔案] 功能表中，選擇 [儲存**資料表**] 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

@@ -17,9 +17,10 @@ caps.latest.revision: 5
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 0f2edc5c0bbf2fba20b26826413ee4f659b379b1
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -824,7 +825,7 @@ CREATE PARTITION FUNCTION myRangePF1 (int) AS RANGE LEFT FOR VALUES (3, 7, 10);
 
 ### <a name="displaying-partitioning-information-in-query-execution-plans"></a>在查詢執行計畫中顯示資料分割資訊
 
-資料分割資料表和索引上的查詢執行計畫可以使用 Transact-SQL `SET` 陳述式 `SET SHOWPLAN_XML` 或 `SET STATISTICS XML`，或是使用 SQL Server Management Studio 中的圖形化執行計畫輸出進行檢查。 例如，您可以在查詢編輯器工具列上，按一下 [顯示估計執行計畫] ** 來顯示編譯時間執行計畫，以及按一下 [包括實際執行計畫] **來顯示執行階段計畫。 
+資料分割資料表和索引上的查詢執行計畫可以使用 Transact-SQL `SET` 陳述式 `SET SHOWPLAN_XML` 或 `SET STATISTICS XML`，或是使用 SQL Server Management Studio 中的圖形化執行計畫輸出進行檢查。 例如，您可以在查詢編輯器工具列上，按一下 [顯示估計執行計畫]  來顯示編譯時間執行計畫，以及按一下 [包括實際執行計畫] 來顯示執行階段計畫。 
 
 您可以使用這些工具來確定以下資訊：
 

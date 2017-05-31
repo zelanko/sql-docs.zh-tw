@@ -16,14 +16,15 @@ caps.latest.revision: 21
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7db783ed5f45e69dc65c96214b79facc8043e531
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="audit-server-principal-impersonation-event-class"></a>Audit Server Principal Impersonation 事件類別
-  當伺服器範圍內有模擬時發生，例如 EXECUTE AS \<登入>**，就會發生 **Audit Server Principal Impersonation** 事件類別。  
+  當伺服器範圍內有模擬時發生，例如 EXECUTE AS \<登入>，就會發生 **Audit Server Principal Impersonation** 事件類別。  
   
 ## <a name="audit-server-principal-impersonation-event-class-data-columns"></a>Audit Server Principal Impersonation 事件類別資料行  
   

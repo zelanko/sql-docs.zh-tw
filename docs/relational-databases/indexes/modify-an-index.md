@@ -18,9 +18,10 @@ caps.latest.revision: 19
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: baab89e891a068e358727fd2a8c739ef1b37b400
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -50,7 +51,7 @@ ms.lasthandoff: 04/11/2017
   
 3.  展開索引所在的資料表，然後展開 **[索引]**。  
   
-4.  以滑鼠右鍵按一下您要修改的索引，然後按一下 [屬性]****。  
+4.  以滑鼠右鍵按一下您要修改的索引，然後按一下 [屬性]。  
   
 5.  在 **[索引屬性]** 對話方塊中，進行所需的變更。 例如，您可以在索引鍵中加入或移除資料行，或是變更索引選項的設定。  
   

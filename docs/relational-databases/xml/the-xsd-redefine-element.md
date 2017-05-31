@@ -17,14 +17,15 @@ caps.latest.revision: 14
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 74822cb1a24319e1926866da283b1ada379709e8
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="the-ltxsdredefinegt-element"></a>&lt;xsd:redefine&gt; 項目
-  W3C XSD **redefine** 元素支援重新定義結構描述的元件。 不過，此指示詞的支援可能會使效能大幅降低，而且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 也需要重新驗證所有 **** 資料類型執行個體 (其已與重新定義的結構描述建立關聯)。 因此， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支援此元素。 伺服器將會拒絕包含 **\<xsd:redefine>** 項目的 XML 結構描述。  
+  W3C XSD **redefine** 元素支援重新定義結構描述的元件。 不過，此指示詞的支援可能會使效能大幅降低，而且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 也需要重新驗證所有  資料類型執行個體 (其已與重新定義的結構描述建立關聯)。 因此， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支援此元素。 伺服器將會拒絕包含 **\<xsd:redefine>** 項目的 XML 結構描述。  
   
  若要更新結構描述或是其元件，您可以改為執行下列動作：  
   

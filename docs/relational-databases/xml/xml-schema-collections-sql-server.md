@@ -25,14 +25,15 @@ caps.latest.revision: 31
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5368814b9cd123c0e968ecef14fa236d09b3c57d
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="xml-schema-collections-sql-server"></a>XML 結構描述集合 (SQL Server)
-  如 [xml &#40;Transact-SQL&#41;](../../t-sql/xml/xml-transact-sql.md) 主題所述，SQL Server 是透過 **XML** 資料類型來提供原生的 XML 資料儲存體。 您可以選擇透過 XML 結構描述集合，使 XSD 結構描述與 **** 類型的變數或資料行產生關聯。 XML 結構描述集合會儲存匯入的 XML 結構描述，然後用來執行下列作業：  
+  如 [xml &#40;Transact-SQL&#41;](../../t-sql/xml/xml-transact-sql.md) 主題所述，SQL Server 是透過 **XML** 資料類型來提供原生的 XML 資料儲存體。 您可以選擇透過 XML 結構描述集合，使 XSD 結構描述與  類型的變數或資料行產生關聯。 XML 結構描述集合會儲存匯入的 XML 結構描述，然後用來執行下列作業：  
   
 -   驗證 XML 執行個體  
   
@@ -59,7 +60,7 @@ ms.lasthandoff: 04/11/2017
   
 -   [DROP XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-xml-schema-collection-transact-sql.md) 刪除整個 XML 結構描述集合及其所有的元件。  
   
- 若要使用 XML 結構描述集合及其包含的結構描述，您必須先使用 CREATE XML SCHEMA COLLECTION 陳述式來建立集合和結構描述。 在建立結構描述集合之後，您就可以建立 **** 類型的變數和資料行，並將結構描述集合與它們產生關聯。 請注意，建立結構描述集合之後，各種結構描述元件會儲存在中繼資料內。 您也可以使用 ALTER XML SCHEMA COLLECTION 將更多元件加入現有的結構描述，或將新的結構描述加入現有的集合。  
+ 若要使用 XML 結構描述集合及其包含的結構描述，您必須先使用 CREATE XML SCHEMA COLLECTION 陳述式來建立集合和結構描述。 在建立結構描述集合之後，您就可以建立  類型的變數和資料行，並將結構描述集合與它們產生關聯。 請注意，建立結構描述集合之後，各種結構描述元件會儲存在中繼資料內。 您也可以使用 ALTER XML SCHEMA COLLECTION 將更多元件加入現有的結構描述，或將新的結構描述加入現有的集合。  
   
  若要卸除結構描述集合，請使用 DROP XML SCHEMA COLLECTION 陳述式。 這會卸除集合中包含的所有結構描述，並移除集合物件。 請注意，必須符合 [DROP XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-xml-schema-collection-transact-sql.md) 中描述的條件，才能卸除結構描述集合。  
   

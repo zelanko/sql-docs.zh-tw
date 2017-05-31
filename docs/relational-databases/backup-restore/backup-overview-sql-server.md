@@ -26,9 +26,10 @@ caps.latest.revision: 84
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 6839d0474f1062f5dc0e247e9bb1fdbbf492c9c9
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -62,7 +63,7 @@ ms.lasthandoff: 04/11/2017
  資料庫的備份。 完整資料庫備份代表備份完成時的整個資料庫。 差異資料庫備份僅包含自其最近的完整資料庫備份以來，對資料庫所做的變更。  
   
  **[差異備份](../../relational-databases/backup-restore/full-database-backups-sql-server.md)**  
- 一種資料備份，是以整個或部分資料庫或一組資料檔案或檔案群組 (「差異基底」**) 的最新完整備份為基礎，而且只包含自差異基底以來變更的資料範圍。  
+ 一種資料備份，是以整個或部分資料庫或一組資料檔案或檔案群組 (「差異基底」) 的最新完整備份為基礎，而且只包含自差異基底以來變更的資料範圍。  
   
  差異部分備份僅記錄自上一次部分備份後在檔案群組中變更過的資料範圍，稱為差異基底。  
   

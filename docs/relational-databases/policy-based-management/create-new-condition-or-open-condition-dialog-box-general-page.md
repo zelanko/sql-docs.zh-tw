@@ -16,14 +16,15 @@ caps.latest.revision: 30
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b90436634729185cf2703cc012aae3a4f0338cdb
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="create-new-condition-or-open-condition-dialog-box-general-page"></a>建立新條件或開啟條件對話方塊，一般頁面
-  使用此對話方塊可建立或變更以原則為基礎的管理條件。 條件是一種布林運算式，可指定以原則為基礎之管理 Managed 目標所允許的一組狀態 (與 Facet 有關)。 可以在 [運算式/欄位]**** 方塊中選取的屬性需視所使用的 Facet 而定。 如需條件如何與 Facet 和原則相關的詳細資訊，請參閱[使用原則式管理來管理伺服器](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)。  
+  使用此對話方塊可建立或變更以原則為基礎的管理條件。 條件是一種布林運算式，可指定以原則為基礎之管理 Managed 目標所允許的一組狀態 (與 Facet 有關)。 可以在 [運算式/欄位] 方塊中選取的屬性需視所使用的 Facet 而定。 如需條件如何與 Facet 和原則相關的詳細資訊，請參閱[使用原則式管理來管理伺服器](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)。  
   
 ## <a name="options"></a>選項  
  **名稱**  
@@ -49,7 +50,7 @@ ms.lasthandoff: 04/11/2017
   
  **群組子句**  
   
--   按下 SHIFT 或 CTRL 鍵，然後按一下兩個或多個子句來選取範圍。 以滑鼠右鍵按一下選取的區域，然後按一下 [群組子句]****。  
+-   按下 SHIFT 或 CTRL 鍵，然後按一下兩個或多個子句來選取範圍。 以滑鼠右鍵按一下選取的區域，然後按一下 [群組子句]。  
   
 ## <a name="see-also"></a>另請參閱  
  [使用原則式管理來管理伺服器](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  

@@ -24,9 +24,10 @@ caps.latest.revision: 21
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 364c8e7db9d336df91b984d62aaf62cff19da4ac
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -69,7 +70,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  按一下 **[文字編輯器]**。  
   
-3.  開啟適當語言資料夾 (或 [所有語言]****，這會影響所有語言)。  
+3.  開啟適當語言資料夾 (或 [所有語言]，這會影響所有語言)。  
   
 4.  選取 **[自動換行]**。  
   
@@ -82,7 +83,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  按一下 **[文字編輯器]**。  
   
-3.  開啟適當語言資料夾 (或 [所有語言]****，這會影響所有語言)。  
+3.  開啟適當語言資料夾 (或 [所有語言]，這會影響所有語言)。  
   
 4.  選取 **[啟用虛擬空間]**。  
   

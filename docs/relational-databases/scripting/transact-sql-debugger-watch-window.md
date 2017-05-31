@@ -18,9 +18,10 @@ caps.latest.revision: 16
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 9b0722b0bd77b33ddb170bb1c2f510f28b74dd82
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -34,7 +35,7 @@ ms.lasthandoff: 04/11/2017
   
  **變更運算式的值**  
   
--   以滑鼠右鍵按一下運算式，然後選取 [編輯值]****。  
+-   以滑鼠右鍵按一下運算式，然後選取 [編輯值]。  
   
 ## <a name="columns"></a>資料行  
  **名稱**  
@@ -51,7 +52,7 @@ ms.lasthandoff: 04/11/2017
 -   傳回單一值的 Transact-SQL 陳述式，例如 SELECT CharacterCol FROM MyTable WHERE PrimaryKey = 1。  
   
  **Value**  
- 顯示當 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具評估 [名稱]**** 內指定的運算式以後所傳回的值。  
+ 顯示當 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具評估 [名稱] 內指定的運算式以後所傳回的值。  
   
  如果運算式的長度超過 **[值]** 資料行的寬度，當您將指標放在該運算式的 **[值]** 資料格上方時，工具提示會顯示完整的值。  
   

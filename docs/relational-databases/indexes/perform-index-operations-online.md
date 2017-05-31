@@ -18,9 +18,10 @@ caps.latest.revision: 32
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 7be8dd139a8c377d67259df538b097f1337821ca
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -81,7 +82,7 @@ ms.lasthandoff: 04/11/2017
   
 4.  展開 **[索引]** 資料夾。  
   
-5.  以滑鼠右鍵按一下要線上重建的索引，然後選取 [屬性]****。  
+5.  以滑鼠右鍵按一下要線上重建的索引，然後選取 [屬性]。  
   
 6.  在 **[選取頁面]**底下，選取 **[選項]**。  
   
@@ -89,7 +90,7 @@ ms.lasthandoff: 04/11/2017
   
 8.  按一下 **[確定]**。  
   
-9. 以滑鼠右鍵按一下要線上重建的索引，然後選取 [重建]****。  
+9. 以滑鼠右鍵按一下要線上重建的索引，然後選取 [重建]。  
   
 10. 在 **[重建索引]** 對話方塊中，確認 **[要重建的索引]** 方格中有正確索引，然後按一下 **[確定]**。  
   

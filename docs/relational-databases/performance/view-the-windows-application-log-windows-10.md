@@ -23,9 +23,10 @@ caps.latest.revision: 25
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 148bb839729d26ca2c9b5dad8d51696e9c8c6a5c
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -34,12 +35,12 @@ ms.lasthandoff: 04/11/2017
   
 ### <a name="view-the-windows-application-log"></a>檢視 Windows 應用程式記錄檔  
   
-1.  在 [搜尋列]**** 上，輸入**事件檢視器**，然後選取 [事件檢視器-] 桌面應用程式。
+1.  在 [搜尋列] 上，輸入**事件檢視器**，然後選取 [事件檢視器-] 桌面應用程式。
   
-2.  開啟 [事件檢視器] 中的 [應用程式及服務記錄檔]****。    
-3.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件是以 [來源]**** 資料行的 **MSSQLSERVER** 項目識別 (具名執行個體則是以 **MSSQL$***<執行個體名稱>* 識別)。 SQL Server Agent 事件由 SQLSERVERAGENT 項目識別 (對於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的具名執行個體，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 事件是由 **SQLAgent$**\<*執行個體名稱*> 加以識別)。 Microsoft Search 服務事件則以 **Microsoft Search**項目識別。  
+2.  開啟 [事件檢視器] 中的 [應用程式及服務記錄檔]。    
+3.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件是以 [來源] 資料行的 **MSSQLSERVER** 項目識別 (具名執行個體則是以 **MSSQL$***<執行個體名稱>* 識別)。 SQL Server Agent 事件由 SQLSERVERAGENT 項目識別 (對於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的具名執行個體，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 事件是由 **SQLAgent$**\<*執行個體名稱*> 加以識別)。 Microsoft Search 服務事件則以 **Microsoft Search**項目識別。  
   
-4.  若要檢視不同電腦的記錄檔，請以滑鼠右鍵按一下 [事件檢視器]****，選取 [連線到另一台電腦]****，然後完成 [選取電腦]**** 對話方塊。  
+4.  若要檢視不同電腦的記錄檔，請以滑鼠右鍵按一下 [事件檢視器]，選取 [連線到另一台電腦]，然後完成 [選取電腦] 對話方塊。  
   
 5.  (選擇性) 若只想顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件，請在 **[檢視]** 功能表中按一下 **[篩選]**，然後在 **[事件來源]** 清單中選擇 **[MSSQLSERVER]**。 若只想檢視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 事件，請改在 **[事件來源]** 清單中選取 **[SQLSERVERAGENT]** 。  
   

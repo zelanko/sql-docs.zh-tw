@@ -14,9 +14,10 @@ caps.latest.revision: 29
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c5b936bf52653ea81c579c345d09f4f2d0e76339
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -138,7 +139,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  在 [物件總管] 中，以滑鼠右鍵按一下要產生報表的資料庫。  
   
-3.  在操作功能表中，依序選取 [報表]**** -> [標準報表]**** -> [記憶體最佳化物件的記憶體使用量]****  
+3.  在操作功能表中，依序選取 [報表] -> [標準報表] -> [記憶體最佳化物件的記憶體使用量]****  
   
  ![HK_MM_SSMS](../../relational-databases/in-memory-oltp/media/hk-mm-ssms-stdrpt-memuse.gif "HK_MM_SSMS")  
   

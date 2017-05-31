@@ -17,9 +17,10 @@ caps.latest.revision: 39
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 2abba76ac65025fe1f2c2d23a9d5b094eafb8980
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -47,31 +48,31 @@ ms.lasthandoff: 04/11/2017
 -   編輯複寫所產生的任何快照集檔案時必須特別小心。 您必須在自訂預存程序中測試並支援自訂邏輯。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 不提供自訂邏輯的支援。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 在 [發行項屬性 - \<發行項>]**** 對話方塊的 [屬性]**** 索引標籤上指定傳遞方法，其可於 [新增發行集精靈] 和 [發行集屬性 - \<發行集>]**** 對話方塊中提供。 如需使用精靈和存取對話方塊的詳細資訊，請參閱[建立發行集](../../../relational-databases/replication/publish/create-a-publication.md)和[檢視及修改發行集屬性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
+ 在 [發行項屬性 - \<發行項>] 對話方塊的 [屬性] 索引標籤上指定傳遞方法，其可於 [新增發行集精靈] 和 [發行集屬性 - \<發行集>] 對話方塊中提供。 如需使用精靈和存取對話方塊的詳細資訊，請參閱[建立發行集](../../../relational-databases/replication/publish/create-a-publication.md)和[檢視及修改發行集屬性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
   
 #### <a name="to-specify-the-propagation-method"></a>指定傳遞方法  
   
-1.  在 [新增發行集精靈] 的 [發行項]**** 頁面上，或是在 [發行集屬性 - \<發行集>]**** 對話方塊中，選取一個資料表，然後按一下 [發行項屬性]****。  
+1.  在 [新增發行集精靈] 的 [發行項] 頁面上，或是在 [發行集屬性 - \<發行集>] 對話方塊中，選取一個資料表，然後按一下 [發行項屬性]。  
   
 2.  按一下 **[設定反白顯示資料表發行項的屬性]**。  
   
-3.  在 [發行項屬性 - \<發行項>]**** 對話方塊中 [屬性]**** 索引標籤的 [陳述式傳遞]**** 區段中，使用 [INSERT 傳遞格式]****、[UPDATE 傳遞格式]**** 以及 [DELETE 傳遞格式]**** 功能表，指定各項作業的傳播方法。  
+3.  在 [發行項屬性 - \<發行項>] 對話方塊中 [屬性] 索引標籤的 [陳述式傳遞] 區段中，使用 [INSERT 傳遞格式]、[UPDATE 傳遞格式] 以及 [DELETE 傳遞格式] 功能表，指定各項作業的傳播方法。  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  如果您在 [發行集屬性 - \<發行集>]**** 對話方塊中，請按一下 [確定]**** 以儲存並關閉對話方塊。  
+5.  如果您在 [發行集屬性 - \<發行集>] 對話方塊中，請按一下 [確定] 以儲存並關閉對話方塊。  
   
 #### <a name="to-generate-and-use-custom-stored-procedures"></a>產生及使用自訂預存程序  
   
-1.  在 [新增發行集精靈] 的 [發行項]**** 頁面上，或是在 [發行集屬性 - \<發行集>]**** 對話方塊中，選取一個資料表，然後按一下 [發行項屬性]****。  
+1.  在 [新增發行集精靈] 的 [發行項] 頁面上，或是在 [發行集屬性 - \<發行集>] 對話方塊中，選取一個資料表，然後按一下 [發行項屬性]。  
   
 2.  按一下 **[設定反白顯示資料表發行項的屬性]**。  
   
-     在 [發行項屬性 - \<發行項>]**** 對話方塊的 [屬性]**** 索引標籤上，於 [陳述式傳遞]**** 區段中適當的傳遞格式功能表 ([INSERT 傳遞格式]****、[UPDATE 傳遞格式]**** 或 [DELETE 傳遞格式]****) 中選取 CALL 語法，然後輸入要在 [INSERT 預存程序]****、[DELETE 預存程序]**** 或 [UPDATE 預存程序]**** 中使用的程序名稱。 如需 CALL 語法的詳細資訊，請參閱[指定交易式發行項變更的傳播方式](../../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)中的＜預存程序的 Call 語法＞一節。  
+     在 [發行項屬性 - \<發行項>] 對話方塊的 [屬性] 索引標籤上，於 [陳述式傳遞] 區段中適當的傳遞格式功能表 ([INSERT 傳遞格式]、[UPDATE 傳遞格式] 或 [DELETE 傳遞格式]) 中選取 CALL 語法，然後輸入要在 [INSERT 預存程序]、[DELETE 預存程序] 或 [UPDATE 預存程序] 中使用的程序名稱。 如需 CALL 語法的詳細資訊，請參閱[指定交易式發行項變更的傳播方式](../../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)中的＜預存程序的 Call 語法＞一節。  
   
 3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-4.  如果您在 [發行集屬性 - \<發行集>]**** 對話方塊中，請按一下 [確定]**** 以儲存並關閉對話方塊。  
+4.  如果您在 [發行集屬性 - \<發行集>] 對話方塊中，請按一下 [確定] 以儲存並關閉對話方塊。  
   
 5.  產生發行集的快照集時，其中會包含您在前一個步驟中指定的程序。 這些程序將使用您指定的 CALL 語法，但是會包含複寫使用的預設邏輯。  
   
@@ -119,11 +120,11 @@ ms.lasthandoff: 04/11/2017
   
 1.  在發行集資料庫的發行者上，執行 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)。 針對 **@publication**指定發行項所屬的發行集名稱、針對 **@article**指定發行項名稱、針對 **@source_object**指定發行的資料庫物件、針對包含 **@schema_option** 值 (可自動產生自訂預存程序) 的 **@schema_option** 位元遮罩指定一個值，以及至少指定下列其中一個參數：  
   
-    -   **@ins_cmd** - 指定 **CALL sp_MSins_<發行項名稱>** ** 值，其中 <發行項名稱>****** 是針對 **@article** 指定的值。  
+    -   **@ins_cmd** - 指定 **CALL sp_MSins_<發行項名稱>** ** 值，其中 <發行項名稱> 是針對 **@article** 指定的值。  
   
-    -   **@del_cmd** - 指定 **CALL sp_MSdel_<發行項名稱>**** 或 **XCALL sp_MSdel_<發行項名稱>**** 的值，其中 <發行項名稱>****** 是針對 **@article** 指定的值。  
+    -   **@del_cmd** - 指定 **CALL sp_MSdel_<發行項名稱>**** 或 **XCALL sp_MSdel_<發行項名稱>**** 的值，其中 <發行項名稱> 是針對 **@article** 指定的值。  
   
-    -   **@upd_cmd** - 指定 **SCALL sp_MSupd_<發行項名稱>****、**CALL sp_MSupd_<發行項名稱>****、**XCALL sp_MSupd_<發行項名稱>** **或 **MCALL sp_MSupd_*article_name*** 的值，其中 <發行項名稱>****** 是針對 **@article** 指定的值。  
+    -   **@upd_cmd** - 指定 **SCALL sp_MSupd_<發行項名稱>****、**CALL sp_MSupd_<發行項名稱>****、**XCALL sp_MSupd_<發行項名稱>** **或 **MCALL sp_MSupd_*article_name*** 的值，其中 <發行項名稱> 是針對 **@article** 指定的值。  
   
     > [!NOTE]  
     >  您可以針對上述的每一個命令參數，為複寫產生的預存程序指定您自己的名稱。  
@@ -139,11 +140,11 @@ ms.lasthandoff: 04/11/2017
   
 1.  在發行集資料庫的發行者上，執行 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)。 針對 **@publication**指定發行項所屬的發行集名稱、針對 **@article**指定發行項名稱、針對 **@source_object**指定發行的資料庫物件、針對包含 **@schema_option** 值 (可自動產生自訂預存程序) 的 **@schema_option** 位元遮罩指定一個值，以及至少指定下列其中一個參數：  
   
-    -   **@ins_cmd** - 指定 **CALL sp_MSins_<發行項名稱>** ** 值，其中 <發行項名稱>****** 是針對 **@article** 指定的值。  
+    -   **@ins_cmd** - 指定 **CALL sp_MSins_<發行項名稱>** ** 值，其中 <發行項名稱> 是針對 **@article** 指定的值。  
   
-    -   **@del_cmd** - 指定 **CALL sp_MSdel_<發行項名稱>**** 或 **XCALL sp_MSdel_<發行項名稱>**** 的值，其中 <發行項名稱>****** 是針對 **@article** 指定的值。  
+    -   **@del_cmd** - 指定 **CALL sp_MSdel_<發行項名稱>**** 或 **XCALL sp_MSdel_<發行項名稱>**** 的值，其中 <發行項名稱> 是針對 **@article** 指定的值。  
   
-    -   **@upd_cmd** - 指定 **SCALL sp_MSupd_<發行項名稱>*article_name***、**CALL sp_MSupd_<發行項名稱>****、**XCALL sp_MSupd_<發行項名稱>** **或 **MCALL sp_MSupd_**** 的值，其中 <發行項名稱>****** 是針對 **@article** 指定的值。  
+    -   **@upd_cmd** - 指定 **SCALL sp_MSupd_<發行項名稱>*article_name***、**CALL sp_MSupd_<發行項名稱>****、**XCALL sp_MSupd_<發行項名稱>** **或 **MCALL sp_MSupd_**** 的值，其中 <發行項名稱> 是針對 **@article** 指定的值。  
   
     > [!NOTE]  
     >  您可以針對上述的每一個命令參數，為複寫產生的預存程序指定您自己的名稱。  

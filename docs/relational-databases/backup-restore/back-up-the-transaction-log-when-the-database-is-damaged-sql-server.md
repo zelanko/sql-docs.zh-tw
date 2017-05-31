@@ -18,9 +18,10 @@ caps.latest.revision: 29
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 92a58c71939a7a3c4244f94c8da5479e54a491ca
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -80,7 +81,7 @@ ms.lasthandoff: 04/11/2017
   
 8.  在 **[備份組]** 區域，接受 **[名稱]** 文字方塊中建議的預設備份組名稱，或者輸入不同的備份組名稱。  
   
-9. 在 [描述]**** 文字方塊中，輸入結尾記錄備份的描述。  
+9. 在 [描述] 文字方塊中，輸入結尾記錄備份的描述。  
   
 10. 指定備份組會在何時過期：  
   
@@ -129,9 +130,9 @@ ms.lasthandoff: 04/11/2017
      `BACKUP LOG <database_name> TO <backup_device> WITH NORECOVERY`  
   
     > [!IMPORTANT]  
-    >  在還原時，[還原資料庫] 對話方塊會將結尾記錄備份的類型顯示為 [交易記錄 (只複製)]****。  
+    >  在還原時，[還原資料庫] 對話方塊會將結尾記錄備份的類型顯示為 [交易記錄 (只複製)]。  
   
-15. 如果您要備份至磁帶機 (如同 [一般]**** 頁面的 [目的地]**** 區段中所指定)，即可使用 [備份後卸載磁帶]**** 選項。 按一下這個選項會啟動 **[卸載之前倒轉磁帶]** 選項。  
+15. 如果您要備份至磁帶機 (如同 [一般] 頁面的 [目的地] 區段中所指定)，即可使用 [備份後卸載磁帶] 選項。 按一下這個選項會啟動 **[卸載之前倒轉磁帶]** 選項。  
   
 16. [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] 和更新的版本支援 [備份壓縮](../../relational-databases/backup-restore/backup-compression-sql-server.md)。 依預設，備份壓縮與否取決於 **備份壓縮預設** 伺服器組態選項的值。 不過，不論目前的伺服器層級預設值為何，您都可以透過核取 **[壓縮備份]**壓縮備份，而且可以透過核取 **[不要壓縮備份]**防止壓縮。  
   

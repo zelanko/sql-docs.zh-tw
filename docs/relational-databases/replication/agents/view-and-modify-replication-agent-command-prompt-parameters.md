@@ -16,14 +16,15 @@ caps.latest.revision: 22
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 1e9dafe794470f2b0307459e774e01a1ef07d784
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="view-and-modify-replication-agent-command-prompt-parameters"></a>檢視並修改複寫代理程式命令提示字元參數
-  複寫代理程式為可接受命令行參數的可執行檔。 根據預設，代理程式會在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理程式作業步驟下執行，因此這些參數便可透過 [作業屬性 - \<作業>]**** 對話方塊進行檢視並修改。 **的** [作業] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 資料夾及複寫監視器的 **[代理程式]** 索引標籤會提供此對話方塊。 如需啟動複寫監視器的資訊，請參閱[啟動複寫監視器](../../../relational-databases/replication/monitor/start-the-replication-monitor.md)。  
+  複寫代理程式為可接受命令行參數的可執行檔。 根據預設，代理程式會在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理程式作業步驟下執行，因此這些參數便可透過 [作業屬性 - \<作業>] 對話方塊進行檢視並修改。 **的** [作業] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 資料夾及複寫監視器的 **[代理程式]** 索引標籤會提供此對話方塊。 如需啟動複寫監視器的資訊，請參閱[啟動複寫監視器](../../../relational-databases/replication/monitor/start-the-replication-monitor.md)。  
   
 > [!NOTE]  
 >  代理程式參數變更會在代理程式下次啟動時生效。 如果代理程式連續執行，則必須停止代理程式，然後重新啟動它。  
@@ -60,7 +61,7 @@ ms.lasthandoff: 04/11/2017
   
 3.  以滑鼠右鍵按一下作業，然後按一下 **[屬性]**。  
   
-4.  在 [作業屬性 - \<作業>]**** 對話方塊的 [步驟]**** 頁面上，選取步驟 [執行代理程式]****，然後按一下 [編輯]****。  
+4.  在 [作業屬性 - \<作業>] 對話方塊的 [步驟] 頁面上，選取步驟 [執行代理程式]，然後按一下 [編輯]。  
   
 5.  在 **[作業步驟屬性 - 執行代理程式]** 對話方塊中，編輯 **[命令]** 欄位。  
   
@@ -74,9 +75,9 @@ ms.lasthandoff: 04/11/2017
   
 3.  以滑鼠右鍵按一下訂閱，然後按一下 **[檢視詳細資料]**。  
   
-4.  在 [訂閱 <訂閱名稱>]**** 視窗中，按一下 [動作]****，然後按一下 [\<代理程式名稱> 作業屬性]****。  
+4.  在 [訂閱 <訂閱名稱>] 視窗中，按一下 [動作]，然後按一下 [\<代理程式名稱> 作業屬性]。  
   
-5.  在 [作業屬性 - \<作業>]**** 對話方塊的 [步驟]**** 頁面上，選取步驟 [執行代理程式]****，然後按一下 [編輯]****。  
+5.  在 [作業屬性 - \<作業>] 對話方塊的 [步驟] 頁面上，選取步驟 [執行代理程式]，然後按一下 [編輯]。  
   
 6.  在 **[作業步驟屬性 - 執行代理程式]** 對話方塊中，編輯 **[命令]** 欄位。  
   
@@ -90,7 +91,7 @@ ms.lasthandoff: 04/11/2017
   
 3.  以滑鼠右鍵按一下方格內的代理程式，然後按一下 **[屬性]**。  
   
-4.  在 [作業屬性 - \<作業>]**** 對話方塊的 [步驟]**** 頁面上，選取步驟 [執行代理程式]****，然後按一下 [編輯]****。  
+4.  在 [作業屬性 - \<作業>] 對話方塊的 [步驟] 頁面上，選取步驟 [執行代理程式]，然後按一下 [編輯]。  
   
 5.  在 **[作業步驟屬性 - 執行代理程式]** 對話方塊中，編輯 **[命令]** 欄位。  
   

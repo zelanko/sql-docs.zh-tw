@@ -14,9 +14,10 @@ caps.latest.revision: 9
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 6ef76460f1f77ea9622bbc2465857946bf463b96
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -31,10 +32,10 @@ ms.lasthandoff: 04/11/2017
  輸入原則的描述。  
   
  **其他說明超連結: 要顯示的文字**  
- 在執行原則時，其他說明超連結會顯示在 [結果詳細檢視]**** 頁面上。 輸入要顯示為超連結的文字。  
+ 在執行原則時，其他說明超連結會顯示在 [結果詳細檢視] 頁面上。 輸入要顯示為超連結的文字。  
   
  **其他說明超連結: 位址**  
- 輸入當使用者按一下 [結果詳細檢視]**** 頁面上所出現的超連結文字時，所要開啟之網頁的超連結。  
+ 輸入當使用者按一下 [結果詳細檢視] 頁面上所出現的超連結文字時，所要開啟之網頁的超連結。  
   
  **其他說明超連結: 測試連結**  
  按一下此選項可開啟用來測試連結有效性的超連結。  

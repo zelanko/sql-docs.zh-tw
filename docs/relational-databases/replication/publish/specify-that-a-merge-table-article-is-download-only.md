@@ -18,9 +18,10 @@ caps.latest.revision: 40
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 83d7383aff0ccc5ab8f6716135d07c3642e6c9d6
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -46,7 +47,7 @@ ms.lasthandoff: 04/11/2017
 -   如果您在初始化訂閱之後指定發行項僅限下載，則所有收到該發行項的客訂閱都必須重新初始化。 主訂閱則不需要重新初始化。 如需屬性變更效果的詳細資訊，請參閱[變更發行集與發行項屬性](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 在 [新增發行集精靈] 的 [發行項]**** 頁面，或 [發行項屬性 - \<發行項>]**** 對話方塊的 [屬性]**** 索引標籤上指定發行項僅限下載。 [新增發行集精靈] 與 [發行集屬性 - \<發行集>]**** 對話方塊中都有提供此對話方塊。 如需使用精靈和存取對話方塊的詳細資訊，請參閱[建立發行集](../../../relational-databases/replication/publish/create-a-publication.md)和[檢視及修改發行集屬性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
+ 在 [新增發行集精靈] 的 [發行項] 頁面，或 [發行項屬性 - \<發行項>] 對話方塊的 [屬性] 索引標籤上指定發行項僅限下載。 [新增發行集精靈] 與 [發行集屬性 - \<發行集>] 對話方塊中都有提供此對話方塊。 如需使用精靈和存取對話方塊的詳細資訊，請參閱[建立發行集](../../../relational-databases/replication/publish/create-a-publication.md)和[檢視及修改發行集屬性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
   
 #### <a name="to-specify-that-an-article-is-download-only-on-the-articles-page"></a>在發行項頁面上指定發行項僅限下載  
   
@@ -54,17 +55,17 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="to-specify-that-an-article-is-download-only-on-the-properties-tab-of-the-article-properties---article-dialog-box"></a>在發行項屬性 - \<發行項> 對話方塊的屬性索引標籤上指定發行項僅限下載  
   
-1.  在 [新增發行集精靈] 的 [發行項]**** 頁面上，或是在 [發行集屬性 - \<發行集>]**** 對話方塊中，選取一個資料表，然後按一下 [發行項屬性]****。  
+1.  在 [新增發行集精靈] 的 [發行項] 頁面上，或是在 [發行集屬性 - \<發行集>] 對話方塊中，選取一個資料表，然後按一下 [發行項屬性]。  
   
 2.  按一下 **[設定反白顯示資料表發行項的屬性]** 或 **[設定所有資料表發行項的屬性]**。  
   
-3.  在 [發行項屬性 - \<發行項>]**** 對話方塊之 [屬性]**** 索引標籤的 [目的地物件]**** 區段中，指定 [同步處理方向]**** 的下列其中一個值：  
+3.  在 [發行項屬性 - \<發行項>] 對話方塊之 [屬性] 索引標籤的 [目的地物件] 區段中，指定 [同步處理方向] 的下列其中一個值：  
   
     -   **[下載至訂閱者，禁止訂閱者變更]**  
   
     -   **[下載至訂閱者，允許訂閱者變更]**  
   
-4.  如果您在 [發行集屬性 - \<發行集>]**** 對話方塊中，請按一下 [確定]**** 儲存並關閉對話方塊。  
+4.  如果您在 [發行集屬性 - \<發行集>] 對話方塊中，請按一下 [確定] 儲存並關閉對話方塊。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

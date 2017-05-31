@@ -18,14 +18,15 @@ caps.latest.revision: 22
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: eb4a9958813dbb3b7457c1163abb6aab8013f91f
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="publisher-properties---publisher-subscribers"></a>發行者屬性 - 發行者，訂閱者
-  [發行者屬性]**** 對話方塊的 [訂閱者]**** 頁面，是用於執行 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 之前的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本之發行者。 此頁面可讓您啟用訂閱者，以接收來自此發行者的發行集資料。 啟用訂閱者以接收來自此發行者的資料，並不會在此發行者上建立發行集的訂閱。 若要建立訂閱，您必須使用新增訂閱精靈。  
+  [發行者屬性] 對話方塊的 [訂閱者] 頁面，是用於執行 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 之前的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本之發行者。 此頁面可讓您啟用訂閱者，以接收來自此發行者的發行集資料。 啟用訂閱者以接收來自此發行者的資料，並不會在此發行者上建立發行集的訂閱。 若要建立訂閱，您必須使用新增訂閱精靈。  
   
 ## <a name="options"></a>選項  
  **[發行者屬性]**  

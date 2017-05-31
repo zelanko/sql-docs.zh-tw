@@ -23,14 +23,15 @@ caps.latest.revision: 12
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 57703923bd142330e2a46e72eb4faaee18fa7285
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="deploy-a-database-by-using-a-dac"></a>使用 DAC 來部署資料庫
-  使用 [將資料庫部署到 SQL Azure] **** 精靈，在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體與 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 伺服器之間部署資料庫，或在兩個 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]伺服器之間部署資料庫。  
+  使用 [將資料庫部署到 SQL Azure]  精靈，在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體與 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 伺服器之間部署資料庫，或在兩個 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]伺服器之間部署資料庫。  
   
 ##  <a name="BeforeBegin"></a> 開始之前  
  精靈會使用資料層應用程式 (DAC) BACPAC 封存檔案，來部署資料和資料庫物件的定義。 它會從來源資料庫執行 DAC 匯出作業並對目的地資料庫執行 DAC 匯入。  

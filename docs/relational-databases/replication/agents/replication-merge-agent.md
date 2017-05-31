@@ -19,9 +19,10 @@ caps.latest.revision: 64
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e8d07eaf421703fb57b9682780027f4e909583dd
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -115,7 +116,7 @@ replmerg [-?]
  列印所有可用的參數。  
   
  **-Publisher** *server_name*[**\\***instance_name*]  
- 這是發行者的名稱。 請針對該伺服器上的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 預設執行個體指定 <伺服器名稱>**。 請針對該伺服器上 *server_name***\\***instance_name* instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 預設執行個體指定 server_name。  
+ 這是發行者的名稱。 請針對該伺服器上的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 預設執行個體指定 <伺服器名稱>。 請針對該伺服器上 *server_name***\\***instance_name* instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 預設執行個體指定 server_name。  
   
  **-PublisherDB** *publisher_database*  
  這是發行者資料庫的名稱。  
@@ -196,7 +197,7 @@ replmerg [-?]
  指定應該針對資料列計數驗證使用哪一種資料列計數計算方法。 值為 **1** (預設值) 表示快速方法。 值為 **0** 則表示完整資料列計數方法。  
   
  **-FileTransferType** [**0**|**1**]  
- 指定檔案傳輸類型。 **** 值為 **0** 表示 UNC (通用命名慣例)，而值為 1 則表示 FTP (檔案傳輸通訊協定)。  
+ 指定檔案傳輸類型。  值為 **0** 表示 UNC (通用命名慣例)，而值為 1 則表示 FTP (檔案傳輸通訊協定)。  
   
  **-ForceConvergenceLevel** [**0**|**1**|**2** ( **Publisher**| **Subscriber**| **Both**)]  
  指定合併代理程式應該使用的聚合層級，而且可以是下列其中一個值。  
@@ -263,7 +264,7 @@ replmerg [-?]
  這是記錄執行緒檢查是否有任何現有的連接正在等候伺服器回應之前的秒數。 執行長時間執行的批次時，您可以減少這個值，避免檢查代理程式將合併代理程式標示為有疑問。 預設值是 **300** 秒。  
   
  **-LoginTimeOut** *login_time_out_seconds*  
- 這是登入逾時之前的秒數。 **** 預設值為 15 秒。  
+ 這是登入逾時之前的秒數。  預設值為 15 秒。  
   
  **-MakeGenerationInterval** *make_generation_interval_seconds*  
  這是建立層代或變更批次之間等待的秒數，以便下載到用戶端。 預設值為 **1** 秒。  
@@ -286,7 +287,7 @@ replmerg [-?]
  這是代理程式輸出檔的路徑。 如果未提供檔案名稱，輸出將傳送至主控台。 如果指定的檔案名稱存在，輸出就會附加至該檔案。  
   
  **-OutputVerboseLevel** [**0**|**1**|**2**]  
- 指定輸出是否應該詳細。 ****如果詳細資訊層級為 0，系統就只會列印錯誤訊息。 如果詳細資訊層級為 **1**，系統就會列印所有進度報表訊息。 **** 如果詳細資訊層級為 2 (預設值)，系統就會列印所有錯誤訊息和進度報表訊息 (可用於偵錯)。  
+ 指定輸出是否應該詳細。 如果詳細資訊層級為 0，系統就只會列印錯誤訊息。 如果詳細資訊層級為 **1**，系統就會列印所有進度報表訊息。  如果詳細資訊層級為 2 (預設值)，系統就會列印所有錯誤訊息和進度報表訊息 (可用於偵錯)。  
   
  **-ParallelUploadDownload** [**0**|**1**]  
  指定合併代理程式是否應該以平行方式處理上傳至發行者的變更以及下載至訂閱者的變更，而且這個參數在具有高網路頻寬的高容量環境中很有用。 如果 **ParallelUploadDownload** 是 **1**，就會啟用平行處理。  

@@ -14,9 +14,10 @@ caps.latest.revision: 41
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 9f213219f9d9fd65af0fee8544f64e61fc1151a3
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -30,7 +31,7 @@ ms.lasthandoff: 04/11/2017
   
 ### <a name="start-the-sqlcmd-utility-and-connect-to-a-default-instance-of-sql-server"></a>啟動 sqlcmd 公用程式和連接 SQL Server 的預設執行個體  
   
-1.  在 [開始]**** 功能表上，按一下 [執行]****。 在 [開啟]**** 方塊中，輸入 **cmd**，然後按一下 [確定]**** 開啟 [命令提示字元] 視窗。 (如果您從未連接過此 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的執行個體，可能必須設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以接受連接。)  
+1.  在 [開始] 功能表上，按一下 [執行]。 在 [開啟] 方塊中，輸入 **cmd**，然後按一下 [確定] 開啟 [命令提示字元] 視窗。 (如果您從未連接過此 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的執行個體，可能必須設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以接受連接。)  
   
 2.  在命令提示字元下，輸入 **sqlcmd**。  
   

@@ -26,9 +26,10 @@ caps.latest.revision: 33
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: eeda8a1432ad975caaf74134ce598b0c70c16d29
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -42,7 +43,7 @@ ms.lasthandoff: 04/11/2017
  您可以將相同的 DAC 封裝部署到單一 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體多次，但是一次只能執行一個部署。 針對每個部署指定的 DAC 執行個體名稱在 [!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體中必須是唯一的。  
   
 ## <a name="managed-instances"></a>受管理的執行個體  
- 如果您將 DAC 部署至 Database Engine 的受管理執行個體，下次從執行個體將公用程式收集組傳送到公用程式控制點時，部署的 DAC 就會合併至 **SQL Server 公用程式**。 然後 DAC 會出現在 **** [公用程式總管] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **[部署的資料層應用程式]** 節點中，並在 **** 詳細資料頁面中報告。  
+ 如果您將 DAC 部署至 Database Engine 的受管理執行個體，下次從執行個體將公用程式收集組傳送到公用程式控制點時，部署的 DAC 就會合併至 **SQL Server 公用程式**。 然後 DAC 會出現在  [公用程式總管] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **[部署的資料層應用程式]** 節點中，並在  詳細資料頁面中報告。  
   
 ###  <a name="database-options-and-settings"></a>資料庫選項和設定  
  根據預設，部署期間建立的資料庫將會擁有 CREATE DATABASE 陳述式中的所有預設值，但是以下項目除外：  
@@ -67,7 +68,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 **[物件總管]**中，展開您要部署 DAC 之執行個體的節點。  
   
-2.  以滑鼠右鍵按一下 [資料庫]**** 節點，然後選取 [部署資料層應用程式…]****  
+2.  以滑鼠右鍵按一下 [資料庫] 節點，然後選取 [部署資料層應用程式…]****  
   
 3.  完成精靈對話方塊，然後按一下 [完成]。
 進一步了解下面的某些精靈頁面： 
@@ -105,7 +106,7 @@ ms.lasthandoff: 04/11/2017
   
  如果您變更資料庫名稱，則資料檔和記錄檔的名稱也會變更，以符合新的值。  
   
- 資料庫名稱也會當做 DAC 執行個體的名稱使用。 執行個體名稱會顯示在**物件總管**中 [資料層應用程式]**** 節點或是**公用程式總管**中 [部署的資料層應用程式]**** 節點底下的 DAC 節點上。  
+ 資料庫名稱也會當做 DAC 執行個體的名稱使用。 執行個體名稱會顯示在**物件總管**中 [資料層應用程式] 節點或是**公用程式總管**中 [部署的資料層應用程式] 節點底下的 DAC 節點上。  
   
  下列選項不適用於 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]，也不會在部署至 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 時顯示。  
   

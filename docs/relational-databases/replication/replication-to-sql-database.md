@@ -18,9 +18,10 @@ caps.latest.revision: 15
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 1beb8c0334078c7710568a40339daf05ed0b69e1
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -86,7 +87,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  在內部部署 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中建立異動複寫發行集。  
   
-2.  在內部部署 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上使用[新增訂閱精靈] **** 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式來建立發送訂閱至 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
+2.  在內部部署 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上使用[新增訂閱精靈]  或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式來建立發送訂閱至 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
   
 3.  初始資料集通常為由快照集代理程式建立，並由「散發代理程式」散發和套用的快照集。 The initial data set can also be supplied through a backup or other means, such as [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   

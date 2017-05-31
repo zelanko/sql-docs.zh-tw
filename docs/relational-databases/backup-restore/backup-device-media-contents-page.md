@@ -16,9 +16,10 @@ caps.latest.revision: 38
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 4bfa385cab6527c16e62e2e631b9ffa1b96e0d10
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -61,7 +62,7 @@ ms.lasthandoff: 04/11/2017
 |標頭|值|  
 |------------|------------|  
 |**名稱**|備份組的名稱。|  
-|**型別**|已備份的物件：資料庫、檔案或 \<空白>** (適用於交易記錄)。|  
+|**型別**|已備份的物件：資料庫、檔案或 \<空白> (適用於交易記錄)。|  
 |**元件**|執行的備份類型：完整、差異或交易記錄。|  
 |**Server**|執行備份作業之 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體的名稱。|  
 |**資料庫**|已備份資料庫的名稱。|  

@@ -16,14 +16,15 @@ caps.latest.revision: 29
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 75214423ace24eecad39a00465d9a4f08693f2b9
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="server-memory-change-event-class"></a>Server Memory Change 事件類別
-  當 **** 記憶體使用量增加或減少 1 MB 或最大伺服器記憶體的 5% (以較大者為主)，就會發生 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] memory usage has increased or decreased by either 1 megabyte (MB) or 5 percent of the maximum server memory, whichever is greater.  
+  當  記憶體使用量增加或減少 1 MB 或最大伺服器記憶體的 5% (以較大者為主)，就會發生 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] memory usage has increased or decreased by either 1 megabyte (MB) or 5 percent of the maximum server memory, whichever is greater.  
   
 ## <a name="server-memory-change-event-class-data-columns"></a>Server Memory Change 事件類別資料行  
   

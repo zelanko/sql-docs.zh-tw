@@ -16,9 +16,10 @@ caps.latest.revision: 15
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: cca409052d10cc153417c1bd984273e1cad4bb9a
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -40,10 +41,10 @@ ms.lasthandoff: 04/11/2017
  對等 (Peer) 端的資料庫，會同時作為發行集資料庫與訂閱資料庫。  
   
  **散發者的連接**  
- 用於連接到散發者的內容。 本機連接一律會使用執行代理程式之 Windows 帳戶的內容來進行。 此精靈會建立發送訂閱，本機連接會連接到散發者，所以此欄位一律會顯示：[模擬 '\<網域>\\<登入\>']**** 或是 [模擬 '\<電腦>\\<登入\>']****。  
+ 用於連接到散發者的內容。 本機連接一律會使用執行代理程式之 Windows 帳戶的內容來進行。 此精靈會建立發送訂閱，本機連接會連接到散發者，所以此欄位一律會顯示：[模擬 '\<網域>\\<登入\>'] 或是 [模擬 '\<電腦>\\<登入\>']。  
   
  **訂閱者的連接**  
- 與訂閱者進行連接的內容。 連接可以使用執行代理程式之 Windows 帳戶的內容，或使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入的內容來進行。 欄位會顯示下列內容之一：[使用者登入 '\<登入>']****、[模擬 '\<網域>\\<登入\>']**** 或 [模擬 '\<電腦>\\<登入\>']****。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 建議使用 Windows 帳戶的內容進行所有連接。  
+ 與訂閱者進行連接的內容。 連接可以使用執行代理程式之 Windows 帳戶的內容，或使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入的內容來進行。 欄位會顯示下列內容之一：[使用者登入 '\<登入>']、[模擬 '\<網域>\\<登入\>'] 或 [模擬 '\<電腦>\\<登入\>']。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 建議使用 Windows 帳戶的內容進行所有連接。  
   
 ## <a name="see-also"></a>另請參閱  
  [管理點對點拓撲 &#40;複寫 Transact-SQL 程式設計&#41;](../../relational-databases/replication/administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   

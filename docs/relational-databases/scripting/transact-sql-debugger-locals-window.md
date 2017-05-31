@@ -18,23 +18,24 @@ caps.latest.revision: 16
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 84668538d8c13c4317eec610afabcdf39d457899
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="transact-sql-debugger---locals-window"></a>Transact-SQL 偵錯工具 - 區域變數視窗
-  [區域變數]**** 視窗會顯示有關 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具目前範圍中之區域運算式的資訊。 此範圍會設定為 [呼叫堆疊]**** 視窗內選取的目前呼叫堆疊框架。 您必須在偵錯模式中，才能顯示本機運算式。  
+  [區域變數] 視窗會顯示有關 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具目前範圍中之區域運算式的資訊。 此範圍會設定為 [呼叫堆疊] 視窗內選取的目前呼叫堆疊框架。 您必須在偵錯模式中，才能顯示本機運算式。  
   
 ## <a name="task-list"></a>工作清單  
  **存取區域變數視窗**  
   
--   在 [偵錯]**** 功能表中，按一下 [視窗]****，然後按一下 [區域變數]****。  
+-   在 [偵錯] 功能表中，按一下 [視窗]，然後按一下 [區域變數]。  
   
  **變更運算式的值**  
   
--   以滑鼠右鍵按一下運算式，然後選取 [編輯值]****。  
+-   以滑鼠右鍵按一下運算式，然後選取 [編輯值]。  
   
 ## <a name="columns"></a>資料行  
  **名稱**  

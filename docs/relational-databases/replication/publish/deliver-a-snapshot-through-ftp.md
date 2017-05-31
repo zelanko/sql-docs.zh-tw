@@ -18,9 +18,10 @@ caps.latest.revision: 47
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 93f5c6bc367bf8e38a5683cb542a1345c7a275e5
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -61,11 +62,11 @@ ms.lasthandoff: 04/11/2017
  可能的話，會在執行階段提示使用者輸入其認證。 如果將認證儲存在指令碼檔案中，您必須維護此檔案的安全。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 設定 FTP 伺服器之後，請在 [發行集屬性 \<發行集>]**** 對話方塊中，指定此伺服器的目錄和安全性資訊。 如需有關存取這個對話方塊的詳細資訊，請參閱＜ [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)＞。  
+ 設定 FTP 伺服器之後，請在 [發行集屬性 \<發行集>] 對話方塊中，指定此伺服器的目錄和安全性資訊。 如需有關存取這個對話方塊的詳細資訊，請參閱＜ [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)＞。  
   
 #### <a name="to-specify-ftp-information"></a>若要指定 FTP 資訊  
   
-1.  從以下頁面之一的 [發行集屬性 - \<發行集>] **** 對話方塊中，選取 [允許訂閱者使用 FTP 下載快照集檔案]****：  
+1.  從以下頁面之一的 [發行集屬性 - \<發行集>]  對話方塊中，選取 [允許訂閱者使用 FTP 下載快照集檔案]：  
   
     -   **[FTP 快照集]** 頁面，適用於快照式和交易式發行集，以及執行 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]之前版本的「發行者」所用的合併式發行集。  
   
@@ -73,7 +74,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  指定 **[FTP 伺服器名稱]**、 **[通訊埠編號]**、 **[FTP 根資料夾的路徑]**、 **[登入]**以及 **[密碼]**的值。  
   
-     例如，如果 FTP 伺服器根目錄為 \\\ftpserver\home，而您想將快照集儲存在 \\\ftpserver\home\snapshots 中，請將 [FTP 根資料夾的路徑]**** 屬性指定為 \snapshots\ftp (複寫會在建立快照集檔案時，在快照集資料夾路徑後加上 'ftp')。  
+     例如，如果 FTP 伺服器根目錄為 \\\ftpserver\home，而您想將快照集儲存在 \\\ftpserver\home\snapshots 中，請將 [FTP 根資料夾的路徑] 屬性指定為 \snapshots\ftp (複寫會在建立快照集檔案時，在快照集資料夾路徑後加上 'ftp')。  
   
 3.  指定快照集代理程式應該將快照集檔案複製到步驟 2 中指定的目錄。 例如，若要讓快照集代理程式將快照集檔案寫入到 \\\ftpserver\home\snapshots\ftp 中，您必須在以下兩處位置的其中一處指定路徑 \\\ftpserver\home\snapshots：  
   
@@ -83,7 +84,7 @@ ms.lasthandoff: 04/11/2017
   
     -   此發行集的替代快照集資料夾位置。 如果壓縮快照集，則需要替代位置。  
   
-         在 [發行集屬性 - \<發行集>]**** 對話方塊 [快照集] 頁面上的 [將檔案放在下列資料夾中]**** 文字方塊中，輸入路徑。 如需替代快照集資料夾位置的詳細資訊，請參閱＜ [Alternate Snapshot Folder Locations](../../../relational-databases/replication/alternate-snapshot-folder-locations.md)＞。  
+         在 [發行集屬性 - \<發行集>] 對話方塊 [快照集] 頁面上的 [將檔案放在下列資料夾中] 文字方塊中，輸入路徑。 如需替代快照集資料夾位置的詳細資訊，請參閱＜ [Alternate Snapshot Folder Locations](../../../relational-databases/replication/alternate-snapshot-folder-locations.md)＞。  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   

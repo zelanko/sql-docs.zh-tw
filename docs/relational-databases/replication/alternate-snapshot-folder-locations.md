@@ -18,9 +18,10 @@ caps.latest.revision: 36
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: eac6520e46f252855d84dced89d9b79f5f8aed2b
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -32,7 +33,7 @@ ms.lasthandoff: 04/11/2017
  如果您要指定替代快照集的資料夾位置或是壓縮快照集檔，請立即建立發行集 (但不要立刻建立初始快照集)、設定快照集位置的發行集屬性，然後對此發行集執行「快照集代理程式」(Snapshot Agent)。 如果您在建立初始快照集後變更替代位置，則不會將發行集任何產生的快照集重新放置到新的替代位置。 在此狀況下，「合併代理程序」或「散發代理程序」可能無法在新的替代位置找到快照集檔案，這取決於此發行集的設定。  
   
 > [!NOTE]  
->  請勿使用 [發行集屬性]**** 對話方塊或 [sp_changepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) 指定與預設快照集資料夾位置相同的替代位置。  
+>  請勿使用 [發行集屬性] 對話方塊或 [sp_changepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) 指定與預設快照集資料夾位置相同的替代位置。  
   
 > [!CAUTION]  
 >  請勿同時使用 WebSync 和替代快照集資料夾位置。  
