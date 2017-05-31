@@ -17,9 +17,10 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 91bfefd9497254ed233e6fe5168b0eb060b0bee4
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -72,7 +73,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  按一下加號展開 **[SQL Server Agent]**。  
   
-3.  以滑鼠右鍵按一下 [作業]**** 資料夾，然後選取 [新增作業]****。  
+3.  以滑鼠右鍵按一下 [作業] 資料夾，然後選取 [新增作業]。  
   
 4.  在 **[新增作業]** 對話方塊的 **[一般]** 頁面中，修改作業的一般屬性。 如需有關此頁面可用之選項的詳細資訊，請參閱[作業屬性 - 新增作業 &#40;一般頁面&#41;](../../ssms/agent/job-properties-new-job-general-page.md)  
   

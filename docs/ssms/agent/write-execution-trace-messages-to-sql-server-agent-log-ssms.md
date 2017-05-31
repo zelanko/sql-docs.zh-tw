@@ -20,9 +20,10 @@ caps.latest.revision: 6
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 569d906147784f951d340c3773efb5a619040298
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -67,9 +68,9 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 **[物件總管]**中，按一下加號展開伺服器，此伺服器包含您要寫入執行追蹤訊息的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 錯誤記錄檔。  
   
-2.  以滑鼠右鍵按一下 [SQL Server Agent]****，然後選取 [屬性]****。  
+2.  以滑鼠右鍵按一下 [SQL Server Agent]，然後選取 [屬性]。  
   
-3.  在 [SQL Server Agent 屬性 - <伺服器名稱>]****** 對話方塊，於 [一般]**** 頁面上的 [錯誤記錄檔]**** 底下，選取 [包含執行追蹤訊息]**** 核取方塊。  
+3.  在 [SQL Server Agent 屬性 - <伺服器名稱>] 對話方塊，於 [一般] 頁面上的 [錯誤記錄檔] 底下，選取 [包含執行追蹤訊息] 核取方塊。  
   
 4.  按一下 **[確定]**。  
   

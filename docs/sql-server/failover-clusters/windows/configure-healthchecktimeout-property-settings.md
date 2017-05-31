@@ -14,9 +14,10 @@ caps.latest.revision: 31
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: fe45e057f3e8a9a4cd105cad16ef773c2aed0928
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -76,7 +77,7 @@ Get-ClusterResource $fci | Set-ClusterParameter HealthCheckTimeout 60000
   
 2.  展開 **[服務及應用程式]** 並選取 FCI。  
   
-3.  以滑鼠右鍵按一下 [其他資源]**** 下方的 [SQL Server 資源]****，並從滑鼠右鍵功能表中選取 [屬性]****。 SQL Server 資源的 **[屬性]** 對話方塊隨即開啟。  
+3.  以滑鼠右鍵按一下 [其他資源] 下方的 [SQL Server 資源]，並從滑鼠右鍵功能表中選取 [屬性]。 SQL Server 資源的 **[屬性]** 對話方塊隨即開啟。  
   
 4.  選取 **[屬性]** 索引標籤，輸入需要的 **[HealthCheckTimeout]** 屬性值，然後按一下 **[確定]** 套用變更。  
   

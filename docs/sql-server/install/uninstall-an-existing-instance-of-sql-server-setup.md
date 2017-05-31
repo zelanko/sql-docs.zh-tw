@@ -21,9 +21,10 @@ caps.latest.revision: 74
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 548949bad71213430b987383fd221a91bddcfdff
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -84,7 +85,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  若要開始解除安裝程序，請移至 **[控制台]** ，然後移至 **[程式和功能]**。  
   
-2.  以滑鼠右鍵按一下 [SQL Server 2016]****，然後選取 [解除安裝]****。 然後按一下 **[移除]**。 這樣就會啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝精靈。  
+2.  以滑鼠右鍵按一下 [SQL Server 2016]，然後選取 [解除安裝]。 然後按一下 **[移除]**。 這樣就會啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝精靈。  
   
      安裝程式支援規則將會執行，以便驗證您的電腦組態。 若要繼續進行，請按 **[下一步]**。  
   

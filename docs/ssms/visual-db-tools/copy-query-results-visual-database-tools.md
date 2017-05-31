@@ -16,20 +16,21 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 43a63ea7380ce4586d8a411c085c094aa953b1b2
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="copy-query-results-visual-database-tools"></a>複製查詢結果 (Visual Database Tools)
-您可以從 [結果]**** 窗格，將結果集複製成定位字元分隔的文字。 您可以複製整個結果集或任何數目的連續或非連續的資料列或資料格。  
+您可以從 [結果] 窗格，將結果集複製成定位字元分隔的文字。 您可以複製整個結果集或任何數目的連續或非連續的資料列或資料格。  
   
 ### <a name="to-copy-result-set-text-from-the-results-pane"></a>若要從 [結果] 窗格複製結果集文字  
   
 1.  執行含有您要複製之資料的查詢或檢視。  
   
-2.  若要選取整個結果集，請在 [結果]**** 窗格中按一下左上方空白的資料格。  
+2.  若要選取整個結果集，請在 [結果] 窗格中按一下左上方空白的資料格。  
   
 3.  若要選取資料列：  
   
@@ -51,7 +52,7 @@ ms.lasthandoff: 04/11/2017
   
     選取的資料格將會反白顯示。  
   
-5.  按一下滑鼠右鍵，再選擇 [複製]****。  
+5.  按一下滑鼠右鍵，再選擇 [複製]。  
   
 ## <a name="see-also"></a>另請參閱  
 [使用結果窗格中的資料 &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)  

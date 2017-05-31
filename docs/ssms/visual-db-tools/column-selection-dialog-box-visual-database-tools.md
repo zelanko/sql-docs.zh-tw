@@ -17,26 +17,27 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: ec9eb8b6cee6f16dc54f6d16a43d1f94f16a8e11
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="column-selection-dialog-box-visual-database-tools"></a>資料行選取對話方塊 (Visual Database Tools)
 讓您在資料庫圖表中變更資料表的 [自訂] 檢視。 [自訂] 檢視只會顯示使用者可識別的資料行屬性。  
   
-在資料表上按一下滑鼠右鍵，然後從快速鍵功能表選擇 [修改自訂檢視]****，便會出現此對話方塊。  
+在資料表上按一下滑鼠右鍵，然後從快速鍵功能表選擇 [修改自訂檢視]，便會出現此對話方塊。  
   
 ## <a name="options"></a>選項。  
 **可用的資料行**  
-列出存在於已選取資料庫資料表中的所有資料行。 此處所列的資料行相依於資料庫資料表屬性及資料庫類型。 反白顯示所要的資料行，並使用箭號按鈕將資料行移至 [選取的資料行]**** 方塊。  
+列出存在於已選取資料庫資料表中的所有資料行。 此處所列的資料行相依於資料庫資料表屬性及資料庫類型。 反白顯示所要的資料行，並使用箭號按鈕將資料行移至 [選取的資料行] 方塊。  
   
 **選取的資料行**  
 顯示目前為 [自訂] 檢視所定義的資料行屬性。 使用箭號按鈕將資料行屬性加入 [選取的資料行] 清單，或從該清單移除。  
   
 **箭號控制**  
-使用向上箭號與向下箭號按鈕，在 [選取的資料行]**** 清單中向上或向下移動反白顯示的資料行。  
+使用向上箭號與向下箭號按鈕，在 [選取的資料行] 清單中向上或向下移動反白顯示的資料行。  
   
 使用 > 和 >> 箭號，將一個或所有屬性加入自訂檢視。  
   

@@ -18,9 +18,10 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: f12c61a883c8a0c190a13e4b2ae35ff7188156ff
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -31,7 +32,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  在資料庫圖表中，選取要移除的資料表。  
   
-2.  以滑鼠右鍵按一下資料表，然後從快速鍵功能表選擇 [從圖表中移除資料表]****。  
+2.  以滑鼠右鍵按一下資料表，然後從快速鍵功能表選擇 [從圖表中移除資料表]。  
   
     -或-  
   

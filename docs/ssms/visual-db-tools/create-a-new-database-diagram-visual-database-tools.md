@@ -17,9 +17,10 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: f057c7af427ba69ff5b6253ae0d3c7e33ce435aa
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -28,13 +29,13 @@ ms.lasthandoff: 04/11/2017
   
 ### <a name="to-create-a-new-database-diagram"></a>若要建立新的資料庫圖表  
   
-1.  在物件總管中，在 [資料庫圖表]**** 資料夾上或該資料夾的任何圖表上按一下滑鼠右鍵。  
+1.  在物件總管中，在 [資料庫圖表] 資料夾上或該資料夾的任何圖表上按一下滑鼠右鍵。  
   
-2.  在快速鍵功能表上選擇 [新增資料庫圖表]****。  
+2.  在快速鍵功能表上選擇 [新增資料庫圖表]。  
   
-    出現 [新增資料表]**** 對話方塊。  
+    出現 [新增資料表] 對話方塊。  
   
-3.  在 [資料表]**** 清單中選取必要的資料表，按一下 [新增]****。  
+3.  在 [資料表] 清單中選取必要的資料表，按一下 [新增]。  
   
     資料表以圖形方式顯示於新資料庫圖表中。  
   

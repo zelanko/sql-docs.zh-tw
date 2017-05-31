@@ -17,9 +17,10 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: b9bb3d6b6f64dae6aa3fc79494fd85730b380daf
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -31,10 +32,10 @@ ms.lasthandoff: 04/11/2017
   
 ## <a name="options"></a>選項。  
 **警告受影響資料表**  
-指定下次儲存選取的資料表時是否出現此對話方塊。 依照預設，此方塊為核取。 如果您清除此選項，可以在 [選項]**** 對話方塊中重新選取。  
+指定下次儲存選取的資料表時是否出現此對話方塊。 依照預設，此方塊為核取。 如果您清除此選項，可以在 [選項] 對話方塊中重新選取。  
   
 **儲存為文字檔**  
-顯示 [另存新檔]**** 對話方塊，提示您輸入儲存列出資料表的文字檔的位置。 此檔案提供一份資料表清單，其中包含受您所做變更影響的資料表。  
+顯示 [另存新檔] 對話方塊，提示您輸入儲存列出資料表的文字檔的位置。 此檔案提供一份資料表清單，其中包含受您所做變更影響的資料表。  
   
 ## <a name="see-also"></a>另請參閱  
 [設計資料表 &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)  

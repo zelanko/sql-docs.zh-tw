@@ -17,9 +17,10 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: fa969625800cb179e37b13046e3823bf55fa7ade
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -33,7 +34,7 @@ ms.lasthandoff: 04/11/2017
     > [!NOTE]  
     > 只有圖表的擁有人或資料庫的 db_owner 角色成員能開啟圖表。  
   
-2.  以滑鼠右鍵按一下空白區域，再選擇 [複製圖表至剪貼簿]****。  
+2.  以滑鼠右鍵按一下空白區域，再選擇 [複製圖表至剪貼簿]。  
   
     整個資料庫圖表的影像現在已經在系統剪貼簿中。  
   

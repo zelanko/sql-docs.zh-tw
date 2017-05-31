@@ -20,14 +20,15 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 71ececab6e544fab1d3650ba8115b53a51e78b7b
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="f1-help-for-server-connections-sql-server-management-studio"></a>伺服器連接的 F1 說明 (SQL Server Management Studio)
-本節包含 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 中，[連接到伺服器]**** 對話方塊頁面的 F1 說明。  
+本節包含 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 中，[連接到伺服器] 對話方塊頁面的 F1 說明。  
   
 [瀏覽伺服器 &amp;#40;本機伺服器&amp;#41;](../../ssms/f1-help/browse-for-servers-local-servers.md)  
   

@@ -19,9 +19,10 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: a6da7992bd9767f4a5b05c307c85af694b074729
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -69,9 +70,9 @@ ms.lasthandoff: 04/11/2017
   
 2.  按一下加號展開 **[SQL Server Agent]**。  
   
-3.  以滑鼠右鍵按一下 [錯誤記錄檔]**** 資料夾，然後選取 [設定]****。  
+3.  以滑鼠右鍵按一下 [錯誤記錄檔] 資料夾，然後選取 [設定]。  
   
-4.  在 **[設定 SQL Server Agent 錯誤記錄檔]** 對話方塊的 **[錯誤記錄檔]** 方塊中，輸入錯誤記錄檔的新路徑與檔案名稱。 或者，按一下省略符號 **(...)** 開啟 [指定代理程式錯誤記錄檔的位置]**** 對話方塊。  
+4.  在 **[設定 SQL Server Agent 錯誤記錄檔]** 對話方塊的 **[錯誤記錄檔]** 方塊中，輸入錯誤記錄檔的新路徑與檔案名稱。 或者，按一下省略符號 **(...)** 開啟 [指定代理程式錯誤記錄檔的位置] 對話方塊。  
   
 5.  完成後，請按一下 **[確定]**。  
   

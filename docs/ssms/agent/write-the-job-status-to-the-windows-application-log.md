@@ -20,9 +20,10 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: a23a522ebf0c1d506cc55ef5923a583a19b64434
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -66,11 +67,11 @@ ms.lasthandoff: 04/11/2017
   
 4.  勾選 **[寫入 Windows 應用程式事件記錄檔]**，並選擇下列其中一項：  
   
-    -   按一下 [當作業成功時]****，在作業成功完成時記錄作業狀態。  
+    -   按一下 [當作業成功時]，在作業成功完成時記錄作業狀態。  
   
-    -   按一下 [當作業失敗時]****，在作業失敗時記錄作業狀態。  
+    -   按一下 [當作業失敗時]，在作業失敗時記錄作業狀態。  
   
-    -   按一下 [作業完成時]****，不論完成狀態為何，一律記錄作業狀態。  
+    -   按一下 [作業完成時]，不論完成狀態為何，一律記錄作業狀態。  
   
 ## <a name="SMO"></a>使用 SQL Server 管理物件  
 **若要將作業狀態寫入到 Windows 應用程式記錄**  

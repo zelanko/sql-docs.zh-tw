@@ -14,9 +14,10 @@ caps.latest.revision: 29
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 46e7f2aca995373d14ce0096a4dba4204cc69ece
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -76,7 +77,7 @@ Get-ClusterResource $fci | Set-ClusterParameter FailureConditionLevel 3
   
 2.  展開 **[服務及應用程式]** 並選取 FCI。  
   
-3.  以滑鼠右鍵按一下 [其他資源]**** 下方的 [SQL Server 資源]****，然後從功能表中選取 [屬性]****。 SQL Server 資源的 **[屬性]** 對話方塊隨即開啟。  
+3.  以滑鼠右鍵按一下 [其他資源] 下方的 [SQL Server 資源]，然後從功能表中選取 [屬性]。 SQL Server 資源的 **[屬性]** 對話方塊隨即開啟。  
   
 4.  選取 **[屬性]** 索引標籤，為 **[FaliureConditionLevel]** 屬性輸入所要的值，然後再按一下 **[確定]** 以套用變更。  
   

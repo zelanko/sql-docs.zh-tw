@@ -18,9 +18,10 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 1153704ae4f345436c05a37cae98a522ef991ba1
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -41,10 +42,10 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] 中，使用 [物件總管] 連接到 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion_md.md)] 的執行個體。  
   
-2.  在物件總管中，以滑鼠右鍵按一下伺服器名稱，然後按一下 [屬性]****。  
+2.  在物件總管中，以滑鼠右鍵按一下伺服器名稱，然後按一下 [屬性]。  
   
-3.  在 [安全性]**** 頁面的 [登入稽核]**** 底下，按一下所需的選項並關閉 [伺服器屬性]**** 頁面。  
+3.  在 [安全性] 頁面的 [登入稽核] 底下，按一下所需的選項並關閉 [伺服器屬性] 頁面。  
   
-4.  在物件總管中，以滑鼠右鍵按一下伺服器名稱，然後按一下 [重新啟動]****。  
+4.  在物件總管中，以滑鼠右鍵按一下伺服器名稱，然後按一下 [重新啟動]。  
   
 

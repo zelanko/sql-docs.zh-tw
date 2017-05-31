@@ -18,16 +18,17 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: fbf4122473bbe62865c57da73e661c74e8d9e035
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="sql-pane-visual-database-tools"></a>SQL 窗格 (Visual Database Tools)
 您可以使用 [SQL 窗格] 立您自己的 SQL 陳述式，也可以使用 [準則窗格] 和 [圖表窗格] 建立陳述式。在這個情況中，SQL 陳述式會在 [SQL 窗格] 中建立。 當您建置查詢時，[SQL 窗格] 會自動進行簡單的可讀性更新及重新格式化。  
   
-若要開啟 [SQL 窗格]，請先開啟查詢和檢視設計工具 (按一下 [資料庫]**** 功能表中的 [新增查詢]****，以在伺服器總管中選取資料庫物件)。 接著在 [查詢設計工具]**** 功能表中指向 [窗格]****按一下 [SQL]****。  
+若要開啟 [SQL 窗格]，請先開啟查詢和檢視設計工具 (按一下 [資料庫] 功能表中的 [新增查詢]，以在伺服器總管中選取資料庫物件)。 接著在 [查詢設計工具] 功能表中指向 [窗格]按一下 [SQL]。  
   
 您可以在 [SQL 窗格] 中：  
   

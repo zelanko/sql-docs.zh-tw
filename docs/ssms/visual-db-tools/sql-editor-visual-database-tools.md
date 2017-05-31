@@ -25,9 +25,10 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: dd01c244e33751b49c4bd811a879eedd500be957
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -42,7 +43,7 @@ SQL 編輯器提供許多實用的 SQL 文字編輯功能，包括：
   
 -   提供有用的編輯功能，包括剪下、複製、貼上和拖曳作業。  
   
--   變更編輯器的行為 (藉由選取 [工具]**** 功能表上的 [選項]****)，以修改虛擬空間、自動換行、行號，以及定位點大小。  
+-   變更編輯器的行為 (藉由選取 [工具] 功能表上的 [選項])，以修改虛擬空間、自動換行、行號，以及定位點大小。  
   
 -   協助管理偵錯時的中斷點。  
   

@@ -17,9 +17,10 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 84829e727653973598485a88c4a6806c75330c8b
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -28,9 +29,9 @@ ms.lasthandoff: 04/11/2017
   
 ### <a name="to-rename-a-query"></a>若要重新命名查詢  
   
-1.  從 [檢視]**** 功能表選擇 [方案總管]****。  
+1.  從 [檢視] 功能表選擇 [方案總管]。  
   
-2.  在方案總管中，在想要重新命名的查詢上按一下滑鼠右鍵，並在出現的快速鍵功能表上按一下 [重新命名]****。  
+2.  在方案總管中，在想要重新命名的查詢上按一下滑鼠右鍵，並在出現的快速鍵功能表上按一下 [重新命名]。  
   
 3.  為查詢輸入新名稱，然後按下 ENTER。  
   

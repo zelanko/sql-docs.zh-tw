@@ -23,9 +23,10 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: be4e79791bad00c268354d91dab4a301a79b5ef4
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -72,7 +73,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]的執行個體，然後展開該執行個體。  
   
-2.  以滑鼠右鍵按一下 [SQL Server Agent]****、指向 [多重伺服器管理]****，然後按一下 [設為目標伺服器]****。 **[目標伺服器精靈]** 將引導您執行將此伺服器設定為目標伺服器的程序。  
+2.  以滑鼠右鍵按一下 [SQL Server Agent]、指向 [多重伺服器管理]，然後按一下 [設為目標伺服器]。 **[目標伺服器精靈]** 將引導您執行將此伺服器設定為目標伺服器的程序。  
   
 3.  從 **[選取主要伺服器]** 頁面選取此目標伺服器將接收作業來源的主要伺服器。  
   

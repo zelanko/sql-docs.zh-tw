@@ -18,9 +18,10 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 960865a8bb263a2089dc51a75304e3e6e40b85bf
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -61,9 +62,9 @@ ms.lasthandoff: 04/11/2017
   
 2.  按一下加號展開 **[SQL Server Agent]**。  
   
-3.  以滑鼠右鍵按一下 [作業]**** 資料夾，然後選取 [管理作業類別目錄]****。  
+3.  以滑鼠右鍵按一下 [作業] 資料夾，然後選取 [管理作業類別目錄]。  
   
-4.  在 [管理作業類別目錄 <伺服器名稱>**]**** 對話方塊中，按一下 [新增]****。  
+4.  在 [管理作業類別目錄 <伺服器名稱>] 對話方塊中，按一下 [新增]。  
   
 5.  在新對話方塊的 **[名稱]** 方塊中，輸入新作業類別目錄的名稱。  
   
@@ -71,7 +72,7 @@ ms.lasthandoff: 04/11/2017
   
 7.  按一下 **[確定]**。  
   
-8.  在 [管理作業類別目錄 <伺服器名稱>**] ****對話方塊中，按一下 [重新整理]****，以確定新作業類別目錄為作用中。 如果一切如預期，關閉此對話方塊。  
+8.  在 [管理作業類別目錄 <伺服器名稱>] 對話方塊中，按一下 [重新整理]，以確定新作業類別目錄為作用中。 如果一切如預期，關閉此對話方塊。  
   
 如需這些對話方塊的詳細資訊，請參閱 [作業類別目錄 - 管理作業類別目錄](../../ssms/agent/job-categories-manage-job-categories.md) 和 [作業類別目錄屬性 - 新作業類別目錄](../../ssms/agent/job-categories-properties-new-job-category.md)。  
   
@@ -83,7 +84,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] ****。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
   
     ```  
     -- creates a local job category named AdminJobs   

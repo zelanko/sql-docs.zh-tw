@@ -19,9 +19,10 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: f5dd000cda03eaac79a198ba5103652db2bf892d
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -59,17 +60,17 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="to-designate-a-fail-safe-operator"></a>若要指定保全操作員  
   
-1.  在物件總管****中，按一下加號，展開包含要指定為保全操作員之 SQL Server Agent 操作員的伺服器。  
+1.  在物件總管中，按一下加號，展開包含要指定為保全操作員之 SQL Server Agent 操作員的伺服器。  
   
-2.  以滑鼠右鍵按一下 [SQL Server Agent]****，然後選取 [屬性]****。  
+2.  以滑鼠右鍵按一下 [SQL Server Agent]，然後選取 [屬性]。  
   
-3.  在 [SQL Server Agent 屬性 - <伺服器名稱>]****** 對話方塊的 [選取頁面]**** 底下，選取 [警示系統]****。  
+3.  在 [SQL Server Agent 屬性 - <伺服器名稱>] 對話方塊的 [選取頁面] 底下，選取 [警示系統]。  
   
-4.  在 [保全操作員]**** 下方，選取 [啟用保全操作員]****。  
+4.  在 [保全操作員] 下方，選取 [啟用保全操作員]。  
   
-5.  在 [操作員]**** 清單中，選取您想要設為保全操作員的操作員。  
+5.  在 [操作員] 清單中，選取您想要設為保全操作員的操作員。  
   
-6.  選取下列任何一個或所有核取方塊，指定通知操作員的方法：[電子郵件]****、[呼叫器]**** 或 [Net send]****。  
+6.  選取下列任何一個或所有核取方塊，指定通知操作員的方法：[電子郵件]、[呼叫器] 或 [Net send]。  
   
 7.  完成後，請按一下 **[確定]**。  
   
