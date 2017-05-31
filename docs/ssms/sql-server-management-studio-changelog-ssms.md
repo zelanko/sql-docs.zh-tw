@@ -14,9 +14,10 @@ caps.latest.revision: 72
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: f2144751277bb10897e0ed39ee24dbad8a32b4ce
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -39,7 +40,7 @@ ms.lasthandoff: 04/11/2017
 
 * 使用 Always Encrypted 進行加密時，未正確處理加密後來自重新整理模組的錯誤。
 
-* 「開啟最近使用的項目」**功能表未顯示最近儲存的檔案。 [Connect 識別碼 3113288](https://connect.microsoft.com/SQLServer/feedback/details/3113288/ssms-2016-open-recent-menu-doesnt-show-recently-saved-files)
+* 「開啟最近使用的項目」功能表未顯示最近儲存的檔案。 [Connect 識別碼 3113288](https://connect.microsoft.com/SQLServer/feedback/details/3113288/ssms-2016-open-recent-menu-doesnt-show-recently-saved-files)
 
 * SSMS 在以右鍵按一下資料表索引時 (透過遠端 (網際網路) 連線) 很緩慢。 [Connect 識別碼 3114074](https://connect.microsoft.com/SQLServer/feedback/details/3114074/ssms-slow-when-right-clicking-an-index-for-a-table-over-a-remote-internet-connection)
  
@@ -153,7 +154,7 @@ ms.lasthandoff: 04/11/2017
 
 * SSMS 的每月版本現在將以數值標註。
 
-* [新驗證選項：「Active Directory 通用驗證」****](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/)。 這個一個由 Azure Active Directory 驅動的權杖型驗證機制，支援多因素、密碼及整合式驗證機制。
+* [新驗證選項：「Active Directory 通用驗證」](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/)。 這個一個由 Azure Active Directory 驅動的權杖型驗證機制，支援多因素、密碼及整合式驗證機制。
 
 * 符合 SQL Server Profiler 範本的新擴充事件範本 [(Microsoft Connect 項目 #2543925)](https://connect.microsoft.com/SQLServer/feedback/details/2543925/sql-server-extended-events-profiler-tool)。 深入了解包含的 [SQL Server Profiler 範本](https://msdn.microsoft.com/library/ms190176.aspx)。
 
@@ -206,7 +207,7 @@ ms.lasthandoff: 04/11/2017
 ## <a name="ssms-july-2016-hotfix-update-release"></a>SSMS 2016 年 7 月 Hotfix 更新版本 
 正式推出 | 版本號碼：13.0.15600.2
 
-* 修正 SSMS 中的錯誤，以啟用遺失的右鍵功能表項目****。  
+* 修正 SSMS 中的錯誤，以啟用遺失的右鍵功能表項目。  
 *連結的客戶 Bug 要求：*  
 [Microsoft Connect 項目 #2883440](https://connect.microsoft.com/SQLServer/feedback/details/2883440/lost-table-design-and-edit-top-n-rows-in-tables-context-menu)  
 [Microsoft Connect 項目 #2909644](https://connect.microsoft.com/SQLServer/feedback/details/2909644/ssms-2016-is-missing-edit-options-against-sql-express-2014)  
@@ -216,15 +217,15 @@ ms.lasthandoff: 04/11/2017
 ## <a name="ssms-july-2016-release"></a>SSMS 2016 年 7 月版本 
 正式推出 | 版本號碼：13.0.15500.91
 
-* *編輯，7 月 5 日：*改進 SQL Server 2016 (1200 相容性層級) 表格式資料庫在 Analysis Services 處理對話方塊及 Analysis Services 部署精靈中的支援。****
+* *編輯，7 月 5 日：*改進 SQL Server 2016 (1200 相容性層級) 表格式資料庫在 Analysis Services 處理對話方塊及 Analysis Services 部署精靈中的支援。
 
-* *編輯，7 月 5 日：*在 SSMS [查詢執行選項] 對話方塊中新增設定 'XACT_ABORT' 的選項。****此選項在這一版 SSMS 中預設為啟用，它會指示 SQL Server 復原整個交易，並在發生執行階段錯誤時中止批次。
+* *編輯，7 月 5 日：*在 SSMS [查詢執行選項] 對話方塊中新增設定 'XACT_ABORT' 的選項。此選項在這一版 SSMS 中預設為啟用，它會指示 SQL Server 復原整個交易，並在發生執行階段錯誤時中止批次。
 
 * **在 SSMS 中支援 Azure SQL 資料倉儲。**
 
-* SQL Server PowerShell 模組的重大更新。****這包括新的 [SQL PowerShell 模組以及適用於永遠加密、SQL Agent 及 SQL 錯誤記錄檔的新 CMDLET](https://blogs.technet.microsoft.com/dataplatforminsider/2016/06/30/sql-powershell-july-2016-update)。
+* SQL Server PowerShell 模組的重大更新。這包括新的 [SQL PowerShell 模組以及適用於永遠加密、SQL Agent 及 SQL 錯誤記錄檔的新 CMDLET](https://blogs.technet.microsoft.com/dataplatforminsider/2016/06/30/sql-powershell-july-2016-update)。
 
-* 支援在永遠加密精靈中產生 PowerShell 指令碼****。
+* 支援在永遠加密精靈中產生 PowerShell 指令碼。
 
 * **大幅改善 Azure SQL 資料庫的連線時間。**
 
@@ -302,19 +303,19 @@ ms.lasthandoff: 04/11/2017
   
 * **對 SSMS 安裝程式的改進，以新增人工可讀取的錯誤訊息。**  
   
-* 針對 Stretch Database 精靈的改進，以新增述詞的支援****。  
+* 針對 Stretch Database 精靈的改進，以新增述詞的支援。  
   
-* 針對 AlwaysEncrypted PowerShell Commandlet 的改進，以加入金鑰加密 API****。  
+* 針對 AlwaysEncrypted PowerShell Commandlet 的改進，以加入金鑰加密 API。  
   
 * **Bug 修正，以在 IntelliSense 已於 [工具]、[選項] 對話方塊中關閉的情況下，於 SSMS 工具列中關閉 IntelliSense。**  
 *連結的客戶 Bug 要求：*  
 <https://connect.microsoft.com/SQLServer/feedback/details/2555163/sql-2016-rc2-turning-off-intellisense-from-options-does-not-turn-it-off-on-toolbar/>  
     
-* 針對執行程序表比較使用者介面的改進和錯誤修正，以減少長查詢計劃所使用的間距****。  
+* 針對執行程序表比較使用者介面的改進和錯誤修正，以減少長查詢計劃所使用的間距。  
   
-* 修正 SSMS 中的錯誤，以修正造成 SSMS 於結束時當機的問題****。   
+* 修正 SSMS 中的錯誤，以修正造成 SSMS 於結束時當機的問題。   
   
-* 修正永遠加密精靈中的錯誤，以在加密期間保留使用者權限，並在精靈完成後允許資料庫中斷連結作業****。  
+* 修正永遠加密精靈中的錯誤，以在加密期間保留使用者權限，並在精靈完成後允許資料庫中斷連結作業。  
   
 * **修正 Always Encrypted [新增資料行主要金鑰] 對話方塊中的 Bug，以在嘗試使用不支援的密碼編譯演算法 (CNG) 提供者產生金鑰時提供意見反應。**  
   
@@ -465,7 +466,7 @@ ms.lasthandoff: 04/11/2017
   *連結的客戶 Bug 要求：*  
   <https://connect.microsoft.com/SQLServer/feedback/details/1868474/ssms-2016-preview-can-be-installed-but-not-uninstalled>  
   
-* 錯誤修正，以允許在檔案遺漏時仍能編輯 SQL Job Agent 的作業步驟****。  
+* 錯誤修正，以允許在檔案遺漏時仍能編輯 SQL Job Agent 的作業步驟。  
   *連結的客戶 Bug 要求：*  
   <https://connect.microsoft.com/SQLServer/feedback/details/1769778/management-studio-2016-sql-job-agent>  
     <https://connect.microsoft.com/SQLServer/feedback/details/1502100/ssms-preview-error>  

@@ -16,16 +16,17 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: fbe2a44b573d05bbf4b9b1eed79595e3a771bcf4
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="job-step-properties---new-job-step-general-page"></a>作業步驟屬性 - 新增作業步驟 (一般頁面)
 使用此頁面來檢視和變更 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理程式作業步驟的屬性，或定義新的作業步驟。  
   
-若要導覽至此頁面，請在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 物件總管中，展開 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent，以滑鼠右鍵按一下 [作業]****，按一下 [新增作業]****，選取 [步驟]**** 頁面，然後按一下 [新增]****。 您也可用滑鼠右鍵按一下物件總管中的作業，按一下 [屬性]****、選取 [步驟]**** 頁面，然後按一下 [新增]****、[插入]**** 或 [編輯]****，以導覽至此頁面。  
+若要導覽至此頁面，請在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 物件總管中，展開 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent，以滑鼠右鍵按一下 [作業]，按一下 [新增作業]，選取 [步驟] 頁面，然後按一下 [新增]。 您也可用滑鼠右鍵按一下物件總管中的作業，按一下 [屬性]、選取 [步驟] 頁面，然後按一下 [新增]、[插入] 或 [編輯]，以導覽至此頁面。  
   
 ## <a name="options"></a>選項。  
 **步驟名稱**  
@@ -35,7 +36,7 @@ ms.lasthandoff: 04/11/2017
 設定作業步驟使用的子系統。 根據您選擇的子系統，會顯示定義作業步驟變更的選項。  
   
 **執行身分**  
-設定作業步驟的 Proxy 帳戶。 系統管理員 (sysadmin) 固定伺服器角色的成員也會指定 [SQL 代理程式服務帳戶]****。  
+設定作業步驟的 Proxy 帳戶。 系統管理員 (sysadmin) 固定伺服器角色的成員也會指定 [SQL 代理程式服務帳戶]。  
   
 **資料庫**  
 設定作業步驟執行所在的資料庫。 並非所有作業步驟類型都可使用這個選項。  
@@ -217,13 +218,13 @@ ms.lasthandoff: 04/11/2017
 -   **SSIS 封裝存放區**  
   
 **Server**  
-輸入儲存 [!INCLUDE[ssIS](../../includes/ssis_md.md)] 封裝的伺服器名稱。 唯有當 [套件來源]**** 指定 [SQL Server]**** 或 [SSIS 套件存放區]**** 時，才能使用此選項。  
+輸入儲存 [!INCLUDE[ssIS](../../includes/ssis_md.md)] 封裝的伺服器名稱。 唯有當 [套件來源] 指定 [SQL Server] 或 [SSIS 套件存放區] 時，才能使用此選項。  
   
 **使用 Windows 驗證**  
 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Windows 驗證登入 [!INCLUDE[msCoName](../../includes/msconame_md.md)] 。  
   
 **使用 SQL Server 驗證**  
-使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 驗證登入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 。 如果選取這種驗證方法，請輸入適當的 [使用者名稱]**** 和 [密碼]****。  
+使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 驗證登入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 。 如果選取這種驗證方法，請輸入適當的 [使用者名稱] 和 [密碼]。  
   
 > [!IMPORTANT]  
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 提供驗證的目的在提供回溯相容性。 為了提升安全性，如果可能的話請使用 Windows 驗證。  
@@ -232,7 +233,7 @@ ms.lasthandoff: 04/11/2017
 輸入封裝的位置。  
   
 > [!IMPORTANT]  
-> 對於受密碼保護的 [!INCLUDE[ssIS](../../includes/ssis_md.md)] 套件，按一下 [組態]**** 索引標籤，在 [套件密碼]**** 對話方塊中輸入密碼。 否則，執行受密碼保護之封裝的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 作業將會失敗。  
+> 對於受密碼保護的 [!INCLUDE[ssIS](../../includes/ssis_md.md)] 套件，按一下 [組態] 索引標籤，在 [套件密碼] 對話方塊中輸入密碼。 否則，執行受密碼保護之封裝的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 作業將會失敗。  
   
 ### <a name="configurations-tab"></a>組態索引標籤  
 指定 [!INCLUDE[ssIS](../../includes/ssis_md.md)] 封裝的組態選項。 當選取這個索引標籤時，可以使用下列選項。  
