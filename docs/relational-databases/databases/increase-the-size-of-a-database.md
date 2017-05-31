@@ -19,9 +19,10 @@ caps.latest.revision: 30
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 66895e3c9a74b60e570ccc6b451023da0d93da40
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -59,11 +60,11 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的執行個體，然後展開該執行個體。  
   
-2.  展開 [資料庫]****，以滑鼠右鍵按一下要增加的資料庫，然後按一下 [屬性]****。  
+2.  展開 [資料庫]，以滑鼠右鍵按一下要增加的資料庫，然後按一下 [屬性]。  
   
 3.  在 **[資料庫屬性]**中，選取 **[檔案]** 頁面。  
   
-4.  若要增加現有檔案的大小，請在 [初始大小 (MB)]**** 資料行中增加該檔案的值。 資料庫的大小至少必須增加 1MB。  
+4.  若要增加現有檔案的大小，請在 [初始大小 (MB)] 資料行中增加該檔案的值。 資料庫的大小至少必須增加 1MB。  
   
 5.  若要加入新檔案來增加資料庫的大小，請按一下 **[加入]** ，再輸入新檔案的值。 如需詳細資訊，請參閱 [Add Data or Log Files to a Database](../../relational-databases/databases/add-data-or-log-files-to-a-database.md)。  
   

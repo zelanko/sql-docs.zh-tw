@@ -16,9 +16,10 @@ caps.latest.revision: 10
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 54ada9bad44e2cd8410fe3a70fd022769febc960
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -38,7 +39,7 @@ INSERT INTO Person VALUES
    ,('P3','Joe',N'<SomeTag attr3="data" PersonID="P">content</SomeTag>');  
 ```  
   
- 此查詢從 `Person` 資料表擷取資料行。 對於 `Overflow` 資料行，並未指定 *AttributeName*，但「指示詞」**會將 `XMLTEXT` 設為提供通用資料表資料行名稱的一部分。  
+ 此查詢從 `Person` 資料表擷取資料行。 對於 `Overflow` 資料行，並未指定 *AttributeName*，但「指示詞」會將 `XMLTEXT` 設為提供通用資料表資料行名稱的一部分。  
   
 ```  
 SELECT 1 as Tag, NULL as parent,  

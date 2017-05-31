@@ -17,9 +17,10 @@ caps.latest.revision: 9
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: dc2ee0a2699bb9f1d2aad02e5777a208e842bef8
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -61,9 +62,9 @@ ms.lasthandoff: 04/11/2017
   
 4.  按一下加號展開 **[統計資料]** 資料夾。  
   
-5.  以滑鼠右鍵按一下要修改的統計資料物件，然後選取 [屬性]****。  
+5.  以滑鼠右鍵按一下要修改的統計資料物件，然後選取 [屬性]。  
   
-6.  在 [統計資料屬性 - *statistics_name*]**** 對話方塊的 [一般]**** 頁面上，按一下 [加入]****、[移除]****、[上移]****、[下移]**** 或任何組合，以改變統計資料的屬性。 請記住，資料行在 **[統計資料行]** 方格中的位置會大幅影響統計資料的效益。  
+6.  在 [統計資料屬性 - *statistics_name*] 對話方塊的 [一般] 頁面上，按一下 [加入]、[移除]、[上移]、[下移] 或任何組合，以改變統計資料的屬性。 請記住，資料行在 **[統計資料行]** 方格中的位置會大幅影響統計資料的效益。  
   
 7.  按一下 **[確定]**。  
   

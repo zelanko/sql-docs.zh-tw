@@ -19,9 +19,10 @@ caps.latest.revision: 22
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 242d7b946699560cf24c59a262e3a14a5c08b8d9
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -63,17 +64,17 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 **[物件總管]**中，按一下檢視表所在之資料庫旁邊的加號，然後按一下 **[檢視表]** 資料夾旁邊的加號。  
   
-2.  以滑鼠右鍵按一下您要修改的檢視，然後選取 [設計]****。  
+2.  以滑鼠右鍵按一下您要修改的檢視，然後選取 [設計]。  
   
 3.  在查詢設計工具的圖表窗格中，以下列一個或多個方式變更檢視：  
   
     1.  對於您要加入或移除的任何元素，選取或清除核取方塊。  
   
-    2.  以滑鼠右鍵按一下圖表窗格，並選取 [加入資料表]****，然後從 [加入資料表]**** 對話方塊選取要加入檢視中的其他資料行。  
+    2.  以滑鼠右鍵按一下圖表窗格，並選取 [加入資料表]，然後從 [加入資料表] 對話方塊選取要加入檢視中的其他資料行。  
   
-    3.  以滑鼠右鍵按一下您要移除之資料表的標題列，然後選取 [移除]****。  
+    3.  以滑鼠右鍵按一下您要移除之資料表的標題列，然後選取 [移除]。  
   
-4.  在 [檔案] **** 功能表上，按一下 [儲存] *****view name*。  
+4.  在 [檔案]  功能表上，按一下 [儲存] *view name*。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

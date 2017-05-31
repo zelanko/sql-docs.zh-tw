@@ -19,9 +19,10 @@ caps.latest.revision: 12
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 2e74236a254493b554c34b5f7c729e8cb91868a0
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -46,11 +47,11 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 [物件總管] 中，遞迴地向下展開 **[管理]** 節點至 **[資源管理員]**。  
   
-2.  以滑鼠右鍵按一下 [Resource Governor]****，然後按一下 [屬性]****，這會開啟 [Resource Governor 屬性]**** 頁面。  
+2.  以滑鼠右鍵按一下 [Resource Governor]，然後按一下 [屬性]，這會開啟 [Resource Governor 屬性] 頁面。  
   
 3.  在 **[資源集區]** 視窗中，按一下包含要移動之工作負載群組的資源集區。 **[工作負載群組]** 視窗現在會列出該資源集區中的工作負載群組。  
   
-4.  在 [工作負載群組]**** 視窗中，以滑鼠右鍵按一下要移動之工作負載群組左側的向右箭頭，然後按一下 [移至]****。 這會顯示 **[移動工作負載群組]** 視窗。  
+4.  在 [工作負載群組] 視窗中，以滑鼠右鍵按一下要移動之工作負載群組左側的向右箭頭，然後按一下 [移至]。 這會顯示 **[移動工作負載群組]** 視窗。  
   
 5.  可用的資源集區會顯示在此視窗中。 按一下您想要將工作負載群組移到其中的資源集區名稱，然後按一下 **[確定]** 執行此動作。  
   

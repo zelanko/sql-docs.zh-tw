@@ -29,9 +29,10 @@ caps.latest.revision: 20
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 6a68d0e0a9347331c31b6e4d09b1ec7e9856742a
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -61,11 +62,11 @@ ms.lasthandoff: 04/11/2017
   
 1.  連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體 (不論是內部部署或在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]中)。  
   
-2.  在物件總管**** 中，展開您要匯出 DAC 的執行個體來源節點。  
+2.  在物件總管 中，展開您要匯出 DAC 的執行個體來源節點。  
   
 3.  以滑鼠右鍵按一下資料庫名稱。  
   
-4.  按一下 [工作]****，然後選取 [匯出資料層應用程式]****。  
+4.  按一下 [工作]，然後選取 [匯出資料層應用程式]。  
   
 5.  完成精靈對話方塊：  
   
@@ -88,7 +89,7 @@ ms.lasthandoff: 04/11/2017
   
  **不要再顯示此頁面。** - 按一下此核取方塊，之後就不會再顯示 [簡介] 頁面。  
   
- **下一步** - 繼續進行 [Select DAC Package (選取 DAC 封裝)]**** 頁面。  
+ **下一步** - 繼續進行 [Select DAC Package (選取 DAC 封裝)] 頁面。  
   
  **取消** - 取消作業並關閉精靈。  
   
@@ -99,15 +100,15 @@ ms.lasthandoff: 04/11/2017
   
 -   **儲存至 Windows Azure** - 在 Windows Azure 容器中建立 BACPAC 檔案。 您必須連接到 Windows Azure 容器，才能驗證此選項。 請注意，此選項也會要求您指定暫存檔的本機目錄。 請注意，暫存檔將建立在指定的位置，而且作業完成之後，將保留在該位置。  
   
- 若要指定要匯出的資料表子集，請使用 [進階]**** 選項。  
+ 若要指定要匯出的資料表子集，請使用 [進階] 選項。  
   
 ##  <a name="Validation"></a> 驗證頁面  
- 您可以使用 [驗證] 頁面來檢閱封鎖作業的任何問題。 若要繼續進行，請解決封鎖問題，然後按一下 [重新執行驗證]**** 確定驗證成功。  
+ 您可以使用 [驗證] 頁面來檢閱封鎖作業的任何問題。 若要繼續進行，請解決封鎖問題，然後按一下 [重新執行驗證] 確定驗證成功。  
   
  若要繼續進行，請按 **[下一步]**。  
   
 ##  <a name="Summary"></a> 摘要頁面  
- 您可以使用此頁面來檢閱作業的指定來源和目標設定。 若要使用指定的設定來完成匯出作業，請按一下 [完成]****。 若要取消匯出作業並結束精靈，請按一下 [取消]****。  
+ 您可以使用此頁面來檢閱作業的指定來源和目標設定。 若要使用指定的設定來完成匯出作業，請按一下 [完成]。 若要取消匯出作業並結束精靈，請按一下 [取消]。  
   
 ##  <a name="Progress"></a> 進度頁面  
  此頁面會顯示進度列，指出作業的狀態。 若要檢視詳細狀態，請按一下 **[檢視詳細資料]** 選項。  

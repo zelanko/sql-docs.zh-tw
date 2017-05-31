@@ -16,9 +16,10 @@ caps.latest.revision: 6
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a8bd8881f2c7ed11141091e117cefa037818f7ea
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -54,9 +55,9 @@ ms.lasthandoff: 04/11/2017
   
 4.  按一下加號展開 **[原則]** 資料夾。  
   
-5.  以滑鼠右鍵按一下您想要評估其排程的原則，然後選取 [屬性]****。  
+5.  以滑鼠右鍵按一下您想要評估其排程的原則，然後選取 [屬性]。  
   
-6.  在 [開啟原則 - *原則名稱*]**** 對話方塊的 [評估模式]**** 清單中，選取 [按排程時間]****。  
+6.  在 [開啟原則 - *原則名稱*] 對話方塊的 [評估模式] 清單中，選取 [按排程時間]。  
   
 7.  在 **[排程]**底下，按一下 **[挑選]** 指定現有的排程，或按一下 **[新增]** 建立新的排程。  
   

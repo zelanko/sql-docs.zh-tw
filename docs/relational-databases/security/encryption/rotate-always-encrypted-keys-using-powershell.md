@@ -14,9 +14,10 @@ caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7ffa9047c43a263ceae52550b65d3d147a8c9928
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -51,7 +52,7 @@ ms.lasthandoff: 04/11/2017
 |步驟 10： 從舊資料行主要金鑰移除中繼資料。 |[Remove-SqlColumnMasterKey](https://msdn.microsoft.com/library/mt759800.aspx)| 否 | 是
 
 > [!NOTE]
-> 強烈建議您不要在輪替之後永久刪除舊的資料行主要金鑰。 而是應該將舊的資料行主要金鑰保留在其目前金鑰存放區中，或將它封存在另一個安全的地方。 如果您將資料庫從備份檔案還原到設定新資料行主要金鑰之前 ** 的某個時間點，則需要舊的金鑰才能存取資料。
+> 強烈建議您不要在輪替之後永久刪除舊的資料行主要金鑰。 而是應該將舊的資料行主要金鑰保留在其目前金鑰存放區中，或將它封存在另一個安全的地方。 如果您將資料庫從備份檔案還原到設定新資料行主要金鑰之前  的某個時間點，則需要舊的金鑰才能存取資料。
 
 ### <a name="rotating-a-column-master-key-without-role-separation-windows-certificate-example"></a>輪替資料行主要金鑰，而不進行角色分離 (Windows 憑證範例)
 
@@ -97,7 +98,7 @@ Remove-SqlColumnMasterKey -Name $oldCmkName -InputObject $database
 本節所描述的資料行主要金鑰輪替工作流程，能確保安全性系統管理員與資料庫管理員之間的分離。
 
 > [!IMPORTANT]
-> 執行下表中「存取純文字金鑰/金鑰存放區」**=「是」****的任何步驟 (存取純文字金鑰或金鑰存放區的步驟) 之前，請確定 PowerShell 環境是在不同於裝載資料庫之電腦的安全電腦上執行。 如需詳細資訊，請參閱[金鑰管理的安全性考量](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md#SecurityForKeyManagement)。
+> 執行下表中「存取純文字金鑰/金鑰存放區」=「是」的任何步驟 (存取純文字金鑰或金鑰存放區的步驟) 之前，請確定 PowerShell 環境是在不同於裝載資料庫之電腦的安全電腦上執行。 如需詳細資訊，請參閱[金鑰管理的安全性考量](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md#SecurityForKeyManagement)。
 
 
 ### <a name="part-1-dba"></a>第 1 部分︰DBA
@@ -129,7 +130,7 @@ DBA 擷取有關要輪替之資料行主要金鑰的中繼資料，以及受影�
 |步驟 8： 將新資料行主要金鑰 (資料行主要金鑰的提供者名稱與金鑰路徑) 的位置，以及資料行加密金鑰的新加密值設定提供給您的 DBA。| 請參閱以下的範例。 | 否 | 否
 
 > [!NOTE]
-> 強烈建議您不要在輪替之後永久刪除舊的資料行主要金鑰。 而是應該將舊的資料行主要金鑰保留在其目前金鑰存放區中，或將它封存在另一個安全的地方。 如果您將資料庫從備份檔案還原到設定新資料行主要金鑰之前 ** 的某個時間點，則需要舊的金鑰才能存取資料。
+> 強烈建議您不要在輪替之後永久刪除舊的資料行主要金鑰。 而是應該將舊的資料行主要金鑰保留在其目前金鑰存放區中，或將它封存在另一個安全的地方。 如果您將資料庫從備份檔案還原到設定新資料行主要金鑰之前  的某個時間點，則需要舊的金鑰才能存取資料。
 
 
 ### <a name="part-3-dba"></a>第 3 部分︰DBA

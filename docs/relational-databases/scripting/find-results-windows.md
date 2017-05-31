@@ -20,9 +20,10 @@ caps.latest.revision: 17
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 52589dedfb673f299f63d12c2381be04019a78bb
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -46,7 +47,7 @@ ms.lasthandoff: 04/11/2017
  移至下一個相符項目的行。  
   
  **全部清除**  
- 移除 [結果]**** 清單中的所有相符項目。  
+ 移除 [結果] 清單中的所有相符項目。  
   
 ## <a name="shortcut-keys"></a>快速鍵  
  下列快速鍵可用來協助您快速導覽所有找到的相符項目。  

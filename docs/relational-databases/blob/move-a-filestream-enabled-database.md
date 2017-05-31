@@ -16,9 +16,10 @@ caps.latest.revision: 11
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7af3800a6e604289944a340cee7f469654c495e2
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -30,9 +31,9 @@ ms.lasthandoff: 04/11/2017
   
 ### <a name="to-move-a-filestream-enabled-database"></a>移動已啟用 FILESTREAM 功能的資料庫  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，按一下 [新增查詢]**** 開啟 [查詢編輯器]。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，按一下 [新增查詢] 開啟 [查詢編輯器]。  
   
-2.  將下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼複製到 [查詢編輯器]，然後按一下 [執行]****。 此指令碼會顯示 FILESTREAM 資料庫使用之實體資料庫檔案的位置。  
+2.  將下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼複製到 [查詢編輯器]，然後按一下 [執行]。 此指令碼會顯示 FILESTREAM 資料庫使用之實體資料庫檔案的位置。  
   
     ```tsql  
     USE Archive  
@@ -40,7 +41,7 @@ ms.lasthandoff: 04/11/2017
     SELECT type_desc, name, physical_name from sys.database_files  
     ```  
   
-3.  將下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼複製到 [查詢編輯器]，然後按一下 [執行]****。 此程式碼會讓 `Archive` 資料庫離線。  
+3.  將下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼複製到 [查詢編輯器]，然後按一下 [執行]。 此程式碼會讓 `Archive` 資料庫離線。  
   
     ```tsql  
     USE master  
@@ -50,7 +51,7 @@ ms.lasthandoff: 04/11/2017
   
 4.  建立 `C:\moved_location` 資料夾，然後將步驟 2 所列的檔案和資料夾移到這個資料夾中。  
   
-5.  將下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼複製到 [查詢編輯器]，然後按一下 [執行]****。 此指令碼會將 `Archive` 資料庫設定為線上。  
+5.  將下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼複製到 [查詢編輯器]，然後按一下 [執行]。 此指令碼會將 `Archive` 資料庫設定為線上。  
   
     ```tsql  
     CREATE DATABASE Archive ON  

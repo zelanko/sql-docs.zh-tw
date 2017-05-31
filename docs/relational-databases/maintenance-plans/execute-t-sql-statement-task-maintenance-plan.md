@@ -18,14 +18,15 @@ caps.latest.revision: 18
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: cc4fe80e02dfde259794807f700cee0e73dcd43f
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="execute-t-sql-statement-task-maintenance-plan"></a>執行 T-SQL 陳述式工作 (維護計畫)
-  使用 [執行 T-SQL 陳述式工作]**** 對話方塊，即可將您選擇的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式加入此維護計畫，來自訂維護計畫。  
+  使用 [執行 T-SQL 陳述式工作] 對話方塊，即可將您選擇的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式加入此維護計畫，來自訂維護計畫。  
   
 ## <a name="options"></a>選項。  
  **連接**  

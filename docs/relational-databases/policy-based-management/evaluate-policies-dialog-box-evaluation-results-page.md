@@ -16,9 +16,10 @@ caps.latest.revision: 16
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3801000fb37d133ca0bf7c5197c939188e4e59a4
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -39,7 +40,7 @@ ms.lasthandoff: 04/11/2017
  評估原則所針對的目標。  
   
  **目標詳細資料: 詳細資料**  
- [結果詳細檢視]**** 對話方塊的連結，其中會顯示原則評估的詳細資料。  
+ [結果詳細檢視] 對話方塊的連結，其中會顯示原則評估的詳細資料。  
   
  **目標詳細資料: 訊息**  
  發生錯誤時的資訊連結。  
