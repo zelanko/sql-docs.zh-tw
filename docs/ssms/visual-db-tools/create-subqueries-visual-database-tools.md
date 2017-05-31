@@ -18,9 +18,10 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 2eb9fd6d0a542c4b9636edb1b65b146b0c043e2d
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -33,9 +34,9 @@ ms.lasthandoff: 04/11/2017
   
 1.  建立主查詢。  
   
-2.  在 [SQL] 窗格中選取 SQL 陳述式，然後使用 [複製]**** 將查詢移至 [剪貼簿]。  
+2.  在 [SQL] 窗格中選取 SQL 陳述式，然後使用 [複製] 將查詢移至 [剪貼簿]。  
   
-3.  起始新的查詢，然後使用 [貼上]**** 將第一個查詢移至新查詢的 WHERE 或 FROM 子句。  
+3.  起始新的查詢，然後使用 [貼上] 將第一個查詢移至新查詢的 WHERE 或 FROM 子句。  
   
     例如，假設您有兩個資料表 `products` 和 `suppliers`，並且想建立顯示 Sweden 供應商的所有產品的查詢。 請先在 `suppliers` 資料表建立第一個查詢，以找出所有的 Swedish 供應商：  
   

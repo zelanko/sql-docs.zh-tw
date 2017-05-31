@@ -19,9 +19,10 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: e64df57000934aca3d532b34a46c799e4a74e542
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -34,11 +35,11 @@ ms.lasthandoff: 04/11/2017
   
 1.  選取要列印的資料行或資料列。  
   
-2.  使用 [複製]**** 命令將它們移至剪貼簿。  
+2.  使用 [複製] 命令將它們移至剪貼簿。  
   
 3.  切換控制至列印結果用的 Windows 程式。  
   
-4.  使用 [貼上]**** 命令將查詢結果移出剪貼簿。  
+4.  使用 [貼上] 命令將查詢結果移出剪貼簿。  
   
 5.  格式化並列印出結果。  
   

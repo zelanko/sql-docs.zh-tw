@@ -21,9 +21,10 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: a747402098366d0bbe387b76938fc5fbde8ed87a
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -67,9 +68,9 @@ ms.lasthandoff: 04/11/2017
   
 3.  按一下加號展開 **[操作員]** 資料夾。  
   
-4.  以滑鼠右鍵按一下您要檢視的操作員，然後選取 [屬性]****。  
+4.  以滑鼠右鍵按一下您要檢視的操作員，然後選取 [屬性]。  
   
-    如需 [<操作員名稱> 屬性]****** 對話方塊中之可用選項的詳細資訊，請參閱：  
+    如需 [<操作員名稱> 屬性] 對話方塊中之可用選項的詳細資訊，請參閱：  
   
     -   [操作員屬性 - 新增操作員 &amp;#40;一般頁面&amp;#41;](../../ssms/agent/operator-properties-new-operator-general-page.md)  
   

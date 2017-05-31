@@ -19,9 +19,10 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: ecf6dd4edb70904d902f11940da42dc33765708f
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -32,18 +33,18 @@ ms.lasthandoff: 04/11/2017
   
 ### <a name="open-a-new-table"></a>開啟新的資料表  
   
-1.  在物件總管中，以滑鼠右鍵按一下資料庫的 [資料表] 節點，再按一下 [新增資料表]****。  
+1.  在物件總管中，以滑鼠右鍵按一下資料庫的 [資料表] 節點，再按一下 [新增資料表]。  
   
-    [資料表設計工具]**** 功能表會新增至主功能表中，而且會開啟設計工具窗格。  
+    [資料表設計工具] 功能表會新增至主功能表中，而且會開啟設計工具窗格。  
   
 > [!NOTE]  
 > 如果您連接到 SQL Azure 資料庫，新的資料表選項將會啟動建立資料表範本指令碼。 請編輯參數，然後執行指令碼來建立新的資料表。 如需詳細資訊，請參閱＜ [SQL Azure 概觀](http://go.microsoft.com/fwlink/?LinkId=163948)＞。  
   
 ### <a name="open-an-existing-table"></a>開啟現有的資料表  
   
-1.  在物件總管中，以滑鼠右鍵按一下資料庫的 [資料表] 節點底下的資料表，再按一下 [修改]****。  
+1.  在物件總管中，以滑鼠右鍵按一下資料庫的 [資料表] 節點底下的資料表，再按一下 [修改]。  
   
-    [資料表設計工具]**** 功能表會新增至主功能表中，而且會在設計工具窗格中開啟資料表。  
+    [資料表設計工具] 功能表會新增至主功能表中，而且會在設計工具窗格中開啟資料表。  
   
 ## <a name="see-also"></a>另請參閱  
 [設計資料表 &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)  

@@ -21,9 +21,10 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 0ba11f05536a52023c382e040738b8d9f9a4a215
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -46,7 +47,7 @@ ms.lasthandoff: 04/11/2017
     > [!NOTE]  
     > 如果所貼上的一或多個資料列無法為資料庫認可，您將會收到通知哪些資料列不被認可的訊息。  
   
-3.  輸入新資料列的資料。 若要貼上，請從 [編輯]**** 功能表選擇 [貼上]****。  
+3.  輸入新資料列的資料。 若要貼上，請從 [編輯] 功能表選擇 [貼上]。  
   
 4.  離開該資料列，讓資料庫對其進行認可。  
   

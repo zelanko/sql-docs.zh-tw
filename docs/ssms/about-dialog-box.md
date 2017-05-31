@@ -17,14 +17,15 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 75ae5975ecd2aa61f7887921fd5942b2c6693b0e
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="about-dialog-box"></a>關於對話方塊
-[關於]**** 對話方塊提供產品資訊，並可讓您存取產品所在之機器的相關資訊。 若為評估版，[!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] 項目會列出安裝到期前的剩餘天數。 您可以從 [說明]**** 功能表存取此對話方塊。  
+[關於] 對話方塊提供產品資訊，並可讓您存取產品所在之機器的相關資訊。 若為評估版，[!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] 項目會列出安裝到期前的剩餘天數。 您可以從 [說明] 功能表存取此對話方塊。  
   
 ## <a name="options"></a>選項。  
 **元件名稱**  

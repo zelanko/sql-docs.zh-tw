@@ -24,9 +24,10 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 96cd179445fcab211321ccf4e89f6fbce5792230
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -79,7 +80,7 @@ ms.lasthandoff: 04/11/2017
   
 -   **引號**：不要用引號括住數字。  
   
--   **非數字字元**：除了小數分隔符號 (在 Windows [控制台] 的 [地區設定]**** 對話方塊中所定義) 和負號 (-) 以外，不要包含非數字字元。 不要包含數字分位符號 (例如千位用逗號分開) 或貨幣符號。  
+-   **非數字字元**：除了小數分隔符號 (在 Windows [控制台] 的 [地區設定] 對話方塊中所定義) 和負號 (-) 以外，不要包含非數字字元。 不要包含數字分位符號 (例如千位用逗號分開) 或貨幣符號。  
   
 -   **小數符號** ：如果是輸入整數，可以包含小數符號，不論您搜尋的值是整數或實數。  
   
@@ -97,7 +98,7 @@ ms.lasthandoff: 04/11/2017
   
 [查詢和檢視設計師] 可以使用下列的日期格式：  
   
--   **地區設定特性** (Locale-Specific)：在 [Windows 區域設定內容]**** 對話方塊中指定的日期格式。  
+-   **地區設定特性** (Locale-Specific)：在 [Windows 區域設定內容] 對話方塊中指定的日期格式。  
   
 -   **資料庫特性**：資料庫能夠辨識的任何格式。  
   

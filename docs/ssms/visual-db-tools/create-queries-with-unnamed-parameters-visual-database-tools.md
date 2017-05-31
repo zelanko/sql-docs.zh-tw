@@ -17,9 +17,10 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: cf0454412324ef88c645854dab9563eeee531b64
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -32,7 +33,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 [[準則窗格]](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)中，新增您要搜尋的資料行或運算式。 如果不想讓搜尋資料行或運算式出現在查詢輸出中，請將它們從輸出資料行移除。  
   
-2.  尋找內含您要搜尋之資料行或運算式的資料列，然後在 [篩選]**** 格線欄中輸入問號 (?)。  
+2.  尋找內含您要搜尋之資料行或運算式的資料列，然後在 [篩選] 格線欄中輸入問號 (?)。  
   
     依照預設，查詢和檢視設計工具會加入 "=" 運算子。 不過，您可以編輯資料格，以替代 ">"、"<" 或其他 SQL 比較運算子。  
   

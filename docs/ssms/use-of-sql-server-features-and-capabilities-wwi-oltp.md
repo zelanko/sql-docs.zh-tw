@@ -17,14 +17,15 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 514b5f4e9e5df63f745e7f2e6a9465cddd6c4628
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="arguments-for-external-tools"></a>外部工具的引數
-引數是 Studio 環境提供的變數，適用於從 [工具]**** 功能表中啟動外部工具之時。 您可以使用 [外部工具]**** 對話方塊，將 [記事本] 之類的外部工具加入 [工具]**** 功能表中。  
+引數是 Studio 環境提供的變數，適用於從 [工具] 功能表中啟動外部工具之時。 您可以使用 [外部工具] 對話方塊，將 [記事本] 之類的外部工具加入 [工具] 功能表中。  
   
 下表列出外部工具的引數。  
   

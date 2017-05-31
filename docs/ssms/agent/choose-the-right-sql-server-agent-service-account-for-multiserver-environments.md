@@ -17,9 +17,10 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 86d85a50ab48b48c25610def1d2d1816a5856255
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -34,7 +35,7 @@ ms.lasthandoff: 04/11/2017
   
 -   如果以本機系統帳戶執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 服務，則只有在主要伺服器和目標伺服器都位在相同電腦上時，才支援「主要伺服器-目標伺服器」作業。 如果您使用這個組態，則將目標伺服器編列至主要伺服器時，會傳回下列訊息：  
   
-    「請確定 <目標伺服器電腦名稱>** 的代理程式啟動帳戶有權限以 targetServer 的身分登入」。  
+    「請確定 <目標伺服器電腦名稱> 的代理程式啟動帳戶有權限以 targetServer 的身分登入」。  
   
     您可以忽略此參考訊息。 編列作業應該順利完成。  
   

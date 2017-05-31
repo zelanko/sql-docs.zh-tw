@@ -17,14 +17,15 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 8af8c347e4225f1beb4cef6f4b515568115146f1
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="options-dialog-boxes-f1-help"></a>選項對話方塊 F1 說明
-此章節包含在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 中按一下 [工具]**** 功能表上的 [選項]**** 時，可用之對話方塊的 F1 說明。  
+此章節包含在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 中按一下 [工具] 功能表上的 [選項] 時，可用之對話方塊的 F1 說明。  
   
 [選項 &amp;#40;設計工具 - Analysis Services 設計工具 - 一般&amp;#41;](../../ssms/menu-help/options-designers-analysis-services-designers-general.md)  
   

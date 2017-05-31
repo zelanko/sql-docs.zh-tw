@@ -17,9 +17,10 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: f2492d66f5a9c5ae025e0b861702f8c668c9f023
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -30,7 +31,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 [方案總管] 中選取專案。  
   
-2.  若 [屬性] 視窗未開啟，可在 [檢視]**** 功能表上，按一下 [屬性視窗]****。  
+2.  若 [屬性] 視窗未開啟，可在 [檢視] 功能表上，按一下 [屬性視窗]。  
   
 3.  在 [屬性] 視窗中，檢視專案的屬性。  
   

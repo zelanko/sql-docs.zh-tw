@@ -17,9 +17,10 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: f50e2c3733c636d04fa69ed4226ffeef2685874a
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -30,10 +31,10 @@ ms.lasthandoff: 04/11/2017
   
 1.  建立您的查詢。  
   
-2.  從 [檔案]**** 功能表中按一下 [儲存 <查詢名稱>]****。  
+2.  從 [檔案] 功能表中按一下 [儲存 <查詢名稱>]。  
   
     > [!NOTE]  
-    > 新建立的查詢會以系統名稱命名。 若要選擇您自己的查詢名稱，請選擇 [另存 <查詢名稱> 為]****。  
+    > 新建立的查詢會以系統名稱命名。 若要選擇您自己的查詢名稱，請選擇 [另存 <查詢名稱> 為]。  
   
 3.  查詢會儲存在 [方案總管] 中專案的 [查詢] 資料夾內。  
   

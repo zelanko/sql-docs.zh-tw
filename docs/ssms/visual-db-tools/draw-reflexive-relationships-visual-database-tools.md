@@ -18,9 +18,10 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: b3f92a8f199bf03ff3a9c0cff4aedfb8a138ebec
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -35,11 +36,11 @@ ms.lasthandoff: 04/11/2017
   
 2.  將線條拖曳回選取的資料表。  
   
-3.  放開滑鼠按鈕。 隨即出現 [資料表和資料行]**** 對話方塊。  
+3.  放開滑鼠按鈕。 隨即出現 [資料表和資料行] 對話方塊。  
   
 4.  選取要用來形成關聯性的外部索引鍵資料行及主索引鍵資料表與資料行。  
   
-5.  選擇兩次 [確定]**** 以建立關聯性。  
+5.  選擇兩次 [確定] 以建立關聯性。  
   
 當您對資料表執行查詢時，可使用自反關聯性來建立自我聯結 (Self-Join)。 如需使用聯結查詢資料表的相關資訊，請參閱[使用聯結查詢 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-with-joins-visual-database-tools.md)。  
   

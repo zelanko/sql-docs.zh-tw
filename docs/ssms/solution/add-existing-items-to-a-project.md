@@ -17,9 +17,10 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: a84052767f74ae790328cff5755398e3ea0afbe0
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -30,7 +31,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 [方案總管] 中，選取一個目標專案。  
   
-2.  在 [專案]**** 功能表上，按一下 [新增現有項目]****。  
+2.  在 [專案] 功能表上，按一下 [新增現有項目]。  
   
     **Look in**  
     從此清單中找出要加入專案的檔案或資料夾。 針對 XML Web 服務和 ASP.NET Web 應用程式，這些檔案是位於 Web 伺服器上。  
@@ -39,16 +40,16 @@ ms.lasthandoff: 04/11/2017
     顯示位於桌面上的檔案和資料夾。  
   
     **我的專案**  
-    顯示位於預設 [我的專案]**** 位置處的檔案和資料夾。  
+    顯示位於預設 [我的專案] 位置處的檔案和資料夾。  
   
     **我的電腦**  
-    顯示 [我的電腦]**** 資料夾的內容。  
+    顯示 [我的電腦] 資料夾的內容。  
   
     **檔案名稱**  
     使用此選項來篩選所顯示的檔案和資料夾。 輸入要篩選的完整或部份檔案名稱；使用星號 (`*`) 作為萬用字元。  
   
     > [!NOTE]  
-    > 在 [檔案名稱]**** 方塊中輸入 URL 或網路路徑，導覽至 Web 和網路位置。 例如， **http://mywebsite** 會顯示在 mywebsite Web 位置上的可用檔案，而 **\\\myserver\myshare** 則會顯示在 myserver 的 myshare 位置上的可用檔案。  
+    > 在 [檔案名稱] 方塊中輸入 URL 或網路路徑，導覽至 Web 和網路位置。 例如， **http://mywebsite** 會顯示在 mywebsite Web 位置上的可用檔案，而 **\\\myserver\myshare** 則會顯示在 myserver 的 myshare 位置上的可用檔案。  
   
     **檔案類型**  
     使用此選項根據副檔名篩選檔案。 每個產品都會列出最常用之檔案類型的預設篩選。  
@@ -64,9 +65,9 @@ ms.lasthandoff: 04/11/2017
   
         將選取的檔案加入專案中並以該檔案類型的預設編輯器開啟它。 此選項會開啟原始選取的檔案，但不會將檔案複製到專案資料夾。  
   
-3.  如果您要加入查詢檔，連接對話方塊會提示您指定查詢的連接。 如果不要將連接關聯於這項查詢，您可以在連接對話中，按一下 [取消]****。  
+3.  如果您要加入查詢檔，連接對話方塊會提示您指定查詢的連接。 如果不要將連接關聯於這項查詢，您可以在連接對話中，按一下 [取消]。  
   
-4.  此時檔案會加入專案的 [查詢]**** 或 [其他檔案]**** 資料夾中。  
+4.  此時檔案會加入專案的 [查詢] 或 [其他檔案] 資料夾中。  
   
 ## <a name="see-also"></a>另請參閱  
 [方案總管](../../ssms/solution/solution-explorer.md)  

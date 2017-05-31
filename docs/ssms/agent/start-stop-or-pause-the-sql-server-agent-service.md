@@ -18,9 +18,10 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: af137c019a7f96769b801d01f882e1d98b0da2ea
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -68,7 +69,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 **[物件總管]**中，按一下加號展開要管理 SQL Server Agent 服務所在的伺服器。  
   
-2.  在 [SQL Server Agent]****，然後選取 [啟動]****、[停止]**** 或 [重新啟動]****。  
+2.  在 [SQL Server Agent]，然後選取 [啟動]、[停止] 或 [重新啟動]。  
   
 3.  在 **[使用者帳戶控制]** 對話方塊中，按一下 **[是]**。  
   

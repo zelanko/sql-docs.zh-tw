@@ -16,9 +16,10 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 32da2911fb4daf39e6086beb6e10c7ff5922bace
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -33,6 +34,6 @@ ms.lasthandoff: 04/11/2017
 |**字母順序**|依字母順序排序來列出所選物件的所有屬性和屬性值。|  
 |屬性名稱|方格的第一個資料行列出屬性名稱。|  
 |屬性|方格的第二個資料行列出屬性值。|  
-|描述窗格|描述窗格在頁面底端，它會顯示屬性類型和屬性的簡短描述。 您可以使用快速鍵功能表上的 [描述]**** 命令，來關閉和開啟屬性的描述。|  
+|描述窗格|描述窗格在頁面底端，它會顯示屬性類型和屬性的簡短描述。 您可以使用快速鍵功能表上的 [描述] 命令，來關閉和開啟屬性的描述。|  
   
 

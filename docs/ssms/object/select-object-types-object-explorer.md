@@ -16,16 +16,17 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: bd28c550c21656390a186fffeb225c1438ec62b3
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="select-object-types-object-explorer"></a>選取物件類型 (物件總管)
-使用此對話方塊即可指定 [選取物件]**** 對話方塊中出現的物件類型。  
+使用此對話方塊即可指定 [選取物件] 對話方塊中出現的物件類型。  
   
 ## <a name="select-the-types-of-objects-to-find"></a>選取要尋找的物件類型  
-選取 [物件類型]**** 清單中的項目。 清單中只會包含某動作類型可用的項目；例如，要選取新物件的擁有者時，只會出現 [登入]****。  
+選取 [物件類型] 清單中的項目。 清單中只會包含某動作類型可用的項目；例如，要選取新物件的擁有者時，只會出現 [登入]。  
   
 

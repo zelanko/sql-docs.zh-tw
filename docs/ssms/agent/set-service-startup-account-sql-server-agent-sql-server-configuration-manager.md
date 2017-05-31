@@ -18,9 +18,10 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: ca20cf42839419f5d40826ef992087623dbc3059
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -68,20 +69,20 @@ ms.lasthandoff: 04/11/2017
   
 2.  按一下加號展開 **[本機伺服器群組]** 資料夾。  
   
-3.  以滑鼠右鍵按一下您要設定服務啟動帳戶的伺服器執行個體，並選取 [SQL Server 組態管理員]****。  
+3.  以滑鼠右鍵按一下您要設定服務啟動帳戶的伺服器執行個體，並選取 [SQL Server 組態管理員]。  
   
 4.  在 **[使用者帳戶控制]** 對話方塊中，按一下 **[是]**。  
   
 5.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 組態管理員的主控台窗格中，選取 **[SQL Server 服務]**。  
   
-6.  在詳細資料窗格中，以滑鼠右鍵按一下 [SQL Server Agent (<伺服器名稱>)]******，其中 <伺服器名稱>** 是您要變更服務啟動帳戶的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 執行個體的名稱，然後選取 [屬性]****。  
+6.  在詳細資料窗格中，以滑鼠右鍵按一下 [SQL Server Agent (<伺服器名稱>)]，其中 <伺服器名稱> 是您要變更服務啟動帳戶的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 執行個體的名稱，然後選取 [屬性]。  
   
-7.  在 [SQL Server Agent (<伺服器名稱>) 屬性]********** 對話方塊的 [登入]**** 索引標籤中，選取 [登入身分]**** 下的下列其中一個選項：  
+7.  在 [SQL Server Agent (<伺服器名稱>) 屬性] 對話方塊的 [登入] 索引標籤中，選取 [登入身分] 下的下列其中一個選項：  
   
     -   **內建帳戶**：如果您的作業僅需來自本機伺服器的資源，請選取此選項。 如需有關如何選擇 Windows 內建帳戶類型的詳細資訊，請參閱[選取 SQL Server Agent 服務的帳戶](http://msdn.microsoft.com/library/ms191543.aspx)。  
   
         > [!IMPORTANT]  
-        > [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 服務不支援 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 中的 [本機服務]**** 帳戶。  
+        > [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 服務不支援 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 中的 [本機服務] 帳戶。  
   
     -   **這個帳戶**：如果您的作業需要網路上的資源 (包括應用程式資源)，或想要將事件轉寄給其他 Windows 應用程式記錄檔，又或者想要透過電子郵件或呼叫器來通知操作員，請選取此選項。  
   
@@ -89,7 +90,7 @@ ms.lasthandoff: 04/11/2017
   
         1.  在 **[帳戶名稱]** 方塊中，輸入將用來執行 SQL Server Agent 的帳戶。 或者，按一下 **[瀏覽]** 開啟 **[選取使用者或群組]** 對話方塊，然後選取要使用的帳戶。  
   
-        2.  在 **[密碼]** 方塊中，輸入帳戶的密碼。 在 [確認密碼]**** 方塊中重新輸入密碼。  
+        2.  在 **[密碼]** 方塊中，輸入帳戶的密碼。 在 [確認密碼] 方塊中重新輸入密碼。  
   
 8.  按一下 **[確定]**。  
   

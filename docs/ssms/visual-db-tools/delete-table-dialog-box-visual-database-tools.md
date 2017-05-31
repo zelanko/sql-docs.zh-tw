@@ -17,16 +17,17 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: c6485a4d7020bf63b4650ec70d6eb20c9ccf714f
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="delete-table-dialog-box-visual-database-tools"></a>刪除資料表對話方塊 (Visual Database Tools)
 這個對話方塊可以讓您指定想要刪除資料錄的資料表。 當您變更查詢類型為 DELETE 查詢時，如果 [圖表窗格] 顯示一個以上的資料表，就會出現這個對話方塊。  
   
-選取要刪除記錄的資料表，然後選擇 [確定]****。  
+選取要刪除記錄的資料表，然後選擇 [確定]。  
   
 > [!NOTE]  
 > DELETE 查詢會移除資料表中全部的資料列。 如果您要清除個別資料行中的值，請使用 UPDATE 查詢。 如果您要從資料表定義中刪除資料行或刪除資料表本身，請使用您資料庫的 [資料表設計師] 或資料庫設計工具。  

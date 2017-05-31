@@ -18,9 +18,10 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: bbfd8eb271ea0eb10ed0f8dac22833d8a4aa0f5c
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -31,9 +32,9 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 **[工具]** 功能表上，按一下 **[選項]**。  
   
-2.  展開 [環境]****，再按一下 [字型和色彩]****。  
+2.  展開 [環境]，再按一下 [字型和色彩]。  
   
-3.  在 [顯示設定]**** 清單中，選取 [資料表和資料庫設計工具]****。  
+3.  在 [顯示設定] 清單中，選取 [資料表和資料庫設計工具]。  
   
 4.  變更字型、大小、顯示項目、前景和背景色彩。  
   

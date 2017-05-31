@@ -18,9 +18,10 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 46b028b87458139b7180c1f60dd871128b988472
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -31,7 +32,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 [資料庫圖表] 視窗的空白空間上按一下滑鼠右鍵。  
   
-2.  從捷徑功能表按一下 [排列資料表]****。  
+2.  從捷徑功能表按一下 [排列資料表]。  
   
 ## <a name="see-also"></a>另請參閱  
 [使用資料庫圖表 &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  

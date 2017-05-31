@@ -18,9 +18,10 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 6bf3f6c31cb92aa86c8e2ac3d04beab51d00db13
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -31,7 +32,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  關閉您的資料庫圖表或資料表設計視窗。  
   
-2.  畫面會出現訊息，提示您儲存變更。 選擇 [否]****。  
+2.  畫面會出現訊息，提示您儲存變更。 選擇 [否]。  
   
     > [!CAUTION]  
     > 如果有其他開啟的資料庫圖表或資料表設計視窗連接到相同的資料庫，請將其關閉且不要儲存變更。  

@@ -21,9 +21,10 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 5529f7d3664e669893ccdf34e3dd58c9722176de
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -61,9 +62,9 @@ ms.lasthandoff: 04/11/2017
   
 3.  按一下加號展開 **[作業]** 資料夾。  
   
-4.  以滑鼠右鍵按一下要編輯的作業，然後選取 [屬性]****。  
+4.  以滑鼠右鍵按一下要編輯的作業，然後選取 [屬性]。  
   
-5.  在 [作業屬性 - <作業名稱>]****** 對話方塊，從 [類別目錄]**** 清單中選取您要指派給作業的作業類別目錄。  
+5.  在 [作業屬性 - <作業名稱>] 對話方塊，從 [類別目錄] 清單中選取您要指派給作業的作業類別目錄。  
   
 6.  按一下 **[確定]**。  
   

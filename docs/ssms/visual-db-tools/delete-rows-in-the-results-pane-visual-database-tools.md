@@ -22,9 +22,10 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: cef300f5851e64620787d1dec2ca0b2d6fe114f9
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -37,7 +38,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  按下 DELETE 鍵。  
   
-3.  在詢問確認的訊息方塊中，按一下 [是]****。  
+3.  在詢問確認的訊息方塊中，按一下 [是]。  
   
 > [!CAUTION]  
 > 用這種方式刪除的資料列，會永久自資料庫移除，無法重新叫用。  

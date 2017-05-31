@@ -18,9 +18,10 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 54c012b6648c2c35395b22489d3f2f3493f189fe
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -29,13 +30,13 @@ ms.lasthandoff: 04/11/2017
   
 ### <a name="to-open-a-database-diagram"></a>若要開啟資料庫圖表  
   
-1.  在物件總管中，展開 [資料庫圖表]**** 資料夾。  
+1.  在物件總管中，展開 [資料庫圖表] 資料夾。  
   
 2.  在要開啟的資料庫圖表名稱上按兩下。  
   
     -或-  
   
-    在要開啟的資料庫圖表名稱上按一下滑鼠右鍵，然後選擇 [設計資料庫圖表]****。  
+    在要開啟的資料庫圖表名稱上按一下滑鼠右鍵，然後選擇 [設計資料庫圖表]。  
   
 資料庫圖表將在 [資料庫圖表設計工具] 中開啟，您可在其中編輯圖表。  
   

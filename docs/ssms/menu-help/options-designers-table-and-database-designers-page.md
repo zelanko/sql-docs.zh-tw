@@ -16,14 +16,15 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 79e728f7cf2c300338e202b3e9cae27226f70a50
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="options-designers---table-and-database-designers-page"></a>選項 (設計工具 - 資料表和資料庫設計工具頁面)
-使用此頁面來決定設計師的預設行為。 若要存取設定，請在 [工具]**** 功能表上按一下 [選項]****、展開 [設計工具]**** 資料夾，然後按一下 [資料表設計工具]****。  
+使用此頁面來決定設計師的預設行為。 若要存取設定，請在 [工具] 功能表上按一下 [選項]、展開 [設計工具] 資料夾，然後按一下 [資料表設計工具]。  
   
 ## <a name="uielement-list"></a>UIElement 清單  
 **覆寫資料表設計師更新的連接字串逾時值**  
@@ -81,6 +82,6 @@ ms.lasthandoff: 04/11/2017
     允許您選擇要檢視的資料行。  
   
 **在新圖表上啟動加入資料表對話方塊**  
-在開啟設計師時自動開啟 [新增資料表]**** 對話方塊。  
+在開啟設計師時自動開啟 [新增資料表] 對話方塊。  
   
 

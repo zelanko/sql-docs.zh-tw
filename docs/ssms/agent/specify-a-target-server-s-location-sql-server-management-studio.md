@@ -17,9 +17,10 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: e287e48b3185904eb2fb5b24920aa3dca433fcff
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -56,9 +57,9 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 **[物件總管]**中，按一下加號，展開要指定目標伺服器位置的主要伺服器。  
   
-2.  以滑鼠右鍵按一下 [SQL Server Agent]****、指向 [多伺服器管理]****，然後選取 [管理目標伺服器]****。  
+2.  以滑鼠右鍵按一下 [SQL Server Agent]、指向 [多伺服器管理]，然後選取 [管理目標伺服器]。  
   
-3.  以滑鼠右鍵按一下目標伺服器，然後選取 [屬性]****。  
+3.  以滑鼠右鍵按一下目標伺服器，然後選取 [屬性]。  
   
 4.  在 **[位置]** 方塊中輸入伺服器的位置，再按一下 **[確定]**。  
   

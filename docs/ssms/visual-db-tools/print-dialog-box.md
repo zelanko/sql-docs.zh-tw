@@ -16,14 +16,15 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: acc46cf8d6af75c2c4719dcd30e6766ab8756512
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="print-dialog-box"></a>列印對話方塊
-您可以選取 [列印]**** 對話方塊中的選項，藉以指定您要列印文件的方式。  
+您可以選取 [列印] 對話方塊中的選項，藉以指定您要列印文件的方式。  
   
 ## <a name="printer"></a>印表機  
 **名稱**  
@@ -42,7 +43,7 @@ ms.lasthandoff: 04/11/2017
 包含關於所選印表機的其他資訊。  
   
 **屬性**  
-按一下以開啟 [\<印表機名稱屬性**>] 對話方塊。  
+按一下以開啟 [\<印表機名稱屬性>] 對話方塊。  
   
 **列印至檔案**  
 將文件列印到檔案而非印表機。  
@@ -55,7 +56,7 @@ ms.lasthandoff: 04/11/2017
 只列印目前的選取範圍。 選取部分或全部文件前，仍然無法使用這個選項。  
   
 **頁面**  
-列印您在 [頁面]**** 方塊中輸入的頁面。  
+列印您在 [頁面] 方塊中輸入的頁面。  
   
 ## <a name="copies"></a>份數  
 **份數**  

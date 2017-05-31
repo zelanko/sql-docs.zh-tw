@@ -18,9 +18,10 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 9df42c738038a393b1a2955c3825eaf58e0dc4ed
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -32,9 +33,9 @@ ms.lasthandoff: 04/11/2017
   
 ### <a name="to-discard-changes-made-to-a-query-definition"></a>若要捨棄對查詢定義所做的變更  
   
-1.  在查詢和檢視表設計工具中開啟查詢時，從 [檔案]**** 功能表中按一下 [關閉]****。  
+1.  在查詢和檢視表設計工具中開啟查詢時，從 [檔案] 功能表中按一下 [關閉]。  
   
-2.  在 [Microsoft SQL Server Management Studio]**** 對話方塊中，按一下 [否]****。  
+2.  在 [Microsoft SQL Server Management Studio] 對話方塊中，按一下 [否]。  
   
     查詢定義會回復為上次儲存時的狀態。  
   

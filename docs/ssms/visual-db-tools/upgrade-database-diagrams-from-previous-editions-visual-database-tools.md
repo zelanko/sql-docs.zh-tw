@@ -22,9 +22,10 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 069eef224bc8c26acc17fff49c609a2dca1443a0
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -37,7 +38,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  在資料庫中展開 [資料庫圖表] 節點。  
   
-3.  如果您要設定資料庫圖表化，可在提示出現時選取 [是]****。  
+3.  如果您要設定資料庫圖表化，可在提示出現時選取 [是]。  
   
     這樣將會升級資料庫上預存的圖表。  
   

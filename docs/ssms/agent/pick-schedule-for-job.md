@@ -18,9 +18,10 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 8f3a338899b6e04c839d692fe691873ed97c017b
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -44,7 +45,7 @@ ms.lasthandoff: 04/11/2017
 列出附加至排程的作業編號。 按一下某個編號以檢視該作業的屬性。  
   
 **屬性**  
-啟動 [作業排程屬性]**** 對話方塊，您可以在其中檢視排程的相關資訊。  
+啟動 [作業排程屬性] 對話方塊，您可以在其中檢視排程的相關資訊。  
   
 ## <a name="see-also"></a>另請參閱  
 [建立及附加排程至作業](../../ssms/agent/create-and-attach-schedules-to-jobs.md)  

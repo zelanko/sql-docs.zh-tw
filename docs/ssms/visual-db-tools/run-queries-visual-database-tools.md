@@ -17,9 +17,10 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: c988c7f2cf6128c0ddab4c126d4424aaead11deb
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -30,7 +31,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  開啟或建立要執行的查詢。  
   
-2.  在查詢視窗的任何位置上按一下滑鼠右鍵，然後從快速鍵功能表中選取 [執行 SQL]****。  
+2.  在查詢視窗的任何位置上按一下滑鼠右鍵，然後從快速鍵功能表中選取 [執行 SQL]。  
   
     -或-  
   

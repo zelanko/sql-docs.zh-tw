@@ -17,9 +17,10 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 1a8340db616d7d6b40e311eeab8460e2d0af654f
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -28,9 +29,9 @@ ms.lasthandoff: 04/11/2017
   
 ### <a name="to-open-an-existing-solution"></a>開啟現有的方案  
   
-1.  在 [檔案]**** 功能表上，指向 [開啟舊檔]****，再按一下 [專案/方案]****。  
+1.  在 [檔案] 功能表上，指向 [開啟舊檔]，再按一下 [專案/方案]。  
   
-2.  在 [開啟專案]**** 對話方塊中，導覽到您想要的方案，按一下這個方案，再按一下 [開啟]****。  
+2.  在 [開啟專案] 對話方塊中，導覽到您想要的方案，按一下這個方案，再按一下 [開啟]。  
   
 ## <a name="see-also"></a>另請參閱  
 [方案總管](../../ssms/solution/solution-explorer.md)  

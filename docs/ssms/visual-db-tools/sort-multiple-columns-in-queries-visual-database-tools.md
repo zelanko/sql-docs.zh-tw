@@ -16,9 +16,10 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 0671c3815de4c20aca3eab4d30e038a094409f07
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -27,7 +28,7 @@ ms.lasthandoff: 04/11/2017
   
 ### <a name="to-sort-query-results-by-more-than-one-column"></a>若要使用一個以上的資料行排序查詢結果  
   
-1.  在 [準則]**** 窗格中，針對要排序之資料行按一下 [排序次序]**** 欄位。  
+1.  在 [準則] 窗格中，針對要排序之資料行按一下 [排序次序] 欄位。  
   
 2.  輸入一個整數，或是從下拉清單中選取整數，以指示此資料行在排序資料行中的次序。  
   

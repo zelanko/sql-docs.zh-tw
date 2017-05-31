@@ -19,9 +19,10 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: ca2182f7cf871a32891a186f13fb177b7f22be52
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -30,11 +31,11 @@ ms.lasthandoff: 04/11/2017
   
 ### <a name="to-delete-a-database-diagram"></a>若要刪除資料庫圖表  
   
-1.  在物件總管中，展開 [資料庫圖表]**** 資料夾。  
+1.  在物件總管中，展開 [資料庫圖表] 資料夾。  
   
 2.  用滑鼠右鍵按一下準備刪除的資料庫圖表。  
   
-3.  在快速鍵功能表上選擇 [刪除]****。  
+3.  在快速鍵功能表上選擇 [刪除]。  
   
 4.  會出現訊息提示您確認是否刪除。 選擇 [ **是**]。  
   

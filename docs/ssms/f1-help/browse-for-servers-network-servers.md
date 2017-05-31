@@ -16,14 +16,15 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 0dfaef0364cf72e994b0fe5de778adc8a18bd715
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="browse-for-servers-network-servers"></a>瀏覽伺服器 (網路伺服器)
-如果連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 元件，但不知道 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 執行個體的確實名稱，請在 [伺服器名稱]**** 方塊中按一下 [瀏覽其他]****，以開啟 [瀏覽伺服器]**** 對話方塊。  
+如果連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 元件，但不知道 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 執行個體的確實名稱，請在 [伺服器名稱] 方塊中按一下 [瀏覽其他]，以開啟 [瀏覽伺服器] 對話方塊。  
   
 伺服器電腦上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Browser 服務會擴展這個對話方塊。 執行個體名稱未出現在清單中的原因很多：  
   

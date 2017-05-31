@@ -18,19 +18,20 @@ caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 91c10b51a3fec9ccc96c3aa23100abdf2a60ba81
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="monitor-and-troubleshoot-data-migration-stretch-database"></a>監視和疑難排解資料移轉 (Stretch Database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  若要在 Stretch Database 監視器中監視資料移轉，請針對 SQL Server Management Studio 中的資料庫，選取 [工作 | Stretch | 監視]****。  
+  若要在 Stretch Database 監視器中監視資料移轉，請針對 SQL Server Management Studio 中的資料庫，選取 [工作 | Stretch | 監視]。  
   
 ## <a name="check-the-status-of-data-migration-in-the-stretch-database-monitor"></a>在 Stretch Database 監視器中檢查資料移轉的狀態  
- 針對 SQL Server Management Studio 中的資料庫選取 [工作 | Stretch | 監視]****，以開啟 Stretch Database 監視器並監視資料移轉。  
+ 針對 SQL Server Management Studio 中的資料庫選取 [工作 | Stretch | 監視]，以開啟 Stretch Database 監視器並監視資料移轉。  
   
 -   監視器的上半部會顯示啟用延展的 SQL Server 資料庫與遠端 Azure 資料庫的一般資訊。  
   

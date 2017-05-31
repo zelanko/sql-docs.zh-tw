@@ -19,9 +19,10 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: df7d516501546d36ac3fac900d694e1e32e2f336
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -57,10 +58,10 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 **[物件總管]** 中，按一下加號，展開要設定作業執行關機間隔的伺服器。  
   
-2.  以滑鼠右鍵按一下 [SQL Server Agent]****，然後選取 [屬性]****。  
+2.  以滑鼠右鍵按一下 [SQL Server Agent]，然後選取 [屬性]。  
   
 3.  在 **[選取頁面]**底下，選取 **[作業的系統]**。  
   
-4.  設定 [關機逾時間隔]**** (以秒為單位)，以增加或減少關機的逾時間隔。 這決定了在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 自行結束前， [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 會等待執行中作業完成的時間。  
+4.  設定 [關機逾時間隔] (以秒為單位)，以增加或減少關機的逾時間隔。 這決定了在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 自行結束前， [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 會等待執行中作業完成的時間。  
   
 

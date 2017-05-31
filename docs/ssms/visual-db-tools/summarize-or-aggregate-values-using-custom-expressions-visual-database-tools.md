@@ -17,9 +17,10 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 3d3f44a6e6d80dafc9567ddc146e90b7d258b730
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -34,11 +35,11 @@ ms.lasthandoff: 04/11/2017
   
 1.  為您的查詢指定群組。 如需詳細資訊，請參閱[群組查詢結果中的資料列 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/group-rows-in-query-results-visual-database-tools.md)。  
   
-2.  移至 [準則] 窗格的空白資料列，然後在 [資料行]**** 資料行輸入運算式。  
+2.  移至 [準則] 窗格的空白資料列，然後在 [資料行] 資料行輸入運算式。  
   
     [查詢和檢視表設計工具](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md)會自動指派資料行別名給運算式，以便在查詢輸出中建立有用的資料行標題。 如需詳細資訊，請參閱[建立資料行別名 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-column-aliases-visual-database-tools.md)。  
   
-3.  在運算式的 [群組依據]**** 資料行中，選取 [Expression]****。  
+3.  在運算式的 [群組依據] 資料行中，選取 [Expression]。  
   
 4.  執行查詢。  
   

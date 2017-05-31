@@ -21,9 +21,10 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: ef92982f0b86b25fad049f444416ed5afb43fd85
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -35,7 +36,7 @@ ms.lasthandoff: 04/11/2017
   
 ### <a name="to-remove-a-column-from-the-query-output"></a>若要從查詢輸出移除資料行  
   
--   在 [準則]**** 窗格中，清除要移除的資料行之 [輸出]**** 資料行欄位的核取方塊。 (若要將資料行再次新增回查詢輸出中，請再次核取 [輸出]**** 資料行)。  
+-   在 [準則] 窗格中，清除要移除的資料行之 [輸出] 資料行欄位的核取方塊。 (若要將資料行再次新增回查詢輸出中，請再次核取 [輸出] 資料行)。  
   
     -或-  
   

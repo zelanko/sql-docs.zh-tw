@@ -24,9 +24,10 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: f5a329a77be5b7b18183e09cb3701232646d9563
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -62,7 +63,7 @@ ms.lasthandoff: 04/11/2017
   
 3.  按一下加號展開 **[警示]** 資料夾。  
   
-4.  以滑鼠右鍵按一下您想要啟用的警示，然後選取 [啟用]****。若要停用警示，請以滑鼠右鍵按一下您想要停用的警示，然後選取 [停用]****。  
+4.  以滑鼠右鍵按一下您想要啟用的警示，然後選取 [啟用]。若要停用警示，請以滑鼠右鍵按一下您想要停用的警示，然後選取 [停用]。  
   
 5.  畫面上會顯示 **[停用警示]** 或 **[啟用警示]** 對話方塊，並顯示處理的狀態。 完成後，請按一下 **[關閉]**。  
   

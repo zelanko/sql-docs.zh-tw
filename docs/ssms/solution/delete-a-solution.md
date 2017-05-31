@@ -18,9 +18,10 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: b783dbb2d94608d4d3d798403dde78b34027d38d
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -38,7 +39,7 @@ ms.lasthandoff: 04/11/2017
   
 3.  在 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows 的 [檔案總管] 中，尋找和選取您要刪除之方案的相關檔案。  
   
-4.  在 [檔案]**** 功能表上，按一下 [刪除]****。  
+4.  在 [檔案] 功能表上，按一下 [刪除]。  
   
 ## <a name="see-also"></a>另請參閱  
 [方案總管](../../ssms/solution/solution-explorer.md)  

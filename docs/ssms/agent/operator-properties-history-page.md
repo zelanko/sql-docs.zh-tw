@@ -16,9 +16,10 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 5ce6c8110367a4dd37e5e3e782cfc06c6ea16ef1
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -27,13 +28,13 @@ ms.lasthandoff: 04/11/2017
   
 ## <a name="options"></a>選項。  
 **使用電子郵件傳送**  
-最近嘗試發送的電子郵件通知；若此操作員從未發送過電子郵件通知，即是 [(未曾使用電子郵件傳送)]****。  
+最近嘗試發送的電子郵件通知；若此操作員從未發送過電子郵件通知，即是 [(未曾使用電子郵件傳送)]。  
   
 **使用呼叫器傳送**  
-最近嘗試發送的呼叫器通知；若此操作員從未發送過呼叫器通知，即是 [(未曾使用呼叫器功能傳送)]****。  
+最近嘗試發送的呼叫器通知；若此操作員從未發送過呼叫器通知，即是 [(未曾使用呼叫器功能傳送)]。  
   
 **使用 Net Send**  
-最近嘗試使用 net send 發送的通知；若此操作員從未使用過 net send 發送通知，即是 [(未曾使用 Net Send 通知)]****。  
+最近嘗試使用 net send 發送的通知；若此操作員從未使用過 net send 發送通知，即是 [(未曾使用 Net Send 通知)]。  
   
 ## <a name="see-also"></a>另請參閱  
 [運算子](../../ssms/agent/operators.md)  

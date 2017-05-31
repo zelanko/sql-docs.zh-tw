@@ -17,9 +17,10 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: ba1aeadc84bf4ffb5ecc019eec496b0bd2db084d
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -28,9 +29,9 @@ ms.lasthandoff: 04/11/2017
   
 ### <a name="to-open-a-query"></a>若要開啟查詢  
   
-1.  在 [檢視]**** 功能表上，按一下 [方案總管]****。  
+1.  在 [檢視] 功能表上，按一下 [方案總管]。  
   
-2.  在方案總管中，在要開啟的查詢上按一下滑鼠右鍵，然後按一下 [開啟]****。  
+2.  在方案總管中，在要開啟的查詢上按一下滑鼠右鍵，然後按一下 [開啟]。  
   
 3.  若要修改查詢設計工具中的查詢，可反白顯示 SQL 陳述式，在反白顯示的區域上按一下滑鼠右鍵，然後選取 [在編輯器中設計查詢]****  
   

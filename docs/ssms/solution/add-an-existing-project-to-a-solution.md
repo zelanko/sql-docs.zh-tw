@@ -20,9 +20,10 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: c420cccafdda162f8acee678536b4419270c5777
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -33,9 +34,9 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 [方案總管] 中，選取方案。  
   
-2.  在 [檔案]**** 功能表上，指向 [新增]****，再按一下 [現有的專案]****。  
+2.  在 [檔案] 功能表上，指向 [新增]，再按一下 [現有的專案]。  
   
-3.  在 [新增現有的專案]**** 對話方塊中，找出您要新增的專案，選取專案檔，再按一下 [開啟]****。  
+3.  在 [新增現有的專案] 對話方塊中，找出您要新增的專案，選取專案檔，再按一下 [開啟]。  
   
     此時會將專案加入所選的方案中。  
   

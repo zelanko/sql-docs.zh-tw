@@ -16,9 +16,10 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 9643dbca781cb469fd3895e1de265948bfbc873e
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -39,10 +40,10 @@ ms.lasthandoff: 04/11/2017
 建立新的全文檢索索引。  
   
 **Delete**  
-刪除在 [選取的全文檢索索引]**** 清單中所選取的全文檢索索引。  
+刪除在 [選取的全文檢索索引] 清單中所選取的全文檢索索引。  
   
 **一般類別目錄**  
-展開時會顯示 [資料行]**** 和 [全文檢索資料庫目錄名稱]****。  
+展開時會顯示 [資料行] 和 [全文檢索資料庫目錄名稱]。  
   
 **資料行**  
 顯示可使用全文檢索搜尋資料行的逗號分隔清單。 若要查看完整清單，請按屬性欄位左側的省略符號按鈕 (**…**)。  

@@ -16,9 +16,10 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: dd82f10ad1b997b8e14080e030079d6179d6b848
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -33,7 +34,7 @@ ms.lasthandoff: 04/11/2017
 檢視下載指示的描述。  
   
 **輪詢間隔**  
-設定目標伺服器的輪詢間隔。 僅適用於 [設定輪詢間隔]**** 指示。  
+設定目標伺服器的輪詢間隔。 僅適用於 [設定輪詢間隔] 指示。  
   
 **所有目標伺服器**  
 選取此選項將下載指示公佈到所有目標伺服器。  

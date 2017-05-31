@@ -22,9 +22,10 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 5b921074b261bffbd51c46b24784376147f3a044
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -65,7 +66,7 @@ ms.lasthandoff: 04/11/2017
   
 3.  按一下加號展開 **[警示]** 資料夾。  
   
-4.  在您要刪除的警示上按一下滑鼠右鍵，然後選取 [刪除]****。  
+4.  在您要刪除的警示上按一下滑鼠右鍵，然後選取 [刪除]。  
   
 5.  在 **[刪除物件]** 對話方塊中，確認已選取正確的警示，然後按一下 **[確定]**。  
   
@@ -77,7 +78,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] ****。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
   
     ```  
     -- deletes the SQL Server Agent alert called 'Test Alert.'  

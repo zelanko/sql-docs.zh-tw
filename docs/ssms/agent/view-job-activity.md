@@ -19,9 +19,10 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 48c5a7cff0b48fa137d6c39d4e08b1cf713d88f2
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -55,7 +56,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  展開 **[SQL Server Agent]**。  
   
-3.  在 [作業活動監視器]****一，然後按一下 [檢視作業活動]****。  
+3.  在 [作業活動監視器]一，然後按一下 [檢視作業活動]。  
   
 4.  您可以在 **[作業活動監視器]**中檢視為此伺服器定義之每項作業的詳細資訊。  
   

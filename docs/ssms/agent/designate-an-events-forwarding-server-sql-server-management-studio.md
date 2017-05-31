@@ -18,9 +18,10 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 3a888bf925f0deec6b774891d13da7548d1fe28f
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -50,9 +51,9 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 **[物件總管]** 中，按一下加號展開伺服器，從此伺服器轉送事件到另一部伺服器。  
   
-2.  以滑鼠右鍵按一下 [SQL Server Agent]****，然後選取 [屬性]****。  
+2.  以滑鼠右鍵按一下 [SQL Server Agent]，然後選取 [屬性]。  
   
-3.  在 [SQL Server Agent 屬性 - <伺服器名稱>]****** 對話方塊的 [選取頁面]**** 底下，選取 [進階]****。  
+3.  在 [SQL Server Agent 屬性 - <伺服器名稱>] 對話方塊的 [選取頁面] 底下，選取 [進階]。  
   
 4.  在 **[SQL Server 事件轉送]**下，選取 **[轉送事件到另一部伺服器]** 核取方塊。  
   

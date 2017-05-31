@@ -17,14 +17,15 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 343cdc53d15a8a1729053029f6650d7799c345f3
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="browse-for-objects-object-explorer"></a>瀏覽物件 (物件總管)
-顯示所選取類型的物件清單。 透過選取對應的核取方塊，從這份清單中選取一或多個物件。 [瀏覽物件]**** 方塊只會顯示適用於該動作的項目，並只顯示您有權限檢視的項目。  
+顯示所選取類型的物件清單。 透過選取對應的核取方塊，從這份清單中選取一或多個物件。 [瀏覽物件] 方塊只會顯示適用於該動作的項目，並只顯示您有權限檢視的項目。  
   
 ## <a name="options"></a>選項。  
 **核取方塊**  

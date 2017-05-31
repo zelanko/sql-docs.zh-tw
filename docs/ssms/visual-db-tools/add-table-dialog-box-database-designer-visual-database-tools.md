@@ -17,9 +17,10 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 275f2120bd76147916f1ba6d24d59dc450ed7c8b
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -37,7 +38,7 @@ ms.lasthandoff: 04/11/2017
 加入選取的資料表或多個資料表。  
   
 > [!NOTE]  
-> 若要將好幾個資料表加入至圖表，可以在按一下 [新增]**** 之前選取所有資料表。 或是，按兩下每一個要加入的資料表，完成時按一下 [關閉]****。  
+> 若要將好幾個資料表加入至圖表，可以在按一下 [新增] 之前選取所有資料表。 或是，按兩下每一個要加入的資料表，完成時按一下 [關閉]。  
   
 **關閉**  
 關閉對話方塊，而不再加入其他資料表。  

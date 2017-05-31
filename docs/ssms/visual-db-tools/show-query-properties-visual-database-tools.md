@@ -19,9 +19,10 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 95cd6dd3a8b04134ea6b2d08252429eac2b80299
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -30,9 +31,9 @@ ms.lasthandoff: 04/11/2017
   
 ### <a name="to-display-properties-for-a-query"></a>若要顯示查詢的屬性  
   
--   在查詢和檢視表設計工具中開啟查詢，然後按一下 [檢視]**** 功能表中的 [屬性視窗]****。  
+-   在查詢和檢視表設計工具中開啟查詢，然後按一下 [檢視] 功能表中的 [屬性視窗]。  
   
-此時查詢的屬性便會顯示在 [屬性]**** 視窗中。  
+此時查詢的屬性便會顯示在 [屬性] 視窗中。  
   
 ## <a name="see-also"></a>另請參閱  
 [執行查詢的基本作業 &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  

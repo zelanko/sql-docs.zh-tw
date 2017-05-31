@@ -18,9 +18,10 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: a44398daffbf1ab25f52430d2b27a0e822427db1
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -117,9 +118,9 @@ Cheryl Carson       Abraham Bennet
   
     查詢和檢視設計師藉由在資料表名稱加入連續編號，來指派第二個執行個體的別名。 此外，[查詢和檢視設計師] 會在 [圖表] 窗格的兩個資料表或資料表值物件之間建立聯結線。  
   
-3.  在聯結線上按一下滑鼠右鍵，然後在捷徑功能表中選擇 [屬性]****。  
+3.  在聯結線上按一下滑鼠右鍵，然後在捷徑功能表中選擇 [屬性]。  
   
-4.  在 [屬性] 視窗中，按一下 [聯結條件及類型]****，再按一下屬性右邊的省略符號 (**…**)。  
+4.  在 [屬性] 視窗中，按一下 [聯結條件及類型]，再按一下屬性右邊的省略符號 (**…**)。  
   
 5.  在[聯結對話方塊](../../ssms/visual-db-tools/join-dialog-box-visual-database-tools.md)中，在必要時變更主索引鍵之間的比較運算子。 例如，您可以會將運算子變更為小於 (<)。  
   

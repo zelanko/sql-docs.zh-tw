@@ -17,9 +17,10 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: f9c97287220cddf8d77b65375f308b784d508742
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -32,12 +33,12 @@ ms.lasthandoff: 04/11/2017
   
 2.  在 [圖表] 視窗的空白空間上按一下滑鼠右鍵。  
   
-3.  從快速鍵功能表按一下 [新增文字附註]****。  
+3.  從快速鍵功能表按一下 [新增文字附註]。  
   
 4.  將註記輸入至出現的文字欄位。  
   
 > [!NOTE]  
-> 若要變更字型，請在文字欄位按一下滑鼠右鍵，再按一下 [設定文字附註的字型]****。  
+> 若要變更字型，請在文字欄位按一下滑鼠右鍵，再按一下 [設定文字附註的字型]。  
   
 ## <a name="see-also"></a>另請參閱  
 [使用資料庫圖表 &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  

@@ -19,9 +19,10 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: b8628cf736650c53493501777f79f970ff864209
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -67,9 +68,9 @@ ms.lasthandoff: 04/11/2017
   
 3.  按一下加號展開 **[操作員]** 資料夾。  
   
-4.  以滑鼠右鍵按一下您要編輯的操作員，然後選取 [屬性]****。  
+4.  以滑鼠右鍵按一下您要編輯的操作員，然後選取 [屬性]。  
   
-    如需 [<操作員名稱> 屬性]****** 對話方塊中之可用選項的詳細資訊，請參閱：  
+    如需 [<操作員名稱> 屬性] 對話方塊中之可用選項的詳細資訊，請參閱：  
   
     -   [操作員屬性 - 新增操作員 &amp;#40;一般頁面&amp;#41;](../../ssms/agent/operator-properties-new-operator-general-page.md)  
   
@@ -87,7 +88,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] ****。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
   
     ```  
     -- updates the operator status to enabled, and sets the days   

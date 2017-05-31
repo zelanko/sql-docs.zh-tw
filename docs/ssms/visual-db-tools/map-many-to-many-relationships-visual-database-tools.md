@@ -20,9 +20,10 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 393483c566c3e4b61833972ef2b33ba2dde8404a
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -35,9 +36,9 @@ ms.lasthandoff: 04/11/2017
   
 1.  在資料庫圖表中，加入您要在其間建立多對多關聯性的資料表。  
   
-2.  在圖表上按一下滑鼠右鍵，並從快速鍵功能表選擇 [新增資料表]****，建立第三個資料表。 這會成為聯合資料表。  
+2.  在圖表上按一下滑鼠右鍵，並從快速鍵功能表選擇 [新增資料表]，建立第三個資料表。 這會成為聯合資料表。  
   
-3.  在 [選擇名稱]**** 對話方塊中，變更系統指派的資料表名稱。 例如，`titles` 資料表和 `authors` 資料表之間的聯合資料表，現在的名稱為 `titleauthors`。  
+3.  在 [選擇名稱] 對話方塊中，變更系統指派的資料表名稱。 例如，`titles` 資料表和 `authors` 資料表之間的聯合資料表，現在的名稱為 `titleauthors`。  
   
 4.  將兩個資料表的主索引鍵資料行都複製到聯合資料表。 您可以將其他資料行加入到此資料表，也可以加入到其他資料表。  
   

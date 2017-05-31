@@ -20,9 +20,10 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 87382ace072e21384546b8785a9aa61cb71f20f4
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -31,9 +32,9 @@ ms.lasthandoff: 04/11/2017
   
 ### <a name="to-change-the-properties-of-a-connection-in-a-project"></a>變更專案中之連接的屬性  
   
-1.  在方案總管中，以滑鼠右鍵按一下連接，再按一下 [屬性視窗]****。  
+1.  在方案總管中，以滑鼠右鍵按一下連接，再按一下 [屬性視窗]。  
   
-2.  在 [屬性] 視窗中，檢視連接內容。 您可以變更 [執行逾時]****、[資料庫]**** 和 [登入逾時]**** 等屬性。  
+2.  在 [屬性] 視窗中，檢視連接內容。 您可以變更 [執行逾時]、[資料庫] 和 [登入逾時] 等屬性。  
   
 ## <a name="see-also"></a>另請參閱  
 [方案總管](../../ssms/solution/solution-explorer.md)  

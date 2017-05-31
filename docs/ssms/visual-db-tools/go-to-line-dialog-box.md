@@ -16,13 +16,14 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 51793a269a149be9d05ba49ffd787dee1f74a589
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="go-to-line-dialog-box"></a>移至行對話方塊
-若要移到程式碼編輯器視窗中的某個位置，輸入行號，然後按一下 [確定]****。  
+若要移到程式碼編輯器視窗中的某個位置，輸入行號，然後按一下 [確定]。  
   
 

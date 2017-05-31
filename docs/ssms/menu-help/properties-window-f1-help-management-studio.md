@@ -27,16 +27,17 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: b50fb9b56d11e1ff911c0781e9cda52df168b82f
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="properties-window-f1-help-management-studio"></a>屬性視窗 F1 說明 (Management Studio)
-使用 [屬性]**** 視窗來檢視所選取元素的屬性。 您也可以使用 [屬性]**** 視窗來檢視檔案、專案和方案屬性。 按一下 [檢視]**** 功能表上的 [屬性視窗]****，就可以使用 [屬性]**** 視窗。  
+使用 [屬性] 視窗來檢視所選取元素的屬性。 您也可以使用 [屬性] 視窗來檢視檔案、專案和方案屬性。 按一下 [檢視] 功能表上的 [屬性視窗]，就可以使用 [屬性] 視窗。  
   
-視特定屬性的需求而定，[屬性]**** 視窗會顯示不同類型的編輯欄位。 以灰色顯示的屬性是唯讀屬性。  
+視特定屬性的需求而定，[屬性] 視窗會顯示不同類型的編輯欄位。 以灰色顯示的屬性是唯讀屬性。  
   
 ## <a name="options"></a>選項。  
 **物件名稱**  
@@ -52,7 +53,7 @@ ms.lasthandoff: 04/11/2017
 顯示物件的屬性。  
   
 **描述窗格**  
-描述窗格會在 [屬性]**** 視窗的底部顯示，並且會顯示屬性類型以及屬性的簡短描述。 您可以使用快速鍵功能表上的 [描述]**** 命令，來關閉和開啟屬性的描述。  
+描述窗格會在 [屬性] 視窗的底部顯示，並且會顯示屬性類型以及屬性的簡短描述。 您可以使用快速鍵功能表上的 [描述] 命令，來關閉和開啟屬性的描述。  
   
 ## <a name="see-also"></a>另請參閱  
 [SQL Server Management Studio 中的屬性視窗](http://msdn.microsoft.com/en-us/903d4aca-f57c-43d9-a893-702eceaa7004)  

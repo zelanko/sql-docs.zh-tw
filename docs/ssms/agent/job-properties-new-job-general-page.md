@@ -16,9 +16,10 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 884ed5fdf244272e5f46dc3d2faf0a8d1ee8a9b2
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -45,19 +46,19 @@ ms.lasthandoff: 04/11/2017
 啟用作業。 未啟用作業時，則不會執行作業以回應排程或警示，但是您仍可以使用 **sp_start_job** 預存程序來啟動作業。  
   
 **Source**  
-顯示作業的主要伺服器。 只能在 [作業屬性] 的 [一般]**** 頁面使用。  
+顯示作業的主要伺服器。 只能在 [作業屬性] 的 [一般] 頁面使用。  
   
 **建立日期**  
-顯示作業的建立日期和時間。 只能在 [作業屬性] 的 [一般]**** 頁面使用。  
+顯示作業的建立日期和時間。 只能在 [作業屬性] 的 [一般] 頁面使用。  
   
 **上次修改**  
-顯示作業的上次修改日期和時間。 只能在 [作業屬性] 的 [一般]**** 頁面使用。  
+顯示作業的上次修改日期和時間。 只能在 [作業屬性] 的 [一般] 頁面使用。  
   
 **上次執行**  
-顯示作業上次開始執行的日期和時間。 只能在 [作業屬性] 的 [一般]**** 頁面使用。  
+顯示作業上次開始執行的日期和時間。 只能在 [作業屬性] 的 [一般] 頁面使用。  
   
 **檢視作業記錄**  
-檢視作業的作業記錄。 只能在 [作業屬性] 的 [一般]**** 頁面使用。  
+檢視作業的作業記錄。 只能在 [作業屬性] 的 [一般] 頁面使用。  
   
 ## <a name="see-also"></a>另請參閱  
 [實作作業](../../ssms/agent/implement-jobs.md)  

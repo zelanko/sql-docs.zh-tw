@@ -17,9 +17,10 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: b9098896a6389489eac2c2d5adae26e82e863df9
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -32,7 +33,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  自動或手動建立聯結。 如需詳細資訊，請參閱[自動聯結資料表 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/join-tables-automatically-visual-database-tools.md) 或[手動聯結資料表 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/join-tables-manually-visual-database-tools.md)。  
   
-2.  選取 [圖表] 窗格中的聯結線 (Join Line)，然後從 [查詢設計工具]**** 功能表選擇 [選取 <tablename> 中所有的資料列]****，以選取包含您要併入其額外資料列之資料表的命令。  
+2.  選取 [圖表] 窗格中的聯結線 (Join Line)，然後從 [查詢設計工具] 功能表選擇 [選取 <tablename> 中所有的資料列]，以選取包含您要併入其額外資料列之資料表的命令。  
   
     -   選擇第一個資料表以建立左外部聯結。  
   

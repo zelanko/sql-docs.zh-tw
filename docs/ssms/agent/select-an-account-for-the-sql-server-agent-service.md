@@ -25,9 +25,10 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: b8ea899dbbf5b94205ba7cfa0afee4aad262d79a
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -39,12 +40,12 @@ ms.lasthandoff: 04/11/2017
     -   **本機系統** 帳戶。 這個帳戶的名稱是 NT AUTHORITY\System。 它是功能強大的帳戶，可不受限制地存取所有本機系統資源。 這個帳戶是本機電腦上的 Windows **Administrators** 群組成員，因此也是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **系統管理員 (sysadmin)** 固定伺服器角色的成員。  
   
         > [!IMPORTANT]  
-        > [本機系統帳戶]**** 選項僅用於回溯相容性。 本機系統帳戶具有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 不需要的權限。 避免以本機系統帳戶身分執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent。 為了改善安全性，請搭配使用 Windows 網域帳戶與下節「Windows 網域帳戶權限」所列的權限。  
+        > [本機系統帳戶] 選項僅用於回溯相容性。 本機系統帳戶具有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 不需要的權限。 避免以本機系統帳戶身分執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent。 為了改善安全性，請搭配使用 Windows 網域帳戶與下節「Windows 網域帳戶權限」所列的權限。  
   
 -   **這個帳戶**。 可讓您指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 服務用來執行的 Windows 網域帳戶。 我們建議您選擇非 Windows **Administrators** 群組成員的 Windows 使用者帳戶。 然而， [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 服務帳戶不是本機 **Administrators** 群組的成員時，則會限制多伺服器管理的使用。 如需詳細資訊，請參閱本主題稍後的＜支援的服務帳戶類型＞。  
   
 ## <a name="windows-domain-account-permissions"></a>Windows 網域帳戶權限  
-為了改善安全性，請選取 [這個帳戶]****，以指定 Windows 網域帳戶。 您指定的 Windows 網域帳戶必須具有下列權限：  
+為了改善安全性，請選取 [這個帳戶]，以指定 Windows 網域帳戶。 您指定的 Windows 網域帳戶必須具有下列權限：  
   
 -   在所有 Windows 版本中，以服務方式登入的權限 (SeServiceLogonRight)  
   
@@ -94,7 +95,7 @@ ms.lasthandoff: 04/11/2017
 ### <a name="limitation-2-using-the-local-system-account-for-multiserver-administration"></a>限制 2：對於多伺服器管理使用本機系統帳戶  
 當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 服務在本機系統帳戶下執行時支援多伺服器管理，但前提是主要伺服器和目標伺服器都必須位於相同電腦上。 如果您使用此組態，則當您在主要伺服器上編列目標伺服器時會傳回下列訊息：  
   
-「請確定 <目標伺服器電腦名稱>** 的代理程式啟動帳戶有權限以 targetServer 的身分登入」。  
+「請確定 <目標伺服器電腦名稱> 的代理程式啟動帳戶有權限以 targetServer 的身分登入」。  
   
 您可以忽略此參考訊息。 編列作業應該順利完成。 如需詳細資訊，請參閱 [建立多伺服器環境](../../ssms/agent/create-a-multiserver-environment.md)。  
   

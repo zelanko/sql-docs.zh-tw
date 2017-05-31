@@ -18,22 +18,23 @@ caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 407863b783be38aa9342361778cc22914f805033
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="enable-stretch-database-for-a-table"></a>Enable Stretch Database for a table
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  若要設定 Stretch Database 的資料表，請在 SQL Server Management Studio 中為資料表選取 [延展 | 啟用]****，開啟 [對資料表啟用延展精靈]****。 您也可以使用 Transact-SQL 對現有的資料表啟用 Stretch Database，或建立已啟用 Stretch Database 的新資料表。  
+  若要設定 Stretch Database 的資料表，請在 SQL Server Management Studio 中為資料表選取 [延展 | 啟用]，開啟 [對資料表啟用延展精靈]。 您也可以使用 Transact-SQL 對現有的資料表啟用 Stretch Database，或建立已啟用 Stretch Database 的新資料表。  
   
 -   如果您將原始資料儲存在個別的資料表中，可以遷移整個資料表。  
   
 -   若您的資料表同時包含作用及原始資料，您可以指定篩選函數，以選取要移轉的資料列。    
  
- **必要條件**。 如果您為資料表選取了 [延展 | 啟用]****，卻未針對資料庫啟用 Stretch Database，精靈會先設定 Stretch Database 資料庫。 請依照 [Get started by running the Enable Database for Stretch Wizard](../../sql-server/stretch-database/get-started-by-running-the-enable-database-for-stretch-wizard.md) (執行 [延展精靈] 的資料庫來開始) 的步驟著手，而不是本主題中的步驟。  
+ **必要條件**。 如果您為資料表選取了 [延展 | 啟用]，卻未針對資料庫啟用 Stretch Database，精靈會先設定 Stretch Database 資料庫。 請依照 [Get started by running the Enable Database for Stretch Wizard](../../sql-server/stretch-database/get-started-by-running-the-enable-database-for-stretch-wizard.md) (執行 [延展精靈] 的資料庫來開始) 的步驟著手，而不是本主題中的步驟。  
   
  **權限**。 在資料庫或資料表上啟用 Stretch Database 需要 db_owner 權限。 在資料表上啟用 Stretch Database 也需要資料表的 ALTER 權限。  
 
@@ -44,7 +45,7 @@ ms.lasthandoff: 04/11/2017
  **啟動精靈**  
  1.  在 SQL Server Management Studio 的 [物件總管] 中，選取要啟用 Stretch 的資料表。  
   
-2.  按一下滑鼠右鍵並選取 [延展]****，然後選取 [啟用]**** 來啟動精靈。  
+2.  按一下滑鼠右鍵並選取 [延展]，然後選取 [啟用] 來啟動精靈。  
   
  **簡介**  
  檢閱精靈的用途及必要條件。  
@@ -61,7 +62,7 @@ ms.lasthandoff: 04/11/2017
  本主題稍後將說明 ALTER TABLE 語法。  
   
  **摘要**  
- 檢閱您輸入的值和在精靈中選取的選項。 然後選取 [完成] **** 以啟用 Stretch。  
+ 檢閱您輸入的值和在精靈中選取的選項。 然後選取 [完成]  以啟用 Stretch。  
   
  **結果**  
  檢閱結果。  

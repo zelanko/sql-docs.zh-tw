@@ -18,9 +18,10 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: f1dfb11e842436e8787624e3b16ba178423859b2
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -29,7 +30,7 @@ ms.lasthandoff: 04/11/2017
   
 ## <a name="options"></a>選項。  
 **伺服器類型**  
-從 [物件總管] 註冊伺服器時，選取要連接的伺服器類型： [!INCLUDE[ssDE](../../includes/ssde_md.md)]、Analysis Services、Reporting Services 或 Integration Services。 對話方塊的其他部分僅會顯示適用於所選取伺服器類型的選項。 從已註冊的伺服器註冊伺服器時，[伺服器類型]**** 方塊會呈現唯讀，並會與已註冊的伺服器元件中所顯示的伺服器類型進行比對。 若要註冊不同類型的伺服器，請先從 [已註冊的伺服器] 工具列中選取 [ [!INCLUDE[ssDE](../../includes/ssde_md.md)]]、[Analysis Services]、[Reporting Services] 或 [Integration Services]，再開始註冊新的伺服器。  
+從 [物件總管] 註冊伺服器時，選取要連接的伺服器類型： [!INCLUDE[ssDE](../../includes/ssde_md.md)]、Analysis Services、Reporting Services 或 Integration Services。 對話方塊的其他部分僅會顯示適用於所選取伺服器類型的選項。 從已註冊的伺服器註冊伺服器時，[伺服器類型] 方塊會呈現唯讀，並會與已註冊的伺服器元件中所顯示的伺服器類型進行比對。 若要註冊不同類型的伺服器，請先從 [已註冊的伺服器] 工具列中選取 [ [!INCLUDE[ssDE](../../includes/ssde_md.md)]]、[Analysis Services]、[Reporting Services] 或 [Integration Services]，再開始註冊新的伺服器。  
   
 **伺服器名稱**  
 您要連接之報表伺服器執行個體的伺服器模式會決定您必須輸入的值。  
@@ -45,10 +46,10 @@ ms.lasthandoff: 04/11/2017
 使用您的 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows 認證連接到報表伺服器執行個體。  
   
 **基本驗證**  
-如果您的 Reporting Services 安裝設定為使用基本驗證，請使用 [基本驗證]**** 來連接。  
+如果您的 Reporting Services 安裝設定為使用基本驗證，請使用 [基本驗證] 來連接。  
   
 **表單驗證**  
-如果您的 Reporting Services 安裝設定為使用自訂驗證延伸模組，請使用 [表單驗證]**** 來連接。  
+如果您的 Reporting Services 安裝設定為使用自訂驗證延伸模組，請使用 [表單驗證] 來連接。  
   
 **使用者名稱**  
 請輸入連接將使用的登入名稱。 唯有選取 **[基本驗證]** 或 **[表單驗證]**時，才能使用此選項。  
@@ -57,7 +58,7 @@ ms.lasthandoff: 04/11/2017
 請輸入使用者名稱的密碼。 唯有選取 **[基本驗證]** 或 **[表單驗證]**時，才能編輯此選項。  
   
 **記住密碼**  
-請儲存您輸入的密碼。 您必須按一下 [選項]**** 才會顯示此選項，而且只有在選取使用 [基本]**** 或 [表單驗證]**** 進行連線時，才可編輯此選項。  
+請儲存您輸入的密碼。 您必須按一下 [選項] 才會顯示此選項，而且只有在選取使用 [基本] 或 [表單驗證] 進行連線時，才可編輯此選項。  
   
 **Connect**  
 連接到選取的伺服器。  

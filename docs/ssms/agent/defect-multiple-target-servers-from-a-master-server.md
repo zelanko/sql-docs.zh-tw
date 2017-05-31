@@ -21,9 +21,10 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: d24f986e0274592b8984c9bf5d493261781b8f77
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -36,7 +37,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 **[物件總管]**中，展開設定為主要伺服器的伺服器。  
   
-2.  在 [SQL Server Agent]****，再指向 [多伺服器管理]****，然後按一下 [管理目標伺服器]****。  
+2.  在 [SQL Server Agent]，再指向 [多伺服器管理]，然後按一下 [管理目標伺服器]。  
   
 3.  按一下 **[公佈指示]**，然後在 **[指示類型]** 清單中選取 **[脫離]**。  
   

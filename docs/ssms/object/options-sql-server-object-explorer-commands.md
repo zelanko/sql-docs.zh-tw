@@ -16,9 +16,10 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: da27431ddc8718e711bc4c4a0d0ced4fca1106c8
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -33,7 +34,7 @@ ms.lasthandoff: 04/11/2017
   
     在 Visual Database Tools 中開啟已填入 200 個資料列的資料表。  
   
-使用 [一般指令碼選項]**** 對話方塊，以變更將會開啟的資料列數目。  
+使用 [一般指令碼選項] 對話方塊，以變更將會開啟的資料列數目。  
   
 ## <a name="general-scripting-options"></a>一般指令碼選項  
 **[選取前 <n> 筆稽核記錄] 命令的值**  

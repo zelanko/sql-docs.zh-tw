@@ -19,9 +19,10 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 7cc7f7c8972fae08c956db86f95250d830fba39b
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -45,7 +46,7 @@ ms.lasthandoff: 04/11/2017
 |在資料表或表格化物件的資料行之間移動|方向鍵|要移至的資料行|  
 |選擇選取的資料行以供輸出|空白鍵或加號鍵|資料行名稱旁邊的核取方塊|  
 |從查詢輸出中移除選取的資料行|空白鍵或減號鍵|資料行名稱旁邊的核取方塊|  
-|從查詢中移除選取的資料表、表格化物件或聯結線|DELETE|按一下滑鼠右鍵，再選擇 [移除]****。|  
+|從查詢中移除選取的資料表、表格化物件或聯結線|DELETE|按一下滑鼠右鍵，再選擇 [移除]。|  
   
 > [!NOTE]  
 > 如果選取多個項目，按下此按鍵會影響所有選取的項目。 按住 CTRL 鍵，同時在要選取的各項目上按一下滑鼠，即可選取多個項目。  
@@ -80,7 +81,7 @@ ms.lasthandoff: 04/11/2017
 如需詳細資訊，請參閱[準則窗格 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)。  
   
 ## <a name="sql-pane"></a>SQL 窗格  
-在 SQL 窗格中工作時，可使用標準的 Windows 編輯鍵 (例如 CTRL + 方向鍵) 在文字間移動，以及 [編輯]**** 功能表上的 [剪下]****、[複製]**** 和 [貼上]**** 命令。  
+在 SQL 窗格中工作時，可使用標準的 Windows 編輯鍵 (例如 CTRL + 方向鍵) 在文字間移動，以及 [編輯] 功能表上的 [剪下]、[複製] 和 [貼上] 命令。  
   
 > [!NOTE]  
 > 您只能插入文字；沒有覆寫模式。  

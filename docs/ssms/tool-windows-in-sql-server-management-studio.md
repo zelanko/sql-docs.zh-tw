@@ -17,9 +17,10 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 106bcdf98b6b7979d0fd24921fd506459748fc46
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -29,9 +30,9 @@ ms.lasthandoff: 04/11/2017
 |||  
 |-|-|  
 |**工具**|**目的**|  
-|[物件總管](../ssms/object/object-explorer.md)|瀏覽伺服器、建立和尋找物件、管理資料來源，以及檢視記錄。 此工具可從 [檢視]**** 功能表加以存取。|  
-|[方案總管](../ssms/solution/solution-explorer.md)|儲存和組織稱為 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] 指令碼之專案中的指令碼和相關連接資訊。 您可以將許多 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] 指令碼儲存成方案，當指令碼隨著時間而進展時，您可以利用原始檔控制來管理它們。 此工具可從 [檢視]**** 功能表加以存取。|  
-|[範本總管](../ssms/template/template-explorer.md)|根據現有的範本來建立查詢。 您也可以建立您的自訂查詢，或變更現有的範本來配合您的狀況。 此工具可從 [檢視]**** 功能表加以存取。|  
+|[物件總管](../ssms/object/object-explorer.md)|瀏覽伺服器、建立和尋找物件、管理資料來源，以及檢視記錄。 此工具可從 [檢視] 功能表加以存取。|  
+|[方案總管](../ssms/solution/solution-explorer.md)|儲存和組織稱為 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] 指令碼之專案中的指令碼和相關連接資訊。 您可以將許多 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] 指令碼儲存成方案，當指令碼隨著時間而進展時，您可以利用原始檔控制來管理它們。 此工具可從 [檢視] 功能表加以存取。|  
+|[範本總管](../ssms/template/template-explorer.md)|根據現有的範本來建立查詢。 您也可以建立您的自訂查詢，或變更現有的範本來配合您的狀況。 此工具可從 [檢視] 功能表加以存取。|  
 |[動態說明](../ssms/user-assistance-in-sql-server-management-studio.md)|在您按一下元件或類型程式碼時，顯示一份相關說明主題的清單。|  
   
 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] 中的各項工具能夠協同運作。 例如，您可以執行下列動作：  

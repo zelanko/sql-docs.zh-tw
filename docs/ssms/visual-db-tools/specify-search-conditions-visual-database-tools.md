@@ -18,9 +18,10 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 30a1677cec766fd17fb80447548341fc73f99edc
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -40,9 +41,9 @@ ms.lasthandoff: 04/11/2017
   
 1.  如果尚未這麼做，請將想要在搜尋條件中使用的資料行或運算式加入至 [準則] 窗格中。  
   
-    如果您正在建立選取查詢，而不想讓搜尋資料行或運算式出現在查詢輸出中，請清除每一個搜尋資料行或運算式的 [輸出]**** 欄位，將它們當成輸出資料行而加以移除。  
+    如果您正在建立選取查詢，而不想讓搜尋資料行或運算式出現在查詢輸出中，請清除每一個搜尋資料行或運算式的 [輸出] 欄位，將它們當成輸出資料行而加以移除。  
   
-2.  尋找包含想要搜尋之資料行或運算式的資料列，然後在 [篩選條件]**** 欄位中輸入搜尋條件。  
+2.  尋找包含想要搜尋之資料行或運算式的資料列，然後在 [篩選條件] 欄位中輸入搜尋條件。  
   
     > [!NOTE]  
     > 如果尚未輸入運算子，[查詢和檢視設計師] 會自動插入相等運算子「=」。  

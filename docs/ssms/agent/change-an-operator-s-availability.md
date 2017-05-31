@@ -26,9 +26,10 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: e99e3aff2a9e1225aff4388f33eb4e9da8c34174
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -64,9 +65,9 @@ ms.lasthandoff: 04/11/2017
   
 3.  按一下加號展開 **[操作員]** 資料夾。  
   
-4.  以滑鼠右鍵按一下要啟用或停用的操作員並選取 [屬性]****，然後按一下 [一般]**** 索引標籤。  
+4.  以滑鼠右鍵按一下要啟用或停用的操作員並選取 [屬性]，然後按一下 [一般] 索引標籤。  
   
-5.  在 [<操作員名稱> 屬性]****** 對話方塊中，選取或清除 [已啟用]**** 核取方塊。  
+5.  在 [<操作員名稱> 屬性] 對話方塊中，選取或清除 [已啟用] 核取方塊。  
   
 6.  按一下 **[確定]**。  
   
@@ -78,7 +79,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] ****。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
   
     ```  
     -- disables the 'François Ajenstat' operator  

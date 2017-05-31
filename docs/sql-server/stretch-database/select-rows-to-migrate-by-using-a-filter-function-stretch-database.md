@@ -20,9 +20,10 @@ caps.latest.revision: 43
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 097d613e8732823d91d660f6e8a0c1f6d749fb39
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -204,7 +205,7 @@ ALTER TABLE SensorTelemetry
   
 ## <a name="addafterwiz"></a>在執行精靈後新增篩選函數  
   
-如果您想要使用無法在 [啟用資料庫的延展功能精靈]**** 中建立的函數，您可以在結束精靈後，執行 **ALTER TABLE** 陳述式來指定函數。 不過，您必須先停止已經在進行中的資料移轉並回復已移轉的資料，才能套用函數。 (如需為什麼必須這麼做的詳細資訊，請參閱 [取代現有的篩選函數](#replacePredicate)。)
+如果您想要使用無法在 [啟用資料庫的延展功能精靈] 中建立的函數，您可以在結束精靈後，執行 **ALTER TABLE** 陳述式來指定函數。 不過，您必須先停止已經在進行中的資料移轉並回復已移轉的資料，才能套用函數。 (如需為什麼必須這麼做的詳細資訊，請參閱 [取代現有的篩選函數](#replacePredicate)。)
   
 1. 反轉移轉方向並回復已經移轉的資料。 這項作業開始之後，即無法將其取消。 您也會因輸出資料傳輸 (輸出) 而在 Azure 上產生費用。 如需詳細資訊，請參閱 [Azure 定價機制](https://azure.microsoft.com/pricing/details/data-transfers/)。  
   
@@ -213,7 +214,7 @@ ALTER TABLE SensorTelemetry
         SET ( REMOTE_DATA_ARCHIVE ( MIGRATION_STATE = INBOUND ) ) ;   
     ```  
   
-2. 等待移轉完成。 您可以在 SQL Server Management Studio 的 [延展資料庫監視器]**** 中或查詢 **sys.dm_db_rda_migration_status** 檢視，來查看狀態。 如需詳細資訊，請參閱[資料移轉的監視及疑難排解](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md)或 [sys.dm_db_rda_migration_status](../../relational-databases/system-dynamic-management-views/stretch-database-sys-dm-db-rda-migration-status.md)。  
+2. 等待移轉完成。 您可以在 SQL Server Management Studio 的 [延展資料庫監視器] 中或查詢 **sys.dm_db_rda_migration_status** 檢視，來查看狀態。 如需詳細資訊，請參閱[資料移轉的監視及疑難排解](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md)或 [sys.dm_db_rda_migration_status](../../relational-databases/system-dynamic-management-views/stretch-database-sys-dm-db-rda-migration-status.md)。  
   
 3. 建立您想要套用至資料表的篩選函數。  
   

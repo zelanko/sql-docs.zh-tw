@@ -16,9 +16,10 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: dc46da89f0cc905c743da8900e0a1b58feb478fc
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -71,7 +72,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  按一下加號展開 **[SQL Server Agent]**。  
   
-3.  以滑鼠右鍵按一下 [Proxy]**** 資料夾，然後選取 [新增 Proxy]****。  
+3.  以滑鼠右鍵按一下 [Proxy] 資料夾，然後選取 [新增 Proxy]。  
   
 4.  在 **[新 Proxy 帳戶]** 對話方塊，於 **[一般]** 頁面上的 **[Proxy 名稱]** 方塊中輸入 Proxy 帳戶的名稱。  
   

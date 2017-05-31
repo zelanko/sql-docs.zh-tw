@@ -20,9 +20,10 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 5bfe05dde95b8fdb47893ea17802b0798de9762a
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -58,9 +59,9 @@ ms.lasthandoff: 04/11/2017
   
 3.  按一下加號展開 **[警示]** 資料夾。  
   
-4.  以滑鼠右鍵按一下您想要檢視其資訊的警示，然後選取 [屬性]****。  
+4.  以滑鼠右鍵按一下您想要檢視其資訊的警示，然後選取 [屬性]。  
   
-    如需 [<警示名稱> 警示屬性]****** 對話方塊中之可用選項的詳細資訊，請參閱：  
+    如需 [<警示名稱> 警示屬性] 對話方塊中之可用選項的詳細資訊，請參閱：  
   
     -   [警示屬性 - 新增警示 &amp;#40;一般頁面&amp;#41;](../../ssms/agent/alert-properties-new-alert-general-page.md)  
   

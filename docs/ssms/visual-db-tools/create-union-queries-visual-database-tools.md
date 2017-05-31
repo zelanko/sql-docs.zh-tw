@@ -20,9 +20,10 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 6c1ec545f2175067a3e4d6f9f625356607cb0eb4
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -48,7 +49,7 @@ UNION 關鍵字讓您可以在所產生的單一資料表中，包含 2 個 SELE
     FROM dbo.Gloves;  
     ```  
   
-3.  在 [查詢設計工具]**** 功能表中，按一下 [執行 SQL]**** 來執行查詢。  
+3.  在 [查詢設計工具] 功能表中，按一下 [執行 SQL] 來執行查詢。  
   
     查詢設計工具目前已格式化您的 UNION 查詢。  
   

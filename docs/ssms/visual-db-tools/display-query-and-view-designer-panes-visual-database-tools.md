@@ -21,9 +21,10 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 23f1d17f062613ef9c75ee8d7748d3ed72d8d375
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -34,7 +35,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  開啟檢視或建立新的查詢，以開啟查詢和檢視設計工具。  
   
-2.  在 [查詢設計工具]**** 功能表中指向 [窗格]****，然後按一下要開啟的窗格名稱。  
+2.  在 [查詢設計工具] 功能表中指向 [窗格]，然後按一下要開啟的窗格名稱。  
   
 ## <a name="see-also"></a>另請參閱  
 [建立查詢 &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/create-queries-visual-database-tools.md)  

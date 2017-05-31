@@ -24,9 +24,10 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 7a08a632df3d4f6b054f4b60cae2d4befc8c8745
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -62,9 +63,9 @@ HAVING AVG(price) > 10
   
 2.  如果沒有出現在 [準則] 窗格中，加入您想要組成 WHERE 條件的資料行。  
   
-3.  除非資料的資料行是 GROUP BY 子句的一部分，或包含在彙總函式中，否則清除 [輸出]**** 資料行。  
+3.  除非資料的資料行是 GROUP BY 子句的一部分，或包含在彙總函式中，否則清除 [輸出] 資料行。  
   
-4.  在 [篩選條件]**** 資料行中，指定 WHERE 條件。 [查詢和檢視設計師] 會將條件加入到 SQL 陳述式的 HAVING 子句。  
+4.  在 [篩選條件] 資料行中，指定 WHERE 條件。 [查詢和檢視設計師] 會將條件加入到 SQL 陳述式的 HAVING 子句。  
   
     > [!NOTE]  
     > 在這個程序中所顯示的查詢範例聯結了兩個資料表， `titles` 和 `publishers`。  
@@ -79,7 +80,7 @@ HAVING AVG(price) > 10
     HAVING publishers.state = 'CA'  
     ```  
   
-5.  在 [群組依據]**** 資料行中，從群組和摘要選項清單中選擇 [Where]****。 [查詢和檢視設計師] 移除 SQL 陳述式中的 HAVING 子句條件，然後加入到 WHERE 子句。  
+5.  在 [群組依據] 資料行中，從群組和摘要選項清單中選擇 [Where]。 [查詢和檢視設計師] 移除 SQL 陳述式中的 HAVING 子句條件，然後加入到 WHERE 子句。  
   
     SQL 陳述式變更為包含了 WHERE 子句：  
   

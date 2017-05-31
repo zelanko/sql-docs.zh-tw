@@ -17,9 +17,10 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 3380732d0cce979849a41d43567783a6c7df3a71
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -65,11 +66,11 @@ ms.lasthandoff: 04/11/2017
   
 3.  按一下加號展開 **[Proxy]** 資料夾。  
   
-4.  按一下加號展開 Proxy 的子系統節點 (例如，[ActiveX Script]****)。  
+4.  按一下加號展開 Proxy 的子系統節點 (例如，[ActiveX Script])。  
   
-5.  以滑鼠右鍵按一下要修改的 Proxy 帳戶，然後選取 [屬性]****。  
+5.  以滑鼠右鍵按一下要修改的 Proxy 帳戶，然後選取 [屬性]。  
   
-6.  在 [<Proxy 名稱> Proxy 帳戶屬性]****** 對話方塊中，視需要變更 Proxy 帳戶。 如需有關此對話方塊之選項的詳細資訊，請參閱[建立 SQL Server Agent Proxy](../../ssms/agent/create-a-sql-server-agent-proxy.md)。  
+6.  在 [<Proxy 名稱> Proxy 帳戶屬性] 對話方塊中，視需要變更 Proxy 帳戶。 如需有關此對話方塊之選項的詳細資訊，請參閱[建立 SQL Server Agent Proxy](../../ssms/agent/create-a-sql-server-agent-proxy.md)。  
   
 7.  完成後，請按一下 **[確定]**。  
   
@@ -81,7 +82,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] ****。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
   
     ```  
     -- Disables the proxy named 'Catalog application proxy'.  

@@ -20,9 +20,10 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 9afcf20de2220aee5d9be2763a0b274ec738e48c
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -35,7 +36,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  在資料庫連接中展開 [資料庫圖表] 節點。  
   
-3.  如果您要設定資料庫圖表化，可在提示出現時選取 [是]****。  
+3.  如果您要設定資料庫圖表化，可在提示出現時選取 [是]。  
   
     > [!NOTE]  
     > 這會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 資料庫中建立資料庫圖表資料表、系統預存程序和系統函數。  

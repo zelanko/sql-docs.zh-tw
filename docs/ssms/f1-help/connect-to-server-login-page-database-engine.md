@@ -17,9 +17,10 @@ caps.latest.revision: 6
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 1556c7facc4a671767fe2d6c061b4f6655ba521b
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -31,9 +32,9 @@ ms.lasthandoff: 04/11/2017
   
 ## <a name="options"></a>選項。  
 **伺服器類型**  
-從 [物件總管] 註冊伺服器時，選取要連接的伺服器類型： [!INCLUDE[ssDE](../../includes/ssde_md.md)]、Analysis Services、Reporting Services 或 Integration Services。 對話方塊的其他部分僅會顯示適用於所選取伺服器類型的選項。 從 [已註冊的伺服器] 註冊伺服器時，[伺服器類型]**** 方塊是唯讀的，且會與 [已註冊的伺服器] 元件中所顯示的伺服器類型相符。 若要註冊不同類型的伺服器，請先從 [已註冊的伺服器] 工具列中選取 [[!INCLUDE[ssDE](../../includes/ssde_md.md)]]、[Analysis Services]、[Reporting Services] 或 [Integration Services]，再開始註冊新的伺服器。  
+從 [物件總管] 註冊伺服器時，選取要連接的伺服器類型： [!INCLUDE[ssDE](../../includes/ssde_md.md)]、Analysis Services、Reporting Services 或 Integration Services。 對話方塊的其他部分僅會顯示適用於所選取伺服器類型的選項。 從 [已註冊的伺服器] 註冊伺服器時，[伺服器類型] 方塊是唯讀的，且會與 [已註冊的伺服器] 元件中所顯示的伺服器類型相符。 若要註冊不同類型的伺服器，請先從 [已註冊的伺服器] 工具列中選取 [[!INCLUDE[ssDE](../../includes/ssde_md.md)]]、[Analysis Services]、[Reporting Services] 或 [Integration Services]，再開始註冊新的伺服器。  
   
-當您透過 [!INCLUDE[ssSDSfull](../../includes/sssdsfull_md.md)] 連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Database Engine 執行個體時，您必須使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 驗證，並在 [連接到伺服器]**** 對話方塊的 [連接屬性]**** 索引標籤上指定資料庫。 請務必選取 [加密連接]**** 核取方塊。  
+當您透過 [!INCLUDE[ssSDSfull](../../includes/sssdsfull_md.md)] 連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Database Engine 執行個體時，您必須使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 驗證，並在 [連接到伺服器] 對話方塊的 [連接屬性] 索引標籤上指定資料庫。 請務必選取 [加密連接] 核取方塊。  
   
 根據預設，[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 會連接到 **master**。 如果您指定使用者資料庫，您只會在物件總管中看到該資料庫與其物件。 如果您連接到 **master**，您將能夠看到所有資料庫。 如需詳細資訊，請參閱 [Windows Azure SQL Database 概觀](http://go.microsoft.com/fwlink/?LinkId=163948)。  
   
@@ -43,7 +44,7 @@ ms.lasthandoff: 04/11/2017
 **驗證**  
 當連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]的執行個體時，有兩種可用的驗證模式。  
   
-當您透過 [!INCLUDE[ssSDS](../../includes/sssds_md.md)] 連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Database Engine 執行個體時，您必須使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 驗證，並在 [連接到伺服器]**** 對話方塊的 [連接屬性]**** 索引標籤上指定資料庫。 請務必選取 [加密連接]**** 核取方塊。  
+當您透過 [!INCLUDE[ssSDS](../../includes/sssds_md.md)] 連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Database Engine 執行個體時，您必須使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 驗證，並在 [連接到伺服器] 對話方塊的 [連接屬性] 索引標籤上指定資料庫。 請務必選取 [加密連接] 核取方塊。  
   
 根據預設，[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 會連接到 **master**。 如果您指定使用者資料庫，您只會在物件總管中看到該資料庫與其物件。 如果您連接到 **master**，您將能夠看到所有資料庫。 如需詳細資訊，請參閱 [Windows Azure SQL Database 概觀](http://go.microsoft.com/fwlink/?LinkId=163948)。  
   
@@ -66,7 +67,7 @@ Azure Active Directory 驗證機制使用 Azure Active Directory (Azure AD) 中�
 Azure Active Directory 驗證機制使用 Azure Active Directory (Azure AD) 中的身分識別連接至 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssSDSfull](../../includes/sssdsfull_md.md)] 。 如果您使用來自同盟網域的 Azure Active Directory 認證登入 Windows，請使用此方法連接至 [!INCLUDE[ssSDS](../../includes/sssds_md.md)] 。 如需詳細資訊，請參閱 [使用 Azure Active Directory 驗證連線到 SQL 資料庫](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)。  
   
 **使用者名稱**  
-要用來連接的 Windows 使用者名稱。 這個選項只有在您選取了使用 [Active Directory 密碼驗證]****連接時才可以使用。 當您選取 [Windows 驗證]**** 時它是唯讀的。  
+要用來連接的 Windows 使用者名稱。 這個選項只有在您選取了使用 [Active Directory 密碼驗證]連接時才可以使用。 當您選取 [Windows 驗證] 時它是唯讀的。  
   
 **登入**  
 輸入要用來連接的登入。 這個選項只有在您選取了使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 驗證連接時才可以使用。  
