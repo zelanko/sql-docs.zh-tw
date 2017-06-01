@@ -59,7 +59,7 @@ ms.lasthandoff: 04/11/2017
   
 -   當您選取邏輯記錄層級追蹤時，如果在一個以上的複寫節點對相同邏輯記錄中的任何資料列進行變更，則該變更會被視為衝突 (對應資料列中受影響的資料行不需要相同)。  
   
- 如需詳細資訊，請參閱 [Detecting and Resolving Conflicts in Logical Records](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-resolving-in-logical-record.md)。  
+ 如需詳細資訊，請參閱 [偵測和解決邏輯記錄中的衝突](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-resolving-in-logical-record.md)。  
   
  若要指定發行項的衝突追蹤與解決層級，請參閱＜ [指定合併發行項的衝突追蹤與解決層級](../../../relational-databases/replication/publish/specify-the-conflict-tracking-and-resolution-level-for-merge-articles.md)＞。  
   
@@ -85,11 +85,11 @@ ms.lasthandoff: 04/11/2017
   
 -   以 COM 為基礎的自訂解析程式  
   
-     合併式複寫提供一個 API，用於以 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vcprvc](../../../includes/vcprvc-md.md)] 或 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]等語言將解析程式撰寫為 COM 物件。 如需詳細資訊，請參閱 [COM-Based Custom Resolvers](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md)。  
+     合併式複寫提供一個 API，用於以 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vcprvc](../../../includes/vcprvc-md.md)] 或 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]等語言將解析程式撰寫為 COM 物件。 如需詳細資訊，請參閱 [以 COM 為基礎的自訂解析程式](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md)。  
   
 -   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 提供的 COM 為基礎的解析程式。  
   
-     [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] includes a number of COM-based resolvers. 如需詳細資訊，請參閱 [Microsoft COM-Based Resolvers](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md)。  
+     [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 包含多個以 COM 為基礎的解析程式。 如需詳細資訊，請參閱 [以 COM 為基礎的 Microsoft 解析程式](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md)。  
   
  如需如何選取適當解析程式類型的詳細資訊，請參閱[選擇解析程式](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-choose-a-resolver.md)。  
   
@@ -100,10 +100,10 @@ ms.lasthandoff: 04/11/2017
   
 -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Specify a Merge Subscription Type and Conflict Resolution Priority &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/specify-a-merge-subscription-type-and-conflict-resolution-priority.md)  
   
--   複寫 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 程式設計與 Replication Management Objects (RMO) 程式設計： [Create a Pull Subscription](../../../relational-databases/replication/create-a-pull-subscription.md) 和 [Create a Push Subscription](../../../relational-databases/replication/create-a-push-subscription.md)  
+-   複寫 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 程式設計與 Replication Management Objects (RMO) 程式設計： [建立提取訂閱](../../../relational-databases/replication/create-a-pull-subscription.md) 和 [建立發送訂閱](../../../relational-databases/replication/create-a-push-subscription.md)  
   
 ### <a name="interactive-resolver"></a>互動解析程式  
- 複寫提供「互動解析程式」使用者介面，可與預設的優先權式衝突解析程式或發行項解析程式一起使用。 透過 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows Synchronization Manager 執行視需要的同步處理時，「互動解析程式」會在執行階段顯示衝突資料，並讓您選擇如何解決衝突。 如需有關如何啟用互動式解決及啟動「互動解析程式」的詳細資訊，請參閱＜ [Interactive Conflict Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md)＞。  
+ 複寫提供「互動解析程式」使用者介面，可與預設的優先權式衝突解析程式或發行項解析程式一起使用。 透過 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows Synchronization Manager 執行視需要的同步處理時，「互動解析程式」會在執行階段顯示衝突資料，並讓您選擇如何解決衝突。 如需有關如何啟用互動式解決及啟動「互動解析程式」的詳細資訊，請參閱＜ [互動式衝突解決](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md)＞。  
   
 ## <a name="viewing-conflicts"></a>檢視衝突  
  檢視衝突最直接的方法是使用「複寫衝突檢視器」，該檢視器可從 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 取得 ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 也提供允許查詢衝突資料表的預存程序)。 「衝突檢視器」和「互動解析程式」是類似的工具，不過「互動解析程式」可讓您在同步處理發生時解決衝突，而「衝突解析程式」是設計用來在已解決衝突後檢視衝突。 如果系統資料表中仍有可用的衝突中繼資料 (衝突中繼資料依預設會保留 14 天)，您可以在「衝突檢視器」中覆寫衝突解決結果，不過如果經常需要直接介入，請考慮使用「互動解析程式」。  
