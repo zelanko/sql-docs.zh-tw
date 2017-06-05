@@ -37,7 +37,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  在散發者上安裝 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] OLE DB Provider for DB2 的最新版本：  
   
-    -   如果您使用的是 [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)] Enterprise Edition，請在 [SQL Server 下載](http://go.microsoft.com/fwlink/?LinkId=149256)網頁的 [Related Downloads] \(相關下載) 區段中，按一下最新版 Microsoft SQL Server 功能套件的連結。**** 在 **Microsoft SQL Server 功能套件**網頁上，搜尋 **Microsoft OLE DB Provider for DB2**。  
+    -   如果您使用的是 [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)] Enterprise Edition，請在 [SQL Server 下載](http://go.microsoft.com/fwlink/?LinkId=149256)網頁的 [Related Downloads] \(相關下載) 區段中，按一下最新版 Microsoft SQL Server 功能套件的連結。 在 **Microsoft SQL Server 功能套件**網頁上，搜尋 **Microsoft OLE DB Provider for DB2**。  
   
     -   如果您使用的是 [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)] Standard Edition，請安裝 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Host [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] (HIS) 伺服器的最新版本，其中就包含此提供者。  
   

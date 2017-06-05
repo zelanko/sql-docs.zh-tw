@@ -32,7 +32,7 @@ ms.lasthandoff: 04/11/2017
   
 
   ## <a name="how-to-view-the-logs"></a>如何檢視記錄檔
-1.  在 SSMS 中，選取物件總管****
+1.  在 SSMS 中，選取物件總管
 
 >**開啟** 物件總管：鍵盤快速鍵是 **F8**。 或者，在上層功能表上，按一下 [檢視]/物件總管 ![Object_explorer](../../relational-databases/performance/media/object-explorer.png) 
 

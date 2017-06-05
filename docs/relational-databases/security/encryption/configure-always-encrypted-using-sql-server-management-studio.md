@@ -443,10 +443,10 @@ SQL Server Management Studio 將會發出 [ALTER COLUMN ENCRYPTION KEY (Transact
 
 | 狀況|來源連接組態|    目標連接組態
 |:---|:---|:---
-|在移轉時加密資料 (資料會以純文字形式儲存在資料來源中，並移轉至資料目標的加密資料行中)。| 資料提供者/驅動程式︰任何 **<br><br>資料行加密設定 = 已停用<br><br>(如果使用 SqlServer 和 .NET Framework 4.6 或更新版本的 .Net Framework 資料提供者。) | 資料提供者/驅動程式︰ *SqlServer 的 .Net Framework 資料提供者* (需要 .NET Framework 4.6 或更新版本)<br><br>資料行加密設定 = 已啟用
-| 在移轉時解密資料 (資料會儲存在資料來源的加密資料行中，並且以純文字形式移轉至資料目標；如果資料目標是資料庫，則不會加密目標資料行)。<br><br>**注意：** 移轉之前，必須要有具有加密資料行的目標資料表。|資料提供者/驅動程式︰ *SqlServer 的 .Net Framework 資料提供者* (需要 .NET Framework 4.6 或更新版本)<br><br>資料行加密設定 = 已啟用|資料提供者/驅動程式︰任何 **<br><br>資料行加密設定 = 已停用<br><br>(如果使用 SqlServer 和 .NET Framework 4.6 或更新版本的 .Net Framework 資料提供者。)
+|在移轉時加密資料 (資料會以純文字形式儲存在資料來源中，並移轉至資料目標的加密資料行中)。| 資料提供者/驅動程式︰任何 <br><br>資料行加密設定 = 已停用<br><br>(如果使用 SqlServer 和 .NET Framework 4.6 或更新版本的 .Net Framework 資料提供者。) | 資料提供者/驅動程式︰ *SqlServer 的 .Net Framework 資料提供者* (需要 .NET Framework 4.6 或更新版本)<br><br>資料行加密設定 = 已啟用
+| 在移轉時解密資料 (資料會儲存在資料來源的加密資料行中，並且以純文字形式移轉至資料目標；如果資料目標是資料庫，則不會加密目標資料行)。<br><br>**注意：** 移轉之前，必須要有具有加密資料行的目標資料表。|資料提供者/驅動程式︰ *SqlServer 的 .Net Framework 資料提供者* (需要 .NET Framework 4.6 或更新版本)<br><br>資料行加密設定 = 已啟用|資料提供者/驅動程式︰任何 <br><br>資料行加密設定 = 已停用<br><br>(如果使用 SqlServer 和 .NET Framework 4.6 或更新版本的 .Net Framework 資料提供者。)
 |在移轉時重新加密資料 (資料會儲存在資料來源的加密資料行中，並且以純文字形式移轉至資料目標中使用不同加密類型之資料行加密金鑰的資料行)。<br><br>**注意：** 移轉之前，必須要有具有加密資料行的目標資料表。| 資料提供者/驅動程式︰ *SqlServer 的 .Net Framework 資料提供者* (需要 .NET Framework 4.6 或更新版本)<br><br>資料行加密設定 = 已啟用|資料提供者/驅動程式︰ *SqlServer 的 .Net Framework 資料提供者* (需要 .NET Framework 4.6 或更新版本)<br><br>資料行加密設定 = 已啟用
-|移動加密資料，而未進行解密。<br><br>**注意：** 移轉之前，必須要有具有加密資料行的目標資料表。| 資料提供者/驅動程式︰任何 **<br>資料行加密設定 = 已停用<br><br>(如果使用 SqlServer 和 .NET Framework 4.6 或更新版本的 .Net Framework 資料提供者。)| 資料提供者/驅動程式︰任何 **<br>資料行加密設定 = 已停用<br><br>(如果使用 SqlServer 和 .NET Framework 4.6 或更新版本的 .Net Framework 資料提供者。)<br><br>使用者必須將 ALLOW_ENCRYPTED_VALUE_MODIFICATIONS 設成 ON。<br><br>如需詳細資訊，請參閱 [移轉透過永遠加密保護的敏感性資料](../../../relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md)。
+|移動加密資料，而未進行解密。<br><br>**注意：** 移轉之前，必須要有具有加密資料行的目標資料表。| 資料提供者/驅動程式︰任何 <br>資料行加密設定 = 已停用<br><br>(如果使用 SqlServer 和 .NET Framework 4.6 或更新版本的 .Net Framework 資料提供者。)| 資料提供者/驅動程式︰任何 <br>資料行加密設定 = 已停用<br><br>(如果使用 SqlServer 和 .NET Framework 4.6 或更新版本的 .Net Framework 資料提供者。)<br><br>使用者必須將 ALLOW_ENCRYPTED_VALUE_MODIFICATIONS 設成 ON。<br><br>如需詳細資訊，請參閱 [移轉透過永遠加密保護的敏感性資料](../../../relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md)。
 
 
 ### <a name="permissions"></a>Permissions

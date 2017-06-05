@@ -266,7 +266,7 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="define-the-update-statistics-task"></a>定義更新統計資料工作  
   
-1.  在 **[定義更新統計資料工作]** 頁面上，定義要更新其中資料表和索引統計資料的資料庫。 此工作會使用 `UPDATE STATISTICS` 陳述式。 如需詳細資訊，請參閱[更新統計資料 &#40;TRANSACT-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md) 完成時，請按一下 [下一步]****  
+1.  在 **[定義更新統計資料工作]** 頁面上，定義要更新其中資料表和索引統計資料的資料庫。 此工作會使用 `UPDATE STATISTICS` 陳述式。 如需詳細資訊，請參閱[更新統計資料 &#40;TRANSACT-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md) 完成時，請按一下 [下一步]  
   
      此頁面提供下列選項。  
   
@@ -316,7 +316,7 @@ ms.lasthandoff: 04/11/2017
      這個記錄可以幫助您疑難排解失敗的維護計畫作業，或判斷資料庫動作為何發生。  
   
      **移除早於下列時限的記錄資料**  
-     指定您想要刪除的項目之存在時間。 您可以指定 [小時]、[天]、[週] (預設)、[月] 或 [年]****  
+     指定您想要刪除的項目之存在時間。 您可以指定 [小時]、[天]、[週] (預設)、[月] 或 [年]  
   
 #### <a name="define-the-execute-agent-job-task"></a>定義執行代理程式作業工作  
   

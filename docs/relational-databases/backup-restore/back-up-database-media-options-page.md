@@ -90,7 +90,7 @@ ms.lasthandoff: 04/11/2017
  即使發生一或多個錯誤，備份作業也會繼續執行。  
   
 ### <a name="transaction-log"></a>交易記錄  
- [交易記錄] 面板的選項控制交易記錄備份的行為。 只有在完整復原模式或大量記錄復原模式之下，這些選項才具有相關性。 只有在 [備份資料庫] 對話方塊的 [[一般](../../relational-databases/backup-restore/back-up-database-general-page.md)] 頁面中的 [備份類型] 欄位中，選取 [交易記錄] 後，才會啟動這些選項。****  
+ [交易記錄] 面板的選項控制交易記錄備份的行為。 只有在完整復原模式或大量記錄復原模式之下，這些選項才具有相關性。 只有在 [備份資料庫] 對話方塊的 [[一般](../../relational-databases/backup-restore/back-up-database-general-page.md)] 頁面中的 [備份類型] 欄位中，選取 [交易記錄] 後，才會啟動這些選項。  
   
 > [!NOTE]  
 >  如需交易記錄備份的相關資訊，請參閱[交易記錄備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)。  
@@ -99,12 +99,12 @@ ms.lasthandoff: 04/11/2017
  備份交易記錄並截斷，以釋放記錄空間。 資料庫仍維持在線上。 這是預設選項。  
   
  **備份記錄的結尾，並讓資料庫保持在還原狀態**  
- 備份記錄的結尾，並讓資料庫保持在還原狀態。 此選項會建立「結尾記錄備份」，其會為尚未備份的記錄 (使用中的記錄) 進行備份，一般而言，是為還原資料庫做準備。** 資料庫完全還原之前，使用者無法使用資料庫。  
+ 備份記錄的結尾，並讓資料庫保持在還原狀態。 此選項會建立「結尾記錄備份」，其會為尚未備份的記錄 (使用中的記錄) 進行備份，一般而言，是為還原資料庫做準備。 資料庫完全還原之前，使用者無法使用資料庫。  
   
  選取此選項相當於在 [BACKUP](../../t-sql/statements/backup-transact-sql.md) 陳述式 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 中指定 WITH NO_TRUNCATE, NORECOVERY。 如需詳細資訊，請參閱[結尾記錄備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)。  
   
 ### <a name="tape-drive"></a>磁帶機  
- [磁帶機] 面板的選項控制備份作業的磁帶管理。 只有在 [備份資料庫] 對話方塊的 [[一般](../../relational-databases/backup-restore/back-up-database-general-page.md)] 頁面中的 [目的地] 面板中，選取 [磁帶] 後，才會啟動這些選項。****  
+ [磁帶機] 面板的選項控制備份作業的磁帶管理。 只有在 [備份資料庫] 對話方塊的 [[一般](../../relational-databases/backup-restore/back-up-database-general-page.md)] 頁面中的 [目的地] 面板中，選取 [磁帶] 後，才會啟動這些選項。  
   
 > [!NOTE]  
 >  如需有關如何使用磁帶裝置的資訊，請參閱[備份裝置 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)。  

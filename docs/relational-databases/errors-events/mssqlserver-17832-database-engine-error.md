@@ -55,11 +55,11 @@ ms.lasthandoff: 04/11/2017
 > [!CAUTION]  
 > [!INCLUDE[ssNoteRegistry](../../includes/ssnoteregistry-md.md)]  
   
-**變更伺服器電腦上的 MaxTokenSize******  
+**變更伺服器電腦上的 MaxTokenSize**  
   
 1.  在 **[開始]** 功能表上，按一下 **[執行]**。  
   
-2.  輸入 **regedit**，然後按一下 [確定]**** (如果出現 [使用者帳戶控制] 對話方塊，請按一下 [繼續])。  
+2.  輸入 **regedit**，然後按一下 [確定] (如果出現 [使用者帳戶控制] 對話方塊，請按一下 [繼續])。  
   
 3.  巡覽至 **HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Lsa\Kerberos\Parameters**。  
   
