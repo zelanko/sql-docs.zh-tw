@@ -29,7 +29,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 6de5f69f5c5d6fefea0fb3dca7f6b11b3c6c7194
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/05/2017
 
 ---
 # <a name="view-publication-and-subscription-status-in-replication-monitor"></a>在複寫監視器中檢視發行集和訂閱狀態
