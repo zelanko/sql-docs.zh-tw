@@ -29,7 +29,7 @@ SQL Server 和 Azure SQL Database 可讓您使用格式化為 JSON 的文字。 
 ## <a name="store-json-in-memory-optimized-tables"></a>將 JSON 儲存到記憶體最佳化資料表
 下列範例示範具有 `Tags` 和 `Data` 這兩個 JSON 資料行的記憶體最佳化 `Product` 資料表。
 
-```tsql
+```sql
 CREATE SCHEMA xtp;
 GO
 CREATE TABLE xtp.Product(
@@ -54,7 +54,7 @@ SQL Server 和 Azure SQL Database 中提供的新功能可讓您完全整合 JSO
 ## <a name="validate-json-columns"></a>驗證 JSON 資料行
 SQL Server 和 Azure SQL Database 可讓您新增原生編譯 CHECK 條件約束，來驗證字串資料行中所儲存的 JSON 文件內容，如下列範例所示。
 
-```tsql
+```sql
 DROP TABLE IF EXISTS xtp.Product;
 GO
 CREATE TABLE xtp.Product(
@@ -72,7 +72,7 @@ CREATE TABLE xtp.Product(
 
 在包含 JSON 資料行的現有資料表上，可以新增原生編譯 CHECK 條件約束：
 
-```tsql
+```sql
 ALTER TABLE xtp.Product
     ADD CONSTRAINT [Data should be JSON]
         CHECK (ISJSON(Data)=1)
@@ -87,7 +87,7 @@ ALTER TABLE xtp.Product
 -   產品的製作國家/地區。
 -   產品製造成本。
 
-```tsql
+```sql
 DROP TABLE IF EXISTS xtp.Product;
 GO
 CREATE TABLE xtp.Product(
@@ -108,7 +108,7 @@ CREATE TABLE xtp.Product(
 ## <a name="index-values-in-json-columns"></a>編製 JSON 資料行中值的索引
 SQL Server 和 Azure SQL Database 可讓您使用記憶體最佳化索引來編製 JSON 資料行中值的索引。 必須公開要編製索引的 JSON 值，並使用計算資料行將其設為強型別，如下列範例所示。
 
-```tsql
+```sql
 DROP TABLE IF EXISTS xtp.Product;
 GO
 CREATE TABLE xtp.Product(
@@ -136,7 +136,7 @@ ALTER TABLE Product
 ## <a name="native-compilation-of-json-queries"></a>JSON 查詢的原生編譯
 最後，原生編譯 Transact-SQL 程序、函式和觸發程序包含使用 JSON 函式進行的查詢，可提高查詢的效能，並減少執行程序所需的 CPU 循環。 下列範例示範使用下列數個 JSON 函式的原生編譯程序：JSON_VALUE、OPENJSON 和 JSON_MODIFY。
 
-```tsql
+```sql
 CREATE PROCEDURE xtp.ProductList(@ProductIds nvarchar(100))
 WITH SCHEMABINDING, NATIVE_COMPILATION
 AS BEGIN

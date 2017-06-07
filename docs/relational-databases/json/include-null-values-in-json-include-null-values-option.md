@@ -42,7 +42,7 @@ ms.lasthandoff: 04/11/2017
   
  **查詢**  
   
-```tsql  
+```sql  
 SELECT name, surname  
 FROM emp  
 FOR JSON AUTO, INCLUDE_NULL_VALUES    

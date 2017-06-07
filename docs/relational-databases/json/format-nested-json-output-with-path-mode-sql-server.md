@@ -42,7 +42,7 @@ FOR JSON PATH 子句會使用資料行別名或資料行名稱判斷 JSON 輸出
 
  **查詢**  
   
-```tsql  
+```sql  
 SELECT TOP 5   
        BusinessEntityID As Id,  
        FirstName, LastName,  
@@ -93,7 +93,7 @@ SELECT TOP 5
   
  **查詢**  
   
-```tsql  
+```sql  
 SELECT TOP 2 SalesOrderNumber AS 'Order.Number',  
         OrderDate AS 'Order.Date',  
         UnitPrice AS 'Product.Price',  

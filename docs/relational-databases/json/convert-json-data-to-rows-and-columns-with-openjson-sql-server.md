@@ -48,7 +48,7 @@ JSON 物件的每個屬性或陣列的每個元素，都會以個別資料列的
 以下是簡單的範例，其使用 **OPENJSON** 與預設結構描述，並傳回 JSON 物件每個屬性的一個資料列。  
  
 **範例**
-```tsql  
+```sql  
 DECLARE @json NVARCHAR(MAX)
 
 SET @json='{"name":"John","surname":"Doe","age":45,"skills":["SQL","C#","MVC"]}';
@@ -80,7 +80,7 @@ FROM OPENJSON(@json);
   
 **範例**
   
-```tsql  
+```sql  
 DECLARE @json NVARCHAR(MAX)
 SET @json =   
   N'[  
