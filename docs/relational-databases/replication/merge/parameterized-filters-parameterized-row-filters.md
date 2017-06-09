@@ -28,7 +28,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: c16383cadde524f23f8a6b94a14c282666856780
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/05/2017
 
 ---
 # <a name="parameterized-filters---parameterized-row-filters"></a>參數化篩選 - 參數化資料列篩選
@@ -104,7 +104,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
   
  使用下列方法其中一之來覆寫 HOST_NAME() 值：  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: specify a value on the **HOST\_NAME\(\) Values** page of the New Subscription Wizard. For more information about creating subscriptions, see [Subscribe to Publications](../../../relational-databases/replication/subscribe-to-publications.md).  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]：在 [新增訂閱精靈] 的 [HOST\_NAME\(\) 值] 頁面上指定一個值。 如需建立訂閱的詳細資訊，請參閱[訂閱發行集](../../../relational-databases/replication/subscribe-to-publications.md)。  
   
 -   複寫 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 程式設計︰指定 [sp_addmergesubscription &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md) (適用於發送訂閱) 或 [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) (適用於提取訂閱) 的 **@hostname** 參數值。  
   
@@ -191,6 +191,6 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
 ## <a name="see-also"></a>另請參閱  
  [以時間為基礎之資料列篩選的最佳做法](../../../relational-databases/replication/merge/best-practices-for-time-based-row-filters.md)   
  [篩選發行的資料](../../../relational-databases/replication/publish/filter-published-data.md)   
- [合併式複寫之篩選發行資料](../../../relational-databases/replication/merge/filter-published-data-for-merge-replication.md)  
+ [針對合併式複寫篩選發行的資料](../../../relational-databases/replication/merge/filter-published-data-for-merge-replication.md)  
   
   

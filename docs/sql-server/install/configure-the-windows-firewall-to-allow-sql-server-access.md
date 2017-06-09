@@ -1,7 +1,7 @@
 ---
 title: "設定 Windows 防火牆以允許 SQL Server 存取 | Microsoft Docs"
 ms.custom: 
-ms.date: 05/13/2016
+ms.date: 05/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -28,18 +28,20 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: fb4cb189914d6636b76816490e9d38f9f4240101
+ms.sourcegitcommit: c4cd6d86cdcfe778d6b8ba2501ad4a654470bae7
+ms.openlocfilehash: 5849c0c3d38756795a7aef83b04e95eb0ffcc305
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/05/2017
 
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  防火牆系統有助於預防未經授權存取電腦資源。 如果防火牆已開啟，但是設定不正確，則嘗試連接至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的行為可能會被封鎖。  
+ > 如需舊版 SQL Server 的相關內容，請參閱[設定 Windows 防火牆以允許 SQL Server 存取](https://msdn.microsoft.com/en-US/library/cc646023(SQL.120).aspx)。
+
+防火牆系統有助於預防未經授權存取電腦資源。 如果防火牆已開啟，但是設定不正確，則嘗試連接至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的行為可能會被封鎖。  
   
- 若要透過防火牆存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體，您必須在執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的電腦上，將防火牆設定成允許存取。 防火牆是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 的元件。 您也可以安裝來自其他公司的防火牆。 雖然本主題將討論如何設定 Windows 防火牆，但是基本原則也適用於其他防火牆程式。  
+若要透過防火牆存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體，您必須在執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的電腦上設定防火牆。 防火牆是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 的元件。 您也可以安裝來自其他公司的防火牆。 雖然本主題將討論如何設定 Windows 防火牆，但是基本原則也適用於其他防火牆程式。  
   
 > [!NOTE]  
 >  本主題會提供防火牆組態的概觀，並且摘要列出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理員感興趣的資訊。 如需有關防火牆的詳細資訊以及授權的防火牆資訊，請參閱防火牆文件集，例如 [具有進階安全性的 Windows 防火牆和 IPsec](http://go.microsoft.com/fwlink/?LinkID=116904)。  
@@ -51,35 +53,6 @@ ms.lasthandoff: 04/11/2017
 -   [設定 Windows 防火牆以允許 Analysis Services 存取](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)  
   
 -   [設定供報表伺服器存取的防火牆](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)  
-  
-## <a name="in-this-topic"></a>本主題內容  
- 本主題具有下列章節：  
-  
- [基本防火牆資訊](#BKMK_basic)  
-  
- [預設防火牆設定](#BKMK_default)  
-  
- [設定防火牆的程式](#BKMK_programs)  
-  
- [Database Engine 所使用的通訊埠](#BKMK_ssde)  
-  
- [Analysis Services 所使用的通訊埠](#BKMK_ssas)  
-  
- [Reporting Services 所使用的通訊埠](#BKMK_ssrs)  
-  
- [Integration Services 所使用的通訊埠](#BKMK_ssis)  
-  
- [其他通訊埠和服務](#BKMK_additional_ports)  
-  
- [與其他防火牆規則的互動](#BKMK_other_rules)  
-  
- [防火牆設定檔的概觀](#BKMK_profiles)  
-  
- [使用控制台中的 Windows 防火牆項目進行其他防火牆設定](#BKMK_additional_settings)  
-  
- [使用具有進階安全性的 Windows 防火牆嵌入式管理單元](#BKMK_WF_msc)  
-  
- [疑難排解防火牆設定](#BKMK_troubleshooting)  
   
 ##  <a name="BKMK_basic"></a> 基本防火牆資訊  
  防火牆的運作方式是檢查內送封包，以及針對一組規則比較這些封包。 如果這些規則允許封包，防火牆就會將該封包傳遞給 TCP/IP 通訊協定，進行其他處理。 如果這些規則不允許封包，防火牆就會捨棄該封包，而且如果啟用記錄的話，還會在防火牆記錄檔中建立項目。  
@@ -105,34 +78,9 @@ ms.lasthandoff: 04/11/2017
 >  開啟防火牆將會影響存取此電腦的其他程式，例如檔案及列印共用，以及遠端桌面連接。 調整防火牆設定之前，管理員應該考慮在電腦上執行的所有應用程式。  
   
 ##  <a name="BKMK_programs"></a> 設定防火牆的程式  
- 有三種方式可設定 Windows 防火牆設定。  
-  
--   **控制台中的 Windows 防火牆項目**  
-  
-     您可以從 [控制台] 開啟 **[Windows 防火牆]** 項目。  
-  
-    > [!IMPORTANT]  
-    >  在 [控制台] 之 **[Windows 防火牆]** 項目中進行的變更只會影響目前的設定檔。 筆記型電腦等行動裝置不應該使用 [控制台] 中的 **[Windows 防火牆]** 項目，因為此設定檔可能會在不同的組態中連接時變更。 然後，先前設定的設定檔將不會生效。 如需有關設定檔的詳細資訊，請參閱＜ [具有進階安全性的 Windows 防火牆入門指南](http://go.microsoft.com/fwlink/?LinkId=116080)＞。  
-  
-     [控制台] 中的 **[Windows 防火牆]** 項目可讓您設定一些基本選項。 這些選項包括：  
-  
-    -   開啟或關閉 [控制台] 中的 **[Windows 防火牆]** 項目。  
-  
-    -   啟用和停用規則  
-  
-    -   授與通訊埠和程式的例外  
-  
-    -   設定某些範圍限制  
-  
-     [控制台] 中的 **[Windows 防火牆]** 項目最適合沒有防火牆組態設定經驗的使用者，以及針對非行動式電腦設定基本防火牆選項的使用者。 您也可以使用下列程序，透過 **run** 命令開啟 [控制台] 中的 [Windows 防火牆]  項目：  
-  
-    #### <a name="to-open-the-windows-firewall-item"></a>開啟 Windows 防火牆項目  
-  
-    1.  在 **[開始]** 功能表按一下 **[執行]**，然後輸入 `firewall.cpl`。  
-  
-    2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
-  
--   **Microsoft Management Console (MMC)**  
+您可以使用 **Microsoft Management Console** 或 **netsh** 來設定 Windows 防火牆設定。  
+
+-  **Microsoft Management Console (MMC)**  
   
      [具有進階安全性的 Windows 防火牆] MMC 嵌入式管理單元可讓您設定更多進階的防火牆設定。 這個嵌入式管理單元會以容易使用的方式呈現大部分防火牆選項，而且它會呈現所有防火牆設定檔。 如需詳細資訊，請參閱本主題稍後的 [Using the Windows Firewall with Advanced Security Snap-in](#BKMK_WF_msc) (使用具有進階安全性的 Windows 防火牆嵌入式管理單元)。  
   
@@ -185,18 +133,29 @@ ms.lasthandoff: 04/11/2017
   
  另一種設定具名執行個體接聽固定通訊埠的方法，是在防火牆中為 **sqlservr.exe** (適用於[!INCLUDE[ssDE](../../includes/ssde-md.md)]) 一類的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 程式建立例外狀況。 雖然這樣很方便，但當您使用具有進階安全性的 Windows 防火牆 MMC 嵌入式管理單元時，通訊埠編號將不會顯示在 [輸入規則] 頁面的 [本機通訊埠] 資料行中。 如此一來可能會讓您更難以稽核哪些通訊埠已開啟。 其他考量是 Service Pack 或累積更新可能會變更 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可執行檔的路徑，因而使防火牆規則失效。  
   
-> [!NOTE]  
->  下列程序會使用 [控制台] 中的 **[Windows 防火牆]** 項目。 [具有進階安全性的 Windows 防火牆] MMC 嵌入式管理單元可以設定更複雜的規則。 這包括設定服務例外，以便用於提供深度防禦。 請參閱下面的 [使用具有進階安全的 Windows 防火牆性嵌入式管理單元](#BKMK_WF_msc) 。  
+##### <a name="to-add-a-program-exception-to-the-firewall-using-windows-firewall-with-advanced-security"></a>使用具有進階安全性的 Windows 防火牆，將程式例外新增至防火牆
   
-###### <a name="to-add-a-program-exception-to-the-firewall-using-the-windows-firewall-item-in-control-panel"></a>使用控制台中的 Windows 防火牆項目，將程式例外加入至防火牆  
-  
-1.  在 [控制台] 中，於 **[Windows 防火牆]** 項目的 **[例外]** 索引標籤上，按一下 **[新增程式]**。  
-  
-2.  瀏覽至您要允許其通過防火牆之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的位置，例如 **C:\Program Files\Microsoft SQL Server\MSSQL13.<instance_name>\MSSQL\Binn**，選取 **sqlservr.exe**，然後按一下 [開啟]。  
-  
-3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
-  
- 如需端點的詳細資訊，請參閱[設定 Database Engine 接聽多個 TCP 通訊埠](../../database-engine/configure-windows/configure-the-database-engine-to-listen-on-multiple-tcp-ports.md)和[端點目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)。  
+1. 從 [開始] 功能表，鍵入 *wf.msc*。 按一下 [具有進階安全性的 Windows 防火牆]。
+
+1. 在左窗格中，按一下 [輸入規則]。
+
+1. 在右窗格的 [動作] 下，按一下 [新增規則...]。 [新增輸入規則精靈] 隨即開啟。
+
+1. 在 [規則類型] 上，按一下 [程式]。 按一下 **[下一步]**。
+
+1. 在 [程式] 上，按一下 [這個程式路徑]。 按一下 [瀏覽] 找出您的 SQL Server 執行個體。 此程式稱為 sqlservr.exe。 它通常位於：
+
+   `C:\Program Files\Microsoft SQL Server\MSSQL13.<InstanceName>\MSSQL\Binn\sqlservr.exe`
+
+   按一下 **[下一步]**。
+
+1. 在 [動作] 上，按一下 [允許連線]。  
+
+1. 在 [設定檔] 中，加入所有三個設定檔。 按一下 **[下一步]**。
+
+1. 在 [名稱] 上，輸入規則的名稱。 按一下 **[完成]**。
+
+如需端點的詳細資訊，請參閱[設定 Database Engine 接聽多個 TCP 通訊埠](../../database-engine/configure-windows/configure-the-database-engine-to-listen-on-multiple-tcp-ports.md)和[端點目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)。 
   
 ###  <a name="BKMK_ssas"></a> Analysis Services 所使用的通訊埠  
  下表將列出 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]常用的通訊埠。  
@@ -213,14 +172,14 @@ ms.lasthandoff: 04/11/2017
  如需設定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的 Windows 防火牆之逐步解說指示，請參閱 [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)(設定 Windows 防火牆以允許 Analysis Services 存取)。  
   
 ###  <a name="BKMK_ssrs"></a> Reporting Services 所使用的通訊埠  
- 下表將列出 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]常用的通訊埠。  
+下表將列出 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]常用的通訊埠。  
   
 |功能|通訊埠|註解|  
 |-------------|----------|--------------|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web 服務|TCP 通訊埠 80|用於透過 URL 進行 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的 HTTP 連接。 建議您不要使用預先設定的規則 **World Wide Web 服務 (HTTP)**。 如需詳細資訊，請參閱下面的「 [與其他防火牆規則的互動](#BKMK_other_rules) 」一節。|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 設定成可透過 HTTPS 使用|TCP 通訊埠 443|用於透過 URL 進行 HTTPS 連接。 HTTPS 是使用安全通訊端層 (SSL) 的 HTTP 連接。 建議您不要使用預先設定的規則 **Secure World Wide Web 服務 (HTTPS)**。 如需詳細資訊，請參閱下面的「 [與其他防火牆規則的互動](#BKMK_other_rules) 」一節。|  
   
- 當 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 連接至 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 或 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的執行個體時，您也必須針對這些服務開啟適當的通訊埠。 如需設定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Windows 防火牆的逐步指示， [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)(設定報表伺服器存取的防火牆)。  
+當 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 連接至 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 或 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的執行個體時，您也必須針對這些服務開啟適當的通訊埠。 如需設定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Windows 防火牆的逐步指示， [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)(設定報表伺服器存取的防火牆)。  
   
 ###  <a name="BKMK_ssis"></a> Integration Services 所使用的通訊埠  
  下表將列出 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務所使用的通訊埠。  
@@ -229,10 +188,10 @@ ms.lasthandoff: 04/11/2017
 |-------------|----------|--------------|  
 |[!INCLUDE[msCoName](../../includes/msconame-md.md)] 遠端程序呼叫 (MS RPC)<br /><br /> 由 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 執行階段所使用。|TCP 通訊埠 135<br /><br /> 請參閱「 [通訊埠 135 的特殊考量](#BKMK_port_135)」|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務會在通訊埠 135 上使用 DCOM。 服務控制管理員會使用通訊埠 135 來執行一些工作，例如啟動和停止 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務，以及將控制要求傳送至執行中服務。 您無法變更此通訊埠編號。<br /><br /> 只有當您要從 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 或自訂應用程式連接至 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 服務的遠端執行個體時，才需要開啟這個通訊埠。|  
   
- 如需針對 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 設定「Windows 防火牆」的逐步指示，請參閱 [Integration Services 服務 &#40;SSIS Service&#41;](../../integration-services/service/integration-services-service-ssis-service.md)。  
+如需針對 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 設定「Windows 防火牆」的逐步指示，請參閱 [Integration Services 服務 &#40;SSIS Service&#41;](../../integration-services/service/integration-services-service-ssis-service.md)。  
   
 ###  <a name="BKMK_additional_ports"></a> 其他通訊埠和服務  
- 下表將列出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可能會相依的通訊埠和服務。  
+下表將列出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可能會相依的通訊埠和服務。  
   
 |狀況|通訊埠|註解|  
 |--------------|----------|--------------|  
@@ -289,7 +248,7 @@ ms.lasthandoff: 04/11/2017
 > [!NOTE]  
 >  使用 [控制台] 中的 [Windows 防火牆] 項目只會設定目前的防火牆設定檔。  
   
-#### <a name="to-change-the-scope-of-a-firewall-exception-using-the-windows-firewall-item-in-control-panel"></a>使用控制台中的 Windows 防火牆項目來變更防火牆例外的範圍  
+### <a name="to-change-the-scope-of-a-firewall-exception-using-the-windows-firewall-item-in-control-panel"></a>使用控制台中的 Windows 防火牆項目來變更防火牆例外的範圍  
   
 1.  在 [控制台] 的 **[Windows 防火牆]** 中，選取 **[例外]** 索引標籤上的程式或通訊埠，然後按一下 **[內容]** 或 **[編輯]**。  
   
@@ -328,7 +287,7 @@ ms.lasthandoff: 04/11/2017
   
 -   針對內送連接要求 IPsec  
   
-#### <a name="to-create-a-new-firewall-rule-using-the-new-rule-wizard"></a>使用新增規則精靈來建立新的防火牆規則  
+### <a name="to-create-a-new-firewall-rule-using-the-new-rule-wizard"></a>使用新增規則精靈來建立新的防火牆規則  
   
 1.  在 [開始] 功能表上、按一下 **[執行]**輸入 **WF.msc**，然後按一下 **[確定]**。  
   

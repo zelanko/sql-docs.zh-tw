@@ -19,16 +19,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5ac612d72c1a82d49a7cfcf41aa9aa2989ee25b2
+ms.sourcegitcommit: c0e55c0e35039490f0ce4cd8a7fb6d7e232c05aa
+ms.openlocfilehash: 9555085ef832e4277da89e062aa28872b5eeb4fe
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/05/2017
 
 ---
 # <a name="configure-iis-for-web-synchronization"></a>針對 Web 同步處理設定 IIS
   本主題中的程序，會構成設定合併式複寫之 Web 同步處理時所採取的第二個步驟。 請在啟用 Web 同步處理的發行集之後執行這個步驟。 如需組態處理序的概觀，請參閱＜ [[設定 Web 同步處理]](../../relational-databases/replication/configure-web-synchronization.md)＞。 完成本主題中的程序之後，請繼續執行第三個步驟，即設定訂閱來使用 Web 同步處理。 第三個步驟在下列主題中描述：  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [How to: Configure a Subscription to Use Web Synchronization \(SQL Server Management Studio\)](http://msdn.microsoft.com/library/ms345214.aspx)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]：[如何：設定訂閱來使用 Web 同步處理\(SQL Server Management Studio\)](http://msdn.microsoft.com/library/ms345214.aspx)  
   
 -   複寫 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式設計： [如何：將訂閱設定為使用 Web 同步處理 (複寫 Transact-SQL 程式設計)](http://msdn.microsoft.com/library/ms345206.aspx)  
   
@@ -133,7 +133,7 @@ ms.lasthandoff: 04/11/2017
     > [!NOTE]  
     >  您指定的網站提供 Web 同步處理所使用之元件的存取權。 網站不提供其他資料或網頁的存取權，除非您將網站設定為必須提供。  
   
--   建立虛擬目錄及其相關聯的別名。 別名在存取 Web 同步處理元件時使用。 例如，如果 IIS 位址為 https://*server.domain.com* ，且您指定別名 'websync1'，則存取 replisapi.dll 元件的位址便為 https://*server.domain.com*/websync1/replisapi.dll。  
+-   建立虛擬目錄及其相關聯的別名。 別名在存取 Web 同步處理元件時使用。 例如，若 IIS 位址為 `https://server.domain.com` 且您指定別名為 'websync1'，則存取 replisapi.dll 元件的位址為 `https://server.domain.com/websync1/replisapi.dll`。  
   
 -   使用基本驗證。 我們建議您使用基本驗證，因為，基本驗證可讓您在不同的電腦上執行 IIS 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者/散發者 (建議的組態)，而不需要 Kerberos 委派。 搭配基本驗證使用 SSL，可以確保登入、密碼及所有資料在傳輸中時都會加密。 (不論採用哪一種驗證類型，都需要 SSL。)如需 Web 同步處理的最佳作法詳細資訊，請參閱[設定 Web 同步處理](../../relational-databases/replication/configure-web-synchronization.md)中的＜Web 同步處理安全性最佳作法＞一節。  
   
@@ -327,7 +327,7 @@ ms.lasthandoff: 04/11/2017
   
     5.  按一下 **[確定]**。  
   
-2.  在訂閱者端的 Internet Explorer 中，將 `?diag` 附加至 replisapi.dll 的位址，以便在診斷模式下連接伺服器。 例如：https://server.domain.com/directory/replisapi.dll?diag。  
+2.  在訂閱者端的 Internet Explorer 中，將 `?diag` 附加至 replisapi.dll 的位址，以便在診斷模式下連接伺服器。 例如： `https://server.domain.com/directory/replisapi.dll?diag`。  
   
 3.  如果 Windows 作業系統無法辨識您先前為 IIS 指定的憑證，則會出現 **[安全性警示]** 對話方塊。 發生此警示的可能是因為該憑證是測試憑證，或者該憑證是由 Windows 無法辨識的憑證授權單位 (CA) 所發行。  
   

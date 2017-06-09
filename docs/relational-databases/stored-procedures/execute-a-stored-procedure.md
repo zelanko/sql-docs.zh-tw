@@ -24,13 +24,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c1e76212425f01aba20c8a0d0fdb548415559be1
+ms.sourcegitcommit: bc2034ac69dee1a72429e94841aec1763703de7c
+ms.openlocfilehash: 75e4f9647c7d19c82fd74caa15775fc3d8a97b12
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/05/2017
 
 ---
 # <a name="execute-a-stored-procedure"></a>執行預存程序
+
+ > 如需舊版 SQL Server 的相關內容，請參閱[執行預存程序](https://msdn.microsoft.com/en-US/library/ms189915(SQL.120).aspx)。
+
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 執行 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的預存程序。  
   
  有兩種不同的方法可執行預存程序。 第一種是最常用的方法，可讓應用程式或使用者呼叫程序。 第二種方法是設定讓程序在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體啟動時自動執行。 當應用程式或使用者呼叫程序時， [!INCLUDE[tsql](../../includes/tsql-md.md)] EXECUTE 或 EXEC 關鍵字會在呼叫中明確陳述。 如果程序是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批次中的第一個陳述式，則呼叫和執行程序時也可以不用關鍵字。  
