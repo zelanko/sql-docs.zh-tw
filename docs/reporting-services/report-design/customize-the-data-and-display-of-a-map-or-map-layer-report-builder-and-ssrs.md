@@ -1,36 +1,41 @@
 ---
-title: "自訂地圖或地圖圖層的資料和顯示 (報表產生器及 SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "10521"
-  - "sql13.rtp.rptdesigner.mapgroupproperties.filter.f1"
-  - "10515"
-  - "10512"
-  - "10520"
-  - "sql13.rtp.rptdesigner.shared.font.f1"
-  - "10523"
-  - "sql13.rtp.rptdesigner.mapgroupproperties.general.f1"
-  - "sql13.rtp.rptdesigner.shared.number.f1"
-  - "sql13.rtp.rptdesigner.shared.shadowdv.f1"
-  - "sql13.rtp.rptdesigner.mapgroupproperties.variables.f1"
-  - "10507"
+title: "自訂的資料和顯示的地圖或地圖圖層 （報表產生器及 SSRS） |Microsoft 文件"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- "10521"
+- sql13.rtp.rptdesigner.mapgroupproperties.filter.f1
+- "10515"
+- "10512"
+- "10520"
+- sql13.rtp.rptdesigner.shared.font.f1
+- "10523"
+- sql13.rtp.rptdesigner.mapgroupproperties.general.f1
+- sql13.rtp.rptdesigner.shared.number.f1
+- sql13.rtp.rptdesigner.shared.shadowdv.f1
+- sql13.rtp.rptdesigner.mapgroupproperties.variables.f1
+- "10507"
 ms.assetid: fdd9b994-d138-4990-a291-279b0249eb72
 caps.latest.revision: 13
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 13
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a9751ad1f640181db57e4107ff1debfa510d3b0e
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 自訂地圖或地圖圖層的資料和顯示 (報表產生器及 SSRS)
+# <a name="customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs"></a>自訂地圖或地圖圖層的資料和顯示 (報表產生器及 SSRS)
   使用精靈將地圖或地圖圖層加入至 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表之後，您可能會想要變更地圖在報表中的外觀。 您可以考慮下列構想來進行改善：  
   
 -   若要協助您的使用者了解如何解譯地圖上的資料顯示，您可以加入圖例、色階、標籤，以及工具提示。  
@@ -88,7 +93,7 @@ caps.handback.revision: 13
   
 -   解析度與簡化 在繪製時間與線條和多邊形的詳細外框之間選擇一個平衡點。  
   
- 若要變更這些選項，以滑鼠右鍵按一下地圖檢視區，然後使用[地圖檢視區屬性對話方塊、一般](../Topic/Map%20Viewport%20Properties%20Dialog%20Box,%20General.md)頁面與相關的頁面。  
+ 若要變更這些選項，以滑鼠右鍵按一下地圖檢視區，然後使用 [地圖檢視區屬性對話方塊、一般](http://msdn.microsoft.com/library/6c9c773e-5c56-4571-95ed-8a157cfdfe52) 頁面與相關的頁面。  
   
 ##  <a name="Legends"></a> 變更圖例的選項  
  圖例可協助使用者解譯地圖上的資料。  
@@ -99,7 +104,7 @@ caps.handback.revision: 13
   
 -   若要變更圖例內容或圖例內容的格式，請針對圖層的對應規則變更圖例選項。  
   
- 如需詳細資訊，請參閱[變更地圖圖例、色階與相關的規則 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)。  
+ 如需詳細資訊，請參閱 [變更地圖圖例、色階與相關的規則 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)。  
   
 ##  <a name="Layer"></a> 變更圖層的選項  
  若要顯示地圖的圖層，按一下該地圖來選取它。 [地圖] 窗格隨即出現。 若要變更圖層的選項，以滑鼠右鍵按一下圖層，然後使用快速鍵功能表。  
@@ -123,7 +128,7 @@ caps.handback.revision: 13
   
  群組運算式會指定與空間資料具有關聯性的分析資料如何針對圖層上的每個地圖元素進行彙總。 根據預設，群組運算式是針對空間資料與分析資料之間的關聯性指定的一組符合欄位組。 例如，對於顯示國家或地區之城市位置和人口數多寡的泡泡地圖，符合欄位包含城市名稱 [City] 和地區名稱 [Region]，因為可能會有多個城市擁有相同的名稱。 對應的群組運算式包含兩個欄位：[City] 和 [Region]。  
   
- 如需詳細資訊，請參閱 [Map Tips: How To Import Shapefiles Into SQL Server and Aggregate Spatial Data](http://go.microsoft.com/fwlink/?LinkID=214991) (地圖提示：如何將形狀檔匯入 SQL Server 及彙總空間資料中)。  
+ 如需詳細資訊，請參閱 [Map Tips: How To Import Shapefiles Into SQL Server and Aggregate Spatial Data](http://go.microsoft.com/fwlink/?LinkID=214991)(地圖提示：如何將形狀檔匯入 SQL Server 及彙總空間資料中)。  
   
 ##  <a name="MapElements"></a> 變更圖層上地圖元素的選項  
  在以空間資料為基礎的圖層上，地圖元素為點、線條或多邊形。 您可以為地圖元素設定下列選項。 不會是否內嵌地圖元素，這些選項都會套用到圖層上的所有地圖元素：  
@@ -159,9 +164,9 @@ caps.handback.revision: 13
   
 -   圖層上個別內嵌點、線條或多邊形的覆寫選項。 您所做的變更是永久的。 若要還原這些變更，您必須重新載入圖層的資料。  
   
- 如需詳細資訊，請參閱[使用規則與分析資料更改多邊形、線條與點顯示 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/vary polygon, line, and point display by rules and analytical data.md)。  
+ 如需詳細資訊，請參閱[使用規則與分析資料更改多邊形、線條與點顯示 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)。  
   
-## 請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [地圖精靈與地圖圖層精靈 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)   
  [地圖 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)  
   

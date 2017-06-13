@@ -1,23 +1,28 @@
 ---
-title: "報表設計提示 (報表產生器及 SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "報表設計提示 （報表產生器及 SSRS） |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c1490ff0-5b8a-43c1-8d22-e459395db4f6
 caps.latest.revision: 12
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 12
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0d30cf6d4ad8e2a4903172230469f1ba41bab360
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 報表設計提示 (報表產生器及 SSRS)
+# <a name="report-design-tips-report-builder-and-ssrs"></a>報表設計提示 (報表產生器及 SSRS)
   請採用下列秘訣協助設計您的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分頁報表。  
   
 > [!NOTE]  
@@ -76,9 +81,9 @@ caps.handback.revision: 12
   
     -   **方向鍵** ：移動選取的報表項目。  
   
-    -   **CTRL+方向鍵**：微調選取的報表項目。  
+    -   **CTRL+方向鍵** ：微調選取的報表項目。  
   
-    -   **CTRL+SHIFT+方向鍵**：增加或減少選取報表項目的大小。  
+    -   **CTRL+SHIFT+方向鍵** ：增加或減少選取報表項目的大小。  
   
 -   若要將項目加入至矩形，請使用滑鼠游標的左上尖端指向該項目位於矩形容器的初始位置。 您可以使用鍵盤快速鍵來協助放置選取的物件。 此矩形會自動擴展以容納內含項目的大小。  
   
@@ -101,7 +106,7 @@ caps.handback.revision: 12
   
     -   若要使用 Tablix 資料區內的資料列群組和資料行群組，請從 [群組] 窗格選取該群組。  
   
- 在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 的報表設計師中，您可以從 [屬性] 窗格工具列的下拉式物件清單中選取，也可以從 [文件大綱] 視窗的報表項目階層式檢視中選取。 您可以在這個窗格內選取項目，並查看已在設計介面上選取哪一個項目。 若要開啟 [文件大綱] 視窗，請在 **[檢視]** 功能表中，指向 **[其他視窗]**，然後按一下 **[文件大綱]**。  
+ 在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]的報表設計師中，您可以從 [屬性] 窗格工具列的下拉式物件清單中選取，也可以從 [文件大綱] 視窗的報表項目階層式檢視中選取。 您可以在這個窗格內選取項目，並查看已在設計介面上選取哪一個項目。 若要開啟 [文件大綱] 視窗，請在 **[檢視]** 功能表中，指向 **[其他視窗]**，然後按一下 **[文件大綱]**。  
   
 ##  <a name="ReportItems"></a> 使用特定類型的報表項目  
   
@@ -145,7 +150,7 @@ caps.handback.revision: 12
   
 -   如果您打算將報表儲存成 .pdf 檔案，報表寬度必須明確設定為某個值，這個值會在匯出檔案格式中提供您想要的結果。 例如，您可以將報表頁面寬度設定為剛好 7.9375 英吋，而將左邊界和右邊界設定為 0.5 英吋。  
   
--   若要在列印相容檢視中轉譯報表，請使用報表檢視器工具列上的 [整頁模式] 和 [版面設定]。 若要協助移除不想要的水平頁面，請進行下列動作：  
+-   若要在列印相容檢視中轉譯報表，請使用報表檢視器工具列上的 **[整頁模式]** 和 **[版面設定]** 。 若要協助移除不想要的水平頁面，請進行下列動作：  
   
     1.  移除資料區與報表邊緣之間的所有額外空白。  
   
@@ -157,7 +162,7 @@ caps.handback.revision: 12
   
  這種行為、報表項目的寬度和高度屬性、報表主體的大小、頁面高度和頁面寬度定義、父報表的邊界設定以及轉譯器特有的分頁支援都會一起決定哪些報表項目會一起容納在轉譯的頁面上。 如需詳細資訊，請參閱 [Reporting Services 中的分頁 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)。  
   
-## 請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [SQL Server 2016 的報表產生器](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
  [Reporting Services 教學課程 &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)   
  [報表產生器教學課程](../../reporting-services/report-builder-tutorials.md)  

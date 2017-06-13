@@ -1,29 +1,34 @@
 ---
-title: "監視 Reporting Services 訂閱 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "訂閱 [Reporting Services]，非使用中"
-  - "訂閱 [Reporting Services]，狀態"
-  - "監視 [Reporting Services]，訂閱"
-  - "狀態資訊 [Reporting Services]"
-  - "非使用中訂閱 [Reporting Services]"
+title: "監視 Reporting Services 的訂用帳戶 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- subscriptions [Reporting Services], inactive
+- subscriptions [Reporting Services], status
+- monitoring [Reporting Services], subscriptions
+- status information [Reporting Services]
+- inactive subscriptions [Reporting Services]
 ms.assetid: 054c4a87-60bf-4556-9a8c-8b2d77a534e6
 caps.latest.revision: 36
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 36
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 388c564367a3eaeb3f7e0f58f07997079322040d
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 監視 Reporting Services 訂閱
+# <a name="monitor-reporting-services-subscriptions"></a>監視 Reporting Services 訂閱
   您可以透過使用者介面、Windows PowerShell 或記錄檔來監視 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 訂閱。 您可以使用的監視選項取決於正在執行的報表伺服器模式。  
   
 ||  
@@ -49,23 +54,23 @@ caps.handback.revision: 36
 |------------|-----------------|  
 |新增訂閱|出現在第一次建立訂閱時。|  
 |非使用中|出現在無法處理訂閱時。 如需詳細資訊，請參閱此主題稍後的＜管理非使用中訂閱＞。|  
-|完成：已處理 \<數目> 個 (總共 \<數目> 個)；\<數目> 個錯誤。|顯示資料驅動訂閱執行的狀態；此訊息來自排程與傳遞處理器。|  
-|\<*數目*> (已處理)|排程與傳遞處理器已成功傳遞或已不再嘗試傳遞的通知數目。 當資料驅動傳遞完成時，已處理的通知數目應該和產生的通知總數相等。|  
-|\<*數目*> (總共)|訂閱最後一次傳遞所產生的通知總數。|  
-|\<*數目*> 個錯誤|排程與傳遞處理器無法傳遞或已不再嘗試傳遞的通知數目。|  
+|完成： \<*數目*> 處理的\<*數目*> 總計。\<*數目*> 錯誤。|顯示資料驅動訂閱執行的狀態；此訊息來自排程與傳遞處理器。|  
+|\<*數字*> 處理|排程與傳遞處理器已成功傳遞或已不再嘗試傳遞的通知數目。 當資料驅動傳遞完成時，已處理的通知數目應該和產生的通知總數相等。|  
+|\<*數字*> 總計|訂閱最後一次傳遞所產生的通知總數。|  
+|\<*數字*> 錯誤|排程與傳遞處理器無法傳遞或已不再嘗試傳遞的通知數目。|  
 |傳送郵件失敗：傳輸無法連接到伺服器。|指出報表伺服器未連接到郵件伺服器；此訊息來自電子郵件傳遞延伸模組。|  
-|檔案 \<檔案名稱> 已寫入 \<路徑>。|指出已成功傳遞到檔案共用位置；此訊息來自檔案共用傳遞延伸模組。|  
+|檔案\< *filename*> 已寫入至\<路徑 >。|指出已成功傳遞到檔案共用位置；此訊息來自檔案共用傳遞延伸模組。|  
 |寫入檔案時發生未知的錯誤。|指出未成功傳遞到檔案共用位置；此訊息來自檔案共用傳遞延伸模組。|  
-|無法連接到目的資料夾，\<路徑>。 請確認目的資料夾或檔案共用存在。|指出找不到所指定的資料夾；此訊息來自檔案共用傳遞延伸模組。|  
-|檔案 \<檔案名稱> 無法寫入 \<路徑>。 正在嘗試重試。|指出無法以較新版本進行檔案更新；此訊息來自檔案共用傳遞延伸模組。|  
-|無法寫入檔案 \<檔案名稱>：\<訊息>|指出未成功傳遞到檔案共用位置；此訊息來自檔案共用傳遞延伸模組。|  
-|\<自訂狀態訊息>|關於傳遞成功與傳遞失敗的狀態訊息，是由傳遞延伸模組所提供。 如果您使用協力廠商或自訂傳遞延伸模組，就可能會提供其他的狀態訊息。|  
+|無法連接到目的資料夾，\<路徑 >。 請確認目的資料夾或檔案共用存在。|指出找不到所指定的資料夾；此訊息來自檔案共用傳遞延伸模組。|  
+|檔案\<檔名 > 無法寫入\<路徑 >。 正在嘗試重試。|指出無法以較新版本進行檔案更新；此訊息來自檔案共用傳遞延伸模組。|  
+|無法寫入檔案\<檔案名稱 >:\<訊息 >|指出未成功傳遞到檔案共用位置；此訊息來自檔案共用傳遞延伸模組。|  
+|\<自訂狀態訊息 >|關於傳遞成功與傳遞失敗的狀態訊息，是由傳遞延伸模組所提供。 如果您使用協力廠商或自訂傳遞延伸模組，就可能會提供其他的狀態訊息。|  
   
- 報表伺服器管理員也可以監視目前正在處理的標準訂閱。 無法監視資料驅動訂閱。 如需詳細資訊，請參閱[管理執行中的處理序](../../reporting-services/subscriptions/manage-a-running-process.md)。  
+ 報表伺服器管理員也可以監視目前正在處理的標準訂閱。 無法監視資料驅動訂閱。 如需詳細資訊，請參閱 [管理執行中的處理序](../../reporting-services/subscriptions/manage-a-running-process.md)。  
   
  如果無法傳遞訂閱 (例如，若郵件伺服器無法使用)，傳遞延伸模組就會重試傳遞。 組態設定會指定嘗試傳遞的次數。 預設值為不重試。 在某些情況下，報表可能會在無資料狀況下處理 (例如，若資料來源為離線)，此時，訊息內文將會說明此一狀況。  
   
-### 原生模式記錄檔  
+### <a name="native-mode-log-files"></a>原生模式記錄檔  
  如果在傳遞期間發生錯誤，就會在報表伺服器追蹤記錄中產生項目。  
   
  報表伺服器管理員可以檢閱 **reportserverservice_\*.log** 檔案，以決定訂閱傳遞狀態。 針對電子郵件傳遞，報表伺服器記錄檔會包括處理以及傳遞到特定電子郵件帳戶的記錄。 下列是記錄檔的預設位置：  
@@ -89,11 +94,11 @@ caps.handback.revision: 36
   
 2.  開啟報表的內容功能表 (**…**)。  
   
-3.  選取展開的功能表選項 (**…**)。  
+3.  選取展開的功能表選項 (**...**)。  
   
 4.  選取 [管理訂閱]   
   
-### SharePoint ULS 記錄檔  
+### <a name="sharepoint-uls-log-files"></a>SharePoint ULS 記錄檔  
  寫入 SharePoint ULS 記錄檔的訂閱相關資訊。 如需設定 ULS 記錄檔之 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 事件的詳細資訊，請參閱[開啟 SharePoint 追蹤記錄的 Reporting Services 事件 &#40;ULS&#41;](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)。  下列是與 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 訂閱相關的範例 ULS 記錄檔項目。  
   
 ||||||||  
@@ -102,7 +107,7 @@ caps.handback.revision: 36
 |5/21/2014 14:34:06:15|應用程式集區：a0ba039332294f40bc4a81544afde01d|SQL Server Reporting Services|報表伺服器電子郵件延伸模組|未預期|(空的)|**Error sending email.** 例外狀況：System.net.mail.smtpexception: 信箱無法使用。 伺服器回應為：5.7.1 用戶端不具權限，無法以此寄件者傳送  於 System.Net.Mail.DataStopCommand.CheckResponse(SmtpStatusCode statusCode, String serverResponse)  於 System.Net.Mail.DataStopCommand.Send(SmtpConnection conn)  於 System.Net.Mail.SmtpClient.Send(MailMessage message)  於 Microsoft.ReportingServices.EmailDeliveryProvider.EmailProvider.Deliver(Notification notification)|  
   
 ##  <a name="bkmk_use_powershell"></a> 使用 PowerShell 監視訂閱  
- 例如，您可以使用 PowerShell 指令碼查看原生模式或 SharePoint 模式訂閱的狀態，請參閱 [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](../../reporting-services/subscriptions/manage subscription owners and run subscription - powershell.md)。  
+ 例如，您可以使用 PowerShell 指令碼查看原生模式或 SharePoint 模式訂閱的狀態，請參閱 [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)。  
   
 ##  <a name="bkmk_manage_inactive"></a> 管理非使用中訂閱  
  如果訂閱變成非使用中，您應該將其刪除，或藉由解決導致無法處理的問題將其重新啟動。 如果發生問題而導致無法處理，訂閱就可能會變成非使用中。 這些條件包括：  
@@ -113,14 +118,14 @@ caps.handback.revision: 36
   
 -   變更報表定義中的參數名稱或資料類型，然後重新發行報表。 如果訂閱包括已不再有效的參數，則訂閱會變成非使用中。  
   
--   變更報表的執行模式 (例如，修改視需要產生的報表，使其以報表執行快照集執行)。 如需詳細資訊，請參閱[設定報表處理屬性](../../reporting-services/report-server/set-report-processing-properties.md)。  
+-   變更報表的執行模式 (例如，修改視需要產生的報表，使其以報表執行快照集執行)。 如需詳細資訊，請參閱 [設定報表處理屬性](../../reporting-services/report-server/set-report-processing-properties.md)。  
   
  非使用中訂閱是由訂閱本身的訊息指出。 訊息包括有關原因和重新啟動訂閱所應採取之步驟的資訊。  
   
  當條件導致訂閱變成非使用中，而報表伺服器執行訂閱時，該訂閱會反映出此事實。 如果訂閱已排程在每星期五的上午 2:00 傳遞報表，而其使用的傳遞延伸模組在星期一的上午 9:00 解除安裝，則直到星期五的上午 2:00，訂閱才會反映出其非使用中的狀態。  
   
-## 請參閱＜  
- [old_建立及管理原生模式報表伺服器的訂閱](http://msdn.microsoft.com/zh-tw/7f46cbdb-5102-4941-bca2-5e0ff9012c6b)   
+## <a name="see-also"></a>請參閱＜  
+ [old_建立及管理原生模式報表伺服器的訂閱](http://msdn.microsoft.com/en-us/7f46cbdb-5102-4941-bca2-5e0ff9012c6b)   
  [訂閱與傳遞 &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
   
   

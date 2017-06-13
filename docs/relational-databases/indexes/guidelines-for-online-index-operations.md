@@ -1,7 +1,7 @@
 ---
 title: "線上索引作業的指導方針 | Microsoft Docs"
 ms.custom: 
-ms.date: 04/09/2017
+ms.date: 04/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -22,10 +22,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 44ef45ea5831186a3b6b7218111444d79ceef128
+ms.sourcegitcommit: cf2d74e423ab96af582d5f420065f9756e671ec2
+ms.openlocfilehash: 508440b3e6cd15d4fb70f933c380e958dad74d56
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="guidelines-for-online-index-operations"></a>線上索引作業的指導方針
@@ -38,6 +38,7 @@ ms.lasthandoff: 04/11/2017
 -   當資料表包含 LOB 資料類型，但這些資料行並未在索引定義中當做索引鍵或非索引鍵 (內含) 資料行使用時，您可以在線上建立非唯一的非叢集索引。  
   
 -   您無法在線上建立、重建或卸除本機暫存資料表的索引。 此限制不適用於全域暫存資料表上的索引。
+- 可以從非預期的失敗，資料庫容錯移轉之後的停止處繼續索引或**暫停**命令。 請參閱[改變索引](../../t-sql/statements/alter-index-transact-sql.md)。 這項功能處於公開預覽版供 SQL Server 2017。
 
 > [!NOTE]  
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的所有版本都無法使用線上索引作業。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本所支援的功能清單，請參閱[版本支援的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
@@ -89,6 +90,30 @@ ms.lasthandoff: 04/11/2017
 ## <a name="transaction-log-considerations"></a>交易記錄考量因素  
  大規模的索引作業，無論是離線或線上執行，都會產生大量資料負載，而很快就填滿了交易記錄。 若要確定可以回復索引作業，在索引作業完成以前，不能截斷交易記錄；不過，在索引作業期間可以備份此記錄。 因此，在索引作業期間，交易記錄必須有足夠的空間，才能儲存索引作業交易與任何並行使用者交易。 如需詳細資訊，請參閱 [索引作業的交易記錄磁碟空間](../../relational-databases/indexes/transaction-log-disk-space-for-index-operations.md)。  
 
+## <a name="resumable-index-rebuild-considerations"></a>可繼續索引重建考量
+
+> [!NOTE]
+> 請參閱[改變索引](../../t-sql/statements/alter-index-transact-sql.md)。 這項功能處於公開預覽版供 SQL Server 2017。
+>
+
+當您執行可繼續線上索引重建時套用下列指導方針：
+-    管理、 規劃和擴充索引的維護期間。 您可以暫停和重新啟動索引重建作業多次，以符合您的維護期間。
+- 從索引重建失敗 （例如資料庫容錯移轉或執行磁碟空間不足） 復原。
+- 當索引作業已暫停，原始索引和磁碟空間，以及需要更新 DML 作業期間，需要新建的一個。
+
+- 可讓 （一般索引，線上索引作業無法執行此作業） 的索引重建作業期間截斷記錄檔的截斷。
+- SORT_IN_TEMPDB = ON 選項不支援
+
+> [!IMPORTANT]
+> 可繼續重建不需要長時間執行的截斷，允許記錄截斷，這項作業和更好的記錄檔空間管理期間保持開啟。 利用新的設計，我們管理所需的資料保留在資料庫與重新啟動擱置作業所需的所有參考。
+>
+
+一般而言，是效能之間沒有差異可繼續和不可繼續擱置的線上索引重建。 當您繼續索引時，更新索引重建作業已暫停：
+- 最常讀取工作負載，是不顯著的效能影響。 
+- 針對以更新為主的工作負載，您可能會遇到的輸送量降低情況 （我們測試小於 10%的顯示降低）。
+
+一般而言，沒有任何差異磁碟重組品質可繼續和不可繼續擱置的線上索引重建。
+ 
 ## <a name="related-content"></a>相關內容  
  [線上索引作業如何運作](../../relational-databases/indexes/how-online-index-operations-work.md)  
   

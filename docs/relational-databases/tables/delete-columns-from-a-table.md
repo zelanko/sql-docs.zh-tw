@@ -1,7 +1,7 @@
 ---
 title: "從資料表中刪除資料行 | Microsoft 文件"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 04/11/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -20,10 +20,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 20aa31c62de21e9718f504538ae4199395a5dab0
+ms.sourcegitcommit: 621185759462020bca20985c3133c93814a1f333
+ms.openlocfilehash: ef0c4b8b66af5dfc46c836fc8c18734609b1301a
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="delete-columns-from-a-table"></a>從資料表中刪除資料行
@@ -66,7 +66,9 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在**物件總管**中，以滑鼠右鍵按一下您想要從中刪除資料行的資料表，然後選擇 [刪除]。  
+2.  在**物件總管 中**，尋找您想要刪除的資料行，與展開至公開的資料行名稱的資料表。 
+
+3.  以滑鼠右鍵按一下您想要刪除，並選擇的資料行**刪除**。  
   
 3.  在 **[刪除物件]** 對話方塊中，按一下 **[確定]**。  
   
@@ -101,3 +103,4 @@ ms.lasthandoff: 04/11/2017
  如需其他範例，請參閱 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)。  
   
 ##  <a name="FollowUp"></a>  
+

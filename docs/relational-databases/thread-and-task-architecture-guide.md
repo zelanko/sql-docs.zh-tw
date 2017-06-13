@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9b66cd3d05632792b851f039aa653c15de18c78b
+ms.sourcegitcommit: 93be3a22ee517f90e65b8c8ba6dcaa8d90ed8515
+ms.openlocfilehash: 3b835536b4f510021f0d966e3214cf1ec5f71f5c
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/07/2017
 
 ---
 # <a name="thread-and-task-architecture-guide"></a>執行緒和工作架構指南
@@ -51,7 +51,6 @@ Affinity Mask 選項是使用 [ALTER SERVER CONFIGURATION](../t-sql/statements/a
 這些系統在將輕量型共用值設定為 1 時，可能會發現效能有稍微增加。
 
 我們不建議您針對例行作業使用 Fiber 模式排程。 這是因為 Fiber 模式可能會抑制一般環境切換的好處而降低效能，而且 SQL Server 的某些元件無法在 Fiber 模式下正確運作。 如需詳細資訊，請參閱＜輕量型共用＞。
-
 
 ## <a name="thread-and-fiber-execution"></a>執行緒和 Fiber 執行
 
@@ -94,15 +93,14 @@ SQL Server 不會在新增 CPU 之後自動開始使用這些 CPU。 這樣可�
 
 在具有許多 CPU 的電腦上，您可以暫時將資料庫的復原模式設定為大量記錄或簡單復原模式，藉此改善建立或重建索引等索引作業的效能。 這些索引作業可能會產生重要的記錄活動，而且記錄競爭可能會影響 SQL Server 所選擇之平行處理原則的最佳程度 (DOP)。
 
-此外，請考慮針對這些作業調整平行處理原則的最大程度 (MAXDOP) 設定。 下列指導方針是以內部測試為基礎，而且屬於一般建議。 您應該嘗試多種不同的 MAXDOP 設定，以便決定適合您環境的最佳設定。
+此外，請考慮調整**最大平行程度 (MAXDOP)**這些作業的伺服器組態選項。 下列指導方針是以內部測試為基礎，而且屬於一般建議。 您應該嘗試多種不同的 MAXDOP 設定，以便決定適合您環境的最佳設定。
 
 * 若為完整復原模式，請將「平行處理原則的最大程度」選項的值限制為 8 或更小的值。   
 * 若為大量記錄模式或簡單復原模式，您就應該考慮將「平行處理原則的最大程度」選項的值設定為高於 8 的值。   
 * 若為已設定 NUMA 的伺服器，平行處理原則的最大程度就不應該超過指派給每個 NUMA 節點的 CPU 數目。 這是因為查詢很可能會使用來自 1 個 NUMA 節點的本機記憶體，以便改善記憶體存取時間。  
-* 若為已啟用超執行緒且為 2009 年或之前製造的伺服器，MAXDOP 值就不應該超過實體處理器的數目。  
+* 針對具有超執行緒的伺服器已啟用，而且已在 2009年製造早 （之前已經改進，超執行緒的功能），MAXDOP 值就不應該超過實體處理器，而不是邏輯處理器的數目。
 
-
-如需平行處理原則的最大程度選項的詳細資訊，請參閱 [設定平行處理原則的最大程度選項](../relational-databases/policy-based-management/set-the-max-degree-of-parallelism-option-for-optimal-performance.md)。
+如需 max degree of parallelism 選項的詳細資訊，請參閱[設定 max degree of parallelism 伺服器組態選項](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。
 
 ### <a name="setting-the-maximum-number-of-worker-threads"></a>設定工作者執行緒的數目上限
 
@@ -120,17 +118,17 @@ SQL Server 不會在新增 CPU 之後自動開始使用這些 CPU。 這樣可�
 
 下表將列出 SQL Server 元件並指出它們是否能使用超過 64 個 CPU。
 
-|程序名稱    |可執行的程式    |使用超過 64 個 CPU |  
+|程序名稱   |可執行的程式 |使用超過 64 個 CPU |  
 |----------|----------|----------|  
-|SQL Server Database Engine    |Sqlserver.exe    |是 |  
-|Reporting Services    |Rs.exe    |否 |  
-|Analysis Services    |As.exe    |否 |  
-|Integration Services    |Is.exe    |否 |  
-|Service Broker    |Sb.exe    |否 |  
-|全文檢索搜尋    |Fts.exe    |否 |  
-|SQL Server Agent    |Sqlagent.exe    |否 |  
-|Transact-SQL    |Ssms.exe    |否 |  
-|SQL Server 安裝程式    |Setup.exe    |否 |  
+|SQL Server Database Engine |Sqlserver.exe  |是 |  
+|Reporting Services |Rs.exe |否 |  
+|Analysis Services  |As.exe |否 |  
+|Integration Services   |Is.exe |否 |  
+|Service Broker |Sb.exe |否 |  
+|全文檢索搜尋   |Fts.exe    |否 |  
+|SQL Server Agent   |Sqlagent.exe   |否 |  
+|Transact-SQL   |Ssms.exe   |否 |  
+|SQL Server 安裝程式   |Setup.exe  |否 |  
 
 
 

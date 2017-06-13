@@ -1,42 +1,51 @@
 ---
-title: "處理訂閱 (Web 入口網站) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "使用訂閱 （入口網站） |Microsoft 文件"
+ms.custom: 
+ms.date: 05/25/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 09e8ece5-0200-41f2-87c1-9fab19e261be
 caps.latest.revision: 6
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 5
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 72e0abad76008b445fe32a9fed3cb4522ab64af2
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 處理訂閱 (Web 入口網站)
+# <a name="working-with-subscriptions-web-portal"></a>處理訂閱 (Web 入口網站)
+
+[!INCLUDE[ssrs-appliesto-sql2016-preview](../includes/ssrs-appliesto-sql2016-preview.md)]
+
 使用 [訂閱] 頁面即可列出目前報表的所有訂閱。 如果您擁有足夠的權限 (如同「管理所有訂閱」工作所表示)，就可以檢視所有使用者的訂閱。 否則，此頁面只會顯示您擁有的訂閱。  
   
 建立新訂閱之前，您必須確認報表資料來源是否使用預存認證。 使用 [資料來源屬性] 頁面即可儲存認證。  
   
-> [!NOTE] 需要啟動 SQL Server Agent 服務。   
+> [!NOTE]
+> 需要啟動 SQL Server Agent 服務。   
   
 ![ssRSWebPortal-subscriptions1](../reporting-services/media/ssrswebportal-subscriptions1.png)  
    
-選取報表的**省略符號 (…)**，並選取 [管理]，然後選取 [訂閱]，即可到達 [訂閱] 頁面。  
+您可以藉由選取 [訂閱] 頁面來取得**省略符號 （...）**的報表，請選取**管理**，然後選取**訂閱**。  
   
 從 [訂閱] 頁面中，您可以選取 [+ 新增訂閱] 來建立新的訂閱。 您也可以編輯現有訂閱，或刪除所選取的訂閱。  
   
 此頁面也會在 [結果] 資料行上提供訂閱執行的結果狀態。 如果訂閱發生錯誤，請先檢查結果資料行，查看訊息為何。  
   
-## 建立或編輯訂閱  
+## <a name="creating-or-editing-a-subscription"></a>建立或編輯訂閱  
 使用 [新增訂閱] 或 [編輯訂閱] 頁面，即可在報表中建立新的訂閱或修改現有的訂閱。 這個頁面的此選項隨著您的角色指派而改變。 具有進階權限的使用者可以使用額外的選項。  
   
 可自主式執行的報表支援訂閱。 報表至少必須使用預存認證或無認證。 如果報表使用參數，就必須指定預設值。 如果您變更報表執行設定或移除參數屬性的預設值，就可能會造成訂閱停用。 如需詳細資訊，請參閱 [建立和管理原生模式報表伺服器的訂閱]。  
   
-### 訂閱的類型  
+### <a name="type-of-subscription"></a>訂閱的類型  
 您可以選取 [標準訂閱] 和 [資料驅動訂閱]。  
   
 ![ssRSWebPortal-subscriptions3](../reporting-services/media/ssrswebportal-subscriptions3.png)  
@@ -47,7 +56,7 @@ caps.handback.revision: 5
   
 此選項可供具有進階權限的使用者使用。 如果您要使用預設的安全性，資料驅動訂閱就不可以用於 [我的報表] 資料夾中的報表。  
   
-### 目的地  
+### <a name="destination"></a>目的地  
 選取要用來散發報表的傳遞延伸模組。   
   
 傳遞延伸模組是否可用，取決於該模組是否安裝和設定於報表伺服器。 報表伺服器電子郵件是預設傳遞延伸模組，但您必須先設定它才能夠使用。 檔案共用傳遞不需要進行設定，但您必須先定義共用資料夾，才能加以使用。  
@@ -60,14 +69,14 @@ caps.handback.revision: 5
   
 -   檔案共用訂閱提供讓您指定目標位置的欄位。 您可以傳遞任何報表至檔案共用。 不過，支援互動式功能的報表 (包括支援針對資料列和資料行向下鑽研的矩陣報表) 將轉譯成靜態檔案。 您無法在靜態檔案中檢視向下鑽研資料列和資料行。 檔案共用的名稱必須以統一命名慣例 (UNC) 格式指定 (例如，\mycomputer\public\myreportfiles)。 在路徑名稱中不可包含反斜線。 報表檔案會使用以轉譯格式為基礎的檔案格式進行傳遞 (例如，如果您選擇 [Excel]，報表就會以 .xlsx 檔案來傳遞)。  
   
-### 資料驅動訂閱資料集  
+### <a name="data-driven-subscription-dataset"></a>資料驅動訂閱資料集  
 針對資料驅動訂閱，您必須定義用於訂閱的資料集。 選取 [編輯資料集] 提供該資訊。  
   
 ![ssRSWebPortal-subscriptions4](../reporting-services/media/ssrswebportal-subscriptions4.png)  
   
-您需要先提供用於查詢的**資料來源**。 這可以是共用資料來源，或者您可以提供自訂資料來源。  
+您需要先提供用於查詢的 **資料來源** 。 這可以是共用資料來源，或者您可以提供自訂資料來源。  
   
-您需要提供**查詢**，以列出執行訂閱所需的不同選項。 此畫面將提供需要傳回的欄位。 這些欄位會根據報表的傳遞方法和參數而不同。  
+您需要提供 **查詢** ，以列出執行訂閱所需的不同選項。 此畫面將提供需要傳回的欄位。 這些欄位會根據報表的傳遞方法和參數而不同。  
   
 為了獲得最佳結果，請先在 SQL Server Management Studio 中執行此查詢，然後再將它用於資料驅動訂閱中。 接著，您可以檢查結果，以便確認它是否包含所需的資訊。 辨識查詢結果的重點包括：  
   
@@ -77,9 +86,12 @@ caps.handback.revision: 5
   
 ![ssRSWebPortal-subscriptions5](../reporting-services/media/ssrswebportal-subscriptions5.png)  
   
-接著，您可以驗證查詢。 您也可以定義**查詢逾時**。  
+接著，您可以驗證查詢。 您也可以定義 **查詢逾時**。  
   
-在您建立查詢之後，即可指派必要欄位的值。 您可以輸入手動資料，或從您所建立的資料集中選取欄位。  
-  
-  
-  
+在您建立查詢之後，即可指派必要欄位的值。 您可以輸入手動資料，或從您所建立的資料集中選取欄位。
+
+[Web 入口網站](../reporting-services/web-portal-ssrs-native-mode.md)  
+[使用分頁報表](working-with-paginated-reports-web-portal.md)  
+[使用共用資料集](../reporting-services/work-with-shared-datasets-web-portal.md)
+
+更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)

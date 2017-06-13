@@ -1,7 +1,7 @@
 ---
 title: "PolyBase 組態 | Microsoft Docs"
 ms.custom: 
-ms.date: 11/08/2016
+ms.date: 06/12/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 8486b55e306c7463551184cdd2334d629f5df135
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 7ac4f40e66a0bb82f811aa75a3d69e14a3a97188
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/13/2017
 
 ---
 # <a name="polybase-configuration"></a>PolyBase 設定
@@ -30,6 +30,8 @@ ms.lasthandoff: 04/11/2017
  您必須確定可從 SQL Server 連線到外部資料來源。 連線類型會強烈影響預期的查詢效能。 例如，針對 PolyBase 查詢，10Gbit 乙太網路連結將產生比 1Gbit 乙太網路連結更快速的回應時間。  
   
  您必須使用 **sp_configure**設定 SQL Server，以連接到 Hadoop 版本或 Azure Blob 儲存體。 PolyBase 支援兩種 Hadoop 散發：Hortonworks Data Platform (HDP) 和 Cloudera 分散式 Hadoop (CDH)。  如需支援的外部資料來源的完整清單，請參閱 [PolyBase 組態 &#40;Transact-SQL&#41;](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md)。  
+ 
+ 請注意： PolyBase 不支援 Cloudera 加密區域。 
   
 ### <a name="run-spconfigure"></a>執行 sp_configure  
   
@@ -52,7 +54,7 @@ ms.lasthandoff: 04/11/2017
     -   SQL Server PolyBase Engine  
   
 ## <a name="pushdown-configuration"></a>下推設定  
- 若要改善查詢效能，請將下推計算功能啟用到 Hadoop 叢集，而在此叢集中，您需要將 Hadoop 環境特有的一些組態參數提供給 SQL Server︰  
+ 若要改善查詢效能，讓計算下推到 Hadoop 叢集，您需要提供 SQL Server 的某些 Hadoop 環境特有的組態參數：  
   
 1.  在 SQL Server 的安裝路徑中，尋找 **yarn-site.xml** 檔案。 通常其路徑如下：  
   
@@ -66,15 +68,15 @@ ms.lasthandoff: 04/11/2017
 
 4. 針對所有 CDH 5.X 版本，您需要將 **mapreduce.application.classpath** 組態參數新增至 **yarn.site.xml 檔案**結尾或 **mapred-site.xml 檔案**。 HortonWorks 會將這些組態包含在 **yarn.application.classpath** 組態內。
 
-## <a name="example-yarn-sitexml-and-mapred-sitexml-files-for-cdh-5x-cluster"></a>適用於 CDH 5.X 叢集的範例 Yarn-site.xml 和 mapred-site.xml 檔案。
+## <a name="example-yarn-sitexml-and-mapred-sitexml-files-for-cdh-5x-cluster"></a>範例 yarn-site.xml 和 mapred-site.xml 檔 CDH 5.X 叢集。
 
 
 
-具有 yarn.application.classpath 和 Mapreduce.application.classpath 組態的 Yarn-site.xml。
+Yarn-site.xml 以 yarn.application.classpath 和 mapreduce.application.classpath 設定。
 ```
-\<?xml version="1.0" encoding="utf-8"?>
-\<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
-\<!-- Put site-specific property overrides in this file. -->
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<!-- Put site-specific property overrides in this file. -->
  <configuration>
   <property>
      <name>yarn.resourcemanager.connect.max-wait.ms</name>
@@ -84,11 +86,11 @@ ms.lasthandoff: 04/11/2017
      <name>yarn.resourcemanager.connect.retry-interval.ms</name>
      <value>30000</value>
   </property>
-\<!-- Applications' Configuration-->
+<!-- Applications' Configuration-->
   <property>
     <description>CLASSPATH for YARN applications. A comma-separated list of CLASSPATH entries</description>
-     \<!-- Please set this value to the correct yarn.application.classpath that matches your server side configuration -->
-     \<!-- For example: $HADOOP_CONF_DIR,$HADOOP_COMMON_HOME/share/hadoop/common/*,$HADOOP_COMMON_HOME/share/hadoop/common/lib/*,$HADOOP_HDFS_HOME/share/hadoop/hdfs/*,$HADOOP_HDFS_HOME/share/hadoop/hdfs/lib/*,$HADOOP_YARN_HOME/share/hadoop/yarn/*,$HADOOP_YARN_HOME/share/hadoop/yarn/lib/* -->
+     <!-- Please set this value to the correct yarn.application.classpath that matches your server side configuration -->
+     <!-- For example: $HADOOP_CONF_DIR,$HADOOP_COMMON_HOME/share/hadoop/common/*,$HADOOP_COMMON_HOME/share/hadoop/common/lib/*,$HADOOP_HDFS_HOME/share/hadoop/hdfs/*,$HADOOP_HDFS_HOME/share/hadoop/hdfs/lib/*,$HADOOP_YARN_HOME/share/hadoop/yarn/*,$HADOOP_YARN_HOME/share/hadoop/yarn/lib/* -->
      <name>yarn.application.classpath</name>
      <value>$HADOOP_CLIENT_CONF_DIR,$HADOOP_CONF_DIR,$HADOOP_COMMON_HOME/*,$HADOOP_COMMON_HOME/lib/*,$HADOOP_HDFS_HOME/*,$HADOOP_HDFS_HOME/lib/*,$HADOOP_YARN_HOME/*,$HADOOP_YARN_HOME/lib/,$HADOOP_MAPRED_HOME/*,$HADOOP_MAPRED_HOME/lib/*,$MR2_CLASSPATH*</value>
   </property>
@@ -106,9 +108,9 @@ ms.lasthandoff: 04/11/2017
 
 **yarn-site.xml**
 ```
-\<?xml version="1.0" encoding="utf-8"?>
-\<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
-\<!-- Put site-specific property overrides in this file. -->
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<!-- Put site-specific property overrides in this file. -->
  <configuration>
   <property>
      <name>yarn.resourcemanager.connect.max-wait.ms</name>
@@ -118,11 +120,11 @@ ms.lasthandoff: 04/11/2017
      <name>yarn.resourcemanager.connect.retry-interval.ms</name>
      <value>30000</value>
   </property>
-\<!-- Applications' Configuration-->
+<!-- Applications' Configuration-->
   <property>
     <description>CLASSPATH for YARN applications. A comma-separated list of CLASSPATH entries</description>
-     \<!-- Please set this value to the correct yarn.application.classpath that matches your server side configuration -->
-     \<!-- For example: $HADOOP_CONF_DIR,$HADOOP_COMMON_HOME/share/hadoop/common/*,$HADOOP_COMMON_HOME/share/hadoop/common/lib/*,$HADOOP_HDFS_HOME/share/hadoop/hdfs/*,$HADOOP_HDFS_HOME/share/hadoop/hdfs/lib/*,$HADOOP_YARN_HOME/share/hadoop/yarn/*,$HADOOP_YARN_HOME/share/hadoop/yarn/lib/* -->
+     <!-- Please set this value to the correct yarn.application.classpath that matches your server side configuration -->
+     <!-- For example: $HADOOP_CONF_DIR,$HADOOP_COMMON_HOME/share/hadoop/common/*,$HADOOP_COMMON_HOME/share/hadoop/common/lib/*,$HADOOP_HDFS_HOME/share/hadoop/hdfs/*,$HADOOP_HDFS_HOME/share/hadoop/hdfs/lib/*,$HADOOP_YARN_HOME/share/hadoop/yarn/*,$HADOOP_YARN_HOME/share/hadoop/yarn/lib/* -->
      <name>yarn.application.classpath</name>
      <value>$HADOOP_CLIENT_CONF_DIR,$HADOOP_CONF_DIR,$HADOOP_COMMON_HOME/*,$HADOOP_COMMON_HOME/lib/*,$HADOOP_HDFS_HOME/*,$HADOOP_HDFS_HOME/lib/*,$HADOOP_YARN_HOME/*,$HADOOP_YARN_HOME/lib/*</value>
   </property>
@@ -140,11 +142,11 @@ ms.lasthandoff: 04/11/2017
 
 請注意，我們已新增 mapreduce.application.classpath 屬性。 在 CDH 5.x 中，您將會在 Ambari 的相同命名慣例下找到組態值。
 
-  ```
-  \<?xml version="1.0"?>
-\<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
-\<!-- Put site-specific property overrides in this file. -->
-\<configuration xmlns:xi="http://www.w3.org/2001/XInclude">
+```
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<!-- Put site-specific property overrides in this file. -->
+<configuration xmlns:xi="http://www.w3.org/2001/XInclude">
   <property>
     <name>mapred.min.split.size</name>
       <value>1073741824</value>
@@ -171,7 +173,7 @@ ms.lasthandoff: 04/11/2017
 -->
 </configuration>
   
-  ```
+```
   
 ## <a name="kerberos-configuration"></a>Kerberos 設定  
 請注意，向 Kerberos 受保護叢集驗證 PolyBase 時，我們需要將 hadoop.rpc.protection 設定設為 authentication。 這會導致 Hadoop 節點之間的資料通訊未加密。 

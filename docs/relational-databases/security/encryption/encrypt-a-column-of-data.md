@@ -1,7 +1,7 @@
 ---
 title: "加密資料行 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/18/2016
+ms.date: 05/22/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -20,10 +20,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1451071485e8994dd90ea447e28d9b32e511dd1a
+ms.sourcegitcommit: 30791ad9733446f664db1592b95d1ffec5fc9a1b
+ms.openlocfilehash: c27f699eb519c1e9a72756c26e8b320869786c6c
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/23/2017
 
 ---
 # <a name="encrypt-a-column-of-data"></a>加密資料行
@@ -55,7 +55,14 @@ ms.lasthandoff: 04/11/2017
 -   金鑰的某種權限，而且絕不能被拒絕 VIEW DEFINITION 權限。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
-  
+
+若要使用下列的範例，您必須有資料庫主要金鑰。 如果您的資料庫已經沒有資料庫主要金鑰，建立一個，執行下列陳述式提供您的密碼：   
+```  
+CREATE MASTER KEY ENCRYPTION BY   
+PASSWORD = '<some strong password>';  
+```  
+一定要備份您的資料庫主要金鑰。 如需有關資料庫主要金鑰的詳細資訊，請參閱[CREATE MASTER KEY &#40;TRANSACT-SQL &#41;](../../../t-sql/statements/create-master-key-transact-sql.md).
+
 #### <a name="to-encrypt-a-column-of-data-using-a-simple-symmetric-encryption"></a>若要使用簡單的對稱加密來加密資料行  
   
 1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的執行個體。  
@@ -66,11 +73,7 @@ ms.lasthandoff: 04/11/2017
   
     ```  
     USE AdventureWorks2012;  
-    --If there is no master key, create one now.   
-    IF NOT EXISTS   
-        (SELECT * FROM sys.symmetric_keys WHERE symmetric_key_id = 101)  
-        CREATE MASTER KEY ENCRYPTION BY   
-        PASSWORD = '23987hxJKL95QYV4369#ghf0%lekjg5k3fd117r$$#1946kcj$n44ncjhdlj'  
+    
     GO  
   
     CREATE CERTIFICATE Sales09  
@@ -129,13 +132,6 @@ ms.lasthandoff: 04/11/2017
   
     ```  
     USE AdventureWorks2012;  
-    GO  
-  
-    --If there is no master key, create one now.   
-    IF NOT EXISTS   
-        (SELECT * FROM sys.symmetric_keys WHERE symmetric_key_id = 101)  
-        CREATE MASTER KEY ENCRYPTION BY   
-        PASSWORD = '23987hxJKL969#ghf0%94467GRkjg5k3fd117r$$#1946kcj$n44nhdlj'  
     GO  
   
     CREATE CERTIFICATE HumanResources037  

@@ -1,25 +1,30 @@
 ---
-title: "作業屬性 (Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.reportserver.jobproperties.f1"
+title: "作業屬性 (Management Studio) |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.reportserver.jobproperties.f1
 ms.assetid: 807ffd0e-9363-4f8f-9c36-c5d746ad19fd
 caps.latest.revision: 13
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 13
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2f138c5caef261757a4bce22cb84ebeb7a2a68b8
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 作業屬性 (Management Studio)
+# <a name="job-properties-management-studio"></a>作業屬性 (Management Studio)
   您可以使用 [作業屬性] 頁面來檢視有關進行中報表或訂閱的資訊，然後再加以取消。  
   
  若要開啟此頁面，請啟動 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、連接至報表伺服器，然後開啟 [作業] 資料夾。 以滑鼠右鍵按一下執行中的作業，然後按一下 [屬性]。  
@@ -27,7 +32,7 @@ caps.handback.revision: 13
 > [!NOTE]  
 >  [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] with Advanced Services 不支援這項功能。 因此，當您執行 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]時，不會出現此頁面。  
   
-## 工作  
+## <a name="tasks"></a>工作  
  在您檢視有關某項作業的資訊之前，請重新整理此頁面，以便擷取報表伺服器上目前正在執行之作業的相關資訊：  
   
 1.  開啟報表伺服器資料夾。  
@@ -36,7 +41,7 @@ caps.handback.revision: 13
   
 3.  如果已列出作業，請以滑鼠右鍵按一下該作業，然後按一下 [屬性]。  
   
-## 選項。  
+## <a name="options"></a>選項。  
  **作業識別碼**  
  在處理作業時指派給作業的 GUID。 此值是在每次報表或訂閱執行時隨機產生的。  
   
@@ -67,7 +72,7 @@ caps.handback.revision: 13
  **使用者名稱**  
  若為使用者起始的處理序，此資料行會顯示使用者的名稱。 若為系統作業，這就是報表伺服器的名稱。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [Management Studio F1 說明中的報表伺服器](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
  [連接至 Management Studio 中的報表伺服器](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
  [管理執行中的處理序](../../reporting-services/subscriptions/manage-a-running-process.md)  

@@ -2,7 +2,7 @@
 title: "開始使用 PolyBase | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 10/25/2016
+ms.date: 5/30/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -25,16 +25,16 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 13d43201a92c729dd3405d2d436942316ebad0e4
+ms.sourcegitcommit: 3fc2a681f001906cf9e819084679db097bca62c7
+ms.openlocfilehash: 59bf4021617603f0720c23ca192f4ddb65aa6834
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/31/2017
 
 ---
 # <a name="get-started-with-polybase"></a>開始使用 PolyBase
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  本主題包含執行 PolyBase 的基本知識。 如需詳細資訊，請參閱 [PolyBase 指南](../../relational-databases/polybase/polybase-guide.md)。  
+  本主題包含有關 SQL Server 執行個體上執行 PolyBase 的基本概念。
   
  執行下列步驟之後，您將符合下列條件︰  
   
@@ -47,7 +47,7 @@ ms.lasthandoff: 04/11/2017
 -   使用 PolyBase 物件的查詢範例  
   
 ## <a name="prerequisites"></a>必要條件  
- [SQL Server (64 位元)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)的執行個體。  
+ 執行個體[SQL Server （64 位元）](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)為下列：  
   
 -   Microsoft .NET Framework 4.5。  
   
@@ -55,23 +55,21 @@ ms.lasthandoff: 04/11/2017
   
 -   最小記憶體︰4 GB  
   
--   最小硬碟空間︰2 GB  
-  
+-   最小硬碟空間︰2 GB    
 -   必須啟用 TCP/IP 連線。 (請參閱 [啟用或停用伺服器網路通訊協定](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)。)  
   
+ 
  外部資料來源，下列項目之一：  
   
 -   Hadoop 叢集。 如需支援的版本，請參閱 [設定 PolyBase](#supported)。  
 
--   Azure BLOB 儲存體。 
-
--   如果您要針對 Hadoop 使用計算下推功能，則需要確定目標 Hadoop 叢集具有 HDFS 的核心元件：啟用 Jobhistory 伺服器的 Yarn/MapReduce。 PolyBase 透過 MapReduce 來提交下推查詢，並從 JobHistory Server 提取狀態。 如果沒有其中一個元件，查詢將會失敗，並出現錯誤訊息。 
+-   Azure Blob 儲存體
 
 > [!NOTE]
-> HDInsight 叢集會使用 Azure Blob 儲存體作為永久儲存用的檔案系統。 您可以使用 PolyBase 來查詢 HDInsight 叢集所管理的檔案。 若要這樣做，請建立外部資料來源以參考設定為 HDInsight 叢集儲存體的 blob。 
-  
+>   如果您要針對 Hadoop 使用計算下推功能，則需要確定目標 Hadoop 叢集具有 HDFS 的核心元件：啟用 Jobhistory 伺服器的 Yarn/MapReduce。 PolyBase 透過 MapReduce 來提交下推查詢，並從 JobHistory Server 提取狀態。 沒有其中一個元件，則查詢會失敗。 
+
 ## <a name="install-polybase"></a>安裝 PolyBase  
- 如果您尚未安裝 PolyBase，請參閱 [PolyBase 安裝](../../relational-databases/polybase/polybase-installation.md)。  
+ 如果您尚未安裝 PolyBase，請參閱[PolyBase 安裝](../../relational-databases/polybase/polybase-installation.md)。  
   
 ### <a name="how-to-confirm-installation"></a>如何確認安裝  
  安裝之後，執行下列命令來確認已成功安裝 PolyBase。 如果已安裝 PolyBase 會傳回 1，否則會傳回 0。  
@@ -81,17 +79,17 @@ SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;
 ```  
   
 ##  <a name="supported"></a> Configure PolyBase  
- 安裝之後，您必須使用 Hadoop 版本或 Azure Blob 儲存體來設定 SQL Server。 PolyBase 支援兩個 Hadoop 提供者：Hortonwork 的 Data Platform (HDP) 和 Cloudera 的 CDH。 您可以在 Windows 或 Linux 電腦上執行 Hortonworks ，而其同時也是組態的一部分。  支援的外部資料來源包括︰  
+ 在安裝之後，您必須設定 SQL Server 使用可能是您 Hadoop 版本或 Azure Blob 儲存體。 PolyBase 支援兩個 Hadoop 提供者，Hortonworks Data Platform (HDP) 和 Cloudera 分散式 Hadoop (CDH)。  支援的外部資料來源包括︰  
   
 -   Linux/Windows Server 上的 Hortonworks HDP 1.3  
   
--   Linux 上的 Hortonworks HDP 2.1 - 2.5
+-   在 Linux 上的 Hortonworks HDP 2.1 – 2.6
 
 -   Windows Server 上的 Hortonworks HDP 2.1 - 2.3  
   
 -   Linux 上的 Cloudera CDH 4.3  
   
--   Cloudera CDH 5.1 – Linux 上的 5.5、5.9、5.10  
+-   Cloudera CDH 5.1 – 5.5、 5.9-5.11 on Linux  
   
 -   Azure Blob 儲存體  
   
@@ -101,8 +99,7 @@ SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;
 ### <a name="external-data-source-configuration"></a>外部資料來源設定  
   
 1.  執行 [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) ‘hadoop connectivity’ 並設定適當的值。 根據預設，Hadoop 連接設為 7。 若要尋找值，請參閱 [PolyBase Connectivity Configuration &#40;Transact-SQL&#41;](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md) (PolyBase 連線組態 &#40;Transact-SQL&#41;)。  
-  
-    ```tsql  
+      ```tsql  
     -- Values map to various external data sources.  
     -- Example: value 7 stands for Azure blob storage and Hortonworks HDP 2.3 on Linux.  
     sp_configure @configname = 'hadoop connectivity', @configvalue = 7;   
@@ -159,7 +156,7 @@ SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;
  如需詳細資訊，請參閱 [PolyBase scale-out groups](../../relational-databases/polybase/polybase-scale-out-groups.md)(PolyBase 向外延展群組)。  
   
 ## <a name="create-t-sql-objects"></a>建立 T-SQL 物件  
- 根據外部資料來源建立物件，Hadoop 或 Azure 儲存體。  
+ 建立根據外部資料來源，Hadoop 或 Azure 儲存體的物件。  
   
 ### <a name="hadoop"></a>Hadoop  
   
@@ -189,8 +186,7 @@ CREATE EXTERNAL DATA SOURCE MyHadoopCluster WITH (
 );  
   
 -- 4: Create an external file format.  
--- FORMAT TYPE: Type of format in Hadoop (DELIMITEDTEXT,  RCFILE, ORC, PARQUET).  
-  
+-- FORMAT TYPE: Type of format in Hadoop (DELIMITEDTEXT,  RCFILE, ORC, PARQUET).    
 CREATE EXTERNAL FILE FORMAT TextFileFormat WITH (  
         FORMAT_TYPE = DELIMITEDTEXT,   
         FORMAT_OPTIONS (FIELD_TERMINATOR ='|',   

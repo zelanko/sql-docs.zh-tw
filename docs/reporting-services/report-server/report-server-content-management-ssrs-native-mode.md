@@ -1,37 +1,42 @@
 ---
-title: "報表伺服器內容管理 (SSRS 原生模式) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "管理 Reporting Services"
-  - "發行的報表 [Reporting Services], 管理"
-  - "報表伺服器 [Reporting Services], 內容管理"
-  - "內容管理 [Reporting Services]"
+title: "報表伺服器內容管理 （SSRS 原生模式） |Microsoft 文件"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- administering Reporting Services
+- published reports [Reporting Services], managing
+- report servers [Reporting Services], content management
+- content management [Reporting Services]
 ms.assetid: 641961ac-53a5-4997-9d42-cf4ecce1f892
 caps.latest.revision: 50
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 50
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2289f62499f876cc296d6c939c4d9e70ccfe4c3f
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 報表伺服器內容管理 (SSRS 原生模式)
-  在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中，內容管理是指管理報表伺服器項目。 所有項目都可以透過屬性和安全性設定單獨進行管理， 而任何一個項目都可以移至報表伺服器資料夾命名空間內的不同位置。 若要有效管理項目，您必須了解內容管理員所執行的工作。 從 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] CTP 3.2 開始可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 入口網站。 本文會探討報表管理員和新的入口網站體驗。  
+# <a name="report-server-content-management-ssrs-native-mode"></a>報表伺服器內容管理 (SSRS 原生模式)
+  在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，內容管理是指管理報表伺服器項目。 所有項目都可以透過屬性和安全性設定單獨進行管理， 而任何一個項目都可以移至報表伺服器資料夾命名空間內的不同位置。 若要有效管理項目，您必須了解內容管理員所執行的工作。 從 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] CTP 3.2 開始可以使用  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 入口網站。 本文會探討報表管理員和新的入口網站體驗。  
   
 > [!NOTE]  
 >  內容管理與報表伺服器管理不同。 如需如何管理報表伺服器執行環境的詳細資訊，請參閱 [Reporting Services 報表伺服器 &#40;原生模式&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)。  
   
  內容管理包括下列工作：  
   
--   藉由套用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 所提供以角色為基礎的安全性，保護報表伺服器網站及項目的安全。  
+-   藉由套用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]所提供以角色為基礎的安全性，保護報表伺服器網站及項目的安全。  
   
 -   藉由加入、修改和刪除資料夾，建立報表伺服器資料夾階層。  
   
@@ -45,7 +50,7 @@ caps.handback.revision: 50
   
 -   藉由建立報表處理排程，並指定何者可依需求執行以及何者要從快取載入，即可平衡伺服器的報表處理負荷。  
   
--   使用兩個預先定義的角色提供執行管理工作的權限：**系統管理員**和**內容管理員**。 您必須被指派至這兩種角色，才能有效管理報表伺服器內容。  
+-   使用兩個預先定義的角色提供執行管理工作的權限： **系統管理員** 和 **內容管理員**。 您必須被指派至這兩種角色，才能有效管理報表伺服器內容。  
   
  用於管理報表伺服器內容的工具包括 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]、報表管理員或入口網站。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 可讓您設定預設值和啟用功能。 報表管理員是用來將報表伺服器項目與作業的存取權授與使用者、檢視和使用報表與其他內容類型，以及檢視和使用所有共用項目與報表散發功能。 入口網站是更新的網站，允許使用大多數的報表管理員功能。 如需詳細資訊，請參閱 [Reporting Services 工具](../../reporting-services/tools/reporting-services-tools.md)。  
   
@@ -61,10 +66,10 @@ caps.handback.revision: 50
   
 |圖示|可移動項目|  
 |----------|-------------------|  
-|![報表圖示](../../reporting-services/report-server/media/hlp-16doc.png "報表圖示")|報表|  
-|![連結報表圖示](../../reporting-services/report-server/media/hlp-16linked.png "連結報表圖示")|連結報表|  
-|![資料夾圖示](../../reporting-services/report-server/media/hlp-16folder.png "資料夾圖示")|資料夾|  
-|![一般資源圖示](../../reporting-services/report-server/media/hlp-16file.png "一般資源圖示")|一般資源|  
+|![報表圖示](../../reporting-services/report-server/media/hlp-16doc.gif "報表圖示")|報表|  
+|![連結報表圖示](../../reporting-services/report-server/media/hlp-16linked.gif "連結報表圖示")|連結報表|  
+|![資料夾圖示](../../reporting-services/report-server/media/hlp-16folder.gif "資料夾圖示")|資料夾|  
+|![一般資源圖示](../../reporting-services/report-server/media/hlp-16file.gif "一般資源圖示")|一般資源|  
 |![共用資料來源圖示](../../reporting-services/report-data/media/hlp-16datasource.png "共用資料來源圖示")|共用資料來源|  
 ||共用資料集|  
   
@@ -97,7 +102,7 @@ caps.handback.revision: 50
   
 -   其他資料夾  
   
-### 保留的資料夾  
+### <a name="reserved-folders"></a>保留的資料夾  
  預先定義的資料夾在 Reporting Services 中是被保留的；不可以將它們移動、重新命名或刪除。 使用者自訂資料夾包含具有將項目加入資料夾之權限的使用者或報表伺服器管理員所建立的資料夾。  
   
  下表描述預先定義的資料夾，資料夾會錨定資料夾階層並提供數種功能的架構。  
@@ -108,15 +113,15 @@ caps.handback.revision: 50
 |使用者|啟用 [我的報表] 功能時，會出現此資料夾。 它包含使用 [我的報表] 功能之所有使用者的子資料夾，而且只有報表伺服器管理員能夠存取。 每個子資料夾名稱與使用者的名稱相符。|  
 |我的報表|提供每個使用者的個人工作空間。|  
   
-### 建立資料夾  
+### <a name="creating-folders"></a>建立資料夾  
  您可以在階層中任何可用的資料夾內建立資料夾。  
   
  如果您要針對限制特定報表和模型之存取權的目的建立資料夾，就應該指定允許使用者瀏覽資料夾路徑中之父資料夾 (但無法檢視其內容) 的角色指派。  
   
-### 修改資料夾屬性  
- 在資料夾建立之後，您可以修改屬性以重新命名資料夾、新增或修改描述，或移動資料夾到其他位置。 這些屬性可從資料夾的 [一般] 屬性頁面存取。 如需設定授與資料夾存取權之屬性的詳細資訊，請參閱[保護資料夾的安全](../../reporting-services/security/secure-folders.md)。  
+### <a name="modifying-folder-properties"></a>修改資料夾屬性  
+ 在資料夾建立之後，您可以修改屬性以重新命名資料夾、新增或修改描述，或移動資料夾到其他位置。 這些屬性可從資料夾的 [一般] 屬性頁面存取。 如需設定授與資料夾存取權之屬性的詳細資訊，請參閱 [保護資料夾的安全](../../reporting-services/security/secure-folders.md)。  
   
-### 刪除資料夾與資料夾內容  
+### <a name="deleting-folders-and-folder-contents"></a>刪除資料夾與資料夾內容  
  當您刪除資料夾時，同時會刪除其包含的所有項目。 在刪除資料夾前，應該檢查其內容，以判斷是否包含資料夾階層其他部分的項目可能會參考或使用的項目。 參考的項目包括支援連結報表、共用資料來源，以及資源的報表定義。  
   
  如果您刪除有一或多個連結報表參考到的報表，則刪除報表之後連結報表就變成無效。 因為報表並不保留以其做為基礎之連結報表的相關資訊，所以您無法在事先判斷哪些連結報表會受到影響。 然而，您可以檢閱連結報表的屬性，來了解它以哪些報表做為基礎。 相對地，共用資料來源項目會列出目前使用該項目的所有報表，如此您可以輕易地判斷連接資訊是否正在使用。 如需詳細資訊，請參閱[建立、修改和刪除共用資料來源 &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)。 最後，報表所使用的資源，並不會識別這些報表。  
@@ -128,7 +133,7 @@ caps.handback.revision: 50
 ##  <a name="bkmk_Resources"></a> 資源  
  資源是指儲存在報表伺服器上，但並非由報表伺服器所處理的 Managed 項目。 一般而言，資源會提供外部內容給報表使用者。 範例包括 .jpg 檔、包含空間資料的 ESRI 形狀檔，或 HTML 檔中描述報表所使用之商務規則的影像。 雖然此 JPG、SHP 或 HTML 檔會儲存在報表伺服器上，但是報表伺服器會直接將此檔案傳遞至瀏覽器而非先處理它。 如需詳細資訊，請參閱[影像 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/images-report-builder-and-ssrs.md) 和[地圖 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md) 的＜將資料加入至地圖＞一節。  
   
-### 加入和檢視資源  
+### <a name="adding-and-viewing-a-resource"></a>加入和檢視資源  
  若要將資源加入至報表伺服器，您可以上傳或發行檔案：  
   
 |運算|檔案類型|  
@@ -140,10 +145,10 @@ caps.handback.revision: 50
   
  資源是否可供報表使用者檢視，要看瀏覽器的檢視功能而定。 由於報表伺服器不會處理資源，因此瀏覽器可能會提供檢視功能來轉譯特定 MIME 類型。 如果瀏覽器無法轉譯內容，檢視資源的使用者就只能看到資源的一般屬性。  
   
-### 保護和管理資源  
+### <a name="securing-and-managing-a-resource"></a>保護和管理資源  
  資源會連同報表、共用資料來源、共用排程和資料夾一起當做具名項目存在報表伺服器資料夾階層中。 您可以搜尋、檢視、保護和設定資源的屬性，就像處理報表伺服器上所儲存的任何項目一樣。 若要檢視或管理資源，您的角色指派中必須具有檢視資源或管理員資源的工作。  
   
-### 從報表參考影像資源  
+### <a name="referencing-an-image-resource-from-a-report"></a>從報表參考影像資源  
  資源可以包含您在報表中參考的影像。 如果報表需求包括使用外部影像，請考慮下列將影像儲存成資源的優點：  
   
 -   報表伺服器資料庫中的集中式儲存。 如果您將報表伺服器資料庫及其內容移至另一部電腦，外部影像會與報表一起移動。 您不需要追蹤儲存在不同電腦之磁碟上的影像檔。  
@@ -152,7 +157,7 @@ caps.handback.revision: 50
   
  若要在報表中使用影像資源，請將影像檔加入至專案，然後將它與報表一起發行。 發行影像之後，您可以更新報表中的影像參考，讓它指向報表伺服器上的資源，然後單獨重新發行該報表，以便儲存您的變更。 之後，您就可以透過重新發行資源，更新影像 (與報表分開處理)。 報表會使用報表伺服器上可用的最新影像版本。  
   
- 如需詳細資訊，請參閱[更新資源 &#40;報表管理員 &#41;](../../reporting-services/report-server/update-a-resource-report-manager.md)。  
+ 如需詳細資訊，請參閱 [更新資源 &#40;報表管理員&#41;](../../reporting-services/report-server/update-a-resource-report-manager.md)。  
   
 ##  <a name="bkmk_MyReports"></a> 我的報表  
  [我的報表] 資料夾是以有效網域帳戶登入報表伺服器的使用者之個人工作空間。 此特定用途資料夾提供儲存區給處理中的報表、不要進行全區散發的報表，或針對特定需求而修改的報表。 您無法限制儲存在 [我的報表] 資料夾中的項目數量或大小，也無法設定 [我的報表] 資料夾在使用者之間共用。  
@@ -175,9 +180,9 @@ caps.handback.revision: 50
 |& (連字號)|[amp]|*username*@*company*&*company.com* 會變成 *username*[at]*company*[amp]*company.com*|  
 |$ (貨幣符號)|[dollar]|*User* $*Name* 會變成 *User*[ ][dollar]*Name*|  
   
- [我的報表] 功能是選擇性的。 安裝報表伺服器時，[我的報表] 預設為停用。 如需啟用此功能的詳細資訊，請參閱[啟用與停用我的報表](../../reporting-services/report-server/enable-and-disable-my-reports.md)。 如需詳細資訊，請參閱[保護我的報表](../../reporting-services/security/secure-my-reports.md)。  
+ [我的報表] 功能是選擇性的。 安裝報表伺服器時，[我的報表] 預設為停用。 如需啟用此功能的詳細資訊，請參閱 [啟用與停用我的報表](../../reporting-services/report-server/enable-and-disable-my-reports.md)。 如需詳細資訊，請參閱 [保護我的報表](../../reporting-services/security/secure-my-reports.md)。  
   
-## 工作  
+## <a name="tasks"></a>工作  
  [上傳檔案到資料夾](../../reporting-services/report-server/upload-files-to-a-folder.md)  
   
  [建立、刪除或修改資料夾 &#40;報表管理員&#41;](../../reporting-services/report-server/create-delete-or-modify-a-folder-report-manager.md)  
@@ -186,7 +191,7 @@ caps.handback.revision: 50
   
  [上傳檔案到資料夾](../../reporting-services/report-server/upload-files-to-a-folder.md)  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [Reporting Services 工具](../../reporting-services/tools/reporting-services-tools.md)   
  [角色與權限 &#40;Reporting Services&#41;](../../reporting-services/security/roles-and-permissions-reporting-services.md)   
  [Reporting Services 報表 &#40;SSRS&#41;](../../reporting-services/reports/reporting-services-reports-ssrs.md)  

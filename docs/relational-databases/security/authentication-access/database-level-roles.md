@@ -2,7 +2,7 @@
 title: "資料庫層級角色 | Microsoft 文件"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 12/16/2016
+ms.date: 05/24/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -43,10 +43,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1ccfe7ee55e50f0530b33855f4ad57549a1da712
+ms.sourcegitcommit: 96f6a7eeb03fdc222d0e5b42bcfbf05c25d11db6
+ms.openlocfilehash: 411da6974090c9ccad6aa6184c248537bfdebe79
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/25/2017
 
 ---
 # <a name="database-level-roles"></a>資料庫層級角色
@@ -71,7 +71,7 @@ ms.lasthandoff: 04/11/2017
 
 ## <a name="fixed-database-roles"></a>固定資料庫角色
   
- 下表顯示固定資料庫角色及其功能。 這些角色存在所有資料庫中。 指派給固定資料庫角色的權限無法變更。   
+ 下表顯示固定資料庫角色及其功能。 這些角色存在所有資料庫中。 除了**公用**無法變更資料庫角色中，指派至固定資料庫角色的權限。   
   
 |固定資料庫角色名稱|Description|  
 |-------------------------------|-----------------|  
@@ -87,7 +87,7 @@ ms.lasthandoff: 04/11/2017
 
 指派給固定資料庫角色的權限無法變更。 下圖顯示指派給固定資料庫角色的權限：
 
-![fixed_database_role_permissions](../../../relational-databases/security/authentication-access/media/fixed-database-role-permissions.jpg)
+![fixed_database_role_permissions](../../../relational-databases/security/authentication-access/media/permissions-of-database-roles.png)
 
 ## <a name="special-roles-for-includesssdsmdincludessssds-mdmd-and-includesssdwmdincludessssdw-mdmd"></a>針對 [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] 及 [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]的特殊角色
 
@@ -106,7 +106,7 @@ ms.lasthandoff: 04/11/2017
   
 |msdb 角色名稱|Description|  
 |--------------------|-----------------|  
-|**db_ssisadmin**<br /><br /> **db_ssisoperator**<br /><br /> **db_ssisltduser**|這些資料庫角色的成員可以管理和使用 [!INCLUDE[ssIS](../../../includes/ssis-md.md)]。 從舊版升級的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體可能會包含使用 Data Transformation Services (DTS) 而非 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 所命名的舊版角色。 如需詳細資訊，請參閱 [Integration Services 角色 &#40;SSIS 服務&#41;](../../../integration-services/service/integration-services-roles-ssis-service.md)。|  
+|**db_ssisadmin**<br /><br /> **db_ssisoperator**<br /><br /> **db_ssisltduser**|這些資料庫角色的成員可以管理和使用 [!INCLUDE[ssIS](../../../includes/ssis-md.md)]。 從舊版升級的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體可能會包含使用 Data Transformation Services (DTS) 而非 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 所命名的舊版角色。 如需詳細資訊，請參閱 [Integration Services 角色 &#40;SSIS 服務&#41;](../../../integration-services/security/integration-services-roles-ssis-service.md)。|  
 |**dc_admin**<br /><br /> **dc_operator**<br /><br /> **dc_proxy**|這些資料庫角色的成員可以管理和使用資料收集器。 如需相關資訊，請參閱 [Data Collection](../../../relational-databases/data-collection/data-collection.md)。|  
 |**PolicyAdministratorRole**|**db_ PolicyAdministratorRole** 資料庫角色的成員可以在以原則為基礎的管理原則和條件上執行所有組態和維護活動。 如需詳細資訊，請參閱 [使用原則式管理來管理伺服器](../../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)。|  
 |**ServerGroupAdministratorRole**<br /><br /> **ServerGroupReaderRole**|這些資料庫角色的成員可以管理和使用已註冊的伺服器群組。|  

@@ -1,28 +1,33 @@
 ---
-title: "列印報表 (報表產生器及 SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "列印報表 （報表產生器及 SSRS） |Microsoft 文件"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b96936c9-c387-41a9-8c19-6eb325769ffd
 caps.latest.revision: 7
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 7
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 26fe5c7d510e186258b006659d565935f4dd73d0
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 列印報表 (報表產生器及 SSRS)
-  將報表儲存至報表伺服器之後，您就可以從瀏覽器、報表管理員或任何用來檢視所匯出報表的應用程式，檢視及列印報表。 儲存報表之前，您可以在預覽報表時將它列印出來。  
+# <a name="print-a-report-report-builder-and-ssrs"></a>列印報表 (報表產生器及 SSRS)
+  您將報表儲存至報表伺服器之後，您可以檢視和瀏覽器、 Reporting Services 入口網站，或您用於檢視匯出的報表的任何應用程式列印報表。 儲存報表之前，您可以在預覽報表時將它列印出來。  
   
  當您列印報表時，可以指定所要使用的紙張大小。 紙張大小會決定報表中的頁數及哪些報表資料適合每一頁的大小。 紙張大小只會影響以硬分頁轉譯器所轉譯的報表：PDF、影像和列印。 設定紙張大小對於其他轉譯器沒有任何作用。 如需詳細資訊，請參閱[轉譯行為 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)。  
   
- 您可以從報表管理員中的報表檢視器工具列或報表產生器中的預覽，將報表匯出到手動分頁轉譯器，或是按一下 [列印] 按鈕來列印報表的複本。 您可能需要設定紙張大小或是其他版面設定屬性。 使用 **[報表屬性]** 對話方塊可變更版面設定屬性，包括紙張大小。  
+ 從報表檢視器工具列或報表產生器中預覽 Reporting Services 入口網站中，您可以將報表匯出到手動分頁符號轉譯器，或按一下 [列印] 按鈕來列印報表的複本。 您可能需要設定紙張大小或是其他版面設定屬性。 使用 **[報表屬性]** 對話方塊可變更版面設定屬性，包括紙張大小。  
   
  您可以在兩個不同位置中指定列印頁面邊界：設計模式和執行模式。  
   
@@ -38,7 +43,7 @@ caps.handback.revision: 7
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### 在報表產生器中列印報表  
+### <a name="to-print-a-report-in-report-builder"></a>在報表產生器中列印報表  
   
 1.  開啟報表。  
   
@@ -55,11 +60,9 @@ caps.handback.revision: 7
   
 6.  在 **[列印]** 對話方塊中，選取印表機並指定其他列印選項。  
   
-### 若要從網頁瀏覽器應用程式列印報表  
+### <a name="to-print-a-report-from-a-web-browser-application"></a>若要從網頁瀏覽器應用程式列印報表  
   
-1.  啟動[報表管理員 &#40;SSRS 原生模式&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md)。  
-  
-2.  在報表管理員中，導覽到您要列印的報表。 開啟報表。  
+1.  在 Reporting Services 入口網站中，瀏覽至您想要列印的報表。 開啟報表。  
   
 3.  在報表頂端的工具列上，按一下 **[列印]**。  
   
@@ -68,9 +71,9 @@ caps.handback.revision: 7
   
 4.  在 **[列印]** 對話方塊中，選取一個印表機，然後按一下 **[列印]**。  
   
-### 若要從其他應用程式列印報表  
+### <a name="to-print-a-report-from-other-applications"></a>若要從其他應用程式列印報表  
   
-1.  在報表管理員中，導覽到您要列印的報表。 開啟報表。  
+1.  在 Reporting Services 入口網站中，瀏覽至您想要列印的報表。 開啟報表。  
   
 2.  在報表頂端的工具列上，選取一種轉譯格式，然後按一下 **[匯出]**。 報表會在對應至轉譯格式的檢視器應用程式中開啟。  
   
@@ -78,7 +81,7 @@ caps.handback.revision: 7
   
 3.  在該程式的 **[檔案]** 功能表上，按一下 **[列印]**。  
   
-### 變更紙張大小  
+### <a name="to-change-paper-size"></a>變更紙張大小  
   
 1.  以滑鼠右鍵按一下報表主體的外面，然後按一下 [報表屬性]。  
   
@@ -87,18 +90,18 @@ caps.handback.revision: 7
     > [!NOTE]  
     >  大小值的預設單位視使用者的地區設定而定。 若要指定不同的單位，請在數值後面輸入一個實體單位指示項，例如 cm、mm、pt 或 pc。  
   
-### 在設計模式中設定頁面邊界  
+### <a name="to-set-page-margins-in-design-mode"></a>在設計模式中設定頁面邊界  
   
 -   以滑鼠右鍵按一下設計介面周圍的藍色區域，按一下 [報表屬性]，然後按一下 [版面設定] 頁面。  
   
-### 若要在執行模式中設定頁面邊界  
+### <a name="to-set-page-margins-in-run-mode"></a>若要在執行模式中設定頁面邊界  
   
 -   按一下 **[執行]** 索引標籤上的 **[版面設定]** 。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [列印報表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)   
  [匯出報表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
- [報表屬性對話方塊、版面設定 &#40;報表產生器&#41;](../Topic/Report%20Properties%20Dialog%20Box,%20Page%20Setup%20\(Report%20Builder\).md)   
+ [報表屬性對話方塊、版面設定 &#40;報表產生器&#41;](http://msdn.microsoft.com/library/eb3b5d01-7b82-4808-a58b-9e096742f8c6)   
  [報表設計檢視 &#40;報表產生器&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)  
   
   

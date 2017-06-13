@@ -15,70 +15,35 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 2da0c759864e746414f8bf17388463c9a4bfdf88
+ms.sourcegitcommit: cf69aa2c57e86aab11974b5874039ae7f72b9917
+ms.openlocfilehash: 3384d962c3765bf4feb00f957ad56a668f8d92e4
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/31/2017
 
 ---
 # <a name="polybase-versioned-feature-summary"></a>PolyBase 建立版本的功能摘要
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
-  適用於 SQL Server 產品和服務的 PolyBase 功能摘要。  
+適用於 SQL Server 產品和服務的 PolyBase 功能的摘要。  
   
 ## <a name="feature-summary-for-product-releases"></a>產品版本的功能摘要  
  本表會摘要說明 PolyBase 的重要功能以及提供這些功能的產品。  
   
-### [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
- 這些功能適用於在內部部署或 Azure 虛擬機器中執行的 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 。  SQL Server 2014 和舊版不提供 PolyBase。  
-  
-|||  
-|-|-|  
-|**功能**|**可用性**|  
-|使用下列項目查詢 Hadoop 資料： [!INCLUDE[tsql](../../includes/tsql-md.md)]|是|  
-|使用下列項目查詢 Azure Blob 儲存體： [!INCLUDE[tsql](../../includes/tsql-md.md)]|是|  
-|從 Hadoop 匯入資料|是|  
-|從 Azure Blob 儲存體匯入資料|是| 
-|從 Azure Data Lake Store 匯入資料|否|   
-|匯出資料至 Hadoop|是|  
-|匯出資料至 Azure Blob 儲存體|是|  
-|從 Azure Data Lake Store 匯出資料|否|
-|從 Microsoft 的 BI 工具執行 PolyBase 查詢|是|  
-|將查詢計算下推到 Hadoop|是|  
-  
-### [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]  
- 這些功能適用於 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。  
-  
-|||  
-|-|-|  
-|**功能**|**可用性**|  
-|使用下列項目查詢 Hadoop 資料： [!INCLUDE[tsql](../../includes/tsql-md.md)]|否|  
-|使用下列項目查詢 Azure Blob 儲存體： [!INCLUDE[tsql](../../includes/tsql-md.md)]|是|  
-|從 Hadoop 匯入資料|否|  
-|從 Azure Blob 儲存體匯入資料|是|
-|從 Azure Data Lake Store 匯入資料|是|     
-|匯出資料至 Hadoop|否|  
-|匯出資料至 Azure Blob 儲存體|是|  
-|將資料匯出至 Azure Data Lake Store|是|
-|從 Microsoft 的 BI 工具執行 PolyBase 查詢|是|  
-|將查詢計算下推到 Hadoop|否|  
-  
-### [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 這些功能適用於 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]。  
-  
-|||  
-|-|-|  
-|**功能**|**可用性**|  
-|使用下列項目查詢 Hadoop 資料： [!INCLUDE[tsql](../../includes/tsql-md.md)]|是|  
-|使用下列項目查詢 Azure Blob 儲存體： [!INCLUDE[tsql](../../includes/tsql-md.md)]|是|  
-|從 Hadoop 匯入資料|是|  
-|從 Azure Blob 儲存體匯入資料|是|  
-|從 Azure Data Lake Store 匯入資料|否|   
-|匯出資料至 Hadoop|是|  
-|匯出資料至 Azure Blob 儲存體|是|  
-|將資料匯出至 Azure Data Lake Store|否|
-|從 Microsoft 的 BI 工具執行 PolyBase 查詢|是|  
-|將查詢計算下推到 Hadoop|是|  
+||||||
+|-|-|-|-|-|   
+|**功能**|**SQL Server 2016**|**Azure SQL Database**|**Azure SQL 資料倉儲**|**平行處理資料倉儲**| 
+|使用下列項目查詢 Hadoop 資料： [!INCLUDE[tsql](../../includes/tsql-md.md)]|是|否|否|是|
+|從 Hadoop 匯入資料|是|否|否|是|
+|匯出資料至 Hadoop  |是|否|否| 是|
+|將查詢計算下推到 Hadoop|是|否|否|是|  
+|從 Azure Blob 儲存體匯入資料|是|否|是|是| 
+|匯出資料至 Azure Blob 儲存體|是|否|是|是|  
+|從 Azure Data Lake Store 匯入資料|否|否|是|否|    
+|從 Azure Data Lake Store 匯出資料|否|否|是|否|
+|從 Microsoft 的 BI 工具執行 PolyBase 查詢|是|否|是|是|   
+
+
+
   
 ## <a name="see-also"></a>另請參閱  
  [PolyBase 指南](../../relational-databases/polybase/polybase-guide.md)  

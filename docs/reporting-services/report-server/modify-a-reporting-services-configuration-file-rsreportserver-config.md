@@ -1,29 +1,34 @@
 ---
-title: "Modify a Reporting Services Configuration File (RSreportserver.config) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "修改 Reporting Services 組態檔 (RSreportserver.config) |Microsoft 文件"
+ms.custom: 
+ms.date: 03/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 958ef51f-2699-4cb2-a92e-3b4322e36a30
 caps.latest.revision: 9
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 7
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: f5862f4faec4784aac678d578c155ac5992a55f6
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# Modify a Reporting Services Configuration File (RSreportserver.config)
+# <a name="modify-a-reporting-services-configuration-file-rsreportserverconfig"></a>修改 Reporting Services 組態檔 (RSreportserver.config)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會將應用程式設定儲存在組態檔集合中。 安裝程式會針對您所安裝的每個報表伺服器執行個體建立組態檔。 在每個檔案內部，其值是在安裝期間設定，或當您使用工具和應用程式來設定作業的伺服器時設定。 在某些情況下，您必須直接修改檔案，以便加入或修改進階設定。 組態設定會指定為 XML 元素或屬性。 如果您了解 XML 和組態檔，就可以使用文字或程式碼編輯器來修改可由使用者定義的設定。  
   
  某些組態設定只能透過某個工具進行設定。 您必須透過 Reporting Services 組態工具、安裝程式或 **rsconfig** 命令列公用程式來修改包含加密值的設定。 您必須是本機管理員群組的成員才能執行這些工具。  
   
 > [!IMPORTANT]  
->  修改組態檔時，請特別小心。 如果您修改保留給內部使用的設定，可能會停用安裝程序。 除非您嘗試解決特定問題，否則一般而言不建議您修改組態設定。 如需哪些設定可安全變更的詳細資訊，請參閱 [RsReportServer.config 組態檔](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)或 [RSReportDesigner 組態檔](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)。 如需組態檔的詳細資訊，請參閱 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 產品文件。  
+>  修改組態檔時，請特別小心。 如果您修改保留給內部使用的設定，可能會停用安裝程序。 除非您嘗試解決特定問題，否則一般而言不建議您修改組態設定。 如需哪些設定可安全變更的詳細資訊，請參閱 [RsReportServer.config 組態檔](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) 或 [RSReportDesigner 組態檔](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)。 如需組態檔的詳細資訊，請參閱 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 產品文件。  
   
  本主題內容：  
   
@@ -59,13 +64,24 @@ caps.handback.revision: 7
     -   **RSReportServer.config** 位於下列資料夾：  
   
         ```  
-        C:\Program Files\Microsoft SQL Server\MSRS11.MSSQLSERVER\Reporting Services\ReportServer  
+        C:\Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\ReportServer  
         ```  
+        
+        ||  
+        |-|  
+        |**[!INCLUDE[applies](../../includes/applies-md.md)]**SQL Server Reporting Services 中的 Power BI 報表 2017 年 1 月技術預覽|
+        
+        ```  
+        C:\Program Files\Microsoft SQL Server Reporting Services\RSServer\ReportServer
+        ```
   
     -   **RSReportServerServices.exe.config** 位於下列資料夾：  
+    
+        > [!NOTE] 
+        > 這不是適用於年 1 月 2017年的 Power BI 技術預覽中 SQL Server Reporting Services 報表。
   
         ```  
-        C:\Program Files\Microsoft SQL Server\MSRS11.MSSQLSERVER\Reporting Services\ReportServer\bin  
+        C:\Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\ReportServer\bin  
         ```  
   
     -   **RSReportDesigner.config** 位於下列資料夾：  
@@ -82,22 +98,22 @@ caps.handback.revision: 7
   
     -   [使用報表伺服器驗證](../../reporting-services/security/authentication-with-the-report-server.md)  
   
-    -   [設定報表管理員傳遞自訂驗證 Cookie](../Topic/Configure%20Report%20Manager%20to%20Pass%20Custom%20Authentication%20Cookies.md)  
+    -   [設定入口網站，以傳遞自訂驗證 Cookie](../../reporting-services/security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)
   
     -   [在 RSReportServer.Config 中自訂轉譯延伸模組參數](../../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)  
   
 5.  儲存檔案。  
   
-6.  檢查追蹤記錄檔，以便確認錯誤並未發生。 如果您看見錯誤狀況，表示某項設定或其值的指定內容不正確。 請檢閱[RsReportServer.config 組態檔](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)，以便取得導致錯誤發生之任何設定的有效值。 如需如何檢視追蹤記錄的詳細資訊，請參閱[報表伺服器服務追蹤記錄](../../reporting-services/report-server/report-server-service-trace-log.md)。  
+6.  檢查追蹤記錄檔，以便確認錯誤並未發生。 如果您看見錯誤狀況，表示某項設定或其值的指定內容不正確。 請檢閱 [RsReportServer.config 組態檔](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) ，以便取得導致錯誤發生之任何設定的有效值。 如需如何檢視追蹤記錄的詳細資訊，請參閱 [報表伺服器服務追蹤記錄](../../reporting-services/report-server/report-server-service-trace-log.md)。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [RsReportServer.config 組態檔](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [ReportingServicesService 組態檔](../../reporting-services/report-server/reportingservicesservice-configuration-file.md)   
  [RSReportDesigner 組態檔](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)   
  [部署資料處理延伸模組](../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension.md)   
  [部署傳遞延伸模組](../../reporting-services/extensions/delivery-extension/deploying-a-delivery-extension.md)   
  [部署轉譯延伸模組](../../reporting-services/extensions/rendering-extension/deploying-a-rendering-extension.md)   
- [如何：部署自訂報表項目](../Topic/How%20to:%20Deploy%20a%20Custom%20Report%20Item.md)   
  [Reporting Services 組態檔](../../reporting-services/report-server/reporting-services-configuration-files.md)  
   
   
+

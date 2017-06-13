@@ -1,26 +1,31 @@
 ---
-title: "在 URL 內傳遞報表參數 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "URL 存取 [Reporting Services], 傳遞參數"
-  - "傳遞參數 [Reporting Services]"
+title: "將報表參數，在 URL 內傳遞 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- URL access [Reporting Services], passing parameters
+- passing parameters [Reporting Services]
 ms.assetid: f93a94cc-27b5-435a-aa85-69e6ec6459ad
 caps.latest.revision: 36
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 36
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e3b076b74a6082e34dc9c489c0383fd6a5c3bd4f
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 在 URL 內傳遞報表參數
+# <a name="pass-a-report-parameter-within-a-url"></a>在 URL 內傳遞報表參數
   您可以在報表 URL 中包括報表參數，以便將它們傳遞給報表。 這些 URL 參數不會加上前置詞，因為它們會直接傳遞給報表處理引擎。  
   
 > [!IMPORTANT]  
@@ -75,7 +80,7 @@ parameter
 SalesOrderNumber:isnull=true  
 ```  
   
- 若要傳遞**布林**值，請使用 0 表示 False，使用 1 表示 True。 若要傳遞**浮點數**值，請包含伺服器地區設定的小數分隔符號  
+ 若要傳遞 **布林** 值，請使用 0 表示 False，使用 1 表示 True。 若要傳遞 **浮點數** 值，請包含伺服器地區設定的小數分隔符號  
   
 > [!NOTE]  
 >  如果報表中包含具有預設值的報表參數，而且 **Prompt** 屬性的值是 **false** (也就是在報表管理員中未選取 [提示使用者] 屬性)，則您無法在 URL 內傳遞該報表參數的值。 這可讓管理員選擇防止使用者加入或修改某些報表參數值。  
@@ -99,13 +104,13 @@ https://myserver/Reportserver?/SQL+Server+User+Education+Team/_ContentTeams/fold
 https://myserver/Reportserver?/SQL+Server+User+Education+Team/_ContentTeams/folder123/team+project+report&teamgrouping2=xgroup&teamgrouping1=ygroup&OrderID=747&OrderID=787&OrderID=12  
 ```  
   
- 下列 URL 範例會針對原生模式報表伺服器傳遞具有值 “7/1/2005” 的單一參數 *SellStartDate*。  
+ 下列 URL 範例會針對原生模式報表伺服器傳遞具有值 “7/1/2005” 的單一參數 *SellStartDate* 。  
   
 ```  
 http://myserver/ReportServer/Pages/ReportViewer.aspx?%2fProduct_and_Sales_Report_AdventureWorks&SellStartDate=7/1/2005  
 ```  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [URL 存取 &#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)   
  [URL 存取參數參考](../reporting-services/url-access-parameter-reference.md)  
   

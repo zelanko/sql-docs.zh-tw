@@ -1,7 +1,7 @@
 ---
 title: "伺服器層級角色 | Microsoft Docs"
 ms.custom: 
-ms.date: 12/29/2016
+ms.date: 05/24/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -27,20 +27,20 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 8850c5e74e5e77ecad1b847f6176713c0af9b537
+ms.sourcegitcommit: 96f6a7eeb03fdc222d0e5b42bcfbf05c25d11db6
+ms.openlocfilehash: f4f99b8869aca02d63b5aacaa883ce501e332ea7
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/25/2017
 
 ---
 # <a name="server-level-roles"></a>伺服器層級角色
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會提供伺服器層級角色來協助您管理伺服器的權限。 這些角色是將其他主體組成群組的安全性主體。 伺服器層級角色的權限範圍為整個伺服器  (「角色」就像是 Windows 作業系統中的「群組」)。  
   
  固定伺服器角色是為了方便和回溯相容性所提供。 請盡可能指派更特定的權限。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 提供了九種固定伺服器角色。 您無法變更授與固定伺服器角色的權限。 從 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]開始，您就可以建立使用者定義伺服器角色，並將伺服器層級權限加入至使用者定義伺服器角色。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 提供了九種固定伺服器角色。 授與固定的伺服器角色的權限 (除了**公用**) 無法變更。 從 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]開始，您就可以建立使用者定義伺服器角色，並將伺服器層級權限加入至使用者定義伺服器角色。  
   
  您可以將伺服器層級主體 ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登入、Windows 帳戶和 Windows 群組) 加入伺服器層級角色。 固定伺服器角色的每個成員可以對相同的角色增加其他登入。 使用者定義伺服器角色的成員無法將其他伺服器主體加入至此角色。  
 >  [!NOTE]
@@ -49,21 +49,21 @@ ms.lasthandoff: 04/11/2017
 ## <a name="fixed-server-level-roles"></a>固定伺服器層級角色  
  下表顯示固定伺服器層級角色及其功能。  
   
-|固定伺服器層級角色|描述|  
+|固定伺服器層級角色|Description|  
 |------------------------------|-----------------|  
-|sysadmin|系統管理員 (sysadmin) 固定伺服器角色的成員可以執行伺服器中的所有活動。|  
-|serveradmin|伺服器管理員 (serveradmin) 固定伺服器角色的成員可以變更整個伺服器的組態選項及關閉伺服器。|  
-|securityadmin|安全性管理員 (securityadmin) 固定伺服器角色的成員可以管理登入及其屬性。 他們可以 GRANT、DENY 及 REVOKE 伺服器層級權限。 如果他們擁有資料庫的存取權，也可以 GRANT、DENY 和 REVOKE 資料庫層級權限。 此外，他們可以重設 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登入的密碼。<br /><br /> **\*\* 安全性注意事項 \*\*** 安全性管理員可使用授與 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 存取權和設定使用者權限的功能，來指派大部分的伺服器權限。 您應該將 **securityadmin** 角色視為相當於 **系統管理員** 角色。|  
-|processadmin|處理序管理員 (processadmin) 固定伺服器角色的成員可以結束在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體中執行的處理序。|  
-|setupadmin|setupadmin 固定伺服器角色的成員可以使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式加入和移除連結的伺服器 (使用 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]時需要系統管理員成員資格)。|  
-|bulkadmin|大量管理員 (bulkadmin) 固定伺服器角色的成員可以執行 BULK INSERT 陳述式。|  
-|diskadmin|diskadmin 固定伺服器角色是用來管理磁碟檔案。|  
-|dbcreator|資料庫建立者 (dbcreator) 固定伺服器角色的成員可以建立、改變、卸除及還原任何資料庫。|  
-|public|每一個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登入都屬於 public 伺服器角色。 當伺服器主體未被授與或拒絕安全性實體物件的特定權限時，該使用者會繼承授與給該物件之 public 的權限。 只有當您想要將任何物件提供給所有使用者使用時，才指派該物件的 public 權限。 您無法變更 public 的成員資格。<br /><br /> 注意：public 的實作方式與其他角色不同。 不過，您可以在 public 中授與、拒絕或撤銷權限。|  
+|**sysadmin**|成員**sysadmin**固定的伺服器角色可以執行伺服器中的任何活動。|  
+|**serveradmin**|**serveradmin** 固定伺服器角色的成員可以變更全伺服器組態選項及關閉伺服器。|  
+|**securityadmin**|**securityadmin** 固定伺服器角色的成員可以管理登入及其屬性。 他們可以`GRANT`， `DENY`，和`REVOKE`伺服器層級權限。 他們也可以`GRANT`， `DENY`，和`REVOKE`資料庫層級權限有資料庫的存取權。 此外，他們可以重設 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登入的密碼。<br /><br /> **重要事項：**授與存取權的能力[!INCLUDE[ssDE](../../../includes/ssde-md.md)]並設定使用者權限可讓安全性管理員指派大部分伺服器權限。 您應該將 **securityadmin** 角色視為相當於 **系統管理員** 角色。|  
+|**processadmin**|成員**processadmin**固定的伺服器角色可以結束正在執行的執行個體中的處理程序[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。|  
+|**setupadmin**|成員**setupadmin**固定的伺服器角色可以新增和移除連結的伺服器使用[!INCLUDE[tsql](../../../includes/tsql-md.md)]陳述式。 (**sysadmin**時使用，如需成員資格[!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]。)|  
+|**管理員 （bulkadmin)**|成員**bulkadmin**固定的伺服器角色可以執行`BULK INSERT`陳述式。|  
+|**diskadmin**|**Diskadmin**固定的伺服器角色用來管理磁碟檔案。|  
+|**dbcreator**|**dbcreator** 固定伺服器角色的成員可以建立、改變、卸除及還原任何資料庫。|  
+|**公開金鑰**|每個[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]登入都屬於**公用**伺服器角色。 當伺服器主體未被授與或拒絕安全性實體物件的特定權限時，該使用者會繼承授與給該物件之 public 的權限。 只有當您想要將任何物件提供給所有使用者使用時，才指派該物件的 public 權限。 您無法變更 public 的成員資格。<br /><br /> **注意：** **公用**實作方式不同於其他角色和權限可以授與、 拒絕或撤銷 public 固定的伺服器角色。|  
   
 ## <a name="permissions-of-fixed-server-roles"></a>固定伺服器角色的權限  
  每個固定伺服器角色都擁有指派給它的特定權限。 下圖顯示指派給伺服器角色的權限。   
-![fixed_server_role_permissions](../../../relational-databases/security/authentication-access/media/fixed-server-role-permissions.png)   
+![fixed_server_role_permissions](../../../relational-databases/security/authentication-access/media/permissions-of-server-roles.png)   
   
 > [!IMPORTANT]  
 >  **CONTROL SERVER** 權限與 **系統管理員** 固定伺服器角色類似但不完全相同。 權限不代表角色成員資格，角色成員資格也不會授與權限。 (例如， **CONTROL SERVER** 不代表**系統管理員**固定伺服器角色的成員資格)。不過，角色與相等權限之間有時候可以互相模擬。 大部分 **DBCC** 命令與許多系統程序都需要**系統管理員**固定伺服器角色的成員資格。 如需需要 **系統管理員** 成員資格的 171 個系統預存程序清單，請參閱 Andreas Wolter 的下列部落格文章： [CONTROL SERVER vs. sysadmin/sa: permissions, system procedures, DBCC, automatic schema creation and privilege escalation - caveats](http://www.insidesql.org/blogs/andreaswolter/2013/08/control-server-vs-sysadmin-sa-permissions-privilege-escalation-caveats)。  
@@ -71,7 +71,7 @@ ms.lasthandoff: 04/11/2017
 ## <a name="server-level-permissions"></a>伺服器層級權限  
  只有伺服器層級權限可加入至使用者定義伺服器角色。 若要列出伺服器層級權限，請執行以下陳述式。 伺服器層級權限為：  
   
-```tsql  
+```  
 SELECT * FROM sys.fn_builtin_permissions('SERVER') ORDER BY permission_name;  
 ```  
   

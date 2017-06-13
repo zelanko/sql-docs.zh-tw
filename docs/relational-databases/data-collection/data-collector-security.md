@@ -19,10 +19,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d5b90faa09f6185ffe5e273e43707bc9dc2dc1c0
+ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
+ms.openlocfilehash: 62b958f5a1c032e11b5aaef37692b5de21a0bec4
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 04/25/2017
 
 ---
 # <a name="data-collector-security"></a>資料收集器安全性
@@ -96,7 +96,7 @@ ms.lasthandoff: 04/11/2017
   
 -   **db_ssisoperator**  
   
- 如需詳細資訊，請參閱 [Integration Services 角色 &#40;SSIS 服務&#41;](../../integration-services/service/integration-services-roles-ssis-service.md)。  
+ 如需詳細資訊，請參閱 [Integration Services 角色 &#40;SSIS 服務&#41;](../../integration-services/security/integration-services-roles-ssis-service.md)。  
   
 ### <a name="dcproxy-role"></a>dc_proxy 角色  
  **dc_proxy** 角色的成員對於資料收集器收集組和收集器層級的屬性具有讀取存取權。 這個角色的成員也可以執行自己所擁有的作業，並建立以現有 Proxy 帳戶身分執行的作業步驟。  
@@ -115,7 +115,7 @@ ms.lasthandoff: 04/11/2017
   
 -   **db_ssisoperator**  
   
- 如需詳細資訊，請參閱 [Integration Services 角色 &#40;SSIS 服務&#41;](../../integration-services/service/integration-services-roles-ssis-service.md)。  
+ 如需詳細資訊，請參閱 [Integration Services 角色 &#40;SSIS 服務&#41;](../../integration-services/security/integration-services-roles-ssis-service.md)。  
   
 ## <a name="permissions-for-configuring-and-using-the-management-data-warehouse"></a>設定及使用管理資料倉儲的權限  
  根據工作而定，使用者必須是針對存取管理資料倉儲所提供之一個或多個固定資料庫角色的成員。 下面依照最高存取權限到最低存取權限的順序列出這些角色：  

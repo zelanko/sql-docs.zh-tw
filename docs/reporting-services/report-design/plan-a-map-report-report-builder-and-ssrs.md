@@ -1,23 +1,28 @@
 ---
-title: "規劃地圖報表 (報表產生器及 SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "規劃地圖報表 （報表產生器及 SSRS） |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: dc0c27a4-7e31-4a15-a0bc-3a02479d5b02
 caps.latest.revision: 9
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 9
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 78f69746e290ea004d28edf8a0a90aeabfb9151d
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 規劃地圖報表 (報表產生器及 SSRS)
+# <a name="plan-a-map-report-report-builder-and-ssrs"></a>規劃地圖報表 (報表產生器及 SSRS)
 良好的報表會呈現具備行動力或洞察能力的資訊。 若要針對地理背景呈現分析資料 (例如銷售總計或人口統計)，您可以將地圖加入 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表中。 一個地圖可以包含多個圖層，而每個圖層都會顯示由特定類型之空間資料所定義的地圖元素：表示位置的點、表示路線的線條，或表示區域的多邊形。 您可以讓您的分析資料與每個圖層上的地圖元素產生關聯。  
   
 > [!NOTE]  
@@ -51,7 +56,7 @@ caps.handback.revision: 9
   
  識別您所需要的空間資料之後，您必須尋找該資料的來源。  
   
-### 尋找空間資料的來源  
+### <a name="find-a-source-for-spatial-data"></a>尋找空間資料的來源  
  若要尋找地圖中所使用的空間資料，您可以使用下列來源：  
   
 -   ESRI 形狀檔，包括您可以在網際網路上搜尋到之公開提供的形狀檔。  
@@ -70,18 +75,18 @@ caps.handback.revision: 9
   
  在您找到所需的資料之後，可以將該資料內嵌在報表定義中，或在處理報表時動態擷取該資料。 如需詳細資訊，請參閱本主題稍後的＜ [平衡報表定義大小與報表處理時間](#Embedding) ＞。  
   
-### 決定空間資料與空間資料符合欄位  
+### <a name="determine-the-spatial-data-and-the-spatial-data-match-fields"></a>決定空間資料與空間資料符合欄位  
  若要在地圖上顯示分析資料，以及更改大小、色彩或標記類型，您必須指定讓空間資料和分析資料產生關聯的欄位。  
   
  空間資料必須包含下列欄位：  
   
--   **空間資料提供的協力廠商網站。** 包含定義每個點、線條或多邊形之座標組的空間資料欄位。  
+-   **Spatial data.** 包含定義每個點、線條或多邊形之座標組的空間資料欄位。  
   
 -   **符合欄位：** 唯一識別每個空間資料欄位的一個或多個欄位。 例如，對於商店位置點，您可能會使用商店的名稱。 如果商店名稱在空間資料中不是唯一的，您可以加入城市名稱以及商店名稱。  
   
  若要讓空間資料與分析資料產生關聯，請使用符合欄位。  
   
-### 決定分析資料與分析資料符合欄位  
+### <a name="determine-the-analytical-data-and-the-analytical-data-match-fields"></a>決定分析資料與分析資料符合欄位  
  識別空間資料之後，您必須識別分析資料。 分析資料可能是來自下列來源：  
   
 -   現有的報表資料集。 系統會將欄位指定為簡單的欄位運算式，例如，[Sales] 或 =Fields!Sales.Value。  
@@ -107,18 +112,18 @@ caps.handback.revision: 9
   
 |精靈圖示|圖層樣式|圖層類型|描述及選項|  
 |-----------------|-----------------|----------------|-----------------------------|  
-|![rs_MapType_Polygon_Basic](../../reporting-services/report-design/media/rs-maptype-polygon-basic.png "rs_MapType_Polygon_Basic")|基本地圖|多邊形|僅顯示區域的地圖，例如銷售領域。<br /><br /> 選項：依調色盤更改色彩或使用單一色彩。 調色盤是預先定義的一組色彩。 當調色盤中的所有色彩都經過指派之後，就會指派色彩的陰影。|  
-|![rs_MapType_Polygon_ColorAnalytical](../../reporting-services/report-design/media/rs-maptype-polygon-coloranalytical.png "rs_MapType_Polygon_ColorAnalytical")|色彩分析地圖|多邊形|透過更改色彩顯示分析資料的地圖，例如，依地區顯示的銷售資料。|  
-|![rs_MapType_Polygon_Bubble](../../reporting-services/report-design/media/rs-maptype-polygon-bubble.png "rs_MapType_Polygon_Bubble")|泡泡地圖|多邊形|透過更改在區域上置中的泡泡大小來顯示分析資料的地圖，例如，依地區顯示的銷售資料。<br /><br /> 選項：根據另一個分析欄位更改區域色彩，然後指定色彩規則。|  
-|![rs_MapType_Line_Basic](../../reporting-services/report-design/media/rs-maptype-line-basic.png "rs_MapType_Line_Basic")|基本線條地圖|行|僅顯示線條的地圖，例如傳遞路線。<br /><br /> 選項：依調色盤更改色彩或使用單一色彩。|  
-|![rs_MapType_Line_Analytical](../../reporting-services/report-design/media/rs-maptype-line-analytical.png "rs_MapType_Line_Analytical")|分析線條地圖|線條|更改線條色彩與寬度的地圖，例如，已傳遞的封裝數目以及依路線顯示的準時度量資訊。<br /><br /> 選項：依某個分析欄位更改線條寬度、依另一個分析欄位更改線條色彩，然後指定色彩規則。|  
-|![rs_MapType_Marker_Basic](../../reporting-services/report-design/media/rs-maptype-marker-basic.png "rs_MapType_Marker_Basic")|基本標記地圖|點|顯示每個位置之標記的地圖，例如城市。<br /><br /> 選項：依調色盤更改色彩或使用單一色彩，然後變更標記樣式。|  
-|![rs_MapType_Marker_Bubble](../../reporting-services/report-design/media/rs-maptype-marker-bubble.png "rs_MapType_Marker_Bubble")|泡泡標記地圖|點|針對每個位置顯示泡泡，並依某個分析資料欄位更改泡泡大小的地圖，例如，依城市顯示的銷售資料。<br /><br /> 選項：根據另一個分析欄位更改泡泡色彩，然後指定色彩規則。|  
-|![rs_MapType_Marker_Analytical](../../reporting-services/report-design/media/rs-maptype-marker-analytical.png "rs_MapType_Marker_Analytical")|分析標記地圖|點|在每個位置顯示標記，並根據分析資料更改標記色彩、大小與類型的地圖，例如，最暢銷的產品、收益範圍與折扣策略。<br /><br /> 選項：依某個分析欄位更改標記類型、依另一個分析欄位更改標記大小，依第三個分析欄位更改標記色彩，然後指定色彩規則。|  
+|![rs_MapType_Polygon_Basic](../../reporting-services/report-design/media/rs-maptype-polygon-basic.gif "rs_MapType_Polygon_Basic")|基本地圖|多邊形|僅顯示區域的地圖，例如銷售領域。<br /><br /> 選項：依調色盤更改色彩或使用單一色彩。 調色盤是預先定義的一組色彩。 當調色盤中的所有色彩都經過指派之後，就會指派色彩的陰影。|  
+|![rs_MapType_Polygon_ColorAnalytical](../../reporting-services/report-design/media/rs-maptype-polygon-coloranalytical.gif "rs_MapType_Polygon_ColorAnalytical")|色彩分析地圖|多邊形|透過更改色彩顯示分析資料的地圖，例如，依地區顯示的銷售資料。|  
+|![rs_MapType_Polygon_Bubble](../../reporting-services/report-design/media/rs-maptype-polygon-bubble.gif "rs_MapType_Polygon_Bubble")|泡泡地圖|多邊形|透過更改在區域上置中的泡泡大小來顯示分析資料的地圖，例如，依地區顯示的銷售資料。<br /><br /> 選項：根據另一個分析欄位更改區域色彩，然後指定色彩規則。|  
+|![rs_MapType_Line_Basic](../../reporting-services/report-design/media/rs-maptype-line-basic.gif "rs_MapType_Line_Basic")|基本線條地圖|行|僅顯示線條的地圖，例如傳遞路線。<br /><br /> 選項：依調色盤更改色彩或使用單一色彩。|  
+|![rs_MapType_Line_Analytical](../../reporting-services/report-design/media/rs-maptype-line-analytical.gif "rs_MapType_Line_Analytical")|分析線條地圖|行|更改線條色彩與寬度的地圖，例如，已傳遞的封裝數目以及依路線顯示的準時度量資訊。<br /><br /> 選項：依某個分析欄位更改線條寬度、依另一個分析欄位更改線條色彩，然後指定色彩規則。|  
+|![rs_MapType_Marker_Basic](../../reporting-services/report-design/media/rs-maptype-marker-basic.gif "rs_MapType_Marker_Basic")|基本標記地圖|點|顯示每個位置之標記的地圖，例如城市。<br /><br /> 選項：依調色盤更改色彩或使用單一色彩，然後變更標記樣式。|  
+|![rs_MapType_Marker_Bubble](../../reporting-services/report-design/media/rs-maptype-marker-bubble.gif "rs_MapType_Marker_Bubble")|泡泡標記地圖|點|針對每個位置顯示泡泡，並依某個分析資料欄位更改泡泡大小的地圖，例如，依城市顯示的銷售資料。<br /><br /> 選項：根據另一個分析欄位更改泡泡色彩，然後指定色彩規則。|  
+|![rs_MapType_Marker_Analytical](../../reporting-services/report-design/media/rs-maptype-marker-analytical.gif "rs_MapType_Marker_Analytical")|分析標記地圖|點|在每個位置顯示標記，並根據分析資料更改標記色彩、大小與類型的地圖，例如，最暢銷的產品、收益範圍與折扣策略。<br /><br /> 選項：依某個分析欄位更改標記類型、依另一個分析欄位更改標記大小，依第三個分析欄位更改標記色彩，然後指定色彩規則。|  
   
  使用「地圖精靈」加入地圖之後，您可以使用「圖層精靈」建立其他圖層或變更圖層的選項。 如需精靈的詳細資訊，請參閱[地圖精靈和地圖圖層精靈 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)。  
   
- 您可以針對每個圖層分別自訂顯示或資料選項。 如需在執行精靈後自訂地圖的詳細資訊，請參閱[自訂地圖或地圖圖層的資料和顯示 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)。  
+ 您可以針對每個圖層分別自訂顯示或資料選項。 如需在執行精靈後自訂地圖的詳細資訊，請參閱 [自訂地圖或地圖圖層的資料和顯示 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)中。  
   
 ##  <a name="Legend"></a> 規劃圖例  
  為協助您的使用者解譯地圖，您可以加入多個地圖圖例、色階，以及距離標尺。 當您設計地圖時，規劃您希望圖例顯示的位置。 您可以指定有關每個圖例的下列資訊：  
@@ -135,7 +140,7 @@ caps.handback.revision: 9
   
  根據預設，所有圖層都會將規則結果顯示在第一個地圖圖例中。 您可以建立多個圖例，然後針對每個規則，指派要用來顯示結果的圖例。  
   
- 如需詳細資訊，請參閱[使用規則與分析資料更改多邊形、線條與點顯示 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/vary polygon, line, and point display by rules and analytical data.md) 和[變更地圖圖例、色階與相關的規則 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)。  
+ 如需詳細資訊，請參閱[使用規則與分析資料更改多邊形、線條與點顯示 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md) 和[變更地圖圖例、色階與相關的規則 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)。  
   
 ##  <a name="Embedding"></a> 平衡報表定義大小與報表處理時間  
  對於地圖而言，良好的報表設計會要求您平衡控制報表效能與報表定義大小的選項。 以空間資料或 Bing 地圖底圖為基礎的地圖元素可以是靜態的，而且內嵌在報表定義中，或者是動態的，而且在每次處理報表時建立。 您必須評估靜態或動態地圖資料的權衡得失，並找出適合您狀況的平衡點。 請考量下列資訊再做決定：  
@@ -150,7 +155,7 @@ caps.handback.revision: 9
   
  若要使用動態空間資料，空間資料來源必須位在報表伺服器上。 在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中設計報表時，可以將空間資料來源加入至專案中，然後與報表定義一起發行至報表伺服器。 如果您要使用報表產生器設計報表，必須先將空間資料上傳至報表伺服器，然後在精靈或圖層屬性中，指定地圖圖層之空間資料的來源。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [自訂地圖或地圖圖層的資料和顯示 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   
  [教學課程：地圖報表 &#40;報表產生器&#41;](../../reporting-services/tutorial-map-report-report-builder.md)   
  [地圖 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   

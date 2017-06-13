@@ -19,10 +19,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 3daaaa3dc2fb53344b009a5b3ab3d1cfbdd19350
+ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
+ms.openlocfilehash: e2a427682aebeeccc82a1b7f6521399b8a0b6fe8
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/09/2017
 
 ---
 # <a name="json-data-sql-server"></a>JSON 資料 (SQL Server)
@@ -70,15 +70,15 @@ JSON 是在最新 Web 和行動應用程式中用來交換資料的常見文字�
 
 **範例**
   
- 在下列範例中，查詢會使用來自資料表的關聯式資料和 JSON 資料 (儲存於 jsonCol 資料行中)︰  
+ 在下列範例中，此查詢會使用關聯式和 JSON 資料 (儲存在名為資料行`jsonCol`) 從資料表：  
   
-```tsql  
+```sql  
 SELECT Name,Surname,
  JSON_VALUE(jsonCol,'$.info.address.PostCode') AS PostCode,
  JSON_VALUE(jsonCol,'$.info.address."Address Line 1"')+' '
   +JSON_VALUE(jsonCol,'$.info.address."Address Line 2"') AS Address,
  JSON_QUERY(jsonCol,'$.info.skills') AS Skills
-FROM PeopleCollection
+FROM People
 WHERE ISJSON(jsonCol)>0
  AND JSON_VALUE(jsonCol,'$.info.address.Town')='Belgrade'
  AND Status='Active'
@@ -92,7 +92,7 @@ ORDER BY JSON_VALUE(jsonCol,'$.info.address.PostCode')
 ### <a name="change-json-values"></a>變更 JSON 值
 如果您需要修改部分 JSON 文字，可以使用 **JSON_MODIFY** 函式來更新 JSON 字串中的屬性值，並傳回更新的 JSON 字串。 下列範例會在包含 JSON 的變數中更新屬性的值。  
   
-```tsql  
+```sql  
 DECLARE @jsonInfo NVARCHAR(MAX)
 
 SET @jsonInfo=JSON_MODIFY(@jsonInfo,'$.info.address[0].town','London') 
@@ -103,7 +103,7 @@ SET @jsonInfo=JSON_MODIFY(@jsonInfo,'$.info.address[0].town','London')
   
  下列範例會呼叫 **OPENJSON**，將儲存於 `@json` 變數中的物件陣列轉換為可使用標準 SQL **SELECT** 陳述式查詢的資料列集︰  
   
-```tsql  
+```sql  
 DECLARE @json NVARCHAR(MAX)
 SET @json =  
 N'[  
@@ -140,7 +140,7 @@ FROM OPENJSON(@json)
   
  下列範例會搭配 FOR JSON 子句使用 PATH 模式。  
   
-```tsql  
+```sql  
 SELECT id, firstName AS "info.name", lastName AS "info.surname", age, dateOfBirth as dob  
 FROM People  
 FOR JSON PATH  
@@ -190,7 +190,7 @@ JSON 文字通常儲存在 varchar 或 nvarchar 資料行中，並以純文字�
   
  此 OData URL 表示對於識別碼 1 的產品的 ProductID 和 ProductName 資料行的要求。 您可以使用 **FOR JSON**，以 SQL Server 的預期方式來格式化輸出。  
   
-```tsql  
+```sql  
 SELECT 'http://services.odata.org/V4/Northwind/Northwind.svc/$metadata#Products(ProductID,ProductName)/$entity'
  AS '@odata.context',   
  ProductID, Name as ProductName   
@@ -204,7 +204,7 @@ FOR JSON AUTO
 ## <a name="analyze-json-data-with-sql-queries"></a>使用 SQL 查詢分析 JSON 資料  
  如果您基於報告目的而必須篩選或彙總 JSON 資料，您可以使用 **OPENJSON**，將 JSON 轉換為關聯式格式。 然後使用標準的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 和內建函數來準備報告。  
   
-```tsql  
+```sql  
 SELECT Tab.Id, SalesOrderJsonData.Customer, SalesOrderJsonData.Date  
 FROM   SalesOrderRecord AS Tab  
           CROSS APPLY  
@@ -225,7 +225,7 @@ ORDER BY JSON_VALUE(Tab.json, '$.Group'), Tab.DateModified
 ## <a name="import-json-data-into-sql-server-tables"></a>將 JSON 資料匯入 SQL Server 資料表  
  如果必須將外部服務的 JSON 資料載入 SQL Server，您可以改用 **OPENJSON** 將資料匯入 SQL Server，而不需在應用程式層剖析資料。  
   
-```tsql  
+```sql  
 DECLARE @jsonVariable NVARCHAR(MAX)
 
 SET @jsonVariable = N'[  
@@ -321,7 +321,7 @@ FROM OPENJSON (@jsonVariable, N'$.Orders.OrdersArray')
   
 ### <a name="microsoft-blog-posts"></a>Microsoft 部落格文章  
   
--   [Microsoft 專案經理 Jovan Popovic 的部落格文章](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)  
+-   針對特定的解決方案，大量使用案例和建議，請參閱[有關內建 JSON 支援的部落格文章](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)Microsoft 經理專案 jovan popovic 的 Azure SQL Database 和 SQL Server 中。  
   
 ### <a name="reference-topics"></a>參考主題  
   

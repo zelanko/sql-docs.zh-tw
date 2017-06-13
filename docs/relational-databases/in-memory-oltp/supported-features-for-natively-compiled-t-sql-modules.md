@@ -1,7 +1,7 @@
 ---
 title: "原生編譯的 T-SQL 模組支援的功能 | Microsoft Docs"
 ms.custom: 
-ms.date: 12/16/2016
+ms.date: 04/12/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 16f09bada7bbf3ae964ecfa09aa33208aa2f3acf
+ms.sourcegitcommit: 332787256518605b6f91dab6be012889c0b0aa93
+ms.openlocfilehash: 0d87653d1db0ffad098e9cdf914d61a486905647
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="supported-features-for-natively-compiled-t-sql-modules"></a>原生編譯的 T-SQL 模組支援的功能
@@ -51,19 +51,29 @@ ms.lasthandoff: 04/11/2017
 
 以下為支援的查詢結構：  
 
+CASE 運算式： 案例可用於任何陳述式或子句的允許有效運算式。
+   - **適用於：** [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]。  
+    開頭為[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]，CASE 陳述式現在支援原生編譯 T-SQL 模組。
+
 SELECT 子句：  
 
 -   資料行和名稱別名 (使用 AS 或 = 語法)。  
 
--   純量子查詢  
+-   純量子查詢
+    - **適用於：** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]。
+      開頭為[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]，原生編譯模組現在支援純量子查詢。
 
 -   回到頁首*  
 
 -   SELECT DISTINCT  
+    - **適用於：** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]。
+      開頭為[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]，原生編譯模組支援不同的運算子。
 
               DISTINCT aggregates are not supported.  
 
 -   UNION 和 UNION ALL
+    - **適用於：** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]。
+      開頭為[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]，原生編譯模組中現在支援 UNION 和 UNION ALL 運算子。
 
 -   變數指派  
 
@@ -73,15 +83,22 @@ FROM 子句：
 
 -   FROM \<原生編譯的內嵌 TVF>  
 
--   LEFT OUTER JOIN、RIGHT OUTER JOIN、CROSS JOIN 和 INNER JOIN。  
+-   LEFT OUTER JOIN、RIGHT OUTER JOIN、CROSS JOIN 和 INNER JOIN。
+    - **適用於：** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]。
+      開頭為[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]，原生編譯模組現在支援聯結。
 
--   子查詢 `[AS] table_alias`。 如需詳細資訊，請參閱 [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)。  
+-   子查詢 `[AS] table_alias`。 如需詳細資訊，請參閱 [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)。 
+    - **適用於：** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]。
+      開頭為[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]，原生編譯模組現在支援子查詢。
 
 WHERE 子句：  
 
 -   篩選器述詞 IS [NOT] NULL  
 
--   AND、OR、NOT、IN、EXISTS、BETWEEN  
+-   和之間  
+-   OR、 NOT、 中、 EXISTS
+    - **適用於：** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]。
+      開頭為[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]，OR/NOT/IN/EXISTS 運算子現在支援原生編譯模組中。
 
 
 [GROUP BY](../../t-sql/queries/select-group-by-transact-sql.md) 子句：

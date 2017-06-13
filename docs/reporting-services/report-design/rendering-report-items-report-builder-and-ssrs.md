@@ -1,29 +1,34 @@
 ---
-title: "Rendering Report Items (Report Builder and SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "轉譯報表項目 （報表產生器及 SSRS） |Microsoft 文件"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 99ebb4dc-41cc-42ac-82dd-a2b0e31155a0
 caps.latest.revision: 7
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 7
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3a254c48e1639c95b1d93f180f1fdd00326a79ae
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# Rendering Report Items (Report Builder and SSRS)
+# <a name="rendering-report-items-report-builder-and-ssrs"></a>Rendering Report Items (Report Builder and SSRS)
   報表項目的數目、大小和位置會影響轉譯器為報表主體分頁的方式。 下列是如何轉譯各種報表項目的描述。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## 重疊的報表項目  
+## <a name="overlapping-report-items"></a>重疊的報表項目  
  在 HTML、MHTML、Word、Excel、[預覽] 或「報表檢視器」中不支援重疊的報表項目。 如果有重疊的項目，它們會移動。 下列規則適用於重疊的報表項目：  
   
 -   如果報表項目的垂直重疊較大，系統會將其中一個重疊項目移到右側。 最左邊的項目則維持在所在的位置。  
@@ -36,7 +41,7 @@ caps.handback.revision: 7
   
  手動分頁符號格式支援重疊的報表項目，包括列印。  
   
-## 可見性與報表項目  
+## <a name="visibility-and-report-items"></a>可見性與報表項目  
  根據預設，系統可以隱藏或顯示報表項目，會使用運算式有條件地隱藏或顯示。 或者，您可以按一下其他報表項目來切換可見性。  
   
  轉譯報表項目時，可以使用下列可見性規則：  
@@ -47,7 +52,7 @@ caps.handback.revision: 7
   
 -   如果報表項目及其內容的可見性可以透過按一下其他報表項目切換，則分頁會變更，只在一開始顯示報表項目時，容納報表項目及其內容。  
   
-## 讓報表項目在單一頁面上保持在一起  
+## <a name="keeping-report-items-together-on-a-single-page"></a>讓報表項目在單一頁面上保持在一起  
  您可以設定保持群組或保持在一起屬性，在單一頁面上以隱含或明確的方式，讓報表內的許多報表項目保持在一起。 如果報表項目沒有任何邏輯分頁符號，而且在尺寸上小於可用的頁面區域，則永遠會在相同的頁面上轉譯報表項目。 如果報表項目無法完全容納在通常報表一開始的頁面上，就會在報表項目前插入一個手動分頁符號，強制該報表項目移到下一頁。 若是軟分頁符號轉譯器，頁面則會擴張，以容納報表項目。  
   
  當報表項目永遠呈隱藏狀態時，就會忽略將項目保持在一起的規則。  
@@ -68,7 +73,7 @@ caps.handback.revision: 7
   
 -   在 Tablix 資料區中可以切換的報表項目。  
   
-### 優先順序  
+### <a name="priority-order"></a>優先順序  
  由於頁面大小的限制，讓報表項目保持在一起的規則之間可能會發生衝突。 當衝突發生時，系統會使用下列優先順序，以便在轉譯時讓項目保持在一起：  
   
 -   線條、圖表和影像。  
@@ -85,7 +90,7 @@ caps.handback.revision: 7
   
 -   Tablix 資料區，其明確的 KeepTogether 屬性設定為 **true**。  
   
-### 子報表  
+### <a name="subreports"></a>子報表  
  子報表會轉譯為包含在個別報表 .rdl 檔案中定義之其他報表的矩形。 子報表檔案必須先發行到報表伺服器上，父報表才能進行存取。  
   
  轉譯子報表時，適用下列規則：  
@@ -104,10 +109,10 @@ caps.handback.revision: 7
   
  如需子報表的詳細資訊，請參閱[子報表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md)。  
   
-## 請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [Reporting Services 中的分頁 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [轉譯行為 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [不同報表轉譯延伸模組的互動式功能 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/interactive functionality - different report rendering extensions.md)   
+ [不同報表轉譯延伸模組的互動式功能 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [資料表、矩陣和清單 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

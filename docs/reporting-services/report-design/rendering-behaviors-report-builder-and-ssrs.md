@@ -1,23 +1,28 @@
 ---
-title: "轉譯行為 (報表產生器及 SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "轉譯行為 （報表產生器及 SSRS） |Microsoft 文件"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8f873ef9-27a3-40e5-b58b-6774f8027a58
 caps.latest.revision: 7
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 7
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 518b74abc3238fcebee1e8b5356315e49f35db01
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 轉譯行為 (報表產生器及 SSRS)
+# <a name="rendering-behaviors-report-builder--and-ssrs"></a>轉譯行為 (報表產生器及 SSRS)
   根據所選取的轉譯器，當轉譯報表時，系統會將某些規則套用到報表主體及其內容。 將報表項目全部容納在一頁的方式，取決於下列因素的組合：  
   
 -   轉譯規則。  
@@ -35,7 +40,7 @@ caps.handback.revision: 7
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## 適用於 HTML、MHTML、Word 與 Excel (軟分頁轉譯器) 的一般行為  
+## <a name="general-behaviors-for-html-mhtml-word-and-excel-soft-page-break-renderers"></a>適用於 HTML、MHTML、Word 與 Excel (軟分頁轉譯器) 的一般行為  
  使用 HTML 和 MHTML 格式匯出的報表會針對各種長度的頁面，提供最佳的電腦螢幕檢視效果。 分頁符號只會以垂直方式插入到報表主體內的約略位置。 這些約略位置取決於 [屬性] 窗格中的互動式高度設定。 例如，假設互動式高度設定為 5 英吋。 轉譯報表時，頁面高度的長度大約是 5 英吋。 Word 和 Excel 會根據邏輯分頁符號分頁，並忽略互動式高度設定。  
   
 > [!NOTE]  
@@ -58,7 +63,7 @@ caps.handback.revision: 7
   
 -   系統不會套用頁面邊界。  
   
-## 適用於 PDF、影像與列印 (手動分頁符號轉譯器) 的一般行為  
+## <a name="general-behaviors-for-pdf-image-and-print-hard-page-break-renderers"></a>適用於 PDF、影像與列印 (手動分頁符號轉譯器) 的一般行為  
  使用 PDF 和影像匯出的報表會針對大小一致的頁面，提供最佳的書籍或列印效果。 分頁符號會以垂直和水平的方式插入到報表主體內的特定位置。 這些特定位置取決於頁面寬度與頁面高度設定。  
   
 > [!NOTE]  
@@ -79,12 +84,12 @@ caps.handback.revision: 7
     > [!NOTE]  
     >  在手動分頁符號轉譯器中不會使用互動式寬度設定。  
   
-## 報表項目間的最小間距  
+## <a name="minimum-spacing-between-report-items"></a>報表項目間的最小間距  
  報表項目會在報表主體內擴展以容納其內容。 例如，轉譯報表時，矩陣資料區域在頁面中通常會以橫向往下擴展，而且文字方塊的高度為隨著運算式所傳回的資料而調整。  
   
  轉譯器會在報表配置中定義的報表項目之間維持最小的空間。 當您在報表配置上，將某個報表項目放置在另一個報表項目旁邊時，報表項目間的距離會變成報表項目水平或垂直擴展時所必須維持的最小距離。 例如，如果您在報表中加入矩陣資料區域，然後在矩陣右側加入矩形 .25 英吋，該空間就會隨著矩陣的擴展來維持。 每一個項目都會往右移動，以維持其本身與其左邊結束之項目之間的最小空間。  
   
-## 頁首和頁尾  
+## <a name="page-headers-and-footers"></a>頁首和頁尾  
  頁首和頁尾會出現在每個轉譯頁面的頂端和底部。 您可以設定頁首和頁尾的格式，讓其包含框線色彩、框線樣式，以及框線寬度。 您也可以加入背景色彩或背景影像。 這些格式選項全部都會根據您選擇的格式進行轉譯。  
   
  以 HTML 或 MHTML 轉譯格式進行轉譯時，下列規則會套用到頁首和頁尾：  
@@ -112,7 +117,7 @@ caps.handback.revision: 7
   
 -   將報表轉譯為子報表時，不會轉譯在原始 RDL 檔案中所定義的頁首和頁尾。  
   
-## 邏輯分頁符號  
+## <a name="logical-page-breaks"></a>邏輯分頁符號  
  邏輯分頁符號是您在報表項目或群組前後插入的分頁符號。 轉譯或匯出報表時，分頁符號有助於決定如何將內容納入報表頁面，以獲得最佳的檢視效果。  
   
  轉譯邏輯分頁符號時，適用下列規則：  
@@ -127,8 +132,8 @@ caps.handback.revision: 7
   
 -   系統不會保留在資料表或矩陣資料格之項目上定義的邏輯分頁符號。 這不適用於清單中的項目。  
   
-## 請參閱＜  
- [不同報表轉譯延伸模組的互動式功能 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/interactive functionality - different report rendering extensions.md)   
+## <a name="see-also"></a>請參閱＜  
+ [不同報表轉譯延伸模組的互動式功能 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [轉譯為 HTML &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/rendering-to-html-report-builder-and-ssrs.md)   
  [頁面配置和轉譯 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)  
   

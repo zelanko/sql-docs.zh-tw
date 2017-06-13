@@ -2,7 +2,7 @@
 title: "時態表使用案例 | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 01/13/2017
+ms.date: 05/16/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -16,27 +16,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: bb6a2865838df1d66119f68c6d8cd19809a8f86c
+ms.sourcegitcommit: 332787256518605b6f91dab6be012889c0b0aa93
+ms.openlocfilehash: 007b40b36317a67c6b9714b89aac0d3324312f30
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="temporal-table-usage-scenarios"></a>時態表使用案例
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   時態表在需要追蹤資料變更歷程記錄的案例中通常很有用。    
-我們建議您在下列使用案例中考慮使用時態表，因為它擁有龐大的生產力優勢：  
-  
--   [資料稽核](https://msdn.microsoft.com/library/mt631669.aspx#Anchor_0)  
-  
--   [時間點分析 (時間移動)](https://msdn.microsoft.com/library/mt631669.aspx#Anchor_1)  
-  
--   [異常偵測](https://msdn.microsoft.com/library/mt631669.aspx#Anchor_2)  
-  
--   [緩時變維度](https://msdn.microsoft.com/library/mt631669.aspx#Anchor_3)  
-  
--   [修復資料列層級資料損毀](https://msdn.microsoft.com/library/mt631669.aspx#Anchor_4)  
+我們建議您考慮使用時態表中的主要的生產力優勢下列使用案例。  
   
 ## <a name="data-audit"></a>資料稽核  
  在您儲存重要資訊，並隨時需要追蹤變更內容和變更時間，以及執行資料鑑識調查的資料表上使用暫時性系統版本設定。    

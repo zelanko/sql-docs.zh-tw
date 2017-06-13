@@ -1,7 +1,7 @@
 ---
 title: "使用 PowerShell 設定 Always Encrypted | Microsoft Docs"
 ms.custom: 
-ms.date: 09/29/2016
+ms.date: 05/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 7e3971933bb32cc47f761d18ba8c0dd57b139636
+ms.sourcegitcommit: c4cd6d86cdcfe778d6b8ba2501ad4a654470bae7
+ms.openlocfilehash: dcd6c2dc9c489a888c647a77c27ce9694d154699
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/18/2017
 
 ---
 # <a name="configure-always-encrypted-using-powershell"></a>使用 PowerShell 設定永遠加密
@@ -26,18 +26,16 @@ ms.lasthandoff: 04/11/2017
 
 SqlServer PowerShell 模組提供 Cmdlet 讓您在 Azure SQL Database 與 SQL Server 2016 中設定 [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) 。
 
-因為 SqlServer 模組中大部分的永遠加密 Cmdlet 會處理永遠加密金鑰或儲存在加密資料行中的敏感性資料，所以請務必在安全的電腦上執行 Cmdlet。 管理永遠加密時，請從與裝載您的 SQL Server 執行個體不同的電腦上執行 Cmdlet。 
+永遠加密 cmdlet SqlServer 模組中的使用金鑰或敏感性資料，因此是很重要的安全電腦上，執行 cmdlet。 當管理永遠加密時，從您的 SQL Server 執行個體所在電腦不同的電腦上執行 cmdlet。
 
-因為永遠加密的主要目標是為了確保已加密的敏感性資料安全無虞，即使資料庫系統遭到入侵亦然，所以在 SQL Server 電腦上執行處理金鑰或敏感性資料的 PowerShell 指令碼，可能會降低或損害此功能的優點。 如需其他安全性相關建議，請參閱 [金鑰管理的安全性考量](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md#SecurityForKeyManagement)。
+因為永遠加密的主要目標是為了確保加密的敏感性資料安全無虞，即使資料庫系統遭到入侵，執行 PowerShell 指令碼處理金鑰或 SQL Server 電腦上的機密資料可以降低或損害此功能的優點。 如需其他安全性相關建議，請參閱 [金鑰管理的安全性考量](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md#SecurityForKeyManagement)。
 
 [此頁面底部](#aecmdletreference)的連結。
 
 ## <a name="prerequisites"></a>必要條件
 
-在未裝載 SQL Server 執行個體的安全電腦上安裝 [SqlServer 模組](https://msdn.microsoft.com/library/mt740629.aspx) 。 
+在未裝載 SQL Server 執行個體的安全電腦上安裝 [SqlServer 模組](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/sqlserver) 。 直接從 PowerShell 資源庫，可以安裝的模組。  請參閱[下載](../../../ssms/download-sql-server-ps-module.md)如需詳細資訊的指示。
 
-安裝最新版的 [SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx)來安裝 SqlServer 模組。
-請注意， *SqlServer* 模組不同於 *sqlps* 模組，其不支援永遠加密。 如需詳細資訊，請參閱小組的 [SQL PowerShell - 2016 年 7 月更新](https://blogs.technet.microsoft.com/dataplatforminsider/2016/06/30/sql-powershell-july-2016-update) 部落格文章。
 
 ## <a name="importsqlservermodule"></a> 匯入 SqlServer 模組 
 
@@ -63,7 +61,7 @@ Import-Module "SqlServer"
 
 此方法只適用於 SQL Server (Azure SQL Database 不支援)。
 
-透過 SQL Server PowerShell，您可以使用 Windows PowerShell 別名來巡覽路徑，這與於一般用來巡覽檔案系統路徑的命令類似。 一旦您巡覽至目標執行個體和資料庫，後續的 Cmdlet 將會以該資料庫為目標，如下列範例所示：
+透過 SQL Server PowerShell，您可以使用 Windows PowerShell 別名來巡覽路徑，這與於一般用來巡覽檔案系統路徑的命令類似。 一旦您導覽至目標執行個體和資料庫，後續的 cmdlet 為目標資料庫，如下列範例所示：
 
 ```
 # Import the SqlServer module.
@@ -130,24 +128,24 @@ $database | Get-SqlColumnMasterKey
 
 |CMDLET    |描述
 |:---|:---
-|**[Add-SqlAzureAuthenticationContext](https://msdn.microsoft.com/library/mt759815.aspx)**    |對 Azure 執行驗證，並取得驗證權杖。
-|**[Add-SqlColumnEncryptionKeyValue](https://msdn.microsoft.com/library/mt759817.aspx)**    |為資料庫中現有的資料行加密金鑰物件新增加密值。
-|**[Complete-SqlColumnMasterKeyRotation](https://msdn.microsoft.com/library/mt759791.aspx)**    |完成資料行主要金鑰的輪替
-|**[Get-SqlColumnEncryptionKey](https://msdn.microsoft.com/library/mt759814.aspx)**    |傳回資料庫中定義的所有資料行加密金鑰物件，或傳回具有指定名稱的一個資料行加密金鑰物件。
-|**[Get-SqlColumnMasterKey](https://msdn.microsoft.com/library/mt759782.aspx)**    |傳回資料庫中定義的資料行主要金鑰物件，或傳回具有指定名稱的一個資料行主要金鑰物件。
-|**[Invoke-SqlColumnMasterKeyRotation](https://msdn.microsoft.com/library/mt759810.aspx)**    |起始資料行主要金鑰的輪替。
-|**[New-SqlAzureKeyVaultColumnMasterKeySettings](https://msdn.microsoft.com/library/mt759795.aspx)**    |建立 SqlColumnMasterKeySettings 物件，描述儲存在 Azure 金鑰保存庫中的非對稱金鑰。
-|**[New-SqlCngColumnMasterKeySettings](https://msdn.microsoft.com/library/mt759818.aspx)**    |建立 SqlColumnMasterKeySettings 物件，描述儲存在支援新一代密碼編譯 (CNG) API 之金鑰存放區中的非對稱金鑰。
-|**[New-SqlColumnEncryptionKey](https://msdn.microsoft.com/library/mt759808.aspx)**    |在資料庫中建立新的資料行加密金鑰物件。
-|**[New-SqlColumnEncryptionKeyEncryptedValue](https://msdn.microsoft.com/library/mt759794.aspx)**    |產生資料行加密金鑰的加密值。
-|**[New-SqlColumnEncryptionSettings](https://msdn.microsoft.com/library/mt759825.aspx)**    |建立新的 SqlColumnEncryptionSettings 物件，以封裝單一資料行加密的相關資訊，包括 CEK 和加密類型。
-|**[New-SqlColumnMasterKey](https://msdn.microsoft.com/library/mt759813.aspx)**    |在資料庫中建立新的資料行主要金鑰物件。
-|**New-SqlColumnMasterKeySettings**|使用指定的提供者與機碼路徑，為資料行主要金鑰建立 SqlColumnMasterKeySettings 物件。
-|**[New-SqlCspColumnMasterKeySettings](https://msdn.microsoft.com/library/mt759784.aspx)**    |建立 SqlColumnMasterKeySettings 物件，描述使用支援密碼編譯 API 之密碼編譯服務提供者 (CSP) 儲存在金鑰存放區中的非對稱金鑰。
-|**[Remove-SqlColumnEncryptionKey](https://msdn.microsoft.com/library/mt759786.aspx)**    |從資料庫移除資料行加密金鑰物件。
-|**[Remove-SqlColumnEncryptionKeyValue](https://msdn.microsoft.com/library/mt759783.aspx)**    |從資料庫中現有的資料行加密金鑰物件移除加密值。
-|**[Remove-SqlColumnMasterKey](https://msdn.microsoft.com/library/mt759800.aspx)**    |從資料庫移除資料行主要金鑰物件。
-|**[Set-SqlColumnEncryption](https://msdn.microsoft.com/library/mt759790.aspx)**    |加密、解密或重新加密資料庫中指定的資料行。
+|**[Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext)**    |對 Azure 執行驗證，並取得驗證權杖。
+|**[Add-SqlColumnEncryptionKeyValue](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlcolumnencryptionkeyvalue)**    |為資料庫中現有的資料行加密金鑰物件新增加密值。
+|**[Complete-SqlColumnMasterKeyRotation](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/complete-sqlcolumnmasterkeyrotation)**    |完成資料行主要金鑰的輪替
+|**[Get-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/get-sqlcolumnencryptionkey)**    |傳回資料庫中定義的所有資料行加密金鑰物件，或傳回具有指定名稱的一個資料行加密金鑰物件。
+|**[Get-SqlColumnMasterKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/get-sqlcolumnmasterkey)**    |傳回資料庫中定義的資料行主要金鑰物件，或傳回具有指定名稱的一個資料行主要金鑰物件。
+|**[Invoke-SqlColumnMasterKeyRotation](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/invoke-sqlcolumnmasterkeyrotation)**    |起始資料行主要金鑰的輪替。
+|**[New-SqlAzureKeyVaultColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlazurekeyvaultcolumnmasterkeysettings)**    |建立 SqlColumnMasterKeySettings 物件，描述儲存在 Azure 金鑰保存庫中的非對稱金鑰。
+|**[New-SqlCngColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcngcolumnmasterkeysettings)**    |建立 SqlColumnMasterKeySettings 物件，描述儲存在支援新一代密碼編譯 (CNG) API 之金鑰存放區中的非對稱金鑰。
+|**[New-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionkey)**    |在資料庫中建立資料行加密金鑰物件。
+|**[New-SqlColumnEncryptionKeyEncryptedValue](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionkeyencryptedvalue)**    |產生資料行加密金鑰的加密值。
+|**[New-SqlColumnEncryptionSettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionsettings)**    |建立封裝的單一資料行加密，包括 CEK 和加密類型的相關資訊的 SqlColumnEncryptionSettings 物件。
+|**[New-SqlColumnMasterKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnmasterkey)**    |在資料庫中建立的資料行主要金鑰物件。
+|**[新 SqlColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnmasterkeysettings)**|使用指定的提供者與機碼路徑，為資料行主要金鑰建立 SqlColumnMasterKeySettings 物件。
+|**[New-SqlCspColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcspcolumnmasterkeysettings)**    |建立 SqlColumnMasterKeySettings 物件，描述使用支援密碼編譯 API 之密碼編譯服務提供者 (CSP) 儲存在金鑰存放區中的非對稱金鑰。
+|**[Remove-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/remove-sqlcolumnencryptionkey)**    |從資料庫移除資料行加密金鑰物件。
+|**[Remove-SqlColumnEncryptionKeyValue](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/remove-sqlcolumnencryptionkeyvalue)**    |從資料庫中現有的資料行加密金鑰物件移除加密值。
+|**[Remove-SqlColumnMasterKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/remove-sqlcolumnmasterkey)**    |從資料庫移除資料行主要金鑰物件。
+|**[Set-SqlColumnEncryption](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption)**    |加密、解密或重新加密資料庫中指定的資料行。
 
 
 

@@ -1,23 +1,28 @@
 ---
-title: "轉譯資料 (報表產生器及 SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "轉譯資料 （報表產生器及 SSRS） |Microsoft 文件"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a458fdf9-fb2a-4fee-9fbd-b38f36e91753
 caps.latest.revision: 6
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 6
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 209938a6f1f5562fb3e5bfb70be713d2eb9b8285
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 轉譯資料 (報表產生器及 SSRS)
+# <a name="rendering-data-report-builder-and-ssrs"></a>轉譯資料 (報表產生器及 SSRS)
   使用配置轉譯器 (例如 HTML、MHTML、Word、Excel、PDF 或影像) 時，資料及其組織會保持不變。 使用資料轉譯器格式 (例如，逗號分隔值 (CSV) 或 XML) 匯出時，不會轉譯任何視覺化配置元素。 轉譯報表時，CSV 和 XML 會將某些規則套用到報表主體及其內容。 這些規則決定了如何以這些格式轉譯資料。  
   
 > [!NOTE]  
@@ -41,14 +46,14 @@ caps.handback.revision: 6
   
 -   DataElementStyle 屬性控制報表項目在 XML 中是否要轉譯為元素或屬性。  
   
- CSV 匯出選項會將報表資料儲存為逗號分隔的純文字檔案，沒有任何格式。 根據預設，此檔案使用逗號 (,) 來分隔欄位與資料列，但是此設定可以使用 [裝置資訊設定] 設定。 產生的檔案可以使用試算表程式 (例如 Office SharePoint Server) 開啟，或用來當做其他程式的匯入格式。 .csv 檔案可以使用文字編輯器 (例如 [記事本]) 開啟。 如果以 URL 存取，則 .csv 檔案會傳回 **text/csv** 類型的 MIME。 檔案的 MIME 版本為 1.0。 如需以 CSV 檔案類型轉譯報表的詳細資訊，請參閱[匯出至 CSV 檔案 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md)。  
+ CSV 匯出選項會將報表資料儲存為逗號分隔的純文字檔案，沒有任何格式。 根據預設，此檔案使用逗號 (,) 來分隔欄位與資料列，但是此設定可以使用 [裝置資訊設定] 設定。 產生的檔案可以使用試算表程式 (例如 Office SharePoint Server) 開啟，或用來當做其他程式的匯入格式。 .csv 檔案可以使用文字編輯器 (例如 [記事本]) 開啟。 如果以 URL 存取，則 .csv 檔案會傳回 **text/csv**類型的 MIME。 檔案的 MIME 版本為 1.0。 如需以 CSV 檔案類型轉譯報表的詳細資訊，請參閱[匯出至 CSV 檔案 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md)。  
   
  具有報表資料的 XML 檔案匯出選項會將報表儲存為 XML 檔案。 報表的 XML 結構描述為報表特有的。 XML 匯出選項不會儲存報表配置資訊。 使用此選項產生的 XML 可以匯入資料庫 (當做 XML 資料訊息)，或傳送到自訂應用程式。 如需以 XML 檔案類型轉譯報表的詳細資訊，請參閱[匯出至 XML &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/exporting-to-xml-report-builder-and-ssrs.md)。  
   
-## 請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [Reporting Services 中的分頁 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [轉譯行為 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [不同報表轉譯延伸模組的互動式功能 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/interactive functionality - different report rendering extensions.md)   
+ [不同報表轉譯延伸模組的互動式功能 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [轉譯報表項目 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [資料表、矩陣和清單 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [Reporting Services 裝置資訊設定](http://go.microsoft.com/fwlink/?LinkId=102515)  

@@ -1,7 +1,7 @@
 ---
 title: "使用記憶體最佳化加快暫存資料表與資料表變數的速度 | Microsoft Docs"
 ms.custom: 
-ms.date: 01/17/2017
+ms.date: 06/12/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 98f4cf9519987f458c1f053ffe9368776b28cda9
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 4e2fb53cbb1d9a8999a9260b6907f5319c0fe203
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/13/2017
 
 ---
 # <a name="faster-temp-table-and-table-variable-by-using-memory-optimization"></a>使用記憶體最佳化加快暫存資料表與資料表變數的速度
@@ -430,40 +430,4 @@ ms.lasthandoff: 04/11/2017
 - [Memory-Optimized Tables](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)
 - [為記憶體最佳化的物件定義持久性](../../relational-databases/in-memory-oltp/defining-durability-for-memory-optimized-objects.md)  
   
-  
-  
-  
-\<!--  
-CAPS Title: "使用記憶體最佳化加快暫存資料表與資料表變數的速度"  
-  
-https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/21/improving-temp-table-and-table-variable-performance-using-memory-optimization/  
-  
-  
-[ALTER DATABASE 檔案及檔案群組選項 (Transact-SQL)](http://msdn.microsoft.com/library/bb522469.aspx)  
-  
-[記憶體最佳化檔案群組](http://msdn.microsoft.com/library/dn639109.aspx)  
-  
-[資源管理員資源集區](http://msdn.microsoft.com/library/hh510189.aspx)  
-  
-  
-[記憶體最佳化 Advisor](http://msdn.microsoft.com/library/dn284308.aspx)  
-  
-[估計記憶體最佳化資料表的記憶體需求](http://msdn.microsoft.com/library/dn282389.aspx)  
-  
-[記憶體最佳化資料表中的資料表和資料列大小：計算範例](http://msdn.microsoft.com/library/dn205318.aspx)  
-  
-  
-[記憶體最佳化資料表的持久性](http://msdn.microsoft.com/library/dn553125.aspx)  
-  
-[為記憶體最佳化的物件定義持久性](http://msdn.microsoft.com/library/dn553122.aspx)  
-  
-[Memory-Optimized Table Variables](http://msdn.microsoft.com/library/dn535766.aspx)  
-  
-  
-GeneMi , 2016-05-02  Monday  18:40pm  
--->  
-  
-  
-  
-
 

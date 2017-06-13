@@ -1,25 +1,33 @@
 ---
-title: "使用分頁報表 (Web 入口網站) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "使用分頁報表 （入口網站） |Microsoft 文件"
+ms.custom: 
+ms.date: 05/25/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: fb0bc38f-dc56-4350-8457-cd135c0346e1
 caps.latest.revision: 6
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 5
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 222b9ae4ca3ff3f1dd1f08205a502473fea07da4
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 使用分頁報表 (Web 入口網站)
+# <a name="working-with-paginated-reports-web-portal"></a>使用分頁報表 (Web 入口網站)
+
+[!INCLUDE[ssrs-appliesto-sql2016-preview](../includes/ssrs-appliesto-sql2016-preview.md)]
+
 您可以檢視和管理 Web 入口網站內分頁報表的屬性。 Web 入口網站可以啟動報表產生器來建立或編輯分頁報表。  
    
-## 建立分頁報表  
+## <a name="create-a-paginated-report"></a>建立分頁報表  
   
 您可以執行以下步驟來建立新的共用資料集。  
   
@@ -33,13 +41,14 @@ caps.handback.revision: 5
   
 4.  建置您的報表，然後選取左上方的 [儲存] 圖示來將分頁報表儲存回報表伺服器。  
   
-## 管理現有的分頁報表  
+## <a name="manage-an-existing-paginated-report"></a>管理現有的分頁報表  
   
 若要管理現有的分頁報表，您可以執行下列作業。  
   
-> [!NOTE] 如果您在資料夾中看不到分頁報表，請確定您正在檢視分頁報表。 您可以從入口網站右上角的功能表列選取 [檢視]。 請確定已核取 [編頁報表]。  
+> [!NOTE]
+> 如果您在資料夾中看不到分頁報表，請確定您正在檢視分頁報表。 您可以從入口網站右上角的功能表列選取 [檢視]。 請確定已核取 [編頁報表]。  
   
-1.  針對您要管理的資料庫選取省略符號 […]。  
+1.  選取**省略符號 （...）**您想要管理的資料集。  
       
     ![ssRSWebPortal-manage-report1](../reporting-services/media/ssrswebportal-manage-report1.png)  
   
@@ -47,19 +56,19 @@ caps.handback.revision: 5
     
     ![ssRSWebPortal-manage-report2](../reporting-services/media/ssrswebportal-manage-report2.png)  
   
-## 屬性  
+## <a name="properties"></a>屬性  
   
 在 [屬性] 畫面上，您可以變更分頁報表的 [名稱] 和 [描述]。 您也可以 [刪除]、[移動]、[建立連結報表]、[在報表產生器中編輯]、[下載] 或 [取代]。  
     
 ![ssRSWebPortal-report-properties](../reporting-services/media/ssrswebportal-report-properties.png)  
    
-## 參數  
+## <a name="parameters"></a>參數  
   
 您可以修改分頁報表的現有參數。 若要加入新的參數，您必須在報表產生器或 SQL Server Data Tools 中編輯報表。  
   
 ![ssRSWebPortal-report-parameters](../reporting-services/media/ssrswebportal-report-parameters.png)  
    
-## 資料來源  
+## <a name="data-source"></a>資料來源  
 您可以指向共用資料來源，或輸入自訂資料來源的連接資訊。  
   
 ![ssRSWebPortal-report-datasource](../reporting-services/media/ssrswebportal-report-datasource.png)  
@@ -82,7 +91,8 @@ caps.handback.revision: 5
   
 您可以指定決定如何取得認證的選項。  
   
-> [!IMPORTANT] 如果連接字串中有提供認證，則此章節中所提供的選項和值將會被忽略。 請注意，如果您在連接字串上指定認證，這些值就會以純文字的形式顯示給檢視此頁面的所有使用者查看。  
+> [!IMPORTANT]
+> 如果連接字串中有提供認證，則此章節中所提供的選項和值將會被忽略。 請注意，如果您在連接字串上指定認證，這些值就會以純文字的形式顯示給檢視此頁面的所有使用者查看。  
   
 **作為檢視報表的使用者**  
   
@@ -112,17 +122,17 @@ caps.handback.revision: 5
   
 這可讓您不提供資料來源的任何認證。 如果資料來源需要使用者登入，則選擇此選項將沒有作用。 只有當資料來源連接不需要使用者認證時，才應該選擇此選項。  
   
-若要使用這個選項，您先前必須已針對報表伺服器設定自動執行帳戶。 當認證的其他進程無法使用時，自動執行帳戶就會用來連接至外部資料來源。 如果您指定了這個選項，但是沒有設定帳戶，報表資料來源的連接將會失敗，而且報表處理將不會進行。 如需此帳戶的詳細資訊，請參閱[設定自動執行帳戶 (SSRS 組態管理員)](../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。  
+若要使用這個選項，您先前必須已針對報表伺服器設定自動執行帳戶。 當認證的其他進程無法使用時，自動執行帳戶就會用來連接至外部資料來源。 如果您指定了這個選項，但是沒有設定帳戶，報表資料來源的連接將會失敗，而且報表處理將不會進行。 如需此帳戶的詳細資訊，請參閱 [設定自動執行帳戶 (SSRS 組態管理員)](../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。  
   
-## 訂閱  
-Reporting Services 訂閱是在特定時間，或是為了回應某個事件時，以您指定的檔案格式所傳遞之報表組態。 例如，在每個星期三將 MonthlySales.rdl 報表以 Microsoft Word 文件儲存至檔案共用。 訂閱可用於排程及自動化報表的傳遞，並可搭配一組特定的報表參數值。 [深入了解]  
+## <a name="subscriptions"></a>訂閱  
+Reporting Services 訂閱是在特定時間，或是為了回應某個事件時，以您指定的檔案格式所傳遞之報表組態。 例如，在每個星期三將 MonthlySales.rdl 報表以 Microsoft Word 文件儲存至檔案共用。 訂閱可用於排程及自動化報表的傳遞，並可搭配一組特定的報表參數值。 如需詳細資訊，請參閱[訂用帳戶使用](working-with-subscriptions-web-portal.md)。
   
-![ssRSWebPortal-report-subscription1](../reporting-services/media/ssrswebportal-report-subscription1.png)  
+![ssRSWebPortal-report-subscription1](../reporting-services/media/ssrswebportal-report-subscription1.png)
    
-## 相依項目  
-使用 [相依項目] 頁面即可檢視參考此報表的項目清單。 每個項目類型的圖示都會表示其用途。 您接著可以選取每個項目上的 [省略符號 (…)]，進一步管理這些項目。  
+## <a name="dependent-items"></a>相依項目  
+使用 [相依項目] 頁面即可檢視參考此報表的項目清單。 每個項目類型的圖示都會表示其用途。 然後您可以選取**省略符號 （...）**每個項目來管理這些項目上進一步。  
   
-## Caching  
+## <a name="caching"></a>Caching  
 您有幾個選項可以快取分頁報表的資料。 先從簡單的選取步驟開始。  
   
 1.  [永遠以最新的資料執行此報表] 會在每次執行報表時針對資料來源進行查詢。 這會讓依需求報表包含最新的資料。 每次開啟包含新查詢結果的報表時，都會建立報表的新執行個體。 使用此方法時，如果十位使用者同時開啟報表，則會傳送十個查詢至資料來源進行處理。  
@@ -136,14 +146,17 @@ Reporting Services 訂閱是在特定時間，或是為了回應某個事件時�
 選取 [快取此報表的複本並在可用時加以使用] 會顯示更多選項。  
   
 ![ssRSWebPortal-report-caching2](../reporting-services/media/ssrswebportal-report-caching2.png)  
+
+如需詳細資訊，請參閱[使用快照集](working-with-snapshots-web-portal.md)。
   
-### 快取到期  
+### <a name="cache-expiration"></a>快取到期  
   
 您可以控制是否要讓分頁報表的快取在一段時間後到期，您也可以選擇用排程來控制。 您可以使用共用排程。  
   
-> [!NOTE] 這不會重新整理快取。  
+> [!NOTE]
+> 這不會重新整理快取。  
   
-### 快取重新整理計劃  
+### <a name="cache-refresh-plans"></a>快取重新整理計劃  
   
 您可以使用 [快取重新整理計劃] 來建立排程，以供預先載入含分頁報表之資料暫存複本的快取。 重新整理計劃包括排程和選項，可指定或覆寫參數的值。 您不能覆寫標示為唯讀的參數值。 您可以建立並使用多個重新整理計劃。  
    
@@ -157,11 +170,12 @@ Reporting Services 訂閱是在特定時間，或是為了回應某個事件時�
   
 ![ssRSWebPortal-report-caching3](../reporting-services/media/ssrswebportal-report-caching3.png)  
   
-> [!NOTE] SQL Server Agent 必須正在執行，才能建立快取重新整理計劃。  
+> [!NOTE]
+> SQL Server Agent 必須正在執行，才能建立快取重新整理計劃。  
   
 您接著可以 [編輯] 或 [刪除] 列出的計劃。 當只有選取一個快取重新整理計劃時，才會啟用 [從現有的新增] 選項。 這個選項會建立從原始計劃複製的新重新整理計劃。 [快取重新整理計劃] 頁面開啟時會預先填入所選取計劃的詳細資料。 接著，您就可以修改重新整理計劃選項，然後使用新的描述儲存該計劃。  
   
-## 記錄快照集  
+## <a name="history-snapshots"></a>記錄快照集  
   
 使用 [記錄快照集] 頁面來檢視產生和儲存一段時間的報表快照集。 依據設定的選項，報表記錄可能只包含最近的快照集。  
   
@@ -171,13 +185,18 @@ Reporting Services 訂閱是在特定時間，或是為了回應某個事件時�
   
 按一下報表記錄快照集即可檢視該快照集。 報表記錄中顯示的快照集只能以建立日期和時間來區分。 沒有視覺指示可以區分快照集是回應排程而建立或是手動作業所建立。  
   
-## Security  
+## <a name="security"></a>Security  
 使用 [安全性屬性] 頁面來檢視或修改安全性設定，以決定報表的存取權。 此頁面適用於您有權保護的項目。  
   
 透過指定群組或使用者可執行的工作的角色指派來定義項目的存取權。 角色指派含有一個使用者或群組名稱，以及一個或多個指定工作集合的角色定義。  
   
 **編輯項目安全性**  
   
-選取即可變更定義目前項目安全性的方式。  
-  
-  
+選取即可變更定義目前項目安全性的方式。
+
+## <a name="next-steps"></a>後續的步驟
+
+[Web 入口網站](../reporting-services/web-portal-ssrs-native-mode.md)  
+[使用共用資料集](../reporting-services/work-with-shared-datasets-web-portal.md)
+
+更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)

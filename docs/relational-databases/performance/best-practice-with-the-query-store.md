@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f00c5db3574f21010e682f964d06f3c2b61a1d09
-ms.openlocfilehash: 9cd813b72eda096f780ed7140b6691f528251a30
+ms.sourcegitcommit: f9debfb35bdf0458a34dfc5933fd3601e731f037
+ms.openlocfilehash: 3a11180d35ec0a67eed18e03cfe5f0e82d0cc180
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 05/30/2017
 
 ---
 # <a name="best-practice-with-the-query-store"></a>使用查詢存放區的最佳作法
@@ -56,7 +56,7 @@ ms.lasthandoff: 04/29/2017
   
  如果您的工作負載會產生很多不同的查詢和計劃，或者是如果您希望保留更長時間的查詢記錄，預設值 (100 MB) 可能不足。 追蹤目前的空間使用量，並增加大小上限 (MB) 以防止查詢存放區轉換為唯讀模式。  使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 或執行下列指令碼取得有關查詢存放區大小的最新資訊：  
   
-```  
+```tsql 
 USE [QueryStoreDB];  
 GO  
   
@@ -67,14 +67,14 @@ FROM sys.database_query_store_options;
   
  下列指令碼會設定新的大小上限 (MB)：  
   
-```  
+```tsql  
 ALTER DATABASE [QueryStoreDB]  
 SET QUERY_STORE (MAX_STORAGE_SIZE_MB = 1024);  
 ```  
   
  **統計資料收集間隔：** 定義已收集之執行階段統計資料的資料粒度層級 (預設值是 1 小時)。 如果您需要更精細的資料粒度或使用較短的時間偵測與解決問題，請考慮使用較低的值，但請注意，它會直接影響查詢存放區資料的大小。 使用 SSMS 或 Transact-SQL 來針對統計資料收集間隔設定不同的值：  
   
-```  
+```tsql  
 ALTER DATABASE [QueryStoreDB] SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 30);  
 ```  
   
@@ -83,7 +83,7 @@ ALTER DATABASE [QueryStoreDB] SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 30);
   
  避免保留您沒有計畫使用的歷程記錄資料。 這會降低變更為唯讀狀態。 查詢存放區資料的大小以及偵測和解決問題的時間會更容易預測。 使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 或下列指令碼來設定以時間為基礎的清除原則：  
   
-```  
+```tsql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE (CLEANUP_POLICY = (STALE_QUERY_THRESHOLD_DAYS = 14));  
 ```  
@@ -92,7 +92,7 @@ SET QUERY_STORE (CLEANUP_POLICY = (STALE_QUERY_THRESHOLD_DAYS = 14));
   
  強烈建議您啟用大小基礎的清除模式，以確保查詢存放區一律以讀寫模式執行並收集最新的資料。  
   
-```  
+```tsql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE (SIZE_BASED_CLEANUP_MODE = AUTO);  
 ```  
@@ -107,7 +107,7 @@ SET QUERY_STORE (SIZE_BASED_CLEANUP_MODE = AUTO);
   
  下列指令碼會將查詢擷取模式設定為 [Auto]：  
   
-```  
+```tsql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE (QUERY_CAPTURE_MODE = AUTO);  
 ```  
@@ -119,7 +119,7 @@ SET QUERY_STORE (QUERY_CAPTURE_MODE = AUTO);
   
  使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 啟用查詢存放區，如上一節中所述，或執行下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式：  
   
-```  
+```tsql  
 ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;  
 ```  
   
@@ -140,19 +140,30 @@ ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;
 |SSMS 檢視|狀況|  
 |---------------|--------------|  
 |迴歸查詢|找出執行計量最近迴歸的查詢 (也就是變更為更糟)。 <br />使用此檢視將您的應用程式中觀察到的需要修正或改善的效能問題，與實際查詢相互關聯。|  
-|熱門資源取用查詢|選擇一個感興趣的執行計量，並識別針對提供的時間間隔具有最極端值的查詢。 <br />使用此檢視將注意力放在最相關的查詢， 也就是對資料庫資源耗用量有最大影響的查詢。|  
-|追蹤查詢|即時追蹤最重要的查詢的執行。 一般而言，當您有包含強制計畫的查詢且想要確定查詢效能是否穩定時，會使用此檢視。|  
 |整體資源耗用量|針對任何執行計量，分析資料庫的整體資源耗用量。<br />使用此檢視來識別資源模式 (每日與每晚的工作負載) 和最佳化資料庫的整體耗用量。|  
+|熱門資源取用查詢|選擇一個感興趣的執行計量，並識別針對提供的時間間隔具有最極端值的查詢。 <br />使用此檢視將注意力放在最相關的查詢， 也就是對資料庫資源耗用量有最大影響的查詢。|  
+|包含強制計畫的查詢|先前的強制計劃使用查詢存放區的清單。 <br />若要快速存取所有目前強制執行的計畫中使用此檢視。|  
+|具有高變化的查詢|在關聯到任何可用的維度，例如所需的時間間隔的持續時間、 CPU 時間、 IO 和記憶體使用量分析高執行變化的查詢。<br />您可以使用此檢視來識別含有可以跨應用程式影響使用者體驗的廣泛 variant 效能的查詢。|  
+|追蹤查詢|即時追蹤最重要的查詢的執行。 一般而言，當您有包含強制計畫的查詢且想要確定查詢效能是否穩定時，會使用此檢視。|
   
 > [!TIP]  
 >  如需如何使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 識別熱門資源取用查詢並修正那些因為計畫選擇變更而迴歸之查詢的詳細說明，請參閱[查詢存放區@Azure 部落格](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/)。  
   
- 當您識別次佳效能的查詢時，您的動作會取決於問題的本質。  
+ 當您識別次佳效能的查詢時，您的動作，取決於問題的本質。  
   
 -   如果是以多個計劃執行查詢，且最後一個計劃明顯比前一個計畫差，您可以使用計劃強制機制來強制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 針對未來的執行一律使用最佳計畫。  
   
      ![query-store-force-plan](../../relational-databases/performance/media/query-store-force-plan.png "query-store-force-plan")  
-  
+
+> [!NOTE]  
+> 上面的圖形可能功能適用於特定查詢計劃，具有下列意義，每個可能狀態的不同圖形：<br />  
+> |形狀圖|意義|  
+> |-------------------|-------------|
+> |Circle|查詢已完成 （已順利完成正常執行）|
+> |Square|已取消 （用戶端起始已中止執行）|
+> |Triangle|失敗 （中止的例外狀況執行）|
+> 此外，該圖形的大小會反映內指定的時間間隔，在執行的數字的大小增加查詢執行計數。  
+
 -   您可能會推斷您的查詢遺失最佳執行的索引。 此資訊會顯示於查詢執行計畫內。 建立遺失的索引，並使用查詢存放區檢查查詢效能。  
   
      ![query-store-show-plan](../../relational-databases/performance/media/query-store-show-plan.png "query-store-show-plan")  
@@ -166,7 +177,7 @@ ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;
 ##  <a name="Verify"></a> Verify Query Store is Collecting Query Data Continuously  
  查詢存放區可以無訊息方式變更作業模式。 您應該定期監視查詢存放區的狀態，以確定查詢存放區正在運作，並採取動作避免因為預防因素造成的失敗。 執行下列查詢來判斷作業模式，並檢視最相關的參數：  
   
-```  
+```tsql
 USE [QueryStoreDB];  
 GO  
   
@@ -187,13 +198,13 @@ FROM sys.database_query_store_options;
   
 -   使用下列陳述式清除查詢存放區資料：  
   
-    ```  
+    ```tsql  
     ALTER DATABASE [QueryStoreDB] SET QUERY_STORE CLEAR;  
     ```  
   
  您可以透過執行下列明確地將變更作業模式變更回讀寫，套用其中一個或兩個步驟：  
   
-```  
+```tsql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE (OPERATION_MODE = READ_WRITE);  
 ```  
@@ -209,7 +220,7 @@ SET QUERY_STORE (OPERATION_MODE = READ_WRITE);
 ### <a name="error-state"></a>錯誤狀態  
  若要復原查詢存放區， 請嘗試明確地重新設定讀寫模式，並檢查實際狀態。  
   
-```  
+```tsql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE (OPERATION_MODE = READ_WRITE);    
 GO  
@@ -221,9 +232,13 @@ SELECT actual_state_desc, desired_state_desc, current_storage_size_mb,
 FROM sys.database_query_store_options;  
 ```  
   
- 如果問題持續發生，表示已損毀的查詢存放區資料會持續保存在磁碟上。 要求讀寫模式之前，您必須先清除查詢存放區。  
+ 如果問題持續發生，表示已損毀，查詢存放區資料會保存在磁碟上。
+ 
+ 無法復原查詢存放區，藉由執行**sp_query_store_consistency_check**預存程序內受影響的資料庫。
+ 
+ 如果沒有幫助，，您可以嘗試要求讀寫模式之前先清除查詢存放區。  
   
-```  
+```tsql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE CLEAR;  
 GO  
@@ -285,7 +300,7 @@ FROM sys.database_query_store_options;
 ##  <a name="CheckForced"></a> Check the Status of Forced Plans Regularly  
  強制執行計畫是一個針對重要查詢修正效能的方便的機制，並讓查詢變得更容易預測。 不過，因為有計畫提示與計畫指南，強制執行計畫並不保證它將在未來的執行中使用。 一般而言，當資料庫結構描述都以執行計畫所參考之物件都已改變或卸除的方式變更時，強制執行計畫就會開始失敗。 在此情況下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會退而重新編譯查詢，而實際的強制執行失敗原因會顯示在 [sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md) 中。 下列查詢會傳回強制執行計畫的相關資訊 ︰  
   
-```  
+```tsql  
 USE [QueryStoreDB];  
 GO  
   
@@ -307,6 +322,5 @@ WHERE is_forced_plan = 1;
  [查詢存放區預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
  [使用含有記憶體內部 OLTP 的查詢存放區](../../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)   
  [使用查詢存放區監視效能](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
-  
   
 

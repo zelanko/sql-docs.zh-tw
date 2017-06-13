@@ -1,7 +1,7 @@
 ---
 title: "使用 PowerShell 設定資料行加密 | Microsoft Docs"
 ms.custom: 
-ms.date: 01/10/2017
+ms.date: 05/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,16 +15,16 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 65fa326c931ed4a4bd534e7f70ca4e93811ee44d
+ms.sourcegitcommit: c4cd6d86cdcfe778d6b8ba2501ad4a654470bae7
+ms.openlocfilehash: d4a5651f3ef4f8d848253711ed93721f387c016a
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/18/2017
 
 ---
 # <a name="configure-column-encryption-using-powershell"></a>使用 PowerShell 設定資料行加密
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-本文逐步說明如何使用 *SqlServer* PowerShell 模組中的 [Set-SqlColumnEncryption](https://msdn.microsoft.com/library/mt759790.aspx) Cmdlet，為資料庫資料行設定目標永遠加密組態。 **Set-SqlColumnEncryption** Cmdlet 會同時修改目標資料庫的結構描述及儲存在所選資料行中的資料。 您可以根據資料行的指定目標加密設定和目前的加密組態，對儲存在資料行中的資料進行加密、重新加密或解密。
+本文逐步說明如何使用 *SqlServer* PowerShell 模組中的 [Set-SqlColumnEncryption](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption) Cmdlet，為資料庫資料行設定目標永遠加密組態。 **Set-SqlColumnEncryption** Cmdlet 會同時修改目標資料庫的結構描述及儲存在所選資料行中的資料。 您可以根據資料行的指定目標加密設定和目前的加密組態，對儲存在資料行中的資料進行加密、重新加密或解密。
 如需 SqlServer PowerShell 模組中關於 Always Encrypted 支援的詳細資訊，請參閱 [使用 PowerShell 設定 Always Encrypted](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)。
 
 ## <a name="prerequisites"></a>必要條件
@@ -41,7 +41,7 @@ ms.lasthandoff: 04/11/2017
 
 使用離線方法時，目標資料表 (以及與目標資料表相關的所有資料表，例如，與目標資料表具有外部索引鍵關聯性的所有資料表) 無法在作業持續期間寫入交易。 使用離線方法時，一律會保留外部索引鍵條件約束的語意 (**CHECK** 或 **NOCHECK**)。
 
-使用線上方法 (需要來自 SSMS 17.0 或更新版本的 SqlServer PowerShell 模組) 時，會以累加方式執行資料的複製和加密、解密或重新加密作業。 應用程式可以在整個資料移動作業期間，進行目標資料表的資料讀取與寫入作業，但除了最後一個反覆運算以外，因為該期間受限於 **MaxDownTimeInSeconds** 參數 (您可以定義)。 為了偵測並處理應用程式在複製資料時進行的變更，Cmdlet 會在目標資料庫中啟用[變更追蹤](https://msdn.microsoft.com/library/bb964713.aspx)。 因此，比起離線方法，線上方法很可能會使用伺服器端上的更多資源。 使用線上方法的作業可能也需要更多時間，特別是在對資料庫執行大量寫入的工作負載時。 線上方法可用來一次加密一個資料表，而該資料表必須具有主索引鍵。 預設會使用 **NOCHECK** 選項來重新建立外部索引鍵條件約束，以將對應用程式造成的影響降到最低。 您可以藉由指定 **KeepCheckForeignKeyConstraints** 選項，強制保留外部索引鍵條件約束的語意。
+透過線上方法 (需要 SqlServer PowerShell 模組版本 21.x 或更新版本)，以累加方式執行複製和加密、 解密或重新加密資料的作業。 應用程式可以在整個資料移動作業期間，進行目標資料表的資料讀取與寫入作業，但除了最後一個反覆運算以外，因為該期間受限於 **MaxDownTimeInSeconds** 參數 (您可以定義)。 為了偵測並處理應用程式在複製資料時進行的變更，Cmdlet 會在目標資料庫中啟用[變更追蹤](../../track-changes/enable-and-disable-change-tracking-sql-server.md)。 因此，比起離線方法，線上方法很可能會使用伺服器端上的更多資源。 使用線上方法的作業可能也需要更多時間，特別是在對資料庫執行大量寫入的工作負載時。 線上方法可用來一次加密一個資料表，而該資料表必須具有主索引鍵。 預設會使用 **NOCHECK** 選項來重新建立外部索引鍵條件約束，以將對應用程式造成的影響降到最低。 您可以藉由指定 **KeepCheckForeignKeyConstraints** 選項，強制保留外部索引鍵條件約束的語意。
 
 以下是在離線和線上方法之間進行選擇的指導方針：
 
@@ -61,9 +61,9 @@ ms.lasthandoff: 04/11/2017
 ---|---|---|---
 步驟 1： 啟動 PowerShell 環境並匯入 SqlServer 模組。 | [匯入 SqlServer 模組](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule) | 否 | 否
 步驟 2： 連接到您的伺服器和資料庫 | [連接到資料庫](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | 否 | 是
-步驟 3： 如果您的資料行主要金鑰 (用於保護資料行加密金鑰並需要更換) 儲存在 Azure 金鑰保存庫中，請向 Azure 驗證 | [Add-SqlAzureAuthenticationContext](https://msdn.microsoft.com/library/mt759815.aspx) | 是 | 否
-步驟 4： 建構 SqlColumnEncryptionSettings 物件的陣列 - 您要加密、重新加密或解密的每個資料庫資料行各有一個物件。 SqlColumnMasterKeySettings 是存在於 PowerShell 記憶體中的物件。 它會指定資料行的目標加密配置。 | [New-SqlColumnEncryptionSettings](https://msdn.microsoft.com/library/mt759825.aspx) | 否 | 否
-步驟 5： 針對您在上一個步驟中建立的 SqlColumnMasterKeySettings 物件陣列，設定在其中指定的所需加密組態。 將會根據資料行的指定目標設定和目前的加密組態，對資料行進行加密、重新加密或解密。| [Set-SqlColumnEncryption](https://msdn.microsoft.com/library/mt759790.aspx)<br><br>**注意︰** 此步驟可能需要很長的時間。 根據您選取的方法 (線上與離線) 而定，您的應用程式可能無法在整個作業期間或作業的部分期間存取資料表。 | 是 | 是
+步驟 3： 如果您的資料行主要金鑰 (用於保護資料行加密金鑰並需要更換) 儲存在 Azure 金鑰保存庫中，請向 Azure 驗證 | [Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext) | 是 | 否
+步驟 4： 建構 SqlColumnEncryptionSettings 物件的陣列 - 您要加密、重新加密或解密的每個資料庫資料行各有一個物件。 SqlColumnMasterKeySettings 是存在於 PowerShell 記憶體中的物件。 它會指定資料行的目標加密配置。 | [New-SqlColumnEncryptionSettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionsettings) | 否 | 否
+步驟 5： 針對您在上一個步驟中建立的 SqlColumnMasterKeySettings 物件陣列，設定在其中指定的所需加密組態。 將會根據資料行的指定目標設定和目前的加密組態，對資料行進行加密、重新加密或解密。| [Set-SqlColumnEncryption](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption)<br><br>**注意︰** 此步驟可能需要很長的時間。 根據您選取的方法 (線上與離線) 而定，您的應用程式可能無法在整個作業期間或作業的部分期間存取資料表。 | 是 | 是
 
 ## <a name="encrypt-columns-using-offline-approach---example"></a>使用離線方法加密資料行 - 範例
 

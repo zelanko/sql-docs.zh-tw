@@ -1,26 +1,33 @@
 ---
-title: "將報表伺服器資料庫移至其他電腦 (SSRS 原生模式) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "將報表伺服器資料庫移到另一部電腦 （SSRS 原生模式） |Microsoft 文件"
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 44a9854d-e333-44f6-bdc7-8837b9f34416
 caps.latest.revision: 10
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 10
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: bb803f632f9c325430c811082e5e2cebdfa29df8
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 將報表伺服器資料庫移至其他電腦 (SSRS 原生模式)
+
+# <a name="moving-the-report-server-databases-to-another-computer-ssrs-native-mode"></a>將報表伺服器資料庫移至其他電腦 (SSRS 原生模式)
+
   您可以將安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中所使用的報表伺服器資料庫，移至不同電腦上的執行個體。 但是，您必須一起移動或複製 reportserver 和 reportservertempdb 資料庫。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝需要這兩個資料庫。reportservertempdb 資料庫的名稱必須與所移動的主要 reportserver 資料庫相關。  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native mode.  
   
  移動資料庫不會影響目前已針對報表伺服器項目所定義的排程作業。  
   
@@ -37,8 +44,8 @@ caps.handback.revision: 10
 > [!IMPORTANT]  
 >  如果您對現有安裝所做的唯一變更是重新放置報表伺服器資料庫，就適用本主題中所提供的這些步驟。 移轉整個 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝 (亦即，移動資料庫，並變更使用資料庫之報表伺服器 Windows 服務的識別) 需要重新設定連接和重設加密金鑰。  
   
-## 卸離及附加報表伺服器資料庫  
- 如果您可以將報表伺服器設定為離線狀態，就可以卸離資料庫，並將資料庫移動到您要使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 這種方式可以保留資料庫中的權限。 如果您要使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 資料庫，就必須將它移至另一個 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 執行個體。 移動資料庫之後，您必須重新設定報表伺服器與報表伺服器資料庫間的連接。 如果執行的是向外延伸部署，您必須重新設定部署中每個報表伺服器的報表伺服器資料庫連接。  
+## <a name="detaching-and-attaching-the-report-server-databases"></a>卸離及附加報表伺服器資料庫  
+ 如果您可以將報表伺服器設定為離線狀態，就可以卸離資料庫，並將資料庫移動到您要使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 這種方式可以保留資料庫中的權限。 如果您使用 SQL Server 資料庫，您必須將它移到另一個 SQL Server 執行個體。 移動資料庫之後，您必須重新設定報表伺服器與報表伺服器資料庫間的連接。 如果執行的是向外延伸部署，您必須重新設定部署中每個報表伺服器的報表伺服器資料庫連接。  
   
  請使用下列步驟來移動資料庫：  
   
@@ -58,7 +65,7 @@ caps.handback.revision: 10
   
 8.  按一下 **[加入]** ，選取您要附加之報表伺服器資料庫的 .mdf 和 .ldf 檔案。 針對報表伺服器暫存資料庫重複此步驟。  
   
-9. 附加資料庫之後，請確認報表伺服器資料庫和暫存資料庫中具有 **RSExecRole** 資料庫角色， 而且**RSExecRole** 必須具有選取、插入、更新、刪除和參考報表伺服器資料庫資料表的權限，以及執行預存程序的權限。 如需詳細資訊，請參閱[建立 RSExecRole](../../reporting-services/security/create-the-rsexecrole.md)。  
+9. 附加資料庫之後，請確認報表伺服器資料庫和暫存資料庫中具有 **RSExecRole** 資料庫角色， 而且**RSExecRole** 必須具有選取、插入、更新、刪除和參考報表伺服器資料庫資料表的權限，以及執行預存程序的權限。 如需詳細資訊，請參閱 [建立 RSExecRole](../../reporting-services/security/create-the-rsexecrole.md)。  
   
 10. 啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具，並開啟報表伺服器的連接。  
   
@@ -70,10 +77,10 @@ caps.handback.revision: 10
   
 14. 重新啟動報表伺服器服務。  
   
-## 備份及還原報表伺服器資料庫  
+## <a name="backing-up-and-restoring-the-report-server-databases"></a>備份及還原報表伺服器資料庫  
  如果無法將報表伺服器設定為離線狀態，您可以使用備份和還原來重新放置報表伺服器資料庫。 您必須使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式來進行備份和還原。 還原資料庫之後，您必須將報表伺服器設定為使用新伺服器執行個體上的資料庫。 如需詳細資訊，請參閱此主題結尾的指示。  
   
-### 使用 BACKUP 和 COPY_ONLY 備份報表伺服器資料庫  
+### <a name="using-backup-and-copyonly-to-backup-the-report-server-databases"></a>使用 BACKUP 和 COPY_ONLY 備份報表伺服器資料庫  
  備份資料庫時，請設定 COPY_ONLY 引數。 請務必同時備份資料庫以及記錄檔。  
   
 ```  
@@ -136,7 +143,7 @@ BACKUP LOG ReportServerTempDB
    WITH COPY_ONLY  
 ```  
   
-### 使用 RESTORE 和 MOVE 重新放置報表伺服器資料庫  
+### <a name="using-restore-and-move-to-relocate-the-report-server-databases"></a>使用 RESTORE 和 MOVE 重新放置報表伺服器資料庫  
  還原資料庫時，請務必包含 MOVE 引數，如此才能指定路徑。 使用 NORECOVERY 引數來執行初始還原；這樣子資料庫可以保持在還原狀態，讓您有時間可以預覽記錄備份，判斷要還原哪一個資料庫。 最後一個步驟會使用 RECOVERY 引數重複執行 RESTORE 作業。  
   
  MOVE 引數會使用資料檔案的邏輯名稱。 若要找出該邏輯名稱，請執行下列陳述式： `RESTORE FILELISTONLY FROM DISK='C:\ReportServerData.bak';`  
@@ -197,7 +204,7 @@ RESTORE DATABASE ReportServerTempDB
 GO  
 ```  
   
-### 如何設定報表伺服器資料庫連接  
+### <a name="how-to-configure-the-report-server-database-connection"></a>如何設定報表伺服器資料庫連接  
   
 1.  啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員，並開啟報表伺服器的連接。  
   
@@ -214,16 +221,17 @@ GO
 7.  按 **[下一步]** ，然後按一下 **[完成]**。  
   
 > [!NOTE]  
->  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝會要求 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體必須包含 **RSExecRole** 角色。 當您透過 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具設定報表伺服器資料庫連接時，會產生角色建立、登入註冊以及角色指派等動作。 如果您使用其他方法 (尤其是使用 rsconfig.exe 命令提示字元公用程式) 來設定連接，報表伺服器將不會處於工作狀態。 您可能必須撰寫 WMI 程式碼，才能讓報表伺服器可供使用。 如需詳細資訊，請參閱[存取 Reporting Services WMI 提供者](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md)。  
-  
-## 請參閱＜  
- [建立 RSExecRole](../../reporting-services/security/create-the-rsexecrole.md)   
- [啟動與停止 Report Server 服務](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)   
- [設定報表伺服器資料庫連接 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
- [設定自動執行帳戶 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
- [Reporting Services 組態管理員 &#40;原生模式&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
- [rsconfig 公用程式 &#40;SSRS&#41;](../../reporting-services/tools/rsconfig-utility-ssrs.md)   
- [設定和管理加密金鑰 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-and-manage-encryption-keys-ssrs-configuration-manager.md)   
- [報表伺服器資料庫 &#40;SSRS 原生模式&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)  
-  
-  
+>  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝會要求 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體必須包含 **RSExecRole** 角色。 當您透過 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具設定報表伺服器資料庫連接時，會產生角色建立、登入註冊以及角色指派等動作。 如果您使用其他方法 (尤其是使用 rsconfig.exe 命令提示字元公用程式) 來設定連接，報表伺服器將不會處於工作狀態。 您可能必須撰寫 WMI 程式碼，才能讓報表伺服器可供使用。 如需詳細資訊，請參閱 [存取 Reporting Services WMI 提供者](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md)。  
+
+## <a name="next-steps"></a>後續的步驟
+
+[建立 RSExecRole](../../reporting-services/security/create-the-rsexecrole.md)   
+[啟動與停止 Report Server 服務](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)   
+[設定報表伺服器資料庫連接](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+[設定自動的執行帳戶](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
+[Reporting Services 組態管理員](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
+[rsconfig 公用程式](../../reporting-services/tools/rsconfig-utility-ssrs.md)   
+[設定和管理加密金鑰](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
+[報表伺服器資料庫](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)  
+
+更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)

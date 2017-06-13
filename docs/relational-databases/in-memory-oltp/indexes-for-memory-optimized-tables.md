@@ -3,7 +3,7 @@ title: "記憶體最佳化資料表的索引 | Microsoft Docs"
 ms.custom:
 - MSDN content
 - MSDN - SQL DB
-ms.date: 10/24/2016
+ms.date: 06/12/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.service: sql-database
@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f55708bc9eaf8e94cf33ead19cf62cbc319e8e63
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: b468f44444a9c6cc031ea892f44849db401e0ab7
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/13/2017
 
 ---
 # <a name="indexes-for-memory-optimized-tables"></a>記憶體最佳化資料表的索引
@@ -225,34 +225,10 @@ ms.lasthandoff: 04/11/2017
 | :-------- | :--------------------------- | :----------------------------------- | :------------------------------------ |  
 | 索引掃描，擷取所有資料表資料列。 | 是 | 是 | 是 |  
 | 等號比較述詞 (=) 的索引搜尋。 | 是 <br/> (需要有完整索引鍵。) | 是  | 是 |  
-| 不等比較和範圍述詞的索引搜尋 <br/> (>、<、\<=、>=、BETWEEN)。 | 否 <br/> (產生索引掃描。) | 是 | 是 |  
+| 不等比較和範圍述詞的索引搜尋 <br/> (>、<、<=、>=、BETWEEN)。 | 否 <br/> (產生索引掃描。) | 是 | 是 |  
 | 依照排序次序擷取符合索引定義的資料列。 | 否 | 是 | 是 |  
 | 依照排序次序擷取符合相反索引定義的資料列。 | 否 | 否 | 是 |  
   
   
 在表格中，「是」表示索引可以有效率地為要求提供服務，「否」則表示索引無法有效率地滿足要求。  
-
-
-  
-  
-\<!--   
-Indexes_for_Memory-Optimized_Tables.md , which is....  
-CAPS guid: {eecc5821-152b-4ed5-888f-7c0e6beffed9}  
-mt670614.aspx  
-  
-Application-Level%20Partitioning.xml , {162d1392-39d2-4436-a4d9-ee5c47864c5a}  
-  
-/Image/hekaton_tables_23d.png , fbc511a0-304c-42f7-807d-d59f3193748f  
-  
-  
-Replaces dn511012.aspx , which is....  
-CAPS guid: {86805eeb-6972-45d8-8369-16ededc535c7}  
-  
-GeneMi  ,  2016-05-05  Thursday  17:25pm  (Hash content moved to new child article, e922cc3a-3d6e-453b-8d32-f4b176e98488.)  
--->  
-  
-  
-  
-
-
 

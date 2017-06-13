@@ -1,23 +1,28 @@
 ---
-title: "巢狀資料區 (報表產生器及 SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "巢狀資料區域 （報表產生器及 SSRS） |Microsoft 文件"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 15c2bc9b-428a-47ac-9630-8dde925d0595
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3a2829591b4024a9423c83b057ed1462c6762255
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 巢狀資料區 (報表產生器及 SSRS)
+# <a name="nested-data-regions-report-builder-and-ssrs"></a>巢狀資料區 (報表產生器及 SSRS)
   您可以在一個資料區域 (例如矩陣) 內巢狀另一個資料區域 (例如圖表)，這樣通常可以透過精確的方式顯示資料摘要，或提供視覺化顯示以及資料表或矩陣顯示。  
   
  例如，針對包含以 Store 資料列和 Quarter 資料行分組之銷售訂單的矩陣 (也稱為 *Tablix*) 資料區域，您可以將資料表或圖表加入到邊角資料格來摘要所有商店的銷售額，或將圖表加入到矩陣資料行標頭，將資料在資料行中的銷售比重顯示為所有銷售額的百分比。  
@@ -26,13 +31,13 @@ caps.handback.revision: 8
   
  在此圖中，邊角資料格中的圓形圖和資料列中的走勢圖都是巢狀資料區域。  
   
- 根據定義，巢狀資料區域是以相同的報表資料集為基礎。 您無法巢狀以不同資料集為基礎的資料區域。 若要顯示來自不同資料集的資料，請考慮使用鑽研報表或子報表。 如需詳細資訊，請參閱[鑽研、向下鑽研、子報表和巢狀資料區域 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/drillthrough, drilldown, subreports, and nested data regions.md)。  
+ 根據定義，巢狀資料區域是以相同的報表資料集為基礎。 您無法巢狀以不同資料集為基礎的資料區域。 若要顯示來自不同資料集的資料，請考慮使用鑽研報表或子報表。 如需詳細資訊，請參閱[鑽研、向下鑽研、子報表和巢狀資料區域 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## 了解巢狀資料區域的範圍  
- 資料在巢狀資料區域中的範圍會透過其在父資料區域中的放置位置自動定義。 例如，在 Tablix 邊角資料格中巢狀之圖表的資料範圍為套用資料集、Tablix 資料區與圖表資料區域的篩選後，繫結至 Tablix 資料區之資料集中的資料。 在 Tablix 資料格中巢狀之 Tablix 的範圍與邊角資料格的範圍相同，但是會在套用對應群組篩選的情況下，產生所巢狀資料格之資料列和資料行群組成員資格的額外範圍。 如需範圍的詳細資訊，請參閱[總計、彙總與內建集合的運算式範圍 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/expression scope for totals, aggregates, and built-in collections.md)。  
+## <a name="understanding-scope-for-a-nested-data-region"></a>了解巢狀資料區域的範圍  
+ 資料在巢狀資料區域中的範圍會透過其在父資料區域中的放置位置自動定義。 例如，在 Tablix 邊角資料格中巢狀之圖表的資料範圍為套用資料集、Tablix 資料區與圖表資料區域的篩選後，繫結至 Tablix 資料區之資料集中的資料。 在 Tablix 資料格中巢狀之 Tablix 的範圍與邊角資料格的範圍相同，但是會在套用對應群組篩選的情況下，產生所巢狀資料格之資料列和資料行群組成員資格的額外範圍。 如需範圍的詳細資訊，請參閱[總計、彙總與內建集合的運算式範圍 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)。  
   
  下列清單描述資料格在下列 Tablix 區域中的範圍：  
   
@@ -46,7 +51,7 @@ caps.handback.revision: 8
   
  如需詳細資訊，請參閱 [Tablix 資料區的區域 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md)。  
   
-## 將圖表、走勢圖或資料橫條以巢狀方式置於 Tablix 中  
+## <a name="nesting-a-chart-sparkline-or-data-bar-in-a-tablix"></a>將圖表、走勢圖或資料橫條以巢狀方式置於 Tablix 中  
  當您將圖表 (包括走勢圖或資料橫條) 加入到 Tablix 資料行群組頭或群組尾資料列時，或加入到 Tablix 主體資料格時，傳遞到圖表中的資料範圍為該資料格的資料子集。 根據預設，當您將圖表加入到 Tablix 資料格時，圖表維度會擴充以填滿資料格。  
   
 > [!NOTE]  
@@ -54,10 +59,10 @@ caps.handback.revision: 8
   
  根據預設，圖表圖例色彩取決於圖表數列中資料點的色彩。 若要控制色彩，讓巢狀圖表資料區域針對相同的資料類別目錄，全部使用相同的色彩，您必須使用自訂色彩，並針對資料設定排序運算式。 如需詳細資訊，請參閱[跨多個形狀圖指定一致的色彩 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs.md) 和[在資料區域中排序資料 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)。  
   
-## 將量測計或指標以巢狀方式置於 Tablix 中  
+## <a name="nesting-a-gauge-or-an-indicator-in-a-tablix"></a>將量測計或指標以巢狀方式置於 Tablix 中  
  您可以在資料表、矩陣或清單內部巢狀量測計或指標，藉以顯示關鍵效能指標 (KPI)。 當您在資料表內部放置量測計或指標時，會出現在 Tablix 的每個資料列中。 如需將指標加入 Tablix 的詳細資訊，請參閱[指標 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)。  
   
-### 將量測計加入到 Tablix  
+### <a name="adding-a-gauge-to-a-tablix"></a>將量測計加入到 Tablix  
  將量測計加入到 Tablix 資料區域有兩種方式：  
   
 -   按一下 Tablix 資料格內部，然後插入量測計。 **[選取量測計類型]** 對話方塊隨即出現。 選取量測計類型後，量測計資料區域就會放置在選取的 Tablix 資料格內部。 您可能需要調整 Tablix 的大小，才能設定量測計格式。  
@@ -72,7 +77,7 @@ caps.handback.revision: 8
   
  如果量測計上的資料變得太大，請考慮使用標尺乘數減少所顯示的位數。 若要指定乘數，您可以用滑鼠右鍵按一下標尺，然後選取 [標尺屬性]。 當 **[標尺屬性]** 對話方塊開啟時，針對 **[乘數]**指定一個值。  
   
-## 在清單中巢狀資料表或矩陣與圖表  
+## <a name="nesting-a-table-or-matrix-and-a-chart-in-a-list"></a>在清單中巢狀資料表或矩陣與圖表  
  若要在清單中巢狀多個資料區域，請先加入矩形，然後將資料區域加入到該矩形中。  
   
  您可以針對清單資料區域定義一個群組，然後加入 Tablix 和圖表，就可以提供相同資料的不同檢視。 若要達成這個效果，您必須針對內嵌的 Tablix 和圖表，定義相同的群組與排序運算式。 根據定義，Tablix 和圖表會使用來自父清單資料區域之資料集的資料。  
@@ -82,8 +87,8 @@ caps.handback.revision: 8
   
  如需詳細資訊，請參閱[了解群組 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md) 和[加入、移動或刪除資料表、矩陣或清單 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs.md)。  
   
-## 請參閱＜  
- [篩選、分組和排序資料 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>另請參閱  
+ [篩選、分組和排序資料 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [資料表、矩陣和清單 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [圖表 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [量測計 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)   

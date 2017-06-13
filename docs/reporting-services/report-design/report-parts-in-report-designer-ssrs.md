@@ -1,25 +1,32 @@
 ---
-title: "報表設計師中的報表組件 (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rtp.rptdesigner.components.f1"
+title: "報表組件在報表設計工具 (SSRS) |Microsoft 文件"
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rtp.rptdesigner.components.f1
 ms.assetid: 0c34311d-05d6-4bd2-b452-545fa95f8e7f
 caps.latest.revision: 12
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 11
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 66d5312047b516176e8aa1b331b36745bcdb20d9
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 報表設計師中的報表組件 (SSRS)
+
+# <a name="report-parts-in-report-designer-ssrs"></a>報表設計師中的報表組件 (SSRS)
+
   在報表設計師中，建立專案的資料表、圖表及其他分頁報表項目之後，您可以將它們當作「報表組件」發行至報表伺服器或與報表伺服器整合的 SharePoint 網站，以供您和其他人員在其他報表中重複使用這些組件。  
   
  一般來說，報表組件在報表設計師和報表產生器中的運作方式都相同。 若要了解基本功能，請參閱[報表組件 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)。  
@@ -27,7 +34,7 @@ caps.handback.revision: 11
  報表組件在報表設計師中運作的方式有基本的差異。 主要差異在於工作流程。 報表產生器可進行共同作業式撰寫：我建立報表組件並加以發行。 您可以重複使用、修改，並重新發行。 在報表設計師中，發行作業是單向的：我可以從報表設計師發行報表組件，而且您可以重複使用它。 但是，我無法在報表設計師的報表中重複使用現有的報表組件。 本主題會先快速介紹報表組件的概觀，然後再詳細說明這些差異。  
   
 ##  <a name="ComponentWorkflow"></a> 報表組件發行的生命週期  
- ![rs_ComponentCreation](../../reporting-services/report-design/media/rs-componentcreation.png "rs_ComponentCreation")  
+ ![rs_ComponentCreation](../../reporting-services/report-design/media/rs-componentcreation.gif "rs_ComponentCreation")  
   
 1.  在報表設計師中，某甲建立專案，其中包含的報表具有以內嵌資料集為依據的圖表。  
   
@@ -35,7 +42,7 @@ caps.handback.revision: 11
   
 3.  某乙在報表產生器中建立空白報表，並將圖表加入其中。 現在，該圖表加上內嵌資料集都是某乙報表的一部分。 某乙可以修改報表中的圖表執行個體與資料集。 這項作業對報表伺服器上的圖表執行個體和資料集不會有任何影響，也不會中斷報表中與報表伺服器上執行個體之間的關聯性。  
   
-     ![rs_BIDScomponentupdate](../../reporting-services/report-design/media/rs-bidscomponentupdate.png "rs_BIDScomponentupdate")  
+     ![rs_BIDScomponentupdate](../../reporting-services/report-design/media/rs-bidscomponentupdate.gif "rs_BIDScomponentupdate")  
   
 4.  在報表設計師中，某甲修改原始報表中的圖表。  
   
@@ -66,7 +73,7 @@ caps.handback.revision: 11
   
 -   清單  
   
- 如果您發行的報表組件會顯示資料，如資料表、矩陣或圖表，您可以共用資料集為其根據，否則，當您發行該報表組件時，所根據的資料集會儲存為內嵌資料集。 內嵌資料集可以使用內嵌資料集來源為根據，但認證並未儲存於內嵌資料集來源中。 因此，如果您的報表組件是以使用內嵌資料來源的內嵌資料集為依據，任何人只要重複使用此報表組件都必須提供內嵌資料來源的認證。 若要避免這種情形，請以含預存認證的共用資料來源做為內嵌和共用資料集的根據。 如需詳細資訊，請參閱[報表產生器中的報表組件和資料集](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)。  
+ 如果您發行的報表組件會顯示資料，如資料表、矩陣或圖表，您可以共用資料集為其根據，否則，當您發行該報表組件時，所根據的資料集會儲存為內嵌資料集。 內嵌資料集可以使用內嵌資料集來源為根據，但認證並未儲存於內嵌資料集來源中。 因此，如果您的報表組件是以使用內嵌資料來源的內嵌資料集為依據，任何人只要重複使用此報表組件都必須提供內嵌資料來源的認證。 若要避免這種情形，請以含預存認證的共用資料來源做為內嵌和共用資料集的根據。 如需詳細資訊，請參閱 [報表產生器中的報表組件和資料集](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)。  
   
  在報表設計師中發行報表組件的程序有兩個步驟：  
   
@@ -74,9 +81,8 @@ caps.handback.revision: 11
   
 2.  部署報表。  
   
- 部署報表時，報表組件會發行至 SharePoint 網站或報表伺服器，讓其他人也可以重複使用。 若要發行報表組件，必須具有與 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 報表伺服器的連線，並在部署報表時具有該伺服器上足夠的權限。  
+ 部署報表時，報表組件會發行至 SharePoint 網站或報表伺服器，讓其他人也可以重複使用。 若要發行報表組件，您必須連線至足夠的權限，並在報表伺服器上部署報表時。  
   
- ![搭配回到頁首連結使用的箭頭圖示](../../analysis-services/instances/media/uparrow16x16.png "搭配回到頁首連結使用的箭頭圖示") [回到頁首](#BackToTop)  
   
 ##  <a name="SearchReuseComponents"></a> 重複使用報表組件  
  跟報表產生器不同的是：您無法在建立報表組件之專案外的任何專案中，搜尋並重複使用該報表組件。  
@@ -89,10 +95,9 @@ caps.handback.revision: 11
  您可以修改，然後將報表組件重新發行到網站或伺服器。 報表產生器報表作者如果已經將該報表組件加入報表中，下次開啟該報表時就會接到變更的通知。 他們可以選擇接受您所做的變更與否。  
   
  您也可以選擇將已經發行過的報表當做新報表來發行。 請在 [發行報表組件] 對話方塊中，按一下 [發行為新報表組件]。 這個新的報表組件會有新的唯一識別碼，而且和舊的報表組件沒有關聯性。  
-  
- ![搭配回到頁首連結使用的箭頭圖示](../../analysis-services/instances/media/uparrow16x16.png "搭配回到頁首連結使用的箭頭圖示") [回到頁首](#BackToTop)  
-  
-## 請參閱＜  
- [管理報表組件](../../reporting-services/report-design/managing-report-parts.md)  
-  
-  
+
+## <a name="next-steps"></a>後續的步驟
+
+[管理報表組件](../../reporting-services/report-design/managing-report-parts.md)  
+
+更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)

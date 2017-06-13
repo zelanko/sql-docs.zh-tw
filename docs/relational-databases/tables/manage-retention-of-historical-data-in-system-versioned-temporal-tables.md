@@ -2,7 +2,7 @@
 title: "管理系統設定版本時態表中的歷程記錄資料保留 | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 08/31/2016
+ms.date: 05/18/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -16,10 +16,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4c8237dfcc25045fb0fec915c942ea7968e02a13
+ms.sourcegitcommit: 5bd0e1d3955d898824d285d28979089e2de6f322
+ms.openlocfilehash: 1fdb84c01f9e25c6ad818a6350a08df9ceaeae93
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/20/2017
 
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>管理系統設定版本之時態表中的歷程記錄資料保留
@@ -36,14 +36,16 @@ ms.lasthandoff: 04/11/2017
 ## <a name="data-retention-management-for-history-table"></a>歷程記錄資料表的資料保留管理  
  若要管理時態表的資料保留，第一步是決定每個時態表所需的保留期限。 在大部分情況下，您應將保留原則視為使用時態表之應用程式商務邏輯的一部分。 例如，資料稽核和時間移動案例中的應用程式，對於供應線上查詢之歷程記錄資料的保留期間有嚴格的規範。  
   
- 一旦決定資料保留期限後，下一步擬定計劃來管理歷程記錄資料的儲存方式和位置，以及刪除超過保留需求之歷程記錄資料的方式。 透過 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，您可以使用下列三種方法來管理時態歷程記錄資料表中的歷程記錄資料︰  
+ 一旦決定資料保留期限後，下一步擬定計劃來管理歷程記錄資料的儲存方式和位置，以及刪除超過保留需求之歷程記錄資料的方式。 下列四個方法來管理時態歷程記錄資料表中的歷程記錄資料可用：  
   
--   [Stretch Database](https://msdn.microsoft.com/library/mt637341.aspx#Anchor_1)  
+-   [Stretch Database](https://msdn.microsoft.com/library/mt637341.aspx#using-stretch-database-approach)  
   
--   [資料表資料分割](https://msdn.microsoft.com/library/mt637341.aspx#Anchor_2)  
+-   [資料表資料分割](https://msdn.microsoft.com/library/mt637341.aspx#using-table-partitioning-approach)  
   
--   [自訂清除指令碼](https://msdn.microsoft.com/library/mt637341.aspx#Anchor_3)  
-  
+-   [自訂清除指令碼](https://msdn.microsoft.com/library/mt637341.aspx#using-custom-cleanup-script-approach)  
+
+-   [保留原則](https://msdn.microsoft.com/library/mt637341.aspx#using-temporal-history-retention-policy-approach)  
+
  對於以上任一種方式，移轉或清除歷程記錄資料的邏輯乃基於與目前資料表之期間結束相對應的資料行。 每個資料列的期間結束值決定資料列版本「關閉」的時間，也就是落在歷程記錄資料表的時間。 例如， `SysEndTime < DATEADD (DAYS, -30, SYSUTCDATETIME ())` 條件指定超過一個月的歷程記錄資料需要移除或移出歷程記錄資料表。  
   
 > **注意：**  本主題中的範例使用此 [時態表範例](https://msdn.microsoft.com/library/mt590957.aspx)。  
@@ -425,7 +427,78 @@ BEGIN TRAN
     EXEC (@enableVersioningScript);  
 COMMIT;  
 ```  
-  
+
+## <a name="using-temporal-history-retention-policy-approach"></a>使用時態歷程記錄保留原則方法
+> **注意：**時態歷程記錄保留原則的方法適用於[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]和 SQL Server 2017 從 CTP 1.3 開始。  
+
+可以是時態歷程記錄保留在個別的資料表層級的設定，可讓使用者建立彈性的過時原則。 套用暫時保留很簡單： 它只需要一個參數是在資料表建立或結構描述變更時設定。
+
+定義保留原則之後，Azure SQL Database 會啟動定期檢查是否有資格可自動清除資料的歷程記錄資料列。 相符的資料列的識別和歷程記錄資料表中的移除它們發生背景工作，排程及執行系統中的透明的方式。 歷程記錄資料表資料列的存留期條件檢查會根據表示一端的 SYSTEM_TIME 期間資料行。 保留期限，例如，設定為六個月內，如果資料表有資格清除的資料列滿足下列條件：
+```
+ValidTo < DATEADD (MONTH, -6, SYSUTCDATETIME())
+```
+在上述範例中，我們假設 ValidTo 資料行對應至 SYSTEM_TIME 週期的結尾。
+### <a name="how-to-configure-retention-policy"></a>如何設定保留原則？
+設定的時態表的保留原則之前，請先檢查是否啟用時態歷程記錄保留在資料庫層級：
+```
+SELECT is_temporal_history_retention_enabled, name
+FROM sys.databases
+```
+資料庫旗標**is_temporal_history_retention_enabled**設為 ON，根據預設，但使用者可以變更利用 ALTER DATABASE 陳述式。 它也會自動設為 OFF 之後的時間還原作業中的點。 若要啟用時態歷程記錄保留為清除，為您的資料庫，請執行下列陳述式：
+```
+ALTER DATABASE <myDB>
+SET TEMPORAL_HISTORY_RETENTION  ON
+```
+在資料表建立期間設定保留原則，藉由指定 HISTORY_RETENTION_PERIOD 參數值：
+```
+CREATE TABLE dbo.WebsiteUserInfo
+(  
+    [UserID] int NOT NULL PRIMARY KEY CLUSTERED
+  , [UserName] nvarchar(100) NOT NULL
+  , [PagesVisited] int NOT NULL
+  , [ValidFrom] datetime2 (0) GENERATED ALWAYS AS ROW START
+  , [ValidTo] datetime2 (0) GENERATED ALWAYS AS ROW END
+  , PERIOD FOR SYSTEM_TIME (ValidFrom, ValidTo)
+ )  
+ WITH
+ (
+     SYSTEM_VERSIONING = ON
+     (
+        HISTORY_TABLE = dbo.WebsiteUserInfoHistory,
+        HISTORY_RETENTION_PERIOD = 6 MONTHS
+     )
+ );
+```
+您可以使用不同的時間單位，指定保留週期： 天、 週、 月和年。 如果省略 HISTORY_RETENTION_PERIOD，則會假設無限期保留。 您也可以明確地使用無限的關鍵字。
+在某些情況下，可能會想要設定保留資料表建立之後，或變更先前設定的值。 在此情況下使用 ALTER TABLE 陳述式：
+```
+ALTER TABLE dbo.WebsiteUserInfo
+SET (SYSTEM_VERSIONING = ON (HISTORY_RETENTION_PERIOD = 9 MONTHS));
+```
+若要檢閱目前的保留原則狀態，請使用下列查詢所加入資料庫層級與針對個別資料表的保留期限的暫時保留啟用旗標：
+```
+SELECT DB.is_temporal_history_retention_enabled,
+SCHEMA_NAME(T1.schema_id) AS TemporalTableSchema,
+T1.name as TemporalTableName,  SCHEMA_NAME(T2.schema_id) AS HistoryTableSchema,
+T2.name as HistoryTableName,T1.history_retention_period,
+T1.history_retention_period_unit_desc
+FROM sys.tables T1  
+OUTER APPLY (select is_temporal_history_retention_enabled from sys.databases
+where name = DB_NAME()) AS DB
+LEFT JOIN sys.tables T2   
+ON T1.history_table_id = T2.object_id WHERE T1.temporal_type = 2
+```
+### <a name="how-sql-database-deletes-aged-rows"></a>SQL Database 的會刪除過時的資料列？
+清理程序取決於歷程記錄資料表的索引配置。 請務必注意*只有歷程記錄資料表具有叢集索引 （B 型樹狀目錄或資料行存放區） 可以將有限的保留原則設定*。 建立背景工作執行的所有具有有限的保留期限的時態表的過時的資料清除。 清除的資料列存放區 (b-tree) 的叢集索引的邏輯會刪除過時的資料列較小的區塊 （最多 10 K) 最小化資料庫記錄檔和 I/O 子系統的壓力。 雖然將清除邏輯，會利用必要的 B 型樹狀目錄索引，刪除早於保留期間無法保證穩固地的資料列的順序。 因此，*清除順序，在應用程式中，不接受任何相依性*。
+
+叢集資料行存放區的 「 清除 」 工作會同時移除整個資料列群組 （通常包含 1 百萬個資料列的），這是非常有效率，特別是在高步調產生歷程記錄資料。
+
+![叢集資料行存放區保留](../../relational-databases/tables/media/cciretention.png "叢集資料行存放區保留")
+
+極佳的資料壓縮，有效率地保留清除讓叢集資料行存放區索引案例是完美的選擇您的工作負載快速產生大量的歷程記錄資料時。 此模式是一般使用時態表的變更追蹤和稽核、 趨勢分析，或 IoT 擷取資料的大量交易處理工作負載。
+
+請檢查[管理時態表中的歷程記錄資料保留原則](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-temporal-tables-retention-policy)如需詳細資訊。
+
 ## <a name="see-also"></a>另請參閱  
  [時態表](../../relational-databases/tables/temporal-tables.md)   
  [開始使用系統建立版本的時態表](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   

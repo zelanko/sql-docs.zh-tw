@@ -1,7 +1,7 @@
 ---
 title: "規劃在 SQL Server 中採用記憶體內部 OLTP 功能 | Microsoft Docs"
 ms.custom: 
-ms.date: 10/05/2016
+ms.date: 05/08/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 4404ee4d70ed16ddaad5d0600f5d37225897d455
+ms.sourcegitcommit: 0bcdf5c7eec91bccabc4b7b54f6121bec4d6c7f2
+ms.openlocfilehash: bf29cd596c9b52ecf88fc715a580253de5477271
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/09/2017
 
 ---
 # <a name="plan-your-adoption-of-in-memory-oltp-features-in-sql-server"></a>規劃在 SQL Server 中採用記憶體內部 OLTP 功能
@@ -61,6 +61,7 @@ ms.lasthandoff: 04/11/2017
 
 對於裝載於 Azure SQL Database 雲端服務的資料庫，您所選的服務層會影響資料庫允許使用的使用中記憶體數量。 您應該規劃使用警示來監視資料庫的記憶體使用量。 如需詳細資料，請參閱：
 
+- 檢閱的記憶體中 OLTP 儲存體限制您[定價層](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-service-tiers#single-database-service-tiers-and-performance-levels)
 - [監視記憶體內部 OLTP 儲存體](https://azure.microsoft.com/documentation/articles/sql-database-in-memory-oltp-monitoring/)
 
 #### <a name="memory-optimized-table-variables"></a>記憶體最佳化資料表變數
@@ -113,7 +114,7 @@ ms.lasthandoff: 04/11/2017
 
 ### <a name="a4-guidance-for-whether-in-memory-oltp-features-are-right-for-your-application"></a>A.4 記憶體內部 OLTP 功能是否適合您的應用程式的指引
 
-如需記憶體內部功能是否可以改善特定應用程式效能的指引，請參閱︰
+如需記憶體內部 OLTP 功能是否可以改善應用程式特定的效能指引，請參閱：
 
 - [In-Memory OLTP (記憶體中最佳化)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)
 
@@ -121,7 +122,7 @@ ms.lasthandoff: 04/11/2017
 
 ## <a name="b-unsupported-features"></a>B. 不支援的功能
 
-特定記憶體內部案例中不支援的功能說明於︰
+在描述中不支援在特定案例中記憶體內部 OLTP 的功能：
 
 - [記憶體內部 OLTP 不支援的 SQL Server 功能](../../relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md)
 
@@ -158,7 +159,7 @@ READPAST 提示在一些案例中很有幫助，例如數個工作階段全都�
 - 無法在記憶體最佳化資料表上針對 [RowVersion](../../t-sql/data-types/rowversion-transact-sql.md) 標記任何資料行。
 
 
-- [SEQUENCE](../../t-sql/statements/create-sequence-transact-sql.md) 物件不能用於任何記憶體最佳化資料表。
+- A[順序](../../t-sql/statements/create-sequence-transact-sql.md)不適用於記憶體最佳化資料表中的條件約束。 例如，您無法建立預設條件約束使用 NEXT VALUE FOR 子句。 順序可以搭配 INSERT 和 UPDATE 陳述式。
 
 
 ## <a name="c-administrative-maintenance"></a>C. 管理維護

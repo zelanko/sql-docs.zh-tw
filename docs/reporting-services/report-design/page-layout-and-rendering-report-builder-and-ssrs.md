@@ -1,23 +1,28 @@
 ---
-title: "頁面配置和轉譯 (報表產生器及 SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "頁面配置和轉譯 （報表產生器及 SSRS） |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e2358653-35bc-4496-810a-d3ccf02f229f
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d688ed124a419017e97d405d7f5bd80e6e3bf530
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 頁面配置和轉譯 (報表產生器及 SSRS)
+# <a name="page-layout-and-rendering-report-builder-and-ssrs"></a>頁面配置和轉譯 (報表產生器及 SSRS)
 請閱讀分頁報表的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 轉譯延伸模組，確定報表就是您要的外觀 (包括頁面配置、分頁符號和頁面大小)。 
 
  當您在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表管理員或是報表產生器或報表設計師的預覽窗格中檢視報表時，報表會先透過 HTML 轉譯器進行轉譯。 接著，您可以將報表匯出為不同的格式，例如 Excel 或逗點分隔檔 (CSV)。 然後，匯出的報表可以在 Excel 中進行進一步分析，或是當成可以匯入與使用 CSV 檔案之應用程式的資料來源使用。  
@@ -33,12 +38,12 @@ caps.handback.revision: 8
 
 其他報表項目會連結到單一項目，並顯示單一項目。 
 * **[影像]** 報表項目會連結到圖片。 
-* [文字方塊] 報表項目包含類似標題或運算式的簡單文字，其中可以包含內建欄位、報表參數或資料集欄位的參考。 
+* **[文字方塊]** 報表項目包含類似標題或運算式的簡單文字，其中可以包含內建欄位、報表參數或資料集欄位的參考。 
 * **[線條]** 和 **[矩形]** 報表項目則提供了報表頁面上的簡單圖形化元素。 **[矩形]** 也可以是其他報表項目的容器。 
 
 報表也可以包含子報表。  
   
-## 頁面配置
+## <a name="page-layout"></a>頁面配置
 
  使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]時，您可以將報表項目放在設計介面上的任何地方。 您可以使用貼齊格線和調整大小的控點，以互動方式放置、展開及收縮報表項目的最初形狀。 您可以並排不同組的資料來放置資料區，甚至是不同格式的相同資料。 當您將報表項目放在設計介面上時，它會有預設的大小和形狀，而且與所有其他報表項目之間具有初始關聯性。 
  
@@ -61,11 +66,11 @@ caps.handback.revision: 8
     > [!NOTE]  
     >  雖然它不提供直接匯出為不同格式的功能，但是 Atom 轉譯會從報表產生資料檔。  
   
--   **軟分頁轉譯器**：軟分頁轉譯器會維持報表的版面配置和格式。 所產生的檔案最適合使用螢幕檢視與傳遞，例如，使用網頁。 可用的軟分頁轉譯器為：[!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel、[!INCLUDE[msCoName](../../includes/msconame-md.md)] Word、網頁封存 (MHTML)，以及 HTML。  
+-   **軟分頁轉譯器** ：軟分頁轉譯器會維持報表的版面配置和格式。 所產生的檔案最適合使用螢幕檢視與傳遞，例如，使用網頁。 可用的軟分頁轉譯器為： [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word、網頁封存 (MHTML)，以及 HTML。  
   
--   **手動分頁轉譯器**：手動分頁轉譯器會維持報表的版面配置和格式。 所產生的檔案最適合一致的列印結果，或者以書本格式線上檢視報表。 可用的手動分頁轉譯器為 TIFF 和 PDF。  
+-   **手動分頁轉譯器** ：手動分頁轉譯器會維持報表的版面配置和格式。 所產生的檔案最適合一致的列印結果，或者以書本格式線上檢視報表。 可用的手動分頁轉譯器為 TIFF 和 PDF。  
   
- 當您在報表產生器或報表設計師中預覽報表，或在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器上執行報表時，報表一定會先以 HTML 轉譯。 在執行報表後，您可以將它匯出為其他的檔案格式。 如需詳細資訊，請參閱[匯出報表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)。  
+ 當您在報表產生器或報表設計師中預覽報表，或在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器上執行報表時，報表一定會先以 HTML 轉譯。 在執行報表後，您可以將它匯出為其他的檔案格式。 如需詳細資訊，請參閱 [匯出報表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)中之分頁的規則。  
   
 ##  <a name="RenderingBehaviors"></a> 轉譯行為  
  根據所選取的轉譯器，當轉譯報表時，系統會套用某些規則。 將報表項目全部容納在一頁的方式，取決於下列因素的組合：  
@@ -83,9 +88,9 @@ caps.handback.revision: 8
 ##  <a name="Pagination"></a> 分頁  
  分頁指的是報表內的頁數，以及如何在這些頁面上排列報表項目。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中的分頁會根據您用於檢視和傳遞報表的轉譯延伸模組，以及您設定報表使用的分頁符號和保持在一起的選項而有所不同。  
   
- 若要為使用者成功設計容易閱讀的報表，並針對計畫用於傳遞報表的轉譯器最佳化該報表，您必須了解用於控制 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中之分頁的規則。 使用**資料**與**軟分頁**轉譯延伸模組匯出的報表通常不會受到分頁影響。 當您使用資料轉譯延伸模組時，報表會以 XML 或 CSV 格式轉譯為表格式資料列集。 為確保匯出的報表資料可以使用，您應該了解從報表套用至已轉譯之扁平化表格式資料列集的規則。  
+ 若要為使用者成功設計容易閱讀的報表，並針對計畫用於傳遞報表的轉譯器最佳化該報表，您必須了解用於控制 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中之分頁的規則。 使用 **資料** 與 **軟分頁** 轉譯延伸模組匯出的報表通常不會受到分頁影響。 當您使用資料轉譯延伸模組時，報表會以 XML 或 CSV 格式轉譯為表格式資料列集。 為確保匯出的報表資料可以使用，您應該了解從報表套用至已轉譯之扁平化表格式資料列集的規則。  
   
- 當您使用**軟分頁**轉譯延伸模組 (例如，HTML 轉譯延伸模組) 時，您可能想要知道報表列印後的外觀，同時也想知道使用 PDF 之類的手動分頁轉譯器的效果如何。 在建立或更新報表期間，您可以在報表產生器和報表設計師中預覽並匯出該報表。  
+ 當您使用 **軟分頁** 轉譯延伸模組 (例如，HTML 轉譯延伸模組) 時，您可能想要知道報表列印後的外觀，同時也想知道使用 PDF 之類的手動分頁轉譯器的效果如何。 在建立或更新報表期間，您可以在報表產生器和報表設計師中預覽並匯出該報表。  
   
  **手動分頁**轉譯器對於報表版面配置與實際頁面大小擁有最大的影響力。 若要深入了解，請參閱 [Reporting Services 中的分頁 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)。  
    
@@ -113,8 +118,8 @@ caps.handback.revision: 8
  [控制分頁符號、標題、資料行和資料列 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)  
  提供有關使用分頁符號的資訊。  
   
-## 請參閱＜  
- [不同報表轉譯延伸模組的互動式功能 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/interactive functionality - different report rendering extensions.md)   
+## <a name="see-also"></a>請參閱＜  
+ [不同報表轉譯延伸模組的互動式功能 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [匯出報表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)  
   
   

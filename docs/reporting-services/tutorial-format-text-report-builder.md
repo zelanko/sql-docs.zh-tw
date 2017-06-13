@@ -1,24 +1,31 @@
 ---
-title: "教學課程：格式化文字 (報表產生器) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/15/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: "教學課程： 格式化文字 （報表產生器） |Microsoft 文件"
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: 67d8513e-8a70-464b-b87f-e91d010cfd82
 caps.latest.revision: 16
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 15
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: cfbe1001a049466af839363db29156df6b972556
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 教學課程：格式化文字 (報表產生器)
+
+# <a name="tutorial-format-text-report-builder"></a>教學課程：格式化文字 (報表產生器)
+
 在本教學課程中，您可以在 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分頁報表中練習以各種不同的方式格式化文字。 您可以實驗不同的格式。 
 
 使用資料來源和資料集設定空白報表之後，您可以挑選想要瀏覽的格式。 下圖顯示報表，與您將要建立的報表相似。  
@@ -26,35 +33,15 @@ caps.handback.revision: 15
 ![report-build-format-report](../reporting-services/media/report-build-format-report.png) 
   
 您在某個步驟故意出錯，所以知道錯誤的原因是什麼。 接著您要更正錯誤以便達到想要的效果。  
-   
-## <a name="BackToTop"></a>學習內容  
-  
-### 設定報表  
-1. [建立含資料來源和資料集的空白報表](#CreateReport)  
-  
-2. [將欄位加入至報表設計介面 (先做錯，再用正確的方法)](#AddField)  
-  
-3. [將資料表加入至報表設計介面](#AddTable)  
-  
-### 隨意挑選  
-* [加入超連結至報表](#AddHyperlink)  
-  
-* [旋轉報表中的文字](#RotateText)  
-  
-* [將貨幣格式化](#FormatCurrency)  
-  
-* [顯示 HTML 格式的文字](#FormatHTML)  
-  
-* [儲存報表](#Save)  
-  
+    
 完成這個教學課程的估計時間：30 分鐘。  
   
-## 需求  
+## <a name="requirements"></a>需求  
 如需需求的資訊，請參閱[教學課程的必要條件 &#40;報表產生器&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md)。  
   
 ## <a name="CreateReport"></a>建立含資料來源和資料集的空白報表  
   
-### 建立空白報表  
+### <a name="to-create-a-blank-report"></a>建立空白報表  
   
 1.  從您的電腦、[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] Web 入口網站或 SharePoint 整合模式[啟動報表產生器](../reporting-services/report-builder/start-report-builder.md)。  
   
@@ -66,7 +53,7 @@ caps.handback.revision: 15
   
 3.  在右窗格中，按一下 **[空白報表]**。  
   
-### 建立資料來源  
+### <a name="to-create-a-data-source"></a>建立資料來源  
   
 1.  在 [報表資料] 窗格中，按一下 [新增] > [資料來源]。  
 
@@ -76,14 +63,14 @@ caps.handback.revision: 15
   
 3.  按一下 **[使用內嵌於報表中的連接]**。  
   
-4.  確認連接類型為 Microsoft SQL Server，然後在 [連接字串] 方塊中輸入： `Data Source = <servername>`  
+4.  確認連接類型為 Microsoft SQL Server，然後在**連接字串**方塊中，輸入：`Data Source = <servername>`  
   
     > [!NOTE]  
-    > `<servername>` 運算式 (例如 Report001) 會指定已安裝 SQL Server Database Engine 執行個體的電腦名稱。 本教學課程無須任何特定資料，您只需要連接到 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 資料庫。 如果您已有資料來源連接列於 [資料來源連接] 底下，就可以選取該連接並移至下一個程序「建立資料集」。 如需詳細資訊，請參閱[取得資料連接的替代方式 &#40;報表產生器&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)。  
+    > `<servername>`運算式 (例如 Report001) 會指定已安裝 SQL Server Database Engine 執行個體的電腦名稱。 本教學課程無須任何特定資料。您只需要 SQL Server 資料庫的連接。 如果您已有資料來源連接列於 [資料來源連接] 底下，就可以選取該連接並移至下一個程序「建立資料集」。 如需詳細資訊，請參閱[取得資料連接的替代方式 &#40;報表產生器&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)。  
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-### 建立資料集  
+### <a name="to-create-a-dataset"></a>建立資料集  
   
 1.  在 [報表資料] 窗格中，按一下 [新增] > [資料集]。  
   
@@ -144,7 +131,7 @@ caps.handback.revision: 15
 ## <a name="AddField"></a>將欄位加入至報表設計介面  
 如果希望擷取自資料集的欄位出現在報表中，您可能會不加思索地直接將欄位拖曳到設計介面。 此練習將點出為何這樣做無效，以及應該改用的方法。  
   
-### 將欄位加入至報表 (會得到錯誤的結果)  
+### <a name="to-add-a-field-to-the-report-and-get-the-wrong-result"></a>將欄位加入至報表 (會得到錯誤的結果)  
   
 1.  從 [報表資料] 窗格，將 [FullName] 欄位拖曳到設計介面。  
   
@@ -170,7 +157,7 @@ caps.handback.revision: 15
   
 6.  選取文字方塊 (如果您已選取運算式，請按 ESC 鍵選取文字方塊)，然後按下 DELETE 鍵。  
   
-### 將欄位加入至報表 (會得到正確的結果)  
+### <a name="to-add-a-field-to-the-report-and-get-the-right-result"></a>將欄位加入至報表 (會得到正確的結果)  
   
 1.  在功能區的 [插入] 索引標籤上，按一下 [資料區域] 區域內的 [清單]。 按一下設計介面，然後進行拖曳以建立寬約 2 英吋且高約 1 英吋的方塊。  
   
@@ -349,7 +336,7 @@ caps.handback.revision: 15
   
 本教學課程會將報表儲存至報表伺服器。 如果您沒有報表伺服器的存取權，請將報表儲存在您的電腦上。  
   
-### 若要將報表儲存在報表伺服器上  
+### <a name="to-save-the-report-on-a-report-server"></a>若要將報表儲存在報表伺服器上  
   
 1.  在 **[報表產生器]** 按鈕中，按一下 **[另存新檔]**。  
   
@@ -365,7 +352,7 @@ caps.handback.revision: 15
   
 報表就會儲存至報表伺服器。 您連接之報表伺服器的名稱會顯示在視窗底部的狀態列中。  
   
-### 將報表儲存到您的電腦上  
+### <a name="to-save-the-report-on-your-computer"></a>將報表儲存到您的電腦上  
   
 1.  在 **[報表產生器]** 按鈕中，按一下 **[另存新檔]**。  
   
@@ -374,12 +361,13 @@ caps.handback.revision: 15
 3.  在 [名稱] 中，將預設名稱取代為您選擇的名稱。 
   
 4.  按一下 **[儲存]**。  
-  
-## 後續步驟  
-在報表產生器中，格式化文字的方法有好幾種。 [教學課程：建立自由格式報表 &#40;報表產生器&#41;](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md) 包含更多範例。  
-  
-## 另請參閱  
--   [報表產生器教學課程 ](../reporting-services/report-builder-tutorials.md) 
--   [設定報表項目的格式 &#40;報表產生器及 SSRS&#41;](../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  
--   [SQL Server 2016 的報表產生器](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
-  
+
+## <a name="next-steps"></a>後續步驟
+
+在報表產生器中，格式化文字的方法有好幾種。 [教學課程： 建立自由格式報表](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md)包含更多的範例。  
+
+[報表產生器教學課程](../reporting-services/report-builder-tutorials.md)  
+[格式化報表項目](../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  
+[SQL Server 2016 的報表產生器](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
+
+更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)

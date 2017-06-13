@@ -1,23 +1,28 @@
 ---
-title: "範圍圖表 (報表產生器及 SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "範圍圖表 （報表產生器及 SSRS） |Microsoft 文件"
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 48e351d3-ac5b-4eda-a4bd-32a0de206a30
 caps.latest.revision: 5
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 5
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1cdcf1877134ea93ec52b3c7fb70dbfeda536a93
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 範圍圖表 (報表產生器及 SSRS)
+# <a name="range-charts-report-builder-and-ssrs"></a>範圍圖表 (報表產生器及 SSRS)
   範圍圖表類型會顯示一組資料點，每個點都是由相同類別的多個值所定義。 這些值會以值軸所測量的標記高度來表示。 類別標籤會顯示在類別軸上。 一般範圍圖表會針對每個資料點，填滿上界值和下界值之間的區域。  
   
  下圖顯示的是包含三個數列的一般範圍圖表。  
@@ -27,7 +32,7 @@ caps.handback.revision: 5
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## 變數  
+## <a name="variations"></a>變數  
   
 -   **平滑範圍圖表**： 平滑範圍圖表會顯示曲線而不是直線。  
   
@@ -35,7 +40,7 @@ caps.handback.revision: 5
   
 -   **橫條範圍**： 橫條範圍圖表會使用橫條 (而非區域) 來顯示範圍。  
   
-## 範圍圖表的資料考量  
+## <a name="data-considerations-for-range-charts"></a>範圍圖表的資料考量  
   
 -   範圍圖表類型的每個資料點都需要兩個值。 這些值會與定義每個資料點範圍的最高值和最低值相對應。  
   
@@ -51,7 +56,7 @@ caps.handback.revision: 5
   
 -   甘特圖可以使用範圍橫條圖建立。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [圖表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [圖表類型 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
  [格式化圖表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)  

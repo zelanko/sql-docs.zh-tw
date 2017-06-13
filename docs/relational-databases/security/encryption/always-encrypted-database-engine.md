@@ -2,7 +2,7 @@
 title: "Always Encrypted (資料庫引擎) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 01/13/2017
+ms.date: 04/24/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -22,10 +22,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f848c5ebf1233d6b34dcf00bb7084adcebc95ea1
+ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
+ms.openlocfilehash: a59eb966ca238f4e1c2acd95f108f7090b136a52
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 04/25/2017
 
 ---
 # <a name="always-encrypted-database-engine"></a>一律加密 (Database Engine)
@@ -126,33 +126,32 @@ Database Engine 會將每個資料行的加密設定儲存在資料庫中繼資�
 
 -   變更加密物件的定義之後，執行 [sp_refresh_parameter_encryption](../../../relational-databases/system-stored-procedures/sp-refresh-parameter-encryption-transact-sql.md) 更新物件的 Always Encrypted 中繼資料。
   
- 針對具有下列特性的資料行，不支援 Always Encrypted (例如，如果下列任何條件適用於該資料行，加密的 WITH 子句  不能使用於資料行的 **CREATE TABLE/ALTER TABLE** 中)：  
+針對具有下列特性的資料行，不支援 Always Encrypted (例如，如果下列任何條件適用於該資料行，加密的 WITH 子句  不能使用於資料行的 **CREATE TABLE/ALTER TABLE** 中)：  
   
 -   使用下列其中一個資料類型的資料行： **xml**、 **timestamp**/**rowversion**、 **image**, **ntext**、 **text**、 **sql_variant**、 **hierarchyid**、 **geography**、 **geometry**、alias、使用者定義的類型。  
-  
 - FILESTREAM 資料行  
-  
-- 屬性為 ROWGUIDCOL 的資料行
-- 含非 bin2 定序的字串 (varchar、char 等) 資料行
-- 為使用隨機加密資料行做為索引鍵資料行 (決定性加密資料行亦可) 之非叢集索引金鑰的資料行
-- 為使用隨機加密資料行做為索引鍵資料行 (決定性加密資料行亦可) 之叢集索引金鑰的資料行
-- 為同時包含隨機加密與決定性加密資料行之全文檢索索引金鑰的資料行
-- 計算資料行所參考之資料行 (當運算式執行 [永遠加密] 不支援的作業)
-- 疏鬆資料行集合
-- 統計資料所參考的資料行
-- 使用別名類型的資料行
-- 資料分割資料行
-- 包含預設條件約束的資料行
-- 使用隨機加密時，唯一條件約束所參考的資料行 (支援決定性加密)
-- 使用隨機加密時的主索引鍵資料行 (支援決定性加密)
-- 當使用隨機加密或使用決定性加密時 (如果已參考和參考資料行使用不同的索引鍵或演算法)，外部索引鍵條件約束中的參考資料行
-- 檢查條件約束所參考之資料行
-- 使用異動資料擷取之資料表中的資料行
-- 具有變更追蹤之資料表上的主索引鍵資料行
-- 已遮罩的資料行 (使用動態資料遮罩)
-- Stretch Database 資料表中的資料行。 (包含使用 [永遠加密] 進行加密之資料行的資料表可針對 Stretch 啟用。)
-- 外部 (PolyBase) 資料表中的資料行 (附註：支援使用外部資料表和包含加密資料行的資料表)
-- 不支援以加密的資料行為目標的資料表值參數。
+- 含 IDENTITY 屬性的資料行  
+- 屬性為 ROWGUIDCOL 的資料行  
+- 含非 bin2 定序的字串 (varchar、char 等) 資料行  
+- 為使用隨機加密資料行做為索引鍵資料行 (決定性加密資料行亦可) 之非叢集索引金鑰的資料行  
+- 為使用隨機加密資料行做為索引鍵資料行 (決定性加密資料行亦可) 之叢集索引金鑰的資料行  
+- 為同時包含隨機加密與決定性加密資料行之全文檢索索引金鑰的資料行  
+- 計算資料行所參考之資料行 (當運算式執行 [永遠加密] 不支援的作業)  
+- 疏鬆資料行集合  
+- 統計資料所參考的資料行  
+- 使用別名類型的資料行  
+- 資料分割資料行  
+- 包含預設條件約束的資料行  
+- 使用隨機加密時，唯一條件約束所參考的資料行 (支援決定性加密)  
+- 使用隨機加密時的主索引鍵資料行 (支援決定性加密)  
+- 當使用隨機加密或使用決定性加密時 (如果已參考和參考資料行使用不同的索引鍵或演算法)，外部索引鍵條件約束中的參考資料行  
+- 檢查條件約束所參考之資料行  
+- 使用異動資料擷取之資料表中的資料行  
+- 具有變更追蹤之資料表上的主索引鍵資料行  
+- 已遮罩的資料行 (使用動態資料遮罩)  
+- Stretch Database 資料表中的資料行。 (包含使用 [永遠加密] 進行加密之資料行的資料表可針對 Stretch 啟用。)  
+- 外部 (PolyBase) 資料表中的資料行 (附註：支援使用外部資料表和包含加密資料行的資料表)  
+- 不支援以加密的資料行為目標的資料表值參數。  
 
 下列子句不能用於加密的資料行：
 

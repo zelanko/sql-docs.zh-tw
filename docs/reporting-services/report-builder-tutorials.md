@@ -1,28 +1,36 @@
 ---
-title: "報表產生器教學課程 | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/15/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: "報表產生器教學課程 |Microsoft 文件"
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: c99495c3-899b-4c84-af87-76e96d4afa23
 caps.latest.revision: 11
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 11
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 0db221b65dff8a531893657c47c776dc350c4aef
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 報表產生器教學課程
+# <a name="report-builder-tutorials"></a>報表產生器教學課程
+
+[!INCLUDE[ssrs-appliesto-sql2016-preview](../includes/ssrs-appliesto-sql2016-preview.md)]
+
 使用下列報表產生器教學課程，了解如何建立基本 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分頁報表。  
   
 [教學課程的必要條件 &#40;報表產生器&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md)  
-若要使用這些教學課程，您必須擁有 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 資料庫的唯讀存取權，以及存取 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 報表伺服器的權限。  
+若要使用這些教學課程，您必須為 SQL Server 資料庫以及權限可以存取的唯讀存取[!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]報表伺服器。  
   
 如需這些必要條件的說明，請連絡報表伺服器管理員。  
   
@@ -67,11 +75,11 @@ caps.handback.revision: 11
   
 [教學課程：運算式簡介](../reporting-services/tutorial-introducing-expressions.md)  
 請遵循此教學課程中的步驟，學習如何使用運算式串連、計算和查閱欄位值，以及顯示其報表。 您也會學習如何使用運算式，條件式地顯示不同的影像和指標狀態。  
-  
-## 另請參閱  
-[報表設計檢視 &#40;報表產生器&#41;](../reporting-services/report-builder/report-design-view-report-builder.md)  
+
+## <a name="next-steps"></a>後續的步驟
+
+[報表設計檢視](../reporting-services/report-builder/report-design-view-report-builder.md)  
 [SQL Server 2016 的報表產生器](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
-[教學課程：離線建立快速圖表報表 &#40;報表產生器&#41;](../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
-  
-  
-  
+[教學課程： 建立快速圖表報表離線](../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
+
+更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
