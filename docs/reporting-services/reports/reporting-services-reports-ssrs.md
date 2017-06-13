@@ -1,30 +1,35 @@
 ---
-title: "Reporting Services 報表 (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/15/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-helpviewer_keywords: 
-  - "Reporting Services, 報表建立"
+title: "Reporting Services 報表 (SSRS) |Microsoft 文件"
+ms.custom: 
+ms.date: 06/15/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+helpviewer_keywords:
+- Reporting Services, report creation
 ms.assetid: 52ed9e74-f2c8-488b-a2c2-6dfbc2a2c8cc
 caps.latest.revision: 54
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 54
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fae0916939061f7e0206d749c9232691bca31f9d
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# Reporting Services 報表 (SSRS)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分頁報表是一種以 XML 為基礎的報表定義，其中包括報表資料及報表配置元素。 在用戶端檔案系統上，報表定義的副檔名為 .rdl。 在發行分頁報表之後，其為儲存在報表伺服器或 SharePoint 網站上的報表項目。 分頁報表是由 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供之伺服器架構報表平台的一部分。 您也可以[使用 SQL Server 行動報表發行工具建立行動報表](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)。  
+# <a name="reporting-services-reports-ssrs"></a>Reporting Services 報表 (SSRS)
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分頁報表是一種以 XML 為基礎的報表定義，其中包括報表資料及報表配置元素。 在用戶端檔案系統上，報表定義的副檔名為 .rdl。 在發行分頁報表之後，其為儲存在報表伺服器或 SharePoint 網站上的報表項目。 分頁報表是由 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]提供之伺服器架構報表平台的一部分。 您也可以[使用 SQL Server 行動報表發行工具建立行動報表](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)。  
   
  若您是第一次使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，請務必檢閱 [Reporting Services 概念 &#40;SSRS&#41;](../../reporting-services/reporting-services-concepts-ssrs.md) 中的資訊。  
   
-## Reporting Services 分頁報表的優點  
+## <a name="benefits-of-reporting-services-paginated-reports"></a>Reporting Services 分頁報表的優點  
  您可使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表方案來：  
   
 -   使用提供單一版本事實的一組資料來源。 讓報表以這些資料來源為基礎，提供統一的資料檢視，以協助商業性決策的制定。  
@@ -45,7 +50,7 @@ caps.handback.revision: 54
   
 -   定義運算式，可讓您擁有自訂報表資料篩選、分組及排序方式的能力。  
   
- ![rs_GettingStartedReport](../../reporting-services/report-builder/media/rs-gettingstartedreport.gif "rs_GettingStartedReport")  
+ ![rs_GettingStartedReport](../../reporting-services/report-builder/media/rs-gettingstartedreport.png "rs_GettingStartedReport")  
   
 ##  <a name="bkmk_StagesSummary"></a> 報表處理的階段  
  建立報表時，您會定義一個 XML 格式的報表定義檔案 (.rdl)。 這個檔案包含報表處理器結合報表資料與報表配置所需的所有資訊。 當您檢視報表時，會透過下列階段來處理報表：  
@@ -60,14 +65,14 @@ caps.handback.revision: 54
   
  如需詳細資訊，請參閱 [Reporting Services 概念 &#40;SSRS&#41;](../../reporting-services/reporting-services-concepts-ssrs.md) 中的[報表階段](../../reporting-services/reporting-services-concepts-ssrs.md#bkmk_StagesofReports)。  
   
-## 建立分頁報表  
+## <a name="create-paginated-reports"></a>建立分頁報表  
  若要建立分頁報表：  
   
 -   **判斷報表的用途。** 依據使用報表的對象來識別報表的用途。 設計良好的報表會將具備洞察能力與行動力的資訊提供給報告讀取器。 在此步驟決定的設計決策會影響您所選的報表參數、報表配置設計及報表檢視經驗。 如需詳細資訊，請參閱[規劃報表 &#40;報表產生器&#41;](../../reporting-services/report-design/planning-a-report-report-builder.md) 和[報表設計提示 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/report-design-tips-report-builder-and-ssrs.md)。  
   
 -   **選擇查詢的類型。** 判斷是否要使用一般化的共用資料集查詢，或專屬於您的一組報表的資料集查詢。 含有一般化查詢的共用資料集在多份報表使用中較易於維護，但每個報表設計師必須依據其特定的一組報表來篩選所需的資料。 如需詳細資訊，請參閱[報表資料 &#40;SSRS&#41;](../../reporting-services/report-data/report-data-ssrs.md)。  
   
--   **規劃相關資料的檢視。** 規劃報表讀取器的檢視經驗。 若要處理大量資料時，利用具備向下鑽研詳細資料能力的摘要報表是很實用的方法。 如需詳細資訊，請參閱[鑽研、向下鑽研、子報表和巢狀資料區 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/drillthrough, drilldown, subreports, and nested data regions.md)。  
+-   **規劃相關資料的檢視。** 規劃報表讀取器的檢視經驗。 若要處理大量資料時，利用具備向下鑽研詳細資料能力的摘要報表是很實用的方法。 如需詳細資訊，請參閱[鑽研、向下鑽研、子報表和巢狀資料區域 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)。  
   
 -   **設定權限：** 規劃授與適當權限等級的策略。 常用的策略是在報表伺服器上建立一個資料夾結構，並依據角色和資料夾安全性來授與報表及報表相關項目的存取權。 如需詳細資訊，請參閱＜ [確保報表安全性](#bkmk_SecureReportsSummary)。  
   
@@ -75,7 +80,7 @@ caps.handback.revision: 54
   
 -   針對每份報表：  
   
-    -   **識別資料的來源。** 為每個資料來源定義報表資料來源。 如需詳細資訊，請參閱[資料連接、資料來源及連接字串 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
+    -   **識別資料的來源。** 為每個資料來源定義報表資料來源。 如需詳細資訊，請參閱 [資料連接、資料來源及連接字串 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
   
     -   **選擇每個來源會用到的資料。** 為每個資料來源定義報表資料集。 每個資料集都包括查詢，以指定要使用的資料。 若您有報表參數，定義資料集可擴展每個參數可用的值清單。 如需詳細資訊，請參閱[報表資料集 &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md) 和[報表參數 &#40;報表產生器和報表設計師&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)。  
   
@@ -115,16 +120,16 @@ caps.handback.revision: 54
   
 -   **考量哪些元件可重複使用。**  判斷是否有任何資料來源或資料集查詢可共用及重複使用。 如果有，可以在報表伺服器或 SharePoint 網站上建立共用資料來源和共用資料集。 判斷資料區是否適合重複使用為報表組件。 如需詳細資訊，請參閱[報表設計師中的報表組件 &#40;SSRS&#41;](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md)。  
   
-## 預覽報表  
- 每個報表撰寫工具都支援預覽報表。 如需詳細資訊，請參閱[使用報表設計師設計報表 &#40;SSRS&#41;](../../reporting-services/tools/design-reports-with-report-designer-ssrs.md) 的[預覽](../../reporting-services/tools/design-reports-with-report-designer-ssrs.md#bkmk_Preview)一節和[在報表產生器中預覽報表](../../reporting-services/report-builder/previewing-reports-in-report-builder.md)。  
+## <a name="preview-reports"></a>預覽報表  
+ 每個報表撰寫工具都支援預覽報表。 如需詳細資訊，請參閱[使用報表設計師設計報表 &#40;SSRS&#41;](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md) 的[預覽](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md#bkmk_Preview)一節和[在報表產生器中預覽報表](../../reporting-services/report-builder/previewing-reports-in-report-builder.md)。  
   
-## 儲存或發行報表  
- 每個報表撰寫工具都支援本機儲存報表，或是將報表發行至報表伺服器或 SharePoint 網站。 如需詳細資訊，請參閱[使用報表設計師設計報表 &#40;SSRS&#41;](../../reporting-services/tools/design-reports-with-report-designer-ssrs.md) 的[儲存和部署](../../reporting-services/tools/design-reports-with-report-designer-ssrs.md#bkmk_SaveandDeploy)一節和[儲存報表 &#40;報表產生器&#41;](../../reporting-services/report-builder/saving-reports-report-builder.md)。  
+## <a name="save-or-publish-reports"></a>儲存或發行報表  
+ 每個報表撰寫工具都支援本機儲存報表，或是將報表發行至報表伺服器或 SharePoint 網站。 如需詳細資訊，請參閱[使用報表設計師設計報表 &#40;SSRS&#41;](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md) 的[儲存和部署](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md#bkmk_SaveandDeploy)一節和[儲存報表 &#40;報表產生器&#41;](../../reporting-services/report-builder/saving-reports-report-builder.md)。  
   
-## 檢視報表  
+## <a name="view-reports"></a>檢視報表  
  您除了可以預覽儲存在本機或發行至報表伺服器的報表外，還可提供各種檢視經驗給報告讀取器。 若要檢視報表：  
   
--   **瀏覽器。**  使用報表伺服器 Web 服務或 SharePoint 網站來檢視發行的報表。 在 SharePoint 網站中，您也可以設定 Web 組件來檢視已發行的報表。 如需詳細資訊，請參閱 [Reporting Services 和 Power View 的瀏覽器支援](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)、[報表管理員 &#40;SSRS 原生模式&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md) 和 [URL 存取 &#40;SSRS&#41;](../../reporting-services/url-access-ssrs.md)。  
+-   **瀏覽器。**  使用報表伺服器 Web 服務或 SharePoint 網站來檢視發行的報表。 在 SharePoint 網站中，您也可以設定 Web 組件來檢視已發行的報表。 如需詳細資訊，請參閱 [Reporting Services 和 Power View 的瀏覽器支援](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)、[報表管理員 &#40;SSRS 原生模式&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896) 和 [URL 存取 &#40;SSRS&#41;](../../reporting-services/url-access-ssrs.md)。  
   
 -   **傳遞。**  設定訂閱，將報表以電子郵件傳遞給報告讀取器或傳送至共用檔案資料夾。  如需詳細資訊，請參閱[訂閱與傳遞 &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)。  
   
@@ -134,7 +139,7 @@ caps.handback.revision: 54
   
 -   **Web 或 Windows Form 應用程式。**  使用 Visual Studio 來開發 ASP.NET AJAX 應用程式或主控報表檢視器控制項的 Windows Form 應用程式。 此控制項可指向報表伺服器上的已發行報表。 如需詳細資訊，請參閱＜ [Microsoft 報表](http://go.microsoft.com/fwlink/?LinkID=205399)。  
   
-## 管理報表  
+## <a name="manage-reports"></a>管理報表  
  若要管理發行的報表：  
   
 -   **資料來源。** 共用資料來源及內嵌資料來源都是獨立管理的，與報表定義無關。  
@@ -158,26 +163,27 @@ caps.handback.revision: 54
   
 -   請讓報表伺服器管理員，識別您的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝所用的授權與驗證系統。 依預設， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會使用 Windows 驗證、整合式安全性及角色指派，以協助控制發行報表的存取權。 如需詳細資訊，請參閱[角色與權限 &#40;Reporting Services&#41;](../../reporting-services/security/roles-and-permissions-reporting-services.md) 和 [Reporting Services 安全性與保護](../../reporting-services/security/reporting-services-security-and-protection.md)。  
   
-## 依據報表資料建立通知  
+## <a name="create-notifications-based-on-report-data"></a>依據報表資料建立通知  
  您可以為 SharePoint 網站上的發行報表建立資料警示。 資料警示是以報表中報表資料區的資料摘要為依據。 依預設，會自動命名資料區。 報表作者可依據其商業用途來命名資料區，即可輕鬆地在其報表中建立資料警示。 建立資料警示時，若資料符合您所指定的條件，即會以電子郵件通知您。 如需詳細資訊，請參閱[從多個報表產生資料摘要 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)、[在資料警示設計工具中建立資料警示](../../reporting-services/create-a-data-alert-in-data-alert-designer.md)和 [Reporting Services 資料警示](../../reporting-services/reporting-services-data-alerts.md)。  
   
-## 升級報表  
+## <a name="upgrade-reports"></a>升級報表  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 支援多種版本的報表定義、報表伺服器及 SharePoint 網站。 若要升級報表：  
   
 -   升級報表伺服器安裝。 儲存在報表伺服器上的已編譯報表會在第一次使用時自動升級。 報表定義 (.rdl) 則不會變更。 如需詳細資訊，請參閱＜ [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)＞。  
   
 -   在報表撰寫環境中開啟報表。 在大部分情況下，報表定義都會升級。 如需詳細資訊，請參閱[升級報表](../../reporting-services/install-windows/upgrade-reports.md)和 [SQL Server Data Tools 中的部署和版本支援 &#40;SSRS&#41;](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)。  
   
-## 報表疑難排解  
+## <a name="troubleshoot-reports"></a>報表疑難排解  
  若要疑難排解報表：  
   
 -   **判斷何處發生問題。** 檢閱 [報表階段](#bkmk_StagesSummary)。  
   
 -   **判斷可從何處取得更多資訊。** 例如，針對包括運算式的報表設計，報表設計師工具會比報表產生器工具在運算式評估問題方面提供更詳細的資訊。 針對報表處理錯誤，記錄檔中會包含詳細的資訊。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [Reporting Services 工具](../../reporting-services/tools/reporting-services-tools.md)   
  [延伸模組 &#40;SSRS&#41;](../../reporting-services/extensions-ssrs.md)   
  [Reporting Services Report Server](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)  
   
   
+

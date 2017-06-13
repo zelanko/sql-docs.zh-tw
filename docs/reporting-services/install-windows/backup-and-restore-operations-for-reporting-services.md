@@ -1,35 +1,42 @@
 ---
-title: "Reporting Services 的備份與還原作業 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/18/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-  - "reporting-services-sharepoint"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "資料庫 [Reporting Services], 備份"
-  - "資料庫 [Reporting Services], 還原"
-  - "資料庫 [Reporting Services], 移動"
-  - "備份資料庫 [Reporting Services]"
-  - "移動資料庫"
-  - "還原資料庫 [Reporting Services]"
-  - "檔案 [Reporting Services], 還原"
-  - "檔案 [Reporting Services], 備份"
+title: "備份與還原 Reporting Services 的作業 |Microsoft 文件"
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+- reporting-services-sharepoint
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- databases [Reporting Services], backing up
+- databases [Reporting Services], restoring
+- databases [Reporting Services], moving
+- backing up databases [Reporting Services]
+- moving databases
+- restoring databases [Reporting Services]
+- files [Reporting Services], restoring
+- files [Reporting Services], backing up
 ms.assetid: 157bc376-ab72-4c99-8bde-7b12db70843a
 caps.latest.revision: 43
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 43
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: e3247864547983779f4037eb963ba6721a2b7654
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# Reporting Services 的備份與還原作業
+
+# <a name="backup-and-restore-operations-for-reporting-services"></a>Reporting Services 的備份與還原作業
+
   此主題提供所有用於 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝中資料檔案的概觀，並說明備份這些檔案的時機與方法。 復原策略中最重要的部分，就是訂定報表伺服器資料庫檔案的備份與還原計劃。 但是，更加完整的復原策略應該要包括加密金鑰、自訂組件或延伸模組、組態檔以及報表和模型之來源檔案的備份。  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式 | [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native Mode | [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint Mode  
   
  備份和還原作業常用於移動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝的全部或一部分：  
   
@@ -43,7 +50,7 @@ caps.handback.revision: 43
   
     -   [遷移 Reporting Services 安裝 &#40;原生模式&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)  
   
-## 備份報表伺服器資料庫  
+## <a name="backing-up-the-report-server-databases"></a>備份報表伺服器資料庫  
  由於報表伺服器是無狀態伺服器，因此所有應用程式資料都會儲存在 **執行個體上執行的** reportserver **與** reportservertempdb [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 資料庫中。 您可以使用其中一種支援的 **資料庫備份方法，備份** reportserver **與** reportservertempdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫。 報表伺服器資料庫的特定建議事項如下：  
   
 -   使用完整復原模式備份 **reportserver** 資料庫。  
@@ -55,12 +62,12 @@ caps.handback.revision: 43
  如需備份和復原 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 關聯式資料庫的詳細資訊，請參閱 [SQL Server 資料庫的備份與還原](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)。  
   
 > [!IMPORTANT]  
->  如果您的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 報表伺服器處於 SharePoint 模式，則要連接其他資料庫，包括 SharePoint 組態資料庫和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 警示資料庫。 在 SharePoint 模式下，系統會針對每個 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式建立三個資料庫。 **reportserver**、 **reportservertempdb**和 **dataalerting** 資料庫。 如需詳細資訊，請參閱[備份與還原 Reporting Services SharePoint 服務應用程式](../../reporting-services/report-server-sharepoint/backup-and-restore-reporting-services-sharepoint-service-applications.md)  
+>  如果您的報表伺服器處於 SharePoint 模式，則顧慮，包括 SharePoint 組態資料庫的其他資料庫和[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]警示資料庫。 在 SharePoint 模式下，系統會針對每個 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式建立三個資料庫。 **reportserver**、 **reportservertempdb**和 **dataalerting** 資料庫。 如需詳細資訊，請參閱 [備份與還原 Reporting Services SharePoint 服務應用程式](../../reporting-services/report-server-sharepoint/backup-and-restore-reporting-services-sharepoint-service-applications.md)  
   
-## 備份加密金鑰  
- 當您第一次設定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝時，應該要備份加密金鑰。 每次變更服務帳戶的身分或重新命名電腦時，您也應該同時備份加密金鑰。 如需詳細資訊，請參閱[備份與還原 Reporting Services 加密金鑰](../../reporting-services/install-windows/back-up-and-restore-reporting-services-encryption-keys.md)。 若是 SharePoint 模式的報表伺服器，請參閱[管理 Reporting Services SharePoint 服務應用程式](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)的＜金鑰管理＞一節。  
+## <a name="backing-up-the-encryption-keys"></a>備份加密金鑰  
+ 當您第一次設定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝時，應該要備份加密金鑰。 每次變更服務帳戶的身分或重新命名電腦時，您也應該同時備份加密金鑰。 如需詳細資訊，請參閱 [備份與還原 Reporting Services 加密金鑰](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)。 若是 SharePoint 模式的報表伺服器，請參閱 [管理 Reporting Services SharePoint 服務應用程式](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)的＜金鑰管理＞一節。  
   
-## 備份組態檔  
+## <a name="backing-up-the-configuration-files"></a>備份組態檔  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會使用組態檔來儲存應用程式設定。 您應該在第一次設定伺服器時，以及部署任何自訂延伸模組之後，備份組態檔。 要備份的檔案包括：  
   
 -   Rsreportserver.config  
@@ -75,19 +82,20 @@ caps.handback.revision: 43
   
 -   Machine.config [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]  
   
-## 備份資料檔案  
+## <a name="backing-up-data-files"></a>備份資料檔案  
  備份您在報表設計師和模型設計師中建立與維護的檔案。 這些包括報表定義 (.rdl) 檔案、報表模型 (.smdl) 檔案、共用資料來源 (.rds) 檔案、資料檢視 (.dv) 檔案、資料來源 (.ds) 檔案、報表伺服器專案 (.rptproj) 檔案，以及報表方案 (.sln) 檔案。  
   
  請記得備份任何為管理或部署工作所建立的指令碼檔案 (.rss)。  
   
  確認您有所使用之任何自訂延伸模組與自訂組件的備份副本。  
-  
-## 另請參閱  
- [報表伺服器資料庫 &#40;SSRS 原生模式&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
- [Reporting Services 組態檔](../../reporting-services/report-server/reporting-services-configuration-files.md)   
- [rskeymgmt 公用程式 &#40;SSRS&#41;](../../reporting-services/tools/rskeymgmt-utility-ssrs.md)   
- [使用備份與還原複製資料庫](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)   
- [管理報表伺服器資料庫 &#40;SSRS 原生模式&#41;](../../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md)   
- [設定和管理加密金鑰 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-and-manage-encryption-keys-ssrs-configuration-manager.md)  
-  
-  
+
+## <a name="next-steps"></a>後續的步驟
+
+[報表伺服器資料庫](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
+[Reporting Services 組態檔](../../reporting-services/report-server/reporting-services-configuration-files.md)   
+[rskeymgmt 公用程式](../../reporting-services/tools/rskeymgmt-utility-ssrs.md)   
+[使用備份與還原複製資料庫](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)   
+[管理報表伺服器資料庫](../../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md)   
+[設定和管理加密金鑰](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
+
+更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)

@@ -3,5 +3,4 @@
 # [資料層應用程式架構 - 授權條款](data-tier-application-framework-license-terms.md)
 # [舊版的 SSDT 和 SSDT-BI](previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md)
 # [SQL Server 工具](sql-server-tools.md)
-# [SSDT 候選版](sql-server-data-tools-ssdt-release-candidate.md)
 # [授權條款 - SSDT](sql-server-data-tools-license-terms.md)

@@ -1,29 +1,34 @@
 ---
-title: "第 3 課：定義資料表報表的資料集 (Reporting Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/23/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: "第 3 課： 定義資料表報表 (Reporting Services) 的資料集 |Microsoft 文件"
+ms.custom: 
+ms.date: 05/23/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: ee93dfcb-8f52-4d63-b4f6-0d38e00fd350
 caps.latest.revision: 53
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 53
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ce3439962e88c24980615d2f2648b56cc88505fa
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 第 3 課：定義資料表報表的資料集 (Reporting Services)
+# <a name="lesson-3-defining-a-dataset-for-the-table-report-reporting-services"></a>第 3 課：定義資料表報表的資料集 (Reporting Services)
 當您定義資料來源之後，就需要定義資料集。 在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中，報表所用的資料是包含在「資料集」中。 資料集含有指向資料來源的指標和報表要用的查詢，以及計算的欄位和變數。  
   
 使用報表設計師中的查詢設計工具來設計資料集。 在此教學課程中，您將建立一項查詢來擷取 [!INCLUDE [ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] 資料庫中的銷售訂單資訊。  
   
-### 若要定義報表資料的 Transact-SQL 查詢  
+### <a name="to-define-a-transact-sql-query-for-report-data"></a>若要定義報表資料的 Transact-SQL 查詢  
   
 1.  在 [報表資料] 窗格中，按一下 [新增]，然後按一下 [資料集]。 **[資料集屬性]** 對話方塊隨即開啟。  
   
@@ -70,13 +75,15 @@ caps.handback.revision: 53
     您的 **AdventureWorksDataset** 資料集和欄位會顯示在 [報表資料] 窗格中。  
     ![ssrs_adventureworksdataset](../reporting-services/media/ssrs-adventureworksdataset.png)  
   
-## 下一項工作  
+## <a name="next-task"></a>下一項工作  
 您已順利指定一項擷取報表資料的查詢。 之後，您要建立報表配置。 請參閱[第 4 課：將資料表加入至報表 &#40;Reporting Services&#41;](../reporting-services/lesson-4-adding-a-table-to-the-report-reporting-services.md)。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
 [查詢設計工具 &#40;SSRS&#41;](../reporting-services/report-data/query-design-tools-ssrs.md)  
 [SQL Server 連接類型 &#40;SSRS&#41;](../reporting-services/report-data/sql-server-connection-type-ssrs.md)  
 [教學課程：撰寫國際性通用的 Transact-SQL 陳述式](../t-sql/tutorial-writing-transact-sql-statements.md)  
   
   
   
+
+

@@ -1,26 +1,31 @@
 ---
-title: "Exporting to Microsoft Excel (Report Builder and SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/09/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "匯出至 Microsoft Excel （報表產生器及 SSRS） |Microsoft 文件"
+ms.custom: 
+ms.date: 01/09/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 74f726fc-2167-47af-9093-1644e03ef01f
 caps.latest.revision: 28
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 27
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 4f612dc69be670d6a99418fbf8e17f34fb8e9d7c
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# Exporting to Microsoft Excel (Report Builder and SSRS)
+# <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>Exporting to Microsoft Excel (Report Builder and SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Excel 轉譯延伸模組會將 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分頁報表轉譯成 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 格式 (.xlsx)。 使用 Excel 轉譯延伸模組，Excel 中的資料行寬度就可以更精確地反映報表中的資料行寬度。  
   
- 此格式為 Office Open XML。 這個轉譯器所產生檔案的內容類型為 **application/vnd.openxmlformats-officedocument.spreadsheetml.sheet**，而檔案的副檔名為 .xlsx。  
+ 此格式為 Office Open XML。 這個轉譯器所產生檔案的內容類型為 **application/vnd.openxmlformats-officedocument.spreadsheetml.sheet** ，而檔案的副檔名為 .xlsx。  
   
  您可以透過變更裝置資訊設定，變更此轉譯器的某些預設設定。 如需詳細資訊，請參閱 [Excel Device Information Settings](../../reporting-services/excel-device-information-settings.md)。  
   
@@ -29,16 +34,18 @@ caps.handback.revision: 27
 > [!IMPORTANT]  
 >  當您將參數定義為 **String**類型時，使用者會看到一個可接受任何值的文字方塊。 如果報表參數未繫結至查詢參數且參數值未包含在報表中，報表使用者就可以輸入運算式語法、指令碼或 URL 到參數值中，將報表轉譯為 Excel。 如果另一個使用者接著檢視報表並按一下轉譯的參數內容，該使用者可能會不小心執行惡意指令碼或連結。  
 >   
->  若要減輕不小心執行惡意指令碼的風險，請只從信任的來源開啟轉譯的報表。 如需保護報表安全的詳細資訊，請參閱[保護報表和資源的安全](../../reporting-services/security/secure-reports-and-resources.md)。  
+>  若要減輕不小心執行惡意指令碼的風險，請只從信任的來源開啟轉譯的報表。 如需保護報表安全的詳細資訊，請參閱 [保護報表和資源的安全](../../reporting-services/security/secure-reports-and-resources.md)。  
   
 ##  <a name="ExcelLimitations"></a> Excel 限制  
  [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 會對匯出的報表加諸限制。 影響最大的限制如下所列：  
   
 -   資料行寬度上限的限制為 255 個字元或 1726.5 點。 轉譯器不會驗證資料行寬度低於限制。  
   
--   資料列高度的上限為 409 點。 如果資料列的內容導致資料列高度的增加超過 409 點，內容會被截斷。  
-  
 -   資料格中的字元數目上限限制為 32,767 個字元。 如果超出這個限制，轉譯器會顯示錯誤訊息。  
+  
+-   資料列高度的上限為 409 點。 如果資料列的內容導致資料列高度的增加超過 409 點，Excel 資料格顯示的文字部分數量最多為 409 點。 儲存格內容的其餘部分是 32767 的仍在儲存格 （最多 Excel 的最大字元數）。
+
+-  最大資料列高度為 409 點，如果已定義的報表中的儲存格高度超過 409 點，因為 Excel 會分割成多個資料列的儲存格的內容。
   
 -   在 Excel 中沒有定義工作表數目上限，但是，諸如記憶體與磁碟空間之類的外部因素，則會應用這些限制。  
   
@@ -48,17 +55,17 @@ caps.handback.revision: 27
   
  如需 Excel 限制的詳細資訊，請參閱 [Excel 規格和限制](https://support.office.com/article/Excel-specifications-and-limits-CA36E2DC-1F09-4620-B726-67C00B05040F)。  
   
-### Excel 2003 (.xls) 檔案的大小  
+### <a name="sizes-of-excel-2003-xls-files"></a>Excel 2003 (.xls) 檔案的大小  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2003 轉譯延伸模組已被取代。 如需詳細資訊，請參閱 [SQL Server 2016 中 SQL Server Reporting Services 已被取代的功能](../Topic/Deprecated%20Features%20in%20SQL%20Server%20Reporting%20Services%20in%20SQL%20Server%202016.md)。  
+>  [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2003 轉譯延伸模組已被取代。 如需詳細資訊，請參閱 [SQL Server 2016 中 SQL Server Reporting Services 已被取代的功能](../../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)。  
   
  報表首次匯出並儲存至 Excel 2003 時，並不能享有 Excel 自動套用於本身 *.xls 活頁簿檔案的檔案最佳化功能。 較大的檔案若做為電子郵件訂閱項目和附件，可能會造成問題。 為了減少報表匯出之後的 \*.xls 檔案大小，請先開啟 \*.xls 檔案再重新儲存活頁簿。 重新儲存活頁簿通常可讓檔案大小減少 40% 至 50%。  
   
 > [!NOTE]  
 >  在 Excel 2003 中，Excel 工作表的資料格會顯示大約 1000 個字元，但不超過可在公式列中編輯的字元數目上限。 此限制不適用於目前 (.xlsx) Excel 檔案。  
   
-### 文字方塊和文字  
+### <a name="text-boxes-and-text"></a>文字方塊和文字  
  下列限制適用於文字方塊和文字：  
   
 -   是運算式的文字方塊值不會轉換為 Excel 公式。 每個文字方塊的值都會在報表處理期間進行評估。 評估的運算式會當做每個 Excel 資料格的內容來匯出。  
@@ -72,19 +79,19 @@ caps.handback.revision: 27
     > [!NOTE]  
     >  若要解決此問題，請在報表中增加文字方塊的寬度。  
   
-### 影像  
+### <a name="images"></a>影像  
  下列限制適用於影像：  
   
 -   Excel 不支援個別資料格的背景影像，因此會忽略報表項目的背景影像。  
   
 -   Excel 轉譯延伸模組僅支援報表主體的背景影像。 如果報表主體背景影像顯示在報表中，該影像會轉譯為工作表的背景影像。  
   
-### 矩形  
+### <a name="rectangles"></a>矩形  
  下列限制適用於矩形：  
   
 -   報表頁尾中的矩形不會匯出至 Excel。 但是，其餘如報表主體、Tablix 資料格中的矩形將轉譯為某個範圍的 Excel 資料格。  
   
-### 報表頁首和頁尾  
+### <a name="report-headers-and-footers"></a>報表頁首和頁尾  
  下列限制適用於報表頁首和頁尾：  
   
 -   Excel 頁首和頁尾區段最多支援 256 個字元，包括標記。 轉譯延伸模組會在 256 個字元處截斷字串。  
@@ -93,7 +100,7 @@ caps.handback.revision: 27
   
 -   頁首或頁尾內的文字方塊在匯出至 Excel 時會保留格式設定，但不包括對齊方式。 這是因為開頭和尾端空白在報表轉譯為 Excel 時將遭到修剪。  
   
-### 合併資料格  
+### <a name="merging-cells"></a>合併資料格  
  下列限制適用於合併資料格：  
   
 -   如果資料格經過合併，自動換行就無法正確運作。 如果在利用 AutoSize 屬性轉譯文字方塊的資料列上有任何經過合併的資料格存在，自動調整將無法運作。  
@@ -106,34 +113,34 @@ caps.handback.revision: 27
   
 -   儘管所有項目都已精準地對齊，您可能會發現某些資料行在部分罕見情況下還是合併。 這大概是因為 Excel 工作表轉譯時的內部單位轉換與捨入所造成。 在報表定義語言 (RDL) 中，您可用不同的度量單位來指定位置和大小，例如英吋、像素、公分和點。 而 Excel 內部使用的單位是點。 為盡量避免轉換 (由英吋和公分轉換為點) 並降低捨入不準確的可能性，請考慮指定所有度量以完整的點為單位來獲得最直接的結果。 一英吋等於 72 點。  
   
-### 報表資料列群組和資料行群組  
+### <a name="report-row-groups-and-column-groups"></a>報表資料列群組和資料行群組  
  當包含資料列群組或資料行群組的報表匯出至 Excel 時，這些報表會包含空白資料格。 假設有一個針對通勤距離分組資料列的報表。 每個通勤距離都可以包含一個以上的客戶。 下圖顯示此報表。  
   
- ![Report in the Reporting Services web portal](../../reporting-services/report-builder/media/ssrb-excelexportssrs.png "Report in the Reporting Services web portal")  
+ ![Reporting Services 入口網站中的報表](../../reporting-services/report-builder/media/ssrb-excelexportssrs.png "Reporting Services 入口網站中的報表")  
   
  當此報表匯出至 Excel 時，通勤距離只會顯示在 [通勤距離] 資料行的單一資料格中。 根據報表中文字的對齊方式 (靠上、置中或靠下)，此值會位於第一個、中央或最後一個資料格中。 其他資料格都是空白的。 包含客戶名稱的 [名稱] 資料行沒有任何空白資料格。 下圖顯示匯出至 Excel 之後的報表。 為了強調，我們加入了紅色資料格框線。 灰色方塊是空白資料格 (紅線和灰色方塊都不是所匯出報表的一部分)。  
   
- ![Report exported to Excel, with lines](../../reporting-services/report-builder/media/ssrb-exportedexcellines.png "Report exported to Excel, with lines")  
+ ![報表匯出至 Excel 時，行](../../reporting-services/report-builder/media/ssrb-exportedexcellines.png "報表匯出至 Excel 時，行")  
   
  這表示，當您將含有資料列群組或資料行群組的報表匯出至 Excel 之後，必須先加以修改，然後才能在樞紐資料表中顯示匯出的資料。 您必須將群組值加入至遺漏值的資料格，讓工作表成為所有資料格都含有值的二維資料表。 下圖顯示更新過的工作表。  
   
- ![Report exported to Excel, flattened](../../reporting-services/report-builder/media/ssrb-excelexportnomatrix.png "Report exported to Excel, flattened")  
+ ![報表匯出至 Excel 時，扁平化](../../reporting-services/report-builder/media/ssrb-excelexportnomatrix.png "報表匯出至 Excel 時，扁平化")  
   
  因此，如果您建立報表的特定目的是要將它匯出至 Excel，以便進一步分析報表資料，請考慮不要對報表中的資料列或資料行進行分組。  
   
-## Excel 轉譯器  
+## <a name="excel-renderer"></a>Excel 轉譯器  
   
-### 目前 (.xlsx) Excel 檔案轉譯器  
- 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中，預設 Excel 轉譯器是與目前 (.xlsx) [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 檔案相容的版本。 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web 入口網站和 SharePoint 清單的 [匯出] 功能表上，這就是 [Excel] 選項。  
+### <a name="current-xlsx-excel-file-renderer"></a>目前 (.xlsx) Excel 檔案轉譯器  
+ 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，預設 Excel 轉譯器是與目前 (.xlsx) [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 檔案相容的版本。 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web 入口網站和 SharePoint 清單的 [匯出] 功能表上，這就是 [Excel] 選項。  
   
  當您使用預設的 Excel 轉譯器而不是舊版的 Excel 2003 (.xls) 轉譯器時，您可以安裝適用於 Word、Excel 以及 PowerPoint 的 Microsoft Office 相容性套件，以允許舊版 Excel 開啟匯出的檔案。  
   
-### Excel 2003 (.xls) 轉譯器  
+### <a name="excel-2003-xls-renderer"></a>Excel 2003 (.xls) 轉譯器  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2003 轉譯延伸模組已被取代。 如需詳細資訊，請參閱 [SQL Server 2016 中 SQL Server Reporting Services 已被取代的功能](../Topic/Deprecated%20Features%20in%20SQL%20Server%20Reporting%20Services%20in%20SQL%20Server%202016.md)。  
+>  [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2003 轉譯延伸模組已被取代。 如需詳細資訊，請參閱 [SQL Server 2016 中 SQL Server Reporting Services 已被取代的功能](../../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)。  
   
- 與 Excel 2003 相容的舊版 Excel 轉譯器現在已命名為 Excel 2003，而且使用該名稱列於功能表上。 此轉譯器所產生檔案的內容類型為 **application/vnd.ms-excel**，而檔案的副檔名為 .xls。  
+ 與 Excel 2003 相容的舊版 Excel 轉譯器現在已命名為 Excel 2003，而且使用該名稱列於功能表上。 此轉譯器所產生檔案的內容類型為 **application/vnd.ms-excel** ，而檔案的副檔名為 .xls。  
   
  **[Excel 2003]** 功能表選項預設不會顯示。 系統管理員可以藉由更新 RSReportServer 組態檔，在某些情況下讓它顯示。 若要使用 Excel 2003 轉譯器，從 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 匯出報表，請更新 RSReportDesigner 組態檔。  
   
@@ -141,7 +148,7 @@ caps.handback.revision: 27
   
 -   報表產生器處於中斷連接模式，而且您在報表產生器中預覽報表。 因為 RSReportServer 組態檔位於報表伺服器上，所以您從中匯出報表的工具或產品必須連接至報表伺服器，以便讀取組態檔。  
   
--   報表檢視器 Web 組件處於本機模式，而且 SharePoint 伺服陣列並未與 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器整合。 如需詳細資訊，請參閱[比較報表檢視器中的本機模式與連接模式報表 &#40;SharePoint 模式的 Reporting Services&#41;](../../reporting-services/report-server-sharepoint/local mode vs. connected mode reports in the report viewer.md)  
+-   報表檢視器 Web 組件處於本機模式，而且 SharePoint 伺服陣列並未與 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器整合。 如需詳細資訊，請參閱[比較報表檢視器中的本機模式與連接模式報表 &#40;SharePoint 模式的 Reporting Services&#41;](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md)  
   
  如果 **[Excel 2003]** 功能表選項轉譯器設定為顯示，在下列案例中，您就可以同時使用 Excel 和 Excel 2003 選項：  
   
@@ -161,9 +168,9 @@ caps.handback.revision: 27
   
  `<Extension Name="EXCEL" Type="Microsoft.ReportingServices.Rendering.ExcelRenderer.ExcelRenderer,Microsoft.ReportingServices.ExcelRendering" Visible="false"/>`  
   
- EXCELOPENXML 延伸模組會定義目前 (.xlsx) Excel 檔案的 Excel 轉譯器。 EXCEL 延伸模組會定義 EXCEL 2003 版本。 `Visible = “false”` 表示隱藏 Excel 2003 轉譯器。 如需詳細資訊，請參閱 [RsReportServer.config 組態檔](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)和 [RSReportDesigner 組態檔](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)。  
+ EXCELOPENXML 延伸模組會定義目前 (.xlsx) Excel 檔案的 Excel 轉譯器。 EXCEL 延伸模組會定義 EXCEL 2003 版本。 `Visible = “false”` 表示隱藏 Excel 2003 轉譯器。 如需詳細資訊，請參閱 [RsReportServer.config 組態檔](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) 和 [RSReportDesigner 組態檔](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)。  
   
-### 目前 (.xlsx) Excel 與 Excel 2003 轉譯器之間的差異  
+### <a name="differences-between-the-current-xlsx-excel-and-excel-2003-renderers"></a>目前 (.xlsx) Excel 與 Excel 2003 轉譯器之間的差異  
  使用目前 (.xlsx) Excel 或 Excel 2003 轉譯器所轉譯的報表通常完全相同。只有在極少數的情況下，您才會發現兩種格式之間的差異。 下表將比較 Excel 與 Excel 2003 轉譯器。  
   
 |屬性|[Excel 2003]|目前 Excel|  
@@ -187,7 +194,7 @@ caps.handback.revision: 27
   
  如果您要處理圖表、走勢圖、資料橫條、地圖、量測計與指標資料，請將報表匯出為 .csv 檔，或從報表產生符合 Atom 的資料摘要。 如需詳細資訊，請參閱[匯出至 CSV 檔案 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md) 和[從多個報表產生資料摘要 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)。  
   
-## 調整頁面大小  
+## <a name="page-sizing"></a>調整頁面大小  
  Excel 轉譯延伸模組會使用頁面高度與寬度設定來決定要在 Excel 工作表中定義的紙張設定。 Excel 會嘗試讓 PageHeight 和 PageWidth 屬性設定符合其中一個常用的紙張大小。  
   
  如果找不到相符項目，Excel 會針對印表機使用預設的頁面大小。 如果頁面寬度小於頁面高度，則方向會設定為 [縱向]；否則，系統會設定為 [橫向]。  
@@ -218,7 +225,7 @@ caps.handback.revision: 27
   
  Excel 頁首和頁尾區段最多支援 256 個字元，包括標記。 如果超出這個限制，Excel 轉譯器會移除頁首和/或頁尾字串結尾的標記字元，以減少字元的總數。 如果移除所有標記字元後長度仍然超出最大值，系統會從右側開始截斷字串。  
   
-### SimplePageHeader 設定  
+### <a name="simplepageheader-settings"></a>SimplePageHeader 設定  
  根據預設，裝置資訊的 SimplePageHeaders 設定會設定為 **False**；因此，在 Excel 工作表介面上，頁首會轉譯為報表中的資料列。 包含頁首的工作表資料列會變成鎖定的資料列。 您可以在 Excel 中凍結或取消凍結窗格。 如果有選取 [列印標題] 選項，這些頁首會自動設定為列印在每個工作表頁面上。  
   
  如果在 Excel 的 [頁面配置] 索引標籤上選取 **[列印標題]** 選項，頁首會在活頁簿的每個工作表頂端重複 (除了文件引導模式封面之外)。 如果沒有在 [報表頁首屬性] 或 [報表頁尾屬性] 對話方塊中選取 **[在第一頁列印]** 或 **[在最後一頁列印]** 選項，頁首就不會分別加入到第一頁或最後一頁。  
@@ -230,7 +237,7 @@ caps.handback.revision: 27
 ##  <a name="Interactivity"></a> 互動性  
  在 Excel 中支援某些互動項目。 下列是特定行為的描述。  
   
-### 顯示與隱藏  
+### <a name="show-and-hide"></a>顯示與隱藏  
  [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 對於報表匯出時如何管理隱藏與顯示的報表項目有一些限制。 包含可以切換之報表項目的群組、資料列和資料行會轉譯為 Excel 大綱。 Excel 建立的大綱可以跨整個資料列或資料行展開和折疊資料列與資料行，這可能會折疊不想折疊的報表項目。 此外，Excel 的大綱符號會因為重疊的大綱而變得雜亂。 若要解決這些問題，請在使用 Excel 轉譯延伸模組時套用下列大綱規則：  
   
 -   左上角可以切換的報表項目在 Excel 中仍然可以切換。 可以切換並與可以在左上角切換之報表項目共用垂直或水平空間的報表項目無法在 Excel 中切換。  
@@ -241,35 +248,36 @@ caps.handback.revision: 27
   
 -   由於 Excel 的限制，大綱所建立的巢狀結構最多只能有 7 個層級。  
   
-### 文件引導模式  
+### <a name="document-map"></a>文件引導模式  
  如果報表中有任何文件引導模式標籤，就會轉譯文件引導模式。 文件引導模式會轉譯為插入活頁簿第一個索引標籤位置的 Excel 工作表封面。 此工作表的名稱為 **「文件引導模式」**(Document Map)。  
   
  顯示在文件引導模式中的文字取決於報表項目或群組的 DocumentMapLabel 屬性。 文件引導模式標籤會以報表中出現的順序列出，從第一個資料行的第一個資料列開始。 每個文件引導模式標籤資料格都會縮排報表中出現的層級深度。 系統會在接續的資料行中放置標籤來表示每個縮排層級。 Excel 最多支援 256 層的大綱巢狀層級。  
   
  文件引導模式大綱會轉譯為可折疊的 Excel 大綱。 大綱結構會與文件引導模式的巢狀結構相符。 大綱的展開和折疊狀態會從第二層級開始。  
   
- 地圖的根節點即為報表名稱 \<*reportname*>.rdl，且無法互動。 文件引導模式連結字型為 Arial，10pt。  
+ 地圖的根節點就是報表名稱， \< *reportname*>.rdl，而且這不是互動式。 文件引導模式連結字型為 Arial，10pt。  
   
-### 鑽研連結  
+### <a name="drillthrough-links"></a>鑽研連結  
  系統會將文字方塊中出現的鑽研連結轉譯為轉譯文字之資料格中的 Excel 超連結。 而影像和圖表的鑽研連結則會在轉譯時，轉譯為影像上的 Excel 超連結。 當您按一下鑽研連結時，用戶端的預設瀏覽器會開啟，並導覽至目標的 HTML 檢視。  
   
-### 超連結  
+### <a name="hyperlinks"></a>超連結  
  系統會將文字方塊中出現的超連結轉譯為轉譯文字之資料格中的 Excel 超連結。 而影像和圖表的超連結則會在轉譯時，轉譯為影像上的 Excel 超連結。 當您按一下超連結時，用戶端的預設瀏覽器會開啟，並導覽至目標 URL。  
   
-### 互動式排序  
+### <a name="interactive-sorting"></a>互動式排序  
  Excel 不支援互動式排序。  
   
-### 書籤  
+### <a name="bookmarks"></a>書籤  
  系統會將文字方塊中的書籤連結轉譯為轉譯文字之資料格中的 Excel 超連結。 而影像和圖表的書籤連結則會在轉譯時，轉譯為影像上的 Excel 超連結。 按一下書籤時，會移至轉譯設為書籤之報表項目的 Excel 資料格。  
   
 ##  <a name="ConditionalFormat"></a> 在執行階段變更報表  
- 如果報表必須轉譯為多種格式，但您無法建立依希望的方式轉譯成全部所需格式的單一報表配置，則您應可考慮使用內建的全域 RenderFormat 值，在執行階段依條件變更報表外觀。 如此可讓您根據用於獲得每一種格式最佳結果的轉譯器，隱藏或顯示報表項目。 如需詳細資訊，請參閱[內建的全域和使用者參考 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/built-in-globals-and-users-references-report-builder-and-ssrs.md)。  
+ 如果報表必須轉譯為多種格式，但您無法建立依希望的方式轉譯成全部所需格式的單一報表配置，則您應可考慮使用內建的全域 RenderFormat 值，在執行階段依條件變更報表外觀。 如此可讓您根據用於獲得每一種格式最佳結果的轉譯器，隱藏或顯示報表項目。 如需詳細資訊，請參閱[內建的全域和使用者參考 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md)。  
   
-## 請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [Reporting Services 中的分頁 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [轉譯行為 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [不同報表轉譯延伸模組的互動式功能 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/interactive functionality - different report rendering extensions.md)   
+ [不同報表轉譯延伸模組的互動式功能 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [轉譯報表項目 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [資料表、矩陣和清單 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
+

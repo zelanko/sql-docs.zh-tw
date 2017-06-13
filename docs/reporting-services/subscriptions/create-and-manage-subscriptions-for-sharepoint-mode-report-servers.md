@@ -1,27 +1,32 @@
 ---
-title: "建立及管理 SharePoint 模式報表伺服器的訂閱 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "訂閱 [Reporting Services], 建立"
-  - "訂閱 [Reporting Services], 刪除"
-  - "訂閱 [Reporting Services], 管理"
+title: "建立和管理 SharePoint 模式報表伺服器的訂用帳戶 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- subscriptions [Reporting Services], creating
+- subscriptions [Reporting Services], deleting
+- subscriptions [Reporting Services], managing
 ms.assetid: 44be7ee2-33ce-46e4-9d1a-a20aaf43a227
 caps.latest.revision: 19
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 19
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 56e19fe33a42086ef25001f605220f970d8b226a
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 建立及管理 SharePoint 模式報表伺服器的訂閱
+# <a name="create-and-manage-subscriptions-for-sharepoint-mode-report-servers"></a>建立及管理 SharePoint 模式報表伺服器的訂閱
   您可以建立 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 訂閱，傳遞以 SharePoint 模式報表伺服器整合的 SharePoint Web 應用程式報表。 訂閱可以將報表傳遞至文件庫、檔案資料夾，或以電子郵件傳送。 本主題摘要說明建立 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 訂閱的需求與步驟。  
   
 ||  
@@ -34,7 +39,7 @@ caps.handback.revision: 19
   
 -   **檔案資料夾：** 您可以將以原始報表為基礎的文件傳遞至檔案系統上的共用資料夾。 您必須選取可透過網路連接存取的現有資料夾。  
   
--   **電子郵件：**如果報表伺服器設定為使用報表伺服器電子郵件傳遞延伸模組，您就可以建立將報表或已匯出報表檔案 (以輸出格式儲存) 傳送至收件匣的訂閱。 若只要接收通知，但不接收報表或報表 URL，請清除 **[包含這個報表的連結]** 和 **[在訊息內顯示報表]** 核取方塊。  
+-   **電子郵件：** 如果報表伺服器設定為使用報表伺服器電子郵件傳遞延伸模組，您就可以建立將報表或已匯出報表檔案 (以輸出格式儲存) 傳送至收件匣的訂閱。 若只要接收通知，但不接收報表或報表 URL，請清除 **[包含這個報表的連結]** 和 **[在訊息內顯示報表]** 核取方塊。  
   
  **本主題內容：**  
   
@@ -88,7 +93,7 @@ caps.handback.revision: 19
   
 9. 在 **[傳遞事件]**中，指定導致訂閱執行的排程或事件。 每當使用快照集資料執行之報表的資料重新整理時，您就可以建立自訂排程、選取共用排程 (如果可用的話) 或執行訂閱。 如需排程和資料處理的詳細資訊，請參閱[設定處理選項 &#40;SharePoint 整合模式的 Reporting Services&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)。  
   
-10. 在 **[參數]**中，如果您要建立參數化報表的訂閱，請指定您想要在處理訂閱時搭配報表使用的值。 如果您選取的報表不包含參數，表示在此頁面上看不到報表區段。 如需參數的詳細資訊，請參閱[在已發行的報表上設定參數 &#40;SharePoint 整合模式的 Reporting Services&#41;](../../reporting-services/report-design/set parameters on a published report - sharepoint integrated mode.md)。  
+10. 在 **[參數]**中，如果您要建立參數化報表的訂閱，請指定您想要在處理訂閱時搭配報表使用的值。 如果您選取的報表不包含參數，表示在此頁面上看不到報表區段。 如需參數的詳細資訊，請參閱[在已發行的報表上設定參數 &#40;SharePoint 整合模式的 Reporting Services&#41;](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md)。  
   
 ###  <a name="bkmk_subscription_for_sharedfolder"></a> 若要建立共用資料夾傳遞的訂閱  
   
@@ -114,7 +119,7 @@ caps.handback.revision: 19
   
 11. 在 **[傳遞事件]**中，指定導致訂閱執行的排程或事件。 每當使用快照集資料執行之報表的資料重新整理時，您就可以建立自訂排程、選取共用排程 (如果可用的話) 或執行訂閱。 如需排程和資料處理的詳細資訊，請參閱[設定處理選項 &#40;SharePoint 整合模式的 Reporting Services&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)。  
   
-12. 在 **[參數]**中，如果您要建立參數化報表的訂閱，請指定您想要在處理訂閱時搭配報表使用的值。 如需參數的詳細資訊，請參閱[在已發行的報表上設定參數 &#40;SharePoint 整合模式的 Reporting Services&#41;](../../reporting-services/report-design/set parameters on a published report - sharepoint integrated mode.md)。  
+12. 在 **[參數]**中，如果您要建立參數化報表的訂閱，請指定您想要在處理訂閱時搭配報表使用的值。 如需參數的詳細資訊，請參閱[在已發行的報表上設定參數 &#40;SharePoint 整合模式的 Reporting Services&#41;](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md)。  
   
 ###  <a name="bkmk_subscription_for_email"></a> 建立報表伺服器電子郵件傳遞的訂閱  
   
@@ -138,7 +143,7 @@ caps.handback.revision: 19
   
 9. 在 **[傳遞事件]**中，指定導致訂閱執行的排程或事件。 每當使用快照集資料執行之報表的資料重新整理時，您就可以建立自訂排程、選取共用排程 (如果可用的話) 或執行訂閱。 如需排程和資料處理的詳細資訊，請參閱[設定處理選項 &#40;SharePoint 整合模式的 Reporting Services&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)。  
   
-10. 在 **[參數]**中，如果您要建立參數化報表的訂閱，請指定您想要在處理訂閱時搭配報表使用的值。 如需參數的詳細資訊，請參閱[在已發行的報表上設定參數 &#40;SharePoint 整合模式的 Reporting Services&#41;](../../reporting-services/report-design/set parameters on a published report - sharepoint integrated mode.md)。  
+10. 在 **[參數]**中，如果您要建立參數化報表的訂閱，請指定您想要在處理訂閱時搭配報表使用的值。 如需參數的詳細資訊，請參閱[在已發行的報表上設定參數 &#40;SharePoint 整合模式的 Reporting Services&#41;](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md)。  
   
 ###  <a name="bkmk_to_modify_subscription"></a> 檢視或修改訂閱  
   
@@ -156,11 +161,11 @@ caps.handback.revision: 19
   
 3.  按一下訂閱旁的核取方塊，然後按一下 **[刪除]**。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [訂閱與傳遞 &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Reporting Services 中的電子郵件傳遞](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)   
  [Reporting Services 中的檔案共用傳遞](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md)   
  [Reporting Services 中的 SharePoint 文件庫傳遞](../../reporting-services/subscriptions/sharepoint-library-delivery-in-reporting-services.md)   
- [為電子郵件傳遞設定報表伺服器 (SSRS 組態管理員)](http://msdn.microsoft.com/zh-tw/b838f970-d11a-4239-b164-8d11f4581d83)  
+ [為電子郵件傳遞設定報表伺服器 (SSRS 組態管理員)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83)  
   
   

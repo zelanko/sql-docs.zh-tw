@@ -1,41 +1,48 @@
 ---
-title: "建立 RSExecRole | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "RSExecRole"
+title: "建立 RSExecRole |Microsoft 文件"
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- RSExecRole
 ms.assetid: 7ac17341-df7e-4401-870e-652caa2859c0
 caps.latest.revision: 23
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 23
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: c5830b59420268d58f6425f8a2ce52fc4a3be12e
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 建立 RSExecRole
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會使用稱為 **RSExecRole** 之預先定義的資料庫角色，授與報表伺服器對於報表伺服器資料庫的權限。 **RSExecRole** 角色會自動與報表伺服器資料庫一起建立。 您絕對不能修改它或是將其他使用者指派給這個角色，這是一般的規則。 但是，當您將報表伺服器資料庫移到新的或另一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 時，您必須在 Master 和 MSDB 系統資料庫中重新建立此角色。  
+
+# <a name="create-the-rsexecrole"></a>建立 RSExecRole
+
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會使用稱為 **RSExecRole** 之預先定義的資料庫角色，授與報表伺服器對於報表伺服器資料庫的權限。 **RSExecRole** 角色會自動與報表伺服器資料庫一起建立。 您絕對不能修改它或是將其他使用者指派給這個角色，這是一般的規則。 但是，當您將報表伺服器資料庫移到新的或另一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]時，您必須在 Master 和 MSDB 系統資料庫中重新建立此角色。  
   
  使用下列指示執行下列步驟：  
   
--   在 Master 系統資料庫中建立及佈建 **RSExecRole**。  
+-   在 Master 系統資料庫中建立及佈建 **RSExecRole** 。  
   
--   在 MSDB 系統資料庫中建立及佈建 **RSExecRole**。  
+-   在 MSDB 系統資料庫中建立及佈建 **RSExecRole** 。  
   
 > [!NOTE]  
->  本主題的指示適用於不想要執行指令碼或撰寫 WMI 程式碼來提供報表伺服器資料庫的使用者。 如果您管理大型部署，而且平常都會移動資料庫，您應該撰寫指令碼，讓這些步驟自動化。 如需詳細資訊，請參閱[存取 Reporting Services WMI 提供者](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md)。  
+>  本主題的指示適用於不想要執行指令碼或撰寫 WMI 程式碼來提供報表伺服器資料庫的使用者。 如果您管理大型部署，而且平常都會移動資料庫，您應該撰寫指令碼，讓這些步驟自動化。 如需詳細資訊，請參閱 [存取 Reporting Services WMI 提供者](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md)。  
   
-## 開始之前  
+## <a name="before-you-start"></a>開始之前  
   
--   請備份加密金鑰，好讓您可以在移動資料庫之後還原這些金鑰。 這個步驟不會直接影響您建立及提供 **RSExecRole**的能力，但是您必須擁有金鑰的備份，才能夠確認您的工作。 如需詳細資訊，請參閱[備份與還原 Reporting Services 加密金鑰](../../reporting-services/install-windows/back-up-and-restore-reporting-services-encryption-keys.md)。  
+-   請備份加密金鑰，好讓您可以在移動資料庫之後還原這些金鑰。 這個步驟不會直接影響您建立及提供 **RSExecRole**的能力，但是您必須擁有金鑰的備份，才能夠確認您的工作。 如需詳細資訊，請參閱 [備份與還原 Reporting Services 加密金鑰](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)。  
   
--   請確認您已經使用具有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上**系統管理員**權限的使用者帳戶登入。  
+-   請確認您已經使用具有 **執行個體上** 系統管理員 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 權限的使用者帳戶登入。  
   
 -   請確認在您打算使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上已安裝及執行 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Agent 服務。  
   
@@ -43,10 +50,10 @@ caps.handback.revision: 23
   
  手動建立 **RSExecRole** 的指示是要用於移轉報表伺服器安裝的環境。 本主題不會說明類似備份及移動報表伺服器資料庫等重要工作，這些工作記載於 Database Engine 文件集內。  
   
-## 在 Master 資料庫中建立 RSExecRole  
+## <a name="create-rsexecrole-in-master"></a>在 Master 資料庫中建立 RSExecRole  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會使用適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務的擴充預存程序來支援排程作業。 下列步驟說明如何將這些程序的 Execute 權限授與給 **RSExecRole** 角色。  
   
-#### 使用 Management Studio 在 Master 系統資料庫中建立 RSExecRole  
+#### <a name="to-create-rsexecrole-in-the-master-system-database-using-management-studio"></a>使用 Management Studio 在 Master 系統資料庫中建立 RSExecRole  
   
 1.  啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 及連接到主控報表伺服器資料庫的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體。  
   
@@ -60,7 +67,7 @@ caps.handback.revision: 23
   
 6.  開啟 **[角色]**。  
   
-7.  以滑鼠右鍵按一下 [資料庫角色]，然後選取 [新增資料庫角色]。 [一般] 頁面隨即出現。  
+7.  以滑鼠右鍵按一下 **[資料庫角色]**，然後選取 **[新增資料庫角色]**。 [一般] 頁面隨即出現。  
   
 8.  在 **[角色名稱]**中輸入 **RSExecRole**。  
   
@@ -96,10 +103,10 @@ caps.handback.revision: 23
   
  ![資料庫角色屬性頁面](../../reporting-services/security/media/rsexecroledbproperties.gif "資料庫角色屬性頁面")  
   
-## 在 MSDB 資料庫中建立 RSExecRole  
+## <a name="create-rsexecrole-in-msdb"></a>在 MSDB 資料庫中建立 RSExecRole  
  Reporting Services 會使用適用於 SQL Server Agent 服務的預存程序，並從系統資料表擷取作業資訊來支援排程作業。 下列步驟說明如何將這些程序的 Execute 權限及資料表的 Select 權限授與給 RSExecRole。  
   
-#### 在 MSDB 系統資料庫中建立 RSExecRole  
+#### <a name="to-create-rsexecrole-in-the-msdb-system-database"></a>在 MSDB 系統資料庫中建立 RSExecRole  
   
 1.  重複類似的步驟來授與 MSDB 中預存程序和資料表的權限。 為了簡化步驟，您將會個別提供預存程序和資料表。  
   
@@ -109,7 +116,7 @@ caps.handback.revision: 23
   
 4.  開啟 **[角色]**。  
   
-5.  以滑鼠右鍵按一下 [資料庫角色]，然後選取 [新增資料庫角色]。 [一般] 頁面隨即出現。  
+5.  以滑鼠右鍵按一下 **[資料庫角色]**，然後選取 **[新增資料庫角色]**。 [一般] 頁面隨即出現。  
   
 6.  在 [角色名稱] 中輸入 **RSExecRole**。  
   
@@ -185,17 +192,17 @@ caps.handback.revision: 23
   
 30. 針對 sysjobs 資料表重複此步驟。 必須針對這兩個資料表為 RSExecRole 授與 Select 權限。  
   
-## 移動報表伺服器資料庫  
- 在建立角色之後，您可以將報表伺服器資料庫移到新的 SQL Server 執行個體。 如需詳細資訊，請參閱[將報表伺服器資料庫移至其他電腦 &#40;SSRS 原生模式&#41;](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md)。  
+## <a name="move-the-report-server-database"></a>移動報表伺服器資料庫  
+ 在建立角色之後，您可以將報表伺服器資料庫移到新的 SQL Server 執行個體。 如需詳細資訊，請參閱[將報表伺服器資料庫移到另一部電腦](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md)。  
   
- 如果您要將 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 升級到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，您可以在移動資料庫之前或之後來升級。  
+ 如果您要升級[!INCLUDE[ssDE](../../includes/ssde-md.md)]至 SQL Server 2016，您可以將它升級之前或之後移動資料庫。  
   
- 當報表伺服器連接到報表伺服器資料庫時，報表伺服器資料庫將會自動升級到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 。 升級此資料庫不需要任何特定步驟。  
+ 當報表伺服器會連接到它時，將會自動升級報表伺服器資料庫。 升級此資料庫不需要任何特定步驟。  
   
-## 還原加密金鑰及確認工作  
+## <a name="restore-encryption-keys-and-verify-your-work"></a>還原加密金鑰及確認工作  
  如果您已經附加報表伺服器資料庫，您現在應該能夠完成以下步驟來確認您的工作。  
   
-#### 在移動資料庫之後確認報表伺服器是否可操作  
+#### <a name="to-verify-report-server-operability-after-a-database-move"></a>在移動資料庫之後確認報表伺服器是否可操作  
   
 1.  啟動 Reporting Services 組態工具，並連接到報表伺服器。  
   
@@ -205,7 +212,7 @@ caps.handback.revision: 23
   
 4.  按一下 **[選擇現有報表伺服器資料庫]**。  
   
-5.  輸入 Database Engine 的伺服器名稱。 如果您將報表伺服器資料庫附加到具名執行個體，您應該使用以下格式輸入此執行個體名稱：\<伺服器名稱>\\<執行個體名稱\>。  
+5.  輸入 Database Engine 的伺服器名稱。 如果您附加報表伺服器資料庫的具名執行個體時，您必須以此格式輸入執行個體名稱： \<servername >\\< instancename\>。  
   
 6.  按一下 **[測試連接]**。  
   
@@ -226,11 +233,12 @@ caps.handback.revision: 23
 14. 按一下 **[報表管理員 URL]**。  
   
 15. 按一下此連結，開啟報表管理員。 您應該可從報表伺服器資料庫中看到報表伺服器項目。  
-  
-## 請參閱＜  
- [將報表伺服器資料庫移至其他電腦 &#40;SSRS 原生模式&#41;](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md)   
- [Reporting Services 組態管理員 &#40;原生模式&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
- [建立原生模式報表伺服器資料庫 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/create-a-native-mode-report-server-database-ssrs-configuration-manager.md)   
- [備份與還原 Reporting Services 加密金鑰](../../reporting-services/install-windows/back-up-and-restore-reporting-services-encryption-keys.md)  
-  
-  
+
+## <a name="next-steps"></a>後續的步驟
+
+[將報表伺服器資料庫移至其他電腦 &#40;SSRS 原生模式&#41;](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md)   
+[Reporting Services 組態管理員 &#40;原生模式&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
+[建立原生模式報表伺服器資料庫 &#40;SSRS 組態管理員 &#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
+[備份與還原 Reporting Services 加密金鑰](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
+
+更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)

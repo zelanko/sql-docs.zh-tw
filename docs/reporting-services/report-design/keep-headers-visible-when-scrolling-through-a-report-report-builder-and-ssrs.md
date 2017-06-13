@@ -1,23 +1,28 @@
 ---
-title: "在報表中捲動時將標頭保持可見 (報表產生器及 SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "將標頭保持可見 （報表產生器及 SSRS） 報表中捲動時 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6d9192a4-fd5c-41ad-b9ef-f88f9496afed
 caps.latest.revision: 10
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 10
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f2fac57fe0e898a1ccbfbe33fb271eae76da1389
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 在報表中捲動時將標頭保持可見 (報表產生器及 SSRS)
+# <a name="keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs"></a>在報表中捲動時將標頭保持可見 (報表產生器及 SSRS)
   若要避免資料列和資料行的標籤在轉譯報表之後捲動到檢視畫面以外，可以將資料列或資料行的標題凍結。  
   
  如何控制資料列和資料行取決於您擁有資料表還是矩陣。 如果您有資料表，請設定靜態成員 (資料列和資料行標題) 來維持可見度。 如果您有矩陣，請設定資料列和資料行群組標頭來維持可見度。  
@@ -38,19 +43,19 @@ caps.handback.revision: 10
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### 若要在捲動時維持矩陣群組標頭的可見度  
+### <a name="to-keep-matrix-group-headers-visible-while-scrolling"></a>若要在捲動時維持矩陣群組標頭的可見度  
   
-1.  以滑鼠右鍵按一下 Tablix 資料區的資料列、資料行或角控點，然後按一下 [Tablix 屬性]。  
+1.  以滑鼠右鍵按一下 Tablix 資料區的資料列、資料行或角控點，然後按一下 **[Tablix 屬性]**。  
   
 2.  在 **[一般]** 索引標籤的 **[資料列標頭]** 或 **[資料行標頭]**下方選取 **[捲動時，標頭應保持可見]**。  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### 若要在捲動時將靜態 Tablix 成員 (資料列或資料行) 保持可見  
+### <a name="to-keep-a-static-tablix-member-row-or-column-visible-while-scrolling"></a>若要在捲動時將靜態 Tablix 成員 (資料列或資料行) 保持可見  
   
 1.  在設計介面上，按一下資料表中的任何地方即可在群組窗格中顯示靜態成員以及群組。  
   
-     ![群組窗格](../../reporting-services/report-design/media/grouppane-updated.png "群組窗格")  
+     ![群組 窗格](../../reporting-services/report-design/media/grouppane-updated.png "群組 窗格")  
   
      [資料列群組] 窗格會顯示資料列群組階層的階層式靜態及動態成員，[資料行群組] 窗格則會為資料行群組階層顯示類似的內容。  
   
@@ -68,7 +73,7 @@ caps.handback.revision: 10
   
  當您向下或向側邊捲動一頁時，靜態的 Tablix 成員仍會維持在檢視中。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [Tablix 資料區 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   
  [尋找、檢視和管理報表 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [匯出報表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   

@@ -1,23 +1,28 @@
 ---
-title: "Manage a Reporting Services SharePoint Service Application | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "管理 Reporting Services SharePoint 服務應用程式 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: bfda2e04-2d82-4534-bb50-90925f7386ae
 caps.latest.revision: 18
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 18
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f0930c8f5d3b0af4460c3deac2b8aa780e1f2568
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# Manage a Reporting Services SharePoint Service Application
+# <a name="manage-a-reporting-services-sharepoint-service-application"></a>Manage a Reporting Services SharePoint Service Application
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式是從 SharePoint 管理中心進行管理。 [管理] 和 [屬性] 頁面可讓您更新服務應用程式的組態以及常見的管理工作。  
   
  本主題涵蓋下列資訊：  
@@ -36,14 +41,14 @@ caps.handback.revision: 18
   
 -   [提供訂閱和警示](#bkmk_provisionsubscriptions)  
   
-## 開啟服務應用程式屬性頁面  
+## <a name="to-open-service-application-properties-page"></a>開啟服務應用程式屬性頁面  
  若要開啟 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式的屬性頁面，請完成下列步驟：  
   
 1.  在 [管理中心] 的 [應用程式管理] 群組中，按一下 **[管理服務應用程式]**。  
   
 2.  在您的服務應用程式名稱附近按一下，或按一下 **[類型]** 資料行選取整個資料列，然後按一下 SharePoint 功能區中的 **[屬性]** 。  
   
- 如需服務應用程式屬性的詳細資訊，請參閱[步驟 3：建立 Reporting Services 服務應用程式](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_create_serrviceapplication)。  
+ 如需服務應用程式屬性的詳細資訊，請參閱 [步驟 3：建立 Reporting Services 服務應用程式](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_create_serrviceapplication)。  
   
 ##  <a name="bkmk_openpages"></a> 開啟服務應用程式管理頁面  
  若要開啟 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式的管理頁面，請完成下列步驟：  
@@ -93,7 +98,7 @@ caps.handback.revision: 18
 |啟用執行記錄|預設值是 TRUE。<br /><br /> 指定報表伺服器是否產生追蹤記錄以及這些記錄的保存天數。 。 記錄會儲存在報表伺服器電腦的下列資料夾中：\Microsoft SQL Server\MSSQL.n\ReportServer\Log。 每次服務重新啟動時，就會啟動新的記錄。 如需有關記錄檔的詳細資訊，請參閱＜ [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)＞|  
 |執行記錄保留天數|預設值是 60 天。|  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 全都支援 SharePoint ULS 記錄。  如需詳細資訊，請參閱[開啟 SharePoint 追蹤記錄的 Reporting Services 事件 &#40;ULS&#41;](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 全都支援 SharePoint ULS 記錄。  如需詳細資訊，請參閱 [開啟 SharePoint 追蹤記錄的 Reporting Services 事件 &#40;ULS&#41;](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
   
 ###  <a name="bkmk_security_settings_section"></a> 安全性設定  
   
@@ -109,7 +114,7 @@ caps.handback.revision: 18
 |設定|註解|  
 |-------------|--------------|  
 |啟用報表產生器下載|預設值是 TRUE。<br /><br /> 指定用戶端是否能夠看到下載報表產生器應用程式的按鈕。|  
-|報表產生器啟動 URL|當報表伺服器不使用預設的報表產生器 URL 時，指定自訂 URL。 這個設定是選擇性的。 如果您沒有指定值，將會使用預設 URL，這樣會啟動報表產生器。 若要啟動報表產生器 3.0 當作 Click-Once 應用程式，請輸入下列值：http://\<電腦名稱>/ReportServer/ReportBuilder/ReportBuilder_3_0_0_0.application。|  
+|報表產生器啟動 URL|當報表伺服器不使用預設的報表產生器 URL 時，指定自訂 URL。 這個設定是選擇性的。 如果您沒有指定值，將會使用預設 URL，這樣會啟動報表產生器。 要啟動報表產生器 3.0 為-一旦應用程式中，輸入下列值： http://\<電腦名稱 > / ReportServer/ReportBuilder/ReportBuilder_3_0_0_0.application。|  
 |啟用用戶端列印|預設值是 TRUE。<br /><br /> 指定使用者是否可以下載提供列印選項的用戶端控制項。|  
 |編輯工作階段逾時|預設值是 7200 秒。|  
 |編輯工作階段快取限制|預設值為 5。|  
@@ -117,7 +122,7 @@ caps.handback.revision: 18
 ##  <a name="bkmk_managejobs"></a> 管理作業  
  您可以檢視和刪除執行中的作業，例如報表訂閱及資料驅動訂閱所建立的作業。 此頁面並非用來管理訂閱，而是管理訂閱所觸發的作業。 例如，排程為每小時執行一次的訂閱將會每小時產生作業，該作業會出現在 **[管理作業]** 頁面上。  
   
- ![管理正在執行的作業](../../reporting-services/report-server-sharepoint/media/ssrs-manage-jobs.gif "管理正在執行的作業")  
+ ![管理正在執行的作業](../../reporting-services/report-server-sharepoint/media/ssrs-manage-jobs.gif "管理執行中的工作")  
   
 ##  <a name="bkmk_keymgt"></a> 金鑰管理  
  下表摘要說明 [金鑰管理] 頁面  
@@ -145,7 +150,7 @@ caps.handback.revision: 18
   
  您可以使用任何 Windows 使用者帳戶。 為求最佳效果，請選擇擁有讀取權限及網路登入權限的帳戶，以連接到其他電腦。 此帳戶必須擁有您想在報表中使用之任何外部影像或資料檔案的讀取權限。 除非所有的報表資料來源和外部影像全都儲存在報表伺服器電腦上，否則請勿指定本機帳戶。 這種帳戶只適用於自動報表處理。  
   
- ![PowerShell 相關內容](../../analysis-services/instances/install-windows/media/rs-powershellicon.png "PowerShell 相關內容")  
+ ![PowerShell 相關內容](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 相關內容")  
   
  以下是一個 PowerShell 命令範例，會傳回具有 UEAccount 屬性的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式清單：  
   
@@ -155,12 +160,12 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
   
  如需詳細資訊，請參閱 [Reporting Services SharePoint 模式適用的 PowerShell Cmdlet](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)。  
   
-### 選項。  
+### <a name="options"></a>選項。  
  **指定執行帳戶**  
  選取此項目來指定帳戶。  
   
  **帳戶**  
- 輸入 Windows 網域使用者帳戶。 請使用此格式：\<網域>\\<使用者帳戶\>。  
+ 輸入 Windows 網域使用者帳戶。 使用此格式： *\<網域 >\\< 使用者帳戶\>*。  
   
  **密碼**  
  輸入密碼。  
@@ -171,7 +176,7 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
 ##  <a name="bkmk_email"></a> 電子郵件設定  
  使用此頁面，即可指定會啟用從報表伺服器傳遞報表伺服器電子郵件的 Simple Mail Transport Protocol (SMTP) 設定。 您可以使用報表伺服器電子郵件傳遞延伸模組，透過電子郵件訂閱來散發報表或報表處理通知。 報表伺服器電子郵件傳遞延伸模組，需要使用 [從:] 欄位中的 SMTP 伺服器和電子郵件地址。  
   
-### 選項  
+### <a name="options"></a>選項。  
  **使用 SMTP 伺服器**  
  指定報表伺服器電子郵件是透過 SMTP 伺服器來傳送。  
   
@@ -184,7 +189,7 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
 ##  <a name="bkmk_provisionsubscriptions"></a> 提供訂閱和警示  
  使用此頁面驗證 SQL Server Agent 是否正在執行，並且提供存取權讓報表服務能夠使用 SQL Server Agent。 SQL Server Agent 為 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 訂閱、排程和資料警示所需。 [SSRS 服務應用程式的佈建訂閱及警示](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)  
   
-## Proxy 關聯  
+## <a name="proxy-association"></a>Proxy 關聯  
  您建立 Reporting Services 服務應用程式時，會選取要產生關聯並且藉由 Reporting Services 服務應用程式提供存取權限的 Web 應用程式。 如果您選擇不產生關聯或想要變更關聯，可以使用下列步驟：  
   
 1.  在 [SharePoint 管理中心] 的 [應用程式管理] 中，按一下 **[設定服務應用程式關聯]**。  

@@ -1,42 +1,47 @@
 ---
-title: "資料集屬性對話方塊、查詢 (報表產生器) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "10024"
-  - "sql13.rtp.rptdesigner.datasetproperties.query.f1"
-  - "10160"
+title: "資料集屬性對話方塊、 查詢 （報表產生器） |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- "10024"
+- sql13.rtp.rptdesigner.datasetproperties.query.f1
+- "10160"
 ms.assetid: 75432318-0b00-4797-917c-0a2e74f9d951
 caps.latest.revision: 12
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 12
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cc89e2a412163811aca2c8a99bdc3fae574d0926
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 資料集屬性對話方塊、查詢 (報表產生器)
+# <a name="dataset-properties-dialog-box-query-report-builder"></a>資料集屬性對話方塊、查詢 (報表產生器)
   選取 **[資料集屬性]** 對話方塊上的 **[查詢]** ，從報表伺服器選擇共用資料集或是建立內嵌資料集。 如果是內嵌資料集，您必須選擇資料來源並建立查詢。  
   
  **[資料集屬性]** 對話方塊包含下列項目：  
   
--   [資料集屬性對話方塊、參數 &#40;報表產生器&#41;](../Topic/Dataset%20Properties%20Dialog%20Box,%20Parameters%20\(Report%20Builder\).md)  
+-   [資料集屬性對話方塊、參數 &#40;報表產生器&#41;](http://msdn.microsoft.com/library/3a0672ad-c969-455b-b952-585164ce1dda)  
   
--   [資料集屬性對話方塊、欄位 &#40;報表產生器&#41;](../Topic/Dataset%20Properties%20Dialog%20Box,%20Fields%20\(Report%20Builder\).md)  
+-   [資料集屬性對話方塊、欄位 &#40;報表產生器&#41;](http://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42)  
   
 -   [資料集屬性對話方塊、選項 &#40;報表產生器&#41;](../../reporting-services/report-data/dataset-properties-dialog-box-options-report-builder.md)  
   
--   [資料集屬性對話方塊、篩選 &#40;報表產生器&#41;](../Topic/Dataset%20Properties%20Dialog%20Box,%20Filters%20\(Report%20Builder\).md)  
+-   [資料集屬性對話方塊、篩選 &#40;報表產生器&#41;](http://msdn.microsoft.com/library/933a6f44-4eb7-4e73-9c40-ac0fd17b23d3)  
   
- 如需詳細資訊，請參閱[報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。  
+ 如需詳細資訊，請參閱 [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。  
   
-## 選項。  
+## <a name="options"></a>選項。  
  **名稱**  
  輸入資料集的名稱。 此名稱不可以與報表中任何資料區域或群組的名稱相同。  
   
@@ -74,11 +79,11 @@ caps.handback.revision: 12
  輸入查詢逾時之前的秒數。 預設值是 30 秒。 **[逾時]** 的值必須是空白或大於零。 如果是空白，則查詢不會逾時。  
   
  **重新整理欄位**  
- 執行查詢命令，以更新[資料集屬性對話方塊、欄位](../Topic/Dataset%20Properties%20Dialog%20Box,%20Fields%20\(Report%20Builder\).md)頁面上的欄位清單。  
+ 執行查詢命令，以更新 [資料集屬性對話方塊、欄位](http://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42) 頁面上的欄位清單。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [報表資料集 &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
- [對話方塊、窗格和精靈的報表產生器說明](http://msdn.microsoft.com/zh-tw/2da24891-0b6d-4d3c-8b18-81b98752642f)   
- [查詢設計工具 &#40;報表產生器&#41;](../Topic/Query%20Designers%20\(Report%20Builder\).md)  
+ [對話方塊、窗格和精靈的報表產生器說明](http://msdn.microsoft.com/en-us/2da24891-0b6d-4d3c-8b18-81b98752642f)   
+ [查詢設計工具 &#40;報表產生器&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
   
   

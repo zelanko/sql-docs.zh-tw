@@ -18,10 +18,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 9909c0d9d42e40e09517d60bb23906a49c8e9161
+ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
+ms.openlocfilehash: c96f36b9f59f5cd091dfa3e61be9e1cf7e744f3d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/09/2017
 
 ---
 # <a name="use-openjson-with-an-explicit-schema-sql-server"></a>使用 OPENJSON 與明確結構描述 (SQL Server)
@@ -89,6 +89,9 @@ DECLARE @json NVARCHAR(MAX) = '{
         isAlive bit, age int,  
         dateOfBirth datetime2, spouse nvarchar(50))  
 ```  
+
+## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>深入了解內建 JSON 支援 SQL Server 中  
+針對特定的解決方案，大量使用案例和建議，請參閱[有關內建 JSON 支援的部落格文章](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)Microsoft 經理專案 jovan popovic 的 Azure SQL Database 和 SQL Server 中。
   
 ## <a name="see-also"></a>另請參閱  
  [OPENJSON &#40;Transact-SQL&#41;](../../t-sql/functions/openjson-transact-sql.md)  

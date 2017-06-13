@@ -15,3 +15,4 @@
 # [安裝 SQL Server 2016 BI 功能](install-sql-server-business-intelligence-features.md)
 # [設定 Windows 防火牆以允許 SQL Server 存取](configure-the-windows-firewall-to-allow-sql-server-access.md)  
 ## [設定多重主目錄電腦進行 SQL Server 存取](configure-a-multi-homed-computer-for-sql-server-access.md)  
+# [安裝精靈說明](instance-configuration.md)

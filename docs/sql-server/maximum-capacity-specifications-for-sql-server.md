@@ -25,13 +25,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 242edcd8d7caf7aed6e08a7fffdae4828237e1e4
+ms.sourcegitcommit: d4dc2ff665ff191fb75dd99103a222542262d4c4
+ms.openlocfilehash: b03d9514e39fad101a305784b6852e012e3e4aad
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/12/2017
 
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>SQL Server 的最大容量規格
+
+ > 如需舊版的 SQL Server 相關的內容，請參閱[Maximum Capacity Specifications for SQL Server](https://msdn.microsoft.com/en-US/library/ms143432(SQL.120).aspx)。
+
   下表指定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 元件中已定義之各種物件的大小和數目上限。 若要導覽至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 技術的資料表，請按一下其連結：  
   
  [SQL Server Database Engine 物件](#Engine)  

@@ -1,7 +1,7 @@
 ---
 title: "記憶體內部 OLTP 不支援的 Transact-SQL 建構 | Microsoft 文件"
 ms.custom: 
-ms.date: 12/16/2016
+ms.date: 04/24/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a3539b07a27be375ebfe58e16a4792d9095fce0c
+ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
+ms.openlocfilehash: 66f9964d94ebcbab021c9dcf69ae50663196a597
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 04/25/2017
 
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>記憶體中的 OLTP 不支援 Transact-SQL 建構
@@ -70,7 +70,7 @@ ms.lasthandoff: 04/11/2017
 |運算|主索引鍵資料行的更新。|記憶體最佳化資料表中的主索引鍵資料行和資料類型無法更新。 如果主索引鍵需要更新，請刪除舊資料列，並插入包含更新之主索引鍵的新資料列。|  
 |運算|CREATE INDEX|記憶體最佳化資料表上的索引必須採用內嵌於 **CREATE TABLE** 陳述式或 **ALTER TABLE** 陳述式的方式指定。|  
 |運算|CREATE FULLTEXT INDEX|記憶體最佳化資料表中不支援全文檢索索引。|  
-|運算|結構描述變更|記憶體最佳化資料表和原生編譯預存程序不支援結構描述變更，例如 **sp_rename**。<br /><br /> 嘗試進行特定的結構描述變更會產生錯誤 12320。 記憶體最佳化資料表不支援需要變更結構描述版本的作業，例如重新命名。<br /><br /> 允許使用 ALTER TABLE 和 ALTER PROCEDURE 的特定結構描述變更。|  
+|運算|結構描述變更|記憶體最佳化資料表和原生編譯預存程序不支援結構描述變更，例如 **sp_rename**。<br /><br /> 嘗試進行特定的結構描述變更會產生錯誤 12320。 記憶體最佳化資料表不支援需要變更結構描述版本的作業，例如重新命名。<br /><br /> 允許使用 ALTER TABLE 和 ALTER PROCEDURE 的特定結構描述變更。<br/><br/>**適用於：** [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]。<br/>開頭為[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]，sp_rename 支援。| 
 |運算|TRUNCATE TABLE|記憶體最佳化資料表不支援 TRUNCATE 作業。 若要移除資料表中的所有資料列，請使用 **DELETE FROM***table* 刪除所有資料列，或卸除後再重新建立資料表。|  
 |運算|ALTER AUTHORIZATION|不支援變更現有記憶體最佳化資料表或原生編譯預存程序的擁有者。 請卸除後再重新建立資料表或程序，以變更擁有權。|  
 |運算|ALTER SCHEMA|在結構描述之間傳送安全性實體。|  

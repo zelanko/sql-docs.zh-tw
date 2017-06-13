@@ -1,23 +1,28 @@
 ---
-title: "將篩選加入至資料集 (報表產生器及 SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "將篩選加入至資料集 （報表產生器及 SSRS） |Microsoft 文件"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: eed37e74-6a43-4d7c-9959-2d5fa6a6aba9
 caps.latest.revision: 8
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 8
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 68838748a77567747cd7f44f7924738d87b68450
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 將篩選加入至資料集 (報表產生器及 SSRS)
+# <a name="add-a-filter-to-a-dataset-report-builder-and-ssrs"></a>將篩選加入至資料集 (報表產生器及 SSRS)
   從外部資料來源擷取資料後，將篩選加入至資料集來限制報表中的資料。 當您將篩選加入至資料集時，所有報表組件或資料區都只會使用符合篩選條件的資料。  
   
  若是共用資料集，套用至所有相依項目的篩選必須是報表伺服器上共用資料集定義的一部分。 包含共用資料集執行個體的報表或報表組件可以建立只套用至執行個體的其他篩選。  
@@ -27,7 +32,7 @@ caps.handback.revision: 8
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### 若要將篩選加入至共用資料集  
+### <a name="to-add-a-filter-to-a-shared-dataset"></a>若要將篩選加入至共用資料集  
   
 1.  在共用資料集模式下，開啟共用資料集。  
   
@@ -49,7 +54,7 @@ caps.handback.revision: 8
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### 若要將篩選加入至內嵌資料集或共用資料集執行個體  
+### <a name="to-add-a-filter-to-an-embedded-dataset-or-a-shared-dataset-instance"></a>若要將篩選加入至內嵌資料集或共用資料集執行個體  
   
 1.  在報表設計模式下，開啟報表。  
   
@@ -71,8 +76,8 @@ caps.handback.revision: 8
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## 請參閱＜  
- [新增資料集篩選、資料區篩選和群組篩選 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add dataset filters, data region filters, and group filters.md)   
+## <a name="see-also"></a>另請參閱  
+ [新增資料集篩選、資料區篩選和群組篩選 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
  [運算式範例 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [加入篩選 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-a-filter-report-builder-and-ssrs.md)  
   

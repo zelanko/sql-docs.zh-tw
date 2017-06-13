@@ -1,31 +1,36 @@
 ---
-title: "將 Reporting Services 中的角色和工作與 SharePoint 群組和權限做比較 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "權限 [Reporting Services], SharePoint 整合模式"
-  - "安全性 [Reporting Services], 工作"
-  - "角色 [Reporting Services], 預先定義"
-  - "SharePoint 整合 [Reporting Services], 權限"
-  - "權限 [Reporting Services], 原生模式"
-  - "安全性 [Reporting Services], 預先定義的角色"
-  - "安全性 [Reporting Services], SharePoint 整合模式"
+title: "Reporting Services 角色工作 vs。SharePoint 群組權限 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- permissions [Reporting Services], SharePoint integrated mode
+- security [Reporting Services], tasks
+- roles [Reporting Services], predefined
+- SharePoint integration [Reporting Services], permissions
+- permissions [Reporting Services], native mode
+- security [Reporting Services], predefined roles
+- security [Reporting Services], SharePoint integrated mode
 ms.assetid: 429f1dbb-183a-4097-bd1b-693da9fe7a36
 caps.latest.revision: 19
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 19
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 779105655150aae2f1397865c67f8e835fd99646
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 將 Reporting Services 中的角色和工作與 SharePoint 群組和權限做比較
+# <a name="reporting-services-roles-tasks-vs-sharepoint-groups-permissions"></a>Reporting Services 角色工作 vs。SharePoint 群組權限
   本主題會比較 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式中的角色和工作型授權功能與 SharePoint 產品的安全性功能。 本主題會比較有關角色、工作、SharePoint 群組、權限等級和權限的詞彙與特性。  
   
 ||  
@@ -62,11 +67,11 @@ caps.handback.revision: 19
   
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 角色|SharePoint 群組|  
 |--------------------------------------|-----------------------|  
-|**瀏覽器**<br /><br /> 檢視| 使用 [訪客] 群組可授與檢視報表的權限。  [訪客] 群組具有「讀取」層級權限，讓群組成員能夠檢視網頁、清單項目和文件。|  
+|**瀏覽器**<br /><br /> 檢視| 使用 [訪客] 群組可授與檢視報表的權限。 [訪客]  群組具有「讀取」層級權限，讓群組成員能夠檢視網頁、清單項目和文件。|  
 |**內容管理員**<br /><br /> 對所有項目和項目層級的作業具有完整權限，其中包括設定安全性的權限。|使用「 **擁有者** 」群組可授與完整控制權，來管理 SharePoint 網站上的報表伺服器項目。 「 **擁有者** 」群組具有「完整控制權」權限，讓群組成員能夠變更網站內容、網頁或功能。 完整控制存取權應該僅限於網站管理員。|  
 |**我的報表**|沒有對等的群組。  以 SharePoint 模式執行的報表伺服器不支援 [我的報表]。 如果您想要使用對等的功能，可以使用 [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 中的「我的網站」功能。|  
 |**發行者**<br /><br /> 加入、更新、檢視和刪除報表、報表模型、共用資料來源和資源。|使用「 **成員** 」群組可授與權限，在 SharePoint 網站上加入項目、編輯項目和更新相依項目的參考。 「 **成員** 」群組具有「參與」等級權限，讓群組成員能夠檢視網頁、加入和更新項目以及提交變更核准。|  
-|**報表產生器**<br /><br /> 在報表產生器中檢視報表、自我管理個別訂閱和開啟報表。|在預先定義的現成權限等級或 SharePoint 群組中，沒有相當於報表產生器報表定義的項目。 依預設，凡是屬於「 **成員** 」群組或「 **擁有者** 」群組的使用者，都有權限可以使用報表產生器。 如果您要讓更多使用者可以使用報表產生器，您應該建立自訂安全性設定，以提供類似報表產生器角色所提供的權限等級。 如需詳細資訊，請參閱[設定 SharePoint 網站上報表伺服器項目的權限 &#40;SharePoint 整合模式的 Reporting Services&#41;](../../reporting-services/security/set permissions for report server items on a sharepoint site.md)。|  
+|**報表產生器**<br /><br /> 在報表產生器中檢視報表、自我管理個別訂閱和開啟報表。|在預先定義的現成權限等級或 SharePoint 群組中，沒有相當於報表產生器報表定義的項目。 依預設，凡是屬於「 **成員** 」群組或「 **擁有者** 」群組的使用者，都有權限可以使用報表產生器。 如果您要讓更多使用者可以使用報表產生器，您應該建立自訂安全性設定，以提供類似報表產生器角色所提供的權限等級。 如需詳細資訊，請參閱 [設定 SharePoint 網站上報表伺服器項目的權限 &#40;SharePoint 整合模式的 Reporting Services&#41;](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)＞。|  
 |-| 使用 [檢視者] 群組可授與檢視已轉譯之報表的權限。 「 **檢視者** 」群組無法下載或檢視報表項目的內容。<br /><br /> **注意：** 從 SQL Server 2012 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]開始， **檢視者** 群組沒有建立訂閱的權限。|  
 |**系統使用者** 和 **系統管理員**|這些角色不是以 SharePoint 模式執行報表伺服器時必要的角色。  [系統使用者]  和 [系統管理員] 對應到 SharePoint 伺服陣列或 Web 應用程式層級權限。 報表伺服器不提供必須於該層級授權的任何功能。|  
   
@@ -102,11 +107,11 @@ caps.handback.revision: 19
 |檢視報表伺服器屬性|系統|無 (不適用)。 報表伺服器不控制使用者在管理中心是否有權限檢視整合設定。|  
 |檢視共用排程|系統|開啟項目。|  
   
-## 請參閱＜  
- [設定 SharePoint 網站上報表伺服器項目的權限 &#40;SharePoint 整合模式的 Reporting Services&#41;](../../reporting-services/security/set permissions for report server items on a sharepoint site.md)   
+## <a name="see-also"></a>請參閱＜  
+ [設定 SharePoint 網站上報表伺服器項目的權限 &#40;SharePoint 整合模式的 Reporting Services&#41;](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
  [在 SharePoint Web 應用程式中設定報表伺服器作業的權限](../../reporting-services/security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)   
  [授與 SharePoint 網站上報表伺服器項目的權限](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [角色定義](../../reporting-services/security/role-definitions.md)   
- [Predefined Roles](../../reporting-services/security/predefined-roles.md)  
+ [Predefined Roles](../../reporting-services/security/role-definitions-predefined-roles.md)  
   
   

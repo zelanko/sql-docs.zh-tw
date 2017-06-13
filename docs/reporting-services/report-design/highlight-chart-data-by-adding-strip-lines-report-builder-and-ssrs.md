@@ -1,23 +1,28 @@
 ---
-title: "加入帶狀線來強調圖表資料 (報表產生器及 SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "加入 （報表產生器及 SSRS） 的帶狀線來強調圖表資料 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: addd6137-4b6e-4e88-a7e8-9600fcd1ccce
 caps.latest.revision: 6
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 6
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 04bc46bc61a1091d715e348e44ac7ee22e4a891d
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 加入帶狀線來強調圖表資料 (報表產生器及 SSRS)
+# <a name="highlight-chart-data-by-adding-strip-lines-report-builder-and-ssrs"></a>加入帶狀線來強調圖表資料 (報表產生器及 SSRS)
   帶狀線 (或稱寬帶) 是水平或垂直的範圍，這些範圍會以規則或自訂的間隔來繪製圖表背景的陰影。 您可以使用區域線：  
   
 -   改善可讀性以在圖表上尋找個別值。 以固定間隔指定區域線，這有助於在讀取圖表時區隔資料點。  
@@ -31,7 +36,7 @@ caps.handback.revision: 6
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### 在圖表上以固定間隔顯示交錯的帶狀線  
+### <a name="to-display-interlaced-strip-lines-at-regular-intervals-on-a-chart"></a>在圖表上以固定間隔顯示交錯的帶狀線  
   
 1.  若要顯示水平帶狀線，請以滑鼠右鍵按一下垂直圖表軸，然後按一下 [垂直軸屬性]。  
   
@@ -41,7 +46,7 @@ caps.handback.revision: 6
   
 3.  (選擇性) 使用相鄰的 [色彩] 下拉式清單來指定帶狀線的色彩。  
   
-### 在圖表上以自訂間隔顯示交錯的帶狀線  
+### <a name="to-display-interlaced-strip-lines-at-custom-intervals-on-a-chart"></a>在圖表上以自訂間隔顯示交錯的帶狀線  
   
 1.  若要顯示水平帶狀線，請以滑鼠右鍵按一下垂直圖表軸，然後按一下 [垂直軸屬性]。  
   
@@ -49,7 +54,7 @@ caps.handback.revision: 6
   
      軸屬性會在 [屬性] 視窗中顯示。  
   
-2.  在 [屬性] 窗格的 [外觀]**** 區段中，針對 StripLines 屬性按一下 [編輯集合] 按鈕 (…) 來開啟 [ChartStripLine Collection Editor (ChartStripLine 集合編輯器)]****。  
+2.  在 [屬性] 窗格的 [外觀]** **區段中，針對 StripLines 屬性按一下 [編輯集合] 按鈕 (…) 來開啟 [ChartStripLine Collection Editor (ChartStripLine 集合編輯器)]****。  
   
 3.  按一下 [加入]，將新的帶狀線加入集合。  
   
@@ -60,7 +65,7 @@ caps.handback.revision: 6
 > [!NOTE]  
 >  根據預設，Interval 是設為 [自動]，代表圖表不會計算自訂帶狀線的間隔。 只有在有設定間隔值時，圖表才會計算區域線的間隔。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [格式化圖表上的軸標籤 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [格式化圖表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
  [將移動平均加入至圖表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)  

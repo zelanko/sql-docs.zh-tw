@@ -1,28 +1,33 @@
 ---
-title: "URL 存取參數參考 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "09/09/2015"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "報表 [Reporting Services], 顯示選項"
-  - "URL 存取 [Reporting Services], 報表顯示參數"
+title: "URL 存取參數參考 |Microsoft 文件"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 09/09/2015
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- reports [Reporting Services], display options
+- URL access [Reporting Services], report display parameters
 ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
 caps.latest.revision: 48
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 48
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7e79341b1988e43d27ac35d46fcba482de0ab371
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# URL 存取參數參考
-  您可以使用下列參數當做 URL 的一部分，以設定 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]報表的外觀及操作。 本章節中將列出最常用的參數。 參數會區分大小寫，而且如果是導向至報表伺服器，則以參數前置字元 *rs:* 開頭，如果是導向至 HTML 檢視器，則以 *rc:* 開頭。 您也可以指定裝置或轉譯延伸模組特定的參數。 如需裝置特定參數的詳細資訊，請參閱[在 URL 中指定裝置資訊設定](../reporting-services/specify-device-information-settings-in-a-url.md)。  
+# <a name="url-access-parameter-reference"></a>URL 存取參數參考
+  您可以使用下列參數當做 URL 的一部分，以設定 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]報表的外觀及操作。 本章節中將列出最常用的參數。 參數會區分大小寫，而且如果是導向至報表伺服器，則以參數前置字元 *rs:* 開頭，如果是導向至 HTML 檢視器，則以 *rc:* 開頭。 您也可以指定裝置或轉譯延伸模組特定的參數。 如需裝置特定參數的詳細資訊，請參閱 [在 URL 中指定裝置資訊設定](../reporting-services/specify-device-information-settings-in-a-url.md)。  
   
 > [!IMPORTANT]  
 >  如需使用 SharePoint 模式報表伺服器，請務必讓 URL 包含 `_vti_bin` Proxy 語法，以便透過 SharePoint 和 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] HTTP Proxy 路由傳送要求。 此 Proxy 會將內容加入至 HTTP 要求，其為確保針對 SharePoint 模式報表伺服器正確執行報表的所需內容。 如需範例，請參閱＜ [Access Report Server Items Using URL Access](../reporting-services/access-report-server-items-using-url-access.md)＞。  
@@ -40,7 +45,7 @@ caps.handback.revision: 48
 ##  <a name="bkmk_htmlviewer"></a> HTML 檢視器命令 (rc:)  
  HTML 檢視器命令的用途為將 HTML 檢視器 (例如，從報表管理員) 作為目標，而且前面會加上 *rc:*：  
   
--   *Toolbar*：  
+-   *Toolbar* ：  
                   顯示或隱藏工具列。 如果這個參數的值為 **false**，則會忽略所有剩餘的選項。 如果您省略這個參數，工具列就會自動顯示以轉譯支援該參數的格式。 這個參數的預設值為 **true**。  
   
     > [!IMPORTANT]  
@@ -60,7 +65,7 @@ caps.handback.revision: 48
     http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales&rc:Parameters=Collapsed  
     ```  
   
--   *Zoom* ：將報表縮放值設定為整數百分比或一串常數。 標準字串值包括 **Page Width** 和 **Whole Page**。 Internet Explorer 5.0 之前的舊版 Internet Explorer 和所有非 [!INCLUDE[msCoName](../includes/msconame-md.md)] 瀏覽器都會忽略這個參數。 此參數的預設值為 **100**。  
+-   *Zoom* ：將報表縮放值設定為整數百分比或一串常數。 標準字串值包括 **Page Width** 和 **Whole Page**。 Internet Explorer 5.0 之前的舊版 Internet Explorer 和所有非[!INCLUDE[msCoName](../includes/msconame-md.md)] 瀏覽器都會忽略這個參數。 此參數的預設值為 **100**。  
   
      例如 **Native** 模式：  
   
@@ -104,7 +109,7 @@ caps.handback.revision: 48
   
 -   *StartFind* ：指定要搜尋的最後一部分。 此參數的預設值是報表的最後一頁。  
   
-     例如在**原生**模式下，在 Product Catalog 範例報表中搜尋第一個出現的 "Mountain-400" 文字 (搜尋開始於頁面 1，終止於頁面 5)。  
+     例如在 **原生** 模式下，在 Product Catalog 範例報表中搜尋第一個出現的 "Mountain-400" 文字 (搜尋開始於頁面 1，終止於頁面 5)。  
   
     ```  
     http://server/Reportserver?/SampleReports/Product Catalog&rs:Command=Render&rc:StartFind=1&rc:EndFind=5&rc:FindString=Mountain-400  
@@ -120,7 +125,7 @@ caps.handback.revision: 48
   
 -   *Stylesheet*：指定要套用至 HTML 檢視器的樣式表。  
   
--   裝置資訊設定：將裝置資訊設定指定為 `rc:tag=value` 的形式，其中 *tag* 是指定給目前所使用轉譯延伸模組的裝置資訊設定名稱 (請參閱 *Format* 參數的說明)。 例如，您可以利用 IMAGE 轉譯延伸模組的 *OutputFormat* 裝置資訊設定，使用下列 URL 存取字串的參數將報表轉譯為 JPEG 影像：`…&rs:Format=IMAGE&rc:OutputFormat=JPEG`。 如需所有延伸模組特定裝置資訊設定的詳細資訊，請參閱[轉譯延伸模組的裝置資訊設定 &#40;Reporting Services&#41;](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md)。  
+-   裝置資訊設定：將裝置資訊設定指定為 `rc:tag=value`的形式，其中 *tag* 是指定給目前所使用轉譯延伸模組的裝置資訊設定名稱 (請參閱 *Format* 參數的說明)。 例如，您可以利用 IMAGE 轉譯延伸模組的 *OutputFormat* 裝置資訊設定，使用下列 URL 存取字串的參數將報表轉譯為 JPEG 影像：`…&rs:Format=IMAGE&rc:OutputFormat=JPEG`。 如需所有延伸模組特定裝置資訊設定的詳細資訊，請參閱[轉譯延伸模組的裝置資訊設定 &#40;Reporting Services&#41;](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md)。  
   
 ##  <a name="bkmk_reportserver"></a> 報表伺服器命令 (rs:)  
  報表伺服器命令前面會加上 *rs:* ，而且用來針對下列報表伺服器︰  
@@ -200,7 +205,7 @@ caps.handback.revision: 48
   
     -   **GetComponentDefinition** ：顯示與已發行報表項目相關聯的 XML 定義。 您必須在已發行報表項目上具有 **「讀取內容」** 權限，才能使用這個值。  
   
--   *Format*：  
+-   *Format* ：  
                   指定用於轉譯並檢視報表的格式。 常見的值包括：  
   
     -   **HTML5**  
@@ -227,7 +232,7 @@ caps.handback.revision: 48
   
      預設值是 **HTML5**秒。 如需詳細資訊，請參閱 [Export a Report Using URL Access](../reporting-services/export-a-report-using-url-access.md)。  
   
-     如需完整清單，請參閱報表伺服器 rsreportserver.config 檔案的 **\<轉譯>** 延伸模組區段。  如需如何尋找檔案的資訊，請參閱 [RsReportServer.config Configuration File](../reporting-services/report-server/rsreportserver-config-configuration-file.md)。  
+     如需完整清單，請參閱**\<呈現 >**延伸區段，報表伺服器的 rsreportserver.config 檔案。  如需如何尋找檔案的資訊，請參閱 [RsReportServer.config Configuration File](../reporting-services/report-server/rsreportserver-config-configuration-file.md)。  
   
      例如，直接從 **Native** 模式報表伺服器取得報表的 PDF 副本：  
   
@@ -244,15 +249,15 @@ caps.handback.revision: 48
 -   *ParameterLanguage*：  
                   提供 URL 所傳遞參數的語言，這與瀏覽器語言無關。 預設值是瀏覽器語言。 此值可以是文化特性值，例如 **en-us** 或 **de-de**。  
   
-     例如在**原生**模式下，若要覆寫瀏覽器語言及指定文化特性值 de-DE：  
+     例如在 **原生** 模式下，若要覆寫瀏覽器語言及指定文化特性值 de-DE：  
   
     ```  
     http://myrshost/Reportserver?/SampleReports/Product+Line+Sales&rs:Command=Render&StartDate=4/10/2008&EndDate=11/10/2008&rs:ParameterLanguage=de-DE  
     ```  
   
--   *Snapshot* ：根據報表記錄快照集來轉譯報表。 如需詳細資訊，請參閱[使用 URL 存取轉譯報表記錄快照集](../reporting-services/render-a-report-history-snapshot-using-url-access.md)。  
+-   *Snapshot* ：根據報表記錄快照集來轉譯報表。 如需詳細資訊，請參閱 [使用 URL 存取轉譯報表記錄快照集](../reporting-services/render-a-report-history-snapshot-using-url-access.md)。  
   
-     例如在**原生**模式下，擷取日期為 2003-04-07 且時間戳記為 13:40:02 的報表記錄快照集：  
+     例如在 **原生** 模式下，擷取日期為 2003-04-07 且時間戳記為 13:40:02 的報表記錄快照集：  
   
     ```  
     http://myrshost/reportserver?/SampleReports/Company Sales&rs:Snapshot=2003-04-07T13:40:02  
@@ -373,8 +378,9 @@ caps.handback.revision: 48
     http://myspsite/_vti_bin/reportserver?http://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:ToolBarItemsDisplayMode=15  
     ```  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [URL 存取 &#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)   
- [使用 URL 存取匯出報表](../reporting-services/export-a-report-using-url-access.md)  
+ [匯出的報表是使用 URL 存取](../reporting-services/export-a-report-using-url-access.md)  
   
   
+

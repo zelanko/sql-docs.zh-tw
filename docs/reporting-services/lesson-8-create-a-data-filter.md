@@ -1,29 +1,34 @@
 ---
-title: "第 8 課：建立資料篩選 | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/18/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
+title: "第 8 課： 建立資料篩選 |Microsoft 文件"
+ms.custom: 
+ms.date: 05/18/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+applies_to:
+- SQL Server 2016
 ms.assetid: 19ccbdba-e3da-40a4-b652-32c628cf32e5
 caps.latest.revision: 9
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 9
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ea0e116101c9599268b3fc2f3cd556d2149433c8
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 第 8 課：建立資料篩選
+# <a name="lesson-8-create-a-data-filter"></a>第 8 課：建立資料篩選
 在父報表上加入鑽研動作後，下一步是要針對您為子報表定義的資料表建立資料篩選。  
   
-您可以為鑽研報表建立以資料表為基礎的篩選，**或**查詢篩選。 本課將提供這兩個選項的指示。  
+您可以為鑽研報表建立以資料表為基礎的篩選， **或** 查詢篩選。 本課將提供這兩個選項的指示。  
   
-## 以資料表為基礎的篩選  
+## <a name="table-based-filter"></a>以資料表為基礎的篩選  
 您需要完成下列工作，才能實作以資料表為基礎的篩選。  
   
 -   將篩選運算式加入至子報表中的 Tablix。  
@@ -32,7 +37,7 @@ caps.handback.revision: 9
   
 -   新增事件處理常式，以將 **PurchaseOrderDetail** 繫結至子報表。  
   
-### 若要將篩選運算式加入至子報表中的 Tablix  
+### <a name="to-add-a-filter-expression-to-the-tablix-in-the-child-report"></a>若要將篩選運算式加入至子報表中的 Tablix  
   
 1.  開啟子報表。  
   
@@ -50,15 +55,15 @@ caps.handback.revision: 9
   
 8.  儲存 .rdlc 檔。  
   
-### 若要建立從 PurchaseOrdeDetail 資料表選取未篩選資料的函數  
+### <a name="to-create-a-function-that-selects-unfiltered-data-from-the-purchaseordedetail-table"></a>若要建立從 PurchaseOrdeDetail 資料表選取未篩選資料的函數  
   
 1.  在 [方案總管] 中展開 [Default.aspx]，然後按兩下 [Default.aspx.cs]。  
   
 2.  建立新函數，以接受整數類型參數 **productid**、傳回 **datatable** 物件，並執行下列操作。  
   
-    1.  建立資料集 **DataSet2** 的執行個體，該資料集為[第 4 課：定義子報表的資料連接和資料表](../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md)步驟 2 中所建立。  
+    1.  建立資料集 **DataSet2**的執行個體，該資料集為 [第 4 課：定義子報表的資料連接和資料表](../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md)步驟 2 中所建立。  
   
-    2.  建立與 SqlServer 資料庫的連接，以執行**第 4 課：定義子報表的資料連接和資料表**中定義的查詢。  
+    2.  建立與 SqlServer 資料庫的連接，以執行 **第 4 課：定義子報表的資料連接和資料表**中定義的查詢。  
   
     3.  查詢會傳回未篩選的資料。  
   
@@ -102,7 +107,7 @@ caps.handback.revision: 9
             }  
         ```  
   
-### 若要加入將 PurchaseOrderDetail DataTable 繫結至子報表的事件處理常式  
+### <a name="to-add-an-event-handler-that-binds-the-purchaseorderdetail-datatable-to-the-child-report"></a>若要加入將 PurchaseOrderDetail DataTable 繫結至子報表的事件處理常式  
   
 1.  在設計師檢視中開啟 Default.aspx。  
   
@@ -153,22 +158,22 @@ caps.handback.revision: 9
   
 6.  儲存檔案。  
   
-## 查詢篩選  
+## <a name="query-filter"></a>查詢篩選  
 您需要完成下列工作，才能實作查詢篩選。  
   
 -   建立函數，以從 **PurchaseOrderDetail** 資料表選取已篩選的資料。  
   
 -   新增事件處理常式，以擷取參數值並將 **PurchaseOrderDetail** 繫結至子報表。  
   
-### 若要建立從 PurchaseOrderDetail 資料表選取已篩選資料的函數  
+### <a name="to-create-a-function-that-selects-filtered-data-from-the-purchaseorderdetail-table"></a>若要建立從 PurchaseOrderDetail 資料表選取已篩選資料的函數  
   
 1.  在 [方案總管] 中展開 [Default.aspx]，然後按兩下 [Default.aspx.cs]。  
   
 2.  建立新函數，以接受整數類型參數 **productid**、傳回 **datatable** 物件，並執行下列操作。  
   
-    1.  建立資料集 **DataSet2** 的執行個體，該資料集為[第 4 課：定義子報表的資料連接和資料表](../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md)步驟 2 中所建立。  
+    1.  建立資料集 **DataSet2**的執行個體，該資料集為 [第 4 課：定義子報表的資料連接和資料表](../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md)步驟 2 中所建立。  
   
-    2.  建立與 SqlServer 資料庫的連接，以執行**第 4 課：定義子報表的資料連接和資料表**中定義的查詢。  
+    2.  建立與 SqlServer 資料庫的連接，以執行 **第 4 課：定義子報表的資料連接和資料表**中定義的查詢。  
   
     3.  查詢將包含參數 **productid**，確保傳回的資料是根據父報表中選取的 **ProductID** 篩選。  
   
@@ -218,7 +223,7 @@ caps.handback.revision: 9
             }  
         ```  
   
-### 若要加入擷取參數值並將 PurchaseOrdeDetail DataTable 繫結至子報表的事件處理常式  
+### <a name="to-add-an-event-handler-that-retrieves-parameter-values-and-binds-the-purchaseordedetail-datatable-to-the-child-report"></a>若要加入擷取參數值並將 PurchaseOrdeDetail DataTable 繫結至子報表的事件處理常式  
   
 1.  在設計師檢視中開啟 Default.aspx。  
   
@@ -242,9 +247,9 @@ caps.handback.revision: 9
   
     2.  從提取的子報表物件取得子報表參數清單。  
   
-    3.  反覆運算參數集合，並擷取從父報表傳遞之參數 **ProductID** 的值。  
+    3.  反覆運算參數集合，並擷取從父報表傳遞之參數 **ProductID**的值。  
   
-    4.  呼叫 **GetPurchaseOrderDetail** 函數，並傳遞 **ProductID** 參數值。  
+    4.  呼叫 **GetPurchaseOrderDetail**函數，並傳遞 **ProductID**參數值。  
   
     5.  將 **PurchaseOrderDetail** DataTable 與報表的對應資料來源繫結。  
   
@@ -289,8 +294,10 @@ caps.handback.revision: 9
   
 6.  儲存檔案。  
   
-## 下一項工作  
-您已成功針對您為子報表定義的資料表建立資料篩選。 接下來您將建立並執行網站應用程式。 請參閱[第 9 課：建置並執行應用程式](../reporting-services/lesson-9-build-and-run-the-application.md)。  
+## <a name="next-task"></a>下一項工作  
+您已成功針對您為子報表定義的資料表建立資料篩選。 接下來您將建立並執行網站應用程式。 請參閱 [第 9 課：建置並執行應用程式](../reporting-services/lesson-9-build-and-run-the-application.md)。  
   
   
   
+
+

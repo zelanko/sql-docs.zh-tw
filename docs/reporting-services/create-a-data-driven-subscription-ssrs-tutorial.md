@@ -1,28 +1,33 @@
 ---
-title: "建立資料驅動訂閱 (SSRS 教學課程) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/26/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
-helpviewer_keywords: 
-  - "訂閱 [Reporting Services], 教學課程"
-  - "逐步解說 [Reporting Services]"
-  - "資料驅動訂閱"
+title: "建立資料驅動訂閱 （SSRS 教學課程） |Microsoft 文件"
+ms.custom: 
+ms.date: 05/26/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+applies_to:
+- SQL Server 2016
+helpviewer_keywords:
+- subscriptions [Reporting Services], tutorials
+- walkthroughs [Reporting Services]
+- data-driven subscriptions
 ms.assetid: 79ab0572-43e9-4dc4-9b5a-cd8b627b8274
 caps.latest.revision: 50
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 50
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7ca542c75d289b79284c5affeea5095ac032e1e0
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 建立資料驅動訂閱 (SSRS 教學課程)
+# <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>建立資料驅動訂閱 (SSRS 教學課程)
 本 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 教學課程將告訴您資料驅動訂閱概念，方法是逐步解說建立資料驅動訂閱的簡單範例來產生篩選過的報表輸出，並將其儲存至檔案共用。 
 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 資料驅動訂閱可讓您依據動態訂閱者資料來自訂和自動化報表的散發。 資料驅動訂閱適用於下列狀況：  
   
@@ -31,7 +36,7 @@ caps.handback.revision: 50
 -   依據預先定義的準則，將報表散發給特定收件者群組。 例如，將銷售績效報表傳送給組織中的所有銷售經理。
 + 自動產生各種格式的報表 (例如 .xlsx 和 .pdf)。  
   
-## 學習內容  
+## <a name="what-you-will-learn"></a>學習內容  
  本教學課程分成三個課程：  
  課程 | 註解
  ------- | --------------
@@ -52,10 +57,10 @@ caps.handback.revision: 50
  
    ![ssrs_tutorial_datadriven_flow](../reporting-services/media/ssrs-tutorial-datadriven-flow.png) 
   
-## 需求  
+## <a name="requirements"></a>需求  
 資料驅動訂閱通常是由報表伺服器管理員來建立和維護。 建立資料驅動訂閱的步驟需要建立查詢、包含訂閱者資料之資料來源的知識，以及具備較高的報表伺服器權限。  
   
-本教學課程使用[建立基本資料表報表 &#40;SSRS 教學課程&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md) 教學課程中所建立的 *Sales order* 報表，以及範例資料庫 **AdventureWorks2014** 中的資料。  
+本教學課程使用 *建立基本資料表報表 &#40;SSRS 教學課程&#41;* 教學課程中所建立的 [建立基本資料表報表 &#40;SSRS 教學課程&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md) 報表，以及範例資料庫 **AdventureWorks2014**中的資料。  
   
 您的電腦必須安裝下列項目，才能使用此教學課程：  
   
@@ -65,7 +70,7 @@ caps.handback.revision: 50
   
 -   SQL Server Agent 服務必須在執行中。  
   
--   包括參數的報表。 本教學課程採用您使用[建立基本資料表報表 &#40;SSRS 教學課程&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md) 教學課程所建立的範例報表 `Sales Orders`。  
+-   包括參數的報表。 本教學課程採用您使用 `Sales Orders` 建立基本資料表報表 &#40;SSRS 教學課程&#41; [建立基本資料表報表 &#40;SSRS 教學課程&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)中的資料。  
   
 -   **AdventureWorks2014** 範例資料庫，它會將資料提供給範例報表。  
   
@@ -73,9 +78,11 @@ caps.handback.revision: 50
   
 -   您有寫入權的共用資料夾。 共用資料夾必須可透過網路連接存取。  
   
-**完成這個教學課程的估計時間：**30 分鐘。 如果您尚未完成基本報表教學課程，還需額外 30 分鐘。  
+**完成這個教學課程的估計時間：** 30 分鐘。 如果您尚未完成基本報表教學課程，還需額外 30 分鐘。  
   
-## 另請參閱  
-[資料驅動訂閱](../reporting-services/subscriptions/data-driven-subscriptions.md)  
+## <a name="see-also"></a>另請參閱  
+[Data-Driven Subscriptions](../reporting-services/subscriptions/data-driven-subscriptions.md)  
 [建立基本資料表報表 &#40;SSRS 教學課程&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)
  
+
+

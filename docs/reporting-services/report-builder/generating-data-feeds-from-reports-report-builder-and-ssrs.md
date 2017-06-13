@@ -1,30 +1,37 @@
 ---
-title: "從多個報表產生資料摘要 (報表產生器及 SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "產生資料摘要的報表 （報表產生器及 SSRS） |Microsoft 文件"
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4e00789f-6967-42e5-b2b4-03181fdb1e2c
 caps.latest.revision: 12
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 11
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 190c45d5ec0deeff6d71ce06e4c66872ca3253d2
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 從多個報表產生資料摘要 (報表產生器及 SSRS)
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Atom 轉譯延伸模組會產生 Atom 服務文件，其中會列出可從分頁報表取得的資料摘要，以及來自報表中之資料區的資料摘要。 您可以使用此延伸模組產生符合 Atom 的資料摘要，這些資料摘要可以使用可取用報表產生之資料摘要的應用程式讀取與交換。 例如，您可以使用 Atom 轉譯延伸模組產生您之後可用於 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 用戶端的資料摘要。  
+
+# <a name="generating-data-feeds-from-reports-report-builder-and-ssrs"></a>從多個報表產生資料摘要 (報表產生器及 SSRS)
+
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Atom 轉譯延伸模組會產生 Atom 服務文件，其中會列出可從分頁報表取得的資料摘要，以及來自報表中之資料區的資料摘要。 您可以使用此延伸模組產生符合 Atom 的資料摘要，這些資料摘要可以使用可取用報表產生之資料摘要的應用程式讀取與交換。 例如，您可以使用 Atom 轉譯延伸模組，您可以接著使用 Power Pivot 或 Power BI 中產生的資料摘要。  
   
  Atom 服務文件在報表中，每個資料區至少會列出一個資料摘要。 根據資料區的類型以及該資料區顯示的資料， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 可能會產生來自某個資料區的多個資料摘要。 例如，矩陣或圖表可以提供多個資料摘要。 當 Atom 轉譯延伸模組建立 Atom 服務文件時，系統會針對每個資料摘要建立一個唯一的識別碼，而您會在 URL 中使用該識別碼來存取資料摘要的內容。  
   
  Atom 轉譯延伸模組針對資料摘要產生資料的方式類似於逗點分隔值 (CSV) 轉譯延伸模組將資料轉譯為 CSV 檔案的方式。 資料摘要就像是 CSV 檔案，是報表資料的扁平化表示法。 例如，包含加總群組內銷售量之資料列群組的資料表會在每個資料列中重複顯示這個總和，而且沒有僅包含總和的個別資料列。  
   
- 您可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]、報表伺服器或是與 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 整合的 SharePoint 網站，產生 Atom 服務文件與資料摘要。  
+ 您可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 、報表伺服器或是與 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]整合的 SharePoint 網站，產生 Atom 服務文件與資料摘要。  
   
  Atom 適用於成對的相關標準。 Atom 服務文件符合 RFC 5023 Atom 發行通訊協定規格，而資料摘要符合 RFC 4287 Atom 同步發佈格式通訊協定規格。  
   
@@ -39,7 +46,6 @@ caps.handback.revision: 11
   
  如需詳細資訊，請參閱[從報表產生資料摘要 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/generate-data-feeds-from-a-report-report-builder-and-ssrs.md)。  
   
- ![搭配回到頁首連結使用的箭頭圖示](../../analysis-services/instances/media/uparrow16x16.png "搭配回到頁首連結使用的箭頭圖示") [回到頁首](#BackToTop)  
   
 ##  <a name="AtomServiceDocument"></a> Atom 服務文件 (.atomsvc 檔)  
  Atom 服務文件會指定一個或多個資料摘要的連接。 連線至少是產生摘要之資料服務的簡單 URL。  
@@ -60,14 +66,13 @@ caps.handback.revision: 11
   
  ![RS_Atom_PeerDynamicDataFeeds](../../reporting-services/report-builder/media/rs-atom-peerdynamicdatafeeds.gif "RS_Atom_PeerDynamicDataFeeds")  
   
- ![搭配回到頁首連結使用的箭頭圖示](../../analysis-services/instances/media/uparrow16x16.png "搭配回到頁首連結使用的箭頭圖示") [回到頁首](#BackToTop)  
   
 ##  <a name="DataFeeds"></a> 資料摘要  
  資料摘要是一種 XML 檔案，這個檔案擁有一致的表格格式 (不會隨時間而變更) 與變數資料 (每次執行報表時都可能不同)。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 所產生的資料摘要與 ADO.NET Data Services 所產生的資料摘要格式相同。  
   
  一個資料摘要包含兩個區段：標頭和資料。 Atom 規格會定義每個區段中的元素。 標頭包含搭配資料摘要使用之字元編碼結構描述之類的資訊。  
   
-### 標頭區段  
+### <a name="header-section"></a>標頭區段  
  下列 XML 程式碼顯示資料摘要的標頭區段。  
   
  `<?xml version="1.0" encoding="utf-8" standalone="yes"?><feed xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns="http://www.w3.org/2005/Atom">`  
@@ -78,14 +83,14 @@ caps.handback.revision: 11
   
  `<updated>2009-05-08T23:09:58Z</updated>`  
   
-### 資料區段  
- 資料摘要的資料區段在 Atom 轉譯延伸模組產生之扁平化資料列集的每個資料列中包含一個 \<**entry**> 元素。  
+### <a name="data-section"></a>資料區段  
+ 資料區段的資料摘要包含一個\<**項目**> 扁平化的資料列集產生的 Atom 轉譯延伸模組中的每個資料列的項目。  
   
  下列圖表顯示使用群組和總計的報表。  
   
  ![RS_Atom_ProductSalesSummaryCircledValues](../../reporting-services/report-builder/media/rs-atom-productsalessummarycircledvalues.gif "RS_Atom_ProductSalesSummaryCircledValues")  
   
- 下列 XML 顯示來自資料摘要中該報表的 \<**entry**> 元素。 請注意，\<**entry**> 元素包含群組之銷售量與訂單的總計，以及所有群組之銷售量與訂單的總計。 \<**entry**> 元素包含報表上所有的值。  
+ 下列 XML 會說明\<**項目**> 項目從資料摘要中該報表。 請注意， \<**項目**> 元素包含總計之銷售量與訂單群組和總計銷售量與訂單的所有群組。 \<**項目**> 項目包含在報表上的所有值。  
   
  `<entry><id>uuid:1795992c-a6f3-40ec-9243-fbfd0b1a5be3;id=166322</id><title type="text"></title><updated>2009-05-08T23:09:58Z</updated><author /><content type="application/xml"><m:properties>`  
   
@@ -107,24 +112,23 @@ caps.handback.revision: 11
   
  `</entry>`  
   
-### 處理資料摘要  
- 報表所產生的所有資料摘要包含產生資料摘要之資料區父系範圍內的報表項目。 。 設想一個包含數個資料表和一個圖表的報表。 報表主體中的文字方塊會提翁每個資料區的描述文字。 報表所產生之每個資料摘要中的每個項目都包含文字方塊的值。 例如，如果文字為 "Chart displays monthly sales averages by sales region" (圖表依銷售區域顯示每月的平均銷售額)，全部三個資料摘要都會在每個資料列上加入這段文字。  
+### <a name="working-with-data-feeds"></a>處理資料摘要  
+ 報表所產生的所有資料摘要包含產生資料摘要之資料區父系範圍內的報表項目。 整合的 SharePoint 網站，產生 Atom 服務文件與資料摘要。 設想一個包含數個資料表和一個圖表的報表。 報表主體中的文字方塊會提翁每個資料區的描述文字。 報表所產生之每個資料摘要中的每個項目都包含文字方塊的值。 例如，如果文字為 "Chart displays monthly sales averages by sales region" (圖表依銷售區域顯示每月的平均銷售額)，全部三個資料摘要都會在每個資料列上加入這段文字。  
   
  如果報表配置包含階層式資料關聯性 (如巢狀資料區)，這些關聯性就會包含在報表資料的扁平化資料列集中。  
   
  巢狀資料區的資料列通常很寬，特別是巢狀資料表和矩陣包含群組和總計時更是如此。 將報表匯出至資料摘要，以及檢視資料摘要以確認產生的資料就是預期的資料時，您可能會發現這個功能相當實用。  
   
- 當 Atom 轉譯延伸模組建立 Atom 服務文件時，系統會針對資料摘要建立一個唯一的識別碼，而您會在 URL 中使用該識別碼來檢視資料摘要的內容。 以上所顯示的範例 Atom 服務文件包含 URL http://ServerName/ReportServer?%2fProduct+Sales+Summary&rs%3aCommand=Render&rs%3aFormat=ATOM&rc%3aDataFeed=xAx0x1"。 此 URL 會識別報表 (Product Sales Summary)、Atom 轉譯延伸模組 (ATOM)，以及資料摘要的名稱 (xAx0x1)。  
+ 當 Atom 轉譯延伸模組建立 Atom 服務文件時，系統會針對資料摘要建立一個唯一的識別碼，而您會在 URL 中使用該識別碼來檢視資料摘要的內容。 範例 Atom 服務文件，如上所示，包含 URL `http://ServerName/ReportServer?%2fProduct+Sales+Summary&rs%3aCommand=Render&rs%3aFormat=ATOM&rc%3aDataFeed=xAx0x1`。 此 URL 會識別報表 (Product Sales Summary)、Atom 轉譯延伸模組 (ATOM)，以及資料摘要的名稱 (xAx0x1)。  
   
  報表項目名稱預設為報表項目的報表定義語言 (RDL) 元素名稱，而且這些名稱通常不容易了解或是不容易記住。 例如，置於報表中之第一個矩陣的預設名稱為 Tablix 1。 資料摘要會使用這些名稱。  
   
- 若要讓資料摘要更容易處理，您可以使用資料區的 DataElementName 屬性來提供易記的名稱。 如果您提供 DataElementName 的值，資料摘要子元素 \<**d**> 將會使用它來取代預設的資料區名稱。 例如，如果資料區的預設名稱為 Tablix1 而 DataElementName 設定 SalesByTerritoryYear，則資料摘要中的 \<**d**> 會使用 SalesByTerritoryYear。 如果資料區有兩個資料摘要，如上述的矩陣報表，則在資料摘要中使用的名稱為 SalesByTerritoryYear _Territory 和 SalesByTerritoryYear _Year。  
+ 若要讓資料摘要更容易處理，您可以使用資料區的 DataElementName 屬性來提供易記的名稱。 如果您提供 DataElementName 值的資料摘要子元素\< **d**> 會使用為它而不是預設的資料區域名稱。 例如，如果資料區的預設名稱為 Tablix1 而 DataElementName 設定 SalesByTerritoryYear 則\< **d**> 在資料摘要會使用 SalesByTerritoryYear。 如果資料區有兩個資料摘要，如上述的矩陣報表，則在資料摘要中使用的名稱為 SalesByTerritoryYear _Territory 和 SalesByTerritoryYear _Year。  
   
  如果您比較顯示在報表上的資料與資料摘要中的資料，可能會發現部分差異。 報表通常會顯示格式化的數值和時間/日期資料，而資料摘要則包含未格式化的摘要。  
   
  資料摘要會以副檔名 .atom 儲存。 您可以使用文字或 XML 編輯器 (例如 [記事本] 或 XML 編輯器) 來檢視檔案結構和內容。  
   
- ![搭配回到頁首連結使用的箭頭圖示](../../analysis-services/instances/media/uparrow16x16.png "搭配回到頁首連結使用的箭頭圖示") [回到頁首](#BackToTop)  
   
 ##  <a name="FlatteningReportData"></a> 扁平化報表資料  
  Atom 轉譯器會提供 XML 格式的報表資料做為扁平化的資料列集。 除了以下幾個例外情況之外，扁平化資料表的規則與 CSV 轉譯器的規則相同：  
@@ -145,9 +149,8 @@ caps.handback.revision: 11
   
 -   對等資料區域是一種資料區域或動態群組，可以共用一般資料區域或動態上階。 對等資料會以扁平化樹狀結構的分支識別。  
   
- 如需詳細資訊，請參閱[資料表、矩陣和清單 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)。  
+ 如需詳細資訊，請參閱 [資料表、矩陣和清單 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)。  
   
- ![搭配回到頁首連結使用的箭頭圖示](../../analysis-services/instances/media/uparrow16x16.png "搭配回到頁首連結使用的箭頭圖示") [回到頁首](#BackToTop)  
   
 ##  <a name="AtomRendering"></a> Atom 轉譯規則  
  轉譯資料摘要時，Atom 轉譯延伸模組會忽略下列資訊：  
@@ -185,15 +188,13 @@ caps.handback.revision: 11
 |指標|以作用中的狀態名稱、可用的狀態以及資料值轉譯成單一記錄。|  
 |對應|針對每一個地圖資料區域產生資料摘要。 如果多個地圖圖層使用相同的資料區域，則資料摘要會包含所有地圖圖層。 此資料摘要包含一筆記錄，其中包含地圖圖層之每一個地圖成員的標籤和值。|  
   
- ![搭配回到頁首連結使用的箭頭圖示](../../analysis-services/instances/media/uparrow16x16.png "搭配回到頁首連結使用的箭頭圖示") [回到頁首](#BackToTop)  
   
 ##  <a name="DeviceInfo"></a> 裝置資訊設定  
  您可以變更此轉譯器的某些預設設定，包括要使用的編碼結構描述。 如需詳細資訊，請參閱 [ATOM Device Information Settings](../../reporting-services/atom-device-information-settings.md)。  
-  
- ![搭配回到頁首連結使用的箭頭圖示](../../analysis-services/instances/media/uparrow16x16.png "搭配回到頁首連結使用的箭頭圖示") [回到頁首](#BackToTop)  
-  
-## 請參閱＜  
- [匯出至 CSV 檔案 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md)   
- [匯出報表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)  
-  
-  
+
+## <a name="next-steps"></a>後續的步驟
+
+[匯出至 CSV 檔案](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md)   
+[匯出報表](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)  
+
+更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)

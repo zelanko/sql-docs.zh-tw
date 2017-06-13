@@ -1,37 +1,42 @@
 ---
-title: "管理 Reporting Services 原生模式報表伺服器 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Reporting Services 組態工具"
-  - "組態選項 [Reporting Services]"
-  - "報表伺服器 [Reporting Services], 設定"
+title: "管理 Reporting Services 原生模式報表伺服器 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Reporting Services Configuration tool
+- configuration options [Reporting Services]
+- report servers [Reporting Services], configuring
 ms.assetid: 6ca03a09-d6a8-4c93-ba12-1c99dcbfb618
 caps.latest.revision: 10
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 10
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: aadfbe555fa1334f9101f799e60cccdcca7e68fd
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 管理 Reporting Services 原生模式報表伺服器
+# <a name="manage-a-reporting-services-native-mode-report-server"></a>管理 Reporting Services 原生模式報表伺服器
   本節包含使用 Reporting Services 組態管理員來設定原生模式報表伺服器執行個體的程序。  
   
-## 本節內容  
+## <a name="in-this-section"></a>本節內容  
  本章節的主題將組織成數個類別，好讓您可以更輕鬆地找到所要的指示。 第一節包含原生模式報表伺服器之基本組態工作的主題， 第二節包含進階組態主題， 第三節包含設定報表伺服器於 SharePoint 整合模式下執行的主題。  
   
-### 基本組態  
+### <a name="basic-configuration"></a>基本組態  
  [Reporting Services 組態管理員 &#40;原生模式&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
  提供啟動 Reporting Services 組態工具的步驟。  
   
- [設定服務帳戶 &#40;SSRS 組態管理員&#41;](../Topic/Configure%20a%20Service%20Account%20\(SSRS%20Configuration%20Manager\).md)  
+ [設定服務帳戶 &#40;SSRS 組態管理員&#41;](http://msdn.microsoft.com/library/25000ad5-3f80-4210-8331-d4754dc217e0)  
  說明如何指定報表伺服器服務的帳戶和密碼資訊。  
   
  [為報表伺服器註冊服務主要名稱 &#40;SPN&#41;](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md)  
@@ -40,21 +45,21 @@ caps.handback.revision: 10
  [設定 URL &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
  說明如何建立用來存取報表伺服器 Web 服務和報表管理員的一個或多個 URL。  
   
- [建立原生模式報表伺服器資料庫 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/create-a-native-mode-report-server-database-ssrs-configuration-manager.md)  
+ [建立原生模式報表伺服器資料庫 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)  
  提供建立報表伺服器資料庫的步驟。 這是部署 Reporting Services 安裝的必要步驟。  
   
-### 進階或選擇性組態  
- [設定原生模式報表伺服器向外延展部署 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure a native mode report server scale-out deployment.md)  
+### <a name="advanced-or-optional-configuration"></a>進階或選擇性組態  
+ [設定原生模式報表伺服器向外延展部署 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)  
  提供設定多個報表伺服器來共用報表伺服器資料庫的步驟。  
   
- [為電子郵件傳遞設定報表伺服器 (SSRS 組態管理員)](http://msdn.microsoft.com/zh-tw/b838f970-d11a-4239-b164-8d11f4581d83)  
+ [為電子郵件傳遞設定報表伺服器 (SSRS 組態管理員)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83)  
  提供有關為電子郵件散發設定報表伺服器的步驟。  
   
  [設定供報表伺服器存取的防火牆](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)  
  說明如何開啟用於來自報表伺服器之傳入要求和傳出回應的通訊埠。  
   
  [設定原生模式報表伺服器進行本機管理 &#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)  
- 描述使用 http://localhost 連接報表管理員或報表伺服器所需的其他步驟。  
+ 描述連接到報表管理員或使用報表伺服器所需的其他步驟`http://localhost`。  
   
  [設定報表伺服器來進行遠端管理](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)  
  說明如何設定遠端報表伺服器執行個體，好讓您可以從其他電腦連接及設定它。  
@@ -65,8 +70,8 @@ caps.handback.revision: 10
  [啟用遠端錯誤 &#40;Reporting Services&#41;](../../reporting-services/report-server/enable-remote-errors-reporting-services.md)  
  說明如何在報表伺服器上設定伺服器屬性，以傳回有關遠端伺服器上發生之錯誤狀況的其他資訊。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [設定和管理報表伺服器 &#40;SSRS 原生模式&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)   
- [設定和管理報表伺服器 &#40;Reporting Services SharePoint 模式&#41;](../../reporting-services/report-server-sharepoint/configuration and administration of a report server.md)  
+ [設定和管理報表伺服器 &#40;Reporting Services SharePoint 模式&#41;](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md)  
   
   

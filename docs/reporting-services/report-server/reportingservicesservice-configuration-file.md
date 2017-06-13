@@ -1,47 +1,56 @@
 ---
-title: "ReportingServicesService 組態檔 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "追蹤 [Reporting Services]"
-  - "報表伺服器 Windows 服務, ReportingServicesService 組態檔"
-  - "ReportingServicesService 組態檔"
+title: "ReportingServicesService 組態檔 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- traces [Reporting Services]
+- Report Server Windows service, ReportingServicesService configuration file
+- ReportingServicesService configuration file
 ms.assetid: 40f4a401-cb61-4c42-b1ec-01acdacdacd1
 caps.latest.revision: 41
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 40
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 72985f45d29d0f7f2d5a40494da929dfdfbbdc12
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# ReportingServicesService 組態檔
-  ReportingServicesService.exe.config 檔包括設定追蹤的設定。  
+# <a name="reportingservicesservice-configuration-file"></a>ReportingServicesService 組態檔
+ ||  
+|-|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  SQL Server 2016|
   
-## 檔案位置  
+ReportingServicesService.exe.config 檔包括設定追蹤的設定。  
+  
+## <a name="file-location"></a>檔案位置  
  此檔案位於 \Reporting Services\Report Server\Bin 資料夾中。  
   
-## 編輯指導方針  
+## <a name="editing-guidelines"></a>編輯指導方針  
  您可以修改此檔案以重新命名記錄檔，或者增加或減少追蹤層級。 請勿修改其他任何設定。 如需指示，請參閱[修改 Reporting Services 組態檔 &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)。 如需追蹤記錄的詳細資訊，請參閱[報表伺服器服務追蹤記錄](../../reporting-services/report-server/report-server-service-trace-log.md)。  
   
-## 範例組態  
+## <a name="example-configuration"></a>範例組態  
  下列範例顯示 ReportingServicesService.exe.config 檔中的設定和預設值。  
   
 ```  
 <configSections>  
       <section name="RStrace" type="Microsoft.ReportingServices.Diagnostics.RSTraceSectionHandler,Microsoft.ReportingServices.Diagnostics" />  
 </configSections>  
-<system.diagnostics>  
+\<system.diagnostics>  
       <switches>  
           <add name="DefaultTraceSwitch" value="3" />  
       </switches>  
-</system.diagnostics>  
+\</system.diagnostics>  
 <RStrace>  
       <add name="FileName" value="ReportServerService_" />  
       <add name="FileSizeLimitMb" value="32" />  
@@ -68,7 +77,7 @@ caps.handback.revision: 40
 </runtime>  
 ```  
   
-## 組態設定  
+## <a name="configuration-settings"></a>組態設定  
  下表提供有關特定設定的資訊。 設定會依其出現在組態檔的順序顯示。  
   
 |設定|說明|  
@@ -78,14 +87,15 @@ caps.handback.revision: 40
 |**FileName**|指定記錄檔名稱的第一部分。 **Prefix** 所指定的值會完成名稱的其餘部分。 依預設，名稱是 ReportServerService_。|  
 |**FileSizeLimitMb**|指定追蹤記錄的大小上限。 檔案大小的單位為 MB。 有效值為 0 到最大整數。 預設值為 32。|  
 |**KeepFilesForDays**|指定一個天數，超過此天數後，追蹤記錄檔便會被刪除。 有效值為 0 到最大整數。 預設值為 14。|  
-|**前置詞**|指定可區別記錄檔執行個體的產生值。 依預設，會將時間戳記附加至追蹤記錄檔名稱。 此值設定為 "tid, time"。 請勿修改此設定。|  
+|**Prefix**|指定可區別記錄檔執行個體的產生值。 依預設，會將時間戳記附加至追蹤記錄檔名稱。 此值設定為 "tid, time"。 請勿修改此設定。|  
 |**TraceListeners**|指定輸出追蹤記錄內容的目標。 您可以指定多重目標，每個目標之間請以逗號隔開。 有效值包括：<br /><br /> DebugWindow (預設值)<br /><br /> File (預設值)<br /><br /> StdOut|  
 |**TraceFileMode**|指定追蹤記錄中是否要包含 24 小時內的資料。 每個元件每一天只能有一份追蹤記錄。 此值設定為「Unique (預設值)」。 請勿修改此值。|  
 |**Components**|指定建立追蹤記錄的元件。 預設值是 **all**秒。 此設定的其他有效值包括內部元件的名稱。 請勿修改此值。|  
 |**執行階段**|指定支援與前版回溯相容的組態設定。 執行階段設定是用來重新導向以新版為前版 Microsoft.ReportingServices.Interfaces 之目標的要求。<br /><br /> 本節中的所有組態設定會在 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 產品文件集中加以描述。 如需詳細資訊，請在 MSDN 網站上或 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 文件集中搜尋「執行階段結構描述設定」。|  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [Reporting Services 組態檔](../../reporting-services/report-server/reporting-services-configuration-files.md)   
  [報表伺服器服務追蹤記錄](../../reporting-services/report-server/report-server-service-trace-log.md)  
   
   
+

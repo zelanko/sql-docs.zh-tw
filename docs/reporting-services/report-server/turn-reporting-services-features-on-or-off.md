@@ -1,26 +1,31 @@
 ---
-title: "開啟或關閉 Reporting Services 功能 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Reporting Services, 組態"
-  - "安全性 [Reporting Services], 策略"
+title: "開啟或關閉 Reporting Services 功能 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Reporting Services, configuration
+- security [Reporting Services], strategies
 ms.assetid: b69db02a-43a7-4fdc-ad9b-438d817a7f83
 caps.latest.revision: 10
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 9
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: a9cb113f44e01052d03fc5354c2cff6da4afb460
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 開啟或關閉 Reporting Services 功能
+# <a name="turn-reporting-services-features-on-or-off"></a>開啟或關閉 Reporting Services 功能
   您可以關閉鎖定策略中未使用的報表伺服器功能，以減少實際執行報表伺服器的攻擊面。 在大多數情況下，您會想要同時執行 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能，以便能夠使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中所提供的所有功能。 不過，根據部署模型而定，您可以停用不需要的功能。 例如，如果所有報表處理都設定為排程的作業，您就可以只啟用背景處理。 同樣地，如果只想要視需要執行的互動式報表，可以只執行報表伺服器 Web 服務。  
   
  本主題中的程序將示範如何關閉原生模式 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能。 您可以透過不同的方式來設定功能，例如直接編輯 `RsReportServer.config` 檔案，或是在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，使用原則式管理的 [Reporting Services 的介面區組態] Facet。 使用下列連結即可找到說明如何開啟或關閉功能的程序：  
@@ -29,15 +34,15 @@ caps.handback.revision: 9
   
 -   [排程的事件和處理](#Sched)  
   
--   [報表管理員](#ReportManager)  
+-   [Web 入口網站](#WebPortal)  
   
 -   [報表產生器](#ReportBuilder)  
   
 -   [報表資料來源的 Windows 整合式安全性](#WinIntSec)  
   
-##  <a name="RSWebSvc"></a> 報表伺服器 Web 服務  
+##  <a name="RSWebSvc"></a> Report Server Web Service  
   
-#### 透過編輯組態來開啟或關閉報表伺服器 Web 服務  
+#### <a name="to-turn-on-or-off-the-report-server-web-service-by-editing-configuration"></a>透過編輯組態來開啟或關閉報表伺服器 Web 服務  
   
 1.  在文字編輯器中開啟 `RsReportServer.config` 檔案。 如需詳細資訊，請參閱《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的[修改 Reporting Services 組態檔 &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)。  
   
@@ -55,7 +60,7 @@ caps.handback.revision: 9
   
 4.  儲存您的變更，然後關閉檔案。  
   
-#### 使用 SQL Server Management Studio 來開啟或關閉報表伺服器 Web 服務  
+#### <a name="to-turn-on-or-off-the-report-server-web-service-by-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 來開啟或關閉報表伺服器 Web 服務  
   
 1.  開啟 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 並連接至您想要設定的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 執行個體。  
   
@@ -73,7 +78,7 @@ caps.handback.revision: 9
   
 ##  <a name="Sched"></a> 排程的事件和傳遞  
   
-#### 透過編輯組態來開啟或關閉排程的事件和傳遞  
+#### <a name="to-turn-on-or-off-scheduled-events-and-delivery-by-editing-configuration"></a>透過編輯組態來開啟或關閉排程的事件和傳遞  
   
 1.  在文字編輯器中開啟 RsReportServer.config 檔。 如需詳細資訊，請參閱《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的[修改 Reporting Services 組態檔 &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)。  
   
@@ -98,7 +103,7 @@ caps.handback.revision: 9
 > [!NOTE]  
 >  您不能完全關閉背景處理，因為它提供了伺服器作業所需的資料庫維護功能。  
   
-#### 使用 SQL Server Management Studio 來開啟或關閉排程的事件和傳遞  
+#### <a name="to-turn-on-or-off-scheduled-events-and-delivery-by-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 來開啟或關閉排程的事件和傳遞  
   
 1.  開啟 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 並連接至您想要設定的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 執行個體。  
   
@@ -117,45 +122,13 @@ caps.handback.revision: 9
 > [!NOTE]  
 >  您不能完全關閉背景處理，因為它提供了伺服器作業所需的資料庫維護功能。  
   
-##  <a name="ReportManager"></a> 報表管理員  
+##  <a name="WebPortal"></a>Web 入口網站
   
-#### 透過編輯組態來開啟或關閉報表管理員  
-  
-1.  在文字編輯器中開啟 RsReportServer.config 檔。 如需指示，請參閱《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的[修改 Reporting Services 組態檔 &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)。  
-  
-2.  若要開啟報表管理員，請將 **IsReportManagerEnabled** 設定為 **true**：  
-  
-    ```  
-    <IsReportManagerEnabled>true</IsReportManagerEnabled>  
-    ```  
-  
-3.  若要關閉報表管理員，請將 **IsReportManagerEnabled** 設定為 **false**：  
-  
-    ```  
-    <IsReportManagerEnabled>false</IsReportManagerEnabled>  
-    ```  
-  
-4.  儲存您的變更，然後關閉檔案。  
-  
-#### 使用 SQL Server Management Studio 來開啟或關閉報表管理員  
-  
-1.  開啟 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 並連接至您想要設定的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 執行個體。  
-  
-2.  在**物件總管**中，以滑鼠右鍵按一下 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 節點，指向 [原則]，然後按一下 [Facet]。  
-  
-3.  在 **[Facet]** 清單中，選取 **[Reporting Services 的介面區組態]**。  
-  
-4.  在 **[Facet 屬性]**底下：  
-  
-    -   若要開啟報表管理員，請將 **[ReportManagerEnabled]** 設定為 **[True]**。  
-  
-    -   若要關閉報表管理員，請將 **[ReportManagerEnabled]** 設定為 **[False]**。  
-  
-5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+在舊版中，您無法停用報表管理員設定**IsReportManagerEnabled**設為 false。 **IsReportManagerEnabled**為準，SQL Server 2016 Reporting Services 累計更新 2 已被取代。 Web 入口網站將會永遠啟用。
   
 ##  <a name="ReportBuilder"></a> 報表產生器  
   
-#### 使用 SQL Server Management Studio 來開啟或關閉報表產生器  
+#### <a name="to-turn-on-or-off-report-builder-by-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 來開啟或關閉報表產生器  
   
 1.  開啟 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 並連接至您想要設定的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 執行個體。  
   
@@ -171,7 +144,7 @@ caps.handback.revision: 9
   
 ##  <a name="WinIntSec"></a> Windows 整合式安全性  
   
-#### 使用 SQL Server Management Studio 來開啟或關閉 Windows 整合式安全性  
+#### <a name="to-turn-on-or-off-windows-integrated-security-by-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 來開啟或關閉 Windows 整合式安全性  
   
 1.  開啟 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 並連接至您想要設定的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 執行個體。  
   
@@ -185,7 +158,9 @@ caps.handback.revision: 9
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## 請參閱＜  
- [Reporting Services 組態管理員 (SSRS 原生模式)](http://msdn.microsoft.com/zh-tw/63519ef4-e68a-42fb-9cf7-31228ea4e434)  
+## <a name="see-also"></a>請參閱＜  
+ [Reporting Services 組態管理員 (SSRS 原生模式)](http://msdn.microsoft.com/en-us/63519ef4-e68a-42fb-9cf7-31228ea4e434)  
+ 更多問題嗎？ [再試一次 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
   
   
+

@@ -1,31 +1,36 @@
 ---
-title: "排程 | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "排程 [Reporting Services]"
-  - "排程 [Reporting Services], 關於排程"
-  - "發行的報表 [Reporting Services], 排程"
-  - "報表 [Reporting Services], 排程"
-  - "訂閱 [Reporting Services], 排程"
-  - "自動報表處理"
+title: "排程 |Microsoft 文件"
+ms.custom: 
+ms.date: 07/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- schedules [Reporting Services]
+- schedules [Reporting Services], about schedules
+- published reports [Reporting Services], schedules
+- reports [Reporting Services], scheduling
+- subscriptions [Reporting Services], scheduling
+- automatic report processing
 ms.assetid: ecccd16b-eba9-4e95-b55d-f15c621e003f
 caps.latest.revision: 51
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 51
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a49274f347768a1a213c9a0010917e9e1d1376a5
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 排程
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會提供**共用排程**和**報表特定排程**來協助您控制報表的處理和散發。 這兩種排程類型之間的差異是定義、儲存和管理它們的方式。 兩種排程類型的內部建構則相同。 所有排程都會指定一個循環類型：每月、每週或每日。 在循環類型內，您可以設定發生事件之頻率的間隔和範圍。 不論您是建立共用排程還是報表特定排程，循環模式的類型和指定這些模式的方式相同。
+# <a name="schedules"></a>排程
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會提供 **共用排程** 和 **報表特定排程** 來協助您控制報表的處理和散發。 這兩種排程類型之間的差異是定義、儲存和管理它們的方式。 兩種排程類型的內部建構則相同。 所有排程都會指定一個循環類型：每月、每週或每日。 在循環類型內，您可以設定發生事件之頻率的間隔和範圍。 不論您是建立共用排程還是報表特定排程，循環模式的類型和指定這些模式的方式相同。
   
   -   共用排程會建立為個別項目。 建立之後，您可以在定義訂閱或其他已排程的作業時參考它們。  
   
@@ -37,7 +42,7 @@ caps.handback.revision: 51
   
   
 ##  <a name="bkmk_whatyoucando"></a> 可以使用排程執行的工作  
- 您可以在原生模式下使用 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] Web 入口網站和 [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)]，以及在 SharePoint 模式下使用 SharePoint 網站管理頁面，以建立及管理您的排程。 您可以：  
+ 您可以在原生模式下使用 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] Web 入口網站和 [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] ，以及在 SharePoint 模式下使用 SharePoint 網站管理頁面，以建立及管理您的排程。 您可以：  
   
 -   以標準訂閱或資料驅動訂閱的方式，排程報表的傳遞。  
   
@@ -56,12 +61,12 @@ caps.handback.revision: 51
  如需如何建立及管理排程的詳細資訊，請參閱＜ [Create, Modify, and Delete Schedules](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)＞。  
   
 > [!NOTE]  
->  並非所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本都提供排程作業。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本支援的功能清單，請參閱 [Features Suppported by edition of SQL Server 2016](Features%20Supported%20by%20Edition%20of%20SQL%20Server_deleted.md) (SQL Server 2016 版本支援的功能)。  
+>  並非所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本都提供排程作業。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本支援的功能清單，請參閱 [Features Suppported by edition of SQL Server 2016](http://msdn.microsoft.com/library/22ad82d7-860c-43d3-b77a-77fb9eec5454)(SQL Server 2016 版本支援的功能)。  
   
 ##  <a name="bkmk_compare"></a> 比較共用排程與報表特定排程  
  這兩種排程類型會產生相同的輸出：  
   
--   **共用排程**是多用途的可攜式項目，包含立即可用的排程資訊。 因為共用排程是系統層級項目，所以建立共用排程需要系統層級權限。 基於這個原因，報表伺服器管理員或內容管理員一般會在您的報表伺服器上建立可以使用的共用排程。 共用排程是在報表伺服器上，使用入口網站或 SharePoint 網站設定來儲存及管理。  
+-   **共用排程** 是多用途的可攜式項目，包含立即可用的排程資訊。 因為共用排程是系統層級項目，所以建立共用排程需要系統層級權限。 基於這個原因，報表伺服器管理員或內容管理員一般會在您的報表伺服器上建立可以使用的共用排程。 共用排程是在報表伺服器上，使用入口網站或 SharePoint 網站設定來儲存及管理。  
   
      與您透過報表、共用資料集或訂閱屬性定義的特定排程相較之下，共用排程比較容易管理和維護，原因如下：  
   
@@ -71,7 +76,7 @@ caps.handback.revision: 51
   
     -   如果您只有使用共用排程，就可以精確地知道進行排程作業的時間。 這可在發生效能問題之前，讓您更容易地預期和配合伺服器負載。 例如，如果您決定要以特定時間排程電腦備份，就可以調整共用排程，以便於不同的時間執行。  
   
--   **報表特定排程**會定義在個別報表、訂閱或報表執行作業的內容中，用以決定快取過期或快照集更新。 當您定義訂閱或設定報表執行屬性時，會以內嵌的方式建立這些排程。 若共用排程未提供您需要的頻率或循環模式，您可以建立報表特定排程。 若要防止報表執行，您必須手動編輯報表特定排程。 報表特定排程可以由個別的使用者建立。  
+-   **報表特定排程** 會定義在個別報表、訂閱或報表執行作業的內容中，用以決定快取過期或快照集更新。 當您定義訂閱或設定報表執行屬性時，會以內嵌的方式建立這些排程。 若共用排程未提供您需要的頻率或循環模式，您可以建立報表特定排程。 若要防止報表執行，您必須手動編輯報表特定排程。 報表特定排程可以由個別的使用者建立。  
   
 ##  <a name="bkmk_configuredatasources"></a> 設定資料來源  
  您必須先將報表資料來源設定成使用預存認證或自動報表處理帳戶，才能排程報表的資料或訂閱處理。 如果您使用預存認證，則只能儲存一組認證，而且該組認證將會由所有執行報表的使用者使用。 預存認證可以是 Windows 使用者帳戶或資料庫使用者帳戶。  
@@ -90,7 +95,7 @@ caps.handback.revision: 51
 |建立、修改或刪除使用者自訂訂閱中的報表特定排程|管理個別訂閱|瀏覽器、報表產生器、我的報表和內容管理員|訪客、成員|  
 |建立、修改或刪除所有其他已排程之作業的報表特定排程|管理報表記錄、管理所有訂閱、管理報表|內容管理員|擁有者|  
   
- 如需原生模式 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中安全性的詳細資訊，請參閱 [Predefined Roles](../../reporting-services/security/predefined-roles.md) (預先定義的角色)、[在原生模式報表伺服器上授與權限](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)和[工作和權限](../../reporting-services/security/tasks-and-permissions.md)。 如果是 SharePoint 模式，請參閱＜ [Compare Roles and Tasks in Reporting Services to SharePoint Groups and Permissions](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)＞  
+ 如需原生模式 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中安全性的詳細資訊，請參閱 [Predefined Roles](../../reporting-services/security/role-definitions-predefined-roles.md)(預先定義的角色)、 [在原生模式報表伺服器上授與權限](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md) 和 [工作和權限](../../reporting-services/security/tasks-and-permissions.md)。 如果是 SharePoint 模式，請參閱＜ [Compare Roles and Tasks in Reporting Services to SharePoint Groups and Permissions](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)＞  
   
 ##  <a name="bkmk_how_scheduling_works"></a> 排程與傳遞處理器的運作方式  
  排程與傳遞處理器提供下列功能：  
@@ -124,15 +129,15 @@ caps.handback.revision: 51
 >  您可以使用 **[Reporting Services 的介面區組態]** Facet，暫時或永久地停止排程的作業。 您可以建立與部署自訂傳遞擴充模組，但排程與傳遞處理器無法藉由本身擴充。 您無法變更它管理事件與通知的方式。 如需有關關閉功能的詳細資訊，請參閱＜ **Turn Reporting Services Features On or Off** ＞的＜ [排程的事件和傳遞](../../reporting-services/report-server/turn-reporting-services-features-on-or-off.md)＞一節。  
   
 ###  <a name="bkmk_stoppingagent"></a> 停止 SQL Server Agent 的影響  
- 依預設，排程的報表是使用 SQL Server Agent。 如果您停止服務，則除非您透過 <xref:ReportService2010.ReportingService2010.FireEvent%2A> 方法，以程式設計方式加入處理要求，否則不會有新處理要求加入佇列。 您重新啟動服務後，建立報表處理要求的作業就會繼續。 報表伺服器不會嘗試重新建立可能在 SQL Server Agent 離線期間所發生的報表處理作業。 如果您停止 SQL Server Agent 一個星期，那個星期內所有排程的作業都會遺失。  
+ 依預設，排程的報表是使用 SQL Server Agent。 如果您停止服務，則除非您透過 <xref:ReportService2010.ReportingService2010.FireEvent%2A> 方法，利用程式加入處理要求，否則不會有新處理要求加入佇列。 您重新啟動服務後，建立報表處理要求的作業就會繼續。 報表伺服器不會嘗試重新建立可能在 SQL Server Agent 離線期間所發生的報表處理作業。 如果您停止 SQL Server Agent 一個星期，那個星期內所有排程的作業都會遺失。  
   
 > [!NOTE]  
->  SQL Server Agent 為 Reporting Services 提供的功能，可以由使用 <xref:ReportService2010.ReportingService2010.FireEvent%2A> 方法的自訂程式碼取代，來將排程事件加入佇列。  
+>  SQL Server Agent 為 Reporting Services 提供的功能，可以由使用 <xref:ReportService2010.ReportingService2010.FireEvent%2A> 方法，將排程事件加入佇列的自訂程式碼取代。  
   
 ###  <a name="bkmk_stoppingservice"></a> 停止報表伺服器服務的影響  
  如果停止報表伺服器服務，SQL Server Agent 會繼續將報表處理要求加入佇列。 SQL Server Agent 中的狀態資訊會指出作業成功。 但是，因為報表伺服器服務已停止，因此實際上沒有任何報表處理發生。 要求將繼續在佇列中累積，直到您重新啟動報表伺服器服務為止。 一旦您重新啟動報表伺服器服務之後，佇列中的所有報表處理要求都會依照順序處理。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [建立、修改及刪除報表記錄中的快照集](../../reporting-services/report-server/create-modify-and-delete-snapshots-in-report-history.md)   
  [訂閱與傳遞 &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [資料驅動訂閱](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
@@ -141,3 +146,4 @@ caps.handback.revision: 51
  [快取共用資料集 &#40;SSRS&#41;](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)  
   
   
+

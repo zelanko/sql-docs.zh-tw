@@ -1,30 +1,35 @@
 ---
-title: "加入走勢圖和資料橫條 (報表產生器及 SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "加入走勢圖和資料橫條 （報表產生器及 SSRS） |Microsoft 文件"
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 0b297c2e-d48b-41b0-aabd-29680cdcdb05
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a9f084fc55a0f3011a40c6f2d8a2cfcdf61dc9f2
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 加入走勢圖和資料橫條 (報表產生器及 SSRS)
+# <a name="add-sparklines-and-data-bars-report-builder-and-ssrs"></a>加入走勢圖和資料橫條 (報表產生器及 SSRS)
   走勢圖和資料橫條很小，也就是以少量的外來細節傳達許多資訊的精簡圖表。 如需詳細資訊，請參閱[走勢圖和資料橫條 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)。  
   
  在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 中，走勢圖和資料橫條最常放在資料表或矩陣內的資料格中。 走勢圖通常會針對每個資料格只顯示一個數列。 資料橫條可以包含一個或多個資料點。 走勢圖和資料橫條會從資料表或矩陣內每一個資料列的重複數列資訊來衍生其影響力。  
   
-## 若要將走勢圖或資料橫條加入至資料表或矩陣  
+## <a name="to-add-a-sparkline-or-data-bar-to-a-table-or-matrix"></a>若要將走勢圖或資料橫條加入至資料表或矩陣  
   
-1.  如果您還沒這樣做，請使用您想要顯示的資料建立[資料表](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)或[矩陣](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)。  
+1.  如果您還沒這樣做，請使用您想要顯示的資料建立 [資料表](../../reporting-services/report-design/tables-report-builder-and-ssrs.md) 或 [矩陣](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md) 。  
   
 2.  將資料行插入資料表或矩陣中。 如需詳細資訊，請參閱[插入或刪除資料行 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/insert-or-delete-a-column-report-builder-and-ssrs.md)。  
   
@@ -45,7 +50,7 @@ caps.handback.revision: 8
   
      一般對於走勢圖或資料橫條而言，您不會將欄位加入至 **[數列群組]** 區域，因為您希望每一個資料列只有一個數列。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [圖表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [在資料表或矩陣的圖表上對齊資料 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs.md)  
   

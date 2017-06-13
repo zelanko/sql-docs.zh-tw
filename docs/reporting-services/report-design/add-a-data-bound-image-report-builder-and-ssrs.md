@@ -1,23 +1,28 @@
 ---
-title: "加入資料繫結影像 (報表產生器及 SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "加入資料繫結影像 （報表產生器及 SSRS） |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: df4c38d4-bfcc-41c4-aa6d-952ca6fd7a2e
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 253d3abfffae056d6300e2203623e7af023a2476
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 加入資料繫結影像 (報表產生器及 SSRS)
+# <a name="add-a-data-bound-image-report-builder-and-ssrs"></a>加入資料繫結影像 (報表產生器及 SSRS)
   報表可以包含儲存在資料庫內之影像的參考。 這類影像稱為「資料繫結影像」。 出現在產品清單中產品名稱旁邊的圖片就是資料繫結影像的範例。  
   
  將資料繫結影像加入至頁首或頁尾時，需要其他步驟。 如需詳細資訊，請參閱[頁首和頁尾 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)。  
@@ -25,7 +30,7 @@ caps.handback.revision: 8
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### 若要加入資料繫結影像  
+### <a name="to-add-a-data-bound-image"></a>若要加入資料繫結影像  
   
 1.  在報表設計檢視中，建立具有資料來源連線的資料表，以及具有包含二進位影像資料之欄位的資料集。 如需詳細資訊，請參閱[資料表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)。  
   
@@ -47,10 +52,10 @@ caps.handback.revision: 8
   
      影像預留位置會出現在報表設計介面上。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [影像 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/images-report-builder-and-ssrs.md)   
  [在報表中內嵌影像 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/embed-an-image-in-a-report-report-builder-and-ssrs.md)   
  [加入外部影像 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-an-external-image-report-builder-and-ssrs.md)   
- [影像屬性對話方塊、一般 &#40;報表產生器及 SSRS&#41;](../Topic/Image%20Properties%20Dialog%20Box,%20General%20\(Report%20Builder%20and%20SSRS\).md)  
+ [影像屬性對話方塊、一般 &#40;報表產生器及 SSRS&#41;](http://msdn.microsoft.com/library/c2218b93-f7fe-46ef-995f-d7dadf9752ec)  
   
   

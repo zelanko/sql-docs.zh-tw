@@ -1,23 +1,28 @@
 ---
-title: "快取共用資料集 (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "快取共用資料集 (SSRS) |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4acb1bbe-1c04-4979-b893-dc1b1c5039b6
 caps.latest.revision: 6
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 6
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 698548e71d8d346d04f0aa93eef8b8074a2417c0
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 快取共用資料集 (SSRS)
+# <a name="cache-shared-datasets-ssrs"></a>快取共用資料集 (SSRS)
   共用資料集的查詢結果可以複製到快取，以便為多個報表提供一致的資料，並改善資料集查詢的回應時間。 跟報表一樣，您可以設定共用資料集在第一次使用時或指定排程進行快取。  
   
  共用資料集可以包含在多個報表中，或做為元件定義的一部分。 您可以透過快取共用資料集，為所有使用該資料集的報表提供一致的資料集，而且也減少資料集查詢依外部資料來源執行的次數。  
@@ -48,14 +53,14 @@ caps.handback.revision: 6
   
  如果使用者所選擇的報表參數值與快取結果集所指定的預設值不同，資料集查詢會主動執行，該查詢不會使用快取結果。  
   
-## 快取共用資料集  
+## <a name="caching-shared-datasets"></a>快取共用資料集  
  若要啟用共用資料集快取，您必須在共用資料集上選取快取選項。 啟用快取之後，共用資料集的查詢結果會在第一次使用時複製到快取中。 如果共用資料集具有參數，參數的每個組合都會在快取中建立新項目。  
   
  特定參數組合的查詢結果在快取中時，啟動進行處理的所有報表，以及包含具有這些參數值之共用資料集參考的所有報表，都會使用快取的資料。  
   
- 您可以指定資料要在快取中保存到過期的時間。 如需詳細資訊，請參閱[快取頁面、共用資料集 &#40;報表管理員&#41;](../Topic/Caching%20Page,%20Shared%20Datasets%20\(Report%20Manager\).md)。  
+ 您可以指定資料要在快取中保存到過期的時間。 如需詳細資訊，請參閱[快取頁面、共用資料集 &#40;報表管理員&#41;](http://msdn.microsoft.com/library/eac372e9-d2a1-48a8-bbe5-09d101df16ea)。  
   
-## 預先載入快取  
+## <a name="preloading-the-cache"></a>預先載入快取  
  您可以透過建立快取重新整理計劃，以預先載入快取。 針對重新整理計劃，您可以使用項目特定排程或共用排程，指定重新整理的頻率。 若要避免產生多個相同項目的快取，您所指定的排程應該有足夠時間來處理外部資料來源的查詢。 例如，如果執行查詢需要 20 分鐘，則重新整理排程應該超過 20 分鐘。 如需詳細資訊，請參閱 [Schedules](../../reporting-services/subscriptions/schedules.md)。  
   
  若要建立共用資料集的快取重新整理計劃，則應具備下列條件。  
@@ -70,9 +75,9 @@ caps.handback.revision: 6
   
 -   您必須在共用資料集上擁有 ReadPolicy 和 UpdatePolicy 權限。  
   
- 快取重新整理計劃適用於共用資料集及報表。 如需詳細資訊，請參閱[快取重新整理選項 &#40;報表管理員&#41;](../Topic/Cache%20Refresh%20Options%20\(Report%20Manager\).md)。  
+ 快取重新整理計劃適用於共用資料集及報表。 如需詳細資訊，請參閱[快取重新整理選項 &#40;報表管理員&#41;](http://msdn.microsoft.com/library/227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6)。  
   
-## 造成快取逾期的條件  
+## <a name="conditions-that-cause-cache-expiration"></a>造成快取逾期的條件  
  下列條件可能會導致共用資料集快取無效。  
   
 -   排程條件過期。 發生快取逾時或已到過期時間。  
@@ -95,7 +100,7 @@ caps.handback.revision: 6
   
  共用資料集的快取重新整理計劃更新不會影響已處理的報表。 更新快取重新整理計劃只會影響未來啟動而參考共用資料集的報表。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [管理共用資料集](../../reporting-services/report-data/manage-shared-datasets.md)  
   
   

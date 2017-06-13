@@ -1,28 +1,33 @@
 ---
-title: "變更指標圖示和指標集合 (報表產生器及 SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "變更指標圖示和指標集合 （報表產生器及 SSRS） |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8a056adf-4473-473d-9b0c-314675af7bfd
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7e9b0deb3a240607b3df2612622803d62749f521
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 變更指標圖示和指標集合 (報表產生器及 SSRS)
+# <a name="change-indicator-icons-and-indicator-sets-report-builder-and-ssrs"></a>變更指標圖示和指標集合 (報表產生器及 SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 針對分頁報表所提供的預先設定指標集合，在已傳遞的報表中可能不一定會有效地描述您的資料，運作也不一定良好。 本主題提供變更指標圖示外觀，以及變更指標集合以加入不同、更多或更少之指標圖示的程序。  
   
  您可以使用運算式來設定選項，如色彩。 如需詳細資訊，請參閱[運算式 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)。  
   
-## 若要變更指標圖示的色彩  
+## <a name="to-change-the-color-of-an-indicator-icon"></a>若要變更指標圖示的色彩  
   
 1.  以滑鼠右鍵按一下您要變更的指標，然後按一下 [指標屬性]。  
   
@@ -32,11 +37,11 @@ caps.handback.revision: 8
   
      您可以選擇按一下 [運算式] (*fx*) 按鈕來編輯設定 [色彩] 選項值的運算式。  
   
-     如果您按一下 [更多色彩]，[選取色彩] 對話方塊便會開啟，您可以從其中選擇色彩。 如需其選項的詳細資訊，請參閱[選取色彩對話方塊 &#40;報表產生器及 SSRS&#41;](../Topic/Select%20Color%20Dialog%20Box%20\(Report%20Builder%20and%20SSRS\).md)。 按一下 [確定] 關閉 [選取色彩] 對話方塊。  
+     如果您按一下 [更多色彩]，[選取色彩] 對話方塊便會開啟，您可以從其中選擇色彩。 如需其選項的詳細資訊，請參閱[選取色彩對話方塊 &#40;報表產生器及 SSRS&#41;](http://msdn.microsoft.com/library/ac7089a3-5c7b-4f53-8348-180610e86da2)。 按一下 [確定] 關閉 [選取色彩] 對話方塊。  
   
 4.  按一下 **[確定]**。  
   
-## 若要變更圖示  
+## <a name="to-change-the-icon"></a>若要變更圖示  
   
 1.  以滑鼠右鍵按一下您要變更的指標，然後按一下 [指標屬性]。  
   
@@ -48,7 +53,7 @@ caps.handback.revision: 8
   
 4.  按一下 **[確定]**。  
   
-## 若要使用自訂影像做為指標圖示  
+## <a name="to-use-a-custom-image-as-an-indicator-icon"></a>若要使用自訂影像做為指標圖示  
   
 1.  以滑鼠右鍵按一下您要變更的指標，然後按一下 [指標屬性]。  
   
@@ -68,7 +73,7 @@ caps.handback.revision: 8
   
 6.  按一下 **[確定]**。  
   
-## 若要將圖示加入至指標集合  
+## <a name="to-add-an-icon-to-the-indicator-set"></a>若要將圖示加入至指標集合  
   
 1.  以滑鼠右鍵按一下您要變更的指標，然後按一下 [指標屬性]。  
   
@@ -80,7 +85,7 @@ caps.handback.revision: 8
   
 4.  按一下 **[確定]**。  
   
-## 若要從指標集合刪除圖示  
+## <a name="to-delete-an-icon-to-the-indicator-set"></a>若要從指標集合刪除圖示  
   
 1.  以滑鼠右鍵按一下您要變更的指標，然後按一下 [指標屬性]。  
   
@@ -90,7 +95,7 @@ caps.handback.revision: 8
   
 4.  按一下 **[確定]**。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [指標 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   
   

@@ -2,7 +2,7 @@
 title: "SQL Server 加密 | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 05/03/2016
+ms.date: 05/15/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -20,24 +20,24 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 441968f81086a875ee526d31dcaf753c1e103868
+ms.sourcegitcommit: 6d75e0e40c5642993cb17b09e421fbfebf40f87a
+ms.openlocfilehash: c7aee6098b6cf8eca74dd3f34b9ed9a836bb9d20
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/16/2017
 
 ---
 # <a name="sql-server-encryption"></a>SQL Server 加密
   加密是透過金鑰或密碼的使用讓資料模糊化的程序。 這樣可以讓資料變成毫無用處，而不需要對應的解密金鑰或密碼。 加密並不能解決存取控制問題。 但是，若發生存取控制失靈的情形，加密可限縮資料遺失的風險以增強安全性。 例如，只要資料已加密，即使資料庫主機電腦設定不當而遭駭客取得敏感性資料，失竊的資訊就可能毫無用處。  
   
- 您可以在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中針對連接、資料和預存程序使用加密。 下表包含 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中加密的詳細資訊。  
-  
+
 > [!IMPORTANT]  
 >  雖然加密是維護安全性的寶貴工具，但是不應該將它用於所有的資料或連接。 當您決定是否要實作加密時，請考慮使用者將如何存取資料。 如果使用者透過公用網路存取資料，可能需要資料加密來提高安全性。 但是，如果所有的存取都與安全的內部網路組態有關，則可能不需要加密。 每次使用加密時，都應該包含密碼、金鑰和憑證的維護策略。  
   
 > [!NOTE]  
 >  傳輸層安全性 (TSL1.2) 的最新相關資訊位於 [Microsoft SQL Server 的 TLS 1.2 支援](https://support.microsoft.com/kb/3135244)。  
-  
-## <a name="in-this-section"></a>本節內容  
+
+您可以在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中針對連接、資料和預存程序使用加密。 下列主題包含中加密的詳細資訊[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
+
  [加密階層](../../../relational-databases/security/encryption/encryption-hierarchy.md)  
  有關 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中加密階層的資訊。  
   
@@ -79,7 +79,7 @@ ms.lasthandoff: 04/11/2017
  有關如何使用憑證來加密資料的資訊。  
   
 ## <a name="external-resources"></a>外部資源  
- [Microsoft TechNet：SQL Server TechCenter：SQL Server 2005 安全性和保護](https://msdn.microsoft.com/sqlserver/bb895847.aspx)  
+ [Microsoft TechNet: SQL Server TechCenter: SQL Server 2012 的安全性與保護](http://download.microsoft.com/download/8/F/A/8FABACD7-803E-40FC-ADF8-355E7D218F4C/SQL_Server_2012_Security_Best_Practice_Whitepaper_Apr2012.docx)  
  有關 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安全性的最新資訊。  
   
 ## <a name="see-also"></a>另請參閱  

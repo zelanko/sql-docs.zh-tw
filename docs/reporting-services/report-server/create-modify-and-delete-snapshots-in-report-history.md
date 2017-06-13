@@ -1,34 +1,39 @@
 ---
-title: "建立、修改及刪除報表記錄中的快照集 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "快照集 [Reporting Services]"
-  - "報表快照集 [Reporting Services]"
+title: "建立、 修改和刪除報表記錄中的快照集 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- snapshots [Reporting Services]
+- report snapshots [Reporting Services]
 ms.assetid: 5aebbbfa-a8db-462d-8ab9-746fad9525f0
 caps.latest.revision: 40
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 40
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4c3d0de81994b5a234ead420277718c760f9ddb3
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 建立、修改及刪除報表記錄中的快照集
+# <a name="create-modify-and-delete-snapshots-in-report-history"></a>建立、修改及刪除報表記錄中的快照集
   報表記錄是報表快照集的集合。 您可以加入和刪除快照集，或修改影響報表記錄儲存區的屬性，來維護報表記錄。 您可以用手動方式或依據排程來建立報表記錄。  
   
  若要建立報表記錄，您的角色指派必須包括「管理報表記錄」工作。 若要檢視報表記錄，您的角色指派必須包括「檢視報表」工作。 有報表存取權的使用者，都可以使用報表記錄。 您無法選擇性地針對部分使用者啟用或停用報表記錄。  
   
  報表記錄中的快照集可以由建立的日期及時間加以識別。 日期及時間是以查詢的執行時間為準。  
   
-## 在報表記錄中建立快照集  
- 您可以用手動方式建立快照集，如果是可以自動執行的報表，就能夠依排定間隔建立快照集。 若要自動執行，報表必須使用預存認證，或完全不使用認證。 此外，若報表使用參數，您必須指定報表執行時使用的預設值。 您可以在報表的屬性頁面指定預存認證和參數值。 如需詳細資訊，請參閱[參數屬性頁面 &#40;報表管理員&#41;](../Topic/Parameters%20Properties%20Page%20\(Report%20Manager\).md)。  
+## <a name="creating-snapshots-in-report-history"></a>在報表記錄中建立快照集  
+ 您可以用手動方式建立快照集，如果是可以自動執行的報表，就能夠依排定間隔建立快照集。 若要自動執行，報表必須使用預存認證，或完全不使用認證。 此外，若報表使用參數，您必須指定報表執行時使用的預設值。 您可以在報表的屬性頁面指定預存認證和參數值。 如需詳細資訊，請參閱[參數屬性頁面 &#40;報表管理員&#41;](http://msdn.microsoft.com/library/ebb53598-2378-46ae-8935-d5192f8ea49a)。  
   
  當您在建立報表快照集時，下列元素會和報表快照集一起儲存在報表伺服器資料庫中：  
   
@@ -44,7 +49,7 @@ caps.handback.revision: 40
   
  如果報表產生錯誤，就不會建立快照集。 產生警告的報表若可繼續執行，則可以用來產生快照集。  
   
-## 修改屬性與刪除報表記錄  
+## <a name="modifying-properties-and-deleting-report-history"></a>修改屬性與刪除報表記錄  
  一旦報表快照集已存在，便無法加以修改。 然而，您可以藉由修改屬性來刪除報表記錄。  
   
  以下為刪除報表記錄的方式：  
@@ -59,9 +64,9 @@ caps.handback.revision: 40
   
  刪除報表時，報表記錄也會一併刪除。 例如，若您刪除每月銷售額報表而以較新版本加以取代，則所有和該報表關聯的報表記錄也會遭到刪除。 然而，如果您移動報表，則所有報表記錄會隨著移動。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [建立報表記錄 &#40;SharePoint 整合模式的 Reporting Services&#41;](../../reporting-services/report-server/create-report-history-reporting-services-in-sharepoint-integrated-mode.md)   
- [報表管理員 &#40;SSRS 原生模式&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md)   
+ [報表管理員 &#40;SSRS 原生模式&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [報表伺服器內容管理 &#40;SSRS 原生模式&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
  [將快照集加入報表記錄 &#40;報表管理員&#41;](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
  [限制報表記錄 &#40;報表管理員&#41;](../../reporting-services/reports/limit-report-history-report-manager.md)  

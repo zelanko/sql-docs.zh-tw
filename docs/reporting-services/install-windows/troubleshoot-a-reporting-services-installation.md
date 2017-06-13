@@ -1,30 +1,37 @@
 ---
-title: "疑難排解 Reporting Services 安裝 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "疑難排解 Reporting Services 安裝 |Microsoft 文件"
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e2536f7f-d90c-4571-9ffd-6bbfe69018d6
 caps.latest.revision: 16
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 13
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 79d064c7ddb43531fdff086eda71ba1e28d71fd6
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 疑難排解 Reporting Services 安裝
-  如果您因為安裝期間發生的錯誤而無法安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，請使用本主題的指示來處理最有可能造成安裝錯誤的狀況。  
+
+# <a name="troubleshoot-a-reporting-services-installation"></a>疑難排解 Reporting Services 安裝
+
+  如果您因為安裝期間發生的錯誤而無法安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，請使用本主題的指示來處理最有可能造成安裝錯誤的狀況。  
   
  如需有關與 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 相關之其他錯誤和問題的詳細資訊，請參閱 [疑難排解 SSRS 問題和錯誤](http://social.technet.microsoft.com/wiki/contents/articles/ssrs-troubleshooting-issues-and-errors.aspx)。  
   
  如果您碰到的問題在版本資訊中有描述，請檢閱 [線上版本資訊](http://go.microsoft.com/fwlink/?linkid=236893) 。  
   
 ##  <a name="bkmk_setuplogs"></a> 檢查安裝記錄檔  
- 安裝錯誤會記錄在 **[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Setup Bootstrap\Log** 資料夾的記錄檔中。 每當您執行安裝程式時，都會建立一個子資料夾， 此子資料夾的名稱就是您執行安裝程式的時間和日期。 如需如何檢視安裝記錄檔的指示，請參閱[檢視與讀取 SQL Server 安裝記錄檔](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)。  
+ 安裝錯誤會記錄在 **[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Setup Bootstrap\Log** 資料夾的記錄檔中。 每當您執行安裝程式時，都會建立一個子資料夾， 此子資料夾的名稱就是您執行安裝程式的時間和日期。 如需如何檢視安裝記錄檔的指示，請參閱 [檢視與讀取 SQL Server 安裝記錄檔](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)。  
   
 -   記錄檔包含檔案的集合。  
   
@@ -47,7 +54,7 @@ caps.handback.revision: 13
   
 -   Authz.dll 必須存在於 System32 資料夾中。  
   
- 安裝程式不再檢查 Internet Information Services (IIS) 或 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 需要 MDAC 2.0 與 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0 版；如果尚未安裝，則安裝程式會加以安裝。  
+ 安裝程式不再檢查 Internet Information Services (IIS) 或 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]需要 MDAC 2.0 和[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]版本 2.0。安裝程式會安裝這些如果尚未安裝。  
   
 ##  <a name="bkmk_tshoot_sharepoint"></a> 疑難排解 SharePoint 模式安裝的問題  
   
@@ -66,16 +73,17 @@ caps.handback.revision: 13
 -   [嘗試建立新的報表產生器報表時看到錯誤訊息](#bkmk_reportbuilder_newreport_error)  
   
 -   [您會看到使用 PREPAREIMAGE 時不支援 RS_SHP 的錯誤訊息](#bkmk_RS_SHP_notsupported)  
+
+### <a name="bkmk_configmanager_notstart"></a> Reporting Services 組態管理員未啟動
+
+ **描述：**這個問題是設計在 SQL Server 2012 和更新版本。 Reporting Services 的架構為 SharePoint 服務架構。 在 SharePoint 模式中設定及管理 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 時，不再需要組態管理員。  
   
-###  <a name="bkmk_configmanager_notstart"></a> Reporting Services 組態管理員未啟動  
- **描述：** 按 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的設計會出現此情況。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 現在的架構為 SharePoint 服務架構。 在 SharePoint 模式中設定及管理 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 時，不再需要組態管理員。  
+ **因應措施：** 使用 SharePoint 管理中心，在 SharePoint 模式下設定報表伺服器。 如需詳細資訊，請參閱 [管理 Reporting Services SharePoint 服務應用程式](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)  
   
- **因應措施：** 使用 SharePoint 管理中心，在 SharePoint 模式下設定報表伺服器。 如需詳細資訊，請參閱[管理 Reporting Services SharePoint 服務應用程式](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)  
+ ![搭配回到頁首連結使用的箭號圖示](../../analysis-services/instances/media/uparrow16x16.gif "搭配回到頁首連結使用的箭號圖示")[疑難排解 SharePoint 模式安裝的問題](#bkmk_tshoot_sharepoint)  
   
- ![搭配回到頁首連結使用的箭頭圖示](../../analysis-services/instances/media/uparrow16x16.png "搭配回到頁首連結使用的箭頭圖示") [疑難排解 SharePoint 模式安裝的問題](#bkmk_tshoot_sharepoint)  
-  
-###  <a name="bkmk_no_ssrs_service"></a> 在 SharePoint 模式下安裝 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] SSRS 之後，您在 SharePoint 管理中心中看不到 SQL Server Reporting Services 服務。  
- 如果在 SharePoint 模式中成功安裝 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 與 SharePoint 2013/2016 適用的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 增益集之後，您沒有在下列兩個功能表中看見 “SQL Server Reporting Services”，表示 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務尚未註冊：  
+###  <a name="bkmk_no_ssrs_service"></a>在 SharePoint 模式安裝 SQL Server 2016 SSRS 之後不看 SQL Server Reporting Services 服務，在 SharePoint 管理中心內  
+ **描述：**如果順利安裝 SQL Server 2016 Reporting Services SharePoint 模式和 SQL Server 2016 Reporting Services 增益集，適用於 SharePoint 2013/2016年，您看不"SQL Server Reporting Services 」 在下列兩個功能表，然後在[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]服務尚未註冊：  
   
 -   SharePoint 2013/2016 管理中心 -> [應用程式管理] -> [管理伺服器上的服務] 頁面  
   
@@ -101,7 +109,7 @@ caps.handback.revision: 13
   
 2.  在下列頁面上，確認 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務的狀態顯示成 [已啟動]：SharePoint 2013/2016 管理中心 -> [應用程式管理] -> [管理伺服器上的服務]  
   
- ![搭配回到頁首連結使用的箭頭圖示](../../analysis-services/instances/media/uparrow16x16.png "搭配回到頁首連結使用的箭頭圖示") [疑難排解 SharePoint 模式安裝的問題](#bkmk_tshoot_sharepoint)  
+ ![搭配回到頁首連結使用的箭號圖示](../../analysis-services/instances/media/uparrow16x16.gif "搭配回到頁首連結使用的箭號圖示")[疑難排解 SharePoint 模式安裝的問題](#bkmk_tshoot_sharepoint)  
   
 ###  <a name="bkmk_cmdlets_not_recognized"></a> Reporting Services PowerShell 指令程式無法使用，而且無法辨識命令  
  **描述：** 當您嘗試執行 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] PowerShell 指令程式時，看到類似下列的錯誤訊息：  
@@ -120,9 +128,9 @@ caps.handback.revision: 13
   
 -   [尋找適用於 SharePoint 產品之 Reporting Services 增益集的位置](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)  
   
--   [在 SharePoint 模式中安裝第一部報表伺服器](http://msdn.microsoft.com/zh-tw/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538)  
+-   [在 SharePoint 模式中安裝第一部報表伺服器](http://msdn.microsoft.com/en-us/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538)  
   
- ![搭配回到頁首連結使用的箭頭圖示](../../analysis-services/instances/media/uparrow16x16.png "搭配回到頁首連結使用的箭頭圖示") [疑難排解 SharePoint 模式安裝的問題](#bkmk_tshoot_sharepoint)  
+ ![搭配回到頁首連結使用的箭號圖示](../../analysis-services/instances/media/uparrow16x16.gif "搭配回到頁首連結使用的箭號圖示")[疑難排解 SharePoint 模式安裝的問題](#bkmk_tshoot_sharepoint)  
   
 ###  <a name="bkmk_URL_not_configured"></a> 您看見一則錯誤訊息，指出 URL 未設定  
  **描述：** 您看見一則類似以下的錯誤訊息：  
@@ -145,7 +153,7 @@ caps.handback.revision: 13
   
 -   管理服務應用程式。  
   
- ![搭配回到頁首連結使用的箭頭圖示](../../analysis-services/instances/media/uparrow16x16.png "搭配回到頁首連結使用的箭頭圖示") [疑難排解 SharePoint 模式安裝的問題](#bkmk_tshoot_sharepoint)  
+ ![搭配回到頁首連結使用的箭號圖示](../../analysis-services/instances/media/uparrow16x16.gif "搭配回到頁首連結使用的箭號圖示")[疑難排解 SharePoint 模式安裝的問題](#bkmk_tshoot_sharepoint)  
   
 ###  <a name="bkmk_sharepoint_not_confiugred"></a> 在已安裝 SharePoint 但尚未進行設定的電腦上，安裝程式會失敗  
  **描述：** 若您在已安裝 SharePoint 但尚未進行設定的電腦上，選擇安裝 Reporting Services SharePoint 模式，將會看到類似下列的訊息，且安裝程式將會停止：  
@@ -156,10 +164,10 @@ caps.handback.revision: 13
   
  **詳細資訊：** 將 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝至現有的 SharePoint 安裝時，安裝程式會嘗試安裝並啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 服務。 若尚未設定 SharePoint，服務安裝將會失敗並會導致安裝程式失敗。  
   
- ![搭配回到頁首連結使用的箭頭圖示](../../analysis-services/instances/media/uparrow16x16.png "搭配回到頁首連結使用的箭頭圖示") [疑難排解 SharePoint 模式安裝的問題](#bkmk_tshoot_sharepoint)  
+ ![搭配回到頁首連結使用的箭號圖示](../../analysis-services/instances/media/uparrow16x16.gif "搭配回到頁首連結使用的箭號圖示")[疑難排解 SharePoint 模式安裝的問題](#bkmk_tshoot_sharepoint)  
   
 ###  <a name="bkmk_central_admin_blank"></a> SharePoint 管理中心頁面是空白的  
- **描述：**您可以順利安裝 SharePoint 2013/2016，且未出現安裝錯誤。 但當您瀏覽至管理中心時，只看到了空白頁面：  
+ **描述：** 您可以順利安裝 SharePoint 2013/2016，且未出現安裝錯誤。 但當您瀏覽至管理中心時，只看到了空白頁面：  
   
  **因應措施：** 此問題不是 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 所特有的問題，而是與整體 SharePoint 安裝中的權限組態相關。 下列是建議的清單：  
   
@@ -169,16 +177,16 @@ caps.handback.revision: 13
   
 -   為 SharePoint 服務 (如 SharePoint 2013/2016 管理中心服務) 所使用的服務帳戶，應具有本機作業系統中的管理員權限。  
   
- ![搭配回到頁首連結使用的箭頭圖示](../../analysis-services/instances/media/uparrow16x16.png "搭配回到頁首連結使用的箭頭圖示") [疑難排解 SharePoint 模式安裝的問題](#bkmk_tshoot_sharepoint)  
+ ![搭配回到頁首連結使用的箭號圖示](../../analysis-services/instances/media/uparrow16x16.gif "搭配回到頁首連結使用的箭號圖示")[疑難排解 SharePoint 模式安裝的問題](#bkmk_tshoot_sharepoint)  
   
 ###  <a name="bkmk_reportbuilder_newreport_error"></a> 嘗試建立新的報表產生器報表時看到錯誤訊息  
  **描述：** 嘗試在文件庫中建立報表產生器報表時，會看到類似下列的錯誤訊息：  
   
  尚未支援此功能，因為 SQL Server Reporting Services 服務應用程式不存在，或是未於管理中心設定報表伺服器 URL。  
   
- **因應措施：** 確認您具有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式，且已正確設定。 如需詳細資訊，請參閱[在 SharePoint 模式中安裝第一部報表伺服器](http://msdn.microsoft.com/zh-tw/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538)。
+ **因應措施：** 確認您具有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式，且已正確設定。 如需詳細資訊，請參閱 [在 SharePoint 模式中安裝第一部報表伺服器](http://msdn.microsoft.com/en-us/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538)。
   
- ![搭配回到頁首連結使用的箭頭圖示](../../analysis-services/instances/media/uparrow16x16.png "搭配回到頁首連結使用的箭頭圖示") [疑難排解 SharePoint 模式安裝的問題](#bkmk_tshoot_sharepoint)  
+ ![搭配回到頁首連結使用的箭號圖示](../../analysis-services/instances/media/uparrow16x16.gif "搭配回到頁首連結使用的箭號圖示")[疑難排解 SharePoint 模式安裝的問題](#bkmk_tshoot_sharepoint)  
   
 ###  <a name="bkmk_RS_SHP_notsupported"></a> 您會看到使用 PREPAREIMAGE 時不支援 RS_SHP 的錯誤訊息  
  **描述：** 嘗試執行 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的 PREPAREIMAGE 時，會看到類似下列的錯誤訊息：  
@@ -187,14 +195,14 @@ caps.handback.revision: 13
   
  **因應措施：** 沒有因應措施。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 不支援 SYSPREP (PREPAREIMAGE)。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式支援 SYSPREP。  
   
- ![搭配回到頁首連結使用的箭頭圖示](../../analysis-services/instances/media/uparrow16x16.png "搭配回到頁首連結使用的箭頭圖示") [疑難排解 SharePoint 模式安裝的問題](#bkmk_tshoot_sharepoint)  
+ ![搭配回到頁首連結使用的箭號圖示](../../analysis-services/instances/media/uparrow16x16.gif "搭配回到頁首連結使用的箭號圖示")[疑難排解 SharePoint 模式安裝的問題](#bkmk_tshoot_sharepoint)  
   
 ##  <a name="bkmk_tshoot_native"></a> 疑難排解原生模式安裝的問題  
   
 ###  <a name="PerfCounters"></a> 升級到 Windows Vista 或 Windows Server 2008 之後，看不到效能計數器  
  如果您在執行 [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] 的電腦上，將作業系統升級為 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 或 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，在升級之後將不會設定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 效能計數器。  
   
-#### 若要重新恢復 Reporting Services 效能計數器  
+#### <a name="to-reinstate-reporting-services-performance-counters"></a>若要重新恢復 Reporting Services 效能計數器  
   
 1.  刪除下列登錄機碼：  
   
@@ -204,16 +212,16 @@ caps.handback.revision: 13
   
 2.  開啟命令視窗，然後在命令提示字元下輸入下列命令：  
   
-    -   **run \<** *.NET 4.0 Framework 目錄* **>\InstallUtil.exe \<** *報表伺服器 Bin 目錄* **>\ReportingServicesLibrary.dll**  
+    -   **執行\<**  *.NET 4.0 Framework 目錄* **> \InstallUtil.exe \< ** *報表伺服器 Bin 目錄* **> \ReportingServicesLibrary.dll**  
   
         > [!NOTE]  
-        >  以 .NET Framework 4.0 檔案的實體路徑來取代 \<*.NET 4.0 Framework 目錄*>，並以報表伺服器 bin 檔案的實體路徑來取代 \<*報表伺服器 Bin 目錄*>。  
+        >  取代\< *.NET 4.0 Framework 目錄*>.NET Framework 4.0 的實體路徑與檔案和取代\<*報表伺服器 Bin 目錄*> 報表伺服器 bin 檔案的實體路徑。  
   
 3.  重新啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務。  
   
- 若要上述步驟是否有效，請開啟網頁瀏覽器，並導覽至報表管理員 URL 或報表伺服器 URL。 然後，開啟效能監視器來確認計數器是否有在運作。  
+ 若要確認步驟有效，請開啟網頁瀏覽器並瀏覽至入口網站 URL 或報表伺服器 URL。 然後，開啟效能監視器來確認計數器是否有在運作。  
   
-#### 若要使用登錄編輯程式重新加入效能登錄機碼  
+#### <a name="to-re-add-the-performance-registry-keys-by-using-registry-editor"></a>若要使用登錄編輯程式重新加入效能登錄機碼  
   
 1.  開啟登錄編輯程式：  
   
@@ -240,20 +248,22 @@ caps.handback.revision: 13
  修復 64 位元執行個體或手動重新加入登錄機碼後，可以使用效能監視器設定您要監視的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 效能物件。  
   
 ###  <a name="ConfigPropsMissing"></a> 從 SQL Server 2005 升級後，ReportServerExternalURL 和 PassThroughCookies 組態屬性未設定  
- 當您從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 升級成 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]時，升級程序未設定 **ReportServerExternalURL** 和 **PassThroughCookies** 組態屬性。 **ReportServerExternalURL** 是選用屬性，只有當您要使用 SharePoint 2.0 Web 組件，而且希望使用者能夠擷取報表，並在新的瀏覽器視窗中開啟此報表時，才應該設定這個項目。 如需 **ReportServerExternalURL** 的詳細資訊，請參閱[組態檔中的 URL &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md)。 只有在使用自訂驗證方法時，才需要**PassThroughCookies** 。 如需 **PassThroughCookies** 的詳細資訊，請參閱[設定報表管理員傳遞自訂驗證 Cookie](../Topic/Configure%20Report%20Manager%20to%20Pass%20Custom%20Authentication%20Cookies.md)。  
+ 當您從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 升級成 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]時，升級程序未設定 **ReportServerExternalURL** 和 **PassThroughCookies** 組態屬性。 **ReportServerExternalURL** 是選用屬性，只有當您要使用 SharePoint 2.0 Web 組件，而且希望使用者能夠擷取報表，並在新的瀏覽器視窗中開啟此報表時，才應該設定這個項目。 如需 **ReportServerExternalURL** 的詳細資訊，請參閱[組態檔中的 URL &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md)。 只有在使用自訂驗證方法時，才需要**PassThroughCookies** 。 如需有關**PassThroughCookies**，請參閱[設定入口網站，以傳遞自訂驗證 Cookie](../../reporting-services/security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)。  
   
 > [!NOTE]  
 >  當您使用自訂驗證時，建議您移轉安裝，而不要執行升級。 如需移轉 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的詳細資訊，請參閱[移轉 Reporting Services 安裝 &#40;原生模式&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)。  
   
  根據預設，這些屬性不存在 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 組態中。 如果您在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中設定了這些屬性，而且仍然需要這些屬性的功能，就必須在升級程序之後將這些屬性手動加入至 **RSReportServer.config** 檔案。 如需詳細資訊，請參閱[修改 Reporting Services 組態檔 &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)。  
+
+### <a name="WindowsAuthBreaksAfterUpgrade"></a>401-未經授權錯誤，使用從 SQL Server 2005 升級至 SQL Server 2016 後的 Windows 驗證時
+
+ 如果您從[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]至[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]，而且報表伺服器服務帳戶使用 NTLM 驗證及內建帳戶，在升級後存取報表伺服器或 web 入口網站時，您可能會遇到 401 未經授權的錯誤。  
   
-###  <a name="WindowsAuthBreaksAfterUpgrade"></a> 從 SQL Server 2005 升級至下者之後，使用 Windows 驗證時發生 401 未經授權錯誤： [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
- 如果您從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 升級到 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]，而且對報表伺服器服務帳戶使用 NTLM 驗證及內建帳戶，當您在升級後存取報表伺服器或報表管理員時，可能會遇到 401 未經授權錯誤。  
-  
- 之所以發生這個錯誤，是因為 Windows 驗證的預設 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 組態中出現變更。 當報表伺服器服務帳戶是 Network Service 或 Local System 時，會設定交涉。 如果報表伺服器服務帳戶不是上述其中一個內建帳戶時，則會設定 NTLM。 若要在升級後修正這個問題，您可以編輯 RSReportServer.config 檔案，並將 **AuthenticationType** 設定成 **RSWindowsNTLM**。 如需詳細資訊，請參閱[設定報表伺服器上的 Windows 驗證](../../reporting-services/security/configure-windows-authentication-on-the-report-server.md)。  
-  
-###  <a name="Uninstall32BitBreaks64Bit"></a> 在包含 64 位元執行個體的並存部署中，解除安裝 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Reporting Services 的 32 位元執行個體會中斷 64 位元執行個體  
- 當您在電腦上並存安裝 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 的 32 位元執行個體與 64 位元執行個體後，如果解除安裝 32 位元執行個體，就會移除四個 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 登錄機碼。 這會中斷 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的 64 位元執行個體。 當您解除安裝 32 位元執行個體時，會移除的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 登錄機碼如下：  
+ 之所以發生這個錯誤，是因為 Windows 驗證的預設 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 組態中出現變更。 當報表伺服器服務帳戶是 Network Service 或 Local System 時，會設定交涉。 如果報表伺服器服務帳戶不是上述其中一個內建帳戶時，則會設定 NTLM。 若要在升級後修正這個問題，您可以編輯 RSReportServer.config 檔案，並將 **AuthenticationType** 設定成 **RSWindowsNTLM**。 如需詳細資訊，請參閱 [設定報表伺服器上的 Windows 驗證](../../reporting-services/security/configure-windows-authentication-on-the-report-server.md)。  
+
+### <a name="Uninstall32BitBreaks64Bit"></a>解除安裝 32 位元執行個體的 SQL Server 2016 Reporting Services 的並存部署中與 64 位元執行個體中斷 64 位元執行個體
+
+ 當您在電腦上並存安裝 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 的 32 位元執行個體與 64 位元執行個體後，如果解除安裝 32 位元執行個體，就會移除四個 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 登錄機碼。 這會中斷 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的 64 位元執行個體。 當您解除安裝 32 位元執行個體時，會移除的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 登錄機碼如下：  
   
  `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MSRS 2016 Web Service\Performance:Counter Names` `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MSRS 2016 Windows Service\Performance:Counter Names` `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MSRS 2016 Web Service\Performance:Counter Types` `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MSRS 2016 Windows Service\Performance:Counter Types`  
   
@@ -265,10 +275,11 @@ caps.handback.revision: 13
 ##  <a name="bkmk_additional"></a> 其他資源  
  下列為您可檢閱以協助您進行問題疑難排解的其他資源：  
   
--   TechNet Wiki：疑難排解主題[疑難排解 SharePoint 整合模式的 SQL Server Reporting Services (SSRS)](http://social.technet.microsoft.com/wiki/contents/articles/troubleshoot-sql-server-reporting-services-ssrs-in-sharepoint-integrated-mode.aspx)  
+-   TechNet Wiki：疑難排解主題 [疑難排解 SharePoint 整合模式的 SQL Server Reporting Services (SSRS)](http://social.technet.microsoft.com/wiki/contents/articles/troubleshoot-sql-server-reporting-services-ssrs-in-sharepoint-integrated-mode.aspx)  
   
 -   [論壇：SQL Server Reporting Services](http://social.msdn.microsoft.com/Forums/sqlreportingservices/threads)  
   
- ![SharePoint 設定](../../analysis-services/media/as-sharepoint2013-settings-gear.png "SharePoint 設定") [透過 Microsoft SQL Server Connect 提交意見與連絡資訊](https://connect.microsoft.com/SQLServer/Feedback) (https://connect.microsoft.com/SQLServer/Feedback)。  
+ ![SharePoint 設定](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 設定")[透過 Microsoft SQL Server Connect 提交意見和連絡資訊](https://connect.microsoft.com/SQLServer/Feedback)(https://connect.microsoft.com/SQLServer/Feedback)。  
   
   
+

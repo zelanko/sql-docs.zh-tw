@@ -1,32 +1,37 @@
 ---
-title: "設定報表的資料來源屬性 (報表管理員) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "資料來源 [Reporting Services], 內嵌"
+title: "設定報表 （報表管理員） 的資料來源屬性 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data sources [Reporting Services], embedded
 ms.assetid: 27af5195-c845-40e0-9a9c-efe569424022
 caps.latest.revision: 44
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 44
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d4edfc347b8ad4bb90d807f4f0c9ecc602ca3f2e
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 設定報表的資料來源屬性 (報表管理員)
+# <a name="configure-data-source-properties-for-a-report--report-manager"></a>設定報表的資料來源屬性 (報表管理員)
   當您執行報表時，報表伺服器會擷取屬性資訊來判斷如何連接至資料來源。 資料來源類型、連接字串和認證資訊都是在已發行報表的 [資料來源] 屬性頁面中指定的。 您可以設定這些屬性，讓資料來源連接資訊與建立報表時所指定的原始值不同。  
   
  或者，如果您擁有已經指定您想要使用之連接資訊的預先定義共用資料來源，就可以改為指定此共用資料來源。 若要使用共用資料來源，請在報表的 [資料來源] 屬性頁面上，按一下 **[共用資料來源]** 。  
   
-### 若要設定內嵌資料來源  
+### <a name="to-configure-an-embedded-data-source"></a>若要設定內嵌資料來源  
   
-1.  啟動[報表管理員 &#40;SSRS 原生模式&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md)。  
+1.  啟動[報表管理員 &#40;SSRS 原生模式&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)。  
   
 2.  在報表管理員中，導覽至 **[內容]** 頁面。 導覽至您要為其設定報表特定資料來源的報表，然後開啟報表。  
   
@@ -58,12 +63,12 @@ caps.handback.revision: 44
   
  如需設定認證的詳細資訊，請參閱[指定報表資料來源的認證及連接資訊](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)。 如需自動執行帳戶的詳細資訊，請參閱[設定自動執行帳戶 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。  
   
-## 請參閱＜  
- [內容頁面 &#40;報表管理員&#41;](../Topic/Contents%20Page%20\(Report%20Manager\).md)   
- [新增資料來源頁面 &#40;報表管理員&#41;](../Topic/New%20Data%20Source%20Page%20\(Report%20Manager\).md)   
+## <a name="see-also"></a>另請參閱  
+ [內容頁面 &#40;報表管理員&#41;](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
+ [新增資料來源頁面 &#40;報表管理員&#41;](http://msdn.microsoft.com/library/35563d4c-a3d5-4f95-bf46-605da9dfcbb8)   
  [建立、修改和刪除共用資料來源 &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)   
  [管理報表資料來源](../../reporting-services/report-data/manage-report-data-sources.md)   
- [建立、刪除或修改共用資料來源 &#40;報表管理員&#41;](../Topic/Create,%20Delete,%20or%20Modify%20a%20Shared%20Data%20Source%20\(Report%20Manager\).md)   
- [資料來源屬性頁面 &#40;報表管理員&#41;](../Topic/Data%20Sources%20Properties%20Page%20\(Report%20Manager\).md)  
+ [建立、刪除或修改共用資料來源 &#40;報表管理員&#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
+ [資料來源屬性頁面 &#40;報表管理員&#41;](http://msdn.microsoft.com/library/f37edda0-19e6-489e-b544-8751fa6b6cfb)  
   
   

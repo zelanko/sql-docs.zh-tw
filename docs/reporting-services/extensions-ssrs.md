@@ -1,31 +1,36 @@
 ---
-title: "延伸模組 (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "延伸模組 (SSRS) |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2bb0fdca-1837-49f5-b542-61826bab0b46
 caps.latest.revision: 7
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 7
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d8ec3b39a36a6020a6655e7c7e7c2a589266f3fc
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 延伸模組 (SSRS)
+# <a name="extensions-ssrs"></a>延伸模組 (SSRS)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中的報表伺服器會使用延伸模組，以模塊化其接受用於驗證、資料處理、報表轉譯及報表傳遞的輸入或輸出類型。 這可讓現有的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 安裝輕鬆地利用產業中的新軟體標準，例如新驗證結構，或是自訂資料來源類型。 報表伺服器支援自訂驗證延伸模組、資料處理延伸模組、報表處理延伸模組、轉譯延伸模組和傳遞延伸模組，以及在 RSReportServer.config 組態檔中適用於使用者的可設定延伸模組。 例如，您可以限制報表檢視器允許使用的匯出格式。 報表伺服器至少需要一個驗證延伸模組、資料處理延伸模組和轉譯延伸模組。 傳遞與報表處理延伸模組是選擇性的，但是您若要支援報表散發或自訂控制項，則是必要的。  
   
  此主題描述 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]中便於使用的延伸模組。  
   
-## 安全性延伸模組  
+## <a name="security-extensions"></a>安全性延伸模組  
  安全性延伸模組用於驗證和授權使用者與群組至報表伺服器。 預設的安全性延伸模組會以 Windows 驗證為基礎。 如果您的部署模型需要其他驗證方法 (例如，您的網際網路或外部網路部署若是需要以表單為基礎的驗證)，也可以建立自訂安全性延伸模組以取代預設的安全性。 在單一 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 安裝中，只能使用一個安全性延伸模組。 您可以取代預設的 Windows 驗證安全性延伸模組，但是不能和自訂安全性延伸模組一起使用。  
   
-## 資料處理延伸模組  
+## <a name="data-processing-extensions"></a>資料處理延伸模組  
  資料處理延伸模組可用於查詢資料來源，並傳回扁平化的資料列集。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 會使用不同的延伸模組與不同的資料來源類型互動。 您可以使用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]內含的延伸模組，或者開發自己的延伸模組。 目前提供了 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、Oracle、 [!INCLUDE[SAP_DPE_BW_1](../includes/sap-dpe-bw-1-md.md)]、Hyperion Essbase、Teradata、OLE DB 和 ODBC 資料來源的資料處理延伸模組。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 也可以使用任何 [!INCLUDE[vstecado](../includes/vstecado-md.md)] 資料提供者。 資料處理延伸模組會藉由執行下列工作來處理報表處理器元件的查詢要求：  
   
 -   開啟資料來源的連接。  
@@ -52,7 +57,7 @@ caps.handback.revision: 7
   
 -   反覆運算資料列並擷取輔助中繼資料。  
   
-## 轉譯延伸模組  
+## <a name="rendering-extensions"></a>轉譯延伸模組  
  轉譯延伸模組會將報表處理器的資料與配置資訊轉換成裝置特定格式。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 包含七個轉譯延伸模組：HTML、Excel、CSV、XML、Image、PDF 和 [!INCLUDE[msCoName](../includes/msconame-md.md)] Word。  
   
 -   **HTML 轉譯延伸模組** ：當您透過網頁瀏覽器向報表伺服器要求報表時，報表伺服器就會使用 HTML 轉譯延伸模組來轉譯報表。 HTML 轉譯延伸模組會使用 UTF-8 編碼來產生所有 HTML。 如需詳細資訊，請參閱[轉譯為 HTML &#40;報表產生器及 SSRS&#41;](../reporting-services/report-builder/rendering-to-html-report-builder-and-ssrs.md) 和 [Reporting Services 和 Power View 的瀏覽器支援](../reporting-services/browser-support-for-reporting-services-and-power-view.md)。  
@@ -69,10 +74,10 @@ caps.handback.revision: 7
   
 -   **Microsoft Word 轉譯延伸模組** ： [!INCLUDE[msCoName](../includes/msconame-md.md)] Word 轉譯延伸模組會將報表轉譯成與 [!INCLUDE[msCoName](../includes/msconame-md.md)] Office Word 2000 或更新版本相容的 Word 文件。 如需詳細資訊，請參閱[匯出至 Microsoft Word &#40;報表產生器及 SSRS&#41;](../reporting-services/report-builder/exporting-to-microsoft-word-report-builder-and-ssrs.md)。  
   
-## 報表處理延伸模組  
+## <a name="report-processing-extensions"></a>報表處理延伸模組  
  您可以加入報表處理延伸模組，以便提供 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]中未包含之報表項目的自訂報表處理。 根據預設，報表伺服器可以處理資料表、圖表、矩陣、清單、文字方塊、影像和其他所有報表項目。 如果您想要將特殊功能加入在報表執行過程中需要自訂處理的報表 (例如，想要內嵌 [!INCLUDE[msCoName](../includes/msconame-md.md)] MapPoint 對應)，則可以建立報表處理延伸模組來執行。  
   
-## 傳遞延伸模組  
+## <a name="delivery-extensions"></a>傳遞延伸模組  
  背景處理應用程式會使用傳遞延伸模組，將報表傳遞至各個位置。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 包括電子郵件傳遞延伸模組以及檔案共用傳遞延伸模組。 電子郵件傳遞延伸模組會透過 Simple Mail Transport Protocol (SMTP)，傳送包含報表本身或連至報表之 URL 連結的電子郵件訊息。 也可以將沒有 URL 連結或報表的短訊傳送到呼叫器、電話或其他裝置。 檔案共用傳遞延伸模組會將報表儲存到您網路上的共用資料夾。 您可以為所建立的檔案指定位置、轉譯格式、檔案名稱和覆寫選項。 您可以使用檔案共用傳遞封存轉譯的報表，並當成處理非常大型報表之策略的一部分。 傳遞延伸模組配合訂閱使用。 使用者建立訂閱時，選擇可用的傳遞延伸模組之一，以決定如何傳遞報表。  
   
   

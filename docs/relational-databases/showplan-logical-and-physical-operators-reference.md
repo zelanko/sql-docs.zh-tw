@@ -1,7 +1,7 @@
 ---
 title: "執行程序邏輯和實體運算子參考 | Microsoft 文件"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 05/31/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -140,10 +140,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f5b8af0e5293ff06927c043b2fb3aded1fab7591
+ms.sourcegitcommit: 3fc2a681f001906cf9e819084679db097bca62c7
+ms.openlocfilehash: f9a7d0d8023cac77ef0a2d9e7308a419a4518931
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/31/2017
 
 ---
 # <a name="showplan-logical-and-physical-operators-reference"></a>執行程序邏輯和實體運算子參考
@@ -183,8 +183,9 @@ ms.lasthandoff: 04/11/2017
 ## <a name="operator-descriptions"></a>運算子描述  
  本節包含邏輯與實體運算子的說明：  
   
-|圖形執行計畫圖示|Showplan 運算子|描述|  
+|圖形執行計畫圖示|Showplan 運算子|Description|  
 |-----------------------------------|-----------------------|-----------------|  
+|![自動調整的聯結運算子圖示](../relational-databases/media/AdaptiveJoin.gif "適應性聯結運算子圖示")|**自動調整的聯結**|**適應性聯結**運算子可讓延後到雜湊聯結或巢狀的迴圈聯結方法的選擇之後已經掃描的第一個輸入。 | 
 |無|**Aggregate**|**Aggregate** 運算子會計算包含 MIN、MAX、SUM、COUNT 或 AVG 的運算式。 **Aggregate** 運算子可以是邏輯運算子或實體運算子。|  
 |![算術運算式運算子圖示](../relational-databases/media/arithmetic-expression-32x-2.gif "算術運算式運算子圖示")|**算術運算式**|「算術運算式」運算子會從資料列中現有的值計算出新的值。 「算術運算式」無法用於 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 中。|  
 |![判斷提示運算子圖示](../relational-databases/media/assert-32x.gif "判斷提示運算子圖示")|**判斷提示**|「判斷提示」運算子會驗證條件。 例如，它會驗證參考完整性，或確定純量子查詢傳回一個資料列。 「判斷提示」運算子會針對每個輸入資料列來評估執行計畫之 **Argument** 資料行中的運算式。 如果這個運算式評估為 NULL，代表資料列通過「判斷提示」運算子的驗證，則查詢會繼續執行。 如果這個運算式得出非 Null 值，就會得出相對的錯誤。 「判斷提示」運算子是實體運算子。|  
@@ -194,7 +195,7 @@ ms.lasthandoff: 04/11/2017
 |![點陣圖運算子圖示](../relational-databases/media/bitmap-32x.gif "點陣圖運算子圖示")|**點陣圖建立**|「點陣圖建立」運算子會出現在建立點陣圖的 Showplan 輸出中。 **點陣圖建立** 是邏輯運算子。|  
 |![書籤查閱運算子圖示](../relational-databases/media/bookmark-lookup-32x.gif "書籤查閱運算子圖示")|**書籤查閱**|「書籤查閱」運算子使用書籤 (資料列識別碼或叢集索引鍵) 在資料表或叢集索引中查詢對應的資料列。 **Argument** 資料行中包含用來在資料表或叢集索引中查詢資料列的書籤標記。 **Argument** 資料行中也包含查詢資料列的資料表或叢集索引的名稱。 如果 **Argument** 資料行中出現 WITH PREFETCH 子句，表示查詢處理器已決定在資料表或叢集索引中查詢書籤時，使用非同步預先提取 (預先讀取) 是最佳方法。<br /><br /> 「書籤查閱」無法用於 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 中。 不過，[叢集索引搜尋] 和 [RID 查閱] 會提供書籤查閱功能。 「索引鍵查閱」運算子也提供這項功能。|  
 |無|**分支重新分割**|在平行查詢計畫中，有時候會有 Iterator 的概念區。 在這種區域內的所有 Iterator，都可以由平行執行緒來執行。 區域本身必須連續執行。 個別區域內的一些「平行處理原則」Iterator，稱作「分支重新分割」。 在兩個這種區域的界限上的「平行處理原則」Iterator，稱作「區段重新分割」。 「分支重新分割」和「區段重新分割」都是邏輯運算子。|  
-|無|**廣播**|「廣播」有一個子節點和 *n* 個父節點。 「廣播」會依要求將其輸入資料列傳送至多位取用者。 每位取用者都會收到所有資料列。 例如，若所有取用者都是雜湊聯結的建立者，則會建立 *n* 份雜湊資料表。|  
+|無|**廣播**|**廣播**有一個子節點和 *n* 父節點。 「廣播」會依要求將其輸入資料列傳送至多位取用者。 每位取用者都會收到所有資料列。 例如，若所有取用者都建立的雜湊聯結，然後 *n* 將建置份雜湊資料表。|  
 |![建立雜湊運算子圖示](../relational-databases/media/build-hash.gif "建立雜湊運算子圖示")|**建立雜湊**|指示建立 xVelocity 記憶體最佳化的資料行存放區索引之批次雜湊資料表。|  
 |無|**Cache**|「快取」是特殊版的「多工緩衝處理」運算子。 它只儲存一列資料。 「快取」是邏輯運算子。 「快取」無法用於 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 中。|  
 |![叢集索引刪除運算子圖示](../relational-databases/media/clustered-index-delete-32x.gif "叢集索引刪除運算子圖示")|**叢集索引刪除**|「叢集索引刪除」運算子會從查詢執行計畫之 Argument 資料行所指定的叢集索引中刪除資料列。 如果 Argument 資料行中出現 WHERE:() 述詞，就只會刪除滿足述詞的資料列。「叢集索引刪除」是實體運算子。|  
@@ -278,7 +279,7 @@ ms.lasthandoff: 04/11/2017
 |![分割運算子圖示](../relational-databases/media/split-32x.gif "分割運算子圖示")|**分割**|「分割」運算子可用以最佳化更新處理。 它會將每個更新分割成一個刪除和一個插入作業。 「分割」是邏輯與實體運算子。|  
 |![多工緩衝處理運算子圖示](../relational-databases/media/spool-32x.gif "多工緩衝處理運算子圖示")|**多工緩衝處理**|「多工緩衝處理」運算子會將中繼查詢結果儲存到 **tempdb** 資料庫。|  
 |![資料流彙總運算子圖示](../relational-databases/media/stream-aggregate-32x.gif "資料流彙總運算子圖示")|**Stream Aggregate**|「資料流彙總」運算子會依據一個或多個資料行將資料列分組，然後計算查詢所傳回的一個或多個彙總運算式。 這個運算子的輸出可稍後由查詢中的運算子參考，並/或傳回到用戶端。 「資料流彙總」運算子需要其群組內的輸入項目依資料行排列。 如果資料因為前面的「排序」運算子或因為已排序索引搜尋或掃描，而尚未排序，最佳化工具就會在這個運算子之前使用「排序」運算子。 在 SHOWPLAN_ALL 陳述式或 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 的圖形執行計畫中，GROUP BY 述詞中的資料行會列於 **Argument** 資料行中，而彙總運算式則會列在 **Defined Values** 資料行中。 「資料流彙總」是實體運算子。|  
-|![參數運算子圖示](../relational-databases/media/switch-32x.gif "參數運算子圖示")|**參數**|「參數」是一種特殊類型的串連 Iterator，它有 *n* 個輸入。 運算式與每一個「參數」運算子相關聯。 根據運算式的傳回值 (介於 0 和 *n*-1 之間)，「參數」會將適當的輸入資料流複製到輸出資料流。 「參數」的用途之一是實作查詢計畫，包括利用某些運算子向前快轉資料指標，例如 **TOP** 運算子。 「參數」同時為邏輯和實體運算子。|  
+|![參數運算子圖示](../relational-databases/media/switch-32x.gif "參數運算子圖示")|**參數**|**交換器**是特殊類型的串連 iterator，它有 *n* 輸入。 運算式與每一個「參數」運算子相關聯。 根據運算式的傳回值 (介於 0 和 *n* -1)，**交換器**將適當的輸入資料流複製到輸出資料流。 「參數」的用途之一是實作查詢計畫，包括利用某些運算子向前快轉資料指標，例如 **TOP** 運算子。 「參數」同時為邏輯和實體運算子。|  
 |![資料表刪除運算子圖示](../relational-databases/media/table-delete-32x.gif "資料表刪除運算子圖示")|**資料表刪除**|「資料表刪除」實體運算子會從查詢執行計畫之 **Argument** 資料行所指定的資料表中刪除資料列。|  
 |![資料表插入運算子圖示](../relational-databases/media/table-insert-32x.gif "資料表插入運算子圖示")|**資料表插入**|「資料表插入」運算子會從輸入將資料列插入查詢執行計畫之 **Argument** 資料行所指定的資料表中。 **Argument** 資料行也包含 SET:() 述詞，指出每一個資料行設定的值。 如果「資料表插入」沒有插入值的子系，則會從插入運算子本身取得插入的資料列。 「資料表插入」是實體運算子。|  
 |![資料表合併運算子](../relational-databases/media/table-merge-32x.gif "資料表合併運算子")|**資料表合併**|「資料表合併」運算子會將合併資料流套用到堆積中。 此運算子會從運算子之 **Argument** 資料行內所指定的資料表中刪除、更新或插入資料列。 所執行的實際作業取決於運算子之 **Argument** 資料行內指定之 **ACTION** 資料行的執行階段值。 「資料表合併」是實體運算子。|  
@@ -295,3 +296,4 @@ ms.lasthandoff: 04/11/2017
 |![資料表多工緩衝處理運算子圖示](../relational-databases/media/table-spool-32x.gif "資料表多工緩衝處理運算子圖示")|**視窗多工緩衝處理**|「視窗多工緩衝處理」運算子會將每一列展開成一組資料列，分別代表與其關聯的視窗。 查詢中的 OVER 子句會定義查詢結果集中的視窗，以及一個計算視窗中各資料列值的視窗函數。 「視窗多工緩衝處理」是邏輯與實體運算子。|  
   
   
+

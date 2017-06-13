@@ -1,24 +1,29 @@
 ---
-title: "加入或刪除指標 (報表產生器及 SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "加入或刪除指標 （報表產生器及 SSRS） |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a8b1aac1-53ef-47a4-afc0-8fa866c6c480
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1356d575f58eb36d00f52bcbac1483ce902b1954
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 加入或刪除指標 (報表產生器及 SSRS)
-  在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表中，指標是最小的量測計，看一眼就可傳達單一資料值的狀態。 如需指標的詳細資訊，請參閱[指標 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)。  
+# <a name="add-or-delete-an-indicator-report-builder-and-ssrs"></a>加入或刪除指標 (報表產生器及 SSRS)
+  在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表中，指標是最小的量測計，看一眼就可傳達單一資料值的狀態。 如需指標的詳細資訊，請參閱 [指標 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)。  
   
  指標通常會放在資料表或矩陣的資料格中，但是您也可以單獨使用指標、與量測計並存使用，或是內嵌在量測計中。  
   
@@ -39,7 +44,7 @@ caps.handback.revision: 8
 > [!NOTE]  
 >  根據資料值的資料行寬度和長度，資料表或矩陣資料格中的文字可能會換行，並將文字顯示在多行上。 發生這個情況時，指標圖示可能會伸展並變更形狀。 這可能會使指標圖示較不容易讀取。 將指標放在矩形內部以確認圖示絕不會伸展。  
   
-## 若要將指標加入至資料表或矩陣  
+## <a name="to-add-an-indicator-to-a-table-or-matrix"></a>若要將指標加入至資料表或矩陣  
   
 1.  開啟現有的報表，或建立新的報表，其中包含的資料表和矩陣含有您想要顯示的資料。 如需詳細資訊，請參閱[資料表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md) 或[矩陣](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)。  
   
@@ -61,7 +66,7 @@ caps.handback.revision: 8
   
      指標會設定為使用預設值。 根據預設，指標會設定為使用百分比當做度量單位，而且百分比範圍會平均分佈在指標的成員當中，而指標傳達的值會使用最近的群組範圍。  
   
-## 若要刪除資料表或矩陣中的指標  
+## <a name="to-delete-an-indicator-to-a-table-or-matrix"></a>若要刪除資料表或矩陣中的指標  
   
 1.  以滑鼠右鍵按一下要刪除的指標，然後按一下 [刪除]。  
   
@@ -70,7 +75,7 @@ caps.handback.revision: 8
   
 2.  按一下 **[刪除]**。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [指標 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   
   

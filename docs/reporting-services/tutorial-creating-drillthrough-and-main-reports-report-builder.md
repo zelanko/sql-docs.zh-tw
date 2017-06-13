@@ -1,102 +1,58 @@
 ---
-title: "教學課程：建立鑽研及主報表 (報表產生器) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: "教學課程： 建立鑽研及主報表 （報表產生器） |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 caps.latest.revision: 14
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 12
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 0c67ffbd38887cd9428551a369a4d864d8b972d8
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 教學課程：建立鑽研及主報表 (報表產生器)
+# <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>教學課程：建立鑽研及主報表 (報表產生器)
 本教學課程將教導您如何建立兩種 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分頁報表：鑽研報表和主報表。 這些報表中使用的範例銷售資料是從 Analysis Services Cube 擷取的。 
 
 下圖顯示您將建立的報表，並顯示主報表中的欄位值 Games and Toys 如何顯示在鑽研報表的標題中。 鑽研報表中的資料與 Games and Toys 產品類別目錄有關。  
   
 ![rs_DrillthroughCubeTutorial](../reporting-services/media/rs-drillthroughcubetutorial.gif "rs_DrillthroughCubeTutorial")  
-  
-## 學習內容  
-**在鑽研報表中，您將了解：**  
-  
-1.  [從資料表或矩陣精靈建立鑽研矩陣報表和資料集](#DMatrixAndDataset)  
-  
-    1.  [指定資料連接](#DConnection)  
-  
-    2.  [建立 MDX 查詢](#DMDXQuery)  
-  
-    3.  [將資料組織為群組樣式](#DLayout)  
-  
-    4.  [加入小計和總計](#DTotals)  
-  
-2.  [將資料格式化為貨幣](#DFormat)  
-  
-3.  [加入資料行以便在走勢圖中顯示銷售值](#DSparkline)  
-  
-4.  [加入具有產品類別目錄名稱的報表標題](#DReportTitle)  
-  
-5.  [更新參數屬性](#DParameter)  
-  
-6.  [將報表儲存至 SharePoint 文件庫](#DSave)  
-  
-**在主報表中，您將了解：**  
-  
-1.  [從資料表或矩陣精靈建立主要矩陣報表和資料集](#MMatrixAndDataset)  
-  
-    1.  [指定資料連接](#MConnection)  
-  
-    2.  [建立 MDX 查詢](#MMDXQuery)  
-  
-    3.  [將資料組織為群組](#MLayout)  
-  
-    4.  [加入小計和總計](#MTotals)  
-  
-2.  [移除總計資料列](#MGrandTotal)  
-  
-3.  [設定用於鑽研的文字方塊動作](#MDrillthrough)  
-  
-4.  [以指標取代數值](#MIndicators)  
-  
-5.  [更新參數屬性](#MParameter)  
-  
-6.  [加入報表標題](#MTitle)  
-  
-7.  [將報表儲存至 SharePoint 文件庫](#MSave)  
-  
-8.  [執行主報表和鑽研報表](#MRunReports)  
-  
+   
 完成本教學課程的估計時間：30 分鐘。  
   
-## 需求  
+## <a name="requirements"></a>需求  
 本教學課程需要存取鑽研報表和主報表的 Contoso Sales Cube。 這個資料集包含 ContosoDW 資料倉儲和 Contoso_Retail 線上分析處理 (OLAP) 資料庫。 您將在此教學課程中建立的報表會從 Contoso Sales Cube 擷取報表資料。 Contoso_Retail OLAP 資料庫可以從 [Microsoft 下載中心](http://go.microsoft.com/fwlink/?LinkID=191575)下載。 您只需要下載 ContosoBIdemoABF.exe 檔。 它包含 OLAP 資料庫。  
   
-    The other file, ContosoBIdemoBAK.exe, is for the ContosoDW data warehouse, which is not used in this tutorial.  
+另一個檔案 ContosoBIdemoBAK.exe 則是供 ContosoDW 資料倉儲使用，在此教學課程中不會使用這個檔案。  
   
-    The Web site includes instructions extracting and restoring the ContosoRetail.abf backup file to the Contoso_Retail OLAP database.  
-  
-    You must have access to an instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] on which to install the OLAP database.  
+此網站包含解壓縮 ContosoRetail.abf 備份檔案，並將其還原至 Contoso_Retail OLAP 資料庫的指示。  
+
+您必須能夠存取要在其上安裝 OLAP 資料庫的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體。  
     
 如需一般需求的詳細資訊，請參閱[教學課程的必要條件 &#40;報表產生器&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md)。  
   
 ## <a name="DMatrixAndDataset"></a>1.從資料表或矩陣精靈建立鑽研報表  
 從 [使用者入門] 對話方塊中，使用 **[資料表或矩陣精靈]**建立矩陣報表。 精靈中可用的模式有兩種：報表設計和共用資料集設計。 在本教學課程中，您將使用報表設計模式。  
   
-#### 建立新的報表  
+#### <a name="to-create-a-new-report"></a>建立新的報表  
   
 1.  從您的電腦、[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] Web 入口網站或 SharePoint 整合模式[啟動報表產生器](../reporting-services/report-builder/start-report-builder.md)。  
   
     [新報表或資料集] 對話方塊隨即開啟。  
   
-    如果您看不到 [新報表或資料集] 對話方塊，請按一下 [檔案] 功能表 > [新增]。  
+    如果未顯示 [新報表或資料集] 對話方塊，請按一下 [檔案] 功能表 > [新增]。  
   
 2.  在左窗格中，確認已選取 **[新增報表]** 。  
   
@@ -105,7 +61,7 @@ caps.handback.revision: 12
 ## <a name="DConnection"></a>1a. 指定資料連接  
 資料連接包含連接至外部資料來源所需的資訊，例如 Analysis Services Cube 或 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫。 若要指定資料連接，您可以使用來自報表伺服器的共用資料來源，或是建立僅在此報表中使用的內嵌資料來源。 在本教學課程中，您將使用內嵌資料來源。 若要深入了解如何使用共用資料來源，請參閱[取得資料連接的替代方式 &#40;報表產生器&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)。  
   
-#### 建立內嵌資料來源  
+#### <a name="to-create-an-embedded-data-source"></a>建立內嵌資料來源  
   
 1.  在 **[選擇資料集]** 頁面上，選取 **[建立資料集]**，然後按 **[下一步]**。 **[選擇與資料來源的連接]** 頁面隨即開啟。  
   
@@ -115,7 +71,7 @@ caps.handback.revision: 12
   
 4.  在 **[選取連接類型]**中，選取 **[Microsoft SQL Server Analysis Services]**，然後按一下 **[建立]**。  
   
-5.  在 [資料來源] 中，確認資料來源為 [Microsoft SQL Server Analysis Services (AdomdClient)]。  
+5.  在 **[資料來源]**中，確認資料來源為 **[Microsoft SQL Server Analysis Services (AdomdClient)]**。  
   
 6.  在 **[伺服器名稱]**中，輸入安裝 Analysis Services 執行個體所在伺服器的名稱。  
   
@@ -151,14 +107,14 @@ caps.handback.revision: 12
 ## <a name="DMDXQuery"></a>1b. 建立 MDX 查詢  
 在報表中，您可以使用擁有預先定義查詢的共用資料集，或是建立只在報表中使用的內嵌資料集。 在本教學課程中，您將建立內嵌資料集。  
   
-#### 若要建立查詢篩選  
+#### <a name="to-create-query-filters"></a>若要建立查詢篩選  
   
 1.  在 [設計查詢] 頁面的 [中繼資料] 窗格中，按一下 **(…)** 按鈕。  
   
 2.  在 [選取 Cube] 對話方塊中，按一下 [Sales]，然後按一下 [確定]。  
   
     > [!TIP]  
-    > 如果您不想要手動建立 MDX 查詢，請按一下 ![切換到設計模式](../reporting-services/media/rsqdicon-designmode.png "切換到設計模式") 圖示，將查詢設計工具切換到 [查詢] 模式，並將完成的 MDX 貼到查詢設計工具中，然後繼續進行[建立資料集](#DSkip)中的步驟 6。  
+    > 如果您不想要手動建立 MDX 查詢，按一下![切換到設計模式](../reporting-services/media/rsqdicon-designmode.gif "Switch to Design mode")圖示，切換到查詢模式的查詢設計工具、 完成的 MDX 查詢設計工具中，貼上，然後繼續進行步驟 6 中[建立資料集](#DSkip)。  
   
     ```  
     SELECT NON EMPTY { [Measures].[Sales Amount], [Measures].[Sales Return Amount] } ON COLUMNS, NON EMPTY { ([Channel].[Channel Name].[Channel Name].ALLMEMBERS * [Product].[Product Category Name].[Product Category Name].ALLMEMBERS * [Product].[Product Subcategory Name].[Product Subcategory Name].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Date].[Calendar Year].&[2009] } ) ON COLUMNS FROM ( SELECT ( { [Sales Territory].[Sales Territory Group].&[North America] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(@ProductProductCategoryName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Channel].[Channel Name].&[2], [Channel].[Channel Name].&[4] } ) ON COLUMNS FROM [Sales])))) WHERE ( [Sales Territory].[Sales Territory Group].&[North America], [Date].[Calendar Year].&[2009] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS  
@@ -190,7 +146,7 @@ caps.handback.revision: 12
   
     此查詢現在包含一個僅內含 2009 年日曆年度的篩選。  
   
-#### 若要建立參數  
+#### <a name="to-create-the-parameter"></a>若要建立參數  
   
 1.  展開 Product 維度，然後將 Product Category Name 拖曳到 [階層] 資料行 (在 [日曆年度] 底下)。  
   
@@ -201,7 +157,7 @@ caps.handback.revision: 12
     > [!NOTE]  
     > 此參數包含產品類別目錄的名稱。 當您按一下主報表中的產品類別目錄名稱時，系統會使用此參數將其名稱傳遞到鑽研報表。  
   
-### <a name="DSkip"></a>若要建立資料集  
+### <a name="DSkip"></a>建立資料集  
   
 1.  從 Channel 維度中，將 Channel Name 拖曳至資料窗格。  
   
@@ -220,7 +176,7 @@ caps.handback.revision: 12
 ## <a name="DLayout"></a>1c. 將資料組織為群組  
 當您選取將資料分組的欄位時，會設計包含資料列和資料行的矩陣，以顯示詳細資料和彙總資料。  
   
-#### 若要將資料組織為群組  
+#### <a name="to-organize-data-into-groups"></a>若要將資料組織為群組  
   
 1.  若要切換成 [設計] 檢視，按一下 **[設計]**。  
   
@@ -246,7 +202,7 @@ caps.handback.revision: 12
 ## <a name="DTotals"></a>1d. 加入小計和總計  
 建立群組之後，您可以加入並格式化要顯示欄位彙總值的資料列。 您也可以選擇要顯示所有資料，或是讓使用者以互動方式展開和摺疊分組資料。  
   
-#### 加入小計和總計  
+#### <a name="to-add-subtotals-and-totals"></a>加入小計和總計  
   
 1.  在 **[選擇配置]** 頁面的 **[選項]**下方，確定已選取 **[顯示小計和總計]** 。  
   
@@ -258,12 +214,12 @@ caps.handback.revision: 12
   
     資料表會加入至設計介面。  
   
-3.  若要預覽報表，請按一下 [執行 (!)]。  
+3.  若要預覽報表，按一下 **[執行 (!)]**。  
   
 ## <a name="DFormat"></a>2.將資料格式化為貨幣  
 將貨幣格式套用到鑽研報表中的銷售量欄位。  
   
-#### 若要將資料格式化為貨幣  
+#### <a name="to-format-data-as-currency"></a>若要將資料格式化為貨幣  
   
 1.  若要切換成 [設計] 檢視，按一下 **[設計]**。  
   
@@ -274,11 +230,11 @@ caps.handback.revision: 12
 ## <a name="DSparkline"></a>3.加入資料行以便在走勢圖中顯示銷售值  
 報表會顯示走勢圖中的值，而不會將銷售額與銷售報酬顯示為貨幣值。  
   
-#### 若要將走勢圖加入至資料行  
+#### <a name="to-add-sparklines-to-columns"></a>若要將走勢圖加入至資料行  
   
 1.  若要切換成 [設計] 檢視，按一下 **[設計]**。  
   
-2.  在矩陣的 [總計] 群組中，以滑鼠右鍵按一下 [銷售量] 資料行，並按一下 [插入資料行]，然後按一下 [右方]。  
+2.  在矩陣的 [總計] 群組中，以滑鼠右鍵按一下 **[銷售量]** 資料行，按一下 **[插入資料行]**，然後按一下 **[右方]**。  
   
     空白資料行就會加入至 **[銷售量]**的右方。  
   
@@ -307,7 +263,7 @@ caps.handback.revision: 12
 ## <a name="DReportTitle"></a>4.加入具有產品類別目錄名稱的報表標題  
 報表標題會出現在報表的頂端。 您可以將報表標題放置在報表頁首，如果報表不使用報表頁首，則可以放置在報表主體頂端的文字方塊中。 在本教學課程中，您將使用自動放置在報表主體頂端的文字方塊。  
   
-#### 若要加入報表標題  
+#### <a name="to-add-a-report-title"></a>若要加入報表標題  
   
 1.  若要切換成 [設計] 檢視，按一下 **[設計]**。  
   
@@ -315,11 +271,11 @@ caps.handback.revision: 12
   
 3.  輸入 **Sales and Returns for Category:**。  
   
-4.  以滑鼠右鍵按一下，然後按一下 [建立預留位置]。  
+4.  以滑鼠右鍵按一下，然後按一下 **[建立預留位置]**。  
   
-5.  按一下 [值] 清單右側的 [(fx)] 按鈕。  
+5.  按一下 **[值]** 清單右側的 **(fx)** 按鈕。  
   
-6.  在 [運算式] 對話方塊的 [類別目錄] 窗格中，按一下 [資料集]，然後在 [值] 清單中，按兩下 `First(Product_Category_Name)`。  
+6.  在 **[運算式]** 對話方塊的 [類別目錄] 窗格中，按一下 **[資料集]**，然後在 **[值]** 清單中，按兩下 `First(Product_Category_Name)`。  
   
     **[運算式]** 方塊包含下列運算式：  
   
@@ -334,11 +290,11 @@ caps.handback.revision: 12
 ## <a name="DParameter"></a>5.更新參數屬性  
 參數預設是可見的，但不適合這個報表。 您將要更新鑽研報表的參數屬性。  
   
-#### 若要隱藏參數  
+#### <a name="to-hide-a-parameter"></a>若要隱藏參數  
   
 1.  在 [報表資料] 窗格中，展開 **[參數]**。  
   
-2.  以滑鼠右鍵按一下 @ProductProductCategoryName，然後按一下 [參數屬性]。  
+2.  以滑鼠右鍵按一下@ProductProductCategoryName，然後按一下 **參數屬性**。  
   
     > [!NOTE]  
     > 名稱旁邊的 @ 字元表示這是一個參數。  
@@ -357,7 +313,7 @@ caps.handback.revision: 12
 ## <a name="DSave"></a>6.將報表儲存至 SharePoint 文件庫  
 您可以將報表儲存至 SharePoint 文件庫、報表伺服器或您的電腦上。 如果將報表儲存到您的電腦，就無法使用數個 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 功能，例如報表組件和子報表。 在本教學課程中，您會將報表儲存至 SharePoint 程式庫。  
   
-#### 若要儲存報表  
+#### <a name="to-save-the-report"></a>若要儲存報表  
   
 1.  在報表產生器的按鈕中，按一下 **[儲存]**。 **[另存為報表]** 對話方塊隨即開啟。  
   
@@ -390,7 +346,7 @@ caps.handback.revision: 12
 ## <a name="MMatrixAndDataset"></a>1.從資料表或矩陣精靈建立主報表  
 從 **[使用者入門]** 對話方塊中，使用 **[資料表或矩陣精靈]**建立矩陣報表。  
   
-#### 建立主報表  
+#### <a name="to-create-the-main-report"></a>建立主報表  
   
 1.  從您的電腦、[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] Web 入口網站或 SharePoint 整合模式[啟動報表產生器](../reporting-services/report-builder/start-report-builder.md)。  
   
@@ -403,7 +359,7 @@ caps.handback.revision: 12
 ## <a name="MConnection"></a>1a. 指定資料連接  
 您會將內嵌的資料來源儲存到主報表。  
   
-#### 建立內嵌資料來源  
+#### <a name="to-create-an-embedded-data-source"></a>建立內嵌資料來源  
   
 1.  在 **[選擇資料集]** 頁面上，選取 **[建立資料集]**，然後按 **[下一步]**。  
   
@@ -413,7 +369,7 @@ caps.handback.revision: 12
   
 4.  在 **[選取連接類型]**中，選取 **[Microsoft SQL Server Analysis Services]**，然後按一下 **[建立]**。  
   
-5.  在 [資料來源] 中，確認資料來源為 [Microsoft SQL Server Analysis Services (AdomdClient)]。  
+5.  在 **[資料來源]**中，確認資料來源為 **[Microsoft SQL Server Analysis Services (AdomdClient)]**。  
   
 6.  在 **[伺服器名稱]**中，輸入安裝 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體所在伺服器的名稱。  
   
@@ -442,14 +398,14 @@ caps.handback.revision: 12
 ## <a name="MMDXQuery"></a>1b. 建立 MDX 查詢  
 接著，建立內嵌的資料集。 若要這樣做，您將使用查詢設計工具建立篩選、參數、導出成員，以及資料集本身。  
   
-#### 若要建立查詢篩選  
+#### <a name="to-create-query-filters"></a>若要建立查詢篩選  
   
 1.  在 [設計查詢] 頁面的 [中繼資料] 窗格中，按一下 Cube 區段中的省略符號 [(...)]。  
   
 2.  在 [選取 Cube] 對話方塊中，按一下 [Sales]，然後按一下 [確定]。  
   
     > [!TIP]  
-    > 如果您不想要手動建立 MDX 查詢，請按一下 ![切換到設計模式](../reporting-services/media/rsqdicon-designmode.png "切換到設計模式") 圖示，將查詢設計工具切換到 [查詢] 模式，並將完成的 MDX 貼到查詢設計工具中，然後繼續進行[建立資料集](#MSkip)中的步驟 5。  
+    > 如果您不想要手動建立 MDX 查詢，按一下![切換到設計模式](../reporting-services/media/rsqdicon-designmode.gif "Switch to Design mode")圖示，切換到查詢模式的查詢設計工具完成的 MDX 查詢設計工具中，貼上，然後繼續進行步驟 5 中[建立資料集](#MSkip)。  
   
     ```  
     WITH MEMBER [Measures].[Net QTY] AS [Measures].[Sales Quantity] -[Measures].[Sales Return Quantity] MEMBER [Measures].[Net Sales] AS [Measures].[Sales Amount] - [Measures].[Sales Return Amount] SELECT NON EMPTY { [Measures].[Net QTY], [Measures].[Net Sales] } ON COLUMNS, NON EMPTY { ([Channel].[Channel Name].[Channel Name].ALLMEMBERS * [Product].[Product Category Name].[Product Category Name].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Date].[Calendar Year].&[2009] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(@ProductProductCategoryName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Sales Territory].[Sales Territory Group].&[North America] } ) ON COLUMNS FROM ( SELECT ( { [Channel].[Channel Name].&[2], [Channel].[Channel Name].&[4] } ) ON COLUMNS FROM [Sales])))) WHERE ( [Sales Territory].[Sales Territory Group].&[North America], [Date].[Calendar Year].&[2009] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGSQuery text: Code.  
@@ -481,7 +437,7 @@ caps.handback.revision: 12
   
     此查詢現在包含一個僅內含 2009 年日曆年度的篩選。  
   
-#### 若要建立參數  
+#### <a name="to-create-the-parameter"></a>若要建立參數  
   
 1.  展開 Product 維度，然後將 Product Category Name 拖曳至 [階層] 資料行 (在 [銷售領域群組] 底下)。  
   
@@ -489,7 +445,7 @@ caps.handback.revision: 12
   
 3.  按一下 **[參數]** 核取方塊。 此查詢現在包含參數 ProductProductCategoryName。  
   
-#### 若要建立導出成員  
+#### <a name="to-create-calculated-members"></a>若要建立導出成員  
   
 1.  將游標放在 [導出成員] 窗格內部，並按一下滑鼠右鍵，然後按一下 [新增導出成員]。  
   
@@ -521,7 +477,7 @@ caps.handback.revision: 12
   
 8.  在 **[名稱]** 方塊中輸入  **Net Sales**，然後按一下 **[確定]**。[導出成員] 窗格會列出 **Net Sales** 導出成員。  
   
-### <a name="MSkip"></a>若要建立資料集  
+### <a name="MSkip"></a>建立資料集  
   
 1.  從 Channel 維度中，將 Channel Name 拖曳至資料窗格。  
   
@@ -540,7 +496,7 @@ caps.handback.revision: 12
 ## <a name="MLayout"></a>1c. 將資料組織為群組  
 當您選取將資料分組的欄位時，會設計包含資料列和資料行的矩陣，以顯示詳細資料和彙總資料。  
   
-#### 若要將資料組織為群組  
+#### <a name="to-organize-data-into-groups"></a>若要將資料組織為群組  
   
 1.  在 [排列欄位] 頁面上，將 Product_Category_Name 拖曳至 [資料列群組]。  
   
@@ -559,7 +515,7 @@ caps.handback.revision: 12
 ## <a name="MTotals"></a>1d. 加入小計和總計  
 您可以在報表中顯示小計和總計。 主報表中的資料會顯示為指標，而且您將會在完成精靈後移除總計。  
   
-#### 若要加入小計和總計  
+#### <a name="to-add-subtotals-and-grand-totals"></a>若要加入小計和總計  
   
 1.  在 **[選擇配置]** 頁面的 **[選項]**下方，確定已選取 **[顯示小計和總計]** 。  
   
@@ -574,18 +530,18 @@ caps.handback.revision: 12
 ## <a name="MGrandTotal"></a>2.移除總計資料列  
 資料值會顯示為指標狀態，包括資料行群組總計。 移除顯示總計的資料列。  
   
-#### 若要移除總計資料列  
+#### <a name="to-remove-the-grand-total-row"></a>若要移除總計資料列  
   
 1.  若要切換成 [設計] 檢視，按一下 **[設計]**。  
   
-2.  按一下 [總計] 資料列 (矩陣中的最後一個資料列)，並按一下滑鼠右鍵，然後按一下 [刪除資料列]。  
+2.  按一下 [總計] 資料列 (矩陣中的最後一個資料列)，按一下滑鼠右鍵，然後按一下 **[刪除資料列]**。  
   
 3.  若要預覽報表，按一下 **[執行]**。  
   
 ## <a name="MDrillthrough"></a>3.設定用於鑽研的文字方塊動作  
 若要啟用鑽研，請在主報表的文字方塊上指定動作。  
   
-#### 若要啟用動作  
+#### <a name="to-enable-an-action"></a>若要啟用動作  
   
 1.  若要切換成 [設計] 檢視，按一下 **[設計]**。  
   
@@ -610,9 +566,9 @@ caps.handback.revision: 12
   
 9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-#### 若要格式化鑽研欄位  
+#### <a name="to-format-the-drillthrough-field"></a>若要格式化鑽研欄位  
   
-1.  以滑鼠右鍵按一下包含 `Product_Category_Name` 的資料格，然後按一下 [文字方塊屬性]。  
+1.  以滑鼠右鍵按一下包含 `Product_Category_Name`的資料格，然後按一下 **[文字方塊屬性]**。  
   
 2.  按一下 **[字型]** 索引標籤。  
   
@@ -629,7 +585,7 @@ caps.handback.revision: 12
 ## <a name="MIndicators"></a>4.以指標取代數值  
 使用指標顯示 [線上] 與 [轉售商] 通道之數量與銷售額的狀態。  
   
-#### 若要加入 Net QTY 值的指標  
+#### <a name="to-add-an-indicator-for-net-qty-values"></a>若要加入 Net QTY 值的指標  
   
 1.  若要切換成 [設計] 檢視，按一下 **[設計]**。  
   
@@ -639,11 +595,11 @@ caps.handback.revision: 12
   
 4.  按一下 **[三記號]** 類型，然後按一下 **[確定]**。  
   
-5.  以滑鼠右鍵按一下指標，然後在 [量測計資料] 窗格中，按一下 [(未指定)] 旁邊的向下鍵。 選取 [`Net_QTY`]。  
+5.  以滑鼠右鍵按一下指標，然後在 [量測計資料] 窗格中，按一下 **[(未指定)]**旁邊的向下鍵。 選取 `Net_QTY`。  
   
 6.  在 `[Sum(Net QTY)]` [總計] `[Product_Category_Name]` 內，針對 **資料列群組中的**資料格，重複步驟 2 到 5。  
   
-#### 若要加入 Net Sales 值的指標  
+#### <a name="to-add-an-indicator-for-net-sales-values"></a>若要加入 Net Sales 值的指標  
   
 1.  在功能區上，按一下 **[矩形]** 圖示，然後在 `[Sum(Net_Sales)]` 資料行群組的 `[Product_Category_Name]` 資料列群組中，按一下 `Channel_Name` 資料格內部。  
   
@@ -651,7 +607,7 @@ caps.handback.revision: 12
   
 3.  按一下 **[三記號]** 類型，然後按一下 **[確定]**。  
   
-4.  以滑鼠右鍵按一下指標，然後在 [量測計資料] 窗格中，按一下 [(未指定)] 旁邊的向下鍵。 選取 [`Net_Sales`]。  
+4.  以滑鼠右鍵按一下指標，然後在 [量測計資料] 窗格中，按一下 **[(未指定)]**旁邊的向下鍵。 選取 `Net_Sales`。  
   
 5.  在 `[Sum(Net_Sales)]` [總計] `[Product_Category_Name]` 內，針對 **資料列群組中的**資料格，重複步驟 1 到 4。  
   
@@ -660,11 +616,11 @@ caps.handback.revision: 12
 ## <a name="MParameter"></a>5.更新參數屬性  
 參數預設是可見的，但不適合這個報表。 您將更新參數屬性，讓參數變成內部的。  
   
-#### 若要將參數變成內部的  
+#### <a name="to-make-the-parameter-internal"></a>若要將參數變成內部的  
   
 1.  在 [報表資料] 窗格中，展開 **[參數]**。  
   
-2.  以滑鼠右鍵按一下 `@ProductProductCategoryName,`，然後按一下 [參數屬性]。  
+2.  以滑鼠右鍵按一下 `@ProductProductCategoryName,` ，然後按一下 **[參數屬性]**。  
   
 3.  在 **[一般]** 索引標籤上，按一下 **[內部]**。  
   
@@ -675,7 +631,7 @@ caps.handback.revision: 12
 ## <a name="MTitle"></a>6.加入報表標題  
 將標題加入到主報表中  
   
-#### 若要加入報表標題  
+#### <a name="to-add-a-report-title"></a>若要加入報表標題  
   
 1.  在設計介面上，按一下 **[按一下以加入標題]**。  
   
@@ -690,7 +646,7 @@ caps.handback.revision: 12
 ## <a name="MSave"></a>7.將主報表儲存至 SharePoint 文件庫  
 將主報表儲存至 SharePoint 文件庫。  
   
-#### 若要儲存報表  
+#### <a name="to-save-the-report"></a>若要儲存報表  
   
 1.  若要切換成 [設計] 檢視，按一下 **[設計]**。  
   
@@ -716,7 +672,7 @@ caps.handback.revision: 12
 ## <a name="MRunReports"></a>8.執行主報表和鑽研報表  
 執行主報表，然後按一下產品類別目錄資料行中的值以執行鑽研報表。  
   
-#### 若要執行報表  
+#### <a name="to-run-the-reports"></a>若要執行報表  
   
 1.  開啟儲存報表的 SharePoint 文件庫。  
   
@@ -732,6 +688,7 @@ caps.handback.revision: 12
   
 5.  或者，按一下其他產品類別目錄的名稱以進行探索。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
 [報表產生器教學課程](../reporting-services/report-builder-tutorials.md)  
   
+

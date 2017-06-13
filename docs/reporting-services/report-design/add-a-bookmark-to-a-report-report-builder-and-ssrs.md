@@ -1,35 +1,40 @@
 ---
-title: "將書籤加入至報表 (報表產生器及 SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "將書籤加入至報表 （報表產生器及 SSRS） |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f130562e-5673-40e3-8e01-de7227a21d41
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8b63dc6993525970f131b89ac6aea79f8a9c6e72
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 將書籤加入至報表 (報表產生器及 SSRS)
+# <a name="add-a-bookmark-to-a-report-report-builder-and-ssrs"></a>將書籤加入至報表 (報表產生器及 SSRS)
   當您想要在報表中提供自訂內容資料表或是提供自訂內部導覽連結時，請將書籤或書籤連結加入到報表中。 一般來說，您會在報表中想要引導使用者的位置上加入書籤，例如每一個資料表或圖表的書籤，或是資料表或矩陣內顯示之唯一群組值的標籤。 您可以建立自己的字串當做書籤使用，或是針對群組設定群組運算式的標籤。  
   
  當您建立書籤之後，可以加入使用者只需按一下就可移至每一個書籤的報表項目。 這些項目通常是文字方塊或影像。  
   
  例如，如果您的報表顯示依色彩分組的資料表，您會將根據群組運算式的書籤加入到群組首。 然後您會加入一個具有單一文字方塊的資料表 (此文字方塊位於顯示色彩值的報表開頭)，然後您會在該文字方塊上設定書籤連結。 當您按一下色彩時，報表會跳到頁面，此頁面顯示該色彩的群組首資料列。  
   
- 您可以將書籤加入到任何報表項目，並將書籤連結加入到具有 **Action** 屬性的任何項目，例如文字方塊、影像或是圖表中的導出數列。 如需詳細資訊，請參閱[動作屬性對話方塊 &#40;報表產生器及 SSRS&#41;](../Topic/Action%20Properties%20Dialog%20Box%20\(Report%20Builder%20and%20SSRS\).md)。  
+ 您可以將書籤加入到任何報表項目，並將書籤連結加入到具有 **Action** 屬性的任何項目，例如文字方塊、影像或是圖表中的導出數列。 如需詳細資訊，請參閱[動作屬性對話方塊 &#40;報表產生器及 SSRS&#41;](http://msdn.microsoft.com/library/2c5d915b-4f97-42cf-b8f1-49ca3ff3d0f9)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### 加入書籤  
+### <a name="to-add-a-bookmark"></a>加入書籤  
   
 1.  在 [報表設計] 檢視中，選取您想要加入書籤的文字方塊、影像、圖表或其他報表項目。 選定項目的屬性會顯示在 [屬性] 窗格中。  
   
@@ -38,7 +43,7 @@ caps.handback.revision: 8
     > [!NOTE]  
     >  書籤可以是任何字串，但它在報表內必須是唯一的。 如果此書籤不是唯一的，書籤的連結會尋找第一個相符的書籤。  
   
-### 加入書籤連結  
+### <a name="to-add-a-bookmark-link"></a>加入書籤連結  
   
 1.  在 [設計] 檢視中，以滑鼠右鍵按一下要加入連結的文字方塊、影像或圖表，然後按一下 [屬性]。  
   
@@ -54,7 +59,7 @@ caps.handback.revision: 8
   
 7.  若要測試連結，請按一下 **[執行]** 預覽報表，然後按一下這個連結設定所在的報表項目。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [互動式排序、文件引導模式及連結 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
  [運算式 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [篩選、分組和排序資料 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  

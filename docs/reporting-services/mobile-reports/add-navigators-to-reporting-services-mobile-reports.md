@@ -1,38 +1,43 @@
 ---
-title: "Add navigators to Reporting Services mobile reports | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "加入 Reporting Services 行動報表的導覽器 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e141f50e-49a9-46c6-983c-f656013aa07c
 caps.latest.revision: 12
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 12
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 753cb1a6bc95c854d8a9457f6dc8a70867f2a6bd
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# Add navigators to Reporting Services mobile reports
-在 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)] 中，您加入*「導覽器」*(Navigator)，以依時間或依選取項目來篩選視覺效果中的資料。 
+# <a name="add-navigators-to-reporting-services-mobile-reports"></a>加入 Reporting Services 行動報表的導覽器
+在 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]中，您加入 *「導覽器」* (Navigator)，以依時間或依選取項目來篩選視覺效果中的資料。 
 
 導覽器與 Power BI 和 Excel 樞紐分析表中的交叉分析篩選器類似，但導覽器也有一些特有的特性。
 
-**以時間為基礎的導覽器**會選取落在特定時間範圍內的資料列，以篩選資料表。 
+**以時間為基礎的導覽器** 會選取落在特定時間範圍內的資料列，以篩選資料表。 
 
-**以選取項目為基礎的導覽器**會選取特定資料行值符合所選取索引鍵值，或是針對階層樹狀目錄時特定資料行值屬於所選取索引鍵值子樹狀目錄的資料列，以篩選資料表。 選擇導覽器有兩種類型：
+**以選取項目為基礎的導覽器** 會選取特定資料行值符合所選取索引鍵值，或是針對階層樹狀目錄時特定資料行值屬於所選取索引鍵值子樹狀目錄的資料列，以篩選資料表。 選擇導覽器有兩種類型：
 * 選擇清單是可用來篩選行動報表的單一資料行資料表，與 Power BI 和 Excel 中的交叉分析篩選器類似。
 * 計分卡方格也會篩選行動報表，也可以包含 
   
-## 時間導覽器   
+## <a name="time-navigators"></a>時間導覽器   
   
 正如其名，您可以使用時間導覽器，來篩選依時間範圍所繫結的資料範圍。   
   
 ![SSMRP_TimeNav](../../reporting-services/mobile-reports/media/ssmrp-timenav.png)  
-*[時間範圍預設] 的左邊會設定四個折線圖。 右邊的折線圖是篩選。*  
+*在該時間範圍的預設設定四個折線圖左邊。在右側的折線圖是篩選器。*  
   
 當您在預覽或 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] Web 入口網站中檢視報表時，請拖曳時間導覽器中的箭號來篩選報表的其餘部分。  
   
@@ -47,7 +52,7 @@ caps.handback.revision: 12
   
    ![SSMRP_ClearTimeFilter](../../reporting-services/mobile-reports/media/ssmrp-cleartimefilter.png)  
   
-## 選擇清單   
+## <a name="selection-lists"></a>選擇清單   
   
 選擇清單會比對清單中所選取的值與所篩選資料表之每個資料列的指定資料行的值，以篩選行動報表中的資料。 
 
@@ -73,7 +78,7 @@ caps.handback.revision: 12
 
 ![mobile-report-selection-list-filtering](../../reporting-services/mobile-reports/media/mobile-report-selection-list-filtering.png) 
      
-## 計分卡方格  
+## <a name="scorecard-grid"></a>計分卡方格  
   
 計分卡方格篩選的功能與選擇清單篩選非常類似，但也會顯示值資料行和分數指標，其與指標資料方格中的指標相同。 選取索引鍵、標籤以及選用的父索引鍵資料行後，您可以選取輸入資料表和資料行以提供計分卡資料。 計分卡資料資料行應可依索引鍵資料行執行篩選。  
 
@@ -104,7 +109,7 @@ caps.handback.revision: 12
 
 ![mobile-report-scorecard-grid](../../reporting-services/mobile-reports/media/mobile-report-scorecard-grid.png)
     
-## 設定所篩選的視覺效果  
+## <a name="set-which-visualizations-are-filtered"></a>設定所篩選的視覺效果  
   
 在資料檢視中針對特定輸入按一下選項按鈕，以設定組件庫項目來使用篩選。 切換適當的核取方塊以啟用篩選。  
 
@@ -116,13 +121,14 @@ caps.handback.revision: 12
 
 2. 在 [篩選依據] 下，選取導覽器。 多個導覽器可以篩選每個視覺效果。
   
-## 階層式篩選   
+## <a name="cascading-filters"></a>階層式篩選   
   
 篩選亦可串聯在一起，以讓其中一個項目的選取值篩選第二個項目的可用值。 若要串聯篩選，請如同一般組件庫項目將篩選套用至索引鍵資料行。  
 
-### 另請參閱 
+### <a name="see-also"></a>另請參閱 
   
 * [Reporting Services 行動報表中的地圖](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md)
 * [Reporting Services 行動報表中的視覺效果](../../reporting-services/mobile-reports/add-visualizations-to-reporting-services-mobile-reports.md)
 * [Reporting Services 行動報表中的量測計](../../reporting-services/mobile-reports/add-gauges-to-mobile-reports-reporting-services.md)
 * [Reporting Services 行動報表中的資料格](../../reporting-services/mobile-reports/add-data-grids-to-mobile-reports-reporting-services.md)  
+

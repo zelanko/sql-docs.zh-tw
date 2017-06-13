@@ -1,23 +1,28 @@
 ---
-title: "內嵌和共用資料集 (報表產生器及 SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "內嵌和共用資料集 （報表產生器及 SSRS） |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: adc95cc0-d15a-413d-bc5a-302eab37a069
 caps.latest.revision: 7
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 7
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fb2ff6fdeb8f4d05866c09e87cd899a5dd2bb7ad
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 內嵌和共用資料集 (報表產生器及 SSRS)
+# <a name="embedded-and-shared-datasets-report-builder-and-ssrs"></a>內嵌和共用資料集 (報表產生器及 SSRS)
   在報表中，資料集代表在外部資料來源上執行查詢時所傳回的報表資料。 資料集取決於包含外部資料來源之相關資訊的資料連接。 資料本身不會包含在報表定義中。 資料集包含查詢命令、欄位集合、參數、篩選，以及包含區分大小寫和定序的資料選項。 資料集有以下兩種不同的類型：  
   
 -   **共用資料集。** 共用資料集是在報表伺服器上發行，可供多個報表使用。 共用資料集必須以共用資料來源為基礎。 共用資料集可透過建立快取重新整理計劃的方式快取和排程。  
@@ -29,7 +34,7 @@ caps.handback.revision: 7
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## 共用資料集  
+## <a name="shared-datasets"></a>共用資料集  
  您可以使用共用資料集來提供多個報表能夠使用的查詢。 共用資料集會儲存在報表伺服器上，並且與報表或共用資料來源分開管理。 例如，報表伺服器管理員可能會更新查詢以利用改善的索引或其他最佳化查詢效能的方法。  
   
  建議您盡量使用共用資料集。 您可以最佳化查詢或快取查詢結果，以獲得更佳的報表效能。 共用資料集可讓資料存取的管理更輕鬆，並且有助於提升報表和報表所存取資料集的安全性，以及提高效能。  
@@ -53,17 +58,17 @@ caps.handback.revision: 7
     |欄位|來自查詢命令的欄位<br /><br /> 導出欄位不屬於資料集定義的一部分|檢視欄位，但是無法變更欄位<br /><br /> 根據您將共用資料集加入至報表時的查詢，欄位集合是靜態的。 若要更新，請按一下 **[資料集屬性]** 對話方塊中的 **[重新整理欄位]** 。 實際的欄位集合是定義中目前的查詢所傳回的任何內容。<br /><br /> 加入導出欄位|  
     |資料集|資料選項，例如區分大小寫|覆寫執行個體中的資料選項|  
   
-## 內嵌資料集  
+## <a name="embedded-datasets"></a>內嵌資料集  
  如果您要從外部資料來源取得資料，並且僅用於一個報表中，則使用內嵌資料集。 當您想要建立的查詢沒有其他相依性而且不需要用於多個報表時，內嵌資料集將會很實用。  
   
  若要建立或編輯內嵌資料集，請使用 [報表資料] 窗格。 建立資料集之後，您可以在 **[資料集屬性]** 對話方塊中設定屬性。  
   
-## 請參閱＜  
- [內嵌和共用資料連接或資料來源 &#40;報表產生器及 SSRS&#41;](../Topic/Embedded%20and%20Shared%20Data%20Connections%20or%20Data%20Sources%20\(Report%20Builder%20and%20SSRS\).md)   
+## <a name="see-also"></a>請參閱＜  
+ [內嵌和共用資料連接或資料來源 &#40;報表產生器及 SSRS&#41;](http://msdn.microsoft.com/library/f417782c-b85a-4c4d-8a40-839176daba56)   
  [建立共用資料集或內嵌資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
  [報表資料集 &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [資料集 Fields 集合 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
- [報表產生器中的資料連接、資料來源及連接字串](../Topic/Data%20Connections,%20Data%20Sources,%20and%20Connection%20Strings%20in%20Report%20Builder.md)   
+ [報表產生器中的資料連接、資料來源及連接字串](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)   
  [資料連接、資料來源及連接字串 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
   
   

@@ -15,19 +15,57 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 0773be32343e4707503b4acb616e5a1c807fe32f
+ms.sourcegitcommit: 0927784589c1f7227b432ff49f81f29de20083ec
+ms.openlocfilehash: 200753bf64d92043171788852227c6199b64711d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/27/2017
 
 ---
 # <a name="previous-sql-server-management-studio-releases"></a>先前 SQL Server Management Studio 版本
   
 可使用下列舊版 SQL Server Management Studio。
-
-
    
-### <a name="downloadssdtmediadownloadpng-sql-server-management-studio-165-releasehttpgomicrosoftcomfwlinklinkid832812"></a>![下載](../ssdt/media/download.png) [SQL Server Management Studio 16.5 版](http://go.microsoft.com/fwlink/?LinkID=832812)
+## <a name="downloadssdtmediadownloadpng-sql-server-management-studio-1653-releasehttpgomicrosoftcomfwlinklinkid840946"></a>![下載](../ssdt/media/download.png) [SQL Server Management Studio 16.5.3 版本](http://go.microsoft.com/fwlink/?LinkID=840946)
+
+**版本資訊**  
+  
+*此版本的 SSMS 使用 Visual Studio 2015 獨立模式 Shell。*  
+版本號碼：16.5.3  
+此版本的組建編號：13.0.16106.4
+
+## <a name="changelog"></a>變更記錄  
+
+16.5.3
+
+這個版本已修正下列問題：
+
+* 修正 SSMS 16.5.2 中出現的問題，這造成 'Table' 節點會在資料表有多個疏鬆資料行時展開。
+
+* 使用者可以將包含 OData 連線管理員且連線到 Microsoft Dynamics AX/CRM Online 資源的 SSIS 套件部署到 SSIS 目錄。 如需詳細資訊，請參閱 [OData 連線管理員](https://msdn.microsoft.com/library/dn584133.aspx)。
+
+* 在現有資料表上設定 Always Encrypted 失敗，不相關的物件發生錯誤。 [Connect 識別碼 3103181](https://connect.microsoft.com/SQLServer/feedback/details/3103181/setting-up-always-encrypted-on-an-existing-table-fails-with-errors-on-unrelated-objects)
+
+* 無法為具有多個結構描述的現有資料庫設定 Always Encrypted。 [Connect 識別碼 3109591](https://connect.microsoft.com/SQLServer/feedback/details/3109591/sql-server-2016-always-encrypted-against-existing-database-with-multiple-schemas-doesnt-work)
+
+* Always Encrypted、加密資料行精靈失敗，原因是資料庫包含參考系統檢視的檢視。 [Connect 識別碼 3111925](https://connect.microsoft.com/SQLServer/feedback/details/3111925/sql-server-2016-always-encrypted-encrypted-column-wizard-failed-task-failed-due-to-following-error-cannot-save-package-to-file-the-model-has-build-blocking-errors)
+
+* 使用 Always Encrypted 進行加密時，未正確處理加密後來自重新整理模組的錯誤。
+
+* 「開啟最近使用的項目」功能表未顯示最近儲存的檔案。 [Connect 識別碼 3113288](https://connect.microsoft.com/SQLServer/feedback/details/3113288/ssms-2016-open-recent-menu-doesnt-show-recently-saved-files)
+
+* SSMS 在以右鍵按一下資料表索引時 (透過遠端 (網際網路) 連線) 很緩慢。 [Connect 識別碼 3114074](https://connect.microsoft.com/SQLServer/feedback/details/3114074/ssms-slow-when-right-clicking-an-index-for-a-table-over-a-remote-internet-connection)
+ 
+* 修正 SQL Designer 捲軸的問題。 [Connect 識別碼 3114856](http://connect.microsoft.com/SQLServer/feedback/details/3114856/bug-in-scrollbar-on-sql-desginer-in-ssms-2016)
+
+* 資料表的操作功能表會短暫停止回應 
+ 
+* SSMS 有時會擲回活動監視器的例外狀況及損毀。 [Connect 識別碼 697527](https://connect.microsoft.com/SQLServer/feedback/details/697527/)
+
+* SSMS 2016 會損毀，並出現錯誤「處理序因位於 IP 71AF8579 (71AE0000) 的 .NET 執行階段發生內部錯誤而終止，錯誤碼為 80131506」
+
+
+
+## <a name="downloadssdtmediadownloadpng-sql-server-management-studio-165-releasehttpgomicrosoftcomfwlinklinkid832812"></a>![下載](../ssdt/media/download.png) [SQL Server Management Studio 16.5 版](http://go.microsoft.com/fwlink/?LinkID=832812)
 
 **版本資訊**  
   
@@ -67,7 +105,7 @@ ms.lasthandoff: 04/11/2017
 
 
    
-### <a name="downloadssdtmediadownloadpng-sql-server-management-studio-1641-september-2016-releasehttpgomicrosoftcomfwlinklinkid828615"></a>![下載](../ssdt/media/download.png) [SQL Server Management Studio 16.4.1 (2016 年 9 月) 版](http://go.microsoft.com/fwlink/?LinkID=828615)
+## <a name="downloadssdtmediadownloadpng-sql-server-management-studio-1641-september-2016-releasehttpgomicrosoftcomfwlinklinkid828615"></a>![下載](../ssdt/media/download.png) [SQL Server Management Studio 16.4.1 (2016 年 9 月) 版](http://go.microsoft.com/fwlink/?LinkID=828615)
 
 **版本資訊**  
   
@@ -179,7 +217,7 @@ ms.lasthandoff: 04/11/2017
 
 
 
-### <a name="downloadssdtmediadownloadpng-sql-server-management-studio-163-august-2016-releasehttpgomicrosoftcomfwlinklinkid824938"></a>![下載](../ssdt/media/download.png) [SQL Server Management Studio 16.3 (2016 年 8 月) 版](http://go.microsoft.com/fwlink/?LinkID=824938)
+## <a name="downloadssdtmediadownloadpng-sql-server-management-studio-163-august-2016-releasehttpgomicrosoftcomfwlinklinkid824938"></a>![下載](../ssdt/media/download.png) [SQL Server Management Studio 16.3 (2016 年 8 月) 版](http://go.microsoft.com/fwlink/?LinkID=824938)
  2016 年 8 月 15 日 | 版本號碼：13.0.15700.28
 
 **功能**  
@@ -245,7 +283,7 @@ ms.lasthandoff: 04/11/2017
 [如需各項修正的資訊，請參閱 SSMS 變更記錄。](../ssms/sql-server-management-studio-changelog-ssms.md)
  
 ---
-### <a name="downloadssdtmediadownloadpng-sql-server-management-studio-july-2016-hotfix-update-releasehttpgomicrosoftcomfwlinklinkid822301"></a>![下載](../ssdt/media/download.png) [SQL Server Management Studio 2016 年 7 月 Hotfix 更新版本](http://go.microsoft.com/fwlink/?LinkID=822301)
+## <a name="downloadssdtmediadownloadpng-sql-server-management-studio-july-2016-hotfix-update-releasehttpgomicrosoftcomfwlinklinkid822301"></a>![下載](../ssdt/media/download.png) [SQL Server Management Studio 2016 年 7 月 Hotfix 更新版本](http://go.microsoft.com/fwlink/?LinkID=822301)
 
 2016 年 7 月 13 日 | 版本號碼：13.0.15600.2
 
@@ -299,7 +337,7 @@ SSMS 7 月版本和 7 月 Hotfix 版本在您嘗試使用備份或還原精靈�
 [如需詳細資訊及錯誤修正，請查看 SSMS 變更記錄。](../ssms/sql-server-management-studio-changelog-ssms.md)
 
 ---
-### <a name="downloadssdtmediadownloadpng-sql-server-management-studio-june-2016-releasehttpgomicrosoftcomfwlinklinkid799832"></a>![下載](../ssdt/media/download.png) [SQL Server Management Studio 2016 年 6 月版本](http://go.microsoft.com/fwlink/?LinkID=799832)
+## <a name="downloadssdtmediadownloadpng-sql-server-management-studio-june-2016-releasehttpgomicrosoftcomfwlinklinkid799832"></a>![下載](../ssdt/media/download.png) [SQL Server Management Studio 2016 年 6 月版本](http://go.microsoft.com/fwlink/?LinkID=799832)
 
 2016 年 6 月 1 日 | 版本號碼：13.0.15000.23
 
@@ -331,7 +369,7 @@ SSMS 7 月版本和 7 月 Hotfix 版本在您嘗試使用備份或還原精靈�
 6. 修正永遠加密體驗中的錯誤。 已修正 [永遠加密] 功能表選項沒有針對 Stretch Database 正確啟用的錯誤。 同時已修正永遠加密精靈沒有正確使用 SafeNet (Luna SA) HSM 提供者的錯誤。
 
 ---
-### <a name="downloadssdtmediadownloadpng-sql-server-management-studio-2014-sp1httpdownloadmicrosoftcomdownload156156992e6-f7c7-4e55-833d-249bd2348138enux86sqlmanagementstudiox86enuexe"></a>![下載](../ssdt/media/download.png) [SQL Server Management Studio 2014 SP1](http://download.microsoft.com/download/1/5/6/156992E6-F7C7-4E55-833D-249BD2348138/ENU/x86/SQLManagementStudio_x86_ENU.exe)
+## <a name="downloadssdtmediadownloadpng-sql-server-management-studio-2014-sp1httpdownloadmicrosoftcomdownload156156992e6-f7c7-4e55-833d-249bd2348138enux86sqlmanagementstudiox86enuexe"></a>![下載](../ssdt/media/download.png) [SQL Server Management Studio 2014 SP1](http://download.microsoft.com/download/1/5/6/156992E6-F7C7-4E55-833D-249BD2348138/ENU/x86/SQLManagementStudio_x86_ENU.exe)
 
 2015 年 5 月 14 日 | 版本號碼：12.0.4100.1
 
@@ -352,7 +390,7 @@ SSMS 7 月版本和 7 月 Hotfix 版本在您嘗試使用備份或還原精靈�
 7. SSMS 可能會在您於工作列上嘗試重新整理 SSMS 視窗圖示時當機 ([Microsoft Connect 項目 #799430](https://connect.microsoft.com/SQLServer/feedback/details/799430/ssms-2012-sp-1-cu-5-installed-crash-when-enforce-refresh-on-connect))。
 
 ---
-### <a name="downloadssdtmediadownloadpng-sql-server-management-studio-2012-sp3httpdownloadmicrosoftcomdownloadf67f673709c-d371-4a64-8bf9-c1dd73f60990enux86sqlmanagementstudiox86enuexe"></a>![下載](../ssdt/media/download.png) [SQL Server Management Studio 2012 SP3](http://download.microsoft.com/download/F/6/7/F673709C-D371-4A64-8BF9-C1DD73F60990/ENU/x86/SQLManagementStudio_x86_ENU.exe)  
+## <a name="downloadssdtmediadownloadpng-sql-server-management-studio-2012-sp3httpdownloadmicrosoftcomdownloadf67f673709c-d371-4a64-8bf9-c1dd73f60990enux86sqlmanagementstudiox86enuexe"></a>![下載](../ssdt/media/download.png) [SQL Server Management Studio 2012 SP3](http://download.microsoft.com/download/F/6/7/F673709C-D371-4A64-8BF9-C1DD73F60990/ENU/x86/SQLManagementStudio_x86_ENU.exe)  
   
 2015 年 11 月 21 日 | 版本號碼：11.0.6020.0
 
@@ -368,7 +406,7 @@ SSMS 7 月版本和 7 月 Hotfix 版本在您嘗試使用備份或還原精靈�
 2. 當您在 SSMS 中還原差異備份時，出現「無法建立還原計畫，因為 LSN 鏈結中斷」錯誤
 
 ---
-### <a name="additional-downloads"></a>其他下載  
+## <a name="additional-downloads"></a>其他下載  
 如需所有 SQL Server Management Studio 的下載清單，請搜尋 [Microsoft 下載中心](https://www.microsoft.com/en-us/download/search.aspx?q=sql%20server%20management%20studio&p=0&r=10&t=&s=Relevancy~Descending)。  
   
 若要取得最新版的 SQL Server Management Studio，請參閱[下載 SQL Server Management Studio &#40;SSMS&#41;](../ssms/download-sql-server-management-studio-ssms.md)。  

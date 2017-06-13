@@ -1,27 +1,32 @@
 ---
-title: "第 2 課：定義父報表的資料連接和資料表 | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/18/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
+title: "第 2 課： 定義父報表的資料連接和資料表 |Microsoft 文件"
+ms.custom: 
+ms.date: 05/18/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+applies_to:
+- SQL Server 2016
 ms.assetid: f02dee0c-85ad-45d4-b707-10e9e8541db9
 caps.latest.revision: 8
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 8
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: adc2cc7d329586bae6fb85edb08d71fe51aaaef8
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 第 2 課：定義父報表的資料連接和資料表
+# <a name="lesson-2-define-a-data-connection-and-data-table-for-parent-report"></a>第 2 課：定義父報表的資料連接和資料表
 使用 Visual C# 的 ASP.NET 網站範本建立新的網站專案後，下一步是要建立父報表的資料連接和資料表。 在本教學課程中，資料連接是指 AdventureWorks2014 資料庫。  
   
-## 若要藉由加入 DataSet 定義資料連接和資料表 (針對父報表)  
+## <a name="to-define-a-data-connection-and-data-table-by-adding-a-dataset-for-parent-report"></a>若要藉由加入 DataSet 定義資料連接和資料表 (針對父報表)  
   
 1.  在 [網站] 功能表上，選取 [加入新項目]。  
   
@@ -72,6 +77,8 @@ caps.handback.revision: 8
   
 13. 若要預覽資料，請選取 [資料] 功能表上的 [預覽資料]，然後選取 [預覽]。  
   
-## 下一項工作  
-您已成功建立父報表的資料連接和資料表。 接下來您將使用 [報表精靈] 設計父報表。 請參閱[第 3 課：使用報表精靈設計父報表](../reporting-services/lesson-3-design-the-parent-report-using-the-report-wizard.md)。  
+## <a name="next-task"></a>下一項工作  
+您已成功建立父報表的資料連接和資料表。 接下來您將使用 [報表精靈] 設計父報表。 請參閱 [第 3 課：使用報表精靈設計父報表](../reporting-services/lesson-3-design-the-parent-report-using-the-report-wizard.md)。  
   
+
+

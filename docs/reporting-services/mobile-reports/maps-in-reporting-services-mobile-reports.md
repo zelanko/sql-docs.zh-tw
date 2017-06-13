@@ -1,25 +1,30 @@
 ---
-title: "Reporting Services 行動報表中的地圖 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Reporting Services 行動報表中的對應 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 50658295-a71c-441e-8eba-e1ef066629c0
 caps.latest.revision: 10
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 10
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: dcac784ffea9845be91f35f03fb45e2ca6a6e530
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# Reporting Services 行動報表中的地圖
-地圖是將地理資料視覺化的最佳方式。 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)] 提供三種不同類型的地圖視覺效果，以及針對各大洲和一些個別國家/地區內建的地圖。 您也可以[上傳和使用自訂的地圖](../../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md)。   
+# <a name="maps-in-reporting-services-mobile-reports"></a>Reporting Services 行動報表中的地圖
+地圖是將地理資料視覺化的最佳方式。 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)] 提供三種不同類型的地圖視覺效果，以及針對各大洲和一些個別國家/地區內建的地圖。 您也可以 [上傳和使用自訂的地圖](../../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md)。   
   
-## 地圖類型  
+## <a name="types-of-maps"></a>地圖類型  
   
 SQL Server 行動報表提供三種不同類型的地圖，適用於各種不同的情況。  
   
@@ -31,7 +36,7 @@ SQL Server 行動報表提供三種不同類型的地圖，適用於各種不同
   
 **範圍填滿熱度圖**會顯示與目標相關的值。 [目標] 屬性會決定 [比較] 欄位和 [值] 欄位之間的差異。 產生的差異會決定要填滿地圖相關區域的色彩 (從綠色、黃色到紅色)。 您可以在 [值方向] 方塊中，設定較高或較低的值是否為綠色。  
   
-## 選取地圖類型和區域  
+## <a name="select-the-map-type-and-region"></a>選取地圖類型和區域  
   
 1. 在 [配置] 索引標籤上選取地圖類型、將它拖曳至設計介面，並調整為您想要的大小。  
   
@@ -43,23 +48,23 @@ SQL Server 行動報表提供三種不同類型的地圖，適用於各種不同
   
 7. 針對泡泡地圖，在 [視覺屬性] 下方，將 [使用不同色彩] 設定為 [開啟] 或 [關閉]，使所有泡泡的色彩都一樣或完全不同。  
   
-## 選取地圖資料  
-當您第一次將地圖加入報表時，[!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)] 會填入模擬的地理資料。  
+## <a name="select-the-map-data"></a>選取地圖資料  
+當您第一次將地圖加入報表時， [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)] 會填入模擬的地理資料。  
   
 ![SSMRP_MapsData](../../reporting-services/mobile-reports/media/ssmrp-mapsdata.png)  
   
 若要在地圖中顯示實際資料，您至少需要為兩個地圖的資料屬性設定值︰   
 * [索引鍵] 屬性會將資料連接到特定的地圖區域 -- 例如，美國各州或非洲國家/地區。  
-* [值] 屬性是與所選取索引鍵欄位處於相同資料表的數值欄位。 這些值在不同的地圖中有不同的表示方式。 **漸層圖**會使用這些值，根據值範圍，使用各種不同的網格來為每個區域上色。 **泡泡地圖**會根據值屬性，來設定每個區域中泡泡視覺效果的大小。   
+* [值] 屬性是與所選取索引鍵欄位處於相同資料表的數值欄位。 這些值在不同的地圖中有不同的表示方式。 **漸層圖** 會使用這些值，根據值範圍，使用各種不同的網格來為每個區域上色。 **泡泡地圖**會根據值屬性，來設定每個區域中泡泡視覺效果的大小。   
 * 針對範圍填滿熱度圖，您也需要設定 [目標] 屬性。  
   
-### 設定地圖資料屬性  
+### <a name="set-map-data-properties"></a>設定地圖資料屬性  
   
 1. 選取左上角的 [資料] 索引標籤。  
   
-2. 選取 [加入資料]，然後選取 [本機 Excel] 或 [SSRS 伺服器]。  
+2. 選取**將資料加入**，然後選擇**本機 Excel**或**SSRS 伺服器**。  
   
-   > **提示**︰請確定[資料為適用於行動報表的格式](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md)。  
+   > **提示**︰請確定 [資料為適用於行動報表的格式](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md)。  
   
 3. 選取所需的工作表，然後選取 [匯入]。  
    您會在 [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)] 中看見您的資料。  
@@ -78,8 +83,9 @@ SQL Server 行動報表提供三種不同類型的地圖，適用於各種不同
      
 8. 選取左上角的 [儲存] 圖示，以及 [本機儲存] 於您的電腦上或 [儲存到伺服器]。  
   
-### 另請參閱  
--  [Reporting Services 行動報表中的自訂地圖](../../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md)  
+### <a name="see-also"></a>另請參閱  
+-  [Custom maps in Reporting Services mobile reports](../../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md)  
 - [使用 SQL Server 行動報表發行工具建立與發行行動報表](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
   
   
+

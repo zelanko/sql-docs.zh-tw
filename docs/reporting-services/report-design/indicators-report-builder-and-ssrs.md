@@ -1,41 +1,46 @@
 ---
-title: "指標 (報表產生器及 SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "10545"
-  - "10547"
-  - "sql13.rtp.rptdesigner.indicatorproperties.action.f1"
-  - "10546"
-  - "sql13.rtp.rptdesigner.indicatorproperties.validateandstates.f1"
-  - "sql13.rtp.rptdesigner.indicatorproperties.general.f1"
+title: "指標 （報表產生器及 SSRS） |Microsoft 文件"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- "10545"
+- "10547"
+- sql13.rtp.rptdesigner.indicatorproperties.action.f1
+- "10546"
+- sql13.rtp.rptdesigner.indicatorproperties.validateandstates.f1
+- sql13.rtp.rptdesigner.indicatorproperties.general.f1
 ms.assetid: 2edbd279-be39-4d97-b1b6-ddbc5b17c422
 caps.latest.revision: 11
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 11
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7c902fc6195481ab6570612c5ac9012bba33ef79
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 指標 (報表產生器及 SSRS)
+# <a name="indicators-report-builder-and-ssrs"></a>指標 (報表產生器及 SSRS)
   在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表中，指標是小型量測計，看一眼就可傳達單一資料值的狀態。 圖示即使很小，但在視覺上也能有效代表指標及其狀態。  
   
  您可以在報表中使用狀態指標以顯示下列項目：  
   
--   使用趨勢向上箭號、一般箭號 (無變化)、或趨勢向下箭號的**趨勢**。  
+-   使用趨勢向上箭號、一般箭號 (無變化)、或趨勢向下箭號的**趨勢** 。  
   
--   使用一般辨識符號 (例如核取記號和驚嘆號) 的**狀態**。  
+-   使用一般辨識符號 (例如核取記號和驚嘆號) 的**狀態** 。  
   
--   使用一般辨識形狀 (例如號誌燈和標誌) 的**條件**。  
+-   使用一般辨識形狀 (例如號誌燈和標誌) 的**條件** 。  
   
--   使用顯示進度之一般辨識形狀和符號 (例如正方形與星形的四分色方塊數目) 的**評比**。  
+-   使用顯示進度之一般辨識形狀和符號 (例如正方形與星形的四分色方塊數目) 的**評比** 。  
   
  您可以在儀表板或自由格式報表中單獨使用指標，但是最常用於資料表或矩陣中，以資料列或資料行將資料視覺化。 下圖顯示包含號誌燈指標的資料表，此指標會依銷售人員和領域，顯示年初至今的銷售量。  
    
@@ -46,7 +51,7 @@ caps.handback.revision: 11
  如需使用指標作為 KPI 的詳細資訊，請參閱[教學課程：將 KPI 加入至報表 &#40;報表產生器&#41;](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md)。  
   
 > [!NOTE]  
->  您可以將指標當做報表組件，與報表分開發行。 深入了解[報表組件](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)。  
+>  您可以將指標當做報表組件，與報表分開發行。 深入了解 [報表組件](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)。  
   
 ##  <a name="ComparingIndicatorsToGauges"></a> 比較指標與量測計  
  雖然指標在外觀上有很大的差異，但它們只是簡單的量測計。 指標和量測計都會顯示單一資料值。 主要差異是量測計具備框架和指標之類的元素。 指標則只有狀態、圖示及 (選擇性) 標籤。 指標狀態類似於量測計範圍。  
@@ -55,7 +60,7 @@ caps.handback.revision: 11
   
  ![rs_GaugePanelWithIndicator](../../reporting-services/report-design/media/rs-gaugepanelwithindicator.gif "rs_GaugePanelWithIndicator")  
   
- 根據您要描繪資料值的方式，量測計可能比指標更有效。 如需詳細資訊，請參閱[量測計 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)。  
+ 根據您要描繪資料值的方式，量測計可能比指標更有效。 如需詳細資訊，請參閱 [量測計 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)。  
   
 ##  <a name="ChoosingIndicatorTypes"></a> 選擇要使用的指標類型  
  不論資料位於詳細資料列或資料表或矩陣中的資料列或資料行群組，或本身位於報表主體或儀表板中，使用正確的指標集合都是與資料意義立即進行通訊的關鍵。 內建的指標集合擁有三個或多個圖示。 這些指標可以依形狀、色彩或兩者而有所不同。 每個圖示都會與不同的資料狀態進行通訊。  
@@ -64,10 +69,10 @@ caps.handback.revision: 11
   
 |指標集合|指標類型|  
 |-------------------|--------------------|  
-|![Rs_DirectionalIcons](../../reporting-services/report-design/media/rs-directionalicons.png "Rs_DirectionalIcons")|方向性：指出使用向上箭號、向下箭號、一般箭號 (無變化)、趨勢向上箭號或趨勢向下箭號的趨勢。|  
-|![Rs_SymbolIcons](../../reporting-services/report-design/media/rs-symbolicons.png "Rs_SymbolIcons")|符號：指出使用一般辨識符號 (例如核取記號和驚嘆號) 的狀態。|  
-|![Rs_ShapeIcons](../../reporting-services/report-design/media/rs-shapeicons.png "Rs_ShapeIcons")|形狀：指出使用一般形狀 (例如交通標誌和菱形) 的條件。|  
-|![rs_RatingIcons](../../reporting-services/report-design/media/rs-ratingicons.png "rs_RatingIcons")|評比：指出使用顯示進度值之一般辨識形狀和符號 (例如正方形的四分色方塊數目) 的評比。|  
+|![Rs_DirectionalIcons](../../reporting-services/report-design/media/rs-directionalicons.gif "Rs_DirectionalIcons")|方向性：指出使用向上箭號、向下箭號、一般箭號 (無變化)、趨勢向上箭號或趨勢向下箭號的趨勢。|  
+|![Rs_SymbolIcons](../../reporting-services/report-design/media/rs-symbolicons.gif "Rs_SymbolIcons")|符號：指出使用一般辨識符號 (例如核取記號和驚嘆號) 的狀態。|  
+|![Rs_ShapeIcons](../../reporting-services/report-design/media/rs-shapeicons.gif "Rs_ShapeIcons")|形狀：指出使用一般形狀 (例如交通標誌和菱形) 的條件。|  
+|![rs_RatingIcons](../../reporting-services/report-design/media/rs-ratingicons.gif "rs_RatingIcons")|評比：指出使用顯示進度值之一般辨識形狀和符號 (例如正方形的四分色方塊數目) 的評比。|  
   
  選擇指標集合後，您就可以在指標或 [屬性] 窗格的對話方塊中設定其屬性，來自訂集合中每個指標圖示的外觀。 您可以使用內建的色彩、圖示和大小或運算式來設定指標。  
   
@@ -84,7 +89,7 @@ caps.handback.revision: 11
   
 -   從指標集合刪除圖示，藉由只使用幾個圖示，讓資料顯示更簡單。  
   
- 如需詳細資訊，請參閱[變更指標圖示和指標集合 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)。  
+ 如需詳細資訊，請參閱 [變更指標圖示和指標集合 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)。  
   
 ##  <a name="UsingIndicatorsInTablesMatrices"></a> 在資料表和矩陣中使用指標  
  簡單的指標形狀使其適合在資料表和矩陣中使用。 指標即使很小，都仍然有效。 這讓它們在報表的詳細資料或群組資料列中都相當實用。  
@@ -93,17 +98,17 @@ caps.handback.revision: 11
   
  ![rs_IndicatorReportBlueArrows](../../reporting-services/report-design/media/rs-indicatorreportbluearrows.gif "rs_IndicatorReportBlueArrows")  
   
- 如需新增、變更及刪除指標的詳細資訊，請參閱[加入或刪除指標 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-or-delete-an-indicator-report-builder-and-ssrs.md)。  
+ 如需新增、變更及刪除指標的詳細資訊，請參閱 [加入或刪除指標 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-or-delete-an-indicator-report-builder-and-ssrs.md)。  
   
- 當您第一次將標記加入至報表時，系統會設定為使用預設值。 接著，您可以變更值，讓指標以您希望的方式描述資料。 您可以變更指標圖示的外觀、指標選擇要使用之圖示的方式，以及變更指標集合所使用的圖示。 如需詳細資訊，請參閱[變更指標圖示和指標集合 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)。  
+ 當您第一次將標記加入至報表時，系統會設定為使用預設值。 接著，您可以變更值，讓指標以您希望的方式描述資料。 您可以變更指標圖示的外觀、指標選擇要使用之圖示的方式，以及變更指標集合所使用的圖示。 如需詳細資訊，請參閱 [變更指標圖示和指標集合 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)。  
   
- 根據預設，指標會設定為使用百分比做為度量單位，並自動偵測資料中的最小值與最大值。 指標集合中的每個圖示都有一個百分比範圍。 百分比範圍的數目取決於圖示集中的圖示數目，但範圍的大小和循序相同。 例如，如果圖示集有 5 個圖示，則有 5 個百分比範圍，每個大小各為 20%。 第一個從 0 開始並到 20 結束、第二個從 20 開始並到 40 結束，以此類推。 報表上的指標會使用指標集合中的圖示，該指標集合的百分比範圍落在指標資料值所在的範圍中。 您可以變更集合中每個圖示的百分比範圍。 最小值與最大值可以透過提供值或運算式來明確設定。 但您可以將度量單位變更為數值。 在此情況下，您不用指定資料的最小值或最大值。 不過，您只能針對每個圖示提供指標所使用的開始值與結束值。 如需詳細資訊，請參閱[設定度量單位 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/set-and-configure-measurement-units-report-builder-and-ssrs.md)。  
+ 根據預設，指標會設定為使用百分比做為度量單位，並自動偵測資料中的最小值與最大值。 指標集合中的每個圖示都有一個百分比範圍。 百分比範圍的數目取決於圖示集中的圖示數目，但範圍的大小和循序相同。 例如，如果圖示集有 5 個圖示，則有 5 個百分比範圍，每個大小各為 20%。 第一個從 0 開始並到 20 結束、第二個從 20 開始並到 40 結束，以此類推。 報表上的指標會使用指標集合中的圖示，該指標集合的百分比範圍落在指標資料值所在的範圍中。 您可以變更集合中每個圖示的百分比範圍。 最小值與最大值可以透過提供值或運算式來明確設定。 但您可以將度量單位變更為數值。 在此情況下，您不用指定資料的最小值或最大值。 不過，您只能針對每個圖示提供指標所使用的開始值與結束值。 如需詳細資訊，請參閱 [設定度量單位 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/set-and-configure-measurement-units-report-builder-and-ssrs.md)。  
   
  指標會在指定的範圍內，跨指標資料值進行同步處理，藉以傳達資料值。 根據預設，此範圍是指標的父容器，例如，包含指標的資料表或矩陣。 您可以根據報表的版面配置選擇不同的範圍，來變更指標的同步處理。 指標可以省略同步處理。 如需詳細資訊，請參閱[設定同步處理範圍 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/set-synchronization-scope-report-builder-and-ssrs.md)。  
   
- 如需了解和設定報表內範圍的一般資訊，請參閱[總計、彙總與內建集合的運算式範圍 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expression scope for totals, aggregates, and built-in collections.md)。  
+ 如需了解和設定報表內範圍的一般資訊，請參閱[總計、彙總與內建集合的運算式範圍 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)。  
   
- 指標只使用單一值。 如果您必須顯示多個資料值，請使用走勢圖或資料橫條來代替指標。 它們可以表示多個資料值，但即使很小，也很容易了解，而且在資料表和矩陣中運作良好。 如需詳細資訊，請參閱[走勢圖和資料橫條 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)。  
+ 指標只使用單一值。 如果您必須顯示多個資料值，請使用走勢圖或資料橫條來代替指標。 它們可以表示多個資料值，但即使很小，也很容易了解，而且在資料表和矩陣中運作良好。 如需詳細資訊，請參閱 [走勢圖和資料橫條 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)。  
   
 ##  <a name="SizingIndicatators"></a> 調整指標的大小，將視覺影響最大化  
  除了色彩、方向和形狀之外，您還可以使用大小，將指標的視覺影像最大化。 設想使用指標顯示客戶對於不同類型自行車之滿意度的報表。 根據客戶滿意度，指標所使用的圖示可以設定為不同的大小。 滿意度愈高，出現在報表中的圖示愈大。 下圖顯示自行車銷售的報告，而圖示的大小會反映銷售量。  
@@ -117,11 +122,11 @@ caps.handback.revision: 11
   
  下圖並排顯示量測計內的一個指標。  
   
- ![rs_GaugePanelWithIndicatorAndGauge](../../reporting-services/report-design/media/rs-gaugepanelwithindicatorandgauge.png "rs_GaugePanelWithIndicatorAndGauge")  
+ ![rs_GaugePanelWithIndicatorAndGauge](../../reporting-services/report-design/media/rs-gaugepanelwithindicatorandgauge.gif "rs_GaugePanelWithIndicatorAndGauge")  
   
- 如需詳細資訊，請參閱[在量測計面板中加入指標與量測計 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs.md)。  
+ 如需詳細資訊，請參閱 [在量測計面板中加入指標與量測計 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs.md)。  
   
- 如需使用量測計的詳細資訊，請參閱[量測計 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)。  
+ 如需使用量測計的詳細資訊，請參閱 [量測計 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)。  
   
 ##  <a name="SequenceIndicatorStates"></a> 指標狀態的順序  
  **[指標屬性]** 對話方塊的 **[值和狀態]** 索引標籤中指標狀態的順序會影響指標狀態的開始和結束值重疊時，為資料值所顯示的指標圖示。  
@@ -189,7 +194,7 @@ caps.handback.revision: 11
   
 -   [在量測計面板中加入指標與量測計 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs.md)  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [量測計 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)   
  [走勢圖和資料橫條 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)   
  [圖表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  

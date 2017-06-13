@@ -1,31 +1,36 @@
 ---
-title: "設定部署屬性 (Reporting Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "報表 [Reporting Services], 部署"
-  - "發行報表 [Reporting Services]"
-  - "屬性 [Reporting Services], 部署"
-  - "deploying reports [Reporting Services]"
+title: "設定部署屬性 (Reporting Services) |Microsoft 文件"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- reports [Reporting Services], deploying
+- publishing reports [Reporting Services]
+- properties [Reporting Services], deployment
+- deploying reports [Reporting Services]
 ms.assetid: 18201ca0-bf4a-484f-b3a2-95d1046a6a9b
 caps.latest.revision: 44
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 44
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 30d542287f81032aa1bc2540d461a8f8c163b2f9
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 設定部署屬性 (Reporting Services)
-  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，您必須為報表及共用資料來源指定報表伺服器和資料夾 (選擇性)，讓您可以將報表伺服器專案中的項目發行至報表伺服器。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 需要建立、預覽部署報表的屬性和值都儲存在報表伺服器專案的專案組態中。 您可以為這些專案屬性建立多個命名集，讓您可以在屬性集之間方便地切換。 每一組屬性都是一個組態。 例如，您可以擁有一個組態將報表發行到測試伺服器，並有另一個組態將報表發行到實際伺服器。  
+# <a name="set-deployment-properties-reporting-services"></a>設定部署屬性 (Reporting Services)
+  在[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，您必須為報表及共用資料來源指定報表伺服器和資料夾 (選擇性)，讓您可以將報表伺服器專案中的項目發行至報表伺服器。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 需要建立、預覽部署報表的屬性和值都儲存在報表伺服器專案的專案組態中。 您可以為這些專案屬性建立多個命名集，讓您可以在屬性集之間方便地切換。 每一組屬性都是一個組態。 例如，您可以擁有一個組態將報表發行到測試伺服器，並有另一個組態將報表發行到實際伺服器。  
   
- 使用組態管理員可在專案組態中建立及管理專案屬性的集合。 組態管理員是 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 支援的功能，[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 是以它為基礎。  
+ 使用組態管理員可在專案組態中建立及管理專案屬性的集合。 組態管理員是 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]支援的功能， [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 是以它為基礎。  
   
 > [!NOTE]  
 >  請不要將這項功能與 Reporting Services 組態管理員搞混，後者是用來在安裝之後設定 Reporting Services。 如需詳細資訊，請參閱[設定和管理報表伺服器 &#40;SSRS 原生模式&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)。  
@@ -33,7 +38,7 @@ caps.handback.revision: 44
 > [!NOTE]  
 >  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中，從報表伺服器專案或方案發行報表的動作稱為「部署報表」。  
   
-### 若要設定部署屬性  
+### <a name="to-set-deployment-properties"></a>若要設定部署屬性  
   
 1.  以滑鼠右鍵按一下報表專案，然後按一下 [屬性]。  
   
@@ -67,20 +72,20 @@ caps.handback.revision: 44
   
      發行至以 SharePoint 整合模式執行的報表伺服器時，請使用 SharePoint 頂層網站或子網站的 URL。 如果您未指定網站，則會使用預設頂層網站 (例如 http://伺服器名稱、http://伺服器名稱/網站或 http://伺服器名稱/網站/子網站)。  
   
-### 設定組態管理員屬性  
+### <a name="to-set-configuration-manager-properties"></a>設定組態管理員屬性  
   
 1.  以滑鼠右鍵按一下報表專案，然後按一下 [屬性]。  
   
 2.  在專案的 [屬性頁] 對話方塊中，按一下 [組態管理員]。  
   
-3.  在 [組態管理員] 對話方塊中，選取要編輯的組態。 目前使用中的組態會顯示為 [使用中 (\<組態*>*)]。  
+3.  在 [組態管理員] 對話方塊中，選取要編輯的組態。 目前作用中的組態會顯示為**Active (***\<組態 >***)**。  
   
 4.  在 [專案內容] 中，針對方案中的每個專案，選取或清除 [建立] 或 [部署]。  
   
     > [!NOTE]  
     >  如果選取 [建立]，則報表設計師會建立報表專案，並在預覽或發行至報表伺服器之前，先檢查是否有錯誤。 如果選取 [部署]，則報表設計師會依照部署屬性中的定義，將報表發行至報表伺服器。 如果未選取 [部署]，報表設計師會在本機預覽視窗中，顯示 **StartItem** 屬性中指定的報表。  
   
-## 請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [發行資料來源與報表](../../reporting-services/reports/publishing-data-sources-and-reports.md)   
  [預覽報表](../../reporting-services/reports/previewing-reports.md)   
  [報表設計師 F1 說明](../../reporting-services/tools/report-designer-f1-help.md)   

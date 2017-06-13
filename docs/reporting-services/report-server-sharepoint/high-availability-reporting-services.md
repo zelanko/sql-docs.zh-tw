@@ -1,27 +1,32 @@
 ---
-title: "高可用性 (Reporting Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "高可用性 [SQL Server], Reporting Services"
-  - "高可用性 [Reporting Services]"
-  - "Reporting Services, 高可用性"
+title: "高可用性 (Reporting Services) |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- high availability [SQL Server], Reporting Services
+- high availability [Reporting Services]
+- Reporting Services, high availability
 ms.assetid: 50e0813f-f591-4688-9cd1-e6389a3808e5
 caps.latest.revision: 16
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 16
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b4b2d373dfc2467e10a9a6ee79d98aa3a690bd4c
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 高可用性 (Reporting Services)
+# <a name="high-availability-reporting-services"></a>高可用性 (Reporting Services)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器是無狀態伺服器，它會將應用程式資料、內容、屬性和工作階段資訊儲存在兩個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 關聯式資料庫中。 因此，確保 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能可用性的最佳方式是進行下列作業：  
   
 -   使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的高可用性功能，盡可能增加報表伺服器資料庫的執行時間。 如果您將 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體設定為在容錯移轉叢集中執行，就可以在建立報表伺服器資料庫時選取該執行個體。  
@@ -36,8 +41,8 @@ caps.handback.revision: 16
   
  報表伺服器 Web 服務與 Windows 服務會緊密整合而且一起當做單一報表伺服器執行個體執行。 您無法個別針對其中一項服務設定可用性。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [高可用性解決方案 &#40;SQL Server&#41;](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md)   
- [向外延展部署 - Reporting Services 原生模式 &#40;組態管理員&#41;](../Topic/Scale-out%20Deployment%20%20-%20Reporting%20Services%20Native%20mode%20\(Configuration%20Manager\).md)  
+ [向外延展部署 - Reporting Services 原生模式 &#40;組態管理員&#41;](http://msdn.microsoft.com/library/4df38294-6f9d-4b40-9f03-1f01c1f0700c)  
   
   

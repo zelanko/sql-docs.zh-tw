@@ -1,33 +1,41 @@
 ---
-title: "SharePoint 清單連接類型 (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "SharePoint 清單連接類型 (SSRS) |Microsoft 文件"
+ms.custom: 
+ms.date: 05/10/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2c4adf2f-e9c4-4fae-bd3c-97fe64436caf
 caps.latest.revision: 11
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 11
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 23799f3c292e7a64ca859d06b570bd8f4657953a
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# SharePoint 清單連接類型 (SSRS)
-  若要在報表中包含來自 Microsoft SharePoint 清單的資料，您必須加入或建立以 Microsoft SharePoint 清單類型之報表資料來源為基礎的資料集。 這是以 Microsoft SQL Server Reporting Services SharePoint 清單資料延伸模組為基礎的內建資料來源類型。 使用此資料來源類型可連接至 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)]、 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)]、 [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 和 [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 網站，並從中擷取清單資料。  
-  
- 您可以使用本主題中的資訊來建置資料來源。 如需逐步指示，請參閱[加入及驗證資料連接 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)。  
-  
+# <a name="sharepoint-list-connection-type-ssrs"></a>SharePoint 清單連接類型 (SSRS)
+
+[!INCLUDE[ssrs-appliesto-sql2016-preview](../../includes/ssrs-appliesto-sql2016-preview.md)] [!INCLUDE [ssrs-appliesto-sharepoint-2013-2016](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
+
+若要在報表中包含來自 Microsoft SharePoint 清單的資料，您必須加入或建立以 Microsoft SharePoint 清單類型之報表資料來源為基礎的資料集。 這是以 Microsoft SQL Server Reporting Services SharePoint 清單資料延伸模組為基礎的內建資料來源類型。 若要連接並擷取清單資料，從 SharePoint 2013 和更新版本中使用此資料來源類型。
+
+您可以使用本主題中的資訊來建置資料來源。 如需逐步指示，請參閱 [加入及驗證資料連接 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)類型之報表資料來源為基礎的資料集。  
+
 ##  <a name="Connection"></a> 連接字串  
  SharePoint 清單的連接字串是 SharePoint 網站或子網站的 URL，例如 `http://MySharePointWeb/MySharePointSite` 或 `http://MySharePointWeb/MySharePointSite/Subsite`。  
   
  查詢設計工具會自動顯示您有足夠權限存取的 SharePoint 清單。  
   
- 如需更多連接字串範例，請參閱[報表產生器中的資料連接、資料來源及連接字串](../Topic/Data%20Connections,%20Data%20Sources,%20and%20Connection%20Strings%20in%20Report%20Builder.md)。  
+ 如需更多連接字串範例，請參閱 [報表產生器中的資料連接、資料來源及連接字串](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)。  
   
 ##  <a name="Credentials"></a> 認證  
  需要有認證才能夠執行報表、於本機預覽報表並且從報表伺服器預覽報表。 發行報表之後，您可能需要變更資料來源的認證，如此當報表在報表伺服器上執行時，擷取資料的權限就會是有效的。 可搭配這個資料延伸模組使用的認證類型，取決於您使用做為資料來源之 SharePoint 清單的 SharePoint 技術設定。  
@@ -59,21 +67,21 @@ caps.handback.revision: 11
  *Windows 驗證、表單為主的驗證 (FBA)、安全應用程式標記語言 (SAML) 權杖、其他識別提供者或上述之一個以上驗證提供者的組合。  
   
  **Windows 驗證**  
- 若 SharePoint 技術設為搭配「信任帳戶」模式的報表伺服器使用，則不支援此選項。 只適用於 SQL Server 2012 Reporting Services 之前的版本。  
-  
- 若 SharePoint 技術設為搭配「Windows 整合式」模式的報表伺服器使用，此選項會套用至目前的 Windows 使用者和目前的 SharePoint 使用者。  
-  
- 若 SharePoint 技術設為不搭配報表伺服器使用 (本機模式)，則不支援此選項。 如需本機模式的詳細資訊，請參閱[本機模式與連接模式報表 &#40;SharePoint 模式的 Reporting Services&#41;](../../reporting-services/report-server-sharepoint/local mode vs. connected mode reports in the report viewer.md)。  
+ 若 SharePoint 技術設為搭配「信任帳戶」模式的報表伺服器使用，則不支援此選項。 只適用於 SQL Server 2012 Reporting Services 之前的版本。
+
+ 若 SharePoint 技術設為搭配「Windows 整合式」模式的報表伺服器使用，此選項會套用至目前的 Windows 使用者和目前的 SharePoint 使用者。
+ 
+ 若 SharePoint 技術設為不搭配報表伺服器使用 (本機模式)，則不支援此選項。 如需本機模式的詳細資訊，請參閱[本機模式與連接模式報表 &#40;SharePoint 模式的 Reporting Services&#41;](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md)。  
   
  **不需要認證 (請勿使用認證)：**  
  若要使用這個選項，您必須在報表伺服器上設定自動執行帳戶。 如需詳細資訊，請參閱[設定自動執行帳戶 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。  
   
  如需有關跨 Microsoft BI 堆疊之宣告驗證支援的詳細資訊，請參閱 [跨 Microsoft BI 堆疊使用宣告驗證](http://social.technet.microsoft.com/wiki/contents/articles/15274.using-claims-authentication-across-the-microsoft-bi-stack.aspx)。  
   
- 如需詳細資訊，請參閱[資料連接、資料來源及連接字串 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)、[在報表產生器中指定認證](../Topic/Specify%20Credentials%20in%20Report%20Builder.md)或 [Reporting Services &#40;SSRS&#41; 支援的資料來源](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。  
+ 如需詳細資訊，請參閱[資料連接、資料來源及連接字串 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)、[在報表產生器中指定認證](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)或 [Reporting Services &#40;SSRS&#41; 支援的資料來源](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。  
   
 ##  <a name="Query"></a> 查詢  
- 若要設計查詢，根據資料來源建立新資料集，然後開啟相關聯的查詢設計工具。 如需詳細資訊，請參閱[建立共用資料集或內嵌資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)。  
+ 若要設計查詢，根據資料來源建立新資料集，然後開啟相關聯的查詢設計工具。 如需詳細資訊，請參閱 [建立共用資料集或內嵌資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)。  
   
  SharePoint 清單圖形化查詢設計工具會顯示四個窗格：  
   
@@ -87,30 +95,30 @@ caps.handback.revision: 11
   
 -   **隱藏** ：欄位是否顯示在 SharePoint 清單檢視中。  
   
- 不支援從多個清單中選取欄位。 您可為每個清單建立資料集，然後從每個資料集選取欄位。 若清單具有一般欄位，可以使用繫結到某個資料集的 Tablix 資料區中之 Lookup 函數，從未繫結到資料區的其他資料集中擷取值。 如需詳細資訊，請參閱 [Lookup 函數 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/lookup-function-report-builder-and-ssrs.md)。  
+ 不支援從多個清單中選取欄位。 您可為每個清單建立資料集，然後從每個資料集選取欄位。 若清單具有一般欄位，可以使用繫結到某個資料集的 Tablix 資料區中之 Lookup 函數，從未繫結到資料區的其他資料集中擷取值。 如需詳細資訊，請參閱 [Lookup 函數 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/report-builder-functions-lookup-function.md)。  
   
--   **選取的欄位**  ：顯示您已經選取的欄位。 在此窗格中，欄位的名稱為 SharePoint 使用者已經指定的易記名稱。 當您關閉查詢設計工具時，您會在 [報表資料] 窗格的資料集欄位集合中看到這些名稱。 [資料集屬性對話方塊、欄位 &#40;報表產生器 &#41;](../Topic/Dataset%20Properties%20Dialog%20Box,%20Fields%20\(Report%20Builder\).md) 頁面有唯一名稱和易記名稱之間的關聯性。  
+-   **選取的欄位**  ：顯示您已經選取的欄位。 在此窗格中，欄位的名稱為 SharePoint 使用者已經指定的易記名稱。 當您關閉查詢設計工具時，您會在 [報表資料] 窗格的資料集欄位集合中看到這些名稱。 [資料集屬性對話方塊、欄位 &#40;報表產生器 &#41;](http://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42) 頁面有唯一名稱和易記名稱之間的關聯性。  
   
 -   **套用的篩選**  ：在資料傳回報表前，限制從 SharePoint 清單傳回的資料。 選取欄位名稱、運算子及值，用來限制在清單中擷取的資料。 這些運算子會隨著您選取之值的資料類型而有所不同。  
   
-     您無法在圖形化查詢設計工具中變更排序順序或指定群組。 若要這麼做，請在報表資料集上設定排序運算式，然後針對報表中的資料區為運算式分組。 不支援查詢參數。 若要篩選報表中的資料，使用您建立的報表篩選或報表參數。 如需詳細資訊，請參閱[篩選、分組和排序資料 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md) 和[報表參數 &#40;報表產生器和報表設計師&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)。  
+     您無法在圖形化查詢設計工具中變更排序順序或指定群組。 若要這麼做，請在報表資料集上設定排序運算式，然後針對報表中的資料區為運算式分組。 不支援查詢參數。 若要篩選報表中的資料，使用您建立的報表篩選或報表參數。 如需詳細資訊，請參閱 [篩選、分組和排序資料 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md) 和 [報表參數 &#40;報表產生器和報表設計師&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)。  
   
 -   **查詢結果**  ：顯示查詢執行時所傳回的範例資料列。 如果 SharePoint 網站上的 SharePoint 清單值經常變更，您在查詢結果窗格中看到的值可能會與您在報表中看到的值不同。  
   
--   **選取的欄位**  ：顯示您已經選取的欄位。 在此窗格中，欄位的名稱為 SharePoint 使用者已經指定的易記名稱。 當您關閉查詢設計工具時，您會在 [報表資料] 窗格的資料集欄位集合中看到這些名稱。 [資料集屬性對話方塊、欄位 &#40;報表產生器 &#41;](../Topic/Dataset%20Properties%20Dialog%20Box,%20Fields%20\(Report%20Builder\).md) 頁面有唯一名稱和易記名稱之間的關聯性。  
+-   **選取的欄位**  ：顯示您已經選取的欄位。 在此窗格中，欄位的名稱為 SharePoint 使用者已經指定的易記名稱。 當您關閉查詢設計工具時，您會在 [報表資料] 窗格的資料集欄位集合中看到這些名稱。 [資料集屬性對話方塊、欄位 &#40;報表產生器 &#41;](http://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42) 頁面有唯一名稱和易記名稱之間的關聯性。  
   
 -   **套用的篩選**  ：在資料傳回報表前，限制從 SharePoint 清單傳回的資料。 選取欄位名稱、運算子及值，用來限制在清單中擷取的資料。 這些運算子會隨著您選取之值的資料類型而有所不同。  
   
-     您無法在圖形化查詢設計工具中變更排序順序或指定群組。 若要這麼做，請在報表資料集上設定排序運算式，然後針對報表中的資料區為運算式分組。 不支援查詢參數。 若要篩選報表中的資料，使用您建立的報表篩選或報表參數。 如需詳細資訊，請參閱[篩選、分組和排序資料 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md) 和[報表參數 &#40;報表產生器和報表設計師&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)。  
+     您無法在圖形化查詢設計工具中變更排序順序或指定群組。 若要這麼做，請在報表資料集上設定排序運算式，然後針對報表中的資料區為運算式分組。 不支援查詢參數。 若要篩選報表中的資料，使用您建立的報表篩選或報表參數。 如需詳細資訊，請參閱 [篩選、分組和排序資料 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md) 和 [報表參數 &#40;報表產生器和報表設計師&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)。  
   
 -   **查詢結果**  ：顯示查詢執行時所傳回的範例資料列。 如果 SharePoint 網站上的 SharePoint 清單值經常變更，您在查詢結果窗格中看到的值可能會與您在報表中看到的值不同。  
   
  如需詳細資訊，請參閱 [SharePoint 清單查詢設計工具 &#40;報表產生器&#41;](../../reporting-services/report-data/sharepoint-list-query-designer-report-builder.md)。  
   
-### 查詢文字  
+### <a name="query-text"></a>查詢文字  
  若要檢視圖形化查詢設計工具所產生的查詢，請切換到以文字為基礎的查詢設計工具。 在此檢視中，您可以看到圖形化查詢設計工具所建立的 XML。 XML 包含清單名稱、欄位集合和篩選的元素。  
   
-#### 範例 1： 指定清單的欄位  
+#### <a name="example-1-specified-fields-for-a-list"></a>範例 1： 指定清單的欄位  
  下列範例顯示格式正確的 SharePoint 查詢：  
   
 ```  
@@ -139,7 +147,7 @@ caps.handback.revision: 11
   
  只要查詢維持格式正確的 XML 文字，您就可以編輯此查詢的檢視。  
   
-#### 範例 2： 清單的所有欄位  
+#### <a name="example-2-all-fields-for-a-list"></a>範例 2： 清單的所有欄位  
  您也可以指定只傳回清單的名稱以及所有欄位，包括隱藏的欄位。 下列範例會從名為 Tasks 的清單擷取所有欄位：  
   
 ```  
@@ -168,21 +176,22 @@ caps.handback.revision: 11
  [報表資料集 &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
  提供存取報表資料的概觀。  
   
- [報表產生器中的資料連接、資料來源及連接字串](../Topic/Data%20Connections,%20Data%20Sources,%20and%20Connection%20Strings%20in%20Report%20Builder.md)  
+ [報表產生器中的資料連接、資料來源及連接字串](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
  提供資料連接與資料來源的相關資訊。  
   
  [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
  提供內嵌與共用資料集的相關資訊。  
   
- [資料集 Fields 集合 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
+ [資料集欄位集合 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
  提供查詢所產生之資料集欄位集合的相關資訊。  
   
- 《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [線上叢書](http://go.microsoft.com/fwlink/?linkid=121312)》中 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文件的 [Reporting Services &#40;SSRS&#41; 支援的資料來源](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。  
+ 《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [線上叢書》](http://go.microsoft.com/fwlink/?linkid=121312)中 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文件的 [Reporting Services 支援的資料來源 &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。  
  提供支援每一個資料延伸模組之平台與版本的深入資訊。  
-  
-## 請參閱＜  
- [報表參數 &#40;報表產生器和報表設計師&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
- [篩選、分組和排序資料 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [運算式 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
-  
-  
+
+## <a name="see-also"></a>另請參閱
+
+[報表參數](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
+[篩選、 分組和排序資料](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+[運算式 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
+
+更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)

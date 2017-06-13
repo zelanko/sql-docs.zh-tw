@@ -1,32 +1,38 @@
 ---
-title: "View and Explore Native Mode Reports Using SharePoint Web Parts (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "檢視及瀏覽原生模式報表使用 SharePoint Web 組件 (SSRS) |Microsoft 文件"
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: dee8ee42-156b-43b6-b202-02dfb9404284
 caps.latest.revision: 9
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 9
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 507cac75588632cfd89f5275ee7038a49b8cdfc5
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# View and Explore Native Mode Reports Using SharePoint Web Parts (SSRS)
-    
+
+# <a name="view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs"></a>View and Explore Native Mode Reports Using SharePoint Web Parts (SSRS)
+
 > [!IMPORTANT]  
->  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 不再支援從原生模式報表伺服器 SharePoint 網站上使用原生模式 (RSWebParts.cab) 網頁組件，來存取報表伺服器內容。 使用 [SharePoint 網站上的報表檢視器 Web 組件](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)。  
+>  SQL Server Reporting Services 已不再支援從原生模式報表伺服器在 SharePoint 網站上使用原生模式 (RSWebParts.cab) web 組件，來存取報表伺服器內容。 使用 [SharePoint 網站上的報表檢視器 Web 組件](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md) 。  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供數種 Web 組件，可與特定版本的報表伺服器，以及在特定的部署模式下搭配使用。  
   
--   **原生模式**：如果您想要從原生模式報表伺服器存取 SharePoint 網站上的報表伺服器內容，請使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]隨附的 SharePoint 2.0 Web 組件報表總管和報表檢視器。 在本主題中有提供關於安裝與使用 2.0 Web 組件的指示。  
+-   **原生模式** ：如果您想要從原生模式報表伺服器存取 SharePoint 網站上的報表伺服器內容，請使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]隨附的 SharePoint 2.0 Web 組件報表總管和報表檢視器。 在本主題中有提供關於安裝與使用 2.0 Web 組件的指示。  
   
--   **SharePoint 模式**：如果您想要存取以 SharePoint 模式執行的報表伺服器，請使用適用於 SharePoint 產品之 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 增益集所安裝的 Web 組件。 如需增益集的詳細資訊，請參閱[尋找適用於 SharePoint 產品之 Reporting Services 增益集的位置](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)。  
+-   **SharePoint 模式** ：如果您想要存取以 SharePoint 模式執行的報表伺服器，請使用適用於 SharePoint 產品之 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 增益集所安裝的 Web 組件。 如需增益集的詳細資訊，請參閱 [尋找適用於 SharePoint 產品之 Reporting Services 增益集的位置](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)。  
   
 > [!NOTE]  
 >  原生模式的報表檢視器 Web 組件 (SPViewer.dwp) 與適用於 SharePoint 產品之 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 增益集所安裝的 Web 組件 (ReportViewer.dwp) 有所不同。 這些 Web 組件具有不同的結構描述和實作，但是它們可以安裝在相同的 SharePoint 伺服器陣列上。 視覺上，您可以透過下列特性區分這兩個 Web 組件：透過增益集安裝之報表檢視器 Web 組件的工具列具有 [動作] 功能表。  
@@ -61,7 +67,7 @@ caps.handback.revision: 9
   
 -   受支援的 SharePoint 產品版本與技術如下：  
   
-    -   [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007。  
+    -   [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 and [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007.  
   
     -   [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 和 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)]。  
   
@@ -71,14 +77,14 @@ caps.handback.revision: 9
   
 -   必須安裝報表管理員。  
   
- 報表總管與報表檢視器 Web 組件透過包含在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中的封包 (.cab) 檔散發。 在本主題的下列章節中，提供安裝、設定與使用 Web 組件的指示。  
+ 報表總管與報表檢視器 Web 組件透過包含在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中的封包 (.cab) 檔散發。 在本主題的下列章節中，提供安裝、設定與使用 Web 組件的指示。  
   
 ##  <a name="bkmk_installingwebparts"></a> 安裝 Web 組件  
  Web 組件會以封包 (.cab) 檔案的形式，傳遞至 SharePoint 伺服器。 請從命令列針對 .cab 檔執行 SharePoint Stsadm.exe 工具以安裝 Web 組件。 若要了解有關工具和 Web 組件部署的詳細資訊，請參閱您的 SharePoint 文件集。  
   
-#### 使用 PowerShell 安裝 Web 組件  
+#### <a name="install-web-parts-using-powershell"></a>使用 PowerShell 安裝 Web 組件  
   
-1.  請將 **RSWebParts.cab** 複製到 SharePoint 伺服器上的資料夾中。 您可以將其複製到 SharePoint 伺服器上的任何資料夾中，然後稍後在安裝 Web 組件後再刪除它。 根據預設， [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會將 RSWebParts.cab 檔案安裝至下列資料夾：  
+1.  請將 **RSWebParts.cab** 複製到 SharePoint 伺服器上的資料夾中。 您可以將其複製到 SharePoint 伺服器上的任何資料夾中，然後稍後在安裝 Web 組件後再刪除它。 根據預設 SQL Server 2014 Reporting Services 和先前會將 RSWebParts.cab 檔案安裝至下列資料夾：  
   
     ```  
     C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Reporting Services\SharePoint  
@@ -100,9 +106,9 @@ caps.handback.revision: 9
   
     > rswebparts.cab    00000000-0000-0000-0000-000000000000     True  
   
-     如需使用 PowerShell 的詳細資訊，請參閱 [Install-SPWebPartPack](http://technet.microsoft.com/library/ff607840.aspx) (http://technet.microsoft.com/library/ff607840.aspx)。  
+     如需使用 PowerShell 的詳細資訊，請參閱 [Install-SPWebPartPack](http://technet.microsoft.com/library/ff607840.aspx)(http://technet.microsoft.com/library/ff607840.aspx)。  
   
-#### 使用 STSADM.exe 安裝 Web 組件  
+#### <a name="install-web-parts-using-stsadmexe"></a>使用 STSADM.exe 安裝 Web 組件  
   
 1.  請依照本文件的 PowerShell 章節所述，將 **RSWebParts.cab** 檔案複製到 SharePoint 伺服器上的相同位置。  
   
@@ -125,7 +131,7 @@ caps.handback.revision: 9
   
  下列程序會將這兩個 Web 組件加入至頁面，然後將報表總管與報表檢視器連接在一起。如此一來，當您在報表總管中按一下報表時，它就會顯示在報表檢視器內部。  
   
-#### 加入報表檢視器  
+#### <a name="add-report-viewer"></a>加入報表檢視器  
   
 1.  在 [網站動作] 中，按一下 **[編輯頁面]**。  
   
@@ -142,13 +148,13 @@ caps.handback.revision: 9
   
 6.  當頁面處於編輯模式時，在報表檢視 Web 組件中按一下 **[編輯網頁組件]** 。  
   
-7.  在 **[報表管理員 URL]**中，輸入指向報表管理員執行個體的 URL，該執行個體與您要存取的原生模式報表伺服器相關聯。 依預設，報表管理員 URL 的語法如下：**http://\<伺服器名稱>/reports**。  
+7.  在 **[報表管理員 URL]**中，輸入指向報表管理員執行個體的 URL，該執行個體與您要存取的原生模式報表伺服器相關聯。 根據預設，報表管理員 URL 具有下列語法： **http://\<伺服器名稱 > /**。  
   
-8.  在 **[報表路徑]**中，指定正斜線，後面緊跟著資料夾路徑與報表名稱。 請 **勿** 加入伺服器名稱或報表管理員虛擬目錄。 例如，若要開啟 Adventure Works 資料夾中的 ‘Company Sales’ 報表，請指定 **/Adventure Works/Company Sales**。 以下是 ‘Products’ 報表位於報表伺服器根資料夾 **/Products** 的另一個範例。  
+8.  在 **[報表路徑]**中，指定正斜線，後面緊跟著資料夾路徑與報表名稱。 請 **勿** 加入伺服器名稱或報表管理員虛擬目錄。 例如，若要開啟 Adventure Works 資料夾中的 ‘Company Sales’ 報表，請指定 **/Adventure Works/Company Sales**。 以下是 ‘Products’ 報表位於報表伺服器根資料夾 **/Products**的另一個範例。  
   
 9. 按一下 **[確定]**。  
   
-#### 加入報表總管並連接到報表檢視器  
+#### <a name="add-report-explorer-and-connect-to-report-viewer"></a>加入報表總管並連接到報表檢視器  
   
 1.  在頁面的另一個區域中，按一下 **[新增網頁組件]** ，然後在 [其他] 資料夾中，按一下 **[報表總管]** 並按一下 **[新增]**。  
   
@@ -156,7 +162,7 @@ caps.handback.revision: 9
   
 3.  在 **[報表管理員 URL]**中，輸入指向報表管理員執行個體的 URL，該執行個體與您要存取的原生模式報表伺服器相關聯。  
   
-4.  您可以選擇性地設定 **[起始路徑]**。 起始路徑是報表伺服器資料夾階層中的資料夾。 如果您要讓預設頁面成為比資料夾階層以下的資料夾，您可以指定起始路徑。 路徑開頭必須是正斜線。 您必須指定以報表伺服器資料夾階層之根節點開始的完整路徑，但是不包含伺服器名稱或報表管理員虛擬目錄。 例如，若要開啟根節點正下方，名稱為 Adventure Works 的資料夾，請在 [起始路徑] 中指定 **/Adventure Works**。  
+4.  您可以選擇性地設定 **[起始路徑]**。 起始路徑是報表伺服器資料夾階層中的資料夾。 如果您要讓預設頁面成為比資料夾階層以下的資料夾，您可以指定起始路徑。 路徑開頭必須是正斜線。 您必須指定以報表伺服器資料夾階層之根節點開始的完整路徑，但是不包含伺服器名稱或報表管理員虛擬目錄。 例如，若要開啟根節點正下方，名稱為 Adventure Works 的資料夾，請在 [起始路徑] 中指定 **/Adventure Works** 。  
   
 5.  按一下 **[確定]**。  
   
@@ -167,10 +173,5 @@ caps.handback.revision: 9
     2.  按一下 **[顯示報表於]**。  
   
     3.  按一下 **[報表檢視器]**。  
-  
-## 請參閱＜  
- [報表管理員 &#40;SSRS 原生模式&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md)   
- [Reporting Services 報表伺服器 &#40;SharePoint 模式&#41;](../../reporting-services/report-server-sharepoint/reporting-services-report-server-sharepoint-mode.md)   
- [Reporting Services 報表伺服器 &#40;原生模式&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)  
-  
-  
+
+更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)

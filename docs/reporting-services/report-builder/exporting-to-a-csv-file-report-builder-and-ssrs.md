@@ -1,23 +1,28 @@
 ---
-title: "匯出至 CSV 檔案 (報表產生器及 SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "匯出至 CSV 檔案 （報表產生器及 SSRS） |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 68ec746e-8c82-47f5-8c3d-dbe403a441e5
 caps.latest.revision: 9
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 60c8d93cd6901e6a18337212f8906ccbbf0f5522
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 匯出至 CSV 檔案 (報表產生器及 SSRS)
+# <a name="exporting-to-a-csv-file-report-builder-and-ssrs"></a>匯出至 CSV 檔案 (報表產生器及 SSRS)
   逗號分隔值 (CSV) 轉譯延伸模組會將分頁報表從多個應用程式都可輕易讀取與交換的標準化純文字格式報表，轉譯為扁平化表示的資料。  
   
  CSV 轉譯延伸模組使用字串字元分隔符號來分隔欄位和資料列，可將此字串字元分隔符號設定為非逗號字元。 所產生的檔案可以使用試算表程式 (例如 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] ) 開啟，或當做其他程式的匯入格式使用。 匯出的報表會變成 .csv 檔案，並傳回 MIME 類型的 **text/csv**。  
@@ -37,7 +42,7 @@ caps.handback.revision: 8
     > [!NOTE]  
     >  您可以藉由變更裝置資訊設定的方式，將欄位分隔符號變更為所需的任何字元，包括 TAB。 如需詳細資訊，請參閱 [CSV Device Information Settings](../../reporting-services/csv-device-information-settings.md)。  
   
--   記錄分隔符號字串是歸位字元和換行字元 (\<cr>\<lf>)。  
+-   記錄分隔符號字串是歸位字元和換行字元 (\<cr >\<lf >)。  
   
 -   文字限定詞字串是引號 (")。  
   
@@ -81,7 +86,7 @@ caps.handback.revision: 8
 |指標|以作用中的狀態名稱、可用的狀態以及資料值轉譯成單一記錄。|  
 |對應|轉譯資料列，其中包含地圖圖層之每一個地圖成員的標籤和值。<br /><br /> 如果地圖有多個圖層，則資料列中的值會根據地圖圖層是使用相同或不同的地圖資料區域而有所不同。 如果多個地圖圖層使用相同的資料區域，則資料列會包含所有圖層中的資料。|  
   
-### 階層與群組資料  
+### <a name="hierarchical-and-grouped-data"></a>階層與群組資料  
  階層與群組資料必須扁平化，才能以 CSV 格式表示。  
   
  轉譯延伸模組會將報表扁平化為樹狀結構，可表示資料區域內的巢狀群組。 若要將報表扁平化：  
@@ -94,14 +99,13 @@ caps.handback.revision: 8
   
 -   對等資料區域是一種資料區域或動態群組，可以共用一般資料區域或動態上階。 對等資料會以扁平化樹狀結構的分支識別。  
   
- 如需詳細資訊，請參閱[資料表、矩陣和清單 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)。  
+ 如需詳細資訊，請參閱 [資料表、矩陣和清單 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)。  
   
- ![搭配回到頁首連結使用的箭頭圖示](../../analysis-services/instances/media/uparrow16x16.png "搭配回到頁首連結使用的箭頭圖示") [回到頁首](#BackToTop)  
   
 ##  <a name="RenderingModes"></a> 轉譯器模式  
  CSV 轉譯延伸模組可以在兩種模式下操作：一種會針對 Excel 最佳化，而另一種則會針對需要 CSV 嚴格遵循 RFC 4180 中 CSV 規格的協力廠商應用程式最佳化。 根據所使用的模式，對等資料區域的處理方式也會不同。  
   
-### 預設模式  
+### <a name="default-mode"></a>預設模式  
  預設模式會針對 Excel 最佳化。 以預設模式進行轉譯時，報表會轉譯為包含多個 CSV 轉譯資料區塊的 CSV 檔。 每個對等區域都會以一個空行分隔。 報表主體內的對等資料區域在 CSV 檔中，會轉譯為個別的資料區塊。 結果是 CSV 檔，而其中：  
   
 -   報表主體內的各個文字方塊在 CSV 檔中會轉譯一次，而且會轉譯為第一個資料區塊。  
@@ -110,16 +114,16 @@ caps.handback.revision: 8
   
 -   巢狀資料區域會以對角方式轉譯為相同的資料區塊。  
   
-#### 格式化  
+#### <a name="formatting"></a>格式化  
  數值會利用其格式化的狀態進行轉譯。 Excel 可以識別格式化的數值，例如，貨幣、百分比與日期，並在匯入 CSV 檔時，適當地格式化資料格。  
   
-### 相容模式  
+### <a name="compliant-mode"></a>相容模式  
  相容模式會針對協力廠商應用程式最佳化。  
   
-#### 資料區域  
+#### <a name="data-regions"></a>資料區域  
  只有檔案的第一個資料列包含資料行標頭，而且每個資料列都有相同數目的資料行。  
   
-#### 格式化  
+#### <a name="formatting"></a>格式化  
  這些值沒有格式化。  
   
 ##  <a name="Interactivity"></a> 互動性  
@@ -139,17 +143,15 @@ caps.handback.revision: 8
   
 -   書籤  
   
- ![搭配回到頁首連結使用的箭頭圖示](../../analysis-services/instances/media/uparrow16x16.png "搭配回到頁首連結使用的箭頭圖示") [回到頁首](#BackToTop)  
   
 ##  <a name="DeviceInfo"></a> 裝置資訊設定  
  您可以變更此轉譯器的某些預設值，包括要在哪個模式下進行轉譯、要使用哪些字元當做分隔符號，以及要使用哪些字元當做文字限定詞的預設字串，只要變更裝置資訊設定即可。 如需詳細資訊，請參閱 [CSV Device Information Settings](../../reporting-services/csv-device-information-settings.md)。  
   
- ![搭配回到頁首連結使用的箭頭圖示](../../analysis-services/instances/media/uparrow16x16.png "搭配回到頁首連結使用的箭頭圖示") [回到頁首](#BackToTop)  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [Reporting Services 中的分頁 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [轉譯行為 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [不同報表轉譯延伸模組的互動式功能 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/interactive functionality - different report rendering extensions.md)   
+ [不同報表轉譯延伸模組的互動式功能 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [轉譯報表項目 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [資料表、矩陣和清單 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   

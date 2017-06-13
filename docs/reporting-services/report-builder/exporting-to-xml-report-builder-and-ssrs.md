@@ -1,23 +1,28 @@
 ---
-title: "匯出至 XML (報表產生器及 SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "匯出至 XML （報表產生器及 SSRS） |Microsoft 文件"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 11d72068-2d97-495e-948f-12d1e8c1957d
 caps.latest.revision: 9
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: e3bbe7d68c378bd74e70ceb0c6d219da427db099
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 匯出至 XML (報表產生器及 SSRS)
+# <a name="exporting-to-xml-report-builder-and-ssrs"></a>匯出至 XML (報表產生器及 SSRS)
   XML 轉譯延伸模組會傳回 XML 格式的分頁報表。 報表 XML 的結構描述為報表特有的，且僅包含資料。 XML 轉譯延伸模組不會轉譯配置資訊，也不會維持分頁。 此延伸模組所產生的 XML 可以匯入資料庫中 (當做 XML 資料訊息使用)，或傳送到自訂應用程式。  
   
 > [!NOTE]  
@@ -53,7 +58,6 @@ caps.handback.revision: 8
   
 -   **Images, lines, and custom report items** 都會忽略。  
   
- ![搭配回到頁首連結使用的箭頭圖示](../../analysis-services/instances/media/uparrow16x16.png "搭配回到頁首連結使用的箭頭圖示") [回到頁首](#BackToTop)  
   
 ##  <a name="DataTypes"></a> 資料型別  
  文字方塊元素或屬性會根據文字方塊所顯示的值，指派 XSD 資料類型。  
@@ -62,25 +66,24 @@ caps.handback.revision: 8
 |--------------------------------|---------------------------|  
 |**Int16**、 **Int32**、 **Int64**、 **UInt16**、 **UInt32**、 **UInt64**、 **Byte**、 **SByte**|**xsd:integer**|  
 |**十進位** (或 **十進位** 和任何整數或位元組資料類型)|**xsd:decimal**|  
-|**浮點數** (或**十進位**和任何整數或位元組資料類型)|**xsd:float**|  
-|**雙精度** (或**十進位**和任何整數或位元組資料類型)|**xsd:double**|  
+|**浮點數** (或 **十進位** 和任何整數或位元組資料類型)|**xsd:float**|  
+|**雙精度** (或 **十進位** 和任何整數或位元組資料類型)|**xsd:double**|  
 |**DateTime 或 DateTime Offset**|**xsd:dateTime**|  
 |**Time**|**xsd:string**|  
 |**布林**|**xsd:boolean**|  
 |**String**、 **Char**|**xsd:string**|  
 |其他|**xsd:string**|  
   
- ![搭配回到頁首連結使用的箭頭圖示](../../analysis-services/instances/media/uparrow16x16.png "搭配回到頁首連結使用的箭頭圖示") [回到頁首](#BackToTop)  
   
 ##  <a name="XMLSpecificRenderingRules"></a> XML 特定的轉譯規則  
  下列幾節描述 XML 轉譯延伸模組如何解譯報表中的項目。  
   
-### 報表主體  
+### <a name="report-body"></a>報表主體  
  報表會轉譯為 XML 文件的根元素。 元素的名稱來自於 [屬性] 窗格中設定的 DataElementName 屬性。  
   
  XML 命名空間定義與結構描述參考屬性也包含在報表元素中 變數會以粗體類型顯示：  
   
- \<**報表** xmlns=”**SchemaName**” xmlns:xsi=”http://www.w3.org/2001/XMLSchema-instance” xsi:**schemaLocation**=”**SchemaNameReportURL**&amp;rc%3aSchema=true” Name=”ReportName”>  
+ <**報表**xmlns ="**SchemaName**"xmlns:xsi ="http://www.w3.org/2001/XMLSchema-instance"xsi:**schemaLocation**="**SchemaNameReportURL**&amp;rc %3aschema = true 「 名稱 ="ReportName">  
   
  變數的值如下：  
   
@@ -91,48 +94,47 @@ caps.handback.revision: 8
 |SchemaName|Report.SchemaName. 如果為 null，則是 Report.Name。 如果使用 Report.Name，會先以 XmlConvert.EncodeLocalName 編碼。|  
 |ReportName|報表的名稱。|  
   
-### 文字方塊  
+### <a name="text-boxes"></a>文字方塊  
  文字方塊會依據 DataElementStyle RDL 屬性 (property) 而轉譯成元素或屬性 (attribute)。 元素或屬性 (attribute) 的名稱來自於 TextBox.DataElementName RDL 屬性 (property)。  
   
-### 圖表、資料橫條和走勢圖  
+### <a name="charts-data-bars-and-sparklines"></a>圖表、資料橫條和走勢圖  
  圖表、資料橫條和走勢圖都會以 XML 轉譯。 資料是有結構的。  
   
-### 量測計與指標  
+### <a name="gauges-and-indicators"></a>量測計與指標  
  量測計與指標都會以 XML 轉譯。 資料是有結構的。  
   
-### 子報表  
+### <a name="subreports"></a>子報表  
  子報表會轉譯成元素。 元素名稱擷取自 DataElementName RDL 屬性。 報表的 TextBoxesAsElements 屬性設定會覆寫子報表的這個設定。 命名空間與 XSLT 屬性不會加入到子報表元素中。  
   
-### 矩形  
+### <a name="rectangles"></a>矩形  
  矩形會轉譯成元素。 元素名稱擷取自 DataElementName RDL 屬性。  
   
-### 自訂報表項目  
+### <a name="custom-report-items"></a>自訂報表項目  
  轉譯延伸模組看不到 CustomReportItems (CRI)。 如果報表中有自訂報表項目，轉譯延伸模組會將其轉譯為傳統的報表項目。  
   
-### 影像  
+### <a name="images"></a>影像  
  不會轉譯影像。  
   
-### 線條  
+### <a name="lines"></a>線條  
  不會轉譯線條。  
   
- ![搭配回到頁首連結使用的箭頭圖示](../../analysis-services/instances/media/uparrow16x16.png "搭配回到頁首連結使用的箭頭圖示") [回到頁首](#BackToTop)  
   
-### 資料表、矩陣和清單  
+### <a name="tables-matrices-and-lists"></a>資料表、矩陣和清單  
  資料表、矩陣和清單會轉譯成元素。 元素的名稱來自於 Tablix DataElementName RDL 屬性。  
   
-#### 資料列與資料行  
+#### <a name="rows-and-columns"></a>資料列與資料行  
  資料行會在資料列中轉譯。  
   
-#### Tablix 邊角  
+#### <a name="tablix-corner"></a>Tablix 邊角  
  不會轉譯邊角。 只會轉譯邊角的內容。  
   
-#### Tablix 資料格  
+#### <a name="tablix-cells"></a>Tablix 資料格  
  Tablix 資料格會轉譯成元素。 元素的名稱擷取自儲存格的 DataElementName RDL 屬性。  
   
-#### 自動小計  
+#### <a name="automatic-subtotals"></a>自動小計  
  不會轉譯 Tablix 自動小計。  
   
-#### 群組內沒有重複的資料列與資料行項目  
+#### <a name="row-and-column-items-that-do-not-repeat-with-a-group"></a>群組內沒有重複的資料列與資料行項目  
  群組內沒有重複的項目 (例如，標籤、小計和總計) 會轉譯為元素。 元素的名稱來自於 TablixMember.DataElementName RDL 屬性。  
   
  TablixMember.DataElementOutput RDL 屬性控制是否要轉譯非重複的項目。  
@@ -147,24 +149,21 @@ caps.handback.revision: 8
   
  如果非重複的成員沒有對應的 Tablix 資料格，就不會被轉譯。 如果是跨越一個以上資料行的 Tablix 資料格，可能會發生這個狀況。  
   
-#### 群組內重複的資料列與資料行  
+#### <a name="rows-and-columns-that-repeat-with-a-group"></a>群組內重複的資料列與資料行  
  群組內重複的資料列與資料行會根據 Tablix.DataElementOutput 規則來轉譯。 元素名稱擷取自 DataElementName 屬性。  
   
  群組內每個唯一的值都會轉譯為群組的子元素。 元素名稱擷取自 Group.DataElementName 屬性。  
   
  如果 DataElementOutput 屬性值等於「輸出」，重複項目的標頭就會轉譯為詳細資料元素的子系。  
   
- ![搭配回到頁首連結使用的箭頭圖示](../../analysis-services/instances/media/uparrow16x16.png "搭配回到頁首連結使用的箭頭圖示") [回到頁首](#BackToTop)  
   
 ##  <a name="CustomFormatsXSLTransformations"></a> 自訂格式和 XSL 轉換  
  使用 XSL 轉換 (XSLT)，幾乎可以將 XML 轉譯延伸模組所產生的 XML 檔案轉換成任何格式。 此功能可用來產生現有的轉譯延伸模組已不支援的資料格式。 在嘗試建立您自己的轉譯延伸模組之前，請考慮使用 XML 轉譯延伸模組和 XSLT。  
   
- ![搭配回到頁首連結使用的箭頭圖示](../../analysis-services/instances/media/uparrow16x16.png "搭配回到頁首連結使用的箭頭圖示") [回到頁首](#BackToTop)  
   
 ##  <a name="DuplicateName"></a> 重複的名稱  
  如果在相同的範圍內有重複的資料元素名稱，轉譯器會顯示一個錯誤訊息。  
   
- ![搭配回到頁首連結使用的箭頭圖示](../../analysis-services/instances/media/uparrow16x16.png "搭配回到頁首連結使用的箭頭圖示") [回到頁首](#BackToTop)  
   
 ##  <a name="XSLTTransformations"></a> XSLT 轉換  
  XML 轉譯器可以將伺服器端的 XSLT 轉換套用到原始 XML 資料。 套用 XSLT 時，轉譯器會輸出轉換的內容，而非輸出 XML 原始資料。 轉換會在伺服器上，而非用戶端上進行。  
@@ -173,7 +172,6 @@ caps.handback.revision: 8
   
  如果有同時透過 DataTransform 定義屬性和裝置資訊設定指定 XSLT 檔案，會先出現在 DataTransform 中指定的 XSLT，接著出現由裝置資訊設定所設定的 XSLT。  
   
- ![搭配回到頁首連結使用的箭頭圖示](../../analysis-services/instances/media/uparrow16x16.png "搭配回到頁首連結使用的箭頭圖示") [回到頁首](#BackToTop)  
   
 ###  <a name="DeviceInfo"></a> 裝置資訊設定  
  您可以變更此轉譯器的某些預設值，方法是，變更裝置資訊設定，包括：  
@@ -194,12 +192,11 @@ caps.handback.revision: 8
   
  如需詳細資訊，請參閱＜ [XML Device Information Settings](../../reporting-services/xml-device-information-settings.md)＞。  
   
- ![搭配回到頁首連結使用的箭頭圖示](../../analysis-services/instances/media/uparrow16x16.png "搭配回到頁首連結使用的箭頭圖示") [回到頁首](#BackToTop)  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [Reporting Services 中的分頁 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [轉譯行為 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [不同報表轉譯延伸模組的互動式功能 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/interactive functionality - different report rendering extensions.md)   
+ [不同報表轉譯延伸模組的互動式功能 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [轉譯報表項目 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [資料表、矩陣和清單 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   

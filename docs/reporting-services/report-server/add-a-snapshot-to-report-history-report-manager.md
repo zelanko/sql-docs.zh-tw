@@ -1,34 +1,39 @@
 ---
-title: "將快照集加入報表記錄 (報表管理員) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "報表記錄 [Reporting Services], 加入快照集"
-  - "記錄資料 [Reporting Services]"
-  - "快照集 [Reporting Services], 加入報表快照集"
-  - "將快照集加入至報表記錄"
-  - "報表快照集 [Reporting Services], 加入"
+title: "將快照集加入至報表記錄 （報表管理員） |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- report history [Reporting Services], adding snapshots
+- historical data [Reporting Services]
+- snapshots [Reporting Services], adding report snapshots
+- adding snapshots to report history
+- report snapshots [Reporting Services], adding
 ms.assetid: 3aafb183-789e-46ac-966c-881dc549b31d
 caps.latest.revision: 35
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 35
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5d340621db8dc12cd981d75939babeff40e590f2
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 將快照集加入報表記錄 (報表管理員)
+# <a name="add-a-snapshot-to-report-history-report-manager"></a>將快照集加入報表記錄 (報表管理員)
   報表記錄是您在經過一段時間後建立之報表快照集的集合。 報表快照集是一種報表，它包含在特定時間點擷取的配置資訊和查詢結果。 報表快照集和視需要報表不同，視需要報表會在您選取報表時取得最新的查詢結果，而報表快照集是依排程處理，並儲存至報表伺服器。 您選取報表快照集以供檢視時，報表伺服器會從報表伺服器資料庫擷取儲存的報表，並顯示建立快照集當時的資料與配置。  
   
  報表快照集不會以特定轉譯格式儲存。 而是只有在使用者或應用程式要求它時，報表快照集才以最後的檢視格式轉譯 (例如 HTML)。 延遲轉譯讓快照集具有可攜性。 報表可以使用要求的裝置或 Web 瀏覽器的正確格式轉譯。  
   
-### 若要手動將快照集加入至報表記錄  
+### <a name="to-manually-add-snapshots-to-report-history"></a>若要手動將快照集加入至報表記錄  
   
 1.  在報表管理員中，巡覽至 [內容] 頁面，將滑鼠游標停留在您想要檢視記錄的項目上方，然後按一下下拉箭號。  
   
@@ -37,11 +42,11 @@ caps.handback.revision: 35
 3.  按一下 **[新增快照集]**。 **[執行時]** 資料行裡會建立一個新的快照集。  
   
     > [!NOTE]  
-    >  管理員必須將報表記錄設定為 **[允許手動建立記錄]**，才能執行此作業。 如需詳細資訊，請參閱[限制報表記錄 &#40;報表管理員&#41;](../../reporting-services/reports/limit-report-history-report-manager.md)。  
+    >  管理員必須將報表記錄設定為 **[允許手動建立記錄]**，才能執行此作業。 如需詳細資訊，請參閱 [限制報表記錄 &#40;報表管理員&#41;](../../reporting-services/reports/limit-report-history-report-manager.md)。  
   
 4.  按一下 **[套用]**。  
   
-### 若要自動將所有快照集加入報表記錄  
+### <a name="to-automatically-add-all-snapshots-to-report-history"></a>若要自動將所有快照集加入報表記錄  
   
 1.  若為已經設定成當做報表執行快照集執行的報表，您可以設定其他屬性，以便在每次重新整理快照集時，將快照集的副本儲存至報表記錄。  
   
@@ -55,7 +60,7 @@ caps.handback.revision: 35
   
 6.  按一下 **[套用]**。  
   
-### 若要依照排程自動將快照集加入報表記錄  
+### <a name="to-automatically-add-snapshots-to-report-history-based-on-a-schedule"></a>若要依照排程自動將快照集加入報表記錄  
   
 1.  在報表管理員中，巡覽至 [內容] 頁面，將滑鼠游標停留在您想要檢視記錄的項目上方，然後按一下下拉箭號。  
   
@@ -71,11 +76,11 @@ caps.handback.revision: 35
   
 5.  按一下 **[套用]**。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [設定報表的執行屬性 &#40;報表管理員&#41;](../../reporting-services/reports/configure-execution-properties-for-a-report-report-manager.md)   
  [開啟及關閉報表 &#40;報表管理員&#41;](../../reporting-services/reports/open-and-close-a-report-report-manager.md)   
  [限制報表記錄 &#40;報表管理員&#41;](../../reporting-services/reports/limit-report-history-report-manager.md)   
  [排程](../../reporting-services/subscriptions/schedules.md)   
- [報表管理員 &#40;SSRS 原生模式&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md)  
+ [報表管理員 &#40;SSRS 原生模式&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
   
   

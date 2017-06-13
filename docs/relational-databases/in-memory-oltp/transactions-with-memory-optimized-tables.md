@@ -3,7 +3,7 @@ title: "記憶體最佳化資料表的交易 | Microsoft 文件"
 ms.custom:
 - MSDN content
 - MSDN - SQL DB
-ms.date: 08/18/2016
+ms.date: 06/12/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.service: sql-database
@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: aaa888f18eae1c5d49eb3bcff13424a4cbfc6ec6
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 03f81b7010fdba70cccc916406b70131dd24cb8d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/13/2017
 
 ---
 # <a name="transactions-with-memory-optimized-tables"></a>Transactions with Memory-Optimized Tables
@@ -339,31 +339,4 @@ SQL Server 有下列交易初始模式：
 - [Database Engine 中資料列版本設定式的隔離等級](http://msdn.microsoft.com/library/ms177404.aspx)  
   
 - [控制交易持久性](../../relational-databases/logs/control-transaction-durability.md)   
-  
-\<!--  
-連結 GUID：  
-016fb05e-a702-484b-bd2a-a6eabd0d76fd , ms173763.aspx , "設定交易隔離等級 (Transact-SQL)"  
-  
-ef1cc7de-63be-4fa3-a622-6d93b440e3ac , dn511014(v=sql.130,d=robot).aspx , "記憶體最佳化資料表的簡介"  
-  
-a300ac43-e4c0-4329-8b79-a1a05e63370a , ms187807.aspx , "設定 IMPLICIT_TRANSACTIONS (Transact-SQL)"  
-  
-e1e85908-9f31-47cf-8af6-88c77e6f24c9 , ms189823.aspx , "sp_getapplock (Transact-SQL)"  
-  
-3ac93b28-cac7-483e-a8ab-ac44e1cc1c76 , dn449490.aspx , "控制交易持久性"  
-  
-影像：'hekaton_transactions' , e9c5eb2f-c9a3-4625-8ae4-ac91447db42f  
-另請參閱 XMetal 發行項：dn133169.aspx , "交易留存期間"  
-  
-與記憶體內部資料表及程序的交易  
-{ba6f1a15-8b69-4ca6-9f44-f5e3f2962bc5} , dn479429.aspx  
-或許會取代︰06075248-705e-4563-9371-b64cd609793c , dn479429.aspx , "了解記憶體最佳化資料表上的交易"  
-  
-GeneMi，2016-03-28 上午 11:40  
--->  
-  
-  
-  
-  
-
 

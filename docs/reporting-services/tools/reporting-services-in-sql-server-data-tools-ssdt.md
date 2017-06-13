@@ -1,37 +1,44 @@
 ---
-title: "SQL Server 資料工具中的 Reporting Services (SSDT) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Business Intelligence Development Studio 中的 Reporting Services"
+title: "SQL Server Data Tools (SSDT) 中的 reporting Services |Microsoft 文件"
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Business Intelligence Development Studio, Reporting Services in
 ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
 caps.latest.revision: 76
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 75
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: ee41ccb35aef5f0ab94c663a1556aad07bb85faa
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# SQL Server 資料工具中的 Reporting Services (SSDT)
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 環境，可用於建立商務智慧解決方案。 SSDT 的主要功能之一是提供報表設計師的撰寫環境，讓您可以從中開啟、修改、預覽、儲存及部署 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 編頁報表定義、共用的資料來源、共用資料集與報表組件。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 不隨附在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 之中。 下載 [SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714)。 
+
+# <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>SQL Server 資料工具中的 Reporting Services (SSDT)
+
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] is a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] environment for creating business intelligence solutions. SSDT 的主要功能之一是提供報表設計師的撰寫環境，讓您可以從中開啟、修改、預覽、儲存及部署 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 編頁報表定義、共用的資料來源、共用資料集與報表組件。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]不會包含與 SQL Server。 下載 [SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714)。 
   
  此主題描述用於 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]方案、專案、專案範本和組態，以及您可以在 [報表設計師] 中使用的檢視、功能表、工具列和快速鍵。  
   
- 若要開始設計報表，請參閱[使用報表設計師設計報表 &#40;SSRS&#41;](../../reporting-services/tools/design-reports-with-report-designer-ssrs.md)。  
+ 若要開始設計報表，請參閱[使用報表設計師設計報表 &#40;SSRS&#41;](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md)。  
   
 ##  <a name="bkmk_SolutionsandProjects"></a> 方案與專案  
  報表專案是做為報表定義與資源的容器。 部署專案時，報表專案中的每一個檔案都會發行至報表伺服器。 當您第一次建立專案時，同時也會建立該專案的方案，以做為專案的容器。 您可以將多個專案加入單一方案。  
   
   
 ##  <a name="bkmk_Configurations"></a> 組態  
- 若要針對不同部署建立多組專案屬性，例如企業測試和實際報表伺服器，請使用組態管理員。 如需詳細資訊，請參閱 [Deployment and Version Support in SQL Server Data Tools &#40;SSRS&#41;](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)。  
+ 若要針對不同部署建立多組專案屬性，例如企業測試和實際報表伺服器，請使用組態管理員。 如需詳細資訊，請參閱 [SQL Server 資料工具中的部署和版本支援 &#40;SSRS&#41;](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)之中。  
   
 ##  <a name="bkmk_ReportServerProjects"></a> 報表伺服器專案  
  當您安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]時， [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]提供了下列專案範本：  
@@ -40,7 +47,7 @@ caps.handback.revision: 75
   
 -   **報表伺服器專案精靈。** 當您選取報表伺服器精靈專案時，就會自動建立報表伺服器專案，而且報表精靈會開啟。 在此精靈中，您可以遵循每一頁的指示來建立報表，以便建立與資料來源的連接字串、設定資料來源認證、設計查詢、加入資料表或矩陣資料區、指定報表資料和群組、挑選字型和色彩樣式、將報表發行到報表伺服器，以及在本機預覽報表。 當您使用精靈建立報表之後，您可以在報表伺服器專案中使用報表設計師來變更報表資料和報表設計師。  
   
- ![SSDT 中的新專案範本](../../analysis-services/media/ssdt-biprojects.png "SSDT 中的新專案範本")  
+ ![在 SSDT 中的新專案範本](../../analysis-services/media/ssdt-biprojects.png "SSDT 中的新專案範本")  
   
   
 ##  <a name="bkmk_ReportDesignerWindowsandPanes"></a> 報表設計師視窗和窗格  
@@ -57,7 +64,7 @@ caps.handback.revision: 75
   
 -   **資料集** ：每個資料集都會包含指定要從資料來源中擷取哪些資料的查詢。 您可以展開資料集，以便檢視資料集查詢所指定的欄位集合。  
   
-     在多維度資料集的某些查詢設計工具中，您可以在 [篩選] 窗格中指定篩選，然後指出是否要建立報表參數。 若您指定報表參數選項，系統就會自動建立特殊資料集，以擴展參數的有效值清單。  根據預設，此資料集不會出現在 [報表資料] 窗格內。 如需詳細資訊，請參閱[針對多維度資料的參數值顯示隱藏的資料集 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-data/show hidden datasets for parameter values - multidimensional data.md)。  
+     在多維度資料集的某些查詢設計工具中，您可以在 [篩選] 窗格中指定篩選，然後指出是否要建立報表參數。 若您指定報表參數選項，系統就會自動建立特殊資料集，以擴展參數的有效值清單。  根據預設，此資料集不會出現在 [報表資料] 窗格內。 如需詳細資訊，請參閱[針對多維度資料的參數值顯示隱藏的資料集 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-data/show-hidden-datasets-for-parameter-values-multidimensional-data.md)。  
   
 -   **報表參數** ：報表參數清單。 資料集查詢包含查詢參數時，可以手動或自動建立參數。  
   
@@ -94,7 +101,7 @@ caps.handback.revision: 75
   
  您可以使用 [屬性] 窗格以：  
   
--   設定設計介面上目前所選取項目的屬性。 某些屬性會提供值的下拉式清單。 您也可以直接在資料格中輸入值。 某些屬性會包含值的集合，以 [(集合)] 值表示。 大部分屬性都可以接受運算式。複雜運算式會以 **\<運算式>** 值表示。 按一下 \<運算式> 開啟 [運算式] 對話方塊。 如需詳細資訊，請參閱＜ [Expression Dialog Box](../Topic/Expression%20Dialog%20Box.md)＞。  
+-   設定設計介面上目前所選取項目的屬性。 某些屬性會提供值的下拉式清單。 您也可以直接在資料格中輸入值。 某些屬性會包含值的集合，以 [(集合)] 值表示。 大部分屬性都可以接受運算式。複雜運算式，值會指出**\<運算式 >**。 按一下**\<運算式 >**開啟**運算式** 對話方塊。 如需詳細資訊，請參閱＜ [Expression Dialog Box](http://msdn.microsoft.com/library/e6c74ccb-4594-4d4f-b958-618d710e34eb)＞。  
   
 -   您可以使用 [屬性] 窗格工具列按鈕，將方格從類別目錄檢視變更為字母順序檢視。 在類別目錄檢視中，您可能必須展開類別目錄，才能看見底下的所有屬性。 若要開啟項目的 [屬性] 對話方塊，請按一下工具列上的 **[屬性頁]** 按鈕，或以滑鼠右鍵按一下項目，然後按一下 **[屬性]**。  
   
@@ -247,7 +254,7 @@ caps.handback.revision: 75
   
   
 ##  <a name="bkmk_CommandLineSupportForssdt"></a> SQL Server 資料工具的命令列支援  
- [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 是以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 以及基礎 devenv.exe 應用程式為基礎。 您必須先為下列兩個項目設定有效的值，才能使用這些選項：  
+ [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]根據[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]以及基礎 devenv.exe 應用程式。 您必須先為下列兩個項目設定有效的值，才能使用這些選項：  
   
 -   OverwriteDataSources、TargetDataSourceFolder、TargetReportFolder 和 TargetServerURL 的專案屬性。  
   
@@ -304,11 +311,12 @@ caps.handback.revision: 75
     |在文字方塊中，選取從目前游標位置到運算式結尾的文字|CTRL+SHIFT+END|  
     |開啟選定報表項目的快速鍵功能表|較新鍵盤上的 SHIFT+F10+屬性鍵|
   
-## 另請參閱  
+## <a name="next-steps"></a>後續的步驟
+
 [下載 SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714)
- [方案總管](../../ssms/solution/solution-explorer.md)   
- [Reporting Services 報表 &#40;SSRS&#41;](../../reporting-services/reports/reporting-services-reports-ssrs.md)   
- [報表定義語言 &#40;SSRS&#41;](../../reporting-services/reports/report-definition-language-ssrs.md)   
- [SQL Server 資料工具中的部署和版本支援 &#40;SSRS&#41;](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
-  
-  
+[方案總管](http://msdn.microsoft.com/library/0df09843-0d4f-4925-bc6c-99265035a0c1)   
+[Reporting Services 報表](../../reporting-services/reports/reporting-services-reports-ssrs.md)   
+[報表定義語言](../../reporting-services/reports/report-definition-language-ssrs.md)   
+[SQL Server 資料工具中的部署和版本支援](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
+
+更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)

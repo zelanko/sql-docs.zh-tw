@@ -1,30 +1,35 @@
 ---
-title: "瀏覽報表組件及設定預設資料夾 (報表產生器及 SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "瀏覽報表組件及設定預設資料夾 （報表產生器及 SSRS） |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5cf38068-65d1-4fe8-81f3-a404d8fbc663
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 645e20dbc98f831a778df0397b42eea096b71dfd
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 瀏覽報表組件及設定預設資料夾 (報表產生器及 SSRS)
+# <a name="browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs"></a>瀏覽報表組件及設定預設資料夾 (報表產生器及 SSRS)
 建立 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分頁報表最簡單的方式，就是從報表組件庫將現有的報表組件 (例如資料表和圖表) 加入您的報表。 當您將報表組件加入到報表時，您也會加入此組件運作所必須擁有的所有項目。 例如，顯示資料的所有報表組件都取決於資料集，也就是資料來源的查詢和連接。 當您將報表組件加入至報表之後，您可以盡量修改它。  
   
  您可以設定預設資料夾，以便將報表組件發行到報表伺服器或與報表伺服器整合的 SharePoint 網站。  
   
- 如需詳細資訊，請參閱[報表組件 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)。  
+ 如需詳細資訊，請參閱 [報表組件 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)。  
   
-## 若要瀏覽報表組件  
+## <a name="to-browse-for-report-parts"></a>若要瀏覽報表組件  
   
 1.  在 [插入] 功能表上，按一下 [報表組件]。  
   
@@ -52,7 +57,7 @@ caps.handback.revision: 8
     > [!NOTE]  
     >  針對 [建立者] 和 [上次修改者] 值，搜尋此人員在報表伺服器上所代表的使用者名稱。  
   
-## 若要設定報表組件的預設資料夾  
+## <a name="to-set-a-default-folder-for-report-parts"></a>若要設定報表組件的預設資料夾  
   
 1.  按一下 [報表產生器]，然後按一下 [選項]。  
   
@@ -62,11 +67,11 @@ caps.handback.revision: 8
   
  您不需要重新啟動報表產生器，這項設定也會生效。  
   
-## 請參閱＜  
- [檢查更新或關閉更新 (報表產生器及 SSRS)](http://msdn.microsoft.com/zh-tw/9c69792d-d7c4-453b-ae2f-6d2d071d8606)   
+## <a name="see-also"></a>請參閱＜  
+ [檢查更新或關閉更新 (報表產生器及 SSRS)](http://msdn.microsoft.com/en-us/9c69792d-d7c4-453b-ae2f-6d2d071d8606)   
  [報表組件 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)   
  [報表產生器中的報表組件和資料集](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
- [疑難排解報表組件 (報表產生器及 SSRS)](http://msdn.microsoft.com/zh-tw/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
+ [疑難排解報表組件 (報表產生器及 SSRS)](http://msdn.microsoft.com/en-us/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
  [發行與重新發行報表組件 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/publish-and-republish-report-parts-report-builder-and-ssrs.md)  
   
   

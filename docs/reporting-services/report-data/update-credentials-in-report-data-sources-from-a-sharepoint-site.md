@@ -1,30 +1,35 @@
 ---
-title: "從 SharePoint 網站更新報表資料來源的認證 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "更新報表資料來源，從 SharePoint 網站中的認證 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e0c50b6e-89e7-4b4d-8fe5-c90682c5d1b1
 caps.latest.revision: 12
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 12
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 85652be59a369ff3b571f8858a744962b5b3f619
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 從 SharePoint 網站更新報表資料來源的認證
+# <a name="update-credentials-in-report-data-sources-from-a-sharepoint-site"></a>從 SharePoint 網站更新報表資料來源的認證
   本主題描述如何更新內嵌於報表內的資料來源，以及儲存在 SharePoint 文件庫中的共用資料來源。  
   
  許多報表可能包含資料來源或使用設定為使用 Windows 驗證的共用資料來源。 在某些情況下 (例如在儲存到 SharePoint 文件庫的報表上建立資料警示)，您需要將資料來源認證更新至預存認證或是不需要認證。  
   
- 為了使用報表中的預存認證，您可能會決定建立並使用新的 SQL Server 登入。 如需詳細資訊，請參閱[建立登入](../../relational-databases/security/authentication-access/create-a-login.md)。  
+ 為了使用報表中的預存認證，您可能會決定建立並使用新的 SQL Server 登入。 如需詳細資訊，請參閱 [建立登入](../../relational-databases/security/authentication-access/create-a-login.md)。  
   
-### 更新內嵌資料來源以使用預存認證  
+### <a name="to-update-an-embedded-data-source-to-use-stored-credentials"></a>更新內嵌資料來源以使用預存認證  
   
 1.  移至儲存報表所在的 SharePoint 文件庫。  
   
@@ -48,7 +53,7 @@ caps.handback.revision: 12
   
 7.  輸入使用者名稱和密碼。  
   
-    -   如果帳戶是 Windows 網域使用者帳戶，請使用下列格式來指定它：\<網域>\\<帳戶\>，然後選取 [連接到資料來源時作為 Windows 認證]。  
+    -   如果帳戶是 Windows 網域使用者帳戶，會將它指定格式如下：\<網域 >\\< 帳戶\>，然後選取**當做 Windows 認證連接到資料來源時使用**。  
   
     -   如果使用者名稱和密碼是資料庫認證，請勿選取 **[連接到資料來源時做為 Windows 認證]**。 如果資料庫伺服器支援模擬或委派，您可以選取 **[設定執行內容到這個帳戶]**。  
   
@@ -56,7 +61,7 @@ caps.handback.revision: 12
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### 更新共用資料來源以使用預存認證  
+### <a name="to-update-a-shared-data-source-to-use-stored-credentials"></a>更新共用資料來源以使用預存認證  
   
 1.  移至儲存共用資料來源所在的 SharePoint 文件庫。  
   
@@ -74,7 +79,7 @@ caps.handback.revision: 12
   
 5.  輸入使用者名稱和密碼。  
   
-    -   如果帳戶是 Windows 網域使用者帳戶，請使用下列格式來指定它：\<網域>\\<帳戶\>，然後選取 [連接到資料來源時作為 Windows 認證]。  
+    -   如果帳戶是 Windows 網域使用者帳戶，會將它指定格式如下：\<網域 >\\< 帳戶\>，然後選取**當做 Windows 認證連接到資料來源時使用。**  
   
     -   如果使用者名稱和密碼是資料庫認證，請勿選取 **[連接到資料來源時做為 Windows 認證]**。 如果資料庫伺服器支援模擬或委派，您可以選取 **[設定執行內容到這個帳戶]**。  
   
@@ -84,7 +89,7 @@ caps.handback.revision: 12
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [將文件上傳到 SharePoint 文件庫 &#40;SharePoint 模式的 Reporting Services&#41;](../../reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)  
   
   

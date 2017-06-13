@@ -1,37 +1,43 @@
 ---
-title: "使用 SQL Server 行動報表發行工具建立行動報表 | Microsoft Docs"
-description: Learn about Reporting Services mobile reports for mobile devices, connected to on-premises data, with an assortment of data visualizations.
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/30/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+title: "使用 SQL Server 行動報表發行工具建立行動報表 |Microsoft 文件"
+description: "深入了解有關 Reporting Services 行動報表針對行動裝置，連線到內部部署資料，與資料視覺效果的分類。"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
 ms.assetid: a5a8dbf6-4c3a-435d-8188-d6656c32f229
 caps.latest.revision: 35
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 34
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 4fe797ac21e1f659b1a2a196be3f860a65b36896
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 使用 SQL Server 行動報表發行工具建立行動報表
+# <a name="create-mobile-reports-with-sql-server-mobile-report-publisher"></a>使用 SQL Server 行動報表發行工具建立行動報表
 深入了解有各種資料視覺效果的 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 行動報表，針對行動裝置最佳化並可連接到內部部署資料。 
 
-> **注意︰** 您需要將儀表板和 KPI 等 Datazen 伺服器內容移轉至 SQL Server 2016 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 伺服器嗎？ 請嘗試 [適用於 Datazen 的 SQL Server 移轉小幫手](https://www.microsoft.com/en-us/download/details.aspx?id=53128)。 
+>[!NOTE]
+>  您需要移轉至 SQL Server 2016 Datazen 伺服器內容，例如儀表板和 Kpi[!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]伺服器嗎？ 請嘗試 [適用於 Datazen 的 SQL Server 移轉小幫手](https://www.microsoft.com/en-us/download/details.aspx?id=53128)。 
  
 ![SS_MRP_LayoutTabSm](../../reporting-services/media/ss-mrp-layouttabsm.png)  
 
 使用 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)]，您可以快速建立 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 行動報表，針對行動裝置最佳化並有各種其他外型規格。 行動報表具備各種視覺效果，從時間、類別和比較圖表到矩形式樹狀結構圖和自訂的對應。 
 
 * 將行動報表連接到資料來源範圍，包括內部部署 SQL Server 和 Analysis Services 資料。 
-* 在可調整格線資料列和資料行以及可調整為任何畫面大小的彈性行動報表元素的設計介面上，配置行動報表。 
-* 然後將這些行動報表儲存至 Reporting Service 伺服器，在 iPad、iPhone、Android 手機及 Windows 10 裝置的瀏覽器或 Power BI 行動裝置應用程式中，檢視報表並與其互動。
+* 在設計介面上，使用可調式格線列和格線欄以及根據任何螢幕大小適當縮放的彈性行動報表元素，來配置行動報表。 
+* 然後這些行動報表儲存至 Reporting Services 伺服器，以及檢視和 Ipad、 Iphone、 Android 手機和平板電腦和 Windows 10 裝置上的 Power BI 行動應用程式或瀏覽器中，與它們互動。
   
-## <a name="create-includessrsnoversionmdtokenssrsnoversionmdmd-mobile-reports"></a>建立 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]  行動報表  
+## <a name="create-includessrsnoversionmdincludesssrsnoversion-mdmd--mobile-reports"></a>建立 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]  行動報表  
   
 這些文件會協助您開始。
 -  下載 [SQL Server 行動報表發行工具](http://go.microsoft.com/fwlink/?LinkID=733527)  
@@ -43,16 +49,15 @@ caps.handback.revision: 34
 - [行動報表中的視覺效果](../../reporting-services/mobile-reports/add-visualizations-to-reporting-services-mobile-reports.md)
 - [行動報表中的量測計](../../reporting-services/mobile-reports/add-gauges-to-mobile-reports-reporting-services.md)
 - [行動報表中的地圖](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md)
-- 使用公司的色彩和標誌[標示網頁入口網站和行動報表](../../reporting-services/branding-the-web-portal.md)
+- 使用公司的色彩和標誌[標示網頁入口網站和行動報表](../../reporting-services/branding-the-web-portal.md) 
   
 ## <a name="ssrs-mobile-reports-in-the-power-bi-mobile-apps"></a>Power BI 行動裝置應用程式中的 SSRS 行動報表
 
--  [在 (Power BI for iOS) iPad 應用程式中檢視 Reporting Services 行動報表和 KPI](https://powerbi.microsoft.com/documentation/powerbi-mobile-ipad-kpis-mobile-reports)  
--  [在 iPhone 應用程式 (Power BI for iOS) 中檢視 Reporting Services 行動報表和 KPI](https://powerbi.microsoft.com/documentation/powerbi-mobile-iphone-kpis-mobile-reports)  
--  [在 Power BI 的 Android 應用程式中檢視 Reporting Services 行動報表和 KPI](https://powerbi.microsoft.com/documentation/powerbi-mobile-android-kpis-mobile-reports)
+-  檢視[Reporting Services 行動報表和 Kpi 中的 iOS 行動應用程式](https://powerbi.microsoft.com/documentation/powerbi-mobile-iphone-kpis-mobile-reports)
+-  檢視[Reporting Services 行動報表和 Android 裝置的 Power BI 應用程式中的 Kpi](https://powerbi.microsoft.com/documentation/powerbi-mobile-android-kpis-mobile-reports)
 -  [在 Power BI 的 Windows 10 行動裝置應用程式中檢視 Reporting Services 行動報表和 KPI](https://powerbi.microsoft.com/documentation/powerbi-mobile-win10-kpis-mobile-reports/)    
 
-### <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另請參閱  
   
 -   [建立、修改及刪除共用資料來源 (SSRS)](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)  
 -   [管理共用資料集](../../reporting-services/report-data/manage-shared-datasets.md)  
@@ -61,3 +66,5 @@ caps.handback.revision: 34
 
   
   
+
+

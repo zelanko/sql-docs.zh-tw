@@ -1,30 +1,38 @@
 ---
-title: "安裝或解除安裝 SharePoint 的 Reporting Services 增益集 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "安裝或解除安裝 Reporting Services 增益集，sharepoint |Microsoft 文件"
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c2804a9a-08ea-4f4a-805d-a2c19c68733d
 caps.latest.revision: 15
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 15
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: cc931cf057da3d63bd23e7c6ca68ed6d6ec31de9
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 安裝或解除安裝 SharePoint 的 Reporting Services 增益集
-  在 SharePoint 伺服器上執行適用於 SharePoint 產品的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 增益集安裝套件 (rsSharePoint.msi)，以在 SharePoint 部署中啟用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能。 功能包含 Power View、報表檢視器網頁組件、URL Proxy 端點、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 內容類型以及應用程式頁面，讓您可以建立、檢視及管理報表、報表模型、資料來源以及在 SharePoint 網站上的其他報表伺服器內容。 適用於 SharePoint 產品的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 增益集是以 SharePoint 模式執行之報表伺服器的必要元件。 增益集可以從 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安裝精靈安裝，或是從 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 功能套件下載 rsSharePoint.msi。 如需增益集版本和下載頁面的清單，請參閱[尋找適用於 SharePoint 產品之 Reporting Services 增益集的位置](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)。  
+
+# <a name="install-or-uninstall-the-reporting-services-add-in-for-sharepoint"></a>安裝或解除安裝 SharePoint 的 Reporting Services 增益集
+
+[!INCLUDE[ssrs-appliesto-sql2016-xpreview](../../includes/ssrs-appliesto-sql2016-xpreview.md)][!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
+
+  在 SharePoint 伺服器上執行適用於 SharePoint 產品的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 增益集安裝套件 (rsSharePoint.msi)，以在 SharePoint 部署中啟用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能。 功能包含 Power View、報表檢視器網頁組件、URL Proxy 端點、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 內容類型以及應用程式頁面，讓您可以建立、檢視及管理報表、報表模型、資料來源以及在 SharePoint 網站上的其他報表伺服器內容。 適用於 SharePoint 產品的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 增益集是以 SharePoint 模式執行之報表伺服器的必要元件。 可以安裝 SQL Server 2016 安裝精靈或從 SQL Server 2016 功能套件下載 rsSharePoint.msi 增益集。 如需增益集版本和下載頁面的清單，請參閱 [尋找適用於 SharePoint 產品之 Reporting Services 增益集的位置](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)。  
   
-||  
-|-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013 和 SharePoint 2016|  
+> [!NOTE]
+> SQL Server 2016 之後已無法再使用 reporting Services 與 SharePoint 整合。
   
 ##  <a name="bkmk_prereq"></a> 必要條件  
- 安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 增益集是整合報表伺服器與 SharePoint 產品之執行個體的數個必要步驟之一。 如需安裝及設定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的詳細資訊，請參閱[在 SharePoint 模式中安裝第一部報表伺服器](http://msdn.microsoft.com/zh-tw/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538)。  
+ 安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 增益集是整合報表伺服器與 SharePoint 產品之執行個體的數個必要步驟之一。 如需安裝及設定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的詳細資訊，請參閱 [在 SharePoint 模式中安裝第一部報表伺服器](http://msdn.microsoft.com/en-us/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538)。  
   
 -   若要整合 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 與具備多重 Web 前端應用程式的 SharePoint 伺服器陣列，請在具有 Web 伺服器前端的伺服器陣列中之每部電腦上安裝增益集。 請只針對將用來存取報表伺服器內容的 Web 前端進行這項處理。  
   
@@ -41,18 +49,18 @@ caps.handback.revision: 15
   
 -   安裝的第二部分是執行自訂動作集，利用 SharePoint 註冊 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 檔案。 從 rsCustomAction.exe 執行自訂動作。 當完整的兩階段安裝作業完成時，系統就會移除該 exe 檔。 您可以執行 **僅限檔案** 的安裝，在安裝結束時不執行 rsCustomAction.exe，並將其留在磁碟機中。  
   
-## Reporting Services 安裝順序  
+## <a name="the-reporting-services-installation-order"></a>Reporting Services 安裝順序  
  此增益集可以在安裝 SharePoint 之前或 SharePoint 安裝之後進行安裝。 此增益集會遵循 SharePoint 預先部署標準，將檔案安裝在 SharePoint 安裝使用的位置中。  
   
 > [!NOTE]  
 >  在 SharePoint 產品之前安裝此增益集的好處是，當新的伺服器加入到伺服器陣列時，SharePoint 伺服器陣列將會設定和啟動 Reporting Services 增益集。  
   
 ##  <a name="bkmk_3ways_to_install"></a> 安裝方法概觀  
- 您可以使用下列兩種方法的其中一種，安裝適用於 SharePoint 產品的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 增益集：  
+ SQL Server 2016 Reporting Services 增益集適用於 SharePoint 產品可以安裝使用下列兩種方法之一：  
   
--   **安裝精靈**：![附註](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "附註")這是 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的新功能，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝精靈可以安裝增益集。 在精靈的 [功能選擇] 頁面上，選擇 [適用於 SharePoint 產品的 Reporting Services 增益集]。  
+-   **安裝精靈：** ![注意](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "注意")[新增]，SQL Server 2016，增益集可以安裝由[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安裝精靈。 在精靈的 [功能選擇] 頁面上，選擇 [適用於 SharePoint 產品的 Reporting Services 增益集]。  
   
--   **rsSharepoint.msi**：該增益集可以直接從安裝媒體安裝，或下載後安裝。 rsSharepoint.msi 同時支援圖形化使用者介面和命令列安裝。 您必須以系統管理員權限執行 .msi，方式是先開啟提高權限的命令提示字元，然後從命令列執行 rsSharepoint.msi。 如需下載此增益集的詳細資訊，請參閱[尋找適用於 SharePoint 產品之 Reporting Services 增益集的位置](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)。  
+-   **rsSharepoint.msi**：該增益集可以直接從安裝媒體安裝，或下載後安裝。 rsSharepoint.msi 同時支援圖形化使用者介面和命令列安裝。 您必須以系統管理員權限執行 .msi，方式是先開啟提高權限的命令提示字元，然後從命令列執行 rsSharepoint.msi。 如需下載此增益集的詳細資訊，請參閱 [尋找適用於 SharePoint 產品之 Reporting Services 增益集的位置](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)。  
   
     > [!NOTE]  
     >  如果您使用 **/q** 參數進行無訊息命令列安裝，將不會顯示使用者授權合約。 不論安裝方式為何，使用此軟體皆受到授權合約的限制，同時您有責任遵從授權合約的規定。  
@@ -66,7 +74,7 @@ caps.handback.revision: 15
 Rssharepoint.msi /?  
 ```  
   
-1.  下載 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 增益集的安裝程式 (**rsSharepoint.msi**)。 如需下載此增益集的詳細資訊，請參閱[尋找適用於 SharePoint 產品之 Reporting Services 增益集的位置](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)。  
+1.  下載**增益集的安裝程式 (**rsSharepoint.msi [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] )。 如需下載此增益集的詳細資訊，請參閱 [尋找適用於 SharePoint 產品之 Reporting Services 增益集的位置](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)。  
   
 2.  以管理員的身分執行 **rsSharepoint.msi** ，執行安裝精靈。 此精靈會顯示 [歡迎使用] 頁面、軟體授權合約和註冊資訊頁面。 安裝程式會在下列路徑下建立資料夾，並將檔案複製到資料夾：  
   
@@ -76,7 +84,7 @@ Rssharepoint.msi /?
   
      `%program files%\common files\Microsoft Shared\Web Server Extensions\16\` (SharePoint 2016)  
   
-3.  在 SharePoint 管理中心設定報表伺服器設定與功能啟用。 。 如需安裝及設定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式的詳細資訊，請參閱[在 SharePoint 模式中安裝第一部報表伺服器](http://msdn.microsoft.com/zh-tw/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538)。  
+3.  在 SharePoint 管理中心設定報表伺服器設定與功能啟用。 。 如需安裝及設定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式的詳細資訊，請參閱 [在 SharePoint 模式中安裝第一部報表伺服器](http://msdn.microsoft.com/en-us/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538)。  
   
 ###  <a name="bkmk_files_only_installation"></a> 僅限檔案安裝  
  若要安裝檔案但略過自訂動作階段，請從命令列執行 .msi 並加上 SKIPCA 選項：  
@@ -91,7 +99,7 @@ Rssharepoint.msi /?
   
  將會開啟安裝使用者介面並正常運作，同時會安裝 **rsCustomAction.exe** 檔案。 但 .exe 不會在安裝結束時執行，而且當安裝完成時， **rsCustomAction.exe** 會保留在電腦中。  
   
-### 使用兩步驟安裝來疑難排解安裝問題  
+### <a name="use-a-two-step-installation-to-troubleshoot-installation-issues"></a>使用兩步驟安裝來疑難排解安裝問題  
  如果在安裝期間發生錯誤，您可以從命令列以兩步驟程序執行安裝程式：  
   
 1.  **以系統管理員權限** 開啟命令提示字元，並依前一章節所述內容，執行僅限檔案安裝。  
@@ -112,7 +120,7 @@ Rssharepoint.msi /?
   
     3.  根據您的伺服器環境而定，變更生效所需的時間可能會有所不同。 您也可以執行 **iisreset** 強制執行更快的更新。  
   
-### 指令碼的無訊息安裝  
+### <a name="quiet-installation-for-scripting"></a>指令碼的無訊息安裝  
  您可以使用 **/q** 或 **/quiet** 參數，進行不會顯示任何對話方塊或警告的「無訊息」安裝。 如果您想要將增益集的安裝撰寫為指令碼，無訊息安裝相當實用。  
   
 > [!NOTE]  
@@ -151,7 +159,7 @@ Rssharepoint.msi /?
   
 -   安裝程式不會刪除報表伺服器資料庫或修改用於整合作業的報表伺服器執行個體。  
   
-### 若要從 Windows 控制台解除安裝  
+### <a name="to-uninstall-from-windows-control-panel"></a>若要從 Windows 控制台解除安裝  
  若要從 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows [控制台] 啟動精靈並移除增益集：  
   
 1.  在 [控制台] 中的 **[程式]**，選取 **[解除安裝程式]**。  
@@ -160,7 +168,7 @@ Rssharepoint.msi /?
   
 3.  按一下 **[移除]**。  
   
-### 從命令列解除安裝  
+### <a name="uninstall-from-the-command-line"></a>從命令列解除安裝  
  若要從命令列解除安裝增益集：  
   
 1.  **以系統管理員權限**開啟命令提示字元。  
@@ -173,7 +181,7 @@ Rssharepoint.msi /?
   
 3.  您會看到確認訊息方塊。 按一下 **[是]**。  
   
-### 只從本機伺服器解除安裝增益集  
+### <a name="uninstall-the-add-in-from-the-local-server-only"></a>只從本機伺服器解除安裝增益集  
  上述解除安裝增益集的方法會從伺服器陣列中移除 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能和物件。 如果您擁有多伺服器的伺服器陣列，而只想要解除安裝本機電腦上的增益集，並且讓 SharePoint 伺服器陣列保持運作狀態，請完成下列步驟：  
   
 1.  **以系統管理員權限**開啟命令提示字元。  
@@ -210,12 +218,12 @@ Rssharepoint.msi /?
     ```  
   
 ##  <a name="bkmk_logfiles"></a> 設定記錄檔  
- 執行安裝程式時，會為已安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 增益集的使用者，將資訊記錄到 **%temp%** 資料夾中的記錄檔。 例如 **c:\Users\\<使用者名稱\>\AppData\Local\Temp**。檔案名稱是 **RS_SP_\<編號>.log**，例如 **RS_SP_0.log**。 該記錄檔中的每項錯誤，都會以 "SSRSCustomActionError" 字串開頭。  
+ 執行安裝程式時，會為已安裝 **增益集的使用者，將資訊記錄到** %temp% [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 資料夾中的記錄檔。 例如**c:\Users\\< 使用者名稱\>\AppData\Local\Temp** 。檔案名稱是**RS_SP_&LT;\<數字 >.log**，例如**RS_SP_0.log**。 該記錄檔中的每項錯誤，都會以 "SSRSCustomActionError" 字串開頭。  
   
 > [!NOTE]  
 >  AppData 在 Windows 作業系統中是隱藏的資料夾。 您需要修改 Windows 檔案總管資料夾的設定，才可看到隱藏的檔案與資料夾。  
   
-#### 利用 Windows 記事本檢視記錄檔  
+#### <a name="view-a-log-file-with-windows-notepad"></a>利用 Windows 記事本檢視記錄檔  
   
 1.  下列命令會變更命令提示字元路徑，列出 rs 記錄檔後利用 Windows 記事本開啟其中一個檔案：  
   
@@ -231,7 +239,7 @@ Rssharepoint.msi /?
     notepad rs_sp_3.log  
     ```  
   
-#### 利用 PowerShell 檢視記錄檔  
+#### <a name="view-a-log-file-with-powershell"></a>利用 PowerShell 檢視記錄檔  
   
 1.  從 SharePoint 管理命令介面輸入下列命令，從包含 "ssrscustomactionerror" 的檔案傳回已篩選過的資料列清單：  
   
@@ -246,11 +254,11 @@ Rssharepoint.msi /?
 ##  <a name="bkmk_upgrade"></a> 升級  
  如果您已擁有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 增益集的現有安裝，則可以升級至目前版本。 增益集的安裝程式會偵測現有的版本，並提示您確認升級作業。 這些訊息類似於下列文字：  
   
- **在您的系統上已偵測到較低版本的此產品。 請問您想要升級現有的安裝嗎？**  
+ **您的系統上偵測到此產品的較低版本。您要升級現有的安裝嗎？**  
   
  如果確認，將會移除舊版增益集並安裝新版本。  
   
- 請注意，[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 增益集無法感知執行個體。 在電腦上只能安裝一個增益集執行個體。 目前版本無法與相異版本並存。  
+ 請注意， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 增益集無法感知執行個體。 在電腦上只能安裝一個增益集執行個體。 目前版本無法與相異版本並存。  
   
 ##  <a name="bkmk_rscustomaction"></a> RsCustomAction.exe  
  下表摘要列出 rscustomaction.exe 參數：  
@@ -263,11 +271,12 @@ Rssharepoint.msi /?
 |p|本機解除安裝。 此作業會從本機電腦取消 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 元件的註冊。 檔案將會留在磁碟上。 此作業會重新啟動 W3SVCservice。|  
 |t|僅限 SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 2005。 此切換作業會測試報表伺服器是否能與報表伺服器資料庫正常連接。|  
   
-## 設定 Reporting Services  
- 在所有需要的電腦上安裝該增益集之後，需要從 SharePoint 管理中心設定報表伺服器。 所需要的步驟取決於不同技術之安裝順序。 如需詳細資訊，請參閱[在 SharePoint 模式中安裝第一部報表伺服器](http://msdn.microsoft.com/zh-tw/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538)和 [Reporting Services 報表伺服器 &#40;SharePoint Mode&#41;](../../reporting-services/report-server-sharepoint/reporting-services-report-server-sharepoint-mode.md)  
+## <a name="configuring-reporting-services"></a>設定 Reporting Services  
+ 在所有需要的電腦上安裝該增益集之後，需要從 SharePoint 管理中心設定報表伺服器。 所需要的步驟取決於不同技術之安裝順序。 如需詳細資訊，請參閱 [在 SharePoint 模式中安裝第一部報表伺服器](http://msdn.microsoft.com/en-us/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538) and [Reporting Services 報表伺服器 &#40;SharePoint 模式&#41;](../../reporting-services/report-server-sharepoint/reporting-services-report-server-sharepoint-mode.md)  
   
-## 另請參閱  
- [在 SharePoint 模式中安裝第一部報表伺服器](http://msdn.microsoft.com/zh-tw/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538)   
- [Reporting Services 報表伺服器 &#40;SharePoint 模式&#41;](../../reporting-services/report-server-sharepoint/reporting-services-report-server-sharepoint-mode.md)  
-  
-  
+## <a name="see-also"></a>另請參閱
+
+[在 SharePoint 模式中安裝第一部報表伺服器](http://msdn.microsoft.com/en-us/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538)   
+[Reporting Services 報表伺服器 &#40;SharePoint 模式 &#41;](../../reporting-services/report-server-sharepoint/reporting-services-report-server-sharepoint-mode.md)  
+
+更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)

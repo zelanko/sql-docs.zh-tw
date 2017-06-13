@@ -1,23 +1,28 @@
 ---
-title: "在量測計面板中加入指標與量測計 (報表產生器及 SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "（報表產生器及 SSRS） 的量測計面板中加入指標與量測計 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4dff9b67-b483-4c51-a822-6dbe706a6840
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: eb8b6569d75891a2922b283fbde37840910213db
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 在量測計面板中加入指標與量測計 (報表產生器及 SSRS)
+# <a name="include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs"></a>在量測計面板中加入指標與量測計 (報表產生器及 SSRS)
   量測計面板是最上層的容器，其中保存一個或多個量測計和指標。 指標可以內嵌在量測計中，或置於量測計面板旁邊。  
   
  如果指標和量測計在量測計面板中是相鄰的，而且顯示不同欄位中的資料，您可能要加入標籤，讓它清除量測計和指標所傳達的內容。  
@@ -27,7 +32,7 @@ caps.handback.revision: 8
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### 若要將指標內嵌在量測計中  
+### <a name="to-embed-an-indicator-in-a-gauge"></a>若要將指標內嵌在量測計中  
   
 1.  開啟現有的報表，或建立新的報表，其中包含的資料表和矩陣含有您想要顯示的資料。   
   
@@ -57,7 +62,7 @@ caps.handback.revision: 8
   
 13. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### 若要並排顯示指標及量測計  
+### <a name="to-show-an-indicator-and-gauge-side-by-side"></a>若要並排顯示指標及量測計  
   
 1.  開啟現有的報表，或建立新的報表，其中包含的資料表和矩陣含有您想要顯示的資料。  
   
@@ -99,7 +104,7 @@ caps.handback.revision: 8
   
 18. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## 請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [指標 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   
   

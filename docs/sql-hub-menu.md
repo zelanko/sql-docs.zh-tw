@@ -4,10 +4,10 @@ hide_bc: true
 title: "Microsoft SQL 文件 | Microsoft Docs"
 description: "深入了解 SQL"
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ecdaa3efa8c5de65a249413f987b8d4af197b8e1
+ms.sourcegitcommit: cf2d74e423ab96af582d5f420065f9756e671ec2
+ms.openlocfilehash: 6d69b6be60730966727e8de72abeb4964c2ee071
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 04/29/2017
 
 ---
 
@@ -27,7 +27,7 @@ ms.lasthandoff: 04/11/2017
                                 </div>
                             </li>
                             <li>
-                                <a href="/sql/sql-server/sql-server-vnext-release-notes">
+                                <a href="/sql/sql-server/sql-server-2017-release-notes">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
@@ -286,7 +286,7 @@ ms.lasthandoff: 04/11/2017
                         </ul>
                     </li>
                     <li>
-                        <a href="/en-us/sql/linux/">Linux 上的 SQL Server</a>
+                        <a href="/en-us/sql/linux?toc=/sql/docs/linux/toc.json">Linux 上的 SQL Server</a>
                     </li>
                     <li>
                         <a href="/en-us/sql/advanced-analytics/r-services/">SQL Server R Services</a>

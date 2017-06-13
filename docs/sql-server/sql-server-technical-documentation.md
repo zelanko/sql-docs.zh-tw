@@ -1,5 +1,5 @@
 ---
-title: "SQL Server 2016 技術文件 | Microsoft Docs"
+title: "SQL Server 技術文件 |Microsoft 文件"
 ms.date: 03/24/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
@@ -20,43 +20,38 @@ helpviewer_keywords:
 - portal page [SQL Server]
 ms.assetid: 674933a8-e423-4d44-a39b-2a997e2c2333
 caps.latest.revision: 106
-author: BYHAM
-ms.author: rickbyh
+author: craigg-msft
+ms.author: craigg
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 034e10f491c3c327d6a7b2a044f57121636c3c06
+ms.sourcegitcommit: 96f6a7eeb03fdc222d0e5b42bcfbf05c25d11db6
+ms.openlocfilehash: 6ba40fbd036ee6476d7eb3439a5d9e816e79651d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/25/2017
 
 ---
 # <a name="sql-server-technical-documentation"></a>SQL Server 技術文件
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+
+ > 如需舊版的 SQL Server 相關的內容，請參閱[安裝 SQL Server 2014](https://msdn.microsoft.com/en-US/library/bb500469(SQL.120).aspx)。
 
  可協助您安裝、設定和使用 SQL Server 的文件。 內容包括完整範例、程式碼範例和視訊。 如需 [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 語言的主題，請參閱 [語言參考](../t-sql/language-reference.md)。
 
-**SQL Server vNext**
+**SQL Server 2017**
 
-如需最新版本資訊，請參閱 [SQL Server vNext 版本資訊](../sql-server/sql-server-vnext-release-notes.md)
-
-如需新功能的最新資訊，請參閱 [SQL Server vNext 的新功能](../sql-server/what-s-new-in-sql-server-vnext.md)
+- [SQL Server 2017 版本資訊](../sql-server/sql-server-2017-release-notes.md)
+- [SQL Server 2017 中最新消息](../sql-server/what-s-new-in-sql-server-2017.md)
  
 **SQL Server 2016：**
  
- [SQL Server 2016 版本資訊](../sql-server/sql-server-2016-release-notes.md)
-
-[SQL Server 2016 的新功能](../sql-server/what-s-new-in-sql-server-2016.md)
+- [SQL Server 2016 版本資訊](../sql-server/sql-server-2016-release-notes.md)
+- [SQL Server 2016 的新功能](../sql-server/what-s-new-in-sql-server-2016.md)
     
  **試用 SQL Server！**    
-    
- - [**從評估中心下載 SQL Server 2016**](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)    
-    
-- **[啟動已安裝 SQL Server 2016 的虛擬機器](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)**    
-    
--  **[下載最新版的 SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx)**   
-    
-  
-    
+ - [**從評估中心下載 SQL Server 2016**](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) 
+ - **[啟動已安裝 SQL Server 2016 的虛擬機器](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)**    
+ - **[下載最新版的 SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx)**   
+      
 ## <a name="sql-server-technologies"></a>SQL Server 技術    
     
 |||    
@@ -69,7 +64,20 @@ ms.lasthandoff: 04/11/2017
 |![Analysis Services](../sql-server/media/analysis-services.png "Analysis Services")|**[Analysis Services](../analysis-services/analysis-services.md)**<br /><br /> [!INCLUDE[ssASnoversion_md](../includes/ssasnoversion-md.md)] 是一套適用於個人、團隊和企業商業智慧的分析資料平台與工具組。 伺服器和用戶端設計工具支援傳統的 OLAP 方案、新的表格式模型方案，以及使用 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)]、Excel 和 SharePoint Server 環境的自助式分析與共同作業。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 也包含資料採礦，讓您能夠發現隱藏在大量資料內部的模式和關聯性。|    
 |![複寫服務](../sql-server/media/replication-services.png "複寫服務")|**[複寫](../relational-databases/replication/sql-server-replication.md)**<br /><br /> 複寫是一組技術，用於將資料和資料庫物件從某個資料庫複製和散發到另一個資料庫，然後在兩個資料庫之間進行同步處理以維護一致性。 使用複寫，您可以透過區域網路、廣域網路、撥號連接、無線連接及網際網路，將資料散發到不同的位置以及遠端或行動使用者。|    
 |![Reporting Services](../sql-server/media/reporting-services.png "Reporting Services")|**[Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)**<br /><br /> Reporting Services 提供了啟用 Web 的企業級報表功能，讓您可以建立從各種資料來源取得內容的報表、以各種格式發行報表，以及集中管理安全性和訂閱。|    
-     
+
+    
+## <a name="earlier-sql-server-versions"></a>較早的 SQL Server 版本
+- [SQL Server 2014 線上叢書的線上叢書](https://msdn.microsoft.com/library/ms130214(v=sql.120).aspx)
+- [安裝 SQL Server 2014 Express 和其他舊版 SQL Server](http://www.hanselman.com/blog/DownloadSQLServerExpress.aspx)。 (**感謝 [Scott Hanselman](http://www.hanselman.com/) 將所有安裝程式套件連結收集在同一處！**)  
+- [SQL Server 2012 技術文件](https://technet.microsoft.com/library/bb418433(v=sql.10).aspx)  
+- [SQL Server 2008 R2 產品文件](https://msdn.microsoft.com/library/hh278298(v=sql.10).aspx)  
+- [SQL Server 2008 技術文件](https://msdn.microsoft.com/library/hh994727(v=sql.10).aspx) 
+- [SQL Server 2005 封存文件](https://msdn.microsoft.com/library/hh278313(v=sql.10).aspx)    
+
+**範例資料庫**  
+- [Wide World Importers 範例資料庫](https://msdn.microsoft.com/library/mt734199(v=sql.1).aspx)  
+- [SQL Server 2016 的 AdventureWorks 範例資料庫與指令碼](https://www.microsoft.com/en-us/download/details.aspx?id=49502) 
+- [GitHub 上的 SQL Server 範例](https://github.com/Microsoft/sql-server-samples) 
    
  ## <a name="more-information"></a>詳細資訊   
 + [SQL Server 組態管理員](../relational-databases/sql-server-configuration-manager.md)
@@ -78,8 +86,6 @@ ms.lasthandoff: 04/11/2017
 + [安裝 SQL Server 管理工具與 SSMS](https://msdn.microsoft.com/library/bb500441.aspx) 
 + [Visual Studio 2015 中的 SQL Server Data Tools](https://msdn.microsoft.com/mt186501.aspx)
 + [影片、範例和社群資源](https://msdn.microsoft.com/library/dn237258.aspx)
-+ [SQL Server 2016 簡介](https://www.microsoft.com/en-us/server-cloud/products/sql-server/default.aspx?WT.srch=1&WT.mc_id=SEM_%5B_uniqid%5D&utm_source=Bing&utm_medium=CPC&utm_term=SQL%20Server%202016&utm_campaign=Data_Management)  
   
 [!INCLUDE[feedback_stackoverflow_msdn_connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
-
 

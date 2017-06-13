@@ -1,31 +1,36 @@
 ---
-title: "SQL Server 行動報表︰ 端對端逐步解說 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/30/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "SQL Server 行動報表： 端對端逐步解說 |Microsoft 文件"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
 caps.latest.revision: 14
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 13
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: fc9ca2f7181dbda59726b9c38352c349bcf8a472
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# SQL Server 行動報表︰ 端對端逐步解說
-逐步解說在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 入口網站透過 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)]建立適用於任何螢幕大小的行動報表，並在 Power BI 行動應用程式中檢視它們。
+# <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>SQL Server 行動報表： 端對端逐步解說
+逐步解說在 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] 入口網站透過 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 建立適用於任何螢幕大小的行動報表，並在 Power BI 行動應用程式中檢視它們。
 
 您可以在可調整格線列和欄，並具有彈性的行動報表元素的設計介面上，建立行動報表。 連接到各種不同的內部部署資料來源，或上傳 Excel 活頁簿來建立行動報表。 然後將您的報表儲存到 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] 入口網站，並在瀏覽器中或者 Power BI 行動應用程式中檢視。  
   
 本文將逐步引導您完成︰   
   
 - 在 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] 入口網站上建立共用資料來源和資料集，並使用 AdventureWorks 資料庫做為範例資料來源。  
-- 在[!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]中建立 Reporting Services 行動報表  
+- 在 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]中建立 Reporting Services 行動報表  
 - 將行動報表發佈至 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] 入口網站。  
 - 在 Power BI 行動應用程式中檢視行動報表。  
   
@@ -33,13 +38,13 @@ caps.handback.revision: 13
 若要跟著做，您會需要這些產品︰  
   
 * 若要建立資料來源和 KPI 並發佈資料集和行動報表，您需要存取 [!INCLUDE[ssRSCurrent_md](../../includes/ssrscurrent-md.md)] [的原生模式報表伺服器](https://msdn.microsoft.com/library/ms143711.aspx)。  
-* 若要[建立共用資料集](#shared-dataset)，您需要[安裝報表產生器](http://www.microsoft.com/download/details.aspx?id=50016)。  
-* 若要建立行動報表，[請安裝 SQL Server 行動報表發行工具](http://go.microsoft.com/fwlink/?LinkId=717766)。  
+* 若要 [建立共用資料集](#shared-dataset)，您需要 [安裝報表產生器](https://msdn.microsoft.com/library/ff519551.aspx)。  
+* 若要建立行動報表， [請安裝 SQL Server 行動報表發行工具](http://go.microsoft.com/fwlink/?LinkId=717766)。  
 * [AdventureWorks 範例資料庫和指令碼](http://msftdbprodsamples.codeplex.com/)。  
-*  或者：World Wide Importers 範例資料庫，可從 [Microsoft SQL Server 範例](https://msdn.microsoft.com/library/mt748083.aspx)頁面取得。
+*  或者：World Wide Importers 範例資料庫，可從 [Microsoft SQL Server 範例](https://msdn.microsoft.com/library/mt748083.aspx) 頁面取得。
 * 若要檢視結果︰ 
-  *   [註冊 Power BI 服務](http://go.microsoft.com/fwlink/?LinkID=513879)，並且
-  *  [下載 Power BI 行動應用程式](https://powerbi.microsoft.com/en-us/documentation/powerbi-power-bi-apps-for-mobile-devices/)到您的行動裝置：iOS、Android 手機或 Windows 10 裝置。  
+  *   [註冊 Power BI 服務](http://go.microsoft.com/fwlink/?LinkID=513879) ，並且
+  *  [下載 Power BI 行動應用程式](https://powerbi.microsoft.com/en-us/documentation/powerbi-power-bi-apps-for-mobile-devices/) 到您的行動裝置：iOS、Android 手機或 Windows 10 裝置。  
 
   
 ## <a name="create-a-shared-data-source"></a>建立共用資料來源  
@@ -63,9 +68,9 @@ caps.handback.revision: 13
   
 深入了解 [Reporting Services 中的共用資料來源](https://msdn.microsoft.com/library/ms155845.aspx)。  
    
-## <a name="a-nameshareddatasetcreate-a-shared-dataseta"></a><a name="shared-dataset">建立共用資料集</a>153  
+## <a name="shared-dataset">Create a shared dataset</a>  
   
-使用現有的 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] 用戶端工具 (例如 [!INCLUDE[ssBIDevStudioFull_md](../../includes/ssbidevstudiofull-md.md)] 中的「報表設計師」) 建立共用資料集。  本逐步解說使用[!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]。 [安裝報表產生器](http://www.microsoft.com/download/details.aspx?id=50016)，或從您的入口網站啟動它。 您將建立三個資料集，分別針對：KPI 值、KPI 趨勢，以及 Reporting Services 行動報表 (含有更多欄位)。   
+使用現有的 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] 用戶端工具 (例如 [!INCLUDE[ssBIDevStudioFull_md](../../includes/ssbidevstudiofull-md.md)]中的「報表設計師」) 建立共用資料集。  本逐步解說使用 [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]。 [安裝報表產生器](https://msdn.microsoft.com/library/ff519551.aspx)，或從您的入口網站啟動它。 您將建立三個資料集，分別針對：KPI 值、KPI 趨勢，以及 Reporting Services 行動報表 (含有更多欄位)。   
   
 1. 從您的 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] 入口網站，按一下 [新增]  >  [編頁報表] 以啟動[!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]。  
   
@@ -93,7 +98,7 @@ caps.handback.revision: 13
    
 現在您可以使用該資料集做為您的 KPI 和行動報表的基礎。  您可以針對相同的資料來源建立多個資料集。 而且您可以針對這些共用資料集建立多個 KPI 和行動報表。   
   
-## <a name="a-namecreatekpicreate-a-kpia"></a><a name="create-KPI">建立 KPI</a>  
+## <a name="create-KPI">建立 KPI</a>  
 您可以直接在 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] 入口網站中建立 KPI。    
   
 1. 在入口網站右上角，按一下 [新增]  >  [新增 KPI]。   
@@ -133,11 +138,11 @@ caps.handback.revision: 13
    
     ![PBI_SSMRP_NewKPI](../../reporting-services/mobile-reports/media/pbi-ssmrp-newkpi.png)  
     
-## <a name="a-namecreatemobilereportcreate-a-reporting-services-mobile-reporta"></a><a name="create-mobile-report">建立 Reporting Services 行動報表</a>  
+## <a name="create-mobile-report">建立 Reporting Services 行動報表</a>  
    
-若要建立 Reporting Services 行動報表，[請安裝 SQL Server 行動報表發行工具](http://go.microsoft.com/fwlink/?LinkId=717766)，或從 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 入口網站啟動它。 
+若要建立 Reporting Services 行動報表， [請安裝 SQL Server 行動報表發行工具](http://go.microsoft.com/fwlink/?LinkId=717766)，或從 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 入口網站啟動它。 
 
-當您第一次開啟[!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]時，您會看到一個空白畫布，您可以在其中建立您的行動報表。 您可以先從建立視覺效果開始，或是以您的資料來開始。 如果您先建立視覺效果，[!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]會自動產生繫結至報表的模擬資料，並在您變更視覺選取區時做出動態變更。 請您試試看。   
+當您第一次開啟 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]時，您會看到一個空白畫布，您可以在其中建立您的行動報表。 您可以先從建立視覺效果開始，或是以您的資料來開始。 如果您先建立視覺效果， [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] 會自動產生繫結至報表的模擬資料，並在您變更視覺選取區時做出動態變更。 請您試試看。   
   
 ## <a name="start-with-the-visuals"></a>開始使用視覺效果  
   
@@ -238,7 +243,7 @@ caps.handback.revision: 13
   
 
 ## <a name="save-your-mobile-report"></a>儲存您的行動報表  
-您可以將您的報表儲存在本機，或儲存到 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] 入口網站。 如果您將報表儲存在本機，[!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]會利用快取資料儲存它，讓您可以開啟它並繼續使用。 但您將無法在行動裝置上檢視它。   
+您可以將您的報表儲存在本機，或儲存到 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] 入口網站。 如果您將報表儲存在本機， [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] 會利用快取資料儲存它，讓您可以開啟它並繼續使用。 但您將無法在行動裝置上檢視它。   
   
 1. 按一下左上角的儲存圖示。   
    
@@ -261,8 +266,8 @@ caps.handback.revision: 13
   
 若要檢視您的 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 報表，您必須先︰
 
-*  [註冊 Power BI 服務](http://go.microsoft.com/fwlink/?LinkID=513879) (如果您還沒有帳戶)。
-*  [下載 Power BI 行動應用程式](https://powerbi.microsoft.com/en-us/documentation/powerbi-power-bi-apps-for-mobile-devices/)到您的行動裝置。  
+*  [註冊 Power BI 服務](http://go.microsoft.com/fwlink/?LinkID=513879)(如果您還沒有帳戶)。
+*  [下載 Power BI 行動應用程式](https://powerbi.microsoft.com/en-us/documentation/powerbi-power-bi-apps-for-mobile-devices/) 到您的行動裝置。  
 
 ### <a name="view-your-mobile-report"></a>檢視您的行動報表
   
@@ -307,3 +312,5 @@ KPI 與行動報表會顯示於和 Reporting Services 入口網站上相同資�
 -  [在 Power BI 的 Windows 10 行動裝置應用程式中檢視 Reporting Services 行動報表和 KPI](https://powerbi.microsoft.com/documentation/powerbi-mobile-win10-kpis-mobile-reports/)    
   
    
+
+

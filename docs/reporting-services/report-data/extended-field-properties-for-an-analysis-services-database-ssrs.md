@@ -1,37 +1,42 @@
 ---
-title: "Analysis Services 資料庫的擴充欄位屬性 (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "擴充欄位屬性，Analysis services 資料庫 (SSRS) |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1d7d87e2-bf0d-4ebb-a287-80b5a967a3f2
 caps.latest.revision: 7
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 7
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2a73370c0ae9f3d405a185d53754aa0620d593e3
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# Analysis Services 資料庫的擴充欄位屬性 (SSRS)
-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料處理延伸模組支援擴充欄位屬性。 擴充欄位屬性是除了欄位屬性 **Value** 和 **IsMissing** 之外，資料來源可用而且資料處理延伸模組支援的屬性。 在 [報表資料] 窗格中，報表資料集的欄位集合中不會顯示擴充屬性。 若要在報表中包含擴充欄位屬性值，您必須撰寫運算式，使用內建 **Fields** 集合來以名稱指定擴充欄位屬性值。  
+# <a name="extended-field-properties-for-an-analysis-services-database-ssrs"></a>Analysis Services 資料庫的擴充欄位屬性 (SSRS)
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料處理延伸模組支援擴充欄位屬性。 擴充欄位屬性是除了欄位屬性 **Value** 和 **IsMissing** 之外，資料來源可用而且資料處理延伸模組支援的屬性。 在 [報表資料] 窗格中，報表資料集的欄位集合中不會顯示擴充屬性。 若要在報表中包含擴充欄位屬性值，您必須撰寫運算式，使用內建 **Fields** 集合來以名稱指定擴充欄位屬性值。  
   
  擴充屬性包括預先定義的屬性和自訂屬性。 預先定義的屬性是多個資料來源共通的屬性，這類屬性會對應到特定欄位屬性名稱，而且可透過內建的 **Fields** 集合按照名稱存取。 自訂屬性則是各個資料提供者專有的屬性，這類屬性可透過內建的 **Fields** 集合存取，但只能透過使用擴充屬性名稱作為字串的語法。  
   
- 當您使用圖形模式的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] MDX 查詢設計工具定義查詢時，預先定義的資料格屬性和維度屬性集合就會自動加入至 MDX 查詢中。 您只可以使用明確列在您報表的 MDX 查詢中的擴充屬性。 依報表的不同，您或許想修改預設的 MDX 命令文字，藉此包括 Cube 中定義的其他維度或自訂屬性。 如需 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料來源中可用之擴充欄位的詳細資訊，請參閱[建立和使用屬性值 &#40;MDX&#41;](../Topic/Creating%20and%20Using%20Property%20Values%20\(MDX\).md)。  
+ 當您使用圖形模式的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] MDX 查詢設計工具定義查詢時，預先定義的資料格屬性和維度屬性集合就會自動加入至 MDX 查詢中。 您只可以使用明確列在您報表的 MDX 查詢中的擴充屬性。 依報表的不同，您或許想修改預設的 MDX 命令文字，藉此包括 Cube 中定義的其他維度或自訂屬性。 如需 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料來源中可用之擴充欄位的詳細資訊，請參閱[建立和使用屬性值 &#40;MDX&#41;](http://msdn.microsoft.com/library/0cafb269-03c8-4183-b6e9-220f071e4ef2)。  
   
-## 使用報表中的欄位屬性  
- 擴充欄位屬性包含預先定義的屬性和資料提供者特有的屬性。 即使欄位屬性位於針對資料集所建立的查詢中，還是不會與欄位清單一起出現在 **[報表資料]** 窗格內，因此您無法將欄位屬性拖曳到報表設計介面上。 不過，您必須將欄位拖曳到報表上，然後將該欄位的 **Value** 屬性變更為您要使用的屬性。 例如，如果 Cube 中的資料格資料已經格式化，您可以利用以下運算式來使用 FormattedValue 欄位屬性：`=Fields!FieldName.FormattedValue`。  
+## <a name="working-with-field-properties-in-a-report"></a>使用報表中的欄位屬性  
+ 擴充欄位屬性包含預先定義的屬性和資料提供者特有的屬性。 即使欄位屬性位於針對資料集所建立的查詢中，還是不會與欄位清單一起出現在 **[報表資料]** 窗格內，因此您無法將欄位屬性拖曳到報表設計介面上。 不過，您必須將欄位拖曳到報表上，然後將該欄位的 **Value** 屬性變更為您要使用的屬性。 例如，如果 Cube 中的資料格資料已經格式化，您可以利用以下運算式來使用 FormattedValue 欄位屬性： `=Fields!FieldName.FormattedValue`。  
   
  若要參考未預先定義的擴充屬性，請在運算式中使用下列語法：  
   
 -   *Fields!FieldName("PropertyName")*  
   
-## 預先定義的欄位屬性  
+## <a name="predefined-field-properties"></a>預先定義的欄位屬性  
  在大多數情況下，預先定義的欄位屬性會套用至量值、層級或維度。 預先定義的欄位屬性必須有儲存在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料來源中的對應值。 如果值不存在，或者 (例如) 您在層級上指定了僅限量值的欄位屬性，則屬性會傳回 Null 值。  
   
  您可以使用下列任一語法，從運算式參考預先定義的屬性：  
@@ -62,7 +67,7 @@ caps.handback.revision: 7
 > [!NOTE]  
 >  當報表為其資料集執行及擷取資料時，只有在資料來源 (例如 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Cube) 提供這些值的情況下，這些擴充欄位屬性的值才會存在。 這樣，您就可以利用以下章節所述的語法，從任何運算式參考那些欄位屬性值。 不過，由於這些欄位是此資料提供者的特定欄位，因此，您對這些值所作的變更不會隨同報表定義一併儲存。  
   
-### 擴充屬性範例  
+### <a name="example-extended-properties"></a>擴充屬性範例  
  為了示範說明擴充屬性，下列 MDX 查詢和結果集之中包含從為 Cube 定義的維度屬性中取得的數個成員屬性。 這些成員屬性包括 MEMBER_CAPTION、UNIQUENAME、Properties("Day Name")、MEMBER_VALUE、PARENT_UNIQUE_NAME 和 MEMBER_KEY。  
   
  這個 MDX 查詢會針對 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 範例資料庫中所包含之 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] DW 資料庫內的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] Cube 來執行。  
@@ -126,12 +131,12 @@ CELL PROPERTIES
 |三月|2,749|  
 |四月|2,739|  
   
- 這些屬性雖然是 MDX 選取陳述式的一部分，但是卻不會出現在結果集資料行中， 然而，報表還是可以透過使用擴充屬性功能來使用這些資料。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 的 MDX 查詢結果窗格中，按兩下資料格即可查看資料格屬性值 (如果 Cube 中已設定的話)。 如果按兩下包含 1,379 的第一個 [Order Count] 資料格，就會出現內含下列資料格屬性的快顯視窗：  
+ 這些屬性雖然是 MDX 選取陳述式的一部分，但是卻不會出現在結果集資料行中， 然而，報表還是可以透過使用擴充屬性功能來使用這些資料。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]的 MDX 查詢結果窗格中，按兩下資料格即可查看資料格屬性值 (如果 Cube 中已設定的話)。 如果按兩下包含 1,379 的第一個 [Order Count] 資料格，就會出現內含下列資料格屬性的快顯視窗：  
   
 |屬性|Value|  
 |--------------|-----------|  
 |CellOrdinal|0|  
-|值|2481|  
+|Value|2481|  
 |BACK_COLOR|(Null)|  
 |FORE_COLOR|(Null)|  
 |FORMATTED_VALUE|2,481|  
@@ -148,9 +153,9 @@ CELL PROPERTIES
   
  這會將欄位值依其在資料來源中的原始整數資料類型排序。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [運算式 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [運算式中的內建集合 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder-and-ssrs.md)   
+ [運算式中的內建集合 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)   
  [資料集 Fields 集合 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
   
   

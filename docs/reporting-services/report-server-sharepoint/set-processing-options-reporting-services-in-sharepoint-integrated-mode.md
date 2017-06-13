@@ -1,26 +1,31 @@
 ---
-title: "設定處理選項 (SharePoint 整合模式的 Reporting Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SharePoint 整合 [Reporting Services], 內容管理"
-  - "快照集 [Reporting Services], 建立"
+title: "設定處理選項 (SharePoint 整合模式的 Reporting Services) |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SharePoint integration [Reporting Services], content management
+- snapshots [Reporting Services], creating
 ms.assetid: 453b19a1-739a-4b67-aeea-2069b52204e1
 caps.latest.revision: 15
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 15
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8f2a5c52f4fa9b04026490c1e66243bf0d660c13
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 設定處理選項 (SharePoint 整合模式的 Reporting Services)
+# <a name="set-processing-options-reporting-services-in-sharepoint-integrated-mode"></a>設定處理選項 (SharePoint 整合模式的 Reporting Services)
   您可以對 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表設定處理選項，以指定資料開始處理的時間。 您還可以設定報表處理的逾時值，以及決定是否要啟用目前報表之報表記錄的選項。  
   
 -   您可以將報表以報表快照集的形式執行，以避免在任意時間 (例如，在排程備份期間) 執行報表。 報表快照集一般會按照排程建立和後續重新整理，讓您可以設定報表以及資料處理進行的正確時間。 如果報表所依據的，是要花很長時間執行的查詢，或者使用您希望在幾個小時內沒有人能存取之資料來源中之資料的查詢，您應將報表當成快照集執行。  
@@ -36,7 +41,7 @@ caps.handback.revision: 15
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode|  
   
  **本主題內容：**  
   
@@ -104,7 +109,7 @@ caps.handback.revision: 15
   
 1.  使用 Windows PowerShell 設定的 SharePoint 報表伺服器資料庫逾時。 如需詳細資訊，請參閱＜ [PowerShell cmdlets for Reporting Services SharePoint Mode](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)＞的＜取得並設定 Reporting Services 應用程式資料庫的屬性＞一節。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [設定報表處理屬性](../../reporting-services/report-server/set-report-processing-properties.md)   
  [快取報表 &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md)   
  [設定報表和共用資料集處理的逾時值 &#40;SSRS&#41;](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)  

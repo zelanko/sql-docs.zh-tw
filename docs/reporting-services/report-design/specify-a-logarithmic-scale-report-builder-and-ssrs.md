@@ -1,23 +1,28 @@
 ---
-title: "指定對數刻度 (報表產生器及 SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "指定對數刻度 （報表產生器及 SSRS） |Microsoft 文件"
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f3092c1c-b128-433d-9a95-983508b2a8d4
 caps.latest.revision: 7
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 7
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3cbd1de3393757c20cf31c76be12d2911ecf7f9f
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 指定對數刻度 (報表產生器及 SSRS)
+# <a name="specify-a-logarithmic-scale-report-builder-and-ssrs"></a>指定對數刻度 (報表產生器及 SSRS)
   如果您的資料在對數上成比例，您可能會想要考慮在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表的圖表上使用對數刻度。 這樣可以讓您的資料更容易管理，而有助於改善圖表的外觀。 大部分的對數刻度都使用 10 當做基底。  
   
  此功能僅能在值軸上使用。 值軸通常是圖表的垂直軸 (或 Y 軸)， 而在長條圖中，則為水平軸 (即 X 軸)。  
@@ -27,7 +32,7 @@ caps.handback.revision: 7
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## 若要指定對數刻度  
+## <a name="to-specify-a-logarithmic-scale"></a>若要指定對數刻度  
   
 1.  以滑鼠右鍵按一下圖表的 Y 軸，然後按一下 [垂直軸屬性]。 [垂直軸屬性] 對話方塊隨即出現。  
   
@@ -35,7 +40,7 @@ caps.handback.revision: 7
   
 3.  在 [對數底數] 文字方塊中，為對數底數輸入正值。 如果沒有指定任何值，對數基底預設為 10。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [格式化圖表上的軸標籤 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [格式化圖表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
  [將軸標籤格式化成日期或貨幣 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   

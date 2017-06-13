@@ -1,24 +1,29 @@
 ---
-title: "教學課程：運算式簡介 | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/16/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: "教學課程： 運算式簡介 |Microsoft 文件"
+ms.custom: 
+ms.date: 09/16/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
 caps.latest.revision: 14
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 14
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 97b19aaffd06a196d3cbd39e44b49c971a146edf
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 教學課程：運算式簡介
+# <a name="tutorial-introducing-expressions"></a>教學課程：運算式簡介
 在此 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] 教學課程中，您將使用含有一般函數和運算子的運算式，來建立功能強大且靈活的 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 編頁報表。 
 
 您將撰寫運算式以串連名稱值、在不同的資料集中查閱值、依據欄位值顯示不同色彩等功能。  
@@ -31,7 +36,7 @@ caps.handback.revision: 14
   
 完成本教學課程的估計時間：30 分鐘。  
   
-## 需求  
+## <a name="requirements"></a>需求  
 如需需求的資訊，請參閱[教學課程的必要條件 &#40;報表產生器&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md)。  
   
 ## <a name="Setup"></a>1.從資料表或矩陣精靈建立資料表報表和資料集  
@@ -40,7 +45,7 @@ caps.handback.revision: 14
 > [!NOTE]  
 > 在本教學課程中，查詢會包含資料值，因此不需要外部資料來源。 這樣會使查詢相當冗長。 在商業環境中，查詢不會包含資料。 這僅供教學之用。  
   
-### 建立資料表報表  
+### <a name="to-create-a-table-report"></a>建立資料表報表  
   
 1.  從您的電腦、[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 入口網站或 SharePoint 整合模式[啟動報表產生器](../reporting-services/report-builder/start-report-builder.md)。  
   
@@ -127,7 +132,7 @@ caps.handback.revision: 14
   
 ## <a name="UpdateNames"></a>2.更新資料來源和資料集的預設名稱  
   
-### 若要更新資料來源的預設名稱  
+### <a name="to-update-the-default-name-of-the-data-source"></a>若要更新資料來源的預設名稱  
   
 1.  在 [報表資料] 窗格中，展開 [資料來源] 資料夾。  
   
@@ -137,7 +142,7 @@ caps.handback.revision: 14
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-### 若要更新資料集的預設名稱  
+### <a name="to-update-the-default-name-of-the-dataset"></a>若要更新資料集的預設名稱  
   
 1.  在 [報表資料] 窗格中，展開 [資料集] 資料夾。  
   
@@ -197,7 +202,7 @@ caps.handback.revision: 14
 ## <a name="DateFormat"></a>(選擇性) 格式化日期和貨幣資料行和標頭資料列  
 在本節中，您格式化 [上次購買] 資料行 (其中包含日期) 和 [YTDPurchase] 資料行 (其中包含貨幣)。 您也會格式化標頭資料列。  
   
-### 格式化日期資料行  
+### <a name="to-format-the-date-column"></a>格式化日期資料行  
   
 1.  按一下 **[設計]** 返回 [設計] 檢視。  
   
@@ -211,11 +216,11 @@ caps.handback.revision: 14
 
     現在您可以看到所選取的格式化範例。 
   
-### 格式化貨幣資料行
+### <a name="to-format-the-currency-column"></a>格式化貨幣資料行
 
 - 選取 [YTDPurchase] 資料行中的資料格，然後在 [數字] 區段中，選取 [貨幣]。
  
-### 格式化資料行標頭
+### <a name="to-format-the-column-headers"></a>格式化資料行標頭
 
 1. 選取資料行標頭的資料列。
 
@@ -236,7 +241,7 @@ caps.handback.revision: 14
 在使報表成為帶狀報表時，若要保留已在該資料表儲存格中套用的色彩，請新增一個矩形，然後新增矩形的背景色彩。  
     
  
-### 新增 M/F 資料行  
+### <a name="to-add-an-mf-column"></a>新增 M/F 資料行  
   
 1.  以滑鼠右鍵按一下 [名稱] 資料行，指向 [插入資料行]，然後按一下 [左方]。  
   
@@ -244,7 +249,7 @@ caps.handback.revision: 14
   
 2.  按一下新資料行的標頭，並輸入 **M/F**。  
   
-### 若要加入矩形  
+### <a name="to-add-a-rectangle"></a>若要加入矩形  
   
 1.   在 [插入] 索引標籤上，按一下 [矩形]，然後按一下 [M/F] 資料行的資料格。  
   
@@ -256,7 +261,7 @@ caps.handback.revision: 14
 
     ![report-builder-expression-tutorial-narrow-column](../reporting-services/media/report-builder-expression-tutorial-narrow-column.png)
   
-### 使用色彩顯示性別  
+### <a name="to-use-color-to-show-gender"></a>使用色彩顯示性別  
   
 1.  在 [M/F] 資料行的資料格中，以滑鼠右鍵按一下矩形，然後按一下 [矩形屬性]。  
   
@@ -286,7 +291,7 @@ caps.handback.revision: 14
 
 13. 在它之後輸入右括號 **)**。 
   
-    完成的運算式為：`=Switch(Fields!Gender.Value ="Male", "CornflowerBlue",Fields!Gender.Value ="Female","Tomato")`  
+    完成的運算式為： `=Switch(Fields!Gender.Value ="Male", "CornflowerBlue",Fields!Gender.Value ="Female","Tomato")`  
     
     ![report-builder-expression-tutorial-color-expression-complete](../reporting-services/media/report-builder-expression-tutorial-color-expression-complete.png)
   
@@ -296,7 +301,7 @@ caps.handback.revision: 14
 
     ![report-builder-expression-tutorial-preview-m-f-column](../reporting-services/media/report-builder-expression-tutorial-preview-m-f-column.png)
 
-### 格式化色彩矩形
+### <a name="to-format-the-color-rectangles"></a>格式化色彩矩形
 
 1. 按一下 **[設計]** 返回 [設計] 檢視。  
 
@@ -315,13 +320,13 @@ caps.handback.revision: 14
 ## <a name="Lookup"></a>5.查閱 CountryRegion 名稱  
 在本節中，您會建立 CountryRegion 資料集並使用 **Lookup** 函數顯示國家/地區的名稱，而不是國家/地區的識別碼。  
   
-### 若要建立 CountryRegion 資料集  
+### <a name="to-create-the-countryregion-dataset"></a>若要建立 CountryRegion 資料集  
   
 1.  按一下 **[設計]** 返回 [設計] 檢視。  
   
 2.  在 [報表資料] 窗格中，按一下 [新增]，然後按一下 [資料集]。  
   
-3.  在 [資料集屬性] 中，按一下 [使用內嵌在我的報表中的資料集]。  
+3.  在 * * 資料集的內容，然後按一下**使用內嵌在我的報表中的資料集**。  
   
 4.  在 [資料來源] 清單中，選取 ExpressionsDataSource。  
   
@@ -358,7 +363,7 @@ caps.handback.revision: 14
 
      現在您在 [報表資料] 資料行中有第二個資料集。
   
-### 若要查閱 CountryRegion 資料集中的值  
+### <a name="to-look-up-values-in-the-countryregion-dataset"></a>若要查閱 CountryRegion 資料集中的值  
   
 1.  按一下 [國家/地區 ID] 資料行標頭，並刪除文字 [ID]，使它成為 [國家/地區]。  
   
@@ -372,7 +377,7 @@ caps.handback.revision: 14
   
 6.  在 [類別] 清單中，按一下 [欄位 (運算式)]，然後在 [值] 清單中，按兩下 [CountryRegionID]。  
   
-8.  將游標放在緊接 `CountryRegionID.Value`, and type **,Fields!ID.value, Fields!CountryRegion.value, "CountryRegion")** 之後  
+8.  將游標放在緊接 `CountryRegionID.Value`, and type **,Fields!ID.value, Fields!CountryRegion.value, "CountryRegion")**之後  
   
     完成的運算式為： `=Lookup(Fields!CountryRegionID.Value,Fields!ID.value, Fields!CountryRegion.value, "CountryRegion")`  
   
@@ -385,7 +390,7 @@ caps.handback.revision: 14
 ## <a name="Count"></a>6.計算自上次購買後的日數  
 在本節中，您會新增資料行，然後使用 **Now** 函數或 `ExecutionTime` 內建全域變數，計算客戶自上次購買後至今的天數。  
   
-### 若要加入 [天前] 資料行  
+### <a name="to-add-the-days-ago-column"></a>若要加入 [天前] 資料行  
   
 1.  按一下 **[設計]** 返回 [設計] 檢視。  
   
@@ -410,9 +415,9 @@ caps.handback.revision: 14
 13. 在 [類別] 清單中，再按一下 [日期和時間]，然後在 [項目] 清單中，按兩下 [Now]。  
   
     > [!WARNING]  
-    > 在生產報表中，不應該在隨報表轉譯而評估多次的運算式中使用 **Now** 函數 (例如，報表的詳細資料列)。 **Now** 的值會依資料列而改變，而不同的值會影響運算式的評估結果，導致結果稍微不一致。 因此，請改用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供的 `ExecutionTime` 全域變數。  
+    > 在生產報表中，不應該在隨報表轉譯而評估多次的運算式中使用 **Now** 函數 (例如，報表的詳細資料列)。 **Now** 的值會依資料列而改變，而不同的值會影響運算式的評估結果，導致結果稍微不一致。 因此，請改用 `ExecutionTime` 提供的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 全域變數。  
   
-15. 刪除 `Now(` 之後的左括號，然後輸入右括號 **)**  
+15. 刪除 `Now(`之後的左括號，然後輸入右括號 **)**  
   
     完成的運算式為： `=DateDiff("d", Fields!LastPurchase.Value, Now)`  
     
@@ -427,7 +432,7 @@ caps.handback.revision: 14
   
 設定指標和其狀態需要許多步驟。 您要的話，可以略過「設定指標」程序，再從本教學課程將完成的運算式複製/貼上至 [運算式] 對話方塊中。  
   
-### 若要加入平均銷售增減資料行  
+### <a name="to-add-the--or---avg-sales-column"></a>若要加入平均銷售增減資料行  
   
 1.  以滑鼠右鍵按一下 [YTD 購買] 資料行，指向 [插入資料行]，然後按一下 [右方]。  
   
@@ -435,7 +440,7 @@ caps.handback.revision: 14
   
 2.  按一下資料行標頭，並輸入**平均銷售增減**。  
   
-### 若要加入指標  
+### <a name="to-add-an-indicator"></a>若要加入指標  
   
 1.  在 [插入] 索引標籤上，按一下 [指標]，然後按一下 [平均銷售增減] 資料行的資料格。  
   
@@ -447,7 +452,7 @@ caps.handback.revision: 14
   
 3.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-### 若要設定指標  
+### <a name="to-configure-the-indicator"></a>若要設定指標  
   
 1.  以滑鼠右鍵按一下指標，按一下 [指標屬性]，然後按一下 [值和狀態]。  
   
@@ -465,7 +470,7 @@ caps.handback.revision: 14
   
 11. 在 [類別] 清單中，按一下 [欄位 (運算式)]，然後在 [值] 清單中，按兩下 [YTDPurchase]。  
   
-13. 緊接在 `Fields!YTDPurchase.Value` 之後，輸入 **, "Expressions"))**  
+13. 緊接在 `Fields!YTDPurchase.Value`之後，輸入 **, "Expressions"))**  
   
     完成的運算式為： `=Round(Fields!YTDPurchase.Value - Avg(Fields!YTDPurchase.Value, "Expressions"))`  
   
@@ -507,7 +512,7 @@ caps.handback.revision: 14
   
 34. 按一下 [結束] 值的文字方塊右邊的 **fx** 按鈕。  
   
-35. 在 [運算式] 對話方塊中，刪除 **100** 然後建立運算式： `=Round(Fields!YTDPurchase.Value - Avg(Fields!YTDPurchase.Value, "Expressions")) >0`  
+35. 在**運算式**對話方塊中，刪除**100**和建立運算式：`=Round(Fields!YTDPurchase.Value - Avg(Fields!YTDPurchase.Value, "Expressions")) >0`  
   
 36. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -520,7 +525,7 @@ caps.handback.revision: 14
 ## <a name="GreenBar"></a>8.製作帶狀報表  
 建立參數，讓報表讀者可以指定套用至報表中交替資料列的色彩，使其變成帶狀報表。  
   
-### 若要加入參數  
+### <a name="to-add-a-parameter"></a>若要加入參數  
   
 1.  按一下 **[設計]** 返回 [設計] 檢視。  
   
@@ -564,7 +569,7 @@ caps.handback.revision: 14
   
 19. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-### 若要套用交替色彩至詳細資料列  
+### <a name="to-apply-alternating-colors-to-detail-rows"></a>若要套用交替色彩至詳細資料列  
   
 1.   選取在資料列中所有儲存格，但 [M/F] 資料行中的儲存格除外，它有自己的背景色彩。  
 
@@ -590,7 +595,7 @@ caps.handback.revision: 14
   
 8. 按一下 [參數]，然後在 [值] 清單中按兩下 [RowColor]。  
   
-22. 緊接在 `Parameters!RowColor.Value` 之後，輸入 **, “White”)**  
+22. 緊接在 `Parameters!RowColor.Value`之後，輸入 **, “White”)**  
   
     完成的運算式為： `=IIF(RowNumber(Nothing) MOD 2, Parameters!RowColor.Value, “White”)`  
     
@@ -598,7 +603,7 @@ caps.handback.revision: 14
   
 24. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-### 執行報表  
+### <a name="run-the-report"></a>執行報表  
   
 1.  在 [首頁] 索引標籤上，按一下 [執行]。  
 
@@ -617,7 +622,7 @@ caps.handback.revision: 14
 ## <a name="Title"></a>(選擇性) 加入報表標題  
 加入報表的標題。  
   
-### 若要加入報表標題  
+### <a name="to-add-a-report-title"></a>若要加入報表標題  
   
 1.  在設計介面上，按一下 **[按一下以加入標題]**。  
   
@@ -638,7 +643,7 @@ caps.handback.revision: 14
   
 在本教學課程中，您會將報表儲存至報表伺服器。 如果您沒有報表伺服器的存取權，請將報表儲存在您的電腦上。  
   
-### 若要將報表儲存至報表伺服器  
+### <a name="to-save-the-report-to-a-report-server"></a>若要將報表儲存至報表伺服器  
   
 1.  在 [檔案] 功能表 > [另存新檔]。  
   
@@ -657,7 +662,7 @@ caps.handback.revision: 14
 ![report-builder-expression-tutorial-final-in-browser](../reporting-services/media/report-builder-expression-tutorial-final-in-browser.png)
 
    
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
 [運算式 &#40;報表產生器及 SSRS&#41;](../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
 [運算式範例 &#40;報表產生器及 SSRS&#41;](../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
 [指標 &#40;報表產生器及 SSRS&#41;](../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
@@ -667,3 +672,5 @@ caps.handback.revision: 14
   
   
   
+
+

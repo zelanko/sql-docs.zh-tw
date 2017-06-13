@@ -1,57 +1,39 @@
 ---
-title: "教學課程：建立矩陣報表 (報表產生器) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/23/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: "教學課程： 建立矩陣報表 （報表產生器） |Microsoft 文件"
+ms.custom: 
+ms.date: 06/23/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
 caps.latest.revision: 15
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 14
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: ee55d7f9499b638828a6312761dd1b7480a7816c
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 教學課程：建立矩陣報表 (報表產生器)
+# <a name="tutorial-creating-a-matrix-report-report-builder"></a>教學課程：建立矩陣報表 (報表產生器)
 本教學課程會引導您建立 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分頁報表，其中具有巢狀資料列和資料行群組的範例銷售資料矩陣。 
 
 您也會建立相鄰的資料行群組、格式化資料行，以及旋轉文字。 下圖顯示報表，與您將要建立的報表相似。  
   
 ![report-builder-matrix-tutorial](../reporting-services/media/report-builder-matrix-tutorial.png)
-  
-## <a name="BackToTop"></a>學習內容  
-在本教學課程中，您將會：  
-  
-1.  [從新增資料表或矩陣精靈建立矩陣報表和資料集](#CreateMatrix)  
-  
-2.  [從新增資料表或矩陣精靈組織資料、選擇配置](#Groups)  
-  
-3.  [將資料格式化](#FormatData)  
-  
-4.  [加入相鄰資料行群組](#AdjacentGroup)  
-  
-5.  [變更資料行寬度](#Width)  
-  
-6.  [合併矩陣資料格](#MergeCells)  
-  
-7.  [加入報表頁首和報表標題](#HeaderTitle)  
-  
-8.  [儲存報表](#Save)  
-  
-### 選擇性步驟  
-  
-1.  [將文字方塊旋轉 270 度](#RotateTextBox)  
-  
+   
 完成這個教學課程的估計時間：30 分鐘。  
   
-## 需求  
-如需需求的資訊，請參閱[教學課程的必要條件](../reporting-services/prerequisites-for-tutorials-report-builder.md)。 
+## <a name="requirements"></a>需求  
+如需需求的資訊，請參閱 [教學課程的必要條件](../reporting-services/prerequisites-for-tutorials-report-builder.md)。 
   
 ## <a name="CreateMatrix"></a>1.從新增資料表或矩陣精靈建立矩陣報表和資料集  
 在本節中，您會選擇共用資料來源、建立內嵌資料集，然後在矩陣中顯示資料。  
@@ -59,13 +41,13 @@ caps.handback.revision: 14
 > [!NOTE]  
 > 在本教學課程中，查詢已經包含資料值，因此不需要外部資料來源。 這樣會使查詢相當冗長。 在商業環境中，查詢不會包含資料。 這僅供教學之用。  
   
-### 建立矩陣  
+### <a name="to-create-a-matrix"></a>建立矩陣  
   
 1.  從您的電腦、[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 入口網站或 SharePoint 整合模式[啟動報表產生器](../reporting-services/report-builder/start-report-builder.md)。  
   
-    [新增報表或資料集] 對話方塊隨即開啟。  
+    [新報表或資料集] 對話方塊隨即開啟。  
   
-    如果您看不到 [新增報表或資料集] 對話方塊，請按一下 [檔案] 功能表 > [新增]。  
+    如果未顯示 [新報表或資料集] 對話方塊，請按一下 [檔案] 功能表 > [新增]。  
   
 2.  在左窗格中，確認已選取 **[新增報表]** 。  
   
@@ -174,13 +156,13 @@ caps.handback.revision: 14
 ## <a name="FormatData"></a>3.將資料格式化  
 根據預設，[Sales] 欄位的摘要資料會顯示一般數字，而 [SalesDate] 欄位會顯示日期加上時間資訊。 在本節中，您會格式化以使 [Sales] 欄位將數字顯示為貨幣，讓 [SalesDate] 欄位只顯示日期。 切換 [預留位置樣式]，將格式化的文字方塊和預留位置文字顯示為範例值。  
   
-### 格式化欄位  
+### <a name="to-format-fields"></a>格式化欄位  
   
 1.  按一下 **[設計]** ，切換到 [設計] 檢視。  
   
 2.  按下 Ctrl 鍵，然後選取包含 `[Sum(Sales)]` 的 9 個資料格。  
   
-3.  在 [首頁] 索引標籤 > [數值] > [貨幣]。 這些資料格就會變更為顯示格式化貨幣。  
+3.  On the **Home** tab > **Number** > **Currency**. 這些資料格就會變更為顯示格式化貨幣。  
   
     如果您的地區設定為 [英文 (美國)]，則預設範例文字會是 [$12,345.00]。 如果您未看見範例貨幣值，請按一下 [數值] 群組中的 [預留位置樣式] > [範例值]。  
     
@@ -201,7 +183,7 @@ caps.handback.revision: 14
   
 在本節中，您會新增一個與 Subcategory 資料行群組相鄰的資料行群組、複製資料格以填入新資料行群組，然後使用運算式建立新資料行群組頁首的值。  
   
-### 加入相鄰資料行群組  
+### <a name="to-add-an-adjacent-column-group"></a>加入相鄰資料行群組  
   
 1.  按一下 **[設計]** 返回 [設計] 檢視。  
   
@@ -245,7 +227,7 @@ caps.handback.revision: 14
 ## <a name="Width"></a>5.變更資料行寬度  
 含有矩陣的報表在執行時，通常會水平且垂直地展開。 若您打算將報表匯出為印刷報表採用的格式，如 Microsoft Word 或 Adobe PDF，控制水平展開程度就特別重要。 如果報表水平地展開成跨多個頁面，將造成印刷報表難以判讀。 為了盡量減少水平展開程度，您可將資料行寬度調整成以不換行的方式顯示資料所需的量。 您也可以重新命名資料行，使顯示資料所需的寬度恰能容納其標題。  
   
-### 資料行重新命名與調整大小  
+### <a name="to-rename-and-resize-the-columns"></a>資料行重新命名與調整大小  
   
 1.  按一下 **[設計]** 返回 [設計] 檢視。  
   
@@ -274,7 +256,7 @@ caps.handback.revision: 14
 ## <a name="MergeCells"></a>6.合併矩陣資料格  
 邊角區域是位於矩陣的左上角。 邊角區域內的資料格數目，會隨矩陣中的資料列與資料行群組數目而有所不同。 本教學課程建置的矩陣其邊角區域內有四個資料格。 這些資料格排成兩列兩欄，反映了資料列與資料行群組階層的深度。 本報表用不到這四個資料格，因此您要將其合併為單一資料格。  
   
-### 合併矩陣資料格  
+### <a name="to-merge-matrix-cells"></a>合併矩陣資料格  
   
 1.  按一下 **[設計]** 返回 [設計] 檢視。  
   
@@ -286,7 +268,7 @@ caps.handback.revision: 14
   
 5.  以滑鼠右鍵按一下合併的資料格，然後按一下 [文字方塊屬性]。  
   
-6.  在 [框線] 索引標籤 > [預設] > [無]。
+6.  On the **Border** tab > **Presets** > **None**.
   
 9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -297,7 +279,7 @@ caps.handback.revision: 14
 ## <a name="HeaderTitle"></a>7.加入報表頁首和報表標題  
 報表標題會出現在報表的頂端。 您可以將報表標題放置在報表頁首，如果報表不使用報表頁首，則可以放置在報表主體頂端的文字方塊中。 在本教學課程中，您將移除報表頂端的文字方塊，然後加入標題至頁首。  
   
-### 加入報表頁首和報表標題  
+### <a name="to-add-a-report-header-and-report-title"></a>加入報表頁首和報表標題  
   
 1.  按一下 **[設計]** 返回 [設計] 檢視。  
   
@@ -324,7 +306,7 @@ caps.handback.revision: 14
   
 本教學課程會將報表儲存至報表伺服器。 如果您沒有報表伺服器的存取權，請將報表儲存在您的電腦上。  
   
-### 若要將報表儲存在報表伺服器上  
+### <a name="to-save-the-report-on-a-report-server"></a>若要將報表儲存在報表伺服器上  
   
 1.  在 **[報表產生器]** 按鈕中，按一下 **[另存新檔]**。  
   
@@ -340,7 +322,7 @@ caps.handback.revision: 14
   
 報表就會儲存至報表伺服器。 您連接之報表伺服器的名稱會顯示在視窗底部的狀態列中。  
   
-#### 將報表儲存到您的電腦上  
+#### <a name="to-save-the-report-on-your-computer"></a>將報表儲存到您的電腦上  
   
 1.  在 **[報表產生器]** 按鈕中，按一下 **[另存新檔]**。  
   
@@ -355,7 +337,7 @@ caps.handback.revision: 14
   
 文字方塊也可以將文字顯示成水平、垂直 (由上而下) 的方向。 如需詳細資訊，請參閱[文字方塊 &#40;報表產生器及 SSRS&#41;](../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)。  
   
-### 將文字方塊旋轉 270 度  
+### <a name="to-rotate-text-box-270-degrees"></a>將文字方塊旋轉 270 度  
   
 1.  按一下 **[設計]** 返回 [設計] 檢視。  
   
@@ -378,14 +360,16 @@ caps.handback.revision: 14
   
 領域名稱的寫法為由上而下的垂直方向。 Territory 資料列群組的高度會依領域名稱的長度而變化。  
   
-## 後續步驟  
+## <a name="next-steps"></a>後續步驟  
 以上總結如何建立矩陣報表的教學課程。 如需矩陣的詳細資訊，請參閱： 
 -    [資料表、矩陣和清單](../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)
 -    [建立矩陣](../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)
 -    [Tablix 資料區的區域](../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md) 
 -    [Tablix 資料區資料格、資料列及資料行](../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
 [報表產生器教學課程](../reporting-services/report-builder-tutorials.md)  
 [SQL Server 2016 的報表產生器](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
+
+

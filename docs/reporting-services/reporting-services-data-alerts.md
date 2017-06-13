@@ -1,30 +1,37 @@
 ---
-title: "Reporting Services Data Alerts | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Reporting Services 資料警示 |Microsoft 文件"
+ms.custom: 
+ms.date: 05/10/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8c234077-b670-45c0-803f-51c5a5e0866e
 caps.latest.revision: 33
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 33
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 86cf02b246cc8ca11e7ed490cfb6082c2c6c7760
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# Reporting Services Data Alerts
+# <a name="reporting-services-data-alerts"></a>Reporting Services Data Alerts
+
+[!INCLUDE[ssrs-appliesto-sql2016-xpreview](../includes/ssrs-appliesto-sql2016-xpreview.md)][!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
+
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 資料警示是資料驅動的警示解決方案，可協助您得知報表中您有興趣或對您很重要的某個相關時間點的資料。 透過使用資料警示，您就不必再搜尋資訊，而會自動收到資訊。  
   
  資料警示訊息是透過電子郵件傳送。 依據資訊的重要性而定，您可以選擇傳送訊息的頻率，以及僅在結果變更時傳送。 您可以指定多位電子郵件收件者，如此就能通知其他人，以提升效率並增進共同作業。  
-  
-||  
-|-|  
-|**[!INCLUDE[applies](../includes/applies-md.md)]**  SharePoint 模式|  
+
+> [!NOTE]
+> SQL Server 2016 之後已無法再使用 reporting Services 與 SharePoint 整合。
   
 ##  <a name="AlertingWF"></a> 資料警示架構和工作流程  
  以下摘要說明 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 資料警示的主要區域：  
@@ -47,7 +54,7 @@ caps.handback.revision: 33
   
  ![Reporting Services 警示中的工作流程](../reporting-services/media/rs-alertingworkflow.gif "Reporting Services 警示中的工作流程")  
   
-### 資料警示支援的報表  
+### <a name="reports-supported-by-data-alerts"></a>資料警示支援的報表  
  您可以在以報表定義語言 (RDL) 撰寫並且於報表設計師或報表產生器中建立的所有類型專業報表上建立資料警示。 包含資料表和圖表等資料區的報表、擁有子報表的報表，以及擁有多個平行資料行群組和巢狀資料區的複雜報表。 唯一的需求是，報表至少包含一個任何類型的資料區域，而且報表資料來源設定為使用預存認證或無認證。 如果報表沒有任何資料區，則無法為其建立警示。  
   
  您無法針對使用 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]所建立的報表建立資料警示。  
@@ -62,29 +69,29 @@ caps.handback.revision: 33
   
 -   [使用報表伺服器驗證](../reporting-services/security/authentication-with-the-report-server.md)  
   
-### 執行報表  
+### <a name="run-reports"></a>執行報表  
  建立資料警示定義的第一個步驟，就是在 SharePoint 文件庫中尋找您要的報表，然後執行報表。 如果報表執行時未包含任何資料，則無法在當時於報表上建立警示。  
   
  如果報表已參數化，您會在執行報表時指定要使用的參數值。 參數值將儲存在您於報表上建立的報表警示定義中。 這些值會在重新執行報表做為處理資料警示定義的步驟時使用。 如果您要變更參數值，則需要使用這些參數值重新執行報表，並且在該版本的報表上建立警示定義。  
   
-### 建立資料警示定義  
+### <a name="create-data-alert-definitions"></a>建立資料警示定義  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 資料警示功能包括資料警示設計工具，可用來建立資料警示定義。  
   
  若要建立資料警示定義，請執行報表，然後從 SharePoint 報表檢視器的 **[動作]** 功能表開啟 [資料警示設計工具]。 如此就會產生報表的報表資料摘要，而資料摘要中的前 100 個資料列會在 [資料警示設計工具] 的資料預覽資料表中顯示。 只要您在 [資料警示設計工具] 中處理警示定義，就會持續快取所有來自報表的資料摘要。 快取可讓您在資料摘要之間迅速切換。 當您在 [資料警示設計工具] 中重新開啟警示定義時，資料摘要會重新整理。  
   
  資料警示定義包含以下內容：規則和子句，報表資料必須滿足這些規則和子句才能觸發資料警示訊息；排程，定義傳送警示訊息的頻率以及開始和停止傳送警示訊息的日期 (選擇性)；像是主旨和警示訊息中要包含的描述等資訊；以及訊息的收件者。 在您建立警示定義之後，可以將它儲存到 SQL Server 警示資料庫。  
   
-### 儲存資料警示定義和警示中繼資料  
+### <a name="save-data-alert-definitions-and-alerting-metadata"></a>儲存資料警示定義和警示中繼資料  
  您以 SharePoint 模式安裝 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 時，會自動建立 SQL Server 警示資料庫。  
   
- 資料警示定義和警示中繼資料會儲存到警示資料庫中。 根據預設，這個資料庫名為 ReportingServices\<GUID>_Alerting。  
+ 資料警示定義和警示中繼資料會儲存到警示資料庫中。 根據預設，這個資料庫名為 ReportingServices\<GUID > _Alerting。  
   
  當您儲存資料警示定義時，警示會為該警示定義建立 SQL Server Agent 作業。 作業會包括作業排程。 排程是依據您在警示定義上定義的循環模式。 執行該作業會起始資料警示定義的處理。  
   
-### 處理資料警示定義  
+### <a name="process-data-alert-definitions"></a>處理資料警示定義  
  SQL Server Agent 作業的排程開始處理警示定義時，會執行報表以重新整理報表資料摘要。 警示服務會讀取資料摘要，並且套用資料警示定義對資料值指定的規則。 如果一個或多個資料值符合規則，則會建立資料警示執行個體，並且以電子郵件將包含警示結果的資料警示訊息傳送給所有收件者。 結果會是建立警示執行個體時滿足所有規則的報表資料資料列。 為避免產生多個相同結果的警示訊息，您可以指定只有在結果變更時傳送訊息。 在此情況下會建立警示執行個體，並且儲存到警示資料庫，但是不會產生警示訊息。 如果發生錯誤，警示執行個體還是會儲存到警示資料庫，而且包含錯誤之詳細資料的警示訊息會傳送給收件者。 本主題稍後的＜診斷和記錄＞一節將提供記錄和疑難排解的詳細資訊。  
   
-### 傳送資料警示訊息  
+### <a name="send-data-alert-messages"></a>傳送資料警示訊息  
  資料警示訊息是透過電子郵件傳送。  
   
  **[寄件者]** 一行包含 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 電子郵件傳遞組態提供的值。 **[收件者]** 一行列出您在 [資料警示設計工具] 中建立警示時指定的收件者。  
@@ -112,14 +119,14 @@ caps.handback.revision: 33
 ##  <a name="InstallAlerting"></a> 安裝資料警示  
  資料警示功能只有在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 是以 SharePoint 模式安裝時才可使用。 當您以 SharePoint 模式安裝 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 時，安裝程式會自動建立儲存警示定義和警示中繼資料的警示資料庫，以及兩個用於管理警示的 SharePoint 頁面，並且將 [資料警示設計工具] 加入 SharePoint 網站。 在安裝期間不需要針對警示執行特殊步驟或是設定特殊選項。  
   
- 如果您想要深入了解以 SharePoint 模式安裝 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] (包括 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 中的新 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 共用服務，以及在使用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 功能之前，必須先建立和設定的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 服務應用程式)，請參閱 MSDN Library 中的[安裝適用於 SharePoint 2010 的 Reporting Services SharePoint 模式](http://msdn.microsoft.com/zh-tw/47efa72e-1735-4387-8485-f8994fb08c8c)。  
+ 如果您想要深入了解以 SharePoint 模式安裝 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] (包括 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中的新 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 共用服務，以及在使用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 功能之前，必須先建立和設定的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 服務應用程式)，請參閱 MSDN Library 中的 [安裝適用於 SharePoint 2010 的 Reporting Services SharePoint 模式](http://msdn.microsoft.com/en-us/47efa72e-1735-4387-8485-f8994fb08c8c) 。  
   
- 如本主題前段的圖中所示，資料警示會使用 SQL Server Agent 作業。 若要建立作業，必須執行 SQL Server Agent。 您可能已將 SQL Server Agent 設定為在安裝 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]時自動啟動。 否則，您可以手動啟動 SQL Server Agent。 如需詳細資訊，請參閱[設定 SQL Server Agent](../ssms/agent/configure-sql-server-agent.md) 和[啟動、停止、暫停、繼續、重新啟動 Database Engine、SQL Server Agent 或 SQL Server Browser 服務](../database-engine/configure-windows/start, stop, pause, resume, restart sql server services.md)。  
+ 如本主題前段的圖中所示，資料警示會使用 SQL Server Agent 作業。 若要建立作業，必須執行 SQL Server Agent。 您可能已將 SQL Server Agent 設定為在安裝 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]時自動啟動。 否則，您可以手動啟動 SQL Server Agent。 如需詳細資訊，請參閱 [設定 SQL Server Agent](http://msdn.microsoft.com/library/2e361a62-9e92-4fcd-80d7-d6960f127900) 和 [啟動、停止、暫停、繼續、重新啟動 Database Engine、SQL Server Agent 或 SQL Server Browser 服務](../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)。  
   
  您可以使用 SharePoint 管理中心內的 **[提供訂閱和警示]** 頁面，查看 SQL Server Agent 是否正在執行，並且建立和下載自訂的 [!INCLUDE[tsql](../includes/tsql-md.md)] 指令碼，之後可執行這些指令碼將權限授與 SQL Server Agent。 另外還可以使用 PowerShell 產生 [!INCLUDE[tsql](../includes/tsql-md.md)] 指令碼。 如需詳細資訊，請參閱 [Provision Subscriptions and Alerts for SSRS Service Applications](../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)。  
   
 ##  <a name="ConfigAlert"></a> 設定資料警示  
- 從 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 開始，只要在 SharePoint 模式下安裝 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]，[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 功能的設定 (包括資料警示) 就會在報表伺服器組態檔 (rsreportserver.config) 和 SharePoint 組態資料庫之間散發。 當您在安裝和設定 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]的過程中建立服務應用程式時，會自動建立 SharePoint 組態資料庫。 如需詳細資訊，請參閱 [RsReportServer.config 組態檔](../reporting-services/report-server/rsreportserver-config-configuration-file.md)和 [Reporting Services 組態檔](../reporting-services/report-server/reporting-services-configuration-files.md)。  
+ 從 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 開始，只要在 SharePoint 模式下安裝 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ， [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 功能的設定 (包括資料警示) 就會在報表伺服器組態檔 (rsreportserver.config) 和 SharePoint 組態資料庫之間散發。 當您在安裝和設定 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]的過程中建立服務應用程式時，會自動建立 SharePoint 組態資料庫。 如需詳細資訊，請參閱 [RsReportServer.config 組態檔](../reporting-services/report-server/rsreportserver-config-configuration-file.md) 和 [Reporting Services 組態檔](../reporting-services/report-server/reporting-services-configuration-files.md)。  
   
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 資料警示的設定包括清除警示資料和中繼資料的間隔，以及以電子郵件傳送資料警示訊息的重試次數。 您可以更新組態檔和組態資料庫，以便使用不同的資料警示設定值。  
   
@@ -138,7 +145,7 @@ caps.handback.revision: 33
   
  依據預設，MaxRetries 和 SecondsBeforeRetry 設定會套用到引發資料警示的所有事件。 如果您想要更進一步控制重試次數和重試延遲，可以針對指定不同 MaxRetries 和 SecondsBeforeRetry 值的任何或所有事件處理常式加入項目。  
   
-### 事件處理常式和重試  
+### <a name="event-handlers-and-retry"></a>事件處理常式和重試  
  事件處理常式包括：  
   
 |事件處理常式|說明|  
@@ -197,7 +204,7 @@ caps.handback.revision: 33
   
 -   [從多個報表產生資料摘要 &#40;報表產生器及 SSRS&#41;](../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)  
   
--   [設定 SharePoint 網站上報表伺服器項目的權限 &#40;SharePoint 整合模式的 Reporting Services&#41;](../reporting-services/security/set permissions for report server items on a sharepoint site.md)  
+-   [設定 SharePoint 網站上報表伺服器項目的權限 &#40;SharePoint 整合模式的 Reporting Services&#41;](../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)  
   
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 資料警示支援兩種權限層級：資訊工作者和警示系統管理員。 下表列出相關的 SharePoint 權限和使用者工作。  
   
@@ -209,7 +216,7 @@ caps.handback.revision: 33
 ##  <a name="DiagnosticsLogging"></a> 診斷和記錄  
  資料警示提供許多方式來幫助資訊工作者和系統管理員追蹤警示以及了解警示失敗的原因，並且幫助系統管理員運用記錄來了解哪些警示訊息傳送給哪些人、傳送的警示執行個體數目等。  
   
-### 資料警示管理員  
+### <a name="data-alert-manager"></a>資料警示管理員  
  資料警示管理員會列出警示定義和錯誤資訊，有助於資訊工作者和警示系統管理員了解錯誤發生的原因。 一些常見的錯誤原因包括：  
   
 -   報表資料摘要已變更，且資料警示定義規則中使用的資料行已不包含在資料摘要中。  
@@ -218,12 +225,12 @@ caps.handback.revision: 33
   
 -   基礎資料來源中的資料類型已變更，且警示定義不再有效。  
   
-### 記錄檔  
+### <a name="logs"></a>記錄檔  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 會提供一些記錄檔，有助於深入了解處理資料警示定義、所建立的資料警示執行個體等等時執行的報表。 有三個記錄檔特別實用：警示執行記錄、報表伺服器執行記錄及報表伺服器追蹤記錄。  
   
  如需其他 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 記錄檔的相關資訊，請參閱 [Reporting Services 記錄檔和來源](../reporting-services/report-server/reporting-services-log-files-and-sources.md)。  
   
-#### 警示執行記錄  
+#### <a name="alerting-execution-log"></a>警示執行記錄  
  警示執行階段服務會將項目寫入警示資料庫的 ExecutionLogView 資料表中。 您可以查詢資料庫或執行下列預存程序，以取得有關儲存到警示資料庫之資料警示的更完整診斷資訊。  
   
 -   ReadAlertData  
@@ -242,12 +249,12 @@ caps.handback.revision: 33
   
 -   ReadSentAlerts  
   
- 您可以使用 SQL 代理程式依照排程執行預存程序。 如需詳細資訊，請參閱 [SQL Server Agent](../ssms/agent/sql-server-agent.md)。  
+ 您可以使用 SQL 代理程式依照排程執行預存程序。 如需詳細資訊，請參閱 [SQL Server Agent](http://msdn.microsoft.com/library/8d1dc600-aabb-416f-b3af-fbc9fccfd0ec)。  
   
-#### 報表伺服器執行記錄  
- 執行報表會產生資料摘要，做為建立資料警示定義的基礎。 報表伺服器資料庫中的報表伺服器執行記錄會在每次報表執行時擷取資訊。 您可以查詢資料庫中的 ExecutionLog2 檢視，以了解詳細資訊。 如需詳細資訊，請參閱[報表伺服器 ExecutionLog 和 ExecutionLog3 檢視](../reporting-services/report-server/report-server-executionlog-and-the-executionlog3-view.md)。  
+#### <a name="report-server-execution-log"></a>報表伺服器執行記錄  
+ 執行報表會產生資料摘要，做為建立資料警示定義的基礎。 報表伺服器資料庫中的報表伺服器執行記錄會在每次報表執行時擷取資訊。 您可以查詢資料庫中的 ExecutionLog2 檢視，以了解詳細資訊。 如需詳細資訊，請參閱 [報表伺服器 ExecutionLog 和 ExecutionLog3 檢視](../reporting-services/report-server/report-server-executionlog-and-the-executionlog3-view.md)。  
   
-#### 報表伺服器追蹤記錄  
+#### <a name="report-server-trace-log"></a>報表伺服器追蹤記錄  
  報表伺服器追蹤記錄包含報表伺服器服務作業的詳細資訊，包括報表伺服器 Web 服務和背景處理所執行的作業。 如果您要偵錯包含報表伺服器的應用程式，或者調查寫入事件記錄或執行記錄的特定問題，追蹤記錄資訊可能會很有用。 如需詳細資訊，請參閱 [Report Server Service Trace Log](../reporting-services/report-server/report-server-service-trace-log.md)。  
   
 ##  <a name="PerformanceCounters"></a> 效能計數器  
@@ -264,7 +271,7 @@ caps.handback.revision: 33
 |GenerateAlert|警示：已處理的事件數 - GenerateAlert|  
 |DeliverAlert|警示：已處理的事件數 - DeliverAlert|  
   
- [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 會提供其他 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 功能的效能計數器。 如需詳細資訊，請參閱 [ReportServer:Service 和 ReportServerSharePoint:Service 效能物件的效能計數器](../reporting-services/report-server/performance counters - reportserver service, performance objects.md)、[MSRS 2011 Web 服務和 MSRS 2011 Windows 服務效能物件的效能計數器&#40;原生模式&#41;](../reporting-services/report-server/performance counters msrs 2011 web service, performance objects.md) 和 [MSRS 2011 Web 服務 SharePoint 模式和 MSRS 2011 Windows 服務 SharePoint 模式效能物件的效能計數器 &#40;SharePoint 模式&#41;](../reporting-services/report-server/performance counters msrs 2011 sharepoint mode performance objects.md)。  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 會提供其他 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 功能的效能計數器。 如需詳細資訊，請參閱 [ReportServer:Service 和 ReportServerSharePoint:Service 效能物件的效能計數器](../reporting-services/report-server/performance-counters-reportserver-service-performance-objects.md)、[MSRS 2011 Web 服務和 MSRS 2011 Windows 服務效能物件的效能計數器&#40;原生模式&#41;](../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md) 和 [MSRS 2011 Web 服務 SharePoint 模式和 MSRS 2011 Windows 服務 SharePoint 模式效能物件的效能計數器 &#40;SharePoint 模式&#41;](../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)。  
   
 ##  <a name="SupportForSSL"></a> 支援 SSL  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 可以使用 HTTP SSL (安全通訊端層) 服務來建立與報表伺服器或 SharePoint 網站的加密連接。  
@@ -276,13 +283,13 @@ caps.handback.revision: 33
 ##  <a name="UserInterface"></a> 資料警示使用者介面  
  資料警示提供了管理警示的 SharePoint 頁面，以及建立和編輯資料警示定義的設計工具。  
   
--   您用來建立或編輯資料警示定義的**資料警示設計工具** 。 如需詳細資訊，請參閱[資料警示設計工具](../reporting-services/data-alert-designer.md)、[在資料警示設計工具中建立資料警示](../reporting-services/create-a-data-alert-in-data-alert-designer.md)和[在警示設計工具中編輯資料警示](../reporting-services/edit-a-data-alert-in-alert-designer.md)。  
+-   您用來建立或編輯資料警示定義的**資料警示設計工具** 。 如需詳細資訊，請參閱 [資料警示設計工具](../reporting-services/data-alert-designer.md)、 [在資料警示設計工具中建立資料警示](../reporting-services/create-a-data-alert-in-data-alert-designer.md) 和 [在警示設計工具中編輯資料警示](../reporting-services/edit-a-data-alert-in-alert-designer.md)。  
   
 -   您用來檢視資料警示清單、刪除警示及開啟警示進行編輯的**資料警示管理員** 。 [資料警示管理員] 有兩種版本：一種可供使用者管理自己建立的警示，另一種可供系統管理員管理屬於網站使用者的警示。  
   
-     如需管理所建立資料警示的詳細資訊，請參閱 [SharePoint 使用者的資料警示管理員](../reporting-services/data-alert-manager-for-sharepoint-users.md)和[在資料警示管理員中管理我的資料警示](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md)。  
+     如需管理所建立資料警示的詳細資訊，請參閱 [SharePoint 使用者的資料警示管理員](../reporting-services/data-alert-manager-for-sharepoint-users.md) 和 [在資料警示管理員中管理我的資料警示](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md)。  
   
-     如需管理網站上所有資料警示的詳細資訊，請參閱[警示系統管理員的資料警示管理員](../reporting-services/data-alert-manager-for-alerting-administrators.md)和[在資料警示管理員中管理 SharePoint 網站上的所有資料警示](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)。  
+     如需管理網站上所有資料警示的詳細資訊，請參閱 [警示系統管理員的資料警示管理員](../reporting-services/data-alert-manager-for-alerting-administrators.md) 和 [在資料警示管理員中管理 SharePoint 網站上的所有資料警示](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)。  
   
 -   **佈建訂閱及資料警示** ，您可在其中查看 Reporting Services 是否可以針對資料警示使用 SQL Server Agent，以及下載允許存取 SQL Server Agent 的指令碼。 如需詳細資訊，請參閱 [Provision Subscriptions and Alerts for SSRS Service Applications](../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)。  
   
@@ -311,9 +318,10 @@ caps.handback.revision: 33
   
 -   [將權限授與使用者及警示管理員](../reporting-services/grant-permissions-to-users-and-alerting-administrators.md)  
   
-## 請參閱＜  
- [資料警示設計工具](../reporting-services/data-alert-designer.md)   
- [警示系統管理員的資料警示管理員](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
- [SharePoint 使用者的資料警示管理員](../reporting-services/data-alert-manager-for-sharepoint-users.md)  
-  
-  
+## <a name="see-also"></a>請參閱＜
+
+[資料警示設計工具](../reporting-services/data-alert-designer.md)   
+[警示系統管理員的資料警示管理員](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
+[資料警示管理員讓 SharePoint 使用者](../reporting-services/data-alert-manager-for-sharepoint-users.md)  
+
+更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)

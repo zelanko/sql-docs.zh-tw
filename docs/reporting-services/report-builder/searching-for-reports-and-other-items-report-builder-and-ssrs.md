@@ -1,23 +1,28 @@
 ---
-title: "搜尋報表和其他項目 (報表產生器及 SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "搜尋報表和其他項目 （報表產生器及 SSRS） |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6a586659-5c2b-453b-8f40-a3a469277b17
 caps.latest.revision: 7
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 7
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9663bbf0c11ce1d41f02cc22027f2c69aa07b057
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 搜尋報表和其他項目 (報表產生器及 SSRS)
+# <a name="searching-for-reports-and-other-items-report-builder--and-ssrs"></a>搜尋報表和其他項目 (報表產生器及 SSRS)
   您可以使用報表管理員，依名稱或描述在報表伺服器上搜尋特定項目。 您可以搜尋已發行的報表、報表模型、資料夾、共用資料來源和資源。 您不可以搜尋排程、擁有者、角色指派、報表記錄中的特定快照集或訂閱。 此搜尋會在儲存項目的報表伺服器資料庫上執行。  
   
 > [!NOTE]  
@@ -32,7 +37,7 @@ caps.handback.revision: 7
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [在報表管理員中尋找及檢視報表 &#40;報表產生器及 SSRS&#41;](https://msdn.microsoft.com/library/dd255286.aspx)   
  [使用我的報表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/using-my-reports-report-builder-and-ssrs.md)   
  [尋找、檢視和管理報表 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   

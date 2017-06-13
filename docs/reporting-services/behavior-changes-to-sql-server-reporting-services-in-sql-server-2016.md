@@ -1,43 +1,49 @@
 ---
-title: "SQL Server 2016 中 SQL Server Reporting Services 的行為變更 | Microsoft Docs"
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Reporting Services, 回溯相容性"
-  - "資料列 [Reporting Services], 高度"
-  - "開頭的空白"
-  - "安裝 Reporting Services, 版本的行為變更"
-  - "加密 [Reporting Services]"
-  - "安裝程式 [Reporting Services], 版本的行為變更"
-  - "DefaultValueQueryBased 屬性"
-  - "加密 [Reporting Services]"
-  - "解密 [Reporting Services]"
-  - "空白字元 [SQL Server]"
-  - "初始化安裝 [Reporting Services]"
-  - "行為變更 [Reporting Services]"
+title: "SQL Server Reporting Services SQL Server 2016 中的行為變更 |Microsoft 文件"
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Reporting Services, backward compatibility
+- rows [Reporting Services], heights
+- leading blanks
+- installing Reporting Services, behavior changes with release
+- cryptography [Reporting Services]
+- Setup [Reporting Services], behavior changes with release
+- DefaultValueQueryBased property
+- encryption [Reporting Services]
+- decryption [Reporting Services]
+- blank characters [SQL Server]
+- initializing installations [Reporting Services]
+- behavior changes [Reporting Services]
 ms.assetid: 2a767f0f-84f2-4099-8784-1e37790f858e
 caps.latest.revision: 69
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 66
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: f052253295b400bbbbe9d0db25349916e19c2ad2
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# SQL Server 2016 中 SQL Server Reporting Services 的行為變更
-  本主題描述 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]中的行為變更。 行為變更會影響 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 中功能的運作或互動方式 (相較於舊版的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)])。  
+# <a name="behavior-changes-to-sql-server-reporting-services--in-sql-server-2016"></a>SQL Server 2016 中 SQL Server Reporting Services 的行為變更
+  本主題描述 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]中的行為變更。 行為變更會影響功能的運作或互動 SQL Server 2016 中，相較於舊版的 SQL Server。  
   
  行為沒有任何變更。
-  
-## 請參閱＜  
- [Reporting Services &#40;SSRS&#41; 的新功能](../Topic/What's%20New%20in%20Reporting%20Services%20\(SSRS\).md)   
- [SQL Server 2016 中 SQL Server Reporting Services 已被取代的功能](http://msdn.microsoft.com/zh-tw/3876c01e-f81d-4cce-9104-5106a8c369e6)  
- [SQL Server 2016 中 SQL Server Reporting Services 已停止的功能](http://msdn.microsoft.com/zh-tw/d529cc96-3483-480b-9bfc-bd28b1d0ef52)   
- [SQL Server 2016 中 SQL Server Reporting Services 的重大變更](http://msdn.microsoft.com/zh-tw/39c7aafd-dcb9-4317-b8f7-d15828eb4f9a)  
-  
-  
+
+## <a name="next-steps"></a>後續的步驟
+
+[Reporting Services 中最新消息](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)    
+[SQL Server 2016 中 SQL Server Reporting Services 已被取代的功能](../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)  
+[SQL Server Reporting Services SQL Server 2016 中已停止的功能](../reporting-services/discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md)   
+[SQL Server Reporting Services SQL Server 2016 中的重大變更](../reporting-services/breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md)
+
+更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)

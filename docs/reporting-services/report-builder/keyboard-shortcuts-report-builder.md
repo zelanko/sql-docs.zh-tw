@@ -1,26 +1,31 @@
 ---
-title: "鍵盤快速鍵 (報表產生器) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "鍵盤快速鍵"
-  - "快速鍵"
+title: "鍵盤快速鍵 （報表產生器） |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- keyboard shortcuts
+- shortcuts
 ms.assetid: 2d04f2c9-4e29-4b7a-843f-ce9a7c168aeb
 caps.latest.revision: 20
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 20
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5a9b6a8f5eb6238fac6b0588ecf6c79227e9ec7d
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 鍵盤快速鍵 (報表產生器)
+# <a name="keyboard-shortcuts-report-builder"></a>鍵盤快速鍵 (報表產生器)
   當您在報表產生器中建立及編輯分頁的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分頁報表時，可以存取 Windows 環境提供之所有用於導覽的快速鍵。 您可以從許多標準鍵盤對應配置中選取。  
   
  不必使用滑鼠，您就可以在 [報表產生器] 視窗中進行巡覽，或選取和變更對話方塊中的選項。  
@@ -30,7 +35,7 @@ caps.handback.revision: 20
 > [!NOTE]  
 >  鍵盤快速鍵可包含 SHIFT、ALT 和/或 CTRL 鍵及字母的組合，或使用功能鍵。 例如，F1 會開啟報表產生器的說明檔。  
   
-## 報表產生器中的鍵盤快速鍵  
+## <a name="keyboard-shortcuts-in-report-builder"></a>報表產生器中的鍵盤快速鍵  
   
 |說明|按鍵組合|  
 |-----------------|---------------------|  
@@ -91,7 +96,7 @@ caps.handback.revision: 20
 |選取地圖檢視區時，縮小地圖檢視區域。|CTRL+減號 (-)|  
 |選取地圖檢視區時，用於平移和放大地圖檢視區域的對應鍵模式。|CTRL+按一下滑鼠左鍵|  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [SQL Server 2016 的報表產生器](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
  [報表設計檢視 &#40;報表產生器&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)   
  [詞彙 &#40;報表產生器&#41;](../../reporting-services/report-builder/glossary-report-builder.md)  

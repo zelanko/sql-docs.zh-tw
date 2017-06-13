@@ -1,28 +1,33 @@
 ---
-title: "排程屬性 (一般頁面) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/11/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.reportserver.scheduleproperties.general.f1"
+title: "排程屬性 （一般頁面） |Microsoft 文件"
+ms.custom: 
+ms.date: 06/11/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.reportserver.scheduleproperties.general.f1
 ms.assetid: 20e43966-6caf-4972-a2e2-0d9131ac8f51
 caps.latest.revision: 36
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 36
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: eac0a7b5f1a8da128fc90700be9b91e9a38ad694
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 排程屬性 (一般頁面)
-  使用 [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)]中的 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 頁面即可檢視或修改共用排程。 共用排程可以用來取代報表特定或訂閱特定的排程。 對排程所做的變更會在您儲存排程之後套用。 編輯排程並不會影響目前正在進行中的作業。 如果您編輯排程時，該排程正在使用中，則系統會允許根據該排程觸發的所有目前處理中報表和訂閱繼續完成。  
+# <a name="schedule-properties-general-page"></a>排程屬性 (一般頁面)
+  使用 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 中的 [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] 頁面即可檢視或修改共用排程。 共用排程可以用來取代報表特定或訂閱特定的排程。 對排程所做的變更會在您儲存排程之後套用。 編輯排程並不會影響目前正在進行中的作業。 如果您編輯排程時，該排程正在使用中，則系統會允許根據該排程觸發的所有目前處理中報表和訂閱繼續完成。  
   
- 單一排程中無法支援所有的頻率組合。 例如，若要在每星期五下午 12:00  到下午 4:00。 就必須建立指定星期五為執行日期的兩個每日排程，一個開始時間為下午 12:00， 另一個開始時間為下午 4:00。  
+ 單一排程中無法支援所有的頻率組合。 例如，若要在每星期五下午 12:00 到下午 4:00。 就必須建立指定星期五為執行日期的兩個每日排程，一個開始時間為下午 12:00， 另一個開始時間為下午 4:00。  
   
  排程處理是以主控和處理排程之報表伺服器的本機時間為基礎。  
   
@@ -33,9 +38,9 @@ caps.handback.revision: 36
  4) 以滑鼠右鍵按一下共用排程，然後選取 [屬性]。  
   
 > [!NOTE]  
->並非所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本都提供此功能，而且在您執行沒有此功能的版本時，此頁面並不會出現。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本支援的功能清單，請參閱 [SQL Server 2016 版本支援的功能](Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)。  
+>並非所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本都提供此功能，而且在您執行沒有此功能的版本時，此頁面並不會出現。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本支援的功能清單，請參閱 [SQL Server 2016 版本支援的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
-## 選項。  
+## <a name="options"></a>選項。  
  **名稱**  
  指定共用排程的名稱。  
   
@@ -63,10 +68,12 @@ caps.handback.revision: 36
  **一次**  
  指定排程只在特定的日期和時間執行一次。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [Management Studio F1 說明中的報表伺服器](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
  [連接至 Management Studio 中的報表伺服器](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
  [建立、修改和刪除共用排程](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)   
  [排程](../../reporting-services/subscriptions/schedules.md)  
   
   
+
+

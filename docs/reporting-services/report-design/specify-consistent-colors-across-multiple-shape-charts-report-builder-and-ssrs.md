@@ -1,24 +1,29 @@
 ---
-title: "跨多個形狀圖指定一致的色彩 (報表產生器及 SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "指定多個形狀圖報表產生器-在 SSRS 中一致的色彩 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d52f68e9-2ba7-4bff-9053-4089e5164ab4
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 1f8ad4185acdcc86bd93367b23fab8be8ed95d9a
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 跨多個形狀圖指定一致的色彩 (報表產生器及 SSRS)
-  在分頁報表的非形狀圖上，您可以根據圖表中的數列索引，[!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]從調色盤選取新的色彩。 例如，圖表上的第一個數列將會對應到調色盤中的第一個色彩。 不過，對於形狀圖來說，這個行為是不同的。 在形狀圖上，調色盤中的每個色彩都會對應到資料集中的資料點。 例如，資料點 1 對應到調色盤中的第一個色彩，資料點 2 對應到調色盤中的第二個色彩等等。  
+# <a name="specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs"></a>跨多個形狀圖指定一致的色彩 (報表產生器及 SSRS)
+  在分頁報表的非形狀圖上，您可以根據圖表中的數列索引， [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 從調色盤選取新的色彩。 例如，圖表上的第一個數列將會對應到調色盤中的第一個色彩。 不過，對於形狀圖來說，這個行為是不同的。 在形狀圖上，調色盤中的每個色彩都會對應到資料集中的資料點。 例如，資料點 1 對應到調色盤中的第一個色彩，資料點 2 對應到調色盤中的第二個色彩等等。  
   
  如果資料點沒有值，則不會顯示在形狀圖上。 也就是說，資料點會略過而不顯示任何色彩。 例如，如果點 2 的值為零，點 1 將會對應到調色盤中的第一個色彩，而點 3 將會對應到調色盤中的第二個色彩。 這個方法相當實用，因為不需要繪製空點時，圓形圖之資料集中的空點不一定要使用調色盤色彩。  
   
@@ -29,7 +34,7 @@ caps.handback.revision: 8
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## 若要在資料表或矩陣中跨多個走勢圖形狀圖指定一致的色彩  
+## <a name="to-specify-consistent-colors-across-multiple-sparkline-shape-charts-in-a-table-or-matrix"></a>若要在資料表或矩陣中跨多個走勢圖形狀圖指定一致的色彩  
   
 1.  按一下圖表，即可顯示 [圖表資料] 窗格。  
   
@@ -37,7 +42,7 @@ caps.handback.revision: 8
   
 3.  在 [一般] 索引標籤的 [將群組同步處理於] 方塊中，按一下您要同步處理其色彩之類別目錄的名稱，然後按一下 [確定]。  
   
-## 若要跨多個形狀圖指定一致的色彩  
+## <a name="to-specify-consistent-colors-across-multiple-shape-charts"></a>若要跨多個形狀圖指定一致的色彩  
   
 1.  以滑鼠右鍵按一下報表主體的外面，然後選取 [報表屬性]。  
   
@@ -73,9 +78,9 @@ caps.handback.revision: 8
     =Code.GetColor(Fields!MyCategoryField)  
     ```  
   
-## 請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [設定圖表上數列色彩的格式 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
- [將斜面、浮凸與紋理樣式加入至圖表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-bevel-emboss-and-texture-styles-to-a-chart-report-builder-and-ssrs.md)   
+ [將斜面、浮凸與紋理樣式加入至圖表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md)   
  [使用調色盤定義圖表的色彩 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)   
  [將空點加入至圖表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-empty-points-to-a-chart-report-builder-and-ssrs.md)   
  [形狀圖 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/shape-charts-report-builder-and-ssrs.md)   

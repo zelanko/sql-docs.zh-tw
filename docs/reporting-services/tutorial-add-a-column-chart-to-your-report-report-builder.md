@@ -1,24 +1,29 @@
 ---
-title: "教學課程：將直條圖加入至報表 (報表產生器) | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: "教學課程： 將直條圖加入至報表 （報表產生器） |Microsoft 文件"
+ms.custom: 
+ms.date: 09/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: 63480059-b7b9-44b5-9d7f-91780db708b6
 caps.latest.revision: 17
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 16
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: c231648deb4920a3e36a594271d1c9c199313668
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 教學課程：將直條圖加入至報表 (報表產生器)
+# <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>教學課程：將直條圖加入至報表 (報表產生器)
 在本教學課程中，您將建立包含直條圖的 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分頁報表，而直條圖是依據類別目錄群組，將數列顯示為一組垂直線。 
 
 直條圖可用於：  
@@ -35,7 +40,7 @@ caps.handback.revision: 16
   
 完成本教學課程的估計時間：15 分鐘。  
   
-## 需求  
+## <a name="requirements"></a>需求  
 如需需求的資訊，請參閱[教學課程的必要條件 &#40;報表產生器&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md)。  
   
 ## <a name="Chart"></a>1.從圖表精靈建立圖表報表  
@@ -44,13 +49,13 @@ caps.handback.revision: 16
 > [!NOTE]  
 > 在本教學課程中，查詢包含資料值，因此不需要外部資料來源。 這樣會使查詢相當冗長。 在商業環境中，查詢不會包含資料。 這僅供教學之用。  
   
-### 建立圖表報表  
+### <a name="to-create-a-chart-report"></a>建立圖表報表  
   
 1.  從您的電腦、[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] Web 入口網站或 SharePoint 整合模式[啟動報表產生器](../reporting-services/report-builder/start-report-builder.md)。  
   
     [新報表或資料集] 對話方塊隨即開啟。  
   
-    如果您看不到 [新報表或資料集] 對話方塊，請按一下 [檔案] 功能表 > [新增]。  
+    如果未顯示 [新報表或資料集] 對話方塊，請按一下 [檔案] 功能表 > [新增]。  
   
 2.  在左窗格中，確認已選取 **[新增報表]** 。  
   
@@ -93,7 +98,7 @@ caps.handback.revision: 16
 ## <a name="ChartType"></a>2.選擇圖表類型  
 您可以從數個預先定義的圖表類型中進行選擇，然後在完成精靈之後修改圖表。  
   
-### 加入直條圖  
+### <a name="to-add-a-column-chart"></a>加入直條圖  
   
 1.  在 [選擇圖表類型] 頁面上，直條圖是預設圖表類型。 按一下 **[下一步]**。  
   
@@ -138,7 +143,7 @@ caps.handback.revision: 16
   
 您可以透過旋轉標籤和指定間隔，自訂標籤顯示。  
   
-## 4.旋轉水平軸上的軸標籤  
+## <a name="4-rotate-the-axis-labels-on-the-horizontal-axis"></a>4.旋轉水平軸上的軸標籤  
   
 1.  切換到報表設計檢視。  
   
@@ -218,7 +223,7 @@ caps.handback.revision: 16
 
     ![report-builder-column-chart-format-y-axis](../reporting-services/media/report-builder-column-chart-format-y-axis.png)
     
-## 8.顯示水平 (x) 軸上的所有標籤
+## <a name="8-show-all-the-labels-on-the-horizontal-x-axis"></a>8.顯示水平 (x) 軸上的所有標籤
 
 您會注意到只會在 x 軸上顯示部分標籤。 在本節中，您可以在 [屬性] 窗格中設定要全部顯示的屬性。
 
@@ -260,7 +265,7 @@ caps.handback.revision: 16
   
 9. 按一下 **[執行]** 預覽報表。  
   
-圖表會顯示一條線，代表依照日期區分之總銷售量的移動平均 (每四個日期的平均)。 深入了解如何[將移動平均新增至圖表](../reporting-services/report-design/add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)。 
+圖表會顯示一條線，代表依照日期區分之總銷售量的移動平均 (每四個日期的平均)。 深入了解如何 [將移動平均新增至圖表](../reporting-services/report-design/add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)。 
 
 ![report-builder-column-chart-moving-average](../reporting-services/media/report-builder-column-chart-moving-average.png)
   
@@ -270,7 +275,7 @@ caps.handback.revision: 16
   
 2.  在設計介面上，按一下 **[按一下以加入標題]**。  
   
-3.  輸入**銷售圖表**並按 ENTER，然後輸入 **2015 年 1 月到 12 月**，其外觀如下：  
+3.  輸入 **銷售圖表**並按 ENTER，然後輸入 **2015 年 1 月到 12 月**，其外觀如下：  
   
     **銷售圖表**  
   
@@ -288,7 +293,7 @@ caps.handback.revision: 16
   
 ## <a name="Save"></a>11.儲存報表  
   
-### 若要儲存報表  
+### <a name="to-save-the-report"></a>若要儲存報表  
   
 1.  切換到報表設計檢視。  
   
@@ -300,10 +305,12 @@ caps.handback.revision: 16
   
 4.  按一下 **[儲存]**。  
   
-## 後續步驟  
+## <a name="next-steps"></a>後續步驟  
 您已成功完成「將直條圖加入至報表」教學課程。 若要深入了解圖表，請參閱[圖表 &#40;報表產生器及 SSRS&#41;](../reporting-services/report-design/charts-report-builder-and-ssrs.md) 和[走勢圖和資料橫條 &#40;報表產生器及 SSRS&#41;](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
 -    [報表產生器教學課程](../reporting-services/report-builder-tutorials.md) 
 -    [SQL Server 2016 的報表產生器](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
+
+

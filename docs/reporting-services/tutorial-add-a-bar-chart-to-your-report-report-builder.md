@@ -1,24 +1,29 @@
 ---
-title: "教學課程：將橫條圖加入至報表 (報表產生器) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/15/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: "教學課程： 將橫條圖加入至報表 （報表產生器） |Microsoft 文件"
+ms.custom: 
+ms.date: 06/15/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: 6956ebd6-0217-4087-a4fa-5cc1c3804691
 caps.latest.revision: 14
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 13
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: af11d5fdee9122663431f4f00ef5e40fb765c7b4
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 教學課程：將橫條圖加入至報表 (報表產生器)
+# <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>教學課程：將橫條圖加入至報表 (報表產生器)
 在本教學課程中，您會使用 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] 中的精靈，在 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分頁報表中建立圓形圖。 接著新增篩選，並加強圖表。 
 
 橫條圖會以水平方向顯示類別目錄資料。 這樣有助於：  
@@ -31,35 +36,13 @@ caps.handback.revision: 13
   
 ![report-builder-bar-chart](../reporting-services/media/report-builder-bar-chart.png) 
   
-## <a name="BackToTop"></a>學習內容  
-在本教學課程中，您將學會：  
-  
-1.  [從圖表精靈建立圖表](#Chart)  
-  
-2.  [選擇圖表類型](#ChartType)  
-  
-3.  [在垂直軸上顯示所有類別目錄值](#AllValues)  
-  
-4.  [變更垂直軸的排序次序](#Sort)  
-  
-5.  [移動圖例](#Legend)  
-  
-6.  [為圖表加上標題](#ChartTitle)  
-  
-7.  [格式化及標示水平軸](#Horizontal)  
-  
-8.  [加入篩選以顯示前五個值](#Filter)  
-  
-9. [加入報表標題](#Title)  
-  
-10. [儲存報表](#Save)  
-  
+ 
 > [!NOTE]  
 > 在本教學課程中，精靈的步驟會合併為一個程序。 如需如何瀏覽至報表伺服器、建立資料集以及選擇資料來源的逐步指示，請參閱本系列的第一個教學課程：[教學課程：建立基本資料表報表 &#40;報表產生器&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
   
 完成本教學課程的估計時間：15 分鐘。  
   
-## 需求  
+## <a name="requirements"></a>需求  
 如需需求的詳細資訊，請參閱[教學課程的必要條件 &#40;報表產生器&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md)。  
   
 ## <a name="Chart"></a>1.從圖表精靈建立圖表報表  
@@ -68,11 +51,11 @@ caps.handback.revision: 13
 > [!NOTE]  
 > 在本教學課程中，查詢會包含資料值，因此不需要外部資料來源。 這樣會使查詢相當冗長。 在商業環境中，查詢不會包含資料。 這僅供教學之用。  
   
-1.  從 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Web 入口網站，從 SharePoint 整合模式中的報表伺服器，或從您的電腦[啟動報表產生器](../reporting-services/report-builder/start-report-builder.md)。  
+1.  從[Web 入口網站，從 SharePoint 整合模式中的報表伺服器，或從您的電腦](../reporting-services/report-builder/start-report-builder.md) 啟動報表產生器 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] web portal, 啟動報表產生器 report server in SharePoint integrated mode, or from your computer.  
   
      此時會出現 **[使用者入門]** 對話方塊。  
   
-     ![Report Builder Get Started](../reporting-services/media/rb-getstarted.png "Report Builder Get Started")  
+     ![報表產生器開始](../reporting-services/media/rb-getstarted.png "開始使用報表產生器")  
   
      如果您看不到 [使用者入門] 對話方塊，請按一下 [檔案] >[新增]。 [新報表或資料集] 對話方塊大部分的內容和 [使用者入門] 對話方塊相同。 
       
@@ -122,7 +105,7 @@ caps.handback.revision: 13
   
 3.  將 [LastName] 拖曳至 [類別目錄] 窗格。  
   
-4.  將 [SalesYear2015] 拖曳至 [值] 窗格。 SalesYear2015 代表每位銷售人員 2015 年的銷售量。 [值] 窗格會顯示 `[Sum(SalesYear2015)]`，因為圖表會顯示每項產品的彙總。  
+4.  將 [SalesYear2015] 拖曳至 [值] 窗格。 SalesYear2015 代表每位銷售人員 2015 年的銷售量。 [值] 窗格會顯示 `[Sum(SalesYear2015)]` ，因為圖表會顯示每項產品的彙總。  
   
 5.  將 [SalesYear2014] 拖曳至 [SalesYear2015] 下的 [值] 窗格。 SalesYear2014 代表每位銷售人員 2014 年的銷售量。  
   
@@ -204,7 +187,7 @@ caps.handback.revision: 13
 ## <a name="Legend"></a>5.移動圖例  
 為了改善圖表值的可讀性，您可能會想要移動圖表圖例。 例如，在水平顯示橫條的橫條圖中，您可以變更圖例的位置，讓它位於圖表區域的上方或下方。 這樣會提供更多水平空間給橫條。  
   
-#### 在橫條圖的圖表區域下方顯示圖例  
+#### <a name="to-display-the-legend-below-the-chart-area-of-a-bar-chart"></a>在橫條圖的圖表區域下方顯示圖例  
   
 1.  切換到報表設計檢視。  
   
@@ -290,7 +273,7 @@ caps.handback.revision: 13
   
 1.  在設計介面上，按一下 **[按一下以加入標題]**。  
   
-2.  輸入**銷售橫條圖**並按 ENTER，然後輸入 **2015 年前五名銷售人員**，其外觀如下：  
+2.  輸入 **銷售橫條圖**並按 ENTER，然後輸入 **2015 年前五名銷售人員**，其外觀如下：  
   
     **銷售橫條圖**  
   
@@ -318,10 +301,12 @@ caps.handback.revision: 13
   
 4.  按一下 **[儲存]**。   
   
-## 後續步驟  
-您已順利完成「將橫條圖加入至報表」教學課程。 若要深入了解圖表，請參閱[圖表](../reporting-services/report-design/charts-report-builder-and-ssrs.md)和[橫條圖](../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md)。  
+## <a name="next-steps"></a>後續步驟  
+您已順利完成「將橫條圖加入至報表」教學課程。 若要深入了解圖表，請參閱 [圖表](../reporting-services/report-design/charts-report-builder-and-ssrs.md) 和 [橫條圖](../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md)。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
 [報表產生器教學課程](../reporting-services/report-builder-tutorials.md)  
 [SQL Server 2016 的報表產生器](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
+
+

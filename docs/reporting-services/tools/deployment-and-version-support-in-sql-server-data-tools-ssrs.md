@@ -1,23 +1,28 @@
 ---
-title: "SQL Server 資料工具中的部署和版本支援 (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "部署和版本支援在 SQL Server Data Tools (SSRS) |Microsoft 文件"
+ms.custom: 
+ms.date: 03/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 36f5686d-7e40-4f31-be81-bd197ca33a02
 caps.latest.revision: 19
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 19
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 29df783121de48e39d824b9b9e9666d764717ebc
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# SQL Server 資料工具中的部署和版本支援 (SSRS)
+# <a name="deployment-and-version-support-in-sql-server-data-tools-ssrs"></a>SQL Server 資料工具中的部署和版本支援 (SSRS)
   [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 支援以下案例：  
   
 -   開啟報表定義 (*.rdl) 與報表伺服器專案 (\*.rptproj)。  
@@ -41,7 +46,7 @@ caps.handback.revision: 19
   
 -   OutputPath 是會識別資料夾路徑的建置屬性，用於儲存組建驗證、部署與預覽報表時所使用的報表定義。  
   
--   ErrorLevel 是建置屬性，會識別回報為錯誤之建置問題的嚴重性。 嚴重性層級小於或等於 ErrorLevel 值的問題會回報為錯誤；否則，會將這些問題回報為警告。 如需詳細資訊，請參閱[使用報表設計師設計報表 &#40;SSRS&#41;](../../reporting-services/tools/design-reports-with-report-designer-ssrs.md) 中的＜報表驗證和錯誤等級＞一節。  
+-   ErrorLevel 是建置屬性，會識別回報為錯誤之建置問題的嚴重性。 嚴重性層級小於或等於 ErrorLevel 值的問題會回報為錯誤；否則，會將這些問題回報為警告。 如需詳細資訊，請參閱[使用報表設計師設計報表 &#40;SSRS&#41;](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md) 中的＜報表驗證和錯誤等級＞一節。  
   
 -   TargetServerVersion 是部署屬性，可以識別 TargetServerURL 屬性中所指定之目標報表伺服器上安裝的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 預期版本。  
   
@@ -52,12 +57,12 @@ caps.handback.revision: 19
 ##  <a name="bkmk_SupportedVersions"></a> 支援的版本  
   
 > [!NOTE]  
->  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] (報表伺服器專案的 32 位元開發環境) 不是設計成要在 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] 架構電腦上執行，而且未安裝在 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] 架構伺服器上。 不過，[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 仍支援 x64 架構的電腦。  
+>  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)](報表伺服器專案的 32 位元開發環境) 不是設計成要在 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]架構電腦上執行，而且未安裝在 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]架構伺服器上。 不過， [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 仍支援 x64 架構的電腦。  
   
  下表描述在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中撰寫及發行報表所支援的版本。  
   
 > [!NOTE]  
->  此結構描述從 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 之後並未變更。  
+>  此結構描述從 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]之後並未變更。  
   
 |專案或檔案類型|版本|撰寫報表|發行報表|注意|  
 |--------------------------|-------------|--------------------|---------------------|-----------|  
@@ -67,9 +72,9 @@ caps.handback.revision: 19
 |報表伺服器專案<br /><br /> 或<br /><br /> 報表伺服器精靈專案|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|2008 R2 RDL 結構描述|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
 |報表伺服器專案<br /><br /> 或<br /><br /> 報表伺服器精靈專案|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|2008 RDL 結構描述|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器|在本機將 2003 RDL 和 2005 RDL 升級到 2008 RDL 結構描述。|  
   
- 如需在舊版報表定義結構描述中開啟報表的詳細資訊，請參閱[升級報表](../../reporting-services/install-windows/upgrade-reports.md)。 如需有關特定報表定義結構描述的詳細資訊，請參閱＜ [報表定義語言規格](http://go.microsoft.com/fwlink/?linkid=116865)＞。  
+ 如需在舊版報表定義結構描述中開啟報表的詳細資訊，請參閱 [升級報表](../../reporting-services/install-windows/upgrade-reports.md)。 如需有關特定報表定義結構描述的詳細資訊，請參閱＜ [報表定義語言規格](http://go.microsoft.com/fwlink/?linkid=116865)＞。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [發行資料來源與報表](../../reporting-services/reports/publishing-data-sources-and-reports.md)  
   
   

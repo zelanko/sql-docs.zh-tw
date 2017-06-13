@@ -1,27 +1,38 @@
 ---
-title: "在資料警示設計工具中建立資料警示 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "在 資料警示設計工具中建立資料警示 |Microsoft 文件"
+ms.custom: 
+ms.date: 05/10/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8464ab9d-afe1-4490-955f-9f3319bcbf8d
 caps.latest.revision: 13
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 13
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 5203aab062888ca40ee83ee3f00521d6661defba
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 在資料警示設計工具中建立資料警示
-  您可在 [資料警示設計工具] 中建立資料警示定義。 儲存警示定義之後，可以在 [資料警示設計工具] 中再次開啟、編輯，然後再次儲存警示定義。 如需編輯警示定義的相關資訊，請參閱[在資料警示管理員中管理我的資料警示](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md)和[在警示設計工具中編輯資料警示](../reporting-services/edit-a-data-alert-in-alert-designer.md)。  
-  
-### 建立資料警示定義  
-  
+# <a name="create-a-data-alert-in-data-alert-designer"></a>在資料警示設計工具中建立資料警示
+
+[!INCLUDE[ssrs-appliesto-sql2016-xpreview](../includes/ssrs-appliesto-sql2016-xpreview.md)][!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
+
+您可在 [資料警示設計工具] 中建立資料警示定義。 儲存警示定義之後，可以在 [資料警示設計工具] 中再次開啟、編輯，然後再次儲存警示定義。 如需編輯警示定義的相關資訊，請參閱 [在資料警示管理員中管理我的資料警示](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md) 和 [在警示設計工具中編輯資料警示](../reporting-services/edit-a-data-alert-in-alert-designer.md)。
+
+> [!NOTE]
+> SQL Server 2016 之後已無法再使用 reporting Services 與 SharePoint 整合。
+
+## <a name="create-a-data-alert-definition"></a>建立資料警示定義
+ 
 1.  尋找包含要為其建立資料警示定義之報表的 SharePoint 文件庫。  
   
 2.  按一下報表。  
@@ -35,7 +46,7 @@ caps.handback.revision: 13
   
      下圖顯示 [動作] 功能表。  
   
-     ![Open Alert Designer from SharePoint library](../reporting-services/media/rs-openalertdesigneriw.gif "Open Alert Designer from SharePoint library")  
+     ![從 SharePoint 文件庫開啟警示設計工具](../reporting-services/media/rs-openalertdesigneriw.gif "從 SharePoint 文件庫開啟警示設計工具")  
   
      [資料警示設計工具] 隨即開啟，並且在資料表中顯示報表所產生之第一個資料摘要的前 100 個資料列。  
   
@@ -70,7 +81,7 @@ caps.handback.revision: 13
   
 10. 輸入比較值。  
   
-11. (選擇性) 再按一次省略符號 **(…)**。  
+11. (選擇性) 再按一次省略符號 **(…)** 。  
   
      省略符號 **(…)** 會出現在包含第一個子句的那一行。  
   
@@ -109,15 +120,16 @@ caps.handback.revision: 13
   
 20. (選擇性) 在 [主旨] 文字方塊中更新警示訊息的 [主旨]。  
   
-     預設的 [主旨] 為「\<資料警示名稱> 的資料警示」。  
+     預設的主體為**資料警示的\<資料警示名稱 >**。  
   
 21. (選擇性) 在 [描述] 文字方塊中輸入警示訊息的描述。  
   
 22. 按一下 **[儲存]**。  
-  
-## 請參閱＜  
- [資料警示設計工具](../reporting-services/data-alert-designer.md)   
- [警示系統管理員的資料警示管理員](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
- [Reporting Services Data Alerts](../reporting-services/reporting-services-data-alerts.md)  
-  
-  
+
+## <a name="see-also"></a>請參閱＜
+
+[資料警示設計工具](../reporting-services/data-alert-designer.md)   
+[警示系統管理員的資料警示管理員](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
+[Reporting Services Data Alerts](../reporting-services/reporting-services-data-alerts.md)  
+
+更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)

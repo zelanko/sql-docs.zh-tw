@@ -1,47 +1,42 @@
 ---
-title: "RS.exe Utility (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "automatic report server tasks"
-  - "rs utility"
-  - "command prompt utilities [Reporting Services]"
-  - "report servers [Reporting Services], automating tasks"
-  - "command prompt utilities [SQL Server], rs"
-  - "scripts [Reporting Services], command prompt"
-  - "deploying reports [Reporting Services]"
+title: "RS.exe 公用程式 (SSRS) |Microsoft 文件"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- automatic report server tasks
+- rs utility
+- command prompt utilities [Reporting Services]
+- report servers [Reporting Services], automating tasks
+- command prompt utilities [SQL Server], rs
+- scripts [Reporting Services], command prompt
+- deploying reports [Reporting Services]
 ms.assetid: bd6f958f-cce6-4e79-8a0f-9475da2919ce
 caps.latest.revision: 56
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 56
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 70f9afea9e9fe495c66ac98ea8ec4f3e9b1e3a6d
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# RS.exe Utility (SSRS)
+# <a name="rsexe-utility-ssrs"></a>RS.exe Utility (SSRS)
   rs.exe 公用程式會處理您在輸入檔中所提供的指令碼。 使用此公用程式可自動化報表伺服器部署和管理工作。  
   
 > [!NOTE]  
->  從 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 開始，可支援 **rs** 公用程式，運作於設定 SharePoint 整合模式的報表伺服器以及以原生模式設定的伺服器中。 之前舊版只支援原生模式設定。  
+>  從 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]開始，可支援 **rs** 公用程式，運作於設定 SharePoint 整合模式的報表伺服器以及以原生模式設定的伺服器中。 之前舊版只支援原生模式設定。  
   
- **本主題內容：**  
-  
--   [檔案位置](#bkmk_filelocation)  
-  
--   [引數](#bkmk_arguments)  
-  
--   [Permissions](#bkmk_permissions)  
-  
--   [範例](#bkmk_examples)  
-  
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -71,7 +66,7 @@ rs {-?}
  (必要) 指定要對其執行檔案的 Web 伺服器名稱和報表伺服器虛擬目錄名稱。 報表伺服器 URL 的範例為 `http://examplewebserver/reportserver`。 伺服器名稱開頭的前置詞 http:// 或 https:// 是選擇性的。 如果您省略前置詞，報表伺服器 Script Host 會先嘗試使用 https，而且如果 https 無法運作，則會使用 http。  
   
  **-u** [*domain*\\]*username*  
- (選擇性) 指定用來連接到報表伺服器的使用者帳戶。 如果省略 **-u** 和 **-p**，則會使用目前的 Windows 使用者帳戶。  
+ (選擇性) 指定用來連接到報表伺服器的使用者帳戶。 如果省略 **-u** 和 **-p** ，則會使用目前的 Windows 使用者帳戶。  
   
  **-p** *password*  
  (如果已指定 **-u** 則是必要的) 指定要與 **-u** 引數一起使用的密碼。 此值區分大小寫。  
@@ -102,9 +97,9 @@ rs {-?}
   
  `rs.exe -i myScriptFile.rss -s http://myServer/reportserver -v parentFolder="Financial Reports"`  
   
- 全域變數會使用給定的名稱來建立並設定為所提供的值。 例如，**-v a=**"**1**" **-v b=**"**2**" 會產生名為 **a** 的變數，其值為 "**1**"，以及名為 **b** 的變數，其值為 "**2**"。  
+ 全域變數會使用給定的名稱來建立並設定為所提供的值。 例如， **-v a=**"**1**" **-v b=**"**2**" 會產生名為 **a** 的變數，其值為 "**1**"，以及名為 **b** 的變數，其值為 "**2**"。  
   
- 指令碼中的任何函數均可使用全域變數。 反斜線和引號 (**\\"**) 將被解譯為雙引號。 只有當字串含有空格時才需要引號。 變數名稱必須是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]的有效名稱。它們必須以字母字元或底線符號為開頭，而且包含字母字元、數字或底線符號。 保留字不可以當做變數名稱使用。 如需使用全域變數的詳細資訊，請參閱[運算式中的內建集合 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder-and-ssrs.md)。  
+ 指令碼中的任何函數均可使用全域變數。 反斜線和引號 (**\\"**) 將被解譯為雙引號。 只有當字串含有空格時才需要引號。 變數名稱必須是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]的有效名稱。它們必須以字母字元或底線符號為開頭，而且包含字母字元、數字或底線符號。 保留字不可以當做變數名稱使用。 如需使用全域變數的詳細資訊，請參閱[運算式中的內建集合 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)。  
   
  **-t**  
  (選擇性) 追蹤記錄的輸出錯誤訊息。 此引數沒有取得值。 如需詳細資訊，請參閱 [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)。  
@@ -119,22 +114,22 @@ rs {-?}
 rs –i c:\scriptfiles\script_copycontent.rss -s http://localhost/reportserver  
 ```  
   
- 如需詳細範例，請參閱[在報表伺服器之間複製內容的範例 Reporting Services rs.exe 指令碼](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)。  
+ 如需詳細範例，請參閱 [在報表伺服器之間複製內容的範例 Reporting Services rs.exe 指令碼](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)。  
   
- 如需其他範例，請參閱[執行 Reporting Services 指令碼檔案](../../reporting-services/tools/run-a-reporting-services-script-file.md)  
+ 如需其他範例，請參閱 [執行 Reporting Services 指令碼檔案](../../reporting-services/tools/run-a-reporting-services-script-file.md)  
   
-## 備註  
+## <a name="remarks"></a>備註  
  您可以定義指令碼來設定系統屬性、發行報表等等。 您可以建立的指令碼包括 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] API 的任何方法。 如需有關可供您使用的方法和屬性之詳細資訊，請參閱＜ [Report Server Web Service](../../reporting-services/report-server-web-service/report-server-web-service.md)＞。  
   
  指令碼必須以 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET 程式碼撰寫，然後使用 .rss 副檔名將指令碼儲存在 Unicode 或 UTF-8 文字檔中。 您不可以使用 **rs** 公用程式來偵錯指令碼。 若要偵錯指令碼，請在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]中執行該程式碼。  
   
 > [!TIP]  
->  如需詳細範例，請參閱[在報表伺服器之間複製內容的範例 Reporting Services rs.exe 指令碼](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)。  
+>  如需詳細範例，請參閱 [在報表伺服器之間複製內容的範例 Reporting Services rs.exe 指令碼](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)。  
   
-## 請參閱＜  
- [執行 Reporting Services 指令碼檔案](../../reporting-services/tools/run-a-reporting-services-script-file.md)   
- [編寫部署和管理工作的指令碼](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)   
- [利用 rs.exe 公用程式與 Web 服務編寫指令碼](../../reporting-services/tools/script-with-the-rs-exe-utility-and-the-web-service.md)   
- [報表伺服器命令提示字元公用程式 &#40;SSRS&#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)  
+## <a name="see-also"></a>另請參閱  
+- [執行 Reporting Services 指令碼檔案](../../reporting-services/tools/run-a-reporting-services-script-file.md)   
+- [指令碼部署和管理工作](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)   
+- [利用 rs.exe 公用程式和 Web 服務編寫指令碼](../../reporting-services/tools/script-with-the-rs-exe-utility-and-the-web-service.md)   
+- [報表伺服器命令提示字元公用程式 &#40;SSRS &#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)  
   
   

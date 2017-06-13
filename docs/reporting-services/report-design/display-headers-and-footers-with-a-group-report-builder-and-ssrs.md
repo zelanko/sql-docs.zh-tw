@@ -1,26 +1,31 @@
 ---
-title: "與群組一起顯示頁首和頁尾 (報表產生器及 SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "顯示頁首和頁尾與群組 （報表產生器及 SSRS） |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8eb7d648-4df2-491a-96cb-99e55629d617
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 22c9592550b79fa5fa25e31f023a6d53c5b002f5
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 與群組一起顯示頁首和頁尾 (報表產生器及 SSRS)
+# <a name="display-headers-and-footers-with-a-group-report-builder-and-ssrs"></a>與群組一起顯示頁首和頁尾 (報表產生器及 SSRS)
   您可以協助控制靜態資料列 (例如群組頁首或頁尾) 是否會與動態資料列 (與 Tablix 資料區中的群組有關聯) 一起轉譯。  
   
- 若要在多個頁面上重複所有資料行標題或資料列標題，您可以設定 Tablix 資料區的屬性。 如需詳細資訊，請參閱[在多個頁面上顯示資料列和資料行標頭 (報表產生器及 SSRS)](https://msdn.microsoft.com/library/dd207045.aspx)。  
+ 若要在多個頁面上重複所有資料行標題或資料列標題，您可以設定 Tablix 資料區的屬性。 如需詳細資訊，請參閱 [在多個頁面上顯示資料列和資料行標頭 (報表產生器及 SSRS)](https://msdn.microsoft.com/library/dd207045.aspx)。  
   
  若要控制與巢狀群組相關聯之動態資料列和資料行的轉譯行為，或與標籤或小計相關聯之靜態資料列和資料行的轉譯行為，您必須設定 Tablix 成員的屬性。 Tablix 成員代表靜態或動態資料列或資料行。 靜態成員會重複一次。 例如，總計資料列就是靜態資料列。 動態成員會針對每個群組執行個體重複一次。 例如，與具有群組運算式 [Territory] 之群組相關聯的資料列會針對領域的每個唯一值重複一次。 如需 Tablix 成員的詳細資訊，請參閱 [Tablix 資料區資料格、資料列及資料行 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)。  
   
@@ -32,7 +37,7 @@ caps.handback.revision: 8
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### 若要將靜態資料列和一組與資料列群組相關聯的動態資料列保持在一起  
+### <a name="to-keep-a-static-row-with-a-set-of-dynamic-rows-associated-with-a-row-group"></a>若要將靜態資料列和一組與資料列群組相關聯的動態資料列保持在一起  
   
 1.  在設計介面上，按一下 Tablix 資料區中的任意位置來選取它。 [群組] 窗格會顯示資料區的資料列群組和資料行群組。  
   
@@ -50,7 +55,7 @@ caps.handback.revision: 8
   
 5.  (選擇性) 預覽報表。 在可能的狀況下，報表轉譯器都會將此成員與指定的資料列群組成員保持在一起。  
   
-### 若要將靜態資料行和一組與資料行群組相關聯的動態資料行保持在一起  
+### <a name="to-keep-a-static-column-with-a-set-of-dynamic-columns-associated-with-a-column-group"></a>若要將靜態資料行和一組與資料行群組相關聯的動態資料行保持在一起  
   
 1.  在設計介面上，按一下 Tablix 資料區中的任意位置來選取它。 [群組] 窗格會顯示資料區的資料列群組和資料行群組。  
   
@@ -68,7 +73,7 @@ caps.handback.revision: 8
   
 5.  (選擇性) 預覽報表。 在可能的狀況下，報表轉譯器都會將此成員與指定的資料行群組成員保持在一起。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [Tablix 資料區資料格、資料列及資料行 (報表產生器及 SSRS)](https://msdn.microsoft.com/library/dd220587.aspx)   
  
   

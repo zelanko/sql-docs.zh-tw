@@ -1,37 +1,42 @@
 ---
-title: "SSRS 服務應用程式的佈建訂閱及警示 | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/03/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Reporting Services 共用服務"
-  - "SharePoint 模式 [Reporting Services]"
-  - "SharePoint 模式"
-  - "Reporting Services 服務應用程式"
-  - "SSRS 服務應用程式"
+title: "SSRS 服務應用程式的佈建訂閱及警示 |Microsoft 文件"
+ms.custom: 
+ms.date: 06/03/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Reporting Services Shared Service
+- SharePoint Mode [Reporting Services]
+- SharePoint Mode
+- Reporting Services Service Application
+- SSRS service application
 ms.assetid: d0de3f1f-4887-47fb-bacf-46aaad74c4be
 caps.latest.revision: 20
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 20
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 43a5b233f39e52555696d2b6f3e08ce9077581b6
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# SSRS 服務應用程式的佈建訂閱及警示
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 訂閱和資料警示需要 SQL Server Agent，並且需要 SQL Server Agent 的權限組態。 如果您看到錯誤訊息指出需要 SQL Server Agent，而您已確認 SQL Server Agent 正在執行，則請更新或驗證權限。 本主題的範圍是 SharePoint 模式的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，且本主題說明三種可以用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 訂閱來更新 SQL Server Agent 權限的方法。 在本主題中用來執行步驟的認證必須要有足夠的權限，才能針對服務應用程式、msdb 和 master 資料庫中的物件授與 RSExecRole 的執行權限。  
+# <a name="provision-subscriptions-and-alerts-for-ssrs-service-applications"></a>SSRS 服務應用程式的佈建訂閱及警示
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 訂閱和資料警示需要 SQL Server Agent，並且需要 SQL Server Agent 的權限組態。 如果您看到錯誤訊息指出需要 SQL Server Agent，而您已確認 SQL Server Agent 正在執行，則請更新或驗證權限。 本主題的範圍是 SharePoint 模式的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，且本主題說明三種可以用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 訂閱來更新 SQL Server Agent 權限的方法。 在本主題中用來執行步驟的認證必須要有足夠的權限，才能針對服務應用程式、msdb 和 master 資料庫中的物件授與 RSExecRole 的執行權限。  
   
 ||  
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2016 &#124; SharePoint 2013|  
   
- ![SQL Agent permissions to Service Application DBs](../../reporting-services/install-windows/media/rs-provisionsqlagent.gif "SQL Agent permissions to Service Application DBs")  
+ ![服務應用程式資料庫的 SQL 代理程式權限](../../reporting-services/install-windows/media/rs-provisionsqlagent.gif "服務應用程式資料庫的 SQL 代理程式權限")  
   
-||描述|  
+||Description|  
 |------|-----------------|  
 |**1**|主控 Reporting Services 服務應用程式資料庫的 SQL Server Database Engine 執行個體。|  
 |**2**|SQL Database Engine 執行個體的 SQL Server Agent 執行個體。|  
@@ -46,7 +51,7 @@ caps.handback.revision: 20
   
 3.  執行 PowerShell Cmdlet，以建立可用來設定權限的 Transact-SQL 指令碼。  
   
-### 若要使用佈建頁面更新權限  
+### <a name="to-update-permissions-using-the-provision-page"></a>若要使用佈建頁面更新權限  
   
 1.  從 SharePoint 管理中心，按一下 [應用程式管理] 群組中的 [管理服務應用程式]。  
   
@@ -70,7 +75,7 @@ caps.handback.revision: 20
   
 5.  按一下 [下載指令碼]，下載您可以在 SQL Server Management Studio 中執行以授與權限的 Transact-SQL 指令碼。 建立的指令碼檔案名稱會包含 Reporting Services 服務應用程式的名稱，例如 **[服務應用程式的名稱]-GrantRights.sql**。  
   
-### 使用 PowerShell 產生 Transact-SQL 陳述式  
+### <a name="to-generate-the-transact-sql-statement-with-powershell"></a>使用 PowerShell 產生 Transact-SQL 陳述式  
   
 1.  您也可以在 SharePoint 2016 或 SharePoint 2013 管理介面中使用 Windows PowerShell Cmdlet 建立 Transact-SQL 指令碼。  
   
@@ -84,10 +89,10 @@ caps.handback.revision: 20
   
      **範例 Cmdlet：** `Get-SPRSDatabaseRightsScript –DatabaseName ReportingService_46fd00359f894b828907b254e3f6257c –UserName “NT AUTHORITY\NETWORK SERVICE” –IsWindowsUser | Out-File c:\SQLServerAgentrights.sql`  
   
-## 使用 Transact-SQL 指令碼  
+## <a name="using-the-transact-sql-script"></a>使用 Transact-SQL 指令碼  
  下列程序可搭配從佈建頁面下載的指令碼，或透過 PowerShell 建立的指令碼使用。  
   
-#### 在 SQL Server Management Studio 中載入 Transact-SQL 指令碼  
+#### <a name="to-load-the-transact-sql-script-in-sql-server-management-studio"></a>在 SQL Server Management Studio 中載入 Transact-SQL 指令碼  
   
 1.  若要開啟 SQL Server Management Studio，請在 [開始] 功能表上，按一下 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]，然後再按一下 [SQL Server Management Studio]。  
   
@@ -103,7 +108,7 @@ caps.handback.revision: 20
   
 3.  按一下 **[連接]**。  
   
-#### 執行 Transact-SQL 陳述式  
+#### <a name="to-run-the-transact-sql-statement"></a>執行 Transact-SQL 陳述式  
   
 1.  在 SQL Server Management Studio 的工具列上，按一下 [新增查詢]。  
   
@@ -118,3 +123,4 @@ caps.handback.revision: 20
 5.  按一下 **[執行]**。  
   
   
+

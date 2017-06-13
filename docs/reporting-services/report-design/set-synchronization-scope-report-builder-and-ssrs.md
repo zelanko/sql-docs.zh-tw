@@ -1,32 +1,37 @@
 ---
-title: "設定同步處理範圍 (報表產生器及 SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "設定同步處理範圍 （報表產生器及 SSRS） |Microsoft 文件"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6f4a11e6-6151-47be-a43f-e3dbf6c0e737
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 302cc9fbe2c49f2d28786b6a1addcecdcafd3ee7
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 設定同步處理範圍 (報表產生器及 SSRS)
+# <a name="set-synchronization-scope-report-builder-and-ssrs"></a>設定同步處理範圍 (報表產生器及 SSRS)
   在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表中，指標會在指定的範圍內，跨指標值的範圍進行同步處理，藉以傳達資料值。   
     
   根據預設，此範圍是指標的父容器，例如，包含指標的資料表或矩陣。 您可以根據報表的版面配置來變更指標的同步處理。 例如，如果某個資料表之類的資料區有資料列群組，您可以將群組指定為指標範圍。 指標也可以省略同步處理。  
   
  您可以使用運算式來設定選項，如度量單位。 如需詳細資訊，請參閱[運算式 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)。  
   
- 如需了解和設定報表內範圍的一般資訊，請參閱[總計、彙總與內建集合的運算式範圍 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expression scope for totals, aggregates, and built-in collections.md)。  
+ 如需了解和設定報表內範圍的一般資訊，請參閱[總計、彙總與內建集合的運算式範圍 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)。  
   
-## 若要變更指標的同步處理範圍  
+## <a name="to-change-the-synchronization-scope-of-an-indicator"></a>若要變更指標的同步處理範圍  
   
 1.  以滑鼠右鍵按一下您要變更的指標，然後按一下 [指標屬性]。  
   
@@ -40,7 +45,7 @@ caps.handback.revision: 8
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## 請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [指標 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   
   

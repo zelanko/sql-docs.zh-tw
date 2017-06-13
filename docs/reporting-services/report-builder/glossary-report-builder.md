@@ -1,23 +1,28 @@
 ---
-title: "詞彙 (報表產生器) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "詞彙 （報表產生器） |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 525820a2-7eba-4982-8518-e6db041b1fc6
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 69a348a8f2f2d44dbe17f5500557db03b95e5b04
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 詞彙 (報表產生器)
+# <a name="glossary-report-builder"></a>詞彙 (報表產生器)
   
   
 |詞彙|定義|  
@@ -36,7 +41,7 @@ caps.handback.revision: 8
 |消除鋸齒 (antialiasing)|在圖形中，使用演算法可以讓曲線的不規則近似值變平滑。|  
 |應用程式資料庫 (application database)|這個資料庫是用於儲存某一個應用程式的使用者和系統資料。|  
 |引數 (argument)|提供資訊給動作、事件、方法、屬性、函數或程序的值。|  
-|組件 (assembly)| Managed 應用程式模組，它將類別中繼資料和 Managed 程式碼當做物件包含在 SQL Server 中，讓 CLR 函數、預存程序、觸發程序、使用者定義彙總以及使用者定義型別能夠在 SQL Server 中建立。|  
+|組件 (assembly)|Managed 應用程式模組，它將類別中繼資料和 Managed 程式碼當做物件包含在 SQL Server 中，讓 CLR 函數、預存程序、觸發程序、使用者定義彙總以及使用者定義型別能夠在 SQL Server 中建立。|  
 |驗證 (authentication)|藉由驗證實體提供的認證，確認使用者、電腦、處理序或其他實體之識別的程序。 常見的認證形式包括數位簽章、智慧卡、生物識別資料，以及使用者名稱和密碼的組合。|  
 |授權 (authorization)|1.確認授與使用者之權限和存取權的作業。 2. 將特定資訊、服務或功能之存取權授與人員、電腦處理序或裝置的程序。|  
 |軸|圖形上的垂直線和水平線，用來顯示點的位置。|  
@@ -58,7 +63,7 @@ caps.handback.revision: 8
 |串聯參數 (cascading parameters)|從先前參數選取範圍中衍生其可用值的參數。 串聯參數可用來篩選一組參數值。|  
 |類別目錄 (x) 軸 (category (x) axis)|圖表中群組資料的軸，通常是水平軸。 例外：在橫條圖中，這兩個軸是相反的，因此 y 軸會顯示群組資料。|  
 |憑證 (certificate)|一種數位文件，常用於驗證以及協助保護網路上的資訊安全。 憑證會將公開金鑰繫結到持有對應私密金鑰的實體。 發行憑證的授權單位會對憑證進行數位簽署，而憑證可以發行給使用者、電腦或服務。|  
-|字元集 (character set)| SQL Server 可在 char、varchar 和 text 資料類型中辨識的字元類型。|  
+|字元集 (character set)|SQL Server 可在 char、varchar 和 text 資料類型中辨識的字元類型。|  
 |圖表資料區域 (chart data region)|在報表配置中以圖形格式顯示資料的報表項目。|  
 |child|在階層內下一個較低層級中，與目前成員直接相關的成員。|  
 |子句 (clause)|在 Transact-SQL 中，SQL 陳述式的子單位。 子句會以關鍵字為開頭。|  
@@ -76,7 +81,7 @@ caps.handback.revision: 8
 |色彩規則 (color rules)|自動將色彩指派給地圖圖層上每個地圖元素的演算法。|  
 |色階 (color scale)|一種地圖圖例類型，用來解譯地圖上所代表的色彩。|  
 |Common Language Runtime|在 Managed 程式碼執行核心的引擎。 這個執行階段提供含有如跨語言整合、程式碼存取安全性、物件存留期間管理，以及偵錯和設定檔作業支援的 Managed 程式碼。|  
-|複雜運算式 (complex expression)|一種運算式，這種運算式無法以單一內建欄位參考表示，而且在設計介面上會顯示為 <\<Expr>>。|  
+|複雜運算式 (complex expression)|無法以單一內建欄位參考，並顯示在設計介面上做為運算式 <\<Expr >>。|  
 |串連 (concatenation)|指將兩個或多個字元字串或運算式結合成單一字元字串或運算式，或將兩個或多個二進位字串或運算式結合成單一二進位字串或運算式。|  
 |並行 (concurrency)|讓多位使用者同時存取和變更共用資料的程序。 SQL Server 利用鎖定，讓多位使用者同時存取和變更共用資料，且彼此不會發生衝突。|  
 |組態檔 (config file)|請參閱其他詞彙：組態檔|  
@@ -95,7 +100,7 @@ caps.handback.revision: 8
 |資料處理延伸模組 (data processing extension)|在 Reporting Services 中用於從外部資料來源擷取報表資料的元件。|  
 |資料提供者 (data provider)|軟體的圖層，這個圖層可以處理每個外部資料來源類型專用之資料延伸模組與自訂軟體之間的通訊。 根據特定的資料來源，可以從 Microsoft 和協力廠商取得多個資料提供者。|  
 |資料區 (data region)|在資料表、矩陣、清單或圖表中，用於顯示基礎資料集中重複之資料列的報表項目。|  
-|資料來源 (data source)|1.在 ADO 和 OLE DB 中，OLE DB 提供者所公開的資料來源位置。 2.  Cube 或維度之類物件的資料來源。 它也是存取來源資料所需要之資訊的規格。 它有時是指 ClassType clsDataSource 的物件。 <br />3.在 Reporting Services 中，指定的資料來源類型、連接字串和認證，可以單獨地儲存在報表伺服器上，並且在報表專案之間共用，或是內嵌於報表定義 (.rdl) 檔案中。|  
+|資料來源 (data source)|1.在 ADO 和 OLE DB 中，OLE DB 提供者所公開的資料來源位置。 2. Cube 或維度之類物件的資料來源。 它也是存取來源資料所需要之資訊的規格。 它有時是指 ClassType clsDataSource 的物件。 <br />3.在 Reporting Services 中，指定的資料來源類型、連接字串和認證，可以單獨地儲存在報表伺服器上，並且在報表專案之間共用，或是內嵌於報表定義 (.rdl) 檔案中。|  
 |資料來源名稱 (data source name)|在報表中，資料來源物件的名稱。|  
 |資料類型|指定資料行、參數或變數可以儲存哪個資訊類型的屬性。|  
 |資料倉儲 (data warehouse)|專為查詢和分析而建構的資料庫。|  
@@ -188,7 +193,7 @@ caps.handback.revision: 8
 |KPI|請參閱其他詞彙：關鍵效能指標|  
 |標籤欄位 (label field)|一種報表資料集欄位，可識別對應之索引鍵欄位的標籤。 參數和資料區可以顯示索引鍵欄位的標籤，而非值。|  
 |latency|從一部伺服器完成資料變更，到變更出現在另一部伺服器所經歷的時間量。|  
-|緯度 (latitude)| World Geodetic System (WGS 84) 資料中，以十進位度數值表示的緯度座標。 有效範圍是從 –90.0 到 +90.0。|  
+|緯度 (latitude)|World Geodetic System (WGS 84) 資料中，以十進位度數值表示的緯度座標。 有效範圍是從 –90.0 到 +90.0。|  
 |圖層 (layer)|在地圖報表項目中，圖層會指定空間資料單一類型的類型和呈現。 地圖報表項目是多個圖層的容器。|  
 |LCID|用於識別 Windows 架構地區設定的號碼。|  
 |圖例 (legend)|在報表圖表、地圖或量測計資料區中，在顯示資料呈現與基礎資料值之間提供導引的元素。|  
@@ -201,7 +206,7 @@ caps.handback.revision: 8
 |記錄檔 (log file)|包含資料庫修改記錄的檔案或檔案集合。|  
 |邏輯名稱 (logical name)|SQL Server 用於識別檔案的名稱。|  
 |邏輯運算子 (logical operators)|運算子 AND、OR 和 NOT。 這些運算子可用於連接 WHERE 子句中的搜尋條件。|  
-|經度 (longitude)| World Geodetic System (WGS 84) 資料中，以十進位度數值表示的座標。 有效範圍是從 –180.0 到 +180.0。|  
+|經度 (longitude)|World Geodetic System (WGS 84) 資料中，以十進位度數值表示的座標。 有效範圍是從 –180.0 到 +180.0。|  
 |多對多關聯性 (many-to-many relationship)|兩份資料表之間的一種關聯性，每份資料表中的資料列，在相關資料表中都有多個相符的資料列。 例如，每張銷售發票都可以包含多個產品，但每個產品也都可以出現在多張銷售發票上。|  
 |多對一關聯性 (many-to-one relationship)|兩份資料表之間的一種關聯性，一份資料表中的單一資料列可以關聯於另一份資料表中的多個資料列。|  
 |地圖 (map)|一種報表項目，這個報表項目是存放標題、各種圖例以及地圖圖層的容器。|  
@@ -275,7 +280,7 @@ caps.handback.revision: 8
 |轉譯延伸模組 (rendering extension)|在 Reporting Services 中，用於處理報表輸出格式的元件。|  
 |轉譯延伸模組 (rendering extension(s))|將報表轉譯成特定格式的外掛程式。|  
 |轉譯物件模型 (rendering object model)|轉譯延伸模組所使用的報表物件模型。|  
-|報表定義 (report definition)| .rdl 檔，也就是報表的 XML 定義，而且與結構描述 reportdefinition.xsd 相符。|  
+|報表定義 (report definition)|.rdl 檔，也就是報表的 XML 定義，而且與結構描述 reportdefinition.xsd 相符。|  
 |報表定義語言|一組用於描述報表之配置和查詢資訊的指示。|  
 |報表執行快照集 (report execution snapshot)|已快取的報表快照集。|  
 |報表記錄|經過一段時間建立和儲存之報表快照集的集合。|  
@@ -301,7 +306,7 @@ caps.handback.revision: 8
 |報表特定排程 (report-specific schedule)|在報表內部定義的排程。|  
 |ReportViewer 控制項 (ReportViewer controls)|在 ASP.NET 和 Windows Form 應用程式中提供內嵌報表處理的 Web 伺服器控制項和 Windows Form 控制項。|  
 |resource|報表伺服器資料庫中不屬於報表、資料夾或共用資料來源項目的任何項目。|  
-|結果集 (result set)| SELECT 陳述式所傳回的一組資料列。|  
+|結果集 (result set)|SELECT 陳述式所傳回的一組資料列。|  
 |角色 (role)|1.獲得一組特定權限的使用者或群組。  <br />2.在 Analysis Services 中，角色會利用 Windows 安全性帳戶來限制使用者存取資料庫、Cube、維度和資料採礦模型時的存取範圍與權限。  <br />3.在資料庫鏡像工作階段中，主體伺服器和鏡像伺服器會扮演互補的主體與鏡像角色。 另外，也可以選擇由第三個伺服器執行個體扮演見證的角色。|  
 |角色指派 (role assignment)|一種安全性原則，可定義能夠存取特定項目並執行特定作業的使用者和群組。|  
 |角色定義 (role definition)|具名的工作集合，會定義使用者可以在報表伺服器上執行的作業。|  
@@ -325,8 +330,8 @@ caps.handback.revision: 8
 |服務|針對特定工作或一組工作定義名稱的 Service Broker 物件，以及其他服務可用於達成該項工作的合約。|  
 |服務主要名稱 (service principal name)|用戶端用於唯一識別服務執行個體的名稱。|  
 |共用資料來源 (shared data source)|在報表伺服器上當做檔案儲存和管理而且可由多份報表存取的資料來源定義。|  
-|共用資料來源定義 (shared data source definition)| .rsd 檔，也就是資料來源的 XML 定義，而且與結構描述 shareddatasource.xsd 相符。|  
-|共用資料集定義 (shared dataset definition)| .rcd 檔，也就是共用資料集的 XML 定義，而且與結構描述 shareddatasetdefinition.xsd 相符。|  
+|共用資料來源定義 (shared data source definition)|.rsd 檔，也就是資料來源的 XML 定義，而且與結構描述 shareddatasource.xsd 相符。|  
+|共用資料集定義 (shared dataset definition)|.rcd 檔，也就是共用資料集的 XML 定義，而且與結構描述 shareddatasetdefinition.xsd 相符。|  
 |簡單運算式 (simple expression)|一種運算式，其中包含單一欄位的參考，而且會以方括號出現在報表配置中，如 [ProductID]。|  
 |SKU|識別某項產品不同版本的方式。亦即，庫存單位 (Stock Keeping Unit) 的縮寫 (標準商務術語)。|  
 |配量 (slice)|Cube 中的資料子集，指定方式是依維度成員來限制一個或多個維度。|  
@@ -337,7 +342,7 @@ caps.handback.revision: 8
 |空間資料 (spatial data)|指定平面或曲面上物件位置的資料。 空間資料可以是點、線條或多邊形。|  
 |空間資料類型 (spatial data types)|指定代表幾何 (平面) 或地理 (地理) 資訊的資料。|  
 |SQL|請參閱其他詞彙：結構化查詢語言 (SQL)|  
-|SQL 查詢 (SQL query)| SELECT、INSERT、UPDATE、DELETE 或 CREATE TABLE 之類的 SQL 陳述式。|  
+|SQL 查詢 (SQL query)|SELECT、INSERT、UPDATE、DELETE 或 CREATE TABLE 之類的 SQL 陳述式。|  
 |SQL Server 驗證|指定 SQL Server 登入識別碼和密碼來驗證連接至 SQL Server 執行個體之嘗試行為的機制。|  
 |SQL Server 登入|儲存在 SQL Server 中，允許使用者連接至 SQL Server 的帳戶。|  
 |SQL 陳述式|執行一些動作來處理資料的 SQL 或 Transact-SQL 命令，如 SELECT 或 DELETE。|  
@@ -352,14 +357,14 @@ caps.handback.revision: 8
 |系統預存程序 (system stored procedures)|一組 SQL Server 提供的預存程序，可供擷取系統目錄資訊或執行管理工作之類的動作使用。|  
 |table|1.由資料列和資料行組成的二維物件，會儲存關聯式資料庫中所建立實體的相關資料。 2. 在報表配置中以分欄格式顯示資料的資料區域。|  
 |資料表資料區域 (table data region)|在報表配置中以分欄格式顯示資料的報表項目。|  
-|Tablix| Reporting Services RDL 資料區，其中包含類似資料表或矩陣的資料列和資料行，可能會共用這兩者的特性。|  
+|Tablix|Reporting Services RDL 資料區，其中包含類似資料表或矩陣的資料列和資料行，可能會共用這兩者的特性。|  
 |工作 (task)|構成工作的權限的集合 (管理報表、管理資料夾等等)|  
 |Transact-SQL|包含用於管理 SQL Server 執行個體、建立和管理 SQL Server 執行個體中的所有物件，以及在 SQL Server 資料表中插入、擷取、修改和刪除所有資料之命令的語言。 Transact-SQL 是國際標準組織 (ISO) 和美國國家標準局 (ANSI) 發行的標準所定義之語言的延伸模組。|  
 |使用者執行個體 (user instance)|由父執行個體代表使用者所產生的 SQL Server Express 執行個體。|  
 |值 (y) 軸 (value (y) axis)|用來顯示圖表中之數值資料值的軸。 通常是垂直軸。 例外：在橫條圖中，這兩個軸是相反的，因此 y 軸會顯示群組資料。|  
 |值運算式 (value expression)|在多維度運算式 (MDX) 中，會傳回值的運算式。 值運算式可以處理集合、Tuple、成員、層級、數字或字串。|  
-|變數|1.在 Integration Services 中，變數是用於儲存可在指令碼、運算式和屬性運算式中使用的值，用以設定資料行值及封裝物件的屬性。 <br />2.已指派值的定義實體。 區域變數利用 DECLARE@localvariable 陳述式來定義，且會在利用 SELECT 或 SET@localvariable 陳述式來宣告區域變數的陳述式批次內指派起始值。|  
-|可變間隔 (variable interval)| Reporting Services 圖表上的選項，可指定來根據圖表寬度或高度，自動計算某個軸上可放置的最佳標籤數目。|  
+|變數|1.在 Integration Services 中，變數是用於儲存可在指令碼、運算式和屬性運算式中使用的值，用以設定資料行值及封裝物件的屬性。 <br />2.已指派值的定義實體。 定義區域變數DECLARE@localvariable陳述式和指派一個初始值宣告其中一種 SELECT 陳述式批次內或SET@localvariable陳述式。|  
+|可變間隔 (variable interval)|Reporting Services 圖表上的選項，可指定來根據圖表寬度或高度，自動計算某個軸上可放置的最佳標籤數目。|  
 |視覺效果 (visualization)|在地圖、圖表和量測計中，使用者選擇用來視覺化分析資料的方式。|  
 |Web 服務|在 Reporting Services 中，透過 HTTP 使用簡易物件存取通訊協定 (SOAP) 而且在用戶端程式與報表伺服器之間當做通訊介面的服務。|  
 |Windows Management Instrumentation|在 Managed 環境中，提供物件相關資訊的介面。|  
@@ -369,7 +374,7 @@ caps.handback.revision: 8
 |X 軸 (x-axis)|請參閱其他詞彙：類別目錄 (x) 軸|  
 |Y 軸 (y-axis)|請參閱其他詞彙：值 (y) 軸|  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [報表撰寫概念 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
   
   

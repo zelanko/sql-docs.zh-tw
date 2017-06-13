@@ -1,30 +1,35 @@
 ---
-title: "URL 存取 (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "URL 存取 [Reporting Services]"
-  - "連結 [Reporting Services], URL 存取"
-  - "URL 存取 [Reporting Services], 關於 URL 存取"
-  - "參數 [Reporting Services], URL 存取"
-  - "報表伺服器 [Reporting Services], URL 存取"
-  - "超連結 [Reporting Services]"
+title: "URL 存取 (SSRS) |Microsoft 文件"
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- URL access [Reporting Services]
+- links [Reporting Services], URL access
+- URL access [Reporting Services], about URL access
+- parameters [Reporting Services], URL access
+- report servers [Reporting Services], URL access
+- hyperlinks [Reporting Services]
 ms.assetid: 52c3f2a3-3d6d-4fee-9c46-83f366919398
 caps.latest.revision: 43
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 43
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f91b97d1877e365813f3aa2445fabea1a263ab2b
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# URL 存取 (SSRS)
+# <a name="url-access-ssrs"></a>URL 存取 (SSRS)
   在 SQL Server Reporting Services (SSRS) 中，報表伺服器的 URL 存取權可讓您透過 URL 要求，傳送命令至報表伺服器。 例如，您可在原生模式報表伺服器或 SharePoint 文件庫中自訂報表的轉譯。 您可能已使用特定一組報表參數值來檢視過報表，或報表中您感興趣的特定頁面。 您可以使用預先定義的 URL 存取參數，封裝 URL 中的資訊。 您還可以內嵌轉譯格式或調整報表檢視器外觀的參數，以進一步自訂報表伺服器處理報表的方式。 然後，您可以直接將此 URL 貼入電子郵件或網頁，讓其他人在瀏覽器中用相同方式存取您的報表。  
   
  您還可利用 URL 存取執行下列其他動作：  
@@ -41,10 +46,10 @@ caps.handback.revision: 43
   
  如需透過 URL 存取可用之命令與設定的完整清單，請參閱 [URL 存取參數參考](../reporting-services/url-access-parameter-reference.md)。  
   
-## URL 存取概念  
+## <a name="url-access-concepts"></a>URL 存取概念  
  報表伺服器的 URL 要求包含由報表伺服器處理的參數。 報表伺服器處理 URL 要求的方法須視 URL 中包含的參數、參數前置詞以及項目類型而定。 報表伺服器 URL 會遵循聯合全球資訊網協會 W3C/IETF 草案標準所提議的 URL 格式指導方針。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] URL 功能與大部分的網際網路瀏覽器或是支援標準 URL 定址的應用程式相容。  
   
-### URL 存取語法  
+### <a name="url-access-syntax"></a>URL 存取語法  
  URL 要求可包含以任何順序所列的多個參數。 參數是用連字號 (&) 分隔，而名稱/值組則是由等號 (=) 所分隔。  
   
 ```  
@@ -56,7 +61,7 @@ reportpath
   
 ```  
   
-### 語法描述  
+### <a name="syntax-description"></a>語法描述  
  *rswebserviceurl*  
  報表伺服器 Web 服務 URL。 針對原生模式，其為 Reporting Services 組態管理員中設定之報表伺服器執行個體的 Web 服務 URL (請參閱[設定報表伺服器 URL &#40;SSRS 組態管理員&#41;](../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md))。 例如：  
   
@@ -65,7 +70,7 @@ http://myrshost/reportserver
 https://machine.adventure-works.com/reportserver_MYNAMEDINSTANCE  
 ```  
   
- 針對 SharePoint 整合模式，其為整合 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 之 SharePoint 網站的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Proxy URL。 例如：  
+ 針對 SharePoint 整合模式，其為整合 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 之 SharePoint 網站的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]Proxy URL。 例如：  
   
 ```  
 http://myspsite/subsite/_vti_bin/reportserver  
@@ -104,9 +109,9 @@ http://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl
  *value*  
  對應至要使用的參數值之 URL 文字。  
   
- **注意**：如需可用的 URL 存取參數清單，請參閱 [URL 存取參數參考](../reporting-services/url-access-parameter-reference.md)。 如需透過 URL 傳遞報表參數的範例，請參閱[在 URL 內傳遞報表參數](../reporting-services/pass-a-report-parameter-within-a-url.md)。  
+ **注意** ：如需可用的 URL 存取參數清單，請參閱 [URL 存取參數參考](../reporting-services/url-access-parameter-reference.md)。 如需透過 URL 傳遞報表參數的範例，請參閱 [在 URL 內傳遞報表參數](../reporting-services/pass-a-report-parameter-within-a-url.md)。  
   
-## 相關工作  
+## <a name="related-tasks"></a>相關工作  
   
 |工作描述|連結|  
 |-----------------------|-----------|  
@@ -118,7 +123,7 @@ http://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl
 |開啟報表，並直接導覽至字串位置。|[使用 URL 存取搜尋報表](../reporting-services/search-a-report-using-url-access.md)|  
 |轉譯特定的報表記錄快照集。|[使用 URL 存取轉譯報表記錄快照集](../reporting-services/render-a-report-history-snapshot-using-url-access.md)|  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [在 URL 內傳遞報表參數](../reporting-services/pass-a-report-parameter-within-a-url.md)   
  [URL 存取參數參考](../reporting-services/url-access-parameter-reference.md)   
  [使用 URL 存取整合 Reporting Services](../reporting-services/application-integration/integrating-reporting-services-using-url-access.md)   

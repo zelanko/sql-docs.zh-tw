@@ -1,27 +1,32 @@
 ---
-title: "Reporting Services 中的 SharePoint 文件庫傳遞 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SharePoint 整合 [Reporting Services], 報表傳遞"
-  - "delivering reports [Reporting Services]"
-  - "訂閱 [Reporting Services], SharePoint 文件庫傳遞"
+title: "SharePoint Library Delivery in Reporting Services |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SharePoint integration [Reporting Services], report delivery
+- delivering reports [Reporting Services]
+- subscriptions [Reporting Services], SharePoint library delivery
 ms.assetid: cb4e4f71-f2d5-475a-9284-ea324c93c7de
 caps.latest.revision: 15
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 15
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 18312b5d8222cc79b07eb3a33eaf3fb60454b861
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# Reporting Services 中的 SharePoint 文件庫傳遞
+# <a name="sharepoint-library-delivery-in-reporting-services"></a>Reporting Services 中的 SharePoint 文件庫傳遞
   針對 SharePoint 整合所設定的報表伺服器包含您可以用來將報表傳送至 SharePoint 文件庫的傳遞延伸模組。  
   
  若要使用 SharePoint 傳遞延伸模組，您必須從 SharePoint 網站上的應用程式頁面建立訂閱，然後選取 [SharePoint 文件庫] 作為傳遞類型。 您無法針對您在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 或報表管理員中建立的訂閱，使用 SharePoint 傳遞延伸模組。  
@@ -29,7 +34,7 @@ caps.handback.revision: 15
 > [!NOTE]  
 >  如果報表伺服器以原生模式執行，傳遞延伸模組不支援將報表傳遞至 SharePoint 網站。 如果您嘗試以程式設計的方式呼叫原生模式報表伺服器的傳遞延伸模組，伺服器將會傳回 **rsDeliveryExtensionNotFound** 錯誤，並在報表伺服器的記錄檔中記錄 **rsOperationNotSupportedSharePointMode** 錯誤。  
   
-## 需求  
+## <a name="requirements"></a>需求  
  將已轉譯報表傳遞至文件庫的需求包括：  
   
 -   報表伺服器必須針對 SharePoint 整合模式設定。  
@@ -44,10 +49,10 @@ caps.handback.revision: 15
   
  報表傳遞時，不包含屬性與中繼資料。 首次傳遞報表時，此報表會繼承包含它之資料庫或清單的安全性設定。 如果您之後修改安全性設定或設定報表屬性，就會保留這些設定。 訂閱僅會重新整理儲存在指定位置的報表。  
   
-## SharePoint 權限  
+## <a name="sharepoint-permissions"></a>SharePoint 權限  
  若要建立訂閱，您必須在報表上擁有「檢視項目」權限。 若要傳遞報表，您必須在報表要傳遞至其中的文件庫上擁有「新增項目」權限。  
   
-## 如何建立、修改和刪除訂閱  
+## <a name="how-to-create-modify-and-delete-subscriptions"></a>如何建立、修改和刪除訂閱  
   
 1.  移至您要存取報表的來源 SharePoint 網站。  
   
@@ -57,7 +62,7 @@ caps.handback.revision: 15
   
  [管理訂閱] 清單中的 [狀態] 訊息便會顯示關於訂閱的最新資訊，包括是否成功以及訂閱上次執行的日期和時間。  
   
-## 設定傳遞選項  
+## <a name="setting-delivery-options"></a>設定傳遞選項  
  您可以在將報表傳遞至 SharePoint 文件庫的訂閱上，設定下列傳遞選項。  
   
  轉譯輸出格式  
@@ -68,13 +73,13 @@ caps.handback.revision: 15
  請注意，您無法指定僅用於內部使用的輸出格式，或是以 SharePoint 整合模式執行之報表伺服器不支援的輸出格式。 這些格式包括 Null、RGDI 和 HTMLOWC。  
   
  檔案名稱與副檔名  
- 將報表的檔案名稱與副檔名指定為您要顯示在目標文件庫中的檔案名稱與副檔名。 如果您沒有指定副檔名，報表伺服器會依據報表輸出格式來建立副檔名。 此為必要值。 檔案名稱不得包含下列字元：: \ / * ? " \< > | # { } %  
+ 將報表的檔案名稱與副檔名指定為您要顯示在目標文件庫中的檔案名稱與副檔名。 如果您沒有指定副檔名，報表伺服器會依據報表輸出格式來建立副檔名。 此為必要值。 檔案名稱不得包含下列字元：: \ / * ? " < > | # { } %  
   
  Title  
  在目標文件庫中，指定報表的選用 **Title** 屬性。 這是儲存在文件庫中之所有項目的標準屬性。 使用者可以在檢視 SharePoint 網站上的文件庫內容時，指定要顯示或隱藏此屬性。  
   
  路徑  
- 指定指向 SharePoint 文件庫的完整 URL，包括 SharePoint Web 應用程式和網站。 例如，http://mySharePointWeb/MySite/MyDocLib，其中的 "http://mySharePointWeb" 表示 Web 應用程式，"MySite" 是 SharePoint 網站，而 "MyDocLib" 是將傳遞報表的 SharePoint 文件庫。  
+ 指定指向 SharePoint 文件庫的完整 URL，包括 SharePoint Web 應用程式和網站。 例如： `http://mySharePointWeb/MySite/MyDocLib`; 其中`http://mySharePointWeb`表示 Web 應用程式中，"MySite"是 SharePoint 網站，且"MyDocLib"是 SharePoint 文件庫會傳遞報表。  
   
  您無法指定頁面、網站或清單。 目標容器必須是相同網站或伺服陣列中的文件庫。  
   
@@ -84,9 +89,10 @@ caps.handback.revision: 15
  自動複製  
  如果您要使用 [自動複製] 功能，將檔案的最新版本自動複製到多個位置，當啟用 [覆寫] 時，就會複製該檔案。 如果您使用的是 [自動遞增] 或 [無]，傳遞將會失敗，而且會發生 **rsDeliveryError** 錯誤。  
   
-## 請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [建立及管理 SharePoint 模式報表伺服器的訂閱](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
  [訂閱與傳遞 &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [指定報表資料來源的認證及連接資訊](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   
   
+

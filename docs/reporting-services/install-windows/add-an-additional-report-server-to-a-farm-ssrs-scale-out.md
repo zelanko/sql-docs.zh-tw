@@ -1,31 +1,38 @@
 ---
-title: "將其他報表伺服器加入至伺服器陣列 (SSRS 向外延展) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/03/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "將其他報表伺服器加入至伺服器陣列 （SSRS 向外延展） |Microsoft 文件"
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c1a6b683-15cf-44ae-ac60-ceee63a60aaf
 caps.latest.revision: 12
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 12
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: b810d42e1d7e74db8aa81939cfe83f81a1694c36
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 將其他報表伺服器加入至伺服器陣列 (SSRS 向外延展)
+
+# <a name="add-an-additional-report-server-to-a-farm-ssrs-scale-out"></a>將其他報表伺服器加入至伺服器陣列 (SSRS 向外延展)
+
   在 SharePoint 伺服器陣列中加入第二個或更多的 SharePoint 模式報表伺服器，可以改善報表伺服器的處理效能和回應時間。 如果您發現新增更多使用者、報表和其他應用程式到報表伺服器時效能降低了，那麼新增額外的報表伺服器可以改善效能。 此外，當硬體發生問題或者您在環境中的個別伺服器上執行一般維護作業時，也建議您加入第二個報表伺服器以提高報表伺服器的可用性。 從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 版開始，在 SharePoint 模式中向外延展 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 環境的步驟會遵循標準 SharePoint 伺服器陣列部署，並且運用 SharePoint 負載平衡功能。  
   
 > [!IMPORTANT]  
->  並非所有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 版本都支援向外延展 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如需詳細資訊，請參閱 [SQL Server 2016 版本支援的功能](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)的＜[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]＞一節。  
+>  並非所有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 版本都支援向外延展 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如需詳細資訊，請參閱 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SQL Server 2016 版本支援的功能 [的＜](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)＞一節。  
   
 > [!TIP]  
 >  從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 版開始，您不會使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員來加入伺服器以及向外延展報表伺服器。 SharePoint 產品會在具有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務的 SharePoint 伺服器加入至伺服器陣列時，管理向外延展 Reporting Services。  
   
- 如需如何向外延展原生模式報表伺服器的資訊，請參閱[設定原生模式報表伺服器向外延展部署 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure a native mode report server scale-out deployment.md)。  
+ 如需如何向外延展原生模式報表伺服器的資訊，請參閱[設定原生模式報表伺服器向外延展部署 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)。  
   
 ##  <a name="bkmk_loadbalancing"></a> 負載平衡  
  除非您的環境具有自訂或協力廠商負載平衡解決方案，否則 SharePoint 將自動管理 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式的負載平衡。 預設的 SharePoint 負載平衡行為是，每個 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式都將在您已經啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務的所有應用程式伺服器之間取得平衡。 若要確認 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務是否已安裝並啟動，請按一下 SharePoint 管理中心內的 **[管理伺服器上的服務]** 。  
@@ -53,31 +60,32 @@ caps.handback.revision: 12
   
 -   (4) 代表軟體或硬體網路負載平衡解決方案 (NLB)。  
   
- ![Adding a Reporting Services application server](../../reporting-services/install-windows/media/rs-sharepointscale.gif "Adding a Reporting Services application server")  
+ ![加入 Reporting Services 應用程式伺服器](../../reporting-services/install-windows/media/rs-sharepointscale.gif "加入 Reporting Services 應用程式伺服器")  
   
  下列步驟假設管理員要安裝及設定伺服器。 此伺服器將在伺服器陣列中設定為新的應用程式伺服器，而且不會當做 Web 前端 (WFE) 使用。  
   
 |步驟|說明和連結|  
 |----------|--------------------------|  
-|將 SharePoint 伺服器加入伺服器陣列中。|您需要安裝 SharePoint 以部署其他 Reporting Services 應用程式。<br/><br/>若是 SharePoint 2013，請參閱 [Add SharePoint server to a farm in SharePoint Server 2013](https://technet.microsoft.com/library/cc261752(v=office.15).aspx) (在 SharePoint Server 2013 中將 SharePoint 伺服器加入伺服器陣列)。<br/><br/>若是 SharePoint 2016，請參閱 [Add SharePoint server to a farm in SharePoint Server 2016](https://technet.microsoft.com/library/cc261752(v=office.16).aspx) (在 SharePoint Server 2016 中將 SharePoint 伺服器加入伺服器陣列)。|  
-|安裝和設定 Reporting Services SharePoint 模式。|執行 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安裝。 如需安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式的詳細資訊，請參閱[在 SharePoint 模式中安裝第一部報表伺服器](http://msdn.microsoft.com/zh-tw/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538)<br /><br /> 如果伺服器只會當做應用程式伺服器使用，而不會當做 WFE 使用，您就不需要選取 [適用於 SharePoint 產品的 Reporting Services 增益集]。<br /><br /> 1) 在 [安裝程式角色] 頁面上，選取 [SQL Server 功能安裝]<br /><br /> 2) 在 [功能選擇] 頁面上，選取 [Reporting Services - SharePoint]<br /><br /> 3) 在 [Reporting Services 組態] 頁面上，確認已針對 [Reporting Services SharePoint 模式] 選取 [只安裝] 選項。|  
+|將 SharePoint 伺服器加入伺服器陣列中。|您需安裝 SharePoint 以部署其他 Reporting Services 應用程式。<br/><br/>若是 SharePoint 2013，請參閱 [Add SharePoint server to a farm in SharePoint Server 2013](https://technet.microsoft.com/library/cc261752(v=office.15).aspx)(在 SharePoint Server 2013 中將 SharePoint 伺服器加入伺服陣列)。<br/><br/>若是 SharePoint 2016，請參閱 [Add SharePoint server to a farm in SharePoint Server 2016](https://technet.microsoft.com/library/cc261752(v=office.16).aspx)(在 SharePoint Server 2016 中將 SharePoint 伺服器加入伺服器陣列)。|  
+|安裝和設定 Reporting Services SharePoint 模式。|執行 SQL Server 安裝程式。 如需安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式的詳細資訊，請參閱 [在 SharePoint 模式中安裝第一部報表伺服器](http://msdn.microsoft.com/en-us/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538)<br /><br /> 如果伺服器只會當做應用程式伺服器使用，而不會當做 WFE 使用，您就不需要選取 [適用於 SharePoint 產品的 Reporting Services 增益集]。<br /><br /> 1) 在 [安裝程式角色] 頁面上，選取 [SQL Server 功能安裝]<br /><br /> 2) 在 [功能選擇] 頁面上，選取 [Reporting Services - SharePoint]<br /><br /> 3) 在 [Reporting Services 組態] 頁面上，確認已針對 [Reporting Services SharePoint 模式] 選取 [只安裝] 選項。|  
 |確認 Reporting Services 可以運作。|1) 在 SharePoint 管理中心內，按一下 [系統設定] 群組中的 [管理此伺服器陣列中的伺服器]。<br /><br /> 2) 確認 [SQL Server Reporting Services 服務] 正在執行。<br /><br />如需詳細資訊，請參閱＜ [Verify a Reporting Services Installation](../../reporting-services/install-windows/verify-a-reporting-services-installation.md)＞|  
   
 ##  <a name="bkmk_additional"></a> 其他組態  
  您可以將向外延展部署中的個別 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 伺服器最佳化為僅執行背景處理，如此伺服器就不會與互動報表執行作業競用資源。 背景處理包括排程、訂閱和資料警示。  
   
- 若要變更個別報表伺服器的行為，請將 **RSreportServer.config** 組態檔中的 **\<IsWebServiceEnable>** 設定為 false。  
+ 若要變更個別報表伺服器的行為，請設定 **\<IsWebServiceEnable >**中設為 false **RSreportServer.config**組態檔。  
   
- 根據預設，報表伺服器的 \<IsWebServiceEnable> 會設定為 TRUE。 當所有伺服器都設定為 TRUE 時，伺服器陣列中所有節點的互動和背景就能達到負載平衡。  
+ 根據預設，報表伺服器會設定與\<IsWebServiceEnable > 設定為 TRUE。 當所有伺服器都設定為 TRUE 時，伺服器陣列中所有節點的互動和背景就能達到負載平衡。  
   
- 如果您將所有報表伺服器的 \<IsWebServiceEnable> 設定為 False，當您嘗試使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能時，就會看見類似以下的錯誤訊息：  
+ 如果您將所有報表伺服器的\<IsWebServiceEnable > 設為 False，您會看到類似下面的錯誤訊息時您嘗試使用[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]功能：  
   
       The Reporting Services Web Service is not enabled. Configure at least one instance of the Reporting Services SharePoint Service to have <IsWebServiceEnable> set to true. 
  
  如需詳細資訊，請參閱[修改 Reporting Services 組態檔 &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)  
-  
-## 另請參閱  
-[Add SharePoint server to a farm in SharePoint Server 2016 (在 SharePoint Server 2016 中將 SharePoint 伺服器加入伺服器陣列)](https://technet.microsoft.com/library/cc261752(v=office.16).aspx)  
-[Add SharePoint server to a farm in SharePoint Server 2013 (在 SharePoint Server 2013 中將 SharePoint 伺服器加入伺服器陣列)](https://technet.microsoft.com/library/cc261752(v=office.15).aspx)
-  
-  
+
+## <a name="next-steps"></a>後續的步驟
+
+[Add SharePoint server to a farm in SharePoint Server 2016](https://technet.microsoft.com/library/cc261752(v=office.16).aspx)  
+[Add SharePoint server to a farm in SharePoint Server 2013](https://technet.microsoft.com/library/cc261752(v=office.15).aspx)
+
+更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)

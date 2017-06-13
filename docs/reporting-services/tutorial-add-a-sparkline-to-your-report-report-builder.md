@@ -1,55 +1,40 @@
 ---
-title: "教學課程：將走勢圖加入至報表 (報表產生器) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/15/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: "教學課程： 將走勢圖加入至報表 （報表產生器） |Microsoft 文件"
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: 18c90a36-48bf-4805-a960-2d1e8f00c2dc
 caps.latest.revision: 17
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 16
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: c4cc42eaf9862f2154f598d6f91dafffa906c799
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 教學課程：將走勢圖加入至報表 (報表產生器)
-在這個 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] 教學課程中，您會使用 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 編頁報表來建立含有走勢圖的基本資料表。   
+
+# <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>教學課程：將走勢圖加入至報表 (報表產生器)
+
+在這個 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)]教學課程中，您會使用 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 編頁報表來建立含有走勢圖的基本資料表。   
   
 走勢圖和資料橫條是簡單的小圖表，可在極小空間中傳達大量資訊，通常用於 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 報表中的資料表與矩陣。 您將建立的報表應類似下圖。  
   
 ![report-builder-sparkline-final](../reporting-services/media/report-builder-sparkline-final.png)  
-   
-## <a name="BackToTop"></a>學習內容  
-在本教學課程中，您將學習如何執行下列作業：  
-  
-1. [建立含資料表的報表](#CreateTable)  
-  
-2. [在資料表或矩陣精靈中建立查詢和資料表配置](#Query)
- 
-    2a. (選擇性) [將資料格式化為貨幣](#FormatCurrency)  
-  
-    2b. (選擇性) [將資料格式化為日期](#FormatDates)  
-  
-3. [將走勢圖加入至資料表](#Sparkline)  
-  
-4. [垂直與水平對齊走勢圖](#AlignSparklines)  
-  
-### 其他選擇性步驟  
-7. [變更資料行寬度](#Width)  
-  
-8. [加入報表標題](#Title)  
-  
-9. [儲存報表](#Save)  
-  
+     
 完成本教學課程的估計時間：30 分鐘。  
   
-## 需求  
+## <a name="requirements"></a>需求  
 如需需求的詳細資訊，請參閱[教學課程的必要條件 &#40;報表產生器&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md)。  
   
 ## <a name="CreateTable"></a>1.建立含資料表的報表  
@@ -67,7 +52,7 @@ caps.handback.revision: 16
 4.  在 [選擇資料集] 頁面上，選取 [建立資料集] > [下一步]。 **[選擇與資料來源的連接]** 頁面隨即開啟。  
   
     > [!NOTE]  
-    > 本教學課程無須任何特定資料，您只需要連接到 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 資料庫。 如果您已有資料來源連接列於 [資料來源連接] 底下，就可以選取該連接並移至步驟 10。 如需詳細資訊，請參閱[取得資料連接的替代方式 &#40;報表產生器&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)。  
+    > 本教學課程不需要特定的資料。您只需要 SQL Server 資料庫的連接。 如果您已有資料來源連接列於 [資料來源連接] 底下，就可以選取該連接並移至步驟 10。 如需詳細資訊，請參閱[取得資料連接的替代方式 &#40;報表產生器&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)。  
   
 5.  按一下 **[新增]**。 **[資料來源屬性]** 對話方塊隨即開啟。  
   
@@ -101,7 +86,7 @@ caps.handback.revision: 16
 > [!NOTE]  
 > 在本教學課程中，查詢會包含資料值，因此不需要外部資料來源。 這樣會使查詢相當冗長。 在商業環境中，查詢不會包含資料。 這僅供教學之用。  
   
-### 在資料表精靈中建立查詢和資料表配置 
+### <a name="to-create-a-query-and-table-layout-in-the-table-wizard"></a>在資料表精靈中建立查詢和資料表配置 
   
 1.  [設計查詢] 頁面上會開啟關聯式查詢設計工具。 在這個教學課程中，您將使用以文字為基礎的查詢設計工具。  
   
@@ -144,7 +129,7 @@ caps.handback.revision: 16
   
 4.  在查詢設計工具的工具列上，按一下 [執行] (**!**)。  
   
-    查詢隨即執行，並顯示 **SalesDate**、**Subcategory**、**Product**、**Sales** 和 **Quantity** 欄位的結果集。  
+    查詢隨即執行，並顯示 **SalesDate**、 **Subcategory**、 **Product**、 **Sales**和 **Quantity**欄位的結果集。  
   
 5.  按一下 **[下一步]**。  
   
@@ -178,18 +163,18 @@ caps.handback.revision: 16
   
 14. 資料表會加入至設計介面。 該資料表具有三個資料行和三個資料列。  
   
-    請查看 [群組] 窗格。 如果未顯示 [群組] 窗格，請按一下 [檢視] 功能表上的 [群組]。 [資料列群組] 窗格會顯示一個資料列群組：**Product**。 [資料行群組] 窗格會顯示一個資料行群組：**SalesDate**。 詳細資料是資料集查詢擷取的所有資料。  
+    請查看 [群組] 窗格。 如果未顯示 [群組] 窗格，請按一下 [檢視] 功能表上的 [群組]。 [資料列群組] 窗格會顯示一個資料列群組：**Product**。 [資料行群組] 窗格會顯示一個資料行群組： **SalesDate**。 詳細資料是資料集查詢擷取的所有資料。  
     
     ![report-builder-sparkline-grouping-pane](../reporting-services/media/report-builder-sparkline-grouping-pane.png)
   
 15. 按一下 **[執行]** 預覽報表。  
 
 ### <a name="FormatCurrency"></a>2a. 將資料格式化為貨幣  
-根據預設，**Sales** 欄位的摘要資料會顯示一般數字。 格式化該欄位，將數字顯示為貨幣。 切換 [預留位置樣式]，將格式化的文字方塊和預留位置文字顯示為範例值。  
+根據預設， **Sales** 欄位的摘要資料會顯示一般數字。 格式化該欄位，將數字顯示為貨幣。 切換 [預留位置樣式]，將格式化的文字方塊和預留位置文字顯示為範例值。  
   
 1.  按一下 **[設計]** ，切換到 [設計] 檢視。  
   
-2.  在 **SalesDate** 資料行中，按一下第二列的資料格 (位於欄標題資料列底下)。 按住 Ctrl 鍵，然後選取含有 `[Sum(Sales)]` 的所有資料格。 
+2.  在 **SalesDate** 資料行中，按一下第二列的資料格 (位於欄標題資料列底下)。 按住 Ctrl 鍵，然後選取含有 `[Sum(Sales)]`的所有資料格。 
 
     ![report-builder-select-sum-sales](../reporting-services/media/report-builder-select-sum-sales.png) 
   
@@ -202,7 +187,7 @@ caps.handback.revision: 16
     ![report-builder-placeholder-value-button](../reporting-services/media/report-builder-placeholder-value-button.png)
    
 ### <a name="FormatDates"></a>2b. (選擇性) 將資料格式化為日期  
-根據預設，**SalesDate** 欄位會同時顯示日期和時間資訊。 您可以將該欄位格式化，以便只顯示日期。  
+根據預設， **SalesDate** 欄位會同時顯示日期和時間資訊。 您可以將該欄位格式化，以便只顯示日期。  
   
 1.  按一下包含 `[SalesDate]` 的資料格。  
   
@@ -280,7 +265,7 @@ caps.handback.revision: 16
   
 若要減少每個資料列佔用的垂直空間數量，請展開資料行寬度以容納一行上資料行中預期的文字方塊內容。  
   
-### 變更資料行的寬度  
+### <a name="to-change-the-width-of-columns"></a>變更資料行的寬度  
   
 1.  按一下 **[設計]** 返回 [設計] 檢視。  
   
@@ -295,7 +280,7 @@ caps.handback.revision: 16
   
 您可以將不同的字型樣式、大小和色彩套用到文字的片語和個別字元，進一步加強文字。 如需詳細資訊，請參閱[格式化文字方塊中的文字 &#40;報表產生器及 SSRS&#41;](../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)。  
   
-### 若要加入報表標題  
+### <a name="to-add-a-report-title"></a>若要加入報表標題  
   
 1.  在設計介面上，按一下 **[按一下以加入標題]**。  
   
@@ -312,7 +297,7 @@ caps.handback.revision: 16
 ## <a name="Save"></a>9.儲存報表  
 將報表儲存至報表伺服器或您的電腦。 如果沒有將報表儲存到報表伺服器，就無法使用數個 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 功能，例如報表組件和子報表。  
   
-### 若要將報表儲存在報表伺服器上  
+### <a name="to-save-the-report-on-a-report-server"></a>若要將報表儲存在報表伺服器上  
   
 1.  在 **[報表產生器]** 按鈕中，按一下 **[另存新檔]**。  
   
@@ -328,7 +313,7 @@ caps.handback.revision: 16
   
 報表就會儲存至報表伺服器。 您連接之報表伺服器的名稱會顯示在視窗底部的狀態列中。  
   
-### 將報表儲存到您的電腦上  
+### <a name="to-save-the-report-on-your-computer"></a>將報表儲存到您的電腦上  
   
 1.  在 **[報表產生器]** 按鈕中，按一下 **[另存新檔]**。  
   
@@ -338,10 +323,11 @@ caps.handback.revision: 16
   
 4.  按一下 **[儲存]**。  
   
-## 後續步驟  
-這總結本教學課程：建立含走勢圖的資料表報表。 如需走勢圖的詳細資訊，請參閱[走勢圖和資料橫條 &#40;報表產生器和 SSRS&#41;](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)。  
+## <a name="next-steps"></a>後續步驟  
+
+這總結本教學課程：建立含走勢圖的資料表報表。 如需有關走勢圖的詳細資訊，請參閱[and Data Bars](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)。  
   
-## 另請參閱  
 [報表產生器教學課程](../reporting-services/report-builder-tutorials.md) 
 [SQL Server 2016 的報表產生器](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
-  
+
+更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)

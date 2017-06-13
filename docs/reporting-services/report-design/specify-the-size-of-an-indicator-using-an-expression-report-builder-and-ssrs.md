@@ -1,23 +1,28 @@
 ---
-title: "使用運算式指定指標的大小 (報表產生器及 SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "指定大小的指標使用運算式 （報表產生器及 SSRS） |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ab0b86f1-4882-4258-a2b6-c612faecfa4b
 caps.latest.revision: 7
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 7
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 50bf03c9ad36de5e98451705aaae5c0afa79c70b
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 使用運算式指定指標的大小 (報表產生器及 SSRS)
+# <a name="specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs"></a>使用運算式指定指標的大小 (報表產生器及 SSRS)
   除了色彩、方向和形狀之外，您還可以使用大小，將指標的視覺影像最大化。  
   
  指標包含一個名稱為 IndicatorStates 的指標狀態集合。 IndicatorStates 集合通常有多個狀態。 每個狀態都是集合的成員，而且會以一個圖示表示。 這些所有狀態就構成 IndicatorsStates 集合。  
@@ -34,7 +39,7 @@ caps.handback.revision: 7
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### 若要使用運算式指定指標圖示大小  
+### <a name="to-specify-the-indicator-icon-size-using-an-expression"></a>若要使用運算式指定指標圖示大小  
   
 1.  按一下您想要變更的指標。  
   
@@ -60,7 +65,7 @@ caps.handback.revision: 7
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## 請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [指標 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   
   

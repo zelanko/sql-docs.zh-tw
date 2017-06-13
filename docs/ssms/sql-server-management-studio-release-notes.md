@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 51e336a22d0c1052c48b8e569330aef26f2af094
+ms.sourcegitcommit: b68d454230d414ff52d90b4f3f71dd68ee65c6bc
+ms.openlocfilehash: 1733a789fb2dc17eea82ab22d4a50614d1fffc3b
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 04/26/2017
 
 ---
 # <a name="sql-server-management-studio----release-notes"></a>SQL Server Management Studio -  版本資訊
@@ -28,44 +28,36 @@ ms.lasthandoff: 04/11/2017
   
 下列為此版本 SQL Server Management Studio 版本的問題與限制：  
 
-1. **使用 Active Directory 通用驗證的 SSMS 執行個體只能以單一 Azure Active Directory 帳戶進行登入。**  
+1. **還原資料庫精靈會產生不正確的目的地資料庫檔案位置的路徑模式**
+   這是已知的問題，當 SSMS 連接到 Linux 伺服器。 即使路徑看起來不正確/奇數，就會正確處理伺服器端上，也就是沒有任何功能的問題。
+
+2. **檔案瀏覽器的問題**
+    - 時使用的 Windows 基礎 SQL Server 2017 CTP 2.0 的執行個體，可能無法開啟空的磁碟機或固定的磁碟受安裝 Bitlocker 保護之伺服器是否檔案瀏覽器在 SSMS 中的 UI。 
+    - 檔案瀏覽器 UI 已不再支援 SQL Server 2017 CTP 2.0 之前的版本。
+    
+
+
+3. **使用 Active Directory 通用驗證的 SSMS 執行個體只能以單一 Azure Active Directory 帳戶進行登入。**  
     此限制僅限於 Active Directory 通用驗證。您可以使用 Active Directory 密碼驗證、Active Directory 整合式驗證或 SQL Server 驗證登入不同的伺服器。
     
     因應措施為使用另一個 SSMS 執行個體來以另一個 Azure Active Directory 帳戶進行登入。 
     
-2. **Data-Tier Application Framework (DacFx) 命令和 SSMS 中的結構描述設計工具不支援 Active Directory 通用驗證。**  
+4. **Data-Tier Application Framework (DacFx) 命令和 SSMS 中的結構描述設計工具不支援 Active Directory 通用驗證。**  
     使用 DacFx 的命令 (例如匯入與匯出)、SSMS 中的結構描述設計工具，目前並不支援 Active Directory 通用驗證。
     
     因應措施為使用 SSMS 所提供的其他形式驗證：Active Directory 密碼驗證、Active Directory 整合式驗證或 SQL Server 驗證。
 
-3. **SSMS 只能連線到 SQL Server 2016 Integration Services (SSIS 2016) 執行個體。**  
+5. **SSMS 只能連線到 SQL Server 2016 Integration Services (SSIS 2016) 執行個體。**  
     SQL Server Integration Services 具有會防止連線到先前版本的已知相容性限制。
     
     此問題的因應措施為使用 [與您的 SSIS 執行個體對齊的 SSMS 版本](../ssms/previous-sql-server-management-studio-releases.md)來連線到您的 SQL Server Integration Service 執行個體。 
   
-4. **SSMS 不會儲存 SQL Server 2008 R2 和較早 SQL Server 版本的維護計畫。**  
+5. **SSMS 不會儲存 SQL Server 2008 R2 和較早 SQL Server 版本的維護計畫。**  
     這是一個我們希望能於未來解決的已知限制。 在此期間，您可以使用 [SSMS 2014 版本](../ssms/previous-sql-server-management-studio-releases.md) 來儲存維護計畫。  
     
 5. **非英文的 SSMS 安裝可能需要安裝額外的安全性套件。**  
 非英文的 SSMS 語言版本如果安裝在 Windows 8、Windows 7、Windows Server 2012 及 Windows Server 2008 R2，就需要 [KB 2862966 安全性更新程式封裝](https://support.microsoft.com/en-us/kb/2862966) 。
   
-6. **如果用戶端電腦上沒有安裝 SQL Server，SQL Server 組態管理員將無法啟動**  
-    如果您沒有在用戶端電腦上安裝 SQL Server，並啟動 SQL Server 組態管理員，您將會看見下列錯誤：   
-     `Cannot connect to WMI provider. You do not have permission or the server is unreachable. Note that you can only manage SQL Server 2005 and later servers with SQL Server Configuration Manager. Invalid namespace \[0x8004100e]`,   
-   
-     * 如果您已將 SQL Server 執行個體加入 SSMS 中的 [已註冊的伺服器] 清單：  
-        1. 瀏覽到 SSMS 中的 [已註冊的伺服器] 檢視。  
-        2. 以滑鼠右鍵按一下您想要設定的 SQL Server 執行個體。  
-        3. 從右鍵功能表選取 [SQL Server 組態管理員...]。    
-          
-      * 如果您尚未將 SQL Server 執行個體加入 SSMS 中的 [已註冊的伺服器] 清單：  
-        1. 以系統管理員身分開啟命令提示字元。  
-        2. 使用下列命令執行 Mofcomp 工具：  
-    `mofcomp "%programfiles(x86)%\Microsoft SQL Server\130\Shared\sqlmgmproviderxpsp2up.mof"`  
-        3. 執行 Mofcomp 工具之後，請執行下列命令以重新啟動 WMI 服務讓變更生效：  
-        `net stop "Windows Management Instrumentation"`  
-        `net start “Windows Management Instrumentation”`  
-
 ## <a name="feedback"></a>意見反應  
   
 ![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [SQL 用戶端工具論壇](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqltools) |  [在 Microsoft Connect 記錄問題或建議](https://connect.microsoft.com/SQLServer/Feedback)。  

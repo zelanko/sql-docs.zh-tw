@@ -1,23 +1,28 @@
 ---
-title: "為手機或平板電腦配置 Reporting Services 行動報表 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "配置 Reporting Services 行動報表的電話或平板電腦 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f8632816-068f-4a87-b15a-779387f3d3a3
 caps.latest.revision: 7
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 7
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 283c93958b4cb8bedc890e8af942db3bc3c13a41
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 為手機或平板電腦配置 Reporting Services 行動報表
-現在，您已[建立 Reporting Services 行動報表](../../reporting-services/mobile-reports/create-a-reporting-services-mobile-report.md) in [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-long.md)]，可以配置它的手機或平板電腦版本。  
+# <a name="lay-out-a-reporting-services-mobile-report-for-phone-or-tablet"></a>為手機或平板電腦配置 Reporting Services 行動報表
+現在，您已 [建立 Reporting Services 行動報表](../../reporting-services/mobile-reports/create-a-reporting-services-mobile-report.md) in [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-long.md)]，可以配置它的手機或平板電腦版本。  
   
 ![SSMRP_SalesTrendRptLayout](../../reporting-services/mobile-reports/media/ssmrp-salestrendrptlayout.png)   
 *行動報表的主要配置。*  
@@ -38,7 +43,8 @@ caps.handback.revision: 7
   
    ![SSMRP_PhonePreview](../../reporting-services/mobile-reports/media/ssmrp-phonepreview.png)  
   
-### 另請參閱  
+### <a name="see-also"></a>另請參閱  
 - [使用 SQL Server 行動報表發行工具建立與發行行動報表](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
   
   
+

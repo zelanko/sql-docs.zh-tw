@@ -1,23 +1,28 @@
 ---
-title: "備份與還原 Reporting Services SharePoint 服務應用程式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "備份與還原 Reporting Services SharePoint 服務應用程式 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: dfb4ed77-90e5-4273-b690-89a945508ed2
 caps.latest.revision: 12
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 11
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: a4f320a1e806dce3411137abc74f2fe07bab7217
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 備份與還原 Reporting Services SharePoint 服務應用程式
+# <a name="backup-and-restore-reporting-services-sharepoint-service-applications"></a>備份與還原 Reporting Services SharePoint 服務應用程式
   本主題描述如何使用 SharePoint 管理中心或 PowerShell 備份和還原 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式。 本主題包含：  
   
 -   [限制事項](#bkmk_Restrictions)  
@@ -33,7 +38,7 @@ caps.handback.revision: 11
 ###  <a name="bkmk_Restrictions"></a> 限制事項  
   
 > [!NOTE]  
->  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式。 **需要執行其他步驟** ，且這些步驟記錄在本主題中。 目前備份程序**不會**將自動執行帳戶 (UEA) 或 Windows 驗證的加密金鑰和認證備份至 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 資料庫。  
+>  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式。 **需要執行其他步驟** ，且這些步驟記錄在本主題中。 目前備份程序 **不會** 將自動執行帳戶 (UEA) 或 Windows 驗證的加密金鑰和認證備份至 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 資料庫。  
   
 ###  <a name="bkmk_recommendations"></a> 建議  
   
@@ -52,8 +57,8 @@ caps.handback.revision: 11
   
 3.  確認您的服務應用程式是否使用 UEA 或 Windows 驗證進行資料庫存取。 如果是的話，請記下認證，以便在還原服務應用程式之後使用認證進行設定。  
   
-### 使用管理中心備份加密金鑰  
- 如需備份 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 加密金鑰的資訊，請參閱[管理 Reporting Services SharePoint 服務應用程式](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)的＜加密金鑰＞一節。  
+### <a name="backup-the-encryption-keys-using-central-administration"></a>使用管理中心備份加密金鑰  
+ 如需備份 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 加密金鑰的資訊，請參閱 [管理 Reporting Services SharePoint 服務應用程式](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)的＜加密金鑰＞一節。  
   
 ###  <a name="bkmk_centraladmin"></a> 使用 SharePoint 管理中心備份服務應用程式  
  若要備份服務應用程式，請完成下列步驟：  
@@ -74,7 +79,7 @@ caps.handback.revision: 11
   
  [備份服務應用程式 (SharePoint Server 2010)](http://technet.microsoft.com/library/ee428318.aspx)  
   
-### 驗證執行帳戶和資料庫驗證  
+### <a name="verify-execution-account-and-database-authentication"></a>驗證執行帳戶和資料庫驗證  
  **執行帳戶** ：若要驗證您的服務應用程式是否使用執行帳戶：  
   
 1.  在 [SharePoint 管理中心] 的 **[應用程式管理]** 群組中，按一下 **[管理服務應用程式]** 。  
@@ -91,7 +96,7 @@ caps.handback.revision: 11
   
 2.  按一下服務應用程式的名稱，然後按一下 SharePoint 功能區中的 **[屬性]** 。  
   
-3.  檢閱 [Reporting Services (SSRS) 服務資料庫] 區段。  
+3.  檢閱 **[Reporting Services (SSRS) 服務資料庫]** 區段。  
   
 4.  如果設定了 Windows 驗證，則您必須知道認證，才能在還原之後設定服務應用程式。 如果不知道正確的認證，請不要進行備份和還原程序。  
   
@@ -104,7 +109,7 @@ caps.handback.revision: 11
   
 3.  如果您的服務應用程式使用執行帳戶或 Windows 驗證進行資料庫存取，請設定認證。  
   
-### 使用 SharePoint 管理中心還原服務應用程式  
+### <a name="restore-the-service-application-using-sharepoint-central-administration"></a>使用 SharePoint 管理中心還原服務應用程式  
   
 1.  在 [SharePoint 管理中心] 中，按一下 **[備份與還原]** 群組中的 **[從備份還原]** 。  
   
@@ -124,12 +129,12 @@ caps.handback.revision: 11
   
  [還原服務應用程式 (SharePoint Foundation 2010)](http://msdn.microsoft.com/library/ee748615.aspx)。  
   
- [Restore a service application (SharePoint Server 2010)](ttp://technet.microsoft.com/library/ee428305.aspx) (還原服務應用程式 (SharePoint Server 2010))。  
+ [Restore a service application (SharePoint Server 2010)](https://technet.microsoft.com/library/ee428305.aspx)(還原服務應用程式 (SharePoint Server 2010))。  
   
-### 使用管理中心還原加密金鑰  
- 如需還原 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 加密金鑰的資訊，請參閱[管理 Reporting Services SharePoint 服務應用程式](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)的＜加密金鑰＞一節。  
+### <a name="restore-the-encryption-keys-using-central-administration"></a>使用管理中心還原加密金鑰  
+ 如需還原 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 加密金鑰的資訊，請參閱 [管理 Reporting Services SharePoint 服務應用程式](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)的＜加密金鑰＞一節。  
   
-### 設定執行帳戶和資料庫驗證  
+### <a name="configure-the-execution-account-and-database-authentication"></a>設定執行帳戶和資料庫驗證  
  **執行帳戶** ：如果您的服務應用程式使用執行帳戶，請完成下列步驟設定該帳戶：  
   
 1.  在 [SharePoint 管理中心] 的 **[應用程式管理]** 群組中，按一下 **[管理服務應用程式]** 。  
@@ -148,7 +153,7 @@ caps.handback.revision: 11
   
 2.  按一下服務應用程式的名稱，然後按一下 SharePoint 功能區中的 **[屬性]** 。  
   
-3.  檢閱 [Reporting Services (SSRS) 服務資料庫] 區段。  
+3.  檢閱 **[Reporting Services (SSRS) 服務資料庫]** 區段。  
   
 4.  選取 **[Windows 驗證]**。  
   

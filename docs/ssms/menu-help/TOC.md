@@ -1,3 +1,4 @@
+# [SQL Server Management Studio 功能表說明 [SQL Server]](sql-server-management-studio-menu-help.md)
 # [屬性視窗 F1 說明 (Management Studio)](properties-window-f1-help-management-studio.md)
 # [選項 (環境 - 字型和色彩頁面)](options-environment-fonts-and-colors-page.md)
 # [選項 (環境 - 說明 - 一般頁面)](options-environment-help-general-page.md)
@@ -14,7 +15,6 @@
 # [視窗對話方塊 (Microsoft 文件總管說明)](windows-dialog-box-microsoft-document-explorer-help.md)
 # [進階儲存選項](advanced-save-options.md)
 # [另存新檔](save-as.md)
-# [SQL Server Management Studio 功能表說明](sql-server-management-studio-menu-help.md)
 # [自訂 (工具列頁面)](customize-toolbars-page.md)
 # [選項 (設計工具 - 維護計畫頁面)](options-designers-maintenance-plans-page.md)
 # [選擇搜尋資料夾對話方塊 (Visual Studio)](choose-search-folders-dialog-box-visual-studio.md)

@@ -1,26 +1,31 @@
 ---
-title: "格式化 Reporting Services 指令碼檔案 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "指令碼 [Reporting Services], 格式"
-  - "格式 [Reporting Services], 指令碼檔案"
+title: "格式化 Reporting Services 指令碼檔案 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- scripts [Reporting Services], formats
+- formats [Reporting Services], script files
 ms.assetid: 85a207dd-4e0f-4d40-a41e-0c75f65d719c
 caps.latest.revision: 43
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 43
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: de06ca0018df176e84db7e16e38c3c2021811fda
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 格式化 Reporting Services 指令碼檔案
+# <a name="format-a-reporting-services-script-file"></a>格式化 Reporting Services 指令碼檔案
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 指令碼是針對 Web Service Description Language (WSDL) 內建 Proxy 撰寫的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET 程式碼檔案，其中會定義 Reporting Services SOAP API。 指令碼檔案會儲存為 Unicode 或 UTF-8 文字檔，且其副檔名為 .rss。  
   
  指令碼檔案的用途如何 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 模組，而且可以包含使用者自訂程序和模組層次的變數。 若要讓指令碼檔案自動執行，則必須包含 Main 程序。 Main 程序是指令碼檔案執行時存取的第一個程序。 Main 是您可以加入 Web 服務作業並執行使用者自訂子程序的地方。 下列程式碼會建立 Main 程序：  
@@ -48,11 +53,11 @@ End Sub
 > [!IMPORTANT]  
 >  使用者認證會由指令碼環境所管理，並藉由使用 RS.exe，透過命令提示字元引數傳遞。 您可以使用 *rs* 變數來設定 Web 服務的驗證，但是建議您使用指令碼環境。 您不需要在指令碼檔案本身，驗證 Web 服務。 如需有關驗證指令碼環境的詳細資訊，請參閱 [RS.exe 公用程式 &#40;SSRS&#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md)。  
   
- 您沒有宣告指令碼檔案內的命名空間。 指令碼環境提供數個實用的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 命名空間供您使用：**System.Web.Services**、**System.Web.Services.Protocols**、**System.Xml** 和 **System.IO**。  
+ 您沒有宣告指令碼檔案內的命名空間。 指令碼環境提供數個實用的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 命名空間供您使用： **System.Web.Services**, **System.Web.Services.Protocols**, **System.Xml**和 **System.IO**。  
   
  如需指令碼範例，請參閱 [SQL Server Reporting Services 產品範例](http://go.microsoft.com/fwlink/?LinkId=177889)。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [報表伺服器 Web 服務](../../reporting-services/report-server-web-service/report-server-web-service.md)   
  [技術參考 &#40;SSRS&#41;](../../reporting-services/technical-reference-ssrs.md)   
  [RS.exe 公用程式 &#40;SSRS&#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md)  

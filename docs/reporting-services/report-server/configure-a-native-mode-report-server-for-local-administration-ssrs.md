@@ -1,31 +1,36 @@
 ---
-title: "設定原生模式報表伺服器進行本機管理 (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "UAC"
-  - "安裝 Reporting Services"
-  - "Windows Vista"
-  - "Localhost"
-  - "Windows Server 2008"
-  - "Vista"
+title: "設定原生模式報表伺服器進行本機管理 (SSRS) |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- UAC
+- installing Reporting Services
+- Windows Vista
+- Localhost
+- windows server 2008
+- Vista
 ms.assetid: 312c6bb8-b3f7-4142-a55f-c69ee15bbf52
 caps.latest.revision: 20
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 20
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9939a592288fb5bc031dc53b94ac21c3809d0314
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 設定原生模式報表伺服器進行本機管理 (SSRS)
-  如果您想要在本機管理報表伺服器執行個體，則在下列其中一個作業系統上部署 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器需要其他組態步驟。 本主題說明如何設定報表伺服器以進行本機管理。 如果您尚未安裝或設定報表伺服器，請參閱[從安裝精靈安裝 SQL Server 2016 &#40;安裝程式&#41;](../../database-engine/install-windows/install-sql-server-2016-from-the-installation-wizard-setup.md) 和[管理 Reporting Services 原生模式報表伺服器](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)。  
+# <a name="configure-a-native-mode-report-server-for-local-administration-ssrs"></a>設定原生模式報表伺服器進行本機管理 (SSRS)
+  如果您想要在本機管理報表伺服器執行個體，則在下列其中一個作業系統上部署 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器需要其他組態步驟。 本主題說明如何設定報表伺服器以進行本機管理。 如果您尚未安裝或設定報表伺服器，請參閱[從安裝精靈安裝 SQL Server 2016 &#40;安裝程式&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) 和[管理 Reporting Services 原生模式報表伺服器](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)。  
   
 ||  
 |-|  
@@ -62,7 +67,7 @@ caps.handback.revision: 20
 ##  <a name="bkmk_configuraiton_overview"></a> 組態變更概觀  
  下列組態變更會設定伺服器，好讓您可以使用標準使用者權限來管理報表伺服器內容和作業：  
   
--   將 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL 加入至信任的網站。 依預設，在列出的作業系統上執行的 Internet Explorer 會在 [受保護模式] 下執行，此功能會封鎖瀏覽器要求，使其無法到達相同電腦上執行的高層級處理序。 您可以為報表伺服器應用程式停用受保護模式，只要將這些應用程式加入為信任的網站即可。  
+-   將 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL 加入至信任的網站。 根據預設，在列出的作業系統上執行的 Internet Explorer 會在 **[受保護模式]**下執行，此功能會封鎖瀏覽器要求，使其無法到達相同電腦上執行的高層級處理序。 您可以為報表伺服器應用程式停用受保護模式，只要將這些應用程式加入為信任的網站即可。  
   
 -   建立授與您 (亦即報表伺服器管理員) 有權管理內容和作業的角色指派，而不需要使用 Internet Explorer 上的 **[以系統管理員身分執行]** 功能。 為 Windows 使用者帳戶建立角色指派，就可以使用內容管理員和系統管理員權限取得報表伺服器的存取權 (透過可取代 Reporting Services 建立之預先定義的內建角色指派的明確角色指派)。  
   
@@ -73,11 +78,11 @@ caps.handback.revision: 20
   
 ###  <a name="bkmk_site_settings"></a> 瀏覽器中受信任的站台設定  
   
-1.  使用 [以系統管理員身分執行] 權限開啟瀏覽器視窗。 從 [開始] 功能表按一下 [所有程式]，再以滑鼠右鍵按一下 [Internet Explorer]，並選取 [以系統管理員身分執行]。  
+1.  使用 [以系統管理員身分執行] 權限開啟瀏覽器視窗。 從 **[開始]** 功能表按一下 **[所有程式]**，再以滑鼠右鍵按一下 **[Internet Explorer]**，並選取 **[以系統管理員身分執行]**。  
   
 2.  按一下 **[允許]** 繼續進行。  
   
-3.  在 URL 網址中，輸入報表管理員 URL。 如需指示，請參閱《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的[報表管理員 &#40;SSRS 原生模式&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md)。  
+3.  在 URL 網址中，輸入報表管理員 URL。 如需指示，請參閱《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的[報表管理員 &#40;SSRS 原生模式&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)。  
   
 4.  按一下 **[工具]**。  
   
@@ -91,7 +96,7 @@ caps.handback.revision: 20
   
 9. 加入 `http://<your-server-name>`。  
   
-10. 如果您並未針對預設網站使用 HTTPS，請清除 [此區域內的所有網站需要伺服器驗證 (https:)] 核取方塊。  
+10. 如果您並未針對預設網站使用 HTTPS，請清除 **[此區域內的所有網站需要伺服器驗證 (https:)]** 核取方塊。  
   
 11. 按一下 **[加入]**。  
   
@@ -132,7 +137,7 @@ caps.handback.revision: 20
   
 8.  關閉報表管理員。  
   
-9. 在 Internet Explorer 中重新開啟報表管理員，而不使用 [以系統管理員身分執行]。  
+9. 在 Internet Explorer 中重新開啟報表管理員，而不使用 **[以系統管理員身分執行]**。  
   
 ##  <a name="bkmk_configure_ssms"></a> 若要設定 SQL Server Management Studio (SSMS) 來進行本機報表伺服器管理  
  根據預設，您無法存取 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中所提供的所有報表伺服器屬性，除非您使用系統管理權限啟動 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 。  
@@ -145,7 +150,7 @@ caps.handback.revision: 20
   
 -   在 **[安全性]** 節點中，按一下 **[系統角色]**。  
   
--   以滑鼠右鍵按一下 [系統管理員]，然後按一下 [屬性]。  
+-   以滑鼠右鍵按一下 **[系統管理員]** ，然後按一下 **[屬性]**。  
   
 -   在 **[系統角色屬性]** 頁面中，選取 **[檢視報表伺服器屬性]**。 選取您想要與系統管理員角色成員產生關聯的任何其他屬性。  
   
@@ -181,7 +186,7 @@ caps.handback.revision: 20
 ##  <a name="bkmk_addiitonal_informaiton"></a> 其他資訊  
  與 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 管理相關的額外且常見的組態步驟如下：在 Windows 防火牆中開啟通訊埠 80，以允許存取報表伺服器電腦。 如需指示，請參閱 [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [管理 Reporting Services 原生模式報表伺服器](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
   
   

@@ -2,7 +2,7 @@
 title: "時態表考量與限制 | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 01/24/2017
+ms.date: 05/22/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -16,10 +16,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 22bab0bc2c039e68a336ac827a3e2d028ca77c78
+ms.sourcegitcommit: 30791ad9733446f664db1592b95d1ffec5fc9a1b
+ms.openlocfilehash: 5ee3aa9223ae8ab832eff23a1da1755278e86d0b
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/23/2017
 
 ---
 # <a name="temporal-table-considerations-and-limitations"></a>時態表考量與限制
@@ -57,7 +57,9 @@ ms.lasthandoff: 04/11/2017
   
 -   不允許直接修改歷程記錄資料表中的資料。  
   
--   **ON DELETE CASCADE** 和 **ON UPDATE CASCADE** 不得位於目前資料表。 換言之，若時態表參考外部索引鍵關係中的資料表 (對應至 sys.foreign_keys 中的 *parent_object_id* )，則不允許 CASCADE 選項。 若要解決此限制，請使用應用程式邏輯或 after 觸發程序，以維持在主索引鍵資料表執行刪除的一致性 (對應至 sys.foreign_keys 中的  *referenced_object_id* )。 若主索引鍵資料表為時態，且參考資料表為非時態，則不會有這些限制。  
+-   **ON DELETE CASCADE** 和 **ON UPDATE CASCADE** 不得位於目前資料表。 換言之，若時態表參考外部索引鍵關係中的資料表 (對應至 sys.foreign_keys 中的 *parent_object_id* )，則不允許 CASCADE 選項。 若要解決此限制，請使用應用程式邏輯或 after 觸發程序，以維持在主索引鍵資料表執行刪除的一致性 (對應至 sys.foreign_keys 中的  *referenced_object_id* )。 若主索引鍵資料表為時態，且參考資料表為非時態，則不會有這些限制。 
+
+    **注意：**這項限制僅適用於 SQL Server 2016。 支援 CASCADE 選項[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]和 SQL Server 2017 CTP 2.0 從開始。  
   
 -   目前或歷程記錄資料表不允許使用**INSTEAD OF** 觸發程序，以避免使 DML 邏輯無效。 **AFTER** 觸發程序僅允許針對目前的資料表使用。 這些觸發程序在歷程記錄資料表上會遭到封鎖，以避免使 DML 邏輯無效。  
   

@@ -1,29 +1,34 @@
 ---
-title: "在關聯式查詢設計工具中建立查詢 (報表產生器及 SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "建立關聯式查詢設計工具 （報表產生器及 SSRS） 中的查詢 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 28b25861-f3b4-4c3e-a9b0-03d6e4cfea26
 caps.latest.revision: 7
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 7
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8f7c711b3cd56302b05d7dcf4f3045283c376d73
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 在關聯式查詢設計工具中建立查詢 (報表產生器及 SSRS)
+# <a name="build-a-query-in-the-relational-query-designer-report-builder-and-ssrs"></a>在關聯式查詢設計工具中建立查詢 (報表產生器及 SSRS)
   查詢設計工具可協助您針對報表資料集，指定要從外部資料來源擷取的資料。 當您在精靈中建置查詢或建立資料集查詢時，就會使用查詢設計工具。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
- 資料集是以資料來源為基礎。 資料來源的類型以及撰寫環境會決定當您定義資料集查詢時開啟的查詢設計工具。 查詢設計工具功能會因基礎資料來源而異。 如需資料層級的詳細資訊，請參閱[報表產生器中的資料連接、資料來源及連接字串](../Topic/Data%20Connections,%20Data%20Sources,%20and%20Connection%20Strings%20in%20Report%20Builder.md)或[資料連接、資料來源及連接字串 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
+ 資料集是以資料來源為基礎。 資料來源的類型以及撰寫環境會決定當您定義資料集查詢時開啟的查詢設計工具。 查詢設計工具功能會因基礎資料來源而異。 如需資料層級的詳細資訊，請參閱[報表產生器中的資料連接、資料來源及連接字串](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)或[資料連接、資料來源及連接字串 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
   
  您可以使用查詢設計工具進行下列工作：  
   
@@ -43,7 +48,7 @@ caps.handback.revision: 7
   
  如需詳細資訊，請參閱[關聯式查詢設計工具使用者介面 &#40;報表產生器&#41;](../../reporting-services/report-data/relational-query-designer-user-interface-report-builder.md)。  
   
-### 若要在報表設計檢視中建立內嵌資料集的查詢  
+### <a name="to-build-a-query-for-an-embedded-dataset-in-report-design-view"></a>若要在報表設計檢視中建立內嵌資料集的查詢  
   
 1.  開啟查詢設計工具。 在 [報表資料] 窗格中，以滑鼠右鍵按一下此資料集，然後按一下 [查詢]。  
   
@@ -61,7 +66,7 @@ caps.handback.revision: 7
   
      資料集欄位清單會出現在 [報表資料] 窗格中。  
   
-### 若要指定查詢的限制條件  
+### <a name="to-specify-limits-for-a-query"></a>若要指定查詢的限制條件  
   
 1.  在關聯式查詢設計工具中，確認您已選取欄位，且欄位出現在 **[選取的欄位]** 窗格中。  
   
@@ -81,22 +86,22 @@ caps.handback.revision: 7
   
  資料集欄位清單會出現在 [報表資料] 窗格中。  
   
-### 若要檢視查詢結果集  
+### <a name="to-view-a-query-result-set"></a>若要檢視查詢結果集  
   
 1.  在查詢設計工具工具列上，按一下 [執行查詢] (!)。  
   
     > [!NOTE]  
-    >  查詢設計工具會使用設計階段認證執行查詢和擷取結果集。 如需詳細資訊，請參閱[在報表產生器中指定認證](../Topic/Specify%20Credentials%20in%20Report%20Builder.md)。  
+    >  查詢設計工具會使用設計階段認證執行查詢和擷取結果集。 如需詳細資訊，請參閱 [在報表產生器中指定認證](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)。  
   
  查詢會在資料來源上執行，並將範例資料傳回 [查詢結果] 窗格。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [報表資料集 &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [從外部資料來源加入資料 &#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md)   
- [查詢設計工具 &#40;報表產生器&#41;](../Topic/Query%20Designers%20\(Report%20Builder\).md)   
+ [查詢設計工具 &#40;報表產生器&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)   
  [建立共用資料集或內嵌資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
  [報表設計檢視 &#40;報表產生器&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)   
  [共用資料集設計檢視 &#40;報表產生器&#41;](../../reporting-services/report-builder/shared-dataset-design-view-report-builder.md)   
- [Reporting Services 查詢設計工具](../Topic/Reporting%20Services%20Query%20Designers.md)  
+ [Reporting Services 查詢設計工具](http://msdn.microsoft.com/library/07efd3f1-804f-45f7-b62a-3e727a3d9835)  
   
   

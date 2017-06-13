@@ -1,27 +1,32 @@
 ---
-title: "rrRenderingError - Reporting Services 錯誤 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "rrRenderingError"
+title: "rrRenderingError-Reporting Services 錯誤 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- rrRenderingError
 ms.assetid: 0751efc3-b81b-44ee-8aac-8560f86ca322
 caps.latest.revision: 26
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 26
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1acdcb76215bc8f7a3ae1017649a3e3a2cbcdc94
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# rrRenderingError - Reporting Services 錯誤
+# <a name="rrrenderingerror---reporting-services-error"></a>rrRenderingError - Reporting Services 錯誤
     
-## 詳細資料  
+## <a name="details"></a>詳細資料  
   
 |||  
 |-|-|  
@@ -31,7 +36,7 @@ caps.handback.revision: 26
 |元件|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|  
 |訊息文字|轉譯報表期間發生錯誤。 (rrRenderingError) %1|  
   
-## 說明  
+## <a name="explanation"></a>說明  
  當 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 無法轉譯或匯出報表時，就會傳回這個訊息。  
   
  當指定的 RDL 頁面大小無效時，通常會產生一個訊息，指出不支援該大小。 請指定有效的 RDL 頁面大小，然後重試一遍。  
@@ -56,7 +61,7 @@ caps.handback.revision: 26
   
  當超出 Excel 工作表內的資料行數時，通常會產生一個訊息，指出資料行數超出每一工作表的最大可能資料行數。  
   
-## 使用者動作  
+## <a name="user-action"></a>使用者動作  
   
-## 僅供內部使用  
+## <a name="internal-only"></a>僅供內部使用  
   

@@ -1,27 +1,32 @@
 ---
-title: "第 3 課：使用報表精靈設計父報表 | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/18/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
+title: "第 3 課： 設計父報表使用報表精靈 |Microsoft 文件"
+ms.custom: 
+ms.date: 05/18/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+applies_to:
+- SQL Server 2016
 ms.assetid: 2f69dcd3-cd6d-45a9-a62a-ba6f5f3179d8
 caps.latest.revision: 9
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 9
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b491008866649087e050b04261bfde7a3ad82e92
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 第 3 課：使用報表精靈設計父報表
-在您建立父報表的資料連接和資料表之後，下一步是要使用報表設計師中的 [報表精靈] 設計父報表。 如需報表設計師的詳細資訊，請參閱[使用報表設計師設計報表 &#40;SSRS&#41;](../reporting-services/tools/design-reports-with-report-designer-ssrs.md)。  
+# <a name="lesson-3-design-the-parent-report-using-the-report-wizard"></a>第 3 課：使用報表精靈設計父報表
+在您建立父報表的資料連接和資料表之後，下一步是要使用報表設計師中的 [報表精靈] 設計父報表。 如需報表設計師的詳細資訊，請參閱[使用報表設計師設計報表 &#40;SSRS&#41;](../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md)。  
   
-### 若要使用報表精靈設計父報表  
+### <a name="to-design-the-parent-report-using-the-report-wizard"></a>若要使用報表精靈設計父報表  
   
 1.  請確認已在**方案總管**中選取頂層網站。  
   
@@ -49,8 +54,10 @@ caps.handback.revision: 9
   
 8.  儲存 .rdlc 檔。  
   
-## 下一項工作  
-您已使用 [報表精靈] 成功設計父報表。 接下來您將建立子報表的資料連接和資料表。 請參閱[第 4 課：定義子報表的資料連接和資料表](../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md)。  
+## <a name="next-task"></a>下一項工作  
+您已使用 [報表精靈] 成功設計父報表。 接下來您將建立子報表的資料連接和資料表。 請參閱 [第 4 課：定義子報表的資料連接和資料表](../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md)。  
   
   
   
+
+

@@ -1,30 +1,35 @@
 ---
-title: "將多值參數加入至報表 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "報表中加入多值參數 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 12ad0e77-4c28-4bbb-ab11-473ae89ec9f1
 caps.latest.revision: 7
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 7
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0411de7999d497b3198e6864d185cb54a4a5e1f5
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 將多值參數加入至報表
+# <a name="add-a-multi-value-parameter-to-a-report"></a>將多值參數加入至報表
   您可以在報表中新增參數，好讓使用者可以為參數選取多個值。  
   
- 您可以將多個參數值傳遞給報表 URL 中的報表。 如需包含多值參數的 URL 範例，請參閱[在 URL 內傳遞報表參數](../../reporting-services/pass-a-report-parameter-within-a-url.md)。  
+ 您可以將多個參數值傳遞給報表 URL 中的報表。 如需包含多值參數的 URL 範例，請參閱 [在 URL 內傳遞報表參數](../../reporting-services/pass-a-report-parameter-within-a-url.md)。  
   
- 如需如何將多個參數值傳遞給預存程序的詳細資訊，請參閱 mssqltips.com 上的[為 SSRS 報表處理複選參數](http://go.microsoft.com/fwlink/?LinkId=321529)。  
+ 如需如何將多個參數值傳遞給預存程序的詳細資訊，請參閱 mssqltips.com 上的 [為 SSRS 報表處理複選參數](http://go.microsoft.com/fwlink/?LinkId=321529) 。  
   
-## 若要加入多值參數  
+## <a name="to-add-a-multi-value-parameter"></a>若要加入多值參數  
   
 1.  在「報表產生器」中，開啟您要加入多值參數的報表。  
   
@@ -52,9 +57,9 @@ caps.handback.revision: 7
   
      可用值清單會將使用者可以做的選擇限制為參數的有效值。 如果是多個值，清單的最開頭是 **[全選]** 功能，好讓使用者只需按一下就可以選取或清除所有值。 如果您選擇從資料集查詢取得報表參數的可用值，請確定選取的資料集不能包含與相同報表參數有關聯的查詢變數。  
   
-     如需詳細資訊，請參閱[為報表參數加入、變更或刪除可用的值 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/add, change, or delete available values for a report parameter.md)。  
+     如需詳細資訊，請參閱[為報表參數加入、變更或刪除可用的值 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-available-values-for-a-report-parameter.md)。  
   
-## 若要加入多值參數  
+## <a name="to-add-a-multi-value-parameter"></a>若要加入多值參數  
   
 1.  在「報表產生器」中，開啟您要加入多值參數的報表。  
   
@@ -82,9 +87,9 @@ caps.handback.revision: 7
   
      可用值清單會將使用者可以做的選擇限制為參數的有效值。 如果是多個值，清單的最開頭是 **[全選]** 功能，好讓使用者只需按一下就可以選取或清除所有值。 如果您選擇從資料集查詢取得報表參數的可用值，請確定選取的資料集不能包含與相同報表參數有關聯的查詢變數。  
   
-     如需詳細資訊，請參閱[為報表參數加入、變更或刪除可用的值 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/add, change, or delete available values for a report parameter.md)。  
+     如需詳細資訊，請參閱[為報表參數加入、變更或刪除可用的值 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-available-values-for-a-report-parameter.md)。  
   
-## 請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [將串聯參數加入至報表 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
  [加入、變更或刪除報表參數 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)  
   

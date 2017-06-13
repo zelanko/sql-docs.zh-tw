@@ -1,24 +1,29 @@
 ---
-title: "Lesson 6: Adding Grouping and Totals (Reporting Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/23/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: "第 6 課： 加入群組和總計 (Reporting Services) |Microsoft 文件"
+ms.custom: 
+ms.date: 05/23/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
 caps.latest.revision: 56
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 56
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5e20b99d995151c14e6c334a647da14d3ff8f365
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# Lesson 6: Adding Grouping and Totals (Reporting Services)
+# <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lesson 6: Adding Grouping and Totals (Reporting Services)
 在本教學課程中，您會將群組和總計新增至 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 報表以組織和摘要資料。  
   
   
@@ -32,7 +37,7 @@ caps.handback.revision: 56
   
     請注意，資料列控制代碼中現在具有一個用來顯示群組的方括號。 資料表現在也具有兩個 [日期] 資料行 – 垂直虛線兩側各有一個。  
   
-    ![](../reporting-services/media/rs-basictablegroups1design.gif "rs_BasicTableGroups1Design")  
+    ![新增日期群組](../reporting-services/media/rs-basictablegroups1design.png "新增日期群組")  
   
 4.  將 **Order** 欄位從 [報表資料]  窗格拖曳到 [資料列群組]  窗格。 將它放在 [日期] 下方和 [(詳細資料)] 上方。
 
@@ -42,7 +47,7 @@ caps.handback.revision: 56
   
 5.  刪除雙線**右側**的原始 [日期] 和 [訂單] 資料行。 這樣會移除這個個別記錄值，所以只有群組值會顯示。 選取這兩個資料行的資料行控制代碼，並按一下滑鼠右鍵，然後按一下 [刪除資料行]。  
   
-    ![選取要刪除的資料行](../reporting-services/media/rs-basictablegroupsdeletecols.gif "選取要刪除的資料行")  
+    ![選取要刪除資料行](../reporting-services/media/rs-basictablegroupsdeletecols.gif "選取要刪除資料行")  
   
 6.  若要格式化新的日期資料行，請以滑鼠右鍵按一下含有 `[Date]` 欄位運算式的資料格，然後按一下 [文字方塊屬性]。  
   
@@ -50,10 +55,10 @@ caps.handback.revision: 56
   
 8.  在 **[類型]** 方塊中，選取 **[January 31, 2000]**。  
   
-9.  [!INCLUDE[clickOK](../includes/clickok-md.md)].  
+9.  [!INCLUDE[clickOK](../includes/clickok-md.md)]。  
   
 10.  切換到 **[預覽]** 索引標籤預覽報表。 報表應看起來類似下圖：  
-    ![rs_BasicTableGroupsPreview](../reporting-services/media/rs-basictablegroupspreview.gif) 
+    ![rs_BasicTableGroupsPreview](../reporting-services/media/rs-basictablegroupspreview.png) 
   
 ## <a name="bkmk_addtotals"></a>在報表中加入總計  
   
@@ -73,7 +78,7 @@ caps.handback.revision: 56
   
 6.  在 **[格式]** 功能表上，依序按一下 **[背景色彩]**、 **[淺灰]**和 **[確定]**。  
   
-    ![設計檢視：包含訂單總計的基本資料表](../reporting-services/media/rs-basictablesumlinetotaldesign.gif "設計檢視：包含訂單總計的基本資料表")  
+    ![設計檢視： 具有訂單總計的基本資料表](../reporting-services/media/rs-basictablesumlinetotaldesign.gif "設計檢視： 具有訂單總計的基本資料表")  
   
 ## <a name="bkmk_adddailytotal"></a>在報表中加入每日總計  
   
@@ -101,13 +106,13 @@ caps.handback.revision: 56
   
 4.  在 **[格式]** 功能表上，依序按一下 **[背景色彩]**、 **[淺藍]**和 **[確定]**。  
   
-    ![設計檢視：基本資料表中的總計](../reporting-services/media/rs-basictablesumgrandtotaldesign.gif "設計檢視：基本資料表中的總計")  
+    ![設計檢視： 基本資料表中的總計](../reporting-services/media/rs-basictablesumgrandtotaldesign.gif "設計檢視： 基本資料表中的總計")  
   
-5.  按一下 [預覽]。  
+5.  按一下 **[預覽]**。  
   
     最後一頁應該與下列影像類似。 在工具列中，按一下 [最後一頁] ![ssrs_ssdt_viewertoolbar_lastpage](../reporting-services/media/ssrs-ssdt-viewertoolbar-lastpage.png)按鈕，可選取色彩。   
   
-    ![預覽：包含總計的基本資料表](../reporting-services/media/rs-basictablesumgrandtotalpreview.gif "預覽：包含總計的基本資料表")  
+    ![預覽： 具有總計的基本資料表](../reporting-services/media/rs-basictablesumgrandtotalpreview.gif "預覽： 具有總計的基本資料表")  
   
 ## <a name="bkmk_publishreport"></a>若要將報表發行至報表伺服器 (選擇性)  
   
@@ -146,7 +151,7 @@ caps.handback.revision: 56
   
     瀏覽至 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] Web入口網站 URL。   
     **注意︰***portal* URL 是 "Reports"，而非 "Reportserver" 的 Report *Server* URL。  例如：   
-    - `http://<server name>/reports`.  
+    - `http://<server name>/reports`。  
      - `http://localhost/reports` 適用於在報表伺服器上設計報表時。  
   
 8.  瀏覽至包含報表的資料夾。 預設名稱是 *tutorial*，即專案名稱或輸入專案屬性中 TargetReportFolder 欄位的名稱。   
@@ -154,10 +159,12 @@ caps.handback.revision: 56
   
     ![ssrs_tutorial_tutorialfolder](../reporting-services/media/ssrs-tutorial-tutorialfolder.png)  
  
-** 您已成功完成「建立基本資料表報表」教學課程。**  
+貴用戶已成功完成 「 建立基本資料表報表 tutorial.* *  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
 [篩選、分組和排序資料 &#40;報表產生器及 SSRS&#41;](../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
   
   
+
+

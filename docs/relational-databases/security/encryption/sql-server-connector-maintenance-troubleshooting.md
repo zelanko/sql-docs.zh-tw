@@ -17,10 +17,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 7d93dd0a6eae5fead834526e86455717c6ed97e6
+ms.sourcegitcommit: c0e55c0e35039490f0ce4cd8a7fb6d7e232c05aa
+ms.openlocfilehash: 0218298a95d1e7df242b3ca7cbae657effead719
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 04/15/2017
 
 ---
 # <a name="sql-server-connector-maintenance-amp-troubleshooting"></a>SQL Server 連接器維護和疑難排解
@@ -166,7 +166,7 @@ ms.lasthandoff: 04/11/2017
  金鑰保存庫中的非對稱金鑰可用來保護 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 加密金鑰。 只有非對稱金鑰的公開部分可離開保存庫，保存庫絕不會匯出私用部分。 所有使用非對稱金鑰的密碼編譯作業都是在 Azure 金鑰保存庫服務內完成，並受到服務安全性的保護。  
   
  **什麼是金鑰 URI？**  
- Azure 金鑰保存庫中的每個金鑰都有統一資源識別碼 (URI)，可用來在您的應用程式中參考該金鑰。 使用 **https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey** 的格式來取得目前的版本，並使用 **https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey/cgacf4f763ar42ffb0a1gca546aygd87** 的格式來取得特定版本。  
+ Azure 金鑰保存庫中的每個金鑰都有統一資源識別碼 (URI)，可用來在您的應用程式中參考該金鑰。 使用格式`https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey`來取得最新版本，並使用格式`https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey/cgacf4f763ar42ffb0a1gca546aygd87`來取得特定版本。  
   
 ### <a name="on-configuring-includessnoversionincludesssnoversion-mdmd"></a>設定時 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
 

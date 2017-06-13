@@ -1,26 +1,31 @@
 ---
-title: "Hyperion Essbase 連接類型 (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Hyperion Essbase 連接類型 (SSRS) |Microsoft 文件"
+ms.custom: 
+ms.date: 03/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 108a00b6-799f-4066-b796-da59e95c09fd
 caps.latest.revision: 10
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 9
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 1002bb2ff985a9ee5c2eeaade2377789c136f248
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# Hyperion Essbase 連接類型 (SSRS)
-  若要在報表中包含來自 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 外部資料來源的資料，您必須具有以 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)]類型之報表資料來源為基礎的資料集。 這種內建資料來源類型的建構基礎是 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 的資料延伸模組，而這個延伸模組可以讓您從 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 外部資料來源擷取多維度資料。  
+# <a name="hyperion-essbase-connection-type-ssrs"></a>Hyperion Essbase 連接類型 (SSRS)
+  若要在報表中包含來自 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 外部資料來源的資料，您必須具有以 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)]類型之報表資料來源為基礎的資料集。 這種內建資料來源類型的建構基礎是 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)]的資料延伸模組，而這個延伸模組可以讓您從 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 外部資料來源擷取多維度資料。  
   
- 您可以使用本主題中的資訊來建置資料來源。 如需逐步指示，請參閱 [Add and Verify a Data Connection &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md) (加入及驗證資料連接 (報表產生器及 SSRS))。  
+ 您可以使用本主題中的資訊來建置資料來源。 如需逐步指示，請參閱 [加入及驗證資料連接 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)類型之報表資料來源為基礎的資料集。  
   
 ##  <a name="Connection"></a> 連接字串  
  下列連接字串範例會指定伺服器上的 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 資料來源使用通訊埠 13080，並指定網際網路上的 XML for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (XMLA) 使用 SOAP，以連接到範例目錄：  
@@ -29,18 +34,16 @@ caps.handback.revision: 9
 Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample  
 ```  
   
- 如需連接字串範例的詳細資訊，請參閱[報表產生器中的資料連接、資料來源及連接字串](../Topic/Data%20Connections,%20Data%20Sources,%20and%20Connection%20Strings%20in%20Report%20Builder.md)。  
+ 如需連接字串範例的詳細資訊，請參閱 [報表產生器中的資料連接、資料來源及連接字串](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)。  
   
- ![搭配回到頁首連結使用的箭頭圖示](../../analysis-services/instances/media/uparrow16x16.png "搭配回到頁首連結使用的箭頭圖示") [回到頁首](#BackToTop)  
   
 ##  <a name="Credentials"></a> 認證  
  需要有認證才能夠執行報表、於本機預覽報表並且從報表伺服器預覽報表。  
   
  發行報表之後，您可能需要變更資料來源的認證，如此當報表在報表伺服器上執行時，擷取資料的權限就會是有效的。  
   
- 如需詳細資訊，請參閱 [Data Connections, Data Sources, and Connection Strings &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) (資料連接、資料來源及連接字串 (報表產生器和 SSRS)) 或[在報表產生器中指定認證](../Topic/Specify%20Credentials%20in%20Report%20Builder.md)。  
+ 如需詳細資訊，請參閱[資料連接、資料來源及連接字串 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) 或[在報表產生器中指定認證](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)。  
   
- ![搭配回到頁首連結使用的箭頭圖示](../../analysis-services/instances/media/uparrow16x16.png "搭配回到頁首連結使用的箭頭圖示") [回到頁首](#BackToTop)  
   
 ##  <a name="Query"></a> 查詢  
  您可以利用下列方式指定查詢：  
@@ -51,7 +54,7 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
     -   **查詢檢視** ：將維度、成員、成員屬性、量值和 KPI 從中繼資料瀏覽器拖曳到 [查詢] 窗格，以建立 MDX 查詢。 您可以在 [查詢] 窗格中直接編輯 MDX 文字。 請將導出成員從 [導出成員] 窗格拖曳到 [查詢] 窗格，以便定義其他資料集欄位。  
   
-     如需詳細資訊，請參閱 [Hyperion Essbase 查詢設計工具使用者介面 &#40;報表產生器&#41;](../Topic/Hyperion%20Essbase%20Query%20Designer%20User%20Interface%20\(Report%20Builder\).md)。  
+     如需詳細資訊，請參閱 [Hyperion Essbase 查詢設計工具使用者介面 &#40;報表產生器&#41;](http://msdn.microsoft.com/library/d89a6773-dbe5-48e5-bda9-db0e67100696)。  
   
 -   從報表匯入現有的 MDX 查詢。 請使用 **[匯入查詢]** 按鈕來瀏覽到 .rdl 檔案，然後匯入查詢。 您可以從包含以 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 資料來源為基礎之內嵌資料集的報表匯入查詢。 不支援直接從 .mdx 檔案匯入 MDX 查詢。  
   
@@ -59,13 +62,11 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
  [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 資料處理延伸模組支援擴充資料集欄位屬性。 這些值可從外部資料來源取得，但是不會出現在 [報表資料] 窗格中。 如需詳細資訊，請參閱本主題後面的＜ [擴充欄位屬性](#Extended) ＞。  
   
- ![搭配回到頁首連結使用的箭頭圖示](../../analysis-services/instances/media/uparrow16x16.png "搭配回到頁首連結使用的箭頭圖示") [回到頁首](#BackToTop)  
   
-##  <a name="Parameters"></a> 若要包含查詢參數，請在查詢設計工具的篩選區域中建立篩選，然後再將該篩選標示成參數。 系統會針對每一個篩選自動建立一個資料集，以提供可用的值。 根據預設，這些資料集不會出現在 [報表資料] 窗格內。 如需詳細資訊，請參閱 [Show Hidden Datasets for Parameter Values for Multidimensional Data &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/show hidden datasets for parameter values - multidimensional data.md) (針對多維度資料的參數值顯示隱藏的資料集 (報表產生器及 SSRS))。  
+##  <a name="Parameters"></a> 若要包含查詢參數，請在查詢設計工具的篩選區域中建立篩選，然後再將該篩選標示成參數。 系統會針對每一個篩選自動建立一個資料集，以提供可用的值。 根據預設，這些資料集不會出現在 [報表資料] 窗格內。 如需詳細資訊，請參閱 [Show Hidden Datasets for Parameter Values for Multidimensional Data &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/show-hidden-datasets-for-parameter-values-multidimensional-data.md) (針對多維度資料的參數值顯示隱藏的資料集 (報表產生器及 SSRS))。  
   
- 根據預設，每個報表參數都具有 **[文字]**資料類型。 建立報表參數後，您可能必須變更預設值。 如需詳細資訊，請參閱[報表參數 &#40;報表產生器和報表設計師&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)。  
+ 根據預設，每個報表參數都具有 **[文字]**資料類型。 建立報表參數後，您可能必須變更預設值。 如需詳細資訊，請參閱 [報表參數 &#40;報表產生器和報表設計師&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)類型之報表資料來源為基礎的資料集。  
   
- ![搭配回到頁首連結使用的箭頭圖示](../../analysis-services/instances/media/uparrow16x16.png "搭配回到頁首連結使用的箭頭圖示") [回到頁首](#BackToTop)  
   
 ##  <a name="Extended"></a> 擴充欄位屬性  
  [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 資料處理延伸模組支援擴充欄位屬性。 擴充欄位屬性是資料集欄位 **Value** 和 **IsMissing** 以外的屬性，由資料處理延伸模組所定義。 擴充屬性包括預先定義的屬性和自訂屬性。 預先定義的屬性是多個資料來源常用的屬性。 自訂屬性對於每個資料來源都是唯一的屬性。  
@@ -77,10 +78,9 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
 > [!NOTE]  
 >  只有在 MDX 運算式中包含擴充欄位屬性值，而且資料來源會在您的報表執行並擷取其資料集之資料時提供這些值，擴充欄位屬性的值才會存在。 這樣，您就可以利用以下章節所述的語法，從任何運算式參考那些 **Field** 屬性值。 然而，由於這些欄位是此資料提供者的特定欄位，而且不屬於報表定義語言的一部分，因此您對這些值所進行的變更並不會和報表定義儲存在一起。  
   
- ![搭配回到頁首連結使用的箭頭圖示](../../analysis-services/instances/media/uparrow16x16.png "搭配回到頁首連結使用的箭頭圖示") [回到頁首](#BackToTop)  
   
-### 預先定義的欄位屬性  
- 預先定義的欄位屬性一般是由多個資料提供者支援，而且會出現在報表資料集的 MDX 基礎查詢中。 例如，MDX 維度屬性 MEMBER_UNIQUE_NAME 會對應到預先定義的報表資料集欄位屬性 **UniqueName**。 若要在文字方塊中包含唯一的名稱值，請使用運算式 `=Fields!`\<欄位名稱>`.UniqueName`。  
+### <a name="predefined-field-properties"></a>預先定義的欄位屬性  
+ 預先定義的欄位屬性一般是由多個資料提供者支援，而且會出現在報表資料集的 MDX 基礎查詢中。 例如，MDX 維度屬性 MEMBER_UNIQUE_NAME 會對應到預先定義的報表資料集欄位屬性 **UniqueName**。 若要在文字方塊中包含唯一的名稱值，使用運算式`=Fields!`  *\<FieldName >*`.UniqueName`。  
   
  下表提供可用在 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 資料來源之預先定義的欄位屬性清單。  
   
@@ -93,12 +93,11 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
 |**Color**|**字串**|傳回資料庫中為項目定義的前景色彩。<br /><br /> 從 MDX 運算式中的 FORE_COLOR 對應。|  
 |**UniqueName**|**字串**|傳回層級的完整名稱。<br /><br /> 從 MDX 運算式中的 MEMBER_UNIQUE_NAME 對應。|  
   
- 如需如何在運算式中使用欄位及欄位屬性的詳細資訊，請參閱 [Built-in Collections in Expressions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder-and-ssrs.md) (運算式中的內建集合 (報表產生器及 SSRS))。  
+ 如需如何在運算式中使用欄位及欄位屬性的詳細資訊，請參閱 [Built-in Collections in Expressions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md) (運算式中的內建集合 (報表產生器及 SSRS))。  
   
- ![搭配回到頁首連結使用的箭頭圖示](../../analysis-services/instances/media/uparrow16x16.png "搭配回到頁首連結使用的箭頭圖示") [回到頁首](#BackToTop)  
   
-### 自訂屬性  
- 自訂欄位屬性是由資料提供者支援，而且會出現在報表資料集的 MDX 基礎查詢中，但不會出現在報表的 [資料集] 窗格中，當做該資料集下的欄位。 例如， **[Long Names]** 是一個針對維度層級而定義的成員屬性。 若要在文字方塊中包含值，您可以使用運算式 `=Fields!`\<欄位名稱>`("Long Names")`。 運算式中的欄位名稱會區分大小寫。  
+### <a name="custom-properties"></a>自訂屬性  
+ 自訂欄位屬性是由資料提供者支援，而且會出現在報表資料集的 MDX 基礎查詢中，但不會出現在報表的 [資料集] 窗格中，當做該資料集下的欄位。 例如， **[Long Names]** 是一個針對維度層級而定義的成員屬性。 若要在文字方塊中包含值，您可以使用運算式`=Fields!`  *\<FieldName >*`("Long Names")`。 運算式中的欄位名稱會區分大小寫。  
   
  請使用下列語法來參考運算式中自訂的擴充屬性：  
   
@@ -110,14 +109,12 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
 |------------------|--------------|---------------------------------------|  
 |**FORMAT_STRING**|**字串**|在量值上的定義，這是可當做 String 類型使用的 **FormattedValue** 。|  
   
- ![搭配回到頁首連結使用的箭頭圖示](../../analysis-services/instances/media/uparrow16x16.png "搭配回到頁首連結使用的箭頭圖示") [回到頁首](#BackToTop)  
   
 ##  <a name="Remarks"></a> 備註  
  這個資料提供者並沒有支援所有的報表傳遞模式。 這個資料處理延伸模組不支援透過資料驅動訂閱所傳遞的報表。 如需詳細資訊，請參閱 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [線上叢書](http://go.microsoft.com/fwlink/?linkid=121312)中 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文件集的 [Use an External Data Source for Subscriber Data &#40;Data-Driven Subscription&#41;](../../reporting-services/subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md) (使用外部資料來源以取得訂閱者資料 (資料驅動訂閱))。  
   
  如需詳細資訊，請參閱＜ [使用 SQL Server 2005 Reporting Services 搭配 Hyperion Essbase](http://go.microsoft.com/fwlink/?LinkId=81970)＞。  
   
- ![搭配回到頁首連結使用的箭頭圖示](../../analysis-services/instances/media/uparrow16x16.png "搭配回到頁首連結使用的箭頭圖示") [回到頁首](#BackToTop)  
   
 ##  <a name="HowTo"></a> 如何主題  
  本節包含使用資料連接、資料來源與資料集的逐步指示：  
@@ -128,7 +125,6 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
  [將篩選加入資料集中 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
- ![搭配回到頁首連結使用的箭頭圖示](../../analysis-services/instances/media/uparrow16x16.png "搭配回到頁首連結使用的箭頭圖示") [回到頁首](#BackToTop)  
   
 ##  <a name="Related"></a> 相關章節  
  本文件集的這些章節會提供報表資料的深入概念性資訊，以及如何定義、自訂和使用與報表資料相關組件的程序資訊。  
@@ -136,24 +132,23 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
  [報表資料集 &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
  提供存取報表資料的概觀。  
   
- [報表產生器中的資料連接、資料來源及連接字串](../Topic/Data%20Connections,%20Data%20Sources,%20and%20Connection%20Strings%20in%20Report%20Builder.md)  
+ [報表產生器中的資料連接、資料來源及連接字串](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
  提供資料連接與資料來源的相關資訊。  
   
  [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
  提供內嵌與共用資料集的相關資訊。  
   
- [資料集欄位集合 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
+ [資料集 Fields 集合 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
  提供資料集查詢所產生之欄位集合的相關資訊。  
   
- 《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [線上叢書》](http://go.microsoft.com/fwlink/?linkid=121312)中 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文件的 [Reporting Services &#40;SSRS&#41; 支援的資料來源](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。  
+ 《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [線上叢書](http://go.microsoft.com/fwlink/?linkid=121312)》中 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文件的 [Reporting Services &#40;SSRS&#41; 支援的資料來源](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。  
  提供支援每一個資料延伸模組之平台與版本的深入資訊。  
   
  [使用 SQL Server 2005 Reporting Services 搭配 Hyperion Essbase](http://go.microsoft.com/fwlink/?LinkId=81970)  
  提供有關使用這個資料延伸模組的詳細資訊。  
   
- ![搭配回到頁首連結使用的箭頭圖示](../../analysis-services/instances/media/uparrow16x16.png "搭配回到頁首連結使用的箭頭圖示") [回到頁首](#BackToTop)  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [報表參數 &#40;報表產生器和報表設計師&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
  [篩選、分組和排序資料 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [運算式 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  

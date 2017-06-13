@@ -1,31 +1,36 @@
 ---
-title: "更新資源 (報表管理員) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "更新資源"
-  - "資源 [Reporting Services], 更新"
+title: "更新資源 （報表管理員） |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- updating resources
+- resources [Reporting Services], updating
 ms.assetid: d21f7493-bcf7-4e9e-9886-55ebdc1f1037
 caps.latest.revision: 17
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 17
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d0650fb86cd929d67170f54adec1424c36467dcc
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 更新資源 (報表管理員)
+# <a name="update-a-resource-report-manager"></a>更新資源 (報表管理員)
   您可以使用新版本來取代舊版本，以此方式更新資源。 資源是一些項目，儲存在包含您上傳之檔案中之內容的報表伺服器上。 您可以將新的或不同的檔案內容匯入現有的資源，以取代現有的資源。 更新資源提供一種方式，可以更新內容，同時保留資源的現有屬性與安全性設定。  
   
-### 若要更新資源  
+### <a name="to-update-a-resource"></a>若要更新資源  
   
-1.  啟動[報表管理員 &#40;SSRS 原生模式&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md)。  
+1.  啟動[報表管理員 &#40;SSRS 原生模式&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)。  
   
 2.  在報表管理員中，導覽至或搜尋您要更新的資源。  
   
@@ -43,10 +48,10 @@ caps.handback.revision: 17
   
  如果您更新的資源包含在報表中所使用的影像，您就需要重新整理報表才看得到更新的影像。  
   
-## 請參閱＜  
- [內容頁面 &#40;報表管理員&#41;](../Topic/Contents%20Page%20\(Report%20Manager\).md)   
- [上傳檔案頁面 &#40;報表管理員&#41;](../Topic/Upload%20File%20Page%20\(Report%20Manager\).md)   
+## <a name="see-also"></a>請參閱＜  
+ [內容頁面 &#40;報表管理員&#41;](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
+ [上傳檔案頁面 &#40;報表管理員&#41;](http://msdn.microsoft.com/library/7bb3166f-9374-4449-b66a-ffb77298507d)   
  [上傳檔案到資料夾](../../reporting-services/report-server/upload-files-to-a-folder.md)   
- [報表管理員 F1 說明](../Topic/Report%20Manager%20F1%20Help.md)  
+ [報表管理員 F1 說明](http://msdn.microsoft.com/library/e0137273-85b8-45f0-83e5-38a50481768f)  
   
   

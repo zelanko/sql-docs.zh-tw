@@ -1,37 +1,44 @@
 ---
-title: "Reporting Services Report Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/14/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-helpviewer_keywords: 
-  - "security [Reporting Services], extensions"
-  - "report servers [Reporting Services], about report server"
-  - "rendering extensions [Reporting Services], about extensions"
-  - "extensions [Reporting Services], about extensions"
-  - "storing data [Reporting Services]"
-  - "report servers [Reporting Services]"
-  - "data processing extensions [Reporting Services], about extensions"
-  - "delivery extensions [Reporting Services], about extensions"
-  - "data storage [Reporting Services]"
-  - "components [Reporting Services], report server"
-  - "report processing [Reporting Services], extensions"
-  - "Web service [Reporting Services], report server"
-  - "storage [Reporting Services]"
+title: "Reporting Services 報表伺服器 |Microsoft 文件"
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+helpviewer_keywords:
+- security [Reporting Services], extensions
+- report servers [Reporting Services], about report server
+- rendering extensions [Reporting Services], about extensions
+- extensions [Reporting Services], about extensions
+- storing data [Reporting Services]
+- report servers [Reporting Services]
+- data processing extensions [Reporting Services], about extensions
+- delivery extensions [Reporting Services], about extensions
+- data storage [Reporting Services]
+- components [Reporting Services], report server
+- report processing [Reporting Services], extensions
+- Web service [Reporting Services], report server
+- storage [Reporting Services]
 ms.assetid: 88ed5b97-1d28-4980-80e4-b36761f3c03a
 caps.latest.revision: 93
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 92
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: ef2c94d2ee518262825d3e34bfb181ddb921690d
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# Reporting Services Report Server
+
+# <a name="reporting-services-report-server"></a>Reporting Services Report Server
+
 深入了解 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝的核心。 它是由處理引擎以及擴充功能所組成，以增加功能。
 
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器會在兩種部署模式的其中一個模式下執行，也就是原生模式或 SharePoint 模式。 請參閱 [SharePoint 和原生模式的功能比較](#bkmk_featuresupport) 一節中的功能比較。  
@@ -61,15 +68,15 @@ caps.handback.revision: 92
   
 -   **SharePoint 模式**：在該模式下，報表伺服器會安裝為 SharePoint 伺服器陣列的一部分。  您可以使用 PowerShell 命令或 SharePoint 內容管理頁面來部署和設定 SharePoint 模式。  
   
- 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，您無法將報表伺服器從一種模式切換為另一種模式。 如果您要變更環境使用的報表伺服器類型，則必須安裝所需的報表伺服器模式，然後將報表項目或報表伺服器資料庫從舊版報表伺服器複製或移動到新的報表伺服器。 這種程序通常稱為「移轉」。 移轉所需的步驟，取決於您要移轉到哪個模式以及您要從哪個版本移轉。 如需詳細資訊，請參閱＜ [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)＞  
+ SQL Server Reporting Services 中，您無法切換到另一種模式從報表伺服器。 如果您要變更環境使用的報表伺服器類型，則必須安裝所需的報表伺服器模式，然後將報表項目或報表伺服器資料庫從舊版報表伺服器複製或移動到新的報表伺服器。 這種程序通常稱為「移轉」。 移轉所需的步驟，取決於您要移轉到哪個模式以及您要從哪個版本移轉。 如需詳細資訊，請參閱＜ [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)＞  
   
-##  <a name="bkmk_featuresupport"></a> SharePoint 和原生模式的功能比較  
+##  <a name="bkmk_featuresupport"></a>SharePoint 和原生模式的功能比較  
   
 |功能或元件|原生模式|SharePoint 模式|  
 |--------------------------|-----------------|---------------------|  
 |**URL 定址**|是|SharePoint 整合模式中的 URL 定址不同。 在參考報表、報表模型、共用資料來源和資源時會使用 SharePoint URL， 而不使用報表伺服器資料夾階層。 如果您所擁有的自訂應用程式依賴原生模式報表伺服器所支援的 URL 存取，當報表伺服器設定成 SharePoint 整合時，該功能將無法再運作。<br /><br /> 如需有關 URL 存取的詳細資訊，請參閱 [URL 存取參數參考](../../reporting-services/url-access-parameter-reference.md)|  
 |**自訂安全性延伸模組**|是|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 自訂安全性延伸模組無法在報表伺服器上部署或使用。 報表伺服器包含一個特殊用途的安全性延伸模組，每當您將報表伺服器設定為以 SharePoint 整合模式執行，就會使用此延伸模組。 此安全性延伸模組為內部元件，而且它是整合作業的必要項目。|  
-|**組態管理員**|是|**\*\*重要事項 \*\*** 組態管理員無法用來管理 SharePoint 模式報表伺服器。 請改用 SharePoint 管理中心。|  
+|**組態管理員**|是|**\*\* 重要事項 \*\*** 組態管理員無法用來管理 SharePoint 模式報表伺服器。 請改用 SharePoint 管理中心。|  
 |**報表管理員**|是|報表管理員無法用來管理 SharePoint 模式。 請使用 SharePoint 應用程式頁面。 如需詳細資訊，請參閱 [Reporting Services SharePoint 服務和服務應用程式](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md)。|  
 |**連結報表**|是|資料分割|  
 |**我的報表**|是|否|  
@@ -112,7 +119,7 @@ caps.handback.revision: 92
   
  ![SSRS SharePoint 功能架構](../../reporting-services/report-server-sharepoint/media/rs-sharepoint-architecture.gif "SSRS SharePoint 功能架構")  
   
-||說明|  
+||Description|  
 |-|-----------------|  
 |**(1)**|Web 伺服器或 Web 前端 (WFE)。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 增益集必須安裝在您想要從中使用 Web 應用程式功能 (例如檢視報表) 或使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 管理頁面進行工作 (例如管理資料來源或訂閱) 的每部 Web 伺服器上。|  
 |**(2)**|此增益集會安裝 URL 和 SOAP 端點，讓用戶端能夠透過 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務 Proxy 與應用程式伺服器通訊。|  
@@ -125,7 +132,7 @@ caps.handback.revision: 92
  報表伺服器包含兩個處理引擎，這兩個引擎會執行初步與中繼的報表處理，以及排程與傳遞作業。 報表處理器會擷取報表定義或模型、將配置資訊與資料處理延伸模組中的資料結合，以及使用要求的格式來轉譯。 排程與傳遞處理序會處理從排程觸發的報表，並將報表傳遞至目標目的地。  
   
 ##  <a name="bkmk_reportdatabase"></a> 報表伺服器資料庫  
- 報表伺服器是無狀態伺服器，它會將所有屬性、物件與中繼資料儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中。 儲存的資料包括已發行的報表、已編譯的報表、報表模型，以及資料夾階層，該階層會提供報表伺服器所管理之所有項目的定址。 報表伺服器資料庫可以提供單一 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝的內部儲存，或者屬於向外延展部署之多個報表伺服器的內部儲存。 如果您設定要在 SharePoint 產品或技術的大型部署中執行的報表伺服器，報表伺服器除了報表伺服器資料庫之外，還會使用 SharePoint 資料庫。 如需有關在 Reporting Services 中使用之資料存放區的詳細資訊，請參閱[報表伺服器資料庫 &#40;SSRS 原生模式&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)。  
+ 報表伺服器是無狀態伺服器，它會將所有屬性、物件與中繼資料儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中。 儲存的資料包括已發行的報表、已編譯的報表、報表模型，以及資料夾階層，該階層會提供報表伺服器所管理之所有項目的定址。 報表伺服器資料庫可以提供單一 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝的內部儲存，或者屬於向外延展部署之多個報表伺服器的內部儲存。 如果您設定要在 SharePoint 產品或技術的大型部署中執行的報表伺服器，報表伺服器除了報表伺服器資料庫之外，還會使用 SharePoint 資料庫。 如需有關在 Reporting Services 中使用之資料存放區的詳細資訊，請參閱 [報表伺服器資料庫 &#40;SSRS 原生模式&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)。  
   
 ##  <a name="bkmk_authentication"></a> 驗證、轉譯、資料和傳遞延伸模組  
  報表伺服器支援以下類型的延伸模組：驗證延伸模組、資料處理延伸模組、報表處理延伸模組、轉譯延伸模組及傳遞延伸模組。 報表伺服器至少需要一個驗證延伸模組、資料處理延伸模組和轉譯延伸模組。 傳遞與自訂報表處理延伸模組是選擇性的，但是您若要支援報表散發或自訂控制項，則是必要的。  
@@ -147,23 +154,23 @@ caps.handback.revision: 92
   
 |工作|連結|  
 |----------|----------|  
-|檢閱硬體及軟體需求。|第 1 課：建立 Windows Azure 儲存體物件[Hardware and Software Requirements for Reporting Services in SharePoint Mode](../Topic/Hardware%20and%20Software%20Requirements%20for%20Reporting%20Services%20in%20SharePoint%20Mode.md)。|  
-|以 SharePoint 模式安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 。|[安裝適用於 SharePoint 2010 的 Reporting Services SharePoint 模式](http://msdn.microsoft.com/zh-tw/47efa72e-1735-4387-8485-f8994fb08c8c)|  
-|如果您是 Web 開發者，或您有建立階層式樣式表的專業知識，您可以修改預設樣式 (自行負責風險)，來變更工具列或報表管理員的色彩、字型和配置。 此版本未收錄預設樣式表或樣式表的修改指示。|[自訂 HTML 檢視器及報表管理員的樣式表](../Topic/Customize%20Style%20Sheets%20for%20HTML%20Viewer%20and%20Report%20Manager.md)|  
+|檢閱硬體及軟體需求。|第 1 課：建立 Windows Azure 儲存體物件[Hardware and Software Requirements for Reporting Services in SharePoint Mode](http://msdn.microsoft.com/library/ed91877d-4f74-4266-a932-b824b4810c99)。|  
+|以 SharePoint 模式安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 。|[安裝適用於 SharePoint 2010 的 Reporting Services SharePoint 模式](http://msdn.microsoft.com/en-us/47efa72e-1735-4387-8485-f8994fb08c8c)|  
+|如果您是 Web 開發者，或您有建立階層式樣式表的專業知識，您可以修改預設樣式 (自行負責風險)，來變更工具列或報表管理員的色彩、字型和配置。 此版本未收錄預設樣式表或樣式表的修改指示。|[自訂 HTML 檢視器及報表管理員的樣式表](http://msdn.microsoft.com/library/df805cff-b1de-4062-b2ac-423f37390fbd)|  
 |熟悉 HTML 樣式和階層式樣式表 (CSS) 的 Web 開發人員可以使用本主題的資訊來判斷哪些檔案可修改，以便自訂報表管理員的外觀。|[設定入口網站傳遞自訂驗證 Cookie](assetid:///91aeb053-149e-4562-ae4c-a688d0e1b2ba)|  
 |說明如何針對報表伺服器 Web 服務和 Windows 服務微調記憶體設定。|[設定報表伺服器應用程式的可用記憶體](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)|  
 |說明建議的設定步驟為遠端管理的報表伺服器。|[設定報表伺服器來進行遠端管理](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)|  
 | 提供有關在原生報表伺服器執行個體上設定 [我的報表] 可用性的指示。|[啟用與停用我的報表](../../reporting-services/report-server/enable-and-disable-my-reports.md)|  
 |提供有關設定 RSClientPrint 控制項，以便在支援的瀏覽器內部提供列印功能的指示。 如需瀏覽器需求的詳細資訊，請參閱 [Reporting Services 和 Power View 的瀏覽器支援](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)。|[啟用和停用 Reporting Services 的用戶端列印功能](../../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md)|  
-  
-## 請參閱＜  
- [Reporting Services 延伸模組](../../reporting-services/extensions/reporting-services-extensions.md)   
- [Reporting Services 工具](../../reporting-services/tools/reporting-services-tools.md)   
- [訂閱與傳遞 &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [報表伺服器資料庫 &#40;SSRS 原生模式&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
- [實作安全性延伸模組](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)   
- [實作資料處理延伸模組](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
- [Reporting Services 支援的資料來源 &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)   
- [如何使用 PowerShell 管理 SSRS (Curated Answer)](http://go.microsoft.com/fwlink/?LinkId=321992)  
-  
-  
+
+## <a name="next-steps"></a>後續的步驟
+
+[Reporting Services 延伸模組](../../reporting-services/extensions/reporting-services-extensions.md)   
+[Reporting Services 工具](../../reporting-services/tools/reporting-services-tools.md)   
+[訂閱與傳遞 &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
+[報表伺服器資料庫 &#40;SSRS 原生模式&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
+[實作安全性延伸模組](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)   
+[實作資料處理延伸模組](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
+[Reporting Services &#40;SSRS&#41; 支援的資料來源](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)   
+
+更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)

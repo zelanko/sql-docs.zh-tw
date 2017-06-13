@@ -1,26 +1,31 @@
 ---
-title: "格式化量測計上的標尺 (報表產生器及 SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "格式化量測計 （報表產生器及 SSRS） 上的標尺 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 0dd65945-3b74-46a6-a794-b33585d565d2
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4a25ea1cb8702758096118371c4261e8189c2e91
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 格式化量測計上的標尺 (報表產生器及 SSRS)
+# <a name="formatting-scales-on-a-gauge-report-builder-and-ssrs"></a>格式化量測計上的標尺 (報表產生器及 SSRS)
   在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表中，量測計標尺是顯示在量測計上，受限於最小值與最大值的數字範圍。 量測計標尺通常包含量測計標籤與刻度，以便正確讀取量測計指標所顯示的數目。 量測計標尺通常與一或多個量測計指標相關聯。 在相同的量測計上可以有一個以上的標尺。  
   
- ![量測計標尺的元素概觀](../../reporting-services/report-design/media/scaleoverviewdiagram.gif "量測計標尺的元素概觀")  
+ ![量測計標尺上的項目概觀](../../reporting-services/report-design/media/scaleoverviewdiagram.gif "的量測計標尺上的項目概觀")  
   
  與定義多個群組的圖表不同的是，量測計只會顯示一個值。 您必須定義標尺的最小值和最大值。 系統會根據您針對最小值和最大值指定的值，自動計算間隔數字。  
   
@@ -78,7 +83,7 @@ caps.handback.revision: 8
   
 -   線性量測計之量測計高度或寬度最小值的 1%。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [格式化量測計上的範圍 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)   
  [格式化量測計上的指標 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
  [將軸標籤格式化成日期或貨幣 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   

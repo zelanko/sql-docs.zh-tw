@@ -1,23 +1,28 @@
 ---
-title: "Reporting Services 中的樹狀圖與放射環狀圖 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "08/31/2015"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "樹狀圖與放射環狀圖中的 Reporting Services |Microsoft 文件"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 08/31/2015
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 12307c8f-bca7-4d21-8ad5-0c07d819865b
 caps.latest.revision: 17
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 16
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: e09afe4634c02db6e74413e7c1c10565450b3559
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# Reporting Services 中的樹狀圖與放射環狀圖
+# <a name="tree-map-and-sunburst-charts-in-reporting-services"></a>Reporting Services 中的樹狀圖與放射環狀圖
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 樹狀圖和放射環狀視覺效果是以視覺呈現階層資料的絕佳方式。   本主題是如何新增樹狀圖或放射環狀圖到 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表的概觀。 本主題也包含範例 Adventureworks 查詢，以協助您快速入門。  
@@ -31,12 +36,12 @@ caps.handback.revision: 16
   
  ![ssrs_treemap_example](../../reporting-services/report-design/media/ssrs-treemap-example.png "ssrs_treemap_example")  
   
-### 插入樹狀圖圖表並設定範例 Adventureworks 資料  
+### <a name="to-insert-a-tree-map-chart-and-configure-for-the-sample-adventureworks-data"></a>插入樹狀圖圖表並設定範例 Adventureworks 資料  
  **注意：** 在您新增圖表到報表前，請建立資料來源和資料集。  如需範例資料和範例查詢，請參閱本主題中的 [範例 Adventureworks 資料](#bkmk_sample_data) 章節。  
   
 1.  以滑鼠右鍵按一下設計介面，按一下 [插入]，然後按一下 [圖表]。  
   
-     選取樹狀圖 ![ssrs_treemap_icon](../../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon")。  
+     選取樹狀圖![ssrs_treemap_icon](../../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon")。  
   
      ![ssrs_insert_treemap_sunburst](../../reporting-services/report-design/media/ssrs-insert-treemap-sunburst.png "ssrs_insert_treemap_sunburst")  
   
@@ -60,13 +65,12 @@ caps.handback.revision: 16
     =Fields!SubcategoryName.Value &": " &Format(Sum(Fields!LineTotal.Value),"C")  
     ```  
   
-     如需詳細資訊，請參閱 [Show ToolTips on a Series &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md) (在數列上顯示工具提示 (報表產生器及 SSRS))。  
+     如需詳細資訊，請參閱 [在數列上顯示工具提示 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md)。  
   
 6.  將預設圖表標題變更為「按領域分類的銷售量」。  
   
 7.  顯示的標籤值數目會受字型大小、整體圖表區域大小，和特定矩形的大小影響。  若要看到更多標籤，將 LineTotal 的 Label font 屬性變更為 10pt，取代預設的 8pt。  
   
- ![搭配回到頁首連結使用的箭頭圖示](../../analysis-services/instances/media/uparrow16x16.png "搭配回到頁首連結使用的箭頭圖示") [本主題內容](#bkmk_top)  
   
 ##  <a name="bkmk_sunburst_chart"></a> 放射環狀圖表  
  ![ssrs_sunburst_icon](../../reporting-services/media/ssrs-sunburst-icon.png "ssrs_sunburst_icon")  
@@ -75,12 +79,12 @@ caps.handback.revision: 16
   
  ![ssrs_sunburst_example](../../reporting-services/report-design/media/ssrs-sunburst-example.png "ssrs_sunburst_example")  
   
-### 插入放射環狀圖表並設定範例 Adventureworks 資料  
+### <a name="to-insert-a-sunburst-chart-and-configure-for-the-sample-adventureworks-data"></a>插入放射環狀圖表並設定範例 Adventureworks 資料  
  **注意：** 在您新增圖表到報表前，請建立資料來源和資料集。  如需範例資料和範例查詢，請參閱本主題中的 [範例 Adventureworks 資料](#bkmk_sample_data) 章節。  
   
 1.  以滑鼠右鍵按一下設計介面，按一下 [插入]，然後按一下 [圖表]。  
   
-     選取放射環狀圖 ![ssrs_treemap_icon](../../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon")。  
+     選取放射環狀圖![ssrs_treemap_icon](../../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon")。  
   
      ![ssrs_insert_treemap_sunburst](../../reporting-services/report-design/media/ssrs-insert-treemap-sunburst.png "ssrs_insert_treemap_sunburst")  
   
@@ -104,7 +108,6 @@ caps.handback.revision: 16
   
      ![ssrs_visualization_palette](../../reporting-services/report-design/media/ssrs-visualization-palette.png "ssrs_visualization_palette")  
   
- ![搭配回到頁首連結使用的箭頭圖示](../../analysis-services/instances/media/uparrow16x16.png "搭配回到頁首連結使用的箭頭圖示") [本主題內容](#bkmk_top)  
   
 ##  <a name="bkmk_sample_data"></a> 範例 Adventureworks 資料  
  本節包含範例查詢及在 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]中建立資料來源和資料集的基本步驟。 如果報表已包含資料來源及資料集，您可以略過此章節。  
@@ -172,9 +175,8 @@ caps.handback.revision: 16
   
      如需建立資料集的詳細資訊，請參閱 [Create a Shared Dataset or Embedded Dataset &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md) (建立共用資料集或內嵌資料集 (報表產生器及 SSRS))。  
   
- ![搭配回到頁首連結使用的箭頭圖示](../../analysis-services/instances/media/uparrow16x16.png "搭配回到頁首連結使用的箭頭圖示") [本主題內容](#bkmk_top)  
   
-## 請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [共用資料集設計檢視 &#40;報表產生器&#41;](../../reporting-services/report-builder/shared-dataset-design-view-report-builder.md)   
  [在數列上顯示工具提示 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md)   
  [教學課程：Power BI 中的樹狀圖](https://support.powerbi.com/knowledgebase/articles/556200-tutorial-treemaps-in-power-bi)   
@@ -182,3 +184,5 @@ caps.handback.revision: 16
   
   
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
+
+

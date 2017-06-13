@@ -1,23 +1,28 @@
 ---
-title: "設定度量單位 (報表產生器及 SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "設定和設定度量單位 （報表產生器及 SSRS） |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a15a96c3-7d2c-433e-a440-4ea051e967a9
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 46d639df93661b5cd27810c72a44f698539aac2f
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 設定度量單位 (報表產生器及 SSRS)
+# <a name="set-and-configure-measurement-units-report-builder-and-ssrs"></a>設定度量單位 (報表產生器及 SSRS)
   在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表中，指標使用下列兩個度量單位的其中一個︰百分比或數值。   
     
   根據預設，指標會設定為使用百分比做為度量單位。 也就是說，指派給指標集合中每個圖示的指標值取決於百分比範圍。 百分比範圍會在指標集合的圖示中平均分配。 每個圖示代表一個指標狀態。 您可以指定不同的開始與結束百分比來變更指標集合中每個圖示的百分比。 指標也會自動偵測資料中的最小值與最大值。  
@@ -26,7 +31,7 @@ caps.handback.revision: 8
   
  您可以使用運算式來設定選項，如度量單位。 如需詳細資訊，請參閱[運算式 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)。  
   
-## 若要使用數值狀態度量單位  
+## <a name="to-use-the-numeric-state-measurement-unit"></a>若要使用數值狀態度量單位  
   
 1.  以滑鼠右鍵按一下您要變更的指標，然後按一下 [指標屬性]。  
   
@@ -45,7 +50,7 @@ caps.handback.revision: 8
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## 若要使用百分比度量單位  
+## <a name="to-use-the-percentage-measurement-unit"></a>若要使用百分比度量單位  
   
 1.  以滑鼠右鍵按一下您要變更的指標，然後按一下 [指標屬性]。  
   
@@ -71,7 +76,7 @@ caps.handback.revision: 8
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## 請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [指標 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   
   

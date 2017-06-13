@@ -1,28 +1,33 @@
 ---
-title: "將資料格加入行動報表 | Reporting Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "加入行動報表中的資料格 |Reporting Services |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: fe98a970-90d3-44d1-9189-9141c237f141
 caps.latest.revision: 4
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 4
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c51169b12265eea7e6d57e0daa7539322e338851
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 將資料格加入行動報表 | Reporting Services
+# <a name="add-data-grids-to-mobile-reports--reporting-services"></a>將資料格加入行動報表 | Reporting Services
 有時候，資料本身就是最佳的視覺效果。 深入了解用於顯示 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)] 中資料的三種「資料格」：
 * 簡易資料格
 * 指示器資料格
 * 圖表資料格
 
-## 簡易資料格
+## <a name="simple-data-grid"></a>簡易資料格
 最基本的簡易資料格可顯示多個含有自訂格式和標頭的資料行。 
 
 ![mobile-report-simple-data-grid](../../reporting-services/mobile-reports/media/mobile-report-simple-data-grid.png)
@@ -38,7 +43,7 @@ caps.handback.revision: 4
 4. 在 [資料行] 窗格中，選取您想要的資料行。 重新排列及重新命名這些資料行，並設定其格式和彙總方式。 
 
  
-##  指示器資料格
+##  <a name="indicator-data-grid"></a>指示器資料格
 您可以將含有量測計的資料行加入指示器資料格。
 
 ![mobile-report-indicator-data-grid](../../reporting-services/mobile-reports/media/mobile-report-indicator-data-grid.png)
@@ -53,7 +58,7 @@ caps.handback.revision: 4
 
 資料格只會將該列資料格特定的資料自動饋送給量測計。  
 
-## 圖表資料格
+## <a name="chart-data-grid"></a>圖表資料格
 您可以將含有量測計或圖表的資料行加入圖表資料格。 
 
 ![mobile-report-chart-data-grid](../../reporting-services/mobile-reports/media/mobile-report-chart-data-grid.png)
@@ -77,10 +82,11 @@ caps.handback.revision: 4
    * [目的地查閱] 是 [圖表視覺效果的參考資料] 中資料表的欄位。 每個資料列中圖表的資料，將會在那兩個欄位上聯結。   
    * [圖表資料欄位] 會決定 [圖表視覺效果的參考資料] 資料表中的哪些度量可作為 Y 軸值或每個資料列中圖表內的數列。  
 
-## 另請參閱 
+## <a name="see-also"></a>另請參閱 
 * [Reporting Services 行動報表中的地圖](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md)
 * [Reporting Services 行動報表中的導覽器](../../reporting-services/mobile-reports/add-navigators-to-reporting-services-mobile-reports.md)
 * [Reporting Services 行動報表中的視覺效果](../../reporting-services/mobile-reports/add-visualizations-to-reporting-services-mobile-reports.md)
 * [Reporting Services 行動報表中的量測計](../../reporting-services/mobile-reports/add-gauges-to-mobile-reports-reporting-services.md)  
  
   
+

@@ -1,25 +1,30 @@
 ---
-title: "報表模型查詢中的公式 (報表產生器及 SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "10151"
+title: "報表中的公式 （報表產生器及 SSRS） 的查詢的模型 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- "10151"
 ms.assetid: fbf68c59-7afc-4afe-bfcd-40ce84629af0
 caps.latest.revision: 9
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 9
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f74c464aad45ffad0c1dfc2a40d62944446e63d7
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 報表模型查詢中的公式 (報表產生器及 SSRS)
+# <a name="formulas-in-report-model-queries-report-builder-and-ssrs"></a>報表模型查詢中的公式 (報表產生器及 SSRS)
   公式是針對使用報表模型做為資料來源之報表中的值來執行的計算。 當您定義報表模型資料來源的查詢時，可以在報表模型查詢設計工具的 [定義公式] 對話方塊中定義公式。 公式可以包含函數、運算子、常數和對欄位或實體的參考。 公式可讓您結合、彙總、篩選以及評估數值和文字資料。 您可以建立公式，並將它們另存為新的欄位，或者，您可以修改現有欄位的公式。  
   
  公式不是 RDL 運算式，開頭不得為等號 (=)。 如需 RDL 運算式的詳細資訊，請參閱[運算式 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)。  
@@ -35,12 +40,12 @@ caps.handback.revision: 9
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## 參考  
+## <a name="references"></a>參考  
  參考是欄位名稱。 可以是實體中的現有欄位名稱，也可以是已建立並加入至 [欄位] 清單的導出欄位名稱。 參考會告訴「報表產生器」去何處尋找想要在公式中使用的值或資料。 您可以參考一個公式內之內容實體和其他實體中的欄位，或使用來自多個公式中之一個欄位的值。  
   
  當您使用參考時，報表處理器會針對欄位中的每個值執行公式。 例如，假設欄位包含過去五年的年度銷售總額。 此欄位會包含五個值，每個值代表給定年度的銷售總額。 如果公式包含對此欄位的參考，則公式會使用每個個別值來計算新的值。  
   
-## 運算子  
+## <a name="operators"></a>運算子  
  運算子指定要在公式的值上執行之計算的類型。 計算運算子有三種不同的類型：算術、比較和文字。 系統會使用符號 (如加號 (+))，來表示運算子。  
   
  **算術運算子。** 算術運算子會執行基本數學運算 (例如加法、減法或乘法)、結合數字，並產生數值結果。  
@@ -57,7 +62,7 @@ caps.handback.revision: 9
   
  函數可用於執行簡單或複雜的計算。 函數的結構以函數名稱開始，隨後是左括號、以逗號分隔的函數引數，和右括號。  
   
- ![函數的範例。](../../reporting-services/report-design/media/functionexample.gif "函數的範例。")  
+ ![函式的範例。](../../reporting-services/report-design/media/functionexample.gif "函式的範例。")  
   
  引數可以是欄位參考、數字、文字和邏輯值 (如 **TRUE** 或 **FALSE**)。 引數也可以是常數、公式或其他函數。 您輸入的引數必須產生該引數的有效值。 例如，如果公式是兩個整數相乘，則結果不能是文字字串。  
   

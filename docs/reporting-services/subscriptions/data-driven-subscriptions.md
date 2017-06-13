@@ -1,26 +1,31 @@
 ---
-title: "資料驅動訂閱 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "訂閱 [Reporting Services], 資料驅動"
-  - "資料驅動訂閱"
+title: "資料驅動訂閱 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- subscriptions [Reporting Services], data-driven
+- data-driven subscriptions
 ms.assetid: ba009f62-0d4f-45e7-a27c-36fd5f0cd3a8
 caps.latest.revision: 56
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 56
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3e4ffac2b4342d0f8b3c30a9d76cdc7b0ecf098c
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 資料驅動訂閱
+# <a name="data-driven-subscriptions"></a>資料驅動訂閱
   資料驅動訂閱會提供一個方式來使用在執行階段擷取自外部資料來源的動態訂閱資料， 資料驅動訂閱也可以使用在定義訂閱時所指定的靜態文字和預設值； 您可以使用資料驅動訂閱來執行下列作業：  
   
 -   將報表散發給變動的訂閱者清單。 例如，您可以使用資料驅動訂閱，將報表散發至每個月的訂閱者都不同的整個大型組織內，或者使用決定現有使用者集內群組成員資格的其他準則。  
@@ -41,14 +46,14 @@ caps.handback.revision: 56
   
  在處理訂閱時，會取得資料驅動訂閱中所用的動態值。 您可以在訂閱中使用的變動資料範例包括訂閱者名稱、電子郵件地址、慣用的報表輸出格式，或是對報表參數有效的任何值。 若要在資料驅動訂閱中使用動態值，您會在查詢中所傳回的欄位以及特定傳遞選項和報表參數之間定義對應。 每當處理此訂閱時，會從訂閱者資料來源中擷取變動資料。  
   
-## 使用資料驅動訂閱的需求  
+## <a name="requirements-for-using-data-driven-subscriptions"></a>使用資料驅動訂閱的需求  
  並非所有版本中都可以使用資料驅動訂閱功能， 您在執行階段可用來擷取訂閱資料的資料來源種類也有一些限制； 下列清單提供有關這些需求的詳細資訊：  
   
 -   如需支援資料驅動訂閱功能之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本的詳細資訊，請參閱 [SQL Server 2012 版本支援的功能](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473)。  
   
--   如果是訂閱資料，請選擇可以提供結構描述資訊給報表伺服器的資料來源； 支援資料來源類型的範例包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 關聯式資料、Oracle、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝資料、ODBC 資料來源和 OLE DB 資料來源。 如需訂閱者資料來源需求的詳細資訊，請參閱[使用外部資料來源以取得訂閱者資料 &#40;資料驅動訂閱&#41;](../../reporting-services/subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)。  
+-   如果是訂閱資料，請選擇可以提供結構描述資訊給報表伺服器的資料來源； 支援資料來源類型的範例包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 關聯式資料、Oracle、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝資料、ODBC 資料來源和 OLE DB 資料來源。 如需訂閱者資料來源需求的詳細資訊，請參閱 [使用外部資料來源以取得訂閱者資料 &#40;資料驅動訂閱&#41;](../../reporting-services/subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)。  
   
-## 使用資料驅動訂閱  
+## <a name="working-with-data-driven-subscriptions"></a>使用資料驅動訂閱  
  下列主題提供有關資料驅動訂閱的詳細資訊。  
   
 |主題|說明|  
@@ -58,9 +63,9 @@ caps.handback.revision: 56
 |[建立資料驅動訂閱 &#40;SSRS 教學課程&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)|提供逐步指示，以了解如何建立資料驅動訂閱。|  
 |[快取報表 &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md)|描述如何使用 Null 傳遞提供者搭配資料驅動訂閱，以預先載入快取。|  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [訂閱與傳遞 &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [建立資料驅動訂閱頁面 &#40;報表管理員&#41;](../Topic/Create%20Data-driven%20Subscription%20Page%20\(Report%20Manager\).md)   
+ [建立資料驅動訂閱頁面 &#40;報表管理員&#41;](http://msdn.microsoft.com/library/814b4653-572a-48c7-847f-b310ba0f3046)   
  [預先載入快取 &#40;報表管理員&#41;](../../reporting-services/report-server/preload-the-cache-report-manager.md)  
   
   

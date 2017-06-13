@@ -1,26 +1,31 @@
 ---
-title: "將 Reporting Services 內容類型加入至 SharePoint 文件庫。 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "新增 Reporting Services 內容類型加入至 SharePoint 文件庫 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ac9136c8-9ef4-484c-8e9d-05008a186db5
 caps.latest.revision: 7
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 7
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2ecb38b65092e15139b0a7c969903105c88a88aa
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 將 Reporting Services 內容類型加入至 SharePoint 文件庫。
+# <a name="add-reporting-services-content-types-to-a-sharepoint-library"></a>將 Reporting Services 內容類型加入至 SharePoint 文件庫。
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會提供預先定義的 SharePoint 內容類型，可用來管理共用資料來源檔案 (.rsds)、報表模型檔案 (.smdl)，以及報表產生器的報表定義檔案 (.rdl)。 將 **[報表產生器報表]**、 **[報表模型]**和 **[報表資料來源]** 內容類型加入至文件庫會啟用 **[新增]** 命令，讓您能夠建立該類型的新文件。  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode  
   
  若要將內容類型加入至文件庫，您必須是網站管理員或具有「完整控制」等級的權限。  
   
@@ -33,7 +38,7 @@ caps.handback.revision: 7
 > [!TIP]  
 >  如果您先前 **沒有** 設定文件庫的內容類型，請先啟用內容類型的管理，然後再啟用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 內容類型。 請參閱在單一文件庫中啟用內容類型管理的程序。  
   
- **短片**：[(SSRS) Enabling Content Types in SharePoint2010.wmv](http://www.youtube.com/watch?v=yqhm3DrtT1w) (http://www.youtube.com/watch?v=yqhm3DrtT1w)。  
+ **短片** [(SSRS) Enabling Content Types in SharePoint2010.wmv](http://www.youtube.com/watch?v=yqhm3DrtT1w) (http://www.youtube.com/watch?v=yqhm3DrtT1w)。  
   
  **本主題內容：**  
   
@@ -55,7 +60,7 @@ caps.handback.revision: 7
   
 2.  前往 **[網站設定]**。  
   
-    -   在 SharePoint 2013，按一下 **[設定]** 圖示。 ![SharePoint 設定](../../analysis-services/media/as-sharepoint2013-settings-gear.png "SharePoint 設定")  
+    -   在 SharePoint 2013，按一下 **[設定]** 圖示。 ![SharePoint 設定](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 設定")  
   
     -   在 SharePoint 2010，按一下 **[網站動作]**，然後按一下 **[網站設定]**。  
   
@@ -110,7 +115,7 @@ caps.handback.revision: 7
 9. > [!NOTE]  
     >  如果在 [加入內容類型] 頁面上看不到 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 內容類型群組的 [SQL Server Reporting Services 內容類型]，表示下列其中一項條件成立：  
   
-    -   尚未安裝適用於 SharePoint 產品的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 增益集。 如需詳細資訊，請參閱[安裝或解除安裝 SharePoint 的 Reporting Services 增益集](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)。 本主題包含安裝增益集的資訊，並逐步帶領您進行增益集中僅檔案部分的安裝，以解決問題。  
+    -   尚未安裝適用於 SharePoint 產品的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 增益集。 如需詳細資訊，請參閱 [安裝或解除安裝 SharePoint 的 Reporting Services 增益集](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)。 本主題包含安裝增益集的資訊，並逐步帶領您進行增益集中僅檔案部分的安裝，以解決問題。  
   
     -   安裝了增益集，但網站集合功能的 [報表伺服器整合功能] 未啟用。 請確認 [網站設定] 中的網站集合功能。  
   
@@ -164,7 +169,7 @@ caps.handback.revision: 7
   
 4.  按一下 **[確定]**。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [報表伺服器項目的 SharePoint 網站和清單權限參考](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)   
  [啟動報表產生器](../../reporting-services/report-builder/start-report-builder.md)  
   

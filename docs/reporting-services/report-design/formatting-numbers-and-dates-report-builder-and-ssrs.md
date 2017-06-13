@@ -1,37 +1,42 @@
 ---
-title: "格式化數字和日期 (報表產生器及 SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rtp.rptdesigner.placeholderproperties.number.f1"
-  - "10127"
-  - "sql13.rtp.rptdesigner.textboxproperties.number.f1"
-  - "10130"
-  - "10286"
-  - "sql13.rtp.rptdesigner.serieslabelproperties.number.f1"
-  - "10285"
-  - "sql13.rtp.rptdesigner.axisproperties.number.f1"
+title: "格式化數字和日期 （報表產生器及 SSRS） |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rtp.rptdesigner.placeholderproperties.number.f1
+- "10127"
+- sql13.rtp.rptdesigner.textboxproperties.number.f1
+- "10130"
+- "10286"
+- sql13.rtp.rptdesigner.serieslabelproperties.number.f1
+- "10285"
+- sql13.rtp.rptdesigner.axisproperties.number.f1
 ms.assetid: 6de1a725-9f06-4708-be26-2d55e442e344
 caps.latest.revision: 6
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 6
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 186bb0bab4abac91ea95d397f379986cac9d2f0f
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 格式化數字和日期 (報表產生器及 SSRS)
+# <a name="formatting-numbers-and-dates-report-builder-and-ssrs"></a>格式化數字和日期 (報表產生器及 SSRS)
   您可以從對應資料區之 **[屬性]** 對話方塊的 **[數字]** 頁面選取一種格式，藉以格式化資料區中的數字和日期。  
   
- 若要在文字方塊報表項目中指定格式字串，您需要選取要格式化的項目，按一下滑鼠右鍵，選取 [文字方塊屬性]，然後按一下 [數字]。 您可以使用相同的方式格式化資料表或矩陣資料區中的個別資料格，因為資料表或矩陣資料區中的資料格為個別的文字方塊。  
+ 若要在文字方塊報表項目中指定格式字串，您需要選取要格式化的項目，按一下滑鼠右鍵，選取 **[文字方塊屬性]**，然後按一下 **[數字]**。 您可以使用相同的方式格式化資料表或矩陣資料區中的個別資料格，因為資料表或矩陣資料區中的資料格為個別的文字方塊。  
   
- 圖表資料區通常會顯示類別目錄 (x) 軸上的日期，以及值 (y) 軸上的值。 若要指定圖表中的格式，請以滑鼠右鍵按一下軸，然後選取 [軸屬性]。 在值軸上，您僅能指定數字的格式。 如需詳細資訊，請參閱[格式化圖表上的軸標籤 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)。  
+ 圖表資料區通常會顯示類別目錄 (x) 軸上的日期，以及值 (y) 軸上的值。 若要指定圖表中的格式，請以滑鼠右鍵按一下軸，然後選取 **[軸屬性]**。 在值軸上，您僅能指定數字的格式。 如需詳細資訊，請參閱[格式化圖表上的軸標籤 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)。  
   
  若要指定量測計資料區中的格式，以滑鼠右鍵按一下量測計的標尺，然後選取 [星形標尺屬性] 或 [線性標尺屬性]。  
   
@@ -41,7 +46,7 @@ caps.handback.revision: 6
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## 格式化數字和日期的考量  
+## <a name="considerations-for-formatting-numbers-and-dates"></a>格式化數字和日期的考量  
  格式化報表中的數字和日期之前，請考慮下列事項：  
   
 -   根據預設，數字會經過格式化以反映用戶端電腦上的文化特性設定。 使用格式字串來指定顯示數字的方式，因此不管檢視報表的人身在何處，格式都是一致的。  
@@ -52,11 +57,11 @@ caps.handback.revision: 6
   
 -   如果您指定無效的格式字串，格式化的文字會解譯為覆寫格式的常值字串。  
   
--   如果您要在相同的文字方塊中格式化數字和字串的混合時，請考慮使用預留位置來分別格式化數字與其餘文字。 如需詳細資訊，請參閱[格式化文字和預留位置 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)。 如果在文字方塊上針對 Format 屬性指定的格式字串無效，則會略過該格式字串。 如果在圖表或量測計上針對 Format 屬性指定的格式字串無效，您所指定的格式字串會解譯為字串，而且不會套用該格式。  
+-   如果您要在相同的文字方塊中格式化數字和字串的混合時，請考慮使用預留位置來分別格式化數字與其餘文字。 如需詳細資訊，請參閱 [格式化文字和預留位置 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)。 如果在文字方塊上針對 Format 屬性指定的格式字串無效，則會略過該格式字串。 如果在圖表或量測計上針對 Format 屬性指定的格式字串無效，您所指定的格式字串會解譯為字串，而且不會套用該格式。  
   
 -   如果您選取 **[類別目錄]** 底下的 **[貨幣]** ，並核取 **[值的顯示單位]**，您可以選取 **[千]**、 **[百萬]**或 **[十億]** 來使用財務格式顯示數值。 例如，如果欄位值為 1,789,905,394，而且您選取 **[十億]** 並指定 2 位小數位數，顯示在報表中的值為 1.78。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [格式化文字和預留位置 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
  [格式化線條、色彩和影像 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-lines-colors-and-images-report-builder-and-ssrs.md)   
  [格式化圖表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   

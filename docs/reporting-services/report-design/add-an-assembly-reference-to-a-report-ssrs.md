@@ -1,32 +1,37 @@
 ---
-title: "將組件參考加入至報表 (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "程式碼 [Reporting Services]"
-  - "自訂組件 [Reporting Services]，參考"
-  - "自訂程式碼 [Reporting Services]"
-  - "加入組件參考"
-  - "組件 [Reporting Services]，參考"
+title: "將組件參考加入報表 (SSRS) |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- code [Reporting Services]
+- custom assemblies [Reporting Services], referencing
+- custom code [Reporting Services]
+- adding assembly references
+- assemblies [Reporting Services], references
 ms.assetid: 0a03939e-48ce-4c30-b227-98533f2e0ccb
 caps.latest.revision: 43
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 43
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1bf8106435899a97572c5972721bdf3190d031a6
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 將組件參考加入至報表 (SSRS)
-  當您內嵌的自訂程式碼包含了不在 <xref:System.Math> 或 <xref:System.Convert> 中之 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 類別的參考時，您必須提供此報表的組件參考，好讓報表處理器可以解析名稱。 如需詳細資訊，請參閱[將程式碼加入至報表 &#40;SSRS&#41;](../../reporting-services/report-design/add-code-to-a-report-ssrs.md)。  
+# <a name="add-an-assembly-reference-to-a-report-ssrs"></a>將組件參考加入至報表 (SSRS)
+  當您內嵌自訂程式碼，包含參考[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]類別不在<xref:System.Math>或<xref:System.Convert>，您必須提供報表的組件參考，讓報表處理器可以解析名稱。 如需詳細資訊，請參閱[將程式碼加入至報表 &#40;SSRS&#41;](../../reporting-services/report-design/add-code-to-a-report-ssrs.md)。  
   
-### 若要將組件參考加入至報表  
+### <a name="to-add-an-assembly-reference-to-a-report"></a>若要將組件參考加入至報表  
   
 1.  在 [設計] 檢視中，以滑鼠右鍵按一下報表框線外面的設計介面，然後按一下 [報表屬性]。  
   
@@ -41,8 +46,8 @@ caps.handback.revision: 43
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## 請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [將自訂組件與報表搭配使用](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)   
- [報表屬性對話方塊、參考](../Topic/Report%20Properties%20Dialog%20Box,%20References.md)  
+ [報表屬性對話方塊、參考](http://msdn.microsoft.com/library/4639d368-9918-4bb1-9953-7a724ca78dea)  
   
   

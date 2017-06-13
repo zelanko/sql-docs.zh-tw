@@ -1,26 +1,31 @@
 ---
-title: "建立和修改內嵌資料來源 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-  - "reporting-services-sharepoint"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "建立和修改內嵌的資料來源 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+- reporting-services-sharepoint
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1c38c2e8-7a29-4f79-a4a3-85ed2b13723b
 caps.latest.revision: 10
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 10
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4e010bccf1cee56d0f572c899f81e54f122f050e
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 建立和修改內嵌資料來源
+# <a name="create-and-modify-embedded-data-sources"></a>建立和修改內嵌資料來源
   內嵌資料來源是定義在報表定義中，而且只能供該報表使用。  
   
-## 在報表設計師中建立內嵌資料來源  
+## <a name="to-create-an-embedded-data-source-in-report-designer"></a>在報表設計師中建立內嵌資料來源  
   
 1.  在 [報表資料] 窗格的工具列上，按一下 **[新增]** ，然後按一下 **[資料來源]**。 **[資料來源屬性]** 對話方塊隨即開啟。  
   
@@ -35,7 +40,7 @@ caps.handback.revision: 10
   
     2.  使用以下其中一個替代方式指定連接字串：  
   
-        -   在 **[連接字串]** 文字方塊中直接輸入連接字串。 如需連接字串範例的清單，請參閱[報表產生器中的資料連接、資料來源及連接字串](../Topic/Data%20Connections,%20Data%20Sources,%20and%20Connection%20Strings%20in%20Report%20Builder.md)或[資料連接、資料來源及連接字串 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
+        -   在 **[連接字串]** 文字方塊中直接輸入連接字串。 如需連接字串範例的清單，請參閱[報表產生器中的資料連接、資料來源及連接字串](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)或[資料連接、資料來源及連接字串 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
   
         -   按一下運算式 (**fx)** 按鈕，即可建立一個評估為連接字串的運算式。 在 **[運算式]** 對話方塊的 [運算式] 窗格內，輸入運算式。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -49,7 +54,7 @@ caps.handback.revision: 10
   
 4.  新的內嵌資料來源會出現在 [報表資料] 窗格中。  
   
-## 在報表產生器中建立內嵌資料來源  
+## <a name="to-create-an-embedded-data-source-in-report-builder"></a>在報表產生器中建立內嵌資料來源  
   
 1.  在 [報表資料] 窗格的工具列上，按一下 **[新增]**，然後按一下 **[資料來源]**。 **[資料來源屬性]** 對話方塊隨即開啟。  
   
@@ -61,7 +66,7 @@ caps.handback.revision: 10
   
     2.  使用以下其中一個替代方式來指定連接字串：  
   
-        -   在 **[連接字串]** 文字方塊中直接輸入連接字串。 如需連接字串範例的清單，請參閱[報表產生器中的資料連接、資料來源及連接字串](../Topic/Data%20Connections,%20Data%20Sources,%20and%20Connection%20Strings%20in%20Report%20Builder.md)。  
+        -   在 **[連接字串]** 文字方塊中直接輸入連接字串。 如需連接字串範例的清單，請參閱 [報表產生器中的資料連接、資料來源及連接字串](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)。  
   
         -   按一下運算式 (**fx)** 按鈕，即可建立一個評估為連接字串的運算式。 在 **[運算式]** 對話方塊的 [運算式] 窗格內，輸入運算式。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -71,14 +76,14 @@ caps.handback.revision: 10
   
 4.  按一下 **[認證]**。  
   
-     指定用於這個資料來源的認證。 資料來源的擁有者會選擇支援的認證類型。 如需詳細資訊，請參閱[在報表產生器中指定認證](../Topic/Specify%20Credentials%20in%20Report%20Builder.md)。  
+     指定用於這個資料來源的認證。 資料來源的擁有者會選擇支援的認證類型。 如需詳細資訊，請參閱 [在報表產生器中指定認證](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)。  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
      資料來源會出現在 [報表資料] 窗格中。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [報表內嵌資料集和共用資料集 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
- [在報表產生器中指定認證](../Topic/Specify%20Credentials%20in%20Report%20Builder.md)  
+ [在報表產生器中指定認證](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)  
   
   

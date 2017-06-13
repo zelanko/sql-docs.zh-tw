@@ -1,24 +1,29 @@
 ---
-title: "教學課程：將 KPI 加入至報表 (報表產生器) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/15/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: "教學課程： 將 KPI 加入至報表 （報表產生器） |Microsoft 文件"
+ms.custom: 
+ms.date: 06/15/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: 1bf77859-0b33-4f40-abaf-ebeeb6ebb1f8
 caps.latest.revision: 13
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 12
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 6ff993552c5c5b8a3e48c672a29f6567107f2331
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 教學課程：將 KPI 加入至報表 (報表產生器)
+# <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>教學課程：將 KPI 加入至報表 (報表產生器)
 在此 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] 教學課程中，您會將關鍵效能指標 (KPI) 新增至 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 編頁報表。  
 
 KPI 是具有商務重要性的可測量值。 在這個案例中，依產品子類別排列的銷售摘要便是 KPI。 KPI 的目前狀態會以色彩、量測計和指標顯示。
@@ -26,38 +31,19 @@ KPI 是具有商務重要性的可測量值。 在這個案例中，依產品子
 您將建立的報表應類似下圖。  
   
 ![report-builder-kpi-report](../reporting-services/media/report-builder-kpi-report.png)
-  
-## <a name="BackToTop"></a>學習內容  
-在本教學課程中，您將學習如何根據資料格的值，藉由設定資料表資料格的背景色彩來新增 KPI，並新增和設定量測計和指標。 您也將學習如何撰寫設定資料表資料格背景色彩的運算式。  
-  
-本教學課程包含下列程序：  
-  
-1.  [從資料表或矩陣精靈建立資料表報表和資料集](#Table)  
-  
-2.  [在資料表或矩陣精靈中組織資料、選擇配置](#CompleteWizard)  
-  
-3.  [使用背景色彩顯示 KPI](#BackgroundColors)  
-  
-4.  [使用量測計顯示 KPI](#Gauge)  
-  
-5.  [使用指標顯示 KPI](#Indicator)  
-  
-6.  [加入報表標題](#Title)  
-  
-7.  [儲存報表](#Save)  
-  
+    
 > [!NOTE]  
 > 在本教學課程中，精靈的步驟會合併成兩個程序：一個程序用來建立資料集，另一個程序用來建立資料表。 如需如何瀏覽至報表伺服器、選擇資料來源、建立資料集以及執行精靈的逐步指示，請參閱本系列的第一個教學課程：[教學課程：建立基本資料表報表 &#40;報表產生器&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
   
 完成本教學課程的估計時間：15 分鐘。  
   
-## 需求  
+## <a name="requirements"></a>需求  
 如需需求的資訊，請參閱[教學課程的必要條件 &#40;報表產生器&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md)。  
   
 ## <a name="Table"></a>1.從資料表或矩陣精靈建立資料表報表和資料集  
 在本節中，您會選擇共用資料來源、建立內嵌資料集，並在資料表中顯示資料。  
  
-### 若要建立含內嵌資料集的資料表  
+### <a name="to-create-a-table-with-an-embedded-dataset"></a>若要建立含內嵌資料集的資料表  
   
 1.  從您的電腦、[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] Web 入口網站或 SharePoint 整合模式，[啟動報表產生器](../reporting-services/report-builder/start-report-builder.md)。  
   
@@ -124,7 +110,7 @@ KPI 是具有商務重要性的可測量值。 在這個案例中，依產品子
 ## <a name="CompleteWizard"></a>2.在精靈中組織資料並選擇配置  
 [資料表或矩陣精靈] 提供用於顯示資料的起始設計。 精靈中的預覽窗格可協助您在完成資料表或矩陣設計之前，先視覺化群組資料的結果。  
   
-### 將資料組織成群組，並選擇配置 
+### <a name="to-organize-data-into-groups-and-choose-a-layout"></a>將資料組織成群組，並選擇配置 
   
 1.  在 [排列欄位] 頁面上，將 [Product] 拖曳至 [值]。  
   
@@ -168,7 +154,7 @@ KPI 是具有商務重要性的可測量值。 在這個案例中，依產品子
 
 ![report-builder-kpi-basic-table](../reporting-services/media/report-builder-kpi-basic-table.png)
     
-### 格式化日期和貨幣
+### <a name="format-dates-and-currency"></a>格式化日期和貨幣
 現在，我們來加寬資料行，並設定日期和貨幣格式。
 
 1. 按一下 [設計]，返回設計檢視。
@@ -177,7 +163,7 @@ KPI 是具有商務重要性的可測量值。 在這個案例中，依產品子
 
 3. 按下 Ctrl 鍵，然後選取包含 [Sum(Sales)] 的 4 個資料格。
 
-4. 在 [主資料夾] 索引標籤 > [數字] > [貨幣]。 這些資料格就會變更為顯示格式化貨幣。
+4. On the **Home** tab > **Number** > **Currency**. 這些資料格就會變更為顯示格式化貨幣。
 
    如果您的地區設定為 [英文 (美國)]，則預設範例文字會是 [$12,345.00]。 如果未顯示範例貨幣值，請按一下 [數字] 群組中的 [預留位置樣式] > [範例值]。
     
@@ -198,7 +184,7 @@ KPI 是具有商務重要性的可測量值。 在這個案例中，依產品子
 ## <a name="BackgroundColors"></a>3.使用背景色彩顯示 KPI  
 您可以將背景色彩設定成執行報表時評估的運算式。  
   
-### 若要使用背景色彩來顯示 KPI 的目前狀態  
+### <a name="to-display-the-present-state-of-a-kpi-by-using-background-colors"></a>若要使用背景色彩來顯示 KPI 的目前狀態  
   
 1.  在資料表中，以滑鼠右鍵按一下第二個 `[Sum(Sales)]` 資料格 (顯示子類別銷售額的小計資料列)，然後按一下 [文字方塊屬性]。 
 
@@ -223,7 +209,7 @@ KPI 是具有商務重要性的可測量值。 在這個案例中，依產品子
 ## <a name="Gauge"></a>4.使用量測計顯示 KPI  
 量測計可說明資料集中的單一值。 這個教學課程使用水平的線性量測計，因為它的形狀一目了然，即使很小並用於資料表資料格內，也很容易閱讀。 如需詳細資訊，請參閱[量測計 &#40;報表產生器及SSRS&#41;](../reporting-services/report-design/gauges-report-builder-and-ssrs.md)。  
   
-### 若要使用量測計來顯示 KPI 的目前狀態  
+### <a name="to-display-the-present-state-of-a-kpi-using-a-gauge"></a>若要使用量測計來顯示 KPI 的目前狀態  
   
 1.  切換回設計檢視。  
   
@@ -278,13 +264,13 @@ KPI 是具有商務重要性的可測量值。 在這個案例中，依產品子
 ## <a name="Indicator"></a>5.使用指標顯示 KPI  
 指標是小型的簡單量測計，可一目了然資料值。 由於指標的尺寸小加上簡單明瞭，因此常用於資料表和矩陣。 如需詳細資訊，請參閱[指標 &#40;報表產生器及 SSRS&#41;](../reporting-services/report-design/indicators-report-builder-and-ssrs.md)。  
   
-### 若要使用指標來顯示 KPI 的目前狀態  
+### <a name="to-display-the-present-state-of-a-kpi-using-an-indicator"></a>若要使用指標來顯示 KPI 的目前狀態  
   
 1.  切換至 [設計] 檢視。  
   
 2.  在資料表中，以滑鼠右鍵按一下您在上一個程序中新增之「線性 KPI」資料行的資料行控點 > [插入資料行] > [右方]。 新的資料行就會加入至此資料表。  
   
-3.  在資料行標題中輸入**警示燈 KPI**。  
+3.  在資料行標題中輸入 **警示燈 KPI** 。  
   
 4.  按一下子類別小計的資料格 (位於您在上一個程序中新增的線性量測計旁邊)。  
   
@@ -315,7 +301,7 @@ KPI 是具有商務重要性的可測量值。 在這個案例中，依產品子
   
 您可以將不同的字型樣式、大小和色彩套用到文字的片語和個別字元，進一步加強文字。 如需詳細資訊，請參閱[格式化文字方塊中的文字 &#40;報表產生器及 SSRS&#41;](../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)。  
   
-### 若要加入報表標題  
+### <a name="to-add-a-report-title"></a>若要加入報表標題  
   
 1.  在設計介面上，按一下 **[按一下以加入標題]**。  
   
@@ -328,7 +314,7 @@ KPI 是具有商務重要性的可測量值。 在這個案例中，依產品子
 ## <a name="Save"></a>7.儲存報表  
 將報表儲存至報表伺服器或您的電腦。 如果沒有將報表儲存到報表伺服器，就無法使用數個 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 功能，例如報表組件和子報表。  
   
-### 若要將報表儲存在報表伺服器上  
+### <a name="to-save-the-report-on-a-report-server"></a>若要將報表儲存在報表伺服器上  
   
 1.  在 **[報表產生器]** 按鈕中，按一下 **[另存新檔]**。  
   
@@ -344,7 +330,7 @@ KPI 是具有商務重要性的可測量值。 在這個案例中，依產品子
   
 報表就會儲存至報表伺服器。 您連接之報表伺服器的名稱會顯示在視窗底部的狀態列中。  
   
-### 將報表儲存到您的電腦上  
+### <a name="to-save-the-report-on-your-computer"></a>將報表儲存到您的電腦上  
   
 1.  在 **[報表產生器]** 按鈕中，按一下 **[另存新檔]**。  
   
@@ -357,12 +343,14 @@ KPI 是具有商務重要性的可測量值。 在這個案例中，依產品子
   
 2.  按一下 **[儲存]**。  
   
-## 後續步驟  
+## <a name="next-steps"></a>後續步驟  
 您已成功完成「將 KPI 加入至報表」教學課程。 如需詳細資訊，請參閱：
 *  [量測計](../reporting-services/report-design/gauges-report-builder-and-ssrs.md)
 * [指標](../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
 * [報表產生器教學課程](../reporting-services/report-builder-tutorials.md)
 * [SQL Server 2016 的報表產生器](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
+
+

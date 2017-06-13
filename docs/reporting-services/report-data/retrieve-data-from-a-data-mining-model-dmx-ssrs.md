@@ -1,31 +1,36 @@
 ---
-title: "從資料採礦模型擷取資料 (DMX) (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "擷取報表資料"
-  - "資料集 [Reporting Services], 使用 DMX 查詢"
-  - "資料集 [Reporting Services], Analysis Services"
-  - "查詢 [Reporting Services], 資料採礦預測"
+title: "擷取資料，從資料採礦模型 (DMX) (SSRS) |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- retrieving report data
+- datasets [Reporting Services], with DMX queries
+- datasets [Reporting Services], Analysis Services
+- queries [Reporting Services], data mining prediction
 ms.assetid: d9cd3624-1594-4707-8887-55437dd7e07c
 caps.latest.revision: 19
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 19
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c12f8637430ef42d794cf2cf54100e0b9c6d58cf
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 從資料採礦模型擷取資料 (DMX) (SSRS)
+# <a name="retrieve-data-from-a-data-mining-model-dmx-ssrs"></a>從資料採礦模型擷取資料 (DMX) (SSRS)
   若要在報表中使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料採礦模型內的資料，您必須定義 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料來源，並建立一或多個報表資料集。 當您建立資料來源定義時，您必須指定連接字串和認證，好讓您可以從用戶端電腦存取資料來源。  
   
- 您可以建立內嵌資料來源定義供單一報表使用，或是建立共用資料來源定義供多個報表使用。 本主題的程序描述如何建立內嵌資料來源。 如需共用資料來源的詳細資訊，請參閱[內嵌和共用資料連接或資料來源 &#40;報表產生器及 SSRS&#41;](../Topic/Embedded%20and%20Shared%20Data%20Connections%20or%20Data%20Sources%20\(Report%20Builder%20and%20SSRS\).md) 和[建立、修改及刪除共用資料來源 &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)。  
+ 您可以建立內嵌資料來源定義供單一報表使用，或是建立共用資料來源定義供多個報表使用。 本主題的程序描述如何建立內嵌資料來源。 如需共用資料來源的詳細資訊，請參閱[內嵌和共用資料連接或資料來源 &#40;報表產生器及 SSRS&#41;](http://msdn.microsoft.com/library/f417782c-b85a-4c4d-8a40-839176daba56) 和[建立、修改及刪除共用資料來源 &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)。  
   
  在您建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料來源之後，可以建立一或多個資料集。 您可針對每一個資料集使用資料採礦預測運算式 (DMX) 查詢設計工具，以建立一個指定欄位集合的 DMX 查詢。 如需詳細資訊，請參閱 [Analysis Services MDX 查詢設計工具使用者介面](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md)。  
   
@@ -33,7 +38,7 @@ caps.handback.revision: 19
   
  發行報表之後，您可能需要變更資料來源的認證，如此當報表在報表伺服器上執行時，擷取資料的權限就會是有效的。  
   
-### 建立內嵌 Microsoft SQL Server Analysis Services 資料來源  
+### <a name="to-create-an-embedded-microsoft-sql-server-analysis-services-data-source"></a>建立內嵌 Microsoft SQL Server Analysis Services 資料來源  
   
 1.  在 [報表資料] 窗格的工具列上，按一下 **[新增]**，然後按一下 **[資料來源]**。  
   
@@ -62,7 +67,7 @@ caps.handback.revision: 19
   
      資料來源會出現在 [報表資料] 窗格中。  
   
-### 若要為 Microsoft SQL Server Analysis Services 建立資料集  
+### <a name="to-create-a-dataset-for-a-microsoft-sql-server-analysis-services"></a>若要為 Microsoft SQL Server Analysis Services 建立資料集  
   
 1.  在 [報表資料] 窗格中，以滑鼠右鍵按一下連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料來源的資料來源名稱，然後按一下 [加入資料集]。  
   
@@ -70,7 +75,7 @@ caps.handback.revision: 19
   
 3.  在 [資料來源] 方塊中，確認該名稱為連接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料來源的資料來源名稱。  
   
-4.  按一下 [查詢設計工具]，開啟圖形化查詢設計工具來以互動方式建立查詢。 如果查詢設計工具以 MDX 模式開啟，請按一下工具列上的 [命令類型 DMX] (![變更為 DMX 查詢語言檢視](../../reporting-services/report-data/media/rsqdicon-commandtypedmx.png "變更為 DMX 查詢語言檢視"))，切換到資料採礦查詢設計工具。 如需詳細資訊，請參閱 [Analysis Services DMX 查詢設計工具使用者介面](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md)。  
+4.  按一下 [查詢設計工具]，開啟圖形化查詢設計工具來以互動方式建立查詢。 如果查詢設計工具開啟 MDX 模式中，按一下**命令類型 DMX** (![變更為 DMX 查詢語言檢視](../../reporting-services/report-data/media/rsqdicon-commandtypedmx.gif "變更為 DMX 查詢語言檢視")) 切換到資料採礦查詢設計工具工具列上。 如需詳細資訊，請參閱 [Analysis Services MDX 查詢設計工具使用者介面](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md)。  
   
      或者，若要從其他報表匯入現有的 DMX 查詢，請按一下 [匯入]，然後導覽至包含 DMX 查詢的 .rdl 檔案。 不支援從 .dmx 檔案匯入查詢。  
   
@@ -80,7 +85,7 @@ caps.handback.revision: 19
   
      資料集和它的欄位集合會出現在 [報表資料] 窗格的資料來源節點底下。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [Analysis Services Connection Type for DMX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)   
  [資料連接、資料來源及連接字串 &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [資料集欄位集合 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   

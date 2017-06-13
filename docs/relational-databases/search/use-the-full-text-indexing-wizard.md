@@ -28,10 +28,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: dd4ac1d2f93c1fa776473cdc7b1b99a07b5f8164
+ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
+ms.openlocfilehash: 204b0e834db9ad1c5fe7d3f08f507629313e3cad
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/09/2017
 
 ---
 # <a name="use-the-full-text-indexing-wizard"></a>使用全文檢索索引精靈
@@ -100,11 +100,11 @@ ms.lasthandoff: 04/11/2017
      指定要在上面建立全文檢索索引的檔案群組。  
   
      E. 選取值：  
-    |Value|描述|  
-    |-----------|-----------------|
-      |**<default>**| 如果資料表或檢視未分割，請選取此值，以便與基礎資料表或檢視使用的相同檔案群組。 如果已分割資料表或檢視表，則會使用主要檔案群組|
+      |Value|描述|  
+      |-----------|-----------------|
+      |**<default>**| 如果資料表或檢視未分割，請選取此值，以便與基礎資料表或檢視使用的相同檔案群組。 如果資料表或檢視表已分割，會使用主要檔案群組|
       |**PRIMARY**|選取即可針對新的全文檢索索引使用主要檔案群組。|
-             *使用者指定的預設檔案群組*|如果使用者定義的預設停用字詞表已存在，請從清單中選取其名稱，以便針對新的全文檢索索引使用該檔案群組。|  
+      *使用者指定的預設檔案群組*|如果使用者定義的預設停用字詞表已存在，請從要用於新的全文檢索索引中的該檔案群組清單中選取其名稱。|   
   
      
  11. **選取全文檢索停用字詞表**  

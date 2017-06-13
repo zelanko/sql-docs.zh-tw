@@ -1,33 +1,38 @@
 ---
-title: "預先載入快取 (報表管理員) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "快取 [Reporting Services]"
-  - "預先載入快取"
+title: "預先載入快取 （報表管理員） |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- cache [Reporting Services]
+- preloading cache
 ms.assetid: 152a1051-8aa5-4c01-bc85-f8be8971b0cd
 caps.latest.revision: 35
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 35
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c5543c648289dee007a2249299ecb006d41f6b98
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 預先載入快取 (報表管理員)
+# <a name="preload-the-cache-report-manager"></a>預先載入快取 (報表管理員)
   您可以為共用資料集建立快取重新整理計劃，為共用資料集預先載入快取。  
   
  您有兩種方式，可以預先載入報表的快取：  
   
 1.  建立報表的快取重新整理計劃。 這是慣用的方法。  
   
-2.  使用資料驅動訂閱，以預先載入有參數化報表執行個體的快取。 這是在早於 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]的版本中預先載入快取的唯一方法。 如需詳細資訊，請參閱[快取報表 &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md)。  
+2.  使用資料驅動訂閱，以預先載入有參數化報表執行個體的快取。 這是在早於 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]的版本中預先載入快取的唯一方法。 如需詳細資訊，請參閱 [快取報表 &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md)的版本中預先載入快取的唯一方法。  
   
  快取報表或共用資料集之前，必須符合下列條件：  
   
@@ -37,9 +42,9 @@ caps.handback.revision: 35
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務必須執行。  
   
-### 若要透過建立快取重新整理計劃以預先載入快取  
+### <a name="to-preload-the-cache-by-creating-a-cache-refresh-plan"></a>若要透過建立快取重新整理計劃以預先載入快取  
   
-1.  啟動[報表管理員 &#40;SSRS 原生模式&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md)。  
+1.  啟動[報表管理員 &#40;SSRS 原生模式&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)。  
   
 2.  在報表管理員中，導覽到 **[內容]** 頁面，然後導覽到您要快取的項目。  
   
@@ -64,9 +69,9 @@ caps.handback.revision: 35
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### 若要透過使用資料驅動訂閱以預先載入含使用者專屬報表的快取  
+### <a name="to-preload-the-cache-with-a-user-specific-report-by-using-a-data-driven-subscription"></a>若要透過使用資料驅動訂閱以預先載入含使用者專屬報表的快取  
   
-1.  啟動[報表管理員 &#40;SSRS 原生模式&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md)。  
+1.  啟動[報表管理員 &#40;SSRS 原生模式&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)。  
   
 2.  在報表管理員中，導覽至 **[內容]** 頁面，然後導覽至您要建立訂閱的報表。  
   
@@ -103,7 +108,7 @@ caps.handback.revision: 35
      或者，若要建立自訂排程，請按一下 **[在為此訂閱建立的排程上]** ，然後按 **[下一步]**。 設定排程，然後按一下 **[完成]**。  
   
     > [!NOTE]  
-    >  為了讓訂閱者能夠接收到最新的報表，您設定的排程應該與您為訂閱者所定義的報表傳遞排程一致。 如需詳細資訊，請參閱[報表管理員 &#40;SSRS 原生模式&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md)。  
+    >  為了讓訂閱者能夠接收到最新的報表，您設定的排程應該與您為訂閱者所定義的報表傳遞排程一致。 如需詳細資訊，請參閱[報表管理員 &#40;SSRS 原生模式&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)。  
   
 14. 設定報表的執行選項，如下。 在報表頁面上，按一下 **[屬性]** 索引標籤。  
   
@@ -119,7 +124,7 @@ caps.handback.revision: 35
   
 18. 按一下 **[套用]**。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [資料驅動訂閱](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
  [建立資料驅動訂閱 &#40;SSRS 教學課程&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)   
  [效能、快照、快取 &#40;Reporting Services&#41;](../../reporting-services/report-server/performance-snapshots-caching-reporting-services.md)   

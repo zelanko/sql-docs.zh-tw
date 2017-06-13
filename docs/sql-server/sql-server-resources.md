@@ -20,10 +20,10 @@ author: sabotta
 ms.author: carlasab
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 229b4aac242bc8be7e2058bad708f0bdee604796
+ms.sourcegitcommit: cf2d74e423ab96af582d5f420065f9756e671ec2
+ms.openlocfilehash: c4f53b76e5f01a639cb15f95f28a8d7118178783
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="sql-server-resources"></a>SQL Server 資源
@@ -31,7 +31,7 @@ ms.lasthandoff: 04/11/2017
   
  了解 SQL Server 中的新功能
  - [SQL Server 2016 的新功能](../sql-server/what-s-new-in-sql-server-2016.md)。
- - [SQL Server vNext 的新功能](../sql-server/what-s-new-in-sql-server-vnext.md)  
+ - [在 SQL Server 2017 最新消息](../sql-server/what-s-new-in-sql-server-2017.md)  
   
  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 是 Microsoft 的資料平台歷史上最大的進展，其具備即時作業分析能力、能在行動裝置上展現豐富的視覺效果、內建進階分析功能、採用先進的新安全性技術，以及提供新的混合式雲端案例。 其他優點包括增強記憶體內效能、將 OLTP 資料延伸到 Microsoft Azure，以及簡化關聯式和非關聯式資料的管理。  
   

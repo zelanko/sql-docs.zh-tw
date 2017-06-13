@@ -1,38 +1,36 @@
 ---
-title: "建立入口網站品牌形象 | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/29/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "商標 web 入口網站 |Microsoft 文件"
+ms.custom: 
+ms.date: 05/25/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6dac97f7-02a6-4711-81a3-e850a6b40bf1
 caps.latest.revision: 8
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 8
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 19742f59b104d18633a954dc2f8bc9824b58ef21
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 建立入口網站品牌形象
+
+# <a name="branding-the-web-portal"></a>建立入口網站品牌形象
+
+[!INCLUDE[ssrs-appliesto-sql2016-preview](../includes/ssrs-appliesto-sql2016-preview.md)]
+
 您可以在入口網站上打造您的企業品牌形象，藉以變更入口網站的外觀。 這是透過品牌封裝來完成。 品牌封裝已完成設計，因此您不需要具備深度階層式樣式表 (CSS) 的知識，就能建立它。  
   
-本主題內容：  
-  
--   [建立品牌封裝](#create)  
-  
--   [將品牌封裝套用至入口網站](#apply)  
-  
--   [metadata.xml 範例](#metadata)  
-  
--   [colors.json 範例](#colors)  
-  
 <iframe width="560" height="315" src="https://www.youtube.com/embed/m08kLuofwFA?list=PLv2BtOtLblH3F--8WmK9QcLbx6dV_lVkL" frameborder="0" allowfullscreen></iframe>  
-  
-<a name="create">  
-## 建立品牌封裝  
+   
+## <a name="creating-the-brand-package"></a>建立品牌封裝  
   
 Reporting Services 的品牌封裝包含三個項目且會封裝為 zip 檔案。   
   
@@ -42,7 +40,7 @@ Reporting Services 的品牌封裝包含三個項目且會封裝為 zip 檔案�
   
 檔案必須具備上述的名稱。 不過您可以隨意命名 zip 檔案。  
   
-### metadata.xml  
+### <a name="metadataxml"></a>metadata.xml  
   
 Metadata.xml 檔案可讓您設定品牌封裝的名稱，並擁有對 colors.json 和 logo.png 檔案的參考項目。  
   
@@ -65,7 +63,7 @@ Metadata.xml 檔案可讓您設定品牌封裝的名稱，並擁有對 colors.js
       <Item key="logo" path="logo.png" />  
     </Contents>  
   
-### Colors.json  
+### <a name="colorsjson"></a>Colors.json  
   
 上傳品牌封裝時，伺服器會從 colors.json 檔案擷取適當的名稱/值組，並將它們與主要的 LESS 樣式表合併 (brand.less)。 系統接著會處理這個 LESS 檔案，並將產生的 CSS 檔案提供給用戶端。 樣式表中的所有色彩都會遵循色彩的六個字元的十六進位表示法。  
   
@@ -77,14 +75,14 @@ LESS 樣式表所包含的區塊會參考某些預先定義的 LESS 變數，如
         background-color:@primaryButtonBg;   
     }  
   
-儘管這類似於 CSS 語法，但色彩值 (以 @symbol 做為首碼) 對 LESS 是唯一的。 它們是透過 json 檔案設定其值的變數。  
+儘管這類似於 CSS 語法，但色彩值，加上@symbol，對是唯一的。 它們是透過 json 檔案設定其值的變數。  
   
 例如，如果 colors.json 檔案具有下列值。  
   
     "primary":"#009900",   
     "primaryContrast":"#ffffff"   
   
-已處理的輸出會查閱 **@primaryButtonBg** LESS 變數，且會看見它對應到名為 **primary** 的 json 屬性，在此範例中是 #009900。 因此，它就能輸出正確的 CSS。  
+已處理的輸出會查閱 **@primaryButtonBg** LESS 變數，且會看見它對應到名為 **primary**的 json 屬性，在此範例中是 #009900。 因此，它就能輸出正確的 CSS。  
   
     .btn-primary {   
         color:#ffffff;   
@@ -102,7 +100,7 @@ LESS 樣式表所包含的區塊會參考某些預先定義的 LESS 變數，如
   
 |章節|說明|  
 |---|---|  
-|Primary|按鈕和暫留色彩。|  
+|primary|按鈕和暫留色彩。|  
 |次要|標題列、搜尋列、左邊功能表 (如果顯示) 及這些項目的文字色彩|  
 |主要中性色彩|首頁和報表區域背景。|  
 |次要中性色彩|文字方塊和資料夾選項背景，以及設定功能表。|  
@@ -116,14 +114,13 @@ LESS 樣式表所包含的區塊會參考某些預先定義的 LESS 變數，如
   
 接著可針對您建立的任何行動報表使用該佈景主題，即使它們不在您已部署該佈景主題的同一部伺服器上。   
   
-### 使用標誌  
+### <a name="using-a-logo"></a>使用標誌  
   
 如果您在品牌封裝中包含標誌，則它會出現在入口網站中，來取代您在 [站台設定] 功能表中針對入口網站所設定的名稱。  
   
 您針對標誌所納入的檔案必須使用 PNG 檔案格式。 檔案維度會在上傳至伺服器之後加以調整。 它應該會調整為大約 290px x 60px。  
-  
-<a name="apply">  
-## 將品牌封裝套用至入口網站  
+   
+## <a name="applying-the-brand-package-to-the-web-portal"></a>將品牌封裝套用至入口網站  
   
 若要加入、下載或移除品牌封裝，您可以執行下列動作。  
   
@@ -137,14 +134,13 @@ LESS 樣式表所包含的區塊會參考某些預先定義的 LESS 變數，如
   
     ![ssRSBranding](../reporting-services/media/ssrsbranding.png)  
   
-**目前安裝的品牌封裝**將顯示已上傳的封裝名稱，或顯示 [無]。  
+**目前安裝的品牌封裝** 將顯示已上傳的封裝名稱，或顯示 [無]。  
   
-**上傳品牌封裝**會將封裝套用至入口網站。 您會看到它立即生效。  
+**上傳品牌封裝** 會將封裝套用至入口網站。 您會看到它立即生效。  
   
-您也可以**下載**或**移除**封裝。 移除封裝會立即將入口網站重設為預設品牌。  
+您也可以 **下載** 或 **移除** 封裝。 移除封裝會立即將入口網站重設為預設品牌。  
   
-<a name="metadata">  
-## metadata.xml 範例  
+## <a name="metadataxml-example"></a>metadata.xml 範例  
   
     \<?xml version="1.0" encoding="utf-8"?>  
     <SystemResourcePackage xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/systemresourcepackagemetadata"  
@@ -157,9 +153,8 @@ LESS 樣式表所包含的區塊會參考某些預先定義的 LESS 變數，如
             <Item key="logo" path="logo.png" />  
         </Contents>  
     </SystemResourcePackage>  
-  
-<a name="colors">  
-## Colors.json 範例  
+   
+## <a name="colorsjson-example"></a>colors.json 範例  
   
     {  
         "name":"Multicolored example brand",  
@@ -252,12 +247,5 @@ LESS 樣式表所包含的區塊會參考某些預先定義的 LESS 變數，如
             "altTableAccent":"#fdc336"  
         }  
     }  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+
+更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)

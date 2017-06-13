@@ -1,26 +1,31 @@
 ---
-title: "建立階梯狀報表 (報表產生器及 SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "建立階梯狀的報表 （報表產生器及 SSRS） |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5933c4f0-c713-4ecb-b521-ff46c9c63fff
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 232b8e03dc8e5e2130d127408f356ba2dc0492d5
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 建立階梯狀報表 (報表產生器及 SSRS)
-階梯狀報表是一種 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分頁報表類型，會在相同的資料行中，顯示父群組底下縮排的詳細資料列或子群組，如以下範例所示：  
+# <a name="create-a-stepped-report-report-builder-and-ssrs"></a>建立階梯狀報表 (報表產生器及 SSRS)
+階梯狀報表是一種  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分頁報表類型，會在相同的資料行中，顯示父群組底下縮排的詳細資料列或子群組，如以下範例所示：  
   
- ![已轉譯的階梯狀報表](../../reporting-services/report-design/media/steppedreportrendered.gif "已轉譯的階梯狀報表")  
+ ![轉譯的階梯狀的報表](../../reporting-services/report-design/media/steppedreportrendered.gif "Rendered 階梯狀報表")  
   
  傳統的資料表報表會將父群組放在報表的相鄰資料行中。 新的 Tablix 資料區可讓您將群組和詳細資料列或子群組加入到相同的資料行中。 若要區分群組資料列與詳細資料列或子群組資料列，您可以套用格式 (如字型色彩)，也可以讓詳細資料列縮排。  
   
@@ -32,7 +37,7 @@ caps.handback.revision: 8
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## 若要建立階梯狀報表  
+## <a name="to-create-a-stepped-report"></a>若要建立階梯狀報表  
   
 1.  建立資料表報表。 例如，插入 Tablix 資料區，然後將欄位加入到資料列。  
   
@@ -48,15 +53,15 @@ caps.handback.revision: 8
   
      您現在擁有一個基本的表格式報表。 轉譯報表時，您會看到一個包含群組執行個體值的資料行，以及一個或多個包含群組詳細資料的資料行。 下圖顯示資料區可能會在設計介面上呈現的外觀。  
   
-     ![含有群組的資料表資料區域](../../reporting-services/report-design/media/tabledataregionwithgroup.gif "含有群組的資料表資料區域")  
+     ![資料表資料區域與群組](../../reporting-services/report-design/media/tabledataregionwithgroup.gif "資料表資料區域與群組")  
   
      下圖顯示當您檢視報表時，轉譯的資料區可能的外觀。  
   
-     ![已轉譯的群組報表](../../reporting-services/report-design/media/tablereportrendered.gif "已轉譯的群組報表")  
+     ![轉譯的群組的報表](../../reporting-services/report-design/media/tablereportrendered.gif "Rendered 群組報表")  
   
 3.  如果是階梯狀報表，您不需要第一個顯示群組執行個體的資料行， 請改為複製群組首資料格中的值、刪除群組資料行，然後貼到群組首資料列中的第一個文字方塊。 若要移除群組資料行，請以滑鼠右鍵按一下群組資料行或資料格，然後按一下 [刪除資料行]。 下圖顯示資料區可能會在設計介面上呈現的外觀。  
   
-     ![含有群組頁首資料列的資料區域](../../reporting-services/report-design/media/tabledataregiongroupheader.gif "含有群組頁首資料列的資料區域")  
+     ![資料區域與群組標頭資料列](../../reporting-services/report-design/media/tabledataregiongroupheader.gif "資料區域與群組標頭資料列")  
   
 4.  若要將詳細資料列縮排到相同資料行的群組頁首資料列之下，請變更詳細資料資料格的填補。  
   
@@ -78,13 +83,13 @@ caps.handback.revision: 8
   
      您的資料區域外觀將與下列範例類似。  
   
-     ![階梯狀報表的資料區域](../../reporting-services/report-design/media/steppedreportdataregion.gif "階梯狀報表的資料區域")  
+     ![階梯狀報表的資料區](../../reporting-services/report-design/media/steppedreportdataregion.gif "階梯狀報表的資料區域")  
   
      **階梯狀報表配置的資料區**  
   
      在 [主資料夾] 索引標籤上，按一下 [執行]。 報表在顯示群組時，將會包含子群組值的縮排層級。  
   
-## 若要建立包含多個群組的階梯狀報表  
+## <a name="to-create-a-stepped-report-with-multiple-groups"></a>若要建立包含多個群組的階梯狀報表  
   
 1.  如前一個程序所述來建立報表。  
   
@@ -103,7 +108,7 @@ caps.handback.revision: 8
   
 3.  變更顯示群組資料之資料格的填補。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [頁首和頁尾 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
  [設定報表項目的格式 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)   
  [Tablix 資料區 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   

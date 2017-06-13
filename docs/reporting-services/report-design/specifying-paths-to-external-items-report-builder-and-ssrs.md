@@ -1,23 +1,28 @@
 ---
-title: "指定外部項目的路徑 (報表產生器及 SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Paths to External Items （報表產生器及 SSRS） |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4fe513da-f3c5-479c-9fec-8662b91a0d6d
 caps.latest.revision: 9
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 9
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3ba2c751b7f851fa9be24ca08cb4ab95f4314258
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 指定外部項目的路徑 (報表產生器及 SSRS)
+# <a name="specifying-paths-to-external-items-report-builder-and-ssrs"></a>指定外部項目的路徑 (報表產生器及 SSRS)
   您可以在報表項目屬性中指定路徑，以便參考位於報表定義檔案外部且儲存在報表伺服器上的項目，例如鑽研報表、子報表和影像檔。  
   
 > [!NOTE]  
@@ -32,18 +37,18 @@ caps.handback.revision: 9
   
  在設定為 SharePoint 整合模式的報表伺服器上，您必須包含副檔名 .rdl。 路徑可以是下列其中一項：  
   
--   **來自主報表之項目的相對路徑。** 例如 ../AllSubreports/Subreport1。 在此範例中，**..** 表示主報表所在之資料夾上方的資料夾。  
+-   **來自主報表之項目的相對路徑。** 例如 ../AllSubreports/Subreport1。 在此範例中， **..** 表示主報表所在之資料夾上方的資料夾。  
   
     > [!NOTE]  
     >  在報表產生器內部執行報表時，不支援相對路徑。 若要檢視使用外部項目之相對路徑的報表，請將報表儲存至報表伺服器，然後從中執行報表。  
   
 -   **項目的完整路徑。**  
   
-    -   **在報表伺服器上：**路徑的開頭是 **/**，亦即主資料夾。 例如 /Reports/AllSubreports/Subreport1。  
+    -   **在報表伺服器上：** 路徑的開頭是 **/**，亦即主資料夾。 例如 /Reports/AllSubreports/Subreport1。  
   
-    -   **在 SharePoint 網站上：**您必須在運算式中指定報表名稱，以及項目的完整 URL 和副檔名 .rdl。 例如，`="http://server/site/library/folder/Report1.rdl"`。  
+    -   **在 SharePoint 網站上：** 您必須在運算式中指定報表名稱，以及項目的完整 URL 和副檔名 .rdl。 例如， `="http://server/site/library/folder/Report1.rdl"`。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [加入外部影像 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-an-external-image-report-builder-and-ssrs.md)   
  [加入子報表和參數 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-a-subreport-and-parameters-report-builder-and-ssrs.md)   
  [在報表上加入鑽研動作 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-a-drillthrough-action-on-a-report-report-builder-and-ssrs.md)  

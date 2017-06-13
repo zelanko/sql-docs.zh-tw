@@ -1,27 +1,32 @@
 ---
-title: "Reporting Services Report Server (Native Mode) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "administering Reporting Services"
-  - "administering [Reporting Services]"
-  - "Reporting Services, 管理"
+title: "Reporting Services 報表伺服器 （原生模式） |Microsoft 文件"
+ms.custom: 
+ms.date: 03/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- administering Reporting Services
+- administering [Reporting Services]
+- Reporting Services, administration
 ms.assetid: fa0d84e2-4c21-432c-aa7c-23517da75253
 caps.latest.revision: 24
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 24
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 004db2495533a1155b58a49ac0af96943a997181
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# Reporting Services Report Server (Native Mode)
+# <a name="reporting-services-report-server-native-mode"></a>Reporting Services Report Server (Native Mode)
   針對原生模式設定的報表伺服器會當做應用程式伺服器執行，並透過 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]元件專門提供所有處理和管理能力。  
   
  您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 或報表管理員來管理 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表。 使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員可在原生模式中管理報表伺服器。  
@@ -59,11 +64,11 @@ caps.handback.revision: 24
  在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，內容管理是指報表、模型、資料夾、資源和共用資料來源的管理。 所有的這些項目都可以透過屬性和安全性設定單獨進行管理， 而任何一個項目都可以移至報表伺服器資料夾命名空間內的不同位置。 若要有效管理項目，您必須了解內容管理員所執行的工作。  
   
 > [!NOTE]  
->  內容管理與報表伺服器管理不同。 如需如何管理報表伺服器執行環境的詳細資訊，請參閱[設定和管理報表伺服器 &#40;Reporting Services SharePoint 模式&#41;](../../reporting-services/report-server-sharepoint/configuration and administration of a report server.md)。  
+>  內容管理與報表伺服器管理不同。 如需如何管理報表伺服器執行環境的詳細資訊，請參閱[設定和管理報表伺服器 &#40;Reporting Services SharePoint 模式&#41;](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md)。  
   
  內容管理包括下列工作：  
   
--   藉由套用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 所提供以角色為基礎的安全性，保護報表伺服器站台及項目的安全。  
+-   藉由套用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]所提供以角色為基礎的安全性，保護報表伺服器站台及項目的安全。  
   
 -   藉由加入、修改和刪除資料夾，將報表伺服器資料夾階層結構化。  
   
@@ -106,7 +111,7 @@ caps.handback.revision: 24
   
  若要在報表中使用影像資源，請將影像檔加入至專案，然後將它與報表一起發行。 發行影像之後，您可以更新報表中的影像參考，讓它指向報表伺服器上的資源，然後單獨重新發行該報表，以便儲存您的變更。 之後，您就可以透過重新發行資源，更新影像 (與報表分開處理)。 報表會使用報表伺服器上可用的最新影像版本。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [設定和管理報表伺服器 &#40;SSRS 原生模式&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)   
  [疑難排解 Reporting Services 安裝](../../reporting-services/install-windows/troubleshoot-a-reporting-services-installation.md)  
   

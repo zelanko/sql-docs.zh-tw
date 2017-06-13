@@ -1,68 +1,49 @@
 ---
-title: "教學課程：建立基本資料表報表 (報表產生器) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/23/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: "教學課程： 建立基本資料表報表 （報表產生器） |Microsoft 文件"
+ms.custom: 
+ms.date: 06/23/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: d9e30521-f8ae-4c45-89c3-d40727f622f7
 caps.latest.revision: 16
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 15
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 021a980dee9f6cd72f663475ba084962fa543cd4
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 教學課程：建立基本資料表報表 (報表產生器)
+# <a name="tutorial-creating-a-basic-table-report-report-builder"></a>教學課程：建立基本資料表報表 (報表產生器)
 本教學課程將教導您根據範例銷售資料建立基本資料表報表。 下圖顯示您將建立的報表。  
   
 ![SSRS_Tutorial_Basic_Table_Report](../reporting-services/media/ssrs-tutorial-basic-table-report.png)  
   
-## <a name="BackToTop"></a>學習內容  
-在本教學課程中，您將學習如何執行下列作業：  
-  
-1.  [使用精靈建立報表](#CreateTable)  
-  
-    1.  [在資料表精靈中指定資料連接](#DataConnection)  
-  
-    2.  [在資料表精靈中建立查詢](#Query)  
-  
-    3.  [在資料表精靈中將資料組織成群組](#Groups)  
-  
-    4.  [在資料表精靈中加入小計和總計資料列](#Subtotals)  
-  
-2.  [將資料格式化為貨幣](#FormatCurrency)  
-  
-3.  [將資料格式化為日期](#FormatDate)  
-  
-4.  [變更資料行寬度](#Width)  
-  
-5.  [加入報表標題](#Title)  
-  
-6.  [儲存報表](#Save)  
-  
-7.  [匯出報表](#Export)  
-  
+
 完成這個教學課程的估計時間：30 分鐘。  
   
-## 需求  
+## <a name="requirements"></a>需求  
 如需需求的詳細資訊，請參閱[教學課程的必要條件 &#40;報表產生器&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md)。  
   
 ## <a name="CreateTable"></a>1.使用精靈建立報表  
 使用資料表或矩陣精靈建立資料表報表。 模式有兩種：報表設計和共用資料集設計。 在報表設計模式中，您可以在 [報表資料] 窗格中指定資料，並且在設計介面上指定報表配置。 在共用資料集設計模式中，您可以建立資料集查詢，以便與其他人共用。 在本教學課程中，您將使用報表設計模式。  
   
-### 建立報表  
+### <a name="to-create-a-report"></a>建立報表  
   
 1.  從您的電腦、[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 入口網站或 SharePoint 整合模式[啟動報表產生器](../reporting-services/report-builder/start-report-builder.md)。  
   
-    [新增報表或資料集] 對話方塊隨即開啟。  
+    [新報表或資料集] 對話方塊隨即開啟。  
   
-    如果看不到 [新增報表或資料集] 對話方塊，請按一下 [檔案] 功能表 > [新增]。  
+    如果未顯示 [新報表或資料集] 對話方塊，請按一下 [檔案] 功能表 > [新增]。  
   
 2.  在左窗格中，確認已選取 **[新增報表]** 。  
   
@@ -73,7 +54,7 @@ caps.handback.revision: 15
   
 在本教學課程中，您將使用內嵌資料來源。 若要深入了解如何使用共用資料來源，請參閱[取得資料連接的替代方式 &#40;報表產生器&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)。  
   
-### 建立內嵌資料來源  
+### <a name="to-create-an-embedded-data-source"></a>建立內嵌資料來源  
   
 1.  在 **[選擇資料集]** 頁面上，選取 **[建立資料集]**，然後按 **[下一步]**。 **[選擇與資料來源的連接]** 頁面隨即開啟。  
   
@@ -109,7 +90,7 @@ caps.handback.revision: 15
 > [!NOTE]  
 > 在本教學課程中，查詢會包含資料值，因此不需要外部資料來源。 這樣會使查詢相當冗長。 在商業環境中，查詢不會包含資料。 這僅供教學之用。  
   
-### 建立查詢  
+### <a name="to-create-a-query"></a>建立查詢  
   
 1.  [設計查詢] 頁面上會開啟關聯式查詢設計工具。 在這個教學課程中，您將使用以文字為基礎的查詢設計工具。  
   
@@ -162,7 +143,7 @@ caps.handback.revision: 15
 ## <a name="Groups"></a>1c. 在資料表精靈中將資料組織成群組  
 選取做為群組對象的欄位時，您會設計包含資料列和資料行的資料表，以顯示詳細資料和彙總資料。  
   
-### 若要將資料組織為群組  
+### <a name="to-organize-data-into-groups"></a>若要將資料組織為群組  
   
 1.  在 [排列欄位] 頁面上，將 [Product] 拖曳至 [值]。  
   
@@ -189,7 +170,7 @@ caps.handback.revision: 15
 ## <a name="Subtotals"></a>1d. 在資料表精靈中加入小計和總計資料列  
 建立群組之後，您可以加入並格式化要顯示欄位彙總值的資料列。 您可以選擇要顯示所有資料，或是讓使用者以互動方式展開和摺疊分組資料。  
   
-### 加入小計和總計  
+### <a name="to-add-subtotals-and-totals"></a>加入小計和總計  
   
 1.  在 **[選擇配置]** 頁面的 **[選項]**下方，確定已選取 **[顯示小計和總計]** 。  
   
@@ -216,7 +197,7 @@ caps.handback.revision: 15
 ## <a name="FormatCurrency"></a>2.將資料格式化為貨幣  
 根據預設，[Sales] 欄位的摘要資料會顯示一般數字。 格式化該欄位，將數字顯示為貨幣。   
   
-### 格式化貨幣欄位  
+### <a name="to-format-a-currency-field"></a>格式化貨幣欄位  
   
 1.  若要檢視 [設計檢視] 中的格式化文字方塊及作為範例值的預留位置文字，請在 [常用] 索引標籤的 [數字] 群組中，按一下預留位置樣式圖示旁的箭號 > [範例值]。  
   
@@ -233,7 +214,7 @@ caps.handback.revision: 15
 ## <a name="FormatDate"></a>3.將資料格式化為日期  
 根據預設，[SalesDate] 欄位會同時顯示日期和時間。 您可以將該欄位格式化，以便只顯示日期。  
   
-### 將日期欄位格式化成預設格式  
+### <a name="to-format-a-date-field-as-the-default-format"></a>將日期欄位格式化成預設格式  
   
 1.  按一下 **[設計]** 返回 [設計] 檢視。  
   
@@ -247,7 +228,7 @@ caps.handback.revision: 15
   
 SalesDate 值會以預設的日期格式顯示。  
   
-### 若要將日期格式變更為自訂格式  
+### <a name="to-change-the-date-format-to-a-custom-format"></a>若要將日期格式變更為自訂格式  
   
 1.  按一下 **[設計]** 返回 [設計] 檢視。  
   
@@ -274,7 +255,7 @@ SalesDate 值會顯示月份的名稱，而不是月份的數字。
   
 若要減少每個資料列佔用的垂直空間數量，請展開資料行寬度以容納一行上資料行中預期的文字方塊內容。  
   
-### 變更資料表資料行的寬度  
+### <a name="to-change-the-width-of-table-columns"></a>變更資料表資料行的寬度  
   
 1.  按一下 **[設計]** 返回 [設計] 檢視。  
   
@@ -291,7 +272,7 @@ SalesDate 值會顯示月份的名稱，而不是月份的數字。
   
 您可以將不同的字型樣式、大小和色彩套用到文字的片語和個別字元，進一步加強文字。 如需詳細資訊，請參閱[格式化文字方塊中的文字 &#40;報表產生器及 SSRS&#41;](../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)。  
   
-### 若要加入報表標題  
+### <a name="to-add-a-report-title"></a>若要加入報表標題  
   
 1.  在設計介面上，按一下 **[按一下以加入標題]**。  
   
@@ -312,7 +293,7 @@ SalesDate 值會顯示月份的名稱，而不是月份的數字。
 ## <a name="Save"></a>6.儲存報表  
 將報表儲存至報表伺服器或您的電腦。 如果沒有將報表儲存到報表伺服器，就無法使用數個 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 功能，例如報表組件和子報表。  
   
-### 若要將報表儲存在報表伺服器上  
+### <a name="to-save-the-report-on-a-report-server"></a>若要將報表儲存在報表伺服器上  
   
 1.  按一下 [檔案] > [另存新檔]。  
   
@@ -328,7 +309,7 @@ SalesDate 值會顯示月份的名稱，而不是月份的數字。
   
 報表就會儲存至報表伺服器。 您連接之報表伺服器的名稱會顯示在視窗底部的狀態列中。  
   
-### 將報表儲存到您的電腦上  
+### <a name="to-save-the-report-on-your-computer"></a>將報表儲存到您的電腦上  
   
 1.  按一下 [檔案] > [另存新檔]。  
   
@@ -343,7 +324,7 @@ SalesDate 值會顯示月份的名稱，而不是月份的數字。
   
 在本教學課程中，您會將報表匯出到 Excel，並且設定報表上的屬性，為活頁簿索引標籤提供自訂名稱。  
   
-### 指定活頁簿索引標籤名稱  
+### <a name="to-specify-the-workbook-tab-name"></a>指定活頁簿索引標籤名稱  
   
 1.  按一下 **[設計]** 返回 [設計] 檢視。  
   
@@ -355,7 +336,7 @@ SalesDate 值會顯示月份的名稱，而不是月份的數字。
     > 如果看不到 [屬性] 窗格，請選取 **[檢視]** 索引標籤上的 **[屬性]**。  
     > 如果在 [屬性] 窗格中看不到屬性，請嘗試選取窗格頂端的 [字母順序] 按鈕，依字母順序排列所有屬性。   
   
-### 將報表匯出到 Excel  
+### <a name="to-export-a-report-to-excel"></a>將報表匯出到 Excel  
   
 1.  按一下 **[執行]** 預覽報表。  
   
@@ -371,16 +352,18 @@ SalesDate 值會顯示月份的名稱，而不是月份的數字。
   
 6.  按一下 **[儲存]**。  
   
-### 若要在 Excel 中檢視報表  
+### <a name="to-view-the-report-in-excel"></a>若要在 Excel 中檢視報表  
   
 1.  開啟您儲存活頁簿的資料夾並按兩下 **Product_Sales_Excel.xlsx**。  
   
 2.  確認活頁簿索引標籤的名稱是 **Product Sales Excel**。  
   
-## 後續步驟  
+## <a name="next-steps"></a>後續步驟  
 以上總結如何建立基本資料表報表的逐步解說。 如需資料表的詳細資訊，請參閱[資料表、矩陣和清單 &#40;報表產生器及 SSRS&#41;](../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
 [報表產生器教學課程](../reporting-services/report-builder-tutorials.md)  
 [SQL Server 2016 的報表產生器](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
+
+

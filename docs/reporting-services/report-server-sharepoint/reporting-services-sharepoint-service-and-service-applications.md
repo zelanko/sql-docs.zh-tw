@@ -1,23 +1,28 @@
 ---
-title: "Reporting Services SharePoint 服務和服務應用程式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Reporting Services SharePoint 服務和服務應用程式 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 501aa9ee-8c13-458c-bf6f-24e00c82681b
 caps.latest.revision: 10
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 10
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d34dfcd5c6c4ecb6ef91dc57cb7e98ee71512393
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# Reporting Services SharePoint 服務和服務應用程式
+# <a name="reporting-services-sharepoint-service-and-service-applications"></a>Reporting Services SharePoint 服務和服務應用程式
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式是以 SharePoint 服務架構為基礎進行架構，並且利用 SharePoint 服務和一對多服務應用程式。 建立服務應用程式可讓服務變成可用，並產生服務應用程式資料庫。 您可以建立多個 Reporting Services 服務應用程式，但是一個服務應用程式就足以應付大部分的部署狀況。  
   
  本主題涵蓋下列資訊：  
@@ -33,7 +38,7 @@ caps.handback.revision: 10
 -   [相關工作](#bkmk_related)  
   
 ##  <a name="bkmk_createapp"></a> 建立 Reporting Services 服務應用程式  
- 您可以使用 SharePoint 管理中心或 PowerShell 指令碼建立 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式。 如需使用 SharePoint 管理中心的詳細資訊，請參閱[安裝適用於 SharePoint 2010 的 Reporting Services SharePoint 模式](http://msdn.microsoft.com/zh-tw/47efa72e-1735-4387-8485-f8994fb08c8c)中的＜建立 Reporting Services 服務應用程式＞一節。 如需建立服務應用程式的範例 PowerShell 指令碼，請參閱本主題稍後的＜PowerShell＞一節。  
+ 您可以使用 SharePoint 管理中心或 PowerShell 指令碼建立 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式。 如需使用 SharePoint 管理中心的詳細資訊，請參閱 [安裝適用於 SharePoint 2010 的 Reporting Services SharePoint 模式](http://msdn.microsoft.com/en-us/47efa72e-1735-4387-8485-f8994fb08c8c)中的＜建立 Reporting Services 服務應用程式＞一節。 如需建立服務應用程式的範例 PowerShell 指令碼，請參閱本主題稍後的＜PowerShell＞一節。  
   
 ##  <a name="bkmk_associations"></a> 修改服務應用程式與 Proxy 群組的關聯  
  建立服務應用程式的 [新增] 頁面包含 **[Web 應用程式關聯]**區段。 此區段可讓您在建立服務應用程式時產生關聯。 使用下列步驟變更關聯並將客戶組態指派至服務應用程式。 您也可以使用相同的一般程序將 Proxy 加入至預設群組，而不是將服務應用程式的關聯變更為自訂群組。  

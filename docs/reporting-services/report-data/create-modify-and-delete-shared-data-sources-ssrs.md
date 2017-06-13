@@ -1,36 +1,41 @@
 ---
-title: "建立、修改及刪除共用資料來源 (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "修改資料來源屬性"
-  - "共用資料來源 [Reporting Services]"
-  - "移除共用資料來源"
-  - "角色 [Reporting Services], 共用資料來源"
-  - "資料來源 [Reporting Services], 共用"
-  - "資料來源 [Reporting Services], 修改屬性"
-  - "刪除共用資料來源"
+title: "建立、 修改及刪除共用的資料來源 (SSRS) |Microsoft 文件"
+ms.custom: 
+ms.date: 03/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- modifying data source properties
+- shared data sources [Reporting Services]
+- removing shared data sources
+- roles [Reporting Services], shared data sources
+- data sources [Reporting Services], shared
+- data sources [Reporting Services], modifying properties
+- deleting shared data sources
 ms.assetid: 1e58c1c2-5ecf-4ce6-9d04-0a8acfba17be
 caps.latest.revision: 53
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 53
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 3d4025539369dcc955e8675a92def39e356cb86d
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 建立、修改及刪除共用資料來源 (SSRS)
+# <a name="create-modify-and-delete-shared-data-sources-ssrs"></a>建立、修改及刪除共用資料來源 (SSRS)
   共用資料來源是一組資料來源連接屬性，可供多個報表、模型以及在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器上執行的資料驅動訂閱參考。  共用資料來源提供一種簡單的方式，可用來管理通常會隨著時間而變更的資料來源屬性。 如果使用者帳戶或密碼變更，或者如果您將資料庫移到不同的伺服器，可以在一個地方更新連接資訊。  
   
  下列圖示會指出報表管理員資料夾階層中的共用資料來源：  
   
- ![共用資料來源圖示](../../reporting-services/report-data/media/hlp-16datasource.png "共用資料來源圖示")  
+ ![Shared data source icon](../../reporting-services/report-data/media/hlp-16datasource.png "Shared data source icon")  
 共用資料來源的圖示  
   
  對於報表以及資料驅動訂閱而言，共用資料來源是選擇性的，但是對於報表模型而言，則是必要的。 如果您打算將報表模型用於隨選報表，您必須建立並維護一個共用資料來源項目，才能提供連接資訊給模型。  
@@ -42,17 +47,17 @@ caps.handback.revision: 53
 |名稱|識別報表伺服器資料夾階層中之項目的名稱。|  
 |說明|檢視資料夾的內容時，與「報表管理員」中的項目一起顯示的描述。|  
 |連接類型|與資料來源搭配使用的資料處理延伸模組。 您僅能使用在報表伺服器上部署的資料處理延伸模組。 如需 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 隨附之資料處理延伸模組的詳細資訊，請參閱 [Reporting Services &#40;SSRS&#41; 支援的資料來源](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。|  
-|連接字串|資料庫的連接字串。 如需詳細資訊，或者要檢視常用資料來源之連接字串的範例，請參閱[資料連接、資料來源及連接字串 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。|  
-|認證類型|指定如何取得用於連接的認證，以及建立連接後是否要使用這些認證。 如需詳細資訊，請參閱[指定報表資料來源的認證及連接資訊](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)。|  
+|連接字串|資料庫的連接字串。 如需詳細資訊，或者要檢視常用資料來源之連接字串的範例，請參閱 [資料連接、資料來源及連接字串 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。|  
+|認證類型|指定如何取得用於連接的認證，以及建立連接後是否要使用這些認證。 如需詳細資訊，請參閱 [指定報表資料來源的認證及連接資訊](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)。|  
   
  共用資料來源不包含用來擷取資料的查詢資訊。 查詢永遠會保留在報表定義中。  
   
-## 建立與刪除共用資料來源  
+## <a name="creating-and-modifying-shared-data-sources"></a>建立與刪除共用資料來源  
  若要建立共用資料來源或修改其屬性，您必須擁有報表伺服器的 [管理資料來源] 權限。 如果報表伺服器是在原生模式下執行，您可以使用「報表管理員」來建立與設定共用資料來源。 如果報表伺服器是在 SharePoint 整合模式下執行，您可以使用 SharePoint 網站上的應用程式頁面。 如果是任意模式下的任何報表伺服器，您可以在「報表設計師」中建立共用資料來源，然後將其發行到目標伺服器上。  
   
  在報表伺服器上建立共用資料來源之後，您可以建立角色指派來控制其存取權、將其移動到不同的位置、重新命名它，或者在外部資料來源執行維護作業時離線以防進行報表處理。 如果您重新命名或移動共用資料來源項目至報表伺服器資料夾階層中的其他位置，所有參考共用資料來源的報表或訂閱，其相關路徑資訊會隨之更新。 如果您讓共用資料來源離線，所有報表、模型和訂閱都不會執行，直到您重新啟用資料來源為止。  
   
- 如需在報表伺服器資料夾階層控制共用資料來源存取權的詳細資訊，請參閱[保護共用資料來源項目的安全](../../reporting-services/security/secure-shared-data-source-items.md)。  
+ 如需在報表伺服器資料夾階層控制共用資料來源存取權的詳細資訊，請參閱 [保護共用資料來源項目的安全](../../reporting-services/security/secure-shared-data-source-items.md)。  
   
  **在報表設計師中建立共用資料來源**  
   
@@ -77,13 +82,13 @@ caps.handback.revision: 53
   
  **在報表管理員中建立共用資料來源**  
   
-1.  啟動[報表管理員 &#40;SSRS 原生模式&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md)。  
+1.  啟動 [報表管理員 &#40;SSRS 原生模式&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)。  
   
 2.  在報表管理員中，導覽至 **[內容]** 頁面。  
   
 3.  按一下 [新增資料來源]。 [新增資料來源] 頁面隨即開啟。  
   
-4.  輸入項目的名稱。 名稱必須至少包含一個字元，而且開頭必須為字母。 它也可以包含特定符號，但不能包含空格或下列字元：; ?  : @ & = + , $ / * \< > | " /。  
+4.  輸入項目的名稱。 名稱必須至少包含一個字元，而且開頭必須為字母。 它也可以包含特定符號，但不能包含空格或下列字元：; ?  : @ & = + , $ / * < > | " /。  
   
 5.  選擇性地輸入描述，以提供使用者有關連接的資訊。 此描述會出現在報表管理員的 [內容] 頁面上。  
   
@@ -124,7 +129,7 @@ caps.handback.revision: 53
   
 3.  修改資料來源，然後按一下 [套用]。  
   
-## 刪除共用資料來源  
+## <a name="deleting-shared-data-sources"></a>刪除共用資料來源  
  您可以利用從報表伺服器刪除任何項目的相同方式，刪除共用資料來源。  
   
  **若要刪除共用資料來源**  
@@ -151,7 +156,7 @@ caps.handback.revision: 53
   
  刪除共用資料來源時，沒有「復原」作業。 不過，如果您不小心刪除了共用資料來源，可以使用相同的屬性值來建立一個新的共用資料來源。 您必須開啟每個報表、模型和資料驅動訂閱，才能在使用它的項目中重建共用資料來源，但是，只要資料來源屬性與之前的資料來源屬性相同，報表、模型和訂閱就會如先前般運作。  
   
-## 匯入共用資料來源  
+## <a name="importing-shared-data-sources"></a>匯入共用資料來源  
  **若要在報表設計師中匯入現有的資料來源**  
   
 1.  在方案總管中，以滑鼠右鍵按一下報表伺服器專案中的 [共用資料來源] 資料夾，然後按一下 [加入現有項目]。 [加入現有項目] 對話方塊隨即開啟。  
@@ -160,7 +165,7 @@ caps.handback.revision: 53
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## SharePoint 中的共用資料來源  
+## <a name="shared-data-sources-in-sharepoint"></a>SharePoint 中的共用資料來源  
  當您從 SharePoint 文件庫執行報表時，可以在報表內部或連結到報表的外部檔案中定義連接資訊。 如果連接資訊內嵌於報表中，它就稱為自訂資料來源。 如果連接資訊定義於外部檔案中，它就稱為共用資料來源。 外部檔案可以是報表伺服器資料來源 (.rsds) 檔案或 Office 資料連線 (.odc) 檔案。  
   
  .rsds 檔類似 .rds 檔，但結構描述不同。 若要建立 .rsds 檔，您可以將 .rds 檔從報表設計師或模型設計師中發行到 SharePoint 文件庫 (便會根據原始 .rds 檔建立新的 .rsds 檔)。 或者，您可以在 SharePoint 網站的文件庫中建立新檔案。  
@@ -215,7 +220,7 @@ caps.handback.revision: 53
   
  刪除報表模型時，請特別小心。 如果您刪除模型，就不能再於報表產生器中，開啟和修改以該模型為基礎的任何報表。 如果您不慎刪除了現有報表所使用的模型，就必須重新產生該模型，重新建立並儲存使用該模型的任何報表，然後重新指定想要使用的任何模型項目安全性。 您不能只是重新產生模型，然後將它附加到現有的報表。  
   
-## 相依項目  
+## <a name="dependent-items"></a>相依項目  
  若要檢視使用資料來源之報表和模型的清單，開啟共用資料來源的 [相依項目] 頁面。 當您在「報表管理員」或 SharePoint 應用程式頁面中開啟資料來源時，您可以存取此頁面。 請注意，[相依項目] 頁面中不會顯示資料驅動訂閱。 如果共用資料來源是由訂閱所使用，訂閱將不會出現在相依項目清單中。  
   
  **檢視 SharePoint 中的相依項目**  
@@ -228,14 +233,15 @@ caps.handback.revision: 53
   
      若為報表模型，相依項目的清單就會顯示在報表產生器中建立的報表。 若為共用資料來源，相依項目清單可能會同時包括報表和報表模型。  
   
-## 請參閱＜  
- [建立及管理共用資料來源 &#40;SharePoint 整合模式的 Reporting Services&#41;](../Topic/Create%20and%20Manage%20Shared%20Data%20Sources%20\(Reporting%20Services%20in%20SharePoint%20Integrated%20Mode\).md)   
+## <a name="see-also"></a>請參閱＜  
+ [建立及管理共用資料來源 &#40;SharePoint 整合模式的 Reporting Services&#41;](http://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76)   
  [資料連接、資料來源及連接字串 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [管理報表資料來源](../../reporting-services/report-data/manage-report-data-sources.md)   
- [報表管理員 &#40;SSRS 原生模式&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md)   
- [內嵌和共用資料連接或資料來源 &#40;報表產生器及 SSRS&#41;](../Topic/Embedded%20and%20Shared%20Data%20Connections%20or%20Data%20Sources%20\(Report%20Builder%20and%20SSRS\).md)   
- [資料來源屬性頁面 &#40;報表管理員&#41;](../Topic/Data%20Sources%20Properties%20Page%20\(Report%20Manager\).md)   
- [建立、刪除或修改共用資料來源 &#40;報表管理員&#41;](../Topic/Create,%20Delete,%20or%20Modify%20a%20Shared%20Data%20Source%20\(Report%20Manager\).md)   
+ [報表管理員 &#40;SSRS 原生模式&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [內嵌和共用資料連接或資料來源 &#40;報表產生器及 SSRS&#41;](http://msdn.microsoft.com/library/f417782c-b85a-4c4d-8a40-839176daba56)   
+ [資料來源屬性頁面 &#40;報表管理員&#41;](http://msdn.microsoft.com/library/f37edda0-19e6-489e-b544-8751fa6b6cfb)   
+ [建立、刪除或修改共用資料來源 &#40;報表管理員&#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
  [設定報表的資料來源屬性 &#40;報表管理員&#41;](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)  
   
   
+

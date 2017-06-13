@@ -1,26 +1,31 @@
 ---
-title: "建立共用資料集或內嵌資料集 (報表產生器及 SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "建立共用資料集或內嵌資料集 （報表產生器及 SSRS） |Microsoft 文件"
+ms.custom: 
+ms.date: 10/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d1d7bc71-f0e9-4ce5-b3ad-6fee54388a31
 caps.latest.revision: 9
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 9
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 25caf057e8d75fd3ed463f4165b3259331d18182
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 建立共用資料集或內嵌資料集 (報表產生器及 SSRS)
+# <a name="create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs"></a>建立共用資料集或內嵌資料集 (報表產生器及 SSRS)
 內嵌資料集適用於單一 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 報表。 報表伺服器上的共用資料集可供多份報表使用，行動和分頁報表皆可。 若要建立資料集，您需要內嵌或共用的資料來源。  
   
- 請使用**報表產生器**來執行下列工作：  
+ 請使用 **報表產生器** 來執行下列工作：  
   
 1.  在資料集設計檢視中建立共用資料集。 共用資料集必須使用已發行的共用資料來源。  
   
@@ -28,7 +33,7 @@ caps.handback.revision: 9
   
 3.   將資料集直接儲存至報表伺服器或 SharePoint 網站。  
   
- 請使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的**報表產生器**來執行下列工作：  
+ 請使用 **的** 報表產生器 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 來執行下列工作：  
   
 1.  在 [方案總管] 中建立共用資料集。 共用資料集必須使用 [方案總管] 中 [共用資料來源] 資料夾內的資料來源。  
   
@@ -36,12 +41,12 @@ caps.handback.revision: 9
   
 3.  (選擇性) 使用報表來部署共用資料集和共用資料來源。 您可以針對每種項目類型，使用 [專案屬性] 來指定報表伺服器或 SharePoint 網站上資料夾的路徑。  
   
- 如需詳細資訊，請參閱[報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。  
+ 如需詳細資訊，請參閱 [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## 若要開啟報表產生器，並建立共用資料集  
+## <a name="to-open-report-builder-and-create-a-shared-dataset"></a>若要開啟報表產生器，並建立共用資料集  
   
 1.  開啟報表產生器。 **[新增報表或資料集]** 窗格隨即開啟，如下圖所示：  
   
@@ -62,7 +67,7 @@ caps.handback.revision: 9
   
 7.  若要結束報表產生器，請按一下 **[報表產生器]**，然後按一下 **[結束報表產生器]**。 若要處理報表，按一下 **[報表產生器]**，然後按一下 **[新增]** 或 **[開啟]**。  
   
-## 若要設定查詢參數選項  
+## <a name="to-set-query-parameter-options"></a>若要設定查詢參數選項  
   
 1.  開啟報表產生器。  
   
@@ -81,7 +86,7 @@ caps.handback.revision: 9
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 
   
-## 若要從 SQL Server 關聯式資料庫建立資料集  
+## <a name="to-create-a-dataset-from-a-sql-server-relational-database"></a>若要從 SQL Server 關聯式資料庫建立資料集  
   
 1.  在 [報表資料] 窗格中，以滑鼠右鍵按一下資料來源的名稱，然後按一下 [加入資料集]。 **[資料集屬性]** 對話方塊的 **[查詢]** 頁面隨即開啟。  
   
@@ -110,11 +115,12 @@ caps.handback.revision: 9
   
      資料集和它的欄位集合會出現在 [報表資料] 窗格的資料來源節點底下。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [資料集欄位集合 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
  [報表資料集 &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
- [資料連接、資料來源及連接字串 &#40;報表產生器及 SSRS&#41;](../Topic/Data%20Connections,%20Data%20Sources,%20and%20Connection%20Strings%20in%20Report%20Builder.md)   
+ [資料連接、資料來源及連接字串 &#40;報表產生器及 SSRS&#41;](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)   
  [內嵌和共用資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  
   
   
+

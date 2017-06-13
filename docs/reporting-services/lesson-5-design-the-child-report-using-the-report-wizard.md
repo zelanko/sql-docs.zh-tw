@@ -1,27 +1,32 @@
 ---
-title: "第 5 課：使用報表精靈設計子報表 | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/18/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
+title: "第 5 課： 設計子報表使用報表精靈 |Microsoft 文件"
+ms.custom: 
+ms.date: 05/18/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+applies_to:
+- SQL Server 2016
 ms.assetid: 19a3f927-ea97-4f40-a5f8-cd5f2598e4da
 caps.latest.revision: 8
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 8
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 285ade0eaf63fee0733fcfcb9e8f627e8c666a6b
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 第 5 課：使用報表精靈設計子報表
-在您建立子報表的資料連接和資料表之後，下一步是要使用報表設計師中的 [報表精靈] 設計子報表。 如需報表設計師的詳細資訊，請參閱[使用報表設計師設計報表 &#40;SSRS&#41;](../reporting-services/tools/design-reports-with-report-designer-ssrs.md)。  
+# <a name="lesson-5-design-the-child-report-using-the-report-wizard"></a>第 5 課：使用報表精靈設計子報表
+在您建立子報表的資料連接和資料表之後，下一步是要使用報表設計師中的 [報表精靈] 設計子報表。 如需報表設計師的詳細資訊，請參閱[使用報表設計師設計報表 &#40;SSRS&#41;](../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md)。  
   
-### 若要使用報表精靈設計子報表  
+### <a name="to-design-the-child-report-using-the-report-wizard"></a>若要使用報表精靈設計子報表  
   
 1.  請確認已在**方案總管**中選取頂層網站。  
   
@@ -59,8 +64,10 @@ caps.handback.revision: 8
   
 9. 儲存 .rdlc 檔。  
   
-## 下一項工作  
-您已使用 [報表精靈] 成功設計子報表。 接下來您要將 ReportViewer 控制項加入至網站應用程式。 請參閱[第 6 課：將 ReportViewer 控制項加入至應用程式](../reporting-services/lesson-6-add-a-reportviewer-control-to-the-application.md)。  
+## <a name="next-task"></a>下一項工作  
+您已使用 [報表精靈] 成功設計子報表。 接下來您要將 ReportViewer 控制項加入至網站應用程式。 請參閱 [第 6 課：將 ReportViewer 控制項加入至應用程式](../reporting-services/lesson-6-add-a-reportviewer-control-to-the-application.md)。  
   
   
   
+
+

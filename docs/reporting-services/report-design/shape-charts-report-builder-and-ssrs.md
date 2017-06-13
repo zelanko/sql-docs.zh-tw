@@ -1,39 +1,44 @@
 ---
-title: "形狀圖 (報表產生器及 SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "圖形圖 （報表產生器及 SSRS） |Microsoft 文件"
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4b8404c1-aa89-4350-8bd6-203bc0446ee4
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 84ee7a9030bb27725994a33860b26b8754034cd9
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 形狀圖 (報表產生器及 SSRS)
+# <a name="shape-charts-report-builder-and-ssrs"></a>形狀圖 (報表產生器及 SSRS)
   形狀圖會將值資料顯示為整體所佔的百分比。 形狀圖通常用於顯示集合中不同值之間成比例的比較。 類別目錄是以個別的形狀區段表示。 區段的大小取決於值。 形狀圖在用途上類似於圓形圖，差別在於後者排序類別目錄時是從最大到最小。  
   
- 漏斗圖會將值顯示為逐漸減少的比例。 區域的大小取決於所有值總計中所佔百分比的數列值。 例如，您可能會使用漏斗圖來顯示網站訪客的趨勢。 漏斗圖在頂端可能會顯示一個寬廣的區域，表示訪客點擊首頁的次數，而其他區域在比例上會比較小。 如需如何將資料加入漏斗圖中的詳細資訊，請參閱[圖表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)。  
+ 漏斗圖會將值顯示為逐漸減少的比例。 區域的大小取決於所有值總計中所佔百分比的數列值。 例如，您可能會使用漏斗圖來顯示網站訪客的趨勢。 漏斗圖在頂端可能會顯示一個寬廣的區域，表示訪客點擊首頁的次數，而其他區域在比例上會比較小。 如需如何將資料加入漏斗圖中的詳細資訊，請參閱 [圖表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)。  
   
  下圖顯示漏斗圖的範例。  
   
- ![漏斗圖](../../reporting-services/report-design/media/rs-funnelchart.png "漏斗圖")  
+ ![漏斗圖](../../reporting-services/report-design/media/rs-funnelchart.gif "漏斗圖")  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## 變數  
+## <a name="variations"></a>變數  
   
 -   **金字塔圖**： 金字塔圖會顯示成比例的資料，讓圖表看起來像金字塔一樣。  
   
-## 形狀圖的資料考量  
+## <a name="data-considerations-for-shape-charts"></a>形狀圖的資料考量  
   
 -   形狀圖因為其視覺效果而在報表上相當普遍。 不過，形狀圖是非常簡化的圖表類型，在表示資料時可能不是最適合。 只有在資料已彙整為七個資料點 (含) 以下後，才考慮使用形狀圖。 一般而言，使用形狀圖只能在每個資料區域顯示一個類別目錄。  
   
@@ -53,7 +58,7 @@ caps.handback.revision: 8
   
 -   您可以在圓形圖和環圈圖上套用其他繪製樣式來增加視覺效果。 如需詳細資訊，請參閱[格式化圖表上的數列色彩 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)。  
   
-## 請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [圖表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [格式化圖表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
  [圖表中的空白和 Null 資料點 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   

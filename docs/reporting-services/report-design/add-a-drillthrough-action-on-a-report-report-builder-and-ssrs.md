@@ -1,23 +1,28 @@
 ---
-title: "在報表上加入鑽研動作 (報表產生器及 SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "報表 （報表產生器及 SSRS） 上加入鑽研動作 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 153729c4-d01e-4629-b78f-0cfd5a7f83da
 caps.latest.revision: 9
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 9
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f1e5c7c678cb3c38d9e0225ce47bc2dca91ab326
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 在報表上加入鑽研動作 (報表產生器及 SSRS)
+# <a name="add-a-drillthrough-action-on-a-report-report-builder-and-ssrs"></a>在報表上加入鑽研動作 (報表產生器及 SSRS)
   當您按一下主報表中的連結所開啟的報表稱為 *「鑽研報表」*(Drillthrough Report)。 此鑽研連結會啟用一個鑽研動作。  
   
  鑽研報表必須與主報表發行至相同的報表伺服器，但是可位於不同的資料夾中。 您可以將鑽研連結加入到具有 **Action** 屬性的任何項目，例如文字方塊、影像或是圖表的資料點。  
@@ -27,7 +32,7 @@ caps.handback.revision: 9
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### 若要加入鑽研動作  
+### <a name="to-add-a-drillthrough-action"></a>若要加入鑽研動作  
   
 1.  在 [設計] 檢視中，以滑鼠右鍵按一下要加入連結的文字方塊、影像或圖表，然後按一下 [屬性]。  
   
@@ -59,8 +64,8 @@ caps.handback.revision: 9
   
 7.  若要測試連結，請執行報表，然後按一下這個連結設定所在的報表項目。  
   
-## 請參閱＜  
- [動作屬性對話方塊 &#40;報表產生器和 SSRS&#41;](../Topic/Action%20Properties%20Dialog%20Box%20\(Report%20Builder%20and%20SSRS\).md)   
+## <a name="see-also"></a>請參閱＜  
+ [動作屬性對話方塊 &#40;報表產生器和 SSRS&#41;](http://msdn.microsoft.com/library/2c5d915b-4f97-42cf-b8f1-49ca3ff3d0f9)   
  [格式化圖表上的資料點 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
  [在數列上顯示工具提示 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md)  
   

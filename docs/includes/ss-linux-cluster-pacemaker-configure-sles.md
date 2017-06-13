@@ -1,4 +1,4 @@
-2. 在這兩個叢集節點上，建立檔案以儲存 SQL Server 使用者名稱和密碼，以供 Pacemaker 登入使用。 下列命令會建立並填入這個檔案：
+2. 所有叢集節點上，建立要儲存的 SQL Server 使用者名稱和密碼 Pacemaker 登入的檔案。 下列命令會建立並填入這個檔案：
 
    ```bash
    sudo touch /var/opt/mssql/secrets/passwd
@@ -8,7 +8,7 @@
    sudo chmod 600 /var/opt/mssql/secrets/passwd    
    ```
 
-3. 在這兩個叢集節點上，開啟 Pacemaker 防火牆連接埠。 若要使用 `firewalld` 開啟這些連接埠，請執行下列命令：
+3. 所有叢集節點上，開啟 Pacemaker 防火牆連接埠。 若要使用 `firewalld` 開啟這些連接埠，請執行下列命令：
 
    ```bash
    sudo firewall-cmd --permanent --add-service=high-availability
@@ -28,7 +28,7 @@
 
    
 
-2. 設定安裝 Pacemaker 和 Corosync 套件時建立的預設使用者密碼。 在這兩個節點上使用相同的密碼。 
+2. 設定安裝 Pacemaker 和 Corosync 套件時建立的預設使用者密碼。 在所有節點上使用相同的密碼。 
 
    ```bash
    sudo passwd hacluster
@@ -36,7 +36,7 @@
 
    
 
-3. 啟用並啟動 `pcsd` 服務和 Pacemaker。 這將會允許節點在重新開機後重新加入叢集。 在這兩個節點上執行下列命令。
+3. 啟用並啟動 `pcsd` 服務和 Pacemaker。 這將會允許節點在重新開機後重新加入叢集。 所有節點上執行下列命令。
 
    ```bash
    sudo systemctl enable pcsd
@@ -44,7 +44,7 @@
    sudo systemctl enable pacemaker
    ```
 
-4. 安裝 SQL Server 的 FCI 資源代理程式。 在這兩個節點上執行下列命令。 
+4. 安裝 SQL Server 的 FCI 資源代理程式。 所有節點上執行下列命令。 
 
    ```bash
    sudo yum install mssql-server-ha

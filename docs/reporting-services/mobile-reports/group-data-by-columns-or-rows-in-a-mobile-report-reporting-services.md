@@ -1,23 +1,28 @@
 ---
-title: "依行動報表中的資料行或資料列群組資料 | Reporting Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "依資料行或行動報表中的資料列群組資料 |Reporting Services |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b9ebd36c-a337-47ae-83e5-6c2f2144eb52
 caps.latest.revision: 6
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 6
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1c1b584f5a88af5055ffac67932fd94a37734bfd
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 依行動報表中的資料行或資料列群組資料 | Reporting Services
-您可以在許多圖表類型中，使用[!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]依資料行或資料列來組織資料。 請遵循下列逐步指示。
+# <a name="group-data-by-columns-or-rows-in-a-mobile-report--reporting-services"></a>依行動報表中的資料行或資料列群組資料 | Reporting Services
+您可以在許多圖表類型中，使用 [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]依資料行或資料列來組織資料。 請遵循下列逐步指示。
 
 在時間圖表、總計圖表、圓形圖和漏斗圖中，您可以依資料列或資料行來組織資料。 
 * 如果您想要比較資料表中的多個資料行，依資料行組織就會很有用。 
@@ -35,7 +40,7 @@ caps.handback.revision: 6
 
    ![mobile-report-properties-columns](../../reporting-services/mobile-reports/media/mobile-report-properties-columns.png)
 
-   同樣地，您會看到 [比較數列] -- **Comparison1** 至 **Comparison5** 處於選取狀態。
+   同樣的**比較數列** -- **Comparison1**透過**Comparison5**已選取。
    
 4. 選取 [預覽]。
 
@@ -51,7 +56,7 @@ caps.handback.revision: 6
 
    ![mobile-report-data-group-rows](../../reporting-services/mobile-reports/media/mobile-report-data-group-rows.png)
 
-8.  在 [資料屬性] 窗格中，現在會有 [類別目錄資料行] 方塊，其中列出 SimulatedTable 中的 [類別目錄] 資料行。 在 [主要數列] 中，您可以挑選使用哪些資料行來顯示值。 根據預設，[!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)] 會選取 Metric1 至 Metric5 作為主要數列，並選取 Comparison1 至 Comparison5 作為比較數列。 
+8.  在 [資料屬性] 窗格中，現在會有 [類別目錄資料行] 方塊，其中列出 SimulatedTable 中的 [類別目錄] 資料行。 在 [主要數列] 中，您可以挑選使用哪些資料行來顯示值。 根據預設， [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)] 會選取 Metric1 至 Metric5 作為主要數列，並選取 Comparison1 至 Comparison5 作為比較數列。 
 
     ![mobile-report-properties-rows](../../reporting-services/mobile-reports/media/mobile-report-properties-rows.png)
 
@@ -61,5 +66,5 @@ caps.handback.revision: 6
 
    現在，圖表中的每個橫條各代表 [類別目錄] 資料行中每個類別目錄的值。
 
-### 另請參閱
+### <a name="see-also"></a>另請參閱
 * [Reporting Services 行動報表中的視覺效果](../../reporting-services/mobile-reports/add-visualizations-to-reporting-services-mobile-reports.md)

@@ -1,29 +1,34 @@
 ---
-title: "隱藏第一頁或最後一頁的頁首或頁尾 (報表產生器及 SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "隱藏頁首或頁尾的第一個或最後一頁報表產生器 SSRS |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f87ce79b-00d7-4458-a17e-e253a20f720d
 caps.latest.revision: 6
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 6
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 17c9a8c854fad691b864ff1b0aba4e91b5d7b64d
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 隱藏第一頁或最後一頁的頁首或頁尾 (報表產生器及 SSRS)
+# <a name="hide-a-page-header-or-footer-on-the-first-or-last-page-report-builder-and-ssrs"></a>隱藏第一頁或最後一頁的頁首或頁尾 (報表產生器及 SSRS)
   報表可以包含分別在每個頁面的頂端和底端執行的頁首和頁尾。 在您加入頁首或頁尾之後，就可以選擇性地隱藏報表第一頁和最後一頁的頁首或頁尾。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### 若要隱藏第一頁或最後一頁的頁首  
+### <a name="to-hide-a-page-header-on-the-first-or-last-page"></a>若要隱藏第一頁或最後一頁的頁首  
   
 1.  在 [設計] 檢視中，開啟報表。  
   
@@ -35,7 +40,7 @@ caps.handback.revision: 6
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### 若要隱藏第一頁或最後一頁的頁尾  
+### <a name="to-hide-a-page-footer-on-the-first-or-last-page"></a>若要隱藏第一頁或最後一頁的頁尾  
   
 1.  在 [設計] 檢視中，開啟報表。  
   
@@ -47,7 +52,7 @@ caps.handback.revision: 6
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## 請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [頁首和頁尾 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
  [Reporting Services 中的分頁 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [加入或移除頁首或頁尾 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md)  

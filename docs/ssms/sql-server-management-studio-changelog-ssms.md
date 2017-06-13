@@ -15,13 +15,200 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f2144751277bb10897e0ed39ee24dbad8a32b4ce
+ms.sourcegitcommit: 470e6c83318eaf8eb579d053f65b5353862eb4c7
+ms.openlocfilehash: 23e304e52967d5d16672872d8d5712f26ef8c610
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/08/2017
 
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
+
+## <a name="ssms-171-release"></a>SSMS 17.1 版本
+正式推出 |組建編號： 14.0.17119.0
+
+### <a name="enhancements"></a>功能增強
+
+- 程式碼剖析工具： 協助 > 大約現在會顯示發行版本號碼 （例如 17.1）
+- 分析服務的使用者可以為 1200年項目重新整理其資料來源的認證 TM 模型和更新版本從資料來源的內容功能表
+- 內建的 SSIS 報告現在從 CTP 2.1 SSIS 向外延展執行顯示記錄檔
+- SSIS 向外管理應用程式
+  - 檢視向外延展 master 的基本資訊。
+  - 輕鬆地加入向外延展部署的背景工作。
+  - 檢視所有的向外延展工作者和基本相關資訊，和也可以啟用或停用它們輕鬆。
+
+### <a name="bug-fixes"></a>錯誤修正
+- Always On:
+  - 其中可用性複本的屬性一律顯示為 「 自動容錯移轉 」 模式的 WSFC Ag 修正的問題。
+  - 已修正下列問題其中更新可用性群組時已覆寫唯讀路由清單
+- 永遠加密： 修正的問題產生的記錄檔，遺漏 DacFx 所產生的資訊。
+- 執行程序表： 修正問題其中 UI 已一律顯示實際的聯結型別屬性的非適應性聯結運算子。
+- 安裝程式：
+  - 修正 SSMS 17.0 的位置已中斷 SSDT Visual Studio 2013 [連接項目 3133479] 的問題
+  - 已修正的問題，按一下 「 重新啟動 」 結尾的安裝程式已不在重新啟動電腦
+- 指令碼： 暫時防止被意外刪除 Azure 的資料庫物件時嘗試停用該選項的指令碼刪除 SSMS。  近期版本的 SSMS 中，將適當的修正程式。
+- 物件總管 中： 已修正的問題，「 資料庫 」 節點未展開時連接至 Azure 的資料庫，使用"AS 複製 「 建立
+
+## <a name="ssms-170-release"></a>SSMS 17.0 版本
+正式推出 |組建編號： 14.0.17099.0
+
+### <a name="enhancements"></a>功能增強 
+
+- 升級封裝和 Windows Software Update Services (WSUS) 
+    - 未來 17.X 版本包含較小的累積更新套件 
+  - 更新套件也將會發行至 WSUS 類別目錄  
+- 圖示更新
+    - VS Shell 提供圖示與一致，並支援高 DPI 的解析度已更新圖示
+    - 新的 SSMS 和分析工具程式圖示，以區分 16.X 和 17.X 版本
+- SQL PowerShell 模組
+  - SQL Server PowerShell 模組從 SSMS 中移除，現在是透過 PowerShell 組件庫 （PowerShell 5.0 現在支援所需模組的版本控制）
+  - 「 簡報 」 （格式化） 的部分 （例如資料庫現在會顯示大小的可用空間和資料表顯示資料列計數和空間使用方式） 的 SMO 物件的其他增強功能
+  - PowerShell 命令提示字元中叫用從 OE 中的 [啟動 PowerShell] 功能表時加入的顏色標示
+  - 新增 -ClusterType 和 -RequiredCopiesToCommit 參數至 AG Cmdlet (New-SqlAvailabilityGroup、Join-SqlAvailabilityGroup 及 Set-SqlAvailabilityGroup Cmdlet)
+  - 新增參數 -ActiveDirectoryAuthority 和 -AzureKeyVaultResourceId 至 Add-SqlAzureAuthenticationContext Cmdlet
+  - 新增的撤銷 SqlAvailabilityGroupCreateAnyDatabase、 Grant SqlAvailabilityGroupCreateAnyDatabase 和集 SqlAvailabilityReplicaRoleToSecondary cmdlet
+  - 加入-SeedingMode Set-sqlavailabilityreplica 和 New-sqlavailabilityreplica cmdlet 的參數
+  - 已加入-ConnectionString 參數，以取得 sql Database
+- Linux 上的 SQL Server
+    - 記錄傳送的一般改進和修正
+  - 已新增的支援的原生 Linux 路徑附加、 還原與備份資料庫
+  - 已新增的支援針對稽核記錄檔的目的地資料夾的原生 Linux 路徑
+- Analysis Services
+  - DAX 查詢視窗中：
+    - 在編輯器中比對括號
+    - 定義量值和定義 VAR 語法支援
+    - 各種的 Intellisense 的增強功能
+  - 通用驗證
+    - 可讓使用者指定使用者名稱和任何密碼和 Azure 登入 對話方塊會處理連接
+  - SSMS PQ 整合： 
+    - 指令碼的結構化的資料來源運作 
+    - 檢視及編輯 PQ UI 中的結構化的資料來源
+- 新的「加入唯一條件約束」範本
+- Showplan
+    - 在已耗用時間的屬性視窗中顯示所有執行緒的最大值，而非加總
+    - 公開新的記憶體授與運算子屬性
+    - 啟用「即時查詢統計資料」中的 [編輯查詢] 按鈕
+    - 支援交錯執行
+  - 「 分析實際執行計畫 」 的新選項
+  - 執行程序表比較的一般增強功能
+  - 導入了發現基數估計中的兩個查詢計劃的比對節點之間顯著的差異，並執行基本的分析可能的根本原因的執行程序表比較功能中的功能
+- 移除「已註冊的伺服器總管」中的 [組態管理員]
+- 啟用讀取來自 Azure Blob 儲存體的稽核記錄
+- 為 Always Encrypted 新增參數化，如需詳細資料，請參閱[此頁面](https://blogs.msdn.microsoft.com/sqlsecurity/2016/12/13/parameterization-for-always-encrypted-using-ssms-to-insert-into-update-and-filter-by-encrypted-columns/) 
+- 目標為 Azure SQL DB 的 AAD 通用驗證連線支援自訂租用戶識別碼 
+- 為 Azure SQL Database 產生指令碼，現在可編寫全文、規則及資料庫指令碼
+- 修正 SSMS 和 Profiler 啟動顯示畫面的商標
+- 從 SSMS 移除公用程式控制點 UI
+- SSMS 現在可以建立 「 PremiumRS"版本的 SQL Azure 資料庫
+- AlwaysOn 可用性群組
+  - 加入新的叢集類型的支援： 外部和 NONE
+    - 新增支援 SQL Server on Linux
+    - 新增自動植入初始資料同步處理選項
+    - 修正一些缺失，例如處理、 資料重新整理 UI 配置端點 URL
+    - 移除 Azure 複本相關功能
+  - 改進的 IntelliSense 的數個可用性群組的關鍵字
+- 活動監視器
+  - 加入新的 「 活動監視器 」 窗格，SSMS 輸出視窗
+  - 變更連線逾時錯誤/訊息記錄到輸出視窗，而不是一個快顯訊息的資訊
+  - 移除的空白圖表中 [概觀] 區段 （第 5 個圖表）
+  - 加入"（暫停） 」 概觀標題如果已暫停 活動監視器資料收集
+  - 圖形資料表 」 資料夾底下會顯示 SQL Server 的新節點與邊緣資料表的圖形圖示-圖形節點和邊緣資料表的圖形擴充功能-範本來建立圖形可用的節點和邊緣資料表
+- 簡報模式
+    - 3 個可透過快速啟動 (Ctr-Q) 使用的新工作
+    - PresentOn - 開啟簡報模式
+    - PresentEdit - 編輯簡報模式的簡報字型大小。  查詢編輯器的「文字編輯器字型」。  其他組件的「環境字型」。
+    - RestoreDefaultFonts - 還原至預設設定。
+    - *注意：目前沒有 PresentOff 命令。請使用 RestoreDefaultFonts 來關閉簡報模式*
+
+### <a name="bug-fixes"></a>錯誤修正
+
+- 已修正的問題時顯示計劃捲動 surfacebook 觸控板透過 SSMS 損毀
+- 修正 SSMS 其中作業長時間擱置的問題取得要用為已還原或離線資料庫的屬性時的時間 
+- 已修正的問題，「 說明檢視器 」 無法開啟 RC 組建中
+- 「 維護計畫工作 工具箱 」 項目可能會遺失在 SSMS 中修正的問題。
+- 在 SSMS 使用者的無法壓縮資料庫時的資料庫名稱包含大括號中修正的問題。 [Connect 項目](https://connect.microsoft.com/SQLServer/feedback/details/3122618)
+- 已修正的問題 SSMS 已嘗試刪除的指令碼的 Azure 資料庫實際上造成資料庫本身的刪除。 [Connect 項目](http://connect.microsoft.com/SQLServer/feedback/details/3131458/)
+- 修正預設值沒有針對使用者定義資料表類型編寫指令碼的問題。 [Connect 項目](https://connect.microsoft.com/SQLServer/feedback/details/3119027)
+- 針對索引上操作功能表的另一輪效能改進。 [Connect 項目](https://connect.microsoft.com/SQLServer/feedback/details/3120783)
+- 修正當滑鼠游標暫留在執行計畫中的遺失索引上時，會造成過度閃爍的問題。 [Connect 項目](https://connect.microsoft.com/SQLServer/feedback/details/3118510)
+- 修正 SSMS 在編寫指令碼時會使 DB 離線的問題 [Connect 項目](https://connect.microsoft.com/SQLServer/feedback/details/3118550)
+- SSMS 當地語系化 (非英文) 版本的其他 UI 修正。
+- 修正以 SQL 2016 SP1 Standard Edition 為目標時，[Always Encrypted 金鑰] 節點會遺失的問題。
+- 永遠加密
+    - 當以 SQL 2016 RTM Standard Edition 或任何 SQL 2014 (及以下) 伺服器為目標時，[Always Encrypted] 功能表會不正確地啟動
+    - 修正當使用 CREATE OR ALTER 語法時，IntelliSense 會報告錯誤的問題
+    - 修正當 CMK/CEK 中包含需要逸出 (以括弧括住) 的字元時，加密會失敗的問題
+    - 當 SSMS 中出現「記憶體不足」例外狀況時，使用者會看到建議使用原生 (64 位元) PowerShell 的錯誤。
+    - 修正當使用者使用資源群組管理員訂用帳戶，而不是使用傳統 Azure 訂用帳戶時，AE 精靈會失敗的問題
+    - 修正當使用者在訂用帳戶中沒有任何權限或 Azure 金鑰保存庫時，AE 精靈會顯示不正確錯誤的錯誤。
+    - 修正在 AE 精靈具有多個 AAD 的情況下，Azure 金鑰保存庫登入頁面不會顯示 Azure 訂用帳戶的問題
+    - 修正在 AE 精靈中，Azure 金鑰保存庫登入頁面不會顯示使用者具有讀取權限之 Azure 訂用帳戶的問題
+  - 已修正下列問題其中資源檔可能不會正確載入，因此會導致不正確的錯誤訊息
+- 改進 SSMS 安裝頁面上超連結的對比
+- 修正連線到 SQL Server Express (2016 SP1) 時不會顯示 Polybase 節點的問題
+- 已修正的問題所在的 Azure DB 的相容性層級變更為 v140 無法 SSMS
+- 改進 [物件總管] 在展開 Azure 資料庫清單時的效能 [Connect 項目 (英文)](https://connect.microsoft.com/SQLServer/feedback/details/3100675)
+- 修正 [檢視 SQL Server 記錄檔] 操作功能表項目針對非關聯式伺服器類型 (AS\RS\IS) 會不正確顯示的問題 
+- 修正使用 SQL 驗證檢查 Analysis Services 分割區查詢的語法時，可能會導致出現登入失敗訊息的問題
+- 修正在 SSMS 中重新命名預覽 1400 相容性層級 AS 表格式模型會導致失敗的問題
+- 修正在 AS 伺服器上嘗試無效作業之後，在罕見情況下可能會產生「模型上作業失敗」的問題，並在無法成功於模型上儲存之後還原本機變更
+- 修正 [Analysis Services 同步處理資料庫] 快顯對話方塊中的錯字
+- 在多個監視器安裝程式的畫面上，看不到備份/還原容器對話方塊。 
+- 如果目標物件名稱中有 ]，SecurityPolicy 建立會失敗。
+- SSMS 2016 [開啟最近使用的項目] 功能表未顯示最近儲存的檔案。 [Connect 項目](https://connect.microsoft.com/SQLServer/feedback/details/3113288/ssms-2016-open-recent-menu-doesnt-show-recently-saved-files)
+- 移除 VS Shell 更新時，使用者設定的重設。
+- 修正造成使用者無法變更 SQL Server 2017 上的資料庫相容性層級的問題。
+- 使用 AAD 通用驗證的查詢視窗在一小時後無法重新整理查詢。
+- 公用程式控制點 UI 已從 SSMS 移除。
+- AD 通用驗證連線在初始權杖過期後無法查詢資料。
+- 無法將 Rules from Azure SQL DB 編碼為 Azure SQL DB。
+- 修正 SQL PowerShell 無法連接舊版 SQL 執行個體 (2014 及更早版本) 的問題。 [Connect 項目](https://connect.microsoft.com/SQLServer/feedback/details/1138754/sql-server-sqlps-powershell-module-fails-connection-to-sql-2012-instance)
+- 修正在 SSMS 無法匯入註冊的伺服器時造成損毀的問題。
+- 修正如果使用者有資料庫的特定權限，會造成 SSMS 損毀的問題。 
+- SSMS - 在檢閱檢視時，資料表會從設計介面消失。 [Connect 項目](https://connect.microsoft.com/SQLServer/feedback/details/2946125/ssms-tables-disappears-from-design-surface-while-reviewing-views) 
+- 資料表捲軸不允許使用者捲動資料表內容，只有向上/下箭號允許這個動作。 也有可能在嘗試使用捲軸捲動後，捲動資料表內容，而這是一項錯誤。 [Connect 項目](
+http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manager-2016-bug-in-design-view) 
+- 註冊的伺服器在重新整理根節點後未顯示圖示。
+- Azure v12 伺服器上 [建立資料庫] 的指令碼按鈕會執行指令碼，然後顯示訊息「沒有要編寫指令碼的動作」。
+- SSMS [連接到伺服器] 對話方塊未清除每個新連線的 [其他屬性] 索引標籤。
+- [產生工作] 指令碼未為 Azure SQL DB 產生 [建立資料庫] 指令碼。
+- 檢視設計工具中的捲軸顯示為已停用。
+- Always Encrypted AVK 金鑰路徑未包含版本識別碼。
+- 減少查詢視窗中的引擎版本查詢數。 [Connect 項目](http://connect.microsoft.com/SQLServer/feedback/details/3113387)
+- 未正確處理加密後來自重新整理模組的 Always Encrypted 錯誤。
+- 將 OLTP 與 OLAP 的預設連線逾時從 15 秒變更為 30 秒，以修正略過連線的這類失敗。 
+- 修正自訂報表啟動時，SSMS 中的損毀。 [Connect 項目](http://connect.microsoft.com/SQLServer/feedback/details/3118856)
+- 修正 [產生指令碼...] 在 Azure SQL 資料庫失敗的問題。
+- 修正 [編寫指令碼為] 及 [產生指令碼精靈]，不要在編寫預存程序等物件的指令碼時新增額外新行。 [Connect 項目](http://connect.microsoft.com/SQLServer/feedback/details/3115850)
+- SQLAS PowerShell 提供者：將 LastProcessed 屬性新增到 Dimension 及 MeasureGroup 資料夾。 [Connect 項目](http://connect.microsoft.com/SQLServer/feedback/details/3111879)
+- 即時查詢統計資料：修正其只顯示批次中第一個查詢的問題。 [連線項目](http://connect.microsoft.com/SQLServer/feedback/details/3114221)  
+- 執行程序表：在視窗中顯示執行緒的最大值，而非加總。
+- 查詢存放區：對具有高執行變化的查詢新增報表。
+- 物件總管效能問題：[Connect 項目](http://connect.microsoft.com/SQLServer/feedback/details/3114074)
+    - 資料表的操作功能表會短暫停止回應
+    - SSMS 在以右鍵按一下資料表索引時 (透過遠端 (網際網路) 連線) 很緩慢。 
+    - 避免發行依伺服器排序的資料表查詢
+- 從 SSMS 移除 Azure 部署精靈 (將資料庫部署到 Azure VM)
+- 修正遺漏的索引未在 SSMS 中的執行計劃顯示的問題 [Connect 項目](http://connect.microsoft.com/SQLServer/feedback/details/3114194)
+- 修正 SSMS 中常見的關機時當機問題
+- 修正物件總管中，在 Polybase|向外延展群組節點上帶出操作功能表時發生錯誤的問題 [Connect 項目](http://connect.microsoft.com/SQLServer/feedback/details/3115128)
+- 修正 SSMS 可能在嘗試顯示資料庫權限時損毀的問題
+- 查詢存放區：在操作功能表項目中，為查詢存放區報表的結果方格進行一般功能增強
+- 為現有資料表設定 Always Encrypted 失敗，不相關的物件發生錯誤。 [Connect 項目](http://connect.microsoft.com/SQLServer/feedback/details/3103181)
+- 無法為具有多個結構描述的現有資料庫設定 Always Encrypted。 [連線項目](http://connect.microsoft.com/SQLServer/feedback/details/3109591)
+- Always Encrypted、加密資料行精靈失敗，原因是資料庫包含參考系統檢視的檢視。 [連線項目](http://connect.microsoft.com/SQLServer/feedback/details/3111925)
+- 使用 Always Encrypted 進行加密時，未正確處理加密後來自重新整理模組的錯誤。
+- 修正 [新增伺服器註冊] 對話方塊上的 UI 截斷問題
+- 修正 DMF 條件 UI 未正確更新其字串常值中有引號的運算式
+- 修正執行自訂報表時可能造成 SSMS 損毀的問題
+- 將 [向外延展中的執行...] 功能表項目 新增到資料夾節點
+- Azure SQL DB 防火牆白名單 IP 位址功能與修正的問題
+- 固定的問題，導致物件參考的 SSMS 中未設定例外狀況時編輯的來源為多維度磁碟分割
+- 固定的問題，導致物件參考的 SSMS 中未設定例外狀況，從多維度 AS 刪除客戶組件時伺服器
+- 已修正的問題而重新命名 AS 表格式 1400年資料庫失敗
+- 指令碼之後 1400 compat 層級為表格式資料來源連接屬性對話方塊中已修正的問題
+- 移除資料表中的做為 1400 compat 層級模型有至少一個資料分割的假設
+- Ctrl-R 現在切換 SSMS DAX 查詢編輯器中的 [結果] 窗格
+
 
 ## <a name="ssms-1653-release"></a>SSMS 16.5.3 版
 正式運作 | 組建編號：13.0.16106.4
@@ -568,12 +755,4 @@ ms.lasthandoff: 04/11/2017
  * **為新的 Azure SQL Database 服務層 (基本、標準、進階) 提供匯入/匯出精靈支援。**  
    
  * **許多 Bug 修正 (指令碼案例、允許 SQL 資料庫啟用變更追蹤等等)。**   
-     
-  
-  
-  
-  
-  
-  
-    
 

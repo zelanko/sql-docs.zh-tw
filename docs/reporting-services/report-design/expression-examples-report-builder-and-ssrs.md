@@ -1,58 +1,63 @@
 ---
-title: "運算式範例 (報表產生器及 SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/16/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-helpviewer_keywords: 
-  - "分頁符號 [Reporting Services], 運算式"
-  - "白綠相間的報表 [Reporting Services]"
-  - "Visual Basic [Reporting Services]"
-  - "函數 [Reporting Services], 範例"
-  - "自訂程式碼 [Reporting Services]"
-  - "報表的外觀"
-  - "格式化報表 [Reporting Services], 運算式"
-  - "顯示/隱藏 [Reporting Services]"
-  - "參數 [Reporting Services], 運算式"
-  - "可見性 [Reporting Services], 運算式"
-  - "頁首 [Reporting Services]"
-  - "頁尾 [Reporting Services]"
-  - "日期 [Reporting Services], 運算式"
-  - "運算式 [Reporting Services], 範例"
+title: "運算式範例 （報表產生器及 SSRS） |Microsoft 文件"
+ms.custom: 
+ms.date: 04/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+helpviewer_keywords:
+- page breaks [Reporting Services], expressions
+- green-bar reports [Reporting Services]
+- Visual Basic [Reporting Services]
+- functions [Reporting Services], examples
+- custom code [Reporting Services]
+- appearance of reports
+- formatting reports [Reporting Services], expressions
+- show/hide [Reporting Services]
+- parameters [Reporting Services], expressions
+- visibility [Reporting Services], expressions
+- page headers [Reporting Services]
+- page footers [Reporting Services]
+- dates [Reporting Services], expressions
+- expressions [Reporting Services], examples
 ms.assetid: 87ddb651-a1d0-4a42-8ea9-04dea3f6afa4
 caps.latest.revision: 101
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 101
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 6cf3c3d62250f84184adc53d66d9ec274a2a1b3d
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 運算式範例 (報表產生器及 SSRS)
-[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]分頁報表中常會使用運算式來控制內容與報表的外觀。 運算式是以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 所撰寫，而且可以使用內建函數、自訂程式碼、報表與群組變數，以及使用者定義的變數。 運算式以等號 (=) 當做開頭。 如需運算式編輯器以及可以包含之參考類型的詳細資訊，請參閱[報表中的運算式用法 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md) 和[加入運算式 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md)。  
+# <a name="expression-examples-report-builder-and-ssrs"></a>運算式範例 (報表產生器及 SSRS)
+[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]分頁報表中常會使用運算式來控制內容與報表的外觀。 運算式是以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]所撰寫，而且可以使用內建函數、自訂程式碼、報表與群組變數，以及使用者定義的變數。 運算式以等號 (=) 當做開頭。 如需運算式編輯器以及可以包含之參考類型的詳細資訊，請參閱[報表中的運算式用法 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md) 和[加入運算式 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md)。  
   
 > [!IMPORTANT]  
->  若啟用 RDL 沙箱，當報表發行時，運算式文字中只能使用特定類型和成員。 如需詳細資訊，請參閱[啟用與停用 RDL 沙箱](../../reporting-services/report-server-sharepoint/enable-and-disable-rdl-sandboxing.md)。  
+>  若啟用 RDL 沙箱，當報表發行時，運算式文字中只能使用特定類型和成員。 如需詳細資訊，請參閱 [啟用與停用 RDL 沙箱](../../reporting-services/report-server-sharepoint/enable-and-disable-rdl-sandboxing.md)。  
   
- 本主題提供可用於報表中一般工作的運算式範例。  
+本主題提供可用於報表中一般工作的運算式範例。  
   
--   [Visual Basic 函數](#VisualBasicFunctions)：日期、字串、轉換和條件式 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 函數的範例。  
+-   [Visual Basic 函數](#VisualBasicFunctions) ：日期、字串、轉換和條件式 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 函數的範例。  
   
--   [報表函數](#ReportFunctions)：彙總和其他內建報表函數的範例。  
+-   [報表函數](#ReportFunctions) ：彙總和其他內建報表函數的範例。  
   
--   [報表資料的外觀](#AppearanceofReportData)：變更報表外觀的範例。  
+-   [報表資料的外觀](#AppearanceofReportData) ：變更報表外觀的範例。  
   
--   [屬性](#Properties)：設定報表項目屬性來控制格式或可見性的範例。  
+-   [屬性](#Properties) ：設定報表項目屬性來控制格式或可見性的範例。  
   
--   [參數](#Parameters)：在運算式中使用參數的範例。  
+-   [參數](#Parameters) ：在運算式中使用參數的範例。  
   
--   [自訂程式碼](#CustomCode)：內嵌自訂程式碼的範例。  
+-   [自訂程式碼](#CustomCode) ：內嵌自訂程式碼的範例。  
   
- 如需特定用法的運算式範例，請參閱下列主題：  
+如需特定用法的運算式範例，請參閱下列主題：  
   
 -   [群組運算式範例 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)  
   
@@ -60,26 +65,22 @@ caps.handback.revision: 101
   
 -   [常用的篩選 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/commonly-used-filters-report-builder-and-ssrs.md)  
   
--   [報表和群組變數集合參考 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/report-and-group-variables-collections-references-report-builder-and-ssrs.md)  
+-   [報表和群組變數集合參考 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/built-in-collections-report-and-group-variables-references-report-builder.md)  
   
- 如需有關簡單和複雜運算式、使用運算式的地方，以及您可以包含在運算式中之參考類型的詳細資訊，請參閱[運算式 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md) 下的主題。 如需有關評估運算式以計算彙總所使用之內容的詳細資訊，請參閱[總計、彙總與內建集合的運算式範圍 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expression scope for totals, aggregates, and built-in collections.md)。  
+如需有關簡單和複雜運算式、使用運算式的地方，以及您可以包含在運算式中之參考類型的詳細資訊，請參閱 [運算式 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)。 如需有關評估運算式以計算彙總所使用之內容的詳細資訊，請參閱[總計、彙總與內建集合的運算式範圍 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)。  
   
- 如需了解如何在撰寫報表的內容中，撰寫使用本主題中運算式範例所使用的許多函數和運算子的運算式，請參閱[教學課程：運算式簡介](../../reporting-services/tutorial-introducing-expressions.md)。  
+如需了解如何在撰寫報表的內容中，撰寫使用本主題中運算式範例所使用的許多函數和運算子的運算式，請參閱 [教學課程：運算式簡介](../../reporting-services/tutorial-introducing-expressions.md)。  
+
   
- 如果使用報表模型查詢設計工具來設計使用報表模型當做資料來源的資料集查詢，您會使用公式來取代運算式。 這些公式可協助您使用整合到查詢中的自訂計算來指定報表資料，整合自訂計算的這項查詢可以指定要從報表模型資料來源傳回的資料。 如需詳細資訊，請參閱[報表模型查詢中的公式 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formulas-in-report-model-queries-report-builder-and-ssrs.md)。  
+## <a name="functions"></a>函數  
+ 報表中的許多運算式都有包含函數， 您可以使用這些函數來格式化資料、套用邏輯以及存取報表中繼資料。 您可以撰寫使用來自函式的運算式[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]執行階段程式庫，以及從<xref:System.Convert>和<xref:System.Math>命名空間。 您可以加入其他組件或自訂程式碼中函數的參考， 您也可以使用類別從[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]，包括<xref:System.Text.RegularExpressions>。  
   
-> [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
-  
-## 函數  
- 報表中的許多運算式都有包含函數， 您可以使用這些函數來格式化資料、套用邏輯以及存取報表中繼資料。 您可撰寫運算式來使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 執行階段程式庫及 <xref:System.Convert> 和 <xref:System.Math> 命名空間中的函數。 您可以加入其他組件或自訂程式碼中函數的參考， 您也可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 的類別，包括 <xref:System.Text.RegularExpressions>。  
-  
-###  <a name="VisualBasicFunctions"></a> Visual Basic 函數  
+##  <a name="VisualBasicFunctions"></a> Visual Basic 函數  
  您可以利用 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 函數來操作文字方塊所顯示的資料，或參數、屬性或報表的其他區域所用的資料。 此章節提供示範其中一些函數的範例。 如需詳細資訊，請參閱 MSDN 上的 [Visual Basic 執行階段程式庫成員](http://go.microsoft.com/fwlink/?LinkId=198941) 。  
   
- [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 提供許多自訂格式選項，例如特定的日期格式。 如需詳細資訊，請參閱 MSDN 上的[格式化型別](http://go.microsoft.com/fwlink/?LinkId=112024)。  
+ [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 提供許多自訂格式選項，例如特定的日期格式。 如需詳細資訊，請參閱 MSDN 上的 [格式化型別](http://go.microsoft.com/fwlink/?LinkId=112024) 。  
   
-#### 數學函數  
+### <a name="math-functions"></a>數學函數  
   
 -   **Round** 函數可用來將數字四捨五入至最接近的整數。 下列運算式會將 1.3 四捨五入成 1。  
   
@@ -93,7 +94,7 @@ caps.handback.revision: 101
     = Round(1.3*5)/5  
     ```  
   
-####  <a name="DateFunctions"></a> 日期函數  
+###  <a name="DateFunctions"></a> 日期函數  
   
 -   **Today** 函數會提供目前的日期。 此運算式可用於文字方塊，以顯示報表中的日期，或根據目前的日期在參數中篩選資料。  
   
@@ -101,7 +102,26 @@ caps.handback.revision: 101
     =Today()  
     ```  
   
--   **DateAdd** 函數在根據單一參數提供一個範圍的日期時很有用。 下列運算式提供在名為 *StartDate* 參數的日期六個月之後的日期。  
+-   使用**DateInterval**拉出特定的日期部分的函式。 以下是一些有效**DateInterval**參數：
+
+    -   DateInterval.Second
+    -   DateInterval.Minute
+    -   DateInterval.Hour
+    -   DateInterval.Weekday
+    -   DateInterval.Day
+    -   DateInterval.DayOfYear
+    -   DateInterval.WeekOfYear
+    -   DateInterval.Month
+    -   DateInterval.Quarter
+    -   DateInterval.Year
+
+    比方說，此運算式會顯示今天日期的目前年份的週數：
+  
+    ```  
+    =DatePart(DateInterval.WeekOfYear, today()) 
+    ```  
+  
+-   **DateAdd** 函數在根據單一參數提供一個範圍的日期時很有用。 下列運算式提供在名為 *StartDate*參數的日期六個月之後的日期。  
   
     ```  
     =DateAdd(DateInterval.Month, 6, Parameters!StartDate.Value)  
@@ -149,7 +169,7 @@ caps.handback.revision: 101
     =DateAdd(DateInterval.Month,DateDiff(DateInterval.Month,CDate("01/01/1900"),Now())-1,CDate("01/01/1900"))  
     ```  
   
--   下列運算式會產生 SellStartDate 與 LastReceiptDate 之間的間隔年數。 這些欄位位於兩個不同的資料集：DataSet1 和 DataSet2 中。 [First 函數 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/first-function-report-builder-and-ssrs.md) 為彙總函數，它會傳回 DataSet1 中 SellStartDate 的第一個值，以及 DataSet2 中 LastReceiptDate 的第一個值。  
+-   下列運算式會產生 SellStartDate 與 LastReceiptDate 之間的間隔年數。 這些欄位位於兩個不同的資料集：DataSet1 和 DataSet2 中。 [First 函數 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/report-builder-functions-first-function.md) 為彙總函數，它會傳回 DataSet1 中 SellStartDate 的第一個值，以及 DataSet2 中 LastReceiptDate 的第一個值。  
   
     ```  
     =DATEDIFF(“yyyy”, First(Fields!SellStartDate.Value, "DataSet1"), First(Fields!LastReceiptDate.Value, "DataSet2"))  
@@ -179,7 +199,7 @@ caps.handback.revision: 101
 |一年前|`=DateSerial(Year(Parameters!TodaysDate.Value)-1,Month(Parameters!TodaysDate.Value),Day(Parameters!TodaysDate.Value))`|  
 |兩年前|`=DateSerial(Year(Parameters!TodaysDate.Value)-2,Month(Parameters!TodaysDate.Value),Day(Parameters!TodaysDate.Value))`|  
   
-####  <a name="StringFunctions"></a> 字串函數  
+###  <a name="StringFunctions"></a> 字串函數  
   
 -   您可以使用串連運算子和 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 常數，將一個以上的欄位結合在一起。 下列運算式會傳回兩個欄位，分別位於相同文字方塊中的不同行：  
   
@@ -195,13 +215,13 @@ caps.handback.revision: 101
   
      如果文字方塊只包含日期或數字，您應該使用文字方塊的 Format 屬性來套用格式，而非使用文字方塊中的 **Format** 函數。  
   
--   **Right**、**Len** 和 **InStr** 函數在傳回子字串時很有用，例如，將 '網域\\使用者名稱' 修改成只有使用者名稱。 下列運算式會從名為 *User* 的參數傳回字串中反斜線 (\\) 字元右邊的字串部分：  
+-   **Right**、**Len** 和 **InStr** 函數在傳回子字串時很有用，例如，將 '網域\\使用者名稱' 修改成只有使用者名稱。 下列運算式會從名為\\User *的參數傳回字串中反斜線 (*) 字元右邊的字串部分：  
   
     ```  
     =Right(Parameters!User.Value, Len(Parameters!User.Value) - InStr(Parameters!User.Value, "\"))  
     ```  
   
-     下列運算式會產生與上一個運算式相同的值，但它是使用 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.String> 類別的成員，而不是 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 函數：  
+     下列運算式會產生相同的值與上一個，使用成員[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]<xref:System.String>類別而不是[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]函式：  
   
     ```  
     =Parameters!User.Value.Substring(Parameters!User.Value.IndexOf("\")+1, Parameters!User.Value.Length-Parameters!User.Value.IndexOf("\")-1)  
@@ -220,7 +240,7 @@ caps.handback.revision: 101
   
     ```  
   
--   [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Text.RegularExpressions> 中的 **Regex** 函數對於變更現有字串的格式 (例如，格式化電話號碼) 很有用處。 下列運算式使用 **Replace** 函數，將欄位中十位數電話號碼的格式從 "*nnn*-*nnn*-*nnnn*" 變更為 "(*nnn*) *nnn*-*nnnn*"：  
+-   **Regex**函式從[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]<xref:System.Text.RegularExpressions>可用於變更現有的字串，例如，格式化電話號碼的格式。 The following expression uses the **Replace** function to change the format of a ten-digit telephone number in a field from "*nnn*-*nnn*-*nnnn*" to "(*nnn*) *nnn*-*nnnn*":  
   
     ```  
     =System.Text.RegularExpressions.Regex.Replace(Fields!Phone.Value, "(\d{3})[ -.]*(\d{3})[ -.]*(\d{4})", "($1) $2-$3")  
@@ -229,7 +249,7 @@ caps.handback.revision: 101
     > [!NOTE]  
     >  確認 Fields!Phone.Value 的值沒有額外的空格，而且為 <xref:System.String> 類型。  
   
-#### 查閱  
+### <a name="lookup"></a>查閱  
   
 -   您可以藉由指定索引鍵欄位，使用 **Lookup** 函數來從一對一關係的資料集 (如索引鍵-值組) 中擷取值。 下列運算式會顯示資料集 (“Product”) 中的產品名稱 (有提供要比對的產品識別碼)：  
   
@@ -237,7 +257,7 @@ caps.handback.revision: 101
     =Lookup(Fields!PID.Value, Fields!ProductID.Value, Fields.ProductName.Value, "Product")  
     ```  
   
-#### LookupSet  
+### <a name="lookupset"></a>LookupSet  
   
 -   您可以藉由指定索引鍵欄位，使用 **LookupSet** 函數來從一對多關係的資料集中擷取一組值。 例如，人員可以擁有多個電話號碼。 在下列範例中，假設 PhoneList 資料集在每一個資料列中包含人員識別碼和電話號碼。 **LookupSet** 會傳回值的陣列。 下列運算式會將傳回值結合成單一字串，並顯示 ContactID 指定之人員的電話號碼清單：  
   
@@ -245,7 +265,7 @@ caps.handback.revision: 101
     =Join(LookupSet(Fields!ContactID.Value, Fields!PersonID.Value, Fields!PhoneNumber.Value, "PhoneList"),",")  
     ```  
   
-####  <a name="ConversionFunctions"></a> 轉換函數  
+###  <a name="ConversionFunctions"></a> 轉換函數  
  您可以使用 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 函數，將欄位從一種資料類型轉換成不同的資料類型。 轉換函數可用來將欄位的預設資料類型轉換為計算或結合文字時所需的資料類型。  
   
 -   下列運算式會將常數 500 轉換為 Decimal 類型，以便與篩選運算式之值欄位中的 [!INCLUDE[tsql](../../includes/tsql-md.md)] money 資料類型相比較。  
@@ -254,21 +274,21 @@ caps.handback.revision: 101
     =CDec(500)  
     ```  
   
--   下列運算式會顯示針對多重數值參數 *MySelection* 所選的值數目。  
+-   下列運算式會顯示針對多重數值參數 *MySelection*所選的值數目。  
   
     ```  
     =CStr(Parameters!MySelection.Count)  
     ```  
   
-####  <a name="DecisionFunctions"></a> 決策函數  
+###  <a name="DecisionFunctions"></a> 決策函數  
   
--   **lif** 函數會根據運算式是否評估為 true 而傳回兩個值之一。 當 `LineTotal` 超過 100 時，下列運算式會使用 **lif** 函數來傳回布林值 **True**， 否則它會傳回 **False**：  
+-   **lif** 函數會根據運算式是否評估為 true 而傳回兩個值之一。 當 **超過 100 時，下列運算式會使用** lif **函數來傳回布林值** True `LineTotal` ， 否則它會傳回 **False**：  
   
     ```  
     =IIF(Fields!LineTotal.Value > 100, True, False)  
     ```  
   
--   使用多個 **IIF** 函數 (也稱為「巢狀 IIF」) 可以根據 `PctComplete` 值傳回三個值之一。 您可以將下列運算式置入文字方塊的填滿色彩，依照文字方塊中的值而變更背景色彩。  
+-   使用多個 **IIF** 函數 (也稱為「巢狀 IIF」) 可以根據 `PctComplete`值傳回三個值之一。 您可以將下列運算式置入文字方塊的填滿色彩，依照文字方塊中的值而變更背景色彩。  
   
     ```  
     =IIF(Fields!PctComplete.Value >= 10, "Green", IIF(Fields!PctComplete.Value >= 1, "Blue", "Red"))  
@@ -276,10 +296,10 @@ caps.handback.revision: 101
   
      大於或等於 10 的值會以綠色背景顯示、介於 1 和 9 之間的值以藍色背景顯示，小於 1 的值則以紅色背景顯示。  
   
--   另一種取得相同功能的方法，是使用 **Switch** 函數。 當測試的條件有三個或三個以上時，**Switch** 函數就很有用。 **Switch** 函數會傳回與數列中評估為 true 的第一個運算式相關聯的值：  
+-   另一種取得相同功能的方法，是使用 **Switch** 函數。 當測試的條件有三個或三個以上時， **Switch** 函數就很有用。 **Switch** 函數會傳回與數列中評估為 true 的第一個運算式相關聯的值：  
   
     ```  
-    =Switch(Fields!PctComplete.Value >= 10, "Green", Fields!PctComplete.Value >= 1, "Blue", Fields!PctComplete.Value = 1, "Yellow", Fields!PctComplete.Value <= 0, "Red",)  
+    =Switch(Fields!PctComplete.Value >= 10, "Green", Fields!PctComplete.Value >= 1, "Blue", Fields!PctComplete.Value = 1, "Yellow", Fields!PctComplete.Value <= 0, "Red")  
     ```  
   
      大於或等於 10 的值會以綠色背景顯示、介於 1 和 9 之間的值以藍色背景顯示、等於 1 的值以黃色背景顯示，0 或小於 0 的值則以紅色背景顯示。  
@@ -290,13 +310,13 @@ caps.handback.revision: 101
     =IIF(DateDiff("d",Fields!ImportantDate.Value, Now())>7,"Red","Blue")  
     ```  
   
--   測試 `PhoneNumber` 欄位的值，如果為 **null** (在 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 中為 **Nothing**) 傳回 "No Value"，否則傳回電話號碼值。 這個運算式可用來控制報表項目中文字方塊的值。  
+-   測試 `PhoneNumber` 欄位的值，如果為 **null** (在**中為** Nothing [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) 傳回 "No Value"，否則傳回電話號碼值。 這個運算式可用來控制報表項目中文字方塊的值。  
   
     ```  
     =IIF(Fields!PhoneNumber.Value Is Nothing,"No Value",Fields!PhoneNumber.Value)  
     ```  
   
--   測試 `Department` 欄位的值，並傳回子報表名稱或 **null** (在 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 中為 **Nothing**)。 此運算式可用於條件式鑽研子報表。  
+-   測試 `Department` 欄位的值，並傳回子報表名稱或 **null** (在**中為** Nothing [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)])。 此運算式可用於條件式鑽研子報表。  
   
     ```  
     =IIF(Fields!Department.Value = "Development", "EmployeeReport", Nothing)  
@@ -315,10 +335,10 @@ caps.handback.revision: 101
   
     ```  
   
-###  <a name="ReportFunctions"></a> 報表函數  
- 在運算式中，您可以加入在報表中操作資料之其他報表函數的參考。 此章節提供這些函數的其中兩個範例。 如需報表函數和範例的詳細資訊，請參閱[彙總函數參考 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/aggregate-functions-reference-report-builder-and-ssrs.md)。  
+##  <a name="ReportFunctions"></a> 報表函數  
+ 在運算式中，您可以加入在報表中操作資料之其他報表函數的參考。 此章節提供這些函數的其中兩個範例。 如需報表函數和範例的詳細資訊，請參閱[彙總函數參考 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)。  
   
-#####  <a name="Sum"></a> Sum  
+###  <a name="Sum"></a> Sum  
   
 -   **Sum** 函數可以將群組或資料區域中的值加總。 群組的頁首或頁尾可以使用這個函數。 下列運算式會顯示 Order 群組或資料區域中資料的總和：  
   
@@ -332,9 +352,9 @@ caps.handback.revision: 101
     =Sum(IIF(Fields!State.Value = "Finished", 1, 0))  
     ```  
   
-#####  <a name="RowNumber"></a> RowNumber  
+###  <a name="RowNumber"></a> RowNumber  
   
--   **RowNumber** 函數在用於資料區域內的文字方塊時，會為其中顯示此運算式的每個文字方塊執行個體顯示資料列號碼。 此函數對於計算資料表中的資料列數目非常有用。 它對於更複雜的工作也非常實用，例如，根據資料列數目提供分頁符號。 如需詳細資訊，請參閱這個主題中的[分頁符號](#PageBreaks)。  
+-   **RowNumber** 函數在用於資料區域內的文字方塊時，會為其中顯示此運算式的每個文字方塊執行個體顯示資料列號碼。 此函數對於計算資料表中的資料列數目非常有用。 它對於更複雜的工作也非常實用，例如，根據資料列數目提供分頁符號。 如需詳細資訊，請參閱這個主題中的 [分頁符號](#PageBreaks) 。  
   
      您所指定的 **RowNumber** 範圍會控制何時開始重新編號。 **Nothing** 關鍵字指出函數將從最外層資料區域中的第一個資料列開始計數。 若要在巢狀資料區域內開始計數，請使用資料區域的名稱。 若要在群組內開始計數，請使用群組的名稱。  
   
@@ -360,7 +380,7 @@ caps.handback.revision: 101
     =Globals.PageNumber & " of " & Globals.TotalPages  
     ```  
   
- 下列範例描述如何顯示一頁中頁首的第一個和最後一個值，與目錄清單中所找到的類似。 這個範例假設包含名稱為 `LastName` 之文字方塊的資料區域。  
+ 下列範例描述如何顯示一頁中頁首的第一個和最後一個值，與目錄清單中所找到的類似。 這個範例假設包含名稱為 `LastName`之文字方塊的資料區域。  
   
 -   下列運算式放在頁首左側文字方塊中，用來提供頁面 `LastName` 文字方塊的第一個值：  
   
@@ -374,7 +394,7 @@ caps.handback.revision: 101
     =Last(ReportItems("LastName").Value)  
     ```  
   
- 下列範例描述如何顯示總頁數。 這個範例假設包含名稱為 `Cost` 之文字方塊的資料區域。  
+ 下列範例描述如何顯示總頁數。 這個範例假設包含名稱為 `Cost`之文字方塊的資料區域。  
   
 -   下列運算式放在頁首或頁尾中，用來提供頁面 `Cost` 文字方塊中各個值的總和：  
   
@@ -432,7 +452,7 @@ caps.handback.revision: 101
 > [!NOTE]  
 >  可用的色彩是來自 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] KnownColor 列舉。  
   
-### 圖表色彩  
+### <a name="chart-colors"></a>圖表色彩  
  若要指定形狀圖的色彩，您可以使用自訂程式碼控制色彩對應到資料點值的順序。 這有助於針對擁有相同類別目錄群組的多個圖表，使用一致的色彩。 如需詳細資訊，請參閱[跨多個形狀圖指定一致的色彩 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs.md)。  
   
 ###  <a name="Visibility"></a> 可見性  
@@ -491,7 +511,7 @@ caps.handback.revision: 101
     =Parameters!Department.Value  
     ```  
   
--   您可以在報表中建立參數，但將其設為隱藏。 當報表在報表伺服器上執行時，工具列中不會顯示參數，而報表讀取器也無法變更其預設值。 您可以使用設為預設值的隱藏參數做為自訂常數。 您可以在任何運算式中使用此值，欄位運算式也在內。 下列運算式會識別由名為 *ParameterField* 之參數的預設參數值所指定的欄位：  
+-   您可以在報表中建立參數，但將其設為隱藏。 當報表在報表伺服器上執行時，工具列中不會顯示參數，而報表讀取器也無法變更其預設值。 您可以使用設為預設值的隱藏參數做為自訂常數。 您可以在任何運算式中使用此值，欄位運算式也在內。 下列運算式會識別由名為 *ParameterField*之參數的預設參數值所指定的欄位：  
   
     ```  
     =Fields(Parameters!ParameterField.Value).Value  
@@ -500,13 +520,13 @@ caps.handback.revision: 101
 ##  <a name="CustomCode"></a> 自訂程式碼  
  您可以在報表中使用自訂程式碼， 自訂程式碼會內嵌在報表中，或是儲存在用於報表的自訂組件中。 如需自訂程式碼的詳細資訊，請參閱[報表設計師中運算式的自訂程式碼及組件參考 &#40;SSRS&#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)。  
   
-### 使用群組變數進行自訂彙總  
- 您可以初始化特定群組範圍本機之群組變數的值，然後在運算式中加入該變數的參考。 搭配自訂程式碼使用群組變數的其中一種方式是實作自訂彙總。 如需詳細資訊，請參閱[在 Reporting Services 2008 中使用群組變數進行自訂彙總](http://go.microsoft.com/fwlink/?LinkId=128714)。  
+### <a name="using-group-variables-for-custom-aggregation"></a>使用群組變數進行自訂彙總  
+ 您可以初始化特定群組範圍本機之群組變數的值，然後在運算式中加入該變數的參考。 搭配自訂程式碼使用群組變數的其中一種方式是實作自訂彙總。 如需詳細資訊，請參閱 [在 Reporting Services 2008 中使用群組變數進行自訂彙總](http://go.microsoft.com/fwlink/?LinkId=128714)。  
   
- 如需變數的詳細資訊，請參閱[報表和群組變數集合參考 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/report-and-group-variables-collections-references-report-builder-and-ssrs.md)。  
+ 如需變數的詳細資訊，請參閱 [報表和群組變數集合參考 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/built-in-collections-report-and-group-variables-references-report-builder.md)。  
   
-## 在執行階段隱藏 Null 或零值  
- 運算式中有些值可能會在報表處理時評估為 Null 或未定義。 這樣可能會造成執行階段錯誤，導致文字方塊中顯示 **#Error**，而不是評估的運算式。 **IIF** 函數對於這種行為特別敏感，因為不像 If-Then-Else 陳述式，**IIF** 陳述式的每部分都會先進行評估 (包括函數呼叫)，才會傳遞至測試 **true** 或 **false** 的常式。 如果 `Fields!Sales.Value` 為 NOTHING，`=IIF(Fields!Sales.Value is NOTHING, 0, Fields!Sales.Value)` 陳述式會在轉譯的報表中產生 **#Error**。  
+## <a name="suppressing-null-or-zero-values-at-run-time"></a>在執行階段隱藏 Null 或零值  
+ 運算式中有些值可能會在報表處理時評估為 Null 或未定義。 這樣可能會造成執行階段錯誤，導致文字方塊中顯示 **#Error** ，而不是評估的運算式。 **IIF** 函數對於這種行為特別敏感，因為不像 If-Then-Else 陳述式， **IIF** 陳述式的每部分都會先進行評估 (包括函數呼叫)，才會傳遞至測試 **true** 或 **false**的常式。 如果 `=IIF(Fields!Sales.Value is NOTHING, 0, Fields!Sales.Value)` 為 NOTHING， **陳述式會在轉譯的報表中產生** #Error `Fields!Sales.Value` 。  
   
  若要避免此種狀況，請使用下列其中一種策略：  
   
@@ -516,7 +536,7 @@ caps.handback.revision: 101
     =IIF(Field!B.Value=0, 0, Field!A.Value / IIF(Field!B.Value =0, 1, Field!B.Value))  
     ```  
   
--   使用自訂程式碼函數來傳回運算式的值。 下列範例會傳回目前值和上一個值之間的百分比差異。 這可以用來計算任兩個連續值之間的差異，也可以處理第一個比較 (沒有上一個值) 的邊緣案例，以及上一個或目前的值為 **null** (在 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 中為 **Nothing**) 的案例。  
+-   使用自訂程式碼函數來傳回運算式的值。 下列範例會傳回目前值和上一個值之間的百分比差異。 這可以用來計算任兩個連續值之間的差異，也可以處理第一個比較 (沒有上一個值) 的邊緣案例，以及上一個或目前的值為 **null** (在**中為** Nothing [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) 的案例。  
   
     ```  
     Public Function GetDeltaPercentage(ByVal PreviousValue, ByVal CurrentValue) As Object  
@@ -536,9 +556,9 @@ caps.handback.revision: 101
     =Code.GetDeltaPercentage(Previous(Sum(Fields!Sales.Value),"ColumnGroupByYear"), Sum(Fields!Sales.Value))  
     ```  
   
-     這有助於避免執行階段例外狀況。 您現在可以在文字方塊的 **Color** 屬性中使用類似 `=IIF(Me.Value < 0, "red", "black")` 的運算式，以便根據值大於或小於 0，有條件地顯示文字。  
+     這有助於避免執行階段例外狀況。 您現在可以在文字方塊的 `=IIF(Me.Value < 0, "red", "black")` Color **屬性中使用類似** 的運算式，以便根據值大於或小於 0，有條件地顯示文字。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [篩選方程式範例 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)   
  [群組運算式範例 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)   
  [報表中的運算式用法 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
@@ -546,3 +566,4 @@ caps.handback.revision: 101
  [常用的篩選 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/commonly-used-filters-report-builder-and-ssrs.md)  
   
   
+

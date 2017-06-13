@@ -18,10 +18,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f4c8c44b4c07b26676fd424acb36ea7ccce19df3
+ms.sourcegitcommit: 43841807dce9cb747c2c5b182174f83f0540b030
+ms.openlocfilehash: 12297570eae81459949b6c910fba26525e27d9ed
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/05/2017
 
 ---
 # <a name="user-defined-functions"></a>使用者定義的函式
@@ -44,7 +44,8 @@ ms.lasthandoff: 04/11/2017
   
      對於無法以單一純量運算式表示的作業 (例如，根據某些複雜條件約束來篩選資料)，可以利用函數來表示。 接著，您可以在 WHERE 子句中叫用函數，減少傳送到用戶端的資料列數。  
   
-> **注意**：查詢中的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 使用者定義函數只能在單一執行緒上執行 (序列執行計畫)。  
+> [!NOTE]
+> 查詢中的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 使用者定義函數只能在單一執行緒上執行 (序列執行計畫)。  
   
 ##  <a name="FunctionTypes"></a> 函式類型  
 **純量函式**  
@@ -62,12 +63,13 @@ ms.lasthandoff: 04/11/2017
   
  BEGIN...END 區塊中的陳述式不能有任何副作用。 函數副作用是在函數的範圍外對資源狀態所做的任何永久變更，例如修改資料庫資料表。 在函數中陳述式只能變更函數的區域性物件，例如本機資料指標或變數。 在函數中不得執行的動作包括修改資料庫資料表、對函數的非本機資料指標進行運算、傳送電子郵件、試圖修改目錄，以及產生傳回給使用者的結果集。  
   
-> **注意**：如果 CREATE FUNCTION 陳述式會對資源產生在發出 CREATE FUNCTION 陳述式時不存在的副作用，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會執行該陳述式。 不過， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不會執行叫用的函數。  
+> [!NOTE]
+> 如果 CREATE FUNCTION 陳述式會對資源產生在發出 CREATE FUNCTION 陳述式時不存在的副作用，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會執行該陳述式。 不過， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不會執行叫用的函數。  
   
  查詢中指定的函數真正執行的次數，會因最佳化工具建立的執行計畫而有不同。 WHERE 子句中的子查詢所叫用的函數就是一個例子。 子查詢及其函數的執行次數，會因最佳化工具選擇的存取路徑而有不同。  
   
 ##  <a name="ValidStatements"></a> 函式中有效的陳述式  
- 函數中有效的陳述式類型包括：  
+函數中有效的陳述式類型包括：  
   
 -   DECLARE 陳述式，可用來定義對函數而言為本機的資料變數與資料指標。  
   
@@ -110,7 +112,7 @@ ms.lasthandoff: 04/11/2017
 ##  <a name="SchemaBound"></a> 結構描述繫結的函式  
  CREATE FUNCTION 支援 SCHEMABINDING 子句，它可將函數與它參考的任何物件之結構描述繫結在一起，例如資料表、檢視及其他使用者自訂函數。 嘗試更改或卸除任何被結構描述繫結函數所參考的物件將會失敗。  
   
- 要在 [CREATE FUNCTION](https://msdn.microsoft.com/library/ms186755.aspx) 中指定 SCHEMABINDING，必須先滿足下列條件：  
+ 要在 [CREATE FUNCTION](../../t-sql/statements/create-function-transact-sql.md) 中指定 SCHEMABINDING，必須先滿足下列條件：  
   
 -   函數所參考的所有檢視及使用者自訂函數，都必須是結構描述繫結的。  
   
@@ -138,7 +140,4 @@ ms.lasthandoff: 04/11/2017
 |描述如何檢視使用者定義函數的定義。|[檢視使用者定義函式](../../relational-databases/user-defined-functions/view-user-defined-functions.md)|  
   
   
-
-
-
 

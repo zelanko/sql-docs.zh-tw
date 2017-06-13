@@ -1,45 +1,44 @@
 ---
-title: "啟用和停用 Reporting Services 的用戶端列印功能 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "09/14/2015"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "pdf"
-  - "檢視器"
-  - "reportviewer"
-  - "工具列"
+title: "啟用和停用 reporting Services 的用戶端列印 |Microsoft 文件"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- pdf
+- viewer
+- reportviewer
+- toolbar
 ms.assetid: 0e709c96-7517-4547-8ef6-5632f8118524
 caps.latest.revision: 14
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 14
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: ee650a09b57ae92abda378fea6fc780b550fbac4
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 啟用和停用 Reporting Services 的用戶端列印功能
+
+# <a name="enable-and-disable-client-side-printing-for-reporting-services"></a>啟用和停用 Reporting Services 的用戶端列印功能
+
   報表檢視器工具列上的 [列印] 按鈕使用可攜式文件格式 (PDF)，提供用戶端在瀏覽器中檢視之 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表的列印。 新的遠端列印體驗使用包含 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的 PDF 轉譯延伸模組，以將報表轉譯為 PDF 模式。 您可以下載 .PDF 格式的報表，或如果您已安裝可檢視 .PDF 檔案的應用程式，列印按鈕會顯示列印對話方塊，提供頁面常用設定項目，例如頁面大小方向及 .PDF 檔案的預覽。 雖然依預設會啟用用戶端列印，但如果您不想提供此功能，也可以停用它。  
   
- 舊版的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 使用 ActiveX 控制項，它必須從報表伺服器下載至用戶端電腦。 如果您將報表伺服器升級至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，列印控制項不會從報表伺服器或用戶端電腦移除。  
-  
-##  <a name="bkmk_top"></a> 本主題內容  
-  
--   [列印體驗](#bkmk_clientside_printexpereince)  
-  
--   [疑難排解用戶端列印功能](#bkmk_troubleshoot_clientsideprinting)  
-  
--   [啟用及停用用戶端列印功能](#bkmk_enable)  
-  
+ 舊版的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 使用 ActiveX 控制項，它必須從報表伺服器下載至用戶端電腦。 如果您將報表伺服器升級至 SQL Server 2016 列印控制項不會移除從報表伺服器或用戶端電腦。  
+
 ##  <a name="bkmk_clientside_printexpereince"></a> 列印體驗  
- 當您按一下報表檢視器工具列上的 [列印] ![htmlviewer_print](../../reporting-services/report-server/media/htmlviewer-print.png "htmlviewer_print") 按鈕，其體驗會依用戶端電腦上安裝的 .PDF 檢視應用程式及正在使用的瀏覽器而有所不同。   您可以下載 PDF 檔案，或從對話方塊設定列印選項，取決於用戶端電腦。  
+ 當您按一下列印![htmlviewer_print](../../reporting-services/report-server/media/htmlviewer-print.png "htmlviewer_print")按鈕的報表檢視器工具列上，經驗會根據項目而有所不同。PDF 檢視應用程式會安裝在用戶端電腦以及您使用瀏覽器。   您可以下載 PDF 檔案，或從對話方塊設定列印選項，取決於用戶端電腦。  
   
- ![報表工具列](../../reporting-services/media/ssrs-htmlviewer-toolbar.gif "報表工具列")  
+ ![報表工具列](../../reporting-services/media/ssrs-htmlviewer-toolbar.png "報表工具列")  
   
 |||  
 |-|-|  
@@ -51,7 +50,7 @@ caps.handback.revision: 14
 ##  <a name="bkmk_troubleshoot_clientsideprinting"></a> 疑難排解用戶端列印功能  
  如果報表檢視器工具列上的列印按鈕已停用，請確認下列項目：  
   
--   [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中報表伺服器的用戶端列印功能已停用。 請參閱本主題中的[啟用及停用用戶端列印功能](#bkmk_enable)一節。  
+-   [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中報表伺服器的用戶端列印功能已停用。 請參閱本主題中的  [啟用及停用用戶端列印功能](#bkmk_enable) 一節。  
   
 -   [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] PDF 轉譯延伸模組已停用。 檢閱 `<Extension Name="PDF"` rsreportserver.config **檔案的** 區段。  
   
@@ -96,7 +95,7 @@ caps.handback.revision: 14
   
  下列範例指令碼說明停用用戶端列印功能的方法之一。 編譯後執行下列 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 程式碼，將 **EnableClientPrinting** 屬性設定為 **[False]**。 執行程式碼之後，請重新啟動 IIS。  
   
-### 範例指令碼  
+### <a name="sample-script"></a>範例指令碼  
   
 ```  
 Imports System  
@@ -119,6 +118,7 @@ Dim rs As New ReportingService()
         End Try  
     End Sub 'Main  
 End Class 'Sample  
-```  
-  
-  
+```
+
+更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+

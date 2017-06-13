@@ -1,28 +1,33 @@
 ---
-title: "群組運算式範例 (報表產生器及 SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "資料 [Reporting Services], 群組"
-  - "群組資料"
-  - "運算式 [Reporting Services], 加入"
-  - "群組 [Reporting Services], 運算式"
+title: "群組運算式範例 （報表產生器及 SSRS） |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data [Reporting Services], grouping
+- grouping data
+- expressions [Reporting Services], adding
+- groups [Reporting Services], expressions
 ms.assetid: 34cd0249-fc74-4cf2-ba11-7b072992bfd2
 caps.latest.revision: 24
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 24
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cbb4f5f3af2a8986fdc7384ad4da1740f2be6638
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 群組運算式範例 (報表產生器及 SSRS)
+# <a name="group-expression-examples-report-builder-and-ssrs"></a>群組運算式範例 (報表產生器及 SSRS)
   在資料區域中，您可以依據單一欄位來分組資料，或是建立較為複雜的運算式來識別分組的資料。 複雜運算式包含了多個欄位或參數、條件陳述式或自訂程式碼的參考。 當您為資料區定義群組時，您會將這些運算式加入到 **[群組]** 屬性。 如需詳細資訊，請參閱[在資料區中加入或刪除群組 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)。  
   
  若要合併根據簡單欄位運算式的兩個或多個群組，請將每一個欄位加入到群組定義中的群組運算式清單。  
@@ -30,7 +35,7 @@ caps.handback.revision: 24
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## 群組運算式的範例  
+## <a name="examples-of-group-expressions"></a>群組運算式的範例  
  下表提供您可用來定義群組的群組運算式範例。  
   
 |說明|運算式|  
@@ -42,7 +47,7 @@ caps.handback.revision: 24
 |依三個不同的年齡範圍分組：<br /><br /> 「21 歲以下」、「21 歲到 50 歲之間」及「超過 50 歲」|`=IIF(First(Fields!Age.Value)<21,"Under 21",(IIF(First(Fields!Age.Value)>=21 AND First(Fields!Age.Value)<=50,"Between 21 and 50","Over 50")))`|  
 |依多個年齡範圍分組。 此範例會示範可針對下列範圍傳回字串的自訂程式碼 (以 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET 所撰寫)：<br /><br /> 25 歲或 25 歲以下<br /><br /> 26 歲到 50 歲<br /><br /> 51 歲到 75 歲<br /><br /> 超過 75 歲|`=Code.GetRangeValueByAge(Fields!Age.Value)`<br /><br /> 自訂程式碼：<br /><br /> `Function GetRangeValueByAge(ByVal age As Integer) As String`<br /><br /> `Select Case age`<br /><br /> `Case 0 To 25`<br /><br /> `GetRangeValueByByAge = "25 or Under"`<br /><br /> `Case 26 To 50`<br /><br /> `GetRangeValueByByAge = "26 to 50"`<br /><br /> `Case 51 to 75`<br /><br /> `GetRangeValueByByAge = "51 to 75"`<br /><br /> `Case Else`<br /><br /> `GetRangeValueByByAge = "Over 75"`<br /><br /> `End Select`<br /><br /> `Return GetRangeValueByByAge`<br /><br /> `End Function`|  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [篩選、分組和排序資料 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [運算式範例 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [報表設計師中運算式的自訂程式碼及組件參考 &#40;SSRS&#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)  

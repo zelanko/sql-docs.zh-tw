@@ -1,29 +1,34 @@
 ---
-title: "加入背景影像 (報表產生器及 SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "加入背景影像 （報表產生器及 SSRS） |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c777fefb-8695-44a7-b5cd-a18c587583f2
 caps.latest.revision: 10
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 10
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 35b41f21f12487ef0ff32daa999ce4e4075c4180
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 加入背景影像 (報表產生器及 SSRS)
+# <a name="add-a-background-image-report-builder-and-ssrs"></a>加入背景影像 (報表產生器及 SSRS)
   您可以將背景影像加入至報表項目 (如矩形、文字方塊、清單、矩陣、資料表和部分圖表) 或是加入至報表區段 (如頁首、頁尾或報表主體)。 您可以針對在 [屬性] 窗格中顯示 **[BackgroundImage]** 之報表設計介面上的任何選定項目來定義背景影像。 如同其他影像，背景影像可以是報表伺服器上影像的 URL、資料集欄位中的影像，或是報表定義中內嵌的影像。 若要使用內嵌在報表中的影像，您必須先將影像加入至報表定義，然後才可以將影像加入至設計介面。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### 將影像內嵌在報表定義中  
+### <a name="to-embed-an-image-in-the-report-definition"></a>將影像內嵌在報表定義中  
   
 1.  在 [報表資料] 窗格中，以滑鼠右鍵按一下 [影像] 節點，然後按一下 [加入影像]。  
   
@@ -32,7 +37,7 @@ caps.handback.revision: 10
   
 2.  瀏覽至您要內嵌在報表定義中的影像，然後按一下 **[確定]**。  
   
-### 加入背景影像  
+### <a name="to-add-a-background-image"></a>加入背景影像  
   
 1.  在報表設計檢視中，選取您想要將背景影像加入其中的報表項目。  
   
@@ -67,8 +72,8 @@ caps.handback.revision: 10
   
          如果是圖表中的背景影像， **[BackgroundRepeat]** 可以設定為 **[Default]**、 **[Repeat]**、 **[Fit]**和 **[Clip]**，但是不能設定為 **[RepeatX]** 或 **[RepeatY]**。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [影像 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/images-report-builder-and-ssrs.md)   
- [影像屬性對話方塊、一般 &#40;報表產生器及 SSRS&#41;](../Topic/Image%20Properties%20Dialog%20Box,%20General%20\(Report%20Builder%20and%20SSRS\).md)  
+ [影像屬性對話方塊、一般 &#40;報表產生器及 SSRS&#41;](http://msdn.microsoft.com/library/c2218b93-f7fe-46ef-995f-d7dadf9752ec)  
   
   

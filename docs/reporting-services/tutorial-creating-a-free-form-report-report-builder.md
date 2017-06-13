@@ -1,24 +1,29 @@
 ---
-title: "教學課程：建立自由格式報表 (報表產生器) | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: "教學課程： 建立自由格式報表 （報表產生器） |Microsoft 文件"
+ms.custom: 
+ms.date: 09/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
 caps.latest.revision: 17
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 16
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 356d795aec5249ecf4f990d549c8eacb70e25f03
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 教學課程：建立自由格式報表 (報表產生器)
+# <a name="tutorial-creating-a-free-form-report-report-builder"></a>教學課程：建立自由格式報表 (報表產生器)
 在本教學課程中，您會建立分頁報表，作為電子報。 每個頁面會顯示靜態文字、摘要的視覺效果，以及詳細的範例銷售資料。
 
 ![report-builder-free-form-report-complete](../reporting-services/media/report-builder-free-form-report-complete.png)
@@ -27,7 +32,7 @@ caps.handback.revision: 16
   
 完成這個教學課程的估計時間：30 分鐘。  
   
-## 需求  
+## <a name="requirements"></a>需求  
 如需需求的詳細資訊，請參閱[教學課程的必要條件 &#40;報表產生器&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md)。  
   
 ## <a name="BlankReport"></a>1.建立空白報表、資料來源與資料集  
@@ -35,7 +40,7 @@ caps.handback.revision: 16
 > [!NOTE]  
 > 在本教學課程中，查詢會包含資料值，因此不需要外部資料來源。 這樣會使查詢相當冗長。 在商業環境中，查詢不會包含資料。 這僅供教學之用。  
   
-### 建立空白報表  
+### <a name="to-create-a-blank-report"></a>建立空白報表  
   
 1.  從您的電腦、[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] Web 入口網站或 SharePoint 整合模式[啟動報表產生器](../reporting-services/report-builder/start-report-builder.md)。  
   
@@ -47,7 +52,7 @@ caps.handback.revision: 16
  
 3.  在右窗格中，按一下 **[空白報表]**。  
   
-### 建立新資料來源  
+### <a name="to-create-a-new-data-source"></a>建立新資料來源  
   
 1.  在 [報表資料] 窗格中，按一下 [新增] > [資料來源]。  
   
@@ -63,7 +68,7 @@ caps.handback.revision: 16
   
 6.  按一下 **[確定]**。  
   
-### 建立新資料集  
+### <a name="to-create-a-new-dataset"></a>建立新資料集  
   
 1.  在 [報表資料] 窗格中，按一下 [新增] > [資料集]。  
   
@@ -119,11 +124,11 @@ caps.handback.revision: 16
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ## <a name="List"></a>2.加入及設定清單  
-在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中，清單範本相當適合用來建立自由格式報表。 它是根據 *tablix* 資料區域，就和資料表和矩陣一樣。 如需詳細資訊，請參閱[使用清單建立發票和表單](../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)。  
+在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中，清單範本相當適合用來建立自由格式報表。 它是根據 *tablix* 資料區域，就和資料表和矩陣一樣。 如需詳細資訊，請參閱 [使用清單建立發票和表單](../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)。  
   
 您將使用清單，在格式類似新聞稿的報表中顯示各銷售領域的銷售資訊。 此資訊是依領域分組。 您要加入新的資料列群組來依領域分組資料，然後刪除內建的 [詳細資料] 資料列群組。  
   
-### 加入清單  
+### <a name="to-add-a-list"></a>加入清單  
   
 1.  在 [插入] 索引標籤 > [資料區域] > [清單]。 
 
@@ -146,13 +151,13 @@ caps.handback.revision: 16
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-### 加入新的資料列群組並刪除 [詳細資料] 群組  
+### <a name="to-add-a-new-row-group-and-to-delete-the-details-group"></a>加入新的資料列群組並刪除 [詳細資料] 群組  
   
 1.  在 [資料列群組] 窗格中，以滑鼠右鍵按一下 [詳細資料] 群組，然後指向 [新增群組]，再按一下 [父群組]。  
   
     ![report-builder-free-form-add-parent-group](../reporting-services/media/report-builder-free-form-add-parent-group.png)  
   
-2.  從 [群組依據] 清單中選取 `[Territory].`  
+2.  在**分組**清單中，選取`[Territory].`  
   
 3.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -173,7 +178,7 @@ caps.handback.revision: 16
 ## <a name="Graphics"></a>3.新增圖形元素  
 清單資料區的一項好處是，您可以在任何位置加入矩形和文字方塊等報表項目，而不必侷限於表格式配置。 您將要透過加入圖形 (有填色的矩形) 加強報表的外觀。  
   
-### 加入圖形元素至報表中  
+### <a name="to-add-graphic-elements-to-the-report"></a>加入圖形元素至報表中  
   
 1.  在 [插入] 索引標籤上，選取 [矩形]。 
 
@@ -196,13 +201,13 @@ caps.handback.revision: 16
 ## <a name="Text"></a>4.加入自由格式文字  
 您可以新增文字方塊以顯示在每個報表頁面上重複的靜態文字，還有資料欄位。  
   
-### 在報表中加入文字  
+### <a name="to-add-text-to-the-report"></a>在報表中加入文字  
   
 1.  按一下 **[設計]** 返回 [設計] 檢視。  
   
 2.  在 [插入] 索引標籤 > [文字方塊] 上。 按一下清單的左上角，在您先前新增的矩形內，並拖曳形成大約寬 3.45 英吋且高約 5 英吋的文字方塊。  
   
-3.  將滑鼠游標置於文字方塊內，然後輸入：**Newsletter for** 。 在單字 "for" 後面加上一個空格來分隔的文字和您將在下一個步驟新增的欄位。   
+3.  將滑鼠游標置於文字方塊內，然後輸入： **Newsletter for** 。 在單字 "for" 後面加上一個空格來分隔的文字和您將在下一個步驟新增的欄位。   
   
     ![新增新聞稿標題文字](../reporting-services/media/tutorial-newsletterfor.png "新增新聞稿標題文字")  
   
@@ -247,7 +252,7 @@ caps.handback.revision: 16
       *  [10 pt]。
       *  [黑色]。  
  
-20. 將滑鼠游標置於文字方塊內，在無意義文字底下輸入︰**Congratulations on your total sales of**，並在文字之後以一個空格分隔文字和您將在下一個步驟新增的欄位。 
+20. 將滑鼠游標置於文字方塊內，在無意義文字底下輸入︰ **Congratulations on your total sales of**，並在文字之後以一個空格分隔文字和您將在下一個步驟新增的欄位。 
   
 21. 將 [Sales] 欄位拖曳到文字方塊中，置於您在前一個步驟輸入的文字後面，然後輸入一個驚嘆號 (!)。  
 
@@ -288,11 +293,11 @@ caps.handback.revision: 16
 ## <a name="Table"></a>5.加入資料表以顯示銷售詳細資料  
 使用新增資料表和矩陣精靈，將資料表加入至自由格式報表。 在完成精靈之後，您將要手動加入一個總計資料列。  
   
-### 加入資料表  
+### <a name="to-add-a-table"></a>加入資料表  
   
 1.  在 [插入] 索引標籤 > [資料區域] 區域 > [資料表] > [資料表精靈] 上。  
   
-2.  在 [選擇資料集] 頁面上，按一下 [ListDataset] > [下一步]。  
+2.  在**選擇資料集**頁面上，按一下**[listdataset]** > **下一步**。  
   
 4.  在 [排列欄位] 頁面上，將 [Product] 欄位從 [可用的欄位] 拖曳至 [值]。  
   
@@ -336,7 +341,7 @@ caps.handback.revision: 16
   
 本教學課程會將報表儲存至報表伺服器。 如果您沒有報表伺服器的存取權，請將報表儲存在您的電腦上。  
   
-### 若要將報表儲存在報表伺服器上  
+### <a name="to-save-the-report-on-a-report-server"></a>若要將報表儲存在報表伺服器上  
   
 1.  在 **[報表產生器]** 按鈕中，按一下 **[另存新檔]**。  
   
@@ -352,7 +357,7 @@ caps.handback.revision: 16
   
 報表就會儲存至報表伺服器。 您連接之報表伺服器的名稱會顯示在視窗底部的狀態列中。  
   
-### 將報表儲存到您的電腦上  
+### <a name="to-save-the-report-on-your-computer"></a>將報表儲存到您的電腦上  
   
 1.  在 **[報表產生器]** 按鈕中，按一下 **[另存新檔]**。  
   
@@ -365,11 +370,11 @@ caps.handback.revision: 16
 ## <a name="Line"></a>7.(選擇性) 加入線條以區隔報表的各區域  
 加入線條以區隔報表的編輯區和詳細資料區。  
   
-### 加入線條  
+### <a name="to-add-a-line"></a>加入線條  
   
 1.  按一下 **[設計]** 返回 [設計] 檢視。  
   
-2.  在 [插入] 索引標籤 > [報表項目] > [線條]。  
+2.  在**插入** 索引標籤 >**報表項目** > **列。**  
   
 3.  在您於第 4 課新增的文字方塊下方繪製線條。  
   
@@ -380,21 +385,21 @@ caps.handback.revision: 16
 ## <a name="Visualization"></a>8.(選擇性) 新增摘要資料視覺效果  
 矩形可以協助您控制報表的轉譯方式。 將圓形圖和直條圖放到矩形內，以確保報表轉譯為您希望的外觀。  
   
-### 若要加入矩形  
+### <a name="to-add-a-rectangle"></a>若要加入矩形  
   
 1.  按一下 **[設計]** 返回 [設計] 檢視。  
   
-2.  在 [插入] 索引標籤 > [報表項目] >  [矩形] 上。 將清單方塊內的矩形拖曳到資料表的右邊，形成大約寬 2.25 英吋且高 7.9 英吋的矩形。  
+2.  在**插入** 索引標籤 >**報表項目** >  **矩形**。 將清單方塊內的矩形拖曳到資料表的右邊，形成大約寬 2.25 英吋且高 7.9 英吋的矩形。  
   
-3.  在選取新矩形的情況下，在 [屬性] 窗格中，讓 **BorderColor** 成為 LightGrey、**BorderStyle** 成為 Solid、**BorderWidth** 成為 2pt。 
+3.  在選取新矩形的情況下，在 [屬性] 窗格中，讓 **BorderColor**成為 LightGrey、 **BorderStyle**成為 Solid、 **BorderWidth**成為 2pt。 
 
 4. 對齊矩形和資料表的上緣。  
   
-## 加入圓形圖  
+## <a name="to-add-a-pie-chart"></a>加入圓形圖  
   
 1.  在 [插入] 索引標籤 > [資料視覺效果] > [圖表] > [圖表精靈]。  
   
-2.  在 [選擇資料集] 頁面上，按一下 [ListDataset] > [下一步]。  
+2.  在**選擇資料集**頁面上，按一下**[listdataset]** > **下一步**。  
   
 3.  按一下 [圓形圖] > [下一步]。  
   
@@ -412,7 +417,7 @@ caps.handback.revision: 16
   
 12. 在 [首頁] 索引標籤 > [字型] 上，讓標題成為︰
     * **字型** **Segoe UI SemiBold**。
-    * **大小** **12 pt**。
+    * **Size** **12 pt**.
     * **色彩** **黑色**。  
 
 13. 以滑鼠右鍵按一下圖例 > [圖例屬性]。
@@ -425,7 +430,7 @@ caps.handback.revision: 16
 
      ![report-builder-free-form-pie](../reporting-services/media/report-builder-free-form-pie.png)
   
-## 加入直條圖  
+## <a name="to-add-a-column-chart"></a>加入直條圖  
   
 1.  在 [插入] 索引標籤 > [資料視覺效果] > [圖表] > [圖表精靈] 上。  
   
@@ -451,8 +456,8 @@ caps.handback.revision: 16
   
 12. 在 [首頁] 索引標籤 > [字型] 上，讓標題成為︰
     * **字型** **Segoe UI SemiBold**。
-    * **大小** **12 pt**。
-    * **色彩** **黑色**。  
+    * **Size** **12 pt**.
+    * **Color** **Black**.  
   
 15. 以滑鼠右鍵按一下圖例，然後按一下 **[刪除圖例]**。  
   
@@ -461,12 +466,12 @@ caps.handback.revision: 16
   
     ![report-builder-free-form-column](../reporting-services/media/report-builder-free-form-column.png)
 
-12. 選取圖表軸，然後在 [首頁]* 索引標籤 > [數值]** > [貨幣]** 上。
+12. 選取圖表軸，然後在*首頁** 索引標籤 >**數目** > **貨幣**。
 
 13. 選取 [減少小數位數] 兩次，讓數字只顯示元而不顯示分。      
-### 確認圖表位於矩形內部  
+### <a name="to-verify-the-charts-are-inside-the-rectangle"></a>確認圖表位於矩形內部  
 
-您可以使用矩形當作報表頁面上其他項目的容器。 深入了解[矩形當作容器](../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md)。
+您可以使用矩形當作報表頁面上其他項目的容器。 深入了解 [矩形當作容器](../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md)。
   
 1.  選取您稍早在本課程中建立並新增圖表的矩形。  
   
@@ -485,7 +490,7 @@ caps.handback.revision: 16
     > [!NOTE]  
     > 如果圖表不是在矩形內部，轉譯後的報表將不會一併顯示圖表。  
   
-### 將圖表調整成相同的大小  
+### <a name="to-make-the-charts-the-same-size"></a>將圖表調整成相同的大小  
   
 1.  選取圓形圖、按下 Ctrl 鍵，然後選取直條圖。  
   
@@ -500,7 +505,7 @@ caps.handback.revision: 16
   
 
   
-## 後續步驟  
+## <a name="next-steps"></a>後續步驟  
 以上總結如何建立自由格式報表的教學課程。  
   
 如需清單的詳細資訊，請參閱： 
@@ -508,8 +513,10 @@ caps.handback.revision: 16
 * [使用清單建立發票和表單](../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)
 * [Tablix 資料區資料格、資料列及資料行 &#40;報表產生器及 SSRS&#41;](../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)。  
   
-如需查詢設計工具的詳細資訊，請參閱[查詢設計工具 &#40;報表產生器&#41;](../Topic/Query%20Designers%20(Report%20Builder).md) 和[以文字為基礎的查詢設計工具使用者介面 &#40;報表產生器&#41;](../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md)。  
+如需查詢設計工具的詳細資訊，請參閱[查詢設計工具 &#40;報表產生器&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9) 和[以文字為基礎的查詢設計工具使用者介面 &#40;報表產生器&#41;](../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md)。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
 [報表產生器教學課程](../reporting-services/report-builder-tutorials.md) 
   
+
+
