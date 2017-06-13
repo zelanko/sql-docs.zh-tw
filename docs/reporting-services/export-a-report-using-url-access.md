@@ -1,25 +1,30 @@
 ---
-title: "使用 URL 存取匯出報表 | Microsoft Docs"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "格式 [Reporting Services], URL 轉譯"
-  - "URL 存取 [Reporting Services], 轉譯格式"
+title: "使用 URL 存取將報表匯出 |Microsoft 文件"
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- formats [Reporting Services], URL rendering
+- URL access [Reporting Services], rendering formats
 ms.assetid: 6a3b7fc3-3d91-4d12-8371-42ea12e74517
 caps.latest.revision: 42
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 42
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d9ee4dd3c00d9e250fd3c773a917ad3cf90f84c4
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 使用 URL 存取匯出報表
+# <a name="export-a-report-using-url-access"></a>使用 URL 存取匯出報表
   您可以使用 *rs:Format* URL 參數，選擇性地指定用於轉譯報表的格式。  HTML4.0 和 HTM5 格式 (轉譯延伸模組) 及其他格式會呈現在瀏覽器中，瀏覽器會提示使用者將報表輸出儲存至本機檔案。  
   
  例如，直接從原生模式報表伺服器取得報表的 PDF 副本。  
@@ -44,7 +49,7 @@ http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportf
   
  如果您未將 *Format* 參數包含為 URL 的一部分，則報表伺服器會偵測瀏覽器，並以適當的 HTML 格式轉譯報表。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [URL 存取 &#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)   
  [URL 存取參數參考](../reporting-services/url-access-parameter-reference.md)  
   
