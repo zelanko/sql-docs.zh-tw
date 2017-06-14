@@ -1,24 +1,29 @@
 ---
-title: "教學課程：地圖報表 (報表產生器) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/31/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: "教學課程： 地圖報表 （報表產生器） |Microsoft 文件"
+ms.custom: 
+ms.date: 08/31/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
 caps.latest.revision: 18
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 18
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: efe91a2e1e8ca7b0744639ed718d63b70e3adc5c
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/13/2017
+
 ---
-# 教學課程：地圖報表 (報表產生器)
+# <a name="tutorial-map-report-report-builder"></a>教學課程：地圖報表 (報表產生器)
 在此 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] 教學課程中，您會了解在 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分頁報表的地理背景上，可用來顯示資料的地圖功能。 
   
 地圖是以空間資料為基礎，通常由點、線條和多邊形所組成。 例如，多邊行可表示某一縣的輪廓，線條可表示一條路，點則可表示城市的位置。 每一種空間資料會在不同的地圖圖層上顯示為一組地圖元素。  
@@ -34,21 +39,21 @@ caps.handback.revision: 18
   
 完成本教學課程的估計時間：30 分鐘。  
   
-## 需求  
-針對本教學課程，報表伺服器必須設定為支援 Bing Maps 作為背景。 如需詳細資訊，請參閱[對應報表支援規劃](http://msdn.microsoft.com/zh-tw/5ddc97a7-7ee5-475d-bc49-3b814dce7e19)。 
+## <a name="requirements"></a>需求  
+針對本教學課程，報表伺服器必須設定為支援 Bing Maps 作為背景。 如需詳細資訊，請參閱[對應報表支援規劃](http://msdn.microsoft.com/en-us/5ddc97a7-7ee5-475d-bc49-3b814dce7e19)。 
 
 如需其他需求的資訊，請參閱[教學課程的必要條件 &#40;報表產生器&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md)。  
   
 ## <a name="Map"></a>1.從地圖精靈建立含多邊形圖層的地圖  
 在本節中，您會從地圖庫將地圖新增至報表。 地圖中包含一個顯示紐約州各郡的圖層。 各郡的形狀是以空間資料為基礎的多邊形，這些資料內嵌於地圖庫的地圖中。  
   
-### 使用新報表中的地圖精靈加入地圖  
+### <a name="to-add-a-map-with-the-map-wizard-in-a-new-report"></a>使用新報表中的地圖精靈加入地圖  
   
 1.  從您的電腦、[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 入口網站或 SharePoint 整合模式[啟動報表產生器](../reporting-services/report-builder/start-report-builder.md)。  
   
-    [新增報表或資料集] 對話方塊隨即開啟。  
+    [新報表或資料集] 對話方塊隨即開啟。  
   
-    如果您看不到 [新增報表或資料集] 對話方塊，請按一下 [檔案] 功能表 > [新增]。  
+    如果未顯示 [新報表或資料集] 對話方塊，請按一下 [檔案] 功能表 > [新增]。  
   
 2.  在左窗格中，確認已選取 **[新增報表]** 。  
   
@@ -117,17 +122,17 @@ caps.handback.revision: 18
 > [!NOTE]  
 > 在本教學課程中，查詢會包含資料值，因此不需要外部資料來源。 這樣會使查詢相當冗長。 在商業環境中，查詢不會包含資料。 這僅供教學之用。  
   
-### 根據 SQL Server 空間查詢加入點圖層  
+### <a name="to-add-a-point-layer-based-on-a-sql-server-spatial-query"></a>根據 SQL Server 空間查詢加入點圖層  
   
 1.  在 [執行] 索引標籤 > [設計]，切換回 [設計] 檢視。  
   
-2.  按兩下地圖來顯示 [地圖圖層] 窗格。 在工具列上，按一下 [新增圖層精靈] 按鈕 ![rs_IconMapLayerWizard](../reporting-services/media/rs-iconmaplayerwizard.png "rs_IconMapLayerWizard")。 
+2.  按兩下地圖來顯示 [地圖圖層] 窗格。 在工具列上，按一下 **新增圖層精靈**按鈕![rs_IconMapLayerWizard](../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")。 
 
     ![report-builder-map-new-layer-wizard-icon](../reporting-services/media/report-builder-map-new-layer-wizard-icon.png) 
   
 3.  在 **[選擇空間資料的來源]** 頁面上，選取 **[SQL Server 空間查詢]**，然後按 **[下一步]**。  
   
-4.  在 [選擇含有 SQL Server 空間資料的資料集] 頁面上，按一下 [新增含有 SQL Server 空間資料的資料集] > [下一步]。  
+4.  在 **[選擇含有 SQL Server 空間資料的資料集]** 頁面上，按一下 **[新增含有 SQL Server 空間資料的資料集]** > **[下一步]**。  
   
 5.  在 **[選擇到 SQL Server 空間資料來源的連接]** 頁面上，選取現有的資料來源，或瀏覽至報表伺服器並選取資料來源。  
 
@@ -233,11 +238,11 @@ caps.handback.revision: 18
 ## <a name="LineLayer"></a>3.加入地圖線條圖層以顯示路線  
 使用地圖圖層精靈，加入顯示兩個商店之間路線的地圖圖層。 在本教學課程中，路徑是從三個商店位置建立。 在商業應用程式中，路徑可能是商店之間的最佳路線。  
   
-### 將線條圖層加入至地圖  
+### <a name="to-add-a-line-layer-to-map"></a>將線條圖層加入至地圖  
   
 1.  切換至 [設計] 檢視。  
   
-2.  按兩下地圖來顯示 [地圖圖層] 窗格。 在工具列上，按一下 [新增圖層精靈] 按鈕 ![rs_IconMapLayerWizard](../reporting-services/media/rs-iconmaplayerwizard.png "rs_IconMapLayerWizard")。  
+2.  按兩下地圖來顯示 **[地圖圖層]** 窗格。 在工具列上，按一下 **新增圖層精靈**按鈕![rs_IconMapLayerWizard](../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")。  
   
 3.  在 **[選擇空間資料的來源]** 頁面上，選取 **[SQL Server 空間查詢]** ，然後按 **[下一步]**。  
   
@@ -278,7 +283,7 @@ caps.handback.revision: 18
   
      地圖會顯示新的線條圖層，其空間資料來源類型為 **DataRegion**。 在此範例中，空間資料來自資料集，但是分析資料與線條沒有產生關聯。  
 
-## 調整顯示比例
+## <a name="adjust-the-zoom"></a>調整顯示比例
 1. 如果您無法看到整個紐約州，可以調整顯示比例。 在選取地圖的情況下，在 [屬性] 窗格中您會看到 **MapViewport** 屬性。 
 
 15. 展開 [檢視] 區段，然後展開 [檢視] 以便您可以看到 **Zoom** 屬性。 將它設為 [125]。 
@@ -292,9 +297,9 @@ caps.handback.revision: 18
   
 1.  切換至 [設計] 檢視。  
   
-2.  按兩下地圖來顯示 [地圖圖層] 窗格。 在工具列上，按一下 [加入圖層] ![rs_IconMapAddLayer](../reporting-services/media/rs-iconmapaddlayer.png "rs_IconMapAddLayer")。  
+2.  按兩下地圖來顯示 **[地圖圖層]** 窗格。 在工具列上，按一下 **加入圖層** ![rs_IconMapAddLayer](../reporting-services/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer")。  
   
-3.  從下拉式清單中，按一下 [圖格圖層]。  
+3.  從下拉式清單中，按一下 **[圖格圖層]**。  
   
     **[地圖圖層]** 窗格中的最後一個圖層是 TileLayer1。 根據預設，影像分割圖層會顯示路段圖樣式。  
   
@@ -361,7 +366,7 @@ caps.handback.revision: 18
 ### <a name="ColorRules"></a>6b. 指定多邊形的色彩規則  
 若要建立讓各郡的色彩隨商店銷售額變化的規則，您必須指定範圍值、該範圍中要顯示的區間數目，以及要使用的色彩。  
   
-#### 為所有擁有相關資料的多邊形指定色彩規則  
+#### <a name="to-specify-color-rules-for-all-polygons-that-have-associated-data"></a>為所有擁有相關資料的多邊形指定色彩規則  
   
 1.  切換至 [設計] 檢視。  
   
@@ -369,7 +374,7 @@ caps.handback.revision: 18
   
 3.  選取 **[使用色彩範圍將資料視覺化]**。 開始色彩、中間色彩和結束色彩選項會取代調色盤選項。  
   
-4.  定義每個郡銷售額的範圍值。 從 [資料欄位] 的下拉式清單中，選取 `[Sum(Sales)]`。  
+4.  定義每個郡銷售額的範圍值。 從 **[資料欄位]**的下拉式清單中，選取 [ `[Sum(Sales)]`]。  
   
 5.  若要改變格式，以千為單位顯示貨幣，則將運算式變更如下： `=Sum(Fields!Sales.Value)/1000`  
   
@@ -391,7 +396,7 @@ caps.handback.revision: 18
   
 12. 在 **[色階選項]**中，確認已選取 **[在色階中顯示]** 。  
   
-13. 於 [在此圖例中顯示] 的下拉式清單中，選取空行。 現在您只能以色階顯示色彩範圍。  
+13. 在 **[在此圖例中顯示]**的下拉式清單中，選取空行。 現在您只能以色階顯示色彩範圍。  
   
 14. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
 
@@ -414,7 +419,7 @@ caps.handback.revision: 18
   
 ### <a name="NewLegend"></a>6d. 新增圖例標題   
   
-1.  在仍然選取色階的情況下，在 [屬性] 窗格中您會看到 **MapColorScale** 的屬性。 
+1.  在仍然選取色階的情況下，在 [屬性] 窗格中您會看到 **MapColorScale**的屬性。 
   
 2. 展開 [標題] 區段中，並在 Caption 屬性中，輸入 **Sales (Thousands)**。
 
@@ -429,11 +434,11 @@ caps.handback.revision: 18
 ### <a name="NoData"></a>6f. 變更未包含資料之郡的色彩  
 您可以針對圖層上的所有地圖元素設定預設顯示選項。 色彩規則的優先順序高於這些顯示選項。  
   
-#### 設定圖層上所有元素的顯示屬性  
+#### <a name="to-set-the-display-properties-for-all-elements-on-a-layer"></a>設定圖層上所有元素的顯示屬性  
   
 1.  切換至 [設計] 檢視。  
   
-2.  按兩下地圖來顯示 [地圖圖層] 窗格。  
+2.  按兩下地圖來顯示 **[地圖圖層]** 窗格。  
   
 3.  按一下 PolygonLayer1 上的向下箭頭，然後按一下 **[多邊形屬性]**。 
 
@@ -456,7 +461,7 @@ caps.handback.revision: 18
   
 1.  切換至 [設計] 檢視。  
   
-2.  按兩下地圖來顯示 [地圖圖層] 窗格。 在工具列上，按一下 [新增圖層] ![rs_IconMapAddLayer](../reporting-services/media/rs-iconmapaddlayer.png "rs_IconMapAddLayer")，然後按一下 [點圖層]。  
+2.  按兩下地圖來顯示 **[地圖圖層]** 窗格。 在工具列上，按一下 **加入圖層**![rs_IconMapAddLayer](../reporting-services/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer")，然後按一下 **點圖層**。    
   
     新的點圖層便會加入至地圖中。 根據預設，點圖層的空間資料類型為 **[內嵌]**。  
   
@@ -539,14 +544,16 @@ caps.handback.revision: 18
 
 ![report-builder-map-in-portal](../reporting-services/media/report-builder-map-in-portal.png) 
   
-## 後續步驟  
+## <a name="next-steps"></a>後續步驟  
 以上總結如何將地圖加入至報表的逐步解說。  
   
 如需詳細資訊，請參閱[地圖 &#40;報表產生器及 SSRS&#41;](../reporting-services/report-design/maps-report-builder-and-ssrs.md)。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
 [報表產生器教學課程](../reporting-services/report-builder-tutorials.md)  
 [SQL Server 2016 的報表產生器](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 [地圖精靈與地圖圖層精靈 &#40;報表產生器及 SSRS&#41;](../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  
-[使用規則與分析資料更改多邊形、線條與點顯示 &#40;報表產生器及 SSRS&#41;](../reporting-services/report-design/vary polygon, line, and point display by rules and analytical data.md)  
+[使用規則與分析資料更改多邊形、線條與點顯示 &#40;報表產生器及 SSRS&#41;](../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)  
   
+
+
