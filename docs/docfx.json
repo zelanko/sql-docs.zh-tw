@@ -79,7 +79,6 @@
 	  "relational-databases/wmi-provider-configuration/**",
 	  "relational-databases/wmi-provider-configuration-classes/**",
    	  "relational-databases/wmi-provider-server-events/**",
-	  "reporting-services/**",
 	  "sample/**",
 	  "ssma/**",
 	  "t-sql/**",
