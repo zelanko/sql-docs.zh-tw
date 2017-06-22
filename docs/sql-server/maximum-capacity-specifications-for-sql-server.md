@@ -25,10 +25,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: d4dc2ff665ff191fb75dd99103a222542262d4c4
-ms.openlocfilehash: b03d9514e39fad101a305784b6852e012e3e4aad
+ms.sourcegitcommit: 76839e39427e24688609353b8708d59fee772d28
+ms.openlocfilehash: b93591eb1d0f34b792adc6f2c998dbfdd9fca4b5
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/12/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>SQL Server 的最大容量規格
@@ -140,14 +140,14 @@ ms.lasthandoff: 05/12/2017
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 複寫物件||SQL Server 大小/數目上限 (64 位元)|  
 |--------------------------------------------------|-|---------------------------------------------------|  
-|發行項 (合併式發行集)||256|  
+|發行項 (合併式發行集)||2048|  
 |發行項 (快照式或交易式發行集)||32,767|  
 |資料表中的資料行* (合併式發行集)||246|  
 |資料表中的資料行** ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 快照式或交易式發行集)||1,000|  
 |資料表中的資料行** (Oracle 快照式或交易式發行集)||995|  
 |用於資料列篩選之資料行的位元組數 (合併式發行集)||1,024|  
 |用於資料列篩選之資料行的位元組數 (快照式或交易式發行集)||8,000|  
-  
+
  *如果使用資料列追蹤來進行衝突偵測 (預設值)，則基底資料表可包括的資料行行數上限為 1,024，不過，因為必須從發行項篩選資料行，所以發行的資料行行數上限為 246。 如果使用資料行追蹤，則基底資料表可包括的資料行數上限為 246。  
   
  **基底資料表可包含發行集資料庫中允許的最大資料行數 (如果是 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，則為 1,024 個)，但如果資料行超出對發行集類型指定的最大值，則必須篩選發行項的資料行。  

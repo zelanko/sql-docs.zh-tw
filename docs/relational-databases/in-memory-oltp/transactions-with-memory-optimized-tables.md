@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 03f81b7010fdba70cccc916406b70131dd24cb8d
+ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
+ms.openlocfilehash: 40b7bd5f5f8bf6682a7c85d332cce420baf06105
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="transactions-with-memory-optimized-tables"></a>Transactions with Memory-Optimized Tables
@@ -35,24 +35,6 @@ SQL Server 中的交易隔離等級會分別套用到記憶體最佳化資料表
 如需記憶體最佳化資料表上的交易特定錯誤狀況，請跳至 [衝突偵測和重試邏輯](#confdetretry34ni)一節。
   
 如需一般資訊，請參閱 [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)。  
-  
-  
-  
-#### <a name="sections-in-this-article"></a>本文件的章節：  
-  
-- [封閉式與開放式](#pessvoptim22ni)  
-- [交易初始模式](#txninitmodes24ni)  
-  - [明確模式的程式碼範例](#codeexamexpmode25ni)  
-- [資料列版本設定](#rowver28ni)  
-- [交易隔離等級](#confdegreeiso30ni)  
-- [交易階段和存留期](#txnphaslife32ni)  
-- [衝突偵測和重試邏輯](#confdetretry34ni)  
-  - [重試 T-SQL 程式碼範例](#retrytsqlcodeexam35ni)  
-- [跨容器交易](#crossconttxn38ni)  
-- [限制](#limitations40ni)  
-- [原生編譯的預存程序](#natcompstorprocs42ni)  
-- [其他交易連結](#othertxnlinks44ni)  
-  
   
   
 <a name="pessvoptim22ni"/>  

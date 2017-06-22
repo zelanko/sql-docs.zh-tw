@@ -18,7 +18,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 0927784589c1f7227b432ff49f81f29de20083ec
 ms.openlocfilehash: 200753bf64d92043171788852227c6199b64711d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/27/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="previous-sql-server-management-studio-releases"></a>先前 SQL Server Management Studio 版本

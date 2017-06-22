@@ -1,7 +1,7 @@
 ---
 title: "SQL Server 的教學課程 |Microsoft 文件"
 ms.custom: 
-ms.date: 05/24/2017
+ms.date: 06/21/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: erikre
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 96f6a7eeb03fdc222d0e5b42bcfbf05c25d11db6
-ms.openlocfilehash: f1220e70a98fd38ac2f38f892a42ff88c3f64555
+ms.sourcegitcommit: 76839e39427e24688609353b8708d59fee772d28
+ms.openlocfilehash: cd54a753fe83bc4b535e31c3cd6481c73424e1bb
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/25/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="tutorials-for-sql-server"></a>SQL Server 的教學課程
@@ -41,7 +41,7 @@ ms.lasthandoff: 05/25/2017
 |[Integration Services 教學課程](../integration-services/integration-services-tutorials.md)|了解如何建立及部署 [!INCLUDE[ssIS](../includes/ssis-md.md)] 封裝。|  
 |[複寫教學課程](../relational-databases/replication/replication-tutorials.md)|了解如何使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]來設定及執行複寫拓撲。|  
 |[Reporting Services 教學課程 &#40;SSRS&#41;](../reporting-services/reporting-services-tutorials-ssrs.md)|了解如何建立基本報表和訂閱。|  
-|[SQL Server R Services 教學課程](../advanced-analytics/r-services/sql-server-r-services-tutorials.md)|了解如何使用 R 語言處理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料，並從 [!INCLUDE[tsql](../includes/tsql-md.md)]執行 R 指令碼。|  
+|[SQL Server R Services 教學課程](../advanced-analytics/tutorials/machine-learning-services-tutorials.md)|了解如何使用 R 語言處理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料，並從 [!INCLUDE[tsql](../includes/tsql-md.md)]執行 R 指令碼。|  
   
  ## <a name="previously-published-tutorials"></a>先前發行的教學課程：  
   

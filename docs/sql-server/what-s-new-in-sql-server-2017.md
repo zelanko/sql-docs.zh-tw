@@ -1,7 +1,7 @@
 ---
 title: "什麼 & #39 的新 SQL Server 2017 |Microsoft 文件"
 ms.custom: 
-ms.date: 05/23/2017
+ms.date: 06/19/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 1d363db8e8bd0e1460cdea3c3a7add68e48714c9
-ms.openlocfilehash: 25d81efe1b915f0e4ddc5eab2feb4142ad2ceb8f
+ms.sourcegitcommit: aa08b5e7de9bb317fd781a98ee5d829431b92df6
+ms.openlocfilehash: 66c9bc4f2cba20076c357d27fdfacbc767a94c5c
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/05/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="what39s-new-in-sql-server-2017"></a>什麼 & #39 的新 SQL Server 2017
@@ -67,8 +67,8 @@ SQL Server 2017 表示讓 SQL Server 提供您選擇的開發語言、 資料類
 - CLR 會在.NET Framework 中，已不再支援做為安全性界限使用的程式碼存取安全性 (CAS)。 CLR 組件，以建立`PERMISSION_SET = SAFE`可能能夠存取外部系統資源、 呼叫 unmanaged 程式碼，以及取得 sysadmin 權限。 開頭為[!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)]、`sp_configure`選項呼叫`clr strict security`已引入來增強安全性的 CLR 組件。 `clr strict security`根據預設，已啟用，並將`SAFE`和`EXTERNAL_ACCESS`組件如同它們已標示`UNSAFE`。 `clr strict security`選項可以停用回溯相容性，但不是建議使用。 Microsoft 建議所有的組件簽署的憑證或非對稱金鑰對應登入已被授與`UNSAFE ASSEMBLY`master 資料庫中的權限。 如需詳細資訊，請參閱[CLR 嚴格的安全性](../database-engine/configure-windows/clr-strict-security.md)。  
 - 圖形模型多對多關聯性的資料庫功能。 這包括新[CREATE TABLE](../t-sql/statements/create-table-sql-graph.md)建立節點和邊緣資料表，以及關鍵字的語法[相符](../t-sql/queries/match-sql-graph.md)查詢。 如需詳細資訊，請參閱[圖形處理與 SQL Server 2017](../relational-databases/graphs/sql-graph-overview.md)。   
 - 自動調整是提供深入了解潛在的查詢效能問題的資料庫功能，它可以建議解決方案，並自動修正識別問題。 的自動調整[!INCLUDE[ssnoversion](../includes/ssnoversion.md)]、 潛在的效能問題偵測到，而且可讓您套用的矯正措施時通知您，或者讓[!INCLUDE[ssde](../includes/ssde-md.md)]自動修正效能問題。 如需詳細資訊，請參閱[自動微調](../relational-databases/automatic-tuning/automatic-tuning.md)。  
--    批次模式適應性加入改善 （在資料庫相容性 140） 計畫品質。
--    多重陳述式來改善 （在資料庫相容性 140） 下的計劃品質的 T-SQL tvf 的交錯的執行。
+-   批次模式適應性加入改善 （在資料庫相容性 140） 計畫品質。
+-   多重陳述式來改善 （在資料庫相容性 140） 下的計劃品質的 T-SQL tvf 的交錯的執行。
 - 查詢存放區現在也會追蹤等候統計資料的摘要資訊。 追蹤每個查詢存放區中的查詢等候統計資料類別可讓效能疑難排解體驗，提供，更詳細的資訊，深入了解工作負載效能，同時保留查詢存放區的重要優點其瓶頸的下一個層級。
 - DTC 支援 Alwayson 可用性群組的所有資料庫屬於可用性群組，包括屬於相同的執行個體的資料庫之間的跨資料庫交易。 如需詳細資訊，請參閱[交易-Alwayson 可用性群組和資料庫鏡像](../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)
 - 新的資料行**modified_extent_page_count**中引進[sys.dm_db_file_space_usage](../relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md)以追蹤資料庫的每個資料庫檔案差異變更。
@@ -76,7 +76,6 @@ SQL Server 2017 表示讓 SQL Server 提供您選擇的開發語言、 資料類
 - SQL Server 安裝程式支援最多指定初始的 tempdb 檔案大小**256 GB (262,144 MB)**每個檔案，但出現警告，如果檔案大小設定為值大於**1GB**和如果 IFI 未啟用。
 - 新的動態管理檢視 (DMV) [sys.dm_tran_version_store_space_usage](../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-space-usage.md)已引入來追蹤每個資料庫的版本存放區使用量。
 - 新的 DMV [sys.dm_db_log_info](../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)已引入來公開類似於 DBCC LOGINFO VLF 資訊。
-- 再製，以免遺漏在資料庫複製品中的查詢存放區執行階段統計資料時，DBCC CLONEDATABASE 會清除執行階段統計資料。 此外，DBCC CLONEDATABASE 進一步增強支援，並複製到全文檢索索引。
 - 系統版本設定時態表現在支援 CASCADE DELETE 和 UPDATE CASCADE。
 - 此 CTP 中包含資料庫引擎的錯誤修正。
 - 如需詳細的 2017年清單 CTP 增強功能，在先前的 CTP 版本中，請參閱[What's New in SQL Server 2017 (Database Engine)](../database-engine/configure-windows/what-s-new-in-sql-server-2017-database-engine.md)。   
