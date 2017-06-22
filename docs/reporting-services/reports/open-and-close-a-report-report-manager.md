@@ -23,7 +23,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 440fe0b9ff8468546cf7e8cfadf2533a3bdf82d7
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="open-and-close-a-report-report-manager"></a>開啟及關閉報表 (報表管理員)

@@ -19,7 +19,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 4e8b0226c27380bd2089acf8d2d6c8d7b27c7c5b
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="integrating-reporting-services-using-reportviewer-controls---data-collection"></a>使用資料收集 ReportViewer 控制項整合 Reporting Services

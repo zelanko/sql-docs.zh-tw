@@ -22,7 +22,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: bc2034ac69dee1a72429e94841aec1763703de7c
 ms.openlocfilehash: 82d9586bdd3dce6f463f9c142b4e0a1e9ddb3a72
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/05/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="add-columns-to-a-table-database-engine"></a>將資料行加入資料表 (Database Engine)

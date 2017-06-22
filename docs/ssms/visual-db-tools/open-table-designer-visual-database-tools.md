@@ -23,7 +23,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: ecf6dd4edb70904d902f11940da42dc33765708f
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="open-table-designer-visual-database-tools"></a>開啟資料表設計工具 (Visual Database Tools)

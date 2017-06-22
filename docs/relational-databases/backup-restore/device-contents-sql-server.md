@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d3a9d57f3c21ffc663d87d10eacaaca183d38ec9
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="device-contents-sql-server"></a>裝置內容 (SQL Server)

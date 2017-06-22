@@ -24,7 +24,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 34d2c923e509422ee4a45abe2132b06362efa1ee
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="back-up-files-and-filegroups-sql-server"></a>備份檔案和檔案群組 (SQL Server)

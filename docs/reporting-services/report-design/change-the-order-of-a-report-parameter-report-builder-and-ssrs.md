@@ -19,7 +19,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3377e943ddf7d8c7bd06aeab52ee263a754af25c
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="change-the-order-of-a-report-parameter-report-builder-and-ssrs"></a>變更報表參數的順序 (報表產生器及 SSRS)

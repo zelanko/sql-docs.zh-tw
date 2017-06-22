@@ -23,7 +23,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 5e5c583a270c36031c69350de7561fee0d670f90
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="jobs-that-reference-a-schedule"></a>參考排程的作業

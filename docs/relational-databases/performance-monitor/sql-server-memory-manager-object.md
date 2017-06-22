@@ -21,7 +21,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 884e6d05db70f9978b84a3423bdfad748f50b29c
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="sql-server-memory-manager-object"></a>SQL Server 的 Memory Manager 物件

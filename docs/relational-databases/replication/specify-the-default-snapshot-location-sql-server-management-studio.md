@@ -21,7 +21,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e6cda346b9dfdbc0a5693ce263456ee7f10076a2
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="specify-the-default-snapshot-location-sql-server-management-studio"></a>指定預設快照集位置 (SQL Server Management Studio)

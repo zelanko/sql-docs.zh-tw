@@ -25,7 +25,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: d4dc2ff665ff191fb75dd99103a222542262d4c4
 ms.openlocfilehash: 31c1a78b0f951933fea5927efd7acc13a6ce6f6c
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/12/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="uninstall-an-existing-instance-of-sql-server-setup"></a>解除安裝現有的 SQL Server 執行個體 (安裝程式)

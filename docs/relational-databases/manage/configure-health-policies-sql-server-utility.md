@@ -18,7 +18,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d1e3fdfceb5d12bb37e9f8289b03e5e3db3e84ad
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="configure-health-policies-sql-server-utility"></a>設定健康情況原則 (SQL Server 公用程式)

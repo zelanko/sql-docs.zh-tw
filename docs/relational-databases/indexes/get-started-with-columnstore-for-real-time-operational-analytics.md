@@ -19,7 +19,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: e032da9604178eb356de35448eb5d53a9d663214
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="get-started-with-columnstore-for-real-time-operational-analytics"></a>開始使用資料行存放區進行即時作業分析

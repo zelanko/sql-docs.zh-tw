@@ -18,7 +18,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b540d4b491980a57ec88d7a7717821a4e38b76a9
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="piecemeal-restore-of-databases-with-memory-optimized-tables"></a>分次還原具有記憶體最佳化資料表的資料庫

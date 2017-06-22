@@ -28,7 +28,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 9a3f71afe41528eca49f37d5f81e30d3defa0d21
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="server-performance-and-activity-monitoring"></a>伺服器效能與活動監視

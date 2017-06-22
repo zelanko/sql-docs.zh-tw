@@ -29,7 +29,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 77c335c54f7794f621850c727e57729a4bd526c6
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="design-queries-and-views-how-to-topics-visual-database-tools"></a>設計查詢和檢視操作說明主題 (Visual Database Tools)

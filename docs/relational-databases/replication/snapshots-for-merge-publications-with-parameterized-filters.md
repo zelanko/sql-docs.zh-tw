@@ -24,7 +24,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 246e2e5db5c3e64973c165be8b03e03b7c8226a5
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="snapshots-for-merge-publications-with-parameterized-filters"></a>含參數化篩選之合併式發行集的快照集

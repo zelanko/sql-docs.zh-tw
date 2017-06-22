@@ -21,7 +21,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7cdd06f5488603b10e788d513c93269b250d8486
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="delete-catalog-items-management-studio"></a>刪除目錄項目 (Management Studio)

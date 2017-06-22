@@ -21,7 +21,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: e287e48b3185904eb2fb5b24920aa3dca433fcff
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="specify-a-target-server39s-location-sql-server-management-studio"></a>指定目標伺服器的位置 (SQL Server Management Studio)

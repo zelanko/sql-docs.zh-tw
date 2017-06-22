@@ -18,7 +18,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e1d68c71f727aefd0a95bb1e1c95d0a3fe77edb5
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="comparing-disk-based-table-storage-to-memory-optimized-table-storage"></a>比較以磁碟為基礎的資料表儲存體和記憶體最佳化資料表儲存體

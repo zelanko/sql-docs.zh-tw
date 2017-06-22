@@ -23,7 +23,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 1dcb415f177d7a7163520c1b4295cadbca5f4cc9
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="use-auto-mode-with-for-xml"></a>搭配 FOR XML 使用 AUTO 模式

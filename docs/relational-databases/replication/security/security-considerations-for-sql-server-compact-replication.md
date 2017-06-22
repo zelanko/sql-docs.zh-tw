@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e2b05715b07ab2bb2c7de3d28fb92d8288d41a44
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="security-considerations-for-sql-server-compact-replication"></a>SQL Server Compact 複寫的安全性考量

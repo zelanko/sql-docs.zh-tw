@@ -22,7 +22,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 8b6ddedabeb826caf903701327b6b103666b2abb
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="setup-steps-for-extensible-key-management-using-the-azure-key-vault"></a>使用 Azure 金鑰保存庫進行可延伸金鑰管理的設定步驟

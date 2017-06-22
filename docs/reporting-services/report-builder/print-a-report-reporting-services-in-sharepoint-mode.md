@@ -22,7 +22,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f89c8f0d330561aacd678e4556fdaf2910b5dcc7
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="print-a-report-reporting-services-in-sharepoint-mode"></a>列印報表 (SharePoint 模式的 Reporting Services)

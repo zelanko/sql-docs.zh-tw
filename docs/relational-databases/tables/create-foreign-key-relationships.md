@@ -21,7 +21,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: bc2034ac69dee1a72429e94841aec1763703de7c
 ms.openlocfilehash: f6d1acfc492d4d2c37bd4e7cfe66a2b95266a80a
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/05/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="create-foreign-key-relationships"></a>建立外部索引鍵關聯性

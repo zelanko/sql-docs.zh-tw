@@ -27,7 +27,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 58f0b1ab65e812e778d630a2a95db8539e1b47eb
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="restore-a-transaction-log-backup-sql-server"></a>還原交易記錄備份 (SQL Server)

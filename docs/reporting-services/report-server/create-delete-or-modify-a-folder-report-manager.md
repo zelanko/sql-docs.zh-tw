@@ -26,7 +26,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: ad8509d26a0ad1cac7efb75bed728b8501b0545e
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="create-delete-or-modify-a-folder-report-manager"></a>建立、刪除或修改資料夾 (報表管理員)

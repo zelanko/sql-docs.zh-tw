@@ -23,7 +23,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 6271d97901c8508802300fce5d040549d265edda
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="tutorial-administering-servers-by-using-policy-based-management"></a>教學課程：使用以原則為基礎的管理來管理伺服器

@@ -18,7 +18,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a8590c7e7adbf796d44347b66a790f98c13667bc
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="deleting-backup-blob-files-with-active-leases"></a>刪除擁有使用中租用的備份 Blob 檔案

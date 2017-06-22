@@ -18,7 +18,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ae35fb3deecc8b77940ab76d1b0f016f00f39e27
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="run-windows-powershell-steps-in-sql-server-agent"></a>在 SQL Server Agent 中執行 Windows PowerShell 步驟

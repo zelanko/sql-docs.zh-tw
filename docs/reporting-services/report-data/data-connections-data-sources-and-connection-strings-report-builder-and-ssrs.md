@@ -28,7 +28,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 51be2879461864ce67992e12d7cfd95014e03e40
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="data-connections-data-sources-and-connection-strings-report-builder-and-ssrs"></a>資料連接、資料來源及連接字串 (報表產生器和 SSRS)

@@ -24,7 +24,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 31fbf087c088a0f83471a37b60d5151b9db315b3
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="view-sql-server-agent-error-log-sql-server-management-studio"></a>檢視 SQL Server Agent 錯誤記錄檔 (SQL Server Management Studio)

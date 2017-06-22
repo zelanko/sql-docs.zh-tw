@@ -23,7 +23,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f53c21103cf05d606ab9a8543606577df097a353
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="compare-replicated-tables-for-differences-replication-programming"></a>比較複寫資料表的差異 (複寫程式設計)

@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 7d508937008511c8b2a6213b6a429b8e93ccb521
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="distributor-info-subscription-watch-list-transaction-pub-sql-2005"></a>散發者資訊、訂閱監看清單 (交易式發行集，SQL 2005+)

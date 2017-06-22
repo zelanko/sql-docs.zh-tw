@@ -18,7 +18,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d632e025a0a9fe18dbf42d773ff0e943263f4851
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="full-text-search-ddl-functions-stored-procedures-and-views"></a>全文檢索搜尋 DDL、函數、預存程序與檢視

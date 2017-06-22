@@ -21,7 +21,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 92fca3a74586d7c7adbe135422283342db36a204
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="plan-and-perform-restore-sequences-full-recovery-model"></a>規劃和執行還原順序 (完整復原模式)

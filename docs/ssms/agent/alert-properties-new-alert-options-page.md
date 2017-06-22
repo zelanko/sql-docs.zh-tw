@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 360fc93c7f1e8cf7194637b7f5cffb20cb772c3c
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="alert-properties---new-alert-options-page"></a>警示屬性 - 新增警示 (選項頁面)

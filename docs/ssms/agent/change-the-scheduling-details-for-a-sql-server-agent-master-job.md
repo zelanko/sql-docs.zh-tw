@@ -18,7 +18,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 68153141215e5cad8310f02cb93d96266e82bb8e
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="change-the-scheduling-details-for-a-sql-server-agent-master-job"></a>變更 SQL Server Agent 主要作業的排程詳細資料

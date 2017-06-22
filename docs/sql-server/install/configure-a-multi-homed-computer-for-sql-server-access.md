@@ -22,7 +22,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 61df6c613fec3d5a549f5dc1468b44affa37f047
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="configure-a-multi-homed-computer-for-sql-server-access"></a>設定多重主目錄電腦進行 SQL Server 存取

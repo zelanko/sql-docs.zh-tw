@@ -22,7 +22,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 4b8ac7919f5f6fb191a5636e119e16abce782428
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="enable-or-disable-backup-checksums-during-backup-or-restore-sql-server"></a>在備份或還原期間啟用或停用備份總和檢查碼 (SQL Server)

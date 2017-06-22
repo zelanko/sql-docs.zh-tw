@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7b670e48c6859dfaad38b9383fb3e2056fa47994
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="log-reader-agent-security-peer-to-peer-replication"></a>記錄讀取器代理程式安全性 (點對點複寫)

@@ -22,7 +22,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: cc6d04babcdb016fcbeb72b348339c18d6fc7d22
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="restore-database-to-point-of-failure---full-recovery"></a>將資料庫還原到失敗點 - 完整復原

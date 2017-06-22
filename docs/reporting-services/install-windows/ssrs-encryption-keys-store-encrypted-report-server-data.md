@@ -25,7 +25,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 42709e27ef13cadc3be92ce5afcbbf9ea35ab1f7
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="ssrs-encryption-keys---store-encrypted-report-server-data"></a>SSRS 加密金鑰-儲存加密的報表伺服器資料

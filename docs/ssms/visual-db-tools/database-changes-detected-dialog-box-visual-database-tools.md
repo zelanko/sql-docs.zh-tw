@@ -22,7 +22,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 3d2e7bb8486f588c055cc6eee890bf533e726fb4
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="database-changes-detected-dialog-box-visual-database-tools"></a>偵測到資料庫變更對話方塊 (Visual Database Tools)

@@ -24,7 +24,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 6bc6d9b3e482869bd82daa13c167d0221639a95f
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="specify-metaproperties-in-openxml"></a>在 OPENXML 中指定中繼屬性

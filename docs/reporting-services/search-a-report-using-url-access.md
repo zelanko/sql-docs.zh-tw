@@ -23,7 +23,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 39ec7f9885cff6bcfcbf65e0448f3e8e837bc8a6
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="search-a-report-using-url-access"></a>使用 URL 存取搜尋報表

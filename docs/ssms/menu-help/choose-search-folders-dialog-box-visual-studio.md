@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 12c0849728ab63ccc806e0ca2de2d8b98fd7c110
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="choose-search-folders-dialog-box-visual-studio"></a>選擇搜尋資料夾對話方塊 (Visual Studio)

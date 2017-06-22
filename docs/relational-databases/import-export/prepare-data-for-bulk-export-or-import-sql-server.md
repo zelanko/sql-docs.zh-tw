@@ -24,7 +24,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: fbcca0ce4e711ba22215e9e6ff09389b02d6e80b
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="prepare-data-for-bulk-export-or-import-sql-server"></a>準備大量匯出或匯入的資料 (SQL Server)

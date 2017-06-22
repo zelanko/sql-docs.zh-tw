@@ -18,7 +18,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0465daf504277e1a221d0fd553dd60617eb067a1
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="implementing-merge-functionality-in-a-natively-compiled-stored-procedure"></a>在原生編譯的預存程序中實作 MERGE 功能

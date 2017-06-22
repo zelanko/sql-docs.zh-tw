@@ -22,7 +22,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 83d7383aff0ccc5ab8f6716135d07c3642e6c9d6
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="specify-that-a-merge-table-article-is-download-only"></a>將合併資料表發行項指定為僅限下載

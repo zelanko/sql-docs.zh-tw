@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 288ed137e701d6cfb416d12b6ff2176c59ec0278
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="developer39s-guide-how-to-topics-replication"></a>開發人員指南：使用說明主題 (複寫)

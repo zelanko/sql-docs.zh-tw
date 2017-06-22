@@ -19,7 +19,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f83ece6730c623a8c710d9b3aef3f8b4786b83ca
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="controlling-row-and-column-headings-report-builder-and-ssrs"></a>控制資料列和資料行標題 (報表產生器及 SSRS)

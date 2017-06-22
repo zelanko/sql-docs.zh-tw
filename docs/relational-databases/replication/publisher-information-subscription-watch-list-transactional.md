@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 603986631591c86fa2b4559d016e36dd754e3d42
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="publisher-information-subscription-watch-list-transactional"></a>發行者資訊，訂閱監看清單 (交易式)

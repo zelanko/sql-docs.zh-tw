@@ -19,7 +19,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b9a3f027fddc3ab7094b2ca82ae1f9ad3190a886
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="selects-and-joins-from-system-views-for-extended-events-in-sql-server"></a>SQL Server 擴充事件系統檢視表中的 SELECT 和 JOIN

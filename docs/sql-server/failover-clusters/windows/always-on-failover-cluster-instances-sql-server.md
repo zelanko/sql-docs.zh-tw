@@ -28,7 +28,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: a5de42512c1b7f5372e96f53b6332145fb99a3d8
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="always-on-failover-cluster-instances-sql-server"></a>AlwaysOn 容錯移轉叢集執行個體 (SQL Server)

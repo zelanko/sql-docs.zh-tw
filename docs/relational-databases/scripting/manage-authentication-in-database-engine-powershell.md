@@ -18,7 +18,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 135580dd67315ad9eb07361dcff7b1334398a0aa
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="manage-authentication-in-database-engine-powershell"></a>管理 Database Engine PowerShell 中的驗證

@@ -22,7 +22,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3817f8c3c5b3aaa50770b3734974e457a4e802e8
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="convert-an-existing-sql-trace-script-to-an-extended-events-session"></a>將現有的 SQL 追蹤指令碼轉換為擴充事件工作階段

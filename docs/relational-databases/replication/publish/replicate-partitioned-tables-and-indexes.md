@@ -24,7 +24,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ca19ef9e234653e490e8c9b92bcf221b2175a341
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="replicate-partitioned-tables-and-indexes"></a>複寫資料分割資料表及索引

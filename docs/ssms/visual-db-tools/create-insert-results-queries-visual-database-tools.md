@@ -24,7 +24,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: ef3e0b90a01079e974ed687656bf51448abcc66d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="create-insert-results-queries-visual-database-tools"></a>建立插入結果查詢 (Visual Database Tools)

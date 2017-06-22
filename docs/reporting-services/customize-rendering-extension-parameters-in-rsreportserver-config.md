@@ -26,7 +26,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 009b40c83d662b40b3215f701a2eb490ebc4fed1
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="customize-rendering-extension-parameters-in-rsreportserverconfig"></a>在 RSReportServer.Config 中自訂轉譯延伸模組參數

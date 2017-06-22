@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 79e728f7cf2c300338e202b3e9cae27226f70a50
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="options-designers---table-and-database-designers-page"></a>選項 (設計工具 - 資料表和資料庫設計工具頁面)

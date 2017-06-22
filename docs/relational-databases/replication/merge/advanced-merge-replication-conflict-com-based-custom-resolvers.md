@@ -21,7 +21,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 88ccc09da5973beffdfa8b2595b1354c95b4cbb1
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="advanced-merge-replication-conflict---com-based-custom-resolvers"></a>進階合併式複寫衝突 - 以 COM 為基礎的自訂解析程式

@@ -27,7 +27,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 148bb839729d26ca2c9b5dad8d51696e9c8c6a5c
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="view-the-windows-application-log-windows-10"></a>檢視 Windows 應用程式記錄檔 (Windows 10)

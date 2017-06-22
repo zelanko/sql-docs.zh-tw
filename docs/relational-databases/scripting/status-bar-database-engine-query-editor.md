@@ -18,7 +18,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 34d7a9bfaf04f1ea7d201083201aa3c8a3895061
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="status-bar-database-engine-query-editor"></a>狀態列 (Database Engine 查詢編輯器)

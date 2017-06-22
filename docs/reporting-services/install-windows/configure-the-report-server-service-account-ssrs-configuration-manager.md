@@ -18,7 +18,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3e1fde5db0ebdf332d82cdb7269342aea036ec61
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="configure-the-report-server-service-account-ssrs-configuration-manager"></a>設定報表伺服器服務帳戶 (SSRS 組態管理員)

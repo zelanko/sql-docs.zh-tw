@@ -25,7 +25,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: b042bef86620c773f39f81ea16a62b3d9c4c2a6a
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="ssrs-encryption-keys---delete-and-re-create-encryption-keys"></a>SSRS 加密金鑰-刪除並重新建立加密金鑰

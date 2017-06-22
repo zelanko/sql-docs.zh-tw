@@ -28,7 +28,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 24825a3c9c016588b4ac3d1a9c8fa29741e609b3
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="control-behavior-of-triggers-and-constraints-in-synchronization"></a>控制同步處理中觸發程序和條件約束的行為

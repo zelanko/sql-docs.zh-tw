@@ -19,7 +19,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
 ms.openlocfilehash: 1829f2a3b1d053173145df421ce7d8d35a0e29e3
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/25/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="implementing-a-case-expression-in-a-natively-compiled-stored-procedure"></a>在原生編譯的預存程序中實作 CASE 運算式

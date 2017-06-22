@@ -33,7 +33,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 2ae4b7e7ed2efc44ce1b432313d56288a66e778c
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="use-xml-data-in-applications"></a>在應用程式中使用 XML 資料

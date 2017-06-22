@@ -22,7 +22,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: c0e55c0e35039490f0ce4cd8a7fb6d7e232c05aa
 ms.openlocfilehash: 9555085ef832e4277da89e062aa28872b5eeb4fe
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/05/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="configure-iis-for-web-synchronization"></a>針對 Web 同步處理設定 IIS

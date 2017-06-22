@@ -18,7 +18,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 49a53643e94d64fc47932bc2ee8dc3200967ae23
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="local-audit-for-ssms-usage-feedback-collection"></a>SSMS 使用意見收集的本機稽核
@@ -28,9 +28,9 @@ SQL Server Management Studio (SSMS) 包含使用已連線到網際網路的功�
 ## <a name="audit-feature-usage-data"></a>稽核功能的使用方式資料
 
 若要查看 SSMS 所收集的功能使用方式資料，請執行下列作業：
-1.    啟動 SSMS。
-2.    按一下 [檢視]，然後按一下主功能表中的 [輸出] 以顯示 [輸出] 視窗。 
-3.    當 [輸出] 視窗顯示時，選擇 [顯示輸出來源:] 功能表中的 [遙測]。
+1.  啟動 SSMS。
+2.  按一下 [檢視]，然後按一下主功能表中的 [輸出] 以顯示 [輸出] 視窗。 
+3.  當 [輸出] 視窗顯示時，選擇 [顯示輸出來源:] 功能表中的 [遙測]。
 
 當您使用 SSMS 來與資料庫互動時，[輸出] 視窗會顯示所收集的資料。
 

@@ -22,7 +22,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 6a1efe67725037c9d47f20209c2831db3faef65e
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="associate-a-query-parameter-with-a-report-parameter-report-builder-and-ssrs"></a>將查詢參數與報表參數產生關聯 (報表產生器及 SSRS)

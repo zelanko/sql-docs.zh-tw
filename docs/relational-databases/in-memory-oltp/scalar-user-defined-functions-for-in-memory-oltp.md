@@ -19,7 +19,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: d6ed803c39e37a43b3db6c78f7416272954d1692
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="scalar-user-defined-functions-for-in-memory-oltp"></a>記憶體內部 OLTP 的純量使用者定義函數

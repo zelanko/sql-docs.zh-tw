@@ -24,7 +24,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 711b648b41294d6c32530407b31aec8401db389c
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="formatting-series-colors-on-a-chart-report-builder-and-ssrs"></a>設定圖表上數列色彩的格式 (報表產生器及 SSRS)

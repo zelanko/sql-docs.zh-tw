@@ -18,7 +18,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e38a8b7a03c79a596d2c795b3ee992e974f604cb
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="add-a-custom-map-to-a-reporting-services-mobile-report"></a>將自訂地圖加入 Reporting Services 行動報表

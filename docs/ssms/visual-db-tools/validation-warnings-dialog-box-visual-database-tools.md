@@ -21,7 +21,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 78aac0124cb34ac7699907df89c3251559bb79f8
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="validation-warnings-dialog-box-visual-database-tools"></a>驗證警告對話方塊 (Visual Database Tools)

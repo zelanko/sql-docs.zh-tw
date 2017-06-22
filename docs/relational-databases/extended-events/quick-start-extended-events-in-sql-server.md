@@ -19,7 +19,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 2c02a1b16e4ab6375c0479f494838649ed7a413f
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="quick-start-extended-events-in-sql-server"></a>快速入門︰SQL Server 中的擴充事件

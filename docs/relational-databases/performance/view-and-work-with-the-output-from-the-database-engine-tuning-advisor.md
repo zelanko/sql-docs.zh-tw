@@ -34,7 +34,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ce827e3df11e103bced1b62afb2329db9c81e0f4
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor"></a>檢視及處理 Database Engine Tuning Advisor 的輸出

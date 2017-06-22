@@ -22,7 +22,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5a9b6a8f5eb6238fac6b0588ecf6c79227e9ec7d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="keyboard-shortcuts-report-builder"></a>鍵盤快速鍵 (報表產生器)

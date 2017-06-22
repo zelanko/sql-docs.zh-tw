@@ -21,7 +21,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: fe5be4e624ef5a5bc956731819f2b4636dc39799
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="data-regions-and-maps-report-builder-and-ssrs"></a>資料區域與地圖 (報表產生器及 SSRS)

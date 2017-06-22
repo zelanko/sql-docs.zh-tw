@@ -21,7 +21,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
 ms.openlocfilehash: 2cdb047169569041e3a8f7890d8215fd87284959
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/09/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="include-null-values-in-json---includenullvalues-option"></a>在 JSON 中包含 Null 值 - INCLUDE_NULL_VALUES 選項

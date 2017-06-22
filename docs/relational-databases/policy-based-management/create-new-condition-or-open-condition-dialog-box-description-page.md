@@ -21,7 +21,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e053294a414ae2baefc90f20ff3fc80adf78a0e7
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="create-new-condition-or-open-condition-dialog-box-description-page"></a>建立新條件或開啟條件對話方塊，描述頁面

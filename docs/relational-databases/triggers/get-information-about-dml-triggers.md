@@ -25,7 +25,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a8583bd2597f5107398a65df65dbe7f7eef53f4d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="get-information-about-dml-triggers"></a>取得關於 DML 觸發程序的詳細資訊

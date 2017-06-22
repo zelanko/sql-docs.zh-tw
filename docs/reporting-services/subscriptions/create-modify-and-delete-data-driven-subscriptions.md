@@ -24,7 +24,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0eb66b6e5590408b1fa8c67c01989bb537436283
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="create-modify-and-delete-data-driven-subscriptions"></a>建立、修改和刪除資料驅動訂閱

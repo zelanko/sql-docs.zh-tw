@@ -21,7 +21,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 076775dfba28cf3857c8ae056c8c46d44a0ce630
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="automatically-generate-join-filters-between-merge-articles"></a>在合併發行項之間自動產生聯結篩選

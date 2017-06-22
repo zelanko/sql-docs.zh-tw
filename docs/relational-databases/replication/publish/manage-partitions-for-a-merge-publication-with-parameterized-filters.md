@@ -22,7 +22,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5718198b2cbfc99a1658a703199bb943fcd73aeb
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="manage-partitions-for-a-merge-publication-with-parameterized-filters"></a>使用參數化篩選管理合併式發行集的資料分割

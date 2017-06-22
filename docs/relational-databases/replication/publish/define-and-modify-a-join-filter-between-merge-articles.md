@@ -23,7 +23,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 51b454f90cca8cc944d79136b954378444fe9452
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="define-and-modify-a-join-filter-between-merge-articles"></a>定義和修改合併發行項之間的聯結篩選

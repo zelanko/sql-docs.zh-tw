@@ -26,7 +26,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 25672cad6198647ca7e24eb924796740ce20c264
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="view-and-modify-publication-properties"></a>檢視及修改發行集屬性

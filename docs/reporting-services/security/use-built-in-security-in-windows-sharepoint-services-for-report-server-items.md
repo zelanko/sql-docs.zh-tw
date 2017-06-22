@@ -23,7 +23,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: becc8fac740023906166f8a9545139300c233a51
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="use-built-in-security-in-windows-sharepoint-services-for-report-server-items"></a>在 Windows SharePoint Services 中使用報表伺服器項目的內建安全性

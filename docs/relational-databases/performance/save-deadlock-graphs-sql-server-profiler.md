@@ -22,7 +22,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c89c0ed24b52d89c36fb1f1cce29717988a0d798
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="save-deadlock-graphs-sql-server-profiler"></a>儲存死結圖形 (SQL Server Profiler)

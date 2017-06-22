@@ -18,7 +18,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 9a0a115eba3fbd1afe52c211fe0f93362a989fc2
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="configuring-storage-spaces-with-a-nvdimm-n-write-back-cache"></a>設定具有 NVDIMM-N 回寫式快取的儲存空間

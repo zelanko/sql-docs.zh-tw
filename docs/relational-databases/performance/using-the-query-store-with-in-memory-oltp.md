@@ -21,7 +21,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 31483a4450089f194241f19df0bd0072b5026375
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="using-the-query-store-with-in-memory-oltp"></a>使用含有記憶體內部 OLTP 的查詢存放區

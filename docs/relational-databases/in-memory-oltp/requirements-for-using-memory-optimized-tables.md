@@ -19,7 +19,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d30c5b808c13258e784187182eab23b0a50c76e0
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="requirements-for-using-memory-optimized-tables"></a>使用記憶體最佳化資料表的需求

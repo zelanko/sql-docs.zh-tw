@@ -26,7 +26,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a337202cea263001fe810c91a607fa1746219bd6
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="use-an-external-data-source-for-subscriber-data-data-driven-subscription"></a>使用外部資料來源以取得訂閱者資料 (資料驅動訂閱)

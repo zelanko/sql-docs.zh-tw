@@ -18,7 +18,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 912c05cd783ead67aaa506f07586387eabcb2ca4
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="view-and-read-failover-cluster-instance-diagnostics-log"></a>檢視及閱讀容錯移轉叢集執行個體診斷記錄檔

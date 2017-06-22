@@ -19,7 +19,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f1e5c7c678cb3c38d9e0225ce47bc2dca91ab326
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="add-a-drillthrough-action-on-a-report-report-builder-and-ssrs"></a>在報表上加入鑽研動作 (報表產生器及 SSRS)

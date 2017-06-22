@@ -26,7 +26,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 74e70cd67affe64f31076f362f36e813f3357f82
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="data-processing-extensions-and-net-framework-data-providers-ssrs"></a>資料處理延伸模組與 .NET Framework Data Provider (SSRS)

@@ -21,7 +21,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 41484cb9478231533d5d48fb445582f08e5762f9
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="use-a-format-file-to-skip-a-data-field-sql-server"></a>使用格式檔案略過資料欄位 (SQL Server)
@@ -89,18 +89,18 @@ bcp TestDatabase.dbo.myTestSkipField format nul -c -f D:\BCP\myTestSkipField.fmt
 ```
 13.0
 3
-1       SQLCHAR    0       7       ","      1     PersonID        ""
-2       SQLCHAR    0       25      ","      2     FirstName    SQL_Latin1_General_CP1_CI_AS
-3       SQLCHAR    0       30      "\r\n"   3     LastName     SQL_Latin1_General_CP1_CI_AS
+1       SQLCHAR 0       7       ","      1     PersonID     ""
+2       SQLCHAR 0       25      ","      2     FirstName    SQL_Latin1_General_CP1_CI_AS
+3       SQLCHAR 0       30      "\r\n"   3     LastName     SQL_Latin1_General_CP1_CI_AS
 ```
 **After**
 ```
 13.0
 4
-1       SQLCHAR    0       7       ","      1     PersonID     ""
-2       SQLCHAR    0       25      ","      0     FirstName    SQL_Latin1_General_CP1_CI_AS
-3       SQLCHAR    0       25      ","      2     FirstName    SQL_Latin1_General_CP1_CI_AS
-4       SQLCHAR    0       50      "\r\n"   3     LastName     SQL_Latin1_General_CP1_CI_AS
+1       SQLCHAR 0       7       ","      1     PersonID     ""
+2       SQLCHAR 0       25      ","      0     FirstName    SQL_Latin1_General_CP1_CI_AS
+3       SQLCHAR 0       25      ","      2     FirstName    SQL_Latin1_General_CP1_CI_AS
+4       SQLCHAR 0       50      "\r\n"   3     LastName     SQL_Latin1_General_CP1_CI_AS
 
 ```
 

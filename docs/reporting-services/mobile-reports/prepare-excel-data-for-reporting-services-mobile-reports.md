@@ -19,7 +19,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c057de4b56529de08385a1e13e1a119550632eda
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="prepare-excel-data-for-reporting-services-mobile-reports"></a>準備 Reporting Services 行動報表的 Excel 資料

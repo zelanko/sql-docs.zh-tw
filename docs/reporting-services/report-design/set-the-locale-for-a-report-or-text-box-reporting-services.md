@@ -21,7 +21,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3ce894281c47d0e54837917b05e785e9d106cdfa
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="set-the-locale-for-a-report-or-text-box-reporting-services"></a>設定報表或文字方塊的地區設定 (Reporting Services)

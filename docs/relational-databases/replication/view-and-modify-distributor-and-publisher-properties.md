@@ -23,7 +23,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: b0c9adb0d7fa110c08f280706d17706f4af07b07
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="view-and-modify-distributor-and-publisher-properties"></a>檢視及修改散發者和發行者屬性

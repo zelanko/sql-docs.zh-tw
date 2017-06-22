@@ -19,7 +19,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: ca6519365ae81c5a7875825fb976c163dbb588f3
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="local-mode-vs-connected-mode-reports-in-the-report-viewer"></a>比較報表檢視器中的本機模式與連接模式報表

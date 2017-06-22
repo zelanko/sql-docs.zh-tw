@@ -19,7 +19,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 99ca6c9509f25c118931ccab981987b3427e4b2d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="rendering-data-regions-report-builder-and-ssrs"></a>轉譯資料區 (報表產生器及 SSRS)

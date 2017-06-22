@@ -24,7 +24,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 79f8068d11d707c4b0237d32e1645a80a12cdbbb
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="change-time-zones-and-clock-settings-on-a-report-server"></a>變更報表伺服器上的時區和時鐘設定

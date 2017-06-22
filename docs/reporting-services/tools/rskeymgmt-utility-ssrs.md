@@ -30,7 +30,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 95e64239c30aab1a341c281230c887f9668b9277
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>rskeymgmt 公用程式 (SSRS)

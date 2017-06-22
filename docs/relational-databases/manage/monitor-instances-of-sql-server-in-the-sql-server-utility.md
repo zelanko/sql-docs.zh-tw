@@ -18,7 +18,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 43a8e4d946a7d5943c8edb1d07a7e6c85cea2fde
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="monitor-instances-of-sql-server-in-the-sql-server-utility"></a>監視 SQL Server 公用程式中的 SQL Server 執行個體

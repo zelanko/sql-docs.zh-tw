@@ -21,7 +21,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: dd3226cf6bf52151c94853d87b4de28e54b5d2df
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="lesson-5-backup-database-using-file-snapshot-backup"></a>第 5 課：使用檔案快照集備份來備份資料庫

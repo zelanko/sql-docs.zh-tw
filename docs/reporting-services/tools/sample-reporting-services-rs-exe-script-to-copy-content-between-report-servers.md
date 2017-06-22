@@ -19,7 +19,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: b46f26baae77ec3c18e0a4291e5c5cbfa8e672e1
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="sample-reporting-services-rsexe-script-to-copy-content-between-report-servers"></a>在報表伺服器之間複製內容的範例 Reporting Services rs.exe 指令碼

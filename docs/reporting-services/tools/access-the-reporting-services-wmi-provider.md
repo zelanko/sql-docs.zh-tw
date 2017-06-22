@@ -26,7 +26,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 2aa02df2ee2953c1a3f4b02236cd5203ff08cdc3
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="access-the-reporting-services-wmi-provider"></a>存取 Reporting Services WMI 提供者

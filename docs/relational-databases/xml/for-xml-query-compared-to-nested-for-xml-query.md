@@ -21,7 +21,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 2e83d836d3cf5e736847c5ebbb1934e8cde5374a
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="for-xml-query-compared-to-nested-for-xml-query"></a>與巢狀 FOR XML 查詢比較的 FOR XML 查詢

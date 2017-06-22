@@ -27,7 +27,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: fd62d43d9f77f0baf63487c15381e07814eea63d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="enhance-merge-replication-performance"></a>增強合併式複寫效能

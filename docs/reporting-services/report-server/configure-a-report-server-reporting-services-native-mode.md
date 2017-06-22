@@ -22,7 +22,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: da2a367b582d39ea8cc8dc7ffc281a3515bb2d8b
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="configure-a-report-server-reporting-services-native-mode"></a>設定報表伺服器 (Reporting Services 原生模式)

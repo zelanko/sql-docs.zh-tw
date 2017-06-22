@@ -22,7 +22,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d20f1dbfd5cb21920ff323f8a09f33a9650c16a4
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="restore-a-sql-server-database-to-a-point-in-time-full-recovery-model"></a>將 SQL Server 資料庫還原至某個時間點 (完整復原模式)

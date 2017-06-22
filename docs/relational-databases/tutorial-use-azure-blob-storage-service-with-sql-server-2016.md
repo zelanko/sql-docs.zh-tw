@@ -21,7 +21,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 4ae1e9aef727303d55c79463d822c4f62d3cdae0
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>教學課程：搭配使用 Azure Blob 儲存體服務和 SQL Server 2016

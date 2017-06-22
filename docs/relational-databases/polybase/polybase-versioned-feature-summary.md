@@ -18,7 +18,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: cf69aa2c57e86aab11974b5874039ae7f72b9917
 ms.openlocfilehash: 3384d962c3765bf4feb00f957ad56a668f8d92e4
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/31/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="polybase-versioned-feature-summary"></a>PolyBase 建立版本的功能摘要

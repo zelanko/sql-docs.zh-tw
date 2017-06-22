@@ -36,7 +36,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d3bb6bc91b9b96830074bac3de28fc6a5f6b0143
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="formatting-axis-labels-on-a-chart-report-builder-and-ssrs"></a>格式化圖表上的軸標籤 (報表產生器及 SSRS)

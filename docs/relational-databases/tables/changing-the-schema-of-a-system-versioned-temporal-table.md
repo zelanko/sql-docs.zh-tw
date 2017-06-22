@@ -19,7 +19,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 97eadf63fb8332ef55d8ccb699241a5e5f0e19d0
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="changing-the-schema-of-a-system-versioned-temporal-table"></a>變更系統建立版本時態表的結構描述

@@ -30,7 +30,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: b0d83269e29d8b901aee6ad45e31207a2488b899
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="use-the-query-and-view-designer-with-international-data-visual-database-tools"></a>使用查詢和檢視表設計工具操作國際資料 (Visual Database Tools)

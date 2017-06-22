@@ -19,7 +19,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ffa83524ea9761dfa4df66b4d47fd049dd63035a
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="images-text-boxes-rectangles-and-lines-report-builder-and-ssrs"></a>影像、文字方塊、矩形和線條 (報表產生器及 SSRS)

@@ -30,7 +30,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8848fbbe73b377a329c8b3af29c8a6a32881f50b
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="recovery-of-related--databases-that-contain-marked-transaction"></a>復原包含標記之異動的相關資料庫

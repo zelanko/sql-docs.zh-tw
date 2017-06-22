@@ -22,7 +22,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ad5b7660207873c5e703a82d23a047d0067d7c9e
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="view-information-and-perform-tasks-for-a-subscription-replication-monitor"></a>檢視訂閱的資訊並執行工作 (複寫監視器)

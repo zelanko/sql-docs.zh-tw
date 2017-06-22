@@ -25,7 +25,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: b1c6738ba292765a769cad8ae68cfae9a4503f8a
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="count-rows-in-a-table-visual-database-tools"></a>計算資料表中的資料列 (Visual Database Tools)

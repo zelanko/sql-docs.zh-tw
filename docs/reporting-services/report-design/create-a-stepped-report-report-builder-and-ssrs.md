@@ -19,7 +19,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 232b8e03dc8e5e2130d127408f356ba2dc0492d5
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="create-a-stepped-report-report-builder-and-ssrs"></a>建立階梯狀報表 (報表產生器及 SSRS)

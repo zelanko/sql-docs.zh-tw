@@ -28,7 +28,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 186bb0bab4abac91ea95d397f379986cac9d2f0f
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="formatting-numbers-and-dates-report-builder-and-ssrs"></a>格式化數字和日期 (報表產生器及 SSRS)

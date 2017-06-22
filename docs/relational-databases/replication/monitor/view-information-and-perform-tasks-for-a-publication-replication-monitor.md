@@ -22,7 +22,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d01adb7abcb4c110f826e0cd54814a66c83c0051
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="view-information-and-perform-tasks-for-a-publication-replication-monitor"></a>檢視發行集的資訊並執行工作 (複寫監視器)

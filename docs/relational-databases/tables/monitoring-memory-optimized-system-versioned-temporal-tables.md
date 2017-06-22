@@ -19,7 +19,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 9a998ba89645d568585d475b50037adaab72657c
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="monitoring-memory-optimized-system-versioned-temporal-tables"></a>監視記憶體最佳化的系統建立版本時態表

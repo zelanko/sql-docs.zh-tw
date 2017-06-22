@@ -19,7 +19,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 9cc4156eccf9dd642e53ec2aeea967d9dcf016af
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="querying-data-in-a-system-versioned-temporal-table"></a>查詢系統建立版本時態表中的資料

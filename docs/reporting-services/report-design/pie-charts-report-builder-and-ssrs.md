@@ -19,7 +19,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: dfa24b2135c34e95dae65e0a6fee4bf5da6b3d16
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="pie-charts-report-builder-and-ssrs"></a>圓形圖 (報表產生器及 SSRS)

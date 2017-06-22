@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 5bd0e1d3955d898824d285d28979089e2de6f322
 ms.openlocfilehash: 7aaa4c48419bf24357b2bef95c40d721d1ab2f2a
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/05/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="download-sql-server-data-tools-ssdt"></a>下載 SQL Server Data Tools (SSDT)

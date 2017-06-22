@@ -21,7 +21,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 94cc2ebfc2b11bd6bc3e2ab2ce07b5c22c14a12c
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="add-a-new-or-existing-report-to-a-report-project-ssrs"></a>將新的或現有的報表加入報表專案 (SSRS)

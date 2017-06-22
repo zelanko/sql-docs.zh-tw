@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e16ba9c8328bf170976ba60d3e789117a3a7e37e
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="example-specifying-xsinil-with-the-elements-directive"></a>範例：使用 ELEMENTS 指示詞指定 XSINIL

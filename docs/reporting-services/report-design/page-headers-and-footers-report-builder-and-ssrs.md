@@ -32,7 +32,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f89d2e283daf9b9ac107c098d38db4feab17a736
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="page-headers-and-footers-report-builder-and-ssrs"></a>頁首和頁尾 (報表產生器及 SSRS)

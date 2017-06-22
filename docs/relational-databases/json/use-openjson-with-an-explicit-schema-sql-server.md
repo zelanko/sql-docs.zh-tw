@@ -21,7 +21,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
 ms.openlocfilehash: c96f36b9f59f5cd091dfa3e61be9e1cf7e744f3d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/09/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="use-openjson-with-an-explicit-schema-sql-server"></a>使用 OPENJSON 與明確結構描述 (SQL Server)

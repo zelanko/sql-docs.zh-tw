@@ -28,7 +28,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: f06506dffa7c0d8497a6fc0986e8a29a701d0415
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="create-a-sql-server-utility-control-point-sql-server-utility"></a>建立 SQL Server 公用程式控制點 (SQL Server 公用程式)

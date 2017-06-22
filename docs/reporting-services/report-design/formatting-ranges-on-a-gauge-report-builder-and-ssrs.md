@@ -19,7 +19,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a4c28739a1b35655f74a16a6757958e0e1bc6e47
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="formatting-ranges-on-a-gauge-report-builder-and-ssrs"></a>設定量測計上範圍的格式 (報表產生器及 SSRS)

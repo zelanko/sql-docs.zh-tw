@@ -16,7 +16,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: d533818e9498237316dabc08fc538caa2ac31c63
 ms.openlocfilehash: f236ff85204ba08e8c02d5e680a4de43f021b9aa
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/07/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="guide-to-enhancing-privacy-and-addressing-gdpr-requirements-with-the-microsoft-sql-platform"></a>增強的隱私權和定址 GDPR 需求與 Microsoft SQL 平台指南

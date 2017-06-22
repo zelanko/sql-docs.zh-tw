@@ -22,7 +22,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 36f6331a6196e7c7c4bd9e476ae98c56418fad4f
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="parameterized-filters---optimize-for-precomputed-partitions"></a>參數化篩選 - 針對預先計算的資料分割最佳化

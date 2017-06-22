@@ -25,7 +25,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b315b0bc0d56cf0e618869f1eef69278fc0d6988
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="view-the-data-and-log-files-in-a-backup-set-sql-server"></a>檢視備份組中的資料和記錄檔 (SQL Server)

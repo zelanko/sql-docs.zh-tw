@@ -26,7 +26,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 9939a592288fb5bc031dc53b94ac21c3809d0314
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="configure-a-native-mode-report-server-for-local-administration-ssrs"></a>設定原生模式報表伺服器進行本機管理 (SSRS)

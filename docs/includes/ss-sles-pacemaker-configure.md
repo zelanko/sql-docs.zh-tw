@@ -51,5 +51,5 @@
     > [!NOTE]
     > **admin_addr** 是虛擬 IP 叢集資源，它是在初始單節點叢集設定期間所設定。
 
-7.    **移除程序**。 如果您需要從叢集移除節點，請使用 **ha-cluster-remove** 啟動程序指令碼。 如需詳細資訊，請參閱[啟動程序指令碼概觀 (英文)](https://www.suse.com/documentation/sle-ha-12/singlehtml/install-quick/install-quick.html#sec.ha.inst.quick.bootstrap)。  
+7.  **移除程序**。 如果您需要從叢集移除節點，請使用 **ha-cluster-remove** 啟動程序指令碼。 如需詳細資訊，請參閱[啟動程序指令碼概觀 (英文)](https://www.suse.com/documentation/sle-ha-12/singlehtml/install-quick/install-quick.html#sec.ha.inst.quick.bootstrap)。  
 

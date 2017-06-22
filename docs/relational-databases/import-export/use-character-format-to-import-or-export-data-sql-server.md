@@ -21,7 +21,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: babd3dc4daaa60af026d8694e0cc69292ab44ce0
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="use-character-format-to-import-or-export-data-sql-server"></a>使用字元格式匯入或匯出資料 (SQL Server)

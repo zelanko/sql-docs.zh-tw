@@ -28,7 +28,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: c5bb6279f7fd96f30aa3f19628e2edc5edb5cc53
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="enroll-an-instance-of-sql-server-sql-server-utility"></a>註冊 SQL Server 的執行個體 (SQL Server 公用程式)

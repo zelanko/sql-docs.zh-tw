@@ -26,7 +26,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: bc2034ac69dee1a72429e94841aec1763703de7c
 ms.openlocfilehash: ccd682b0f193628b900ca2b2baf32691582d993c
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/05/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>建立連結的伺服器 (SQL Server Database Engine)

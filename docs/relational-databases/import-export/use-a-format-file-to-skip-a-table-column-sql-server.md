@@ -21,7 +21,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 1de1c7d6881885035eaa3537ff287a7b45857485
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="use-a-format-file-to-skip-a-table-column-sql-server"></a>使用格式檔案以略過資料表資料行 (SQL Server)

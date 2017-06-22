@@ -23,7 +23,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 1c15031eb2b01a47a933d899c045db6a7123676a
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="lesson-1-creating-windows-accounts-for-replication"></a>第 1 課：建立用於複寫的 Windows 帳戶

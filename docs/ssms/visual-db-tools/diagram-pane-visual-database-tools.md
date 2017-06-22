@@ -23,7 +23,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: d77c2ce648939486be70ca9ab961bb9697b4d8db
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="diagram-pane-visual-database-tools"></a>圖表窗格 (Visual Database Tools)

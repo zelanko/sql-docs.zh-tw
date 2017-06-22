@@ -22,7 +22,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 9e594025e0d4451d563f4d1b8b500d7f1ef1b576
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="add-a-subreport-and-parameters-report-builder-and-ssrs"></a>加入子報表和參數 (報表產生器及 SSRS)

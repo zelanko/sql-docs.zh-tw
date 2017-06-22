@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 803150cde12790eefbeea8c8f4ef0ad32dc350fe
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="deny-permissions-on-an-xml-schema-collection"></a>拒絕 XML 結構描述集合的權限

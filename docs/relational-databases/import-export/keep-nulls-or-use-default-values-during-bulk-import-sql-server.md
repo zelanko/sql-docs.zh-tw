@@ -28,7 +28,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 280e52e4ffbb86b02007493c4d000d3be0decece
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="keep-nulls-or-use-default-values-during-bulk-import-sql-server"></a>大量匯入期間保留 Null 或使用預設值 (SQL Server)

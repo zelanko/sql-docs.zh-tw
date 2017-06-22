@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 3986838ebcbb9f5ed787c974b82e9a87f2a43a29
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="subscription-undistributed-commands-transactional-subscription"></a>訂閱，未散發的命令 (交易式訂閱)

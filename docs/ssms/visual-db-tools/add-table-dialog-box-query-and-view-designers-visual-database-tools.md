@@ -21,7 +21,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: f65c7dfb218052015e9cbc818b2829faca5cf4ae
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="add-table-dialog-box-query-and-view-designers-visual-database-tools"></a>加入資料表對話方塊 (查詢和檢視表設計工具) (Visual Database Tools)

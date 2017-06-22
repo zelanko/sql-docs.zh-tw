@@ -20,7 +20,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: e046d1afc8cc2f774e56f70ac9448e9ba9660cbb
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="url-reservations-for-multi-instance-report-server-deployments"></a>多重執行個體報表伺服器部署的 URL 保留項目

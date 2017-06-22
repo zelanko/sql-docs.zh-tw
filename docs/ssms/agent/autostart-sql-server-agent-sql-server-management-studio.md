@@ -21,7 +21,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: d04f69be267c374559c65638d09d24ac6ef4822d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="autostart-sql-server-agent-sql-server-management-studio"></a>自動啟動 SQL Server Agent (SQL Server Management Studio)

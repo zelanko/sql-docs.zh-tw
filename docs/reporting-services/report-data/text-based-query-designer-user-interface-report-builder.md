@@ -23,7 +23,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 1640b0536b6e206afbd2aff5ea8dd11349277f12
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="text-based-query-designer-user-interface-report-builder"></a>以文字為基礎的查詢設計工具使用者介面 (報表產生器)

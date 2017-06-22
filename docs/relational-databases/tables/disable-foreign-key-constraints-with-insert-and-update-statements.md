@@ -24,7 +24,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a72cfad873d2fe891c9f10c3c5f8c0ede3a68ff2
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="disable-foreign-key-constraints-with-insert-and-update-statements"></a>停用 INSERT 和 UPDATE 陳述式的外部索引鍵條件約束

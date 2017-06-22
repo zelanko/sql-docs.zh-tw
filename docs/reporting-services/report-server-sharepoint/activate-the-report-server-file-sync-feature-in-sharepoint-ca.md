@@ -19,7 +19,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: d9f1b75bc40693248526282a6565db340930601b
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="activate-the-report-server-file-sync-feature-in-sharepoint-ca"></a>啟動報表伺服器檔案同步處理功能，在 SharePoint CA 中

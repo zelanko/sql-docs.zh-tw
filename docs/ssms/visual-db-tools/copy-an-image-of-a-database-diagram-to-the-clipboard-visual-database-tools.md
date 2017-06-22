@@ -21,7 +21,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: fa969625800cb179e37b13046e3823bf55fa7ade
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="copy-an-image-of-a-database-diagram-to-the-clipboard-visual-database-tools"></a>將資料庫圖表的影像複製到剪貼簿 (Visual Database Tools)

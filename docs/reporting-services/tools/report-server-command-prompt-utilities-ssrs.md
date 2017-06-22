@@ -25,7 +25,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: eb04937fc5c68bf2efb82ece9914c56409b7f325
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="report-server-command-prompt-utilities-ssrs"></a>報表伺服器命令提示字元公用程式 (SSRS)

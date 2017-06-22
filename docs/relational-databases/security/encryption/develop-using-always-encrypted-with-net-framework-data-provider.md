@@ -18,7 +18,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 09253894ace06e9bd0b6a515e133eb8e2f5860a1
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="develop-using-always-encrypted-with-net-framework-data-provider"></a>搭配使用 Always Encrypted 與 .NET Framework Data Provider 進行開發
@@ -262,7 +262,7 @@ cmd.ExecuteNonQuery();
 
 取得資料行加密金鑰的程序︰
 
-1.    如果查詢啟用了 [永遠加密]，則當查詢有參數時，.NET Framework Data Provider for SQL Server 就會明確呼叫 **sys.sp_describe_parameter_encryption** 來擷取以加密資料行為目標之參數的加密中繼資料。 針對查詢結果所包含的加密資料，SQL Server 會自動附加加密中繼資料。 資料行主要金鑰的資訊包括：
+1.  如果查詢啟用了 [永遠加密]，則當查詢有參數時，.NET Framework Data Provider for SQL Server 就會明確呼叫 **sys.sp_describe_parameter_encryption** 來擷取以加密資料行為目標之參數的加密中繼資料。 針對查詢結果所包含的加密資料，SQL Server 會自動附加加密中繼資料。 資料行主要金鑰的資訊包括：
     - 套件金鑰存放區的金鑰存放區提供者名稱，而該存放區包含資料行主要金鑰。 
     - 金鑰路徑，其指定金鑰存放區中資料行主要金鑰的位置。
     
@@ -270,8 +270,8 @@ cmd.ExecuteNonQuery();
 
     - 資料行加密金鑰的加密值。
     - 用來將資料行加密金鑰加密的演算法名稱。
-2.    .NET Framework Data Provider for SQL Server 使用資料行主要金鑰存放區提供者的名稱，在內部資料結構中尋找提供者物件 (衍生自 SqlColumnEncryptionKeyStoreProvider 類別的類別執行個體)。
-3.    若要解密資料行加密金鑰，.NET Framework Data Provider for SQL Server 要呼叫 SqlColumnEncryptionKeyStoreProvider.DecryptColumnEncryption 金鑰方法，傳遞資料行主要金鑰的路徑、資料行加密金鑰的加密值及加密演算法的名稱，用以產生加密的資料行加密金鑰。
+2.  .NET Framework Data Provider for SQL Server 使用資料行主要金鑰存放區提供者的名稱，在內部資料結構中尋找提供者物件 (衍生自 SqlColumnEncryptionKeyStoreProvider 類別的類別執行個體)。
+3.  若要解密資料行加密金鑰，.NET Framework Data Provider for SQL Server 要呼叫 SqlColumnEncryptionKeyStoreProvider.DecryptColumnEncryption 金鑰方法，傳遞資料行主要金鑰的路徑、資料行加密金鑰的加密值及加密演算法的名稱，用以產生加密的資料行加密金鑰。
 
 
 

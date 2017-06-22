@@ -25,7 +25,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 4a16a24b197a9fd6a2d1c89f3af8a19b2d2d308d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="configure-and-manage-stopwords-and-stoplists-for-full-text-search"></a>設定及管理全文檢索搜尋的停用字詞與停用字詞表

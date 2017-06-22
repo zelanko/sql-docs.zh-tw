@@ -25,7 +25,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: cf2d74e423ab96af582d5f420065f9756e671ec2
 ms.openlocfilehash: 508440b3e6cd15d4fb70f933c380e958dad74d56
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="guidelines-for-online-index-operations"></a>線上索引作業的指導方針
@@ -97,7 +97,7 @@ ms.lasthandoff: 04/29/2017
 >
 
 當您執行可繼續線上索引重建時套用下列指導方針：
--    管理、 規劃和擴充索引的維護期間。 您可以暫停和重新啟動索引重建作業多次，以符合您的維護期間。
+-   管理、 規劃和擴充索引的維護期間。 您可以暫停和重新啟動索引重建作業多次，以符合您的維護期間。
 - 從索引重建失敗 （例如資料庫容錯移轉或執行磁碟空間不足） 復原。
 - 當索引作業已暫停，原始索引和磁碟空間，以及需要更新 DML 作業期間，需要新建的一個。
 

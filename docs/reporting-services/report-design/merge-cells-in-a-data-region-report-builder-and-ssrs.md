@@ -19,7 +19,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c643b94c86109a99e1448093b4b9744924fcd7f7
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="merge-cells-in-a-data-region-report-builder-and-ssrs"></a>在資料區中合併資料格 (報表產生器及 SSRS)

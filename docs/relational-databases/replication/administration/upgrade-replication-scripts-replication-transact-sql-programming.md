@@ -27,7 +27,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5ef24ad75fa3a8d6e2e181d436dd878a133135b6
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="upgrade-replication-scripts-replication-transact-sql-programming"></a>升級複寫指令碼 (複寫 Transact-SQL 程式設計)

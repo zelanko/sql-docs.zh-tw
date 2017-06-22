@@ -22,7 +22,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 28643373cf787ce1cc3473572249c680151877e9
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="lesson-2-5---summary---managing-data-in-a-hierarchical-table"></a>第 2-5 課：摘要 - 在階層式資料表中管理資料

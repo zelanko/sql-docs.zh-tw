@@ -20,7 +20,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 97b19aaffd06a196d3cbd39e44b49c971a146edf
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="tutorial-introducing-expressions"></a>教學課程：運算式簡介
