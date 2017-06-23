@@ -1,3 +1,4 @@
+# [彈性查詢處理](adaptive-query-processing.md)
 # [自動調整](../automatic-tuning/automatic-tuning.md)
 # [基數估計](cardinality-estimation-sql-server.md)  
 
