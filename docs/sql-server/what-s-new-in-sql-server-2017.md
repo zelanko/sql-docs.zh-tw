@@ -1,5 +1,5 @@
 ---
-title: "什麼 & #39 的新 SQL Server 2017 |Microsoft 文件"
+title: "SQL Server 2017 中最新消息 |Microsoft 文件"
 ms.custom: 
 ms.date: 06/19/2017
 ms.prod: sql-server-2017
@@ -21,7 +21,7 @@ ms.contentlocale: zh-tw
 ms.lasthandoff: 06/23/2017
 
 ---
-# <a name="what39s-new-in-sql-server-2017"></a>什麼 & #39 的新 SQL Server 2017
+# <a name="what39s-new-in-sql-server-2017"></a>SQL Server 2017 中最新消息
 SQL Server 2017 表示讓 SQL Server 提供您選擇的開發語言、 資料類型、 在內部部署雲端，以及跨作業系統將 SQL Server 的強大結合至 Linux、 linux Docker 容器和 Windows 平台的主要步驟。
 
 本主題是最新的社群技術預覽 (CTP) 版本和更多詳細的什麼是特定功能區域的新資訊的連結中新增功能的摘要。
