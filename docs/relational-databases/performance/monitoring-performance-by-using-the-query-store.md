@@ -19,10 +19,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: cf2d74e423ab96af582d5f420065f9756e671ec2
-ms.openlocfilehash: 19da2d9b81da6ec2886d7da3c5189607b0a60b16
+ms.sourcegitcommit: 727d9ccd8cd1e40d89cfe74291edae92988b407c
+ms.openlocfilehash: 4650cfdda4eef32d1d09f4d4407b61f964832b8d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 06/23/2017
 
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>使用查詢存放區監視效能
@@ -50,7 +50,7 @@ ms.lasthandoff: 04/29/2017
   
 1.  使用 **ALTER DATABASE** 陳述式可啟用查詢存放區。 例如：  
   
-    ```  
+    ```tsql  
     ALTER DATABASE AdventureWorks2012 SET QUERY_STORE = ON;  
     ```  
   
@@ -59,7 +59,6 @@ ms.lasthandoff: 04/29/2017
 > [!NOTE]  
 >  您無法為 **master** 或 **tempdb** 資料庫啟用查詢存放區。  
  
-  
 ##  <a name="About"></a> 查詢存放區中的資訊  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中任何特定查詢的執行計劃通常會在一段時間後，因為統計資料的變更、結構描述變更、建立/刪除索引等數種不同原因而有所演變。儲存快取的查詢計劃之程序快取，只會儲存最新的執行計劃。 計劃也會因為記憶體不足的壓力，而從計劃快取中收回。 因此，因為執行計劃變更所造成的查詢效能低下，可能相形重要，而且可能需要許多時間才可解決。  
   
@@ -81,7 +80,7 @@ ms.lasthandoff: 04/29/2017
   
  下列查詢會傳回查詢存放區中查詢與計劃的相關資訊。  
   
-```  
+```tsql  
 SELECT Txt.query_text_id, Txt.query_sql_text, Pl.plan_id, Qry.*  
 FROM sys.query_store_plan AS Pl  
 JOIN sys.query_store_query AS Qry  
@@ -90,7 +89,6 @@ JOIN sys.query_store_query_text AS Txt
     ON Qry.query_text_id = Txt.query_text_id ;  
 ```  
  
-  
 ##  <a name="Regressed"></a> Use the Regressed Queries Feature  
  啟用查詢存放區之後，重新整理物件總管窗格中的資料庫部分，以加入＜ **查詢存放區** ＞一節。  
   
@@ -102,80 +100,67 @@ JOIN sys.query_store_query_text AS Txt
   
  若要強制執行計劃，請選取查詢與計劃，然後按一下 [強制執行計劃] 。 您只可以強制執行由查詢計劃功能所儲存且仍保留在查詢計劃快取中的計劃。  
  
-  
-##  <a name="Options"></a> Configuration Options  
- OPERATION_MODE  
+##  <a name="Options"></a> Configuration Options 
+
+設定查詢存放區參數可使用下列選項。
+
+ `OPERATION_MODE`  
  可以是 READ_WRITE (預設) 或 READ_ONLY。  
   
- CLEANUP_POLICY (STALE_QUERY_THRESHOLD_DAYS)  
+ `CLEANUP_POLICY (STALE_QUERY_THRESHOLD_DAYS)`  
  設定 STALE_QUERY_THRESHOLD_DAYS 引數，可指定在查詢存放區中保留資料的天數。 預設值是 30。 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic 版的預設值為 7 天。
   
- DATA_FLUSH_INTERVAL_SECONDS  
+ `DATA_FLUSH_INTERVAL_SECONDS`  
  決定將寫入查詢存放區的資料保存到磁碟的頻率。 為了獲得最佳效能，查詢存放區所收集的資料會以非同步方式寫入磁碟。 此非同步傳輸發生的頻率，以 DATA_FLUSH_INTERVAL_SECONDS 設定。 預設值為 900 (15 分鐘)。  
   
- MAX_STORAGE_SIZE_MB  
+ `MAX_STORAGE_SIZE_MB`  
  設定查詢存放區的大小上限。 若查詢存放區中的資料到達了 MAX_STORAGE_SIZE_MB 限制，查詢存放區會自動從讀寫狀態變更為唯讀，並會停止收集新的資料。  預設值為 100Mb。 針對 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Premium 版本預設值為 1Gb，而針對 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic 版本預設值為 10Mb。
   
- INTERVAL_LENGTH_MINUTES  
+ `INTERVAL_LENGTH_MINUTES`  
  決定執行階段執行統計資料彙總至查詢存放區的時間間隔。 若要最佳化空間的使用量，在執行階段統計資料存放區中的執行階段執行統計資料，會以固定的時段彙總。 這個固定時段由 INTERVAL_LENGTH_MINUTES 所設定。 預設值為 60。 
   
- SIZE_BASED_CLEANUP_MODE  
+ `SIZE_BASED_CLEANUP_MODE`  
  控制當總資料量接近大小上限時，是否要自動啟用清除。 可以 AUTO (預設) 或 OFF。  
   
- QUERY_CAPTURE_MODE  
+ `QUERY_CAPTURE_MODE`  
  指定讓查詢存放區根據執行計數和資源耗用來擷取所有查詢或相關查詢，或是停止新增查詢而僅追蹤目前的查詢。 可以是 ALL (擷取所有的查詢)，AUTO (略過不頻繁及具有無意義編譯和執行期間的查詢) 或 NONE (停止擷取新的查詢)。 SQL Server 2016 的預設值為 ALL，而 Azure SQL Database 上的預設值為 AUTO。
   
- max_plans_per_query  
+ `MAX_PLANS_PER_QUERY`  
  表示維護每個查詢計劃的大數目的整數。 預設值為 200。  
  
- WAIT_STATS_CAPTURE_MODE  
+ `WAIT_STATS_CAPTURE_MODE`  
  如果查詢存放區擷取控制項等候統計資料資訊。 可以是 OFF = 0，或在 = 1 （預設值）  
  
- 查詢 **sys.database_query_store_options** 檢視可判斷查詢存放區目前的選項。 如需有關值的詳細資訊，請參閱 [sys。database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)。  
+ 查詢 **sys.database_query_store_options** 檢視可判斷查詢存放區目前的選項。 如需值的詳細資訊，請參閱 [sys.database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)。  
   
  如需使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式設定選項的詳細資訊，請參閱 [選項管理](#OptionMgmt)。  
- 
   
 ##  <a name="Related"></a> Related Views, Functions, and Procedures  
  透過 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 或使用下列檢視與程序，檢視及管理查詢存放區。  
-  
--   [sys.fn_stmt_sql_handle_from_sql_stmt &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)  
+
+||| 
+|-|-|  
+|[sys.fn_stmt_sql_handle_from_sql_stmt &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)|| 
   
 ### <a name="query-store-catalog-views"></a>查詢存放區目錄檢視  
- 共有七個目錄檢視可提供有關查詢存放區的資訊。  
-  
--   [sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)  
-  
--   [sys.query_context_settings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)  
-  
--   [sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)  
-  
--   [sys.query_store_query &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)  
-  
--   [sys.query_store_query_text &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)  
-  
--   [sys.query_store_runtime_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)  
+ 目錄檢視會提供查詢存放區的相關資訊。  
 
--   [sys.query_store_wait_stats &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md) 
-
--   [sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)  
+||| 
+|-|-|  
+|[sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)|[sys.query_context_settings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)|  
+|[sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)|[sys.query_store_query &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)|  
+|[sys.query_store_query_text &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)|[sys.query_store_runtime_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)|  
+|[sys.query_store_wait_stats &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)|[sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)|  
   
 ### <a name="query-store-stored-procedures"></a>查詢存放區預存程序  
- 共有六個預存程序可設定查詢存放區。  
-  
--   [sp_query_store_flush_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-flush-db-transact-sql.md)  
-  
--   [sp_query_store_reset_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-reset-exec-stats-transact-sql.md)  
-  
--   [sp_query_store_force_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md)  
-  
--   [sp_query_store_unforce_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md)  
-  
--   [sp_query_store_remove_plan &#40;Transct-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql.md)  
-  
--   [sp_query_store_remove_query &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql.md)  
+ 預存程序可設定查詢存放區。  
+
+||| 
+|-|-|  
+|[sp_query_store_flush_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-flush-db-transact-sql.md)|[sp_query_store_reset_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-reset-exec-stats-transact-sql.md)|  
+|[sp_query_store_force_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md)|[sp_query_store_unforce_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md)|  
+|[sp_query_store_remove_plan &#40;Transct-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql.md)|[sp_query_store_remove_query &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql.md)|  
  
-  
 ##  <a name="Scenarios"></a> 主要使用方式案例  
   
 ###  <a name="OptionMgmt"></a> Option Management  
@@ -183,24 +168,24 @@ JOIN sys.query_store_query_text AS Txt
   
  **查詢存放區目前為作用中？**  
   
- 查詢存放區會將其資料儲存在使用者資料庫中，這也就是為什麼它有大小的限制 (以 **MAX_STORAGE_SIZE_MB**設定)。 若查詢存放區中的資料達到上限，查詢存放區會自動從讀寫狀態變更為唯讀，並會停止收集新的資料。  
+ 查詢存放區會將其資料儲存在使用者資料庫中，這也就是為什麼它有大小的限制 (以 `MAX_STORAGE_SIZE_MB` 設定)。 若查詢存放區中的資料達到上限，查詢存放區會自動從讀寫狀態變更為唯讀，並會停止收集新的資料。  
   
- 查詢 [sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md) 可判斷查詢存放區目前是否在作用中，以及其目前是否正在收集執行階段統計資料。 currently collects runtime stats or not.  
+ 查詢 [sys.database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md) 可判斷查詢存放區目前是否在作用中，以及其目前是否正在收集執行階段統計資料。  
   
-```  
+```tsql  
 SELECT actual_state, actual_state_desc, readonly_reason,   
     current_storage_size_mb, max_storage_size_mb  
 FROM sys.database_query_store_options;  
 ```  
   
- 查詢存放區的狀態取決於 actual_state 資料行。 若與想要的狀態不同，readonly_reason 資料行可以提供更多的資訊。   
+ 查詢存放區的狀態取決於 actual_state 資料行。 若與想要的狀態不同，`readonly_reason` 資料行可以提供更多的資訊。   
 當查詢存放區的大小超過配額時，此功能會切換為 readon_only 模式。  
   
  **取得查詢存放區選項**  
   
  若要找出查詢存放區狀態的詳細資訊，請於使用者資料庫中執行下列作業。  
   
-```  
+```tsql  
 SELECT * FROM sys.database_query_store_options;  
 ```  
   
@@ -208,12 +193,13 @@ SELECT * FROM sys.database_query_store_options;
   
  您可以覆寫彙總查詢執行階段統計資料的間隔 (預設為 60 分鐘)。  
   
-```  
+```tsql  
 ALTER DATABASE <database_name>   
 SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 15);  
 ```  
   
- 請注意，不得使用任意值，您應使用下列其中之一：1、5、10、15、30、60 和 1440 分鐘。  
+ > [!NOTE]
+ > `INTERVAL_LENGTH_MINUTES` 不允許任意值。 請使用下列其中一項：1、5、10、15、30、60 或 1440 分鐘。  
   
  新的間隔值是透過 **sys.database_query_store_options** 檢視而公開。  
   
@@ -221,14 +207,14 @@ SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 15);
   
  若要檢查目前的查詢存放區的大小和限制，請在使用者資料庫中執行下列陳述式。  
   
-```  
+```tsql  
 SELECT current_storage_size_mb, max_storage_size_mb   
 FROM sys.database_query_store_options;  
 ```  
   
  如果查詢存放區的儲存體已滿，請使用下列陳述式來擴充該儲存體。  
   
-```  
+```tsql  
 ALTER DATABASE <database_name>   
 SET QUERY_STORE (MAX_STORAGE_SIZE_MB = <new_size>);  
 ```  
@@ -237,12 +223,11 @@ SET QUERY_STORE (MAX_STORAGE_SIZE_MB = <new_size>);
   
  使用單一 ALTER DATABASE 陳述式即可一次設定多個查詢存放區選項。  
   
-```  
+```tsql  
 ALTER DATABASE <database name>   
 SET QUERY_STORE (  
     OPERATION_MODE = READ_WRITE,  
-    CLEANUP_POLICY =   
-    (STALE_QUERY_THRESHOLD_DAYS = 30),  
+    CLEANUP_POLICY = (STALE_QUERY_THRESHOLD_DAYS = 30),  
     DATA_FLUSH_INTERVAL_SECONDS = 3000,  
     MAX_STORAGE_SIZE_MB = 500,  
     INTERVAL_LENGTH_MINUTES = 15,  
@@ -256,7 +241,7 @@ SET QUERY_STORE (
   
  查詢存放區內部資料表於建立資料庫時建立在 PRIMARY 檔案群組中，且該組態之後無法變更。 如果您快要用完了空間，可能會想要使用下列陳述式，來清除舊的查詢存放區資料。  
   
-```  
+```tsql  
 ALTER DATABASE <db_name> SET QUERY_STORE CLEAR;  
 ```  
   
@@ -264,7 +249,7 @@ ALTER DATABASE <db_name> SET QUERY_STORE CLEAR;
   
  **刪除臨機操作查詢** 如此做會刪除只執行一次且超過 24 小時的查詢。  
   
-```  
+```tsql  
 DECLARE @id int  
 DECLARE adhoc_queries_cursor CURSOR   
 FOR   
@@ -305,9 +290,9 @@ DEALLOCATE adhoc_queries_cursor;
 ###  <a name="Peformance"></a> Performance Auditing and Troubleshooting  
  查詢存放區會保留整個查詢執行過程當中的編譯和執行階段度量歷程記錄，以讓您詢問關於工作負載的問題。  
   
- **前 *n* 個在資料庫上執行的查詢？**  
+ 資料庫執行了**後 *n* 項查詢嗎？**  
   
-```  
+```tsql  
 SELECT TOP 10 qt.query_sql_text, q.query_id,   
     qt.query_text_id, p.plan_id, rs.last_execution_time  
 FROM sys.query_store_query_text AS qt   
@@ -322,7 +307,7 @@ ORDER BY rs.last_execution_time DESC;
   
  **每項查詢的執行次數？**  
   
-```  
+```tsql  
 SELECT q.query_id, qt.query_text_id, qt.query_sql_text,   
     SUM(rs.count_executions) AS total_execution_count  
 FROM sys.query_store_query_text AS qt   
@@ -338,7 +323,7 @@ ORDER BY total_execution_count DESC;
   
  **前一個小時內，平均執行時間最長的查詢數目？**  
   
-```  
+```tsql  
 SELECT TOP 10 rs.avg_duration, qt.query_sql_text, q.query_id,  
     qt.query_text_id, p.plan_id, GETUTCDATE() AS CurrentUTCTime,   
     rs.last_execution_time   
@@ -355,7 +340,7 @@ ORDER BY rs.avg_duration DESC;
   
  **過去 24 小時內，有相對應的平均資料列計數與執行計數，且平均實體 IO 讀取最大的查詢數目？**  
   
-```  
+```tsql  
 SELECT TOP 10 rs.avg_physical_io_reads, qt.query_sql_text,   
     q.query_id, qt.query_text_id, p.plan_id, rs.runtime_stats_id,   
     rsi.start_time, rsi.end_time, rs.avg_rowcount, rs.count_executions  
@@ -374,7 +359,7 @@ ORDER BY rs.avg_physical_io_reads DESC;
   
  **具有多項計畫的查詢？** 這些查詢特別有趣的原因是，它們都是因為計劃選擇變更而導致低下的對象。 下列查詢能找出這些查詢以及所有計劃：  
   
-```  
+```tsql  
 WITH Query_MultPlans  
 AS  
 (  
@@ -403,7 +388,7 @@ ORDER BY query_id, plan_id;
   
  **最近效能低下的查詢 (與時間中的不同點相較)？** 下列查詢範例會傳回所有過去 48 小時內，因為計劃選擇變更而導致執行時間為兩倍的查詢。 查詢會並列比較所有執行階段。  
   
-```  
+```tsql  
 SELECT   
     qt.query_sql_text,   
     q.query_id,   
@@ -442,7 +427,7 @@ ORDER BY q.query_id, rsi1.start_time, rsi2.start_time;
   
  **最近效能低下的查詢 (比較最近的執行與記錄的執行)？** 下一個查詢會依據執行時段，比較查詢的執行。 在此特別的範例中，查詢會比較最近期間內 (1 小時) 與歷程記錄期間 (前一天) 的執行，並找出因 `additional_duration_workload`所引發的項目。 此度量會計算最近的平均執行與記錄的平均執行之間的差，乘以最近執行的數目。 它實際上代表與記錄相較，最近的執行引發了多少額外的時間：  
   
-```  
+```tsql  
 --- "Recent" workload - last 1 hour  
 DECLARE @recent_start_time datetimeoffset;  
 DECLARE @recent_end_time datetimeoffset;  
@@ -531,7 +516,7 @@ OPTION (MERGE JOIN);
   
  **為查詢強制執行計劃 (套用強制原則)。** 若要為特定的查詢強制執行一項計劃，則每次查詢執行時，就會強制以該計劃執行。  
   
-```  
+```tsql  
 EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;  
 ```  
   
@@ -539,10 +524,9 @@ EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;
   
  **為查詢移除強制執行計劃。** 若要再次依賴 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查詢最佳化工具來計算最佳的查詢計劃，請使用 **sp_query_store_unforce_plan** 以取消為該查詢所選取的強制計劃。  
   
-```  
+```tsql  
 EXEC sp_query_store_unforce_plan @query_id = 48, @plan_id = 49;  
 ```  
- 
   
 ## <a name="see-also"></a>另請參閱  
  [查詢存放區的最佳作法](../../relational-databases/performance/best-practice-with-the-query-store.md)   

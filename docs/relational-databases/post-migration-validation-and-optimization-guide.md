@@ -18,10 +18,10 @@ author: pelopes
 ms.author: harinid
 manager: 
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 96f6a7eeb03fdc222d0e5b42bcfbf05c25d11db6
-ms.openlocfilehash: d81eabfa1bdb5736bbf6f53ed34c2e1ac157e782
+ms.sourcegitcommit: dcbeda6b8372b358b6497f78d6139cad91c8097c
+ms.openlocfilehash: 30a271511fff2d9c3c9eab73a0d118bfb3f8130d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/25/2017
+ms.lasthandoff: 06/23/2017
 
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>移轉後驗證和最佳化指南
@@ -30,9 +30,27 @@ ms.lasthandoff: 05/25/2017
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]post 移轉步驟是非常重要的協調任何資料精確度和完整性，以及發現與工作負載的效能問題。
 
 # <a name="common-performance-scenarios"></a>常見的效能案例 
-以下是一些常見的效能案例遇到移轉至後[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]平台和如何解決這些問題。 這些包含案例所要 specifdic[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]至[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]移轉 （至較新版本的舊版本），以及外部平台 （例如 Oracle、 DB2、 MySQL 及 Sybase）[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]移轉。
+以下是一些常見的效能案例遇到移轉至後[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]平台和如何解決這些問題。 這些包含 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 移轉至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的特定案例 (舊版移轉至新版)，以及外部平台 (例如 Oracle、DB2、MySQL 及 Sybase) 移轉至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。
 
-## <a name="Parameter Sniffing"></a>敏感性參數探測
+## <a name="CEUpgrade"></a>因為 CE 版本變更造成的查詢衰退
+
+**適用於：** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 移轉至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。
+
+從舊版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 移轉至 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 或更新版本，並升級到最新的[資料庫相容性層級](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)時，工作負載可能會有效能衰退的風險。
+
+這是因為從 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 開始，所有的查詢最佳化工具變更都會繫結至最新的[資料庫相容性層級](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)；因此，計劃不會在升級時立即變更，而是在使用者將 `COMPATIBILITY_LEVEL` 資料庫選項變更為最新版本時變更。 此功能會結合查詢存放區，可讓您在升級過程中對查詢效能擁有絕佳層級的控制。 
+
+如需 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 所導入的查詢最佳化工具變更的詳細資訊，請參閱[使用 SQL Server 2014 基數估算程式最佳化您的查詢計劃](http://msdn.microsoft.com/library/dn673537.aspx)。
+
+### <a name="steps-to-resolve"></a>若要解決的步驟
+
+將[資料庫相容性層級](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)變更成來源版本並遵循建議的升級工作流程，如下圖所示：
+
+![query-store-usage-5](../relational-databases/performance/media/query-store-usage-5.png "query-store-usage-5")  
+
+如需本主題的詳細資訊，請參閱[在升級到新版 SQL Server 期間保持效能穩定](../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade)。
+
+## <a name="ParameterSniffing"></a>敏感性參數探測
 
 **適用於：**外部平台 （例如 Oracle、 DB2、 MySQL 及 Sybase）[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]移轉。
 
@@ -40,20 +58,20 @@ ms.lasthandoff: 05/25/2017
 > 如[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]至[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]移轉，如果此問題存在於來源[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，移轉至較新版本的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]做為-是將無法解決這種情況。 
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]編譯預存程序使用探查輸入資料分佈的參數輸入的第一次編譯，產生參數化和可重複使用的計畫，針對最佳化查詢計劃。 即使不預存程序，將會進行參數化產生一般計劃的大部分陳述式。 第一次快取計劃之後，任何未來的執行會對應至先前的快取計劃。
-該第一次的編譯不具有使用最常見的參數集的一般工作負載時，就會發生潛在的問題。 針對不同的參數相同的執行計畫會變成效率不佳。
+該第一次的編譯不具有使用最常見的參數集的一般工作負載時，就會發生潛在的問題。 針對不同的參數相同的執行計畫會變成效率不佳。 如需本主題的詳細資訊，請參閱[參數探測](../relational-databases/query-processing-architecture-guide.md#ParamSniffing)。
 
 ### <a name="steps-to-resolve"></a>若要解決的步驟
 
-1.    使用`RECOMPILE`提示。 計劃會計算每次調整每個參數值。
-2.    請重寫預存程序，來使用 option `(OPTIMIZE FOR(<input parameter> = <value>))`。 決定使用哪個值適合大部分相關的工作負載，建立和維護計劃會變得有效率的參數化的值。
-3.    請重寫預存程序中使用的程序內的區域變數。 現在，最佳化工具會使用密度向量的估計，導致相同的計劃，不論參數值。
-4.    請重寫預存程序，來使用 option `(OPTIMIZE FOR UNKNOWN)`。 如同使用本機變數的技術。
-5.    查詢重新撰寫成使用提示`DISABLE_PARAMETER_SNIFFING`。 相同效果做為使用本機變數技術所完全停用參數探測，除非`OPTION(RECOMPILE)`，`WITH RECOMPILE`或`OPTIMIZE FOR <value>`用。
+1.  使用`RECOMPILE`提示。 計劃會計算每次調整每個參數值。
+2.  請重寫預存程序，來使用 option `(OPTIMIZE FOR(<input parameter> = <value>))`。 決定使用哪個值適合大部分相關的工作負載，建立和維護計劃會變得有效率的參數化的值。
+3.  請重寫預存程序中使用的程序內的區域變數。 現在，最佳化工具會使用密度向量的估計，導致相同的計劃，不論參數值。
+4.  請重寫預存程序，來使用 option `(OPTIMIZE FOR UNKNOWN)`。 如同使用本機變數的技術。
+5.  查詢重新撰寫成使用提示`DISABLE_PARAMETER_SNIFFING`。 相同效果做為使用本機變數技術所完全停用參數探測，除非`OPTION(RECOMPILE)`，`WITH RECOMPILE`或`OPTIMIZE FOR <value>`用。
 
 > [!TIP] 
 > 運用[!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)]計劃分析功能來快速找出這是否發生問題。 可用的詳細資訊[這裡](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-query-performance-troubleshooting-made-easier/)。
 
-## <a name="Missing indexes"></a>遺漏索引
+## <a name="MissingIndexes"></a>遺漏索引
 
 **適用於：**外部的平台 （例如 Oracle、 DB2、 MySQL 及 Sybase） 和[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]至[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]移轉。
 
@@ -63,15 +81,15 @@ ms.lasthandoff: 05/25/2017
 
 ### <a name="steps-to-resolve"></a>若要解決的步驟
 
-1.    利用遺漏索引的任何參考的圖形化執行計畫。
-2.    索引所產生的建議[Database Engine Tuning Advisor](../tools/dta/tutorial-database-engine-tuning-advisor.md)。
-3.    運用[遺漏索引 DMV](../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)或透過[SQL Server 效能儀表板](https://www.microsoft.com/en-us/download/details.aspx?id=29063)。
-4.    利用既有可以使用現有的 Dmv，同時也提供深入了解任何遺漏、 重複、 備援、 很少使用和完全未使用的索引，如果任何索引參考有所提示/硬式編碼成現有的程序和函式在資料庫中的指令碼。 
+1.  利用遺漏索引的任何參考的圖形化執行計畫。
+2.  索引所產生的建議[Database Engine Tuning Advisor](../tools/dta/tutorial-database-engine-tuning-advisor.md)。
+3.  運用[遺漏索引 DMV](../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)或透過[SQL Server 效能儀表板](https://www.microsoft.com/en-us/download/details.aspx?id=29063)。
+4.  利用既有可以使用現有的 Dmv，同時也提供深入了解任何遺漏、 重複、 備援、 很少使用和完全未使用的索引，如果任何索引參考有所提示/硬式編碼成現有的程序和函式在資料庫中的指令碼。 
 
 > [!TIP] 
 > 這類預先存在的指令碼的範例包括[索引建立](https://github.com/Microsoft/tigertoolbox/tree/master/Index-Creation)和[索引資訊](https://github.com/Microsoft/tigertoolbox/tree/master/Index-Information)。 
 
-## <a name="Inability to use predicates"></a>無法使用述詞來篩選資料
+## <a name="InabilityPredicates"></a>無法使用述詞來篩選資料
 
 **適用於：**外部的平台 （例如 Oracle、 DB2、 MySQL 及 Sybase） 和[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]至[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]移轉。
 
@@ -97,9 +115,9 @@ ms.lasthandoff: 05/25/2017
   -   根據單欄式資料的複雜運算式會評估需要改為建立保存的計算資料行，可以建立索引。
 
 > [!NOTE] 
-> 上述所有可以透過 programmaticaly。
+> 上述所有作業皆可以程式設計方式完成。
 
-## <a name="Table Valued Functions"></a>資料表值函式 （多重陳述式與內嵌） 的使用
+## <a name="TableValuedFunctions"></a>資料表值函式 （多重陳述式與內嵌） 的使用
 
 **適用於：**外部的平台 （例如 Oracle、 DB2、 MySQL 及 Sybase） 和[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]至[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]移轉。
 
@@ -112,7 +130,7 @@ ms.lasthandoff: 05/25/2017
 > 因為輸出資料表的 MSTVF （多重陳述式資料表值函式） 不會建立在編譯時期[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]查詢最佳化工具會依賴啟發學習法，並不是實際的統計資料，以判斷資料列數量的估計值。 即使索引加入至基底資料表時，這並非要幫助。 MSTVFs，如[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]使用 1 的固定的估計的資料列數目必須是要傳回之 MSTVF (開頭為[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]修正估計是 100 個資料列)。
 
 ### <a name="steps-to-resolve"></a>若要解決的步驟
-1.    如果多重陳述式 TVF 單一陳述式，將轉換成內嵌 TVF。
+1.  如果多重陳述式 TVF 單一陳述式，將轉換成內嵌 TVF。
 
     ```tsql
     CREATE FUNCTION dbo.tfnGetRecentAddress(@ID int)
@@ -142,7 +160,7 @@ ms.lasthandoff: 05/25/2017
     )
     ```
 
-2.    如果是更複雜，請考慮使用儲存在記憶體最佳化的資料表或暫存資料表的中繼結果。
+2.  如果是更複雜，請考慮使用儲存在記憶體最佳化的資料表或暫存資料表的中繼結果。
 
 ##  <a name="Additional_Reading"></a> 其他閱讀資料  
  [使用查詢存放區的最佳作法](../relational-databases/performance/best-practice-with-the-query-store.md)  

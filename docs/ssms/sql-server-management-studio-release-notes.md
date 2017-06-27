@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Management Studio - 版本資訊 | Microsoft Docs"
 ms.custom: 
-ms.date: 01/30/2017
+ms.date: 06/22/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: b68d454230d414ff52d90b4f3f71dd68ee65c6bc
-ms.openlocfilehash: 1733a789fb2dc17eea82ab22d4a50614d1fffc3b
+ms.sourcegitcommit: fe6de2b16b9792a5399b1c014af72a2a5ee52377
+ms.openlocfilehash: f593303a681e2f52161777fc48f0fb1b479d20d9
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 06/23/2017
 
 ---
 # <a name="sql-server-management-studio----release-notes"></a>SQL Server Management Studio -  版本資訊
@@ -57,6 +57,9 @@ ms.lasthandoff: 06/22/2017
     
 5. **非英文的 SSMS 安裝可能需要安裝額外的安全性套件。**  
 非英文的 SSMS 語言版本如果安裝在 Windows 8、Windows 7、Windows Server 2012 及 Windows Server 2008 R2，就需要 [KB 2862966 安全性更新程式封裝](https://support.microsoft.com/en-us/kb/2862966) 。
+
+5. **按一下 [說明] 或按 F1 鍵不會開啟說明**  
+某些環境按一下 [說明] 或按下 F1 鍵時會顯示以下內容：**開啟 ms-xhelp 需要新的應用程式**。 這個錯誤是已知問題，會於近期版本中修正。
   
 ## <a name="feedback"></a>意見反應  
   

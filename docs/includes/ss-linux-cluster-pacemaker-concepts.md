@@ -22,13 +22,19 @@ CTP 1.4 發行之前，可用性群組的 Pacemaker 資源代理程式可能不�
 若要設定`REQUIRED_COPIES_TO_COMMIT`為 0 時，執行：
 
 ```bash
-sudo pcs resource update <**ag1**> required_copies_to_commit=0
+sudo pcs resource update <**ag_cluster**> required_copies_to_commit=0
+```
+
+相當於使用 crm (對 SLES) 的命令為：
+
+```bash
+sudo crm resource param <**ag_cluster**> set required_synchronized_secondaries_to_commit 0
 ```
 
 若要還原為預設值的計算值，執行：
 
 ```bash
-sudo pcs resource update <**ag1**> required_copies_to_commit=
+sudo pcs resource update <**ag_cluster**> required_copies_to_commit=
 ```
 
 >[!NOTE]

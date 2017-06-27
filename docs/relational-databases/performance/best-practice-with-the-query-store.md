@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f9debfb35bdf0458a34dfc5933fd3601e731f037
-ms.openlocfilehash: 3a11180d35ec0a67eed18e03cfe5f0e82d0cc180
+ms.sourcegitcommit: dcbeda6b8372b358b6497f78d6139cad91c8097c
+ms.openlocfilehash: a13e098829fdf1ffee42075a57750513234dc997
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/30/2017
+ms.lasthandoff: 06/23/2017
 
 ---
 # <a name="best-practice-with-the-query-store"></a>使用查詢存放區的最佳作法
@@ -29,9 +29,9 @@ ms.lasthandoff: 05/30/2017
 
   本主題概述搭配您的工作負載使用查詢存放區的最佳作法。  
   
-##  <a name="SSMS"></a> Use the Latest SQL Server Management Studio  
+##  <a name="SSMS"></a> 使用最新版 SQL Server Management Studio  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 擁有一組針對設定查詢存放區，以及耗用有關工作負載之收集資料所設計的使用者介面。  
-請於下列位置下載 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 最新版本：[https://msdn.microsoft.com/library/mt238290.aspx](https://msdn.microsoft.com/library/mt238290.aspx)  
+[在此](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms)下載最新版 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。  
   
  如需有關如何在疑難排解案例中使用查詢存放區的快速說明，請參閱[查詢存放區@Azure 部落格](https://azure.microsoft.com/en-us/blog/query-store-a-flight-data-recorder-for-your-database/)。  
   
@@ -42,7 +42,8 @@ ms.lasthandoff: 05/30/2017
 
 ##  <a name="using-query-store-with-elastic-pool-databases"></a>搭配彈性集區資料庫使用查詢存放區
 您可以放心地在所有資料庫中使用查詢存放區，即使在緊密壓縮的集區中也是一樣。 已經解決所有與過度使用資源有關的問題，這些問題可能發生在彈性集區中大量資料庫已啟用查詢存放區時。
-##  <a name="Configure"></a> Keep Query Store Adjusted to your Workload  
+
+##  <a name="Configure"></a> 針對工作負載調整查詢存放區  
  根據您的工作負載和效能疑難排解需求設定查詢存放區。   
 預設的參數雖然適合快速使用，但是您應該監視一段時間的查詢存放區操作方式，並據以調整其設定 ︰  
   
@@ -143,7 +144,7 @@ ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;
 |整體資源耗用量|針對任何執行計量，分析資料庫的整體資源耗用量。<br />使用此檢視來識別資源模式 (每日與每晚的工作負載) 和最佳化資料庫的整體耗用量。|  
 |熱門資源取用查詢|選擇一個感興趣的執行計量，並識別針對提供的時間間隔具有最極端值的查詢。 <br />使用此檢視將注意力放在最相關的查詢， 也就是對資料庫資源耗用量有最大影響的查詢。|  
 |包含強制計畫的查詢|先前的強制計劃使用查詢存放區的清單。 <br />若要快速存取所有目前強制執行的計畫中使用此檢視。|  
-|具有高變化的查詢|在關聯到任何可用的維度，例如所需的時間間隔的持續時間、 CPU 時間、 IO 和記憶體使用量分析高執行變化的查詢。<br />您可以使用此檢視來識別含有可以跨應用程式影響使用者體驗的廣泛 variant 效能的查詢。|  
+|具有高變化的查詢|在關聯到任何可用的維度，例如所需的時間間隔的持續時間、 CPU 時間、 IO 和記憶體使用量分析高執行變化的查詢。<br />您可以使用此檢視來識別含有廣泛變體效能的查詢，此效能會影響不同應用程式的使用者體驗。|  
 |追蹤查詢|即時追蹤最重要的查詢的執行。 一般而言，當您有包含強制計畫的查詢且想要確定查詢效能是否穩定時，會使用此檢視。|
   
 > [!TIP]  
@@ -273,32 +274,33 @@ FROM sys.database_query_store_options;
 |篩選掉不相關的查詢。|將 [查詢擷取模式] 設定為 [Auto]。|  
 |當到達大小上限時，請刪除比較不相關的查詢。|啟用大小基礎的清除原則。|  
   
-##  <a name="Parameterize"></a> Avoid Using Non-Parameterized Queries  
- 非絕對必要時，使用非參數化查詢 (例如特定分析的情況) 並不是最佳作法。  快取的計畫無法重複使用，這會強制查詢最佳化工具編譯每一個唯一查詢文字的查詢。  
+##  <a name="Parameterize"></a> 請避免使用非參數化查詢  
+ 非絕對必要時，使用非參數化查詢 (例如特定分析的情況) 並不是最佳做法。  快取的計畫無法重複使用，這會強制查詢最佳化工具編譯每一個唯一查詢文字的查詢。 如需本主題的詳細資訊，請參閱[使用強制參數化的指導方針](../../relational-databases/query-processing-architecture-guide.md#ForcedParamGuide)。  
   此外，查詢存放區可以因為大量潛在不同的查詢文字且因此有大量具有類似圖形的不同執行計畫，而快速超過大小配額。  
 因此，您的工作負載的效能會次佳，而查詢存放區可能會切換到唯讀模式，或可能不斷地刪除嘗試要跟上內送查詢的資料。  
   
  請考慮下列選項：  
+
+  -   在適用情況下參數化查詢，例如將查詢包裝在預存程序或 sp_executesql 內。 如需本主題的詳細資訊，請參閱[參數和執行計劃的重複使用](../../relational-databases/query-processing-architecture-guide.md#PlanReuse)。    
   
--   在適用情況下參數化查詢，例如將查詢包裝在預存程序內。  
-  
--   如果您的工作負載包含許多搭配不同查詢計劃的單次使用特定批次，請使用 [針對特定工作負載最佳化]  選項。  
+-   如果您的工作負載包含許多搭配不同查詢計劃的單次使用特定批次，請使用 [[針對特定工作負載最佳化]](../../database-engine/configure-windows/optimize-for-ad-hoc-workloads-server-configuration-option.md) 選項。  
   
     -   比較不同 query_hash 值的數目與 sys.query_store_query 中的項目總數。 如果比例接近 1，您的特定工作負載會產生不同的查詢。  
   
--   如果不同的查詢計畫數目不大，請針對資料庫或查詢子集套用「強制參數化」。  
+-   如果不同的查詢計劃數目不大，請針對資料庫或查詢子集套用[**強制參數化**](../../relational-databases/query-processing-architecture-guide.md#ForcedParam)。  
   
-    -   使用計畫指南以強制僅針對已選取查詢強制參數化。  
+    -   使用[計劃指南](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md)僅對已選取的查詢強制參數化。  
   
-    -   如果您的工作負載中有少數不同的查詢計劃，請針對資料庫設定「強制參數化」。 (當不同 query_hash 計數和 sys.query_store_query 中的項目總數之間的比例遠小於 1 時。)  
+    -   設定強制參數化如同使用[參數化資料庫選項](../../relational-databases/databases/database-properties-options-page.md#miscellaneous)命令，如果工作負載有少數不同的查詢計劃：當不同的 query_hash 計數和 sys.query_store_query 的項目總數之間的比例小於 1 以下時。  
   
 -   將 [查詢擷取模式]  設定為 [自動]，以自動篩選掉小型資源耗用的特定查詢。  
   
-##  <a name="Drop"></a> Avoid a DROP and CREATE Pattern When Maintaining Containing Objects for the Queries  
+##  <a name="Drop"></a> 維護查詢的包含物件時，避免 DROP 和 CREATE 模式。  
  查詢存放區會將查詢項目與包含物件 (預存程序、函式和觸發程序) 產生關聯。  當您重新建立一個包含物件時，將會針對相同的查詢文字產生新的查詢項目。 這會防止您針對該查詢追蹤一段時間的效能統計資料，並使用計畫強制機制。 若要避免這個問題，請使用 `ALTER <object>` 程序盡可能變更包含物件定義。  
   
-##  <a name="CheckForced"></a> Check the Status of Forced Plans Regularly  
- 強制執行計畫是一個針對重要查詢修正效能的方便的機制，並讓查詢變得更容易預測。 不過，因為有計畫提示與計畫指南，強制執行計畫並不保證它將在未來的執行中使用。 一般而言，當資料庫結構描述都以執行計畫所參考之物件都已改變或卸除的方式變更時，強制執行計畫就會開始失敗。 在此情況下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會退而重新編譯查詢，而實際的強制執行失敗原因會顯示在 [sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md) 中。 下列查詢會傳回強制執行計畫的相關資訊 ︰  
+##  <a name="CheckForced"></a> 定期檢查強制計劃的狀態  
+
+ 強制執行計畫是一個針對重要查詢修正效能的方便的機制，並讓查詢變得更容易預測。 不過，因為有計畫提示與計畫指南，強制執行計畫並不保證它將在未來的執行中使用。 一般而言，當資料庫結構描述都以執行計畫所參考之物件都已改變或卸除的方式變更時，強制執行計畫就會開始失敗。 在此情況下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會退而重新編譯查詢，而實際的強制執行失敗原因會顯示在 [sys.query_store_plan](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md) 中。 下列查詢會傳回強制執行計畫的相關資訊 ︰  
   
 ```tsql  
 USE [QueryStoreDB];  
@@ -311,16 +313,19 @@ JOIN sys.query_store_query AS q on p.query_id = q.query_id
 WHERE is_forced_plan = 1;  
 ```  
   
- 如需完整的原因清單，請參閱 [sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)。 您也可以使用 **query_store_plan_forcing_failed** XEvent 追蹤疑難排解強制執行計畫失敗。  
+ 如需完整的原因清單，請參閱 [sys.query_store_plan](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)。 您也可以使用 **query_store_plan_forcing_failed** XEvent 追蹤疑難排解強制執行計畫失敗。  
   
-##  <a name="Renaming"></a> Avoid Renaming Databases if you have Queries with Forced Plans  
- 執行計畫參考使用三部分名稱 (`database.schema.object`) 的物件。   
+##  <a name="Renaming"></a> 如果您有強制計劃的查詢，請避免重新命名資料庫。  
+
+ 執行計劃參考使用三部分名稱 `database.schema.object` 的物件。   
+
 如果您重新命名資料庫，強制執行計畫將會失敗，而導致重新編譯所有後續查詢執行。  
   
 ## <a name="see-also"></a>另請參閱  
  [查詢存放區目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
  [查詢存放區預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
  [使用含有記憶體內部 OLTP 的查詢存放區](../../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)   
- [使用查詢存放區監視效能](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
+ [相關檢視、函數與程序](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)     
+ [查詢處理架構指南](../../relational-databases/query-processing-architecture-guide.md)  
   
 

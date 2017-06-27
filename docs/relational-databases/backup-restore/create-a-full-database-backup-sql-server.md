@@ -1,7 +1,7 @@
 ---
 title: "建立完整資料庫備份 (SQL Server) | Microsoft 文件"
 ms.custom: 
-ms.date: 07/25/2016
+ms.date: 06/13/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -20,19 +20,19 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: bc2034ac69dee1a72429e94841aec1763703de7c
-ms.openlocfilehash: fb2aa3981cd5107cf3ea6f6dc0408acfe3292701
+ms.sourcegitcommit: be884b2d1b316506592f939167c5be91ddc2a9f6
+ms.openlocfilehash: 141c83e009e1cf135690297442c6a4864a871bfc
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/05/2017
+ms.lasthandoff: 06/23/2017
 
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>建立完整資料庫備份 (SQL Server)
 
- > 如需舊版 SQL Server 的相關內容，請參閱[建立完整資料庫備份 (SQL Server)](https://msdn.microsoft.com/en-US/library/ms187510(SQL.120).aspx)。
+ > 若為 SQL Server 2014，請移至[建立完整資料庫備份 (SQL Server)](https://msdn.microsoft.com/en-US/library/ms187510(SQL.120).aspx)。
 
   本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../includes/tsql-md.md)] 或 PowerShell，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中建立完整資料庫備份。  
   
->  如需將 SQL Server 備份至 Windows Azure Blob 儲存體服務的資訊，請參閱 [使用 Microsoft Azure Blob 儲存體服務進行 SQL Server 備份及還原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) 和 [SQL Server 備份至 URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)。  
+>  如需將 SQL Server 備份至 Azure Blob 儲存體服務的資訊，請參閱[使用 Microsoft Azure Blob 儲存體服務進行 SQL Server 備份及還原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)和 [SQL Server 備份至 URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)。  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前！ 
   
@@ -46,7 +46,7 @@ ms.lasthandoff: 06/05/2017
   
 ###  <a name="Recommendations"></a> 建議  
   
--   資料庫的大小增加時，完整資料庫備份就需要更多的時間才能完成，同時也需要更多的儲存空間。 若為大型資料庫，您可能會想透過一系列的「差異資料庫備份」補充完整資料庫備份。 如需詳細資訊，請參閱[差異備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md) 和 [SQL Server 備份至 URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)。  
+-   資料庫的大小增加時，完整資料庫備份就需要更多的時間才能完成，同時也需要更多的儲存空間。 如為大型資料庫，請考慮以一系列的 [差異資料庫備份]((../../relational-databases/backup-restore/differential-backups-sql-server.md) 補充完整資料庫備份。 如需詳細資訊，請參閱＜ [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)＞。  
   
 -   使用 [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) 系統預存程序來估計完整資料庫備份的大小。  
   
@@ -198,7 +198,7 @@ ms.lasthandoff: 06/05/2017
 
 7.  按一下 **[確定]**。
 
-#### <a name="d--backing-up-to-the-microsoft-azure-blob-storage-service"></a>**D.備份至 Microsoft Azure Blob 儲存體服務**
+#### <a name="d--back-up-to-the-azure-blob-storage-service"></a>**D.備份到 Azure Blob 儲存體服務**
 #### <a name="common-steps"></a>**通用步驟**  
 下列範例會將 `Sales` 資料庫完整備份至 Microsoft Azure Blob 儲存體服務。  儲存體帳戶名稱為 `mystorageaccount`。  容器名稱為 `myfirstcontainer`。  為求簡潔，前四個步驟只會在此列出一次，所有範例將從**步驟 5** 開始進行。
 1.  在物件總管中，連接到 SQL Server Database Engine 的執行個體，然後展開該執行個體。
@@ -212,7 +212,7 @@ ms.lasthandoff: 06/05/2017
     **D1.等量備份至 URL，而且 SQL Server 認證已經存在**  
 已建立具有讀取、寫入和列出權限的預存存取原則。  使用與此預存存取原則相關聯的共用存取簽章建立了 SQL Server 認證 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`。  
 *
-    5.    從 [Azure 儲存體容器:] 文字方塊中選取 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`
+    5.  從 [Azure 儲存體容器:] 文字方塊中選取 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`
 
     6.  在 [備份檔案:] 文字方塊中，輸入 `Sales_stripe1of2_20160601.bak`。
 
@@ -247,7 +247,7 @@ ms.lasthandoff: 06/05/2017
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-### <a name="to-create-a-full-database-backup"></a>建立完整資料庫備份  
+### <a name="create-a-full-database-backup"></a>建立完整資料庫備份  
   
 1.  執行 BACKUP DATABASE 陳述式以建立完整資料庫備份，請指定：  
   
@@ -299,7 +299,7 @@ ms.lasthandoff: 06/05/2017
   
 ###  <a name="TsqlExample"></a> 範例 (Transact-SQL)  
   
-#### <a name="a-backing-up-to-a-disk-device"></a>**A.備份到磁碟裝置**  
+#### <a name="a-back-up-to-a-disk-device"></a>**A.備份到磁碟裝置**  
  下列範例使用 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 建立新的媒體集，以將整個 `FORMAT` 資料庫備份至磁碟。  
   
 ```tsql  
@@ -313,7 +313,7 @@ TO DISK = 'Z:\SQLServerBackups\AdventureWorks2012.Bak'
 GO  
 ```  
   
-#### <a name="b-backing-up-to-a-tape-device"></a>**B.備份到磁帶裝置**  
+#### <a name="b-back-up-to-a-tape-device"></a>**B.備份到磁帶裝置**  
  下列範例會將完整的 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫備份到磁帶上，並將備份附加到先前的備份中。  
   
 ```tsql  
@@ -326,7 +326,7 @@ BACKUP DATABASE AdventureWorks2012
 GO  
 ```  
   
-#### <a name="c-backing-up-to-a-logical-tape-device"></a>**C.備份到邏輯磁帶裝置**  
+#### <a name="c-back-up-to-a-logical-tape-device"></a>**C.備份到邏輯磁帶裝置**  
  下列範例會為磁帶機建立邏輯備份裝置。 這個範例會將完整的 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫備份至該裝置。  
   
 ```tsql  
