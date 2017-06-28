@@ -1,7 +1,7 @@
 ---
 title: "唯一條件約束與檢查條件約束 | Microsoft 文件"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 06/27/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -25,7 +25,7 @@ ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="unique-constraints-and-check-constraints"></a>唯一條件約束與檢查條件約束
-[!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   UNIQUE 和 CHECK 是兩種類型的條件約束，可用來強制執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表中的資料完整性。 這些都是重要的資料庫物件。  
   
@@ -107,3 +107,4 @@ DELETE CheckTbl WHERE col1 = 10;
 |描述如何檢視檢查條件約束的屬性。|[唯一條件約束與檢查條件約束](../../relational-databases/tables/unique-constraints-and-check-constraints.md)|  
   
   
+
