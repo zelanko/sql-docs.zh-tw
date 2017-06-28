@@ -1,7 +1,7 @@
 ---
 title: "修改檢查條件約束 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 06/28/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -27,7 +27,7 @@ ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="modify-check-constraints"></a>修改檢查條件約束
-[!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   當您想要變更條件約束運算式或是針對特定條件啟用或停用條件約束的選項時，可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中修改檢查條件約束。  
   
@@ -83,3 +83,4 @@ ms.lasthandoff: 06/22/2017
  若要使用 `CHECK` 來修改 [!INCLUDE[tsql](../../includes/tsql-md.md)]條件約束，您必須先刪除現有的 `CHECK` 條件約束，然後以新的定義重新建立。 如需詳細資訊，請參閱 [Delete Check Constraints](../../relational-databases/tables/delete-check-constraints.md) (刪除檢查條件約束) 和 [Create Check Constraints](../../relational-databases/tables/create-check-constraints.md)(建立檢查條件約束)。  
   
 ###  <a name="TsqlExample"></a>  
+

@@ -1,7 +1,7 @@
 ---
 title: "建立檢查條件約束 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 06/28/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -28,7 +28,7 @@ ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="create-check-constraints"></a>建立檢查條件約束
-[!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中建立資料表的檢查條件約束，以便指定一個或多個資料行可接受的資料值。  
   
@@ -116,3 +116,4 @@ ms.lasthandoff: 06/22/2017
  如需詳細資訊，請參閱 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)。  
   
 ###  <a name="TsqlExample"></a>  
+

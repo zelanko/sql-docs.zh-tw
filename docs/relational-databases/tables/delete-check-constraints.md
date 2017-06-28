@@ -1,7 +1,7 @@
 ---
 title: "刪除檢查條件約束 | Microsoft 文件"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 06/28/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -28,7 +28,7 @@ ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="delete-check-constraints"></a>刪除檢查條件約束
-[!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中刪除檢查條件約束。 刪除檢查條件約束會從條件約束運算式中移除一個或多個資料行所接受資料值的限制。  
   
@@ -82,3 +82,4 @@ ms.lasthandoff: 06/22/2017
  如需詳細資訊，請參閱 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)。  
   
   
+
