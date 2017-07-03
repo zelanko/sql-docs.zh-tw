@@ -1,4 +1,6 @@
 # [使用原則式管理來管理伺服器](administer-servers-by-using-policy-based-management.md)  
+
+# 原則式管理
 ## [原則式管理原則儲存](policy-based-management-storage.md)  
 ## [設定原則式管理的一般屬性](configure-the-general-properties-of-policy-based-management.md)  
 ## [設定警示以便向原則管理員通知原則失敗](configure-alerts-to-notify-policy-administrators-of-policy-failures.md)  
@@ -63,14 +65,16 @@
 ### [檢視原則對話方塊](view-policies-dialog-box.md)  
 ### [評估原則對話方塊，原則選取頁面](evaluate-policies-dialog-box-policy-selection-page.md)  
 ### [評估原則對話方塊，評估結果頁面](evaluate-policies-dialog-box-evaluation-results-page.md)  
-### [Facet 屬性對話方塊，一般頁面](facet-properties-dialog-box-general-page.md)  
-### [Facet 屬性對話方塊，相依原則頁面](facet-properties-dialog-box-dependent-policies-page.md)  
+### [Facet 屬性對話方塊、一般頁面](facet-properties-dialog-box-general-page.md)  
+### [Facet 屬性對話方塊、相依原則頁面](facet-properties-dialog-box-dependent-policies-page.md)  
 ### [Facet 屬性對話方塊，相依條件頁面](facet-properties-dialog-box-dependent-conditions-page.md)  
 ### [結果詳細檢視對話方塊](results-detailed-view-dialog-box.md)  
 ### [檢視 Facet 對話方塊](view-facets-dialog-box.md)  
 ### [選取來源對話方塊](select-source-dialog-box.md)  
 ### [匯出為原則對話方塊](export-as-policy-dialog-box.md)  
 ### [匯入原則對話方塊](import-policies-dialog-box.md)  
+
+
 # [教學課程：使用以原則為基礎的管理來管理伺服器](tutorial-administering-servers-by-using-policy-based-management.md)  
 ## [第 1 課：建立和套用 Off By Default 原則](lesson-1-create-and-apply-an-off-by-default-policy.md)  
 ### [第 1-1 課：建立 Off By Default 原則](lesson-1-1-create-the-off-by-default-policy.md)  

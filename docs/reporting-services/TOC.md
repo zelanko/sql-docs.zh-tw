@@ -1,4 +1,6 @@
-# [概觀](create-deploy-and-manage-mobile-and-paginated-reports.md)
+# [什麼是 SQL Server Reporting Services (SSRS)？](create-deploy-and-manage-mobile-and-paginated-reports.md)
+
+# 概觀
 ## [新功能 Reporting Services](what-s-new-in-sql-server-reporting-services-ssrs.md) 
 ## [Reporting Services 概念 (SSRS)](reporting-services-concepts-ssrs.md)
 ## [Reporting Services 功能及工作](reporting-services-features-and-tasks-ssrs.md)   
@@ -69,7 +71,7 @@
 
 # 開發人員
 ## [應用程式整合](../reporting-services/application-integration/integrating-reporting-services-into-applications.md)
-## [報表伺服器 web 服務](../reporting-services/report-server-web-service/accessing-the-soap-api.md)
+## [報表伺服器 web 服務](../reporting-services/report-server-web-service/report-server-web-service.md)
 ## [擴充功能](../reporting-services/extensions/reporting-services-extension-library.md)
 ## [自訂報表項目](../reporting-services/custom-report-items/creating-a-custom-report-item-design-time-component.md)
 ## [自訂組件](../reporting-services/custom-assemblies/accessing-custom-assemblies-through-expressions.md)
@@ -107,13 +109,13 @@
 
 ## [建立使用 ReportViewer （SSRS 教學課程） 參數的鑽研 (RDLC) 報表](create-drillthrough-rdlc-report-with-parameters-reportviewer.md)  
 ### [第 1 課： 建立新的網站](lesson-1-create-a-new-web-site.md)  
-### [第 2 課： 定義父報表的資料連接和資料表](lesson-2-define-a-data-connection-and-data-table-for-parent-report.md)  
-### [第 3 課： 設計父報表使用報表精靈](lesson-3-design-the-parent-report-using-the-report-wizard.md)  
-### [第 4 課： 定義子報表的資料連接和資料表](lesson-4-define-a-data-connection-and-data-table-for-child-report.md)  
-### [第 5 課： 設計子報表使用報表精靈](lesson-5-design-the-child-report-using-the-report-wizard.md)  
-### [第 6 課： 將 ReportViewer 控制項加入至應用程式](lesson-6-add-a-reportviewer-control-to-the-application.md)  
-### [第 7 課： 在父報表上加入鑽研動作](lesson-7-add-drillthrough-action-on-parent-report.md)  
-### [第 8 課： 建立資料篩選](lesson-8-create-a-data-filter.md)  
+### [第 2 課：定義父報表的資料連接和資料表](lesson-2-define-a-data-connection-and-data-table-for-parent-report.md)  
+### [第 3 課：使用報表精靈設計父報表](lesson-3-design-the-parent-report-using-the-report-wizard.md)  
+### [第 4 課：定義子報表的資料連接和資料表](lesson-4-define-a-data-connection-and-data-table-for-child-report.md)  
+### [第 5 課：使用報表精靈設計子報表](lesson-5-design-the-child-report-using-the-report-wizard.md)  
+### [第 6 課：將 ReportViewer 控制項加入到應用程式](lesson-6-add-a-reportviewer-control-to-the-application.md)  
+### [第 7 課：在父報表上加入鑽研動作](lesson-7-add-drillthrough-action-on-parent-report.md)  
+### [第 8 課：建立資料篩選](lesson-8-create-a-data-filter.md)  
 ### [第 9 課： 建置並執行應用程式](lesson-9-build-and-run-the-application.md)  
 
 ## [報表產生器教學課程](report-builder-tutorials.md)  

@@ -3,9 +3,22 @@
 # [複寫回溯相容性](replication-backward-compatibility.md)  
 ## [SQL Server 複寫中已被取代的功能](deprecated-features-in-sql-server-replication.md)  
 ## [SQL Server 複寫中的重大變更](breaking-changes-in-sql-server-replication.md)  
+
+# 複寫區域
+## [複寫管理](./administration/administration-replication.md)
+## [Replication Agents](./agents/replication-agents.md)
+## [開發人員概念](../../relational-databases/replication/concepts/replication-developer-documentation.md)
+## [監視複寫](./monitor/monitoring-replication.md)
+## [非 SQL 異質資料庫複寫](./non-sql/heterogeneous-database-replication.md)
+## [發行資料和資料庫物件](./publish/publish-data-and-database-objects.md)
+## [複寫安全性](./security/security-overview-replication.md)
+
 # [複寫功能及工作](replication-features-and-tasks.md)  
 ## [複寫類型](types-of-replication.md)  
 ### [快照式複寫](snapshot-replication.md)  
+### [合併式複寫](./merge/merge-replication.md)
+### [異動複寫](./transactional/transactional-replication.md) 
+
 ## [複寫至記憶體最佳化資料表訂閱者](replication-to-memory-optimized-table-subscribers.md)  
 ## [複寫至 SQL 資料庫](replication-to-sql-database.md)  
 ## [重新發行資料](republish-data.md)  
@@ -72,8 +85,6 @@
 ### [驗證合併訂閱者的資料分割資訊](validate-partition-information-for-a-merge-subscriber.md)  
 ### [驗證訂閱者端的資料](validate-data-at-the-subscriber.md)  
 ## [編寫複寫指令碼](scripting-replication.md)  
-
-# [開發人員概念](../../relational-databases/replication/concepts/developer-s-guide-how-to-topics-replication.md)
 
 # [技術參考](technical-reference-replication.md)  
 ## [屬性參考](properties-reference-replication.md)  
