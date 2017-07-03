@@ -1,4 +1,6 @@
 # [註冊伺服器](register-servers.md)  
+
+# 動作
 ## [註冊連線的伺服器 (SQL Server Management Studio)](register-a-connected-server-sql-server-management-studio.md)  
 ## [建立新的註冊伺服器 (SQL Server Management Studio)](create-a-new-registered-server-sql-server-management-studio.md)  
 ## [在 SQL Server Management Studio 中檢視已註冊的伺服器](view-registered-servers-in-sql-server-management-studio.md)  

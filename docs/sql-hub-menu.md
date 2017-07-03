@@ -4,8 +4,8 @@ hide_bc: true
 title: "Microsoft SQL 文件 | Microsoft Docs"
 description: "深入了解 SQL"
 ms.translationtype: Human Translation
-ms.sourcegitcommit: cf2d74e423ab96af582d5f420065f9756e671ec2
-ms.openlocfilehash: 6d69b6be60730966727e8de72abeb4964c2ee071
+ms.sourcegitcommit: 8cb39d4ae3ff02fffe83e7f0e4646ade1545ce72
+ms.openlocfilehash: 71f2b08f6a36adabaa74ef23d109a10c83304345
 ms.contentlocale: zh-tw
 ms.lasthandoff: 06/23/2017
 
@@ -286,7 +286,7 @@ ms.lasthandoff: 06/23/2017
                         </ul>
                     </li>
                     <li>
-                        <a href="/en-us/sql/linux?toc=/sql/docs/linux/toc.json">Linux 上的 SQL Server</a>
+                        <a href="/en-us/sql/linux?toc=/sql/linux/toc.json">Linux 上的 SQL Server</a>
                     </li>
                     <li>
                         <a href="/en-us/sql/advanced-analytics/r-services/">SQL Server R Services</a>

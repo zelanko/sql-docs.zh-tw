@@ -1,5 +1,5 @@
 # [規劃報表](planning-a-report-report-builder.md)  
-## [報表設計提示](report-design-tips-report-builder-and-ssrs.md)  
+# [報表設計提示](report-design-tips-report-builder-and-ssrs.md)  
 # [報表撰寫概念](report-authoring-concepts-report-builder-and-ssrs.md)  
 ## [報表、 報表組件，與報表定義](reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)  
 ## [資料區域與地圖](data-regions-and-maps-report-builder-and-ssrs.md)  

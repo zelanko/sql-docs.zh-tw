@@ -1,4 +1,6 @@
 # [SQL Server 容錯移轉叢集安裝](install/sql-server-failover-cluster-installation.md)  
+
+# 設計
 ## [安裝容錯移轉叢集之前](install/before-installing-failover-clustering.md)  
 ## [建立新的 SQL Server 容錯移轉叢集 (安裝程式)](install/create-a-new-sql-server-failover-cluster-setup.md)  
 ## [在 SQL Server 容錯移轉叢集中加入或移除節點 (安裝程式)](install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)  

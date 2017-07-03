@@ -1,4 +1,6 @@
-# [全文檢索搜尋](full-text-search.md)  
+# [概觀](full-text-search.md)
+
+# 全文檢索搜尋
 ## [全文檢索搜尋使用者入門](get-started-with-full-text-search.md)  
 ## [使用全文檢索搜尋查詢](query-with-full-text-search.md)  
 ## [使用 NEAR 搜尋接近另一個單字的字詞](search-for-words-close-to-another-word-with-near.md)  
@@ -27,6 +29,7 @@
 ## [全文檢索搜尋 DDL、函數、預存程序與檢視](full-text-search-ddl-functions-stored-procedures-and-views.md)  
 ## [使用全文檢索索引精靈](use-the-full-text-indexing-wizard.md)  
 ## [SQL Server 2016 中已被取代的全文檢索搜尋功能](deprecated-full-text-search-features-in-sql-server-2016.md)  
+
 # [語意搜尋](semantic-search-sql-server.md)  
 ## [安裝及設定語意搜尋](install-and-configure-semantic-search.md)  
 ## [在資料表和資料行上啟用語意搜尋](enable-semantic-search-on-tables-and-columns.md)  

@@ -2,7 +2,7 @@
 # [Reporting services 的驗證擴充的保護](extended-protection-for-authentication-with-reporting-services.md)  
 # [使用報表伺服器驗證](authentication-with-the-report-server.md)  
 ## [在報表伺服器上設定 Windows 驗證](configure-windows-authentication-on-the-report-server.md)  
-## [在報表伺服器上設定基本驗證](configure-basic-authentication-on-the-report-server.md)  
+## [設定報表伺服器上的基本驗證](configure-basic-authentication-on-the-report-server.md)  
 ## [設定報表伺服器上的自訂或表單驗證](configure-custom-or-forms-authentication-on-the-report-server.md)  
 ## [設定入口網站，以傳遞自訂驗證 Cookie](configure-the-web-portal-to-pass-custom-authentication-cookies.md)  
 # [角色和權限](roles-and-permissions-reporting-services.md)  

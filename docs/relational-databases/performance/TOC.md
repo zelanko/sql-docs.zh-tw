@@ -1,3 +1,7 @@
+
+# [SQL Server Database Engine 和 Azure SQL Database 的效能中心](performance-center-for-sql-server-database-engine-and-azure-sql-database.md)  
+# [設定具有 NVDIMM-N 回寫式快取的儲存空間](configuring-storage-spaces-with-a-nvdimm-n-write-back-cache.md)  
+
 # [彈性查詢處理](adaptive-query-processing.md)
 # [自動調整](../automatic-tuning/automatic-tuning.md)
 # [基數估計](cardinality-estimation-sql-server.md)  
@@ -50,8 +54,5 @@
 ## [升級之後驗證計畫指南](validate-plan-guides-after-upgrade.md)  
 ## [刪除計畫指南](delete-a-plan-guide.md)  
 ## [啟用或停用計畫指南](enable-or-disable-a-plan-guide.md)  
-
-# [SQL Server Database Engine 和 Azure SQL Database 的效能中心](performance-center-for-sql-server-database-engine-and-azure-sql-database.md)  
-## [設定具有 NVDIMM-N 回寫式快取的儲存空間](configuring-storage-spaces-with-a-nvdimm-n-write-back-cache.md)  
 
 #[監視資源使用狀況 (系統監視器)](../performance-monitor/monitor-resource-usage-system-monitor.md) 

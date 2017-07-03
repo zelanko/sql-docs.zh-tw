@@ -1,4 +1,6 @@
 # [教學課程：SQL Server Management Studio](tutorial-sql-server-management-studio.md)  
+
+# 課程
 ## [課程 1 - SQL Server Management Studio 基本導覽](lesson-1-basic-navigation-in-sql-server-management-studio.md)  
 ### [課程 1-1 - 啟動 SQL Server Management Studio](lesson-1-1-start-sql-server-management-studio.md)  
 ### [課程 1-2 - 連接已註冊的伺服器與物件總管](lesson-1-2-connect-with-registered-servers-and-object-explorer.md)  
