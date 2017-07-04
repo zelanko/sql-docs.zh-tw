@@ -3,12 +3,11 @@
 # 概觀
 ## [SQL Server 2016 的新功能](what-s-new-in-sql-server-2016.md)
 ## [SQL Server 2017 的新功能](what-s-new-in-sql-server-2017.md)
+## [新的與最近更新的文件](new-updated-sql-server.md)
 ## [版本和支援的 SQL Server 功能](editions-and-components-of-sql-server-2016.md)
 ## [SQL Server 的最大容量規格](maximum-capacity-specifications-for-sql-server.md)
 ## [SQL Server 版本的計算容量限制](compute-capacity-limits-by-edition-of-sql-server.md)
 ## [客戶經驗改進計畫](customer-experience-improvement-program-for-sql-server-data-tools.md)
-
-# [SQL Server 的最近更新文件](sql-server-new-updated-sql-docs-pr.md)
 
 # 版本資訊
 

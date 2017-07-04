@@ -1,4 +1,5 @@
 # [概觀](database-engine-powershell-reference.md)  
-# [Invoke-PolicyEvaluation Cmdlet](invoke-policyevaluation-cmdlet.md)  
+# [新的與最近更新的文件](new-updated-powershell.md)
+# [Invoke-PolicyEvaluation 指令程式](invoke-policyevaluation-cmdlet.md)  
 # [Invoke-Sqlcmd Cmdlet](invoke-sqlcmd-cmdlet.md)  
 # [查詢運算式和統一資源名稱](query-expressions-and-uniform-resource-names.md)  

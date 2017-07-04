@@ -1,8 +1,12 @@
 # [下載 SSMS](download-sql-server-management-studio-ssms.md)
 # [什麼是 SSMS？](sql-server-management-studio-ssms.md)
-# [SSMS 變更記錄](sql-server-management-studio-changelog-ssms.md)
-# [版本資訊](sql-server-management-studio-release-notes.md)
-# [舊版 SSMS](previous-sql-server-management-studio-releases.md)
+
+# 新功能
+## [SSMS 變更記錄](sql-server-management-studio-changelog-ssms.md)
+## [版本資訊](sql-server-management-studio-release-notes.md)
+## [新的與最近更新的文件](new-updated-ssms.md)
+## [舊版 SSMS](previous-sql-server-management-studio-releases.md)
+
 # [使用 SSMS](use-sql-server-management-studio.md)
 # [SSMS 中的功能](features-in-sql-server-management-studio.md)
 # [使用意見反應收集](sql-server-management-studio-telemetry-ssms.md)

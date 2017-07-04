@@ -1,11 +1,10 @@
 # [資料庫功能](database-features.md)
+# [新的與最近更新的文件](new-updated-relational-databases.md)
 
 # 概觀
 ## [資料庫引擎跨執行個體功能](database-engine-cross-instance-features.md)
 ## [技術參考](technical-reference-database-engine.md)  
 ## [功能參考](feature-reference-database-engine.md)   
-
-# [最近更新關聯式資料庫的相關文章](relational-databases-new-updated-sql-docs-pr.md)
 
 # [SQL Server 指南](sql-server-guides.md)
 ## Always On 可用性群組疑難排解和監視指南
