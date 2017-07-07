@@ -27,7 +27,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 0d09693778fa9382d40dfb02f0c3fb4b212f86ed
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="restore-a-database-backup-using-ssms"></a>Restore a Database Backup Using SSMS
@@ -218,61 +218,61 @@ ms.lasthandoff: 04/11/2017
 ### <a name="e--restore-a-backup-from-the-microsoft-azure-storage-service"></a>**E.從 Microsoft Azure 儲存體服務還原備份**
 #### <a name="common-steps"></a>**通用步驟**
 下列兩個範例會從 Microsoft Azure 儲存體服務中的備份執行 `Sales` 的還原。  儲存體帳戶名稱為 `mystorageaccount`。  容器名稱為 `myfirstcontainer`。  為求簡潔，前六個步驟只會在此列出一次，所有範例將從**步驟 7** 開始進行。
-1.    在物件總管中，連接到 SQL Server Database Engine 的執行個體，然後展開該執行個體。
+1.  在物件總管中，連接到 SQL Server Database Engine 的執行個體，然後展開該執行個體。
 
-2.    以滑鼠右鍵按一下 [資料庫]，然後選取 [還原資料庫...]。
+2.  以滑鼠右鍵按一下 [資料庫]，然後選取 [還原資料庫...]。
 
-3.    在 [一般] 頁面上，選取 [來源] 區段下的 [裝置]。
+3.  在 [一般] 頁面上，選取 [來源] 區段下的 [裝置]。
 
-4.    按一下瀏覽 (...) 按鈕，開啟 [選取備份裝置] 對話方塊。  
-5.    從 [備份媒體類型:] 下拉式清單中選取 [URL]。
+4.  按一下瀏覽 (...) 按鈕，開啟 [選取備份裝置] 對話方塊。  
+5.  從 [備份媒體類型:] 下拉式清單中選取 [URL]。
 
-6.    按一下 [加入]，[選取備份檔案位置] 對話方塊隨即開啟。
+6.  按一下 [加入]，[選取備份檔案位置] 對話方塊隨即開啟。
 
     #### <a name="e1---restore-a-striped-backup-over-an-existing-database-and-a-shared-access-signature-exists"></a>**E1. 以覆蓋現有資料庫的方式還原等量備份，而且存在共用存取簽章。**
     已建立具有讀取、寫入、刪除和列出權限的預存存取原則。  為容器 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`建立了與此預存存取原則相關聯的共用存取簽章。  如果 SQL Server 認證已經存在，則步驟大致相同。  資料庫 `Sales` 目前不在伺服器上。  備份檔案為 `Sales_stripe1of2_20160601.bak` 和 `Sales_stripe2of2_20160601.bak`。  
 *  
-    7.    如果 SQL Server 認證已經存在，請從 [Azure 儲存體容器:] 下拉式清單中選取 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`；否則請手動輸入容器 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` 的名稱。
+    7.  如果 SQL Server 認證已經存在，請從 [Azure 儲存體容器:] 下拉式清單中選取 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`；否則請手動輸入容器 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` 的名稱。
     
-    8.    在 [共用存取簽章:] RTF 方塊中，輸入共用存取簽章。
-       9.    按一下 [確定]，[在 Microsoft Azure 中尋找備份檔案] 對話方塊隨即開啟。
-    10.    展開 [容器] 並巡覽至 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`。
+    8.  在 [共用存取簽章:] RTF 方塊中，輸入共用存取簽章。
+       9.   按一下 [確定]，[在 Microsoft Azure 中尋找備份檔案] 對話方塊隨即開啟。
+    10. 展開 [容器] 並巡覽至 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`。
     
-    11.    按住 Ctrl，然後選取檔案 `Sales_stripe1of2_20160601.bak` 和 `Sales_stripe2of2_20160601.bak`。
-    12.    按一下 **[確定]**。
-    13.    按一下 [確定] 回到 [一般] 頁面。
-    14.    在 [選取頁面] 窗格中，按一下 [選項]。
-    15.    在 [還原選項] 區段下，核取 [覆寫現有的資料庫 (WITH REPLACE)]。
-    16.    在 [結尾記錄備份] 區段下，取消核取 [還原前先進行結尾記錄備份]。
-    17.    在 [伺服器連接] 區段下，核取 [關閉目的地資料庫的現有連接]。
-    18.    按一下 **[確定]**。
+    11. 按住 Ctrl，然後選取檔案 `Sales_stripe1of2_20160601.bak` 和 `Sales_stripe2of2_20160601.bak`。
+    12. 按一下 **[確定]**。
+    13. 按一下 [確定] 回到 [一般] 頁面。
+    14. 在 [選取頁面] 窗格中，按一下 [選項]。
+    15. 在 [還原選項] 區段下，核取 [覆寫現有的資料庫 (WITH REPLACE)]。
+    16. 在 [結尾記錄備份] 區段下，取消核取 [還原前先進行結尾記錄備份]。
+    17. 在 [伺服器連接] 區段下，核取 [關閉目的地資料庫的現有連接]。
+    18. 按一下 **[確定]**。
 
     #### <a name="e2---a-shared-access-signature-does-not-exist"></a>**E2. 共用存取簽章不存在**
     在此範例中， `Sales` 資料庫目前不在伺服器上。
-    7.    按一下 [加入]，[連接至 Microsoft 訂用帳戶] 對話方塊隨即開啟。  
+    7.  按一下 [加入]，[連接至 Microsoft 訂用帳戶] 對話方塊隨即開啟。  
     
-    8.    完成 [連接至 Microsoft 訂用帳戶] 對話方塊，然後按一下 [確定] 回到 [選取備份檔案位置] 對話方塊。  如需其他資訊，請參閱[連接到 Microsoft Azure 訂用帳戶](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md)。
-    9.    在 [選取備份檔案位置] 對話方塊中按一下 [確定]，[在 Microsoft Azure 中尋找備份檔案] 對話方塊隨即開啟。
-    10.    展開 [容器] 並巡覽至 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`。
-    11.    選取備份檔案，然後按一下 [確定]。
-    12.    按一下 [確定] 回到 [一般] 頁面。
-    13.    按一下 **[確定]**。
+    8.  完成 [連接至 Microsoft 訂用帳戶] 對話方塊，然後按一下 [確定] 回到 [選取備份檔案位置] 對話方塊。  如需其他資訊，請參閱[連接到 Microsoft Azure 訂用帳戶](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md)。
+    9.  在 [選取備份檔案位置] 對話方塊中按一下 [確定]，[在 Microsoft Azure 中尋找備份檔案] 對話方塊隨即開啟。
+    10. 展開 [容器] 並巡覽至 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`。
+    11. 選取備份檔案，然後按一下 [確定]。
+    12. 按一下 [確定] 回到 [一般] 頁面。
+    13. 按一下 **[確定]**。
 
-#### <a name="f----restore-local-backup-to-microsoft-azure-storage-url"></a>**F.  將本機備份還原至 Microsoft Azure 儲存體 (URL)**
+#### <a name="f---restore-local-backup-to-microsoft-azure-storage-url"></a>**F. 將本機備份還原至 Microsoft Azure 儲存體 (URL)**
 `Sales` 資料庫將從 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` 中的備份還原至 Microsoft Azure 儲存體容器 `E:\MSSQL\BAK`。  已建立 Azure 容器的 SQL Server 認證。  目的地容器的 SQL Server 認證必須已經存在，因為您無法透過 **還原** 工作建立此認證。  `Sales` 資料庫目前不在伺服器上。
-1.    在物件總管中，連接到 SQL Server Database Engine 的執行個體，然後展開該執行個體。
+1.  在物件總管中，連接到 SQL Server Database Engine 的執行個體，然後展開該執行個體。
 
-2.    以滑鼠右鍵按一下 [資料庫]，然後選取 [還原資料庫...]。
-3.    在 [一般] 頁面上，選取 [來源] 區段下的 [裝置]。
-4.    按一下瀏覽 (...) 按鈕，開啟 [選取備份裝置] 對話方塊。  
-5.    從 [備份媒體類型:] 下拉式清單中選取 [檔案]。
-6.    按一下 [加入]，[尋找備份檔案] 對話方塊隨即開啟。
-7.    巡覽至 `E:\MSSQL\BAK` 並選取備份檔案，然後按一下 [確定]。
-8.    按一下 [確定] 回到 [一般] 頁面。
-9.    在 [選取頁面] 窗格中，按一下 [檔案]。
-10.    核取 [將所有檔案重新放置到資料夾] 方塊。
-11.    在 [資料檔案資料夾:] 和 [記錄檔資料夾:] 的文字方塊中，輸入容器 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`。
-12.    按一下 **[確定]**。
+2.  以滑鼠右鍵按一下 [資料庫]，然後選取 [還原資料庫...]。
+3.  在 [一般] 頁面上，選取 [來源] 區段下的 [裝置]。
+4.  按一下瀏覽 (...) 按鈕，開啟 [選取備份裝置] 對話方塊。  
+5.  從 [備份媒體類型:] 下拉式清單中選取 [檔案]。
+6.  按一下 [加入]，[尋找備份檔案] 對話方塊隨即開啟。
+7.  巡覽至 `E:\MSSQL\BAK` 並選取備份檔案，然後按一下 [確定]。
+8.  按一下 [確定] 回到 [一般] 頁面。
+9.  在 [選取頁面] 窗格中，按一下 [檔案]。
+10. 核取 [將所有檔案重新放置到資料夾] 方塊。
+11. 在 [資料檔案資料夾:] 和 [記錄檔資料夾:] 的文字方塊中，輸入容器 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`。
+12. 按一下 **[確定]**。
 
 
 ## <a name="see-also"></a>另請參閱    
