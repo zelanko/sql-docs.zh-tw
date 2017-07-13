@@ -2,7 +2,7 @@
 title: "Web 入口網站 （SSRS 原生模式） |Microsoft 文件"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 05/15/2017
+ms.date: 07/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,22 +15,26 @@ caps.latest.revision: 15
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 68cdac26293a2025a7a2cf8833d2d0f2f4f6ff8c
+ms.translationtype: MT
+ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
+ms.openlocfilehash: e3dff8b613f933caa84522b31bdc862aa9c799f7
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/10/2017
 
 ---
-# <a name="web-portal-ssrs-native-mode"></a>入口網站 (SSRS 原生模式)
+<a id="web-portal-ssrs-native-mode" class="xliff"></a>
 
-[!INCLUDE[ssrs-appliesto-sql2016-preview](../includes/ssrs-appliesto-sql2016-preview.md)]
+# 入口網站 (SSRS 原生模式)
+
+[!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
 Reporting Services 入口網站是網頁型的體驗，可讓您檢視報表、 行動報表、 Kpi，並瀏覽報表伺服器執行個體中的項目。 您也可以使用 web 入口網站來管理單一報表伺服器執行個體。
 
 ![ssRSPortal](../reporting-services/media/ssrsportal.png)
 
-## <a name="what-is-the-web-portal"></a>什麼是入口網站
+<a id="what-is-the-web-portal" class="xliff"></a>
+
+## 什麼是入口網站
 
 您可以使用 web 入口網站來執行下列工作：
 
@@ -68,13 +72,17 @@ Web 入口網站只適用於以原生模式執行的報表伺服器。 不支援
 > [!NOTE]
 > 如果您在伺服器執行所在的本機電腦上瀏覽至入口網站，可能會看到一則訊息，指出不允許您檢視這個資料夾。 這是因為通用存取控制 (UAC)，而且您不是以系統管理員身分執行瀏覽器所導致。 您不能以系統管理員身分執行 Edge。 您必須使用 Internet Explorer。 您可以從遠端瀏覽器至伺服器，或是以系統管理員身分啟動 Internet Explorer 並瀏覽至入口網站。 如果您想要從遠端使用入口網站，就必須為您的帳戶提供資料夾上的內容管理員權限。  
 
-## <a name="start-and-use-the-web-portal"></a>啟動並使用入口網站
+<a id="start-and-use-the-web-portal" class="xliff"></a>
+
+## 啟動並使用入口網站
 
 Web 入口網站是您輸入開啟的 web 應用程式[!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]瀏覽器視窗的網址列中的 URL。 當您啟動 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]時，您所看到的頁面、連結和選項會依據您在報表伺服器上擁有的權限而有所不同。 若要執行工作，您必須被指派包含此工作的角色。  指派至具有完整權限之角色的使用者，可以存取用於管理報表伺服器的完整應用程式功能表與頁面。 指派至具有檢視和執行報表權限之角色的使用者，只看得到支援這些活動的功能表與頁面。 每個使用者可以有針對不同報表伺服器的不同角色指派，甚至針對儲存在單一報表伺服器上之各種報表與資料夾的不同角色指派。
 
 如需角色的詳細資訊，請參閱 [在原生模式報表伺服器上授與權限](../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)。
 
-### <a name="start-the-web-portal"></a>啟動 web 入口網站
+<a id="start-the-web-portal" class="xliff"></a>
+
+### 啟動 web 入口網站
 
 若要從瀏覽器中啟動 web 入口網站，執行下列作業：
 
@@ -84,9 +92,11 @@ Web 入口網站是您輸入開啟的 web 應用程式[!INCLUDE[ssRSWebPortal](.
 
     根據預設，URL 為 *http://[ComputerName]/reports*。
 
-    報表伺服器可能會設定為使用特定的通訊埠。 例如， *http://[ComputerName]:80/reports*或*http://[ComputerName]:8080/reports*。
+    報表伺服器可能會設定為使用特定的通訊埠。 例如， *http://[ComputerName]:80/reports* 或 *http://[ComputerName]:8080/reports*。
 
-## <a name="grouping-by-categories"></a>依類別分組
+<a id="grouping-by-categories" class="xliff"></a>
+
+## 依類別分組
 
 Web 入口網站將群組分成不同類別的項目。 以下為可用的類別：
 
@@ -105,7 +115,9 @@ Web 入口網站將群組分成不同類別的項目。 以下為可用的類別
 
 ![ssRSWebPortal-hidden](../reporting-services/media/ssrswebportal-hidden.png)
 
-### <a name="power-bi-desktop-reports-and-excel-workbooks"></a>Power BI Desktop 報表與 Excel 活頁簿
+<a id="power-bi-desktop-reports-and-excel-workbooks" class="xliff"></a>
+
+### Power BI Desktop 報表與 Excel 活頁簿
 
 您可以上傳、組織及管理 Power BI Desktop 報表和 Excel 活頁簿的權限。 它們會在入口網站中分組在一起。
 
@@ -113,13 +125,17 @@ Web 入口網站將群組分成不同類別的項目。 以下為可用的類別
 
 將檔案儲存於 Reporting Services 內，類似於其他資源檔案。 選取這其中一個項目，即會將它們本機下載至您的桌面上。 您可以將它們重新上傳至報表伺服器，藉以儲存所做的變更。
 
-## <a name="search-for-items"></a>搜尋項目
+<a id="search-for-items" class="xliff"></a>
+
+## 搜尋項目
 
 您可以輸入搜尋小組，而您將會看到可存取的所有項目。 結果會分類成 KPI、報表、資料集，以及其他項目。 您可以與結果互動，並將它們加到我的最愛。
 
 ![ssRSWebPortal-Search](../reporting-services/media/ssrswebportal-search.png)
 
-## <a name="web-portal-tasks"></a>入口網站工作
+<a id="web-portal-tasks" class="xliff"></a>
+
+## 入口網站工作
 
 [建立入口網站品牌形象](../reporting-services/branding-the-web-portal.md)
 
@@ -127,7 +143,9 @@ Web 入口網站將群組分成不同類別的項目。 以下為可用的類別
 
 [使用共用資料集](../reporting-services/work-with-shared-datasets-web-portal.md)
 
-## <a name="see-also"></a>另請參閱
+<a id="see-also" class="xliff"></a>
+
+## 另請參閱
 
 [使用 SQL Server 行動報表發行工具建立行動報表](../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
 [設定 URL (SSRS 組態管理員)](../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  

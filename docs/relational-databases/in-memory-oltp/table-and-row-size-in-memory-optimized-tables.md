@@ -1,7 +1,7 @@
 ---
 title: "記憶體最佳化資料表中的資料表和資料列大小 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 06/19/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -14,19 +14,23 @@ caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 57d2a22fc535f3613ce680156a0a6bb55ec62fa1
+ms.translationtype: HT
+ms.sourcegitcommit: fe6de2b16b9792a5399b1c014af72a2a5ee52377
+ms.openlocfilehash: 2ef8331a2217c2fd41881b875264dab6ec2bb822
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/10/2017
 
 ---
-# <a name="table-and-row-size-in-memory-optimized-tables"></a>記憶體最佳化資料表中的資料表和資料列大小
+<a id="table-and-row-size-in-memory-optimized-tables" class="xliff"></a>
+
+# 記憶體最佳化資料表中的資料表和資料列大小
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  記憶體最佳化的表格由資料列與索引 (包含資料列的指標) 的集合組成。 在記憶體最佳化的資料表中，in-row 資料的長度不得超過 8,060 個位元組。 不過，啟動 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 時，可能會建立具有多個大型資料行 (例如，多個 varbinary(8000) 資料行) 和 LOB 資料行 (即 varbinary(max)、varchar(max) 和 nvarchar(max)) 的資料表。 超出 in-row 資料最大大小的資料行都會置於特殊內部資料表中的 off-row。 如需這些內部資料表的詳細資訊，請參閱 [sys.memory_optimized_tables_internal_attributes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md)。
+  在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 之前，記憶體最佳化資料表的 in-row 資料大小不能超過 [8,060 個位元組](https://msdn.microsoft.com/library/dn205318(v=sql.120).aspx)。 不過，自 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始，可在 Azure SQL Database 中建立具有多個大型資料行 (例如，多個 varbinary(8000) 資料行) 和 LOB 資料行 (即 varbinary(max)、varchar(max) 和 nvarchar(max)) 的記憶體最佳化資料表，並可使用原生編譯的 T-SQL 模組和資料表類型對它們執行作業。 
   
- 計算資料表和資料列大小有兩個原因：  
+  無法放入 8060 位元組資料列大小限制的資料行都會置於個別內部資料表中的 off-row。 每個 off-row 資料行都會有對應的內部資料表，而內部資料表接著會有單一非叢集索引。 如需 off-row 資料行所用之內部資料表的詳細資料，請參閱 [sys.memory_optimized_tables_internal_attributes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md)。 
+ 
+  在某些情況中，計算資料列和資料表的大小會很有用：
   
 -   資料表使用多少記憶體？  
   
@@ -38,13 +42,12 @@ ms.lasthandoff: 06/22/2017
   
 -   資料列的資料大小，以及它是否符合 8,060 個位元組的資料列大小限制？ 若要回答這些問題，請使用 [資料列主體大小] 的計算，討論如下。  
 
-無法放入 8060 位元組資料列大小限制的資料行都會置於個別內部資料表中的 off-row。 每個 off-row 資料行都會有對應的內部資料表，而內部資料表接著會有單一非叢集索引。 如需用於 off-row 資料行之內部資料表的詳細資訊，請參閱 [sys.memory_optimized_tables_internal_attributes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md)。 
-  
- 下圖說明包含索引和資料列的資料表，這些索引和資料列各自擁有資料列標頭和主體：  
+  記憶體最佳化的表格由資料列與索引 (包含資料列的指標) 的集合組成。 下圖說明包含索引和資料列的資料表，這些索引和資料列各自擁有資料列標頭和主體：  
   
  ![記憶體最佳化資料表。](../../relational-databases/in-memory-oltp/media/hekaton-guide-1.gif "Memory optimized table.")  
 由索引和資料列組成之記憶體最佳化的資料表。  
-  
+
+##  <a name="bkmk_TableSize"></a> 計算資料表大小
  資料表的記憶體中大小 (以位元組為單位) 計算如下：  
   
 ```  
@@ -65,34 +68,10 @@ ms.lasthandoff: 06/22/2017
 [row size] = [row header size] + [actual row body size]  
 [row header size] = 24 + 8 * [number of indices]  
 ```  
-  
- **資料列主體大小**  
-  
- 下表中討論 [資料列主體大小] 的計算。  
-  
- 資料列主體大小有兩種不同的計算方式，也就是計算的大小和實際大小：  
-  
--   計算的大小以 [計算的資料列主體大小] 表示，用於判斷是否超過 8,060 個位元組的資料列大小限制。  
-  
--   實際大小以 [實際資料列主體大小] 表示，是資料列主體在記憶體中和檢查點檔案中的實際儲存體大小。  
-  
- [計算的資料列主體大小] 和 [實際資料列主體大小] 兩者的計算方式十分類似。 唯一的差異在於 (n)varchar(i) 和 varbinary(i) 資料行大小的計算，如下列資料表底部所反映。 計算的資料列主體大小使用宣告的大小 *i* 作為資料行的大小，而實際的資料列主體大小使用實際的資料大小。  
-  
- 下表描述資料列主體大小的計算，指定為 [實際資料列主體大小] = SUM([淺層類型的大小]) + 2 + 2 * [深層類型資料行數目]。  
-  
-|章節|大小|註解|  
-|-------------|----------|--------------|  
-|淺層類型資料行|SUM([淺層類型的大小])。 個別類型的大小如下所示 (以位元組為單位)：<br /><br /> **Bit**：1<br /><br /> **Tinyint**：1<br /><br /> **Smallint**：2<br /><br /> **Int**：4<br /><br /> **Real**：4<br /><br /> **Smalldatetime**：4<br /><br /> **Smallmoney**：4<br /><br /> **Bigint**：8<br /><br /> **Datetime**：8<br /><br /> **Datetime2**：8<br /><br /> **Float**：8<br /><br /> **Money**：8<br /><br /> **Numeric** (precision <=18)：8<br /><br /> **Time**：8<br /><br /> **Numeric**(precision>18)：16<br /><br /> **Uniqueidentifier**：16||  
-|淺層資料行填補|可能的值為：<br /><br /> 如果有深層類型資料行且淺層資料行的資料大小總計為奇數，則為 1。<br /><br /> 否則為 0|深層類型是指 (var)binary 和 (n)(var)char 類型。|  
-|深層類型資料行的位移陣列|可能的值為：<br /><br /> 如果沒有深層類型資料行則為 0<br /><br /> 否則為 2 + 2 * [深層類型資料行數目]|深層類型是指 (var)binary 和 (n)(var)char 類型。|  
-|NULL 陣列|[可為 null 的資料行數目] / 8，無條件進位到完整的位元組。|陣列中每個可為 null 的資料行都有一個位元。 這個位元會無條件進位到完整的位元組。|  
-|NULL 陣列填補|可能的值為：<br /><br /> 如果有深層類型資料行且 NULL 陣列的大小為奇數個位元組，則為 1。<br /><br /> 否則為 0|深層類型是指 (var)binary 和 (n)(var)char 類型。|  
-|填補|如果沒有深層類型資料行：0<br /><br /> 如果有深層類型資料行，則會根據淺層資料行所需的最大對齊加入 0-7 個位元組填補。 每個淺層資料行的對齊都需等於其大小 (如上面所記載)，除了 GUID 資料行需要 1 個位元組 (非 16) 的對齊，而數值資料行一律需要 8 個位元組 (絕不是 16) 的對齊。 所有淺層資料行之間都會使用最大對齊需求，並且加入 0-7 個位元組填補，使得目前為止的大小總計 (不包括深層類型資料行) 為所需對齊的倍數。|深層類型是指 (var)binary 和 (n)(var)char 類型。|  
-|固定長度的深層類型資料行|SUM([固定長度的深層類型資料行大小])<br /><br /> 每個資料行的大小如下所示：<br /><br /> i 代表 char(i) 和 binary(i)。<br /><br /> 2 * i 代表 nchar(i)|固定長度的深層類型資料行為 char(i)、nchar(i) 或 binary(i) 類型的資料行。|  
-|可變長度的深層類型資料行 [計算的大小]|SUM([可變長度的深層類型資料行計算的大小])<br /><br /> 每個資料行計算的大小如下所示：<br /><br /> i 代表 varchar(i) 和 varbinary(i)<br /><br /> 2 * i 代表 nvarchar(i)|這個資料列只會套用至 [計算的資料列主體大小]。<br /><br /> 可變長度的深層類型資料行為 varchar(i)、nvarchar(i) 或 varbinary(i) 類型的資料行。 計算的大小是由資料行的最大長度 (i) 所決定。|  
-|可變長度的深層類型資料行 [實際大小]|SUM([可變長度的深層類型資料行的實際大小])<br /><br /> 每個資料行的實際大小如下所示：<br /><br /> n (n 是儲存在資料行中的字元數) 代表 varchar(i)。<br /><br /> 2 * n (n 是儲存在資料行中的字元數) 代表 nvarchar(i)。<br /><br /> n (n 是儲存在資料行中的位元組數) 代表 varbinary(i)。|這個資料列只會套用至 [實際資料列主體大小]。<br /><br /> 實際大小是由儲存在資料列的資料行中的資料所決定。|  
-  
-##  <a name="bkmk_RowStructure"></a> 資料列結構  
+##  <a name="bkmk_RowBodySize"></a> 計算資料列主體大小
+
+**資料列結構**
+    
  記憶體最佳化資料表中的資料列具有下列元件：  
   
 -   資料列標頭包含實作資料列版本設定所需的時間戳記。 資料列標頭也包含索引指標，用來實作雜湊值區的資料列鏈結 (如上文所述)。  
@@ -139,6 +118,32 @@ ms.lasthandoff: 06/22/2017
 |John|Paris|  
 |Jane|Prague|  
 |Susan|Bogata|  
+  
+ 
+  
+ 下表中討論 [資料列主體大小] 的計算。  
+  
+ 資料列主體大小有兩種不同的計算方式，也就是計算的大小和實際大小：  
+  
+-   計算的大小以 [計算的資料列主體大小] 表示，用於判斷是否超過 8,060 個位元組的資料列大小限制。  
+  
+-   實際大小以 [實際資料列主體大小] 表示，是資料列主體在記憶體中和檢查點檔案中的實際儲存體大小。  
+  
+ [計算的資料列主體大小] 和 [實際資料列主體大小] 兩者的計算方式十分類似。 唯一的差異在於 (n)varchar(i) 和 varbinary(i) 資料行大小的計算，如下列資料表底部所反映。 計算的資料列主體大小使用宣告的大小 *i* 作為資料行的大小，而實際的資料列主體大小使用實際的資料大小。  
+  
+ 下表描述資料列主體大小的計算，指定為 [實際資料列主體大小] = SUM([淺層類型的大小]) + 2 + 2 * [深層類型資料行數目]。  
+  
+|章節|大小|註解|  
+|-------------|----------|--------------|  
+|淺層類型資料行|SUM([淺層類型的大小])。 個別類型的大小如下所示 (以位元組為單位)：<br /><br /> **Bit**：1<br /><br /> **Tinyint**：1<br /><br /> **Smallint**：2<br /><br /> **Int**：4<br /><br /> **Real**：4<br /><br /> **Smalldatetime**：4<br /><br /> **Smallmoney**：4<br /><br /> **Bigint**：8<br /><br /> **Datetime**：8<br /><br /> **Datetime2**：8<br /><br /> **Float**：8<br /><br /> **Money**：8<br /><br /> **Numeric** (precision <=18)：8<br /><br /> **Time**：8<br /><br /> **Numeric**(precision>18)：16<br /><br /> **Uniqueidentifier**：16||  
+|淺層資料行填補|可能的值為：<br /><br /> 如果有深層類型資料行且淺層資料行的資料大小總計為奇數，則為 1。<br /><br /> 否則為 0|深層類型是指 (var)binary 和 (n)(var)char 類型。|  
+|深層類型資料行的位移陣列|可能的值為：<br /><br /> 如果沒有深層類型資料行則為 0<br /><br /> 否則為 2 + 2 * [深層類型資料行數目]|深層類型是指 (var)binary 和 (n)(var)char 類型。|  
+|NULL 陣列|[可為 null 的資料行數目] / 8，無條件進位到完整的位元組。|陣列中每個可為 null 的資料行都有一個位元。 這個位元會無條件進位到完整的位元組。|  
+|NULL 陣列填補|可能的值為：<br /><br /> 如果有深層類型資料行且 NULL 陣列的大小為奇數個位元組，則為 1。<br /><br /> 否則為 0|深層類型是指 (var)binary 和 (n)(var)char 類型。|  
+|填補|如果沒有深層類型資料行：0<br /><br /> 如果有深層類型資料行，則會根據淺層資料行所需的最大對齊加入 0-7 個位元組填補。 每個淺層資料行的對齊都需等於其大小 (如上面所記載)，除了 GUID 資料行需要 1 個位元組 (非 16) 的對齊，而數值資料行一律需要 8 個位元組 (絕不是 16) 的對齊。 所有淺層資料行之間都會使用最大對齊需求，並且加入 0-7 個位元組填補，使得目前為止的大小總計 (不包括深層類型資料行) 為所需對齊的倍數。|深層類型是指 (var)binary 和 (n)(var)char 類型。|  
+|固定長度的深層類型資料行|SUM([固定長度的深層類型資料行大小])<br /><br /> 每個資料行的大小如下所示：<br /><br /> i 代表 char(i) 和 binary(i)。<br /><br /> 2 * i 代表 nchar(i)|固定長度的深層類型資料行為 char(i)、nchar(i) 或 binary(i) 類型的資料行。|  
+|可變長度的深層類型資料行 [計算的大小]|SUM([可變長度的深層類型資料行計算的大小])<br /><br /> 每個資料行計算的大小如下所示：<br /><br /> i 代表 varchar(i) 和 varbinary(i)<br /><br /> 2 * i 代表 nvarchar(i)|這個資料列只會套用至 [計算的資料列主體大小]。<br /><br /> 可變長度的深層類型資料行為 varchar(i)、nvarchar(i) 或 varbinary(i) 類型的資料行。 計算的大小是由資料行的最大長度 (i) 所決定。|  
+|可變長度的深層類型資料行 [實際大小]|SUM([可變長度的深層類型資料行的實際大小])<br /><br /> 每個資料行的實際大小如下所示：<br /><br /> n (n 是儲存在資料行中的字元數) 代表 varchar(i)。<br /><br /> 2 * n (n 是儲存在資料行中的字元數) 代表 nvarchar(i)。<br /><br /> n (n 是儲存在資料行中的位元組數) 代表 varbinary(i)。|這個資料列只會套用至 [實際資料列主體大小]。<br /><br /> 實際大小是由儲存在資料列的資料行中的資料所決定。|   
   
 ##  <a name="bkmk_ExampleComputation"></a> 範例：資料表和資料列大小計算  
  若是雜湊索引，實際值區計數會無條件進位到最接近的二乘冪。 例如，如果指定的 bucket_count 是 100000，則索引的實際值區計數為 131072。  
@@ -231,8 +236,22 @@ GO
 select * from sys.dm_db_xtp_table_memory_stats  
 where object_id = object_id('dbo.Orders')  
 ```  
+
+##  <a name="bkmk_OffRowLimitations"></a> Off-row 資料行限制
+  以下為在記憶體最佳化資料表中使用 off-row 資料行的某些限制與警告：
   
-## <a name="see-also"></a>另請參閱  
+-   如果記憶體最佳化資料表中有資料行存放區索引，則所有的資料行都必須調整為 in-row。 
+-   所有的索引鍵資料行都必須儲存成 in-row。 如果索引鍵資料行不調整到 in-row，則新增索引就會失敗。 
+-   有關[改變具有 off-row 資料行的記憶體最佳化資料表](../../relational-databases/in-memory-oltp/altering-memory-optimized-tables.md)的警告。
+-   大小限制鏡像磁碟資料表的 LOB (LOB 值的限制是 2 GB)。 
+-   為達最佳效能，建議將大多數的資料行調整到 8060 個位元組內。 
+
+[What's new for In-Memory OLTP in SQL Server 2016 since CTP3](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/25/whats-new-for-in-memory-oltp-in-sql-server-2016-since-ctp3) (SQL Server 2016 自 CTP3 後的記憶體內部 OLTP 新功能) 部落格文章會對這些複雜性的一部分詳加說明。   
+ 
+<a id="see-also" class="xliff"></a>
+
+## 另請參閱  
  [記憶體最佳化資料表](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   
+

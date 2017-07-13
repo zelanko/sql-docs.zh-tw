@@ -16,17 +16,21 @@ caps.latest.revision: 54
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 8df15a6d8f9875fbecf9e14fcdae51d37c7154fe
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/10/2017
 
 ---
-# <a name="full-text-search"></a>全文檢索搜尋
+<a id="full-text-search" class="xliff"></a>
+
+# 全文檢索搜尋
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 中的全文檢索搜尋可讓使用者和應用程式針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表中以字元為主的資料，執行全文檢索查詢。
   
-## <a name="basic-tasks"></a>基本工作
+<a id="basic-tasks" class="xliff"></a>
+
+## 基本工作
 本主題提供全文檢索搜尋的概觀，並描述其元件和其架構。 如果您想要立即開始，則以下是基本工作。
 -   [全文檢索搜尋使用者入門](../../relational-databases/search/get-started-with-full-text-search.md)
 -   [建立及管理全文檢索目錄](../../relational-databases/search/create-and-manage-full-text-catalogs.md)
@@ -37,7 +41,9 @@ ms.lasthandoff: 06/22/2017
 > [!NOTE]
 > Full-Text Search is an optional component of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Database Engine 的選擇性元件。 如果您在安裝 SQL Server 時未選取全文檢索搜尋，請重新執行 SQL Server 安裝程式予以新增。
 
-## <a name="overview"></a>概觀
+<a id="overview" class="xliff"></a>
+
+## 概觀
 全文檢索索引包括資料表中一或多個以字元為基礎的資料行。 這些資料行可以具有下列任何資料類型：**char**、**varchar**、**nchar**、**nvarchar**、**text**、**ntext**、**image**、**xml** 或 **varbinary(max)** 和 **FILESTREAM**。 每個全文檢索索引都會為資料表中的一個或多個資料行建立索引，而且每個資料行都可以使用特定的語言。  
   
  全文檢索查詢會根據特定語言的規則 (例如英文或日文) 在單字與片語上運作，藉以針對全文檢索索引中的文字資料執行語言搜尋。 全文檢索查詢可以包含簡單的單字和片語，或者單字或片語的多種形式。 全文檢索查詢會傳回至少包含一個符合項目 (也稱為 *「叫用」*(Hit)) 的任何文件。 如果目標文件包含全文檢索查詢中指定的所有詞彙，而且符合其他搜尋條件 (例如相符詞彙之間的距離)，就會出現符合項目。    
@@ -146,7 +152,9 @@ ms.lasthandoff: 06/22/2017
 ###  <a name="querying"></a> 全文檢索查詢處理序  
  查詢處理器會將查詢的全文檢索部分傳遞至全文檢索引擎，以便進行處理。 全文檢索引擎會執行斷詞並選擇性地執行同義字展開、詞幹分析和停用字詞 (非搜尋字) 處理。 然後，查詢的全文檢索部分會以 SQL 運算子的形式表示，主要表示成資料流資料表值函式 (STVF)。 在查詢執行期間，這些 STVF 會存取反向索引來擷取正確的結果。 接著，這些結果會在此時傳回用戶端，或在傳回用戶端之前進一步處理。  
 
-## <a name="full-text-index-architecture"></a>全文檢索索引架構
+<a id="full-text-index-architecture" class="xliff"></a>
+
+## 全文檢索索引架構
   全文檢索引擎會使用全文檢索索引中的資訊來編譯全文檢索查詢，以便快速地在資料表中搜尋特定字詞或字詞組合。 全文檢索索引會儲存重要單字及這些單字在資料庫資料表之一或多個資料行內位置的相關資訊。 全文檢索索引是一種特殊類型的 Token 式功能索引，由 Full-Text Engine for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]所建立與維護。 建立全文檢索索引的程序與建立其他索引類型的程序大不相同。 全文檢索引擎會根據個別 Token 從索引中的文字建立反向、堆疊以及壓縮的索引結構，而不是根據特定資料列中所儲存的值來建構 B 型樹狀結構。  全文檢索索引的大小只受限於執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之電腦的可用記憶體資源。  
   
  從 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]開始，全文檢索索引會與 Database Engine 整合在一起，而非位於檔案系統中，如同舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 在新的資料庫中，全文檢索目錄現在是不屬於任何檔案群組的虛擬物件。它只是參考一組全文檢索索引的邏輯概念。 不過，請注意，在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 資料庫 (含有資料檔案的任何全文檢索目錄) 的升級期間，系統會建立新的檔案群組。如需詳細資訊，請參閱 [升級全文檢索搜尋](../../relational-databases/search/upgrade-full-text-search.md)。  
@@ -232,7 +240,9 @@ ms.lasthandoff: 06/22/2017
 |組件|1|2|6|  
 |3|1|2|7|  
 
-### <a name="differences-between-full-text-indexes-and-regular-sql-server-indexes"></a>全文檢索索引與一般 SQL Server 索引之間的差異：  
+<a id="differences-between-full-text-indexes-and-regular-sql-server-indexes" class="xliff"></a>
+
+### 全文檢索索引與一般 SQL Server 索引之間的差異：  
   
 |全文檢索索引|一般 SQL Server 索引|  
 |------------------------|--------------------------------|  
