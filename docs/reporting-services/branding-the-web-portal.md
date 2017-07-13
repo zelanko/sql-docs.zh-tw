@@ -1,7 +1,7 @@
 ---
 title: "商標 web 入口網站 |Microsoft 文件"
 ms.custom: 
-ms.date: 05/25/2017
+ms.date: 07/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,22 +15,24 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 19742f59b104d18633a954dc2f8bc9824b58ef21
+ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
+ms.openlocfilehash: fcca4ace177a9d606a49db485fe6c61c4ef24355
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/03/2017
 
 ---
 
-# <a name="branding-the-web-portal"></a>建立入口網站品牌形象
+# 建立入口網站品牌形象
+<a id="branding-the-web-portal" class="xliff"></a>
 
-[!INCLUDE[ssrs-appliesto-sql2016-preview](../includes/ssrs-appliesto-sql2016-preview.md)]
+[!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
 您可以在入口網站上打造您的企業品牌形象，藉以變更入口網站的外觀。 這是透過品牌封裝來完成。 品牌封裝已完成設計，因此您不需要具備深度階層式樣式表 (CSS) 的知識，就能建立它。  
   
 <iframe width="560" height="315" src="https://www.youtube.com/embed/m08kLuofwFA?list=PLv2BtOtLblH3F--8WmK9QcLbx6dV_lVkL" frameborder="0" allowfullscreen></iframe>  
    
-## <a name="creating-the-brand-package"></a>建立品牌封裝  
+## 建立品牌封裝
+<a id="creating-the-brand-package" class="xliff"></a>  
   
 Reporting Services 的品牌封裝包含三個項目且會封裝為 zip 檔案。   
   
@@ -40,7 +42,8 @@ Reporting Services 的品牌封裝包含三個項目且會封裝為 zip 檔案�
   
 檔案必須具備上述的名稱。 不過您可以隨意命名 zip 檔案。  
   
-### <a name="metadataxml"></a>metadata.xml  
+### metadata.xml
+<a id="metadataxml" class="xliff"></a>  
   
 Metadata.xml 檔案可讓您設定品牌封裝的名稱，並擁有對 colors.json 和 logo.png 檔案的參考項目。  
   
@@ -63,7 +66,8 @@ Metadata.xml 檔案可讓您設定品牌封裝的名稱，並擁有對 colors.js
       <Item key="logo" path="logo.png" />  
     </Contents>  
   
-### <a name="colorsjson"></a>Colors.json  
+### Colors.json
+<a id="colorsjson" class="xliff"></a>  
   
 上傳品牌封裝時，伺服器會從 colors.json 檔案擷取適當的名稱/值組，並將它們與主要的 LESS 樣式表合併 (brand.less)。 系統接著會處理這個 LESS 檔案，並將產生的 CSS 檔案提供給用戶端。 樣式表中的所有色彩都會遵循色彩的六個字元的十六進位表示法。  
   
@@ -114,13 +118,15 @@ LESS 樣式表所包含的區塊會參考某些預先定義的 LESS 變數，如
   
 接著可針對您建立的任何行動報表使用該佈景主題，即使它們不在您已部署該佈景主題的同一部伺服器上。   
   
-### <a name="using-a-logo"></a>使用標誌  
+### 使用標誌
+<a id="using-a-logo" class="xliff"></a>  
   
 如果您在品牌封裝中包含標誌，則它會出現在入口網站中，來取代您在 [站台設定] 功能表中針對入口網站所設定的名稱。  
   
 您針對標誌所納入的檔案必須使用 PNG 檔案格式。 檔案維度會在上傳至伺服器之後加以調整。 它應該會調整為大約 290px x 60px。  
    
-## <a name="applying-the-brand-package-to-the-web-portal"></a>將品牌封裝套用至入口網站  
+## 將品牌封裝套用至入口網站
+<a id="applying-the-brand-package-to-the-web-portal" class="xliff"></a>  
   
 若要加入、下載或移除品牌封裝，您可以執行下列動作。  
   
@@ -140,7 +146,8 @@ LESS 樣式表所包含的區塊會參考某些預先定義的 LESS 變數，如
   
 您也可以 **下載** 或 **移除** 封裝。 移除封裝會立即將入口網站重設為預設品牌。  
   
-## <a name="metadataxml-example"></a>metadata.xml 範例  
+## metadata.xml 範例
+<a id="metadataxml-example" class="xliff"></a>  
   
     \<?xml version="1.0" encoding="utf-8"?>  
     <SystemResourcePackage xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/systemresourcepackagemetadata"  
@@ -154,7 +161,8 @@ LESS 樣式表所包含的區塊會參考某些預先定義的 LESS 變數，如
         </Contents>  
     </SystemResourcePackage>  
    
-## <a name="colorsjson-example"></a>colors.json 範例  
+## colors.json 範例
+<a id="colorsjson-example" class="xliff"></a>  
   
     {  
         "name":"Multicolored example brand",  

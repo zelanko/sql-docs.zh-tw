@@ -1,6 +1,6 @@
 ---
 title: "SQL Server Reporting Services SQL Server 2016 中的行為變更 |Microsoft 文件"
-ms.date: 05/30/2017
+ms.date: 07/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -28,18 +28,26 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: f052253295b400bbbbe9d0db25349916e19c2ad2
+ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
+ms.openlocfilehash: b97215eceda641e7478edb659e61298e43b00859
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/03/2017
 
 ---
-# <a name="behavior-changes-to-sql-server-reporting-services--in-sql-server-2016"></a>SQL Server 2016 中 SQL Server Reporting Services 的行為變更
-  本主題描述 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]中的行為變更。 行為變更會影響功能的運作或互動 SQL Server 2016 中，相較於舊版的 SQL Server。  
-  
- 行為沒有任何變更。
 
-## <a name="next-steps"></a>後續的步驟
+# SQL Server Reporting Services SQL Server 2016 中的行為變更
+<a id="behavior-changes-to-sql-server-reporting-services-in-sql-server-2016" class="xliff"></a>
+
+[!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
+
+[!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]
+
+本主題描述 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]中的行為變更。 行為變更會影響功能的運作或互動 SQL Server 2016 中，相較於舊版的 SQL Server。  
+
+行為沒有任何變更。
+
+## 後續的步驟
+<a id="next-steps" class="xliff"></a>
 
 [Reporting Services 中最新消息](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)    
 [SQL Server 2016 中 SQL Server Reporting Services 已被取代的功能](../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)  

@@ -1,7 +1,7 @@
 ---
 title: "使用共用資料集 （入口網站） |Microsoft 文件"
 ms.custom: 
-ms.date: 05/15/2017
+ms.date: 07/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,21 +15,23 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 6dfbc134c0f0e351648d19cf8c485fe25a58eb99
+ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
+ms.openlocfilehash: 40f29d8cd68a60f88e2077a16f745f8e37bf35f2
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/03/2017
 
 ---
-# <a name="work-with-shared-datasets---web-portal"></a>使用共用資料集的 web 入口網站
+# 使用共用資料集的 web 入口網站
+<a id="work-with-shared-datasets---web-portal" class="xliff"></a>
 
-[!INCLUDE[ssrs-appliesto-sql2016-preview](../includes/ssrs-appliesto-sql2016-preview.md)]
+[!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
 您可以使用共用資料集，從報表及其他使用該資料集的目錄項目，個別管理資料集的設定。 共用資料集可以隨 KPI 搭配分頁和行動報表使用。
 
 您可以檢視和管理入口網站內共用資料集的屬性。 入口網站可以啟動「報表產生器」來建立或編輯共用資料集。
 
-## <a name="create-a-shared-dataset"></a>建立共用資料集
+## 建立共用資料集
+<a id="create-a-shared-dataset" class="xliff"></a>
   
 您可以執行以下步驟來建立新的共用資料集。  
   
@@ -47,7 +49,8 @@ ms.lasthandoff: 06/22/2017
   
 6.  建置您的資料集，然後選取左上方的 [儲存] 圖示來將資料集儲存回報表伺服器。  
   
-## <a name="manage-an-existing-shared-dataset"></a>管理現有的共用資料集
+## 管理現有的共用資料集
+<a id="manage-an-existing-shared-dataset" class="xliff"></a>
   
 您可以執行以下步驟來管理現有的共用資料集。  
   
@@ -62,13 +65,15 @@ ms.lasthandoff: 06/22/2017
   
     ![ssRSDataset-Manage](../reporting-services/media/ssrsdataset-manage.png)  
   
-## <a name="properties"></a>屬性
+## 屬性
+<a id="properties" class="xliff"></a>
   
 在 [屬性] 畫面中，您可以變更該資料集的 [名稱] 和 [描述]。 您也可以 [刪除]、[移動]、[在報表產生器中編輯]、[下載] 或 [取代]。  
   
 ![ssRSdataset-Properties](../reporting-services/media/ssrsdataset-properties.png)  
   
-## <a name="caching"></a>快取
+## 快取
+<a id="caching" class="xliff"></a>
   
 您有幾個選項可以快取資料集的資料。 先從簡單的選取步驟開始。  
   
@@ -82,7 +87,8 @@ ms.lasthandoff: 06/22/2017
   
 ![ssRSDataset-Caching2](../reporting-services/media/ssrsdataset-caching2.png)  
   
-### <a name="cache-expiration"></a>快取到期  
+### 快取到期
+<a id="cache-expiration" class="xliff"></a>  
   
 您可以控制是否要讓共用資料集的快取在一段時間後到期，您也可以選擇用排程來控制。 您可以使用共用排程。  
   
@@ -91,7 +97,8 @@ ms.lasthandoff: 06/22/2017
 > [!NOTE]
 > 設定到期時間不會重新整理快取。 若沒有快取重新整理計劃，則會在資料集下次執行的時候重新整理資料。  
   
-### <a name="cache-refresh-plans"></a>快取重新整理計劃  
+### 快取重新整理計劃
+<a id="cache-refresh-plans" class="xliff"></a>  
   
 您可以使用「快取重新整理計劃」來建立排程，以供預先載入含共用資料集之資料暫存複本的快取。 重新整理計劃包括排程和選項，可指定或覆寫參數的值。 您不能覆寫標示為唯讀的參數值。 您可以建立並使用多個重新整理計劃。   
   

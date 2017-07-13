@@ -1,7 +1,7 @@
 ---
 title: "資料警示管理員讓 SharePoint 使用者 |Microsoft 文件"
 ms.custom: 
-ms.date: 05/10/2017
+ms.date: 07/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -19,17 +19,21 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: f8d31181dd32ab6d48bdc3452986c6ed1c51f9f8
+ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
+ms.openlocfilehash: e9644b5bfcc57b24793684095aba912c688346b8
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/03/2017
 
 ---
-# <a name="data-alert-manager-for-sharepoint-users"></a>SharePoint 使用者的資料警示管理員
 
-[!INCLUDE[ssrs-appliesto-sql2016-xpreview](../includes/ssrs-appliesto-sql2016-xpreview.md)][!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
+# SharePoint 使用者的資料警示管理員
+<a id="data-alert-manager-for-sharepoint-users" class="xliff"></a>
 
-[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 為 SharePoint 資訊工作者提供了 [資料警示管理員] 以管理資料警示。 資訊工作者可以檢視自己所建立警示的資訊、刪除警示、開啟警示定義進行編輯，以及視需要執行警示。 他們可以選擇僅檢視單一報表的警示，或是所有報表的警示。 下圖說明 [資料警示管理員] 中可供資訊工作者使用的功能。
+[!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
+
+[!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]
+
+[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]提供資料警示管理員為管理資料警示的 SharePoint 資訊工作者。 資訊工作者可以檢視自己所建立警示的資訊、刪除警示、開啟警示定義進行編輯，以及視需要執行警示。 他們可以選擇僅檢視單一報表的警示，或是所有報表的警示。 下圖說明 [資料警示管理員] 中可供資訊工作者使用的功能。
 
 ![SharePoint 使用者的警示管理員功能](../reporting-services/media/rs-alertmanageriw.gif "SharePoint 使用者的警示管理員功能")  
 
@@ -68,7 +72,7 @@ ms.lasthandoff: 06/22/2017
   
   
 ##  <a name="EditAlerts"></a> 編輯資料警示  
- 身為資訊工作者，您可以從 [資料警示管理員] 中開啟警示定義進行編輯。 您可以編輯自己建立的警示定義，但無法編輯其他人建立的警示定義。 您以滑鼠右鍵按一下警示定義，然後按一下 [編輯]，[資料警示設計工具] 就會開啟，並且顯示警示定義。 如需詳細資訊，請參閱 [資料警示設計工具](../reporting-services/data-alert-designer.md) 和 [在警示設計工具中編輯資料警示](../reporting-services/edit-a-data-alert-in-alert-designer.md)。  
+ 身為資訊工作者，您可以從 [資料警示管理員] 中開啟警示定義進行編輯。 您可以編輯自己建立的警示定義，但無法編輯其他人建立的警示定義。 您以滑鼠右鍵按一下警示定義，然後按一下 [編輯]，[資料警示設計工具] 就會開啟，並且顯示警示定義。 如需詳細資訊，請參閱[資料警示設計工具](../reporting-services/data-alert-designer.md)和[在警示設計工具中編輯資料警示](../reporting-services/edit-a-data-alert-in-alert-designer.md)。  
   
   
 ##  <a name="RunAlerts"></a> 執行資料警示  
@@ -81,12 +85,13 @@ ms.lasthandoff: 06/22/2017
 ##  <a name="HowTo"></a> 相關工作  
  本節列出如何管理和編輯警示定義的程序。  
   
--   [在資料警示管理員中管理我的資料警示](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md)  
+-   [管理我的資料警示管理員 中的資料警示](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md)  
   
--   [在警示設計工具中編輯資料警示](../reporting-services/edit-a-data-alert-in-alert-designer.md)  
+-   [編輯資料警示設計工具中警示](../reporting-services/edit-a-data-alert-in-alert-designer.md)  
 
 
-## <a name="see-also"></a>請參閱＜
+## 請參閱＜
+<a id="see-also" class="xliff"></a>
 
 [資料警示設計工具](../reporting-services/data-alert-designer.md)   
 [在 資料警示設計工具中建立資料警示](../reporting-services/create-a-data-alert-in-data-alert-designer.md)   

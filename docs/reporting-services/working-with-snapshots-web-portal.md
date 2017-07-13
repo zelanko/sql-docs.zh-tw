@@ -1,7 +1,7 @@
 ---
 title: "使用快照集 （入口網站） |Microsoft 文件"
 ms.custom: 
-ms.date: 05/25/2017
+ms.date: 07/02/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -15,15 +15,17 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: f158c027acfd2acdf7a745c640babad561ec0d20
+ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
+ms.openlocfilehash: 2bca4e3089bde763669c4fe518f509fbe94cb6eb
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/03/2017
 
 ---
-# <a name="working-with-snapshots-web-portal"></a>使用快照集 (入口網站)
 
-[!INCLUDE[ssrs-appliesto-sql2016-preview](../includes/ssrs-appliesto-sql2016-preview.md)]
+# 使用快照集 (入口網站)
+<a id="working-with-snapshots-web-portal" class="xliff"></a>
+
+[!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
 如果選取的報表建立快照集，您可以控制**省略符號 （...）**的報表，請選取**管理**，然後選取**快取**或**記錄快照集**。  
   
@@ -32,7 +34,8 @@ ms.lasthandoff: 06/22/2017
    
 您可以建立快取快照集，以允許更快速地載入特定執行屬性。 您也可以使用記錄快照集來擷取時間點。  
   
-## <a name="creating-a-cache-snapshot"></a>建立快取快照集  
+## 建立快取快照集
+<a id="creating-a-cache-snapshot" class="xliff"></a>  
   
 您可以透過下列方式建立快照集。  
   
@@ -44,7 +47,8 @@ ms.lasthandoff: 06/22/2017
   
 3.  如果您想要立即建立快取快照集，請選取 [在我按一下此頁面上的 [套用] 時建立快取快照集]。 如果您只選取這個選項，將不會重新整理快照集。  
   
-## <a name="create-modify-and-delete-history-snapshots"></a>建立、修改及刪除記錄快照集  
+## 建立、修改及刪除記錄快照集
+<a id="create-modify-and-delete-history-snapshots" class="xliff"></a>  
   
 若要使用記錄快照集，請管理報表並選取 [記錄快照集]。  
   
@@ -62,7 +66,8 @@ ms.lasthandoff: 06/22/2017
   
 3.  您可以選取並檢視記錄快照集。 報表記錄中顯示的快照集只能以建立日期和時間來區分。 沒有視覺指示可以區分快照集是回應排程而建立或是手動作業所建立。  
   
-### <a name="schedule-and-settings"></a>排程及設定  
+### 排程及設定
+<a id="schedule-and-settings" class="xliff"></a>  
   
 選取 [排程及設定] 會提供其他選項，以排程及控制所建立之快照集的保留期。  
   
@@ -76,7 +81,8 @@ ms.lasthandoff: 06/22/2017
   
 選取此選項，將根據報表執行屬性所產生的報表快照集，複製到報表記錄。 可以將報表執行屬性設定為，從產生的快照集來執行報表。 設定此報表記錄屬性，就可以將所有長期產生的報表快照集複本，放入報表記錄中作為保存。
 
-## <a name="next-steps"></a>後續的步驟
+## 後續的步驟
+<a id="next-steps" class="xliff"></a>
 
 [Web 入口網站](../reporting-services/web-portal-ssrs-native-mode.md)  
 [使用分頁報表](working-with-paginated-reports-web-portal.md)  
