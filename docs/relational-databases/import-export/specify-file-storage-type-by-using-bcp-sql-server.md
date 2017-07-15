@@ -24,14 +24,16 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: fc454960a271c4fdfeb5e04337b2fb8ab1790127
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
-# <a name="specify-file-storage-type-by-using-bcp-sql-server"></a>使用 bcp 指定檔案儲存類型 (SQL Server)
+# 使用 bcp 指定檔案儲存類型 (SQL Server)
+<a id="specify-file-storage-type-by-using-bcp-sql-server" class="xliff"></a>
   *檔案儲存類型* 描述資料如何儲存在資料檔中。 資料可以依其資料庫資料表類型 (原生格式)、依其字元表示 (字元格式)，或者依支援隱含轉換的任何資料類型匯出至資料檔；例如，將 **smallint** 複製為 **int**。 使用者自訂資料類型會依其基底類型匯出。  
   
-## <a name="the-bcp-prompt-for-file-storage-type"></a>檔案儲存類型的 bcp 提示  
- 如果互動式 **bcp** 命令包含 **in** 或 **out** 選項，但沒有格式檔案參數 (**-f**) 或資料格式參數 (**-n**、 **-c**、 **-w**或 **-N**)，此命令就會提示您輸入每個資料欄位的檔案儲存類型，如下所示：  
+## 檔案儲存類型的 bcp 提示
+<a id="the-bcp-prompt-for-file-storage-type" class="xliff"></a>  
+ 如果互動式 **bcp** 命令包含 **in** 或 **out** 選項，但沒有格式檔案參數 (**-f**) 或資料格式參數 (**-n**、**-c**、**-w** 或 **-N**)，此命令就會提示您輸入每個資料欄位的檔案儲存類型，如下所示：  
   
  `Enter the file storage type of field <field_name> [<default>]:`  
   
@@ -81,7 +83,8 @@ ms.lasthandoff: 04/11/2017
   
      \*\***的未來版本將會移除**ntext **、**text **及** image [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料類型。 請避免在新的開發工作中使用這些資料類型，並規劃修改目前使用這些資料類型的應用程式。 請改用 **nvarchar(max)**、 **varchar(max)**和 **varbinary(max)** 。  
   
-## <a name="native-file-storage-types"></a>原生檔案儲存類型  
+## 原生檔案儲存類型
+<a id="native-file-storage-types" class="xliff"></a>  
  每個原生檔案儲存類型都記錄於格式檔案內，做為對應的主機檔案資料類型。  
   
 |檔案儲存類型|主檔案資料類型|  
@@ -117,7 +120,8 @@ ms.lasthandoff: 04/11/2017
   
  \*\*您無法將資料大量匯入具有 DEFAULT 值的 **text**、 **ntext**及 **image** 資料行。  
   
-## <a name="additional-considerations-for-file-storage-types"></a>檔案儲存類型的額外考量  
+## 檔案儲存類型的額外考量
+<a id="additional-considerations-for-file-storage-types" class="xliff"></a>  
  當您將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的資料大量匯出到資料檔案時：  
   
 -   您一律可以將檔案儲存類型指定為 **char** 。  
@@ -129,7 +133,8 @@ ms.lasthandoff: 04/11/2017
     > [!NOTE]  
     >  以互動方式在 **bcp** 命令中指定所有欄位之後，此命令會提示您將每個欄位的回應儲存為非 XML 格式檔案。 如需非 XML 格式檔案的詳細資訊，請參閱[非 XML 格式檔案 &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## 另請參閱
+<a id="see-also" class="xliff"></a>  
  [bcp 公用程式](../../tools/bcp-utility.md)   
  [資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [使用 bcp 指定欄位長度 &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-length-by-using-bcp-sql-server.md)   

@@ -19,13 +19,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 727d9ccd8cd1e40d89cfe74291edae92988b407c
-ms.openlocfilehash: 4650cfdda4eef32d1d09f4d4407b61f964832b8d
+ms.sourcegitcommit: aad94f116c1a8b668c9a218b32372424897a8b4a
+ms.openlocfilehash: 53e0f5d479d7fc3cdeae2c6ce121734b6fc16f21
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 06/28/2017
 
 ---
-# <a name="monitoring-performance-by-using-the-query-store"></a>使用查詢存放區監視效能
+# 使用查詢存放區監視效能
+<a id="monitoring-performance-by-using-the-query-store" class="xliff"></a>
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查詢存放區功能為您提供關於查詢計劃選擇及效能的深入資訊。 其可協助您您快速找出由於查詢計劃變更所導致的效能差異，以簡化效能疑難排解作業。 查詢存放區會自動擷取查詢、計劃和執行階段統計資料的歷程記錄，並將其保留供您檢閱。 其會以時段來區分資料、供您查看資料庫使用模式，並了解何時在伺服器上發生查詢計劃變更。 使用 [ALTER DATABASE SET] [](../../t-sql/statements/alter-database-transact-sql-set-options.md) 選項可設定查詢存放區。 
@@ -35,7 +36,8 @@ ms.lasthandoff: 06/23/2017
 ##  <a name="Enabling"></a> Enabling the Query Store  
  新的資料庫預設不會啟用查詢存放區。  
   
-#### <a name="use-the-query-store-page-in-management-studio"></a>使用 Management Studio 中的查詢存放區頁面  
+#### 使用 Management Studio 中的查詢存放區頁面
+<a id="use-the-query-store-page-in-management-studio" class="xliff"></a>  
   
 1.  在 [物件總管] 中，以滑鼠右鍵按一下資料庫，然後按一下 [屬性] 。  
   
@@ -46,7 +48,8 @@ ms.lasthandoff: 06/23/2017
   
 3.  在 [作業模式 (要求)]  方塊中，選取 [開啟] 。  
   
-#### <a name="use-transact-sql-statements"></a>使用 Transact-SQL 陳述式  
+#### 使用 Transact-SQL 陳述式
+<a id="use-transact-sql-statements" class="xliff"></a>  
   
 1.  使用 **ALTER DATABASE** 陳述式可啟用查詢存放區。 例如：  
   
@@ -63,7 +66,9 @@ ms.lasthandoff: 06/23/2017
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中任何特定查詢的執行計劃通常會在一段時間後，因為統計資料的變更、結構描述變更、建立/刪除索引等數種不同原因而有所演變。儲存快取的查詢計劃之程序快取，只會儲存最新的執行計劃。 計劃也會因為記憶體不足的壓力，而從計劃快取中收回。 因此，因為執行計劃變更所造成的查詢效能低下，可能相形重要，而且可能需要許多時間才可解決。  
   
  因為查詢存放區會為每項查詢保留多個執行計劃，其可強制套用原則以指示查詢處理器要為查詢使用特定的執行計劃。 這也稱為強制執行計劃。 查詢存放區中的強制執行計劃，透過類似於 [USE PLAN](../../t-sql/queries/hints-transact-sql-query.md) 查詢提示的機制加以提供，但它不需要在使用者應用程式中進行任何變更。 強制執行計劃可以解決在非常短的期間內，因計劃變更所導致的查詢效能低下。  
-  
+
+ **等候統計資料**是另一種可協助您針對 SQL Server 效能進行疑難排解的來源資訊。 等候統計資料長久以來只能在執行個體層級取得，難以回溯至實際的查詢。 在 SQL Server 2017 和 Azure SQL Database 中，我們在查詢存放區中新增了另一個維度，追蹤等候統計資料。 
+
  使用查詢存放區功能的常見情況包括：  
   
 -   強制執行先前的查詢計劃，快速找出並修正計劃效能低下。 修正因為執行計劃變更而最近出現的效能低下。  
@@ -75,8 +80,15 @@ ms.lasthandoff: 06/23/2017
 -   稽核指定的查詢之查詢計劃記錄。  
   
 -   分析特定資料庫的資源 (CPU、I/O 及記憶體) 使用模式。  
+-   識別前 n 項等候資源的查詢。 
+-   了解特定查詢或計劃的等候本質。
   
- 查詢存放區包含兩個存放區。 **計劃存放區** 可保存執行計劃資訊，而 **執行階段統計資料存放區** 則會保存執行統計資料資訊。 計劃存放區中可為查詢儲存的不重複計劃數目，受限於 **max_plans_per_query** 組態選項。 若要增強效能，資訊會以非同步方式寫入兩個存放區。 若要將空間使用量降至最低，在執行階段統計資料存放區中的執行階段執行統計資料，會以固定的時段彙總。 對查詢存放區目錄檢視進行查詢時，會顯示這些存放區中的資訊。  
+查詢存放區包含三個存放區：
+- **計劃存放區**以保存執行計劃資訊。
+- **執行階段統計資料存放區**以保存執行統計資料資訊。 
+- **等候統計資料存放區**以保存等候統計資料資訊。
+ 
+ 計劃存放區中可為查詢儲存的不重複計劃數目，受限於 **max_plans_per_query** 組態選項。 若要增強效能，資訊會以非同步方式寫入兩個存放區。 若要將空間使用量降至最低，在執行階段統計資料存放區中的執行階段執行統計資料，會以固定的時段彙總。 對查詢存放區目錄檢視進行查詢時，會顯示這些存放區中的資訊。  
   
  下列查詢會傳回查詢存放區中查詢與計劃的相關資訊。  
   
@@ -99,7 +111,21 @@ JOIN sys.query_store_query_text AS Txt
  ![物件總管中的迴歸查詢](../../relational-databases/performance/media/objectexplorerregressedqueries.PNG "物件總管中的迴歸查詢")  
   
  若要強制執行計劃，請選取查詢與計劃，然後按一下 [強制執行計劃] 。 您只可以強制執行由查詢計劃功能所儲存且仍保留在查詢計劃快取中的計劃。  
- 
+##  <a name="Waiting"></a>尋找等候查詢
+
+自 SQL Server 2017 CTP 2.0 開始以及在 Azure SQL Database 上，一段時間後每個查詢的等待統計資料皆可提供查詢存放區客戶使用。 在查詢存放區中，等候類型會合併到**等候類別**。 完整對應請參閱 [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)。
+
+**等候類別**會將不同的等候類型合併到本質類似的貯體中。 不同的等候類別需要不同的後續操作分析來解決問題，但同類別的等候類型會導致非常類似的疑難排解體驗，而提供受影響的前幾項查詢可能就是順利完成大部分這類調查所缺少的片段。
+
+以下範例示範如何在查詢存放區引入等候類別之前及之後深入了解您的工作負載：
+
+|||| 
+|-|-|-|  
+|過去的體驗|新的體驗|動作|
+|每個資料庫的高 RESOURCE_SEMAPHORE 等候|查詢存放區特定查詢的高記憶體等候|尋找查詢存放區中前幾項最耗記憶體的查詢。 這些查詢可能會延遲受影響查詢的進度。 請考慮對這些查詢或受影響的查詢使用 MAX_GRANT_PERCENT 查詢提示。|
+|每個資料庫的高 LCK_M_X 等候|查詢存放區特定查詢的高鎖定等候|檢查受影響查詢的查詢文字，找出目標項目。 在查詢存放區中尋找修改相同項目的其他查詢，這些查詢經常執行且/或持續時間很長。 找出這些查詢之後，請考慮變更應用程式邏輯以改善並行，或使用較不嚴格的隔離等級。|
+|每個資料庫的高 PAGEIOLATCH_SH 等候|查詢存放區特定查詢的高緩衝區 IO 等候|在查詢存放區中尋找有大量實體讀取次數的查詢。 如果它們符合高 IO 等候的查詢，請考慮引入基礎實體索引搜尋，以執行搜尋而不是掃描，進而將查詢的 IO 負擔降至最低。|
+|每個資料庫的高 SOS_SCHEDULER_YIELD 等候|查詢存放區特定查詢的高 CPU 等候|尋找查詢存放區中前幾項最耗 CPU 的查詢。 在它們中間找出高 CPU 趨勢與受影響查詢之高 CPU 等候相互關聯的查詢。 專注於最佳化這些查詢，它們可能有計劃迴歸或缺少索引。| 
 ##  <a name="Options"></a> Configuration Options 
 
 設定查詢存放區參數可使用下列選項。
@@ -142,7 +168,8 @@ JOIN sys.query_store_query_text AS Txt
 |-|-|  
 |[sys.fn_stmt_sql_handle_from_sql_stmt &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)|| 
   
-### <a name="query-store-catalog-views"></a>查詢存放區目錄檢視  
+### 查詢存放區目錄檢視
+<a id="query-store-catalog-views" class="xliff"></a>  
  目錄檢視會提供查詢存放區的相關資訊。  
 
 ||| 
@@ -152,7 +179,8 @@ JOIN sys.query_store_query_text AS Txt
 |[sys.query_store_query_text &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)|[sys.query_store_runtime_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)|  
 |[sys.query_store_wait_stats &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)|[sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)|  
   
-### <a name="query-store-stored-procedures"></a>查詢存放區預存程序  
+### 查詢存放區預存程序
+<a id="query-store-stored-procedures" class="xliff"></a>  
  預存程序可設定查詢存放區。  
 
 ||| 
@@ -233,7 +261,8 @@ SET QUERY_STORE (
     INTERVAL_LENGTH_MINUTES = 15,  
     SIZE_BASED_CLEANUP_MODE = AUTO,  
     QUERY_CAPTURE_MODE = AUTO,  
-    MAX_PLANS_PER_QUERY = 1000  
+    MAX_PLANS_PER_QUERY = 1000,
+    WAIT_STATS_CAPTURE_MODE = ON 
 );  
 ```  
   
@@ -424,7 +453,24 @@ ORDER BY q.query_id, rsi1.start_time, rsi2.start_time;
 ```  
   
  如果您想要查看所有低下的效能 (不只因方案選擇變更的相關項目)，只要從上一個查詢移除條件 `AND p1.plan_id <> p2.plan_id` 即可。  
-  
+
+ **等候最久的查詢？**
+ 此查詢會傳回等候最久的前 10 項查詢。 
+ 
+ ```tsql 
+  SELECT TOP 10
+    qt.query_text_id,
+    q.query_id,
+    p.plan_id,
+    sum(total_query_wait_time_ms) AS sum_total_wait_ms
+FROM sys.query_store_wait_stats ws
+JOIN sys.query_store_plan p ON ws.plan_id = p.plan_id
+JOIN sys.query_store_query q ON p.query_id = q.query_id
+JOIN sys.query_store_query_text qt ON q.query_text_id = qt.query_text_id
+GROUP BY qt.query_text_id, q.query_id, p.plan_id
+ORDER BY sum_total_wait_ms DESC
+ ```
+ 
  **最近效能低下的查詢 (比較最近的執行與記錄的執行)？** 下一個查詢會依據執行時段，比較查詢的執行。 在此特別的範例中，查詢會比較最近期間內 (1 小時) 與歷程記錄期間 (前一天) 的執行，並找出因 `additional_duration_workload`所引發的項目。 此度量會計算最近的平均執行與記錄的平均執行之間的差，乘以最近執行的數目。 它實際上代表與記錄相較，最近的執行引發了多少額外的時間：  
   
 ```tsql  
@@ -528,7 +574,8 @@ EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;
 EXEC sp_query_store_unforce_plan @query_id = 48, @plan_id = 49;  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## 另請參閱
+<a id="see-also" class="xliff"></a>  
  [查詢存放區的最佳作法](../../relational-databases/performance/best-practice-with-the-query-store.md)   
  [使用含有記憶體內部 OLTP 的查詢存放區](../../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)   
  [查詢存放區使用案例](../../relational-databases/performance/query-store-usage-scenarios.md)   

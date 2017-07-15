@@ -40,10 +40,11 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: bc4b16adf509a811980323e2bc41e3f44c9906d9
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
-# <a name="configure-web-synchronization"></a>設定 Web 同步處理
+# 設定 Web 同步處理
+<a id="configure-web-synchronization" class="xliff"></a>
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 合併式複寫的 Web 同步處理選項可讓您透過網際網路使用 HTTPS 通訊協定進行資料複寫。 若要使用 Web 同步處理，您必須先執行下列組態設定動作：  
@@ -63,7 +64,8 @@ ms.lasthandoff: 04/11/2017
   
  為了簡潔起見，在下列程序中，我們將描述使用本機帳戶的簡化安全性組態。 這個簡化的組態適用於 IIS 與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者和散發者在同一部電腦上執行的安裝，即使您比較可能會使用多伺服器拓撲進行實際執行安裝也一樣 (而且這是建議作法)。 在這些程序中，您可以用網域帳戶來取代本機帳戶。  
   
-## <a name="creating-new-accounts-and-mapping-sql-server-logins"></a>建立新的帳戶並對應 SQL Server 登入  
+## 建立新的帳戶並對應 SQL Server 登入
+<a id="creating-new-accounts-and-mapping-sql-server-logins" class="xliff"></a>  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication Listener (replisapi.dll) 會透過模擬針對與複寫網站相關聯之應用程式集區指定的帳戶，連接至發行者。  
   
  用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication Listener 的帳戶必須擁有如＜ [Merge Agent Security](../../relational-databases/replication/merge-agent-security.md)＞中＜連接到發行者或散發者＞一節底下所描述的權限。 總而言之，此帳戶必須：  
@@ -80,7 +82,8 @@ ms.lasthandoff: 04/11/2017
   
  在設定 Web 同步處理之前，我們建議您先閱讀本主題中的＜Web 同步處理安全性最佳作法＞一節。 如需有關 Web 同步處理安全性的詳細資訊，請參閱＜ [Security Architecture for Web Synchronization](../../relational-databases/replication/security/security-architecture-for-web-synchronization.md)＞。  
   
-## <a name="configuring-the-computer-that-is-running-iis"></a>設定正在執行 IIS 的電腦  
+## 設定正在執行 IIS 的電腦
+<a id="configuring-the-computer-that-is-running-iis" class="xliff"></a>  
  Web 同步處理要求您安裝並設定 IIS。 您需要複寫網站的 URL，然後才能將發行集設定為使用 Web 同步處理。  
   
  IIS 5.0 版開始支援 Web 同步處理。 但是，IIS 7.0 版不支援「設定 Web 同步處理精靈」。 從 SQL Server 2012 開始，若要在 IIS 伺服器上使用 Web 同步處理元件，我們建議使用者安裝具有複寫功能的 SQL Server。 例如，免費的 SQL Server Express Edition。  
@@ -90,18 +93,20 @@ ms.lasthandoff: 04/11/2017
   
  **若要設定 Web 同步處理的 IIS**  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Configure IIS for Web Synchronization](../../relational-databases/replication/configure-iis-for-web-synchronization.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]：[設定 Web 同步處理的 IIS](../../relational-databases/replication/configure-iis-for-web-synchronization.md)  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Configure IIS 7 for Web Synchronization](../../relational-databases/replication/configure-iis-7-for-web-synchronization.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]：[設定 Web 同步處理的 IIS 7](../../relational-databases/replication/configure-iis-7-for-web-synchronization.md)  
   
-## <a name="creating-a-web-garden"></a>建立 Web 處理序區  
+## 建立 Web 處理序區
+<a id="creating-a-web-garden" class="xliff"></a>  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication Listener 支援每個執行緒有兩個並行同步處理作業。 超過這個限制可能會導致 Replication Listener 停止回應。 配置給 replisapi.dll 的執行緒數目是由應用程式集區的 [工作者處理序數上限] 屬性所決定。 根據預設，這個屬性設定為 1。  
   
  您可以透過增加 [工作者處理序數上限] 屬性值，讓每個 CPU 支援較大的並行同步處理作業數目。 透過增加每個 CPU 的工作者處理序數目來進行向外延展的行為稱為建立「Web 處理序區」。  
   
  Web 處理序區會允許兩個以上的訂閱者同時訂閱。 此外，它也會增加 replisapi.dll 的 CPU 使用量，因此可能會對整體伺服器效能造成負面影響。 當您針對 [工作者處理序數上限] 選擇值時，請務必權衡這些考量。  
   
-#### <a name="to-increase-maximum-worker-processes-in-iis-7"></a>若要在 IIS 7 中增加工作者處理序數上限  
+#### 若要在 IIS 7 中增加工作者處理序數上限
+<a id="to-increase-maximum-worker-processes-in-iis-7" class="xliff"></a>  
   
 1.  在 **[Internet Information Services (IIS) 管理員]**中，展開本機伺服器節點，然後按一下 **[應用程式集區]** 節點。  
   
@@ -109,7 +114,8 @@ ms.lasthandoff: 04/11/2017
   
 3.  在 [進階設定] 對話方塊的 **[處理序模型]** 標題底下，按一下標示為 **[工作者處理序數上限]**的列。 變更屬性值，然後按一下 **[確定]**。  
   
-## <a name="configuring-the-publication"></a>設定發行集  
+## 設定發行集
+<a id="configuring-the-publication" class="xliff"></a>  
  若要使用 Web 同步處理，請採用您建立標準合併拓撲的相同方式來建立發行集。 如需詳細資訊，請參閱[發行資料和資料庫物件](../../relational-databases/replication/publish/publish-data-and-database-objects.md)。  
   
  建立發行集之後，請利用下列其中一種方法來啟用允許 Web 同步處理的選項： [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../includes/tsql-md.md)]或 Replication Management Objects (RMO)。 若要啟用 Web 同步處理，您必須提供訂閱者連接的 Web 伺服器位址。  
@@ -118,13 +124,16 @@ ms.lasthandoff: 04/11/2017
   
  **gen** 是 websync XML 檔案中的保留字。 請勿嘗試發行包含資料行名稱 **gen**的資料表。  
   
-## <a name="configuring-the-subscription"></a>設定訂閱  
+## 設定訂閱
+<a id="configuring-the-subscription" class="xliff"></a>  
  啟用發行集及設定 IIS 之後，請建立提取訂閱，並指定提取訂閱應利用 IIS 來同步處理。 (只有提取訂閱才支援 Web 同步處理。)  
   
-## <a name="upgrading-from-an-earlier-version-of-sql-server"></a>從舊版 SQL Server 升級  
+## 從舊版 SQL Server 升級
+<a id="upgrading-from-an-earlier-version-of-sql-server" class="xliff"></a>  
  如果您有設定好的現有 Web 同步處理拓撲，而且要升級 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，您必須確認已將最新版的 Replisapi.dll 複製到 Web 同步處理所使用的虛擬目錄。 根據預設，最新版的 Replisapi.dll 位於 C:\Program Files\Microsoft SQL Server\\<nnn\>\COM。  
   
-## <a name="replicating-large-volumes-of-data"></a>複寫大量資料  
+## 複寫大量資料
+<a id="replicating-large-volumes-of-data" class="xliff"></a>  
  為了避免訂閱者電腦上可能發生的記憶體問題，Web 同步處理會針對用於傳送變更的 XML 檔案使用 100 MB 的預設大小上限。 可以設定以下登錄機碼來設定此限制：  
   
  **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\Replication**  
@@ -143,7 +152,8 @@ ms.lasthandoff: 04/11/2017
   
  若為大量資料，請針對每個批次參數指定一個少量數目。 我們建議您從 10 這個值開始，然後根據需求和效能進行微調。 一般而言，這些參數都指定於代理程式設定檔中。 如需有關設定檔的詳細資訊，請參閱＜ [Replication Agent Profiles](../../relational-databases/replication/agents/replication-agent-profiles.md)＞。  
   
-## <a name="security-best-practices-for-web-synchronization"></a>Web 同步處理安全性最佳作法  
+## Web 同步處理安全性最佳作法
+<a id="security-best-practices-for-web-synchronization" class="xliff"></a>  
  Web 同步處理的安全性相關設定有多種選擇， 我們建議下列方式：  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 散發者和發行者可在同一部電腦上 (適用於合併式複寫的一般設定)。 不過，IIS 應該安裝在另一部電腦上。  
@@ -178,7 +188,8 @@ ms.lasthandoff: 04/11/2017
 > [!IMPORTANT]  
 >  在防火牆中開啟通訊埠可能會讓您的伺服器面臨惡意攻擊的威脅。 請先確定您已了解防火牆系統，然後再開啟通訊埠。 如需詳細資訊，請參閱＜ [Security Considerations for a SQL Server Installation](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)＞。  
   
-## <a name="see-also"></a>另請參閱  
+## 另請參閱
+<a id="see-also" class="xliff"></a>  
  [合併式複寫的 Web 同步處理](../../relational-databases/replication/web-synchronization-for-merge-replication.md)  
   
   

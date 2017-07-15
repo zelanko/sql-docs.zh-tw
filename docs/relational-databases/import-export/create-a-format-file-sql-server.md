@@ -20,10 +20,11 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e2360e69486a82a375c038135616753bf0ed19c0
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
-# <a name="create-a-format-file-sql-server"></a>建立格式檔案 (SQL Server)
+# 建立格式檔案 (SQL Server)
+<a id="create-a-format-file-sql-server" class="xliff"></a>
   當您將資料大量匯入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表，或從資料表大量匯出資料時，可以使用格式檔案提供可用來寫入資料檔的彈性系統，幾乎不需要進行編輯即可符合其他資料格式，或是從其他軟體程式讀取資料檔。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援兩種類型的格式檔案：非 XML 格式和 XML 格式。 非 XML 格式是舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]所支援的原始格式。  
@@ -33,9 +34,10 @@ ms.lasthandoff: 04/11/2017
 > [!NOTE]  
 >  用於讀取格式檔案的 **bcp** 公用程式 (Bcp.exe) 版本，必須與用於建立格式檔案的版本相同或比它更新。 例如， [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]**bcp** 可以讀取由 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]**bcp**產生的 10.0 版的格式檔案，但 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]**bcp** 無法讀取由 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]**bcp**所產生的 11.0 版格式檔案。  
   
- 此主題描述如何使用 [bcp 公用程式](../../tools/bcp-utility.md) 來建立特定資料表的格式檔案。 格式檔案以指定的資料類型選項 (**-n**、 **-c**、 **-w**，或 **-N**) 與資料表或檢視分隔符號為基礎。  
+ 此主題描述如何使用 [bcp 公用程式](../../tools/bcp-utility.md) 來建立特定資料表的格式檔案。 格式檔案以指定的資料類型選項 (**-n**、**-c**、**-w** 或 **-N**) 與資料表或檢視分隔符號為基礎。  
   
-## <a name="creating-a-non-xml-format-file"></a>建立非 XML 格式檔案  
+## 建立非 XML 格式檔案
+<a id="creating-a-non-xml-format-file" class="xliff"></a>  
  使用 **bcp** 命令建立格式檔案時，請指定 **format** 引數並使用 **nul** 取代資料檔案路徑。 **format** 選項也需要 **-f** 選項，例如：  
   
  **bcp** *table_or_view* **format** nul **-f***format_file_name*  
@@ -45,7 +47,8 @@ ms.lasthandoff: 04/11/2017
   
  如需有關非 XML 格式檔案之結構與欄位的詳細資訊，請參閱 [非 XML 格式檔案 &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md)所支援的原始格式。  
   
-### <a name="examples"></a>範例  
+### 範例
+<a id="examples" class="xliff"></a>  
  本節包含下列範例，說明如何使用 **bcp** 命令建立非 XML 格式檔案：  
   
 -   A. 建立原生資料的非 XML 格式檔案  
@@ -60,7 +63,8 @@ ms.lasthandoff: 04/11/2017
   
  這些範例使用 `HumanResources.Department` 範例資料庫中的 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料表。 `HumanResources.Department` 資料表包含四個資料行： `DepartmentID`、 `Name`、 `GroupName`和 `ModifiedDate`。  
   
-#### <a name="a-creating-a-non-xml-format-file-for-native-data"></a>A. 建立原生資料的非 XML 格式檔案  
+#### A. 建立原生資料的非 XML 格式檔案
+<a id="a-creating-a-non-xml-format-file-for-native-data" class="xliff"></a>  
  下列範例會建立 `Department-n.xml`資料表的 XML 格式檔案 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]`HumanResources.Department` 。 格式檔案使用原生資料類型。 所產生之格式檔案的內容，會出現在命令之後。  
   
  **bcp** 命令包含下列限定詞。  
@@ -90,7 +94,8 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -n -f Department-
   
  如需詳細資訊，請參閱 [非 XML 格式檔案 &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md)所支援的原始格式。  
   
-#### <a name="b-creating-a-non-xml-format-file-for-character-data"></a>B. 建立字元資料的非 XML 格式檔案  
+#### B. 建立字元資料的非 XML 格式檔案
+<a id="b-creating-a-non-xml-format-file-for-character-data" class="xliff"></a>  
  下列範例會建立 `Department.fmt`資料表的 XML 格式檔案 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]`HumanResources.Department` 。 格式檔案使用字元資料格式和非預設欄位結束字元 (`,`)。 所產生之格式檔案的內容，會出現在命令之後。  
   
  **bcp** 命令包含下列限定詞。  
@@ -120,7 +125,8 @@ bcp AdventureWorks2012.HumanResources.Department format nul -c -f Department-c.f
   
  如需詳細資訊，請參閱 [非 XML 格式檔案 &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md)所支援的原始格式。  
   
-#### <a name="c-creating-a-non-xml-format-file-for-unicode-native-data"></a>C. 建立 Unicode 原生資料的非 XML 格式檔案  
+#### C. 建立 Unicode 原生資料的非 XML 格式檔案
+<a id="c-creating-a-non-xml-format-file-for-unicode-native-data" class="xliff"></a>  
  若要針對 `HumanResources.Department` 資料表的 Unicode 原生資料建立非 XML 格式檔案，請使用下列命令：  
   
 ```  
@@ -129,7 +135,8 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -N -f Department-
   
  如需如何使用 Unicode 原生資料的詳細資訊，請參閱[使用 Unicode 原生格式匯入或匯出資料 &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)。  
   
-#### <a name="d-creating-a-non-xml-format-file-for-unicode-character-data"></a>D. 建立 Unicode 字元資料的非 XML 格式檔案  
+#### D. 建立 Unicode 字元資料的非 XML 格式檔案
+<a id="d-creating-a-non-xml-format-file-for-unicode-character-data" class="xliff"></a>  
  若要針對使用預設結束字元之 `HumanResources.Department` 資料表的 Unicode 字元資料建立非 XML 格式檔案，請使用下列命令：  
   
 ```  
@@ -138,7 +145,8 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
   
  如需如何使用 Unicode 字元資料的詳細資訊，請參閱[使用 Unicode 字元格式匯入或匯出資料 &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)。  
   
-#### <a name="f-using-a-format-file-with-the-code-page-option"></a>F. 使用格式檔案與字碼頁選項  
+#### F. 使用格式檔案與字碼頁選項
+<a id="f-using-a-format-file-with-the-code-page-option" class="xliff"></a>  
  如果您使用 bcp 命令建立格式檔案 (例如 使用 “`bcp forma`t...” )，則定序/字碼頁的相關資訊會寫入格式檔案中。   
 下列範例格式檔案屬於具 5 個資料行的資料表且包含定序。  
   
@@ -167,7 +175,8 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
 5  SQLCHAR         0       41      "!!!\r\r\n"      5     c_4              ""  
 ```  
   
-## <a name="creating-an-xml-format-file"></a>建立 XML 格式檔案  
+## 建立 XML 格式檔案
+<a id="creating-an-xml-format-file" class="xliff"></a>  
  使用 **bcp** 命令建立格式檔案時，請指定 **format** 引數並使用 **nul** 取代資料檔案路徑。 **format** 選項一律需要 **-f** 選項，您也必須指定 **-x** 選項才能建立 XML 格式檔案，例如：  
   
  **bcp** *table_or_view* **format nul-f** *format_file_name* **-x**  
@@ -177,7 +186,8 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
   
  如需有關 XML 格式檔案之結構與欄位的詳細資訊，請參閱 [XML 格式檔案 &#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md)所支援的原始格式。  
   
-### <a name="examples"></a>範例  
+### 範例
+<a id="examples" class="xliff"></a>  
  本節包含下列範例，說明如何使用 **bcp** 命令建立 XML 格式檔案：  
   
 -   A. 建立字元資料的 XML 格式檔案  
@@ -189,7 +199,8 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
 > [!NOTE]  
 >  [!INCLUDE[ssSampleDBdesc](../../includes/sssampledbdesc-md.md)]  
   
-#### <a name="a-creating-an-xml-format-file-for-character-data"></a>A. 建立字元資料的 XML 格式檔案  
+#### A. 建立字元資料的 XML 格式檔案
+<a id="a-creating-an-xml-format-file-for-character-data" class="xliff"></a>  
  下列範例會建立 `Department.xml`資料表的 XML 格式檔案 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]`HumanResources.Department` 。 格式檔案使用字元資料格式和非預設欄位結束字元 (`,`)。 所產生之格式檔案的內容，會出現在命令之後。  
   
  **bcp** 命令包含下列限定詞。  
@@ -229,7 +240,8 @@ bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-
   
  如需本格式檔案語法的相關資訊，請參閱 [XML 格式檔案 &#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md)。 如需字元資料的相關資訊，請參閱[使用字元格式匯入或匯出資料 &#40;SQL Server&#41;](../../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md)。  
   
-#### <a name="b-creating-an-xml-format-file-for-native-data"></a>B. 建立原生資料的 XML 格式檔案  
+#### B. 建立原生資料的 XML 格式檔案
+<a id="b-creating-an-xml-format-file-for-native-data" class="xliff"></a>  
  下列範例會建立 `Department-n.xml`資料表的 XML 格式檔案 `HumanResources.Department` 。 格式檔案使用原生資料類型。 所產生之格式檔案的內容，會出現在命令之後。  
   
  **bcp** 命令包含下列限定詞。  
@@ -268,7 +280,8 @@ bcp AdventureWorks2012.HumanResources.Department format nul -x -f Department-n..
   
  如需本格式檔案語法的相關資訊，請參閱 [XML 格式檔案 &#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md)。 如需如何使用原生資料的相關資訊，請參閱[使用原生格式匯入或匯出資料 &#40;SQL Server&#41;](../../relational-databases/import-export/use-native-format-to-import-or-export-data-sql-server.md)。  
   
-## <a name="mapping-data-fields-to-table-columns"></a>將資料欄位對應至資料表資料行  
+## 將資料欄位對應至資料表資料行
+<a id="mapping-data-fields-to-table-columns" class="xliff"></a>  
  格式檔案由 **bcp**建立後，便會依序描述所有的資料表資料行。 您可以修改格式檔案，重新排列或省略資料表資料列。 這可讓您針對欄位未直接對應至資料表資料行的資料檔來自訂格式檔案。 如需詳細資訊，請參閱下列主題：  
   
 -   [使用格式檔案略過資料表資料行 &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)  
@@ -277,7 +290,8 @@ bcp AdventureWorks2012.HumanResources.Department format nul -x -f Department-n..
   
 -   [使用格式檔案將資料表資料行對應至資料檔案欄位 &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
-## <a name="see-also"></a>另請參閱  
+## 另請參閱
+<a id="see-also" class="xliff"></a>  
  [bcp Utility](../../tools/bcp-utility.md)   
  [使用格式檔案將資料表資料行對應至資料檔案欄位 &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)   
  [使用格式檔案略過資料表資料行 &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)   

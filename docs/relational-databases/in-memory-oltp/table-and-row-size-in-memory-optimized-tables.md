@@ -14,16 +14,15 @@ caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: HT
+ms.translationtype: Human Translation
 ms.sourcegitcommit: fe6de2b16b9792a5399b1c014af72a2a5ee52377
 ms.openlocfilehash: 2ef8331a2217c2fd41881b875264dab6ec2bb822
 ms.contentlocale: zh-tw
 ms.lasthandoff: 07/10/2017
 
 ---
-<a id="table-and-row-size-in-memory-optimized-tables" class="xliff"></a>
-
 # 記憶體最佳化資料表中的資料表和資料列大小
+<a id="table-and-row-size-in-memory-optimized-tables" class="xliff"></a>
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 之前，記憶體最佳化資料表的 in-row 資料大小不能超過 [8,060 個位元組](https://msdn.microsoft.com/library/dn205318(v=sql.120).aspx)。 不過，自 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始，可在 Azure SQL Database 中建立具有多個大型資料行 (例如，多個 varbinary(8000) 資料行) 和 LOB 資料行 (即 varbinary(max)、varchar(max) 和 nvarchar(max)) 的記憶體最佳化資料表，並可使用原生編譯的 T-SQL 模組和資料表類型對它們執行作業。 
@@ -248,9 +247,8 @@ where object_id = object_id('dbo.Orders')
 
 [What's new for In-Memory OLTP in SQL Server 2016 since CTP3](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/25/whats-new-for-in-memory-oltp-in-sql-server-2016-since-ctp3) (SQL Server 2016 自 CTP3 後的記憶體內部 OLTP 新功能) 部落格文章會對這些複雜性的一部分詳加說明。   
  
-<a id="see-also" class="xliff"></a>
-
-## 另請參閱  
+## 另請參閱
+<a id="see-also" class="xliff"></a>  
  [記憶體最佳化資料表](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   

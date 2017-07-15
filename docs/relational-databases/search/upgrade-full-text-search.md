@@ -24,10 +24,11 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 33b11df8c6894b8acd24da6afd4e2f825fc93445
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
-# <a name="upgrade-full-text-search"></a>升級全文檢索搜尋
+# 升級全文檢索搜尋
+<a id="upgrade-full-text-search" class="xliff"></a>
   將全文檢索搜尋升級為 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的作業會在安裝期間完成，而且當您使用 [複製資料庫精靈] 以附加、還原或複製舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的資料庫檔案和全文檢索目錄時，也會完成此作業。  
   
   
@@ -83,7 +84,8 @@ ms.lasthandoff: 04/11/2017
   
      在升級期間匯入或重建會耗用大量 CPU 資源，因而延遲將其餘伺服器執行個體升級並保持在線上狀態的時間。 如果盡可能將伺服器執行個體保持在線上狀態很重要，而且您願意在升級之後執行手動母體擴展，則適合使用 **[重設]** 。  
   
-## <a name="ensure-consistent-query-results-after-importing-a-full-text-index"></a>確保匯入全文檢索索引之後的查詢結果一致性  
+## 確保匯入全文檢索索引之後的查詢結果一致性
+<a id="ensure-consistent-query-results-after-importing-a-full-text-index" class="xliff"></a>  
  新舊斷詞工具的行為稍微不同，因此如果已在將 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 資料庫升級至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]時匯入全文檢索目錄，則查詢與全文檢索索引內容之間可能會不相符。 在此情況中，若要確保查詢與全文檢索索引內容之間完全相符，請選擇下列其中一個選項：  
   
 -   重建包含全文檢索索引的全文檢索目錄 ([ALTER FULLTEXT CATALOG](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)*catalog_name* REBUILD)  
@@ -92,7 +94,8 @@ ms.lasthandoff: 04/11/2017
   
  如需斷詞工具的詳細資訊，請參閱 [設定及管理搜尋的斷詞工具與字幹分析器](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)。  
   
-## <a name="upgrade-noise-word-files-to-stoplists"></a>將非搜尋字檔案升級為停用字詞表  
+## 將非搜尋字檔案升級為停用字詞表
+<a id="upgrade-noise-word-files-to-stoplists" class="xliff"></a>  
 當資料庫從 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 升級為 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]時，便不再使用非搜尋字檔案。 不過，這些舊的非搜尋字檔案會儲存在 FTDATA\ FTNoiseThesaurusBak 資料夾中，而且您之後可以在更新或建立對應的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 停用字詞表時使用它們。  
   
  從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]升級之後：  
@@ -112,7 +115,8 @@ ms.lasthandoff: 04/11/2017
   
      STOPLIST OFF 子句會移除停用字詞篩選，而且它將會觸發資料表的母體擴展，但不會篩選任何視為非搜尋字的字詞。  
   
-## <a name="backup-and-imported-full-text-catalogs"></a>備份與匯入的全文檢索目錄  
+## 備份與匯入的全文檢索目錄
+<a id="backup-and-imported-full-text-catalogs" class="xliff"></a>  
  對於升級期間重建或重設的全文檢索目錄 (以及新的全文檢索目錄) 而言，此全文檢索目錄是邏輯概念，而且不會位於檔案群組中。 因此，若要備份 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中的全文檢索目錄，您必須識別包含此目錄之全文檢索索引的每個檔案群組，然後逐一備份它們。 如需詳細資訊，請參閱 [備份並還原全文檢索目錄與索引](../../relational-databases/search/back-up-and-restore-full-text-catalogs-and-indexes.md)。  
   
  對於已經從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]匯入的全文檢索目錄而言，此全文檢索目錄仍然是位於其檔案群組中的資料庫檔案。 全文檢索目錄的 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 備份程序仍然適用，但是 MSFTESQL 服務不存在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中。 如需 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 程序的相關資訊，請參閱《SQL Server 2005 線上叢書》中的 [備份與還原全文檢索目錄](http://go.microsoft.com/fwlink/?LinkId=209154) 。  
@@ -124,7 +128,7 @@ ms.lasthandoff: 04/11/2017
   
  **變更伺服器執行個體的全文檢索升級行為**  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)]: Use the **upgrade\_option** action of [sp\_fulltext\_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)]：使用 [sp\_fulltext\_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md) 的 **upgrade\_option** 動作  
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**：**使用 [伺服器屬性] 對話方塊的 [全文檢索升級選項]。 如需詳細資訊，請參閱 [管理及監視伺服器執行個體的全文檢索搜尋](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md)。  
   
@@ -155,7 +159,8 @@ ms.lasthandoff: 04/11/2017
   
 -   [完整資料庫還原 &#40;完整復原模式&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)  
   
-### <a name="example"></a>範例  
+### 範例
+<a id="example" class="xliff"></a>  
  下列範例會在 [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 陳述式中使用 MOVE 子句來還原名為 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 的 `ftdb1`資料庫。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 資料庫、記錄和目錄檔案都會移至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 伺服器執行個體上的新位置，如下所示：  
   
 -   資料庫檔案 `ftdb1.mdf`會移至 `C:\Program Files\Microsoft SQL Server\MSSQL.1MSSQL13.MSSQLSERVER\MSSQL\DATA\ftdb1.mdf`。  
@@ -180,7 +185,8 @@ RESTORE DATABASE [ftdb1] FROM  DISK = N'C:\temp\ftdb1.bak' WITH  FILE = 1,
   
  如需卸離和附加資料庫的詳細資訊，請參閱[資料庫卸離和附加 &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)、[CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)、[sp_attach_db](../../relational-databases/system-stored-procedures/sp-attach-db-transact-sql.md) 和 [sp_detach_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## 另請參閱
+<a id="see-also" class="xliff"></a>  
  [全文檢索搜尋使用者入門](../../relational-databases/search/get-started-with-full-text-search.md)   
  [設定及管理搜尋的斷詞工具與字幹分析器](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
  [設定及管理搜尋的篩選](../../relational-databases/search/configure-and-manage-filters-for-search.md)  

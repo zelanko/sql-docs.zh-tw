@@ -26,15 +26,17 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 06806d82a8075b0aa25bd66028eefee1a83ec2f9
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
-# <a name="recover-a-database-without-restoring-data-transact-sql"></a>在不還原資料的情況下復原資料庫 (Transact-SQL)
+# 在不還原資料的情況下復原資料庫 (Transact-SQL)
+<a id="recover-a-database-without-restoring-data-transact-sql" class="xliff"></a>
   通常會先還原 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中的所有資料，再復原資料庫。 不過，還原作業可以復原資料庫，而不實際還原備份；例如，復原與資料庫一致的唯讀檔案時即是如此。 這稱為「僅復原的還原」。 如果離線資料已與資料庫一致，而且只需要回復為可用狀態，僅復原的還原作業就會完成資料庫的復原，並讓資料回到線上。  
   
  整個資料庫或一個或多個檔案或檔案群組，都可能發生僅復原的還原。  
   
-## <a name="recovery-only-database-restore"></a>僅復原的資料庫還原  
+## 僅復原的資料庫還原
+<a id="recovery-only-database-restore" class="xliff"></a>  
  僅復原的資料庫還原在下列情況中會很有用：  
   
 -   還原還原順序中最後一個備份時，您未復原資料庫，但是現在想要復原資料庫以使其回到線上。  
@@ -58,7 +60,8 @@ RESTORE DATABASE AdventureWorks2012
    WITH RECOVERY  
 ```  
   
-## <a name="recovery-only-file-restore"></a>僅復原的檔案還原  
+## 僅復原的檔案還原
+<a id="recovery-only-file-restore" class="xliff"></a>  
  僅復原的檔案還原在下列情況中會很有用：  
   
  分次還原資料庫。 主要檔案群組的還原完成之後，未還原的檔案中有一或多個檔案與新的資料庫狀態一致，或許是因為它已經有好一段時間是唯讀的。 這些檔案只需復原即可；不需要資料複製。  
@@ -67,7 +70,7 @@ RESTORE DATABASE AdventureWorks2012
   
  用於僅復原之檔案還原的 [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 語法為：  
   
- RESTORE DATABASE *database_name* { FILE **=***logical_file_name* | FILEGROUP **=***logical_filegroup_name* }[ **,**...*n* ] WITH RECOVERY  
+ RESTORE DATABASE <資料庫名稱> { FILE **=***logical_file_name* | FILEGROUP **=<邏輯檔案群組名稱>** }[ **,**...*n* ] WITH RECOVERY  
   
  **範例**  
   
@@ -77,7 +80,8 @@ RESTORE DATABASE AdventureWorks2012
 RESTORE DATABASE Sales FILEGROUP=SalesGroup2 WITH RECOVERY;  
 ```  
   
-## <a name="examples-of-completing-a-piecemeal-restore-scenario-with-a-recovery-only-restore"></a>透過僅復原的還原完成分次還原狀況的範例  
+## 透過僅復原的還原完成分次還原狀況的範例
+<a id="examples-of-completing-a-piecemeal-restore-scenario-with-a-recovery-only-restore" class="xliff"></a>  
  **簡單復原模式**  
   
 -   [範例：分次還原資料庫 &#40;簡單復原模式&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-database-simple-recovery-model.md)  
@@ -92,7 +96,8 @@ RESTORE DATABASE Sales FILEGROUP=SalesGroup2 WITH RECOVERY;
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.SqlRestore%2A>  
   
-## <a name="see-also"></a>另請參閱  
+## 另請參閱
+<a id="see-also" class="xliff"></a>  
  [線上還原 &#40;SQL Server&#41;](../../relational-databases/backup-restore/online-restore-sql-server.md)   
  [分次還原 &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)   
  [檔案還原 &#40;簡單復原模式&#41;](../../relational-databases/backup-restore/file-restores-simple-recovery-model.md)   

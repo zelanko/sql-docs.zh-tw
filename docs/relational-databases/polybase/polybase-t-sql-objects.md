@@ -2,7 +2,7 @@
 title: "PolyBase T-SQL 物件 | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 03/08/2016
+ms.date: 07/13/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -20,14 +20,15 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: be34605990368fbbccdb8b81c119318c01431ced
+ms.sourcegitcommit: 722e026f8b8e8f1e04a93ba58f78aa7135b528de
+ms.openlocfilehash: b8b90960e312ed5e26d5379dac1312849818022d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 06/30/2017
 
 ---
-# <a name="polybase-t-sql-objects"></a>PolyBase T-SQL 物件
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+# PolyBase T-SQL 物件
+<a id="polybase-t-sql-objects" class="xliff"></a>
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   若要使用 PolyBase，您必須建立外部資料表來參考您的外部資料。  
   
@@ -40,11 +41,16 @@ ms.lasthandoff: 06/22/2017
  [CREATE EXTERNAL TABLE &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)  
   
  [CREATE STATISTICS &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)  
-  
-## <a name="prerequisites"></a>必要條件  
+ 
+> [!NOTE]
+>  SQL Server 2016 的 PolyBase 僅支援 Windows 使用者。 如果您嘗試使用 SQL 使用者查詢 PolyBase 外部資料表，則查詢會失敗。
+
+## 必要條件
+<a id="prerequisites" class="xliff"></a>  
  設定 PolyBase。 請參閱 [PolyBase configuration](../../relational-databases/polybase/polybase-configuration.md)。  
   
-## <a name="create-external-tables-for-hadoop"></a>建立 Hadoop 的外部資料表  
+## 建立 Hadoop 的外部資料表
+<a id="create-external-tables-for-hadoop" class="xliff"></a>  
  **1.建立資料庫範圍認證**  
   
  由 Kerberos 保護的 Hadoop 叢集才需要此步驟。  
@@ -122,7 +128,8 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
   
 ```  
   
-## <a name="create-external-tables-for-azure-blob-storage"></a>建立 Azure Blob 儲存體的外部資料表  
+## 建立 Azure Blob 儲存體的外部資料表
+<a id="create-external-tables-for-azure-blob-storage" class="xliff"></a>  
  **1.建立資料庫範圍認證**  
   
 ```sql  
@@ -197,7 +204,8 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
   
 ```  
  
-## <a name="create-external-tables-for-azure-data-lake-store"></a>建立 Azure Data Lake Store 的外部資料表
+## 建立 Azure Data Lake Store 的外部資料表
+<a id="create-external-tables-for-azure-data-lake-store" class="xliff"></a>
 在 SQL 資料倉儲中，只有 PolyBase 才支援 Azure Data Lake Store。
 如需 Azure SQL Data Warhouse 和 ADLS 的詳細資訊，請移至[使用 Azure Data Lake Store 載入](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store)。
  
@@ -289,10 +297,12 @@ WITH
 CREATE STATISTICS StatsForProduct on DimProduct_external(ProductKey)  
 ```  
 
-## <a name="next-steps"></a>後續的步驟  
+## 後續的步驟
+<a id="next-steps" class="xliff"></a>  
  如需查詢的範例，請參閱 [PolyBase Queries](../../relational-databases/polybase/polybase-queries.md)(PolyBase 查詢)。  
   
-## <a name="see-also"></a>另請參閱  
+## 另請參閱
+<a id="see-also" class="xliff"></a>  
  [開始使用 PolyBase](../../relational-databases/polybase/get-started-with-polybase.md)   
  [PolyBase 指南](../../relational-databases/polybase/polybase-guide.md)  
   

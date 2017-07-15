@@ -21,10 +21,11 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7fdc75559ffafea97e9ad3f4ef4b5e0788d7fb3d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
-# <a name="create-and-apply-the-snapshot"></a>建立並套用快照集
+# 建立並套用快照集
+<a id="create-and-apply-the-snapshot" class="xliff"></a>
   快照集在發行集建立之後由「快照代理程式」產生。 它們可以：  
   
 -   立即產生。 依預設，在「新增發行集精靈」中建立發行集後會立即產生合併式發行集的快照集。  
@@ -47,11 +48,12 @@ ms.lasthandoff: 04/11/2017
   
  若要檢視或修改預設的快照資料夾位置，請參閱  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Specify the Default Snapshot Location &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/specify-the-default-snapshot-location-sql-server-management-studio.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]：[指定預設快照集位置 &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/specify-the-default-snapshot-location-sql-server-management-studio.md)  
   
 -   複寫程式設計和 RMO 程式設計： [Configure Publishing and Distribution](../../relational-databases/replication/configure-publishing-and-distribution.md)  
   
-## <a name="see-also"></a>另請參閱  
+## 另請參閱
+<a id="see-also" class="xliff"></a>  
  [使用快照集初始化訂閱](../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)   
  [保護快照集資料夾](../../relational-databases/replication/security/secure-the-snapshot-folder.md)   
  [sp_addpublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)  

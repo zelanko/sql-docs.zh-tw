@@ -24,10 +24,11 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: fcd9d7f9e729a1d2ebb7cc876ce3807aa839f079
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
-# <a name="validate-data-at-the-subscriber"></a>驗證訂閱者端的資料
+# 驗證訂閱者端的資料
+<a id="validate-data-at-the-subscriber" class="xliff"></a>
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 Replication Management Objects (RMO)，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中驗證訂閱者端的資料。  
   
  驗證資料是一個三部份式的處理：  
@@ -66,7 +67,8 @@ ms.lasthandoff: 04/11/2017
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### <a name="to-validate-data-for-subscriptions-to-a-transactional-publication-management-studio"></a>若要驗證交易式發行集之訂閱的資料 (Management Studio)  
+#### 若要驗證交易式發行集之訂閱的資料 (Management Studio)
+<a id="to-validate-data-for-subscriptions-to-a-transactional-publication-management-studio" class="xliff"></a>  
   
 1.  連接到 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的發行者，然後展開伺服器節點。  
   
@@ -92,7 +94,8 @@ ms.lasthandoff: 04/11/2017
   
      如果您未看到任何關於驗證的訊息，則代理程式已經記錄了後續訊息。 在此情況下，請在複寫監視器中檢視驗證結果。 如需詳細資訊，請參閱這個主題中＜複寫監視器＞的如何程序。  
   
-#### <a name="to-validate-data-for-a-single-subscription-to-a-merge-publication-management-studio"></a>若要驗證合併式發行集之單一訂閱的資料 (Management Studio)  
+#### 若要驗證合併式發行集之單一訂閱的資料 (Management Studio)
+<a id="to-validate-data-for-a-single-subscription-to-a-merge-publication-management-studio" class="xliff"></a>  
   
 1.  連接到 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的發行者，然後展開伺服器節點。  
   
@@ -114,7 +117,8 @@ ms.lasthandoff: 04/11/2017
   
      如果您未看到任何關於驗證的訊息，則代理程式已經記錄了後續訊息。 在此情況下，請在複寫監視器中檢視驗證結果。 如需詳細資訊，請參閱這個主題中＜複寫監視器＞的如何程序。  
   
-#### <a name="to-validate-data-for-all-subscriptions-to-a-merge-publication-management-studio"></a>若要驗證合併式發行集之所有訂閱的資料 (Management Studio)  
+#### 若要驗證合併式發行集之所有訂閱的資料 (Management Studio)
+<a id="to-validate-data-for-all-subscriptions-to-a-merge-publication-management-studio" class="xliff"></a>  
   
 1.  連接到 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的發行者，然後展開伺服器節點。  
   
@@ -134,7 +138,8 @@ ms.lasthandoff: 04/11/2017
   
      如果您未看到任何關於驗證的訊息，則代理程式已經記錄了後續訊息。 在此情況下，請在複寫監視器中檢視驗證結果。 如需詳細資訊，請參閱這個主題中＜複寫監視器＞的如何程序。  
   
-#### <a name="to-validate-data-for-all-push-subscriptions-to-a-transactional-publication-replication-monitor"></a>若要驗證交易式發行集之所有發送訂閱的資料 (複寫監視器)  
+#### 若要驗證交易式發行集之所有發送訂閱的資料 (複寫監視器)
+<a id="to-validate-data-for-all-push-subscriptions-to-a-transactional-publication-replication-monitor" class="xliff"></a>  
   
 1.  在複寫監視器的左窗格中展開發行者群組，然後展開發行者。  
   
@@ -160,7 +165,8 @@ ms.lasthandoff: 04/11/2017
   
     3.  檢視 **[所選取工作階段中的動作]** 文字區域之 **[散發者到訂閱者記錄]** 索引標籤中的資訊。  
   
-#### <a name="to-validate-data-for-a-single-push-subscription-to-a-merge-publication-replication-monitor"></a>若要驗證合併式發行集之單一發送訂閱的資料 (複寫監視器)  
+#### 若要驗證合併式發行集之單一發送訂閱的資料 (複寫監視器)
+<a id="to-validate-data-for-a-single-push-subscription-to-a-merge-publication-replication-monitor" class="xliff"></a>  
   
 1.  在複寫監視器中，展開左窗格裡的發行者群組，展開發行者，然後按一下發行集。  
   
@@ -184,7 +190,8 @@ ms.lasthandoff: 04/11/2017
   
     3.  在 **[同步處理記錄]** 索引標籤上的 **[所選取工作階段的最後訊息]** 測試區域中檢視資訊。  
   
-#### <a name="to-validate-data-for-all-push-subscriptions-to-a-merge-publication-replication-monitor"></a>若要驗證合併式發行集之所有發送訂閱的資料 (複寫監視器)  
+#### 若要驗證合併式發行集之所有發送訂閱的資料 (複寫監視器)
+<a id="to-validate-data-for-all-push-subscriptions-to-a-merge-publication-replication-monitor" class="xliff"></a>  
   
 1.  在複寫監視器的左窗格中展開發行者群組，然後展開發行者。  
   
@@ -206,7 +213,8 @@ ms.lasthandoff: 04/11/2017
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### <a name="to-validate-data-for-all-articles-in-a-transactional-publication"></a>若要驗證交易式發行集中所有發行項的資料  
+#### 若要驗證交易式發行集中所有發行項的資料
+<a id="to-validate-data-for-all-articles-in-a-transactional-publication" class="xliff"></a>  
   
 1.  在發行集資料庫的發行者端，執行 [sp_publication_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md)。 指定 **@publication** ，以及下列其中一個 **@rowcount_only**值：  
   
@@ -221,7 +229,8 @@ ms.lasthandoff: 04/11/2017
   
 3.  檢查代理程式輸出，以取得驗證的結果。 如需詳細資訊，請參閱[驗證複寫的資料](../../relational-databases/replication/validate-replicated-data.md)。  
   
-#### <a name="to-validate-data-for-a-single-article-in-a-transactional-publication"></a>若要驗證交易式發行集中單一發行項的資料  
+#### 若要驗證交易式發行集中單一發行項的資料
+<a id="to-validate-data-for-a-single-article-in-a-transactional-publication" class="xliff"></a>  
   
 1.  在發行集資料庫的發行者端，執行 [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)。 指定 **@publication**、 **@article**的發行項名稱，及 **@rowcount_only**值：  
   
@@ -236,7 +245,8 @@ ms.lasthandoff: 04/11/2017
   
 3.  檢查代理程式輸出，以取得驗證的結果。 如需詳細資訊，請參閱[驗證複寫的資料](../../relational-databases/replication/validate-replicated-data.md)。  
   
-#### <a name="to-validate-data-for-a-single-subscriber-to-a-transactional-publication"></a>若要驗證交易式發行集中單一訂閱者的資料  
+#### 若要驗證交易式發行集中單一訂閱者的資料
+<a id="to-validate-data-for-a-single-subscriber-to-a-transactional-publication" class="xliff"></a>  
   
 1.  在發行集資料庫的發行者端，使用 [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md) 來開啟明確交易。  
   
@@ -261,7 +271,8 @@ ms.lasthandoff: 04/11/2017
   
 8.  檢查代理程式輸出，以取得驗證的結果。 如需詳細資訊，請參閱 [Validate Data at the Subscriber](../../relational-databases/replication/validate-data-at-the-subscriber.md)。  
   
-#### <a name="to-validate-data-in-all-subscriptions-to-a-merge-publication"></a>若要驗證所有合併發行集訂閱中的資料  
+#### 若要驗證所有合併發行集訂閱中的資料
+<a id="to-validate-data-in-all-subscriptions-to-a-merge-publication" class="xliff"></a>  
   
 1.  在發行集資料庫的發行者端，執行 [sp_validatemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql.md)。 指定 **@publication** ，以及下列其中一個 **@level**值：  
   
@@ -275,7 +286,8 @@ ms.lasthandoff: 04/11/2017
   
 3.  檢查代理程式輸出，以取得驗證的結果。 如需詳細資訊，請參閱 [Validate Data at the Subscriber](../../relational-databases/replication/validate-data-at-the-subscriber.md)。  
   
-#### <a name="to-validate-data-in-selected-subscriptions-to-a-merge-publication"></a>若要驗證選取的合併發行集訂閱中的資料  
+#### 若要驗證選取的合併發行集訂閱中的資料
+<a id="to-validate-data-in-selected-subscriptions-to-a-merge-publication" class="xliff"></a>  
   
 1.  在發行集資料庫的發行者端，執行 [sp_validatemergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql.md)。 指定 **@publication**的發行集、 **@subscriber**的「訂閱者」名稱、 **@subscriber_db**的發行項名稱，及 **@level**值：  
   
@@ -294,7 +306,8 @@ ms.lasthandoff: 04/11/2017
 > [!NOTE]  
 >  您也可以在執行 **Replication Merge Agent** 時藉由指定 [-Validate](../../relational-databases/replication/agents/replication-merge-agent.md)參數，在同步處理結束時驗證合併發行集的訂閱。  
   
-#### <a name="to-validate-data-in-a-subscription-using-merge-agent-parameters"></a>若要使用合併代理程式參數驗證訂閱中的資料  
+#### 若要使用合併代理程式參數驗證訂閱中的資料
+<a id="to-validate-data-in-a-subscription-using-merge-agent-parameters" class="xliff"></a>  
   
 1.  以下列其中一種方法，從命令提示字元啟動「合併代理程式」(在「訂閱者」端的為提取訂閱，在「散發者」端的則為發送訂閱)。  
   
@@ -310,11 +323,12 @@ ms.lasthandoff: 04/11/2017
 > [!NOTE]  
 >  如需範例，請參閱本主題稍後的 [範例 (RMO)](#RMOExample)。  
   
-#### <a name="to-validate-data-for-all-articles-in-a-transactional-publication"></a>若要驗證交易式發行集中所有發行項的資料  
+#### 若要驗證交易式發行集中所有發行項的資料
+<a id="to-validate-data-for-all-articles-in-a-transactional-publication" class="xliff"></a>  
   
-1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 類別建立與發行者的連線。  
+1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 類別建立與發行者的連接。  
   
-2.  建立 <xref:Microsoft.SqlServer.Replication.TransPublication> 類別的執行個體。 設定發行集的 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> 和 <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> 屬性。 將 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 屬性設定為在步驟 1 中建立的連線。  
+2.  建立 <xref:Microsoft.SqlServer.Replication.TransPublication> 類別的執行個體。 設定發行集的 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> 和 <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> 屬性。 將 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 屬性設定為在步驟 1 中建立的連接。  
   
 3.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法以取得物件的剩餘屬性。 如果此方法傳回 **false**，則表示步驟 2 中的發行集屬性定義不正確，或者該發行集不存在。  
   
@@ -330,11 +344,12 @@ ms.lasthandoff: 04/11/2017
   
 5.  如果尚未執行，請啟動「散發代理程式」以同步處理每個訂閱。 如需相關資訊，請參閱 [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md) 或 [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md)。 驗證作業的結果會寫入至代理程式記錄。 如需詳細資訊，請參閱 [Monitoring Replication](../../relational-databases/replication/monitor/monitoring-replication-overview.md)。  
   
-#### <a name="to-validate-data-in-all-subscriptions-to-a-merge-publication"></a>若要驗證所有合併發行集訂閱中的資料  
+#### 若要驗證所有合併發行集訂閱中的資料
+<a id="to-validate-data-in-all-subscriptions-to-a-merge-publication" class="xliff"></a>  
   
-1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 類別建立與發行者的連線。  
+1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 類別建立與發行者的連接。  
   
-2.  建立 <xref:Microsoft.SqlServer.Replication.MergePublication> 類別的執行個體。 設定發行集的 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> 和 <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> 屬性。 將 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 屬性設定為在步驟 1 中建立的連線。  
+2.  建立 <xref:Microsoft.SqlServer.Replication.MergePublication> 類別的執行個體。 設定發行集的 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> 和 <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> 屬性。 將 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 屬性設定為在步驟 1 中建立的連接。  
   
 3.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法以取得物件的剩餘屬性。 如果此方法傳回 **false**，則表示步驟 2 中的發行集屬性定義不正確，或者該發行集不存在。  
   
@@ -342,15 +357,16 @@ ms.lasthandoff: 04/11/2017
   
 5.  為每個訂閱執行「合併代理程式」以啟動驗證，或等候下一個排程的代理程式執行。 如需相關資訊，請參閱 [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md) 以及 [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md)。 驗證作業的結果會寫入至代理程式記錄，您可使用「複寫監視器」來加以檢視。 如需詳細資訊，請參閱 [Monitoring Replication](../../relational-databases/replication/monitor/monitoring-replication-overview.md)。  
   
-#### <a name="to-validate-data-in-a-single-subscription-to-a-merge-publication"></a>若要驗證合併發行集單一訂閱中的資料  
+#### 若要驗證合併發行集單一訂閱中的資料
+<a id="to-validate-data-in-a-single-subscription-to-a-merge-publication" class="xliff"></a>  
   
-1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 類別建立與發行者的連線。  
+1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 類別建立與發行者的連接。  
   
-2.  建立 <xref:Microsoft.SqlServer.Replication.MergePublication> 類別的執行個體。 設定發行集的 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> 和 <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> 屬性。 將 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 屬性設定為在步驟 1 中建立的連線。  
+2.  建立 <xref:Microsoft.SqlServer.Replication.MergePublication> 類別的執行個體。 設定發行集的 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> 和 <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> 屬性。 將 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 屬性設定為在步驟 1 中建立的連接。  
   
 3.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法以取得物件的剩餘屬性。 如果此方法傳回 **false**，則表示步驟 2 中的發行集屬性定義不正確，或者該發行集不存在。  
   
-4.  呼叫 <xref:Microsoft.SqlServer.Replication.MergePublication.ValidateSubscription%2A> 方法。 傳遞正在進行驗證之訂閱者和訂閱資料庫的名稱，以及所要的 <xref:Microsoft.SqlServer.Replication.ValidationOption>。  
+4.  呼叫 <xref:Microsoft.SqlServer.Replication.MergePublication.ValidateSubscription%2A> 方法。 傳遞正在進行驗證之「訂閱者」和訂閱資料庫的名稱以及所要的 <xref:Microsoft.SqlServer.Replication.ValidationOption>。  
   
 5.  為訂閱執行「合併代理程式」以啟動驗證，或等候下一個排程的代理程式執行。 如需相關資訊，請參閱 [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md) 以及 [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md)。 驗證作業的結果會寫入至代理程式記錄，您可使用「複寫監視器」來加以檢視。 如需詳細資訊，請參閱 [Monitoring Replication](../../relational-databases/replication/monitor/monitoring-replication-overview.md)。  
   

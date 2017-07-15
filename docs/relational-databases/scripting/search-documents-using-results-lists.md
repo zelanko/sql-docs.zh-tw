@@ -23,13 +23,15 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a63ced363f4aee6ece4481f7b89b0ab195b82019
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
-# <a name="search-documents-using-results-lists"></a>使用結果清單搜尋文件
+# 使用結果清單搜尋文件
+<a id="search-documents-using-results-lists" class="xliff"></a>
   您可以利用 **[尋找和取代]** 對話方塊來搜尋和取代專案或方案或檔案系統資料夾中之所有檔案內的文字，即使尚未在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中開啟它們，也是如此。 **[尋找和取代]** 對話方塊所執行之搜尋的相符項目會出現在 [尋找結果 1] 和 [尋找結果 2] 視窗中，可讓您檢視相符項目所在字行中的確實文字。  
   
-### <a name="to-search-in-multiple-files"></a>在多個檔案中搜尋  
+### 在多個檔案中搜尋
+<a id="to-search-in-multiple-files" class="xliff"></a>  
   
 1.  在 **[編輯]** 功能表上，指向 **[尋找和取代]** ，再按一下 **[檔案中尋找]**。  
   
@@ -37,7 +39,7 @@ ms.lasthandoff: 04/11/2017
   
 3.  在 **[查詢]** 清單中，按一下 **[所有開啟的文件]**、 **[目前的專案]**或 **[整個方案]**，或輸入目錄路徑。  
   
-4.  在 **[檔案類型]** 清單中，選取列出的各組副檔名之一，或用分號分隔來輸入要搜尋之檔案類型的副檔名。 使用 \*。\* 搜尋 [查詢] 下拉式清單列出的目錄中的所有檔案。  
+4.  在 **[檔案類型]** 清單中，選取列出的各組副檔名之一，或用分號分隔來輸入要搜尋之檔案類型的副檔名。 請利用 \*.\* 來搜尋 [查詢] 下拉式清單列出之目錄中的所有檔案。  
   
 5.  選取其餘搜尋選項來改進搜尋的精確度。  
   
@@ -45,7 +47,8 @@ ms.lasthandoff: 04/11/2017
   
  依預設，搜尋的相符項目會出現在 [尋找結果 1] 視窗中。 您可以在 [尋找結果 1] 視窗中，按兩下各個項目來瀏覽搜尋相符項目。 若要在新視窗中檢視搜尋結果，請選取 **[顯示在 [尋找結果 2] 視窗]**。  
   
-#### <a name="to-replace-across-multiple-files-or-folders"></a>跨多個檔案或資料夾取代  
+#### 跨多個檔案或資料夾取代
+<a id="to-replace-across-multiple-files-or-folders" class="xliff"></a>  
   
 1.  在 **[編輯]** 功能表上，指向 **[尋找和取代]** ，再按一下 **[檔案中取代]**。  
   
@@ -66,7 +69,8 @@ ms.lasthandoff: 04/11/2017
   
  依預設，取代資訊會出現在 [尋找結果 1] 視窗中。 您可以在 [尋找結果 1] 視窗中，按兩下各個項目來瀏覽取代項目。  
   
-## <a name="see-also"></a>另請參閱  
+## 另請參閱
+<a id="see-also" class="xliff"></a>  
  [搜尋和取代](../../relational-databases/scripting/search-and-replace.md)   
  [以互動方式搜尋文件](../../relational-databases/scripting/search-documents-interactively.md)   
  [使用萬用字元搜尋文字](../../relational-databases/scripting/search-text-with-wildcards.md)   
