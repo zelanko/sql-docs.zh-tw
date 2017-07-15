@@ -2,7 +2,7 @@
 title: "SQL Server 2016 的新功能 | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 12/15/2016
+ms.date: 06/28/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -23,16 +23,17 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: a702ff8995bc7d4ad7b67c1e7a9d12299afb068f
+ms.sourcegitcommit: a59a02db0054f3fe1a7e571ad97f23c65b021a77
+ms.openlocfilehash: 331f6b68bb4cdd4803dd0fd634c3584f3b809064
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 06/29/2017
 
 ---
-# <a name="what39s-new-in-sql-server-2016"></a>SQL Server 2016 的新功能
- [!INCLUDE[ssSQL15_md](../includes/sssql15-md.md)] 是 Microsoft 資料平台歷程記錄的最大進展。 使用內建一切的可擴充資料庫平台取得交易與分析資料的即時深入資訊，從前所未有的記憶體內部效能、新的安全性創新和高可用性，到進階分析，讓關鍵任務應用程式變聰明。
+# SQL Server 2016 的新功能
+<a id="whats-new-in-sql-server-2016" class="xliff"></a>
+ SQL Server 2016 - 建置智慧型的關鍵任務應用程式，使用從記憶體內部效能和進階安全性到資料庫內分析的全部內建可調整混合式資料庫平台。
  
- 本主題摘要說明詳細的 [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] 元件層級新功能資訊連結。   
+ 此頁面提供各元件 SQL Server 2016 新功能詳細資訊的連結。   
  
   ![SQL Server 2016](../sql-server/media/sql-server-2016.png) 
  
@@ -40,17 +41,15 @@ ms.lasthandoff: 06/22/2017
  
     
  **立即試用 SQL Server！**    
- - Get the **free** [**SQL Server 2016 Developer edition!!**](https://www.microsoft.com/en-us/cloud-platform/sql-server-editions-developers)
- 
- 
-[![Download from Evaluation Center](../analysis-services/media/download.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) Download SQL Server 2016 from the **[Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)** 
+ - 下載**免費** [**SQL Server 2016 Developer Edition！**](https://www.microsoft.com/en-us/cloud-platform/sql-server-editions-developers)
     
-[![Azure 虛擬機器小型](../analysis-services/media/azure-virtual-machine-small.png)](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/) 擁有 Azure 帳戶嗎？  接著前往 **[這裡](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/)** 來啟動已安裝 SQL Server 2016 SP1 的虛擬機器。  
+[![Azure 虛擬機器小型](../analysis-services/media/azure-virtual-machine-small.png)](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/) 擁有 Azure 帳戶嗎？ 啟動[已安裝 SQL Server 2016 的虛擬機器](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/)。
 
- [![Download from Evaluation Center](../analysis-services/media/download.png)](https://msdn.microsoft.com/library/mt238290.aspx) [**Download the latest version of SQL Server Management Studio (SSMS)**](https://msdn.microsoft.com/library/mt238290.aspx).   
+ [![從 Evaluation Center 下載](../analysis-services/media/download.png)](https://msdn.microsoft.com/library/mt238290.aspx) 下載最新版 [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx)。   
 
     
- ## <a name="whats-new-in-sql-server"></a>SQL Server 的新功能
+ ## SQL Server 的新功能
+<a id="whats-new-in-sql-server" class="xliff"></a>
 個別主題的連結：
  
  - [SQL Server 安裝程式](../database-engine/install-windows/installation-for-sql-server-2016.md)   
@@ -61,17 +60,18 @@ ms.lasthandoff: 06/22/2017
 
  - [新的 SQL PowerShell 模組](https://blogs.technet.microsoft.com/dataplatforminsider/2016/06/30/sql-powershell-july-2016-update/)
  
- - [Integration Services](../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md)    
+ - [Integration Services (SSIS)](../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md)    
   
  - [Reporting Services (SSRS)](https://msdn.microsoft.com/library/ms170438.aspx)   
   
- - [Master Data Services &#40;MDS&#41;](../master-data-services/what-s-new-in-master-data-services-mds.md)    
+ - [Master Data Services (MDS)](../master-data-services/what-s-new-in-master-data-services-mds.md)    
        
  - [SQL Server R 服務](../advanced-analytics/r-services/what-s-new-in-sql-server-r-services.md)    
       
   
     
-## <a name="see-also"></a>另請參閱    
+## 更多連結
+<a id="more-links" class="xliff"></a>   
  +   [SQL Server 2016 版本資訊](../sql-server/sql-server-2016-release-notes.md)。 
 + [SQL Server 2016 資料工作表](http://download.microsoft.com/download/C/5/3/C53C3AEF-653C-4598-8721-D522E8AC6A3A/SQL_Server_2016_Everything_Built-In_Datasheet_EN_US.pdf)
 + [SQL Server 版本支援的功能](https://msdn.microsoft.com/library/cc645993.aspx)

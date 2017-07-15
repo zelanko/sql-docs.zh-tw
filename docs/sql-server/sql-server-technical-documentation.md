@@ -1,6 +1,6 @@
 ---
 title: "SQL Server 技術文件 |Microsoft 文件"
-ms.date: 03/24/2017
+ms.date: 06/27/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -23,18 +23,21 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
-ms.openlocfilehash: 79e06fb9a4eab8cd067aaa59a448593ca25e314c
+ms.sourcegitcommit: aad94f116c1a8b668c9a218b32372424897a8b4a
+ms.openlocfilehash: 334c3d130a1d0c8371c1a7810d82d443e1fbecc8
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 06/28/2017
 
 ---
-# <a name="sql-server-technical-documentation"></a>SQL Server 技術文件
+# SQL Server 技術文件
+<a id="sql-server-technical-documentation" class="xliff"></a>
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
  > 如需舊版的 SQL Server 相關的內容，請參閱[安裝 SQL Server 2014](https://msdn.microsoft.com/en-US/library/bb500469(SQL.120).aspx)。
 
- 可協助您安裝、設定和使用 SQL Server 的文件。 內容包括完整範例、程式碼範例和視訊。 如需 [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 語言的主題，請參閱 [語言參考](../t-sql/language-reference.md)。
+ 可協助您安裝、設定和使用 SQL Server 的文件。 內容包括端對端範例、程式碼範例和視訊。 如需 [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 語言的主題，請參閱 [語言參考](../t-sql/language-reference.md)。
+
+您也可以使用說明檢視器離線檢視 SQL Server 文件。 如需詳細資訊，請參閱 [SQL Server 說明檢視器與離線內容](../release-notes/sql-server-help-installation.md)。
 
 **SQL Server 2017**
 
@@ -51,7 +54,8 @@ ms.lasthandoff: 06/22/2017
  - **[啟動已安裝 SQL Server 2016 的虛擬機器](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)**    
  - **[下載最新版的 SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx)**   
       
-## <a name="sql-server-technologies"></a>SQL Server 技術    
+## SQL Server 技術
+<a id="sql-server-technologies" class="xliff"></a>    
     
 |||    
 |-|-|    
@@ -65,7 +69,8 @@ ms.lasthandoff: 06/22/2017
 |![Reporting Services](../sql-server/media/reporting-services.png "Reporting Services")|**[Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)**<br /><br /> Reporting Services 提供了啟用 Web 的企業級報表功能，讓您可以建立從各種資料來源取得內容的報表、以各種格式發行報表，以及集中管理安全性和訂閱。|    
 
     
-## <a name="earlier-sql-server-versions"></a>較早的 SQL Server 版本
+## 較早的 SQL Server 版本
+<a id="earlier-sql-server-versions" class="xliff"></a>
 - [SQL Server 2014 線上叢書的線上叢書](https://msdn.microsoft.com/library/ms130214(v=sql.120).aspx)
 - [安裝 SQL Server 2014 Express 和其他舊版 SQL Server](http://www.hanselman.com/blog/DownloadSQLServerExpress.aspx)。 (**感謝 [Scott Hanselman](http://www.hanselman.com/) 將所有安裝程式套件連結收集在同一處！**)  
 - [SQL Server 2012 技術文件](https://technet.microsoft.com/library/bb418433(v=sql.10).aspx)  
@@ -78,7 +83,8 @@ ms.lasthandoff: 06/22/2017
 - [SQL Server 2016 的 AdventureWorks 範例資料庫與指令碼](https://www.microsoft.com/en-us/download/details.aspx?id=49502) 
 - [GitHub 上的 SQL Server 範例](https://github.com/Microsoft/sql-server-samples) 
    
- ## <a name="more-information"></a>詳細資訊   
+ ## 詳細資訊
+<a id="more-information" class="xliff"></a>   
 + [SQL Server 組態管理員](../relational-databases/sql-server-configuration-manager.md)
 + [SQL Server 更新中心](https://msdn.microsoft.com/library/ff803383.aspx) 連結和資訊，以取得所有支援的版本 
 + [安裝 SQL Server Database Engine](../database-engine/install-windows/install-sql-server-database-engine.md) 

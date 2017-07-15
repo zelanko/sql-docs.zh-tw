@@ -1,0 +1,1 @@
+> 如需舊版 SQL Server Reporting Services 的相關內容，請參閱 [SQL Server Reporting Services 2014](https://msdn.microsoft.com/library/ms159106(v=sql.120).aspx)。
