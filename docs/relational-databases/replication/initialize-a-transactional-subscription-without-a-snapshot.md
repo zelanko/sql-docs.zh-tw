@@ -18,25 +18,21 @@ caps.latest.revision: 37
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 4b4c95296d12ba08582ecf6929c5c13dd02b2bae
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/18/2017
 
 ---
-<a id="initialize-a-transactional-subscription-without-a-snapshot" class="xliff"></a>
-
-# 不使用快照集初始化交易式訂閱
+# <a name="initialize-a-transactional-subscription-without-a-snapshot"></a>不使用快照集初始化交易式訂閱
   依預設，會使用快照集來初始化交易式發行集的訂閱，此快照集由「快照集代理程式」產生並由「散發者代理程式」套用。 在某些狀況下，例如那些牽涉到大型初始資料集的狀況，最好使用其他方法初始化訂閱。 其他初始化「訂閱者」的方法包括：  
   
 -   指定一個備份。 在「訂閱者」上還原備份，「散發代理程式」隨後會複製所有需要的複寫中繼資料與系統程序。 用備份進行初始化是將資料傳遞到「訂閱者」的最快方法且相當便利，因為如果最新的備份發生在為「使用備份進行初始化」啟用發行集之後，便可使用。  
   
 -   透過其他機制將初始資料集複製到「訂閱者」，例如附加資料庫。 您必須確定「訂閱者」端的資料和結構描述正確，然後「散發代理程式」會複製需要的所有中繼資料和系統程序。  
   
-<a id="initializing-a-subscription-with-a-backup" class="xliff"></a>
-
-## 使用備份初始化訂閱  
+## <a name="initializing-a-subscription-with-a-backup"></a>使用備份初始化訂閱  
  備份包含整個資料庫；因此當訂閱資料庫被初始化後，每個資料庫都包含發行集資料庫的完整副本：  
   
 -   備份包含未指定為發行集之發行項的資料表。  
@@ -59,9 +55,7 @@ ms.lasthandoff: 06/22/2017
 > [!NOTE]  
 >  如果訂閱未使用快照集初始化，在發行者端執行 SQL Server 服務的帳戶必須具有散發者端快照集資料夾的寫入權限。 如需權限的資訊，請參閱＜ [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md)＞。  
   
-<a id="ensuring-the-suitability-of-a-backup" class="xliff"></a>
-
-### 確定備份的適合性  
+### <a name="ensuring-the-suitability-of-a-backup"></a>確定備份的適合性  
  如果備份後發生的所有交易均儲存在「散發者」端，則備份適用於初始化「訂閱者」。 如果備份不適合，則複寫會顯示一條錯誤訊息。  
   
  若要幫助確定備份適合使用，請遵循下列指導方針：  
@@ -76,18 +70,14 @@ ms.lasthandoff: 06/22/2017
   
 -   還原資料庫中的訂閱時間戳記資料行必須轉換為 **binary(8)** 資料行：將包含時間戳記資料行之資料表的內容複製到含相符結構描述的新資料表 (除非含有的是 **binary(8)** 資料行而非時間戳記資料行)，拖拽原始資料表，並將新資料表重新命名為原始資料表的名稱。  
   
-<a id="initializing-a-subscription-with-an-alternative-method" class="xliff"></a>
-
-## 使用替代方法初始化訂閱  
+## <a name="initializing-a-subscription-with-an-alternative-method"></a>使用替代方法初始化訂閱  
  使用可讓您將發行集資料庫結構描述與資料複製到「訂閱者」的任何方法，均有可能初始化訂閱，例如 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]。 當您使用替代方法來初始化「訂閱者」時，複寫支援物件會複製到「訂閱者」。  
   
  與使用備份進行初始化不同，您或您的應用程式必須確定資料與結構描述在您新增訂閱時已正確進行了同步處理。 例如，若在複製資料和結構描述到訂閱者的時間，與加入訂閱的時間之間，發行者端有活動，此活動所導致的變更可能不會複寫到訂閱者。  
   
  若要使用替代方法初始化訂閱，請參閱＜ [Initialize a Subscription Manually](../../relational-databases/replication/initialize-a-subscription-manually.md)＞。  
   
-<a id="see-also" class="xliff"></a>
-
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [初始化訂閱](../../relational-databases/replication/initialize-a-subscription.md)  
   
   
