@@ -21,15 +21,15 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 82aede2ce0a0f0a0271e73361292628049f97875
+ms.translationtype: HT
+ms.sourcegitcommit: 47182ebd082dfae0963d761e54c4045be927d627
+ms.openlocfilehash: 77a39273f5fa02bac3255ea0436341db2342c236
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/11/2017
 
 ---
 # <a name="resize-the-job-history-log"></a>Resize the Job History Log
-此主題描述如何使用 [!INCLUDE[msCoName](../../includes/msconame_md.md)]，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 中設定 [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] Agent 作業記錄的大小限制。  
+此主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 設定 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 作業記錄的大小限制。
   
 -   **開始之前：**  
   
