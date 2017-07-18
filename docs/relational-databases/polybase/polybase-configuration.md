@@ -1,7 +1,7 @@
 ---
 title: "PolyBase 組態 | Microsoft Docs"
 ms.custom: 
-ms.date: 06/12/2017
+ms.date: 07/11/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -14,11 +14,11 @@ caps.latest.revision: 17
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 7ac4f40e66a0bb82f811aa75a3d69e14a3a97188
+ms.translationtype: HT
+ms.sourcegitcommit: 109b5a18604b2111f3344ba216a6d3d98131d116
+ms.openlocfilehash: dd9edc9dccf29c21bb37bb0347c8a8cdb87e2b21
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/12/2017
 
 ---
 # <a name="polybase-configuration"></a>PolyBase 設定
@@ -27,7 +27,7 @@ ms.lasthandoff: 06/23/2017
   請使用下列程序來設定 PolyBase。  
   
 ## <a name="external-data-source-configuration"></a>外部資料來源設定  
- 您必須確定可從 SQL Server 連線到外部資料來源。 連線類型會強烈影響預期的查詢效能。 例如，針對 PolyBase 查詢，10Gbit 乙太網路連結將產生比 1Gbit 乙太網路連結更快速的回應時間。  
+ 您必須確定可從 SQL Server 連線到外部資料來源。 連線類型能大幅影響查詢效能。 例如，針對 PolyBase 查詢，10Gbit 乙太網路連結將產生比 1Gbit 乙太網路連結更快速的回應時間。  
   
  您必須使用 **sp_configure**設定 SQL Server，以連接到 Hadoop 版本或 Azure Blob 儲存體。 PolyBase 支援兩種 Hadoop 散發：Hortonworks Data Platform (HDP) 和 Cloudera 分散式 Hadoop (CDH)。  如需支援的外部資料來源的完整清單，請參閱 [PolyBase 組態 &#40;Transact-SQL&#41;](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md)。  
  

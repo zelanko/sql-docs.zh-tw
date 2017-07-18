@@ -1,7 +1,7 @@
 ---
 title: "建立和測試分類使用者定義函式 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/16/2017
+ms.date: 07/11/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -19,11 +19,11 @@ caps.latest.revision: 25
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 097b7e93a82b8f1cc20767c57788eebe8162729a
+ms.translationtype: HT
+ms.sourcegitcommit: 109b5a18604b2111f3344ba216a6d3d98131d116
+ms.openlocfilehash: 95cb4a61a662dae4168e1b67900cce9c16de315f
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/12/2017
 
 ---
 # <a name="create-and-test-a-classifier-user-defined-function"></a>建立和測試分類使用者定義函數
@@ -44,21 +44,21 @@ ms.lasthandoff: 06/22/2017
   
  分類函數會延長登入時間。 任何過度複雜的函數都可能會導致登入逾時或降低快速連接的速度。  
   
-### <a name="to-create-the-classifier-user-defined-function"></a>建立分類使用者定義函數  
+## <a name="to-create-the-classifier-user-defined-function"></a>建立分類使用者定義函數  
   
 1.  建立並設定新的資源集區和工作負載群組。 將每個工作負載群組指派給適當的資源集區。  
   
     ```  
     --- Create a resource pool for production processing  
     --- and set limits.  
-    USE master  
+    USE master;  
     GO  
     CREATE RESOURCE POOL pProductionProcessing  
     WITH  
     (  
          MAX_CPU_PERCENT = 100,  
          MIN_CPU_PERCENT = 50  
-    )  
+    );  
     GO  
     --- Create a workload group for production processing  
     --- and configure the relative importance.  
@@ -66,7 +66,7 @@ ms.lasthandoff: 06/22/2017
     WITH  
     (  
          IMPORTANCE = MEDIUM  
-    )  
+    );  
     --- Assign the workload group to the production processing  
     --- resource pool.  
     USING pProductionProcessing  
@@ -79,7 +79,7 @@ ms.lasthandoff: 06/22/2017
     (  
          MAX_CPU_PERCENT = 50,  
          MIN_CPU_PERCENT = 0  
-    )  
+    );  
     GO  
     --- Create a workload group for off-hours processing  
     --- and configure the relative importance.  
@@ -90,32 +90,32 @@ ms.lasthandoff: 06/22/2017
     )  
     --- Assign the workload group to the off-hours processing  
     --- resource pool.  
-    USING pOffHoursProcessing  
+    USING pOffHoursProcessing;  
     GO  
     ```  
   
 2.  更新記憶體中組態。  
   
     ```  
-    ALTER RESOURCE GOVERNOR RECONFIGURE  
+    ALTER RESOURCE GOVERNOR RECONFIGURE;  
     GO  
     ```  
   
 3.  建立資料表並定義生產處理時間範圍的開始和結束時間。  
   
     ```  
-    USE master  
+    USE master;  
     GO  
     CREATE TABLE tblClassificationTimeTable  
     (  
          strGroupName     sysname          not null,  
          tStartTime       time              not null,  
          tEndTime         time              not null  
-    )  
+    );  
     GO  
     --- Add time values that the classifier will use to  
     --- determine the workload group for a session.  
-    INSERT into tblClassificationTimeTable VALUES('gProductionProcessing', '6:35 AM', '6:15 PM')  
+    INSERT into tblClassificationTimeTable VALUES('gProductionProcessing', '6:35 AM', '6:15 PM');  
     go  
     ```  
   
@@ -130,11 +130,14 @@ ms.lasthandoff: 06/22/2017
     WITH SCHEMABINDING  
     AS  
     BEGIN  
+    /* We recommend running the classifier function code under 
+    snapshot isolation level OR using NOLOCK hint to avoid blocking on 
+    lookup table. In this example, we are using NOLOCK hint. */
          DECLARE @strGroup sysname  
          DECLARE @loginTime time  
          SET @loginTime = CONVERT(time,GETDATE())  
          SELECT TOP 1 @strGroup = strGroupName  
-              FROM dbo.tblClassificationTimeTable  
+              FROM dbo.tblClassificationTimeTable WITH(NOLOCK)
               WHERE tStartTime <= @loginTime and tEndTime >= @loginTime  
          IF(@strGroup is not null)  
          BEGIN  
@@ -143,26 +146,26 @@ ms.lasthandoff: 06/22/2017
     --- Use the default workload group if there is no match  
     --- on the lookup.  
          RETURN N'gOffHoursProcessing'  
-    END  
+    END;  
     GO  
     ```  
   
 5.  註冊此分類函數並更新記憶體中組態。  
   
     ```  
-    ALTER RESOURCE GOVERNOR with (CLASSIFIER_FUNCTION = dbo.fnTimeClassifier)  
-    ALTER RESOURCE GOVERNOR RECONFIGURE  
+    ALTER RESOURCE GOVERNOR with (CLASSIFIER_FUNCTION = dbo.fnTimeClassifier);  
+    ALTER RESOURCE GOVERNOR RECONFIGURE;  
     GO  
     ```  
   
-### <a name="to-verify-the-resource-pools-workload-groups-and-the-classifier-user-defined-function"></a>確認資源集區、工作負載群組和分類使用者定義函數  
+## <a name="to-verify-the-resource-pools-workload-groups-and-the-classifier-user-defined-function"></a>確認資源集區、工作負載群組和分類使用者定義函數  
   
 1.  使用下列查詢來取得資源集區和工作負載群組組態。  
   
     ```  
-    USE master  
-    SELECT * FROM sys.resource_governor_resource_pools  
-    SELECT * FROM sys.resource_governor_workload_groups  
+    USE master;  
+    SELECT * FROM sys.resource_governor_resource_pools;  
+    SELECT * FROM sys.resource_governor_workload_groups;  
     GO  
     ```  
   
@@ -170,45 +173,46 @@ ms.lasthandoff: 06/22/2017
   
     ```  
     --- Get the classifier function Id and state (enabled).  
-    SELECT * FROM sys.resource_governor_configuration  
+    SELECT * FROM sys.resource_governor_configuration;  
     GO  
     --- Get the classifer function name and the name of the schema  
     --- that it is bound to.  
     SELECT   
           object_schema_name(classifier_function_id) AS [schema_name],  
           object_name(classifier_function_id) AS [function_name]  
-    FROM sys.dm_resource_governor_configuration  
-  
+    FROM sys.dm_resource_governor_configuration;  
     ```  
   
 3.  使用下列查詢來取得資源集區和工作負載群組的目前執行階段資料。  
   
     ```  
-    SELECT * FROM sys.dm_resource_governor_resource_pools  
-    SELECT * FROM sys.dm_resource_governor_workload_groups  
+    SELECT * FROM sys.dm_resource_governor_resource_pools;  
+    SELECT * FROM sys.dm_resource_governor_workload_groups;  
     GO  
     ```  
   
 4.  使用下列查詢來了解每個群組中含有哪些工作階段。  
   
     ```  
-    SELECT s.group_id, CAST(g.name as nvarchar(20)), s.session_id, s.login_time, CAST(s.host_name as nvarchar(20)), CAST(s.program_name AS nvarchar(20))  
-              FROM sys.dm_exec_sessions s  
-         INNER JOIN sys.dm_resource_governor_workload_groups g  
-              ON g.group_id = s.group_id  
-    ORDER BY g.name  
+    SELECT s.group_id, CAST(g.name as nvarchar(20)), s.session_id, s.login_time, 
+        CAST(s.host_name as nvarchar(20)), CAST(s.program_name AS nvarchar(20))  
+    FROM sys.dm_exec_sessions AS s  
+    INNER JOIN sys.dm_resource_governor_workload_groups AS g  
+        ON g.group_id = s.group_id  
+    ORDER BY g.name;  
     GO  
     ```  
   
 5.  使用下列查詢來了解每個群組中含有哪些要求。  
   
     ```  
-    SELECT r.group_id, g.name, r.status, r.session_id, r.request_id, r.start_time, r.command, r.sql_handle, t.text   
-               FROM sys.dm_exec_requests r  
-         INNER JOIN sys.dm_resource_governor_workload_groups g  
-                ON g.group_id = r.group_id  
-         CROSS APPLY sys.dm_exec_sql_text(r.sql_handle) AS t  
-    ORDER BY g.name  
+    SELECT r.group_id, g.name, r.status, r.session_id, r.request_id, 
+        r.start_time, r.command, r.sql_handle, t.text   
+    FROM sys.dm_exec_requests AS r  
+    INNER JOIN sys.dm_resource_governor_workload_groups AS g  
+        ON g.group_id = r.group_id  
+    CROSS APPLY sys.dm_exec_sql_text(r.sql_handle) AS t  
+    ORDER BY g.name;  
     GO  
     ```  
   
@@ -216,24 +220,25 @@ ms.lasthandoff: 06/22/2017
   
     ```  
     SELECT s.group_id, g.name, s.session_id, s.login_time, s.host_name, s.program_name   
-               FROM sys.dm_exec_sessions s  
-         INNER JOIN sys.dm_resource_governor_workload_groups g  
-               ON g.group_id = s.group_id  
-                     AND 'preconnect' = s.status  
-    ORDER BY g.name  
+    FROM sys.dm_exec_sessions AS s  
+    INNER JOIN sys.dm_resource_governor_workload_groups AS g  
+        ON g.group_id = s.group_id  
+           AND 'preconnect' = s.status  
+    ORDER BY g.name;  
     GO  
   
-    SELECT r.group_id, g.name, r.status, r.session_id, r.request_id, r.start_time, r.command, r.sql_handle, t.text   
-               FROM sys.dm_exec_requests r  
-         INNER JOIN sys.dm_resource_governor_workload_groups g  
-               ON g.group_id = r.group_id  
-                     AND 'preconnect' = r.status  
-         CROSS APPLY sys.dm_exec_sql_text(r.sql_handle) AS t  
-    ORDER BY g.name  
+    SELECT r.group_id, g.name, r.status, r.session_id, r.request_id, r.start_time, 
+        r.command, r.sql_handle, t.text   
+    FROM sys.dm_exec_requests AS r  
+    INNER JOIN sys.dm_resource_governor_workload_groups AS g  
+        ON g.group_id = r.group_id  
+           AND 'preconnect' = r.status  
+     CROSS APPLY sys.dm_exec_sql_text(r.sql_handle) AS t  
+    ORDER BY g.name;  
     GO  
     ```  
   
-### <a name="best-practices-for-using-lookup-tables-in-a-classifier-function"></a>在分類函數中使用查閱資料表的最佳做法  
+## <a name="best-practices-for-using-lookup-tables-in-a-classifier-function"></a>在分類函數中使用查閱資料表的最佳做法  
   
 1.  除非絕對必要，否則不要使用查閱資料表。 如果您需要使用查閱資料表，它可能以硬編碼的方式將本身寫入函數中；不過它需要與分類函數的複雜度和動態變更相互平衡。  
   
@@ -259,7 +264,7 @@ ms.lasthandoff: 06/22/2017
   
     4.  資料表上沒有觸發程序。  
   
-    5.  如果您要更新資料表內容，則務必使用快照隔離等級交易避免寫入器封鎖讀取器。 請注意，使用 `NOLOCK` 提示也可以防止這種情況發生。  
+    5.  如果您要更新資料表內容，則務必在分類函式中使用快照隔離等級交易，以避免寫入器封鎖讀取器。 請注意，使用 `NOLOCK` 提示也可以防止這種情況發生。  
   
     6.  如有可能，變更資料表內容時，請停用分類函數。  
   
@@ -280,3 +285,4 @@ ms.lasthandoff: 06/22/2017
  [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-governor-transact-sql.md)  
   
   
+

@@ -17,11 +17,11 @@ caps.latest.revision: 10
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 58db786512aa1ed167df55831c6a7cc3c53224bd
+ms.translationtype: HT
+ms.sourcegitcommit: 0c85f3e3417afc5943baee86eff0c3248172f82a
+ms.openlocfilehash: f13f4f60d8df7d2a2fb668cc6d5a93f092973116
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 07/11/2017
 
 ---
 # <a name="how-query-store-collects-data"></a>查詢存放區如何收集資料
@@ -32,7 +32,7 @@ ms.lasthandoff: 04/11/2017
 ## <a name="views"></a>檢視  
  下圖顯示查詢存放區檢視及其邏輯關聯性，以及顯示為藍色實體的編譯時間資訊︰  
   
- ![query-store-process-1views](../../relational-databases/performance/media/query-store-process-1views.png "query-store-process-1views")  
+ ![query-store-process-2views](../../relational-databases/performance/media/query-store-process-2views.png "query-store-process-2views")  
   
  **檢視描述**  
   
@@ -68,7 +68,8 @@ ms.lasthandoff: 04/11/2017
   
  萬一發生系統損毀，查詢存放區就會遺失執行階段資料，最多遺失使用 `DATA_FLUSH_INTERVAL_SECONDS`所定義的數量。 預設值 900 秒 (15 分鐘) 是查詢擷取效能與資料可用性之間的最佳平衡。  
 萬一有記憶體壓力，執行階段統計資料可以在使用 `DATA_FLUSH_INTERVAL_SECONDS`定義的時間之前排清至磁碟。  
-讀取查詢存放區期間，記憶體內部資料和磁碟上的資料會完全一樣。  
+讀取查詢存放區期間，記憶體內部資料和磁碟上的資料會完全一樣。
+如不記錄工作階段終止或用戶端應用程式重新啟動/當機查詢統計資料。  
   
  ![query-store-process-4planinfo](../../relational-databases/performance/media/query-store-process-4planinfo.png "query-store-process-4planinfo")    
 

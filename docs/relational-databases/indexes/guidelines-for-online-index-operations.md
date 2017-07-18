@@ -1,7 +1,7 @@
 ---
 title: "線上索引作業的指導方針 | Microsoft Docs"
 ms.custom: 
-ms.date: 04/14/2017
+ms.date: 07/10/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -21,11 +21,11 @@ caps.latest.revision: 64
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: cf2d74e423ab96af582d5f420065f9756e671ec2
-ms.openlocfilehash: 508440b3e6cd15d4fb70f933c380e958dad74d56
+ms.translationtype: HT
+ms.sourcegitcommit: 0c85f3e3417afc5943baee86eff0c3248172f82a
+ms.openlocfilehash: 9b6d3aabe451c35c25822a2114e825e980ad01d3
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/11/2017
 
 ---
 # <a name="guidelines-for-online-index-operations"></a>線上索引作業的指導方針
@@ -38,7 +38,7 @@ ms.lasthandoff: 06/23/2017
 -   當資料表包含 LOB 資料類型，但這些資料行並未在索引定義中當做索引鍵或非索引鍵 (內含) 資料行使用時，您可以在線上建立非唯一的非叢集索引。  
   
 -   您無法在線上建立、重建或卸除本機暫存資料表的索引。 此限制不適用於全域暫存資料表上的索引。
-- 可以從非預期的失敗，資料庫容錯移轉之後的停止處繼續索引或**暫停**命令。 請參閱[改變索引](../../t-sql/statements/alter-index-transact-sql.md)。 這項功能處於公開預覽版供 SQL Server 2017。
+- 可以從非預期的失敗，資料庫容錯移轉之後的停止處繼續索引或**暫停**命令。 請參閱[改變索引](../../t-sql/statements/alter-index-transact-sql.md)。 針對 SQL Server 2017 和 Azure SQL Database，此功能正處於公開預覽。
 
 > [!NOTE]  
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的所有版本都無法使用線上索引作業。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本所支援的功能清單，請參閱[版本支援的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
@@ -93,7 +93,7 @@ ms.lasthandoff: 06/23/2017
 ## <a name="resumable-index-rebuild-considerations"></a>可繼續索引重建考量
 
 > [!NOTE]
-> 請參閱[改變索引](../../t-sql/statements/alter-index-transact-sql.md)。 這項功能處於公開預覽版供 SQL Server 2017。
+> 請參閱[改變索引](../../t-sql/statements/alter-index-transact-sql.md)。 針對 SQL Server 2017 和 Azure SQL Database，此功能正處於公開預覽。
 >
 
 當您執行可繼續線上索引重建時套用下列指導方針：

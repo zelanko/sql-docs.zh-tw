@@ -17,11 +17,11 @@ caps.latest.revision: 25
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f5b029907f25811131e08d2f7ade1f050e3a18d5
+ms.translationtype: HT
+ms.sourcegitcommit: dd279b20fdf0f42d4b44843244aeaf6f19f04718
+ms.openlocfilehash: 0c39bbf997fb5041a1fc4ea55699fbb3a40e3d75
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/14/2017
 
 ---
 # <a name="polybase-installation"></a>安裝 PolyBase
@@ -41,7 +41,7 @@ ms.lasthandoff: 06/22/2017
   
 -   最小硬碟空間︰2 GB  
   
--   必須啟用 TCP/IP 連線。 (請參閱 [啟用或停用伺服器網路通訊協定](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)。)  
+-   必須啟用 TCP/IP 連線。 (請參閱 [啟用或停用伺服器網路通訊協定](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)。)SQL Server Developer 和 Express 版預設會停用 TCP/IP 連線能力。 必須手動啟用此功能，PolyBase 才能正常運作。
   
  **注意**  
   
@@ -65,7 +65,7 @@ PolyBase 一旦安裝為獨立項目或安裝於向外延展群組中，就無�
   
 4.  在 [伺服器組態] 頁面上，將 **SQL Server PolyBase 引擎服務** 和 SQL Server PolyBase 資料移動服務設定為在同一個帳戶下執行。  
   
-    > **重要！！** 在 PolyBase 向外延展群組中，所有節點上的 PolyBase 引擎和 PolyBase 資料移動服務必須在同一個網域帳戶執行。  
+    > **重要！** 在 PolyBase 向外延展群組中，所有節點上的 PolyBase 引擎和 PolyBase 資料移動服務必須在同一個網域帳戶執行。  
     > 請參閱＜向外擴充 PolyBase＞。  
   
 5.  在 [PolyBase 組態頁面] 上，選取兩個選項的其中一個。 如需詳細資訊，請參閱 [PolyBase 向外延展群組](../../relational-databases/polybase/polybase-scale-out-groups.md)。  

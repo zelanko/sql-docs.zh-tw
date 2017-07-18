@@ -2,7 +2,7 @@
 title: "開始使用 PolyBase | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 5/30/2017
+ms.date: 7/13/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -24,11 +24,11 @@ caps.latest.revision: 78
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3fc2a681f001906cf9e819084679db097bca62c7
-ms.openlocfilehash: 59bf4021617603f0720c23ca192f4ddb65aa6834
+ms.translationtype: HT
+ms.sourcegitcommit: dd279b20fdf0f42d4b44843244aeaf6f19f04718
+ms.openlocfilehash: baf9d02b824a8aae2a282d0f6203791c4b72f1f8
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/14/2017
 
 ---
 # <a name="get-started-with-polybase"></a>開始使用 PolyBase
@@ -53,10 +53,11 @@ ms.lasthandoff: 06/23/2017
   
 -   Oracle Java SE RunTime Environment (JRE) 版本 7.51 或更新版本 (64 位元)。 ( [JRE](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) 或 [Server JRE](http://www.oracle.com/technetwork/java/javase/downloads/server-jre8-downloads-2133154.html) 都可)。 前往 [Java SE Downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html)(Java SE 下載)。 如果 JRE 不存在，安裝程式將會失敗。   
   
--   最小記憶體︰4 GB  
+-   最小記憶體：4 GB  
   
 -   最小硬碟空間︰2 GB    
--   必須啟用 TCP/IP 連線。 (請參閱 [啟用或停用伺服器網路通訊協定](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)。)  
+
+-   必須啟用 TCP/IP 連線。 (請參閱 [啟用或停用伺服器網路通訊協定](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)。)SQL Server Developer 和 Express 版預設已停用 TCP/IP。 在啟用 TCP/IP 之前，PolyBase 雖然可以安裝，但將不會完全啟動。 您必須手動啟用 TCP/IP 以取得 PolyBase 功能。 
   
  
  外部資料來源，下列項目之一：  
@@ -354,7 +355,7 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
  從 SQL Server 2016 RC1 升級至 RC2 或 RC3 之後，查詢可能會失敗。 如需詳細資訊及解決方式，請參閱 [SQL Server 2016 版本資訊](../../sql-server/sql-server-2016-release-notes.md) ，並搜尋 "PolyBase"。  
   
 ## <a name="next-steps"></a>後續的步驟  
- 若要了解向外延展功能，請參閱 [PolyBase scale-out groups](../../relational-databases/polybase/polybase-scale-out-groups.md)(PolyBase 向外延展群組)。  若要監視 PolyBase，請參閱 [PolyBase troubleshooting](../../relational-databases/polybase/polybase-troubleshooting.md)(疑難排解 PolyBase)。 若要疑難排解 PolyBase 效能，請參閱 [PolyBase troubleshooting with dynamic management views](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)。  
+ 若要了解向外延展功能，請參閱 [PolyBase scale-out groups](../../relational-databases/polybase/polybase-scale-out-groups.md)(PolyBase 向外延展群組)。  若要監視 PolyBase，請參閱 [PolyBase troubleshooting](../../relational-databases/polybase/polybase-troubleshooting.md)(疑難排解 PolyBase)。 若要針對 PolyBase 效能進行疑難排解，請參閱[使用動態管理檢視進行 PolyBase 疑難排解](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80) \(英文\)。  
   
 ## <a name="see-also"></a>另請參閱  
  [PolyBase 指南](../../relational-databases/polybase/polybase-guide.md)   
