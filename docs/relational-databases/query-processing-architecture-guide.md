@@ -17,17 +17,17 @@ caps.latest.revision: 5
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: ceddddafe0c052d0477e218955949012818e9a73
-ms.openlocfilehash: bb13d94c5ef1eb36c3d50d3217f259a09c39e832
+ms.translationtype: HT
+ms.sourcegitcommit: dcbeda6b8372b358b6497f78d6139cad91c8097c
+ms.openlocfilehash: 0052444959911431f68bb40fd5059fb45b0d3412
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/05/2017
+ms.lasthandoff: 07/18/2017
 
 ---
 # <a name="query-processing-architecture-guide"></a>查詢處理架構指南
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
-[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 會針對各種資料儲存架構處理查詢，例如本機資料表、資料分割資料表，以及分散到多部伺服器的資料表。 下列主題涵蓋了 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 如何處理查詢以及透過執行計畫快取最佳化查詢重複使用。
+[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 可在多種資料儲存架構處理查詢，例如本機資料表、資料分割資料表及散發到多部伺服器的資料表。 下列主題涵蓋了 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 如何處理查詢以及透過執行計畫快取最佳化查詢重複使用。
 
 ## <a name="sql-statement-processing"></a>SQL 陳述式處理
 
@@ -37,7 +37,7 @@ ms.lasthandoff: 06/05/2017
 
 `SELECT` 陳述式為非程序性，它無法敘述資料庫伺服器應用來擷取所需資料的正確步驟。 這是表示資料庫伺服器應該先分析陳述式，才能判斷出取得所需資料的最有效方式。 這稱為將 `SELECT` 陳述式最佳化。 執行此動作的元件稱為查詢最佳化工具。 查詢最佳化工具的輸入是由查詢、資料庫結構描述 (資料表和索引定義) 以及資料庫統計資料所組成。 查詢最佳化工具的輸出是查詢執行計畫，有時稱為查詢計畫或只是計畫。 在本主題稍後將更詳盡地描述查詢計畫的內容。
 
-下圖說明在單一 `SELECT` 陳述式最佳化期間，查詢最佳化工具的輸入與輸出：![query_processor_io](../relational-databases/media/query-processor-io.gif)
+The inputs and outputs of the Query Optimizer during optimization of a single `SELECT` 陳述式最佳化期間，查詢最佳化工具的輸入與輸出： ![query_processor_io](../relational-databases/media/query-processor-io.gif)
 
 `SELECT` 陳述式僅定義下列項目：  
 * 結果集的格式。 這大部份是在選取清單中指定。 不過，其他如 `ORDER BY` 和 `GROUP BY` 等子句也會影響結果集的最後格式。
@@ -58,13 +58,13 @@ ms.lasthandoff: 06/05/2017
 * 從各資料表取得資料所用的方法。  
   一般而言，有各種不同的方式可存取每個資料表中的資料。 如果僅需要特定索引鍵值的一些資料列，則資料庫伺服器可以使用索引。 如果需要資料表中的所有資料列，則資料庫伺服器可以忽略索引，並執行資料表掃描。 如果需要資料表中的所有資料列，但其中有一個索引的索引鍵資料行是在 `ORDER BY`中，那麼，執行索引掃描來替代資料表掃描，就能儲存不同排序的結果集。 如果資料表非常小，則資料表掃描可能是所有資料表存取中最有效率的方式。
 
-從許多可能的計畫中選擇其中一個執行計畫的程序，便稱為最佳化。 查詢最佳化工具是 SQL 資料庫系統中最重要的元件之一。 因為查詢最佳化工具使用部分負擔來分析查詢並選取計畫，所以當查詢最佳化工具挑出最有效率的執行計畫時，這個負擔通常已經儲存了好幾層。 例如，兩家營造公司可能對同一間房屋有相同的藍圖。 如果有一家公司在剛開始時，願意花幾天的時間計畫將如何建造房屋，而另一家公司則不計畫就開始建造，那麼有花時間規劃其專案的公司，最有可能在第一時間完成。
+從許多可能的計畫中選擇其中一個執行計畫的程序，便稱為最佳化。 查詢最佳化工具是 SQL 資料庫系統中最重要的元件之一。 因為查詢最佳化工具使用部份負擔來分析查詢並選取計畫，所以當查詢最佳化工具挑出最有效率的執行計畫時，這個負擔通常已經儲存了好幾層。 例如，兩家營造公司可能對同一間房屋有相同的藍圖。 如果有一家公司在剛開始時，願意花幾天的時間計畫將如何建造房屋，而另一家公司則不計畫就開始建造，那麼有花時間規劃其專案的公司，最有可能在第一時間完成。
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢最佳化工具是以成本為基礎的查詢最佳化工具。 每個可能的執行計畫都有計算所使用資源量的相關成本。 查詢最佳化工具必須分析可能的計畫並選擇最低估計成本的計畫。 有些複雜的 `SELECT` 陳述式具備數千個可能的執行計畫。 在這樣的情況下，查詢最佳化工具不會分析所有可能的組合。 相反的，它會使用複雜的演算法來尋找最接近最小可能成本的執行計畫。
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢最佳化工具並不僅是選擇最低資源成本的執行計畫，也選擇傳回給使用者的結果中，具合理的資源成本，以及傳回結果速度最快的計畫。 例如，一般平行處理查詢時，需使用比循序處理時使用更多的資源，但完成的速度較快。 如果伺服器的負載不會受到負面的影響，則 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢最佳化工具將會使用平行執行計畫來傳回結果。
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢最佳化工具在估計以不同方法擷取資料表或索引中資訊的資源成本時，是根據散發統計資料。 散發統計資料適用於資料行和索引。 他們可指出特殊索引或資料行中值的選擇性。 例如，在表示車種的資料表中，許多車種的製造商都是相同的，但每輛車都有一個唯一的汽車識別號碼。 因此索引 VIN 比索引製造商更具選擇性。 如果目前沒有索引統計資料，則查詢最佳化工具可能無法針對目前的資料表狀態做出最佳選擇。 如需讓索引統計資料保持最新的詳細資訊，請參閱＜使用統計資料來改善查詢效能＞。 
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢最佳化工具在估計以不同方法擷取資料表或索引中資訊的資源成本時，是根據散發統計資料。 散發統計資料適用於資料行和索引。 他們可指出特殊索引或資料行中值的選擇性。 例如，在表示車種的資料表中，許多車種的製造商都是相同的，但每輛車都有一個唯一的汽車識別號碼。 因此索引 VIN 比索引製造商更具選擇性。 如果目前沒有索引統計資料，則最佳化工具可能無法針對目前的資料表狀態做出最佳選擇。 如需讓索引統計資料保持最新的詳細資訊，請參閱＜使用統計資料來改善查詢效能＞。 
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢最佳化工具非常重要，因為它可以讓資料庫伺服器隨著資料庫中的狀況變更來進行動態調整，而不需要由程式設計人員或資料庫管理員來輸入。 這樣程式設計師便不用將焦點集中在描述查詢的最後結果。 他們可以相信每次執行陳述式時，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢最佳化工具將依資料庫的狀態建立最有效率的執行計畫。
 
@@ -92,12 +92,12 @@ ms.lasthandoff: 06/05/2017
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢處理器對待索引及非索引檢視的方式不同： 
 
-* 索引檢視的資料列是儲存在資料表庫中，並使用與資料表相同的格式。 如果查詢最佳化工具決定使用查詢計畫中的索引檢視表，將以處理基底資料表的相同方式來處理索引檢視表。
+* 索引檢視的資料列是儲存在資料表庫中，並使用與資料表相同的格式。 如果查詢最佳化工具決定使用查詢計畫中的索引檢視，將以處理基底資料表的相同方式來處理索引檢視。
 * 只會儲存非索引檢視的定義，而不會儲存檢視的資料列。 查詢最佳化工具會將檢視表定義中的邏輯，合併到它為參考非索引檢視表之 SQL 陳述式所建立的執行計畫中。 
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢最佳化工具用來決定何時使用索引檢視表的邏輯，類似於用以決定何時使用資料表中索引的邏輯。 如果索引檢視表中的資料涵蓋了全部或部分的 SQL 陳述式，並且查詢最佳化工具判斷出檢視表中的索引是低成本的存取路徑，那麼查詢最佳化工具便會選擇該索引，而不論查詢中是否有依名稱參考此檢視表。
 
-當 SQL 陳述式參考非索引檢視表時，剖析器與查詢最佳化工具會分析 SQL 陳述式和檢視表的來源，然後將它們解析成單一執行計畫。 SQL 陳述式與檢視不會分屬於不同的計畫。
+當 SQL 陳述式參考無索引的檢視時，剖析器與查詢最佳化工具會分析 SQL 陳述式和檢視的來源，然後將它們解析成單一執行計畫。 SQL 陳述式與檢視不會分屬於不同的計畫。
 
 例如，請考慮下列檢視：
 
@@ -198,37 +198,37 @@ WHERE TableA.ColZ = TableB.Colz;
   * `CONCAT_NULL_YIELDS_NULL`
   * `QUOTED_IDENTIFIER` 
   * `NUMERIC_ROUNDABORT` 工作階段選項會設定為 OFF。
-* 查詢最佳化工具會從檢視表索引資料行與查詢中的項目之間找出相符之處，例如： 
+* 查詢最佳化工具會從檢視索引資料行與查詢中的元素之間找出相符之處，例如： 
   * 位於 WHERE 子句中的搜尋條件述詞
   * 聯結作業
   * 彙總函式
   * `GROUP BY` 子句
   * 資料表參考
-* 使用索引時的預估成本，擁有查詢最佳化工具所考量的任何存取機制成本的最低值。 
+* 使用索引時的預估成本，擁有最佳化工具所考量的任何存取機制成本的最低值。 
 * 在對應於索引檢視中之資料表參考的查詢中，每個參考的資料表 (直接參考，或藉由展開檢視以存取其基礎資料表) 都必須在查詢中套用同一組提示。
 
 > [!NOTE] 
 > 無論目前的交易隔離等級為何，在此內容中，永遠都會將 `READCOMMITTED` 和 `READCOMMITTEDLOCK` 提示視為不同的提示。
  
-除了 `SET` 選項與資料表提示的需求以外，這些也是查詢最佳化工具用來判斷資料表索引是否涵蓋查詢的相同規則。 不需在查詢中指定其他項目，即可使用索引檢視。
+除了 `SET` options and table hints, these are the same rules that the Query Optimizer uses to determine whether a table index covers a query. 不需在查詢中指定其他項目，即可使用索引檢視。
 
-查詢不一定要在 `FROM` 子句中明確參考索引檢視表，才能讓查詢最佳化工具使用索引檢視表。 如果查詢中包含了基底資料表中資料行的參考，而這些資料行也同時出現於索引檢視表中，且查詢最佳化工具的估計結果是使用索引檢視表提供最低成本的存取機制，那麼查詢最佳化工具便選擇索引檢視表，這和查詢中並未直接參考基底資料表的索引時，查詢最佳化工具選擇這些索引的方式類似。 當檢視表包含查詢所未參考到的資料行時，只要檢視表針對涵蓋在查詢中所指定的一或多個資料行提供最低的成本選項，查詢最佳化工具可能就會選擇該檢視表。
+查詢不一定要在 `FROM` clause for the Query Optimizer to use the indexed view. 如果查詢中包含了基底資料表中的資料行的參考，而這些資料行也同時出現於索引檢視中，且最佳化工具的估計結果是使用索引檢視提供最低成本的存取機制，那麼最佳化工具便選擇索引檢視，這和查詢中並未直接參考基底資料表的索引時，最佳化工具選擇這些索引的方式類似。 當檢視包含查詢所未參考到的資料行，只要檢視針對涵蓋在查詢中所指定的一個或多個資料行提供最低的成本選項，最佳化工具可能就會選擇該檢視。
 
-查詢最佳化工具會將 `FROM` 子句中參考的索引檢視表視為標準檢視表。 在最佳化程序開始時，查詢最佳化工具會將檢視表的定義擴充到查詢中。 接著，會執行索引檢視比對。 索引檢視表可用在查詢最佳化工具所選取的最終執行計畫中，或者，此計畫可存取檢視表所參考的基底資料表，藉以從檢視表具體化必要的資料。 查詢最佳化工具會選擇成本最低的方式。
+The Query Optimizer treats an indexed view referenced in the `FROM` 子句中參考的索引檢視表視為標準檢視表。 在最佳化程序開始時，查詢最佳化工具會將檢視的定義擴充到查詢中。 接著，會執行索引檢視比對。 索引檢視表可用在查詢最佳化工具所選取的最終執行計畫中，或者，此計畫可存取檢視表所參考的基底資料表，藉以從檢視表具體化必要的資料。 查詢最佳化工具會選擇成本最低的方式。
 
 #### <a name="using-hints-with-indexed-views"></a>搭配索引檢視使用提示
 
 您可以使用 `EXPAND VIEWS` 查詢提示來防止在查詢中使用檢視表索引，或者可以使用 `NOEXPAND` 資料表提示，針對查詢的 `FROM` 子句所指定的索引檢視表強制使用索引。 然而，您應該讓查詢最佳化工具動態判斷每個查詢最適用的存取方法。 只有在測試已顯現出其大幅改善效能的特定情況下，才能使用 `EXPAND` 和 `NOEXPAND` 。
 
-`EXPAND VIEWS` 選項指定查詢最佳化工具在整個查詢中不會使用任何檢視表索引。 
+`EXPAND VIEWS` option specifies that the Query Optimizer not use any view indexes for the whole query. 
 
-針對檢視表指定 `NOEXPAND` 時，查詢最佳化工具就會考慮使用檢視表中所定義的任何索引。 透過選擇性之 `NOEXPAND` 子句所指定的 `INDEX()` 將強制查詢最佳化工具使用指定的索引。 `NOEXPAND` 只能指定給索引檢視表，且不得指定給尚未編製索引的檢視表。
+針對檢視表指定 `NOEXPAND` is specified for a view, the Query Optimizer considers using any indexes defined on the view. (透過選擇性`NOEXPAND` 子句來指定 `INDEX()` clause forces the Query Optimizer to use the specified indexes. `NOEXPAND` 只能指定給索引檢視表，且不得指定給尚未編製索引的檢視表。
 
 如果未在含有檢視表的查詢中指定 `NOEXPAND` 或 `EXPAND VIEWS` ，即會展開檢視表以存取基礎資料表。 若構成檢視的查詢中含有任何資料表提示，這些提示便會傳播到基礎資料表。 (此處理序在＜檢視解析＞中有較為詳盡的說明。)只要檢視的基礎資料表上所存在的多個提示彼此相同，則查詢即可與索引檢視比對。 這些提示大多會彼此相符，因為它們都直接繼承自檢視。 然而，若查詢參考資料表 (而非檢視) 以及直接套用於這些資料表的提示不相同，這種查詢將無法與索引檢視進行比對。 若 `INDEX`、 `PAGLOCK`、 `ROWLOCK`、 `TABLOCKX`、 `UPDLOCK`或 `XLOCK` 提示會在檢視表展開後套用到查詢中所參考的資料表，查詢就無法與索引檢視表進行比對。
 
 如果格式為 `INDEX (index_val[ ,...n] )` 的資料表提示會參考查詢中的檢視表，而您也未指定 `NOEXPAND` 提示，則會忽略索引提示。 若要指定使用特定的索引，請使用 `NOEXPAND`。 
 
-一般而言，當查詢最佳化工具將索引檢視表比對到查詢時，查詢中的資料表或檢視表上指定的任何提示，都會直接套用到索引檢視表。 若查詢最佳化工具選擇不使用索引檢視表，則所有提示都會直接傳播到檢視表中所參考的資料表。 如需詳細資訊，請參閱＜檢視解析＞。 這種傳播方式不適用於聯結提示。 只會套用在查詢中的原始位置。 將查詢比對到索引檢視表時，查詢最佳化工具不會考慮使用聯結提示。 若查詢計畫所使用的索引檢視表符合含有聯結提示的部分查詢，則計畫中不會使用此聯結提示。
+一般而言，當查詢最佳化工具將索引檢視表比對到查詢時，查詢中的資料表或檢視表上指定的任何提示，都會直接套用到索引檢視表。 若查詢最佳化工具選擇不使用索引檢視，則所有提示都會直接傳播到檢視中所參考的資料表。 如需詳細資訊，請參閱＜檢視解析＞。 這種傳播方式不適用於聯結提示。 只會套用在查詢中的原始位置。 將查詢比對到索引檢視時，查詢最佳化工具不會考慮使用聯結提示。 若查詢計畫所使用的索引檢視表符合含有聯結提示的部分查詢，則計畫中不會使用此聯結提示。
 
 不允許在索引檢視表的定義中使用提示。 在 80 與更高的相容性模式下，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在維護索引檢視表定義時，或在執行使用索引檢視表的查詢時，都會忽略定義中的提示。 雖然在 80 相容性模式下使用索引檢視定義中的提示並不會產生語法錯誤，但這些提示還是會被忽略。
 
@@ -239,7 +239,7 @@ WHERE TableA.ColZ = TableB.Colz;
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會建立智慧型的動態計畫，以有效使用分散式查詢來存取遠端成員資料表的資料： 
 
 * 查詢處理器會先使用 OLE DB 來擷取各成員資料表中的 CHECK 條件約束定義。 這可以讓查詢處理器將索引鍵值的散發對應到每個成員資料表中。
-* 查詢處理器會將 SQL 陳述式 `WHERE` 子句中指定的索引鍵範圍，與顯示成員資料表中資料列分散情況的對應做比較。 然後，查詢處理器會建立查詢執行計畫，而此計畫的分散式查詢僅會擷取那些完成 SQL 陳述式所需的遠端資料列。 執行計畫也會以系統取得所需的資訊前，對資料或中繼資料延遲遠端成員資料表存取的方法執行。
+* The Query Processor compares the key ranges specified in an SQL statement `WHERE` 子句中指定的索引鍵範圍，與顯示成員資料表中資料列分散情況的對應做比較。 然後，查詢處理器會建立查詢執行計畫，而此計畫的分散式查詢僅會擷取那些完成 SQL 陳述式所需的遠端資料列。 執行計畫也會以系統取得所需的資訊前，對資料或中繼資料延遲遠端成員資料表存取的方法執行。
 
 例如，假設系統中的客戶資料表是跨 Server1 (從 1 到 3299999 的`CustomerID` )、Server2 (從 3300000 到 6599999 的`CustomerID` )，以及 Server3 (從 6600000 到 9999999 的`CustomerID` ) 進行資料分割。
 
@@ -370,7 +370,7 @@ SELECT * FROM Person.Person;
 > [!NOTE]
 > 當 `AUTO_UPDATE_STATISTICS` 資料庫選項設定為 `ON` 時，若其目標資料表或索引檢視表的統計資料或基數明顯和上次執行不同時，就會重新編譯查詢。 此行為適用於標準使用者定義的資料表、暫存資料表，以及 DML 觸發程序所建立的插入和刪除資料表。 如果過多的重新編譯影響了查詢效能，請考慮將此設定值變更為 `OFF`。 當 `AUTO_UPDATE_STATISTICS` 資料庫選項設定為 `OFF` 時，就不會基於統計資料或基數變更發生重新編譯，但 DML `INSTEAD OF` 觸發程序所建立的插入和刪除資料表例外。 因為這些資料表是在 tempdb 中建立的，所以存取它們的查詢是否要重新編譯，取決於 tempdb 中 `AUTO_UPDATE_STATISTICS` 的設定。 請注意，在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000 中，即使此設定為 `OFF`，還是會繼續根據 DML 觸發程序之插入和刪除資料表的基數變更來重新編譯查詢。
 
-### <a name="parameters-and-execution-plan-reuse"></a>參數和執行計畫的重複使用
+### <a name="PlanReuse"></a> 參數和執行計畫的重複使用
 
 參數的使用，包括 ADO、OLE DB、和 ODBC 應用程式中的參數標記，可以增加執行計畫的重複使用。 
 
@@ -438,7 +438,7 @@ WHERE AddressID = 1 + 2;
 
 不過，可根據簡單參數化規則將它參數化。 如果強制參數化嘗試失敗，後續仍會嘗試簡單參數化。
 
-### <a name="simple-parameterization"></a>簡單參數化
+### <a name="SimpleParam"></a> 簡單參數化
 
 在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的 Transact-SQL 陳述式中使用參數或參數標記時，可以提升關聯式引擎將新的 SQL 陳述式與先前編譯之現有執行計畫配對的能力。
 
@@ -474,7 +474,7 @@ WHERE ProductSubcategoryID = 4;
 
 此外，您可以指定單一查詢，以及任何其他語法相同但唯有參數值不同的查詢，使其進行參數化。 
 
-### <a name="forced-parameterization"></a>強制參數化
+### <a name="ForcedParam"></a> 強制參數化
 
 您可以藉由指定將資料庫中所有的 `SELECT`、`INSERT`、`UPDATE` 及 `DELETE` 陳述式依據特定限制進行參數化，以覆寫 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 預設的簡單參數化行為。 您可以藉由將 `PARAMETERIZATION` 陳述式中的 `FORCED` 選項設為 `ALTER DATABASE` ，來啟用強制參數化。 強制參數化可藉由降低查詢編譯與重新編譯的頻率，來增進特定資料庫的效能。 可經由強制參數化獲益的資料庫通常會有來自來源 (如銷售點應用程式) 的大量並行查詢。
 
@@ -525,11 +525,11 @@ WHERE ProductSubcategoryID = 4;
 * 如果二進位常值可容納於 8,000 個位元組中，就會參數化為 varbinary(8000)。 如果該常值大於 8,000 個位元組，就會轉換為 varbinary(max)。
 * Money 類型常值會參數化為 money。
 
-#### <a name="guidelines-for-using-forced-parameterization"></a>使用強制參數化的指導方針
+#### <a name="ForcedParamGuide"></a> 強制參數化的使用指南
 
 將 `PARAMETERIZATION` 選項設為 FORCED 時，請考量下列事項：
 
-* 強制參數化一旦生效後，會在編譯查詢時將查詢中的常值 (常數) 變更為參數。 因此，查詢最佳化工具可能會選擇次佳的查詢計畫。 特別是，查詢最佳化工具較不可能比對查詢與索引檢視表或計算資料行上的索引。 它也可會為資料分割資料表與分散式資料分割檢視上的查詢選擇次佳的計畫。 針對非常依賴索引檢視或計算資料行上索引的環境，就不應該使用強制參數化。 一般而言，應由具有經驗的資料庫管理員判斷 `PARAMETERIZATION FORCED` 選項的執行不會對效能造成不良影響後，才能使用此選項。
+* 強制參數化一旦生效後，會在編譯查詢時將查詢中的常值 (常數) 變更為參數。 因此，查詢最佳化工具可能會選擇到次佳的查詢計畫。 特別是，查詢最佳化工具較不可能比對查詢與索引檢視或計算資料行上的索引。 它也可會為資料分割資料表與分散式資料分割檢視上的查詢選擇次佳的計畫。 針對非常依賴索引檢視或計算資料行上索引的環境，就不應該使用強制參數化。 一般而言，應由具有經驗的資料庫管理員判斷 `PARAMETERIZATION FORCED` 選項的執行不會對效能造成不良影響後，才能使用此選項。
 * 只要在查詢執行之內容所屬的資料庫中，將 `PARAMETERIZATION` 選項設為 `FORCED` ，參考多個資料庫的分散式查詢即能使用強制參數化。
 * 將 `PARAMETERIZATION` 選項設為 `FORCED` ，就會從資料庫的計畫快取中排清所有查詢計畫，但目前正在編譯、重新編譯或執行的計畫除外。 在設定變更期間編譯或執行的查詢計畫，會在下次執行查詢時進行參數化。
 * 設定 `PARAMETERIZATION` 選項是不需要資料庫層級獨佔鎖定的線上作業。
@@ -538,7 +538,7 @@ WHERE ProductSubcategoryID = 4;
 您可以指定在單一查詢以及語法上相同但只有其參數值不同的查詢嘗試簡單參數化，以覆寫強制參數化的行為。 反之，您可以指定只在一組語法相同的查詢嘗試強制參數化，即使資料庫中已停用強制參數化。 此即為[計畫指南](../relational-databases/performance/plan-guides.md) 的用途。
 
 > [!NOTE]
-> 將 `PARAMETERIZATION` 選項設為 `FORCED`時，錯誤訊息的報告可能與簡單參數化的報告不同：當簡單參數化下報告的訊息較少時，可能會報告多個錯誤訊息，而且發生錯誤的行號報告可能不正確。
+> 將 `PARAMETERIZATION` 選項設為 `FORCED` 時，錯誤訊息的報告可能會與 `PARAMETERIZATION` 選項設為 `SIMPLE` 時不同：強制參數化下可能報告了多個錯誤訊息，簡單參數化下報告的訊息則較少，而發生錯誤的行號可能未正確回報。
 
 ### <a name="preparing-sql-statements"></a>準備 SQL 陳述式
 
@@ -580,7 +580,7 @@ WHERE ProductID = 63;
 * 準備/執行模型可以移至其他資料庫使用，包括舊版的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。
 
  
-### <a name="parameter-sniffing"></a>參數探測
+### <a name="ParamSniffing"></a> 參數探測
 「參數探測」是指 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在編譯或重新編譯期間「探查」目前的參數值，然後將它傳遞給查詢最佳化工具，以便可用來產生可能更有效率之查詢執行計畫的程序。
 
 在編譯或重新編譯期間會探查下列批次類型的參數值：
@@ -606,7 +606,7 @@ WHERE ProductID = 63;
 * 序列執行計畫被認為比特定查詢之任何可能的平行執行計畫更快。
 * 此查詢包含無法平行執行的純量或關聯式運算子。 特定運算子可能造成查詢計畫的一個區段以序列模式執行，或整個計畫以序列模式執行。
 
-### <a name="degree-of-parallelism"></a>平行處理原則的程度
+### <a name="DOP"></a> 平行處理原則的程度
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會針對平行查詢執行或索引資料定義語言 (DDL) 作業的每一個執行個體，自動偵測最佳程度的平行處理原則。 其作法是依據下列條件： 
 
@@ -633,15 +633,15 @@ WHERE ProductID = 63;
 
 在平行查詢執行計畫中，會循序執行插入、更新及刪除運算子。 然而，UPDATE 或 DELETE 陳述式的 WHERE 子句，或 INSERT 陳述式的 SELECT 部份，可能會以平行方式執行。 真正的資料變更隨即會循序套用到資料庫。
 
-靜態和索引鍵集衍生的資料指標可以利用平行執行計畫來擴展。 但是，動態資料指標的行為僅能由序列執行來提供。 而查詢最佳化工具所產生的查詢序列執行計畫，一定是動態資料指標的一部分。
+靜態和索引鍵集衍生的資料指標可以利用平行執行計畫來擴展。 但是，動態資料指標的行為僅能由序列執行來提供。 而最佳化工具所產生的查詢序列執行計畫，一定是動態資料指標的一部份。
 
 #### <a name="overriding-degrees-of-parallelism"></a>覆寫平行處理原則的程度
 
 您可以使用[平行處理原則的最大程度](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) (MAXDOP) 伺服器組態選項 ([!INCLUDE[ssSDS_md](../includes/sssds-md.md)] 上的 [ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md))，來限制要在平行計畫執行中使用的處理器數目。 對於個別查詢及索引作業陳述式，可以指定 MAXDOP 查詢提示或 MAXDOP 索引選項，來覆寫 [平行處理原則的最大程度] 選項。 MAXDOP 所提供的控制會比個別的查詢及索引作業還多。 例如，您可以使用 MAXDOP 選項，利用增加或減少，來控制線上索引作業專用的處理器數目。 如此一來，您就可以平衡索引作業所使用的資源及並行使用者的資源。 
 
-將 [平行處理原則的最大程度] 選項設定為 0 (預設值)，可讓 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在平行計畫執行中使用所有可用的處理器 (最大值為 64 個處理器)。 雖然當 MAXDOP 選項設定為 0 時，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會將執行階段目標設定為 64 個邏輯處理器，但必要時可手動設定不同的值。 針對查詢或索引將 MAXDOP 設定為 0，讓 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 可針對平行計畫執行中指定的查詢或索引使用所有可用的處理器 (最大值為 64 個處理器)。 MAXDOP 不是所有平行查詢的強制值，而是符合平行處理原則資格之所有查詢的暫訂目標。 這表示，如果執行階段沒有足夠的背景工作執行緒可用，查詢可能會使用比 MAXDOP 伺服器組態選項更低的平行處理原則程度來執行。
+將 [平行處理原則的最大程度] 選項設為 0 (預設)，可讓 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在平行計畫執行中使用所有可用的處理器 (最大值為 64 個處理器)。 雖然當 MAXDOP 選項設定為 0 時，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會將執行階段目標設定為 64 個邏輯處理器，但必要時可手動設定不同的值。 針對查詢或索引將 MAXDOP 設定為 0，讓 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 可針對平行計畫執行中指定的查詢或索引使用所有可用的處理器 (最大值為 64 個處理器)。 MAXDOP 不是所有平行查詢的強制值，而是符合平行處理原則資格之所有查詢的暫訂目標。 這表示，如果執行階段沒有足夠的背景工作執行緒可用，查詢可能會使用比 MAXDOP 伺服器組態選項更低的平行處理原則程度來執行。
 
-如需設定 MAXDOP 的最佳做法，請參閱這篇 [Microsoft 支援文章](https://support.microsoft.com/en-us/help/2806535/recommendations-and-guidelines-for-the-max-degree-of-parallelism-configuration-option-in-sql-server)。
+如需設定 MAXDOP 的最佳做法，請參閱這篇 [Microsoft 支援文章](http://support.microsoft.com/help/2806535/recommendations-and-guidelines-for-the-max-degree-of-parallelism-configuration-option-in-sql-server)。
 
 ### <a name="parallel-query-example"></a>平行查詢範例
 
@@ -665,7 +665,7 @@ WHERE o_orderdate >= '2000/04/01'
    ORDER BY o_orderpriority
 ```
 
-假設下列索引定義於 lineitem 和 orders 資料表上：
+假設下列索引定義於 `lineitem` 和 `orders` 資料表上：
 
 ```tsql
 CREATE INDEX l_order_dates_idx 
@@ -751,7 +751,7 @@ CREATE UNIQUE INDEX o_datkeyopr_idx
 
 個別的 `CREATE TABLE` 或 `ALTER TABLE` 陳述式可以有多個條件約束，來要求建立索引。 這幾個索引建立作業會以序列方式來執行，即使在有多個 CPU 的電腦上，每個個別索引建立作業可能是平行作業。
 
-## <a name="distributted-query-architecture"></a>分散式查詢結構
+## <a name="distributed-query-architecture"></a>分散式查詢結構
 
 Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支援兩種可在 Transact-SQL 陳述式中參考異質 OLE DB 資料來源的方法：
 
@@ -791,7 +791,7 @@ Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支援兩種可
 
 ## <a name="query-processing-enhancements-on-partitioned-tables-and-indexes"></a>分割資料表和索引上的查詢處理增強功能
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2008 針對許多平行計畫提升了資料分割資料表上的查詢處理效能、變更了平行計畫和序列計畫的表示方式，以及增強了編譯時間和執行階段執行計畫內所提供的資料分割資訊。 本主題將描述這些改進的功能、提供如何解譯資料分割資料表和索引之查詢執行計畫的指引，以及提供用來改善資料分割物件上之查詢效能的最佳做法。 
+[!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 針對許多平行計畫提升了資料分割資料表上的查詢處理效能、變更了平行計畫和序列計畫的表示方式，並增強了編譯時間和執行階段執行計畫內所提供的資料分割資訊。 本主題將描述這些改進的功能、提供如何解譯資料分割資料表和索引之查詢執行計畫的指引，以及提供用來改善資料分割物件上之查詢效能的最佳做法。 
 
 > [!NOTE]
 > 只有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise、Developer 和 Evaluation 版本才支援資料分割資料表和索引。
@@ -802,7 +802,7 @@ Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支援兩種可
 
 現在完成了此搜尋作業中的資料分割刪除。
 
-此外，查詢最佳化工具已經過擴充，能讓具有一個條件的搜尋或掃描作業在 `PartitionID` (當作邏輯前置資料行) 上完成，而其他索引鍵資料行及第二層搜尋 (具有另一個條件) 也可能會在一或多個其他資料行上完成 (針對符合第一層搜尋作業資格的每一個相異值)。 也就是說，這個稱為「略過掃描」的作業可讓查詢最佳化工具根據某一個條件來執行搜尋或掃描作業，以判斷要存取的資料分割及該運算子內的第二層索引搜尋作業，以便從符合其他條件的資料分割中傳回資料列。 例如，假設有以下的查詢。
+In addition, the Query Optimizer is extended so that a seek or scan operation with one condition can be done on `PartitionID` (當做邏輯前端資料行) 上完成，而其他索引鍵資料行及第二層搜尋 (具有另一個條件) 也可能會在一或多個其他資料行上完成 (針對符合第一層搜尋作業資格的每一個相異值)。 也就是說，這個稱為「略過掃描」的作業可讓查詢最佳化工具根據某一個條件來執行搜尋或掃描作業，以判斷要存取的資料分割及該運算子內的第二層索引搜尋作業，以便從符合其他條件的資料分割中傳回資料列。 例如，假設有以下的查詢。
 
 ```tsql
 SELECT * FROM T WHERE a < 10 and b = 2;
@@ -816,7 +816,7 @@ CREATE PARTITION FUNCTION myRangePF1 (int) AS RANGE LEFT FOR VALUES (3, 7, 10);
 
 為了解決此查詢，查詢處理器會執行第一層搜尋作業，以尋找包含符合 `T.a < 10`條件之資料列的每一個資料分割。 這會找出要存取的資料分割。 然後處理器會在每個識別出的資料分割中，於資料行 b 上執行叢集索引內的第二層搜尋，以找出符合 `T.b = 2` 和 `T.a < 10`條件的資料列。 
 
-下圖為略過掃描作業的邏輯表示法。 此圖顯示資料表 T，其中的資料行 a 和 b 中有資料。 資料分割以 1 到 4 進行編號，並以垂直虛線來顯示資料分割界限。 對資料分割的第一層搜尋作業 (此圖並未顯示) 已判斷出資料分割 1、2 和 3 符合針對資料行 a 上資料表和述詞定義之資料分割所默許的搜尋條件。 也就是說， `T.a < 10`。 略過掃描作業的第二層搜尋部分所周遊的路徑則以曲線表示。 基本上來說，此略過掃描作業會搜尋每一個資料分割，以找出符合 `b = 2`條件的資料列。 此略過掃描作業的總成本與三個個別索引搜尋的總成本相同。   
+下圖為略過掃描作業的邏輯表示法。 此圖顯示資料表 `T`，其中的資料行 `a` 和 `b` 中有資料。 資料分割以 1 到 4 進行編號，並以垂直虛線來顯示資料分割界限。 對資料分割的第一層搜尋作業 (此圖並未顯示) 判斷出，資料分割 1、2 和 3 符合針對資料行 `a` 上資料表和述詞定義之資料分割所默許的搜尋條件。 也就是說， `T.a < 10`。 略過掃描作業的第二層搜尋部分所周遊的路徑則以曲線表示。 基本上來說，此略過掃描作業會搜尋每一個資料分割，以找出符合 `b = 2`條件的資料列。 此略過掃描作業的總成本與三個個別索引搜尋的總成本相同。   
 
 ![skip_scan](../relational-databases/media/skip-scan.gif)
 
@@ -943,24 +943,24 @@ WHERE date_id BETWEEN 20080802 AND 20080902;
 
 再舉一例，假設資料表在資料行 A 上具有四個資料分割，而界限點為 (10、20、30)、在資料行 B 上有一個索引，而且查詢具有述詞子句 `WHERE B IN (50, 100, 150)`。 由於資料表資料分割是以 A 的值為根據，所以 B 的值可能會發生在任何資料表資料分割內。 因此，查詢處理器將會在這四個資料表資料分割的每一個中，搜尋 B (50, 100, 150) 的這三個值的每一個。 查詢處理器會依比例指派背景工作執行緒，好讓它可以透過平行方式執行這 12 個查詢掃描的每一個。
 
-|根據資料行 A 的資料表資料分割    |在每一個資料表資料分割中搜尋資料行 B |
+|根據資料行 A 的資料表資料分割 |在每一個資料表資料分割中搜尋資料行 B |
 |----|----|
-|資料表資料分割 1: A < 10     |B=50, B=100, B=150 |
-|資料表資料分割 2: A >= 10 AND A < 20     |B=50, B=100, B=150 |
-|資料表資料分割 3: A >= 20 AND A < 30     |B=50, B=100, B=150 |
-|資料表資料分割 4: A >= 30     |B=50, B=100, B=150 |
+|資料表資料分割 1: A < 10   |B=50, B=100, B=150 |
+|資料表資料分割 2: A >= 10 AND A < 20   |B=50, B=100, B=150 |
+|資料表資料分割 3: A >= 20 AND A < 30   |B=50, B=100, B=150 |
+|資料表資料分割 4: A >= 30  |B=50, B=100, B=150 |
 
 ### <a name="best-practices"></a>最佳作法
 
 若要讓從大量資料分割資料表和索引中存取大量資料的查詢提升效能，我們建議您採取以下的最佳做法：
 
-* 在多個磁碟之間條狀配置每一個資料分割。
+* 在多個磁碟之間條狀配置每一個資料分割。 這在使用旋轉磁碟時特別有關。
 * 盡可能使用具有充足主記憶體的伺服器，將經常存取的資料分割或所有資料分割納入記憶體中，以減少 I/O 成本。
 * 如果您查詢的資料不納入記憶體中，請壓縮資料表和索引。 如此可減少 I/O 成本。
 * 請使用具有快速處理器的伺服器並盡量多使用您可以負擔的處理器核心，以充分利用平行查詢處理功能。
 * 確定伺服器擁有足夠的 I/O 控制器頻寬。 
 * 在每一個大型資料分割資料表上建立叢集索引，以充分利用 B 型樹狀結構的掃描最佳化。
-* 當您將資料大量載入資料分割資料表時，請遵循 [將大量資料載入資料分割資料表](http://go.microsoft.com/fwlink/?LinkId=154561)白皮書 (英文) 中的最佳作法建議。
+* 當您將資料大量載入資料分割資料表時，請遵循 [The Data Loading Performance Guide](http://msdn.microsoft.com/en-us/library/dd425070.aspx) (資料載入效能指南) 技術白皮書中的最佳做法建議。
 
 ### <a name="example"></a>範例
 
@@ -1034,5 +1034,6 @@ GO
 
 ##  <a name="Additional_Reading"></a> 其他閱讀資料  
  [執行程序邏輯和實體運算子參考](../relational-databases/showplan-logical-and-physical-operators-reference.md)  
- [擴充事件](../relational-databases/extended-events/extended-events.md)
+ [擴充事件](../relational-databases/extended-events/extended-events.md)  
+ [使用查詢存放區的最佳作法](../relational-databases/performance/best-practice-with-the-query-store.md)
 
