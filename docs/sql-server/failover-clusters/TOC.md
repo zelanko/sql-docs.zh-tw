@@ -3,7 +3,7 @@
 # [角色切換後針對登入和作業進行管理](management-of-logins-and-jobs-after-role-switching-sql-server.md)  
 # [被遺棄使用者疑難排解](troubleshoot-orphaned-users-sql-server.md)  
 
-# [容錯移轉叢集安裝 (文章)](install/TOC.md)  
+# [容錯移轉叢集安裝](install/sql-server-failover-cluster-installation.md)  
 
 # [SQL Server 的 Windows Server 容錯移轉叢集 (WSFC)](windows/windows-server-failover-clustering-wsfc-with-sql-server.md)  
 ## [WSFC 仲裁模式和投票組態](windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md)  
