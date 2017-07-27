@@ -24,7 +24,7 @@ ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="create-primary-keys"></a>建立主索引鍵
-[!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
  > 如需舊版 SQL Server 的相關內容，請參閱[建立主索引鍵](https://msdn.microsoft.com/en-US/library/ms189039(SQL.120).aspx)。
 
