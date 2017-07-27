@@ -2,7 +2,7 @@
 title: "使用 FOR JSON 將查詢結果格式化為 JSON (SQL Server) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 01/31/2017
+ms.date: 07/18/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -19,42 +19,44 @@ caps.latest.revision: 31
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
-ms.openlocfilehash: 06095384c6f6ec876e0d103186b1269d19056987
+ms.translationtype: HT
+ms.sourcegitcommit: 50ef4db2a3c9eebcdf63ec9329eb22f1e0f001c0
+ms.openlocfilehash: e59b0e12e0ee47a5ac8a68e539144401d80fb649
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/20/2017
 
 ---
 # <a name="format-query-results-as-json-with-for-json-sql-server"></a>使用 FOR JSON 將查詢結果格式化為 JSON (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-將 **FOR JSON** 子句新增至 **SELECT** 陳述式，以將查詢結果格式化為 JSON，或將 SQL Server 中的資料匯出為 JSON。 使用**FOR JSON**子句，以簡化用戶端應用程式的用戶端應用程式的 JSON 輸出格式設定委派給[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。
+將 **FOR JSON** 子句新增至 **SELECT** 陳述式，以將查詢結果格式化為 JSON，或將 SQL Server 中的資料匯出為 JSON。 使用 **FOR JSON** 子句，將來自應用程式的 JSON 輸出格式設定委派給 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，以簡化用戶端應用程式。
   
- 當您使用 **FOR JSON** 子句，您可以明確指定輸出的架構，或讓 SELECT 陳述式的架構決定輸出。  
+ 當您使用 **FOR JSON** 子句時，您可以明確指定 JSON 輸出的結構，或讓 SELECT 陳述式的結構決定輸出。  
   
--   使用**FOR JSON PATH**維護的 JSON 輸出格式的完整控制權。 您可以建立包裝函式物件和巢狀複雜屬性。  
+-   若要保有對 JSON 輸出格式的完整控制權，請使用 **FOR JSON PATH**。 您可以建立包裝函式物件和巢狀複雜屬性。  
   
--   使用**FOR JSON AUTO**格式化 JSON 輸出會自動根據 SELECT 陳述式的結構。  
+-   若要根據 SELECT 陳述式的結構自動格式化 JSON 輸出，請使用 **FOR JSON AUTO**。  
   
 以下是含 **FOR JSON** 子句的 **SELECT** 陳述式範例和其輸出。
   
  ![FOR JSON](../../relational-databases/json/media/jsonslides2forjson.png "FOR JSON")  
   
-## <a name="maintain-control-over-json-output-with-for-json-path"></a>保有控制權 FOR JSON PATH 使用 JSON 輸出
+## <a name="option-1---you-control-output-with-for-json-path"></a>選項 1 - 使用 FOR JSON PATH 控制輸出
 在 **PATH** 模式中，您可以使用點語法 (例如 `'Item.Price'` ) 來格式化巢狀的輸出。  
 
 以下是使用 **PATH** 模式搭配 **FOR JSON** 子句的範例。 下列範例也會使用 **ROOT** 選項來指定具名根項目。 
   
  ![FOR JSON 輸出流程圖表](../../relational-databases/json/media/forjson-example1.png "FOR JSON 輸出流程圖表")  
 
-### <a name="more-info"></a>其他資訊
+### <a name="more-info-about-for-json-path"></a>FOR JSON PATH 的詳細資訊
 如需詳細資訊和範例，請參閱[使用 PATH 模式 &#40; 格式化巢狀 JSON 輸出SQL Server &#41;](../../relational-databases/json/format-nested-json-output-with-path-mode-sql-server.md).
 
 如需語法和使用方式，請參閱 [FOR 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-for-clause-transact-sql.md)。  
 
-## <a name="let-the-select-statement-control-json-output-with-for-json-auto"></a>讓 SELECT 陳述式控制使用 FOR JSON AUTO JSON 輸出
-在 **AUTO** 模式中，SELECT 陳述式的結構決定 JSON 輸出的格式。 根據預設， **null** 值不會包含在輸出中。 您可以使用 **INCLUDE_NULL_VALUES** 來變更此行為。  
+## <a name="option-2---select-statement-controls-output-with-for-json-auto"></a>選項 2 - SELECT 陳述式使用 FOR JSON AUTO 控制輸出
+在 **AUTO** 模式中，SELECT 陳述式的結構決定 JSON 輸出的格式。
+
+根據預設， **null** 值不會包含在輸出中。 您可以使用 **INCLUDE_NULL_VALUES** 來變更此行為。  
 
 以下是使用 **AUTO** 模式搭配 **FOR JSON** 子句的範例查詢。
  
@@ -75,8 +77,9 @@ FOR JSON AUTO
     "name": "Jane",
     "surname": "Doe"
 }]
-```  
-### <a name="more-info"></a>其他資訊
+```
+ 
+### <a name="more-info-about-for-json-auto"></a>FOR JSON AUTO 的詳細資訊
 如需詳細資訊和範例，請參閱[自動格式化 JSON 輸出使用 AUTO 模式 &#40;SQL Server &#41;](../../relational-databases/json/format-json-output-automatically-with-auto-mode-sql-server.md).
 
 如需語法和使用方式，請參閱 [FOR 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-for-clause-transact-sql.md)。  
@@ -91,13 +94,13 @@ FOR JSON AUTO
 -   **WITHOUT_ARRAY_WRAPPER**。 若要移除預設圍住 **FOR JSON** 子句之 JSON 輸出的方括弧，請指定 **WITHOUT_ARRAY_WRAPPER** 選項。 使用此選項以產生單一 JSON 物件做為從單一資料列結果的輸出。 如果您未指定此選項，JSON 輸出格式化為陣列-也就是以方括弧括住。 如需詳細資訊，請參閱 [使用 WITHOUT_ARRAY_WRAPPER 選項從 JSON 輸出移除方括弧 &#40;SQL Server&#41;](../../relational-databases/json/remove-square-brackets-from-json-without-array-wrapper-option.md)。 
    
 ## <a name="output-of-the-for-json-clause"></a>FOR JSON 子句的輸出  
- **FOR JSON** 子句的輸出具有下列特性。  
+**FOR JSON** 子句的輸出具有下列特性：  
   
 1.  結果集包含單一資料行。
     -   小型結果集會包含單一資料列。
     -   大型結果集分割很長的 JSON 字串，跨多個資料列。
         -   根據預設，SQL Server Management Studio (SSMS) 將串連結果為單一資料列之輸出的設定時**以方格顯示結果**。 SSMS 的 [狀態] 列會顯示實際資料列計數。
-        -   其他用戶端應用程式可能需要串連長的結果結合多個資料列內容的程式碼。 如需這個程式碼的 C# 應用程式的範例，請參閱[C# 用戶端應用程式中的使用 FOR JSON 輸出](https://docs.microsoft.com/en-us/sql/relational-databases/json/use-for-json-output-in-sql-server-and-in-client-apps-sql-server#use-for-json-output-in-a-c-client-app)。
+        -   其他用戶端應用程式可能需要程式碼，藉由串連多個資料列的內容，來將較長的結果重新合併成有效的單一 JSON 字串。 如需這個程式碼的 C# 應用程式的範例，請參閱[C# 用戶端應用程式中的使用 FOR JSON 輸出](https://docs.microsoft.com/en-us/sql/relational-databases/json/use-for-json-output-in-sql-server-and-in-client-apps-sql-server#use-for-json-output-in-a-c-client-app)。
   
      ![FOR JSON 輸出範例](../../relational-databases/json/media/forjson-example2.png "FOR JSON 輸出範例")  
   
@@ -143,6 +146,7 @@ FOR JSON AUTO
     "D": "Z"
 }] 
 ```  
+
  如需您在 **FOR JSON** 子句輸出中所看到之項目的詳細資訊，請參閱下列主題。  
 -   [FOR JSON 如何將 SQL Server 資料類型轉換為 JSON 資料類型 &#40;SQL Server&#41;](../../relational-databases/json/how-for-json-converts-sql-server-data-types-to-json-data-types-sql-server.md)  
 **FOR JSON** 子句使用本主題中描述的規則，在 JSON 輸出中將 SQL 資料類型轉換為 JSON 類型。  

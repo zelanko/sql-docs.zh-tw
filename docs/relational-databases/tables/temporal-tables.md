@@ -15,17 +15,17 @@ caps.latest.revision: 47
 author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: a4cdbe630a64ce01c6319dcc5791c0f3f9b3176b
+ms.translationtype: HT
+ms.sourcegitcommit: fa59193fcedb1d5437d8df14035fadca2b3a28f1
+ms.openlocfilehash: 5f9f128cab773951438aa89998ad76e7ba29bb4d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/20/2017
 
 ---
 # <a name="temporal-tables"></a>時態表
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以資料庫功能的形式引進了對系統建立版本時態表的支援，其帶入內建支援，提供儲存在資料表中任何時間點資料的相關資訊，而不是只有在目前時間為正確的資料。 Temporal 是 ANSI SQL 2011 中引進的資料庫功能， [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]現在可加以支援。  
+  SQL Server 2016 引進了對系統控制版本時態表的支援，成為帶來內建支援的資料庫功能，能夠提供資料表中在任何時間點儲存的資料相關資訊，而不只是當下時刻的正確資料。 Temporal 是 ANSI SQL 2011 中引進的資料庫功能， [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]現在可加以支援。  
   
  **快速入門**  
   
