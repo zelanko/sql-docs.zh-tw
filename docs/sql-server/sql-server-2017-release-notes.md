@@ -14,15 +14,15 @@ caps.latest.revision: 41
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 67c1c0f3a9da6cc5d050da5db8a493f5da934c2a
-ms.openlocfilehash: fa45fea4ebb378f035b4b4af2b1fa8a20bc152a5
+ms.translationtype: HT
+ms.sourcegitcommit: 6aa73e749d4f308265dfe27a160802c15a391a3e
+ms.openlocfilehash: a2950b6aef0e12653efbb9eb26fd3f1ae6cb951e
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/17/2017
 
 ---
 # <a name="sql-server-2017-release-notes"></a>SQL Server 2017 版本資訊
-本主題描述 [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] 的限制及問題。 相關資訊，請參閱下列各項：
+本主題描述 [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] 的限制及問題。 如需相關資訊，請參閱下列各項：
 
 - [新功能 SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)。
 - [SQL Server 上的 Linux 版本資訊](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-release-notes)。
@@ -31,6 +31,16 @@ ms.lasthandoff: 06/23/2017
  **現在就試試看：**    
    -   [![從 Evaluation Center 下載](../analysis-services/media/download.png)](http://go.microsoft.com/fwlink/?LinkID=829477)  從 [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] Evaluation Center **[下載](http://go.microsoft.com/fwlink/?LinkID=829477)**
 
+## <a name="sql-server-2017-release-candidate-rc1---july-2017"></a>SQL Server 2017 候選版 (RC1 - 2017 年 7 月)
+
+### <a name="sql-server-integration-services-ssis-rc1---july-2017"></a>SQL Server Integration Services (SSIS) (RC1 - 2017 年 7 月)
+- **問題和客戶的影響：**為了一致性和可讀性，預存程序 **[catalog].[create_execution]** 的參數 *runincluster* 已重新命名為 *runinscaleout*。
+- **因應措施：**如果您有現成的指令碼可在 [相應放大] 中執行套件，您必須將參數名稱從 *runincluster* 變更為 *runinscaleout*，以確保這些指令碼在 RC1 中正常運作。
+
+- **問題和客戶的影響：**SQL Server Management Studio (SSMS) 17.1 和舊版無法在 RC1 的 [相應放大] 中觸發套件執行。 錯誤訊息為：「*@runincluster* 不是程序 **create_execution** 的參數。」 SSMS 的下一個版本 17.2 版中將會修正此問題。 SSMS 17.2 版和更新版本支援 [相應放大] 中的新參數名稱和套件執行。 
+- **因應措施：**在 SSMS 17.2 版可用之前，您可以使用現有的 SSMS 版本來產生套件執行指令碼，然後將指令碼中的 *runincluster* 參數名稱變更為 *runinscaleout*，再執行此指令碼。
+
+![horizontal_bar](../sql-server/media/horizontal-bar.png)
 ## <a name="sql-server-2017-ctp-21-may--2017"></a>SQL Server 2017 CTP 2.1 (可能 2017)
 ### <a name="documentation-ctp-21"></a>文件 (CTP 2.1)
 - **問題和對客戶的影響︰**[!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] 的文件有所限制，且內容會隨附於 [!INCLUDE[ssSQL15_md](../includes/sssql15-md.md)] 文件集。  文中專門針對 [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] 的內容會以「適用於」標示。 
@@ -96,78 +106,10 @@ ms.lasthandoff: 06/23/2017
 
    裝載次要複本的 SQL Server 執行個體復原。
 
-
-![horizontal_bar](../sql-server/media/horizontal-bar.png)
-
-## <a name="sql-server-2017-ctp-14-march--2017"></a>SQL Server 2017 CTP 1.4 (第 2017 年 3 月)
-
-### <a name="documentation-ctp-14"></a>文件 (CTP 1.4)
-- **問題和對客戶的影響︰**[!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] 的文件有所限制，且內容會隨附於 [!INCLUDE[ssSQL15_md](../includes/sssql15-md.md)] 文件集。  文中專門針對 [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] 的內容會以「適用於」標示。 
-- **問題和對客戶的影響︰**[!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] 沒有離線內容。
-
-![horizontal_bar](../sql-server/media/horizontal-bar.png)
-
-## <a name="sql-server-2017-ctp-13-february--2017"></a>SQL Server 2017 CTP 1.3 (第 2017 年 2 月)
-### <a name="supported-installation-scenarios-ctp-13"></a>支援的安裝案例 (CTP 1.3)
-[!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] 僅為測試版本。  不支援生產環境部署。 建議您在虛擬機器上安裝並測試 [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] 。
-
-### <a name="documentation-ctp-13"></a>文件 (CTP 1.3)
-- **問題和對客戶的影響︰**[!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] 的文件有所限制，且內容會隨附於 [!INCLUDE[ssSQL15_md](../includes/sssql15-md.md)] 文件集。  文中專門針對 [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] 的內容會以「適用於」標示。 
-- **問題和對客戶的影響︰**[!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] 沒有離線內容。
-
-### <a name="sql-server-integration-services-ssis-ctp-13"></a>SQL Server Integration Services (SSIS) (CTP 1.3)
-#### <a name="cdc-components-not-supported-in-this-ctp-release"></a>這個 CTP 版本不支援 CDC 元件
--   **問題和對客戶的影響**︰這個 CTP 版本不支援 CDC 控制工作、CDC 來源和 CDC 分隔器。
--   **因應措施：**沒有因應措施。
-
-
-![horizontal_bar](../sql-server/media/horizontal-bar.png)
-
-## <a name="sql-server-2017-ctp-12-january--2017"></a>SQL Server 2017 CTP 1.2 (第 2017 年 1 月)
-### <a name="supported-installation-scenarios-ctp-12"></a>支援的安裝案例 (CTP 1.2)
-[!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] 僅為測試版本。  不支援生產環境部署。 建議您在虛擬機器上安裝並測試 [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] 。
-
-### <a name="sql-server-database-engine-ctp-12"></a>SQL Server Database Engine (CTP 1.2)
-- **問題和對客戶的影響︰** 在某些情況下，MSSQLSERVER 服務將會停滯在「開始」狀態。
-- **因應措施：** 若要解決此問題：
-  -  建立 `mssqlserver` 服務和 `keyiso` 服務之間的相依性。 其中一個方法是在已提升權限的命令提示字元中執行下列命令： `sc config mssqlserver depend= keyiso`
-  - 重新啟動電腦。
-
-### <a name="documentation-ctp-12"></a>文件 (CTP 1.2)
-- **問題和對客戶的影響︰**[!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] 的文件有所限制，且內容會隨附於 [!INCLUDE[ssSQL15_md](../includes/sssql15-md.md)] 文件集。  文中專門針對 [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] 的內容會以「適用於︰」標示。 
-- **問題和對客戶的影響︰**[!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] 沒有離線內容。
- 
-### <a name="sql-server-integration-services-ssis-ctp-12"></a>SQL Server Integration Services (SSIS) (CTP 1.2)
-#### <a name="deleting-the-ssis-catalog-may-fail-when-ssis-scale-out-is-installed"></a>安裝 SSIS 相應放大時刪除 SSIS 目錄可能會失敗
-**問題和對客戶的影響︰**將 SSIS 相應放大功能安裝在電腦上，刪除 SSISDB 目錄資料庫可能會因下列錯誤而失敗：「無法卸除目前使用者已登入的登入 *'login'* 」。
-   
-**因應措施**：
--   在相應放大主機電腦上，執行命令 "services.msc" 以開啟 [服務] 視窗。 停止 SQL Server Integration Services 叢集主機服務。
--   在連接到主機的相應放大背景工作電腦上，執行命令 "services.msc" 以開啟 [服務] 視窗。 停止 SQL Server Integration Services 叢集背景工作服務。
-
-您現在可以刪除 SSISDB 目錄資料庫。
-
-### <a name="sql-server-master-data-services-ctp-12"></a>SQL Server Master Data Services (CTP 1.2)
-#### <a name="transaction-may-not-work-when-the-entity-transaction-log-type-is-set-to-attribute"></a>交易在實體交易記錄檔類型設為屬性時可能無法使用
-**問題和對客戶的影響︰** 當實體交易記錄檔類型在 **中設為 [屬性]**[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 時 (預設值是 [成員] )，下列案例會失敗︰
-
-* 網站不會顯示實體變更的交易。
-* 無法開啟 [交易]  網頁反轉交易。
-* 網站中無法更新有交易註解的實體。
-
-**因應措施：**沒有因應措施。
-
-#### <a name="copy-version-may-not-work-when-copy-only-committed-version-is-set-to-false"></a>當 [Copy only committed version (僅複製認可的版本)]  設為 false 時，無法使用複製版本。
--  **問題和對客戶的影響︰** 當 [Copy only committed version (僅複製認可的版本)]  設定設為 [否]  時 (預設值為 [是] )，複製版本作業可能會失敗。 沒有任何錯誤訊息。
--  **因應措施：**沒有因應措施。
-
 ##  <a name="infotipsql-servermediainfo-tippng-engage-with-the-sql-server-engineering-team"></a>![info_tip](../sql-server/media/info-tip.png) 與 SQL Server 工程團隊交流 
 - [堆疊溢位 (標記 sql-server) - 詢問技術性問題](http://stackoverflow.com/questions/tagged/sql-server)
 - [MSDN 論壇 - 詢問技術性問題](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)
 - [Microsoft Connect - 報告錯誤及要求功能](https://connect.microsoft.com/SQLServer/Feedback)
 - [Reddit - 有關 R 的一般討論](https://www.reddit.com/r/SQLServer/)
 
-
 ![MS_Logo_X-Small](../sql-server/media/ms-logo-x-small.png)
-
-

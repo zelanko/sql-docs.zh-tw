@@ -41,29 +41,30 @@
    sudo vi /etc/hosts
    ```
 
-   下列範例所示`/etc/hosts`上**node1**的新增項目與**node1**和**node2**。 本文件**node1**指的是 SQL Server 的主要複本。 **node2**指的是次要 SQL Server。;
+   下列範例顯示 **node1** 上的 `/etc/hosts`，以及 **node1**、**node2** 和 **node3** 上的新增項目。 在本文件中，**node1** 指的是裝載主要複本的伺服器。 **node2** 和 **node3** 指的是裝載次要複本的伺服器。
 
 
    ```
    127.0.0.1   localhost localhost4 localhost4.localdomain4
    ::1       localhost localhost6 localhost6.localdomain6
-   10.128.18.128 node1
+   10.128.18.12 node1
    10.128.16.77 node2
+   10.128.15.33 node3
    ```
 
 ### <a name="install-sql-server"></a>安裝 SQL Server
 
 安裝 SQL Server。 下列連結指向各種分佈的 SQL Server 安裝指示。 
 
-- [Red Hat Enterprise Linux](..\linux\sql-server-linux-setup-red-hat.md)
+- [Red Hat Enterprise Linux](../linux/quickstart-install-connect-red-hat.md)
 
-- [SUSE Linux Enterprise Server](..\linux\sql-server-linux-setup-suse-linux-enterprise-server.md)
+- [SUSE Linux Enterprise Server](../linux/quickstart-install-connect-suse.md)
 
-- [Ubuntu](..\linux\sql-server-linux-setup-ubuntu.md)
+- [Ubuntu](../linux/quickstart-install-connect-ubuntu.md)
 
 ## <a name="enable-always-on-availability-groups-and-restart-sqlserver"></a>啟用 Alwayson 可用性群組並重新啟動 sql server
 
-啟用 Alwayson 可用性群組裝載 SQL Server 服務，每個節點上的，然後重新啟動`mssql-server`。  請執行下列指令碼：
+在裝載 SQL Server 執行個體的每個節點上啟用 AlwaysOn 可用性群組，然後重新啟動 `mssql-server`。  請執行下列指令碼：
 
 ```bash
 sudo /opt/mssql/bin/mssql-conf set hadr.hadrenabled  1
@@ -72,7 +73,7 @@ sudo systemctl restart mssql-server
 
 ##  <a name="enable-alwaysonhealth-event-session"></a>啟用 AlwaysOn_health 事件工作階段 
 
-您可以 optionaly 啟用 Alwayson 可用性群組特定擴充事件來協助診斷根本原因，當您疑難排解可用性群組。
+當您針對可用性群組進行疑難排解時，您可以選擇性地啟用 AlwaysOn 可用性群組擴充事件來協助診斷根本原因。 在每個 SQL Server 執行個體上執行下列命令。 
 
 ```Transact-SQL
 ALTER EVENT SESSION  AlwaysOn_health ON SERVER WITH (STARTUP_STATE=ON);
@@ -83,7 +84,7 @@ GO
 
 ## <a name="create-db-mirroring-endpoint-user"></a>建立資料庫鏡像端點的使用者
 
-下列的 TRANSACT-SQL 指令碼會建立名為登入`dbm_login`，和名為使用者`dbm_user`。 更新的指令碼以強式密碼。 若要建立資料庫鏡像端點使用者的所有 SQL Server 上執行下列命令。
+下列的 TRANSACT-SQL 指令碼會建立名為登入`dbm_login`，和名為使用者`dbm_user`。 更新的指令碼以強式密碼。 在所有 SQL Server 執行個體上執行下列命令，以建立資料庫鏡像端點使用者。
 
 ```Transact-SQL
 CREATE LOGIN dbm_login WITH PASSWORD = '**<1Sample_Strong_Password!@#>**';
@@ -92,9 +93,9 @@ CREATE USER dbm_user FOR LOGIN dbm_login;
 
 ## <a name="create-a-certificate"></a>建立憑證
 
-在 Linux 上的 SQL Server 服務使用憑證來驗證的鏡像端點之間的通訊。 
+Linux 上的 SQL Server 服務使用憑證來驗證鏡像端點之間的通訊。 
 
-下列的 TRANSACT-SQL 指令碼會建立主要金鑰和憑證。 然後會將憑證備份，並具有私密金鑰的金鑰保護的檔案。 更新的指令碼以強式密碼。 連接到主要 SQL Server，然後執行下列 TRANSACT-SQL 來建立憑證：
+下列的 TRANSACT-SQL 指令碼會建立主要金鑰和憑證。 然後會將憑證備份，並具有私密金鑰的金鑰保護的檔案。 更新的指令碼以強式密碼。 連線到主要 SQL Server 執行個體，然後執行下列 Transact-SQL 來建立憑證：
 
 ```Transact-SQL
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '**<Master_Key_Password>**';
@@ -116,7 +117,7 @@ cd /var/opt/mssql/data
 scp dbm_certificate.* root@**<node2>**:/var/opt/mssql/data/
 ```
 
-在目標伺服器上，授與存取憑證 mssql 使用者的權限。
+在每部目標伺服器上，授與 mssql 使用者存取憑證的權限。
 
 ```bash
 cd /var/opt/mssql/data
@@ -144,7 +145,6 @@ CREATE CERTIFICATE dbm_certificate
 
 下列 TRANSACT-SQL 會建立名為接聽端點`Hadr_endpoint`可用性群組。 啟動端點，並可讓您建立之使用者的連接權限。 執行指令碼之前，請將之間的值取代`**< ... >**`。
 
-
 >[!NOTE]
 >此版本中，請勿用於不同的 IP 位址的接聽程式 IP。 我們正在解決這個問題，但只可接受的值現在是 '0.0.0.0'。
 
@@ -164,5 +164,8 @@ GRANT CONNECT ON ENDPOINT::[Hadr_endpoint] TO [dbm_login];
 
 >[!IMPORTANT]
 >在防火牆上的 TCP 連接埠必須開啟接聽程式連接埠。
+
+>[!IMPORTANT]
+>在 SQL Server 2017 版中，資料庫鏡像端點唯一支援的驗證方法是 `CERTIFICATE`。 未來的版本將啟用 `WINDOWS` 選項。
 
 如需完整資訊，請參閱[資料庫鏡像端點 (SQL Server)](http://msdn.microsoft.com/library/ms179511.aspx)。
