@@ -26,6 +26,7 @@
 ## [使用格式檔案大量匯入資料](use-a-format-file-to-bulk-import-data-sql-server.md)  
 ## [使用格式檔案略過資料表資料行](use-a-format-file-to-skip-a-table-column-sql-server.md)  
 ## [使用格式檔案略過資料欄位](use-a-format-file-to-skip-a-data-field-sql-server.md)  
-## [使用格式檔案將資料表資料行對應至資料檔欄位](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
+## [使用格式檔案將資料表資料行對應至資料檔欄位](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)
+# [將 Excel 中的資料匯入到 SQL](import-data-from-excel-to-sql.md)  
 # [大量匯入與匯出 XML 文件的範例](examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)  
 # [大量存取 Azure Blob 儲存體資料的範例](examples-of-bulk-access-to-data-in-azure-blob-storage.md)  

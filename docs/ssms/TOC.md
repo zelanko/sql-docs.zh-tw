@@ -7,9 +7,6 @@
 ## [新的與最近更新的文件](new-updated-ssms.md)
 ## [舊版 SSMS](previous-sql-server-management-studio-releases.md)
 
-# [使用 SSMS](use-sql-server-management-studio.md)
-# [SSMS 中的功能](features-in-sql-server-management-studio.md)
-# [使用意見反應收集](sql-server-management-studio-telemetry-ssms.md)
 # [下載 SQL Server PowerShell 模組](download-sql-server-ps-module.md)
 
 # [SQL Server Agent +](../ssms/agent/sql-server-agent.md)
@@ -49,4 +46,4 @@
 
 # [Ssms 公用程式](ssms-utility.md)  
 # [SSMS 鍵盤快速鍵](sql-server-management-studio-keyboard-shortcuts.md)  
-
+# [匿名的使用量資料](sql-server-management-studio-telemetry-ssms.md)
