@@ -22,8 +22,7 @@ ms.contentlocale: zh-tw
 ms.lasthandoff: 06/29/2017
 
 ---
-# 資料行存放區索引 - 新功能
-<a id="columnstore-indexes---what39s-new" class="xliff"></a>
+# <a name="columnstore-indexes---what39s-new"></a>資料行存放區索引 - 新功能
 [!INCLUDE[tsql-appliesto-ss2012-all_md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
   適用於每個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本，以及最新版的 Azure SQL Database Premium Edition、Azure SQL 資料倉儲及平行處理資料倉儲的資料行存放區功能摘要。  
@@ -31,8 +30,7 @@ ms.lasthandoff: 06/29/2017
  >[!NOTE]
  > 針對 Azure SQL Database，資料行存放區索引僅適用於 Premium Edition。
  
-## 產品版本的功能摘要
-<a id="feature-summary-for-product-releases" class="xliff"></a>  
+## <a name="feature-summary-for-product-releases"></a>產品版本的功能摘要  
  本表會摘要說明資料行存放區索引的重要功能以及提供它們的產品。  
 
   
@@ -61,15 +59,13 @@ ms.lasthandoff: 06/29/2017
 ## [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 
  [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 新增這些新功能。
 
-### 功能
-<a id="functional" class="xliff"></a>
+### <a name="functional"></a>功能
 - [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 支援叢集資料行存放區索引中的非保存計算資料行。 叢集資料行存放區索引不支援保存的資料行。您無法在具有計算資料行的資料行存放區索引上建立非叢集索引。 
 
 ## [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 會加入索引鍵增強功能，以改善資料行存放區索引的效能和彈性。 這些改善會強化資料倉儲案例，並進行即時作業分析。  
   
-### 功能
-<a id="functional" class="xliff"></a>  
+### <a name="functional"></a>功能  
   
 -   資料列存放區資料表可以有一個可更新的非叢集資料行存放區索引。 非叢集資料行存放區索引以前是唯讀的。  
   
@@ -83,8 +79,7 @@ ms.lasthandoff: 06/29/2017
   
 -   資料行存放區索引的壓縮延遲選項，可將即時作業分析的交易工作負載影響降到最低。  這個選項允許經常變更的資料列在穩定後，再壓縮到資料行存放區。 如需詳細資訊，請參閱 [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md) 和[開始使用資料行存放區進行即時作業分析](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)。  
   
-### 資料庫相容性等級 120 或 130 的效能
-<a id="performance-for-database-compatibility-level-120-or-130" class="xliff"></a>  
+### <a name="performance-for-database-compatibility-level-120-or-130"></a>資料庫相容性等級 120 或 130 的效能  
   
 -   資料行存放區索引支援讀取認可快照集隔離等級 (RCSI) 和快照集隔離 (SI)。 這可讓交易式一致性分析查詢沒有任何鎖定。  
   
@@ -96,8 +91,7 @@ ms.lasthandoff: 06/29/2017
   
 -   述詞下推會加快比較 [v]char 或 n[v]char 字串類型的查詢。 這適用於一般比較運算子和包括運算子，如使用點陣圖篩選器的 LIKE。 這對 SQL Server 支援的所有定序都有效。  
   
-### 資料庫相容性等級 130 的效能
-<a id="performance-for-database-compatibility-level-130" class="xliff"></a>  
+### <a name="performance-for-database-compatibility-level-130"></a>資料庫相容性等級 130 的效能  
   
 -   新的批次模式執行支援使用任一這些作業的查詢︰  
   
@@ -115,8 +109,7 @@ ms.lasthandoff: 06/29/2017
   
 -   在存取資料列存放區或資料行存放區索引中的資料時，記憶體最佳化資料表查詢在 SQL InterOp 模式中可以有平行計畫。  
   
-### 可支援性
-<a id="supportability" class="xliff"></a>  
+### <a name="supportability"></a>可支援性  
  這些系統檢視表對資料行存放區而言是新的︰  
   
 -   [sys.column_store_row_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-row-groups-transact-sql.md)  
@@ -147,8 +140,7 @@ ms.lasthandoff: 06/29/2017
   
 -   [sys.dm_db_xtp_table_memory_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql.md)  
   
-### 限制
-<a id="limitations" class="xliff"></a>  
+### <a name="limitations"></a>限制  
   
 -   btree 索引在叢集資料行存放區索引上定義時，MERGE 就會停用。  
   
@@ -156,8 +148,7 @@ ms.lasthandoff: 06/29/2017
   
 -   至於記憶體中資料表，針對資料行存放區索引的查詢只能在 InterOP 模式中執行，不是在記憶體中原生模式中執行。 支援平行執行。  
   
-## SQL Server 2014
-<a id="sql-server-2014" class="xliff"></a>  
+## <a name="sql-server-2014"></a>SQL Server 2014  
  SQL Server 2014 引進了叢集資料行存放區索引，作為主要的儲存體格式。 這允許一般的負載以及更新、刪除和插入作業。  
   
 -   資料表可以使用叢集資料行存放區索引作為主要的資料表儲存體。 資料表上不允許其他索引，但是叢集資料行存放區索引是可以更新的，所以您可以執行一般的載入並對個別資料列進行變更。  
@@ -170,8 +161,7 @@ ms.lasthandoff: 06/29/2017
   
 -   這些運算子可在批次模式下執行多執行緒查詢︰scan、filter、project、join、group by 和 union all。  
   
-## SQL Server 2012
-<a id="sql-server-2012" class="xliff"></a>  
+## <a name="sql-server-2012"></a>SQL Server 2012  
  SQL Server 2012 引進了非叢集資料行存放區索引，作為資料列存放區資料表的另一個索引類型，和批次處理資料行存放區資料的查詢。  
   
 -   資料列存放區資料表可以有一個非叢集資料行存放區索引。  
@@ -182,8 +172,7 @@ ms.lasthandoff: 06/29/2017
   
 -   批次處理序提供 2 倍或更高的查詢效能，但僅供平行查詢執行使用。  
   
-## 另請參閱
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>另請參閱  
  資料行存放區索引指南   
  資料行存放區索引資料載入   
  [資料行存放區索引效能](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   

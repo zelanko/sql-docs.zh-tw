@@ -35,8 +35,7 @@ ms.contentlocale: zh-tw
 ms.lasthandoff: 06/22/2017
 
 ---
-# 擴展全文檢索索引
-<a id="populate-full-text-indexes" class="xliff"></a>
+# <a name="populate-full-text-indexes"></a>擴展全文檢索索引
   建立和維護全文檢索索引包括使用稱為「母體擴展」(Population) (也稱為「搜耙」(Crawl)) 的處理序來擴展索引。  
   
 ##  <a name="types"></a> Types of population  
@@ -45,8 +44,7 @@ ms.lasthandoff: 06/22/2017
 -   以**變更追蹤**為基礎的自動或手動母體擴展
 -   以**時間戳記**為基礎的累加母體擴展
   
-## 完整母體擴展
-<a id="full-population" class="xliff"></a>  
+## <a name="full-population"></a>完整母體擴展  
  在完整母體擴展期間，系統會針對資料表或索引檢視表的所有資料列建立索引項目。 全文檢索索引的完整母體擴展會針對基底資料表或索引檢視表的所有資料列建立索引項目。  
   
 根據預設， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會在建立新的全文檢索索引時，立即進行完整母體擴展。
@@ -55,8 +53,7 @@ ms.lasthandoff: 06/22/2017
 
 若要建立全文檢索索引，但不立即擴展，請在 `CREATE FULLTEXT INDEX` 陳述式中指定 `CHANGE_TRACKING OFF, NO POPULATION` 子句。 如果您指定 `CHANGE_TRACKING MANUAL`，則在使用 `START FULL POPULATION` 或 `START INCREMENTAL POPULATION` 子句來執行 `ALTER FULLTEXT INDEX` 陳述式之前，全文檢索引擎不會擴展新的全文檢索索引。 
 
-### 範例 - 建立全文檢索索引但不執行完整母體擴展
-<a id="example---create-a-full-text-index-without-running-a-full-population" class="xliff"></a>  
+### <a name="example---create-a-full-text-index-without-running-a-full-population"></a>範例 - 建立全文檢索索引但不執行完整母體擴展  
  下列範例會針對 `Production.Document` 範例資料庫的 `AdventureWorks` 資料表建立全文檢索索引。 這個範例會使用 `WITH CHANGE_TRACKING OFF, NO POPULATION` 來延遲初始完整母體擴展。  
   
 ```tsql
@@ -75,8 +72,7 @@ GO
   
 ```  
   
-### 範例 - 執行資料表的完整母體擴展
-<a id="example---run-a-full-population-on-a-table" class="xliff"></a>  
+### <a name="example---run-a-full-population-on-a-table"></a>範例 - 執行資料表的完整母體擴展  
  下列範例會針對 `Production.Document` 範例資料庫的 `AdventureWorks` 資料表執行完整母體擴展。  
   
 ```tsql
@@ -84,8 +80,7 @@ ALTER FULLTEXT INDEX ON Production.Document
    START FULL POPULATION;  
 ```  
    
-## 以變更追蹤為基礎的母體擴展
-<a id="population-based-on-change-tracking" class="xliff"></a>
+## <a name="population-based-on-change-tracking"></a>以變更追蹤為基礎的母體擴展
  在初始完整母體擴展之後，您可以選擇性地使用變更追蹤來維護全文檢索索引。 因為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會維護追蹤上一次母體擴展以來對基底資料表所做之變更的資料表，所以存在與變更追蹤相關聯的少量負擔。 使用變更追蹤時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會在基底資料表或索引檢視表中維護已經由更新、刪除或插入所修改之資料列的記錄。 透過 WRITETEXT 和 UPDATETEXT 進行的資料變更並不會反映在全文檢索索引中，變更追蹤並不會收取這些變更。  
   
 > [!NOTE]  
@@ -93,8 +88,7 @@ ALTER FULLTEXT INDEX ON Production.Document
   
  在建立索引期間啟用變更追蹤時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就會在建立新的全文檢索索引之後，立即完整擴展新的全文檢索索引。 之後，系統會追蹤並傳播變更至全文檢索索引。
 
-### 啟用變更追蹤
-<a id="enable-change-tracking" class="xliff"></a>
+### <a name="enable-change-tracking"></a>啟用變更追蹤
 有兩種類型的變更追蹤：
 -   自動 (`CHANGE_TRACKING AUTO` 選項)。 自動變更追蹤是預設的行為。
 -   手動 (`CHANGE_TRACKING MANUAL` 選項)。   
@@ -155,16 +149,14 @@ ALTER FULLTEXT INDEX ON Production.Document
     GO  
     ```
    
-### 停用變更追蹤
-<a id="disable-change-tracking" class="xliff"></a> 
+### <a name="disable-change-tracking"></a>停用變更追蹤 
   
 -   [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md) … WITH CHANGE_TRACKING OFF  
   
 -   [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) … SET CHANGE_TRACKING OFF  
    
   
-## 以時間戳記為基礎的累加母體擴展
-<a id="incremental-population-based-on-a-timestamp" class="xliff"></a>  
+## <a name="incremental-population-based-on-a-timestamp"></a>以時間戳記為基礎的累加母體擴展  
  累加母體擴展是手動擴展全文檢索索引的替代機制。 如果資料表遇到大量插入作業，使用累加母體擴展可能會比使用手動母體擴展更有效率。
  
  您可以針對將 CHANGE_TRACKING 設定為 MANUAL 或 OFF 的全文檢索索引執行累加母體擴展。 
@@ -178,8 +170,7 @@ ALTER FULLTEXT INDEX ON Production.Document
 -   如果全文檢索索引的第一個母體擴展是累加母體擴展，它就會建立所有資料列的索引，讓它相當於完整母體擴展。 
 -   如果上一次母體擴展以來，影響資料表全文檢索索引的任何中繼資料已變更，便會以完整母體擴展的方式實作累加母體擴展。 這包括由於更改任何資料行、索引或全文檢索索引定義所導致的中繼資料變更。 
 
-### 執行累加母體擴展
-<a id="run-an-incremental-population" class="xliff"></a>
+### <a name="run-an-incremental-population"></a>執行累加母體擴展
   
  若要執行累加母體擴展，請使用 `START INCREMENTAL POPULATION` 子句來執行 `ALTER FULLTEXT INDEX` 陳述式。  
   
@@ -234,8 +225,7 @@ ALTER FULLTEXT INDEX ON Production.Document
   
  例如，`SQLFT0000500008.2` 是指資料庫識別碼 = 5 而且全文檢索目錄識別碼 = 8 之資料庫的編目記錄檔。 位於檔案名稱結尾的 2 表示此資料庫/目錄組有兩個搜耙記錄檔。  
 
-## 另請參閱
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>另請參閱  
  [sys.dm_fts_index_population &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md)   
  [全文檢索搜尋使用者入門](../../relational-databases/search/get-started-with-full-text-search.md)   
  [建立及管理全文檢索索引](../../relational-databases/search/create-and-manage-full-text-indexes.md)   
