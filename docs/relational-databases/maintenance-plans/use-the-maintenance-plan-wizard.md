@@ -1,6 +1,6 @@
 ---
 title: "使用維護計畫精靈 | Microsoft 文件"
-ms.date: 08/19/2016
+ms.date: 06/20/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -37,11 +37,11 @@ caps.latest.revision: 43
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f4fa73a78b9f6e32edcf8395b344f1bcb7e8f5cc
+ms.translationtype: HT
+ms.sourcegitcommit: c51503eae95459aa4530032ef551d0eedf60caa4
+ms.openlocfilehash: 29245ecd82ef8f4401869008bcdb883880eec0bd
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="use-the-maintenance-plan-wizard"></a>使用維護計畫精靈
@@ -203,7 +203,7 @@ ms.lasthandoff: 04/11/2017
      資料庫會壓縮至連續的分頁，但並不會取消分頁的配置，而且資料庫檔案不會壓縮。 如果您預期資料庫會再次展開，且您不希望重新配置空間，請使用此選項。 如果使用這個選項，則會儘量不壓縮資料庫檔案。 這會使用 NOTRUNCATE 選項。  
   
      **將釋放的空間交還給作業系統**  
-     資料庫會緊縮至連續的分頁，且分頁會釋放給作業系統，以供其他程式使用。 此資料庫檔案會盡可能壓縮。 這會使用 TRUNCATEONLY 選項。 這是預設選項。  
+     資料庫會緊縮至連續的分頁，且分頁會釋放給作業系統，以供其他程式使用。 這會使用 TRUNCATEONLY 選項。 這是預設選項。  
   
 ## <a name="define-the-index-tasks"></a>定義索引工作  
   
@@ -262,7 +262,7 @@ ms.lasthandoff: 04/11/2017
     > **注意** ： [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的所有版本都無法使用線上索引作業。 如需詳細資訊，請參閱 [SQL Server 2016 版本支援的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
      [MAXDOP] 核取方塊  
-     只針對作業持續時間覆寫 DBCC CHECKDB 的 sp_configure 組態選項。 如需詳細資訊，請參閱 [DBCC CHECKDB &#40;TRANSACT-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)  
+     只針對作業持續時間覆寫 DBCC CHECKDB 的 sp_configure 組態選項。 如需詳細資訊，請參閱 [DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)  
   
 #### <a name="define-the-update-statistics-task"></a>定義更新統計資料工作  
   
@@ -362,7 +362,7 @@ ms.lasthandoff: 04/11/2017
      [為每個資料庫建立一個子目錄] 核取方塊  
      根據維護計劃針對要備份的資料庫，在指定的磁碟目錄下建立一個子目錄，以放置資料庫備份。  
   
-    > **重要！！** 子目錄會繼承上層目錄的權限。 限制權限以避免未經授權的存取。  
+    > **重要！** 子目錄會繼承上層目錄的權限。 限制權限以避免未經授權的存取。  
   
      [資料夾] 方塊  
      指定包含自動建立的資料庫檔案的資料夾。 如果選取 [URL] 做為備份目的地，則會停用這個選項。  
@@ -370,7 +370,7 @@ ms.lasthandoff: 04/11/2017
      **SQL 認證**  
      選取用來驗證 Windows Azure 儲存體的 SQL 認證。 如果沒有現有可用的 SQL 認證，請按一下 **[建立]** 按鈕建立新的 SQL 認證。  
   
-    > **重要！！** 在您按一下 **[建立]** 時開啟的對話方塊需要管理憑證或訂閱的發行設定檔。 如果您無法存取管理憑證或發行設定檔，可以使用 Transact-SQL 或 SQL Server Management Studio 來指定儲存體帳戶名稱和存取金鑰資訊，藉以建立 SQL 認證。 若要使用 Transact-SQL 來建立認證，請參閱 [Create a Credential](../../relational-databases/backup-restore/sql-server-backup-to-url.md#credential) (建立認證) 主題中的範例程式碼。 或者，使用 SQL Server Management Studio，在資料庫引擎執行個體中，以滑鼠右鍵按一下 **[安全性]**、選取 **[新增]**，然後選取 **[認證]**。 針對 **[識別]** 指定儲存體帳戶名稱，並且在 **[密碼]** 欄位中指定存取金鑰。  
+    > **重要！** 在您按一下 **[建立]** 時開啟的對話方塊需要管理憑證或訂閱的發行設定檔。 如果您無法存取管理憑證或發行設定檔，可以使用 Transact-SQL 或 SQL Server Management Studio 來指定儲存體帳戶名稱和存取金鑰資訊，藉以建立 SQL 認證。 若要使用 Transact-SQL 來建立認證，請參閱 [Create a Credential](../../relational-databases/backup-restore/sql-server-backup-to-url.md#credential) (建立認證) 主題中的範例程式碼。 或者，使用 SQL Server Management Studio，在資料庫引擎執行個體中，以滑鼠右鍵按一下 **[安全性]**、選取 **[新增]**，然後選取 **[認證]**。 針對 **[識別]** 指定儲存體帳戶名稱，並且在 **[密碼]** 欄位中指定存取金鑰。  
   
      **Azure 儲存體容器**  
      指定 Windows Azure 儲存體容器的名稱  
