@@ -69,7 +69,7 @@ ms.lasthandoff: 06/22/2017
   
     -   可以將 DACPAC 匯入資料庫專案中並繼續進行資料庫設計。  
   
-SQL Server Data Tools 還支援 Local DB，以進行未連接的用戶端資料庫應用程式開發。 開發人員可以取得此本機資料庫的快照集，以建立包含在 .dacpac 檔案中的 DACPAC。  
+        SQL Server Data Tools 還支援 Local DB，以進行未連接的用戶端資料庫應用程式開發。 開發人員可以取得此本機資料庫的快照集，以建立包含在 .dacpac 檔案中的 DACPAC。  
   
     -   開發人員可以獨立地將資料庫專案直接發行至資料庫，甚至不需產生 DACPAC。 發行作業遵循類似於其他工具部署作業的行為。  
   
