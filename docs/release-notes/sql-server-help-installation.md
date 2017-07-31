@@ -16,22 +16,20 @@ ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
 caps.latest.revision: 8
 author: sabotta
 ms.author: carlasab
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: aad94f116c1a8b668c9a218b32372424897a8b4a
 ms.openlocfilehash: ca52d53cf25fa0ead6abd9b870f4d8dab424d11a
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/28/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-# SQL Server 說明檢視器與離線內容
-<a id="help-viewer-and-offline-content-for-sql-server" class="xliff"></a>
+# <a name="help-viewer-and-offline-content-for-sql-server"></a>SQL Server 說明檢視器與離線內容
   
   
   
 本文示範如何安裝說明檢視器，以及離線檢視 SQL Server 文件。 本文涵蓋 [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)]、SQL Server 2016 和 SQL Server 2017 的文件。 
 
-## 安裝說明檢視器
-<a id="install-help-viewer" class="xliff"></a>
+## <a name="install-help-viewer"></a>安裝說明檢視器
 下表列出安裝說明檢視器的工具，視所用 SQL Server 版本而定。 請安裝所列工具之一以安裝說明檢視器。
 
 
@@ -54,8 +52,7 @@ ms.lasthandoff: 06/28/2017
 > 只有當您**從磁碟安裝內容**時，才能使用說明檢視器 2.x 檢視 [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] 的本機說明。 
 
 
-## SQL Server 2016、SQL Server 2017 離線內容
-<a id="sql-server-2016-sql-server-2017-offline-content" class="xliff"></a>  
+## <a name="sql-server-2016-sql-server-2017-offline-content"></a>SQL Server 2016、SQL Server 2017 離線內容  
  
 **安裝離線內容**  
 1. 藉由啟動 SQL Server Management Studio 或 Visual Studio，然後按一下 [說明] 功能表上的 [新增和移除說明內容]，來開啟說明檢視器。  
@@ -82,8 +79,7 @@ ms.lasthandoff: 06/28/2017
    >[!IMPORTANT]
    > 如果出現訊息指出移動操作失敗，請關閉訊息方塊、關閉說明檢視器，然後重新開啟說明檢視器。 內容的新位置現在應該會出現在 [本機存放區路徑] 中。   
  
-## [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] 離線內容
-<a id="includesssql14mdincludessssql14-mdmd-offline-content" class="xliff"></a> 
+## <a name="includesssql14mdincludessssql14-mdmd-offline-content"></a>[!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] 離線內容 
  
   
 **安裝離線內容**  
@@ -114,8 +110,7 @@ ms.lasthandoff: 06/28/2017
   
     ![HelpViewer1_withContentInstalled_ZoomedIn](../release-notes/media/helpviewer1-withcontentinstalled-zoomedin.png)  
   
-## 在說明檢視器中檢視線上內容
-<a id="view-online-content-in-help-viewer" class="xliff"></a>
+## <a name="view-online-content-in-help-viewer"></a>在說明檢視器中檢視線上內容
 
 在說明檢視器 v2.x 中，您可以執行下列一項作業檢視線上內容。
 
@@ -135,15 +130,13 @@ ms.lasthandoff: 06/28/2017
 
    ![HelpLibraryManager_ChooseOnlineORLocalHelp_OnlineHelpSelected_dialog](../release-notes/media/helplibrarymanager-chooseonlineorlocalhelp-onlinehelpselected-dialog.png)
 
-## F1 說明和其他提示
-<a id="f1-help-and-other-tips" class="xliff"></a>
+## <a name="f1-help-and-other-tips"></a>F1 說明和其他提示
 
 當您按 F1 時，即會顯示線上的對應主題。 該主題無法顯示於本機說明中。
 
 此外，說明檢視器不支援 Proxy 設定，也不支援 ISO 格式。 
 
 
-## 其他資訊
-<a id="additional-information" class="xliff"></a>
+## <a name="additional-information"></a>其他資訊
 [Microsoft 說明檢視器 - Visual Studio 2015](https://msdn.microsoft.com/library/hh580782.aspx)
 
