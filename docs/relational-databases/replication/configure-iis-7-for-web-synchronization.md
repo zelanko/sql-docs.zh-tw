@@ -17,11 +17,11 @@ caps.latest.revision: 11
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: c0e55c0e35039490f0ce4cd8a7fb6d7e232c05aa
 ms.openlocfilehash: ecc4752f5bf52931df9c7af62b5828b92f8f0123
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="configure-iis-7-for-web-synchronization"></a>針對 Web 同步處理設定 IIS 7
@@ -286,7 +286,7 @@ IIS 5.0 版開始支援 Web 同步處理。 IIS 7.0 版或更新版本不提供 
   
     4.  如果使用 Proxy 伺服器，請按一下 **[在您的區域網路使用 Proxy 伺服器]** 和 **[近端網址不使用 Proxy]**，然後按一下 **[確定]**。  
   
-2.  在訂閱者端的 Internet Explorer 中，將 `?diag` 附加至 replisapi.dll 的位址，以便在診斷模式下連接伺服器。 例如： `https://server.domain.com/directory/replisapi.dll?diag`。  
+2.  在訂閱者端的 Internet Explorer 中，將 `?diag` 附加至 replisapi.dll 的位址，以便在診斷模式下連接伺服器。 例如： `https://server.domain.com/directory/replisapi.dll?diag`＞。  
   
     > [!NOTE]  
     >  在上述範例中，您應該將 **server.domain.com** 取代成 IIS 管理員中 **[伺服器憑證]** 區段底下所列的確切 **[發行給]** 名稱。  

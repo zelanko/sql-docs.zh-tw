@@ -7,7 +7,7 @@
 CREATE DATABASE [db1];
 ALTER DATABASE [db1] SET RECOVERY FULL;
 BACKUP DATABASE [db1] 
-   TO DISK = N'var/opt/mssql/data/db1.bak';
+   TO DISK = N'/var/opt/mssql/data/db1.bak';
 ```
 
 主要 SQL Server 在複本上，執行下列 TRANSACT-SQL 加入資料庫呼叫`db1`至可用性群組稱為`ag1`。
