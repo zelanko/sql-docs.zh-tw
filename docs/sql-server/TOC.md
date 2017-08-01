@@ -33,10 +33,10 @@
 # [安裝](../sql-server/install/planning-a-sql-server-installation.md)
 # [Integration Services](../integration-services/sql-server-integration-services.md)
 # [Master Data Services](../master-data-services/master-data-services-overview-mds.md)
-# [Reporting Services (英文)](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)
+# [Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)
 # [SQL Server 移轉小幫手](../ssma/sql-server-migration-assistant.md)
 # [Stretch Database](../sql-server/stretch-database/stretch-database.md)
-# [SQL Server 的教學課程](tutorials-for-sql-server-2016.md)
+# [適用於 SQL Server 的教學課程](tutorials-for-sql-server-2016.md)
 
 # 關於文件
 ## [SQL Server 資源](sql-server-resources.md)

@@ -3,7 +3,7 @@
 # [SQL Server Agent 錯誤記錄檔](sql-server-agent-error-log.md)
 ## [檢視 SQL Server Agent 錯誤記錄檔 (SQL Server Management Studio)](view-sql-server-agent-error-log-sql-server-management-studio.md)
 ## [重新命名 SQL Server Agent 錯誤記錄檔 (SSMS)](rename-a-sql-server-agent-error-log-sql-server-management-studio.md)
-## [執行追蹤訊息寫入 SQL Server Agent 錯誤記錄檔 (SSMS)](write-execution-trace-messages-to-sql-server-agent-log-ssms.md)
+## [若要將執行追蹤訊息寫入 SQL Server Agent 錯誤記錄檔](write-execution-trace-messages-to-sql-server-agent-log-ssms.md)
 
 # [自動化管理工作 (SQL Server Agent)](automated-administration-tasks-sql-server-agent.md)
 ## [實作 SQL Server Agent 安全性](implement-sql-server-agent-security.md)
@@ -34,7 +34,7 @@
 ## [目標伺服器 (目標伺服器狀態索引標籤)](target-servers-target-server-status-tab.md)
 ## [公佈下載指示](post-download-instructions.md)
 
-# SQL Server 代理程式詳細資料
+# SQL Server Agent 詳細資料
 ## [警示](alerts.md)
 ## [警示屬性 - 新增警示 (一般頁面)](alert-properties-new-alert-general-page.md)
 ## [警示屬性 - 新增警示 (選項頁面)](alert-properties-new-alert-options-page.md)
@@ -129,7 +129,7 @@
 ## [Proxy 帳戶屬性 - 新增 Proxy 帳戶 (一般頁面)](proxy-account-properties-new-proxy-account-general-page.md)
 ## [Proxy 帳戶屬性 - 新 Proxy 帳戶 (主體索引標籤)](proxy-account-properties-new-proxy-account-principals-tab.md)
 ## [Proxy 編輯器 - 新增主體](proxy-editor-add-principal.md)
-## [Remove Steps from a SQL Server Agent Master Job](remove-steps-from-a-sql-server-agent-master-job.md)
+## [從 SQL Server Agent 主要作業中移除步驟](remove-steps-from-a-sql-server-agent-master-job.md)
 ## [Resize the Job History Log](resize-the-job-history-log.md)
 ## [執行作業](run-jobs.md)
 ## [排程作業](schedule-a-job.md)
