@@ -26,7 +26,7 @@
 ## [使用 SQL Server Management Studio 設定永遠加密](configure-always-encrypted-using-sql-server-management-studio.md)  
 ## [使用 PowerShell 設定 Always Encrypted](configure-always-encrypted-using-powershell.md)  
 ### [使用 PowerShell 設定永遠加密金鑰](configure-always-encrypted-keys-using-powershell.md)  
-### [使用 PowerShell 輪替永遠加密金鑰](rotate-always-encrypted-keys-using-powershell.md)  
+### [使用 PowerShell 更換永遠加密金鑰](rotate-always-encrypted-keys-using-powershell.md)  
 ### [使用 PowerShell 設定資料行加密](configure-column-encryption-using-powershell.md)  
 ## [Always Encrypted (用戶端開發)](always-encrypted-client-development.md)  
 ### [搭配 .NET Framework Data Provider for SQL Server 使用永遠加密來開發應用程式](develop-using-always-encrypted-with-net-framework-data-provider.md)  

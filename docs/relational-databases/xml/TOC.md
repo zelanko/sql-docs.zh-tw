@@ -53,7 +53,7 @@
 ### [範例：查詢 XMLType 資料行](example-querying-xmltype-columns.md)  
 ## [搭配 FOR XML 使用 AUTO 模式](use-auto-mode-with-for-xml.md)  
 ### [使用 BINARY BASE64 選項](use-the-binary-base64-option.md)  
-### [形成傳回之 XML 的 AUTO 模式啟發學習法](auto-mode-heuristics-in-shaping-returned-xml.md)  
+### [用來形成傳回之 XML 的 AUTO 模式啟發式方法](auto-mode-heuristics-in-shaping-returned-xml.md)  
 ### [範例：使用 AUTO 模式](examples-using-auto-mode.md)  
 ## [搭配 FOR XML 使用 EXPLICIT 模式](use-explicit-mode-with-for-xml.md)  
 ### [範例：擷取員工資訊](example-retrieving-employee-information.md)  

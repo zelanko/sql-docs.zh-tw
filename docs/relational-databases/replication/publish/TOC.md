@@ -18,7 +18,7 @@
 ## [設定訂閱的到期時間](set-the-expiration-period-for-subscriptions.md)  
 ## [指定結構描述選項](specify-schema-options.md)  
 ## [複寫結構描述變更](replicate-schema-changes.md)  
-## [管理識別欄位](manage-identity-columns.md)  
+## [管理識別資料行](manage-identity-columns.md)  
 ## [設定合併式發行集的相容性層級](set-the-compatibility-level-for-merge-publications.md)  
 ## [指定快照集格式 (SQL Server Management Studio)](specify-snapshot-format-sql-server-management-studio.md)  
 ## [指定替代快照集資料夾位置 (SQL Server Management Studio)](specify-an-alternate-snapshot-folder-location-sql-server-management-studio.md)  

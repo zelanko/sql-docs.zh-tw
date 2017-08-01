@@ -5,7 +5,7 @@
 ## [管理複寫的登入與密碼](manage-logins-and-passwords-in-replication.md)  
 ## [安全開發](secure-development-replication.md)  
 ## [複寫代理程式安全性模型](replication-agent-security-model.md)  
-## [複寫的安全性角色需求](security-role-requirements-for-replication.md)  
+## [Security Role Requirements for Replication](security-role-requirements-for-replication.md)  
 ## [複寫安全性最佳作法](replication-security-best-practices.md)  
 # [安全的部署](secure-deployment-replication.md)  
 ## [保護散發者](secure-the-distributor.md)  
