@@ -21,15 +21,14 @@ caps.latest.revision: 11
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 3a224f5be40f6f7a68a28cb4c8f741c24527e8bd
 ms.openlocfilehash: b164e70bf4b1e7586d8e70ab8edb7baa1dfcaade
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/05/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-# 建立資料庫結構描述
-<a id="create-a-database-schema" class="xliff"></a>
+# <a name="create-a-database-schema"></a>建立資料庫結構描述
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中建立結構描述。  
   
  **本主題內容**  
@@ -64,8 +63,7 @@ ms.lasthandoff: 07/05/2017
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-##### 若要建立結構描述
-<a id="to-create-a-schema" class="xliff"></a>  
+##### <a name="to-create-a-schema"></a>若要建立結構描述  
   
 1.  在 [物件總管] 中，展開 **[資料庫]** 資料夾。  
   
@@ -79,8 +77,7 @@ ms.lasthandoff: 07/05/2017
   
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-### 其他選項
-<a id="additional-options" class="xliff"></a>  
+### <a name="additional-options"></a>其他選項  
  **[結構描述 - 新增]** 對話方塊也在其他兩個頁面上提供選項： **[權限]** 和 **[擴充屬性]**。  
   
 -   **[權限]** 頁面列出所有可能的安全性實體以及可授與登入的安全性實體權限。  
@@ -89,8 +86,7 @@ ms.lasthandoff: 07/05/2017
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 若要建立結構描述
-<a id="to-create-a-schema" class="xliff"></a>  
+#### <a name="to-create-a-schema"></a>若要建立結構描述  
   
 1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的執行個體。  
   

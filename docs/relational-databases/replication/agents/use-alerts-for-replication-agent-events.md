@@ -25,16 +25,15 @@ caps.latest.revision: 39
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 915d79db6a2c8f55443c92cb568bac8a9cc2c7d4
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-# 使用複寫代理程式事件的警示
-<a id="use-alerts-for-replication-agent-events" class="xliff"></a>
-  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] and [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent provide a way to monitor events, such as replication agent events, using alerts. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 會監視 Windows 應用程式記錄檔中與警示相關的事件。 如果發生這類事件， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 會藉由執行已經定義的工作，及 (或) 向指定操作員傳送電子郵件或呼叫器訊息，進行自動回應。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 包含一組預先定義的複寫代理程式警示，您可以設定這類警示來執行工作和 (或) 通知操作員。 如需定義要執行之工作的詳細資訊，請參閱本主題的「自動化回應警示」一節。  
+# <a name="use-alerts-for-replication-agent-events"></a>使用複寫代理程式事件的警示
+  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 和 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 提供了使用警示來監視事件 (如複寫代理程式事件) 的方法。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 會監視 Windows 應用程式記錄檔中與警示相關的事件。 如果發生這類事件， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 會藉由執行已經定義的工作，及 (或) 向指定操作員傳送電子郵件或呼叫器訊息，進行自動回應。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 包含一組預先定義的複寫代理程式警示，您可以設定這類警示來執行工作和 (或) 通知操作員。 如需定義要執行之工作的詳細資訊，請參閱本主題的「自動化回應警示」一節。  
   
  當電腦設定為「散發者」時，會安裝下列警示：  
   
@@ -56,16 +55,13 @@ ms.lasthandoff: 06/22/2017
   
 -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]：[設定預先定義的複寫警示 &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/administration/configure-predefined-replication-alerts-sql-server-management-studio.md)  
   
-## 直接檢視應用程式記錄檔
-<a id="viewing-the-application-log-directly" class="xliff"></a>  
+## <a name="viewing-the-application-log-directly"></a>直接檢視應用程式記錄檔  
  若要檢視 Windows 應用程式記錄檔，請使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 事件檢視器。 應用程式記錄檔包含 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 錯誤訊息，以及電腦上其他許多活動的訊息。 與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 錯誤記錄檔不同，每次啟動 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 時不會建立新的應用程式記錄檔 (每個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 工作階段都會將新的事件寫入現有的應用程式記錄檔)，但您可以指定記錄事件的保留期限。 檢視 Windows 應用程式記錄檔時，您可以篩選特定事件的記錄檔。 如需詳細資訊，請參閱 Windows 文件集。  
   
-## 自動化回應警示
-<a id="automating-a-response-to-an-alert" class="xliff"></a>  
+## <a name="automating-a-response-to-an-alert"></a>自動化回應警示  
  複寫為資料驗證失敗的訂閱提供回應作業，還提供架構，可建立對警示的其他自動回應。 回應作業命名為 **[重新初始化資料驗證失敗的訂閱]** ，並儲存在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之 **Agent 的** [作業] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]資料夾中。 如需啟用此回應作業的詳細資訊，請參閱[設定預先定義的複寫警示 &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/administration/configure-predefined-replication-alerts-sql-server-management-studio.md)。 如果交易式發行集中的發行項驗證失敗，回應作業只會重新初始化失敗的發行項。 如果合併式發行集中的發行項驗證失敗，回應作業將重新初始化發行集中的所有發行項。  
   
-### 自動回應的架構
-<a id="framework-for-automating-responses" class="xliff"></a>  
+### <a name="framework-for-automating-responses"></a>自動回應的架構  
  通常在觸發警示時，協助您了解造成警示原因和採取適當動作的唯一資訊，都包含在警示訊息中。 剖析此資訊可能較費時，並且很容易出錯。 複寫透過提供 **sysreplicationalerts** 系統資料表中警示的其他資訊，簡化了自動回應；提供的資訊已剖析成易於自訂程式使用的形式。  
   
  例如，如果「訂閱者 A」 **Sales.SalesOrderHeader** 資料表中的資料驗證失敗， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 便會觸發 20574 訊息，通知您發生失敗。 您收到的訊息將會是：「訂閱者 'A' 訂閱的發行項 'SalesOrderHeader' (在發行集 'MyPublication' 中) 未通過資料驗證」。  
@@ -94,8 +90,7 @@ close hc
 deallocate hc  
 ```  
   
-## 另請參閱
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>另請參閱  
  [複寫代理程式管理](../../../relational-databases/replication/agents/replication-agent-administration.md)   
  [Best Practices for Replication Administration](../../../relational-databases/replication/administration/best-practices-for-replication-administration.md)   
  [監視 &#40;複寫&#41;](../../../relational-databases/replication/monitor/monitoring-replication.md)  

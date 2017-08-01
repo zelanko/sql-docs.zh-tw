@@ -17,15 +17,14 @@ caps.latest.revision: 43
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 4cb08ec44780935a8340d267fd3790af5150659b
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-# 使用原生格式匯入或匯出資料 (SQL Server)
-<a id="use-native-format-to-import-or-export-data-sql-server" class="xliff"></a>
+# <a name="use-native-format-to-import-or-export-data-sql-server"></a>使用原生格式匯入或匯出資料 (SQL Server)
 在多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之間，使用不包含任何擴充/雙位元組字集 (DBCS) 字元的資料檔傳送大量資料時，建議使用原生格式。  
 
 > [!NOTE]
@@ -173,7 +172,7 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myNative;"
 ```
 
 ### **使用 bcp 與原生格式匯入非 XML 格式檔案的資料**<a name="bcp_native_import_fmt"></a>
-**-n** 和 **-f** 參數與 **IN** 命令。  請在命令提示字元之下，輸入下列命令：
+**-n** 資料行之間傳送的 **-f** 參數與 **IN** 命令。  請在命令提示字元之下，輸入下列命令：
 ```
 REM Truncate table (for testing)
 SQLCMD -Q "TRUNCATE TABLE TestDatabase.dbo.myNative;"
@@ -239,8 +238,7 @@ SELECT * FROM TestDatabase.dbo.myNative;
   
 -   [使用 Unicode 原生格式匯入或匯出資料 &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
-## 另請參閱
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>另請參閱  
  [bcp Utility](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   

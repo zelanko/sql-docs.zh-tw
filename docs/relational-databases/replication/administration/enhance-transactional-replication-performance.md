@@ -25,26 +25,23 @@ caps.latest.revision: 39
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 441ae5e2f835146f3d25bda645c44b33fa0146d2
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-# 增強異動複寫效能
-<a id="enhance-transactional-replication-performance" class="xliff"></a>
+# <a name="enhance-transactional-replication-performance"></a>增強異動複寫效能
   除了考慮＜ [增強一般複寫效能](../../../relational-databases/replication/administration/enhance-general-replication-performance.md)＞中所述的一般效能提示之外，還要考慮異動複寫特定的以下幾個其他方面。  
   
-## 資料庫設計
-<a id="database-design" class="xliff"></a>  
+## <a name="database-design"></a>資料庫設計  
   
 -   將應用程式設計中的交易量最小化。  
   
      依預設，異動複寫會根據交易界限傳播變更。 如果交易較小，便不太可能發生「散發代理程式」因網路問題而必須重新傳送交易的情況。 如果需要代理程式來重新傳送交易，則傳送的資料量較小。  
   
-## 散發者組態
-<a id="distributor-configuration" class="xliff"></a>  
+## <a name="distributor-configuration"></a>散發者組態  
   
 -   在專用伺服器上設定散發者。  
   
@@ -54,8 +51,7 @@ ms.lasthandoff: 06/22/2017
   
      用一般負載量為系統測試複寫，以決定需要多少空間儲存命令。 確認資料庫大小足夠儲存命令，且無須經常自動成長。 如需變更資料庫大小的詳細資訊，請參閱 [ALTER DATABASE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-database-transact-sql.md)。  
   
-## 發行集設計
-<a id="publication-design" class="xliff"></a>  
+## <a name="publication-design"></a>發行集設計  
   
 -   批次更新到已發行資料表時，複寫預存程序執行。  
   
@@ -65,8 +61,7 @@ ms.lasthandoff: 06/22/2017
   
      如果您無法使用 **-SubscriptionStreams** 參數 (本主題中稍後將進行討論)，請考慮建立多個發行集。 在這些發行集間分散發行項允許複寫將變更平行套用到各個「訂閱者」。  
   
-## 訂閱考量因素
-<a id="subscription-considerations" class="xliff"></a>  
+## <a name="subscription-considerations"></a>訂閱考量因素  
   
 -   如果您在同一「發行者」端有多個發行集，請使用獨立代理程式而非共用代理程式 (此為「新增發行集精靈」的預設值)。  
   
@@ -76,8 +71,7 @@ ms.lasthandoff: 06/22/2017
   
     -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]：[指定同步處理排程](../../../relational-databases/replication/specify-synchronization-schedules.md)  
   
-## 散發代理程式和記錄讀取器代理程式參數
-<a id="distribution-agent-and-log-reader-agent-parameters" class="xliff"></a>  
+## <a name="distribution-agent-and-log-reader-agent-parameters"></a>散發代理程式和記錄讀取器代理程式參數  
   
 -   若要解決意外的一次性瓶頸，請針對記錄讀取器代理程式使用 **–MaxCmdsInTran** 參數。  
   

@@ -28,15 +28,14 @@ caps.latest.revision: 44
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 640c90e4f58c0dc09a732eb26a03808be2097999
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-# 訂閱發行集
-<a id="subscribe-to-publications" class="xliff"></a>
+# <a name="subscribe-to-publications"></a>訂閱發行集
   訂閱是指要求一份發行集中的資料和資料庫物件。 訂閱會定義將收到的發行集，以及收到的位置和時間。 規劃訂閱時，請考慮要執行代理程式處理的位置。 您選擇的訂閱類型會控制代理程式執行的位置。 若為發送訂閱，則「合併代理程式」或「散發代理程式」會在「散發者」執行；若為提取訂閱，則代理程式會在「訂閱者」執行。 建立訂閱之後，就不能變更訂閱的類型。  
   
 |訂閱|特性|使用時機|  
@@ -44,16 +43,13 @@ ms.lasthandoff: 06/22/2017
 |發送訂閱|在發送訂閱中，「訂閱者」不需發出請求，「發行者」便會將變更傳播給「訂閱者」。 變更可以在需要時發散給「訂閱者」，或是根據排程發散給「訂閱者」。 「散發代理程式」或「合併代理程式」是在「散發者」中執行。|通常是連續或根據定期排程進行資料同步。<br /><br /> 發行集需要近乎即時移動資料。<br /><br /> 即使「散發者」的處理器額外負荷較高，也不會影響效能。<br /><br /> 最常搭配快照和異動複寫使用。|  
 |提取訂閱|在提取訂閱中，「訂閱者」必須請求傳送「發行者」中的變更。 提取訂閱允許使用者在「訂閱者」中判斷何時要同步資料變更。 「散發代理程式」或「合併代理程式」是在「訂閱者」中執行。|資料通常是在需要時或根據排程進行同步處理，而不是持續進行。<br /><br /> 發行集擁有大量「訂閱者」，且 (或) 其需要過多資源，而無法在「散發者」執行所有代理程式。<br /><br /> 「訂閱者」是獨立的、中斷的以及/或機動的。 「訂閱者」將決定其連接及同步變更的時機。<br /><br /> 最常搭配合併複寫使用。|  
   
-## 合併複寫訂閱類型
-<a id="merge-replication-subscription-types" class="xliff"></a>  
+## <a name="merge-replication-subscription-types"></a>合併複寫訂閱類型  
  所有複寫類型都允許發送和提取訂閱。 合併複寫會使用另外兩個詞彙來區分訂閱︰客訂閱和主訂閱。 客訂閱和主訂閱類型都可搭配發送和提取訂閱使用。 客訂閱適用大部份的「訂閱者」，而主訂閱通常用於重新發行資料給其他「訂閱者」的「訂閱者」。 訂閱選擇也會影響衝突解決。  
   
-## 非 SQL Server 訂閱者
-<a id="non-sql-server-subscribers" class="xliff"></a>  
+## <a name="non-sql-server-subscribers"></a>非 SQL Server 訂閱者  
  Oracle 和 IBM DB2 都可使用發送訂閱來訂閱快照集和交易式發行集。 如需詳細資訊，請參閱 [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)。  
   
-## 建立訂閱
-<a id="creating-subscriptions" class="xliff"></a>  
+## <a name="creating-subscriptions"></a>建立訂閱  
  若要建立訂閱，您必須提供下列資訊︰  
   
 -   發行集的名稱。  
@@ -97,8 +93,7 @@ ms.lasthandoff: 06/22/2017
   
  [刪除提取訂閱](../../relational-databases/replication/delete-a-pull-subscription.md)  
   
-## 另請參閱
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>另請參閱  
  [保護訂閱者](../../relational-databases/replication/security/secure-the-subscriber.md)   
  [Subscription Expiration and Deactivation](../../relational-databases/replication/subscription-expiration-and-deactivation.md)  
   

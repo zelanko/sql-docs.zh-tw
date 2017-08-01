@@ -20,11 +20,11 @@ caps.latest.revision: 43
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 12b8b87460c4cb21776780af955eeecad3b5cda3
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="replication-programming-concepts"></a>複寫程式設計概念
