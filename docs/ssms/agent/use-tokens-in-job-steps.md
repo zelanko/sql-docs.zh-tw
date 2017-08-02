@@ -20,11 +20,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: bc46faf06a34a41f94ee9eb4fa05c2a9ce3a5cec
+ms.translationtype: HT
+ms.sourcegitcommit: 8ec830912e034436d2de0613c793c08ce961c031
+ms.openlocfilehash: bc10ed9c7b6ea1a240b9274c9880c44fa3e8f3ab
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/25/2017
 
 ---
 # <a name="use-tokens-in-job-steps"></a>在作業步驟中使用 Token
@@ -70,8 +70,8 @@ ms.lasthandoff: 06/22/2017
 |**(A-ERR)**|錯誤號碼。 若作業是由警示執行，則錯誤號碼值會自動取代作業步驟中的此 Token。|  
 |**(A-SEV)**|錯誤的重要性。 若作業是由警示執行，則錯誤嚴重性值會自動取代作業步驟中的此 Token。|  
 |**(A-MSG)**|訊息文字。 若作業是由警示執行，則訊息文字值會自動取代作業步驟中的此 Token。|  
-|**(AGENT_JOB_NAME)**|作業的名稱。|  
-|**(AGENT_STEP_NAME)**|步驟的名稱。|  
+|**(JOBNAME)**|作業的名稱。|  
+|**(STEPNAME)**|步驟的名稱。|  
 |**(DATE)**|目前日期 (格式為 YYYYMMDD)。|  
 |**(INST)**|執行個體名稱。 如果是預設執行個體，此 Token 將具有預設執行個體名稱：MSSQLSERVER。|  
 |**(JOBID)**|作業識別碼。|  

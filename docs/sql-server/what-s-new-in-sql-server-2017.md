@@ -1,7 +1,7 @@
 ---
 title: "SQL Server 2017 的新功能 | Microsoft Docs"
 ms.custom: 
-ms.date: 07/12/2017
+ms.date: 07/25/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 71203bfa7cb4dcd06cc14ad8e49e5bc1113f8605
-ms.openlocfilehash: 731d53110d9dc47de5a44dd7f65190e029e120dc
+ms.sourcegitcommit: 70a1fd4dbec68d22187585de69a1d603c39e259e
+ms.openlocfilehash: 31572214a8276182ce1358fc05979a72b57a2ad6
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/19/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="whats-new-in-sql-server-2017"></a>SQL Server 2017 的新功能
@@ -41,10 +41,17 @@ SQL Server 2017 將 SQL Server 的強大能力整合到 Linux、以 Linux 為基
     -   為了一致性和可讀性，預存程序 **[catalog].[create_execution]** 的參數 *runincluster* 已重新命名為 *runinscaleout*。
     -   SSIS 目錄有新的全域屬性，可指定執行 SSIS 套件的預設模式。
 
+### <a name="master-data-services-mds"></a>Master Data Services (MDS)
+- 已改良從下列舊版的 SQL Server 升級至 SQL Server 2017 Master Data Services 時的升級體驗和效能。
+    - SQL Server 2012
+    - SQL Server 2014
+    - SQL Server 2016
+
+
 ## <a name="sql-server-database-engine"></a>SQL Server Database Engine  
 SQL Server 2017 包含許多新的 Database Engine 功能、增強功能和效能提升。 
-- **繼續線上索引重建**可從容錯移轉至複本或磁碟空間不足等失敗後的停止處繼續線上索引重建作業，或暫停並於稍後繼續線上索引重建作業。 請參閱[ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md)和[線上索引作業的指導方針](../relational-databases/indexes/guidelines-for-online-index-operations.md)。 (CTP 2.0)
-- ALTER DATABASE SCOPED CONFIGURATION 的 **IDENTITY_CACHE** 選項可讓您在伺服器意外地重新啟動或容錯移轉至次要伺服器時，避免識別欄位的值出現間隙。 請參閱[ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)。 (CTP 2.0)
+- **繼續線上索引重建**可從容錯移轉至複本或磁碟空間不足等失敗後的停止處繼續線上索引重建作業，或暫停並於稍後繼續線上索引重建作業。 請參閱 [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md) 和[線上索引作業的指導方針](../relational-databases/indexes/guidelines-for-online-index-operations.md)。 (CTP 2.0)
+- ALTER DATABASE SCOPED CONFIGURATION 的 **IDENTITY_CACHE** 選項可讓您在伺服器意外地重新啟動或容錯移轉至次要伺服器時，避免識別欄位的值出現間隙。 請參閱 [ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)。 (CTP 2.0)
 - **自動資料庫調整**可深入探索潛在的查詢效能問題、建議解決方法，而且可以自動修正找到的問題。 請參閱[自動調整](../relational-databases/automatic-tuning/automatic-tuning.md)。 (CTP 2.0)
 - 新增可模型化多對多關聯性的**圖表資料庫功能**，包括新增用於建立節點和邊緣資料表的 [CREATE TABLE](../t-sql/statements/create-table-sql-graph.md) 語法，以及用於查詢的關鍵字 [MATCH](../t-sql/queries/match-sql-graph.md)。 請參閱[圖形處理與 SQL Server 2017](../relational-databases/graphs/sql-graph-overview.md)。 (CTP 2.0)
 - 預設會啟用 sp_configure 選項 `clr strict security` 以增強 CLR 組件的安全性。 請參閱 [CLR 嚴格安全性](../database-engine/configure-windows/clr-strict-security.md)。 (CTP 2.0)
@@ -77,10 +84,16 @@ SQL Server 2017 包含許多新的 Database Engine 功能、增強功能和效�
     -   SSIS 目錄有新的全域屬性，可指定執行 SSIS 套件的預設模式。
 - 在 SSIS 的新 [相應放大] 功能中，您現在可以在觸發執行時使用 **Use32BitRuntime** 參數。 (CTP 2.1)
 - SQL Server 2017 Integration Services (SSIS) 現在支援 **Linux 上的 SQL Server**，並新增套件讓您從命令列在 Linux 上執行 SSIS 套件。 如需詳細資訊，請參閱[宣佈對 Linux 提供 SSIS 支援的部落格文章](https://blogs.msdn.microsoft.com/ssis/2017/05/17/ssis-helsinki-is-available-in-sql-server-vnext-ctp2-1/)。 (CTP 2.1)
-- SSIS 的新 [相應放大] 功能讓您更容易在多部電腦上執行 SSIS。 請參閱 [Integration Services 相應放大](~/integration-services/integration-services-ssis-scale-out.md)。 (CTP 1.0)
+- SSIS 的新 [相應放大] 功能讓您更容易在多部電腦上執行 SSIS。 請參閱 [Integration Services 相應放大](~/integration-services/scale-out/integration-services-ssis-scale-out.md)。 (CTP 1.0)
 - OData 來源和 OData 連線管理員現在支援連線到 Microsoft Dynamics AX Online 和 Microsoft Dynamics CRM Online 的 OData 摘要。 (CTP 1.0)
 
 如需詳細資訊，請參閱 [SQL Server 2017 Integration Services 的新功能](~/integration-services/what-s-new-in-integration-services-in-sql-server-2017.md)。
+
+## <a name="master-data-services-mds"></a>Master Data Services (MDS)
+除了改善升級至 SQL Server 2017 MDS 的升級效能和體驗之外，我們也對 Master Data Services 做出下列其他的加強。
+- 您現在可以在 Web 應用程式的 [總管] 頁面中，檢視實體、集合和階層的排序清單。
+- 已改善使用暫存預存程序暫存數百萬筆記錄的效能。
+- 已改善在 [管理群組] 頁面上展開 [實體] 資料夾以指派模型權限時的效能。 [管理群組] 頁面位於 Web 應用程式的 [安全性] 區段。 如需效能改進的詳細資訊，請參閱 [https://support.microsoft.com/help/4023865?preview](https://support.microsoft.com/help/4023865?preview)。 如需指派權限的詳細資訊，請參閱[指派模型物件權限 (Master Data Services)](../master-data-services/assign-model-object-permissions-master-data-services.md)。
 
 ## <a name="sql-server-analysis-services-ssas"></a>SQL Server Analysis Services (SSAS) 
 SQL Server Analysis Services 2017 為表格式模型引進許多增強功能。 其中包括：
@@ -99,14 +112,14 @@ SQL Server Analysis Services 2017 為表格式模型引進許多增強功能。 
 如需詳細資訊，請參閱 [SQL Server Analysis Services 2017 的新功能](~/analysis-services/what-s-new-in-sql-server-analysis-services-2017.md)。
 
 ## <a name="sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS)
-自 CTP 2.1 起，無法再透過 SQL Server 安裝程式安裝 SSRS。 請前往 Microsoft 下載中心，以[下載 Power BI 報表伺服器的 2017 年 5 月預覽版本，以及針對 Power BI 報表伺服器最佳化的 Power BI Desktop](https://www.microsoft.com/download/details.aspx?id=55253)。 Power BI 報表伺服器的相關資訊，請參閱[開始使用 Power BI 報表伺服器](https://powerbi.microsoft.com/documentation/reportserver-get-started/)。
+自 CTP 2.1 起，無法再透過 SQL Server 安裝程式安裝 SSRS。 請移至 Microsoft 下載中心以[下載 Microsoft SQL Server 2017 Reporting Services 候選版](https://www.microsoft.com/download/details.aspx?id=55252)。 
 - 報表現在提供留言功能，可新增觀點並與其他人共同作業。 您也可以在留言內包含附件。 (CTP 2.1)
 - 在最新版的報表產生器和 SQL Server Data Tools 中，您可以藉由在查詢設計工具中拖放所需的欄位，來對支援的 SQL Server Analysis Services 表格式資料模型建立原生 DAX 查詢。 請參閱 [Reporting Services 部落格](https://blogs.msdn.microsoft.com/sqlrsteamblog/2017/03/09/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools/)。
 
 如需詳細資訊，請參閱 [SQL Server Reporting Services (SSRS) 的新功能](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)。
 
 ## <a name="sql-server-machine-learning-services"></a>SQL Server 機器學習服務
-SQL Server R Services 現在已重新命名為 **SQL Server Machine Learning 服務**，以反映除了 R 語言以外的新 Python 支援。 您可以使用 Machine Learning 服務 (資料庫內) 在 SQL Server 中執行 R 或 Python 指令碼，或安裝 Microsoft Machine Learning 伺服器 (獨立式) 來部署並取用不需要 SQL Server 的 R 和 Python 模型。 兩個平台包含分散式的機器學習和 Microsoft R （版本 9.1.0） 的最新版本的新 MicrosoftML 演算法。 (CTP 2.0)
+SQL Server R Services 現在已重新命名為 **SQL Server Machine Learning 服務**，以反映除了 R 語言以外的新 Python 支援。 您可以使用 Machine Learning 服務 (資料庫內) 在 SQL Server 中執行 R 或 Python 指令碼，或安裝 Microsoft Machine Learning 伺服器 (獨立式) 來部署並取用不需要 SQL Server 的 R 和 Python 模型。 兩個平台都包含分散式機器學習的新 MicrosoftML 演算法，以及 Microsoft R 的最新版本 (9.1.0 版)。 (CTP 2.0)
 - 使用 Python 的 Machine Learning 包括 **revoscalepy** 模組，支援 RevoScaleR 中所提供的分散式演算法和計算內容子集。 
 - 您可以使用新的 **rxExecBy** 函式，輕鬆地從 R 平行建立多個模型。 支援的計算內容包括 RxSpark 和 RxInSQLServer。 (CTP 2.0)
 

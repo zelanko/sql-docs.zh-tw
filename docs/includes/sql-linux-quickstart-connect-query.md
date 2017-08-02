@@ -9,7 +9,7 @@
    ```
 
    > [!TIP]
-   > 您可以在命令列中省略密碼，不要在提示時輸入密碼。
+   > 您可以在命令列中省略密碼，以便稍後在提示時才輸入密碼。
 
    > [!TIP]
    > 如果您稍後決定從遠端連線，請針對 **-S** 參數指定電腦名稱或 IP 位址，並確定已開啟您防火牆上的連接埠 1433。
@@ -19,7 +19,7 @@
 1. 如果您收到連線失敗，請先嘗試從錯誤訊息診斷問題。 然後檢閱[連線疑難排解建議](../linux/sql-server-linux-troubleshooting-guide.md#connection)。
 
 ## <a name="create-and-query-data"></a>建立及查詢資料
-下列各節將逐步引導您使用 **sqlcmd** 和 Transact-SQL，來建立新的資料庫、新增資料及執行簡單的查詢。
+下列各節將逐步引導您使用 **sqlcmd** 來建立新的資料庫、新增資料及執行簡單查詢。
 
 ### <a name="create-a-new-database"></a>建立新的資料庫
 
@@ -75,7 +75,7 @@
 
 現在，執行查詢以從 `Inventory` 資料表傳回資料。
 
-1. 從 **sqlcmd** 命令提示字元，輸入查詢以從數量大於 152 的 `Inventory` 資料表傳回資料列：
+1. 從 **sqlcmd** 命令提示字元，輸入查詢以從 `Inventory` 資料表傳回 quantity (數量) 大於 152 的資料列：
 
    ```sql
    SELECT * FROM Inventory WHERE quantity > 152;
@@ -97,7 +97,7 @@ QUIT
 
 ## <a name="connect-from-windows"></a>從 Windows 連線
 
-請務必注意，Windows 上的 SQL Server 工具連線到 Linux 上的 SQL Server 執行個體的方式，與連線到任何遠端 SQL Server 執行個體的方式相同。
+Windows 上 SQL Server 工具連線到 Linux 上 SQL Server 執行個體的方式，與連線到任何遠端 SQL Server 執行個體的方式相同。
 
 如果您有可連線到 Linux 電腦的 Windows 電腦，請嘗試本主題中的相同步驟，從 Windows 命令提示字元執行 **sqlcmd**。 請確認您使用目標 Linux 電腦名稱或 IP 位址，而不是 localhost，並確定已開啟 TCP 連接埠 1433。 如果從 Windows 連線有任何問題，請參閱[連線疑難排解建議](../linux/sql-server-linux-troubleshooting-guide.md#connection)。
 
@@ -107,8 +107,17 @@ QUIT
 - [Windows PowerShell](../linux/sql-server-linux-manage-powershell.md)
 - [SQL Server Data Tools (SSDT)](../linux/sql-server-linux-develop-use-ssdt.md)
 
-## <a name="next-steps"></a>後續步驟
+## <a name="next-steps"></a>後續的步驟
 
-如果您不熟悉 T-SQL，請參閱[教學課程：撰寫 Transact-SQL 陳述式](../t-sql/tutorial-writing-transact-sql-statements.md)和 [Transact-SQL 參考 (Database Engine)](../t-sql/language-reference.md)。
+如需其他安裝案例，請參閱下列資源：
 
-若要探索連線及管理 SQL Server 的其他方式，請參閱 [Visusal Studio Code](../linux/sql-server-linux-develop-use-vscode.md) 和 [SQL Server Management Studio](../linux/sql-server-linux-develop-use-ssms.md)。
+|||
+|---|---|
+| [升級](../linux/sql-server-linux-setup.md#upgrade) | 了解如何升級 Linux 上 SQL Server 的現有安裝 |
+| [解除安裝](../linux/sql-server-linux-setup.md#uninstall) | 解除安裝 Linux 上的 SQL Server |
+| [自動安裝](../linux/sql-server-linux-setup.md#unattended) | 了解如何撰寫指令碼，以進行沒有提示的安裝 |
+| [離線安裝](../linux/sql-server-linux-setup.md#offline) | 了解如何手動下載離線安裝的套件 |
+
+若要探索連線及管理 SQL Server 的其他方式，請參閱 [Visual Studio Code](../linux/sql-server-linux-develop-use-vscode.md) 和 [SQL Server Management Studio](../linux/sql-server-linux-develop-use-ssms.md)。
+
+若要了解撰寫 Transact-SQL 陳述式與查詢的詳細資訊，請參閱[教學課程：撰寫 Transact-SQL 陳述式](../t-sql/tutorial-writing-transact-sql-statements.md)。
