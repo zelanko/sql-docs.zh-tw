@@ -19,11 +19,11 @@ caps.latest.revision: 49
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d47140507a42084ddf60fa9c54ef6abe43c6f8b6
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="work-with-replication-agent-profiles"></a>處理複寫代理程式設定檔
@@ -234,7 +234,7 @@ ms.lasthandoff: 06/22/2017
   
 ###  <a name="Create_RMO"></a> 若要建立新的代理程式設定檔  
   
-1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 類別的執行個體，以建立與散發者的連線。  
+1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 類別的執行個體建立與「散發者」的連接。  
   
 2.  建立 <xref:Microsoft.SqlServer.Replication.AgentProfile> 類別的執行個體。  
   
@@ -242,23 +242,23 @@ ms.lasthandoff: 06/22/2017
   
     -   <xref:Microsoft.SqlServer.Replication.AgentProfile.Name%2A> - 設定檔的名稱。  
   
-    -   <xref:Microsoft.SqlServer.Replication.AgentProfile.AgentType%2A> - <xref:Microsoft.SqlServer.Replication.AgentType> 值，指定所建立設定檔的複寫代理程式類型。  
+    -   <xref:Microsoft.SqlServer.Replication.AgentProfile.AgentType%2A> - <xref:Microsoft.SqlServer.Replication.AgentType> 值，指定為其建立設定檔的複寫代理程式類型。  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> - 在步驟 1 中建立的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection>。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> - 在步驟 1 中建立的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 。  
   
     -   (選擇性) <xref:Microsoft.SqlServer.Replication.AgentProfile.Description%2A> - 設定檔的描述。  
   
-    -   (選擇性) <xref:Microsoft.SqlServer.Replication.AgentProfile.Default%2A> - 如果這個 <xref:Microsoft.SqlServer.Replication.AgentType> 的所有新代理程式作業預設都會使用此設定檔，請將此屬性設定為 **true**。  
+    -   (選擇性) <xref:Microsoft.SqlServer.Replication.AgentProfile.Default%2A> - 如果依預設這個 **T:Microsoft.SqlServer.Replication.AgentType** 的所有新代理程式作業都會使用這個設定檔，請將此屬性設定為 <xref:Microsoft.SqlServer.Replication.AgentType> 。  
   
 4.  呼叫 <xref:Microsoft.SqlServer.Replication.AgentProfile.Create%2A> 方法，以在伺服器上建立設定檔。  
   
 5.  在伺服器上建立設定檔之後，就可以藉由加入、移除或變更複寫代理程式參數的值來加以自訂。  
   
-6.  若要將設定檔指派給現有複寫代理程式作業，請呼叫 <xref:Microsoft.SqlServer.Replication.AgentProfile.AssignToAgent%2A> 方法。 請針對 *distributionDBName* 傳遞散發資料庫的名稱，而針對 *agentID*傳遞作業識別碼。  
+6.  若要將設定檔指派給現有的複寫代理程式作業，請呼叫 <xref:Microsoft.SqlServer.Replication.AgentProfile.AssignToAgent%2A> 方法。 請針對 *distributionDBName* 傳遞散發資料庫的名稱，而針對 *agentID*傳遞作業識別碼。  
   
 ###  <a name="Modify_RMO"></a> 若要修改現有的代理程式設定檔  
   
-1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 類別的執行個體，以建立與散發者的連線。  
+1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 類別的執行個體建立與「散發者」的連接。  
   
 2.  建立 <xref:Microsoft.SqlServer.Replication.ReplicationServer> 類別的執行個體。 傳遞在步驟 1 中建立的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 物件。  
   
@@ -266,25 +266,25 @@ ms.lasthandoff: 06/22/2017
   
 4.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationServer.EnumAgentProfiles%2A> 方法。 傳遞 <xref:Microsoft.SqlServer.Replication.AgentType> 值，將傳回的設定檔縮減為特定的複寫代理程式類型。  
   
-5.  從傳回的 <xref:System.Collections.ArrayList> 中取得所需的 <xref:Microsoft.SqlServer.Replication.AgentProfile> 物件；其中，物件的 <xref:Microsoft.SqlServer.Replication.AgentProfile.Name%2A> 屬性符合設定檔名稱。  
+5.  從傳回的 <xref:Microsoft.SqlServer.Replication.AgentProfile> 取得想要的 <xref:System.Collections.ArrayList>物件，其中物件的 <xref:Microsoft.SqlServer.Replication.AgentProfile.Name%2A> 屬性符合設定檔的名稱。  
   
 6.  呼叫 <xref:Microsoft.SqlServer.Replication.AgentProfile> 的下列其中一個方法來變更設定檔：  
   
-    -   <xref:Microsoft.SqlServer.Replication.AgentProfile.AddParameter%2A> - 將支援的參數新增至設定檔，其中 *name* 是複寫代理程式參數的名稱，*value* 則是指定的值。 若要列舉給定代理程式類型的所有受支援代理程式參數，請呼叫 <xref:Microsoft.SqlServer.Replication.AgentProfile.EnumParameterInfo%2A> 方法。 此方法會傳回 <xref:Microsoft.SqlServer.Replication.AgentProfileParameterInfo> 物件的 <xref:System.Collections.ArrayList>，而這些物件代表所有支援的參數。  
+    -   <xref:Microsoft.SqlServer.Replication.AgentProfile.AddParameter%2A> - 將支援的參數加入至設定檔，其中 *name* 是複寫代理程式參數的名稱， *value* 則是指定的值。 若要列舉給定代理程式類型的所有受支援的代理程式參數，請呼叫 <xref:Microsoft.SqlServer.Replication.AgentProfile.EnumParameterInfo%2A> 方法。 這個方法會傳回 <xref:System.Collections.ArrayList> 物件的 <xref:Microsoft.SqlServer.Replication.AgentProfileParameterInfo> ，代表所有受支援的參數。  
   
-    -   <xref:Microsoft.SqlServer.Replication.AgentProfile.RemoveParameter%2A> - 從設定檔中移除現有參數，其中 *name* 是複寫代理程式參數的名稱。 若要列舉所有目前為設定檔所定義的代理程式參數，請呼叫 <xref:Microsoft.SqlServer.Replication.AgentProfile.EnumParameters%2A> 方法。 此方法會傳回 <xref:Microsoft.SqlServer.Replication.AgentProfileParameter> 物件的 <xref:System.Collections.ArrayList>，而這些物件代表這個設定檔的現有參數。  
+    -   <xref:Microsoft.SqlServer.Replication.AgentProfile.RemoveParameter%2A> - 從設定檔移除現有的參數，其中 *name* 是複寫代理程式參數的名稱。 若要列舉所有目前為設定檔所定義的代理程式參數，請呼叫 <xref:Microsoft.SqlServer.Replication.AgentProfile.EnumParameters%2A> 方法。 這個方法會傳回 <xref:System.Collections.ArrayList> 物件的 <xref:Microsoft.SqlServer.Replication.AgentProfileParameter> ，代表此設定檔的現有參數。  
   
-    -   <xref:Microsoft.SqlServer.Replication.AgentProfile.ChangeParameter%2A> - 變更設定檔中現有參數的設定，其中 *name* 是代理程式參數的名稱，*newValue* 則是參數要變更成的值。 若要列舉所有目前為設定檔所定義的代理程式參數，請呼叫 <xref:Microsoft.SqlServer.Replication.AgentProfile.EnumParameters%2A> 方法。 此方法會傳回 <xref:Microsoft.SqlServer.Replication.AgentProfileParameter> 物件的 <xref:System.Collections.ArrayList>，而這些物件代表這個設定檔的現有參數。 若要列舉所有受支援的代理程式參數設定，請呼叫 <xref:Microsoft.SqlServer.Replication.AgentProfile.EnumParameterInfo%2A> 方法。 此方法會傳回 <xref:Microsoft.SqlServer.Replication.AgentProfileParameterInfo> 物件的 <xref:System.Collections.ArrayList>，而這些物件代表所有參數的支援值。  
+    -   <xref:Microsoft.SqlServer.Replication.AgentProfile.ChangeParameter%2A> - 變更設定檔中現有參數的設定，其中 *name* 是代理程式參數的名稱，而 *newValue* 則是參數要變更成的值。 若要列舉所有目前為設定檔所定義的代理程式參數，請呼叫 <xref:Microsoft.SqlServer.Replication.AgentProfile.EnumParameters%2A> 方法。 這個方法會傳回 <xref:System.Collections.ArrayList> 物件的 <xref:Microsoft.SqlServer.Replication.AgentProfileParameter> ，代表此設定檔的現有參數。 若要列舉所有受支援的代理程式參數設定，請呼叫 <xref:Microsoft.SqlServer.Replication.AgentProfile.EnumParameterInfo%2A> 方法。 這個方法會傳回 <xref:System.Collections.ArrayList> 物件的 <xref:Microsoft.SqlServer.Replication.AgentProfileParameterInfo> ，代表所有受支援的參數值。  
   
 ###  <a name="Delete_RMO"></a> 若要刪除代理程式設定檔  
   
-1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 類別的執行個體，以建立與散發者的連線。  
+1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 類別的執行個體建立與「散發者」的連接。  
   
-2.  建立 <xref:Microsoft.SqlServer.Replication.AgentProfile> 類別的執行個體。 針對 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>，設定步驟 1 中 <xref:Microsoft.SqlServer.Replication.AgentProfile.Name%2A> 和 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 的設定檔名稱。  
+2.  建立 <xref:Microsoft.SqlServer.Replication.AgentProfile> 類別的執行個體。 針對 <xref:Microsoft.SqlServer.Replication.AgentProfile.Name%2A> ，設定步驟 1 的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 和 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>的設定檔名稱。  
   
 3.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法。 如果此方法傳回 **false**，則指定的名稱不正確，或伺服器上不存在該設定檔。  
   
-4.  驗證 <xref:Microsoft.SqlServer.Replication.AgentProfile.Type%2A> 屬性設定為 <xref:Microsoft.SqlServer.Replication.AgentProfileTypeOption.User>，這表示客戶設定檔。 您不應該移除 <xref:Microsoft.SqlServer.Replication.AgentProfile.Type%2A> 之 <xref:Microsoft.SqlServer.Replication.AgentProfileTypeOption.System> 值的設定檔。  
+4.  確認 <xref:Microsoft.SqlServer.Replication.AgentProfile.Type%2A> 屬性是設定為 <xref:Microsoft.SqlServer.Replication.AgentProfileTypeOption.User>，這代表客戶的設定檔。 您不該移除 <xref:Microsoft.SqlServer.Replication.AgentProfileTypeOption.System> 的值為 <xref:Microsoft.SqlServer.Replication.AgentProfile.Type%2A>的設定檔。  
   
 5.  呼叫 <xref:Microsoft.SqlServer.Replication.AgentProfile.Remove%2A> 方法，從伺服器移除此物件代表的使用者自訂設定檔。  
   

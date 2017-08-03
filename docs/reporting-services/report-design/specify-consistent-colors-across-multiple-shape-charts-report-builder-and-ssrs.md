@@ -15,11 +15,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 1f8ad4185acdcc86bd93367b23fab8be8ed95d9a
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs"></a>跨多個形狀圖指定一致的色彩 (報表產生器及 SSRS)
@@ -70,7 +70,7 @@ ms.lasthandoff: 06/22/2017
   
 4.  以滑鼠右鍵按一下形狀圖，並選取 [數列屬性]。  
   
-5.  在 [填滿] 中，按一下 [運算式] (*fx*) 按鈕來編輯 [色彩] 屬性的運算式。  
+5.  在 [填滿] 中，按一下 [運算式]\(*fx*) 按鈕來編輯 [色彩] 屬性的運算式。  
   
 6.  輸入下列運算式，其中 "MyCategoryField" 是顯示在 [類別目錄群組] 區域中的欄位：  
   

@@ -14,11 +14,11 @@ caps.latest.revision: 31
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 24436bccfa9fd9c61edff66e630dd439041dd61f
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="sql-server-management-studio-support-for-in-memory-oltp"></a>SQL Server Management Studio 對記憶體中 OLTP 的支援
@@ -58,7 +58,7 @@ ms.lasthandoff: 06/22/2017
   
      建立原生編譯預存程序的範本會顯示。  
   
-2.  若要取代範本參數，請在 [查詢] 功能表上，按一下 [指定範本參數的值]****  
+2.  若要取代範本參數，請在 [查詢] 功能表上，按一下 [指定範本參數的值]  
   
      如需有關如何建立新的預存程序的詳細資訊，請參閱[建立預存程序](../../relational-databases/stored-procedures/create-a-stored-procedure.md)。  
   

@@ -16,11 +16,11 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 5114c8b5fba96020c07758e8c0143c33540a8ad5
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="spatial-indexes-dialog-box-visual-database-tools"></a>空間索引對話方塊 (Visual Database Tools)
@@ -35,7 +35,7 @@ ms.lasthandoff: 06/22/2017
 **加入**  
 建立新的空間索引。  
   
-**Delete**  
+**刪除**  
 刪除 [選取的空間索引] 清單中選取的空間索引。  
   
 **每一物件的資料格**  
@@ -98,7 +98,7 @@ ms.lasthandoff: 06/22/2017
 展開時會顯示此空間索引的屬性相關資訊。  
   
 **填滿規格**  
-展開時會顯示 [填滿因數] (Fill Factor) 和 [索引頁預留空間] 的資訊。  
+展開時會顯示 [填滿因數]\(Fill Factor) 和 [索引頁預留空間] 的資訊。  
   
 **填滿因數**  
 指定系統可以填滿的索引頁百分比。 當一頁填滿時，如果加入新資料，系統必須分割此頁，因此會降低效能。  
@@ -113,7 +113,7 @@ ms.lasthandoff: 06/22/2017
 **允許頁面鎖定**  
 指定是否在此索引中允許頁面層級的鎖定。 允許或不允許頁面層級的鎖定會影響資料庫效能。  
   
-重新計算統計資料****  
+重新計算統計資料  
 指定是否會在建立索引時計算新的統計資料。 重新計算統計資料會減緩索引的建置，但是通常會提升查詢效能。  
   
 **允許資料列鎖定**  

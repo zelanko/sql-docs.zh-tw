@@ -17,11 +17,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 1fefdecbd07572aabddd724be6e997fa5b0d6fce
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="indexes---keys-dialog-box-visual-database-tools"></a>索引 - 索引鍵對話方塊 (Visual Database Tools)
@@ -37,7 +37,7 @@ ms.lasthandoff: 06/22/2017
 **加入**  
 建立新的主索引鍵、唯一鍵或索引。  
   
-**Delete**  
+**刪除**  
 刪除在 [選取的主/唯一索引鍵或索引] 清單中選取的索引鍵或索引。  
   
 **一般類別目錄**  
@@ -80,7 +80,7 @@ ms.lasthandoff: 06/22/2017
 顯示加入資料分割資料行函數的逗號分隔之資料行清單。 如果在 [(資料空間類型)] 欄位中選取檔案群組，則無法使用。  
   
 **填滿規格**  
-展開時會顯示 [填滿因數] (Fill Factor) 和 [索引頁預留空間] 的資訊。  
+展開時會顯示 [填滿因數]\(Fill Factor) 和 [索引頁預留空間] 的資訊。  
   
 **填滿因數**  
 指定系統可以填滿的索引分葉層級頁百分比。 當一頁填滿時，系統必須分割此頁才能加入新資料，因此會降低效能。  

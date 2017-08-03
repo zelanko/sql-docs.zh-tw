@@ -16,11 +16,11 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 88cb1d98e64580b53af2587c431430d91615d0b6
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="xml-indexes-dialog-box-visual-database-tools"></a>XML 索引對話方塊 (Visual Database Tools)
@@ -67,7 +67,7 @@ ms.lasthandoff: 06/22/2017
 展開時會顯示此 XML 索引的屬性相關資訊。  
   
 **填滿規格**  
-展開時會顯示 [填滿因數] (Fill Factor) 和 [索引頁預留空間] 的資訊。  
+展開時會顯示 [填滿因數]\(Fill Factor) 和 [索引頁預留空間] 的資訊。  
   
 **填滿因數**  
 指定系統可以填滿的索引頁百分比。 當一頁填滿時，如果加入新資料，系統必須分割此頁，因此會降低效能。  

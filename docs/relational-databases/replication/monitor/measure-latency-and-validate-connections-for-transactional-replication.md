@@ -20,11 +20,11 @@ caps.latest.revision: 36
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b2ef601ab4c3dca3b524805e9cce7798213deab9
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="measure-latency-and-validate-connections-for-transactional-replication"></a>針對異動複寫測量延遲及驗證連接
@@ -140,7 +140,7 @@ ms.lasthandoff: 06/22/2017
   
 #### <a name="to-post-a-tracer-token-to-a-transactional-publication"></a>若要將追蹤 Token 公佈到交易式發行集  
   
-1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 類別建立與發行者的連線。  
+1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 類別建立與發行者的連接。  
   
 2.  建立 <xref:Microsoft.SqlServer.Replication.TransPublication> 類別的執行個體。  
   
@@ -156,11 +156,11 @@ ms.lasthandoff: 06/22/2017
   
 2.  建立 <xref:Microsoft.SqlServer.Replication.PublicationMonitor> 類別的執行個體。  
   
-3.  設定 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A>、<xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>、<xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A> 和 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A> 屬性，並將 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 屬性設定為在步驟 1 中建立的連接。  
+3.  設定 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A>、 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>、 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A>和 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A> 屬性，並將 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 屬性設定為在步驟 1 中建立的連接。  
   
 4.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法以取得物件的屬性。 如果此方法傳回 **false**，則表示步驟 3 中的發行集監視器屬性定義不正確，或者該發行集不存在。  
   
-5.  呼叫 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumTracerTokens%2A> 方法。 將傳回的 <xref:System.Collections.ArrayList> 物件轉型為 <xref:Microsoft.SqlServer.Replication.TracerToken> 物件的陣列。  
+5.  呼叫 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumTracerTokens%2A> 方法。 將傳回的 <xref:System.Collections.ArrayList> 物件轉換為 <xref:Microsoft.SqlServer.Replication.TracerToken> 物件的陣列。  
   
 6.  呼叫 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumTracerTokenHistory%2A> 方法。 針對步驟 5 的追蹤 Token 傳遞 <xref:Microsoft.SqlServer.Replication.TracerToken.TracerTokenId%2A> 的值。 這麼做會以 <xref:System.Data.DataSet> 物件傳回所選取追蹤 Token 的延遲資訊。 如果傳回所有的追蹤 Token，則「發行者」和「散發者」之間的連接以及「散發者」和「訂閱者」之間的連接兩者都存在，且複寫拓撲可以運作。  
   
@@ -170,15 +170,15 @@ ms.lasthandoff: 06/22/2017
   
 2.  建立 <xref:Microsoft.SqlServer.Replication.PublicationMonitor> 類別的執行個體。  
   
-3.  設定 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A>、<xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>、<xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A> 和 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A> 屬性，並將 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 屬性設定為在步驟 1 中建立的連接。  
+3.  設定 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A>、 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>、 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A>和 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A> 屬性，並將 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 屬性設定為在步驟 1 中建立的連接。  
   
 4.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法以取得物件的屬性。 如果此方法傳回 **false**，則表示步驟 3 中的發行集監視器屬性定義不正確，或者該發行集不存在。  
   
-5.  呼叫 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumTracerTokens%2A> 方法。 將傳回的 <xref:System.Collections.ArrayList> 物件轉型為 <xref:Microsoft.SqlServer.Replication.TracerToken> 物件的陣列。  
+5.  呼叫 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumTracerTokens%2A> 方法。 將傳回的 <xref:System.Collections.ArrayList> 物件轉換為 <xref:Microsoft.SqlServer.Replication.TracerToken> 物件的陣列。  
   
 6.  呼叫 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.CleanUpTracerTokenHistory%2A> 方法。 傳遞其中一個值：  
   
-    -   步驟 5 的追蹤 Token 的 <xref:Microsoft.SqlServer.Replication.TracerToken.TracerTokenId%2A>。 這麼做會刪除所選取 Token 的資訊。  
+    -   步驟 5 追蹤 Token 的 <xref:Microsoft.SqlServer.Replication.TracerToken.TracerTokenId%2A> 。 這麼做會刪除所選取 Token 的資訊。  
   
     -   <xref:System.DateTime> 物件。 這麼做會刪除所有早於指定日期和時間的 Token 資訊。  
   

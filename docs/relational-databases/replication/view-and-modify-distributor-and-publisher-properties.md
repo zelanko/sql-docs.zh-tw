@@ -19,11 +19,11 @@ caps.latest.revision: 43
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: b0c9adb0d7fa110c08f280706d17706f4af07b07
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="view-and-modify-distributor-and-publisher-properties"></a>檢視及修改散發者和發行者屬性
@@ -130,47 +130,47 @@ ms.lasthandoff: 06/22/2017
   
 #### <a name="to-view-and-modify-distributor-properties"></a>檢視和修改散發者屬性  
   
-1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 類別建立與散發者的連線。  
+1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 類別建立與散發者的連接。  
   
-2.  建立 <xref:Microsoft.SqlServer.Replication.ReplicationServer> 類別的執行個體。 傳遞步驟 1 中的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 物件。  
+2.  建立 <xref:Microsoft.SqlServer.Replication.ReplicationServer> 類別的執行個體。 傳遞步驟 1 的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 物件。  
   
 3.  (選擇性) 檢查 <xref:Microsoft.SqlServer.Replication.ReplicationServer.IsDistributor%2A> 屬性，確認目前連接的伺服器為散發者。  
   
 4.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.Load%2A> 方法，從伺服器中取得屬性。  
   
-5.  (選擇性) 若要變更屬性，請針對 <xref:Microsoft.SqlServer.Replication.ReplicationServer> 物件上其中一或多個可設定的散發者屬性設定新的值。  
+5.  (選擇性) 若要變更屬性，請針對 <xref:Microsoft.SqlServer.Replication.ReplicationServer> 物件上可以設定的一或多個散發者屬性設定新的值。  
   
-6.  (選擇性) 若 <xref:Microsoft.SqlServer.Replication.ReplicationServer> 物件上的 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> 屬性設定為 **true**，請呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 方法來認可伺服器的變更。  
+6.  (選擇性) 如果 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> 物件上的 <xref:Microsoft.SqlServer.Replication.ReplicationServer> 屬性設定為 **true**，請呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 方法來認可伺服器的變更。  
   
 #### <a name="to-view-and-modify-distribution-database-properties"></a>檢視及修改散發資料庫屬性  
   
-1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 類別建立與散發者的連線。  
+1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 類別建立與散發者的連接。  
   
-2.  建立 <xref:Microsoft.SqlServer.Replication.DistributionDatabase> 類別的執行個體。 指定名稱屬性，並傳遞步驟 1 中的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 物件。  
+2.  建立 <xref:Microsoft.SqlServer.Replication.DistributionDatabase> 類別的執行個體。 指定 name 屬性，並傳遞步驟 1 中的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 物件。  
   
 3.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法，從伺服器中取得屬性。 如果此方法傳回 **false**，則表示伺服器上沒有指定之名稱的資料庫存在。  
   
 4.  (選擇性) 若要變更屬性，請針對其中一個可設定的 <xref:Microsoft.SqlServer.Replication.DistributionDatabase> 屬性設定新的值。  
   
-5.  (選擇性) 若 <xref:Microsoft.SqlServer.Replication.DistributionDatabase> 物件上的 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> 屬性設定為 **true**，請呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 方法來認可伺服器的變更。  
+5.  (選擇性) 如果 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> 物件上的 <xref:Microsoft.SqlServer.Replication.DistributionDatabase> 屬性設定為 **true**，請呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 方法來認可伺服器的變更。  
   
 #### <a name="to-view-and-modify-publisher-properties"></a>檢視和修改發行者屬性  
   
-1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 類別建立與發行者的連線。  
+1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 類別建立與發行者的連接。  
   
 2.  建立 <xref:Microsoft.SqlServer.Replication.DistributionPublisher> 類別的執行個體。 指定 <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Name%2A> 屬性，並傳遞步驟 1 中的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 物件。  
   
 3.  (選擇性) 若要變更屬性，請針對其中一個可設定的 <xref:Microsoft.SqlServer.Replication.DistributionPublisher> 屬性設定新的值。  
   
-4.  (選擇性) 若 <xref:Microsoft.SqlServer.Replication.DistributionPublisher> 物件上的 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> 屬性設定為 **true**，請呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 方法來認可伺服器的變更。  
+4.  (選擇性) 如果 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> 物件上的 <xref:Microsoft.SqlServer.Replication.DistributionPublisher> 屬性設定為 **true**，請呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 方法來認可伺服器的變更。  
   
 #### <a name="to-change-the-password-for-the-administrative-connection-from-the-publisher-to-the-distributor"></a>變更從發行者到散發者之管理連接的密碼  
   
-1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 類別建立與散發者的連線。  
+1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 類別建立與散發者的連接。  
   
 2.  建立 <xref:Microsoft.SqlServer.Replication.ReplicationServer> 類別的執行個體。  
   
-3.  將 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 屬性設定為在步驟 1 中建立的連線。  
+3.  將 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 屬性設定為在步驟 1 中建立的連接。  
   
 4.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.Load%2A> 方法以取得物件的屬性。  
   
@@ -181,11 +181,11 @@ ms.lasthandoff: 06/22/2017
   
 6.  (選擇性) 請執行以下步驟，在使用此散發者的每一個遠端發行者上變更密碼：  
   
-    1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 類別建立與發行者的連線。  
+    1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 類別建立與發行者的連接。  
   
     2.  建立 <xref:Microsoft.SqlServer.Replication.ReplicationServer> 類別的執行個體。  
   
-    3.  將 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 屬性設定為在步驟 6a 中建立的連線。  
+    3.  將 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 屬性設定為在步驟 6a 中建立的連接。  
   
     4.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.Load%2A> 方法以取得物件的屬性。  
   

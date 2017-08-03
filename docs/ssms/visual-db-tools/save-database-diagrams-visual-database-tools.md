@@ -18,11 +18,11 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 8e5689586f18c72f6657af5a68a3d63483d3fa78
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="save-database-diagrams-visual-database-tools"></a>儲存資料庫圖表 (Visual Database Tools)
@@ -36,9 +36,9 @@ ms.lasthandoff: 06/22/2017
   
     如果變更現有圖表中的資料表，[儲存] 對話方塊便會出現，並顯示儲存圖表時將會儲存到資料庫之變更的清單。  
   
-3.  按一下 [是] (如果為新圖表則為 [確定])，更新資料庫以符合您的圖表。  
+3.  按一下 [是]\(如果為新圖表則為 [確定])，更新資料庫以符合您的圖表。  
   
 ## <a name="see-also"></a>另請參閱  
-[使用資料庫圖表 &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
+[使用資料庫圖表 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
   
 
