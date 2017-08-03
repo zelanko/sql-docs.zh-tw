@@ -1,7 +1,7 @@
 # [概觀](in-memory-oltp-in-memory-optimization.md)  
 # [快速入門 1：可讓 Transact-SQL 擁有更快效能的記憶體內部 OLTP 技術](survey-of-initial-areas-in-in-memory-oltp.md)  
 # [概觀和使用案例](overview-and-usage-scenarios.md)
-# [SQL Server 2016 技術白皮書的本質](sql-server-in-memory-oltp-internals-for-sql-server-2016.md) 
+# [SQL Server 2016 白皮書內部人員](sql-server-in-memory-oltp-internals-for-sql-server-2016.md) 
 # [規劃在 SQL Server 中採用記憶體內部 OLTP 功能](plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md)  
 # [使用記憶體最佳化資料表的需求](requirements-for-using-memory-optimized-tables.md)  
 # [記憶體內部 OLTP 程式碼範例](in-memory-oltp-code-samples.md)  

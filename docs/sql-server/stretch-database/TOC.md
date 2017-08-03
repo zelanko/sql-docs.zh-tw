@@ -8,11 +8,11 @@
 ## 啟用
 ### [啟用資料庫](enable-stretch-database-for-a-database.md)  
 ### [啟用資料表](enable-stretch-database-for-a-table.md)  
-### [選取要遷移的資料列](select-rows-to-migrate-by-using-a-filter-function-stretch-database.md)  
+### [選取要移轉的資料列](select-rows-to-migrate-by-using-a-filter-function-stretch-database.md)  
 ## 管理
 ### [監視移轉](monitor-and-troubleshoot-data-migration-stretch-database.md)
-### [暫停和繼續移轉](pause-and-resume-data-migration-stretch-database.md)  
-### [管理和疑難排解](manage-and-troubleshoot-stretch-database.md)  
+### [暫停及繼續移轉](pause-and-resume-data-migration-stretch-database.md)  
+### [管理及疑難排解](manage-and-troubleshoot-stretch-database.md)  
 ### [備份](backup-stretch-enabled-databases-stretch-database.md)  
 ### [Restore](restore-stretch-enabled-databases-stretch-database.md)  
 ### [停用並帶回資料](disable-stretch-database-and-bring-back-remote-data.md)

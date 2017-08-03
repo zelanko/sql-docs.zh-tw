@@ -4,4 +4,4 @@
 # [自訂報表項目類別庫](custom-report-item-class-libraries.md)
 # [自訂報表項目實作需求](custom-report-item-implementation-requirements.md)
 # [自訂報表項目](custom-report-items.md)
-# [如何：部署自訂報表項目](how-to-deploy-a-custom-report-item.md)
+# [操作說明：部署自訂報表項目](how-to-deploy-a-custom-report-item.md)

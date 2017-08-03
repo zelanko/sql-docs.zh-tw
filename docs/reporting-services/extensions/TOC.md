@@ -6,4 +6,4 @@
 # [安全性延伸模組 +](../../reporting-services/extensions/security-extension/authentication-in-reporting-services.md)
 # [安全開發 +](../../reporting-services/extensions/secure-development/code-access-security-in-reporting-services.md)
 # [Reporting Services 延伸模組](reporting-services-extensions.md)
-# [擴充功能的安全性考量](security-considerations-for-extensions.md)
+# [延伸模組的安全性考量](security-considerations-for-extensions.md)

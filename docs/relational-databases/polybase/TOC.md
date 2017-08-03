@@ -7,4 +7,4 @@
 # [T-SQL 物件](polybase-t-sql-objects.md)  
 # [查詢](polybase-queries.md)  
 # [疑難排解](polybase-troubleshooting.md) 
-## [PolyBase Kerberos 連線問題疑難排解](polybase-troubleshoot-connectivity.md)   
+## [對 PolyBase Kerberos 的連線問題進行疑難排解](polybase-troubleshoot-connectivity.md)   

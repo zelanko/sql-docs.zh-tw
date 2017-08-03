@@ -7,7 +7,7 @@
 ## [記憶體管理架構](memory-management-architecture-guide.md)
 ### [讀取分頁](reading-pages.md)  
 ### [寫入分頁](writing-pages.md)
-## [頁面與範圍架構](pages-and-extents-architecture-guide.md)
+## [分頁與範圍架構](pages-and-extents-architecture-guide.md)
 ## [移轉後驗證和最佳化](post-migration-validation-and-optimization-guide.md)
 ## [查詢處理架構](query-processing-architecture-guide.md)
 ## [執行緒和工作架構](thread-and-task-architecture-guide.md)
