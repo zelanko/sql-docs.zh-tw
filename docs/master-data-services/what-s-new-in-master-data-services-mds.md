@@ -1,28 +1,33 @@
 ---
-title: "Master Data Services 的新增功能 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "07/08/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "什麼 & #39 的新 Master Data Services (MDS) |Microsoft 文件"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 07/08/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
 caps.latest.revision: 85
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 85
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e341e5b15e33af6338447f5422138aea1b94240a
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# Master Data Services 的新增功能
+# <a name="what39s-new-in-master-data-services-mds"></a>什麼 & #39 的新 Master Data Services (MDS)
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
   本主題摘要 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 的 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]版本中變更及更新。 
   
- 如需如何在 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 中整理資料的概觀，請參閱 [Master Data Services 概觀](../master-data-services/master-data-services-overview-mds.md)。 
+ 如需如何在 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]中整理資料的概觀，請參閱 [Master Data Services 概觀](../master-data-services/master-data-services-overview-mds.md)。 
   
  若要安裝 Master Data Services、設定資料庫和網站，以及部署範例模型，請參閱 [Master Data Services 概觀 (MDS)](../master-data-services/master-data-services-overview-mds.md)。  
   
@@ -50,9 +55,9 @@ caps.handback.revision: 85
   
     ```  
     <configuration>  
-       <system.webServer>  
+       \<system.webServer>  
           <urlCompression doStaticCompression="true" doDynamicCompression="false " />  
-       </system.webServer>  
+       \</system.webServer>  
     </configuration>  
   
     ```  
@@ -77,9 +82,9 @@ caps.handback.revision: 85
   
  使用者現已可在模型層級明確地獲派系統管理員權限。 這表示如果使用者稍後才獲派模型樹狀子目錄 (例如實體層級) 的權限，他並不會失去此系統管理員權限。  
   
- 在這一版的 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中，我們藉由採用下列新的權限，來提供更多權限層級︰讀取、建立、更新與刪除。 例如，具有更新權限的使用者現已可更新主要資料，而無須建立或刪除資料。 當您授與使用者建立、更新或刪除的權限時，使用者會自動獲派讀取權限。 您也可以合併讀取、建立、更新與刪除權限。  
+ 在這一版的 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，我們藉由採用下列新的權限，來提供更多權限層級︰讀取、建立、更新與刪除。 例如，具有更新權限的使用者現已可更新主要資料，而無須建立或刪除資料。 當您授與使用者建立、更新或刪除的權限時，使用者會自動獲派讀取權限。 您也可以合併讀取、建立、更新與刪除權限。  
   
- 當您升級至 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 時，舊有權限會轉換成新的權限，如下表所示。  
+ 當您升級至 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]時，舊有權限會轉換成新的權限，如下表所示。  
   
 |先前版本中的權限|新的權限|  
 |------------------------------------|--------------------|  
@@ -200,7 +205,7 @@ caps.handback.revision: 85
   
  **合併衝突**  
   
- 如果您嘗試發佈已由另一位使用者變更的資料，則該發佈將會失敗並會出現衝突錯誤。 若要解決此錯誤，可以執行合併衝突，然後重新發佈所做的變更。 如需詳細資訊，請參閱[合併衝突 (Master Data Services)](../master-data-services/merge-conflicts-master-data-services.md) 和[合併衝突 (適用於 Excel 的 MDS 增益集)](../master-data-services/microsoft-excel-add-in/merge-conflicts-mds-add-in-for-excel.md)。  
+ 如果您嘗試發佈已由另一位使用者變更的資料，則該發佈將會失敗並會出現衝突錯誤。 若要解決此錯誤，可以執行合併衝突，然後重新發佈所做的變更。 如需詳細資訊，請參閱 [合併衝突 (Master Data Services)](../master-data-services/merge-conflicts-master-data-services.md) 和 [合併衝突 (適用於 Excel 的 MDS 增益集)](../master-data-services/microsoft-excel-add-in/merge-conflicts-mds-add-in-for-excel.md)。  
   
  **變更集**  
   
@@ -227,9 +232,11 @@ caps.handback.revision: 85
  為支援新的案例，已更新了封裝範例。 如需詳細資訊，請參閱 [SQL Server 範例：模型部署封裝 (MDS)](../master-data-services/sql-server-samples-model-deployment-packages-mds.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server 2016 版本支援的 Master Data Services 和 Data Quality Services 功能](../master-data-services/master data services and data quality services features support.md)  
+ [SQL Server 2016 版本支援的 Master Data Services 和 Data Quality Services 功能](../master-data-services/master-data-services-and-data-quality-services-features-support.md)  
  [取代的 Master Data Services 功能](../master-data-services/deprecated-master-data-services-features.md)   
  [已停止的 Master Data Services 功能](../master-data-services/discontinued-master-data-services-features.md)  
   
   
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
+
+

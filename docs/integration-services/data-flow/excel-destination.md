@@ -1,30 +1,35 @@
 ---
-title: "Excel 目的地 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.exceldest.f1"
-helpviewer_keywords: 
-  - "目的地 [Integration Services]，Excel"
-  - "Excel [Integration Services]"
+title: "Excel 目的地，|Microsoft 文件"
+ms.custom: 
+ms.date: 03/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.exceldest.f1
+helpviewer_keywords:
+- destinations [Integration Services], Excel
+- Excel [Integration Services]
 ms.assetid: 37c07446-1264-4814-b4f5-9c66d333bb24
 caps.latest.revision: 49
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 49
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 62feb48c0b05d6f7c8d6b3342b49d9b050113ac3
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# Excel 目的地
+# <a name="excel-destination"></a>Excel 目的地
   Excel 目的地會將資料載入至 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 活頁簿中的工作表或範圍。  
   
-## 存取模式  
+## <a name="access-modes"></a>存取模式  
  Excel 目的地提供三種不同的資料存取模式用於載入資料：  
   
 -   資料表或檢視。  
@@ -36,7 +41,7 @@ caps.handback.revision: 49
 > [!IMPORTANT]  
 >  在 Excel 中，工作表或範圍相當於資料表或檢視。 「Excel 來源」及「Excel 目的地」編輯器中的可用資料表清單，僅會顯示現有工作表 (以附加到工作表名稱的 $ 符號識別，例如 Sheet1$) 及具名範圍 (以沒有 $ 符號的方式識別，例如 MyRange)。  
   
-## 使用狀況的考量  
+## <a name="usage-considerations"></a>使用狀況的考量  
  Excel 連線管理員會使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Jet 4.0 及其支援的 Excel ISAM (Indexed Sequential Access Method，索引循序存取方法) 驅動程式，連接和讀寫資料至 Excel 資料來源。  
   
  許多現有的「 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 知識庫」文件都有記錄此提供者和驅動程式的行為，而即使這些文件並非 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 或其前置的「資料轉換服務」專用，您仍會想了解可能導致未預期結果的特定行為。 如需有關 Excel 驅動程式之使用與行為的一般資訊，請參閱＜ [如何從 Visual Basic 或 VBA 搭配使用 ADO 與 Excel 資料](http://support.microsoft.com/kb/257819)＞。  
@@ -57,7 +62,7 @@ caps.handback.revision: 49
   
     -   布林值 - 布林值 (DT_BOOL)  
   
-    -   日期/時間 - **datetime** (DT_DATE)  
+    -   日期/時間 -     **datetime** (DT_DATE)  
   
     -   字串 - Unicode 字串，長度 255 (DT_WSTR)  
   
@@ -71,7 +76,7 @@ caps.handback.revision: 49
   
     -   雙精確度 Excel 數值資料行與其他類型之數值資料行之間的轉換。  
   
-## 設定 Excel 目的地  
+## <a name="configuration-of-the-excel-destination"></a>設定 Excel 目的地  
  Excel 目的地會使用 Excel 連接管理員，以連接到資料來源，而連接管理員會指定要使用的活頁簿檔案。 如需詳細資訊，請參閱 [Excel Connection Manager](../../integration-services/connection-manager/excel-connection-manager.md)。  
   
  Excel 目的地擁有一個規則輸入與一個錯誤輸出。  
@@ -88,13 +93,13 @@ caps.handback.revision: 49
   
  **[進階編輯器]** 對話方塊會反映能以程式設計的方式設定之所有屬性。 如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [通用屬性](../Topic/Common%20Properties.md)  
+-   [通用屬性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Excel 自訂屬性](../../integration-services/data-flow/excel-custom-properties.md)  
   
- 如需如何設定屬性的詳細資訊，請參閱[設定資料流程元件的屬性](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)。  
+ 如需如何設定屬性的詳細資訊，請參閱 [設定資料流程元件的屬性](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)。  
   
-## 相關工作  
+## <a name="related-tasks"></a>相關工作  
   
 -   [連接至 Excel 活頁簿](../../integration-services/connection-manager/connect-to-an-excel-workbook.md)  
   
@@ -102,7 +107,7 @@ caps.handback.revision: 49
   
 -   [設定資料流程元件的屬性](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
-## 相關內容  
+## <a name="related-content"></a>相關內容  
   
 -   dougbert.com 上的部落格文章： [Integration Services 中的 Excel (第一部分，共三部分)：連接與元件](http://go.microsoft.com/fwlink/?LinkId=217674)   
   
@@ -110,10 +115,10 @@ caps.handback.revision: 49
   
 -   dougbert.com 上的部落格文章： [Integration Services 中的 Excel (第三部分，共三部分)：問題與替代方案](http://go.microsoft.com/fwlink/?LinkId=217676)。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [Excel 來源](../../integration-services/data-flow/excel-source.md)   
- [Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)   
+ [Integration Services &#40;SSIS &#41;變數](../../integration-services/integration-services-ssis-variables.md)   
  [資料流程](../../integration-services/data-flow/data-flow.md)   
- [以指令碼工作處理 Excel 檔案](../../integration-services/extending-packages-scripting-task-examples/working-with-excel-files-with-the-script-task.md)  
+ [使用 with the Script Task Excel 檔案](../../integration-services/extending-packages-scripting-task-examples/working-with-excel-files-with-the-script-task.md)  
   
   

@@ -1,27 +1,32 @@
 ---
-title: "刪除使用者或群組 (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "刪除群組 [Master Data Services]"
-  - "群組 [Master Data Services]，刪除"
-  - "使用者 [Master Data Services]，刪除"
-  - "刪除使用者 [Master Data Services]"
+title: "刪除使用者或群組 (Master Data Services) |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- deleting groups [Master Data Services]
+- groups [Master Data Services], deleting
+- users [Master Data Services], deleting
+- deleting users [Master Data Services]
 ms.assetid: 0bbf9d2c-b826-48bb-8aa9-9905db6e717f
 caps.latest.revision: 7
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5c0a5934afc97b24d884738aa1d6f8c2cc1c80cf
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 刪除使用者或群組 (Master Data Services)
+# <a name="delete-users-or-groups-master-data-services"></a>刪除使用者或群組 (Master Data Services)
   當您不再希望使用者或群組存取 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]時，可以刪除他們。  
   
  在刪除使用者和群組時，請注意下列行為：  
@@ -32,12 +37,12 @@ caps.handback.revision: 7
   
 -   對安全性的變更不會傳播至 MDS [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] 20 分鐘。  
   
-## 必要條件  
+## <a name="prerequisites"></a>必要條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[使用者及群組的權限]** 功能區域的權限。  
   
-### 若要刪除使用者或群組  
+### <a name="to-delete-users-or-groups"></a>若要刪除使用者或群組  
   
 1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[使用者及群組的權限]**。  
   
@@ -49,7 +54,7 @@ caps.handback.revision: 7
   
 5.  在確認對話方塊中按一下 **[確定]**。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [安全性 &#40;Master Data Services&#41;](../master-data-services/security-master-data-services.md)  
   
   

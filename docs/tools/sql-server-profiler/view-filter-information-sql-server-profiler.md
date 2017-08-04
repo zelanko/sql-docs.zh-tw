@@ -1,31 +1,36 @@
 ---
-title: "檢視篩選資訊 (SQL Server Profiler) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "顯示篩選資訊"
-  - "篩選 [SQL Server], 檢視"
-  - "篩選 [SQL Server], 追蹤"
-  - "追蹤 [SQL Server], 篩選"
-  - "檢視篩選資訊"
+title: "檢視篩選資訊 (SQL Server Profiler) |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- displaying filter information
+- filters [SQL Server], viewing
+- filters [SQL Server], traces
+- traces [SQL Server], filters
+- viewing filter information
 ms.assetid: 8d002dea-376a-452c-b3ca-3e93656ed75f
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 693dc730de16e14b4e6e0fc9626aa469eb66ed9b
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 檢視篩選資訊 (SQL Server Profiler)
+# <a name="view-filter-information-sql-server-profiler"></a>檢視篩選資訊 (SQL Server Profiler)
   此主題描述如何使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]，在事件類別的資料行上檢視篩選。  
   
-### 若要檢視篩選資訊  
+### <a name="to-view-filter-information"></a>若要檢視篩選資訊  
   
 1.  開啟追蹤檔案、追蹤資料表或 SQL 指令碼，然後在 [檔案] 功能表上按一下 [屬性]。 如果您正在編輯追蹤範本或正在建立新追蹤，請略過此步驟。  
   
@@ -36,7 +41,7 @@ caps.handback.revision: 23
 > [!NOTE]  
 >  已指派值的比較運算子會顯示為粗體格式。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

@@ -1,40 +1,45 @@
 ---
-title: "SQL Server Profiler | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/24/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Profiler [SQL Server Profiler], 關於 SQL Server Profiler"
-  - "追蹤 [SQL Server], SQL Server Profiler"
-  - "資料庫鏡像 [SQL Server], SQL Server Profiler"
-  - "微調資料庫 [SQL Server], SQL Server Profiler"
-  - "SQL Server Profiler"
-  - "伺服器效能 [SQL Server], SQL Server Profiler"
-  - "Profiler [SQL Server Profiler]"
-  - "追蹤 [SQL Server]"
-  - "監視效能 [SQL Server], SQL Server Profiler"
-  - "事件 [SQL Server], SQL Server Profiler"
-  - "SQL Server Profiler, 關於 SQL Server Profiler"
-  - "工具 [SQL Server], SQL Server Profiler"
-  - "資料庫效能 [SQL Server], SQL Server Profiler"
-  - "trace [SQL Server]"
+title: "SQL Server Profiler |Microsoft 文件"
+ms.custom: 
+ms.date: 10/24/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Profiler [SQL Server Profiler], about SQL Server Profiler
+- traces [SQL Server], SQL Server Profiler
+- database monitoring [SQL Server], SQL Server Profiler
+- tuning databases [SQL Server], SQL Server Profiler
+- SQL Server Profiler
+- server performance [SQL Server], SQL Server Profiler
+- Profiler [SQL Server Profiler]
+- tracing [SQL Server]
+- monitoring performance [SQL Server], SQL Server Profiler
+- events [SQL Server], SQL Server Profiler
+- SQL Server Profiler, about SQL Server Profiler
+- tools [SQL Server], SQL Server Profiler
+- database performance [SQL Server], SQL Server Profiler
+- trace [SQL Server]
 ms.assetid: 3ad5f33d-559e-41a4-bde6-bb98792f7f1a
 caps.latest.revision: 46
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 46
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 55fa14d4d8e28f602c49613cf81e981c12856177
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# SQL Server Profiler
-  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 是一個介面，您可以利用它來建立和管理追蹤，以及分析和重新執行追蹤結果。 事件會儲存於追蹤檔案中，稍後在嘗試診斷問題時，可以用來進行分析或是重新執行特定的一連串步驟。  
+# <a name="sql-server-profiler"></a>SQL Server Profiler
+  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]是建立及管理追蹤和分析和重新執行追蹤結果的介面。 事件會儲存於追蹤檔案中，稍後在嘗試診斷問題時，可以用來進行分析或是重新執行特定的一連串步驟。  
   
->**重要！**  
+>**重要！！**  
 > 我們宣佈適用於 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 追蹤擷取和追蹤重新執行的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 已被取代。 SQL Server 2016 **可以使用** 這些功能，但是之後的版本會移除這些功能。
 >   
 >  包含 Microsoft SQL Server 追蹤和重新執行物件的 *Microsoft.SqlServer.Management.Trace* 命名空間也將被取代。                     
@@ -42,21 +47,21 @@ caps.handback.revision: 46
 >
 > 請在我們的 **[[連接] 頁面](https://connect.microsoft.com/SQLServer/Feedback)**
 
- ## Profiler 位於何處？
+ ## <a name="where-is-the-profiler"></a>Profiler 位於何處？
  
- 您可以從 SSMS 內以數種方式啟動 Profiler。 [以下主題將列出各種啟動 Profiler 的方式。](https://msdn.microsoft.com/library/ms173799.aspx)
+ 您可以從 SSMS 內以數種方式啟動 Profiler。 [以下是列出啟動分析工具的方式的主題。](https://msdn.microsoft.com/library/ms173799.aspx)
   
-## 擷取並重新執行追蹤資料 
+## <a name="capture-and-replay-trace-data"></a>擷取並重新執行追蹤資料 
 下表顯示我們建議在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中用來擷取和重新執行追蹤資料的功能。
   
 ||||  
 |-|-|-|  
-|**功能\目標工作負載**|**關聯式引擎**|**Analysis Services**|  
+|**功能 \ 目標工作負載**|**關聯式引擎**|**Analysis Services (英文)**|  
 |**追蹤擷取**|SQL Server Management Studio 中的[擴充事件](https://msdn.microsoft.com/library/bb630282.aspx) 圖形化使用者介面|SQL Server Profiler|  
-|**追蹤重新執行**|[Distributed Replay](https://msdn.microsoft.com/library/ff878183.aspx)|SQL Server Profiler|  
+|**重新執行追蹤**|[Distributed 的 Replay](https://msdn.microsoft.com/library/ff878183.aspx)|SQL Server Profiler|  
   
-## SQL Server Profiler  
- Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 是「SQL 追蹤」的圖形化使用者介面，可用來監視 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 或 Analysis Services 的執行個體。 您可以擷取每一個事件的相關資料，並將資料儲存至檔案或資料表，以供稍後分析。 例如，您可以監視生產環境，查看哪些預存程序由於執行速度過慢而影響效能。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 可用於下列活動：  
+## <a name="sql-server-profiler"></a>SQL Server Profiler  
+ Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 是「SQL 追蹤」的圖形化使用者介面，可用來監視 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 或 Analysis Services 的執行個體。 您可以擷取每一個事件的相關資料，並將資料儲存至檔案或資料表，以供稍後分析。 例如，您可以監視生產環境，查看哪些預存程序由於執行速度過慢而影響效能。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]用於活動例如：  
   
 -   逐步執行問題查詢來找出問題原因。  
   
@@ -68,9 +73,9 @@ caps.handback.revision: 46
   
 -   將效能計數器相互關聯以診斷問題。  
   
- [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 也支援稽核在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 稽核會將安全性相關動作記錄下來，供安全性管理員稍後進行檢閱。  
+ 另外，[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 也支援稽核在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上執行的動作。 稽核會將安全性相關動作記錄下來，供安全性管理員稍後進行檢閱。  
   
-## SQL Server Profiler 概念  
+## <a name="sql-server-profiler-concepts"></a>SQL Server Profiler 概念  
  若要使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]，您必須對於描述工具功能的專門用語有所了解。  
   
 >**注意！** 使用 SQL Server Profiler 時，了解 SQL 追蹤真的很有幫助。 如需詳細資訊，請參閱 [SQL Trace](../../relational-databases/sql-trace/sql-trace.md)。  
@@ -109,9 +114,9 @@ caps.handback.revision: 46
   
 -   **稽核登出**  
   
--   **Lock:Acquired**  
+-   **Lock： 取得**  
   
--   **Lock:Released**  
+-   **Lock： 發行**  
   
  **EventCategory**  
  事件類別目錄用來定義事件在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]中的分組方式。 例如，所有的鎖定事件類別都會在 **Locks** 事件類別目錄中予以分組。 然而，事件類別目錄僅存在於 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]中。 這個詞彙無法反映 Engine 事件的分組方式。  
@@ -122,17 +127,17 @@ caps.handback.revision: 46
  **範本**  
  範本可定義追蹤的預設組態。 它特別包含您要用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]來監視的事件類別。 例如，您可以建立範本，其中指定要使用的事件、資料行及篩選。 範本不能被執行，但會儲存成 .tdf 副檔名的檔案。 一旦儲存之後，當您啟動以範本為依據的追蹤時，範本就會控制所要擷取的追蹤資料。  
   
- **Trace**  
+ **追蹤**  
  追蹤會根據所選取的事件類別、資料行及篩選，來擷取資料。 例如，您可以建立追蹤來監視異常錯誤。 若要執行此作業，請選取 **Exception** 事件類別及 **Error**、 **State**和 **Severity** 資料行。 必須同時收集這三個資料行的資料，追蹤結果才能提供有意義的資料。 接著，您可以執行以此方式設定的追蹤，並收集出現在伺服器中之任何 **Exception** 事件的資料。 追蹤資料可以儲存起來，也可以立即用於分析。 稍後可以再重新執行追蹤，但有些事件 (例如 **Exception** 事件) 永遠也無法重新執行。 您也可以將追蹤儲存成範本，以在未來建立類似的追蹤。  
   
  SQL Server 提供兩種方式來追蹤 SQL Server 的執行個體：您可以透過 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 追蹤，或是使用系統預存程序追蹤。  
   
- **篩選**  
+ **篩選器**  
  建立追蹤或範本時，您可以定義條件來篩選由事件所收集的資料。 若不想讓追蹤變得太大，您可加以篩選，只收集某些事件資料的子集。 例如，您可以在追蹤中將 Microsoft Windows 使用者名稱限制在特定的使用者，進而減少輸出資料。  
   
  如果沒有設定篩選條件，選定事件類別的所有事件都會傳回到追蹤輸出。  
   
-## SQL Server Profiler 工作  
+## <a name="sql-server-profiler-tasks"></a>SQL Server Profiler 工作  
   
 |工作描述|主題|  
 |----------------------|-----------|  
@@ -175,7 +180,7 @@ caps.handback.revision: 46
 |描述如何從追蹤檔案或追蹤資料表衍生範本。|[從追蹤檔案或追蹤資料表衍生範本 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/derive-a-template-from-a-trace-file-or-trace-table-sql-server-profiler.md)|  
 |描述如何建立用於執行追蹤的 Transact-SQL 指令碼。|[建立 Transact-SQL 指令碼以執行追蹤 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-transact-sql-script-for-running-a-trace-sql-server-profiler.md)|  
 |描述如何匯出追蹤範本。|[匯出追蹤範本 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/export-a-trace-template-sql-server-profiler.md)|  
-|描述如何匯入追蹤範本。|[匯出追蹤範本 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/import-a-trace-template-sql-server-profiler.md)|  
+|描述如何匯入追蹤範本。|[匯入追蹤範本 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/import-a-trace-template-sql-server-profiler.md)|  
 |描述如何從追蹤擷取指令碼。|[從追蹤中擷取指令碼 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/extract-a-script-from-a-trace-sql-server-profiler.md)|  
 |描述如何使追蹤與 Windows 效能記錄資料相互關聯。|[使追蹤與 Windows 效能記錄資料相互關聯 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/correlate-a-trace-with-windows-performance-log-data-sql-server-profiler.md)|  
 |描述如何組織追蹤中所顯示的資料行。|[組織追蹤內顯示的資料行 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/organize-columns-displayed-in-a-trace-sql-server-profiler.md)|  
@@ -188,14 +193,15 @@ caps.handback.revision: 46
 |描述如何在 SQL Server Profiler 中分析具有 SHOWPLAN 結果的查詢。|[在 SQL Server Profiler 中使用 SHOWPLAN 結果分析查詢](../../tools/sql-server-profiler/analyze-queries-with-showplan-results-in-sql-server-profiler.md)|  
 |描述如何使用 SQL Server Profiler 篩選追蹤。|[使用 SQL Server Profiler 篩選追蹤](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md)|  
 |描述如何使用 SQL Server Profiler 的重新執行功能。|[重新執行追蹤](../../tools/sql-server-profiler/replay-traces.md)|  
-|列出 SQL Server Profiler 的即時線上說明主題。|[SQL Server Profiler F1 說明](../../tools/sql-server-profiler/sql-server-profiler-f1-說明.md)|  
+|列出 SQL Server Profiler 的即時線上說明主題。|[SQL Server Profiler F1 說明](../../tools/sql-server-profiler/sql-server-profiler-f1-help.md)|  
 |列出 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 用以監視效能及活動的系統預存程序。|[SQL Server Profiler 預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql.md)|  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [Locks 事件類別目錄](../../relational-databases/event-classes/locks-event-category.md)   
  [Sessions 事件類別目錄](../../relational-databases/event-classes/sessions-event-category.md)   
- [Stored Procedures 事件類別目錄](../../relational-databases/event-classes/stored-procedures-event-category.md)   
+ [Stored 的 Procedures 事件類別目錄](../../relational-databases/event-classes/stored-procedures-event-category.md)   
  [TSQL 事件類別目錄](../../relational-databases/event-classes/tsql-event-category.md)   
  [伺服器效能與活動監視](../../relational-databases/performance/server-performance-and-activity-monitoring.md)  
   
   
+

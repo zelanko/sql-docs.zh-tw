@@ -1,36 +1,41 @@
 ---
-title: "檢查資料庫完整性工作 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.checkdatabaseintegritytask.f1"
-helpviewer_keywords: 
-  - "資料完整性 [Integration Services]"
-  - "檢查資料庫完整性工作 [Integration Services]"
-  - "檢查資料庫一致性"
-  - "資料庫一致性檢查 [Integration Services]"
-  - "確認資料庫一致性"
-  - "完整性檢查 [Integration Services]"
+title: "檢查資料庫完整性工作 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.checkdatabaseintegritytask.f1
+helpviewer_keywords:
+- data integrity [Integration Services]
+- Check Database Integrity task [Integration Services]
+- checking database consistency
+- database consistency checks [Integration Services]
+- verifying database consistency
+- integrity checking [Integration Services]
 ms.assetid: 5a82fe99-4503-429f-9337-e6bac7649fe4
 caps.latest.revision: 38
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cc9a5e5bff94c4ae48e172aa7e0f279020d942c1
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 檢查資料庫完整性工作
+# <a name="check-database-integrity-task"></a>檢查資料庫完整性工作
   「檢查資料庫完整性」工作會檢查指定資料庫中所有物件的配置及結構完整性。 這項工作可檢查單一資料庫或多個資料庫，而且您可以選擇是否同時檢查資料庫索引。  
   
  「檢查資料庫完整性」工作會封裝 DBCC CHECKDB 陳述式。 如需詳細資訊，請參閱 [DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)。  
   
-## 設定檢查資料庫完整性工作  
+## <a name="configuration-of-the-check-database-integrity-task"></a>設定檢查資料庫完整性工作  
  您可以透過「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」設定屬性 這項工作位於「 **設計師」中** [工具箱] **的** [維護計畫工作] [!INCLUDE[ssIS](../../includes/ssis-md.md)] 區段。  
   
  如需有關可在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中設定之屬性的詳細資訊，請按下列主題：  
@@ -39,6 +44,6 @@ caps.handback.revision: 38
   
  如需有關如何在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中設定這些屬性的詳細資訊，請按下列主題：  
   
--   [設定工作或容器的屬性](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+-   [設定工作或容器的屬性](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
   

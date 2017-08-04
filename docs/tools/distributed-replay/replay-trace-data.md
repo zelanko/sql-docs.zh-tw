@@ -1,36 +1,41 @@
 ---
-title: "重新執行追蹤資料 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "重新執行追蹤資料 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 19ff5285-fb9d-4fd1-97c4-ec72c311c384
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 723159aa8d6662e98eb2e25a733b6e43184bcb30
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 重新執行追蹤資料
+# <a name="replay-trace-data"></a>重新執行追蹤資料
   在您已經備妥輸入追蹤資料之後，就可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 功能啟動分散式重新執行。 如需詳細資訊，請參閱[準備輸入追蹤資料](../../tools/distributed-replay/prepare-the-input-trace-data.md)。  
   
  您可以使用管理工具的 [重新執行]  選項以起始 Distributed Replay 的事件重新執行階段。 這個階段是由兩個部分組成：追蹤資料分派以及分散式重新執行的啟動和同步處理。  
   
- ![Distributed Event Replay](../../tools/distributed-replay/media/eventreplay.gif "Distributed Event Replay")  
+ ![Distributed Replay 事件](../../tools/distributed-replay/media/eventreplay.gif "Distributed Replay 事件")  
   
  您可以在下列其中一種順序模式中重新執行追蹤資料：壓力模式或同步處理模式。 預設行為是在壓力模式中重新執行追蹤資料。 如需有關事件重新執行階段和順序模式的詳細資訊，請參閱＜ [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)＞  
   
 > [!NOTE]  
 >  輸入追蹤資料必須在相容於 Distributed Replay 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中擷取。 輸入追蹤資料也必須相容於您要針對它重新執行追蹤資料的目標伺服器。 如需有關版本需求的詳細資訊，請參閱＜ [Distributed Replay Requirements](../../tools/distributed-replay/distributed-replay-requirements.md)＞。  
   
-### 若要重新執行追蹤  
+### <a name="to-replay-the-trace"></a>若要重新執行追蹤  
   
-1.  **(選擇性) 修改重新執行組態設定：**如果您想要修改重新執行組態設定 (例如順序模式和各種調整值)，您必須修改以 XML 為基礎之重新執行組態檔 `DReplay.exe.replay.config` 的 `<ReplayOptions>` 元素。 此外，您也可以修改 `<OutputOptions>` 元素來指定輸出設定，例如是否要記錄資料列計數。 如果您要修改重新執行組態檔，我們建議您修改複本，而不是原始版本。 若要修改設定，請執行下列步驟：  
+1.  **(選擇性) 修改重新執行組態設定：**如果您想要修改重新執行組態設定 (例如順序模式和各種調整值)，您必須修改以 XML 為基礎之重新執行組態檔 `<ReplayOptions>` 的 `DReplay.exe.replay.config`元素。 此外，您也可以修改 `<OutputOptions>` 元素來指定輸出設定，例如是否要記錄資料列計數。 如果您要修改重新執行組態檔，我們建議您修改複本，而不是原始版本。 若要修改設定，請執行下列步驟：  
   
     1.  建立預設重新執行組態檔 `DReplay.exe.replay.config`的複本，並重新命名新的檔案。 預設重新執行組態檔位於管理工具的安裝資料夾。  
   
@@ -44,7 +49,7 @@ caps.handback.revision: 19
   
     1.  開啟 Windows 命令提示字元公用程式 (**CMD.exe**)，並巡覽至 Distributed Replay 管理工具 (**DReplay.exe**) 的安裝位置。  
   
-    2.  (選擇性) 使用 *controller* 參數 **-m** 指定控制器 (如果控制器服務是在與管理工具不同的電腦上執行)。  
+    2.  (選擇性) 使用 *controller* 參數 **-m**指定控制器 (如果控制器服務是在與管理工具不同的電腦上執行)。  
   
     3.  使用 *controller_working_directory* 參數 **-d**，指定中繼檔案在前置處理階段期間儲存在控制器上的位置。  
   
@@ -62,11 +67,11 @@ caps.handback.revision: 19
   
      `dreplay replay -d c:\WorkingDir -o -w client1,client2 -c c:\modifiedreplay.config`  
   
-3.  當分散式重新執行完成時，管理工具就會傳回摘要資訊。 如果您已指定 **-o** 選項，重新執行活動就已經儲存在每個用戶端的結果追蹤檔案中。 如需結果追蹤檔案的詳細資訊，請參閱[檢閱重新執行結果](../../tools/distributed-replay/review-the-replay-results.md)。  
+3.  當分散式重新執行完成時，管理工具就會傳回摘要資訊。 如果您已指定 **-o** 選項，重新執行活動就已經儲存在每個用戶端的結果追蹤檔案中。 如需結果追蹤檔案的詳細資訊，請參閱 [檢閱重新執行結果](../../tools/distributed-replay/review-the-replay-results.md)。  
   
-## 另請參閱  
- [Distributed Replay 需求](../../tools/distributed-replay/distributed-replay-requirements.md)   
- [管理工具命令列選項 &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
- [設定 Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)  
+## <a name="see-also"></a>另請參閱  
+ [Distributed 的 Replay 需求](../../tools/distributed-replay/distributed-replay-requirements.md)   
+ [管理工具命令列選項 &#40; Distributed 的 Replay 公用程式 &#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
+ [設定 Distributed 的 Replay](../../tools/distributed-replay/configure-distributed-replay.md)  
   
   

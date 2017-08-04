@@ -1,29 +1,34 @@
 ---
-title: "在追蹤時尋找值或資料行 (SQL Server Profiler) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "追蹤執行時搜尋"
-  - "追蹤 [SQL Server], 執行"
-  - "追蹤 [SQL Server], 追蹤執行時搜尋"
+title: "追蹤 (SQL Server Profiler) 時尋找值或資料行 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- searching while trace running
+- traces [SQL Server], running
+- traces [SQL Server], searching while trace running
 ms.assetid: fa5212af-1f49-4227-9d80-58003062146f
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 83cd1c1c674ec14926a2d11e8e4469b59ee4e6b4
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 在追蹤時尋找值或資料行 (SQL Server Profiler)
+# <a name="find-a-value-or-data-column-while-tracing-sql-server-profiler"></a>在追蹤時尋找值或資料行 (SQL Server Profiler)
   此主題描述如何在執行追蹤時，使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 在追蹤的輸出中搜尋特定的值或資料行。  
   
-### 若要在執行追蹤時尋找值或資料行  
+### <a name="to-find-a-value-or-data-column-while-running-a-trace"></a>若要在執行追蹤時尋找值或資料行  
   
 1.  執行追蹤時，按一下追蹤結果中的任何一個資料列。  
   
@@ -37,7 +42,7 @@ caps.handback.revision: 21
   
      搜尋會從您在步驟 1 中選取的資料列開始執行。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)   
  [SQL Server Profiler 範本和權限](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)  
   

@@ -1,40 +1,45 @@
 ---
-title: "一般檔案連接管理員編輯器 (資料行頁面) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.ffileconnection.columns.f1"
-helpviewer_keywords: 
-  - "一般檔案連接管理員編輯器"
+title: "一般檔案連接管理員編輯器 （資料行頁面） |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.ffileconnection.columns.f1
+helpviewer_keywords:
+- Flat File Connection Manager Editor
 ms.assetid: 40ce7537-abd0-4973-97fd-6ccb90fddfa0
 caps.latest.revision: 21
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 791bc8b3edbee92a0154dc03011666a488c19e7a
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 一般檔案連接管理員編輯器 (資料行頁面)
+# <a name="flat-file-connection-manager-editor-columns-page"></a>一般檔案連接管理員編輯器 (資料行頁面)
   使用 **[一般檔案連接管理員編輯器]** 對話方塊的 **[資料行]** 頁面來指定資料列和資料行資訊，以及預覽檔案。  
   
  若要深入了解一般檔案連接管理員，請參閱＜ [Flat File Connection Manager](../../integration-services/connection-manager/flat-file-connection-manager.md)＞。  
   
-## 靜態選項  
+## <a name="static-options"></a>靜態選項  
  **連接管理員名稱**  
  提供唯一的名稱給工作流程中的一般檔案連接。 提供的名稱將顯示在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師內。  
   
  **說明**  
  描述連接。 最佳作法是以其用途描述連接，使封裝可以自我記錄並易於維護。  
   
-## 一般檔案格式動態選項  
+## <a name="flat-file-format-dynamic-options"></a>一般檔案格式動態選項  
   
-### 格式 = 使用分隔符號  
+### <a name="format--delimited"></a>格式 = 使用分隔符號  
  **資料列分隔符號**  
  從可用的資料列分隔符號清單中選取，或輸入分隔符號文字。  
   
@@ -72,7 +77,7 @@ caps.handback.revision: 21
  **重設資料行**  
  按一下 [重設資料行]，即可將原始資料行以外的資料行全部移除。  
   
-### 格式 = 固定寬度  
+### <a name="format--fixed-width"></a>格式 = 固定寬度  
  **字型**  
  選取要顯示預覽資料的字型。  
   
@@ -85,7 +90,7 @@ caps.handback.revision: 21
  **重設資料行**  
  按一下 [重設資料行]，即可將原始資料行以外的資料行全部移除。  
   
-### 格式 = 不齊右  
+### <a name="format--ragged-right"></a>格式 = 不齊右  
   
 > [!NOTE]  
 >  不齊右檔案就是除了最後一個資料行之外，其他所有資料行都有固定寬度的檔案。 它是以資料列分隔符號分隔。  
@@ -113,10 +118,10 @@ caps.handback.revision: 21
  **重設資料行**  
  按一下 [重設資料行]，即可將原始資料行以外的資料行全部移除。  
   
-## 請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../integration-services/integration-services-error-and-message-reference.md)   
- [一般檔案連接管理員編輯器 &#40;一般頁面&#41;](../../integration-services/connection-manager/flat-file-connection-manager-editor-general-page.md)   
- [一般檔案連接管理員編輯器 &#40;進階頁面&#41;](../../integration-services/connection-manager/flat-file-connection-manager-editor-advanced-page.md)   
- [一般檔案連接管理員編輯器 &#40;預覽頁面&#41;](../../integration-services/connection-manager/flat-file-connection-manager-editor-preview-page.md)  
+ [一般檔案連接管理員編輯器 &#40;一般頁面 &#41;](../../integration-services/connection-manager/flat-file-connection-manager-editor-general-page.md)   
+ [一般檔案連接管理員編輯器 &#40;進階的頁面 &#41;](../../integration-services/connection-manager/flat-file-connection-manager-editor-advanced-page.md)   
+ [一般檔案連接管理員編輯器 &#40;[預覽] 頁面&#41;](../../integration-services/connection-manager/flat-file-connection-manager-editor-preview-page.md)  
   
   

@@ -1,42 +1,47 @@
 ---
-title: "比較字串資料 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "比較字串資料"
-  - "比較選項 [Integration Services]"
-  - "地區設定 [Integration Services]"
-  - "轉換字串資料"
-  - "字串比較"
+title: "比較字串資料 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- comparing string data
+- comparison options [Integration Services]
+- locales [Integration Services]
+- converting string data
+- string comparisons
 ms.assetid: 93aeb5bd-e208-46b7-8979-dea2dcd37d4c
 caps.latest.revision: 39
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ee8d749695838be53ebbb0b9de11baf722ace7e2
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 比較字串資料
-  字串比較是由 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 執行之許多轉換中的重要部分，此外在評估變數的運算式和屬性運算式時也會使用字串比較。 例如，「排序」轉換會比較資料集中的值，並以遞增或遞減的順序對資料進行排序。  
+# <a name="comparing-string-data"></a>比較字串資料
+  字串比較是由 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]執行之許多轉換中的重要部分，此外在評估變數的運算式和屬性運算式時也會使用字串比較。 例如，「排序」轉換會比較資料集中的值，並以遞增或遞減的順序對資料進行排序。  
   
-## 設定字串比較的轉換  
+## <a name="configuring-transformations-for-string-comparisons"></a>設定字串比較的轉換  
  您可以自訂「排序」、「彙總」、「模糊群組」和「模糊查閱」轉換，以變更在資料行層級比較字串的方式。 例如，您可以指定比較忽略大小寫，這表示大寫和小寫字元都會被視為相同的字元。  
   
  下列轉換使用可包含字串比較的運算式。  
   
 -   「條件式分割」轉換可使用運算式中的字串比較，以決定將資料列傳送到哪個輸出。 如需詳細資訊，請參閱 [Conditional Split Transformation](../../integration-services/data-flow/transformations/conditional-split-transformation.md)。  
   
--   「衍生的資料行」轉換可使用運算式中的字串比較，以產生新的資料行值。 如需詳細資訊，請參閱[衍生的資料行轉換](../../integration-services/data-flow/transformations/derived-column-transformation.md)。  
+-   「衍生的資料行」轉換可使用運算式中的字串比較，以產生新的資料行值。 如需詳細資訊，請參閱 [衍生的資料行轉換](../../integration-services/data-flow/transformations/derived-column-transformation.md)。  
   
  變數、變數對應和優先順序條件約束也使用運算式，它們可以包含字串比較。 如需運算式的詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 運算式](../../integration-services/expressions/integration-services-ssis-expressions.md)。  
   
-## 在字串比較期間處理  
+## <a name="processing-during-string-comparison"></a>在字串比較期間處理  
  視轉換的資料和組態而定，比較字串資料的過程中可能會進行下列處理：  
   
 -   將資料轉換成 Unicode。 如果來源資料還不是 Unicode，則比較發生之前資料會自動轉換成 Unicode。  
@@ -45,23 +50,23 @@ caps.handback.revision: 39
   
 -   在資料行層級套用比較選項來變更比較的敏感性。  
   
-## 將字串資料轉換成 Unicode  
+## <a name="converting-string-data-to-unicode"></a>將字串資料轉換成 Unicode  
  視轉換執行的作業及轉換組態而定，可以將字串資料轉換為 DT_WSTR 資料類型，這是字串字元的 Unicode 表示法。  
   
  具有 DT_STR 資料類型的字串資料，會使用資料行的字碼頁來轉換成 Unicode。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 支援資料行層級的字碼頁，而每個資料行都可以用不同的字碼頁來轉換。  
   
- 在大多數情況下，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 可識別資料來源中的正確字碼頁。 例如，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，您可在資料庫和資料行層級設定定序。 字碼頁從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 定序 (可以是 Windows 或 SQL 定序) 衍生。  
+ 在大多數情況下， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 可識別資料來源中的正確字碼頁。 例如，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，您可在資料庫和資料行層級設定定序。 字碼頁從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 定序 (可以是 Windows 或 SQL 定序) 衍生。  
   
  如果 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供一個非預期的字碼頁，或者封裝使用未提供足夠資訊來判斷字碼頁是否正確的提供者來存取資料，則您可以在 OLE DB 來源和 OLE DB 目的地中指定預設字碼頁。 此預設字碼頁會取代 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供的字碼頁。  
   
  檔案不包含字碼頁。 但是，封裝用來連接到檔案資料的「一般檔案」和「多個一般檔案」連接管理員，會包含用來指定該檔案字碼頁的屬性。 字碼頁只能在檔案層級，而不能在資料行層級進行設定。  
   
-## 設定地區設定  
+## <a name="setting-locale"></a>設定地區設定  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 不會使用字碼頁來推斷用於排序資料或解譯日期、時間和十進位資料之地區設定的特定規則。 反之，轉換會讀取資料流程元件、「資料流程」工作、容器或封裝上 LocaleId 屬性設定的地區設定。 依預設，轉換的地區設定會從其「資料流程」工作繼承，此工作進而從封裝繼承。 如果「資料流程」工作在某個容器中 (如「For 迴圈」容器)，則它會從容器繼承其地區設定。  
   
  您也可以指定「一般檔案」連接管理員和「多個一般檔案」連接管理員的地區設定。  
   
-## 設定比較選項  
+## <a name="setting-comparison-options"></a>設定比較選項  
  地區設定會提供比較字串資料的基本規則。 例如，地區設定指定字母表中每個字母的排序位置。 但是，這些規則對某些轉換執行的比較來說可能並不夠，而且 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 還支援一組超越地區設定之比較規則的進階比較選項。 這些比較選項可在資料行層級進行設定。 例如，其中一個比較選項可讓您忽略非空格字元。 此選項的作用是可以忽略變音 (例如腔調字)，這樣會使 "a" 和 "á" 在比較時被視為完全一樣。  
   
  下表描述比較選項和排序樣式。  
@@ -79,9 +84,9 @@ caps.handback.revision: 39
   
  「模糊群組」和「模糊查閱」轉換的 [進階編輯器] 對話方塊中會顯示 **FullySensitive** 比較旗標。 選取 [FullySensitive] 比較旗標表示會套用所有的比較選項。  
   
-## 請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [Integration Services 資料類型](../../integration-services/data-flow/integration-services-data-types.md)   
- [快速剖析](../Topic/Fast%20Parse.md)   
- [標準剖析](../Topic/Standard%20Parse.md)  
+ [快速剖析](http://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95)   
+ [標準剖析](http://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013)  
   
   

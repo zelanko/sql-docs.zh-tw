@@ -1,27 +1,32 @@
 ---
-title: "WMI 資料讀取器工作 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.wmidatareadertask.f1"
-helpviewer_keywords: 
-  - "WQL [Integration Services]"
-  - "WMI 資料讀取器工作 [Integration Services]"
+title: "WMI 資料讀取器工作 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.wmidatareadertask.f1
+helpviewer_keywords:
+- WQL [Integration Services]
+- WMI Data Reader task [Integration Services]
 ms.assetid: dae57067-0275-4ac3-8f34-1b9d169f1112
 caps.latest.revision: 49
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 49
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: 9edd5e03a79fde1aa580a47c3df294e59957e896
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# WMI 資料讀取器工作
+# <a name="wmi-data-reader-task"></a>WMI 資料讀取器工作
   「WMI 資料讀取器」工作使用「Windows Management Instrumentation (WMI) 查詢語言」執行查詢，該查詢語言會從 WMI 傳回有關電腦系統的資訊。 您可將「WMI 資料讀取器」工作用於下列用途：  
   
 -   查詢本機或遠端電腦上的 Windows 事件記錄檔，並將相關資訊寫入檔案或變數。  
@@ -46,7 +51,7 @@ caps.handback.revision: 49
   
  「WMI 資料讀取器」工作使用 WMI 連接管理員連接到可從中讀取 WMI 資訊的伺服器。 如需相關資訊，請參閱 [WMI Connection Manager](../../integration-services/connection-manager/wmi-connection-manager.md)。  
   
-## WQL 查詢  
+## <a name="wql-query"></a>WQL 查詢  
  WQL 是 SQL 用語，其包含的延伸模組可支援 WMI 事件通知和其他 WMI 特定功能。 如需有關 WQL 的詳細資訊，請參閱 [MSDN Library](http://go.microsoft.com/fwlink/?linkid=7022)中的 Windows Management Instrumentation 文件集。  
   
 > [!NOTE]  
@@ -70,15 +75,15 @@ SELECT FreeSpace, DeviceId, Size, SystemName, Description FROM Win32_LlogicalDis
 Select * FROM Win32_QuickFixEngineering  
 ```  
   
-## WMI 資料讀取器工作上可用的自訂記錄訊息  
- 下表列出「WMI 資料讀取器」工作的自訂記錄項目。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 記錄](../../integration-services/performance/integration-services-ssis-logging.md)和[自訂訊息以進行記錄](../../integration-services/performance/custom-messages-for-logging.md)。  
+## <a name="custom-logging-messages-available-on-the-wmi-data-reader-task"></a>WMI 資料讀取器工作上可用的自訂記錄訊息  
+ 下表列出「WMI 資料讀取器」工作的自訂記錄項目。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 記錄](../../integration-services/performance/integration-services-ssis-logging.md)。  
   
 |記錄項目|說明|  
 |---------------|-----------------|  
 |**WMIDataReaderGettingWMIData**|指出工作已經開始讀取 WMI 資料。|  
 |**WMIDataReaderOperation**|報告工作已執行的 WQL 查詢。|  
   
-## 設定 WMI 資料讀取器工作  
+## <a name="configuration-of-the-wmi-data-reader-task"></a>設定 WMI 資料讀取器工作  
  您可以程式設計方式或透過「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」設定屬性。  
   
  如需有關可以在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中設定之屬性的詳細資訊，請按下列其中一個主題：  
@@ -91,12 +96,12 @@ Select * FROM Win32_QuickFixEngineering
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.WmiDataReaderTask.WmiDataReaderTask>  
   
-## 相關工作  
+## <a name="related-tasks"></a>相關工作  
  如需有關如何在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中設定這些屬性的詳細資訊，請按下列主題：  
   
--   [設定工作或容器的屬性](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+-   [設定工作或容器的屬性](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [Integration Services 工作](../../integration-services/control-flow/integration-services-tasks.md)   
  [控制流程](../../integration-services/control-flow/control-flow.md)  
   

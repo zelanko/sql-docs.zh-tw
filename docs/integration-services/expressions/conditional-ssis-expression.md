@@ -1,29 +1,34 @@
 ---
-title: "? : (條件) (SSIS 運算式) | Microsoft Docs"
-ms.custom: 
-  - "ssisdev020617"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "條件運算子 (?:)"
-  - "?: (條件運算子)"
+title: "? : （條件) （SSIS 運算式） |Microsoft 文件"
+ms.custom:
+- ssisdev020617
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- conditional operator (?:)
+- '?: (conditional operator)'
 ms.assetid: d38e6890-7338-4ce0-a837-2dbb41823a37
 caps.latest.revision: 49
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 49
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 311168388a44f5a42118a7bd496ead4228338496
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# ? : (條件) (SSIS 運算式)
+# <a name="--conditional-ssis-expression"></a>? : (條件) (SSIS 運算式)
   依據布林運算式的評估傳回兩個運算式的其中一個。 如果布林運算式的評估結果為 TRUE，則會評估第一個運算式，且結果為運算式的結果。 如果布林運算式的評估結果為 FALSE，則會評估第二個運算式，且其結果為運算式的結果。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -31,7 +36,7 @@ boolean_expression?expression1:expression2
   
 ```  
   
-## 引數  
+## <a name="arguments"></a>引數  
  *boolean_expression*  
  評估為 TRUE、FALSE 或 NULL 的任何有效運算式。  
   
@@ -41,11 +46,11 @@ boolean_expression?expression1:expression2
  *expression2*  
  任何有效的運算式。  
   
-## 結果類型  
- *expression1* 或 *expression2* 的資料類型。  
+## <a name="result-types"></a>結果類型  
+ *expression1* 或 *expression2*的資料類型。  
   
-## 備註  
- 如果 *boolean_expression* 評估為 NULL，則運算式結果為 NULL。 如果選取的運算式 (*expression1* 或 *expression2*) 為 NULL，則結果為 NULL。 如果選取的運算式不為 NULL，但未選取的運算式為 NULL，則結果為所選運算式的值。  
+## <a name="remarks"></a>備註  
+ 如果 *boolean_expression* 評估為 NULL，則運算式結果為 NULL。 如果選取的運算式 ( *expression1* 或 *expression2* ) 為 NULL，則結果為 NULL。 如果選取的運算式不為 NULL，但未選取的運算式為 NULL，則結果為所選運算式的值。  
   
  如果 *expression1* 和 *expression2* 的資料類型相同，則結果即為該資料類型。 下列其他規則適用於結果類型：  
   
@@ -53,13 +58,13 @@ boolean_expression?expression1:expression2
   
 -   DT_BYTES 資料類型的結果，其長度為較長引數的長度。  
   
- 運算式組合 *expression1* 和 *expression2* 必須評估為有效的資料類型並遵循下列其中一個規則：  
+ 運算式組合 *expression1* 和 *expression2*必須評估為有效的資料類型並遵循下列其中一個規則：  
   
 -   **數值** — *expression1* 與 *expression2* 都必須是數值資料類型。 資料類型的交集必須是運算式評估工具執行之隱含數值轉換規則中所指定的數值資料類型。 兩個數值資料類型的交集不能是 Null。 如需相關資訊，請參閱 [Integration Services Data Types in Expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md)。  
   
 -   **字串***expression1* 和 *expression2* 都必須是字串資料類型：DT_STR 或 DT_WSTR。 兩個運算式可以評估為不同的字串資料類型。 結果的資料類型為 DT_WSTR，且長度為較長引數的長度。  
   
--   **日期、時間或日期/時間**：*expression1* 和 *expression2* 都必須評估為下列其中一種資料類型：DT_DBDATE、DT_DATE、DT_DBTIME、DT_DBTIME2、DT_DBTIMESTAMP、DT_DBTIMESTAMP2、DT_DBTIMESTAPMOFFSET 或 DT_FILETIME。  
+-   **日期、時間或日期/時間** ： *expression1* 和 *expression2* 都必須評估為下列其中一種資料類型：DT_DBDATE、DT_DATE、DT_DBTIME、DT_DBTIME2、DT_DBTIMESTAMP、DT_DBTIMESTAMP2、DT_DBTIMESTAPMOFFSET 或 DT_FILETIME。  
   
     > [!NOTE]  
     >  系統不支援評估為時間資料類型之運算式與評估為日期或日期/時間資料類型之運算式之間的比較。 系統會產生錯誤。  
@@ -84,8 +89,8 @@ boolean_expression?expression1:expression2
   
  如需有關資料類型的詳細資訊，請參閱＜ [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)＞。  
   
-## 運算式範例  
- 此範例顯示條件式地評估為 `savannah` 或 `unknown` 的運算式。  
+## <a name="expression-examples"></a>運算式範例  
+ 此範例顯示條件式地評估為 `savannah` 或 `unknown`的運算式。  
   
 ```  
 @AnimalName == "Elephant"? "savannah": "unknown"  
@@ -97,8 +102,8 @@ boolean_expression?expression1:expression2
 ListPrice < 350.00 ? ListPrice * .2 : ListPrice * .1  
 ```  
   
-## 請參閱＜  
- [運算子優先順序與關聯性](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [運算子 &#40;SSIS 運算式&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
+## <a name="see-also"></a>請參閱＜  
+ [運算子優先順序和關聯性](../../integration-services/expressions/operator-precedence-and-associativity.md)   
+ [運算子 &#40;SSIS 運算式 &#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   
   

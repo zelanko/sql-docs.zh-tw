@@ -1,25 +1,30 @@
 ---
-title: "使用 ODBC 目的地來載入資料 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "使用 ODBC 目的地載入資料 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 339ec0a8-922e-48c0-97b3-fc5ee34f95e3
 caps.latest.revision: 9
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 668cf193758a8dfaba90e598ccbdb7d0d84351fc
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 使用 ODBC 目的地來載入資料
+# <a name="load-data-by-using-the-odbc-destination"></a>使用 ODBC 目的地來載入資料
   此程序說明如何透過使用 ODBC 目的地載入資料。 若要加入及設定 ODBC 目的地，封裝必須已包括至少一個「資料流程」工作與來源。  
   
-### 使用 ODBC 目的地載入資料  
+### <a name="to-load-data-using-an-odbc-destination"></a>使用 ODBC 目的地載入資料  
   
 1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中，開啟所要的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝。  
   
@@ -49,9 +54,9 @@ caps.handback.revision: 9
   
 12. 若要儲存已更新的封裝，請在 **[檔案]** 功能表上，按一下 **[儲存選取項目]** 。  
   
-## 請參閱＜  
- [ODBC 目的地編輯器 &#40;連接管理員頁面&#41;](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md)   
- [ODBC 目的地編輯器 &#40;對應頁面&#41;](../../integration-services/data-flow/odbc-destination-editor-mappings-page.md)   
- [ODBC 來源編輯器 &#40;錯誤輸出頁面&#41;](../../integration-services/data-flow/odbc-source-editor-error-output-page.md)  
+## <a name="see-also"></a>請參閱＜  
+ [ODBC 目的地編輯器 &#40;連接管理員頁面 &#41;](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md)   
+ [ODBC 目的地編輯器 &#40;[對應] 頁面 &#41;](../../integration-services/data-flow/odbc-destination-editor-mappings-page.md)   
+ [ODBC 來源編輯器 &#40;錯誤輸出頁面 &#41;](../../integration-services/data-flow/odbc-source-editor-error-output-page.md)  
   
   

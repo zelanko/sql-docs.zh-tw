@@ -1,28 +1,33 @@
 ---
-title: "設定適用於 Excel 之 Master Data Services 增益集的屬性 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "設定屬性的 Master Data Services 增益集的 Excel |Microsoft 文件"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: cab1c662-5d40-4c16-9f5c-36ff9608810b
 caps.latest.revision: 8
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 14b4715ce4acdc48f6425d2343cb45cd8311d982
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 設定適用於 Excel 之 Master Data Services 增益集的屬性
+# <a name="setting-properties-for-master-data-services-add-in-for-excel"></a>設定適用於 Excel 之 Master Data Services 增益集的屬性
   Master Data Services Add-in for Excel 設定會決定如何從 MDS 將資料載入 Excel 增益集，以及如何從 Excel 增益集將資料發行到 MDS。  
   
  若要針對 Excel 增益集進行設定，請開啟 [Excel]，並按一下 [主要資料] 功能表，然後按一下 [設定]。 可存取 Excel 的任何人都可以變更這些設定。 這些設定適用於開啟 Excel 的電腦。  
   
-## Excel 增益集設定  
+## <a name="excel-add-in-settings"></a>Excel 增益集設定  
   
 ||||  
 |-|-|-|  

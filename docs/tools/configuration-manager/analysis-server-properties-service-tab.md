@@ -1,25 +1,30 @@
 ---
-title: "Analysis Server 屬性 (服務索引標籤) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Analysis Server 屬性 （服務索引標籤） |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8dbe4bc5-6aa9-48ee-857e-0b4ea764b9cb
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b8d2da25a920e0d5e25f9b7fa72ce48529fa6686
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# Analysis Server 屬性 (服務索引標籤)
+# <a name="analysis-server-properties-service-tab"></a>Analysis Server 屬性 (服務索引標籤)
   這個服務是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 必須執行此服務， [!INCLUDE[ssAS](../../includes/ssas-md.md)] 才能正常運作。 淺灰色的屬性值不得以此應用程式加以變更。  
   
-## 選項。  
+## <a name="options"></a>選項。  
  **二進位路徑**  
  顯示這個服務使用之程式檔案的位置。  
   
@@ -30,7 +35,7 @@ caps.handback.revision: 19
  發生錯誤時，錯誤號碼會在這個方塊中顯示。 請使用這個號碼進行疑難排解，方法是在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 知識庫中搜尋該號碼，或者將號碼提供給技術支援人員。  
   
  **Host Name**  
- 顯示執行 [!INCLUDE[ssAS](../../includes/ssas-md.md)] 之電腦或叢集的名稱。  
+ 顯示執行 [!INCLUDE[ssAS](../../includes/ssas-md.md)]之電腦或叢集的名稱。  
   
  **名稱**  
  表示服務的顯示名稱。  
@@ -39,7 +44,7 @@ caps.handback.revision: 19
  顯示 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 用來追蹤此程式之處理序的編號。  
   
  **SQL 服務類型**  
- 顯示為呼叫處理序所提供的服務類型。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會安裝數個服務。  
+ 顯示為呼叫處理序所提供的服務類型。 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]會安裝數個服務。  
   
  **啟動模式**  
  將這個服務設定為下列選擇：  

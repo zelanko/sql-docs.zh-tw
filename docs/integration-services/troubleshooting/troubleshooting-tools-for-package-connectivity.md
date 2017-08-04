@@ -1,39 +1,44 @@
 ---
-title: "疑難排解封裝連接的工具 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQL Server Integration Services 封裝, 疑難排解"
-  - "SSIS 封裝, 疑難排解"
-  - "Integration Services，疑難排解"
-  - "連線 [Integration Services]，疑難排解"
-  - "錯誤 [Integration Services]，疑難排解"
-  - "封裝 [Integration Services], 疑難排解"
+title: "疑難排解工具封裝連接 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Server Integration Services packages, troubleshooting
+- SSIS packages, troubleshooting
+- Integration Services, troubleshooting
+- connectivity [Integration Services], troubleshooting
+- errors [Integration Services], troubleshooting
+- packages [Integration Services], troubleshooting
 ms.assetid: 08a019f5-8ba7-4527-97c1-e9846d4022ff
 caps.latest.revision: 13
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e3799e224930806445bc1c27f37c05b95a0bbbae
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 疑難排解封裝連接的工具
+# <a name="troubleshooting-tools-for-package-connectivity"></a>疑難排解封裝連接的工具
 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 所含的功能及工具，可以讓您用於疑難排解封裝與封裝擷取及載入資料之資料來源之間的連接。  
   
-## 疑難排解外部資料提供者的問題  
+## <a name="troubleshooting-issues-with-external-data-providers"></a>疑難排解外部資料提供者的問題  
  與外部資料提供者互動期間發生許多封裝失敗。 但是，這些提供者傳回 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的訊息經常未提供足夠的資訊，導致無法開始進行互動的疑難排解。 為了解決這個疑難排解需要， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包括新的記錄訊息，可供您用於針對封裝與外部資料來源之間的互動進行疑難排解。  
   
 -   **啟用記錄並選取封裝的 [診斷] 事件以查看新的疑難排解訊息**。 下列 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 元件將能夠在每次呼叫外部資料提供者之前和之後，於記錄中寫入訊息：  
   
     -   OLE DB 連接管理員、OLE DB 來源和 OLE DB 目的地  
   
-    -   [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 連接管理員和 ADO NET 來源  
+    -   [!INCLUDE[vstecado](../../includes/vstecado-md.md)]連接管理員和 ADO NET 來源  
   
     -   執行 SQL 工作  
   
@@ -67,8 +72,8 @@ caps.handback.revision: 13
     ExternalRequest_post: 'IDbConnection.Close finished'. The external request has completed."  
     ```  
   
-## 請參閱＜  
- [疑難排解封裝開發的工具](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)   
- [封裝執行的疑難排解工具](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
+## <a name="see-also"></a>另請參閱  
+ [疑難排解封裝開發工具](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)   
+ [疑難排解封裝執行的工具](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
   
   

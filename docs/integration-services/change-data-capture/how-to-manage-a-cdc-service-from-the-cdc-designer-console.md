@@ -1,25 +1,30 @@
 ---
-title: "如何從 CDC 設計工具主控台管理 CDC 服務 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "如何從 CDC 設計工具主控台管理 CDC 服務 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c923348d-c6c8-4807-9081-172048e6f5e3
 caps.latest.revision: 6
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 80fc7320cb47a9fc46b331b119ff91ec0a1cdc19
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 如何從 CDC 設計工具主控台管理 CDC 服務
+# <a name="how-to-manage-a-cdc-service-from-the-cdc-designer-console"></a>如何從 CDC 設計工具主控台管理 CDC 服務
   此程序描述如何使用 CDC 設計工具主控台來管理 CDC 服務。  
   
-### 若要從 CDC 設計工具主控台來管理 CDC 服務  
+### <a name="to-manage-a-cdc-service-from-the-cdc-designer-console"></a>若要從 CDC 設計工具主控台來管理 CDC 服務  
   
 1.  從 **[開始]** 功能表選取 **[CDC 設計工具主控台]**。  
   

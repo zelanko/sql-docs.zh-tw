@@ -1,31 +1,36 @@
 ---
-title: "篩選追蹤中的事件 (SQL Server Profiler) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "篩選 [SQL Server], 追蹤"
-  - "追蹤 [SQL Server], 篩選"
-  - "追蹤 [SQL Server], 事件"
+title: "篩選事件追蹤 (SQL Server Profiler) |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- filters [SQL Server], traces
+- traces [SQL Server], filters
+- traces [SQL Server], events
 ms.assetid: 0fd63573-3b35-4f67-9e1e-ed9aabee11a8
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 327577ab8656b2af5894c38676c200ea4095edf4
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 篩選追蹤中的事件 (SQL Server Profiler)
+# <a name="filter-events-in-a-trace-sql-server-profiler"></a>篩選追蹤中的事件 (SQL Server Profiler)
   篩選可限制追蹤中收集的事件。 如果沒有設定篩選條件，選定事件類別的所有事件都會傳回到追蹤輸出。 替追蹤設定篩選並非強制的。 不過，篩選可以讓追蹤期間造成的負擔降到最低。  
   
  使用 **[追蹤屬性]** 或 **[追蹤範本屬性]** 對話方塊的 **[事件選取範圍]** 索引標籤，可以將篩選加入到追蹤定義。  
   
-### 若要篩選追蹤中的事件  
+### <a name="to-filter-events-in-a-trace"></a>若要篩選追蹤中的事件  
   
 1.  在 **[追蹤檔案屬性]** 或 **[追蹤資料表屬性]** 對話方塊中，按一下 **[事件選取範圍]** 索引標籤。  
   
@@ -33,7 +38,7 @@ caps.handback.revision: 26
   
 2.  按一下 [資料行篩選]。  
   
-     [編輯篩選] 對話方塊隨即顯示。 您可以使用 [編輯篩選] 對話方塊包含的比較運算子清單，篩選追蹤中的事件。  
+     [編輯篩選] 對話方塊隨即顯示。 **編輯篩選**對話方塊包含的比較運算子可用來篩選追蹤中的事件清單。  
   
 3.  若要套用篩選，請按一下比較運算子，再輸入篩選要用的值。  
   
@@ -43,7 +48,7 @@ caps.handback.revision: 26
   
 -   如果在 [事件選取範圍] 索引標籤的 **StartTime** 與 **EndTime** 資料行上，設定篩選條件，請確定：  
   
-    -   輸入的日期符合以下格式：`YYYY/MM/DD HH:mm:sec`。  
+    -   輸入的日期符合以下格式： `YYYY/MM/DD HH:mm:sec`。  
   
          -或-  
   
@@ -55,7 +60,7 @@ caps.handback.revision: 26
   
 -   如果從 **osql** 公用程式或 **sqlcmd** 公用程式追蹤事件，對 **%** 資料行篩選時會附加 **%** 。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

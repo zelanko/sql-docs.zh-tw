@@ -1,27 +1,32 @@
 ---
-title: "以沒有快取或部分快取模式實作查閱 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "查閱轉換"
-  - "完全相符 [Integration Services]"
-  - "查閱 [Integration Services]"
-  - "完全相符 [Integration Services]"
+title: "以沒有快取或部分快取模式實作查閱 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Lookup transformation
+- match exactly [Integration Services]
+- lookups [Integration Services]
+- exact matches [Integration Services]
 ms.assetid: 01b7fbca-5181-4d47-9f75-7f25af6b40d2
 caps.latest.revision: 67
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 67
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cb81f969cc30366489df367016c8096ea2ac1168
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 以沒有快取或部分快取模式實作查閱
+# <a name="implement-a-lookup-in-no-cache-or-partial-cache-mode"></a>以沒有快取或部分快取模式實作查閱
   您可以將查閱轉換設定為使用部分快取或沒有快取模式：  
   
 -   部分快取  
@@ -34,7 +39,7 @@ caps.handback.revision: 67
   
  不論是選取部份快取或沒有快取，都是使用 OLE DB 連接管理員連接到參考資料集。 參考資料集是藉由在執行查閱轉換期間使用資料表、檢視或 SQL 查詢而產生。  
   
-### 若要以沒有快取或部分快取模式實作查閱轉換  
+### <a name="to-implement-a-lookup-transformation-in-no-cache-or-partial-cache-mode"></a>若要以沒有快取或部分快取模式實作查閱轉換  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]中，開啟包含所要封裝的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 專案，然後再開啟封裝。  
   
@@ -102,11 +107,11 @@ caps.handback.revision: 67
     > [!NOTE]  
     >  在此頁面上所指定的選擇性 SQL 陳述式會覆寫並取代在 [查閱轉換編輯器] 的 [連接]頁面上所指定的資料表名稱。  
   
-13. 若要設定錯誤輸出，按一下 **[錯誤輸出]** 頁面，然後設定錯誤處理選項。 如需詳細資訊，請參閱 [Lookup Transformation Editor &#40;Error Output Page&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md) (查閱轉換編輯器 (錯誤輸出頁面))。  
+13. 若要設定錯誤輸出，按一下 **[錯誤輸出]** 頁面，然後設定錯誤處理選項。 如需詳細資訊，請參閱[查閱轉換編輯器 &#40;錯誤輸出頁面&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md)。  
   
 14. 按一下 **[確定]** ，將變更儲存至查閱轉換，然後再執行封裝。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [Integration Services 轉換](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   

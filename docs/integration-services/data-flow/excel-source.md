@@ -1,27 +1,32 @@
 ---
-title: "Excel 來源 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.excelsource.f1"
-helpviewer_keywords: 
-  - "Excel [Integration Services]"
-  - "來源 [Integration Services], Excel"
+title: "Excel 來源 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.excelsource.f1
+helpviewer_keywords:
+- Excel [Integration Services]
+- sources [Integration Services], Excel
 ms.assetid: e66349f3-b1b8-4763-89b7-7803541a4d62
 caps.latest.revision: 60
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 60
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d9db81f159d831fe10aaf99a4b27a34aef0764fc
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# Excel 來源
+# <a name="excel-source"></a>Excel 來源
   Excel 來源會從 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 活頁簿中的工作表或範圍擷取資料。  
   
  Excel 來源會提供四種不同的資料存取模式來擷取資料：  
@@ -41,7 +46,7 @@ caps.handback.revision: 60
   
  Excel 來源有一個一般輸出和一個錯誤輸出。  
   
-## 使用狀況的考量  
+## <a name="usage-considerations"></a>使用狀況的考量  
  Excel 連線管理員會使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Jet 4.0 及其支援的 Excel ISAM (Indexed Sequential Access Method，索引循序存取方法) 驅動程式，連接和讀寫資料至 Excel 資料來源。  
   
  許多現有的「 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 知識庫」文件都有記錄此提供者和驅動程式的行為，而即使這些文件並非 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 或其前置的「資料轉換服務」專用，您仍會想了解可能導致未預期結果的特定行為。 如需有關 Excel 驅動程式之使用與行為的一般資訊，請參閱＜ [如何從 Visual Basic 或 VBA 搭配使用 ADO 與 Excel 資料](http://support.microsoft.com/kb/257819)＞。  
@@ -52,7 +57,7 @@ caps.handback.revision: 60
   
 -   **遺漏值**。 Excel 驅動程式會在指定來源中讀取特定資料列數目 (依預設為 8 個資料列)，以猜測各資料行的資料類型。 當資料行可能包含混合資料類型，尤其是數值資料與文字資料混合時，驅動程式會做出有利於大部分資料類型的決定，並於包含其他類型資料的資料格中傳回 Null 值。 (在繫結中，以數值類型優先)。Excel 工作表中大部分的資料格格式化選項，似乎都不會影響這項資料類型決定。 您可以藉由指定「匯入模式」來修改 Excel 驅動程式的這項行為。 若要指定「匯入模式」，請在 [屬性] 視窗中將 **IMEX=1** 加入 Excel 連線管理員之連接字串中的「擴充屬性」值。 如需詳細資訊，請參閱 [PRB: Excel Values Returned as NULL Using DAO OpenRecordset](http://support.microsoft.com/kb/194124) (PRB：使用 DAO OpenRecordset 以 NULL 形式傳回的 Excel 值)。  
   
--   **截斷的文字**。 當驅動程式判斷出某個 Excel 資料行包含文字資料時，驅動程式將會根據其取樣的最長值來選取資料類型 (字串或備忘錄)。 如果驅動程式未在其取樣的資料列中發現任何長度超過 255 個字元的值，則會將該資料行視為 255 個字元字串資料行而非備忘錄資料行 因此，長度超過 255 個字元的值可能會被截斷。 若要以不截斷的方式從備忘資料行匯入資料，您必須確保至少在其中一個取樣資料列中的備忘錄資料行包含長度超過 255 個字元的值，否則您就必須增加驅動程式取樣的資料列數目，使其包含這類資料列。 您可以提高 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Jet\4.0\Engines\Excel** 登錄機碼底下 **TypeGuessRows** 的值，藉以增加取樣的資料列數目。 如需詳細資訊，請參閱 [PRB︰從 Jet 4.0 OLEDB 來源傳送資料失敗，發生緩衝區溢位錯誤](http://support.microsoft.com/kb/281517) (PRB: Transfer of Data from Jet 4.0 OLEDB Source Fails w/ Error)。  
+-   **截斷的文字**。 當驅動程式判斷出某個 Excel 資料行包含文字資料時，驅動程式將會根據其取樣的最長值來選取資料類型 (字串或備忘錄)。 如果驅動程式未在其取樣的資料列中發現任何長度超過 255 個字元的值，則會將該資料行視為 255 個字元字串資料行而非備忘錄資料行 因此，長度超過 255 個字元的值可能會被截斷。 若要以不截斷的方式從備忘資料行匯入資料，您必須確保至少在其中一個取樣資料列中的備忘錄資料行包含長度超過 255 個字元的值，否則您就必須增加驅動程式取樣的資料列數目，使其包含這類資料列。 您可以提高 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Jet\4.0\Engines\Excel** 登錄機碼底下 **TypeGuessRows** 的值，藉以增加取樣的資料列數目。 如需詳細資訊，請參閱 [PRB︰從 Jet 4.0 OLEDB 來源傳送資料失敗，發生緩衝區溢位錯誤](http://support.microsoft.com/kb/281517)(PRB: Transfer of Data from Jet 4.0 OLEDB Source Fails w/ Error)。  
   
 -   **資料類型**。 Excel 驅動程式只能辨識有限的一組資料類型。 例如，所有的數值資料行都會被解譯為倍整數 (DT_R8)，而所有的字串資料行 (備忘錄資料行除外) 全都會被解譯成 255 個字元的 Unicode 字串 (DT_WSTR)。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 對應 Excel 資料類型的情況如下：  
   
@@ -76,7 +81,7 @@ caps.handback.revision: 60
   
     -   雙精確度 Excel 數值資料行與其他類型之數值資料行之間的轉換  
   
-## Excel 來源組態  
+## <a name="excel-source-configuration"></a>Excel 來源組態  
  您可以透過「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」或以程式設計方式設定屬性。  
   
  如需可在 [Excel 來源編輯器] 對話方塊中設定之屬性的詳細資訊，請按下列其中一個主題：  
@@ -89,13 +94,13 @@ caps.handback.revision: 60
   
  **[進階編輯器]** 對話方塊會反映能以程式設計的方式設定之所有屬性。 如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [通用屬性](../Topic/Common%20Properties.md)  
+-   [通用屬性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Excel 自訂屬性](../../integration-services/data-flow/excel-custom-properties.md)  
   
- 如需循環使用 Excel 檔案群組的資訊，請參閱[使用 Foreach 迴圈容器來循環使用 Excel 檔案和資料表](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)。  
+ 如需循環使用 Excel 檔案群組的資訊，請參閱 [使用 Foreach 迴圈容器來循環使用 Excel 檔案和資料表](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)。  
   
-## 相關工作  
+## <a name="related-tasks"></a>相關工作  
   
 -   [在資料流程元件中將查詢參數對應至變數](../../integration-services/data-flow/map-query-parameters-to-variables-in-a-data-flow-component.md)  
   
@@ -105,9 +110,9 @@ caps.handback.revision: 60
   
 -   [使用 Foreach 迴圈容器來循環使用 Excel 檔案和資料表](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  
   
-## 相關內容  
+## <a name="related-content"></a>相關內容  
   
--   hrvoje.piasevoli.com 上的部落格文章：[Importing data from 64-bit Excel in SSIS](http://go.microsoft.com/fwlink/?LinkId=217673) (從 SSIS 中的 64 位元 Excel 匯入資料)  
+-   hrvoje.piasevoli.com 上的部落格文章： [Importing data from 64-bit Excel in SSIS](http://go.microsoft.com/fwlink/?LinkId=217673)(從 SSIS 中的 64 位元 Excel 匯入資料)  
   
 -   dougbert.com 上的部落格文章： [Integration Services 中的 Excel (第一部分，共三部分)：連接與元件](http://go.microsoft.com/fwlink/?LinkId=217674)   
   

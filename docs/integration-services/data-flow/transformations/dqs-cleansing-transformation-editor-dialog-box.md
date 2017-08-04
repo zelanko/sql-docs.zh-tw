@@ -1,25 +1,30 @@
 ---
-title: "DQS 清理轉換編輯器對話方塊 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.ssdqs.designer.cleansing.f1"
-  - "sql13.SSDQS.DESIGNER.DQCONNECTION.F1"
+title: "DQS 清理轉換編輯器對話方塊 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.ssdqs.designer.cleansing.f1
+- sql13.SSDQS.DESIGNER.DQCONNECTION.F1
 ms.assetid: 07e79641-71ee-45d0-a9ba-ed6f9f68f333
 caps.latest.revision: 16
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ee0247e25e5ada17f3d79ce9ba63576a5b866b42
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# DQS 清理轉換編輯器對話方塊
+# <a name="dqs-cleansing-transformation-editor-dialog-box"></a>DQS 清理轉換編輯器對話方塊
   使用 [DQS 清理轉換編輯器] 對話方塊，即可更正使用 Data Quality Services (DQS) 的資料。 如需詳細資訊，請參閱 [Data Quality Services Concepts](../../../data-quality-services/data-quality-services-concepts.md)。  
   
  若要了解有關轉換的詳細資訊，請參閱＜ [DQS Cleansing Transformation](../../../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)＞。  
@@ -40,20 +45,20 @@ caps.handback.revision: 16
   
 1.  在 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 中，將 DQS 清理轉換加入至 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]封裝。  
   
-2.  以滑鼠右鍵按一下此元件，然後按一下 [編輯]。  
+2.  以滑鼠右鍵按一下此元件，然後按一下 **[編輯]**。  
   
 ##  <a name="connection"></a> 設定連接管理員索引標籤上的選項  
  **資料品質連接管理員**  
  從清單中選取現有的 DQS 連線管理員，或按一下 [新增] 建立新的連線。  
   
  **新增**  
- 使用 [DQS 清理連線管理員] 對話方塊來建立新的連線管理員。 請參閱[設定 DQS 清理連線管理員對話方塊中的選項](#manager)  
+ 使用 [DQS 清理連線管理員] 對話方塊來建立新的連線管理員。 請參閱 [設定 DQS 清理連線管理員對話方塊中的選項](#manager)  
   
  **資料品質知識庫**  
  針對連接的資料來源選取現有的 DQS 知識庫。 如需有關 DQS 知識庫的詳細資訊，請參閱＜ [DQS Knowledge Bases and Domains](../../../data-quality-services/dqs-knowledge-bases-and-domains.md)＞。  
   
  **加密連接**  
- 指定是否要加密連接，以便加密 DQS 伺服器與 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 之間的資料傳輸。  
+ 指定是否要加密連接，以便加密 DQS 伺服器與 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]之間的資料傳輸。  
   
  **可用的定義域**  
  針對選取的知識庫列出可用的定義域。 定義域有二種類型：單一定義域以及包含兩個或多個單一定義域的複合定義域。  
@@ -98,10 +103,10 @@ caps.handback.revision: 16
   
 ##  <a name="advanced"></a> 設定進階索引標籤上的選項  
  **標準化輸出**  
- 指出是否要根據針對定義域所定義的輸出格式，以標準化格式輸出資料。 如需標準化格式的詳細資訊，請參閱[資料清理](../../../data-quality-services/data-cleansing.md)。  
+ 指出是否要根據針對定義域所定義的輸出格式，以標準化格式輸出資料。 如需標準化格式的詳細資訊，請參閱 [資料清理](../../../data-quality-services/data-cleansing.md)。  
   
  **信心**  
- 指出是否要針對更正的資料包含信心層級。 信心層級表示 DQS 對更正或建議的確定程度。 如需信賴等級的詳細資訊，請參閱[資料清理](../../../data-quality-services/data-cleansing.md)。  
+ 指出是否要針對更正的資料包含信心層級。 信心層級表示 DQS 對更正或建議的確定程度。 如需信賴等級的詳細資訊，請參閱 [資料清理](../../../data-quality-services/data-cleansing.md)。  
   
  **Reason**  
  指出是否要包含資料更正的原因。  
@@ -110,7 +115,7 @@ caps.handback.revision: 16
  指出是否要輸出從現有參考資料提供者收到的其他資料。 如需詳細資訊，請參閱 [Reference Data Services in DQS](../../../data-quality-services/reference-data-services-in-dqs.md)。  
   
  **附加的資料結構描述**  
- 指出是否要輸出資料結構描述。 如需詳細資訊，請參閱[將定義域或複合定義域附加至參考資料](../../../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md)。  
+ 指出是否要輸出資料結構描述。 如需詳細資訊，請參閱 [將定義域或複合定義域附加至參考資料](../../../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md)。  
   
 ##  <a name="manager"></a> 設定 DQS 清理連接管理員對話方塊中的選項  
  **伺服器名稱**  
@@ -127,7 +132,7 @@ caps.handback.revision: 16
   
 3.  按一下 **[加入]**。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [將資料品質規則套用至資料來源](../../../integration-services/data-flow/transformations/apply-data-quality-rules-to-data-source.md)  
   
   

@@ -1,31 +1,36 @@
 ---
-title: "匯出資料行轉換編輯器 (錯誤輸出頁面) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.fileextractortransformation.errorhandling.f1"
-helpviewer_keywords: 
-  - "匯出資料行轉換編輯器"
+title: "匯出資料行轉換編輯器 （錯誤輸出頁面） |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.fileextractortransformation.errorhandling.f1
+helpviewer_keywords:
+- Export Column Transformation Editor
 ms.assetid: 260be463-01a9-460c-9c98-e5265cb2b1e9
 caps.latest.revision: 26
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6d49a143b69869b79169bb4b68ffc0663429ef3d
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 匯出資料行轉換編輯器 (錯誤輸出頁面)
+# <a name="export-column-transformation-editor-error-output-page"></a>匯出資料行轉換編輯器 (錯誤輸出頁面)
   使用 **[匯出資料行轉換編輯器]** 對話方塊的 **[錯誤輸出]** 頁面，即可指定如何處理錯誤。  
   
  若要深入了解匯出資料行轉換，請參閱＜ [Export Column Transformation](../../../integration-services/data-flow/transformations/export-column-transformation.md)＞。  
   
-## 選項。  
+## <a name="options"></a>選項。  
  **輸入/輸出**  
  檢視輸出的名稱。 按一下名稱即可展開檢視來包含資料行。  
   
@@ -47,8 +52,8 @@ caps.handback.revision: 26
  **套用**  
  將錯誤處理選項套用至選取的資料格。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [Integration Services 錯誤和訊息參考](../../../integration-services/integration-services-error-and-message-reference.md)   
- [匯出資料行轉換編輯器 &#40;資料行頁面&#41;](../../../integration-services/data-flow/transformations/export-column-transformation-editor-columns-page.md)  
+ [匯出資料行轉換編輯器 &#40;資料行頁面 &#41;](../../../integration-services/data-flow/transformations/export-column-transformation-editor-columns-page.md)  
   
   

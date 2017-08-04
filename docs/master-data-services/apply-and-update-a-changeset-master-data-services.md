@@ -1,26 +1,31 @@
 ---
-title: "套用及更新變更集 (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "套用及更新變更集 (Master Data Services) |Microsoft 文件"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3a6a3cf2-1e77-43d3-a64a-855ae51258e7
 caps.latest.revision: 10
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8bd1f16bf28951aa128d1ab218ef12e8affbe1aa
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 套用及更新變更集 (Master Data Services)
+# <a name="apply-and-update-a-changeset-master-data-services"></a>套用及更新變更集 (Master Data Services)
   變更集是對主要資料所做的暫止變更集合。 您可以在本機套用變更集，以檢視、新增、更新及刪除變更集中的暫止變更。  
   
-## 必要條件  
+## <a name="prerequisites"></a>必要條件  
   
 -   您必須擁有存取 **[總管]** 功能區域的權限。 如需詳細資訊，請參閱[功能區域權限 &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)。  
   
@@ -30,7 +35,7 @@ caps.handback.revision: 10
   
 -   您只能修改您所擁有的變更集，以及變更集狀態何時為開啟或已拒絕。  
   
-## 套用及更新變更集  
+## <a name="to-apply-and-update-a-changeset"></a>套用及更新變更集  
   
 1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 首頁上，選取模型和版本，然後按一下 [Explorer] 。  
   
@@ -46,10 +51,10 @@ caps.handback.revision: 10
   
 5.  若要還原暫止的變更，請在 [變更集] 窗格中，以滑鼠右鍵按一下方格，然後按一下 [還原]。  
   
-## 後續步驟  
+## <a name="next-steps"></a>後續步驟  
  [認可或提交變更集 &#40;Master Data Services&#41;](../master-data-services/commit-or-submit-a-changeset-master-data-services.md)  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [建立變更集 &#40;Master Data Services&#41;](../master-data-services/create-a-changeset-master-data-services.md)   
  [核准或拒絕變更集 &#40;Master Data Services&#41;](../master-data-services/approve-or-reject-a-changeset-master-data-services.md)  
   

@@ -1,31 +1,36 @@
 ---
-title: "在封裝中使用屬性運算式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "封裝 [Integration Services], 運算式"
-  - "Integration Services 封裝, 運算式"
-  - "SQL Server Integration Services 封裝, 運算式"
-  - "動態屬性"
-  - "更新封裝屬性"
-  - "SSIS 封裝, 運算式"
-  - "運算式 [Integration Services], 屬性運算式"
-  - "屬性運算式 [Integration Services]"
+title: "在封裝中使用屬性運算式 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- packages [Integration Services], expressions
+- Integration Services packages, expressions
+- SQL Server Integration Services packages, expressions
+- dynamic properties
+- updating package properties
+- SSIS packages, expressions
+- expressions [Integration Services], property expressions
+- property expressions [Integration Services]
 ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
 caps.latest.revision: 69
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 69
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7f1a931e20a1ab0bafae0e014b174cf718e9a69f
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 在封裝中使用屬性運算式
+# <a name="use-property-expressions-in-packages"></a>在封裝中使用屬性運算式
   屬性運算式是指派給屬性的運算式，用於在執行階段啟用該屬性的動態更新。 例如，屬性運算式可更新「收件者」欄位，傳送郵件工作透過插入儲存在變數中的電子郵件地址來使用該欄位。  
   
  運算式可加入封裝、工作、「Foreach 迴圈」、「For 迴圈」、「時序」、Foreach 列舉值、事件處理常式、封裝或專案層級的連接管理員或記錄提供者中。 此物件任何為讀取/寫入的屬性，都可以實作屬性運算式。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 也支援在資料流程元件的某些自訂屬性中，使用屬性運算式。 變數和優先順序條件約束不支援屬性運算式，但是它們包含您可以在其中使用運算式的特殊屬性。  
@@ -51,9 +56,9 @@ caps.handback.revision: 69
   
  屬性只可使用一個屬性運算式，而屬性運算式只可套用至一個屬性。 不過，您可以建立多個相同的屬性運算式，並將它們指派給不同的屬性。  
   
- 部分屬性是使用於自列舉值的值加以設定。 在屬性運算式中參考列舉值成員時，您必須使用相當於列舉值成員之易記名稱的數值。 例如，如果屬性運算式設定 **LoggingMode** 屬性，而該屬性使用來自 **DTSLoggingMode** 列舉的值，則屬性運算式就必須使用 0、1 或 2 來取代易記名稱 **Enabled**、**Disabled** 或 **UseParentSetting**。 如需詳細資訊，請參閱[屬性運算式中的列舉常數](../../integration-services/expressions/enumerated-constants-in-property-expressions.md)。  
+ 部分屬性是使用於自列舉值的值加以設定。 在屬性運算式中參考列舉值成員時，您必須使用相當於列舉值成員之易記名稱的數值。 例如，如果屬性運算式設定 **LoggingMode** 屬性，而該屬性使用來自 **DTSLoggingMode** 列舉的值，則屬性運算式就必須使用 0、1 或 2 來取代易記名稱 **Enabled**、 **Disabled**或 **UseParentSetting**。 如需詳細資訊，請參閱 [屬性運算式中的列舉常數](../../integration-services/expressions/enumerated-constants-in-property-expressions.md)。  
   
-## 屬性運算式使用者介面  
+## <a name="property-expression-user-interface"></a>屬性運算式使用者介面  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供一組用於建立和管理屬性運算式的工具。  
   
 -   [運算式] 頁面，位於工作的自訂編輯器、For 迴圈容器和 Foreach 容器中。 該 [運算式] 頁面可讓您編輯運算式，以及檢視工作、Foreach 迴圈或 For 迴圈所使用的屬性運算式清單。  
@@ -72,19 +77,19 @@ caps.handback.revision: 69
   
  您還可以從 [屬性運算式編輯器] 對話方塊，開啟 [運算式產生器] 對話方塊。  
   
-#### 處理屬性運算式  
+#### <a name="to-work-with-property-expressions"></a>處理屬性運算式  
   
 -   [加入或變更屬性運算式](../../integration-services/expressions/add-or-change-a-property-expression.md)  
   
-### 設定資料流程元件的屬性運算式  
+### <a name="setting-property-expressions-of-data-flow-components"></a>設定資料流程元件的屬性運算式  
  如果在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中建構封裝，支援屬性運算式之資料流程元件的屬性便會在其所屬的資料流程工作上公開。 若要加入、變更及移除資料流程元件的屬性運算式，請以滑鼠右鍵按一下資料流程元件所屬資料流程的資料流程工作，並按一下 [屬性]。 [屬性] 視窗會列出可搭配使用屬性運算式之資料流程元件的屬性。 例如，若要建立或修改屬性運算式，以用於 SampleCustomer 資料流程中資料列取樣轉換的 SamplingValue 屬性，請以滑鼠右鍵按一下資料列取樣轉換所屬資料流程的資料流程工作，並按一下 [屬性]。 SamplingValue 屬性會列在 [屬性] 視窗中，其格式為 [SampleCustomer].[SamplingValue]。  
   
- 在 [屬性] 視窗中，您可以使用與其他 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 物件類型之屬性運算式相同的方式，來加入、變更及移除屬性運算式。 [屬性] 視窗也可讓您存取用於加入、變更或移除資料流程元件之屬性運算式的各種對話方塊和產生器。 如需屬性運算式可更新之資料流程元件屬性的詳細資訊，請參閱[轉換自訂屬性](../../integration-services/data-flow/transformations/transformation-custom-properties.md)。  
+ 在 [屬性] 視窗中，您可以使用與其他 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 物件類型之屬性運算式相同的方式，來加入、變更及移除屬性運算式。 [屬性] 視窗也可讓您存取用於加入、變更或移除資料流程元件之屬性運算式的各種對話方塊和產生器。 如需屬性運算式可更新之資料流程元件屬性的詳細資訊，請參閱 [轉換自訂屬性](../../integration-services/data-flow/transformations/transformation-custom-properties.md)。  
   
-## 載入屬性運算式  
- 您不能指定或控制屬性運算式載入的時機。 驗證封裝和封裝物件時便會評估和載入屬性運算式。 儲存封裝、在「[!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中開啟封裝以及執行封裝時，都會進行驗證。  
+## <a name="loading-property-expressions"></a>載入屬性運算式  
+ 您不能指定或控制屬性運算式載入的時機。 驗證封裝和封裝物件時便會評估和載入屬性運算式。 儲存封裝、在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中開啟封裝以及執行封裝時，都會進行驗證。  
   
- 因此，必須等到您在加入屬性運算式之後儲存封裝、執行封裝或重新開啟封裝之後，您才會在「[!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中看到使用屬性運算式之封裝物件屬性的更新值。  
+ 因此，必須等到您在加入屬性運算式之後儲存封裝、執行封裝或重新開啟封裝之後，您才會在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中看到使用屬性運算式之封裝物件屬性的更新值。  
   
  呼叫不同物件類型 (連接管理員、記錄提供者和列舉值) 特有的方法時，也會載入與該物件類型相關聯的屬性運算式。 例如，連接管理員的屬性會在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 建立連接執行個體之前載入。  
   
@@ -102,22 +107,22 @@ caps.handback.revision: 69
 |記錄提供者|載入組態後<br /><br /> 驗證前<br /><br /> 執行前<br /><br /> 開啟記錄檔前|  
 |Foreach 列舉值|載入組態後<br /><br /> 驗證前<br /><br /> 執行前<br /><br /> 每次列舉迴圈前|  
   
-## 在 Foreach 迴圈中使用屬性運算式  
+## <a name="using-property-expressions-in-the-foreach-loop"></a>在 Foreach 迴圈中使用屬性運算式  
  實作屬性運算式通常非常適合用於設定 Foreach 迴圈容器內所使用之連線管理員的 **ConnectionString** 屬性值。 在列舉值將它目前的值對應到迴圈的每個反覆運算上的變數之後，屬性運算式就可以使用這個變數的值來動態更新 **ConnectionString** 屬性的值。  
   
- 如果想要將屬性運算式用於 Foreach 迴圈使用之檔案、多個檔案、一般檔案和多個一般檔案連線管理員的 **ConnectionString** 屬性，您必須考慮幾件事。 可以將 **MaxConcurrentExecutables** 屬性設定為大於 1 或等於 -1 的值，以便將封裝設定為並行執行多個可執行檔。 -1 的值表示允許同時執行的最大可執行檔數目等於處理器數目再加 2。 為了避免平行執行可執行檔的負面結果，**MaxConcurrentExecutables** 值應該設定為 1。 如果 **MaxConcurrentExecutables** 未設為 1，就無法保證 **ConnectionString** 屬性的值，而且結果會無法預測。  
+ 如果想要將屬性運算式用於 Foreach 迴圈使用之檔案、多個檔案、一般檔案和多個一般檔案連線管理員的 **ConnectionString** 屬性，您必須考慮幾件事。 可以將 **MaxConcurrentExecutables** 屬性設定為大於 1 或等於 -1 的值，以便將封裝設定為並行執行多個可執行檔。 -1 的值表示允許同時執行的最大可執行檔數目等於處理器數目再加 2。 為了避免平行執行可執行檔的負面結果， **MaxConcurrentExecutables** 值應該設定為 1。 如果 **MaxConcurrentExecutables** 未設為 1，就無法保證 **ConnectionString** 屬性的值，而且結果會無法預測。  
   
  例如，可考慮使用「Foreach 迴圈」列舉資料夾中的檔案、擷取檔案名稱，然後使用執行 SQL 工作將每一個檔案名稱插入資料表中。 如果 **MaxConcurrentExecutables** 未設為 1，而「執行 SQL」工作的兩個執行個體又試圖同時寫入資料表，就可能發生寫入衝突。  
   
-## 範例屬性運算式  
+## <a name="sample-property-expressions"></a>範例屬性運算式  
  下列範例運算式顯示如何在屬性運算式中使用系統變數、運算子、函數和字串常值。  
   
-### 封裝之 LoggingMode 屬性的屬性運算式  
- 下列屬性運算式可用以設定封裝的 LoggingMode 屬性。 此運算式使用 DAY 和 GETDATE 函數來取得代表日期之日 (Day) 部分的整數。 如果日期是 1 日或 15 日，記錄功能將會啟用，否則便會停用記錄功能。 值 1 是 LoggingMode 列舉值成員 **Enabled** 的整數相等項，而值 2 則是成員 **Disabled** 的整數相等項。 您必須在運算式中使用數值代替列舉值成員名稱。  
+### <a name="property-expression-for-the-loggingmode-property-of-a-package"></a>封裝之 LoggingMode 屬性的屬性運算式  
+ 下列屬性運算式可用以設定封裝的 LoggingMode 屬性。 此運算式使用 DAY 和 GETDATE 函數來取得代表日期之日 (Day) 部分的整數。 如果日期是 1 日或 15 日，記錄功能將會啟用，否則便會停用記錄功能。 值 1 是 LoggingMode 列舉值成員 **Enabled**的整數相等項，而值 2 則是成員 **Disabled**的整數相等項。 您必須在運算式中使用數值代替列舉值成員名稱。  
   
  `DAY((DT_DBTIMESTAMP)GETDATE())==1||DAY((DT_DBTIMESTAMP)GETDATE())==15?1:2`  
   
-### 電子郵件訊息主旨的屬性運算式  
+### <a name="property-expression-for-the-subject-of-an-e-mail-message"></a>電子郵件訊息主旨的屬性運算式  
  下列屬性運算式可用以設定傳送郵件工作的 Subject 屬性，以及提供有用的電子郵件主旨。 該運算式會使用字串常值、系統變數、串連 (+) 與轉換運算子，以及 DATEDIFF 與 GETDATE 函數的組合。 系統變數是 `PackageName` 與 `StartTime` 變數。  
   
  `"PExpression-->Package: (" + @[System::PackageName] + ") Started:"+  (DT_WSTR, 30) @[System::StartTime] + " Duration:"  +  (DT_WSTR,10) (DATEDIFF( "ss", @[System::StartTime] , GETDATE()  )) + " seconds"`  
@@ -126,12 +131,12 @@ caps.handback.revision: 69
   
  PExpression-->Package: (EmailRowCountPP) Started:3/4/2005 11:06:18 AM Duration:9 seconds。  
   
-### 電子郵件訊息之訊息的屬性運算式  
- 下列屬性運算式可用以設定傳送郵件工作的 MessageSource 屬性。 該運算式會使用字串常值、使用者定義變數和串連 (+) 運算子的組合。 使用者定義變數的名稱是 `nasdaqrawrows`、`nyserawrows` 與 `amexrawrows`。 字串 "\n" 表示換行字元。  
+### <a name="property-expression-for-the-message-of-an-e-mail-message"></a>電子郵件訊息之訊息的屬性運算式  
+ 下列屬性運算式可用以設定傳送郵件工作的 MessageSource 屬性。 該運算式會使用字串常值、使用者定義變數和串連 (+) 運算子的組合。 使用者定義變數的名稱是 `nasdaqrawrows`、 `nyserawrows`與 `amexrawrows`。 字串 "\n" 表示換行字元。  
   
  `"Rows Processed: "  +   "\n" +"   NASDAQ: "  +   (dt_wstr,9)@[nasdaqrawrows]   + "\n" + "   NYSE: "  +  (dt_wstr,9)@[nyserawrows]  + "\n" + "   Amex: "  +  (dt_wstr,9)@[amexrawrows]`  
   
- 如果 `nasdaqrawrows` 是 7058、`nyserawrows` 是 3528，而 `amexrawrows` 是 1102，運算式會評估為下列字串。  
+ 如果 `nasdaqrawrows` 是 7058、 `nyserawrows` 是 3528，而 `amexrawrows` 是 1102，運算式會評估為下列字串。  
   
  處理的資料列：  
   
@@ -141,36 +146,36 @@ caps.handback.revision: 69
   
  AMEX: 1102  
   
-### 執行處理工作之 Executable 屬性的屬性運算式  
+### <a name="property-expression-for-the-executable-property-of-an-execute-process-task"></a>執行處理工作之 Executable 屬性的屬性運算式  
  下列屬性運算式可用以設定「執行處理」工作的 Executable 屬性。 該運算式會使用字串常值、運算子和函數的組合。 該運算式會使用 DATEPART 和 GETDATE 函數，以及條件運算子。  
   
  `DATEPART("weekday", GETDATE()) ==2?"notepad.exe":"mspaint.exe"`  
   
  如果是一星期中的第二天，則「執行處理」工作會執行 notepad.exe，否則該工作會執行 mspaint.exe。  
   
-### 一般檔案連接管理員之 ConnectionString 屬性的屬性運算式  
- 下列屬性運算式可用以設定「一般檔案」連線管理員的 ConnectionString 屬性。 該運算式會使用 `myfilenamefull` 單一使用者定義變數，該變數包含文字檔的路徑。  
+### <a name="property-expression-for-the-connectionstring-property-of-a-flat-file-connection-manager"></a>一般檔案連接管理員之 ConnectionString 屬性的屬性運算式  
+ 下列屬性運算式可用以設定「一般檔案」連線管理員的 ConnectionString 屬性。 該運算式會使用 `myfilenamefull`單一使用者定義變數，該變數包含文字檔的路徑。  
   
  `@[User::myfilenamefull]`  
   
 > [!NOTE]  
 >  連接管理員的屬性運算式只可使用 [屬性] 視窗進行存取。 若要檢視連線管理員的屬性，您必須在 [屬性] 視窗開啟時，在 [[!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師] 的 [連線管理員] 區域中選取連線管理員，或以滑鼠右鍵按一下連線管理員並選取 [屬性]。  
   
-### 文字檔記錄提供者之 ConfigString 屬性的屬性運算式  
- 下列屬性運算式可用以設定文字檔記錄提供者的 ConfigString 屬性。 該運算式會使用 `varConfigString` 單一使用者定義變數，該變數包含要使用之檔案連線管理員的名稱。 檔案連接管理員會指定要在其中寫入記錄項目之文字檔的路徑。  
+### <a name="property-expression-for-the-configstring-property-of-a-text-file-log-provider"></a>文字檔記錄提供者之 ConfigString 屬性的屬性運算式  
+ 下列屬性運算式可用以設定文字檔記錄提供者的 ConfigString 屬性。 該運算式會使用 `varConfigString`單一使用者定義變數，該變數包含要使用之檔案連線管理員的名稱。 檔案連接管理員會指定要在其中寫入記錄項目之文字檔的路徑。  
   
  `@[User::varConfigString]`  
   
 > [!NOTE]  
 >  記錄提供者的屬性運算式只可使用 [屬性] 視窗進行存取。 若要檢視記錄提供者的屬性，您必須在 [屬性] 視窗開啟時，在 [[!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師] 的封裝總管索引標籤上選取記錄提供者，或以滑鼠右鍵按一下封裝總管中的記錄提供者，並按一下 [屬性]。  
   
-## 外部資源  
+## <a name="external-resources"></a>外部資源  
   
 -   [運算式和組態螢光筆標示 (CodePlex 專案)](http://go.microsoft.com/fwlink/?LinkId=146625)  
   
 -   social.technet.microsoft.com 上的技術文件： [SSIS 運算式範例](http://go.microsoft.com/fwlink/?LinkId=220761)  
   
-## 請參閱＜  
- [在封裝中使用變數](../Topic/Use%20Variables%20in%20Packages.md)  
+## <a name="see-also"></a>請參閱＜  
+ [在封裝中使用變數](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
   
   

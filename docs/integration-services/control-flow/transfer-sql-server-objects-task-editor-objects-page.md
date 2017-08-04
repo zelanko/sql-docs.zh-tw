@@ -1,40 +1,45 @@
 ---
-title: "傳送 SQL Server 物件工作編輯器 (物件頁面) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.transfersqlserverobjects.objects.f1"
-helpviewer_keywords: 
-  - "傳送 SQL Server 物件工作編輯器"
+title: "傳送 SQL Server 物件工作編輯器 （物件頁面） |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.transfersqlserverobjects.objects.f1
+helpviewer_keywords:
+- Transfer SQL Server Objects Task Editor
 ms.assetid: 8cc09118-70ac-4013-8308-d87f8411ca0c
 caps.latest.revision: 30
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 67557562dd3f2efbe3c40673a835dd557f617604
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 傳送 SQL Server 物件工作編輯器 (物件頁面)
+# <a name="transfer-sql-server-objects-task-editor-objects-page"></a>傳送 SQL Server 物件工作編輯器 (物件頁面)
   使用 [傳送 SQL Server 物件工作編輯器] 對話方塊的 [物件] 頁面，即可指定用於從某個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體將一或多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物件複製到另一個執行個體的屬性。 資料表、檢視、預存程序和使用者自訂函數是您可以複製的一些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物件範例。 如需有關這項工作的詳細資訊，請參閱＜ [Transfer SQL Server Objects Task](../../integration-services/control-flow/transfer-sql-server-objects-task.md)＞。  
   
 > [!NOTE]  
 >  建立傳送 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物件工作的使用者必須具有來源伺服器物件的足夠權限，才能選取它們以進行複製，也要具有存取會從該處傳送物件之目的地伺服器資料庫的權限。  
   
-## 靜態選項  
+## <a name="static-options"></a>靜態選項  
  **SourceConnection**  
- 在清單中選取一個 SMO 連線管理員，或按一下 [\<新增連接...>]，以建立來源伺服器的新連接。  
+ 在清單中，選取一個 SMO 連接管理員，或按一下**\<新增連接 … >**來建立新的連接到來源伺服器。  
   
  **SourceDatabase**  
  在來源伺服器上選取會從中複製物件的資料庫。  
   
  **DestinationConnection**  
- 在清單中選取一個 SMO 連線管理員，或按一下 [\<新增連接...>]，以建立目的地伺服器的新連接。  
+ 在清單中，選取一個 SMO 連接管理員，或按一下**\<新增連接 … >**來建立新的連接到目的地伺服器。  
   
  **DestinationDatabase**  
  在目的地伺服器上選取物件會被複製到的資料庫。  
@@ -78,9 +83,9 @@ caps.handback.revision: 30
  展開 [ObjectsToCopy]，即可指定應從來源資料庫複製到目的地資料庫的物件。  
   
 > [!NOTE]  
-> 只有 **CopyAllObjects** 設定為 **False** 時，才能使用  **ObjectsToCopy**。  
+>  只有 **CopyAllObjects** 設定為 **False** 時，才能使用 **ObjectsToCopy**。  
   
- 只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 才支援用來複製下列類型之物件的選項：  
+ 只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]才支援用來複製下列類型之物件的選項：  
   
  組件  
   
@@ -126,9 +131,9 @@ caps.handback.revision: 30
  **GenerateScriptsInUnicode**  
  指定產生的傳送指令碼是否為 Unicode 格式。  
   
-## 動態選項  
+## <a name="dynamic-options"></a>動態選項  
   
-### CopyAllObjects = False  
+### <a name="copyallobjects--false"></a>CopyAllObjects = False  
  **CopyAllTables**  
  選取工作會複製指定之來源資料庫中的所有資料表，或僅複製選取的資料表。  
   
@@ -166,51 +171,51 @@ caps.handback.revision: 30
  按一下即可開啟 [選取使用者自訂資料類型] 對話方塊。  
   
  **CopyAllPartitionFunctions**  
- 選取工作會複製指定之來源資料庫中的所有使用者自訂資料分割函數，或僅複製選取的資料分割函數。 只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 才支援。  
+ 選取工作會複製指定之來源資料庫中的所有使用者自訂資料分割函數，或僅複製選取的資料分割函數。 只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]才支援。  
   
  **PartitionFunctionsList**  
  按一下即可開啟 [選取資料分割函數] 對話方塊。  
   
  **CopyAllPartitionSchemes**  
- 選取工作會複製指定之來源資料庫中的所有資料分割配置，或僅複製選取的資料分割配置。 只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 才支援。  
+ 選取工作會複製指定之來源資料庫中的所有資料分割配置，或僅複製選取的資料分割配置。 只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]才支援。  
   
  **PartitionSchemesList**  
  按一下即可開啟 [選取資料分割配置] 對話方塊。  
   
  **CopyAllSchemas**  
- 選取工作會複製指定之來源資料庫中的所有結構描述，或僅複製選取的結構描述。 只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 才支援。  
+ 選取工作會複製指定之來源資料庫中的所有結構描述，或僅複製選取的結構描述。 只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]才支援。  
   
  **SchemasList**  
  按一下即可開啟 [選取結構描述] 對話方塊。  
   
  **CopyAllSqlAssemblies**  
- 選取工作會複製指定之來源資料庫中的所有 SQL 組件，或僅複製選取的 SQL 組件。 只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 才支援。  
+ 選取工作會複製指定之來源資料庫中的所有 SQL 組件，或僅複製選取的 SQL 組件。 只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]才支援。  
   
  **SqlAssembliesList**  
  按一下即可開啟 [選取 SQL 組件] 對話方塊。  
   
  **CopyAllUserDefinedAggregates**  
- 選取工作會複製指定之來源資料庫中的所有使用者自訂彙總，或僅複製選取的使用者自訂彙總。 只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 才支援。  
+ 選取工作會複製指定之來源資料庫中的所有使用者自訂彙總，或僅複製選取的使用者自訂彙總。 只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]才支援。  
   
  **UserDefinedAggregatesList**  
  按一下即可開啟 [選取使用者自訂彙總] 對話方塊。  
   
  **CopyAllUserDefinedTypes**  
- 選取工作會複製指定之來源資料庫中的所有使用者定義型別，或僅複製選取的 UDT。 只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 才支援。  
+ 選取工作會複製指定之來源資料庫中的所有使用者定義型別，或僅複製選取的 UDT。 只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]才支援。  
   
  **UserDefinedTypes**  
  按一下即可開啟 [選取使用者定義型別] 對話方塊。  
   
  **CopyAllXmlSchemaCollections**  
- 選取工作會複製指定之來源資料庫中的所有 XML 結構描述集合，或僅複製選取的 XML 結構描述集合。 只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 才支援。  
+ 選取工作會複製指定之來源資料庫中的所有 XML 結構描述集合，或僅複製選取的 XML 結構描述集合。 只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]才支援。  
   
  **XmlSchemaCollectionsList**  
  按一下即可開啟 [選取 XML 結構描述集合] 對話方塊。  
   
-## 請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../integration-services/integration-services-error-and-message-reference.md)   
  [Integration Services 工作](../../integration-services/control-flow/integration-services-tasks.md)   
- [傳送 SQL Server 物件工作編輯器 &#40;一般頁面&#41;](../../integration-services/control-flow/transfer-sql-server-objects-task-editor-general-page.md)   
+ [傳送 SQL Server 物件工作編輯器 &#40;一般頁面 &#41;](../../integration-services/control-flow/transfer-sql-server-objects-task-editor-general-page.md)   
  [運算式頁面](../../integration-services/expressions/expressions-page.md)   
  [大量匯入或大量匯出的資料格式 &#40;SQL Server&#41;](../../relational-databases/import-export/data-formats-for-bulk-import-or-bulk-export-sql-server.md)   
  [SQL Server 安裝的安全性考量](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  

@@ -1,35 +1,40 @@
 ---
-title: "錯誤和事件參考 (Integration Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Integration Services 封裝, 事件"
-  - "事件 [Integration Services]"
-  - "錯誤 [Integration Services]"
-  - "Integration Services, 錯誤"
+title: "錯誤和事件參考 (Integration Services) |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Integration Services packages, events
+- events [Integration Services]
+- errors [Integration Services]
+- Integration Services, errors
 ms.assetid: cf4f0f14-8087-42d7-9b67-e4929228abd6
 caps.latest.revision: 20
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c98113795981fb4c080fac83f3f69a6242c1e86b
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 錯誤和事件參考 (Integration Services)
+# <a name="errors-and-events-reference-integration-services"></a>錯誤和事件參考 (Integration Services)
   文件集中的這一節包含一些與 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 相關之錯誤和事件的資訊， 包含錯誤訊息的原因和解決方案資訊。  
   
  如需 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 錯誤訊息的詳細資訊，包括大部分 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 錯誤及其描述的清單，請參閱 [Integration Services 錯誤和訊息參考](../integration-services/integration-services-error-and-message-reference.md)。 不過，此清單目前並不包含疑難排解的資訊。  
   
 > [!IMPORTANT]  
->  在使用 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 時所看到的許多錯誤訊息都是來自其他元件。 這可能包括 OLE DB 提供者、其他的資料庫元件 (例如 [!INCLUDE[ssDE](../includes/ssde-md.md)] 和 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]) 或其他的服務或元件 (例如檔案系統、SMTP 伺服器或 Microsoft Message Queueing)。 若要尋找有關這些外部錯誤訊息的資訊，請參閱該元件的特定文件集。  
+>  在使用 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 時所看到的許多錯誤訊息都是來自其他元件。 這可能包括 OLE DB 提供者、其他的資料庫元件 (例如 [!INCLUDE[ssDE](../includes/ssde-md.md)] 和 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ) 或其他的服務或元件 (例如檔案系統、SMTP 伺服器或 Microsoft Message Queueing)。 若要尋找有關這些外部錯誤訊息的資訊，請參閱該元件的特定文件集。  
   
-## 錯誤訊息  
+## <a name="error-messages"></a>錯誤訊息  
   
 |錯誤的符號名稱|說明|  
 |----------------------------|-----------------|  
@@ -47,7 +52,7 @@ caps.handback.revision: 20
 |DTS_E_WRITEWHILECACHEINUSE|指出「快取轉換」轉換正嘗試將資料寫入記憶體中的快取，同時「查閱」轉換正從記憶體中的快取讀取資料。|  
 |DTS_W_EXTERNALMETADATACOLUMNSOUTOFSYNC|指出資料來源中的資料行中繼資料與連接至資料來源之來源或目的地元件的資料行中繼資料不相符。|  
   
-## 事件 (SQLISPackage)  
+## <a name="events-sqlispackage"></a>事件 (SQLISPackage)  
  如需詳細資訊，請參閱 [Integration Services 封裝所記錄的事件](../integration-services/performance/events-logged-by-an-integration-services-package.md)。  
   
 |事件|說明|  
@@ -61,7 +66,7 @@ caps.handback.revision: 20
 |SQLISPackage_12551|指出封裝沒有完成其工作而且已停止。|  
 |SQLISPackage_12557|指出封裝已完成執行。|  
   
-## 事件 (SQLISService)  
+## <a name="events-sqlisservice"></a>事件 (SQLISService)  
  如需詳細資訊，請參閱 [Integration Services 服務所記錄的事件](../integration-services/service/events-logged-by-the-integration-services-service.md)。  
   
 |事件|說明|  
@@ -75,7 +80,7 @@ caps.handback.revision: 20
 |SQLISService_273|指出組態檔無法讀取或無效。|  
 |SQLISService_274|指出包含組態檔位置的登錄項目不存在或是空的。|  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [Integration Services 錯誤和訊息參考](../integration-services/integration-services-error-and-message-reference.md)  
   
   

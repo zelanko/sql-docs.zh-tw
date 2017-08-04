@@ -1,30 +1,35 @@
 ---
-title: "使用模糊群組轉換來識別相似的資料列 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "模糊群組轉換"
-  - "比對相似資料 [Integration Services]"
-  - "相似資料列 [Integration Services]"
-  - "模糊相符"
+title: "使用模糊群組轉換來識別類似的資料列 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Fuzzy Grouping transformation
+- match similar data [Integration Services]
+- similar data rows [Integration Services]
+- fuzzy matches
 ms.assetid: ffcb41a6-e23d-49ea-8c32-ac980e3dc495
 caps.latest.revision: 23
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d6d11c2474853586930e5cd46fde8f61526cd6ed
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 使用模糊群組轉換來識別相似的資料列
+# <a name="identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation"></a>使用模糊群組轉換來識別相似的資料列
   若要加入和設定「模糊群組」轉換，封裝必須至少包含一個「資料流程」工作和一個來源。  
   
-### 在資料流程中實作「模糊群組」轉換  
+### <a name="to-implement-fuzzy-grouping-transformation-in-a-data-flow"></a>在資料流程中實作「模糊群組」轉換  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]中，開啟包含所需封裝的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 專案。  
   
@@ -78,7 +83,7 @@ caps.handback.revision: 23
   
 20. 若要儲存已更新的封裝，請在 **[檔案]** 功能表上，按一下 **[儲存選取項目]** 。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [模糊群組轉換](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)   
  [Integration Services 轉換](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Integration Services 路徑](../../../integration-services/data-flow/integration-services-paths.md)   

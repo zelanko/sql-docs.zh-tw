@@ -1,22 +1,27 @@
 ---
-title: "Oracle CDC 資料庫 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Oracle CDC 資料庫 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a96486e9-f79b-4b24-bfaf-56203dd0e435
 caps.latest.revision: 17
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: de8243fb726a9154222f240c5b032291d454befb
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# Oracle CDC 資料庫
+# <a name="the-oracle-cdc-databases"></a>Oracle CDC 資料庫
   Oracle CDC 執行個體與目標 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上同名的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫有關聯。 此資料庫稱為 Oracle CDC 資料庫 (或 CDC 資料庫)。  
   
  CDC 資料庫是使用 Oracle CDC 設計工具主控台所建立及設定，而且其中包含以下元素：  
@@ -44,7 +49,7 @@ caps.handback.revision: 17
  當建立 CDC 資料庫及設定 CDC 來源 Oracle 資料表時，CDC 資料庫擁有者可以授與鏡像資料表的 SELECT 權限，並定義 SQL Server CDC 控制角色來控制存取變更資料的人。  
   
 ## <a name="mirror-tables"></a>鏡像資料表  
- 對於每一個擷取的資料表 \<schema-name>.\<table-name> 而言 (在 Oracle 來源資料庫中)，都會在 CDC 資料庫中建立類似的空白資料表，而且具有相同的結構描述與資料表名稱。 無法擷取結構描述名稱為 `cdc` (不區分大小寫) 的 Oracle 來源資料表，因為會保留 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的 `cdc` 結構描述給 SQL Server CDC。  
+ 每個擷取的資料表，\<結構描述名稱 >。\<資料表名稱 >，在 Oracle 來源資料庫中，建立類似的空白資料表在 CDC 資料庫中，具有相同的結構描述和資料表名稱。 無法擷取結構描述名稱為 `cdc` (不區分大小寫) 的 Oracle 來源資料表，因為會保留 `cdc` 中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 結構描述給 SQL Server CDC。  
   
  鏡像資料表是空的，其中不會儲存任何資料。 鏡像資料表是用來啟用 Oracle CDC 執行個體所使用的標準 SQL Server CDC 基礎結構。 為了避免將資料插入或更新到鏡像資料表中，PUBLIC 拒絕所有的 UPDATE、DELETE 和 INSERT 作業。 這可確保無法修改這些資料表。  
   
@@ -72,23 +77,23 @@ caps.handback.revision: 17
   
 -   [cdc.xdbcdc_staged_transactions](../../integration-services/change-data-capture/the-oracle-cdc-databases.md#BKMK_cdcxdbcdc_staged_transactions)  
   
-###  <a name="a-namebkmkchangetablescta-change-tables-ct"></a><a name="BKMK_Change_Tables_CT"></a> 變更資料表 (_CT)  
+###  <a name="BKMK_Change_Tables_CT"></a> 變更資料表 (_CT)  
  變更資料表是從鏡像資料表建立而來。 其中包含擷取自 Oracle 資料庫的變更資料。 這些資料表是根據以下慣例所命名：  
   
- **[cdc].[\<capture-instance>_CT]**  
+ **[cdc]。[\<擷取執行個體 > _CT]**  
   
- 一開始為資料表 `<schema-name>.<table-name>` 啟用擷取時，預設擷取執行個體名稱為 `<schema-name>_<table-name>`。 例如，Oracle HR.EMPLOYEES 資料表的預設擷取執行個體名稱為 HR_EMPLOYEES 而且關聯的變更資料表為 [cdc]。 [HR_EMPLOYEES_CT]。  
+ 一開始為資料表 `<schema-name>.<table-name>`啟用擷取時，預設擷取執行個體名稱為 `<schema-name>_<table-name>`。 例如，Oracle HR.EMPLOYEES 資料表的預設擷取執行個體名稱為 HR_EMPLOYEES 而且關聯的變更資料表為 [cdc]。 [HR_EMPLOYEES_CT]。  
   
  擷取資料表是由 Oracle CDC 執行個體寫入。 當建立擷取執行個體時，便會使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 產生的特殊資料表值函式讀取這些資料表。 例如， `fn_cdc_get_all_changes_HR_EMPLOYEES`。 如需這些 CDC 函數的詳細資訊，請參閱 [異動資料擷取函數 (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=231152)。  
   
-###  <a name="a-namebkmkcdclsntimemappinga-cdclsntimemapping"></a><a name="BKMK_cdclsn_time_mapping"></a> cdc.lsn_time_mapping  
+###  <a name="BKMK_cdclsn_time_mapping"></a> cdc.lsn_time_mapping  
  **[cdc].[lsn_time_mapping]** 資料表是由 SQL Server CDC 元件所產生。 它在 Oracle CDC 中的使用情況與一般使用情況不同。  
   
  如果是 Oracle CDC，這個資料表中儲存的 LSN 值是根據與變更相關聯的 Oracle 系統變更編號 (SCN) 值。 LSN 值的前 6 個位元組是原始 Oracle SCN 編號。  
   
  此外在使用 Oracle CDC 時，時間資料行 (`tran_begin_time` 和 `tran_end_time`) 會儲存變更的 UTC 時間，而不是當地時間，就像在一般 SQL Server CDC 中一樣。 如此可確保日光節約時間變更不會影響 lsn_time_mapping 中所儲存的資料。  
   
-###  <a name="a-namebkmkcdcxdbcdcconfiga-cdcxdbcdcconfig"></a><a name="BKMK_cdcxdbcdc_config"></a> cdc.xdbcdc_config  
+###  <a name="BKMK_cdcxdbcdc_config"></a> cdc.xdbcdc_config  
  此資料表包含 Oracle CDC 執行個體的組態資料。 它是使用 CDC 設計工具主控台來更新。 此資料表只有一個資料列。  
   
  下表描述 **cdc.xdbcdc_config** 資料表資料行。  
@@ -131,7 +136,7 @@ caps.handback.revision: 17
 |CDC_stop_on_breaking_schema_changes|False|-|-|False|布林值。 **True** 表示在偵測到重大結構描述變更時停止。<br /><br /> **False** 表示卸除鏡像資料表和擷取執行個體。|  
 |source_oracle_home||-|-|False|可設定為特定的 Oracle Home 路徑，或是 CDC 執行個體將用來連接到 Oracle 的 Oracle Home 名稱。|  
   
-###  <a name="a-namebkmkcdcxdbcdcstatea-cdcxdbcdcstate"></a><a name="BKMK_cdcxdbcdc_state"></a> cdc.xdbcdc_state  
+###  <a name="BKMK_cdcxdbcdc_state"></a> cdc.xdbcdc_state  
  此資料表包含有關 Oracle CDC 執行個體之已保存狀態的資訊。 擷取狀態會用於復原和容錯移轉情況，也可用於監控健全狀態。  
   
  下表描述 **cdc.xdbcdc_state** 資料表資料行。  
@@ -156,7 +161,7 @@ caps.handback.revision: 17
 |read_changes|從來源 Oracle 交易記錄讀取的變更記錄數目。|  
 |staged_transactions|目前暫存於 **cdc.xdbcdc_staged_transactions** 資料表中的使用中交易數目。|  
   
-###  <a name="a-namebkmkcdcxdbcdctracea-cdcxdbcdctrace"></a><a name="BKMK_cdcxdbcdc_trace"></a> cdc.xdbcdc_trace  
+###  <a name="BKMK_cdcxdbcdc_trace"></a> cdc.xdbcdc_trace  
  此資料表包含有關 CDC 執行個體操作的資訊。 儲存在此資料表中的資訊包括錯誤記錄、顯著的狀態變更及追蹤記錄。 錯誤資訊也會寫入 Windows 事件記錄檔，以確保當 **cdc.xcbcdc_trace** 資料表無法使用時可以使用該資訊。  
   
  下表描述 cdc.xdbcdc_trace 資料表資料行。  
@@ -171,7 +176,7 @@ caps.handback.revision: 17
 |status_message|狀態資料表使用的狀態訊息。|  
 |資料|當錯誤或追蹤記錄包含裝載時的其他資料 (例如，損毀的記錄檔記錄)。|  
   
-###  <a name="a-namebkmkcdcxdbcdcstagedtransactionsa-cdcxdbcdcstagedtransactions"></a><a name="BKMK_cdcxdbcdc_staged_transactions"></a> cdc.xdbcdc_staged_transactions  
+###  <a name="BKMK_cdcxdbcdc_staged_transactions"></a> cdc.xdbcdc_staged_transactions  
  此資料表會儲存大型交易或長時間執行之交易的變更記錄，直到擷取交易認可或回復事件為止。 Oracle CDC 服務會依據交易認可時間，然後依據每一筆交易的時間順序來排序擷取的記錄檔記錄。 相同交易的記錄檔記錄會儲存在記憶體中，直到交易結束然後寫入目標變更資料表或遭到捨棄為止 (如果進行回復作業的話)。 因為可用記憶體數量有限，所以大型交易會寫入 **cdc.xdbcdc_staged_transactions** 資料表中，直到交易完成為止。 當交易長時間執行時，也會寫入暫存資料表。 因此在重新啟動 Oracle CDC 執行個體時，不需要從 Oracle 交易記錄重新讀取舊的變更。  
   
  下表描述 **cdc.xdbcdc_staged_transactions** 資料表資料行。  

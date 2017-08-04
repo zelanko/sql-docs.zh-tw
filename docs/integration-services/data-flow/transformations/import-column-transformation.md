@@ -1,29 +1,34 @@
 ---
-title: "匯入資料行轉換 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.importcolumntrans.f1"
-helpviewer_keywords: 
-  - "匯入資料行轉換 [Integration Services]"
-  - "資料行 [Integration Services], 匯入"
-  - "匯入資料, SSIS 封裝"
-  - "插入資料"
+title: "匯入資料行 」 轉換 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.importcolumntrans.f1
+helpviewer_keywords:
+- Import Column transformation [Integration Services]
+- columns [Integration Services], importing
+- importing data, SSIS packages
+- inserting data
 ms.assetid: ac3b74c1-ef54-4297-8062-1734324fffcc
 caps.latest.revision: 44
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 44
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 13d509e0a064b7f8e831e41825496e745d88f831
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 匯入資料行轉換
+# <a name="import-column-transformation"></a>匯入資料行轉換
   「匯入資料行」轉換會從檔案讀取資料，並將資料加入至資料流程中的資料行。 封裝可使用此轉換將其他檔案中儲存的文字和影像加入至資料流程。 例如，將資料載入儲存產品資訊之資料表中的資料流程，即可加入「匯入資料行」轉換，以便從檔案匯入客戶對每項產品的檢閱，然後將檢閱加入至資料流程。  
   
  您可以利用下列方式設定「匯入資料行」轉換：  
@@ -39,19 +44,19 @@ caps.handback.revision: 44
   
  這個轉換有一個輸入、一個輸出與一個錯誤輸出。  
   
-## 匯入資料行轉換的組態  
+## <a name="configuration-of-the-import-column-transformation"></a>匯入資料行轉換的組態  
  您可以透過「 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師」或以程式設計方式設定屬性。  
   
  **[進階編輯器]** 對話方塊會反映能以程式設計的方式設定之屬性。 如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [通用屬性](../Topic/Common%20Properties.md)  
+-   [通用屬性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [轉換自訂屬性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
-## 相關工作  
- 如需如何設定此元件屬性的資訊，請參閱[設定資料流程元件的屬性](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)。  
+## <a name="related-tasks"></a>相關工作  
+ 如需如何設定此元件屬性的資訊，請參閱 [設定資料流程元件的屬性](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [匯出資料行轉換](../../../integration-services/data-flow/transformations/export-column-transformation.md)   
  [資料流程](../../../integration-services/data-flow/data-flow.md)   
  [Integration Services 轉換](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  

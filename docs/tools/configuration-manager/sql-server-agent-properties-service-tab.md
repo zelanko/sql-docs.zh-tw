@@ -1,25 +1,30 @@
 ---
-title: "SQL Server Agent 屬性 (服務索引標籤) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "SQL Server Agent 屬性 （服務索引標籤） |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 452857fb-be1b-4e1e-851c-dd2216640f35
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ac155a67f472ad7cf7dcee0f8c5650bb43b21732
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# SQL Server Agent 屬性 (服務索引標籤)
+# <a name="sql-server-agent-properties-service-tab"></a>SQL Server Agent 屬性 (服務索引標籤)
   這項服務是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務。 淺灰色的屬性值不得以此應用程式加以變更。  
   
-## 選項。  
+## <a name="options"></a>選項。  
  **二進位路徑**  
  顯示這個服務使用之程式檔案的位置。  
   

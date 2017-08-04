@@ -1,22 +1,27 @@
 ---
-title: "SQL Server 屬性 (登入索引標籤) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "SQL Server 屬性 （登入 索引標籤） |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 405073fc-eaa3-43c6-bf82-2cd58cacc1c3
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4dde3f4735a42553155d7f58a310963ad599c374
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# SQL Server 屬性 (登入索引標籤)
+# <a name="sql-server-properties-log-on-tab"></a>SQL Server 屬性 (登入索引標籤)
   您可以使用 **[SQL Server 屬性]** 對話方塊的 **[登入]** 索引標籤，來指定要供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務使用的帳戶、變更帳戶的密碼，以及啟動和停止該服務。 帳戶密碼的變更會立即生效。  
   
 > [!NOTE]  
@@ -24,7 +29,7 @@ caps.handback.revision: 25
 >   
 >  如需有關選取帳戶以執行服務的詳細資訊，請參閱《 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的＜設定 Windows 服務帳戶＞。  
   
-## 選項。  
+## <a name="options"></a>選項。  
  **內建帳戶**  
  **本機系統**  
  -   指定本機系統帳戶。 這個帳戶不需要密碼。 但是，根據授與帳戶的權限，本機系統帳戶可能會禁止服務與其他伺服器互動。  
@@ -60,9 +65,9 @@ caps.handback.revision: 25
  繼續已暫停的服務。  
   
 > [!IMPORTANT]  
->  根據預設，只有本機 Administrators 群組的成員能夠啟動、停止、暫停、繼續或重新啟動服務。 若要將管理服務的能力授與非系統管理員，請參閱 [How to grant users rights to manage services in Windows Server 2003](http://support.microsoft.com/kb/325349) (如何在 Windows Server 2003 中，將管理服務的權限授與使用者)。 (其他 Windows 版本的程序都很相似)。  
+>  根據預設，只有本機 Administrators 群組的成員能夠啟動、停止、暫停、繼續或重新啟動服務。 若要將管理服務的能力授與非系統管理員，請參閱 [How to grant users rights to manage services in Windows Server 2003](http://support.microsoft.com/kb/325349)(如何在 Windows Server 2003 中，將管理服務的權限授與使用者)。 (其他 Windows 版本的程序都很相似)。  
   
 > [!NOTE]  
->  啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，包含「未實作 [0x80004001]」片語的 WMI 錯誤，可能表示目標電腦上並未安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+>  啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]時，包含「未實作 [0x80004001]」片語的 WMI 錯誤，可能表示目標電腦上並未安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
   

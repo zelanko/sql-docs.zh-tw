@@ -1,22 +1,27 @@
 ---
-title: "建立新的 InfoObject | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "建立新的 InfoObject |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3587a633-1c0b-4d63-a22a-6b2b93923c3a
 caps.latest.revision: 10
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d0135f5cbbe81cbe8d4a8c530a1d63c84a27f7d2
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 建立新的 InfoObject
+# <a name="create-new-infoobject"></a>建立新的 InfoObject
   使用 **[建立新的 InfoObject]** 對話方塊可以在 SAP Netweaver BW 系統中建立新的 InfoObject。  
   
  您可以從 **[SAP BW 目的地編輯器]** 的 **[連接管理員]** 頁面開啟 **[建立 InfoObject]**對話方塊。 若要深入了解 SAP BW 目的地，請參閱 [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md)。  
@@ -28,7 +33,7 @@ caps.handback.revision: 10
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，開啟包含 SAP BW 目的地的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 套件。  
   
-2.  在 [資料流程] 索引標籤中，按兩下 SAP BW 目的地。  
+2.  在 [資料流程] 索引標籤上，按兩下 SAP BW 目的地。  
   
 3.  在 **[SAP BW 目的地編輯器]**中，按一下 **[連接管理員]** 開啟編輯器的 **[連接管理員]** 頁面。  
   
@@ -50,7 +55,7 @@ caps.handback.revision: 10
   
  您也可以在 **[建立新的 InfoObject]** 對話方塊的 **[屬性]** 區段中按一下 **[新增]** ，藉以開啟 **[建立新的 InfoObject]** 對話方塊。  
   
-## 一般選項  
+## <a name="general-options"></a>一般選項  
  **特性**  
  建立代表維度資料的 InfoObject。  
   
@@ -78,7 +83,7 @@ caps.handback.revision: 10
  **儲存並啟用**  
  儲存並啟用新的 InfoObject。  
   
-## 資料類型選項  
+## <a name="data-type-options"></a>資料類型選項  
  **CHAR - 字元字串**  
  表示 InfoObject 包含字元資料。  
   
@@ -94,7 +99,7 @@ caps.handback.revision: 10
  **長度**  
  輸入資料的長度。  
   
-## 文字選項  
+## <a name="text-options"></a>文字選項  
  **具有文字**  
  表示 InfoObject 包含文字。  
   
@@ -113,13 +118,13 @@ caps.handback.revision: 10
  **與文字時間相依**  
  表示文字具有時間相依性。  
   
-## 屬性區段  
+## <a name="attributes-section"></a>屬性區段  
  **[屬性]** 區段包含 InfoObject 的屬性清單，以及可讓您在清單中加入和移除屬性的選項。  
   
-### 屬性清單  
+### <a name="attributes-list"></a>屬性清單  
  **[屬性]** 清單會顯示您所建立之 InfoObject 的屬性。 **[屬性]** 清單具有下列資料行標題：  
   
- **InfoObject**  
+ **[InfoObject]**  
  檢視 InfoObject 的名稱。  
   
  **說明**  
@@ -135,7 +140,7 @@ caps.handback.revision: 10
 |UNI|單位|  
 |TIM|時間特性|  
   
-### 屬性選項  
+### <a name="attributes-options"></a>屬性選項  
  使用下列選項可以針對您所建立的 InfoObject 加入和移除屬性：  
   
  **加入**  
@@ -143,7 +148,7 @@ caps.handback.revision: 10
   
  若要加入現有的 InfoObject，請按一下 [加入]，然後使用 **[查閱 InfoObject]** 對話方塊來尋找 InfoObject。 如需有關此對話方塊的詳細資訊，請參閱＜ [Look Up InfoObject](../../integration-services/data-flow/look-up-infoobject.md)＞。  
   
- **新增**  
+ **[新增]**  
  加入新的 InfoObject 做為屬性。  
   
  若要建立並加入新的 InfoObject，請按一下 [新增]，然後使用 **[建立新的 InfoObject]** 對話方塊的新執行個體來建立新的 InfoObject。  
@@ -151,7 +156,7 @@ caps.handback.revision: 10
  **移除**  
  從 [屬性] 清單中移除選取的 InfoObject。  
   
-## 請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [建立交易資料的 InfoCube](../../integration-services/data-flow/create-infocube-for-transaction-data.md)   
  [建立 InfoSource](../../integration-services/data-flow/create-infosource.md)   
  [建立交易資料的 InfoSource](../../integration-services/data-flow/create-infosource-for-transaction-data.md)   

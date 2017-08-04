@@ -1,45 +1,50 @@
 ---
-title: "傳送資料庫工作 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.transferdatabasetask.f1"
-helpviewer_keywords: 
-  - "傳送資料庫工作 [Integration Services]"
+title: "傳送資料庫工作 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.transferdatabasetask.f1
+helpviewer_keywords:
+- Transfer Database task [Integration Services]
 ms.assetid: b9a2e460-cdbc-458f-8df8-06b8b2de3d67
 caps.latest.revision: 26
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 86e2b602632d1492d3889981af041c5ee38cfb6b
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 傳送資料庫工作
+# <a name="transfer-database-task"></a>傳送資料庫工作
   「傳送資料庫」工作會在兩個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體之間傳送 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫。 與其他只能透過複製 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物件來傳送它們的工作不同，「傳送資料庫」工作可以複製或移動資料庫。 這項工作也可用來在同一部伺服器內複製資料庫。  
   
-## 離線和線上模式  
+## <a name="offline-and-online-modes"></a>離線和線上模式  
  資料庫可以使用線上或離線模式傳送。 當您使用線上模式時，資料庫會保持附加狀態，並使用 SQL Management Object (SMO) 複製資料庫物件來進行傳送。 當您使用離線模式時，會卸離資料庫，複製或移動資料庫檔案，並在傳送成功完成後將資料庫附加至目的地。 如果複製資料庫，則會在成功複製後將資料庫自動重新附加至來源。 在離線模式中，資料庫的複製速度會更快，但使用者在傳送期間無法使用資料庫。  
   
- 離線模式需要您在包含資料庫檔案的來源和目的地伺服器上，指定網路檔案共用。 如果資料夾已共用，且可由使用者存取，則您可以使用語法 \\\computername\Program Files\myfolder\\ 參考網路共用。 否則，您必須使用語法 \\\computername\c$\Program Files\myfolder\\。 若要使用後面的語法，使用者必須具有來源和目的地網路共用的寫入權限。  
+ 離線模式需要您在包含資料庫檔案的來源和目的地伺服器上，指定網路檔案共用。 如果資料夾已共用，且可由使用者存取，則您可以使用語法 \\\computername\Program Files\myfolder\\參考網路共用。 否則，您必須使用語法 \\\computername\c$\Program Files\myfolder\\。 若要使用後面的語法，使用者必須具有來源和目的地網路共用的寫入權限。  
   
-## 在 SQL Server 的版本之間傳送資料庫  
+## <a name="transfer-of-databases-between-versions-of-sql-server"></a>在 SQL Server 的版本之間傳送資料庫  
  「傳送資料庫」工作可以在不同 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本的執行個體之間，傳送資料庫。  
   
-## 事件  
+## <a name="events"></a>事件  
  「傳送資料庫」工作並不報告錯誤訊息傳送的累加進度，它只報告 0% 和 100 % 完成。  
   
-## 執行值  
+## <a name="execution-value"></a>執行值  
  執行值 (在工作的 **ExecutionValue** 屬性中定義) 會傳回值 1，因為與其他傳送工作不同，「傳送資料庫」工作只能傳送一個資料庫。  
   
- 透過將使用者定義變數指派給「傳送資料庫」工作的 **ExecValueVariable** 屬性，可將與錯誤訊息傳送相關的資訊用於封裝中的其他物件。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)和[在封裝中使用變數](../Topic/Use%20Variables%20in%20Packages.md)。  
+ 透過將使用者定義變數指派給「傳送資料庫」工作的 **ExecValueVariable** 屬性，可將與錯誤訊息傳送相關的資訊用於封裝中的其他物件。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)和[在封裝中使用變數](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)。  
   
-## 記錄項目  
+## <a name="log-entries"></a>記錄項目  
  「傳送資料庫」工作包含下列自訂記錄項目：  
   
 -   SourceSQLServer    此記錄項目列出來源伺服器的名稱。  
@@ -50,12 +55,12 @@ caps.handback.revision: 26
   
  另外，在覆寫目的地資料庫時，會寫入 **OnInformation** 事件的記錄項目。  
   
-## 安全性和權限  
+## <a name="security-and-permissions"></a>安全性和權限  
  若要使用離線模式傳送資料庫，執行封裝的使用者必須是 sysadmin 伺服器角色的成員。  
   
  若要使用線上模式傳送資料庫，執行封裝的使用者必須是 sysadmin 伺服器角色的成員，或是選取之資料庫的資料庫擁有者 (dbo)。  
   
-## 傳送資料庫工作的組態  
+## <a name="configuration-of-the-transfer-database-task"></a>傳送資料庫工作的組態  
  您可以指定如果資料庫傳送失敗，工作是否嘗試重新附加來源資料庫。  
   
  「傳送資料庫」工作還可設為允許覆寫具有相同名稱的目的地資料庫，以取代目的地資料庫。  
@@ -78,9 +83,9 @@ caps.handback.revision: 26
   
  如需有關如何在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中設定這些屬性的詳細資訊，請按下列主題：  
   
--   [設定工作或容器的屬性](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+-   [設定工作或容器的屬性](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
-## 傳送資料庫工作的程式設計組態  
+## <a name="programmatic-configuration-of-the-transfer-database-task"></a>傳送資料庫工作的程式設計組態  
  如需有關以程式設計方式設定這些屬性的詳細資訊，請按下列主題：  
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.TransferDatabaseTask.TransferDatabaseTask>  

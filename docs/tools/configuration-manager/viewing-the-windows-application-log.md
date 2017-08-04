@@ -1,31 +1,36 @@
 ---
-title: "檢視 Windows 應用程式記錄 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "應用程式記錄檔 [SQL Server]"
-  - "Windows 應用程式記錄 [SQL Server]"
-  - "檢視 Windows 應用程式記錄"
-  - "錯誤 [SQL Server], 記錄檔"
-  - "系統記錄 [SQL Server]"
-  - "安全性記錄 [SQL Server]"
-  - "顯示 Windows 應用程式記錄"
-  - "記錄檔 [SQL Server], Windows 應用程式記錄"
+title: "檢視 Windows 應用程式記錄檔 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- application logs [SQL Server]
+- Windows application logs [SQL Server]
+- viewing Windows application logs
+- errors [SQL Server], logs
+- system logs [SQL Server]
+- security logs [SQL Server]
+- displaying Windows application logs
+- logs [SQL Server], Windows application logs
 ms.assetid: f9853b74-7db7-47cc-b957-e49ed5bc0a1a
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 833f71530a08ad5648b35719f9fd636213c61595
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 檢視 Windows 應用程式記錄
+# <a name="viewing-the-windows-application-log"></a>檢視 Windows 應用程式記錄
   當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 設成使用 Microsoft Windows 應用程式記錄檔時，每個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工作階段都會將新事件寫入該記錄檔。 您每次啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體時，並不會建立新的應用程式記錄檔，這和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]錯誤記錄檔不同。  
   
  使用「Windows 事件檢視器」或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的記錄檢視器，可以檢視和管理 Windows 應用程式記錄檔。  
@@ -42,6 +47,6 @@ caps.handback.revision: 20
   
  **若要檢視 Windows 應用程式記錄檔**  
   
- [檢視 Windows 應用程式記錄檔 &#40;Windows&#41;](../../relational-databases/performance/view-the-windows-application-log-windows.md)  
+ [檢視 Windows 應用程式記錄檔 &#40;Windows&#41;](../../relational-databases/performance/view-the-windows-application-log-windows-10.md)  
   
   

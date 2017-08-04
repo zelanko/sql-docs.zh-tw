@@ -1,27 +1,32 @@
 ---
-title: "記錄清除工作 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.historycleanuptask.f1"
-helpviewer_keywords: 
-  - "記錄資料表 [SQL Server]"
-  - "記錄清除工作 [Integration Services]"
+title: "記錄清除工作 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.historycleanuptask.f1
+helpviewer_keywords:
+- history tables [SQL Server]
+- History Cleanup task [Integration Services]
 ms.assetid: 5defc5b9-dfd3-4859-a7fe-ac8c2b5480f8
 caps.latest.revision: 43
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 43
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 835d952dd745235ebddbf788a70b5776d7f2711f
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 記錄清除工作
+# <a name="history-cleanup-task"></a>記錄清除工作
   「記錄清除」工作會刪除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb 資料庫中下列記錄資料表的項目。  
   
 -   backupfile  
@@ -44,7 +49,7 @@ caps.handback.revision: 43
   
  這項工作會封裝 sp_delete_backuphistory 系統預存程序，並將指定的日期傳遞至該程序做為引數。 如需詳細資訊，請參閱 [sp_delete_backuphistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md)。  
   
-## 設定記錄清除工作  
+## <a name="configuration-of-the-history-cleanup-task"></a>設定記錄清除工作  
  這項工作包含指定歷程記錄資料表中最舊日期之資料的屬性。 您可以用目前日期起算的天數、週數、月數或年數表示該日期，而工作會自動將間隔翻譯成日期。  
   
  您可以透過「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」設定屬性 這項工作位於「 **設計師」中** [工具箱] **的** [維護計畫工作] [!INCLUDE[ssIS](../../includes/ssis-md.md)] 區段。  
@@ -55,9 +60,9 @@ caps.handback.revision: 43
   
  如需有關如何在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中設定這些屬性的詳細資訊，請按下列主題：  
   
--   [設定工作或容器的屬性](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+-   [設定工作或容器的屬性](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [Integration Services 工作](../../integration-services/control-flow/integration-services-tasks.md)   
  [控制流程](../../integration-services/control-flow/control-flow.md)  
   

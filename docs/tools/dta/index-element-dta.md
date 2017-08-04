@@ -1,29 +1,34 @@
 ---
-title: "Index 元素 (DTA) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "XML"
-helpviewer_keywords: 
-  - "Index 元素 (DTA)"
+title: "索引元素 (DTA) |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- XML
+helpviewer_keywords:
+- Index element (DTA)
 ms.assetid: 447d3964-b387-40f6-9189-71386774c29e
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5d5affde03096be39cb219ecb0bac2e402761622
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# Index 元素 (DTA)
+# <a name="index-element-dta"></a>Index 元素 (DTA)
   包含您要建立或卸除的使用者指定組態索引的相關資訊。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -35,7 +40,7 @@ caps.handback.revision: 18
     </Index>  
 ```  
   
-## 元素屬性  
+## <a name="element-attributes"></a>元素屬性  
   
 |索引屬性|資料類型|描述|  
 |---------------------|---------------|-----------------|  
@@ -52,7 +57,7 @@ caps.handback.revision: 18
 |**ANSI_WARNINGS**|**boolean**|選擇性。 指定數個錯誤狀況的 ISO 標準行為。 如果索引是在計算資料行或檢視上，就必須開啟這個屬性。 例如，下列語法會將這個屬性設為開啟：<br /><br /> `<Index ANSI_WARNING [...]>`<br /><br /> 依預設，會關閉這個屬性。<br /><br /> 如需詳細資訊，請參閱 [SET ANSI_WARNINGS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-warnings-transact-sql.md)。|  
 |**NUMERIC_ROUNDABORT**|**boolean**|選擇性。 指定在運算式中因捨入而造成失去精確度時，所產生的錯誤報告層級。 如果索引是在計算資料行或檢視的索引，就必須關閉這個屬性。<br /><br /> 下列語法會將這個屬性設為開啟：<br /><br /> `<Index ANSI_WARNING [...]>`<br /><br /> 依預設，會關閉這個屬性。<br /><br /> 如需詳細資訊，請參閱 [SET NUMERIC_ROUNDABORT &#40;Transact-SQL&#41;](../../t-sql/statements/set-numeric-roundabort-transact-sql.md)。|  
   
-## 元素特性  
+## <a name="element-characteristics"></a>元素特性  
   
 |特性|說明|  
 |--------------------|-----------------|  
@@ -60,17 +65,17 @@ caps.handback.revision: 18
 |**預設值**|無。|  
 |**出現次數**|如果未利用 **Create** 或 **Drop** 元素來指定任何其他實體設計結構，每個 **Statistics** 或 **Heap** 元素需要使用這個元素一次。|  
   
-## 元素關聯性  
+## <a name="element-relationships"></a>元素關聯性  
   
 |關聯性|元素|  
 |------------------|--------------|  
 |**父元素**|[Create 元素 &#40;DTA&#41;](../../tools/dta/create-element-dta.md)<br /><br /> **Drop** 元素。 如需詳細資訊，請參閱＜Database Engine Tuning Advisor XML 結構描述＞。|  
-|**子元素**|[索引的 Name 元素 &#40;DTA&#41;](../../tools/dta/name-element-for-index-dta.md)<br /><br /> [索引的 Column 元素 &#40;DTA&#41;](../../tools/dta/column-element-for-index-dta.md)<br /><br /> **PartitionScheme** 元素。 如需詳細資訊，請參閱＜Database Engine Tuning Advisor XML 結構描述＞。<br /><br /> **PartitionColumn** 元素。 如需詳細資訊，請參閱＜Database Engine Tuning Advisor XML 結構描述＞。<br /><br /> [索引的 Filegroup 元素 &#40;DTA&#41;](../../tools/dta/filegroup-element-for-index-dta.md)<br /><br /> **NumberOfReferences** 元素。 如需詳細資訊，請參閱＜Database Engine Tuning Advisor XML 結構描述＞。<br /><br /> **PercentUsage** 元素。 如需詳細資訊，請參閱＜Database Engine Tuning Advisor XML 結構描述＞。|  
+|**子元素**|[Index &#40; Dta& &#41; 的 name 元素](../../tools/dta/name-element-for-index-dta.md)<br /><br /> [索引的 Column 元素 &#40;DTA&#41;](../../tools/dta/column-element-for-index-dta.md)<br /><br /> **PartitionScheme** 元素。 如需詳細資訊，請參閱＜Database Engine Tuning Advisor XML 結構描述＞。<br /><br /> **PartitionColumn** 元素。 如需詳細資訊，請參閱＜Database Engine Tuning Advisor XML 結構描述＞。<br /><br /> [索引的 Filegroup 元素 &#40;DTA&#41;](../../tools/dta/filegroup-element-for-index-dta.md)<br /><br /> **NumberOfReferences** 元素。 如需詳細資訊，請參閱＜Database Engine Tuning Advisor XML 結構描述＞。<br /><br /> **PercentUsage** 元素。 如需詳細資訊，請參閱＜Database Engine Tuning Advisor XML 結構描述＞。|  
   
-## 範例  
+## <a name="example"></a>範例  
  如需此元素的使用範例，請參閱[含使用者指定組態的 XML 輸入檔範例 &#40;DTA&#41;](../../tools/dta/xml-input-file-sample-with-user-specified-configuration-dta.md)。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [XML 輸入檔參考 &#40;Database Engine Tuning Advisor&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

@@ -1,32 +1,37 @@
 ---
-title: "詞彙查閱轉換 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.termlookuptrans.f1"
-helpviewer_keywords: 
-  - "擷取資料 [Integration Services]"
-  - "比對擷取的詞彙 [Integration Services]"
-  - "詞彙擷取 [Integration Services]"
-  - "詞彙擷取 [Integration Services]"
-  - "查閱 [Integration Services]"
-  - "計算已擷取項目"
-  - "詞彙查閱轉換"
+title: "詞彙查閱轉換 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.termlookuptrans.f1
+helpviewer_keywords:
+- extracting data [Integration Services]
+- match extracted terms [Integration Services]
+- text extraction [Integration Services]
+- term extractions [Integration Services]
+- lookups [Integration Services]
+- counting extracted items
+- Term Lookup transformation
 ms.assetid: 3c0fa2f8-cb6a-4371-b184-7447be001de1
 caps.latest.revision: 56
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 56
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3eefbab1c6f9b3cd5e51faa9e875a44218c33b3f
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 詞彙查閱轉換
+# <a name="term-lookup-transformation"></a>詞彙查閱轉換
   「詞彙查閱」轉換會比對從轉換輸入資料行的文字中擷取的詞彙，以及參考資料表中的詞彙。 然後，它會計算查閱資料表中的詞彙在輸入資料集中出現的次數，並將計數與參考資料表的詞彙一起寫入轉換輸出中的資料行。 此轉換包括單字頻率統計資料，對基於輸入文字建立自訂單字清單很有用處。  
   
  在「詞彙查閱」轉換執行查閱之前，它會使用與「詞彙擷取」轉換相同的方法從輸入資料行的文字中擷取單字：  
@@ -39,7 +44,7 @@ caps.handback.revision: 56
   
  若要進一步自訂要比對的詞彙，可以設定「詞彙查閱」轉換，以執行區分大小寫的比對。  
   
-## 比對  
+## <a name="matches"></a>比對  
  「詞彙查閱」會使用下列規則執行查閱並傳回值：  
   
 -   如果設定轉換執行區分大小寫的比對，則會捨棄使區分大小寫比較失敗的比對。 例如，會將 *student* 及 *STUDENT* 視為不同的單字。  
@@ -61,12 +66,12 @@ caps.handback.revision: 56
 |參考詞彙|Windows、Windows 7 Professional|  
 |輸出|Windows|  
   
- 「詞彙查閱」轉換可以比對包含特殊字元的名詞及名詞片語，且參考資料表中的資料可能包含這些字元。 特殊字元如下：%、@、&、$、#、\*、:、;、.、**,**!、?、\<、>、+、=、^、~、|、\\、/、(、)、[、]、{、}、" 和 '。  
+ 「詞彙查閱」轉換可以比對包含特殊字元的名詞及名詞片語，且參考資料表中的資料可能包含這些字元。 特殊字元，如下所示為: %，@，&、 $、 #、 \*，:，;，。， **，** ，！，？， \<，>，+、 =、 ^、 ~，|， \\，/，（、）、 [、]、 {、}、"，和 '。  
   
-## 資料型別  
+## <a name="data-types"></a>資料型別  
  「詞彙查閱」轉換只可以使用具有 DT_WSTR 或 DT_NTEXT 資料類型的資料行。 如果資料行包含文字，但不具有這些資料類型的其中之一，則「資料轉換」可以將具有 DT_WSTR 或 DT_NTEXT 資料類型的資料行加入資料流程，並將資料行值複製至新資料行。 然後，「資料轉換」的輸出可以用作「詞彙查閱」轉換的輸入。 如需詳細資訊，請參閱 [Data Conversion Transformation](../../../integration-services/data-flow/transformations/data-conversion-transformation.md)。  
   
-## 設定詞彙查閱轉換  
+## <a name="configuration-the-term-lookup-transformation"></a>設定詞彙查閱轉換  
  「詞彙查閱」轉換輸入資料行包含可指出資料行用法的 InputColumnType 屬性。 InputColumnType 可包含下列值：  
   
 -   值 0 表示資料行只傳遞至輸出，且不在查閱中使用。  
@@ -101,10 +106,10 @@ caps.handback.revision: 56
   
  如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [通用屬性](../Topic/Common%20Properties.md)  
+-   [通用屬性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [轉換自訂屬性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
- 如需如何設定屬性的詳細資訊，請參閱[設定資料流程元件的屬性](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)。  
+ 如需如何設定屬性的詳細資訊，請參閱 [設定資料流程元件的屬性](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)。  
   
   

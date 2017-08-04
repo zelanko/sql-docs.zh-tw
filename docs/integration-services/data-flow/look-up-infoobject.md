@@ -1,22 +1,27 @@
 ---
-title: "查閱 InfoObject | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "查閱 InfoObject |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e7f4c132-a5ec-49d8-a964-45775432731f
 caps.latest.revision: 10
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f25c00406ce375a2a7a380859ca0eaa5031b54d3
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 查閱 InfoObject
+# <a name="look-up-infoobject"></a>查閱 InfoObject
   使用 [查閱 InfoObject] 對話方塊可以查閱 SAP Netweaver BW 系統中定義的 InfoObject。 出現可用的 InfoObject 清單時，請選取您要的 InfoObject，然後 SAP BW 目的地就會將必要的值填入相關聯的選項。  
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW 的 SAP BW 目的地會使用 [查閱 InfoObject] 對話方塊。 若要深入了解 SAP BW 目的地，請參閱 [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md)。  
@@ -42,7 +47,7 @@ caps.handback.revision: 10
   
  您也可以在 [建立新的 InfoObject] 對話方塊的 [屬性] 區段中按一下 [加入]，藉以開啟 [查閱 InfoObject] 對話方塊。  
   
-## 查閱選項  
+## <a name="lookup-options"></a>查閱選項  
  在查閱欄位文字方塊中，您可以使用星號萬用字元 (*) 或結合星號萬用字元使用部分字串來篩選結果。 不過，如果您將查閱欄位保留空白，查閱處理序就只會比對該欄位中的空白字串。  
   
  **特性**  
@@ -66,7 +71,7 @@ caps.handback.revision: 10
  **查閱**  
  查閱 SAP Netweaver BW 系統中定義的相符 InfoObject。  
   
-## 查閱結果  
+## <a name="lookup-results"></a>查閱結果  
  在您按一下 [查閱] 按鈕之後，SAP Netweaver BW 系統中的 InfoObject 清單就會顯示在包含下列資料行標題的資料表中。  
   
  **InfoObject**  
@@ -77,13 +82,13 @@ caps.handback.revision: 10
   
  出現可用的 InfoObject 清單時，請選取您要的 InfoObject，然後目的地就會將必要的值填入相關聯的選項。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [建立交易資料的 InfoCube](../../integration-services/data-flow/create-infocube-for-transaction-data.md)   
  [建立 InfoSource](../../integration-services/data-flow/create-infosource.md)   
  [建立交易資料的 InfoSource](../../integration-services/data-flow/create-infosource-for-transaction-data.md)   
  [建立主要資料的 InfoSource](../../integration-services/data-flow/create-infosource-for-master-data.md)   
  [建立新的 InfoObject](../../integration-services/data-flow/create-new-infoobject.md)   
- [SAP BW 目的地編輯器 &#40;連線管理員頁面&#41;](../../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)   
+ [SAP BW 目的地編輯器 &#40;連接管理員頁面 &#41;](../../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)   
  [Microsoft Connector for SAP BW F1 說明](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   

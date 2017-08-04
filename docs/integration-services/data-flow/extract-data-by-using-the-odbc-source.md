@@ -1,25 +1,30 @@
 ---
-title: "使用 ODBC 來源來擷取資料 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "使用 ODBC 來源擷取資料 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 10f25703-49a2-4d45-abab-6b4da2a57ba5
 caps.latest.revision: 8
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 236c2b7caf1ec3ade0a140bfabfc32f3a21a9ea1
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 使用 ODBC 來源來擷取資料
+# <a name="extract-data-by-using-the-odbc-source"></a>使用 ODBC 來源來擷取資料
   此程序描述如何使用 ODBC 來源擷取資料。 若要加入和設定 ODBC 來源，封裝必須至少含有一個「資料流程」工作。  
   
-### 使用 ODBC 來源擷取資料  
+### <a name="to-extract-data-using-an-odbc-source"></a>使用 ODBC 來源擷取資料  
   
 1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中，開啟所要的 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 封裝。  
   
@@ -49,9 +54,9 @@ caps.handback.revision: 8
   
 11. 若要儲存已更新的封裝，請在 **[檔案]** 功能表上，按一下 **[儲存選取項目]** 。  
   
-## 請參閱＜  
- [ODBC 來源編輯器 &#40;連線管理員頁面&#41;](../../integration-services/data-flow/odbc-source-editor-connection-manager-page.md)   
- [ODBC 來源編輯器 &#40;資料行頁面&#41;](../../integration-services/data-flow/odbc-source-editor-columns-page.md)   
- [ODBC 來源編輯器 &#40;錯誤輸出頁面&#41;](../../integration-services/data-flow/odbc-source-editor-error-output-page.md)  
+## <a name="see-also"></a>請參閱＜  
+ [ODBC 來源編輯器 &#40;連接管理員頁面 &#41;](../../integration-services/data-flow/odbc-source-editor-connection-manager-page.md)   
+ [ODBC 來源編輯器 &#40;資料行頁面 &#41;](../../integration-services/data-flow/odbc-source-editor-columns-page.md)   
+ [ODBC 來源編輯器 &#40;錯誤輸出頁面 &#41;](../../integration-services/data-flow/odbc-source-editor-error-output-page.md)  
   
   

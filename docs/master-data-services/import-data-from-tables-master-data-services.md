@@ -1,30 +1,35 @@
 ---
-title: "從資料表匯入資料 (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "匯入資料，從資料表 (Master Data Services) |Microsoft 文件"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ad5b83b1-8e40-4ef8-9ba8-4ea17a58b672
 caps.latest.revision: 10
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 47c83a225b97e203875f940a03fe52db80525060
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 從資料表匯入資料 (Master Data Services)
+# <a name="import-data-from-tables-master-data-services"></a>從資料表匯入資料 (Master Data Services)
   您可以將大量資料加入 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]的模型中，也可對模型中的資料進行大量變更。  
   
  **必要條件**  
   
--   您必須具備權限，才能將資料插入 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫的 stg.\<名稱>_Leaf、stg.\<名稱>_Consolidated、stg.\<名稱>_Relationship 資料表中。  
+-   您必須擁有權限，將資料插入 stg.<\<名稱 > _Leaf，stg.<\<名稱 > _Consolidated，stg.<\<名稱 > s h i p 資料表中的[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]資料庫。  
   
--   您必須具備權限，才能執行 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫中的 stg.udp_\<名稱>_Leaf、stg.udp\_\<名稱>_Consolidated 或 stg.udp\_\<名稱>_Relationship 預存程序。  
+-   您必須擁有權限來執行任一 stg.udp_<\<名稱 > _Leaf，stg.udp\_\<名稱 > _Consolidated，或 stg.udp\_\<名稱 > s h i p 預存程序中的[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]資料庫。  
   
 -   模型的狀態不得為 [已認可] 。  
   
@@ -32,11 +37,11 @@ caps.handback.revision: 10
   
 1.  準備要匯入 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫之適當暫存資料表中的成員，這包括為必要欄位提供值。 如需暫存資料表的概觀，請參閱[概觀︰從資料表匯入資料 &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
   
-    -   對於分葉成員，資料表為 stg.\<名稱>_Leaf，其中 \<名稱> 是指對應的實體。 如需必要欄位的資訊，請參閱[分葉成員暫存資料表 &#40;Master Data Services&#41;](../master-data-services/leaf-member-staging-table-master-data-services.md)  
+    -   分葉成員資料表是 stg.<\<名稱 > _Leaf，其中\<名稱 > 指的是對應的實體。 如需必要欄位的資訊，請參閱[分葉成員暫存資料表 &#40;Master Data Services&#41;](../master-data-services/leaf-member-staging-table-master-data-services.md)  
   
-    -   對於合併成員，資料表是 stg.\<名稱>_Consolidated。 如需必要欄位的資訊，請參閱[合併成員暫存資料表 &#40;Master Data Services&#41;](../master-data-services/consolidated-member-staging-table-master-data-services.md)。  
+    -   若是合併成員，資料表是 stg.<\<名稱 > _Consolidated。 如需必要欄位的資訊，請參閱[合併成員暫存資料表 &#40;Master Data Services&#41;](../master-data-services/consolidated-member-staging-table-master-data-services.md)。  
   
-    -   對於要移動明確階層中的成員位置，資料表是 stg.\<名稱>_Relationship。 如需必要欄位的資訊，請參閱[合併成員暫存資料表 &#40;Master Data Services&#41;](../master-data-services/relationship-staging-table-master-data-services.md)。  
+    -   移動明確階層的成員位置，資料表是 stg.<\<名稱 > s h i p。 如需必要欄位的資訊，請參閱[合併成員暫存資料表 &#40;Master Data Services&#41;](../master-data-services/relationship-staging-table-master-data-services.md)。  
   
          如需在明確階層中移動成員的概觀，請參閱[概觀︰從資料表匯入資料 &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)。  
   
@@ -46,11 +51,11 @@ caps.handback.revision: 10
   
 2.  開啟 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 並連接到您 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫的 Database Engine 執行個體。  
   
-     如需詳細資訊，請參閱＜ [SQL Server Management Studio](../Topic/SQL%20Server%20Management%20Studio.md)＞。  
+     如需詳細資訊，請參閱＜ [SQL Server Management Studio](http://msdn.microsoft.com/library/66a6b7b1-de6a-4161-82bd-98ded486947b)＞。  
   
 3.  使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的 [匯入和匯出精靈]，將資料匯入暫存資料表。  
   
-     如需詳細資訊，請參閱＜ [SQL Server Import and Export Wizard](../Topic/SQL%20Server%20Import%20and%20Export%20Wizard.md)＞。  
+     如需詳細資訊，請參閱＜ [SQL Server Import and Export Wizard](~/integration-services/import-export-data/welcome-to-sql-server-import-and-export-wizard.md)＞。  
   
 4.  執行下列其中一項作業，將資料從暫存資料表載入 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料表：  
   
@@ -60,9 +65,9 @@ caps.handback.revision: 10
   
     -   使用主資料管理的 **整合管理** 功能。  
   
-         在 [暫存批次] 頁面上，從下拉式清單中，選取要接收您所加入之資料的模型，然後按一下 [啟動批次]。 批次處理的狀態會顯示在 [狀態]  欄位中。 如需狀態的詳細資訊，請參閱[匯入狀態 &#40;Master Data Services&#41;](../master-data-services/import-statuses-master-data-services.md)。  
+         在 [暫存批次]  頁面上，從下拉式清單中，選取要接收您所加入之資料的模型，然後按一下 [啟動批次] 。 批次處理的狀態會顯示在 [狀態]  欄位中。 如需狀態的詳細資訊，請參閱[匯入狀態 &#40;Master Data Services&#41;](../master-data-services/import-statuses-master-data-services.md)。  
   
-         ![Staging Batches Page in Master Data Manager](../master-data-services/media/mds-stagingbatchespage.png "Staging Batches Page in Master Data Manager")  
+         ![臨時批次頁面在主資料管理員](../master-data-services/media/mds-stagingbatchespage.png "臨時批次在主資料管理員 頁面")  
   
          暫存程序的啟動間隔，由 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 中的 [暫存批次間隔] 設定決定。 如需詳細資訊，請參閱 [系統設定 &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md)。  
   
@@ -75,3 +80,4 @@ caps.handback.revision: 10
      當您從暫存資料表載入資料時，不會自動依商務規則驗證該資料。 如需何謂驗證和其發生時機的詳細資訊，請參閱[驗證 &#40;Master Data Services&#41;](../master-data-services/validation-master-data-services.md)。  
   
   
+

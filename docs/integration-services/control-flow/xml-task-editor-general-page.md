@@ -1,31 +1,36 @@
 ---
-title: "XML Task Editor (General Page) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.xmltask.general.f1"
-helpviewer_keywords: 
-  - "XML Task Editor"
+title: "XML 工作編輯器 （一般頁面） |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.xmltask.general.f1
+helpviewer_keywords:
+- XML Task Editor
 ms.assetid: b9622c48-3243-4408-a1de-9ba20e32ff70
 caps.latest.revision: 43
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 43
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f9dc1f49a7e2fcee8b87546585075d016f1f6ace
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# XML Task Editor (General Page)
+# <a name="xml-task-editor-general-page"></a>XML Task Editor (General Page)
   使用 **[XML 工作編輯器]** 對話方塊的 **[一般節點]** ，即可指定作業類型和設定作業。  
   
- 若要了解這項工作，請參閱 [XML 工作](../../integration-services/control-flow/xml-task.md)和[使用 XML 工作驗證 XML](../../integration-services/control-flow/validate-xml-with-the-xml-task.md)。 如需有關使用 XML 文件和資料的詳細資訊，請參閱 MSDN Library 中的 "[Employing XML in the .NET Framework](http://go.microsoft.com/fwlink/?LinkId=56214)"。  
+ 若要了解這項工作，請參閱 [XML 工作](../../integration-services/control-flow/xml-task.md) 和 [使用 XML 工作驗證 XML](../../integration-services/control-flow/validate-xml-with-the-xml-task.md)。 如需有關使用 XML 文件和資料的詳細資訊，請參閱 MSDN Library 中的 "[Employing XML in the .NET Framework](http://go.microsoft.com/fwlink/?LinkId=56214)"。  
   
-## 靜態選項  
+## <a name="static-options"></a>靜態選項  
  **OperationType**  
  從清單中選取作業類型。 這個屬性具有下表中所列的選項。  
   
@@ -50,17 +55,17 @@ caps.handback.revision: 43
  **Source**  
  如果 [Source] 設定為 [直接輸入]，請提供 XML 程式碼，或按一下省略符號按鈕 **(…)**，然後使用 [文件來源編輯器] 對話方塊來提供 XML。  
   
- 如果 [Source] 設定為 [檔案連接]，請選取檔案連線管理員，或按一下 \<新增連接...> 建立新的連線管理員。  
+ 如果**來源**設**檔案連接**，選取檔案連接管理員，或按一下\<**新增連接...**> 以建立新的連接管理員。  
   
  **相關主題：** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- 如果 [Source] 設定為 [變數]，請選取現有的變數，或按一下 \<新增變數...> 建立新的變數。  
+ 如果**來源**設**變數**，選取現有的變數，或按一下**\<新增變數 … >**以建立新的變數。  
   
- **相關主題**：[Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、[加入變數](../Topic/Add%20Variable.md)。  
+ **相關主題**：[Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、[加入變數](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)。  
   
-## OperationType 動態選項  
+## <a name="operationtype-dynamic-options"></a>OperationType 動態選項  
   
-### OperationType = 驗證  
+### <a name="operationtype--validate"></a>OperationType = 驗證  
  指定驗證作業的選項。  
   
  **SaveOperationResult**  
@@ -70,7 +75,7 @@ caps.handback.revision: 43
  指定是否要覆寫目的地檔案或變數。  
   
  **目的地**  
- 選取現有的檔案連線管理員，或按一下 \<新增連接...> 建立新的連線管理員。  
+ 選取現有的檔案連接管理員，或按一下\<**新增連接...**> 以建立新的連接管理員。  
   
  **相關主題：** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
@@ -96,9 +101,9 @@ caps.handback.revision: 43
  **ValidationDetails**  
  當此屬性的值為 True 時，會提供詳細的錯誤輸出。 如需詳細資訊，請參閱＜ [Validate XML with the XML Task](../../integration-services/control-flow/validate-xml-with-the-xml-task.md)＞。  
   
-### ValidationType 動態選項  
+### <a name="validationtype-dynamic-options"></a>ValidationType 動態選項  
   
-#### ValidationType = XSD  
+#### <a name="validationtype--xsd"></a>ValidationType = XSD  
  **SecondOperandType**  
  選取第二個 XML 文件的來源類型。 這個屬性具有下表中所列的選項。  
   
@@ -111,15 +116,15 @@ caps.handback.revision: 43
  **SecondOperand**  
  如果 [SecondOperandType] 設定為 [直接輸入]，請提供 XML 程式碼，或按一下省略符號按鈕 **(…)**，然後使用 [來源編輯器] 對話方塊來提供 XML。  
   
- 如果 [SecondOperandType] 設定為 [檔案連接]，請選取檔案連線管理員，或按一下 \<新增連接...> 建立新的連線管理員。  
+ 如果**SecondOperandType**設**檔案連接**，選取檔案連接管理員，或按一下\<**新增連接...**> 以建立新的連接管理員。  
   
  **相關主題：** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- 如果 [XPathStringSourceType] 設定為 [變數]，請選取現有的變數，或按一下 \<新增變數...> 建立新的變數。  
+ 如果**XPathStringSourceType**設**變數**，選取現有的變數，或按一下\<**新增變數...**> 若要建立新的變數。  
   
- **相關主題**：[Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、[加入變數](../Topic/Add%20Variable.md)。  
+ **相關主題**：[Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、[加入變數](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)。  
   
-### OperationType = XSLT  
+### <a name="operationtype--xslt"></a>OperationType = XSLT  
  指定 XSLT 作業的選項。  
   
  **SaveOperationResult**  
@@ -129,13 +134,13 @@ caps.handback.revision: 43
  指定是否要覆寫目的地檔案或變數。  
   
  **目的地**  
- 如果 [DestinationType] 設定為 [檔案連接]，請選取檔案連線管理員，或按一下 \<新增連接...> 建立新的連線管理員。  
+ 如果**DestinationType**設**檔案連接**，選取檔案連接管理員，或按一下\<**新增連接...**> 以建立新的連接管理員。  
   
  **相關主題：** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- 如果 [DestinationType] 設定為 [變數]，請選取現有的變數，或按一下 \<新增變數...> 建立新的變數。  
+ 如果**DestinationType**設**變數**，選取現有的變數，或按一下\<**新增變數...**> 若要建立新的變數。  
   
- **相關主題**：[Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、[加入變數](../Topic/Add%20Variable.md)。  
+ **相關主題**：[Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、[加入變數](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)。  
   
  **DestinationType**  
  選取 XML 文件的目的地類型。 這個屬性具有下表中所列的選項。  
@@ -157,15 +162,15 @@ caps.handback.revision: 43
  **SecondOperand**  
  如果 [SecondOperandType] 設定為 [直接輸入]，請提供 XML 程式碼，或按一下省略符號按鈕 **(…)**，然後使用 [來源編輯器] 對話方塊來提供 XML。  
   
- 如果 [SecondOperandType] 設定為 [檔案連接]，請選取檔案連線管理員，或按一下 \<新增連接...> 建立新的連線管理員。  
+ 如果**SecondOperandType**設**檔案連接**，選取檔案連接管理員，或按一下\<**新增連接...**> 以建立新的連接管理員。  
   
  **相關主題：** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- 如果 [XPathStringSourceType] 設定為 [變數]，請選取現有的變數，或按一下 \<新增變數...> 建立新的變數。  
+ 如果**XPathStringSourceType**設**變數**，選取現有的變數，或按一下\<**新增變數...**> 若要建立新的變數。  
   
- **相關主題**：[Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、[加入變數](../Topic/Add%20Variable.md)。  
+ **相關主題**：[Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、[加入變數](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)。  
   
-### OperationType = XPATH  
+### <a name="operationtype--xpath"></a>OperationType = XPATH  
  指定 XPath 作業的選項。  
   
  **SaveOperationResult**  
@@ -175,13 +180,13 @@ caps.handback.revision: 43
  指定是否要覆寫目的地檔案或變數。  
   
  **目的地**  
- 如果 [DestinationType] 設定為 [檔案連接]，請選取檔案連線管理員，或按一下 \<新增連接...> 建立新的連線管理員。  
+ 如果**DestinationType**設**檔案連接**，選取檔案連接管理員，或按一下\<**新增連接...**> 以建立新的連接管理員。  
   
  **相關主題：** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- 如果 [DestinationType] 設定為 [變數]，請選取現有的變數，或按一下 \<新增變數...> 建立新的變數。  
+ 如果**DestinationType**設**變數**，選取現有的變數，或按一下\<**新增變數...**> 若要建立新的變數。  
   
- **相關主題**：[Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、[加入變數](../Topic/Add%20Variable.md)。  
+ **相關主題**：[Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、[加入變數](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)。  
   
  **DestinationType**  
  選取 XML 文件的目的地類型。 這個屬性具有下表中所列的選項。  
@@ -203,13 +208,13 @@ caps.handback.revision: 43
  **SecondOperand**  
  如果 [SecondOperandType] 設定為 [直接輸入]，請提供 XML 程式碼，或按一下省略符號按鈕 **(…)**，然後使用 [來源編輯器] 對話方塊來提供 XML。  
   
- 如果 [SecondOperandType] 設定為 [檔案連接]，請選取檔案連線管理員，或按一下 \<新增連接...> 建立新的連線管理員。  
+ 如果**SecondOperandType**設**檔案連接**，選取檔案連接管理員，或按一下\<**新增連接...**> 以建立新的連接管理員。  
   
  **相關主題：** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- 如果 [XPathStringSourceType] 設定為 [變數]，請選取現有的變數，或按一下 \<新增變數...> 建立新的變數。  
+ 如果**XPathStringSourceType**設**變數**，選取現有的變數，或按一下\<**新增變數...**> 若要建立新的變數。  
   
- **相關主題**：[Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、[加入變數](../Topic/Add%20Variable.md)。  
+ **相關主題**：[Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、[加入變數](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)。  
   
  **PutResultInOneNode**  
  指定是否將結果寫入單一節點。  
@@ -223,7 +228,7 @@ caps.handback.revision: 43
 |**節點清單**|將選取的節點當做 XML 片段傳回。|  
 |**值**|傳回所有選取之節點的內部文字值，串連成字串。|  
   
-### OperationType = 合併  
+### <a name="operationtype--merge"></a>OperationType = 合併  
  指定合併作業的選項。  
   
  **XPathStringSourceType**  
@@ -238,13 +243,13 @@ caps.handback.revision: 43
  **XPathStringSource**  
  如果 [XPathStringSourceType] 設定為 [直接輸入]，請提供 XML 程式碼，或按一下省略符號按鈕 **(…)**，然後使用 [文件來源編輯器] 對話方塊來提供 XML。  
   
- 如果 [XPathStringSourceType] 設定為 [檔案連接]，請選取檔案連線管理員，或按一下 [\<新增連接...>]，以建立新的連線管理員。  
+ 如果**XPathStringSourceType**設**檔案連接**，選取檔案連接管理員，或按一下\<**新增連接...**> 以建立新的連接管理員。  
   
  **相關主題：** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- 如果 [XPathStringSourceType] 設定為 [變數]，請選取現有的變數，或按一下 \<新增變數...> 建立新的變數。  
+ 如果**XPathStringSourceType**設**變數**，選取現有的變數，或按一下\<**新增變數...**> 若要建立新的變數。  
   
- **相關主題**：[Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、[加入變數](../Topic/Add%20Variable.md)  
+ **相關主題**：[Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、[加入變數](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
  當您使用 XPath 陳述式識別來源文件中的合併位置時，此陳述式預期會傳回單一節點。 如果陳述式傳回多個節點，只會使用第一個節點。 第二個文件的內容會合併到 XPath 查詢傳回的第一個節點之下。  
   
@@ -255,13 +260,13 @@ caps.handback.revision: 43
  指定是否要覆寫目的地檔案或變數。  
   
  **目的地**  
- 如果 [DestinationType] 設定為 [檔案連接]，請選取檔案連線管理員，或按一下 \<新增連接...> 建立新的連線管理員。  
+ 如果**DestinationType**設**檔案連接**，選取檔案連接管理員，或按一下\<**新增連接...**> 以建立新的連接管理員。  
   
  **相關主題：** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- 如果 [DestinationType] 設定為 [變數]，請選取現有的變數，或按一下 \<新增變數...> 建立新的變數。  
+ 如果**DestinationType**設**變數**，選取現有的變數，或按一下\<**新增變數...**> 若要建立新的變數。  
   
- **相關主題**：[Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、[加入變數](../Topic/Add%20Variable.md)。  
+ **相關主題**：[Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、[加入變數](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)。  
   
  **DestinationType**  
  選取 XML 文件的目的地類型。 這個屬性具有下表中所列的選項。  
@@ -283,15 +288,15 @@ caps.handback.revision: 43
  **SecondOperand**  
  如果 [SecondOperandType] 設定為 [直接輸入]，請提供 XML 程式碼，或按一下省略符號按鈕 **(…)**，然後使用 [文件來源編輯器] 對話方塊來提供 XML。  
   
- 如果 [SecondOperandType] 設定為 [檔案連接]，請選取檔案連線管理員，或按一下 \<新增連接...> 建立新的連線管理員。  
+ 如果**SecondOperandType**設**檔案連接**，選取檔案連接管理員，或按一下\<**新增連接...**> 以建立新的連接管理員。  
   
  **相關主題：** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- 如果 [SecondOperandType] 設定為 [變數]，請選取現有的變數，或按一下 \<新增變數...> 建立新的變數。  
+ 如果**SecondOperandType**設**變數**，選取現有的變數，或按一下\<**新增變數...**> 若要建立新的變數。  
   
- **相關主題**：[Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、[加入變數](../Topic/Add%20Variable.md)  
+ **相關主題**：[Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、[加入變數](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
-### OperationType = Diff  
+### <a name="operationtype--diff"></a>OperationType = Diff  
  指定 Diff 作業的選項。  
   
  **DiffAlgorithm**  
@@ -330,13 +335,13 @@ caps.handback.revision: 43
  指定是否要覆寫目的地檔案或變數。  
   
  **目的地**  
- 如果 [DestinationType] 設定為 [檔案連接]，請選取檔案連線管理員，或按一下 \<新增連接...> 建立新的連線管理員。  
+ 如果**DestinationType**設**檔案連接**，選取檔案連接管理員，或按一下\<**新增連接...**> 以建立新的連接管理員。  
   
  **相關主題：** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- 如果 [DestinationType] 設定為 [變數]，請選取現有的變數，或按一下 \<新增變數...> 建立新的變數。  
+ 如果**DestinationType**設**變數**，選取現有的變數，或按一下\<**新增變數...**> 若要建立新的變數。  
   
- **相關主題**：[Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、[加入變數](../Topic/Add%20Variable.md)。  
+ **相關主題**：[Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、[加入變數](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)。  
   
  **DestinationType**  
  選取 XML 文件的目的地類型。 這個屬性具有下表中所列的選項。  
@@ -358,15 +363,15 @@ caps.handback.revision: 43
  **SecondOperand**  
  如果 [SecondOperandType] 設定為 [直接輸入]，請提供 XML 程式碼，或按一下省略符號按鈕 **(…)**，然後使用 [文件來源編輯器] 對話方塊來提供 XML。  
   
- 如果 [SecondOperandType] 設定為 [檔案連接]，請選取檔案連線管理員，或按一下 \<新增連接...> 建立新的連線管理員。  
+ 如果**SecondOperandType**設**檔案連接**，選取檔案連接管理員，或按一下\<**新增連接...**> 以建立新的連接管理員。  
   
  **相關主題：** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- 如果 [SecondOperandType] 設定為 [變數]，請選取現有的變數，或按一下 \<新增變數...> 建立新的變數。  
+ 如果**SecondOperandType**設**變數**，選取現有的變數，或按一下\<**新增變數...**> 若要建立新的變數。  
   
- **相關主題**：[Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、[加入變數](../Topic/Add%20Variable.md)  
+ **相關主題**：[Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、[加入變數](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
-### OperationType = 修補  
+### <a name="operationtype--patch"></a>OperationType = 修補  
  指定修補作業的選項。  
   
  **SaveOperationResult**  
@@ -376,13 +381,13 @@ caps.handback.revision: 43
  指定是否要覆寫目的地檔案或變數。  
   
  **目的地**  
- 如果 [DestinationType] 設定為 [檔案連接]，請選取檔案連線管理員，或按一下 \<新增連接...> 建立新的連線管理員。  
+ 如果**DestinationType**設**檔案連接**，選取檔案連接管理員，或按一下\<**新增連接...**> 以建立新的連接管理員。  
   
  **相關主題：** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- 如果 [DestinationType] 設定為 [變數]，請選取現有的變數，或按一下 \<新增變數...> 建立新的變數。  
+ 如果**DestinationType**設**變數**，選取現有的變數，或按一下\<**新增變數...**> 若要建立新的變數。  
   
- **相關主題**：[Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、[加入變數](../Topic/Add%20Variable.md)。  
+ **相關主題**：[Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、[加入變數](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)。  
   
  **DestinationType**  
  選取 XML 文件的目的地類型。 這個屬性具有下表中所列的選項。  
@@ -404,15 +409,15 @@ caps.handback.revision: 43
  **SecondOperand**  
  如果 [SecondOperandType] 設定為 [直接輸入]，請提供 XML 程式碼，或按一下省略符號按鈕 **(…)**，然後使用 [文件來源編輯器] 對話方塊來提供 XML。  
   
- 如果 [SecondOperandType] 設定為 [檔案連接]，請選取檔案連線管理員，或按一下 \<新增連接...> 建立新的連線管理員。  
+ 如果**SecondOperandType**設**檔案連接**，選取檔案連接管理員，或按一下\<**新增連接...**> 以建立新的連接管理員。  
   
  **相關主題：** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- 如果 [SecondOperandType] 設定為 [變數]，請選取現有的變數，或按一下 \<新增變數...> 建立新的變數。  
+ 如果**SecondOperandType**設**變數**，選取現有的變數，或按一下\<**新增變數...**> 若要建立新的變數。  
   
- **相關主題**：[Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、[加入變數](../Topic/Add%20Variable.md)  
+ **相關主題**：[Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、[加入變數](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
-## 請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../integration-services/integration-services-error-and-message-reference.md)   
  [運算式頁面](../../integration-services/expressions/expressions-page.md)  
   

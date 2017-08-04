@@ -1,31 +1,36 @@
 ---
-title: "SQL 目的地編輯器 (進階頁面) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.sqlserverdestadapter.advanced.f1"
-helpviewer_keywords: 
-  - "SQL Server 目的地編輯器"
+title: "SQL 目的地編輯器 （進階頁面） |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.sqlserverdestadapter.advanced.f1
+helpviewer_keywords:
+- SQL Server Destination Editor
 ms.assetid: 9b46bcf8-ddaf-4d7d-90a6-80bc19517e9b
 caps.latest.revision: 28
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e279b5bc6ff340323647d1a93daeb006ec4c3cbf
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# SQL 目的地編輯器 (進階頁面)
+# <a name="sql-destination-editor-advanced-page"></a>SQL 目的地編輯器 (進階頁面)
   使用 [SQL 目的地編輯器] 對話方塊的 [進階] 頁面，即可指定進階大量插入選項。  
   
  若要深入了解 SQL Server 目的地，請參閱＜ [SQL Server Destination](../../integration-services/data-flow/sql-server-destination.md)＞。  
   
-## 選項。  
+## <a name="options"></a>選項。  
  **保留識別**  
  指定工作是否應該將值插入識別欄位中。 此屬性的預設值為 **False**。  
   
@@ -65,10 +70,10 @@ caps.handback.revision: 28
  **排序資料行**  
  輸入排序資料行的名稱。 每個資料行都可依遞增或遞減順序來排序。 如果您使用多個排序資料行，請用逗號分隔此清單。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [Integration Services 錯誤和訊息參考](../../integration-services/integration-services-error-and-message-reference.md)   
- [SQL 目的地編輯器 &#40;連線管理員頁面&#41;](../../integration-services/data-flow/sql-destination-editor-connection-manager-page.md)   
- [SQL 目的地編輯器 &#40;對應頁面&#41;](../../integration-services/data-flow/sql-destination-editor-mappings-page.md)   
+ [SQL 目的地編輯器 &#40;連接管理員頁面 &#41;](../../integration-services/data-flow/sql-destination-editor-connection-manager-page.md)   
+ [SQL 目的地編輯器 &#40;[對應] 頁面 &#41;](../../integration-services/data-flow/sql-destination-editor-mappings-page.md)   
  [使用 SQL Server 目的地來大量載入資料](../../integration-services/data-flow/bulk-load-data-by-using-the-sql-server-destination.md)  
   
   

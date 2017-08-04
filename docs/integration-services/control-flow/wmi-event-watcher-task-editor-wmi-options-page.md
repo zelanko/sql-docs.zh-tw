@@ -1,35 +1,40 @@
 ---
-title: "WMI 事件監看員工作編輯器 (WMI 選項頁面) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.wmieventwatcher.wmiquery.f1"
-helpviewer_keywords: 
-  - "WMI 事件監看員工作編輯器"
+title: "WMI 事件監看員工作編輯器 （WMI 選項頁面） |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.wmieventwatcher.wmiquery.f1
+helpviewer_keywords:
+- WMI Event Watcher Task Editor
 ms.assetid: 525f3de7-a021-4e52-9939-3a83c88f131a
 caps.latest.revision: 38
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 410a65bf316b27fac565388d09bf4c9f5cd82b29
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# WMI 事件監看員工作編輯器 (WMI 選項頁面)
+# <a name="wmi-event-watcher-task-editor-wmi-options-page"></a>WMI 事件監看員工作編輯器 (WMI 選項頁面)
   使用 [WMI 事件監看員工作編輯器] 對話方塊的 [WMI 選項] 頁面，即可指定 Windows Management Instrumentation 查詢語言 (WQL) 查詢的來源，以及 WMI 事件監看員工作如何回應 Microsoft Windows Instrumentation (WMI) 事件。  
   
- 若要了解這項工作，請參閱 [WMI 事件監看員工作](../../integration-services/control-flow/wmi-event-watcher-task.md)。 如需 WMI 查詢語言 (WQL) 的詳細資訊，請參閱 MSDN Library 中的 Windows Management Instrumentation 主題：[Querying with WQL](http://go.microsoft.com/fwlink/?LinkId=79045) (使用 WQL 查詢)。  
+ 若要了解這項工作，請參閱 [WMI 事件監看員工作](../../integration-services/control-flow/wmi-event-watcher-task.md)。 如需 WMI 查詢語言 (WQL) 的詳細資訊，請參閱 MSDN Library 中的 Windows Management Instrumentation 主題： [Querying with WQL](http://go.microsoft.com/fwlink/?LinkId=79045)(使用 WQL 查詢)。  
   
-## 靜態選項  
+## <a name="static-options"></a>靜態選項  
  **WMIConnectionName**  
- 在清單中選取 WMI 連線管理員，或按一下 [\<新增 WMI 連接...>] 以建立新的連線管理員。  
+ 在清單中，選取 WMI 連接管理員，或按一下\<**新增 WMI 連接...**> 以建立新的連接管理員。  
   
- **相關主題**：[WMI 連線管理員](../../integration-services/connection-manager/wmi-connection-manager.md)、[WMI 連線管理員編輯器](../../integration-services/connection-manager/wmi-connection-manager-editor.md)  
+ **相關主題：**[WMI 連接管理員](../../integration-services/connection-manager/wmi-connection-manager.md)、[WMI 連接管理員編輯器](../../integration-services/connection-manager/wmi-connection-manager-editor.md)  
   
  **WQLQuerySourceType**  
  選取工作執行之 WQL 查詢的來源類型。 這個屬性具有下表中所列的選項。  
@@ -58,27 +63,27 @@ caps.handback.revision: 38
  **逾時**  
  指定要等候事件發生的秒數。 值為 0 表示沒有逾時在作用中。  
   
-## WQLQuerySource 動態選項  
+## <a name="wqlquerysource-dynamic-options"></a>WQLQuerySource 動態選項  
   
-### WQLQuerySource = 直接輸入  
+### <a name="wqlquerysource--direct-input"></a>WQLQuerySource = 直接輸入  
  **WQLQuerySource**  
  提供查詢，或按一下省略符號按鈕 (...)，然後使用 [WQL 查詢] 對話方塊輸入查詢。  
   
-### WQLQuerySource = 檔案連接  
+### <a name="wqlquerysource--file-connection"></a>WQLQuerySource = 檔案連接  
  **WQLQuerySource**  
- 在清單中選取檔案連線管理員，或按一下 [\<新增連接...>]，即可建立新的連線管理員。  
+ 在清單中，選取檔案連接管理員，或按一下\<**新增連接...**> 以建立新的連接管理員。  
   
  **相關主題：** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
-### WQLQuerySource = 變數  
+### <a name="wqlquerysource--variable"></a>WQLQuerySource = 變數  
  **WQLQuerySource**  
- 在清單中選取變數，或按一下 [\<新增變數...>]，以建立新的變數。  
+ 在清單中，選取變數，或按一下\<**新增變數...**> 若要建立新的變數。  
   
- **相關主題**︰[Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、[加入變數](../Topic/Add%20Variable.md)  
+ **相關主題**：[Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、[加入變數](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
-## 請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../integration-services/integration-services-error-and-message-reference.md)   
- [WMI 事件監看員工作編輯器 &#40;一般頁面&#41;](../../integration-services/control-flow/wmi-event-watcher-task-editor-general-page.md)   
+ [WMI 事件監看員工作編輯器 &#40;一般頁面 &#41;](../../integration-services/control-flow/wmi-event-watcher-task-editor-general-page.md)   
  [運算式頁面](../../integration-services/expressions/expressions-page.md)   
  [WMI 資料讀取器工作](../../integration-services/control-flow/wmi-data-reader-task.md)  
   

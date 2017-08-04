@@ -1,27 +1,32 @@
 ---
-title: "傳送錯誤訊息工作 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.transfererrormessagestask.f1"
-helpviewer_keywords: 
-  - "傳送錯誤訊息工作 [Integration Services]"
+title: "傳送錯誤訊息工作 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.transfererrormessagestask.f1
+helpviewer_keywords:
+- Transfer Error Messages task [Integration Services]
 ms.assetid: da702289-035a-4d14-bd74-04461fbfee1b
 caps.latest.revision: 31
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3f13e3e6e22e2b4f3b74c80a249a098d93ad5b9f
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 傳送錯誤訊息工作
-  [傳送錯誤訊息] 工作會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體之間傳送一或多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用者自訂的錯誤訊息。 使用者定義的訊息是識別碼等於或大於 50000 的訊息。 識別碼小於 50000 的訊息是系統錯誤訊息，這種訊息無法使用「傳送錯誤訊息」工作進行傳送。  
+# <a name="transfer-error-messages-task"></a>傳送錯誤訊息工作
+  [傳送錯誤訊息] 工作會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體之間傳送一或多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用者自訂的錯誤訊息。 使用者定義的訊息是識別碼等於或大於 50000 的訊息。 識別碼小於 50000 的訊息是系統錯誤訊息，這種訊息無法使用「傳送錯誤訊息」工作進行傳送。  
   
  「傳送錯誤訊息」工作可以設定為傳送所有錯誤訊息，或只傳送指定的錯誤訊息。 使用者自訂的錯誤訊息可能有很多不同的語言版本，您可以設定工作只傳送所選語言的訊息。 在您可以傳送其他語言版本的訊息至目的地伺服器之前，使用字碼頁 1033 的 us_english 版訊息必須存在於該伺服器上。  
   
@@ -39,15 +44,15 @@ caps.handback.revision: 31
   
  [傳送錯誤訊息] 工作支援 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 來源和目的地。 將哪一個用作來源或目的地是沒有限制的。  
   
-## 事件  
+## <a name="events"></a>事件  
  「傳送錯誤訊息」工作會引發報告已傳送錯誤訊息數目的資訊事件。  
   
  該工作並不報告錯誤訊息傳送的累加進度，它只報告 0% 和 100 % 完成。  
   
-## 執行值  
- 工作之 **ExecutionValue** 屬性中定義的執行值會傳回已傳送的錯誤訊息數目。 透過將使用者定義的變數指派給 [傳送錯誤訊息] 工作的 **ExecValueVariable** 屬性，可將與錯誤訊息傳送相關的資訊用於封裝中的其他物件。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)和[在封裝中使用變數](../Topic/Use%20Variables%20in%20Packages.md)。  
+## <a name="execution-value"></a>執行值  
+ 工作之 **ExecutionValue** 屬性中定義的執行值會傳回已傳送的錯誤訊息數目。 透過將使用者定義的變數指派給 [傳送錯誤訊息] 工作的 **ExecValueVariable** 屬性，可將與錯誤訊息傳送相關的資訊用於封裝中的其他物件。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)和[在封裝中使用變數](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)。  
   
-## 記錄項目  
+## <a name="log-entries"></a>記錄項目  
  「傳送錯誤訊息」工作包含下列自訂記錄項目：  
   
 -   TransferErrorMessagesTaskStartTransferringObjects    此記錄項目報告傳送已開始。 記錄項目會包含開始時間。  
@@ -56,10 +61,10 @@ caps.handback.revision: 31
   
  此外， **OnInformation** 事件的記錄項目會報告已傳送的錯誤訊息，並會為在目的地上覆寫的每個錯誤訊息，寫入 [OnWarning 事件] 的記錄項目。  
   
-## 安全性和權限  
+## <a name="security-and-permissions"></a>安全性和權限  
  若要建立新的錯誤訊息，執行封裝的使用者必須是目的地伺服器上 sysadmin 或 serveradmin 伺服器角色的成員。  
   
-## 傳送錯誤訊息工作的組態  
+## <a name="configuration-of-the-transfer-error-messages-task"></a>傳送錯誤訊息工作的組態  
  您可以透過「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」或以程式設計方式設定屬性。  
   
  如需有關可以在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中設定之屬性的詳細資訊，請按下列其中一個主題：  
@@ -74,12 +79,12 @@ caps.handback.revision: 31
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.TransferErrorMessagesTask.TransferErrorMessagesTask>  
   
-## 相關工作  
+## <a name="related-tasks"></a>相關工作  
  如需有關如何在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中設定這些屬性的詳細資訊，請按下列主題：  
   
--   [設定工作或容器的屬性](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+-   [設定工作或容器的屬性](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [Integration Services 工作](../../integration-services/control-flow/integration-services-tasks.md)   
  [控制流程](../../integration-services/control-flow/control-flow.md)  
   

@@ -1,34 +1,39 @@
 ---
-title: "加入或變更屬性運算式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "運算式 [Integration Services], 建立"
-  - "運算式 [Integration Services], 屬性運算式"
+title: "新增或變更屬性運算式 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- expressions [Integration Services], creating
+- expressions [Integration Services], property expressions
 ms.assetid: cb5da499-065f-4fa6-9f6d-5bc5f385241e
 caps.latest.revision: 28
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e9f115f318366e743e0a933239b55ccda16b5171
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 加入或變更屬性運算式
+# <a name="add-or-change-a-property-expression"></a>加入或變更屬性運算式
   您可以為封裝、工作、「Foreach 迴圈」容器、「For 迴圈」容器、「時序」容器、事件處理常式、封裝和專案層級的連接管理員和記錄提供者建立屬性運算式。  
   
  若要建立或變更屬性運算式，您可以使用 [屬性運算式編輯器] 或 [運算式產生器]。 您可以從適用於工作的自訂編輯器或 [屬性] 視窗存取 [屬性運算式編輯器]。 您可以從 [屬性運算式編輯器] 內部存取 [運算式產生器]。 雖然您可以在 [屬性運算式編輯器] 或 [運算式產生器] 中撰寫運算式，但是 [運算式產生器] 會提供一組圖形工具，讓您輕鬆地建立複雜運算式。  
   
- 如需深入了解 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供的語法、運算子和函數，請參閱[運算子 &#40;SSIS 運算式&#41;](../../integration-services/expressions/operators-ssis-expression.md) 和[函數 &#40;SSIS 運算式&#41;](../../integration-services/expressions/functions-ssis-expression.md)。 每個運算子或函數的主題都包含了在運算式中使用該運算子或函數的範例。 如需更複雜之運算式的相關範例，請參閱[在封裝中使用屬性運算式](../../integration-services/expressions/use-property-expressions-in-packages.md)。  
+ 如需深入了解 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供的語法、運算子和函數，請參閱[運算子 &#40;SSIS 運算式&#41;](../../integration-services/expressions/operators-ssis-expression.md) 和[函數 &#40;SSIS 運算式&#41;](../../integration-services/expressions/functions-ssis-expression.md)。 每個運算子或函數的主題都包含了在運算式中使用該運算子或函數的範例。 如需更複雜之運算式的相關範例，請參閱 [在封裝中使用屬性運算式](../../integration-services/expressions/use-property-expressions-in-packages.md)。  
   
-### 建立或變更屬性運算式  
+### <a name="to-create-or-change-a-property-expression"></a>建立或變更屬性運算式  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，開啟包含所需封裝的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，開啟包含所需封裝的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案。  
   
 2.  在 [方案總管] 中，按兩下封裝將其開啟，然後執行下列其中之一：  
   
@@ -63,14 +68,14 @@ caps.handback.revision: 28
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## 請參閱＜  
- [Integration Services &#40;SSIS&#41; 運算式](../../integration-services/expressions/integration-services-ssis-expressions.md)   
+## <a name="see-also"></a>請參閱＜  
+ [Integration Services &#40;SSIS &#41;運算式](../../integration-services/expressions/integration-services-ssis-expressions.md)   
  [在封裝中使用屬性運算式](../../integration-services/expressions/use-property-expressions-in-packages.md)   
- [Integration Services &#40;SSIS&#41; 封裝](../../integration-services/integration-services-ssis-packages.md)   
+ [Integration Services &#40;SSIS &#41;封裝](../../integration-services/integration-services-ssis-packages.md)   
  [整合服務容器](../../integration-services/control-flow/integration-services-containers.md)   
  [Integration Services 工作](../../integration-services/control-flow/integration-services-tasks.md)   
- [Integration Services &#40;SSIS&#41; 事件處理常式](../../integration-services/integration-services-ssis-event-handlers.md)   
- [Integration Services &#40;SSIS&#41; 連接](../../integration-services/connection-manager/integration-services-ssis-connections.md)   
- [Integration Services &#40;SSIS&#41; 記錄](../../integration-services/performance/integration-services-ssis-logging.md)  
+ [Integration Services &#40;SSIS &#41;事件處理常式](../../integration-services/integration-services-ssis-event-handlers.md)   
+ [Integration Services &#40;SSIS &#41;連線](../../integration-services/connection-manager/integration-services-ssis-connections.md)   
+ [Integration Services &#40;SSIS &#41;記錄](../../integration-services/performance/integration-services-ssis-logging.md)  
   
   

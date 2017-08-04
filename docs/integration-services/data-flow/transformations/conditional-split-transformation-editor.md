@@ -1,34 +1,39 @@
 ---
-title: "條件式分割轉換編輯器 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.conditionalsplittransformation.f1"
-helpviewer_keywords: 
-  - "條件式分割轉換編輯器"
+title: "條件式分割轉換編輯器 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.conditionalsplittransformation.f1
+helpviewer_keywords:
+- Conditional Split Transformation Editor
 ms.assetid: c30e1633-537a-4837-9991-6203c6f2a21e
 caps.latest.revision: 33
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 33
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 769f9562af7bac75a488854319ba87ff8088329c
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 條件式分割轉換編輯器
+# <a name="conditional-split-transformation-editor"></a>條件式分割轉換編輯器
   使用 **[條件式分割轉換編輯器]** 對話方塊，即可建立運算式、設定評估運算式的順序，以及命名條件式分割的輸出。 此對話方塊包含可用來建立運算式的數學、字串，以及日期/時間函數與運算子。 評估為 True 的第一個條件會決定資料列的輸出導向。  
   
 > [!NOTE]  
 >  條件式分割轉換會將每個輸入資料列導向至單一輸出。 如果輸入多重條件，轉換會將每個資料列傳送到條件為 True 的第一個輸出，而略過該資料列後續的條件。 如果您需要連續評估數個條件，就可能需要在資料流程中串連多重條件式分割轉換。  
   
- 若要深入了解條件式分割轉換，請參閱[條件式分割轉換](../../../integration-services/data-flow/transformations/conditional-split-transformation.md)。  
+ 若要深入了解條件式分割轉換，請參閱 [條件式分割轉換](../../../integration-services/data-flow/transformations/conditional-split-transformation.md)。  
   
-## 選項。  
+## <a name="options"></a>選項。  
  **單**  
  選取資料列並使用右邊的方向鍵來變更評估運算式的順序。  
   
@@ -46,9 +51,9 @@ caps.handback.revision: 33
  輸入預設輸出的名稱，或使用預設值。  
   
  **設定錯誤輸出**  
- 使用 [設定錯誤輸出][](../Topic/Configure%20Error%20Output.md) 對話方塊來指定如何處理錯誤。  
+ 使用 [ [設定錯誤輸出](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) ] 對話方塊來指定如何處理錯誤。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [Integration Services 錯誤和訊息參考](../../../integration-services/integration-services-error-and-message-reference.md)   
  [使用條件式分割轉換來分割資料集](../../../integration-services/data-flow/transformations/split-a-dataset-by-using-the-conditional-split-transformation.md)  
   

@@ -1,33 +1,38 @@
 ---
-title: "執行 T-SQL 陳述式工作 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/13/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.executetsqlstatementtask.f1"
-helpviewer_keywords: 
-  - "Transact-SQL 陳述式, SSIS"
-  - "陳述式 [Integration Services]"
-  - "執行 T-SQL 陳述式工作 [Integration Services]"
+title: "執行 T-SQL 陳述式工作 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/13/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.executetsqlstatementtask.f1
+helpviewer_keywords:
+- Transact-SQL statements, SSIS
+- statements [Integration Services]
+- Execute T-SQL Statement task [Integration Services]
 ms.assetid: 7e9086ca-d27e-46c0-bfad-d61333ebd55e
 caps.latest.revision: 35
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 94fd411504f1781041e8d36f3f1cf41f6082aa09
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 執行 T-SQL 陳述式工作
+# <a name="execute-t-sql-statement-task"></a>執行 T-SQL 陳述式工作
   「執行 T-SQL 陳述式」工作會執行 Transact-SQL 陳述式。 如需詳細資訊，請參閱 [Transact-SQL 參考 &#40;資料庫引擎&#41;](../../t-sql/transact-sql-reference-database-engine.md) 和 [Integration Services &#40;SSIS&#41; 查詢](../../integration-services/integration-services-ssis-queries.md)。  
   
  此工作與執行 SQL 工作類似。 不過，「執行 T-SQL 陳述式」工作僅支援 Transact-SQL 版的 SQL 語言，而且您無法在使用其他 SQL 語言方言的伺服器上使用此工作執行陳述式。 如果您需要執行參數化查詢、將查詢結果儲存至變數，或使用屬性運算式，則應使用執行 SQL 工作而非「執行 T-SQL 陳述式」工作。 如需相關資訊，請參閱 [Execute SQL Task](../../integration-services/control-flow/execute-sql-task.md)。  
   
-## 設定執行 T-SQL 工作  
+## <a name="configuration-of-the-execute-t-sql-task"></a>設定執行 T-SQL 工作  
  您可以透過「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」設定屬性 這項工作位於「 **設計師」中** [工具箱] **的** [維護計畫工作] [!INCLUDE[ssIS](../../includes/ssis-md.md)] 區段。  
   
  如需有關可在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中設定之屬性的詳細資訊，請按下列主題：  
@@ -36,11 +41,11 @@ caps.handback.revision: 35
   
  如需有關如何在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中設定這些屬性的詳細資訊，請按下列主題：  
   
--   [設定工作或容器的屬性](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+-   [設定工作或容器的屬性](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [Integration Services 工作](../../integration-services/control-flow/integration-services-tasks.md)   
  [控制流程](../../integration-services/control-flow/control-flow.md)   
- [MERGE in Integration Services Packages](../../integration-services/control-flow/merge-in-integration-services-packages.md)  
+ [合併在 Integration Services 封裝](../../integration-services/control-flow/merge-in-integration-services-packages.md)  
   
   

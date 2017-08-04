@@ -1,30 +1,35 @@
 ---
-title: "== (等於) (SSIS 運算式) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "等於運算子 (==)"
-  - "== (等於運算子)"
+title: "= = （等於） （SSIS 運算式） |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- equal operator (==)
+- == (equal operator)
 ms.assetid: 36fd2354-7b93-4c95-9cf3-51ee24568950
 caps.latest.revision: 53
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 53
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2944b2ac0c650f3a7a3d447d20b34bee5fa27e20
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# == (等於) (SSIS 運算式)
+# <a name="-equal-ssis-expression"></a>== (等於) (SSIS 運算式)
   執行比較來決定兩個運算式是否相等。 運算式評估工具會在執行比較之前，自動轉換許多資料類型。 如需詳細資訊，請參閱 [Integration Services Data Types in Expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md)。  
   
- 但是，某些資料類型要求運算式先包含明確轉換，才能成功評估運算式。 如需在資料類型間合法轉換的詳細資訊，請參閱 [Cast &#40;SSIS 運算式&#41;](../../integration-services/expressions/cast-ssis-expression.md)。  
+ 但是，某些資料類型要求運算式先包含明確轉換，才能成功評估運算式。 如需在資料類型間合法轉換的詳細資訊，請參閱[轉換 &#40;SSIS 運算式&#41;](../../integration-services/expressions/cast-ssis-expression.md)。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -32,26 +37,26 @@ expression1 == expression2
   
 ```  
   
-## 引數  
- *expression1、expression2*  
+## <a name="arguments"></a>引數  
+ *expression1, expression2*  
  任何有效的運算式。  
   
-## 結果類型  
+## <a name="result-types"></a>結果類型  
  DT_BOOL  
   
-## 備註  
+## <a name="remarks"></a>備註  
  如果比較中的任一個運算式為 Null，則比較結果為 Null。 如果兩個運算式都是 Null，結果則為 Null。  
   
  運算式集 *expression1* 與 *expression2*必須遵循下列規則之一：  
   
 -   **數值** — *expression1* 與 *expression2* 都必須是數值資料類型。 資料類型的交集必須是運算式評估工具執行之隱含數值轉換規則中所指定的數值資料類型。 兩個數值資料類型的交集不能是 Null。 如需相關資訊，請參閱 [Integration Services Data Types in Expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md)。  
   
--   **字元**：*expression1* 和 *expression2* 都必須評估為 DT_STR 或 DT_WSTR 資料類型。 兩個運算式可以評估為不同的字串資料類型。  
+-   **字元** ： *expression1* 和 *expression2* 都必須評估為 DT_STR 或 DT_WSTR 資料類型。 兩個運算式可以評估為不同的字串資料類型。  
   
     > [!NOTE]  
     >  字串比較有區分大小寫、腔調字、假名與全半形。  
   
--   **日期、時間或日期/時間**：*expression1* 和 *expression2* 都必須評估為下列其中一種資料類型：DT_DBDATE、DT_DATE、DT_DBTIME、DT_DBTIME2、DT_DBTIMESTAMP、DT_DBTIMESTAMP2、DT_DBTIMESTAPMOFFSET 或 DT_FILETIME。  
+-   **日期、時間或日期/時間** ： *expression1* 和 *expression2* 都必須評估為下列其中一種資料類型：DT_DBDATE、DT_DATE、DT_DBTIME、DT_DBTIME2、DT_DBTIMESTAMP、DT_DBTIMESTAMP2、DT_DBTIMESTAPMOFFSET 或 DT_FILETIME。  
   
     > [!NOTE]  
     >  系統不支援評估為時間資料類型之運算式與評估為日期或日期/時間資料類型之運算式之間的比較。 系統會產生錯誤。  
@@ -76,15 +81,15 @@ expression1 == expression2
   
 -   **邏輯** — *expression1* 與 *expression2* 都必須評估為布林。  
   
--   **GUID**：*expression1* 和 *expression2* 都必須評估為 DT_GUID 資料類型。  
+-   **GUID** ： *expression1* 和 *expression2* 都必須評估為 DT_GUID 資料類型。  
   
--   **二進位**：*expression1* 和 *expression2* 都必須評估為 DT_BYTES 資料類型。  
+-   **二進位** ： *expression1* 和 *expression2* 都必須評估為 DT_BYTES 資料類型。  
   
--   **BLOB**：*expression1* 和 *expression2* 都必須評估為相同的二進位大型物件區塊 (BLOB) 資料類型：DT_TEXT、DT_NTEXT 或 DT_IMAGE。  
+-   **BLOB** ： *expression1* 和 *expression2* 都必須評估為相同的二進位大型物件區塊 (BLOB) 資料類型：DT_TEXT、DT_NTEXT 或 DT_IMAGE。  
   
  如需有關資料類型的詳細資訊，請參閱＜ [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)＞。  
   
-## 運算式範例  
+## <a name="expression-examples"></a>運算式範例  
  如果目前日期為 2003 年 7 月 4 日，則此範例評估結果為 TRUE。 如需詳細資訊，請參閱 [GETDATE &#40;SSIS 運算式&#41;](../../integration-services/expressions/getdate-ssis-expression.md)。  
   
  "7/4/2003" == GETDATE()  
@@ -101,9 +106,9 @@ ListPrice == 500
 @LPrice == 500  
 ```  
   
-## 請參閱＜  
- [!= &#40;不等於&#41; &#40;SSIS 運算式&#41;](../../integration-services/expressions/unequal-ssis-expression.md)   
- [運算子優先順序與關聯性](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [運算子 &#40;SSIS 運算式&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
+## <a name="see-also"></a>請參閱＜  
+ [！= &#40;不等於 &#41;&#40;SSIS 運算式 &#41;](../../integration-services/expressions/unequal-ssis-expression.md)   
+ [運算子優先順序和關聯性](../../integration-services/expressions/operator-precedence-and-associativity.md)   
+ [運算子 &#40;SSIS 運算式 &#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   
   

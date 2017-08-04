@@ -1,25 +1,30 @@
 ---
-title: "訂閱檢視格式 (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "訂閱檢視格式 (Master Data Services) |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ff1e2566-ac8f-467d-a6d9-12c3f13879b9
 caps.latest.revision: 9
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5cddce206adbbec42907f426fcd25d92a5e6d91b
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 訂閱檢視格式 (Master Data Services)
+# <a name="subscription-view-formats-master-data-services"></a>訂閱檢視格式 (Master Data Services)
   根據您選取的實體或衍生階層，訂閱檢視可以使用下列格式。  
   
-## 訂閱檢視格式  
+## <a name="subscription-view-formats"></a>訂閱檢視格式  
   
 |名稱|說明|  
 |----------|-----------------|  
@@ -38,7 +43,7 @@ caps.handback.revision: 9
 |**衍生父子 (衍生階層檢視)**|包含父子格式的衍生階層結構。|  
 |**衍生層級 (衍生階層檢視)**|包含層級格式的衍生階層結構。|  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [概觀：匯出資料 &#40;Master Data Services&#41;](../master-data-services/overview-exporting-data-master-data-services.md)   
  [建立訂閱檢視以匯出資料 &#40;Master Data Services&#41;](../master-data-services/create-a-subscription-view-to-export-data-master-data-services.md)  
   

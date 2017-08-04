@@ -1,28 +1,33 @@
 ---
-title: "排序合併和合併聯結轉換的資料 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "排序屬性 [Integration Services]"
-  - "輸出資料行 [Integration Services]"
+title: "排序資料的 「 合併 」 和 「 合併聯結轉換 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- sort attributes [Integration Services]
+- output columns [Integration Services]
 ms.assetid: 22ce3f5d-8a88-4423-92c2-60a8f82cd4fd
 caps.latest.revision: 31
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b9a99a414a74e873e5c09d22c6469a13ac04a32d
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 排序合併和合併聯結轉換的資料
+# <a name="sort-data-for-the-merge-and-merge-join-transformations"></a>排序合併和合併聯結轉換的資料
   在 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]中，「合併」和「合併聯結」轉換需要針對其輸入排序的資料。 輸入資料必須實際排序，且必須在來源中或上游轉換中設定輸出和輸出資料行的排序選項。 如果排序選項表示資料已排序，但實際上資料並未排序，則合併或合併聯結作業的結果可能無法預測。  
   
-## 排序資料  
+## <a name="sorting-the-data"></a>排序資料  
  您可以使用下列其中一個方法來排序此資料：  
   
 -   在來源的陳述式中，使用載入資料所使用的 ORDER BY 子句。  
@@ -31,7 +36,7 @@ caps.handback.revision: 31
   
  如果資料是字串資料，「合併」和「合併聯結」轉換都會預期這些字串值已經使用 Windows 定序排序了。 若要提供字串值給使用 Windows 定序排序的「合併」和「合併聯結」轉換，請使用下列程序。  
   
-#### 若要提供使用 Windows 定序排序的字串值  
+#### <a name="to-provide-string-values-that-are-sorted-by-using-windows-collation"></a>若要提供使用 Windows 定序排序的字串值  
   
 -   使用「排序」轉換來排序資料。  
   
@@ -44,7 +49,7 @@ caps.handback.revision: 31
     > [!IMPORTANT]  
     >  您無法單獨使用 ORDER BY 子句，因為 ORDER BY 子句會使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 定序來排序字串值。 如果您使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 定序，可能會產生與 Windows 定序不同的排序次序，進而導致「合併」或「合併聯結」轉換產生非預期的結果。  
   
-## 設定資料的排序選項  
+## <a name="setting-sort-options-on-the-data"></a>設定資料的排序選項  
  有兩個重要的排序屬性必須針對將資料提供給「合併」和「合併聯結」轉換的來源或上游轉換設定：  
   
 -   輸出的 **IsSorted** 屬性，表示資料是否經過排序。 此屬性必須設定為 **True**。  
@@ -58,7 +63,7 @@ caps.handback.revision: 31
   
  不過，如果您沒有使用「排序」轉換排序資料，則必須在來源或上游轉換手動設定這些排序屬性。 若要在來源或上游轉換手動設定排序屬性，請使用下列程序。  
   
-#### 若要手動在來源或轉換元件上設定排序屬性  
+#### <a name="to-manually-set-sort-attributes-on-a-source-or-transformation-component"></a>若要手動在來源或轉換元件上設定排序屬性  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]中，開啟包含所需封裝的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 專案。  
   
@@ -70,7 +75,7 @@ caps.handback.revision: 31
   
 5.  按一下 **[輸入與輸出屬性]** 索引標籤。  
   
-6.  按一下 [\<元件名稱> 輸出]，然後將 **IsSorted** 屬性設定為 **True**。  
+6.  按一下**\<元件名稱 > 輸出**，並設定**IsSorted**屬性**True**。  
   
     > [!NOTE]  
     >  如果您手動將輸出的 **IsSorted** 屬性設定為 **True** 而且資料未排序，則當您執行封裝時，下游「合併」或「合併聯結」轉換中可能會有資料遺失或是不正確的資料比較。  
@@ -105,7 +110,7 @@ caps.handback.revision: 31
   
 11. 若要儲存已更新的封裝，請在 **[檔案]** 功能表上，按一下 **[儲存選取項目]** 。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [合併轉換](../../../integration-services/data-flow/transformations/merge-transformation.md)   
  [合併聯結轉換](../../../integration-services/data-flow/transformations/merge-join-transformation.md)   
  [Integration Services 轉換](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   

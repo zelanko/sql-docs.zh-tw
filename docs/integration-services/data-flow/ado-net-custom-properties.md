@@ -1,22 +1,27 @@
 ---
-title: "ADO NET 自訂屬性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "ADO NET 自訂屬性 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e062a9ab-1e6b-4061-845a-4f8a0552b09d
 caps.latest.revision: 8
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e16ce0117e36cfd15f8f1cde1bb8c7ce9ac2df55
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# ADO NET 自訂屬性
+# <a name="ado-net-custom-properties"></a>ADO NET 自訂屬性
   **來源自訂屬性**  
   
  ADO NET 來源同時具有自訂屬性以及所有資料流程元件通用的屬性。  
@@ -42,12 +47,12 @@ caps.handback.revision: 8
 |屬性|資料類型|說明|  
 |--------------|---------------|-----------------|  
 |BatchSize|Integer|傳送給伺服器之批次內的資料列數。 值為 **0** 表示批次大小與內部緩衝區大小相符。 這個屬性的預設值為 **0**。|  
-|CommandTimeOut|Integer|逾時之前 SQL 命令可以執行的秒數上限。 值為 **0** 指出無限的時間。 這個屬性的預設值為 **0**。|  
+|CommandTimeout|Integer|逾時之前 SQL 命令可以執行的秒數上限。 值為 **0** 指出無限的時間。 這個屬性的預設值為 **0**。|  
 |TableOrViewName|字串|目的地資料表或檢視的名稱。|  
   
  如需詳細資訊，請參閱 [ADO NET 目的地](../../integration-services/data-flow/ado-net-destination.md)。  
   
-## 請參閱＜  
- [通用屬性](../Topic/Common%20Properties.md)  
+## <a name="see-also"></a>請參閱＜  
+ [通用屬性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
   

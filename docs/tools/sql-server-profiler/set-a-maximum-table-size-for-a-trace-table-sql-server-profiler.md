@@ -1,28 +1,33 @@
 ---
-title: "設定追蹤資料表的資料表大小上限 (SQL Server Profiler) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "大小 [SQL Server], 追蹤資料表"
-  - "追蹤的資料表大小上限"
+title: "設定追蹤資料表 (SQL Server Profiler) 的資料表大小上限 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- size [SQL Server], trace tables
+- maximum table size for traces
 ms.assetid: d0ae83e5-1c88-4a2e-be05-2c341280b978
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 733cbc9e74e9e9e56c7bcb918f8c695dd1304a7e
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 設定追蹤資料表的資料表大小上限 (SQL Server Profiler)
+# <a name="set-a-maximum-table-size-for-a-trace-table-sql-server-profiler"></a>設定追蹤資料表的資料表大小上限 (SQL Server Profiler)
   本主題說明如何使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 來設定追蹤資料表的資料表大小上限。  
   
-### 若要設定追蹤資料表的大小上限  
+### <a name="to-set-a-maximum-table-size-for-a-trace-table"></a>若要設定追蹤資料表的大小上限  
   
 1.  在 **[檔案]** 功能表上按一下 **[新增追蹤]**，然後連接到 SQL Server 的執行個體。  
   
@@ -50,7 +55,7 @@ caps.handback.revision: 23
     > [!NOTE]  
     >  當資料表的資料列數超過您所指定的最大值時，就不會再記錄追蹤事件。 不過，仍會繼續追蹤。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)   
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   

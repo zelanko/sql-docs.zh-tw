@@ -1,44 +1,49 @@
 ---
-title: "刪除成員或集合 (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "集合物件 [Master Data Services], 刪除"
-  - "分葉成員 [Master Data Services], 刪除"
-  - "刪除成員 [Master Data Services]"
-  - "成員 [Master Data Services], 刪除"
-  - "合併成員 [Master Data Services], 刪除"
+title: "刪除成員或集合 (Master Data Services) |Microsoft 文件"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- collections [Master Data Services], deleting
+- leaf members [Master Data Services], deleting
+- deleting members [Master Data Services]
+- members [Master Data Services], deleting
+- consolidated members [Master Data Services], deleting
 ms.assetid: 519130a7-4226-4d71-9124-d2ee0ce7e5bd
 caps.latest.revision: 10
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 89e49964ef41c7d093a2bdba1673ae8ea44a4a70
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 刪除成員或集合 (Master Data Services)
-  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 中，刪除您不再需要的成員或集合。 如果您要大量刪除成員，請改用暫存表格。 如需詳細資訊，請參閱[從資料表匯入資料 &#40;Master Data Services&#41;](../master-data-services/import-data-from-tables-master-data-services.md)。  
+# <a name="delete-a-member-or-collection-master-data-services"></a>刪除成員或集合 (Master Data Services)
+  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，刪除您不再需要的成員或集合。 如果您要大量刪除成員，請改用暫存表格。 如需詳細資訊，請參閱[從資料表匯入資料 &#40;Master Data Services&#41;](../master-data-services/import-data-from-tables-master-data-services.md)。  
   
 > [!NOTE]  
 >  如果某個成員是當做另一個成員的網域屬性值使用，您就無法刪除該成員。  
   
-## 必要條件  
+## <a name="prerequisites"></a>必要條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[總管]** 功能區域的權限。  
   
--   針對成員，您至少必須擁有分葉模型物件的**刪除**權限，才能從中刪除成員。  
+-   針對成員，您至少必須擁有分葉模型物件的 **刪除** 權限，才能從中刪除成員。  
   
--   針對集合，您必須至少擁有分頁集合物件**更新**權限，才能將其刪除。  
+-   針對集合，您必須至少擁有分頁集合物件 **更新** 權限，才能將其刪除。  
   
-### 若要刪除成員或集合  
+### <a name="to-delete-a-member-or-collection"></a>若要刪除成員或集合  
   
 1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 首頁上，選取 [模型]  清單中的模型。  
   
@@ -62,9 +67,9 @@ caps.handback.revision: 10
   
 8.  在確認對話方塊中按一下 **[確定]**。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [重新啟用成員或集合 &#40;Master Data Services&#41;](../master-data-services/reactivate-a-member-or-collection-master-data-services.md)   
- [成員 &#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)   
- [集合 &#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md)  
+ [成員 &#40;Master Data services&#41;](../master-data-services/members-master-data-services.md)   
+ [集合 &#40;Master Data services&#41;](../master-data-services/collections-master-data-services.md)  
   
   

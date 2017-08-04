@@ -1,32 +1,37 @@
 ---
-title: "功能相依性設定檔要求選項 (資料分析工作) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "資料分析工作編輯器"
+title: "功能相依性設定檔要求選項 （資料分析工作） |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Data Profiling Task Editor
 ms.assetid: 6eb853aa-8016-490c-be4f-06ab8d7f5021
 caps.latest.revision: 24
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4efcec555b59668145cd2b998c77a9cc1f8feb54
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 功能相依性設定檔要求選項 (資料分析工作)
+# <a name="functional-dependency-profile-request-options-data-profiling-task"></a>功能相依性設定檔要求選項 (資料分析工作)
   您可以使用 [設定檔要求] 頁面的 [要求屬性] 窗格，針對要求窗格中選取的 [功能相依性設定檔要求] 設定選項。 功能相依性設定檔會報告某個資料行 (相依資料行) 中的值相依於另一個資料行或資料行集合 (行列式資料行) 中之值的程度。 這個設定檔也可協助您識別資料中的問題，例如無效的值。 舉例來說，您分析了「郵遞區號」資料行與「美國州名」資料行之間的相依性。 在這個設定檔中，相同的郵遞區號應該永遠具有相同的州名，但是此設定檔卻發現了相依性的違規。  
   
 > [!NOTE]  
->  本主題所描述的選項會顯示在 **[資料分析工作編輯器]** 的 **[設定檔要求]**頁面上。 如需編輯器之這個頁面的詳細資訊，請參閱[資料分析工作編輯器 &#40;設定檔要求頁面&#41;](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md)。  
+>  本主題所描述的選項會顯示在 **[資料分析工作編輯器]** 的 **[設定檔要求]**頁面上。 如需此編輯器頁面的詳細資訊，請參閱[資料分析工作編輯器 &#40;設定檔要求頁面&#41;](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md)。  
   
- 如需如何使用資料分析工作的詳細資訊，請參閱[資料分析工作的設定](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)。 如需如何使用資料設定檔檢視器來分析資料分析工作輸出的詳細資訊，請參閱[資料設定檔檢視器](../../integration-services/control-flow/data-profile-viewer.md)。  
+ 如需如何使用資料分析工作的詳細資訊，請參閱[資料分析工作的設定](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)。 如需如何使用資料設定檔檢視器來分析資料分析工作輸出的詳細資訊，請參閱 [資料設定檔檢視器](../../integration-services/control-flow/data-profile-viewer.md)。  
   
-## 了解行列式和相依資料行的選擇  
+## <a name="understanding-the-selection-of-determinant-and-dependent-columns"></a>了解行列式和相依資料行的選擇  
  [功能相依性設定檔要求] 會計算行列式端資料行或資料行集合 (在 **DeterminantColumns** 屬性中指定) 決定相依端資料行值 (在 **DependentColumn** 屬性中指定) 的程度。 例如，美國州名資料行應該在功能上相依於美國郵遞區號資料行。 也就是說，如果郵遞區號 (行列式資料行) 是 98052，州名 (相依資料行) 應該永遠是華盛頓。  
   
  您可以針對行列式端，在 **DeterminantColumns** 屬性中指定資料行或資料行集合。 例如，假設有一個包含 A、B 和 C 資料行的範例資料表。您針對 **DeterminantColumns** 屬性進行下列選擇：  
@@ -40,7 +45,7 @@ caps.handback.revision: 24
 > [!NOTE]  
 >  如果您選取 **(\*)**，這個選項可能會產生大量計算並降低工作的效能。 不過，如果此工作找到滿足功能相依性臨界值的子集，它就不會分析其他組合。 例如，在上述範例資料表中，如果此工作決定 C 資料行是行列式資料行，它就不會繼續分析複合候選。  
   
-## 要求屬性選項  
+## <a name="request-properties-options"></a>要求屬性選項  
  [要求屬性] 窗格會針對 [功能相依性設定檔要求] 顯示下列選項群組：  
   
 -   [資料]，其中包括 **DeterminantColumns** 和 **DependentColumn** 選項  
@@ -49,7 +54,7 @@ caps.handback.revision: 24
   
 -   **選項。**  
   
-### 資料選項  
+### <a name="data-options"></a>資料選項  
  **ConnectionManager**  
  選取現有的 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 連線管理員，以便使用 .NET Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) 來連接至包含要分析之資料表或檢視表的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫。  
   
@@ -61,18 +66,18 @@ caps.handback.revision: 24
   
  如需詳細資訊，請參閱本主題的「了解行列式和相依資料行的選擇」和「DeterminantColumns 和 DependentColumn 選項」章節。  
   
- **DependentColumn**  
+ **)**  
  選取相依資料行。 也就是說，您可以選取其值由行列式端資料行或資料行集合之值決定的資料行。  
   
  如需詳細資訊，請參閱本主題的「了解行列式和相依資料行的選擇」和「DeterminantColumns 和 DependentColumn 選項」章節。  
   
-#### DeterminantColumns 和 DependentColumn 選項  
- 下列選項會呈現給在 **DeterminantColumns** 和 **DependentColumn** 中選取待分析的每個資料行。  
+#### <a name="determinantcolumns-and-dependentcolumn-options"></a>DeterminantColumns 和 DependentColumn 選項  
+ 下列選項會呈現給在 **DeterminantColumns** 和 **DependentColumn**中選取待分析的每個資料行。  
   
  如需詳細資訊，請參閱本主題前面的「了解行列式和相依資料行的選擇」章節。  
   
  **IsWildCard**  
- 指定是否已經選取 **(\*)** 萬用字元。 如果您已選取 **(\*)** 來分析所有資料行，這個選項會設定為 **True**。 如果您已選取要分析的個別資料行，它就會設定為 **[False]** 。 此選項是唯讀的。  
+ 指定是否已經選取 **(\*)** 萬用字元。 如果您已選取 **(\*)** 來分析所有資料行，這個選項會設定為 [True]。 如果您已選取要分析的個別資料行，它就會設定為 **[False]** 。 此選項是唯讀的。  
   
  **ColumnName**  
  顯示所選取資料行的名稱。 如果您已選取 **(\*)** 來分析所有資料行，這個選項就是空白的。 此選項是唯讀的。  
@@ -98,18 +103,18 @@ caps.handback.revision: 24
 |**IgnoreKanaType**|指定比較是否區分兩類日文的假名字元：平假名與片假名。 如果設定此選項，則字串比較會忽略假名類型。|  
 |**IgnoreWidth**|指定比較是否區分單一位元組字元和表示為雙位元組字元的相同字元。 如果設定此選項，則字串比較會將同一字元的單一位元組表示法和雙位元組表示法視為一樣。|  
   
-### 一般選項  
+### <a name="general-options"></a>一般選項  
  **RequestID**  
  輸入描述性名稱，以便識別這個設定檔要求。 一般而言，您不需要變更自動產生的值。  
   
-### 選項。  
+### <a name="options"></a>選項。  
  **ThresholdSetting**  
  指定臨界值設定。 這個屬性的預設值為 [已指定]。  
   
 |Value|說明|  
 |-----------|-----------------|  
 |**無**|沒有指定臨界值。 不論功能相依性強度為何，系統都會報告此值。|  
-|**已指定**|使用 **FDStrengthThreshold** 中指定的臨界值。 只有當功能相依性強度大於臨界值時，系統才會報告此值。|  
+|**已指定**|使用 **FDStrengthThreshold**中指定的臨界值。 只有當功能相依性強度大於臨界值時，系統才會報告此值。|  
 |**精確**|沒有指定臨界值。 只有當選取之資料行之間的功能相依性為精確時，系統才會報告此值。|  
   
  **FDStrengthThreshold**  
@@ -118,8 +123,8 @@ caps.handback.revision: 24
  **MaxNumberOfViolations**  
  指定可在輸出中報告的功能相依性違規數目上限。 這個屬性的預設值為 100。 當 [精確] 選取成為 [ThresholdSetting] 時，這個選項會停用。  
   
-## 請參閱＜  
- [資料分析工作編輯器 &#40;一般頁面&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
- [單一資料表快速分析表單 &#40;資料分析工作&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
+## <a name="see-also"></a>另請參閱  
+ [資料分析工作編輯器 &#40;一般頁面 &#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
+ [單一資料表快速分析表單 &#40; 資料分析工作 &#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   
   

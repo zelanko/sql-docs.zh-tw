@@ -1,31 +1,36 @@
 ---
-title: "使用 SQL Server 目的地來大量載入資料 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQL Server 目的地"
-  - "loading data"
-  - "目的地 [Integration Services], SQL Server"
-  - "插入資料"
-  - "大量載入 [Integration Services]"
+title: "使用 SQL Server 目的地來大量載入資料 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Server destination
+- loading data
+- destinations [Integration Services], SQL Server
+- inserting data
+- bulk load [Integration Services]
 ms.assetid: 8f982f85-a82e-4e2d-9cd8-cd2f85402d8e
 caps.latest.revision: 30
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6592de5c7bd0ca674c797d2d3e28f3adbe7dd339
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 使用 SQL Server 目的地來大量載入資料
+# <a name="bulk-load-data-by-using-the-sql-server-destination"></a>使用 SQL Server 目的地來大量載入資料
   若要加入及設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目的地，封裝至少必須包含一個「資料流程」工作及一個資料來源。  
   
-### 使用 SQL Server 目的地載入資料  
+### <a name="to-load-data-using-a-sql-server-destination"></a>使用 SQL Server 目的地載入資料  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，開啟包含所需封裝的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案。  
   
@@ -64,7 +69,7 @@ caps.handback.revision: 30
   
 11. 若要儲存已更新的封裝，請在 **[檔案]** 功能表上，按一下 **[儲存選取項目]** 。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [SQL Server 目的地](../../integration-services/data-flow/sql-server-destination.md)   
  [Integration Services 轉換](../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Integration Services 路徑](../../integration-services/data-flow/integration-services-paths.md)   

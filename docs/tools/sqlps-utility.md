@@ -1,31 +1,36 @@
 ---
-title: "sqlps 公用程式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "sqlps 公用程式"
-  - "PowerShell [SQL Server], sqlps 公用程式"
+title: "sqlps 公用程式 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- sqlps utility
+- PowerShell [SQL Server], sqlps utility
 ms.assetid: 4b2515a6-12c3-44fb-b263-1c567681cd2b
 caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 730d20d8f3accf9a172553fdec5c46aa95530b15
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# sqlps 公用程式
+# <a name="sqlps-utility"></a>sqlps 公用程式
   **sqlps** 公用程式會啟動 Windows PowerShell 工作階段並且載入和註冊 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 提供者與 Cmdlet。 您可以輸入 PowerShell 命令或指令碼，以便使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 元件來處理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體及其物件。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../includes/ssnotedepfutureavoid-md.md)] 請改用 **sqlps** PowerShell 模組。 如需有關 **sqlps** 模組的詳細資訊，請參閱 [Import the SQLPS Module](../relational-databases/scripting/import-the-sqlps-module.md)。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../includes/ssnotedepfutureavoid-md.md)]使用**sqlps** PowerShell 模組改為。 如需有關 **sqlps** 模組的詳細資訊，請參閱 [Import the SQLPS Module](../relational-databases/scripting/import-the-sqlps-module.md)。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -42,7 +47,7 @@ sqlps
 [ -? | -Help ]  
 ```  
   
-## 引數  
+## <a name="arguments"></a>引數  
  **-NoLogo**  
  指定 **sqlps** 公用程式在啟動時隱藏著作權橫幅。  
   
@@ -59,13 +64,13 @@ sqlps
  指定 **sqlps** 公用程式的輸入要格式化為文字字串 (**Text**) 或序列化的 CLIXML 格式 (**XML**)。  
   
  **-Command**  
- 指定 **sqlps** 公用程式要執行的命令。 除非同時指定了 **-NoExit**，否則 **sqlps** 公用程式會執行此命令，然後結束。 請勿在 **-Command** 之後指定任何其他參數，因為這些參數將會讀取成命令參數。  
+ 指定 **sqlps** 公用程式要執行的命令。 除非同時指定了 **-NoExit** ，否則 **sqlps** 公用程式會執行此命令，然後結束。 請勿在 **-Command**之後指定任何其他參數，因為這些參數將會讀取成命令參數。  
   
  **-**  
  **-Command-** 會指定 **sqlps** 公用程式從標準輸入中讀取輸入。  
   
  *script_block* [ **-args***argument_array* ]  
- 指定要執行的 PowerShell 命令區塊，此區塊必須以大括號 {} 括住。 只有當 **PowerShell** 或其他 **sqlps** 公用程式工作階段呼叫了 **sqlps** 公用程式時，才可指定 *Script_block*。 *argument_array* 是 PowerShell 變數的陣列，其中包含 *script_block* 中 PowerShell 命令的引數。  
+ 指定要執行的 PowerShell 命令區塊，此區塊必須以大括號 {} 括住。 只有當*Script_block* 或其他 **Script_block** 公用程式工作階段呼叫了 **Script_block** 公用程式時，才可指定 **Script_block** 。 *argument_array* 是 PowerShell 變數的陣列，其中包含 *script_block*中 PowerShell 命令的引數。  
   
  *string* [ *command_parameters* ]  
  指定包含要執行之 PowerShell 命令的字串。 使用 **"&{***command***}"** 的格式。 引號表示字串，而叫用運算子 (&) 會讓 **sqlps** 公用程式執行此命令。  
@@ -73,7 +78,7 @@ sqlps
  [ **-?** | **-Help** ]  
  顯示 **sqlps** 公用程式選項的語法摘要。  
   
-## 備註  
+## <a name="remarks"></a>備註  
  **sqlps** 公用程式會啟動 PowerShell 環境 (PowerShell.exe) 並載入 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 模組。 此模組 (也稱為 **sqlps**) 會載入及註冊以下 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 嵌入式管理單元：  
   
 -   Microsoft.SqlServer.Management.PSProvider.dll  
@@ -96,28 +101,28 @@ sqlps
   
  根據預設， **sqlps** 公用程式執行時會將指令碼執行原則設定為 **Restricted**。 如此即不會執行任何 PowerShell 指令碼。 您可以使用 **Set-ExecutionPolicy** Cmdlet 來允許執行已簽署的指令碼或任何指令碼。 建議您只執行來自信任來源的指令碼，並且利用適當的 NTFS 權限來保護所有輸入和輸出檔案。 如需有關啟用 PowerShell 指令碼的詳細資訊，請參閱 [執行 Windows PowerShell 指令碼](http://go.microsoft.com/fwlink/?LinkId=103166)。  
   
- [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 和 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 中的 **sqlps** 公用程式版本實作為 Windows PowerShell 1.0 迷你 Shell。 迷你 Shell 有一些限制，例如不允許使用者載入迷你 Shell 所載入之嵌入式管理單元以外的嵌入式管理單元。 這些限制不適用於 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 及更高版本的公用程式，這些版本已經變更為使用 **sqlps** 模組。  
+ **和** 中的 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] sqlps [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 公用程式版本實作為 Windows PowerShell 1.0 迷你 Shell。 迷你 Shell 有一些限制，例如不允許使用者載入迷你 Shell 所載入之嵌入式管理單元以外的嵌入式管理單元。 這些限制不適用於 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 及更高版本的公用程式，這些版本已經變更為使用 **sqlps** 模組。  
   
-## 範例  
- **A. 在不顯示著作權橫幅的預設互動模式中執行 sqlps 公用程式**  
+## <a name="examples"></a>範例  
+ **A.Sqlps 中執行公用程式預設不顯示著作權橫幅的互動模式**  
   
 ```  
 sqlps -NoLogo  
 ```  
   
- **B. 從命令提示字元處執行 SQL Server PowerShell 指令碼**  
+ **B.從命令提示字元中執行的 SQL Server PowerShell 指令碼**  
   
 ```  
 sqlps -Command "&{.\MyFolder.MyScript.ps1}"  
 ```  
   
- **C. 從命令提示字元處執行 SQL Server PowerShell 指令碼，並在指令碼完成之後維持執行狀態**  
+ **C.從命令提示字元中，執行 SQL Server PowerShell 指令碼和指令碼完成之後維持執行狀態**  
   
 ```  
 sqlps -NoExit -Command "&{.\MyFolder.MyScript.ps1}"  
 ```  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [啟用或停用伺服器網路通訊協定](../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)   
  [SQL Server PowerShell](../relational-databases/scripting/sql-server-powershell.md)  
   

@@ -1,38 +1,43 @@
 ---
-title: "刪除衍生階層 (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "刪除衍生階層 [Master Data Services]"
-  - "衍生階層, 刪除"
+title: "刪除衍生的階層 (Master Data Services) |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- deleting derived hierarchies [Master Data Services]
+- derived hierarchies, deleting
 ms.assetid: f46d660e-47f2-47ca-9372-1b5931540beb
 caps.latest.revision: 6
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3b95bf71e1cc687ffd70fce617fd6629fede7d5c
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 刪除衍生階層 (Master Data Services)
+# <a name="delete-a-derived-hierarchy-master-data-services"></a>刪除衍生階層 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中，刪除您不再需要的衍生階層。  
   
 > [!NOTE]  
 >  刪除衍生階層對於此階層所依據的屬性關聯性沒有影響。  
   
-## 必要條件  
+## <a name="prerequisites"></a>必要條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  
   
 -   您必須是模型管理員。 如需詳細資訊，請參閱 [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md) (管理員 (Master Data Services))。  
   
-### 若要刪除衍生階層  
+### <a name="to-delete-a-derived-hierarchy"></a>若要刪除衍生階層  
   
 1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]**。  
   
@@ -46,8 +51,8 @@ caps.handback.revision: 6
   
 6.  在確認對話方塊中按一下 **[確定]**。  
   
-## 另請參閱  
- [建立衍生階層 &#40;Master Data Services&#41;](../master-data-services/create-a-derived-hierarchy-master-data-services.md)   
- [衍生階層 &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md)  
+## <a name="see-also"></a>另請參閱  
+ [建立衍生的階層 &#40;Master Data services&#41;](../master-data-services/create-a-derived-hierarchy-master-data-services.md)   
+ [衍生的階層 &#40;Master Data services&#41;](../master-data-services/derived-hierarchies-master-data-services.md)  
   
   

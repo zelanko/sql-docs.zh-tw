@@ -1,31 +1,36 @@
 ---
-title: "XML 來源編輯器 (錯誤輸出頁面) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.xmlsourceadapter.erroroutput.f1"
-helpviewer_keywords: 
-  - "XML 來源編輯器"
+title: "XML 來源編輯器 （錯誤輸出頁面） |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.xmlsourceadapter.erroroutput.f1
+helpviewer_keywords:
+- XML Source Editor
 ms.assetid: 2ddb97c2-1e43-478f-8872-b6efd41b931e
 caps.latest.revision: 18
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7398b9d0eab5aace59f5bf927b78a41eee1adec2
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# XML 來源編輯器 (錯誤輸出頁面)
+# <a name="xml-source-editor-error-output-page"></a>XML 來源編輯器 (錯誤輸出頁面)
   使用 **[XML 來源編輯器]** 對話方塊的 **[錯誤輸出]** 頁面，以選取錯誤處理選項，並設定錯誤輸出資料行上的屬性。  
   
  如需有關 XML 來源的詳細資訊，請參閱＜ [XML Source](../../integration-services/data-flow/xml-source.md)＞。  
   
-## 選項。  
+## <a name="options"></a>選項。  
  **輸入/輸出**  
  檢視資料來源的名稱。  
   
@@ -35,7 +40,7 @@ caps.handback.revision: 18
  **錯誤**  
  指定錯誤發生時要採取的動作：忽略失敗、重新導向資料列，或使元件失效。  
   
- **相關主題︰**[處理資料中的錯誤](../../integration-services/data-flow/error-handling-in-data.md)  
+ **相關主題** [處理資料中的錯誤](../../integration-services/data-flow/error-handling-in-data.md)  
   
  **截斷**  
  指定截斷發生時要採取的動作：忽略失敗、重新導向資料列，或使元件失效。  
@@ -49,10 +54,10 @@ caps.handback.revision: 18
  **套用**  
  將錯誤處理選項套用至選取的資料格。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [Integration Services 錯誤和訊息參考](../../integration-services/integration-services-error-and-message-reference.md)   
- [XML 來源編輯器 &#40;連線管理員頁面&#41;](../../integration-services/data-flow/xml-source-editor-connection-manager-page.md)   
- [XML 來源編輯器 &#40;資料行頁面&#41;](../../integration-services/data-flow/xml-source-editor-columns-page.md)   
- [使用 XML 來源來擷取資料](../../integration-services/data-flow/extract-data-by-using-the-xml-source.md)  
+ [XML 來源編輯器 &#40;連接管理員頁面 &#41;](../../integration-services/data-flow/xml-source-editor-connection-manager-page.md)   
+ [XML 來源編輯器 &#40;資料行頁面 &#41;](../../integration-services/data-flow/xml-source-editor-columns-page.md)   
+ [使用 XML 來源擷取資料](../../integration-services/data-flow/extract-data-by-using-the-xml-source.md)  
   
   

@@ -1,40 +1,45 @@
 ---
-title: "將資料從 Master Data Services 匯入至 Excel | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "將資料匯出至 Excel 中，從 Master Data Services |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: dd29389b-928c-4e50-995c-c6af27f97805
 caps.latest.revision: 16
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7d2303d6a02bbed69b87e45120ee3de51f0278be
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 將資料從 Master Data Services 匯入至 Excel
-  在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] 中，您必須從 MDS 儲存機制匯出資料，才能使用資料。  
+# <a name="export-data-to-excel-from-master-data-services"></a>將資料從 Master Data Services 匯入至 Excel
+  在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，您必須從 MDS 儲存機制匯出資料，才能使用資料。  
   
  如果您想要在載入之前篩選資料集，請改為參閱[在匯出之前篩選資料 &#40;適用於 Excel 的 MDS 增益集&#41;](../../master-data-services/microsoft-excel-add-in/filter-data-before-exporting-mds-add-in-for-excel.md)。  
   
-## 必要條件  
+## <a name="prerequisites"></a>必要條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[總管]** 功能區域的權限。  
   
-### 將資料從 MDS 匯出至 Excel  
+### <a name="to-export-data-from-mds-into-excel"></a>將資料從 MDS 匯出至 Excel  
   
 1.  開啟 Excel，然後在 [主要資料] 索引標籤上，連接到 MDS 儲存機制。 如需詳細資訊，請參閱[連接到 MDS 儲存機制 &#40;適用於 Excel 的 MDS 增益集&#41;](../../master-data-services/microsoft-excel-add-in/connect-to-an-mds-repository-mds-add-in-for-excel.md)。  
   
 2.  在 [主資料總管] 窗格中，選取模型和版本。 系統就會填入實體的清單。  
   
-    -   如果沒有顯示 [主資料總管] 窗格，請按一下 [連接和載入] 群組中的 [顯示總管]。  
+    -   如果沒有顯示 **[主資料總管]** 窗格，請按一下 **[連接和載入]** 群組中的 **[顯示總管]**。  
   
-    -   如果已停用 [主資料總管] 窗格，原因是現有的工作表已經包含 MDS 管理的資料。 若要啟用此窗格，請開啟新的工作表。  
+    -   如果 **[主資料總管]** 窗格已停用，這是因為現有的工作表已經包含 MDS 管理的資料。 若要啟用此窗格，請開啟新的工作表。  
   
 3.  在 [主資料總管] 窗格的實體清單中，按兩下您想要載入的實體。  
   
@@ -47,12 +52,12 @@ caps.handback.revision: 16
     > [!NOTE]  
     >  如果您使用適用於 Microsoft Excel (32 位元 Excel) 的增益集載入以文字分隔的資料，而且 [Cell Count to Load (要載入的資料格計數)] 和 [Cell Count to Publish (要發行的資料格計數)] 屬性的值都設為最大值 1000，將會發生記憶體不足的錯誤。 您必須使用 64 位元 Excel，才能使用 [Cell Count to Load (要載入的資料格計數)] 和 [Cell Count to Publish (要發行的資料格計數)] 的最大值設定。  
   
-## 後續步驟  
+## <a name="next-steps"></a>後續步驟  
  [將資料從 Excel 匯入至 Master Data Services &#40;適用於 Excel 的 MDS 增益集&#41;](../../master-data-services/microsoft-excel-add-in/import-data-from-excel-to-master-data-services-mds-add-in-for-excel.md)  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [概觀：將資料匯出至 Excel &#40;適用於 Excel 的 MDS 增益集&#41;](../../master-data-services/microsoft-excel-add-in/overview-exporting-data-to-excel-mds-add-in-for-excel.md)   
- [篩選對話方塊 &#40;適用於 Excel 的 MDS 增益集&#41;](../../master-data-services/microsoft-excel-add-in/filter-dialog-box-mds-add-in-for-excel.md)   
+ [篩選對話方塊 &#40;MDS 增益集的 Excel &#41;](../../master-data-services/microsoft-excel-add-in/filter-dialog-box-mds-add-in-for-excel.md)   
  [概觀：從 Excel 匯入資料 &#40;適用於 Excel 的 MDS 增益集&#41;](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  
   
   

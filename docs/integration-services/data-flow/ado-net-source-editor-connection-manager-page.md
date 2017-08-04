@@ -1,24 +1,29 @@
 ---
-title: "ADO NET 來源編輯器 (連接管理員頁面) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.adonetsource.connection.f1"
+title: "ADO NET 來源編輯器 （連接管理員頁面） |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.adonetsource.connection.f1
 ms.assetid: 7de3f438-bdd6-49b5-937a-47369e754943
 caps.latest.revision: 19
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a76ec3875ab02de069e6feef699aff302d4dc5fd
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# ADO NET 來源編輯器 (連接管理員頁面)
+# <a name="ado-net-source-editor-connection-manager-page"></a>ADO NET 來源編輯器 (連接管理員頁面)
   使用 [ADO NET 來源編輯器] 對話方塊的 [連線管理員] 頁面，即可選取來源的 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 連線管理員。 這個頁面也可以讓您從資料庫中選取資料表或檢視。  
   
  若要深入了解 ADO NET 來源，請參閱＜ [ADO NET Source](../../integration-services/data-flow/ado-net-source.md)＞。  
@@ -31,7 +36,7 @@ caps.handback.revision: 19
   
 3.  在 [ADO NET 來源編輯器] 中，按一下 [連線管理員]。  
   
-## 靜態選項  
+## <a name="static-options"></a>靜態選項  
  **ADO.NET 連接管理員**  
  從清單中選取現有的連線管理員，或按一下 [新增] 來建立新的連線。  
   
@@ -50,15 +55,15 @@ caps.handback.revision: 19
  使用 [資料檢視] 對話方塊來預覽結果。 [預覽] 最多可顯示 200 個資料列。  
   
 > [!NOTE]  
->  在預覽資料時，具有 CLR 使用者定義型別的資料行不會包含資料。 而會顯示 \<數值太大而無法顯示> 或 System.Byte[]。 使用 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 提供者存取資料來源時會顯示前者，而使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 提供者時會顯示後者。  
+>  在預覽資料時，具有 CLR 使用者定義型別的資料行不會包含資料。 而是值\<值太大，無法顯示 > 或 System.Byte []。 使用 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 提供者存取資料來源時會顯示前者，而使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 提供者時會顯示後者。  
   
-## 資料存取模式動態選項  
+## <a name="data-access-mode-dynamic-options"></a>資料存取模式動態選項  
   
-### 資料存取模式 = 資料表或檢視  
+### <a name="data-access-mode--table-or-view"></a>資料存取模式 = 資料表或檢視  
  **資料表或檢視的名稱**  
  從資料來源中可用的清單中選取資料表或檢視名稱。  
   
-### 資料存取模式 = SQL 命令  
+### <a name="data-access-mode--sql-command"></a>資料存取模式 = SQL 命令  
  **SQL 命令文字**  
  輸入 SQL 查詢文字，按一下 [建立查詢] 建立查詢，或按一下 [瀏覽] 找到包含查詢文字的檔案。  
   
@@ -68,9 +73,9 @@ caps.handback.revision: 19
  **瀏覽**  
  使用 [開啟] 對話方塊來找出包含 SQL 查詢文字的檔案。  
   
-## 請參閱＜  
- [ADO NET 來源編輯器 &#40;資料行頁面&#41;](../../integration-services/data-flow/ado-net-source-editor-columns-page.md)   
- [ADO NET 來源編輯器 &#40;錯誤輸出頁面&#41;](../../integration-services/data-flow/ado-net-source-editor-error-output-page.md)   
+## <a name="see-also"></a>另請參閱  
+ [ADO NET 來源編輯器 &#40;資料行頁面 &#41;](../../integration-services/data-flow/ado-net-source-editor-columns-page.md)   
+ [ADO NET 來源編輯器 &#40;錯誤輸出頁面 &#41;](../../integration-services/data-flow/ado-net-source-editor-error-output-page.md)   
  [ADO.NET 連接管理員](../../integration-services/connection-manager/ado-net-connection-manager.md)  
   
   

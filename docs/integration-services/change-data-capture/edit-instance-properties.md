@@ -1,22 +1,27 @@
 ---
-title: "編輯執行個體屬性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "編輯執行個體屬性 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e7d6b164-b14a-4c2b-b8ad-0d4fe1f329f4
 caps.latest.revision: 6
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 14a55010cd2adc4ea02f0207b91a8e608ed7b176
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 編輯執行個體屬性
+# <a name="edit-instance-properties"></a>編輯執行個體屬性
   使用屬性編輯器，在您建立初始組態之後變更 CDC 執行個體。 您可以在屬性編輯器中執行以下動作。  
   
 -   [編輯 Oracle 資料庫屬性](../../integration-services/change-data-capture/edit-the-oracle-database-properties.md)  
@@ -29,9 +34,9 @@ caps.handback.revision: 6
   
 -   [檢閱及產生補充記錄指令碼](../../integration-services/change-data-capture/review-and-generate-supplemental-logging-scripts.md)  
   
--   [編輯進階屬性](../../integration-services/change-data-capture/edit-the-advanced-properties.md)  
+-   [編輯進階的屬性](../../integration-services/change-data-capture/edit-the-advanced-properties.md)  
   
-### 若要開啟屬性編輯器  
+### <a name="to-open-the-properties-editor"></a>若要開啟屬性編輯器  
   
 1.  從 CDC 設計工具主控台的左窗格，展開您要使用的服務。  
   
@@ -41,7 +46,7 @@ caps.handback.revision: 6
   
      您也可以用滑鼠右鍵按一下左窗格中的服務，然後選取 [屬性]。  
   
-### OR  
+### <a name="or"></a>OR  
   
 1.  從 CDC 設計工具主控台的左窗格，選取您要使用的服務。  
   

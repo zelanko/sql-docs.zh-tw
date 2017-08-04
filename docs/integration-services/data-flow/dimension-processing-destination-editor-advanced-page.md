@@ -1,31 +1,36 @@
 ---
-title: "維度處理目的地編輯器 (進階頁面) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.dimprocessingtransformation.advanced.f1"
-helpviewer_keywords: 
-  - "維度處理目的地編輯器"
+title: "維度處理目的地編輯器 （進階頁面） |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.dimprocessingtransformation.advanced.f1
+helpviewer_keywords:
+- Dimension Processing Destination Editor
 ms.assetid: 2b30835a-2680-4d98-89a4-4f17e29e3818
 caps.latest.revision: 27
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 81e97a5a5e653fb02f0e8a1ccc5741bb3e86acf1
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 維度處理目的地編輯器 (進階頁面)
+# <a name="dimension-processing-destination-editor-advanced-page"></a>維度處理目的地編輯器 (進階頁面)
   使用 **[維度處理目的地編輯器]** 對話方塊的 **[進階]** 頁面，來設定錯誤處理。  
   
  若要深入了解維度處理目的地，請參閱＜ [Dimension Processing Destination](../../integration-services/data-flow/dimension-processing-destination.md)＞。  
   
-## 選項。  
+## <a name="options"></a>選項。  
  **使用預設錯誤組態。**  
  指定是否要使用預設的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 錯誤處理。 依預設，此值為 **True**。  
   
@@ -96,9 +101,9 @@ caps.handback.revision: 27
  **瀏覽 (...)**  
  選取錯誤記錄的路徑。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [Integration Services 錯誤和訊息參考](../../integration-services/integration-services-error-and-message-reference.md)   
- [維度處理目的地編輯器 &#40;連線管理員頁面&#41;](../../integration-services/data-flow/dimension-processing-destination-editor-connection-manager-page.md)   
- [維度處理目的地編輯器 &#40;對應頁面&#41;](../../integration-services/data-flow/dimension-processing-destination-editor-mappings-page.md)  
+ [維度處理目的地編輯器 &#40;連接管理員頁面 &#41;](../../integration-services/data-flow/dimension-processing-destination-editor-connection-manager-page.md)   
+ [維度處理目的地編輯器 &#40;[對應] 頁面 &#41;](../../integration-services/data-flow/dimension-processing-destination-editor-mappings-page.md)  
   
   

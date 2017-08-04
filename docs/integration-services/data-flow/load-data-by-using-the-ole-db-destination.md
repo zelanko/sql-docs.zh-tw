@@ -1,29 +1,34 @@
 ---
-title: "使用 OLE DB 目的地來載入資料 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "載入資料"
-  - "OLE DB 目的地 [Integration Services]"
-  - "目的地 [Integration Services], OLE DB"
+title: "使用 OLE DB 目的地來載入資料 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- loading data
+- OLE DB destination [Integration Services]
+- destinations [Integration Services], OLE DB
 ms.assetid: 78899498-725e-4300-a7af-f983f4ea384b
 caps.latest.revision: 28
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: eada84a10a9163c3a5bf0757def7948e18bf35da
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 使用 OLE DB 目的地來載入資料
+# <a name="load-data-by-using-the-ole-db-destination"></a>使用 OLE DB 目的地來載入資料
   若要加入及設定 OLE DB 目的地，封裝必須已包括至少一個「資料流程」工作與來源。  
   
-### 使用 OLE DB 目的地載入資料  
+### <a name="to-load-data-using-an-ole-db-destination"></a>使用 OLE DB 目的地載入資料  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，開啟包含所需封裝的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案。  
   
@@ -54,13 +59,13 @@ caps.handback.revision: 28
     > [!NOTE]  
     >  OLE DB 目的地會自動對應具有相同名稱的資料行。  
   
-9. 若要設定錯誤輸出，請按一下 **[錯誤輸出]**。 如需詳細資訊，請參閱[在資料流程元件中設定錯誤輸出](../../integration-services/troubleshooting/configure-an-error-output-in-a-data-flow-component.md)。  
+9. 若要設定錯誤輸出，請按一下 **[錯誤輸出]**。 如需詳細資訊，請參閱 [偵錯資料流程](../../integration-services/troubleshooting/debugging-data-flow.md)。  
   
 10. 按一下 **[確定]**。  
   
 11. 若要儲存已更新的封裝，請在 **[檔案]** 功能表上，按一下 **[儲存選取項目]** 。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [OLE DB 目的地](../../integration-services/data-flow/ole-db-destination.md)   
  [Integration Services 轉換](../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Integration Services 路徑](../../integration-services/data-flow/integration-services-paths.md)   

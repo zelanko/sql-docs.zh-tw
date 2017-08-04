@@ -1,32 +1,37 @@
 ---
-title: "進階 Integration Services 運算式範例 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "函數 [Integration Services]"
-  - "運算子 [Integration Services]"
-  - "運算式 [Integration Services], 範例"
-  - "範例 [Integration Services]"
+title: "範例的進階 Integration Services 運算式 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- functions [Integration Services]
+- operators [Integration Services]
+- expressions [Integration Services], examples
+- examples [Integration Services]
 ms.assetid: c7794ba3-0de5-466b-ae8a-9ddd27360049
 caps.latest.revision: 34
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 819cf75cbfe7dba1bbd0c81d18ecc8db138b01f1
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 進階 Integration Services 運算式範例
+# <a name="examples-of-advanced-integration-services-expressions"></a>進階 Integration Services 運算式範例
   本節提供組合多個運算子和函數的進階運算式範例。 如果在優先順序條件約束或「條件式分割」轉換中使用運算式，則評估結果必須為布林。 不過，該條件約束不會套用至屬性運算式、變數、「衍生的資料行」轉換，或「For 迴圈」容器中使用的運算式。  
   
  下列範例使用 **AdventureWorks** 和 [!INCLUDE[ssSampleDBDWobject](../../includes/sssampledbdwobject-md.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫。 各範例代表其使用的資料表。  
   
-## 布林運算式  
+## <a name="boolean-expressions"></a>布林運算式  
   
 -   這個範例使用 **Product** 資料表。 運算式會評估 **SellStartDate** 資料行中的月份項目，而如果月份為六月或更晚的月份，則傳回 TRUE。  
   
@@ -47,7 +52,7 @@ caps.handback.revision: 34
     MakeFlag ==  TRUE && FinishedGoodsFlag == TRUE  && Size != (DT_WSTR,10)@BikeSize  
     ```  
   
--   此範例使用 **CurrencyRate** 資料表。 運算式會比較資料表中和變數的值。 如果 **FromCurrencyCode** 或 **ToCurrencyCode** 資料行中的項目等於變數值，且 **AverageRate** 中的值大於 **EndOfDayRate** 中的值，則會傳回 TRUE。  
+-   此範例使用 **CurrencyRate** 資料表。 運算式會比較資料表中和變數的值。 如果 **FromCurrencyCode** 或 **ToCurrencyCode** 資料行中的項目等於變數值，且 **AverageRate** 中的值大於 **EndOfDayRate**中的值，則會傳回 TRUE。  
   
     ```  
     (FromCurrencyCode == @FromCur || ToCurrencyCode == @ToCur) && AverageRate > EndOfDayRate  
@@ -65,10 +70,10 @@ caps.handback.revision: 34
     UPPER(SUBSTRING(Name,1,1)) != "A"  
     ```  
   
-## 非布林運算式  
+## <a name="non-boolean-expressions"></a>非布林運算式  
  非布林運算式可用於「衍生的資料行」轉換、屬性運算式，以及「For 迴圈」容器。  
   
--   這個範例使用 **Contact** 資料表。 運算式會移除 **FirstName**、**MiddleName** 和 **LastName** 資料行中開頭和尾端的空格。 如果不是 Null，則會擷取 **MiddleName** 資料行的第一個字母、串連中間的縮寫與 **FirstName** 和 **LastName** 中的值，以及在各值之間插入適當的空格。  
+-   這個範例使用 **Contact** 資料表。 運算式會移除 **FirstName**、 **MiddleName**和 **LastName** 資料行中開頭和尾端的空格。 如果不是 Null，則會擷取 **MiddleName** 資料行的第一個字母、串連中間的縮寫與 **FirstName** 和 **LastName**中的值，以及在各值之間插入適當的空格。  
   
     ```  
     TRIM(FirstName) + " " + (!ISNULL(MiddleName) ? SUBSTRING(MiddleName,1,1) + " " : "") + TRIM(LastName)  
@@ -98,10 +103,10 @@ caps.handback.revision: 34
     ROUND(ListPrice / StandardCost,2) * 100  
     ```  
   
-## 相關工作  
- [在資料流程元件中使用運算式](../Topic/Use%20an%20Expression%20in%20a%20Data%20Flow%20Component.md)  
+## <a name="related-tasks"></a>相關工作  
+ [在資料流程元件中使用運算式](http://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
   
-## 相關內容  
+## <a name="related-content"></a>相關內容  
  pragmaticworks.com 上的技術文件： [SSIS 運算式小抄](http://go.microsoft.com/fwlink/?LinkId=746575)  
   
   

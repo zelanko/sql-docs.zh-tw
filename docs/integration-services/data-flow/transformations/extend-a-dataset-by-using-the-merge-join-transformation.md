@@ -1,32 +1,37 @@
 ---
-title: "使用合併聯結轉換來擴充資料集 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "合併聯結轉換"
-  - "資料集 [Integration Services], 聯結"
-  - "資料集 [Integration Services], 擴充"
-  - "聯結資料集 [Integration Services]"
+title: "使用合併聯結轉換來擴充資料集 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Merge Join transformation
+- datasets [Integration Services], joining
+- datasets [Integration Services], extending
+- joining datasets [Integration Services]
 ms.assetid: 9e512c3c-f89b-45f3-8281-cdb8f35a2b1f
 caps.latest.revision: 27
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0a7d7b4a2af89c855a6269d90d94f79465bfad8a
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 使用合併聯結轉換來擴充資料集
+# <a name="extend-a-dataset-by-using-the-merge-join-transformation"></a>使用合併聯結轉換來擴充資料集
   若要加入和設定「合併聯結」轉換，封裝必須已包含至少一個「資料流程」工作，及兩個為「合併聯結」轉換提供輸入的資料流程元件。  
   
- 「合併聯結」轉換需要兩個經過排序的輸入。 如需詳細資訊，請參閱[排序合併和合併聯結轉換的資料](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)。  
+ 「合併聯結」轉換需要兩個經過排序的輸入。 如需詳細資訊，請參閱 [排序合併和合併聯結轉換的資料](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)。  
   
-### 擴充資料集  
+### <a name="to-extend-a-dataset"></a>擴充資料集  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]中，開啟包含所需封裝的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 專案。  
   
@@ -59,7 +64,7 @@ caps.handback.revision: 27
   
 11. 若要儲存已更新的封裝，請在 **[檔案]** 功能表上，按一下 **[儲存選取項目]** 。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [合併聯結轉換](../../../integration-services/data-flow/transformations/merge-join-transformation.md)   
  [Integration Services 轉換](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Integration Services 路徑](../../../integration-services/data-flow/integration-services-paths.md)   

@@ -1,29 +1,34 @@
 ---
-title: "使用 OLE DB 來源來擷取資料 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "擷取資料 [Integration Services]"
-  - "來源 [Integration Services], OLE DB"
-  - "OLE DB 來源 [Integration Services]"
+title: "使用 OLE DB 來源擷取資料 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- extracting data [Integration Services]
+- sources [Integration Services], OLE DB
+- OLE DB source [Integration Services]
 ms.assetid: 4ca6eeb5-b60e-4b81-86dd-0674be8ae8d8
 caps.latest.revision: 23
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: c80e5fef4855cf5066dfa00bf527e452aa616d33
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 使用 OLE DB 來源來擷取資料
+# <a name="extract-data-by-using-the-ole-db-source"></a>使用 OLE DB 來源來擷取資料
   若要加入及設定 OLE DB 來源，封裝必須已包含至少一個「資料流程」工作。  
   
-### 若要使用 OLE DB 來源擷取資料  
+### <a name="to-extract-data-using-an-ole-db-source"></a>若要使用 OLE DB 來源擷取資料  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，開啟包含所需封裝的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案。  
   
@@ -39,14 +44,14 @@ caps.handback.revision: 23
   
     -   **資料表或檢視** ：選取 OLE DB 連接管理員連接之資料庫中的資料表或檢視。  
   
-    -   **資料表名稱或檢視名稱變數**：選取包含 OLE DB 連接管理員連接之資料庫中資料表或檢視名稱的使用者自訂變數。  
+    -   **資料表名稱或檢視名稱變數** ：選取包含 OLE DB 連接管理員連接之資料庫中資料表或檢視名稱的使用者自訂變數。  
   
     -   **SQL 命令** ：輸入 SQL 命令，或按一下 **[建立查詢]** ，以使用 **[查詢產生器]**撰寫 SQL 命令。  
   
         > [!NOTE]  
-        >  命令可以包含參數。 如需詳細資訊，請參閱[在資料流程元件中將查詢參數對應至變數](../../integration-services/data-flow/map-query-parameters-to-variables-in-a-data-flow-component.md)。  
+        >  命令可以包含參數。 如需詳細資訊，請參閱 [在資料流程元件中將查詢參數對應至變數](../../integration-services/data-flow/map-query-parameters-to-variables-in-a-data-flow-component.md)。  
   
-    -   **來自變數的 SQL 命令**：選取包含 SQL 命令的使用者自訂變數。  
+    -   **來自變數的 SQL 命令** ：選取包含 SQL 命令的使用者自訂變數。  
   
         > [!NOTE]  
         >  變數必須在包含 OLE DB 來源之同一「資料流程」工作的範圍中定義，或在同一封裝的範圍中定義；此外，變數還必須具有字串資料類型。  
@@ -55,7 +60,7 @@ caps.handback.revision: 23
   
 8.  (選擇性) 藉由編輯 **[輸出資料行]** 清單中的值，更新輸出資料行的名稱。  
   
-9. 若要設定錯誤輸出，請按一下 **[錯誤輸出]**。 如需詳細資訊，請參閱[在資料流程元件中設定錯誤輸出](../../integration-services/troubleshooting/configure-an-error-output-in-a-data-flow-component.md)。  
+9. 若要設定錯誤輸出，請按一下 **[錯誤輸出]**。 如需詳細資訊，請參閱 [偵錯資料流程](../../integration-services/troubleshooting/debugging-data-flow.md)。  
   
 10. 您可以按一下 **[預覽]** ，以檢視 OLE DB 來源擷取之最多 200 個資料列的資料。  
   
@@ -63,7 +68,7 @@ caps.handback.revision: 23
   
 12. 若要儲存已更新的封裝，請在 **[檔案]** 功能表上，按一下 **[儲存選取項目]** 。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [OLE DB 來源](../../integration-services/data-flow/ole-db-source.md)   
  [Integration Services 轉換](../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Integration Services 路徑](../../integration-services/data-flow/integration-services-paths.md)   

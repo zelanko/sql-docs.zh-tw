@@ -1,46 +1,51 @@
 ---
-title: "模糊查閱轉換 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.fuzzylookuptrans.f1"
-helpviewer_keywords: 
-  - "清除資料"
-  - "比較資料"
-  - "Token 分隔符號 [Integration Services]"
-  - "暫存索引 [Integration Services]"
-  - "暫存資料表 [Integration Services]"
-  - "模糊查閱轉換"
-  - "參考資料表 [Integration Services]"
-  - "比對相似資料 [Integration Services]"
-  - "取代遺漏值"
-  - "更正資料 [Integration Services]"
-  - "快取 [Integration Services]"
-  - "標準化資料 [Integration Services]"
-  - "查閱 [Integration Services]"
-  - "信心分數 [Integration Services]"
-  - "模糊相符"
-  - "取代遺漏值 [Integration Services]"
-  - "相似度臨界值 [Integration Services]"
+title: "模糊查閱 」 轉換 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.fuzzylookuptrans.f1
+helpviewer_keywords:
+- cleaning data
+- comparing data
+- token delimiters [Integration Services]
+- temporary indexes [Integration Services]
+- temporary tables [Integration Services]
+- Fuzzy Lookup transformation
+- reference tables [Integration Services]
+- match similar data [Integration Services]
+- replacing missing values
+- correcting data [Integration Services]
+- cache [Integration Services]
+- standardizing data [Integration Services]
+- lookups [Integration Services]
+- confidence scores [Integration Services]
+- fuzzy matches
+- missing values replaced [Integration Services]
+- similarity thresholds [Integration Services]
 ms.assetid: 019db426-3de2-4ca9-8667-79fd9a47a068
 caps.latest.revision: 75
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 75
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2c05d44e6a91c79e5a5ce71b1e26ac2f4a319a88
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 模糊查閱轉換
+# <a name="fuzzy-lookup-transformation"></a>模糊查閱轉換
   「模糊查閱」轉換會執行資料清除工作，例如標準化資料、更正資料及提供遺漏值。  
   
 > [!NOTE]  
->  如需模糊查閱轉換 (包括效能和記憶體限制) 的詳細資訊，請參閱[Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](http://go.microsoft.com/fwlink/?LinkId=96604)(SQL Server Integration Services 2005 中的模糊查閱和模糊群組) 白皮書。  
+>  如需模糊查閱轉換 (包括效能和記憶體限制) 的詳細資訊，請參閱 [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](http://go.microsoft.com/fwlink/?LinkId=96604)(SQL Server Integration Services 2005 中的模糊查閱和模糊群組) 白皮書。  
   
  「模糊查詢」轉換與「查閱」轉換的不同之處在於其使用模糊比對。 「查閱」轉換使用等聯結 (Equi-Join)，在參考資料表中尋找相符的資料錄。 它會傳回至少有一項相符資料錄的資料錄，以及傳回沒有任何相符資料錄的資料錄。 相反地，「模糊查閱」轉換會使用模糊比對，傳回參考資料表中的一個或多個相近相符項目。  
   
@@ -50,13 +55,13 @@ caps.handback.revision: 75
   
  此轉換有一個輸入和一個輸出。  
   
- 只有具有 **DT_WSTR** 和 **DT_STR** 資料類型的資料行可用於模糊比對。 完全比對可使用任何 DTS 資料類型，但 **DT_TEXT**、**DT_NTEXT** 和 **DT_IMAGE** 除外。 如需詳細資訊，請參閱＜ [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md)＞。 參與輸入與參考資料表之間聯結的資料行必須具有相容的資料類型。 例如，將具有 DTS **DT_WSTR** 資料類型的資料行聯結到具有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **nvarchar** 資料類型的資料行是有效的，但將具有 **DT_WSTR** 資料類型的資料行聯結到具有 **int** 資料類型的資料行則是無效的。  
+ 只有具有 **DT_WSTR** 和 **DT_STR** 資料類型的資料行可用於模糊比對。 完全比對可使用任何 DTS 資料類型，但 **DT_TEXT**、 **DT_NTEXT**和 **DT_IMAGE**除外。 如需詳細資訊，請參閱＜ [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md)＞。 參與輸入與參考資料表之間聯結的資料行必須具有相容的資料類型。 例如，將具有 DTS **DT_WSTR** 資料類型的資料行聯結到具有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **nvarchar** 資料類型的資料行是有效的，但將具有 **DT_WSTR** 資料類型的資料行聯結到具有 **int** 資料類型的資料行則是無效的。  
   
  您可以指定最大記憶體數量、資料列比較演算法，以及轉換使用的索引和參考資料表快取，以自訂此轉換。  
   
  您可以透過設定 MaxMemoryUsage 自訂屬性來設定模糊查閱轉換所使用的記憶體數量。 您可以指定百萬位元組 (MB) 數，或是使用 0 值，讓轉換依據其需求與可用實體記憶體，使用動態的記憶體數量。 屬性運算式可以在載入封裝時更新 MaxMemoryUsage 自訂屬性。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; Expressions](../../../integration-services/expressions/integration-services-ssis-expressions.md) (Integration Services (SSIS) 運算式)、[Use Property Expressions in Packages](../../../integration-services/expressions/use-property-expressions-in-packages.md) (在封裝中使用屬性運算式) 和[轉換自訂屬性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)。  
   
-## 控制模糊比對行為  
+## <a name="controlling-fuzzy-matching-behavior"></a>控制模糊比對行為  
  「模糊查閱」轉換包含三種用於自訂其所執行之查閱的功能：每個輸入資料列傳回的相符項目上限、Token 分隔符號，以及相似度臨界值。  
   
  轉換會傳回零或多個相符項目，最多可傳回指定的相符項目數。 指定相符項目上限並不會保證轉換傳回最大數目的相符項目，而只會保證轉換最多傳回該數目的相符項目。 如果您將相符項目上限設為大於 1 的值，則每個查閱的轉換輸出可能會包含一個以上的資料列，且部分資料列可能是重複的。  
@@ -79,7 +84,7 @@ caps.handback.revision: 75
   
  轉換會使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫連接，以建立模糊比對演算法所使用的暫存資料表。  
   
-## 執行模糊查閱轉換  
+## <a name="running-the-fuzzy-lookup-transformation"></a>執行模糊查閱轉換  
  當封裝首次執行轉換時，轉換會複製參考資料表、將具有整數資料類型的索引鍵加入新資料表，並在索引鍵資料行上建立索引。 接著，轉換會在參考資料表的副本上建立索引，稱為相符索引。 相符索引會將值的 Token 化結果儲存在轉換輸入資料行中，轉換接著會在查閱作業中使用該 Token。 相符索引是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫中的資料表。  
   
  當封裝再次執行時，轉換可使用現有的相符索引，也可建立新索引。 如果參考資料表是靜態的，則封裝可以避免發生費時的程序，以便為資料清除的重複工作階段重建索引。 如果選擇使用現有的索引，則該索引是在封裝首次執行時建立的。 如果多個「模糊查閱」轉換使用相同的參考資料表，則它們都可使用同一索引。 若要重複使用索引，查閱作業必須是相同的，且查閱必須使用相同的資料行。 您可以命名索引，並選取儲存索引之 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫的連接。  
@@ -95,7 +100,7 @@ caps.handback.revision: 75
 |**GenerateNewIndex**|建立新索引，但不對其進行儲存。|  
 |**ReuseExistingIndex**|重複使用現有的索引。|  
   
-### 相符索引資料表的維護  
+### <a name="maintenance-of-the-match-index-table"></a>相符索引資料表的維護  
  **GenerateAndMaintainNewIndex** 選項會在參考資料表上安裝觸發程序，讓相符索引資料表與參考資料表同步。 如果您必須移除已安裝的觸發程序，則必須執行 **sp_FuzzyLookupTableMaintenanceUnInstall** 預存程序，並提供 MatchIndexName 屬性中指定的名稱作為輸入參數值。  
   
  在執行 **sp_FuzzyLookupTableMaintenanceUnInstall** 預存程序之前，您不應刪除所維護的相符索引資料表。 一旦刪除相符索引資料表，參考資料表上的觸發程序就無法再正確執行。 參考資料表的所有後續更新都將失敗，直到您手動卸除參考資料表上的觸發程序為止。  
@@ -103,24 +108,24 @@ caps.handback.revision: 75
  SQL TRUNCATE TABLE 命令不會叫用 DELETE 觸發程序。 如果在參考資料表上使用 TRUNCATE TABLE 命令，則參考資料表和相符索引將不再同步，且「模糊查閱」轉換會失敗。 在參考資料表上安裝維護相符索引資料表的觸發程序時，您應該使用 SQL DELETE 命令，而不是 TRUNCATE TABLE 命令。  
   
 > [!NOTE]  
->  當您在 **[模糊查閱轉換編輯器]** 的 **[參考資料表]** 索引標籤上選取 **[維護儲存的索引]**時，轉換會使用具名預存程序來維護索引。 這些 Managed 預存程序會使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的 Common Language Runtime (CLR) 整合功能。 根據預設，不會啟用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的 CLR 整合功能。 若要使用 **[維護儲存的索引]** 功能，您必須啟用 CLR 整合。 如需詳細資訊，請參閱 [Enabling CLR Integration](../Topic/Enabling%20CLR%20Integration.md)。  
+>  當您在 **[模糊查閱轉換編輯器]** 的 **[參考資料表]** 索引標籤上選取 **[維護儲存的索引]**時，轉換會使用具名預存程序來維護索引。 這些 Managed 預存程序會使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中的 Common Language Runtime (CLR) 整合功能。 根據預設，不會啟用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的 CLR 整合功能。 若要使用 **[維護儲存的索引]** 功能，您必須啟用 CLR 整合。 如需詳細資訊，請參閱 [Enabling CLR Integration](../../../relational-databases/clr-integration/clr-integration-enabling.md)。  
 >   
 >  因為 [維護儲存的索引]  選項需要 CLR 整合，因此只有當您在已啟用 CLR 整合的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體上選取參考資料表時，這項功能才有效。  
   
-## 資料列比較  
- 設定模糊查閱轉換時，您可以指定轉換在參考資料表中尋找相符記錄時所使用的比較演算法。 如果您將 Exhaustive 屬性設為 **True**，則轉換會比較輸入中的每一個資料列與參考資料表中的每一個資料列。 此比較演算法可產生更精確的結果，但很可能會讓轉換的執行速度更慢，除非參考資料表中的資料列數目較小。 如果將 Exhaustive 屬性設為 **True**，則會將整個參考資料表載入記憶體。 為避免效能問題，建議僅在封裝開發期間將 Exhaustive 屬性設為 **True**。  
+## <a name="row-comparison"></a>資料列比較  
+ 設定模糊查閱轉換時，您可以指定轉換在參考資料表中尋找相符記錄時所使用的比較演算法。 如果您將 Exhaustive 屬性設為 **True**，則轉換會比較輸入中的每一個資料列與參考資料表中的每一個資料列。 此比較演算法可產生更精確的結果，但很可能會讓轉換的執行速度更慢，除非參考資料表中的資料列數目較小。 如果將 Exhaustive 屬性設為 **True**，則會將整個參考資料表載入記憶體。 為避免效能問題，建議僅在封裝開發期間將 Exhaustive 屬性設為 **True** 。  
   
- 如果 Exhaustive 屬性設定為 **False**，模糊查閱轉換只會傳回至少具有一個與輸入記錄相同之已索引 Token 或子字串 (此子字串稱為 *q-gram*) 的相符項目。 為了達到最高的查閱效率，模糊查閱轉換只會在它用來尋找相符項目的反向索引結構中，檢索資料表內每個資料列中的一個 Token 子集。 如果輸入資料集很小，您可以將 Exhaustive 設定為 **True**，以免遺漏在索引資料表中沒有通用 Token 的相符項目。  
+ 如果 Exhaustive 屬性設定為 **False**，模糊查閱轉換只會傳回至少具有一個與輸入記錄相同之已索引 Token 或子字串 (此子字串稱為 *q-gram*) 的相符項目。 為了達到最高的查閱效率，模糊查閱轉換只會在它用來尋找相符項目的反向索引結構中，檢索資料表內每個資料列中的一個 Token 子集。 如果輸入資料集很小，您可以將 Exhaustive 設定為 **True** ，以免遺漏在索引資料表中沒有通用 Token 的相符項目。  
   
-## 索引和參考資料表的快取  
+## <a name="caching-of-indexes-and-reference-tables"></a>索引和參考資料表的快取  
  設定「模糊查閱」轉換時，您可以指定在轉換執行其工作之前，是否在記憶體中部分快取索引和參考資料表。 如果將 WarmCaches 屬性設為 **True**，則會將索引和參考資料表載入記憶體。 當輸入中的資料列較多時，將 WarmCaches 屬性設為 **True** 可改進轉換的效能。 當輸入資料列的數目較小時，將 WarmCaches 屬性設為 **False** 可以讓重複使用大型索引的速度更快。  
   
-## 暫存資料表和索引  
+## <a name="temporary-tables-and-indexes"></a>暫存資料表和索引  
  在執行階段，「模糊查閱」轉換會在轉換連接到的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫中建立暫存物件，例如資料表和索引。 這些暫存資料表和索引的大小，與參考資料表中的資料列和 Token 數目，以及「模糊查閱」轉換所建立的 Token 數目成正比，因此它們會佔用相當大的磁碟空間。 轉換還會查詢這些暫存資料表。 因此，您應該考量將「模糊查閱」轉換連接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫的非生產執行個體，特別是當生產伺服器的可用磁碟空間十分有限時。  
   
  如果此轉換所使用的資料表和索引在本機電腦上，則轉換的效能會有所改進。 如果「模糊查閱」轉換所使用的參考資料表在生產伺服器上，則應考量將資料表複製到非生產伺服器，並設定「模糊查閱」轉換存取該副本。 如此一來，您就可避免查閱查詢耗用生產伺服器上的資源。 此外，如果「模糊查閱」轉換維護相符索引 (也就是說，如果將 MatchIndexOptionsis 設為 **GenerateAndMaintainNewIndex**)，則轉換可能會在資料清除作業期間鎖定參考資料表，以防止其他使用者和應用程式存取該資料表。  
   
-## 設定模糊查閱轉換  
+## <a name="configuring-the-fuzzy-lookup-transformation"></a>設定模糊查閱轉換  
  您可以透過「 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師」或以程式設計方式設定屬性。  
   
  如需有關可在 **[模糊查閱轉換編輯器]** 對話方塊中設定之屬性的詳細資訊，請按下列其中一個主題：  
@@ -133,14 +138,14 @@ caps.handback.revision: 75
   
  如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [通用屬性](../Topic/Common%20Properties.md)  
+-   [通用屬性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [轉換自訂屬性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
-## 相關工作  
- 如需如何設定資料流程元件屬性的詳細資訊，請參閱 [Set the Properties of a Data Flow Component](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md) (設定資料流程元件的屬性)。  
+## <a name="related-tasks"></a>相關工作  
+ 如需如何設定資料流程元件屬性的詳細資訊，請參閱 [Set the Properties of a Data Flow Component](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)(設定資料流程元件的屬性)。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [查閱轉換](../../../integration-services/data-flow/transformations/lookup-transformation.md)   
  [模糊群組轉換](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)   
  [Integration Services 轉換](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  

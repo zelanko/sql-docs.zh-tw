@@ -1,26 +1,31 @@
 ---
-title: "模糊查閱轉換編輯器 (參考資料表索引標籤) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.fuzzylookuptransformation.referencetable.f1"
-helpviewer_keywords: 
-  - "模糊查閱轉換編輯器"
+title: "模糊查閱轉換編輯器 （參考資料表索引標籤） |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.fuzzylookuptransformation.referencetable.f1
+helpviewer_keywords:
+- Fuzzy Lookup Transformation Editor
 ms.assetid: 451f4e7d-1c8e-4784-b540-df0806509bf1
 caps.latest.revision: 35
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 083e8bbb2791cf8ac72dfde6b11ab93570a5990b
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 模糊查閱轉換編輯器 (參考資料表索引標籤)
+# <a name="fuzzy-lookup-transformation-editor-reference-table-tab"></a>模糊查閱轉換編輯器 (參考資料表索引標籤)
   使用 **[模糊查閱轉換編輯器]** 對話方塊的 **[參考資料表]** 索引標籤，指定來源資料表和用於查閱的索引。 參考資料來源必須是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫中的資料表。  
   
 > [!NOTE]  
@@ -31,12 +36,12 @@ caps.handback.revision: 35
   
  若要深入了解模糊查閱轉換，請參閱＜ [Fuzzy Lookup Transformation](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md)＞。  
   
-## 選項。  
+## <a name="options"></a>選項。  
  **OLE DB 連接管理員**  
- 從清單中選取現有的 OLE DB 連接管理員，或按一下 [新增] 來建立新連接。  
+ 從清單中選取現有的 OLE DB 連線管理員，或按一下 [新增] 來建立新連線。  
   
  **新增**  
- 使用 [設定 OLE DB 連接管理員] 對話方塊來建立新的連接。  
+ 使用 [設定 OLE DB 連線管理員] 對話方塊來建立新的連線。  
   
  **產生新的索引**  
  指定轉換應建立新的索引以用來查閱。  
@@ -50,11 +55,11 @@ caps.handback.revision: 35
  **新增索引名稱**  
  如果您已選擇要儲存新的查閱索引，請輸入該索引的描述性名稱。  
   
- **維護儲存的索引**  
+ **[維護儲存的索引]**  
  如果您已選擇要儲存新的查閱索引，請指定是否也要 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 維護該索引。  
   
 > [!NOTE]  
->  當您在 **[模糊查閱轉換編輯器]** 的 **[參考資料表]** 索引標籤上選取 **[維護儲存的索引]**時，轉換會使用具名預存程序來維護索引。 這些 Managed 預存程序會使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的 Common Language Runtime (CLR) 整合功能。 根據預設，不會啟用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的 CLR 整合功能。 若要使用 **[維護儲存的索引]** 功能，您必須啟用 CLR 整合。 如需詳細資訊，請參閱 [Enabling CLR Integration](../Topic/Enabling%20CLR%20Integration.md)。  
+>  當您在 **[模糊查閱轉換編輯器]** 的 **[參考資料表]** 索引標籤上選取 **[維護儲存的索引]**時，轉換會使用具名預存程序來維護索引。 這些 Managed 預存程序會使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中的 Common Language Runtime (CLR) 整合功能。 根據預設，不會啟用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的 CLR 整合功能。 若要使用 **[維護儲存的索引]** 功能，您必須啟用 CLR 整合。 如需詳細資訊，請參閱 [Enabling CLR Integration](../../../relational-databases/clr-integration/clr-integration-enabling.md)。  
 >   
 >  因為 **[維護儲存的索引]** 選項需要 CLR 整合，因此只有當您在已啟用 CLR 整合的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體上選取參考資料表時，這項功能才有效。  
   
@@ -64,9 +69,9 @@ caps.handback.revision: 35
  **現有索引的名稱**  
  從清單中選取先前建立的查閱索引。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [Integration Services 錯誤和訊息參考](../../../integration-services/integration-services-error-and-message-reference.md)   
- [模糊查閱轉換編輯器 &#40;資料行索引標籤&#41;](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation-editor-columns-tab.md)   
+ [模糊查閱轉換編輯器 &#40;資料行索引標籤 &#41;](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation-editor-columns-tab.md)   
  [模糊查閱轉換編輯器 &#40;進階索引標籤&#41;](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation-editor-advanced-tab.md)  
   
   

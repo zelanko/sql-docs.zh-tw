@@ -1,33 +1,38 @@
 ---
-title: "檔案系統工作 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.filesystemtask.f1"
-helpviewer_keywords: 
-  - "檔案系統工作 [Integration Services]"
+title: "檔案系統工作 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.filesystemtask.f1
+helpviewer_keywords:
+- File System task [Integration Services]
 ms.assetid: 7dd79a6a-e066-4028-a385-1d40f31056f8
 caps.latest.revision: 58
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 58
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: 0c10a9020fe4fd03e9d71df19a9b16223e3031ea
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 檔案系統工作
+# <a name="file-system-task"></a>檔案系統工作
   「檔案系統」工作會在檔案系統中的檔案和目錄上執行作業。 例如，封裝可使用「檔案系統」工作建立、移動或刪除目錄和檔案。 您也可以使用「檔案系統」工作設定檔案和目錄的屬性。 例如，「檔案系統」工作可將檔案設為隱藏或唯讀。  
   
  所有「檔案系統」工作作業均使用來源，其可為檔案或目錄。 例如，工作所複製的檔案或刪除的目錄即為來源。 來源可使用指向目錄或檔案的「檔案」連接管理員指定，或藉由提供包含來源路徑的變數名稱指定。 如需詳細資訊，請參閱[檔案連線管理員](../../integration-services/connection-manager/file-connection-manager.md)和 [Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)。  
   
  複製和移動檔案與目錄以及重新命名檔案的作業會使用目的地和來源。 目的地是使用「檔案」連接管理員或變數指定。 檔案系統工作的作業可設定為允許覆寫目的地檔案和目錄。 建立新目錄的作業可設定為當目錄已存在時使用具有指定名稱的現有目錄，而不會失敗。  
   
-## 預先定義的檔案系統作業  
+## <a name="predefined-file-system-operations"></a>預先定義的檔案系統作業  
  「檔案系統」工作包括一組預先定義的作業。 下表描述這些作業。  
   
 |運算|說明|  
@@ -49,14 +54,14 @@ caps.handback.revision: 58
   
 -   **加入和設定檔案系統工作** ：將「檔案系統」工作加入到「Foreach 迴圈」容易。 在「檔案系統工作編輯器」的 **[一般]** 頁面上，將 **[SourceVariable]** 或 **[DestinationVariable]** 屬性設定為您在「Foreach 迴圈」容器中定義的變數。  
   
-## 檔案系統工作上可用的自訂記錄項目  
- 下表描述「檔案系統」工作的自訂記錄項目。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 記錄](../../integration-services/performance/integration-services-ssis-logging.md)和[自訂訊息以進行記錄](../../integration-services/performance/custom-messages-for-logging.md)。  
+## <a name="custom-log-entries-available-on-the-file-system-task"></a>檔案系統工作上可用的自訂記錄項目  
+ 下表描述「檔案系統」工作的自訂記錄項目。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 記錄](../../integration-services/performance/integration-services-ssis-logging.md)。  
   
 |記錄項目|說明|  
 |---------------|-----------------|  
 |**FileSystemOperation**|報告工作執行的作業。 記錄項目會在檔案系統作業開始時寫入，項目中包含有關來源和目的地的資訊。|  
   
-## 設定檔案系統工作  
+## <a name="configuring-the-file-system-task"></a>設定檔案系統工作  
  您可以透過「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」或以程式設計方式設定屬性。  
   
  如需有關可在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中設定之屬性的詳細資訊，請參閱下列主題：  
@@ -67,16 +72,16 @@ caps.handback.revision: 58
   
  如需有關如何在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中設定這些屬性的詳細資訊，請參閱下列主題：  
   
--   [設定工作或容器的屬性](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+-   [設定工作或容器的屬性](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
  如需有關如何以程式設計的方式設定這些屬性的詳細資訊，請參閱下列主題：  
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask>  
   
-## 相關工作  
+## <a name="related-tasks"></a>相關工作  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包括下載和上傳資料檔以及管理伺服器上目錄的工作。 如需相關資訊，請參閱 [FTP Task](../../integration-services/control-flow/ftp-task.md)。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [Integration Services 工作](../../integration-services/control-flow/integration-services-tasks.md)   
  [控制流程](../../integration-services/control-flow/control-flow.md)  
   

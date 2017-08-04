@@ -1,28 +1,33 @@
 ---
-title: "設定 OLE DB 命令轉換 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "參數 [Integration Services]"
-  - "OLE DB 命令轉換"
+title: "設定 OLE DB 命令轉換 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- parameters [Integration Services]
+- OLE DB Command transformation
 ms.assetid: c800f167-3d2e-4c10-8ba3-a02f1872ccea
 caps.latest.revision: 24
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a93d0ab78a39f8e87fbd9863822a06522d542db0
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 設定 OLE DB 命令轉換
+# <a name="configure-the-ole-db-command-transformation"></a>設定 OLE DB 命令轉換
   若要加入及設定「OLE DB 命令」轉換，封裝必須至少已包含一個「資料流程」工作和一個來源 (例如「一般檔案」來源或 OLE DB 來源)。 此轉換通常用於執行參數化查詢。  
   
-### 設定 OLE DB 命令轉換  
+### <a name="to-configure-the-ole-db-command-transformation"></a>設定 OLE DB 命令轉換  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]中，開啟包含所需封裝的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 專案。  
   
@@ -46,7 +51,7 @@ caps.handback.revision: 24
   
 11. 展開 **[OLE DB 命令輸入]**，然後展開 **[外部資料行]**。  
   
-12. 請確認 **[外部資料行]** 會列出 SQL 陳述式中每個參數的資料行。 資料行的名稱為 **Param_0**、**Param_1** 等。  
+12. 請確認 **[外部資料行]** 會列出 SQL 陳述式中每個參數的資料行。 資料行的名稱為 **Param_0**、 **Param_1**等。  
   
      請不要變更這些資料行名稱。 如果您變更了這些資料行名稱， [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 就會針對 OLE DB 命令轉換產生驗證錯誤。  
   
@@ -56,7 +61,7 @@ caps.handback.revision: 24
   
     -   針對 SQL 陳述式中的每個參數，一次按一下 **[加入資料行]** 。  
   
-    -   將資料行的名稱更新為 **Param_0**、**Param_1** 等。  
+    -   將資料行的名稱更新為 **Param_0**、 **Param_1**等。  
   
     -   指定 DBParamInfoFlags 屬性中的值。 該值必須與 OLE DB DBPARAMFLAGSENUM 列舉中的值相符。 如需詳細資訊，請參閱 OLE DB 參考文件集。  
   
@@ -70,7 +75,7 @@ caps.handback.revision: 24
   
 15. 若要儲存更新的封裝，請按一下 **[檔案]** 功能表上的 **[儲存]** 。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [OLE DB 命令轉換](../../../integration-services/data-flow/transformations/ole-db-command-transformation.md)   
  [Integration Services 轉換](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Integration Services 路徑](../../../integration-services/data-flow/integration-services-paths.md)   

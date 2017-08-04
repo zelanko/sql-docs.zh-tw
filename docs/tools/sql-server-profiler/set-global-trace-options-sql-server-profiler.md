@@ -1,27 +1,32 @@
 ---
-title: "設定全域追蹤選項 (SQL Server Profiler) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "全域追蹤選項 [SQL Server]"
+title: "設定全域追蹤選項 (SQL Server Profiler) |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- global trace options [SQL Server]
 ms.assetid: 2854608a-c3c7-4eb8-b567-034bfec4b1a9
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e243eb89d6006d82191e73577ed18dd9a5840bd9
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 設定全域追蹤選項 (SQL Server Profiler)
+# <a name="set-global-trace-options-sql-server-profiler"></a>設定全域追蹤選項 (SQL Server Profiler)
   此主題描述如何設定適用於利用特定 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]執行個體而建立之所有追蹤的選項。  
   
-### 若要設定全域追蹤選項  
+### <a name="to-set-global-trace-options"></a>若要設定全域追蹤選項  
   
 1.  在 **[工具]** 功能表上，按一下 **[選項]**。  
   
@@ -59,14 +64,14 @@ caps.handback.revision: 24
   
     -   [預設健全狀況監視器輪詢間隔 (秒)] 設定輪詢重新執行的執行緒是否有封鎖處理序的頻率。 下表會說明這些值。  
   
-        |值|說明|  
+        |值|描述|  
         |-----------|-----------------|  
         |**1**|最小值。 設為 **1** 代表 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 會每秒輪詢封鎖處理序一次。|  
         |**60**|預設值。 每分鐘輪詢封鎖處理序一次。|  
         |**86400**|最大值。 每 **86400** 秒或每日輪詢封鎖處理序一次。|  
   
-## 另請參閱  
- [設定追蹤顯示預設值 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/set-trace-display-defaults-sql-server-profiler.md)   
+## <a name="see-also"></a>另請參閱  
+ [設定追蹤顯示預設值 &#40;SQL Server Profiler &#41;](../../tools/sql-server-profiler/set-trace-display-defaults-sql-server-profiler.md)   
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

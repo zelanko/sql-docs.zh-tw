@@ -1,27 +1,32 @@
 ---
-title: "WMI 事件監看員工作 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.wmieventwatchertask.f1"
-helpviewer_keywords: 
-  - "WQL [Integration Services]"
-  - "WMI 事件監看員工作 [Integration Services]"
+title: "WMI 事件監看員工作 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.wmieventwatchertask.f1
+helpviewer_keywords:
+- WQL [Integration Services]
+- WMI Event Watcher task [Integration Services]
 ms.assetid: b5bb52e9-a77e-41e1-93f9-d4c3bc6b2c9a
 caps.latest.revision: 53
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 53
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: f91107cf76f48f60b23b7ee1f0f93352468a1422
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# WMI 事件監看員工作
+# <a name="wmi-event-watcher-task"></a>WMI 事件監看員工作
   「WMI 事件監看員」工作使用 Management Instrumentation 查詢語言 (WQL) 事件查詢來監看 Windows Management Instrumentation (WMI) 事件，以指定感興趣的事件。 您可將「WMI 事件監看員」工作用於下列用途：  
   
 -   等待檔案已加入資料夾的通知，然後起始檔案的處理。  
@@ -36,8 +41,8 @@ caps.handback.revision: 53
   
 -   [WMI 資料讀取器工作](../../integration-services/control-flow/wmi-data-reader-task.md)  
   
-## WQL 查詢  
- WQL 是 SQL 用語，其包含的延伸模組可支援 WMI 事件通知和其他 WMI 特定功能。 如需 WQL 的詳細資訊，請參閱 [MSDN Library](http://go.microsoft.com/fwlink/?linkid=62553) 中的 Windows Management Instrumentation 文件。  
+## <a name="wql-queries"></a>WQL 查詢  
+ WQL 是 SQL 用語，其包含的延伸模組可支援 WMI 事件通知和其他 WMI 特定功能。 如需 WQL 的詳細資訊，請參閱 [MSDN Library](http://go.microsoft.com/fwlink/?linkid=62553)中的 Windows Management Instrumentation 文件。  
   
 > [!NOTE]  
 >  不同 Windows 版本的 WMI 類別也有所不同。  
@@ -54,8 +59,8 @@ SELECT * from __InstanceModificationEvent WITHIN 2 WHERE TargetInstance ISA 'Win
 SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_DirectoryContainsFile" and TargetInstance.GroupComponent= "Win32_Directory.Name=\"c:\\\\WMIFileWatcher\""   
 ```  
   
-## WMI 事件監看員工作上可用的自訂記錄訊息  
- 下表列出「WMI 事件監看員」工作的自訂記錄項目。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 記錄](../../integration-services/performance/integration-services-ssis-logging.md)和[自訂訊息以進行記錄](../../integration-services/performance/custom-messages-for-logging.md)。  
+## <a name="custom-logging-messages-available-on-the-wmi-event-watcher-task"></a>WMI 事件監看員工作上可用的自訂記錄訊息  
+ 下表列出「WMI 事件監看員」工作的自訂記錄項目。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 記錄](../../integration-services/performance/integration-services-ssis-logging.md)。  
   
 |記錄項目|說明|  
 |---------------|-----------------|  
@@ -63,7 +68,7 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
 |**WMIEventWatcherTimedout**|指出工作已經逾時。|  
 |**WMIEventWatcherWatchingForWMIEvents**|指出工作已經開始執行 WQL 查詢。 項目包含查詢。|  
   
-## WMI 事件監看員工作的組態  
+## <a name="configuration-of-the-wmi-event-watcher-task"></a>WMI 事件監看員工作的組態  
  您可以利用下列方式設定「WMI 資料讀取器」工作：  
   
 -   指定要使用的 WMI 連接管理員。  
@@ -98,9 +103,9 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
   
  如需有關如何在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中設定這些屬性的詳細資訊，請按下列主題：  
   
--   [設定工作或容器的屬性](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+-   [設定工作或容器的屬性](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
-## WMI 事件監看員工作的程式設計組態  
+## <a name="programmatic-configuration-of-the-wmi-event-watcher-task"></a>WMI 事件監看員工作的程式設計組態  
  如需有關以程式設計方式設定這些屬性的詳細資訊，請按下列主題：  
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.WmiEventWatcherTask.WmiEventWatcherTask>  

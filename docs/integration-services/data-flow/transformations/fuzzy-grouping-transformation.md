@@ -1,41 +1,46 @@
 ---
-title: "模糊群組轉換 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.fuzzygroupingtrans.f1"
-helpviewer_keywords: 
-  - "清除資料"
-  - "比較資料"
-  - "Token 分隔符號 [Integration Services]"
-  - "暫存索引 [Integration Services]"
-  - "模糊群組轉換"
-  - "暫存資料表 [Integration Services]"
-  - "群組資料"
-  - "標準化資料 [Integration Services]"
-  - "資料行 [Integration Services], 標準化"
-  - "相似度臨界值 [Integration Services]"
-  - "資料清除 [Integration Services]"
-  - "重複資料 [Integration Services]"
+title: "模糊群組轉換 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.fuzzygroupingtrans.f1
+helpviewer_keywords:
+- cleaning data
+- comparing data
+- token delimiters [Integration Services]
+- temporary indexes [Integration Services]
+- Fuzzy Grouping transformation
+- temporary tables [Integration Services]
+- grouping data
+- standardizing data [Integration Services]
+- columns [Integration Services], standardizing
+- similarity thresholds [Integration Services]
+- data cleaning [Integration Services]
+- duplicate data [Integration Services]
 ms.assetid: e43f17bd-9d13-4a8f-9f29-cce44cac1025
 caps.latest.revision: 58
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 58
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 009cdda72a100f887adb81e6f526b9a3ebe7651f
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 模糊群組轉換
+# <a name="fuzzy-grouping-transformation"></a>模糊群組轉換
   「模糊群組」轉換會透過識別可能重複的資料列並選取用於標準化資料的標準資料列，執行資料清除工作。  
   
 > [!NOTE]  
->  如需模糊群組轉換 (包括效能和記憶體限制) 的詳細資訊，請參閱 [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](http://go.microsoft.com/fwlink/?LinkId=96604) (SQL Server Integration Services 2005 中的模糊查閱和模糊群組) 白皮書。  
+>  如需模糊群組轉換 (包括效能和記憶體限制) 的詳細資訊，請參閱 [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](http://go.microsoft.com/fwlink/?LinkId=96604)(SQL Server Integration Services 2005 中的模糊查閱和模糊群組) 白皮書。  
   
  「模糊群組」轉換需要連接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的執行個體，以建立轉換演算法執行其工作所需的暫存 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料表。 連接必須解析為具有在資料庫中建立資料表之權限的使用者。  
   
@@ -47,7 +52,7 @@ caps.handback.revision: 58
   
 -   **_key_in**，唯一識別每個資料列的資料行。  
   
--   **_key_out**，識別一組重複資料列的資料行。 **_key_out** 資料行具有標準資料列中 **_key_in** 資料行的值。 具有與 **_key_out** 相同值的資料列屬於同一群組。 群組的 **_key_out** 值與標準資料列中 **_key_in** 的值相對應。  
+-   **_key_out**，識別一組重複資料列的資料行。 **_key_out** 資料行具有標準資料列中 **_key_in** 資料行的值。 具有與 **_key_out** 相同值的資料列屬於同一群組。 群組的 **_key_out**值與標準資料列中 **_key_in** 的值相對應。  
   
 -   **_score**，介於 0 與 1 之間的值，指出輸入資料列與標準資料列的相似度。  
   
@@ -67,17 +72,17 @@ caps.handback.revision: 58
   
  此轉換有一個輸入和一個輸出。 它不支援錯誤輸出。  
   
-## 資料列比較  
- 設定模糊群組轉換時，您可以指定轉換在比較轉換輸入中的資料列時所使用的比較演算法。 如果您將 Exhaustive 屬性設為 **true**，則轉換會比較輸入中的每一個資料列與輸入中的每個其他資料列。 此比較演算法可產生更精確的結果，但很可能會讓轉換的執行速度更慢，除非輸入中的資料列數目較小。 為避免效能問題，建議僅在封裝開發期間將 Exhaustive 屬性設為 **true**。  
+## <a name="row-comparison"></a>資料列比較  
+ 設定模糊群組轉換時，您可以指定轉換在比較轉換輸入中的資料列時所使用的比較演算法。 如果您將 Exhaustive 屬性設為 **true**，則轉換會比較輸入中的每一個資料列與輸入中的每個其他資料列。 此比較演算法可產生更精確的結果，但很可能會讓轉換的執行速度更慢，除非輸入中的資料列數目較小。 為避免效能問題，建議僅在封裝開發期間將 Exhaustive 屬性設為 **true** 。  
   
-## 暫存資料表和索引  
+## <a name="temporary-tables-and-indexes"></a>暫存資料表和索引  
  在執行階段，「模糊群組」轉換會在轉換連接到的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫中建立暫存物件，例如資料表和索引 (它們的大小可能相當大)。 資料表和索引的大小與轉換輸入中的資料列數目和「模糊群組」轉換所建立的 Token 數目成正比。  
   
- 轉換還會查詢暫存資料表。 因此，您應該考量將「模糊群組」轉換連接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的非生產執行個體，特別是當生產伺服器的可用磁碟空間十分有限時。  
+ 轉換還會查詢暫存資料表。 因此，您應該考量將「模糊群組」轉換連接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的非生產執行個體，特別是當生產伺服器的可用磁碟空間十分有限時。  
   
  如果此轉換所使用的資料表和索引在本機電腦上，則轉換的效能會有所改進。  
   
-## 模糊群組轉換的組態  
+## <a name="configuration-of-the-fuzzy-grouping-transformation"></a>模糊群組轉換的組態  
  您可以透過「 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師」或以程式設計方式設定屬性。  
   
  如需可在 [模糊群組轉換編輯器] 對話方塊中設定之屬性的詳細資訊，請按下列其中一個主題：  
@@ -90,18 +95,18 @@ caps.handback.revision: 58
   
  如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [通用屬性](../Topic/Common%20Properties.md)  
+-   [通用屬性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [轉換自訂屬性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
-## 相關工作  
+## <a name="related-tasks"></a>相關工作  
  如需有關如何設定此工作屬性的詳細資訊，請按下列其中一個主題：  
   
 -   [使用模糊群組轉換來識別相似的資料列](../../../integration-services/data-flow/transformations/identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation.md)  
   
 -   [設定資料流程元件的屬性](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [模糊查閱轉換](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md)   
  [Integration Services 轉換](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   

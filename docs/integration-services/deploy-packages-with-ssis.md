@@ -1,32 +1,37 @@
 ---
-title: "使用 SSIS 部署封裝 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/16/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-helpviewer_keywords: 
-  - "部署教學課程 [Integration Services]"
-  - "部署封裝 [Integration Services]"
-  - "SSIS, 教學課程"
-  - "Integration Services, 教學課程"
-  - "部署封裝 [Integration Services], 安裝"
-  - "SQL Server Integration Services, 教學課程"
-  - "逐步解說 [Integration Services]"
-  - "部署公用程式 [Integration Services]"
-  - "部署封裝 [Integration Services], 組態"
+title: "部署套件使用 SSIS |Microsoft 文件"
+ms.custom: 
+ms.date: 11/16/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+helpviewer_keywords:
+- deployment tutorial [Integration Services]
+- deploying packages [Integration Services]
+- SSIS, tutorials
+- Integration Services, tutorials
+- deploying packages [Integration Services], installing
+- SQL Server Integration Services, tutorials
+- walkthroughs [Integration Services]
+- deployment utility [Integration Services]
+- deploying packages [Integration Services], configurations
 ms.assetid: de18468c-cff3-48f4-99ec-6863610e5886
 caps.latest.revision: 27
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 939f988b8d91e93aa8f1cc4ef4b555af7b26cf67
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 使用 SSIS 部署封裝
+# <a name="deploy-packages-with-ssis"></a>使用 SSIS 部署封裝
 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供數個工具，可讓您輕鬆地將套件部署到另一部電腦。 部署工具也可以用來管理任何相依性，例如封裝所需的組態和檔案。 在這個教學課程中，您會學到如何使用這些工具，將封裝及其相依性安裝到目標電腦上。    
     
 首先，您會執行一些部署的準備工作。 您會在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中建立一個新的 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 專案，並且將現有的封裝和資料檔加入至該專案中。 您不需要從頭開始建立新的封裝，而是使用針對這個教學課程所建立的已完成的封裝。 您在這個教學課程中並不會修改封裝的功能，不過，在您將封裝加入至專案之後，若能在 [ [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師] 中開啟封裝並檢閱各個封裝的內容，可能會很有幫助。 因為您可以藉由檢查封裝，而了解封裝的相依性 (例如記錄檔) 以及封裝的其他有趣功能。    
@@ -47,14 +52,14 @@ caps.handback.revision: 27
 ## <a name="requirements"></a>需求    
 這個教學課程的主要對象是已經熟悉基本檔案系統作業，但對於 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]可用的新功能較為陌生的使用者。 為了進一步了解在這個教學課程中所要用到的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 基本概念，若能先完成下列 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 教學課程，將會很有幫助： [SSIS 如何建立 ETL 封裝](../integration-services/ssis-how-to-create-an-etl-package.md)。    
     
-**來源電腦。** 要用來建立部署配套的電腦**必須安裝下列元件：**
+**來源電腦。** 要用來建立部署配套的電腦 **必須安裝下列元件：**
 - SQL Server  
 - 範例資料、完成的套件、組態和讀我檔案。 如果您下載 [Adventure Works 2014 範例資料庫](https://msftdbprodsamples.codeplex.com/releases/view/125550)，則會同時安裝這些檔案。     
 > **注意！** 請確定您具有在 AdventureWorks 中建立和卸除資料表或您使用的其他資料的權限。         
     
 -   [SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx)。    
     
-**目的地電腦。** 要在其中部署套件的電腦**必須安裝下列元件：**    
+**目的地電腦。** 要在其中部署套件的電腦 **必須安裝下列元件：**    
     
 - SQL Server
 - 範例資料、完成的套件、組態和讀我檔案。 如果您下載 [Adventure Works 2014 範例資料庫](https://msftdbprodsamples.codeplex.com/releases/view/125550)，則會同時安裝這些檔案。 
@@ -63,7 +68,7 @@ caps.handback.revision: 27
     
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]。    
     
--   您必須具有在 AdventureWorks 中建立和卸除資料表以及在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中執行套件的權限。    
+-   您必須具有在 AdventureWorks 中建立和卸除資料表以及在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中執行套件的權限。    
     
 -   您必須具有 msdb [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 系統資料庫中 sysssispackages 資料表的讀取和寫入權限。    
     
@@ -81,3 +86,5 @@ caps.handback.revision: 27
 [第 3 課：安裝 SSIS 套件](../integration-services/lesson-3-install-ssis-packages.md)    
 在這一課中，您會將部署配套複製到目標電腦上、安裝封裝，然後執行封裝。    
     
+
+

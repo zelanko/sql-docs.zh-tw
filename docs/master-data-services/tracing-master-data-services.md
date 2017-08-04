@@ -1,22 +1,27 @@
 ---
-title: "追蹤 (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "追蹤 (Master Data Services) |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 45823fc8-723a-49f2-9a11-94d241245cfd
 caps.latest.revision: 7
-author: "sabotta"
-ms.author: "carlasab"
-manager: "erikre"
-caps.handback.revision: 7
+author: sabotta
+ms.author: carlasab
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9697bf0ee7df005c5cdd5b12126df2e31c7deca2
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 追蹤 (Master Data Services)
+# <a name="tracing-master-data-services"></a>追蹤 (Master Data Services)
   Web.config 檔案包含追蹤區段，如下所示。 這是 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]  
   
 ```  
@@ -63,7 +68,7 @@ caps.handback.revision: 7
     |Level|此追蹤項目的層級。|  
     |訊息|追蹤的訊息主體|  
   
-## 外部資源  
+## <a name="external-resources"></a>外部資源  
  msdn.com 上的部落格文章： [疑難排解記錄改進](http://go.microsoft.com/fwlink/p/?LinkId=615377)。  
   
   

@@ -1,22 +1,27 @@
 ---
-title: "查閱 ProcessChain | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "查閱 Processchain |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f6303ea4-fbbf-4cba-bc60-828df62be8c2
 caps.latest.revision: 11
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: df521b8df1b4e211dda395099b2e2cf112aeafda
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 查閱 ProcessChain
+# <a name="look-up-process-chain"></a>查閱 ProcessChain
   使用 **[查閱 ProcessChain]** 對話方塊可以查閱 SAP Netweaver BW 系統中定義的處理序鏈結。 出現可用的處理序鏈結清單時，請選取您要的鏈結，然後來源就會將必要的值填入相關聯的選項。  
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW 的 SAP BW 來源會使用 **[查閱 ProcessChain]** 對話方塊。 若要了解有關 SAP BW 來源的詳細資訊，請參閱＜ [SAP BW Source](../../integration-services/data-flow/sap-bw-source.md)＞。  
@@ -36,19 +41,19 @@ caps.handback.revision: 11
   
      只有當 [執行模式] 的值是 [P - 觸發處理鏈結] 時，才會出現 [處理序鏈結] 群組方塊。  
   
-## 查閱選項  
+## <a name="lookup-options"></a>查閱選項  
  在查閱欄位中，您可以使用星號萬用字元 (*) 或結合星號萬用字元使用部分字串來篩選結果。 不過，如果您將查閱欄位保留空白，查閱作業就只會比對該欄位中的空白字串。  
   
- **處理序鏈結**  
+ **Process chain**  
  輸入您想要查閱的處理序鏈結名稱，或輸入包含星號萬用字元 (*) 的部分名稱。 或者，單獨使用星號萬用字元來包含所有處理序鏈結。  
   
- **查閱**  
+ **[查閱]**  
  查閱 SAP Netweaver BW 系統中定義的相符處理序鏈結。  
   
-## 查閱結果  
+## <a name="lookup-results"></a>查閱結果  
  在您按一下 [查閱] 按鈕之後，SAP Netweaver BW 系統中的處理序鏈結清單就會顯示在包含下列資料行標題的資料表中：  
   
- **處理序鏈結**  
+ **[處理序鏈結]**  
  顯示 SAP Netweaver BW 系統中定義的處理序鏈結名稱。  
   
  **說明**  
@@ -56,7 +61,7 @@ caps.handback.revision: 11
   
  出現可用的處理序鏈結清單時，請選取您要的鏈結，然後來源就會將必要的值填入相關聯的選項。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [SAP BW 來源編輯器 &#40;連線管理員頁面&#41;](../../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)   
  [Microsoft Connector for SAP BW F1 說明](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   

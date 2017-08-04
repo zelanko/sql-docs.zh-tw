@@ -1,39 +1,44 @@
 ---
-title: "根據商務規則驗證特定成員 (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "套用商務規則 [Master Data Services]"
-  - "商務規則 [Master Data Services], 套用至選取成員"
+title: "根據商務規則 (Master Data Services) 驗證特定成員 |Microsoft 文件"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- applying business rules [Master Data Services]
+- business rules [Master Data Services], applying to select members
 ms.assetid: 2288ef43-5392-47ea-b651-ec25e5692a14
 caps.latest.revision: 7
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5ca1beaf471a1adfb91ec4fa66c32e0bde3c6514
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 根據商務規則驗證特定成員 (Master Data Services)
+# <a name="validate-specific-members-against-business-rules-master-data-services"></a>根據商務規則驗證特定成員 (Master Data Services)
   如果您想要更新或依照商務規則驗證成員子集，請在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中選擇性地套用商務規則。  
   
 > [!NOTE]  
 >  如果您想要將商務規則套用至某版本模型中的所有成員，請參閱[根據商務規則驗證版本 &#40;Master Data Services&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)。  
   
-## 必要條件  
+## <a name="prerequisites"></a>必要條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[總管]** 功能區域的權限。  
   
 -   針對要套用商務規則的模型物件，您必須至少擁有 **[更新]** 權限。  
   
-### 若要選擇性地套用商務規則  
+### <a name="to-apply-business-rules-selectively"></a>若要選擇性地套用商務規則  
   
 1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 首頁上，選取 [模型] 下拉式清單中的模型。  
   
@@ -45,7 +50,7 @@ caps.handback.revision: 7
   
 5.  按一下 [套用規則] 。 商務規則只套用至方格中顯示的成員。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [根據商務規則驗證版本 &#40;Master Data Services&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)   
  [商務規則 &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
   

@@ -1,31 +1,36 @@
 ---
-title: "HTTP 連接管理員編輯器 (Proxy 頁面) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.httpconnection.proxy.f1"
-helpviewer_keywords: 
-  - "HTTP 連接管理員編輯器"
+title: "HTTP 連接管理員編輯器 （Proxy 頁面） |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.httpconnection.proxy.f1
+helpviewer_keywords:
+- HTTP Connection Manager Editor
 ms.assetid: e831a830-49a3-49c5-8a31-9731fc4fd12e
 caps.latest.revision: 27
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 838fc4b195b0a3111b26b2a2a2f905bb5cc21b2c
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# HTTP 連接管理員編輯器 (Proxy 頁面)
+# <a name="http-connection-manager-editor-proxy-page"></a>HTTP 連接管理員編輯器 (Proxy 頁面)
   使用 **[HTTP 連接管理員編輯器]** 對話方塊的 **[Proxy]** 索引標籤，來設定 HTTP 連接管理員使用 Proxy 伺服器。 HTTP 連接讓封裝得以經由使用 HTTP 傳送或接收檔案，存取 Web 伺服器。  
   
  若要深入了解 HTTP 連接管理員，請參閱＜ [HTTP Connection Manager](../../integration-services/connection-manager/http-connection-manager.md)＞。 若要深入了解 HTTP 連接管理員的常見使用案例，請參閱＜ [Web Service Task](../../integration-services/control-flow/web-service-task.md)＞。  
   
-## 選項。  
+## <a name="options"></a>選項。  
  **使用 Proxy**  
  指定 HTTP 連接管理員是否要透過 Proxy 伺服器連接。  
   
@@ -56,8 +61,8 @@ caps.handback.revision: 27
  **移除**  
  選取一個位址，然後按一下 [移除] 來移除它。  
   
-## 請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../integration-services/integration-services-error-and-message-reference.md)   
- [HTTP 連線管理員編輯器 &#40;伺服器頁面&#41;](../../integration-services/connection-manager/http-connection-manager-editor-server-page.md)  
+ [HTTP 連接管理員編輯器 &#40;伺服器頁面 &#41;](../../integration-services/connection-manager/http-connection-manager-editor-server-page.md)  
   
   

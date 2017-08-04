@@ -1,25 +1,30 @@
 ---
-title: "錯誤處理 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "錯誤處理 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ff79e19d-afca-42a4-81b0-62d759380d11
 caps.latest.revision: 12
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9243f40c5088c8ed2abcb92c435d662b408b45d5
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 錯誤處理
+# <a name="error-handling"></a>錯誤處理
   Oracle CDC 執行個體會針對單一 Oracle 來源資料庫中的變更進行採礦處理 (Oracle RAC 叢集會視為單一資料庫)，並將認可的變更寫入目標 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中 CDC 資料庫內的變更資料表。  
   
- CDC 執行個體會在稱為 **cdc.xdbcdc_state** 的系統資料表中維護其狀態。 可以隨時查詢此資料表，以尋找 CDC 執行個體的狀態。 如需 cdc.xdbcdc_state 資料表的詳細資訊，請參閱 [cdc.xdbcdc_state](../../integration-services/change-data-capture/the-oracle-cdc-databases.md#BKMK_cdcxdbcdc_state)。  
+ CDC 執行個體會在稱為 **cdc.xdbcdc_state**的系統資料表中維護其狀態。 可以隨時查詢此資料表，以尋找 CDC 執行個體的狀態。 如需 cdc.xdbcdc_state 資料表的詳細資訊，請參閱 [cdc.xdbcdc_state](../../integration-services/change-data-capture/the-oracle-cdc-databases.md#BKMK_cdcxdbcdc_state)。  
   
  下表描述 xdbcdc_state 資料表中的 CDC 執行個體狀態。  
   
@@ -42,19 +47,19 @@ caps.handback.revision: 12
 |SUSPENDED|1|1|CDC 執行個體正在執行中，但是因為發生可復原的錯誤所以暫停處理。|DISCONNECTED：無法建立與來源 Oracle 資料庫的連接。 一旦還原連接時，處理作業便會繼續。<br /><br /> STORAGE：儲存體已滿。 當有儲存體可用時，處理作業便會繼續。 某些情況下可能不會出現這個狀態，因為無法更新狀態資料表。<br /><br /> LOGGER：記錄器已連接到 Oracle，但是因為暫時性問題所以無法讀取 Oracle 交易記錄。|  
 |DATAERROR|x|x|此狀態碼僅用於 **xdbcdc_trace** 資料表。 不會出現在 **xdbcdc_state** 資料表中。 具有此狀態的追蹤記錄表示 Oracle 記錄檔記錄發生問題。 錯誤的記錄檔記錄會儲存在 [資料] 資料行中當做 BLOB。|BADRECORD：無法剖析附加的記錄檔記錄。<br /><br /> CONVERT-ERROR：某些資料行中的資料無法轉換為擷取資料表中的目標資料行。 只有當組態指定轉換錯誤應該產生追蹤記錄時，才可能會出現這個狀態。|  
   
- 因為 Oracle CDC 服務狀態會儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，所以資料庫中的狀態值可能不會影響此服務的實際狀態。 最常見的情況是此服務遺失與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的連接，而且基於任何理由無法繼續。 在此情況下，儲存在 **cdc.xdbcdc_state** 中的狀態會過時。 如果上次更新時間戳記 (UTC) 已超過一分鐘，則狀態可能已過時。 在此情況下，請使用 Windows 事件檢視器來尋找有關此服務之狀態的其他資訊。  
+ 因為 Oracle CDC 服務狀態會儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，所以資料庫中的狀態值可能不會影響此服務的實際狀態。 最常見的情況是此服務遺失與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的連接，而且基於任何理由無法繼續。 在此情況下，儲存在 **cdc.xdbcdc_state** 中的狀態會過時。 如果上次更新時間戳記 (UTC) 已超過一分鐘，則狀態可能已過時。 在此情況下，請使用 Windows 事件檢視器來尋找有關此服務之狀態的其他資訊。  
   
-## 錯誤處理  
+## <a name="error-handling"></a>錯誤處理  
  本節描述 Oracle CDC 服務如何處理錯誤。  
   
-### 記錄  
+### <a name="logging"></a>記錄  
  Oracle CDC 服務會在下列其中一個位置建立錯誤資訊。  
   
 -   Windows 事件記錄檔，它會與記錄錯誤功能一起使用，並指示 Oracle CDC 服務生命週期事件 (啟動、停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體或是與它連接或重新連接)。  
   
 -   MSXDBCDC.dbo.xdbcdc_trace 資料表，它是由 Oracle CDC 服務主要處理序用於一般記錄和追蹤。  
   
--   \<cdc-database>.cdc.xdbcdc_trace 資料表，它是由 Oracle CDC 執行個體用於一般記錄和追蹤。 這表示與特定 Oracle CDC 執行個體有關的錯誤都會記錄到該執行個體的追蹤資料表。  
+-   \<Cdc 資料庫 >。 cdc.xdbcdc_trace 資料表，它用於一般記錄和追蹤由 Oracle CDC 執行個體。 這表示與特定 Oracle CDC 執行個體有關的錯誤都會記錄到該執行個體的追蹤資料表。  
   
  當 Oracle CDC 服務在以下情況時會記錄資訊：  
   
@@ -78,14 +83,14 @@ caps.handback.revision: 12
   
  追蹤資料表也用於記錄詳細追蹤資訊，以供疑難排解之用。  
   
-### 處理來源 Oracle 連接錯誤  
+### <a name="handling-source-oracle-connection-errors"></a>處理來源 Oracle 連接錯誤  
  Oracle CDC 服務需要具備與來源 Oracle 資料庫之間的持續性連接。 與服務組態不相關的許多連接錯誤 (例如網路錯誤) 會視為暫時性錯誤。 因此，如果 Oracle CDC 服務無法建立與 Oracle 資料庫之間的連接 (不論是在啟動時或是在中斷連接之後工作時)，此服務會將其狀態變更為 SUSPENDED/DISCONNECTED，然後進入重試迴圈 (在此迴圈中會以規律的間隔重試連接)。 當重新建立連接時，處理作業會繼續。  
   
  其他類型的連接錯誤不是暫時性 (例如，認證錯誤、權限不足及資料庫位址錯誤)。 當發生這些錯誤時，Oracle CDC 服務狀態會設定為 ERROR/MISCONFIGURED 或 ERROR/PASSWORD-REQUIRED，而且此服務會停用。 當使用者修正根本錯誤時，應該要手動重新啟用 Oracle CDC 執行個體，處理作業才會繼續。  
   
  如果不清楚錯誤是否為暫時性，最好先假定它是暫時性。  
   
-### 處理目標 SQL Server 連接錯誤  
+### <a name="handling-target-sql-server-connection-errors"></a>處理目標 SQL Server 連接錯誤  
  Oracle CDC 服務需要具備與目標 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之間的持續性連接。 此連接是用於：  
   
 -   確定目前沒有同名的其他服務正在使用這個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。  
@@ -100,19 +105,19 @@ caps.handback.revision: 12
   
  如果是暫時性錯誤和非預期的錯誤，則會重試此作業數次，而且如果失敗持續一段很長的時間，CDC 服務會停止其 CDC 執行個體子處理序，並回到最初的連接嘗試 (這時候，另一部電腦上的 Oracle CDC 服務可能已經取得具名 CDC 服務的控制權)。  
   
-### 處理目標 SQL Server 儲存體已滿的錯誤  
+### <a name="handling-target-sql-server-storage-full-errors"></a>處理目標 SQL Server 儲存體已滿的錯誤  
  當 Oracle CDC 服務偵測到它無法將新的變更資料插入目標 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CDC 執行個體時，它會將一則警告寫入事件記錄檔，並嘗試插入追蹤記錄 (雖然可能會因為同樣的原因而失敗)。 然後它會以特定間隔重試作業，直到成功為止。  
   
-### 處理 Oracle CDC 錯誤  
+### <a name="handling-oracle-cdc-errors"></a>處理 Oracle CDC 錯誤  
  Oracle CDC 執行個體會讀取 Oracle 交易記錄並進行處理。 如果 CDC 處理遇到錯誤，則會在 **cdc.xdbcdc_state** 資料表中報告此錯誤，而且使用者需要根據報告的錯誤來手動介入。  
   
  例如，Oracle CDC 執行個體可能有一段期間沒有活動，而且必要的 Oracle 交易記錄檔案不再可用。 在此情況下，Oracle DBA 必須還原必要的記錄，Oracle CDC 執行個體才能繼續處理。  
   
-### 處理非預期的 Oracle CDC 執行個體失敗  
+### <a name="handling-unexpected-oracle-cdc-instance-failures"></a>處理非預期的 Oracle CDC 執行個體失敗  
  Oracle CDC 服務會監視其 CDC 執行個體子處理序。 當 CDC 執行個體子處理序中止時，CDC 服務會在 MSXDBCDC.dbo.xdbcdc_databases 資料表中停用它，並將其 cdc.xdbcdc_state 狀態更新為 ABORTED。 在此情況下，標準 Windows 錯誤報告對話方塊會用來報告這個錯誤，以供進一步分析。  
   
-## 請參閱＜  
- [Attunity Oracle 異動資料擷取設計工具](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md)   
+## <a name="see-also"></a>請參閱＜  
+ [Attunity oracle 異動資料擷取設計工具](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md)   
  [Oracle CDC 執行個體](../../integration-services/change-data-capture/the-oracle-cdc-instance.md)  
   
   

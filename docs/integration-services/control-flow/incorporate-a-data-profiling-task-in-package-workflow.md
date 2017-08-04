@@ -1,24 +1,29 @@
 ---
-title: "在封裝工作流程中納入資料分析工作 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "資料分析工作 [Integration Services], 使用工作流程中的輸出"
+title: "納入資料分析封裝工作流程中的 工作 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Data Profiling task [Integration Services], using output in workflow
 ms.assetid: 39a51586-6977-4c45-b80b-0157a54ad510
 caps.latest.revision: 24
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ea3c68e0320216c81ce2a47f426112dd4a25f22f
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 在封裝工作流程中納入資料分析工作
+# <a name="incorporate-a-data-profiling-task-in-package-workflow"></a>在封裝工作流程中納入資料分析工作
   在早期階段中，資料分析和清除並非自動化處理序的候選項目。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中，資料分析工作的輸出通常需要進行視覺化分析和人為判斷，才能決定報告的違規項目是否有意義，或是否為過度報告。 甚至在辨識出資料品質問題之後，您仍然必須仔細地全盤規劃，尋求最佳的清除方法。  
   
  不過，當資料品質的準則確立之後，您可能會想要自動化資料來源的定期分析與清除作業。 請考慮這些狀況：  
@@ -29,10 +34,10 @@ caps.handback.revision: 24
   
  在您設有可合併資料流程工作的工作流程之後，就必須了解加入這項工作所需的步驟。 下一節將描述合併資料流程工作的一般程序。 最後兩節則描述如何將資料流程工作直接連接至資料來源，或連接至資料流程的已轉換資料。  
   
-## 定義資料流程工作的一般工作流程  
+## <a name="defining-a-general-workflow-for-the-data-flow-task"></a>定義資料流程工作的一般工作流程  
  下列程序將概述在封裝之工作流程中使用資料分析工作輸出的一般方法。  
   
-#### 以程式設計方式在封裝中使用資料分析工作的輸出  
+#### <a name="to-use-the-output-of-the-data-profiling-task-programmatically-in-a-package"></a>以程式設計方式在封裝中使用資料分析工作的輸出  
   
 1.  加入並設定封裝中的資料分析工作。  
   
@@ -53,7 +58,7 @@ caps.handback.revision: 24
   
  下列各節會將這個一般工作流程套用至直接來自外部資料來源或從資料流程工作轉換的分析資料。 此外，這些章節也會說明如何處理資料流程工作的輸入和輸出需求。  
   
-## 將資料分析工作直接連接至外部資料來源  
+## <a name="connecting-the-data-profiling-task-directly-to-an-external-data-source"></a>將資料分析工作直接連接至外部資料來源  
  資料分析工作可以分析直接來自某個資料來源的資料。  為了說明這項功能，下列範例會使用資料分析工作，針對 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中 Person.Address 資料表的資料行計算資料行 Null 比例設定檔。 然後，這則範例會使用指令碼工作，從輸出檔中擷取結果並填入可用來導向工作流程的封裝變數。  
   
 > [!NOTE]  
@@ -71,33 +76,33 @@ caps.handback.revision: 24
   
 -   設定優先順序條件約束，以便控制工作流程中的哪些下游分支會根據資料分析工作的結果執行。  
   
-### 設定連接管理員  
+### <a name="configure-the-connection-managers"></a>設定連接管理員  
  在這則範例中，我們設有兩個連接管理員：  
   
 -   連接至 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 資料庫的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 連接管理員。  
   
 -   建立輸出檔以便保存資料分析工作結果的檔案連接管理員。  
   
-##### 設定連接管理員  
+##### <a name="to-configure-the-connection-managers"></a>設定連接管理員  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，建立新的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝。  
   
 2.  將 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 連接管理員加入至封裝。 將這個連線管理員設定為使用 NET Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) 並連接至 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫的可用執行個體。  
   
-     根據預設，此連線管理員具有下列名稱：\<伺服器名稱>.AdventureWorks1。  
+     根據預設，連接管理員包含下列名稱：\<伺服器名稱 >。AdventureWorks1。  
   
 3.  將檔案連接管理員加入至封裝。 將這個連接管理員設定為建立資料分析工作的輸出檔。  
   
      這個範例會使用檔案名稱 DataProfile1.xml。 根據預設，此連接管理員與該檔案具有相同的名稱。  
   
-### 設定封裝變數  
+### <a name="configure-the-package-variables"></a>設定封裝變數  
  這個範例會使用兩個封裝變數：  
   
 -   ProfileConnectionName 變數會將檔案連接管理員的名稱傳遞給指令碼工作。  
   
 -   AddressLine2NullRatio 變數會從指令碼工作將這個資料行的已計算 Null 比例傳遞給封裝。  
   
-##### 設定即將保存設定檔結果的封裝變數  
+##### <a name="to-configure-the-package-variables-that-will-hold-profile-results"></a>設定即將保存設定檔結果的封裝變數  
   
 -   在 **[變數]** 視窗中，加入並設定下列兩個封裝變數：  
   
@@ -105,7 +110,7 @@ caps.handback.revision: 24
   
     -   為另一個變數輸入 **AddressLine2NullRatio**名稱，然後將這個變數的類型設定為 [Double] 。  
   
-### 設定資料分析工作  
+### <a name="configure-the-data-profiling-task"></a>設定資料分析工作  
  您必須以下列方式來設定資料分析工作：  
   
 -   使用 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 連接管理員所提供的資料當做輸入。  
@@ -114,7 +119,7 @@ caps.handback.revision: 24
   
 -   將設定檔結果儲存至與檔案連接管理員相關聯的檔案。  
   
-##### 設定資料分析工作  
+##### <a name="to-configure-the-data-profiling-task"></a>設定資料分析工作  
   
 1.  針對控制流程，加入資料分析工作。  
   
@@ -128,10 +133,10 @@ caps.handback.revision: 24
   
 6.  關閉 [資料分析工作編輯器]。  
   
-### 設定指令碼工作  
+### <a name="configure-the-script-task"></a>設定指令碼工作  
  您必須設定指令碼工作，以便從輸出檔中擷取結果，然後填入先前設定的封裝變數。  
   
-##### 設定指令碼工作  
+##### <a name="to-configure-the-script-task"></a>設定指令碼工作  
   
 1.  針對控制流程，加入指令碼工作。  
   
@@ -262,7 +267,7 @@ caps.handback.revision: 24
   
 8.  關閉指令碼開發環境，然後關閉 [指令碼工作編輯器]。  
   
-#### 替代程式碼 - 從變數中讀取設定檔輸出  
+#### <a name="alternative-codereading-the-profile-output-from-a-variable"></a>替代程式碼 - 從變數中讀取設定檔輸出  
  上一個程序說明了如何從檔案載入資料分析工作的輸出。 不過，我們提供了替代方法，可從封裝變數載入這個輸出。 若要從變數載入封裝，您必須針對範例程式碼進行下列變更：  
   
 -   呼叫 **LoadXml** 類別的 **XmlDocument** 方法，而非 **Load** 方法。  
@@ -285,16 +290,16 @@ caps.handback.revision: 24
     profileOutput.LoadXml(outputString);  
     ```  
   
-### 設定優先順序條件約束  
+### <a name="configure-the-precedence-constraints"></a>設定優先順序條件約束  
  您必須設定優先順序條件約束，以便控制工作流程中的哪些下游分支會根據資料分析工作的結果執行。  
   
-##### 設定優先順序條件約束  
+##### <a name="to-configure-the-precedence-constraints"></a>設定優先順序條件約束  
   
 -   在將指令碼工作連接至工作流程中下游分支的優先順序條件約束中，撰寫使用變數值來導向工作流程的運算式。  
   
      例如，您可能會將優先順序條件約束的 **[評估作業]** 設定為 **[運算式與條件約束]**。 然後，您可能會使用 `@AddressLine2NullRatio < .90` 當做運算式的值。 當先前的工作成功，而且選取資料行中 Null 值的百分比小於 90% 時，這樣做會導致工作流程遵循選取的路徑。  
   
-## 將資料分析工作連接至資料流程的已轉換資料  
+## <a name="connecting-the-data-profiling-task-to-transformed-data-from-the-data-flow"></a>將資料分析工作連接至資料流程的已轉換資料  
  除了分析直接來自資料來源的資料以外，您也可以分析已經在資料流程中載入並轉換的資料。 不過，資料分析工作只能針對保存的資料運作，無法針對記憶體中的資料運作。 因此，您必須先使用目的地元件，將已轉換的資料儲存至臨時資料表。  
   
 > [!NOTE]  
@@ -310,7 +315,7 @@ caps.handback.revision: 24
   
  下列程序將提供使用資料分析工作來分析已經由資料流程轉換之資料的一般方法。 其中許多步驟都與先前針對分析直接來自外部資料來源之資料所描述的步驟相同。 如需有關如何設定各種元件的詳細資訊，您可能會想要檢閱先前的步驟。  
   
-#### 在資料流程中使用資料分析工作  
+#### <a name="to-use-the-data-profiling-task-in-the-data-flow"></a>在資料流程中使用資料分析工作  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，建立封裝。  
   
@@ -326,7 +331,7 @@ caps.handback.revision: 24
   
 7.  在將指令碼工作連接至工作流程中下游分支的優先順序條件約束中，撰寫使用變數值來導向工作流程的運算式。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [資料分析工作的設定](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)   
  [資料設定檔檢視器](../../integration-services/control-flow/data-profile-viewer.md)  
   

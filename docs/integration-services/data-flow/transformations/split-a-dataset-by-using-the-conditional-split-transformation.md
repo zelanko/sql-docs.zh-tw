@@ -1,29 +1,34 @@
 ---
-title: "使用條件式分割轉換來分割資料集 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "條件式分割轉換"
-  - "分割資料集"
-  - "資料集 [Integration Services], 分割"
+title: "使用條件式分割轉換來分割資料集 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Conditional Split transformation
+- splitting dataset
+- datasets [Integration Services], splitting
 ms.assetid: 23b3e84f-9296-4dc9-81c0-c7f06ae3f1ff
 caps.latest.revision: 40
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 40
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: 8248e068541c6bd72b21f78d121811f4851850bb
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 使用條件式分割轉換來分割資料集
+# <a name="split-a-dataset-by-using-the-conditional-split-transformation"></a>使用條件式分割轉換來分割資料集
   若要加入及設定「條件式分割」轉換，封裝中必須已包含至少一個「資料流程」工作和一個來源。  
   
-### 若要條件式分割資料集  
+### <a name="to-conditionally-split-a-dataset"></a>若要條件式分割資料集  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]中，開啟包含所需封裝的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 專案。  
   
@@ -52,18 +57,18 @@ caps.handback.revision: 40
   
 9. (選擇性) 修改不符合任何條件之資料列的預設輸出名稱。  
   
-10. 若要設定錯誤輸出，請按一下 **[設定錯誤輸出]**。 如需詳細資訊，請參閱[在資料流程元件中設定錯誤輸出](../../../integration-services/troubleshooting/configure-an-error-output-in-a-data-flow-component.md)。  
+10. 若要設定錯誤輸出，請按一下 **[設定錯誤輸出]**。 如需詳細資訊，請參閱 [偵錯資料流程](../../../integration-services/troubleshooting/debugging-data-flow.md)。  
   
 11. 按一下 **[確定]**。  
   
 12. 若要儲存已更新的封裝，請在 **[檔案]** 功能表上，按一下 **[儲存選取項目]** 。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [條件式分割轉換](../../../integration-services/data-flow/transformations/conditional-split-transformation.md)   
  [Integration Services 轉換](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Integration Services 路徑](../../../integration-services/data-flow/integration-services-paths.md)   
  [Integration Services 資料類型](../../../integration-services/data-flow/integration-services-data-types.md)   
  [資料流程工作](../../../integration-services/control-flow/data-flow-task.md)   
- [Integration Services &#40;SSIS&#41; 運算式](../../../integration-services/expressions/integration-services-ssis-expressions.md)  
+ [Integration Services &#40;SSIS &#41;運算式](../../../integration-services/expressions/integration-services-ssis-expressions.md)  
   
   

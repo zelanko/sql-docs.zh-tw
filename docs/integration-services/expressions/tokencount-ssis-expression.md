@@ -1,41 +1,46 @@
 ---
-title: "TOKENCOUNT (SSIS 運算式) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "TOKENCOUNT （SSIS 運算式） |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1c0efed1-c2b3-4f20-a3a1-ad91283b7c0a
 caps.latest.revision: 8
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 77faf8083207373dee5dba3721fb38f91eefc3f2
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# TOKENCOUNT (SSIS 運算式)
+# <a name="tokencount-ssis-expression"></a>TOKENCOUNT (SSIS 運算式)
   傳回包含以分隔符號分隔之 Token 的字串中的 Token 數。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 TOKENCOUNT(character_expression, delimiter_string)  
 ```  
   
-## 引數  
+## <a name="arguments"></a>引數  
  *character_expression*  
  包含以分隔符號分隔之 Token 的字串。  
   
  *delimiter_string*  
  包含分隔符號字元的字串。 例如，"; ," 包含分號、空格和逗號三個分隔符號字元。  
   
-## 結果類型  
+## <a name="result-types"></a>結果類型  
  DT_I4  
   
-## 備註  
+## <a name="remarks"></a>備註  
  下列備註適用於 TOKEN 函數：  
   
 -   分隔符號字串可以包含一個或多個分隔符號字元。  
@@ -48,7 +53,7 @@ TOKENCOUNT(character_expression, delimiter_string)
   
 -   您可以使用變數和資料行做為此運算式的引數。  
   
-## 運算式範例  
+## <a name="expression-examples"></a>運算式範例  
  在下列範例中，因為字串包含 "01"、"12"、"2011" 三個 Token，因此 TOKENCOUNT 函數會傳回 3。  
   
 ```  
@@ -79,7 +84,7 @@ TOKENCOUNT("a:little|white dog","| ,.:")
 TOKENCOUNT("        a little white dog", " ")  
 ```  
   
-## 請參閱＜  
- [函數 &#40;SSIS 運算式&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>請參閱＜  
+ [函式 &#40;SSIS 運算式 &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

@@ -1,25 +1,30 @@
 ---
-title: "Analysis Server 屬性 (進階索引標籤) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Analysis Server 屬性 （進階索引標籤） |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f4415e35-8f50-4cb7-813e-bdfafbdee275
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7b6148a96e9846341dd5635333a891576ea74220
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# Analysis Server 屬性 (進階索引標籤)
+# <a name="analysis-server-properties-advanced-tab"></a>Analysis Server 屬性 (進階索引標籤)
   這個服務是 Microsoft [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 如果定義了自訂屬性，屬性與其值會在這個索引標籤上顯示。  
   
-## 選項。  
+## <a name="options"></a>選項。  
  **叢集**  
  指出這項服務是否安裝為叢集伺服器的資源。  
   

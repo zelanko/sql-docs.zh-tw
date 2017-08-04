@@ -1,30 +1,35 @@
 ---
-title: "判斷變更資料是否就緒 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "增量載入 [Integration Services]，判斷整備程度"
+title: "判斷變更資料是否就緒 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- incremental load [Integration Services],determining readiness
 ms.assetid: 04935f35-96cc-4d70-a250-0fd326f8daff
 caps.latest.revision: 26
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: 91c0f342c63df8d3a1376850615c5b68745ab4c9
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 判斷變更資料是否就緒
+# <a name="determine-whether-the-change-data-is-ready"></a>判斷變更資料是否就緒
   在執行累加式變更資料載入之 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝的控制流程中，第二個工作是確保所選間隔之變更資料已就緒。 由於非同步的擷取程序可能還沒有處理到所選端點的所有變更，因此這是必要的步驟。  
   
 > [!NOTE]  
 >  控制流程的第一個工作是計算變更間隔的端點。 如需這項工作的詳細資訊，請參閱[指定變更資料的間隔](../../integration-services/change-data-capture/specify-an-interval-of-change-data.md)。 如需設計控制流程之完整程序的描述，請參閱[變更資料擷取 &#40;SSIS&#41;](../../integration-services/change-data-capture/change-data-capture-ssis.md)。  
   
-## 了解方案的元件  
+## <a name="understanding-the-components-of-the-solution"></a>了解方案的元件  
  本主題所描述的方案使用 4 個 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 元件：  
   
 -   重複評估「執行 SQL」工作之輸出的「For 迴圈」容器。  
@@ -37,7 +42,7 @@ caps.handback.revision: 26
   
  這些元件會設定或讀取數個封裝變數的值以控制在迴圈內部或稍後在封裝中執行的流程。  
   
-#### 設定封裝變數  
+#### <a name="to-set-up-package-variables"></a>設定封裝變數  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]的 **[變數]** 視窗中，建立下列變數：  
   
@@ -61,10 +66,10 @@ caps.handback.revision: 26
   
          此範例會使用變數名稱 IntervalID，並僅針對 0 這個值進行檢查以表示初始載入。  
   
-## 設定 For 迴圈容器  
+## <a name="configuring-a-for-loop-container"></a>設定 For 迴圈容器  
  在設定變數的情況下，「For 迴圈」容器是第一個要加入的元件。  
   
-#### 設定 For 迴圈容器以便等到變更資料就緒  
+#### <a name="to-configure-a-for-loop-container-to-wait-until-change-data-is-ready"></a>設定 For 迴圈容器以便等到變更資料就緒  
   
 1.  在 **設計師的** [控制流程] [!INCLUDE[ssIS](../../includes/ssis-md.md)] 索引標籤上，將「For 迴圈」容器加入到控制流程中。  
   
@@ -80,7 +85,7 @@ caps.handback.revision: 26
   
          當此運算式評估為 **False**時，執行會通過迴圈之外，而且會開始累加式載入。  
   
-## 設定查詢變更資料的執行 SQL 工作  
+## <a name="configuring-the-execute-sql-task-that-queries-for-change-data"></a>設定查詢變更資料的執行 SQL 工作  
  在「For 迴圈」容器的內部，您可以加入「執行 SQL」工作。 此工作會查詢異動資料擷取程序在資料庫中維護的資料表。 此查詢的結果是一個狀態值，表示變更資料是否就緒。  
   
  在下表中，第一欄顯示範例 Transact-SQL 查詢從「執行 SQL」工作傳回的值。 第二欄顯示其他元件如何回應這些值。  
@@ -93,7 +98,7 @@ caps.handback.revision: 26
 |3|表示所有可用變更資料的初始載入。<br /><br /> 條件式邏輯會從僅用於此用途的特殊封裝變數取得這個值。|執行會通過「For 迴圈」容器之外，而且會開始累加式載入。|  
 |5|表示已達到 TimeoutCeiling。<br /><br /> 資料的迴圈已經測試過指定的次數，而且資料仍然無法使用。 如果沒有這個測試或類似的測試，封裝可能會無期限地執行。|執行會繼續進行記錄逾時的選擇性元件。|  
   
-#### 設定執行 SQL 工作查詢變更資料是否就緒  
+#### <a name="to-configure-an-execute-sql-task-to-query-whether-change-data-is-ready"></a>設定執行 SQL 工作查詢變更資料是否就緒  
   
 1.  在「For 迴圈」容器的內部，加入「執行 SQL」工作。  
   
@@ -150,13 +155,13 @@ caps.handback.revision: 26
   
 4.  在 **[執行 SQL 工作編輯器]** 的 **[結果集]**頁面上，將 DataReady 結果對應到 DataReady 變數，並將 TimeoutCount 結果對應到 TimeoutCount 變數。  
   
-## 等到變更資料就緒  
+## <a name="waiting-until-the-change-data-is-ready"></a>等到變更資料就緒  
  變更資料尚未就緒時，您可以使用數個方法中的一個方法來實作延遲。 下列兩個程序說明如何使用「指令碼」工作或「執行 SQL」工作實作延遲。  
   
 > [!NOTE]  
 >  先行編譯的指令碼所產生的負擔比「執行 SQL」工作所產生的負擔少。  
   
-#### 使用指令碼工作實作延遲  
+#### <a name="to-implement-a-delay-by-using-a-script-task"></a>使用指令碼工作實作延遲  
   
 1.  在「For 迴圈」容器的內部，加入「指令碼」工作。  
   
@@ -202,7 +207,7 @@ caps.handback.revision: 26
   
 8.  關閉指令碼開發環境以及 **[指令碼工作編輯器]**。  
   
-#### 使用執行 SQL 工作實作延遲  
+#### <a name="to-implement-a-delay-by-using-an-execute-sql-task"></a>使用執行 SQL 工作實作延遲  
   
 1.  在「For 迴圈」容器的內部，加入「執行 SQL」工作。  
   
@@ -239,16 +244,16 @@ caps.handback.revision: 26
   
 5.  在編輯器的 **[參數對應]** 頁面上，將 DelaySeconds 字串變數對應到參數 0。  
   
-## 處理錯誤條件  
+## <a name="handling-an-error-condition"></a>處理錯誤條件  
  您可以在迴圈內部，選擇性地設定其他元件，以記錄錯誤或逾時條件：  
   
 -   此元件可以在 DataReady 變數的值 = 1 時，記錄錯誤條件。 這個值表示在所選間隔開始前，沒有可用的變更資料。  
   
 -   此元件也可以在達到 Timeout Ceiling 變數的值時，記錄逾時條件。 這個值表示資料的迴圈已經測試過指定的次數，而且資料仍然無法使用。 如果沒有這個測試或類似的測試，封裝可能會無期限地執行。  
   
-#### 設定選擇性的指令碼工作以記錄錯誤條件  
+#### <a name="to-configure-an-optional-script-task-to-log-an-error-condition"></a>設定選擇性的指令碼工作以記錄錯誤條件  
   
-1.  如果您要將訊息寫入記錄檔藉以報告錯誤或逾時，請設定封裝的記錄。 如需詳細資訊，請參閱[在 SQL Server Data Tools 中啟用封裝記錄功能](../../integration-services/performance/enable-package-logging-in-sql-server-data-tools.md)。  
+1.  如果您要將訊息寫入記錄檔藉以報告錯誤或逾時，請設定封裝的記錄。 如需詳細資訊，請參閱 [在 SQL Server Data Tools 中啟用封裝記錄功能](../../integration-services/performance/integration-services-ssis-logging.md#ssdt)。  
   
 2.  在「For 迴圈」容器的內部，加入「指令碼」工作。  
   
@@ -330,7 +335,7 @@ caps.handback.revision: 26
   
 8.  關閉指令碼開發環境以及 **[指令碼工作編輯器]**。  
   
-## 下一個步驟  
+## <a name="next-step"></a>下一個步驟  
  判斷變更資料就緒後，下一個步驟是準備針對變更資料進行查詢。  
   
  **下一個主題：**[準備查詢變更資料](../../integration-services/change-data-capture/prepare-to-query-for-the-change-data.md)  

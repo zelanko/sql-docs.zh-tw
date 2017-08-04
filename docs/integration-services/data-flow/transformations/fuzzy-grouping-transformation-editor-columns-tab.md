@@ -1,31 +1,36 @@
 ---
-title: "模糊群組轉換編輯器 (資料行索引標籤) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.fuzzygroupingtransformation.columns.f1"
-helpviewer_keywords: 
-  - "模糊群組轉換編輯器"
+title: "模糊群組轉換編輯器 （資料行索引標籤） |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.fuzzygroupingtransformation.columns.f1
+helpviewer_keywords:
+- Fuzzy Grouping Transformation Editor
 ms.assetid: 24f4539f-2a9f-4acd-acc7-06228a07f7df
 caps.latest.revision: 30
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6040dde176f4f92674fd267388ff28a08499137b
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 模糊群組轉換編輯器 (資料行索引標籤)
+# <a name="fuzzy-grouping-transformation-editor-columns-tab"></a>模糊群組轉換編輯器 (資料行索引標籤)
   使用 **[模糊群組轉換編輯器]** 對話方塊的 **[資料行]** 索引標籤，即可指定用於將具有重複值之資料列分組的資料行。  
   
  若要深入了解模糊群組轉換，請參閱＜ [Fuzzy Grouping Transformation](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)＞。  
   
-## 選項。  
+## <a name="options"></a>選項。  
  **可用的輸入資料行**  
  從清單中選取輸入資料行，即可依據該資料行將具有重複值的資料列分組。  
   
@@ -64,10 +69,10 @@ caps.handback.revision: 30
 |**LeadingAndTrailing**|開頭和尾端數字皆屬於顯著。|  
   
  **比較旗標**  
- 如需字串比較選項的資訊，請參閱[比較字串資料](../../../integration-services/data-flow/comparing-string-data.md)。  
+ 如需字串比較選項的相關資訊，請參閱 [比較字串資料](../../../integration-services/data-flow/comparing-string-data.md)。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [Integration Services 錯誤和訊息參考](../../../integration-services/integration-services-error-and-message-reference.md)   
- [使用模糊群組轉換來識別相似的資料列](../../../integration-services/data-flow/transformations/identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation.md)  
+ [使用模糊群組轉換來識別類似的資料列](../../../integration-services/data-flow/transformations/identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation.md)  
   
   

@@ -1,36 +1,41 @@
 ---
-title: "為交易加上註解 (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "註解 [Master Data Services], 針對交易"
+title: "加上註解的交易 (Master Data Services) |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- annotations [Master Data Services], for transactions
 ms.assetid: f5a6b2ca-56de-4e42-9da8-fba0ac3e8d92
 caps.latest.revision: 6
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 279808cca74dbbc7c5ca9aa09c4996660fe949dc
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 為交易加上註解 (Master Data Services)
+# <a name="annotate-a-transaction-master-data-services"></a>為交易加上註解 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中，當您想要提供有關某個交易的支援詳細資料做為歷程記錄時，請為該交易加上註解。  
   
 > [!NOTE]  
 >  您無法刪除註解。  
   
-## 必要條件  
+## <a name="prerequisites"></a>必要條件  
   
 -   若要為所建立的交易加上註解，您必須擁有存取 [總管] 功能區域的權限，而且至少必須擁有您要加上註解之模型物件的**更新**權限。  
   
 -   若要為所有使用者的交易加上註解，您必須擁有存取 [版本管理] 功能區域的權限，而且必須身為模型管理員。 如需詳細資訊，請參閱 [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md) (管理員 (Master Data Services))。  
   
-### 若要在總管中為交易加上註解  
+### <a name="to-annotate-a-transaction-in-explorer"></a>若要在總管中為交易加上註解  
   
 1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 首頁上，選取 [模型]  清單中的模型。  
   
@@ -50,7 +55,7 @@ caps.handback.revision: 6
   
 9. 按一下 [加入註解]。 註解就會顯示在 [註解] 窗格中。  
   
-### 若要在版本管理中為交易加上註解 (僅限系統管理員)  
+### <a name="to-annotate-a-transaction-in-version-management-administrators-only"></a>若要在版本管理中為交易加上註解 (僅限系統管理員)  
   
 1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 首頁上，按一下 [版本管理]。  
   
@@ -62,8 +67,8 @@ caps.handback.revision: 6
   
 5.  按一下 **[確定]**。  
   
-## 另請參閱  
- [註解 &#40;Master Data Services&#41;](../master-data-services/annotations-master-data-services.md)   
+## <a name="see-also"></a>另請參閱  
+ [註解 &#40;Master Data services&#41;](../master-data-services/annotations-master-data-services.md)   
  [交易 &#40;Master Data Services&#41;](../master-data-services/transactions-master-data-services.md)  
   
   

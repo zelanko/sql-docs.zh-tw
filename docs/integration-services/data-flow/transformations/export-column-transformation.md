@@ -1,34 +1,39 @@
 ---
-title: "匯出資料行轉換 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.exportcolumntrans.f1"
-helpviewer_keywords: 
-  - "匯出資料"
-  - "附加選項 [Integration Services]"
-  - "匯出資料行轉換 [Integration Services]"
-  - "資料行 [Integration Services], 匯出"
-  - "插入資料"
-  - "截斷選項 [Integration Services]"
+title: "匯出資料行轉換 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.exportcolumntrans.f1
+helpviewer_keywords:
+- exporting data
+- append options [Integration Services]
+- Export Column transformation [Integration Services]
+- columns [Integration Services], exporting
+- inserting data
+- truncate options [Integration Services]
 ms.assetid: 678d2dfc-e40c-4fbb-b2cc-42fffc44478a
 caps.latest.revision: 45
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 45
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e7e611452f931d049c63c822587dc7610bf1eb25
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 匯出資料行轉換
+# <a name="export-column-transformation"></a>匯出資料行轉換
   「匯出資料行」轉換會讀取資料流程中的資料，並將資料插入檔案中。 例如，如果資料流程包含產品資訊 (例如每一項產品的圖片)，則可使用「匯出資料行」轉換將影像儲存到檔案中。  
   
-## 附加和截斷選項  
+## <a name="append-and-truncate-options"></a>附加和截斷選項  
  下表說明附加和截斷選項的設定影響結果的方式。  
   
 |附加|截斷|檔案存在|結果|  
@@ -42,7 +47,7 @@ caps.handback.revision: 45
 |True|False|是|轉換會開啟該檔案，並將資料寫入檔案結尾。|  
 |True|True|是|轉換未通過設計階段驗證。 將兩個屬性都設定為 [true] 是無效的。|  
   
-## 設定匯出資料行轉換  
+## <a name="configuration-of-the-export-column-transformation"></a>設定匯出資料行轉換  
  您可以利用下列方式設定「匯出資料行」轉換：  
   
 -   指定資料的資料行，以及包含要寫入資料的檔案路徑的資料行。  
@@ -64,10 +69,10 @@ caps.handback.revision: 45
   
  **[進階編輯器]** 對話方塊會反映能以程式設計的方式設定之屬性。 如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [通用屬性](../Topic/Common%20Properties.md)  
+-   [通用屬性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [轉換自訂屬性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
- 如需如何設定屬性的詳細資訊，請參閱[設定資料流程元件的屬性](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)。  
+ 如需如何設定屬性的詳細資訊，請參閱 [設定資料流程元件的屬性](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)。  
   
   

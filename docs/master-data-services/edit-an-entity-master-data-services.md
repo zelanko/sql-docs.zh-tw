@@ -1,35 +1,40 @@
 ---
-title: "編輯實體 (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "實體 [Master Data Services], 變更名稱"
+title: "編輯實體 (Master Data Services) |Microsoft 文件"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- entities [Master Data Services], changing name
 ms.assetid: 6a5b9f14-6dfc-49d7-a771-e96461d4feae
 caps.latest.revision: 8
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1364db68abbbff7ff13899180af78dc87478737d
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 編輯實體 (Master Data Services)
-  您可以在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中編輯實體。  
+# <a name="edit-an-entity-master-data-services"></a>編輯實體 (Master Data Services)
+  您可以在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中編輯實體。  
   
-## 必要條件  
+## <a name="prerequisites"></a>必要條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  
   
 -   您必須是模型管理員。 如需詳細資訊，請參閱 [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md) (管理員 (Master Data Services))。  
   
-### 編輯實體  
+### <a name="to-edit-an-entity"></a>編輯實體  
   
 1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]**。  
   
@@ -53,24 +58,24 @@ caps.handback.revision: 8
   
 9. 選取或取消選取 [啟用資料壓縮] 核取方塊。 依預設會開啟資料列壓縮。  
   
-     如需詳細資訊，請參閱[資料壓縮](../relational-databases/data-compression/data-compression.md)。  
+     如需詳細資訊，請參閱 [資料壓縮](../relational-databases/data-compression/data-compression.md)。  
   
-## 狀態  
+## <a name="status"></a>狀態  
  方格中的狀態資料行會顯示實體的作業狀態。 當您按一下 [儲存實體] 時，下列影像隨即顯示，指出正在更新實體。  
   
- ![Icon for updating status](../master-data-services/media/mds-statusicon-updating.png "Icon for updating status")  
+ ![更新狀態的圖示](../master-data-services/media/mds-statusicon-updating.png "更新狀態的圖示")  
   
  如果建立或編輯實體時發生錯誤，則會顯示下列影像。  
   
- ![Icon for error status](../master-data-services/media/mds-statusicon-error.png "Icon for error status")  
+ ![如需錯誤狀態的圖示](../master-data-services/media/mds-statusicon-error.png "的錯誤狀態的圖示")  
   
  如果狀態正常，則會顯示下列影像。  
   
- ![Icon for OK status](../master-data-services/media/mds-statusicon-ok.png "Icon for OK status")  
+ ![[確定] 狀態的圖示](../master-data-services/media/mds-statusicon-ok.png "[確定] 狀態的圖示")  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [明確階層 &#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)   
- [刪除實體 &#40;Master Data Services&#41;](../master-data-services/delete-an-entity-master-data-services.md)   
+ [刪除實體 &#40;Master Data services&#41;](../master-data-services/delete-an-entity-master-data-services.md)   
  [實體 &#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)  
   
   

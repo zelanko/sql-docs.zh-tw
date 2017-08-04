@@ -1,24 +1,29 @@
 ---
-title: "編輯 Oracle 資料庫屬性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "oraProp"
+title: "Edit the Oracle Database Properties |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- oraProp
 ms.assetid: 58dc99f1-ee6b-4508-bb66-2bc589611ff7
 caps.latest.revision: 7
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c310a25fe5098cd5edc845c3a29d024182f6361c
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 編輯 Oracle 資料庫屬性
+# <a name="edit-the-oracle-database-properties"></a>編輯 Oracle 資料庫屬性
   在屬性編輯器中使用 [Oracle] 索引標籤，以變更您在新增執行個體精靈中 [建立 CDC 資料庫] 頁面上提供的描述，以及變更 Oracle 記錄採礦資料庫連接資訊。  
   
  以下將描述 **[Oracle]** 索引標籤中的資訊。  
@@ -41,7 +46,7 @@ caps.handback.revision: 7
   
  您可以在檢視器中檢視 Oracle 資料庫屬性。 當使用檢視器時，此資訊是唯讀的。 檢視器也包括資料表中擷取的資料行清單。 如需有關如何存取此檢視器的詳細資訊，請參閱＜ [How to Manage a CDC Instance](../../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md)＞。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [如何從 CDC 設計工具主控台管理 CDC 服務](../../integration-services/change-data-capture/how-to-manage-a-cdc-service-from-the-cdc-designer-console.md)   
  [連接到 Oracle 來源資料庫](../../integration-services/change-data-capture/connect-to-an-oracle-source-database.md)   
  [連接到 Oracle](../../integration-services/change-data-capture/connect-to-oracle.md)  

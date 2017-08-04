@@ -1,25 +1,30 @@
 ---
-title: "教學課程：使用 OData 來源 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "教學課程： 使用 OData 來源 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2c64cf8b-5edb-48df-8ffe-697096258f71
 caps.latest.revision: 6
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 38fc17519a5c0450b2a80a4bb0429ea24f34ac64
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 教學課程：使用 OData 來源
+# <a name="tutorial-using-the-odata-source"></a>教學課程：使用 OData 來源
   本教學課程將逐步引導您進行從範例 **Northwind** OData 服務 (http://services.odata.org/V3/Northwind/Northwind.svc/) 擷取 **Employees** 集合，然後將該集合載入一般檔案的程序。  
   
-## 1.建立 Integration Services 專案  
+## <a name="1-create-an-integration-services-project"></a>1.建立 Integration Services 專案  
   
 1.  啟動 **[SQL Server Data Tools]** 或 [ [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]]。  
   
@@ -31,7 +36,7 @@ caps.handback.revision: 6
   
 5.  輸入專案的 **[名稱]** 並選取 **[位置]** ，然後按一下 **[確定]**。  
   
-## 2.將 OData 來源加入至 SSIS 封裝並進行設定  
+## <a name="2-add-and-configure-odata-source-to-the-ssis-package"></a>2.將 OData 來源加入至 SSIS 封裝並進行設定  
   
 1.  從 [SSIS 工具箱] 將 [資料流程工作] 拖放至 SSIS 封裝的控制流程設計介面。  
   
@@ -63,7 +68,7 @@ caps.handback.revision: 6
   
 15. 按一下 **[確定]** ，關閉 **[OData 來源編輯器]** 對話方塊。  
   
-## 3.加入一般檔案目的地並測試方案  
+## <a name="3-add-flat-file-destination-and-test-the-solution"></a>3.加入一般檔案目的地並測試方案  
   
 1.  現在，從 [SSIS 工具箱] 將 [一般檔案目的地] 拖放至 [OData 來源] 元件下方的資料流程設計介面。  
   

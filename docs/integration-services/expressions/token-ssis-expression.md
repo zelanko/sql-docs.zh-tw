@@ -1,31 +1,36 @@
 ---
-title: "TOKEN (SSIS 運算式) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "TOKEN （SSIS 運算式） |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9fdd06bf-5bc9-445c-95bf-709e0ca5989b
 caps.latest.revision: 10
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ff578d1f2ba584c64e471fa9514c6fa76e581d8e
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# TOKEN (SSIS 運算式)
+# <a name="token--ssis-expression"></a>TOKEN (SSIS 運算式)
   依據字串中用來分隔 Token 的指定分隔符號，以及表示要傳回哪個 Token 的 Token 號碼，從字串傳回 Token (子字串)。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 TOKEN(character_expression, delimiter_string, occurrence)  
 ```  
   
-## 引數  
+## <a name="arguments"></a>引數  
  *character_expression*  
  包含以分隔符號分隔之 Token 的字串。  
   
@@ -35,17 +40,17 @@ TOKEN(character_expression, delimiter_string, occurrence)
  *occurrence*  
  帶正負號或不帶正負號的整數，指定要傳回的 Token。 例如，若您指定 3 做為此參數的值，則會傳回字串中的第三個 Token。  
   
-## 結果類型  
+## <a name="result-types"></a>結果類型  
  DT_WSTR  
   
-## 備註  
- 此函數會將 <character_expression> 字串分割成一組以 <delimiter_string> 中指定之分隔符號來分隔的 Token，然後傳回第 N 個 Token (其中 N 是 \<occurrence> 參數指定的 Token 出現編號)。 如需此函數的範例用法，請參閱＜範例＞一節。  
+## <a name="remarks"></a>備註  
+ 此函式分割成一組由 < delimiter_string > 中指定的分隔符號分隔語彙基元 < character_expression > 字串，然後傳回第 n 個語彙基元，其中 N 是語彙基元所指定的項目數目\<出現 > 參數。 如需此函數的範例用法，請參閱＜範例＞一節。  
   
  下列備註適用於 TOKEN 函數：  
   
 -   分隔符號字串可以包含一個或多個分隔符號字元。  
   
--   如果 \<occurrence> 參數的值大於字串中的 Token 總數，函數就會傳回 NULL。  
+-   如果值\<出現 > 參數為高於在字串中的語彙基元的總數，函數會傳回 NULL。  
   
 -   前導分隔符號會予略過。  
   
@@ -55,7 +60,7 @@ TOKEN(character_expression, delimiter_string, occurrence)
   
 -   您可以使用變數和資料行來做為運算式中所有引數的值。  
   
-## 運算式範例  
+## <a name="expression-examples"></a>運算式範例  
  在下列範例中，TOKEN 函數會傳回 "a"。 “a little white dog” 字串中有 4 個 Token：“a”、“little”、“white”、“dog”，並以分隔符號 " " (空格字元) 分隔。 第二個引數 (分隔符號字串) 僅指定一個分隔符號 (空格字元)，以用來將輸入字串分割成 Token。 最後一個引數 1 指定要傳回的第一個 Token。 此範例字串中的第一個 Token 是 “a”。  
   
 ```  
@@ -98,7 +103,7 @@ TOKEN("2009/01/01", "/"), 1
 TOKEN(@[User::Path], "\\", TOKENCOUNT(@[User::Path], "\\"))  
 ```  
   
-## 請參閱＜  
- [函數 &#40;SSIS 運算式&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>請參閱＜  
+ [函式 &#40;SSIS 運算式 &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

@@ -1,37 +1,42 @@
 ---
-title: "使用緩時變維度精靈來設定輸出 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "緩時變維度轉換"
-  - "緩時變維度"
-  - "緩時變維度精靈"
+title: "使用 「 緩時變更維度精靈 」 來設定輸出 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Slowly Changing Dimension transformation
+- slowly changing dimensions
+- Slowly Changing Dimension Wizard
 ms.assetid: da111731-1ffa-49b9-bcaa-3c93fd0eb619
 caps.latest.revision: 43
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 43
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cc89e598abbf0b224325d74501b47e3999bf472b
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 使用緩時變維度精靈來設定輸出
+# <a name="configure-outputs-using-the-slowly-changing-dimension-wizard"></a>使用緩時變維度精靈來設定輸出
   「緩時變維度精靈」做為「緩時變維度」轉換的編輯器使用。 為緩時變維度資料建立並設定資料流程會是一個複雜的工作。 「緩時變維度精靈」可引導您執行對應資料行、選取商務索引鍵資料行、設定資料行變更屬性，以及設定對推斷之維度成員的支援等步驟，為「緩時變維度」轉換輸出提供建立資料流程的最簡單方法。  
   
  您必須在維度資料表中選取至少一個商務索引鍵資料行，並將其對應到輸入資料行。 商務索引鍵值會將來源中的記錄連結到維度資料表中的記錄。 轉換會使用這個對應尋找維度資料表中的記錄，並判斷記錄是新的還是變更的。 通常，商務索引鍵是來源中的主索引鍵，但只要它會唯一識別記錄且其值不變更，就可以是替代索引鍵。 商務索引鍵也可以是包含多個資料行的複合索引鍵。 維度資料表中的主索引鍵通常是代理索引鍵，表示由識別欄位或自訂方案 (例如指令碼) 自動產生的數值。  
   
  在可執行「緩時變維度精靈」之前，必須先將來源和「緩時變維度」轉換加入到資料流程，然後將來源的輸出連接到「緩時變維度」轉換的輸入。 (選擇性) 資料流程可以包含資料來源和「緩時變維度」轉換之間的其他轉換。  
   
- 若要開啟 [[!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師] 中的 [緩時變維度精靈]，請按兩下「緩時變維度」轉換。  
+ 若要開啟 [ [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師] 中的 [緩時變維度精靈]，請按兩下「緩時變維度」轉換。  
   
-## 建立緩時變維度輸出  
+## <a name="creating-slowly-changing-dimension-outputs"></a>建立緩時變維度輸出  
   
-#### 若要建立緩時變維度轉換輸出  
+#### <a name="to-create-slowly-changing-dimension-transformation-outputs"></a>若要建立緩時變維度轉換輸出  
   
 1.  選擇連接管理員，以存取包含您要更新之維度資料表的資料來源。  
   
@@ -59,7 +64,7 @@ caps.handback.revision: 43
   
 6.  設定記錄屬性選項。  
   
-     如果設定資料行使用 [歷程記錄屬性] 變更類型，您必須選擇如何區分目前記錄和過期記錄。 您可以使用目前資料列指標資料行或兩個日期資料行，以識別目前資料列和過期資料列。 如果使用目前資料列指標資料行，可以將其設定為 **Current**、**True**，和 **Expired,** 或 **False**。 您也可以輸入自訂值。 如果您使用兩個日期資料行，即開始日期和結束日期，則當透過輸入日期或選取系統變數然後使用其值的方式設定日期資料行值時，您可以指定要使用的日期。  
+     如果設定資料行使用 [歷程記錄屬性] 變更類型，您必須選擇如何區分目前記錄和過期記錄。 您可以使用目前資料列指標資料行或兩個日期資料行，以識別目前資料列和過期資料列。 如果使用目前資料列指標資料行，可以將其設定為 **Current**、 **True** ，和 **Expired,** 或 **False** 。 您也可以輸入自訂值。 如果您使用兩個日期資料行，即開始日期和結束日期，則當透過輸入日期或選取系統變數然後使用其值的方式設定日期資料行值時，您可以指定要使用的日期。  
   
 7.  指定對推斷成員的支援，並選擇推斷成員記錄包含的資料行。  
   
@@ -73,12 +78,12 @@ caps.handback.revision: 43
   
      下圖顯示一個資料流程範例，它支援固定屬性、變更屬性和記錄屬性變更、推斷的成員以及對符合記錄的變更。  
   
-     ![來自緩時變維度精靈的資料流程](../../../integration-services/data-flow/transformations/media/dimensionwizard.gif "來自緩時變維度精靈的資料流程")  
+     ![從緩時變維度精靈 」 的資料流](../../../integration-services/data-flow/transformations/media/dimensionwizard.gif "緩時變維度精靈 」 中資料流")  
   
-## 更新緩時變維度輸出  
+## <a name="updating-slowly-changing-dimension-outputs"></a>更新緩時變維度輸出  
  更新「緩時變維度」轉換輸出之組態的最簡單方法，就是重新執行「緩時變維度精靈」並修改精靈頁面中的屬性。 您還可以使用 [進階編輯器] 對話方塊或以程式設計方式更新「緩時變維度」轉換。  
   
-## 請參閱＜  
- [緩時變維度轉換](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)  
+## <a name="see-also"></a>另請參閱  
+ [Slowly Changing Dimension Transformation](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)  
   
   

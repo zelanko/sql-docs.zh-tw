@@ -1,26 +1,31 @@
 ---
-title: "彙總轉換編輯器 (彙總索引標籤) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.aggregationtransformation.aggregations.f1"
-helpviewer_keywords: 
-  - "彙總轉換編輯器"
+title: "彙總轉換編輯器 （彙總索引標籤） |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.aggregationtransformation.aggregations.f1
+helpviewer_keywords:
+- Aggregate Transformation Editor
 ms.assetid: a01cb124-ec79-4673-b1a1-bf4d60ee1b45
 caps.latest.revision: 30
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6e7bf78662f021ae3c6ff776635035feea985b12
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 彙總轉換編輯器 (彙總索引標籤)
+# <a name="aggregate-transformation-editor-aggregations-tab"></a>彙總轉換編輯器 (彙總索引標籤)
   使用 [彙總轉換編輯器] 對話方塊的 [彙總] 索引標籤，即可指定彙總的資料行與彙總屬性。 您可以套用多個彙總。 此轉換不會產生錯誤輸出。  
   
 > [!NOTE]  
@@ -30,7 +35,7 @@ caps.handback.revision: 30
   
  若要了解有關彙總轉換的詳細資訊，請參閱＜ [Aggregate Transformation](../../../integration-services/data-flow/transformations/aggregate-transformation.md)＞。  
   
-## 選項。  
+## <a name="options"></a>選項。  
  **進階 / 基本**  
  顯示或隱藏設定多個輸出之多個彙總的選項。 依預設，會隱藏 [進階] 選項。  
   
@@ -50,7 +55,7 @@ caps.handback.revision: 30
 |中|彙總可寫入大約 5,000,000 個索引鍵。|  
 |高|彙總可寫入超過 25,000,000 個索引鍵。|  
   
- **索引鍵**  
+ **[索引鍵]**  
  在 [進階] 顯示中，選擇性地指定彙總可以寫入的確切索引鍵數目。 如果 [索引鍵小數位數] 和 [索引鍵] 都有指定，會優先使用 [索引鍵]。  
   
  **可用的輸入資料行**  
@@ -78,7 +83,7 @@ caps.handback.revision: 30
  **比較旗標**  
  如果您選擇 [群組依據]，請使用核取方塊來控制轉換執行比較的方式。 如需字串比較選項的資訊，請參閱[比較字串資料](../../../integration-services/data-flow/comparing-string-data.md)。  
   
- **計算相異小數位數**  
+ **Count Distinct Scale**  
  可選擇性地指定彙總可寫入之相異值的近似數目。 根據預設，此選項的值為 **[未指定]**。 如果 [CountDistinctScale] 和 [CountDistinctKeys] 都有指定，會優先使用 [CountDistinctKeys]。  
   
 |Value|說明|  
@@ -88,12 +93,12 @@ caps.handback.revision: 30
 |中|彙總可寫入大約 5,000,000 個相異值。|  
 |高|彙總可寫入超過 25,000,000 個相異值。|  
   
- **計算相異索引鍵**  
+ **Count Distinct Keys**  
  可選擇性地指定彙總可寫入之相異值的確實數目。 如果 [CountDistinctScale] 和 [CountDistinctKeys] 都有指定，會優先使用 [CountDistinctKeys]。  
   
-## 請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../../integration-services/integration-services-error-and-message-reference.md)   
- [彙總轉換編輯器 &#40;進階索引標籤&#41;](../../../integration-services/data-flow/transformations/aggregate-transformation-editor-advanced-tab.md)   
- [使用彙總轉換來彙總資料集中的值](../../../integration-services/data-flow/transformations/aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  
+ [彙總轉換編輯器 &#40;進階 索引標籤 &#41;](../../../integration-services/data-flow/transformations/aggregate-transformation-editor-advanced-tab.md)   
+ [使用彙總 」 轉換資料集內的彙總值](../../../integration-services/data-flow/transformations/aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  
   
   

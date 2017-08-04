@@ -1,22 +1,27 @@
 ---
-title: "安裝 Distributed Replay | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "安裝 Distributed 的 Replay |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ea1171da-f50e-4f16-bedc-5e468a46477f
 caps.latest.revision: 21
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: f12949316171843274bc70aefc3ed8ff2b236e45
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 安裝 Distributed Replay
+# <a name="install-distributed-replay"></a>安裝 Distributed Replay
   您可以使用下列三種方式之一來安裝 Distributed Replay︰  
   
 -   [從 [安裝精靈] 安裝 Distributed Replay](#bkmk_wizard)  
@@ -26,7 +31,7 @@ caps.handback.revision: 21
 -   [使用組態檔安裝 Distributed Replay](#bkmk_configuration_file)  
   
 ##  <a name="bkmk_wizard"></a> 從 [安裝精靈] 安裝 Distributed Replay  
- 您可以使用 [[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安裝精靈] 安裝 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 功能。 規劃要安裝這些功能的位置時，請考慮下列事項：  
+ 您可以使用 [ [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝精靈] 安裝 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Distributed Replay 功能。 規劃要安裝這些功能的位置時，請考慮下列事項：  
   
 -   您可以選擇將管理工具與 Distributed Replay Controller 安裝在同一部電腦上，也可以選擇安裝在不同的電腦上。  
   
@@ -36,7 +41,7 @@ caps.handback.revision: 21
   
 -   Distributed Replay Controller 電腦上只可安裝一個用戶端服務執行個體。 您的 Distributed Replay 環境中如有多個用戶端，即不建議您將用戶端服務與控制器安裝在同一部電腦上。 這樣做可能會降低 Distributed Replay 的整體速度。  
   
--   在效能測試案例中，我們不建議您在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的目標執行個體上安裝管理工具、Distributed Replay Controller 服務或 Client 服務。 在目標伺服器上安裝這些所有功能應限於應用程式相容性的功能測試。  
+-   在效能測試案例中，我們不建議您在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的目標執行個體上安裝管理工具、Distributed Replay Controller 服務或 Client 服務。 在目標伺服器上安裝這些所有功能應限於應用程式相容性的功能測試。  
   
 -   安裝之後，必須先執行控制器服務 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller)，然後再啟動用戶端上的 Distributed Replay Client 服務。  
   
@@ -47,7 +52,7 @@ caps.handback.revision: 21
   
 -   請確定您想要使用的電腦符合 [Distributed Replay 需求](../../tools/distributed-replay/distributed-replay-requirements.md)主題中所描述的需求。  
   
--   開始進行此程序之前，請建立將用來執行 Controller 和 Client 服務的網域使用者帳戶。 建議您不要將這些帳戶設定為 Windows Administrators 群組的成員。 如需詳細資訊，請參閱 [Distributed Replay 安全性](../../tools/distributed-replay/distributed-replay-security.md)主題中的＜使用者和服務帳戶＞一節。  
+-   開始進行此程序之前，請建立將用來執行 Controller 和 Client 服務的網域使用者帳戶。 建議您不要將這些帳戶設定為 Windows Administrators 群組的成員。 如需詳細資訊，請參閱 [Distributed Replay 安全性](../../tools/distributed-replay/distributed-replay-security.md) 主題中的＜使用者和服務帳戶＞一節。  
   
     > [!NOTE]  
     >  如果您要在同一部電腦上執行管理工具、Controller 服務和 Client 服務，可以使用本機使用者帳戶。  
@@ -60,19 +65,19 @@ caps.handback.revision: 21
   
      [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]工具  
   
-     \- 或 -  
+     \- OR-  
   
-     \<共用功能目錄>\Tools\\(使用者提供的替代共用功能目錄)  
+     \<共用功能目錄 > \Tools\\（使用者提供的替代共用的功能目錄）  
   
 -   在 64 位元系統上：  
   
      C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (x86)\130\Tools  
   
-     \- 或 -  
+     \- OR-  
   
-     \<共用功能目錄 (x86)>\Tools\\(使用者提供的替代共用功能 (x86) 目錄)  
+     \<共用功能目錄 (x86) > \Tools\\（使用者提供的替代共用的功能 (x86) 目錄）  
   
-#### 安裝 Distributed Replay 功能  
+#### <a name="to-install-distributed-replay-features"></a>安裝 Distributed Replay 功能  
   
 1.  如果要開始安裝 Distributed Replay 功能，請啟動 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安裝精靈。  
   
@@ -112,7 +117,7 @@ caps.handback.revision: 21
   
     1.  在 32 位元電腦上，預設安裝路徑為 **C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\**  
   
-    2.  在 64 位元電腦上，預設安裝路徑為 **C:\Program Files (x86)\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\**  
+    2.  在 64 位元電腦上的預設安裝路徑是**C:\Program Files (x86)\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\**  
   
 9. 完成後，請按一下 [下一步]。  
   
@@ -127,19 +132,19 @@ caps.handback.revision: 21
 14. 在 [已完成安裝程式的準備工作] 頁面上，按一下 [安裝]。  
   
     > [!IMPORTANT]  
-    >  安裝 Distributed Replay 之後，您必須在控制器電腦與用戶端電腦上建立防火牆規則，並為目標伺服器上的每個用戶端電腦授與權限。 如需詳細資訊，請參閱[完成安裝後步驟](../../tools/distributed-replay/complete-the-post-installation-steps.md)。  
+    >  安裝 Distributed Replay 之後，您必須在控制器電腦與用戶端電腦上建立防火牆規則，並為目標伺服器上的每個用戶端電腦授與權限。 如需詳細資訊，請參閱 [完成安裝後步驟](../../tools/distributed-replay/complete-the-post-installation-steps.md)。  
   
-### .NET Framework 安全性  
+### <a name="net-framework-security"></a>.NET Framework 安全性  
  您必須具備管理權限，才可安裝各種 Distributed Replay 功能。 只有擁有系統管理員權限的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入能夠將用戶端服務帳戶加入測試伺服器的系統管理員伺服器角色。 如需 Distributed Replay 安全性考量的詳細資訊，請參閱 [Distributed Replay 安全性](../../tools/distributed-replay/distributed-replay-security.md)。  
   
 ##  <a name="bkmk_command_prompt"></a> 從命令提示字元處安裝 Distributed Replay  
- 在命令提示字元處安裝 Distributed Replay 的新執行個體，讓您可以指定安裝功能及應如何設定。 命令提示字元安裝支援安裝、修復、升級及解除 Distributed Replay 元件。 透過命令提示字元安裝時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援使用 /Q 參數進行完整無訊息模式。  
+ 在命令提示字元處安裝 Distributed Replay 的新執行個體，讓您可以指定安裝功能及應如何設定。 命令提示字元安裝支援安裝、修復、升級及解除 Distributed Replay 元件。 透過命令提示字元安裝時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援使用 /Q 參數進行完整無訊息模式。  
   
 > [!NOTE]  
->  如果是本機安裝，您必須以管理員身分執行安裝程式。 如果您是從遠端共用位置安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，則必須使用對遠端共用位置具有讀取和執行權限的網域帳戶。  
+>  如果是本機安裝，您必須以管理員身分執行安裝程式。 如果您是從遠端共用位置安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，則必須使用對遠端共用位置具有讀取和執行權限的網域帳戶。  
   
-### 安裝參數  
- 最上層功能清單包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 和工具。 工具功能會安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理工具、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書、[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]，以及其他共用元件。 若要安裝 Distributed Replay 元件，請指定下列參數：  
+### <a name="installation-parameters"></a>安裝參數  
+ 最上層功能清單包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]和工具。 工具功能會安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理工具、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]，以及其他共用元件。 若要安裝 Distributed Replay 元件，請指定下列參數：  
   
 |元件|參數|  
 |---------------|---------------|  
@@ -148,7 +153,7 @@ caps.handback.revision: 21
 |管理工具|**工具**|  
   
 > [!IMPORTANT]  
->  安裝 Distributed Replay 之後，您必須在控制器電腦與用戶端電腦上建立防火牆規則，並為目標伺服器上的每個用戶端電腦授與權限。 如需詳細資訊，請參閱[完成安裝後步驟](../../tools/distributed-replay/complete-the-post-installation-steps.md)。  
+>  安裝 Distributed Replay 之後，您必須在控制器電腦與用戶端電腦上建立防火牆規則，並為目標伺服器上的每個用戶端電腦授與權限。 如需詳細資訊，請參閱 [完成安裝後步驟](../../tools/distributed-replay/complete-the-post-installation-steps.md)。  
   
  您可以使用下表中的參數來開發安裝的命令列指令碼。  
   
@@ -165,7 +170,7 @@ caps.handback.revision: 21
 |/CLTWORKINGDIR<br /><br /> **選擇性**|Distributed Replay Client 服務的工作目錄。|有效路徑|  
 |/CLTRESULTDIR<br /><br /> **選擇性**|Distributed Replay Client 服務的結果目錄。|有效路徑|  
   
-### 範例語法：  
+### <a name="sample-syntax"></a>範例語法：  
  **安裝 Distributed Replay Controller 元件**  
   
 ```  
@@ -187,18 +192,18 @@ setup /q /ACTION=Install /FEATURES=DREPLAY_CLT /IAcceptSQLServerLicenseTerms /CL
   
 -   命令列的值會覆寫組態檔中的值  
   
- 如需有關如何使用組態檔的詳細資訊，請參閱[使用組態檔來安裝 SQL Server 2016](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md)。  
+ 如需有關如何使用組態檔的詳細資訊，請參閱 [使用組態檔來安裝 SQL Server 2016](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md)。  
   
 > [!IMPORTANT]  
->  安裝 Distributed Replay 之後，您必須在控制器電腦與用戶端電腦上建立防火牆規則，並為目標伺服器上的每個用戶端電腦授與權限。 如需詳細資訊，請參閱[完成安裝後步驟](../../tools/distributed-replay/complete-the-post-installation-steps.md)。  
+>  安裝 Distributed Replay 之後，您必須在控制器電腦與用戶端電腦上建立防火牆規則，並為目標伺服器上的每個用戶端電腦授與權限。 如需詳細資訊，請參閱 [完成安裝後步驟](../../tools/distributed-replay/complete-the-post-installation-steps.md)。  
   
-#### 若要產生組態檔  
+#### <a name="to-generate-a-configuration-file"></a>若要產生組態檔  
   
 1.  遵循安裝精靈的指示，直到 [準備安裝] 頁面。 組態檔的路徑已指定於 **[準備安裝]** 頁面的 [組態檔路徑] 區段中。  
   
 2.  取消安裝程式而不實際完成安裝，即可產生 INI 檔案。  
   
-#### 使用組態檔安裝 Distributed Replay  
+#### <a name="to-install-distributed-replay-using-the-configuration-file"></a>使用組態檔安裝 Distributed Replay  
   
 -   透過命令提示字元執行安裝，並且使用 ConfigurationFile 參數來提供 ConfigurationFile.ini。  
   
@@ -213,11 +218,12 @@ Setup.exe /CTLRSVCPASSWORD="ctlrsvcpswd" /CLTSVCPASSWORD="cltsvcpswd" / Configur
 > [!NOTE]  
 >  您必須在命令列中指定這兩個密碼，因為您無法在組態檔中設定它們。  
   
-## 另請參閱  
- [SQL Server 2016 版本支援的功能](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)   
- [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
- [Distributed Replay 需求](../../tools/distributed-replay/distributed-replay-requirements.md)   
- [管理工具命令列選項 &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
- [設定 Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)  
+## <a name="see-also"></a>另請參閱  
+ [SQL Server 2016 版本支援的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)   
+ [SQL Server Distributed 的 Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
+ [Distributed 的 Replay 需求](../../tools/distributed-replay/distributed-replay-requirements.md)   
+ [管理工具命令列選項 &#40; Distributed 的 Replay 公用程式 &#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
+ [設定 Distributed 的 Replay](../../tools/distributed-replay/configure-distributed-replay.md)  
   
   
+

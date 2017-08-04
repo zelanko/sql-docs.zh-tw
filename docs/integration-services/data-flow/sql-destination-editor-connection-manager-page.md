@@ -1,36 +1,41 @@
 ---
-title: "SQL 目的地編輯器 (連接管理員頁面) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.sqlserverdestadapter.connection.f1"
-helpviewer_keywords: 
-  - "SQL Server 目的地編輯器"
+title: "SQL 目的地編輯器 （連接管理員頁面） |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.sqlserverdestadapter.connection.f1
+helpviewer_keywords:
+- SQL Server Destination Editor
 ms.assetid: 423e1654-54af-47c6-ab6f-98670534557d
 caps.latest.revision: 37
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 37
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cb0665ca794b028e2cdb3fd16f6e9514fe9bd33e
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# SQL 目的地編輯器 (連接管理員頁面)
-  使用 **[SQL 目的地編輯器]** 對話方塊的 **[連接管理員]** 頁面，即可指定資料來源資訊並預覽結果。  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目的地會將資料載入到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中的資料表或檢視。  
+# <a name="sql-destination-editor-connection-manager-page"></a>SQL 目的地編輯器 (連接管理員頁面)
+  使用 **[SQL 目的地編輯器]** 對話方塊的 **[連接管理員]** 頁面，即可指定資料來源資訊並預覽結果。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目的地會將資料載入到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中的資料表或檢視。  
   
  若要深入了解 SQL Server 目的地，請參閱＜ [SQL Server Destination](../../integration-services/data-flow/sql-server-destination.md)＞。  
   
-## 選項。  
+## <a name="options"></a>選項。  
  **OLE DB 連接管理員**  
  從清單中選取現有的連接，或按一下 [新增] 來建立新的連接。  
   
  **新增**  
- 使用 [設定 OLE DB 連接管理員] 對話方塊來建立新的連接。  
+ 使用 [設定 OLE DB 連線管理員] 對話方塊來建立新的連線。  
   
  **使用資料表或檢視**  
  從清單中選取現有的資料表或檢視，或按一下 [新增] 來建立新的連接。  
@@ -44,10 +49,10 @@ caps.handback.revision: 37
  **預覽**  
  使用 [預覽查詢結果] 對話方塊來預覽結果。 預覽最多可顯示 200 個資料列。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [Integration Services 錯誤和訊息參考](../../integration-services/integration-services-error-and-message-reference.md)   
- [SQL 目的地編輯器 &#40;對應頁面&#41;](../../integration-services/data-flow/sql-destination-editor-mappings-page.md)   
- [SQL 目的地編輯器 &#40;進階頁面&#41;](../../integration-services/data-flow/sql-destination-editor-advanced-page.md)   
+ [SQL 目的地編輯器 &#40;[對應] 頁面 &#41;](../../integration-services/data-flow/sql-destination-editor-mappings-page.md)   
+ [SQL 目的地編輯器 &#40;進階的頁面 &#41;](../../integration-services/data-flow/sql-destination-editor-advanced-page.md)   
  [使用 SQL Server 目的地來大量載入資料](../../integration-services/data-flow/bulk-load-data-by-using-the-sql-server-destination.md)  
   
   

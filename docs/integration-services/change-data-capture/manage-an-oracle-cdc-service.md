@@ -1,24 +1,29 @@
 ---
-title: "管理 Oracle CDC 服務 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "createSrv"
+title: "管理 Oracle CDC 服務 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- createSrv
 ms.assetid: 5972cee3-b1a9-4c56-aed6-bdddf84af283
 caps.latest.revision: 8
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ece331cf561da80bf56df914fec6f42159ade23e
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 管理 Oracle CDC 服務
+# <a name="manage-an-oracle-cdc-service"></a>管理 Oracle CDC 服務
   您可以使用 CDC 服務組態主控台來管理特定的 CDC 服務。  
   
  **若要選取您想要使用的 CDC 服務**  
@@ -37,10 +42,10 @@ caps.handback.revision: 8
   
      您也可以用滑鼠右鍵按一下您想要使用的 CDC 服務，並選取所要的動作。 請參閱 [What can you do with a CDC Service](../../integration-services/change-data-capture/manage-an-oracle-cdc-service.md#BKMK_WhatcandowithCDCService)。  
   
-##  <a name="BKMK_WhatcandowithCDCService"></a> 您可以使用 CDC 服務做什麼事  
+##  <a name="BKMK_WhatcandowithCDCService"></a> What can you do with a CDC Service  
  當您使用 CDC 服務時，可以執行以下動作。  
   
-### 刪除服務  
+### <a name="delete-the-service"></a>刪除服務  
  從 CDC 服務組態主控台右側的 **[動作]** 窗格中，按一下 **[刪除]** 刪除此服務。  
   
  您也可以用滑鼠右鍵按一下您想要刪除的 CDC 服務，然後選取 [刪除]。  
@@ -51,12 +56,12 @@ caps.handback.revision: 8
   
  如需有關您必須在 [連接到 SQL Server] 對話方塊中輸入之資料的詳細資訊，請參閱＜ [Connection to SQL Server for Delete](../../integration-services/change-data-capture/connection-to-sql-server-for-delete.md)＞。  
   
-### 編輯 CDC 服務屬性  
+### <a name="edit-the-cdc-service-properties"></a>編輯 CDC 服務屬性  
  從 CDC 服務組態主控台右側的 **[動作]** 窗格中，按一下 **[屬性]**。  
   
  您也可以用滑鼠右鍵按一下您要編輯屬性的 CDC 服務，然後選取 [屬性]。  
   
-## 請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [如何管理本機 CDC 服務](../../integration-services/change-data-capture/how-to-manage-a-local-cdc-service.md)  
   
   

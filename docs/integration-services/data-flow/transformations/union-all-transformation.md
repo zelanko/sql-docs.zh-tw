@@ -1,32 +1,37 @@
 ---
-title: "聯集全部轉換 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.unionalltrans.f1"
-helpviewer_keywords: 
-  - "合併資料集 [Integration Services]"
-  - "組合資料集"
-  - "聯集全部轉換"
-  - "資料集 [Integration Services], 合併"
+title: "聯集全部 」 轉換 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.unionalltrans.f1
+helpviewer_keywords:
+- merging datasets [Integration Services]
+- combining datasets
+- Union All transformation
+- datasets [Integration Services], merging
 ms.assetid: 942e4b90-9c41-4e9c-a6f3-80b3afe57f2f
 caps.latest.revision: 39
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 049d9195499e7145f98258cb90f2fd7069569058
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 聯集全部轉換
+# <a name="union-all-transformation"></a>聯集全部轉換
   「聯集全部」轉換會將多項輸入結合至單一輸出。 例如，五個不同的「一般檔案」來源的輸出，可做為「聯集全部」轉換的輸入並組合成一個輸出。  
   
-## 輸入和輸出  
+## <a name="inputs-and-outputs"></a>輸入和輸出  
  轉換輸入會逐一加入至轉換輸出；不會發生任何重新排列資料列的情形。 如果封裝需要經過排序的輸出，則您應使用「合併」轉換而非「聯集全部」轉換。  
   
  您連接到「聯集全部」轉換的第一個輸入，是轉換從中建立轉換輸出的輸入。 您接著連接到轉換的輸入中的資料行，會對應至轉換輸出中的資料行。  
@@ -37,18 +42,18 @@ caps.handback.revision: 39
   
  此轉換有多個輸入和一個輸出。 它不支援錯誤輸出。  
   
-## 聯集全部轉換的組態  
+## <a name="configuration-of-the-union-all-transformation"></a>聯集全部轉換的組態  
  您可以透過「 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師」或以程式設計方式設定屬性。  
   
  如需可在 [聯集全部轉換編輯器] 對話方塊中設定之屬性的詳細資訊，請參閱[聯集全部轉換編輯器](../../../integration-services/data-flow/transformations/union-all-transformation-editor.md)。  
   
- 如需可透過程式設計方式設定之屬性的詳細資訊，請參閱[通用屬性](../Topic/Common%20Properties.md)。  
+ 如需可透過程式設計方式設定之屬性的詳細資訊，請參閱[通用屬性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)。  
   
  如需有關如何設定屬性的詳細資訊，請按下列其中一個主題：  
   
 -   [設定資料流程元件的屬性](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
-## 相關工作  
+## <a name="related-tasks"></a>相關工作  
  [使用聯集全部轉換來合併資料](../../../integration-services/data-flow/transformations/merge-data-by-using-the-union-all-transformation.md)  
   
   

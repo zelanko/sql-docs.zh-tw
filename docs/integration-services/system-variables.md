@@ -1,33 +1,38 @@
 ---
-title: "系統變數 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "容器 [Integration Services], 變數"
-  - "工作 [Integration Services], 變數"
-  - "系統變數 [Integration Services]"
-  - "事件處理常式 [Integration Services], 變數"
-  - "變數 [Integration Services], 系統"
+title: "系統變數 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- containers [Integration Services], variables
+- tasks [Integration Services], variables
+- system variables [Integration Services]
+- event handlers [Integration Services], variables
+- variables [Integration Services], system
 ms.assetid: efecd0d4-1489-4eba-a8fe-275d647058b8
 caps.latest.revision: 54
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 54
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0c472b50d9bf7f208a474c14bd5576767842a56c
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 系統變數
+# <a name="system-variables"></a>系統變數
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供一組儲存執行封裝及其物件之資訊的系統變數。 這些變數可以用於運算式及屬性運算式，以自訂封裝、容器、工作及事件處理常式。  
   
  所有的變數 (系統變數和使用者自訂變數) 都可在「執行 SQL」工作用來將變數對應至參數的參數繫結中使用。  
   
-## 封裝的系統變數  
+## <a name="system-variables-for-packages"></a>封裝的系統變數  
  下表描述 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 為封裝提供的系統變數。  
   
 |系統變數|資料類型|說明|  
@@ -55,14 +60,14 @@ caps.handback.revision: 54
 |**VersionMajor**|Int32|封裝的主要版本。|  
 |**VersionMinor**|Int32|封裝的次要版本。|  
   
-## 容器的系統變數  
+## <a name="system-variables-for-containers"></a>容器的系統變數  
  下表描述 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 為 For 迴圈、Foreach 迴圈及時序容器提供的系統變數。  
   
 |系統變數|資料類型|說明|容器|  
 |---------------------|---------------|-----------------|---------------|  
 |**LocaleId**|Int32|容器使用的地區設定。|For 迴圈容器<br /><br /> Foreach 迴圈容器<br /><br /> 時序容器|  
   
-## 工作的系統變數  
+## <a name="system-variables-for-tasks"></a>工作的系統變數  
  下表描述 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 為工作提供的系統變數。  
   
 |系統變數|資料類型|說明|  
@@ -73,7 +78,7 @@ caps.handback.revision: 54
 |**TaskName**|字串|工作執行個體的名稱。|  
 |**TaskTransactionOption**|Int32|工作使用的交易選項。|  
   
-## 事件處理常式的系統變數  
+## <a name="system-variables-for-event-handlers"></a>事件處理常式的系統變數  
  下表描述 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 為事件處理常式提供的系統變數。 並非所有變數都可用於所有事件處理常式。  
   
 |系統變數|資料類型|說明|事件處理常式|  
@@ -95,14 +100,14 @@ caps.handback.revision: 54
 |**VariableDescription**|字串|變數描述。|OnVariableValueChanged 事件處理常式|  
 |**VariableID**|字串|變數的唯一識別碼。|OnVariableValueChanged 事件處理常式|  
   
-## 參數繫結中的系統變數  
+## <a name="system-variables-in-parameter-bindings"></a>參數繫結中的系統變數  
  執行封裝時，將系統變數的值儲存在資料表中通常很有幫助。 例如，動態建立資料表並在資料表資料行中寫入建立資料表之封裝執行個體 GUID 的封裝。  
   
  如果使用系統變數對應至「執行 SQL」工作使用之 SQL 陳述式中的參數，您就必須將每個參數繫結的資料類型設定為系統變數的資料類型。 否則，系統變數值的翻譯可能會出錯。 例如，如果在具有 GUID 資料類型的參數繫結中使用 **ExecutionInstanceGUID** 系統變數，而此系統變數具有字串資料類型並包含代表封裝執行個體之 GUID 的字串，封裝執行個體 GUID 的翻譯便會出錯。  
   
  此規則也適用於使用者自訂變數。 但是，由於系統變數的資料類型無法變更，而且您必須修改這些變數的用法以符合其資料類型，因此使用者自訂變數比較有彈性。 參數繫結中使用之使用者自訂變數所定義的資料類型，通常與其對應參數的資料類型相容。  
   
-## 相關工作  
- [在執行 SQL 工作中將查詢參數對應到變數](../Topic/Map%20Query%20Parameters%20to%20Variables%20in%20an%20Execute%20SQL%20Task.md)  
+## <a name="related-tasks"></a>相關工作  
+ [在執行 SQL 工作中將查詢參數對應到變數](http://msdn.microsoft.com/library/6a164349-dfcf-4995-80bc-d4e7aee52a83)  
   
   

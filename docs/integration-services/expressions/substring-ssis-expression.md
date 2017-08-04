@@ -1,49 +1,54 @@
 ---
-title: "SUBSTRING (SSIS 運算式) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SUBSTRING 函數"
-  - "傳回運算式的部分 [Integration Services]"
+title: "SUBSTRING （SSIS 運算式） |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SUBSTRING function
+- part of expression returned [Integration Services]
 ms.assetid: 3a46748a-f5f8-4a6c-9108-673666754068
 caps.latest.revision: 34
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 47f7ac32826faacd2ad38c0a09750012222fde7e
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# SUBSTRING (SSIS 運算式)
+# <a name="substring-ssis-expression"></a>SUBSTRING (SSIS 運算式)
   傳回從指定位置開始算起指定長度的字元運算式部分。 *position* 參數和 *length* 參數必須評估為整數。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
 SUBSTRING(character_expression, position, length)  
 ```  
   
-## 引數  
+## <a name="arguments"></a>引數  
  *character_expression*  
  要擷取字元的字元運算式。  
   
  *position*  
  是指定子字串開始處的整數。  
   
- *長度*  
+ *length*  
  是指定做為字元數之子字串長度的整數。  
   
-## 結果類型  
+## <a name="result-types"></a>結果類型  
  DT_WSTR  
   
-## 備註  
- SUBSTRING 使用以 1 為基底的索引。 如果 *position* 是 1，則子字串會以 *character_expression* 中的第一個字元開頭。  
+## <a name="remarks"></a>備註  
+ SUBSTRING 使用以 1 為基底的索引。 如果 *position* 是 1，則子字串會以 *character_expression*中的第一個字元開頭。  
   
  SUBSTRING 只適用於 DT_WSTR 資料類型。 如果 *character_expression* 引數是字串常值或具有 DT_STR 資料類型的資料行，則該引數會在 SUBSTRING 執行其作業前隱含轉換成 DT_WSTR 資料類型。 其他資料類型必須明確地轉換為 DT_WSTR 資料類型。 如需詳細資訊，請參閱 [Integration Services 資料類型](../../integration-services/data-flow/integration-services-data-types.md)和 [Cast &#40;SSIS 運算式&#41;](../../integration-services/expressions/cast-ssis-expression.md)。  
   
@@ -53,7 +58,7 @@ SUBSTRING(character_expression, position, length)
   
  *length* 引數可以超過字串長度。 在此情況下，函數會傳回字串的其餘部份。  
   
-## 運算式範例  
+## <a name="expression-examples"></a>運算式範例  
  此範例會從字串常值傳回以第 4 個字元開頭的兩個字元。 傳回結果為 "ph"。  
   
 ```  
@@ -90,7 +95,7 @@ SUBSTRING (@PostalCode,6,4)
 SUBSTRING ("Redmond",4,0)  
 ```  
   
-## 請參閱＜  
- [函數 &#40;SSIS 運算式&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>請參閱＜  
+ [函式 &#40;SSIS 運算式 &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

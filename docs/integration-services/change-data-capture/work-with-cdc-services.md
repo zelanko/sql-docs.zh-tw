@@ -1,27 +1,32 @@
 ---
-title: "使用 CDC 服務 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "cdcServ"
+title: "使用 CDC 服務 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- cdcServ
 ms.assetid: 4fc8edad-e16e-432f-a8ca-75f9a27444f3
 caps.latest.revision: 6
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 496eead0f37abd155b789d4ae4c40a40a64ac9f1
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 使用 CDC 服務
+# <a name="work-with-cdc-services"></a>使用 CDC 服務
   您可以使用 CDC 服務組態主控台來建立新的 CDC 服務並為 CDC 準備 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫。  
   
-## 選項。  
+## <a name="options"></a>選項。  
  **準備 SQL Server**  
  從 CDC 服務組態主控台右側的 **[動作]** 窗格中選取這個選項。  
   
@@ -29,7 +34,7 @@ caps.handback.revision: 6
   
  隨即開啟 [為 Oracle CDC 準備 SQL Server 執行個體] 對話方塊。  
   
- 如需有關如何使用此對話方塊的詳細資訊，請參閱＜ [Prepare SQL Server for CDC](../../integration-services/change-data-capture/prepare-sql-server-for-cdc.md)＞。 如需如何針對 CDC 啟用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的資訊，請參閱[如何為 CDC 準備 SQL Server](../../integration-services/change-data-capture/how-to-prepare-sql-server-for-cdc.md)。  
+ 如需有關如何使用此對話方塊的詳細資訊，請參閱＜ [Prepare SQL Server for CDC](../../integration-services/change-data-capture/prepare-sql-server-for-cdc.md)＞。 如需如何針對 CDC 啟用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的資訊，請參閱 [如何為 CDC 準備 SQL Server](../../integration-services/change-data-capture/how-to-prepare-sql-server-for-cdc.md)。  
   
  **建立新的 CDC 服務**  
  從 CDC 服務組態主控台右側的 **[動作]** 窗格中按一下 **[新增服務]** 。  
@@ -38,7 +43,7 @@ caps.handback.revision: 6
   
  隨即開啟 [新增 Oracle CDC 服務] 對話方塊。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [如何使用 CDC 服務](../../integration-services/change-data-capture/how-to-work-with-cdc-services.md)   
  [建立及編輯 Oracle CDC 服務](../../integration-services/change-data-capture/create-and-edit-an-oracle-cdc-service.md)  
   

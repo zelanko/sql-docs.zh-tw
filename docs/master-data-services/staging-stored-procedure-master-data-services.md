@@ -1,33 +1,38 @@
 ---
-title: "暫存預存程序 (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "暫存預存程序 (Master Data Services) |Microsoft 文件"
+ms.custom: 
+ms.date: 04/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6a613106-9f87-4caf-a23a-a726fc6561c5
 caps.latest.revision: 15
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c2c12151d25b7d563a8a37a7ccfd617bca5cb479
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 暫存預存程序 (Master Data Services)
-  從 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 起始暫存處理序時，可以使用下列三個預存程序其中之一：  
+# <a name="staging-stored-procedure-master-data-services"></a>暫存預存程序 (Master Data Services)
+  從 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]起始暫存處理序時，可以使用下列三個預存程序其中之一：  
   
--   stg.udp_\<名稱>_Leaf  
+-   stg.udp_<\<名稱 > _Leaf  
   
--   stg.udp_\<名稱>_Consolidated  
+-   stg.udp_<\<名稱 > _Consolidated  
   
--   stg.udp_\<名稱>_Relationship  
+-   stg.udp_<\<名稱 > s h i p  
   
  其中 name 是建立實體時所指定之暫存資料表的名稱。  
   
-## 暫存處理序預存程序參數  
+## <a name="staging-process-stored-procedure-parameters"></a>暫存處理序預存程序參數  
  下表列出這些預存程序的參數。  
   
 |參數|說明|  
@@ -39,7 +44,7 @@ caps.handback.revision: 15
 |**使用者名稱**|選擇性參數|  
 |**使用者識別碼**|選擇性參數|  
   
-### 暫存處理序預存程序範例  
+### <a name="staging-process-stored-procedure-example"></a>暫存處理序預存程序範例  
  下列範例顯示如何使用暫存預存程序啟動暫存處理序。  
   
 ```  
@@ -56,8 +61,9 @@ GO
   
 ```  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [驗證預存程序 &#40;Master Data Services&#41;](../master-data-services/validation-stored-procedure-master-data-services.md)   
  [檢視暫存期間發生的錯誤 &#40;Master Data Services&#41;](../master-data-services/view-errors-that-occur-during-staging-master-data-services.md)  
   
   
+

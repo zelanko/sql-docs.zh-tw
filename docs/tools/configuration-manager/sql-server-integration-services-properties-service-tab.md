@@ -1,25 +1,30 @@
 ---
-title: "SQL Server Integration Services 屬性 (服務索引標籤) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "SQL Server Integration Services 屬性 （服務索引標籤） |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 37f0acd9-c96f-48fd-9b53-2ca0097af242
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 53b926557561d244dbef987aaabe3fdcfeabbf70
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# SQL Server Integration Services 屬性 (服務索引標籤)
+# <a name="sql-server-integration-services-properties-service-tab"></a>SQL Server Integration Services 屬性 (服務索引標籤)
   您可以使用 [[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 屬性] 對話方塊上的 [服務] 索引標籤，來檢視或指定下列選項。  
   
-## 選項。  
+## <a name="options"></a>選項  
  **二進位路徑**  
  顯示這個服務使用之程式檔案的位置。  
   
@@ -39,7 +44,7 @@ caps.handback.revision: 16
  顯示 Windows 處理序識別碼。  
   
  **SQL 服務類型**  
- 顯示為呼叫處理序所提供的服務類型。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會安裝數個服務。  
+ 顯示為呼叫處理序所提供的服務類型。 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]會安裝數個服務。  
   
  **啟動模式**  
  將這個服務設定為下列選擇：  

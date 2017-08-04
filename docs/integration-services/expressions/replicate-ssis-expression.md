@@ -1,47 +1,52 @@
 ---
-title: "REPLICATE (SSIS 運算式) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "REPLICATE 函數"
+title: "REPLICATE （SSIS 運算式） |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- REPLICATE function
 ms.assetid: e7a37b93-6d1d-42d5-9a65-de1790abf6a5
 caps.latest.revision: 34
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c94e5f4221251b3b931ebabc5076620ba6ab0e7e
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# REPLICATE (SSIS 運算式)
+# <a name="replicate-ssis-expression"></a>REPLICATE (SSIS 運算式)
   傳回複寫許多次的字元運算式。 *times* 引數必須評估為整數。  
   
 > [!NOTE]  
 >  REPLICATE 函數經常使用長字串，因此很可能產生運算式長度為 4000 個字元的限制。 如果運算式的評估結果具有 Integration Services 資料類型 DT_WSTR 或 DT_STR，則會將運算式在 4000 個字元處截斷。 如果子運算式的結果類型為 DT_STR 或 DT_WSTR，則同樣會將子運算式截斷到 4000 個字元，不論整體運算式的結果類型為何。 截斷的結果可正常地處理，或造成警告或錯誤。 如需詳細資訊，請參閱[語法 &#40;SSIS&#41;](../../integration-services/expressions/syntax-ssis.md)。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
 REPLICATE(character_expression,times)  
 ```  
   
-## 引數  
+## <a name="arguments"></a>引數  
  *character_expression*  
  是要複寫的字元運算式。  
   
- *乘*  
+ *times*  
  是整數運算式，指定複寫 *character_expression* 的次數。  
   
-## 結果類型  
+## <a name="result-types"></a>結果類型  
  DT_WSTR  
   
-## 備註  
+## <a name="remarks"></a>備註  
  如果 *times* 為零，則函數會傳回長度為 0 的字串。  
   
  如果 *times* 為負數，則函數會傳回錯誤。  
@@ -52,7 +57,7 @@ REPLICATE(character_expression,times)
   
  如果其中一個引數為 Null，則 REPLICATE 會傳回 Null 結果。  
   
-## 運算式範例  
+## <a name="expression-examples"></a>運算式範例  
  此範例會複寫字串常值三次。 傳回結果為「Mountain BikeMountain BikeMountain Bike」。  
   
 ```  
@@ -71,7 +76,7 @@ REPLICATE(Name, @Times)
 REPLICATE(@Name, (DT_I4(Times))  
 ```  
   
-## 請參閱＜  
- [函數 &#40;SSIS 運算式&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>請參閱＜  
+ [函式 &#40;SSIS 運算式 &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

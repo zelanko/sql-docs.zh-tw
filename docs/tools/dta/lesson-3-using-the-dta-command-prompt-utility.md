@@ -1,27 +1,32 @@
 ---
-title: "第 3 課：使用 dta 命令提示字元公用程式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-query-tuning"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
-helpviewer_keywords: 
-  - "資料庫引擎 [SQL Server], 教學課程"
+title: "第 3 課： 使用 dta 命令提示字元公用程式 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-query-tuning
+ms.tgt_pltfrm: 
+ms.topic: article
+applies_to:
+- SQL Server 2016
+helpviewer_keywords:
+- Database Engine [SQL Server], tutorials
 ms.assetid: 30f27f4d-8852-4b12-ba62-57f63e496f1d
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b33b5d2a64fc88cbd53d6c76fd73165ade697eac
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 第 3 課：使用 dta 命令提示字元公用程式
-除了 Database Engine Tuning Advisor 所提供的功能，**dta** 命令提示字元公用程式還提供額外的功能。  
+# <a name="lesson-3-using-the-dta-command-prompt-utility"></a>第 3 課：使用 dta 命令提示字元公用程式
+除了 Database Engine Tuning Advisor 所提供的功能， **dta** 命令提示字元公用程式還提供額外的功能。  
   
 您可以利用您愛用的 XML 工具和 Database Engine Tuning Advisor XML 結構描述來建立這個公用程式的輸入檔。 這個結構描述會在您安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時一併安裝，並且位於：C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd。  
   
@@ -39,8 +44,9 @@ caps.handback.revision: 26
   
 -   啟動 **dta** 命令提示字元公用程式和微調工作負載  
   
-## 本課程的下一項工作  
-[啟動 dta 命令提示字元公用程式和微調工作負載](../../tools/dta/starting-the-dta-command-prompt-utility-and-tuning-a-workload.md)  
+## <a name="next-task-in-lesson"></a>本課程的下一項工作  
+[啟動 dta 命令提示字元公用程式和微調工作負載](../../tools/dta/lesson-3-1-starting-the-dta-command-prompt-utility-and-tuning-a-workload.md)  
   
   
   
+

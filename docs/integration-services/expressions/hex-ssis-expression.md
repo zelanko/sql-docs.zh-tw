@@ -1,42 +1,47 @@
 ---
-title: "HEX (SSIS 運算式) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "十六進位資料"
-  - "HEX 函數"
+title: "HEX （SSIS 運算式） |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- hexadecimal data
+- HEX function
 ms.assetid: f5d471ee-aeef-421c-b6e1-55b9676c3842
 caps.latest.revision: 36
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f44919fb8992a26ce5adddfabba9f3b1164ee7be
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# HEX (SSIS 運算式)
+# <a name="hex-ssis-expression"></a>HEX (SSIS 運算式)
   傳回代表整數的十六進位值的字串。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
 HEX(integer_expression)  
 ```  
   
-## 引數  
+## <a name="arguments"></a>引數  
  *integer_expression*  
  是帶正負號或不帶正負號的整數。  
   
-## 結果類型  
+## <a name="result-types"></a>結果類型  
  DT_WSTR  
   
-## 備註  
+## <a name="remarks"></a>備註  
  如果 *integer_expression* 是 Null，則 HEX 會傳回 Null。  
   
  *integer_expression* 引數必須評估為整數。 如需詳細資訊，請參閱＜ [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)＞。  
@@ -55,7 +60,7 @@ HEX(integer_expression)
   
 -   DT_I8 和 DT_UI8 傳回最大長度為 16 的字串。  
   
-## 運算式範例  
+## <a name="expression-examples"></a>運算式範例  
  這個範例使用數值常值。 函數傳回值 190。  
   
 ```  
@@ -74,7 +79,7 @@ HEX(ReorderPoint)
 HEX(@LocaleID)  
 ```  
   
-## 請參閱＜  
- [函數 &#40;SSIS 運算式&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>請參閱＜  
+ [函式 &#40;SSIS 運算式 &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

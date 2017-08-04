@@ -1,22 +1,27 @@
 ---
-title: "查閱 RFC 目的地 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "查閱 RFC 目的地 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: db9404d8-4c42-45e5-a100-c7a84b056109
 caps.latest.revision: 10
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3c9db6a056a69d502b4a93b9575cb565da798adf
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 查閱 RFC 目的地
+# <a name="look-up-rfc-destination"></a>查閱 RFC 目的地
   使用 [查閱 RFC 目的地] 對話方塊可以查閱 SAP Netweaver BW 系統中定義的 RFC 目的地。 出現可用的 RFC 目的地清單時，請選取您要的目的地，然後此元件就會將必要的值填入相關聯的選項。  
   
  SAP BW 來源和 SAP BW 目的地都會使用 [查閱 RFC 目的地] 對話方塊。 如需 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW 這些元件的詳細資訊，請參閱 [SAP BW 來源](../../integration-services/data-flow/sap-bw-source.md)和 [SAP BW 目的地](../../integration-services/data-flow/sap-bw-destination.md)。  
@@ -36,7 +41,7 @@ caps.handback.revision: 10
   
      在 [SAP BW 來源編輯器] 中，只有當 [執行模式] 的值是 [P - 觸發處理鏈結] 或 [W - 等候通知] 時，才會出現 [RFC 目的地] 群組方塊。  
   
-## 選項。  
+## <a name="options"></a>選項。  
  **目的地**  
  檢視 SAP Netweaver BW 系統中定義的 RFC 目的地名稱。  
   
@@ -44,14 +49,14 @@ caps.handback.revision: 10
  檢視閘道器主機的伺服器名稱或 IP 位址。 此名稱或 IP 位址通常與 SAP 應用程式伺服器相同。  
   
  **閘道器服務**  
- 以 **sapgwNN** 格式檢視閘道器服務的名稱，其中 **NN** 是系統編號。  
+ 以 **sapgwNN**格式檢視閘道器服務的名稱，其中 **NN** 是系統編號。  
   
  **程式識別碼**  
  檢視與 RFC 目的地相關聯的程式識別碼。  
   
-## 請參閱＜  
- [SAP BW 來源編輯器 &#40;連線管理員頁面&#41;](../../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)   
- [SAP BW 目的地編輯器 &#40;連線管理員頁面&#41;](../../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)   
+## <a name="see-also"></a>請參閱＜  
+ [SAP BW 來源編輯器 &#40;連接管理員頁面 &#41;](../../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)   
+ [SAP BW 目的地編輯器 &#40;連接管理員頁面 &#41;](../../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)   
  [Microsoft Connector for SAP BW F1 說明](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   

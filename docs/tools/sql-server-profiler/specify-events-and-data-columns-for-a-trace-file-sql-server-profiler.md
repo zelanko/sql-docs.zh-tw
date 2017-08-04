@@ -1,31 +1,36 @@
 ---
-title: "指定追蹤檔案的事件及資料行 (SQL Server Profiler) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "新增事件"
-  - "追蹤 [SQL Server], 資料行"
-  - "刪除事件"
-  - "移除事件"
-  - "追蹤 [SQL Server], 事件"
+title: "指定追蹤檔案 (SQL Server Profiler) 的事件及資料行 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- adding events
+- traces [SQL Server], data columns
+- deleting events
+- removing events
+- traces [SQL Server], events
 ms.assetid: 7da715a3-2f03-4063-b6a4-20fd7b44e675
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 413a30657e348dba30d335a225ad243600a0ebbd
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 指定追蹤檔案的事件及資料行 (SQL Server Profiler)
+# <a name="specify-events-and-data-columns-for-a-trace-file-sql-server-profiler"></a>指定追蹤檔案的事件及資料行 (SQL Server Profiler)
   此主題描述如何使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 來指定追蹤的事件類別及資料行。  
   
-### 若要指定追蹤的事件及資料行  
+### <a name="to-specify-events-and-data-columns-for-a-trace"></a>若要指定追蹤的事件及資料行  
   
 1.  在 [追蹤屬性] 或 [追蹤範本屬性] 對話方塊上，按一下 [事件選取範圍] 索引標籤。  
   
@@ -46,7 +51,7 @@ caps.handback.revision: 24
   
 2.  您可以選擇將篩選套用至追蹤。 如需詳細資訊，請參閱[篩選追蹤中的事件 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/filter-events-in-a-trace-sql-server-profiler.md)  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

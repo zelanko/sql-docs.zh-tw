@@ -1,25 +1,30 @@
 ---
-title: "測試使用者的權限 (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "測試使用者 &#39; s 權限 (Master Data Services) |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 83a03b85-ea7f-4b4a-b19b-f7eca534ffae
 caps.latest.revision: 4
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 4
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 125c5cffc68dd80688242636c455fb26e4129263
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 測試使用者的權限 (Master Data Services)
+# <a name="test-a-user39s-permissions-master-data-services"></a>測試使用者 &#39; s 權限 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，您可以建立測試使用者並登入 Web 應用程式來測試權限。當使用者嘗試存取 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] URL 時，就會驗證使用者的認證。 在 Internet Explorer 中，安全性設定會控制這項驗證是自動發生，還是使用者必須輸入使用者名稱和密碼。 若要變更這些設定，請完成下列步驟：  
   
-### 若要測試使用者的安全性  
+### <a name="to-test-a-users-security"></a>若要測試使用者的安全性  
   
 1.  在 Internet Explorer 7 及更新版本中，依序按一下 **[工具]**、 **[網際網路選項]**和 **[安全性]** 索引標籤。  
   
@@ -29,7 +34,7 @@ caps.handback.revision: 4
   
 4.  下次您開啟瀏覽器視窗時，將提示您輸入使用者名和密碼。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [安全性 &#40;Master Data Services&#41;](../master-data-services/security-master-data-services.md)  
   
   

@@ -1,26 +1,31 @@
 ---
-title: "Web 服務工作 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.webservicetask.f1"
-helpviewer_keywords: 
-  - "Web 服務工作 [Integration Services]"
+title: "Web 服務工作 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.webservicetask.f1
+helpviewer_keywords:
+- Web Service task [Integration Services]
 ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
 caps.latest.revision: 57
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 57
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: f91aa6e47ee1255c97e8ffd2f91a5fb559a942ca
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# Web 服務工作
+# <a name="web-service-task"></a>Web 服務工作
   「Web 服務」工作執行一個 Web 服務方法。 您可將「Web 服務」工作用於下列用途：  
   
 -   將 Web 服務方法傳回的值寫入變數。 例如，您可以使用 Web 服務方法取得一天的最高溫度，然後使用該值來更新在設定資料行值之運算式中所使用的變數。  
@@ -35,7 +40,7 @@ caps.handback.revision: 57
   
  HTTP 連接管理員可指向網站或「Web 服務描述語言」(WSDL) 檔案。 指向 WSDL 檔案之 HTTP 連接管理員的 URL 包含 `?WSDL` 參數：例如 `http://MyServer/MyWebService/MyPage.asmx?WSDL`。  
   
- WSDL 檔案必須可以在本機上使用，這樣才能使用 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師提供的 [Web 服務工作編輯器] 對話方塊設定 Web 服務工作。  
+ WSDL 檔案必須可以在本機上使用，這樣才能使用 **設計師提供的 [Web 服務工作編輯器]**[!INCLUDE[ssIS](../../includes/ssis-md.md)] 對話方塊設定 Web 服務工作。  
   
 -   如果 HTTP 連接管理員指向網站，則必須手動將 WSDL 檔案複製到本機電腦。  
   
@@ -50,7 +55,7 @@ caps.handback.revision: 57
  Web 服務方法的結果可以寫入變數或檔案。 您可以使用「檔案」連接管理員，以指定要寫入結果的檔案或提供要寫入結果的變數名稱。 如需詳細資訊，請參閱[檔案連線管理員](../../integration-services/connection-manager/file-connection-manager.md)和 [Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)。  
   
 ## <a name="custom-logging-messages-available-on-the-web-service-task"></a>Web 服務工作上可用的自訂記錄訊息  
- 下表列出您可以為 Web 服務工作啟用的自訂記錄項目。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 記錄](../../integration-services/performance/integration-services-ssis-logging.md)和[自訂訊息以進行記錄](../../integration-services/performance/custom-messages-for-logging.md)。  
+ 下表列出您可以為 Web 服務工作啟用的自訂記錄項目。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 記錄](../../integration-services/performance/integration-services-ssis-logging.md)。  
   
 |記錄項目|Description|  
 |---------------|-----------------|  
@@ -63,17 +68,17 @@ caps.handback.revision: 57
   
  如需有關可以在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [Web 服務工作編輯器 &#40;[一般] 頁面&#41;](../Topic/Web%20Service%20Task%20Editor%20\(General%20Page\).md)  
+-   [Web 服務工作編輯器 &#40;[一般] 頁面&#41;](../../integration-services/control-flow/web-service-task-editor-general-page.md)  
   
--   [Web 服務工作編輯器 &#40;[輸入] 頁面&#41;](../Topic/Web%20Service%20Task%20Editor%20\(Input%20Page\).md)  
+-   [Web 服務工作編輯器 &#40;[輸入] 頁面&#41;](../../integration-services/control-flow/web-service-task-editor-input-page.md)  
   
--   [Web 服務工作編輯器 &#40;[輸出] 頁面&#41;](../Topic/Web%20Service%20Task%20Editor%20\(Output%20Page\).md)  
+-   [Web 服務工作編輯器 &#40;[輸出] 頁面&#41;](../../integration-services/control-flow/web-service-task-editor-output-page.md)  
   
 -   [運算式頁面](../../integration-services/expressions/expressions-page.md)  
   
  如需有關如何在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中設定這些屬性的詳細資訊，請按下列主題：  
   
--   [設定工作或容器的屬性](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+-   [設定工作或容器的屬性](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## <a name="programmatic-configuration-of-the-web-service-task"></a>以程式設計方式設定 Web 服務工作  
  如需有關以程式設計方式設定這些屬性的詳細資訊，請按下列其中一個主題：  
@@ -82,3 +87,4 @@ caps.handback.revision: 57
   
 ## <a name="related-content"></a>相關內容  
  technet.microsoft.com 上的影片： [How to: Call a Web Service by Using the Web Service Task](http://go.microsoft.com/fwlink/?LinkId=259642)(如何：使用 Web 服務工作呼叫 Web 服務) (SQL Server 影片)。  
+

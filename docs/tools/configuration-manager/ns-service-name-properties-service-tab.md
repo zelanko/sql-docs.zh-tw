@@ -1,25 +1,30 @@
 ---
-title: "NS$&lt;service name&gt; 屬性 (服務索引標籤) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "NS$&lt;服務名稱&gt;屬性 （服務索引標籤） |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 57c6b791-1663-4a01-9de2-cf1bdd8adb2c
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6b5e8e22040a8d2c680e7ab14ead804ead600d77
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# NS$&lt;service name&gt; 屬性 (服務索引標籤)
+# <a name="nsltservice-namegt-properties-service-tab"></a>NS$&lt;服務名稱&gt;屬性 （服務索引標籤）
   這個服務是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNS](../../includes/ssns-md.md)] 服務。 淺灰色的屬性值不得以此應用程式加以變更。  
   
-## 選項。  
+## <a name="options"></a>選項。  
  **二進位路徑**  
  顯示這個服務使用之程式檔案的位置。  
   

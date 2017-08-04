@@ -1,34 +1,39 @@
 ---
-title: "檔案連接管理員編輯器 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.fileconnectionmanager.f1"
-helpviewer_keywords: 
-  - "檔案連接管理員編輯器"
+title: "檔案連接管理員編輯器 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.fileconnectionmanager.f1
+helpviewer_keywords:
+- File Connection Manager Editor
 ms.assetid: 051c48e5-3d86-49af-b554-ff62e3de3622
 caps.latest.revision: 22
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1483b135c5a2ef8559ce4a2f21f3fa04da1433cf
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 檔案連接管理員編輯器
+# <a name="file-connection-manager-editor"></a>檔案連接管理員編輯器
   使用 **[檔案連接管理員編輯器]** 對話方塊，以指定用來連接到檔案或資料夾的屬性。  
   
 > [!NOTE]  
->  您可以針對檔案連線管理員來設定 ConnectionString 屬性，其方式是在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的 [屬性] 視窗中指定運算式。 但是，若您在使用運算式來指定檔案或資料夾時想要避免驗證錯誤，請在**檔案連線管理員編輯器**中針對**檔案/資料夾**，加入檔案或資料夾的路徑。  
+>  您可以針對檔案連線管理員來設定 ConnectionString 屬性，其方式是在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]的 [屬性] 視窗中指定運算式。 但是，若您在使用運算式來指定檔案或資料夾時想要避免驗證錯誤，請在 **檔案連線管理員編輯器**中針對 **檔案/資料夾**，加入檔案或資料夾的路徑。  
   
  若要深入了解檔案連接管理員，請參閱＜ [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)＞。  
   
-## 選項。  
+## <a name="options"></a>選項。  
  **使用類型**  
  指定 [檔案連線管理員] 是否連接到現有的檔案或資料夾，或者建立新檔案或資料夾。  
   
@@ -47,7 +52,7 @@ caps.handback.revision: 22
  **瀏覽**  
  使用 [選取檔案] 或 [瀏覽資料夾] 對話方塊，來選取檔案或資料夾。  
   
-## 請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../integration-services/integration-services-error-and-message-reference.md)  
   
   

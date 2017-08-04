@@ -1,31 +1,36 @@
 ---
-title: "一般檔案連接管理員編輯器 (一般頁面) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.ffileconnection.general.f1"
-helpviewer_keywords: 
-  - "一般檔案連接管理員編輯器"
+title: "一般檔案連接管理員編輯器 （一般頁面） |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.ffileconnection.general.f1
+helpviewer_keywords:
+- Flat File Connection Manager Editor
 ms.assetid: 77296024-5c1a-4f6a-9665-0b50d45d744c
 caps.latest.revision: 24
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6e94228deef3c278239cc9f24026677a175d3a65
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 一般檔案連接管理員編輯器 (一般頁面)
+# <a name="flat-file-connection-manager-editor-general-page"></a>一般檔案連接管理員編輯器 (一般頁面)
   使用 **[一般檔案連接管理員編輯器]** 對話方塊的 **[一般]** 頁面，來選取檔案和資料格式。 一般檔案連接可以讓封裝連接到文字檔。  
   
  若要深入了解一般檔案連接管理員，請參閱＜ [Flat File Connection Manager](../../integration-services/connection-manager/flat-file-connection-manager.md)＞。  
   
-## 選項。  
+## <a name="options"></a>選項。  
  **連接管理員名稱**  
  提供唯一的名稱給工作流程中的一般檔案連接。 提供的名稱將顯示在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師內。  
   
@@ -82,10 +87,10 @@ caps.handback.revision: 24
  **第一個資料列的資料行名稱**  
  指出在第一個資料列中，是否為資料行名稱或需要提供資料行名稱。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [Integration Services 錯誤和訊息參考](../../integration-services/integration-services-error-and-message-reference.md)   
- [一般檔案連接管理員編輯器 &#40;資料行頁面&#41;](../../integration-services/connection-manager/flat-file-connection-manager-editor-columns-page.md)   
- [一般檔案連接管理員編輯器 &#40;進階頁面&#41;](../../integration-services/connection-manager/flat-file-connection-manager-editor-advanced-page.md)   
- [一般檔案連接管理員編輯器 &#40;預覽頁面&#41;](../../integration-services/connection-manager/flat-file-connection-manager-editor-preview-page.md)  
+ [一般檔案連接管理員編輯器 &#40;資料行頁面 &#41;](../../integration-services/connection-manager/flat-file-connection-manager-editor-columns-page.md)   
+ [一般檔案連接管理員編輯器 &#40;進階的頁面 &#41;](../../integration-services/connection-manager/flat-file-connection-manager-editor-advanced-page.md)   
+ [一般檔案連接管理員編輯器 &#40;[預覽] 頁面&#41;](../../integration-services/connection-manager/flat-file-connection-manager-editor-preview-page.md)  
   
   

@@ -1,25 +1,30 @@
 ---
-title: "如何建立 SQL Server 變更資料庫執行個體 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "如何建立 SQL Server 變更資料庫執行個體 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3895097e-28fa-4808-a3a8-ba821b4ba4d4
 caps.latest.revision: 6
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: db156f59fe1e77bd3abb50be85ecca1f693a0b73
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 如何建立 SQL Server 變更資料庫執行個體
+# <a name="how-to-create-the-sql-server-change-database-instance"></a>如何建立 SQL Server 變更資料庫執行個體
   這個程序描述如何使用 CDC 設計工具主控台來建立 CDC 執行個體。  
   
-### 若要建立 CDC 執行個體  
+### <a name="to-create-cdc-instances"></a>若要建立 CDC 執行個體  
   
 1.  從 **[開始]** 功能表選取 **[CDC 設計工具主控台]**。  
   

@@ -1,31 +1,36 @@
 ---
-title: "一般檔案目的地編輯器 (連接管理員頁面) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.flatfiledestadapter.connection.f1"
-helpviewer_keywords: 
-  - "一般檔案目的地編輯器"
+title: "一般檔案目的地編輯器 （連接管理員頁面） |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.flatfiledestadapter.connection.f1
+helpviewer_keywords:
+- Flat File Destination Editor
 ms.assetid: b01571fa-bc19-4742-8eed-ac163172a919
 caps.latest.revision: 30
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 85e551983f5409098187848014bd4819e0810c90
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 一般檔案目的地編輯器 (連接管理員頁面)
+# <a name="flat-file-destination-editor-connection-manager-page"></a>一般檔案目的地編輯器 (連接管理員頁面)
   使用 [一般檔案目的地編輯器] 對話方塊的 [連線管理員] 頁面，來選取目的地的一般檔案連接，以及指定是否要覆寫或附加至現有的目的地檔案。 一般檔案目的地會將資料寫入文字檔。 此文字檔的格式可以是分隔、固定寬度、固定寬度且具有資料列分隔符號或不齊右格式。  
   
- 若要深入了解一般檔案目的地，請參閱[一般檔案目的地](../../integration-services/data-flow/flat-file-destination.md)。  
+ 若要深入了解一般檔案目的地，請參閱 [一般檔案目的地](../../integration-services/data-flow/flat-file-destination.md)。  
   
-## 選項。  
+## <a name="options"></a>選項。  
  **一般檔案連接管理員**  
  使用清單方塊選取現有的連線管理員，或按一下 [新增] 建立新的連接。  
   
@@ -45,8 +50,8 @@ caps.handback.revision: 30
  **預覽**  
  使用 [資料檢視] 對話方塊來預覽結果。 預覽最多可顯示 200 個資料列。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [Integration Services 錯誤和訊息參考](../../integration-services/integration-services-error-and-message-reference.md)   
- [一般檔案目的地編輯器 &#40;對應頁面&#41;](../../integration-services/data-flow/flat-file-destination-editor-mappings-page.md)  
+ [一般檔案目的地編輯器 &#40;[對應] 頁面 &#41;](../../integration-services/data-flow/flat-file-destination-editor-mappings-page.md)  
   
   

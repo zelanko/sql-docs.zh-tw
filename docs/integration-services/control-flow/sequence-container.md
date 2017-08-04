@@ -1,29 +1,34 @@
 ---
-title: "時序容器 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.sequencecontainer.f1"
-helpviewer_keywords: 
-  - "時序容器"
-  - "群組控制流程"
-  - "容器 [Integration Services], 時序"
-  - "子集控制流程 [Integration Services]"
+title: "時序容器 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.sequencecontainer.f1
+helpviewer_keywords:
+- Sequence container
+- grouping control flows
+- containers [Integration Services], Sequence
+- subset control flow [Integration Services]
 ms.assetid: 7731f91e-b8b3-4d96-a0d9-73f568547cb3
 caps.latest.revision: 48
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 48
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0e5ab99da4957f614aff20aa7672f444abfadbee
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 時序容器
+# <a name="sequence-container"></a>時序容器
   「時序」容器會定義屬於封裝控制流程子集的控制流程。 「時序」容器會將封裝納入多個不同的控制流程中，而各流程中包含在整個封裝控制流程內執行的一項或多項工作和容器。  
   
  除了其他容器外，「時序」容器也可包含多個工作。 將工作和容器加入「時序」容器與將它們加入封裝相似，不同之處在於，您要將工作和容器拖曳至「時序」容器而非封裝容器。 如果「時序」容器包含一個以上的工作或容器，則您可以如同在封裝中所做的一樣，使用優先順序條件約束來連接它們。 如需詳細資訊，請參閱 [Precedence Constraints](../../integration-services/control-flow/precedence-constraints.md)。  
@@ -46,17 +51,17 @@ caps.handback.revision: 48
   
      例如，如果「時序」容器包括兩項相關的工作，其中一項工作為刪除資料表中的資料，而另一項工作會將資料插入資料表中，則可設定交易，以確認刪除動作會在插入動作失敗時回復。 如需詳細資訊，請參閱 [Integration Services 交易](../../integration-services/integration-services-transactions.md)。  
   
-## 設定時序容器  
+## <a name="configuration-of-the-sequence-container"></a>設定時序容器  
  「時序」容器沒有自訂使用者介面，而且您只能在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的 [屬性] 視窗中或利用撰寫程式的方式進行設定。  
   
  如需以程式設計方式設定這些屬性的詳細資訊，請參閱《開發人員指南》中 **T:Microsoft.SqlServer.Dts.Runtime.Sequence** 類別的文件。  
   
-## 相關工作  
- 如需如何設定 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中元件屬性的資訊，請參閱[設定工作或容器的屬性](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)。  
+## <a name="related-tasks"></a>相關工作  
+ 如需如何設定 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中元件屬性的資訊，請參閱 [設定工作或容器的屬性](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [在控制流程中加入或刪除工作或容器](../../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
- [使用預設的優先順序條件約束來連接工作和容器](../Topic/Connect%20Tasks%20and%20Containers%20by%20Using%20a%20Default%20Precedence%20Constraint.md)   
+ [使用預設的優先順序條件約束連接工作和容器](http://msdn.microsoft.com/library/8f31f15f-98ff-4c35-b41f-8b8cfd148d75)   
  [整合服務容器](../../integration-services/control-flow/integration-services-containers.md)  
   
   

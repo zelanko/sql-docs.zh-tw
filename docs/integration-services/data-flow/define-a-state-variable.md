@@ -1,22 +1,27 @@
 ---
-title: "定義狀態變數 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "定義狀態變數 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 45d66152-883a-49a7-a877-2e8ab45f8f79
 caps.latest.revision: 12
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2ebec44b7492ead6e3417758ac653360f44d4df9
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 定義狀態變數
+# <a name="define-a-state-variable"></a>定義狀態變數
   此程序描述如何定義 CDC 狀態儲存所在的封裝變數。  
   
  CDC 狀態變數是由 CDC 控制工作所載入、初始化及更新，並且由 CDC 來源資料流程元件用來判斷變更記錄目前的處理範圍。 CDC 狀態變數可定義於 CDC 控制工作和 CDC 來源通用的任何容器上。 這可以是在封裝層級，但也可以是在其他容器，如迴圈容器。  
@@ -25,20 +30,20 @@ caps.handback.revision: 12
   
  下表提供 CDC 狀態變數值各項元件的進階說明。  
   
-|元件|說明|  
+|元件|Description|  
 |---------------|-----------------|  
-|**\<state-name>**|此為目前 CDC 狀態的名稱。|  
+|**\<狀態名稱 >**|此為目前 CDC 狀態的名稱。|  
 |**CS**|此標示目前處理範圍的起點 (Current Start)。|  
-|**\<cs-lsn>**|此為上一個 CDC 回合最後處理的 LSN (記錄序號)。|  
+|**\<cs lsn >**|此為上一個 CDC 回合最後處理的 LSN (記錄序號)。|  
 |**CE**|此標示目前處理範圍的終點 (Current End)。 CDC 狀態中若存在 CE 元件，代表目前正在處理 CDC 封裝，或是 CDC 封裝在其 CDC 處理範圍未處理完全之前即已失敗。|  
-|**\<ce-lsn>**|此為目前 CDC 回合要處理的最後一個 LSN。 處理的最後一個序號一律假設為最大值 (0xFFF…)。|  
+|**\<ce lsn >**|此為目前 CDC 回合要處理的最後一個 LSN。 處理的最後一個序號一律假設為最大值 (0xFFF…)。|  
 |**IR**|此標示初始處理範圍。|  
-|**\<ir-start>**|此為初始載入剛要開始前之異動的 LSN。|  
-|**\<ir-end>**|此為初始載入才剛結束後之異動的 LSN。|  
+|**\<ir 開始 >**|此為初始載入剛要開始前之異動的 LSN。|  
+|**\<ir 端 >**|此為初始載入才剛結束後之異動的 LSN。|  
 |**TS**|此標示上次 CDC 狀態更新的時間戳記。|  
-|**\<時間戳記>**|此為 64 位元 System.DateTime.UtcNow 屬性的十進位表示法。|  
+|**\<時間戳記 >**|此為 64 位元 System.DateTime.UtcNow 屬性的十進位表示法。|  
 |**ER**|此將在上次作業失敗時出現，且包含錯誤原因的簡短描述。 若存在此元件，則其一定出現於最後。|  
-|**\<short-error-text>**|此為簡短的錯誤描述。|  
+|**\<簡短的錯誤文字 >**|此為簡短的錯誤描述。|  
   
  每個 LSN 和序號都是編碼為多達 20 位數的十六進位字串，代表 Binary(10) 的 LSN 值。  
   
@@ -67,7 +72,7 @@ caps.handback.revision: 12
   
 -   TFREDO/CS/0x0000030D000000AE0003/CE/0x0000159D1E0F01000000/TS/2011-08-09T05:30:59.5544900/  
   
-### 若要定義 CDC 狀態變數  
+### <a name="to-define-a-cdc-state-variable"></a>若要定義 CDC 狀態變數  
   
 1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中，開啟有需要定義變數之 CDC 流程的 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 封裝。  
   
@@ -83,7 +88,7 @@ caps.handback.revision: 12
   
  如果您不打算將 CDC 控制工作與 [自動狀態持續性] 搭配使用，則必須從上次封裝執行時儲存其值的永續性儲存體中載入變數值，並在目前處理範圍已完成處理時將變數值寫回該永續性儲存體。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [CDC 控制工作](../../integration-services/control-flow/cdc-control-task.md)   
  [CDC 控制工作編輯器](../../integration-services/control-flow/cdc-control-task-editor.md)  
   

@@ -1,27 +1,32 @@
 ---
-title: "如何建立及編輯 CDC 服務 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "如何建立及編輯 CDC 服務 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1b3d47a5-dc89-482d-bbc7-fff04f194c43
 caps.latest.revision: 7
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: daf64f88220832573485701883921ad575e789bc
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 如何建立及編輯 CDC 服務
+# <a name="how-to-create-and-edit-a-cdc-service"></a>如何建立及編輯 CDC 服務
   這些程序描述如何從 CDC 服務組態主控台來建立和編輯新的 Oracle CDC 服務。  
   
  此程序要求在設定 Oracle CDC 服務的電腦上必須有系統管理員權限的 Windows 使用者。  
   
-### 若要建立新的 CDC 服務  
+### <a name="to-create-a-new-cdc-service"></a>若要建立新的 CDC 服務  
   
 1.  從 **[開始]** 功能表，選取 **[Oracle CDC 服務組態]**。  
   
@@ -31,7 +36,7 @@ caps.handback.revision: 7
   
 3.  在 [新增 Oracle CDC 服務] 對話方塊中輸入必要的資訊。 如需有關如何在 [新增 Oracle CDC 服務] 對話方塊中輸入資訊的詳細資訊，請參閱＜ [Create and Edit an Oracle CDC Service](../../integration-services/change-data-capture/create-and-edit-an-oracle-cdc-service.md) ＞。  
   
-     當 Oracle CDC 服務執行時，此服務會使用在 [新增 Oracle CDC 服務] 對話方塊中所提供的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 此登入只要求它必須是公用固定伺服器角色的成員，不需要其他權限。 一旦加入新的 Oracle CDC 執行個體之後，該登入會收到關聯 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CDC 資料庫的 **db_owner** 存取權。  
+     當 Oracle CDC 服務執行時，此服務會使用在 [新增 Oracle CDC 服務] 對話方塊中所提供的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 此登入只要求它必須是公用固定伺服器角色的成員，不需要其他權限。 一旦加入新的 Oracle CDC 執行個體之後，該登入會收到關聯 **CDC 資料庫的** db_owner [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 存取權。  
   
 4.  當您將所需的資訊輸入完畢時，請按一下 **[確定]**。  
   
@@ -41,7 +46,7 @@ caps.handback.revision: 7
   
 5.  按一下 **[確定]** 關閉 [新增 Oracle CDC 服務] 對話方塊。  
   
-### 若要編輯 CDC 服務  
+### <a name="to-edit-a-cdc-service"></a>若要編輯 CDC 服務  
   
 1.  從 **[開始]** 功能表，選取 **[Oracle CDC 服務組態]**。  
   
@@ -59,8 +64,8 @@ caps.handback.revision: 7
   
 5.  在 [連接到 Oracle] 對話方塊中按一下 **[確定]** 。 隨即關閉這兩個對話方塊，而且會更新及註冊此服務。  
   
-## 請參閱＜  
- [Attunity Oracle 異動資料擷取設計工具](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md)   
+## <a name="see-also"></a>請參閱＜  
+ [Attunity oracle 異動資料擷取設計工具](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md)   
  [建立及編輯 Oracle CDC 服務](../../integration-services/change-data-capture/create-and-edit-an-oracle-cdc-service.md)  
   
   

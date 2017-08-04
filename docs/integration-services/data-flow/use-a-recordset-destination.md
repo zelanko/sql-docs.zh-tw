@@ -1,25 +1,30 @@
 ---
-title: "使用資料錄集目的地 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "資料錄集目的地"
+title: "使用資料錄集目的地 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Recordset destination
 ms.assetid: a7b143dc-8008-404f-83b0-b45ffbca6029
 caps.latest.revision: 11
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0e2423a1d19122a3eb13bd69c4bce495c96d81ff
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 使用資料錄集目的地
-  資料錄集目的地不會將資料儲存到外部資料來源， 而是將資料儲存到資料類型為 **Object** 之 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝變數內儲存的資料錄集記憶體中。 當資料錄集目的地儲存資料之後，您通常要使用具有 Foreach ADO 列舉值的 Foreach 迴圈容器來一次處理資料錄集的一個資料列。 Foreach ADO 列舉值會將目前資料列的每一資料行值儲存到個別封裝變數之中。 接著，您在 Foreach 迴圈容器中設定的工作會讀取這些變數中的值，然後對它們執行一些動作。  
+# <a name="use-a-recordset-destination"></a>使用資料錄集目的地
+  資料錄集目的地不會將資料儲存到外部資料來源， 而是將資料儲存到資料類型為 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Object **之** 封裝變數內儲存的資料錄集記憶體中。 當資料錄集目的地儲存資料之後，您通常要使用具有 Foreach ADO 列舉值的 Foreach 迴圈容器來一次處理資料錄集的一個資料列。 Foreach ADO 列舉值會將目前資料列的每一資料行值儲存到個別封裝變數之中。 接著，您在 Foreach 迴圈容器中設定的工作會讀取這些變數中的值，然後對它們執行一些動作。  
   
  您可以在多種不同情況下使用資料錄集目的地。 以下是一些範例：  
   
@@ -29,12 +34,12 @@ caps.handback.revision: 11
   
  下列章節會先說明使用資料錄集目的地的一般程序，然後提供一個如何使用目的地的明確範例。  
   
-## 使用資料錄集目的地的一般步驟  
+## <a name="general-steps-to-using-a-recordset-destination"></a>使用資料錄集目的地的一般步驟  
  下列程序摘要列出如何將資料儲存到資料錄集目的地，然後使用 Foreach 迴圈容器處理每一個資料列的步驟。  
   
-#### 將資料儲存到資料錄集目的地並使用 Foreach 迴圈容器處理每一個資料列  
+#### <a name="to-save-data-to-a-recordset-destination-and-process-each-row-by-using-the-foreach-loop-container"></a>將資料儲存到資料錄集目的地並使用 Foreach 迴圈容器處理每一個資料列  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，建立或開啟 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，建立或開啟 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝。  
   
 2.  建立一個變數，在其中加入由資料錄集目的地儲存到記憶體中的資料錄集，然後將變數類型設為 **Object**。  
   
@@ -56,10 +61,10 @@ caps.handback.revision: 11
   
 8.  在 Foreach 迴圈容器中加入並設定工作，藉由讀取變數中的值，一次處理資料錄集的一個資料列。  
   
-## 使用資料錄集目的地的範例  
+## <a name="example-of-using-the-recordset-destination"></a>使用資料錄集目的地的範例  
  在下列範例中，資料流程工作會將 Sales.SalesPerson 資料表中有關 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 員工的資料載入資料錄集目的地中。 然後，Foreach 迴圈容器會一次讀取一個資料列，接著呼叫傳送郵件工作。 傳送郵件工作會使用運算式，將每位銷售人員的獎金金額以自訂的電子郵件訊息傳送給每位銷售人員。  
   
-#### 建立專案和設定變數  
+#### <a name="to-create-the-project-and-configure-the-variables"></a>建立專案和設定變數  
   
 1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中，建立新的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案。  
   
@@ -71,19 +76,19 @@ caps.handback.revision: 11
   
          **BonusRecordset** 變數會保存資料錄集。  
   
-    2.  建立名稱為 **EmailAddress** 的變數，並將其類型設為 **String**。  
+    2.  建立名稱為 **EmailAddress**的變數，並將其類型設為 **String**。  
   
          **EmailAddress** 變數會保存銷售人員的電子郵件地址。  
   
-    3.  建立名稱為 **FirstName** 的變數，然後將其類型設為 **String**。  
+    3.  建立名稱為 **FirstName**的變數，然後將其類型設為 **String**。  
   
          **FirstName** 變數會保存銷售人員的名字。  
   
-    4.  建立名稱為 **Bonus** 的變數，然後將其類型設為 **Double**。  
+    4.  建立名稱為 **Bonus**的變數，然後將其類型設為 **Double**。  
   
          **Bonus** 變數會保存銷售人員的獎金金額。  
   
-#### 設定連接管理員  
+#### <a name="to-configure-the-connection-managers"></a>設定連接管理員  
   
 1.  在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師的「連線管理員」區域中，加入並設定連接到 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 範例資料庫的新 OLE DB 連線管理員。  
   
@@ -93,7 +98,7 @@ caps.handback.revision: 11
   
      Foreach 迴圈容器中的傳送郵件工作，將會使用此連接管理員傳送電子郵件。  
   
-#### 設定資料流程和資料錄集目的地  
+#### <a name="to-configure-the-data-flow-and-the-recordset-destination"></a>設定資料流程和資料錄集目的地  
   
 1.  在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師的 [控制流程] 索引標籤上，將資料流程工作加入設計介面。  
   
@@ -124,7 +129,7 @@ caps.handback.revision: 11
   
     2.  在 [輸入資料行] 索引標籤上，選取可用的全部三個資料行。  
   
-#### 設定 Foreach 迴圈容器並執行封裝  
+#### <a name="to-configure-the-foreach-loop-container-and-run-the-package"></a>設定 Foreach 迴圈容器並執行封裝  
   
 1.  在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師的 [控制流程] 索引標籤上，加入 Foreach 迴圈容器，並將此容器連接在資料流程工作之後。  
   
@@ -170,6 +175,6 @@ caps.handback.revision: 11
   
 7.  執行封裝。  
   
-     如果您指定了有效的 SMTP 伺服器且提供您自己的電子郵件地址，針對由傳送郵件工作傳送到 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 虛構銷售人員的郵件，您將會收到無法傳遞的收件者訊息。  
+     如果您指定了有效的 SMTP 伺服器且提供您自己的電子郵件地址，針對由傳送郵件工作傳送到 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]虛構銷售人員的郵件，您將會收到無法傳遞的收件者訊息。  
   
   

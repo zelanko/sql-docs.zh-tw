@@ -1,32 +1,37 @@
 ---
-title: "Excel 連接管理員編輯器 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.excelconnection.f1"
-helpviewer_keywords: 
-  - "Excel 連接管理員編輯器"
+title: "Excel 連接管理員編輯器 |Microsoft 文件"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.excelconnection.f1
+helpviewer_keywords:
+- Excel Connection Manager Editor
 ms.assetid: 7ff097e4-cafb-4885-a898-05b2a46628c1
 caps.latest.revision: 32
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3c4060736f824becd05fecceba0b162b45f0fed4
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# Excel 連接管理員編輯器
+# <a name="excel-connection-manager-editor"></a>Excel 連接管理員編輯器
   使用 [Excel 連線管理員編輯器] 對話方塊，將連接加入現有或新的 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 活頁簿檔案。  
   
  若要深入了解快取連線管理員，請參閱 [Excel 連線管理員](../../integration-services/connection-manager/excel-connection-manager.md)。  
   
-## 選項。  
+## <a name="options"></a>選項。  
  **Excel 檔案路徑**  
  輸入現有或新的 Excel 活頁簿檔案 (.xls) 的路徑和檔案名稱。  
   
@@ -45,7 +50,7 @@ caps.handback.revision: 32
  **第一個資料列有資料行名稱**  
  指定選取之工作表中資料的第一個資料列是否包含資料行名稱。 此選項的預設值是 **[True]**。  
   
-## Microsoft Excel 和 Access 檔案的提供者和驅動程式  
+## <a name="providers-and-drivers-for-microsoft-excel-and-access-file"></a>Microsoft Excel 和 Access 檔案的提供者和驅動程式  
  如果尚未安裝 Microsoft Office 檔案的 OLE DB 提供者及驅動程式，您必須加以下載。 新版的提供者可以開啟以舊版 Excel 建立的檔案。  
   
  如果電腦有 32 位元版本的 Office，則必須安裝 32 位元版本的驅動程式，而且您也必須確定已執行精靈或以 32 位元模式建立的 Integration Services 封裝。  
@@ -57,8 +62,8 @@ caps.handback.revision: 32
 |2013|[Microsoft Access 2013 執行階段](http://www.microsoft.com/download/details.aspx?id=39358)|  
 |2016|[Microsoft Access 2016 執行階段](https://www.microsoft.com/download/details.aspx?id=50040)|
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [Integration Services 錯誤和訊息參考](../../integration-services/integration-services-error-and-message-reference.md)   
- [使用 Foreach 迴圈容器來循環使用 Excel 檔案和資料表](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  
+ [迴圈透過 Excel 檔案和資料表使用 「 Foreach 迴圈 」 容器](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  
   
   

@@ -1,26 +1,31 @@
 ---
-title: "FTP 工作 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.ftptask.f1"
-helpviewer_keywords: 
-  - "FTP 工作 [Integration Services]"
+title: "FTP 工作 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.ftptask.f1
+helpviewer_keywords:
+- FTP task [Integration Services]
 ms.assetid: 41c3f2c4-ee04-460a-9822-bb9ae4036c2e
 caps.latest.revision: 52
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 52
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: 14cfb9dafee9b12bac8864e15cc1a46ac5762680
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# FTP 工作
+# <a name="ftp-task"></a>FTP 工作
   FTP 工作會下載和上傳資料檔以及管理伺服器上的目錄。 例如，封裝可從遠端伺服器或網際網路位置下載資料檔，此工作可視為 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝工作流程的一部分。 您可將 FTP 工作用於下列用途：  
   
 -   在移動資料之前或之後於目錄之間複製目錄和資料檔，以及將轉換套用至資料。  
@@ -44,7 +49,7 @@ caps.handback.revision: 52
   
  FTP 作業可設定成在作業失敗時停止「檔案系統」工作，或以 ASCII 模式傳送檔案。 傳送和接收檔案副本的作業可設定成覆寫目的地檔案和目錄。  
   
-## 預先定義的 FTP 作業  
+## <a name="predefined-ftp-operations"></a>預先定義的 FTP 作業  
  FTP 工作包括一組預先定義的作業。 下表描述這些作業。  
   
 |運算|說明|  
@@ -58,24 +63,24 @@ caps.handback.revision: 52
 |刪除本機檔案|刪除本機電腦上的檔案。|  
 |刪除遠端檔案|刪除 FTP 伺服器上的檔案。|  
   
-## FTP 工作上可用的自訂記錄項目  
- 下表列出 FTP 工作的自訂記錄項目。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 記錄](../../integration-services/performance/integration-services-ssis-logging.md)和[自訂訊息以進行記錄](../../integration-services/performance/custom-messages-for-logging.md)。  
+## <a name="custom-log-entries-available-on-the-ftp-task"></a>FTP 工作上可用的自訂記錄項目  
+ 下表列出 FTP 工作的自訂記錄項目。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 記錄](../../integration-services/performance/integration-services-ssis-logging.md)。  
   
 |記錄項目|說明|  
 |---------------|-----------------|  
 |**FTPConnectingToServer**|指出工作已經起始與 FTP 伺服器的連接。|  
 |**FTPOperation**|報告工作執行之 FTP 作業的開始及其類型。|  
   
-## 相關工作  
+## <a name="related-tasks"></a>相關工作  
  您可以透過「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」或以程式設計方式設定屬性。  
   
- 如需如何在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計工具中設定這些屬性的詳細資訊，請參閱[設定工作或容器的屬性](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)。  
+ 如需如何在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計工具中設定這些屬性的詳細資訊，請參閱 [設定工作或容器的屬性](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)。  
   
  如需以程式設計方式設定這些屬性的詳細資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Tasks.FtpTask.FtpTask>。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [FTP 工作編輯器 &#40;一般頁面&#41;](../../integration-services/control-flow/ftp-task-editor-general-page.md)   
- [FTP 工作編輯器 &#40;檔案傳輸頁面&#41;](../../integration-services/control-flow/ftp-task-editor-file-transfer-page.md)   
+ [FTP 工作編輯器 &#40;檔案傳輸頁面 &#41;](../../integration-services/control-flow/ftp-task-editor-file-transfer-page.md)   
  [Integration Services 工作](../../integration-services/control-flow/integration-services-tasks.md)   
  [控制流程](../../integration-services/control-flow/control-flow.md)  
   

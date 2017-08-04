@@ -1,25 +1,30 @@
 ---
-title: "保留字 (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "保留字 [Master Data Services]"
-  - "Master Data Services, 保留字"
+title: "保留字 (Master Data Services) |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- reserved words [Master Data Services]
+- Master Data Services, reserved words
 ms.assetid: 88afd0d0-4362-4394-8357-4e65388fc0fc
 caps.latest.revision: 11
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6815fb319b670226694e2fad4ed5768470d79e5e
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 保留字 (Master Data Services)
+# <a name="reserved-words-master-data-services"></a>保留字 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，當您建立模型物件或成員時，無法使用某些字詞。 使用這些字詞可能會導致錯誤。  
   
 > [!NOTE]  
@@ -48,13 +53,13 @@ caps.handback.revision: 11
   
 -   **ID**  
   
--   **程式碼**  
+-   **Code**  
   
 -   **EnterUserName**  
   
 -   **LastChgUserName**  
   
--   **名稱**  
+-   **Name**  
   
 -   **EnterDTM**  
   
@@ -73,9 +78,9 @@ caps.handback.revision: 11
 -   **Version_ID**  
   
 ##  <a name="members"></a> 成員  
- 對於成員而言，您無法針對 **Code** 屬性值使用 **MDMMemberStatus**、**MDMUnused** 或 **ROOT**。  
+ 對於成員而言，您無法針對 **Code**屬性值使用 **MDMMemberStatus**、 **MDMUnused** 或 **ROOT** 。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [Master Data Services 概觀 &#40;MDS&#41;](../master-data-services/master-data-services-overview-mds.md)  
   
   

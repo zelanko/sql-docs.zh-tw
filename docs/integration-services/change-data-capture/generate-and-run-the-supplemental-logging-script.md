@@ -1,24 +1,29 @@
 ---
-title: "產生及執行補充記錄指令碼 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "supLog"
+title: "產生及執行補充記錄指令碼 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- supLog
 ms.assetid: 6e940d93-12c6-4cda-9333-5489b245f0e4
 caps.latest.revision: 6
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 736b11e79235b38659e9fa4c13f06369bd8b335d
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 產生及執行補充記錄指令碼
+# <a name="generate-and-run-the-supplemental-logging-script"></a>產生及執行補充記錄指令碼
   使用 [設定資料表來擷取變更] 頁面，於將設定補充記錄的 Oracle 來源資料庫上執行指令碼。  
   
  **若要執行補充記錄指令碼**  
@@ -35,7 +40,7 @@ caps.handback.revision: 6
   
  按 **[下一步]** ， [Generate Mirror Tables and CDC Capture Instances](../../integration-services/change-data-capture/generate-mirror-tables-and-cdc-capture-instances.md)。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [如何建立 SQL Server 變更資料庫執行個體](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)   
  [檢閱及產生補充記錄指令碼](../../integration-services/change-data-capture/review-and-generate-supplemental-logging-scripts.md)  
   

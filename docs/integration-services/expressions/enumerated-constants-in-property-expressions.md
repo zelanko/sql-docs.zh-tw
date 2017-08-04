@@ -1,34 +1,39 @@
 ---
-title: "屬性運算式中的列舉常數 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "列舉值 [Integration Services]"
-  - "封裝 [Integration Services], 運算式"
-  - "動態屬性"
-  - "更新封裝屬性"
-  - "列舉常數 [Integration Services]"
-  - "屬性運算式 [Integration Services]"
+title: "列舉屬性運算式中的常數 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- enumerators [Integration Services]
+- packages [Integration Services], expressions
+- dynamic properties
+- updating package properties
+- enumerated constants [Integration Services]
+- property expressions [Integration Services]
 ms.assetid: a4418315-38e2-4ad3-8784-576163b25d6f
 caps.latest.revision: 34
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8483c36dca5a24485e865b1115e766aa579635b9
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 屬性運算式中的列舉常數
+# <a name="enumerated-constants-in-property-expressions"></a>屬性運算式中的列舉常數
   如果屬性運算式包含來自列舉值成員清單的值，運算式必須使用列舉值成員的數值來取代成員的易記名稱。 例如，如果運算式設定了 **LoggingMode** 屬性，您就必須使用數值 2 來取代易記名稱 Disabled。  
   
  此主題列出相當於列舉值易記名稱的數值，但僅限屬性運算式中常用之成員所屬的列舉值。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 物件模型包含其他許多列舉值，您在設計物件模型程式以程式設計方式建立封裝，或是對自訂封裝元素 (例如工作和資料流程元件) 進行編碼時，都會使用這些列舉值。  
   
- 除了封裝和封裝物件適用的自訂屬性以外，[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的 [屬性] 視窗還包含一組可用於封裝、工作以及「Foreach 迴圈」、「For 迴圈」和「時序」等容器的屬性。 由列舉程式值設定的通用屬性會列在 [通用屬性] 區段中：**ForceExecutionResult**、**LoggingMode**、**IsolationLevel** 和 **Transaction Option**。  
+ 除了封裝和封裝物件適用的自訂屬性以外， [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的 [屬性] 視窗還包含一組可用於封裝、工作以及「Foreach 迴圈」、「For 迴圈」和「時序」等容器的屬性。 由列舉程式值設定的通用屬性會列在 [通用屬性] 區段中：**ForceExecutionResult**、 **LoggingMode**、 **IsolationLevel**和 **Transaction Option**。  
   
  下列章節提供有關列舉常數的資訊：  
   
@@ -107,7 +112,7 @@ caps.handback.revision: 34
 ##  <a name="Foreach"></a> Foreach 迴圈列舉值  
  「Foreach 迴圈」包含一組列舉值，其屬性可由屬性運算式設定。  
   
-### Foreach ADO 列舉值  
+### <a name="foreach-ado-enumerator"></a>Foreach ADO 列舉值  
  **Type** 屬性：使用來自 **ADOEnumerationType** 列舉的值進行設定。  
   
 |ADOEnumerationType 中的易記名稱|數值|  
@@ -116,8 +121,8 @@ caps.handback.revision: 34
 |EnumerateAllRows|1|  
 |EnumerateRowsInFirstTable|2|  
   
-### Foreach NodeList 列舉值  
- **SourceDocumentType**、**InnerXPathStringSourceType** 和 **OuterXPathStringSourceType** 屬性：使用來自 **SourceType** 列舉的值進行設定。  
+### <a name="foreach-nodelist-enumerator"></a>Foreach NodeList 列舉值  
+ **SourceDocumentType**、 **InnerXPathStringSourceType**和 **OuterXPathStringSourceType** 屬性：使用來自 **SourceType** 列舉的值進行設定。  
   
 |SourceType 中的易記名稱|數值|  
 |---------------------------------|-------------------|  
@@ -145,7 +150,7 @@ caps.handback.revision: 34
 ##  <a name="Tasks"></a> 工作  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含許多工作，其屬性可由屬性運算式設定。  
   
-### Analysis Services 執行 DDL 工作  
+### <a name="analysis-services-execute-ddl-task"></a>Analysis Services 執行 DDL 工作  
  **SourceType** 屬性：使用來自 **DDLSourceType** 列舉的值進行設定。  
   
 |DDLSourceType 中的易記名稱|數值|  
@@ -154,7 +159,7 @@ caps.handback.revision: 34
 |FileConnection|1|  
 |變數|2|  
   
-### 大量插入工作  
+### <a name="bulk-insert-task"></a>大量插入工作  
  **DataFileType** 屬性：使用來自 **DTSBulkInsert_DataFileType** 列舉的值進行設定。  
   
 |DTSBulkInsert_DataFileType 中的易記名稱|數值|  
@@ -164,7 +169,7 @@ caps.handback.revision: 34
 |DTSBulkInsert_DataFileType_WideChar|2|  
 |DTSBulkInsert_DataFileType_WideNative|3|  
   
-### 執行 SQL 工作  
+### <a name="execute-sql-task"></a>執行 SQL 工作  
  **ResultSetType** 屬性：使用來自 **ResultSetType** 列舉的值進行設定。  
   
 |ResultSetType 中的易記名稱|數值|  
@@ -182,7 +187,7 @@ caps.handback.revision: 34
 |FileConnection|2|  
 |變數|3|  
   
-### 檔案系統工作  
+### <a name="file-system-task"></a>檔案系統工作  
  **Operation** 屬性：使用 **DTSFileSystemOperation** 列舉的值進行設定。  
   
 |DTSFileSystemOperation 中的易記名稱|數值|  
@@ -208,7 +213,7 @@ caps.handback.revision: 34
 |ReadOnly|4|  
 |系統|8|  
   
-### FTP 工作  
+### <a name="ftp-task"></a>FTP 工作  
  **Operation** 屬性：使用 **DTSFTPOp** 列舉的值進行設定。  
   
 |DTSFTPOp 中的易記名稱|數值|  
@@ -222,7 +227,7 @@ caps.handback.revision: 34
 |RemoveDirLocal|6|  
 |RemoveDirRemote|7|  
   
-### 訊息佇列工作  
+### <a name="message-queue-task"></a>訊息佇列工作  
  **MessageType** 屬性：使用來自 **MQMessageType** 列舉的值進行設定。  
   
 |MQMessageType 中的易記名稱|數值|  
@@ -248,7 +253,7 @@ caps.handback.revision: 34
 |DTSMQType_Sender|0|  
 |DTSMQType_Receiver|1|  
   
-### 傳送郵件工作  
+### <a name="send-mail-task"></a>傳送郵件工作  
  **MessageSourceType** 屬性：使用來自 **SendMailMessageSourceType** 列舉的值進行設定。  
   
 |SendMailMessageSourceType 中的易記名稱|數值|  
@@ -265,7 +270,7 @@ caps.handback.revision: 34
 |一般|3|  
 |低|5|  
   
-### 傳送資料庫工作  
+### <a name="transfer-database-task"></a>傳送資料庫工作  
  **Action** 屬性：使用來自 **TransferAction** 列舉的值進行設定。  
   
 |TransferAction 中的易記名稱|數值|  
@@ -280,7 +285,7 @@ caps.handback.revision: 34
 |DatabaseOffline|0|  
 |DatabaseOnline|1|  
   
-### 傳送錯誤訊息工作  
+### <a name="transfer-error-messages-task"></a>傳送錯誤訊息工作  
  **IfObjectExists** 屬性：使用來自 **IfObjectExists** 列舉的值設定。  
   
 |IfObjectExists 中的易記名稱|數值|  
@@ -289,8 +294,8 @@ caps.handback.revision: 34
 |Overwrite|1|  
 |Skip|2|  
   
-### 傳送作業工作  
- **IfObjectExists** 屬性：使用來自 **IfObjectExists** 列舉的值進行設定。  
+### <a name="transfer-jobs-task"></a>傳送作業工作  
+ **IfObjectExists** 屬性：使用來自 **IfObjectExists** 列舉的值設定。  
   
 |IfObjectExists 中的易記名稱|數值|  
 |-------------------------------------|-------------------|  
@@ -298,8 +303,8 @@ caps.handback.revision: 34
 |Overwrite|1|  
 |Skip|2|  
   
-### 傳送登入工作  
- **IfObjectExists** 屬性：使用來自 **IfObjectExists** 列舉的值進行設定。  
+### <a name="transfer-logins-task"></a>傳送登入工作  
+ **IfObjectExists** 屬性：使用來自 **IfObjectExists** 列舉的值設定。  
   
 |IfObjectExists 中的易記名稱|數值|  
 |-------------------------------------|-------------------|  
@@ -315,8 +320,8 @@ caps.handback.revision: 34
 |SelectedLogins|1|  
 |AllLoginsFromSelectedDatabases|2|  
   
-### 傳送主要預存程序工作  
- **IfObjectExists** 屬性：使用來自 **IfObjectExists** 列舉的值進行設定。  
+### <a name="transfer-master-stored-procedures-task"></a>傳送主要預存程序工作  
+ **IfObjectExists** 屬性：使用來自 **IfObjectExists** 列舉的值設定。  
   
 |IfObjectExists 中的易記名稱|數值|  
 |-------------------------------------|-------------------|  
@@ -324,7 +329,7 @@ caps.handback.revision: 34
 |Overwrite|1|  
 |Skip|2|  
   
-### 傳送 SQL Server 物件工作  
+### <a name="transfer-sql-server-objects-task"></a>傳送 SQL Server 物件工作  
  **ExistingData** 屬性：使用來自 **ExistingData** 列舉的值設定。  
   
 |ExistingData 中的易記名稱|數值|  
@@ -332,7 +337,7 @@ caps.handback.revision: 34
 |取代|0|  
 |附加|1|  
   
-### Web 服務工作  
+### <a name="web-service-task"></a>Web 服務工作  
  **OutputType** 屬性：使用來自 **DTSOutputType** 列舉的值進行設定。  
   
 |DTSOutputType 中的易記名稱|數值|  
@@ -340,7 +345,7 @@ caps.handback.revision: 34
 |檔案|0|  
 |變數|1|  
   
-### WMI 資料讀取器工作  
+### <a name="wmi-data-reader-task"></a>WMI 資料讀取器工作  
  **OverwriteDestination** 屬性：使用來自 **OverwriteDestination** 列舉的值設定。  
   
 |OverwriteDestination 中的易記名稱|數值|  
@@ -410,7 +415,7 @@ caps.handback.revision: 34
 |DirectInput|1|  
 |變數|2|  
   
-### XML 工作  
+### <a name="xml-task"></a>XML 工作  
  **OperationType** 屬性：使用來自 **DTSXMLOperation** 列舉的值進行設定。  
   
 |DTSXMLOperation 中的易記名稱|數值|  
@@ -422,7 +427,7 @@ caps.handback.revision: 34
 |Diff|4|  
 |修補|5|  
   
- **SourceType**、**SecondOperandType** 和 **XPathSourceType** 屬性：使用來自 **DTSXMLSourceType** 列舉的值進行設定。  
+ **SourceType**、 **SecondOperandType**和 **XPathSourceType** 屬性：使用來自 **DTSXMLSourceType** 列舉的值進行設定。  
   
 |DTSXMLSourceType 中的易記名稱|數值|  
 |---------------------------------------|-------------------|  
@@ -479,7 +484,7 @@ caps.handback.revision: 34
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支援以程式設計方式處理這些工作，而且程式設計參考文件集也不包括這些工作及其列舉值的 API 文件集。  
   
-### 所有維護工作  
+### <a name="all-maintenance-tasks"></a>所有維護工作  
  所有維護工作都使用下列列舉來設定指定的屬性。  
   
  **DatabaseSelectionType** 屬性：使用來自 **DatabaseSelection** 列舉的值進行設定。  
@@ -508,7 +513,7 @@ caps.handback.revision: 34
 |檢視|1|  
 |TableView|2|  
   
-### 備份資料庫工作  
+### <a name="back-up-database-task"></a>備份資料庫工作  
  **DestinationCreationType** 屬性：使用來自 **DestinationType** 列舉的值進行設定。  
   
 |DestinationType 中的易記名稱|數值|  
@@ -541,7 +546,7 @@ caps.handback.revision: 34
 |Pipe|3|  
 |VirtualDevice|4|  
   
-### 維護清除工作  
+### <a name="maintenance-cleanup-task"></a>維護清除工作  
  **FileTypeSelected** 屬性：使用來自 **FileType** 列舉的值進行設定。  
   
 |FileType 中的易記名稱|數值|  
@@ -558,7 +563,7 @@ caps.handback.revision: 34
 |Month|2|  
 |Year|3|  
   
-### 更新統計資料工作  
+### <a name="update-statistics-task"></a>更新統計資料工作  
  **UpdateType** 屬性：使用來自 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理物件 (SMO) **StatisticsTarget** 列舉的值進行設定。  
   
 |StatisticsTarget 中的易記名稱|數值|  
@@ -579,7 +584,7 @@ caps.handback.revision: 34
 |失敗|1|  
 |Completion|2|  
   
- **IsolationLevel** 屬性：由 .NET Framework **IsolationLevel** 列舉設定。 如需詳細資訊，請參閱 [MSDN Library](http://go.microsoft.com/fwlink?LinkId=17313) 中的＜.NET Framework 類別庫＞。  
+ **IsolationLevel** 屬性：由 .NET Framework **IsolationLevel** 列舉設定。 如需詳細資訊，請參閱 [MSDN Library](http://go.microsoft.com/fwlink?LinkId=17313)中的＜.NET Framework 類別庫＞。  
   
  **LoggingMode** 屬性：使用來自 **DTSLoggingMode** 列舉的值進行設定。  
   
@@ -597,12 +602,12 @@ caps.handback.revision: 34
 |支援|1|  
 |必要項|2|  
   
-## 相關工作  
+## <a name="related-tasks"></a>相關工作  
  [加入或變更屬性運算式](../../integration-services/expressions/add-or-change-a-property-expression.md)  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [在封裝中使用屬性運算式](../../integration-services/expressions/use-property-expressions-in-packages.md)   
- [Integration Services &#40;SSIS&#41; 封裝](../../integration-services/integration-services-ssis-packages.md)   
+ [Integration Services &#40;SSIS &#41;封裝](../../integration-services/integration-services-ssis-packages.md)   
  [整合服務容器](../../integration-services/control-flow/integration-services-containers.md)   
  [Integration Services 工作](../../integration-services/control-flow/integration-services-tasks.md)   
  [優先順序條件約束](../../integration-services/control-flow/precedence-constraints.md)  

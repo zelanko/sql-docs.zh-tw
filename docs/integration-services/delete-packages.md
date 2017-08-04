@@ -1,28 +1,33 @@
 ---
-title: "刪除封裝 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "刪除封裝 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 85b7d512-0ea7-47f5-8937-b1af6592b5b5
 caps.latest.revision: 7
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 70b39c648fc2d3ddd13db93d3923880edcf56675
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 刪除封裝
+# <a name="delete-packages"></a>刪除封裝
   在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中，您可以刪除已儲存至檔案系統的封裝。 如果您刪除封裝，它將會永久刪除，並且無法還原到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案。  
   
 > [!NOTE]  
 >  如果您要從 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案移除封裝，但在其他專案中使用這些封裝，則應使用 [從專案移除] 選項而非 [刪除] 選項。  
   
-### 在 Business Intelligence 中刪除封裝  
+### <a name="to-delete-a-package-in-business-intelligence"></a>在 Business Intelligence 中刪除封裝  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中，開啟包含要刪除之封裝的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案。  
   

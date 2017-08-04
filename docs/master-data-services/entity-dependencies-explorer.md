@@ -1,30 +1,35 @@
 ---
-title: "Entity Dependencies (實體相依性) 總管 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/06/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-keywords: 
-  - "Master Data Services"
+title: "實體的相依性總管 |Microsoft 文件"
+ms.custom: 
+ms.date: 04/06/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+keywords:
+- Master Data Services
 ms.assetid: 9d922118-1412-4a9d-9c02-70d6c48d6c0d
 caps.latest.revision: 5
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 5
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ccac7deb9d40896082cddda7c438ebe5f6e53a83
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# Entity Dependencies (實體相依性) 總管
+# <a name="entity-dependencies-explorer"></a>Entity Dependencies (實體相依性) 總管
   
 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 2016 所加入的新總管頁面 ([實體相依性]) 提供替代方式，來視覺化模型內實體成員間的關聯性 (透過其網域屬性 (DBA) 值所指定)，但不需要先定義 [衍生階層]。   
   
 它有助於回答「誰正在使用我的實體，且其做法為何？」問題。 此檢視與 [衍生階層] 總管頁面類似，但它包含的範圍更廣。 它會顯示所有 DBA 關聯性，而不只是定義為特定階層一部分的 DBA 關聯性。 不需要階層定義，因為只會從現有 DBA 推斷所顯示的階層結構。  
   
-在 [總管] 頁面功能表中，[Entity Dependencies] (實體相依性) 功能表項目會列出模型中至少有一個實體所相依的所有實體 (即至少有一個實體具有參考所列實體的 DBA)。 實體名稱旁邊會顯示相依性 (直接和間接) 數目，並依這個數目排序清單，而且大量參考的實體會在頂端。 下列螢幕擷取畫面取自[範例資料](https://msdn.microsoft.com/library/master-data-services-sample.aspx)的客戶模型，並顯示有 7 個實體參考 BigArea 實體 (直接或間接)：  
+在 [總管] 頁面功能表中，[Entity Dependencies] (實體相依性) 功能表項目會列出模型中至少有一個實體所相依的所有實體 (即至少有一個實體具有參考所列實體的 DBA)。 實體名稱旁邊會顯示相依性 (直接和間接) 數目，並依這個數目排序清單，而且大量參考的實體會在頂端。 下列螢幕擷取畫面取自 [範例資料](https://msdn.microsoft.com/library/master-data-services-sample.aspx)的客戶模型，並顯示有 7 個實體參考 BigArea 實體 (直接或間接)：  
   
 ![MDS_EntityDependencies_Menu.jpg](../master-data-services/media/mds-entitydependencies-menu-jpg.jpg)  
     
@@ -43,3 +48,5 @@ caps.handback.revision: 5
   
   
   
+
+

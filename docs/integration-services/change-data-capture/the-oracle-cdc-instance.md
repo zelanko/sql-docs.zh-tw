@@ -1,22 +1,27 @@
 ---
-title: "Oracle CDC 執行個體 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Oracle CDC 執行個體 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ed71e8c4-e013-4bf2-8b6c-1e833ff2a41d
 caps.latest.revision: 8
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 13704cfef54e3401d31eb22f6dca9c9f247c079b
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# Oracle CDC 執行個體
+# <a name="the-oracle-cdc-instance"></a>Oracle CDC 執行個體
   Oracle CDC 執行個體是由 Oracle CDC 服務建立的一種處理序，可處理從單一 Oracle 來源資料庫擷取的變更。 Oracle CDC 執行個體會從 **cdc.xdbcdc_config** 資料表擷取其組態，並在 **cdc.xdbcdc_state** 資料表中維護其狀態。 這些資料表是 CDC 資料庫的一部分 (此資料庫會定義 Oracle CDC 執行個體)。 如需有關 xdbcdc 資料庫和資料表的詳細資訊，請參閱＜ [The CDC Databases](../../integration-services/change-data-capture/working-with-the-oracle-cdc-service.md#BKMK_CDCdatabase)＞。  
   
  以下描述 Oracle CDC 執行個體所執行的工作：  
@@ -41,7 +46,7 @@ caps.handback.revision: 8
   
 -   **處理復原**：當 Oracle CDC 執行個體啟動時，其內部狀態會從 **xdbcdc_state** 和 **xdbcdc_staged_transactions** 資料表中還原。 還原狀態之後，CDC 執行個體會如往常一樣繼續進行。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [錯誤處理](../../integration-services/change-data-capture/error-handling.md)  
   
   

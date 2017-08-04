@@ -1,24 +1,29 @@
 ---
-title: "管理 CDC 執行個體 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "manIns"
+title: "Manage a CDC Instance |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- manIns
 ms.assetid: cfed22c8-c666-40ca-9e73-24d93e85ba92
 caps.latest.revision: 11
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 308d7528e516baa755a893bb42c9864c7ef7e3b7
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 管理 CDC 執行個體
+# <a name="manage-a-cdc-instance"></a>管理 CDC 執行個體
   您可以使用 CDC 設計工具主控台來檢視有關您所建立之執行個體的資訊，並管理執行個體的操作。  
   
  在左窗格中按一下執行個體的名稱，以檢視有關此執行個體的資訊。  
@@ -26,7 +31,7 @@ caps.handback.revision: 11
 > [!NOTE]  
 >  如果您在左窗格中選取服務，可用執行個體的清單也會顯示在 CDC 設計工具主控台的中央。 如果您在此區段中選取其中一個執行個體，您可以在右窗格執行工作；但是，您將無法檢視屬性索引標籤中的資訊。  
   
-## 您在顯示 CDC 執行個體資訊時可以做什麼事  
+## <a name="what-you-can-do-when-you-display-the-cdc-instance-information"></a>您在顯示 CDC 執行個體資訊時可以做什麼事  
  從右窗格執行以下動作：  
   
  **啟動**  
@@ -68,10 +73,10 @@ caps.handback.revision: 11
   
     |||  
     |-|-|  
-    |![Error](../../integration-services/change-data-capture/media/error.gif "Error")|**錯誤**： Oracle CDC 執行個體未在執行中，因為發生無法重試的錯誤。 以下是可用的子狀態：<br /><br /> **設定錯誤**：發生了需要手動介入的組態錯誤。<br /><br /> **需要密碼**：未針對 Oracle CDC 執行個體設定任何密碼，或是密碼無效。<br /><br /> **非預期**： 所有其他無法復原的錯誤。|  
-    |![Okay](../../integration-services/change-data-capture/media/okay.gif "Okay")|**執行中**：CDC 執行個體正在執行及處理變更記錄。 以下是可用的子狀態：<br /><br /> **閒置**：所有變更記錄都已經處理並儲存在目標變更資料表中。 沒有其他使用中交易。<br /><br /> **正在處理**：有正在處理但是尚未寫入變更資料表的變更記錄。|  
-    |![Stop](../../integration-services/change-data-capture/media/stop.gif "Stop")|**已停止**：CDC 執行個體未在執行中。 已停止的狀態表示 CDC 執行個體以正常方式停止。|  
-    |![Paused](../../integration-services/change-data-capture/media/paused.gif "Paused")|**已暫停**：CDC 執行個體正在執行中，但是因為發生可重試的錯誤所以暫停處理。 以下是可用的子狀態：<br /><br /> **已中斷連接**：無法建立與來源 Oracle 資料庫的連接。 還原連接時，處理作業便會繼續。<br /><br /> **儲存體**：儲存體已滿。 當有額外的儲存體可用時，處理作業便會繼續。<br /><br /> **記錄器**：記錄器連接到 Oracle，但由於暫時性問題無法讀取 Oracle 交易記錄，例如，無法使用必要的交易記錄。|  
+    |![錯誤](../../integration-services/change-data-capture/media/error.gif "錯誤")|**錯誤**： Oracle CDC 執行個體未在執行中，因為發生無法重試的錯誤。 以下是可用的子狀態：<br /><br /> **設定錯誤**：發生了需要手動介入的組態錯誤。<br /><br /> **需要密碼**：未針對 Oracle CDC 執行個體設定任何密碼，或是密碼無效。<br /><br /> **非預期**： 所有其他無法復原的錯誤。|  
+    |![好](../../integration-services/change-data-capture/media/okay.gif "好")|**執行中**：CDC 執行個體正在執行及處理變更記錄。 以下是可用的子狀態：<br /><br /> **閒置**：所有變更記錄都已經處理並儲存在目標變更資料表中。 沒有其他使用中交易。<br /><br /> **正在處理**：有正在處理但是尚未寫入變更資料表的變更記錄。|  
+    |![停止](../../integration-services/change-data-capture/media/stop.gif "停止")|**已停止**：CDC 執行個體未在執行中。 已停止的狀態表示 CDC 執行個體以正常方式停止。|  
+    |![已暫停](../../integration-services/change-data-capture/media/paused.gif "已暫停")|**已暫停**：CDC 執行個體正在執行中，但是因為發生可重試的錯誤所以暫停處理。 以下是可用的子狀態：<br /><br /> **已中斷連接**：無法建立與來源 Oracle 資料庫的連接。 還原連接時，處理作業便會繼續。<br /><br /> **儲存體**：儲存體已滿。 當有額外的儲存體可用時，處理作業便會繼續。<br /><br /> **記錄器**：記錄器連接到 Oracle，但由於暫時性問題無法讀取 Oracle 交易記錄，例如，無法使用必要的交易記錄。|  
   
 -   **詳細狀態**：目前的子狀態。  
   
@@ -102,24 +107,24 @@ caps.handback.revision: 11
     -   **寫入的變更**：寫入 SQL Server 變更資料表的變更數目。  
   
  **Oracle**  
- 顯示有關 CDC 執行個體以及它與 Oracle 資料庫之連接的資訊。 此索引標籤是唯讀的。 若要編輯這些屬性，請以滑鼠右鍵在左窗格中按一下執行個體，並選取 [屬性] 或按一下右窗格中的 [屬性]，開啟 [\<執行個體> 屬性] 對話方塊。  
+ 顯示有關 CDC 執行個體以及它與 Oracle 資料庫之連接的資訊。 此索引標籤是唯讀的。 若要編輯這些屬性，以滑鼠右鍵按一下左窗格中的執行個體，然後選取**屬性**或按一下**屬性**開啟右窗格中\<執行個體 > 屬性 對話方塊。  
   
  如需有關這些屬性以及如何加以編輯的詳細資訊，請參閱＜ [Edit the Oracle Database Properties](../../integration-services/change-data-capture/edit-the-oracle-database-properties.md)＞。  
   
  **資料表**  
- 顯示有關 CDC 執行個體中包含之資料表的資訊。 這裡也會提供資料行資訊。 此索引標籤是唯讀的。 若要編輯這些屬性，請以滑鼠右鍵在左窗格中按一下執行個體，並選取 [屬性] 或按一下右窗格中的 [屬性]，開啟 [\<執行個體> 屬性] 對話方塊。  
+ 顯示有關 CDC 執行個體中包含之資料表的資訊。 這裡也會提供資料行資訊。 此索引標籤是唯讀的。 若要編輯這些屬性，以滑鼠右鍵按一下左窗格中的執行個體，然後選取**屬性**或按一下**屬性**開啟右窗格中\<執行個體 > 屬性 對話方塊。  
   
  如需有關這些屬性以及如何加以編輯的詳細資訊，請參閱＜ [Edit Tables](../../integration-services/change-data-capture/edit-tables.md)＞。  
   
  **進階**  
- 顯示 CDC 執行個體的進階屬性和屬性值。 此索引標籤是唯讀的。 若要編輯這些屬性，請以滑鼠右鍵在左窗格中按一下執行個體，並選取 [屬性] 或按一下右窗格中的 [屬性]，開啟 [\<執行個體> 屬性] 對話方塊。  
+ 顯示 CDC 執行個體的進階屬性和屬性值。 此索引標籤是唯讀的。 若要編輯這些屬性，以滑鼠右鍵按一下左窗格中的執行個體，然後選取**屬性**或按一下**屬性**開啟右窗格中\<執行個體 > 屬性 對話方塊。  
   
  如需有關這些屬性以及如何加以編輯的詳細資訊，請參閱＜ [Edit the Advanced Properties](../../integration-services/change-data-capture/edit-the-advanced-properties.md)＞。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [如何建立 SQL Server 變更資料庫執行個體](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)   
  [如何檢視 CDC 執行個體屬性](../../integration-services/change-data-capture/how-to-view-the-cdc-instance-properties.md)   
  [如何編輯 CDC 執行個體屬性](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)   
- [使用新增執行個體精靈](../../integration-services/change-data-capture/use-the-new-instance-wizard.md)  
+ [使用新的執行個體精靈](../../integration-services/change-data-capture/use-the-new-instance-wizard.md)  
   
   

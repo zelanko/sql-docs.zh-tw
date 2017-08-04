@@ -1,36 +1,41 @@
 ---
-title: "OLE DB 目的地 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.oledbdest.f1"
-helpviewer_keywords: 
-  - "快速載入資料存取模式 [Integration Services]"
-  - "OLE DB 目的地 [Integration Services]"
-  - "快速載入選項 [Integration Services]"
-  - "快速載入選項 [Integration Services]"
-  - "目的地 [Integration Services], OLE DB"
-  - "快速載入資料存取模式 [Integration Services]"
-  - "插入資料"
+title: "OLE DB 目的地 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.oledbdest.f1
+helpviewer_keywords:
+- fast-load data access mode [Integration Services]
+- OLE DB destination [Integration Services]
+- fast load options [Integration Services]
+- fast-load options [Integration Services]
+- destinations [Integration Services], OLE DB
+- fast load data access mode [Integration Services]
+- inserting data
 ms.assetid: 873a2fa0-2a02-41fc-a80a-ec9767f36a8a
 caps.latest.revision: 79
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 79
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5a16dc276a0ed875c2343bf0b5de7739e3c2955a
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# OLE DB 目的地
+# <a name="ole-db-destination"></a>OLE DB 目的地
   OLE DB 目的地會使用資料庫的資料表、檢視或 SQL 命令將資料載入各種符合 OLE DB 標準的資料庫。 例如，OLE DB 來源可以將資料載入至 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的資料表中。  
   
 > [!NOTE]  
->  如果資料來源為 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007，則資料來源需要舊版 Excel 以外的連線管理員。 如需詳細資訊，請參閱[連接至 Excel 活頁簿](../../integration-services/connection-manager/connect-to-an-excel-workbook.md)。  
+>  如果資料來源為 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007，則資料來源需要舊版 Excel 以外的連線管理員。 如需詳細資訊，請參閱 [連接至 Excel 活頁簿](../../integration-services/connection-manager/connect-to-an-excel-workbook.md)。  
   
  OLE DB 目的地提供用於載入資料的五種不同資料存取模式：  
   
@@ -65,10 +70,10 @@ caps.handback.revision: 79
   
  如需有關資料類型的詳細資訊，請參閱＜ [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)＞。  
   
-## 快速載入選項  
+## <a name="fast-load-options"></a>快速載入選項  
  如果 OLE DB 目的地使用快速載入資料存取模式，則您可以在 **OLE DB 目的地編輯器**這個使用者介面中為目的地指定下列快速載入選項：  
   
--   保留匯入資料檔中的識別值或使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指派的唯一值。  
+-   保留匯入資料檔中的識別值或使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]指派的唯一值。  
   
 -   大量載入作業期間保留 Null 值。  
   
@@ -87,18 +92,18 @@ caps.handback.revision: 79
   
 |快速載入選項|說明|  
 |----------------------|-----------------|  
-|KILOBYTES_PER_BATCH|指定要插入的大小 (以 KB 為單位)。 選項的格式為 **KILOBYTES_PER_BATCH** = \<正整數值>。|  
+|KILOBYTES_PER_BATCH|指定要插入的大小 (以 KB 為單位)。 這個選項沒有表單**KILOBYTES_PER_BATCH** = \<正整數值**>**。|  
 |FIRE_TRIGGERS|指定是否要針對插入資料表上引發觸發程序。 選項的格式為 **FIRE_TRIGGERS**。 選項的存在代表觸發程序會引發。|  
-|ORDER|指定如何儲存輸入資料。 選項的格式為 ORDER \<資料行名稱> ASC&#124;DESC。 可以列出任何數目的資料行，也可以選擇包含排序順序。 如果省略排序順序，大量插入作業會假設資料沒有排序。<br /><br /> 注意：如果您使用 ORDER 選項依照資料表的叢集索引排序輸入資料，將可改善效能。|  
+|ORDER|指定如何儲存輸入資料。 這個選項沒有表單順序\<資料行名稱 > ASC &#124; DESC。 可以列出任何數目的資料行，也可以選擇包含排序順序。 如果省略排序順序，大量插入作業會假設資料沒有排序。<br /><br /> 注意：如果您使用 ORDER 選項依照資料表的叢集索引排序輸入資料，將可改善效能。|  
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 關鍵字通常是以大寫字母輸入，但是這些關鍵字並不區分大小寫。  
   
  若要深入了解有關快速載入選項的詳細資訊，請參閱 [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)。  
   
-## 疑難排解 OLE DB 目的地  
+## <a name="troubleshooting-the-ole-db-destination"></a>疑難排解 OLE DB 目的地  
  您可以記錄 OLE DB 目的地對外部資料提供者執行的呼叫。 您可以使用這項記錄功能，針對 OLE DB 目的地所執行的將資料儲存至外部資料來源的作業進行疑難排解。 若要記錄 OLE DB 目的地對外部資料提供者執行的呼叫，請啟用封裝記錄，然後在封裝層級選取 [診斷] 事件。 如需詳細資訊，請參閱[封裝執行的疑難排解工具](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)。  
   
-## 設定 OLE DB 目的地  
+## <a name="configuring-the-ole-db-destination"></a>設定 OLE DB 目的地  
  您可以透過「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」或以程式設計方式設定屬性。  
   
  如需有關可以在 [OLE DB 目的地編輯器] 對話方塊中設定之屬性的詳細資訊，請按下列其中一個主題：  
@@ -111,7 +116,7 @@ caps.handback.revision: 79
   
  **[進階編輯器]** 對話方塊會反映能以程式設計的方式設定之屬性。 如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [通用屬性](../Topic/Common%20Properties.md)  
+-   [通用屬性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [OLE DB 自訂屬性](../../integration-services/data-flow/ole-db-custom-properties.md)  
   
@@ -121,7 +126,7 @@ caps.handback.revision: 79
   
 -   [設定資料流程元件的屬性](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
-## 相關內容  
+## <a name="related-content"></a>相關內容  
  [OLE DB 來源](../../integration-services/data-flow/ole-db-source.md)  
   
  [Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)  

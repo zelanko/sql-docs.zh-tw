@@ -1,30 +1,35 @@
 ---
-title: "衍生的資料行轉換 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.derivedcolumntrans.f1"
-helpviewer_keywords: 
-  - "多個衍生的資料行"
-  - "運算式 [Integration Services], 衍生的資料行"
-  - "衍生的資料行"
-  - "資料行 [Integration Services], 衍生"
-  - "衍生的資料行轉換"
+title: "衍生資料行 」 轉換 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.derivedcolumntrans.f1
+helpviewer_keywords:
+- multiple derived columns
+- expressions [Integration Services], derived columns
+- derived columns
+- columns [Integration Services], derivations
+- Derived Column transformation
 ms.assetid: 8eba755e-8e48-4233-bd1e-09a46bf2692f
 caps.latest.revision: 60
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 60
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 51522b2df0c47048cbc62a6fb6997e40a484d7d6
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 衍生的資料行轉換
+# <a name="derived-column-transformation"></a>衍生的資料行轉換
   「衍生的資料行」轉換會將運算式套用至轉換輸入資料行，藉此建立新的資料行值。 運算式可包含來自轉換輸入之變數、函數、運算子和資料行的任意組合。 結果可加入做為新的資料行，或插入現有資料行做為取代值。 「衍生的資料行」轉換可定義多個衍生的資料行，且任何變數或輸入資料行都可在多個運算式中出現。  
   
  您可以使用此轉換執行下列工作：  
@@ -57,11 +62,11 @@ caps.handback.revision: 60
   
  您可以透過「 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師」或以程式設計方式設定屬性。  
   
- 如需可在 [衍生的資料行轉換編輯器] 對話方塊中設定之屬性的詳細資訊，請參閱[衍生的資料行轉換編輯器](../../../integration-services/data-flow/transformations/derived-column-transformation-editor.md)。  
+ 如需可在 [衍生的資料行轉換編輯器]  對話方塊中設定之屬性的詳細資訊，請參閱 [衍生的資料行轉換編輯器](../../../integration-services/data-flow/transformations/derived-column-transformation-editor.md)。  
   
  **[進階編輯器]** 對話方塊會反映能以程式設計的方式設定之屬性。 如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [通用屬性](../Topic/Common%20Properties.md)  
+-   [通用屬性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [轉換自訂屬性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -75,3 +80,4 @@ caps.handback.revision: 60
   
 ## <a name="related-content"></a>相關內容  
  social.technet.microsoft.com 上的技術文件： [SSIS 運算式範例](http://go.microsoft.com/fwlink/?LinkId=220761)  
+

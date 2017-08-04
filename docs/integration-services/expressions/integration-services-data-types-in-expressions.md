@@ -1,36 +1,41 @@
 ---
-title: "運算式中的 Integration Services 資料類型 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "運算式 [Integration Services], 資料類型"
-  - "資料類型 [Integration Services], 運算式"
+title: "Integration Services Data Types in Expressions |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- expressions [Integration Services], data types
+- data types [Integration Services], expressions
 ms.assetid: c296ad10-4080-4988-8c2c-2c250f7a1884
 caps.latest.revision: 57
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 57
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cd0a604c665f7bd31a8ebd3e46b78afde802cc98
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 運算式中的 Integration Services 資料類型
+# <a name="integration-services-data-types-in-expressions"></a>運算式中的 Integration Services 資料類型
   運算式評估工具使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 資料類型。 當資料初次進入 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝中的資料流程時，資料流程引擎會將所有資料行的資料轉換成 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 資料類型，而運算式所使用的資料行資料已為 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 資料類型。 「條件式分割」和「衍生的資料行」轉換中使用的運算式可參考資料行，因為它們是包含資料行資料的資料流程中的一部分。  
   
-## 變數  
+## <a name="variables"></a>變數  
  運算式亦可使用變數。 變數的資料類型為 Variant，且運算式評估工具會先將變數的資料類型從 Variant 子類型轉換成 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 資料類型，然後才評估運算式。 變數只能使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 資料類型的子集。 例如，變數無法使用「二進位大型物件區塊」(Binary Large Object Block，BLOB) 資料類型。  
   
  如需 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 資料類型，以及將 Variant 資料類型對應到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 資料類型的詳細資訊，請參閱 [Integration Services 資料類型](../../integration-services/data-flow/integration-services-data-types.md)。  
   
-## 常值  
- 此外，運算式還可包含字串、布林，以及數值常值。 如需將數值常值轉換為數值 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 資料類型的詳細資訊，請參閱[常值 &#40;SSIS&#41;](../../integration-services/expressions/literals-ssis.md)。  
+## <a name="literals"></a>常值  
+ 此外，運算式還可包含字串、布林，以及數值常值。 如需將數值常值轉換為數值 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 資料類型的詳細資訊，請參閱[常值 &#40;SSIS&#41;](../../integration-services/expressions/numeric-string-and-boolean-literals.md)。  
   
-## 字串  
+## <a name="strings"></a>字串  
  您可以使用 DT_STR 或 DT_WSTR 作為運算式的傳回類型。 不過，在運算式中僅支援 DT_WSTR，因此會將 DT_STR 值轉換成 DT_WSTR 值。 當您撰寫運算式時，這種行為會有幾個隱含式。  
   
 -   在運算式中，使用 NULL(DT_WSTR, ...) 而不是 NULL(DT_STR, ...)。 如需此函數的詳細資訊，請參閱 [NULL &#40;SSIS 運算式&#41;](../../integration-services/expressions/null-ssis-expression.md)。  
@@ -39,7 +44,7 @@ caps.handback.revision: 57
   
  請參考下列螢幕擷取畫面中的運算式。  
   
- ![String data types in SSIS expressions](../../integration-services/expressions/media/stringsinssisexpressions.png "String data types in SSIS expressions")  
+ ![SSIS 運算式中的資料類型的字串](../../integration-services/expressions/media/stringsinssisexpressions.png "字串 SSIS 運算式中的資料類型")  
   
 1.  第一個運算式可順利執行而不會發生錯誤，因為 NULL(DT_STR, ...) 函數位於運算式的根層級。  
   
@@ -53,20 +58,20 @@ caps.handback.revision: 57
   
  下列範例示範轉換的效果。  
   
- ![Casting strings in SSIS expressions](../../integration-services/expressions/media/stringsinssisexpressions2.png "Casting strings in SSIS expressions")  
+ ![SSIS 運算式中轉換字串](../../integration-services/expressions/media/stringsinssisexpressions2.png "SSIS 運算式中轉換字串")  
   
 1.  在第一個運算式中，轉換不是在運算式的根層級。 運算式評估工具可以智慧的方式處理這項轉換，並將其轉換為 DT_WSTR，而不是 DT_STR。 運算式會傳回 DT_WSTR。  
   
 2.  在第二個運算式中，轉換是在運算式的根層級。 運算式會傳回 DT_STR。  
   
-## 隱含資料轉換  
- 當運算式評估工具自動將資料從一種資料類型轉換為另一種資料類型時，會發生資料類型的隱含轉換。 例如，如果將 **smallint** 與 **int** 做比較，就會先將 **smallint** 隱含轉換成 **int**，然後再執行比較。  
+## <a name="implicit-data-conversion"></a>隱含資料轉換  
+ 當運算式評估工具自動將資料從一種資料類型轉換為另一種資料類型時，會發生資料類型的隱含轉換。 例如，如果將 **smallint** 與 **int**做比較，就會先將 **smallint** 隱含轉換成 **int** ，然後再執行比較。  
   
  當引數和運算元的資料類型不相容時，運算式評估工具無法執行隱含資料轉換。 此外，運算式評估工具無法將任何值隱含轉換為布林。 而必須使用轉換運算子隱含轉換引數和運算元。 如需詳細資訊，請參閱 [Cast &#40;SSIS 運算式&#41;](../../integration-services/expressions/cast-ssis-expression.md)。  
   
  下圖顯示 BINARY 運算之隱含轉換的結果類型。 此資料表中資料行和資料列的交集為具有左 (從) 和右 (至) 類型之運算元的二進位運算結果類型。  
   
- ![資料類型之間的隱含資料類型轉換](../../integration-services/expressions/media/mw-dts-impl-conver-02.gif "資料類型之間的隱含資料類型轉換")  
+ ![隱含資料類型的資料類型之間轉換](../../integration-services/expressions/media/mw-dts-impl-conver-02.gif "隱含資料類型的資料類型之間轉換")  
   
  帶正負號和不帶正負號的整數之間的交集，應是大於任一引數的帶正負號整數。  
   
@@ -103,12 +108,12 @@ caps.handback.revision: 57
   
  如果引數的資料類型相同，則結果為該類型。 唯一的例外為關於兩個 DT_DECIMAL 資料類型之值的二進位運算結果，其會傳回 DT_NUMERIC 資料類型的結果。  
   
-## 運算式中所用資料的需求  
+## <a name="requirements-for-data-used-in-expressions"></a>運算式中所用資料的需求  
  運算式評估工具支援所有的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 資料類型。 不過，根據運算和函數而定，運算元和引數會需要特定資料類型。 運算式評估工具對於運算式中使用的資料，有下列資料類型需求的規定︰  
   
--   **邏輯**運算中使用的運算元評估結果必須為布林。 例如，ColumnA > 1&&ColumnB < 2。  
+-   **邏輯** 運算中使用的運算元評估結果必須為布林。 例如，ColumnA > 1&&ColumnB < 2。  
   
--   **數學**運算中使用的運算元評估結果必須為數值。 例如，23.75 * 4。  
+-   **數學** 運算中使用的運算元評估結果必須為數值。 例如，23.75 * 4。  
   
 -   比較運算中使用的運算元 (例如邏輯和等式運算) 必須評估為相容的資料類型。  
   
@@ -116,7 +121,7 @@ caps.handback.revision: 57
   
      `(DT_DBTIMESTAMPOFFSET,3) "1999-10-11 20:34:52.123 -3:30" != (DT_DBDATE)"1999-10-12"`  
   
-     系統會將運算式 `(DT_DBDATE)"1999-10-12"` 轉換為 DT_DBTIMESTAMPOFFSET。 轉換的運算式會變成 "1999-10-12 00:00:00.000 +00:00" (不等於其他運算式 `(DT_DBTIMESTAMPOFFSET,3) "1999-10-11 20:34:52.123 -3:30"` 的值)，因此，此範例會評估為 TRUE。  
+     系統會將運算式 `(DT_DBDATE)"1999-10-12"`轉換為 DT_DBTIMESTAMPOFFSET。 轉換的運算式會變成 "1999-10-12 00:00:00.000 +00:00" (不等於其他運算式 `(DT_DBTIMESTAMPOFFSET,3) "1999-10-11 20:34:52.123 -3:30"`的值)，因此，此範例會評估為 TRUE。  
   
 -   傳遞至數學函數的引數評估結果必須為數值資料類型。 根據函數或運算而定，可能會需要特定的數值資料類型。 例如，HEX 函數需要帶正負號或不帶正負號的整數。  
   
@@ -128,10 +133,10 @@ caps.handback.revision: 57
   
  許多運算和函數的結果都需要預定的資料類型。 此資料類型可能是引數的資料類型，或運算式評估工具轉換結果的資料類型。 例如，邏輯 OR 運算子 (||) 的結果固定為布林、ABS 函數的結果為引數的數值資料類型，而乘法的結果為可保留結果且不會遺失的最小數值資料類型。 如需結果之資料類型的詳細資訊，請參閱[運算子 &#40;SSIS 運算式&#41;](../../integration-services/expressions/operators-ssis-expression.md) 和[函數 &#40;SSIS 運算式&#41;](../../integration-services/expressions/functions-ssis-expression.md)。  
   
-## 相關工作  
- [在資料流程元件中使用運算式](../Topic/Use%20an%20Expression%20in%20a%20Data%20Flow%20Component.md)  
+## <a name="related-tasks"></a>相關工作  
+ [在資料流程元件中使用運算式](http://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
   
-## 相關內容  
+## <a name="related-content"></a>相關內容  
   
 -   pragmaticworks.com 上的技術文件： [SSIS 運算式小抄](http://go.microsoft.com/fwlink/?LinkId=746575)  
   

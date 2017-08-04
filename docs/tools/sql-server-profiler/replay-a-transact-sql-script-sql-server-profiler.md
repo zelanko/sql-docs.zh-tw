@@ -1,29 +1,34 @@
 ---
-title: "重新執行 Transact-SQL 指令碼 (SQL Server Profiler) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "追蹤 [SQL Server], 重新執行"
-  - "指令碼 [SQL Server], 追蹤"
-  - "重新執行追蹤"
+title: "重新執行 TRANSACT-SQL 指令碼 (SQL Server Profiler) |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- traces [SQL Server], replaying
+- scripts [SQL Server], traces
+- replaying traces
 ms.assetid: 9c0eb222-e6e3-4bc1-a25f-a41e962d361b
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: eed8da389f0c2422b3aee7ec947e5f34958f190d
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 重新執行 Transact-SQL 指令碼 (SQL Server Profiler)
+# <a name="replay-a-transact-sql-script-sql-server-profiler"></a>重新執行 Transact-SQL 指令碼 (SQL Server Profiler)
   當測試效能問題的可能方案時，請使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 來重新執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼，並比較變更前後的效能。  
   
-### 若要重新執行 Transact-SQL 指令碼  
+### <a name="to-replay-a-transact-sql-script"></a>若要重新執行 Transact-SQL 指令碼  
   
 1.  在 [檔案] 功能表上，指向 [開啟]，然後按一下 [指令碼檔案]。  
   
@@ -33,7 +38,7 @@ caps.handback.revision: 24
   
 4.  在 **[重新執行組態]** 對話方塊中確認設定，然後按一下 **[確定]**。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [重新執行追蹤](../../tools/sql-server-profiler/replay-traces.md)   
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   

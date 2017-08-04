@@ -1,0 +1,65 @@
+---
+title: "使用 Tuple 函數 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- tuple functions
+ms.assetid: fe41e3e5-a675-4169-a966-b42c18e8d741
+caps.latest.revision: 23
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: b92f048f50f26d6ba5c98e28193a44a68e3ceb39
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
+---
+# <a name="using-tuple-functions"></a>使用 Tuple 函數
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
+
+  Tuple 函數可以擷取集合的 Tuple，或是解析 Tuple 的字串表示法來擷取 Tuple。  
+  
+ Tuple 函數跟成員函數和集合函數一樣，對於交涉 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中找到的多維度結構而言不可或缺。  
+  
+ 在 MDX 中，有三個 tuple 函數[目前 &#40;MDX &#41;](../mdx/current-mdx.md)，[項目 &#40;Tuple &#41;&#40;MDX &#41;](../mdx/item-tuple-mdx.md)和[StrToTuple &#40;MDX &#41;](../mdx/strtotuple-mdx.md). 下列範例查詢會示範如何使用每一個函數：  
+  
+ `WITH`  
+  
+ `//Creates a set of tuples consisting of Years and Countries`  
+  
+ `SET MyTuples AS  [Date].[Calendar Year].[Calendar Year].MEMBERS * [Customer].[Country].[Country].MEMBERS`  
+  
+ `//Returns a string representation of that set using the Current and Generate functions`  
+  
+ `MEMBER MEASURES.CURRENTDEMO AS GENERATE(MyTuples, TUPLETOSTR(MyTuples.CURRENT), ", ")`  
+  
+ `//Retrieves the fourth tuple from that set and displays it as a string`  
+  
+ `MEMBER MEASURES.ITEMDEMO AS TUPLETOSTR(MyTuples.ITEM(3))`  
+  
+ `//Creates a tuple consisting of the measure Internet Sales Amount and the country Australia from a string`  
+  
+ `MEMBER MEASURES.STRTOTUPLEDEMO AS STRTOTUPLE("([Measures].[Internet Sales Amount]" + ", [Customer].[Country].&[Australia])")`  
+  
+ `SELECT{MEASURES.CURRENTDEMO,MEASURES.ITEMDEMO,MEASURES.STRTOTUPLEDEMO} ON COLUMNS`  
+  
+ `FROM [Adventure Works]`  
+  
+## <a name="see-also"></a>另請參閱  
+ [函式 &#40;MDX 語法 &#41;](../mdx/functions-mdx-syntax.md)   
+ [使用成員函式](../mdx/using-member-functions.md)   
+ [使用 Set 函式](../mdx/using-set-functions.md)  
+  
+  
+

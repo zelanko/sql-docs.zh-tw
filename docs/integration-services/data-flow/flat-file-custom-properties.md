@@ -1,22 +1,27 @@
 ---
-title: "一般檔案自訂屬性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "一般檔案自訂屬性 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7f2caeab-784c-4b0c-9b3e-6a88d1ccdbf9
 caps.latest.revision: 7
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 097c9a07d738bb1b192095ac91448487fdfa0eb1
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 一般檔案自訂屬性
+# <a name="flat-file-custom-properties"></a>一般檔案自訂屬性
   **來源自訂屬性**  
   
  一般檔案來源同時具有自訂屬性以及所有資料流程元件通用的屬性。  
@@ -34,9 +39,9 @@ caps.handback.revision: 7
   
 |屬性名稱|資料類型|說明|  
 |-------------------|---------------|-----------------|  
-|FastParse|布林|一個值，指出資料行會使用 DTS 所提供之速度更快但不區分地區設定的快速剖析常式，還是區分地區設定的標準剖析常式。 如需詳細資訊，請參閱[快速剖析](../Topic/Fast%20Parse.md)和[標準剖析](../Topic/Standard%20Parse.md)。 此屬性的預設值為 **False**。<br /><br /> 注意：雖然您無法在 [一般檔案來源編輯器] 中使用這個屬性，但是可以使用 [進階編輯器] 來設定這個屬性。|  
+|FastParse|布林|一個值，指出資料行會使用 DTS 所提供之速度更快但不區分地區設定的快速剖析常式，還是區分地區設定的標準剖析常式。 如需詳細資訊，請參閱 [快速剖析](http://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95) 和 [標準剖析](http://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013)。 此屬性的預設值為 **False**。<br /><br /> 注意：雖然您無法在 [一般檔案來源編輯器] 中使用這個屬性，但是可以使用 [進階編輯器] 來設定這個屬性。|  
   
- 如需詳細資訊，請參閱[一般檔案來源](../../integration-services/data-flow/flat-file-source.md)。  
+ 如需詳細資訊，請參閱 [一般檔案來源](../../integration-services/data-flow/flat-file-source.md)。  
   
  **目的地自訂屬性**  
   
@@ -51,9 +56,9 @@ caps.handback.revision: 7
   
  一般檔案目的地的輸入和輸入資料行沒有任何自訂屬性。  
   
- 如需詳細資訊，請參閱[一般檔案目的地](../../integration-services/data-flow/flat-file-destination.md)。  
+ 如需詳細資訊，請參閱 [一般檔案目的地](../../integration-services/data-flow/flat-file-destination.md)。  
   
-## 請參閱＜  
- [通用屬性](../Topic/Common%20Properties.md)  
+## <a name="see-also"></a>請參閱＜  
+ [通用屬性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
   

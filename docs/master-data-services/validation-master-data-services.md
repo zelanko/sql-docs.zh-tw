@@ -1,25 +1,30 @@
 ---
-title: "驗證 (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "驗證 (Master Data Services) |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 98eb49e7-b190-4a21-8316-08c07cde14ed
 caps.latest.revision: 12
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f442721e0e3d428b58e6bdd281af09193ebad867
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 驗證 (Master Data Services)
+# <a name="validation-master-data-services"></a>驗證 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，會驗證資料以確保其正確性。 其中一部分驗證會自動發生，而另外一部分驗證則會根據管理員建立的商務規則。  
   
-## 當資料驗證發生時  
+## <a name="when-data-validation-occurs"></a>當資料驗證發生時  
  驗證發生在不同的時間，並以不同的方式顯示在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Web 應用程式中。  
   
 |驗證類型|決定標準的人員|發生時機|在主資料管理員 Web UI 中顯示成|在適用於 Excel 的增益集中顯示成|資料是否會儲存至 MDS 儲存機制？|  
@@ -28,7 +33,7 @@ caps.handback.revision: 12
 |資料類型和內容驗證|MDS 管理員，建立模型物件時 (例如，屬性的長度或資料類型)|使用者加入或編輯資料時自動發生|輸入錯誤|InputStatus|否|  
 |資料類型和內容驗證|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]|使用者加入或編輯資料時自動發生|輸入錯誤|InputStatus|否|  
   
-## 相關工作  
+## <a name="related-tasks"></a>相關工作  
   
 |工作描述|主題|  
 |----------------------|-----------|  
@@ -37,7 +42,7 @@ caps.handback.revision: 12
 |根據商務規則驗證資料的特定子集。 具有 **[總管]** 功能區域權限的所有使用者。|[根據商務規則驗證特定成員 &#40;Master Data Services&#41;](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md)|  
 |根據商務規則驗證資料的特定子集。 具有 **[總管]** 功能區域權限並且使用 [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]的所有使用者。|[套用商務規則 &#40;適用於 Excel 的 MDS 增益集&#41;](../master-data-services/microsoft-excel-add-in/apply-business-rules-mds-add-in-for-excel.md)|  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [商務規則 &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
   
   

@@ -1,22 +1,27 @@
 ---
-title: "使用 Oracle CDC 服務 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "使用 Oracle CDC 服務 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 04be5896-2301-45f5-a8ce-5f4ef2b69aa5
 caps.latest.revision: 14
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 69eb7087530b82c7ba75a9d8ff87fd8fff815f16
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 使用 Oracle CDC 服務
+# <a name="working-with-the-oracle-cdc-service"></a>使用 Oracle CDC 服務
   本章節描述 Oracle CDC 服務的一些重要概念。 本章節包含的概念如下：  
   
 -   [MSXDBCDC 資料庫](../../integration-services/change-data-capture/working-with-the-oracle-cdc-service.md#BKMK_MSXDBCDC)  
@@ -42,9 +47,9 @@ caps.handback.revision: 14
   
 -   當做 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體內包含之 Oracle CDC 執行個體的登錄，處理每一個執行個體以及每一個執行個體使用之組態版本的 CDC 服務。 此資訊相當於 master 資料庫中 **sys.databases** 資料表內的 **is_cdc_enabled** 資料行。 CDC 服務會定期掃描 **dbo.xdbcdc_databases** 資料表，以識別對 CDC 組態或對擷取的執行個體清單所做的變更。  
   
--   持有 **sysadmin** 擁有的預存程序，有助於建立及維護 CDC 執行個體。 這些類似於用於實作 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CDC 功能的系統程序。  
+-   持有 **sysadmin**擁有的預存程序，有助於建立及維護 CDC 執行個體。 這些類似於用於實作 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CDC 功能的系統程序。  
   
-### 建立 MSXDBCDC 資料庫  
+### <a name="creating-the-msxdbcdc-database"></a>建立 MSXDBCDC 資料庫  
  在可以定義 Oracle CDC 服務之前，必須建立 MSXDBCDC 資料庫。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上只能建立一個 MSXDBCDC 資料庫。 當您為 Oracle CDC 準備 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫時，便會建立 MSXDBCDC 資料庫。 若要執行這項作業，請使用 Oracle CDC 服務組態主控台，或是執行 CDC 服務組態主控台所產生的建立指令碼。  
   
  此資料庫的擁有者為 Oracle CDC 服務管理員，他可以控制在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之下主控的所有 Oracle CDC 執行個體。  
@@ -53,7 +58,7 @@ caps.handback.revision: 14
   
  [如何為 CDC 準備 SQL Server](../../integration-services/change-data-capture/how-to-prepare-sql-server-for-cdc.md)  
   
-### MSXDBCDC 資料庫資料表  
+### <a name="the-msxdbcdc-database-tables"></a>MSXDBCDC 資料庫資料表  
  本節描述 MSXDBCDC 資料庫中的以下資料表。  
   
 -   [dbo.xdbcdc_trace](../../integration-services/change-data-capture/working-with-the-oracle-cdc-service.md#BKMK_dboxdbcdc_trace)  
@@ -72,7 +77,7 @@ caps.handback.revision: 14
 |項目|說明|  
 |----------|-----------------|  
 |timestamp|寫入追蹤記錄的精確 UTC 時間戳記。|  
-|型別|包含下列其中一個值。<br /><br /> ERROR<br /><br /> INFO<br /><br /> TRACE|  
+|型別|包含下列其中一個值。<br /><br /> error<br /><br /> INFO<br /><br /> 追蹤|  
 |node|寫入記錄的節點名稱。|  
 |status|狀態資料表使用的狀態碼。|  
 |sub_status|狀態資料表使用的子狀態碼。|  
@@ -107,10 +112,10 @@ caps.handback.revision: 14
 |ref_count|這個項目會計算安裝相同 Oracle CDC 服務的電腦數目。 每次加入相同名稱的 Oracle CDC 服務時，這個數目就會遞增，每當移除這類服務時，這個數目就會遞減。 當計數器到達零時，這個資料列會遭到刪除。|  
 |active_service_node|目前處理 CDC 服務的 Windows 節點名稱。 當此服務正確停止時，這個資料行會設定為 null，表示不再有使用中的服務。|  
 |active_service_heartbeat|這個項目會追蹤目前的 CDC 服務來判斷它是否依然使用中。<br /><br /> 對於固定間隔的使用中 CDC 服務而言，將會使用目前資料庫 UTC 時間戳記來更新這個項目。 預設間隔為 30 秒，但是可以設定間隔。<br /><br /> 當暫止的 CDC 服務偵測到經過設定的間隔時間後並未更新活動訊號時，暫止的服務會嘗試接管使用中的 CDC 服務角色。|  
-|選項|這個項目會指定次要選項，例如追蹤或微調。 它會以 **name[=value][; ]** 格式寫入。 選項字串會使用與 ODBC 連接字串相同的語意。 如果選項為布林值 (值為是/否)，此值只能包含名稱。<br /><br /> 追蹤具有以下的可能值。<br /><br /> **true**<br /><br /> **on**<br /><br /> **false**<br /><br /> **關閉**<br /><br /> **\<類別名稱>[,類別名稱>]**<br /><br /> <br /><br /> 預設值是 **false**秒。<br /><br /> **service_heartbeat_interval** 是此服務更新 active_service_heartbeat 資料行的時間間隔 (以秒數為單位)。 預設值是 **30**。 最大值為 **3600**。<br /><br /> **service_config_polling_interval** 是 CDC 服務檢查組態變更的輪詢間隔 (以秒數為單位)。 預設值是 **30**。 最大值為 **3600**。<br /><br /> **sql_command_timeout** 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所使用的命令逾時。 預設值是 **1**秒。 最大值為 **3600**。|  
+|選項|這個項目會指定次要選項，例如追蹤或微調。 它會以 **name[=value][; ]**格式寫入。 選項字串會使用與 ODBC 連接字串相同的語意。 如果選項為布林值 (值為是/否)，此值只能包含名稱。<br /><br /> 追蹤具有以下的可能值。<br /><br /> **true**<br /><br /> **on**<br /><br /> **false**<br /><br /> **關閉**<br /><br /> **\<類別名稱 > [，類別名稱 >]**<br /><br /> <br /><br /> 預設值是 **false**秒。<br /><br /> **service_heartbeat_interval** 是此服務更新 active_service_heartbeat 資料行的時間間隔 (以秒數為單位)。 預設值是 **30**。 最大值為 **3600**。<br /><br /> **service_config_polling_interval** 是 CDC 服務檢查組態變更的輪詢間隔 (以秒數為單位)。 預設值是 **30**。 最大值為 **3600**。<br /><br /> **sql_command_timeout** 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]所使用的命令逾時。 預設值是 **1**秒。 最大值為 **3600**。|  
 ||  
   
-### MSXDBCDC 資料庫預存程序  
+### <a name="the-msxdbcdc-database-stored-procedures"></a>MSXDBCDC 資料庫預存程序  
  本節描述 MSXDBCDC 資料庫中的以下預存程序。  
   
 -   [dbo.xcbcdc_reset_db(資料庫名稱)](../../integration-services/change-data-capture/working-with-the-oracle-cdc-service.md#BKMK_dboxcbcdc_reset_db)  
@@ -134,15 +139,15 @@ caps.handback.revision: 14
   
 -   停止 CDC 執行個體 (若為使用中)。  
   
--   截斷變更資料表：**cdc_lsn_mapping** 資料表和 **cdc_ddl_history** 資料表。  
+-   截斷變更資料表： **cdc_lsn_mapping** 資料表和 **cdc_ddl_history** 資料表。  
   
 -   清除 **cdc_xdbcdc_state** 資料表。  
   
--   清除 **cdc_change_table** 之每一個資料列的 start_lsn 資料行。  
+-   清除 **cdc_change_table**之每一個資料列的 start_lsn 資料行。  
   
  若要使用 **dbo.xcbcdc_reset_db** 程序，使用者必須是所指名之 CDC 執行個體資料庫的 **db_owner** 資料庫角色成員，或是 **sysadmin** 或 **serveradmin** 固定伺服器角色的成員。  
   
- 如需 CDC 資料表的詳細資訊，請參閱 CDC 設計工具主控台中說明系統內的 *CDC 資料庫*。  
+ 如需 CDC 資料表的詳細資訊，請參閱 CDC 設計工具主控台中說明系統內的 *CDC 資料庫* 。  
   
 ###  <a name="BKMK_dboxdbcdc_disable_db"></a> dbo.xdbcdc_disable_db(dbname)  
  **dbo.xcbcdc_disable_db** 程序會執行以下工作：  
@@ -156,22 +161,22 @@ caps.handback.revision: 14
 ###  <a name="BKMK_dboxcbcdc_add_service"></a> dbo.xcbcdc_add_service(svcname,sqlusr)  
  **dbo.xcbcdc_add_service** 程序會將項目加入至 **MSXDBCDC.xdbcdc_services** 資料表，並針對 **MSXDBCDC.xdbcdc_services** 資料表中的服務名稱將 1 的遞增值加入 ref_count 資料行。 當 **ref_count** 為 0 時，它會刪除資料列。  
   
- 若要使用 **dbo.xcbcdc_add_service\<服務名稱, 使用者名稱>** 程序，使用者必須是所指名之 CDC 執行個體資料庫的 **db_owner** 資料庫角色成員，或是 **sysadmin** 或 **serveradmin** 固定伺服器角色的成員。  
+ 若要使用**dbo.xcbcdc_add_service\<服務名稱、 使用者名稱 >**程序中，使用者必須是成員**db_owner**所指名之 CDC 執行個體資料庫的資料庫角色或成員的**sysadmin**或**serveradmin**固定的伺服器角色。  
   
 ###  <a name="BKMK_dboxdbcdc_start"></a> dbo.xdbcdc_start(dbname)  
  **dbo.xdbcdc_start** 程序會傳送啟動要求給 CDC 服務，此服務會處理選取的 CDC 執行個體來開始變更處理。  
   
- 若要使用 **dbo.xcdcdc_start** 程序，使用者必須是 CDC 資料庫的 **db_owner** 資料庫角色成員，或是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之 **sysadmin** 或 **serveradmin** 角色的成員。  
+ 若要使用 **dbo.xcdcdc_start** 程序，使用者必須是 CDC 資料庫的 **db_owner** 資料庫角色成員，或是 **執行個體之** sysadmin **或** serveradmin [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 角色的成員。  
   
 ###  <a name="BKMK_dboxdbcdc_stop"></a> dbo.xdbcdc_stop(dbname)  
  **dbo.xdbcdc_stop** 程序會傳送停止要求給 CDC 服務，此服務會處理選取的 CDC 執行個體來停止變更處理。  
   
- 若要使用 **dbo.xcdcdc_stop** 程序，使用者必須是 CDC 資料庫的 **db_owner** 資料庫角色成員，或是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之 **sysadmin** 或 **serveradmin** 角色的成員。  
+ 若要使用 **dbo.xcdcdc_stop** 程序，使用者必須是 CDC 資料庫的 **db_owner** 資料庫角色成員，或是 **執行個體之** sysadmin **或** serveradmin [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 角色的成員。  
   
 ##  <a name="BKMK_CDCdatabase"></a> CDC 資料庫  
  CDC 服務中使用的每一個 Oracle CDC 執行個體都與稱為 CDC 資料庫的特定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫有關聯。 這個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫會在與 Oracle CDC 服務相關聯的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中主控。  
   
- CDC 資料庫包含特殊的 cdc 結構描述。 Oracle CDC 服務會搭配前置詞為 **xdbcdc_** 的資料表名稱使用這個結構描述。 此結構描述的用途是為了安全性和一致性。  
+ CDC 資料庫包含特殊的 cdc 結構描述。 Oracle CDC 服務會搭配前置詞為 **xdbcdc_**的資料表名稱使用這個結構描述。 此結構描述的用途是為了安全性和一致性。  
   
  Oracle CDC 執行個體和 CDC 資料庫都是使用 Oracle CDC 設計工具主控台所建立。 如需有關 CDC 資料庫的詳細資訊，請參閱 Oracle CDC 設計工具主控台安裝所隨附的文件集。  
   
@@ -182,7 +187,7 @@ caps.handback.revision: 14
   
  [如何使用 CDC 服務命令列介面](../../integration-services/change-data-capture/how-to-use-the-cdc-service-command-line-interface.md)  
   
-### 服務程式命令  
+### <a name="service-program-commands"></a>服務程式命令  
  本章節描述用來設定 CDC 服務的以下命令。  
   
 -   [Config](../../integration-services/change-data-capture/working-with-the-oracle-cdc-service.md#BKMK_config)  
@@ -212,9 +217,9 @@ caps.handback.revision: 14
   
  **asym-key-password** 是要更新的密碼。  
   
- **windows-account** 和 **windows-password** 為正在更新之服務的 Windows 帳戶認證。  
+ **windows-account**和 **windows-password** 為正在更新之服務的 Windows 帳戶認證。  
   
- **sql-username** 和 **sql-password** 為正在更新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證認證。 如果 sqlacct 同時有空的使用者名稱和空的密碼，Oracle CDC 服務會使用 Windows 驗證連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+ **sql-username**和 **sql-password** 為正在更新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證認證。 如果 sqlacct 同時有空的使用者名稱和空的密碼，Oracle CDC 服務會使用 Windows 驗證連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
  **注意**：必須用雙引號 (") 括住任何包含空格或雙引號的參數。 內嵌雙引號必須成對 (例如，若要使用 **"A#B" D** 當作密碼，請輸入 **""A#B"" D"**)。  
   
@@ -238,9 +243,9 @@ caps.handback.revision: 14
   
  **asym-key-password** 是保護非對稱金鑰的密碼，該金鑰是用來儲存來源資料庫的記錄採礦認證。  
   
- **windows-account** 和 **windows-password** 是與所建立之 Oracle CDC 服務相關聯的帳戶名稱和密碼。  
+ **windows-account**和 **windows-password** 是與所建立之 Oracle CDC 服務相關聯的帳戶名稱和密碼。  
   
- **sql-username** 和 **sql-password** 是用來連接至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 帳戶名稱和密碼。 如果這兩個參數都是空的，則 Oracle CDC 服務會使用 Windows 驗證連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+ **sql-username**和 **sql-password** 是用來連接至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 帳戶名稱和密碼。 如果這兩個參數都是空的，則 Oracle CDC 服務會使用 Windows 驗證連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
  **注意**：必須用雙引號 (") 括住任何包含空格或雙引號的參數。 內嵌雙引號必須成對 (例如，若要使用 **"A#B" D** 當作密碼，請輸入 **""A#B"" D"**)。  
   
@@ -259,7 +264,7 @@ caps.handback.revision: 14
   
  **注意**：必須用雙引號 (") 括住任何包含空格或雙引號的參數。 內嵌雙引號必須成對 (例如，若要使用 **"A#B" D** 當作密碼，請輸入 **""A#B"" D"**)。  
   
-## 請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [如何使用 CDC 服務命令列介面](../../integration-services/change-data-capture/how-to-use-the-cdc-service-command-line-interface.md)   
  [如何為 CDC 準備 SQL Server](../../integration-services/change-data-capture/how-to-prepare-sql-server-for-cdc.md)  
   

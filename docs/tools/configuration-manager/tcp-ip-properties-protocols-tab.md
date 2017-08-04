@@ -1,22 +1,27 @@
 ---
-title: "TCP/IP 屬性 (通訊協定索引標籤) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/24/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "TCP/IP [SQL Server]，組態選項"
+title: "TCP/IP 屬性 （通訊協定索引標籤） |Microsoft 文件"
+ms.custom: 
+ms.date: 08/24/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- TCP/IP [SQL Server], configuration options
 ms.assetid: 007638fc-3a24-4460-adbe-545ded5d6f88
 caps.latest.revision: 38
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c1a3d4995d3cc79f9a31533b918268f14204d511
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
 # TCP/IP 屬性 (通訊協定索引標籤)
   使用 [TCP/IP 屬性] 對話方塊來設定 TCP/IP 通訊協定的選項。 按一下左窗格中的 [TCP/IP]，在詳細資料窗格中顯示個別的 IP 位址組態。  
@@ -24,7 +29,7 @@ caps.handback.revision: 38
  Microsoft SQL Server 必須重新啟動之後，變更才能生效。  
   
 ## 選項。  
- **Enabled**  
+ **已啟用**  
  可能的值為 [是] 和 [否]。  
   
  **Keep Alive**  
@@ -38,6 +43,7 @@ caps.handback.revision: 38
   
 ## 另請參閱  
  [選擇網路通訊協定](https://msdn.microsoft.com/library/ms187892(v=sql.130).aspx)   
- [Creating a Valid Connection String Using TCP IP](https://msdn.microsoft.com/library/ms191260.aspx)  
+ [建立有效的連接字串使用 TCP IP](https://msdn.microsoft.com/library/ms191260.aspx)  
   
   
+

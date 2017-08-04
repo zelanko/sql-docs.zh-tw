@@ -1,25 +1,30 @@
 ---
-title: "如何管理本機 CDC 服務 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "如何管理本機 CDC 服務 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7f9be649-cd93-40c1-bc48-0480106f207c
 caps.latest.revision: 6
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 40678ff92e4513354db09cca42d48ed0302369ac
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 如何管理本機 CDC 服務
+# <a name="how-to-manage-a-local-cdc-service"></a>如何管理本機 CDC 服務
   此程序描述如何使用 CDC 服務組態主控台來管理特定的 CDC 服務。  
   
-### 若要管理特定的 CDC 服務  
+### <a name="to-manage-a-specific-cdc-service"></a>若要管理特定的 CDC 服務  
   
 1.  從 **[開始]** 功能表，選取 **[Oracle CDC 服務組態]**。  
   
@@ -55,7 +60,7 @@ caps.handback.revision: 6
   
          您也可以用滑鼠右鍵按一下您要編輯屬性的 CDC 服務，然後選取 [屬性]。  
   
-## 請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [管理 Oracle CDC 服務](../../integration-services/change-data-capture/manage-an-oracle-cdc-service.md)  
   
   

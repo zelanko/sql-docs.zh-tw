@@ -1,45 +1,50 @@
 ---
-title: "Integration Services 工作 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "指令碼 [Integration Services], 工作"
-  - "檔案 [Integration Services], 工作選項"
-  - "工作流程工作 [Integration Services]"
-  - "Integration Services, 工作"
-  - "加入封裝工作"
-  - "工作 [Integration Services], 已列出"
-  - "SSIS 工作"
-  - "SSIS, 工作"
-  - "控制流程 [Integration Services], 工作"
-  - "工作 [Integration Services]"
-  - "群組工作"
-  - "工作 [Integration Services], 關於工作"
-  - "SQL Server Integration Services 工作"
-  - "資料準備工作 [Integration Services]"
-  - "目錄作業 [Integration Services]"
+title: "Integration Services 工作 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- scripts [Integration Services], tasks
+- files [Integration Services], task options
+- workflow tasks [Integration Services]
+- Integration Services, tasks
+- adding package tasks
+- tasks [Integration Services], listed
+- SSIS tasks
+- SSIS, tasks
+- control flow [Integration Services], tasks
+- tasks [Integration Services]
+- grouping tasks
+- tasks [Integration Services], about tasks
+- SQL Server Integration Services tasks
+- data preparation tasks [Integration Services]
+- directory operations [Integration Services]
 ms.assetid: 75c8901d-6966-4af3-abe5-10af6dd9313b
 caps.latest.revision: 51
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 51
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 00504d62d603f43b567394180b9e03dee34a1ed7
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# Integration Services 工作
+# <a name="integration-services-tasks"></a>Integration Services 工作
   工作為控制流程元素，用來定義封裝控制流程中所執行工作的單位。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝是由一或多項工作所組成。 如果封裝包含超過一項工作，則會在控制流程中按照優先順序條件約束連接並排列順序。  
   
  您也可以使用支援 COM 的程式設計語言 (例如 Visual Basic) 或 .NET 程式設計語言 (例如 C#) 撰寫自訂工作。  
   
- [[!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師] 為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中使用封裝的圖形工具，它提供用來建立封裝控制流程的設計介面，以及用來設定工作的自訂編輯器。 您也可以設計 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 物件模型的程式以程式設計方式建立封裝。  
+ [ [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師] 為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中使用封裝的圖形工具，它提供用來建立封裝控制流程的設計介面，以及用來設定工作的自訂編輯器。 您也可以設計 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 物件模型的程式以程式設計方式建立封裝。  
   
-## 工作的類型  
+## <a name="types-of-tasks"></a>工作的類型  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包括下列工作類型。  
   
  資料流程工作  
@@ -64,23 +69,23 @@ caps.handback.revision: 51
  執行管理功能如備份和壓縮 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫、重建和重新組織索引，以及執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 工作的工作。  
   
  自訂工作  
- 此外，您可以使用支援 COM 的程式設計語言 (例如 Visual Basic) 或 .NET 程式設計語言 (例如 C#) 撰寫自訂工作。 如果您要在 [[!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師] 中存取自訂工作，可為該工作建立及註冊使用者介面。 如需詳細資訊，請參閱[開發自訂工作](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md)。  
+ 此外，您可以使用支援 COM 的程式設計語言 (例如 Visual Basic) 或 .NET 程式設計語言 (例如 C#) 撰寫自訂工作。 如果您要在 [ [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師] 中存取自訂工作，可為該工作建立及註冊使用者介面。 如需詳細資訊，請參閱 [開發自訂工作](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md)。  
   
-## 設定工作  
+## <a name="configuration-of-tasks"></a>設定工作  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝可包含單一工作，例如，在封裝執行時刪除資料庫資料表中各項記錄的執行 SQL 工作。 不過，封裝通常包含數項工作，且各項工作均設定為在封裝控制流程的內容中執行。 若事件處理常式為回應執行階段事件的工作流程，則亦可擁有工作。  
   
- 如需使用 [[!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師] 將工作加入封裝的詳細資訊，請參閱[在控制流程中加入或刪除工作或容器](../../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)。  
+ 如需使用 [ [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師] 將工作加入封裝的詳細資訊，請參閱 [在控制流程中加入或刪除工作或容器](../../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)。  
   
- 如需利用撰寫程式的方式將工作加入封裝的詳細資訊，請參閱[以程式設計方式加入工作](../../integration-services/building-packages-programmatically/adding-tasks-programmatically.md)。  
+ 如需利用撰寫程式的方式將工作加入封裝的詳細資訊，請參閱 [以程式設計方式加入工作](../../integration-services/building-packages-programmatically/adding-tasks-programmatically.md)。  
   
- 每項工作均可使用 [[!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師] 針對各項工作提供的自訂對話方塊，或 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中包括的 [屬性] 視窗另行設定。 封裝可包括多項相同類型的工作，例如六項執行 SQL 工作，而每項工作皆可分別設定。 如需詳細資訊，請參閱[設定工作或容器的屬性](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)。  
+ 每項工作均可使用 [ [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師] 針對各項工作提供的自訂對話方塊，或 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中包括的 [屬性] 視窗另行設定。 封裝可包括多項相同類型的工作，例如六項執行 SQL 工作，而每項工作皆可分別設定。 如需詳細資訊，請參閱 [設定工作或容器的屬性](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)。  
   
-## 工作連接和群組  
+## <a name="tasks-connections-and-groups"></a>工作連接和群組  
  如果工作包含超過一項工作，則會在控制流程中按照優先順序條件約束連接並排列順序。 如需詳細資訊，請參閱 [Precedence Constraints](../../integration-services/control-flow/precedence-constraints.md)。  
   
- 您可將多項工作設為群組，並做為單一工作單位執行，或於迴圈中重複。 如需詳細資訊，請參閱 [Foreach 迴圈容器](../../integration-services/control-flow/foreach-loop-container.md)、[For 迴圈容器](../../integration-services/control-flow/for-loop-container.md)和[時序容器](../../integration-services/control-flow/sequence-container.md)。  
+ 您可將多項工作設為群組，並做為單一工作單位執行，或於迴圈中重複。 如需詳細資訊，請參閱 [Foreach 迴圈容器](../../integration-services/control-flow/foreach-loop-container.md)、 [For 迴圈容器](../../integration-services/control-flow/for-loop-container.md)和 [時序容器](../../integration-services/control-flow/sequence-container.md)。  
   
-## 相關工作  
+## <a name="related-tasks"></a>相關工作  
  [在控制流程中加入或刪除工作或容器](../../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
   

@@ -1,31 +1,36 @@
 ---
-title: "WMI 連接管理員編輯器 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.wmiconnection.f1"
-helpviewer_keywords: 
-  - "WMI 連接管理員編輯器"
+title: "WMI 連接管理員編輯器 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.wmiconnection.f1
+helpviewer_keywords:
+- WMI Connection Manager Editor
 ms.assetid: 0ef2c913-0779-4a07-989e-3361cd83170b
 caps.latest.revision: 28
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6b39bf96634b93b366492c9551942e633e20e9b0
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# WMI 連接管理員編輯器
+# <a name="wmi-connection-manager-editor"></a>WMI 連接管理員編輯器
   使用 [WMI 連線管理員] 對話方塊，以指定 Microsoft Windows Management Instrumentation (WMI) 與伺服器的連線。  
   
  若要深入了解 WMI 連接管理員，請參閱＜ [WMI Connection Manager](../../integration-services/connection-manager/wmi-connection-manager.md)＞。  
   
-## 選項。  
+## <a name="options"></a>選項。  
  **名稱**  
  提供唯一的名稱給連接管理員。  
   
@@ -50,9 +55,9 @@ caps.handback.revision: 28
  **測試**  
  測試連接管理員設定。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [Integration Services 錯誤和訊息參考](../../integration-services/integration-services-error-and-message-reference.md)   
- [組態管理的 WMI 提供者概念](../Topic/WMI%20Provider%20for%20Configuration%20Management%20Concepts.md)   
+ [Configuration Management Concepts 的 WMI 提供者](../../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md)   
  [伺服器事件的 WMI 提供者概念](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)  
   
   

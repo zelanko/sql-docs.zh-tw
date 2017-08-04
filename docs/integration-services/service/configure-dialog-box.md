@@ -1,26 +1,31 @@
 ---
-title: "設定對話方塊 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.configure.f1"
-  - "sql13.SSIS.SSMS.ISPROJECTPROP.REFERENCES.F1"
-  - "sql13.SSIS.SSMS.ISPROJECTPROP.PARAMETERS.F1"
+title: "設定對話方塊 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.configure.f1
+- sql13.SSIS.SSMS.ISPROJECTPROP.REFERENCES.F1
+- sql13.SSIS.SSMS.ISPROJECTPROP.PARAMETERS.F1
 ms.assetid: 10183c8d-b1be-420f-972a-96ea97d4f4d8
 caps.latest.revision: 11
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f9587abfb97ec048985ac28de0e7dc585e2bea61
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 設定對話方塊
+# <a name="configure-dialog-box"></a>設定對話方塊
   使用 **[設定]** 對話方塊來針對封裝和專案設定參數、連接管理員及環境的參考。  
   
  **您想要做什麼事？**  

@@ -1,27 +1,32 @@
 ---
-title: "XML 工作 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.xmltask.f1"
-helpviewer_keywords: 
-  - "XML [Integration Services]"
-  - "XML 工作 [Integration Services]"
+title: "XML 工作 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.xmltask.f1
+helpviewer_keywords:
+- XML [Integration Services]
+- XML task [Integration Services]
 ms.assetid: 9f761846-390e-46d5-9db7-858943d40849
 caps.latest.revision: 59
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 59
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: 87e8a8a282e0d6973f1fd47157c9ea33b71a8c7f
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# XML 工作
+# <a name="xml-task"></a>XML Task
   XML 工作用於處理 XML 資料。 使用此工作，封裝可以擷取 XML 文件、使用「可延伸樣式表語言轉換」(XSLT) 樣式表和 XPath 運算式將作業套用到文件、合併多個文件，或者驗證、比較更新的文件，並將其儲存至檔案和變數。  
   
  此工作可讓 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝在執行階段動態修改 XML 文件。 您可將 XML 工作用於下列用途：  
@@ -36,7 +41,7 @@ caps.handback.revision: 59
   
  您可以透過使用 XML 來源擷取 XML 文件的值，將 XML 資料包含到資料流程中。 如需詳細資訊，請參閱 [XML 來源](../../integration-services/data-flow/xml-source.md)。  
   
-## XML 作業  
+## <a name="xml-operations"></a>XML 作業  
  XML 工作執行的第一個動作是擷取特定的 XML 文件。 此動作內建於 XML 工作中，並且可以自動發生。 擷取的 XML 文件用作 XML 工作執行之作業的資料來源。  
   
  「差異」、「合併」和「修補」的 XML 作業需要兩個運算元。 第一個運算元會指定來源 XML 文件。 第二個運算元也會指定 XML 文件，其內容視作業的需求而定。 例如，差異作業會比較兩個文件；因此，第二個運算元會指定與來源 XML 文件相比較的另一個類似 XML 文件。  
@@ -49,7 +54,7 @@ caps.handback.revision: 59
   
  可以設定 XML 工作，以將作業結果儲存到變數或檔案。 如果儲存到檔案，XML 工作則使用「檔案」連接管理員來存取此檔案。 您也可以將差異作業產生的 Diffgram 結果儲存到檔案和變數。  
   
-## 預先定義的 XML 作業  
+## <a name="predefined-xml-operations"></a>預先定義的 XML 作業  
  XML 工作包括一組預先定義的作業，用於處理 XML 文件。 下表描述這些作業。  
   
 |運算|說明|  
@@ -61,7 +66,7 @@ caps.handback.revision: 59
 |XPath|執行 XPath 查詢和評估。|  
 |XSLT|在 XML 文件上執行 XSL 轉換。|  
   
-### 差異作業  
+### <a name="diff-operation"></a>差異作業  
  視比較要求快還是精確而定，差異作業可設定為使用不同的比較演算法。 作業也可以設定為根據比較文件的大小來自動選取快速或精確比較。  
   
  差異作業包含一組自訂 XML 比較的選項。 下表描述這些選項。  
@@ -77,10 +82,10 @@ caps.handback.revision: 59
 |**IgnoreProcessingInstructions**|指定是否要比較處理指示的值。|  
 |**IgnoreDTD**|指定是否要忽略 DTD 的值。|  
   
-### 合併作業  
+### <a name="merge-operation"></a>合併作業  
  當您使用 XPath 陳述式識別來源文件中的合併位置時，此陳述式預期會傳回單一節點。 如果陳述式傳回多個節點，只會使用第一個節點。 第二個文件的內容會合併到 XPath 查詢傳回的第一個節點之下。  
   
-### XPath 作業  
+### <a name="xpath-operation"></a>XPath 作業  
  可以將 XPath 作業設定為使用不同類型的 XPath 功能。  
   
 -   選取 [評估] 選項以實作 XPath 函數，例如 sum()。  
@@ -89,12 +94,12 @@ caps.handback.revision: 59
   
 -   選取 **值** 選項以傳回所有選取節點的內部文字值 (串連成一個字串)。  
   
-### 驗證作業  
+### <a name="validation-operation"></a>驗證作業  
  可以將「驗證」作業設定為使用「文件類型定義」(DTD) 或「XML 結構描述定義」(XSD) 結構描述。  
   
  啟用 **ValidationDetails** 可取得詳細的錯誤輸出。 如需詳細資訊，請參閱＜ [Validate XML with the XML Task](../../integration-services/control-flow/validate-xml-with-the-xml-task.md)＞。  
   
-## XML 文件編碼  
+## <a name="xml-document-encoding"></a>XML 文件編碼  
  XML 工作只支援 Unicode 文件的合併。 這表示只能對具有 Unicode 編碼的文件套用「合併」作業。 使用其他編碼將造成 XML 工作失敗。  
   
 > [!NOTE]  
@@ -106,19 +111,19 @@ caps.handback.revision: 59
   
  `<?xml version="1.0" encoding="UTF-8"?>`  
   
-## XML 工作上可用的自訂記錄訊息  
- 下表描述 XML 工作的自訂記錄項目。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 記錄](../../integration-services/performance/integration-services-ssis-logging.md)和[自訂訊息以進行記錄](../../integration-services/performance/custom-messages-for-logging.md)。  
+## <a name="custom-logging-messages-available-on-the-xml-task"></a>XML 工作上可用的自訂記錄訊息  
+ 下表描述 XML 工作的自訂記錄項目。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 記錄](../../integration-services/performance/integration-services-ssis-logging.md)。  
   
 |記錄項目|說明|  
 |---------------|-----------------|  
 |**XMLOperation**|提供有關工作執行之作業的資訊。|  
   
-## XML 工作的組態  
+## <a name="configuration-of-the-xml-task"></a>XML 工作的組態  
  您可以透過「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」或以程式設計方式設定屬性。  
   
  如需有關可以在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [XML 工作編輯器 &#40;一般頁面&#41;](../../integration-services/control-flow/xml-task-editor-general-page.md)  
+-   [XML 工作編輯器 &#40;一般頁面 &#41;](../../integration-services/control-flow/xml-task-editor-general-page.md)  
   
 -   [使用 XML 工作驗證 XML](../../integration-services/control-flow/validate-xml-with-the-xml-task.md)  
   
@@ -126,17 +131,17 @@ caps.handback.revision: 59
   
  如需有關如何在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中設定屬性的詳細資訊，請按下列主題：  
   
--   [設定工作或容器的屬性](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+-   [設定工作或容器的屬性](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
-## XML 工作的程式設計組態  
+## <a name="programmatic-configuration-of-the-xml-task"></a>XML 工作的程式設計組態  
  如需有關以程式設計方式設定這些屬性的詳細資訊，請按下列主題：  
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.XMLTask.XMLTask>  
   
-## 相關工作  
- [設定工作或容器的屬性](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+## <a name="related-tasks"></a>相關工作  
+ [設定工作或容器的屬性](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
-## 相關內容  
+## <a name="related-content"></a>相關內容  
   
 -   agilebi.com 上的部落格文章： [XML 目的地指令碼元件](http://agilebi.com/jwelch/2007/06/02/xml-destination-script-component/)  
   

@@ -1,31 +1,36 @@
 ---
-title: "HTTP 連接管理員 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "HTTP 連接管理員"
-  - "網站連接 [Integration Services]"
-  - "連接管理員 [Integration Services], HTTP"
-  - "Web 伺服器連接 [Integration Services]"
-  - "連接 [Integration Services], HTTP"
+title: "HTTP 連接管理員 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- HTTP connection manager
+- Web site connections [Integration Services]
+- connection managers [Integration Services], HTTP
+- Web server connections [Integration Services]
+- connections [Integration Services], HTTP
 ms.assetid: 26b2b3e1-d02c-46ca-8d31-7aef2bbc3c53
 caps.latest.revision: 44
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 44
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4cf63461848933530a215a75b19d40128327f356
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# HTTP 連接管理員
-  HTTP 連接讓封裝得以經由使用 HTTP 傳送或接收檔案，存取 Web 伺服器。  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 所包含的「Web 服務」工作便使用此連接管理員。  
+# <a name="http-connection-manager"></a>HTTP 連接管理員
+  HTTP 連接讓封裝得以經由使用 HTTP 傳送或接收檔案，存取 Web 伺服器。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 所包含的「Web 服務」工作便使用此連接管理員。  
   
- 當您將 HTTP 連線管理員加入封裝時，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會建立連線管理員，用來在執行階段解析為 HTTP 連接、設定連線管理員屬性，以及將連線管理員加入封裝的 **Connections** 集合。  
+ 當您將 HTTP 連線管理員加入封裝時， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會建立連線管理員，用來在執行階段解析為 HTTP 連接、設定連線管理員屬性，以及將連線管理員加入封裝的 **Connections** 集合。  
   
  連接管理員的 **ConnectionManagerType** 屬性會設定為 **HTTP.**。  
   
@@ -42,7 +47,7 @@ caps.handback.revision: 44
   
 -   使用 Proxy 伺服器。 Proxy 伺服器也可設定為使用認證，以及設定為略過 Proxy 伺服器並改用本機位址。  
   
-## 設定 HTTP 連接管理員  
+## <a name="configuration-of-the-http-connection-manager"></a>設定 HTTP 連接管理員  
  您可以透過「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」或以程式設計方式設定屬性。  
   
  如需有關可以在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中設定之屬性的詳細資訊，請按下列其中一個主題：  
@@ -53,8 +58,8 @@ caps.handback.revision: 44
   
  如需以程式設計方式設定連線管理員的資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [Web 服務工作](../../integration-services/control-flow/web-service-task.md)   
- [Integration Services &#40;SSIS&#41; 連接](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
+ [Integration Services &#40;SSIS &#41;連線](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
   
   

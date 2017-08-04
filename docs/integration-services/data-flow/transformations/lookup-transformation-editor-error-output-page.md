@@ -1,29 +1,34 @@
 ---
-title: "查閱轉換編輯器 (錯誤輸出頁面) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.lookuptransformation.erroroutput.f1"
+title: "查閱轉換編輯器 （錯誤輸出頁面） |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.lookuptransformation.erroroutput.f1
 ms.assetid: 15d53bb0-8be1-46fb-b459-04a397e75fac
 caps.latest.revision: 14
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 120a040b37f3eae7e7ce4fc317f39434116f2ece
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 查閱轉換編輯器 (錯誤輸出頁面)
+# <a name="lookup-transformation-editor-error-output-page"></a>查閱轉換編輯器 (錯誤輸出頁面)
   使用 **[查閱轉換編輯器]** 對話方塊的 **[錯誤輸出]** 頁面，來指定錯誤處理選項。  
   
  若要深入了解查閱轉換，請參閱＜ [Lookup Transformation](../../../integration-services/data-flow/transformations/lookup-transformation.md)＞。  
   
-## 選項。  
+## <a name="options"></a>選項。  
  **輸入/輸出**  
  檢視輸入的名稱。  
   
@@ -41,7 +46,7 @@ caps.handback.revision: 14
   
  在 **[指定如何處理無相符項目的資料列]** 清單中選取 **[將資料列重新導向無相符結果輸出]** 時，無法使用此選項。 此清單位在 **[查閱轉換編輯器]** 對話方塊的 **[一般]** 頁面上。  
   
- **相關主題**︰[處理資料中的錯誤](../../../integration-services/data-flow/error-handling-in-data.md)  
+ **相關主題** [處理資料中的錯誤](../../../integration-services/data-flow/error-handling-in-data.md)  
   
  **截斷**  
  指定資料截斷發生時要採取的動作：  
@@ -67,7 +72,7 @@ caps.handback.revision: 14
  **套用**  
  將錯誤處理選項套用至選取的資料格。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [Integration Services 錯誤和訊息參考](../../../integration-services/integration-services-error-and-message-reference.md)  
   
   
