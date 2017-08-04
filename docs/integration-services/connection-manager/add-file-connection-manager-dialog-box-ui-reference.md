@@ -1,26 +1,31 @@
 ---
-title: "加入檔案連接管理員對話方塊 UI 參考 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.fileconnection.f1"
-helpviewer_keywords: 
-  - "加入檔案連接管理員"
+title: "加入檔案連接管理員對話方塊 UI 參考 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.fileconnection.f1
+helpviewer_keywords:
+- Add File Connection Manager
 ms.assetid: 9370bfb5-5993-4ad8-a9cd-2de53f320f34
 caps.latest.revision: 33
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 33
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c189e040ea0fa8981f9f176cd1e89d80a2f7c445
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 加入檔案連接管理員對話方塊 UI 參考
+# <a name="add-file-connection-manager-dialog-box-ui-reference"></a>加入檔案連接管理員對話方塊 UI 參考
   使用 **[加入檔案連接管理員]** 對話方塊來定義一組檔案或資料夾的連接。  
   
  若要深入了解多個檔案連接管理員，請參閱＜ [Multiple Files Connection Manager](../../integration-services/connection-manager/multiple-files-connection-manager.md)＞。  
@@ -28,7 +33,7 @@ caps.handback.revision: 33
 > [!NOTE]  
 >  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中的內建工作和資料流程元件不會使用「多個檔案」連接管理員。 但是，您可以在指令碼工作或指令碼元件中使用這個連接管理員。  
   
-## 選項。  
+## <a name="options"></a>選項。  
  **使用類型**  
  指定用於多個檔案連接管理員的檔案類型。  
   
@@ -54,7 +59,7 @@ caps.handback.revision: 33
  **箭頭按鈕**  
  選取檔案或資料夾，然後使用箭頭按鈕上移或下移來指定存取順序。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [Integration Services 錯誤和訊息參考](../../integration-services/integration-services-error-and-message-reference.md)  
   
   

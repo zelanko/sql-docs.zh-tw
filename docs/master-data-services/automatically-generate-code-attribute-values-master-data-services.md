@@ -1,26 +1,31 @@
 ---
-title: "自動產生 Code 屬性值 (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "自動產生 Code 屬性值 (Master Data Services) |Microsoft 文件"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 19b354ee-2906-4cc7-ba2f-32b4543bddcf
 caps.latest.revision: 5
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 5
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 469c1d37c52791d463986814ee1566fbc4cdaee4
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 自動產生 Code 屬性值 (Master Data Services)
+# <a name="automatically-generate-code-attribute-values-master-data-services"></a>自動產生 Code 屬性值 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，當您希望每次建立新成員時，自動將整數指派給字碼值，請自動為實體的 Code 屬性自動產生值。  
   
-## 必要條件  
+## <a name="prerequisites"></a>必要條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  
@@ -29,7 +34,7 @@ caps.handback.revision: 5
   
 -   實體必須存在。 如需詳細資訊，請參閱[建立實體 &#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md)。  
   
-### 若要自動產生值字碼  
+### <a name="to-automatically-generate-code-values"></a>若要自動產生值字碼  
   
 1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]**。  
   
@@ -43,8 +48,8 @@ caps.handback.revision: 5
   
 6.  按一下 **[儲存]**。  
   
-## 另請參閱  
- [自動建立代碼 &#40;Master Data Services&#41;](../master-data-services/automatic-code-creation-master-data-services.md)   
- [自動產生 Code 以外的屬性值 &#40;Master Data Services&#41;](../master-data-services/automatically-generate-attribute-values-other-than-code-master-data-services.md)  
+## <a name="see-also"></a>另請參閱  
+ [自動建立代碼 &#40;Master Data services&#41;](../master-data-services/automatic-code-creation-master-data-services.md)   
+ [自動產生程式碼 &#40; 以外的屬性值Master Data services&#41;](../master-data-services/automatically-generate-attribute-values-other-than-code-master-data-services.md)  
   
   

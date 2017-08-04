@@ -1,33 +1,38 @@
 ---
-title: "資料採礦查詢 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.dataminingquery.f1"
+title: "資料採礦查詢 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.dataminingquery.f1
 ms.assetid: 948e358a-6245-429f-82c7-4cedc5e048fd
 caps.latest.revision: 23
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8809f1e5f91ad5746b66d4640747b1ec0a923f0f
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 資料採礦查詢
+# <a name="data-mining-query"></a>資料採礦查詢
   設計窗格包含資料採礦預測查詢產生器，您可以使用該產生器來建立資料採礦預測查詢。 您可以依據輸入資料表來設計預測查詢，或設計單一預測查詢。 切換到結果檢視以執行查詢並檢視結果。 查詢檢視會顯示預測查詢產生器所建立的資料採礦延伸模組 (DMX) 查詢。  
   
-## 選項。  
+## <a name="options"></a>選項。  
  切換檢視按鈕  
  按一下圖示，即可在設計與查詢窗格之間切換。 預設會開啟設計窗格。  
   
- 若要切換到設計窗格，請按一下 ![設計圖示](../../integration-services/control-flow/media/ssis-designicon.png "設計圖示") 圖示。  
+ 若要切換至設計窗格，請按一下![設計圖示](../../integration-services/control-flow/media/ssis-designicon.gif "設計圖示")圖示。  
   
- 若要切換到查詢窗格，請按一下 ![SQL 圖示](../../integration-services/control-flow/media/ssis-queryicon.png "SQL 圖示") 圖示。  
+ 若要切換到 [查詢] 窗格，請按一下![SQL 圖示](../../integration-services/control-flow/media/ssis-queryicon.gif "SQL 圖示")圖示。  
   
  **採礦模型**  
  顯示選取的採礦模型，並以此模型作為預測的基礎。  
@@ -61,8 +66,8 @@ caps.handback.revision: 23
  **準則/引數**  
  指定套用至資料行的條件或使用者運算式。 可以將資料行從包含採礦模型和輸入資料行的資料表，拖曳至資料格。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [資料採礦查詢工具](../../analysis-services/data-mining/data-mining-query-tools.md)   
- [資料採礦延伸模組 &#40;DMX&#41; 陳述式參考](../Topic/Data%20Mining%20Extensions%20\(DMX\)%20Statement%20Reference.md)  
+ [資料採礦延伸模組 &#40; DMX &#41;陳述式參考](../../dmx/data-mining-extensions-dmx-statements.md)  
   
   

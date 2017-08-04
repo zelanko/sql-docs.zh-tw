@@ -1,26 +1,31 @@
 ---
-title: "建立索引 (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "建立索引 (Master Data Services) |Microsoft 文件"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d694a105-69b1-4ff6-99d3-1f408b916b81
 caps.latest.revision: 6
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a4d03606ab8a45d6c7b326fd64b6900ac7e67356
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 建立索引 (Master Data Services)
+# <a name="create-an-index-master-data-services"></a>建立索引 (Master Data Services)
   在您經常查詢的屬性清單上建立自訂索引，以提升查詢效能。  
   
-## 必要條件  
+## <a name="prerequisites"></a>必要條件  
  若要執行此程序：  
   
 -   您必須擁有存取系統管理功能區域的權限。 如需詳細資訊，請參閱[功能區域權限 &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)。  
@@ -49,7 +54,7 @@ caps.handback.revision: 6
   
 |資料行名稱|說明|  
 |-----------------|-----------------|  
-|狀態|索引狀態。<br /><br /> 當您按一下 [儲存] 時，![Icon for updating status](../master-data-services/media/mds-statusicon-updating.png "Icon for updating status") 影像隨即顯示，表示屬性正在更新。<br /><br /> 如果建立或編輯索引時發生錯誤，則會顯示 ![Icon for error status](../master-data-services/media/mds-statusicon-error.png "Icon for error status") 影像。<br /><br /> 否則，狀態為正常並顯示 ![Icon for OK status](../master-data-services/media/mds-statusicon-ok.png "Icon for OK status") 影像。|  
+|狀態|索引狀態。<br /><br /> 當您按一下**儲存**、![更新狀態的圖示](../master-data-services/media/mds-statusicon-updating.png "更新狀態的圖示")影像會顯示表示正在更新索引。<br /><br /> 如果發生錯誤時建立或編輯索引![的錯誤狀態的圖示](../master-data-services/media/mds-statusicon-error.png "的錯誤狀態的圖示")影像隨即顯示。<br /><br /> 否則，狀態為正常，而![[確定] 狀態的圖示](../master-data-services/media/mds-statusicon-ok.png "[確定] 狀態的圖示")影像隨即顯示。|  
 |名稱|索引名稱。|  
 |是唯一的|指定索引是否是唯一的。|  
 |依據屬性|顯示定義索引的屬性顯示名稱。|  
@@ -64,10 +69,10 @@ caps.handback.revision: 6
   
 -   **於**：建立索引的日期與時間。  
   
-## 後續步驟  
+## <a name="next-steps"></a>後續步驟  
  [編輯和刪除索引 &#40;Master Data Services&#41;](../master-data-services/edit-and-delete-an-index-master-data-services.md)  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [自訂索引 &#40;Master Data Services&#41;](../master-data-services/custom-index-master-data-services.md)  
   
   

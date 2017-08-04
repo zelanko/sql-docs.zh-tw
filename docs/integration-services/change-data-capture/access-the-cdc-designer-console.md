@@ -1,24 +1,29 @@
 ---
-title: "存取 CDC 設計工具主控台 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "accMsDes"
+title: "存取 CDC 設計工具主控台 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- accMsDes
 ms.assetid: b168c64e-c1b5-42d4-a92a-84de1dd0324e
 caps.latest.revision: 9
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e1266809582119e6316b821c54f93f4217c21316
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 存取 CDC 設計工具主控台
+# <a name="access-the-cdc-designer-console"></a>存取 CDC 設計工具主控台
   您可以從安裝 CDC 設計工具主控台的電腦來存取此主控台。 如需有關安裝的詳細資訊，請參閱＜安裝＞。  
   
  當您開啟 CDC 設計工具主控台時，隨即開啟 [連接到 SQL Server] 對話方塊。  
@@ -27,10 +32,10 @@ caps.handback.revision: 9
   
  在 [連接到 SQL Server] 對話方塊中輸入以下資訊。  
   
-### 伺服器名稱  
+### <a name="server-name"></a>伺服器名稱  
  輸入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所在的伺服器名稱。  
   
-### 驗證  
+### <a name="authentication"></a>驗證  
  選取下列其中一項：  
   
 -   **Windows 驗證**  
@@ -39,7 +44,7 @@ caps.handback.revision: 9
   
  此登入擁有的資料庫角色必須允許存取 MSXCDCDB 資料庫。 建議最好讓此登入也能存取正在使用的其他任何資料庫，否則使用者將無法檢視這些資料庫中的資料。  
   
-### 選項。  
+### <a name="options"></a>選項。  
  按一下箭頭即可檢視要設定的可用選項。 您可以選擇保留這些選項的預設值。 可用的選項如下：  
   
  **連接逾時**  
@@ -56,7 +61,7 @@ caps.handback.revision: 9
   
  如需 [進階連接屬性] 對話方塊的資訊，請參閱[進階連接屬性](../../integration-services/change-data-capture/advanced-connection-properties.md)。  
   
-## 請參閱＜  
- [SQL Server 連接所需的 CDC 設計工具權限](../../integration-services/change-data-capture/sql-server-connection-required-permissions-for-the-cdc-designer.md)  
+## <a name="see-also"></a>請參閱＜  
+ [CDC 設計工具 SQL Server 連接所需權限](../../integration-services/change-data-capture/sql-server-connection-required-permissions-for-the-cdc-designer.md)  
   
   

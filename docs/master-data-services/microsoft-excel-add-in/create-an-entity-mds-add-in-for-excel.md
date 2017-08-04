@@ -1,25 +1,30 @@
 ---
-title: "建立實體 (適用於 Excel 的 MDS 增益集) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "建立實體 （MDS 增益集的 Excel） |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d354abb3-88fe-4b40-a374-f6256b84ffae
 caps.latest.revision: 8
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b77e214a86b07da01010357edeedf09e62234345
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 建立實體 (適用於 Excel 的 MDS 增益集)
-  在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] 中，系統管理員可以建立新的實體來儲存資料。 當您建立實體時，應該至少載入要儲存的資料樣本。  
+# <a name="create-an-entity-mds-add-in-for-excel"></a>建立實體 (適用於 Excel 的 MDS 增益集)
+  在[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]，系統管理員可以建立新的實體來儲存資料。 當您建立實體時，應該至少載入要儲存的資料樣本。  
   
-## 必要條件  
+## <a name="prerequisites"></a>必要條件  
  若要執行此程序：  
   
 -   您必須擁有存取 [系統管理] 和總管功能區域的權限。  
@@ -42,7 +47,7 @@ caps.handback.revision: 8
   
     -   確定沒有資料格包含時間值。 日期值可儲存在 MDS 中，但時間值不能。  
   
-### 若要建立實體及載入資料  
+### <a name="to-create-an-entity-and-load-data"></a>若要建立實體及載入資料  
   
 1.  開啟或建立 Excel 工作表，其中包含您要載入的資料。  
   
@@ -68,13 +73,13 @@ caps.handback.revision: 8
   
 12. 按一下 **[確定]**。 成功建立實體時，畫面上會顯示新標頭資料列，反白顯示資料格，而且更新工作表名稱以符合實體名稱。  
   
-## 後續步驟  
+## <a name="next-steps"></a>後續步驟  
   
 -   若要檢視發生的錯誤，請按一下 [發行和驗證] 群組中的 [顯示狀態]。 ValidationStatus 和 InputStatus 資料行隨即顯示。 如需詳細資訊，請參閱[驗證資料 &#40;適用於 Excel 的 MDS 增益集&#41;](../../master-data-services/microsoft-excel-add-in/validating-data-mds-add-in-for-excel.md)。  
   
 -   確認屬性已建立為預期的資料類型。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [建立網域屬性 &#40;適用於 Excel 的 MDS 增益集&#41;](../../master-data-services/microsoft-excel-add-in/create-a-domain-based-attribute-mds-add-in-for-excel.md)  
   
   

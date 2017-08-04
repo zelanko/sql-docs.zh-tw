@@ -1,24 +1,29 @@
 ---
-title: "商務規則延伸模組 (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "商務規則延伸模組 (Master Data Services) |Microsoft 文件"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4c18be5f-a3fa-45a8-9be6-0f45f58bbc9e
 caps.latest.revision: 16
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 04d846ca87f96f1b3f08a0add5115968af40a855
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 商務規則延伸模組 (Master Data Services)
-  在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中，您可以套用使用者定義的 SQL 指令碼，以做為預先定義之條件與動作的擴充功能。  
+# <a name="business-rules-extension-master-data-services"></a>商務規則延伸模組 (Master Data Services)
+  在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，您可以套用使用者定義的 SQL 指令碼，以做為預先定義之條件與動作的擴充功能。  
   
 > [!NOTE]  
 >  所有的指令碼必須在 [usr] 結構描述下定義。  
@@ -67,7 +72,7 @@ CREATE PROCEDURE [usr].[YourAction]
 |stg|SELECT、UPDATE、DELETE、EXECUTE、INSERT|  
 |usr|FULL|  
   
-## 必要條件  
+## <a name="prerequisites"></a>必要條件  
  若要執行此程序：  
   
 -   您必須擁有存取系統管理功能區域的權限。  
@@ -76,7 +81,7 @@ CREATE PROCEDURE [usr].[YourAction]
   
 -   使用者定義指令碼已加入 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫中。  
   
-## 建立商務規則，採用使用者定義指令碼作為條件或動作  
+## <a name="create-a-business-rule-to-take-a-user-defined-script-as-a-condition-or-as-an-action"></a>建立商務規則，採用使用者定義指令碼作為條件或動作  
   
 1.  在主資料管理員中，按一下 [系統管理] 。  
   
@@ -86,7 +91,7 @@ CREATE PROCEDURE [usr].[YourAction]
   
 4.  從 [實體] 下拉式清單中，選取實體。  
   
-5.  從 [成員類型] 下拉式清單中，選取要套用商務規則的成員類型。  
+5.  從 [成員類型]  下拉式清單中，選取要套用商務規則的成員類型。  
   
 6.  按一下 **[加入]**。  
   
@@ -110,9 +115,9 @@ CREATE PROCEDURE [usr].[YourAction]
   
     3.  按一下 **[儲存]**。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [商務規則 &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)   
- [商務規則條件 &#40;Master Data Services&#41;](../master-data-services/business-rule-conditions-master-data-services.md)   
- [商務規則動作 &#40;Master Data Services&#41;](../master-data-services/business-rule-actions-master-data-services.md)  
+ [商務規則條件 &#40;Master Data services&#41;](../master-data-services/business-rule-conditions-master-data-services.md)   
+ [商務規則動作 &#40;Master Data services&#41;](../master-data-services/business-rule-actions-master-data-services.md)  
   
   

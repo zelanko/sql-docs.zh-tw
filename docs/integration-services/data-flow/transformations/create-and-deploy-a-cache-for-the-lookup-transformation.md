@@ -1,35 +1,40 @@
 ---
-title: "針對查閱轉換來建立及部署快取 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "建立查閱轉換的快取檔案"
-  - "部署查閱轉換的快取檔案"
-  - "查閱轉換快取檔案"
+title: "建立及部署快取查閱轉換的 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- creating cache files for Lookup transformation
+- deploying cache files for Lookup transformation
+- Lookup transformation cache files
 ms.assetid: cedf5cad-2fac-42d0-ad91-9461e117d330
 caps.latest.revision: 23
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
+ms.openlocfilehash: 88d6515c29c789c12818dfc51c86c5b1d4537247
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 針對查閱轉換來建立及部署快取
+# <a name="create-and-deploy-a-cache-for-the-lookup-transformation"></a>針對查閱轉換來建立及部署快取
   您可以針對查閱轉換建立及部署快取檔案 (.caw)。 參考資料集會儲存在快取檔案中。  
   
  查閱轉換會藉由聯結已連接資料來源輸入資料行中的資料與參考資料集中的資料行來執行查閱。  
   
- 您可以使用快取連接管理員和快取轉換轉換來建立快取檔案。 如需詳細資訊，請參閱[快取連線管理員](../../../integration-services/data-flow/transformations/cache-connection-manager.md)和[快取轉換](../../../integration-services/data-flow/transformations/cache-transform.md)。  
+ 您可以使用快取連接管理員和快取轉換轉換來建立快取檔案。 如需詳細資訊，請參閱 [快取連線管理員](../../../integration-services/data-flow/transformations/cache-connection-manager.md) 和 [快取轉換](../../../integration-services/data-flow/transformations/cache-transform.md)。  
   
- 若要深入了解查閱轉換和快取檔案，請參閱[查閱轉換](../../../integration-services/data-flow/transformations/lookup-transformation.md)。  
+ 若要深入了解查閱轉換和快取檔案，請參閱 [查閱轉換](../../../integration-services/data-flow/transformations/lookup-transformation.md)。  
   
-### 若要建立快取檔案  
+### <a name="to-create-a-cache-file"></a>若要建立快取檔案  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]中，開啟包含所要封裝的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 專案，然後再開啟封裝。  
   
@@ -50,7 +55,7 @@ caps.handback.revision: 23
      系統會在執行封裝時建立該檔案。  
   
     > [!NOTE]  
-    >  封裝保護等級不會套用至快取檔案。 如果快取檔案包含機密資訊，請使用存取控制清單 (ACL) 限制對其中儲存檔案的位置或資料夾的存取權。 您應該只啟用特定帳戶的存取權。 如需詳細資訊，請參閱[對封裝使用之檔案的存取權](../../../integration-services/security/access-to-files-used-by-packages.md)。  
+    >  封裝保護等級不會套用至快取檔案。 如果快取檔案包含機密資訊，請使用存取控制清單 (ACL) 限制對其中儲存檔案的位置或資料夾的存取權。 您應該只啟用特定帳戶的存取權。 如需詳細資訊，請參閱[對封裝使用之檔案的存取權](../../../integration-services/security/security-overview-integration-services.md#files)。  
   
 6.  按一下 [資料行] 索引標籤，然後使用 [索引位置] 選項，指定哪些資料行是索引資料行。  
   
@@ -59,7 +64,7 @@ caps.handback.revision: 23
     > [!NOTE]  
     >  當查閱轉換是設定為使用快取連接管理員，則只有參考資料集中的索引資料行可以對應到輸入資料行。 而且，所有的索引資料行都必須進行對應。  
   
-     如需詳細資訊，請參閱[快取連線管理員編輯器](../../../integration-services/data-flow/transformations/cache-connection-manager-editor.md)。  
+     如需詳細資訊，請參閱 [快取連線管理員編輯器](../../../integration-services/data-flow/transformations/cache-connection-manager-editor.md)。  
   
 7.  視需要設定快取轉換。  
   
@@ -67,11 +72,11 @@ caps.handback.revision: 23
   
 8.  執行封裝。  
   
-### 若要部署快取檔案  
+### <a name="to-deploy-a-cache-file"></a>若要部署快取檔案  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]中，開啟包含所要封裝的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 專案，然後再開啟封裝。  
   
-2.  選擇性地建立封裝設定。 如需詳細資訊，請參閱[建立封裝組態](../../../integration-services/packages/create-package-configurations.md)。  
+2.  選擇性地建立封裝設定。 如需詳細資訊，請參閱 [建立封裝組態](../../../integration-services/packages/create-package-configurations.md)。  
   
 3.  藉由執行下列工作，將快取檔案加入至專案：  
   
@@ -83,13 +88,13 @@ caps.handback.revision: 23
   
      檔案便會出現在方案總管的 [其他] 資料夾中。  
   
-4.  將專案設定為建立部署公用程式，然後建立專案。 如需詳細資訊，請參閱[建立部署公用程式](../../../integration-services/packages/create-a-deployment-utility.md)。  
+4.  將專案設定為建立部署公用程式，然後建立專案。 如需詳細資訊，請參閱 [建立部署公用程式](../../../integration-services/packages/create-a-deployment-utility.md)。  
   
-     資訊清單檔 \<專案名稱>.SSISDeploymentManifest.xml 會建立，並列出專案中的其他檔案、封裝以及封裝組態。  
+     資訊清單檔\<*專案名稱*>。建立 c t Name>.ssisdeploymentmanifest.xml，列出的其他檔案中的專案、 封裝以及封裝組態。  
   
-5.  將封裝部署到檔案系統。 如需詳細資訊，請參閱[使用部署公用程式來部署封裝](../../../integration-services/packages/deploy-packages-by-using-the-deployment-utility.md)。  
+5.  將封裝部署到檔案系統。 如需詳細資訊，請參閱 [使用部署公用程式來部署封裝](../../../integration-services/packages/deploy-packages-by-using-the-deployment-utility.md)。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [建立部署公用程式](../../../integration-services/packages/create-a-deployment-utility.md)  
   
   

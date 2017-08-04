@@ -1,31 +1,34 @@
 ---
-title: "Azure 儲存體連線管理員 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.afpstorageconn.f1"
-  - "sql14.dts.designer.afpstorageconn.f1"
+title: "Azure 儲存體連線管理員 |Microsoft 文件"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.afpstorageconn.f1
+- sql14.dts.designer.afpstorageconn.f1
 ms.assetid: 68bd1d04-d20f-4357-a34e-7c9c76457062
 caps.latest.revision: 13
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 848b0f0e3e639d31fa739e8d744fc4b80839a5fd
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# Azure 儲存體連線管理員
-  **Azure 儲存體連線管理員**可讓 SSIS 封裝使用您指定的屬性值連接到 Azure 儲存體帳戶︰儲存體帳戶名稱和帳戶金鑰。  
-  
->   [!NOTE] 為了確保 Azure 儲存體連線管理員及使用它的元件 - 也就是 Blob 來源、Blob 目的地、Blob 上傳工作和 Blob 下載工作 - 可同時連接到一般目的儲存體帳戶和 Blob 儲存體帳戶，請務必從[這裡](https://www.microsoft.com/download/details.aspx?id=49492)下載最新版的 Azure Feature Pack。 如需這兩種儲存體帳戶類型的詳細資訊，請參閱 [Microsoft Azure 儲存體簡介](https://azure.microsoft.com/en-us/documentation/articles/storage-introduction/#general-purpose-storage-accounts)。
-  
- **Azure 儲存體連線管理員**是適用於 SQL Server 2016 之 Azure SQL Server Integration Services (SSIS) 功能套件的元件。 請在 [這裡](http://go.microsoft.com/fwlink/?LinkID=626967)。  
+# <a name="azure-storage-connection-manager"></a>Azure 儲存體連線管理員
+  **Azure 儲存體連線管理員** 可讓 SSIS 封裝使用您指定的屬性值連接到 Azure 儲存體帳戶︰儲存體帳戶名稱和帳戶金鑰。  
+   
+ **Azure 儲存體連線管理員**是一種元件的[Azure 的 SQL Server Integration Services (SSIS) Feature Pack](../../integration-services/azure-feature-pack-for-integration-services-ssis.md)。 
   
 1.  在 [加入 SSIS 連線管理員] 對話方塊中，選取 [AzureStorage]，然後按一下 [加入]。  
   
@@ -39,6 +42,7 @@ caps.handback.revision: 11
   
 4.  按一下 **[確定]** ，關閉對話方塊。  
   
-5.  您可以在 [屬性] 視窗中看到您建立的連線管理員屬性。  
+5.  您可以在 [屬性]  視窗中看到您建立的連線管理員屬性。  
   
   
+

@@ -1,36 +1,41 @@
 ---
-title: "DATEDIFF (SSIS 運算式) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "DATEDIFF 陳述式"
-  - "日期 [Integration Services], DATEDIFF"
+title: "DATEDIFF （SSIS 運算式） |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- DATEDIFF statement
+- dates [Integration Services], DATEDIFF
 ms.assetid: 449b327f-47c7-4709-8bc6-4ee9a35cc330
 caps.latest.revision: 40
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 40
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0c771f4788199c26fae2cfe46dfd66a18d67fcb6
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# DATEDIFF (SSIS 運算式)
+# <a name="datediff-ssis-expression"></a>DATEDIFF (SSIS 運算式)
   傳回跨越兩個指定日期的日期和時間界線數目。 *datepart* 參數會識別要比較的日期和時間界線。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
 DATEDIFF(datepart, startdate, endate)  
 ```  
   
-## 引數  
- *日期部份*  
+## <a name="arguments"></a>引數  
+ *datepart*  
  是指定日期中哪一個部分要進行比較和傳回值的參數。  
   
  *startdate*  
@@ -39,13 +44,13 @@ DATEDIFF(datepart, startdate, endate)
  *endate*  
  是間隔的結束日期。  
   
-## 結果類型  
+## <a name="result-types"></a>結果類型  
  DT_I4  
   
-## 備註  
+## <a name="remarks"></a>備註  
  下表列出運算式評估工具所辨識的日期部份與縮寫。  
   
-|DATEPART|縮寫|  
+|datepart|縮寫|  
 |--------------|-------------------|  
 |Year|yy, yyyy|  
 |Quarter|qq, q|  
@@ -67,7 +72,7 @@ DATEDIFF(datepart, startdate, endate)
   
  如果結束日期早於開始日期，則函數會傳回負數。 如果開始和結束日期相等或落在相同的間隔內，則函數會傳回零。  
   
-## SSIS 運算式範例  
+## <a name="ssis-expression-examples"></a>SSIS 運算式範例  
  此範例會計算兩個日期常值之間的天數。 如果日期格式為 "mm/dd/yyyy"，則函數會傳回 7。  
   
 ```  
@@ -86,12 +91,12 @@ DATEDIFF("mm", (DT_DBTIMESTAMP)"8/1/2003",GETDATE())
 DATEDIFF("Week", ModifiedDate,@YearEndDate)  
 ```  
   
-## 請參閱＜  
- [DATEADD &#40;SSIS 運算式&#41;](../../integration-services/expressions/dateadd-ssis-expression.md)   
- [DATEPART &#40;SSIS 運算式&#41;](../../integration-services/expressions/datepart-ssis-expression.md)   
- [DAY &#40;SSIS 運算式&#41;](../../integration-services/expressions/day-ssis-expression.md)   
- [MONTH &#40;SSIS 運算式&#41;](../../integration-services/expressions/month-ssis-expression.md)   
- [YEAR &#40;SSIS 運算式&#41;](../../integration-services/expressions/year-ssis-expression.md)   
- [函數 &#40;SSIS 運算式&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>請參閱＜  
+ [DATEADD &#40;SSIS 運算式 &#41;](../../integration-services/expressions/dateadd-ssis-expression.md)   
+ [DATEPART &#40;SSIS 運算式 &#41;](../../integration-services/expressions/datepart-ssis-expression.md)   
+ [日 &#40;SSIS 運算式 &#41;](../../integration-services/expressions/day-ssis-expression.md)   
+ [月份 &#40;SSIS 運算式 &#41;](../../integration-services/expressions/month-ssis-expression.md)   
+ [年份 &#40;SSIS 運算式 &#41;](../../integration-services/expressions/year-ssis-expression.md)   
+ [函式 &#40;SSIS 運算式 &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

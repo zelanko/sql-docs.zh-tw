@@ -1,33 +1,36 @@
 ---
-title: "Azure Blob 目的地 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "07/25/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.afpblobdest.f1"
-  - "sql14.dts.designer.afpblobdest.f1"
+title: "Azure Blob 目的地 |Microsoft 文件"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 07/25/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.afpblobdest.f1
+- sql14.dts.designer.afpblobdest.f1
 ms.assetid: 820a1e7a-7182-4c7b-ab56-5b4097a7e042
 caps.latest.revision: 12
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 152d92859c2f4ce96d0cc1ba9b02ffb412d18fde
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# Azure Blob 目的地
-  [Azure Blob 目的地] 元件可讓 SSIS 封裝將資料寫入 Azure Blob。 支援的檔案格式：CSV 與 AVRO。 
-  
->   [!NOTE] 為了確保 Azure 儲存體連線管理員及使用它的元件 (也就是 Blob 來源、Blob 目的地、Blob 上傳工作和 Blob 下載工作) 可同時連接到一般目的儲存體帳戶和 Blob 儲存體帳戶，請務必從[這裡](https://www.microsoft.com/download/details.aspx?id=49492)下載最新版的 Azure Feature Pack。 如需這兩種儲存體帳戶類型的詳細資訊，請參閱 [Microsoft Azure 儲存體簡介](https://azure.microsoft.com/en-us/documentation/articles/storage-introduction/#general-purpose-storage-accounts)。
-  
+# <a name="azure-blob-destination"></a>Azure Blob 目的地
+ [Azure Blob 目的地] 元件可讓 SSIS 封裝將資料寫入 Azure Blob。 支援的檔案格式：CSV 與 AVRO。 
+   
  將 [Azure Blob 目的地] 拖放到資料流程設計師，然後在上面按兩下以查看編輯器)。  
   
- [Azure Blob 目的地] 是適用於 SQL Server 2016 之 Azure SQL Server Integration Services (SSIS) 功能套件的元件。 請在 **這裡**。  
+ **Azure Blob 目的地**是一種元件的[Azure 的 SQL Server Integration Services (SSIS) Feature Pack](../../integration-services/azure-feature-pack-for-integration-services-ssis.md)。  
   
 1.  針對 [Azure 儲存體連線管理員] 欄位，請指定現有的 Azure 儲存體連線管理員，或建立參考 Azure 儲存體帳戶的新連線管理員。  
   
@@ -42,3 +45,4 @@ caps.handback.revision: 10
 6.  指定連接資訊後，請切換至 [資料行] 頁面，將來源資料行對應至 SSIS 資料流程的目的地資料行。  
   
   
+

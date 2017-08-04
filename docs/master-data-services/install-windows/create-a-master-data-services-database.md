@@ -1,29 +1,34 @@
 ---
-title: "建立 Master Data Services 資料庫 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "建立 Master Data Services 資料庫 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8373bb35-f0f9-4c3c-a53c-dfaa2ce567ac
 caps.latest.revision: 9
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 507022be209de69bf01a5a9d7f02019ce19b54d7
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 建立 Master Data Services 資料庫
+# <a name="create-a-master-data-services-database"></a>建立 Master Data Services 資料庫
   當您需要新的資料庫支援 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式及 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Web 服務時，請建立 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 資料庫。  
   
-## 必要條件  
+## <a name="prerequisites"></a>必要條件  
   
 -   如需主控資料庫之電腦需求的相關資訊，請參閱[資料庫需求 &#40;Master Data Services&#41;](../../master-data-services/install-windows/database-requirements-master-data-services.md)。  
   
-### 若要建立 Master Data Services 資料庫  
+### <a name="to-create-a-master-data-services-database"></a>若要建立 Master Data Services 資料庫  
   
 1.  開啟 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]。  
   
@@ -33,7 +38,7 @@ caps.handback.revision: 9
   
 4.  完成 [建立資料庫] 精靈，建立及設定此資料庫。 如需精靈中之使用者介面 (UI) 選項的相關資訊，請參閱 [Create Database Wizard &#40;Master Data Services Configuration Manager&#41;](../../master-data-services/create-database-wizard-master-data-services-configuration-manager.md) (建立資料庫精靈 (Master Data Services 組態管理員))。  
   
-## 後續步驟  
+## <a name="next-steps"></a>後續步驟  
   
 -   設定資料庫及 Web 應用程式的系統設定。 如需詳細資訊，請參閱 [系統設定 &#40;Master Data Services&#41;](../../master-data-services/system-settings-master-data-services.md)。  
   
@@ -41,7 +46,7 @@ caps.handback.revision: 9
   
 -   設定維護計畫來備份資料庫和交易記錄。 如需詳細資訊，請參閱[資料庫需求 &#40;Master Data Services&#41;](../../master-data-services/install-windows/database-requirements-master-data-services.md)。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [安裝 Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)  
   
   

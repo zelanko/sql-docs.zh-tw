@@ -1,22 +1,27 @@
 ---
-title: "Attunity Oracle Change Data Capture (CDC) 服務系統架構 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Change Data Capture Service for Oracle by Attunity 系統架構 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1db6c737-3c60-4066-a0a3-3611e1c83e4e
 caps.latest.revision: 9
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 69f36b9b3e01be90cc1f5a4cd19fb80543186620
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# Attunity Oracle Change Data Capture (CDC) 服務系統架構
+# <a name="change-data-capture-service-for-oracle-by-attunity-system-architecture"></a>Attunity Oracle Change Data Capture (CDC) 服務系統架構
   Oracle CDC 服務會將一個或多個來源 Oracle 資料庫中選定資料表所做的變更擷取到位於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CDC 資料庫中。 下圖顯示組成 Oracle CDC 服務的元件。  
   
  ![服務架構](../../integration-services/change-data-capture/media/service-architecture.gif "服務架構")  
@@ -27,7 +32,7 @@ caps.handback.revision: 9
   
 -   Oracle 資料庫：這可以是執行支援的 Oracle 資料庫版本所在的任何電腦。 其中包括執行 Windows、Linux 或是安裝之 Oracle 資料庫版本所支援的任何其他作業系統的電腦。 請注意，此圖以複數形式顯示這個平台，因為單一 Oracle CDC 服務可以從多個來源 Oracle 資料庫擷取變更。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]：這可以是目標 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫 (執行支援的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] SKU) 所在的任何電腦。 Oracle CDC 服務支援一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目標，它會將變更資料表和服務組態儲存在此目標上。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 平台也可能代表 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的叢集執行個體，或是使用 **AlwaysOn** 功能的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 鏡像執行個體。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]：這可以是目標 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫 (執行支援的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]SKU) 所在的任何電腦。 Oracle CDC 服務支援一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目標，它會將變更資料表和服務組態儲存在此目標上。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 平台也可能代表 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的叢集執行個體，或是使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] AlwaysOn **功能的** 鏡像執行個體。  
   
 -   Oracle CDC 設計工具：這可以是可存取來源 Oracle 資料庫和目標 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的任何支援的 Windows 電腦。  
   

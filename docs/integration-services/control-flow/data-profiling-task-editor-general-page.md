@@ -1,33 +1,38 @@
 ---
-title: "資料分析工作編輯器 (一般頁面) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.dataprofilingtask.general.f1"
-helpviewer_keywords: 
-  - "資料分析工作編輯器"
+title: "資料分析工作編輯器 （一般頁面） |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.dataprofilingtask.general.f1
+helpviewer_keywords:
+- Data Profiling Task Editor
 ms.assetid: eec15906-d757-4079-b2f6-aca4e52b3b4c
 caps.latest.revision: 19
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
+ms.openlocfilehash: bed1fa78db9ee0beca66efe57f088d1d74d377f2
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 資料分析工作編輯器 (一般頁面)
+# <a name="data-profiling-task-editor-general-page"></a>資料分析工作編輯器 (一般頁面)
   您可以使用 [資料分析工作編輯器] 的 [一般] 頁面來設定下列選項：  
   
 -   指定設定檔輸出的目的地。  
   
 -   使用預設設定來簡化分析單一資料表或檢視表的工作。  
   
- 如需如何使用資料分析工作的詳細資訊，請參閱[資料分析工作的設定](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)。 如需如何使用資料設定檔檢視器來分析資料分析工作輸出的詳細資訊，請參閱[資料設定檔檢視器](../../integration-services/control-flow/data-profile-viewer.md)。  
+ 如需如何使用資料分析工作的詳細資訊，請參閱 [資料分析工作的設定](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)。 如需如何使用資料設定檔檢視器來分析資料分析工作輸出的詳細資訊，請參閱 [資料設定檔檢視器](../../integration-services/control-flow/data-profile-viewer.md)。  
   
  **開啟資料分析工作編輯器的一般頁面**  
   
@@ -37,14 +42,14 @@ caps.handback.revision: 19
   
 3.  在 [資料分析工作編輯器] 中，按一下 [一般]。  
   
-## 資料分析選項  
+## <a name="data-profiling-options"></a>資料分析選項  
  **逾時**  
  指定資料分析工作應該逾時並停止執行之前經過的秒數。 預設值為 0，表示沒有逾時。  
   
-## 目的地選項  
+## <a name="destination-options"></a>目的地選項  
   
 > [!IMPORTANT]  
->  輸出檔可能包含您資料庫的相關敏感性資料，以及資料庫所包含的資料。 如需如何讓這個檔案更安全的相關建議，請參閱[對封裝使用之檔案的存取權](../../integration-services/security/access-to-files-used-by-packages.md)。  
+>  輸出檔可能包含您資料庫的相關敏感性資料，以及資料庫所包含的資料。 如需如何讓這個檔案更安全的相關建議，請參閱 [對封裝使用之檔案的存取權](../../integration-services/security/security-overview-integration-services.md#files)。  
   
  **DestinationType**  
  指定要將資料設定檔輸出儲存至檔案或變數：  
@@ -57,9 +62,9 @@ caps.handback.revision: 19
  **目的地**  
  指定哪一個檔案連線管理員或封裝變數包含資料設定檔輸出：  
   
--   如果 [DestinationType] 選項設定為 [FileConnection]，[目的地] 選項就會顯示可用的檔案連線管理員。 您可以選取其中一個連線管理員，或選取 [\<新增檔案連線>] 來建立新的檔案連線管理員。  
+-   如果 [DestinationType] 選項設定為 [FileConnection]，[目的地] 選項就會顯示可用的檔案連線管理員。 選取其中一個連接管理員，或選取\<新的檔案連接 > 以建立新的檔案連接管理員。  
   
--   如果 [DestinationType] 選項設定為 [變數]，[目的地] 選項就會在 [目的地] 清單中顯示可用的封裝變數。 您可以選取其中一個變數，或選取 [\<新增變數>] 來建立新的變數。  
+-   如果 [DestinationType] 選項設定為 [變數]，[目的地] 選項就會在 [目的地] 清單中顯示可用的封裝變數。 選取其中一個變數，或選取\<新增變數 > 若要建立新的變數。  
   
  **OverwriteDestination**  
  指定是否要覆寫輸出檔 (如果它已經存在的話)。 預設值為 **[False]**。 只有當 [DestinationType] 選項設定為 [FileConnection] 時，系統才會使用這個屬性的值。 當 [DestinationType] 選項設定為 [變數] 時，此工作永遠會覆寫變數的上一個值。  
@@ -67,18 +72,18 @@ caps.handback.revision: 19
 > [!IMPORTANT]  
 >  如果您嘗試執行資料分析工作一次以上，但不變更輸出檔名稱或將 **OverwriteDestination** 屬性的值變更為 **True**，此工作便會失敗，並顯示輸出檔已經存在的訊息。  
   
-## 其他選項  
+## <a name="other-options"></a>其他選項  
  **快速分析**  
- 顯示 [單一資料表快速分析表單]。 這個表單會簡化使用預設設定來分析單一資料表或檢視表的工作。 如需詳細資訊，請參閱[單一資料表快速分析表單 &#40;資料分析工作&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)。  
+ 顯示 [單一資料表快速分析表單]。 這個表單會簡化使用預設設定來分析單一資料表或檢視表的工作。 如需詳細資訊，請參閱 [單一資料表快速分析表單 &#40;資料分析工作&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)。  
   
  **開啟設定檔檢視器**  
  開啟資料設定檔檢視器。 獨立資料設定檔檢視器會顯示資料分析工作的資料設定檔輸出。 在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝內部執行資料分析工作並計算資料設定檔後，您可以檢視資料設定檔輸出。  
   
 > [!NOTE]  
->  您也可以藉由執行 \<磁碟機>:\Program Files (x86) | Program Files\Microsoft SQL Server\110\DTS\Binn 資料夾中的 DataProfileViewer.exe，開啟資料設定檔檢視器。  
+>  您也可以在資料夾中，執行 DataProfileViewer.exe，開啟資料設定檔檢視器*\<磁碟機 >*: \Program Files (x86) |Program Files\Microsoft SQL Server\110\DTS\Binn。  
   
-## 請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [單一資料表快速分析表單 &#40;資料分析工作&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)   
- [資料分析工作編輯器 &#40;設定檔要求頁面&#41;](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md)  
+ [資料分析工作編輯器 &#40;設定檔要求頁面 &#41;](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md)  
   
   

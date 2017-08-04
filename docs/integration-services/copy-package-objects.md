@@ -1,32 +1,37 @@
 ---
-title: "複製封裝物件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "控制流程 [Integration Services], 複製物件"
-  - "複製封裝物件 [Integration Services]"
-  - "資料流程 [Integration Services], 複製物件"
-  - "連接管理員 [Integration Services], 複製"
+title: "複製封裝物件 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- control flow [Integration Services], copying objects
+- copying package objects [Integration Services]
+- data flow [Integration Services], copying objects
+- connection managers [Integration Services], copying
 ms.assetid: 99b85e5c-d6bd-4e7c-afe4-51f6ce151c2f
 caps.latest.revision: 14
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 61e0e7c321323bba74e05afe4d28ce7f525843af
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 複製封裝物件
+# <a name="copy-package-objects"></a>複製封裝物件
   此主題描述如何在某個封裝內或兩個封裝之間複製控制流程項目、資料流程項目和連接管理員。  
   
-### 若要複製控制和資料流程項目  
+### <a name="to-copy-control-and-data-flow-items"></a>若要複製控制和資料流程項目  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中，開啟包含要使用之封裝的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，開啟包含要使用之封裝的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案。  
   
 2.  在 [方案總管] 中，按兩下您要在其間進行複製的封裝。  
   
@@ -46,9 +51,9 @@ caps.handback.revision: 14
   
 7.  按一下滑鼠右鍵，並按一下 [貼上]。  
   
-### 若要複製連接管理員  
+### <a name="to-copy-connection-managers"></a>若要複製連接管理員  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中，開啟包含要處理之封裝的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，開啟包含要處理之封裝的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案。  
   
 2.  在 [方案總管] 中，按兩下封裝。  
   
@@ -60,10 +65,10 @@ caps.handback.revision: 14
   
 6.  以滑鼠右鍵按一下 [連線管理員] 區域，然後按一下 [貼上]。  
   
-## 請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [控制流程](../integration-services/control-flow/control-flow.md)   
  [資料流程](../integration-services/data-flow/data-flow.md)   
- [Integration Services &#40;SSIS&#41; 連接](../integration-services/connection-manager/integration-services-ssis-connections.md)   
- [複製專案項目](../Topic/Copy%20Project%20Items.md)  
+ [Integration Services &#40;SSIS &#41;連線](../integration-services/connection-manager/integration-services-ssis-connections.md)   
+ [複製專案項目](http://msdn.microsoft.com/library/1606c54d-20f9-49f3-a4ef-caad83a772aa)  
   
   

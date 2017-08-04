@@ -1,22 +1,27 @@
 ---
-title: "CDC 執行個體部署指令碼 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "CDC Instance Deployment Script |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8fa82822-ac99-48ef-a18d-f4f3a77105b4
 caps.latest.revision: 7
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ff22a521f6bebcb60bfc120cc79102a5b9172aef
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# CDC 執行個體部署指令碼
+# <a name="cdc-instance-deployment-script"></a>CDC 執行個體部署指令碼
   顯示 CDC 執行個體部署指令碼的 [CDC 執行個體部署指令碼] 對話方塊。 此指令碼可用來重新建立 CDC 資料庫，並將其所有成品放在另一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上。  
   
  在完成部署指令碼之後，您應該確定以下事項：  
@@ -35,7 +40,7 @@ caps.handback.revision: 7
  **複製**  
  將指令碼複製到剪貼簿。 然後您可以將指令碼貼到 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或任何文字編輯器中，於日後執行指令碼。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [為 CDC 準備 SQL Server](../../integration-services/change-data-capture/prepare-sql-server-for-cdc.md)  
   
   

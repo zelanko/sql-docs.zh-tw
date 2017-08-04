@@ -1,29 +1,34 @@
 ---
-title: "資料檢視器 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.dataviewer.f1"
-helpviewer_keywords: 
-  - "資料檢視器對話方塊"
+title: "資料檢視器 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.dataviewer.f1
+helpviewer_keywords:
+- Data Viewer dialog box
 ms.assetid: 6351309a-688f-4e82-9697-1712130f10a1
 caps.latest.revision: 13
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a04115502f54ce1731c0d8aa14b2f264bc66709f
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 資料檢視器
+# <a name="data-viewer"></a>資料檢視器
   如果路徑設定為使用資料檢視器，當資料在資料流程元件之間移動時，資料檢視器會一一顯示緩衝區的資料。  
   
-## 選項。  
+## <a name="options"></a>選項。  
  **綠色箭頭**  
  按一下即可顯示下一個緩衝區中的資料。 如果在單一緩衝區中可以移動資料，則無法使用此選項。  
   
@@ -40,7 +45,7 @@ caps.handback.revision: 13
  **複製資料**  
  將目前緩衝區中的資料複製到剪貼簿。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [偵錯資料流程](../../integration-services/troubleshooting/debugging-data-flow.md)  
   
   

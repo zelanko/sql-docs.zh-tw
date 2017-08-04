@@ -1,30 +1,35 @@
 ---
-title: "條件式分割轉換 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.conditionalsplittrans.f1"
-helpviewer_keywords: 
-  - "條件式分割轉換"
-  - "將資料列路由至不同輸出 [Integration Services]"
+title: "條件式分割轉換 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.conditionalsplittrans.f1
+helpviewer_keywords:
+- Conditional Split transformation
+- route rows to different outputs [Integration Services]
 ms.assetid: 3f8b5825-226f-413c-ba8f-0bb931ca3770
 caps.latest.revision: 51
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 51
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d5c9ba281713154357344891987131480331f9f0
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 條件式分割轉換
+# <a name="conditional-split-transformation"></a>條件式分割轉換
   「條件式分割」轉換可根據資料的內容，將資料列傳送至不同的輸出。 「條件式分割」轉換的實作與程式設計語言中的 CASE 決策結構類似。 轉換會評估運算式，並根據結果將資料列導向指定的輸出。 此轉換亦提供預設輸出，如此一來，即使資料列未符合任何運算式，仍會導向預設輸出。  
   
-## 設定條件式分割轉換  
+## <a name="configuration-of-the-conditional-split-transformation"></a>設定條件式分割轉換  
  您可以利用下列方式設定「條件式分割」轉換：  
   
 -   針對您要讓轉換測試的每項條件，提供評估為布林的運算式。  
@@ -45,7 +50,7 @@ caps.handback.revision: 51
   
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 包含各種函數和運算子，可用來建立評估輸入資料和導向輸出資料的運算式。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 運算式](../../../integration-services/expressions/integration-services-ssis-expressions.md)。  
   
- 條件式分割轉換包括 **FriendlyExpression** 自訂屬性。 屬性運算式可以在載入封裝時更新這個屬性。 如需詳細資訊，請參閱[在封裝中使用屬性運算式](../../../integration-services/expressions/use-property-expressions-in-packages.md)和[轉換自訂屬性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)。  
+ 條件式分割轉換包括 **FriendlyExpression** 自訂屬性。 屬性運算式可以在載入封裝時更新這個屬性。 如需詳細資訊，請參閱 [在封裝中使用屬性運算式](../../../integration-services/expressions/use-property-expressions-in-packages.md) 和 [轉換自訂屬性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)。  
   
  此轉換擁有一項輸入、一項或多項輸出，以及一項錯誤輸出。  
   
@@ -55,7 +60,7 @@ caps.handback.revision: 51
   
  **[進階編輯器]** 對話方塊會反映能以程式設計的方式設定之屬性。 如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [通用屬性](../Topic/Common%20Properties.md)  
+-   [通用屬性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [轉換自訂屬性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -65,10 +70,10 @@ caps.handback.revision: 51
   
 -   [設定資料流程元件的屬性](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
-## 相關工作  
+## <a name="related-tasks"></a>相關工作  
  [使用條件式分割轉換來分割資料集](../../../integration-services/data-flow/transformations/split-a-dataset-by-using-the-conditional-split-transformation.md)  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [資料流程](../../../integration-services/data-flow/data-flow.md)   
  [Integration Services 轉換](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   

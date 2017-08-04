@@ -1,24 +1,29 @@
 ---
-title: "建立 SQL Server 變更資料庫 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "oraIns"
+title: "建立 SQL Server 變更資料庫 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- oraIns
 ms.assetid: 4f79c24a-e99a-4a06-8637-51eeec406259
 caps.latest.revision: 8
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6934f245f0878e3491a7d1751e764dcf3db7bb46
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 建立 SQL Server 變更資料庫
+# <a name="create-the-sql-server-change-database"></a>建立 SQL Server 變更資料庫
   當您啟動新增執行個體精靈時，隨即開啟 [建立 CDC 資料庫] 頁面。 使用 [建立 CDC 資料庫] 頁面可提供有關新的 CDC 執行個體及建立新的變更資料庫的資訊。  
   
  當您建立新的 CDC 資料庫時，它會啟用 SQL Server CDC，而這樣的啟用需要屬於 `sysadmin` 固定伺服器角色成員的登入。  
@@ -30,7 +35,7 @@ caps.handback.revision: 8
   
  如需有關在 [連接到 SQL Server] 對話方塊中輸入資料的詳細資訊，請參閱＜ [SQL Server Connection for Instance Creation](../../integration-services/change-data-capture/sql-server-connection-for-instance-creation.md)＞。  
   
-## 選項。  
+## <a name="options"></a>選項。  
  **Oracle CDC 執行個體**  
  輸入以下有關您建立之 CDC 執行個體的資訊。  
   
@@ -49,7 +54,7 @@ caps.handback.revision: 8
   
      在您建立資料庫之後，可以按 **[下一步]** [Connect to an Oracle Source Database](../../integration-services/change-data-capture/connect-to-an-oracle-source-database.md)。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [如何建立 SQL Server 變更資料庫執行個體](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)   
  [Oracle CDC 服務](../../integration-services/change-data-capture/the-oracle-cdc-service.md)  
   

@@ -1,29 +1,34 @@
 ---
-title: "使用資料轉換將資料轉換至不同的資料類型 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "轉換資料類型 [Integration Services]"
-  - "資料轉換"
-  - "資料類型 [Integration Services], 轉換"
+title: "使用資料轉換 」 轉換資料類型 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- converting data types [Integration Services]
+- Data Conversion transformation
+- data types [Integration Services], converting
 ms.assetid: 4aabbe4f-7666-4672-865a-9627bd25fbfd
 caps.latest.revision: 41
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: 3a6de227fc2fd0e93abfc9e8ac5300dbf0a137ac
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 使用資料轉換將資料轉換至不同的資料類型
+# <a name="convert-data-type-by-using-data-conversion-transformation"></a>使用資料轉換 」 轉換資料類型
   若要加入及設定「資料轉換」，封裝必須已包含至少一個「資料流程」工作及一個來源。  
   
-### 轉換資料至不同的資料類型  
+### <a name="to-convert-data-to-a-different-data-type"></a>轉換資料至不同的資料類型  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]中，開啟包含所需封裝的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 專案。  
   
@@ -46,13 +51,13 @@ caps.handback.revision: 41
   
 9. (選擇性) 視所選取資料類型而定，更新 **[長度]**、 **[有效位數]**、 **[小數位數]**及 **[字碼頁]** 資料行中的值。  
   
-10. 若要設定錯誤輸出，請按一下 **[設定錯誤輸出]**。 如需詳細資訊，請參閱[在資料流程元件中設定錯誤輸出](../../../integration-services/troubleshooting/configure-an-error-output-in-a-data-flow-component.md)。  
+10. 若要設定錯誤輸出，請按一下 **[設定錯誤輸出]**。 如需詳細資訊，請參閱 [偵錯資料流程](../../../integration-services/troubleshooting/debugging-data-flow.md)。  
   
 11. 按一下 **[確定]**。  
   
 12. 若要儲存已更新的封裝，請在 **[檔案]** 功能表上，按一下 **[儲存選取項目]** 。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [資料轉換](../../../integration-services/data-flow/transformations/data-conversion-transformation.md)   
  [Integration Services 轉換](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Integration Services 路徑](../../../integration-services/data-flow/integration-services-paths.md)   

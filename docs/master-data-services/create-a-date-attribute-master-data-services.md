@@ -1,32 +1,37 @@
 ---
-title: "建立日期屬性 (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "建立日期屬性 [Master Data Services]"
-  - "屬性 [Master Data Services], 建立日期屬性"
+title: "建立日期屬性 (Master Data Services) |Microsoft 文件"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- creating date attributes [Master Data Services]
+- attributes [Master Data Services], creating date attributes
 ms.assetid: 22a8f1a3-b4f2-4cfa-8495-7daad5ce9d12
 caps.latest.revision: 13
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f44b3b8c577dcb684a386e74df07095c17bc204a
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 建立日期屬性 (Master Data Services)
+# <a name="create-a-date-attribute-master-data-services"></a>建立日期屬性 (Master Data Services)
   當您想要讓使用者輸入日期做為屬性值時，可以在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中建立日期屬性。  
   
 > [!NOTE]  
 >  該屬性稱為 DateTime，但不支援時間值。  
   
-## 必要條件  
+## <a name="prerequisites"></a>必要條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  
@@ -35,7 +40,7 @@ caps.handback.revision: 13
   
 -   您必須有要建立屬性的實體。 如需詳細資訊，請參閱[建立實體 &#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md)。  
   
-### 若要建立日期屬性  
+### <a name="to-create-a-date-attribute"></a>若要建立日期屬性  
   
 1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]**。  
   
@@ -69,7 +74,7 @@ caps.handback.revision: 13
   
 13. 按一下 **[儲存]**。  
   
-## 若要顯示日期時間值的時間部分  
+## <a name="to-display-the-time-portion-of-a-datetime-value"></a>若要顯示日期時間值的時間部分  
  若要讓使用者介面顯示日期時間值的時間部分，您必須選擇適用於屬性的輸入遮罩。 日期時間屬性的內建遮罩都無法執行這項處理，但是您可以加入可讓您顯示時間的新遮罩。 若要這樣做，請在儲存內建遮罩之 MDS 資料庫的 mdm.tblList 資料表中加入資料列。 此資料列應該有下列值：  
   
 |||  
@@ -86,10 +91,10 @@ caps.handback.revision: 13
   
  輸入遮罩是自訂的 .NET DateTime 格式字串。 如需詳細資訊，請參閱 [自訂日期和時間格式字串](https://msdn.microsoft.com/en-us/library/8kb3ddd4\(v=vs.110\).aspx)  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [屬性 &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)   
- [變更屬性名稱和資料類型 &#40;Master Data Services&#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
- [建立網域屬性 &#40;Master Data Services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)   
+ [變更屬性名稱和資料類型 &#40;Master Data services&#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
+ [建立網域屬性 &#40;Master Data services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)   
  [建立檔案屬性 &#40;Master Data Services&#41;](../master-data-services/create-a-file-attribute-master-data-services.md)  
   
   

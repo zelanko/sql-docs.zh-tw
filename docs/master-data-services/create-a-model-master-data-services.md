@@ -1,36 +1,41 @@
 ---
-title: "建立模型 (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "模型 [Master Data Services], 建立模型"
-  - "建立模型 [Master Data Services]"
+title: "建立模型 (Master Data Services) |Microsoft 文件"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- models [Master Data Services], creating models
+- creating models [Master Data Services]
 ms.assetid: 9bb3b3b3-bde8-44aa-ad62-eaae21188141
 caps.latest.revision: 13
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1791558cec3999d3a038bc3b651cd3c8edbd307d
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 建立模型 (Master Data Services)
-  在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中，建立模型以包含模型物件。  
+# <a name="create-a-model-master-data-services"></a>建立模型 (Master Data Services)
+  在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，建立模型以包含模型物件。  
   
-## 必要條件  
+## <a name="prerequisites"></a>必要條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  
   
 -   您必須是模型管理員。 如需詳細資訊，請參閱 [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md) (管理員 (Master Data Services))。  
   
-### 若要建立模型  
+### <a name="to-create-a-model"></a>若要建立模型  
   
 1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]**。  
   
@@ -52,7 +57,7 @@ caps.handback.revision: 13
   
  對於每個建立的模型，會將含有八個資料行的資料列加入方格中。 八個資料行如下：  
   
--   **狀態**︰模型狀態。 當您按一下 [儲存模型] 按鈕時，![Updating](../master-data-services/media/mds-model-status-updating.png "Updating") 影像隨即顯示，表示正在更新模型。 如果建立或編輯模型時發生錯誤，會顯示 ![Error](../master-data-services/media/mds-model-status-error.png "Error") 影像。 否則，狀態為正常並顯示 ![OK](../master-data-services/media/mds-model-status-ok.png "OK") 影像。  
+-   **狀態**︰模型狀態。 當您按一下**儲存模型** 按鈕，![更新](../master-data-services/media/mds-model-status-updating.png "更新")影像隨即顯示，表示正在更新模型。 如果發生錯誤時建立或編輯模型時，![錯誤](../master-data-services/media/mds-model-status-error.png "錯誤")影像隨即顯示。 否則，狀態為正常並顯示 ![[確定]](../master-data-services/media/mds-model-status-ok.png "[確定]") 影像。  
   
 -   **名稱**：模型名稱。  
   
@@ -68,15 +73,15 @@ caps.handback.revision: 13
   
 -   **更新日期和時間**：取得上次更新模型的日期和時間。  
   
-## 後續步驟  
+## <a name="next-steps"></a>後續步驟  
   
 -   [建立實體 &#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md)  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [模型 &#40;Master Data Services&#41;](../master-data-services/models-master-data-services.md)   
- [實體 &#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)   
- [刪除模型 &#40;Master Data Services&#41;](../master-data-services/delete-a-model-master-data-services.md)   
- [編輯模型 &#40;Master Data Services&#41;](../master-data-services/edit-model-master-data-services.md)   
+ [實體 &#40;Master Data services&#41;](../master-data-services/entities-master-data-services.md)   
+ [刪除模型 &#40;Master Data services&#41;](../master-data-services/delete-a-model-master-data-services.md)   
+ [編輯模式 &#40;Master Data services&#41;](../master-data-services/edit-model-master-data-services.md)   
  [交易 &#40;Master Data Services&#41;](../master-data-services/transactions-master-data-services.md)  
   
   

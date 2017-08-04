@@ -1,44 +1,49 @@
 ---
-title: "資料行模式設定檔要求選項 (資料分析工作) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "資料分析工作編輯器"
+title: "資料行模式設定檔要求選項 （資料分析工作） |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Data Profiling Task Editor
 ms.assetid: 9ccb8fc5-f65e-41a2-9511-7fa55586eb8b
 caps.latest.revision: 24
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c7ece8c33a4c110898134da60aea6595b936e1e9
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 資料行模式設定檔要求選項 (資料分析工作)
+# <a name="column-pattern-profile-request-options-data-profiling-task"></a>資料行模式設定檔要求選項 (資料分析工作)
   您可以使用 [設定檔要求] 頁面的 [要求屬性] 窗格，針對要求窗格中選取的 [資料行模式設定檔要求] 設定選項。 資料行模式設定檔會報告一組規則運算式，其中涵蓋了字串資料行中值的指定百分比。 這個設定檔可協助您識別資料中的問題，例如無效的字串，而且可以建議未來可用於驗證新值的規則運算式。 例如，「美國郵遞區號」資料行的模式設定檔可能會產生規則運算式 \d{5}-\d{4}、\d{5} 和 \d{9}。 如果您看見其他規則運算式，表示您的資料可能包含無效或格式錯誤的值。  
   
 > [!NOTE]  
->  本主題所描述的選項會顯示在 **[資料分析工作編輯器]** 的 **[設定檔要求]**頁面上。 如需編輯器之這個頁面的詳細資訊，請參閱[資料分析工作編輯器 &#40;設定檔要求頁面&#41;](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md)。  
+>  本主題所描述的選項會顯示在 **[資料分析工作編輯器]** 的 **[設定檔要求]**頁面上。 如需此編輯器頁面的詳細資訊，請參閱[資料分析工作編輯器 &#40;設定檔要求頁面&#41;](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md)。  
   
- 如需如何使用資料分析工作的詳細資訊，請參閱[資料分析工作的設定](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)。 如需如何使用資料設定檔檢視器來分析資料分析工作輸出的詳細資訊，請參閱[資料設定檔檢視器](../../integration-services/control-flow/data-profile-viewer.md)。  
+ 如需如何使用資料分析工作的詳細資訊，請參閱[資料分析工作的設定](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)。 如需如何使用資料設定檔檢視器來分析資料分析工作輸出的詳細資訊，請參閱 [資料設定檔檢視器](../../integration-services/control-flow/data-profile-viewer.md)。  
   
-## 了解分隔符號和符號的使用方式  
+## <a name="understanding-the-use-of-delimiters-and-symbols"></a>了解分隔符號和符號的使用方式  
  針對 [資料行模式設定檔要求] 計算模式之前，資料分析工作會 Token 化資料。 也就是說，此工作會將字串值分隔成名為 Token 的較小單位。 此工作會根據您針對 [分隔符號] 和 [符號] 屬性指定的分隔符號和符號，將字串分隔成 Token：  
   
 -   **分隔符號**：根據預設，分隔符號清單包含下列字元：空格、水平定位字元 (\t)、新行字元 (\n) 和歸位字元 (\r)。 雖然您可以指定其他分隔符號，但是無法移除預設的分隔符號。  
   
--   **符號**：根據預設，[符號] 清單包含下列字元：`,.;:-"'`~=&/@!?()<>[]{}|#*^%`. For example, if the symbols are "`()-`"，"(425) 123-4567" 值就會 Token 化成為 ["(", "425", ")", "123", "-", "4567", ")"]。  
+-   **符號**根據預設，清單**符號**包含下列字元： `,.;:-"'`~ = （& s) / @ ！？（） <> [] {} | #* ^ %`. For example, if the symbols are "`（)-'"，"(425) 123-4567"的值會 token 化成為 ["（"，"425"，"）"，"123"，"-"，"4567"，")"]。  
   
  一個字元無法同時屬於分隔符號和符號。  
   
  所有分隔符號都會在 Token 化程序中正規化成為單一空格，而符號則會保留。  
   
-## 了解標記資料表的使用方式  
- 您可以將標記和相關的詞彙儲存在您於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中建立的特殊資料表中，藉以選擇性地以單一標記將相關 Token 組成群組。 標記資料表必須具有兩個字串資料行：一個名為「標記」，而另一個名為「詞彙」。 這些資料行的類型可以是 **char**、**nchar**、**varchar** 或 **nvarchar**，但不得為 **text** 或 **ntext**。 您可以在單一資料表中結合多個標記和對應的詞彙。 一個資料行模式設定檔要求只能使用一份標記資料表。 您可以使用個別的 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 連線管理員來連接至標記資料表。 因此，標記資料表可以位於不同的資料庫中或與來源資料位於不同的伺服器上。  
+## <a name="understanding-the-use-of-the-tag-table"></a>了解標記資料表的使用方式  
+ 您可以將標記和相關的詞彙儲存在您於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中建立的特殊資料表中，藉以選擇性地以單一標記將相關 Token 組成群組。 標記資料表必須具有兩個字串資料行：一個名為「標記」，而另一個名為「詞彙」。 這些資料行的類型可以是 **char**、 **nchar**、 **varchar**或 **nvarchar**，但不得為 **text** 或 **ntext**。 您可以在單一資料表中結合多個標記和對應的詞彙。 一個資料行模式設定檔要求只能使用一份標記資料表。 您可以使用個別的 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 連線管理員來連接至標記資料表。 因此，標記資料表可以位於不同的資料庫中或與來源資料位於不同的伺服器上。  
   
  例如，您可以使用單一標記「方向」，將可能顯示在街道地址中的「東」、「西」、「北」和「南」值組成群組。 下表是這類標記資料表的範例。  
   
@@ -67,7 +72,7 @@ caps.handback.revision: 24
   
  相同的詞彙可以屬於多個標記。  
   
-## 要求屬性選項  
+## <a name="request-properties-options"></a>要求屬性選項  
  [要求屬性] 窗格會針對 [資料行模式設定檔要求] 顯示下列選項群組：  
   
 -   **[資料]**，其中包括 **[TableOrView]** 和 **[資料行]** 選項。  
@@ -76,30 +81,30 @@ caps.handback.revision: 24
   
 -   **選項。**  
   
-### 資料選項  
+### <a name="data-options"></a>資料選項  
  **ConnectionManager**  
  選取現有的 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 連線管理員，以便使用 .NET Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) 來連接至包含要分析之資料表或檢視表的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫。  
   
- **TableOrView**  
+ **[TableOrView]**  
  選取包含要分析之資料行的資料表或檢視表。  
   
  如需詳細資訊，請參閱本主題中的「TableorView 選項」一節。  
   
- **資料行**  
+ **[資料行]**  
  選取要分析的現有資料行。 您可以選取 **(\*)** 來分析所有資料行。  
   
  如需詳細資訊，請參閱本主題中的「資料行選項」一節。  
   
-#### TableOrView 選項  
+#### <a name="tableorview-options"></a>TableOrView 選項  
  **結構描述**  
  指定選取之資料表所屬的結構描述。 此選項是唯讀的。  
   
  **Table**  
  顯示選取之資料表的名稱。 此選項是唯讀的。  
   
-#### 資料行選項  
+#### <a name="column-options"></a>資料行選項  
  **IsWildCard**  
- 指定是否已經選取 **(\*)** 萬用字元。 如果您已選取 **(\*)** 來分析所有資料行，這個選項會設定為 **True**。 如果您已選取要分析的個別資料行，它就會設定為 **[False]** 。 此選項是唯讀的。  
+ 指定是否已經選取 **(\*)** 萬用字元。 如果您已選取 **(\*)** 來分析所有資料行，這個選項會設定為 [True]。 如果您已選取要分析的個別資料行，它就會設定為 **[False]** 。 此選項是唯讀的。  
   
  **ColumnName**  
  顯示所選取資料行的名稱。 如果您已選取 **(\*)** 來分析所有資料行，這個選項就是空白的。 此選項是唯讀的。  
@@ -107,11 +112,11 @@ caps.handback.revision: 24
  **StringCompareOptions**  
  這個選項不會套用至資料行模式設定檔。  
   
-### 一般選項  
+### <a name="general-options"></a>一般選項  
  **RequestID**  
  輸入描述性名稱，以便識別這個設定檔要求。 一般而言，您不需要變更自動產生的值。  
   
-### 選項。  
+### <a name="options"></a>選項。  
  **MaxNumberOfPatterns**  
  指定您想讓設定檔計算的模式數目上限。 這個選項的預設值為 10。 最大值為 100。  
   
@@ -121,7 +126,7 @@ caps.handback.revision: 24
  **CaseSensitive**  
  指出模式是否應該區分大小寫。 此選項的預設值是 **[False]**。  
   
- **Delimiters**  
+ **分隔符號**  
  列出在 Token 化文字時應該視為字詞之間空格對等項目的字元。 根據預設，[分隔符號] 清單包含下列字元：空格、水平定位字元 (\t)、新行字元 (\n) 和歸位字元 (\r)。 雖然您可以指定其他分隔符號，但是無法移除預設的分隔符號。  
   
  如需詳細資訊，請參閱本主題前面的「了解分隔符號和符號的使用方式」。  
@@ -141,8 +146,8 @@ caps.handback.revision: 24
   
  如需詳細資訊，請參閱本主題前面的「了解標記資料表的使用方式」。  
   
-## 請參閱＜  
- [資料分析工作編輯器 &#40;一般頁面&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
- [單一資料表快速分析表單 &#40;資料分析工作&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
+## <a name="see-also"></a>請參閱＜  
+ [資料分析工作編輯器 &#40;一般頁面 &#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
+ [單一資料表快速分析表單 &#40; 資料分析工作 &#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   
   

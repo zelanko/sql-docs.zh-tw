@@ -1,36 +1,41 @@
 ---
-title: "建立及發行商務規則 (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "商務規則 [Master Data Services], 建立"
-  - "建立商務規則 [Master Data Services]"
+title: "建立及發行商務規則 (Master Data Services) |Microsoft 文件"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- business rules [Master Data Services], creating
+- creating business rules [Master Data Services]
 ms.assetid: 6961d636-4d69-468e-81f7-8d0be6a4a039
 caps.latest.revision: 14
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b8ea50a2feb5c35e431422c1786d7731bf97d8fb
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 建立及發行商務規則 (Master Data Services)
-  在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中，建立商務規則，確保主要資料的正確性。 建立規則之後，您必須發行它，才能將它套用至資料。  
+# <a name="create-and-publish-a-business-rule-master-data-services"></a>建立及發行商務規則 (Master Data Services)
+  在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，建立商務規則，確保主要資料的正確性。 建立規則之後，您必須發行它，才能將它套用至資料。  
   
-## 必要條件  
+## <a name="prerequisites"></a>必要條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  
   
 -   您必須是模型管理員。 如需詳細資訊，請參閱 [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md) (管理員 (Master Data Services))。  
   
-### 若要建立及發行商務規則  
+### <a name="to-create-and-publish-a-business-rule"></a>若要建立及發行商務規則  
   
 1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]**。  
   
@@ -40,11 +45,11 @@ caps.handback.revision: 14
   
 4.  從 [實體] 下拉式清單中，選取實體。  
   
-5.  從 [成員類型] 下拉式清單中，選取要套用商務規則的成員類型。  
+5.  從 [成員類型]  下拉式清單中，選取要套用商務規則的成員類型。  
   
 6.  按一下 **[加入]**。  
   
-7.  在 [名稱] 方塊中，輸入商務規則的名稱。  
+7.  在 [名稱]  方塊中，輸入商務規則的名稱。  
   
 8.  (選擇性) 在 [描述] 欄位中，輸入商務規則描述。  
   
@@ -96,7 +101,7 @@ caps.handback.revision: 14
   
 24. 在確認對話方塊中按一下 **[確定]**。 [商務規則狀態] 資料行中的值是 [使用中]。  
   
-## 方格資料行  
+## <a name="grid-columns"></a>方格資料行  
  對於每個建立的商務規則，會將含有六個資料行的資料列加入方格中。 以下是資料行。  
   
 |名稱|說明|  
@@ -108,17 +113,17 @@ caps.handback.revision: 14
 |已排除|指定商務規則是否已排除。|  
 |通知|指定選取傳送電子郵件通知的使用者或群組。|  
   
-## 後續步驟  
+## <a name="next-steps"></a>後續步驟  
   
 -   遵循下列其中一個程序，將商務規則套用至資料：  
   
     -   [根據商務規則驗證特定成員 &#40;Master Data Services&#41;](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
   
-    -   [根據商務規則驗證版本 &#40;Master Data Services&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
+    -   [根據商務規則 &#40; 驗證版本Master Data services&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [設定商務規則來傳送通知 &#40;Master Data Services&#41;](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)   
- [變更商務規則名稱 &#40;Master Data Services&#41;](../master-data-services/change-a-business-rule-name-master-data-services.md)   
- [將多個條件加入至商務規則 &#40;Master Data Services&#41;](../master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md)  
+ [變更商務規則名稱 &#40;Master Data services&#41;](../master-data-services/change-a-business-rule-name-master-data-services.md)   
+ [將多個條件加入至商務規則 &#40;Master Data services&#41;](../master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md)  
   
   

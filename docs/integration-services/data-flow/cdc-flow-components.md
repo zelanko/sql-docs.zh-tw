@@ -1,27 +1,32 @@
 ---
-title: "CDC 流程元件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "CDC 資料流程元件 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
 caps.latest.revision: 21
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: a2e3655bedbb24f2174a62c8792cd168e7642592
+ms.openlocfilehash: 403fb295b690c0aca09c597dc7d5c0469646ce29
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# CDC 流程元件
+# <a name="cdc-flow-components"></a>CDC 流程元件
   Change Data Capture Components by Attunity for Microsoft [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 可協助 SSIS 開發人員使用 CDC 並且降低 CDC 封裝的複雜性。  
   
- SSIS CDC 元件的設計目的是要搭配來源資料表為相同 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 資料庫或 Oracle 資料庫 (使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的 Oracle CDC 服務時) 的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC 功能運作。 支援分割資料表。  
+ SSIS CDC 元件的設計目的是要搭配來源資料表為相同 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 資料庫或 Oracle 資料庫 (使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的 Oracle CDC 服務時) 的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]CDC 功能運作。 支援分割資料表。  
   
- 這些元件包括控制和資料流程元件，可簡化在 SSIS 封裝中讀取和處理變更資料的體驗。 這些元件可以加入至 Microsoft [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的元件程式庫，但是必須另外安裝。  
+ 這些元件包括控制和資料流程元件，可簡化在 SSIS 封裝中讀取和處理變更資料的體驗。 這些元件可以加入至 Microsoft [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的元件程式庫，但是必須另外安裝。  
   
  Change Data Capture Components by Attunity 如下所示：  
   
@@ -35,12 +40,12 @@ caps.handback.revision: 21
   
  [CDC 分隔器](../../integration-services/data-flow/cdc-splitter.md)  
   
-## 安裝  
- 本節描述 Microsoft [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] CDC 元件的安裝程序。  
+## <a name="installation"></a>安裝  
+ 本節描述 Microsoft [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]CDC 元件的安裝程序。  
   
  SSIS 的 CDC 元件隨附於 Attunity 所提供適用於 Microsoft SQL Server® 2016 的 Microsoft® Change Data Capture Designer for Oracle 和 Change Data Capture Service for Oracle。 此下載是 SQL Server 2016 Feature Pack 的一部分。 從 [SQL Server 2016 Feature Pack 網頁](http://go.microsoft.com/fwlink/?LinkId=746297)下載 Feature Pack 的元件。  
   
-### 版本支援  
+### <a name="version-support"></a>版本支援  
  SSIS CDC 元件支援下列 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 產品：  
   
 -   Microsoft [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
@@ -61,38 +66,38 @@ caps.handback.revision: 21
   
 -   Windows Server 2012  
   
-### 執行安裝程式  
- 執行安裝精靈之前，請確定 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 已關閉。 然後，遵循安裝精靈中的指示進行。  
+### <a name="running-the-installation-program"></a>執行安裝程式  
+ 在執行安裝精靈之前，務必[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]已關閉。 然後，遵循安裝精靈中的指示進行。  
   
-### 重新啟動 SSIS  
- 安裝 CDC 元件之後，您必須重新啟動 SSIS 服務，才能確保在 SQL [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中開發封裝時，這些元件可正確運作。  
+### <a name="restart-ssis"></a>重新啟動 SSIS  
+ 安裝 CDC 元件之後，您必須重新啟動 SSIS 服務，才能確保在 SQL [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中開發封裝時，這些元件可正確運作。  
   
  安裝元件之後，系統會顯示一則訊息。 出現提示時，請按一下 [是]。  
   
-### 解除安裝 Microsoft CDC 元件  
+### <a name="uninstalling-the-microsoft-cdc-components"></a>解除安裝 Microsoft CDC 元件  
  您可以使用解除安裝精靈來解除安裝 CDC 來源、CDC 分隔器或 CDC 控制工作。 解除安裝元件之前，您必須先確定下列事項：  
   
- 如果您正在使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 進行封裝開發，請確定 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 已關閉，然後再執行解除安裝精靈。  
+ 如果您使用[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]進行封裝開發，請確定[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]關閉然後再執行解除安裝精靈。  
   
-## 優點  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 元件的 CDC 元件可讓 SSIS 開發人員輕鬆地建置處理變更資料的 SSIS 封裝。 這些元件可強化 SSIS 開發人員處理 CDC 的能力，並且降低 CDC 封裝的複雜性。  
+## <a name="benefits"></a>優點  
+ CDC 元件[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]元件可讓 SSIS 開發人員輕鬆地建置處理變更資料的 SSIS 封裝。 這些元件可強化 SSIS 開發人員處理 CDC 的能力，並且降低 CDC 封裝的複雜性。  
   
  SSIS CDC 元件是用來以方便進一步處理的方式提供變更資料，以便複寫、載入資料倉儲、更新 OLAP 的緩時變維度、稽核變更或進行其他可能的用途。 所使用的進一步處理類型是由 SSIS 開發人員決定。  
   
  SSIS CDC 元件的設計目的是要搭配變更資料表位於相同 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 資料庫中的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC 功能運作。  
   
-## 開始使用異動資料擷取元件  
+## <a name="getting-started-with-the-change-data-capture-components"></a>開始使用異動資料擷取元件  
  一般的 CDC 封裝會處理一組資料表的變更。 下圖顯示這種 CDC 封裝類型的基本控制流程部分。 這種封裝稱為 Trickle 摘要處理封裝。  
   
- ![處理封裝控制流程的 Trickle 摘要](../../integration-services/data-flow/media/tricklefeedprocessing.gif "處理封裝控制流程的 Trickle 摘要")  
+ ![Trickle 摘要處理封裝控制流程](../../integration-services/data-flow/media/tricklefeedprocessing.gif "Trickle 摘要處理封裝控制流程")  
   
- 這個 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 控制流程包含兩項 CDC 控制工作和資料流程工作。 名為「取得 CDC 處理範圍」的第一項工作會針對在名為「處理變更」之資料流程工作中處理的變更建立 LSN 範圍。 這個範圍是根據最後一個封裝執行期間所處理的內容以及儲存在永續性存放區中的內容所建立。  
+ 這[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]控制流程包含兩項 CDC 控制工作和資料流程工作。 名為「取得 CDC 處理範圍」的第一項工作會針對在名為「處理變更」之資料流程工作中處理的變更建立 LSN 範圍。 這個範圍是根據最後一個封裝執行期間所處理的內容以及儲存在永續性存放區中的內容所建立。  
   
  如需使用 CDC 控制工作的詳細資訊，請參閱 [CDC 控制工作](../../integration-services/control-flow/cdc-control-task.md)和 [CDC 控制工作編輯器](../../integration-services/control-flow/cdc-control-task-editor.md)。  
   
  下圖顯示「處理變更」資料流程，就概念上說明變更的處理方式。  
   
- ![處理異動資料流程](../../integration-services/data-flow/media/processchangesdataflow.gif "處理異動資料流程")  
+ ![程序會變更資料流](../../integration-services/data-flow/media/processchangesdataflow.gif "程序會變更資料流")  
   
  此圖所說明的步驟如下：  
   
@@ -106,11 +111,11 @@ caps.handback.revision: 21
   
  [CDC 來源](../../integration-services/data-flow/cdc-source.md)  
   
- [CDC 來源編輯器 &#40;連線管理員頁面&#41;](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md)  
+ [CDC 來源編輯器 &#40;連接管理員頁面 &#41;](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md)  
   
- [CDC 來源編輯器 &#40;資料行頁面&#41;](../../integration-services/data-flow/cdc-source-editor-columns-page.md)  
+ [CDC 來源編輯器 &#40;資料行頁面 &#41;](../../integration-services/data-flow/cdc-source-editor-columns-page.md)  
   
- [CDC 來源編輯器 &#40;錯誤輸出頁面&#41;](../../integration-services/data-flow/cdc-source-editor-error-output-page.md)  
+ [CDC 來源編輯器 &#40;錯誤輸出頁面 &#41;](../../integration-services/data-flow/cdc-source-editor-error-output-page.md)  
   
  如需有關 CDC 分隔器的詳細資訊，請參閱：  
   
@@ -132,7 +137,7 @@ caps.handback.revision: 21
   
  下圖顯示可處理第三種案例的 SSIS 封裝：  
   
- ![SSIS 封裝處理第三個案例](../../integration-services/data-flow/media/scenario3.gif "SSIS 封裝處理第三個案例")  
+ ![SSIS 封裝處理第三個案例](../../integration-services/data-flow/media/scenario3.gif "處理第三個案例的 SSIS 封裝")  
   
  初始載入封裝之後，Trickle 摘要更新封裝會根據處理變更的排程重複執行，因為它們變成可供取用。  
   
@@ -140,19 +145,19 @@ caps.handback.revision: 21
   
  CDC 狀態變數的值必須在持續性儲存體中維護、應該在啟動 CDC 處理之前讀取，而且應該在處理完成之後，與目前狀態一起儲存。 雖然 SSIS 開發人員可以處理 CDC 狀態的載入和儲存工作，不過 CDC 控制元件可以在資料庫資料表中維護 CDC 狀態值，藉以自動化這項工作。  
   
-## 安全性考量  
+## <a name="security-considerations"></a>安全性考量  
  本節列出一些在 SSIS 中使用 CDC 元件的相關安全性考量。  
   
-### 變更資料的存取授權  
+### <a name="access-authorization-to-change-data"></a>變更資料的存取授權  
  Trickle 摘要更新封裝需要 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC 功能的存取權。 根據預設，這類存取權會授與 **db_owner** 固定資料庫角色的成員。 因為 **db_owner** 是功能強大的角色，所以在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中定義擷取執行個體時，建議您將控制安全性角色與每個擷取執行個體產生關聯，讓 SSIS CDC 封裝使用更受限制的使用者來處理變更。  
   
-### CDC 資料庫目前 LSN 的存取權  
+### <a name="access-to-cdc-database-current-lsn"></a>CDC 資料庫目前 LSN 的存取權  
  針對變更處理標記啟始 LSN 的 CDC 控制工作作業必須能夠尋找 CDC 資料庫目前 LSN。 這項作業是使用 master 資料庫的 **sp_replincrementlsn** 程序來完成。 您必須將此程序的執行權限提供給用於連接至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC 資料庫的登入。  
   
-### CDC 狀態資料表的存取權  
+### <a name="access-to-cdc-states-table"></a>CDC 狀態資料表的存取權  
  CDC 狀態資料表是用於自動保存 CDC 狀態，而用於連接至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC 資料庫的登入必須能夠更新這些狀態。 因為這個資料表是由 SSIS 開發人員所建立，所以請將 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 系統管理員設定為獲授權可建立 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 資料庫並執行管理和維護工作的使用者。 此外，使用啟用 CDC 之資料庫的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 系統管理員必須充分了解 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC 技術和實作。  
   
-## 將資料表分組以進行 CDC 處理  
+## <a name="grouping-tables-for-cdc-processing"></a>將資料表分組以進行 CDC 處理  
  資料庫專案大小的範圍從許多資料表到數千個資料表不等。 設計初始載入和 CDC 封裝時，建議您將資料表分組成較小的群組以方便管理並提高效率。 本節列出將資料表排序成小型群組時可能會影響的各種考量 (一開始載入每個群組中的資料表，然後再當做群組來更新)。  
   
  CDC 元件所支援的 CDC 模式會假設已經決定此群組。 每個群組都會定義不同的 CDC 內容，並且與其他群組分開維護內容。 每個群組都會建立初始載入和 Trickle 摘要更新封裝。 Trickle 摘要更新是根據變更處理條件約束的比率 (例如 CPU 和 IO 耗用量，對其他系統的影響) 以及所需的延遲，排程為定期執行。  
@@ -173,7 +178,7 @@ caps.handback.revision: 21
   
 -   Trickle 摘要更新封裝，它會讀取對來源資料表所做的變更並且將變更套用至目標資料表。 這個封裝應該定期執行。  
   
-## CDC 狀態  
+## <a name="cdc-state"></a>CDC 狀態  
  每個 CDC 群組都具有相關聯的狀態，由特定格式的字串表示。 如需詳細資訊，請參閱 [CDC 控制工作](../../integration-services/control-flow/cdc-control-task.md)。 下表顯示可能的 CDC 狀態值。  
   
 |State|說明|  
@@ -195,23 +200,23 @@ caps.handback.revision: 21
   
  一旦初始載入封裝順利執行之後，Trickle 摘要更新封裝就會依照預先決定的排程重複執行，以便處理來源資料表的變更。 Trickle 摘要更新封裝的每個回合都是 CDC 回合。  
   
-## 本節內容  
+## <a name="in-this-section"></a>本節內容  
   
 -   [CDC 來源](../../integration-services/data-flow/cdc-source.md)  
   
 -   [CDC 分隔器](../../integration-services/data-flow/cdc-splitter.md)  
   
-## 相關工作  
+## <a name="related-tasks"></a>相關工作  
   
--   [依據變更類型來導向 CDC 資料流](../../integration-services/data-flow/direct-the-cdc-stream-according-to-the-type-of-change.md)  
+-   [導向 CDC 資料流，以根據變更的類型](../../integration-services/data-flow/direct-the-cdc-stream-according-to-the-type-of-change.md)  
   
 -   [定義狀態變數](../../integration-services/data-flow/define-a-state-variable.md)  
   
-## 相關內容  
+## <a name="related-content"></a>相關內容  
   
--   mattmasson.com 上的部落格文章：[CDC in SSIS for SQL Server 2012](http://www.mattmasson.com/2011/12/cdc-in-ssis-for-sql-server-2012-2/)。  
+-   mattmasson.com 上的部落格文章：[CDC in SSIS for SQL Server 2012](https://www.mattmasson.com/2011/12/cdc-in-ssis-for-sql-server-2012-2/)。  
   
--   blogs.msdn.com 上有關設定 CDC 服務的部落格文章：[CDC for Oracle in SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=247827)SQL Server 2012 中的 Oracle CDC)。  
+-   blogs.msdn.com 上有關設定 CDC 服務的部落格文章： [CDC for Oracle in SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=247827)SQL Server 2012 中的 Oracle CDC)。  
   
 -   social.technet.microsoft.com 上的技術文章： [安裝 Microsoft SQL Server 2012 Change Data Capture for Oracle by Attunity](http://go.microsoft.com/fwlink/?LinkId=252958)。  
   
@@ -219,9 +224,9 @@ caps.handback.revision: 21
   
 -   social.technet.microsoft.com 上的技術文章： [疑難排解 Microsoft SQL Server 2012 Change Data Capture for Oracle by Attunity 中的 CDC 執行個體錯誤](http://go.microsoft.com/fwlink/?LinkId=252961)。  
   
--   technet.microsoft.com 上的影片：[CDC for Oracle Databases using SQL Server Integration Services 2012](http://technet.microsoft.com/sqlserver/jj218898) (使用 SQL Server Integration Services 2012 的 Oracle CDC 資料庫) (SQL Server 影片)。  
+-   technet.microsoft.com 上的影片： [CDC for Oracle Databases using SQL Server Integration Services 2012](http://technet.microsoft.com/sqlserver/jj218898)(使用 SQL Server Integration Services 2012 的 Oracle CDC 資料庫) (SQL Server 影片)。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [CDC 控制工作](../../integration-services/control-flow/cdc-control-task.md)  
   
   

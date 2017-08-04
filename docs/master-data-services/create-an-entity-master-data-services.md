@@ -1,29 +1,34 @@
 ---
-title: "建立實體 (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "實體 [Master Data Services], 建立"
-  - "建立實體 [Master Data Services]"
+title: "建立實體 (Master Data Services) |Microsoft 文件"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- entities [Master Data Services], creating
+- creating entities [Master Data Services]
 ms.assetid: d9a6a51e-7b53-4785-a118-3baeb7ca2d48
 caps.latest.revision: 9
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2766ad2cb250200e7fbb3f19f96eab7b5f748a9a
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 建立實體 (Master Data Services)
-  在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中，建立實體以包含成員及其屬性。  
+# <a name="create-an-entity-master-data-services"></a>建立實體 (Master Data Services)
+  在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，建立實體以包含成員及其屬性。  
   
-## 必要條件  
+## <a name="prerequisites"></a>必要條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  
@@ -32,7 +37,7 @@ caps.handback.revision: 9
   
 -   模型必須存在。 如需詳細資訊，請參閱[建立模型 &#40;Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md)。  
   
-### 若要建立實體  
+### <a name="to-create-an-entity"></a>若要建立實體  
   
 1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]**。  
   
@@ -57,16 +62,16 @@ caps.handback.revision: 9
   
 8.  選擇性。 選取 **[自動建立字碼值]** 核取方塊。 如需詳細資訊，請參閱[自動建立代碼 &#40;Master Data Services&#41;](../master-data-services/automatic-code-creation-master-data-services.md)。  
   
-9. 選擇性。 選取 [啟用資料壓縮] 核取方塊。 依預設會開啟資料列壓縮。 如需詳細資訊，請參閱[資料壓縮](../relational-databases/data-compression/data-compression.md)。  
+9. 選擇性。 選取 [啟用資料壓縮] 核取方塊。 依預設會開啟資料列壓縮。 如需詳細資訊，請參閱 [資料壓縮](../relational-databases/data-compression/data-compression.md)。  
   
 10. 按一下 **[儲存]**。  
   
-## 方格資料行  
+## <a name="grid-columns"></a>方格資料行  
  對於每個建立的實體，會將含有十三個資料行的資料列加入格線。 以下是資料行。  
   
 |名稱|說明|  
 |----------|-----------------|  
-|狀態|實體狀態。 當您按一下 [儲存] 時，下列影像隨即顯示，指出正在更新實體。<br /><br /> ![Icon for updating status](../master-data-services/media/mds-statusicon-updating.png "Icon for updating status")<br /><br /> 如果建立或編輯實體時發生錯誤，則會顯示下列影像。<br /><br /> ![Icon for error status](../master-data-services/media/mds-statusicon-error.png "Icon for error status")<br /><br /> 如果狀態正常，則會顯示下列影像。<br /><br /> ![Icon for OK status](../master-data-services/media/mds-statusicon-ok.png "Icon for OK status")|  
+|狀態|實體狀態。 當您按一下 [儲存] 時，下列影像隨即顯示，指出正在更新實體。<br /><br /> ![更新狀態的圖示](../master-data-services/media/mds-statusicon-updating.png "更新狀態的圖示")<br /><br /> 如果建立或編輯實體時發生錯誤，則會顯示下列影像。<br /><br /> ![如需錯誤狀態的圖示](../master-data-services/media/mds-statusicon-error.png "的錯誤狀態的圖示")<br /><br /> 如果狀態正常，則會顯示下列影像。<br /><br /> ![[確定] 狀態的圖示](../master-data-services/media/mds-statusicon-ok.png "[確定] 狀態的圖示")|  
 |名稱|實體名稱。|  
 |說明|實體描述。|  
 |暫存資料表|此資料表的前置名稱用於儲存資料。|  
@@ -80,7 +85,7 @@ caps.handback.revision: 9
 |更新者|使用者名稱，該使用者為最近一次更新模型的使用者。|  
 |更新於|實體的上次更新日期與時間。|  
   
-## 後續步驟  
+## <a name="next-steps"></a>後續步驟  
   
 -   [建立文字屬性 &#40;Master Data Services&#41;](../master-data-services/create-a-text-attribute-master-data-services.md)  
   
@@ -88,10 +93,10 @@ caps.handback.revision: 9
   
 -   [建立檔案屬性 &#40;Master Data Services&#41;](../master-data-services/create-a-file-attribute-master-data-services.md)  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [實體 &#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)   
- [明確階層 &#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)   
- [編輯實體 &#40;Master Data Services&#41;](../master-data-services/edit-an-entity-master-data-services.md)   
+ [明確階層 &#40;Master Data services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)   
+ [編輯實體 &#40;Master Data services&#41;](../master-data-services/edit-an-entity-master-data-services.md)   
  [刪除實體 &#40;Master Data Services&#41;](../master-data-services/delete-an-entity-master-data-services.md)  
   
   

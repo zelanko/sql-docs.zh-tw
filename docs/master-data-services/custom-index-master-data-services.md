@@ -1,25 +1,30 @@
 ---
-title: "自訂索引 (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "自訂索引 (Master Data Services) |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c57bf8b8-55a6-4b6c-9adb-91b5f4f1ee3c
 caps.latest.revision: 9
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ccb20ed7018a941ccc5e928d7fc9488377e3a125
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 自訂索引 (Master Data Services)
-  自訂索引會在實體中於單一屬性 (單一索引) 或一份屬性清單 (複合索引) 上建立非叢集索引。 索引一般會改善查詢程序的效能。 如需 SQL Server 索引的詳細資訊，請參閱[索引](../relational-databases/indexes/indexes.md)。  
+# <a name="custom-index-master-data-services"></a>自訂索引 (Master Data Services)
+  自訂索引會在實體中於單一屬性 (單一索引) 或一份屬性清單 (複合索引) 上建立非叢集索引。 索引一般會改善查詢程序的效能。 如需 SQL Server 索引的詳細資訊，請參閱 [索引](../relational-databases/indexes/indexes.md)。  
   
-## 索引類型  
+## <a name="type-of-indexes"></a>索引類型  
  您可以針對每個實體建立下列類型的多個自訂索引。  
   
 -   唯一索引  
@@ -28,7 +33,7 @@ caps.handback.revision: 9
   
  唯一索引確保索引資料行未包含重複值。 針對複合唯一索引，此索引確保所選取屬性清單的每一個值組合都是唯一的。 如果所選取屬性的值重複，則無法建立唯一索引。  
   
-## 規則  
+## <a name="rules"></a>規則  
  下列規則適用於自訂的唯一和非唯一索引。  
   
 -   若要建立自訂索引，請確定您選取至少一個屬性。  
@@ -52,7 +57,7 @@ caps.handback.revision: 9
   
 -   無法變更自訂索引中所含的屬性類型。  
   
-## 相關工作  
+## <a name="related-tasks"></a>相關工作  
   
 |工作描述|主題|  
 |----------------------|-----------|  

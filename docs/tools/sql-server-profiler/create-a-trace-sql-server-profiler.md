@@ -1,33 +1,38 @@
 ---
-title: "建立追蹤 (SQL Server Profiler) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "追蹤 [SQL Server]，建立"
+title: "建立追蹤 (SQL Server Profiler) |Microsoft 文件"
+ms.custom: 
+ms.date: 08/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- traces [SQL Server], creating
 ms.assetid: 0302fa6d-d2b5-43fe-ad70-7a337575b112
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f0008f30aa031c98e251fd1e4fc764b801a16858
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 建立追蹤 (SQL Server Profiler)
+# <a name="create-a-trace-sql-server-profiler"></a>建立追蹤 (SQL Server Profiler)
   此主題描述如何使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 來建立追蹤。  
   
-### 若要建立追蹤  
+### <a name="to-create-a-trace"></a>若要建立追蹤  
   
 1.  在 **[檔案]** 功能表上，按一下 **[新增追蹤]**，並連線到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的執行個體。  
   
      會出現 [追蹤屬性]  對話方塊。  
   
-    > **注意**：[追蹤屬性] 對話方塊無法顯示，但若已選取 [進行連接後立即啟動追蹤]，便會開始追蹤。 若要關閉這個設定，請在 [工具] 功能表上按一下 [選項]，然後清除 [進行連接後立即啟動追蹤] 核取方塊。  
+    > **注意**：[追蹤屬性] 對話方塊無法顯示，但若已選取 [進行連接後立即啟動追蹤]，便會開始追蹤。 若要關閉此設定，而在 **工具** 功能表上，按一下 **選項**，並清除 進行連接核取方塊後立即啟動追蹤。  
   
 2.  在 **[追蹤名稱]** 方塊中，輸入追蹤的名稱。  
   
@@ -51,10 +56,11 @@ caps.handback.revision: 28
   
 7.  按一下 **[執行]** 啟動追蹤。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [執行 SQL Server Profiler 所需的權限](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md)   
  [SQL Server Profiler 範本和權限](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)   
- [使追蹤與 Windows 效能記錄資料產生相互關聯 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/correlate-a-trace-with-windows-performance-log-data-sql-server-profiler.md)  
+ [使追蹤與 Windows 效能記錄資料相互關聯 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/correlate-a-trace-with-windows-performance-log-data-sql-server-profiler.md)  
   
   
+

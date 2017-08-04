@@ -1,32 +1,37 @@
 ---
-title: "大量插入工作 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.bulkinserttask.f1"
-helpviewer_keywords: 
-  - "大量插入工作"
-  - "複製資料 [Integration Services]"
+title: "大量插入工作 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.bulkinserttask.f1
+helpviewer_keywords:
+- Bulk Insert task
+- copying data [Integration Services]
 ms.assetid: c5166156-6b4c-4369-81ed-27c4ce7040ae
 caps.latest.revision: 61
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 61
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: 81b72c67ee8d968a2452e7ede94fe8c390c53a9b
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 大量插入工作
+# <a name="bulk-insert-task"></a>大量插入工作
   「大量插入」工作提供有效的方式，將大量資料複製到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表或檢視。 例如，假設您的公司將百萬個資料列的產品清單儲存在大型電腦系統上，但公司的電子商務系統是使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 擴展網頁。 您必須在晚上以大型電腦的主產品清單更新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 產品資料表。 若要更新資料表，請以 Tab 分隔的格式儲存產品清單，並使用「大量插入」工作將資料直接複製到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表中。  
   
  為了確保高速資料複製，從來源檔案將資料搬移到資料表或檢視時，無法執行資料的轉換。  
   
-## 使用狀況的考量  
+## <a name="usage-considerations"></a>使用狀況的考量  
  使用「大量插入」工作之前，請考慮下列事項：  
   
 -   「大量插入」工作只能從文字檔將資料傳送到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表或檢視。 若要使用「大量插入」工作傳輸來自其他資料庫管理系統 (DBMS) 的資料，您必須從來源將資料匯出到文字檔，然後從文字檔將資料匯入到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表或檢視。  
@@ -37,14 +42,14 @@ caps.handback.revision: 61
   
 -   只有系統管理員 (sysadmin) 固定伺服器角色的成員才能執行包含「大量插入」工作的封裝。  
   
-## 使用交易的大量插入工作  
+## <a name="bulk-insert-task-with-transactions"></a>使用交易的大量插入工作  
  若未設定批次大小，則會將整個大量複製作業視為一項交易。 批次大小 **0** 表示會將資料插入一個批次中。 若有設定批次大小，則每一個批次即代表批次完成時的一筆認可交易。  
   
  「大量插入」工作的行為與交易相關，端視工作是否聯結封裝交易而定。 若「大量插入」工作並未聯結封裝交易，在嘗試下一個批次之前，會將每一個無錯誤的 (Error-free) 批次視為一個單位進行認可。 如果「大量插入」工作與封裝交易聯結，那麼工作結束時，無錯誤批次仍會保留在交易中。 這些批次是取決於封裝的認可或復原作業。  
   
  「大量插入」工作的錯誤不會自動復原已成功載入的批次；同樣地，如果工作成功，批次並不會自動認可。 認可和復原作業只會發生於回應封裝以及工作流程屬性設定的時候。  
   
-## 來源和目的地  
+## <a name="source-and-destination"></a>來源和目的地  
  當您指定文字來源檔的位置時，請考慮下列各項：  
   
 -   伺服器必須有權限，才能同時存取檔案和目的地資料庫。  
@@ -53,15 +58,15 @@ caps.handback.revision: 61
   
 -   「大量插入」工作載入的來源檔所在伺服器，可以和要插入資料的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫所在的伺服器相同，或位於遠端伺服器上。 如果檔案位於遠端伺服器上，則必須在路徑中指定使用「通用命名慣例」(UNC) 名稱的檔名。  
   
-## 效能最佳化  
+## <a name="performance-optimization"></a>效能最佳化  
  若要最佳化效能，請考慮下列各項：  
   
 -   如果文字檔與要插入資料的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫位於同一台電腦上，則由於資料並非在網路上移動，因此複製作業進行的速度更快。  
   
 -   「大量插入」工作不會記錄導致錯誤的資料列。 如果您必須擷取這項資訊，請使用資料流程元件的錯誤輸出擷取例外狀況檔案中造成錯誤的資料列。  
   
-## 大量插入工作上可用的自訂記錄項目  
- 下表列出「大量插入」工作的自訂記錄項目。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 記錄](../../integration-services/performance/integration-services-ssis-logging.md)和[自訂訊息以進行記錄](../../integration-services/performance/custom-messages-for-logging.md)。  
+## <a name="custom-log-entries-available-on-the-bulk-insert-task"></a>大量插入工作上可用的自訂記錄項目  
+ 下表列出「大量插入」工作的自訂記錄項目。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 記錄](../../integration-services/performance/integration-services-ssis-logging.md)。  
   
 |記錄項目|說明|  
 |---------------|-----------------|  
@@ -69,7 +74,7 @@ caps.handback.revision: 61
 |**BulkInsertTaskEnd**|指出大量插入已經完成。|  
 |**BulkInsertTaskInfos**|提供有關工作的描述性資訊。|  
   
-## 大量插入工作組態  
+## <a name="bulk-insert-task-configuration"></a>大量插入工作組態  
  您可以利用下列方式設定「大量插入」工作：  
   
 -   指定讓 OLE DB 連接管理員連接到目的地 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫，以及要插入資料的資料表或檢視。 「大量插入」工作只支援用於目的地資料庫的 OLE DB 連接。  
@@ -98,22 +103,22 @@ caps.handback.revision: 61
   
  如需有關如何在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中設定這些屬性的詳細資訊，請按下列主題：  
   
--   [設定工作或容器的屬性](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+-   [設定工作或容器的屬性](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
-### 大量插入工作的程式設計組態  
+### <a name="programmatic-configuration-of-the-bulk-insert-task"></a>大量插入工作的程式設計組態  
  如需有關以程式設計方式設定這些屬性的詳細資訊，請按下列主題：  
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.BulkInsertTask.BulkInsertTask>  
   
-## 相關工作  
- [設定工作或容器的屬性](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+## <a name="related-tasks"></a>相關工作  
+ [設定工作或容器的屬性](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
-## 相關內容  
+## <a name="related-content"></a>相關內容  
   
 -   support.microsoft.com 上的技術文件： [您可能會在啟用 UAC 的系統上收到「無法準備 SSIS 大量插入來進行資料插入」錯誤](http://go.microsoft.com/fwlink/?LinkId=233693)。  
   
 -   msdn.microsoft.com 上的技術文章： [資料載入效能指南](http://go.microsoft.com/fwlink/?LinkId=233700)。  
   
--   simple-talk.com 上的技術文件：[Using SQL Server Integration Services to Bulk Load Data](http://go.microsoft.com/fwlink/?LinkId=233701) (使用 SQL Server Integration Services 大量載入資料)。  
+-   simple-talk.com 上的技術文件： [Using SQL Server Integration Services to Bulk Load Data](http://go.microsoft.com/fwlink/?LinkId=233701)(使用 SQL Server Integration Services 大量載入資料)。  
   
   

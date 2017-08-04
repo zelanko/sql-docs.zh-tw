@@ -1,29 +1,34 @@
 ---
-title: "資料流程 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "輸出資料 [Integration Services]"
-  - "資料流程 [Integration Services], 元素"
-  - "輸入資料 [Integration Services]"
-  - "外部中繼資料 [Integration Services]"
-  - "資料流程 [Integration Services]"
-  - "錯誤 [Integration Services], 資料流程輸出"
+title: "資料流程 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- output data [Integration Services]
+- data flow [Integration Services], elements
+- input data [Integration Services]
+- external metadata [Integration Services]
+- data flow [Integration Services]
+- errors [Integration Services], data flow outputs
 ms.assetid: 7a50de3c-4ca0-4922-8028-fdddeb47e5b0
 caps.latest.revision: 70
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 70
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0a72cbbc25ba137e96ad792441ea7f30d1d0af14
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 資料流程
+# <a name="data-flow"></a>資料流程
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供三種不同類型的資料流程元件：來源、轉換與目的地。 來源從關聯式資料庫、檔案和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫中的資料表和檢視等資料存放區擷取資料。 轉換會修改、摘要並清除資料。 目的地則將資料載入資料存放區或建立記憶體中資料集。  
   
 > [!NOTE]  
@@ -31,7 +36,7 @@ caps.handback.revision: 70
   
  此外， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供將一個元件的輸出連接到另一個元件的輸入之路徑。 路徑會定義元件的順序，還能讓您將附註加入資料流程或檢視資料行的來源。  
   
- 您可透過將來源和目的地的輸出，連接到轉換和目的地的輸入，以連接資料流程元件。 在建構資料流程時，您通常會在加入第二個和後續元件至資料流程時連接這些元件。 在您連接元件之後，輸入資料行便可用於設定元件。 當沒有任何輸入資料行可使用時，您將需要在元件已連接到資料流程後完成該元件的組態。 如需詳細資訊，請參閱 [Integration Services 路徑](../../integration-services/data-flow/integration-services-paths.md) 和 [以路徑連接元件](../Topic/Connect%20Components%20with%20Paths.md)。  
+ 您可透過將來源和目的地的輸出，連接到轉換和目的地的輸入，以連接資料流程元件。 在建構資料流程時，您通常會在加入第二個和後續元件至資料流程時連接這些元件。 在您連接元件之後，輸入資料行便可用於設定元件。 當沒有任何輸入資料行可使用時，您將需要在元件已連接到資料流程後完成該元件的組態。 如需詳細資訊，請參閱 [Integration Services 路徑](../../integration-services/data-flow/integration-services-paths.md) 和 [以路徑連接元件](http://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8)。  
   
  下圖顯示了具有來源、一個輸入與一個輸出的轉換，以及目的地的資料流程。 除輸入資料行、輸出資料行和外部資料行之外，該圖還包含了輸入、輸出和錯誤輸出。  
   
@@ -166,7 +171,7 @@ caps.handback.revision: 70
  如需如何利用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity 獲致效能提升的示範，請參閱 [Microsoft Connector for Oracle by Attunity 的效能 (SQL Server 視影片)](http://go.microsoft.com/fwlink/?LinkID=210369)。  
   
 ## <a name="connection-managers"></a>連接管理員  
- 許多資料流程元件會連接到資料來源，您必須在封裝中加入元件所需的連接管理員，才能正確設定元件。 您可以在建構資料流程時，或是在開始建構資料流程之前，加入連接管理員。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 連接](../../integration-services/connection-manager/integration-services-ssis-connections.md)和[建立連接管理員](../Topic/Create%20Connection%20Managers.md)。  
+ 許多資料流程元件會連接到資料來源，您必須在封裝中加入元件所需的連接管理員，才能正確設定元件。 您可以在建構資料流程時，或是在開始建構資料流程之前，加入連接管理員。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 連接](../../integration-services/connection-manager/integration-services-ssis-connections.md)和[建立連接管理員](http://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)。  
   
 ## <a name="external-metadata"></a>外部中繼資料  
  當您使用 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師在封裝中建立資料流程時，來自來源和目的地的中繼資料會複製到來源和目的地的外部資料行，做為結構描述的快照集。 當 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 驗證封裝時，[ [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師] 會根據變更，比較此對照集與來源結構描述，或比較此對照集與目的地的結構描述，並公佈錯誤和警告。  
@@ -215,3 +220,4 @@ caps.handback.revision: 70
   
 ## <a name="related-content"></a>相關內容  
  technet.microsoft.com 上的影片： [Microsoft Connector for Oracle by Attunity 的效能 (SQL Server 影片)](http://go.microsoft.com/fwlink/?LinkID=210369)。  
+

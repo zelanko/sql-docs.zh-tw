@@ -1,36 +1,41 @@
 ---
-title: "資料設定檔檢視器 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "資料設定檔檢視器 [Integration Services]"
-  - "資料分析工作 [Integration Services], 輸出檢視器"
+title: "資料設定檔檢視器 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Data Profile Viewer [Integration Services]
+- Data Profiling task [Integration Services], output viewer
 ms.assetid: b9043428-ce26-45bb-910c-588d07579565
 caps.latest.revision: 26
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
+ms.openlocfilehash: 8f02bbe73421c1fbb1f929cef397cfebf749c0d8
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 資料設定檔檢視器
-  檢視和分析資料設定檔是資料分析程序中的下一個步驟。 您可以在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝內部執行「資料分析」工作並計算資料設定檔後，檢視這些設定檔。 如需如何設定和執行「資料分析」工作的詳細資訊，請參閱[資料分析工作的設定](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)。  
+# <a name="data-profile-viewer"></a>資料設定檔檢視器
+  檢視和分析資料設定檔是資料分析程序中的下一個步驟。 您可以在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝內部執行「資料分析」工作並計算資料設定檔後，檢視這些設定檔。 如需如何設定和執行「資料分析」工作的詳細資訊，請參閱 [資料分析工作的設定](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)。  
   
 > [!IMPORTANT]  
->  輸出檔可能包含您資料庫的相關敏感性資料，以及資料庫所包含的資料。 如需如何讓這個檔案更安全的相關建議，請參閱[對封裝使用之檔案的存取權](../../integration-services/security/access-to-files-used-by-packages.md)。  
+>  輸出檔可能包含您資料庫的相關敏感性資料，以及資料庫所包含的資料。 如需如何讓這個檔案更安全的相關建議，請參閱 [對封裝使用之檔案的存取權](../../integration-services/security/security-overview-integration-services.md#files)。  
   
-## 資料設定檔  
+## <a name="data-profiles"></a>資料設定檔  
  若要檢視資料設定檔，您可以設定「資料分析」工作，將其輸出傳送到檔案，然後使用獨立的「資料設定檔檢視器」即可。 若要開啟資料設定檔檢視器，請執行下列其中一項操作。  
   
 -   以滑鼠右鍵按一下 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中的 [資料分析] 工作，然後按一下 [編輯]。 在 [資料分析工作編輯器] 的 [一般] 頁面上按一下 [開啟設定檔檢視器]。  
   
--   在 *\<磁碟機>*:\Program Files (x86) | Program Files\Microsoft SQL Server\110\DTS\Binn 資料夾中，執行 DataProfileViewer.exe。  
+-   在資料夾中， *\<磁碟機 >*: \Program Files (x86) |程式 Files\Microsoft SQL Server\110\DTS\Binn 中，執行 DataProfileViewer.exe。  
   
  此檢視器可使用多個窗格，顯示您所要求與計算之結果的設定檔以及選擇性的詳細資料與向下鑽研能力：  
   
@@ -61,6 +66,6 @@ caps.handback.revision: 26
 >   
 >  如果您從不是最近建立的輸出檔向下鑽研，則向下鑽研查詢傳回的資料列集可能與計算原始輸出的資料列集不同。  
   
- 如需資料設定檔檢視器之使用者介面的詳細資訊，請參閱[資料設定檔檢視器 F1 說明](../../integration-services/control-flow/data-profile-viewer-f1-help.md)。  
+ 如需資料設定檔檢視器之使用者介面的詳細資訊，請參閱 [資料設定檔檢視器 F1 說明](../../integration-services/control-flow/data-profile-viewer-f1-help.md)。  
   
   

@@ -1,24 +1,29 @@
 ---
-title: "DatabaseToConnect 元素 (DTA) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "XML"
-helpviewer_keywords: 
-  - "DatabaseToConnect 元素"
+title: "DatabaseToConnect 元素 (DTA) |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- XML
+helpviewer_keywords:
+- DatabaseToConnect element
 ms.assetid: 65153a66-3aee-4429-99b7-0816ac23c285
 caps.latest.revision: 12
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 94746d3007587223ba1b2ae6a3868ce3a013bafd
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
 # DatabaseToConnect 元素 (DTA)
   指定微調工作負載時，Database Engine Tuning Advisor 所連接的第一個資料庫。  
@@ -44,7 +49,7 @@ caps.handback.revision: 12
   
 |關聯性|元素|  
 |------------------|--------------|  
-|**父元素**|[TuningOptions 元素 &#40;DTA&#41;](../../tools/dta/tuningoptions-element-dta.md)|  
+|**父元素**|[TuningOptions 元素 &#40; Dta& &#41;](../../tools/dta/tuningoptions-element-dta.md)|  
 |**子元素**|無|  
   
 ## 備註  

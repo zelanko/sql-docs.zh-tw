@@ -1,26 +1,31 @@
 ---
-title: "建立及執行實體同步關係 (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "建立及執行實體同步關係 (Master Data Services) |Microsoft 文件"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 0ddceab4-d2b3-4bc1-bd9c-6b852200b414
 caps.latest.revision: 6
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f9efe68604f73df42930c5b3eb348e5c2b3e7965
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 建立及執行實體同步關係 (Master Data Services)
+# <a name="create-and-execute-an-entity-sync-relationship-master-data-services"></a>建立及執行實體同步關係 (Master Data Services)
   實體同步是實體版本間單向且可重複的同步處理。 它提供不同模型間共用實體資料的方法。  
   
-## 必要條件  
+## <a name="prerequisites"></a>必要條件  
  建立實體同步關係的必要條件：  
   
 -   您必須擁有存取系統管理功能區域的權限。 如需詳細資訊，請參閱[功能區域權限 &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)。  
@@ -89,12 +94,12 @@ caps.handback.revision: 6
   
 4.  按一下 **[執行]**。  
   
-## 同步關係資訊  
+## <a name="sync-relationship-information"></a>同步關係資訊  
  對於每個建立的同步關係，會新增含有十個資料行的資料列到方格。 下表描述該資料行。  
   
 |資料行|說明|  
 |------------|-----------------|  
-|狀態|同步關係狀態。<br /><br /> 當您按一下 [儲存] 或執行同步關係時，會顯示 ![Icon for updating status](../master-data-services/media/mds-statusicon-updating.png "Icon for updating status") 影像，指出同步關係正在更新。<br /><br /> 如果在建立、編輯或執行同步關係時發生錯誤，會顯示 ![Icon for error status](../master-data-services/media/mds-statusicon-error.png "Icon for error status") 影像。<br /><br /> 否則，狀態為正常並顯示 ![Icon for OK status](../master-data-services/media/mds-statusicon-ok.png "Icon for OK status") 影像。|  
+|狀態|同步關係狀態。<br /><br /> 當您按一下**儲存**或執行同步處理關聯性![更新狀態的圖示](../master-data-services/media/mds-statusicon-updating.png "更新狀態的圖示")影像隨即顯示，表示正在更新同步處理關聯性。<br /><br /> 如果發生錯誤時建立、 編輯或執行同步關係，![的錯誤狀態的圖示](../master-data-services/media/mds-statusicon-error.png "的錯誤狀態的圖示")影像隨即顯示。<br /><br /> 否則，狀態為正常並![[確定] 狀態的圖示](../master-data-services/media/mds-statusicon-ok.png "[確定] 狀態的圖示")影像隨即顯示。|  
 |來源模型|來源模型名稱。|  
 |來源版本|來源版本名稱。|  
 |來源實體|來源實體名稱。|  
@@ -117,7 +122,7 @@ caps.handback.revision: 6
   
 -   **於**：上次更新同步的日期與時間。  
   
-## 後續步驟  
+## <a name="next-steps"></a>後續步驟  
  [編輯和刪除實體同步關係 &#40;Master Data Services&#41;](../master-data-services/edit-and-delete-an-entity-sync-relationship-master-data-services.md)  
   
   

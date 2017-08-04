@@ -1,29 +1,34 @@
 ---
-title: "建立屬性群組 (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "屬性群組 [Master Data Services], 建立"
-  - "建立屬性群組 [Master Data Services]"
+title: "建立屬性群組 (Master Data Services) |Microsoft 文件"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- attribute groups [Master Data Services], creating
+- creating attribute groups [Master Data Services]
 ms.assetid: 798c325e-e8d8-412a-b02e-118f2741d1c7
 caps.latest.revision: 7
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: cd89cee45f9f0973764a2b4f4dc32f32abc6d1c9
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 建立屬性群組 (Master Data Services)
+# <a name="create-an-attribute-group-master-data-services"></a>建立屬性群組 (Master Data Services)
   當您想要在總管方格的個別索引標籤上顯示屬性時，可以在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中建立屬性群組。  
   
-## 必要條件  
+## <a name="prerequisites"></a>必要條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  
@@ -32,7 +37,7 @@ caps.handback.revision: 7
   
 -   至少有一個屬性必須存在。 如需詳細資訊，請參閱[建立文字屬性 &#40;Master Data Services&#41;](../master-data-services/create-a-text-attribute-master-data-services.md)。  
   
-### 若要建立屬性群組  
+### <a name="to-create-an-attribute-group"></a>若要建立屬性群組  
   
 1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]**。  
   
@@ -64,16 +69,17 @@ caps.handback.revision: 7
   
 12. 按一下 **[儲存]**。  
   
-## 後續步驟  
+## <a name="next-steps"></a>後續步驟  
   
 -   [讓使用者看到屬性群組 &#40;Master Data Services&#41;](../master-data-services/make-an-attribute-group-visible-to-users-master-data-services.md)  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [屬性群組 &#40;Master Data Services&#41;](../master-data-services/attribute-groups-master-data-services.md)   
- [屬性 &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)   
- [變更屬性群組名稱 &#40;Master Data Services&#41;](../master-data-services/change-an-attribute-group-name-master-data-services.md)   
- [刪除屬性群組 &#40;Master Data Services&#41;](../master-data-services/delete-an-attribute-group-master-data-services.md)   
+ [屬性 &#40;Master Data services&#41;](../master-data-services/attributes-master-data-services.md)   
+ [變更屬性群組名稱 &#40;Master Data services&#41;](../master-data-services/change-an-attribute-group-name-master-data-services.md)   
+ [刪除屬性群組 &#40;Master Data services&#41;](../master-data-services/delete-an-attribute-group-master-data-services.md)   
  [分葉權限 &#40;Master Data Services&#41;](../master-data-services/leaf-permissions-master-data-services.md)   
- [合併的權限 &#40;Master Data Services&#41;](../Topic/Consolidated%20Permissions%20\(Master%20Data%20Services\).md)  
+   
   
   
+

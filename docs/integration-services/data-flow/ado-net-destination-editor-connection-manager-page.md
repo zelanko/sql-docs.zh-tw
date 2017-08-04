@@ -1,24 +1,29 @@
 ---
-title: "ADO NET 目的地編輯器 (連線管理員頁面) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.adonetdest.connection.f1"
+title: "ADO NET 目的地編輯器 （連接管理員頁面） |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.adonetdest.connection.f1
 ms.assetid: a3b11286-32c8-40e1-8ae7-090e2590345a
 caps.latest.revision: 31
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
+ms.openlocfilehash: 16ed4103735f389959531b92fad81884fc583a5b
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# ADO NET 目的地編輯器 (連線管理員頁面)
+# <a name="ado-net-destination-editor-connection-manager-page"></a>ADO NET 目的地編輯器 (連線管理員頁面)
   使用 [ADO NET 目的地編輯器] 對話方塊的 [連線管理員] 頁面，即可選取目的地的 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 連線。 這個頁面也可以讓您從資料庫中選取資料表或檢視。  
   
  若要深入了解 ADO NET 目的地，請參閱＜ [ADO NET Destination](../../integration-services/data-flow/ado-net-destination.md)＞。  
@@ -31,8 +36,8 @@ caps.handback.revision: 31
   
 3.  在 [ADO NET 目的地編輯器] 中，按一下 [連線管理員]。  
   
-## 靜態選項  
- **[ODBC 目的地編輯器]**  
+## <a name="static-options"></a>靜態選項  
+ **連線管理員**  
  從清單中選取現有的連線管理員，或按一下 [新增] 來建立新的連線。  
   
  **新增**  
@@ -57,20 +62,25 @@ caps.handback.revision: 31
   
  您可以使用 .NET Data Provider for SQL Server (SqlClient) 連接到 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]。  
   
- 如果您選取 [盡可能使用大量插入]，並將 [錯誤] 選項設定為 [重新導向資料列]，目的地重新導向至錯誤輸出的資料批次可能會包含良好的資料列。如需處理大量作業中錯誤的詳細資訊，請參閱[處理資料中的錯誤](../../integration-services/data-flow/error-handling-in-data.md)。 如需 [錯誤] 選項的詳細資訊，請參閱 [ADO NET 目的地編輯器 &#40;錯誤輸出頁面&#41;](../../integration-services/data-flow/ado-net-destination-editor-error-output-page.md)。  
+ 如果您選取 [盡可能使用大量插入]，並將 [錯誤] 選項設定為 [重新導向資料列]，目的地重新導向至錯誤輸出的資料批次可能會包含良好的資料列。如需處理大量作業中錯誤的詳細資訊，請參閱[處理資料中的錯誤](../../integration-services/data-flow/error-handling-in-data.md)。 如需有關**錯誤**選項，請參閱[ADO NET 目的地編輯器 &#40;錯誤輸出頁面 &#41;](../../integration-services/data-flow/ado-net-destination-editor-error-output-page.md).  
   
 > [!NOTE]  
->  如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 Sybase 來源資料表包含識別欄位，您就必須使用「執行 SQL」工作，在 ADO NET 目的地前後執行 SET IDENTITY_INSERT 陳述式。 識別欄位屬性會指定資料行的累加值。 SET IDENTITY_INSERT 陳述式可讓明確值插入識別欄位中。 若要在相同的資料庫連接上執行 CREATE TABLE 和 SET IDENTITY 陳述式，請將 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 連線管理員的 **RetainSameConnection** 屬性設為 [True]。 此外，您可以針對「執行 SQL」工作和 ADO NET 目的地使用相同的 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 連線管理員。  
+>  如果 SQL Server 或 Sybase 來源資料表包含識別欄位，您必須使用執行 SQL 」 工作，才能啟用 IDENTITY_INSERT ADO NET 目的地之前以及將它一次之後停用。 （identity 資料行屬性會指定資料行的累加值。 SET IDENTITY_INSERT 陳述式可讓來源資料表中明確值插入至目的地資料表中的識別欄位。）  
 >   
->  如需詳細資訊，請參閱 [SET IDENTITY_INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/set-identity-insert-transact-sql.md) 和 [IDENTITY &#40;屬性&#41; &#40;Transact-SQL&#41;](../Topic/IDENTITY%20\(Property\)%20\(Transact-SQL\).md)。  
+>   若要執行 SET IDENTITY_INSERT 陳述式和資料載入成功，您必須執行下列動作。
+>       1. 針對執行 SQL 工作和 ADO.NET 目的地，請使用相同的 ADO.NET 連接管理員。
+>       2. 在 連接管理員上設定**RetainSameConnection**屬性和**MultipleActiveResultSets**屬性設定為 True。
+>       3. 在 ADO.NET 目的地中，設定**UseBulkInsertWhenPossible**屬性設定為 False。
+>
+>  如需詳細資訊，請參閱 [SET IDENTITY_INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/set-identity-insert-transact-sql.md) 和 [IDENTITY &#40;屬性&#41; &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql-identity-property.md)。  
   
-## 外部資源  
- sqlcat.com 上的技術文件：[快速將資料載入 Windows Azure SQL 資料庫的方式](http://go.microsoft.com/fwlink/?LinkId=244333)  
+## <a name="external-resources"></a>外部資源  
+ sqlcat.com 上的技術文件： [快速將資料載入 Windows Azure SQL 資料庫的方式](http://go.microsoft.com/fwlink/?LinkId=244333)  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [ADO NET 目的地編輯器 &#40;對應頁面&#41;](../../integration-services/data-flow/ado-net-destination-editor-mappings-page.md)   
- [ADO NET 目的地編輯器 &#40;錯誤輸出頁面&#41;](../../integration-services/data-flow/ado-net-destination-editor-error-output-page.md)   
- [ADO.NET 連線管理員](../../integration-services/connection-manager/ado-net-connection-manager.md)   
+ [ADO NET 目的地編輯器 &#40;錯誤輸出頁面 &#41;](../../integration-services/data-flow/ado-net-destination-editor-error-output-page.md)   
+ [ADO.NET 連接管理員](../../integration-services/connection-manager/ado-net-connection-manager.md)   
  [執行 SQL 工作](../../integration-services/control-flow/execute-sql-task.md)  
   
   

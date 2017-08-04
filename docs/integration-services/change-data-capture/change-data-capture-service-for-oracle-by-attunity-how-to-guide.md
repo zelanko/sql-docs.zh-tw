@@ -1,25 +1,30 @@
 ---
-title: "Attunity Oracle Change Data Capture (CDC) 服務使用說明指南 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Change Data Capture Service for Oracle by Attunity 如何指南 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f50178e7-6d9a-45f9-bfce-61260aa882c1
 caps.latest.revision: 6
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d6bd845f244c0ed7484d91961502bfa63879544b
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# Attunity Oracle Change Data Capture (CDC) 服務使用說明指南
+# <a name="change-data-capture-service-for-oracle-by-attunity-how-to-guide"></a>Attunity Oracle Change Data Capture (CDC) 服務使用說明指南
   本章節描述如何在 CDC 服務組態主控台中執行工作。  
   
-## 了解如何使用適用於 Oracle 服務組態 UI 的 CDC 服務  
+## <a name="learn-how-to-use-the-cdc-service-for-oracle-service-configuration-ui"></a>了解如何使用適用於 Oracle 服務組態 UI 的 CDC 服務  
   
 -   [如何建立及編輯 CDC 服務](../../integration-services/change-data-capture/how-to-create-and-edit-a-cdc-service.md)  
   

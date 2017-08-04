@@ -1,22 +1,27 @@
 ---
-title: "建立交易資料的 InfoCube | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "建立交易資料的 InfoCube |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 673cea01-a260-4fce-a1a0-f73839289805
 caps.latest.revision: 10
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3abae6f0ecf09b1b0156bedfb584570ed7bb45cd
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 建立交易資料的 InfoCube
+# <a name="create-infocube-for-transaction-data"></a>建立交易資料的 InfoCube
   使用 [建立交易資料的 InfoCube] 對話方塊可以在 SAP Netweaver BW 系統中建立交易資料的新 InfoCube。  
   
  您可以從 [SAP BW 目的地編輯器] 的 [連線管理員] 頁面開啟 [建立交易資料的 InfoCube] 對話方塊。 若要深入了解 SAP BW 目的地，請參閱 [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md)。  
@@ -28,13 +33,13 @@ caps.handback.revision: 10
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，開啟包含 SAP BW 目的地的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 套件。  
   
-2.  在 [資料流程] 索引標籤中，按兩下 SAP BW 目的地。  
+2.  在 [資料流程] 索引標籤上，按兩下 SAP BW 目的地。  
   
 3.  在 **[SAP BW 目的地編輯器]**中，按一下 **[連接管理員]** 開啟編輯器的 **[連接管理員]** 頁面。  
   
 4.  在 [連線管理員] 頁面的 [建立 SAP BW 物件] 群組方塊中，選取 [InfoCube]，然後按一下 [建立]。  
   
-## 一般選項  
+## <a name="general-options"></a>一般選項  
  **InfoCube 名稱**  
  輸入新 InfoCube 的名稱。  
   
@@ -44,7 +49,7 @@ caps.handback.revision: 10
  **儲存並啟用**  
  儲存並啟用新的 InfoCube。  
   
-## InfoCube 傳送結構選項  
+## <a name="infocube-transfer-structure-options"></a>InfoCube 傳送結構選項  
  InfoCube 傳送結構區段可讓您將資料流程資料行與 InfoObject 建立關聯。  
   
  **PipelineElement**  
@@ -79,7 +84,7 @@ caps.handback.revision: 10
  **Iobject - 移除**  
  移除 InfoObject 與目前資料列的資料流程資料行之間的關聯。 若要移除此關聯，請按一下 [移除]。  
   
-## 請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [Microsoft Connector for SAP BW F1 說明](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   

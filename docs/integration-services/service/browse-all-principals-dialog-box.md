@@ -1,24 +1,29 @@
 ---
-title: "瀏覽所有主體對話方塊 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.ssis.ssms.browseprincipals.f1"
+title: "瀏覽所有主體對話方塊 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.ssis.ssms.browseprincipals.f1
 ms.assetid: f11d2c5e-ee05-45f3-8dc2-0feb99b2f76f
 caps.latest.revision: 11
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ebfc25e2f1eae0c926f5597b4c330d8b8b21b93e
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 瀏覽所有主體對話方塊
+# <a name="browse-all-principals-dialog-box"></a>瀏覽所有主體對話方塊
   使用 **[瀏覽所有主體]** 對話方塊選取資料庫主體，以變更主體愛所選專案上的權限，或所選資料夾中包含之所有專案上的權限。  
   
  **您想要做什麼事？**  

@@ -1,29 +1,34 @@
 ---
-title: "建立文字屬性 (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "屬性 [Master Data Services], 建立文字屬性"
-  - "建立文字屬性 [Master Data Services]"
+title: "建立文字屬性 (Master Data Services) |Microsoft 文件"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- attributes [Master Data Services], creating text attributes
+- creating text attributes [Master Data Services]
 ms.assetid: cd8b57de-364d-42a3-9273-c1c6b992bb40
 caps.latest.revision: 8
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cb8300268810dd6389c6744b126da6f7ff460ffa
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 建立文字屬性 (Master Data Services)
-  當您想要讓使用者輸入文字字串做為屬性值時，可以在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中建立文字屬性。  
+# <a name="create-a-text-attribute-master-data-services"></a>建立文字屬性 (Master Data Services)
+  當您想要讓使用者輸入文字字串做為屬性值時，可以在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中建立文字屬性。  
   
-## 必要條件  
+## <a name="prerequisites"></a>必要條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  
@@ -32,12 +37,12 @@ caps.handback.revision: 8
   
 -   建立屬性的實體必須存在。 如需詳細資訊，請參閱[建立實體 &#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md)。  
   
-## 屬性資訊  
+## <a name="attribute-information"></a>屬性資訊  
  針對每個建立的屬性，會將含有七個資料行的資料列加入方格中。 下表描述該資料行。  
   
 |資料行|說明|  
 |------------|-----------------|  
-|狀態|屬性狀態。<br /><br /> 當您按一下 [儲存]，會顯示 ![Icon for updating status](../master-data-services/media/mds-statusicon-updating.png "Icon for updating status") 影像，表示正在更新屬性。<br /><br /> 如果建立或編輯屬性時發生錯誤，則會顯示 ![Icon for error status](../master-data-services/media/mds-statusicon-error.png "Icon for error status") 影像。<br /><br /> 否則，狀態為正常並顯示 ![Icon for OK status](../master-data-services/media/mds-statusicon-ok.png "Icon for OK status") 影像。|  
+|狀態|屬性狀態。<br /><br /> 當您按一下 [儲存]![更新狀態的圖示](../master-data-services/media/mds-statusicon-updating.png "更新狀態的圖示")影像隨即顯示，指出正在更新屬性。<br /><br /> 如果發生錯誤時建立或編輯屬性，![的錯誤狀態的圖示](../master-data-services/media/mds-statusicon-error.png "的錯誤狀態的圖示")影像隨即顯示。<br /><br /> 否則，狀態為正常並![[確定] 狀態的圖示](../master-data-services/media/mds-statusicon-ok.png "[確定] 狀態的圖示")影像隨即顯示。|  
 |名稱|屬性名稱。|  
 |顯示名稱|屬性的顯示名稱。|  
 |說明|屬性描述。|  
@@ -55,7 +60,7 @@ caps.handback.revision: 8
   
 -   **時間**：上次更新屬性的日期與時間。  
   
-### 若要建立文字屬性  
+### <a name="to-create-a-text-attribute"></a>若要建立文字屬性  
   
 1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]**。  
   
@@ -89,10 +94,10 @@ caps.handback.revision: 8
   
 13. 按一下 **[儲存]**。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [屬性 &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)   
- [變更屬性名稱和資料類型 &#40;Master Data Services&#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
- [建立網域屬性 &#40;Master Data Services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)   
+ [變更屬性名稱和資料類型 &#40;Master Data services&#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
+ [建立網域屬性 &#40;Master Data services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)   
  [建立檔案屬性 &#40;Master Data Services&#41;](../master-data-services/create-a-file-attribute-master-data-services.md)  
   
   

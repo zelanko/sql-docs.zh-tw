@@ -1,33 +1,38 @@
 ---
-title: "建立 Master Data Services 資料庫與 Web 應用程式的關聯 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "建立關聯的 Master Data Services 資料庫與 Web 應用程式 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ccb25672-f71d-4135-b548-f50eb45d8fa5
 caps.latest.revision: 9
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 729f1dab03952ff2986973ec387b10a8f14a965f
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 建立 Master Data Services 資料庫與 Web 應用程式的關聯
+# <a name="associate-a-master-data-services-database-and-web-application"></a>建立 Master Data Services 資料庫與 Web 應用程式的關聯
   將 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式與 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 資料庫產生關聯，以指定要用於 Web 作業的資料庫。  
   
-## 必要條件  
+## <a name="prerequisites"></a>必要條件  
   
--   [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 必須安裝在本機電腦上。 如需詳細資訊，請參閱[安裝 Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)。  
+-   [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]必須安裝在本機電腦上。 如需詳細資訊，請參閱 [安裝 Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)。  
   
 -   必須存在本機 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式。 如需詳細資訊，請參閱[建立主資料管理員 Web 應用程式 &#40;Master Data Services&#41;](../../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)。  
   
--   本機或遠端 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 資料庫必須存在。 如需詳細資訊，請參閱[建立 Master Data Services 資料庫](../../master-data-services/install-windows/create-a-master-data-services-database.md)。  
+-   本機或遠端 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 資料庫必須存在。 如需詳細資訊，請參閱 [建立 Master Data Services 資料庫](../../master-data-services/install-windows/create-a-master-data-services-database.md)。  
   
-### 將 Master Data Services 資料庫與 Web 應用程式產生關聯  
+### <a name="to-associate-a-master-data-services-database-and-web-application"></a>將 Master Data Services 資料庫與 Web 應用程式產生關聯  
   
 1.  開啟 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]。  
   
@@ -45,14 +50,14 @@ caps.handback.revision: 9
   
 8.  確認 [將應用程式與資料庫產生關聯] 底下的執行個體和資料庫資訊都正確無誤，然後按一下 [套用]。  
   
-## 後續步驟  
+## <a name="next-steps"></a>後續步驟  
   
--   建立 Web 應用程式時，會自動啟用對 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Web 服務的程式設計存取。 為了讓開發人員可存取服務中繼資料，輕鬆地為程式設計存取產生 Proxy 類別，啟用中繼資料發佈。 如需詳細資訊，請參閱[建立主資料管理員 Web 服務 Proxy 類別](../../master-data-services/develop/create-master-data-manager-web-service-proxy-classes.md)。  
+-   建立 Web 應用程式時，會自動啟用對 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Web 服務的程式設計存取。 為了讓開發人員可存取服務中繼資料，輕鬆地為程式設計存取產生 Proxy 類別，啟用中繼資料發佈。 如需詳細資訊，請參閱 [建立主資料管理員 Web 服務 Proxy 類別](../../master-data-services/develop/create-master-data-manager-web-service-proxy-classes.md)。  
   
 -   將使用者和群組加入至 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]。 如果沒有使用者或群組已獲授權存取 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]，您必須使用 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 系統管理員認證來開啟 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]。 如需詳細資訊，請參閱 [Administrators &#40;Master Data Services&#41;](../../master-data-services/administrators-master-data-services.md) (管理員 (Master Data Services)) 和 [Users and Groups &#40;Master Data Services&#41;](../../master-data-services/users-and-groups-master-data-services.md) (使用者和群組 (Master Data Services))。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [安裝 Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)   
- [Web 組態頁面 &#40;Master Data Services 組態管理員&#41;](../../master-data-services/web-configuration-page-master-data-services-configuration-manager.md)  
+ [Web 組態頁面 &#40;Master Data Services 組態管理員 &#41;](../../master-data-services/web-configuration-page-master-data-services-configuration-manager.md)  
   
   

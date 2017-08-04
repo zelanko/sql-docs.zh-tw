@@ -1,33 +1,38 @@
 ---
-title: "將屬性加入至變更追蹤群組 (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "變更追蹤群組 [Master Data Services]"
-  - "屬性 [Master Data Services], 變更追蹤群組"
-  - "變更追蹤群組, [Master Data Services], 新增屬性"
+title: "將屬性加入至變更追蹤群組 (Master Data Services) |Microsoft 文件"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- change tracking groups [Master Data Services]
+- attributes [Master Data Services], change tracking groups
+- change tracking groups [Master Data Services], adding attributes
 ms.assetid: e153eb5f-70ca-4c6f-89d8-1f937ed3917d
 caps.latest.revision: 7
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0f0d90b83014cab277a0289a972b18e7d0ac9253
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 將屬性加入至變更追蹤群組 (Master Data Services)
+# <a name="add-attributes-to-a-change-tracking-group-master-data-services"></a>將屬性加入至變更追蹤群組 (Master Data Services)
   當您想要追蹤屬性值變更時，可以在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中將屬性新增至變更追蹤群組。  
   
 > [!NOTE]  
->  將屬性加入至變更追蹤群組之後，當屬性值變更時，[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫中的屬性會標示為已變更。 建立商務規則，以根據變更來執行動作。  
+>  將屬性加入至變更追蹤群組之後，當屬性值變更時， [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫中的屬性會標示為已變更。 建立商務規則，以根據變更來執行動作。  
   
-## 必要條件  
+## <a name="prerequisites"></a>必要條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  
@@ -36,7 +41,7 @@ caps.handback.revision: 7
   
 -   屬性必須存在，才能加入至變更追蹤群組。 如需詳細資訊，請參閱[建立文字屬性 &#40;Master Data Services&#41;](../master-data-services/create-a-text-attribute-master-data-services.md)。  
   
-### 若要將屬性加入至變更追蹤群組  
+### <a name="to-add-attributes-to-a-change-tracking-group"></a>若要將屬性加入至變更追蹤群組  
   
 1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]**。  
   
@@ -66,12 +71,12 @@ caps.handback.revision: 7
   
 10. 重複此程序，加入要包含在群組中的所有屬性。 對群組中的每個屬性，使用相同的變更追蹤群組編號。  
   
-## 後續步驟  
+## <a name="next-steps"></a>後續步驟  
   
--   [根據屬性值變更來起始動作 &#40;Master Data Services&#41;](../master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)  
+-   [根據屬性值的變更 &#40; 起始動作Master Data services&#41;](../master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)  
   
-## 另請參閱  
- [建立文字屬性 &#40;Master Data Services&#41;](../master-data-services/create-a-text-attribute-master-data-services.md)   
- [建立網域屬性 &#40;Master Data Services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)  
+## <a name="see-also"></a>另請參閱  
+ [建立文字屬性 &#40;Master Data services&#41;](../master-data-services/create-a-text-attribute-master-data-services.md)   
+ [建立網域屬性 &#40;Master Data services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)  
   
   

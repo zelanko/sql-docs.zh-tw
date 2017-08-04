@@ -1,22 +1,27 @@
 ---
-title: "建立主資料管理員 Web 應用程式 (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "建立主資料管理員 Web 應用程式 (Master Data Services) |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 241d46d7-8008-47f6-bebd-0dfff1cc856a
 caps.latest.revision: 8
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9f2371c46e3eb0140c26357070e39a2f16d2d8f7
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 建立主資料管理員 Web 應用程式 (Master Data Services)
+# <a name="create-a-master-data-manager-web-application-master-data-services"></a>建立主資料管理員 Web 應用程式 (Master Data Services)
   [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式提供了一個介面，可讓使用者處理主資料並且讓管理員設定及管理 MDS。  
   
  網站中一定要包含 Web 應用程式。 若要建立 Web 應用程式，您必須：  
@@ -29,19 +34,19 @@ caps.handback.revision: 8
   
  建立 Web 應用程式之後，將它與 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 資料庫產生關聯。  
   
-## 必要條件  
+## <a name="prerequisites"></a>必要條件  
   
 -   如需主控此 Web 應用程式之電腦需求的資訊，請參閱 [Web 應用程式需求 &#40;Master Data Services&#41;](../../master-data-services/install-windows/web-application-requirements-master-data-services.md)。  
   
-## 在新網站上建立主資料管理員 Web 應用程式  
+## <a name="to-create-a-master-data-manager-web-application-in-a-new-website"></a>在新網站上建立主資料管理員 Web 應用程式  
  當您建立新網站時，根 Web 應用程式會是 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式。 此 Web 應用程式也會加入至新的應用程式集區。  
   
 > [!NOTE]  
 >  如果您依照此程序進行，將無法指定 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式的虛擬路徑和別名。 如果要指定 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]的虛擬路徑及別名，則必須在尚未設定為 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式的現有網站上建立 Web 應用程式。  
   
- 此外，[!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]只支援建立具有 HTTP 繫結的網站。 若要加入 HTTPS 繫結，請在 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]中建立新的網站和應用程式，然後參閱[保護主資料管理員 Web 應用程式](../../master-data-services/install-windows/secure-a-master-data-manager-web-application.md)取得詳細資訊。  
+ 此外， [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 只支援建立具有 HTTP 繫結的網站。 若要加入 HTTPS 繫結，請在 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 中建立新的網站和應用程式，然後參閱 [保護主資料管理員 Web 應用程式](../../master-data-services/install-windows/secure-a-master-data-manager-web-application.md) 取得詳細資訊。  
   
-#### 在新網站上建立主資料管理員 Web 應用程式  
+#### <a name="to-create-a-master-data-manager-web-application-in-a-new-website"></a>在新網站上建立主資料管理員 Web 應用程式  
   
 1.  開啟 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]。  
   
@@ -53,10 +58,10 @@ caps.handback.revision: 8
   
 5.  按一下 **[確定]**。  
   
-## 在現有網站上建立主資料管理員 Web 應用程式  
+## <a name="to-create-a-master-data-manager-web-application-in-an-existing-website"></a>在現有網站上建立主資料管理員 Web 應用程式  
  當您在現有網站上建立 Web 應用程式時，可以選擇 Web 應用程式的虛擬路徑及別名。 此 Web 應用程式會加入至新的應用程式集區。  
   
-#### 在現有網站上建立主資料管理員 Web 應用程式  
+#### <a name="to-create-a-master-data-manager-web-application-in-an-existing-website"></a>在現有網站上建立主資料管理員 Web 應用程式  
   
 1.  開啟 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]。  
   
@@ -70,13 +75,13 @@ caps.handback.revision: 8
   
 6.  按一下 **[確定]**。  
   
-## 後續步驟  
+## <a name="next-steps"></a>後續步驟  
   
--   將此 Web 應用程式關聯至 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 資料庫。 如需詳細資訊，請參閱[將 Master Data Services 資料庫與 Web 應用程式產生關聯](../../master-data-services/install-windows/associate-a-master-data-services-database-and-web-application.md)。  
+-   將此 Web 應用程式關聯至 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 資料庫。 如需詳細資訊，請參閱 [將 Master Data Services 資料庫與 Web 應用程式產生關聯](../../master-data-services/install-windows/associate-a-master-data-services-database-and-web-application.md)。  
   
 -   如果要使用安全通訊端層 (SSL) 加密內容，可以選擇將主控 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式的網站設定成使用 HTTPS 繫結。 您必須使用 Internet Information Services (IIS) 工具 (如 IIS 管理員)，才可設定 Web 伺服器的伺服器憑證，以及設定 HTTPS 繫結與網站的 SSL 設定。 如需詳細資訊，請參閱 [Secure a Master Data Manager Web Application](../../master-data-services/install-windows/secure-a-master-data-manager-web-application.md)。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [安裝 Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)  
   
   

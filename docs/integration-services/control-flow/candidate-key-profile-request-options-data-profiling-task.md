@@ -1,32 +1,37 @@
 ---
-title: "候選索引鍵設定檔要求選項 (資料分析工作) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "資料分析工作編輯器"
+title: "候選索引鍵設定檔要求選項 （資料分析工作） |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Data Profiling Task Editor
 ms.assetid: 8632dbc4-4394-4dc7-b19c-f9adeb21ba52
 caps.latest.revision: 26
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c2a94d4e37ee6d120b3a065052313d5a00f37059
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 候選索引鍵設定檔要求選項 (資料分析工作)
+# <a name="candidate-key-profile-request-options-data-profiling-task"></a>候選索引鍵設定檔要求選項 (資料分析工作)
   您可以使用 [設定檔要求] 頁面的 [要求屬性] 窗格，針對要求窗格中選取的 [候選索引鍵設定檔要求] 設定選項。 候選索引鍵設定檔會報告資料行或資料行集合是否為選取之資料表的索引鍵或近似索引鍵。 這個設定檔也可協助您識別資料中的問題，例如潛在索引鍵資料行中重複的值。  
   
 > [!NOTE]  
->  本主題所描述的選項會顯示在 **[資料分析工作編輯器]** 的 **[設定檔要求]**頁面上。 如需編輯器之這個頁面的詳細資訊，請參閱[資料分析工作編輯器 &#40;設定檔要求頁面&#41;](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md)。  
+>  本主題所描述的選項會顯示在 **[資料分析工作編輯器]** 的 **[設定檔要求]**頁面上。 如需此編輯器頁面的詳細資訊，請參閱[資料分析工作編輯器 &#40;設定檔要求頁面&#41;](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md)。  
   
- 如需如何使用資料分析工作的詳細資訊，請參閱[資料分析工作的設定](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)。 如需如何使用資料設定檔檢視器來分析資料分析工作輸出的詳細資訊，請參閱[資料設定檔檢視器](../../integration-services/control-flow/data-profile-viewer.md)。  
+ 如需如何使用資料分析工作的詳細資訊，請參閱[資料分析工作的設定](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)。 如需如何使用資料設定檔檢視器來分析資料分析工作輸出的詳細資訊，請參閱 [資料設定檔檢視器](../../integration-services/control-flow/data-profile-viewer.md)。  
   
-## 了解 KeyColumns 屬性之資料行的選擇  
+## <a name="understanding-the-selection-of-columns-for-the-keycolumns-property"></a>了解 KeyColumns 屬性之資料行的選擇  
  每個 [候選索引鍵設定檔要求] 都會計算包含單一資料行或多個資料行之單一索引鍵候選的索引鍵強度：  
   
 -   當您在 [KeyColumns] 中僅選取一個資料行時，此工作會計算該單一資料行的索引鍵強度。  
@@ -44,7 +49,7 @@ caps.handback.revision: 26
 > [!NOTE]  
 >  如果您選取 (*)，這個選項可能會產生大量計算並降低工作的效能。 不過，如果此工作找到滿足索引鍵臨界值的子集，它就不會分析其他組合。 例如，在上述範例資料表中，如果此工作決定 C 資料行是索引鍵，它就不會繼續分析複合索引鍵候選。  
   
-## 要求屬性選項  
+## <a name="request-properties-options"></a>要求屬性選項  
  [要求屬性] 窗格會針對 [候選索引鍵設定檔要求] 顯示下列選項群組：  
   
 -   [資料]，其中包括 [TableOrView] 和 [KeyColumns] 選項  
@@ -53,7 +58,7 @@ caps.handback.revision: 26
   
 -   **選項。**  
   
-### 資料選項  
+### <a name="data-options"></a>資料選項  
  **ConnectionManager**  
  選取現有的 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 連線管理員，以便使用 .NET Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) 來連接至包含要分析之資料表或檢視表的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫。  
   
@@ -67,20 +72,20 @@ caps.handback.revision: 26
   
  如需詳細資訊，請參閱本主題的「了解 KeyColumns 屬性之資料行的選擇」和「KeyColumns 選項」章節。  
   
-#### TableOrView 選項  
+#### <a name="tableorview-options"></a>TableOrView 選項  
  **結構描述**  
  指定選取之資料表所屬的結構描述。 此選項是唯讀的。  
   
  **Table**  
  顯示選取之資料表的名稱。 此選項是唯讀的。  
   
-#### KeyColumns 選項  
+#### <a name="keycolumns-options"></a>KeyColumns 選項  
  下列選項會呈現給在 [KeyColumns] 中選取待分析的每個資料行或 **(\*)** 選項。  
   
  如需詳細資訊，請參閱本主題前面的「了解 KeyColumns 屬性之資料行的選擇」章節。  
   
  **IsWildcard**  
- 指定是否已經選取 **(\*)** 萬用字元。 如果您已選取 **(\*)** 來分析所有資料行，這個選項會設定為 **True**。 如果您已選取要分析的個別資料行，它就會設定為 **[False]** 。 此選項是唯讀的。  
+ 指定是否已經選取 **(\*)** 萬用字元。 如果您已選取 **(\*)** 來分析所有資料行，這個選項會設定為 [True]。 如果您已選取要分析的個別資料行，它就會設定為 **[False]** 。 此選項是唯讀的。  
   
  **ColumnName**  
  顯示所選取資料行的名稱。 如果您已選取 **(\*)** 來分析所有資料行，這個選項就是空白的。 此選項是唯讀的。  
@@ -106,11 +111,11 @@ caps.handback.revision: 26
 |**IgnoreKanaType**|指定比較是否區分兩類日文的假名字元：平假名與片假名。 如果設定此選項，則字串比較會忽略假名類型。|  
 |**IgnoreWidth**|指定比較是否區分單一位元組字元和表示為雙位元組字元的相同字元。 如果設定此選項，則字串比較會將同一字元的單一位元組表示法和雙位元組表示法視為一樣。|  
   
-### 一般選項  
+### <a name="general-options"></a>一般選項  
  **RequestID**  
  輸入描述性名稱，以便識別這個設定檔要求。 一般而言，您不需要變更自動產生的值。  
   
-### 選項。  
+### <a name="options"></a>選項。  
  **ThresholdSetting**  
  這個屬性具有下表中所列的選項。 這個屬性的預設值為 [已指定]。  
   
@@ -126,8 +131,8 @@ caps.handback.revision: 26
  **MaxNumberOfViolations**  
  指定可在輸出中報告的候選索引鍵違規數目上限。 這個屬性的預設值為 100。 當 [精確] 選取成為 [KeyStrengthThresholdSetting] 時，這個選項會停用。  
   
-## 請參閱＜  
- [資料分析工作編輯器 &#40;一般頁面&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
- [單一資料表快速分析表單 &#40;資料分析工作&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
+## <a name="see-also"></a>另請參閱  
+ [資料分析工作編輯器 &#40;一般頁面 &#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
+ [單一資料表快速分析表單 &#40; 資料分析工作 &#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   
   

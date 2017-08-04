@@ -1,29 +1,34 @@
 ---
-title: "使用精靈建立模型部署封裝 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "部署封裝 [Master Data Services], 建立"
-  - "模型 [Master Data Services], 建立部署封裝"
-  - "建立封裝 [Master Data Services]"
+title: "使用精靈建立模型部署封裝 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- deployment packages [Master Data Services], creating
+- models [Master Data Services], creating a deployment package
+- creating packages [Master Data Services]
 ms.assetid: b24ec4c2-1378-4c72-ac69-4ec2647030f0
 caps.latest.revision: 8
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 050a64ae675c953ea54e33bd813f93732804fe1b
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 使用精靈建立模型部署封裝
-  使用 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 模型部署精靈僅建立模型物件的封裝。 如果您需要在套件中包含資料，請參閱[使用 MDSModelDeploy 建立模型部署封裝](../master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md)。  
+# <a name="create-a-model-deployment-package-by-using-the-wizard"></a>使用精靈建立模型部署封裝
+  使用 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 模型部署精靈僅建立模型物件的封裝。 如果您需要在套件中包含資料，請參閱 [使用 MDSModelDeploy 建立模型部署封裝](../master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md)。  
   
-## 必要條件  
+## <a name="prerequisites"></a>必要條件  
  若要執行此程序：  
   
 -   在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式中，您必須擁有存取 [系統管理] 功能區域的權限。  
@@ -32,7 +37,7 @@ caps.handback.revision: 8
   
 -   模型必須存在，才能建立其封裝。 如需詳細資訊，請參閱[建立模型 &#40;Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md)。  
   
-### 若要建立模型部署封裝  
+### <a name="to-create-a-model-deployment-package"></a>若要建立模型部署封裝  
   
 1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]**。  
   
@@ -50,11 +55,11 @@ caps.handback.revision: 8
   
 8.  按一下 **[關閉]** ，關閉精靈。  
   
-## 後續步驟  
+## <a name="next-steps"></a>後續步驟  
   
 -   [使用精靈部署模型部署封裝](../master-data-services/deploy-a-model-deployment-package-by-using-the-wizard.md)  
   
-## 另請參閱  
- [部署模型 &#40;Master Data Services&#41;](../master-data-services/deploying-models-master-data-services.md)  
+## <a name="see-also"></a>另請參閱  
+ [部署模型 &#40;Master Data services&#41;](../master-data-services/deploying-models-master-data-services.md)  
   
   

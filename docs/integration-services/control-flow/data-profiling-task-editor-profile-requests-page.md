@@ -1,29 +1,34 @@
 ---
-title: "Data Profiling Task Editor (Profile Requests Page) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.dataprofilingtask.profilerequests.f1"
-helpviewer_keywords: 
-  - "資料分析工作編輯器"
+title: "資料分析工作編輯器 （設定檔要求頁面） |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.dataprofilingtask.profilerequests.f1
+helpviewer_keywords:
+- Data Profiling Task Editor
 ms.assetid: c72acb3d-380e-436e-8041-ed364eddfabd
 caps.latest.revision: 26
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ac9d7e62bfad28176582537c59e733f51223a4f0
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# Data Profiling Task Editor (Profile Requests Page)
+# <a name="data-profiling-task-editor-profile-requests-page"></a>Data Profiling Task Editor (Profile Requests Page)
   您可以使用 **[資料分析工作編輯器]** 的 **[設定檔要求]** 頁面來選取並設定想要計算的設定檔。 在單一「資料分析」工作中，您可以針對多個資料表或檢視表中的多個資料行或資料行組合計算多個設定檔。  
   
- 如需如何使用資料分析工作的詳細資訊，請參閱[資料分析工作的設定](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)。 如需如何使用資料設定檔檢視器來分析資料分析工作輸出的詳細資訊，請參閱[資料設定檔檢視器](../../integration-services/control-flow/data-profile-viewer.md)。  
+ 如需如何使用資料分析工作的詳細資訊，請參閱 [資料分析工作的設定](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)。 如需如何使用資料設定檔檢視器來分析資料分析工作輸出的詳細資訊，請參閱 [資料設定檔檢視器](../../integration-services/control-flow/data-profile-viewer.md)。  
   
  **開啟資料分析工作編輯器的設定檔要求頁面**  
   
@@ -33,10 +38,10 @@ caps.handback.revision: 26
   
 3.  在 **[資料分析工作編輯器]**中，按一下 **[設定檔要求]**。  
   
-## 使用要求窗格  
+## <a name="using-the-requests-pane"></a>使用要求窗格  
  要求窗格是指顯示在頁面頂端的窗格。 這個窗格會列出已經針對目前資料分析工作設定的所有設定檔。 如果尚未設定任何設定檔，此要求窗格就是空的。 若要加入新的設定檔，請在 **[設定檔類型]** 資料行底下的任何區域中按一下，然後從清單中選取設定檔類型。 若要設定設定檔，請在要求窗格中選取設定檔，然後在 **[要求屬性]** 窗格中設定設定檔的屬性。  
   
-### 要求窗格選項  
+### <a name="requests-pane-options"></a>要求窗格選項  
  此要求窗格具有下列選項：  
   
  **檢視**  
@@ -44,7 +49,7 @@ caps.handback.revision: 26
   
  要求窗格中的資料行會根據您所選取的 **[檢視]** 而變更。 如需有關每個資料行的詳細資訊，請參閱下一節「要求窗格資料行」。  
   
-### 要求窗格資料行  
+### <a name="requests-pane-columns"></a>要求窗格資料行  
  要求窗格所顯示的資料行會根據您所選取的 **[檢視]** 而不同：  
   
 -   如果您選取檢視 **[所有要求]**，要求窗格就會有兩個資料行： **[設定檔類型]** 和 **[要求識別碼]**。  
@@ -59,8 +64,8 @@ caps.handback.revision: 26
   
  下列各節會分別描述每個資料行。  
   
-#### 所有檢視通用的資料行  
- **設定檔類型**  
+#### <a name="columns-common-to-all-views"></a>所有檢視通用的資料行  
+ **[設定檔類型]**  
  從下列選項中選取資料設定檔：  
   
 |Value|說明|  
@@ -77,51 +82,51 @@ caps.handback.revision: 26
  **RequestID**  
  顯示要求的識別碼。 一般而言，您不需要變更自動產生的值。  
   
-#### 所有個別設定檔通用的資料行  
+#### <a name="columns-common-to-all-individual-profiles"></a>所有個別設定檔通用的資料行  
  **連線管理員**  
  顯示連接至來源資料庫的 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 連線管理員。  
   
- **要求識別碼**  
+ **[要求識別碼]**  
  顯示要求的識別碼。 一般而言，您不需要變更自動產生的值。  
   
-#### 五個個別資料行設定檔通用的資料行  
- **資料表或檢視表**  
+#### <a name="columns-common-to-the-five-individual-column-profiles"></a>五個個別資料行設定檔通用的資料行  
+ **[資料表或檢視表]**  
  顯示包含選取之資料行的資料表或檢視表。  
   
- **資料行**  
+ **[資料行]**  
  顯示選取以便分析的資料行。  
   
-#### 候選索引鍵設定檔特有的資料行  
- **資料表或檢視表**  
+#### <a name="columns-specific-to-the-candidate-key-profile"></a>候選索引鍵設定檔特有的資料行  
+ **[資料表或檢視表]**  
  顯示包含選取之資料行的資料表或檢視表。  
   
  **索引鍵資料行**  
  顯示選取以便分析的資料行。  
   
-#### 功能相依性設定檔特有的資料行  
- **資料表或檢視表**  
+#### <a name="columns-specific-to-the-functional-dependency-profile"></a>功能相依性設定檔特有的資料行  
+ **[資料表或檢視表]**  
  顯示包含選取之資料行的資料表或檢視表。  
   
- **行列式資料行**  
+ **[行列式資料行]**  
  顯示選取以便分析成為行列式資料行的資料行。 在美國郵遞區號決定美國州名的範例中，行列式資料行就是郵遞區號資料行。  
   
- **相依資料行**  
+ **Dependent column**  
  顯示選取以便分析成為相依資料行的資料行。 在美國郵遞區號決定美國州名的範例中，相依資料行就是州名資料行。  
   
-#### 值包含設定檔特有的資料行  
- **子集資料表或檢視表**  
+#### <a name="columns-specific-to-the-value-inclusion-profile"></a>值包含設定檔特有的資料行  
+ **[子集資料表或檢視表]**  
  顯示包含選取成為子集資料行之資料行的資料表或檢視表。  
   
- **超集資料表或檢視表**  
+ **[超集資料表或檢視表]**  
  顯示包含選取成為超集資料行之資料行的資料表或檢視表。  
   
- **子集資料行**  
+ **[子集資料行]**  
  顯示選取以便分析成為子集資料行的資料行。 舉例來說，如果您想要確認美國州名資料行中的值可在二字元美國州名代碼的參考資料表中找到，子集資料行就是來源資料表中的州名資料行。  
   
- **超集資料行**  
+ **[超集資料行]**  
  顯示選取以便分析成為超集資料行的資料行。 舉例來說，如果您想要確認美國州名資料行中的值可在二字元美國州名代碼的參考資料表中找到，超集資料行就是參考資料表中的州名代碼資料行。  
   
-## 使用要求屬性窗格  
+## <a name="using-the-request-properties-pane"></a>使用要求屬性窗格  
  **[要求屬性]** 窗格會顯示在要求窗格底下。 這個窗格會針對您已在要求窗格中選取的設定檔顯示選項。  
   
 > [!NOTE]  
@@ -129,24 +134,24 @@ caps.handback.revision: 26
   
  這些選項會因選取的設定檔而不同。 如需有關個別設定檔類型之選項的詳細資訊，請參閱下列主題：  
   
--   [候選索引鍵設定檔要求選項 &#40;資料分析工作&#41;](../../integration-services/control-flow/candidate-key-profile-request-options-data-profiling-task.md)  
+-   [候選索引鍵設定檔要求選項 &#40; 資料分析工作 &#41;](../../integration-services/control-flow/candidate-key-profile-request-options-data-profiling-task.md)  
   
--   [資料行 Null 比例設定檔要求選項 &#40;資料分析工作&#41;](../../integration-services/control-flow/column-null-ratio-profile-request-options-data-profiling-task.md)  
+-   [資料行 Null 比例設定檔要求選項 &#40; 資料分析工作 &#41;](../../integration-services/control-flow/column-null-ratio-profile-request-options-data-profiling-task.md)  
   
--   [資料行統計資料設定檔要求選項 &#40;資料分析工作&#41;](../../integration-services/control-flow/column-statistics-profile-request-options-data-profiling-task.md)  
+-   [資料行統計資料設定檔要求選項 &#40; 資料分析工作 &#41;](../../integration-services/control-flow/column-statistics-profile-request-options-data-profiling-task.md)  
   
--   [資料行值散發設定檔要求選項 &#40;資料分析工作&#41;](../../integration-services/control-flow/column-value-distribution-profile-request-options-data-profiling-task.md)  
+-   [資料行值散發設定檔要求選項 &#40; 資料分析工作 &#41;](../../integration-services/control-flow/column-value-distribution-profile-request-options-data-profiling-task.md)  
   
--   [資料行長度散發設定檔要求選項 &#40;資料分析工作&#41;](../../integration-services/control-flow/column-length-distribution-profile-request-options-data-profiling-task.md)  
+-   [資料行長度散發設定檔要求選項 &#40; 資料分析工作 &#41;](../../integration-services/control-flow/column-length-distribution-profile-request-options-data-profiling-task.md)  
   
--   [資料行模式設定檔要求選項 &#40;資料分析工作&#41;](../../integration-services/control-flow/column-pattern-profile-request-options-data-profiling-task.md)  
+-   [資料行模式設定檔要求選項 &#40; 資料分析工作 &#41;](../../integration-services/control-flow/column-pattern-profile-request-options-data-profiling-task.md)  
   
--   [功能相依性設定檔要求選項 &#40;資料分析工作&#41;](../../integration-services/control-flow/functional-dependency-profile-request-options-data-profiling-task.md)  
+-   [功能相依性設定檔要求選項 &#40; 資料分析工作 &#41;](../../integration-services/control-flow/functional-dependency-profile-request-options-data-profiling-task.md)  
   
--   [值包含設定檔要求選項 &#40;資料分析工作&#41;](../../integration-services/control-flow/value-inclusion-profile-request-options-data-profiling-task.md)  
+-   [值包含設定檔要求選項 &#40; 資料分析工作 &#41;](../../integration-services/control-flow/value-inclusion-profile-request-options-data-profiling-task.md)  
   
-## 請參閱＜  
- [資料分析工作編輯器 &#40;一般頁面&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
- [單一資料表快速分析表單 &#40;資料分析工作&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
+## <a name="see-also"></a>請參閱＜  
+ [資料分析工作編輯器 &#40;一般頁面 &#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
+ [單一資料表快速分析表單 &#40; 資料分析工作 &#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   
   

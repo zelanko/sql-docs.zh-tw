@@ -1,37 +1,42 @@
 ---
-title: "彙總轉換 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.aggregatetrans.f1"
-helpviewer_keywords: 
-  - "IsBig 屬性"
-  - "彙總函式 [Integration Services]"
-  - "彙總轉換 [Integration Services]"
-  - "大型資料, SSIS 轉換"
+title: "彙總 」 轉換 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.aggregatetrans.f1
+helpviewer_keywords:
+- IsBig property
+- aggregate functions [Integration Services]
+- Aggregate transformation [Integration Services]
+- large data, SSIS transformations
 ms.assetid: 2871cf2a-fbd3-41ba-807d-26ffff960e81
 caps.latest.revision: 59
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 59
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9e6bdc92869d16ac47745b04c0a94d9f9c993449
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 彙總轉換
+# <a name="aggregate-transformation"></a>彙總轉換
   「彙總」轉換會將彙總函式 (例如 Average) 套用至資料行值，並將結果複製到轉換輸出。 除了彙總函式外，該轉換還提供 GROUP BY 子句，讓您用來指定要彙總的群組。  
   
-## 作業  
+## <a name="operations"></a>作業  
  「彙總」轉換支援下列作業。  
   
 |運算|說明|  
 |---------------|-----------------|  
-|群組依據|將資料集分割成群組。 任何資料類型的資料行都可用於群組。 如需詳細資訊，請參閱 [GROUP BY &#40;Transact-SQL&#41;](../Topic/GROUP%20BY%20\(Transact-SQL\).md)。|  
+|群組依據|將資料集分割成群組。 任何資料類型的資料行都可用於群組。 如需詳細資訊，請參閱 [GROUP BY &#40;Transact-SQL&#41;](../../../t-sql/queries/select-group-by-transact-sql.md)。|  
 |Sum|加總資料行中的值。 只能加總具有數值資料類型的資料行。 如需詳細資訊，請參閱 [SUM &#40;Transact-SQL&#41;](../../../t-sql/functions/sum-transact-sql.md)。|  
 |平均值|傳回資料行中資料行值的平均。 只能平均具有數值資料類型的資料行。 如需詳細資訊，請參閱 [AVG &#40;Transact-SQL&#41;](../../../t-sql/functions/avg-transact-sql.md)。|  
 |Count|傳回群組中的項目數。 如需詳細資訊，請參閱 [COUNT &#40;Transact-SQL&#41;](../../../t-sql/functions/count-transact-sql.md)。|  
@@ -47,7 +52,7 @@ caps.handback.revision: 59
   
 -   在 COUNT (*) 函數中，會計算所有資料列，包括含有 Null 值的資料列在內。  
   
-## 彙總中的大數值  
+## <a name="big-numbers-in-aggregates"></a>彙總中的大數值  
  資料行可能包含因為過大數值或有效位數需求而需要特殊考量的數值。 「彙總」轉換包含 IsBig 屬性，您可以在輸出資料行上設定該屬性，以叫用大型數值或高有效位數數值的特殊處理。 如果資料行值可能超過 40 億，或需要比浮點資料類型更高的有效位數，則 IsBig 應設定為 1。  
   
  將 IsBig 屬性設定為 1，會對彙總轉換的輸出有下列影響：  
@@ -61,14 +66,14 @@ caps.handback.revision: 59
 > [!NOTE]  
 >  您無法在 GROUP BY、Maximum 或 Minimum 作業所使用的資料行上，將 IsBig 設定為 1。  
   
-## 效能考量  
+## <a name="performance-considerations"></a>效能考量  
  「彙總」轉換包含一組屬性，可讓您用來增強轉換的效能。  
   
 -   當執行 [群組依據] 作業時，請設定元件的 Keys 或 KeysScale 屬性和元件輸出。 您可以使用 Keys，指定轉換預期要處理的確切索引鍵數目。 (在此內容中，Keys 會參考預期要從 [群組依據] 作業產生的群組數)。您可以使用 KeysScale，指定索引鍵的近似數目。 當您為 Keys 或 KeyScale 指定適當值時，您將會提高效能，因為轉換能夠針對轉換所快取的資料來配置足夠的記憶體。  
   
 -   當執行 [相異計數] 作業時，請設定元件的 CountDistinctKeys 或 CountDistinctScale 屬性。 您可以使用 CountDistinctKeys，為相異計數作業指定轉換預期要處理的確切索引鍵數目。 (在此內容中，CountDistinctKeys 會參考預期要從 [相異計數] 作業產生的相異值數目)。您可以使用 CountDistinctScale，為相異計數作業指定索引鍵的近似數目。 當您為 CountDistinctKeys 或 CountDistinctScale 指定適當值時，您將會提高效能，因為轉換能夠針對轉換所快取的資料來配置足夠的記憶體。  
   
-## 彙總轉換組態  
+## <a name="aggregate-transformation-configuration"></a>彙總轉換組態  
  您可以在轉換、輸出和資料行層級設定「彙總」轉換。  
   
 -   在轉換層級上，您可以藉由指定下列值來設定「彙總」轉換的效能：  
@@ -103,7 +108,7 @@ caps.handback.revision: 59
   
  您也可以將多個輸出加入「彙總」轉換，並將每個彙總導向不同的輸出。 例如，如果「彙總」轉換套用 Sum 和 Average 函數，則每個彙總可以導向至不同的輸出。  
   
- 您可以將多個彙總套用至單一輸入資料行。 例如，如果您要計算名為 **Sales** 之輸入資料行的總和與平均值，可以將轉換設定為套用 Sum 和 Average 函數至 **Sales** 資料行。  
+ 您可以將多個彙總套用至單一輸入資料行。 例如，如果您要計算名為 **Sales**之輸入資料行的總和與平均值，可以將轉換設定為套用 Sum 和 Average 函數至 **Sales** 資料行。  
   
  「彙總」轉換有一個輸入，以及一個或多個輸出。 它不支援錯誤輸出。  
   
@@ -117,7 +122,7 @@ caps.handback.revision: 59
   
  **[進階編輯器]** 對話方塊會反映能以程式設計的方式設定之屬性。 如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [通用屬性](../Topic/Common%20Properties.md)  
+-   [通用屬性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [轉換自訂屬性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -129,10 +134,10 @@ caps.handback.revision: 59
   
 -   [排序合併和合併聯結轉換的資料](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
-## 相關工作  
+## <a name="related-tasks"></a>相關工作  
  [使用彙總轉換來彙總資料集中的值](../../../integration-services/data-flow/transformations/aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [資料流程](../../../integration-services/data-flow/data-flow.md)   
  [Integration Services 轉換](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   

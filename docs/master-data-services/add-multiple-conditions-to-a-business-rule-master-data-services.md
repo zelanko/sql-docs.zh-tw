@@ -1,31 +1,36 @@
 ---
-title: "將多個條件加入至商務規則 (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "商務規則 [Master Data Services], 多個條件"
+title: "將多個條件加入至商務規則 (Master Data Services) |Microsoft 文件"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- business rules [Master Data Services], multiple conditions
 ms.assetid: 5f0f6958-6cf2-444b-bdcd-05b887637a0b
 caps.latest.revision: 9
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f32a774b32d76a829e44ef699223c7a7f425dae8
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 將多個條件加入至商務規則 (Master Data Services)
-  如果您想要比較複雜的規則，請在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中將多個 **AND** 或 **OR** 條件新增至商務規則。  
+# <a name="add-multiple-conditions-to-a-business-rule-master-data-services"></a>將多個條件加入至商務規則 (Master Data Services)
+  如果您想要比較複雜的規則，請在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中將多個 **AND** 或 **OR** 條件新增至商務規則。  
   
 > [!NOTE]  
 >  如果您建立使用 **OR** 運算子的商務規則，請考慮為每個可獨立評估的條件陳述式建立不同的規則。 然後您可以視需要排除規則，提供更多彈性和輕鬆疑難排解。  
   
-## 必要條件  
+## <a name="prerequisites"></a>必要條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  
@@ -34,7 +39,7 @@ caps.handback.revision: 9
   
 -   商務規則必須存在。 如需詳細資訊，請參閱[建立及發行商務規則 &#40;Master Data Services&#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)。  
   
-### 若要將多個條件加入至商務規則  
+### <a name="to-add-multiple-conditions-to-a-business-rule"></a>若要將多個條件加入至商務規則  
   
 1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]**。  
   
@@ -70,9 +75,9 @@ caps.handback.revision: 9
     > [!TIP]  
     >  您可以選取多個條件，並按一下滑鼠右鍵將它們集合在邏輯運算子內，或取消群組特定邏輯運算子內的條件。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [商務規則 &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)   
- [變更商務規則名稱 &#40;Master Data Services&#41;](../master-data-services/change-a-business-rule-name-master-data-services.md)   
- [設定商務規則來傳送通知 &#40;Master Data Services&#41;](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)  
+ [變更商務規則名稱 &#40;Master Data services&#41;](../master-data-services/change-a-business-rule-name-master-data-services.md)   
+ [設定商務規則來傳送通知 &#40;Master Data services&#41;](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)  
   
   

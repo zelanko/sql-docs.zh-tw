@@ -1,42 +1,47 @@
 ---
-title: "將旗標指派給版本 (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "版本旗標 [Master Data Services], 指派旗標"
-  - "版本 [Master Data Services], 指派旗標"
+title: "將旗標指派給版本 (Master Data Services) |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- version flags [Master Data Services], assigning flags
+- versions [Master Data Services], assigning flags
 ms.assetid: 6629ec7e-32e7-4a1e-8b31-eb43c5923766
 caps.latest.revision: 7
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2fe233f28ef0fd602e775f90b5fae083a96a1848
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 將旗標指派給版本 (Master Data Services)
+# <a name="assign-a-flag-to-a-version-master-data-services"></a>將旗標指派給版本 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中，將旗標指派給版本，指出使用者或訂閱系統應該使用的版本。  
   
 > [!NOTE]  
 >  版本旗標一次只能指派給一個版本。 如果指派的旗標已指派給另一個版本，該旗標會移至選取的版本。  
   
-## 必要條件  
+## <a name="prerequisites"></a>必要條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[版本管理]** 功能區域的權限。  
   
 -   您必須是模型管理員。 如需詳細資訊，請參閱 [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md) (管理員 (Master Data Services))。  
   
--   您必須已建立要指派的版本旗標。 如需詳細資訊，請參閱[建立版本旗標 &#40;Master Data Services&#41;](../master-data-services/create-a-version-flag-master-data-services.md)。  
+-   您必須已建立要指派的版本旗標。 如需詳細資訊，請參閱 [建立版本旗標 &#40;Master Data Services&#41;](../master-data-services/create-a-version-flag-master-data-services.md)(管理員 (Master Data Services))。  
   
 -   您必須具有存取 [版本管理] 功能區域的權限。 如需詳細資訊，請參閱[功能區域權限 &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)。  
   
-### 若要將旗標指派給版本  
+### <a name="to-assign-a-flag-to-a-version"></a>若要將旗標指派給版本  
   
 1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[版本管理]**。  
   
@@ -49,8 +54,8 @@ caps.handback.revision: 7
   
 4.  按下 ENTER 鍵儲存變更。  
   
-## 另請參閱  
- [建立版本旗標 &#40;Master Data Services&#41;](../master-data-services/create-a-version-flag-master-data-services.md)   
- [版本 &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)  
+## <a name="see-also"></a>另請參閱  
+ [建立版本旗標 &#40;Master Data services&#41;](../master-data-services/create-a-version-flag-master-data-services.md)   
+ [版本 &#40;Master Data services&#41;](../master-data-services/versions-master-data-services.md)  
   
   

@@ -1,27 +1,32 @@
 ---
-title: "資料截斷 (SSIS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "截斷資料"
-  - "資料截斷 [Integration Services]"
-  - "運算式 [Integration Services], 資料截斷"
-  - "截斷選項 [Integration Services]"
+title: "資料截斷 (SSIS) |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- truncating data
+- data truncation [Integration Services]
+- expressions [Integration Services], data truncation
+- truncate options [Integration Services]
 ms.assetid: 02461e15-49ca-445b-abb3-5c369c283ec2
 caps.latest.revision: 37
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 37
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5bed8ab4de8d1fe868cf12ca9e90e1040857d858
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 資料截斷 (SSIS)
+# <a name="data-truncation-ssis"></a>資料截斷 (SSIS)
   將某個資料類型的值轉換成其他類型，可能會導致值被截斷。  
   
  發生截斷的狀況︰  
@@ -40,6 +45,6 @@ caps.handback.revision: 37
   
  不過，執行階段不檢查截斷。 資料在執行階段截斷時，不會發出警告。 多數資料配接器和轉換支援錯誤輸出，可處理錯誤資料列的配置。  
   
- 如需處理資料截斷的詳細資訊，請參閱 [Error Handling in Data](../../integration-services/data-flow/error-handling-in-data.md) (處理資料時發生錯誤)。  
+ 如需處理資料截斷的詳細資訊，請參閱 [Error Handling in Data](../../integration-services/data-flow/error-handling-in-data.md)(處理資料時發生錯誤)。  
   
   

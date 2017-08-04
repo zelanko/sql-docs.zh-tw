@@ -1,22 +1,27 @@
 ---
-title: "用戶端通訊協定屬性 (順序索引標籤) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "用戶端通訊協定 [SQL Server]"
+title: "用戶端通訊協定的屬性 （順序索引標籤） |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- client protocols [SQL Server]
 ms.assetid: 64fd7135-1756-4885-bed9-9ab8997ecc6c
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e92bac20c6f709964dabf08710c2b18b5db0c1e4
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
 # 用戶端通訊協定屬性 (順序索引標籤)
   您可以使用 [用戶端通訊協定內容] 對話方塊上的 [順序] 頁面來檢視與啟用用戶端通訊協定。  
@@ -54,6 +59,6 @@ caps.handback.revision: 18
 >  若通訊協定是以前置詞或連接字串的一部份來指定，則只會嘗試使用指定的通訊協定。  
   
 ## 請參閱＜  
- [選擇網路通訊協定](../Topic/Choosing%20a%20Network%20Protocol.md)  
+ [選擇網路通訊協定](http://msdn.microsoft.com/library/6565fb7d-b076-4447-be90-e10d0dec359a)  
   
   

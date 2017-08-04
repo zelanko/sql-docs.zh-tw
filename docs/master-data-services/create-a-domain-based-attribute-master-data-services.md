@@ -1,30 +1,35 @@
 ---
-title: "建立網域屬性 (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "網域屬性 [Master Data Services], 建立"
-  - "建立網域屬性 [Master Data Services]"
-  - "屬性 [Master Data Services], 建立網域屬性"
+title: "建立網域屬性 (Master Data Services) |Microsoft 文件"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 07/25/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- domain-based attributes [Master Data Services], creating
+- creating domain-based attributes [Master Data Services]
+- attributes [Master Data Services], creating domain-based attributes
 ms.assetid: 11c31c9f-e6cc-47b7-b76a-d691f84c93c6
 caps.latest.revision: 12
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 963b974e68187ecf4f42ad06c90ff1cb0ab3aa67
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 建立網域屬性 (Master Data Services)
-  在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中，建立網域屬性，以使用實體成員來擴展屬性值。  
+# <a name="create-a-domain-based-attribute-master-data-services"></a>建立網域屬性 (Master Data Services)
+  在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，建立網域屬性，以使用實體成員來擴展屬性值。  
   
-## 必要條件  
+## <a name="prerequisites"></a>必要條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  
@@ -35,12 +40,12 @@ caps.handback.revision: 12
   
 -   建立屬性的實體必須存在。 如需詳細資訊，請參閱[建立實體 &#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md)。  
   
-## 屬性資訊  
+## <a name="attribute-information"></a>屬性資訊  
  針對每個建立的屬性，會將含有七個資料行的資料列加入方格中。 下表描述該資料行。  
   
 |資料行|說明|  
 |------------|-----------------|  
-|狀態|屬性狀態。<br /><br /> 當您按一下 [儲存]，會顯示 ![Icon for updating status](../master-data-services/media/mds-statusicon-updating.png "Icon for updating status") 影像，表示正在更新屬性。<br /><br /> 如果建立或編輯屬性時發生錯誤，則會顯示 ![Icon for error status](../master-data-services/media/mds-statusicon-error.png "Icon for error status") 影像。<br /><br /> 否則，狀態為正常並顯示 ![Icon for OK status](../master-data-services/media/mds-statusicon-ok.png "Icon for OK status") 影像。|  
+|狀態|屬性狀態。<br /><br /> 當您按一下 [儲存]![更新狀態的圖示](../master-data-services/media/mds-statusicon-updating.png "更新狀態的圖示")影像隨即顯示，指出正在更新屬性。<br /><br /> 如果發生錯誤時建立或編輯屬性，![的錯誤狀態的圖示](../master-data-services/media/mds-statusicon-error.png "的錯誤狀態的圖示")影像隨即顯示。<br /><br /> 否則，狀態為正常並![[確定] 狀態的圖示](../master-data-services/media/mds-statusicon-ok.png "[確定] 狀態的圖示")影像隨即顯示。|  
 |名稱|屬性名稱。|  
 |顯示名稱|屬性的顯示名稱。|  
 |說明|屬性描述。|  
@@ -58,7 +63,7 @@ caps.handback.revision: 12
   
 -   **時間**：上次更新屬性的日期與時間。  
   
-### 若要建立網域屬性  
+### <a name="to-create-a-domain-based-attribute"></a>若要建立網域屬性  
   
 1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]**。  
   
@@ -84,22 +89,22 @@ caps.handback.revision: 12
   
 9. 從 [屬性類型] 清單中，選取 [網域]。  
   
-10. 從 [網域實體] 清單中，選擇要用來擴展屬性值的實體。  
+10. 從 [網域實體] 清單中，選擇要用來擴展屬性值的實體。 
   
 11. **(選擇性) 適用於分葉成員的網域屬性。** 選取篩選父屬性，以用來限制允許的網域屬性值。  
   
      篩選父屬性必須是相同實體中分葉成員的另一個網域屬性。 衍生的階層必須具有一個層級，且該層級定義兩個屬性之網域實體間的父子式關聯性。  
   
-     如需限制允許的值的資訊，請參閱 Master Data Services 部落格上的 [How to filter Domain Based Attribute drop down lists](https://blogs.msdn.microsoft.com/mds/2015/12/03/in-sql-server-2016-master-data-services-how-to-filter-domain-based-attribute-drop-down-lists/) (如何篩選網域屬性下拉式清單)。  
+     如需限制允許的值的資訊，請參閱 Master Data Services 部落格上的 [How to filter Domain Based Attribute drop down lists](https://blogs.msdn.microsoft.com/mds/2015/12/03/in-sql-server-2016-master-data-services-how-to-filter-domain-based-attribute-drop-down-lists/)(如何篩選網域屬性下拉式清單)。  
   
 12. **選擇性。** 選取 [啟用變更追蹤] 以追蹤屬性群組的變更。 如需詳細資訊，請參閱[將屬性加入至變更追蹤群組 &#40;Master Data Services&#41;](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)。  
   
 13. 按一下 **[儲存]**。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [網域屬性 &#40;Master Data Services&#41;](../master-data-services/domain-based-attributes-master-data-services.md)   
- [建立衍生階層 &#40;Master Data Services&#41;](../master-data-services/create-a-derived-hierarchy-master-data-services.md)   
- [變更屬性名稱和資料類型 &#40;Master Data Services&#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
+ [建立衍生的階層 &#40;Master Data services&#41;](../master-data-services/create-a-derived-hierarchy-master-data-services.md)   
+ [變更屬性名稱和資料類型 &#40;Master Data services&#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
  [刪除屬性 &#40;Master Data Services&#41;](../master-data-services/delete-an-attribute-master-data-services.md)  
   
   
