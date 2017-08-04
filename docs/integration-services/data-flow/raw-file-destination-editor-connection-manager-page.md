@@ -1,24 +1,29 @@
 ---
-title: "原始檔案目的地編輯器 (連接管理員頁面) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.rawfiledestinationconnectionmanager.f1"
+title: "原始檔案目的地編輯器 （連接管理員頁面） |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.rawfiledestinationconnectionmanager.f1
 ms.assetid: a0ec9643-3b44-4467-b855-f45ae4794f7f
 caps.latest.revision: 8
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9f27180b2dca144905af1a5346d3d8747aa8248a
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 原始檔案目的地編輯器 (連接管理員頁面)
+# <a name="raw-file-destination-editor-connection-manager-page"></a>原始檔案目的地編輯器 (連接管理員頁面)
   使用原始檔案目的地編輯器設定原始檔案目的地將，以便將原始資料寫入至檔案。  
   
  **您想要做什麼事？**  
@@ -33,13 +38,13 @@ caps.handback.revision: 8
   
 1.  將「原始檔案」目的地加入至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中的 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]封裝。  
   
-2.  以滑鼠右鍵按一下此元件，然後按一下 [編輯]。  
+2.  以滑鼠右鍵按一下此元件，然後按一下 **[編輯]**。  
   
 ##  <a name="connection"></a> 設定連接管理員索引標籤上的選項  
  **存取模式**  
  選取指定檔案名稱的方式。 選取 **[檔案名稱]** 直接輸入檔案名稱和路徑，或是選取 **[來自變數的檔案名稱]** 指定包含檔案名稱的變數。  
   
- [檔案名稱] 或 [變數名稱]  
+ **[檔案名稱]** 或 **[變數名稱]**  
  輸入原始檔案的名稱和路徑，或是選取包含檔案名稱的變數。  
   
  **寫入選項**  
@@ -55,12 +60,12 @@ caps.handback.revision: 8
  選取要寫入至原始檔案的一個或多個輸入資料行。  
   
  **輸入資料行**  
- 當您在 [可用的輸入資料行] 下選取輸入資料行時，資料行會自動加入此資料表，您也可以直接在此資料表中選取輸入資料行。  
+ 當您在 **[可用的輸入資料行]**底下選取資料表時，輸入資料行會自動加入此資料表中，或者您可以直接在此資料表中選取輸入資料行。  
   
  **輸出別名**  
  指定要做為輸出資料行使用的替代名稱。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [原始檔案目的地](../../integration-services/data-flow/raw-file-destination.md)  
   
   

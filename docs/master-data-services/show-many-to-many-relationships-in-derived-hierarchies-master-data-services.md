@@ -1,26 +1,31 @@
 ---
-title: "在衍生階層 (Master Data Services) 中顯示多對多關聯性 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "衍生階層 (Master Data Services) 中顯示多對多關聯性 |Microsoft 文件"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8b2a9c43-40e0-48f7-a6a9-325beb9f27da
 caps.latest.revision: 13
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 5653a69d945fda68c197107461f6af0861135505
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 在衍生階層 (Master Data Services) 中顯示多對多關聯性
+# <a name="show-many-to-many-relationships-in-derived-hierarchies-master-data-services"></a>在衍生階層 (Master Data Services) 中顯示多對多關聯性
   衍生階層 (DH) 顯示一對多關聯性，現今也可以顯示多對多關聯性。  
   
-## 多對多 (M2M) 關聯性  
+## <a name="many-to-many-m2m-relationships"></a>多對多 (M2M) 關聯性  
  兩個實體之間的多對多 (M2M) 關聯性可能會透過使用第三個實體 (該實體提供兩者間的對應)，進而模型化︰  
   
  ![mds_hierarchies_manytomany](../master-data-services/media/mds-hierarchies-manytomany.png "mds_hierarchies_manytomany")  
@@ -70,16 +75,16 @@ caps.handback.revision: 13
  M2M 層級可能會隱藏起來，就像其他衍生階層層級一樣。  
    
 ### <a name="M2MSample"></a> 範例模型中的 M2M 關聯性  
-如需 M2M 關聯性的示範，請檢視 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 隨附之 Customer 範例模型中的 Region Climate 衍生階層。   
+如需 M2M 關聯性的示範，請檢視 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]隨附之 Customer 範例模型中的 Region Climate 衍生階層。   
   
-如下圖所示，建立此關聯性模型的層級名稱是 ![mds_Number1](../master-data-services/media/mds-number1.png)**Climate (透過 RegionClimate.Region 進行對應)**。 ![mds_Number2](../master-data-services/media/mds-number2.png)** 預覽**會顯示依相關聯氣候類型分組的地區。 這是 M2M 關聯性，原因是有與多個氣候 (父系) 相關聯的地區 (子成員)。 例如，![mds_Number3](../master-data-services/media/mds-number3.png)**APCR {Asia Pacific}** 是與 ![mds_Number4](../master-data-services/media/mds-number4.png)**A {Tropical}** 和 ![mds_Number5](../master-data-services/media/mds-number5.png)**B {Dry}** 相關聯。  
+如下圖所示，建立此關聯性模型的層級名稱是 ![mds_Number1](../master-data-services/media/mds-number1.png)**Climate (透過 RegionClimate.Region 進行對應)**。 ![mds_Number2](../master-data-services/media/mds-number2.png)**預覽** 會顯示依相關聯氣候類型分組的地區。 這是 M2M 關聯性，原因是有與多個氣候 (父系) 相關聯的地區 (子成員)。 例如， ![mds_Number3](../master-data-services/media/mds-number3.png)**APCR {Asia Pacific}** 是與 ![mds_Number4](../master-data-services/media/mds-number4.png)**A {Tropical}** 和 ![mds_Number5](../master-data-services/media/mds-number5.png)**B {Dry}**相關聯。  
   
 ![mds_M2MRelationship_Example_CustomerModel](../master-data-services/media/mds-m2mrelationship-example-customermodel.png)  
   
-如需部署 Customer 範例模型的指示，以及 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 隨附的其他範例模型，請參閱[部署範例模型和資料](../sql-server/media/master-data-services.png#deploySample)。   
+如需部署 Customer 範例模型的指示，以及 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]隨附的其他範例模型，請參閱 [部署範例模型和資料](~/master-data-services/sql-server-samples-model-deployment-packages-mds.md)。   
   
-## 一對多關聯性  
- DH 的成員可能是許多子成員的父系，但通常不能有一個以上的父代 (對於例外狀況，請參閱[成員安全性](#bkmk_member_security))。 例如，假設有兩個實體︰Employee 和 Department，其中每一位員工皆屬於單一部門。 此關聯性是透過加入 Employee 實體進行模型化，其為參考 Department 實體的以網域為基礎的屬性 (DBA)︰  
+## <a name="one-many-relationship"></a>一對多關聯性  
+ DH 的成員可能是許多子成員的父系，但通常不能有一個以上的父代 (對於例外狀況，請參閱 [成員安全性](#bkmk_member_security))。 例如，假設有兩個實體︰Employee 和 Department，其中每一位員工皆屬於單一部門。 此關聯性是透過加入 Employee 實體進行模型化，其為參考 Department 實體的以網域為基礎的屬性 (DBA)︰  
   
  ![mds_hierarchies_onetomany](../master-data-services/media/mds-hierarchies-onetomany.png "mds_hierarchies_onetomany")  
   
@@ -96,10 +101,11 @@ caps.handback.revision: 13
   
 -   衍生階層，其具有 M2M 層級 (子系可能對應至多個父系)。  
   
-## 集合  
+## <a name="collections"></a>集合  
  集合和明確階層已被取代。 轉換預存程序 (udpConvertCollectionAndConsolidatedMembersToLeaf) 會將集合成員轉換為分葉成員，並建立多對多衍生階層，以擷取集合成員資格的資訊。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [衍生階層 &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md)  
   
   
+

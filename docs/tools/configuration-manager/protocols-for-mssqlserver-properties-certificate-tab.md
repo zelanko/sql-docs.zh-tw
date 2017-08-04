@@ -1,24 +1,29 @@
 ---
-title: "MSSQLSERVER 的通訊協定內容 (憑證索引標籤) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.computermgr.cert.general.f1"
-helpviewer_keywords: 
-  - "MSSQLSERVER 內容通訊協定"
+title: "MSSQLSERVER 通訊協定屬性 （憑證索引標籤） |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.computermgr.cert.general.f1
+helpviewer_keywords:
+- MSSQLSERVER property protocols
 ms.assetid: 776addd6-25f3-4875-9a71-064035787090
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 71fbfe0f85936f3db04c527291e1baa0064dc1f9
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
 # MSSQLSERVER 的通訊協定內容 (憑證索引標籤)
   您可以使用 **[MSSQLSERVER 的通訊協定內容]** 對話方塊的 **[憑證]** 索引標籤，來選取 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]憑證或檢視憑證內容。 選取憑證之前所有欄位都會是空白。  

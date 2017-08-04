@@ -1,32 +1,37 @@
 ---
-title: "值包含設定檔要求選項 (資料分析工作) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "資料分析工作編輯器"
+title: "值包含設定檔要求選項 （資料分析工作） |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Data Profiling Task Editor
 ms.assetid: ca94da82-a4c9-4e87-9cba-c2d85bd31f01
 caps.latest.revision: 21
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: db75039979f7c0e4d6d17beeef4bf4457607290e
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 值包含設定檔要求選項 (資料分析工作)
+# <a name="value-inclusion-profile-request-options-data-profiling-task"></a>值包含設定檔要求選項 (資料分析工作)
   您可以使用 [設定檔要求] 頁面的 [要求屬性] 窗格，針對要求窗格中選取的 [值包含設定檔要求] 設定選項。 值包含設定檔會計算兩個資料行或資料行集合之間值的重疊。 因此，它也可以判斷資料行或資料行集合是否適合當做選取之資料表之間的外部索引鍵。 這個設定檔也可協助您識別資料中的問題，例如無效的值。 舉例來說，您使用了值包含設定檔來分析 Sales 資料表的 ProductID 資料行。 此設定檔發現該資料行包含在 Products 資料表之 ProductID 資料行中找不到的值。  
   
 > [!NOTE]  
->  本主題所描述的選項會顯示在 **[資料分析工作編輯器]** 的 **[設定檔要求]**頁面上。 如需這個編輯器頁面的詳細資訊，請參閱 [資料分析工作編輯器 &#40;設定檔要求頁面&#41;](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md)。  
+>  本主題所描述的選項會顯示在 **[資料分析工作編輯器]** 的 **[設定檔要求]**頁面上。 如需此編輯器頁面的詳細資訊，請參閱[資料分析工作編輯器 &#40;設定檔要求頁面&#41;](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md)。  
   
- 如需如何使用資料分析工作的詳細資訊，請參閱[資料分析工作的設定](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)。 如需如何使用資料設定檔檢視器來分析資料分析工作輸出的詳細資訊，請參閱[資料設定檔檢視器](../../integration-services/control-flow/data-profile-viewer.md)。  
+ 如需如何使用資料分析工作的詳細資訊，請參閱[資料分析工作的設定](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)。 如需如何使用資料設定檔檢視器來分析資料分析工作輸出的詳細資訊，請參閱 [資料設定檔檢視器](../../integration-services/control-flow/data-profile-viewer.md)。  
   
-## 了解 InclusionColumns 屬性之資料行的選擇  
+## <a name="understanding-the-selection-of-columns-for-the-inclusioncolumns-property"></a>了解 InclusionColumns 屬性之資料行的選擇  
  [值包含設定檔要求] 會計算某個子集中的所有值是否都會出現在超集中。 超集通常是查閱或參考資料表。 例如，地址資料表中的州名資料行就是子集資料表。 這個資料行中的每個二字元州名代碼也應該可在美國郵遞服務州名代碼的資料表 (超集資料表) 中找到。  
   
  當您使用 (*) 萬用字元當做子集資料行或超集資料行的值時，資料分析工作會比較該端的每個資料行與另一端指定的資料行。  
@@ -34,7 +39,7 @@ caps.handback.revision: 21
 > [!NOTE]  
 >  如果您選取 (*)，這個選項可能會產生大量計算並降低工作的效能。  
   
-## 了解臨界值設定  
+## <a name="understanding-the-threshold-settings"></a>了解臨界值設定  
  您可以使用兩個不同的臨界值設定來精簡值包含設定檔要求的輸出。  
   
  當您針對 [InclusionThresholdSetting] 指定 **None** 以外的值時，只有在下列其中一項條件底下，此設定檔才會報告超集中子集的包含強度：  
@@ -49,7 +54,7 @@ caps.handback.revision: 21
   
 -   當包含強度具有 1.0 的值，而且 [SupersetColumnsKeyThreshold] 設定為 [精確] 時。  
   
-## 要求屬性選項  
+## <a name="request-properties-options"></a>要求屬性選項  
  [要求屬性] 窗格會針對 [值包含設定檔要求] 顯示下列選項群組：  
   
 -   [資料]，其中包括 [SubsetTableOrView]、[SupersetTableOrView] 和 [InclusionColumns] 選項  
@@ -58,7 +63,7 @@ caps.handback.revision: 21
   
 -   **選項。**  
   
-### 資料選項  
+### <a name="data-options"></a>資料選項  
  **ConnectionManager**  
  選取現有的 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 連線管理員，以便使用 .NET Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) 來連接至包含要分析之資料表或檢視表的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫。  
   
@@ -77,15 +82,15 @@ caps.handback.revision: 21
   
  如需詳細資訊，請參閱本主題的「了解 InclusionColumns 屬性之資料行的選擇」和「InclusionColumns 選項」章節。  
   
-#### SubsetTableOrView 和 SupersetTableOrView 選項  
+#### <a name="subsettableorview-and-supersettableorview-options"></a>SubsetTableOrView 和 SupersetTableOrView 選項  
  **結構描述**  
  指定選取之資料表所屬的結構描述。 此選項是唯讀的。  
   
  **TableOrView**  
  顯示選取之資料表的名稱。 此選項是唯讀的。  
   
-#### InclusionColumns 選項  
- 下列選項會呈現給在 **[InclusionColumns]** 中選取待分析的每個資料行集合。  
+#### <a name="inclusioncolumns-options"></a>InclusionColumns 選項  
+ 下列選項會呈現給在 **[InclusionColumns]**中選取待分析的每個資料行集合。  
   
  如需詳細資訊，請參閱本主題前面的「了解 InclusionColumns 屬性之資料行的選擇」一節。  
   
@@ -116,18 +121,18 @@ caps.handback.revision: 21
 |**IgnoreKanaType**|指定比較是否區分兩類日文的假名字元：平假名與片假名。 如果設定此選項，則字串比較會忽略假名類型。|  
 |**IgnoreWidth**|指定比較是否區分單一位元組字元和表示為雙位元組字元的相同字元。 如果設定此選項，則字串比較會將同一字元的單一位元組表示法和雙位元組表示法視為一樣。|  
   
-### 一般選項  
+### <a name="general-options"></a>一般選項  
  **RequestID**  
  輸入描述性名稱，以便識別這個設定檔要求。 一般而言，您不需要變更自動產生的值。  
   
-### 選項。  
+### <a name="options"></a>選項。  
  **InclusionThresholdSetting**  
  選取臨界值設定，以便精簡設定檔的輸出。 這個屬性的預設值為 [已指定]。 如需詳細資訊，請參閱本主題前面的「了解臨界值設定」一節。  
   
 |Value|說明|  
 |-----------|-----------------|  
 |**無**|沒有指定臨界值。 不論索引鍵強度為何，系統都會報告此值。|  
-|**已指定**|使用 **InclusionStrengthThreshold** 中指定的臨界值。 只有當包含強度大於臨界值時，系統才會報告此值。|  
+|**已指定**|使用 **InclusionStrengthThreshold**中指定的臨界值。 只有當包含強度大於臨界值時，系統才會報告此值。|  
 |**精確**|沒有指定臨界值。 只有當子集值完全包含在超集值中時，系統才會報告包含強度。|  
   
  **InclusionStrengthThreshold**  
@@ -141,7 +146,7 @@ caps.handback.revision: 21
 |Value|說明|  
 |-----------|-----------------|  
 |**無**|沒有指定臨界值。 不論超集資料行的索引鍵強度為何，系統都會報告包含強度。|  
-|**已指定**|使用 [SupersetColumnsKeyThreshold] 中指定的臨界值。 只有當超集資料行的索引鍵強度大於臨界值時，系統才會報告包含強度。|  
+|**已指定**|使用 **SupersetColumnsKeyThreshold**頁面上。 只有當超集資料行的索引鍵強度大於臨界值時，系統才會報告包含強度。|  
 |**精確**|沒有指定臨界值。 只有當超集資料行是超集資料表中的精確索引鍵時，系統才會報告包含強度。|  
   
  **SupersetColumnsKeyThreshold**  
@@ -152,8 +157,8 @@ caps.handback.revision: 21
  **MaxNumberOfViolations**  
  指定可在輸出中報告的包含違規數目上限。 這個屬性的預設值為 100。 當 [精確] 選取成為 [InclusionThresholdSetting] 時，這個選項會停用。  
   
-## 請參閱＜  
- [資料分析工作編輯器 &#40;一般頁面&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
- [單一資料表快速分析表單 &#40;資料分析工作&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
+## <a name="see-also"></a>另請參閱  
+ [資料分析工作編輯器 &#40;一般頁面 &#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
+ [單一資料表快速分析表單 &#40; 資料分析工作 &#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   
   

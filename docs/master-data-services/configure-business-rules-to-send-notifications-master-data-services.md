@@ -1,30 +1,35 @@
 ---
-title: "設定商務規則來傳送通知 (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "商務規則 [Master Data Services], 設定通知"
-  - "電子郵件 [Master Data Services], 設定商務規則"
-  - "通知 [Master Data Services], 設定商務規則"
+title: "設定商務規則來傳送通知 (Master Data Services) |Microsoft 文件"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- business rules [Master Data Services], configuring notifications
+- e-mail [Master Data Services], configuring business rules
+- notifications [Master Data Services], configuring business rules
 ms.assetid: b24f7b11-ab53-4642-999c-e17b543b3558
 caps.latest.revision: 10
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 29ff569439e245100befb8e0a515a128aac91f79
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 設定商務規則來傳送通知 (Master Data Services)
-  在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中，當您想要通知使用者屬性值變更時，請設定商務規則來傳送通知。  
+# <a name="configure-business-rules-to-send-notifications-master-data-services"></a>設定商務規則來傳送通知 (Master Data Services)
+  在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，當您想要通知使用者屬性值變更時，請設定商務規則來傳送通知。  
   
-## 必要條件  
+## <a name="prerequisites"></a>必要條件  
  若要執行此程序：  
   
 -   您必須擁有存取 [系統管理] 和 [使用者及群組的權限] 功能區域的權限。 如果您沒有 [使用者及群組的權限] 功能區域的權限，就無法檢視傳送通知的目標使用者和群組清單。  
@@ -37,7 +42,7 @@ caps.handback.revision: 10
   
 -   如果將郵件傳送給群組，只有可存取 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 的群組成員會收到電子郵件。  
   
-### 若要設定商務規則來傳送通知  
+### <a name="to-configure-business-rules-to-send-notifications"></a>若要設定商務規則來傳送通知  
   
 1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]**。  
   
@@ -55,11 +60,11 @@ caps.handback.revision: 10
   
 8.  按一下 **[儲存]**。  
   
-9. 按一下 [全部發行]。  
+9. 按一下 [全部發行] 。  
   
 10. 在確認對話方塊中按一下 **[確定]**。 [商務規則狀態] 資料行中的值變更為 [作用中]，[通知] 資料行會顯示要向其傳送通知的選取使用者或群組。  
   
-## 後續步驟  
+## <a name="next-steps"></a>後續步驟  
   
 -   遵循下列其中一個程序，將商務規則套用至資料：  
   
@@ -71,7 +76,7 @@ caps.handback.revision: 10
   
     -   [設定電子郵件通知 &#40;Master Data Services&#41;](../master-data-services/configure-email-notifications-master-data-services.md)  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [通知 &#40;Master Data Services&#41;](../master-data-services/notifications-master-data-services.md)   
  [設定電子郵件通知 &#40;Master Data Services&#41;](../master-data-services/configure-email-notifications-master-data-services.md)  
   

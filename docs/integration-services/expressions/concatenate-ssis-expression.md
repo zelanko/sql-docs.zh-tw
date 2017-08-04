@@ -1,29 +1,34 @@
 ---
-title: "+ (串連) (SSIS 運算式) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "串連 [Integration Services]"
-  - "+ (串連運算子)"
-  - "串連運算子 (+)"
+title: "+ （串連）（SSIS 運算式） |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- concatenation [Integration Services]
+- + (concatenate operator)
+- concatenate operator (+)
 ms.assetid: 0fed6334-7a4f-42dc-a611-191fcaa0e443
 caps.latest.revision: 37
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 37
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ba1fcd0a00289d7c2f97fa344be196885c7e7451
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# + (串連) (SSIS 運算式)
+# <a name="-concatenate-ssis-expression"></a>+ (串連) (SSIS 運算式)
   將兩個運算式串連成一個運算式。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -31,14 +36,14 @@ character_expression1 + character_expression2
   
 ```  
   
-## 引數  
+## <a name="arguments"></a>引數  
  *expression1、expression2*  
  是任何有效的 DT_STR、DT_WSTR、DT_TEXT、DT_NTEXT 或 DT_IMAGE 資料類型運算式。  
   
-## 結果類型  
+## <a name="result-types"></a>結果類型  
  DT_WSTR  
   
-## 備註  
+## <a name="remarks"></a>備註  
  運算式可使用 DT_STR 和 DT_WSTR 資料類型的其中之一或兩者。  
   
  串連 DT_STR 和 DT_WSTR 資料類型會傳回 DT_WSTR 類型的結果。 字串長度是以字元表示的原始字串之長度總和。  
@@ -53,21 +58,21 @@ character_expression1 + character_expression2
   
  字串常值必須以引號括住。  
   
-## 運算式範例  
+## <a name="expression-examples"></a>運算式範例  
  此範例會串連 **FirstName** 和 **LastName** 資料行中的值，並在兩者之間插入空格。  
   
 ```  
 FirstName + ' ' + LastName  
 ```  
   
- 此範例會串連 **ZIPCode** 和 **ZIPCode+4** 變數。 兩個變數都具有字串資料類型。 **ZIPCode+4** 必須加上方括弧，這是因為變數名稱包含 + 字元。  
+ 此範例會串連 **ZIPCode** 和 **ZIPCode+4**變數。 兩個變數都具有字串資料類型。 **ZIPCode+4** 必須加上方括弧，這是因為變數名稱包含 + 字元。  
   
 ```  
 @ZIPCcode + "-" + @[ZipCode+4]  
 ```  
   
-## 請參閱＜  
- [運算子優先順序與關聯性](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [運算子 &#40;SSIS 運算式&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
+## <a name="see-also"></a>請參閱＜  
+ [運算子優先順序和關聯性](../../integration-services/expressions/operator-precedence-and-associativity.md)   
+ [運算子 &#40;SSIS 運算式 &#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   
   

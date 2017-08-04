@@ -1,28 +1,33 @@
 ---
-title: "執行封裝工作 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.executepackagetask.f1"
-helpviewer_keywords: 
-  - "執行封裝工作 [Integration Services]"
-  - "子封裝"
-  - "父封裝 [Integration Services]"
+title: "執行封裝工作 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.executepackagetask.f1
+helpviewer_keywords:
+- Execution Package task [Integration Services]
+- child packages
+- parent packages [Integration Services]
 ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
 caps.latest.revision: 63
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 63
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: c78071650af34e9dc4baf5754781700921f5d293
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 執行封裝工作
+# <a name="execute-package-task"></a>執行封裝工作
   「執行封裝」工作可讓封裝將其他封裝當做工作流程的一部分執行，以延伸 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的企業功能。  
   
  您可將「執行封裝」工作用於下列用途：  
@@ -39,11 +44,11 @@ caps.handback.revision: 63
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含執行工作流程作業的工作，例如執行可執行檔和批次檔。 如需詳細資訊，請參閱＜ [Execute Process Task](../../integration-services/control-flow/execute-process-task.md)＞。  
   
-## 執行封裝  
+## <a name="running-packages"></a>執行封裝  
  「執行封裝」工作可以執行包含父封裝之相同專案中所含的子封裝。 您可以透過將 **[ReferenceType]** 屬性設定為 **[專案參考]**，然後設定 **[PackageNameFromProjectReference]** 屬性，以便從專案中選取子封裝。  
   
 > [!NOTE]  
->  [ReferenceType] 選項是唯讀的，如果尚未將包含封裝的專案轉換為專案部署模型，則該選項設為 [外部參考]。 如需轉換的詳細資訊，請參閱 [Deploy Projects to Integration Services Server](../../integration-services/packages/deploy-projects-to-integration-services-server.md) (將專案部署至 Integration Services 伺服器)。  
+>  [ReferenceType] 選項是唯讀的，如果尚未將包含封裝的專案轉換為專案部署模型，則該選項設為 [外部參考]。 [部署 Integration Services (SSIS) 專案和封裝](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)。  
   
  「執行封裝」工作也可執行儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb 資料庫中的封裝，以及儲存在檔案系統中的封裝。 此工作使用 OLE DB 連接管理員連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，或使用檔案連接管理員存取檔案系統。 如需詳細資訊，請參閱＜ [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md) ＞和＜ [Flat File Connection Manager](../../integration-services/connection-manager/flat-file-connection-manager.md)＞。  
   
@@ -55,15 +60,15 @@ caps.handback.revision: 63
   
  或者，有時您可能希望父封裝和子封裝當作一個單位一起失敗，或是不要產生其他處理序的額外負擔。 例如，如果子處理序失敗，而父封裝處理序中的後續處理取決於子處理序的成功，則子封裝應該在父封裝的處理序中執行。  
   
- 依預設，「執行封裝」工作的 ExecuteOutOfProcess 屬性會設定為 **False**，而且子封裝會在與父封裝的相同處理序中執行。 如果您將此屬性設定為 **True**，子封裝就會在不同的處理序中執行。 這可能會降低子封裝的啟動速度。 此外，如果您將此屬性設定為 **True**，則無法在僅限工具安裝中偵錯封裝。 您必須安裝 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]。 如需詳細資訊，請參閱[安裝 Integration Services](../../integration-services/install-windows/install-integration-services.md)。  
+ 依預設，「執行封裝」工作的 ExecuteOutOfProcess 屬性會設定為 **False**，而且子封裝會在與父封裝的相同處理序中執行。 如果您將此屬性設定為 **True**，子封裝就會在不同的處理序中執行。 這可能會降低子封裝的啟動速度。 此外，如果您將此屬性設定為 **True**，則無法在僅限工具安裝中偵錯封裝。 您必須安裝 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]。 如需詳細資訊，請參閱 [安裝 Integration Services](../../integration-services/install-windows/install-integration-services.md)。  
   
-## 延伸交易  
- 父封裝使用的交易可延伸至子封裝；因此，這兩種封裝執行的工作都能認可或回復。 例如，根據子封裝執行的資料庫插入，可以認可或回復父封裝所執行的資料庫插入，反之亦然。 如需詳細資訊，請參閱＜ [Inherited Transactions](../Topic/Inherited%20Transactions.md)＞。  
+## <a name="extending-transactions"></a>延伸交易  
+ 父封裝使用的交易可延伸至子封裝；因此，這兩種封裝執行的工作都能認可或回復。 例如，根據子封裝執行的資料庫插入，可以認可或回復父封裝所執行的資料庫插入，反之亦然。 如需詳細資訊，請參閱＜ [Inherited Transactions](http://msdn.microsoft.com/library/90db5564-d41e-4cfe-8c9e-4e68d41eff1c)＞。  
   
-## 傳播記錄詳細資料  
+## <a name="propagating-logging-details"></a>傳播記錄詳細資料  
  「執行封裝」工作執行的子封裝不一定會設定為使用記錄，但是子封裝永遠會將記錄的詳細資料轉送給父封裝。 如果「執行封裝」工作設定為使用記錄，則此工作會記錄來自子封裝的記錄詳細資料。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 記錄](../../integration-services/performance/integration-services-ssis-logging.md)。  
   
-## 將值傳遞給子封裝  
+## <a name="passing-values-to-child-packages"></a>將值傳遞給子封裝  
  子封裝通常使用由另一個呼叫它的封裝傳遞給它的值，該封裝一般是其父封裝。 使用來自父封裝的值在下列類似狀況中很有用：  
   
 -   將較大工作流程的各個部分指派給不同的封裝。 例如，一個封裝每晚下載資料、摘要資料、指派摘要資料值給變數，然後將值傳遞給另一個封裝進行資料的額外處理。  
@@ -95,25 +100,25 @@ caps.handback.revision: 63
   
  父封裝變數可在「執行封裝」工作的範圍內定義，或是在諸如封裝的父容器中定義。 如果有多個名稱相同的變數可用，則會使用在「執行封裝」工作範圍內所定義的變數，或是最接近工作範圍的變數。  
   
- 如需詳細資訊，請參閱 [Use the Values of Variables and Parameters in a Child Package](../../integration-services/packages/use-the-values-of-variables-and-parameters-in-a-child-package.md) (在子封裝中使用變數和參數的值)。  
+ 如需詳細資訊，請參閱 [Use the Values of Variables and Parameters in a Child Package](../../integration-services/packages/legacy-package-deployment-ssis.md#child)(在子封裝中使用變數和參數的值)。  
   
-### 存取父封裝變數  
+### <a name="accessing-parent-package-variables"></a>存取父封裝變數  
  子封裝可藉由使用指令碼工作存取父封裝變數。 當你在 **[指令碼工作編輯器]** 的 **[指令碼]**頁面上輸入父封裝變數的名稱時，變數名稱中請勿加上 **User:** 。 否則，在您執行父封裝時子封裝會找不到該變數。  
   
-## 設定執行封裝工作  
+## <a name="configuring-the-execute-package-task"></a>設定執行封裝工作  
  您可以透過「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」或以程式設計方式設定屬性。  
   
  如需有關可以在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [執行封裝工作編輯器](../../integration-services/control-flow/execute-package-task-editor.md)  
+-   [Execute Package Task Editor](../../integration-services/control-flow/execute-package-task-editor.md)  
   
 -   [運算式頁面](../../integration-services/expressions/expressions-page.md)  
   
  如需有關如何在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中設定這些屬性的詳細資訊，請按下列主題：  
   
--   [設定工作或容器的屬性](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+-   [設定工作或容器的屬性](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
-## 以程式設計的方式設定執行封裝工作  
+## <a name="configuring-the-execute-package-task-programmatically"></a>以程式設計的方式設定執行封裝工作  
  如需有關以程式設計方式設定這些屬性的詳細資訊，請按下列主題：  
   
 -   [N:Microsoft.SqlServer.Dts.Tasks.ExecutePackageTask](https://technet.microsoft.com/library/microsoft.sqlserver.dts.tasks.executepackagetask\(v=sql.110\).aspx)  

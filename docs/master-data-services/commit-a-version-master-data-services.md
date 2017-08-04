@@ -1,28 +1,33 @@
 ---
-title: "認可版本 (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "正在認可版本 [Master Data Services]"
-  - "版本 [Master Data Services], 認可"
+title: "認可版本 (Master Data Services) |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- committing versions [Master Data Services]
+- versions [Master Data Services], committing
 ms.assetid: 6b967a39-b333-4b84-9e5f-4fb07e156826
 caps.latest.revision: 7
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 28fd453f17c08b708b4a49f1f4646eb1be7a51ab
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 認可版本 (Master Data Services)
+# <a name="commit-a-version-master-data-services"></a>認可版本 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中，您可認可模型版本，以防止模型成員及其屬性的變更。 已認可的版本無法解除鎖定。  
   
-## 必要條件  
+## <a name="prerequisites"></a>必要條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[版本管理]** 功能區域的權限。  
@@ -35,7 +40,7 @@ caps.handback.revision: 7
   
 -   您必須具有存取 [版本管理] 功能區域的權限。 如需詳細資訊，請參閱[功能區域權限 &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)。  
   
-### 若要認可版本  
+### <a name="to-commit-a-version"></a>若要認可版本  
   
 1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[版本管理]**。  
   
@@ -47,15 +52,15 @@ caps.handback.revision: 7
   
 5.  在確認對話方塊中按一下 **[確定]**。  
   
-## 後續步驟  
+## <a name="next-steps"></a>後續步驟  
   
--   [建立版本旗標 &#40;Master Data Services&#41;](../master-data-services/create-a-version-flag-master-data-services.md)  
+-   [建立版本旗標 &#40;Master Data services&#41;](../master-data-services/create-a-version-flag-master-data-services.md)  
   
--   [將旗標指派給版本 &#40;Master Data Services&#41;](../master-data-services/assign-a-flag-to-a-version-master-data-services.md)  
+-   [將旗標指派給版本 &#40;Master Data services&#41;](../master-data-services/assign-a-flag-to-a-version-master-data-services.md)  
   
--   [複製版本 &#40;Master Data Services&#41;](../master-data-services/copy-a-version-master-data-services.md)  
+-   [複製版本 &#40;Master Data services&#41;](../master-data-services/copy-a-version-master-data-services.md)  
   
-## 另請參閱  
- [版本 &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)  
+## <a name="see-also"></a>另請參閱  
+ [版本 &#40;Master Data services&#41;](../master-data-services/versions-master-data-services.md)  
   
   

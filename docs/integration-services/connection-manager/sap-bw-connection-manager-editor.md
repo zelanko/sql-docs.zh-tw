@@ -1,27 +1,32 @@
 ---
-title: "SAP BW 連接管理員編輯器 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.sapbwconnectionmanager.f1"
+title: "SAP BW 連接管理員編輯器 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.sapbwconnectionmanager.f1
 ms.assetid: ec970319-e749-4753-8675-9cf76ed99669
 caps.latest.revision: 10
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a9f07a79e630550d7d0599026a91ee53f5b05d05
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# SAP BW 連接管理員編輯器
+# <a name="sap-bw-connection-manager-editor"></a>SAP BW 連接管理員編輯器
   使用 [SAP BW 連線管理員編輯器] 可以指定要用來連接到 SAP Netweaver BW 版本 7 系統的屬性。  
   
- SAP BW 連接管理員會提供 SAP Netweaver BW 7 系統的連接，供 SAP BW 來源或目的地使用。 若要深入了解 [!INCLUDE[msCoName](../../includes/msconame-md.md)]Connector 1.1 for SAP BW 之 SAP BW 連線管理員的詳細資訊，請參閱 [SAP BW 連線管理員](../../integration-services/connection-manager/sap-bw-connection-manager.md)。  
+ SAP BW 連接管理員會提供 SAP Netweaver BW 7 系統的連接，供 SAP BW 來源或目的地使用。 若要深入了解 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW 之 SAP BW 連線管理員的詳細資訊，請參閱 [SAP BW 連線管理員](../../integration-services/connection-manager/sap-bw-connection-manager.md)。  
   
 > [!IMPORTANT]  
 >  Microsoft Connector 1.1 for SAP BW 的文件集是假設使用者已熟悉 SAP Netweaver BW 環境。 如需有關 SAP Netweaver BW 的詳細資訊，或有關如何設定 SAP Netweaver BW 物件與處理序的詳細資訊，請參閱 SAP 文件集。  
@@ -38,7 +43,7 @@ caps.handback.revision: 10
   
     -   以滑鼠右鍵按一下 SAP BW 連線管理員，然後選取 [編輯]。  
   
-## 選項。  
+## <a name="options"></a>選項。  
   
 > [!NOTE]  
 >  如果您不知道設定連接管理員的所有必要值，可能必須詢問 SAP 系統管理員。  
@@ -60,7 +65,7 @@ caps.handback.revision: 10
   
  若要連接到負載平衡的伺服器群組，請改用 [使用負載平衡] 選項。  
   
- **Host**  
+ **主應用程式**  
  如果要連接到單一應用程式伺服器，請指定主機名稱。  
   
 > [!NOTE]  
@@ -98,7 +103,7 @@ caps.handback.revision: 10
  **記錄目錄**  
  針對 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW 的元件啟用記錄。  
   
- 若要啟用記錄，請針對每個 RFC 函數呼叫前後建立的記錄檔指定目錄  (這項記錄功能會使用 XML 格式來建立許多記錄檔。 因為這些記錄檔也包含所有傳輸的資料列，所以這些記錄檔可能會耗用大量磁碟空間)。  
+ 若要啟用記錄，請針對每個 RFC 函數呼叫前後建立的記錄檔指定目錄 (這項記錄功能會使用 XML 格式來建立許多記錄檔。 因為這些記錄檔也包含所有傳輸的資料列，所以這些記錄檔可能會耗用大量磁碟空間)。  
   
 > [!IMPORTANT]  
 >  如果傳輸的資料包含機密資訊，這些記錄檔也會包含該項機密資訊。  
@@ -113,7 +118,7 @@ caps.handback.revision: 10
  **測試連接**  
  使用您已提供的值來測試連接。 按一下 [測試連接] 之後，就會出現一個訊息方塊，指出連接成功或失敗。  
   
-## 請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [Microsoft Connector for SAP BW F1 說明](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   

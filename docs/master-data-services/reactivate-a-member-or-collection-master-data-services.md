@@ -1,34 +1,39 @@
 ---
-title: "重新啟用成員或集合 (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "集合 [Master Data Services], 重新啟動"
-  - "合併成員 [Master Data Services], 重新啟動"
-  - "重新啟動成員 [Master Data Services]"
-  - "成員 [Master Data Services], 重新啟動"
-  - "重新啟動集合 [Master Data Services]"
-  - "分葉成員 [Master Data Services], 重新啟動"
+title: "重新啟用成員或集合 (Master Data Services) |Microsoft 文件"
+ms.custom: 
+ms.date: 04/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- collections [Master Data Services], reactivating
+- consolidated members [Master Data Services], reactivating
+- reactivating members [Master Data Services]
+- members [Master Data Services], reactivating
+- reactivating collections [Master Data Services]
+- leaf members [Master Data Services], reactivating
 ms.assetid: bb4884c0-3658-4763-92d1-636804278b1c
 caps.latest.revision: 11
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cc90708210730332fc2baafa0f6ab61ceadb6840
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 重新啟用成員或集合 (Master Data Services)
-  在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中，您可以重新啟用以下成員：  
+# <a name="reactivate-a-member-or-collection-master-data-services"></a>重新啟用成員或集合 (Master Data Services)
+  在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，您可以重新啟用以下成員：  
   
 -   已透過暫存處理序停用。  
   
--   已在 MDS [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] 中予以刪除。  
+-   已在 MDS [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]中予以刪除。  
   
 -   已在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式中予以刪除。  
   
@@ -38,14 +43,14 @@ caps.handback.revision: 11
   
  重新啟用集合或成員時，會還原先前所有的交易。  
   
-## 必要條件  
+## <a name="prerequisites"></a>必要條件  
  若要執行此程序：  
   
 -   在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 中，您必須具有 [版本管理] 功能區域的權限。  
   
 -   您必須是模型管理員。 如需詳細資訊，請參閱 [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md) (管理員 (Master Data Services))。  
   
-### 若要重新啟用成員或集合  
+### <a name="to-reactivate-a-member-or-collection"></a>若要重新啟用成員或集合  
   
 1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 首頁上，按一下 [版本管理]。  
   
@@ -61,9 +66,10 @@ caps.handback.revision: 11
   
 7.  在確認對話方塊中按一下 **[確定]**。 即會加入新交易，在 [新值] 資料行中顯示 [Active]。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [刪除成員或集合 &#40;Master Data Services&#41;](../master-data-services/delete-a-member-or-collection-master-data-services.md)   
- [成員 &#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)   
- [集合 &#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md)  
+ [成員 &#40;Master Data services&#41;](../master-data-services/members-master-data-services.md)   
+ [集合 &#40;Master Data services&#41;](../master-data-services/collections-master-data-services.md)  
   
   
+

@@ -1,31 +1,36 @@
 ---
-title: "Distributed Replay 安全性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Distributed Replay 安全性 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7e2e586d-947d-4fe2-86c5-f06200ebf139
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 71e00ff0a5ea435715c5895fa2ec212ad5a8f056
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# Distributed Replay 安全性
-  安裝和使用 [[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay] 功能之前，您應該先檢閱本主題中的重要安全性資訊。 本主題描述的是使用 Distributed Replay 之前必須進行的安裝後安全性設定步驟。 本主題亦描述與資料保護和重要移除步驟有關的重要考量。  
+# <a name="distributed-replay-security"></a>Distributed Replay 安全性
+  安裝和使用 [ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay] 功能之前，您應該先檢閱本主題中的重要安全性資訊。 本主題描述的是使用 Distributed Replay 之前必須進行的安裝後安全性設定步驟。 本主題亦描述與資料保護和重要移除步驟有關的重要考量。  
   
-## 使用者和服務帳戶  
+## <a name="user-and-service-accounts"></a>使用者和服務帳戶  
  下表描述用於 Distributed Replay 的帳戶。 安裝 Distributed Replay 之後，您必須指派用以執行 Controller 和 Client 服務帳戶的安全性主體。 因此，我們建議您在安裝 Distributed Replay 功能之前設定對應的網域使用者帳戶。  
   
 |使用者帳戶|需求|  
 |------------------|------------------|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller 服務帳戶|可以是網域使用者帳戶或本機使用者帳戶。 如果您使用本機使用者帳戶，管理工具、Controller 和 Client 都必須在同一部電腦上執行。<br /><br /> **\*\*安全性注意事項\*\*** 我們建議您不要將此帳戶設定為 Windows 本機 Administrators 群組的成員。|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client 服務帳戶|可以是網域使用者帳戶或本機使用者帳戶。 如果您使用本機使用者帳戶，Controller、Client 和目標 SQL Server 都必須在同一部電腦上執行。<br /><br /> **\*\*安全性注意事項\*\*** 我們建議您不要將此帳戶設定為 Windows 本機 Administrators 群組的成員。|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller 服務帳戶|可以是網域使用者帳戶或本機使用者帳戶。 如果您使用本機使用者帳戶，管理工具、Controller 和 Client 都必須在同一部電腦上執行。<br /><br /> **\*\* 安全性注意事項 \*\*** 我們建議您不要將此帳戶設定為 Windows 本機 Administrators 群組的成員。|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client 服務帳戶|可以是網域使用者帳戶或本機使用者帳戶。 如果您使用本機使用者帳戶，Controller、Client 和目標 SQL Server 都必須在同一部電腦上執行。<br /><br /> **\*\* 安全性注意事項 \*\*** 我們建議您不要將此帳戶設定為 Windows 本機 Administrators 群組的成員。|  
 |用來執行 Distributed Replay 管理工具的互動式使用者帳戶|可以是本機使用者或網域使用者帳戶。 若要使用本機使用者帳戶，管理工具和控制器必須在同一部電腦上執行。|  
   
  **重要事項**：當您設定 Distributed Replay Controller 時，可以指定將用來執行 Distributed Replay Client 服務的一或多個使用者帳戶。 下列是支援帳戶的清單：  
@@ -56,15 +61,15 @@ caps.handback.revision: 29
   
 4.  設定您想要使用的使用者帳戶。  
   
-## 檔案和資料夾權限  
+## <a name="file-and-folder-permissions"></a>檔案和資料夾權限  
  指定了服務帳戶之後，您必須將必要的檔案和資料夾權限授與這些服務帳戶。 請根據下表設定檔案和資料夾權限：  
   
 |帳戶|資料夾權限|  
 |-------------|------------------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller 服務帳戶|`<Controller_Installation_Path>\DReplayController` (讀取、寫入、刪除)<br /><br /> `DReplayServer.xml` 檔案 (讀取、寫入)|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client 服務帳戶|`<Client_Installation_Path>\DReplayClient` (讀取、寫入、刪除)<br /><br /> `DReplayClient.xml` 檔案 (讀取、寫入)<br /><br /> 工作和結果目錄，分別由 `WorkingDirectory` 和 `ResultDirectory` 元素指定於 Client 組態檔中  (讀取、寫入)。|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client 服務帳戶|`<Client_Installation_Path>\DReplayClient` (讀取、寫入、刪除)<br /><br /> `DReplayClient.xml` 檔案 (讀取、寫入)<br /><br /> 工作和結果目錄，分別由 `WorkingDirectory` 和 `ResultDirectory` 元素指定於 Client 組態檔中 (讀取、寫入)。|  
   
-## DCOM 權限  
+## <a name="dcom-permissions"></a>DCOM 權限  
  DCOM 是用於 Controller 與管理工具以及 Controller 與所有 Client 之間的遠端程序呼叫 (RPC) 通訊。 安裝了 Distributed Replay 功能之後，您必須在 Controller 上設定整部電腦和應用程式特定的 DCOM 權限。  
   
  若要設定 Controller DCOM 權限，請遵循下列步驟進行：  
@@ -77,9 +82,9 @@ caps.handback.revision: 29
   
     3.  按 ENTER 鍵。  
   
-2.  **設定整部電腦的 DCOM 權限**：針對下表所列的每個帳戶授與對應的整部電腦 DCOM 權限。 如需如何設定整部電腦權限的詳細資訊，請參閱[檢查清單：管理 DCOM 應用程式](http://go.microsoft.com/fwlink/?LinkId=185842)。  
+2.  **設定整部電腦的 DCOM 權限**：針對下表所列的每個帳戶授與對應的整部電腦 DCOM 權限。 如需如何設定整部電腦權限的詳細資訊，請參閱 [檢查清單：管理 DCOM 應用程式](http://go.microsoft.com/fwlink/?LinkId=185842)。  
   
-3.  **設定應用程式特定的 DCOM 權限**：針對下表所列的每個帳戶授與對應的應用程式特定 DCOM 權限。 控制器服務的 DCOM 應用程式名稱是 **DReplayController**。 如需如何設定應用程式特定權限的詳細資訊，請參閱[檢查清單：管理 DCOM 應用程式](http://go.microsoft.com/fwlink/?LinkId=185842)。  
+3.  **設定應用程式特定的 DCOM 權限**：針對下表所列的每個帳戶授與對應的應用程式特定 DCOM 權限。 控制器服務的 DCOM 應用程式名稱是 **DReplayController**。 如需如何設定應用程式特定權限的詳細資訊，請參閱 [檢查清單：管理 DCOM 應用程式](http://go.microsoft.com/fwlink/?LinkId=185842)。  
   
  下表描述哪些 DCOM 權限是管理工具互動式使用者帳戶和 Client 服務帳戶所需的權限：  
   
@@ -89,15 +94,15 @@ caps.handback.revision: 29
 |Distributed Replay Client|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client 服務帳戶|本機存取<br /><br /> 遠端存取<br /><br /> 本機啟動<br /><br /> 遠端啟動<br /><br /> 本機啟用<br /><br /> 遠端啟用|  
   
 > [!IMPORTANT]  
->  為了有效抵禦惡意查詢或阻斷服務攻擊，請務必只將信任的使用者帳戶用於 Client 服務帳戶。 此帳戶將能夠針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的目標執行個體連接並重新執行工作負載。  
+>  為了有效抵禦惡意查詢或阻斷服務攻擊，請務必只將信任的使用者帳戶用於 Client 服務帳戶。 此帳戶將能夠針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的目標執行個體連接並重新執行工作負載。  
   
-## SQL Server 權限  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client 服務帳戶是用來連接到工作負載的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目標執行個體。 這些連接僅支援 Windows 驗證模式。  
+## <a name="sql-server-permissions"></a>SQL Server 權限  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client 服務帳戶是用來連接到工作負載的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]目標執行個體。 這些連接僅支援 Windows 驗證模式。  
   
  當您在一組電腦上安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client 服務之後，用於這些服務帳戶的安全性主體必須被授與您要重新執行追蹤工作負載之目標 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的系統管理員伺服器角色。 在 Distributed Replay 安裝期間，不會自動執行此步驟。  
   
-## 資料保護  
- 在 Distributed Replay 環境中，下列使用者帳戶會被授與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之目標伺服器執行個體、輸入追蹤資料和結果追蹤檔案的完整存取權：  
+## <a name="data-protection"></a>資料保護  
+ 在 Distributed Replay 環境中，下列使用者帳戶會被授與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之目標伺服器執行個體、輸入追蹤資料和結果追蹤檔案的完整存取權：  
   
 -   用來執行管理工具的互動式使用者帳戶。  
   
@@ -120,14 +125,14 @@ caps.handback.revision: 29
   
 -   使用安全通訊端層 (SSL) 來協助保護網路傳輸。  
   
-## 重要移除步驟  
+## <a name="important-removal-steps"></a>重要移除步驟  
  我們建議您僅在測試環境中使用 Distributed Replay。 在您完成測試之後，針對不同的工作佈建這些電腦之前，請務必執行下列作業：  
   
 -   解除安裝 Distributed Replay 功能並且從 Controller 和所有 Client 中移除相關的組態檔。  
   
 -   刪除用於測試的任何追蹤、中繼、分派和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫檔案。 中繼和分派檔案會分別儲存在 Controller 和 Client 的工作目錄中。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
  [安裝 Distributed Replay - 概觀](../../tools/distributed-replay/install-distributed-replay-overview.md)  
   

@@ -1,29 +1,34 @@
 ---
-title: "一般檔案目的地 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.flatfiledest.f1"
-helpviewer_keywords: 
-  - "一般檔案"
-  - "一般檔案目的地"
-  - "文字檔寫入 [Integration Services]"
-  - "目的地 [Integration Services], 一般檔案"
+title: "一般檔案目的地 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.flatfiledest.f1
+helpviewer_keywords:
+- flat files
+- Flat File destination
+- text file writing [Integration Services]
+- destinations [Integration Services], Flat File
 ms.assetid: e0d6e356-8db4-48aa-ba66-029397f98f61
 caps.latest.revision: 49
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 49
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 78a0ec526f83dcab8d7358ef5a51f1f6ccfd0a04
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 一般檔案目的地
+# <a name="flat-file-destination"></a>一般檔案目的地
   「一般檔案」目的地會將資料寫入文字檔。 該文字檔的格式可以是使用分隔符號、固定寬度、具有資料列分隔符號的固定寬度，或不齊右。  
   
  您可以利用下列方式設定「一般檔案」目的地：  
@@ -38,7 +43,7 @@ caps.handback.revision: 49
   
  此目的地擁有一個輸出。 它不支援錯誤輸出。  
   
-## 一般檔案目的地的組態  
+## <a name="configuration-of-the-flat-file-destination"></a>一般檔案目的地的組態  
  您可以透過「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」或以程式設計方式設定屬性。  
   
  如需有關 **[一般檔案來源編輯器]** 對話方塊中可設定屬性的詳細資訊，請按一下下列其中一個主題：  
@@ -49,14 +54,14 @@ caps.handback.revision: 49
   
  **[進階編輯器]** 對話方塊會反映能以程式設計的方式設定之屬性。 如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [通用屬性](../Topic/Common%20Properties.md)  
+-   [通用屬性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [一般檔案自訂屬性](../../integration-services/data-flow/flat-file-custom-properties.md)  
   
-## 相關工作  
- 如需如何設定資料流程元件屬性的資訊，請參閱[設定資料流程元件的屬性](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)。  
+## <a name="related-tasks"></a>相關工作  
+ 如需如何設定資料流程元件屬性的資訊，請參閱 [設定資料流程元件的屬性](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [一般檔案來源](../../integration-services/data-flow/flat-file-source.md)   
  [資料流程](../../integration-services/data-flow/data-flow.md)  
   

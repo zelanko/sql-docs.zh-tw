@@ -1,22 +1,27 @@
 ---
-title: "ODBC 來源自訂屬性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "ODBC 來源自訂屬性 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 362bbcd8-b7b0-4bab-8afe-1212b2ad1af9
 caps.latest.revision: 7
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 15c78bdb8f093b07ce62a7d710ba583aad96548d
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# ODBC 來源自訂屬性
+# <a name="odbc-source-custom-properties"></a>ODBC 來源自訂屬性
   下表將描述 ODBC 來源的自訂屬性。 所有屬性都可從 SSIS 屬性運算式設定。  
   
 |屬性名稱|資料類型|說明|  
@@ -35,8 +40,8 @@ caps.handback.revision: 7
 |LobChunckSize|Integer|LOB 資料行的區塊大小配置。|  
 ||||  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [ODBC 來源](../../integration-services/data-flow/odbc-source.md)   
- [ODBC 來源編輯器 &#40;連線管理員頁面&#41;](../../integration-services/data-flow/odbc-source-editor-connection-manager-page.md)  
+ [ODBC 來源編輯器 &#40;連接管理員頁面 &#41;](../../integration-services/data-flow/odbc-source-editor-connection-manager-page.md)  
   
   

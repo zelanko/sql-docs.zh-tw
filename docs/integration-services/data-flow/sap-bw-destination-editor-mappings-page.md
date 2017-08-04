@@ -1,24 +1,29 @@
 ---
-title: "SAP BW 目的地編輯器 (對應頁面) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.sapbwdestination.columns.f1"
+title: "SAP BW 目的地編輯器 （對應頁面） |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.sapbwdestination.columns.f1
 ms.assetid: dfa1f1d6-6b64-4331-bdc5-eaa8b7aa41a1
 caps.latest.revision: 11
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 245ff83f84ff1a60a08f4a73d24ee76179b31e2b
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# SAP BW 目的地編輯器 (對應頁面)
+# <a name="sap-bw-destination-editor-mappings-page"></a>SAP BW 目的地編輯器 (對應頁面)
   使用 [SAP BW 目的地編輯器] 的 [對應] 頁面可以將輸入資料行對應至目的地資料行。  
   
  若要深入了解 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW 的 SAP BW 目的地，請參閱 [SAP BW 目的地](../../integration-services/data-flow/sap-bw-destination.md)。  
@@ -34,7 +39,7 @@ caps.handback.revision: 11
   
 3.  在 [SAP BW 目的地編輯器] 中，按一下 [對應] 開啟編輯器的 [對應] 頁面。  
   
-## 選項。  
+## <a name="options"></a>選項。  
   
 > [!NOTE]  
 >  如果您不知道設定目的地的所有必要值，可能必須詢問 SAP 系統管理員。  
@@ -45,7 +50,7 @@ caps.handback.revision: 11
   
 -   下方區段是一份資料表，其中列出哪些輸入資料行已經對應至哪些輸出資料行。  
   
-### 上方區段選項  
+### <a name="upper-section-options"></a>上方區段選項  
  上方區段具有下列選項：  
   
  **可用的輸入資料行**  
@@ -66,21 +71,21 @@ caps.handback.revision: 11
   
 -   **藉由比對名稱來對應項目**  
   
-### 下方區段資料行  
+### <a name="lower-section-columns"></a>下方區段資料行  
  下方區段是對應的資料表，而且具有下列資料行：  
   
  **輸入資料行**  
  檢視您已選取的輸入資料行。  
   
- 若要將不同的輸入資料行對應至相同的目的地資料行，請在清單中選取不同的輸入資料行。 若要移除對應，請選取 [\<忽略>]，即可從輸出中排除輸入資料行。  
+ 若要將不同的輸入資料行對應至相同的目的地資料行，請在清單中選取不同的輸入資料行。 若要移除對應，請選取**\<忽略 >**從輸出排除輸入資料行。  
   
  **目的地資料行**  
  檢視每個可用的目的地資料行，不論該資料行是否已經對應。  
   
-## 請參閱＜  
- [SAP BW 目的地編輯器 &#40;連線管理員頁面&#41;](../../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)   
- [SAP BW 目的地編輯器 &#40;錯誤輸出頁面&#41;](../../integration-services/data-flow/sap-bw-destination-editor-error-output-page.md)   
- [SAP BW 目的地編輯器 &#40;進階頁面&#41;](../../integration-services/data-flow/sap-bw-destination-editor-advanced-page.md)   
+## <a name="see-also"></a>請參閱＜  
+ [SAP BW 目的地編輯器 &#40;連接管理員頁面 &#41;](../../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)   
+ [SAP BW 目的地編輯器 &#40;錯誤輸出頁面 &#41;](../../integration-services/data-flow/sap-bw-destination-editor-error-output-page.md)   
+ [SAP BW 目的地編輯器 &#40;進階的頁面 &#41;](../../integration-services/data-flow/sap-bw-destination-editor-advanced-page.md)   
  [Microsoft Connector for SAP BW F1 說明](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   

@@ -1,31 +1,36 @@
 ---
-title: "變更實體交易記錄類型 (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "變更實體交易記錄類型 (Master Data Services) |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 75250b32-3384-43c2-9b5c-1607cc3aa7b3
 caps.latest.revision: 10
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d3f5998073b5a4ddf596e241a52db6bbd49f3a2d
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 變更實體交易記錄類型 (Master Data Services)
+# <a name="change-the-entity-transaction-log-type-master-data-services"></a>變更實體交易記錄類型 (Master Data Services)
   您可以將實體交易記錄類型變更成屬性、成員或無。  
   
 |交易記錄類型|說明|  
 |--------------------------|-----------------|  
-|Attribute|實體變更記錄儲存在屬性等級。<br /><br /> 交易記錄會如 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 一樣存檔。|  
+|Attribute|實體變更記錄儲存在屬性等級。<br /><br /> 交易記錄會如 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]一樣存檔。|  
 |成員|實體變更記錄儲存在資料列等級。<br /><br /> 任何屬性變更都會觸發新的資料列修訂。<br /><br /> 使用資料列交易記錄類型時，實體會儲存為緩時變維度類型 4。 支援類型 2 訂閱檢視和類型 4 (記錄) 訂閱檢視。 如需詳細資訊，請參閱[訂閱檢視格式 &#40;Master Data Services&#41;](../master-data-services/subscription-view-formats-master-data-services.md)。<br /><br /> 提供更佳的效能。|  
 |無|不儲存變更記錄。<br /><br /> 提供最佳效能。|  
   
-## 必要條件  
+## <a name="prerequisites"></a>必要條件  
  若要執行此程序：  
   
 -   您必須擁有存取 [系統管理] 功能區域的權限。如需詳細資訊，請參閱[功能區域權限 &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)。  

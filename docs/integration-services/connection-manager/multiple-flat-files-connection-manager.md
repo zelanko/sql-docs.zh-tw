@@ -1,32 +1,37 @@
 ---
-title: "多個一般檔案連接管理員 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "多個一般檔案連接管理員"
-  - "連接 [Integration Services], 一般檔案"
-  - "一般檔案"
-  - "一般檔案連接 [Integration Services]"
-  - "連接管理員 [Integration Services], 多個一般檔案"
-  - "多個一般檔案連接"
+title: "多個一般檔案連接管理員 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Multiple Flat Files connection manager
+- connections [Integration Services], flat files
+- flat files
+- flat file connections [Integration Services]
+- connection managers [Integration Services], Multiple Flat Files
+- multiple flat file connections
 ms.assetid: 31fc3f7a-d323-44f5-a907-1fa3de66631a
 caps.latest.revision: 41
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 04900b28471f2dc4b0eb7d06fcc7f0c5acf69468
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 多個一般檔案連接管理員
+# <a name="multiple-flat-files-connection-manager"></a>多個一般檔案連接管理員
   「多個一般檔案」連接管理員可讓封裝存取多個一般檔案中的資料。 例如，當資料流程工作位於迴圈容器 (如 For 迴圈容器) 內時，「一般檔案」來源可以使用「多個一般檔案」連接管理員。 在此容器的每一個迴圈上，「一般檔案」來源會從「多個一般檔案」連接管理員提供的下一個檔案名稱中載入資料。  
   
- 當您將「多個一般檔案」連接管理員加入封裝時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會建立連接管理員，用來在執行階段解析為「多個一般檔案」連接、在「多個一般檔案」連接管理員上設定屬性，以及將「多個一般檔案」連接管理員加入封裝的 **Connections** 集合。  
+ 當您將「多個一般檔案」連接管理員加入封裝時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會建立連接管理員，用來在執行階段解析為「多個一般檔案」連接、在「多個一般檔案」連接管理員上設定屬性，以及將「多個一般檔案」連接管理員加入封裝的 **Connections** 集合。  
   
  連接管理員的 **ConnectionManagerType** 屬性會設為 **MULTIFLATFILE**。  
   
@@ -46,9 +51,9 @@ caps.handback.revision: 41
   
  如果「多個一般檔案」連接管理員參考多個檔案，則檔案的路徑會以垂直線 (|) 字元隔開。 連接管理員的 **ConnectionString** 屬性具有下列格式：  
   
- \<路徑>|\<路徑>  
+ \<*path*>|\<*path*>  
   
- 您也可以使用萬用字元來指定多個檔案。 例如，若要參考 C 磁碟機上的所有文字檔，**ConnectionString** 屬性的值可以設定為 C:\\*.txt。  
+ 您也可以使用萬用字元來指定多個檔案。 例如，若要參考 C 磁碟機上的所有文字檔， **ConnectionString** 屬性的值可以設定為 C:\\*.txt。  
   
  如果「多個一般檔案」連接管理員參考多個檔案，則所有檔案必須具有相同的格式。  
   
@@ -56,24 +61,24 @@ caps.handback.revision: 41
   
  如果在加入及設定使用「多個一般檔案」連接管理員的一般檔案來源之後，在該連接管理員中更新資料行長度，您就不需要手動調整一般檔案來源中輸出資料行的大小。 在您開啟 **[一般檔案來源]** 對話方塊時，一般檔案來源會提供一個用來同步化資料行中繼資料的選項。  
   
-## 設定多個一般檔案連接管理員  
+## <a name="configuration-of-the-multiple-flat-files-connection-manager"></a>設定多個一般檔案連接管理員  
  您可以透過「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」或以程式設計方式設定屬性。  
   
  如需有關可以在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中設定之屬性的詳細資訊，請按下列其中一個主題：  
   
 -   [多個一般檔案連接管理員編輯器 &#40;一般頁面&#41;](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-general-page.md)  
   
--   [多個一般檔案連接管理員編輯器 &#40;資料行頁面&#41;](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-columns-page.md)  
+-   [多個一般檔案連接管理員編輯器 &#40;資料行頁面 &#41;](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-columns-page.md)  
   
--   [多個一般檔案連接管理員編輯器 &#40;進階頁面&#41;](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-advanced-page.md)  
+-   [多個一般檔案連接管理員編輯器 &#40;進階的頁面 &#41;](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-advanced-page.md)  
   
 -   [多個一般檔案連接管理員編輯器 &#40;預覽頁面&#41;](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-preview-page.md)  
   
- 如需以程式設計方式設定連接管理員的資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 和[以程式設計方式加入連接](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)。  
+ 如需以程式設計方式設定連接管理員的資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 和 [以程式設計方式加入連接](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)。  
   
-## 請參閱＜  
- [一般檔案來源](../../integration-services/data-flow/flat-file-source.md)   
+## <a name="see-also"></a>請參閱＜  
+ [[一般檔案來源]](../../integration-services/data-flow/flat-file-source.md)   
  [一般檔案目的地](../../integration-services/data-flow/flat-file-destination.md)   
- [Integration Services &#40;SSIS&#41; 連接](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
+ [Integration Services &#40;SSIS &#41;連線](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
   
   

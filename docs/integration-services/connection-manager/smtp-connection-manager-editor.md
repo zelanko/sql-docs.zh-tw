@@ -1,31 +1,36 @@
 ---
-title: "SMTP 連接管理員編輯器 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.smtpconnection.f1"
-helpviewer_keywords: 
-  - "SMTP 連接管理員編輯器"
+title: "SMTP 連接管理員編輯器 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.smtpconnection.f1
+helpviewer_keywords:
+- SMTP Connection Manager Editor
 ms.assetid: 2693de0d-b04d-4325-a856-ce667d2b8aa1
 caps.latest.revision: 37
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 37
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3ef8edce1f187ac427463a0a0722c12666265d93
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# SMTP 連接管理員編輯器
+# <a name="smtp-connection-manager-editor"></a>SMTP 連接管理員編輯器
   使用 [SMTP 連線管理員編輯器] 對話方塊指定簡易郵件傳輸通訊協定 (SMTP) 伺服器。  
   
  若要深入了解 SMTP 連接管理員，請參閱＜ [SMTP Connection Manager](../../integration-services/connection-manager/smtp-connection-manager.md)＞。  
   
-## 選項。  
+## <a name="options"></a>選項。  
  **名稱**  
  提供唯一的名稱給連接管理員。  
   
@@ -47,7 +52,7 @@ caps.handback.revision: 37
  **啟用安全通訊端層 (SSL)**  
  選擇在傳送電子郵件訊息時以安全通訊端層 (SSL) 將通訊加密。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [Integration Services 錯誤和訊息參考](../../integration-services/integration-services-error-and-message-reference.md)  
   
   
