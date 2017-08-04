@@ -27,12 +27,12 @@ ms.assetid: 855dd9fc-f80c-4dbc-bf46-55a9736bfe15
 caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: a40017c7e70e0af2e38485a26a96cfdcea88a345
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
+ms.openlocfilehash: a3385d76691aa2710dd0d0e1544ee6e4fb5b43d0
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 07/29/2017
 
 ---
 # <a name="get-started-by-running-the-enable-database-for-stretch-wizard"></a>開始執行啟用資料庫的延展功能精靈

@@ -19,12 +19,12 @@ ms.assetid: 81bd93d8-eef8-4572-88d7-5c37ab5ac2bf
 caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 603226ee369f6e557bae19e80211677f92fe7cd7
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
+ms.openlocfilehash: 59608301d353d99eb710a956389fd9f8d8948dfe
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 07/29/2017
 
 ---
 # <a name="stretch-database-databases-and-tables---stretch-database-advisor"></a>Stretch Database 資料庫與資料表 - Stretch Database Advisor
@@ -39,15 +39,15 @@ ms.lasthandoff: 04/11/2017
   
 1.  執行 Upgrade Advisor。  
   
-2.  選取 [Scenarios] \(案例)，然後選取 [Run Stretch Database Advisor] \(執行 Stretch Database Advisor)。****  
+2.  選取 [Scenarios] \(案例)，然後選取 [Run Stretch Database Advisor] \(執行 Stretch Database Advisor)。  
   
-3.  在 [Run Stretch Database Advisor] \(執行 Stretch Database Advisor) 刀鋒視窗上，按一下 [SELECT DATABASES TO ANALYZE] \(選取要分析的資料庫)。****  
+3.  在 [Run Stretch Database Advisor] \(執行 Stretch Database Advisor) 刀鋒視窗上，按一下 [SELECT DATABASES TO ANALYZE] \(選取要分析的資料庫)。  
   
-4.  在 [選取資料庫] 刀鋒視窗中，輸入或選取伺服器名稱和驗證資訊。**** 按一下 **[連接]**。
+4.  在 [選取資料庫] 刀鋒視窗中，輸入或選取伺服器名稱和驗證資訊。 按一下 **[連接]**。
 
-5.  所選伺服器上的資料庫清單隨即出現。 選取您想要分析的資料庫。 按一下 [選取]。****  
+5.  所選伺服器上的資料庫清單隨即出現。 選取您想要分析的資料庫。 按一下 [選取]。  
   
-6.  在 [Run Stretch Database Advisor] \(執行 Stretch Database Advisor) 刀鋒視窗上，按一下 [執行]。****  即會執行分析。  
+6.  在 [Run Stretch Database Advisor] \(執行 Stretch Database Advisor) 刀鋒視窗上，按一下 [執行]。  即會執行分析。  
   
 ## <a name="review-the-results"></a>檢閱結果  
   
