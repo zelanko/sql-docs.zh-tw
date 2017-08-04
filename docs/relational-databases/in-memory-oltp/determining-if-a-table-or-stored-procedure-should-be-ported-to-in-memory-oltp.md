@@ -2,7 +2,7 @@
 title: "判斷是否應將資料表或預存程序移植至記憶體內部 OLTP | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 03/01/2017
+ms.date: 08/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -18,11 +18,11 @@ caps.latest.revision: 39
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a6f70a5be224219a572df858e37ecbfe5f9fde07
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: b18d5078244bf83d8820bf3f03039ac120287f8a
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>判斷是否應將資料表或預存程序匯出至記憶體中 OLTP
@@ -48,6 +48,8 @@ ms.lasthandoff: 06/22/2017
 ## <a name="transaction-performance-analysis-reports"></a>交易效能分析報表  
  若要在**物件總管**中產生交易效能分析報表，請以滑鼠右鍵按一下資料庫，依序選取 [報表]、[標準報表] 和 [交易效能分析概觀]。 資料庫必須具有作用中的工作負載或是最近執行的工作負載，以產生有意義的分析報表。  
   
+### <a name="tables"></a>資料表
+  
  資料表的詳細報表包含三個部分：  
   
 -   掃描統計資料部分  
@@ -57,9 +59,7 @@ ms.lasthandoff: 06/22/2017
     -   總存取數百分比。 整個資料庫活動中，此資料表上掃描次數與搜尋次數百分比。 此百分比愈高，表示與資料庫中的其他資料表相較下，較大量使用此資料表。  
   
     -   查閱統計資料/範圍掃描統計資料。 此資料行記錄分析期間，資料表上執行的點查閱及範圍掃描 (索引掃描及資料表掃描) 數。 每筆交易的平均值為預估。  
-  
-    -   Interop 改善和原生改善。 這些資料行可預估當資料表轉換成記憶體最佳化資料表時，點查閱或範圍掃描將會得到的效能獲益量。  
-  
+    
 -   競爭統計資料部分  
   
      此部分包含在資料庫資料表上顯示競爭的資料表。 如需有關資料庫閂鎖和鎖定的詳細資訊，請參閱＜鎖定架構＞。 資料行如下：  
@@ -74,8 +74,10 @@ ms.lasthandoff: 06/22/2017
   
      此部分包含顯示將此資料庫資料表轉換成記憶體最佳化資料表之難度的資料表。 較高的難度評等表示較難轉換資料表。 若要查看轉換此資料庫資料表的詳細資料，請使用記憶體最佳化建議程式。  
   
- 資料表詳細資料報表的掃描與競爭統計資料，是從 sys.dm_db_index_operational_stats (Transact-SQL) 收集和彙總。  
-  
+資料表詳細資料報表的掃描與競爭統計資料，是從 sys.dm_db_index_operational_stats (Transact-SQL) 收集和彙總。  
+
+### <a name="stored-procedures"></a>預存程序
+
  CPU 時間與經過時間的比率較高的預存程序就是移轉作業的候選。 報表會顯示所有資料表參考，因為原生方式編譯預存程序只能參考記憶體最佳化資料表，而這些資料表可能會增加移轉成本。  
   
  預存程序的詳細資料報表包含兩個部分：  
@@ -107,7 +109,7 @@ ms.lasthandoff: 06/22/2017
   
  若要在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中產生移轉檢查清單，您可使用 **產生記憶體內 OLTP 移轉檢查清單** 命令或 PowerShell。  
   
- **使用 UI 命令產生移轉檢查清單**  
+**使用 UI 命令產生移轉檢查清單**  
   
 1.  在**物件總管**中，以滑鼠右鍵按一下非系統資料庫的資料庫，按一下 [工作]，然後按一下 [產生記憶體內 OLTP 移轉檢查清單]。  
   
@@ -127,7 +129,7 @@ ms.lasthandoff: 06/22/2017
   
  您可將這些報表與記憶體最佳化建議程式工具和原生編譯建議程式工具產生的報表加以比較，以確認報表的精確度。 如需相關資訊，請參閱 [Memory Optimization Advisor](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md) 及 [Native Compilation Advisor](../../relational-databases/in-memory-oltp/native-compilation-advisor.md)。  
   
- **使用 SQL Server PowerShell 產生移轉檢查清單**  
+**使用 SQL Server PowerShell 產生移轉檢查清單**  
   
 1.  在 [物件總管] 中，按一下資料庫然後再按一下 [啟動 PowerShell] 。 確認顯示下列提示。  
   
@@ -147,7 +149,7 @@ ms.lasthandoff: 06/22/2017
   
     -   系統會針對資料庫中的所有資料表和預存程序產生移轉檢查清單報表，且報表會位於 folder_path 中的指定位置。  
   
- **使用 Windows PowerShell 產生移轉檢查清單**  
+**使用 Windows PowerShell 產生移轉檢查清單**  
   
 1.  啟動更高權限的 Windows PowerShell 工作階段。  
   
@@ -178,3 +180,4 @@ ms.lasthandoff: 06/22/2017
  [移轉至 In-Memory OLTP](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   
   
+
