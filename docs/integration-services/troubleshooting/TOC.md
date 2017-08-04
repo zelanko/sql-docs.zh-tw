@@ -1,13 +1,13 @@
-# [偵錯指令碼](debugging-script.md)
-# [封裝執行的疑難排解工具](troubleshooting-tools-for-package-execution.md)
-# [針對工作或容器設定中斷點以偵錯封裝](debug-a-package-by-setting-breakpoints-on-a-task-or-a-container.md)
-# [疑難排解 Integration Services (SSIS) 封裝](troubleshoot-integration-services-ssis-packages.md)
-# [疑難排解封裝執行的報表](troubleshooting-reports-for-package-execution.md)
-# [[設定中斷點]](set-breakpoints.md)
-# [產生封裝執行的傾印檔案](generating-dump-files-for-package-execution.md)
-# [將資料檢視器加入資料流程](add-a-data-viewer-to-a-data-flow.md)
-# [偵錯控制流程](debugging-control-flow.md)
-# [在資料流程元件中設定錯誤輸出](configure-an-error-output-in-a-data-flow-component.md)
-# [疑難排解封裝開發的工具](troubleshooting-tools-for-package-development.md)
-# [偵錯資料流程](debugging-data-flow.md)
-# [疑難排解封裝連接的工具](troubleshooting-tools-for-package-connectivity.md)
+# [概觀](troubleshoot-integration-services-ssis-packages.md)
+
+# 套件開發的疑難排解和偵錯
+## [套件開發的疑難排解工具](troubleshooting-tools-for-package-development.md)
+## [偵錯控制流程](debugging-control-flow.md)
+## [偵錯指令碼](debugging-script.md)
+## [偵錯資料流程](debugging-data-flow.md)
+
+# [套件連線能力的疑難排解工具](troubleshooting-tools-for-package-connectivity.md)
+# [套件執行的疑難排解工具](troubleshooting-tools-for-package-execution.md)
+# [套件執行的疑難排解報告](troubleshooting-reports-for-package-execution.md)
+
+# [產生套件執行的傾印檔案](generating-dump-files-for-package-execution.md)

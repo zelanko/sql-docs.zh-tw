@@ -1,0 +1,10 @@
+# [以指令碼工作來擴充套件](extending-the-package-with-the-script-task.md)
+# [在指令碼工作編輯器設定指令碼工作](configuring-the-script-task-in-the-script-task-editor.md)
+# [編碼和偵錯指令碼工作](coding-and-debugging-the-script-task.md)
+# [在指令碼工作中使用變數](using-variables-in-the-script-task.md)
+# [在指令碼工作中連線至資料來源](connecting-to-data-sources-in-the-script-task.md)
+# [在指令碼工作中引發事件](raising-events-in-the-script-task.md)
+# [在指令碼工作中記錄](logging-in-the-script-task.md)
+# [從指令碼工作傳回結果](returning-results-from-the-script-task.md)
+
+# [指令碼工作範例](../../extending-packages-scripting-task-examples/script-task-examples.md)

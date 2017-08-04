@@ -1,4 +1,4 @@
-# [威脅和弱點安全防護](threat-and-vulnerability-mitigation-integration-services.md)
-# [對封裝使用之檔案的存取權](access-to-files-used-by-packages.md)
-# [對 Integration Services 服務的存取權](access-to-the-integration-services-service.md)
-# [Security](security-overview-integration-services.md)
+# [概觀](security-overview-integration-services.md)  
+# [套件中敏感性資料的存取控制](access-control-for-sensitive-data-in-packages.md)  
+# [使用數位簽章來識別封裝的來源](identify-the-source-of-packages-with-digital-signatures.md)  
+# [Integration Services 角色 (SSIS 服務)](integration-services-roles-ssis-service.md)

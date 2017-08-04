@@ -1,0 +1,7 @@
+# [使用指令碼擴充套件](extending-packages-with-scripting.md)
+# [比較指令碼工作和指令碼元件](comparing-the-script-task-and-the-script-component.md)
+# [比較指令碼解決方案和自訂物件](comparing-scripting-solutions-and-custom-objects.md)
+# [參考指令碼解決方案中的其他組件](referencing-other-assemblies-in-scripting-solutions.md)
+# [在指令碼工作和指令碼元件中設定中斷點來對指令碼偵錯](debug-a-script-by-setting-breakpoints-in-a-script-task-and-script-component.md)
+# [以指令碼工作來擴充套件](../../integration-services/extending-packages-scripting/task/extending-the-package-with-the-script-task.md)
+# [以指令碼元件來擴充資料流程](../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)
