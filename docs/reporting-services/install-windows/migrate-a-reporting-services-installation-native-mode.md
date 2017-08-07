@@ -1,5 +1,5 @@
 ---
-title: "移轉 Reporting Services 安裝 （原生模式） |Microsoft 文件"
+title: "移轉 Reporting Services 安裝 (原生模式) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -23,11 +23,11 @@ caps.latest.revision: 54
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: b1e79ca61f1de78ca82cb65aadccd9ea214090a7
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 
@@ -35,7 +35,7 @@ ms.lasthandoff: 06/22/2017
 
 [!INCLUDE[ssrs-appliesto-sql2016-xpreview](../../includes/ssrs-appliesto-sql2016-xpreview.md)]
 
-本主題提供逐步指示，來移轉下列支援版本的其中一個[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]原生模式部署到新的 SQL Server Reporting Services 執行個體：  
+本主題提供將下列其中一個 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式部署的支援版本移轉到新 SQL Server Reporting Services 執行個體的逐步指示：  
   
 -   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
   
@@ -47,7 +47,7 @@ ms.lasthandoff: 06/22/2017
 
 如需遷移 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式部署的資訊，請參閱 [遷移 Reporting Services 安裝 &#40;SharePoint 模式&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md)。  
   
- 移轉定義成將應用程式資料檔案移至新的 SQL Server 執行個體。 以下是您必須移轉安裝的常見原因：  
+ 移轉的定義是將應用程式資料檔案移至新的 SQL Server 執行個體。 以下是您必須移轉安裝的常見原因：  
   
 -   您有大規模的部署或執行時間需求。  
   
@@ -63,12 +63,12 @@ ms.lasthandoff: 06/22/2017
   
 -   備份加密金鑰。  
   
--   安裝 SQL Server 的新執行個體。 如果您使用相同的硬體，您可以安裝 SQL Server-並存，現有的安裝是支援的版本即可。  
+-   安裝新的 SQL Server 執行個體。 如果您使用相同的硬體，只要是支援的版本，就可以將 SQL Server 與現有的安裝並存安裝。  
   
     > [!TIP]  
-    >  並存安裝可能需要您將 SQL Server 安裝成具名執行個體。  
+    >  並存安裝可能會要求您將 SQL Server 安裝為具名執行個體。  
   
--   將報表伺服器資料庫和其他應用程式檔案從現有的安裝移至新的 SQL Server 安裝。  
+-   將報表伺服器資料庫和其他應用程式檔案，從現有的安裝移至新的 SQL Server 安裝。  
   
 -   將任何自訂應用程式檔案移至新的安裝。  
   
@@ -96,9 +96,9 @@ ms.lasthandoff: 06/22/2017
 -   如果您只有少量的項目，可以從報表設計師、模型設計師和報表產生器將報表、報表模型和共用資料來源重新發行到新的報表伺服器。 您必須重新建立角色指派、訂閱、共用排程、報表快照集排程、您在報表或其他項目上設定的自訂屬性、模型項目安全性，以及您在報表伺服器上設定的屬性。 您將會遺失報表記錄和報表執行記錄資料。  
   
 ##  <a name="bkmk_before_you_start"></a> 開始之前  
- 即使您正在移轉而非升級安裝，請考慮在現有的安裝上執行 Upgrade Advisor，以便協助您識別可能會影響移轉的任何問題。 如果您正在移轉尚未安裝或設定的報表伺服器，這個步驟便特別有用。 透過執行 Upgrade Advisor，您可以找出可能不支援新的 SQL Server 安裝中的自訂設定。  
+ 即使您正在移轉而非升級安裝，請考慮在現有的安裝上執行 Upgrade Advisor，以便協助您識別可能會影響移轉的任何問題。 如果您正在移轉尚未安裝或設定的報表伺服器，這個步驟便特別有用。 透過執行升級建議程式，您可以找出新 SQL Server 安裝可能不支援的自訂設定。  
   
- 此外，您應該留意幾項重要變更 SQL Server Reporting Services 會影響您移轉安裝的方式：
+ 此外，您應留意 SQL Server Reporting Services 中的數項重要變更，因為這些變更將會影響您移轉安裝的方式：
  
 - 新的 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 已取代報表管理員。
   
@@ -118,7 +118,7 @@ ms.lasthandoff: 06/22/2017
   
 - 如果您在報表環境中使用自訂的階層式樣式表，則這些樣式表不會移轉。 您必須以手動方式移動它們以進行遷移。  
   
-如需 SQL Server Reporting Services 中的變更的詳細資訊，請參閱 Upgrade Advisor 文件和[What's New in Reporting Services](../../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)。  
+如需 SQL Server Reporting Services 中變更的詳細資訊，請參閱升級建議程式文件和 [Reporting Services 的新功能](../../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)。  
 
 ## <a name="bkmk_backup"></a> 備份檔案和資料
 
@@ -140,13 +140,13 @@ ms.lasthandoff: 06/22/2017
   
     5.  Reportingservicesservice.exe.config  
   
-    6.  報表伺服器的 Web.config[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]應用程式。  
+    6.  報表伺服器 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 應用程式的 Web.config。  
   
     7.  [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 的 Machine.config (如果您針對報表伺服器作業修改過它的話)。  
 
 ## <a name="bkmk_install_ssrs"></a> 安裝 SQL Server Reporting Services
 
- 在僅限檔案模式下，安裝新的報表伺服器執行個體，如此您就可以將它設定為使用非預設值。 若為命令列安裝，請使用 **FilesOnly** 引數。 在 [安裝精靈] 中，請選取 [安裝但不設定] 選項。  
+ 在僅限檔案模式下，安裝新的報表伺服器執行個體，如此您就可以將它設定為使用非預設值。 若為命令列安裝，請使用 **FilesOnly** 引數。 在 [安裝精靈] 中，選取 [安裝但不設定] 選項。  
   
  按一下下列其中一個連結，即可檢視有關如何安裝新 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]執行個體的指示：  
   
@@ -162,7 +162,7 @@ ms.lasthandoff: 06/22/2017
   
  若要移動報表伺服器資料庫，請執行下列動作：  
   
-1.  選擇要使用的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體。 SQL Server Reporting Services 要求您使用下列版本的其中一個來主控報表伺服器資料庫：  
+1.  選擇要使用的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體。 SQL Server Reporting Services 需要您使用下列其中一個版本來裝載報表伺服器資料庫：  
   
     -   SQL Server 2016  
   
@@ -176,7 +176,7 @@ ms.lasthandoff: 06/22/2017
   
 2.  啟動 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 並連接至 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-3.  如果 **從未主控過報表伺服器資料庫，請在系統資料庫中建立** RSExecRole [!INCLUDE[ssDE](../../includes/ssde-md.md)] 。 如需詳細資訊，請參閱[建立 RSExecRole](../../reporting-services/security/create-the-rsexecrole.md)。  
+3.  如果 **從未主控過報表伺服器資料庫，請在系統資料庫中建立** RSExecRole [!INCLUDE[ssDE](../../includes/ssde-md.md)] 。 如需詳細資訊，請參閱 [建立 RSExecRole](../../reporting-services/security/create-the-rsexecrole.md)。  
   
 4.  遵循[將報表伺服器資料庫移至其他電腦 &#40;SSRS 原生模式&#41;](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md) 中的指示。  
   
@@ -198,7 +198,7 @@ ms.lasthandoff: 06/22/2017
   
     -   其他自訂組件應該不需要重新編譯。  
   
-2.  將組件移到新的報表伺服器 \bin 資料夾。 在 SQL Server 中，報表伺服器二進位檔位於預設報表伺服器執行個體的下列位置：  
+2.  將組件移至新的報表伺服器 \bin 資料夾。 在 SQL Server 中，報表伺服器二進位檔位於預設報表伺服器執行個體的下列位置：  
   
      `\Program files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\ReportServer\bin`  
   
@@ -218,15 +218,15 @@ ms.lasthandoff: 06/22/2017
 
 ## <a name="bkmk_configure_reportserver"></a> 設定報表伺服器
 
- 設定 Url 的報表伺服器 Web 服務與 web 入口網站，並設定報表伺服器資料庫的連接。  
+ 設定報表伺服器 Web 服務和入口網站的 URL，然後設定報表伺服器資料庫的連線。  
   
- 如果您正在移轉向外延展部署，請將所有的報表伺服器節點設為離線，然後一次移轉一個伺服器。 第一部報表伺服器移轉，且該伺服器成功連接到報表伺服器資料庫，報表伺服器資料庫的版本會自動升級至 SQL Server 資料庫版本。  
+ 如果您正在移轉向外延展部署，請將所有的報表伺服器節點設為離線，然後一次移轉一個伺服器。 在移轉第一個報表伺服器且該伺服器成功連線至報表伺服器資料庫之後，報表伺服器資料庫的版本就會自動升級為 SQL Server 資料庫版本。  
   
 > [!IMPORTANT]  
 >  如果向外延展部署中有任何報表伺服器是在線上且尚未移轉，則這些伺服器可能會遭遇 rsInvalidReportServerDatabase 例外狀況，因為它們在連接至已升級版本時使用的是舊版的結構描述。  
   
 > [!NOTE]  
->  如果您遷移的報表伺服器是設定為向外延展部署的共用資料庫，必須在設定報表伺服器服務之前，從 **ReportServer** 資料庫中的 **Keys** 資料表刪除所有舊的加密金鑰。 如果未移除金鑰，移轉後的報表伺服器會嘗試在向外延展部署模式中初始化。 如需詳細資訊，請參閱[加入和移除向外延展部署的加密金鑰 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md) 和[設定和管理加密金鑰 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)。  
+>  如果您遷移的報表伺服器是設定為向外延展部署的共用資料庫，必須在設定報表伺服器服務之前，從 **ReportServer** 資料庫中的 **Keys** 資料表刪除所有舊的加密金鑰。 如果未移除金鑰，移轉後的報表伺服器會嘗試在向外延展部署模式中初始化。 如需詳細資訊，請參閱[新增和移除向外延展部署的加密金鑰 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md) 和[設定和管理加密金鑰 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)。  
 >   
 >  您無法利用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員來刪除向外延展金鑰， 而是必須使用 SQL Server Management Studio，從 **ReportServer** 資料庫中的 **Keys** 資料表刪除舊金鑰。 請刪除 Keys 資料表中的所有資料列。 這麼做將會清除資料表，使其僅用於還原對稱金鑰，其步驟如下所示。  
 >   
@@ -234,38 +234,38 @@ ms.lasthandoff: 06/22/2017
   
 1.  啟動 Reporting Services 組態管理員，並連接到您剛才安裝的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 執行個體。 如需詳細資訊，請參閱 [Reporting Services 組態管理員 &#40;原生模式&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)。  
   
-2.  設定報表伺服器和入口網站的 Url。 如需詳細資訊，請參閱[設定 URL &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)。  
+2.  設定報表伺服器和入口網站的 URL。 如需詳細資訊，請參閱[設定 URL &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)。  
   
-3.  設定報表伺服器資料庫，並且從先前安裝中選取現有的報表伺服器資料庫。 成功完成設定後，報表伺服器服務會重新啟動，並建立連接之後，報表伺服器資料庫，資料庫自動升級為 SQL Server Reporting Services。 如需如何執行您用來建立或選取報表伺服器資料庫的變更資料庫精靈 」 的詳細資訊，請參閱[建立原生模式報表伺服器資料庫](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)。  
+3.  設定報表伺服器資料庫，並且從先前安裝中選取現有的報表伺服器資料庫。 在成功設定後，報表伺服器服務就會重新啟動，而在建立報表伺服器資料庫的連線之後，資料庫就會自動升級為 SQL Server Reporting Services。 如需如何執行您用來建立或選取報表伺服器資料庫之 [變更資料庫精靈] 的詳細資訊，請參閱[建立原生模式報表伺服器資料庫](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)。  
   
 4.  還原加密金鑰。 若要針對已經在報表伺服器資料庫中之預先存在的連接字串和認證啟用可回復加密，這個步驟就是必要的。 如需詳細資訊，請參閱 [備份與還原 Reporting Services 加密金鑰](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)。  
   
 5.  如果您在新的電腦上安裝報表伺服器，而且正在使用 Windows 防火牆，請確定報表伺服器所接聽的 TCP 通訊埠是開啟的。 此通訊埠依預設為 80。 如需詳細資訊，請參閱 [設定供報表伺服器存取的防火牆](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)。  
   
-6.  如果您想要管理原生模式報表伺服器在本機上，您需要設定以允許本機與 web 入口網站管理的作業系統。 如需詳細資訊，請參閱[設定原生模式報表伺服器進行本機管理](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)。  
+6.  如果您想要在本機管理您的原生模式報表伺服器，則必須設定作業系統，允許透過入口網站進行本機管理。 如需詳細資訊，請參閱 [設定原生模式報表伺服器進行本機管理](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)。  
 
 ## <a name="bkmk_copy_custom_config"></a> 將自訂組態設定複製到 RSReportServer.config 檔案
 
-如果您在先前安裝中修改了 RSReportServer.config 檔案或 RSWebApplication.config 檔案，就應該在新的 RSReportServer.config 檔案中進行相同的修改。 下列清單摘要列出一些原因，您可能會修改先前組態檔並且提供如何在 SQL Server 2016 中設定相同設定的其他資訊的連結。  
+如果您在先前安裝中修改了 RSReportServer.config 檔案或 RSWebApplication.config 檔案，就應該在新的 RSReportServer.config 檔案中進行相同的修改。 下列清單將摘要列出一些您可能會修改先前組態檔的原因，並且提供有關如何在 SQL Server 2016 中設定相同設定的其他資訊連結。  
   
 |自訂|資訊|  
 |-------------------|-----------------|  
-|含有自訂設定的報表伺服器電子郵件傳遞|[電子郵件設定-Reporting Services 原生模式](../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)。|  
+|含有自訂設定的報表伺服器電子郵件傳遞|[電子郵件設定 - Reporting Services 原生模式](../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)。|  
 |裝置資訊設定|[在 RSReportServer.Config 中自訂轉譯延伸模組參數](../../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)|
 
 ## <a name="bkmk_windowsservice_group"></a> Windows 服務群組和安全性 ACL
 
- 在[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]，一個服務群組， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Windows 服務群組，用來建立安全性 Acl 所有登錄機碼、 檔案和資料夾與 SQL Server Reporting Services 一起安裝。 這個 Windows 群組名稱會出現在以格式 SQLServerReportServerUser$\<*computer_name*>$\<*instance_name*>。  
+ [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 中有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Windows 服務群組這個服務群組，會用來為跟著 QL Server Reporting Services 安裝的所有登錄機碼、檔案和資料夾建立安全性 ACL。 這個 Windows 群組名稱會以格式 SQLServerReportServerUser$\<computer_name>$\<instance_name> 顯示。  
 
 ## <a name="bkmk_verify"></a> 驗證您的部署
 
 1.  開啟瀏覽器並輸入 URL 位址，以測試報表伺服器和 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 虛擬目錄。 如需詳細資訊，請參閱 [驗證 Reporting Services 安裝](../../reporting-services/install-windows/verify-a-reporting-services-installation.md)。  
   
-2.  測試報表，並確認其包含您預期的資料。 檢閱資料來源資訊，查看是否仍然有指定資料來源連接資訊。 使用報表物件模型處理和轉譯報表時，報表伺服器，但不能取代[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]， [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]， [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]，或[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]建構新的報表定義語言元素。 若要深入了解有關現有報表如何在新版的報表伺服器上執行，請參閱[Upgrade Reports](../../reporting-services/install-windows/upgrade-reports.md)。  
+2.  測試報表，並確認其包含您預期的資料。 檢閱資料來源資訊，查看是否仍然有指定資料來源連接資訊。 雖然報表伺服器會在處理和轉譯報表時使用報表物件模型，但不會以新的報表定義語言元素取代 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]。 若要深入了解現有報表如何在新版報表伺服器上執行，請參閱[升級報表](../../reporting-services/install-windows/upgrade-reports.md)。  
 
 ## <a name="bkmk_remove_unused"></a> 移除未使用的程式和檔案
 
-一旦成功移轉您的報表伺服器的新執行個體，您可能想要執行下列步驟，以移除不再需要的程式和檔案。  
+一旦將報表伺服器成功移轉至新執行個體，您就可以執行下列步驟，以移除不再需要的程式和檔案。  
   
 1.  如果您不再需要舊版 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，請解除安裝它。 這個步驟不會刪除下列項目，但如果您不再需要它們，可以用手動方式加以移除：  
   

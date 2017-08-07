@@ -26,17 +26,17 @@ caps.latest.revision: 61
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: e940ba8880aa2d1c4e4677c779b6984b2e6d4dde
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="replication-management-objects-concepts"></a>Replication Management Objects Concepts
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Replication Management Objects (RMO) 是一種 Managed 程式碼組件，用以封裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的複寫功能。 RMO 是透過 <xref:Microsoft.SqlServer.Replication> 命名空間所實作。  
+  Replication Management Objects (RMO) 是一種 Managed 程式碼組件，用以封裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的複寫功能。 RMO 是由 <xref:Microsoft.SqlServer.Replication> 命名空間實作。  
   
  下列章節中的主題將說明如何使用 RMO 屬性，以程式設計方式控制複寫工作。  
   
@@ -59,7 +59,7 @@ ms.lasthandoff: 06/22/2017
  本章節中的主題示範如何以程式設計方式監視複寫拓撲。  
   
 ## <a name="introduction-to-rmo-programming"></a>RMO 程式設計簡介  
- RMO 是針對程式設計 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 複寫的所有層面所設計。 RMO 命名空間是 <xref:Microsoft.SqlServer.Replication>，而且它是 Microsoft.SqlServer.Rmo.dll 所實作，這個檔案是 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 組件。 同時也屬於 <xref:Microsoft.SqlServer.Replication> 命名空間的 Microsoft.SqlServer.Replication.dll 組件，會實作 Managed 程式碼介面，以設計各種複寫代理程式的程式 (「快照集代理程式」、「散發代理程式」和「合併代理程式」)。 可從 RMO 存取其類別以同步處理訂閱。 在由 Microsoft.SqlServer.Replication.BusinessLogicSupport.dll 組件所實作的 <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport> 命名空間中的類別，是用以為合併式複寫建立自訂商務邏輯。 這個組件與 RMO 無關。  
+ RMO 是針對程式設計 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 複寫的所有層面所設計。 RMO 命名空間是 <xref:Microsoft.SqlServer.Replication>，而且它是 Microsoft.SqlServer.Rmo.dll 所實作，這個檔案是 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 組件。 同時也屬於 <xref:Microsoft.SqlServer.Replication> 命名空間的 Microsoft.SqlServer.Replication.dll 組件，會實作 Managed 程式碼介面，以設計各種複寫代理程式的程式 (快照集代理程式、散發代理程式以及合併代理程式)。 可從 RMO 存取其類別以同步處理訂閱。 在由 Microsoft.SqlServer.Replication.BusinessLogicSupport.dll 組件所實作的 <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport> 命名空間中的類別，是用以為合併式複寫建立自訂商務邏輯。 這個組件與 RMO 無關。  
   
 ## <a name="deploying-applications-based-on-rmo"></a>根據 RMO 部署應用程式  
  RMO 相依於隨附在所有版本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (但 SQL Server Compact 除外) 中之複寫元件與用戶端連線元件。 若要根據 RMO 部署應用程式，您必須在應用程式將執行的電腦上，安裝含有複寫元件與用戶端連線元件的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本。  
@@ -148,25 +148,25 @@ ms.lasthandoff: 06/22/2017
     ```  
   
 ## <a name="connecting-to-a-replication-server"></a>連接至複寫伺服器  
- RMO 程式設計物件需要使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 類別的執行個體，來建立 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的連線。 這個伺服器連接會獨立於任何 RMO 程式設計物件之外建立。 接著會在執行個體建立期間將它傳遞到 RMO 物件，或是將它指派到物件的 `P:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContex`t 屬性。 以此方式，就可以個別建立和管理 RMO 程式設計物件與連接物件執行個體，而且多個 RMO 程式設計物件可以重複使用單一連接物件。 下列規則適用於應用程式伺服器的連接：  
+ RMO 程式設計物件需要使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 類別的執行個體，來建立 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的連接。 這個伺服器連接會獨立於任何 RMO 程式設計物件之外建立。 接著會在執行個體建立期間將它傳遞到 RMO 物件，或是將它指派到物件的 `P:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContex`t 屬性。 以此方式，就可以個別建立和管理 RMO 程式設計物件與連接物件執行個體，而且多個 RMO 程式設計物件可以重複使用單一連接物件。 下列規則適用於應用程式伺服器的連接：  
   
--   針對指定的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 物件，定義連線的所有屬性。  
+-   連接的所有屬性是針對指定的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 物件所定義。  
   
--   每個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的連線都必須具有專屬 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 物件。  
+-   每個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的連接都必須有它自己的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 物件。  
   
 -   會將 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 物件指派到要在伺服器上建立或存取的 RMO 程式設計物件之 `P:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext` 屬性。  
   
--   <xref:Microsoft.SqlServer.Management.Common.ConnectionManager.Connect%2A> 方法會開啟與伺服器的連線。 必須先呼叫這個方法，才能呼叫在使用此連接的任何 RMO 程式設計物件上存取伺服器之任何方法。  
+-   <xref:Microsoft.SqlServer.Management.Common.ConnectionManager.Connect%2A> 方法會開啟伺服器的連接。 必須先呼叫這個方法，才能呼叫在使用此連接的任何 RMO 程式設計物件上存取伺服器之任何方法。  
   
--   因為 RMO 與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理物件 (SMO) 都使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 類別連線至 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，所以 RMO 與 SMO 物件都可以使用相同的連線。 如需詳細資訊，請參閱[連線到 SQL Server 的執行個體](../../../relational-databases/server-management-objects-smo/create-program/connecting-to-an-instance-of-sql-server.md)。  
+-   因為 RMO 與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理物件 (SMO) 都使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 類別連接至 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，所以 RMO 與 SMO 物件都可以使用相同的連接。 如需詳細資訊，請參閱[連線到 SQL Server 的執行個體](../../../relational-databases/server-management-objects-smo/create-program/connecting-to-an-instance-of-sql-server.md)。  
   
--   在 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 物件中，會提供所有建立連線及成功登入伺服器的驗證資訊。  
+-   在 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 物件中，會提供所有建立連接及成功登入伺服器的驗證資訊。  
   
--   Windows 驗證是預設值。 若要使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證，<xref:Microsoft.SqlServer.Management.Common.ConnectionSettings.LoginSecure%2A> 必須設定為 **false**，而且 <xref:Microsoft.SqlServer.Management.Common.ConnectionSettings.Login%2A> 和 <xref:Microsoft.SqlServer.Management.Common.ConnectionSettings.Password%2A> 必須設定為有效的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登入和密碼。 安全性認證必須以安全方式儲存和處理，而且每當有需要時必須在執行階段提供。  
+-   Windows 驗證是預設值。 若要使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證，必須將 <xref:Microsoft.SqlServer.Management.Common.ConnectionSettings.LoginSecure%2A> 設定為 **false**，而 <xref:Microsoft.SqlServer.Management.Common.ConnectionSettings.Login%2A> 與 <xref:Microsoft.SqlServer.Management.Common.ConnectionSettings.Password%2A> 必須設為有效的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登入與密碼。 安全性認證必須以安全方式儲存和處理，而且每當有需要時必須在執行階段提供。  
   
 -   對於多執行緒應用程式，應該在每個執行緒中使用個別的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 物件。  
   
- 在 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 物件上呼叫 <xref:Microsoft.SqlServer.Management.Common.ConnectionManager.Disconnect%2A> 方法，以關閉 RMO 物件所使用的使用中伺服器連線。  
+ 在 <xref:Microsoft.SqlServer.Management.Common.ConnectionManager.Disconnect%2A> 物件上呼叫 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 方法，以關閉 RMO 物件所使用的使用中伺服器連接。  
   
 ## <a name="setting-rmo-properties"></a>設定 RMO 屬性  
  RMO 程式設計物件的屬性代表在伺服器這些複寫物件的屬性。 在伺服器建立新複寫物件時，會使用 RMO 屬性來定義這些物件。 對於現有的物件，RMO 屬性代表現有物件的屬性，只能修改可寫入或是可設定的屬性。 屬性可以在新物件或是現有物件上設定。  
@@ -183,10 +183,10 @@ ms.lasthandoff: 06/22/2017
 >  當有多個 RMO 用戶端或是多個 RMO 程式設計物件的執行個體，在伺服器上存取相同複寫物件時，可以呼叫 RMO 物件的 **Refresh** 方法，以便根據伺服器上物件目前的狀態來更新屬性。  
   
 ### <a name="caching-property-changes"></a>快取屬性變更  
- 將 <xref:Microsoft.SqlServer.Management.Common.SqlExecutionModes> 屬性設定為 <xref:Microsoft.SqlServer.Management.Common.SqlExecutionModes.CaptureSql> 時，會擷取 RMO 產生的所有 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式，這樣就可以使用其中一個執行方法，以單一批次手動執行它們。 RMO 可讓您使用物件的 `M:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges` 方法，以擷取屬性變更並在單一批次中一起認可它們。 若要快取屬性變更，必須將物件的 `P:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges` 屬性設定為 **true**。 在快取 RMO 中的屬性變更時，<xref:Microsoft.SqlServer.Management.Common.ServerConnection> 物件仍然會控制何時將變更傳送到伺服器。 如需快取複寫物件之屬性變更的詳細資訊，請參閱[檢視及修改散發者和發行者屬性](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)。  
+ 當將 <xref:Microsoft.SqlServer.Management.Common.SqlExecutionModes> 屬性設定為 <xref:Microsoft.SqlServer.Management.Common.SqlExecutionModes.CaptureSql> 時，會擷取 RMO 產生的所有 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式，這樣就可以使用其中一個執行方法，以單一批次手動執行它們。 RMO 可讓您使用物件的 `M:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges` 方法，以擷取屬性變更並在單一批次中一起認可它們。 若要快取屬性變更，必須將物件的 `P:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges` 屬性設定為 **true**。 在快取 RMO 中的屬性變更時，<xref:Microsoft.SqlServer.Management.Common.ServerConnection> 物件仍然會控制何時將變更傳送到伺服器。 如需快取複寫物件之屬性變更的詳細資訊，請參閱[檢視及修改散發者和發行者屬性](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)。  
   
 > [!IMPORTANT]  
->  雖然 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 類別支援在設定屬性時宣告明確的交易，不過，這樣的交易可能會干擾內部複寫交易、可能會產生非預期的結果，而且不應該與 RMO 搭配使用。  
+>  雖然 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 類別支援在設定屬性時宣告明確的交易，不過，這樣的交易可能會平擾內部複寫交易、可能會產生非預期的結果，而且不應該與 RMO 搭配使用。  
   
 ## <a name="example"></a>範例  
  這個範例會示範屬性變更的快取。 會快取對於交易式發行集屬性所做的變更，直到將它們明確地傳送到伺服器為止。  

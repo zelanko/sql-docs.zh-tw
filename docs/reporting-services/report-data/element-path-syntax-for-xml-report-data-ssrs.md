@@ -1,5 +1,5 @@
 ---
-title: "XML 報表資料 (SSRS) 的元素路徑語法 |Microsoft 文件"
+title: "XML 報表資料的元素路徑語法 (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -18,11 +18,11 @@ caps.latest.revision: 43
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 7c25d6665198e0392aa70d649ca658adec84d2de
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="element-path-syntax-for-xml-report-data-ssrs"></a>XML 報表資料的元素路徑語法 (SSRS)
@@ -37,9 +37,9 @@ ms.lasthandoff: 06/22/2017
 |----------------|--------------|  
 |**粗體字**|文字必須完全依照顯示的樣子輸入。|  
 |&#124; (分隔號)|會分隔語法項目， 您只能選擇其中一個項目。|  
-|`[ ]`（括號）|選擇性的語法項目。 不要輸入方括號。|  
+|`[ ]` (方括弧)|選擇性的語法項目。 不要輸入方括號。|  
 |**{ }** (大括弧)|會分隔語法項目的參數。|  
-|[**,**...*n*]|指出先前項目可以重複 *n* 的次數。 以逗號分開各次出現項目。|  
+|[**,**...*n*]|指出先前項目可以重複 *n* 次。 以逗號分開各次出現項目。|  
   
 ## <a name="syntax"></a>語法  
   
@@ -80,13 +80,13 @@ XMLLocalName :: =
 |詞彙|定義|  
 |----------|----------------|  
 |元素路徑|定義 XML 文件中周遊節點的順序，以便使用 XML 資料來源擷取資料集的欄位資料。|  
-|**ElementNode**|XML 文件中的 XML 節點。 節點是由標記指定，並存在於與其他節點構成的階層式關聯性中。 例如，\<客戶 > 是根元素節點。 \<客戶 > 子元素之\<客戶 >。|  
+|**ElementNode**|XML 文件中的 XML 節點。 節點是由標記指定，並存在於與其他節點構成的階層式關聯性中。 例如，\<Customers> 是根元素節點。 \<Customer> 是 \<Customers>的子元素。|  
 |**XMLName**|節點的名稱。 例如，Customers 節點的名稱為 Customers。 **XMLName** 可以使用命名空間識別碼做為前置詞，以確保所有節點的名稱都是唯一的。|  
 |**編碼方式**|指出本元素的 **Value** 是已編碼的 XML，需要加以解碼並加入做為此元素的子元素。|  
 |**FieldList**|定義用來擷取資料的元素與屬性組合。<br /><br /> 如果沒有指定，所有屬性和子元素都會做為欄位使用。 如果指定了空的欄位清單 (**{}**)，就不會使用這個節點中的任何欄位。<br /><br /> **FieldList** 可能不會同時包含 **Value** 及 **Element** 或 **ElementNode**。|  
 |**欄位**|指定擷取做為資料集欄位的資料。|  
-|**Attribute**|**ElementNode**中名稱與值的配對。 例如，在項目節點\<客戶 ID ="1">，**識別碼**是屬性和 **@ID（整數）**對應的資料欄位中傳回"1"為整數類型**識別碼**。|  
-|**值**|元素的值。 **Value** 只能用於元素路徑中的最後一個 **ElementNode** 上。 例如，因為\<傳回 > 如果您包含結尾的元素路徑的值是分葉節點，**傳回 {@}**是**Chair**。|  
+|**Attribute**|**ElementNode**中名稱與值的配對。 例如，在 \<Customer ID="1"> 元素節點中，**ID** 為一屬性，而 **@ID(Integer)** 會在對應的資料欄位 **ID** 中以整數資料類型傳回 "1"。|  
+|**值**|元素的值。 **Value** 只能用於元素路徑中的最後一個 **ElementNode** 上。 例如，因為 \<Return> 是分葉節點，如果將其加入元素路徑的結尾，**Return {@}** 的值會是 **Chair**。|  
 |**Element**|具名子元素的值。 例如，Customers {}/Customer {}/LastName 只會擷取 LastName 元素的值。|  
 |**型別**|此元素建立之欄位所使用的選擇性資料類型。|  
 |**NamespacePrefix**|**NamespacePrefix** 是在 XML 查詢元素中定義。 如果 XML 查詢元素不存在，則會省略 XML **ElementPath** 中的命名空間。 如果有 XML 查詢元素，XML **ElementPath** 則會有選擇性的 **IgnoreNamespaces**屬性。 如果 IgnoreNamespaces 為 **true**，則會忽略 XML **ElementPath** 以及 XML 文件中的命名空間。 如需詳細資訊，請參閱 [XML 報表資料的 XML 查詢語法 &#40;SSRS&#41;](../../reporting-services/report-data/xml-query-syntax-for-xml-report-data-ssrs.md)。|  
@@ -202,7 +202,7 @@ XMLLocalName :: =
   
      `<Query>`  
   
-8.  按一下 [執行查詢] (!)。  
+8.  按一下 [執行查詢]\(!)。  
   
      結果集會顯示具有下列資料行的 4 行資料： `xmlns`、 `Customer.ID`、 `FirstName`、 `LastName`、 `ID`、 `Qty`、 `Order`。  
   
@@ -211,7 +211,7 @@ XMLLocalName :: =
 ## <a name="see-also"></a>請參閱＜  
  [XML 連接類型 &#40;SSRS&#41;](../../reporting-services/report-data/xml-connection-type-ssrs.md)   
  [Reporting Services 教學課程 &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)   
- [加入、編輯、重新整理報表資料窗格中的欄位 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)  
+ [加入、編輯、重新整理報表資料窗格中的欄位 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)  
   
   
 

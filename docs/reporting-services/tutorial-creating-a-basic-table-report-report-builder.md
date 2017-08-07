@@ -1,5 +1,5 @@
 ---
-title: "教學課程： 建立基本資料表報表 （報表產生器） |Microsoft 文件"
+title: "教學課程：建立基本資料表報表 (報表產生器) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/23/2016
 ms.prod: sql-server-2016
@@ -16,11 +16,11 @@ caps.latest.revision: 16
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 021a980dee9f6cd72f663475ba084962fa543cd4
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="tutorial-creating-a-basic-table-report-report-builder"></a>教學課程：建立基本資料表報表 (報表產生器)
@@ -39,11 +39,11 @@ ms.lasthandoff: 06/22/2017
   
 ### <a name="to-create-a-report"></a>建立報表  
   
-1.  從您的電腦、[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 入口網站或 SharePoint 整合模式[啟動報表產生器](../reporting-services/report-builder/start-report-builder.md)。  
+1.  從您的電腦、[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] Web 入口網站或 SharePoint 整合模式[啟動報表產生器](../reporting-services/report-builder/start-report-builder.md)。  
   
     [新報表或資料集] 對話方塊隨即開啟。  
   
-    如果未顯示 [新報表或資料集] 對話方塊，請按一下 [檔案] 功能表 > [新增]。  
+    如果您看不到 [新增報表或資料集] 對話方塊，請按一下 [檔案] 功能表 > [新增]。  
   
 2.  在左窗格中，確認已選取 **[新增報表]** 。  
   
@@ -52,7 +52,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="DataConnection"></a>1a. 在資料表精靈中指定資料連接  
 資料連接包含連接至外部資料來源的資訊，例如 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫。 通常您會向資料來源擁有者取得連接資訊以及要使用的認證類型。 若要指定資料連接，您可以使用來自報表伺服器的共用資料來源，或是建立僅在此報表中使用的內嵌資料來源。  
   
-在本教學課程中，您將使用內嵌資料來源。 若要深入了解如何使用共用資料來源，請參閱[取得資料連接的替代方式 &#40;報表產生器&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)。  
+在本教學課程中，您將使用內嵌資料來源。 若要深入了解如何使用共用資料來源，請參閱[取得資料連線的替代方式 &#40;報表產生器&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)。  
   
 ### <a name="to-create-an-embedded-data-source"></a>建立內嵌資料來源  
   
@@ -60,11 +60,11 @@ ms.lasthandoff: 06/22/2017
   
 2.  按一下 **[新增]**。 **[資料來源屬性]** 對話方塊隨即開啟。  
   
-3.  在 [名稱] 中輸入 **Product_Sales** 作為資料來源的名稱。  
+3.  在 [名稱] 中鍵入 **Product_Sales** 作為資料來源的名稱。  
   
-4.  在 [選取連接類型] 中，確認已選取 [Microsoft SQL Server]。  
+4.  在 [選取連線類型] 中，驗證已選取 [Microsoft SQL Server]。  
   
-5.  在 [連接字串] 中輸入下列文字，其中 \<伺服器名稱> 是 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體的名稱：  
+5.  在 [連接字串] 中鍵入下列文字，其中 \<servername> 是 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體的名稱：  
   
     ```  
     Data Source=<servername>  
@@ -80,7 +80,7 @@ ms.lasthandoff: 06/22/2017
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-    您會回到 [選擇與資料來源的連接] 頁面，並已選取新的資料來源。  
+    您會回到 [選擇與資料來源的連線] 頁面，並選取了新的資料來源。  
   
 9. 按一下 **[下一步]**。  
   
@@ -132,7 +132,7 @@ ms.lasthandoff: 06/22/2017
   
     ```  
   
-3.  在查詢設計工具的工具列上，按一下 [執行] (**!**)。  
+3.  在查詢設計工具工具列上，按一下 **[執行]**\(**!**)。  
   
     查詢隨即執行，並顯示 SalesDate、Subcategory、Product、Sales 和 Quantity 欄位的結果集。  
   
@@ -174,7 +174,7 @@ ms.lasthandoff: 06/22/2017
   
 1.  在 **[選擇配置]** 頁面的 **[選項]**下方，確定已選取 **[顯示小計和總計]** 。  
   
-2.  確認已選取 [被封鎖，小計位於下方]。  
+2.  驗證已選取 [區塊式，小計位於下方]。  
   
     精靈的 [預覽] 窗格會顯示含有五個資料列的資料表。 當您執行報表時，每個資料列都會以下列方式顯示：  
   
@@ -199,13 +199,13 @@ ms.lasthandoff: 06/22/2017
   
 ### <a name="to-format-a-currency-field"></a>格式化貨幣欄位  
   
-1.  若要檢視 [設計檢視] 中的格式化文字方塊及作為範例值的預留位置文字，請在 [常用] 索引標籤的 [數字] 群組中，按一下預留位置樣式圖示旁的箭號 > [範例值]。  
+1.  若要在 [設計] 檢視中查看格式化文字方塊及預留位置文字顯示範例值，請在 [主資料夾] 索引標籤的 [數字] 群組中，按一下**預留位置樣式**圖示旁的箭號 > [範例值]。  
   
-2.   在 [Sales] 資料行中，按一下第二列的資料格 (位於欄標題資料列底下)，然後向下拖曳以選取包含 `[Sum(Sales)]` 的所有資料格。  
+2.   在 [Sales] 資料行中，按一下第二列的資料格 (位於欄標題資料列底下)，然後向下拖曳以選取包含 `[Sum(Sales)]`的所有資料格。  
   
-3.  在 [常用] 索引標籤的 [數字] 群組中，按一下 [貨幣] 按鈕。 這些資料格就會變更為顯示格式化貨幣。  
+3.  在 [主資料夾] 索引標籤的 [數字] 群組中，按一下 [貨幣] 按鈕。 這些資料格就會變更為顯示格式化貨幣。  
   
-    如果您的地區設定為 [英文 (美國)]，則預設範例文字會是 [$12,345.00]。 如果看不到範例貨幣值，請在 [常用] 索引標籤的 [數字] 群組中，按一下預留位置樣式圖示旁的箭號 > [範例值]。  
+    如果您的地區設定為 [英文 (美國)]，則預設範例文字會是 [**$12,345.00**]。 如果看不到範例貨幣值，請在 [主資料夾] 索引標籤的 [數字] 群組中，按一下**預留位置樣式**圖示旁的箭號 > [範例值]。  
   
 4.  按一下 [執行] 以預覽報表。  
   
@@ -218,11 +218,11 @@ ms.lasthandoff: 06/22/2017
   
 1.  按一下 **[設計]** 返回 [設計] 檢視。  
   
-2.  按一下包含 `[SalesDate]` 的資料格。  
+2.  按一下包含 `[SalesDate]`的資料格。  
   
-3.  在功能區上，於 [常用] 索引標籤的 [數字] 群組中，按一下箭號並選取 [日期]。  
+3.  在功能區上，於 [主資料夾] 索引標籤的 [數字] 群組中，按一下箭號並選取 [日期]。  
   
-    資料格就會顯示範例日期 [1/31/2000]。 如果看不到範例日期，請在 [常用] 索引標籤的 [數字] 群組中，按一下預留位置樣式圖示旁的箭號 > [範例值]。  
+    資料格就會顯示範例日期 **[1/31/2000]**。 如果看不到範例日期，請在 [主資料夾] 索引標籤的 [數字] 群組中，按一下**預留位置樣式**圖示旁的箭號 > [範例值]。  
   
 4.  按一下 **[執行]** 預覽報表。  
   
@@ -232,19 +232,19 @@ SalesDate 值會以預設的日期格式顯示。
   
 1.  按一下 **[設計]** 返回 [設計] 檢視。  
   
-2.  選取包含 `[SalesDate]` 的資料格。  
+2.  選取包含 `[SalesDate]`的資料格。  
   
-3.  在 [常用] 索引標籤的 [數字] 群組中，按一下右下角的箭號以開啟對話方塊。  
+3.  在 [主資料夾] 索引標籤的 [數字] 群組中，按一下右下角的箭號以開啟對話方塊。  
   
     [文字方塊屬性] 對話方塊隨即開啟。  
   
-4.  在 [類別目錄] 窗格中，確認已選取 [日期]。  
+4.  在 [類別目錄] 窗格中，驗證已選取 [日期]。  
   
 5.  在 [類型] 窗格中，選取 [January 31, 2000]。  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-    資料格就會顯示範例日期 [January 31, 2000]。  
+    資料格就會顯示範例日期 **[January 31, 2000]**。  
   
 7.  按一下 [執行] 以預覽報表。  
   
@@ -270,7 +270,7 @@ SalesDate 值會顯示月份的名稱，而不是月份的數字。
 ## <a name="Title"></a>5.加入報表標題  
 報表標題會出現在報表的頂端。 您可以將報表標題放置在報表頁首，如果報表不使用報表頁首，則可以放置在報表主體頂端的文字方塊中。 在本教學課程中，您將使用自動放置在報表主體頂端的文字方塊。  
   
-您可以將不同的字型樣式、大小和色彩套用到文字的片語和個別字元，進一步加強文字。 如需詳細資訊，請參閱[格式化文字方塊中的文字 &#40;報表產生器及 SSRS&#41;](../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)。  
+您可以將不同的字型樣式、大小和色彩套用到文字的片語和個別字元，進一步加強文字。 如需詳細資訊，請參閱[在文字方塊中將文字格式化 &#40;報表產生器及 SSRS&#41;](../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)。  
   
 ### <a name="to-add-a-report-title"></a>若要加入報表標題  
   
@@ -278,7 +278,7 @@ SalesDate 值會顯示月份的名稱，而不是月份的數字。
   
 2.  輸入 **Product Sales**，然後按一下文字方塊外部。  
   
-3.  以滑鼠右鍵按一下包含 **Product Sales** 的文字方塊，然後按一下 [文字方塊屬性]。  
+3.  以滑鼠右鍵按一下包含 [Product Sales] 的文字方塊，然後按一下 [文字方塊屬性]。  
   
 4.  在 [文字方塊屬性] 對話方塊中，按一下 [字型]。  
   
@@ -346,9 +346,9 @@ SalesDate 值會顯示月份的名稱，而不是月份的數字。
   
 3.  在 [另存新檔] 對話方塊中，瀏覽至您要儲存檔案的位置。  
   
-4.  在 [檔案名稱] 方塊中，輸入 **Product_Sales_Excel**。  
+4.  在 [檔案名稱] 方塊中，鍵入 **Product_Sales_Excel**。  
   
-5.  確認檔案類型為 **Excel (\*.xlsx)**。  
+5.  驗證檔案類型為 **Excel (\*.xlsx)**。  
   
 6.  按一下 **[儲存]**。  
   

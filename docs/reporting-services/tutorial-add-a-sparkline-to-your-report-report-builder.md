@@ -1,5 +1,5 @@
 ---
-title: "教學課程： 將走勢圖加入至報表 （報表產生器） |Microsoft 文件"
+title: "教學課程：將走勢圖新增至報表 (報表產生器) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -16,11 +16,11 @@ caps.latest.revision: 17
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: c4cc42eaf9862f2154f598d6f91dafffa906c799
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 
@@ -39,11 +39,11 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="CreateTable"></a>1.建立含資料表的報表  
   
-1.  從您的電腦、[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] Web 入口網站或 SharePoint 整合模式，[啟動報表產生器](../reporting-services/report-builder/start-report-builder.md)。  
+1.  從您的電腦、[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] Web 入口網站或 SharePoint 整合模式[啟動報表產生器](../reporting-services/report-builder/start-report-builder.md)。  
   
     [新報表或資料集] 對話方塊隨即開啟。  
   
-    如果未顯示 [新報表或資料集] 對話方塊，請按一下 [檔案] 功能表 > [新增]。  
+    如果您看不到 [新增報表或資料集] 對話方塊，請按一下 [檔案] 功能表 > [新增]。  
   
 2.  在左窗格中，確認已選取 **[新增報表]** 。  
   
@@ -52,25 +52,25 @@ ms.lasthandoff: 06/22/2017
 4.  在 [選擇資料集] 頁面上，選取 [建立資料集] > [下一步]。 **[選擇與資料來源的連接]** 頁面隨即開啟。  
   
     > [!NOTE]  
-    > 本教學課程不需要特定的資料。您只需要 SQL Server 資料庫的連接。 如果您已有資料來源連接列於 [資料來源連接] 底下，就可以選取該連接並移至步驟 10。 如需詳細資訊，請參閱[取得資料連接的替代方式 &#40;報表產生器&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)。  
+    > 本教學課程無須任何特定資料，只需要 SQL Server 資料庫的連線。 如果您已有資料來源連接列於 [資料來源連接] 底下，就可以選取該連接並移至步驟 10。 如需詳細資訊，請參閱[取得資料連線的替代方式 &#40;報表產生器&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)。  
   
 5.  按一下 **[新增]**。 **[資料來源屬性]** 對話方塊隨即開啟。  
   
-6.  在 [名稱] 中輸入 **Product Sales** 做為資料來源的名稱。  
+6.  在 [名稱] 中鍵入 **Product Sales** 作為資料來源的名稱。  
   
-7.  在 [選取連接類型] 中，確認已選取 [Microsoft SQL Server]。  
+7.  在 [選取連線類型] 中，驗證已選取 [Microsoft SQL Server]。  
   
-8.  在 [連接字串] 中，輸入下列文字：  
+8.  在 [連接字串] 中，鍵入下列文字：  
   
     `Data Source\=<servername>`  
   
-    `<servername>` 運算式 (例如 Report001) 會指定已安裝 SQL Server Database Engine 執行個體的電腦名稱。 由於報表資料不是擷取自 SQL Server 資料庫，您不必加上資料庫的名稱。 指定之伺服器上的預設資料庫將用來剖析查詢。  
+    `<servername>`運算式 (例如 Report001) 會指定已安裝 SQL Server Database Engine 執行個體的電腦名稱。 由於報表資料不是擷取自 SQL Server 資料庫，您不必加上資料庫的名稱。 指定之伺服器上的預設資料庫將用來剖析查詢。  
   
 9. 按一下 **[認證]**。 輸入您存取外部資料來源所需的認證。  
   
 10. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-    您會回到 [選擇與資料來源的連接] 頁面。  
+    您會回到 [選擇與資料來源的連線] 頁面。  
   
 11. 若要確認您能夠連接至資料來源，請按一下 **[測試連接]**。  
   
@@ -133,13 +133,13 @@ ms.lasthandoff: 06/22/2017
   
 5.  按一下 **[下一步]**。  
   
-6.  在 [排列欄位] 頁面上，將 **Sales** 拖曳至 [值]。  
+6.  在 [排列欄位] 頁面上，將 [Sales] 拖曳至 [值]。  
   
     **Sales** 是透過 Sum 函數彙總。 值為 [Sum(Sales)]。  
   
-7.  將 **Product** 拖曳至 [資料列群組]。  
+7.  將 [Product] 拖曳至 [資料列群組]。  
   
-8.  將 **SalesDate** 拖曳至 [資料行群組]。  
+8.  將 [SalesDate] 拖曳至 [資料行群組]。  
 
     ![report-builder-sparkline-arrange-fields](../reporting-services/media/report-builder-sparkline-arrange-fields.png)
   
@@ -163,7 +163,7 @@ ms.lasthandoff: 06/22/2017
   
 14. 資料表會加入至設計介面。 該資料表具有三個資料行和三個資料列。  
   
-    請查看 [群組] 窗格。 如果未顯示 [群組] 窗格，請按一下 [檢視] 功能表上的 [群組]。 [資料列群組] 窗格會顯示一個資料列群組：**Product**。 [資料行群組] 窗格會顯示一個資料行群組： **SalesDate**。 詳細資料是資料集查詢擷取的所有資料。  
+    請查看 [群組] 窗格。 如果未顯示 [群組] 窗格，請按一下 [檢視] 功能表上的 [群組]。 [資料列群組] 窗格會顯示一個資料列群組： **Product**。 [資料行群組] 窗格會顯示一個資料行群組： **SalesDate**。 詳細資料是資料集查詢擷取的所有資料。  
     
     ![report-builder-sparkline-grouping-pane](../reporting-services/media/report-builder-sparkline-grouping-pane.png)
   
@@ -182,18 +182,18 @@ ms.lasthandoff: 06/22/2017
 
     ![report-builder-placeholder-currency](../reporting-services/media/report-builder-placeholder-currency.png)
   
-    如果您的地區設定為 [英文 (美國)]，則預設範例文字會是 [$12,345.00]。 如果未顯示範例貨幣值，請按一下 [數字] 群組中的 [預留位置樣式] > [範例值]。  
+    如果您的地區設定為 [英文 (美國)]，則預設範例文字會是 [**$12,345.00**]。 如果您看不到範例貨幣值，請按一下 [數字] 群組中的 [預留位置樣式] > [範例值]。  
     
     ![report-builder-placeholder-value-button](../reporting-services/media/report-builder-placeholder-value-button.png)
    
 ### <a name="FormatDates"></a>2b. (選擇性) 將資料格式化為日期  
 根據預設， **SalesDate** 欄位會同時顯示日期和時間資訊。 您可以將該欄位格式化，以便只顯示日期。  
   
-1.  按一下包含 `[SalesDate]` 的資料格。  
+1.  按一下包含 `[SalesDate]`的資料格。  
   
 3.  在 [主資料夾] 索引標籤 > [數字] 群組 > [日期]。  
   
-    資料格就會顯示範例日期 [1/31/2000]。
+    資料格就會顯示範例日期 **[1/31/2000]**。
      
 4.  按一下 **[執行]** 預覽報表。  
   
@@ -213,7 +213,7 @@ ms.lasthandoff: 06/22/2017
 
     ![report-builder-insert-sparkline](../reporting-services/media/report-builder-insert-sparkline.png)
   
-5.  在 [選取走勢圖類型] 對話方塊中，確定已選取 [先欄後列] 的第一個走勢圖，然後按一下 [確定]。  
+5.  在 [選取走勢圖類型] 對話方塊中，確定已選取 [Column] 資料列的第一個走勢圖，然後按一下 [確定]。  
   
 6.  按一下走勢圖以顯示 [圖表資料] 窗格。  
   
@@ -254,7 +254,7 @@ ms.lasthandoff: 06/22/2017
   
 7.  按一下 **[確定]**。  
   
-8.  按一下 [執行] 再次預覽報表。  
+8.  按一下 [執行] 來重新預覽報表。  
   
 現在，每個走勢圖中的所有橫條都與其他走勢圖的橫條對齊，並以相對高度呈現。  
   
@@ -271,14 +271,14 @@ ms.lasthandoff: 06/22/2017
   
 2.  按一下資料表，使灰色橫條出現在資料表的上面和旁邊。 這些是資料行和資料列控點。
   
-3.  指向資料行控點之間的線條，使游標變成雙箭頭。 您可以拖曳 **Product**資料行，讓產品名稱顯示於同一行上。  
+3.  指向資料行控點之間的線條，使游標變成雙箭頭。 您可以拖曳 **Product** 資料行，讓產品名稱顯示於同一行上。  
   
 4.  按一下 [執行] 預覽報表，以查看寬度是否足夠。  
   
 ## <a name="Title"></a>8.(選擇性) 加入報表標題  
 報表標題會出現在報表的頂端。 您可以將報表標題放置在報表頁首，如果報表不使用報表頁首，則可以放置在報表主體頂端的文字方塊中。 在本教學課程中，您將使用自動放置在報表主體頂端的文字方塊。  
   
-您可以將不同的字型樣式、大小和色彩套用到文字的片語和個別字元，進一步加強文字。 如需詳細資訊，請參閱[格式化文字方塊中的文字 &#40;報表產生器及 SSRS&#41;](../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)。  
+您可以將不同的字型樣式、大小和色彩套用到文字的片語和個別字元，進一步加強文字。 如需詳細資訊，請參閱[在文字方塊中將文字格式化 &#40;報表產生器及 SSRS&#41;](../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)。  
   
 ### <a name="to-add-a-report-title"></a>若要加入報表標題  
   
@@ -286,9 +286,9 @@ ms.lasthandoff: 06/22/2017
   
 2.  輸入 **Sales by Date**，然後按一下文字方塊外部。  
   
-3.  選取包含 **Product Sales** 的文字方塊。  
+3.  選取包含 **Product Sales**的文字方塊。  
   
-4.  在 [主資料夾] 索引標籤 > [字型] 群組 > [色彩] 中，請選取**藍綠色**。  
+4.  在 [主資料夾] 索引標籤 > [字型] 群組 > [色彩] 中，請選取 [藍綠色]。  
   
 7.  選取 [粗體]。  
   
@@ -307,7 +307,7 @@ ms.lasthandoff: 06/22/2017
   
     「正在連接到報表伺服器」訊息隨即顯示。 連接完成時，您就會看見報表伺服器管理員指定為預設報表位置之報表資料夾的內容。  
   
-4.  將 [名稱] 中的預設名稱取代為**Product Sales**。  
+4.  將 [名稱] 中的預設名稱取代為 **Product Sales**。  
   
 5.  按一下 **[儲存]**。  
   
@@ -319,13 +319,13 @@ ms.lasthandoff: 06/22/2017
   
 2.  按一下 [桌面]、[我的文件] 或 [我的電腦]，然後瀏覽到您要儲存報表的資料夾。  
   
-3.  將 [名稱] 中的預設名稱取代為**Product Sales**。  
+3.  將 [名稱] 中的預設名稱取代為 **Product Sales**。  
   
 4.  按一下 **[儲存]**。  
   
 ## <a name="next-steps"></a>後續步驟  
 
-這總結本教學課程：建立含走勢圖的資料表報表。 如需有關走勢圖的詳細資訊，請參閱[and Data Bars](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)。  
+這總結本教學課程：建立含走勢圖的資料表報表。 如需走勢圖的詳細資訊，請參閱[走勢圖和資料橫條](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)。  
   
 [報表產生器教學課程](../reporting-services/report-builder-tutorials.md) 
 [SQL Server 2016 的報表產生器](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  

@@ -1,5 +1,5 @@
 ---
-title: "訂閱與傳遞 (Reporting Services) |Microsoft 文件"
+title: "訂閱與傳遞 (Reporting Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -26,11 +26,11 @@ caps.latest.revision: 56
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 5ecd364a199f122c98471f112e153d98d2778852
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="subscriptions-and-delivery-reporting-services"></a>Subscriptions and Delivery (Reporting Services)
@@ -38,7 +38,7 @@ ms.lasthandoff: 06/22/2017
   
  您可以為單一報表建立多個訂閱，以區別訂閱選項；例如，您可以指定不同的參數值，以產生三種版本的報表，例如西區銷售額報表、東區銷售額報表及所有銷售額報表。  
   
- ![ssrs 訂閱流程範例](../../reporting-services/subscriptions/media/ssrs-subscription-example-flow.png "ssrs 訂閱流程範例")  
+ ![SSRS 訂閱流程範例](../../reporting-services/subscriptions/media/ssrs-subscription-example-flow.png "SSRS 訂閱流程範例")  
   
  並非所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本都提供訂閱。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本支援的功能清單，請參閱 [SQL Server 2016 版本支援的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
@@ -187,7 +187,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>另請參閱  
  [建立資料驅動訂閱 &#40;SSRS 教學課程&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)   
- [排程](../../reporting-services/subscriptions/schedules.md)   
+ [[排程]](../../reporting-services/subscriptions/schedules.md)   
  [Reporting Services 報表伺服器 &#40;原生模式&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
  [監視 Reporting Services 訂閱](../../reporting-services/subscriptions/monitor-reporting-services-subscriptions.md)  
   

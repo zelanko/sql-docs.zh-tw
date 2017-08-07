@@ -1,5 +1,5 @@
 ---
-title: "資料集屬性對話方塊、 查詢 （報表產生器） |Microsoft 文件"
+title: "資料集屬性對話方塊、查詢 (報表產生器) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -19,11 +19,11 @@ caps.latest.revision: 12
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: cc89e2a412163811aca2c8a99bdc3fae574d0926
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="dataset-properties-dialog-box-query-report-builder"></a>資料集屬性對話方塊、查詢 (報表產生器)
@@ -39,7 +39,7 @@ ms.lasthandoff: 06/22/2017
   
 -   [資料集屬性對話方塊、篩選 &#40;報表產生器&#41;](http://msdn.microsoft.com/library/933a6f44-4eb7-4e73-9c40-ac0fd17b23d3)  
   
- 如需詳細資訊，請參閱 [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。  
+ 如需詳細資訊，請參閱 [報表內嵌資料集和共用資料集 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)(Dependent Dataset)。  
   
 ## <a name="options"></a>選項。  
  **名稱**  
@@ -64,7 +64,7 @@ ms.lasthandoff: 06/22/2017
 >  並非所有的查詢類型都受到所有資料來源的支援。 例如， **[資料表]** 只受到 **[OLE DB]** 和 **[ODBC]**資料來源類型的支援。  
   
  **查詢**  
- 此選項會在選擇 [文字] 命令類型選項時出現。 輸入查詢，或按一下 [匯入] 來匯入已存在的查詢。 請按一下 [運算式] (*fx*) 按鈕來編輯運算式。  
+ 此選項會在選擇 [文字] 命令類型選項時出現。 鍵入查詢，或按一下 [匯入] 來匯入已存在的查詢。 請按一下 [運算式] (*fx*) 按鈕來編輯運算式。  
   
 > [!NOTE]  
 >  如果您使用查詢設計工具來建立查詢，則查詢的文字會顯示在此方塊中。  

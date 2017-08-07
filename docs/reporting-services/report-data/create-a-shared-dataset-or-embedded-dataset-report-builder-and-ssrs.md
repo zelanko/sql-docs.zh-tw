@@ -1,5 +1,5 @@
 ---
-title: "建立共用資料集或內嵌資料集 （報表產生器及 SSRS） |Microsoft 文件"
+title: "建立共用資料集或內嵌資料集 (報表產生器及 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 10/17/2016
 ms.prod: sql-server-2016
@@ -15,11 +15,11 @@ caps.latest.revision: 9
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 25caf057e8d75fd3ed463f4165b3259331d18182
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs"></a>建立共用資料集或內嵌資料集 (報表產生器及 SSRS)
@@ -61,7 +61,7 @@ ms.lasthandoff: 06/22/2017
   
 4.  在查詢設計工具中，指定要併入資料集的欄位。  
   
-5.  按一下 [執行] (**!**) 來執行查詢。  
+5.  按一下 **[執行]** (**!**) 來執行查詢。  
   
 6.  在 **[報表產生器]** 按鈕上，按一下 **[儲存]** 或 **[另存新檔]** ，將共用資料集儲存在報表伺服器上。  
   
@@ -75,20 +75,20 @@ ms.lasthandoff: 06/22/2017
   
 3.  瀏覽至報表伺服器，並選取共用資料來源的資料夾。  
   
-4.  在 [Items of type (類型的項目)] 中，按一下下拉式清單中的資料集 (*.rsd)。  
+4.  在 **[下列類型的項目]**中，按一下下拉式清單中的資料集 (*.rsd)。  
   
 5.  選取共用資料集，然後按一下 **[開啟]**。 隨即開啟關聯的查詢設計工具。  
   
 6.  在功能區上，按一下 **[資料集屬性]**。  
   
-7.  按一下 **[參數]**。 在這個頁面上，將預設值設定為常數或運算式，並將參數標示為唯讀、可為 Null 或 [從查詢中忽略]。 如需詳細資訊，請參閱[報表參數](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)。  
+7.  按一下 **[參數]**。 在這個頁面上，將預設值設定為常數或運算式，並將參數標示為唯讀、可為 Null 或 [從查詢中忽略]。 如需詳細資訊，請參閱 [報表參數](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)。  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 
   
 ## <a name="to-create-a-dataset-from-a-sql-server-relational-database"></a>若要從 SQL Server 關聯式資料庫建立資料集  
   
-1.  在 [報表資料] 窗格中，以滑鼠右鍵按一下資料來源的名稱，然後按一下 [加入資料集]。 **[資料集屬性]** 對話方塊的 **[查詢]** 頁面隨即開啟。  
+1.  在 [報表資料] 窗格中，以滑鼠右鍵按一下資料來源的名稱，然後按一下 **[加入資料集]**。 **[資料集屬性]** 對話方塊的 **[查詢]** 頁面隨即開啟。  
   
 2.  在 **[名稱]**中，輸入資料集名稱或是接受預設名稱。  
   
@@ -105,7 +105,7 @@ ms.lasthandoff: 06/22/2017
   
     -   選取 **[StoredProcedure]** 即可依名稱執行預存程序。  
   
-5.  在 **[查詢]**中，輸入查詢、預存程序或資料表名稱。 或者，您也可以按一下 [查詢設計工具] 來開啟圖形化或是以文字為基礎的查詢設計工具，或是按一下 [匯入] 從現有的報表匯入查詢。  
+5.  在 **[查詢]**中，輸入查詢、預存程序或資料表名稱。 或者，您也可以按一下 **[查詢設計工具]** 來開啟圖形化或是以文字為基礎的查詢設計工具，或是按一下 **[匯入]** 從現有的報表匯入查詢。  
   
      在一些情況下，查詢所指定的欄位集合只能透過在資料來源上執行查詢來判斷。 例如，預存程序可能會在結果集中傳回一組變動的欄位。 按一下 **[重新整理欄位]** 可在資料來源上執行查詢，並擷取在 [報表資料] 窗格中填入資料集欄位集合所需的欄位名稱。 當您關閉 **[資料集屬性]** 對話方塊之後，資料集節點底下會出現欄位集合。  
   
@@ -119,7 +119,7 @@ ms.lasthandoff: 06/22/2017
  [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [資料集欄位集合 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
  [報表資料集 &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
- [資料連接、資料來源及連接字串 &#40;報表產生器及 SSRS&#41;](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)   
+ [資料連接、資料來源及連接字串 &#40;報表產生器和 SSRS&#41;](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)   
  [內嵌和共用資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

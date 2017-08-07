@@ -43,6 +43,6 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="see-also"></a>另請參閱  
  [使用快照集初始化訂閱](../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)   
- [Snapshot Options](../../relational-databases/replication/snapshot-options.md)  
+ [快照集選項](../../relational-databases/replication/snapshot-options.md)  
   
   

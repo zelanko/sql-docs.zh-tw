@@ -18,11 +18,11 @@ caps.latest.revision: 45
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: bf5b724d58fde9162bc75a4052f569b5218bbe8c
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="xml-format-files-sql-server"></a>XML 格式檔案 (SQL Server)
@@ -79,7 +79,7 @@ ms.lasthandoff: 06/22/2017
   
      \<記錄>  
   
-     \<欄位 .../> [ ...*n* ]  
+     \<FIELD .../> [ ...*n* ]  
   
      \</記錄>  
   
@@ -93,7 +93,7 @@ ms.lasthandoff: 06/22/2017
   
      \<資料列>  
   
-     \<資料行 .../> [ ...*n* ]  
+     \<COLUMN .../> [ ...*n* ]  
   
      \</資料列>  
   

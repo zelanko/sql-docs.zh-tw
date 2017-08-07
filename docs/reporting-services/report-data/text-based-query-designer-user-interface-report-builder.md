@@ -1,5 +1,5 @@
 ---
-title: "以文字為基礎的查詢設計工具使用者介面 （報表產生器） |Microsoft 文件"
+title: "文字型查詢設計工具使用者介面 (報表產生器) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -19,11 +19,11 @@ caps.latest.revision: 15
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 1640b0536b6e206afbd2aff5ea8dd11349277f12
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="text-based-query-designer-user-interface-report-builder"></a>以文字為基礎的查詢設計工具使用者介面 (報表產生器)
@@ -49,9 +49,9 @@ ms.lasthandoff: 06/22/2017
 |**命令類型**|選取 [Text]、[StoredProcedure] 或 [TableDirect]。 如果預存程序含有參數，當您按一下工具列上的 [執行] 時，便會顯示 [定義查詢參數] 對話方塊，您可以依照需要填入值。 對於命令類型的支援會依資料來源類型而有所不同。 例如，只有 OLE DB 和 ODBC 支援 [TableDirect]。<br /><br /> 注意：若預存程序傳回一個以上的結果集，則只會使用第一個結果集填入資料集。|  
   
 ### <a name="command-type-text"></a>Text 命令類型  
- 當您建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料集時，預設會開啟關聯式查詢設計工具。 若要切換到以文字為基礎的查詢設計工具，請按一下工具列上的 [當成文字編輯] 切換按鈕。 以文字為基礎的查詢設計工具會顯示兩個窗格：[查詢] 窗格和 [結果] 窗格。 下圖會標示出各個窗格。  
+ 當您建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料集時，預設會開啟關聯式查詢設計工具。 若要切換到文字型查詢設計工具，請按一下工具列上的 [當成文字編輯] 切換按鈕。 以文字為基礎的查詢設計工具會顯示兩個窗格：[查詢] 窗格和 [結果] 窗格。 下圖會標示出各個窗格。  
   
- ![關聯式資料查詢的一般查詢設計工具，](../../reporting-services/report-data/media/rsqd-dsaw-sql-generic.gif "關聯式資料查詢的一般查詢設計工具，")  
+ ![關聯式資料查詢的一般查詢設計工具](../../reporting-services/report-data/media/rsqd-dsaw-sql-generic.gif "關聯式資料查詢的一般查詢設計工具")  
   
  下表會描述各個窗格的功能。  
   
@@ -70,11 +70,11 @@ SELECT Name FROM Person.ContactType
  當您按一下工具列上的 [執行] 時，[查詢] 窗格中的命令便會執行，而且結果會顯示在 [結果] 窗格中。 結果集會顯示 20 種連絡人類型的清單，例如「擁有者」或「銷售代理人」。  
   
 ### <a name="command-type-storedprocedure"></a>StoredProcedure 命令類型  
- 當您選取 [命令類型] [StoredProcedure] 時，以文字為基礎的查詢設計工具會顯示兩個窗格：[查詢] 窗格和 [結果] 窗格。 請在 [查詢] 窗格內輸入預存程序名稱，然後按一下工具列上的 [執行]。 如果預存程序使用參數，[定義查詢參數] 對話方塊隨即開啟。 為此預存程序輸入參數值。 系統將會針對每一個預存程序輸入參數建立報表參數。  
+ 當您選取 [命令類型] [StoredProcedure] 時，文字型查詢設計工具會顯示兩個窗格：[查詢] 窗格和 [結果] 窗格。 請在 [查詢] 窗格內輸入預存程序名稱，然後按一下工具列上的 [執行]。 如果預存程序使用參數，[定義查詢參數] 對話方塊隨即開啟。 為此預存程序輸入參數值。 系統將會針對每一個預存程序輸入參數建立報表參數。  
   
  下圖會在您執行預存程序時，顯示 [查詢] 和 [結果] 窗格。 在此情況下，輸入參數是常數。  
   
- ![預存程序，以文字為基礎的查詢設計工具中](../../reporting-services/report-data/media/rs-relational-text-sp.gif "預存程序，在以文字為基礎的查詢設計工具")  
+ ![文字型查詢設計工具中的預存程序](../../reporting-services/report-data/media/rs-relational-text-sp.gif "文字型查詢設計工具中的預存程序")  
   
  下表會描述各個窗格的功能。  
   
@@ -100,7 +100,7 @@ uspGetWhereUsedProductID
  對於指定的日期，結果集會顯示 13 個產品識別碼 (使用指定的元件編號) 的清單。  
   
 ### <a name="command-type-tabledirect"></a>TableDirect 命令類型  
- 當您選取 [命令類型] [TableDirect] 時，以文字為基礎的查詢設計工具會顯示兩個窗格：[查詢] 窗格和 [結果] 窗格。 當您輸入資料表並按一下 [執行] 按鈕時，便會傳回該資料表的所有資料行。  
+ 當您選取 [命令類型] [TableDirect] 時，文字型查詢設計工具會顯示兩個窗格：[查詢] 窗格和 [結果] 窗格。 當您輸入資料表並按一下 [執行] 按鈕時，便會傳回該資料表的所有資料行。  
   
 #### <a name="example"></a>範例  
  對於資料來源類型 OLE DB，下列的資料集查詢會傳回 AdventureWorks2014 資料庫中所有連絡人類型的結果集。  

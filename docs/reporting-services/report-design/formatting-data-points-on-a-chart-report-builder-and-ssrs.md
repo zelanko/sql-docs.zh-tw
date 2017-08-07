@@ -1,5 +1,5 @@
 ---
-title: "格式化圖表 （報表產生器及 SSRS） 上的資料點 |Microsoft 文件"
+title: "將圖表上的資料點格式化 (報表產生器及 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-server-2016
@@ -18,15 +18,15 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d1514b7ec2a5f1d7d2d5abd3513db47a208a2e24
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="formatting-data-points-on-a-chart-report-builder-and-ssrs"></a>格式化圖表上的資料點 (報表產生器及 SSRS)
-在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 編頁報表中，資料點是圖表上最小的個別實體。 在非形狀圖上，資料點的表示取決於其圖表類型。 例如，線條數列由一個或多個已連接的資料點所組成。 在形狀圖上，資料點會以加入到整個圖表的個別配量或區段表示。 例如，在圓形圖上，每一塊都是一個資料點。 如需詳細資訊，請參閱[圖表類型 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)。  
+在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 編頁報表中，資料點是圖表上最小的個別實體。 在非形狀圖上，資料點的表示取決於其圖表類型。 例如，線條數列由一個或多個已連接的資料點所組成。 在形狀圖上，資料點會以加入到整個圖表的個別配量或區段表示。 例如，在圓形圖上，每一塊都是一個資料點。 如需詳細資訊，請參閱 [圖表類型 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)。  
   
  一個或多個資料點會形成一個數列。 根據預設，系統會將所有格式選項套用到數列中的所有資料點。 如果您要指定個別資料點的屬性，可以針對數列指定在執行階段根據資料集格式化個別資料點的欄位或運算式。  
   
@@ -36,14 +36,14 @@ ms.lasthandoff: 06/22/2017
 ## <a name="adding-tooltips-and-drillthrough-actions-to-data-points"></a>將工具提示和鑽研動作加入到資料點中  
  您可以在數列上設定 **ToolTip** 屬性的值，以便將工具提示加入到每個資料點中。 您可以透過顯示工具提示，讓使用者能夠看到與資料點相關的任何資訊，例如，群組名稱、資料點的值，以及相對於數列總數之資料點的百分比。 如需詳細資訊，請參閱 [在數列上顯示工具提示 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md)。  
   
- 您也可以在數列上指定資料點的鑽研動作來顯示其他報表或 URL。 您可以傳遞參數來顯示與已經按下之資料點相關的資訊。 如需詳細資訊，請參閱[在報表上加入鑽研動作 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/add-a-drillthrough-action-on-a-report-report-builder-and-ssrs.md)。  
+ 您也可以在數列上指定資料點的鑽研動作來顯示其他報表或 URL。 您可以傳遞參數來顯示與已經按下之資料點相關的資訊。 如需詳細資訊，請參閱[在報表上新增鑽研動作 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/add-a-drillthrough-action-on-a-report-report-builder-and-ssrs.md)。  
   
 ## <a name="highlighting-individual-data-points-in-a-series"></a>反白顯示數列中的個別資料點  
  在任何非形狀圖上，您可以指定 Color 屬性的運算式，藉以反白顯示個別的資料點。 例如，若要在名稱為 `MyField` 的數列中，以不同於其他資料點的色彩反白顯示資料點的最高值，其運算式類似如下：  
   
  `=Iif(Fields!MyField.Value >= Max(Fields!MyField.Value, "MyDataSet"), "Red", "Green")`  
   
- 在此範例中， `MyField` 的最高值色彩將為紅色，而其他所有資料點的色彩則為綠色。 當您使用數列的 **Fill** 屬性指定數列的色彩時，圖表將會覆寫在調色盤中指定的色彩。 如需詳細資訊，請參閱[格式化圖表上的序列色彩 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)。  
+ 在此範例中， `MyField` 的最高值色彩將為紅色，而其他所有資料點的色彩則為綠色。 當您使用數列的 **Fill** 屬性指定數列的色彩時，圖表將會覆寫在調色盤中指定的色彩。 如需詳細資訊，請參閱 [設定圖表上數列色彩的格式 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)。  
   
 ## <a name="positioning-data-point-labels-on-a-chart"></a>在圖表上放置資料點標籤  
  針對所有圖表類型，當您以滑鼠右鍵按一下圖表，然後選取 **[顯示資料標籤]**時，可以顯示資料點標籤。 資料點標籤的位置會根據圖表類型而指定：  
@@ -58,14 +58,14 @@ ms.lasthandoff: 06/22/2017
   
 -   在其他所有圖表類型上，您可以使用數列標籤上的 **Position** 屬性重新放置資料點標籤的位置。 根據預設，圖表會自動計算資料點標籤的位置以避免標籤衝突。 當您設定 **Position**的值時，所有資料點標籤都會以相同的方式放置，這可能會造成標籤重疊。 請僅在資料點較少時，考慮使用此方法。  
   
- 如需詳細資訊，請參閱[在圖表中放置標籤 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/position-labels-in-a-chart-report-builder-and-ssrs.md)。  
+ 如需詳細資訊，請參閱[圖表中的位置標籤 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/position-labels-in-a-chart-report-builder-and-ssrs.md)。  
   
 ## <a name="adding-keywords-for-data-point-labels-tooltips-and-legend-text"></a>為資料點標籤、工具提示和圖例文字加入關鍵字  
  您可以使用區分大小寫的圖表專用關鍵字來表示存在於圖表中的項目。 這些關鍵字僅適用於工具提示、自訂圖例文字與資料點標籤屬性。 在許多情況下，圖表關鍵字擁有相等的簡單運算式，但是關鍵字輸入時更快、更容易。 下列是圖表關鍵字的清單。  
   
 |圖表關鍵字|說明|適用於圖表類型|相等簡單運算式的範例|  
 |-------------------|-----------------|------------------------------|------------------------------------------------|  
-|#VALY|資料點的 Y 值。|All|`=Fields!MyDataField.Value`|  
+|#VALY|資料點的 Y 值。|全部|`=Fields!MyDataField.Value`|  
 |#VALY2|資料點的 Y 值 #2。|範圍圖、泡泡圖|無|  
 |#VALY3|資料點的 Y 值 #3。|股票圖、K 線圖|無|  
 |#VALY4|資料點的 Y 值 #4。|股票圖、K 線圖|無|  
@@ -73,20 +73,20 @@ ms.lasthandoff: 06/22/2017
 |#LABEL|資料點標籤。|全部|無|  
 |#AXISLABEL|軸資料點標籤。|形狀圖|`=Fields!MyDataField.Value`|  
 |#INDEX|資料點索引。|全部|無|  
-|#PERCENT|資料點 Y 值的百分比。|All|`=FormatPercent(Fields!MyDataField.Value/Sum(Fields!MyDataField.Value, "MyDataSet"),2)`|  
-|#TOTAL|數列中所有 Y 值的總計。|All|`=Sum(Fields!MyDataField.Value)`|  
+|#PERCENT|資料點 Y 值的百分比。|全部|`=FormatPercent(Fields!MyDataField.Value/Sum(Fields!MyDataField.Value, "MyDataSet"),2)`|  
+|#TOTAL|數列中所有 Y 值的總計。|全部|`=Sum(Fields!MyDataField.Value)`|  
 |#LEGENDTEXT|對應到圖例項目文字的文字。|全部|無|  
-|#AVG|數列中所有 Y 值的平均值。|All|`=Avg(Fields!MyDataField.Value)`|  
+|#AVG|數列中所有 Y 值的平均值。|全部|`=Avg(Fields!MyDataField.Value)`|  
 |#MIN|數列中所有 Y 值的最小值。|全部|`=Min(Fields!MyDataField.Value)`|  
-|#MAX|數列中所有 Y 值的最大值。|All|`=Max(Fields!MyDataField.Value)`|  
+|#MAX|數列中所有 Y 值的最大值。|全部|`=Max(Fields!MyDataField.Value)`|  
 |#FIRST|數列中所有 Y 值的第一個。|全部|`=First(Fields!MyDataField.Value)`|  
   
- 若要格式化關鍵字，請以括號括住 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 格式字串。 例如，若要將工具提示中資料點的值指定為包含兩位小數的數字，請以大括弧包含格式字串 "N2"，例如 "#VALY{N2}" 表示數列的 **ToolTip** 屬性。 如需有關 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 格式字串的詳細資訊，請參閱 MSDN 上的＜ [格式化型別](http://go.microsoft.com/fwlink/?LinkId=112024) ＞。 如需在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中格式化數字的詳細資訊，請參閱[格式化數字和日期 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)。  
+ 若要格式化關鍵字，請以括號括住 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 格式字串。 例如，若要將工具提示中資料點的值指定為包含兩位小數的數字，請以大括弧包含格式字串 "N2"，例如 "#VALY{N2}" 表示數列的 **ToolTip** 屬性。 如需有關 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 格式字串的詳細資訊，請參閱 MSDN 上的＜ [格式化型別](http://go.microsoft.com/fwlink/?LinkId=112024) ＞。 如需在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中將數字格式化的詳細資訊，請參閱[將數字和日期格式化 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)。  
   
- 如需將關鍵字加入圖表中的詳細資訊，請參閱[在數列上顯示工具提示 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md) 和[變更圖例項目的文字 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md)。  
+ 如需將關鍵字新增至圖表的詳細資訊，請參閱[在數列上顯示工具提示 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md) 和[變更圖例項目的文字 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md)。  
   
 ## <a name="increasing-readability-in-a-chart-with-multiple-data-points"></a>在圖表中以多個資料點增加可讀性  
- 如果您在圖表上有多個數列，可能會降低圖表資料點的可讀性。 將多個數列加入到圖表時，請考慮使用可區別如何在圖表中有效讀取及了解每個數列的技術。 如需詳細資訊，請參閱[圖表上的多個數列 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/multiple-series-on-a-chart-report-builder-and-ssrs.md)。  
+ 如果您在圖表上有多個數列，可能會降低圖表資料點的可讀性。 將多個數列加入到圖表時，請考慮使用可區別如何在圖表中有效讀取及了解每個數列的技術。 如需詳細資訊，請參閱 [圖表上的多個數列 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/multiple-series-on-a-chart-report-builder-and-ssrs.md)：  
   
  為了簡化的目的，當您使用形狀圖時，請考慮僅加入一個資料欄位和一個類別目錄欄位。 如需詳細資訊，請參閱[形狀圖 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/shape-charts-report-builder-and-ssrs.md)。 如果您的圖表需要一個以上的資料欄位和類別目錄欄位，請考慮變更圖表類型。 您可以用滑鼠右鍵按一下此數列，並選取 **[變更圖表類型]**。  
   
@@ -102,11 +102,11 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>請參閱＜  
  [格式化圖表 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
- [格式化圖表上的軸標籤 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
- [圖表 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [將軸標籤格式化成日期或貨幣 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
- [教學課程：將圓形圖加入報表 &#40;報表產生器&#41;](../../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
- [運算式範例 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
- [運算式 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
+ [格式化圖表上的軸標籤 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
+ [圖表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [將軸標籤格式化成日期或貨幣 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
+ [教學課程：將圓形圖新增至報表 &#40;報表產生器&#41;](../../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
+ [運算式範例 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
+ [運算式 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
   
   

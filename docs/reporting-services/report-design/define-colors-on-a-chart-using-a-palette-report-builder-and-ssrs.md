@@ -1,5 +1,5 @@
 ---
-title: "使用調色盤 （報表產生器及 SSRS） 的圖表上定義色彩 |Microsoft 文件"
+title: "使用調色盤定義圖表的色彩 (報表產生器及 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-server-2016
@@ -15,11 +15,11 @@ caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c244f75603ae96dad15c98411bffe223b2857b56
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs"></a>使用調色盤定義圖表的色彩 (報表產生器及 SSRS)
@@ -34,9 +34,9 @@ ms.lasthandoff: 06/22/2017
   
 2.  在設計介面上，按一下圖表。 圖表物件的屬性會顯示在 [屬性] 窗格中。  
   
-     物件名稱 (預設為 **Chart1**) 就會出現在 [屬性] 窗格頂端的下拉式清單中。  
+     物件名稱 (預設為**Chart1** ) 就會出現在 [屬性] 窗格頂端的下拉式清單中。  
   
-3.  在 [圖表] 區段中，從下拉式清單為 Palette 屬性選取一個新的調色盤。  
+3.  在 [圖表] 區段中，從下拉式清單為 Palette 屬性選取新的調色盤。  
   
     > [!NOTE]  
     >  您無法在預先定義的調色盤中變更色彩或順序。  
@@ -49,7 +49,7 @@ ms.lasthandoff: 06/22/2017
   
 3.  在 **[圖表]** 區段中，為 **[調色盤]** 屬性選取 **[自訂]**。  
   
-4.  在 CustomPaletteColors 屬性中，按一下 [編輯集合] ([…]) 按鈕。 **[ReportColorExpression 集合編輯器]** 便會開啟。  
+4.  在 CustomPaletteColors 屬性中，按一下 [編輯集合]\([…]) 按鈕。 **[ReportColorExpression 集合編輯器]** 便會開啟。  
   
 5.  按一下 **[加入]** 來加入色彩。 從下拉式清單中選取一個色彩，或選取 [運算式]，然後為特定色彩指定一個十六進位值，例如，ff6600 代表「橙色」。  
   

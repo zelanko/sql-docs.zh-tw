@@ -1,5 +1,5 @@
 ---
-title: "加入或刪除資料區域 （報表產生器及 SSRS） 中的群組 |Microsoft 文件"
+title: "在資料區中新增或刪除群組 (報表產生器及 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -15,21 +15,21 @@ caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a28d250be3c4fe43b16825bf033e86836a036db0
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs"></a>在資料區中加入或刪除群組 (報表產生器及 SSRS)
-當您想要針對顯示和計算，依特定值或特定一組運算式組織資料時，請在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分頁報表中，將群組加入資料區。 每個群組都有一個名稱和一個運算式，識別資料集中的哪個資料屬於群組。 如需群組的詳細資訊，請參閱[了解群組 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md)。  
+當您想要針對顯示和計算，依特定值或特定一組運算式組織資料時，請在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分頁報表中，將群組加入資料區。 每個群組都有一個名稱和一個運算式，識別資料集中的哪個資料屬於群組。 如需群組的詳細資訊，請參閱 [了解群組 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md)。  
   
  在 Tablix 資料區中，按一下資料表、矩陣或清單來顯示 [群組] 窗格。 將資料集欄位拖曳到 [資料列群組] 和 [資料行群組] 窗格以建立父群組或子群組。 以滑鼠右鍵按一下現有的群組即可加入相鄰的群組。 根據定義，詳細資料群組是最內部的群組，而且僅能當做子群組加入。 以滑鼠右鍵按一下現有的群組即可刪除該群組。 系統會為您自動加入用於顯示群組值的資料列和資料行。 如需詳細資訊，請參閱 [資料表、矩陣和清單 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)。  
   
  在 [圖表] 資料區域中，按一下圖表來顯示放置區。 將資料集欄位拖曳到類別目錄和數列放置區，藉以建立群組。 若要加入巢狀群組，將多個欄位加入至放置區。  
   
- 依預設，在量測計中不會定義群組。 量測計的預設行為是將指定之欄位中的所有值彙總為量測計上顯示的一個值。 如需詳細資訊，請參閱[量測計 &#40;報表產生器及SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)。  
+ 依預設，在量測計中不會定義群組。 量測計的預設行為是將指定之欄位中的所有值彙總為量測計上顯示的一個值。 如需詳細資訊，請參閱 [量測計 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -39,7 +39,7 @@ ms.lasthandoff: 06/22/2017
 1.  將欄位從 **[報表資料]** 窗格拖曳到 **[資料列群組]** 窗格或 **[資料行群組]** 窗格。  
   
     > [!NOTE]  
-    >  如果看不到 [群組] 窗格，請按一下 [檢視] 索引標籤上的 [群組]。  
+    >  如果沒有看到 [群組] 窗格，請按一下 [檢視] 索引標籤上的 [群組]。  
   
 2.  使用導覽列將欄位放在群組階層之上或之下，以便將群組當做父群組或子群組放到現有的群組中。  
   
@@ -51,7 +51,7 @@ ms.lasthandoff: 06/22/2017
   
 2.  在 **[名稱]**中，輸入群組的名稱。  
   
-3.  在 [群組運算式] 中輸入運算式，或是按一下運算式按鈕 (**fx**) 來建立運算式。  
+3.  在 [群組運算式] 中鍵入運算式，或按一下運算式按鈕 (**fx**) 建立運算式。  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -59,7 +59,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="to-add-a-details-group-to-a-tablix-data-region"></a>將詳細資料群組加入到 Tablix 資料區域  
   
-1.  在 [群組] 窗格中，以滑鼠右鍵按一下屬於最內部之子群組的群組，而不是 [詳細資料] 群組。 按一下 **[加入群組]**，然後按一下 **[子群組]**。 **[Tablix 群組]** 對話方塊隨即開啟。  
+1.  在 [群組] 窗格中，以滑鼠右鍵按一下屬於最內部子群組的群組，而不是 [詳細資料] 群組。 按一下 **[加入群組]**，然後按一下 **[子群組]**。 **[Tablix 群組]** 對話方塊隨即開啟。  
   
 2.  在 **[群組運算式]**中，將運算式保留空白。 詳細資料群組沒有運算式。  
   
@@ -77,15 +77,15 @@ ms.lasthandoff: 06/22/2017
   
 3.  在 **[名稱]**中，輸入群組的名稱。  
   
-4.  在 [群組運算式] 中輸入或選取簡單運算式，或是按一下 [運算式] (**fx**) 按鈕來建立群組運算式。  
+4.  在 [群組運算式] 中鍵入或選取簡單運算式，或是按一下 [運算式] (**fx**) 按鈕來建立群組運算式。  
   
 5.  按一下 **[加入]** 來建立其他運算式。 您指定的所有運算式都會使用邏輯 AND 結合在一起以指定此群組的資料。  
   
 6.  (選擇性) 按一下 [分頁符號] 來設定分頁符號選項。  
   
-7.  (選擇性) 按一下 [排序] 來選取或輸入運算式，以指定群組中值的排序次序。  
+7.  (選擇性) 按一下 [排序] 來選取或鍵入運算式，以指定群組中值的排序次序。  
   
-8.  (選擇性) 按一下 [可見性] 來選取項目的可見性選項。  
+8.  (選擇性) 按一下 [可見度] 來選取項目的可見度選項。  
   
 9. (選擇性) 按一下 [篩選] 來設定此群組的篩選條件。  
   
@@ -125,7 +125,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>請參閱＜  
  [報表和群組變數集合參考 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/built-in-collections-report-and-group-variables-references-report-builder.md)   
  [群組運算式範例 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)   
- [篩選、分組和排序資料 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [篩選、分組和排序資料 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Tablix 資料區 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   
  [資料表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
  [矩陣 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)   

@@ -1,5 +1,5 @@
 ---
-title: "伺服器的屬性 （進階頁面）-Reporting Services |Microsoft 文件"
+title: "伺服器屬性 (進階頁面) - Reporting Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-server-2016
@@ -17,11 +17,11 @@ caps.latest.revision: 18
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: b5cd82621ecd65bb56b8a5a2eb0314935fd3a37a
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>伺服器屬性 (進階頁面) - Reporting Services
@@ -46,7 +46,7 @@ ms.lasthandoff: 06/22/2017
  要將報表執行資訊保留在執行記錄中的天數。 這個屬性的有效值包括 **-1** 至 **2**、**147**、**483**和**647**。 如果此值為 **-1** ，系統就不會從執行記錄資料表中刪除項目。 預設值是 **60**秒。  
  
 > [!NOTE] 
-> 將值設定為**0**將*刪除*從執行記錄的所有項目。 值為**-1**會保留執行記錄的項目，而且不會被刪除。
+> 將值設定為 **0** 會「刪除」執行記錄中的所有項目。 **-1** 值會保留執行記錄的項目，而不會刪除。
   
  **SessionTimeout**  
  工作階段維持作用中狀態的時間長度 (以秒為單位)。 預設值是 **600**秒。  
