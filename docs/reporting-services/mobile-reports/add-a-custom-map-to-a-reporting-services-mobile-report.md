@@ -36,7 +36,7 @@ ms.lasthandoff: 08/03/2017
   
    ![SSMRP_MapsGallery](../../reporting-services/mobile-reports/media/ssmrp-mapsgallery.png)  
   
-2. 在 [配置] 檢視 > [視覺屬性] 面板 > [地圖] 中，選取 [Custom Map From File] (檔案的自訂地圖)。   
+2. 在 [配置] 檢視 > [視覺屬性] 面板 > [地圖] 中，選取 [Custom Map From File]\(檔案的自訂地圖)。   
   
    ![SSMRP_SelectCustomMap](../../reporting-services/mobile-reports/media/ssmrp-selectcustommap.png)  
   
