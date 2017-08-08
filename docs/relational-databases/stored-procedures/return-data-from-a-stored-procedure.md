@@ -17,16 +17,16 @@ caps.latest.revision: 25
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: d4dc2ff665ff191fb75dd99103a222542262d4c4
 ms.openlocfilehash: 7eb8ea4b29caaf7f1600bbd31db4f669b86476c1
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="return-data-from-a-stored-procedure"></a>從預存程序傳回資料
 
- > 如需舊版的 SQL Server 相關的內容，請參閱[傳回的資料，從預存程序](https://msdn.microsoft.com/en-US/library/ms188655(SQL.120).aspx)。
+ > 如需舊版 SQL Server 的相關內容，請參閱[從預存程序傳回資料](https://msdn.microsoft.com/en-US/library/ms188655(SQL.120).aspx)。
 
   將結果集或資料從程序傳回至呼叫端程式的方式有兩種：輸出參數和傳回碼。 本主題提供有關這兩種方法的詳細資訊。  
   

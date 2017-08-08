@@ -19,7 +19,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: fa59193fcedb1d5437d8df14035fadca2b3a28f1
 ms.openlocfilehash: 5f9f128cab773951438aa89998ad76e7ba29bb4d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/20/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="temporal-tables"></a>時態表
@@ -122,7 +122,7 @@ CREATE TABLE dbo.Employee
 >  系統 datetime2 資料行中所記錄的時間是依據交易本身的開始時間。 例如，在單一交易中插入的所有資料列，在資料行中都會記錄相同的 UTC 時間，且對應到 **SYSTEM_TIME** 。  
   
 ## <a name="how-do-i-query-temporal-data"></a>如何查詢時態表？  
- **SELECT** 陳述式 **FROM***\<資料表>* 子句具有新子句 **FOR SYSTEM_TIME** 附帶五個時態特定的子子句，以在目前和歷程記錄資料表之間查詢資料。 這個新 **SELECT** 陳述式語法直接受到單一資料表支援，透過多個聯結以及在多個時態表上檢視進行傳播。  
+ **SELECT** 陳述式 **FROM***\<資料表>* 子句具有新子句 **FOR SYSTEM_TIME** 並附帶五個時態特定的子子句，以在目前和歷程記錄資料表之間查詢資料。 這個新 **SELECT** 陳述式語法直接受到單一資料表支援，透過多個聯結以及在多個時態表上檢視進行傳播。  
   
  ![Temporal-Querying](../../relational-databases/tables/media/temporal-querying.PNG "Temporal-Querying")  
   
@@ -143,10 +143,10 @@ SELECT * FROM Employee
   
  在下表中，合格資料列資料行中的 SysStartTime 代表所查詢資料表中 **SysStartTime** 資料行中的值，而 **SysEndTime** 代表所查詢資料表中 **SysEndTime** 資料行中的值。 如需完整的語法和範例，請參閱 [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md) 和 [查詢系統建立版本時態表中的資料](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md)現在可加以支援。  
   
-|運算式|查詢資料列|描述|  
+|運算式|查詢資料列|Description|  
 |----------------|---------------------|-----------------|  
-|**AS OF**<日期時間>|SysStartTime \<= date_time AND SysEndTime > date_time|傳回含有資料列的資料表，資料列內含的值是過去指定時間點的實際 (目前) 值。 就內部而言，時態表和其歷程記錄資料表之間會執行等位，且會將結果篩選為傳回資料列中的值，該資料列在 <日期時間> 參數所指定的時間點為有效。 資料列的值會被視為有效，如果 *system_start_time_column_name* 值小於或等於 <日期時間> 參數值，且 *system_end_time_column_name* 值大於 <日期時間> 參數值。|  
-|**FROM**<開始日期時間>**TO**<結束日期時間>|SysStartTime < end_date_time AND SysEndTime > start_date_time|傳回資料表，其中內含所有資料列版本的值，該值在所指定的時間範圍內有效，而不論其是否在 FROM 引數的 <開始日期時間> 參數值之前為作用中，或是在 TO 引數的 <結束日期時間> 參數值之後就不在作用中。 就內部而言，時態表和其歷程記錄資料表之間會執行等位，且會將結果篩選為傳回所有資料列版本的值，該值在指定的時間範圍任何時間點內皆為作用中。 不包含恰好在 FROM 端點所定義的範圍下限變為作用中的資料列，也不包含恰好在 TO 端點所定義的範圍上限變為作用中的資料列。|  
+|**AS OF**<日期時間>|SysStartTime \<= date_time AND SysEndTime > date_time|傳回含有資料列的資料表，資料列內含的值是過去指定時間點的實際 (目前) 值。 就內部而言，時態表和其歷程記錄資料表之間會執行等位，且會將結果篩選為傳回資料列中的值，該資料列在 *<date_time>* 參數所指定的時間點為有效。 資料列的值會被視為有效，如果 *system_start_time_column_name* 值小於或等於 *<date_time>* 參數值，且 *system_end_time_column_name* 值大於 *<date_time>* 參數值。|  
+|**FROM**<start_date_time>**TO**<end_date_time>|SysStartTime < end_date_time AND SysEndTime > start_date_time|傳回資料表，其中內含所有資料列版本的值，該值在所指定的時間範圍內有效，而不論其是否在 FROM 引數的 *<start_date_time>* 參數值之前為作用中，或是在 TO 引數的 *<end_date_time>* 參數值之後就不在作用中。 就內部而言，時態表和其歷程記錄資料表之間會執行等位，且會將結果篩選為傳回所有資料列版本的值，該值在指定的時間範圍任何時間點內皆為作用中。 不包含恰好在 FROM 端點所定義的範圍下限變為作用中的資料列，也不包含恰好在 TO 端點所定義的範圍上限變為作用中的資料列。|  
 |**BETWEEN**<開始日期時間>**AND**<結束日期時間>|SysStartTime \<= end_date_time AND SysEndTime > start_date_time|如同上方 **FOR SYSTEM_TIME FROM**<開始日期時間>**TO**<結束日期時間> 中的描述，唯一的差別在於所傳回資料列的資料表內含的資料列，在 <結束日期時間> 端點所定義的範圍上限變為作用中。|  
 |**CONTAINED IN** (<開始日期時間> , <結束日期時間>)|SysStartTime >= start_date_time AND SysEndTime \<= end_date_time|傳回資料表，其中內含所有資料列版本的值，該值在 CONTAINED IN 引數兩個日期時間值所定義的指定時間範圍內為開啟及關閉。 包含恰好在範圍下限變為作用中的資料列，或是恰好在範圍上限就不在作用中的資料列。|  
 |**ALL**|所有資料列|傳回屬於目前和歷程記錄資料表的資料列聯集。|  

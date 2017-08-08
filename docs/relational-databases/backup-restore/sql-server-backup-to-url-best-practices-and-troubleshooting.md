@@ -14,11 +14,11 @@ caps.latest.revision: 26
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: c0e55c0e35039490f0ce4cd8a7fb6d7e232c05aa
 ms.openlocfilehash: b76a0f262fd12e53797c0ad86c991a6e4423927a
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>SQL Server 備份至 URL 的最佳作法和疑難排解
@@ -100,7 +100,7 @@ ms.lasthandoff: 06/23/2017
 -   從壓縮備份還原時，您可能會看見下列錯誤：  
   
     -   `SqlException 3284 occurred. Severity: 16 State: 5`  
-        **在裝置上訊息： 尚未調`'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak'`未對齊。請以建立備份組所使用的相同區塊大小來重新發出 Restore 陳述式: '65536' 類似可能值。**  
+        **尚未調準裝置 `'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak'` 上的訊息檔案標記。請以建立備份組所使用的相同區塊大小來重新發出 Restore 陳述式: '65536' 類似可能值。**  
   
          若要解決此錯誤，請重新發出指定 **BLOCKSIZE = 65536** 的 **BACKUP** 陳述式。  
   
@@ -125,7 +125,7 @@ ms.lasthandoff: 06/23/2017
   
 -   寫入"http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak"失敗: 備份至 URL 收到來自遠端端點的例外狀況。 例外狀況訊息: 無法讀取傳輸連線的資料: 此連接已經關閉。  
   
--   檔案上發生無法復原的 I/O 錯誤 「`http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:`"無法從遠端端點收集錯誤。  
+-   檔案 "`http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:`" 上發生無法復原的 I/O 錯誤。無法從遠端端點收集錯誤。  
   
      訊息 3013，層級 16，狀態 1，行 2  
   
@@ -139,7 +139,7 @@ ms.lasthandoff: 06/23/2017
   
  **預設 Proxy 設定未收取：**  
   
- 有時預設設定不挑選會導致 proxy 驗證錯誤，如下所示：*檔案上發生無法復原的 I/O 錯誤 「`http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:`「 備份至 URL 收到遠端端點的例外狀況。例外狀況訊息: 遠端伺服器傳回錯誤：(407)* **需要 Proxy 驗證**。  
+ 有時未收取到預設值，導致 Proxy 驗證錯誤，如下所示：*檔案 "`http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:`" 上發生無法復原的 I/O 錯誤。備份至 URL 時收到來自遠端端點的例外狀況。例外狀況訊息: 遠端伺服器傳回錯誤：(407)* **需要 Proxy 驗證**。  
   
  若要解決這個問題，使用下列步驟建立組態檔，讓備份至 URL 處理序可以使用預設 Proxy 設定：  
   

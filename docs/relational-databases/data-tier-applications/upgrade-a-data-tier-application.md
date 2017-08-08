@@ -28,19 +28,19 @@ caps.latest.revision: 35
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: cf2d74e423ab96af582d5f420065f9756e671ec2
 ms.openlocfilehash: 2a55f2852f3146cd20ace9448040c1f96d328f07
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="upgrade-a-data-tier-application"></a>升級資料層應用程式
   您可以使用升級資料層應用程式精靈或 Windows PowerShell 指令碼，將目前部署之資料層應用程式 (DAC) 的結構描述和屬性變更為符合新版 DAC 中所定義的結構描述和屬性。  
   
--   **Before you begin:**  [Choosing DAC Upgrade Options](#ChoseDACUpgOptions), [Limitations and Restrictions](#LimitationsRestrictions), [Prerequisites](#Prerequisites), [Security](#Security), [Permissions](#Permissions)  
+-   **開始之前：**  [選擇 DAC 升級選項](#ChoseDACUpgOptions)、 [限制事項](#LimitationsRestrictions)、 [必要條件](#Prerequisites)、 [安全性](#Security)、 [權限](#Permissions)  
   
--   **To upgrade a DAC, using:**  [The Upgrade Data-tier Application Wizard](#UsingDACUpgradeWizard), [PowerShell](#UpgradeDACPowerShell)  
+-   **使用下列項目，升級 DAC**  [升級資料層應用程式精靈](#UsingDACUpgradeWizard)、 [PowerShell](#UpgradeDACPowerShell)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
  DAC 升級是一種就地升級程序，可改變現有資料庫的結構描述，以符合新版 DAC 中所定義的結構描述。 在 DAC 封裝檔案中，會套用新版 DAC。 如需建立 DAC 封裝的詳細資訊，請參閱 [資料層應用程式](../../relational-databases/data-tier-applications/data-tier-applications.md)。  
@@ -251,7 +251,7 @@ ms.lasthandoff: 06/23/2017
 7.  關閉用來讀取 DAC 封裝檔案的檔案資料流。  
   
 ### <a name="example-powershell"></a>範例 (PowerShell)  
- 下列範例會升級的預設執行個體上名為 MyApplication 的 DAC [!INCLUDE[ssDE](../../includes/ssde-md.md)]，MyApplication2017.dacpac 封裝中使用的新 DAC 版本。  
+ 下列範例使用 MyApplication2017.dacpac 封裝中的新 DAC 版本來升級 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 預設執行個體上名為 MyApplication 的 DAC。  
   
 ```  
 ## Set a SMO Server object to the default instance on the local computer.  

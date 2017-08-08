@@ -17,11 +17,11 @@ caps.latest.revision: 24
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: dcbeda6b8372b358b6497f78d6139cad91c8097c
 ms.openlocfilehash: a13e098829fdf1ffee42075a57750513234dc997
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="best-practice-with-the-query-store"></a>使用查詢存放區的最佳作法
@@ -33,7 +33,7 @@ ms.lasthandoff: 06/23/2017
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 擁有一組針對設定查詢存放區，以及耗用有關工作負載之收集資料所設計的使用者介面。  
 [在此](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms)下載最新版 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。  
   
- 如需有關如何在疑難排解案例中使用查詢存放區的快速說明，請參閱[查詢存放區@Azure 部落格](https://azure.microsoft.com/en-us/blog/query-store-a-flight-data-recorder-for-your-database/)。  
+ 如需有關如何在疑難排解案例中使用查詢存放區的快速說明，請參閱[查詢存放區@Azure部落格](https://azure.microsoft.com/en-us/blog/query-store-a-flight-data-recorder-for-your-database/)。  
   
 ##  <a name="Insight"></a> 在 Azure SQL 資料庫中使用查詢效能深入解析  
  如果您在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中執行查詢存放區，您可以使用「查詢效能深入解析」  分析經過一段時間的 DTU 耗用量。  
@@ -143,27 +143,27 @@ ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;
 |迴歸查詢|找出執行計量最近迴歸的查詢 (也就是變更為更糟)。 <br />使用此檢視將您的應用程式中觀察到的需要修正或改善的效能問題，與實際查詢相互關聯。|  
 |整體資源耗用量|針對任何執行計量，分析資料庫的整體資源耗用量。<br />使用此檢視來識別資源模式 (每日與每晚的工作負載) 和最佳化資料庫的整體耗用量。|  
 |熱門資源取用查詢|選擇一個感興趣的執行計量，並識別針對提供的時間間隔具有最極端值的查詢。 <br />使用此檢視將注意力放在最相關的查詢， 也就是對資料庫資源耗用量有最大影響的查詢。|  
-|包含強制計畫的查詢|先前的強制計劃使用查詢存放區的清單。 <br />若要快速存取所有目前強制執行的計畫中使用此檢視。|  
-|具有高變化的查詢|在關聯到任何可用的維度，例如所需的時間間隔的持續時間、 CPU 時間、 IO 和記憶體使用量分析高執行變化的查詢。<br />您可以使用此檢視來識別含有廣泛變體效能的查詢，此效能會影響不同應用程式的使用者體驗。|  
+|強制計畫的查詢|使用查詢存放區列出先前的強制計畫。 <br />使用此檢視快速存取所有目前的強制計畫。|  
+|高變化的查詢|在關聯到任何可用的維度 (例如，所需時間間隔的持續時間、CPU 時間、IO 和記憶體使用量) 時，分析高執行變化的查詢。<br />您可以使用此檢視來識別含有廣泛變體效能的查詢，此效能會影響不同應用程式的使用者體驗。|  
 |追蹤查詢|即時追蹤最重要的查詢的執行。 一般而言，當您有包含強制計畫的查詢且想要確定查詢效能是否穩定時，會使用此檢視。|
   
 > [!TIP]  
 >  如需如何使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 識別熱門資源取用查詢並修正那些因為計畫選擇變更而迴歸之查詢的詳細說明，請參閱[查詢存放區@Azure 部落格](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/)。  
   
- 當您識別次佳效能的查詢時，您的動作，取決於問題的本質。  
+ 當您識別效能次佳的查詢時，您的動作取決於問題的本質。  
   
 -   如果是以多個計劃執行查詢，且最後一個計劃明顯比前一個計畫差，您可以使用計劃強制機制來強制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 針對未來的執行一律使用最佳計畫。  
   
      ![query-store-force-plan](../../relational-databases/performance/media/query-store-force-plan.png "query-store-force-plan")  
 
 > [!NOTE]  
-> 上面的圖形可能功能適用於特定查詢計劃，具有下列意義，每個可能狀態的不同圖形：<br />  
+> 上圖對於特定查詢計劃可能具有不同形狀，每個可能狀態的意義如下：<br />  
 > |形狀圖|意義|  
 > |-------------------|-------------|
-> |Circle|查詢已完成 （已順利完成正常執行）|
-> |Square|已取消 （用戶端起始已中止執行）|
-> |Triangle|失敗 （中止的例外狀況執行）|
-> 此外，該圖形的大小會反映內指定的時間間隔，在執行的數字的大小增加查詢執行計數。  
+> |Circle|查詢已完成 (已順利完成正常執行)|
+> |Square|已取消 (用戶端起始已中止執行)|
+> |Triangle|失敗 (例外狀況已中止執行)|
+> 此外，該形狀的大小會反映指定時間間隔內的查詢執行計數，隨著執行數目提高而增加大小。  
 
 -   您可能會推斷您的查詢遺失最佳執行的索引。 此資訊會顯示於查詢執行計畫內。 建立遺失的索引，並使用查詢存放區檢查查詢效能。  
   
@@ -175,7 +175,7 @@ ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;
   
 -   請重寫有問題的查詢。 例如，充分利用查詢參數化，或實作更最多最佳化邏輯。  
   
-##  <a name="Verify"></a> Verify Query Store is Collecting Query Data Continuously  
+##  <a name="Verify"></a> 確認查詢存放區會持續收集查詢資料  
  查詢存放區可以無訊息方式變更作業模式。 您應該定期監視查詢存放區的狀態，以確定查詢存放區正在運作，並採取動作避免因為預防因素造成的失敗。 執行下列查詢來判斷作業模式，並檢視最相關的參數：  
   
 ```tsql
@@ -233,11 +233,11 @@ SELECT actual_state_desc, desired_state_desc, current_storage_size_mb,
 FROM sys.database_query_store_options;  
 ```  
   
- 如果問題持續發生，表示已損毀，查詢存放區資料會保存在磁碟上。
+ 如果問題持續發生，表示已損毀的查詢存放區資料會持續保存在磁碟上。
  
- 無法復原查詢存放區，藉由執行**sp_query_store_consistency_check**預存程序內受影響的資料庫。
+ 查詢存放區無法藉由執行受影響資料庫內的 **sp_query_store_consistency_check** 預存程序來復原。
  
- 如果沒有幫助，，您可以嘗試要求讀寫模式之前先清除查詢存放區。  
+ 如果沒有幫助，您可以嘗試在要求讀寫模式之前，先清除查詢存放區。  
   
 ```tsql  
 ALTER DATABASE [QueryStoreDB]   

@@ -27,11 +27,11 @@ caps.latest.revision: 24
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
 ms.openlocfilehash: 204b0e834db9ad1c5fe7d3f08f507629313e3cad
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="use-the-full-text-indexing-wizard"></a>使用全文檢索索引精靈
@@ -102,9 +102,9 @@ ms.lasthandoff: 06/23/2017
      E. 選取值：  
       |Value|描述|  
       |-----------|-----------------|
-      |**<default>**| 如果資料表或檢視未分割，請選取此值，以便與基礎資料表或檢視使用的相同檔案群組。 如果資料表或檢視表已分割，會使用主要檔案群組|
+      |**<default>**| 如果資料表或檢視未分割，請選取此值，以便與基礎資料表或檢視使用的相同檔案群組。 如果已分割資料表或檢視表，則會使用主要檔案群組|
       |**PRIMARY**|選取即可針對新的全文檢索索引使用主要檔案群組。|
-      *使用者指定的預設檔案群組*|如果使用者定義的預設停用字詞表已存在，請從要用於新的全文檢索索引中的該檔案群組清單中選取其名稱。|   
+      *使用者指定的預設檔案群組*|如果使用者定義的預設停用字詞表已存在，請從清單中選取其名稱，以便針對新的全文檢索索引使用該檔案群組。|   
   
      
  11. **選取全文檢索停用字詞表**  

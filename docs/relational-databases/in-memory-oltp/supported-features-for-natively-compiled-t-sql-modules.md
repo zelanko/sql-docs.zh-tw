@@ -14,11 +14,11 @@ caps.latest.revision: 44
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 332787256518605b6f91dab6be012889c0b0aa93
 ms.openlocfilehash: 0d87653d1db0ffad098e9cdf914d61a486905647
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="supported-features-for-natively-compiled-t-sql-modules"></a>原生編譯的 T-SQL 模組支援的功能
@@ -51,9 +51,9 @@ ms.lasthandoff: 06/23/2017
 
 以下為支援的查詢結構：  
 
-CASE 運算式： 案例可用於任何陳述式或子句的允許有效運算式。
+CASE 運算式：CASE 可以用在允許有效運算式的任何陳述式或子句中。
    - **適用於：** [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]。  
-    開頭為[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]，CASE 陳述式現在支援原生編譯 T-SQL 模組。
+    從 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 開始，原生編譯 T-SQL 模組現在支援 CASE 陳述式。
 
 SELECT 子句：  
 
@@ -61,19 +61,19 @@ SELECT 子句：
 
 -   純量子查詢
     - **適用於：** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]。
-      開頭為[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]，原生編譯模組現在支援純量子查詢。
+      從 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 開始，原生編譯模組現在支援純量子查詢。
 
 -   回到頁首*  
 
 -   SELECT DISTINCT  
     - **適用於：** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]。
-      開頭為[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]，原生編譯模組支援不同的運算子。
+      從 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 開始，原生編譯模組支援 DISTINCT 運算子。
 
               DISTINCT aggregates are not supported.  
 
 -   UNION 和 UNION ALL
     - **適用於：** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]。
-      開頭為[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]，原生編譯模組中現在支援 UNION 和 UNION ALL 運算子。
+      從 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 開始，原生編譯模組現在支援 UNION 和 UNION ALL 運算子。
 
 -   變數指派  
 
@@ -85,20 +85,20 @@ FROM 子句：
 
 -   LEFT OUTER JOIN、RIGHT OUTER JOIN、CROSS JOIN 和 INNER JOIN。
     - **適用於：** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]。
-      開頭為[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]，原生編譯模組現在支援聯結。
+      從 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 開始，原生編譯模組現在支援 JOINS。
 
 -   子查詢 `[AS] table_alias`。 如需詳細資訊，請參閱 [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)。 
     - **適用於：** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]。
-      開頭為[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]，原生編譯模組現在支援子查詢。
+      從 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 開始，原生編譯模組現在支援子查詢。
 
 WHERE 子句：  
 
 -   篩選器述詞 IS [NOT] NULL  
 
--   和之間  
--   OR、 NOT、 中、 EXISTS
+-   AND、BETWEEN  
+-   OR、NOT、IN、EXISTS
     - **適用於：** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]。
-      開頭為[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]，OR/NOT/IN/EXISTS 運算子現在支援原生編譯模組中。
+      從 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 開始，原生編譯模組現在支援 OR/NOT/IN/EXISTS 運算子。
 
 
 [GROUP BY](../../t-sql/queries/select-group-by-transact-sql.md) 子句：
@@ -194,7 +194,7 @@ SELECT TOP (@v) … FROM … ORDER BY …
 -   位元運算子 ~、&、| 和 ^  
 
 -   APPLY 運算子
-    - **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
+    - **適用於：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。  
       從 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 開始，原生編譯模組支援 APPLY 運算子。
 
 ##  <a name="bfncsp"></a> 原生編譯模組中的內建函數  
@@ -205,7 +205,7 @@ SELECT TOP (@v) … FROM … ORDER BY …
 -   日期函數：CURRENT_TIMESTAMP、DATEADD、DATEDIFF、DATEFROMPARTS、DATEPART、DATETIME2FROMPARTS、DATETIMEFROMPARTS、DAY、EOMONTH、GETDATE、GETUTCDATE、MONTH、SMALLDATETIMEFROMPARTS、SYSDATETIME、SYSUTCDATETIME 和 YEAR。  
 
 -   字串函數：LEN、LTRIM、RTRIM 和 SUBSTRING。  
-    - **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
+    - **適用於：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。  
       從 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 開始，也支援下列內建函數︰TRIM、TRANSLATE 及 CONCAT_WS。  
 
 -   Identity 函數：SCOPE_IDENTITY  
@@ -215,7 +215,7 @@ SELECT TOP (@v) … FROM … ORDER BY …
 -   Uniqueidentifier 函數：NEWID 和 NEWSEQUENTIALID  
 
 -   JSON 函數  
-    - **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
+    - **適用於：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。  
       從 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 開始，原生編譯模組支援 JSON 函數。
 
 -   錯誤函數：ERROR_LINE、ERROR_MESSAGE、ERROR_NUMBER、ERROR_PROCEDURE、ERROR_SEVERITY 和 ERROR_STATE  
@@ -279,7 +279,7 @@ WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION
 GO  
 ```
 
- 8192 資料列限制只適用於 `TOP N`，其中 `N` 是常數，如前面的範例中所示。  如果您需要讓 `N` 大於 8192，可以將值指派給變數，並使用該變數搭配 `TOP`。  
+ 8192 資料列限制只適用於 `TOP N` ，其中 `N` 是常數，如前面的範例中所示。  如果您需要讓 `N` 大於 8192，可以將值指派給變數，並使用該變數搭配 `TOP`。  
 
  使用變數的範例：編譯  
 

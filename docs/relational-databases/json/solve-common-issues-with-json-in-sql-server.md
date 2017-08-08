@@ -17,11 +17,11 @@ caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
-ms.openlocfilehash: 94435e9fb466887a00c8d22076f229481a83f280
+ms.translationtype: HT
+ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
+ms.openlocfilehash: 3c55ec9bc77f499d5c97c7cd75d160547ac681d2
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="solve-common-issues-with-json-in-sql-server"></a>解決 SQL Server 中的 JSON 常見問題
@@ -32,14 +32,14 @@ ms.lasthandoff: 06/23/2017
 ## <a name="for-json-and-json-output"></a>FOR JSON 和 JSON 輸出
 
 ### <a name="for-json-path-or-for-json-auto"></a>FOR JSON PATH 或 FOR JSON AUTO？  
- **問：** 我想要從單一資料表上的簡易 SQL 查詢，建立 JSON 文字結果。 FOR JSON PATH 與 FOR JSON AUTO 產生相同的輸出。 我該使用哪一個選項？  
+ **問：** 我想要透過單一資料表上的簡易 SQL 查詢，建立 JSON 文字結果。 FOR JSON PATH 與 FOR JSON AUTO 產生相同的輸出。 我該使用哪一個選項？  
   
- **答：** 使用 FOR JSON PATH。 雖然沒有任何差異，在 JSON 輸出中的，AUTO 模式適用於某些額外邏輯，以檢查是否應該巢狀資料行。 請考慮使用 PATH 做為預設選項。  
+ **答：** 使用 FOR JSON PATH。 JSON 輸出並無任何差異，但 AUTO 模式會套用某些額外邏輯，其可檢查是否應將資料行執行巢狀處理。 請考慮使用 PATH 做為預設選項。  
 
 ### <a name="create-a-nested-json-structure"></a>建立巢狀的 JSON 結構  
- **問：** 我想要產生具有相同的層級上的數個陣列的複雜 JSON。 FOR JSON PATH 可使用路徑建立巢狀物件，而 FOR JSON AUTO 會針對每個資料表建立額外巢狀層級。 沒有這兩個選項的其中一個可讓我產生我想要的輸出。 如何建立現有選項未直接支援的自訂 JSON 格式？  
+ **問：** 我想要在相同層級產生具有數個陣列的複雜 JSON。 FOR JSON PATH 可使用路徑建立巢狀物件，而 FOR JSON AUTO 會針對每個資料表建立額外巢狀層級。 這兩個選項都無法產生我想要的輸出。 如何建立現有選項未直接支援的自訂 JSON 格式？  
   
- **答：** 您可以新增 FOR JSON 查詢做為資料行運算式傳回 JSON 文字，以建立任何資料結構。 您也可以使用 JSON_QUERY 函數手動建立 JSON。 下列範例會示範這些技巧。  
+ **答：** 您可以新增 FOR JSON 查詢作為傳回 JSON 文字的資料行運算式，以建立任何資料結構。 您也可以使用 JSON_QUERY 函數手動建立 JSON。 下列範例示範這些技巧。  
   
 ```sql  
 SELECT col1, col2, col3,  
@@ -54,7 +54,7 @@ FOR JSON PATH
 資料行運算式中的所有 FOR JSON 查詢或 JSON_QUERY 函數結果，皆會格式化為個別的巢狀 JSON 子物件並包含於主要結果。  
 
 ### <a name="prevent-double-escaped-json-in-for-json-output"></a>避免在 FOR JSON 輸出中產生雙逸出 JSON  
- **問：** 我已將 JSON 文字儲存於資料表資料行。 我想要將其包含在 FOR JSON 輸出中。 但是，FOR JSON 逸出 JSON 中的所有字元，因此我會收到 JSON 字串而非巢狀物件，如下列範例所示。  
+ **問：** 我已將 JSON 文字儲存於資料表資料行。 我想要將其包含在 FOR JSON 輸出中。 FOR JSON 會逸出 JSON 中的所有字元，因此我會收到 JSON 字串而非巢狀物件，如下列範例所示。  
   
 ```sql  
 SELECT 'Text' AS myText, '{"day":23}' AS myJson  
@@ -69,7 +69,7 @@ FOR JSON PATH
   
  如何防止此行為？ 我想讓 `{"day":23}` 以 JSON 物件形式傳回而非逸出的文字。  
   
- **答：** 儲存於文字資料行的 JSON 或常值，其處理方式與任何文字相似。 也就是說，它已經以雙引號括住並逸出。 如果您想要傳回未逸出的 JSON 物件，將 JSON 資料行做為引數至 JSON_QUERY 函數，如下列範例所示。  
+ **答：** 儲存於文字資料行的 JSON 或常值，其處理方式與任何文字相似。 也就是說，它會以雙引號括住並逸出。 若您想要傳回未逸出的 JSON 物件，則必須將 JSON 資料行以引數形式傳送至 JSON_QUERY 函數，如下列範例所示。  
   
 ```sql  
 SELECT col1, col2, col3, JSON_QUERY(jsoncol1) AS jsoncol1  
@@ -77,7 +77,7 @@ FROM tab1
 FOR JSON PATH  
 ```  
   
- JSON_QUERY 若無選用的第二參數，則僅會傳回第一個引數做為結果。 由於 JSON_QUERY 一律會傳回有效的 JSON，因此 FOR JSON 知道此結果無須逸出。
+ JSON_QUERY 若無選用的第二參數，則僅會傳回第一個引數做為結果。 由於 JSON_QUERY 永遠會傳回有效的 JSON，因此 FOR JSON 知道此結果無須逸出。
 
 ### <a name="json-generated-with-the-withoutarraywrapper-clause-is-escaped-in-for-json-output"></a>使用 WITHOUT_ARRAY_WRAPPER 子句產生的 JSON，會在 FOR JSON 輸出中逸出  
  **問：** 我嘗試使用 FOR JSON 和 WITHOUT_ARRAY_WRAPPER 選項，格式化資料行運算式。  
@@ -90,7 +90,7 @@ FOR JSON PATH
   
  FOR JSON 查詢傳回的文字似乎會逸出為純文字。 僅在指定 WITHOUT_ARRAY_WRAPPER 時才會發生此情況。 為何不會將它視為 JSON 物件，並將它以未逸出方式包含在結果中？  
   
- **答：** 如果您指定`WITHOUT_ARRAY_WRAPPER`中內部選項`FOR JSON`，產生的 JSON 文字不一定有效的 JSON。 因此外部`FOR JSON`會假定此為純文字並逸出字串。 如果您確定 JSON 輸出有效，請將其包裝以`JSON_QUERY`函式可將它升級到正確的格式 JSON，如下列範例所示。  
+ **答：** 如果您在內部 `FOR JSON` 中指定 `WITHOUT_ARRAY_WRAPPER` 選項，產生的 JSON 文字不一定是有效的 JSON。 因此，外部 `FOR JSON` 會假定此為純文字並逸出字串。 若您確定 JSON 輸出有效，請使用 `JSON_QUERY` 函數將其包裝以升級為正確格式的 JSON，如下列範例所示。  
   
 ```sql  
 SELECT 'Text' as myText,  
@@ -101,9 +101,9 @@ FOR JSON PATH
 ## <a name="openjson-and-json-input"></a>OPENJSON 和 JSON 輸入
 
 ### <a name="return-a-nested-json-sub-object-from-json-text-with-openjson"></a>使用 OPENJSON 從 JSON 文字傳回巢狀 JSON 子物件  
- **問：** 無法開啟複雜 JSON 物件的陣列，包含兩個純量值、 物件和陣列使用 OPENJSON 與明確結構描述。 參考 WITH 子句中的索引鍵時，僅會傳回純量值。 物件和陣列會以 Null 值形式傳回。 如何成為 JSON 物件，擷取物件或陣列？  
+ **問：** 無法使用具明確結構描述的 OPENJSON，開啟包含純量值、物件和陣列的複雜 JSON 物件陣列。 參考 WITH 子句中的索引鍵時，僅會傳回純量值。 物件和陣列會以 Null 值形式傳回。 如何以 JSON 物件的形式擷取物件或陣列？  
   
- **答：** 如果您想要傳回的物件或陣列做為資料行，使用 AS JSON 選項在資料行定義中，如下列範例所示。  
+ **答：** 若您想要傳回物件或陣列作為資料行，請在資料行定義中使用 AS JSON 選項，如下列範例所示。  
   
 ```sql  
 SELECT scalar1, scalar2, obj1, obj2, arr1  
@@ -115,7 +115,7 @@ FROM OPENJSON(@json)
         arr1 NVARCHAR(MAX) AS JSON)  
 ```  
 
-### <a name="return-long-text-value-with-openjson-instead-of-jsonvalue"></a>傳回使用 OPENJSON，不要用 JSON_VALUE。 長文字值
+### <a name="return-long-text-value-with-openjson-instead-of-jsonvalue"></a>使用 OPENJSON 傳回長文字值，而不要用 JSON_VALUE
  **問：** 在包含長文字的 JSON 文字當中具有描述索引鍵。 `JSON_VALUE(@json, '$.description')` 傳回 NULL 而非值。  
   
  **答：** JSON_VALUE 設計為傳回小純量值。 函數通常會傳回 NULL 而非溢位錯誤。 若您想要傳回整數值，請使用支援 NVARCHAR(MAX) 值的 OPENJSON，如下列範例所示。  
@@ -124,10 +124,10 @@ FROM OPENJSON(@json)
 SELECT myText FROM OPENJSON(@json) WITH (myText NVARCHAR(MAX) '$.description')  
 ```  
 
-### <a name="handle-duplicate-keys-with-openjson-instead-of-jsonvalue"></a>處理重複的索引鍵使用 OPENJSON，不要用 JSON_VALUE。
+### <a name="handle-duplicate-keys-with-openjson-instead-of-jsonvalue"></a>使用 OPENJSON 處理重複的索引鍵，而不要用 JSON_VALUE
  **問：** 在 JSON 文字中具有重複的索引鍵。 JSON_VALUE 僅傳回在路徑上找到的第一個索引鍵。 如何傳回所有具相同名稱的索引鍵？  
   
- **答：** 內建的 JSON 純量函數會傳回參考的物件第一次出現。 若您需要多個索引鍵，請使用 OPENJSON 資料表值函式，如下列範例所示。  
+ **答：** 內建 JSON 純量函數僅會傳回第一次出現的參考物件。 若您需要多個索引鍵，請使用 OPENJSON 資料表值函式，如下列範例所示。  
   
 ```sql  
 SELECT value FROM OPENJSON(@json, '$.info.settings')  
@@ -148,6 +148,6 @@ WHERE [key] = 'color'
   
  **答：** 您必須在 JSON 路徑中使用引號將其括住。 例如， `JSON_VALUE(@json, '$."$info"."First Name".value')`。
  
-## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>深入了解內建 JSON 支援 SQL Server 中  
-針對特定的解決方案，大量使用案例和建議，請參閱[有關內建 JSON 支援的部落格文章](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)Microsoft 經理專案 jovan popovic 的 Azure SQL Database 和 SQL Server 中。
+## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>深入了解 SQL Server 中的內建 JSON 支援  
+對於大量的特定解決方案、使用案例和建議，請參閱 SQL Server 和 Azure SQL Database 中 Microsoft 經理專案 Jovan Popovic 所撰寫的[有關內建 JSON 支援的部落格文章](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)。
 

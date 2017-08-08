@@ -32,21 +32,19 @@ caps.latest.revision: 57
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 9ac118739640b288307e09c8fd36ba842d0c7ef1
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-# 主體 (Database Engine)
-<a id="principals-database-engine" class="xliff"></a>
+# <a name="principals-database-engine"></a>主體 (Database Engine)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   「主體」是可要求 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資源的實體。 主體就像其他 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 授權模型的元件一樣，可以階層方式安排。 主體的影響範圍視主體的定義範圍 (Windows、伺服器、資料庫)，以及主體是否可分割或者是一個集合而定。 「Windows 登入」是不可分割主體的一個範例，而「Windows 群組」則是主體為集合的範例。 每個主體都有一個安全性識別碼 (SID)。 本主題適用於所有版本的 SQL Server，但 SQL Database 或 SQL 資料倉儲中的伺服器層級主體有一些限制。 
   
-## SQL Server 層級主體
-<a id="sql-server-level-principals" class="xliff"></a>  
+## <a name="sql-server-level-principals"></a>SQL Server 層級主體  
   
 -  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證登入   
 -  Windows 使用者的 Windows 驗證登入  
@@ -55,33 +53,27 @@ ms.lasthandoff: 06/22/2017
 -  AD 群組的 Azure Active Directory 驗證登入
 -  伺服器角色  
   
- ## 資料庫層級主體
-<a id="database-level-principals" class="xliff"></a>  
+ ## <a name="database-level-principals"></a>資料庫層級主體  
   
 -   資料庫使用者 (有 11 種類型的使用者。 如需詳細資訊，請參閱 [CREATE USER](../../../t-sql/statements/create-user-transact-sql.md))。 
 -   資料庫角色  
 -   應用程式角色  
   
-## sa 登入
-<a id="sa-login" class="xliff"></a>  
+## <a name="sa-login"></a>sa 登入  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `sa` 登入為伺服器層級的主體。 根據預設，安裝執行個體時會建立它。 從 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]開始，sa 的預設資料庫就是 master。 這是和舊版 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]不同的一項行為變更。 `sa` 登入是 `sysadmin` 固定資料庫角色成員。 `sa` 登入具有伺服器的所有權限，因此不受限制。 無法卸除 `sa` 登入，但可透過停用，讓所有人都無法使用它。
 
-## dbo 使用者和 dbo 結構描述
-<a id="dbo-user-and-dbo-schema" class="xliff"></a>
+## <a name="dbo-user-and-dbo-schema"></a>dbo 使用者和 dbo 結構描述
 
 `dbo` 使用者是每個資料庫中的特殊使用者主體。 所有 SQL Server 系統管理員、`sysadmin` 固定伺服器角色成員、`sa` 登入以及資料庫擁有者，都是以 `dbo` 使用者的身分進入資料庫。 `dbo` 使用者具有資料庫中的所有權限，並且不受限制也無法進行卸除。 `dbo` 代表資料庫擁有者，但 `dbo` 使用者帳戶與 `db_owner` 固定資料庫角色不同，而且 `db_owner` 固定資料庫角色與記錄為資料庫擁有者的使用者帳戶不同。     
 `dbo` 使用者擁有 `dbo` 結構描述。 除非指定其他結構描述，否則 `dbo` 結構描述是所有使用者的預設結構描述。  無法卸除 `dbo` 結構描述。
   
-## public 伺服器角色和資料庫角色
-<a id="public-server-role-and-database-role" class="xliff"></a>  
+## <a name="public-server-role-and-database-role"></a>public 伺服器角色和資料庫角色  
 每個登入都屬於 `public` 固定伺服器角色，而每個資料庫使用者都屬於 `public` 資料庫角色。 當登入或使用者未被授與或拒絕安全性實體的特定權限時，該登入或使用者會繼承授與該安全性實體之 public 的權限。 無法卸除 `public` 固定伺服器角色和 `public` 固定資料庫角色。 不過，您可以撤銷 `public` 角色的權限。 預設會將許多權限指派給 `public` 角色。 在資料庫中執行例行作業時，需要其中的大部分權限，而每個人應該都有可以執行的動作類型。 撤銷 public 登入或使用者的權限時請小心，因為它會影響所有登入/使用者。 一般而言，您不應該將拒絕權限授與 public，因為拒絕陳述會覆寫任何可對個人所進行的授與陳述。 
   
-## INFORMATION_SCHEMA 與 sys 使用者和結構描述
-<a id="informationschema-and-sys-users-and-schemas" class="xliff"></a> 
+## <a name="informationschema-and-sys-users-and-schemas"></a>INFORMATION_SCHEMA 與 sys 使用者和結構描述 
  每個資料庫都包含兩個在目錄檢視中顯示為使用者的實體：`INFORMATION_SCHEMA` 和 `sys`。 需要有這些實體，以供 Database Engine 內部使用。 它們無法進行修改或卸除。  
   
-## 以憑證為基礎的 SQL Server 登入
-<a id="certificate-based-sql-server-logins" class="xliff"></a>  
+## <a name="certificate-based-sql-server-logins"></a>以憑證為基礎的 SQL Server 登入  
  以兩個 ## 符號括住的伺服器主體名稱僅供內部系統使用。 在安裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 時，將會從憑證建立下列主體，而且不應該刪除它們。  
   
 -   \##MS_SQLResourceSigningCertificate##    
@@ -92,13 +84,11 @@ ms.lasthandoff: 06/22/2017
 -   \##MS_PolicySigningCertificate##   
 -   \##MS_PolicyTsqlExecutionLogin##   
   
-## guest 使用者
-<a id="the-guest-user" class="xliff"></a>  
+## <a name="the-guest-user"></a>guest 使用者  
  每個資料庫都包括 `guest`不同的一項行為變更。 具有資料庫存取權但在資料庫中沒有使用者帳戶的使用者，將繼承授與 `guest` 使用者的權限。 無法卸除 `guest` 使用者，但可透過撤銷其 CONNECT 權限予以停用。 在任何資料庫 (不含 `master` 或 `tempdb`) 內執行 `REVOKE CONNECT FROM GUEST;`，即可撤銷 CONNECT 權限。  
   
   
-## 相關工作
-<a id="related-tasks" class="xliff"></a>  
+## <a name="related-tasks"></a>相關工作  
  如需設計權限系統的資訊，請參閱 [資料庫引擎權限使用者入門](../../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)。  
   
  《 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 線上叢書》的本節中包括下列主題：  
@@ -111,8 +101,7 @@ ms.lasthandoff: 06/22/2017
   
 -   [應用程式角色](../../../relational-databases/security/authentication-access/application-roles.md)  
   
-## 另請參閱
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>另請參閱  
  [保護 SQL Server 的安全](../../../relational-databases/security/securing-sql-server.md)   
  [sys.database_principals &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
  [sys.server_principals &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   

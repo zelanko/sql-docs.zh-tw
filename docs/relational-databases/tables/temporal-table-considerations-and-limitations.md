@@ -15,11 +15,11 @@ caps.latest.revision: 18
 author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 30791ad9733446f664db1592b95d1ffec5fc9a1b
 ms.openlocfilehash: 5ee3aa9223ae8ab832eff23a1da1755278e86d0b
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="temporal-table-considerations-and-limitations"></a>時態表考量與限制
@@ -59,7 +59,7 @@ ms.lasthandoff: 06/23/2017
   
 -   **ON DELETE CASCADE** 和 **ON UPDATE CASCADE** 不得位於目前資料表。 換言之，若時態表參考外部索引鍵關係中的資料表 (對應至 sys.foreign_keys 中的 *parent_object_id* )，則不允許 CASCADE 選項。 若要解決此限制，請使用應用程式邏輯或 after 觸發程序，以維持在主索引鍵資料表執行刪除的一致性 (對應至 sys.foreign_keys 中的  *referenced_object_id* )。 若主索引鍵資料表為時態，且參考資料表為非時態，則不會有這些限制。 
 
-    **注意：**這項限制僅適用於 SQL Server 2016。 支援 CASCADE 選項[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]和 SQL Server 2017 CTP 2.0 從開始。  
+    **注意：**這項限制僅適用於 SQL Server 2016。 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 和 SQL Server 2017 (從 CTP 2.0 開始) 支援 CASCADE 選項。  
   
 -   目前或歷程記錄資料表不允許使用**INSTEAD OF** 觸發程序，以避免使 DML 邏輯無效。 **AFTER** 觸發程序僅允許針對目前的資料表使用。 這些觸發程序在歷程記錄資料表上會遭到封鎖，以避免使 DML 邏輯無效。  
   

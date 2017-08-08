@@ -19,11 +19,11 @@ ms.translationtype: HT
 ms.sourcegitcommit: 50ef4db2a3c9eebcdf63ec9329eb22f1e0f001c0
 ms.openlocfilehash: bc86472cabd742e83980126dce2cf22d42dfdde2
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/19/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="developer-guides-for-sql-server"></a>適用於 SQL Server 的開發人員指南
-  透過使用程式設計模型和介面的自訂程式碼，整合幾乎任何 SQL Server 功能。 每個功能區域都會包括用於資料收集、資料存取、伺服器管理或資料視覺化的原生和受管理 API。  
+  透過使用程式設計模型和介面的自訂程式碼，整合幾乎所有的 SQL Server 功能。 每個功能區域都會包括用於資料收集、資料存取、伺服器管理或資料視覺化的原生和受管理 API。  
   
 ## <a name="sql-server-developer-edition-free"></a>SQL Server Developer Edition (免費！)
 

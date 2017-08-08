@@ -21,11 +21,11 @@ caps.latest.revision: 58
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
 ms.openlocfilehash: a59eb966ca238f4e1c2acd95f108f7090b136a52
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="always-encrypted-database-engine"></a>一律加密 (Database Engine)
@@ -130,7 +130,7 @@ Database Engine 會將每個資料行的加密設定儲存在資料庫中繼資�
   
 -   使用下列其中一個資料類型的資料行： **xml**、 **timestamp**/**rowversion**、 **image**, **ntext**、 **text**、 **sql_variant**、 **hierarchyid**、 **geography**、 **geometry**、alias、使用者定義的類型。  
 - FILESTREAM 資料行  
-- 含 IDENTITY 屬性的資料行  
+- 屬性為 IDENTITY 的資料行  
 - 屬性為 ROWGUIDCOL 的資料行  
 - 含非 bin2 定序的字串 (varchar、char 等) 資料行  
 - 為使用隨機加密資料行做為索引鍵資料行 (決定性加密資料行亦可) 之非叢集索引金鑰的資料行  

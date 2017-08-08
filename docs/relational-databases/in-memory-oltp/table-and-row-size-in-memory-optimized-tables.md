@@ -14,15 +14,14 @@ caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: fe6de2b16b9792a5399b1c014af72a2a5ee52377
 ms.openlocfilehash: 2ef8331a2217c2fd41881b875264dab6ec2bb822
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/10/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-# 記憶體最佳化資料表中的資料表和資料列大小
-<a id="table-and-row-size-in-memory-optimized-tables" class="xliff"></a>
+# <a name="table-and-row-size-in-memory-optimized-tables"></a>記憶體最佳化資料表中的資料表和資料列大小
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 之前，記憶體最佳化資料表的 in-row 資料大小不能超過 [8,060 個位元組](https://msdn.microsoft.com/library/dn205318(v=sql.120).aspx)。 不過，自 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始，可在 Azure SQL Database 中建立具有多個大型資料行 (例如，多個 varbinary(8000) 資料行) 和 LOB 資料行 (即 varbinary(max)、varchar(max) 和 nvarchar(max)) 的記憶體最佳化資料表，並可使用原生編譯的 T-SQL 模組和資料表類型對它們執行作業。 
@@ -43,7 +42,7 @@ ms.lasthandoff: 07/10/2017
 
   記憶體最佳化的表格由資料列與索引 (包含資料列的指標) 的集合組成。 下圖說明包含索引和資料列的資料表，這些索引和資料列各自擁有資料列標頭和主體：  
   
- ![記憶體最佳化資料表。](../../relational-databases/in-memory-oltp/media/hekaton-guide-1.gif "Memory optimized table.")  
+ ![記憶體最佳化資料表。](../../relational-databases/in-memory-oltp/media/hekaton-guide-1.gif "記憶體最佳化資料表。")  
 由索引和資料列組成之記憶體最佳化的資料表。  
 
 ##  <a name="bkmk_TableSize"></a> 計算資料表大小
@@ -247,8 +246,7 @@ where object_id = object_id('dbo.Orders')
 
 [What's new for In-Memory OLTP in SQL Server 2016 since CTP3](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/25/whats-new-for-in-memory-oltp-in-sql-server-2016-since-ctp3) (SQL Server 2016 自 CTP3 後的記憶體內部 OLTP 新功能) 部落格文章會對這些複雜性的一部分詳加說明。   
  
-## 另請參閱
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>另請參閱  
  [記憶體最佳化資料表](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   

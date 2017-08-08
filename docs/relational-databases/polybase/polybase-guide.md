@@ -23,17 +23,17 @@ caps.latest.revision: 26
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 3fc2a681f001906cf9e819084679db097bca62c7
 ms.openlocfilehash: f9fe99ddd630b8444819c94111f6a363e96105f5
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="polybase-guide"></a>PolyBase 指南
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
-  PolyBase 是一種技術，以便存取透過 t-sql 語言資料庫外部的資料。  在 SQL Server 2016 中，它可讓您在 Hadoop 中的外部資料上執行查詢，或匯入/匯出資料從 Azure Blob 儲存體。 查詢已最佳化，可將計算推送到 Hadoop。 在 Azure SQL 資料倉儲中，您可以匯入/匯出資料從 Azure Blob 儲存體和 Azure 資料湖存放區。
+  PolyBase 是一種技術，可透過 t-sql 語言存取資料庫外部的資料。  在 SQL Server 2016 中，它可讓您對 Hadoop 中的外部資料執行查詢，或從 Azure Blob 儲存體匯入/匯出資料。 查詢已最佳化，可將計算推送到 Hadoop。 在 Azure SQL 資料倉儲中，您可以從 Azure Blob 儲存體和 Azure Data Lake Store 中匯入/匯出資料。
   
   
  若要使用 PolyBase，請參閱 [開始使用 PolyBase](../../relational-databases/polybase/get-started-with-polybase.md)。  
@@ -43,15 +43,15 @@ ms.lasthandoff: 06/23/2017
 ## <a name="why-use-polybase"></a>為何要使用 PolyBase？  
 若要做出不錯的決策，您要將關聯式資料和其他非結構化資料分析為資料表 (尤其是 Hadoop)。 除非您有方法可在不同類型的資料存放區之間傳送資料，否則這不容易達成。 PolyBase 透過對 SQL Server 外部資料進行操作來縮短這個差距。  
   
-為了簡化，PolyBase 不需要您對 Hadoop 環境中安裝其他軟體。 查詢外部資料與查詢資料庫資料表所使用的語法相同。 這都會以透明方式進行。 PolyBase 控點的詳細資料幕後作業，而不知道 Hadoop 需要使用者來查詢外部資料表。 
+為了簡化，PolyBase 不需要在 Hadoop 環境中安裝其他軟體。 查詢外部資料與查詢資料庫資料表所使用的語法相同。 這都會以透明方式進行。 PolyBase 會處理幕後的所有詳細資料，而且使用者不需具備 Hadoop 的知識就能查詢外部資料表。 
   
  PolyBase 可以：  
   
--   **查詢 SQL Server 或 PDW 從 Hadoop 中所儲存的資料。** 使用者必須將資料儲存於符合成本效益的分散式且可擴充的系統中，例如 Hadoop。 PolyBase 可讓您輕鬆地使用 T-SQL 來查詢資料。  
+-   **從 SQL Server 或 PDW 查詢 Hadoop 中所儲存的資料。** 使用者必須將資料儲存於符合成本效益的分散式且可擴充的系統中，例如 Hadoop。 PolyBase 可讓您輕鬆地使用 T-SQL 來查詢資料。  
   
--   **查詢 Azure Blob 儲存體中儲存的資料。** Azure Blob 儲存體是儲存資料以供 Azure 服務使用的便利位置。  PolyBase 可讓您輕鬆地使用 T-SQL 來存取資料。  
+-   **查詢 Azure Blob 儲存體中所儲存的資料。** Azure Blob 儲存體是儲存資料以供 Azure 服務使用的便利位置。  PolyBase 可讓您輕鬆地使用 T-SQL 來存取資料。  
   
--   **從 Hadoop、 Azure Blob 儲存體或 Azure Data Lake Store 匯入資料**利用 Microsoft SQL 資料行存放區技術和分析功能的速度從 Hadoop、 Azure Blob 儲存體或 Azure Data Lake Store 匯入資料至關聯式資料表。 個別 ETL 或匯入工具則不需要。  
+-   **將資料從 Hadoop、Azure Blob 儲存體或 Azure Data Lake Store 匯入** 將資料從 Hadoop、Azure Blob 儲存體或 Azure Data Lake Store 匯入至關聯式資料表，以利用 Microsoft SQL 資料行存放區技術和分析功能的速度。 個別 ETL 或匯入工具則不需要。  
 
 -   **將資料匯出至 Hadoop、Azure Blob 儲存體或 Azure Data Lake Store。** 將資料封存至 Hadoop、Azure Blob 儲存體或 Azure Data Lake Store 以達成符合成本效益的儲存體，並讓它持續上線，方便進行存取。  
   

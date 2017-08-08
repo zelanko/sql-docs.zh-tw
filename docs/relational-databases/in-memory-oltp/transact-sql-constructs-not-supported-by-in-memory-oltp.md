@@ -14,11 +14,11 @@ caps.latest.revision: 51
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
 ms.openlocfilehash: 66f9964d94ebcbab021c9dcf69ae50663196a597
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>記憶體中的 OLTP 不支援 Transact-SQL 建構
@@ -56,7 +56,7 @@ ms.lasthandoff: 06/23/2017
 |----------|----------|----------------|  
 |功能|ON|記憶體最佳化資料表不可放置在檔案群組或分割區配置上。 請從 **CREATE TABLE** 陳述式中移除 ON 子句。<br /><br /> 所有記憶體最佳化資料表都會對應到記憶體最佳化檔案群組。|  
 |資料類型|*資料類型名稱*|不支援所指的資料類型。 請用其中一種支援的資料類型取代該類型。 如需詳細資訊，請參閱 [記憶體內部 OLTP 支援的資料類型](../../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md)。|  
-|功能|計算資料行|記憶體最佳化資料表中不支援計算資料行。 請從 **CREATE TABLE** 陳述式中移除計算資料行。<br/><br/>**Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.<br/>從 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 開始，記憶體最佳化的資料表和索引支援計算資料行。|  
+|功能|計算資料行|記憶體最佳化資料表中不支援計算資料行。 請從 **CREATE TABLE** 陳述式中移除計算資料行。<br/><br/>**適用於：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。<br/>從 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 開始，記憶體最佳化的資料表和索引支援計算資料行。|  
 |功能|複寫|記憶體最佳化資料表不支援複寫。|  
 |功能|FILESTREAM|FILESTREAM 儲存體不是記憶體最佳化資料表支援的資料行。 請從資料行定義中移除 **FILESTREAM** 關鍵字。|  
 |功能|SPARSE|記憶體最佳化資料表的資料行不可定義為 SPARSE。 請從資料行定義中移除 **SPARSE** 關鍵字。|  
@@ -70,7 +70,7 @@ ms.lasthandoff: 06/23/2017
 |運算|主索引鍵資料行的更新。|記憶體最佳化資料表中的主索引鍵資料行和資料類型無法更新。 如果主索引鍵需要更新，請刪除舊資料列，並插入包含更新之主索引鍵的新資料列。|  
 |運算|CREATE INDEX|記憶體最佳化資料表上的索引必須採用內嵌於 **CREATE TABLE** 陳述式或 **ALTER TABLE** 陳述式的方式指定。|  
 |運算|CREATE FULLTEXT INDEX|記憶體最佳化資料表中不支援全文檢索索引。|  
-|運算|結構描述變更|記憶體最佳化資料表和原生編譯預存程序不支援結構描述變更，例如 **sp_rename**。<br /><br /> 嘗試進行特定的結構描述變更會產生錯誤 12320。 記憶體最佳化資料表不支援需要變更結構描述版本的作業，例如重新命名。<br /><br /> 允許使用 ALTER TABLE 和 ALTER PROCEDURE 的特定結構描述變更。<br/><br/>**適用於：** [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]。<br/>開頭為[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]，sp_rename 支援。| 
+|運算|結構描述變更|記憶體最佳化資料表和原生編譯預存程序不支援結構描述變更，例如 **sp_rename**。<br /><br /> 嘗試進行特定的結構描述變更會產生錯誤 12320。 記憶體最佳化資料表不支援需要變更結構描述版本的作業，例如重新命名。<br /><br /> 允許使用 ALTER TABLE 和 ALTER PROCEDURE 的特定結構描述變更。<br/><br/>**適用於：** [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]。<br/>從 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 開始，支援 sp_rename。| 
 |運算|TRUNCATE TABLE|記憶體最佳化資料表不支援 TRUNCATE 作業。 若要移除資料表中的所有資料列，請使用 **DELETE FROM***table* 刪除所有資料列，或卸除後再重新建立資料表。|  
 |運算|ALTER AUTHORIZATION|不支援變更現有記憶體最佳化資料表或原生編譯預存程序的擁有者。 請卸除後再重新建立資料表或程序，以變更擁有權。|  
 |運算|ALTER SCHEMA|在結構描述之間傳送安全性實體。|  
@@ -141,7 +141,7 @@ ms.lasthandoff: 06/23/2017
 |運算子|OFFSET|不支援此運算子。 請從原生編譯預存程序中移除 **OFFSET** 。|  
 |運算子|INTERSECT|不支援此運算子。 請從原生編譯預存程序中移除 **INTERSECT** 。 在某些情況下，可以使用 INNER JOIN 獲得相同結果。|  
 |運算子|EXCEPT|不支援此運算子。 請從原生編譯預存程序中移除 **EXCEPT** 。|  
-|運算子|APPLY|不支援此運算子。 請從原生編譯預存程序中移除 **APPLY** 。<br/><br/>**Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.<br/>從 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 開始，原生編譯模組支援 APPLY 運算子。|  
+|運算子|APPLY|不支援此運算子。 請從原生編譯預存程序中移除 **APPLY** 。<br/><br/>**適用於：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。<br/>從 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 開始，原生編譯模組支援 APPLY 運算子。|  
 |運算子|PIVOT|不支援此運算子。 請從原生編譯預存程序中移除 **PIVOT** 。|  
 |運算子|UNPIVOT|不支援此運算子。 請從原生編譯預存程序中移除 **UNPIVOT** 。|  
 |運算子|CONTAINS|不支援此運算子。 請從原生編譯預存程序中移除 **CONTAINS** 。|  
