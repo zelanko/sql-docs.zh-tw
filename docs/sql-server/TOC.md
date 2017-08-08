@@ -37,7 +37,4 @@
 # [SQL Server 移轉小幫手](../ssma/sql-server-migration-assistant.md)
 # [Stretch Database](../sql-server/stretch-database/stretch-database.md)
 # [適用於 SQL Server 的教學課程](tutorials-for-sql-server-2016.md)
-
-# 關於文件
-## [SQL Server 資源](sql-server-resources.md)
-## [說明檢視器](../release-notes/sql-server-help-installation.md)
+# [使用 Help Viewer 的本機內容](../release-notes/sql-server-help-installation.md)
