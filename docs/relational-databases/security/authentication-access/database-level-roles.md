@@ -42,11 +42,11 @@ caps.latest.revision: 49
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 96f6a7eeb03fdc222d0e5b42bcfbf05c25d11db6
-ms.openlocfilehash: 411da6974090c9ccad6aa6184c248537bfdebe79
+ms.translationtype: HT
+ms.sourcegitcommit: 47b0c3fc8aba635dcfd573536b770f13a40956fa
+ms.openlocfilehash: 6510f02e44dfc84c24c19c509a8dd9254845d4a1
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="database-level-roles"></a>資料庫層級角色
@@ -71,7 +71,7 @@ ms.lasthandoff: 06/23/2017
 
 ## <a name="fixed-database-roles"></a>固定資料庫角色
   
- 下表顯示固定資料庫角色及其功能。 這些角色存在所有資料庫中。 除了**公用**無法變更資料庫角色中，指派至固定資料庫角色的權限。   
+ 下表顯示固定資料庫角色及其功能。 這些角色存在所有資料庫中。 除了**公用**資料庫角色外，指派給固定資料庫角色的權限無法變更。   
   
 |固定資料庫角色名稱|Description|  
 |-------------------------------|-----------------|  
@@ -117,7 +117,7 @@ ms.lasthandoff: 06/23/2017
 
 ## <a name="working-with-r-services"></a>使用 R 服務  
 
-**Applies to:** SQL Server starting with [!INCLUDE[ssSQLv14_md](../../../includes/sssqlv14-md.md)]   
+**適用於：** SQL Server (從 [!INCLUDE[ssSQLv14_md](../../../includes/sssqlv14-md.md)]   
 
 安裝 R 服務時，可使用額外的資料庫角色來管理封裝。 如需詳細資訊，請參閱 [SQL Server 的 R 封裝管理](../../../advanced-analytics/r-services/r-package-management-for-sql-server-r-services.md)。
 

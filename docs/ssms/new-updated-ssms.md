@@ -19,18 +19,18 @@ ms.translationtype: HT
 ms.sourcegitcommit: 71203bfa7cb4dcd06cc14ad8e49e5bc1113f8605
 ms.openlocfilehash: 4938dd27bf3f42cc85f22de99fef01adbad08ace
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/19/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="new-and-recently-updated-sql-server-management-studio-ssms-for-sql-server"></a>新文章和最近更新的文章：SQL Server Management Studio (SSMS) for SQL Server
 
 
 
-幾乎每日 Microsoft 某些現有發行項上更新其[Docs.Microsoft.com](http://docs.microsoft.com/)文件網站。 這篇文章會顯示從最近已更新的發行項的摘錄。 可能也會列出新的文章連結。
+Microsoft 幾乎每天都會在其 [Docs.Microsoft.com](http://docs.microsoft.com/) 文件網站上更新一些現有文章。 本文會顯示最近更新文章的摘錄。 可能也會列出新文章的連結。
 
-這篇文章會定期重新執行程式所產生的。 偶爾摘錄會顯示具有完美的格式，或 markdown 從來源文件。 影像永遠不會顯示在這裡。
+本文是透過定期重新執行的程式所產生。 摘錄中偶爾會出現示不完整的格式，或顯示為來自來源文章的 Markdown。 影像永遠不會顯示在這裡。
 
-新的更新會報告下列日期範圍和主體：
+新的更新會報告下列日期範圍和主旨：
 
 
 
@@ -51,7 +51,7 @@ ms.lasthandoff: 07/19/2017
 2. [變更已註冊之伺服器或已註冊之伺服器群組的名稱](register-servers/change-the-name-of-registered-server-or-registered-server-group.md)
 3. [連線到已註冊的伺服器 (SQL Server Management Studio)](register-servers/connect-to-a-registered-server-sql-server-management-studio.md)
 4. [建立中央管理伺服器和伺服器群組](register-servers/create-a-central-management-server-and-server-group.md)
-5. [建立新的註冊伺服器 (SQL Server Management Studio)](register-servers/create-a-new-registered-server-sql-server-management-studio.md)
+5. [建立新的已註冊伺服器 (SQL Server Management Studio)](register-servers/create-a-new-registered-server-sql-server-management-studio.md)
 6. [建立或編輯伺服器群組 (SQL Server Management Studio)](register-servers/create-or-edit-a-server-group-sql-server-management-studio.md)
 7. [中斷與已註冊之伺服器的連線 (SQL Server Management Studio)](register-servers/disconnect-from-a-registered-server-sql-server-management-studio.md)
 8. [同時對多部伺服器執行陳述式](register-servers/execute-statements-against-multiple-servers-simultaneously.md)
@@ -75,19 +75,19 @@ ms.lasthandoff: 07/19/2017
 26. [課程 1-7 - 設定啟動選項](tutorials/lesson-1-7-set-the-startup-options.md)
 27. [課程 1-8 - 還原預設的 SQL Server Management Studio 組態](tutorials/lesson-1-8-restore-the-default-sql-server-management-studio-configuration.md)
 28. [課程 1-9 - 摘要：基本導覽](tutorials/lesson-1-9-summary-basic-navigation.md)
-29. [課程 1 - SQL Server Management Studio 基本導覽](tutorials/lesson-1-basic-navigation-in-sql-server-management-studio.md)
+29. [第 1 課：SQL Server Management Studio 中的基本導覽](tutorials/lesson-1-basic-navigation-in-sql-server-management-studio.md)
 30. [課程 2-1 - 連接查詢編輯器](tutorials/lesson-2-1-connecting-with-query-editor.md)
 31. [課程 2-2 - 新增縮排](tutorials/lesson-2-2-adding-indentation.md)
 32. [課程 2-3 - 最大化查詢編輯器](tutorials/lesson-2-3-maximizing-query-editor.md)
 33. [課程 2-4 - 使用註解](tutorials/lesson-2-4-using-comments.md)
 34. [課程 2-5 - 程式碼視窗的其他檢視方式](tutorials/lesson-2-5-other-ways-of-viewing-the-code-window.md)
 35. [課程 2-6 - 編寫資料表指令碼](tutorials/lesson-2-6-script-a-table.md)
-36. [課程 2 - 撰寫 Transact-SQL](tutorials/lesson-2-writing-transact-sql.md)
+36. [第 2 課：撰寫 Transact-SQL](tutorials/lesson-2-writing-transact-sql.md)
 37. [課程 3-1 - 使用範本建立指令碼](tutorials/lesson-3-1-create-scripts-using-templates.md)
 38. [課程 3-2 - 建立自訂範本](tutorials/lesson-3-2-create-custom-templates.md)
 39. [課程 3-3 - 將專案或解決方案另存為指令碼](tutorials/lesson-3-3-save-scripts-as-projects-or-solutions.md)
 40. [課程 3-4 - 摘要：解決方案與指令碼專案](tutorials/lesson-3-4-summary-solutions-and-script-projects.md)
-41. [課程 3 - 使用範本、解決方案與指令碼專案](tutorials/lesson-3-working-with-templates-solutions-and-script-projects.md)
+41. [第 3 課：使用範本、方案和指令碼專案](tutorials/lesson-3-working-with-templates-solutions-and-script-projects.md)
 42. [教學課程：SQL Server Management Studio](tutorials/tutorial-sql-server-management-studio.md)
 
 
@@ -97,7 +97,7 @@ ms.lasthandoff: 07/19/2017
 
 <a name="compactupdatedlist"/>
 
-## <a name="compact-list-of-articles-updated-recently"></a>Compact 文件最近才更新清單
+## <a name="compact-list-of-articles-updated-recently"></a>最近更新文章的壓縮清單
 
 此壓縮清單提供所有更新文章的連結，並將列於＜摘要＞一節。
 
@@ -105,13 +105,13 @@ ms.lasthandoff: 07/19/2017
 
 &nbsp;
 
-## <a name="updated-articles-with-excerpts"></a>更新的發行項、 只有摘要
+## <a name="updated-articles-with-excerpts"></a>更新文章與摘要
 
-此區段會顯示更新從發行項的最近發生大規模的更新所收集的摘錄。
+本節會顯示從最近發生大規模更新的文章所收集的更新摘錄。
 
-此處顯示的摘錄顯示分隔其適當語意的內容。 此外，有時摘錄分開四周實際文件中的重要的 markdown 語法。 因此，這些摘錄適用於一般指導方針。 摘錄只會讓您知道您的興趣是否值得花時間按一下，瀏覽實際的發行項。
+此處顯示的摘錄不同於其適當語意內容。 此外，有時摘錄也與實際文件四周的重要 Markdown 語法不同。 因此，這些摘錄僅適用於一般指導方針。 摘錄只能讓您知道您感興趣的項目，是否值得花時間按一下並瀏覽實際文章。
 
-如需這些和其他原因，不要複製程式碼從這些摘錄中，而且不採用確切真為任何文字摘錄。 相反地，請瀏覽實際的發行項。
+由於這些和其他原因，請勿從這些摘錄中複製程式碼，而且不要將任何文字摘錄視為確切事實。 相反地，請瀏覽實際文章。
 
 
 
@@ -141,26 +141,26 @@ ms.lasthandoff: 07/19/2017
 **增強功能**
 
 
-- 程式碼剖析工具： 協助 > 大約現在會顯示發行版本號碼 （例如 17.1）
-- 分析服務的使用者可以為 1200年項目重新整理其資料來源的認證 TM 模型和更新版本從資料來源的內容功能表
-- 內建的 SSIS 報告現在從 CTP 2.1 SSIS 向外延展執行顯示記錄檔
-- SSIS 向外管理應用程式
+- 剖析工具：說明 > 關於現在會顯示發行版本號碼 (例如 17.1)
+- 分析服務使用者可以從資料來源的內容功能表，針對 1200 TM 模型和更高版本重新整理其資料來源的認證
+- 內建的 SSIS 報表現在顯示 CTP 2.1 中 SSIS 向外延展執行的記錄
+- SSIS 向外延展管理應用程式
   - 檢視向外延展 master 的基本資訊。
-  - 輕鬆地加入向外延展部署的背景工作。
-  - 檢視所有的向外延展工作者和基本相關資訊，和也可以啟用或停用它們輕鬆。
+  - 輕鬆地將背景工作角色加入向外延展部署。
+  - 檢視所有的向外延展背景工作角色和基本相關資訊，也可以輕鬆地進行啟用或停用。
 
 **ug 修正**
 
-- Always On:
-  - 其中可用性複本的屬性一律顯示為 「 自動容錯移轉 」 模式的 WSFC Ag 修正的問題。
-  - 已修正下列問題其中更新可用性群組時已覆寫唯讀路由清單
-- 永遠加密： 修正的問題產生的記錄檔，遺漏 DacFx 所產生的資訊。
-- 執行程序表： 修正問題其中 UI 已一律顯示實際的聯結型別屬性的非適應性聯結運算子。
+- 一律開啟：
+  - 已修正下列問題：可用性複本的屬性一律顯示為 WSFC AG 的「自動容錯移轉」模式。
+  - 已修正下列問題：更新可用性群組時，覆寫了唯讀的路由清單
+- 永遠加密：已修正下列問題：產生的記錄檔遺漏了 DacFx 所產生的資訊。
+- 執行程序表：已修正下列問題：UI 一律顯示自適性聯結運算子的實際聯結型別屬性。
 - 安裝程式：
-  - 修正 SSMS 17.0 的位置已中斷 SSDT Visual Studio 2013 [連接項目 3133479] 的問題
-  - 已修正的問題，按一下 「 重新啟動 」 結尾的安裝程式已不在重新啟動電腦
-- 指令碼： 暫時防止被意外刪除 Azure 的資料庫物件時嘗試停用該選項的指令碼刪除 SSMS。  近期版本的 SSMS 中，將適當的修正程式。
-- 物件總管 中： 已修正的問題，「 資料庫 」 節點未展開時連接至 Azure 的資料庫，使用"AS 複製 「 建立
+  - 已修正下列問題：SSMS 17.0 已在 Visual Studio 2013 上中斷 SSDT [連接項目 3133479]
+  - 已修正下列問題：按一下安裝程式結尾處的 [重新啟動]，並不會重新啟動電腦
+- 指令碼：藉由停用該選項，在嘗試指令碼刪除時防止 SSMS 意外刪除 Azure 資料庫物件。  正確的修復程式將位於即將發佈的 SSMS 版本中。
+- 物件總管：已修正下列問題：連接至使用 "AS COPY" 建立的 Azure 資料庫時，「資料庫」節點未展開
 
 
 

@@ -25,7 +25,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 0c85f3e3417afc5943baee86eff0c3248172f82a
 ms.openlocfilehash: 9b6d3aabe451c35c25822a2114e825e980ad01d3
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/11/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="guidelines-for-online-index-operations"></a>線上索引作業的指導方針
@@ -38,7 +38,7 @@ ms.lasthandoff: 07/11/2017
 -   當資料表包含 LOB 資料類型，但這些資料行並未在索引定義中當做索引鍵或非索引鍵 (內含) 資料行使用時，您可以在線上建立非唯一的非叢集索引。  
   
 -   您無法在線上建立、重建或卸除本機暫存資料表的索引。 此限制不適用於全域暫存資料表上的索引。
-- 可以從非預期的失敗，資料庫容錯移轉之後的停止處繼續索引或**暫停**命令。 請參閱[改變索引](../../t-sql/statements/alter-index-transact-sql.md)。 針對 SQL Server 2017 和 Azure SQL Database，此功能正處於公開預覽。
+- 可以從非預期的失敗、資料庫容錯移轉或 **PAUSE** 命令之後的停止處繼續索引。 請參閱[改變索引](../../t-sql/statements/alter-index-transact-sql.md)。 針對 SQL Server 2017 和 Azure SQL Database，此功能正處於公開預覽。
 
 > [!NOTE]  
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的所有版本都無法使用線上索引作業。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本所支援的功能清單，請參閱[版本支援的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
@@ -96,23 +96,23 @@ ms.lasthandoff: 07/11/2017
 > 請參閱[改變索引](../../t-sql/statements/alter-index-transact-sql.md)。 針對 SQL Server 2017 和 Azure SQL Database，此功能正處於公開預覽。
 >
 
-當您執行可繼續線上索引重建時套用下列指導方針：
--   管理、 規劃和擴充索引的維護期間。 您可以暫停和重新啟動索引重建作業多次，以符合您的維護期間。
-- 從索引重建失敗 （例如資料庫容錯移轉或執行磁碟空間不足） 復原。
-- 當索引作業已暫停，原始索引和磁碟空間，以及需要更新 DML 作業期間，需要新建的一個。
+當您執行可繼續的線上索引重建時，將適用下列指導方針：
+-   管理、規劃和擴充索引的維護期間。 您可以暫停和重新啟動索引重建作業多次，以符合您的維護期間。
+- 從索引重建失敗 (例如資料庫容錯移轉或磁碟空間不足) 中復原。
+- 當索引作業暫停時，原始索引和新建立的索引都需要磁碟空間，而且必須在 DML 作業期間進行更新。
 
-- 可讓 （一般索引，線上索引作業無法執行此作業） 的索引重建作業期間截斷記錄檔的截斷。
-- SORT_IN_TEMPDB = ON 選項不支援
+- 在索引重建作業期間啟用截斷記錄的截斷功能 (無法為一般線上索引作業執行此作業)。
+- 不支援 SORT_IN_TEMPDB=ON 選項
 
 > [!IMPORTANT]
-> 可繼續重建不需要長時間執行的截斷，允許記錄截斷，這項作業和更好的記錄檔空間管理期間保持開啟。 利用新的設計，我們管理所需的資料保留在資料庫與重新啟動擱置作業所需的所有參考。
+> 可繼續的重建不需要您持續開啟長時間執行的截斷，允許在此作業期間執行記錄截斷，而讓記錄空間管理的效能更佳。 利用新的設計，我們設法將資料庫中的必要資料與重新啟動可繼續作業所需的所有參考保存在一起。
 >
 
-一般而言，是效能之間沒有差異可繼續和不可繼續擱置的線上索引重建。 當您繼續索引時，更新索引重建作業已暫停：
-- 最常讀取工作負載，是不顯著的效能影響。 
-- 針對以更新為主的工作負載，您可能會遇到的輸送量降低情況 （我們測試小於 10%的顯示降低）。
+一般而言，可繼續和不可繼續的線上索引重建之間沒有效能差異。 若在索引重建作業暫停時，更新可繼續的索引：
+- 對於最常讀取的工作負載，效能影響微不足道。 
+- 對於更新繁重的工作負載，您可能會遇到輸送量降低情況 (我們的測試顯示小於 10% 的降低情況)。
 
-一般而言，沒有任何差異磁碟重組品質可繼續和不可繼續擱置的線上索引重建。
+一般而言，可繼續和不可繼續的線上索引重建之間的磁碟重組品質沒有差異。
  
 ## <a name="related-content"></a>相關內容  
  [線上索引作業如何運作](../../relational-databases/indexes/how-online-index-operations-work.md)  

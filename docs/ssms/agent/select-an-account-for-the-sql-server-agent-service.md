@@ -25,11 +25,11 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 43841807dce9cb747c2c5b182174f83f0540b030
 ms.openlocfilehash: 3050dc3fc207f2154a70c68770ca266d2d47ce92
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="select-an-account-for-the-sql-server-agent-service"></a>選取 SQL Server Agent 服務的帳戶
@@ -60,7 +60,7 @@ ms.lasthandoff: 06/23/2017
   
     -   調整處理序之記憶體配額的權限 (SeIncreaseQuotaPrivilege)  
   
-    -   若要存取這台電腦從網路 (SeNetworkLogonRight) 的權限  
+    -   從網路存取這台電腦的權限 (SeNetworkLogonRight)  
   
 > [!NOTE]  
 > 如果帳戶沒有支援 Proxy 所需的權限，則只有 **系統管理員 (sysadmin)** 固定伺服器角色的成員可以建立作業。  
@@ -112,7 +112,7 @@ ms.lasthandoff: 06/23/2017
 ## <a name="common-tasks"></a>一般工作  
 **若要指定 SQL Server Agent 服務的啟動帳戶**  
   
--   [設定 SQL Server Agent 的服務啟動帳戶 &amp;#40;SQL Server 組態管理員&amp;#41;](../../ssms/agent/set-service-startup-account-sql-server-agent-sql-server-configuration-manager.md)  
+-   [設定 SQL Server Agent 的服務啟動帳戶 &#40;SQL Server 組態管理員&#41;](../../ssms/agent/set-service-startup-account-sql-server-agent-sql-server-configuration-manager.md)  
   
 **若要指定 SQL Server Agent 的郵件設定檔**  
   

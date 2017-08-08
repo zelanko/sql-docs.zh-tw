@@ -18,26 +18,24 @@ caps.latest.revision: 38
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: aad94f116c1a8b668c9a218b32372424897a8b4a
 ms.openlocfilehash: 53e0f5d479d7fc3cdeae2c6ce121734b6fc16f21
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/28/2017
+ms.lasthandoff: 08/03/2017
 
 ---
-# 使用查詢存放區監視效能
-<a id="monitoring-performance-by-using-the-query-store" class="xliff"></a>
+# <a name="monitoring-performance-by-using-the-query-store"></a>使用查詢存放區監視效能
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查詢存放區功能為您提供關於查詢計劃選擇及效能的深入資訊。 其可協助您您快速找出由於查詢計劃變更所導致的效能差異，以簡化效能疑難排解作業。 查詢存放區會自動擷取查詢、計劃和執行階段統計資料的歷程記錄，並將其保留供您檢閱。 其會以時段來區分資料、供您查看資料庫使用模式，並了解何時在伺服器上發生查詢計劃變更。 使用 [ALTER DATABASE SET] [](../../t-sql/statements/alter-database-transact-sql-set-options.md) 選項可設定查詢存放區。 
   
  如需操作 Azure SQL Database 中查詢存放區的相關資訊，請參閱 [操作 Azure SQL Database 中的查詢存放區](https://azure.microsoft.com/documentation/articles/sql-database-operate-query-store/)。  
   
-##  <a name="Enabling"></a> Enabling the Query Store  
+##  <a name="Enabling"></a> 啟用查詢存放區  
  新的資料庫預設不會啟用查詢存放區。  
   
-#### 使用 Management Studio 中的查詢存放區頁面
-<a id="use-the-query-store-page-in-management-studio" class="xliff"></a>  
+#### <a name="use-the-query-store-page-in-management-studio"></a>使用 Management Studio 中的查詢存放區頁面  
   
 1.  在 [物件總管] 中，以滑鼠右鍵按一下資料庫，然後按一下 [屬性] 。  
   
@@ -48,8 +46,7 @@ ms.lasthandoff: 06/28/2017
   
 3.  在 [作業模式 (要求)]  方塊中，選取 [開啟] 。  
   
-#### 使用 Transact-SQL 陳述式
-<a id="use-transact-sql-statements" class="xliff"></a>  
+#### <a name="use-transact-sql-statements"></a>使用 Transact-SQL 陳述式  
   
 1.  使用 **ALTER DATABASE** 陳述式可啟用查詢存放區。 例如：  
   
@@ -75,7 +72,7 @@ ms.lasthandoff: 06/28/2017
   
 -   判斷在指定的時段執行查詢的次數、協助 DBA 疑難排解資源的效能問題。  
   
--   識別過去 *x* 小時內的前 *n* 項查詢 (依據執行時間、記憶體耗用量等等)。  
+-   識別過去 *n* 小時內的前 *n* 項查詢 (依據執行時間、記憶體耗用量等等)。  
   
 -   稽核指定的查詢之查詢計劃記錄。  
   
@@ -101,7 +98,7 @@ JOIN sys.query_store_query_text AS Txt
     ON Qry.query_text_id = Txt.query_text_id ;  
 ```  
  
-##  <a name="Regressed"></a> Use the Regressed Queries Feature  
+##  <a name="Regressed"></a> 使用迴歸查詢功能  
  啟用查詢存放區之後，重新整理物件總管窗格中的資料庫部分，以加入＜ **查詢存放區** ＞一節。  
   
  ![物件總管中的查詢存放區樹狀結構](../../relational-databases/performance/media/objectexplorerquerystore.PNG "物件總管中的查詢存放區樹狀結構")  
@@ -126,7 +123,7 @@ JOIN sys.query_store_query_text AS Txt
 |每個資料庫的高 LCK_M_X 等候|查詢存放區特定查詢的高鎖定等候|檢查受影響查詢的查詢文字，找出目標項目。 在查詢存放區中尋找修改相同項目的其他查詢，這些查詢經常執行且/或持續時間很長。 找出這些查詢之後，請考慮變更應用程式邏輯以改善並行，或使用較不嚴格的隔離等級。|
 |每個資料庫的高 PAGEIOLATCH_SH 等候|查詢存放區特定查詢的高緩衝區 IO 等候|在查詢存放區中尋找有大量實體讀取次數的查詢。 如果它們符合高 IO 等候的查詢，請考慮引入基礎實體索引搜尋，以執行搜尋而不是掃描，進而將查詢的 IO 負擔降至最低。|
 |每個資料庫的高 SOS_SCHEDULER_YIELD 等候|查詢存放區特定查詢的高 CPU 等候|尋找查詢存放區中前幾項最耗 CPU 的查詢。 在它們中間找出高 CPU 趨勢與受影響查詢之高 CPU 等候相互關聯的查詢。 專注於最佳化這些查詢，它們可能有計劃迴歸或缺少索引。| 
-##  <a name="Options"></a> Configuration Options 
+##  <a name="Options"></a> 組態選項 
 
 設定查詢存放區參數可使用下列選項。
 
@@ -155,21 +152,20 @@ JOIN sys.query_store_query_text AS Txt
  表示維護每個查詢計劃的大數目的整數。 預設值為 200。  
  
  `WAIT_STATS_CAPTURE_MODE`  
- 如果查詢存放區擷取控制項等候統計資料資訊。 可以是 OFF = 0，或在 = 1 （預設值）  
+ 控制查詢存放區是否擷取等候統計資料資訊。 可以是 OFF = 0 或 ON = 1 (預設值)  
  
  查詢 **sys.database_query_store_options** 檢視可判斷查詢存放區目前的選項。 如需值的詳細資訊，請參閱 [sys.database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)。  
   
  如需使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式設定選項的詳細資訊，請參閱 [選項管理](#OptionMgmt)。  
   
-##  <a name="Related"></a> Related Views, Functions, and Procedures  
+##  <a name="Related"></a> 相關檢視、函數與程序  
  透過 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 或使用下列檢視與程序，檢視及管理查詢存放區。  
 
 ||| 
 |-|-|  
 |[sys.fn_stmt_sql_handle_from_sql_stmt &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)|| 
   
-### 查詢存放區目錄檢視
-<a id="query-store-catalog-views" class="xliff"></a>  
+### <a name="query-store-catalog-views"></a>查詢存放區目錄檢視  
  目錄檢視會提供查詢存放區的相關資訊。  
 
 ||| 
@@ -177,10 +173,9 @@ JOIN sys.query_store_query_text AS Txt
 |[sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)|[sys.query_context_settings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)|  
 |[sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)|[sys.query_store_query &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)|  
 |[sys.query_store_query_text &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)|[sys.query_store_runtime_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)|  
-|[sys.query_store_wait_stats &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)|[sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)|  
+|[sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)|[sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)|  
   
-### 查詢存放區預存程序
-<a id="query-store-stored-procedures" class="xliff"></a>  
+### <a name="query-store-stored-procedures"></a>查詢存放區預存程序  
  預存程序可設定查詢存放區。  
 
 ||| 
@@ -191,7 +186,7 @@ JOIN sys.query_store_query_text AS Txt
  
 ##  <a name="Scenarios"></a> 主要使用方式案例  
   
-###  <a name="OptionMgmt"></a> Option Management  
+###  <a name="OptionMgmt"></a> 選項管理  
  本節提供管理查詢存放區功能本身的一些指導方針。  
   
  **查詢存放區目前為作用中？**  
@@ -316,7 +311,7 @@ DEALLOCATE adhoc_queries_cursor;
 -   **sp_query_store_remove_plan** – 以移除單一計畫。  
  
   
-###  <a name="Peformance"></a> Performance Auditing and Troubleshooting  
+###  <a name="Peformance"></a> 效能稽核及疑難排解  
  查詢存放區會保留整個查詢執行過程當中的編譯和執行階段度量歷程記錄，以讓您詢問關於工作負載的問題。  
   
  資料庫執行了**後 *n* 項查詢嗎？**  
@@ -455,7 +450,7 @@ ORDER BY q.query_id, rsi1.start_time, rsi2.start_time;
  如果您想要查看所有低下的效能 (不只因方案選擇變更的相關項目)，只要從上一個查詢移除條件 `AND p1.plan_id <> p2.plan_id` 即可。  
 
  **等候最久的查詢？**
- 此查詢會傳回等候最久的前 10 項查詢。 
+此查詢會傳回等候最久的前 10 項查詢。 
  
  ```tsql 
   SELECT TOP 10
@@ -555,7 +550,7 @@ OPTION (MERGE JOIN);
 ```  
  
   
-###  <a name="Stability"></a> Maintaining Query Performance Stability  
+###  <a name="Stability"></a> 維護查詢效能穩定性  
  若是執行多次的查詢，您可會注意到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用不同的計劃，而產生了不同的資源使用率與持續時間。 您可利用查詢存放區，輕鬆偵測查詢效能何時低下，以及判斷在意時段中的最佳計劃。 然後可以對未來的查詢強制執行該最佳計劃。  
   
  也可以為具有參數 (自動設定參數或手動設定參數) 的查詢，找出不一致的查詢效能。 您可以在不同的計劃間，找出適合所有或大部分參數值的良好且快速之計劃，並強制執行該計劃，為更多使用者案例留下可預測的效能。  
@@ -574,8 +569,7 @@ EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;
 EXEC sp_query_store_unforce_plan @query_id = 48, @plan_id = 49;  
 ```  
   
-## 另請參閱
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>另請參閱  
  [查詢存放區的最佳作法](../../relational-databases/performance/best-practice-with-the-query-store.md)   
  [使用含有記憶體內部 OLTP 的查詢存放區](../../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)   
  [查詢存放區使用案例](../../relational-databases/performance/query-store-usage-scenarios.md)   

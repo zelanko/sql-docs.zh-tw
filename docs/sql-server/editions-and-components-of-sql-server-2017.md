@@ -43,7 +43,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 6aa73e749d4f308265dfe27a160802c15a391a3e
 ms.openlocfilehash: 6c17972f863043a53bf60b6c814aaac0c3c38d51
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/17/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017"></a>SQL Server 2017 的版本及支援功能
@@ -66,9 +66,9 @@ SQL Server Evaluation Edition 提供了 180 天的試用期。
   
 如需最新版本資訊和新功能資訊，請參閱下列項目：
 - [SQL Server 2017 版本資訊](../sql-server/sql-server-2017-release-notes.md)
-- [在 SQL Server 2017 最新消息](../sql-server/what-s-new-in-sql-server-2017.md)
+- [SQL Server 2017 的新功能](../sql-server/what-s-new-in-sql-server-2017.md)
 
-### <a name="try-sql-server"></a>SQL Server 再試一次 ！    
+### <a name="try-sql-server"></a>試用 SQL Server！    
     
 > [![從 Evaluation Center 下載](../analysis-services/media/download.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2017-ctp/) **[從 Evaluation Center 下載 SQL Server 2017 CTP](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/)**    
 
@@ -81,14 +81,14 @@ SQL Server Evaluation Edition 提供了 180 天的試用期。
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本|定義|  
 |---------------------------------------|----------------|  
-|Enterprise|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Enterprise Edition 這套頂級產品不但提供完整的高階資料中心功能，而且具備急速效能、不受限制的虛擬化以及完整商業智慧 - 為關鍵任務工作負載提供最高的服務等級，並且讓使用者獲得資料洞察能力。|  
+|Enterprise|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Enterprise Edition 這套頂級產品不但提供完整的高階資料中心功能，而且具備急速效能、不受限制的虛擬化以及端對端商業智慧 - 為關鍵任務工作負載提供最高的服務等級，並且讓使用者獲得資料洞察能力。|  
 |Standard|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Standard Edition 針對部門和小型組織提供基本的資料管理與商業智慧資料庫來執行應用程式，並且支援內部部署和雲端的一般開發工具 - 以最少的 IT 資源提供最有效率的資料庫管理。|  
 |Web|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Web Edition 對於 Web 主控者和 Web VAP 而言是一個整體擁有成本很低的選擇，可針對小型到大型規模的 Web 屬性提供可擴充、負擔輕鬆而且管理方便的功能。|  
 |開發人員|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Developer Edition 可讓開發人員在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]上建立任何類型的應用程式。 其中包含 Enterprise Edition 的所有功能，但是只授權做為開發和測試系統使用，而不做為實際伺服器使用。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer 對建置<br />                [!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] 及測試應用程式的人員而言是絕佳選項。|  
 |Express 版本|Express Edition 是入門級免費伺服器，非常適合用來學習及建置桌上型電腦和小型伺服器資料驅動應用程式。 這個版本是獨立軟體廠商、開發人員及建置用戶端應用程式之愛好者的最佳選擇。 如果您需要更進階的資料庫功能， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express 可以順利地升級為其他更高階的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]版本。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express LocalDB 是輕量版 Express，其中包含所有程式設計功能但是以使用者模式執行，並配備快速的零設定安裝，而且所需必要條件很少。|  
   
 ## <a name="using-includessnoversionincludesssnoversion-mdmd-with-an-internet-server"></a>搭配網際網路伺服器使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
- 在網際網路伺服器中，例如執行 Internet Information Services (IIS) 的伺服器，您通常會安裝 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 用戶端工具。 用戶端工具包括連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體的應用程式所使用的用戶端連接元件。  
+ 在網際網路伺服器中，例如執行 Internet Information Services (IIS) 的伺服器，您通常會安裝 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 用戶端工具。 用戶端工具包括連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]執行個體的應用程式所使用的用戶端連接元件。  
   
 >[!NOTE]
 >雖然您可以在執行 IIS 的電腦上安裝 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的執行個體，但通常只有針對具有單一伺服器電腦的小型網站才會這麼做。 大部分網站會將它們的中介層 IIS 系統放在一部伺服器或伺服器叢集上，並將其資料庫放在另一部伺服器或伺服器聯盟上。  
@@ -116,7 +116,7 @@ SQL Server Evaluation Edition 提供了 180 天的試用期。
   
 |管理工具|Description|  
 |----------------------|-----------------|  
-|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 是一個整合式環境，可存取、設定、管理及開發 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的元件。 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 可讓所有技能等級的開發人員和管理員使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。<br /><br /> 下載並安裝 <br />                [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] from  [Download SQL Server Management Studio](http://msdn.microsoft.com/library/mt238290.aspx)|  
+|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 是一個整合式環境，可存取、設定、管理及開發 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的元件。 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 可讓所有技能等級的開發人員和管理員使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。<br /><br /> 下載並安裝 <br />                [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 下載 SQL Server Management Studio  [的](http://msdn.microsoft.com/library/mt238290.aspx)|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員對 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 服務、伺服器通訊協定、用戶端通訊協定和用戶端別名提供基本組態管理。|  
 |[!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]|[!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 提供圖形化使用者介面來監視 [!INCLUDE[ssDE](../includes/ssde-md.md)] 或 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]的執行個體。|  
 |[!INCLUDE[ssDE](../includes/ssde-md.md)] Tuning Advisor|[!INCLUDE[ssDE](../includes/ssde-md.md)] Tuning Advisor 協助您建立一組最佳的索引、索引檢視表和分割區。|  
@@ -142,8 +142,8 @@ Developer edition 會持續支援的只有 1 個用戶端[SQL Server Distributed
 |每個 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]執行個體的緩衝集區記憶體上限|作業系統最大值|128 GB|64 GB|1410 MB|1410 MB|
 |每個 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]執行個體的資料行存放區區段快取記憶體上限|無限制的記憶體| 32 GB| 16 GB| 352 MB| 352 MB|  
 |每個 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]資料庫的記憶體最佳化資料大小上限|無限制的記憶體| 32 GB| 16 GB| 352 MB| 352 MB|  
-|每個 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]執行個體使用的記憶體上限|作業系統最大值|表格式：16 GB<br /><br /> MOLAP：64 GB|不適用|不適用|不適用|  
-|每個 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]執行個體使用的記憶體上限|作業系統最大值|64 GB|64 GB|4 GB|不適用|
+|每個 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]執行個體使用的記憶體上限|作業系統最大值|表格式：16 GB<br /><br /> MOLAP：64 GB|N/A|不適用|N/A|  
+|每個 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]執行個體使用的記憶體上限|作業系統最大值|64 GB|64 GB|4 GB|N/A|
 |關聯式資料庫大小上限|524 PB|524 PB|524 PB|10 GB|10 GB|  
   
 <sup>1</sup> 新合約不適用的 Enterprise Edition (含伺服器 + 用戶端存取授權 (CAL)) 授權限制為每個 SQL Server 執行個體最多 20 個核心。 核心伺服器授權模式之下沒有任何限制。 如需詳細資訊，請參閱 [Compute Capacity Limits by Edition of SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)。  
@@ -222,7 +222,7 @@ Developer edition 會持續支援的只有 1 個用戶端[SQL Server Distributed
 |自主資料庫|是|是|是|是|是| 
 |備份的加密|是|是|否|否|否|  
 
-##  <a name="Replication"></a> Replication  
+##  <a name="Replication"></a> 複寫  
   
 |功能|Enterprise|Standard|Web|Express with Advanced Services|Express|   
 |-------------|----------------|--------------|---------|------------------------------------|------------------------| 
@@ -277,7 +277,7 @@ Developer edition 會持續支援的只有 1 個用戶端[SQL Server Distributed
 |查詢最佳化工具自動使用索引檢視表|是|否|否|否|否| 
 |平行一致性檢查|是|否|否|否|否| 
 |SQL Server 公用程式控制點|是|否|否|否|否|    
-|緩衝集區擴充|是|是|否|否|否| 
+|緩衝集區延伸模組|是|是|否|否|否| 
   
  <sup>1</sup> 如需詳細資訊，請參閱 [使用 SysPrep 安裝 SQL Server 的考量](../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md)。  
  
@@ -326,7 +326,7 @@ Developer edition 會持續支援的只有 1 個用戶端[SQL Server Distributed
 如需有關 [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 版本所支援之 Integration Services (SSIS) 功能的資訊，請參閱 [SQL Server 版本支援的 Integration Services 功能](../integration-services/integration-services-features-supported-by-the-editions-of-sql-server.md)。
 
 ##  <a name="MDS"></a> Master Data Services  
- 如需有關資訊[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]和 Data Quality Services 功能的版本支援[!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)]，請參閱[Master Data Services 和 SQL Server 版本所支援的資料品質服務功能](../master-data-services/master-data-services-and-data-quality-services-features-support.md)。 
+ 如需 [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)] 版本所支援之 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 和 Data Quality Services 功能的資訊，請參閱 [SQL Server 版本支援的 Master Data Services 和 Data Quality Services 功能](../master-data-services/master-data-services-and-data-quality-services-features-support.md)。 
 
   
 ##  <a name="DW"></a> 資料倉儲  
@@ -343,31 +343,31 @@ Developer edition 會持續支援的只有 1 個用戶端[SQL Server Distributed
 
 ##  <a name="SSAS"></a> Analysis Services  
   
-如需有關支援版本的 Analysis Services 功能資訊[!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)]，請參閱[Analysis Services 的 SQL Server 版本所支援的功能](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)。 
+如需 [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)] 所支援之 Analysis Services 功能的資訊，請參閱 [SQL Server 版本支援的 Analysis Services 功能](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)。 
   
 ##  <a name="BIMD"></a> BI 語意模型 (多維度)  
   
-如需有關支援版本的 Analysis Services 功能資訊[!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)]，請參閱[Analysis Services 的 SQL Server 版本所支援的功能](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)。
+如需 [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)] 所支援之 Analysis Services 功能的資訊，請參閱 [SQL Server 版本支援的 Analysis Services 功能](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)。
    
 ##  <a name="BIT"></a> BI 語意模型 (表格式)  
   
-如需有關支援版本的 Analysis Services 功能資訊[!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)]，請參閱[Analysis Services 的 SQL Server 版本所支援的功能](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)。
+如需 [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)] 所支援之 Analysis Services 功能的資訊，請參閱 [SQL Server 版本支援的 Analysis Services 功能](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)。
   
 ##  <a name="PPSP"></a> Power Pivot for SharePoint  
   
-如需有關 Powerpivot for SharePoint 的版本支援的功能資訊[!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)]，請參閱[Analysis Services 的 SQL Server 版本所支援的功能](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)。
+如需 [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)] 版本所支援之 Power Pivot for SharePoint 功能的資訊，請參閱 [SQL Server 版本支援的 Analysis Services 功能](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)。
   
 ##  <a name="DM"></a> 資料採礦  
   
-如需各版本所支援的資料採礦功能[!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)]，請參閱[Analysis Services 的 SQL Server 版本所支援的功能](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)。
+如需 [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)] 版本所支援之資料採礦功能的資訊，請參閱 [SQL Server 版本支援的 Analysis Services 功能](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)。
   
 ##  <a name="SSRS"></a> Reporting Services  
   
-如需有關支援版本的 Reporting Services 功能資訊[!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)]，請參閱[Reporting Services 支援的功能的 SQL Server 版本](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)。
+如需 [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)] 版本所支援之 Reporting Services 功能的資訊，請參閱 [SQL Server 版本支援的 Reporting Services 功能](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)。
 
 ##  <a name="BIC"></a> 商業智慧用戶端  
 
-如需有關支援版本的商業智慧用戶端功能資訊[!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)]，請參閱[Analysis Services 的 SQL Server 版本所支援的功能](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)或[Reporting Services 支援的功能的 SQL Server 版本](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)。
+如需 [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)] 版本所支援之商業智慧用戶端功能的資訊，請參閱 [SQL Server 版本支援的 Analysis Services 功能](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)或 [SQL Server 版本支援的 Reporting Services 功能](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)。
   
 ##  <a name="SLS"></a> 空間和定位服務  
   

@@ -16,11 +16,11 @@ caps.latest.revision: 15
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 45f30fa7d1153f4ee70a9cfcb7c7e891bc15fec1
 ms.openlocfilehash: 53733118cf5fcf0b2b29544d64ebac6622425d56
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="mssqlserver18456"></a>MSSQLSERVER_18456
@@ -78,7 +78,7 @@ ms.lasthandoff: 06/23/2017
 |18|密碼必須變更。|  
 |38, 46|找不到使用者所要求的資料庫。|
 |102 - 111|AAD 失敗。|
-|122 - 124|失敗，因為空的使用者名稱或密碼。|
+|122 - 124|因為使用者名稱或密碼空白而失敗。|
 |126|使用者所要求的資料庫不存在。|
 |132 - 133|AAD 失敗。|
   

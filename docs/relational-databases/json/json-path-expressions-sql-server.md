@@ -17,18 +17,18 @@ ms.assetid: 25ea679c-84cc-4977-867c-2cbe9d192553
 caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
-ms.openlocfilehash: 44bfd54aa494dd52174eeed8479e14a99d810af3
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
+ms.openlocfilehash: 07c873941669f7a36ff9b93651a938ecae2662b7
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="json-path-expressions-sql-server"></a>JSON 路徑運算式 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
- 使用 JSON 路徑運算式來參考 JSON 物件的屬性。  
+ 請使用 JSON 路徑運算式來參考 JSON 物件的屬性。  
   
  當您呼叫下列函數時，必須提供路徑運算式。  
   
@@ -43,18 +43,18 @@ ms.lasthandoff: 06/23/2017
 ## <a name="parts-of-a-path-expression"></a>路徑運算式的組成部分
  路徑運算式有兩個元件。  
   
-1.  選擇性[path 模式](#PATHMODE)，其值為**lax**或**嚴格**。  
+1.  選擇性[路徑模式](#PATHMODE)，其值為 **lax** 或 **strict**。  
   
 2.  [路徑](#PATH) 本身。  
 
 ##  <a name="PATHMODE"></a> Path mode  
  在路徑運算式的開頭，指定關鍵字 **lax** 或 **strict**以選擇性地宣告路徑模式。 預設值是 **lax**。  
   
--   在**lax**模式中，此函數會傳回空值如果路徑運算式包含錯誤。 例如，如果您要求值**$.name**，且 JSON 文字不包含**名稱**索引鍵，函式會傳回 null，但不會引發錯誤。  
+-   在 **lax** 模式中，如果路徑運算式包含錯誤，函數會傳回空白值。 例如，如果您要求值 **$.name**，且 JSON 文字不包含 **name** 索引鍵，則函數會傳回 null，但不會引發錯誤。  
   
--   在**嚴格**模式，此函式就會引發錯誤如果路徑運算式包含錯誤。  
+-   在 **strict** 模式中，如果路徑運算式包含錯誤，函數會引發錯誤。  
 
-下列查詢會明確地指定`lax`路徑運算式中的模式。
+下列查詢會在路徑運算式中明確指定 `lax`模式。
 
 ```sql  
 DECLARE @json NVARCHAR(MAX)
@@ -74,7 +74,7 @@ SELECT * FROM OPENJSON(@json, N'lax $.info')
   
     -   陣列元素。 例如， `$.product[3]`。 以零為基底的陣列。  
   
-    -   點運算子 (`.`) 表示物件的成員。 例如，在`$.people[1].surname`，`surname`子系的`people`。
+    -   點運算子 (`.`) 表示物件的成員。 例如，在 `$.people[1].surname` 中，`surname` 是 `people` 的子系。
   
 ## <a name="examples"></a>範例  
  本節中的範例參考下列 JSON 文字。  
@@ -102,7 +102,7 @@ SELECT * FROM OPENJSON(@json, N'lax $.info')
 |$|{ "people": [ { "name": "John",  "surname": "Doe" },<br />   { "name": "Jane",  "surname": null, "active": true } ] }|  
   
 ## <a name="how-built-in-functions-handle-duplicate-paths"></a>內建函數處理重複路徑的方法  
- 如果 JSON 文字包含重複的屬性，例如兩個索引鍵，並在相同的層級-同名**JSON_VALUE**和**JSON_QUERY**函式會傳回只符合路徑的第一個值。 若要剖析包含重複索引鍵的 JSON 物件，並傳回所有值，請使用**OPENJSON**，如下列範例所示。  
+ 如果 JSON 文字包含重複的屬性 (例如相同層級上有兩個同名的索引鍵)，**JSON_VALUE** 和 **JSON_QUERY** 函數會傳回第一個符合路徑的值。 若要剖析包含重複索引鍵的 JSON 物件，請使用 **OPENJSON**，如下列範例所示。  
   
 ```sql  
 DECLARE @json NVARCHAR(MAX)
@@ -112,8 +112,8 @@ SELECT value
 FROM OPENJSON(@json,'$.person.info') 
 ```  
 
-## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>深入了解內建 JSON 支援 SQL Server 中  
-針對特定的解決方案，大量使用案例和建議，請參閱[有關內建 JSON 支援的部落格文章](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)Microsoft 經理專案 jovan popovic 的 Azure SQL Database 和 SQL Server 中。
+## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>深入了解 SQL Server 中的內建 JSON 支援  
+對於大量的特定解決方案、使用案例和建議，請參閱 SQL Server 和 Azure SQL Database 中 Microsoft 經理專案 Jovan Popovic 所撰寫的[有關內建 JSON 支援的部落格文章](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)。
   
 ## <a name="see-also"></a>另請參閱  
  [OPENJSON &#40;Transact-SQL&#41;](../../t-sql/functions/openjson-transact-sql.md)   

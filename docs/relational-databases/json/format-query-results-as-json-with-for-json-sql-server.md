@@ -20,10 +20,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 50ef4db2a3c9eebcdf63ec9329eb22f1e0f001c0
-ms.openlocfilehash: e59b0e12e0ee47a5ac8a68e539144401d80fb649
+ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
+ms.openlocfilehash: bfda43cbc97a641a5e2654f7cb4c92cdddaf1532
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/20/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="format-query-results-as-json-with-for-json-sql-server"></a>使用 FOR JSON 將查詢結果格式化為 JSON (SQL Server)
@@ -49,7 +49,7 @@ ms.lasthandoff: 07/20/2017
  ![FOR JSON 輸出流程圖表](../../relational-databases/json/media/forjson-example1.png "FOR JSON 輸出流程圖表")  
 
 ### <a name="more-info-about-for-json-path"></a>FOR JSON PATH 的詳細資訊
-如需詳細資訊和範例，請參閱[使用 PATH 模式 &#40; 格式化巢狀 JSON 輸出SQL Server &#41;](../../relational-databases/json/format-nested-json-output-with-path-mode-sql-server.md).
+如需詳細資訊和範例，請參閱[以 PATH 模式格式化巢狀 JSON 輸出 &#40;SQL Server&#41;](../../relational-databases/json/format-nested-json-output-with-path-mode-sql-server.md)。
 
 如需語法和使用方式，請參閱 [FOR 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-for-clause-transact-sql.md)。  
 
@@ -80,42 +80,42 @@ FOR JSON AUTO
 ```
  
 ### <a name="more-info-about-for-json-auto"></a>FOR JSON AUTO 的詳細資訊
-如需詳細資訊和範例，請參閱[自動格式化 JSON 輸出使用 AUTO 模式 &#40;SQL Server &#41;](../../relational-databases/json/format-json-output-automatically-with-auto-mode-sql-server.md).
+如需詳細資訊和範例，請參閱[使用 AUTO 模式自動格式化 JSON 輸出 &#40;SQL Server&#41;](../../relational-databases/json/format-json-output-automatically-with-auto-mode-sql-server.md)。
 
 如需語法和使用方式，請參閱 [FOR 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-for-clause-transact-sql.md)。  
   
 ## <a name="control-other-json-output-options"></a>控制其他 JSON 輸出選項  
-控制的輸出**FOR JSON**子句使用下列其他選項。  
+使用下列其他選項控制 **FOR JSON** 子句的輸出。  
   
--   **根**。 若要將單一最上層元素新增至 JSON 輸出，請指定 **ROOT** 選項。 如果您未指定此選項，JSON 輸出就沒有根項目。 如需詳細資訊，請參閱 [將根節點與根選項加入至 JSON 輸出 &#40;SQL Server&#41;](../../relational-databases/json/add-a-root-node-to-json-output-with-the-root-option-sql-server.md)。  
+-   **ROOT**。 若要將單一最上層元素新增至 JSON 輸出，請指定 **ROOT** 選項。 如果您未指定此選項，JSON 輸出就不會有根項目。 如需詳細資訊，請參閱 [將根節點與根選項加入至 JSON 輸出 &#40;SQL Server&#41;](../../relational-databases/json/add-a-root-node-to-json-output-with-the-root-option-sql-server.md)。  
   
--   **INCLUDE_NULL_VALUES**。 若要在 JSON 輸出中包含 Null 值，請指定 **INCLUDE_NULL_VALUES** 選項。 如果您未指定此選項，輸出就不在查詢結果中包含 NULL 值的 JSON 屬性。 如需詳細資訊，請參閱[使用 INCLUDE_NULL_VALUES 選項 &#40; JSON 輸出中包含 Null 值SQL Server &#41;](../../relational-databases/json/include-null-values-in-json-include-null-values-option.md).   
+-   **INCLUDE_NULL_VALUES**。 若要在 JSON 輸出中包含 Null 值，請指定 **INCLUDE_NULL_VALUES** 選項。 如果您未指定此選項，輸出就不會在查詢結果中包含 NULL 值的 JSON 屬性。 如需詳細資訊，請參閱[使用 INCLUDE_NULL_VALUES 選項在 JSON 輸出中包含 Null 值 &#40;SQL Server&#41;](../../relational-databases/json/include-null-values-in-json-include-null-values-option.md)。   
 
--   **WITHOUT_ARRAY_WRAPPER**。 若要移除預設圍住 **FOR JSON** 子句之 JSON 輸出的方括弧，請指定 **WITHOUT_ARRAY_WRAPPER** 選項。 使用此選項以產生單一 JSON 物件做為從單一資料列結果的輸出。 如果您未指定此選項，JSON 輸出格式化為陣列-也就是以方括弧括住。 如需詳細資訊，請參閱 [使用 WITHOUT_ARRAY_WRAPPER 選項從 JSON 輸出移除方括弧 &#40;SQL Server&#41;](../../relational-databases/json/remove-square-brackets-from-json-without-array-wrapper-option.md)。 
+-   **WITHOUT_ARRAY_WRAPPER**。 若要移除預設圍住 **FOR JSON** 子句之 JSON 輸出的方括弧，請指定 **WITHOUT_ARRAY_WRAPPER** 選項。 使用此選項以產生單一 JSON 物件，作為來自單一資料列結果的輸出。 如果您未指定此選項，JSON 輸出就會格式化為陣列，也就是以方括弧括住。 如需詳細資訊，請參閱 [使用 WITHOUT_ARRAY_WRAPPER 選項從 JSON 輸出移除方括弧 &#40;SQL Server&#41;](../../relational-databases/json/remove-square-brackets-from-json-without-array-wrapper-option.md)。 
    
 ## <a name="output-of-the-for-json-clause"></a>FOR JSON 子句的輸出  
 **FOR JSON** 子句的輸出具有下列特性：  
   
 1.  結果集包含單一資料行。
     -   小型結果集會包含單一資料列。
-    -   大型結果集分割很長的 JSON 字串，跨多個資料列。
-        -   根據預設，SQL Server Management Studio (SSMS) 將串連結果為單一資料列之輸出的設定時**以方格顯示結果**。 SSMS 的 [狀態] 列會顯示實際資料列計數。
-        -   其他用戶端應用程式可能需要程式碼，藉由串連多個資料列的內容，來將較長的結果重新合併成有效的單一 JSON 字串。 如需這個程式碼的 C# 應用程式的範例，請參閱[C# 用戶端應用程式中的使用 FOR JSON 輸出](https://docs.microsoft.com/en-us/sql/relational-databases/json/use-for-json-output-in-sql-server-and-in-client-apps-sql-server#use-for-json-output-in-a-c-client-app)。
+    -   大型結果集跨多個資料列分割太長的 JSON 字串。
+        -   根據預設，SQL Server Management Studio (SSMS) 會在輸出設定為 [以方格顯示結果] 時，將結果串連成單一資料列。 SSMS 的狀態列會顯示實際資料列計數。
+        -   其他用戶端應用程式可能需要程式碼，藉由串連多個資料列的內容，來將較長的結果重新合併成有效的單一 JSON 字串。 如需這個程式碼在 C# 應用程式中的範例，請參閱[在 C# 用戶端應用程式中使用 FOR JSON 輸出](https://docs.microsoft.com/en-us/sql/relational-databases/json/use-for-json-output-in-sql-server-and-in-client-apps-sql-server#use-for-json-output-in-a-c-client-app)。
   
      ![FOR JSON 輸出範例](../../relational-databases/json/media/forjson-example2.png "FOR JSON 輸出範例")  
   
 2.  結果會格式化為 JSON 物件陣列。  
   
-    -   JSON 陣列中的元素數目等於資料列數目在 SELECT 陳述式的結果 （FOR JSON 子句會套用之前）。 
+    -   JSON 陣列中的元素數目等於 SELECT 陳述式結果中的資料列數目 (在套用 FOR JSON 子句之前)。 
   
-    -   在 SELECT 陳述式 （在 FOR JSON 子句會套用） 的結果中的每個資料列會成為陣列中個別的 JSON 物件。  
+    -   SELECT 陳述式 (在套用 FOR JSON 子句之前) 結果中的每個資料列會成為陣列中的個別 JSON 物件。  
   
-    -   （之前子句套用適用於 JSON) 的 SELECT 陳述式的結果中每個資料行會成為 JSON 物件的屬性。  
+    -   SELECT 陳述式 (在套用 FOR JSON 子句之前) 結果中的每個資料行則會成為 JSON 物件的屬性。  
   
 3.  資料行名稱與其值會根據 JSON 語法逸出。 如需詳細資訊，請參閱 [FOR JSON 如何逸出特殊字元和控制字元 &#40;SQL Server&#41;](../../relational-databases/json/how-for-json-escapes-special-characters-and-control-characters-sql-server.md)。
   
 ### <a name="example"></a>範例
-以下是範例，示範如何**FOR JSON**子句格式化 JSON 輸出。  
+以下是示範 **FOR JSON** 子句如何格式化 JSON 輸出的範例。  
   
 **查詢結果**  
   
@@ -154,8 +154,8 @@ FOR JSON AUTO
 -   [FOR JSON 如何逸出特殊字元和控制字元 &#40;SQL Server&#41;](../../relational-databases/json/how-for-json-escapes-special-characters-and-control-characters-sql-server.md)  
  **FOR JSON** 子句會逸出特殊字元，並在 JSON 輸出中代表控制字元，如本主題中所描述。  
 
-## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>深入了解內建 JSON 支援 SQL Server 中  
-針對特定的解決方案，大量使用案例和建議，請參閱[有關內建 JSON 支援的部落格文章](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)Microsoft 經理專案 jovan popovic 的 Azure SQL Database 和 SQL Server 中。
+## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>深入了解 SQL Server 中的內建 JSON 支援  
+對於大量的特定解決方案、使用案例和建議，請參閱 SQL Server 和 Azure SQL Database 中 Microsoft 經理專案 Jovan Popovic 所撰寫的[有關內建 JSON 支援的部落格文章](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)。
   
 ## <a name="see-also"></a>另請參閱  
  [FOR 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-for-clause-transact-sql.md)   

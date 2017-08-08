@@ -6,28 +6,28 @@
 - 安裝 SQL Server
 
 >[!NOTE]
->On Linux，您必須建立可用性群組，再將其新增為叢集資源，以管理叢集。 本文件提供的範例會建立可用性群組。 發佈的特定指示來建立叢集和可用性群組新增為叢集資源，請參閱底下的連結[後續步驟](#next-steps)。
+>在 Linux 上，您必須先建立可用性群組，再將其新增為叢集資源，以供叢集管理。 本文件提供建立可用性群組的範例。 如需建立叢集並將可用性群組新增為叢集資源的發行套件特定指示，請參閱[後續步驟](#next-steps)底下的連結。
 
 1. **更新每一部主機的電腦名稱**
 
    每個 SQL Server 名稱必須是：
    
-   - 15 個字元或更少
-   - 在 網路內唯一
+   - 15 個字元以下
+   - 在網路內是唯一的
    
-   若要設定的電腦名稱，請編輯`/etc/hostname`。 下列指令碼可讓您編輯`/etc/hostname`與`vi`。
+   若要設定電腦名稱，請編輯 `/etc/hostname`。 下列指令碼可讓您使用 `vi` 編輯 `/etc/hostname`。
 
    ```bash
    sudo vi /etc/hostname
    ```
 
-1. **設定主機檔案。**
+1. **設定 hosts 檔案**
 
 >[!NOTE]
->如果主機名稱會登錄在 DNS 伺服器及其 IP，但沒有需要執行下列步驟。 驗證要將可用性群組組態的一部分的所有節點可以與 (ping 主機名稱應該回覆與對應的 IP 位址) 彼此都通訊。 此外，請確定 /etc/hosts 檔案不包含 localhost IP 位址 127.0.0.1 與節點的主機名稱，對應的記錄。
+>如果在 DNS 伺服器中註冊了主機名稱及其 IP，就無需執行下列步驟。 驗證將要成為可用性群組組態一部分的所有節點都可以彼此通訊 (Ping 主機名稱應該會回覆對應的 IP 位址)。 此外，請確定 /etc/hosts 檔案不包含對應 localhost IP 位址 127.0.0.1 與節點主機名稱的記錄。
 
 
-   每一部伺服器上的主機檔案包含 IP 位址和要參與可用性群組的所有伺服器的名稱。 
+   每一部伺服器上的 hosts 檔案包含將參與可用性群組之所有伺服器的 IP 位址和名稱。 
 
    下列命令會傳回目前伺服器的 IP 位址：
 
@@ -35,7 +35,7 @@
    sudo ip addr show
    ```
 
-   更新`/etc/hosts`。 下列指令碼可讓您編輯`/etc/hosts`與`vi`。
+   更新 `/etc/hosts`。 下列指令碼可讓您使用 `vi` 編輯 `/etc/hosts`。
 
    ```bash
    sudo vi /etc/hosts
@@ -54,7 +54,7 @@
 
 ### <a name="install-sql-server"></a>安裝 SQL Server
 
-安裝 SQL Server。 下列連結指向各種分佈的 SQL Server 安裝指示。 
+安裝 SQL Server。 下列連結指向各種發行套件的 SQL Server 安裝指示。 
 
 - [Red Hat Enterprise Linux](../linux/quickstart-install-connect-red-hat.md)
 
@@ -62,7 +62,7 @@
 
 - [Ubuntu](../linux/quickstart-install-connect-ubuntu.md)
 
-## <a name="enable-always-on-availability-groups-and-restart-sqlserver"></a>啟用 Alwayson 可用性群組並重新啟動 sql server
+## <a name="enable-always-on-availability-groups-and-restart-sqlserver"></a>啟用 Always On 可用性群組並重新啟動 sqlserver
 
 在裝載 SQL Server 執行個體的每個節點上啟用 AlwaysOn 可用性群組，然後重新啟動 `mssql-server`。  請執行下列指令碼：
 
@@ -80,11 +80,11 @@ ALTER EVENT SESSION  AlwaysOn_health ON SERVER WITH (STARTUP_STATE=ON);
 GO
 ```
 
-如需此 XE 工作階段的詳細資訊，請參閱[一律在擴充事件](http://msdn.microsoft.com/library/dn135324.aspx)。
+如需此 XE 工作階段的詳細資訊，請參閱 [Always On 擴充事件](http://msdn.microsoft.com/library/dn135324.aspx)。
 
-## <a name="create-db-mirroring-endpoint-user"></a>建立資料庫鏡像端點的使用者
+## <a name="create-db-mirroring-endpoint-user"></a>建立資料庫鏡像端點使用者
 
-下列的 TRANSACT-SQL 指令碼會建立名為登入`dbm_login`，和名為使用者`dbm_user`。 更新的指令碼以強式密碼。 在所有 SQL Server 執行個體上執行下列命令，以建立資料庫鏡像端點使用者。
+下列 Transact-SQL 指令碼會建立名為 `dbm_login` 的登入，以及名為 `dbm_user` 的使用者。 請以強式密碼更新指令碼。 在所有 SQL Server 執行個體上執行下列命令，以建立資料庫鏡像端點使用者。
 
 ```Transact-SQL
 CREATE LOGIN dbm_login WITH PASSWORD = '**<1Sample_Strong_Password!@#>**';
@@ -95,7 +95,7 @@ CREATE USER dbm_user FOR LOGIN dbm_login;
 
 Linux 上的 SQL Server 服務使用憑證來驗證鏡像端點之間的通訊。 
 
-下列的 TRANSACT-SQL 指令碼會建立主要金鑰和憑證。 然後會將憑證備份，並具有私密金鑰的金鑰保護的檔案。 更新的指令碼以強式密碼。 連線到主要 SQL Server 執行個體，然後執行下列 Transact-SQL 來建立憑證：
+下列 Transact-SQL 指令碼會建立主要金鑰和憑證。 然後它會備份憑證，並使用私密金鑰保護檔案。 請以強式密碼更新指令碼。 連線到主要 SQL Server 執行個體，然後執行下列 Transact-SQL 來建立憑證：
 
 ```Transact-SQL
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '**<Master_Key_Password>**';
@@ -108,9 +108,9 @@ BACKUP CERTIFICATE dbm_certificate
        );
 ```
 
-此時您 SQL Server 的主要複本已位於憑證`/var/opt/mssql/data/dbm_certificate.cer`和私用的索引鍵在`var/opt/mssql/data/dbm_certificate.pvk`。 將這兩個檔案複製到將要裝載可用性複本的所有伺服器上的相同位置。 使用 mssql 使用者或授與權限給 mssql 使用者存取這些檔案。 
+此時，您的 SQL Server 主要複本含有一個位於 `/var/opt/mssql/data/dbm_certificate.cer` 的憑證，以及一個位於 `var/opt/mssql/data/dbm_certificate.pvk` 的私密金鑰。 將這兩個檔案複製到將裝載可用性複本的所有伺服器上的相同位置。 使用 mssql 使用者，或授與 mssql 使用者存取這些檔案的權限。 
 
-例如在來源伺服器上，下列命令將檔案複製到目標電腦。 取代 **<node2>** 將裝載複本的 SQL Server 執行個體名稱的值。 
+例如在來源伺服器上，下列命令會將檔案複製到目標電腦。 將 **<node2>** 值取代為要裝載複本的 SQL Server 執行個體的名稱。 
 
 ```bash
 cd /var/opt/mssql/data
@@ -126,7 +126,7 @@ chown mssql:mssql dbm_certificate.*
 
 ## <a name="create-the-certificate-on-secondary-servers"></a>在次要伺服器上建立憑證
 
-下列的 TRANSACT-SQL 指令碼會從您建立 SQL Server 的主要複本的備份來建立主要金鑰和憑證。 此命令也會授權使用者存取的憑證。 更新的指令碼以強式密碼。 您用來建立.pvk 檔案上一個步驟中的相同密碼的解密密碼。 若要建立憑證的所有次要伺服器上執行下列指令碼。
+下列 Transact-SQL 指令碼會從您在 SQL Server 主要複本上建立的備份來建立主要金鑰和憑證。 此命令也會授權使用者存取憑證。 請以強式密碼更新指令碼。 解密密碼與您在上一個步驟中用來建立 .pvk 檔案的密碼相同。 請在所有次要伺服器上執行下列指令碼來建立憑證。
 
 ```Transact-SQL
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '**<Master_Key_Password>**';
@@ -139,16 +139,16 @@ CREATE CERTIFICATE dbm_certificate
             );
 ```
 
-## <a name="create-the-database-mirroring-endpoints-on-all-replicas"></a>建立資料庫鏡像端點，在所有複本上，
+## <a name="create-the-database-mirroring-endpoints-on-all-replicas"></a>在所有複本上建立資料庫鏡像端點
 
 資料庫鏡像端點使用「傳輸控制通訊協定」(TCP)，在參與資料庫鏡像工作階段或裝載可用性複本的伺服器執行個體之間傳送和接收訊息。 資料庫鏡像端點會在唯一的 TCP 通訊埠編號上接聽。 
 
-下列 TRANSACT-SQL 會建立名為接聽端點`Hadr_endpoint`可用性群組。 啟動端點，並可讓您建立之使用者的連接權限。 執行指令碼之前，請將之間的值取代`**< ... >**`。
+下列 Transact-SQL 會為可用性群組建立名為 `Hadr_endpoint` 的接聽端點。 它會啟動端點，並授與您建立的使用者連線權限。 執行指令碼之前，請取代 `**< ... >**` 之間的值。
 
 >[!NOTE]
->此版本中，請勿用於不同的 IP 位址的接聽程式 IP。 我們正在解決這個問題，但只可接受的值現在是 '0.0.0.0'。
+>在此版本中，請勿對接聽程式 IP 使用不同的 IP 位址。 我們正在解決這個問題，但目前唯一可接受的值是 '0.0.0.0'。
 
-更新下列 TRANSACT-SQL 為您所有的 SQL Server 執行個體上的環境： 
+請在所有 SQL Server 執行個體上更新您環境的下列 Transact-SQL： 
 
 ```Transact-SQL
 CREATE ENDPOINT [Hadr_endpoint]
@@ -163,7 +163,7 @@ GRANT CONNECT ON ENDPOINT::[Hadr_endpoint] TO [dbm_login];
 ```
 
 >[!IMPORTANT]
->在防火牆上的 TCP 連接埠必須開啟接聽程式連接埠。
+>防火牆上的 TCP 連接埠必須開啟以作為接聽程式連接埠。
 
 >[!IMPORTANT]
 >在 SQL Server 2017 版中，資料庫鏡像端點唯一支援的驗證方法是 `CERTIFICATE`。 未來的版本將啟用 `WINDOWS` 選項。

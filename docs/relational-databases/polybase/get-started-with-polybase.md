@@ -28,13 +28,13 @@ ms.translationtype: HT
 ms.sourcegitcommit: dd279b20fdf0f42d4b44843244aeaf6f19f04718
 ms.openlocfilehash: baf9d02b824a8aae2a282d0f6203791c4b72f1f8
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/14/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="get-started-with-polybase"></a>開始使用 PolyBase
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  本主題包含有關 SQL Server 執行個體上執行 PolyBase 的基本概念。
+  本主題包含有關在 SQL Server 執行個體上執行 PolyBase 的基本概念。
   
  執行下列步驟之後，您將符合下列條件︰  
   
@@ -47,7 +47,7 @@ ms.lasthandoff: 07/14/2017
 -   使用 PolyBase 物件的查詢範例  
   
 ## <a name="prerequisites"></a>必要條件  
- 執行個體[SQL Server （64 位元）](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)為下列：  
+ [SQL Server (64 位元)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) 的執行個體和下列項目：  
   
 -   Microsoft .NET Framework 4.5。  
   
@@ -67,10 +67,10 @@ ms.lasthandoff: 07/14/2017
 -   Azure Blob 儲存體
 
 > [!NOTE]
->   如果您要針對 Hadoop 使用計算下推功能，則需要確定目標 Hadoop 叢集具有 HDFS 的核心元件：啟用 Jobhistory 伺服器的 Yarn/MapReduce。 PolyBase 透過 MapReduce 來提交下推查詢，並從 JobHistory Server 提取狀態。 沒有其中一個元件，則查詢會失敗。 
+>   如果您要針對 Hadoop 使用計算下推功能，則需要確定目標 Hadoop 叢集具有 HDFS 的核心元件：啟用 Jobhistory 伺服器的 Yarn/MapReduce。 PolyBase 透過 MapReduce 來提交下推查詢，並從 JobHistory Server 提取狀態。 如果沒有其中一個元件，則查詢會失敗。 
 
 ## <a name="install-polybase"></a>安裝 PolyBase  
- 如果您尚未安裝 PolyBase，請參閱[PolyBase 安裝](../../relational-databases/polybase/polybase-installation.md)。  
+ 如果您尚未安裝 PolyBase，請參閱 [PolyBase 安裝](../../relational-databases/polybase/polybase-installation.md)。  
   
 ### <a name="how-to-confirm-installation"></a>如何確認安裝  
  安裝之後，執行下列命令來確認已成功安裝 PolyBase。 如果已安裝 PolyBase 會傳回 1，否則會傳回 0。  
@@ -79,18 +79,18 @@ ms.lasthandoff: 07/14/2017
 SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;  
 ```  
   
-##  <a name="supported"></a> Configure PolyBase  
- 在安裝之後，您必須設定 SQL Server 使用可能是您 Hadoop 版本或 Azure Blob 儲存體。 PolyBase 支援兩個 Hadoop 提供者，Hortonworks Data Platform (HDP) 和 Cloudera 分散式 Hadoop (CDH)。  支援的外部資料來源包括︰  
+##  <a name="supported"></a> 設定 PolyBase  
+ 在安裝之後，您必須設定 SQL Server 來使用可能是您 Hadoop 版本或 Azure Blob 儲存體。 PolyBase 支援兩個 Hadoop 提供者，Hortonworks Data Platform (HDP) 和 Cloudera 分散式 Hadoop (CDH)。  支援的外部資料來源包括︰  
   
 -   Linux/Windows Server 上的 Hortonworks HDP 1.3  
   
--   在 Linux 上的 Hortonworks HDP 2.1 – 2.6
+-   Linux 上的 Hortonworks HDP 2.1 – 2.6
 
 -   Windows Server 上的 Hortonworks HDP 2.1 - 2.3  
   
 -   Linux 上的 Cloudera CDH 4.3  
   
--   Cloudera CDH 5.1 – 5.5、 5.9-5.11 on Linux  
+-   Linux 上的 Cloudera CDH 5.1 – 5.5、5.9-5.11  
   
 -   Azure Blob 儲存體  
   
@@ -157,7 +157,7 @@ SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;
  如需詳細資訊，請參閱 [PolyBase scale-out groups](../../relational-databases/polybase/polybase-scale-out-groups.md)(PolyBase 向外延展群組)。  
   
 ## <a name="create-t-sql-objects"></a>建立 T-SQL 物件  
- 建立根據外部資料來源，Hadoop 或 Azure 儲存體的物件。  
+ 根據外部資料來源建立物件，Hadoop 或 Azure 儲存體。  
   
 ### <a name="hadoop"></a>Hadoop  
   

@@ -19,11 +19,11 @@ caps.latest.revision: 16
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 621185759462020bca20985c3133c93814a1f333
 ms.openlocfilehash: ef0c4b8b66af5dfc46c836fc8c18734609b1301a
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="delete-columns-from-a-table"></a>從資料表中刪除資料行
@@ -66,9 +66,9 @@ ms.lasthandoff: 06/23/2017
   
 1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在**物件總管 中**，尋找您想要刪除的資料行，與展開至公開的資料行名稱的資料表。 
+2.  在 [物件總管] 中，尋找您想要從中刪除資料行的資料表，然後展開以公開資料行名稱。 
 
-3.  以滑鼠右鍵按一下您想要刪除，並選擇的資料行**刪除**。  
+3.  以滑鼠右鍵按一下您想要刪除的資料行，然後選擇 [刪除]。  
   
 3.  在 **[刪除物件]** 對話方塊中，按一下 **[確定]**。  
   

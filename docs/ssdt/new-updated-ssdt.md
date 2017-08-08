@@ -19,18 +19,18 @@ ms.translationtype: HT
 ms.sourcegitcommit: 71203bfa7cb4dcd06cc14ad8e49e5bc1113f8605
 ms.openlocfilehash: a3b52f0dc6a552c7eb0d41e0cca4137b97dd8f15
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/19/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="new-and-recently-updated-sql-server-data-tools-ssdt"></a>新文章和最近更新的文章：SQL Server Data Tools (SSDT)
 
 
 
-幾乎每日 Microsoft 某些現有發行項上更新其[Docs.Microsoft.com](http://docs.microsoft.com/)文件網站。 這篇文章會顯示從最近已更新的發行項的摘錄。 可能也會列出新的文章連結。
+Microsoft 幾乎每天都會在其 [Docs.Microsoft.com](http://docs.microsoft.com/) 文件網站上更新一些現有文章。 本文會顯示最近更新文章的摘錄。 可能也會列出新文章的連結。
 
-這篇文章會定期重新執行程式所產生的。 偶爾摘錄會顯示具有完美的格式，或 markdown 從來源文件。 影像永遠不會顯示在這裡。
+本文是透過定期重新執行的程式所產生。 摘錄中偶爾會出現示不完整的格式，或顯示為來自來源文章的 Markdown。 影像永遠不會顯示在這裡。
 
-新的更新會報告下列日期範圍和主體：
+新的更新會報告下列日期範圍和主旨：
 
 
 
@@ -56,7 +56,7 @@ ms.lasthandoff: 07/19/2017
 
 <a name="compactupdatedlist"/>
 
-## <a name="compact-list-of-articles-updated-recently"></a>Compact 文件最近才更新清單
+## <a name="compact-list-of-articles-updated-recently"></a>最近更新文章的壓縮清單
 
 此壓縮清單提供所有更新文章的連結，並將列於＜摘要＞一節。
 
@@ -64,13 +64,13 @@ ms.lasthandoff: 07/19/2017
 
 &nbsp;
 
-## <a name="updated-articles-with-excerpts"></a>更新的發行項、 只有摘要
+## <a name="updated-articles-with-excerpts"></a>更新文章與摘要
 
-此區段會顯示更新從發行項的最近發生大規模的更新所收集的摘錄。
+本節會顯示從最近發生大規模更新的文章所收集的更新摘錄。
 
-此處顯示的摘錄顯示分隔其適當語意的內容。 此外，有時摘錄分開四周實際文件中的重要的 markdown 語法。 因此，這些摘錄適用於一般指導方針。 摘錄只會讓您知道您的興趣是否值得花時間按一下，瀏覽實際的發行項。
+此處顯示的摘錄不同於其適當語意內容。 此外，有時摘錄也與實際文件四周的重要 Markdown 語法不同。 因此，這些摘錄僅適用於一般指導方針。 摘錄只能讓您知道您感興趣的項目，是否值得花時間按一下並瀏覽實際文章。
 
-如需這些和其他原因，不要複製程式碼從這些摘錄中，而且不採用確切真為任何文字摘錄。 相反地，請瀏覽實際的發行項。
+由於這些和其他原因，請勿從這些摘錄中複製程式碼，而且不要將任何文字摘錄視為確切事實。 相反地，請瀏覽實際的發行項。
 
 
 

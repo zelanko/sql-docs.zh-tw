@@ -14,11 +14,11 @@ caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: c4cd6d86cdcfe778d6b8ba2501ad4a654470bae7
 ms.openlocfilehash: d4a5651f3ef4f8d848253711ed93721f387c016a
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="configure-column-encryption-using-powershell"></a>使用 PowerShell 設定資料行加密
@@ -41,7 +41,7 @@ ms.lasthandoff: 06/23/2017
 
 使用離線方法時，目標資料表 (以及與目標資料表相關的所有資料表，例如，與目標資料表具有外部索引鍵關聯性的所有資料表) 無法在作業持續期間寫入交易。 使用離線方法時，一律會保留外部索引鍵條件約束的語意 (**CHECK** 或 **NOCHECK**)。
 
-透過線上方法 (需要 SqlServer PowerShell 模組版本 21.x 或更新版本)，以累加方式執行複製和加密、 解密或重新加密資料的作業。 應用程式可以在整個資料移動作業期間，進行目標資料表的資料讀取與寫入作業，但除了最後一個反覆運算以外，因為該期間受限於 **MaxDownTimeInSeconds** 參數 (您可以定義)。 為了偵測並處理應用程式在複製資料時進行的變更，Cmdlet 會在目標資料庫中啟用[變更追蹤](../../track-changes/enable-and-disable-change-tracking-sql-server.md)。 因此，比起離線方法，線上方法很可能會使用伺服器端上的更多資源。 使用線上方法的作業可能也需要更多時間，特別是在對資料庫執行大量寫入的工作負載時。 線上方法可用來一次加密一個資料表，而該資料表必須具有主索引鍵。 預設會使用 **NOCHECK** 選項來重新建立外部索引鍵條件約束，以將對應用程式造成的影響降到最低。 您可以藉由指定 **KeepCheckForeignKeyConstraints** 選項，強制保留外部索引鍵條件約束的語意。
+使用線上方法 (需要 SqlServer PowerShell 模組版本 21.x 或更新版本) 時，會以累加方式執行資料的複製和加密、解密或重新加密作業。 應用程式可以在整個資料移動作業期間，進行目標資料表的資料讀取與寫入作業，但除了最後一個反覆運算以外，因為該期間受限於 **MaxDownTimeInSeconds** 參數 (您可以定義)。 為了偵測並處理應用程式在複製資料時進行的變更，Cmdlet 會在目標資料庫中啟用[變更追蹤](../../track-changes/enable-and-disable-change-tracking-sql-server.md)。 因此，比起離線方法，線上方法很可能會使用伺服器端上的更多資源。 使用線上方法的作業可能也需要更多時間，特別是在對資料庫執行大量寫入的工作負載時。 線上方法可用來一次加密一個資料表，而該資料表必須具有主索引鍵。 預設會使用 **NOCHECK** 選項來重新建立外部索引鍵條件約束，以將對應用程式造成的影響降到最低。 您可以藉由指定 **KeepCheckForeignKeyConstraints** 選項，強制保留外部索引鍵條件約束的語意。
 
 以下是在離線和線上方法之間進行選擇的指導方針：
 

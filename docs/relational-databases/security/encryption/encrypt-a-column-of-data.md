@@ -19,11 +19,11 @@ caps.latest.revision: 27
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 30791ad9733446f664db1592b95d1ffec5fc9a1b
 ms.openlocfilehash: c27f699eb519c1e9a72756c26e8b320869786c6c
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="encrypt-a-column-of-data"></a>加密資料行
@@ -56,12 +56,12 @@ ms.lasthandoff: 06/23/2017
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
 
-若要使用下列的範例，您必須有資料庫主要金鑰。 如果您的資料庫已經沒有資料庫主要金鑰，建立一個，執行下列陳述式提供您的密碼：   
+若要使用下列範例，您必須有資料庫主要金鑰。 如果您的資料庫還沒有資料庫主要金鑰，請執行下列提供密碼的陳述式建立一個：   
 ```  
 CREATE MASTER KEY ENCRYPTION BY   
 PASSWORD = '<some strong password>';  
 ```  
-一定要備份您的資料庫主要金鑰。 如需有關資料庫主要金鑰的詳細資訊，請參閱[CREATE MASTER KEY &#40;TRANSACT-SQL &#41;](../../../t-sql/statements/create-master-key-transact-sql.md).
+一律備份您的資料庫主要金鑰。 如需建立資料庫主要金鑰的詳細資訊，請參閱 [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-master-key-transact-sql.md)。
 
 #### <a name="to-encrypt-a-column-of-data-using-a-simple-symmetric-encryption"></a>若要使用簡單的對稱加密來加密資料行  
   

@@ -28,10 +28,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: fa59193fcedb1d5437d8df14035fadca2b3a28f1
-ms.openlocfilehash: e14166437e035c347fec8f50a1248eeb0d0e5597
+ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
+ms.openlocfilehash: dcb3ee622bac9c70a235e1ff124f7041549825c0
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/20/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>下載 SQL Server Management Studio (SSMS)
@@ -75,15 +75,15 @@ SSMS 17.1 是 SQL Server Management Studio 17.X 世代的第一項更新。  17.
   
 ## <a name="supported-operating-systems"></a>支援的作業系統
   
-搭配最新推出的服務套件使用時，這一版 SSMS 支援下列平台：   
-- Windows 10
-- Windows 8.1
-- Windows 8
-- Windows 7 (SP1)
+搭配最新推出的服務套件使用時，這一版 SSMS 支援下列 64 位元平台：
+- Windows 10 (64 位元)
+- Windows 8.1 (64 位元)
+- Windows 8 (64 位元)
+- Windows 7 (SP1) (64 位元)
 - Windows Server 2016
-- Windows Server 2012 (64 位元) 
-- Windows Server 2012 R2 (64 位元) 
-- Windows Server 2008 R2 (64 位元)  
+- Windows Server 2012 R2 (64 位元)
+- Windows Server 2012 (64 位元)
+- Windows Server 2008 R2 (64 位元)
 
 >[!NOTE]
 >SSMS 17.X 以 Windows Server 2016 之前發行的 Visual Studio 2015 獨立模式 Shell 為基礎。 Microsoft 重視應用程式相容性，並確保已出貨的應用程式會持續在最新的 Windows 版本上執行。 為了將在 Windows Server 2016 上執行 SSMS的問題降至最低，請確定 SSMS 已套用所有最新的更新。 如果在 Windows Server 2016 上發生任何 SSMS 問題，請連絡支援服務。 支援小組會判斷問題是否與 SSMS、Visual Studio 或 Windows 相容性有關。 然後，支援小組會將問題傳送至適當的小組以進行進一步的調查。
@@ -121,7 +121,7 @@ SQL Server Management Studio 17.1 升級套件 (從 17.0 升級到 17.1)：<br>
   
 ## <a name="feedback"></a>意見反應  
   
-![needhelp_person_icon](../ssms/media/needhelp_person_icon.png)。[SQL 用戶端工具論壇](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqltools) |  [在 Microsoft Connect 記錄問題或建議](https://connect.microsoft.com/SQLServer/Feedback)  
+![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [SQL 用戶端工具論壇](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqltools) |  [在 Microsoft Connect 記錄問題或建議](https://connect.microsoft.com/SQLServer/Feedback)  
   
 ## <a name="see-also"></a>另請參閱  
 [教學課程：SQL Server Management Studio](http://msdn.microsoft.com/en-us/d2bade70-07cf-4d94-b5d2-88aecb538ed1)  
