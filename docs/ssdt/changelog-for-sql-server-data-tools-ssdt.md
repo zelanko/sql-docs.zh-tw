@@ -14,74 +14,74 @@ caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 5bd0e1d3955d898824d285d28979089e2de6f322
 ms.openlocfilehash: 243d2e6187a58554cee80066912de7dfcc0c52fc
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) 的變更記錄
-此變更記錄適用於[SQL Server Data Tools (SSDT) for Visual Studio 2015](https://msdn.microsoft.com/library/mt204009.aspx)。  
+此變更記錄適用於 [Visual Studio 2015 的 SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx)。  
   
-如需新功能和已變更的詳細文章，請瀏覽[SSDT 團隊部落格](https://blogs.msdn.microsoft.com/ssdt/)
+如需新功能和已變更的詳細文章，請瀏覽 [SSDT 小組部落格](https://blogs.msdn.microsoft.com/ssdt/)
 
 ## <a name="ssdt-171"></a>SSDT 17.1
-組建編號： 14.0.61705.170
+組建編號︰14.0.61705.170
 
 ### <a name="whats-new"></a>新功能
 **AS 專案：**
-- 使用者可設定編碼 1400年模型上的 UI 中的資料行上的提示
-- 現在是在離線模式中使用非模型相關的 IntelliSense
-- 表格式模型總管 現在包含代表整個模型 （1400 compat 層級表格式模型） 可用的具名的 M 運算式的節點
-- Azure Active Directory 人員選擇器類似於 Microsoft Azure 入口網站的 IAM 現在可供使用時，表格式模型中的角色成員
+- 使用者可以在 1400 模型的 UI 資料行上設定編碼提示
+- 非模型相關的 IntelliSense 目前可以在離線模式中使用
+- 表格式 [模型總管] 現在包含一個節點，代表模型 (1400 相容性層級表格式模型) 中可用的具名 M 運算式
+- Azure Active Directory 人員選擇器類似於 Microsoft Azure 入口網站的 IAM，目前在設定表格式模型中的角色成員時即可供使用
 
 **資料庫專案：**
 - 更新為 DacFx 17.1
 
-### <a name="bug-fixes"></a>Bug 修正
-- 已修正下列問題的商業智慧設計師群組名稱已顯示在 VS2017 中的 Visual Studio 選項中的不正確
-- 已修正的問題產生的報表專案方案的 Code Map 發生當機或做為專案位置
-- 已修正一些問題 PowerQuery 整合的 Analysis Services 1400 compat 層級的表格式模型
-- 其中指派運算子可能不是單獨的一行定義量值時的工具視窗固定在新的 DAX 編輯器中的問題
-- 修正防止表格式的量值顯示重新命名檢視方塊中的量值時，更新的問題
-- 已更新的整合式工作區中的 Analysis Services 引擎及修正造成 1200年的表格式專案包含翻譯上失敗的迴歸的表格式物件模型部署到 SQL Server 2016 Analysis Services 伺服器
-- 修正效能問題，在新 1400年表格式資料來源非常慢 creation\deletion
-- 已修正的問題，在多維度模型的 DSV 圖表無法停止轉譯如果間不同 Dsv 快速檢視變更
+### <a name="bug-fixes"></a>錯誤修正
+- 修正在 VS2017 的 Visual Studio 選項中，商業智慧設計師群組名稱顯示不正確的問題
+- 修正使用報表專案或 AS 專案產生方案的 Code Map 時，發生當機的問題
+- 修正一些 Analysis Services 1400 相容性層級表格式模型的 PowerQuery 整合問題
+- 修正新的 DAX 編輯器工具視窗中當定義量值時，指派運算子可能不是單獨一行的問題
+- 修正在重新命名檢視方塊中的量值時，阻止更新表格式量值顯示畫面的問題
+- 更新 Analysis Services 整合式工作區引擎和表格式物件模型，以修正造成包含翻譯的 1200 表格式專案在部署到 SQL Server 2016 Analysis Services 伺服器時失敗的迴歸
+- 修正建立\刪除新的 1400 表格式資料來源非常緩慢的效能問題
+- 修正在不同 DSV 之間快速變更速檢視時，多維模型中的 DSV 圖表無法停止呈現的問題
 
 ## <a name="dacfx-171"></a>DacFx 17.1
-- 加密記憶體最佳化資料表的其他身分識別資料行的資料行時，已修正的問題
-- 未支援 CATALOG_COLLATION 選項的 CREATE DATABASE
+- 修正使用其他身分識別資料行為記憶體最佳化資料表的資料行加密的問題
+- SQLDOM 支援 CREATE DATABASE 的CATALOG_COLLATION 選項
 
 ## <a name="dacfx-1701"></a>DacFx 17.0.1 
-- 修正問題的資料庫使用 HSM 的非對稱金鑰的 EKM 提供者[Connect 項目](https://connect.microsoft.com/SQLServer/feedback/details/3132749/sqlpackage-exe-fails-when-extracting-a-database-which-contains-an-asymmetric-key-using-an-ekm-provider)
+- 修正使用 HSM 的非對稱金鑰與 EKM 提供者[連接項目](https://connect.microsoft.com/SQLServer/feedback/details/3132749/sqlpackage-exe-fails-when-extracting-a-database-which-contains-an-asymmetric-key-using-an-ekm-provider) 的資料庫問題
 
-## <a name="ssdt-170-supports-up-to-sql-server-2017"></a>SSDT 17.0 （最多 SQL Server 2017 支援）
-組建編號： 14.0.61704.140
+## <a name="ssdt-170-supports-up-to-sql-server-2017"></a>SSDT 17.0 (最多支援 SQL Server 2017)
+組建編號：14.0.61704.140
 
 ### <a name="whats-new"></a>新功能
 **資料庫專案：**
-- 修改檢視表上的叢集的索引將不再會封鎖部署
+- 修改檢視上的叢集索引不會再封鎖部署
 - 與資料行加密相關的結構描述比較字串會使用專有名稱，而不是執行個體名稱。   
-- 新增命令列選項到 SqlPackage：ModelFilePath。  這提供的選項來指定匯入、 發佈和指令碼作業的外部 model.xml 檔的進階使用者   
-- DacFx API 已擴充為支援 Azure AD 通用驗證和 multi-factor authentication (MFA)
+- 新增命令列選項到 SqlPackage：ModelFilePath。  這可讓進階使用者選擇針對匯入、發佈和指令碼作業指定外部 model.xml 檔案   
+- DacFx API 已擴充為支援 Azure AD 通用驗證和 Multi-Factor Authentication (MFA)
 
 **IS 專案：**
 - SSIS OData 來源和 OData 連線管理員現在支援連線到 Microsoft Dynamics AX Online 和 Microsoft Dynamics CRM Online 的 OData 摘要。
-- SSIS 專案現在支援目標伺服器版本的 < SQL Server 2017 > 
-- CDC 控制工作、 CDC 分隔器以及目標 SQL Server 2017 時 CDC 來源的支援。 
+- SSIS 專案現在支援 "SQL Server 2017" 的目標伺服器版本 
+- 以 SQL Server 2017 為目標時，支援 CDC 控制工作、CDC 分隔器和 CDC 來源。 
 
 **AS 專案：**
-- Analysis Services PowerQuery 整合 （1400 compat 層級表格式模型）：
-    - DirectQuery 是適用於 SQL Oracle 和 Teradata，如果使用者已安裝的第 3 個合作對象驅動程式
-    - 將資料行加入 PowerQuery 中的範例
-    - 資料存取 1400年模型 （M 引擎所使用的模型層級屬性） 中的選項
-        - 啟用 快速合併 （預設值為 false-當設定為 true，mashup 引擎將會忽略資料來源的隱私權等級，合併資料時）
-        - 啟用舊版重新導向 （預設值為 false – 當設為 true，mashup 引擎將會遵循可能不安全的 HTTP 重新導向。  例如，從 HTTPS 至 HTTP URI 重新導向）  
-        - 傳回錯誤值為 Null （預設值為 false – 時設為 true，資料格層級的錯誤會以 null 傳回。 若為 false，將會引發例外狀況是資料格包含錯誤)  
-    - 使用 PowerQuery 額外的資料來源 （檔案資料來源）
+- Analysis Services PowerQuery 整合 (1400 相容性層級表格式模型)：
+    - 如果使用者已安裝協力廠商驅動程式，則 DirectQuery 適用於 SQL Oracle 和 Teradata
+    - 在 PowerQuery 中透過範例新增資料行
+    - 1400 模型 (M 引擎所使用的模型層級屬性) 中的資料存取選項
+        - 啟用快速合併 (預設值為 false - 設定為 true 時，交互式 Web 應用程式引擎會在合併資料時忽略資料來源的隱私權等級)
+        - 啟用舊版重新導向 (預設值為 false – 設為 true 時，交互式 Web 應用程式引擎會遵循可能不安全的 HTTP 重新導向。  例如，從 HTTPS 至 HTTP URI 的重新導向)  
+        - 以 Null 傳回錯誤值 (預設值為 false – 設為 true 時，資料格層級的錯誤會以 null 傳回。 設為 false 時，將引發的例外狀況是資料格包含錯誤)  
+    - 使用 PowerQuery 的額外資料來源 (檔案資料來源)
         - Excel 
-        - Text/CSV 
+        - 文字/CSV 
         - XML 
         - Json 
         - 資料夾 
@@ -89,8 +89,8 @@ ms.lasthandoff: 06/23/2017
         - Azure Blob 儲存體 
     - 當地語系化的 PowerQuery 使用者介面
 - DAX 編輯器工具視窗
-    - 改良的 DAX 編輯量值、 導出資料行和詳細資料列的運算式，可透過 檢視中，在 SSDT 中的 其他視窗 功能表的體驗
-    - DAX parser\Intellisense 的增強功能
+    - 改善量值、導出資料行和詳細資料列運算式的 DAX 編輯體驗，可透過 SSDT 中的 [檢視]、其他 Windows 功能表存取
+    - DAX 部析器\Intellisense 的增強功能
 
 
 **RS 專案︰**
@@ -121,17 +121,17 @@ ms.lasthandoff: 06/23/2017
 - 修正在某些情況下防止 (不具有初始目錄支援的) 資料來源正常運作的問題 
 - 部署精靈應該將變更套用到導出資料表分割區，即使已啟用保持分割區的選項也一樣
 - 修正現有 AS 連線的 [進階屬性] 對話方塊要在重新選取後才會顯示完整清單的問題
-- 裁剪的 UI 字串出現在某些當地語系化組建中已修正一些問題
-- 為表格式模型的 PowerQuery 整合 1400 compat 層級中已修正一些問題
-- 報表精靈樣式範本未顯示正確與已修正的問題
-- 修正問題，可能會導致不正確的資料來源設定從 SQL AS 變更時，報表精靈
-- 已修正的問題，導致從命令列 (devenv.com\exe) 的 Analysis Services （表格式） 專案組建失敗
-- DAX 量值剖析器，以字母之前啟動時顯示反白顯示且正確的文字色彩修正的問題: =
-- 修正觸發 ObjectRefException，如果路徑太長嘗試中整合式工作區模式的表格式專案的 顯示所有檔案的問題
-- Compact 4.0 用戶端資料提供者出現無法使用資料來源設計師修正的問題
-- 修正造成嘗試瀏覽採礦模型中 VS2017 為錯誤的問題
-- 固定為 VS2017 DSV 圖表停止轉譯之後變更檢視，然後叫用例外狀況中的多維度模型中的問題
-- 已修正的問題與失敗 VS2017 AS 連接預覽報表
+- 修正一些裁剪的 UI 字串出現在某些當地語系化組建的問題
+- 修正一些 Analysis Services 1400 相容性層級表格式模型之 PowerQuery 整合的問題
+- 修正報表精靈樣式範本未正確顯示的問題
+- 修正報表精靈在從 SQL 變更為 AS 時，可能會導致資料來源設定不正確的問題
+- 修正導致從命令列 (devenv.com\exe) 執行 Analysis Services (表格式) 專案組建失敗的問題
+- 修正 DAX 量值剖析器在以之前字母開頭時，要反白顯示並顯示正確的文字色彩的問題: =
+- 修正路徑嘗試在整合式工作區模式下顯示表格式專案的所有檔案時，花費太長時間而觸發 ObjectRefException 的問題
+- 修正 Compact 4.0 用戶端資料提供者的資料來源設計師無法使用的問題
+- 修正嘗試在 VS2017 中瀏覽 AS 採礦模型時造成錯誤的問題
+- 修正 VS2017 中 DSV 圖表在變更檢視之後停止轉譯，然後觸發例外狀況的 AS 多維模型問題
+- 修正在 VS2017 中使用 AS 連線預覽報表失敗的問題
  
 
 **RS 專案︰**
@@ -147,7 +147,7 @@ ms.lasthandoff: 06/23/2017
 - 修正套件組件會隱藏註解的問題。 [Connect 項目](https://connect.microsoft.com/SQLServer/feedback/details/3106624/package-parts-hide-annotations)
 - 修正套件組件會捨棄 [資料流程] 配置及註解的問題。 [Connect 項目](https://connect.microsoft.com/SQLServer/feedback/details/3109241/package-parts-discard-data-flow-layouts-and-annotations)
 - 修正 SSDT 在從 SQL Server 匯入專案時損毀的問題。
-- 修正的問題，Hadoop 檔案系統工作 TimeoutInMinutes 預設值為 10 之後開啟已儲存 SSIS 封裝,，並在執行階段。
+- 修正在開啟已儲存的 SSIS 封裝之後以及執行階段時，Hadoop 檔案系統工作 TimeoutInMinutes 預設為 10 的問題。
 
 **資料庫專案：**
 - SSDT DACPAC 部署將設定加回 IgnoreColumnOrder [Connect 項目 (英文)](https://connect.microsoft.com/SQLServer/feedback/details/1221587/ssdt-dacpac-deploy-add-setting-back-in-for-ignorecolumnorder)
@@ -158,7 +158,7 @@ ms.lasthandoff: 06/23/2017
 - Always Encrypted：線上加密在取消時不會停用變更追蹤，且如果開始加密之前沒有清理變更追蹤，線上加密便無法正常運作
 
 
-## <a name="ssdt-165-supports-up-to-sql-server-2016"></a>SSDT 16.5 （最多 SQL Server 2016 支援）
+## <a name="ssdt-165-supports-up-to-sql-server-2016"></a>SSDT 16.5 (最多支援 SQL Server 2016)
 發行日期︰2016 年 10 月 20 日
 
 組建編號：14.0.61021.0

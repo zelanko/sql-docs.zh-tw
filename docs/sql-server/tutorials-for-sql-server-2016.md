@@ -1,5 +1,5 @@
 ---
-title: "SQL Server 的教學課程 |Microsoft 文件"
+title: "適用於 SQL Server 的教學課程 | Microsoft Docs"
 ms.custom: 
 ms.date: 06/21/2017
 ms.prod: sql-server-2016
@@ -14,19 +14,19 @@ caps.latest.revision: 40
 author: BYHAM
 ms.author: rickbyh
 manager: erikre
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 76839e39427e24688609353b8708d59fee772d28
 ms.openlocfilehash: cd54a753fe83bc4b535e31c3cd6481c73424e1bb
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-# <a name="tutorials-for-sql-server"></a>SQL Server 的教學課程
+# <a name="tutorials-for-sql-server"></a>適用於 SQL Server 的教學課程
 [!INCLUDE[feedback_stackoverflow_msdn_connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
-[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]提供可協助您了解新的技術和功能的教學課程。 教學課程，針對先前的版本通常可以搭配較新版本。 時教學課程解決較新的功能，它們會指出要完成本教學課程的最小版本。  
+[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 提供可協助您了解新技術和功能的教學課程。 舊版的教學課程通常可用於較新版本。 當教學課程提及較新的功能時，將指出完成該教學課程所需的最低版本。  
      
--   如果教學課程使用其中一個[!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)]資料庫，您應該下載並使用從 CodePlex 的最新版本。 如需詳細資訊，請參閱[AdventureWorks 資料庫和 SQL Server 2016 CTP3 的指令碼](https://www.microsoft.com/download/details.aspx?id=49502)。    
+-   如果教學課程使用其中一個 [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] 資料庫，那麼您應該從 CodePlex 下載最新版本並加以使用。 如需詳細資訊，請參閱 [AdventureWorks 資料庫與 SQL Server 2016 CTP3 的指令碼](https://www.microsoft.com/download/details.aspx?id=49502)。    
 -   若要下載 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 活頁簿和 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 報表搭配 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 教學課程使用，請前往 [SQL Server 2012 的 Power View 範例](http://go.microsoft.com/fwlink/?LinkId=220734)。  
 - 查看 [sql-server-samples](https://msdn.microsoft.com/library/mt734199(SQL.1).aspx) GitHub 存放庫上提供的新 [Wide World Importers](https://github.com/Microsoft/sql-server-samples) 範例。 
 

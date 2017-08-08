@@ -50,20 +50,20 @@ caps.latest.revision: 333
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f6ac799e828d817eb19d6a8451c8c2011b0ea82f
 ms.openlocfilehash: 85e12d330f4c779deda67a739e107309074c0ea7
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 08/03/2017
 
 ---
-# <a name="hardware-and-software-requirements-for-installing-sql-server"></a>安裝 SQL Server 的硬體和軟體需求
+# <a name="hardware-and-software-requirements-for-installing-sql-server"></a>安裝 SQL Server 2008 R2 的硬體和軟體需求
 
 本主題列出在 Windows 作業系統上安裝和執行 [!INCLUDE[ssNoVer](../../includes/ssnoversion-md.md)] 的最低軟硬體需求。 
 
 [!INCLUDE[sscurrent](../../includes/sssqlv14-md.md)] 推出 Linux 的 [!INCLUDE[ssNoVer](../../includes/ssnoversion-md.md)] 支援。 如需相關資訊，請參閱[ Linux 的 [!INCLUDE[sscurrent](../../includes/sssqlv14-md.md)]](../../linux/sql-server-linux-overview.md)。 
 
-> 本主題適用於 [!INCLUDE[ss2016](../../includes/sssql15-md.md)] 和更新版本。 如需舊版的 SQL Server 相關的內容，請參閱[硬體和軟體需求，安裝 SQL Server 2014](https://msdn.microsoft.com/library/ms143506(v=sql.120).aspx)。 
+> 本主題適用於 [!INCLUDE[ss2016](../../includes/sssql15-md.md)] 和更新版本。 如需舊版 SQL Server 的相關內容，請參閱[安裝 SQL Server 2014 的硬體和軟體需求](https://msdn.microsoft.com/library/ms143506(v=sql.120).aspx)。 
   
 **現在就試試看：**  
   
@@ -174,7 +174,7 @@ ms.lasthandoff: 06/23/2017
   
 \*不支援 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。
   
-###  <a name="TOP_Breadth"></a>[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 的廣泛版本  
+###  <a name="TOP_Breadth"></a> [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 的廣泛版本  
  下表顯示 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)]廣泛版本的作業系統需求：  
   
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本|支援的作業系統|  

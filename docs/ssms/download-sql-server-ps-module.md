@@ -1,5 +1,5 @@
 ---
-title: "下載 SQL Server PowerShell 模組 |Microsoft 文件"
+title: "下載 SQL Server PowerShell 模組 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/10/2017
 ms.prod: sql-non-specified
@@ -10,29 +10,29 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 keywords:
-- "安裝 sql server powershell，請下載 sql server powershell"
+- "安裝 SQL Server Powershell, 下載 SQL Server Powershell"
 ms.assetid: 
 caps.latest.revision: 113
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: b68d454230d414ff52d90b4f3f71dd68ee65c6bc
 ms.openlocfilehash: f55266b6ec28e2552047cc36a5060945006b2caa
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="download-sql-server-powershell-module"></a>下載 SQL Server PowerShell 模組
-過程 17.0 發行版本的 SQL Server Management Studio 中，SQL Server PowerShell 模組現在提供了透過 PowerShell 資源庫。  模組不再隨附於 SSMS 安裝套件。 若要使用 SSMS 17.0 及更新版本，請使用 PowerShell，SQL Server 模組必須安裝在電腦上做為額外的步驟。
+作為 SQL Server Management Studio 17.0 版的一部分，SQL Server PowerShell 模組現在透過 PowerShell 資源庫提供。  模組不再隨附於 SSMS 安裝封裝。 若要搭配使用 PowerShell 與 SSMS 17.0 及更新版本，SQL Server 模組必須以額外步驟的方式安裝在電腦上。
 
-完整的文件中有關安裝最新版本的 Windows Management Framework 和如何安裝 PowerShell 模組在一般情況下可以找到上[PowerShell 資源庫](https://www.powershellgallery.com/)站台。
+有關安裝最新版本的 Windows Management Framework 和如何安裝 PowerShell 模組的完整文件通常位於 [PowerShell 資源庫](https://www.powershellgallery.com/)網站上。
 
-若要安裝 SQL Server 單元的 PowerShell 命令為：
+安裝 SQL Server 模組的 PowerShell 命令如下：
 
-> Install-module-名稱 SqlServer-範圍 CurrentUser
+> Install-module -Name SqlServer -Scope CurrentUser
 
-如果您有舊版的電腦上的 SQL Server PowerShell 模組，它可能需要提供 「-AllowClobber"參數。  
+如果電腦上有舊版的 SQL Server PowerShell 模組，可能需要提供 "-AllowClobber" 參數。  
 
-出貨至 PowerShell Gallery 的 SQL Server PowerShell 模組版本支援版本控制，而且需要 PowerShell 5.0 或更新版本。
+提供給 PowerShell 資源庫的 SQL Server PowerShell 模組版本支援版本設定，而且需要 PowerShell 5.0 版或更新版本。
 

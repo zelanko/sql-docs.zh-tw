@@ -21,16 +21,16 @@ caps.latest.revision: 74
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: d4dc2ff665ff191fb75dd99103a222542262d4c4
 ms.openlocfilehash: 31c1a78b0f951933fea5927efd7acc13a6ce6f6c
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="uninstall-an-existing-instance-of-sql-server-setup"></a>解除安裝現有的 SQL Server 執行個體 (安裝程式)
 
- > 如需舊版的 SQL Server 相關的內容，請參閱[解除安裝現有的 SQL Server 執行個體 （安裝程式）](https://msdn.microsoft.com/en-US/library/ms143412(SQL.120).aspx)。
+ > 如需舊版 SQL Server 的相關內容，請參閱[解除安裝現有的 SQL Server 執行個體 (安裝程式)](https://msdn.microsoft.com/en-US/library/ms143412(SQL.120).aspx)。
 
   本文描述如何解除安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的獨立執行個體。 遵循本主題的步驟，也可以讓系統做好準備，以便可以重新安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
@@ -80,7 +80,7 @@ ms.lasthandoff: 06/23/2017
   
 2.  **刪除本機安全性群組。** 在解除安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之前，請先刪除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件的本機安全性群組。  
   
-3.  **Stop all**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **services.** ：建議您在解除安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件之前，先停止所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件的本機安全性群組。 使用中的連接可能會導致解除安裝無法順利完成。  
+3.  **停止所有**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **服務** ：建議您在解除安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件之前，先停止所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件的本機安全性群組。 使用中的連接可能會導致解除安裝無法順利完成。  
   
 4.  **使用具有適當權限的帳戶。** 請使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務帳戶或具有同等權限的帳戶登入伺服器。 例如，您可以使用本機管理員群組成員的帳戶登入伺服器。  
   

@@ -1,1 +1,1 @@
-**本主題的適用對象：**![沒有](media/no.png)SQL Server 2016![是](media/yes.png)Power BI 報表伺服器
+**本主題適用於：**![否](media/no.png)SQL Server 2016![是](media/yes.png)Power BI 報表伺服器
