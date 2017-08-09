@@ -26,11 +26,11 @@ ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="analysis-services-execute-ddl-task-editor-general-page"></a>Analysis Services 執行 DDL 工作編輯器 (一般頁面)
-  使用 [Analysis Services 執行 DDL 工作編輯器] 對話方塊的 [一般] 頁面，即可命名並描述 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行 DDL 工作。  
+  使用 **[Analysis Services 執行 DDL 工作編輯器]** 對話方塊的 **[一般]** 頁面，即可命名並描述 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行 DDL 工作。  
   
  若要了解這個工作，請參閱＜ [Analysis Services Execute DDL Task](../../integration-services/control-flow/analysis-services-execute-ddl-task.md)＞。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **名稱**  
  提供 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行 DDL 工作的唯一名稱。 這個名稱是作為工作圖示中的標籤使用。  
   

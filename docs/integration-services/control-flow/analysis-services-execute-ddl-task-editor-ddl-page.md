@@ -26,7 +26,7 @@ ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="analysis-services-execute-ddl-task-editor-ddl-page"></a>Analysis Services 執行 DDL 工作編輯器 (DDL 頁面)
-  使用 [Analysis Services 執行 DDL 工作編輯器] 對話方塊的 [DDL] 頁面，即可指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案或 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫的連接，並提供資料定義語言 (DDL) 陳述式來源的相關資訊。  
+  使用 **[Analysis Services 執行 DDL 工作編輯器]** 對話方塊的 **[DDL]** 頁面，即可指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案或 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫的連接，並提供資料定義語言 (DDL) 陳述式來源的相關資訊。  
   
  若要了解這個工作，請參閱＜ [Analysis Services Execute DDL Task](../../integration-services/control-flow/analysis-services-execute-ddl-task.md)＞。  
   
@@ -41,7 +41,7 @@ ms.lasthandoff: 08/03/2017
   
 |Value|說明|  
 |-----------|-----------------|  
-|**直接輸入**|將來源設定為 [SourceDirect] 文字方塊中所儲存的 DDL 陳述式。 選取這個值就會顯示在下列章節中的動態選項。|  
+|**直接輸入**|將來源設定為 **[SourceDirect]** 文字方塊中所儲存的 DDL 陳述式。 選取這個值就會顯示在下列章節中的動態選項。|  
 |**檔案連接**|將來源設定為包含 DDL 陳述式的檔案。 選取這個值就會顯示在下列章節中的動態選項。|  
 |**變數**|將來源設定為變數。 選取這個值就會顯示在下列章節中的動態選項。|  
   
@@ -49,19 +49,19 @@ ms.lasthandoff: 08/03/2017
   
 ### <a name="sourcetype--direct-input"></a>SourceType = 直接輸入  
  **Source**  
- 輸入 DDL 陳述式或按一下省略符號 **(…)**，然後在 [DDL 陳述式] 對話方塊中輸入陳述式。  
+ 輸入 DDL 陳述式或按一下省略符號 **(…)**，然後在 **[DDL 陳述式]** 對話方塊中輸入陳述式。  
   
 ### <a name="sourcetype--file-connection"></a>SourceType = 檔案連接  
  **Source**  
  在清單中，選取檔案連接，或按一下\<**新增連接...**>，並使用**檔案 」 連接管理員**對話方塊，即可建立新的連接。  
   
- **相關主題：**[檔案連線管理員](../../integration-services/connection-manager/file-connection-manager.md)  
+ **相關主題：** [檔案連線管理員](../../integration-services/connection-manager/file-connection-manager.md)  
   
 ### <a name="sourcetype--variable"></a>SourceType = 變數  
  **Source**  
  在清單中，選取變數，或按一下\<**新增變數...**>，並使用**加入變數**對話方塊，即可建立新的變數。  
   
- **相關主題：**[Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)  
+ **相關主題：** [Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../integration-services/integration-services-error-and-message-reference.md)   
