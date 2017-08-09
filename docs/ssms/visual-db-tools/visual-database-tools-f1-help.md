@@ -29,7 +29,7 @@ ms.lasthandoff: 06/22/2017
 若要存取對話方塊主題，請在對話方塊開啟並取得焦點時按 F1。 若要存取屬性視窗主題，請在 [屬性] 視窗中按一下，再按 F1。  
   
 ## <a name="see-also"></a>另請參閱  
-[設計資料表 &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)  
-[設計查詢和檢視使用說明主題 &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
+[設計資料表 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)  
+[設計查詢和檢視使用說明主題 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
 
