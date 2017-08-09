@@ -50,7 +50,7 @@ ms.lasthandoff: 08/03/2017
   
      若要在報表伺服器上檢視或發行項目，套用到報表相關項目與作業的多組使用權限會根據角色分組。 報表伺服器管理員會將您指派為一個或多個角色。 例外，預先定義的角色 [瀏覽者] 可以讓您檢視報表、資料夾、模型與資源。  
   
-     如果您無法連接或瀏覽至報表伺服器，請連絡報表伺服器管理員。 如需詳細資訊，請參閱《 [](../../reporting-services/security/reporting-services-security-and-protection.md) 線上叢書》 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
+     如果您無法連接或瀏覽至報表伺服器，請連絡報表伺服器管理員。 如需詳細資訊，請參閱《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [線上叢書》](http://go.microsoft.com/fwlink/?linkid=121312) 中 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文件集的 [Reporting Services 安全性與保護](../../reporting-services/security/reporting-services-security-and-protection.md)。  
   
 -   以 SharePoint 整合模式設定的報表伺服器  
   
