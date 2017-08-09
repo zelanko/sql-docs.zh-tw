@@ -19,7 +19,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: e3dff8b613f933caa84522b31bdc862aa9c799f7
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="web-portal-ssrs-native-mode"></a>入口網站 (SSRS 原生模式)

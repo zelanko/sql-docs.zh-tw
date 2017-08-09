@@ -19,11 +19,10 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: 27956feca3ad15233943a447422e2260bd61c913
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
-# Reporting Services Data Alerts
-<a id="reporting-services-data-alerts" class="xliff"></a>
+# <a name="reporting-services-data-alerts"></a>Reporting Services Data Alerts
 
 [!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
 
@@ -58,8 +57,7 @@ SQL Server Reporting Services 資料警示是資料驅動警示解決方案，�
   
  ![Reporting Services 警示中的工作流程](../reporting-services/media/rs-alertingworkflow.gif "Reporting Services 警示中的工作流程")  
   
-### 資料警示支援的報表
-<a id="reports-supported-by-data-alerts" class="xliff"></a>  
+### <a name="reports-supported-by-data-alerts"></a>資料警示支援的報表  
  您可以在以報表定義語言 (RDL) 撰寫並且於報表設計師或報表產生器中建立的所有類型專業報表上建立資料警示。 包含資料表和圖表等資料區的報表、擁有子報表的報表，以及擁有多個平行資料行群組和巢狀資料區的複雜報表。 唯一的需求是，報表至少包含一個任何類型的資料區域，而且報表資料來源設定為使用預存認證或無認證。 如果報表沒有任何資料區，則無法為其建立警示。  
   
  您無法針對使用 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]所建立的報表建立資料警示。  
@@ -74,34 +72,29 @@ SQL Server Reporting Services 資料警示是資料驅動警示解決方案，�
   
 -   [使用報表伺服器驗證](../reporting-services/security/authentication-with-the-report-server.md)  
   
-### 執行報表
-<a id="run-reports" class="xliff"></a>  
+### <a name="run-reports"></a>執行報表  
  建立資料警示定義的第一個步驟，就是在 SharePoint 文件庫中尋找您要的報表，然後執行報表。 如果報表執行時未包含任何資料，則無法在當時於報表上建立警示。  
   
  如果報表已參數化，您會在執行報表時指定要使用的參數值。 參數值將儲存在您於報表上建立的報表警示定義中。 這些值會在重新執行報表做為處理資料警示定義的步驟時使用。 如果您要變更參數值，則需要使用這些參數值重新執行報表，並且在該版本的報表上建立警示定義。  
   
-### 建立資料警示定義
-<a id="create-data-alert-definitions" class="xliff"></a>  
+### <a name="create-data-alert-definitions"></a>建立資料警示定義  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 資料警示功能包括資料警示設計工具，可用來建立資料警示定義。  
   
  若要建立資料警示定義，請執行報表，然後從 SharePoint 報表檢視器的 **[動作]** 功能表開啟 [資料警示設計工具]。 如此就會產生報表的報表資料摘要，而資料摘要中的前 100 個資料列會在 [資料警示設計工具] 的資料預覽資料表中顯示。 只要您在 [資料警示設計工具] 中處理警示定義，就會持續快取所有來自報表的資料摘要。 快取可讓您在資料摘要之間迅速切換。 當您在 [資料警示設計工具] 中重新開啟警示定義時，資料摘要會重新整理。  
   
  資料警示定義包含以下內容：規則和子句，報表資料必須滿足這些規則和子句才能觸發資料警示訊息；排程，定義傳送警示訊息的頻率以及開始和停止傳送警示訊息的日期 (選擇性)；像是主旨和警示訊息中要包含的描述等資訊；以及訊息的收件者。 在您建立警示定義之後，可以將它儲存到 SQL Server 警示資料庫。  
   
-### 儲存資料警示定義和警示中繼資料
-<a id="save-data-alert-definitions-and-alerting-metadata" class="xliff"></a>  
+### <a name="save-data-alert-definitions-and-alerting-metadata"></a>儲存資料警示定義和警示中繼資料  
  您以 SharePoint 模式安裝 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 時，會自動建立 SQL Server 警示資料庫。  
   
  資料警示定義和警示中繼資料會儲存到警示資料庫中。 根據預設，這個資料庫名為 ReportingServices\<GUID > _Alerting。  
   
  當您儲存資料警示定義時，警示會為該警示定義建立 SQL Server Agent 作業。 作業會包括作業排程。 排程是依據您在警示定義上定義的循環模式。 執行該作業會起始資料警示定義的處理。  
   
-### 處理資料警示定義
-<a id="process-data-alert-definitions" class="xliff"></a>  
+### <a name="process-data-alert-definitions"></a>處理資料警示定義  
  SQL Server Agent 作業的排程開始處理警示定義時，會執行報表以重新整理報表資料摘要。 警示服務會讀取資料摘要，並且套用資料警示定義對資料值指定的規則。 如果一個或多個資料值符合規則，則會建立資料警示執行個體，並且以電子郵件將包含警示結果的資料警示訊息傳送給所有收件者。 結果會是建立警示執行個體時滿足所有規則的報表資料資料列。 為避免產生多個相同結果的警示訊息，您可以指定只有在結果變更時傳送訊息。 在此情況下會建立警示執行個體，並且儲存到警示資料庫，但是不會產生警示訊息。 如果發生錯誤，警示執行個體還是會儲存到警示資料庫，而且包含錯誤之詳細資料的警示訊息會傳送給收件者。 本主題稍後的＜診斷和記錄＞一節將提供記錄和疑難排解的詳細資訊。  
   
-### 傳送資料警示訊息
-<a id="send-data-alert-messages" class="xliff"></a>  
+### <a name="send-data-alert-messages"></a>傳送資料警示訊息  
  資料警示訊息是透過電子郵件傳送。  
   
  **[寄件者]** 一行包含 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 電子郵件傳遞組態提供的值。 **[收件者]** 一行列出您在 [資料警示設計工具] 中建立警示時指定的收件者。  
@@ -155,8 +148,7 @@ SQL Server Reporting Services 資料警示是資料驅動警示解決方案，�
   
  依據預設，MaxRetries 和 SecondsBeforeRetry 設定會套用到引發資料警示的所有事件。 如果您想要更進一步控制重試次數和重試延遲，可以針對指定不同 MaxRetries 和 SecondsBeforeRetry 值的任何或所有事件處理常式加入項目。  
   
-### 事件處理常式和重試
-<a id="event-handlers-and-retry" class="xliff"></a>  
+### <a name="event-handlers-and-retry"></a>事件處理常式和重試  
  事件處理常式包括：  
   
 |事件處理常式|說明|  
@@ -227,8 +219,7 @@ SQL Server Reporting Services 資料警示是資料驅動警示解決方案，�
 ##  <a name="DiagnosticsLogging"></a> 診斷和記錄  
  資料警示提供許多方式來幫助資訊工作者和系統管理員追蹤警示以及了解警示失敗的原因，並且幫助系統管理員運用記錄來了解哪些警示訊息傳送給哪些人、傳送的警示執行個體數目等。  
   
-### 資料警示管理員
-<a id="data-alert-manager" class="xliff"></a>  
+### <a name="data-alert-manager"></a>資料警示管理員  
  資料警示管理員會列出警示定義和錯誤資訊，有助於資訊工作者和警示系統管理員了解錯誤發生的原因。 一些常見的錯誤原因包括：  
   
 -   報表資料摘要已變更，且資料警示定義規則中使用的資料行已不包含在資料摘要中。  
@@ -237,14 +228,12 @@ SQL Server Reporting Services 資料警示是資料驅動警示解決方案，�
   
 -   基礎資料來源中的資料類型已變更，且警示定義不再有效。  
   
-### 記錄檔
-<a id="logs" class="xliff"></a>  
+### <a name="logs"></a>記錄檔  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 會提供一些記錄檔，有助於深入了解處理資料警示定義、所建立的資料警示執行個體等等時執行的報表。 有三個記錄檔特別實用：警示執行記錄、報表伺服器執行記錄及報表伺服器追蹤記錄。  
   
  如需其他 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 記錄檔的相關資訊，請參閱 [Reporting Services 記錄檔和來源](../reporting-services/report-server/reporting-services-log-files-and-sources.md)。  
   
-#### 警示執行記錄
-<a id="alerting-execution-log" class="xliff"></a>  
+#### <a name="alerting-execution-log"></a>警示執行記錄  
  警示執行階段服務會將項目寫入警示資料庫的 ExecutionLogView 資料表中。 您可以查詢資料庫或執行下列預存程序，以取得有關儲存到警示資料庫之資料警示的更完整診斷資訊。  
   
 -   ReadAlertData  
@@ -265,12 +254,10 @@ SQL Server Reporting Services 資料警示是資料驅動警示解決方案，�
   
  您可以使用 SQL 代理程式依照排程執行預存程序。 如需詳細資訊，請參閱 [SQL Server Agent](http://msdn.microsoft.com/library/8d1dc600-aabb-416f-b3af-fbc9fccfd0ec)。  
   
-#### 報表伺服器執行記錄
-<a id="report-server-execution-log" class="xliff"></a>  
+#### <a name="report-server-execution-log"></a>報表伺服器執行記錄  
  執行報表會產生資料摘要，做為建立資料警示定義的基礎。 報表伺服器資料庫中的報表伺服器執行記錄會在每次報表執行時擷取資訊。 您可以查詢資料庫中的 ExecutionLog2 檢視，以了解詳細資訊。 如需詳細資訊，請參閱 [報表伺服器 ExecutionLog 和 ExecutionLog3 檢視](../reporting-services/report-server/report-server-executionlog-and-the-executionlog3-view.md)。  
   
-#### 報表伺服器追蹤記錄
-<a id="report-server-trace-log" class="xliff"></a>  
+#### <a name="report-server-trace-log"></a>報表伺服器追蹤記錄  
  報表伺服器追蹤記錄包含報表伺服器服務作業的詳細資訊，包括報表伺服器 Web 服務和背景處理所執行的作業。 如果您要偵錯包含報表伺服器的應用程式，或者調查寫入事件記錄或執行記錄的特定問題，追蹤記錄資訊可能會很有用。 如需詳細資訊，請參閱 [Report Server Service Trace Log](../reporting-services/report-server/report-server-service-trace-log.md)。  
   
 ##  <a name="PerformanceCounters"></a> 效能計數器  
@@ -334,8 +321,7 @@ SQL Server Reporting Services 資料警示是資料驅動警示解決方案，�
   
 -   [將權限授與使用者及警示管理員](../reporting-services/grant-permissions-to-users-and-alerting-administrators.md)  
   
-## 請參閱＜
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>請參閱＜
 
 [資料警示設計工具](../reporting-services/data-alert-designer.md)   
 [警示系統管理員的資料警示管理員](../reporting-services/data-alert-manager-for-alerting-administrators.md)   

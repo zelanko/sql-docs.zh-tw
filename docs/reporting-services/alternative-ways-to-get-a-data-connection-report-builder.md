@@ -20,7 +20,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d485cf494efedfc0fe7f6a47f11d3ca0825b3654
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="alternative-ways-to-get-a-data-connection-report-builder"></a>取得資料連接的替代方式 (報表產生器)

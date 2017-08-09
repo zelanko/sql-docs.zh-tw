@@ -23,13 +23,11 @@ ms.contentlocale: zh-tw
 ms.lasthandoff: 06/22/2017
 
 ---
-<a id="integrating-reporting-services-using-reportviewer-controls---get-started" class="xliff"></a>
-# 整合 Reporting Services 使用 ReportViewer 控制項-快速入門
+# <a name="integrating-reporting-services-using-reportviewer-controls---get-started"></a>整合 Reporting Services 使用 ReportViewer 控制項-快速入門
 
 了解如何開發人員可以在 ASP.Net 網站和 Windows forms 應用程式，透過 Reporting Services 2016 ReportViewer 控制項內嵌分頁的報表。 您可以將控制項加入新的專案，或更新現有的專案。
 
-<a id="adding-the-reportviewer-control-to-a-new-web-project" class="xliff"></a>
-## 將 ReportViewer 控制項加入至新的 web 專案
+## <a name="adding-the-reportviewer-control-to-a-new-web-project"></a>將 ReportViewer 控制項加入至新的 web 專案
 
 1. 建立新**ASP.NET 空網站**或開啟現有的 ASP.NET 專案。
 
@@ -82,13 +80,11 @@ ms.lasthandoff: 06/22/2017
 
 ```
 
-<a id="updating-an-existing-project-to-use-the-reportviewer-control" class="xliff"></a>
-## 更新現有的專案以使用 ReportViewer 控制項
+## <a name="updating-an-existing-project-to-use-the-reportviewer-control"></a>更新現有的專案以使用 ReportViewer 控制項
 
 要使用現有的專案中 ReportViewer 2016 控制項、 將透過 Nuget 控制項加入和更新版本的組件參考*版本為 14.0.0.0*。 這包括正在更新專案的 web.config 和所有參考的 ReportViewer 控制項的.aspx 網頁。
 
-<a id="sample-webconfig-changes" class="xliff"></a>
-### 範例 web.config 變更
+### <a name="sample-webconfig-changes"></a>範例 web.config 變更
 
 ```
 <?xml version="1.0"?>
@@ -135,8 +131,7 @@ ms.lasthandoff: 06/22/2017
 </configuration>
 ```
 
-<a id="sample-aspx" class="xliff"></a>
-### 範例.aspx
+### <a name="sample-aspx"></a>範例.aspx
 
 ```
 <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="SampleAspx" %>
@@ -147,8 +142,7 @@ ms.lasthandoff: 06/22/2017
 <!DOCTYPE html>
 ```
 
-<a id="adding-the-reportviewer-control-to-a-new-windows-forms-project" class="xliff"></a>
-## 將 ReportViewer 控制項加入至新的 Windows form 專案
+## <a name="adding-the-reportviewer-control-to-a-new-windows-forms-project"></a>將 ReportViewer 控制項加入至新的 Windows form 專案
 
 1. 建立新**Windows Forms 應用程式**或開啟現有的專案。
 
@@ -183,15 +177,13 @@ ms.lasthandoff: 06/22/2017
     }
     ```
 
-<a id="how-to-set-100-height-on-the-report-viewer-2016-control" class="xliff"></a>
-## 如何設定報表檢視器 2016年控制項上的 100%的高度
+## <a name="how-to-set-100-height-on-the-report-viewer-2016-control"></a>如何設定報表檢視器 2016年控制項上的 100%的高度
 
 新的報表檢視器 2016年控制項最適合用於 HTML5 標準模式的頁面，適用於所有現代化瀏覽器。 在過去，與舊 RVC 控制項，當您設定 100 %height 屬性，它即使沒有任何上階必須指定高度。 此行為已經變更 html5 格式。 當您在新的 RVC 控制項上設定此屬性時，則在父項目已定義的高度時，才會正確運作，也就是不是自動的值或所有上階的 RVC 也有 100%的高度。
 
 以下是兩個範例，若要這樣做。
 
-<a id="by-setting-the-height-of-all-the-parent-elements-to-100" class="xliff"></a>
-### 將所有父系的高度項目設定為 100%
+### <a name="by-setting-the-height-of-all-the-parent-elements-to-100"></a>將所有父系的高度項目設定為 100%
 
 ```
 <!DOCTYPE html>
@@ -217,8 +209,7 @@ ms.lasthandoff: 06/22/2017
 
 ```
 
-<a id="by-setting-the-style-height-attribute-on-the-parent-of-the-reportviewer-control" class="xliff"></a>
-### 藉由設定 reportviewer 控制項的父代上的樣式高度屬性
+### <a name="by-setting-the-style-height-attribute-on-the-parent-of-the-reportviewer-control"></a>藉由設定 reportviewer 控制項的父代上的樣式高度屬性
 
 如需檢視區百分比長度的詳細資訊，請參閱[檢視區百分比長度](https://www.w3.org/TR/css3-values/#viewport-relative-lengths)。
 
@@ -241,8 +232,7 @@ ms.lasthandoff: 06/22/2017
 
 ```
 
-<a id="adding-control-to-visual-studio-toolbar" class="xliff"></a>
-## 將控制項加入至 Visual Studio 工具列
+## <a name="adding-control-to-visual-studio-toolbar"></a>將控制項加入至 Visual Studio 工具列
 
 報表檢視器控制項現在隨附以 NuGet 套件。 因為這個緣故，不會看到顯示 Visual Studio 工具箱中的預設報表檢視器控制項。 您可以將控制項加入工具箱 中，執行下列動作。
 
@@ -269,16 +259,14 @@ ms.lasthandoff: 06/22/2017
 
     ![ssRS-工具箱-rvcontrol](../../reporting-services/application-integration/media/ssrs-toolbox-rvcontrol.png)
 
-<a id="things-to-be-aware-of" class="xliff"></a>
-### 要注意的事項
+### <a name="things-to-be-aware-of"></a>要注意的事項
 
 - 這會新增在目前專案中安裝的 NuGet 套件的參考。 [工具箱] 中的項目會保存至其他專案。 當您安裝 NuGet 封裝在新的方案/專案中時，工具箱項目也可能會參照較舊的版本。 
 
 - 即使組件不再可用時，控制項仍在 [工具箱]。 若已刪除該專案，Visual Studio 將會擲回錯誤如果再次嘗試將控制項從 [工具箱]。 若要更正這個錯誤，從 [工具箱] 移除控制項並重新加入使用上述步驟。
 
 
-<a id="common-issues" class="xliff"></a>
-## 常見的問題
+## <a name="common-issues"></a>常見的問題
     
 - ReportViewer 2016 控制項被為了搭配新式瀏覽器。 如果瀏覽器中呈現網頁 IE 相容性模式中，控制項可能無法運作。 內部網路網站可能需要其中鼓勵轉譯相容性模式中的內部網路頁面 meta 標記，來覆寫設定。
 
@@ -286,13 +274,11 @@ ms.lasthandoff: 06/22/2017
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     ```
       
-<a id="providing-feedback" class="xliff"></a>
-## 提供意見反應
+## <a name="providing-feedback"></a>提供意見反應
 
 可讓小組了解您的控制項會遇到的問題[Reporting Services MSDN 論壇](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=sqlreportingservices)或透過電子郵件在[ RVCFeedback@microsoft.com ](mailto:RVCFeedback@microsoft.com)。
 
-<a id="see-also" class="xliff"></a>
-## 另請參閱
+## <a name="see-also"></a>另請參閱
 
 [2016 ReportingViewer 控制項中的資料收集](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls-data-collection.md)  
 更多問題嗎？ [再試一次 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)

@@ -23,11 +23,10 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: 17effa28932798a3cd35427a0a7104d4aa355b56
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
-# 安裝 Reporting Services SharePoint 模式
-<a id="install-reporting-services-sharepoint-mode" class="xliff"></a>
+# <a name="install-reporting-services-sharepoint-mode"></a>安裝 Reporting Services SharePoint 模式
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../../includes/ssrs-appliesto-not-pbirs.md)]
 
@@ -45,8 +44,7 @@ SQL Server Reporting Services 在 SharePoint 中，啟用報表建立和檢視�
 |**報表伺服器：** 以 SharePoint 模式安裝的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器|報表伺服器處理資料與報表的處理程序、訂閱的呈現方式，以及資料警示處理程序。 SharePoint 模式報表伺服器會設計與安裝為 SharePoint 共用服務。<br /><br /> **如何：** 請使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝媒體來安裝報表伺服器。|  
 |**Add-in:** The [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] add-in for SharePoint products, **rssharepoint.msi**.|增益集會在 SharePoint 網站前端伺服器上，安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 使用者介面 (UI) 頁面與功能。 使用者介面包含 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]、SharePoint 管理中心內的管理頁面、SharePoint 文件庫中使用的功能頁面，以及 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 資料警示頁面。<br /><br /> **如何：**  該增益集可以從 Web 下載或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝媒體安裝。 如需詳細資訊，請參閱 [尋找適用於 SharePoint 產品之 Reporting Services 增益集的位置](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)。|  
   
-## 本節內容
-<a id="in-this-section" class="xliff"></a>  
+## <a name="in-this-section"></a>本節內容  
  [支援的 SharePoint 和 Reporting Services 伺服器與增益集的組合 &#40;SQL Server 2016&#41;](../../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)  
   
  [尋找適用於 SharePoint 產品之 Reporting Services 增益集的位置](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)  
@@ -65,8 +63,7 @@ SQL Server Reporting Services 在 SharePoint 中，啟用報表建立和檢視�
   
  [對 Windows Token 服務 &#40;c2WTS&#41; 和 Reporting Services 的宣告](../../reporting-services/install-windows/claims-to-windows-token-service-c2wts-and-reporting-services.md)  
 
-## 後續的步驟
-<a id="next-steps" class="xliff"></a>
+## <a name="next-steps"></a>後續的步驟
 
  [資料警示架構和工作流程](../../reporting-services/reporting-services-data-alerts.md#AlertingWF)   
  [警示系統管理員的資料警示管理員](../../reporting-services/data-alert-manager-for-alerting-administrators.md)  

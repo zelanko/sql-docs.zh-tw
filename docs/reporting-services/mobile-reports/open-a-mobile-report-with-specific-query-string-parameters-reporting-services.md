@@ -18,7 +18,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 959754e0eb23530cb168098e9404273af9f67bba
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="open-a-mobile-report-with-specific-query-string-parameters--reporting-services"></a>開啟行動報表使用特定的查詢字串參數 |Reporting Services

@@ -19,7 +19,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 2c3031036636e8c2ba2e2a0487ea2092c882c3e0
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="troubleshoot-reporting-services-subscriptions-and-delivery"></a>為 Reporting Services 訂閱與傳遞疑難排解

@@ -1,5 +1,5 @@
 ---
-title: "開啟 SharePoint 追蹤記錄檔的 Reporting Services 事件 (ULS) | Microsoft Docs"
+title: "開啟 SharePoint 追蹤記錄檔 (ULS) Reporting Services 事件 |Microsoft 文件"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -15,15 +15,15 @@ caps.latest.revision: 19
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 45d2f680e35666c9958665ac6c687725c6db0eb4
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 
-# <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>Turn on Reporting Services events for the SharePoint trace log (ULS)
+# <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>開啟 SharePoint 追蹤記錄的 Reporting Services 事件 (ULS)
 
   從 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]開始，SharePoint 模式的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 伺服器可以將 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 事件寫入 SharePoint 統一記錄服務 (ULS) 追蹤記錄。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 特定類別目錄。  
   
@@ -108,7 +108,7 @@ Get-SPDiagnosticConfig
 |本機模式轉譯||  
 |SOAP 用戶端 Proxy||  
 |UI 頁面||  
-|Power View|已寫入 **LogClientTraceEvents** API 中的記錄項目。 這些項目來自於用戶端應用程式，包括 SQL Server Reporting Services 增益集的功能 Power View。<br /><br /> 所有來自於 LogClientTraceEvents API 的記錄項目都會記錄在 “SQL Server Reporting Services” 的 **類別目錄** 和 “Power View” 的 **區域** 之下。<br /><br /> 使用 “Power View” 的區域所記錄的項目內容是由用戶端應用程式所決定。|  
+|Power View|已寫入 **LogClientTraceEvents** API 中的記錄項目。 這些項目來自於用戶端應用程式，包括 Power View 的 SQL Server Reporting Services 增益集功能。<br /><br /> 所有來自於 LogClientTraceEvents API 的記錄項目都會記錄在 “SQL Server Reporting Services” 的 **類別目錄** 和 “Power View” 的 **區域** 之下。<br /><br /> 使用 “Power View” 的區域所記錄的項目內容是由用戶端應用程式所決定。|  
 |報表伺服器警示執行階段||  
 |報表伺服器應用程式定義域管理員||  
 |報表伺服器緩衝回應||  
@@ -116,7 +116,7 @@ Get-SPDiagnosticConfig
 |報表伺服器目錄||  
 |報表伺服器區塊||  
 |報表伺服器清除||  
-|報表伺服器組態管理員|範例項目：<br /><br /> MediumUsing 報表伺服器內部 URL `http://localhost:80/ReportServer`。<br /><br /> UnexpectedMissing 或是無效的 ExtendedProtectionLevel 設定|  
+|報表伺服器組態管理員|範例項目：<br /><br /> MediumUsing 報表伺服器內部 url `http://localhost:80/ReportServer`。<br /><br /> UnexpectedMissing 或是無效的 ExtendedProtectionLevel 設定|  
 |報表伺服器密碼編譯||  
 |報表伺服器資料延伸模組||  
 |報表伺服器資料庫輪詢||  
@@ -146,7 +146,7 @@ Get-SPDiagnosticConfig
 |共用服務|範例項目：<br /><br /> MediumUpdating ReportingWebServiceApplication<br /><br /> MediumGranting 對內容資料庫的存取。<br /><br /> ReportingWebServiceApplication 的 MediumProvisioning 執行個體<br /><br /> ReportingWebServiceApplication 的 MediumProcessing 服務帳戶變更<br /><br /> MediumSetting 資料庫權限。|  
   
 ##  <a name="bkmk_powershell"></a> 利用 PowerShell 檢視記錄檔  
- ![PowerShell 相關內容](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 相關內容")您可以使用 PowerShell 從 ULS 記錄檔傳回 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 相關事件的清單。 從 SharePoint 2010 管理命令介面輸入下列命令，從包含 "**sql server reporting services**" 的 ULS 記錄檔 UESQL11SPOINT-20110606-1530.log 傳回已篩選過的資料列清單：  
+ ![PowerShell 相關內容](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 相關內容")您可以使用 PowerShell 來傳回一份[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]相關事件的 ULS 記錄檔。 從 SharePoint 2010 管理命令介面輸入下列命令，從包含 "**sql server reporting services**" 的 ULS 記錄檔 UESQL11SPOINT-20110606-1530.log 傳回已篩選過的資料列清單：  
   
 ```  
 Get-content -path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\LOGS\UESQL11SPOINT-20110606-1530.log" | select-string "sql server reporting services”  

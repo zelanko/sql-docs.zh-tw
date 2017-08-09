@@ -23,12 +23,11 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: 507c09d09f22f8326898b557997bc109785f30c0
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 
-# 支援的 SharePoint 與 Reporting Services 伺服器組合
-<a id="supported-combinations-of-sharepoint-and-reporting-services-server" class="xliff"></a>
+# <a name="supported-combinations-of-sharepoint-and-reporting-services-server"></a>支援的 SharePoint 與 Reporting Services 伺服器組合
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../../includes/ssrs-appliesto-not-pbirs.md)]
 
@@ -39,13 +38,11 @@ ms.lasthandoff: 07/03/2017
 > [!NOTE]
 > SQL Server 2016 之後已無法再使用 reporting Services 與 SharePoint 整合。
 
-## 支援的 SharePoint 與 Reporting Services 元件組合
-<a id="supported-combinations-of-sharepoint-and-reporting-services-components" class="xliff"></a>
+## <a name="supported-combinations-of-sharepoint-and-reporting-services-components"></a>支援的 SharePoint 與 Reporting Services 元件組合
 
  下表摘要說明支援的報表伺服器、適用 SharePoint 產品的 Reporting Services 增益集，以及 SharePoint 產品的組合。 未列在下表中的組合不受支援
 
-### 支援的組合
-<a id="supported-combinations" class="xliff"></a>
+### <a name="supported-combinations"></a>支援的組合
 
 ||報表伺服器|增益集|SharePoint 版本|
 |-|-------------------|-------------|------------------------|
@@ -83,8 +80,7 @@ ms.lasthandoff: 07/03/2017
 
 - **升級：** 已安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 增益集的 SharePoint 2010 無法就地升級至 SharePoint 2013。 SharePoint 2013 需要 SQL Server 2012 SP1 或更新版本的[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]增益集和報表伺服器。 如需升級的詳細資訊，請參閱 [升級和移轉 Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)。
 
-## 後續的步驟
-<a id="next-steps" class="xliff"></a>
+## <a name="next-steps"></a>後續的步驟
 
  [尋找適用於 SharePoint 產品之 Reporting Services 增益集的位置](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)   
  [SQL Server 2016 版本支援的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)   

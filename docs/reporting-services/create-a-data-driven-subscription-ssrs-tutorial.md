@@ -24,7 +24,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7ca542c75d289b79284c5affeea5095ac032e1e0
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>建立資料驅動訂閱 (SSRS 教學課程)

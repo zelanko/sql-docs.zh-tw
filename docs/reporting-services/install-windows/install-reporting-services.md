@@ -20,11 +20,10 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: 9d336624d3a9468757363bc468e5cd85d607cbfd
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
-# 安裝 Reporting Services
-<a id="install-reporting-services" class="xliff"></a>
+# <a name="install-reporting-services"></a>安裝 Reporting Services
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 
@@ -50,8 +49,7 @@ SQL Server Reporting Services 安裝牽涉到儲存報表項目、 轉譯報表�
 > [!NOTE]
 > SQL Server 2016 不含 SQL Server Data Tools (SSDT)。 [下載 SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714)。
 
-## 後續的步驟
-<a id="next-steps" class="xliff"></a>
+## <a name="next-steps"></a>後續的步驟
 
 [支援的 SharePoint 和 Reporting Services 伺服器與增益集的組合](../../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)  
 [升級和移轉 Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)  

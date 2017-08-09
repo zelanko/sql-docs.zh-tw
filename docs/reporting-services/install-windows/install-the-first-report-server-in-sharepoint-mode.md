@@ -19,7 +19,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 664bf6ff099454060779ff19dd4e07b48acf6d2c
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="install-the-first-report-server-in-sharepoint-mode"></a>在 SharePoint 模式中安裝第一部報表伺服器

@@ -19,7 +19,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5360240569fcffe5f9708f68d7f95403e45c0909
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="add-or-delete-a-group-in-a-chart-report-builder-and-ssrs"></a>在圖表中加入或刪除群組 (報表產生器及 SSRS)

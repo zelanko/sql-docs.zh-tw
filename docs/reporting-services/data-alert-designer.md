@@ -26,11 +26,10 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: 10ec05b662839e5cf2aac0d756d7ae581bdf8de9
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
-# 資料警示設計工具
-<a id="data-alert-designer" class="xliff"></a>
+# <a name="data-alert-designer"></a>資料警示設計工具
 
 [!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
 
@@ -68,8 +67,7 @@ ms.lasthandoff: 07/03/2017
  ![在警示設計工具使用者介面中的區域](../reporting-services/media/rs-alertdesigner.gif "警示設計工具使用者介面中的區域")  
   
   
-### 警示資料
-<a id="alert-data" class="xliff"></a>  
+### <a name="alert-data"></a>警示資料  
  當您開啟 [資料警示設計工具] 時，該工具會從報表產生並提供所有資料摘要，而 [報表資料名稱] 下拉式清單中會包含摘要的名稱。 資料摘要是在您建立警示定義時於記憶體中快取，而顯示資料摘要資料的資料表會在您於資料摘要之間切換以探索報表資料時迅速填入。  
   
  建立資料警示定義的第一個步驟，就是選取包含您要讓警示監視之資料的報表資料摘要。 報表可以不包含任何資料摘要，或是包含多個資料摘要。 如果報表沒有任何資料摘要，則無法為其建立警示。 資料摘要可以由任何資料區產生，包括所有類型的圖表、量測計、指標，以及資料表、矩陣和清單。  
@@ -82,14 +80,12 @@ ms.lasthandoff: 07/03/2017
   
  某些報表會有數百萬個資料列的資料。 資料表只會顯示摘要中前 100 個資料列的資料。  
   
-### 警示名稱
-<a id="alert-name" class="xliff"></a>  
+### <a name="alert-name"></a>警示名稱  
  根據預設，警示定義與報表的名稱相同。 您可以將警示名稱變更為更有意義的名稱。 這樣更方便您管理警示，判斷哪些警示需要更新、刪除等。  
   
  您可以在報表上建立多個警示。 雖然您可以擁有多個相同名稱的警示定義，不過建議您使用唯一的警示名稱。 這樣更方便您區分及管理警示定義。 您可以在 [資料警示管理員] 中檢視您建立之所有警示的清單。 如需詳細資訊，請參閱 [警示系統管理員的資料警示管理員](../reporting-services/data-alert-manager-for-alerting-administrators.md) 和 [在資料警示管理員中管理我的資料警示](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md)。  
   
-### 規則和子句
-<a id="rules-and-clauses" class="xliff"></a>  
+### <a name="rules-and-clauses"></a>規則和子句  
  資料變更的範圍和警示規則會定義觸發警示的資料變更。 資料變更的範圍如下：  
   
 -   **任何資料**- 至少有一個資料值符合條件所指定的規則。  
@@ -160,8 +156,7 @@ ms.lasthandoff: 07/03/2017
   
  規則和子句包含在資料警示訊息中。  
   
-### 排程設定
-<a id="schedule-settings" class="xliff"></a>  
+### <a name="schedule-settings"></a>排程設定  
  您為資料警示定義的排程會定義傳送資料警示訊息的循環模式，以及何時開始和停止傳送警示訊息。 模式包括：一次、分鐘、每天和每週。 雖然警示只有一項排程，但是您可以使用這些間隔建立符合大部分商務需要的複雜循環模式。 以下範例為排程中常用的循環模式：  
   
 -   **每隔 10 天** - 每隔 10 天傳送警示一次。  
@@ -179,8 +174,7 @@ ms.lasthandoff: 07/03/2017
 > [!IMPORTANT]  
 >  除非業務上有重要的理由，否則建議您不要使用頻率高於每天一次的循環模式。 不支援即時處理資料警示定義。 處理資料警示定義的頻率過高，會影響報表伺服器和整體 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 部署的效能。  
   
-### 電子郵件設定
-<a id="email-settings" class="xliff"></a>  
+### <a name="email-settings"></a>電子郵件設定  
  您可在 [收件者] 選項中指定要接收資料警示訊息電子郵件之收件者的電子郵件地址。 多個電子郵件是以分號分隔，與 Microsoft Office Outlook 電子郵件中的方式相同。 您也可以指定通訊群組做為收件者，如此可讓管理收件者清單的工作更容易且更有效率。 如果建立警示定義時，SharePoint 可以判斷您的電子郵件地址，則您的電子郵件地址會自動加入收件者清單，否則您就必須明確將自己加入為收件者。  
   
  電子郵件的預設主旨是**資料警示的\<警示名稱 >**。 您可以依需要變更主旨。  
@@ -223,8 +217,7 @@ ms.lasthandoff: 07/03/2017
   
 -   [在資料警示設計工具中建立資料警示](../reporting-services/create-a-data-alert-in-data-alert-designer.md)  
 
-## 請參閱＜
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>請參閱＜
 
 [Reporting Services 資料警示](../reporting-services/reporting-services-data-alerts.md)   
 [警示系統管理員的資料警示管理員](../reporting-services/data-alert-manager-for-alerting-administrators.md)  

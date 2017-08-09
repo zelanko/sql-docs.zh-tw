@@ -21,7 +21,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 957ddf233fbbf41f468f8c981c3e8303a3672d9b
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="sharepoint-list-query-designer-report-builder"></a>SharePoint 清單查詢設計工具 (報表產生器)

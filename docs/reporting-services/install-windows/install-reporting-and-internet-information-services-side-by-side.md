@@ -20,12 +20,11 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: f7e12ebcec8e06828430e10c377205e2421f50f4
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 
-# 安裝 Reporting 和 Internet Information Services 來並行
-<a id="install-reporting-and-internet-information-services-side-by-side" class="xliff"></a>
+# <a name="install-reporting-and-internet-information-services-side-by-side"></a>安裝 Reporting 和 Internet Information Services 來並行
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
@@ -37,8 +36,7 @@ ms.lasthandoff: 07/03/2017
 |-----------------|------------|-----------------|  
 |8.0, 8.5|適用於某個應用程式的要求被不同的應用程式所接受。<br /><br /> HTTP.SYS 會針對 URL 保留項目強制執行優先順序規則。 如果 URL 保留項目比另一個應用程式的 URL 保留項目更弱，傳送至具有相同虛擬目錄名稱而且共同監視通訊埠 80 之應用程式的要求可能無法送達預期的目標。|在特定條件底下，在 URL 保留項目配置中取代另一個 URL 端點的已註冊端點可能會收到適用於其他應用程式的 HTTP 要求。<br /><br /> 針對報表伺服器 Web 服務和 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] 使用唯一的虛擬目錄名稱可協助您避免這項衝突。<br /><br /> 本主題將提供有關這個狀況的詳細資訊。|  
   
-## URL 保留項目的優先順序規則
-<a id="precedence-rules-for-url-reservations" class="xliff"></a>  
+## <a name="precedence-rules-for-url-reservations"></a>URL 保留項目的優先順序規則  
  在您處理 IIS 與 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]之間的互通性問題之前，必須了解 URL 保留項目的優先順序規則。 優先順序規則可以歸納成為下列陳述式：具有更多明確定義值的 URL 保留項目會優先接收符合此 URL 的要求。  
   
 -   指定虛擬目錄的 URL 保留項目會比省略虛擬目錄的 URL 保留項目更明確。  
@@ -59,8 +57,7 @@ ms.lasthandoff: 07/03/2017
   
  發生連接埠衝突的其中一個指標是，您將會看到下列錯誤訊息：「System.IO.FileLoadException: 由於已有另一個處理序正在使用該檔案，所以無法存取該檔案。 (來自 HRESULT 的例外狀況: 0x80070020)。」  
   
-## IIS 8.0、 8.5 與 SQL Server Reporting Services URL 保留項目
-<a id="url-reservations-for-iis-80-85-with-sql-server-reporting-services" class="xliff"></a>  
+## <a name="url-reservations-for-iis-80-85-with-sql-server-reporting-services"></a>IIS 8.0、 8.5 與 SQL Server Reporting Services URL 保留項目  
  根據上一節所描述的優先順序規則，您可以開始了解針對 Reporting Services 和 IIS 所定義的 URL 保留項目如何提升互通性。 Reporting Services 會接收明確指定其應用程式之虛擬目錄名稱的要求。IIS 會接收所有其餘要求，然後您可以將這些要求導向至 IIS 處理模型內部執行的應用程式。  
   
 |應用程式|URL 保留項目|描述|要求接收|  
@@ -69,8 +66,7 @@ ms.lasthandoff: 07/03/2017
 |入口網站|`http://+:80/Reports`|通訊埠 80 的強式萬用字元，以及 Reports 虛擬目錄。|在通訊埠 80 上接收指定 Reports 虛擬目錄的所有要求。 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]接收所有要求 http://\<電腦名稱 > /。|  
 |IIS|`http://*:80/`|通訊埠 80 的弱式萬用字元。|在通訊埠 80 上接收其他應用程式未接收的任何其餘要求。|  
 
-## SQL Server Reporting services IIS 8.0、 8.5 上的-並存部署
-<a id="side-by-side-deployments-of-sql-server-reporting-services-on-iis-80-85" class="xliff"></a>
+## <a name="side-by-side-deployments-of-sql-server-reporting-services-on-iis-80-85"></a>SQL Server Reporting services IIS 8.0、 8.5 上的-並存部署
 
  當 IIS 網站的虛擬目錄名稱與 Reporting Services 所使用的虛擬目錄名稱完全相同時，IIS 與 Reporting Services 之間就會發生互通性問題。 例如，假設您有下列組態：  
   
@@ -88,8 +84,7 @@ ms.lasthandoff: 07/03/2017
   
 -   針對手動設定的安裝，請在設定的 URL 中採用預設命名慣例。 如果您將 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 安裝成具名執行個體，請在建立虛擬目錄時加入執行個體名稱。  
 
-## 後續的步驟
-<a id="next-steps" class="xliff"></a>
+## <a name="next-steps"></a>後續的步驟
 
 [設定報表伺服器 Url](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
 [設定 URL](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   

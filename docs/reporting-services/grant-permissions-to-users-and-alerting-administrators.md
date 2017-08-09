@@ -19,7 +19,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 91700c92ed7f96e00ba05d7ee9ca96590d0a4837
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="grant-permissions-to-users-and-alerting-administrators"></a>將權限授與使用者及警示管理員

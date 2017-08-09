@@ -1,5 +1,5 @@
 ---
-title: "教學課程：運算式簡介 | Microsoft Docs"
+title: "教學課程： 運算式簡介 |Microsoft 文件"
 ms.custom: 
 ms.date: 09/16/2016
 ms.prod: sql-server-2016
@@ -16,11 +16,11 @@ caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 97b19aaffd06a196d3cbd39e44b49c971a146edf
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="tutorial-introducing-expressions"></a>教學課程：運算式簡介
@@ -47,11 +47,11 @@ ms.lasthandoff: 08/03/2017
   
 ### <a name="to-create-a-table-report"></a>建立資料表報表  
   
-1.  從您的電腦、[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] Web 入口網站或 SharePoint 整合模式[啟動報表產生器](../reporting-services/report-builder/start-report-builder.md)。  
+1.  從您的電腦、[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 入口網站或 SharePoint 整合模式[啟動報表產生器](../reporting-services/report-builder/start-report-builder.md)。  
   
     [新報表或資料集] 對話方塊隨即開啟。  
   
-    如果您看不到 [新增報表或資料集] 對話方塊，請按一下 [檔案] 功能表 > [新增]。  
+    如果未顯示 [新報表或資料集] 對話方塊，請按一下 [檔案] 功能表 > [新增]。  
   
 2.  在左窗格中，確認已選取 **[新增報表]** 。  
   
@@ -62,7 +62,7 @@ ms.lasthandoff: 08/03/2017
 6.  在 **[選擇與資料來源的連接]** 頁面上，選取類型為 **[SQL Server]**的資料來源。 請從清單中選取資料來源，或者瀏覽到報表伺服器再進行選取。  
 
     > [!NOTE]  
-    > 只要您有適當的權限，選擇哪一種資料來源都無關緊要。 因為您不會從資料來源取得資料。 如需詳細資訊，請參閱[取得資料連線的替代方式 &#40;報表產生器&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)。  
+    > 只要您有適當的權限，選擇哪一種資料來源都無關緊要。 因為您不會從資料來源取得資料。 如需詳細資訊，請參閱[取得資料連接的替代方式 &#40;報表產生器&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)。  
   
 7.  按一下 **[下一步]**。  
   
@@ -97,13 +97,13 @@ ms.lasthandoff: 08/03/2017
     ```  
 
   
-10. 在查詢設計工具工具列上，按一下 **[執行]**\(**!**)。 結果集會顯示 23 個資料列，包括下列資料行：FirstName、LastName、StateProvince、CountryRegionID、Gender、YTDPurchase 和 LastPurchase。  
+10. 在查詢設計工具工具列上，按一下 [執行] (**!**)。 結果集會顯示 23 個資料列，包括下列資料行：FirstName、LastName、StateProvince、CountryRegionID、Gender、YTDPurchase 和 LastPurchase。  
 
     ![report-builder-expression-tutorial-query-as-text](../reporting-services/media/report-builder-expression-tutorial-query-as-text.png)
   
 11. 按一下 **[下一步]**。  
   
-12. 在 [排列欄位] 頁面上，依指定的順序將下列欄位從 [可用的欄位] 清單拖曳至 [值] 清單。  
+12. 在 [排列欄位] 頁面上，依指定的順序從 [可用的欄位] 清單將下列欄位拖曳至 [值] 清單。  
   
     -   StateProvince   
     -   CountryRegionID  
@@ -112,11 +112,11 @@ ms.lasthandoff: 08/03/2017
   
     由於 CountryRegionID 和 YTDPurchase 包含數值資料，因此預設會套用 SUM 彙總，但您不想要它們是加總。  
    
-13. 以滑鼠右鍵按一下 [值] 清單中的 [CountryRegionID]，然後清除 [加總] 核取方塊。  
+13. 以滑鼠右鍵按一下 [值] 清單中的 **CountryRegionID**，然後清除 [加總] 核取方塊。  
   
     [加總] 不再套用至 CountryRegionID。  
   
-14. 以滑鼠右鍵按一下 [值] 清單中的 [YTDPurchase]，然後按一下 [加總] 選項。  
+14. 以滑鼠右鍵按一下 [值] 清單中的 **YTDPurchase**，然後按一下 [加總] 選項。  
   
     [加總] 不再套用至 YTDPurchase。  
     
@@ -138,7 +138,7 @@ ms.lasthandoff: 08/03/2017
   
 2.  以滑鼠右鍵按一下 **DataSource1**，然後按一下 [資料來源屬性]。  
   
-3.  在 [名稱] 方塊中，鍵入 **ExpressionsDataSource**。  
+3.  在 [名稱] 方塊中，輸入 **ExpressionsDataSource**。  
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -163,7 +163,7 @@ ms.lasthandoff: 08/03/2017
     
     ![report-builder-expression-tutorial-insert-column](../reporting-services/media/report-builder-expression-tutorial-insert-column.png) 
   
-2.  按一下新資料行的標頭，並輸入 **名稱**。  
+2.  按一下新資料行的標頭，並輸入**名稱**。  
   
 3.  以滑鼠右鍵按一下 [名稱] 資料行的資料格，然後按一下 [運算式]。  
 
@@ -171,7 +171,7 @@ ms.lasthandoff: 08/03/2017
   
 4.  在 [運算式] 對話方塊中，展開 [一般函數]，並按一下 [文字]。  
   
-5.  在 [項目] 清單中，按兩下 [左方]。  
+5.  在 [項目] 清單中，按兩下 [Left]。  
   
     **Left** 函數隨即新增至運算式中。  
     
@@ -185,7 +185,7 @@ ms.lasthandoff: 08/03/2017
   
     此運算式會從 **FirstName** 值中擷取一個字元 (從左邊算起)。  
   
-9. 鍵入 **&". "&**  
+9. 輸入 **&". "&**  
 
     如此會在運算式之後新增句號和空格。
   
@@ -206,7 +206,7 @@ ms.lasthandoff: 08/03/2017
   
 1.  按一下 **[設計]** 返回 [設計] 檢視。  
   
-2.  選取 [上次購買] 資料行中的資料格，然後在 [主資料夾] 索引標籤 > [數字] 區段中，選取 [日期]。  
+2.  選取 [上次購買] 資料行中的資料格，然後在 [首頁] 索引標籤 > [數字] 區段中，選取 [日期]。  
 
     ![report-builder-expression-tutorial-date-format](../reporting-services/media/report-builder-expression-tutorial-date-format.png)
   
@@ -218,13 +218,13 @@ ms.lasthandoff: 08/03/2017
   
 ### <a name="to-format-the-currency-column"></a>格式化貨幣資料行
 
-- 選取 [YTDPurchase] 資料行中的資料格，然後在 [數字] 區段中，選取 [貨幣符號]。
+- 選取 [YTDPurchase] 資料行中的資料格，然後在 [數字] 區段中，選取 [貨幣]。
  
 ### <a name="to-format-the-column-headers"></a>格式化資料行標頭
 
 1. 選取資料行標頭的資料列。
 
-2. 在 [主資料夾] 索引標籤 > [段落] 區段中，選取 [左方]。 
+2. 在 [首頁] 索引標籤 > [段落] 區段中，選取 [左方]。 
 
     ![report-builder-expression-tutorial-format-headings](../reporting-services/media/report-builder-expression-tutorial-format-headings.png)
 
@@ -245,7 +245,7 @@ ms.lasthandoff: 08/03/2017
   
 1.  以滑鼠右鍵按一下 [名稱] 資料行，指向 [插入資料行]，然後按一下 [左方]。  
   
-    新資料行就會新增至 **名稱** 資料行的左方。  
+    新資料行就會新增在 [名稱] 資料行的左方。  
   
 2.  按一下新資料行的標頭，並輸入 **M/F**。  
   
@@ -257,7 +257,7 @@ ms.lasthandoff: 08/03/2017
      
      ![report-builder-expression-tutorial-insert-rectangle](../reporting-services/media/report-builder-expression-tutorial-insert-rectangle.png)
   
-2. 拖曳 [M/F] 和 [名稱] 之間的資料行分隔線，讓 [M/F] 資料行變得較窄。
+2. 拖曳 [M/F] 和 [名稱] 之間的資料行分隔線，讓 [M/F] 資料行較窄。
 
     ![report-builder-expression-tutorial-narrow-column](../reporting-services/media/report-builder-expression-tutorial-narrow-column.png)
   
@@ -265,7 +265,7 @@ ms.lasthandoff: 08/03/2017
   
 1.  在 [M/F] 資料行的資料格中，以滑鼠右鍵按一下矩形，然後按一下 [矩形屬性]。  
   
-2.  在 [矩形屬性] 對話方塊 > [填滿] 索引標籤中，按一下 [填滿色彩] 旁邊的 [運算式 **fx**] 按鈕。  
+2.  在 [矩形屬性] > [填滿] 索引標籤中，按一下 [填滿色彩] 旁邊的運算式 **fx** 按鈕。  
   
 3.  在 [運算式] 對話方塊中，展開 [一般函數]，並按一下 [程式流程]。  
   
@@ -277,25 +277,25 @@ ms.lasthandoff: 08/03/2017
   
 7.  輸入 **="Male",** (包括逗號)。
 
-8. 在 [類別目錄] 清單中，按一下 [常數]，然後在 [值] 方塊中，按一下 [矢菊花藍]。
+8. 在 [類別] 清單中，按一下 [常數]，然後在 [值] 方塊中，按一下 [矢菊花藍]。
 
     ![report-builder-expression-tutorial-color-expression-cornflower-blue](../reporting-services/media/report-builder-expression-tutorial-color-expression-cornflower-blue.png)
 
 9. 在它後面輸入一個逗號。 
   
-5.  在 [類別目錄] 清單中，按一下 [欄位 (運算式)]，然後在 [值] 清單中，再按兩下 [性別]。  
+5.  在 [類別] 清單中，按一下 [欄位 (運算式)]，然後在 [值] 清單中，再按兩下 [Gender]。  
   
 7.  輸入 **="Female",** (包括逗號)。 
 
-8. 在 [類別目錄] 清單中，按一下 [常數]，然後在 [值] 方塊中，按一下 [蕃茄紅]。
+8. 在 [類別] 清單中，按一下 [常數]，然後在 [值] 方塊中，按一下 [蕃茄紅]。
 
-13. 在它之後輸入右括號 **)** 。 
+13. 在它之後輸入右括號 **)**。 
   
     完成的運算式為： `=Switch(Fields!Gender.Value ="Male", "CornflowerBlue",Fields!Gender.Value ="Female","Tomato")`  
     
     ![report-builder-expression-tutorial-color-expression-complete](../reporting-services/media/report-builder-expression-tutorial-color-expression-complete.png)
   
-12. 按一下 [確定]，再按一下 [確定] 以關閉 [矩形屬性] 對話方塊。  
+12. 按一下 [確定]，然後再按一下 [確定] 以關閉 [矩形屬性] 對話方塊。  
   
 14. 按一下 **[執行]** 預覽報表。  
 
@@ -313,7 +313,7 @@ ms.lasthandoff: 08/03/2017
     
     ![report-builder-expression-tutorial-format-m-f-column](../reporting-services/media/report-builder-expression-tutorial-format-m-f-column.png)
 
-18. 按一下 [執行] 來重新預覽報表。 這次色彩區塊周圍有空白。
+18. 按一下 [執行] 再次預覽報表。 這次色彩區塊周圍有空白。
 
     ![report-builder-expression-tutorial-preview-formatted-m-f-column](../reporting-services/media/report-builder-expression-tutorial-preview-formatted-m-f-column.png)  
   
@@ -326,13 +326,13 @@ ms.lasthandoff: 08/03/2017
   
 2.  在 [報表資料] 窗格中，按一下 [新增]，然後按一下 [資料集]。  
   
-3.  在 [資料集屬性] 中，按一下 [使用內嵌在報表中的資料集]。  
+3.  在 * * 資料集的內容，然後按一下**使用內嵌在我的報表中的資料集**。  
   
 4.  在 [資料來源] 清單中，選取 ExpressionsDataSource。  
   
-5.  在 [名稱] 方塊中，鍵入 **CountryRegion**  
+5.  在 [名稱] 方塊中，輸入 **CountryRegion**。  
   
-6.  驗證已選取 [文字] 查詢類型，並按一下 [查詢設計工具]。  
+6.  確認已選取 [文字] 查詢類型，並且按一下 [查詢設計工具]。  
   
 7.  按一下 **[當成文字編輯]**。  
   
@@ -353,7 +353,7 @@ ms.lasthandoff: 08/03/2017
     UNION SELECT 12 AS ID, 'United Kingdom' AS CountryRegion  
     ```  
   
-9. 按一下 **[執行]** (**!**) 來執行查詢。  
+9. 按一下 [執行] (**!**) 來執行查詢。  
   
     查詢結果為國家/地區識別碼和名稱。  
   
@@ -365,7 +365,7 @@ ms.lasthandoff: 08/03/2017
   
 ### <a name="to-look-up-values-in-the-countryregion-dataset"></a>若要查閱 CountryRegion 資料集中的值  
   
-1.  按一下 [國家/地區 ID] 資料行標題，並刪除文字：**ID**，變成 [國家/地區]。  
+1.  按一下 [國家/地區 ID] 資料行標頭，並刪除文字 [ID]，使它成為 [國家/地區]。  
   
 2.  以滑鼠右鍵按一下 [國家/地區] 資料行的資料格，然後按一下 [運算式]。  
   
@@ -375,7 +375,7 @@ ms.lasthandoff: 08/03/2017
   
 4.  在 [運算式] 對話方塊中，展開 [一般函數]，並按一下 [其他]，在 [項目] 清單中，按兩下 [Lookup]。  
   
-6.  在 [類別目錄] 清單中，按一下 [欄位 (運算式)]，然後在 [值] 清單中，按兩下 [CountryRegionID]。  
+6.  在 [類別] 清單中，按一下 [欄位 (運算式)]，然後在 [值] 清單中，按兩下 [CountryRegionID]。  
   
 8.  將游標放在緊接 `CountryRegionID.Value`, and type **,Fields!ID.value, Fields!CountryRegion.value, "CountryRegion")**之後  
   
@@ -398,7 +398,7 @@ ms.lasthandoff: 08/03/2017
   
     新資料行就會新增至 [上次購買] 資料行的右方。  
   
-3.  在資料行標頭中，輸入 **天前**。  
+3.  在資料行標頭中，輸入**天前**。  
   
 4.  以滑鼠右鍵按一下 [天前] 資料行的資料格，然後按一下 [運算式]。  
   
@@ -406,13 +406,13 @@ ms.lasthandoff: 08/03/2017
   
 6.  在 [項目] 清單中，按兩下 [DateDiff]。  
   
-7.  緊接在 `DateDiff(`之後，輸入 **"d",** (包括引號 "" 和逗號)。 
+7.  緊接在 `DateDiff(` 之後，輸入 **"d",** (包括引號 "" 和逗號)。 
   
-9. 在 [類別目錄] 清單中，按一下 [欄位 (運算式)]，然後在 [值] 清單中，按兩下 [LastPurchase]。  
+9. 在 [類別] 清單中，按一下 [欄位 (運算式)]，然後在 [值] 清單中，按兩下 [LastPurchase]。  
   
-11. 緊接在 `Fields!LastPurchase.Value`之後，輸入 **,** (逗號)。 
+11. 緊接在 `Fields!LastPurchase.Value` 之後，輸入 **,** (逗號)。 
   
-13. 在 [類別目錄] 清單中，再按一下 [日期和時間]，然後在 [項目] 清單中，按兩下 [現在]。  
+13. 在 [類別] 清單中，再按一下 [日期和時間]，然後在 [項目] 清單中，按兩下 [Now]。  
   
     > [!WARNING]  
     > 在生產報表中，不應該在隨報表轉譯而評估多次的運算式中使用 **Now** 函數 (例如，報表的詳細資料列)。 **Now** 的值會依資料列而改變，而不同的值會影響運算式的評估結果，導致結果稍微不一致。 因此，請改用 `ExecutionTime` 提供的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 全域變數。  
@@ -430,7 +430,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="Indicator"></a>7.使用指標顯示銷售比較  
 在本節中，您會新增資料行，並使用指標顯示某人今年到目前 (YTD) 的購買為高於或低於平均 YTD 購買。 **Round** 函數會移除值的小數。  
   
-設定指標和其狀態需要許多步驟。 您可以跳過「設定指標」程序，再從本教學課程將完成的運算式複製/貼上至 [運算式] 對話方塊中。  
+設定指標和其狀態需要許多步驟。 您要的話，可以略過「設定指標」程序，再從本教學課程將完成的運算式複製/貼上至 [運算式] 對話方塊中。  
   
 ### <a name="to-add-the--or---avg-sales-column"></a>若要加入平均銷售增減資料行  
   
@@ -438,7 +438,7 @@ ms.lasthandoff: 08/03/2017
   
     新資料行就會新增至 [YTD 購買] 資料行的右方。  
   
-2.  按一下資料行標頭，並輸入 **平均銷售增減**。  
+2.  按一下資料行標頭，並輸入**平均銷售增減**。  
   
 ### <a name="to-add-an-indicator"></a>若要加入指標  
   
@@ -456,19 +456,19 @@ ms.lasthandoff: 08/03/2017
   
 1.  以滑鼠右鍵按一下指標，按一下 [指標屬性]，然後按一下 [值和狀態]。  
   
-2.  按一下 [值] 文字方塊旁邊的 [運算式 fx] 按鈕。  
+2.  按一下 [值] 文字方塊旁邊的運算式 **fx** 按鈕。  
   
 3.  在 [運算式] 對話方塊中，展開 [一般函數]，並按一下 [數學]。  
   
 4.  在 [項目] 清單中，按兩下 [Round]。  
   
-5.  在 [類別目錄] 清單中，按一下 [欄位 (運算式)]，然後在 [值] 清單中，按兩下 [YTDPurchase]。  
+5.  在 [類別] 清單中，按一下 [欄位 (運算式)]，然後在 [值] 清單中，按兩下 [YTDPurchase]。  
   
-7.  緊接在 `Fields!YTDPurchase.Value`之後，輸入  **-** (減號)。 
+7.  緊接在 `Fields!YTDPurchase.Value` 之後，輸入 **-** (減號)。 
   
 9. 再次展開 [一般函數]、按一下 [彙總]，然後在 [項目] 清單中，按兩下 [Avg]。  
   
-11. 在 [類別目錄] 清單中，按一下 [欄位 (運算式)]，然後在 [值] 清單中，按兩下 [YTDPurchase]。  
+11. 在 [類別] 清單中，按一下 [欄位 (運算式)]，然後在 [值] 清單中，按兩下 [YTDPurchase]。  
   
 13. 緊接在 `Fields!YTDPurchase.Value`之後，輸入 **, "Expressions"))**  
   
@@ -486,13 +486,13 @@ ms.lasthandoff: 08/03/2017
   
 19. 在 [項目] 清單中，按兩下 [Round]。  
   
-20. 在 [類別目錄] 清單中，按一下 [欄位 (運算式)]，然後在 [值] 清單中，按兩下 [YTDPurchase]。  
+20. 在 [類別] 清單中，按一下 [欄位 (運算式)]，然後在 [值] 清單中，按兩下 [YTDPurchase]。  
   
-22. 緊接在 `Fields!YTDPurchase.Value`之後，輸入  **-** (減號)。 
+22. 緊接在 `Fields!YTDPurchase.Value` 之後，輸入 **-** (減號)。 
   
 24. 再次展開 [一般函數]、按一下 [彙總]，然後在 [項目] 清單中，按兩下 [Avg]。  
   
-26. 在 [類別目錄] 清單中，按一下 [欄位 (運算式)]，然後在 [值] 清單中，按兩下 [YTDPurchase]。  
+26. 在 [類別] 清單中，按一下 [欄位 (運算式)]，然後在 [值] 清單中，按兩下 [YTDPurchase]。  
   
 28. 緊接在 `Fields!YTDPurchase.Value` 之後，輸入 **, "Expressions")) < 0**  
   
@@ -512,7 +512,7 @@ ms.lasthandoff: 08/03/2017
   
 34. 按一下 [結束] 值的文字方塊右邊的 **fx** 按鈕。  
   
-35. 在 [運算式] 對話方塊中，刪除 **100** 然後建立運算式：`=Round(Fields!YTDPurchase.Value - Avg(Fields!YTDPurchase.Value, "Expressions")) >0`  
+35. 在**運算式**對話方塊中，刪除**100**和建立運算式：`=Round(Fields!YTDPurchase.Value - Avg(Fields!YTDPurchase.Value, "Expressions")) >0`  
   
 36. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -535,7 +535,7 @@ ms.lasthandoff: 08/03/2017
   
     **[報表參數屬性]** 對話方塊隨即開啟。  
   
-3.  在 [提示] 中，鍵入**選擇色彩**  
+3.  在 [提示] 中，輸入**選擇色彩**。  
   
 4.  在 [名稱] 中，輸入 **RowColor**。  
   
@@ -543,25 +543,25 @@ ms.lasthandoff: 08/03/2017
   
 7.  按一下 **[加入]**。  
   
-8.  在 [標籤] 方塊中，鍵入 **Yellow**  
+8.  在 [標籤] 方塊中，輸入 **Yellow**。  
   
 9. 在 [值] 方塊中，輸入 **Yellow**。  
   
 10. 按一下 **[加入]**。  
   
-11. 在 [標籤] 方塊中，鍵入 **Green**  
+11. 在 [標籤] 方塊中，輸入 **Green**。  
   
-12. 在 [值] 方塊中，鍵入 **PaleGreen**  
+12. 在 [值] 方塊中，輸入 **PaleGreen**。  
   
 13. 按一下 **[加入]**。  
   
-14. 在 [標籤] 方塊中，鍵入 **Blue**  
+14. 在 [標籤] 方塊中，輸入 **Blue**。  
   
-15. 在 [值] 方塊中，鍵入 **LightBlue**  
+15. 在 [值] 方塊中，輸入 **LightBlue**。  
   
 16. 按一下 **[加入]**。  
   
-17. 在 [標籤] 方塊中，鍵入 **Pink**  
+17. 在 [標籤] 方塊中，輸入 **Pink**。  
   
 18. 在 [值] 方塊中，輸入 **Pink**。  
 
@@ -571,7 +571,7 @@ ms.lasthandoff: 08/03/2017
   
 ### <a name="to-apply-alternating-colors-to-detail-rows"></a>若要套用交替色彩至詳細資料列  
   
-1.   選取資料列中所有儲存格，但 [M/F] 資料行中的儲存格除外，它有自己的背景色彩。  
+1.   選取在資料列中所有儲存格，但 [M/F] 資料行中的儲存格除外，它有自己的背景色彩。  
 
      ![report-builder-expression-tutorial-select-banded](../reporting-services/media/report-builder-expression-tutorial-select-banded.png)
   
@@ -579,7 +579,7 @@ ms.lasthandoff: 08/03/2017
 
      如果看不到 [屬性] 窗格，請在 [檢視] 索引標籤上選取 [屬性] 方塊。  
   
-    如果 [屬性] 窗格中依類別列出屬性，則您會在 **Misc** 類別中發現 **BackgroundColor** 。  
+    如果 [屬性] 窗格中依類別列出屬性，則您會在 **Misc** 類別中發現 **BackgroundColor**。  
   
 5.  按一下向下鍵，然後按一下 [運算式]。  
 
@@ -605,7 +605,7 @@ ms.lasthandoff: 08/03/2017
   
 ### <a name="run-the-report"></a>執行報表  
   
-1.  在 [主資料夾] 索引標籤上，按一下 [執行]。  
+1.  在 [首頁] 索引標籤上，按一下 [執行]。  
 
     現在當您執行報表時，要等到您選擇非白色區間的色彩之後才能看到報表。
   
@@ -626,15 +626,15 @@ ms.lasthandoff: 08/03/2017
   
 1.  在設計介面上，按一下 **[按一下以加入標題]**。  
   
-2.  輸入 **銷售比較摘要**，然後選取文字。  
+2.  輸入**銷售比較摘要**，然後選取文字。  
   
-3.  在 [主資料夾] 索引標籤的 [字型] 方塊中，設定︰
+3.  在 [首頁] 索引標籤的 [字型] 方塊中，設定︰
 
     -  Size = 18
     -  Color = Gray
     -  粗體字
   
-4.  在 [主資料夾] 索引標籤上，按一下 [執行]。  
+4.  在 [首頁] 索引標籤上，按一下 [執行]。  
   
 3.  選取報表中非白色區間的色彩，然後按一下 [檢視報表]。  
   

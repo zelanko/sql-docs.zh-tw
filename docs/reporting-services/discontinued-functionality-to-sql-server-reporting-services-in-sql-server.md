@@ -23,12 +23,11 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: 937a22d56d2c290fb87d963ef3fd54d53c34f5fb
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 
-# SQL Server 2016 中 SQL Server Reporting Services 已停止的功能
-<a id="discontinued-functionality-to-sql-server-reporting-services-in-sql-server-2016" class="xliff"></a>
+# <a name="discontinued-functionality-to-sql-server-reporting-services-in-sql-server-2016"></a>SQL Server 2016 中 SQL Server Reporting Services 已停止的功能
 
 [!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
 
@@ -43,8 +42,7 @@ ms.lasthandoff: 07/03/2017
 |上傳報表模型，透過 web 入口網站|這仍然可以透過 SOAP API 來完成。|
 |管理報表模型，透過 web 入口網站|這仍然可以透過 SOAP API 來完成。|
 
-## 後續的步驟
-<a id="next-steps" class="xliff"></a>
+## <a name="next-steps"></a>後續的步驟
 
 [Reporting Services 的新功能](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)  
 [SQL Server Reporting Services SQL Server 2016 中的行為變更](../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)  

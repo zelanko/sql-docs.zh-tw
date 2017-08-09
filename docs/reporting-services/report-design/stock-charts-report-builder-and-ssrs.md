@@ -19,11 +19,11 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 4a37208813e989353a381070e1ecfa0888e1e33b
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 
-# <a name="stock-charts-report-builder-and-ssrs"></a>股票圖 (報表產生器及 SSRS)
+# 股票圖 (報表產生器及 SSRS)
 
   股票圖是特別針對每個資料點最多使用四個值的財務或科學資料而設計的。 這些值會讓用於繪製財務股票資料的最高值、最低值、開盤值與收盤值排成一列。 此圖表類型會使用標記 (通常是線條或三角形) 來顯示開盤值與收盤值。 在下列範例中，開盤值以左方的標記顯示，而收盤值以右方的標記顯示。  
   
@@ -34,11 +34,11 @@ ms.lasthandoff: 06/22/2017
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## <a name="variations"></a>變數  
+## 變數  
   
 -   **K 線圖**： K 線圖是一種特殊形式的股票圖，其中的方塊用於顯示開盤值與收盤值之間的範圍。 K 線圖就像股票圖一樣，最多可以在每個資料點顯示四個值。  
   
-## <a name="data-considerations-for-stock-charts"></a>股票圖的資料考量  
+## 股票圖的資料考量  
   
 -   顯示多個股票資料點 (例如，年股價趨勢) 時，很難區分每個資料點的每個開盤值、收盤值、最高值與最低值。 在此狀況下，請考慮使用折線圖而非股票圖。  
   
@@ -46,7 +46,7 @@ ms.lasthandoff: 06/22/2017
   
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供許多計算公式搭配股票圖使用，包括「價格指標」、「相對強弱指標 (Relative Strength Index)」、MACD 等等。  
 
-## <a name="next-steps"></a>後續的步驟
+## 後續的步驟
 
 [範圍圖表](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md)   
 [圖表](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
