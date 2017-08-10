@@ -5,3 +5,4 @@
 # [舊版的 SSDT 和 SSDT-BI](previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md)
 # [SQL Server 工具](sql-server-tools.md)
 # [授權條款 - SSDT](sql-server-data-tools-license-terms.md)
+# [授權條款 - SSDT (VS 2017)](sql-server-data-tools-license-terms-vs2017.md)
