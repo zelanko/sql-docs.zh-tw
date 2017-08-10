@@ -1,5 +1,5 @@
 ---
-title: "記憶體內部 OLTP 不支援的 SQL Server 功能 | Microsoft 文件"
+title: "記憶體內部 OLTP 不支援的 SQL Server 功能 | Microsoft Docs"
 ms.custom: 
 ms.date: 07/19/2017
 ms.prod: sql-server-2016
@@ -18,7 +18,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: cf8509cab2424529ca0ed16c936fa63a139dfca4
 ms.openlocfilehash: 85a720edefe425146e5c54613b0a0f88007765a9
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/20/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="unsupported-sql-server-features-for-in-memory-oltp"></a>記憶體內部 OLTP 不支援的 SQL Server 功能
@@ -38,7 +38,7 @@ ms.lasthandoff: 07/20/2017
 | 複寫 | 複寫組態除了訂閱者端對經記憶體最佳化的資料表的異動複寫以外，與參考記憶體最佳化資料表的資料表或檢視表並不相容。<br /><br />若有經記憶體最佳化的檔案群組，就不支援使用 sync_mode=’database snapshot’ 的複寫。<br /><br />如需詳細資訊，請參閱 [複寫至記憶體最佳化資料表訂閱者](../../relational-databases/replication/replication-to-memory-optimized-table-subscribers.md)。|
 |鏡像|具有 MEMORY_OPTIMIZED_DATA 檔案群組的資料庫不支援資料庫鏡像。 如需鏡像的詳細資訊，請參閱[資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)。|  
 |重建記錄檔|具有 MEMORY_OPTIMIZED_DATA 檔案群組的資料庫不支援透過附加或 ALTER DATABASE 重建記錄檔。|  
-|連結的伺服器|在以記憶體最佳化資料表形式的相同查詢或交易中，您無法存取連結的伺服器。 如需詳細資訊，請參閱[連結的伺服器 &#40;Database Engine&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)。|  
+|連結的伺服器|在以記憶體最佳化資料表形式的相同查詢或交易中，您無法存取連結的伺服器。 如需詳細資訊，請參閱 [連結的伺服器 &#40;Database Engine&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)。|  
 |大量記錄|無論資料庫使用何種復原模式，所有在持久性記憶體最佳化的資料表上的作業，一律會完整記錄。|  
 |最低限度記錄|記憶體最佳化資料表不支援最低限度記錄。 如需最低限度記錄的詳細資訊，請參閱[交易記錄 &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md) 和[大量匯入採用最低限度記錄的必要條件](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)。|  
 |變更追蹤|變更追蹤可在具有記憶體中 OLTP 物件的資料庫上啟用。 不過，記憶體最佳化的資料表中的變更不會受到追蹤。|  

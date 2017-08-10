@@ -18,7 +18,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 109b5a18604b2111f3344ba216a6d3d98131d116
 ms.openlocfilehash: dd9edc9dccf29c21bb37bb0347c8a8cdb87e2b21
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/12/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="polybase-configuration"></a>PolyBase 設定
@@ -31,7 +31,7 @@ ms.lasthandoff: 07/12/2017
   
  您必須使用 **sp_configure**設定 SQL Server，以連接到 Hadoop 版本或 Azure Blob 儲存體。 PolyBase 支援兩種 Hadoop 散發：Hortonworks Data Platform (HDP) 和 Cloudera 分散式 Hadoop (CDH)。  如需支援的外部資料來源的完整清單，請參閱 [PolyBase 組態 &#40;Transact-SQL&#41;](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md)。  
  
- 請注意： PolyBase 不支援 Cloudera 加密區域。 
+ 請注意：PolyBase 不支援 Cloudera 加密區域。 
   
 ### <a name="run-spconfigure"></a>執行 sp_configure  
   
@@ -68,11 +68,11 @@ ms.lasthandoff: 07/12/2017
 
 4. 針對所有 CDH 5.X 版本，您需要將 **mapreduce.application.classpath** 組態參數新增至 **yarn.site.xml 檔案**結尾或 **mapred-site.xml 檔案**。 HortonWorks 會將這些組態包含在 **yarn.application.classpath** 組態內。
 
-## <a name="example-yarn-sitexml-and-mapred-sitexml-files-for-cdh-5x-cluster"></a>範例 yarn-site.xml 和 mapred-site.xml 檔 CDH 5.X 叢集。
+## <a name="example-yarn-sitexml-and-mapred-sitexml-files-for-cdh-5x-cluster"></a>適用於 CDH 5.X 叢集的範例 yarn-site.xml 和 mapred-site.xml 檔案。
 
 
 
-Yarn-site.xml 以 yarn.application.classpath 和 mapreduce.application.classpath 設定。
+具有 yarn.application.classpath 和 mapreduce.application.classpath 組態的 yarn-site.xml。
 ```
 <?xml version="1.0" encoding="utf-8"?>
 <?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
