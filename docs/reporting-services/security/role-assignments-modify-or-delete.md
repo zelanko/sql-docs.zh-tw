@@ -21,11 +21,11 @@ caps.latest.revision: 45
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 1a0db8452d082dddf6f5ffc39c1a9bd5802bf114
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="role-assignments---modify-or-delete"></a>角色指派的修改或刪除
@@ -68,9 +68,9 @@ ms.lasthandoff: 06/22/2017
 6.  若要刪除角色指派，請按一下使用者或群組名稱旁的核取方塊，然後按一下 [刪除]。  
   
 ## <a name="see-also"></a>另請參閱  
- [建立和管理角色指派](../../reporting-services/security/create-and-manage-role-assignments.md)   
+ [建立及管理角色指派](../../reporting-services/security/create-and-manage-role-assignments.md)   
  [角色指派](../../reporting-services/security/role-assignments.md)   
  [站台設定頁面 &#40;報表管理員&#41;](http://msdn.microsoft.com/library/4d67a01c-eae4-49ba-a6e8-8e983c0248f5)   
- [新增系統角色指派：編輯系統角色指派頁面 &#40;報表管理員&#41;](http://msdn.microsoft.com/library/62a22ab9-1eb4-4ce5-8dd7-06b5ed2d9a2a)  
+ [新增系統角色指派︰編輯系統角色指派頁面 &#40;報表管理員&#41;](http://msdn.microsoft.com/library/62a22ab9-1eb4-4ce5-8dd7-06b5ed2d9a2a)  
   
   

@@ -18,11 +18,11 @@ caps.latest.revision: 56
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3e4ffac2b4342d0f8b3c30a9d76cdc7b0ecf098c
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="data-driven-subscriptions"></a>資料驅動訂閱
@@ -65,7 +65,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>請參閱＜  
  [訂閱與傳遞 &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [建立資料驅動訂閱頁面 &#40;報表管理員&#41;](http://msdn.microsoft.com/library/814b4653-572a-48c7-847f-b310ba0f3046)   
- [預先載入快取 &#40;報表管理員&#41;](../../reporting-services/report-server/preload-the-cache-report-manager.md)  
+ [建立資料驅動訂閱頁面 &#40;報表管理員 &#41;](http://msdn.microsoft.com/library/814b4653-572a-48c7-847f-b310ba0f3046)   
+ [預先載入快取 &#40;報表管理員 &#41;](../../reporting-services/report-server/preload-the-cache-report-manager.md)  
   
   

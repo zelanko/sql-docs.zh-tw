@@ -15,11 +15,11 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 488c17afabc7dc828ccf88ed1e058f1e13c7e0b2
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>報表疑難排解：地圖報表 (報表產生器及 SSRS)
@@ -180,7 +180,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="my-color-scale-does-not-appear-when-i-run-the-report"></a>當我執行報表時，我的色階沒有出現。  
  當地圖圖層針對整個圖層或針對內嵌的地圖元素指定多邊形、線條或點的色彩規則時，色階會對使用者顯示相關資訊。 如果地圖元素沒有指定任何色彩規則，或者色彩規則透過圖例 (而非色彩地圖) 指定，則色彩地圖不會出現在轉譯的報表中。  
   
- 若要顯示色階，請針對圖層或內嵌的地圖元素指定色彩規則。 如需詳細資訊，請參閱 [變更地圖圖例、色階與相關的規則 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)。  
+ 若要顯示色階，請針對圖層或內嵌的地圖元素指定色彩規則。 如需詳細資訊，請參閱[變更地圖圖例、色階與相關的規則 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)。  
   
 ##  <a name="Tile"></a> 影像分割問題  
  使用本節協助解決與影像分割背景選項相關的問題。  
@@ -212,7 +212,7 @@ ms.lasthandoff: 06/22/2017
  若要指定與非報表資料集一部分之空間資料相關的資料，您必須使用符號 #，後面接著一個指定資料名稱的標籤。  
   
 ## <a name="see-also"></a>請參閱＜  
- [地圖 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
+ [對應 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
  [疑難排解報表產生器](http://msdn.microsoft.com/en-us/3806fc48-56f8-44d1-a3c1-df8c33cce0a3)  
   
   

@@ -19,11 +19,11 @@ caps.latest.revision: 51
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 440fe0b9ff8468546cf7e8cfadf2533a3bdf82d7
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="open-and-close-a-report-report-manager"></a>開啟及關閉報表 (報表管理員)
@@ -46,9 +46,9 @@ ms.lasthandoff: 06/22/2017
      關閉報表並不會將其從瀏覽器快取中移除。 您必須關閉瀏覽器以中斷報表的連接。  
   
 ## <a name="see-also"></a>請參閱＜  
- [搜尋報表和其他項目 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/searching-for-reports-and-other-items-report-builder-and-ssrs.md)   
- [內容頁面 &#40;報表管理員&#41;](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
- [尋找、檢視和管理報表 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
- [報表伺服器內容管理 &#40;SSRS 原生模式&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)  
+ [搜尋報表和其他項目 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-builder/searching-for-reports-and-other-items-report-builder-and-ssrs.md)   
+ [內容頁面 &#40;。報表管理員 &#41;](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
+ [尋找、 檢視和管理報表 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [報表伺服器內容管理 &#40;SSRS 原生模式 &#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)  
   
   

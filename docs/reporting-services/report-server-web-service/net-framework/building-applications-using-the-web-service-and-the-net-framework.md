@@ -27,11 +27,11 @@ caps.latest.revision: 38
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 58588838e0e74b545290df5ff0e77dc68ad5e918
+ms.translationtype: MT
+ms.sourcegitcommit: 727d9ccd8cd1e40d89cfe74291edae92988b407c
+ms.openlocfilehash: e228d60a4ae01aa345f007be91109b7bccb76f5a
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="building-applications-using-the-web-service-and-the-net-framework"></a>Building Applications Using the Web Service and the .NET Framework
@@ -53,7 +53,7 @@ ms.lasthandoff: 06/13/2017
   
      若要這樣做，請呼叫 Web 服務方法並提供必要的引數。 如需 Web 服務方法的詳細資訊，請參閱[報表伺服器 Web 服務方法](../../../reporting-services/report-server-web-service/methods/report-server-web-service-methods.md)。 如需有關呼叫的詳細資訊，請參閱[呼叫 Web 服務方法](../../../reporting-services/report-server-web-service/net-framework/calling-web-service-methods.md)。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>섹션 내용  
   
 |主題|Description|  
 |-----------|-----------------|  
@@ -67,7 +67,7 @@ ms.lasthandoff: 06/13/2017
 |[將裝置資訊設定傳遞至轉譯延伸模組](../../../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)|描述用以將報表轉譯成不同格式的裝置資訊設定。|  
 |[Reporting Services 傳遞延伸模組設定](../../../reporting-services/report-server-web-service/net-framework/reporting-services-delivery-extension-settings.md)|描述使用報表伺服器電子郵件傳遞報表所用的設定。|  
 |[使用 Reporting Services SOAP 標頭](../../../reporting-services/report-server-web-service-net-framework-soap-headers/using-reporting-services-soap-headers.md)|說明 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中 SOAP 標頭的用法。|  
-|[例外狀況處理中的 Reporting Services 簡介](../../../reporting-services/report-server-web-service-net-framework-exception-handling/introducing-exception-handling-in-reporting-services.md)|提供有關 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 處理錯誤之方法的資訊。|  
+|[Reporting Services 中的例外狀況處理簡介](../../../reporting-services/report-server-web-service-net-framework-exception-handling/introducing-exception-handling-in-reporting-services.md)|提供有關 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 處理錯誤之方法的資訊。|  
   
 ## <a name="see-also"></a>另請參閱  
  [報表伺服器 Web 服務](../../../reporting-services/report-server-web-service/report-server-web-service.md)   

@@ -21,11 +21,11 @@ caps.latest.revision: 43
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 41e0843d517f4fe24c16c6071ba8a1921be68502
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="script-with-the-rsexe-utility-and-the-web-service"></a>利用 rs.exe 公用程式與 Web 服務編寫指令碼
@@ -42,7 +42,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>請參閱＜  
  [編寫部署和管理工作的指令碼](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)   
  [報表伺服器 Web 服務](../../reporting-services/report-server-web-service/report-server-web-service.md)   
- [技術參考 &#40;SSRS&#41;](../../reporting-services/technical-reference-ssrs.md)   
- [RS.exe 公用程式 &#40;SSRS&#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md)  
+ [技術參考 &#40;SSRS &#41;](../../reporting-services/technical-reference-ssrs.md)   
+ [RS.exe 公用程式 &#40;SSRS &#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md)  
   
   

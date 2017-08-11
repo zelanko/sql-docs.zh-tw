@@ -21,11 +21,11 @@ caps.latest.revision: 47
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 66e32b412558ec3c06fcbfcb3b4dbd1b7b2e06e0
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="secure-reports-and-resources"></a>保護報表和資源的安全
@@ -79,10 +79,10 @@ ms.lasthandoff: 06/22/2017
  包含機密資訊的報表應該在資料存取層級受到保護，方法是要求使用者提供存取敏感性資料的認證。 如需詳細資訊，請參閱 [指定報表資料來源的認證及連接資訊](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)。 您也可以保護資料夾的安全，讓未經授權的使用者無法使用它。 如需詳細資訊，請參閱 [保護資料夾的安全](../../reporting-services/security/secure-folders.md)。  
   
 ## <a name="see-also"></a>請參閱＜  
- [建立和管理角色指派](../../reporting-services/security/create-and-manage-role-assignments.md)   
- [設定報表產生器的存取](../../reporting-services/report-server/configure-report-builder-access.md)   
- [在原生模式報表伺服器上授與權限](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
- [保護共用資料來源項目的安全](../../reporting-services/security/secure-shared-data-source-items.md)   
- [Store Credentials in a Reporting Services Data Source](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)  
+ [建立及管理角色指派](../../reporting-services/security/create-and-manage-role-assignments.md)   
+ [設定報表產生器存取](../../reporting-services/report-server/configure-report-builder-access.md)   
+ [授與原生模式報表伺服器上的權限](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
+ [安全的共用的資料來源項目](../../reporting-services/security/secure-shared-data-source-items.md)   
+ [將認證儲存在 Reporting Services 資料來源](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)  
   
   

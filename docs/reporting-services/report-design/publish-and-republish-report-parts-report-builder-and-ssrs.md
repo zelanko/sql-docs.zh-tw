@@ -15,11 +15,11 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 03b06d981e4ff824fbdca3f598271fce666237af
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="publish-and-republish-report-parts-report-builder-and-ssrs"></a>發行與重新發行報表組件 (報表產生器及 SSRS)
@@ -31,24 +31,24 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="to-publish-a-report-part"></a>若要發行報表組件  
   
-1.  在 [報表產生器] 功能表上，按一下 [發行報表組件]。  
+1.  在 報表產生器 功能表中，按一下 **發行報表組件**。  
   
      如果您沒有連接到報表伺服器，系統會提示您連接。 如果您無法連接到報表伺服器，就無法啊型報表組件。  
   
-2.  若要使用預設值將報表組件儲存至預設位置，按一下 [使用預設值發行所有報表組件]。  
+2.  若要將您的報表組件儲存到預設位置的預設設定，請按一下**發行使用預設設定的所有報表組件**。  
   
-     否則，按一下 [發行前檢閱並修改報表組件]。  
+     否則，請按一下**檢閱及修改報表組件發行前的**。  
   
-3.  編輯報表組件名稱和描述：按兩下名稱可以編輯名稱，而在 [描述] 欄位中按一下則可加入描述。  
+3.  編輯報表組件名稱和描述： 按兩下名稱加以編輯，然後按一下 在**描述**欄位可加入描述。  
   
     > [!NOTE]  
     >  最好提供報表組件名稱和描述，以協助使用者在搜尋時識別它。 若是完整路徑，報表組件名稱的最大長度為 260 個字元，包括伺服器上的資料夾名稱，後面接著報表組件的實際名稱。  
   
-4.  若要將報表組件儲存至預設值之外的其他資料夾中，按一下 [瀏覽] 按鈕。  
+4.  若要將您的報表組件儲存至預設值以外的資料夾中，按一下**瀏覽** 按鈕。  
   
-5.  完成設定報表中所有報表組件的選項時，按一下 [發行]。  
+5.  當您已將所有報表組件的選項，報表中時，按一下 **發行**。  
   
-     發行報表組件之後，對話方塊會顯示成功發行的報表組件，以及未成功發行的報表組件。 您可以在 [發行報表組件] 對話方塊中，檢視無法發行之報表組件的詳細資料。  
+     發行報表組件之後，對話方塊會顯示成功發行的報表組件，以及未成功發行的報表組件。 您可以檢視詳細資料中的**發行報表組件**對話方塊中，報表組件無法發佈。  
   
 6.  按一下 [ **關閉**]。  
   
@@ -56,14 +56,14 @@ ms.lasthandoff: 06/22/2017
   
 1.  請遵循先前的程序發行報表組件。  
   
-2.  在 [發行報表組件] 對話方塊中，如果您按一下 [發行為報表組件的新複本]，報表產生器就不會覆寫伺服器上現有的報表組件，但是會建立另一個報表組件。  
+2.  在**發行報表組件**對話方塊中，如果您按一下**發佈一份新報表組件為**，透過現有的報表組件的報表產生器就不會在伺服器上，但會改為建立其他報表組件。  
   
 > [!NOTE]  
 >  如果您將其發行為新的報表組件，它將會擁有一個新的唯一識別碼。 如果原始報表組件變更，它不會再接收更新。  
   
 ## <a name="see-also"></a>請參閱＜  
  [報表組件 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)   
- [報表產生器中的報表組件和資料集](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
+ [報表組件和報表產生器中的資料集](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
  [疑難排解報表組件 (報表產生器及 SSRS)](http://msdn.microsoft.com/en-us/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
  [檢查更新或關閉更新 (報表產生器及 SSRS)](http://msdn.microsoft.com/en-us/9c69792d-d7c4-453b-ae2f-6d2d071d8606)   
  [瀏覽報表組件及設定預設資料夾 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)  

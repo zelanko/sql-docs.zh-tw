@@ -15,11 +15,11 @@ caps.latest.revision: 9
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: f5862f4faec4784aac678d578c155ac5992a55f6
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="modify-a-reporting-services-configuration-file-rsreportserverconfig"></a>修改 Reporting Services 組態檔 (RSreportserver.config)
@@ -98,9 +98,9 @@ ms.lasthandoff: 06/22/2017
   
     -   [使用報表伺服器驗證](../../reporting-services/security/authentication-with-the-report-server.md)  
   
-    -   [設定入口網站，以傳遞自訂驗證 Cookie](../../reporting-services/security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)
+    -   [設定入口網站傳遞自訂驗證 Cookie](../../reporting-services/security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)
   
-    -   [在 RSReportServer.Config 中自訂轉譯延伸模組參數](../../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)  
+    -   [自訂轉譯延伸模組參數，在 RSReportServer.Config 中](../../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)  
   
 5.  儲存檔案。  
   

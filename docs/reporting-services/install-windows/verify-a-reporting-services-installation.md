@@ -22,11 +22,11 @@ caps.latest.revision: 45
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a5849b6240557cd1682d08210f256e0edabfa70b
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="verify-a-reporting-services-installation"></a>驗證 Reporting Services 安裝
@@ -76,7 +76,7 @@ ms.lasthandoff: 06/22/2017
   
 ### <a name="reporting-services-samples"></a>Reporting Services 範例  
   
-1.  完成其中一個 Reporting Services 教學課程。 如需詳細資訊，請參閱 [Reporting Services 教學課程 &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)。  
+1.  完成其中一個 Reporting Services 教學課程。 如需詳細資訊，請參閱[Reporting Services 教學課程 &#40;SSRS &#41;](../../reporting-services/reporting-services-tutorials-ssrs.md).  
   
 2.  從 CodePlex 下載 Adventure Works 範例資料庫和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 範例報表。 如需詳細資訊，請參閱＜ [AdventureWorks 報表範例](https://msftrsprodsamples.codeplex.com/wikipage?title=SS2012!AdventureWorks2012%20Report%20Samples&referringTitle=Home)＞。  
   
@@ -87,11 +87,11 @@ ms.lasthandoff: 06/22/2017
   
 1.  執行 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具，並連接到您剛安裝的報表伺服器執行個體。 [Web 服務 URL] 頁面包含報表伺服器 Web 服務的連結。 請按一下此連結，確認您可以存取伺服器。 如果報表伺服器資料庫並未設定，請在按一下連結之前先行設定。  
   
-2.  開啟 [服務] 主控台應用程式，並確認報表伺服器服務正在執行中。 若要檢視報表伺服器服務的狀態，請按一下 [開始]，指向 [控制台]，並按兩下 [系統管理工具]，然後按兩下 [服務]。 當服務清單出現時，請捲到 [報表伺服器 (MSSQLSERVER)]。 其狀態應該是 **[已啟動]**。  
+2.  開啟 [服務] 主控台應用程式，並確認報表伺服器服務正在執行中。 若要檢視報表伺服器服務的狀態，請按一下**啟動**，指向**控制台**，連按兩下**系統管理工具**，然後按兩下**服務**。 當服務清單出現時，捲動到**報表伺服器 (MSSQLSERVER)**。 其狀態應該是 **[已啟動]**。  
   
-3.  開啟瀏覽器，並在位址列輸入報表伺服器 URL。 位址是由您在安裝期間對報表伺服器指定的伺服器名稱和虛擬目錄名稱所組成。 報表伺服器虛擬目錄的預設名稱為 **ReportServer**。 您可以使用下列 URL 來確認報表伺服器安裝： http://*\<電腦名稱 >*/ReportServer*\<_ 執行個體名稱 >*。 如果您將報表伺服器安裝成具名執行個體，則需使用不同的 URL。 如需 URL 格式的詳細資訊，請參閱[設定報表伺服器 URL &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)。 如果您是 Windows Vista 或 Windows Server 2008 的本機系統管理員，請參閱 [Configure a Native Mode Report Server for Local Administration &#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md) (設定原生模式報表伺服器進行本機管理 (SSRS))。  
+3.  開啟瀏覽器，並在位址列輸入報表伺服器 URL。 位址是由您在安裝期間對報表伺服器指定的伺服器名稱和虛擬目錄名稱所組成。 報表伺服器虛擬目錄的預設名稱為 **ReportServer**。 您可以使用下列 URL 來確認報表伺服器安裝： http://*\<電腦名稱 >*/ReportServer*\<_ 執行個體名稱 >*。 如果您將報表伺服器安裝成具名執行個體，則需使用不同的 URL。 如需 URL 格式詳細資訊，請參閱[設定報表伺服器 Url &#40;SSRS 組態管理員 &#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md). 如果您在 Windows Vista 或 Windows Server 2008 上的本機系統管理員，請參閱[設定本機管理 &#40; 原生模式報表伺服器SSRS &#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
-4.  執行報表來測試報表伺服器作業。 在此步驟中，您可以根據教學課程建立範例報表。 如需詳細資訊，請參閱[建立基本資料表報表 &#40;SSRS 教學課程&#41;](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)。  
+4.  執行報表來測試報表伺服器作業。 在此步驟中，您可以根據教學課程建立範例報表。 如需詳細資訊，請參閱[建立基本資料表報表 &#40;SSRS 教學課程 &#41;](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md).  
   
 ### <a name="to-verify-that-the-includessrswebportalincludesssrswebportalmd-is-installed-and-running"></a>確認 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 已安裝且正在執行  
   
@@ -101,11 +101,11 @@ ms.lasthandoff: 06/22/2017
   
 2.  使用 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 來建立新資料夾，或上傳檔案來測試定義是否傳回至報表伺服器資料庫。 如果這些作業都成功，表示連接可運作。  
   
-     如需詳細資訊，請參閱[入口網站 &#40;SSRS 原生模式&#41;](http://msdn.microsoft.com/en-us/7349e626-6ed5-4d21-b05f-cf042ad9ad70)。  
+     如需詳細資訊，請參閱[入口網站 &#40;SSRS 原生模式 &#41;](http://msdn.microsoft.com/en-us/7349e626-6ed5-4d21-b05f-cf042ad9ad70).  
   
 ### <a name="to-verify-that-report-designer-is-installed-and-running"></a>確認報表設計師已安裝及執行  
   
-1.  開啟 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]，並根據報表伺服器專案類型來建立新的專案。 如需使用 [報表伺服器專案精靈] 的詳細資訊，請參閱《SQL Server 線上叢書》中的 [SQL Server 資料工具中的 Reporting Services &#40;SSDT&#41;](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md)。  
+1.  開啟 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]，並根據報表伺服器專案類型來建立新的專案。 如需有關使用報表伺服器專案精靈的詳細資訊，請參閱[中 SQL Server Data Tools &#40; Reporting ServicesSSDT &#41;](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md)中 SQL Server 線上叢書。  
   
 2.  如果您已安裝報表範例，請開啟範例報表專案檔，並將報表發行至報表伺服器。  
   

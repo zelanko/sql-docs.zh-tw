@@ -15,11 +15,11 @@ caps.latest.revision: 20
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 64cab4cc760ee1af2c3777bca88be2663d8039a4
+ms.translationtype: MT
+ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
+ms.openlocfilehash: 967dfebc4add43efb039a3b5eb54f8e5d20f1fab
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="rsreportserverconfig-configuration-file"></a>RsReportServer.config 組態檔
@@ -77,6 +77,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |**DisableSecureFormsAuthenticationCookie**|預設值為 False。<br /><br /> 指定是否停用強制將表單和自訂驗證所使用的 Cookie 標記為安全。 從 SQL Server 2012 開始， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會自動將搭配自訂驗證延伸模組所使用的表單驗證 Cookie (在傳送給用戶端時) 標示為安全 Cookie。 藉由變更這個屬性，報表伺服器管理員和自訂安全性延伸模組作者可以還原成之前的行為，該行為可讓自訂安全性延伸模組作者判斷是否將 Cookie 標示為安全 Cookie。 建議針對表單驗證使用安全 Cookie，以防止網路探查和重新執行攻擊。|N|  
 |**CleanupCycleMinutes**|指定一個時限 (分鐘)，超過此時限後，舊有的工作階段和過期的快照集，便會從報表伺服器資料庫中移除。 有效值範圍是從 0 到最大整數。 預設值是 10。 將值設定為 0，則會停用資料庫清除處理序。|N、S|  
 |**MaxActiveReqForOneUser**|指定一個使用者同時可以處理的報表最大數目。 一旦達到限制，系統就會拒絕進一步的報表處理要求。 有效值為 1 到最大整數。 預設值是 20。<br /><br /> 請注意，大部分要求的處理速度很快，因此單一使用者不太可能同時擁有 20 個以上的開啟連接。 如果使用者同時開啟超過 15 個密集處理的報表，您可能需要增加此值。<br /><br /> 以 SharePoint 整合模式執行的報表伺服器會忽略這項設定。|N、S|  
+|**MaxActiveReqForAnonymous**|指定可以同時處理序中的匿名要求的數目上限。 一旦達到限制時，進一步會拒絕處理要求。 有效值為 1 到最大整數。 預設值是 200。
 |**DatabaseQueryTimeout**|指定一個時限 (秒)，超過此時限後，與報表伺服器資料庫的連接便會逾時。 此值傳遞至 System.Data.SQLClient.SQLCommand.CommandTimeout 屬性。 有效值的範圍為 0 到 2147483647。 預設值是 120。 值為 0 會指定無限等候時間，因此不建議您這樣做。|N|  
 |**AlertingCleanupCycleMinutes**|預設值是 20。<br /><br /> 判斷清除在警示資料庫中儲存之暫存資料的頻率。|S|  
 |**AlertingDataCleanupMinutes**|預設值是 360。<br /><br /> 判斷用於建立或編輯警示定義的工作階段資料會在警示資料庫內保留多久。 預設為 6 小時。|S|  
@@ -846,7 +847,7 @@ x6K1NTC/u8hl9v0MgK+xMQKaiV7BuNYbgGgkaViABcNH0xVzcc5rMTHUkrABbGDFGKyAFniGQ1qu
  [將報表伺服器初始化 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
  [儲存加密的報表伺服器資料 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
  [Reporting Services 組態管理員 &#40;原生模式&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
- 更多問題嗎？ [試試 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+ 更多問題嗎？ [再試一次 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
   
   
 

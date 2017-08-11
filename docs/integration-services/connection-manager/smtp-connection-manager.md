@@ -9,6 +9,8 @@ ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- sql13.dts.designer.smtpconnection.f1
 helpviewer_keywords:
 - connections [Integration Services], SMTP
 - SMTP connection manager [Integration Services]
@@ -19,10 +21,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d350ca1ef990278eb64fc0589787fc5ea9b6125f
+ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
+ms.openlocfilehash: b952c9427a9bd15b29b806a5afb9f11d75d7393a
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="smtp-connection-manager"></a>SMTP 連接管理員
@@ -50,6 +52,33 @@ ms.lasthandoff: 08/03/2017
   
  如需可在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中設定之屬性的詳細資訊，請參閱 [SMTP 連線管理員編輯器](../../integration-services/connection-manager/smtp-connection-manager-editor.md)。  
   
- 如需以程式設計方式設定連線管理員的資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 和 [以程式設計方式加入連接](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)。  
+ 如需以程式設計方式設定連線管理員的相關資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 和 [以程式設計方式加入連接](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)。  
   
+## <a name="smtp-connection-manager-editor"></a>SMTP 連接管理員編輯器
+  使用 [SMTP 連線管理員編輯器] 對話方塊指定簡易郵件傳輸通訊協定 (SMTP) 伺服器。  
   
+ 若要深入了解 SMTP 連接管理員，請參閱＜ [SMTP Connection Manager](../../integration-services/connection-manager/smtp-connection-manager.md)＞。  
+  
+### <a name="options"></a>選項。  
+ **名稱**  
+ 提供唯一的名稱給連接管理員。  
+  
+ **說明**  
+ 描述連接管理員。 最佳作法是以其用途描述連接管理員，使封裝可以自我記錄並易於維護。  
+  
+ **SMTP 伺服器**  
+ 提供 SMTP 伺服器的名稱。  
+  
+ **使用 Windows 驗證**  
+ 選取此選項即可使用以 Windows 驗證來驗證伺服器存取權的 SMTP 伺服器，以便傳送郵件。  
+  
+> [!IMPORTANT]  
+>  SMTP 連接管理員僅支援匿名驗證和 Windows 驗證， 而不支援基本驗證。  
+  
+> [!NOTE]  
+>  使用 Microsoft Exchange 當做 SMTP 伺服器時，您可能需要將 **[使用 Windows 驗證]** 設定為 **True**。 Exchange 伺服器可以設定成不允許未驗證的 SMTP 連接。  
+  
+ **啟用安全通訊端層 (SSL)**  
+ 選擇在傳送電子郵件訊息時以安全通訊端層 (SSL) 將通訊加密。  
+  
+

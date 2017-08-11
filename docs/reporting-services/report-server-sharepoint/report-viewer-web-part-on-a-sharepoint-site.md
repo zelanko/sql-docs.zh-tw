@@ -20,11 +20,11 @@ caps.latest.revision: 13
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0604356dc5bb7bd964679ef2da4f891900183b78
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="report-viewer-web-part-on-a-sharepoint-site"></a>SharePoint 網站上的報表檢視器 Web 組件
@@ -45,19 +45,19 @@ ms.lasthandoff: 06/22/2017
 ## <a name="web-part-components"></a>Web 組件元件  
  檢視區域會以 HTML 顯示報表。 根據此 Web 組件的設定方式，檢視區域可能會最大化以便以整頁模式顯示報表，或者可能會與相鄰的窗格和工具列共用可用空間。  
   
- 工具列會提供頁面導覽、搜尋、顯示比例以及匯出功能，讓您可以用另一種應用程式格式檢視報表。 此外，它也會提供選用的列印功能，可提供 HTML 報表的分頁列印輸出以及變更頁面配置和邊界設定的功能。 在工具列的 [動作] 功能表中，提供 [用報表產生器開啟]、[訂閱]、[匯出] 和 [列印]。 頁面導覽及顯示比例控制項直接位於工具列上。  
+ 工具列會提供頁面導覽、搜尋、顯示比例以及匯出功能，讓您可以用另一種應用程式格式檢視報表。 此外，它也會提供選用的列印功能，可提供 HTML 報表的分頁列印輸出以及變更頁面配置和邊界設定的功能。 **報表產生器，訂閱開啟**，**匯出**，和**列印**中提供**動作**工具列上的功能表。 頁面導覽及顯示比例控制項直接位於工具列上。  
   
 > [!NOTE]  
 >  除非您有撰寫相關的程式碼，否則無法自訂工具列，但是您可以設定屬性，以便隱藏所有或部分控制項。  
   
 ### <a name="export-action-on-the-report-toolbar"></a>報表工具列上的匯出動作  
- [動作] 功能表上的 [匯出] 會顯示與報表伺服器上部署之轉譯延伸模組相關聯的應用程式格式。 若要決定特定格式的可用性，您可以在報表伺服器上加入或移除轉譯延伸模組，也可以修改組態設定，以便從清單中移除特定匯出格式。 此外，您也可以在報表伺服器上指定組態設定，以便控制可用的格式。 您可以透過加入並修改該轉譯延伸模組的組態設定，修改特定格式的預設行為。  
+ **匯出**上**動作**功能表會顯示與部署報表伺服器上的轉譯延伸模組相關聯的應用程式格式。 若要決定特定格式的可用性，您可以在報表伺服器上加入或移除轉譯延伸模組，也可以修改組態設定，以便從清單中移除特定匯出格式。 此外，您也可以在報表伺服器上指定組態設定，以便控制可用的格式。 您可以透過加入並修改該轉譯延伸模組的組態設定，修改特定格式的預設行為。  
   
 ### <a name="print-action-on-the-report-toolbar"></a>報表工具列上的列印動作  
- [動作] 功能表上的 [列印] 是透過 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供的自訂列印功能。 當您按一下 [列印] 時，ActiveX 用戶端列印控制項就會下載至用戶端電腦。 在大部分情況下，按一下 [列印] 的使用者必須在本機電腦上擁有「管理員」權限。 常見的作法是將 ActiveX 控制項下載限制為僅擁有「管理員」權限的使用者。 您可以使用 SharePoint 管理中心啟用或停用用戶端列印控制的下載。  
+ **列印**上**動作**功能表是透過提供自訂列印功能[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。 當您按一下**列印**，ActiveX 用戶端列印控制項下載到用戶端電腦。 在大部分情況下，使用者按下使用者**列印**必須在本機電腦上具有系統管理員權限。 常見的作法是將 ActiveX 控制項下載限制為僅擁有「管理員」權限的使用者。 您可以使用 SharePoint 管理中心啟用或停用用戶端列印控制的下載。  
   
 ### <a name="find-action-on-the-report-toolbar"></a>報表工具列上的尋找動作  
- [動作] 功能表上的 [尋找] 會提供一個方式，讓您移至報表中的目標位置。 您可以輸入您要尋找的單字或片語來搜尋報表的內容。 搜尋詞彙的最大值為 256 個字元。 當您的搜尋在報表中找到相符的值時，焦點就會移到報表中，包含該值的部分。  
+ **尋找**上**動作**功能表會提供用來移動到報表中的目標位置。 您可以輸入您要尋找的單字或片語來搜尋報表的內容。 搜尋詞彙的最大值為 256 個字元。 當您的搜尋在報表中找到相符的值時，焦點就會移到報表中，包含該值的部分。  
   
  輸入要搜尋的值時，請輸入您預期會顯示在報表中的值。 除非您預期句子中的每個字都會出現在報表中，否則請勿提出疑問句 (例如，「本月份的平均收益有多少」)。  
   
@@ -66,7 +66,7 @@ ms.lasthandoff: 06/22/2017
  限制存取報表資料的資料庫和模型安全性設定會套用至搜尋作業。 如果您要在使用模型做為資料來源的點選連結報表中搜尋某個值，而您無法存取該模型部分，則搜尋作業將會排除該模型部分所代表的資料。  
   
 ### <a name="panes-for-specifying-credentials-and-parameters"></a>指定認證與參數的窗格  
- [認證] 和 [參數] 是顯示在檢視區域旁的窗格。 當報表的資料來源連接設定為提示使用者輸入具有存取資料來源權限的帳戶和密碼時，就會顯示 [認證]。 當報表接受報表中定義之參數的使用者輸入時，就會顯示 [參數]。  
+ **認證**和**參數**會出現在檢視區域旁的窗格。 **認證**報表的資料來源連接設定為提示使用者輸入的帳戶和密碼具有存取資料來源的權限時，會出現。 **參數**報表接受報表中定義之參數的使用者輸入時，會出現。  
   
 ### <a name="setting-properties-on-the-report-viewer-web-part"></a>設定報表檢視器 Web 組件上的屬性  
  Web 組件上的屬性包括報表檢視器特定的自訂屬性，以及您可以為任何 Web 組件設定的一般屬性。 如需詳細資訊，請參閱 [自訂報表檢視器網頁組件](../../reporting-services/report-server-sharepoint/customize-the-report-viewer-web-part.md)。  
@@ -75,6 +75,6 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>請參閱＜  
  [安裝或解除安裝 SharePoint 的 Reporting Services 增益集](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
- [將報表檢視器網頁組件加入至網頁 &#40;SharePoint 整合模式的 Reporting Services&#41;](../../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md)  
+ [將報表檢視器 Web 組件加入至 Web 頁面 &#40;Reporting Services SharePoint 整合模式 &#41;](../../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md)  
   
   

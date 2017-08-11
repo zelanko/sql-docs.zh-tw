@@ -24,11 +24,11 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 99b5b8ec78220064b79795e51b37b22f18a60886
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="built-in-collections---report-and-group-variables-references-report-builder"></a>內建集合的報表和群組變數參考 （報表產生器）
@@ -52,7 +52,7 @@ ms.lasthandoff: 06/22/2017
   
 -   **讀寫使用** ：設定一次某個值，然後在報表工作階段中序列化該值。 變數的讀寫選項會比在報表定義的程式碼區塊中使用靜態變數提供更好的替代方案。  
   
-     當您清除變數的 [唯讀] 選項時，變數的 Writable 屬性會設為 [true]。 若要更新運算式的值，請使用 SetValue 方法，例如，`=Variables!MyVariable.SetValue("123")`。  
+     當您清除**唯讀**變數會設為變數時，可寫入的屬性選項**true**。 若要更新運算式的值，請使用 SetValue 方法，例如， `=Variables!MyVariable.SetValue("123")`。  
   
     > [!NOTE]  
     >  您無法控制報表處理器初始化變數，或評估更新變數之運算式的時間。 系統未定義變數初始化的執行順序。  
@@ -77,8 +77,8 @@ ms.lasthandoff: 06/22/2017
  若要參考運算式中的變數，請使用全域集合語法，例如 `=Variables!GroupDescription.Value`。 此值會在設計介面的文字方塊中顯示為 `<<Expr>>`。  
   
 ## <a name="see-also"></a>請參閱＜  
- [篩選、分組和排序資料 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [運算式中的內建集合 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)   
- [運算式範例 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
+ [篩選、 群組和排序資料 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [運算式 &#40; 中的內建集合報表產生器及 SSRS &#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)   
+ [運算式範例 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
   
   

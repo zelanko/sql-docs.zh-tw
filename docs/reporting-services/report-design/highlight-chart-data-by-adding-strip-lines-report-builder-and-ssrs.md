@@ -15,11 +15,11 @@ caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 04bc46bc61a1091d715e348e44ac7ee22e4a891d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="highlight-chart-data-by-adding-strip-lines-report-builder-and-ssrs"></a>加入帶狀線來強調圖表資料 (報表產生器及 SSRS)
@@ -54,7 +54,7 @@ ms.lasthandoff: 06/22/2017
   
      軸屬性會在 [屬性] 視窗中顯示。  
   
-2.  在 [屬性] 窗格的 [外觀]** **區段中，針對 StripLines 屬性按一下 [編輯集合] 按鈕 (…) 來開啟 [ChartStripLine Collection Editor (ChartStripLine 集合編輯器)]****。  
+2.  在 [屬性] 窗格的 [外觀] ****區段中，針對 StripLines 屬性按一下 [編輯集合] 按鈕 (…) 來開啟 [ChartStripLine Collection Editor (ChartStripLine 集合編輯器)]****。  
   
 3.  按一下 [加入]，將新的帶狀線加入集合。  
   
@@ -66,8 +66,8 @@ ms.lasthandoff: 06/22/2017
 >  根據預設，Interval 是設為 [自動]，代表圖表不會計算自訂帶狀線的間隔。 只有在有設定間隔值時，圖表才會計算區域線的間隔。  
   
 ## <a name="see-also"></a>請參閱＜  
- [格式化圖表上的軸標籤 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
- [格式化圖表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
- [將移動平均加入至圖表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)  
+ [格式化圖表 &#40; 上的軸標籤報表產生器及 SSRS &#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
+ [格式化圖表 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
+ [將移動平均加入至圖表 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)  
   
   

@@ -19,11 +19,11 @@ caps.latest.revision: 12
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: cc89e2a412163811aca2c8a99bdc3fae574d0926
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="dataset-properties-dialog-box-query-report-builder"></a>資料集屬性對話方塊、查詢 (報表產生器)
@@ -31,15 +31,15 @@ ms.lasthandoff: 08/03/2017
   
  **[資料集屬性]** 對話方塊包含下列項目：  
   
--   [資料集屬性對話方塊、參數 &#40;報表產生器&#41;](http://msdn.microsoft.com/library/3a0672ad-c969-455b-b952-585164ce1dda)  
+-   [資料集屬性對話方塊、 參數 &#40;報表產生器 &#41;](http://msdn.microsoft.com/library/3a0672ad-c969-455b-b952-585164ce1dda)  
   
--   [資料集屬性對話方塊、欄位 &#40;報表產生器&#41;](http://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42)  
+-   [資料集屬性對話方塊、 欄位 &#40;報表產生器 &#41;](http://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42)  
   
--   [資料集屬性對話方塊、選項 &#40;報表產生器&#41;](../../reporting-services/report-data/dataset-properties-dialog-box-options-report-builder.md)  
+-   [資料集屬性對話方塊、 選項 &#40;報表產生器 &#41;](../../reporting-services/report-data/dataset-properties-dialog-box-options-report-builder.md)  
   
--   [資料集屬性對話方塊、篩選 &#40;報表產生器&#41;](http://msdn.microsoft.com/library/933a6f44-4eb7-4e73-9c40-ac0fd17b23d3)  
+-   [資料集屬性對話方塊、 篩選 &#40;報表產生器 &#41;](http://msdn.microsoft.com/library/933a6f44-4eb7-4e73-9c40-ac0fd17b23d3)  
   
- 如需詳細資訊，請參閱 [報表內嵌資料集和共用資料集 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)(Dependent Dataset)。  
+ 如需詳細資訊，請參閱[報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。  
   
 ## <a name="options"></a>選項。  
  **名稱**  
@@ -64,7 +64,7 @@ ms.lasthandoff: 08/03/2017
 >  並非所有的查詢類型都受到所有資料來源的支援。 例如， **[資料表]** 只受到 **[OLE DB]** 和 **[ODBC]**資料來源類型的支援。  
   
  **查詢**  
- 此選項會在選擇 [文字] 命令類型選項時出現。 鍵入查詢，或按一下 [匯入] 來匯入已存在的查詢。 請按一下 **「運算式」** (*fx*) 按鈕來編輯運算式。  
+ 此選項會在選擇 [文字] 命令類型選項時出現。 輸入查詢，或按一下 [匯入] 來匯入已存在的查詢。 請按一下 [運算式] (*fx*) 按鈕來編輯運算式。  
   
 > [!NOTE]  
 >  如果您使用查詢設計工具來建立查詢，則查詢的文字會顯示在此方塊中。  
@@ -73,7 +73,7 @@ ms.lasthandoff: 08/03/2017
  輸入您想要當做資料集使用之資料表的名稱。 此選項會在您選取 **[資料表]**時出現。  
   
  **選取或輸入預存程序名稱**  
- 輸入或選擇您要使用之預存程序的名稱。 請按一下 **運算式** (*fx*) 按鈕來編輯運算式。 此選項會在選擇 [預存程序] 命令類型選項時出現。  
+ 輸入或選擇您要使用之預存程序的名稱。 請按一下 [運算式] (*fx*) 按鈕來編輯運算式。 此選項會在選擇 [預存程序] 命令類型選項時出現。  
   
  **逾時 (以秒為單位)**  
  輸入查詢逾時之前的秒數。 預設值是 30 秒。 **[逾時]** 的值必須是空白或大於零。 如果是空白，則查詢不會逾時。  
@@ -84,6 +84,6 @@ ms.lasthandoff: 08/03/2017
 ## <a name="see-also"></a>請參閱＜  
  [報表資料集 &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [對話方塊、窗格和精靈的報表產生器說明](http://msdn.microsoft.com/en-us/2da24891-0b6d-4d3c-8b18-81b98752642f)   
- [查詢設計工具 &#40;報表產生器&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
+ [查詢設計工具 &#40;報表產生器 &#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
   
   

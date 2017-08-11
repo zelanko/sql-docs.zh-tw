@@ -17,11 +17,11 @@ caps.latest.revision: 28
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: f4917fea7fbaa0f652287a08e0a3a5727feaad9e
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="new-system-role-management-studio"></a>新增系統角色 (Management Studio)
@@ -48,7 +48,7 @@ ms.lasthandoff: 08/03/2017
  顯示工作的描述，其中列舉出工作能夠支援的作業或權限。  
   
 ## <a name="see-also"></a>請參閱＜  
- [Management Studio F1 說明中的報表伺服器](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
+ [Report Server in Management Studio F1 說明](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
  [角色定義](../../reporting-services/security/role-definitions.md)  
   
   

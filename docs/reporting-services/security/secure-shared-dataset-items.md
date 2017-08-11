@@ -15,11 +15,11 @@ caps.latest.revision: 6
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a8f5d95f21c220a5039945a06204fd2a0e9a3c66
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="secure-shared-dataset-items"></a>保護共用資料集項目的安全
@@ -55,9 +55,9 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>請參閱＜  
  [管理共用資料集](../../reporting-services/report-data/manage-shared-datasets.md)   
- [保護資料夾的安全](../../reporting-services/security/secure-folders.md)   
- [保護報表和資源的安全](../../reporting-services/security/secure-reports-and-resources.md)   
- [在原生模式報表伺服器上授與權限](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
- [在原生模式報表伺服器上授與權限](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
+ [安全的資料夾](../../reporting-services/security/secure-folders.md)   
+ [保護報表和資源](../../reporting-services/security/secure-reports-and-resources.md)   
+ [授與原生模式報表伺服器上的權限](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
+ [授與原生模式報表伺服器上的權限](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   
   

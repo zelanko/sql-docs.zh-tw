@@ -15,11 +15,11 @@ caps.latest.revision: 9
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: d9f1b75bc40693248526282a6565db340930601b
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="activate-the-report-server-file-sync-feature-in-sharepoint-ca"></a>啟動報表伺服器檔案同步處理功能，在 SharePoint CA 中
@@ -45,7 +45,7 @@ ms.lasthandoff: 06/22/2017
 4.  按一下 **[啟用]**。  
   
 > [!NOTE]  
->  若要停用報表伺服器檔案同步處理功能，您可以執行相同的程序，但是按一下 [停用]。  
+>  若要停用報表伺服器檔案同步處理功能，您可以使用相同的程序，但是按一下**停用**。  
   
 ## <a name="see-also"></a>另請參閱  
  [疑難排解報表組件 (報表產生器及 SSRS)](http://msdn.microsoft.com/en-us/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   

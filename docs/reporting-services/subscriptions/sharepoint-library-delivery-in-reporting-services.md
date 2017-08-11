@@ -19,11 +19,11 @@ caps.latest.revision: 15
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 18312b5d8222cc79b07eb3a33eaf3fb60454b861
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="sharepoint-library-delivery-in-reporting-services"></a>Reporting Services 中的 SharePoint 文件庫傳遞
@@ -87,12 +87,12 @@ ms.lasthandoff: 06/22/2017
  指定在處理訂閱時，具有相同名稱與副檔名的檔案是否要由較新的版本取代。 如果您要以較新的版本取代現有的檔案，選擇 [覆寫]。 如果您不要訂閱取代檔案，選擇 [無]。 在此情況下，如果有具有目標名稱與副檔名的檔案存在，則傳遞不會發生。 如果您要在檔案名稱結尾附加一個數字，藉此加入相同檔案的連續版本，選擇 [自動遞增]。  
   
  自動複製  
- 如果您要使用 [自動複製] 功能，將檔案的最新版本自動複製到多個位置，當啟用 [覆寫] 時，就會複製該檔案。 如果您使用的是 [自動遞增] 或 [無]，傳遞將會失敗，而且會發生 **rsDeliveryError** 錯誤。  
+ 如果您要使用 [自動複製] 功能，將檔案的最新版本自動複製到多個位置，當啟用 [覆寫] 時，就會複製該檔案。 如果您使用**Autoincrement**或**無**，便會失敗而**rsDeliveryError**就會發生錯誤。  
   
 ## <a name="see-also"></a>另請參閱  
- [建立及管理 SharePoint 模式報表伺服器的訂閱](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
- [訂閱與傳遞 &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [指定報表資料來源的認證及連接資訊](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
+ [建立和管理 SharePoint 模式報表伺服器的訂閱](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
+ [訂閱和傳遞 &#40;Reporting Services &#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
+ [指定認證和報表資料來源的連接資訊](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   
   
 

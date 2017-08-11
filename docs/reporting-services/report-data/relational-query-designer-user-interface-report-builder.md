@@ -21,18 +21,18 @@ caps.latest.revision: 23
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: bd44bb279b61785784ce6ebe443ad78d30b4fc82
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="relational-query-designer-user-interface-report-builder"></a>關聯式查詢設計工具使用者介面 (報表產生器)
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的報表產生器和報表設計師同時提供圖形化查詢設計工具和以文字為基礎的查詢設計工具，可協助您建立查詢，用來指定從 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)] relational databases 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] 中針對報表資料集擷取的資料。 使用圖形化查詢設計工具來瀏覽中繼資料、以互動方式建立查詢以及檢視查詢的結果。 使用以文字為基礎的查詢設計工具來檢視圖形化查詢設計工具所建立的查詢，或是修改查詢。 您也可以從檔案或報表匯入現有的查詢。  
   
 > [!NOTE]  
->  在報表產生器中，若要指定 Oracle、OLE DB、ODBC 和 Teradata 資料來源類型的查詢，您必須使用以文字為基礎的查詢設計工具。 如需詳細資訊，請參閱[以文字為基礎的查詢設計工具使用者介面 &#40;報表產生器&#41;](../../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md)。  
+>  在報表產生器中，若要指定 Oracle、OLE DB、ODBC 和 Teradata 資料來源類型的查詢，您必須使用以文字為基礎的查詢設計工具。 如需詳細資訊，請參閱[文字為基礎的查詢設計工具使用者介面 &#40;報表產生器 &#41;](../../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
   
 > [!IMPORTANT]  
 >  當使用者建立與執行查詢時，可以存取資料來源。 您應該授與資料來源的最小權限，例如唯讀權限。  
@@ -43,7 +43,7 @@ ms.lasthandoff: 06/22/2017
  圖形化查詢設計工具分成三個區域。 根據查詢使用資料表/檢視表還是預存程序/資料表值函式而定，查詢設計工具的配置會有所不同。  
   
 > [!NOTE]  
->  [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] 不支援預存程序或資料表值函數。  
+>  [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)]不支援預存程序或資料表值函式。  
   
  下圖顯示搭配資料表或檢視表使用時的圖形化查詢設計工具。  
   
@@ -94,7 +94,7 @@ ms.lasthandoff: 06/22/2017
   
  彙總會提供資料摘要，而資料會進行分組，以支援傳遞摘要資料的彙總。 當您在查詢中使用彙總時，查詢傳回的其他欄位會自動分組，且查詢會包含 SQL GROUP BY 子句。 您可以僅使用 [群組和彙總] 清單中的 [群組依據] 選項摘要資料，而不加入彙總。 許多彙總會包含使用 DISTINCT 關鍵字的版本。 包含 DISTINCT 可消除重複的值。  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses [!INCLUDE[tsql](../../includes/tsql-md.md)] and [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] uses [!INCLUDE[DWsql](../../includes/dwsql-md.md)]. SQL 語言的這兩種方言都支援查詢設計工具提供的子句、關鍵字和彙總。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] 使用 [!INCLUDE[DWsql](../../includes/dwsql-md.md)]。 SQL 語言的這兩種方言都支援查詢設計工具提供的子句、關鍵字和彙總。  
   
  如需 [!INCLUDE[tsql](../../includes/tsql-md.md)] 的詳細資訊，請參閱 msdn.microsoft.com 上《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [線上叢書》](http://go.microsoft.com/fwlink/?LinkId=141687)中的 [Transact-SQL 參考 &#40;資料庫引擎&#41;](../../t-sql/transact-sql-reference-database-engine.md)。  
   
@@ -199,9 +199,9 @@ ms.lasthandoff: 06/22/2017
  當您在 [資料庫檢視] 窗格中選取資料表和資料行或預存程序和檢視表時，查詢設計工具就會從資料庫結構描述中擷取基礎主索引鍵和外部索引鍵關聯性。 查詢設計工具會透過分析這些關聯性，偵測兩個資料表之間的關聯性，並且將聯結加入至查詢。 然後您就可以加入群組和彙總、加入或變更關聯性以及加入篩選，藉此修改查詢。 按一下 [當成文字編輯]，即可檢視查詢文字，該文字會顯示要從中擷取資料的資料行、資料表之間的聯結，以及所有群組或彙總。  
   
 ## <a name="text-based-query-designer"></a>以文字為基礎的查詢設計工具  
- 若要對查詢擁有最佳控制權，請使用以文字為基礎的查詢設計工具。 若要切換至以文字為基礎的查詢設計工具，請按一下工具列中的 [當成文字編輯]。 您在以文字為基礎的查詢設計工具中編輯查詢之後，就無法再使用關聯式查詢設計工具。 之後，查詢永遠都會在以文字為基礎的查詢設計工具中開啟。 如需詳細資訊，請參閱[以文字為基礎的查詢設計工具使用者介面 &#40;報表產生器&#41;](../../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md)。  
+ 若要對查詢擁有最佳控制權，請使用以文字為基礎的查詢設計工具。 若要切換至以文字為基礎的查詢設計工具，請按一下工具列中的 [當成文字編輯]。 您在以文字為基礎的查詢設計工具中編輯查詢之後，就無法再使用關聯式查詢設計工具。 之後，查詢永遠都會在以文字為基礎的查詢設計工具中開啟。 如需詳細資訊，請參閱[文字為基礎的查詢設計工具使用者介面 &#40;報表產生器 &#41;](../../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
   
 ## <a name="see-also"></a>另請參閱  
- [查詢設計工具 &#40;報表產生器&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
+ [查詢設計工具 &#40;報表產生器 &#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
   
   

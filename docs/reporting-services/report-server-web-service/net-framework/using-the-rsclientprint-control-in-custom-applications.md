@@ -22,11 +22,11 @@ caps.latest.revision: 31
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 8afee187160da9d35efd0c7079b649bac7e73740
+ms.translationtype: MT
+ms.sourcegitcommit: 727d9ccd8cd1e40d89cfe74291edae92988b407c
+ms.openlocfilehash: 57312a2c4c75a9df1abc55baa833772c9949270c
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="using-the-rsclientprint-control-in-custom-applications"></a>在自訂應用程式中使用 RSClientPrint 控制項
@@ -72,7 +72,7 @@ ms.lasthandoff: 06/13/2017
   
 ### <a name="rsclientprint-properties"></a>RSClientPrint 屬性  
   
-|屬性|Type|RW|預設值|Description|  
+|屬性|型別|RW|預設值|Description|  
 |--------------|----------|--------|-------------|-----------------|  
 |MarginLeft|Double|RW|報表設定|取得或設定左邊界。 如果開發人員未設定或報表中未指定，則預設值為 12.2 公釐。|  
 |MarginRight|Double|RW|報表設定|取得或設定右邊界。 如果開發人員未設定或報表中未指定，則預設值為 12.2 公釐。|  
@@ -82,7 +82,7 @@ ms.lasthandoff: 06/13/2017
 |PageHeight|Double|RW|報表設定|取得或設定頁高。 如果開發人員未設定或是報表定義為 279.4 公釐，則為預設值。|  
 |Culture|Int32|RW|瀏覽器地區設定|指定地區設定識別碼 (LCID)。 此值會決定使用者輸入的度量單位。 例如，如果使用者類型**3**，將會以公釐為單位測量值，如果語言為法文或英吋如果語言是英文 （美國）。 有效值包括：1028、1031、1033、1036、1040、1041、1042、2052、3082。|  
 |UICulture|字串|RW|用戶端文化特性|指定對話方塊的字串當地語系化。 [列印] 對話方塊中的文字會採用下列語言的當地語系化：簡體中文、繁體中文、英文、法文、德文、義大利文、日文、韓文和西班牙文。 有效值包括：1028、1031、1033、1036、1040、1041、1042、2052、3082。|  
-|Authenticate|Boolean|RW|False|指定控制項是否對報表伺服器發出 GET 命令，以起始連接來執行工作階段外的列印。|  
+|Authenticate|布林|RW|False|指定控制項是否對報表伺服器發出 GET 命令，以起始連接來執行工作階段外的列印。|  
   
 ### <a name="when-to-set-the-authenticate-property"></a>何時設定驗證屬性  
  當您從列印在瀏覽器工作階段中時，您不需要設定**驗證**屬性。 在使用中工作階段的環境內，從列印控制項至報表伺服器的全部要求均透過瀏覽器來處理。 瀏覽器會設定對報表伺服器通訊的必要工作階段變數。  
@@ -109,7 +109,7 @@ ms.lasthandoff: 06/13/2017
 ### <a name="rsprintclient-support-for-the-print-method"></a>RSPrintClient 支援 Print 方法  
  **RSClientPrint**物件支援**列印**方法用來啟動 [列印] 對話方塊。 **列印**方法具有下列引數。  
   
-|引數|I/O|Type|Description|  
+|引數|I/O|型別|Description|  
 |--------------|----------|----------|-----------------|  
 |ServerPath|In|字串|指定報表伺服器虛擬目錄 (例如， `https://adventure-works/reportserver`)。|  
 |ReportPathParameters|In|字串|在報表伺服器資料夾命名空間內指定報表的全名，包括參數在內。 報表是透過 URL 存取來擷取。 例如："/AdventureWorks Sample Reports/Employee Sales Summary&EmpID=1234"|  
@@ -150,7 +150,7 @@ ms.lasthandoff: 06/13/2017
   
 ## <a name="see-also"></a>另請參閱  
  [從列印控制項 &#40; 的瀏覽器列印報表報表產生器及 SSRS &#41;](../../../reporting-services/report-builder/print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md)   
- [列印報表 &#40;報表產生器及 SSRS&#41;](../../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)   
+ [列印報表 &#40;報表產生器及 SSRS &#41;](../../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)   
  [影像裝置資訊設定](../../../reporting-services/image-device-information-settings.md)  
   
   

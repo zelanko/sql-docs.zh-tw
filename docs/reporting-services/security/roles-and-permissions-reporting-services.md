@@ -23,11 +23,11 @@ caps.latest.revision: 18
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ea2b4cba953b6622811b80c7f6c60838ce0a6f91
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="roles-and-permissions-reporting-services"></a>角色與權限 (Reporting Services)
@@ -42,14 +42,14 @@ ms.lasthandoff: 06/22/2017
  在 SharePoint 整合模式中，驗證和授權會先在 SharePoint 網站上處理，然後要求才會送達報表伺服器。 根據您設定驗證的方式而定，來自 SharePoint 網站的要求會包含安全性 Token 或受信任的使用者名稱。 您針對 SharePoint 使用者和群組所設定的權限會授權放置於 SharePoint 文件庫中之報表伺服器項目的存取權。  
   
 ## <a name="in-this-section"></a>本節內容  
- [在原生模式報表伺服器上授與權限](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
+ [授與原生模式報表伺服器上的權限](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
  描述提供內容和作業之存取權的以角色為基礎授權模型。  
   
- [授與 SharePoint 網站上報表伺服器項目的權限](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
+ [授與權限在 SharePoint 網站上的報表伺服器項目](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
  說明 SharePoint 群組、權限等級和權限如何用於控制報表伺服器的存取權。  
   
 ## <a name="see-also"></a>請參閱＜  
- [使用報表伺服器驗證](../../reporting-services/security/authentication-with-the-report-server.md)   
- [在原生模式報表伺服器上授與權限](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
+ [報表伺服器驗證](../../reporting-services/security/authentication-with-the-report-server.md)   
+ [授與原生模式報表伺服器上的權限](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   
   

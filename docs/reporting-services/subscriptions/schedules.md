@@ -22,11 +22,11 @@ caps.latest.revision: 51
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a49274f347768a1a213c9a0010917e9e1d1376a5
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="schedules"></a>排程
@@ -123,25 +123,25 @@ ms.lasthandoff: 06/22/2017
  Reporting Services 會針對所有排程的作業維護事件佇列， 也會定期輪詢此佇列，以檢查是否有新的事件。 依預設，每隔 10 秒鐘會掃描一次佇列。 您可以變更此間隔，其方式是在 RSReportServer.config 檔中修改 **PollingInterval**、 **IsNotificationService**和 **IsEventService** 組態設定。 SharePoint 模式也會將 RSreporserver.config 用於這些設定，而且這些值會套用到所有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式。 如需詳細資訊，請參閱 [RsReportServer.config 組態檔](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)。  
   
 ##  <a name="bkmk_serverdependencies"></a> 伺服器相依性  
- 排程與傳遞處理器需要啟動報表伺服器服務與 SQL Server Agent。 排程與傳遞處理功能必須透過原則型式管理中 [Reporting Services 的介面區組態] Facet 的 **ScheduleEventsAndReportDeliveryEnabled** 屬性來啟用。 SQL Server Agent 與報表伺服器服務都必須執行，排程的作業才會發生。  
+ 排程與傳遞處理器需要啟動報表伺服器服務與 SQL Server Agent。 排程與傳遞處理功能必須啟用透過**[scheduleeventsandreportdeliveryenabled]**屬性**Reporting Services 的介面區組態**中以原則為基礎的管理 facet。 SQL Server Agent 與報表伺服器服務都必須執行，排程的作業才會發生。  
   
 > [!NOTE]  
 >  您可以使用 **[Reporting Services 的介面區組態]** Facet，暫時或永久地停止排程的作業。 您可以建立與部署自訂傳遞擴充模組，但排程與傳遞處理器無法藉由本身擴充。 您無法變更它管理事件與通知的方式。 如需有關關閉功能的詳細資訊，請參閱＜ **Turn Reporting Services Features On or Off** ＞的＜ [排程的事件和傳遞](../../reporting-services/report-server/turn-reporting-services-features-on-or-off.md)＞一節。  
   
 ###  <a name="bkmk_stoppingagent"></a> 停止 SQL Server Agent 的影響  
- 依預設，排程的報表是使用 SQL Server Agent。 如果您停止服務，則除非您透過 <xref:ReportService2010.ReportingService2010.FireEvent%2A> 方法，利用程式加入處理要求，否則不會有新處理要求加入佇列。 您重新啟動服務後，建立報表處理要求的作業就會繼續。 報表伺服器不會嘗試重新建立可能在 SQL Server Agent 離線期間所發生的報表處理作業。 如果您停止 SQL Server Agent 一個星期，那個星期內所有排程的作業都會遺失。  
+ 依預設，排程的報表是使用 SQL Server Agent。 如果您停止服務，則除非您透過 <xref:ReportService2010.ReportingService2010.FireEvent%2A> 方法，以程式設計方式加入處理要求，否則不會有新處理要求加入佇列。 您重新啟動服務後，建立報表處理要求的作業就會繼續。 報表伺服器不會嘗試重新建立可能在 SQL Server Agent 離線期間所發生的報表處理作業。 如果您停止 SQL Server Agent 一個星期，那個星期內所有排程的作業都會遺失。  
   
 > [!NOTE]  
->  SQL Server Agent 為 Reporting Services 提供的功能，可以由使用 <xref:ReportService2010.ReportingService2010.FireEvent%2A> 方法，將排程事件加入佇列的自訂程式碼取代。  
+>  SQL Server Agent 為 Reporting Services 提供的功能，可以由使用 <xref:ReportService2010.ReportingService2010.FireEvent%2A> 方法的自訂程式碼取代，來將排程事件加入佇列。  
   
 ###  <a name="bkmk_stoppingservice"></a> 停止報表伺服器服務的影響  
  如果停止報表伺服器服務，SQL Server Agent 會繼續將報表處理要求加入佇列。 SQL Server Agent 中的狀態資訊會指出作業成功。 但是，因為報表伺服器服務已停止，因此實際上沒有任何報表處理發生。 要求將繼續在佇列中累積，直到您重新啟動報表伺服器服務為止。 一旦您重新啟動報表伺服器服務之後，佇列中的所有報表處理要求都會依照順序處理。  
   
 ## <a name="see-also"></a>請參閱＜  
  [建立、修改及刪除報表記錄中的快照集](../../reporting-services/report-server/create-modify-and-delete-snapshots-in-report-history.md)   
- [訂閱與傳遞 &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
+ [訂閱和傳遞 &#40;Reporting Services &#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [資料驅動訂閱](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
- [快取多個報表 &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md)   
+ [快取報表 &#40;SSRS &#41;](../../reporting-services/report-server/caching-reports-ssrs.md)   
  [報表伺服器內容管理 &#40;SSRS 原生模式&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
  [快取共用資料集 &#40;SSRS&#41;](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)  
   

@@ -18,11 +18,11 @@ caps.latest.revision: 15
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: eb1f09f1a23a6e24077357c36a0dbc136a86473f
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="about-url-reservations-and-registration--ssrs-configuration-manager"></a>關於 URL 保留項目和註冊 (SSRS 組態管理員)
@@ -30,7 +30,7 @@ ms.lasthandoff: 06/22/2017
   
 -   安裝程式將會使用預設值建立 URL 保留項目。 如果安裝程式安裝預設組態，它將會保留兩個 URL；其中一個用於報表伺服器 Web 服務，另一個用於報表管理員。 您可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具來加入更多的 URL，或是修改安裝程式所建立的預設 URL。  
   
--   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具將會根據您在此工具的 [Web 服務 URL] 或 [入口網站 URL] 頁面所指定的 URL 來建立 URL 保留項目。  
+-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]組態工具會建立根據的指定的 URL 保留項目**Web 服務 URL**或**入口網站 URL**工具中的頁面。  
   
  安裝程式和此工具也都將指派報表伺服器服務之 URL 的權限、檢查是否有重複的執行個體，然後將此 URL 保留項目加入到 HTTP.SYS。 絕對不要直接使用 HttpCfg.exe 或其他工具來建立或修改 Reporting Services URL 保留項目。 如果您略過某個步驟或是設定無效的值，您將會遇到可能很難診斷或修復的問題。  
   
@@ -58,7 +58,7 @@ ms.lasthandoff: 06/22/2017
   
  當此服務啟動時，就會發生*「URL 註冊」* 。 於是會建立要求佇列，而且 HTTP.SYS 會開始將要求路由傳送到該佇列。 必須先註冊 URL 端點之後，導向該端點的要求才會加入此佇列中。 當報表伺服器服務啟動時，它將會註冊保留給所有啟用之應用程式使用的所有 URL。 這表示必須啟用此 Web 服務，才會發生註冊。 如果您在原則式管理之 Reporting Services 的介面區組態 Facet 中，將 [WebServiceAndHTTPAccessEnabled] 屬性設定為 [False]，當此服務啟動時，將不會註冊此 Web 服務的 URL。  
   
- 如果您停止此服務或是回收此 Web 服務或[!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]應用程式定義域，URL 會取消註冊。 如果您在此服務執行時修改 URL 保留項目，報表伺服器將會立即回收應用程式定義域，好讓舊的 URL 可以取消註冊，並使用新的 URL。  
+ 如果您停止此服務或是回收此 Web 服務或 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 應用程式定義域，URL 會取消註冊。 如果您在此服務執行時修改 URL 保留項目，報表伺服器將會立即回收應用程式定義域，好讓舊的 URL 可以取消註冊，並使用新的 URL。  
   
  幾個簡單範例將可說明 URL 保留項目的概念，以及它如何與用於 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 應用程式的 URL 位址相關。 請注意一個要點，URL 保留項目的語法與用於存取此應用程式之 URL 的語法不同：  
   
@@ -97,7 +97,7 @@ ms.lasthandoff: 06/22/2017
 |SQL Server Express|入口網站|`http://<servername>/reports_SQLExpress`|`http://<servername>:80/reports_SQLExpress`|  
   
 ##  <a name="URLPermissionsAccounts"></a> Reporting Services URL 的驗證和服務識別  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL 保留項目會指定報表伺服器服務的服務帳戶。 執行此服務所用的帳戶會用於針對相同執行個體內執行之 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 應用程式所建立的所有 URL。 報表伺服器執行個體的服務識別會儲存在 RSReportServer.config 檔案中。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]URL 保留項目會指定報表伺服器服務的服務帳戶。 執行此服務所用的帳戶會用於針對相同執行個體內執行之 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 應用程式所建立的所有 URL。 報表伺服器執行個體的服務識別會儲存在 RSReportServer.config 檔案中。  
   
  此服務帳戶沒有預設值。 但是，安裝期間需要指定服務帳戶，而且即使您在僅限檔案模式下安裝伺服器，仍然會在 RSReportServer.config 的 **URLReservation** 中指定服務帳戶。 此服務帳戶的有效值包括網域使用者帳戶、 **LocalSystem**或 **NetworkService**。  
   
@@ -108,11 +108,11 @@ ms.lasthandoff: 06/22/2017
   
  `http://localhost` URL 會解譯為`http://127.0.0.1`。 如果您將 URL 保留項目限制為電腦名稱或單一 IP 位址，則除非您針對本機電腦上的 127.0.0.1 建立其他保留項目，否則將無法使用 localhost。 同樣地，如果電腦上已停用 localhost 或 127.0.0.1，您將無法使用該 URL。  
   
- [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)]、 [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] 和更新版本包含新的安全性功能，可讓意外使用更高權限執行程式的風險降到最低。 您需要其他步驟，才能在這些作業系統上啟用管理。 如需詳細資訊，請參閱[設定原生模式報表伺服器進行本機管理 &#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)。  
+ [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)]、 [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] 和更新版本包含新的安全性功能，可讓意外使用更高權限執行程式的風險降到最低。 您需要其他步驟，才能在這些作業系統上啟用管理。 如需詳細資訊，請參閱 [Configure a Native Mode Report Server for Local Administration &#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [設定 URL &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
- [URL 保留項目語法 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md)  
+ [設定 URL &#40;SSRS 組態管理員 &#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
+ [URL 保留項目語法 &#40;SSRS 組態管理員 &#41;](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md)  
   
   
 

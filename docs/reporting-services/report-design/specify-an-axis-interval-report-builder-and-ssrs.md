@@ -15,11 +15,11 @@ caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 3676c9e127d69540a634053e37bf21dd8d06024e
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="specify-an-axis-interval-report-builder-and-ssrs"></a>指定軸間隔 (報表產生器及 SSRS)
@@ -44,11 +44,11 @@ ms.lasthandoff: 06/22/2017
 
 ![report-builder-column-chart-preview-x-axis-interval-auto](../../reporting-services/report-design/media/report-builder-column-chart-preview-x-axis-interval-auto.png)
   
-1.  以滑鼠右鍵按一下類別軸，然後按一下 [水平軸屬性]。   
+1.  以滑鼠右鍵按一下類別目錄軸，然後按一下**水平軸屬性**。   
 
     ![report-builder-column-chart-x-axis-labels](../../reporting-services/report-design/media/report-builder-column-chart-x-axis-labels.png)
   
-2.  在 [水平軸屬性] 對話方塊 > [軸選項] 索引標籤上，將 [間隔] 設為 **1** 以顯示每個類別群組標籤。 若要在 X 軸上每隔一個類別目錄群組標籤進行顯示，請輸入 **2**。 
+2.  在**水平軸屬性**對話方塊 >**軸選項**索引標籤上，設定**間隔**至**1**以顯示每個類別目錄群組標籤。 若要在 X 軸上每隔一個類別目錄群組標籤進行顯示，請輸入 **2**。 
 
      ![report-builder-column-chart-x-axis-interval-one](../../reporting-services/report-design/media/report-builder-column-chart-x-axis-interval-one.png)
   
@@ -83,19 +83,19 @@ ms.lasthandoff: 06/22/2017
 
 根據預設， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會將軸間隔設為 [自動]。 此程序說明如何將它設回預設值。 
   
-1.  以滑鼠右鍵按一下要變更的圖表軸，然後按一下 [軸屬性]。 
+1.  以滑鼠右鍵按一下要變更的圖表軸，然後按一下 **[軸屬性]**。 
   
-2.  在 [水平軸屬性] 對話方塊 > [軸選項] 索引標籤上，將 [間隔] 設為 [自動]。 圖表將顯示可納入軸的最佳類別目錄標籤數目。  
+2.  在**水平軸屬性**對話方塊 >**軸選項**索引標籤上，設定**間隔**至**自動**。 圖表將顯示可納入軸的最佳類別目錄標籤數目。  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>請參閱＜  
- [格式化圖表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
+ [格式化圖表 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
  [格式化圖表 （報表產生器及 SSRS） 上的資料點](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
  [在資料區域 （報表產生器及 SSRS） 的排序資料](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)   
- [軸屬性對話方塊，軸選項 &#40;報表產生器及 SSRS&#41;](http://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11)   
- [指定對數刻度 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/specify-a-logarithmic-scale-report-builder-and-ssrs.md)   
- [繪製副座標軸上的資料 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)  
+ [軸屬性對話方塊、 軸選項 &#40;報表產生器及 SSRS &#41;](http://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11)   
+ [指定對數刻度 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/specify-a-logarithmic-scale-report-builder-and-ssrs.md)   
+ [繪製次要座標軸 &#40; 上的資料報表產生器及 SSRS &#41;](../../reporting-services/report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)  
   
   
 

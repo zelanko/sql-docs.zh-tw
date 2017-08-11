@@ -21,11 +21,11 @@ caps.latest.revision: 6
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3aa67165e961e76569daadff1fc610c4d16a1e63
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="pptx-device-information-settings"></a>PPTX 裝置資訊設定
@@ -47,11 +47,11 @@ ms.lasthandoff: 06/22/2017
 |**StartPage**|要轉譯之報表的第一頁。 **0** 值表示轉譯所有頁面。 預設值是 **1**秒。|  
 |**UseReportPageSize**|如果 UseReportPageSize =**false** ，則預設投影片大小為 PowerPoint 預設值 13.333” x 7.5” (16:9 外觀比例)。 如果 UseReportPageSize =true，則預設投影片大小為報表的定義頁面大小。<br /><br /> 預設值為 **false**<br /><br /> 請注意，PageWidth 和 PageHeight 設定會覆寫預設的寬度和高度。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   
  [將裝置資訊設定傳遞至轉譯延伸模組](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
- [在 RSReportServer.Config 中自訂轉譯延伸模組參數](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
- [技術參考 &#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)  
+ [自訂轉譯延伸模組參數，在 RSReportServer.Config 中](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
+ [技術參考 &#40;SSRS &#41;](../reporting-services/technical-reference-ssrs.md)  
   
   
 

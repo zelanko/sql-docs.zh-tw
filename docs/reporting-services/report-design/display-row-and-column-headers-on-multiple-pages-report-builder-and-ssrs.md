@@ -15,11 +15,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 97fe2b81898c3172db4d387afbac3be4086fac11
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs"></a>在多個頁面上顯示資料列和資料行標頭 (報表產生器及 SSRS)
@@ -35,7 +35,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="to-display-row-headers-on-multiple-pages"></a>若要在多個頁面上顯示資料列標頭  
   
-1.  以滑鼠右鍵按一下 Tablix 資料區的資料列、資料行或角控點，然後按一下 [Tablix 屬性]。  
+1.  以滑鼠右鍵按一下 Tablix 資料區的資料列、資料行或角控點，然後按一下 **[Tablix 屬性]**。  
   
 2.  在 **[資料列標頭]**中，選取 **[在每一頁重複標頭資料列]**。  
   
@@ -43,7 +43,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="to-display-column-headers-on-multiple-pages"></a>在多個頁面上顯示資料行標頭  
   
-1.  以滑鼠右鍵按一下 Tablix 資料區的資料列、資料行或角控點，然後按一下 [Tablix 屬性]。  
+1.  以滑鼠右鍵按一下 Tablix 資料區的資料列、資料行或角控點，然後按一下 **[Tablix 屬性]**。  
   
 2.  在 **[資料行標頭]**中，選取 **[在每一頁重複標頭資料行]**。  
   
@@ -72,8 +72,8 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>請參閱＜  
  [尋找、檢視和管理報表 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [匯出報表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
- [控制分頁符號、標題、資料行和資料列 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
- [與群組一起顯示頁首和頁尾 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)   
+ [控制分頁符號、 標題、 資料行和資料列 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
+ [顯示頁首和頁尾與群組 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)   
  [在報表中捲動時將標頭保持可見 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md)  
   
   

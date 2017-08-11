@@ -9,6 +9,8 @@ ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- sql13.dts.designer.wmiconnection.f1
 helpviewer_keywords:
 - connections [Integration Services], WMI
 - connection managers [Integration Services], WMI
@@ -19,10 +21,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d8bd256a462a8a0a51441024619f2ed81f6db753
+ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
+ms.openlocfilehash: 6e314655d6a230bde897ffceb54fadb8d180d1db
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="wmi-connection-manager"></a>WMI 連接管理員
@@ -45,8 +47,37 @@ ms.lasthandoff: 08/03/2017
   
  如需以程式設計方式設定連線管理員的相關資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 和 [以程式設計方式加入連接](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="wmi-connection-manager-editor"></a>WMI 連接管理員編輯器
+  使用 [WMI 連線管理員] 對話方塊，以指定 Microsoft Windows Management Instrumentation (WMI) 與伺服器的連線。  
+  
+ 若要深入了解 WMI 連接管理員，請參閱＜ [WMI Connection Manager](../../integration-services/connection-manager/wmi-connection-manager.md)＞。  
+  
+### <a name="options"></a>選項。  
+ **名稱**  
+ 提供唯一的名稱給連接管理員。  
+  
+ **說明**  
+ 描述連接管理員。 最佳作法是以其用途描述連接管理員，使封裝可以自我記錄並易於維護。  
+  
+ **伺服器名稱**  
+ 提供您要 WMI 連接的伺服器名稱。  
+  
+ **命名空間**  
+ 指定 WMI 命名空間。  
+  
+ **使用 Windows 驗證**  
+ 選取以使用 Windows 驗證。 如果您使用 Windows 驗證，就不需要提供連接的使用者名稱或密碼。  
+  
+ **使用者名稱**  
+ 如果您並未使用 Windows 驗證，則必須提供連接的使用者名稱。  
+  
+ **密碼**  
+ 如果您並未使用 Windows 驗證，則必須提供連接的密碼。  
+  
+ **測試**  
+ 測試連接管理員設定。  
+  
+## <a name="see-also"></a>另請參閱  
  [Web 服務工作](../../integration-services/control-flow/web-service-task.md)   
  [Integration Services &#40;SSIS &#41;連線](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
-  
-  
+

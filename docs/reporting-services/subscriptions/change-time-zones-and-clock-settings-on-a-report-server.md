@@ -20,11 +20,11 @@ caps.latest.revision: 22
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 79f8068d11d707c4b0237d32e1645a80a12cdbbb
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="change-time-zones-and-clock-settings-on-a-report-server"></a>變更報表伺服器上的時區和時鐘設定
@@ -46,7 +46,7 @@ ms.lasthandoff: 06/22/2017
  變更電腦時鐘不會影響現有的時間戳記值 (例如，若您將時間往前調一小時，報表記錄快照集的時間戳記並不會變更)。 在排程與傳遞處理器使用新的設定以前，可能會有 10 秒的延遲。 如果您有在組態檔中修改輪詢間隔設定，實際的延遲就會因設定而異。  
   
 ## <a name="see-also"></a>請參閱＜  
- [啟動與停止 Report Server 服務](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)   
+ [啟動和停止報表伺服器服務](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)   
  [排程](../../reporting-services/subscriptions/schedules.md)  
   
   

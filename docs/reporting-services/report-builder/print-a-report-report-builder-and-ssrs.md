@@ -15,11 +15,11 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 26fe5c7d510e186258b006659d565935f4dd73d0
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="print-a-report-report-builder-and-ssrs"></a>列印報表 (報表產生器及 SSRS)
@@ -38,7 +38,7 @@ ms.lasthandoff: 06/22/2017
     > [!NOTE]  
     >  在設計或執行模式中，不會顯示列印邊界。 設計介面區域與報表的列印區域之間沒有任何關聯性。 若要查看列印邊界，請在執行模式中，於 [功能區] 的 **[執行]** 索引標籤上，按一下 [整頁模式]。  
   
- 如需報表分頁的詳細資訊，請參閱 [Reporting Services 中的分頁 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)。  
+ 如需有關報表分頁的詳細資訊，請參閱[Reporting Services &#40; 中的分頁報表產生器及 SSRS &#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -49,9 +49,9 @@ ms.lasthandoff: 06/22/2017
   
 2.  在 [主資料夾] 索引標籤上，按一下 **[執行]**。  
   
-3.  (選擇性) 按一下 [整頁模式] 查看報表列印時的外觀。  
+3.  （選擇性）按一下**整頁模式**以查看報表列印時的外觀。  
   
-4.  (選擇性) 按一下 [版面設定] 設定紙張、方向與邊界。  
+4.  （選擇性）按一下**版面**設定紙張、 方向與邊界。  
   
     > [!NOTE]  
     >  這些設定的預設值來自 [設計] 檢視中所設定的報表屬性。 您在 **[版面設定]** 對話方塊中設定的值只會用於此工作階段。 當您關閉這份報表並重新開啟時，它就會再次具有預設值。  
@@ -83,7 +83,7 @@ ms.lasthandoff: 06/22/2017
   
 ### <a name="to-change-paper-size"></a>變更紙張大小  
   
-1.  以滑鼠右鍵按一下報表主體的外面，然後按一下 [報表屬性]。  
+1.  以滑鼠右鍵按一下報表主體的外面，按一下 **報表屬性**。  
   
 2.  在 **[版面設定]**中，從 **[紙張大小]** 清單選取一個值。 每個選項都會填入 **[寬度]** 和 **[高度]** 屬性。 您也可以指定自訂大小，其方式是在 **[寬度]** 和 **[高度]** 方塊內輸入數值。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -92,7 +92,7 @@ ms.lasthandoff: 06/22/2017
   
 ### <a name="to-set-page-margins-in-design-mode"></a>在設計模式中設定頁面邊界  
   
--   以滑鼠右鍵按一下設計介面周圍的藍色區域，按一下 [報表屬性]，然後按一下 [版面設定] 頁面。  
+-   以滑鼠右鍵按一下設計介面周圍的藍色區域中，按一下**報表屬性**，然後按一下 **版面**頁面。  
   
 ### <a name="to-set-page-margins-in-run-mode"></a>若要在執行模式中設定頁面邊界  
   
@@ -101,7 +101,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>請參閱＜  
  [列印報表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)   
  [匯出報表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
- [報表屬性對話方塊、版面設定 &#40;報表產生器&#41;](http://msdn.microsoft.com/library/eb3b5d01-7b82-4808-a58b-9e096742f8c6)   
+ [報表屬性對話方塊、 版面設定 &#40;報表產生器 &#41;](http://msdn.microsoft.com/library/eb3b5d01-7b82-4808-a58b-9e096742f8c6)   
  [報表設計檢視 &#40;報表產生器&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)  
   
   

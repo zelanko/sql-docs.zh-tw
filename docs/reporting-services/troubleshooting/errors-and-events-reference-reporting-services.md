@@ -21,11 +21,11 @@ caps.latest.revision: 42
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a0738c8ac950a86ef877c26fd8b6a0f6a6b075f2
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="errors-and-events-reference-reporting-services"></a>錯誤和事件參考 (Reporting Services)
@@ -53,14 +53,14 @@ ms.lasthandoff: 06/22/2017
 |117|錯誤|啟動/關閉|報表伺服器|報表伺服器資料庫是無效的版本。|  
 |118|警告|記錄|報表伺服器<br /><br /> 報表管理員|追蹤記錄不在預期的目錄位置；將在預設目錄建立新的追蹤記錄。 如需詳細資訊，請參閱 [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)。|  
 |119|錯誤|啟用|報表伺服器<br /><br /> 排程與傳遞處理器|*\<來源 >*未被授權存取報表伺服器資料庫的內容。|  
-|120|錯誤|啟用|報表伺服器|對稱金鑰無法解密。 最可能的情況是因為，伺服器執行的帳戶已經變更。 如需詳細資訊，請參閱[設定和管理加密金鑰 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)。|  
+|120|錯誤|啟用|報表伺服器|對稱金鑰無法解密。 最可能的情況是因為，伺服器執行的帳戶已經變更。 如需詳細資訊，請參閱[設定和管理加密金鑰 &#40;SSRS 組態管理員 &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).|  
 |121|錯誤|啟動/關閉|報表伺服器|遠端程序呼叫 (RPC) 服務啟動失敗。|  
 |122|警告|傳遞|排程與傳遞處理器|「排程與傳遞處理器」無法連接到作為電子郵件傳遞的 SMTP 伺服器。 如需有關 SMTP 伺服器連接的詳細資訊，請參閱 [為電子郵件傳遞設定報表伺服器 (SSRS 組態管理員)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83)。|  
 |123|警告|記錄|報表伺服器<br /><br /> 報表管理員|報表伺服器寫入追蹤記錄失敗。 如需追蹤記錄的詳細資訊，請參閱 [報表伺服器服務追蹤記錄](../../reporting-services/report-server/report-server-service-trace-log.md)。|  
-|124|資訊|啟用|報表伺服器|「報表伺服器」服務已經初始化。 如需詳細資訊，請參閱[初始化報表伺服器 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)。|  
-|125|資訊|啟用|報表伺服器|用來加密資料的金鑰已經成功擷取。 如需金鑰的詳細資訊，請參閱[設定和管理加密金鑰 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)。|  
-|126|資訊|啟用|報表伺服器|用來加密資料的金鑰已經成功套用。 如需金鑰的詳細資訊，請參閱[設定和管理加密金鑰 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)。|  
-|127|資訊|啟用|報表伺服器|加密內容已經成功從報表伺服器資料庫移除。 如需刪除無法復原之加密資料的詳細資訊，請參閱[設定和管理加密金鑰 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)。|  
+|124|資訊|啟用|報表伺服器|「報表伺服器」服務已經初始化。 如需詳細資訊，請參閱[初始化報表伺服器 &#40;SSRS 組態管理員 &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).|  
+|125|資訊|啟用|報表伺服器|用來加密資料的金鑰已經成功擷取。 如需有關金鑰的詳細資訊，請參閱[設定和管理加密金鑰 &#40;SSRS 組態管理員 &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).|  
+|126|資訊|啟用|報表伺服器|用來加密資料的金鑰已經成功套用。 如需有關金鑰的詳細資訊，請參閱[設定和管理加密金鑰 &#40;SSRS 組態管理員 &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).|  
+|127|資訊|啟用|報表伺服器|加密內容已經成功從報表伺服器資料庫移除。 如需刪除非可復原的加密的資料的詳細資訊，請參閱[設定和管理加密金鑰 &#40;SSRS 組態管理員 &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).|  
 |128|錯誤|啟用|報表伺服器|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 不同版本的元件無法一起使用。|  
 |129|錯誤|管理|報表伺服器<br /><br /> 排程與傳遞處理器|加密的組態檔設定無法解密。|  
 |130|錯誤|管理|報表伺服器<br /><br /> 排程與傳遞處理器|*\<來源 >*找不到組態檔。 報表伺服器需要組態檔。|  

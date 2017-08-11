@@ -15,11 +15,11 @@ caps.latest.revision: 7
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: fb2ff6fdeb8f4d05866c09e87cd899a5dd2bb7ad
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="embedded-and-shared-datasets-report-builder-and-ssrs"></a>內嵌和共用資料集 (報表產生器及 SSRS)
@@ -43,7 +43,7 @@ ms.lasthandoff: 06/22/2017
   
  在報表產生器中，您可以執行下列作業：  
   
-1.  若要建立共用資料集，請使用共用資料集設計檢視。 您可以將它儲存至報表伺服器或 SharePoint 網站，以便與其他報表共用。 您也可以瀏覽至報表伺服器，然後編輯現有的共用資料集。 在此檢視中，您可以建立查詢並設定所有資料集選項。 如需詳細資訊，請參閱[共用資料集設計檢視 &#40;報表產生器&#41;](../../reporting-services/report-builder/shared-dataset-design-view-report-builder.md)。  
+1.  若要建立共用資料集，請使用共用資料集設計檢視。 您可以將它儲存至報表伺服器或 SharePoint 網站，以便與其他報表共用。 您也可以瀏覽至報表伺服器，然後編輯現有的共用資料集。 在此檢視中，您可以建立查詢並設定所有資料集選項。 如需詳細資訊，請參閱[共用資料集設計檢視 &#40;報表產生器 &#41;](../../reporting-services/report-builder/shared-dataset-design-view-report-builder.md).  
   
 2.  若要將共用資料集加入至報表，請在 [報表設計檢視] 中開啟報表產生器。 從精靈或 [報表資料] 窗格中，瀏覽到報表伺服器，並選取您要加入至報表的共用資料集。 在此檢視中，除非加入欄位，否則您無法變更查詢。 您可以覆寫其他資料選項和加入篩選。 不過不能移除篩選。  
   
@@ -65,10 +65,10 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>請參閱＜  
  [內嵌和共用資料連接或資料來源 &#40;報表產生器及 SSRS&#41;](http://msdn.microsoft.com/library/f417782c-b85a-4c4d-8a40-839176daba56)   
- [建立共用資料集或內嵌資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
+ [建立共用資料集或內嵌資料集 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
  [報表資料集 &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
- [資料集 Fields 集合 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
- [報表產生器中的資料連接、資料來源及連接字串](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)   
+ [資料集欄位集合 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
+ [資料連接、 資料來源和報表產生器中的連接字串](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)   
  [資料連接、資料來源及連接字串 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
   
   

@@ -15,11 +15,11 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 9a422c1619ae284ec49643465bd8b84efda1910b
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="interactive-functionality---different-report-rendering-extensions"></a>互動式功能的不同報表轉譯延伸模組
@@ -59,7 +59,7 @@ ms.lasthandoff: 06/22/2017
 |-------------------|-------------------------|  
 |預覽/報表檢視器、HTML|使用者按一下 [展開] 和 [摺疊] 圖示，即可檢視報表的各區段。|  
 |PDF|報表伺服器會將目前報表的顯示或隱藏狀態匯出至 PDF。 不支援互動式切換|  
-|Excel|可以切換的鑽研連結和項目會轉譯為 Excel 中可折疊的大綱。 您可以在 Excel 中展開及摺疊報表的各區段。 如需 Excel 規定限制詳細資訊，請參閱[匯出至 Microsoft Excel &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)。|  
+|Excel|可以切換的鑽研連結和項目會轉譯為 Excel 中可折疊的大綱。 您可以在 Excel 中展開及摺疊報表的各區段。 如需有關 Excel 限制的詳細資訊，請參閱[匯出至 Microsoft Excel &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).|  
 |Word|報表伺服器會將目前報表的顯示或隱藏狀態匯出至 PDF。 不支援互動式切換|  
 |其他|不適用於 MHTML、XML 或 CSV。 匯出到影像格式時，報表伺服器會將目前報表的顯示或隱藏狀態匯出至 PDF。 不支援互動式切換。|  
   
@@ -115,10 +115,10 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>請參閱＜  
  [匯出報表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
- [互動式排序、文件引導模式及連結 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
+ [互動式排序、 文件引導模式及連結 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
     
  [資料表、矩陣和清單 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [圖表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
+ [圖表 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
   
   
 

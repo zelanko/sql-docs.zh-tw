@@ -15,11 +15,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0dfa69257be349f7da24de5a1d6313cbd280105e
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="insert-or-delete-a-column-report-builder-and-ssrs"></a>插入或刪除資料行 (報表產生器及 SSRS)
@@ -38,36 +38,36 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="to-insert-a-column-in-a-selected-data-region"></a>在選取的資料區中插入資料行  
   
--   以滑鼠右鍵按一下您想要插入資料行的資料行控制代碼、按一下 [插入資料行]，然後按一下 **[左方]** 或 [右方]。  
+-   以滑鼠右鍵按一下您要插入資料行，資料行控點按一下**插入資料行**，然後按一下 **左**或**右邊**。  
   
      -或-  
   
--   在您想要插入資料列的資料區中，以滑鼠右鍵按一下資料格、按一下 [插入資料行]，然後按一下 **[左方]** 或 [右方]。  
+-   以滑鼠右鍵按一下資料格資料區中要插入資料列，按一下**插入資料行**，然後按一下 **左**或**右邊**。  
   
 ## <a name="to-delete-a-column-from-a-selected-data-region"></a>從選取的資料區中刪除資料行  
   
--   選取您想要刪除的一或多個資料行、以滑鼠右鍵按一下其中一個選取之資料行的控制代碼，然後按一下 [刪除資料行]。  
+-   選取您想要刪除的資料行以滑鼠右鍵按一下其中一個您選取，然後再按一下資料行的控制代碼**刪除資料行**。  
   
      -或-  
   
--   在您想要刪除資料行的資料區中，以滑鼠右鍵按一下資料格，然後按一下 [刪除資料行]。  
+-   以滑鼠右鍵按一下您要刪除的資料行，然後按一下 資料區域中的資料格**刪除資料行**。  
   
 ## <a name="to-insert-a-column-in-a-group-in-a-selected-data-region"></a>在選取之資料區的群組中插入資料行  
   
--   在您想要插入資料行之 Tablix 資料區的資料行群組區域中，以滑鼠右鍵按一下資料行群組資料格、按一下 [插入資料行]，然後按一下 [左方 - 群組外]、[左方 - 群組內]、[右方 - 群組內] 或 [右方 - 群組外]。  
+-   以滑鼠右鍵按一下資料行群組資料格在 tablix 資料區域，您要插入資料行的資料行群組區域，按一下**插入資料行**，然後按一下 **左方-群組外**，**左方-群組內**，**右方-群組內**，或**右方-群組外**。  
   
      如此就會在您按一下之資料行群組資料格所表示的群組內部或外部加入資料行。  
   
 ## <a name="to-delete-a-column-from-a-group-in-a-selected-data-region"></a>從選取之資料區的群組中刪除資料行  
   
--   在您想要刪除資料行之 Tablix 資料區的資料行群組區域中，以滑鼠右鍵按一下資料行群組資料格，然後按一下 [刪除資料行]。  
+-   以滑鼠右鍵按一下您想要用來刪除資料行，然後按一下 tablix 資料區的資料行群組區域中的資料行群組資料格**刪除資料行**。  
   
 ## <a name="see-also"></a>另請參閱  
  [了解群組 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md)   
- [Tablix 資料區 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   
- [資料表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
- [矩陣 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)   
- [清單 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)      
- [資料表、矩陣和清單 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [Tablix 資料區 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   
+ [資料表 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
+ [矩陣 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)   
+ [列出 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)      
+ [資料表、 矩陣和清單 &#40;報表產生器和 SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

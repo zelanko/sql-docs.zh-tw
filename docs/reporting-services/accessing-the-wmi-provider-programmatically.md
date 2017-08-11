@@ -17,11 +17,11 @@ caps.latest.revision: 7
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: a8608faf31e4132570de4e57e748d02057c3722d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="accessing-the-wmi-provider-programmatically"></a>以程式設計方式存取 WMI 提供者
@@ -134,7 +134,7 @@ class Class1
   
 ## <a name="see-also"></a>另請參閱  
  [存取 Reporting Services WMI 提供者](../reporting-services/tools/access-the-reporting-services-wmi-provider.md)   
- [RsReportServer.config 組態檔](../reporting-services/report-server/rsreportserver-config-configuration-file.md)  
+ [RsReportServer.config 設定檔](../reporting-services/report-server/rsreportserver-config-configuration-file.md)  
   
   
 

@@ -17,11 +17,11 @@ caps.latest.revision: 34
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: dbd2d63c8698cb9e33361c12980aa6abdeaaae7b
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="report-server-properties-general-page"></a>Report Server 屬性 （一般頁面）
@@ -30,7 +30,7 @@ ms.lasthandoff: 06/22/2017
  **若要開啟此頁面：**
  1) 啟動 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]
  2) 連接到報表伺服器執行個體。
- 3) 以滑鼠右鍵按一下報表伺服器名稱，然後選取 [屬性]。  
+ 3) 報表伺服器的名稱，以滑鼠右鍵按一下，然後選取**屬性**。  
   
  伺服器模式會決定您可以設定的伺服器屬性。 如果您要管理針對 SharePoint 整合模式所設定的報表伺服器，便無法啟用 [我的報表] 或設定入口網站的標題。  
   
@@ -58,10 +58,10 @@ ms.lasthandoff: 06/22/2017
 
   
 ## <a name="see-also"></a>請參閱＜  
- [設定報表伺服器屬性 &#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md)   
- [連接至 Management Studio 中的報表伺服器](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
- [啟用與停用我的報表](../../reporting-services/report-server/enable-and-disable-my-reports.md)   
- [Management Studio F1 說明中的報表伺服器](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
+ [設定報表伺服器屬性 &#40;Management Studio &#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md)   
+ [連接到 Management Studio 中的報表伺服器](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
+ [啟用和停用 我的報表](../../reporting-services/report-server/enable-and-disable-my-reports.md)   
+ [Report Server in Management Studio F1 說明](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
  [保護我的報表](../../reporting-services/security/secure-my-reports.md)  
   
   

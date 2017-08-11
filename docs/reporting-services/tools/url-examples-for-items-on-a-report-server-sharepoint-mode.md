@@ -15,11 +15,11 @@ caps.latest.revision: 5
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 53c07f85e9ec0bfca627b8ff941eddfde03336df
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="url-examples-for-items-on-a-report-server---sharepoint-mode"></a>在報表伺服器的 SharePoint 模式的項目的 URL 範例
@@ -63,7 +63,7 @@ ms.lasthandoff: 06/22/2017
   
  在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 或[!INCLUDE[SPF2010](../../includes/spf2010-md.md)]，程式庫會出現在伺服器名稱後面，例如`http://*servername/*Shared Documents`。  
   
- 在 [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 或 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)]上，文件庫會出現在網站和子網站後面。 例如， `http://*servername/site/*Documents`。  
+ 在 [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 或 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 上，文件庫會出現在網站和子網站後面。 例如， `http://*servername/site/*Documents`。  
   
  若要尋找新 SharePoint 文件庫或不熟悉之網站的路徑資訊，開啟瀏覽器，然後找出您要發行報表的 SharePoint 文件庫。 如果文件庫是空的，上傳任何檔案。 以滑鼠右鍵按一下檔案，然後選取 [屬性]，以開啟 [屬性] 視窗。 檔案的位址包含發行作業所需的 URL 值。  
   
@@ -80,7 +80,7 @@ ms.lasthandoff: 06/22/2017
  報表定義可以包含當做外部檔案儲存的影像檔。 您可以設定指向影像檔的完整 URL，在報表定義中參考該檔案。 它可以儲存在 SharePoint 網站或遠端電腦上。  
   
 > [!IMPORTANT]  
->  如果外部 URL 代表 SharePoint 網站上的影像，則當您在報表產生器中預覽報表時，會出現不完整的影像圖示。 當您將報表上傳至 SharePoint 網站，並且以連線模式轉譯報表時，如果您僅具有 [檢視項目] 權限，則會出現不完整的影像圖示。  
+>  如果外部 URL 代表 SharePoint 網站上的影像，則當您在報表產生器中預覽報表時，會出現不完整的影像圖示。 當您將報表上傳至 SharePoint 網站，並連接模式中轉譯報表時，會出現不完整的影像圖示，如果您只有**檢視項目**權限。  
   
  不管報表伺服器的模式為何，在報表中的外部影像檔參考必須是完整的 URL。 同時，參考外部影像檔通常需要您設定自動報表處理帳戶。  
   
@@ -140,8 +140,8 @@ ms.lasthandoff: 06/22/2017
  當報表伺服器以 SharePoint 整合模式執行時，資源概念的定義則比較窄化。 報表伺服器會保留資源的概念，以儲存參考外部影像的報表。 如果報表是快照集或保留給內部使用的副本，則也適用這個概念。  
   
 ## <a name="see-also"></a>請參閱＜  
- [將報表發行到 SharePoint 文件庫](../../reporting-services/reports/publish-a-report-to-a-sharepoint-library.md)   
- [將共用資料來源發行至 SharePoint 文件庫](../../reporting-services/reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   
+ [將報表發行至 SharePoint 文件庫](../../reporting-services/reports/publish-a-report-to-a-sharepoint-library.md)   
+ [將共用的資料來源發行至 SharePoint 文件庫](../../reporting-services/reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   
  [專案屬性頁對話方塊](../../reporting-services/tools/project-property-pages-dialog-box.md)  
   
   

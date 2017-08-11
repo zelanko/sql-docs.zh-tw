@@ -17,17 +17,17 @@ caps.latest.revision: 76
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: ee41ccb35aef5f0ab94c663a1556aad07bb85faa
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>SQL Server 資料工具中的 Reporting Services (SSDT)
 
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] is a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] environment for creating business intelligence solutions. SSDT 的主要功能之一是提供報表設計師的撰寫環境，讓您可以從中開啟、修改、預覽、儲存及部署 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 編頁報表定義、共用的資料來源、共用資料集與報表組件。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]不會包含與 SQL Server。 下載 [SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714)。 
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 環境，可用於建立商務智慧解決方案。 SSDT 的主要功能之一是提供報表設計師的撰寫環境，讓您可以從中開啟、修改、預覽、儲存及部署 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 編頁報表定義、共用的資料來源、共用資料集與報表組件。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]不會包含與 SQL Server。 下載 [SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714)。 
   
  此主題描述用於 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]方案、專案、專案範本和組態，以及您可以在 [報表設計師] 中使用的檢視、功能表、工具列和快速鍵。  
   
@@ -43,7 +43,7 @@ ms.lasthandoff: 06/22/2017
 ##  <a name="bkmk_ReportServerProjects"></a> 報表伺服器專案  
  當您安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]時， [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]提供了下列專案範本：  
   
--   **報表伺服器專案。** 當您選取報表伺服器專案時，就會開啟報表設計師。 報表伺服器專案是由 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 所安裝的商業智慧專案範本，而且可從 **[新增專案]** 對話方塊取得。 如需詳細資訊，請參閱[將新的或現有的報表加入報表專案 &#40;SSRS&#41;](../../reporting-services/tools/add-a-new-or-existing-report-to-a-report-project-ssrs.md)。報表伺服器專案屬性會套用至 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 專案中的所有報表和所有共用資料來源。 這些屬性包括報表伺服器的 URL 以及報表和共用資料來源的資料夾名稱。 使用 **[專案屬性頁面]** 對話方塊可檢視目前的屬性值。 若要開啟此對話方塊，請從 [專案]  功能表按一下 [屬性] 。  
+-   **報表伺服器專案。** 當您選取報表伺服器專案時，就會開啟報表設計師。 報表伺服器專案是由 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 所安裝的商業智慧專案範本，而且可從 **[新增專案]** 對話方塊取得。 如需詳細資訊，請參閱[將新的或現有的報表加入至報表專案 &#40;SSRS &#41;](../../reporting-services/tools/add-a-new-or-existing-report-to-a-report-project-ssrs.md).報表伺服器專案屬性會套用到所有報表及所有共用資料來源中[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]專案。 這些屬性包括報表伺服器的 URL 以及報表和共用資料來源的資料夾名稱。 使用 **[專案屬性頁面]** 對話方塊可檢視目前的屬性值。 若要開啟此對話方塊，請從 [專案]  功能表按一下 [屬性] 。  
   
 -   **報表伺服器專案精靈。** 當您選取報表伺服器精靈專案時，就會自動建立報表伺服器專案，而且報表精靈會開啟。 在此精靈中，您可以遵循每一頁的指示來建立報表，以便建立與資料來源的連接字串、設定資料來源認證、設計查詢、加入資料表或矩陣資料區、指定報表資料和群組、挑選字型和色彩樣式、將報表發行到報表伺服器，以及在本機預覽報表。 當您使用精靈建立報表之後，您可以在報表伺服器專案中使用報表設計師來變更報表資料和報表設計師。  
   
@@ -64,20 +64,20 @@ ms.lasthandoff: 06/22/2017
   
 -   **資料集** ：每個資料集都會包含指定要從資料來源中擷取哪些資料的查詢。 您可以展開資料集，以便檢視資料集查詢所指定的欄位集合。  
   
-     在多維度資料集的某些查詢設計工具中，您可以在 [篩選] 窗格中指定篩選，然後指出是否要建立報表參數。 若您指定報表參數選項，系統就會自動建立特殊資料集，以擴展參數的有效值清單。  根據預設，此資料集不會出現在 [報表資料] 窗格內。 如需詳細資訊，請參閱[針對多維度資料的參數值顯示隱藏的資料集 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-data/show-hidden-datasets-for-parameter-values-multidimensional-data.md)。  
+     在多維度資料集的某些查詢設計工具中，您可以在 [篩選] 窗格中指定篩選，然後指出是否要建立報表參數。 若您指定報表參數選項，系統就會自動建立特殊資料集，以擴展參數的有效值清單。  根據預設，此資料集不會出現在 [報表資料] 窗格內。 如需詳細資訊，請參閱 [Show Hidden Datasets for Parameter Values for Multidimensional Data &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/show-hidden-datasets-for-parameter-values-multidimensional-data.md) (針對多維度資料的參數值顯示隱藏的資料集 (報表產生器及 SSRS))。  
   
 -   **報表參數** ：報表參數清單。 資料集查詢包含查詢參數時，可以手動或自動建立參數。  
   
 -   **影像** ：可用於併入為報表中「影像」報表項目的影像清單。  
   
- [報表資料] 窗格中的資料來源和資料集代表報表定義中的元素。 [報表資料] 窗格是多個報表撰寫環境所支援的功能。 在 [報表產生器] 中，這是唯一可用於管理資料來源和資料集的窗格。 在 [報表設計師] 中，[報表資料] 窗格是與 [方案總管] 搭配使用，而後者會將共用資料來源和共用資料集列出為檔案。 [報表資料] 窗格中的共用資料來源和共用資料集，必須指向它們在 [方案總管] 中的對應「共用資料來源」和「共用資料集」。 之後，[報表資料] 窗格元素就會包含 [方案總管] 中資料檔案的參考。 專案屬性可決定是否將共用資料來源和共用資料集部署至報表伺服器或 SharePoint 網站。 如需詳細資訊，請參閱[轉換資料來源 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-data/convert-data-sources-report-builder-and-ssrs.md)。  
+ [報表資料] 窗格中的資料來源和資料集代表報表定義中的元素。 [報表資料] 窗格是多個報表撰寫環境所支援的功能。 在 [報表產生器] 中，這是唯一可用於管理資料來源和資料集的窗格。 在 [報表設計師] 中，[報表資料] 窗格是與 [方案總管] 搭配使用，而後者會將共用資料來源和共用資料集列出為檔案。 [報表資料] 窗格中的共用資料來源和共用資料集，必須指向它們在 [方案總管] 中的對應「共用資料來源」和「共用資料集」。 之後，[報表資料] 窗格元素就會包含 [方案總管] 中資料檔案的參考。 專案屬性可決定是否將共用資料來源和共用資料集部署至報表伺服器或 SharePoint 網站。 如需詳細資訊，請參閱[轉換資料來源 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-data/convert-data-sources-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  如果您看不到 [報表資料] 窗格，請按一下 [設計] 區，然後再按一下 [檢視]  功能表上的 [報表資料] 。 如果 [報表資料] 窗格是浮動窗格，您可以錨定它。 如需詳細資訊，請參閱[停駐報表設計師中的報表資料窗格 &#40;SSRS&#41;](../../reporting-services/tools/dock-the-report-data-pane-in-report-designer-ssrs.md)。  
   
   
 ###  <a name="bkmk_GroupingPane"></a> 群組窗格  
- 使用 [群組] 窗格，即可定義 Tablix 資料區的群組。 您可以定義資料表的資料列群組和詳細資料群組，以及矩陣的資料列和資料行群組。 您無法使用 [群組] 窗格定義 [圖表] 或其他資料區的群組。 如需詳細資訊，請參閱[了解群組 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md)。  
+ 使用 [群組] 窗格，即可定義 Tablix 資料區的群組。 您可以定義資料表的資料列群組和詳細資料群組，以及矩陣的資料列和資料行群組。 您無法使用 [群組] 窗格定義 [圖表] 或其他資料區的群組。 如需詳細資訊，請參閱[了解群組 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md)。  
   
  [群組] 窗格有兩種模式：  
   
@@ -105,7 +105,7 @@ ms.lasthandoff: 06/22/2017
   
 -   您可以使用 [屬性] 窗格工具列按鈕，將方格從類別目錄檢視變更為字母順序檢視。 在類別目錄檢視中，您可能必須展開類別目錄，才能看見底下的所有屬性。 若要開啟項目的 [屬性] 對話方塊，請按一下工具列上的 **[屬性頁]** 按鈕，或以滑鼠右鍵按一下項目，然後按一下 **[屬性]**。  
   
--   設定 [群組] 窗格中目前所選取群組成員的屬性。 群組成員屬性可協助控制每個群組執行個體之靜態群組頁首及頁尾資料列的重複方式。 如需詳細資訊，請參閱[與群組一起顯示頁首和頁尾 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)。  
+-   設定 [群組] 窗格中目前所選取群組成員的屬性。 群組成員屬性可協助控制每個群組執行個體之靜態群組頁首及頁尾資料列的重複方式。 如需詳細資訊，請參閱[顯示頁首和頁尾與群組 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/display-headers-and-footers-with-a-group-report-builder-and-ssrs.md).  
   
  若要顯示 [屬性] 窗格，請在 **[檢視]** 功能表中，按一下 **[屬性視窗]**。 您可以取消停駐此窗格並將它移至 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]視窗的其他區域，或將它顯示成設計介面上的索引標籤式檢視。  
   
@@ -248,13 +248,13 @@ ms.lasthandoff: 06/22/2017
  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 可以與來源外掛程式整合。 您可以使用 **[選項]** 對話方塊中的 [專案和方案] 頁面，以指定外掛程式，並設定屬性。  
   
 ##  <a name="bkmk_CustomReportTemplates"></a> 自訂報表範本  
- 若要使用自訂報表做為新報表的範本，您只需將自訂報表複製到裝有 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 之電腦上的 ReportProject 資料夾即可。 此資料夾預設位於下列位置：  `<drive>:\Program Files\Microsoft Visual Studio 14.0\Common7\IDE\Private Assemblies\ProjectItems\ReportProject`。 將新項目加入報表專案時，您的自訂報表會顯示在 [範本] 窗格中。  
+ 若要使用自訂報表做為新報表的範本，您只需將自訂報表複製到裝有 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 之電腦上的 ReportProject 資料夾即可。 根據預設，這個資料夾會位於下列位置： `<drive>:\Program Files\Microsoft Visual Studio 14.0\Common7\IDE\Private Assemblies\ProjectItems\ReportProject`。 將新項目加入報表專案時，您的自訂報表會顯示在 [範本] 窗格中。  
   
  您也可以將自訂樣式加入報表精靈。  
   
   
 ##  <a name="bkmk_CommandLineSupportForssdt"></a> SQL Server 資料工具的命令列支援  
- [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]根據[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]以及基礎 devenv.exe 應用程式。 您必須先為下列兩個項目設定有效的值，才能使用這些選項：  
+ [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 是以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 以及基礎 devenv.exe 應用程式為基礎。 您必須先為下列兩個項目設定有效的值，才能使用這些選項：  
   
 -   OverwriteDataSources、TargetDataSourceFolder、TargetReportFolder 和 TargetServerURL 的專案屬性。  
   

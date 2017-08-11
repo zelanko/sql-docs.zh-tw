@@ -20,15 +20,15 @@ caps.latest.revision: 26
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 6247ce56394aff4f194bf9e452f36663a1112c80
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="integrating-reporting-services-using-reportviewer-controls"></a>使用 ReportViewer 控制項整合 Reporting Services
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)]Visual Studio 2015 提供兩個 ReportViewer 控制項將報表檢視功能納入您的應用程式整合。 一個版本是用於 Windows Form 應用程式，另一個版本則是用於 Web Form 應用程式。 每個控制項都提供類似的功能，但是每個功能都是針對其個別的環境所設計的。 兩個控制項都可以處理已經部署到報表伺服器 (遠端處理模式) 的報表，或是已經複製到尚未安裝 (本機處理模式) [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 之電腦上的報表。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)]Visual Studio 2015 提供兩個 ReportViewer 控制項將報表檢視功能納入您的應用程式整合。 一個版本是用於 Windows Form 應用程式，另一個版本則是用於 Web Form 應用程式。 每個控制項都提供類似的功能，但是每個功能都是針對其個別的環境所設計的。 這兩個控制項都可以處理已部署至報表伺服器 （遠端處理模式），或已複製到電腦的報表位置[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]尚未安裝 （本機處理模式）。  
   
  ReportViewer 控制項並未內建支援動態適應具備不同螢幕解析度之不同裝置的功能。  
   
@@ -45,7 +45,7 @@ ms.lasthandoff: 06/22/2017
 >  當 ReportViewer 控制項在遠端處理模式下執行時，其可用的延伸模組清單須視安裝在報表伺服器上的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 版本而定。  
   
 ## <a name="local-processing-mode"></a>本機處理模式  
- 本機處理模式提供替代的方法，可在未安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的情況下檢視和轉譯報表。 與遠端處理不同的是，只有報表伺服器提供的功能子集可在控制項中使用。 在本機處理模式中，資料處理不是由控制項來進行，而是由主機應用程式所實作。 但是，報表處理是由控制項本身所處理。 在本機處理模式中，只能使用 PDF、Excel、Word 和 Image 轉譯延伸模組。  
+ 本機處理模式提供替代的方法，可在未安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的情況下檢視和轉譯報表。 與遠端處理不同的是，只有報表伺服器提供的功能子集可在控制項中使用。 在本機處理模式中，資料處理不是由控制項來進行，而是由主機應用程式所實作。 但是報表處理是由控制項本身所處理。 在本機處理模式中，只能使用 PDF、Excel、Word 和 Image 轉譯延伸模組。  
   
 ## <a name="see-also"></a>另請參閱  
  [將 Reporting Services 整合到應用程式](../../reporting-services/application-integration/integrating-reporting-services-into-applications.md)   

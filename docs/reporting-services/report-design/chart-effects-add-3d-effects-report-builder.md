@@ -15,11 +15,11 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 7170699a3f0cbb26dd2376a8805978fe792223f0
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="chart-effects---add-3d-effects-report-builder"></a>圖表效果-加入 3D 效果 （報表產生器）
@@ -30,19 +30,19 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="to-apply-3d-effects-to-a-range-area-line-scatter-or-polar-chart"></a>將 3D 效果套用到範圍圖、區域圖、折線圖、散佈圖或極座標圖  
   
-1.  以滑鼠右鍵按一下圖表區域內的任何位置，然後選取 [3D 效果]。 [圖表區域屬性] 對話方塊隨即出現。  
+1.  以滑鼠右鍵按一下圖表區域內的任何位置，然後選取**3D 效果**。 **圖表區域屬性** 對話方塊隨即出現。  
   
-2.  在 [3D 選項] 中，選取 [啟用 3D] 選項。  
+2.  在**3D 選項**，選取**啟用 3D**選項。  
   
-3.  (選擇性) 在 [3D 選項] 中，可以設定多種與 3D 角度及場景選項相關的屬性。 如需這些屬性的詳細資訊，請參閱 [圖表中的 3D、浮凸和其他效果 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/chart-effects-3d-bevel-and-other-report-builder.md)。  
+3.  （選擇性）在**3D 選項**，您可以設定多種與 3D 角度及場景選項相關的屬性。 如需這些屬性的詳細資訊，請參閱 [圖表中的 3D、浮凸和其他效果 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/chart-effects-3d-bevel-and-other-report-builder.md)。  
   
 4.  按一下 **[確定]**。  
   
 ## <a name="to-apply-3d-effects-to-a-funnel-chart"></a>將 3D 效果套用到漏斗圖  
   
-1.  以滑鼠右鍵按一下圖表區域內的任何位置，然後選取 [3D 效果]。 [圖表區域屬性] 對話方塊隨即出現。  
+1.  以滑鼠右鍵按一下圖表區域內的任何位置，然後選取**3D 效果**。 **圖表區域屬性** 對話方塊隨即出現。  
   
-2.  在 [3D 選項] 中，選取 [啟用 3D] 選項。 按一下 **[確定]**。  
+2.  在**3D 選項**，選取**啟用 3D**選項。 按一下 **[確定]**。  
   
 3.  (選擇性) 若要自訂漏斗圖的視覺外觀，可以移至 [屬性] 窗格，然後變更漏斗圖特定的屬性。  
   
@@ -52,29 +52,29 @@ ms.lasthandoff: 06/22/2017
   
     3.  在 [一般]  區段中，展開 [CustomAttributes]  節點。  
   
-    4.  針對 [Funnel3DDrawingStyle] 屬性，選取漏斗是要顯示為圓形或方形。  
+    4.  如**[funnel3ddrawingstyle]**屬性，選取漏斗要顯示為圓形或方形。  
   
-    5.  為 [Funnel3DRotationAngle] 屬性設定介於 -10 和 10 之間的值。 這會決定在 3D 漏斗圖上顯示的傾斜度。  
+    5.  如**[funnel3drotationangle]**屬性設定介於-10 到 10 之間的值。 這會決定在 3D 漏斗圖上顯示的傾斜度。  
   
 ## <a name="to-apply-3d-effects-to-a-pie-chart"></a>將 3D 效果套用到圓形圖  
   
-1.  以滑鼠右鍵按一下圖表區域內的任何位置，然後選取 [3D 效果]。 [圖表區域屬性] 對話方塊隨即出現。  
+1.  以滑鼠右鍵按一下圖表區域內的任何位置，然後選取 [3D 效果]。 **圖表區域屬性** 對話方塊隨即出現。  
   
-2.  在 [3D 選項] 中，選取 [啟用 3D] 選項。 按一下 **[確定]**。  
+2.  在**3D 選項**，選取**啟用 3D**選項。 按一下 **[確定]**。  
   
-3.  (選擇性) 在 [旋轉] 中輸入整數值，代表圓形圖的水平旋轉。  
+3.  （選擇性）在**旋轉**，輸入整數值，代表圓形圖的水平旋轉。  
   
-4.  (選擇性) 在 [傾斜] 中輸入整數值，代表圓形圖的垂直傾斜旋轉。  
+4.  （選擇性）在**傾斜**，輸入整數值，代表圓形圖的垂直傾斜旋轉。  
   
 5.  按一下 **[確定]**。  
   
 ## <a name="to-apply-3d-effects-to-a-bar-or-column-chart"></a>將 3D 效果套用到橫條圖或直條圖  
   
-1.  以滑鼠右鍵按一下圖表區域內的任何位置，然後選取 [3D 效果]。 [圖表區域屬性] 對話方塊隨即出現。  
+1.  以滑鼠右鍵按一下圖表區域內的任何位置，然後選取**3D 效果**。 **圖表區域屬性** 對話方塊隨即出現。  
   
-2.  選取 [啟用 3D] 選項。 按一下 **[確定]**。  
+2.  選取**啟用 3D**選項。 按一下 **[確定]**。  
   
-3.  (選擇性) 選取 [啟用數列群集] 選項。 如果圖表包含多個橫條圖或直條圖數列，則這個選項會將數列顯示為群集。 依預設，多個橫條或直條數列會並列顯示。  
+3.  （選擇性）選取**啟用數列群集**選項。 如果圖表包含多個橫條圖或直條圖數列，則這個選項會將數列顯示為群集。 依預設，多個橫條或直條數列會並列顯示。  
   
 4.  按一下 **[確定]**。  
   
@@ -86,11 +86,11 @@ ms.lasthandoff: 06/22/2017
   
     3.  在 [一般]  區段中，展開 [CustomAttributes]  節點。  
   
-    4.  為 [DrawingStyle] 屬性指定 [圓柱] 值。  
+    4.  如**DrawingStyle**屬性，指定**磁柱**值。  
   
 ## <a name="see-also"></a>另請參閱  
  [圖表中的 3D、浮凸和其他效果 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/chart-effects-3d-bevel-and-other-report-builder.md)   
- [格式化圖表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
- [圖表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
+ [格式化圖表 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
+ [圖表 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
   
   

@@ -18,11 +18,11 @@ caps.latest.revision: 39
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 528ff1aac617e36ac8b3faeed0bad0981479f651
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="image-device-information-settings"></a>影像裝置資訊設定
@@ -46,10 +46,10 @@ ms.lasthandoff: 06/22/2017
 |**PrintDpiY**|輸出影像的垂直解析度。 預設值為 **300**。 適用於增強型中繼檔 (**EMF**) 輸出格式。|  
 |**StartPage**|要轉譯之報表的第一頁。 **0** 值表示轉譯所有頁面。 預設值是 **1**秒。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   
  [將裝置資訊設定傳遞至轉譯延伸模組](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
- [在 RSReportServer.Config 中自訂轉譯延伸模組參數](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
- [技術參考 &#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)  
+ [自訂轉譯延伸模組參數，在 RSReportServer.Config 中](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
+ [技術參考 &#40;SSRS &#41;](../reporting-services/technical-reference-ssrs.md)  
   
   

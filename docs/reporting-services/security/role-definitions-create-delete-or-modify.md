@@ -23,11 +23,11 @@ caps.latest.revision: 42
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 42f66d05b179ee5f00c3322a2eb2943439936bcb
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="role-definitions---create-delete-or-modify"></a>角色定義的建立、 刪除或修改
@@ -81,9 +81,9 @@ ms.lasthandoff: 06/22/2017
          選取這個角色的成員可以執行的工作，然後按一下 **[確定]** 來套用變更。  
   
 ## <a name="see-also"></a>請參閱＜  
- [連接至 Management Studio 中的報表伺服器](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
- [建立和管理角色指派](../../reporting-services/security/create-and-manage-role-assignments.md)   
- [SQL Server Management Studio 中的 Reporting Services &#40;SSRS&#41;](../../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md)  
+ [連接到 Management Studio 中的報表伺服器](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
+ [建立及管理角色指派](../../reporting-services/security/create-and-manage-role-assignments.md)   
+ [在 SQL Server Management Studio &#40; reporting ServicesSSRS &#41;](../../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md)  
   
   
 

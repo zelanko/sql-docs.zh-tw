@@ -18,11 +18,11 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: aa3e4553ddeb529ec8565a5599b2ce861f91bc38
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="hide-an-item-report-builder-and-ssrs"></a>隱藏項目 (報表產生器及 SSRS)
@@ -37,10 +37,10 @@ ms.lasthandoff: 06/22/2017
   
 ### <a name="to-hide-a-report-item"></a>隱藏報表項目  
   
-1.  在報表設計檢視中，以滑鼠右鍵按一下報表項目，然後開啟其 [屬性] 頁面。  
+1.  在報表設計檢視中，以滑鼠右鍵按一下報表項目，並開啟其**屬性**頁面。  
   
     > [!NOTE]  
-    >  若要選取整個資料表或矩陣資料區，請在資料區中按一下來選取它，以滑鼠右鍵按一下資料列、資料行或角控點，然後按一下 [Tablix 屬性]。  
+    >  若要選取整個資料表或矩陣資料區域，按一下 資料區域來選取它，以滑鼠右鍵按一下資料列、 資料行或角控點，然後按**Tablix 屬性**。  
   
 2.  按一下 **[可見性]**。  
   
@@ -50,11 +50,11 @@ ms.lasthandoff: 06/22/2017
   
     -   若要隱藏此項目，請按一下 **[隱藏]**。  
   
-    -   若要指定在執行階段評估的運算式，請按一下 [依據運算式顯示或隱藏]。 輸入運算式或按一下運算式 (**fx**) 按鈕，在 [運算式] 對話方塊中建立運算式。  
+    -   若要指定在執行階段評估的運算式，請按一下**顯示或隱藏根據運算式**。 輸入運算式，或按一下運算式 (**fx**) 按鈕來建立在運算式**運算式** 對話方塊。  
   
         > [!NOTE]  
         >  當您指定可見性的運算式時，會設定報表項目的 Hidden 屬性，如下圖所示。 評估之後的運算式會在值為 False 時顯示此報表項目，並在值為 True 時隱藏此報表項目。   
-        > ![Properties_Visibility 對話方塊與隱藏的屬性](../../reporting-services/report-builder/media/hiddenproperty-propertiesvisibility.png "Properties_Visibility dialog and Hidden property")  
+        > ![Properties_Visibility 對話方塊中，並隱藏屬性](../../reporting-services/report-builder/media/hiddenproperty-propertiesvisibility.png "Properties_Visibility 對話方塊中，並隱藏屬性")  
   
 4.  按兩次 **[確定]** 。  
   
@@ -62,7 +62,7 @@ ms.lasthandoff: 06/22/2017
   
 1.  在報表設計檢視中，按一下資料表、矩陣或清單來顯示資料列和資料行控點。  
   
-2.  以滑鼠右鍵按一下資料列控點，然後按一下 [資料列可見性]。 **[資料列可見性]** 對話方塊隨即開啟。  
+2.  以滑鼠右鍵按一下資料列控制代碼，然後按一下**資料列可見性**。 **[資料列可見性]** 對話方塊隨即開啟。  
   
 3.  若要設定可見性，請遵循第一個程序中的步驟 3 和 4。  
   
@@ -70,13 +70,13 @@ ms.lasthandoff: 06/22/2017
   
 1.  在 [設計] 檢視中，選取資料表、矩陣或清單來顯示資料列和資料行控點。  
   
-2.  以滑鼠右鍵按一下資料行控點，然後按一下 [資料行可見性]。  
+2.  以滑鼠右鍵按一下資料行控點，然後按一下**資料行可見性**。  
   
 3.  在 **[資料行可見性]** 對話方塊中，遵循第一個程序中的步驟 3 和 4。  
   
 ## <a name="see-also"></a>請參閱＜  
  [向下鑽研動作 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/drilldown-action-report-builder-and-ssrs.md)   
- [將展開或摺疊動作加入項目中 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)   
- [運算式範例 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
+ [將展開或摺疊動作加入至項目 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)   
+ [運算式範例 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
   
   

@@ -18,11 +18,11 @@ caps.latest.revision: 18
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0cec89b68c69b5e5ae6875d5d5d5e721008844cd
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="application-domains-for-report-server-applications"></a>報表伺服器應用程式的應用程式網域
@@ -47,8 +47,8 @@ ms.lasthandoff: 06/22/2017
 |-----------|-----------------------|----------------|------------------|-----------------------------------|  
 |以預先定義間隔發生的排程回收作業|根據預設，應用程式網域每隔 12 小時會回收一次。<br /><br /> 排程回收作業是提升整體處理序健全狀況之 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 應用程式的常見作法。|報表伺服器 Web 服務<br /><br /> 報表管理員<br /><br /> 背景處理應用程式|是的。 RSReportServer.config 檔中的**RecycleTime** 組態設定會決定回收間隔。<br /><br /> **MaxAppDomainUnloadTime** 會設定允許背景處理完成的等候時間。|[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 會管理 Web 服務和報表管理員的回收作業。<br /><br /> 若為背景處理應用程式，報表伺服器會針對從排程起始的新作業建立新的應用程式網域。 系統會允許已經在進行中的作業在目前的應用程式網域中完成，直到等候時間過期為止。|  
 |報表伺服器的組態變更|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 將回收應用程式網域，以便回應 RSReportServer.config 檔中的變更。|報表伺服器 Web 服務<br /><br /> 報表管理員<br /><br /> 背景處理應用程式|資料分割|您無法阻止回收作業發生。 不過，為了回應組態變更所發生之回收作業的處理方式與排程回收作業相同。 當目前的要求和作業在目前的應用程式網域中完成時，系統會針對新的要求建立新的應用程式網域。|  
-|[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 組態變更|[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 如果所監視的檔案 (例如，machine.config 和 Web.config 檔，以及 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 程式檔案) 發生變更，它就會回收應用程式網域。|報表伺服器 Web 服務<br /><br /> 報表管理員|資料分割|[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 會管理此作業。<br /><br /> 由 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 起始的回收作業不會影響背景處理應用程式網域。|  
-|記憶體不足的壓力和記憶體配置失敗|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR 就會立即回收應用程式網域。|報表伺服器 Web 服務<br /><br /> 報表管理員<br /><br /> 背景處理應用程式|資料分割|處於高度記憶體不足壓力的情況下，報表伺服器不會接受目前應用程式網域中的新要求。 在伺服器拒絕新要求的期間，就會發生 HTTP 503 錯誤。 卸載舊的應用程式網域之前，系統不會建立新的應用程式網域。 這表示，如果您在伺服器處於高度記憶體不足壓力的情況下進行組態檔變更，正在進行中的要求和作業可能無法啟動或完成。<br /><br /> 如果記憶體配置失敗，所有應用程式網域都會立即重新啟動。 系統會卸除正在進行中的作業和要求。 您必須以手動方式重新啟動這些作業和要求。|  
+|[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 組態變更|[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]如果沒有，它會監視檔案的變更，就會回收應用程式網域 (例如，machine.config 和 Web.config 檔，和[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]程式檔案)。|報表伺服器 Web 服務<br /><br /> 報表管理員|資料分割|[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]管理作業。<br /><br /> 由 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 起始的回收作業不會影響背景處理應用程式網域。|  
+|記憶體不足的壓力和記憶體配置失敗|如果記憶體配置失敗，或者伺服器處於高度記憶體不足壓力的情況下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR 就會立即回收應用程式網域。|報表伺服器 Web 服務<br /><br /> 報表管理員<br /><br /> 背景處理應用程式|資料分割|處於高度記憶體不足壓力的情況下，報表伺服器不會接受目前應用程式網域中的新要求。 在伺服器拒絕新要求的期間，就會發生 HTTP 503 錯誤。 卸載舊的應用程式網域之前，系統不會建立新的應用程式網域。 這表示，如果您在伺服器處於高度記憶體不足壓力的情況下進行組態檔變更，正在進行中的要求和作業可能無法啟動或完成。<br /><br /> 如果記憶體配置失敗，所有應用程式網域都會立即重新啟動。 系統會卸除正在進行中的作業和要求。 您必須以手動方式重新啟動這些作業和要求。|  
   
 ## <a name="planned-and-unplanned-recycle-operations"></a>已規劃與未規劃的回收作業  
  回收作業是已規劃或未規劃完全取決於產生作業的條件而定：  
@@ -63,7 +63,7 @@ ms.lasthandoff: 06/22/2017
   
  報表伺服器 Web 服務、報表管理員和背景處理應用程式的應用程式網域可能會一起回收或個別回收，端視導致回收發生的情況而定：  
   
--   由 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 起始的回收作業通常只會影響 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 應用程式：報表伺服器 Web 服務和報表管理員。 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 所監視的檔案發生變更，它就會回收應用程式網域。 由 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 起始的回收作業通常與背景處理應用程式的回收作業無關。  
+-   由 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 起始的回收作業通常只會影響 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 應用程式：報表伺服器 Web 服務和報表管理員。 如果 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 所監視的檔案發生變更，它就會回收應用程式網域。 由 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 起始的回收作業通常與背景處理應用程式的回收作業無關。  
   
 -   由報表伺服器起始的回收作業通常會影響報表伺服器 Web 服務、報表管理員和背景處理應用程式。 為了回應組態設定和服務重新啟動的變更，系統會進行回收作業。  
   
@@ -86,7 +86,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>請參閱＜  
  [RsReportServer.config 組態檔](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
- [修改 Reporting Services 組態檔 &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
+ [修改 Reporting Services 組態檔 &#40;RSreportserver.config &#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
  [設定報表伺服器應用程式的可用記憶體](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)  
   
   

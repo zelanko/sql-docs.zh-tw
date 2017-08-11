@@ -15,11 +15,11 @@ caps.latest.revision: 11
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0185d35444cdac141cb5d9626d85618b7eaf3358
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="finding-viewing-and-managing-reports-report-builder-and-ssrs-"></a>尋找、檢視和管理報表 (報表產生器及 SSRS)
@@ -72,21 +72,21 @@ ms.lasthandoff: 06/22/2017
   
 -   在伺服器上建立新的資料夾，以便使用您想要的方式組織您的報表。  
   
- 報表伺服器的系統管理員可能會為您完成以上某些工作。 若要深入了解報表伺服器上執行的工作，請參閱 [Reporting Services 報表伺服器 &#40;原生模式&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)。  
+ 報表伺服器的系統管理員可能會為您完成以上某些工作。 若要深入了解報表伺服器上執行的工作，請參閱[Reporting Services 報表伺服器 &#40;原生模式 &#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md).  
   
  報表管理員通常包含資料夾、報表、資料來源和報表模型，以及 [我的報表] 資料夾。 [我的報表] 是個人的工作空間，可以用來儲存和使用您擁有的報表。 其他報表伺服器資料夾都是公開的，通常使用者必須具備進階權限才可以加入或修改資料夾內容。 您可以在 [我的報表] 中建立資料夾，以進一步組織您的報表。 如需詳細資訊，請參閱 [使用我的報表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/using-my-reports-report-builder-and-ssrs.md)。  
   
  報表管理員會使用 Reporting Services HTML 檢視器中顯示報表。 HTML 檢視器會提供架構，以便使用 HTML 檢視報表，而且包含報表工具列、參數區段、認證區段及文件引導模式。 報表工具列會提供頁面巡覽，縮放、重新整理、搜尋、匯出、列印及資料摘要功能。 透過 URL 存取報表時，報表工具列也會顯示在報表上方的瀏覽器視窗中。 列印功能是選擇性的，而且必須由您的系統管理員開啟。 可用時，印表機圖示就會顯示在報表工具列中。 下列圖例顯示 [報表管理員] 視窗中的報表工具列以及報表工具列功能的特寫。  
   
- ![報表管理員中的報表工具列](../../reporting-services/report-builder/media/hs-reportserver-blowout.gif "Report toolbar in Report Manager")  
+ ![報表管理員中的報表工具列](../../reporting-services/report-builder/media/hs-reportserver-blowout.gif "報表工具列在報表管理員")  
 報表管理員視窗  
   
- ![報表工具列](../../reporting-services/media/ssrs-htmlviewer-toolbar.png "Report toolbar")  
+ ![報表工具列](../../reporting-services/media/ssrs-htmlviewer-toolbar.png "報表工具列")  
 報表工具列  
   
- 當您執行報表時，您可以將報表匯出成其他格式，例如 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 或 PDF。 您也可以使用資料轉譯延伸模組 (例如，逗號分隔值 (CSV) 轉譯延伸模組) 來匯出報表，然後使用 CSV 資料檔做為其他應用程式的輸入。 如需匯出報表的詳細資訊，請參閱[匯出報表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md) 和[將報表匯出為其他檔案類型 &#40;報表產生器及 SSRS&#41;](http://msdn.microsoft.com/library/b577568b-ecbd-44c3-be88-31dab6fc38a2)。  
+ 當您執行報表時，您可以將報表匯出成其他格式，例如 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 或 PDF。 您也可以使用資料轉譯延伸模組 (例如，逗號分隔值 (CSV) 轉譯延伸模組) 來匯出報表，然後使用 CSV 資料檔做為其他應用程式的輸入。 如需有關匯出報表的詳細資訊，請參閱[匯出報表 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)和[將報表匯出為其他檔案類型 &#40;報表產生器及 SSRS &#41;](http://msdn.microsoft.com/library/b577568b-ecbd-44c3-be88-31dab6fc38a2).  
   
- 選取和執行報表最簡單的方法，是開啟報表管理員，然後搜尋或瀏覽至您要檢視的報表。 如需開啟報表的逐步指示，請參閱[開啟及關閉報表 &#40;報表管理員&#41;](../../reporting-services/reports/open-and-close-a-report-report-manager.md)。  
+ 選取和執行報表最簡單的方法，是開啟報表管理員，然後搜尋或瀏覽至您要檢視的報表。 如需如何開啟報表的逐步指示，請參閱[開啟和關閉報表 &#40;報表管理員 &#41;](../../reporting-services/reports/open-and-close-a-report-report-manager.md).  
   
  執行報表後，您可以進行重新整理以查看新的資料。  
   
@@ -107,7 +107,7 @@ ms.lasthandoff: 06/22/2017
   
  若要存取應用程式頁面，請從報表的下拉式功能表選取項目專屬的動作，或選取您先前加入到 SharePoint 文件庫的其他報表伺服器項目。 根據項目和權限，您也可能可以在報表產生器中建立報表、產生模型和設定模型項目安全性。  
   
- 如需 Reporting Services 和 SharePoint 技術的詳細資訊，請參閱《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [線上叢書](http://go.microsoft.com/fwlink/?LinkId=154888)》(msdn.microsoft.com) 上的[設定和管理報表伺服器 &#40;Reporting Services SharePoint 模式&#41;](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md)。  
+ 如需有關 Reporting Services 和 SharePoint 技術的詳細資訊，請參閱[設定和管理報表伺服器 &#40;Reporting Services SharePoint 模式 &#41;](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md)中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][線上叢書 》](http://go.microsoft.com/fwlink/?LinkId=154888) msdn.microsoft.com 上。  
   
 ### <a name="finding-report-server-items-on-a-sharepoint-site"></a>在 SharePoint 網站上尋找報表伺服器項目  
  您必須要先能找到項目，才能設定屬性。 報表伺服器項目一律儲存在程式庫或程式庫內的資料夾中。  

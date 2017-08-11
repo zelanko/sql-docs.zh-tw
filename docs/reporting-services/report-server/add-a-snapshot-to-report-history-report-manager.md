@@ -21,11 +21,11 @@ caps.latest.revision: 35
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5d340621db8dc12cd981d75939babeff40e590f2
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="add-a-snapshot-to-report-history-report-manager"></a>將快照集加入報表記錄 (報表管理員)
@@ -35,9 +35,9 @@ ms.lasthandoff: 06/22/2017
   
 ### <a name="to-manually-add-snapshots-to-report-history"></a>若要手動將快照集加入至報表記錄  
   
-1.  在報表管理員中，巡覽至 [內容] 頁面，將滑鼠游標停留在您想要檢視記錄的項目上方，然後按一下下拉箭號。  
+1.  在報表管理員中，瀏覽至**內容** 頁面上，並停留在您想要檢視記錄，然後按一下下拉箭號項目。  
   
-2.  在下拉式功能表中，按一下 [檢視報表記錄]。  
+2.  在下拉式功能表中，按一下 **[檢視報表記錄]**。  
   
 3.  按一下 **[新增快照集]**。 **[執行時]** 資料行裡會建立一個新的快照集。  
   
@@ -50,9 +50,9 @@ ms.lasthandoff: 06/22/2017
   
 1.  若為已經設定成當做報表執行快照集執行的報表，您可以設定其他屬性，以便在每次重新整理快照集時，將快照集的副本儲存至報表記錄。  
   
-2.  在報表管理員中，巡覽至 [內容] 頁面，將滑鼠游標停留在您想要檢視記錄的項目上方，然後按一下下拉箭號。  
+2.  在報表管理員中，瀏覽至**內容**頁面停留在您想要檢視記錄，然後按一下下拉箭號項目。  
   
-3.  在下拉式功能表中，按一下 [管理]。  
+3.  在下拉式功能表中，按一下 **[管理]**。  
   
 4.  按一下 **[快照集選項]**。  
   
@@ -62,15 +62,15 @@ ms.lasthandoff: 06/22/2017
   
 ### <a name="to-automatically-add-snapshots-to-report-history-based-on-a-schedule"></a>若要依照排程自動將快照集加入報表記錄  
   
-1.  在報表管理員中，巡覽至 [內容] 頁面，將滑鼠游標停留在您想要檢視記錄的項目上方，然後按一下下拉箭號。  
+1.  在報表管理員中，瀏覽至**內容** 頁面上，並停留在您想要檢視記錄，然後按一下下拉箭號項目。  
   
-2.  在下拉式功能表中，按一下 [管理]。  
+2.  在下拉式功能表中，按一下 **[管理]**。  
   
 3.  按一下 **[快照集選項]**。  
   
 4.  選取 **[使用下列排程將快照集加入至報表記錄]**的核取方塊。 執行下列其中之一：  
   
-    -   選取 [報表特定排程]。 填入排程詳細資料，選取排程的開始和結束日期，然後按一下 **[確定]**。  
+    -   選取**報表特定排程**。 填入排程詳細資料，選取排程的開始和結束日期，然後按一下 **[確定]**。  
   
     -   選取 **[共用排程]**。 從清單中，選取喜好的排程。  
   
@@ -78,9 +78,9 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>請參閱＜  
  [設定報表的執行屬性 &#40;報表管理員&#41;](../../reporting-services/reports/configure-execution-properties-for-a-report-report-manager.md)   
- [開啟及關閉報表 &#40;報表管理員&#41;](../../reporting-services/reports/open-and-close-a-report-report-manager.md)   
- [限制報表記錄 &#40;報表管理員&#41;](../../reporting-services/reports/limit-report-history-report-manager.md)   
+ [開啟和關閉報表 &#40;報表管理員&#41;](../../reporting-services/reports/open-and-close-a-report-report-manager.md)   
+ [限制報表記錄 &#40;報表管理員 &#41;](../../reporting-services/reports/limit-report-history-report-manager.md)   
  [排程](../../reporting-services/subscriptions/schedules.md)   
- [報表管理員 &#40;SSRS 原生模式&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
+ [報表管理員 &#40;SSRS 原生模式 &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
   
   

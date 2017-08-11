@@ -18,11 +18,11 @@ caps.latest.revision: 25
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: b59cdb7f5087ed7cb02300758f593ea952be3778
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>設定報表伺服器上的 Windows 驗證
@@ -37,7 +37,7 @@ ms.lasthandoff: 06/22/2017
     > [!IMPORTANT]  
     >  如果您設定報表伺服器服務使用網域使用者帳戶執行，而且您並未針對此帳戶註冊服務主體名稱 (SPN)，則使用 **RSWindowsNegotiate** 將會產生 Kerberos 驗證錯誤。 如需詳細資訊，請參閱本主題的 [在連接報表伺服器時解決 Kerberos 驗證錯誤](#proxyfirewallRSWindowsNegotiate) 。  
   
--   [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 必須設定 Windows 驗證。 根據預設，報表伺服器 Web 服務的 Web.config 檔案包含\<mode ="Windows"> 設定。 如果您將它變更為\<mode ="Forms">，Windows 驗證[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]將會失敗。  
+-   [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]必須設定為 Windows 驗證。 根據預設，報表伺服器 Web 服務的 Web.config 檔案包含\<mode ="Windows"> 設定。 如果您將它變更為\<mode ="Forms">，Windows 驗證[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]將會失敗。  
   
 -   Web.config 檔案的報表伺服器 Web 服務必須具有\<y impersonate ="true"/ >。  
   
@@ -47,12 +47,12 @@ ms.lasthandoff: 06/22/2017
   
  若要變更報表伺服器驗證設定，請編輯 RSReportServer.config 檔案中的 XML 元素和值。 您可以複製及貼上本主題的範例，以實作特定的組合。  
   
- 如果所有的用戶端和伺服器電腦全都位於相同網域或信任網域，或是公司防火牆後方已部署報表伺服器供內部網路存取使用，預設值便可達到最佳的效果。 若要傳遞 Windows 認證，網域必須是受信任的網域或單一網域。 伺服器必須啟用 Kerberos 第 5 版通訊協定，才能多次傳遞認證。 否則，認證在逾期前僅能傳遞一次。 如需設定多個電腦連接之認證的詳細資訊，請參閱 [指定報表資料來源的認證及連接資訊](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)。  
+ 如果所有的用戶端和伺服器電腦全都位於相同網域或信任網域，或是公司防火牆後方已部署報表伺服器供內部網路存取使用，預設值便可達到最佳的效果。 若要傳遞 Windows 認證，網域必須是受信任的網域或單一網域。 伺服器必須啟用 Kerberos 第 5 版通訊協定，才能多次傳遞認證。 否則，認證在逾期前僅能傳遞一次。 如需設定多個電腦連接之認證的詳細資訊，請參閱[指定報表資料來源的認證及連接資訊](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)。  
   
  下列指示用於原生模式報表伺服器。 如果您在 SharePoint 整合模式下部署報表伺服器，您必須使用可指定 Windows 整合式安全性的預設驗證設定。 報表伺服器會使用預設 Windows 驗證延伸模組中的內部功能來支援 SharePoint 整合模式下的報表伺服器。  
   
 ## <a name="extended-protection-for-authentication"></a>驗證擴充保護  
- 從 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]開始，就有驗證擴充保護的支援可以使用。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能可支援使用通道繫結和服務繫結，以增強驗證的保護。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能需要搭配支援擴充保護的作業系統使用。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 擴充保護的組態是由 RSReportServer.config 檔案中的設定所決定。 若要更新這個檔案，您可以編輯檔案或使用 WMI API。 如需詳細資訊，請參閱 [Extended Protection for Authentication with Reporting Services](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md)。  
+ 從 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]開始，就有驗證擴充保護的支援可以使用。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能可支援使用通道繫結和服務繫結，以增強驗證的保護。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能需要搭配支援擴充保護的作業系統使用。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]擴充保護組態是由 RSReportServer.config 檔案中的設定決定。 若要更新這個檔案，您可以編輯檔案或使用 WMI API。 如需詳細資訊，請參閱 [Extended Protection for Authentication with Reporting Services](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md)。  
   
 ### <a name="to-configure-a-report-server-to-use-windows-integrated-security"></a>若要設定報表伺服器使用 Windows 整合式安全性  
   
@@ -131,7 +131,7 @@ ms.lasthandoff: 06/22/2017
   
  如果您啟用 Kerberos 記錄，就可以偵測此錯誤。 此錯誤的其他徵兆是系統會提示您輸入多次認證，然後您會看到空白瀏覽器視窗。  
   
- 您可以從組態檔中移除 < **RSWindowsNegotiate** />，然後重新嘗試連接，確認您遇到了 Kerberos 驗證錯誤。  
+ 您可以確認您遇到了 Kerberos 驗證錯誤藉由移除 < **RSWindowsNegotiate** / > 從您的組態檔並重新嘗試連接。  
   
  在您確認問題之後，可以透過以下方式來解決：  
   
@@ -182,7 +182,7 @@ ms.lasthandoff: 06/22/2017
 <RSWindowsExtendedProtectionScenario>Proxy</RSWindowsExtendedProtectionScenario>  
 ```  
   
- 如需詳細資訊，請參閱 [含有 Reporting Services 的驗證擴充保護](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md)  
+ 如需詳細資訊，請參閱[含有 Reporting Services 的驗證擴充保護](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md)  
   
 #### <a name="how-the-browser-chooses-negotiated-kerberos-or-negotiated-ntlm"></a>瀏覽器如何選擇交涉式 Kerberos 或交涉式 NTLM  
  當您使用 Internet Explorer 連接報表伺服器時，它會在驗證標頭上指定交涉式 Kerberos 或 NTLM。 在以下情況下會使用 NTLM 取代 Kerberos：  
@@ -212,12 +212,12 @@ ms.lasthandoff: 06/22/2017
 -   如需 Kerberos 和報表伺服器的其他資訊，請參閱 [Deploying a Business Intelligence Solution Using SharePoint, Reporting Services, and PerformancePoint Monitoring Server with Kerberos](http://go.microsoft.com/fwlink/?LinkID=177751)(搭配 Kerberos 使用 SharePoint、Reporting Services 與 PerformancePoint 監控伺服器部署商業智慧方案)。  
   
 ## <a name="see-also"></a>請參閱＜  
- [使用報表伺服器驗證](../../reporting-services/security/authentication-with-the-report-server.md)   
- [在原生模式報表伺服器上授與權限](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
+ [報表伺服器驗證](../../reporting-services/security/authentication-with-the-report-server.md)   
+ [授與原生模式報表伺服器上的權限](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
  [RsReportServer.config 組態檔](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
- [設定報表伺服器上的基本驗證](../../reporting-services/security/configure-basic-authentication-on-the-report-server.md)   
+ [在報表伺服器上設定基本驗證](../../reporting-services/security/configure-basic-authentication-on-the-report-server.md)   
  [設定報表伺服器上的自訂或表單驗證](../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md)   
- [Extended Protection for Authentication with Reporting Services](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md)  
+ [Reporting services 的驗證擴充的保護](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md)  
   
   
 

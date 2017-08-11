@@ -18,11 +18,11 @@ caps.latest.revision: 47
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 08eb8b5f2acf66f9c07c6cf6de647dbc02ce079b
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="rsreportdesigner-configuration-file"></a>RSReportDesigner 組態檔
@@ -36,9 +36,9 @@ ms.lasthandoff: 06/22/2017
 ## <a name="editing-guidelines"></a>編輯指導方針  
  除非您要部署或移除自訂延伸模組、在預覽期間停用快取，或是在 Service Pack 升級之後登錄新的資料處理延伸模組，否則請勿修改這個檔案中的設定。  
   
- 如果您要自訂轉譯延伸模組設定，請使用編輯組態檔的特定指示。 如需詳細資訊，請參閱[在 RSReportServer.Config 中自訂轉譯延伸模組參數](../../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)。  
+ 如果您要自訂轉譯延伸模組設定，請使用編輯組態檔的特定指示。 如需詳細資訊，請參閱 [在 RSReportServer.Config 中自訂轉譯延伸模組參數](../../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)。  
   
- 如需如何編輯組態檔的一般指示，請參閱 [ Modify a Reporting Services Configuration File &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md) (修改 Reporting Services 組態檔 &#40;RSreportserver.config&#41;)。  
+ 如需有關如何編輯組態檔的一般指示，請參閱[修改 Reporting Services 組態檔 &#40;RSreportserver.config &#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md).  
   
 ## <a name="example-configuration-file"></a>範例組態檔  
  下列範例說明 RSReportDesigner.config 檔案的格式。  

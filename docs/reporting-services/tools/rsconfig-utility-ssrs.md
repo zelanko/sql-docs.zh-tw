@@ -21,11 +21,11 @@ caps.latest.revision: 47
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 68b5e38f2b4e71298fbf7b6ec6970fc7824c3cde
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="rsconfig-utility-ssrs"></a>rsconfig 公用程式 (SSRS)
@@ -55,13 +55,13 @@ rsconfig {-?}
 |**-?**|選擇性。|顯示 Rsconfig.exe 引數的語法。|  
 |**-c**|如果未使用 **-e** 引數，這就是必要的。|指定用來將報表伺服器連接到報表伺服器資料庫的連接字串、認證和資料來源值。<br /><br /> 此引數沒有取得值。 不過，您也必須指定其他引數來搭配它，以便提供所有必要的連接值。<br /><br /> 您可以搭配 **-c** 來指定的引數，包括 **-m**、 **-s**、 **-i**、**-d**、**-a**、**-u**、**-p**和**-t**。|  
 |**-e**|如果未使用 **-c** 引數，這就是必要的。|指定自動報表執行帳戶。<br /><br /> 此引數沒有取得值。 不過，命令列必須包括其他引數，以便指定組態檔中所加密的值。<br /><br /> 您可以搭配 **-e** 來指定的引數，包括 **-u** 和 **-p**。 您也可以設定 **-t**。|  
-|**-m**  <電腦名稱>|如果您在設定遠端報表伺服器執行個體，這就是必要的。|指定主控報表伺服器的電腦名稱。 如果省略這個引數，預設值就是 **localhost**。|  
+|**-m***computername* |如果您在設定遠端報表伺服器執行個體，這就是必要的。|指定主控報表伺服器的電腦名稱。 如果省略這個引數，預設值就是 **localhost**。|  
 |**-s**  <伺服器名稱>|必要。|指定主控報表伺服器資料庫的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。|  
-|**-i**  <執行個體名稱>|如果您使用具名執行個體，這就是必要的。|如果您利用具名 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體來主控報表伺服器資料庫，這個值會指定具名執行個體。|  
-|**-d**  <資料庫名稱>|必要。|指定報表伺服器資料庫的名稱。|  
-|**-a**  <驗證方法>|必要。|指定報表伺服器用來連接到報表伺服器資料庫的驗證方法。 有效值如下： **Windows** 或 **SQL** (這個引數不區分大小寫)。<br /><br /> **Windows** 指定報表伺服器使用 Windows 驗證。<br /><br /> **SQL** 指定報表伺服器使用 SQL Server 驗證。|  
-|**-u**  [網域\\]使用者名稱|對 **-e** 而言，這是必要的；對 **-c** 而言，這是選擇性的。|指定報表伺服器資料庫連接或自動帳戶的使用者帳戶。<br /><br /> 若為 **rsconfig -e**，此引數是必要的。 它必須是網域使用者帳戶。<br /><br /> 若為 **rsconfig -c** 及 **-a SQL**，此引數必須指定一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。<br /><br /> 若為 **rsconfig -c** 及 **-a Windows**，此引數可能會指定網域使用者、內建帳戶或服務帳戶認證。 如果您指定網域帳戶，請以 <網域>\<使用者名稱> 的格式指定 <網域> 和 <使用者名稱>。 如果您是使用內建帳戶，這個引數就是選擇性的。 如果您要使用服務帳戶認證，請省略這個引數。|  
-|**-p** <密碼>|如果指定 **-u**，則為必要。|指定要搭配 <使用者名稱> 引數使用的密碼。 如果帳戶不需要密碼，您可以將這個引數設為空白值。 網域帳戶的這個值會區分大小寫。|  
+|**-i***instancename* |如果您使用具名執行個體，這就是必要的。|如果您利用具名 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體來主控報表伺服器資料庫，這個值會指定具名執行個體。|  
+|**-d***databasename* |必要。|指定報表伺服器資料庫的名稱。|  
+|**-a***authmethod* |必要。|指定報表伺服器用來連接到報表伺服器資料庫的驗證方法。 有效值如下： **Windows** 或 **SQL** (這個引數不區分大小寫)。<br /><br /> **Windows** 指定報表伺服器使用 Windows 驗證。<br /><br /> **SQL** 指定報表伺服器使用 SQL Server 驗證。|  
+|**-u***[網域\\] 使用者名稱* |對 **-e** 而言，這是必要的；對 **-c**而言，這是選擇性的。|指定報表伺服器資料庫連接或自動帳戶的使用者帳戶。<br /><br /> 若為 **rsconfig -e**，此引數是必要的。 它必須是網域使用者帳戶。<br /><br /> 若為 **rsconfig -c** 及 **-a SQL**，此引數必須指定一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。<br /><br /> 若為 **rsconfig -c** 及 **-a Windows**，此引數可能會指定網域使用者、內建帳戶或服務帳戶認證。 如果您指定網域帳戶，請以 <網域>\<使用者名稱> 的格式指定 <網域> 和 <使用者名稱>。 如果您是使用內建帳戶，這個引數就是選擇性的。 如果您要使用服務帳戶認證，請省略這個引數。|  
+|**-p***密碼* |如果指定 **-u** ，則為必要。|指定要搭配 <使用者名稱> 引數使用的密碼。 如果帳戶不需要密碼，您可以將這個引數設為空白值。 網域帳戶的這個值會區分大小寫。|  
 |**-t**|選擇性。|在追蹤記錄中，輸出錯誤訊息。 此引數沒有取得值。 如需詳細資訊，請參閱 [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)。|  
   
 ## <a name="permissions"></a>Permissions  
@@ -127,12 +127,12 @@ rsconfig -e -m <REMOTECOMPUTERNAME> -s <SQLSERVERNAME> -u <DOMAIN\ACCOUNT> -p <P
 ```  
   
 ## <a name="see-also"></a>請參閱＜  
- [設定報表伺服器資料庫連接 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
- [設定自動執行帳戶 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
- [Reporting Services 報表伺服器 &#40;原生模式&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
- [儲存加密的報表伺服器資料 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
+ [設定報表伺服器資料庫連接 &#40;SSRS 組態管理員 &#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [設定自動的執行帳戶 &#40;SSRS 組態管理員 &#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
+ [Reporting Services 報表伺服器 &#40;原生模式 &#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
+ [儲存加密的報表伺服器資料 &#40;SSRS 組態管理員 &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
  [Reporting Services 組態檔](../../reporting-services/report-server/reporting-services-configuration-files.md)   
- [報表伺服器命令提示字元公用程式 &#40;SSRS&#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)   
- [RsReportServer.config 組態檔](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)  
+ [報表伺服器命令提示字元公用程式 &#40;SSRS &#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)   
+ [RsReportServer.config 設定檔](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)  
   
   

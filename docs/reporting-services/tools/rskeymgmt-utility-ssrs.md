@@ -26,11 +26,11 @@ caps.latest.revision: 56
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 95e64239c30aab1a341c281230c887f9668b9277
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>rskeymgmt 公用程式 (SSRS)
@@ -83,15 +83,15 @@ rskeymgmt {-?}
  **-r**  <安裝識別碼>  
  移除特定報表伺服器執行個體的對稱金鑰資訊，因而從向外延展部署中移除報表伺服器。 <安裝識別碼> 是一個 GUID 值，可在 RSReportserver.config 檔中找到它。  
   
- **-f**  <檔案>  
+ **-f***檔案*   
  指定儲存了對稱金鑰備份副本之檔案的完整路徑。  
   
  若為 **rskeymgmt -e**，對稱金鑰會寫入您指定的檔案中。  
   
  若為 **rskeymgmt -a**，便會將檔案中所儲存的對稱金鑰值套用在報表伺服器執行個體上。  
   
- **-p**  <密碼>  
- (**-f** 需要這個引數) 指定用來備份或套用對稱金鑰的密碼。 這個值不能空白。  
+ **-p***密碼*   
+ ( **-f**需要這個引數) 指定用來備份或套用對稱金鑰的密碼。 這個值不能空白。  
   
  **-i**  
  指定本機報表伺服器執行個體。 如果您將報表伺服器安裝在預設的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上，這個引數即為選擇性 ( **-i** 的預設值是 MSSQLSERVER)。 若您將報表伺服器安裝成具名執行個體，就需要 **-i** 。  
@@ -100,13 +100,13 @@ rskeymgmt {-?}
  指定要聯結至報表伺服器向外延展部署中，主控報表伺服器執行個體的遠端電腦名稱。 請使用在網路中用來識別這部電腦的名稱。  
   
  **-n**  
- 指定遠端電腦中之報表伺服器執行個體的名稱。 這個引數是選擇性，如果您將報表伺服器安裝在預設的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體 (預設值為 **-n** 為 MSSQLSERVER)。 如果您將報表伺服器安裝成具名執行個體，  **-n** 需要。  
+ 指定遠端電腦中之報表伺服器執行個體的名稱。 如果您將報表伺服器安裝在預設的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上，這個引數即為選擇性 ( **-n** 的預設值是 MSSQLSERVER)。 若您將報表伺服器安裝成具名執行個體，就需要 **-n** 。  
   
  **-u**  <使用者帳戶>  
  指定要聯結至向外延展部署中之遠端電腦的管理員帳戶。 如果未指定帳戶，就會使用目前使用者的認證。  
   
- **-v**  <密碼>  
- (**-u** 需要這個引數) 指定要聯結至向外延展部署中之遠端電腦的管理員帳戶密碼。  
+ **-v***密碼*   
+ ( **-u**需要這個引數) 指定要聯結至向外延展部署中之遠端電腦的管理員帳戶密碼。  
   
  **-t**  <追蹤>  
  在追蹤記錄中，輸出錯誤訊息。 此引數沒有取得值。 如需詳細資訊，請參閱 [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)。  
@@ -170,7 +170,7 @@ rskeymgmt -r <installationID>
 ```  
   
 ## <a name="file-location"></a>檔案位置  
- Rskeymgmt.exe 位於 ** \<*磁碟機*>: \Program Files\Microsoft SQL Server\110\Tools\Binn * * 或* * \<*磁碟機*>: \Program 檔案 (x86) \Microsoft SQL Server\110\Tools\Binn**。 您可以從檔案系統上的任何資料夾執行此公用程式。  
+ Rskeymgmt.exe 位於  **\<*磁碟機*>: \Program Files\Microsoft SQL Server\110\Tools\Binn * * 或  **\<*磁碟機*>: \Program 檔案 (x86) \Microsoft SQL Server\110\Tools\Binn**。 您可以從檔案系統上的任何資料夾執行此公用程式。  
   
 ## <a name="remarks"></a>備註  
  報表伺服器會加密預存的認證和連接資訊。 資料的加密使用公開金鑰和對稱金鑰。 報表伺服器資料庫必須具備有效的金鑰，報表伺服器才能夠執行。 您可以使用 **rskeymgmt** 來備份、刪除或還原金鑰。 如果金鑰無法還原，這個工具可用來刪除已無法使用的加密內容。  
@@ -181,8 +181,8 @@ rskeymgmt -r <installationID>
   
 ## <a name="see-also"></a>另請參閱  
  [向外延展部署 - Reporting Services 原生模式 &#40;組態管理員&#41;](http://msdn.microsoft.com/library/4df38294-6f9d-4b40-9f03-1f01c1f0700c)   
- [Reporting Services 報表伺服器 &#40;原生模式&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
- [報表伺服器命令提示字元公用程式 &#40;SSRS&#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)   
- [設定和管理加密金鑰 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
+ [Reporting Services 報表伺服器 &#40;原生模式 &#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
+ [報表伺服器命令提示字元公用程式 &#40;SSRS &#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)   
+ [設定和管理加密金鑰 &#40;SSRS 組態管理員 &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   
   

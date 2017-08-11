@@ -21,15 +21,15 @@ caps.latest.revision: 10
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: cca3d552a0e1ffb7fdfc09e98a334f8f4d196d84
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="ssrs-encryption-keys---initialize-a-report-server"></a>將報表伺服器的 SSRS 加密金鑰-初始化
-  在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，初始化的伺服器是可以在報表伺服器資料庫中加密和解密資料的伺服器。 初始化是報表伺服器作業的需求。 報表伺服器服務第一次啟動時，會進行初始化。 在您將報表伺服器聯結至現有的部署時，或者您在復原處理中手動重新建立金鑰時，也會進行初始化。 如需如何和為什麼使用加密金鑰的詳細資訊，請參閱[設定和管理加密金鑰 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md) 和[儲存加密的報表伺服器資料 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)。  
+  在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中，初始化的伺服器是可以在報表伺服器資料庫中加密和解密資料的伺服器。 初始化是報表伺服器作業的需求。 報表伺服器服務第一次啟動時，會進行初始化。 在您將報表伺服器聯結至現有的部署時，或者您在復原處理中手動重新建立金鑰時，也會進行初始化。 如需如何和為什麼使用加密金鑰的詳細資訊，請參閱[設定和管理加密金鑰 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md) 和[儲存加密的報表伺服器資料 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)。  
   
  加密金鑰有一部分是以報表伺服器服務的設定檔資訊為根據。 如果您變更用來執行報表伺服器服務的使用者識別，就必須隨之更新金鑰。 如果您是使用 Reporting Services 組態工具來變更識別，則會自動幫您處理這個步驟。  
   
@@ -51,7 +51,7 @@ ms.lasthandoff: 06/22/2017
 5.  報表伺服器服務會再次連接到報表伺服器資料庫，並將對稱金鑰加入步驟 3 所儲存的公開金鑰和安裝識別碼值。 在儲存之前，報表伺服器服務會使用它的公開金鑰來加密對稱金鑰。 一旦對稱金鑰儲存之後，報表伺服器就視為已初始化，並且可供使用。  
   
 ## <a name="initializing-a-report-server-for-scale-out-deployment"></a>針對向外延展部署初始化報表伺服器  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 支援向外延展部署模型，這種模型會在多個報表伺服器執行個體中共用單一報表伺服器資料庫。 若要聯結向外延展部署，報表伺服器必須在共用資料庫中建立並儲存其對稱金鑰的副本。 雖然使用資料庫的所有伺服器會使用單一對稱金鑰，不過每個報表伺服器有其自己的金鑰副本。 每個複本都使用其擁有的公開金鑰唯一加密，因此各有不同。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]支援共用單一報表伺服器資料庫在多個報表伺服器執行個體的向外延展部署模型。 若要聯結向外延展部署，報表伺服器必須在共用資料庫中建立並儲存其對稱金鑰的副本。 雖然使用資料庫的所有伺服器會使用單一對稱金鑰，不過每個報表伺服器有其自己的金鑰副本。 每個複本都使用其擁有的公開金鑰唯一加密，因此各有不同。  
   
  針對向外延展部署初始化報表伺服器的第一組步驟，和針對單一伺服器與資料庫組合初始化的前三個步驟相同。  
   

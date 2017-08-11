@@ -18,11 +18,11 @@ caps.latest.revision: 11
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 6021dec1c7d072041710c62a533d4e19ead4aa53
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="sparklines-and-data-bars-report-builder-and-ssrs"></a>走勢圖和資料橫條 (報表產生器和 SSRS)
@@ -40,13 +40,13 @@ ms.lasthandoff: 06/22/2017
 ##  <a name="KindsofSparklines"></a> 走勢圖的類型  
  您幾乎可以建立與一般圖表一樣多的走勢圖類型。 一般而言，您無法建立 3D 走勢圖。 您可以建立這些完整圖表的走勢圖版本：  
   
--   [直條圖 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md)︰基本、堆疊與 100% 堆疊直條圖。  
+-   [直條圖 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md)： 基本、 堆疊與 100%堆疊直條圖。  
   
--   [折線圖 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/line-charts-report-builder-and-ssrs.md)：3D 折線圖以外的所有圖表。  
+-   [折線圖 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/line-charts-report-builder-and-ssrs.md): 3D 以外的所有折線圖。  
   
--   [區域圖 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/area-charts-report-builder-and-ssrs.md)：3D 區域圖以外的所有圖表  
+-   [區域圖 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/area-charts-report-builder-and-ssrs.md): 3D 區域圖以外的所有  
   
--   [圓形圖 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)：以及環圈圖 (平面和立體)，但不是漏斗圖和金字塔圖之類的其他形狀。  
+-   [圓形圖 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)： 以及環圈圖，一般和 3D，但其他配置未圖形例如漏斗與金字塔圖。  
   
 -   [範圍圖表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md)︰股票圖、K 線圖、誤差長條圖與盒狀圖。  
   
@@ -59,12 +59,12 @@ ms.lasthandoff: 06/22/2017
   
  您可以建立這些完整圖表的資料橫條版本：  
   
--   [橫條圖 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md)︰基本、堆疊與 100% 堆疊橫條圖。  
+-   [橫條圖 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md)： 基本、 堆疊 和 100%堆疊橫條圖。  
   
--   [直條圖 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md)︰基本、堆疊與 100% 堆疊直條圖。 直條圖可以是走勢圖或資料橫條。  
+-   [直條圖 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md)： 基本、 堆疊 和 100%堆疊直條圖。 直條圖可以是走勢圖或資料橫條。  
   
 ##  <a name="AlignDatainTableMatrix"></a> 在資料表或矩陣中對齊走勢圖資料  
- 當您將走勢圖插入資料表或矩陣時，每個走勢圖中的資料點通常最好對齊該直條圖中其他走勢圖的資料點。 否則，很難比較不同資料列中的資料。 例如，當您依月份比較公司中不同銷售人員的銷售資料時，您會希望月份能夠對齊。 如果員工四月份外出，該員工就沒有該月份的資料。 您希望看到該月份的間距，並且看到後續月份的資料對齊其他員工的資料。 您可以對齊水平軸達到這個目的。 如需詳細資訊，請參閱[總計、彙總與內建集合的運算式範圍 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md) 中關於走勢圖的章節，並參閱[在資料表或矩陣的圖表上對齊資料 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs.md)。  
+ 當您將走勢圖插入資料表或矩陣時，每個走勢圖中的資料點通常最好對齊該直條圖中其他走勢圖的資料點。 否則，很難比較不同資料列中的資料。 例如，當您依月份比較公司中不同銷售人員的銷售資料時，您會希望月份能夠對齊。 如果員工四月份外出，該員工就沒有該月份的資料。 您希望看到該月份的間距，並且看到後續月份的資料對齊其他員工的資料。 您可以對齊水平軸達到這個目的。 如需詳細資訊，請參閱 > 一節中關於走勢圖[總計、 彙總與內建集合 &#40; 的運算式範圍報表產生器及 SSRS &#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)，並查看[對齊資料表或矩陣 &#40; 中的圖表中的資料報表產生器及 SSRS &#41;](../../reporting-services/report-design/align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs.md).  
   
  同樣地，為了能夠跨資料列進行比較，資料也必須垂直對齊，也就是說，某個走勢圖或資料橫條中的橫條或線條高度必須相對於其他所有走勢圖或資料橫條中的橫條和線條高度。 否則，您無法互相比較資料列。  
   
@@ -109,6 +109,6 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>請參閱＜  
  [圖表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [教學課程：將走勢圖加入至報表 &#40;報表產生器&#41;](../../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md)   
+ [教學課程： 將走勢圖加入至您的報表 &#40;報表產生器 &#41;](../../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md)   
   
   

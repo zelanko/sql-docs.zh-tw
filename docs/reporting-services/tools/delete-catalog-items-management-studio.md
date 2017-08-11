@@ -17,11 +17,11 @@ caps.latest.revision: 16
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7cdd06f5488603b10e788d513c93269b250d8486
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="delete-catalog-items-management-studio"></a>刪除目錄項目 (Management Studio)
@@ -50,8 +50,8 @@ ms.lasthandoff: 06/22/2017
  如果在刪除項目時發生錯誤，則顯示錯誤碼。  
   
 ## <a name="see-also"></a>請參閱＜  
- [刪除項目 &#40;Management Studio&#41;](../../reporting-services/tools/delete-an-item-management-studio.md)   
- [Management Studio F1 說明中的報表伺服器](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
- [建立、修改和刪除共用排程](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)  
+ [刪除項目 &#40;Management Studio &#41;](../../reporting-services/tools/delete-an-item-management-studio.md)   
+ [Report Server in Management Studio F1 說明](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
+ [建立、 修改及刪除共用排程](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)  
   
   

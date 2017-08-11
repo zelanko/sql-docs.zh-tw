@@ -15,11 +15,11 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 78f69746e290ea004d28edf8a0a90aeabfb9151d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="plan-a-map-report-report-builder-and-ssrs"></a>規劃地圖報表 (報表產生器及 SSRS)
@@ -156,9 +156,9 @@ ms.lasthandoff: 06/22/2017
  若要使用動態空間資料，空間資料來源必須位在報表伺服器上。 在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中設計報表時，可以將空間資料來源加入至專案中，然後與報表定義一起發行至報表伺服器。 如果您要使用報表產生器設計報表，必須先將空間資料上傳至報表伺服器，然後在精靈或圖層屬性中，指定地圖圖層之空間資料的來源。  
   
 ## <a name="see-also"></a>請參閱＜  
- [自訂地圖或地圖圖層的資料和顯示 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   
- [教學課程：地圖報表 &#40;報表產生器&#41;](../../reporting-services/tutorial-map-report-report-builder.md)   
- [地圖 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
- [報表疑難排解：地圖報表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [自訂的資料和顯示的地圖或地圖圖層 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   
+ [教學課程： 地圖報表 &#40;報表產生器 &#41;](../../reporting-services/tutorial-map-report-report-builder.md)   
+ [對應 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
+ [報表疑難排解： 地圖報表 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

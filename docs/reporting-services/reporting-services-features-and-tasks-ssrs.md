@@ -18,15 +18,15 @@ caps.latest.revision: 42
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 8134ebc66d9b0d75b3eae53b666eea37dee3df5a
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="reporting-services-features-and-tasks-ssrs"></a>Reporting Services 功能及工作 (SSRS)
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 基礎內容是依報表和報表功能、報表伺服器功能以及 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 產品功能進行組織。  
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]基礎內容依報表和報表功能，報表伺服器功能，和[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]產品功能。  
   
 ## <a name="in-this-section"></a>本節內容  
  [使用 SQL Server 行動報表發行工具建立行動報表](../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
@@ -39,19 +39,19 @@ ms.lasthandoff: 06/22/2017
   
  [報表參數 &#40;報表產生器和報表設計師&#41;](../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
   
- [報表設計師中的報表組件 &#40;SSRS&#41;](../reporting-services/report-design/report-parts-in-report-designer-ssrs.md)  
+ [在報表設計工具 &#40; 中的報表組件SSRS &#41;](../reporting-services/report-design/report-parts-in-report-designer-ssrs.md)  
   
  [排程](../reporting-services/subscriptions/schedules.md)  
   
- [訂閱與傳遞 &#40;Reporting Services&#41;](../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
+ [訂閱和傳遞 &#40;Reporting Services &#41;](../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
   
- [Reporting Services Data Alerts](../reporting-services/reporting-services-data-alerts.md)  
+ [Reporting Services 資料警示](../reporting-services/reporting-services-data-alerts.md)  
   
  [Reporting Services 安全性與保護](../reporting-services/security/reporting-services-security-and-protection.md)  
   
- [URL 存取 &#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)  
+ [URL 存取 &#40;SSRS &#41;](../reporting-services/url-access-ssrs.md)  
   
- [延伸模組 &#40;SSRS&#41;](../reporting-services/extensions-ssrs.md)  
+ [擴充功能 &#40;SSRS &#41;](../reporting-services/extensions-ssrs.md)  
   
  [Reporting Services 工具](../reporting-services/tools/reporting-services-tools.md)  
   

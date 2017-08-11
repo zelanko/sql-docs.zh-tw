@@ -18,11 +18,11 @@ caps.latest.revision: 52
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7983325b1036809058e4866dd217c72c97c8238b
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="create-and-manage-subscriptions-for-native-mode-report-servers"></a>建立及管理原生模式報表伺服器的訂閱
@@ -91,7 +91,7 @@ ms.lasthandoff: 06/22/2017
   
     -   若要選取預先定義的共用排程，其中已經具有您想要使用的日期、時間和循環資訊，請按一下 **[在共用排程上]**，然後選取要用的排程。  
   
-    -   若要在報表快照集以更新的版本更新時傳遞報表，請按一下 [重新整理報表內容時]。 如果您要訂閱以排程間隔擷取資料的報表，用來重新整理資料的排程就會決定處理訂閱的時間。  
+    -   若要將報表傳遞的報表快照集更新的較新版本時，按一下**重新整理報表內容時**。 如果您要訂閱以排程間隔擷取資料的報表，用來重新整理資料的排程就會決定處理訂閱的時間。  
   
         > [!NOTE]  
         >  只有當快照集已經和更新排程相關聯時可使用此選項。  
@@ -112,12 +112,12 @@ ms.lasthandoff: 06/22/2017
   
 4.  **擁有者**︰擁有者欄位預設為目前的使用者，且在您建立訂閱時無法編輯。 不過，在儲存訂閱之後，您可以變更訂閱屬性，包括擁有者與描述。  
   
-5.  **傳遞者**：選取 [電子郵件]。 如果無法使用 [電子郵件]，表示您的報表伺服器尚未針對電子郵件訂閱進行設定。 請參閱[為電子郵件傳遞設定報表伺服器 (SSRS 組態管理員)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83)  
+5.  **傳遞者**： 選取**電子郵件**。 如果**電子郵件**是無法使用，您的報表伺服器尚未設定電子郵件訂閱。 請參閱 [為電子郵件傳遞設定報表伺服器 (SSRS 組態管理員)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83)  
   
-6.  **收件者**：系統會使用您的網域使用者帳戶，自行處理 [收件者:] 欄位中的收件者名稱。 驗證格式為 [使用者名稱]@[網域.com] 報表伺服器組態設定會決定系統是否會使用您的使用者帳戶來自行處理 [收件者] 欄位。 如需如何變更電子郵件地址組態設定的詳細資訊，請參閱[為電子郵件傳遞設定報表伺服器 (SSRS 組態管理員)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83)。  
+6.  **收件者**：系統會使用您的網域使用者帳戶，自行處理 [收件者:] 欄位中的收件者名稱。 驗證格式為 [使用者 name]@[domain.com]Report 伺服器組態設定會決定是否**至**欄位是自行處理您的使用者帳戶。 如需如何變更電子郵件地址組態設定的詳細資訊，請參閱 [為電子郵件傳遞設定報表伺服器 (SSRS 組態管理員)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83)。  
   
     > [!NOTE]  
-    >  根據您的權限，可能可以輸入想要傳遞報表的目標電子郵件地址。 若要指定多個電子郵件地址，請使用分號 (;) 隔開。 您也可以在 [副本]、[密件副本] 和 [回覆至] 文字方塊中，輸入其他電子郵件地址。 這需要您具有管理所有訂閱的權限。  
+    >  根據您的權限，可能可以輸入想要傳遞報表的目標電子郵件地址。 若要指定多個電子郵件地址，請使用分號 (;) 隔開。 您也可以輸入其他電子郵件中的位址**副本**，**密件副本**，和**回覆至**文字方塊。 這需要您具有管理所有訂閱的權限。  
   
 7.  **主旨**： 預設值為"@ReportName已執行於@ExecutionTime"。 您可以編輯主旨，但請注意，@ReportName和@ExecutionTime中支援的只有全域變數**主旨**欄位。  
   
@@ -132,7 +132,7 @@ ms.lasthandoff: 06/22/2017
   
 9. 從 **[轉譯格式]** 清單方塊中選擇轉譯格式。 如果選取 **[包含報表]** 以內嵌或附加報表的副本，就可以使用此選項。  
   
-    -   若要將報表內嵌於電子郵件訊息的主體中，請選取 [網頁封存]。  
+    -   若要將報表內嵌在電子郵件訊息的本文中，選取**網頁封存**。  
   
     -   若要將報表當成附加檔案傳送，請選擇其他任一種轉譯格式。  
   
@@ -144,7 +144,7 @@ ms.lasthandoff: 06/22/2017
   
     -   若要選取預先定義的共用排程，其中已經具有您想要使用的日期、時間和循環資訊，請按一下 **[在共用排程上]**，然後選取要用的排程。  
   
-    -   若要在報表快照集以更新的版本更新時傳遞報表，請按一下 [重新整理報表內容時]。 如果您要訂閱以排程間隔擷取資料的報表，用來重新整理資料的排程就會決定處理訂閱的時間。  
+    -   若要將報表傳遞的報表快照集更新的較新版本時，按一下**重新整理報表內容時**。 如果您要訂閱以排程間隔擷取資料的報表，用來重新整理資料的排程就會決定處理訂閱的時間。  
   
     > [!NOTE]  
     >  只有當快照集已經和更新排程相關聯時可使用此選項。  
@@ -186,10 +186,10 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>請參閱＜  
  [建立及管理 SharePoint 模式報表伺服器的訂閱](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
- [使用 PowerShell 變更及列出 Reporting Services 訂閱擁有者並執行訂閱](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)   
+ [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)   
  [資料驅動訂閱](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
- [訂閱與傳遞 &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [報表管理員 &#40;SSRS 原生模式&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
- [使用我的訂閱 &#40;原生模式報表伺服器&#41;](../../reporting-services/subscriptions/use-my-subscriptions-native-mode-report-server.md)  
+ [訂閱和傳遞 &#40;Reporting Services &#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
+ [報表管理員 &#40;SSRS 原生模式 &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [使用我的訂閱 &#40;原生模式報表伺服器 &#41;](../../reporting-services/subscriptions/use-my-subscriptions-native-mode-report-server.md)  
   
   

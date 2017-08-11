@@ -17,11 +17,11 @@ caps.latest.revision: 41
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 289bf07fd3d920d218cf79f2a725a4e33c9572a7
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="report-server-in-management-studio-f1-help"></a>Management Studio F1 說明中的報表伺服器
@@ -35,31 +35,31 @@ ms.lasthandoff: 06/22/2017
   
 -   [作業屬性頁面](../../reporting-services/tools/job-properties-management-studio.md)  
   
--   [新增共用排程](../../reporting-services/tools/new-shared-schedule-management-studio.md)  
+-   [新增共用的排程](../../reporting-services/tools/new-shared-schedule-management-studio.md)  
   
 -   [新增系統角色](../../reporting-services/tools/new-system-role-management-studio.md)  
   
--   [新增使用者角色](../../reporting-services/tools/new-user-role-management-studio.md)  
+-   [新使用者角色](../../reporting-services/tools/new-user-role-management-studio.md)  
   
--   [排程屬性 (一般頁面)](../../reporting-services/tools/schedule-properties-general-page.md)  
+-   [排程屬性 （一般頁面）](../../reporting-services/tools/schedule-properties-general-page.md)  
   
--   [排程屬性 (報表頁面)](../../reporting-services/tools/schedule-properties-reports-page.md)  
+-   [排程屬性 （報表頁面）](../../reporting-services/tools/schedule-properties-reports-page.md)  
   
--   [伺服器屬性 (一般頁面)](../../reporting-services/tools/report-server-properties-general-page.md)  
+-   [伺服器屬性 （一般頁面）](../../reporting-services/tools/report-server-properties-general-page.md)  
   
--   [伺服器屬性 (執行頁面)](../../reporting-services/tools/server-properties-execution-page.md)  
+-   [伺服器屬性 （執行頁面）](../../reporting-services/tools/server-properties-execution-page.md)  
   
--   [伺服器多個屬性 (記錄頁面)](../../reporting-services/tools/server-properties-history-page.md)  
+-   [伺服器屬性 （記錄頁面）](../../reporting-services/tools/server-properties-history-page.md)  
   
--   [伺服器屬性 (記錄頁面)](../../reporting-services/tools/server-properties-logging-page.md)  
+-   [伺服器屬性 （記錄頁面）](../../reporting-services/tools/server-properties-logging-page.md)  
   
--   [伺服器屬性 (安全性頁面)](../../reporting-services/tools/server-properties-security-page-reporting-services.md)  
+-   [伺服器屬性 （安全性頁面）](../../reporting-services/tools/server-properties-security-page-reporting-services.md)  
   
--   [伺服器屬性 (進階頁面)](../../reporting-services/tools/server-properties-advanced-page-reporting-services.md)  
+-   [伺服器屬性 （進階頁面）](../../reporting-services/tools/server-properties-advanced-page-reporting-services.md)  
   
 -   [系統角色屬性](../../reporting-services/tools/system-role-properties-management-studio.md)  
   
--   [使用者角色屬性](../../reporting-services/tools/user-role-properties-management-studio.md)  
+-   [使用者角色內容](../../reporting-services/tools/user-role-properties-management-studio.md)  
   
 ## <a name="see-also"></a>請參閱＜  
  [功能參考 (Reporting Services)](../../reporting-services/feature-reference-reporting-services.md)  

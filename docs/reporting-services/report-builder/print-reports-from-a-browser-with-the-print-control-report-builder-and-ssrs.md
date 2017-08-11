@@ -15,11 +15,11 @@ caps.latest.revision: 13
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3674bb697d86ac79906aa4ee5172ad24030a22fc
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs"></a>使用列印控制項從瀏覽器列印報表 (報表產生器及 SSRS)
@@ -42,10 +42,10 @@ ms.lasthandoff: 06/22/2017
  若要在 **[列印]** 對話方塊中預覽報表，請按一下 **[預覽]** 按鈕。 按一下預覽會以個別的預覽視窗，來開啟報表的第一頁。 其他的頁面在報表於報表伺服器上完成轉譯之後即可使用。 預覽的報表會轉譯成 EMF 格式。 您可以導覽至上一頁或下一頁，直到出現最後一頁為止，此時 **[下一頁]** 按鈕就會停用。  
   
 ### <a name="adjusting-print-margins"></a>調整列印邊界  
- 您可以在列印轉譯的 EMF 報表之前，先在該報表中修改列印邊界。 若要這樣做，請在 **[列印]** 對話方塊中，按一下 **[預覽]** 按鈕。 在預覽頁面頂端，按一下 **[邊界]** 按鈕。 [邊界] 對話方塊隨即顯示。 請設定您要的上、下、左、右邊界。 [!INCLUDE[clickOK](../../includes/clickok-md.md)] 對話方塊會關閉並儲存設定，以供轉譯預覽和列印使用。  
+ 您可以在列印轉譯的 EMF 報表之前，先在該報表中修改列印邊界。 若要這樣做，請在 **[列印]** 對話方塊中，按一下 **[預覽]** 按鈕。 在預覽頁面頂端，按一下 **[邊界]** 按鈕。 [邊界] 對話方塊隨即顯示。 請設定您要的上、下、左、右邊界。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]關閉對話方塊並儲存設定，以供轉譯預覽和列印。  
   
 ## <a name="see-also"></a>請參閱＜  
- [列印報表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)   
- [列印報表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/print-a-report-report-builder-and-ssrs.md)  
+ [列印報表 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)   
+ [列印報表 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-builder/print-a-report-report-builder-and-ssrs.md)  
   
   

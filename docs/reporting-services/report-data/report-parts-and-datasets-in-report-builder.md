@@ -15,17 +15,17 @@ caps.latest.revision: 9
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5bd079fcfdd867bbcfb251c7e58fa485c9c56d17
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="report-parts-and-datasets-in-report-builder"></a>報表產生器中的報表組件和資料集
   在報表產生器中，在報表內包含資料最簡單的方式，就是從報表組件庫加入報表組件。 報表組件包含相依的資料集，稱為 *「相依資料集」*(Dependent Dataset)。 相依資料集是以共用資料來源為基礎，而且可以是內嵌資料集或共用資料集。 深入了解 [報表組件](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)。  
   
- 在報表內包含資料的另一個方式是使用共用資料集。 如需詳細資訊，請參閱 [報表內嵌資料集和共用資料集 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)(Dependent Dataset)。  
+ 在報表內包含資料的另一個方式是使用共用資料集。 如需詳細資訊，請參閱[報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -56,13 +56,13 @@ ms.lasthandoff: 06/22/2017
 2.  當您結束報表產生器，或啟動新的報表時，系統會提示您儲存報表。 如果您不儲存報表，下次開啟此報表並發行報表項目時，您可能會發行相同資料集的新複本。 為避免將共用資料集的多個複本儲存至報表伺服器，建議您儲存報表。  
   
 > [!IMPORTANT]  
->  為確保您和其他人可以繼續成功地使用共用資料集中的資料，您必須了解保護報表項目安全背後的原則。 如需詳細資訊，請參閱 [保護共用資料集項目的安全](../../reporting-services/security/secure-shared-dataset-items.md)。  
+>  為確保您和其他人可以繼續成功地使用共用資料集中的資料，您必須了解保護報表項目安全背後的原則。 如需詳細資訊，請參閱[保護共用資料集項目的安全](../../reporting-services/security/secure-shared-dataset-items.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [報表設計檢視 &#40;報表產生器&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)   
- [安全性 &#40;報表產生器&#41;](../../reporting-services/report-builder/security-report-builder.md)   
- [報表組件 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)   
- [報表內嵌資料集和共用資料集 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+ [報表設計檢視 &#40;報表產生器 &#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)   
+ [安全性 &#40;報表產生器 &#41;](../../reporting-services/report-builder/security-report-builder.md)   
+ [報表組件 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)   
+ [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
   
 

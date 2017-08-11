@@ -30,15 +30,15 @@ caps.latest.revision: 101
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 6cf3c3d62250f84184adc53d66d9ec274a2a1b3d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>運算式範例 (報表產生器及 SSRS)
-[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]分頁報表中常會使用運算式來控制內容與報表的外觀。 運算式是以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]所撰寫，而且可以使用內建函數、自訂程式碼、報表與群組變數，以及使用者定義的變數。 運算式以等號 (=) 當做開頭。 如需運算式編輯器以及可以包含之參考類型的詳細資訊，請參閱[報表中的運算式用法 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md) 和[加入運算式 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md)。  
+[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分頁報表中常會使用運算式來控制內容與報表的外觀。 運算式是以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]所撰寫，而且可以使用內建函數、自訂程式碼、報表與群組變數，以及使用者定義的變數。 運算式以等號 (=) 當做開頭。 如需運算式編輯器和可包含的參考類型的詳細資訊，請參閱[運算式會使用在報表 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)，和[新增運算式 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md).  
   
 > [!IMPORTANT]  
 >  若啟用 RDL 沙箱，當報表發行時，運算式文字中只能使用特定類型和成員。 如需詳細資訊，請參閱 [啟用與停用 RDL 沙箱](../../reporting-services/report-server-sharepoint/enable-and-disable-rdl-sandboxing.md)。  
@@ -67,13 +67,13 @@ ms.lasthandoff: 06/22/2017
   
 -   [報表和群組變數集合參考 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/built-in-collections-report-and-group-variables-references-report-builder.md)  
   
-如需有關簡單和複雜運算式、使用運算式的地方，以及您可以包含在運算式中之參考類型的詳細資訊，請參閱 [運算式 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)。 如需有關評估運算式以計算彙總所使用之內容的詳細資訊，請參閱[總計、彙總與內建集合的運算式範圍 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)。  
+如需有關簡單和複雜運算式、使用運算式的地方，以及您可以包含在運算式中之參考類型的詳細資訊，請參閱 [運算式 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)。 如需運算式評估以計算彙總的內容的詳細資訊，請參閱[總計、 彙總與內建集合 &#40; 的運算式範圍報表產生器及 SSRS &#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
 如需了解如何在撰寫報表的內容中，撰寫使用本主題中運算式範例所使用的許多函數和運算子的運算式，請參閱 [教學課程：運算式簡介](../../reporting-services/tutorial-introducing-expressions.md)。  
 
   
 ## <a name="functions"></a>函數  
- 報表中的許多運算式都有包含函數， 您可以使用這些函數來格式化資料、套用邏輯以及存取報表中繼資料。 您可以撰寫使用來自函式的運算式[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]執行階段程式庫，以及從<xref:System.Convert>和<xref:System.Math>命名空間。 您可以加入其他組件或自訂程式碼中函數的參考， 您也可以使用類別從[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]，包括<xref:System.Text.RegularExpressions>。  
+ 報表中的許多運算式都有包含函數， 您可以使用這些函數來格式化資料、套用邏輯以及存取報表中繼資料。 您可撰寫運算式來使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 執行階段程式庫及 <xref:System.Convert> 和 <xref:System.Math> 命名空間中的函數。 您可以加入其他組件或自訂程式碼中函數的參考， 您也可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]的類別，包括 <xref:System.Text.RegularExpressions>。  
   
 ##  <a name="VisualBasicFunctions"></a> Visual Basic 函數  
  您可以利用 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 函數來操作文字方塊所顯示的資料，或參數、屬性或報表的其他區域所用的資料。 此章節提供示範其中一些函數的範例。 如需詳細資訊，請參閱 MSDN 上的 [Visual Basic 執行階段程式庫成員](http://go.microsoft.com/fwlink/?LinkId=198941) 。  
@@ -169,7 +169,7 @@ ms.lasthandoff: 06/22/2017
     =DateAdd(DateInterval.Month,DateDiff(DateInterval.Month,CDate("01/01/1900"),Now())-1,CDate("01/01/1900"))  
     ```  
   
--   下列運算式會產生 SellStartDate 與 LastReceiptDate 之間的間隔年數。 這些欄位位於兩個不同的資料集：DataSet1 和 DataSet2 中。 [First 函數 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/report-builder-functions-first-function.md) 為彙總函數，它會傳回 DataSet1 中 SellStartDate 的第一個值，以及 DataSet2 中 LastReceiptDate 的第一個值。  
+-   下列運算式會產生 SellStartDate 與 LastReceiptDate 之間的間隔年數。 這些欄位位於兩個不同的資料集：DataSet1 和 DataSet2 中。 [第一個函式 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/report-builder-functions-first-function.md)，這是彙總函式，會傳回 DataSet1 和 DataSet2 中 LastReceiptDate 的第一個值中 SellStartDate 的第一個值。  
   
     ```  
     =DATEDIFF(“yyyy”, First(Fields!SellStartDate.Value, "DataSet1"), First(Fields!LastReceiptDate.Value, "DataSet2"))  
@@ -215,13 +215,13 @@ ms.lasthandoff: 06/22/2017
   
      如果文字方塊只包含日期或數字，您應該使用文字方塊的 Format 屬性來套用格式，而非使用文字方塊中的 **Format** 函數。  
   
--   **Right**、**Len** 和 **InStr** 函數在傳回子字串時很有用，例如，將 '網域\\使用者名稱' 修改成只有使用者名稱。 下列運算式會從名為\\User *的參數傳回字串中反斜線 (*) 字元右邊的字串部分：  
+-   **右邊**， **Len**，和**InStr**函式可用於傳回子字串，例如修剪*網域*\\*username*成只有使用者名稱。 下列運算式會從名為\\User *的參數傳回字串中反斜線 (*) 字元右邊的字串部分：  
   
     ```  
     =Right(Parameters!User.Value, Len(Parameters!User.Value) - InStr(Parameters!User.Value, "\"))  
     ```  
   
-     下列運算式會產生相同的值與上一個，使用成員[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]<xref:System.String>類別而不是[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]函式：  
+     下列運算式會產生與上一個運算式相同的值，但它是使用 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.String> 類別的成員，而不是 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 函數：  
   
     ```  
     =Parameters!User.Value.Substring(Parameters!User.Value.IndexOf("\")+1, Parameters!User.Value.Length-Parameters!User.Value.IndexOf("\")-1)  
@@ -240,14 +240,14 @@ ms.lasthandoff: 06/22/2017
   
     ```  
   
--   **Regex**函式從[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]<xref:System.Text.RegularExpressions>可用於變更現有的字串，例如，格式化電話號碼的格式。 The following expression uses the **Replace** function to change the format of a ten-digit telephone number in a field from "*nnn*-*nnn*-*nnnn*" to "(*nnn*) *nnn*-*nnnn*":  
+-   當測試的條件有三個或三個以上時， **[!INCLUDE[dnprdnshort](../Token/dnprdnshort_md.md)]** System.Text.RegularExpressions [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Text.RegularExpressions> 函數對於變更現有字串的格式 (例如，格式化電話號碼) 很有用處。 下列運算式使用 **Replace** 函數，將欄位中十位數電話號碼的格式從 "*nnn*-*nnn*-*nnnn*" 變更為 "(*nnn*) *nnn*-*nnnn*"：  
   
     ```  
     =System.Text.RegularExpressions.Regex.Replace(Fields!Phone.Value, "(\d{3})[ -.]*(\d{3})[ -.]*(\d{4})", "($1) $2-$3")  
     ```  
   
     > [!NOTE]  
-    >  確認 Fields!Phone.Value 的值沒有額外的空格，而且為 <xref:System.String> 類型。  
+    >  確認 Fields!Phone.Value 的值沒有額外的空格，而且為 <xref:System.String>。  
   
 ### <a name="lookup"></a>查閱  
   
@@ -453,7 +453,7 @@ ms.lasthandoff: 06/22/2017
 >  可用的色彩是來自 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] KnownColor 列舉。  
   
 ### <a name="chart-colors"></a>圖表色彩  
- 若要指定形狀圖的色彩，您可以使用自訂程式碼控制色彩對應到資料點值的順序。 這有助於針對擁有相同類別目錄群組的多個圖表，使用一致的色彩。 如需詳細資訊，請參閱[跨多個形狀圖指定一致的色彩 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs.md)。  
+ 若要指定形狀圖的色彩，您可以使用自訂程式碼控制色彩對應到資料點值的順序。 這有助於針對擁有相同類別目錄群組的多個圖表，使用一致的色彩。 如需詳細資訊，請參閱 [Specify Consistent Colors across Multiple Shape Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs.md) (跨多個形狀圖指定一致的色彩 (報表產生器及 SSRS))。  
   
 ###  <a name="Visibility"></a> 可見性  
  您可以使用報表項目的可見性屬性，來顯示和隱藏報表中的項目。 在如資料表的資料區域中，您可以根據運算式中的值一開始便隱藏詳細資料列。  
@@ -485,7 +485,7 @@ ms.lasthandoff: 06/22/2017
     ="http://adventure-works/MyInfo?ID=" & Fields!EmployeeID.Value  
     ```  
   
-     如需詳細資訊，請參閱[將超連結加入 URL &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-a-hyperlink-to-a-url-report-builder-and-ssrs.md)。  
+     如需詳細資訊，請參閱[將超連結加入至 URL &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/add-a-hyperlink-to-a-url-report-builder-and-ssrs.md).  
   
 -   下列運算式會條件式地控制是否要在文字方塊中加入 URL。 這個運算式會根據名為 `IncludeURLs` 的參數，讓使用者決定是否要在報表中包含作用中的 URL。 這個運算式會設定為文字方塊的動作。 透過將參數設定為 False，然後再檢視報表，您可以將報表匯出為沒有超連結的 Microsoft Excel 格式。  
   
@@ -518,7 +518,7 @@ ms.lasthandoff: 06/22/2017
     ```  
   
 ##  <a name="CustomCode"></a> 自訂程式碼  
- 您可以在報表中使用自訂程式碼， 自訂程式碼會內嵌在報表中，或是儲存在用於報表的自訂組件中。 如需自訂程式碼的詳細資訊，請參閱[報表設計師中運算式的自訂程式碼及組件參考 &#40;SSRS&#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)。  
+ 您可以在報表中使用自訂程式碼， 自訂程式碼會內嵌在報表中，或是儲存在用於報表的自訂組件中。 如需有關自訂程式碼的詳細資訊，請參閱[自訂程式碼和報表設計工具 &#40; 中的運算式中的組件參考SSRS &#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md).  
   
 ### <a name="using-group-variables-for-custom-aggregation"></a>使用群組變數進行自訂彙總  
  您可以初始化特定群組範圍本機之群組變數的值，然後在運算式中加入該變數的參考。 搭配自訂程式碼使用群組變數的其中一種方式是實作自訂彙總。 如需詳細資訊，請參閱 [在 Reporting Services 2008 中使用群組變數進行自訂彙總](http://go.microsoft.com/fwlink/?LinkId=128714)。  
@@ -560,9 +560,9 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>請參閱＜  
  [篩選方程式範例 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)   
- [群組運算式範例 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)   
- [報表中的運算式用法 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
- [運算式 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
+ [群組運算式範例 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)   
+ [報表 &#40; 中的運算式用法報表產生器及 SSRS &#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [運算式 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [常用的篩選 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/commonly-used-filters-report-builder-and-ssrs.md)  
   
   

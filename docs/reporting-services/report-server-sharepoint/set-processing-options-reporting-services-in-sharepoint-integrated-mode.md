@@ -18,11 +18,11 @@ caps.latest.revision: 15
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8f2a5c52f4fa9b04026490c1e66243bf0d660c13
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="set-processing-options-reporting-services-in-sharepoint-integrated-mode"></a>設定處理選項 (SharePoint 整合模式的 Reporting Services)
@@ -35,13 +35,13 @@ ms.lasthandoff: 06/22/2017
 -   報表記錄是之前所執行之報表副本的集合。 您可以使用報表記錄，以維護報表經過一段時間的記錄。 報表記錄不適用於包含機密或個人資料的報表。 因此，報表記錄只能包括使用一組認證 (預存認證或用於自動執行報表的認證) 來查詢資料來源的報表，此種認證是所有執行報表的使用者皆可使用的。  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 使用 SharePoint 的簽出和簽入內容管理功能來儲存 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 內容類型的更新。 這包括建立報表快照集。 因此，如果您已經在文件庫上啟用版本控制，您將看到新報表記錄快照集建立時更新的報表版本。 這是更新快照集的副作用。 當快照集更新時，它會使報表的 LastExecution 屬性變更，因此造成報表版本變更。  
+    >  與 SharePoint 整合的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 使用 SharePoint 的簽出和簽入內容管理功能來儲存 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 內容類型的更新。 這包括建立報表快照集。 因此，如果您已經在文件庫上啟用版本控制，您將看到新報表記錄快照集建立時更新的報表版本。 這是更新快照集的副作用。 當快照集更新時，它會使報表的 LastExecution 屬性變更，因此造成報表版本變更。  
   
 -   您可以指定逾時值，以便設定系統資源的使用限制。  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式|  
   
  **本主題內容：**  
   
@@ -111,7 +111,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>請參閱＜  
  [設定報表處理屬性](../../reporting-services/report-server/set-report-processing-properties.md)   
- [快取報表 &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md)   
- [設定報表和共用資料集處理的逾時值 &#40;SSRS&#41;](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)  
+ [快取報表 &#40;SSRS &#41;](../../reporting-services/report-server/caching-reports-ssrs.md)   
+ [設定報表和共用資料集處理 &#40; 逾時值SSRS &#41;](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)  
   
   

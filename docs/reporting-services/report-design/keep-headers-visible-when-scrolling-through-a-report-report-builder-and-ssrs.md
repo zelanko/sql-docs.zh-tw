@@ -15,11 +15,11 @@ caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f2fac57fe0e898a1ccbfbe33fb271eae76da1389
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs"></a>在報表中捲動時將標頭保持可見 (報表產生器及 SSRS)
@@ -27,7 +27,7 @@ ms.lasthandoff: 06/22/2017
   
  如何控制資料列和資料行取決於您擁有資料表還是矩陣。 如果您有資料表，請設定靜態成員 (資料列和資料行標題) 來維持可見度。 如果您有矩陣，請設定資料列和資料行群組標頭來維持可見度。  
   
- 如果您將報表匯出到 Excel，標頭將不會自動凍結。 您可以在 Excel 中凍結窗格。 如需詳細資訊，請參閱[匯出至 Microsoft Excel &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)的**頁首和頁尾**小節。  
+ 如果您將報表匯出到 Excel，標頭將不會自動凍結。 您可以在 Excel 中凍結窗格。 如需詳細資訊，請參閱**頁首和頁尾**區段[匯出至 Microsoft Excel &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  即使資料表包含資料列和資料行群組，您還是無法在捲動時維持這些群組標頭的可見度  
@@ -75,10 +75,10 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>請參閱＜  
  [Tablix 資料區 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   
- [尋找、檢視和管理報表 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [尋找、 檢視和管理報表 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [匯出報表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
- [與群組一起顯示頁首和頁尾 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)   
- [在多個頁面上顯示資料列和資料行標頭 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md)   
- [群組窗格 &#40;報表產生器&#41;](../../reporting-services/report-design/grouping-pane-report-builder.md)  
+ [顯示頁首和頁尾與群組 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)   
+ [顯示資料列和資料行標頭上多個頁面 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md)   
+ [群組 窗格 &#40;報表產生器 &#41;](../../reporting-services/report-design/grouping-pane-report-builder.md)  
   
   

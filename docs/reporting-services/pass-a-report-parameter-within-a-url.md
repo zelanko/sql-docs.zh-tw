@@ -18,11 +18,11 @@ caps.latest.revision: 36
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e3b076b74a6082e34dc9c489c0383fd6a5c3bd4f
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="pass-a-report-parameter-within-a-url"></a>在 URL 內傳遞報表參數
@@ -111,7 +111,7 @@ http://myserver/ReportServer/Pages/ReportViewer.aspx?%2fProduct_and_Sales_Report
 ```  
   
 ## <a name="see-also"></a>請參閱＜  
- [URL 存取 &#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)   
+ [URL 存取 &#40;SSRS &#41;](../reporting-services/url-access-ssrs.md)   
  [URL 存取參數參考](../reporting-services/url-access-parameter-reference.md)  
   
   

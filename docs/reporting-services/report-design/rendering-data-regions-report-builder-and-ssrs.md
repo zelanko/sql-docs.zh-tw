@@ -15,11 +15,11 @@ caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 99ca6c9509f25c118931ccab981987b3427e4b2d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="rendering-data-regions-report-builder-and-ssrs"></a>轉譯資料區 (報表產生器及 SSRS)
@@ -40,7 +40,7 @@ ms.lasthandoff: 06/22/2017
  群組的邏輯分頁符號則不會使外部群組標頭分頁。 例如，假設您的報表有一個國家 (地區) 的外部群組，以及一個國家地區的內部群組。 如果在國家地區群組的執行個體之間有邏輯分頁符號，則外部群組 (也就是國家 (地區)) 將會同時出現在報表的兩個頁面上。  
   
 #### <a name="repeated-tablix-headers"></a>重複的 Tablix 標頭  
- 在 [屬性] 窗格中設定 RepeatWith 屬性時，在資料區中沒有變更的項目 (例如資料行標頭) 在轉譯部分資料區的每個頁面上會重複。 例如，如果資料的資料列出現在下一個頁面上，而且有設定 [重複] 屬性，資料行標頭就也會出現在轉譯的頁面上。  
+ 當 RepeatWith 屬性設定**屬性**其中一部分資料區域會轉譯每個頁面上重複窗格中，不會在資料區域中，資料行標頭，例如變更的項目。 例如，如果資料的資料列出現在下一個頁面上，而且有設定 [重複] 屬性，資料行標頭就也會出現在轉譯的頁面上。  
   
 ### <a name="tablix-corner"></a>Tablix 邊角  
  左上角稱為 Tablix 邊角。 Tablix 邊角可以包含其中的其他報表項目，但是，如果有將邏輯分頁符號插入到邊角中，系統在轉譯 Tablix 資料區時，則會忽略這些項目。  
@@ -52,12 +52,12 @@ ms.lasthandoff: 06/22/2017
  當系統轉譯圖表、量測計以及對應資料區域並顯示在報表主體中時，其行為如同影像。 資料區域內的值可以擁有相關聯的動作 (例如，連結到其他報表或移至書籤)，而且，如果轉譯器有提供支援，也可以轉譯這些動作。  
   
 ## <a name="see-also"></a>請參閱＜  
- [Reporting Services 中的分頁 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [轉譯行為 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [不同報表轉譯延伸模組的互動式功能 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
- [轉譯報表項目 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
- [資料表、矩陣和清單 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [圖表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [量測計 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  
+ [Reporting Services &#40; 中的分頁報表產生器及 SSRS &#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [轉譯行為 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [不同報表轉譯延伸模組 &#40; 的互動式功能報表產生器及 SSRS &#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [轉譯報表項目 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
+ [資料表、 矩陣和清單 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
+ [圖表 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [量測計 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  
   
   

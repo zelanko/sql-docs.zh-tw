@@ -15,11 +15,11 @@ caps.latest.revision: 19
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 69c0ea4110b678e9bffa959992d48f2c28df5897
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="plan-for-report-design-and-report-deployment--reporting-services"></a>規劃報表設計與報表部署 | Reporting Services
@@ -73,7 +73,7 @@ ms.lasthandoff: 06/22/2017
   
  當您將報表定義上傳至報表伺服器，或升級包含現有報表的報表伺服器時，報表伺服器會以原始格式保留報表定義。 **第一次使用時**，報表伺服器會將報表伺服器資料庫中的報表升級為二進位格式，而這個格式在後續檢視時都會保留著。 報表定義 (.rdl) 本身不會升級。  
   
- 您可以從報表伺服器擷取報表定義檔案 (.rdl) 的唯讀複本。 在原生模式報表伺服器上，瀏覽至[!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]，然後選取報表並按一下 [下載]。 在 SharePoint 模式部署中，瀏覽至文件庫，然後選取報表並按一下 **[下載複本]**。  
+ 您可以從報表伺服器擷取報表定義檔案 (.rdl) 的唯讀複本。 原生模式報表伺服器上，瀏覽至[!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]、 選取報表，然後按一下 **下載**。 在 SharePoint 模式部署中，瀏覽至文件庫，然後選取報表並按一下 **[下載複本]**。  
   
  若要升級報表定義，您必須在報表撰寫環境 (例如 SQL Server Data Tools 或報表產生器) 下開啟報表，然後儲存報表。  
   
@@ -117,7 +117,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>請參閱＜  
  [報表、報表組件和報表定義 &#40;報表產生器及 SSRS&#41;](../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
  [Reporting Services 工具](../reporting-services/tools/reporting-services-tools.md)   
- [報表定義語言 &#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
+ [報表定義語言 &#40;SSRS &#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
   
   
 

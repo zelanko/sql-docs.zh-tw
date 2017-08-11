@@ -21,11 +21,11 @@ caps.latest.revision: 37
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ff14ec3cc15847f7285690869ec9544f01d57708
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="role-assignments"></a>角色指派
@@ -41,7 +41,7 @@ ms.lasthandoff: 06/22/2017
   
  下圖描述將一個群組和一個特定使用者對應至資料夾 B 之 **發行者** 角色的角色指派。  
   
- ![角色指派圖表](../../reporting-services/security/media/report-securityarch.gif "Role assignments diagram")  
+ ![角色指派圖表](../../reporting-services/security/media/report-securityarch.gif "角色指派圖表")  
 角色指派圖表  
   
 ## <a name="system-level-and-item-level-role-assignments"></a>系統層級與項目層級角色指派  
@@ -66,10 +66,10 @@ ms.lasthandoff: 06/22/2017
  如需提供預設安全性之預先定義角色指派的詳細資訊，請參閱 [預先定義的角色](../../reporting-services/security/role-definitions-predefined-roles.md)。  
   
 ## <a name="see-also"></a>請參閱＜  
- [建立、刪除或修改角色 &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
- [將報表伺服器的存取權授與使用者 &#40;報表管理員&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
- [修改或刪除角色指派 &#40;報表管理員&#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)   
- [設定 SharePoint 網站上報表伺服器項目的權限 &#40;SharePoint 整合模式的 Reporting Services&#41;](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
- [在原生模式報表伺服器上授與權限](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
+ [建立、 刪除或修改角色 &#40;Management Studio &#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
+ [授與使用者存取報表伺服器 &#40;報表管理員 &#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
+ [修改或刪除角色指派 &#40;報表管理員 &#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)   
+ [設定報表伺服器項目的權限在 SharePoint 網站 &#40;Reporting Services SharePoint 整合模式 &#41;](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
+ [授與原生模式報表伺服器上的權限](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   
   

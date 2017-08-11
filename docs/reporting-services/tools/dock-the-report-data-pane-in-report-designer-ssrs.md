@@ -17,11 +17,11 @@ caps.latest.revision: 17
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 69b608f7c673ccd05826c32c173d5cde014937a3
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="dock-the-report-data-pane-in-report-designer-ssrs"></a>停駐報表設計師中的報表資料窗格 (SSRS)
@@ -29,7 +29,7 @@ ms.lasthandoff: 06/22/2017
   
 ### <a name="to-display-the-report-data-pane"></a>顯示報表資料窗格  
   
--   在 [設計] 檢視上，選取 [檢視] 功能表上的 [報表資料]。
+-   在設計檢視上**檢視**功能表上，選取**報表資料**，或使用 CTRL + ALT + D。
   
 ### <a name="to-dock-the-report-data-pane"></a>停駐報表資料窗格  
   
@@ -39,17 +39,17 @@ ms.lasthandoff: 06/22/2017
   
 ### <a name="to-change-the-report-data-pane-from-a-docked-window-to-a-tabbed-window"></a>將報表資料窗格從停駐視窗變更為索引標籤式視窗  
   
--   以滑鼠右鍵按一下 [報表資料] 窗格的標題列，然後按一下 [停駐成為索引標籤式文件]。  
+-   以滑鼠右鍵按一下 報表資料 窗格的標題列，然後按一下 **停駐成為索引標籤式文件**。  
   
 ### <a name="to-change-the-report-data-pane-from-a-tabbed-window-to-a-docked-window"></a>將報表資料窗格從索引標籤式視窗變更為停駐視窗  
   
--   以滑鼠右鍵按一下 [報表資料] 索引標籤，然後按一下 [停駐]。  
+-   以滑鼠右鍵按一下 報表資料 索引標籤，然後按一下 **停駐**。  
   
      若要在最近的兩個顯示狀態之間切換，請按兩下 [報表資料] 窗格的標題列。  
   
 ## <a name="see-also"></a>請參閱＜  
  [報表資料窗格](../../reporting-services/report-data/report-data-pane.md)   
- [資料連接、資料來源及連接字串 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
+ [資料連接、資料來源及連接字串 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
   
   
 

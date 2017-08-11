@@ -23,11 +23,11 @@ caps.latest.revision: 40
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c1e2822182d644b90aa419986f75a6fdc6fd3296
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="tasks-and-permissions"></a>工作和權限
@@ -37,7 +37,7 @@ ms.lasthandoff: 06/22/2017
   
  唯有工作屬於角色的一部份，而該角色包含在角色指派中時，才能執行工作。 因此，角色中若未包含檢視模型工作，或該角色未包含在角色指派中，使用者就無法檢視報表模型。 下列圖表顯示如何將權限結合到工作中，以及如何將工作結合到可用於特定角色指派的角色中。  
   
- ![權限和工作圖表](../../reporting-services/security/media/report-securityobjects.gif "Permissions and task diagram")  
+ ![權限和工作圖表](../../reporting-services/security/media/report-securityobjects.gif "權限和工作圖表")  
 權限和工作圖表  
   
 ## <a name="system-and-item-level-tasks"></a>系統和項目層級工作  
@@ -50,7 +50,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>請參閱＜  
  [角色定義](../../reporting-services/security/role-definitions.md)   
- [Predefined Roles](../../reporting-services/security/role-definitions-predefined-roles.md)   
- [在原生模式報表伺服器上授與權限](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
+ [預先定義的角色](../../reporting-services/security/role-definitions-predefined-roles.md)   
+ [授與原生模式報表伺服器上的權限](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   
   

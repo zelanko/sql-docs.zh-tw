@@ -15,11 +15,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: cfa69eca6201980d4449c28a8a7018846fd4e4a0
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="built-in-collections---reportitems-collection-references-report-builder"></a>內建集合-ReportItems 集合參考 （報表產生器）
@@ -33,15 +33,15 @@ ms.lasthandoff: 06/22/2017
   
  例如：  
   
--   這個置於文字方塊中的運算式會顯示名為 `Textbox1` 之 **ReportItem** 文字方塊的值：  
+-   這個置於文字方塊中的運算式會顯示名為 **之** ReportItem `Textbox1`文字方塊的值：  
   
      `=ReportItems!Textbox1.Value`  
   
--   這個放在 **ReportItem** 文字方塊 Color 屬性中的運算式，會在值 > 0 時以黑色顯示文字，否則會以紅色文字顯示值：  
+-   這個運算式中，置於**ReportItem**色彩屬性的文字方塊會顯示以黑色文字的值時 > 0; 否則值會以紅色顯示：  
   
      `=IIF(Me.Value > 0,"Black","Red")`  
   
--   這個放在頁首或頁尾之文字方塊中的運算式，會為名為 `LastName` 的文字方塊顯示已轉譯報表之每一頁的第一個值：  
+-   這個放在頁首或頁尾之文字方塊中的運算式，會為名為 `LastName`的文字方塊顯示已轉譯報表之每一頁的第一個值：  
   
      `=First(ReportItems("LastName").Value)`  
   
@@ -56,9 +56,9 @@ ms.lasthandoff: 06/22/2017
  例如，在父群組的資料列內的文字方塊所包含的運算式，不得參考子群組資料列中的文字方塊的名稱。 此類運算式不會解析為報表中的值，因為子資料列文字方塊超出範圍。 如需詳細資訊，請參閱[彙總函式參考 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [運算式中的內建集合 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)   
- [運算式範例 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
- [Reporting Services 中的分頁 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [篩選、分組和排序資料 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
+ [運算式 &#40; 中的內建集合報表產生器及 SSRS &#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)   
+ [運算式範例 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
+ [Reporting Services &#40; 中的分頁報表產生器及 SSRS &#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [篩選、 群組和排序資料 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
   

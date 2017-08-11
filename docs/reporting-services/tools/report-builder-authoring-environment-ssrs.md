@@ -15,11 +15,11 @@ caps.latest.revision: 13
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 03a8fc7800821a235076b5652506c2247db1226f
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="report-builder-authoring-environment-ssrs"></a>報表產生器撰寫環境 (SSRS)
@@ -52,8 +52,8 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>請參閱＜  
  [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md)   
- [設定報表產生器的存取](../../reporting-services/report-server/configure-report-builder-access.md)   
+ [設定報表產生器存取](../../reporting-services/report-server/configure-report-builder-access.md)   
  [Reporting Services 工具](../../reporting-services/tools/reporting-services-tools.md)   
- [使用報表設計師設計報表 &#40;SSRS&#41;](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md)  
+ [設計使用報表設計師報表 &#40;SSRS &#41;](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md)  
   
   

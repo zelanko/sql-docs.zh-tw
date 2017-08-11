@@ -15,11 +15,11 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: ff834d00c915ae81179ff9b0bebed19e7c9ec6c1
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="built-in-collections-in-expressions-report-builder"></a>Built-in Collections in Expressions （報表產生器）
@@ -38,7 +38,7 @@ ms.lasthandoff: 06/22/2017
 |**Globals**|內建欄位|`=Globals.ReportName`<br /><br /> `- or -`<br /><br /> `=Globals.PageNumber`|代表對報表很有用的全域變數，例如：報表名稱或頁碼。 永遠可以使用。<br /><br /> 如需詳細資訊，請參閱[內建的全域和使用者參考 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md)。|  
 |**使用者**|內建欄位|`=User.UserID`<br /><br /> - 或 -<br /><br /> `=User.Language`|代表有關執行報表之使用者的資料集合，例如，語言設定或使用者識別碼。 永遠可以使用。<br /><br /> 如需詳細資訊，請參閱[內建的全域和使用者參考 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md)。|  
 |**參數**|參數|`=Parameters("ReportMonth").Value`<br /><br /> - 或 -<br /><br /> `=Parameters!ReportYear.Value`|代表報表參數的集合，每個參數都可以是單一值或多重值。 處理初始化完成後才可以使用。 如需詳細資訊，請參閱[參數集合參考 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md)。|  
-|**Fields(** *\<Dataset>* **)**|欄位|`=Fields!Sales.Value`|代表可供報表使用之資料集的欄位集合。 可在從資料來源將資料擷取至資料集之後使用。 如需詳細資訊，請參閱[資料集欄位集合參考 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/built-in-collections-dataset-fields-collection-references-report-builder.md)。|  
+|**欄位 (** *\<資料集 >* **)**|欄位|`=Fields!Sales.Value`|代表可供報表使用之資料集的欄位集合。 可在從資料來源將資料擷取至資料集之後使用。 如需詳細資訊，請參閱[資料集欄位集合參考 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/built-in-collections-dataset-fields-collection-references-report-builder.md)。|  
 |**資料集**|不顯示|`=DataSets("TopEmployees").CommandText`|代表從報表定義的主體所參考的資料集集合。 不包含只用於頁首或頁尾的資料來源。 不適用於本機預覽。 如需詳細資訊，請參閱 [DataSources 和 DataSets 集合參考 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/built-in-collections-datasources-and-datasets-references-report-builder.md)。|  
 |**DataSources**|不顯示|`=DataSources("AdventureWorks2012").Type`|代表從報表主體內所參考的資料來源集合。 不包含只用於頁首或頁尾的資料來源。 不適用於本機預覽。 如需詳細資訊，請參閱 [DataSources 和 DataSets 集合參考 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/built-in-collections-datasources-and-datasets-references-report-builder.md)。|  
 |**變數**|`Variables`|`=Variables!CustomTimeStamp.Value`|代表報表變數和群組變數的集合。 如需詳細資訊，請參閱[報表和群組變數集合參考 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/built-in-collections-report-and-group-variables-references-report-builder.md)。|  
@@ -56,7 +56,7 @@ ms.lasthandoff: 06/22/2017
 |*Collection.Member*|`=User.Language`|  
   
 ## <a name="see-also"></a>請參閱＜  
- [加入運算式 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md)   
- [運算式範例 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
+ [加入運算式 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md)   
+ [運算式範例 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
   
   

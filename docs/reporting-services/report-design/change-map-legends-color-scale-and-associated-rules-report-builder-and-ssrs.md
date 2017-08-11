@@ -38,11 +38,11 @@ caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: aee605482e4de390b545f63ac96bfc123cee568a
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs"></a>變更地圖圖例、色階與相關的規則 (報表產生器及 SSRS)
@@ -79,7 +79,7 @@ ms.lasthandoff: 08/03/2017
   
 1.  在 [設計] 檢視中，以滑鼠右鍵按一下圖例，然後開啟 [圖例屬性] 頁面。  
   
-2.  在 [圖例配置] 中，按一下您要用於圖例的表格版面配置。 當您按一下不同的選項時，設計介面上的配置就會變更。  
+2.  在 [圖例配置] 中，按一下您要用於圖例的資料表配置。 當您按一下不同的選項時，設計介面上的配置就會變更。  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -100,7 +100,7 @@ ms.lasthandoff: 08/03/2017
   
 #### <a name="to-create-a-new-legend"></a>建立新的圖例  
   
--   在 [設計] 檢視中，以滑鼠右鍵按一下地圖檢視區外的地圖，然後按一下 [新增圖例]。  
+-   在 [設計] 檢視中，以滑鼠右鍵按一下地圖檢視區外的地圖，然後按一下 [加入圖例]。  
   
      新的圖例會出現在地圖上。  
   
@@ -142,7 +142,7 @@ ms.lasthandoff: 08/03/2017
   
      此選項會使用內建調色盤或您指定的自訂調色盤。 系統會根據相關的分析資料，從調色盤指派一個不同的色彩或色彩陰影給每個地圖元素。  
   
-4.  在 [資料欄位] 中，鍵入包含您要依色彩視覺化之分析資料的欄位名稱。  
+4.  在 [資料欄位] 中，輸入包含您要依色彩視覺化之分析資料的欄位名稱。  
   
 5.  在 [調色盤] 的下拉式清單中，選取要使用的調色盤名稱。  
   
@@ -160,7 +160,7 @@ ms.lasthandoff: 08/03/2017
   
      此選項結合您在此頁面上指定的開始色彩、中間色彩與結束色彩，以及您在 [分佈] 頁面上指定的選項，將相關的分析資料分成多個範圍。 報表處理器會根據其相關的資料與所在範圍，指派適當的色彩給每個地圖元素。  
   
-4.  在 [資料欄位] 中，鍵入包含您要依色彩視覺化之分析資料的欄位名稱。  
+4.  在 [資料欄位] 中，輸入包含您要依色彩視覺化之分析資料的欄位名稱。  
   
 5.  在 [開始色彩] 中，指定要用於最低範圍的色彩。  
   
@@ -182,7 +182,7 @@ ms.lasthandoff: 08/03/2017
   
      此選項會使用您指定之色彩的清單。 系統會根據相關的分析資料，從清單指派一個色彩給每個地圖元素。 如果地圖元素多於色彩，則不會指派任何色彩。  
   
-4.  在 [資料欄位] 中，鍵入包含您要依色彩視覺化之分析資料的欄位名稱。  
+4.  在 [資料欄位] 中，輸入包含您要依色彩視覺化之分析資料的欄位名稱。  
   
 5.  在 [自訂色彩] 中按一下 [加入]，指定每一個自訂色彩。  
   
@@ -212,11 +212,11 @@ ms.lasthandoff: 08/03/2017
   
      如需分佈選項的詳細資訊，請參閱[使用規則與分析資料更改多邊形、線條與點顯示 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)。  
   
-6.  在 [子範圍的數目] 中，鍵入要使用的子範圍數目。 當分佈類型為 [最佳] 時，會自動計算子範圍的數目。  
+6.  在 [子範圍的數目] 中，輸入要使用的子範圍數目。 分佈類型為 [最佳] 時，會自動計算子範圍的數目。  
   
-7.  在 [範圍開始] 中，鍵入最小範圍值。 小於此數字的所有值都與範圍最小值相同。  
+7.  在 [範圍開始] 中，輸入最小範圍值。 小於此數字的所有值都與範圍最小值相同。  
   
-8.  在 [範圍結束] 中，鍵入最大範圍值。 大於此數字的所有值都與範圍最大值相同。  
+8.  在 [範圍結束] 中，輸入最大範圍值。 大於此數字的所有值都與範圍最大值相同。  
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -233,7 +233,7 @@ ms.lasthandoff: 08/03/2017
 4.  在 [資料欄位] 中，確認已選取您要在圖層上視覺化的分析資料。  
   
     > [!NOTE]  
-    >  如果下拉式清單中沒有顯示任何欄位，請以滑鼠右鍵按一下圖層，然後按一下 [圖層資料] 來開啟 [地圖圖層資料屬性] 對話方塊的 [分析資料] 頁面，並驗證您已經指定此圖層的分析資料。  
+    >  如果下拉式清單中沒有顯示任何欄位，請以滑鼠右鍵按一下圖層，然後按一下 [圖層資料] 來開啟 [地圖圖層資料屬性] 對話方塊的 [分析資料] 頁面，並確認您已經指定此圖層的分析資料。  
   
 5.  按一下 **[圖例]**。  
   
@@ -254,7 +254,7 @@ ms.lasthandoff: 08/03/2017
 4.  在 [資料欄位] 中，確認已選取您要在圖層上視覺化的分析資料。  
   
     > [!NOTE]  
-    >  如果下拉式清單中沒有顯示任何欄位，請以滑鼠右鍵按一下圖層，然後按一下 [圖層資料] 來開啟 [地圖圖層資料屬性] 對話方塊的 [分析資料] 頁面，並驗證您已經指定此圖層的分析資料。  
+    >  如果下拉式清單中沒有顯示任何欄位，請以滑鼠右鍵按一下圖層，然後按一下 [圖層資料] 來開啟 [地圖圖層資料屬性] 對話方塊的 [分析資料] 頁面，並確認您已經指定此圖層的分析資料。  
   
 5.  按一下 **[圖例]**。  
   
@@ -285,15 +285,15 @@ ms.lasthandoff: 08/03/2017
   
 3.  按一下 **[圖例]**。  
   
-4.  [圖例文字] 會顯示關鍵字，這些關鍵字會指定出現在圖例中的資料。 使用地圖關鍵字和自訂格式，有助於控制圖例文字的格式。 例如，#FROMVALUE {C2} 會指定包含兩位小數位數的貨幣格式。 如需詳細資訊，請參閱 [使用規則與分析資料更改多邊形、線條與點顯示 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)。  
+4.  [圖例文字] 會顯示關鍵字，這些關鍵字會指定出現在圖例中的資料。 使用地圖關鍵字和自訂格式，有助於控制圖例文字的格式。 例如，#FROMVALUE {C2} 會指定包含兩位小數位數的貨幣格式。 如需詳細資訊，請參閱[使用規則與分析資料更改多邊形、線條與點顯示 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)。  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
- [地圖 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
- [新增、變更或刪除地圖或地圖圖層 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)   
- [自訂地圖或地圖圖層的資料和顯示 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   
- [報表疑難排解：地圖報表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
- [地圖精靈與地圖圖層精靈 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  
+ [對應 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
+ [加入、 變更或刪除地圖或地圖圖層 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)   
+ [自訂的資料和顯示的地圖或地圖圖層 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   
+ [報表疑難排解︰ 地圖報表 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
+ [地圖精靈和地圖圖層精靈 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  
   
   

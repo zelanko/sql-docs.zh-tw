@@ -15,11 +15,11 @@ caps.latest.revision: 7
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 9663bbf0c11ce1d41f02cc22027f2c69aa07b057
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="searching-for-reports-and-other-items-report-builder--and-ssrs"></a>搜尋報表和其他項目 (報表產生器及 SSRS)
@@ -38,9 +38,9 @@ ms.lasthandoff: 06/22/2017
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="see-also"></a>請參閱＜  
- [在報表管理員中尋找及檢視報表 &#40;報表產生器及 SSRS&#41;](https://msdn.microsoft.com/library/dd255286.aspx)   
- [使用我的報表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/using-my-reports-report-builder-and-ssrs.md)   
- [尋找、檢視和管理報表 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
- [開啟及關閉報表 &#40;報表管理員&#41;](../../reporting-services/reports/open-and-close-a-report-report-manager.md)  
+ [尋找及檢視報表在報表管理員 &#40;報表產生器及 SSRS &#41;](https://msdn.microsoft.com/library/dd255286.aspx)   
+ [使用 我的報表 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-builder/using-my-reports-report-builder-and-ssrs.md)   
+ [尋找、 檢視和管理報表 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [開啟和關閉報表 &#40;報表管理員 &#41;](../../reporting-services/reports/open-and-close-a-report-report-manager.md)  
   
   

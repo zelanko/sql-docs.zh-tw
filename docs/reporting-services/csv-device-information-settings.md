@@ -18,11 +18,11 @@ caps.latest.revision: 43
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b727303729744eaec3dfa8994249db7d404584c4
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="csv-device-information-settings"></a>CSV 裝置資訊設定
@@ -42,10 +42,10 @@ ms.lasthandoff: 06/22/2017
 |**SuppressLineBreaks**|指出是否從輸出中所含的資料移除分行符號。 預設值是 **false**秒。 如果值為 **true**，則 **FieldDelimiter**、 **RecordDelimiter**和 **Qualifier** 設定不能是空格字元。|  
 |**UseFormattedValues**|指出是否將格式字串放入 CSV 輸出。 **ExcelMode** 為 **true** 時，預設值是 **true**，否則為 **false**。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   
  [將裝置資訊設定傳遞至轉譯延伸模組](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
- [在 RSReportServer.Config 中自訂轉譯延伸模組參數](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
- [技術參考 &#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)  
+ [自訂轉譯延伸模組參數，在 RSReportServer.Config 中](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
+ [技術參考 &#40;SSRS &#41;](../reporting-services/technical-reference-ssrs.md)  
   
   

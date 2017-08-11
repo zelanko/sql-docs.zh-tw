@@ -20,11 +20,11 @@ caps.latest.revision: 44
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 890a94891df3bbae4e65b7733752f99ba458e3e8
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="role-definitions"></a>角色定義
@@ -34,7 +34,7 @@ ms.lasthandoff: 06/22/2017
  當角色用於角色指派時，角色才成為可以作業。 如需角色如何提供安全性的詳細資訊，請參閱 [角色指派](../../reporting-services/security/role-assignments.md)。  
   
 ## <a name="types-of-role-definitions"></a>角色定義的類型  
- 角色定義是項目層級或系統層級定義。 「項目層級角色定義」會描述與報表伺服器上儲存和管理之項目 (例如報表、資料夾和模型) 相關的工作。 管理報表、檢視資料夾和管理個別訂閱都是您可以包含在項目層級角色定義中的工作範例。 「系統角色定義」包含套用至整個站台的工作。 檢視報表伺服器屬性是您可能會包含在系統角色中的工作範例。  
+ 角色定義是項目層級或系統層級定義。 *項目層級角色定義*描述與所儲存和管理報表伺服器，例如報表、 資料夾和模型上的項目相關的工作。 管理報表、檢視資料夾和管理個別訂閱都是您可以包含在項目層級角色定義中的工作範例。 A*系統角色定義*包含套用至整個網站的工作。 檢視報表伺服器屬性是您可能會包含在系統角色中的工作範例。  
   
 ## <a name="predefined-roles"></a>Predefined Roles  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 包括一些對應至不同使用者互動層級的預先定義角色。 下列清單含有您可以使用的預先定義角色：  
@@ -61,10 +61,10 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>請參閱＜  
  [工作和權限](../../reporting-services/security/tasks-and-permissions.md)   
- [在原生模式報表伺服器上授與權限](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
- [建立、刪除或修改角色 &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
- [將報表伺服器的存取權授與使用者 &#40;報表管理員&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
- [修改或刪除角色指派 &#40;報表管理員&#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)   
+ [授與原生模式報表伺服器上的權限](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
+ [建立、 刪除或修改角色 &#40;Management Studio &#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
+ [授與使用者存取報表伺服器 &#40;報表管理員 &#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
+ [修改或刪除角色指派 &#40;報表管理員 &#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)   
  [設定 SharePoint 網站上報表伺服器項目的權限 &#40;SharePoint 整合模式的 Reporting Services&#41;](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)  
   
   

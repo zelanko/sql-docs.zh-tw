@@ -22,11 +22,11 @@ caps.latest.revision: 48
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8a101dd362ea9ec71a0d4e75347bea60171cd8d1
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="report-and-snapshot-size-limits"></a>報表和快照集的大小限制
@@ -86,7 +86,7 @@ EXEC sp_spaceused
   
 ## <a name="see-also"></a>請參閱＜  
  [設定報表處理屬性](../../reporting-services/report-server/set-report-processing-properties.md)   
- [報表伺服器資料庫 &#40;SSRS 原生模式&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
+ [報表伺服器資料庫 &#40;SSRS 原生模式 &#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
  [處理大型報表](../../reporting-services/report-server/process-large-reports.md)  
   
   

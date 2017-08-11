@@ -24,11 +24,11 @@ caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 186bb0bab4abac91ea95d397f379986cac9d2f0f
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="formatting-numbers-and-dates-report-builder-and-ssrs"></a>格式化數字和日期 (報表產生器及 SSRS)
@@ -38,7 +38,7 @@ ms.lasthandoff: 06/22/2017
   
  圖表資料區通常會顯示類別目錄 (x) 軸上的日期，以及值 (y) 軸上的值。 若要指定圖表中的格式，請以滑鼠右鍵按一下軸，然後選取 **[軸屬性]**。 在值軸上，您僅能指定數字的格式。 如需詳細資訊，請參閱[格式化圖表上的軸標籤 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)。  
   
- 若要指定量測計資料區中的格式，以滑鼠右鍵按一下量測計的標尺，然後選取 [星形標尺屬性] 或 [線性標尺屬性]。  
+ 若要指定量測計資料區中的格式，以滑鼠右鍵按一下量測計的標尺，然後選取 **[星形標尺屬性]** 或 **[線性標尺屬性]**。  
   
 > [!NOTE]  
 >  如果您想要使用的部分格式選項呈現灰色，這表示那些格式選項與資料來源中所設定之欄位的資料類型不相容。 例如，如果該欄位包含數值，但是欄位的資料類型為「字串」，則無法套用數值資料格式選項，例如貨幣或十進位。  
@@ -63,9 +63,9 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>請參閱＜  
  [格式化文字和預留位置 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
- [格式化線條、色彩和影像 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-lines-colors-and-images-report-builder-and-ssrs.md)   
- [格式化圖表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
- [將軸標籤格式化成日期或貨幣 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
- [格式化量測計上的標尺 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)  
+ [格式化線條、色彩和影像 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/formatting-lines-colors-and-images-report-builder-and-ssrs.md)   
+ [格式化圖表 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
+ [軸標籤格式化成日期或貨幣 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
+ [格式化量測計 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)  
   
   

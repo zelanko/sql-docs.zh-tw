@@ -18,11 +18,11 @@ caps.latest.revision: 28
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: bfadbdb617198fe04b789d0d1d6589f4af2d887f
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="configure-basic-authentication-on-the-report-server"></a>設定報表伺服器上的基本驗證
@@ -32,9 +32,9 @@ ms.lasthandoff: 06/22/2017
   
  在您啟用基本驗證之前，請確認您的安全性基礎結構有支援它。 使用基本驗證時，報表伺服器 Web 服務會將認證傳遞給本機安全性授權。 如果認證指定本機使用者帳戶，報表伺服器電腦上的本機安全性授權將會驗證這位使用者，而此使用者將會取得對於本機資源有效的安全性 Token。 網域使用者帳戶的認證會轉送給網域控制站，並由網域控制站加以驗證。 產生的票證對於網路資源而言是有效的。  
   
- 如果您希望在認證傳給網路中的網域控制站的過程中，能夠減低認證被攔截的風險，就需要通道加密，例如安全通訊端層 (SSL)。 基本驗證本身會使用純文字格式傳輸使用者名稱，並使用 base64 編碼方式傳輸密碼。 加入通道加密會讓封包無法讀取。 如需詳細資訊，請參閱[在原生模式報表伺服器上設定 SSL 連接](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)。  
+ 如果您希望在認證傳給網路中的網域控制站的過程中，能夠減低認證被攔截的風險，就需要通道加密，例如安全通訊端層 (SSL)。 基本驗證本身會使用純文字格式傳輸使用者名稱，並使用 base64 編碼方式傳輸密碼。 加入通道加密會讓封包無法讀取。 如需詳細資訊，請參閱 [在原生模式報表伺服器上設定 SSL 連接](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)。  
   
- 當您啟用基本驗證之後，請注意在使用者設定外部資料來源的連接屬性，而此資料來源會提供資料給報表時，就無法選取 [Windows 整合式安全性] 選項。 資料來源屬性頁上的這個選項將會呈現灰色。  
+ 啟用基本驗證之後，請注意，使用者就無法選取**Windows 整合式安全性**選項時將連接屬性設定為外部資料來源提供資料給報表。 資料來源屬性頁上的這個選項將會呈現灰色。  
   
 > [!NOTE]  
 >  下列指示用於原生模式報表伺服器。 如果您在 SharePoint 整合模式下部署報表伺服器，您必須使用可指定 Windows 整合式安全性的預設驗證設定。 報表伺服器會使用預設 Windows 驗證延伸模組中的內部功能來支援 SharePoint 整合模式下的報表伺服器。  

@@ -4,16 +4,16 @@ description: "本主題包含的版本資訊，並支援在 Linux 上執行的 S
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 08/02/2017
+ms.date: 08/07/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 ms.translationtype: MT
-ms.sourcegitcommit: b2f5d26757bd436cfd21076b2a4899376ee60c9f
-ms.openlocfilehash: 1907ef1ae99146fe7cdf2ca124af22aabdc29b35
+ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
+ms.openlocfilehash: baa5826e9722bfb23afacf729d80bebf88985ed3
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/04/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>在 Linux 上的 SQL Server 2017 的版本資訊
@@ -152,6 +152,8 @@ ms.lasthandoff: 08/04/2017
       sudo systemctl restart mssql-server
       ```
 
+- 在 Linux 上的 SQL Server 2017，無法還原使用記憶體內部 OLTP 的 Windows 上的 SQL Server 2014 資料庫。 若要還原使用記憶體內部 OLTP 的 SQL Server 2014 資料庫，先將資料庫升級到 SQL Server 2016 或 Windows 上的 SQL Server 2017 之前將其移至 SQL Server on Linux 透過備份/還原或卸離/附加。
+
 #### <a name="remote-database-files"></a>遠端資料庫檔案
 
 - 在此版本中不支援裝載於 NFS 伺服器上的資料庫檔案。 這包括使用 NFS 共用的磁碟容錯移轉叢集資料庫以及非叢集執行個體上。 我們正在研究如何啟用即將發行版本中的 NFS 伺服器支援。
@@ -267,6 +269,7 @@ ms.lasthandoff: 08/04/2017
 | &nbsp; | Stretch DB |
 | &nbsp; | Polybase |
 | &nbsp; | Distributed Query |
+| &nbsp; | 機器學習服務 |
 | &nbsp; | 系統擴充預存程序 （XP_CMDSHELL 等等） |
 | &nbsp; | Filetable |
 | &nbsp; | CLR 組件與 EXTERNAL_ACCESS 或 UNSAFE 權限設定 |
@@ -856,7 +859,7 @@ RC1 中叢集資源代理程式會設定虛擬伺服器名稱，在 Windows 上�
     - 異動資料擷取
 
 #### <a name="in-memory-oltp"></a>In-Memory OLTP
-- 記憶體內部 OLTP 資料庫只能建立 /var/opt/mssql 目錄中。 如需詳細資訊，請瀏覽[記憶體中 OLTP 主題](sql-server-linux-performance-get-started.md#use-in-memory-oltp)。  
+- 記憶體內部 OLTP 資料庫只能建立 /var/opt/mssql 目錄中。 如需詳細資訊，請瀏覽[記憶體中 OLTP 主題](sql-server-linux-performance-get-started.md#use-in-memory-oltp)。
 
 #### <a name="sqlpackage"></a>SqlPackage
 - 透過 SqlPackage 必須指定檔案的絕對路徑。 使用相對路徑會對應 」 / tmp/sqlpackage 下檔案。\<程式碼 \> /系統/system32"資料夾。 

@@ -22,11 +22,11 @@ caps.latest.revision: 43
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a337202cea263001fe810c91a607fa1746219bd6
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="use-an-external-data-source-for-subscriber-data-data-driven-subscription"></a>使用外部資料來源以取得訂閱者資料 (資料驅動訂閱)
@@ -53,7 +53,7 @@ ms.lasthandoff: 06/22/2017
   
 -   報表模型  
   
- 如果您有想要使用資料驅動訂閱中的自訂資料處理延伸模組，它必須實作<xref:Microsoft.ReportingServices.DataProcessing.IDbCommand>和<xref:Microsoft.ReportingServices.DataProcessing.IDataReader>介面。 該資料處理延伸模組必須支援僅限結構描述的查詢執行。 此查詢是用於在設計階段擷取資料行中繼資料，因此使用者可以將資料行對應至訂閱定義中的傳遞選項以及報表參數。 僅限結構描述的查詢執行會發生在使用者定義訂閱的初期階段。  
+ 如果您希望在資料驅動訂閱中使用自訂的資料處理延伸模組，則該延伸模組必須實作 <xref:Microsoft.ReportingServices.DataProcessing.IDbCommand> 和 <xref:Microsoft.ReportingServices.DataProcessing.IDataReader> 介面。 該資料處理延伸模組必須支援僅限結構描述的查詢執行。 此查詢是用於在設計階段擷取資料行中繼資料，因此使用者可以將資料行對應至訂閱定義中的傳遞選項以及報表參數。 僅限結構描述的查詢執行會發生在使用者定義訂閱的初期階段。  
   
 ## <a name="query-requirements"></a>查詢需求  
  當您建立擷取訂閱資料的查詢時，請牢記下列幾點：  
@@ -70,7 +70,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="passing-parameter-values-from-the-subscriber-database-to-the-report"></a>將參數值從訂閱者資料庫傳遞到報表  
  如果正在建立參數化報表的資料驅動訂閱，則可以使用可變個數參數值來自訂每份報表的輸出。 例如，訂閱者資料庫可能包含可用來篩選報表資料的員工識別碼、雇用日期、職稱和辦公室位置資訊。 如果報表接受以這些或其他可用的資料行資料為基礎的參數，您就可以將參數對應到適當的資料行。  
   
- 將訂閱者欄位對應至報表參數時，請確定資料類型與資料行長度相容。 如果資料類型不符合，訂閱處理期間會發生錯誤。 若要深入了解如何使用參數化報表中的訂閱者資料，請參閱[建立資料驅動訂閱 &#40;SSRS 教學課程&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)。  
+ 將訂閱者欄位對應至報表參數時，請確定資料類型與資料行長度相容。 如果資料類型不符合，訂閱處理期間會發生錯誤。 若要了解有關使用參數化報表中的訂閱者資料的詳細資訊，請參閱[建立資料驅動訂閱 &#40;SSRS 教學課程 &#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md).  
   
 ## <a name="modifying-the-subscriber-data-source"></a>修改訂閱者資料來源  
  下列對訂閱者資料來源的修改會妨礙訂閱執行：  
@@ -85,7 +85,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>請參閱＜  
  [建立、修改和刪除資料驅動訂閱](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md)   
- [Data-Driven Subscriptions](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
- [訂閱與傳遞 &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
+ [資料驅動訂閱](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
+ [訂閱和傳遞 &#40;Reporting Services &#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
   
   

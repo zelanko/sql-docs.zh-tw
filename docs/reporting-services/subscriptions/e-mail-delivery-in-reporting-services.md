@@ -19,11 +19,11 @@ caps.latest.revision: 45
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0498dfe642a927744c7a0b5c7cefb5803cb0d469
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>Reporting Services 中的電子郵件傳遞
@@ -35,7 +35,7 @@ ms.lasthandoff: 06/22/2017
   
 -   [建立及管理原生模式報表伺服器的訂閱](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)  
   
--   [建立和管理 SharePoint 模式報表伺服器的訂閱](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)  
+-   [建立及管理 SharePoint 模式報表伺服器的訂閱](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)  
   
 ||  
 |-|  
@@ -60,7 +60,7 @@ ms.lasthandoff: 06/22/2017
   
      [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 在傳送報表之前，不會檢查附加檔案或訊息的大小。 如果附加檔案或訊息超過郵件伺服器所允許的上限，將不會傳遞報表。 如果是大型報表，請選擇其他傳遞選項之一 (例如 URL 或通知)。  
   
- 您可以設定傳遞選項，來決定建立訂閱時如何傳遞報表。 例如，您若是在訂閱中選取 [包含連結]，則電子郵件訊息包含連結到報表的超連結。  
+ 您可以設定傳遞選項，來決定建立訂閱時如何傳遞報表。 例如，如果您選取**包含連結**訂用帳戶，在電子郵件訊息會包含報表的超連結。  
   
 ## <a name="native-mode-role-based-e-mail-settings"></a>原生模式角色型電子郵件設定  
  在原生模式報表伺服器環境中，您所使用的電子郵件傳遞設定會依您的角色包含的是「管理個別訂閱」工作或「管理所有訂閱」工作而異。  
@@ -80,7 +80,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="controlling-e-mail-delivery"></a>控制電子郵件傳遞  
  您可以設定報表伺服器，來限制只能散發電子郵件至特定主機網域。 例如，您可以防止原生報表伺服器將報表傳遞至 **RSReportServer.config** 組態檔中所列網域以外的所有網域。  
   
- 您也可以設定組態設定，以隱藏訂閱中的 [收件者] 欄位。 在此情況下，報表只會傳遞給定義訂閱的使用者。 然而，在報表傳送給使用者之後，您無法明確地防止其被轉送。  
+ 您也可以設定的組態設定，以隱藏**至**訂用帳戶中的欄位。 在此情況下，報表只會傳遞給定義訂閱的使用者。 然而，在報表傳送給使用者之後，您無法明確地防止其被轉送。  
   
  控制報表散發最有效的方式，是將報表伺服器設定為只傳送報表伺服器 URL。 報表伺服器使用 Windows 驗證和以角色為基礎的驗證模型，來控制對報表的存取。 如果使用者意外地透過電子郵件接收到未被授權檢視的報表，報表伺服器將不會顯示報表。 如需有關訂閱的詳細資訊，請參閱下方項目。  
   
@@ -96,7 +96,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>另請參閱  
  [工作和權限](../../reporting-services/security/tasks-and-permissions.md)   
- [訂閱與傳遞 &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
+ [訂閱和傳遞 &#40;Reporting Services &#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [資料驅動訂閱](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
  [角色指派](../../reporting-services/security/role-assignments.md)  
   

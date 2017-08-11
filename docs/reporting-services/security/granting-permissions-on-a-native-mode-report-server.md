@@ -27,18 +27,18 @@ caps.latest.revision: 60
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e587f50e041d42bb09d99fa03d4146216883fce6
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="granting-permissions-on-a-native-mode-report-server"></a>在原生模式報表伺服器上授與權限
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會使用以角色為基礎的授權和驗證子系統來決定能夠在報表伺服器上執行作業及存取項目的人員。 以角色為基礎的授權，將使用者或群組可以執行的動作集分類成角色。 驗證是以內建的 Windows 驗證或您提供的自訂驗證模組為基礎。 您可以使用預先定義或自訂的角色搭配任何一種驗證類型。  
   
 ## <a name="using-roles-to-grant-report-server-access"></a>使用角色來授與報表伺服器存取權  
- 所有使用者都會在定義特定存取層級的角色內容中與報表伺服器進行互動。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 包含了一些預先定義的角色，而且您可以將這些角色指派給使用者和群組，以便提供報表伺服器的立即存取權。 **ContentManager**、 **Publisher**和 **Browser** 是預先定義角色的範例。 每個角色都會定義相關工作的集合。 例如， **發行者** 擁有加入報表以及建立儲存這些報表之資料夾的權限。  
+ 所有使用者都會在定義特定存取層級的角色內容中與報表伺服器進行互動。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]包含預先定義的角色，您可以指派給使用者和群組，以便提供報表伺服器的立即存取。 **ContentManager**、 **Publisher**和 **Browser** 是預先定義角色的範例。 每個角色都會定義相關工作的集合。 例如， **發行者** 擁有加入報表以及建立儲存這些報表之資料夾的權限。  
   
  雖然角色指派通常是從父節點所繼承的，但是您也可以透過針對特定項目建立新的角色指派，中斷權限繼承。 屬於某份報表之 **內容管理員** 角色成員的使用者可能是另一份報表之 **瀏覽者** 角色的成員。  
   
@@ -58,7 +58,7 @@ ms.lasthandoff: 06/22/2017
 >  如果您設定報表伺服器在 SharePoint 整合模式中執行，您必須在 SharePoint 網站上設定權限，授與報表伺服器項目的存取權。 如需詳細資訊，請參閱 [授與 SharePoint 網站上報表伺服器項目的權限](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)。  
   
 ## <a name="who-sets-permissions"></a>誰設定權限  
- 一開始，只有屬於本機管理員群組成員的使用者可以存取報表伺服器。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 已安裝二個預設角色指派，其將項目層級及系統層級的存取權授與本機管理員群組的成員。 這些內建角色指派會將報表伺服器存取權授與其他使用者並管理報表伺服器項目。 您無法刪除內建的角色指派。 本機管理員一律擁有完全管理報表伺服器執行個體的權限。  
+ 一開始，只有屬於本機管理員群組成員的使用者可以存取報表伺服器。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]已安裝二個預設角色指派，其將項目層級及系統層級的存取權授與本機管理員群組的成員。 這些內建角色指派會將報表伺服器存取權授與其他使用者並管理報表伺服器項目。 您無法刪除內建的角色指派。 本機管理員一律擁有完全管理報表伺服器執行個體的權限。  
   
  由於報表伺服器的完整權限包括項目層級和系統層級的權限，因此本機管理員會被指派至下列角色：  
   
@@ -72,15 +72,15 @@ ms.lasthandoff: 06/22/2017
   
 |工具|工作|  
 |----------|-----------|  
-|Management Studio - 用於檢視、修改、建立和刪除角色定義。|[建立、刪除或修改角色 &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)|  
-|報表管理員 - 用於指派使用者和群組給角色。|[將報表伺服器的存取權授與使用者 &#40;報表管理員&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)<br /><br /> [修改或刪除角色指派 &#40;報表管理員&#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)|  
+|Management Studio - 用於檢視、修改、建立和刪除角色定義。|[建立、 刪除或修改角色 &#40;Management Studio &#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)|  
+|報表管理員 - 用於指派使用者和群組給角色。|[授與使用者存取報表伺服器 &#40;報表管理員 &#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)<br /><br /> [修改或刪除角色指派 &#40;報表管理員 &#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)|  
   
 ## <a name="see-also"></a>請參閱＜  
- [Predefined Roles](../../reporting-services/security/role-definitions-predefined-roles.md)   
- [授與 SharePoint 網站上報表伺服器項目的權限](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
- [使用報表伺服器驗證](../../reporting-services/security/authentication-with-the-report-server.md)   
- [建立和管理角色指派](../../reporting-services/security/create-and-manage-role-assignments.md)   
+ [預先定義的角色](../../reporting-services/security/role-definitions-predefined-roles.md)   
+ [授與權限在 SharePoint 網站上的報表伺服器項目](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
+ [報表伺服器驗證](../../reporting-services/security/authentication-with-the-report-server.md)   
+ [建立及管理角色指派](../../reporting-services/security/create-and-manage-role-assignments.md)   
  [Reporting Services 安全性與保護](../../reporting-services/security/reporting-services-security-and-protection.md)   
- [報表伺服器內容管理 &#40;SSRS 原生模式&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)  
+ [報表伺服器內容管理 &#40;SSRS 原生模式 &#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)  
   
   

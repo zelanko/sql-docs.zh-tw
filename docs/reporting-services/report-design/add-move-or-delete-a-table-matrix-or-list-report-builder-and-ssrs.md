@@ -15,11 +15,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 52df1c4404f761f58189e5bfc05e23359f053808
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs"></a>加入、移動或刪除資料表、矩陣或清單 (報表產生器及 SSRS)
@@ -31,7 +31,7 @@ ms.lasthandoff: 06/22/2017
   
 1.  在 **[插入]** 索引標籤上，按一下 **[資料表]** 或 **[矩陣]**，然後按一下 **[資料表精靈]** 或 **[矩陣精靈]**。  
   
-2.  遵循 [新增資料表] 或 [新增矩陣] 精靈中的步驟進行。  
+2.  請依照**新資料表**或**新矩陣**精靈。  
   
 3.  在 **[主資料夾]** 索引標籤上，按一下 **[執行]** 查看轉譯的報表。  
   
@@ -51,7 +51,7 @@ ms.lasthandoff: 06/22/2017
   
      隨即出現選取控點和八個調整大小的控點。  
   
-     若為巢狀資料區，請在巢狀資料區中按一下滑鼠右鍵、按一下 [選取]，然後選取您想要的報表項目。 若要確認哪一個報表項目已選取，請使用 [屬性] 窗格。 設計介面上選取的項目名稱會出現在 [屬性] 窗格的工具列中。  
+     巢狀的資料區，以滑鼠右鍵按一下巢狀的資料區域中，按一下**選取**，然後選取您想要的報表項目。 若要確認哪一個報表項目已選取，請使用 [屬性] 窗格。 設計介面上選取的項目名稱會出現在 [屬性] 窗格的工具列中。  
   
 ## <a name="to-move-a-data-region"></a>若要移動資料區  
   
@@ -63,10 +63,10 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="to-delete-a-data-region"></a>若要刪除資料區  
   
--   選取資料區，在資料區中按一下滑鼠右鍵，然後按一下 [刪除]。  
+-   選取的資料區，在資料區域中，按一下滑鼠右鍵，然後按一下**刪除**。  
   
 ## <a name="see-also"></a>另請參閱  
  [Tablix 資料區 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   
- [資料表、矩陣和清單 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [資料表、 矩陣和清單 &#40;報表產生器和 SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

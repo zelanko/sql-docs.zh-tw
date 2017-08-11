@@ -22,11 +22,11 @@ caps.latest.revision: 11
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7c902fc6195481ab6570612c5ac9012bba33ef79
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="indicators-report-builder-and-ssrs"></a>指標 (報表產生器及 SSRS)
@@ -94,7 +94,7 @@ ms.lasthandoff: 06/22/2017
 ##  <a name="UsingIndicatorsInTablesMatrices"></a> 在資料表和矩陣中使用指標  
  簡單的指標形狀使其適合在資料表和矩陣中使用。 指標即使很小，都仍然有效。 這讓它們在報表的詳細資料或群組資料列中都相當實用。  
   
- 下圖顯示包含使用方向性指標集合 ([四箭號 (彩色)]) 之資料表的報表來表示標尺。 報表中的指標圖示設定為使用藍色陰影來代替預設色彩：紅色、黃色和綠色。  
+ 下圖顯示具有方向性指標集合中，會使用一份報表**四個箭號 （彩色）**用以表示銷售量。 報表中的指標圖示設定為使用藍色陰影來代替預設色彩：紅色、黃色和綠色。  
   
  ![rs_IndicatorReportBlueArrows](../../reporting-services/report-design/media/rs-indicatorreportbluearrows.gif "rs_IndicatorReportBlueArrows")  
   
@@ -104,7 +104,7 @@ ms.lasthandoff: 06/22/2017
   
  根據預設，指標會設定為使用百分比做為度量單位，並自動偵測資料中的最小值與最大值。 指標集合中的每個圖示都有一個百分比範圍。 百分比範圍的數目取決於圖示集中的圖示數目，但範圍的大小和循序相同。 例如，如果圖示集有 5 個圖示，則有 5 個百分比範圍，每個大小各為 20%。 第一個從 0 開始並到 20 結束、第二個從 20 開始並到 40 結束，以此類推。 報表上的指標會使用指標集合中的圖示，該指標集合的百分比範圍落在指標資料值所在的範圍中。 您可以變更集合中每個圖示的百分比範圍。 最小值與最大值可以透過提供值或運算式來明確設定。 但您可以將度量單位變更為數值。 在此情況下，您不用指定資料的最小值或最大值。 不過，您只能針對每個圖示提供指標所使用的開始值與結束值。 如需詳細資訊，請參閱 [設定度量單位 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/set-and-configure-measurement-units-report-builder-and-ssrs.md)。  
   
- 指標會在指定的範圍內，跨指標資料值進行同步處理，藉以傳達資料值。 根據預設，此範圍是指標的父容器，例如，包含指標的資料表或矩陣。 您可以根據報表的版面配置選擇不同的範圍，來變更指標的同步處理。 指標可以省略同步處理。 如需詳細資訊，請參閱[設定同步處理範圍 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/set-synchronization-scope-report-builder-and-ssrs.md)。  
+ 指標會在指定的範圍內，跨指標資料值進行同步處理，藉以傳達資料值。 根據預設，此範圍是指標的父容器，例如，包含指標的資料表或矩陣。 您可以根據報表的版面配置選擇不同的範圍，來變更指標的同步處理。 指標可以省略同步處理。 如需詳細資訊，請參閱 [設定同步處理範圍 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/set-synchronization-scope-report-builder-and-ssrs.md)。  
   
  如需了解和設定報表內範圍的一般資訊，請參閱[總計、彙總與內建集合的運算式範圍 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)。  
   
@@ -113,7 +113,7 @@ ms.lasthandoff: 06/22/2017
 ##  <a name="SizingIndicatators"></a> 調整指標的大小，將視覺影響最大化  
  除了色彩、方向和形狀之外，您還可以使用大小，將指標的視覺影像最大化。 設想使用指標顯示客戶對於不同類型自行車之滿意度的報表。 根據客戶滿意度，指標所使用的圖示可以設定為不同的大小。 滿意度愈高，出現在報表中的圖示愈大。 下圖顯示自行車銷售的報告，而圖示的大小會反映銷售量。  
   
- 您可以根據指標所使用的欄位值，使用運算式來動態設定星星的大小。 如需詳細資訊，請參閱[使用運算式指定指標的大小 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs.md)。  
+ 您可以根據指標所使用的欄位值，使用運算式來動態設定星星的大小。 如需詳細資訊，請參閱 [使用運算式指定指標的大小 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs.md)。  
   
  若要深入了解撰寫與使用運算式，請參閱[運算式 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)。  
   
@@ -133,7 +133,7 @@ ms.lasthandoff: 06/22/2017
   
  無論使用百分比或數值狀態度量單位，都可能會發生這種狀況。 它比較可能發生於使用數值度量單位時，因為您為此度量提供特定值。 也比較可能發生於捨入報表資料值時，因為這傾向於使值較不離散。  
   
- 下列案例描述在 [三箭號 (彩色)] 方向指標中變更三個狀態的順序時，資料視覺效果如何受到影響。 依預設，此順序為：  
+ 下列案例描述當您變更這三個狀態中的順序時，如何影響資料視覺效果的資料**3 箭號 （彩色）**方向性指標。 依預設，此順序為：  
   
 1.  紅色向下箭頭  
   
@@ -143,7 +143,7 @@ ms.lasthandoff: 06/22/2017
   
  下列案例顯示四個不同的狀態順序及其值範圍，以及順序如何影響資料視覺效果。  
   
- 在這些案例中，[三箭號 (彩色)] 指標使用數值狀態度量。  
+ 在這些情況下， **3 箭號 （彩色）**指標使用數值狀態度量。  
   
 |狀態順序|開始值|結束值|  
 |--------------------|-----------------|---------------|  
@@ -186,7 +186,7 @@ ms.lasthandoff: 06/22/2017
   
 -   [變更指標圖示和指標集合 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)  
   
--   [設定度量單位 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/set-and-configure-measurement-units-report-builder-and-ssrs.md)  
+-   [設定和配置度量單位 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/set-and-configure-measurement-units-report-builder-and-ssrs.md)  
   
 -   [設定同步處理範圍 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/set-synchronization-scope-report-builder-and-ssrs.md)  
   
@@ -196,7 +196,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>請參閱＜  
  [量測計 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)   
- [走勢圖和資料橫條 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)   
- [圖表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
+ [走勢圖和資料橫條 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)   
+ [圖表 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
   
   

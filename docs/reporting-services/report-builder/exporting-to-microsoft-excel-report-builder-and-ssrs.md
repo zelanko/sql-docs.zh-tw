@@ -15,11 +15,11 @@ caps.latest.revision: 28
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 4f612dc69be670d6a99418fbf8e17f34fb8e9d7c
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>Exporting to Microsoft Excel (Report Builder and SSRS)
@@ -29,7 +29,7 @@ ms.lasthandoff: 06/22/2017
   
  您可以透過變更裝置資訊設定，變更此轉譯器的某些預設設定。 如需詳細資訊，請參閱 [Excel Device Information Settings](../../reporting-services/excel-device-information-settings.md)。  
   
- 如需如何匯出至 Excel 的詳細資訊，請參閱[匯出報表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)。  
+ 請參閱[匯出報表 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)的詳細資料匯出至 Excel。  
   
 > [!IMPORTANT]  
 >  當您將參數定義為 **String**類型時，使用者會看到一個可接受任何值的文字方塊。 如果報表參數未繫結至查詢參數且參數值未包含在報表中，報表使用者就可以輸入運算式語法、指令碼或 URL 到參數值中，將報表轉譯為 Excel。 如果另一個使用者接著檢視報表並按一下轉譯的參數內容，該使用者可能會不小心執行惡意指令碼或連結。  
@@ -148,7 +148,7 @@ ms.lasthandoff: 06/22/2017
   
 -   報表產生器處於中斷連接模式，而且您在報表產生器中預覽報表。 因為 RSReportServer 組態檔位於報表伺服器上，所以您從中匯出報表的工具或產品必須連接至報表伺服器，以便讀取組態檔。  
   
--   報表檢視器 Web 組件處於本機模式，而且 SharePoint 伺服陣列並未與 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器整合。 如需詳細資訊，請參閱[比較報表檢視器中的本機模式與連接模式報表 &#40;SharePoint 模式的 Reporting Services&#41;](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md)  
+-   報表檢視器 Web 組件處於本機模式，而且 SharePoint 伺服陣列並未與 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器整合。 如需詳細資訊，請參閱[本機模式與。連線模式報表 &#40;SharePoint 模式的 Reporting Services&#41;](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md)  
   
  如果 **[Excel 2003]** 功能表選項轉譯器設定為顯示，在下列案例中，您就可以同時使用 Excel 和 Excel 2003 選項：  
   
@@ -192,7 +192,7 @@ ms.lasthandoff: 06/22/2017
   
  圖表、走勢圖、資料橫條、地圖、量測計和指標都會匯出為圖片。 它們所描述的資料 (例如圖表的值和成員標籤) 都不會與它們一起匯出，而且除非該資料包含在報表內資料區的資料行或資料列中，否則也無法在 Excel 活頁簿中使用。  
   
- 如果您要處理圖表、走勢圖、資料橫條、地圖、量測計與指標資料，請將報表匯出為 .csv 檔，或從報表產生符合 Atom 的資料摘要。 如需詳細資訊，請參閱[匯出至 CSV 檔案 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md) 和[從多個報表產生資料摘要 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)。  
+ 如果您要處理圖表、走勢圖、資料橫條、地圖、量測計與指標資料，請將報表匯出為 .csv 檔，或從報表產生符合 Atom 的資料摘要。 如需詳細資訊，請參閱[匯出至 CSV 檔案 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md)和[報表 &#40; 從產生資料摘要報表產生器及 SSRS &#41;](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md).  
   
 ## <a name="page-sizing"></a>調整頁面大小  
  Excel 轉譯延伸模組會使用頁面高度與寬度設定來決定要在 Excel 工作表中定義的紙張設定。 Excel 會嘗試讓 PageHeight 和 PageWidth 屬性設定符合其中一個常用的紙張大小。  
@@ -226,7 +226,7 @@ ms.lasthandoff: 06/22/2017
  Excel 頁首和頁尾區段最多支援 256 個字元，包括標記。 如果超出這個限制，Excel 轉譯器會移除頁首和/或頁尾字串結尾的標記字元，以減少字元的總數。 如果移除所有標記字元後長度仍然超出最大值，系統會從右側開始截斷字串。  
   
 ### <a name="simplepageheader-settings"></a>SimplePageHeader 設定  
- 根據預設，裝置資訊的 SimplePageHeaders 設定會設定為 **False**；因此，在 Excel 工作表介面上，頁首會轉譯為報表中的資料列。 包含頁首的工作表資料列會變成鎖定的資料列。 您可以在 Excel 中凍結或取消凍結窗格。 如果有選取 [列印標題] 選項，這些頁首會自動設定為列印在每個工作表頁面上。  
+ 根據預設，裝置資訊的 SimplePageHeaders 設定會設定為 **False**；因此，在 Excel 工作表介面上，頁首會轉譯為報表中的資料列。 包含頁首的工作表資料列會變成鎖定的資料列。 您可以在 Excel 中凍結或取消凍結窗格。 如果**列印標題**選取選項，這些標頭會自動設定為每個工作表頁面上列印。  
   
  如果在 Excel 的 [頁面配置] 索引標籤上選取 **[列印標題]** 選項，頁首會在活頁簿的每個工作表頂端重複 (除了文件引導模式封面之外)。 如果沒有在 [報表頁首屬性] 或 [報表頁尾屬性] 對話方塊中選取 **[在第一頁列印]** 或 **[在最後一頁列印]** 選項，頁首就不會分別加入到第一頁或最後一頁。  
   
@@ -273,11 +273,11 @@ ms.lasthandoff: 06/22/2017
  如果報表必須轉譯為多種格式，但您無法建立依希望的方式轉譯成全部所需格式的單一報表配置，則您應可考慮使用內建的全域 RenderFormat 值，在執行階段依條件變更報表外觀。 如此可讓您根據用於獲得每一種格式最佳結果的轉譯器，隱藏或顯示報表項目。 如需詳細資訊，請參閱[內建的全域和使用者參考 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [Reporting Services 中的分頁 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [轉譯行為 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [不同報表轉譯延伸模組的互動式功能 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
- [轉譯報表項目 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
- [資料表、矩陣和清單 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [Reporting Services &#40; 中的分頁報表產生器及 SSRS &#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [轉譯行為 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [不同報表轉譯延伸模組 &#40; 的互動式功能報表產生器及 SSRS &#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [轉譯報表項目 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
+ [資料表、 矩陣和清單 &#40;報表產生器和 SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
 

@@ -15,11 +15,11 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c4b3521ce8485561df5fec6a9cd468732cfbc52b
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="bar-charts-report-builder-and-ssrs"></a>橫條圖 (報表產生器及 SSRS)
@@ -52,7 +52,7 @@ ms.lasthandoff: 06/22/2017
   
 -   橫條圖會從左到右顯示值，這在顯示與持續時間相關的資料時，可能會更為直覺式。  
   
--   如果您想要將橫條加入到報表內的資料表或矩陣，請考慮使用線性量測計來代替橫條圖。 線性量測計的設計為顯示一個值而非多個群組，因此在清單或資料表的資料區域內，更有使用上的彈性。 如需詳細資訊，請參閱[量測計 &#40;報表產生器及SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)。  
+-   如果您想要將橫條加入到報表內的資料表或矩陣，請考慮使用線性量測計來代替橫條圖。 線性量測計的設計為顯示一個值而非多個群組，因此在清單或資料表的資料區域內，更有使用上的彈性。 如需詳細資訊，請參閱 [量測計 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)。  
   
 -   您可以在橫條圖的個別直條上加入特殊的繪製樣式來增加其視覺效果。 繪製樣式包括楔形、浮凸、圓柱及深淺。 這些效果的設計可以改善平面圖表的外觀。 如果要使用立體圖表，您仍然可以套用繪製樣式，但是可能不會有相同的效果。 如需如何將繪製樣式加入橫條圖的詳細資訊，請參閱 [將斜面、浮凸與紋理樣式加入至圖表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md)。  
   
@@ -63,16 +63,16 @@ ms.lasthandoff: 06/22/2017
 -   如果資料集中有很多相對於圖表大小的資料點，則會縮減資料行或橫條的大小，以及資料行和橫條之間的間距。 若要在圖表中手動設定資料行的寬度，修改 **PointWidth** 屬性來修改其寬度 (以像素為單位)。 依預設，此屬性的值為 0.8。 當您在圖表中增加資料行或橫條的寬度時，每個資料行或橫條之間的空間會減少。  
   
 ## <a name="see-also"></a>請參閱＜  
- [圖表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [圖表類型 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
- [圖表中的空白和 Null 資料點 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
- [直條圖 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md)   
- [範圍圖表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md)   
- [設定圖表上數列色彩的格式 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
- [格式化圖表上的軸標籤 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
- [在圖表上格式化圖例 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/chart-legend-formatting-report-builder.md)   
+ [圖表 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [圖表類型 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
+ [空白和 Null 資料點中圖表 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
+ [直條圖 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md)   
+ [範圍圖表 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md)   
+ [格式化圖表 &#40; 上的數列色彩報表產生器及 SSRS &#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
+ [格式化圖表 &#40; 上的軸標籤報表產生器及 SSRS &#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
+ [圖表 &#40; 上格式化圖例報表產生器及 SSRS &#41;](../../reporting-services/report-design/chart-legend-formatting-report-builder.md)   
  [將斜面、浮凸與紋理樣式加入至圖表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md)   
- [教學課程：將橫條圖加入至報表 (報表產生器)](http://go.microsoft.com/fwlink/?LinkId=198052)   
- [教學課程：將橫條圖加入至報表](http://go.microsoft.com/fwlink/?LinkId=198042)  
+ [教學課程： 將橫條圖加入至報表 （報表產生器）](http://go.microsoft.com/fwlink/?LinkId=198052)   
+ [教學課程： 將橫條圖加入至報表](http://go.microsoft.com/fwlink/?LinkId=198042)  
   
   

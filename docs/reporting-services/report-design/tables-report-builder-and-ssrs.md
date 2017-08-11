@@ -15,11 +15,11 @@ caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 03787380e498b82c160583cf1e8391bf643edf7c
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="tables-report-builder--and-ssrs"></a>資料表 (報表產生器及 SSRS)
@@ -57,7 +57,7 @@ ms.lasthandoff: 06/22/2017
   
  ![具有粗體資料行標頭的資料表的預覽](../../reporting-services/media/rs-basictabledetailsformattedpreview.png "具有粗體資料行標頭的資料表的預覽")  
   
- 您開始使用的資料表是以 Tablix 資料區為基礎的範本。 您可以加入基礎 Tablix 資料區所支援的功能來加強資料表的設計。 如需詳細資訊，請參閱[控制報表頁面上的 Tablix 資料區顯示 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md)。 您也可以加入資料列群組、資料行群組，以及加入或移除詳細資料群組，以便繼續開發您的資料表。 如需詳細資訊，請參閱[探索 Tablix 資料區的彈性 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)。  
+ 您開始使用的資料表是以 Tablix 資料區為基礎的範本。 您可以加入基礎 Tablix 資料區所支援的功能來加強資料表的設計。 如需詳細資訊，請參閱[控制報表頁面上的 Tablix 資料區顯示 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md)。 您也可以加入資料列群組、資料行群組，以及加入或移除詳細資料群組，以便繼續開發您的資料表。 如需詳細資訊，請參閱[探索 Tablix 資料區的彈性 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)。  
   
 ### <a name="adding-totals-for-detail-data"></a>加入詳細資料的資料表  
  若要加入總計，選取包含數值資料的資料格，然後使用快速鍵功能表自動加入數值欄位之詳細資料的標籤和總計。 您也可以手動指定其他標籤和總計。 下圖顯示同時包含自動和手動指定之總計的一般總計：  
@@ -71,7 +71,7 @@ ms.lasthandoff: 06/22/2017
  如需詳細資訊，請參閱[將總計加入到群組或 Tablix 資料區 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)。  
   
 ##  <a name="AddingRowGroups"></a> 將資料列群組加入到資料表  
- 如同您可以將欄位從 [報表資料] 窗格拖曳到資料格來顯示詳細資料，您也可以將欄位拖曳到 [群組] 窗格來加入群組。 若是資料表，將欄位拖曳到 [資料列群組] 窗格。 加入群組之後，資料表會在要顯示群組值之資料列群組區域的新資料行中，自動加入資料格。 如需詳細資訊，請參閱 [Tablix 資料區的區域 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md)。  
+ 如同您可以將欄位從 [報表資料] 窗格拖曳到資料格來顯示詳細資料，您也可以將欄位拖曳到 [群組] 窗格來加入群組。 若是資料表，將欄位拖曳到 [資料列群組] 窗格。 加入群組之後，資料表會在要顯示群組值之資料列群組區域的新資料行中，自動加入資料格。 如需區域的詳細資訊，請參閱[Tablix Data Region Areas &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md).  
   
  下圖顯示 [設計] 檢視中包含兩個巢狀資料列群組的資料表。 若要建立資料列群組，拖曳 Order 欄位，然後將 Date 欄位拖曳到 [資料列群組] 窗格，並插入每個群組，當做現有群組的父系。 此圖表顯示一個以日期為基礎的父群組與一個以訂單號碼為基礎的子群組，以及依預設定義的詳細資料群組。  
   
@@ -81,7 +81,7 @@ ms.lasthandoff: 06/22/2017
   
  ![資料表依日期分組和訂單](../../reporting-services/media/rs-basictablegroupspreview.png "資料表依日期分組和訂單")  
   
- 顯示群組資料的另一種方法是讓群組階層縮排，以顯示群組的巢狀關聯性，而不是在其自己的資料行中呈現每個值。 這種格式樣式稱為階梯狀報表。 如需如何將群組資訊格式化為階梯狀報表的詳細資訊，請參閱[建立階梯狀報表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/create-a-stepped-report-report-builder-and-ssrs.md)。  
+ 顯示群組資料的另一種方法是讓群組階層縮排，以顯示群組的巢狀關聯性，而不是在其自己的資料行中呈現每個值。 這種格式樣式稱為階梯狀報表。 如需如何群組資訊格式化為階梯狀報表的詳細資訊，請參閱[建立階梯狀報表 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/create-a-stepped-report-report-builder-and-ssrs.md).  
   
 ### <a name="adding-totals-to-row-groups"></a>將總計加入到資料列群組  
  若要顯示群組的總計，您可以使用內容相關的 **[加入總計]** 命令。 若是資料列群組，[加入總計] 命令會加入群組外的資料列，讓該資料列僅針對群組重複一次。 若是巢狀群組，子群組的總計資料列位於子群組外部，但位於父群組內部。 在此種情況下，針對子群組設定總計資料列的背景色彩以便與詳細資料列區隔相當實用。 您也可以使用不同的背景色彩區隔資料表頁首與頁尾資料列。 下圖顯示根據訂單號碼，針對群組加入總計資料列的資料表。  
@@ -120,8 +120,8 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>另請參閱  
  [篩選、分組和排序資料 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [運算式 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [運算式範例 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
- [資料表、矩陣和清單 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [運算式 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
+ [運算式範例 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
+ [資料表、 矩陣和清單 &#40;報表產生器和 SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

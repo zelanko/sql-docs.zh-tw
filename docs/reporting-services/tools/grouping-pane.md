@@ -20,11 +20,11 @@ caps.latest.revision: 22
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ed88ddae33151e46c080a8bd747fd8a7f5055eba
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="grouping-pane"></a>群組窗格
@@ -32,7 +32,7 @@ ms.lasthandoff: 06/22/2017
   
   ![ssrs_fyi_note](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png)如果您看不 [群組] 窗格中，在**報表**功能表上，按一下 **分組**。
   
- 資料列和資料行群組區域中的資料格可以是群組的靜態或動態成員。 每個群組的靜態成員都會重複一次，而且通常包含標籤或總計。 每個群組執行個體的動態成員都會重複一次，而且通常包含群組運算式的唯一值。 當您在資料列群組區域或資料行群組區域中選取 Tablix 資料格時，就會在 [資料列群組] 或 [資料行群組] 窗格中選取對應的群組成員。 相反地，如果您在 [群組] 窗格中選取群組，就會在設計介面上選取與群組成員相關聯的對應資料格。 如需 Tablix 資料列和資料行群組區域的詳細資訊，請參閱 [Tablix 資料區的區域 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md)。  
+ 資料列和資料行群組區域中的資料格可以是群組的靜態或動態成員。 每個群組的靜態成員都會重複一次，而且通常包含標籤或總計。 每個群組執行個體的動態成員都會重複一次，而且通常包含群組運算式的唯一值。 當您在資料列群組區域或資料行群組區域中選取 Tablix 資料格時，就會在 [資料列群組] 或 [資料行群組] 窗格中選取對應的群組成員。 相反地，如果您在 [群組] 窗格中選取群組，就會在設計介面上選取與群組成員相關聯的對應資料格。 如需有關 Tablix 資料列和資料行群組區域的詳細資訊，請參閱[Tablix Data Region Areas &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md).  
   
  [群組] 窗格支援下列模式：  
   
@@ -60,7 +60,7 @@ ms.lasthandoff: 06/22/2017
   
 在大部分的情況下，控制靜態與動態群組資料列和群組資料行之顯示的屬性會在建立群組或加入總計時自動設定。 
 
-若要編輯預設值，您必須在 [資料列群組] 或 [資料行群組] 窗格中選取群組成員，然後在 [屬性] 視窗中變更屬性值。 如果看不到 [屬性] 窗格，請按一下 [檢視] 功能表中的 [屬性]，或按 **F4**。  同時會提供下列屬性：  
+若要編輯預設值，您必須在 [資料列群組] 或 [資料行群組] 窗格中選取群組成員，然後在 [屬性] 視窗中變更屬性值。 如果看不見，在 屬性 窗格**檢視**功能表上，按一下 **屬性**或按**F4**。  同時會提供下列屬性：  
   
 -   **FixedData**： 布林值。 用於外部資料列和資料行標頭。 在轉譯器 (例如 HTML) 中垂直捲動時凍結資料列群組區域，或在水平捲動時凍結資料行群組區域。  
   
@@ -76,7 +76,7 @@ ms.lasthandoff: 06/22/2017
   
 -   **ToggleItem：** 字串。 在其中加入切換影像之文字方塊的名稱。 文字方塊必須位於相同的群組範圍或包含範圍。  
   
- 如需如何在 Tablix 資料區上控制此行為的詳細資訊，請參閱[控制報表頁面上的 Tablix 資料區顯示 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md)。  
+ 如需有關如何在 Tablix 資料區域上控制此行為的詳細資訊，請參閱[控制 Tablix 資料區顯示在報表頁面 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md).  
   
  並非每個靜態成員在設計介面上都有一個對應到資料格的標頭。 在 [群組] 窗格中，下列慣例指出靜態成員是否沒有標頭：  
   
@@ -86,7 +86,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>請參閱＜  
  [資料表、矩陣和清單 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [運算式 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [篩選、分組和排序資料 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
+ [運算式 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
+ [篩選、 群組和排序資料 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
   

@@ -15,11 +15,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 8c253794b7b884a3dd7835409e256245ae0dc5a2
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="chart-legend---change-item-text-report-builder"></a>圖表圖例-變更項目文字 （報表產生器）
@@ -59,8 +59,8 @@ ms.lasthandoff: 06/22/2017
 2.  按一下 [圖例]，然後在 [自訂圖例文字] 方塊中輸入圖例標籤。 數列會隨著您的文字更新。  
   
 ## <a name="see-also"></a>請參閱＜  
- [在圖表上格式化圖例 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/chart-legend-formatting-report-builder.md)   
- [設定圖表上數列色彩的格式 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
- [隱藏圖表上的圖例項目 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/chart-legend-hide-items-report-builder.md)  
+ [圖表 &#40; 上格式化圖例報表產生器及 SSRS &#41;](../../reporting-services/report-design/chart-legend-formatting-report-builder.md)   
+ [格式化圖表 &#40; 上的數列色彩報表產生器及 SSRS &#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
+ [隱藏圖表 &#40; 上的圖例項目報表產生器及 SSRS &#41;](../../reporting-services/report-design/chart-legend-hide-items-report-builder.md)  
   
   

@@ -20,15 +20,15 @@ caps.latest.revision: 52
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 9791cd34a321173e30bf2016956f02e54e62112c
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="manage-report-data-sources"></a>管理報表資料來源
-  在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，報表、報表模型和資料驅動訂閱都會從外部資料來源擷取資料。 為了連接到外部資料來源，報表伺服器會使用在報表、模型或訂閱中定義，或者從其中參考的資料來源連接資訊。 資料來源連接屬性一定會在建立報表或模型時，使用報表或模型來定義，但是當報表或模型發行到報表伺服器之後，可以獨立管理這些屬性。  
+  在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中，報表、報表模型和資料驅動訂閱都會從外部資料來源擷取資料。 為了連接到外部資料來源，報表伺服器會使用在報表、模型或訂閱中定義，或者從其中參考的資料來源連接資訊。 資料來源連接屬性一定會在建立報表或模型時，使用報表或模型來定義，但是當報表或模型發行到報表伺服器之後，可以獨立管理這些屬性。  
   
  若要管理報表資料來源，您可以針對原生模式報表伺服器使用報表管理員，或是使用 SharePoint 網站上的應用程式頁面 (如果將報表伺服器部署為 SharePoint 整合模式)。  
   
@@ -67,25 +67,25 @@ ms.lasthandoff: 06/22/2017
 |工作|工具|連結|  
 |----------|----------|----------|  
 |檢視連接字串的範例。||[資料連接、資料來源及連接字串 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)|  
-|選擇取得認證以連接資料來源的方法。||[指定報表資料來源的認證及連接資訊](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)|  
+|選擇取得認證以連接資料來源的方法。||[指定認證和報表資料來源的連接資訊](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)|  
 |將資料來源連接屬性加入到報表定義 (.rdl) 檔案。|報表設計師|[建立內嵌或共用資料來源 &#40;SSRS&#41;](http://msdn.microsoft.com/library/b111a8d0-a60d-4c8b-b00a-51644b19c34b)|  
-|在報表專案中加入共用資料來源 (.rds) 檔案的連結。|報表設計師|[建立、修改和刪除共用資料來源 &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)|  
+|在報表專案中加入共用資料來源 (.rds) 檔案的連結。|報表設計師|[建立、 修改和刪除共用的資料來源 &#40;SSRS &#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)|  
 |建立資料來源的預先定義清單，供使用者在執行階段選取。 當使用者要求報表時，此報表會提供資料來源的清單。 使用者在執行此報表之前，必須先選取所要使用的資料來源。 若要在報表中加入資料來源選擇清單，您可使用運算式。<br /><br /> 這稱之為動態資料來源連接。|報表設計師|[資料連接、資料來源及連接字串 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)|  
-|在報表伺服器上建立共用資料來源項目。|報表管理員|[建立、刪除或修改共用資料來源 &#40;報表管理員&#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)|  
-|將認證儲存為建立訂閱或報表快照集的必要元件。|報表管理員|[Store Credentials in a Reporting Services Data Source](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)|  
-|在已發行的報表上編輯資料來源連接屬性。|報表管理員|[設定報表的資料來源屬性 &#40;報表管理員&#41;](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)|  
+|在報表伺服器上建立共用資料來源項目。|報表管理員|[建立、 刪除或修改共用的資料來源 &#40;報表管理員 &#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)|  
+|將認證儲存為建立訂閱或報表快照集的必要元件。|報表管理員|[將認證儲存在 Reporting Services 資料來源](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)|  
+|在已發行的報表上編輯資料來源連接屬性。|報表管理員|[設定報表 &#40; 資料來源屬性報表管理員 &#41;](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)|  
 |在報表伺服器上建立共用資料來源項目。|SharePoint 網站|[建立和管理共用資料來源 &#40;SharePoint 整合模式的 Reporting Services&#41;](http://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76)|  
-|搭配報表使用現有的 .odc 連接資訊。|SharePoint 網站|[搭配報表使用 Office 資料連線 &#40;.odc&#41; &#40;SharePoint 整合模式的 Reporting Services&#41;](../../reporting-services/report-data/use-an-office-data-connection-odc-with-reports.md)|  
+|搭配報表使用現有的 .odc 連接資訊。|SharePoint 網站|[搭配報表使用 Office 資料連接 &#40;.odc&#41; &#40;SharePoint 整合模式的 Reporting Services&#41;](../../reporting-services/report-data/use-an-office-data-connection-odc-with-reports.md)|  
   
 > [!NOTE]  
 >  管理報表資料來源的資料來源連接，和管理報表伺服器資料庫的報表伺服器連接不同。 如需報表伺服器連接與其內部資料存放區的詳細資訊，請參閱[設定報表伺服器資料庫連接 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [將報表或模型繫結至共用資料來源 &#40;SSRS&#41;](../../reporting-services/report-data/bind-a-report-or-model-to-a-shared-data-source-ssrs.md)   
- [建立、刪除或修改共用資料來源 &#40;報表管理員&#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
- [Store Credentials in a Reporting Services Data Source](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)   
+ [將報表或模型繫結至共用的資料來源 &#40;SSRS &#41;](../../reporting-services/report-data/bind-a-report-or-model-to-a-shared-data-source-ssrs.md)   
+ [建立、 刪除或修改共用的資料來源 &#40;報表管理員 &#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
+ [將認證儲存在 Reporting Services 資料來源](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)   
  [資料連接、資料來源及連接字串 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
- [Reporting Services 支援的資料來源 &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)   
- [報表伺服器內容管理 &#40;SSRS 原生模式&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)  
+ [支援的 Reporting Services &#40; 資料來源SSRS &#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)   
+ [報表伺服器內容管理 &#40;SSRS 原生模式 &#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)  
   
   

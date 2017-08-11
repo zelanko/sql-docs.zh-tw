@@ -15,11 +15,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: e5d4e66fa2de743e7a28dfeba78bb7a753374a5a
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="add-dataset-filters-data-region-filters-and-group-filters"></a>新增資料集篩選、資料區篩選和群組篩選
@@ -68,7 +68,7 @@ ms.lasthandoff: 06/22/2017
  下列各節將描述篩選方程式的每個部分。  
   
 ### <a name="expression"></a>運算式  
- 當報表處理器在執行階段評估篩選方程式時，運算式和值的資料類型必須相同。 您針對 [運算式] 選取的欄位資料類型是由用來從資料來源中擷取資料的資料處理延伸模組或資料提供者所決定。 您針對 [值] 輸入的運算式資料類型是由 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 預設值所決定。 資料類型的選擇是由支援報表定義的資料類型所決定。 資料提供者可能會將資料庫的值轉換成 CLR 類型。  
+ 當報表處理器在執行階段評估篩選方程式時，運算式和值的資料類型必須相同。 您針對 [運算式] 選取的欄位資料類型是由用來從資料來源中擷取資料的資料處理延伸模組或資料提供者所決定。 您輸入運算式的資料型別**值**取決於[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]預設值。 資料類型的選擇是由支援報表定義的資料類型所決定。 資料提供者可能會將資料庫的值轉換成 CLR 類型。  
   
 ### <a name="data-type"></a>資料類型  
  若要讓報表處理器比較兩個值，其資料類型必須相同。 下表將列出 CLR 資料類型與報表定義資料類型之間的對應。 您從資料來源中擷取的資料可能會在它是報表資料時轉換成不同的資料類型。  
@@ -97,14 +97,14 @@ ms.lasthandoff: 06/22/2017
 ### <a name="value"></a>值  
  Value 運算式會指定篩選方程式的最終部分。 報表處理器會將評估的運算式轉換成您所指定的資料類型，然後評估整個篩選方程式，以便判斷在 [運算式] 中指定的資料是否通過篩選。  
   
- 若要轉換成不是標準 CLR 資料類型的資料類型，您必須修改運算式，以便明確轉換成資料類型。 在 [運算式] 對話方塊中，您可以使用列於 [一般函數] 之 [轉換] 底下的轉換函數。 例如，對於欄位`ListPrice`，代表資料會儲存為**money**資料類型上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料來源的資料處理延伸模組傳回欄位的值<xref:System.Decimal>資料型別。 若要將篩選設定成僅使用報表貨幣中大於 **$50000.00** 的值，請使用運算式 `=CDec(50000.00)`，將此值轉換成十進位。  
+ 若要轉換成不是標準 CLR 資料類型的資料類型，您必須修改運算式，以便明確轉換成資料類型。 在 [運算式] 對話方塊中，您可以使用列於 [一般函數] 之 [轉換] 底下的轉換函數。 例如，若為代表在 `ListPrice` 資料來源上儲存成 **money** 資料類型之資料的欄位 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，資料處理延伸模組就會將欄位值傳回成 <xref:System.Decimal> 資料類型。 若要將篩選設定成僅使用報表貨幣中大於 **$50000.00** 的值，請使用運算式 `=CDec(50000.00)`，將此值轉換成十進位。  
   
  這個值也可以包含參數參考，以便允許使用者以互動方式選取要篩選的值。  
   
  回到頁首  
   
 ## <a name="see-also"></a>請參閱＜  
- [報表中的運算式用法 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [報表 &#40; 中的運算式用法報表產生器及 SSRS &#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
  [報表參數 &#40;報表產生器和報表設計師&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
   
   

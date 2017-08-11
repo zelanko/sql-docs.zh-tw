@@ -21,15 +21,15 @@ caps.latest.revision: 10
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: ffe0a7ea7f46ed7b1ae5d1e5070d58afa0540b12
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="add-and-remove-encryption-keys-for-scale-out-deployment"></a>加入和移除向外延展部署的加密金鑰
-  您可以設定多部報表伺服器來使用共用報表伺服器資料庫，以便在向外延展部署模型中執行 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 。 向外延展部署的成員資格，會依報表伺服器是否在報表伺服器資料庫中儲存加密金鑰而定。 您可以加入和移除特定報表伺服器執行個體的加密金鑰，來控制向外延展部署成員資格。 如果您要從部署中移除節點，您可以依照任何順序來移除它們。 如果您要將節點加入部署中，您必須從已屬於部署的報表伺服器聯結任何新的執行個體。  
+  您可以設定多部報表伺服器來使用共用報表伺服器資料庫，以便在向外延展部署模型中執行 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。 向外延展部署的成員資格，會依報表伺服器是否在報表伺服器資料庫中儲存加密金鑰而定。 您可以加入和移除特定報表伺服器執行個體的加密金鑰，來控制向外延展部署成員資格。 如果您要從部署中移除節點，您可以依照任何順序來移除它們。 如果您要將節點加入部署中，您必須從已屬於部署的報表伺服器聯結任何新的執行個體。  
   
 ## <a name="using-the-reporting-services-configuration-tool-to-configure-scale-out-deployment"></a>使用 Reporting Services 組態工具設定向外延展部署  
  設定向外延展部署的最容易的方式，是使用 Reporting Services 組態工具。 如需詳細資訊和逐步指示，請參閱[設定原生模式報表伺服器向外延展部署 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)。  
@@ -41,7 +41,7 @@ ms.lasthandoff: 06/22/2017
   
 1.  在主控已經是報表伺服器向外延展部署成員之報表伺服器的電腦上，於本機執行 **rskeymgmt.exe** 。  
   
-2.  使用 **-j** 引數，即可將報表伺服器聯結至報表伺服器資料庫。 使用**-m**和 **-n** 引數來指定遠端報表伺服器執行個體，您想要加入至部署。 使用 **-u** 和 **-v** 引數，即可指定遠端電腦上的管理員帳戶。 如果您要利用相同電腦上的多個報表伺服器執行個體來建立向外延展部署，所用的語法稍有不同。 如需您應使用之語法的詳細資訊，請參閱 [rskeymgmt 公用程式 &#40;SSRS&#41;](../../reporting-services/tools/rskeymgmt-utility-ssrs.md)。  
+2.  使用 **-j** 引數，即可將報表伺服器聯結至報表伺服器資料庫。 使用 **-m** 和 **-n** 引數，即可指定您要加入部署中的遠端報表伺服器執行個體。 使用 **-u** 和 **-v** 引數，即可指定遠端電腦上的管理員帳戶。 如果您要利用相同電腦上的多個報表伺服器執行個體來建立向外延展部署，所用的語法稍有不同。 如需您應使用之語法的詳細資訊，請參閱 [rskeymgmt 公用程式 &#40;SSRS&#41;](../../reporting-services/tools/rskeymgmt-utility-ssrs.md)。  
   
      下列範例說明，當您要將遠端報表伺服器聯結至向外延展部署 (如果您有遠端電腦的管理員權限，您可以省略認證) 時，您必須指定哪些引數：  
   
@@ -68,8 +68,8 @@ ms.lasthandoff: 06/22/2017
  雖然這些步驟會從向外延展部署中移除報表伺服器，但是它們不會解除安裝報表伺服器上的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 執行個體。 在您從向外延展部署中移除報表伺服器之後，如果不再需要該伺服器上的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，可以解除安裝該伺服器的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。 如需相關資訊，請參閱《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的[解除安裝現有的 SQL Server 執行個體 &#40;安裝程式&#41;](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [設定和管理加密金鑰 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
- [初始化報表伺服器 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)  
+ [設定和管理加密金鑰 &#40;SSRS 組態管理員 &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
+ [初始化報表伺服器 &#40;SSRS 組態管理員 &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)  
   
   
 

@@ -21,25 +21,25 @@ caps.latest.revision: 42
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 6ca8d81025d48af07b5e2ce9336a8e031ea4fb1a
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
-# <a name="store-credentials-in-a-reporting-services-data-source"></a>Store Credentials in a Reporting Services Data Source
+# <a name="store-credentials-in-a-reporting-services-data-source"></a>Reporting Services 資料來源中的預存認證
   您可以設定預存認證，讓 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器用來存取報表的外部資料。 如果報表會自動執行，便是使用預存認證 (例如以電子郵件形式發行報表的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 訂閱)。 排定或觸發報表處理時，報表伺服器會擷取和使用認證。 本主題會逐步引導您完成為原生模式和 SharePoint 模式報表伺服器設定預存認證的程序。  
   
 ||  
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]**[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式 &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式|  
   
--   [為報表特定的資料來源設定預存認證 (原生模式)](#bkmk_stored_credentials_data_source_native)  
+-   [設定報表特定資料來源 （原生模式） 的預存的認證](#bkmk_stored_credentials_data_source_native)  
   
--   [為報表特定的資料來源設定預存認證 (SharePoint 模式)](#bkmk_stored_credentials_data_source_sharepoint)  
+-   [設定報表特定資料來源 （SharePoint 模式） 的預存的認證](#bkmk_stored_credentials_data_source_sharepoint)  
   
--   [為共用資料來源設定預存認證 (原生模式)](#bkmk_stored_credentials_shared_data_source_native)  
+-   [設定共用的資料來源 （原生模式） 的預存的認證](#bkmk_stored_credentials_shared_data_source_native)  
   
 -   [為共用資料來源設定預存認證 (SharePoint 模式)](#bkmk_stored_credentials_shared_data_source_sharepoint)  
   
@@ -163,9 +163,9 @@ ms.lasthandoff: 06/22/2017
      ![搭配回到頁首連結使用的箭號圖示](../../analysis-services/instances/media/uparrow16x16.gif "搭配回到頁首連結使用的箭號圖示")[預存認證的安全性原則需求](#bkmk_top)  
   
 ## <a name="see-also"></a>另請參閱  
- [指定報表資料來源的認證及連接資訊](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
+ [指定認證和報表資料來源的連接資訊](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [設定報表的資料來源屬性 &#40;報表管理員&#41;](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)   
- [建立、刪除或修改共用資料來源 &#40;報表管理員&#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
+ [建立、刪除或修改共用的資料來源 &#40;報表管理員&#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
  [資料來源屬性頁面 &#40;報表管理員&#41;](http://msdn.microsoft.com/library/f37edda0-19e6-489e-b544-8751fa6b6cfb)   
  [新增資料來源頁面 &#40;報表管理員&#41;](http://msdn.microsoft.com/library/35563d4c-a3d5-4f95-bf46-605da9dfcbb8)  
   

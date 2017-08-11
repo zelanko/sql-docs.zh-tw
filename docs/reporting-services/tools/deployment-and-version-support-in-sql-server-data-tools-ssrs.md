@@ -15,11 +15,11 @@ caps.latest.revision: 19
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 29df783121de48e39d824b9b9e9666d764717ebc
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="deployment-and-version-support-in-sql-server-data-tools-ssrs"></a>SQL Server 資料工具中的部署和版本支援 (SSRS)
@@ -46,7 +46,7 @@ ms.lasthandoff: 06/22/2017
   
 -   OutputPath 是會識別資料夾路徑的建置屬性，用於儲存組建驗證、部署與預覽報表時所使用的報表定義。  
   
--   ErrorLevel 是建置屬性，會識別回報為錯誤之建置問題的嚴重性。 嚴重性層級小於或等於 ErrorLevel 值的問題會回報為錯誤；否則，會將這些問題回報為警告。 如需詳細資訊，請參閱[使用報表設計師設計報表 &#40;SSRS&#41;](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md) 中的＜報表驗證和錯誤等級＞一節。  
+-   ErrorLevel 是建置屬性，會識別回報為錯誤之建置問題的嚴重性。 嚴重性層級小於或等於 ErrorLevel 值的問題會回報為錯誤；否則，會將這些問題回報為警告。 如需詳細資訊，請參閱中的 < 報表驗證和錯誤層級 > 一節[使用報表設計工具 &#40; 設計報表SSRS &#41;](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md).  
   
 -   TargetServerVersion 是部署屬性，可以識別 TargetServerURL 屬性中所指定之目標報表伺服器上安裝的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 預期版本。  
   
@@ -57,7 +57,7 @@ ms.lasthandoff: 06/22/2017
 ##  <a name="bkmk_SupportedVersions"></a> 支援的版本  
   
 > [!NOTE]  
->  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)](報表伺服器專案的 32 位元開發環境) 不是設計成要在 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]架構電腦上執行，而且未安裝在 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]架構伺服器上。 不過， [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 仍支援 x64 架構的電腦。  
+>  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]不是報表伺服器專案的 32 位元開發環境上執行[!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]-架構的電腦，不會安裝在[!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]為基礎的伺服器。 不過， [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 仍支援 x64 架構的電腦。  
   
  下表描述在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中撰寫及發行報表所支援的版本。  
   

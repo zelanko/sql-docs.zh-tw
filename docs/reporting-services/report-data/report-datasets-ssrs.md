@@ -15,11 +15,11 @@ caps.latest.revision: 9
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: c8916eaf7a88d74e88c6364148259373a6d0d75d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="report-datasets-ssrs"></a>報表資料集 (SSRS)
@@ -43,7 +43,7 @@ ms.lasthandoff: 06/22/2017
   
  您也可以透過加入包含相依資料集的報表組件，將資料集加入至報表中。 [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
   
- 若要了解如何建立報表，以顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的資料，請參閱 [教學課程︰建立基本資料表報表 &#40;報表產生器&#41;](../../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。 若要建立包括自己本身資料的報表，請參閱[教學課程︰離線建立快速圖表報表 &#40;報表產生器&#41;](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)。  
+ 若要了解如何建立顯示資料的報表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫，請參閱[教學課程： 建立基本資料表報表 &#40;報表產生器 &#41;](../../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md). 若要建立包括自己本身資料的報表，請參閱[教學課程︰離線建立快速圖表報表 &#40;報表產生器&#41;](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -64,15 +64,15 @@ ms.lasthandoff: 06/22/2017
 -   根據內嵌資料來源加入內嵌資料集。  
   
 > [!NOTE]  
->  在報表伺服器上，系統會透過個別方式，或透過繼承發行共用項目所在資料夾的權限來保護共用項目。 若要讓其他使用者可以存取您所儲存的共用資料集，您必須了解如何授予權限。 如需詳細資訊，請參閱[安全性 &#40;報表產生器&#41;](../../reporting-services/report-builder/security-report-builder.md) 或[保護共用資料集項目的安全](../../reporting-services/security/secure-shared-dataset-items.md)。  
+>  在報表伺服器上，系統會透過個別方式，或透過繼承發行共用項目所在資料夾的權限來保護共用項目。 若要讓其他使用者可以存取您所儲存的共用資料集，您必須了解如何授予權限。 如需詳細資訊，請參閱[安全性 &#40;報表產生器 &#41;](../../reporting-services/report-builder/security-report-builder.md)或[保護共用資料集項目](../../reporting-services/security/secure-shared-dataset-items.md)。  
   
  將資料加入至報表之後，您可以利用資料區組織報表頁面上的資料、修改報表組件並與其他人共用這些變更，以及讓使用者限制或排序他們在報表中所看到的資料。 如需詳細資訊，請參閱下列相關主題：  
   
 -   [資料表、矩陣和清單 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
--   [圖表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
+-   [圖表 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
   
--   [走勢圖和資料橫條 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)  
+-   [走勢圖和資料橫條 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)  
   
 -   [指標 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   
@@ -99,7 +99,7 @@ ms.lasthandoff: 06/22/2017
   
  在查詢設計工具中，您可以執行查詢來檢視範例資料並驗證查詢命令語法。 在結果集中的資料行名稱會變成您在 [報表資料] 窗格中看到的欄位名稱。 結果集必須是單一一組資料列和資料行，其中每個資料列都有相同數目的值。 不支援來自單一查詢的多個結果集。 不支援沒有固定資料行數目，而且每個資料列可能產生不同資料值數目的不完全階層。  
   
- 若要執行查詢，您必須要有設計階段的認證。 如需詳細資訊，請參閱[在報表產生器中指定認證](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)和[資料連接、資料來源及連接字串 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
+ 若要執行查詢，您必須要有設計階段的認證。 如需詳細資訊，請參閱[指定的認證，在報表產生器](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)和[資料連接、 資料來源及連接字串 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
  資料延伸模組和外部資料來源之間的通訊是由資料提供者處理。 查詢命令語法、查詢參數，以及結果集中之值資料類型的支援取決於每個資料提供者。 如需詳細資訊，請參閱特定資料延伸模組類型的主題和[查詢設計工具 &#40;報表產生器&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)。  
   
@@ -138,6 +138,6 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>請參閱＜  
  [報表設計檢視 &#40;報表產生器&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)   
- [報表撰寫概念 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
+ [報表撰寫概念 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
   
   

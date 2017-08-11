@@ -15,11 +15,11 @@ caps.latest.revision: 9
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 2a435c6f6b5dc2d9df676f504837393d448820a4
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="enable-and-disable-rdl-sandboxing"></a>啟用或停用 RDL 沙箱
@@ -76,7 +76,7 @@ ms.lasthandoff: 06/22/2017
 |**AllowNew**|布林值屬性，如**允許**，控制是否允許類型的新執行個體建立 RDL 運算式或 RDL **\<類別 >**項目。<br /><br /> 注意：當啟用 **RDLSandboxing** 時，無論是否設定 [AllowNew]，都無法在 RDL 運算式中建立新的陣列。|  
 |**值**|**Allow** 的值，這是 RDL 運算式中允許之類型的名稱。 **\*** 值表示允許命名空間中的所有類型。 這個屬性不區分大小寫。|  
 |**成員**|如需中所包含之型別的清單**\<類型 >**元素中，不允許在 RDL 運算式中的成員名稱的清單。|  
-|**拒絕**|RDL 運算式中不允許的成員名稱。 這個屬性不區分大小寫。<br /><br /> 注意：為成員指定 [Deny] 時，將不會允許所有類型中具有這個名稱的所有成員。|  
+|**拒絕**|RDL 運算式中不允許的成員名稱。 這個屬性不區分大小寫。<br /><br /> 注意： 當**拒絕**指定成員，不允許具有這個名稱的所有類型的所有成員。|  
   
 ## <a name="working-with-expressions-when-rdl-sandboxing-is-enabled"></a>在啟用 RDL 沙箱功能時使用運算式  
  您可以修改 RDL 沙箱功能，透過下列方式幫助管理運算式所使用的資源：  

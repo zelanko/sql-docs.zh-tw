@@ -15,11 +15,11 @@ caps.latest.revision: 13
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 271d1b4018890ab23db0254b24cbf7664491b848
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="dataset-fields-collection-report-builder-and-ssrs"></a>資料集欄位集合 (報表產生器及 SSRS)
@@ -103,7 +103,7 @@ ms.lasthandoff: 06/22/2017
     |**DateTimeTZ**|**DateTimeOffset**|包含時區時差的日期和時間|  
     |**DateTime2**|**DateTime**|包含毫秒的日期和時間|  
   
- 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫類型的詳細資訊，請參閱[資料類型 (Database Engine)](http://go.microsoft.com/fwlink/?linkid=98362) 和[日期和時間資料類型與函數 (Transact-SQL)](http://go.microsoft.com/fwlink/?linkid=98360)。  
+ 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫類型的詳細資訊，請參閱 [資料類型 (Database Engine)](http://go.microsoft.com/fwlink/?linkid=98362) 和 [日期和時間資料類型與函數 (Transact-SQL)](http://go.microsoft.com/fwlink/?linkid=98360)。  
   
  如需從運算式加入資料集欄位之參考的詳細資訊，請參閱[運算式中的資料類型 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)。  
   
@@ -114,7 +114,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>另請參閱  
  [資料集屬性對話方塊、欄位 &#40;報表產生器&#41;](http://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42)   
- [報表產生器中的報表組件和資料集](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
- [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+ [報表組件和報表產生器中的資料集](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
+ [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

@@ -19,11 +19,11 @@ caps.latest.revision: 48
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7e79341b1988e43d27ac35d46fcba482de0ab371
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="url-access-parameter-reference"></a>URL 存取參數參考
@@ -125,7 +125,7 @@ ms.lasthandoff: 06/22/2017
   
 -   *Stylesheet*：指定要套用至 HTML 檢視器的樣式表。  
   
--   裝置資訊設定：將裝置資訊設定指定為 `rc:tag=value`的形式，其中 *tag* 是指定給目前所使用轉譯延伸模組的裝置資訊設定名稱 (請參閱 *Format* 參數的說明)。 例如，您可以利用 IMAGE 轉譯延伸模組的 *OutputFormat* 裝置資訊設定，使用下列 URL 存取字串的參數將報表轉譯為 JPEG 影像：`…&rs:Format=IMAGE&rc:OutputFormat=JPEG`。 如需所有延伸模組特定裝置資訊設定的詳細資訊，請參閱[轉譯延伸模組的裝置資訊設定 &#40;Reporting Services&#41;](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md)。  
+-   裝置資訊設定：將裝置資訊設定指定為 `rc:tag=value`的形式，其中 *tag* 是指定給目前所使用轉譯延伸模組的裝置資訊設定名稱 (請參閱 *Format* 參數的說明)。 例如，您可以利用 IMAGE 轉譯延伸模組的 *OutputFormat* 裝置資訊設定，使用下列 URL 存取字串的參數將報表轉譯為 JPEG 影像： `…&rs:Format=IMAGE&rc:OutputFormat=JPEG`。 如需所有延伸模組特定裝置資訊設定的詳細資訊，請參閱[轉譯延伸模組的裝置資訊設定 &#40;Reporting Services&#41;](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md)。  
   
 ##  <a name="bkmk_reportserver"></a> 報表伺服器命令 (rs:)  
  報表伺服器命令前面會加上 *rs:* ，而且用來針對下列報表伺服器︰  

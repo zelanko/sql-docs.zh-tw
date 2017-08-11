@@ -28,11 +28,11 @@ caps.latest.revision: 47
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7f7e44b6527c90419e5ae220260ab08a706c2372
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="publishing-reports-to-a-report-server"></a>將報表發行至報表伺服器
@@ -66,9 +66,9 @@ ms.lasthandoff: 06/22/2017
 在 [方案總管] 中，以滑鼠右鍵按一下報表，然後按一下 **[部署]**。 您可以在 [輸出] 視窗中，檢視發行程序的狀態。  
   
  當您發行報表時，也必須部署該報表所使用的共用資料來源。   
- 如果您不要發行專案中的所有報表，可以只選擇發行單一報表。 若要這樣做，請選取部署報表的組態 (例如 Release 組態)，以滑鼠右鍵按一下報表，然後按一下 [部署]。  
+ 如果您不要發行專案中的所有報表，可以只選擇發行單一報表。 若要這樣做，請選取部署報表 （例如，發行組態） 的組態，以滑鼠右鍵按一下報表，然後按一下**部署**。  
   
- 如果報表使用共用資料來源，您也必須部署共用資料來源，否則將不會執行部署的報表。 以滑鼠右鍵按一下共用資料來源，然後按一下 [部署]。  
+ 如果報表使用共用資料來源，您也必須部署共用資料來源，否則將不會執行部署的報表。 以滑鼠右鍵按一下共用的資料來源，然後按一下 **部署**。  
   
  您必須指定報表伺服器的目標伺服器 URL，並視需要變更負責部署報表和共用資料來源的預設資料夾。  
 

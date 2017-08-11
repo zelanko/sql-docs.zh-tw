@@ -8,6 +8,8 @@ ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- sql13.dts.designer.excelconnection.f1
 helpviewer_keywords:
 - files [Integration Services], connections
 - connections [Integration Services], Excel
@@ -19,10 +21,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c817f552e527f0d01ec7638eb5f605da572cf9c0
+ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
+ms.openlocfilehash: 15de3ffdf6b4580918edf3a29d40e856614367fb
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="excel-connection-manager"></a>Excel 連接管理員
@@ -55,6 +57,42 @@ ms.lasthandoff: 08/03/2017
  如需以程式設計方式設定連線管理員的資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 和 [以程式設計方式加入連線](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)。  
   
  如需循環使用 Excel 檔案群組的資訊，請參閱 [使用 Foreach 迴圈容器來循環使用 Excel 檔案和資料表](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)。  
+  
+## <a name="excel-connection-manager-editor"></a>Excel 連接管理員編輯器
+  使用 [Excel 連線管理員編輯器] 對話方塊，將連接加入現有或新的 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 活頁簿檔案。  
+  
+ 若要深入了解快取連線管理員，請參閱 [Excel 連線管理員](../../integration-services/connection-manager/excel-connection-manager.md)。  
+  
+### <a name="options"></a>選項。  
+ **Excel 檔案路徑**  
+ 輸入現有或新的 Excel 活頁簿檔案 (.xls) 的路徑和檔案名稱。  
+  
+> [!NOTE]  
+>  您不能連接到受密碼保護的 Excel 檔案。  
+  
+> [!WARNING]  
+>  當您選取指向新的或非現存檔案的 [Excel 連接]，然後在 [Excel 工作表的名稱] 中按一下 [新增] 時，[Excel 目的地編輯器] 會自動建立 Excel 檔案。  
+  
+ **瀏覽**  
+ 使用 [開啟] 對話方塊導覽至 Excel 檔存在的資料夾，或您要建立新的檔案。  
+  
+ **Excel 版本**  
+ 指定用於建立檔案的 Microsoft Excel 版本。  
+  
+ **第一個資料列有資料行名稱**  
+ 指定選取之工作表中資料的第一個資料列是否包含資料行名稱。 此選項的預設值是 **[True]**。  
+  
+### <a name="providers-and-drivers-for-microsoft-excel-and-access-file"></a>Microsoft Excel 和 Access 檔案的提供者和驅動程式  
+ 如果尚未安裝 Microsoft Office 檔案的 OLE DB 提供者及驅動程式，您必須加以下載。 新版的提供者可以開啟以舊版 Excel 建立的檔案。  
+  
+ 如果電腦有 32 位元版本的 Office，則必須安裝 32 位元版本的驅動程式，而且您也必須確定已執行精靈或以 32 位元模式建立的 Integration Services 封裝。  
+  
+|Microsoft Office 版本|下載|  
+|------------------------------|--------------|  
+|2007|[2007 Office System 驅動程式：資料連接元件](https://www.microsoft.com/download/details.aspx?id=23734)|  
+|2010|[Microsoft Access 2010 執行階段](https://www.microsoft.com/download/details.aspx?id=10910)|  
+|2013|[Microsoft Access 2013 執行階段](http://www.microsoft.com/download/details.aspx?id=39358)|  
+|2016|[Microsoft Access 2016 執行階段](https://www.microsoft.com/download/details.aspx?id=50040)|
   
 ## <a name="related-tasks"></a>相關工作  
   

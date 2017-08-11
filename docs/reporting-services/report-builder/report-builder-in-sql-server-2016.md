@@ -20,11 +20,11 @@ caps.latest.revision: 35
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: c2a8702fcee392936451e4a55a4b97327de2b97d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="report-builder-in-sql-server-2016"></a>SQL Server 2016 的報表產生器
@@ -40,7 +40,7 @@ ms.lasthandoff: 06/22/2017
   
 -   **從資料表、矩陣或圖表精靈開始**。 您可以選擇資料來源連接、拖放欄位以建立資料集查詢、選取配置和樣式，以及自訂報表。  
   
--   **從地圖精靈開始**，以建立根據地理或幾何背景顯示彙總資料的報表。 地圖資料可能是來自 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢或環境系統研究協會 (Environmental Systems Research Institute, Inc.) 的空間資料。(ESRI) 形狀檔。 您也可以加入 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Bing 地圖底圖背景。  
+-   **從地圖精靈開始** ，以建立根據地理或幾何背景顯示彙總資料的報表。 地圖資料可能是來自 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢或環境系統研究協會 (Environmental Systems Research Institute, Inc.) 的空間資料。(ESRI) 形狀檔。 您也可以加入 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Bing 地圖底圖背景。  
   
 -   **使用報表組件啟動您的報表**。 報表組件是個別發行到原生模式或 SharePoint 整合模式的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器的報表項目。 報表組件可以在其他報表中重複使用。 諸如資料表、矩陣、圖表和影像等報表項目都可以發行為報表組件。  
   
@@ -73,14 +73,14 @@ ms.lasthandoff: 06/22/2017
 > [!NOTE]  
 >  報表伺服器管理員會在報表伺服器或處於 SharePoint 整合模式的報表伺服器上管理已發行的報表。 報表伺服器管理員可以定義安全性、設定屬性以及排程作業，例如報表記錄和電子郵件報表傳遞。 他們可以建立共用排程和共用資料來源，讓它們可供一般使用。 管理員也會管理所有報表伺服器資料夾。 執行管理工作的能力需視使用者權限而定。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
   [啟動報表產生器](../../reporting-services/report-builder/start-report-builder.md)  
   
   [安裝報表產生器](../../reporting-services/install-windows/install-report-builder.md)
 
   [SQL Server 2016 Reporting Services 和報表產生器的新功能](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)  
   描述此版本 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 和 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]的新功能。   
-  [教學課程： 建立快速圖表報表離線](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
+  [教學課程：離線建立快速圖表報表](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
  介紹 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 以及可協助您建立報表的精靈。 此教學課程會提供一組資料供您使用，所以您不需要連接至資料來源以便開始作業。  
   
  [規劃報表 &#40;報表產生器&#41;](../../reporting-services/report-design/planning-a-report-report-builder.md)  

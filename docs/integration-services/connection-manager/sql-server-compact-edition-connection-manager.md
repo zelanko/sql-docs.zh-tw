@@ -9,6 +9,9 @@ ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- sql13.dts.designer.sqlmobileconnection.connection.f1
+- sql13.dts.designer.sqlmobileconnection.all.f1
 helpviewer_keywords:
 - SQL Server Compact, connection manager
 - connections [Integration Services], SQL Server Compact
@@ -19,10 +22,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: dad3c3c379b62863de834386783b595c984c49ed
+ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
+ms.openlocfilehash: 6b3f09dad60239f595aaae0cac0162283d84430d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="sql-server-compact-edition-connection-manager"></a>SQL Server Compact Edition 連接管理員
@@ -48,12 +51,72 @@ ms.lasthandoff: 08/03/2017
   
  您可以透過「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」或以程式設計方式設定屬性。  
   
- 如需有關可以在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中設定之屬性的詳細資訊，請按下列其中一個主題：  
+ 如需以程式設計方式設定連線管理員的相關資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 和 [以程式設計方式加入連接](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)。  
   
--   [SQL Server Compact Edition 連線管理員編輯器 &#40;連接頁面&#41;](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager-editor-connection-page.md)  
+## <a name="sql-server-compact-edition-connection-manager-editor-connection-page"></a>SQL Server Compact Edition 連接管理員編輯器 (連接頁面)
+  使用 [SQL Server Compact Edition 連線管理員] 對話方塊，指定連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 資料庫的屬性。  
   
--   [SQL Server Compact Edition 連線管理員編輯器 &#40;全部頁面&#41;](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager-editor-all-page.md)  
+ 若要深入了解 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact Edition 連線管理員，請參閱 [SQL Server Compact Edition 連線管理員](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md)。  
   
- 如需以程式設計方式設定連線管理員的資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 和 [以程式設計方式加入連接](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)。  
+### <a name="options"></a>選項。  
+ **輸入資料庫檔案名稱與路徑**  
+ 輸入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 資料庫的路徑與檔名。  
   
+ **瀏覽**  
+ 使用 [選取 SQL Server Compact Edition 資料庫] 對話方塊，尋找所要的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 資料庫檔案。  
   
+ **輸入資料庫密碼**  
+ 輸入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 資料庫的密碼。  
+  
+## <a name="sql-server-compact-edition-connection-manager-editor-all-page"></a>SQL Server Compact Edition 連接管理員編輯器 (全部頁面)
+  使用 [SQL Server Compact Edition 連線管理員] 對話方塊，指定連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 資料庫的屬性。  
+  
+ 若要深入了解 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact Edition 連線管理員，請參閱 [SQL Server Compact Edition 連線管理員](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md)。  
+  
+### <a name="options"></a>選項。  
+ **AutoShrink 臨界值**  
+ 以百分比指定在執行自動壓縮處理序之前， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 資料庫允許的可用空間數量。  
+  
+ **預設鎖定擴大**  
+ 指定在嘗試擴大鎖定之前， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 資料庫要取得的資料庫鎖定數目。  
+  
+ **預設鎖定逾時**  
+ 指定交易等候鎖定的預設間隔，以毫秒為單位。  
+  
+ **排清間隔**  
+ 指定已認可交易將資料排清到磁碟機之間的間隔，以秒為單位。  
+  
+ **地區設定識別碼**  
+ 指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 資料庫的地區設定識別碼 (LCID)。  
+  
+ **緩衝區大小上限**  
+ 指定將資料排清到磁碟之前， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 使用的記憶體數量上限 (以 KB 為單位)。  
+  
+ **資料庫大小上限**  
+ 指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 資料庫的大小上限 (以 MB 為單位)。  
+  
+ **模式**  
+ 指定用來開啟 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 資料庫的檔案模式。 此屬性的預設值為 [讀取寫入]。  
+  
+ 模式選項有四個值，如下表所述。  
+  
+|Value|說明|  
+|-----------|-----------------|  
+|**唯讀**|指定唯讀存取資料庫。|  
+|**讀取寫入**|指定資料庫的讀取/寫入權限。|  
+|**排除**|指定獨佔存取資料庫。|  
+|**共用讀取**|指定其他使用者可同時讀取資料庫。|  
+  
+ **保存安全性資訊**  
+ 指定是否將安全性資訊當做連接字串的一部分傳回。 這個選項的預設值是 **False**。  
+  
+ **暫存檔目錄**  
+ 指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 暫存資料庫檔案的位置。  
+  
+ **資料來源**  
+ 指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 資料庫的名稱。  
+  
+ **密碼**  
+ 輸入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 資料庫的密碼。  
+  
+

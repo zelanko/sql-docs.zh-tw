@@ -23,11 +23,11 @@ caps.latest.revision: 36
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0eceb425b1294026a1c82043800c6aaa2ec83972
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="pause-and-resume-shared-schedules"></a>暫停及繼續共用排程
@@ -68,9 +68,9 @@ ms.lasthandoff: 06/22/2017
 4.  選取排程，然後按一下 **[暫停選取的排程]** 或 **[執行選取的排程]**。 如果排程目前為暫停狀態，則 **[狀態]** 資料行將包含 **[已暫停]**。  
   
 ## <a name="see-also"></a>請參閱＜  
- [[排程]](../../reporting-services/subscriptions/schedules.md)   
- [Create, Modify, and Delete Schedules](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)   
- [變更報表伺服器上的時區和時鐘設定](../../reporting-services/subscriptions/change-time-zones-and-clock-settings-on-a-report-server.md)   
- [管理執行中的處理序](../../reporting-services/subscriptions/manage-a-running-process.md)  
+ [排程](../../reporting-services/subscriptions/schedules.md)   
+ [建立、 修改及刪除共用排程](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)   
+ [變更時區和時鐘設定報表伺服器上](../../reporting-services/subscriptions/change-time-zones-and-clock-settings-on-a-report-server.md)   
+ [管理執行程序](../../reporting-services/subscriptions/manage-a-running-process.md)  
   
   

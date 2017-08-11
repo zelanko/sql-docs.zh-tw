@@ -15,11 +15,11 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: aef6ef0fe1f32f015abe3b48177f6e4d3e45648d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="change-row-height-or-column-width-report-builder-and-ssrs"></a>變更資料列高度或資料行寬度 (報表產生器及 SSRS)
@@ -71,10 +71,10 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>另請參閱  
  [Tablix 資料區 (報表產生器及 SSRS)](https://msdn.microsoft.com/library/dd220587.aspx)   
- [Tablix 資料區資料格、資料列及資料行 (報表產生器及 SSRS)](https://msdn.microsoft.com/library/dd220511.aspx)   
- [資料表 (報表產生器及 SSRS)](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
- [矩陣 (報表產生器及 SSRS)](https://msdn.microsoft.com/library/dd207149.aspx)   
- [清單 (報表產生器及 SSRS)](https://msdn.microsoft.com/library/dd239330.aspx)   
- [資料表、矩陣和清單 (報表產生器及 SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [Tablix 資料區域資料格、 列和資料行 （報表產生器） 和 SSRS](https://msdn.microsoft.com/library/dd220511.aspx)   
+ [資料表 （報表產生器及 SSRS）](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
+ [矩陣 （報表產生器及 SSRS）](https://msdn.microsoft.com/library/dd207149.aspx)   
+ [清單 （報表產生器及 SSRS）](https://msdn.microsoft.com/library/dd239330.aspx)   
+ [資料表、 矩陣和清單 （報表產生器及 SSRS）](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

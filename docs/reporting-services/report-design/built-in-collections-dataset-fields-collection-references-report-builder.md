@@ -15,11 +15,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: df288358b8fd8b209adda5c52af5f23f878541e9
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="built-in-collections---dataset-fields-collection-references-report-builder"></a>內建集合的資料集欄位集合參考 （報表產生器）
@@ -93,7 +93,7 @@ End Function
 ### <a name="using-extended-field-properties"></a>使用擴充欄位屬性  
  擴充欄位屬性是資料處理延伸模組在欄位上所定義的其他屬性，此模組是由資料集的資料來源類型所決定。 擴充欄位屬性是預先定義的，或是資料來源類型所特有的。 如需詳細資訊，請參閱 [Extended Field Properties for an Analysis Services Database &#40;SSRS&#41;](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md) (Analysis Services 資料庫的擴充欄位屬性 (SSRS))。  
   
- 如果您指定了該欄位不支援的屬性，則運算式會評估為 **null** ([!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 中為 **Nothing**)。 如果資料提供者不支援擴充欄位屬性，或是執行查詢時找不到欄位，則當屬性類型為 **String** 和**Object** 時，此屬性值會是 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]null **(在** 中則為 **Nothing**)；當屬性類型為 **Integer**時，此屬性值為零 (0)。 資料處理延伸模組可藉由最佳化包含這個語法的查詢來利用預先定義的屬性。  
+ 如果您指定了該欄位不支援的屬性，則運算式會評估為 **null** (**中為** Nothing [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)])。 如果資料提供者不支援擴充欄位屬性，或是執行查詢時找不到欄位，則當屬性類型為 **String** 和**Object** 時，此屬性值會是 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]null **(在** 中則為 **Nothing**)；當屬性類型為 **Integer**時，此屬性值為零 (0)。 資料處理延伸模組可藉由最佳化包含這個語法的查詢來利用預先定義的屬性。  
   
 ## <a name="see-also"></a>請參閱＜  
  [運算式範例 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   

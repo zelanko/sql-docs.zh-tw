@@ -15,11 +15,11 @@ caps.latest.revision: 11
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d8efc7a0b7120faa53a63bd07c51029a1b379f9e
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="add-cascading-parameters-to-a-report-report-builder-and-ssrs"></a>將串聯參數加入至報表 (報表產生器及 SSRS)
@@ -28,7 +28,7 @@ ms.lasthandoff: 06/22/2017
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
- 若要建立串聯參數，您要先定義資料集查詢，然後加入所需之每個串聯參數的查詢參數。 您也必須針對每個串聯參數建立個別的資料集來提供可用的值。 如需詳細資訊，請參閱[為報表參數加入、變更或刪除可用的值 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-available-values-for-a-report-parameter.md)。  
+ 若要建立串聯參數，您要先定義資料集查詢，然後加入所需之每個串聯參數的查詢參數。 您也必須針對每個串聯參數建立個別的資料集來提供可用的值。 如需詳細資訊，請參閱[新增、 變更或刪除報表參數 &#40; 的可用值報表產生器及 SSRS &#41;](../../reporting-services/report-design/add-change-or-delete-available-values-for-a-report-parameter.md).  
   
  順序對於串聯參數相當重要，因為列在清單中後面之參數的資料集查詢會包含清單中前面每個參數的參考。 在執行階段，參數在 [報表資料] 窗格中的順序會決定參數查詢出現在報表中的順序，因此，也會決定使用者選擇每個後續參數值的順序。  
   
@@ -53,7 +53,7 @@ ms.lasthandoff: 06/22/2017
 6.  按一下 **[執行]** (**!**)。 加入查詢參數然後執行查詢之後，會自動建立對應到查詢參數的報表參數。  
   
     > [!NOTE]  
-    >  您第一次執行查詢時，查詢參數的順序會決定這些參數在報表中建立的順序。 若要變更順序，請參閱[變更報表參數的順序 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)  
+    >  您第一次執行查詢時，查詢參數的順序會決定這些參數在報表中建立的順序。 若要變更順序，請參閱[變更報表參數 &#40; 順序報表產生器及 SSRS &#41;](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -160,10 +160,10 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>請參閱＜  
  [加入、變更或刪除報表參數 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
- [報表參數 &#40;報表產生器和報表設計師&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
- [教學課程：將參數加入至報表 &#40;報表產生器&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)   
+ [報表參數 &#40;報表產生器和報表設計工具 &#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
+ [教學課程： 將參數加入您的報表 &#40;報表產生器 &#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [報表產生器教學課程](../../reporting-services/report-builder-tutorials.md)   
- [加入資料集篩選、資料區篩選和群組篩選 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
- [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+ [加入資料集篩選、 資料區域篩選和群組篩選 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
+ [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

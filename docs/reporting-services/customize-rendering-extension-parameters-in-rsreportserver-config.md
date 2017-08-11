@@ -22,11 +22,11 @@ caps.latest.revision: 31
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 009b40c83d662b40b3215f701a2eb490ebc4fed1
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="customize-rendering-extension-parameters-in-rsreportserverconfig"></a>在 RSReportServer.Config 中自訂轉譯延伸模組參數
@@ -49,7 +49,7 @@ ms.lasthandoff: 06/22/2017
   
 -   **DeviceInfo** XML 結構會定義轉譯延伸模組所使用的裝置資訊設定。 大部分的轉譯延伸模組參數會指定為裝置資訊設定。  
   
- 您可以使用文字編輯器來修改 RSReportServer.config 檔案， 此檔案可以在 \Reporting Services\Report Server\Bin 資料夾中找到。 如需修改組態檔的詳細資訊，請參閱[修改 Reporting Services 組態檔 &#40;RSreportserver.config&#41;](../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)。  
+ 您可以使用文字編輯器來修改 RSReportServer.config 檔案， 此檔案可以在 \Reporting Services\Report Server\Bin 資料夾中找到。 如需有關修改組態檔的詳細資訊，請參閱[修改 Reporting Services 組態檔 &#40;RSreportserver.config &#41;](../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md).  
   
 ## <a name="changing-the-display-name"></a>變更顯示名稱  
  轉譯延伸模組的顯示名稱會出現在報表工具列的 [匯出] 清單中。 預設顯示名稱的範例包括網頁封存、TIFF 檔案和 Acrobat (PDF) 檔案。 藉著指定組態檔中的 **OverrideNames** 元素，您可以使用自訂的值來取代預設的顯示名稱。 此外，如果您正在定義單一轉譯延伸模組的兩個執行個體，也可以使用 **OverrideNames** 元素在 [匯出] 清單中區分每一個執行個體。  

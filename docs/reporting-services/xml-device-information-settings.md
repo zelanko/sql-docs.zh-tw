@@ -18,11 +18,11 @@ caps.latest.revision: 43
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 9a5af7c3ba8de8f3134e40850524ecfd397faebd
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="xml-device-information-settings"></a>XML 裝置資訊設定
@@ -40,10 +40,10 @@ ms.lasthandoff: 06/22/2017
 |**FileExtension**|使用於產生的檔案之副檔名。||  
 |**結構描述**|值 **true** 表示已轉譯 XML 結構描述。 預設值為 **false**。|指出是否轉譯 XML 結構描述定義 (XSD) 以及是否轉譯實際的 XML 資料。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   
  [將裝置資訊設定傳遞至轉譯延伸模組](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
- [在 RSReportServer.Config 中自訂轉譯延伸模組參數](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
- [技術參考 &#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)  
+ [自訂轉譯延伸模組參數，在 RSReportServer.Config 中](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
+ [技術參考 &#40;SSRS &#41;](../reporting-services/technical-reference-ssrs.md)  
   
   

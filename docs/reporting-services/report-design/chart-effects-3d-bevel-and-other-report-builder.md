@@ -17,11 +17,11 @@ caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: f6d149a116c243fba0587afe1dcf969f9356c57f
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="chart-effects---3d-bevel-and-other-report-builder"></a>圖表效果的 3D、 浮凸和其他 （報表產生器）
@@ -29,7 +29,7 @@ ms.lasthandoff: 06/22/2017
   
  您可以將三維效果套用至個別的圖表，也可以同時在相同報表上顯示二維和三維圖表。  
   
- 您可以針對所有的圖表類型選取 [圖表區域屬性] 對話方塊中的 [啟用 3D]，以對圖表區域加入三維效果。 如需詳細資訊，請參閱 [將 3D 效果加入至圖表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/chart-effects-add-3d-effects-report-builder.md)。  
+ 您可以針對所有的圖表類型選取 [圖表區域屬性] 對話方塊中的 [啟用 3D]，以對圖表區域加入三維效果。 如需詳細資訊，請參閱[將 3D 效果加入至圖表 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/chart-effects-add-3d-effects-report-builder.md).  
   
  另一種對圖表加入視覺效果的方式是在直條圖、橫條圖、圓形圖及環圈圖中加入按鈕形、浮凸和材質樣式。 如需詳細資訊，請參閱[將斜面、浮凸與紋理樣式加入至圖表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md)。  
   
@@ -65,8 +65,8 @@ ms.lasthandoff: 06/22/2017
  您可以透過 **[陰影]** 屬性來反白顯示 3D 圖表的樣式，這個屬性會在您選取圖表區域時顯示在 [屬性] 窗格的 [Area3DStyle] 下方。 簡單的光源樣式會對圖表區域項目套用相同的色調。 真實感的樣式會根據指定的光源角度而變更圖表區域項目的色調。  
   
 ## <a name="see-also"></a>請參閱＜  
- [格式化圖表上的軸標籤 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
- [格式化圖表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
- [將 3D 效果加入至圖表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/chart-effects-add-3d-effects-report-builder.md)  
+ [格式化圖表 &#40; 上的軸標籤報表產生器及 SSRS &#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
+ [格式化圖表 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
+ [將 3D 效果加入至圖表 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/chart-effects-add-3d-effects-report-builder.md)  
   
   

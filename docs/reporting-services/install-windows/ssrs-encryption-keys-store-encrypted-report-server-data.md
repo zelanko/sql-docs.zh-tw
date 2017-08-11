@@ -21,11 +21,11 @@ caps.latest.revision: 9
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 42709e27ef13cadc3be92ce5afcbbf9ea35ab1f7
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="ssrs-encryption-keys---store-encrypted-report-server-data"></a>SSRS 加密金鑰-儲存加密的報表伺服器資料
@@ -66,10 +66,10 @@ ms.lasthandoff: 06/22/2017
  報表伺服器會儲存其他未加密的資料，可能包含您想要保護的機密資訊。 尤其是報表記錄快照集與報表執行快照集所包含的查詢結果，可能包含要供授權使用者使用的資料。 如果您在包含機密資料的報表使用快照集功能，請注意，可以開啟報表伺服器資料庫中之資料表的使用者，就有可能檢查資料表內容來檢視預存報表的部份。  
   
 > [!NOTE]  
->  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 不支援使用以使用者安全性識別為基礎之參數的報表的快取或報表記錄。  
+>  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]不支援快取或報表記錄的報表，您可以使用安全性為基礎的參數識別的使用者。  
   
 ## <a name="see-also"></a>另請參閱  
- [設定和管理加密金鑰 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
+ [設定和管理加密金鑰 &#40;SSRS 組態管理員 &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   
   
 

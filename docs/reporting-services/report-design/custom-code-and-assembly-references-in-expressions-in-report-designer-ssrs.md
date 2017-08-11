@@ -24,11 +24,11 @@ caps.latest.revision: 77
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: dc8491006425de79f8e96be1affb10687a1553f9
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs"></a>報表產生器中運算式的自訂程式碼及組件參考 (SSRS)
@@ -55,14 +55,14 @@ ms.lasthandoff: 06/22/2017
 2.  在本機模式中預覽含有自訂組件之參考的報表。  
   
 ##  <a name="Common"></a> 包含常用函數的參考  
- **[運算式]** 對話方塊可用來檢視 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]一般內建函數的分類清單。 當您展開 **[一般函數]** 並按一下類別目錄時， **[項目]** 窗格就會顯示您包含在運算式中的函數清單。 一般函數包含的類別[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]<xref:System.Math>和<xref:System.Convert>命名空間和[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]執行階段程式庫函式。 為了方便起見，您可以在 **[運算式]** 對話方塊中檢視最常用的函數，這些函數會依類別目錄列出：文字、日期和時間、數學、檢閱、程式流程、彙總、財務、轉換和其他。 較不常用的函數則不會顯示在清單中，但仍可用於運算式。  
+ **[運算式]** 對話方塊可用來檢視 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]一般內建函數的分類清單。 當您展開 **[一般函數]** 並按一下類別目錄時， **[項目]** 窗格就會顯示您包含在運算式中的函數清單。 一般函數包含 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Math> 和 <xref:System.Convert> 命名空間的類別以及 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 執行階段程式庫函數。 為了方便起見，您可以在 **[運算式]** 對話方塊中檢視最常用的函數，這些函數會依類別目錄列出：文字、日期和時間、數學、檢閱、程式流程、彙總、財務、轉換和其他。 較不常用的函數則不會顯示在清單中，但仍可用於運算式。  
   
  若要使用內建函數，請在 [項目] 窗格中的函數名稱上按兩下。 函數的描述會顯示在 [描述] 窗格中，函數呼叫的範例則顯示在 [範例] 窗格中。 當您在程式碼窗格中輸入函數名稱，且其後接著左括號 **(**時，IntelliSense 會協助顯示該函數呼叫的每個有效語法。 例如，若要計算資料表中名為 `Quantity` 欄位的最大值，請將簡單運算式 `=Max(` 加入至 [程式碼] 窗格，然後使用智慧標籤來檢視該函數呼叫的所有有效語法。 若要完成此範例，請輸入 `=Max(Fields!Quantity.Value)`。  
   
- 如需有關每個函式的詳細資訊，請參閱<xref:System.Math>， <xref:System.Convert>，和[Visual Basic 執行階段程式庫成員](http://go.microsoft.com/fwlink/?LinkId=198941)MSDN 上。  
+ 如需每個函數的詳細資訊，請參閱 <xref:System.Math>、 <xref:System.Convert>以及 MSDN 上的 [Visual Basic 執行階段程式庫成員](http://go.microsoft.com/fwlink/?LinkId=198941) 。  
   
 ##  <a name="NotCommon"></a> 包含較少使用函數的參考  
- 若要包含其他較不常使用的 CLR 命名空間的參考，您必須，例如使用完整的參考， <xref:System.Text.StringBuilder>。 在這些較少使用函數的 **[運算式]** 對話方塊的程式碼窗格中，不支援 IntelliSense。  
+ 若要包含其他較少使用之 CLR 命名空間的參考，您必須使用完整的參考，例如， <xref:System.Text.StringBuilder>。 在這些較少使用函數的 **[運算式]** 對話方塊的程式碼窗格中，不支援 IntelliSense。  
   
  如需詳細資訊，請參閱 MSDN 上的 [Visual Basic 執行階段程式庫成員](http://go.microsoft.com/fwlink/?LinkId=198941) 。  
   
@@ -196,11 +196,11 @@ End Function
  由於 *Fields* 和 *ReportItems* 集合的內容可能會在執行階段動態變更，因此您不應將這些不同的呼叫內容保留在自訂組件之中 (例如保留在成員變數中)。 此項建議適用於所有的內建集合。  
   
 ## <a name="see-also"></a>請參閱＜  
- [將程式碼加入至報表 &#40;SSRS&#41;](../../reporting-services/report-design/add-code-to-a-report-ssrs.md)   
- [將自訂組件與報表搭配使用](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)   
- [將組件參考加入至報表 &#40;SSRS&#41;](../../reporting-services/report-design/add-an-assembly-reference-to-a-report-ssrs.md)   
- [Reporting Services 教學課程 &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)   
- [運算式範例 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
+ [將程式碼加入至報表 &#40;SSRS &#41;](../../reporting-services/report-design/add-code-to-a-report-ssrs.md)   
+ [報表中使用自訂組件](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)   
+ [將組件參考加入報表 &#40;SSRS &#41;](../../reporting-services/report-design/add-an-assembly-reference-to-a-report-ssrs.md)   
+ [Reporting Services 教學課程和 &#40。SSRS &#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)   
+ [運算式範例 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [報表範例 (報表產生器和 SSRS)](http://go.microsoft.com/fwlink/?LinkId=198283)  
   
   

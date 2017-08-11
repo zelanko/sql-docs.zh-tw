@@ -15,11 +15,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d688ed124a419017e97d405d7f5bd80e6e3bf530
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="page-layout-and-rendering-report-builder-and-ssrs"></a>頁面配置和轉譯 (報表產生器及 SSRS)
@@ -52,11 +52,11 @@ ms.lasthandoff: 06/22/2017
  報表可以合併多個頁面，每一個頁面上都有重複的頁首和頁尾。 報表可以包含類似影像和線條的圖形元素，也可以有多種字型、色彩和樣式 (可以根據運算式)。  
   
 ##  <a name="ReportSections"></a> 報表區段  
- 報表是由三個主要區段所組成：選擇性頁首、選擇性頁尾和報表主體。 報表頁首和頁尾不是報表的個別區段，而是由放置於報表主體頂端和底部的報表項目所組成。 頁首和頁尾會在每個報表頁面的上方和底部重複相同的內容。 您可以將影像、文字方塊和線條放在頁首和頁尾中。 您也可以將所有類型的報表項目都放在報表主體中。  
+ 報表是由三個主要區段所組成：選擇性頁首、選擇性頁尾和報表主體。 *報表*頁首和頁尾不是報表的個別區段，但而不是由位於頂端和報表主體底端的報表項目所組成。 頁首和頁尾會在每個報表頁面的上方和底部重複相同的內容。 您可以將影像、文字方塊和線條放在頁首和頁尾中。 您也可以將所有類型的報表項目都放在報表主體中。  
   
  您可以在報表項目上設定屬性，即可一開始在頁面上隱藏或顯示這些項目。 您可以在資料列或資料行或是資料區的群組上設定可見性屬性，並提供切換按鈕讓使用者以互動方式顯示或隱藏報表資料。 您可以使用運算式 (包括了根據報表參數的運算式) 來設定可見性或初始可見性。  
   
- 當處理報表時，報表資料會結合報表配置元素，而已結合的資料則會傳送到報表轉譯器。 此轉譯器遵循報表項目展開的預先定義規則，而且可決定每個頁面所容納的資料量。 若要設計容易閱讀的報表，並針對您打算使用的轉譯器最佳化此報表，您應該了解用於控制 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中之分頁的規則。 如需詳細資訊，請參閱 [Reporting Services 中的分頁 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)。  
+ 當處理報表時，報表資料會結合報表配置元素，而已結合的資料則會傳送到報表轉譯器。 此轉譯器遵循報表項目展開的預先定義規則，而且可決定每個頁面所容納的資料量。 若要設計容易閱讀的報表，並針對您打算使用的轉譯器最佳化此報表，您應該了解用於控制 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中之分頁的規則。 如需詳細資訊，請參閱 [Reporting Services 中的分頁 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)。  
   
 ##  <a name="RenderingExtensions"></a> 轉譯器  
  Reporting Services 包含一組轉譯器 (也稱為轉譯延伸模組)，您可以使用這組轉譯器將報表匯出為不同的格式。 轉譯器有三種類型：  
@@ -92,7 +92,7 @@ ms.lasthandoff: 06/22/2017
   
  當您使用 **軟分頁** 轉譯延伸模組 (例如，HTML 轉譯延伸模組) 時，您可能想要知道報表列印後的外觀，同時也想知道使用 PDF 之類的手動分頁轉譯器的效果如何。 在建立或更新報表期間，您可以在報表產生器和報表設計師中預覽並匯出該報表。  
   
- **手動分頁**轉譯器對於報表版面配置與實際頁面大小擁有最大的影響力。 若要深入了解，請參閱 [Reporting Services 中的分頁 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)。  
+ **手動分頁** 轉譯器對於報表版面配置與實際頁面大小擁有最大的影響力。 若要深入了解，請參閱 [Reporting Services 中的分頁 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)。  
    
 ##  <a name="HowTo"></a> 如何主題  
  本節列出的程序可以為您逐步示範如何在報表中使用分頁。  

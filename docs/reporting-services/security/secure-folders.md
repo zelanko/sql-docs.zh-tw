@@ -20,11 +20,11 @@ caps.latest.revision: 34
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5aad5bbe0b53e2e6669df93496795f4c5b6a3bca
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="secure-folders"></a>保護資料夾的安全
@@ -48,8 +48,8 @@ ms.lasthandoff: 06/22/2017
 |設定項目安全性|建立和修改控制資料夾之存取的角色指派。 此工作必須用於「檢視資料夾」或「管理資料夾」。 若不這麼做，使用者將無法選取項目，而不會產生任何影響。|  
   
 ## <a name="see-also"></a>請參閱＜  
- [保護報表和資源的安全](../../reporting-services/security/secure-reports-and-resources.md)   
- [保護共用資料來源項目的安全](../../reporting-services/security/secure-shared-data-source-items.md)   
- [在原生模式報表伺服器上授與權限](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
+ [保護報表和資源](../../reporting-services/security/secure-reports-and-resources.md)   
+ [安全的共用的資料來源項目](../../reporting-services/security/secure-shared-data-source-items.md)   
+ [授與原生模式報表伺服器上的權限](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   
   

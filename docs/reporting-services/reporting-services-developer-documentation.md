@@ -21,11 +21,11 @@ caps.latest.revision: 21
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 3704373a08b29a8f36ce843db5f67a860a04a47b
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="reporting-services-developer-documentation"></a>Reporting Services 開發人員文件集
@@ -52,14 +52,14 @@ ms.lasthandoff: 06/22/2017
  [自訂報表項目](../reporting-services/custom-report-items/custom-report-items.md)  
  描述如何建立自訂報表項目，將功能加入現有控制項的 RDL 或是擴充功能。  
   
- [報表中使用自訂組件](../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)  
+ [將自訂組件與報表搭配使用](../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)  
  描述如何在報表定義中包括程式碼參考，將自訂組件與報表搭配使用。  
   
  [存取 Reporting Services WMI 提供者](../reporting-services/tools/access-the-reporting-services-wmi-provider.md)  
  描述如何使用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] WMI 提供者來管理報表伺服器部署。  
   
 ## <a name="see-also"></a>另請參閱  
- [Reporting Services &#40;SSRS&#41;](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)   
+ [Reporting Services &#40;SSRS &#41;](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)   
  [報表定義語言 &#40;SSRS &#41;](../reporting-services/reports/report-definition-language-ssrs.md)   
  [技術參考 &#40;SSRS &#41;](../reporting-services/technical-reference-ssrs.md)   
  [安全開發 &#40;Reporting Services &#41;](../reporting-services/extensions/secure-development/secure-development-reporting-services.md)  

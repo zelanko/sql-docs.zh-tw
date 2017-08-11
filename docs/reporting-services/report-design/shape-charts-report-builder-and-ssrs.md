@@ -15,11 +15,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 84ee7a9030bb27725994a33860b26b8754034cd9
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="shape-charts-report-builder-and-ssrs"></a>形狀圖 (報表產生器及 SSRS)
@@ -46,9 +46,9 @@ ms.lasthandoff: 06/22/2017
   
 -   形狀圖在按照排序順序顯示成比例的百分比時最有效。 不過，為了維持一致性，圖表預設不會排序資料集中的值。 若要最精確地將資料表示成漏斗圖或金字塔圖，請考慮從最高至最低排序值。 如需詳細資訊，請參閱[篩選、分組和排序資料 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)。  
   
--   計算比例時，Null、空值、負值與零值沒有效用。 因此，這些值不會顯示在形狀圖上。 如果您要在圖表上，以視覺方式表示這些值的類型，請將圖表類型變更為形狀圖之外的其他類型。 如需如何將空點加入非形狀圖中的詳細資訊，請參閱[將空點加入至圖表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-empty-points-to-a-chart-report-builder-and-ssrs.md)。  
+-   計算比例時，Null、空值、負值與零值沒有效用。 因此，這些值不會顯示在形狀圖上。 如果您要在圖表上，以視覺方式表示這些值的類型，請將圖表類型變更為形狀圖之外的其他類型。 如需如何將空點加入至非形狀圖的詳細資訊，請參閱[圖表 &#40; 加入空點報表產生器及 SSRS &#41;](../../reporting-services/report-design/add-empty-points-to-a-chart-report-builder-and-ssrs.md).  
   
--   如果您要在形狀圖上使用自訂調色盤定義自己的色彩，請確認您的調色盤上有足夠的色彩，才能以其獨特的色彩反白顯示每個資料點。 如需詳細資訊，請參閱[格式化圖表上的數列色彩 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)。  
+-   如果您要在形狀圖上使用自訂調色盤定義自己的色彩，請確認您的調色盤上有足夠的色彩，才能以其獨特的色彩反白顯示每個資料點。 如需詳細資訊，請參閱 [設定圖表上數列色彩的格式 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)。  
   
 -   形狀圖不像其他所有的圖表類型，它會在其圖例中顯示個別的資料點，而不會顯示個別的數列。  
   
@@ -56,12 +56,12 @@ ms.lasthandoff: 06/22/2017
   
 -   形狀圖類型無法與相同圖表區域中的其他任何圖表類型結合。 如果您必須顯示形狀圖顯示之資料以及其他圖表類型顯示之資料間的比較，您必須加入另一個圖表區域。  
   
--   您可以在圓形圖和環圈圖上套用其他繪製樣式來增加視覺效果。 如需詳細資訊，請參閱[格式化圖表上的數列色彩 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)。  
+-   您可以在圓形圖和環圈圖上套用其他繪製樣式來增加視覺效果。 請參閱[格式化圖表 &#40; 上的數列色彩報表產生器及 SSRS &#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)如需詳細資訊。  
   
 ## <a name="see-also"></a>另請參閱  
- [圖表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [格式化圖表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
- [圖表中的空白和 Null 資料點 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
- [圓形圖 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)  
+ [圖表 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [格式化圖表 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
+ [空白和 Null 資料點中圖表 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
+ [圓形圖 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)  
   
   

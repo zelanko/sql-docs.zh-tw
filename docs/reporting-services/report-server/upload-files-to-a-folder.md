@@ -23,11 +23,11 @@ caps.latest.revision: 42
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b4a7d4a5babf6789baa551f808b840c469dfa31a
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="upload-files-to-a-folder"></a>上傳檔案到資料夾
@@ -44,13 +44,13 @@ ms.lasthandoff: 06/22/2017
   
  您上傳至報表伺服器資料庫的檔案，在資料夾階層中會使用下列圖示進行視覺化表示。  
   
- ![Report icon](../../reporting-services/report-server/media/hlp-16doc.gif "Report icon")  
+ ![報表圖示](../../reporting-services/report-server/media/hlp-16doc.gif "報表圖示")  
 報表圖示  
   
- ![模型圖示](../../reporting-services/report-server/media/model-icon.gif "Model icon")  
+ ![模型圖示](../../reporting-services/report-server/media/model-icon.gif "模型圖示")  
 報表模型圖示  
   
- ![一般資源圖示](../../reporting-services/report-server/media/hlp-16file.gif "generic resource icon")  
+ ![一般資源圖示](../../reporting-services/report-server/media/hlp-16file.gif "一般資源圖示")  
 一般資源圖示  
   
  上傳檔案時，檔案永遠會放在目前所選取的資料夾中。 您可以先導覽至要包含項目的資料夾，或是上傳檔案然後再移動到最終位置。  
@@ -64,9 +64,9 @@ ms.lasthandoff: 06/22/2017
 |檢視資料夾的內容|檢視資源、檢視報表|  
   
 ## <a name="see-also"></a>請參閱＜  
- [報表管理員 &#40;SSRS 原生模式&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
- [在原生模式報表伺服器上授與權限](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
+ [報表管理員 &#40;SSRS 原生模式 &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [授與原生模式報表伺服器上的權限](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
  [工作和權限](../../reporting-services/security/tasks-and-permissions.md)   
- [上傳檔案或報表 &#40;報表管理員&#41;](../../reporting-services/reports/upload-a-file-or-report-report-manager.md)  
+ [上傳檔案或報表 &#40;報表管理員 &#41;](../../reporting-services/reports/upload-a-file-or-report-report-manager.md)  
   
   

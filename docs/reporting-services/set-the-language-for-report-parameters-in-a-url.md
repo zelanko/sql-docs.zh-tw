@@ -22,11 +22,11 @@ caps.latest.revision: 29
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 815af671e5bd26445153b96f68ebcbaf0e972cf7
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="set-the-language-for-report-parameters-in-a-url"></a>設定 URL 中報表參數的語言
@@ -47,7 +47,7 @@ http://myrshost/Reportserver?/SampleReports/Product+Line+Sales&rs:Command=Render
  除了 URL 存取參數 **rc:Parameters** 的 **true** 和 *false*值之外，您現在可以傳遞 **Collapsed**的值。 在 URL 上使用 *rc:Parameters*=**Collapsed** 時，會摺疊 HTML 檢視器的參數提示區域使其看不到，但是使用者仍然可以切換它。 值為 **false** 時，會從 HTML 檢視器工具列移除參數提示區域，並使其無法供使用者使用。  
   
 ## <a name="see-also"></a>請參閱＜  
- [URL 存取 &#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)   
+ [URL 存取 &#40;SSRS &#41;](../reporting-services/url-access-ssrs.md)   
  [URL 存取參數參考](../reporting-services/url-access-parameter-reference.md)  
   
   

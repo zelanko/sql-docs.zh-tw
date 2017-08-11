@@ -9,6 +9,8 @@ ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- sql13.dts.designer.ftpconnectionmanager.f1
 helpviewer_keywords:
 - FTP connection manager
 - connections [Integration Services], FTP
@@ -19,10 +21,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 04cc47e64fbbaec3f1e1df9216ead850efa75b90
+ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
+ms.openlocfilehash: 051dc7db2ef8aa475fa8739b097edd93d8286524
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="ftp-connection-manager"></a>FTP 連接管理員
@@ -59,9 +61,45 @@ ms.lasthandoff: 08/03/2017
   
  如需可在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中設定之屬性的資訊，請參閱 [FTP 連線管理員編輯器](../../integration-services/connection-manager/ftp-connection-manager-editor.md)。  
   
- 如需以程式設計方式設定連線管理員的資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 和 [以程式設計方式加入連線](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)。  
+ 如需以程式設計方式設定連線管理員的相關資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 和 [以程式設計方式加入連接](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="ftp-connection-manager-editor"></a>FTP 連線管理員編輯器
+  使用 [FTP 連線管理員編輯器] 對話方塊來指定連接到 FTP 伺服器的屬性。  
+  
+> [!IMPORTANT]  
+>  FTP 連線管理員僅支援匿名驗證和基本驗證， 而不支援 Windows 驗證。  
+  
+ 若要深入了解 FTP 連線管理員，請參閱 [FTP 連線管理員](../../integration-services/connection-manager/ftp-connection-manager.md)。  
+  
+### <a name="options"></a>選項。  
+ **伺服器名稱**  
+ 提供 FTP 伺服器的名稱。  
+  
+ **伺服器通訊埠**  
+ 指定 FTP 伺服器上用來連接的通訊埠編號。 這個屬性的預設值為 **21**。  
+  
+ **使用者名稱**  
+ 提供存取 FTP 伺服器的使用者名稱。 這個屬性的預設值為 **匿名**。  
+  
+ **密碼**  
+ 提供存取 FTP 伺服器的密碼。  
+  
+ **逾時 (以秒為單位)**  
+ 指定工作在逾時之前所花的秒數。 值為 **0** 指出無限的時間量。 這個屬性的預設值為 **60**。  
+  
+ **使用被動模式**  
+ 指定伺服器或用戶端是否起始連接。 伺服器會以主動模式起始連接，而用戶端則會以被動模式啟動連接。 此屬性的預設值為 **主動模式**。  
+  
+ **重試次數**  
+ 指定工作嘗試連接的次數。 值為 **0** 指出不限制嘗試次數。  
+  
+ **區塊大小 (以 KB 為單位)**  
+ 提供以 KB 為單位的傳輸資料區塊大小。  
+  
+ **測試連接**  
+ 設定 FTP 連線管理員之後，請按一下 [測試連接] 以確認連接是可行的。  
+  
+## <a name="see-also"></a>另請參閱  
  [FTP 工作](../../integration-services/control-flow/ftp-task.md)   
  [Integration Services &#40;SSIS &#41;連線](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
   

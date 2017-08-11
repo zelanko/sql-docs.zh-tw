@@ -15,11 +15,11 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 75444343968c9901a24c1a4d431d4d8cfacb1567
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="add-move-or-delete-a-text-box-report-builder-and-ssrs"></a>加入、移動或刪除文字方塊 (報表產生器及 SSRS)
@@ -76,8 +76,8 @@ ms.lasthandoff: 06/22/2017
     >  如果您在文字方塊中按一下並且處於編輯模式，請按下 ESC 來選取文字方塊。  
   
 ## <a name="see-also"></a>請參閱＜  
- [文字方塊 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)   
- [運算式 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [鍵盤快速鍵 &#40;報表產生器&#41;](../../reporting-services/report-builder/keyboard-shortcuts-report-builder.md)  
+ [文字方塊 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)   
+ [運算式 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
+ [鍵盤快速鍵 &#40;報表產生器 &#41;](../../reporting-services/report-builder/keyboard-shortcuts-report-builder.md)  
   
   

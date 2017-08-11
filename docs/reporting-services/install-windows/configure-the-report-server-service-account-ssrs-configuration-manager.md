@@ -14,21 +14,21 @@ caps.latest.revision: 14
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3e1fde5db0ebdf332d82cdb7269342aea036ec61
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="configure-the-report-server-service-account-ssrs-configuration-manager"></a>設定報表伺服器服務帳戶 (SSRS 組態管理員)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會實作成單一服務，其中包含報表伺服器 Web 服務、 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]，以及用於排程報表處理和訂閱傳遞的背景處理應用程式。 本主題將說明如何在一開始設定服務帳戶，以及如何使用 Reporting Services 組態工具來修改此帳戶或密碼。  
   
 ## <a name="initial-configuration"></a>初始組態  
- 報表伺服器服務帳戶是在安裝期間所定義。 您可以在網域使用者帳戶或內建帳戶 (例如**虛擬服務帳戶**) 之下執行此服務。 沒有預設帳戶；您在安裝精靈的 [服務帳戶] 頁面中指定的任何帳戶都會成為報表伺服器服務的初始帳戶。  
+ 報表伺服器服務帳戶是在安裝期間所定義。 您可以在網域使用者帳戶或內建帳戶 (例如 **虛擬服務帳戶**) 之下執行此服務。 沒有預設帳戶;您在中指定任何帳戶**服務帳戶**安裝精靈頁面都會成為報表伺服器服務的初始帳戶。  
   
 > [!IMPORTANT]  
->  雖然報表伺服器 Web 服務和[!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]為個別的 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 應用程式，但是它們會在同一個報表伺服器處理序識別內的單一服務架構下執行。  
+>  雖然報表伺服器 Web 服務和 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] 為個別的 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 應用程式，但是它們會在同一個報表伺服器處理序識別內的單一服務架構下執行。  
   
 > [!NOTE]  
 >  不支援使用內建 Windows 服務帳戶 (本機服務或網路服務) 做為屬於網域控制站之電腦上的報表伺服器服務帳戶。  
@@ -40,7 +40,7 @@ ms.lasthandoff: 06/22/2017
   
 -   自動更新用來主控報表伺服器資料庫之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體的登入權限。 新的帳戶會加入至 **RSExecRole**。  
   
-     舊帳戶的資料庫登入將不會自動移除。 請務必移除不再使用的帳戶。 如需詳細資訊，請參閱《SQL Server 線上叢書》中的[管理報表伺服器資料庫 &#40;SSRS 原生模式&#41;](../../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md)。  
+     舊帳戶的資料庫登入將不會自動移除。 請務必移除不再使用的帳戶。 如需詳細資訊，請參閱[管理報表伺服器資料庫 &#40;SSRS 原生模式 &#41;](../../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md)中 SQL Server 線上叢書。  
   
      只有在一開始設定報表伺服器資料庫連接使用新的服務帳戶，才能將資料庫權限授與這個服務帳戶。 如果您設定報表伺服器資料庫連接使用網域使用者帳戶或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫登入，則連接資訊將不會受到服務帳戶更新的影響。  
   
@@ -76,7 +76,7 @@ ms.lasthandoff: 06/22/2017
 |-------------|-----------------|  
 |網域使用者帳戶|如果您的 Windows 網域使用者帳戶具有報表伺服器作業所需的最低權限，您應該使用此帳戶。<br /><br /> 建議使用網域使用者帳戶，因為它會將報表伺服器服務與其他應用程式隔離。 在共用帳戶 (如網路服務) 下執行多個應用程式增加了惡意使用者控管報表伺服器的風險，因為任何一個應用程式的安全性缺口都可輕易地延伸到在相同帳戶下執行的所有應用程式。<br /><br /> 請注意，如果您使用網域使用者帳戶，則當您的組織強制實施密碼到期原則時，您將必須定期變更密碼。 您也可能需要使用此使用者帳戶來註冊服務。 如需詳細資訊，請參閱[為報表伺服器註冊服務主體名稱 &#40;SPN&#41;](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md)。<br /><br /> 避免使用本機 Windows 使用者帳戶。 本機帳戶通常沒有足夠的權限可存取其他電腦上的資源。 如需使用本機帳戶如何限制報表伺服器功能的詳細資訊，請參閱本主題中的 [使用本機帳戶的考量](#localaccounts) 。|  
 |**虛擬服務帳戶**|[虛擬服務帳戶] 代表 Windows 服務。 它是權限最低的內建帳戶，具有網路登入權限。 如果您沒有可用的網域使用者帳戶，或是您想要避免因密碼逾期原則所可能產生的任何服務中斷，則建議您使用此帳戶。|  
-|**網路服務**|[網路服務] 是權限最低的內建帳戶，具有網路登入權限。 <br /><br /> 如果您選取 [網路服務]，請嘗試將相同帳戶下執行的其他服務數目降到最低。 任何一個應用程式的安全性缺口都將危害相同帳戶下執行之所有其他應用程式的安全。|  
+|**網路服務**|[網路服務] 是權限最低的內建帳戶，具有網路登入權限。 <br /><br /> 如果您選取 **[網路服務]**，請嘗試將相同帳戶下執行的其他服務數目降到最低。 任何一個應用程式的安全性缺口都將危害相同帳戶下執行之所有其他應用程式的安全。|  
 |**本機服務**|**[本機服務]** 是一個內建帳戶，類似於經過驗證的本機 Windows 使用者帳戶。 以 **[本機服務]** 帳戶身分執行的服務會以不含認證的 Null 工作階段來存取網路資源。 此帳戶不適合內部網路部署狀況，在此狀況下，報表伺服器必須連接到遠端報表伺服器資料庫或網域控制站，才能在開啟報表或處理訂閱之前先驗證使用者。|  
 |**本機系統**|**[本機系統]** 是具有高權限的帳戶，執行報表伺服器不需要使用它。 請避免使用此帳戶進行報表伺服器安裝。 請改為選擇網域帳戶或 **[網路服務]** 。|  
   
@@ -113,5 +113,5 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>另請參閱  
  [設定報表伺服器 URL &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
- [Reporting Services 組態管理員 &#40;原生模式&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)
+ [Reporting Services 組態管理員 &#40;原生模式 &#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)
 
