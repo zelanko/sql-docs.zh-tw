@@ -15,11 +15,11 @@ caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: dcd1af4aee2c0267f1443d87d80be1e3cc2ad8b3
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs"></a>將展開或摺疊動作加入項目中 (報表產生器及 SSRS)
@@ -40,14 +40,14 @@ ms.lasthandoff: 06/22/2017
   
      如果未顯示 [群組] 窗格，請按一下[檢視]  功能表，然後按一下 [群組] 。  
   
-2.  以滑鼠右鍵按一下 [群組] 窗格標題列的任意位置，然後按一下 [進階]。 [群組] 窗格模式會切換以便在設計介面上，顯示資料列和資料行的基礎顯示結構。  
+2.  以滑鼠右鍵按一下 群組 窗格中，標題列中的任何位置，然後按一下 **進階**。 [群組] 窗格模式會切換以便在設計介面上，顯示資料列和資料行的基礎顯示結構。  
   
      ![群組窗格及 [進階模式] 功能表](../../reporting-services/report-design/media/groupingpane-advancedmode.png "使用進階模式功能表的 [群組] 窗格")  
   
 3.  在適當的群組窗格中，按一下您要隱藏相關聯資料列或資料行之資料列群組或資料行群組的名稱。 群組選定之後，[屬性] 窗格會顯示 **[Tablix 成員]** 屬性。  
   
     > [!NOTE]  
-    >  如果看不到 [屬性] 窗格，請按一下功能區上的 [檢視]，然後按一下 [屬性]。  
+    >  如果看不到 屬性 窗格，按一下 **檢視** 功能區，然後按一下 **屬性**。  
   
 4.  在 **[隱藏]**中，選擇下列其中一個選項來設定第一次執行報表時，此報表項目的可見性：  
   
@@ -82,12 +82,12 @@ ms.lasthandoff: 06/22/2017
   
     -   選取 **[隱藏]** 來隱藏報表項目。  
   
-    -   選取 **[依據運算式顯示或隱藏]** ，使用在執行階段評估的運算式來決定可見性。 按一下 (**fx**) 開啟 [運算式] 對話方塊，即可建立運算式。  
+    -   選取 **[依據運算式顯示或隱藏]** ，使用在執行階段評估的運算式來決定可見性。 按一下 (**fx**) 若要開啟**運算式**對話方塊，即可建立運算式。  
   
         > [!NOTE]  
         >  當您指定可見性的運算式時，會設定報表項目的 Hidden 屬性。 運算式會評估為 **Boolean** 值 **True** 來隱藏項目，以及 **False** 來顯示項目。  
   
-4.  在 [此報表項目可以切換顯示] 中，從下拉式方塊輸入或選取報表中要顯示切換影像的文字方塊名稱；例如 Textbox1。  
+4.  在**此報表項目可以切換顯示**，從下拉式清單方塊中，輸入或選取要在其中顯示一個切換影像; 報表中的文字方塊中的名稱，例如 Textbox1。  
   
      在下圖中，資料表已設定為讓使用者可展開及摺疊該資料表。 [Products 資料表] 文字方塊可以切換資料表的顯示。  
   
@@ -102,6 +102,6 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>另請參閱  
  [向下鑽研動作 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/drilldown-action-report-builder-and-ssrs.md)   
- [隱藏項目 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/hide-an-item-report-builder-and-ssrs.md)  
+ [隱藏項目 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-builder/hide-an-item-report-builder-and-ssrs.md)  
   
   

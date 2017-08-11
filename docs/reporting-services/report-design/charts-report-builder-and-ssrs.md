@@ -25,11 +25,11 @@ caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: d7c46a132a6d559e6299910d6b2e4e117e650f45
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="charts-report-builder-and-ssrs"></a>圖表 (報表產生器及 SSRS)
@@ -55,7 +55,7 @@ ms.lasthandoff: 06/22/2017
 ##  <a name="SimilarMatrix"></a>圖表方式就像是矩陣  
  考慮圖表如何運作的其中一種方法是比較圖表與矩陣。  
   
- ![從 [工具箱] 中，選取 加入新的矩陣](../../reporting-services/report-design/media/rs-matrixtemplatenewselected.gif "新矩陣從工具箱新增選取")  
+ ![從 [工具箱] 中，選取加入新的矩陣](../../reporting-services/report-design/media/rs-matrixtemplatenewselected.gif "新矩陣從工具箱新增選取")  
   
  在概念上，組織是相同的：  
   
@@ -144,10 +144,10 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>請參閱＜  
  [影像、文字方塊、矩形和線條 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/images-text-boxes-rectangles-and-lines-report-builder-and-ssrs.md)   
- [互動式排序、文件引導模式及連結 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
- [巢狀資料區 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)   
- [教學課程：將直條圖加入至報表 &#40;報表產生器&#41;](../../reporting-services/tutorial-add-a-column-chart-to-your-report-report-builder.md)   
- [教學課程：將圓形圖加入至報表 &#40;報表產生器&#41;](../../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
- [教學課程：將橫條圖加入至報表 &#40;報表產生器&#41;](../../reporting-services/tutorial-add-a-bar-chart-to-your-report-report-builder.md)  
+ [互動式排序、 文件引導模式及連結 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
+ [巢狀的資料區 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)   
+ [教學課程： 將直條圖加入至您的報表 &#40;報表產生器 &#41;](../../reporting-services/tutorial-add-a-column-chart-to-your-report-report-builder.md)   
+ [教學課程：將圓形圖新增至報表 &#40;報表產生器&#41;](../../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
+ [教學課程： 將橫條圖加入至您的報表 &#40;報表產生器 &#41;](../../reporting-services/tutorial-add-a-bar-chart-to-your-report-report-builder.md)  
   
   

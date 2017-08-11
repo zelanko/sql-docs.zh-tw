@@ -21,11 +21,11 @@ caps.latest.revision: 37
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: f989ec80fe80d85381673cb12a90b8e3cea82da4
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="define-parameters-in-the-mdx-query-designer-for-analysis-services"></a>在 Analysis Services 的 MDX 查詢設計工具中定義參數
@@ -87,7 +87,7 @@ ms.lasthandoff: 06/22/2017
      若要檢視可為報表參數提供可用值的資料集，請以滑鼠右鍵按一下 [報表資料] 窗格中的空白區，然後按一下 **[顯示隱藏的資料集]**。 [報表資料] 窗格會顯示報表中的所有資料集。  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 的 Analysis Services 連接類型 &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md)   
+ [MDX &#40; analysis Services 連接類型SSRS &#41;](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md)   
  [Analysis Services MDX 查詢設計工具使用者介面](../../reporting-services/report-data/analysis-services-mdx-query-designer-user-interface.md)  
   
   
