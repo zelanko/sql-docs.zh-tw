@@ -25,10 +25,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 76839e39427e24688609353b8708d59fee772d28
-ms.openlocfilehash: b93591eb1d0f34b792adc6f2c998dbfdd9fca4b5
+ms.sourcegitcommit: 01f20dd99963b0bb1be86ddc3e173aef6fb3e8b3
+ms.openlocfilehash: 8558691157d6a4f2fe705df236c0701f8bc1bf6c
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>SQL Server 的最大容量規格
@@ -71,7 +71,7 @@ ms.lasthandoff: 07/31/2017
 |每個非寬型資料表的資料行數||1,024||  
 |每個寬型資料表的資料行數||30,000||  
 |每個 SELECT 陳述式的資料行數||4,096||  
-|每個 INSERT 陳述式的資料行數||4096||  
+|每個 INSERT 陳述式的資料行數||4,096||  
 |每個用戶端的連接數目||已設定之連接的最大值||  
 |資料庫大小||524,272 TB||  
 |每個 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]||32,767||  
