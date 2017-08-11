@@ -25,14 +25,14 @@ helpviewer_keywords:
 - extensions [Reporting Services], device information settings
 ms.assetid: fe718939-7efe-4c7f-87cb-5f5b09caeff4
 caps.latest.revision: 47
-author: sabotta
+author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: da897abf38fb1c6e89178a9314189890b88eab87
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: dfbc65590c676278c89ca2646dae0d347abcd3ee
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="passing-device-information-settings-to-rendering-extensions"></a>將裝置資訊設定傳遞至轉譯延伸模組
@@ -49,7 +49,7 @@ ms.lasthandoff: 06/13/2017
 </DeviceInfo>  
 ```  
   
- 當報表轉譯為 HTML 片段時，報表的內容會包含在 TABLE 元素內，而不會使用 HTML 或 BODY 元素。 您可以使用 HTML 片段來將報表整合到現有的 HTML 文件中。 如需有關 HTML 輸出的裝置資訊設定的詳細資訊，請參閱[HTML Device Information Settings](../../../reporting-services/html-device-information-settings.md)。  
+ 當報表轉譯為 HTML 片段時，報表的內容會包含在 TABLE 元素內，而不會使用 HTML 或 BODY 元素。 您可以使用 HTML 片段來將報表整合到現有的 HTML 文件中。 如需有關 HTML 輸出的裝置資訊設定的詳細資訊，請參閱＜ [HTML Device Information Settings](../../../reporting-services/html-device-information-settings.md)＞。  
   
 ## <a name="passing-device-information-using-url-access"></a>使用 URL 存取傳遞裝置資訊  
  您也可以透過 URL 存取來傳遞裝置資訊設定。 裝置資訊設定會當做 URL 參數傳遞。 下列的 URL 存取字串可以傳遞至報表伺服器以產生轉譯的報表 (沒有 HTML 檢視器工具列)。  
@@ -62,7 +62,7 @@ http://<Server Name>/reportserver?/SampleReports/Sales Order Detail&rs:Command=R
   
 ## <a name="see-also"></a>另請參閱  
  [轉譯延伸模組 &#40; 裝置資訊設定Reporting Services &#41;](../../../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md)   
- [在 RSReportServer.Config 中自訂轉譯延伸模組參數](../../../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
+ [自訂轉譯延伸模組參數，在 RSReportServer.Config 中](../../../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
  [使用 Web 服務和.NET Framework 建置應用程式](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)  
   
   

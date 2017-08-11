@@ -19,7 +19,7 @@ caps.latest.revision: 31
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: a09ebdeda6679c80f3eb32602d38068114e7bf36
 ms.contentlocale: zh-tw
@@ -35,7 +35,7 @@ ms.lasthandoff: 08/09/2017
   
  ![報表產生器快速圓形圖](../../reporting-services/report-builder/media/report-builder-quick-pie-chart.png "快速圓形圖報表產生器")  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>필수 구성 요소  
  不論您使用的 XML 資料或[!INCLUDE[tsql](../../includes/tsql-md.md)]查詢，您需要具備存取報表產生器。 您可以在原生模式或 SharePoint 整合模式中從 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 報表伺服器啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，或者從 Microsoft 下載中心下載 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 。 如需詳細資訊，請參閱 [安裝報表產生器](../../reporting-services/install-windows/install-report-builder.md)。  
   
 ##  <a name="TwoWays"></a> 進行此教學課程的兩種方式  
@@ -70,21 +70,21 @@ ms.lasthandoff: 08/09/2017
   
 2.  在左窗格中，確認已選取 **[新增報表]** 。  
   
-3.  在右窗格中按一下 [圖表精靈]，然後按一下 [建立]。  
+3.  在右窗格中，按一下 **圖表精靈**，然後按一下 **建立**。  
   
-4.  在 [選擇資料集] 頁面中按一下 [建立資料集]，然後按一下 [下一步]。  
+4.  在**選擇資料集**頁面上，按一下**建立資料集**，然後按一下 **下一步**。  
   
-5.  在 [選擇與資料來源的連接] 頁面中，按一下 [新增]。  
+5.  在**選擇資料來源的連接**頁面上，按一下**新增**。  
   
      **[資料來源屬性]** 對話方塊隨即開啟。  
   
-6.  您可以將資料來源命名為任何想要的名稱。 在 [名稱] 方塊中，輸入 **MyPieChart**。  
+6.  您可以將資料來源命名為任何想要的名稱。 在**名稱**方塊中，輸入**MyPieChart**。  
   
-7.  在 [選取連接類型] 方塊中，按一下 [XML]。  
+7.  在**選取連接類型**方塊中，按一下**XML**。  
   
-8.  按一下 [認證] 索引標籤，並選取 [使用目前的 Windows 使用者。可能需要 Kerberos 委派]，然後按一下 [確定]。  
+8.  按一下**認證**索引標籤上，選取**使用目前的 Windows 使用者。可能需要 Kerberos 委派**，然後按一下 **確定**。  
   
-9. 在 [選擇與資料來源的連接] 頁面中，按一下 [MyPieChart]，然後按一下 [下一步]。  
+9. 在**選擇資料來源的連接**頁面上，按一下**MyPieChart**，然後按一下 **下一步**。  
   
 10. 複製下列文字並貼入 [設計查詢] 頁面頂端的大型方塊中。  
   
@@ -156,11 +156,11 @@ ms.lasthandoff: 08/09/2017
   
 2.  在左窗格中，確認已選取 **[新增報表]** 。  
   
-3.  在右窗格中按一下 [圖表精靈]，然後按一下 [建立]。  
+3.  在右窗格中，按一下 **圖表精靈**，然後按一下 **建立**。  
   
-4.  在 [選擇資料集] 頁面中按一下 [建立資料集]，然後按一下 [下一步]。  
+4.  在**選擇資料集**頁面上，按一下**建立資料集**，然後按一下 **下一步**。  
   
-5.  在 [選擇與資料來源的連接] 頁面中，選取現有的資料來源，或瀏覽至報表伺服器並選取資料來源，然後按一下 [下一步]。 您可能需要輸入使用者名稱和密碼。  
+5.  在**選擇資料來源的連接**頁面上，選取現有的資料來源或瀏覽至報表伺服器並選取資料來源，然後按一下**下一步**。 您可能需要輸入使用者名稱和密碼。  
   
     > [!NOTE]  
     >  只要您有適當的權限，選擇哪一種資料來源都無關緊要。 因為您不會從資料來源取得資料。 如需詳細資訊，請參閱[教學課程的必要條件 &#40;報表產生器&#41;](../../reporting-services/prerequisites-for-tutorials-report-builder.md)。  
@@ -196,7 +196,7 @@ ms.lasthandoff: 08/09/2017
 15. 若要查看實際的圓形圖，請在功能區的 [主資料夾] 索引標籤上，按一下 [執行]。  
  
 ##  <a name="AfterWizard"></a> 執行精靈之後  
- 既然您已經擁有圓形圖報表，就可以開始處理它。 在 [功能區] 的 [執行] 索引標籤上，按一下 [設計]，即可繼續修改。  
+ 既然您已經擁有圓形圖報表，就可以開始處理它。 在**執行** 索引標籤的 功能區中，按一下 **設計**，因此您可以繼續進行修改。  
   
 ## <a name="make-the-chart-bigger"></a>讓圖表變大  
  您可能想要讓圓形圖變大。 
@@ -221,7 +221,7 @@ ms.lasthandoff: 08/09/2017
      
 4. 按一下 [是] 以確認您要將 **UseValueAsLabel** 設定為 **False**。
 
-5. 在 [字型] 索引標籤上，選取 [粗體]，並將 [色彩] 變更為 [白色]。
+5. 在**字型**索引標籤上，選取**粗體**並變更**色彩**至**白色**。
 
 6. 按一下 **[確定]**。     
   
@@ -234,7 +234,7 @@ ms.lasthandoff: 08/09/2017
   
  最後，若要將報表儲存至報表伺服器或與報表伺服器整合的 SharePoint 網站，您將需要 URL 和權限。 雖然您可以直接從電腦執行任何已建立的報表，不過從報表伺服器或 SharePoint 網站執行時，報表會提供更多功能。 您需要權限才能從發行報表的報表伺服器或 SharePoint 網站執行您的報表或其他報表。 請連絡系統管理員以取得存取權。  
   
- 開始之前，閱讀一些概念和詞彙的相關資訊可能會有所協助。 請參閱[報表撰寫概念 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)。 此外，在您建立第一份報表之前，請花點時間規劃一下。 這是值得花費的時間。 請參閱[規劃報表 &#40;報表產生器&#41;](../../reporting-services/report-design/planning-a-report-report-builder.md)。  
+ 開始之前，閱讀一些概念和詞彙的相關資訊可能會有所協助。 請參閱[報表撰寫概念 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md). 此外，在您建立第一份報表之前，請花點時間規劃一下。 這是值得花費的時間。 請參閱[規劃報表 &#40;報表產生器&#41;](../../reporting-services/report-design/planning-a-report-report-builder.md)。  
 
 ## <a name="next-steps"></a>後續的步驟
 

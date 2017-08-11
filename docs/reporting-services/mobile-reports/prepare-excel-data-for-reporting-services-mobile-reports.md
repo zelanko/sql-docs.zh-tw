@@ -15,7 +15,7 @@ caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c057de4b56529de08385a1e13e1a119550632eda
 ms.contentlocale: zh-tw
@@ -82,7 +82,7 @@ ms.lasthandoff: 08/09/2017
   
     2013-mar-12=DATEVALUE(RIGHT(A1,2)&"-"&MID(A1,6,3)&"-"&LEFT(A1,4))  
   
-在您轉換資料格後，您必須將它們格式化為日期，方法是選取它們或整個資料行 > **操作**功能表 > [儲存格格式] > [類別] 清單中的 [日期]。 您也可以使用 Excel 資料剖析精靈將文字資料格轉換為正確格式的日期。  
+在您轉換的資料格之後，您必須將它們藉由選取它們，或整個資料行格式化為日期 >**內容**功能表 >**儲存格格式** > **日期**從**類別**清單。 您也可以使用 Excel 資料剖析精靈將文字資料格轉換為正確格式的日期。  
   
 ## <a name="unsupported"></a>不支援  
   
@@ -91,7 +91,7 @@ ms.lasthandoff: 08/09/2017
 Excel 工作表中的自訂物件，包括樞紐分析表、視覺效果和影像等，均不會匯入至 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]。  
   
 ### <a name="see-also"></a>另請參閱  
-- [準備 Reporting Services 行動報表的資料](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md)  
+- [Prepare data for Reporting Services mobile reports (準備 Reporting Services 行動報表的資料)](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md)  
 - [使用 SQL Server 行動報表發行工具建立與發行行動報表](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
 -  在 [iPad app 中檢視 SQL Server 行動報表和 KPI](https://pbiwebprod-docs.azurewebsites.net/en-us/documentation/powerbi-mobile-ipad-kpis-mobile-reports)  (Power BI for iOS)  
 -  請參閱 [在 iPhone 應用程式中檢視 SQL Server 行動報表和 KPI (iOS 版 Power BI)](https://pbiwebprod-docs.azurewebsites.net/en-us/documentation/powerbi-mobile-iphone-kpis-mobile-reports) (iOS 版 Power BI)  

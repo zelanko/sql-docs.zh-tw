@@ -17,14 +17,14 @@ helpviewer_keywords:
 - delivery extensions [Reporting Services], about extensions
 ms.assetid: a30600a9-bbed-4519-9426-3470ff2982e7
 caps.latest.revision: 37
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 3b201ef2225d7794b399c79a318627fc978b8b72
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: 79894381bf493132c1f73d711ecd6d1ba282401e
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="delivery-extensions-overview"></a>傳遞延伸模組概觀
@@ -37,7 +37,7 @@ ms.lasthandoff: 06/22/2017
 |報表伺服器電子郵件|使用 SMTP 伺服器以電子郵件將報表寄到個別的使用者或群組。|  
 |報表伺服器檔案共用|用以將組織中的報表散發到網路檔案共用。 提供依指定排程將報表自動複製到檔案共用的功能。|  
   
- ![Reporting Services 傳遞延伸模組架構](../../../reporting-services/extensions/delivery-extension/media/bk-reportservicedelivery.gif "Reporting Services delivery extension architecture")  
+ ![Reporting Services 傳遞延伸模組架構](../../../reporting-services/extensions/delivery-extension/media/bk-reportservicedelivery.gif "Reporting Services 傳遞延伸模組架構")  
 Reporting Services 傳遞延伸模組架構  
   
  傳遞延伸模組會與訂閱配對。 建立訂閱時，使用者可以選擇其中一個可用的傳遞延伸模組，以決定如何傳遞報表。 在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中，訂閱會位在報表伺服器資料庫中。 當事件發生時，[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 會針對包含在報表伺服器資料庫中的訂閱與事件配對。 對於每個與事件繫結的訂閱，報表伺服器會建立通知。 對於資料驅動訂閱，會為每個收件者建立通知。 一旦建立通知，報表伺服器會叫用特定的傳遞延伸模組，並為在通知中指定的延伸模組設定傳遞值。 傳遞延伸模組會將通知傳遞給選取傳遞延伸模組所指定的使用者。  

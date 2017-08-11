@@ -21,7 +21,7 @@ caps.latest.revision: 11
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 6d7a1e1b9b0c8fb3fe60022f79ebfd21d6c44a09
 ms.contentlocale: zh-tw
@@ -41,7 +41,7 @@ ms.lasthandoff: 08/09/2017
   
 -   設定報表伺服器來使用其他的報表伺服器資料庫。  
   
--   變更用於資料庫連接的使用者帳戶或密碼。 帳戶資訊若是儲存在 RSReportServer.config 檔案中，您只需要更新資料庫連接。 如果您是使用服務帳戶進行連接 (這會使用 Windows 整合式安全性做為認證類型)，則不會儲存密碼，因此不必更新連接資訊。 如需變更帳戶的詳細資訊，請參閱 [設定報表伺服器服務帳戶 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)。  
+-   變更用於資料庫連接的使用者帳戶或密碼。 帳戶資訊若是儲存在 RSReportServer.config 檔案中，您只需要更新資料庫連接。 如果您是使用服務帳戶進行連接 (這會使用 Windows 整合式安全性做為認證類型)，則不會儲存密碼，因此不必更新連接資訊。 如需變更帳戶的詳細資訊，請參閱[設定報表伺服器服務帳戶 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)。  
   
 -   設定報表伺服器向外延展部署。 若要設定向外延展部署，您必須建立到報表伺服器資料庫的多個連接。 如需如何執行此多步驟作業的詳細資訊，請參閱[設定原生模式報表伺服器向外延展部署 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)。  
   
@@ -61,7 +61,7 @@ ms.lasthandoff: 08/09/2017
   
 -   主控報表伺服器資料庫之 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體的名稱。  
   
--   報表伺服器資料庫的名稱。 第一次建立連接時，您可以建立新的報表伺服器資料庫或選取現有的資料庫。 如需詳細資訊，請參閱《 [建立報表伺服器資料庫 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)。  
+-   報表伺服器資料庫的名稱。 第一次建立連接時，您可以建立新的報表伺服器資料庫或選取現有的資料庫。 如需詳細資訊，請參閱[建立報表伺服器資料庫 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)。  
   
 -   認證類型。 您可以使用服務帳戶、Windows 網域帳戶或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫登入。  
   
@@ -101,7 +101,7 @@ ms.lasthandoff: 08/09/2017
 ##### <a name="using-service-accounts-and-integrated-security"></a>使用服務帳戶和整合式安全性  
  您可以使用 Windows 整合式安全性，以透過報表伺服器服務帳戶進行連接。 此帳戶會被授與報表伺服器資料庫的登入權限。 如果您以預設的組態安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，這是安裝程式選擇的預設認證類型。  
   
- 此服務帳戶是信任帳戶，可提供管理報表伺服器資料庫連接的低維護方法。 由於此服務帳戶會使用 Windows 整合式安全性進行連接，因此不需要儲存認證。 但是，如果您接著變更服務帳戶密碼或識別 (例如，從內建帳戶切換到網域帳戶)，請務必使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具進行變更。 此工具會自動更新資料庫權限，以使用修訂過的帳戶資訊。 如需詳細資訊，請參閱《 [設定報表伺服器服務帳戶 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)。  
+ 此服務帳戶是信任帳戶，可提供管理報表伺服器資料庫連接的低維護方法。 由於此服務帳戶會使用 Windows 整合式安全性進行連接，因此不需要儲存認證。 但是，如果您接著變更服務帳戶密碼或識別 (例如，從內建帳戶切換到網域帳戶)，請務必使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具進行變更。 此工具會自動更新資料庫權限，以使用修訂過的帳戶資訊。 如需詳細資訊，請參閱[設定報表伺服器服務帳戶 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)。  
   
  如果將資料庫連接設定為使用此服務帳戶，則當報表伺服器資料庫位於遠端電腦上時，該帳戶必須具有網路權限。 如果報表伺服器資料庫位於不同的網域、在防火牆後面，或者您使用的是工作群組安全性而非網域安全性，則請勿使用服務帳戶。 您應該改用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫使用者帳戶。  
   

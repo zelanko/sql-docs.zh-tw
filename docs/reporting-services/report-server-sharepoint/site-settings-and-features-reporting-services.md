@@ -15,7 +15,7 @@ caps.latest.revision: 10
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 044346bd4532c691861689662edbcbb37812b7ff
 ms.contentlocale: zh-tw
@@ -33,9 +33,9 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="to-open-the-reporting-services-site-settings-page"></a>若要開啟 Reporting Services 網站設定頁面  
   
-1.  在 SharePoint 網站的 [網站動作] 功能表中，按一下 [網站設定]。  
+1.  從 SharePoint 網站**網站動作**功能表上，按一下**站台設定**。  
   
-2.  在 [Reporting Services] 區段中，按一下 [Reporting Services 網站設定]。  
+2.  在**Reporting Services**區段中，按一下**Reporting Services 網站設定**。  
   
 ## <a name="options-for-reporting-services-site-settings"></a>Reporting Services 網站設定的選項  
   

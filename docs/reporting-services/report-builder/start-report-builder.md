@@ -20,7 +20,7 @@ caps.latest.revision: 56
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: e99d13a8e80a0ed2a5e584dcc0e20591507f8c92
 ms.contentlocale: zh-tw
@@ -30,7 +30,7 @@ ms.lasthandoff: 08/09/2017
 
 # <a name="start-report-builder"></a>啟動報表產生器
 
-[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]獨立報表撰寫環境。 您可以使用它來建立分頁報表，以及將它們發行到以原生或 SharePoint 整合模式安裝的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 。  
+[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 是獨立報表撰寫環境。 您可以使用它來建立分頁報表，以及將它們發行到以原生或 SharePoint 整合模式安裝的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 。  
   
  第一次從 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] Web 入口網站或處於 SharePoint 整合模式的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 時，系統會提示您從 Microsoft 下載中心進行下載。 
  
@@ -60,9 +60,9 @@ ms.lasthandoff: 08/09/2017
   
 2.  開啟文件庫。  
   
-3.  按一下 [文件]。  
+3.  按一下**文件**。  
   
-4.  在 [新增文件] 功能表上，按一下 [報表產生器報表]。  
+4.  在**新文件**功能表上，按一下 **報表產生器報表**。  
   
      第一次時，這會啟動 [SQL Server [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 精靈]。 如需詳細資訊，請參閱 [安裝報表產生器](../../reporting-services/install-windows/install-report-builder.md) 。  
   

@@ -22,7 +22,7 @@ caps.latest.revision: 20
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 8964b2b0886ffd0483e48c8e9baf91ab9b2dae3d
 ms.contentlocale: zh-tw
@@ -56,7 +56,7 @@ public void SetServiceState(Boolean EnableWindowsService,
  表示報表管理員所需狀態的 **布林** 值。
  
  > [!NOTE] 
- > 從 SQL Server 2016 Reporting Services 累計更新 2 開始，已被取代這項設定。 Web 入口網站將會永遠啟用。 會忽略的值。
+ > 此設定已在 SQL Server 2016 Reporting Services 累積更新 2 之後淘汰。 入口網站會一律啟用。 會忽略的值。
   
  *HRESULT*  
  [out] 指出呼叫成功或失敗的值。  
@@ -67,7 +67,7 @@ public void SetServiceState(Boolean EnableWindowsService,
 ## <a name="remarks"></a>備註  
   
 ## <a name="requirements"></a>需求  
- **命名空間：** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **命名空間：**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>請參閱＜  
  [MSReportServer_ConfigurationSetting 成員](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  

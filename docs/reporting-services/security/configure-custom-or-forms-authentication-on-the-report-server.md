@@ -18,7 +18,7 @@ caps.latest.revision: 20
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 325b7d6f1015b6e5e81565df37d1c02d20e5802f
 ms.contentlocale: zh-tw
@@ -82,12 +82,12 @@ Reporting Services 提供可延伸的架構，可以讓您插入自訂或表單�
   
 12. 重新啟動報表伺服器，清除目前開啟的任何工作階段。  
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱＜
 
 [實作安全性延伸模組](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)  
 [Reporting Services 自訂安全性範例 (GitHub)](https://github.com/Microsoft/Reporting-Services/tree/master/CustomSecuritySample)  
-[使用報表伺服器驗證](../../reporting-services/security/authentication-with-the-report-server.md)   
+[報表伺服器驗證](../../reporting-services/security/authentication-with-the-report-server.md)   
 [RsReportServer.config 組態檔](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
-[在報表伺服器上設定基本驗證](../../reporting-services/security/configure-basic-authentication-on-the-report-server.md)   
-[設定報表伺服器上的 Windows 驗證](../../reporting-services/security/configure-windows-authentication-on-the-report-server.md)  
+[設定報表伺服器上的基本驗證](../../reporting-services/security/configure-basic-authentication-on-the-report-server.md)   
+[在報表伺服器上設定 Windows 驗證](../../reporting-services/security/configure-windows-authentication-on-the-report-server.md)  
 更多問題嗎？ [再試一次 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)

@@ -18,20 +18,20 @@ helpviewer_keywords:
 - IDeliveryExtension interface
 ms.assetid: ab0344db-510b-403f-8dbf-b9831553765d
 caps.latest.revision: 37
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 82bf0172d2ad744d5a34945596814cd584888d95
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: ac54345b14ba3ff84a755e0ce4e8b1c4e9acab13
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="implementing-the-ideliveryextension-interface-for-a-delivery-extension"></a>實作傳遞延伸模組的 IDeliveryExtension 介面
   您的傳遞延伸模組類別是用以根據通知的內容，將報告通知傳遞給使用者。 傳遞延伸模組類別也提供基礎結構，以驗證傳遞給傳遞延伸模組的使用者設定。 此外，您的傳遞延伸模組類別應該包含特定的屬性，讓用戶端可用以取得有關延伸模組的名稱、延伸模組支援的設定，以及可供傳遞延伸模組使用的轉譯格式。  
   
- ![IDeliveryExtension 介面處理程序](../../../reporting-services/extensions/delivery-extension/media/bk-ext-02.gif "IDeliveryExtension interface process")  
+ ![IDeliveryExtension 介面處理](../../../reporting-services/extensions/delivery-extension/media/bk-ext-02.gif "IDeliveryExtension 介面處理程序")  
 IDeliveryExtension 介面允許使用者資料的驗證以及供用戶端了解必要的傳遞設定  
   
  若要建立傳遞延伸模組類別，請實作 <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension> 與 <xref:Microsoft.ReportingServices.Interfaces.IExtension>。 **IDeliveryExtension**介面可讓您的傳遞延伸模組，以傳遞報表通知使用<xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension.Deliver%2A>方法以及驗證內送延伸模組的設定，使用<xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension.ValidateUserData%2A>方法。 **IExtension**介面可讓您傳遞延伸模組實作當地語系化延伸模組名稱，並處理延伸模組特定組態資訊儲存在[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]組態檔。 藉由實作**IExtension**，傳遞延伸模組包含<xref:Microsoft.ReportingServices.Interfaces.Extension.LocalizedName%2A>屬性。 強烈建議，[!INCLUDE[ssRS](../../../includes/ssrs-md.md)]傳遞延伸模組支援**LocalizedName**屬性，以便使用者遇到使用者介面，例如報表管理員中的延伸模組的熟悉名稱。  

@@ -16,7 +16,7 @@ caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 0c67ffbd38887cd9428551a369a4d864d8b972d8
 ms.contentlocale: zh-tw
@@ -52,14 +52,14 @@ ms.lasthandoff: 08/09/2017
   
     [新報表或資料集] 對話方塊隨即開啟。  
   
-    如果未顯示 [新報表或資料集] 對話方塊，請按一下 [檔案] 功能表 > [新增]。  
+    如果您看不到 [新增報表或資料集] 對話方塊，請按一下 [檔案] 功能表 > [新增]。  
   
 2.  在左窗格中，確認已選取 **[新增報表]** 。  
   
 3.  在右窗格中，確認已選取 **[資料表或矩陣精靈]** 。  
   
 ## <a name="DConnection"></a>1a. 指定資料連接  
-資料連接包含連接至外部資料來源所需的資訊，例如 Analysis Services Cube 或 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫。 若要指定資料連接，您可以使用來自報表伺服器的共用資料來源，或是建立僅在此報表中使用的內嵌資料來源。 在本教學課程中，您將使用內嵌資料來源。 若要深入了解如何使用共用資料來源，請參閱[取得資料連接的替代方式 &#40;報表產生器&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)。  
+資料連接包含連接至外部資料來源所需的資訊，例如 Analysis Services Cube 或 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫。 若要指定資料連接，您可以使用來自報表伺服器的共用資料來源，或是建立僅在此報表中使用的內嵌資料來源。 在本教學課程中，您將使用內嵌資料來源。 若要了解有關使用共用的資料來源的詳細資訊，請參閱[替代方法來取得資料連接 &#40;報表產生器 &#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
 #### <a name="to-create-an-embedded-data-source"></a>建立內嵌資料來源  
   
@@ -109,12 +109,12 @@ ms.lasthandoff: 08/09/2017
   
 #### <a name="to-create-query-filters"></a>若要建立查詢篩選  
   
-1.  在 [設計查詢] 頁面的 [中繼資料] 窗格中，按一下 **(…)** 按鈕。  
+1.  在 **[設計查詢]** 頁面的 [中繼資料] 窗格中，按一下 **(…)**按鈕。  
   
 2.  在 [選取 Cube] 對話方塊中，按一下 [Sales]，然後按一下 [確定]。  
   
     > [!TIP]  
-    > 如果您不想要手動建立 MDX 查詢，按一下![切換到設計模式](../reporting-services/media/rsqdicon-designmode.gif "Switch to Design mode")圖示，切換到查詢模式的查詢設計工具、 完成的 MDX 查詢設計工具中，貼上，然後繼續進行步驟 6 中[建立資料集](#DSkip)。  
+    > 如果您不想要手動建立 MDX 查詢，按一下![切換到設計模式](../reporting-services/media/rsqdicon-designmode.gif "切換到設計模式")圖示，切換到查詢模式的查詢設計工具、 完成的 MDX 查詢設計工具中，貼上，然後繼續進行步驟 6 中[建立資料集](#DSkip)。  
   
     ```  
     SELECT NON EMPTY { [Measures].[Sales Amount], [Measures].[Sales Return Amount] } ON COLUMNS, NON EMPTY { ([Channel].[Channel Name].[Channel Name].ALLMEMBERS * [Product].[Product Category Name].[Product Category Name].ALLMEMBERS * [Product].[Product Subcategory Name].[Product Subcategory Name].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Date].[Calendar Year].&[2009] } ) ON COLUMNS FROM ( SELECT ( { [Sales Territory].[Sales Territory Group].&[North America] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(@ProductProductCategoryName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Channel].[Channel Name].&[2], [Channel].[Channel Name].&[4] } ) ON COLUMNS FROM [Sales])))) WHERE ( [Sales Territory].[Sales Territory Group].&[North America], [Date].[Calendar Year].&[2009] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS  
@@ -122,7 +122,7 @@ ms.lasthandoff: 08/09/2017
   
 3.  在 [量值群組] 窗格中，展開 Channel，然後將 Channel Name 拖曳到篩選窗格中的 [階層] 資料行。  
   
-    維度名稱 Channel 就會自動新增至 [維度] 資料行。 請勿變更 **[維度]** 或 **[運算子]** 資料行。  
+    維度名稱，而通道會自動加入至**維度**資料行。 請勿變更 **[維度]** 或 **[運算子]** 資料行。  
   
 4.  若要開啟 **[篩選運算式]** 清單，按一下 **[篩選運算式]** 資料行。  
   
@@ -130,15 +130,15 @@ ms.lasthandoff: 08/09/2017
   
     此查詢現在包含一個僅內含下列通道的篩選：線上和轉售商。  
   
-6.  展開 Sales Territory 維度，然後將 Sales Territory Group 拖曳至 [階層] 資料行 (在 [通道名稱] 底下)。  
+6.  展開 Sales Territory 維度，，然後將拖曳至 Sales Territory Group**階層**資料行 (下面**通道名稱**)。  
   
 7.  開啟 **[篩選運算式]** 清單，展開 **[所有銷售領域]**，按一下 **[北美洲]**，然後按一下 **[確定]**。  
   
     此查詢現在有一個僅包含 [北美洲] 銷售額的篩選。  
   
-8.  在 [量值群組] 窗格中，展開 Date，然後將 Calendar Year 拖曳到篩選窗格中的 [階層] 資料行。  
+8.  在量值群組 窗格中，展開 日期，然後行事曆將年份拖曳到**階層**篩選 窗格中的資料行。  
   
-    維度名稱 Date 就會自動新增至 [維度] 資料行。 請勿變更 **[維度]** 或 **[運算子]** 資料行。  
+    維度名稱，而日期，會自動加入至**維度**資料行。 請勿變更 **[維度]** 或 **[運算子]** 資料行。  
   
 9. 若要開啟 **[篩選運算式]** 清單，按一下 **[篩選運算式]** 資料行。  
   
@@ -148,7 +148,7 @@ ms.lasthandoff: 08/09/2017
   
 #### <a name="to-create-the-parameter"></a>若要建立參數  
   
-1.  展開 Product 維度，然後將 Product Category Name 拖曳到 [階層] 資料行 (在 [日曆年度] 底下)。  
+1.  展開 產品 維度，然後將 Product Category Name 成員**階層**資料行下方**日曆年度**。  
   
 2.  開啟 **[篩選運算式]** 清單，按一下 **[所有產品]**，然後按一下 **[確定]**。  
   
@@ -165,11 +165,11 @@ ms.lasthandoff: 08/09/2017
   
 3.  從 Product 維度中，將 Product Subcategory Name 拖曳到資料窗格，然後將其放置在 Product Category Name 的右側。  
   
-4.  在 [中繼資料] 窗格中，展開 [量值]，然後展開 Sales。  
+4.  在 [中繼資料] 窗格中，依序展開**量值**，然後展開 Sales。  
   
 5.  將 Sales Amount 量值拖曳到資料窗格中，然後將其放置到 Product Subcategory Name 的右側。  
   
-6.  在查詢設計工具工具列上，按一下 [執行 (!)]。  
+6.  在查詢設計工具工具列上，按一下 **[執行 (!)]**。  
   
 7.  按一下 **[下一步]**。  
   
@@ -180,20 +180,20 @@ ms.lasthandoff: 08/09/2017
   
 1.  若要切換成 [設計] 檢視，按一下 **[設計]**。  
   
-2.  在 [排列欄位] 頁面上，將 Product_Subcategory_Name 拖曳至 [資料列群組]。  
+2.  在**排列欄位**頁面上，拖曳至 Product_Subcategory_Name**資料列群組**。  
   
     > [!NOTE]  
     > 名稱中的空格會以底線 (_) 取代。 例如，Product Category Name 是 Product_Category_Name。  
   
-3.  將 Channel_Name 拖曳至 [資料行群組]。  
+3.  拖曳至 Channel_Name**資料行群組**。  
   
-4.  將 Sales_Amount 拖曳至 [值]。  
+4.  拖曳至 Sales_Amount**值**。  
   
     Sum 函數 (數值欄位的預設彙總) 會自動彙總 Sales_Amount。 值為 `[Sum(Sales_Amount)]`。  
   
     若要檢視其他可用的彙總函式，開啟下拉式清單 (不要變更彙總函式)。  
   
-5.  將 Sales_Return_Amount 拖曳至 [值]，並將其放置在 `[Sum(Sales_Amount)]` 之下。  
+5.  拖曳至 Sales_Return_Amount**值**，並將其放置下方`[Sum(Sales_Amount)]`。  
   
     步驟 4 和步驟 5 指定了矩陣中要顯示的資料。  
   
@@ -238,7 +238,7 @@ ms.lasthandoff: 08/09/2017
   
     空白資料行就會加入至 **[銷售量]**的右方。  
   
-3.  在功能區上，按一下 [矩形]，然後按一下 [Product_Subcategory] 資料列群組中的 `[Sum(Sales_Amount)]` 資料格右側。  
+3.  在功能區中，按一下 **矩形**，然後按一下右邊的空白資料格中`[Sum(Sales_Amount)]`[Product_Subcategory] 資料列群組中的資料格。  
   
 4.  在功能區上，按一下 **[走勢圖]** 圖示，然後按一下加入矩形的資料格。  
   
@@ -248,7 +248,7 @@ ms.lasthandoff: 08/09/2017
   
 7.  以滑鼠右鍵按一下走勢圖。  
   
-8.  在 [圖表資料] 窗格中，按一下 [新增欄位] 圖示，然後按一下 Sales_Amount。  
+8.  在 圖表資料 窗格中，按一下**加入欄位**圖示，然後按一下 Sales_Amount。  
   
 9. 以滑鼠右鍵按一下 `Sales_Return_Amount` 資料行，然後將資料行加入至該資料行的右側。  
   
@@ -256,7 +256,7 @@ ms.lasthandoff: 08/09/2017
   
 11. 以滑鼠右鍵按一下走勢圖。  
   
-12. 在 [圖表資料] 窗格中，按一下 [新增欄位] 圖示，然後按一下 Sales_Return_Amount。  
+12. 在 圖表資料 窗格中，按一下**加入欄位**圖示，然後按一下 Sales_Return_Amount。  
   
 13. 若要預覽報表，按一下 **[執行]**。  
   
@@ -352,7 +352,7 @@ ms.lasthandoff: 08/09/2017
   
     [新報表或資料集] 對話方塊隨即開啟。  
   
-    如果您看不到 [新報表或資料集] 對話方塊，請按一下 [檔案] 功能表 > [新增]。  
+    如果您看不到 [新增報表或資料集] 對話方塊，請按一下 [檔案] 功能表 > [新增]。  
  
 2.  在 **[使用者入門]** 對話方塊中，確認已選取 **[新增報表]** ，然後按一下 **[資料表或矩陣精靈]**。  
   
@@ -400,12 +400,12 @@ ms.lasthandoff: 08/09/2017
   
 #### <a name="to-create-query-filters"></a>若要建立查詢篩選  
   
-1.  在 [設計查詢] 頁面的 [中繼資料] 窗格中，按一下 Cube 區段中的省略符號 [(...)]。  
+1.  在 **[設計查詢]** 頁面的 [中繼資料] 窗格中，按一下 Cube 區段中的省略符號 **(...)**。  
   
 2.  在 [選取 Cube] 對話方塊中，按一下 [Sales]，然後按一下 [確定]。  
   
     > [!TIP]  
-    > 如果您不想要手動建立 MDX 查詢，按一下![切換到設計模式](../reporting-services/media/rsqdicon-designmode.gif "Switch to Design mode")圖示，切換到查詢模式的查詢設計工具完成的 MDX 查詢設計工具中，貼上，然後繼續進行步驟 5 中[建立資料集](#MSkip)。  
+    > 如果您不想要手動建立 MDX 查詢，按一下![切換到設計模式](../reporting-services/media/rsqdicon-designmode.gif "切換到設計模式")圖示，切換到查詢模式的查詢設計工具完成的 MDX 查詢設計工具中，貼上，然後繼續進行步驟 5 中[建立資料集](#MSkip)。  
   
     ```  
     WITH MEMBER [Measures].[Net QTY] AS [Measures].[Sales Quantity] -[Measures].[Sales Return Quantity] MEMBER [Measures].[Net Sales] AS [Measures].[Sales Amount] - [Measures].[Sales Return Amount] SELECT NON EMPTY { [Measures].[Net QTY], [Measures].[Net Sales] } ON COLUMNS, NON EMPTY { ([Channel].[Channel Name].[Channel Name].ALLMEMBERS * [Product].[Product Category Name].[Product Category Name].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Date].[Calendar Year].&[2009] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(@ProductProductCategoryName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Sales Territory].[Sales Territory Group].&[North America] } ) ON COLUMNS FROM ( SELECT ( { [Channel].[Channel Name].&[2], [Channel].[Channel Name].&[4] } ) ON COLUMNS FROM [Sales])))) WHERE ( [Sales Territory].[Sales Territory Group].&[North America], [Date].[Calendar Year].&[2009] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGSQuery text: Code.  
@@ -413,7 +413,7 @@ ms.lasthandoff: 08/09/2017
   
 3.  在 [量值群組] 窗格中，展開 Channel，然後將 Channel Name 拖曳到篩選窗格中的 [階層] 資料行。  
   
-    維度名稱 Channel 就會自動新增至 [維度] 資料行。 請勿變更 **[維度]** 或 **[運算子]** 資料行。  
+    維度名稱，而通道會自動加入至**維度**資料行。 請勿變更 **[維度]** 或 **[運算子]** 資料行。  
   
 4.  若要開啟 **[篩選運算式]** 清單，按一下 **[篩選運算式]** 資料行。  
   
@@ -421,15 +421,15 @@ ms.lasthandoff: 08/09/2017
   
     此查詢現在包含一個僅內含下列通道的篩選：線上和轉售商。  
   
-6.  展開 Sales Territory 維度，然後將 Sales Territory Group 拖曳到 [階層] 資料行 (在 [通道名稱] 底下)。  
+6.  展開 Sales Territory 維度，，然後將拖曳至 Sales Territory Group**階層**資料行底下**通道名稱**。  
   
 7.  開啟 **[篩選運算式]** 清單，展開 **[所有銷售領域]**，按一下 **[北美洲]**，然後按一下 **[確定]**。  
   
     此查詢現在有一個僅包含 [北美洲] 銷售額的篩選。  
   
-8.  在 [量值群組] 窗格中，展開 Date，然後將 Calendar Year 拖曳到篩選窗格中的 [階層] 資料行。  
+8.  在 [量值群組] 窗格中，展開 [日期，然後行事曆將年份拖曳到**階層**篩選] 窗格中的資料行。  
   
-    維度名稱 Date 就會自動新增至 [維度] 資料行。 請勿變更 **[維度]** 或 **[運算子]** 資料行。  
+    維度名稱，而日期，會自動加入至**維度**資料行。 請勿變更 **[維度]** 或 **[運算子]** 資料行。  
   
 9. 若要開啟 **[篩選運算式]** 清單，按一下 **[篩選運算式]** 資料行。  
   
@@ -439,7 +439,7 @@ ms.lasthandoff: 08/09/2017
   
 #### <a name="to-create-the-parameter"></a>若要建立參數  
   
-1.  展開 Product 維度，然後將 Product Category Name 拖曳至 [階層] 資料行 (在 [銷售領域群組] 底下)。  
+1.  展開 產品 維度，然後將 Product Category Name 成員**階層**資料行下方**Sales Territory Group**。  
   
 2.  開啟 **[篩選運算式]** 清單，按一下 **[所有產品]**，然後按一下 **[確定]**。  
   
@@ -447,11 +447,11 @@ ms.lasthandoff: 08/09/2017
   
 #### <a name="to-create-calculated-members"></a>若要建立導出成員  
   
-1.  將游標放在 [導出成員] 窗格內部，並按一下滑鼠右鍵，然後按一下 [新增導出成員]。  
+1.  將游標放在 [導出成員] 窗格內部，按一下滑鼠右鍵，然後按一下 **[新增導出成員]**。  
   
-2.  在 [中繼資料] 窗格中，展開 [量值]，然後展開 Sales。  
+2.  在 [中繼資料] 窗格中，依序展開**量值**，再展開 Sales。  
   
-3.  將 Sales Quantity 量值拖曳到 [運算式] 方塊，輸入減號字元 (-)，然後將 Sales Return Quantity 量值拖曳到 [運算式] 方塊，將其放置在減號字元後面。  
+3.  將銷售數量量值拖曳**運算式**方塊，輸入減號字元 （-），然後拖曳 Sales Return Quantity 量值**運算式**方塊，將它放置在減號字元後面。  
   
     下列程式碼顯示運算式：  
   
@@ -463,11 +463,11 @@ ms.lasthandoff: 08/09/2017
   
     [導出成員] 窗格會列出 **Net QTY** 導出成員。  
   
-5.  以滑鼠右鍵按一下 [導出成員]，然後按一下 [新增導出成員]。  
+5.  以滑鼠右鍵按一下 **[導出成員]**，然後按一下 **[新增導出成員]**。  
   
-6.  在 [中繼資料] 窗格中，展開 [量值]，然後展開 Sales。  
+6.  在 [中繼資料] 窗格中，依序展開**量值**，然後展開 Sales。  
   
-7.  將 Sales Amount 量值拖曳到 [運算式] 方塊，輸入減號字元 (-)，然後將 Sales Return Amount 量值拖曳到 [運算式] 方塊，將其放置在減號字元後面。  
+7.  拖曳 Sales Amount 量值**運算式**方塊，輸入減號字元 （-），然後拖曳 Sales Return Amount 量值**運算式**方塊，將它放置在減號字元後面。  
   
     下列程式碼顯示運算式：  
   
@@ -483,11 +483,11 @@ ms.lasthandoff: 08/09/2017
   
 2.  從 Product 維度中，將 Product Category Name 拖曳到資料窗格，然後將其放置在 Channel Name 的右側。  
   
-3.  從 [導出成員] 中，將 `Net QTY` 拖曳到資料窗格，然後將其放置在 Product Category Name 的右側。  
+3.  從**導出成員**，拖曳`Net QTY`到 資料 窗格中，然後將其放置到右邊的 產品類別目錄名稱。  
   
-4.  從 [導出成員] 中，將 Net Sales 拖曳到資料窗格，然後將其放置在 `Net QTY` 的右側。  
+4.  從 [導出成員] 中，將 Net Sales 拖曳到資料窗格，然後將其放置在 `Net QTY`的右側。  
   
-5.  在查詢設計工具工具列上，按一下 [執行 (!)]。  
+5.  在查詢設計工具工具列上，按一下 **[執行 (!)]**。  
   
     檢閱查詢結果集。  
   
@@ -498,9 +498,9 @@ ms.lasthandoff: 08/09/2017
   
 #### <a name="to-organize-data-into-groups"></a>若要將資料組織為群組  
   
-1.  在 [排列欄位] 頁面上，將 Product_Category_Name 拖曳至 [資料列群組]。  
+1.  在**排列欄位**頁面上，拖曳至 Product_Category_Name**資料列群組**。  
   
-2.  將 Channel_Name 拖曳至 [資料行群組]。  
+2.  拖曳至 Channel_Name**資料行群組**。  
   
 3.  將 `Net_QTY` 拖曳至 **[值]**。  
   
@@ -545,7 +545,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  若要切換成 [設計] 檢視，按一下 **[設計]**。  
   
-2.  以滑鼠右鍵按一下包含 Product_Category_Name 的資料格，然後按一下 [文字方塊屬性]。  
+2.  以滑鼠右鍵按一下包含 Product_Category_Name 的資料格，然後按一下**文字方塊內容**。  
   
 3.  按一下 **[動作]** 索引標籤。  
   
@@ -555,7 +555,7 @@ ms.lasthandoff: 08/09/2017
   
 6.  若要加入參數以執行鑽研報表，按一下 **[加入]**。  
   
-7.  在 [名稱] 清單中，選取 ProductProductCategoryName。  
+7.  在**名稱**清單中，選取 ProductProductCategoryName。  
   
 8.  在 **[值]**中，輸入 `[Product_Category_Name.UniqueName]`。  
   

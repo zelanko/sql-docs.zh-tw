@@ -20,7 +20,7 @@ caps.latest.revision: 20
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 43a5b233f39e52555696d2b6f3e08ce9077581b6
 ms.contentlocale: zh-tw
@@ -45,9 +45,9 @@ ms.lasthandoff: 08/09/2017
   
  使用下列三種方法之一來更新權限：  
   
-1.  從 [條款、訂閱和警示] 頁面上輸入認證，然後按一下 [確定]。  
+1.  從**條款、 訂閱和警示**頁面上輸入認證，然後按一下 **確定**。  
   
-2.  從 [提供訂閱和警示] 頁面按一下 [下載指令碼] 按鈕，下載可用來設定權限的 Transact SQL 指令碼。  
+2.  從 [提供訂閱和警示] 頁面上，按一下 [**下載指令碼**] 按鈕，下載的 transact SQL 指令碼可用來設定權限。  
   
 3.  執行 PowerShell Cmdlet，以建立可用來設定權限的 Transact-SQL 指令碼。  
   
@@ -55,9 +55,9 @@ ms.lasthandoff: 08/09/2017
   
 1.  從 SharePoint 管理中心，按一下 [應用程式管理] 群組中的 [管理服務應用程式]。  
   
-2.  在清單中尋找服務應用程式，並按一下應用程式的名稱，或按一下 [類型] 欄選取服務應用程式，再按一下 SharePoint 功能區中的 [管理] 按鈕。  
+2.  在清單中尋找服務應用程式，然後按一下名稱的應用程式，或按一下**類型**欄選取服務應用程式，再按一下**管理**SharePoint 功能區中的按鈕。  
   
-3.  在 [管理 Reporting Services 應用程式] 頁面上，按一下 [提供訂閱和警示]。  
+3.  在**管理 Reporting Services 應用程式**頁面上，按一下**Provision Subscriptions and Alerts**。  
   
 4.  如果 SharePoint 管理員對 Master 資料庫和服務應用程式資料庫有足夠的權限，請輸入這些認證。  
   
@@ -67,21 +67,21 @@ ms.lasthandoff: 08/09/2017
   
 1.  從 SharePoint 管理中心，按一下 [應用程式管理] 群組中的 [管理服務應用程式]。  
   
-2.  在清單中尋找服務應用程式，並按一下應用程式的名稱，或按一下 [類型] 欄選取服務應用程式，再按一下 SharePoint 功能區中的 [管理] 按鈕。  
+2.  在清單中尋找服務應用程式，然後按一下名稱的應用程式，或按一下**類型**欄選取服務應用程式，再按一下**管理**SharePoint 功能區中的按鈕。  
   
-3.  在 [管理 Reporting Services 應用程式] 頁面上，按一下 [提供訂閱和警示]。  
+3.  在**管理 Reporting Services 應用程式**頁面上，按一下**Provision Subscriptions and Alerts**。  
   
-4.  在 [檢視狀態] 區域中，確認 SQL Server Agent 正在執行。  
+4.  在**檢視狀態**區域中，確認 SQL Server Agent 正在執行。  
   
-5.  按一下 [下載指令碼]，下載您可以在 SQL Server Management Studio 中執行以授與權限的 Transact-SQL 指令碼。 建立的指令碼檔案名稱會包含 Reporting Services 服務應用程式的名稱，例如 **[服務應用程式的名稱]-GrantRights.sql**。  
+5.  按一下**下載指令碼**，下載的 transact SQL 指令碼，您可以授與權限的 SQL Server Management studio 中執行。 建立的指令碼檔案名稱會包含 Reporting Services 服務應用程式的名稱，例如 **[服務應用程式的名稱]-GrantRights.sql**。  
   
 ### <a name="to-generate-the-transact-sql-statement-with-powershell"></a>使用 PowerShell 產生 Transact-SQL 陳述式  
   
 1.  您也可以在 SharePoint 2016 或 SharePoint 2013 管理介面中使用 Windows PowerShell Cmdlet 建立 Transact-SQL 指令碼。  
   
-2.  在 [開始] 功能表上，按一下 [所有程式]。  
+2.  在**啟動**功能表上，按一下 **所有程式**。  
   
-3.  展開 [Microsoft SharePoint 2016 產品]，然後按一下 [SharePoint 2016 管理命令介面]。
+3.  展開**Microsoft SharePoint 2016 Products**按一下**SharePoint 2016 管理命令介面**。
   
 4.  透過取代報表伺服器資料庫的名稱、應用程式集區帳戶及陳述式的路徑，來更新下列 PowerShell Cmdlet。  
   
@@ -94,13 +94,13 @@ ms.lasthandoff: 08/09/2017
   
 #### <a name="to-load-the-transact-sql-script-in-sql-server-management-studio"></a>在 SQL Server Management Studio 中載入 Transact-SQL 指令碼  
   
-1.  若要開啟 SQL Server Management Studio，請在 [開始] 功能表上，按一下 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]，然後再按一下 [SQL Server Management Studio]。  
+1.  若要開啟 SQL Server Management Studio，在**啟動**功能表上，按一下 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]按一下**SQL Server Management Studio**。  
   
 2.  在 [連接到伺服器] 對話方塊上，設定下列選項：  
   
-    -   在 [伺服器類型] 清單中，選取 [Database Engine]。  
+    -   在**伺服器類型**清單中，選取**Database Engine**  
   
-    -   在 [伺服器名稱] 中，輸入您要設定 SQL Server Agent 的 SQL Server 執行個體名稱。  
+    -   在**伺服器名稱**，輸入您要設定 SQL Server Agent 的 SQL Server 執行個體的名稱。  
   
     -   選取驗證模式。  
   
@@ -110,13 +110,13 @@ ms.lasthandoff: 08/09/2017
   
 #### <a name="to-run-the-transact-sql-statement"></a>執行 Transact-SQL 陳述式  
   
-1.  在 SQL Server Management Studio 的工具列上，按一下 [新增查詢]。  
+1.  在工具列上的 SQL Server Management Studio，請按一下**新查詢**。  
   
-2.  在 [檔案] 功能表上，按一下 [開啟]，然後再按一下 [檔案]。  
+2.  在**檔案**功能表上，按一下 **開啟**，然後按一下 **檔案**。  
   
 3.  瀏覽至您在 SharePoint 2016 或 SharePoint 2013 管理介面中產生之 Transact-SQL 陳述式的儲存所在資料夾。  
   
-4.  按一下檔案，再按一下 [開啟]。  
+4.  按一下檔案，然後按一下**開啟**。  
   
      陳述式隨即會加入查詢視窗。  
   

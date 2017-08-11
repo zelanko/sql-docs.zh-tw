@@ -20,14 +20,14 @@ helpviewer_keywords:
 - custom assemblies [Reporting Services], strong-named
 ms.assetid: ca9f19d7-6e86-46f2-b9ad-9bf807eaa52e
 caps.latest.revision: 35
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 3c024efb9f8531ed9b87b0e2b7d7b22489a76dcf
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: cf8ee5462bd75ab82ea4296a5b71136cb2eb9ee9
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="using-strong-named-custom-assemblies"></a>使用強式名稱自訂組件
@@ -50,6 +50,6 @@ ms.lasthandoff: 06/22/2017
 >  當**AllowPartiallyTrustedCallersAttribute**沒有、 預設**FullTrustLinkDemand**安全性檢查，將會避免、 讓組件可從其他任何呼叫部分信任組件。 所有的安全性檢查都必須明確地陳述，包括類別層級或是方法層級宣告的安全性屬性。  
   
 ## <a name="see-also"></a>另請參閱  
- [報表中使用自訂組件](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)  
+ [將自訂組件與報表搭配使用](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)  
   
   

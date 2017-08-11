@@ -15,7 +15,7 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 45658226a90008784ca76ab781282dda1dd01dd0
 ms.contentlocale: zh-tw
@@ -63,7 +63,7 @@ ms.lasthandoff: 08/09/2017
 ###  <a name="RetrieveData"></a> 擷取資料  
  子報表和巢狀資料區域與主報表同時擷取資料。 鑽研報表則否。 鑽研報表會在使用者按一下連結時擷取資料。 如果必須同時擷取主報表和從屬報表的資料，這就值得注意。  
   
-###  <a name="ProcessRender"></a> 處理與轉譯  
+###  <a name="ProcessRender"></a> 處理和轉譯  
  子報表會當做主報表的一部分來處理。 例如，如果顯示訂單詳細資訊的子報表加入到詳細資料列的資料表資料格中，則資料表的每一個資料列會處理子報表一次，並將子報表當做主報表的一部分來轉譯。 只有當使用者按一下摘要主報表內的鑽研連結時，才會處理及轉譯鑽研報表。  
   
 ###  <a name="Performance"></a> 效能  
@@ -80,27 +80,27 @@ ms.lasthandoff: 08/09/2017
 ###  <a name="Location"></a> 位置  
  子報表和鑽研報表都是獨立報表，因此儲存在主報表外部。 子報表可以位於相同或不同的報表伺服器上，但鑽研報表必須位於相同的報表伺服器上。 巢狀資料區域屬於主報表的一部分。  
   
-###  <a name="Display"></a> 顯示器  
+###  <a name="Display"></a> 顯示  
  子報表和巢狀資料區域會顯示在主報表中。 鑽研報表則會另外獨立顯示。  
   
   
 ##  <a name="InThisSection"></a> 本節內容  
- [鑽研報表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/drillthrough-reports-report-builder-and-ssrs.md)  
+ [鑽研報表 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/drillthrough-reports-report-builder-and-ssrs.md)  
  說明使用者按一下主報表中的連結時開啟的報表。  
   
- [子報表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md)  
+ [子報表 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md)  
  說明顯示在主報表主體內的報表。  
   
- [巢狀資料區 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)  
+ [巢狀的資料區域 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)  
  說明將某個資料區套疊在另一個資料區內，例如，套疊在矩陣內的圖表。  
   
- [向下鑽研動作 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/drilldown-action-report-builder-and-ssrs.md)  
+ [向下鑽研動作 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/drilldown-action-report-builder-and-ssrs.md)  
  說明如何使用向下鑽研動作隱藏和顯示報表項目。  
   
- [指定外部項目的路徑 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md)  
+ [指定外部項目 &#40;路徑報表產生器和 SSRS&#41;](../../reporting-services/report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md)  
  說明如何參考報表定義檔案外部的項目。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [報表參數 &#40;報表產生器和報表設計師&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
   
   

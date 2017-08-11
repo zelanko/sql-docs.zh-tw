@@ -15,7 +15,7 @@ caps.latest.revision: 16
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: bfa852d24647ae9553ec05167dc8eba58dfd3f73
 ms.contentlocale: zh-tw
@@ -46,17 +46,17 @@ ms.lasthandoff: 08/09/2017
   
 -   **資料集** ：您可以發行資料集並從所相依的報表或共用資料來源分開進行管理。 您或資料庫擁有者可以提供報表作者可用的最佳化查詢。 變更查詢時，所有使用共用資料集的報表都會使用更新的查詢。 您可以啟用資料集快取以改善效能。 您可以為特定時間排程查詢快取，或使用共用排程。  
   
--   **報表組件使用的資料**：報表組件可以包含所相依的資料。 如需報表組件的詳細資訊，請參閱[報表設計師中的報表組件 &#40;SSRS&#41;](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md)。  
+-   **報表組件使用的資料** ：報表組件可以包含所相依的資料。 如需有關報表組件的詳細資訊，請參閱[報表設計工具 &#40; 中的報表組件SSRS &#41;](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md).  
   
--   **篩選資料**：在查詢或在報表中，可以篩選報表資料。 您可以使用資料集及查詢變數以建立串聯參數，並提供使用者從數千個選取中減少選擇項目的能力，以選取便於管理的數字。 您可以根據所指定的參數值或其他值，篩選資料表或圖表中的資料。  
+-   **篩選資料** ：在查詢或在報表中，可以篩選報表資料。 您可以使用資料集及查詢變數以建立串聯參數，並提供使用者從數千個選取中減少選擇項目的能力，以選取便於管理的數字。 您可以根據所指定的參數值或其他值，篩選資料表或圖表中的資料。  
   
--   **參數** ：包含查詢變數的資料集查詢命令會自動建立相符的報表參數。 您也可以手動建立參數。 檢視報表時，報表工具列會顯示參數。 使用者可以選取值，以控制報表資料或報告的外觀。 若要為特定對象自訂報表資料，您可以建立一組具有連結到相同報表定義之不同預設值的報表參數，或是使用內建的 **UserID** 欄位。 如需詳細資訊，請參閱[報表參數 &#40;報表產生器和報表設計師&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md) 和[運算式中的內建集合 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)。  
+-   **參數** ：包含查詢變數的資料集查詢命令會自動建立相符的報表參數。 您也可以手動建立參數。 檢視報表時，報表工具列會顯示參數。 使用者可以選取值，以控制報表資料或報告的外觀。 若要為特定對象自訂報表資料，您可以建立一組具有連結到相同報表定義之不同預設值的報表參數，或是使用內建的 **UserID** 欄位。 如需詳細資訊，請參閱[報表參數 &#40;報表產生器和報表設計工具 &#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)和[運算式 &#40; 中的內建集合報表產生器及 SSRS &#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md).  
   
--   **資料警示**：發行報表後，您可以根據報表資料來建立警示，並在符合所指定規則時，接收電子郵件訊息。  
+-   **資料警示** ：發行報表後，您可以根據報表資料來建立警示，並在符合所指定規則時，接收電子郵件訊息。  
   
--   **群組及彙總值** ：在查詢或在報表中，可以分組及彙總報表資料。 若您彙總查詢中的數值，可繼續合併有意義條件約束內報表中的數值。  如需詳細資訊，請參閱[篩選、分組和排序資料 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md) 和[彙總函式 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-function.md)。  
+-   **群組及彙總值** ：在查詢或在報表中，可以分組及彙總報表資料。 若您彙總查詢中的數值，可繼續合併有意義條件約束內報表中的數值。  如需詳細資訊，請參閱[篩選、 群組和排序資料 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)和[彙總函式 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/report-builder-functions-aggregate-function.md).  
   
--   **排序資料**：在查詢或在報表中，可以排序報表資料。 在資料表中，您也可以加入互動式排序按鈕，讓使用者可以控制排序次序。  
+-   **排序資料** ：在查詢或在報表中，可以排序報表資料。 在資料表中，您也可以加入互動式排序按鈕，讓使用者可以控制排序次序。  
   
 -   **以運算式為基礎的資料** ：因為多數的報表屬性可以運算式為基礎，而且運算式可以包含資料集欄位及報表參數的參考，您可以寫入強大的運算式以控制報表資料及外觀。 您可以提供使用者透過定義參數控制所看見資料的能力。  
   
@@ -70,13 +70,13 @@ ms.lasthandoff: 08/09/2017
   
 -   了解組織的軟體資料層架構，以及資料類型所造成之可能發生的問題。 了解資料延伸模組及資料處理延伸模組會如何影響查詢結果。 資料類型在資料來源、資料提供者及儲存於報表定義 (.rdl) 檔案的資料類型之間會有所差異。  
   
--   了解 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 用戶端/伺服器架構及工具。 例如，在報表設計師中，您會在使用內建資料來源類型的用戶端機器上撰寫報表。 發行報表時，報表伺服器或 SharePoint 網站上必須支援資料來源類型。  如需詳細資訊，請參閱 [Reporting Services 支援的資料來源 &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。  
+-   了解 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 用戶端/伺服器架構及工具。 例如，在報表設計師中，您會在使用內建資料來源類型的用戶端機器上撰寫報表。 發行報表時，報表伺服器或 SharePoint 網站上必須支援資料來源類型。  如需詳細資訊，請參閱 [Reporting Services &#40;SSRS&#41; 支援的資料來源](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。  
   
 -   報表中可撰寫資料來源及資料集，並且會從用戶端撰寫工具發行至報表伺服器或 SharePoint 網站。 報表伺服器上可直接建立資料來源。 發行後，您可以設定報表伺服器上的認證及其他屬性。 如需詳細資訊，請參閱 [資料連接、資料來源及連接字串 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) 和 [Reporting Services 工具](../../reporting-services/tools/reporting-services-tools.md)。  
   
--   您可以使用的資料來源取決於其 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 資料延伸模組的安裝。 資料來源支援可視用戶端撰寫工具、報表伺服器版本及報表伺服器平台而有所差異。 如需詳細資訊，請參閱 [Reporting Services 支援的資料來源 &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。  
+-   您可以使用的資料來源取決於其 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 資料延伸模組的安裝。 資料來源支援可視用戶端撰寫工具、報表伺服器版本及報表伺服器平台而有所差異。 如需詳細資訊，請參閱 [Reporting Services &#40;SSRS&#41; 支援的資料來源](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。  
   
--   資料來源認證會視資料來源類型，以及您是否正在用戶端或報表伺服器或 SharePoint 網站上檢視報表而有所變化。 如需詳細資訊，請參閱[設定 SharePoint 網站上報表伺服器項目的權限 &#40;SharePoint 整合模式的 Reporting Services&#41;](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)、[指定報表資料來源的認證及連接資訊](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)，以及 [Reporting Services 工具](../../reporting-services/tools/reporting-services-tools.md)中每個工具特定的認證資訊。  
+-   資料來源認證會視資料來源類型，以及您是否正在用戶端或報表伺服器或 SharePoint 網站上檢視報表而有所變化。 如需詳細資訊，請參閱[設定 SharePoint 網站 &#40; 上的報表伺服器項目的權限Reporting Services SharePoint 整合模式 &#41;](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)，[指定認證和報表資料來源的連接資訊](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)，及認證中的每個工具的特定資訊[Reporting Services 工具](../../reporting-services/tools/reporting-services-tools.md)。  
   
 ## <a name="related-tasks"></a>相關工作  
  建立資料連接，從外部來源、資料集及查詢加入資料的相關工作。  

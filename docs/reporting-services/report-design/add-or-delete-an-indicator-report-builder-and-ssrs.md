@@ -15,7 +15,7 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 1356d575f58eb36d00f52bcbac1483ce902b1954
 ms.contentlocale: zh-tw
@@ -33,7 +33,7 @@ ms.lasthandoff: 08/09/2017
   
 -   [變更指標圖示和指標集合 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)  
   
--   [設定度量單位 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/set-and-configure-measurement-units-report-builder-and-ssrs.md)  
+-   [設定和配置度量單位 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/set-and-configure-measurement-units-report-builder-and-ssrs.md)  
   
 -   [設定同步處理範圍 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/set-synchronization-scope-report-builder-and-ssrs.md)  
   
@@ -46,7 +46,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="to-add-an-indicator-to-a-table-or-matrix"></a>若要將指標加入至資料表或矩陣  
   
-1.  開啟現有的報表，或建立新的報表，其中包含的資料表和矩陣含有您想要顯示的資料。 如需詳細資訊，請參閱[資料表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md) 或[矩陣](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)。  
+1.  開啟現有的報表，或建立新的報表，其中包含的資料表和矩陣含有您想要顯示的資料。 如需詳細資訊，請參閱[資料表 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)或[矩陣](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)。  
   
 2.  將資料行插入資料表或矩陣中。 如需詳細資訊，請參閱[插入或刪除資料行 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/insert-or-delete-a-column-report-builder-and-ssrs.md)。  
   
@@ -75,7 +75,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  按一下 **[刪除]**。  
   
-## <a name="see-also"></a>請參閱＜  
- [指標 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
+## <a name="see-also"></a>另請參閱  
+ [指標 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   
   

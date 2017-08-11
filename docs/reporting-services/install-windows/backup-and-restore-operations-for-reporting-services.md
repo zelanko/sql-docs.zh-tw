@@ -24,7 +24,7 @@ caps.latest.revision: 43
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: e3247864547983779f4037eb963ba6721a2b7654
 ms.contentlocale: zh-tw
@@ -36,7 +36,7 @@ ms.lasthandoff: 08/09/2017
 
   此主題提供所有用於 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝中資料檔案的概觀，並說明備份這些檔案的時機與方法。 復原策略中最重要的部分，就是訂定報表伺服器資料庫檔案的備份與還原計劃。 但是，更加完整的復原策略應該要包括加密金鑰、自訂組件或延伸模組、組態檔以及報表和模型之來源檔案的備份。  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native Mode | [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint Mode  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式 | [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式  
   
  備份和還原作業常用於移動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝的全部或一部分：  
   
@@ -46,9 +46,9 @@ ms.lasthandoff: 08/09/2017
   
     -   [升級和移轉 Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)  
   
-    -   [遷移 Reporting Services 安裝 &#40;SharePoint 模式&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md)  
+    -   [移轉 Reporting Services 安裝 &#40;SharePoint 模式 &#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md)  
   
-    -   [遷移 Reporting Services 安裝 &#40;原生模式&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)  
+    -   [移轉 Reporting Services 安裝 &#40;原生模式 &#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)  
   
 ## <a name="backing-up-the-report-server-databases"></a>備份報表伺服器資料庫  
  由於報表伺服器是無狀態伺服器，因此所有應用程式資料都會儲存在 **執行個體上執行的** reportserver **與** reportservertempdb [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 資料庫中。 您可以使用其中一種支援的 **資料庫備份方法，備份** reportserver **與** reportservertempdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫。 報表伺服器資料庫的特定建議事項如下：  
@@ -80,7 +80,7 @@ ms.lasthandoff: 08/09/2017
   
 -   報表伺服器和報表管理員 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 應用程式的 Web.config  
   
--   Machine.config [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]  
+-   Machine.config[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]  
   
 ## <a name="backing-up-data-files"></a>備份資料檔案  
  備份您在報表設計師和模型設計師中建立與維護的檔案。 這些包括報表定義 (.rdl) 檔案、報表模型 (.smdl) 檔案、共用資料來源 (.rds) 檔案、資料檢視 (.dv) 檔案、資料來源 (.ds) 檔案、報表伺服器專案 (.rptproj) 檔案，以及報表方案 (.sln) 檔案。  

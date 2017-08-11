@@ -18,7 +18,7 @@ caps.latest.revision: 49
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 6a1efe67725037c9d47f20209c2831db3faef65e
 ms.contentlocale: zh-tw
@@ -36,7 +36,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  在 [報表資料] 窗格中，以滑鼠右鍵按一下資料集，然後按一下 [資料集屬性]，再按一下 [參數]。  
   
-    > **注意：**如果看不到 [報表資料] 窗格，請按一下 [檢視] 功能表上的 [報表資料]。  
+    > **注意：**如果看不到 [報表資料] 窗格，按一下**報表資料**上**檢視**功能表。  
   
 2.  在 [參數名稱] 資料行中，尋找查詢參數的名稱。 參數名稱會依據查詢自動填入。 每當您變更查詢時，系統都會檢查查詢，看看是否有新的查詢參數。 當查詢變更時，您手動建立的查詢參數並不會變更。  
   

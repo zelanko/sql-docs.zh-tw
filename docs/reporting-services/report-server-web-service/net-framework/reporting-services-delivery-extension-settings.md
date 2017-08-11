@@ -26,14 +26,14 @@ helpviewer_keywords:
 - Web service [Reporting Services], delivery extension settings
 ms.assetid: 68c31a85-261c-4ec4-b8df-1f9842b46f8a
 caps.latest.revision: 36
-author: sabotta
+author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 668c3d31af5f287d7d254c2dc666e20a5f6328fa
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: bc52f95cdc038c0074feb10b05fffe916b3d3da1
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="reporting-services-delivery-extension-settings"></a>Reporting Services 傳遞延伸模組設定
@@ -48,12 +48,12 @@ ms.lasthandoff: 06/13/2017
 |設定|Value|  
 |-------------|-----------|  
 |**若要**|會出現在電子郵件地址**至**電子郵件訊息。 分號會分隔多個電子郵件地址。 必要。|  
-|**[副本]**|會出現在電子郵件地址**Cc**電子郵件訊息。 分號會分隔多個電子郵件地址。 選擇性。|  
+|**收件者**|會出現在電子郵件地址**Cc**電子郵件訊息。 分號會分隔多個電子郵件地址。 選擇性。|  
 |**[密件副本]**|會出現在電子郵件地址**密件副本**電子郵件訊息。 分號會分隔多個電子郵件地址。 選擇性。|  
 |**ReplyTo**|會出現在電子郵件地址**回覆給**電子郵件訊息的標頭。 值必須是單一電子郵件地址。 選擇性。|  
 |**[Includereport]**|指出在電子郵件傳遞中是否包括報表的值。 值為**true**指出報表是否傳遞電子郵件訊息的本文中。|  
 |**RenderFormat**|要用以產生轉譯報表的轉譯延伸模組名稱。 名稱必須對應至報表伺服器上安裝的其中一個可見的轉譯延伸模組。 如果此值，則需要**[includereport]**設定為值的**true**。|  
-|**優先權**|傳送電子郵件訊息的優先權。 有效值為**低**，**一般**，和**高**。 預設值是**一般**。|  
+|**優先順序**|傳送電子郵件訊息的優先權。 有效值為**低**，**一般**，和**高**。 預設值是**一般**。|  
 |**主旨**|電子郵件訊息主旨中的文字。|  
 |**註解**|文字包括在電子郵件訊息的本文中。|  
 |**IncludeLink**|指出在電子郵件本文中是否包括報表連結的值。|  

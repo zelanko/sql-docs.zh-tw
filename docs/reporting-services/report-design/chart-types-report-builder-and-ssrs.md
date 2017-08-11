@@ -17,7 +17,7 @@ caps.latest.revision: 11
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 7b23da886ccf8fc76cbe8e86a722e4e9a8f3e656
 ms.contentlocale: zh-tw
@@ -35,9 +35,9 @@ ms.lasthandoff: 08/09/2017
 ## <a name="choosing-a-chart-type"></a>選擇圖表類型  
  每個圖表類型都有獨特的特性，可協助您將資料集視覺化。 您可以使用任何圖表類型來顯示資料，但是，根據您嘗試要在報表中顯示的項目使用適合您資料的圖表類型時，將會更容易讀取資料。 下表摘要說明影響特定資料集之圖表適合度的圖表功能。  
   
- 您可以在建立圖表類型之後再加以變更。 如需詳細資訊，請參閱[變更圖表類型 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/change-a-chart-type-report-builder-and-ssrs.md)。  
+ 您可以在建立圖表類型之後再加以變更。 如需詳細資訊，請參閱[變更圖表類型 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/change-a-chart-type-report-builder-and-ssrs.md).  
   
- 其中許多圖表類型的範例可從範例報表取得。 如需有關下載範例報表的詳細資訊，請參閱[報表產生器和報表設計師範例報表](http://go.microsoft.com/fwlink/?LinkId=198283)。  
+ 其中許多圖表類型的範例可從範例報表取得。 如需有關下載範例報表的詳細資訊，請參閱 [報表產生器與報表設計師範例報表](http://go.microsoft.com/fwlink/?LinkId=198283)。  
   
 |圖表類型|顯示比例資料|顯示庫存資料|顯示線性資料|顯示多重值資料|  
 |----------------|------------------------|------------------------|-------------------------|-------------------------------|  
@@ -45,8 +45,8 @@ ms.lasthandoff: 08/09/2017
 |[橫條圖 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md)|||![可用](../../reporting-services/report-data/media/greencheck.gif "可用")||  
 |[資料橫條](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)|||![可用](../../reporting-services/report-data/media/greencheck.gif "可用")||  
 |[直條圖 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md)|||![可用](../../reporting-services/report-data/media/greencheck.gif "可用")||  
-|[折線圖 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/line-charts-report-builder-and-ssrs.md)|||![可用](../../reporting-services/report-data/media/greencheck.gif "可用")||  
-|[圓形圖 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)|![可用](../../reporting-services/report-data/media/greencheck.gif "可用")||||  
+|[折線圖 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/line-charts-report-builder-and-ssrs.md)|||![可用](../../reporting-services/report-data/media/greencheck.gif "可用")||  
+|[圓形圖 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)|![可用](../../reporting-services/report-data/media/greencheck.gif "可用")||||  
 |[極座標圖 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/polar-charts-report-builder-and-ssrs.md)|![可用](../../reporting-services/report-data/media/greencheck.gif "可用")||||  
 |[範圍圖表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md)|||![可用](../../reporting-services/report-data/media/greencheck.gif "可用")|![可用](../../reporting-services/report-data/media/greencheck.gif "可用")|  
 |[散佈圖 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/scatter-charts-report-builder-and-ssrs.md)|![可用](../../reporting-services/report-data/media/greencheck.gif "可用")||![可用](../../reporting-services/report-data/media/greencheck.gif "可用")||  

@@ -15,7 +15,7 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 824ca565b87a77add1c547aafb264345a9a63dab
 ms.contentlocale: zh-tw
@@ -29,14 +29,14 @@ ms.lasthandoff: 08/09/2017
     
 ## <a name="to-add-a-border-to-a-report"></a>在報表中加入框線    
     
-1.  在頁首內以滑鼠右鍵按一下任何項目的外部，然後按一下 [頁首屬性]。 以您所要的樣式，在 **[框線]** 索引標籤上加入左框線、上框線和右框線。    
+1.  以滑鼠右鍵按一下任何項目在頁首中，外部標頭中，按一下 **標頭屬性**。 以您所要的樣式，在 **[框線]** 索引標籤上加入左框線、上框線和右框線。    
     
     > [!NOTE]    
-    >  如果您不要在報表中使用頁首，可以將框線放在報表主體的周圍，或是從 [插入] 索引標籤加入頁首。    
+    >  如果報表沒有標頭，就可以在報表主體周圍，框線或您可以加入標頭從**插入** 索引標籤。    
     
-2.  在設計介面上以滑鼠右鍵按一下主體內任何項目的外部，然後按一下 [主體屬性]。 以您所要的樣式，在 **[框線]** 索引標籤上加入左框線和右框線。    
+2.  以滑鼠右鍵按一下設計介面上的任何項目外部主體中，按一下 **主體屬性**。 以您所要的樣式，在 **[框線]** 索引標籤上加入左框線和右框線。    
     
-3.  在頁尾內以滑鼠右鍵按一下任何項目的外部，然後按一下 [頁尾屬性]。 以您所要的樣式，在 **[框線]** 索引標籤上加入左框線、下框線和右框線。    
+3.  以滑鼠右鍵按一下任何項目在頁尾中，外部頁尾中，按一下 **頁尾屬性**。 以您所要的樣式，在 **[框線]** 索引標籤上加入左框線、下框線和右框線。    
     
 ## <a name="see-also"></a>請參閱＜    
  [矩形和線條 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md)    

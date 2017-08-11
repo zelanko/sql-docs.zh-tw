@@ -14,7 +14,7 @@ caps.latest.revision: 12
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: b810d42e1d7e74db8aa81939cfe83f81a1694c36
 ms.contentlocale: zh-tw
@@ -67,8 +67,8 @@ ms.lasthandoff: 08/09/2017
 |步驟|說明和連結|  
 |----------|--------------------------|  
 |將 SharePoint 伺服器加入伺服器陣列中。|您需安裝 SharePoint 以部署其他 Reporting Services 應用程式。<br/><br/>若是 SharePoint 2013，請參閱 [Add SharePoint server to a farm in SharePoint Server 2013](https://technet.microsoft.com/library/cc261752(v=office.15).aspx)(在 SharePoint Server 2013 中將 SharePoint 伺服器加入伺服陣列)。<br/><br/>若是 SharePoint 2016，請參閱 [Add SharePoint server to a farm in SharePoint Server 2016](https://technet.microsoft.com/library/cc261752(v=office.16).aspx)(在 SharePoint Server 2016 中將 SharePoint 伺服器加入伺服器陣列)。|  
-|安裝和設定 Reporting Services SharePoint 模式。|執行 SQL Server 安裝程式。 如需安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式的詳細資訊，請參閱 [在 SharePoint 模式中安裝第一部報表伺服器](http://msdn.microsoft.com/en-us/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538)<br /><br /> 如果伺服器只會當做應用程式伺服器使用，而不會當做 WFE 使用，您就不需要選取 [適用於 SharePoint 產品的 Reporting Services 增益集]。<br /><br /> 1) 在 [安裝程式角色] 頁面上，選取 [SQL Server 功能安裝]<br /><br /> 2) 在 [功能選擇] 頁面上，選取 [Reporting Services - SharePoint]<br /><br /> 3) 在 [Reporting Services 組態] 頁面上，確認已針對 [Reporting Services SharePoint 模式] 選取 [只安裝] 選項。|  
-|確認 Reporting Services 可以運作。|1) 在 SharePoint 管理中心內，按一下 [系統設定] 群組中的 [管理此伺服器陣列中的伺服器]。<br /><br /> 2) 確認 [SQL Server Reporting Services 服務] 正在執行。<br /><br />如需詳細資訊，請參閱＜ [Verify a Reporting Services Installation](../../reporting-services/install-windows/verify-a-reporting-services-installation.md)＞|  
+|安裝和設定 Reporting Services SharePoint 模式。|執行 SQL Server 安裝程式。 如需安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式的詳細資訊，請參閱 [在 SharePoint 模式中安裝第一部報表伺服器](http://msdn.microsoft.com/en-us/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538)<br /><br /> 如果伺服器將只會當做應用程式伺服器和伺服器將不會當做 WFE，您不需要選取**Reporting Services 增益集適用於 SharePoint 產品**。<br /><br /> 1） 在**安裝程式角色**頁面上，選取**SQL Server 功能安裝**<br /><br /> 2） 在**特徵選取**頁面上，選取**Reporting Services-SharePoint**<br /><br /> 3） 在**Reporting Services 組態**頁面上，確認**只安裝**的選取選項**Reporting Services SharePoint 模式**。|  
+|確認 Reporting Services 可以運作。|1） 在 SharePoint 管理中心內，按一下 **管理此伺服器陣列中的伺服器**中**系統設定**群組。<br /><br /> 2） 請確認服務**SQL Server Reporting Services 服務**。<br /><br />如需詳細資訊，請參閱＜ [Verify a Reporting Services Installation](../../reporting-services/install-windows/verify-a-reporting-services-installation.md)＞|  
   
 ##  <a name="bkmk_additional"></a> 其他組態  
  您可以將向外延展部署中的個別 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 伺服器最佳化為僅執行背景處理，如此伺服器就不會與互動報表執行作業競用資源。 背景處理包括排程、訂閱和資料警示。  

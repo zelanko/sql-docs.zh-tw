@@ -14,7 +14,7 @@ caps.latest.revision: 57
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: bead48dd2f32047b2782a54204bf06a145a7d71d
 ms.contentlocale: zh-tw
@@ -37,11 +37,11 @@ ms.lasthandoff: 08/09/2017
   
 1.  開啟 [!INCLUDE[ssBIDevStudio_md](../includes/ssbidevstudio-md.md)]。  
   
-2.  在 [檔案] 功能表 > [新增] > [專案]。  
+2.  在**檔案**功能表 >**新增** > **專案**。  
 
     ![ssrs-ssdt-file-01-new-project](../reporting-services/media/ssrs-ssdt-file-01-new-project.png)
   
-3.  在 [已安裝] > [範本] > [商業智慧] 底下，按一下 [Reporting Services]。
+3.  在下**已安裝** > **範本** > **Business Intelligence**，按一下  **Reporting Services**。
 
     ![ssrs-ssdt-01-new-rs-project](../reporting-services/media/ssrs-ssdt-01-new-rs-project.png)
 
@@ -63,7 +63,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  在**方案總管 中** 窗格中，以滑鼠右鍵按一下**報表** > **新增** > **新項目**。 
 
-    >**秘訣**：如果您沒有看到 [方案總管] 窗格，請在 [檢視] 功能表上按一下 [方案總管]。 
+    >**秘訣**：如果您沒有看到 [方案總管]  窗格，請在 [檢視]  功能表上按一下 [方案總管] 。 
 
     ![ssrs_ssdt_add_report](../reporting-services/media/ssrs-ssdt-add-report.png)
   
@@ -80,7 +80,7 @@ ms.lasthandoff: 08/09/2017
     您會在 [報表資料]  窗格中定義資料， 並在 [設計]  檢視中定義報表配置。 您可以執行報表，然後在 [預覽]  檢視中查看外觀。  
   
 ## <a name="next-lesson"></a>下一課  
-您已順利建立稱為 "Tutorial" 的報表專案，並將報表定義 (.rdl) 檔案加入至報表專案。 下一步，您將指定報表要用的資料來源。 請參閱[第 2 課：指定連接資訊 &#40;Reporting Services&#41;](../reporting-services/lesson-2-specifying-connection-information-reporting-services.md)。  
+您已順利建立稱為 "Tutorial" 的報表專案，並將報表定義 (.rdl) 檔案加入至報表專案。 下一步，您將指定報表要用的資料來源。 請參閱[第 2 課： 指定連接資訊 &#40;Reporting Services &#41;](../reporting-services/lesson-2-specifying-connection-information-reporting-services.md).  
   
 ## <a name="see-also"></a>另請參閱  
 [建立基本資料表報表 &#40;SSRS 教學課程&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)  

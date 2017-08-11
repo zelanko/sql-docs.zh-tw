@@ -15,7 +15,7 @@ caps.latest.revision: 13
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: f838e4a7e9518587e91dddec6c2cab61c1061232
 ms.contentlocale: zh-tw
@@ -50,8 +50,8 @@ ms.lasthandoff: 08/09/2017
     >  週期是用來計算移動平均的天數。 如果沒有在 X 軸上指定日期/時間值，則週期會由用來計算移動平均的資料點數目代表。 如果只有一個資料點，則移動平均公式不會進行計算。 移動平均會從第二個點開始計算。 如果指定 **[從第一個點開始]** 選項，則移動平均會從圖表的第一個點開始。 如果只有一個資料點，則導出的移動平均中的點會與原始數列中的第一個點相同。  
   
 ## <a name="see-also"></a>另請參閱  
-* [教學課程： 將直條圖加入至報表 （報表產生器）](Tutorial:%20Add%20a%20Column%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md)
-*  [格式化圖表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
+* [教學課程：將直條圖加入至報表 (報表產生器)](Tutorial:%20Add%20a%20Column%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md)
+*  [格式化圖表 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
 *  [圖表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
 *  [將空點加入至圖表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-empty-points-to-a-chart-report-builder-and-ssrs.md)  
   

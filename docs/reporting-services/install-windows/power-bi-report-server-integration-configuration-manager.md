@@ -19,7 +19,7 @@ caps.latest.revision: 22
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 5ece1f5e492f4508d6c014709a953bfb4d29815a
 ms.contentlocale: zh-tw
@@ -69,9 +69,9 @@ ms.lasthandoff: 08/09/2017
 
 2. 選取 [向 Power BI 註冊]。
 
-3. 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 登入對話方塊中，輸入您用來登入 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 的認證。
+3. 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 登入對話方塊中，輸入您用來登入 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)]的認證。
 
-4. 註冊完成之後，[Power BI 註冊詳細資料] 區段將記下 Azure 租用戶識別碼和重新導向 URL。  在 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 儀表板登入和通訊過程中會使用這些 URL，來向後與已註冊的報表伺服器通訊。
+4. 註冊完成之後， **Power BI 註冊詳細資料**區段將記下 Azure 租用戶識別碼和重新導向 URL。  在 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 儀表板登入和通訊過程中會使用這些 URL，來向後與已註冊的報表伺服器通訊。
 
 5. ![請注意](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "注意")選取**複製**按鈕**結果**視窗複製到 Windows 剪貼簿的註冊詳細資料，以便您加以儲存供日後參考。
 
@@ -91,13 +91,13 @@ ms.lasthandoff: 08/09/2017
 
 ##  <a name="bkmk_updateregistration"></a> 更新註冊
 
-若報表伺服器的組態已變更，則使用 [更新註冊]  。 例如，若您想要新增或移除使用者用來瀏覽至 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 的 URL。
+若報表伺服器的組態已變更，則使用 [更新註冊]  。 例如，若您想要新增或移除使用者用來瀏覽至 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]的 URL。
 
-- 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員中，選取 [入口網站 URL]
+- 在[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]組態管理員中，選取**入口網站 URL**
 
-     選取 [進階]。
+     選取**進階**。
 
-- 選取 [加入] 為 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 加入新的 HTTP 識別，然後選取 [確定]。
+- 選取**新增**要加入新的 HTTP 識別[!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]，然後選取 **確定**。
 
      [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 圖示會變更，指出已變更伺服器設定。  ![ssrs_powebi_icon_warning](../../reporting-services/install-windows/media/ssrs-powebi-icon-warning.png "ssrs_powebi_icon_warning")
 
@@ -113,7 +113,7 @@ ms.lasthandoff: 08/09/2017
 
 1. 在組態管理員中，當您選取 [向 Power BI 註冊] 按鈕時，系統將會提示您登入 Azure Active Directory。
 
-2. [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)]用戶端應用程式已向您受管理的租用戶註冊。
+2. [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 用戶端應用程式已向您受管理的租用戶註冊。
 
 3. Azure Active Directory 內的受管理租用戶是 Power BI 用戶端應用程式的建立位置。
 
@@ -164,7 +164,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="next-steps"></a>後續的步驟
 
 [Power BI 整合的我的設定](http://msdn.microsoft.com/en-us/85c2fac7-80bf-45b7-8654-764b5f5231f5)  
-[Power BI 儀表板的固定 Reporting Services 項目](../../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)   
+[將 Reporting Services 項目釘選到 Power BI 儀表板](../../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)   
 [Power BI 的儀表板](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)  
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)

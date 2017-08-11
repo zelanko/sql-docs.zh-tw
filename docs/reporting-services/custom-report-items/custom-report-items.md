@@ -18,14 +18,14 @@ helpviewer_keywords:
 - custom report items
 ms.assetid: 64dcaf2c-1af5-4937-8ff7-98f1ec3b367e
 caps.latest.revision: 22
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 2396af94f8c28c41d41c52cd505d12aa8dceee17
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: 260b1fbbcac13246da70790ab53cfcbbb07623c2
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="custom-report-items"></a>自訂報表項目
@@ -38,7 +38,7 @@ ms.lasthandoff: 06/22/2017
   
  除了提供本來不支援的功能之外，有些開發人員可能會想要使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 已經隨附的控制項替代版本來擴充現有的功能。 在這個案例中，開發人員可以提供三個元件：執行階段元件、設計階段元件以及設計階段報表項目轉換元件 (可依需求將現有的報表項目轉換為自訂報表項目)。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>섹션 내용  
  [自訂報表項目架構](../../reporting-services/custom-report-items/custom-report-item-architecture.md)  
  描述組成自訂報表項目的元件。  
   
@@ -51,13 +51,13 @@ ms.lasthandoff: 06/22/2017
  [建立自訂報表項目設計階段元件](../../reporting-services/custom-report-items/creating-a-custom-report-item-design-time-component.md)  
  描述如何建立自訂報表項目設計階段元件。  
   
- [如何：部署自訂報表項目](../../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md)  
+ [如何︰ 部署自訂報表項目](../../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md)  
  描述如何部署自訂報表項目  
   
  [自訂報表項目類別庫](../../reporting-services/custom-report-items/custom-report-item-class-libraries.md)  
  描述中的 managed 包裝函式類別與自訂報表項目基礎結構類別**m**命名空間。  
   
 ## <a name="see-also"></a>另請參閱  
- [技術參考 &#40;SSRS&#41;](../../reporting-services/technical-reference-ssrs.md)  
+ [技術參考 &#40;SSRS &#41;](../../reporting-services/technical-reference-ssrs.md)  
   
   

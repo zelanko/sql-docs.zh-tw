@@ -17,7 +17,7 @@ caps.latest.revision: 9
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 77323d7f01b54345cce6354b800808b88e6ab21e
 ms.contentlocale: zh-tw
@@ -34,6 +34,6 @@ ms.lasthandoff: 08/09/2017
  按一下 **[確定]** 繼續進行。  
   
 ## <a name="see-also"></a>請參閱＜  
- [對話方塊、窗格和精靈的報表產生器說明](http://msdn.microsoft.com/en-us/2da24891-0b6d-4d3c-8b18-81b98752642f)  
+ [對話方塊、 窗格和精靈的報表產生器說明](http://msdn.microsoft.com/en-us/2da24891-0b6d-4d3c-8b18-81b98752642f)  
   
   

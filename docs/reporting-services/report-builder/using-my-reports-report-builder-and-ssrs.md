@@ -15,7 +15,7 @@ caps.latest.revision: 8
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f394a1ad055276cc7f0a6d28f923215dde8e437a
 ms.contentlocale: zh-tw
@@ -29,7 +29,7 @@ ms.lasthandoff: 08/09/2017
   
  [我的報表] 功能是選擇性的，可以由報表伺服器管理員停用。 如果有啟用「我的報表」，您就會在 [主資料夾] 資料夾中看到 [我的報表] 資料夾，您可以使用報表管理員或 Web 瀏覽器來存取其內容。 如需詳細資訊，請參閱[在報表管理員中尋找及檢視報表 &#40;報表產生器及 SSRS&#41;](https://msdn.microsoft.com/library/dd255286.aspx)。  
   
- 在設定為 SharePoint 整合模式的報表伺服器上，[我的報表] 資料夾沒有任何對等項目。 如需詳細資訊，請參閱 [尋找、檢視和管理報表 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)。  
+ 在設定為 SharePoint 整合模式的報表伺服器上，[我的報表] 資料夾沒有任何對等項目。 如需詳細資訊，請參閱[尋找、檢視和管理報表 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -37,7 +37,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="ways-to-use-my-reports"></a>使用我的報表的方式  
  在您加入報表、資料夾和其他項目之前，[我的報表] 是空的。 以下是將內容加入至 [我的報表] 的一些方法。  
   
--   建立個人的連結報表，並將它儲存至 [我的報表]。 並非所有的報表都可以連結。 如需詳細資訊，請參閱 [建立連結報表](../../reporting-services/reports/create-a-linked-report.md)。  
+-   建立個人的連結報表，並將它儲存至 [我的報表]。 並非所有的報表都可以連結。 如需詳細資訊，請參閱[建立連結報表](../../reporting-services/reports/create-a-linked-report.md)。  
   
 -   從檔案系統上傳報表定義檔 (.rdl)、報表模型檔 (.smdl) 或其他檔案。 您可以上傳任何檔案，但報表伺服器只會處理副檔名為 .rdl 或 .smdl 的報表檔案。 如需詳細資訊，請參閱《SQL Server 線上叢書》中 [Reporting Services 文件](http://go.microsoft.com/fwlink/?linkid=121312)的＜報表定義＞以及[上傳檔案或報表 &#40;報表管理員&#41;](../../reporting-services/reports/upload-a-file-or-report-report-manager.md)。  
   
@@ -49,6 +49,6 @@ ms.lasthandoff: 08/09/2017
  在搜尋報表伺服器資料庫時，[我的報表] 資料夾的內容將包含在搜尋中，但是會排除其他使用者的 [我的報表] 資料夾的內容。 搜尋結果清單只會包含您有權存取的報表。  
   
 ## <a name="see-also"></a>請參閱＜  
- [尋找、檢視和管理報表 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
+ [尋找、 檢視和管理報表 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

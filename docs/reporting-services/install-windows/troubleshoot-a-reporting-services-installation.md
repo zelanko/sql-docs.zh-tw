@@ -14,7 +14,7 @@ caps.latest.revision: 16
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 79d064c7ddb43531fdff086eda71ba1e28d71fd6
 ms.contentlocale: zh-tw
@@ -54,7 +54,7 @@ ms.lasthandoff: 08/09/2017
   
 -   Authz.dll 必須存在於 System32 資料夾中。  
   
- 安裝程式不再檢查 Internet Information Services (IIS) 或 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]需要 MDAC 2.0 和[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]版本 2.0。安裝程式會安裝這些如果尚未安裝。  
+ 安裝程式不再檢查 Internet Information Services (IIS) 或 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 需要 MDAC 2.0 與 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0 版；如果尚未安裝，則安裝程式會加以安裝。  
   
 ##  <a name="bkmk_tshoot_sharepoint"></a> 疑難排解 SharePoint 模式安裝的問題  
   
@@ -82,7 +82,7 @@ ms.lasthandoff: 08/09/2017
   
  ![搭配回到頁首連結使用的箭號圖示](../../analysis-services/instances/media/uparrow16x16.gif "搭配回到頁首連結使用的箭號圖示")[疑難排解 SharePoint 模式安裝的問題](#bkmk_tshoot_sharepoint)  
   
-###  <a name="bkmk_no_ssrs_service"></a>在 SharePoint 模式安裝 SQL Server 2016 SSRS 之後不看 SQL Server Reporting Services 服務，在 SharePoint 管理中心內  
+###  <a name="bkmk_no_ssrs_service"></a> 在 SharePoint 模式下安裝 SQL Server 2016 SSRS 之後，您在 SharePoint 管理中心內看不到 SQL Server Reporting Services 服務  
  **描述：**如果順利安裝 SQL Server 2016 Reporting Services SharePoint 模式和 SQL Server 2016 Reporting Services 增益集，適用於 SharePoint 2013/2016年，您看不"SQL Server Reporting Services 」 在下列兩個功能表，然後在[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]服務尚未註冊：  
   
 -   SharePoint 2013/2016 管理中心 -> [應用程式管理] -> [管理伺服器上的服務] 頁面  
@@ -122,7 +122,7 @@ ms.lasthandoff: 08/09/2017
   
 -   從 SQL Server 安裝媒體安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式。  
   
- **注意：**如果當您完成其中一種因應措施時 [SharePoint 2013/2016 管理命令介面] 已開啟，請關閉並重新開啟管理命令介面。  
+ **注意：**如果**SharePoint 2013/2016年管理命令介面**已開啟，當您完成下列其中一種因應措施、 關閉並重新開啟管理命令介面。  
   
  如需詳細資訊，請參閱下列內容：  
   
@@ -143,7 +143,7 @@ ms.lasthandoff: 08/09/2017
  
  - SSRS 服務應用程式未對應至此 Web 應用程式。 請使用 SSRS 服務應用程式頁面，將 SSRS 服務應用程式 Proxy 關聯至此 Web 應用程式的應用程式 Proxy 群組。 
   
- **因應措施：** 此錯誤訊息包含更正這個問題的三個建議步驟。 「報表伺服器 URL 未設定...」訊息中的第一項建議 是與 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]之前的報表伺服器版本整合時相關。 先前報表伺服器版本的 SharePoint 設定是在 [一般應用程式設定] 頁面上，使用 [SQL Server Reporting Services (2008 和 2008 R2)] 來完成。  
+ **因應措施：** 此錯誤訊息包含更正這個問題的三個建議步驟。 「報表伺服器 URL 未設定...」訊息中的第一項建議 是與 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]之前的報表伺服器版本整合時相關。 上完成時，先前的報表伺服器版本的 SharePoint 設定**一般應用程式設定**頁面上，使用**SQL Server Reporting Services （2008年和 2008 R2）**...  
   
  **詳細資訊：** 當您嘗試使用任何需要 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務之連接的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能時，就會看見這則錯誤訊息。 這包括：  
   
@@ -212,7 +212,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  開啟命令視窗，然後在命令提示字元下輸入下列命令：  
   
-    -   **執行\<**  *.NET 4.0 Framework 目錄* **> \InstallUtil.exe \< ** *報表伺服器 Bin 目錄* **> \ReportingServicesLibrary.dll**  
+    -   **執行\<**  *.NET 4.0 Framework 目錄* **> \InstallUtil.exe \<**  *報表伺服器 Bin 目錄* **> \ReportingServicesLibrary.dll**  
   
         > [!NOTE]  
         >  取代\< *.NET 4.0 Framework 目錄*>.NET Framework 4.0 的實體路徑與檔案和取代\<*報表伺服器 Bin 目錄*> 報表伺服器 bin 檔案的實體路徑。  
@@ -248,10 +248,10 @@ ms.lasthandoff: 08/09/2017
  修復 64 位元執行個體或手動重新加入登錄機碼後，可以使用效能監視器設定您要監視的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 效能物件。  
   
 ###  <a name="ConfigPropsMissing"></a> 從 SQL Server 2005 升級後，ReportServerExternalURL 和 PassThroughCookies 組態屬性未設定  
- 當您從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 升級成 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]時，升級程序未設定 **ReportServerExternalURL** 和 **PassThroughCookies** 組態屬性。 **ReportServerExternalURL** 是選用屬性，只有當您要使用 SharePoint 2.0 Web 組件，而且希望使用者能夠擷取報表，並在新的瀏覽器視窗中開啟此報表時，才應該設定這個項目。 如需 **ReportServerExternalURL** 的詳細資訊，請參閱[組態檔中的 URL &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md)。 只有在使用自訂驗證方法時，才需要**PassThroughCookies** 。 如需有關**PassThroughCookies**，請參閱[設定入口網站，以傳遞自訂驗證 Cookie](../../reporting-services/security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)。  
+ 當您從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 升級成 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]時，升級程序未設定 **ReportServerExternalURL** 和 **PassThroughCookies** 組態屬性。 **ReportServerExternalURL** 是選用屬性，只有當您要使用 SharePoint 2.0 Web 組件，而且希望使用者能夠擷取報表，並在新的瀏覽器視窗中開啟此報表時，才應該設定這個項目。 如需有關**ReportServerExternalURL**，請參閱[組態檔 &#40; 中的 UrlSSRS 組態管理員 &#41;](../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md). 只有在使用自訂驗證方法時，才需要**PassThroughCookies** 。 如需有關**PassThroughCookies**，請參閱[設定入口網站，以傳遞自訂驗證 Cookie](../../reporting-services/security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)。  
   
 > [!NOTE]  
->  當您使用自訂驗證時，建議您移轉安裝，而不要執行升級。 如需移轉 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的詳細資訊，請參閱[移轉 Reporting Services 安裝 &#40;原生模式&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)。  
+>  當您使用自訂驗證時，建議您移轉安裝，而不要執行升級。 如需有關移轉[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，請參閱[移轉 Reporting Services 安裝 &#40;原生模式 &#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md).  
   
  根據預設，這些屬性不存在 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 組態中。 如果您在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中設定了這些屬性，而且仍然需要這些屬性的功能，就必須在升級程序之後將這些屬性手動加入至 **RSReportServer.config** 檔案。 如需詳細資訊，請參閱[修改 Reporting Services 組態檔 &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)。  
 

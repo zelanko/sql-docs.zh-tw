@@ -15,7 +15,7 @@ caps.latest.revision: 11
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: b49b80de8516e14972b05d7ae91f4f72e765803a
 ms.contentlocale: zh-tw
@@ -31,7 +31,7 @@ ms.lasthandoff: 08/09/2017
   
  Atom 服務文件會針對每個資料摘要包含一個唯一的識別碼，而您可以在 URL 中使用該識別碼來檢視資料摘要的內容。  
   
- 如需詳細資訊，請參閱[從多個報表產生資料摘要 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)。  
+ 如需詳細資訊，請參閱 [從多個報表產生資料摘要 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)中使用這項資料。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -44,7 +44,7 @@ ms.lasthandoff: 08/09/2017
   
      報表隨即執行。  
   
-3.  在工具列上，按一下 [匯出至資料摘要] 圖示。  
+3.  在工具列上，按一下 **匯出至資料摘要**圖示。  
   
      此時會出現一個訊息，詢問您要開啟還是儲存包含資料摘要的 Atom 文件。  
   

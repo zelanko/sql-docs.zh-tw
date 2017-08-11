@@ -18,7 +18,7 @@ caps.latest.revision: 10
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: a9cb113f44e01052d03fc5354c2cff6da4afb460
 ms.contentlocale: zh-tw
@@ -124,7 +124,7 @@ ms.lasthandoff: 08/09/2017
   
 ##  <a name="WebPortal"></a>Web 入口網站
   
-在舊版中，您無法停用報表管理員設定**IsReportManagerEnabled**設為 false。 **IsReportManagerEnabled**為準，SQL Server 2016 Reporting Services 累計更新 2 已被取代。 Web 入口網站將會永遠啟用。
+在舊版中，您無法停用報表管理員設定**IsReportManagerEnabled**設為 false。 **IsReportManagerEnabled**為準，SQL Server 2016 Reporting Services 累計更新 2 已被取代。 入口網站會一律啟用。
   
 ##  <a name="ReportBuilder"></a> 報表產生器  
   

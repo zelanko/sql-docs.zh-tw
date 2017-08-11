@@ -15,7 +15,7 @@ caps.latest.revision: 32
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: d68de45f8514de03e9804996da00d5f63d211311
 ms.contentlocale: zh-tw
@@ -33,7 +33,7 @@ ms.lasthandoff: 08/09/2017
 -   管理 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能，例如擴充功能和加密金鑰。  
 
 ##  <a name="bkmk_cmdlet_sum"></a> 指令程式摘要  
- 若要執行指令程式，您需要開啟 SharePoint 管理命令介面。 您也可以使用 Microsoft Windows 隨附的圖形化使用者介面編輯器 **Windows PowerShell 整合式指令碼環境 (ISE)**。 如需詳細資訊，請參閱[Windows Server 上啟動 Windows PowerShell](http://technet.microsoft.com/library/hh847814.aspx)。 在下列指令程式摘要中，服務應用程式「資料庫」的參考是指 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式建立和使用的所有資料庫。 其中包括組態、警示和暫時資料庫。  
+ 若要執行指令程式，您需要開啟 SharePoint 管理命令介面。 您也可以使用 Microsoft Windows 隨附的圖形化使用者介面編輯器 **Windows PowerShell 整合式指令碼環境 (ISE)**。 如需詳細資訊，請參閱 [Starting Windows PowerShell on Windows Server](http://technet.microsoft.com/library/hh847814.aspx)。 在下列指令程式摘要中，服務應用程式「資料庫」的參考是指 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式建立和使用的所有資料庫。 其中包括組態、警示和暫時資料庫。  
   
  當您輸入 PowerShell 範例時，將會看到類似下面的錯誤訊息：  
   
@@ -50,7 +50,7 @@ ms.lasthandoff: 08/09/2017
     Add-PSSnapin Microsoft.SharePoint.PowerShell  
     ```  
   
- 如需詳細資訊，請參閱[使用 Windows PowerShell 管理 SharePoint 2013](http://technet.microsoft.com/library/ee806878.aspx)。  
+ 如需詳細資訊，請參閱 [Use Windows PowerShell to administer SharePoint 2013](http://technet.microsoft.com/library/ee806878.aspx)。  
   
 #### <a name="to-open-the-sharepoint-management-shell-and-run-cmdlets"></a>若要開啟 SharePoint 管理命令介面並執行指令程式  
   
@@ -280,7 +280,7 @@ Get-SPRSExtension -identity $app -ExtensionType “Data” | select name,extensi
 ## <a name="next-steps"></a>後續的步驟
 
 [使用 PowerShell 變更及列出 Reporting Services 訂閱擁有者並執行訂閱](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)  
-[檢查清單： 使用 PowerShell 驗證 Powerpivot for SharePoint](../../analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md)   
+[檢查清單：使用 PowerShell 驗證 PowerPivot for SharePoint](../../analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md)   
 [取得 SQL Server PowerShell 說明](../../relational-databases/scripting/get-help-sql-server-powershell.md)   
 [CodePlex SharePoint Management PowerShell 指令碼](http://sharepointpsscripts.codeplex.com/)   
 

@@ -19,7 +19,7 @@ caps.latest.revision: 68
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 65a02d6be519b146f37159dd75f1f51dcfb254cc
 ms.contentlocale: zh-tw
@@ -74,7 +74,7 @@ ms.lasthandoff: 08/09/2017
   
 -   檢閱 [Hardware and Software Requirements for Installing SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md) 。  
   
--   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)]必須一起安裝在相同的執行個體。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體會主控安裝程式所建立及設定的報表伺服器資料庫。  
+-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 必須一起安裝在相同的執行個體中。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體會主控安裝程式所建立及設定的報表伺服器資料庫。  
   
 -   用來執行安裝程式的使用者帳戶必須是本機管理員群組的成員，而且擁有在主控報表伺服器資料庫之 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體上存取和建立資料庫的權限。  
   
@@ -128,7 +128,7 @@ ms.lasthandoff: 08/09/2017
   
 3.  在 **[特徵選取]** 頁面上，選取下列選項：  
   
-    -   (1) [Database Engine Services] (除非已安裝資料庫引擎執行個體)。  
+    -   （1) **database Engine Services**，除非您已安裝的 database engine 執行個體。  
   
     -   (2) [Reporting Services-原生]。  
   
@@ -142,7 +142,7 @@ ms.lasthandoff: 08/09/2017
   
     -   `http://[ServerName]/Reports_THESQLINSTANCE`  
   
-6.  **伺服器組態**：如果您打算使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 訂閱功能，請在 [伺服器組態]  頁面上設定 SQL Server Agent [自動]  啟動類型。   預設值是 [手動]。  
+6.  **伺服器組態**： 如果您打算使用[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]訂閱功能，然後在**伺服器組態**頁面上，設定 SQL Server Agent**自動**啟動類型。   預設值是 [手動]。  
   
 7.  在 [資料庫引擎組態]  頁面上加入 SQL Server 系統管理員。  
   
@@ -186,7 +186,7 @@ ms.lasthandoff: 08/09/2017
 [設定報表伺服器服務帳戶](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
 [設定報表伺服器 Url](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
 [設定報表伺服器資料庫連接](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
-[僅限檔案安裝 &#40;Reporting Services &#41;](../../reporting-services/install-windows/files-only-installation-reporting-services.md)   
+[僅限檔案安裝 &#40;Reporting Services&#41;](../../reporting-services/install-windows/files-only-installation-reporting-services.md)   
 [將報表伺服器初始化](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
 [原生模式報表伺服器上設定 SSL 連接](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)   
 [設定 Windows 服務帳戶與權限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   

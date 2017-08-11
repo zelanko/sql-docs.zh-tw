@@ -19,20 +19,20 @@ helpviewer_keywords:
 - XML Web service [Reporting Services], SOAP
 ms.assetid: 87329299-c2ea-4517-9148-d855726768a9
 caps.latest.revision: 36
-author: sabotta
+author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 802070f070222fba573b52bf1f53b2c6eb8ba8b6
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: 1222a4223f54eec0f6083790da4d0afebf353ec9
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="using-secure-web-service-methods"></a>使用安全的 Web 服務方法
   某些報表伺服器 Web 服務方法在叫用時，可能需要安全的連接。 需要安全連接的方法由**SecureConnectionLevel** RSReportServer.config 檔中設定。 設定值有效範圍為 0 及以上的整數值。 下表描述這些值。  
   
-|Level|Description|  
+|層級|Description|  
 |-----------|-----------------|  
 |**0**|不安全。 對 Reporting Services SOAP API 的呼叫不需要安全連接。|  
 |大於**0**|安全。 所有對 Reporting Services SOAP API 的呼叫都需要安全連接。|  

@@ -22,7 +22,7 @@ caps.latest.revision: 26
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 2e7e3d80d7e67b3a6e0924f04600860039086c94
 ms.contentlocale: zh-tw
@@ -75,7 +75,7 @@ out Int32 HRESULT);
   
  當 *IsWindowsUser* 設為 [true] 時，產生的指令碼就會將登入權限授與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的使用者、將報表伺服器資料庫設定為預設資料庫，並且針對報表伺服器資料庫、報表伺服器暫存資料庫、master 資料庫和 MSDB 系統資料庫授與 **RSExec** 角色。  
   
- 當 *IsWindowsUser* 設為 [true] 時，此方法就會接受標準 Windows SID 當作輸入。 提供了標準 Windows SID 或服務帳戶名稱時，它就會轉譯成使用者名稱字串。 如果資料庫位於本機，此帳戶就會轉譯成帳戶的正確當地語系化表示。 如果資料庫位於遠端，此帳戶就會表示成電腦的帳戶。  
+ 當*IsWindowsUser*設**true**，該方法會接受標準 Windows Sid 當做輸入。 提供了標準 Windows SID 或服務帳戶名稱時，它就會轉譯成使用者名稱字串。 如果資料庫位於本機，此帳戶就會轉譯成帳戶的正確當地語系化表示。 如果資料庫位於遠端，此帳戶就會表示成電腦的帳戶。  
   
  下表將顯示已轉譯的帳戶及其遠端表示。  
   
@@ -106,18 +106,18 @@ out Int32 HRESULT);
 |\<MachineFQDN >|example.redmond.microsoft.com|  
 |\<IPAddress >|180.012.345,678|  
   
- 當 *IsWindowsUser* 設為 [true] 時，WMI 提供者就會呼叫 LookupAccountName 來取得帳戶的 SID，然後呼叫 LookupAccountSID 來取得要放入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指令碼的名稱。 這樣可確保所使用的帳戶名稱會通過 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證。  
+ 當*IsWindowsUser*設為**true**，WMI 提供者呼叫 LookupAccountName 帳戶取得 SID，然後再呼叫以取得將放入名稱 LookupAccountSID[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]指令碼。 這樣可確保所使用的帳戶名稱會通過 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證。  
   
- 當 *IsWindowsUser* 設為 [false] 時，產生的指令碼會針對報表伺服器資料庫、報表伺服器暫存資料庫和 MSDB 資料庫授與 **RSExec** 角色。  
+ 當*IsWindowsUser*設**false**，產生指令碼授與**RSExec**上報表伺服器資料庫、 報表伺服器暫存資料庫和 MSDB 資料庫角色。  
   
- 當 *IsWindowsUser* 設為 [false] 時，SQL Server 使用者必須已經存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上，才能讓指令碼順利執行。  
+ 當*IsWindowsUser*設**false**，SQL Server 使用者必須已經存在於[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的指令碼順利執行。  
   
  如果報表伺服器尚未指定報表伺服器資料庫，呼叫 GrantRightsToDatabaseUser 就會傳回錯誤。  
   
  產生的指令碼支援 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 和 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]。  
   
 ## <a name="requirements"></a>需求  
- **命名空間：** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **命名空間：**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>請參閱＜  
  [MSReportServer_ConfigurationSetting 成員](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  

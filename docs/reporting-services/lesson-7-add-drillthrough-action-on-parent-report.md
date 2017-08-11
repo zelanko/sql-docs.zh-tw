@@ -16,7 +16,7 @@ caps.latest.revision: 13
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 9a9790c4afc44e66c521005a3556f8082527d260
 ms.contentlocale: zh-tw
@@ -30,22 +30,22 @@ ms.lasthandoff: 08/09/2017
   
 1.  移至父報表。  
   
-2.  按一下保存 [名稱] 值的文字方塊。  
+2.  選取時，保存的值的文字方塊**名稱**。  
   
-3.  以滑鼠右鍵按一下文字方塊，然後按一下 [文字方塊屬性]。  
+3.  文字方塊中，以滑鼠右鍵按一下，然後選取**文字方塊內容**。  
   
-4.  移至 [動作] 索引標籤，然後選取 [移至報表] 選項。  
+4.  移至**動作**索引標籤，然後選取**移至報表**選項。  
   
-5.  在 [指定報表] 區段中輸入子報表的名稱。  
+5.  輸入子報表中的名稱**指定報表**> 一節。  
   
     > [!NOTE]
     > 不包含報表名稱的副檔名。  
   
-6.  選取 [使用這些參數執行報表] 區段底下的 [加入]。  
+6.  選取**新增**下**使用這些參數執行報表**> 一節。  
   
-7.  在 [名稱] 方塊中輸入 **productid**，然後選取 [值] 下拉式清單中的 [ProductID]。  
+7.  型別**productid**中**名稱**方塊，並選取**ProductID**中**值**下拉式清單。  
   
-8.  選取 [確定] 來完成。  
+8.  選取**確定**完成。  
   
 ## <a name="next-task"></a>下一項工作  
 您已成功在父報表上加入鑽研動作。 接下來您將針對您為子報表定義的資料表建立資料篩選。 請參閱 [第 8 課：建立資料篩選](../reporting-services/lesson-8-create-a-data-filter.md)。  

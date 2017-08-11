@@ -18,14 +18,14 @@ caps.latest.revision: 13
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: abb122ab9eec2ac66895e0b2bc7d1e2dc8490abf
 ms.contentlocale: zh-tw
 ms.lasthandoff: 08/09/2017
 
 ---
-# <a name="manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager"></a>在資料警示管理員中管理 SharePoint 網站上的所有資料警示
+# <a name="manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager"></a>管理資料警示管理員 中的 SharePoint 網站上的所有資料警示
 
 [!INCLUDE[ssrs-appliesto-sql2016-xpreview](../includes/ssrs-appliesto-sql2016-xpreview.md)][!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 

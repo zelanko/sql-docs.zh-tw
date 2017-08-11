@@ -20,14 +20,14 @@ helpviewer_keywords:
 - extensions [Reporting Services]
 ms.assetid: 2bf17ae4-2292-4a58-a1f0-56e99abd9b69
 caps.latest.revision: 45
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: cd4cd15bf03648329dab8bc7ef55314ece7cf9a2
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: 37adf4c09f7f23294572a17631240ad88f51fc9e
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="reporting-services-extensions"></a>Reporting Services 延伸模組
@@ -40,7 +40,7 @@ ms.lasthandoff: 06/22/2017
  報表定義自訂延伸模組 (RDCE) 為另一個報表伺服器延伸模組，它可以動態地自訂報表定義，再將其傳遞至處理引擎。 您可以根據使用者或語言等因素來自訂報表。 例如，您可能會想要為各個使用者 (例如經理或是部門成員) 實作不同的檢視，或是自訂報表，讓報表在轉譯為法文或阿拉伯文時，可以具有不同的配置。  
   
 ## <a name="in-this-section"></a>本節內容  
- [擴充功能的安全性考量](../../reporting-services/extensions/security-considerations-for-extensions.md)  
+ [延伸模組的安全性考量](../../reporting-services/extensions/security-considerations-for-extensions.md)  
  描述與開發和部署 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 延伸模組相關的安全性問題。  
   
  [實作資料處理延伸模組](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)  

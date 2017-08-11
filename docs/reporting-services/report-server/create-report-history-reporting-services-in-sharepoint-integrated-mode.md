@@ -17,7 +17,7 @@ caps.latest.revision: 12
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3e1388fba5963d5571d293f2d995c73bb3d83d3b
 ms.contentlocale: zh-tw
@@ -58,6 +58,6 @@ ms.lasthandoff: 08/09/2017
 3.  在 [記錄快照集選項] 中，按一下 [在報表記錄中儲存所有報表資料快照集]。  
   
 ## <a name="see-also"></a>另請參閱  
- [設定處理選項 &#40;SharePoint 整合模式的 Reporting Services&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)  
+ [設定處理選項 &#40;Reporting Services SharePoint 整合模式 &#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)  
   
   

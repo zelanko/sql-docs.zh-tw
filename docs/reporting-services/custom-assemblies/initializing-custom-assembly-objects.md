@@ -18,14 +18,14 @@ helpviewer_keywords:
 - OnInit method
 ms.assetid: 26fd74dc-d02f-40f7-aeb3-50ce05e9e6b9
 caps.latest.revision: 36
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: dd3f6682e6297f86fbc4e67b98f5df48c7e94281
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: ab05efc7baba58a34180faa038cb58c7f57f4af2
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="initializing-custom-assembly-objects"></a>初始化自訂組件物件
@@ -63,6 +63,6 @@ ms.lasthandoff: 06/22/2017
  如需全域物件集合的詳細資訊，請參閱[運算式 &#40; 中的內建集合報表產生器及 SSRS &#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md).  
   
 ## <a name="see-also"></a>另請參閱  
- [報表中使用自訂組件](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)  
+ [將自訂組件與報表搭配使用](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)  
   
   

@@ -14,7 +14,7 @@ caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: c00b90770f259d9782c68eec52ccf860762f43f1
 ms.contentlocale: zh-tw
@@ -24,7 +24,7 @@ ms.lasthandoff: 08/09/2017
 # <a name="add-drillthrough-from-a-mobile-report-to-other-mobile-reports-or-urls"></a>從行動報表將鑽研加入其他行動報表或 URL
 您可以從 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 行動報表中的任何量測計、圖表或資料格將鑽研加入另一個行動報表或自訂 URL。 
 
-「鑽研」是來源報表中開啟另一個目標報表或 URL 的連結。 目標鑽研報表通常包含摘要報表中某個項目的詳細資料。 根據來源行動報表，可以將一或多個參數傳遞至目標行動報表或整合至自訂 URL。  
+A*鑽研*開啟另一個目標報表或 URL 來源報表的連結。 目標鑽研報表通常包含摘要報表中某個項目的詳細資料。 根據來源行動報表，可以將一或多個參數傳遞至目標行動報表或整合至自訂 URL。  
   
 如果在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] Web 入口網站中檢視來源行動報表，並且選取具有鑽研目標的元素，您可以移至該目標 (另一個行動報表或 URL)。  
 
@@ -40,7 +40,7 @@ ms.lasthandoff: 08/09/2017
 
    地圖和量測計支援鑽研，就像大部分的圖表和簡單資料格一樣。
    
-2. 在 [視覺屬性] 窗格中，選取 [鑽研目標] > [行動報表]。  
+2. 在**視覺屬性**窗格中，選取**鑽研目標** > **行動報表**。  
 3. 選取伺服器和目標行動報表。  
 
    >注意︰如果目標行動報表不是與來源行動報表位在相同的伺服器上，請改用自訂 URL 來連接它 (如下節所述)。  
@@ -55,10 +55,10 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="set-up-a-drillthrough-to-a-custom-url"></a>設定鑽研到自訂 URL  
   
-1. 在 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)] 的配置檢視中，選取可支援鑽研目標的視覺效果。    
-2. 在 [視覺屬性] 窗格中，選取 [鑽研目標] > [自訂 URL]。  這樣會開啟鑽研組態對話方塊。  
+1. 在 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]的配置檢視中，選取可支援鑽研目標的視覺效果。    
+2. 在**視覺屬性**窗格中，選取**鑽研目標** > **自訂 URL**。  這樣會開啟鑽研組態對話方塊。  
   
-3. 在 [設定鑽研 URL] 中，輸入要在按一下視覺效果時前往的目的地 URL，然後從右側所列的 [可用參數] 中進行選取。 下列面板會顯示與範例解析參數 (如果包括的話) 合併之自訂 URL 的預覽。  
+3. 在**設定鑽研 URL**，輸入要按一下視覺效果時，請移至目的地 URL 和選取從**可用的參數**列在右邊。 下列面板會顯示與範例解析參數 (如果包括的話) 合併之自訂 URL 的預覽。  
   
    ![mobile-report-drillthrough-url](../../reporting-services/mobile-reports/media/mobile-report-drillthrough-url.PNG)
   
@@ -74,11 +74,11 @@ ms.lasthandoff: 08/09/2017
 
 1. 在 Web 入口網站中，於您要隱藏的目標報表上選取省略符號 (...)，然後選取 [管理]。
 
-2. 在 [內容] 中，選取 [在並排顯示檢視中隱藏]。
+2. 在**屬性**，選取**並排顯示檢視中隱藏**。
 
 您可以選擇檢視 Web 入口網站中的隱藏項目︰ 
 
-* 在 Web 入口網站的右上方，選取 [檢視] > [顯示隱藏項]。 
+* 在右上方的 web 入口網站，選取**檢視** > **顯示隱藏。** 
 
 隱藏的項目會以較淡的色彩顯示。
     
@@ -86,6 +86,6 @@ ms.lasthandoff: 08/09/2017
  
 * [將參數加入 Reporting Services 行動報表中](../../reporting-services/mobile-reports/add-parameters-to-a-mobile-report-reporting-services.md)
 * [使用 SQL Server 行動報表發行工具建立行動報表](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md) 
-* [Web 入口網站 （SSRS 原生模式）](../../reporting-services/web-portal-ssrs-native-mode.md)
+* [入口網站 (SSRS 原生模式)](../../reporting-services/web-portal-ssrs-native-mode.md)
 
 

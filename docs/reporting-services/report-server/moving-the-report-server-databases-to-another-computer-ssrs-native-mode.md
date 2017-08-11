@@ -15,7 +15,7 @@ caps.latest.revision: 10
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: bb803f632f9c325430c811082e5e2cebdfa29df8
 ms.contentlocale: zh-tw
@@ -27,7 +27,7 @@ ms.lasthandoff: 08/09/2017
 
   您可以將安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中所使用的報表伺服器資料庫，移至不同電腦上的執行個體。 但是，您必須一起移動或複製 reportserver 和 reportservertempdb 資料庫。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝需要這兩個資料庫。reportservertempdb 資料庫的名稱必須與所移動的主要 reportserver 資料庫相關。  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native mode.  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式  
   
  移動資料庫不會影響目前已針對報表伺服器項目所定義的排程作業。  
   
@@ -35,7 +35,7 @@ ms.lasthandoff: 08/09/2017
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業。 雖然您不需要將這些作業移至新的電腦，但是可能會想要刪除電腦上不再使用的作業。  
   
--   移動的資料庫會保留訂閱、快取報表以及快照集。 如果快照集並未在移動資料庫之後收取重新整理過的資料，請在報表管理員中清除快照集選項，然後按一下 [套用] 儲存變更、重新建立排程，再按一下 [套用] 儲存變更。  
+-   移動的資料庫會保留訂閱、快取報表以及快照集。 如果快照集不會收取重新整理的資料移動資料庫之後，清除快照集選項在報表管理員中，按一下**套用**以儲存您的變更，重新建立排程，並按一下**套用**以儲存您的變更。  
   
 -   當您移動 reportservertempdb 資料庫時，系統會保留儲存在該資料庫中的暫存報表和使用者工作階段。  
   
@@ -55,13 +55,13 @@ ms.lasthandoff: 08/09/2017
   
 3.  啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 並開啟主控報表伺服器資料庫之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的連接。  
   
-4.  以滑鼠右鍵按一下報表伺服器資料庫，指向 [工作]，並按一下 [卸離]。 針對報表伺服器暫存資料庫重複此步驟。  
+4.  以滑鼠右鍵按一下報表伺服器資料庫，指向 [工作]，然後按一下**卸離**。 針對報表伺服器暫存資料庫重複此步驟。  
   
 5.  複製或移動 .mdf 和 .ldf 檔案到您要使用之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的 Data 資料夾。 因為移動的資料庫共有兩個，因此請確定您總共移動或複製四個檔案。  
   
 6.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中，開啟即將主控報表伺服器資料庫之新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的連接。  
   
-7.  以滑鼠右鍵按一下 [資料庫] 節點，然後按一下 [附加]。  
+7.  以滑鼠右鍵按一下 [資料庫] 節點，然後按一下**附加**。  
   
 8.  按一下 **[加入]** ，選取您要附加之報表伺服器資料庫的 .mdf 和 .ldf 檔案。 針對報表伺服器暫存資料庫重複此步驟。  
   
@@ -226,7 +226,7 @@ GO
 ## <a name="next-steps"></a>後續的步驟
 
 [建立 RSExecRole](../../reporting-services/security/create-the-rsexecrole.md)   
-[啟動與停止 Report Server 服務](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)   
+[啟動和停止報表伺服器服務](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)   
 [設定報表伺服器資料庫連接](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
 [設定自動的執行帳戶](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
 [Reporting Services 組態管理員](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   

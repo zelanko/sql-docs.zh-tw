@@ -22,7 +22,7 @@ caps.latest.revision: 41
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 3f91523a9cf7555e8d42fc546fff450827ab3f41
 ms.contentlocale: zh-tw
@@ -55,13 +55,13 @@ ms.lasthandoff: 08/09/2017
   
 -   使用參數，將主報表與鑽研報表、子報表和連結報表產生關聯。 當您設計一組報表時，可以將每份報表設計為可回答某些問題。 每份報表對於相關資訊都會提供不同的檢視或不同的詳細程度。 若要提供一組相關聯的報表，請針對目標報表上的相關資料建立參數。  
   
-     如需詳細資訊，請參閱[鑽研報表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/drillthrough-reports-report-builder-and-ssrs.md)、[子報表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md) 和[建立連結報表](../../reporting-services/reports/create-a-linked-report.md)。  
+     如需詳細資訊，請參閱[鑽研報表 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/drillthrough-reports-report-builder-and-ssrs.md)，[子報表 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md)，和[建立連結的報表](../../reporting-services/reports/create-a-linked-report.md)。  
   
 -   為多位使用者自訂參數集。 根據報表伺服器上的銷售報表建立兩個連結的報表。 其中一個連結的報表使用銷售人員的預先定義參數值，另一個連結的報表則使用銷售經理的預先定義參數值。 這兩個報表會使用相同的報表定義。  
   
  **變更報表呈現方式**  
   
--   透過 URL 要求傳送命令到報表伺服器，以自訂報表的轉譯。 如需詳細資訊，請參閱 [URL 存取 &#40;SSRS&#41;](../../reporting-services/url-access-ssrs.md) 和[在 URL 內傳遞報表參數](../../reporting-services/pass-a-report-parameter-within-a-url.md)。  
+-   透過 URL 要求傳送命令到報表伺服器，以自訂報表的轉譯。 如需詳細資訊，請參閱[URL 存取 &#40;SSRS &#41;](../../reporting-services/url-access-ssrs.md)和[報表參數，在 URL 內傳遞](../../reporting-services/pass-a-report-parameter-within-a-url.md)。  
   
 -   可讓使用者指定值，協助自訂報表的外觀。 例如，提供 Boolean 參數，指出要展開或摺疊資料表中的所有巢狀資料列群組。  
   
@@ -74,7 +74,7 @@ ms.lasthandoff: 08/09/2017
   
  ![檢視報表的參數](../../reporting-services/report-design/media/ssrb-rptparamviewrpt.png "檢視報表的參數")  
   
-1.  **參數窗格** ：報表檢視器工具列會顯示每個參數的提示和預設值。 您可以在參數窗格中自訂參數的配置。 如需詳細資訊，請參閱 [自訂報表中的參數窗格 &#40;報表產生器&#41;](../../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md)中建立的行動報表。  
+1.  **參數窗格** ：報表檢視器工具列會顯示每個參數的提示和預設值。 您可以在參數窗格中自訂參數的配置。 如需詳細資訊，請參閱[自訂報表中的參數窗格 &#40;報表產生器&#41;](../../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md)。  
   
 2.  **@SalesDate參數**參數@SalesDate是資料型別**DateTime**。 文字方塊旁會顯示 [選取日期] 提示。 若要修改日期，請在文字方塊中輸入新日期，或是使用行事曆控制項。  
   
@@ -126,7 +126,7 @@ ms.lasthandoff: 08/09/2017
  報表組件會儲存在報表伺服器上，而且可供其他人在報表中使用。 本身為參數的報表組件無法從報表伺服器管理。 您可以在 [報表組件庫] 中搜尋參數，並且在加入這些參數之後，於報表中進行設定。 如需詳細資訊，請參閱[報表組件 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)。  
   
 > [!NOTE]  
->  您可以針對與參數具有相依資料集的資料區域，將參數當做個別的報表組件發行。 雖然參數會列為報表組件，不過您無法直接將報表組件參數加入至報表。 請改為加入報表組件，然後系統就會根據報表組件所包含或參考的資料集查詢，自動產生任何必要的報表參數。 如需報表組件的詳細資訊，請參閱[報表組件 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md) 和[報表設計師中的報表組件 &#40;SSRS&#41;](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md)。  
+>  您可以針對與參數具有相依資料集的資料區域，將參數當做個別的報表組件發行。 雖然參數會列為報表組件，不過您無法直接將報表組件參數加入至報表。 請改為加入報表組件，然後系統就會根據報表組件所包含或參考的資料集查詢，自動產生任何必要的報表參數。 如需有關報表組件的詳細資訊，請參閱[報表組件 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)和[報表組件在報表設計工具 &#40;SSRS &#41;](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md).  
   
 ### <a name="parameter-values"></a>參數值  
  下列是在報表中選取參數值的選項。  
@@ -164,7 +164,7 @@ ms.lasthandoff: 08/09/2017
   
  使用資料來源的查詢設計工具，可協助您建立參數化查詢。  
   
--   如果是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢，不同的資料來源會支援不同的參數語法。 支援的範圍是查詢中依據位置或名稱識別的參數。 如需詳細資訊，請參閱[報表資料集 &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md) 中特定外部資料來源類型的主題。 在關聯式查詢設計工具中，您必須為篩選選取參數選項，才能建立參數化查詢。 如需詳細資訊，請參閱[關聯式查詢設計工具使用者介面 &#40;報表產生器&#41;](../../reporting-services/report-data/relational-query-designer-user-interface-report-builder.md)。  
+-   如果是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢，不同的資料來源會支援不同的參數語法。 支援的範圍是查詢中依據位置或名稱識別的參數。 如需詳細資訊，請參閱主題中的特定外部資料來源類型[報表資料集 &#40;SSRS &#41;](../../reporting-services/report-data/report-datasets-ssrs.md). 在關聯式查詢設計工具中，您必須為篩選選取參數選項，才能建立參數化查詢。 如需詳細資訊，請參閱[關聯式查詢設計工具使用者介面 &#40;報表產生器&#41;](../../reporting-services/report-data/relational-query-designer-user-interface-report-builder.md)。  
   
 -   針對依據多維資料來源 (例如 Microsoft SQL Server Analysis Services、SAP NetWeaver BI 或 Hyperion Essbase) 的查詢，您可以指定是否根據您在查詢設計工具中指定的篩選建立參數。 如需詳細資訊，請參閱[查詢設計工具 &#40;報表產生器&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9) 中對應於資料延伸模組的查詢設計工具主題。  
   
@@ -175,15 +175,15 @@ ms.lasthandoff: 08/09/2017
   
 -   **報表參數屬性** 直接在報表伺服器上，從報表定義個別變更報表參數值。  
   
--   **快取報表。** 若要為報表建立快取計劃，每個參數都必須有預設值。 如需詳細資訊，請參閱 [快取報表 &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md)。  
+-   **快取報表。** 若要為報表建立快取計劃，每個參數都必須有預設值。 如需詳細資訊，請參閱 [快取報表 &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md)的版本中預先載入快取的唯一方法。  
   
--   **快取共用資料集。** 若要為共用資料集建立快取計劃，每個參數都必須有預設值。 如需詳細資訊，請參閱 [快取報表 &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md)。  
+-   **快取共用資料集。** 若要為共用資料集建立快取計劃，每個參數都必須有預設值。 如需詳細資訊，請參閱 [快取報表 &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md)的版本中預先載入快取的唯一方法。  
   
 -   **連結報表。** 您可以使用預設的參數建立連結報表，針對不同的對象來篩選資料。 如需詳細資訊，請參閱 [建立連結報表](../../reporting-services/reports/create-a-linked-report.md)。  
   
 -   **報表訂閱。** 您可以指定參數值來篩選資料，並透過訂用帳戶傳遞報表。 如需詳細資訊，請參閱[訂閱與傳遞 &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)。  
   
--   **URL 存取。** 您可以在報表 URL 中指定參數值。 您也可以使用 URL 存取來執行報表及指定參數值。 如需詳細資訊，請參閱 [URL 存取 &#40;SSRS&#41;](../../reporting-services/url-access-ssrs.md)。  
+-   **URL 存取。** 您可以在報表 URL 中指定參數值。 您也可以使用 URL 存取來執行報表及指定參數值。 如需詳細資訊，請參閱[URL 存取 &#40;SSRS &#41;](../../reporting-services/url-access-ssrs.md).  
   
  如果您重新發行報表定義，則針對已發行報表所設定的參數屬性通常會保留起來。 如果報表定義和報表同樣重新發行，且參數名稱和資料類型保持相同，則會保留屬性設定。 如果您加入或刪除報表定義中的參數，或變更現有參數的資料類型或名稱，您就可能需要變更已發行報表的參數屬性。  
   

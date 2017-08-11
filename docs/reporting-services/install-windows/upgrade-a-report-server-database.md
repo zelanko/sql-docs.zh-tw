@@ -19,7 +19,7 @@ caps.latest.revision: 44
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 89bb5de5f669d033dd18bc63e11ef5bd29644542
 ms.contentlocale: zh-tw
@@ -39,7 +39,7 @@ ms.lasthandoff: 08/09/2017
 
  下列清單會識別升級報表伺服器資料庫的狀況：  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式會升級報表伺服器的單一執行個體。 報表伺服器資料庫結構描述會在服務啟動之後自動升級，而且報表伺服器會判斷此資料庫結構描述是否與伺服器版本不符。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式會升級單一報表伺服器執行個體。 報表伺服器資料庫結構描述會在服務啟動之後自動升級，而且報表伺服器會判斷此資料庫結構描述是否與伺服器版本不符。  
   
      當服務啟動時，報表伺服器會檢查資料庫結構描述版本，以便確認它是否符合伺服器版本。 如果資料庫結構描述版本是較舊的版本，它就會自動升級為報表伺服器所需的結構描述版本。 如果您還原或附加舊版的報表伺服器資料庫，自動升級會特別實用。 報表伺服器追蹤記錄檔中會輸入一則訊息，表示資料庫結構描述版本已升級。  
   

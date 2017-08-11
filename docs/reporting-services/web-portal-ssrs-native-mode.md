@@ -1,5 +1,5 @@
 ---
-title: "入口網站 (SSRS 原生模式) | Microsoft Docs"
+title: "Web 入口網站 （SSRS 原生模式） |Microsoft 文件"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 07/02/2017
@@ -15,7 +15,7 @@ caps.latest.revision: 15
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: MT
+ms.translationtype: HT
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: e3dff8b613f933caa84522b31bdc862aa9c799f7
 ms.contentlocale: zh-tw
@@ -26,13 +26,13 @@ ms.lasthandoff: 08/09/2017
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
-Reporting Services 入口網站是一種 Web 體驗，可讓您檢視報表、行動報表、KPI，以及完整瀏覽報表伺服器執行個體中的項目。 您也可以使用入口網站來管理單一報表伺服器執行個體。
+Reporting Services 入口網站是網頁型的體驗，可讓您檢視報表、 行動報表、 Kpi，並瀏覽報表伺服器執行個體中的項目。 您也可以使用 web 入口網站來管理單一報表伺服器執行個體。
 
 ![ssRSPortal](../reporting-services/media/ssrsportal.png)
 
 ## <a name="what-is-the-web-portal"></a>什麼是入口網站
 
-您可以使用入口網站來執行下列工作：
+您可以使用 web 入口網站來執行下列工作：
 
 - 檢視、搜尋、列印與訂閱報表。
 
@@ -54,33 +54,33 @@ Reporting Services 入口網站是一種 Web 體驗，可讓您檢視報表、�
 
 - 傳送意見反應或功能要求。
 
-您可以使用入口網站來瀏覽報表伺服器資料夾或搜尋特定報表。 您可以檢視報表、其一般屬性，以及過去在報表記錄中擷取的報表複本。 根據您的權限，您也可以訂閱報表，以傳遞至電子郵件收件匣或檔案系統上的共用資料夾。
+您可以使用 web 入口網站來瀏覽報表伺服器資料夾或搜尋特定報表。 您可以檢視報表、其一般屬性，以及過去在報表記錄中擷取的報表複本。 根據您的權限，您也可以訂閱報表，以傳遞至電子郵件收件匣或檔案系統上的共用資料夾。
 
 > [!NOTE]
 > 如需所支援瀏覽器和版本的相關資訊，請參閱 [規劃 Reporting Services 瀏覽器支援](../reporting-services/browser-support-for-reporting-services-and-power-view.md)。
 
-入口網站僅適用於以原生模式執行的報表伺服器。 不支援針對 SharePoint 整合模式設定的報表伺服器。
+Web 入口網站只適用於以原生模式執行的報表伺服器。 不支援針對 SharePoint 整合模式設定的報表伺服器。
 
-部分入口網站功能只在指定的 [!INCLUDE[ssNoVersion](../includes/ssnoversion.md)] 版本中提供。 如需詳細資訊，請參閱 [SQL Server 2016 版本所支援的 Reporting Services 功能](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)。
+某些入口網站的功能才可以使用指定的版本中[!INCLUDE[ssNoVersion](../includes/ssnoversion.md)]。 如需詳細資訊，請參閱[Reporting Services 功能的 SQL Server 2016 的版本所支援](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)。
 
-在新的安裝上，只有本機管理員才有足夠的權限處理內容和設定。 若要授與權限給其他使用者，本機管理員必須建立角色指派，提供報表伺服器的存取權。 使用者在這之後可以存取的應用程式頁面和工作，會視該使用者的角色指派而定。 如需詳細資訊，請參閱[將報表伺服器的存取權授與使用者](security/grant-user-access-to-a-report-server-report-manager.md)
+在新的安裝上，只有本機管理員才有足夠的權限處理內容和設定。 若要授與權限給其他使用者，本機管理員必須建立角色指派，提供報表伺服器的存取權。 使用者在這之後可以存取的應用程式頁面和工作，會視該使用者的角色指派而定。 如需詳細資訊，請參閱[使用者存取權授與報表伺服器](security/grant-user-access-to-a-report-server-report-manager.md)
 
 > [!NOTE]
 > 如果您在伺服器執行所在的本機電腦上瀏覽至入口網站，可能會看到一則訊息，指出不允許您檢視這個資料夾。 這是因為通用存取控制 (UAC)，而且您不是以系統管理員身分執行瀏覽器所導致。 您不能以系統管理員身分執行 Edge。 您必須使用 Internet Explorer。 您可以從遠端瀏覽器至伺服器，或是以系統管理員身分啟動 Internet Explorer 並瀏覽至入口網站。 如果您想要從遠端使用入口網站，就必須為您的帳戶提供資料夾上的內容管理員權限。  
 
 ## <a name="start-and-use-the-web-portal"></a>啟動並使用入口網站
 
-入口網站是一種 Web 應用程式，您可以在瀏覽器視窗的網址列中輸入 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] URL 來開啟。 當您啟動 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]時，您所看到的頁面、連結和選項會依據您在報表伺服器上擁有的權限而有所不同。 若要執行工作，您必須被指派包含此工作的角色。  指派至具有完整權限之角色的使用者，可以存取用於管理報表伺服器的完整應用程式功能表與頁面。 指派至具有檢視和執行報表權限之角色的使用者，只看得到支援這些活動的功能表與頁面。 每個使用者可以有針對不同報表伺服器的不同角色指派，甚至針對儲存在單一報表伺服器上之各種報表與資料夾的不同角色指派。
+Web 入口網站是您輸入開啟的 web 應用程式[!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]瀏覽器視窗的網址列中的 URL。 當您啟動 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]時，您所看到的頁面、連結和選項會依據您在報表伺服器上擁有的權限而有所不同。 若要執行工作，您必須被指派包含此工作的角色。  指派至具有完整權限之角色的使用者，可以存取用於管理報表伺服器的完整應用程式功能表與頁面。 指派至具有檢視和執行報表權限之角色的使用者，只看得到支援這些活動的功能表與頁面。 每個使用者可以有針對不同報表伺服器的不同角色指派，甚至針對儲存在單一報表伺服器上之各種報表與資料夾的不同角色指派。
 
 如需角色的詳細資訊，請參閱 [在原生模式報表伺服器上授與權限](../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)。
 
-### <a name="start-the-web-portal"></a>啟動入口網站
+### <a name="start-the-web-portal"></a>啟動 web 入口網站
 
-若要從瀏覽器中啟動入口網站，請執行下列動作：
+若要從瀏覽器中啟動 web 入口網站，執行下列作業：
 
 1. 開啟網頁瀏覽器。 如需支援的網頁瀏覽器清單，請參閱 [規劃 Reporting Services 瀏覽器支援](../reporting-services/browser-support-for-reporting-services-and-power-view.md)。
 
-2. 在網頁瀏覽器的網址列中，輸入入口網站 URL。
+2. 在網頁瀏覽器網址列中輸入入口網站 URL。
 
     根據預設，URL 為 *http://[ComputerName]/reports*。
 
@@ -88,7 +88,7 @@ Reporting Services 入口網站是一種 Web 體驗，可讓您檢視報表、�
 
 ## <a name="grouping-by-categories"></a>依類別分組
 
-入口網站會將項目分組為不同類別。 以下為可用的類別：
+Web 入口網站將群組分成不同類別的項目。 以下為可用的類別：
 
 - KPI
 - 行動報表
@@ -133,6 +133,6 @@ Reporting Services 入口網站是一種 Web 體驗，可讓您檢視報表、�
 [設定 URL (SSRS 組態管理員)](../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
 [Reporting Services 工具](../reporting-services/tools/reporting-services-tools.md)  
 [規劃 Reporting Services 瀏覽器支援](../reporting-services/browser-support-for-reporting-services-and-power-view.md)  
-[SQL Server 2016 版本所支援的 Reporting Services 功能](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)  
+[Reporting Services 功能的 SQL Server 2016 版本支援](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)  
 
-更多問題嗎？ [嘗試使用 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多問題嗎？ [再試一次 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)

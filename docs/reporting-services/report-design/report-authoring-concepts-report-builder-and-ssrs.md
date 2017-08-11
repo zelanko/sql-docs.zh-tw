@@ -18,7 +18,7 @@ caps.latest.revision: 15
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a5a77b4a1dcf646e82658fb61697b82f7e5e807f
 ms.contentlocale: zh-tw
@@ -32,13 +32,13 @@ ms.lasthandoff: 08/09/2017
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="in-this-section"></a>本節內容  
- [報表、報表組件和報表定義 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)  
+ [報表、 報表組件和報表定義 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)  
  描述用來描述不同狀態之報表的各種詞彙，這些狀態包括初始定義、已發行的報表以及使用者檢視的報表。  
   
  [內嵌和共用資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  
  說明建立、儲存和管理內嵌和共用資料集的差異。  
   
- [資料區與地圖 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/data-regions-and-maps-report-builder-and-ssrs.md)  
+ [資料區域與地圖 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/data-regions-and-maps-report-builder-and-ssrs.md)  
  描述可加入至報表配置的資料區域類型。 資料區會決定報表的外觀：表格式、矩陣、清單或圖表。  
   
  [報表參數概念 (報表產生器及 SSRS)](https://msdn.microsoft.com/library/ee240844.aspx)  

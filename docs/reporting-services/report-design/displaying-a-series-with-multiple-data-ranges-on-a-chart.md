@@ -15,7 +15,7 @@ caps.latest.revision: 11
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: e37adf58a9b3c953eedb9b1815d980addbe4b4d1
 ms.contentlocale: zh-tw
@@ -35,7 +35,7 @@ ms.lasthandoff: 08/09/2017
   
 -   **啟用刻度斷層**： 如果您的資料形成兩組或多組資料範圍，請使用刻度斷層來移除範圍之間的間隙。 刻度斷層是在繪圖區上繪製的一道區域線，代表數列中高低值之間的斷層。  
   
--   **篩選掉不必要的值**： 如果您的資料點蓋住了圖表上所要顯示的重要資料範圍，請使用報表篩選移除不要的點。 如需如何在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中將篩選加入圖表的詳細資訊，請參閱[加入資料集篩選、資料區篩選和群組篩選 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)。  
+-   **篩選掉不必要的值**： 如果您的資料點蓋住了圖表上所要顯示的重要資料範圍，請使用報表篩選移除不要的點。 如需有關如何將篩選加入圖表中詳細[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，請參閱[加入資料集篩選、 資料區域篩選和群組篩選 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md).  
   
 -   **將每一個資料範圍繪製成個別數列來進行多個數列的比較**： 如果您的資料範圍超過兩個以上，請考慮將資料範圍分割成個別的數列。 如需詳細資訊，請參閱 [圖表上的多個數列 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/multiple-series-on-a-chart-report-builder-and-ssrs.md)：  
   
@@ -50,7 +50,7 @@ ms.lasthandoff: 08/09/2017
 > [!NOTE]  
 >  您無法指定刻度斷層在圖表上的放置位置。 但是，您可以修改刻度斷層的計算方式，本主題稍後會加以描述。  
   
- 如果您啟用刻度斷層，但是它並未出現，而且資料範圍之間確實有足夠的距離，此時您可以將 CollapsibleSpaceThreshold 屬性設定為小於 25 的值。 CollapsibleSpaceThreshold 會指定資料範圍之間所需之可摺疊空間的百分比。 如需詳細資訊，請參閱[將刻度斷層加入至圖表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-scale-breaks-to-a-chart-report-builder-and-ssrs.md)。  
+ 如果您啟用刻度斷層，但是它並未出現，而且資料範圍之間確實有足夠的距離，此時您可以將 CollapsibleSpaceThreshold 屬性設定為小於 25 的值。 CollapsibleSpaceThreshold 會指定資料範圍之間所需之可摺疊空間的百分比。 如需詳細資訊，請參閱[加入刻度斷層的圖表 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/add-scale-breaks-to-a-chart-report-builder-and-ssrs.md).  
   
  圖表最多可支援每個圖表五個刻度斷層；但是，顯示一個以上的刻度斷層可能會造成圖表無法讀取。 如果您的資料範圍超過兩個以上，請考慮使用另一個方法來顯示這些資料。 如需詳細資訊，請參閱 [圖表上的多個數列 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/multiple-series-on-a-chart-report-builder-and-ssrs.md)：  
   
@@ -65,7 +65,7 @@ ms.lasthandoff: 08/09/2017
   
 -   圖表類型為極座標圖、雷達圖、圓形圖、環圈圖、漏斗圖、金字塔圖或任何堆疊圖表。  
   
- 具有刻度斷層的圖表範例可從範例報表取得。 如需有關下載這個範例報表及其他的詳細資訊，請參閱[報表產生器和報表設計師範例報表](http://go.microsoft.com/fwlink/?LinkId=198283)。  
+ 具有刻度斷層的圖表範例可從範例報表取得。 如需下載這個範例報表及其他項目的詳細資訊，請參閱 [報表產生器與報表設計師範例報表](http://go.microsoft.com/fwlink/?LinkId=198283)：  
 
 ## <a name="next-steps"></a>後續的步驟
 

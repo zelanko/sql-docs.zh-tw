@@ -15,7 +15,7 @@ caps.latest.revision: 23
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: a401c2af14ba5e530d9efe3ff62eeae3ad9f8e7e
 ms.contentlocale: zh-tw
@@ -69,11 +69,11 @@ ms.lasthandoff: 08/09/2017
   
 |資料庫|範例名稱||  
 |--------------|------------------|-|  
-|目錄資料庫|ReportingService_[服務應用程式 GUID] **(\*)**|使用者移轉。|  
-|暫存資料庫|ReportingService_[服務應用程式 GUID]TempDB **(\*)**|使用者移轉。|  
+|目錄資料庫|ReportingService_ [服務應用程式 GUID] **(\*)**|使用者移轉。|  
+|暫存資料庫|ReportingService_ [服務應用程式 GUID] TempDB **(\*)**|使用者移轉。|  
 |警示資料庫|ReportingService_[服務應用程式 GUID]_Alerting|在建立 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式時建立。|  
   
- **(\*)** 表格中顯示的範例名稱會遵循您建立新 SSRS 服務應用程式時，SSRS 所使用的命名慣例。 如果您從不同的伺服器移轉，您的目錄和 tempDB 所擁有的名稱將會來自原始安裝。  
+ **(\*)**表所示的範例名稱會遵循當您建立新的 SSRS 服務應用程式時，會使用 SSRS 的命名慣例。 如果您從不同的伺服器移轉，您的目錄和 tempDB 所擁有的名稱將會來自原始安裝。  
   
 ####  <a name="bkmk_backup_operations"></a> 備份作業  
  本節描述您需要移轉的資訊類型，以及完成備份所使用的工具或程序。  

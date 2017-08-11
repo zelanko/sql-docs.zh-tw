@@ -17,7 +17,7 @@ caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 75e9c44d9cb75cef338ff2cd684c38969aa1751f
 ms.contentlocale: zh-tw
@@ -48,6 +48,6 @@ ms.lasthandoff: 08/09/2017
 4.  若要搜尋相同值的下一個出現位置，請按 **[下一個]**。  
   
 ## <a name="see-also"></a>請參閱＜  
- [將報表檢視器 Web 組件加入網頁中 &#40;SharePoint 整合模式的 Reporting Services&#41;](../../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md)  
+ [將報表檢視器 Web 組件加入至 Web 頁面 &#40;Reporting Services SharePoint 整合模式 &#41;](../../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md)  
   
   

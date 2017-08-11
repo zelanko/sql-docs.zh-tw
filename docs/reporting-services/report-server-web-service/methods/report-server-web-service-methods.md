@@ -21,14 +21,14 @@ helpviewer_keywords:
 - XML Web service [Reporting Services], methods
 ms.assetid: ce5afa27-e90c-44a7-b204-098a065b3665
 caps.latest.revision: 49
-author: sabotta
+author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: ec79e5169ff32294cc68f5bee24c3df677d8b38b
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: f99a0c09bfbe96062b078c07f86295b34069d9cf
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="report-server-web-service-methods"></a>報表伺服器 Web 服務方法
@@ -42,14 +42,14 @@ ms.lasthandoff: 06/13/2017
 |[報表伺服器 Web 服務端點](../../../reporting-services/report-server-web-service/methods/report-server-web-service-endpoints.md)|描述報表伺服器 Web 服務的管理和執行端點。|  
 |[報表伺服器命名空間管理方法](../../../reporting-services/report-server-web-service/methods/report-server-namespace-management-methods.md)|描述您可以用於管理報表伺服器資料庫的方法。 也就是說，您可以管理資料夾和資源並設定項目屬性。|  
 |[授權方法](../../../reporting-services/report-server-web-service/methods/authorization-methods.md)|描述可用於管理工作、角色和原則的方法。|  
-|[資料來源和連接方法](../../../reporting-services/report-server-web-service/methods/data-sources-and-connection-methods.md)|描述可用於為報表設定資料來源連接及認證資訊並進行管理的方法。|  
+|[資料來源和連線方法](../../../reporting-services/report-server-web-service/methods/data-sources-and-connection-methods.md)|描述可用於為報表設定資料來源連接及認證資訊並進行管理的方法。|  
 |[報表參數方法](../../../reporting-services/report-server-web-service/methods/report-parameters-methods.md)|描述可用於為報表設定及擷取參數的方法。|  
-|[模型方法-報表伺服器 Web 服務](../../../reporting-services/report-server-web-service/methods/model-methods-report-server-web-service.md)|描述可用於管理模型的方法。|  
+|[模型方法 - 報表伺服器 Web 服務](../../../reporting-services/report-server-web-service/methods/model-methods-report-server-web-service.md)|描述可用於管理模型的方法。|  
 |[轉譯及執行方法](../../../reporting-services/report-server-web-service/methods/rendering-and-execution-methods.md)|描述可用於管理報表執行、轉譯和快取的方法。|  
 |[報表記錄方法](../../../reporting-services/report-server-web-service/methods/report-history-methods.md)|描述可用於建立並管理報表記錄快照的方法。|  
 |[排程方法](../../../reporting-services/report-server-web-service/methods/scheduling-methods.md)|描述可用於建立並管理報表伺服器所使用之共用排程和快取重新整理計劃的方法。|  
-|[Subscription and Delivery Methods](../../../reporting-services/report-server-web-service/methods/subscription-and-delivery-methods.md)|描述可用於建立並管理訂閱和報表傳遞的方法。|  
-|[連結的報表方法](../../../reporting-services/report-server-web-service/methods/linked-reports-methods.md)|描述可用於建立並管理連結報表的方法。|  
+|[訂閱與傳遞方法](../../../reporting-services/report-server-web-service/methods/subscription-and-delivery-methods.md)|描述可用於建立並管理訂閱和報表傳遞的方法。|  
+|[連結報表方法](../../../reporting-services/report-server-web-service/methods/linked-reports-methods.md)|描述可用於建立並管理連結報表的方法。|  
   
 ## <a name="see-also"></a>另請參閱  
  [存取 SOAP API](../../../reporting-services/report-server-web-service/accessing-the-soap-api.md)   

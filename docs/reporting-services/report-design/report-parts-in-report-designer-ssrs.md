@@ -17,7 +17,7 @@ caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 66d5312047b516176e8aa1b331b36745bcdb20d9
 ms.contentlocale: zh-tw
@@ -27,9 +27,9 @@ ms.lasthandoff: 08/09/2017
 
 # <a name="report-parts-in-report-designer-ssrs"></a>報表設計師中的報表組件 (SSRS)
 
-  在報表設計師中，建立專案的資料表、圖表及其他分頁報表項目之後，您可以將它們當作「報表組件」發行至報表伺服器或與報表伺服器整合的 SharePoint 網站，以供您和其他人員在其他報表中重複使用這些組件。  
+  在報表設計師中，建立專案的資料表、圖表及其他分頁報表項目之後，您可以將它們當作*「報表組件」*發行至報表伺服器或與報表伺服器整合的 SharePoint 網站，以供您和其他人員在其他報表中重複使用這些組件。  
   
- 一般來說，報表組件在報表設計師和報表產生器中的運作方式都相同。 若要了解基本功能，請參閱[報表組件 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)。  
+ 一般來說，報表組件在報表設計師和報表產生器中的運作方式都相同。 若要了解基本功能，請參閱[報表組件 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
   
  報表組件在報表設計師中運作的方式有基本的差異。 主要差異在於工作流程。 報表產生器可進行共同作業式撰寫：我建立報表組件並加以發行。 您可以重複使用、修改，並重新發行。 在報表設計師中，發行作業是單向的：我可以從報表設計師發行報表組件，而且您可以重複使用它。 但是，我無法在報表設計師的報表中重複使用現有的報表組件。 本主題會先快速介紹報表組件的概觀，然後再詳細說明這些差異。  
   

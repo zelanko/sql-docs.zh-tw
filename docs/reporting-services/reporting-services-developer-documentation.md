@@ -21,7 +21,7 @@ caps.latest.revision: 21
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: MT
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 3704373a08b29a8f36ce843db5f67a860a04a47b
 ms.contentlocale: zh-tw
@@ -36,7 +36,7 @@ ms.lasthandoff: 08/09/2017
 > [!NOTE]  
 >  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 包括程式設計範例與教學課程以協助您開始。 如需詳細資訊，請參閱[Reporting Services 範例](https://msdn.microsoft.com/library/ms160954\(v=sql.110\).aspx)和[開發人員手冊： 教學課程 (Reporting Services)](https://msdn.microsoft.com/library/aa337423\(v=sql.110\).aspx)。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>섹션 내용  
  [將 Reporting Services 整合到應用程式](../reporting-services/application-integration/integrating-reporting-services-into-applications.md)  
  提供如何使用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 將報表整合到自訂應用程式的概觀。 描述何時使用直接的 URL 存取，以及何時使用 Web 服務存取報表伺服器。  
   

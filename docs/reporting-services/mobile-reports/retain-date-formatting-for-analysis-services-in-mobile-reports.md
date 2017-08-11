@@ -14,7 +14,7 @@ caps.latest.revision: 3
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0a4da31bb1ed09024c6278193e8011b5c7981922
 ms.contentlocale: zh-tw
@@ -44,5 +44,5 @@ ms.lasthandoff: 08/09/2017
    
 ### <a name="see-also"></a>另請參閱
 
--  [Reporting Services 行動報表的資料](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md)
+-  [Reporting Services 行動報表資料](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md)
 -  [準備 Reporting Services 行動報表資料](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md)

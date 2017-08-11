@@ -18,14 +18,14 @@ helpviewer_keywords:
 - troubleshooting [Reporting Services], custom assemblies
 ms.assetid: 3a3215b3-548c-4474-81ba-3a98dd3912bf
 caps.latest.revision: 44
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: b6cdc41f90765a3fc1a568bc76ddf0d41c15b38a
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: e33f560106e99062e89ec10bbe84de65a360118f
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="how-to-debug-custom-assemblies"></a>如何：偵錯自訂組件
@@ -93,6 +93,6 @@ ms.lasthandoff: 06/22/2017
 9. 使用 F11 鍵逐步執行程式碼。 如需有關使用 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 來偵錯的詳細資訊，請參閱 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 文件集。  
   
 ## <a name="see-also"></a>另請參閱  
- [報表中使用自訂組件](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)  
+ [將自訂組件與報表搭配使用](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)  
   
   

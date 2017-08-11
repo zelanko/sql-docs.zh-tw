@@ -16,7 +16,7 @@ caps.latest.revision: 11
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 2c2056dccbb2d65e880928e4ec37a70080cfbf53
 ms.contentlocale: zh-tw
@@ -28,17 +28,17 @@ ms.lasthandoff: 08/09/2017
 
 若要執行報表產生器教學課程，您需要能夠在報表伺服器或與報表伺服器整合的 SharePoint 網站上檢視和儲存 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 分頁報表。 針對資料，所有教學課程使用的常值查詢必須處理的 SQL Server 執行個體。  
   
-如果您沒有報表伺服器或網站或是資料來源的存取權，可以透過建立離線報表來了解報表產生器。 請參閱[教學課程：離線建立快速圖表報表 &#40;報表產生器&#41;](../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)。  
+如果您沒有報表伺服器或網站或是資料來源的存取權，可以透過建立離線報表來了解報表產生器。 請參閱[教學課程： 建立快速圖表報表離線 &#40;報表產生器 &#41;](../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md).  
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>요구 사항
 
 您必須擁有下列必要元件，才能完成報表產生器教學課程：  
   
 -   報表產生器的存取。 您可以從 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 報表伺服器，或是 SharePoint 整合模式中的 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 報表伺服器上，執行報表產生器。 只有第一個步驟「如何開啟報表產生器」在不同伺服器上會不同。  
   
-    在報表伺服器上，選取 [新增] > [分頁報表]。
+    在報表伺服器上，選取**新增** > **分頁報表**。
   
-    在 SharePoint 整合模式的報表伺服器中，於 [文件] 索引標籤上，選取 [新增文件]，然後從下拉式清單中選取 [報表產生器報表]。 例如，`http://<servername>/sites/mySite/reports`。 SharePoint 管理員必須啟用每一個文件庫的 [報表產生器報表] 功能。  
+    在報表伺服器在 SharePoint 整合模式中，於**文件**索引標籤上，選取**新文件**，然後從下拉式清單中，選取**報表產生器報表**。 例如， `http://<servername>/sites/mySite/reports`。 SharePoint 管理員必須啟用每一個文件庫的 [報表產生器報表] 功能。  
   
 -   [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 報表伺服器或是與 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 報表伺服器整合之 SharePoint 網站的 URL。 您必須具有權限，才能儲存和檢視報表、共用資料來源、共用資料集、報表組件和模型。 根據預設，報表伺服器的 URL 是 `http://<servername>/reportserver`。 根據預設，SharePoint 網站的 URL 是 `http://<sitename>` 或 `http://<server>/site`。  
   

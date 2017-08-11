@@ -16,7 +16,7 @@ caps.latest.revision: 6
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b54af8ae1b0141a0fceb29c8e583d0026d377fdd
 ms.contentlocale: zh-tw
@@ -24,7 +24,7 @@ ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="device-information-settings-for-rendering-extensions-reporting-services"></a>轉譯延伸模組的裝置資訊設定 (Reporting Services)
-  在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]中，裝置資訊設定會用於將轉譯參數傳遞給轉譯延伸模組。 每一個轉譯延伸模組都會接受一組特定的設定。  
+  在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中，裝置資訊設定會用於將轉譯參數傳遞給轉譯延伸模組。 每一個轉譯延伸模組都會接受一組特定的設定。  
   
 ## <a name="in-this-section"></a>本節內容  
   
@@ -43,7 +43,7 @@ ms.lasthandoff: 08/09/2017
 |[PPTX 裝置資訊設定](../reporting-services/pptx-device-information-settings.md)|描述與 PPTX 轉譯輸出相關聯的裝置資訊設定。|  
   
 ## <a name="see-also"></a>請參閱＜  
- [在 RSReportServer.Config 中自訂轉譯延伸模組參數](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)  
+ [自訂轉譯延伸模組參數，在 RSReportServer.Config 中](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)  
   
   
 

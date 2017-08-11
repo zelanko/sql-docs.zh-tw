@@ -14,7 +14,7 @@ caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: dcac784ffea9845be91f35f03fb45e2ca6a6e530
 ms.contentlocale: zh-tw
@@ -67,7 +67,7 @@ SQL Server 行動報表提供三種不同類型的地圖，適用於各種不同
    > **提示**︰請確定 [資料為適用於行動報表的格式](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md)。  
   
 3. 選取所需的工作表，然後選取 [匯入]。  
-   您會在 [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)] 中看見您的資料。  
+   您會在 [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]中看見您的資料。  
   
 4. 在這個 [資料] 檢視 > [資料屬性] 面板 > [索引鍵] 下方的左側方塊中，選取包含地圖資料的資料表，並在右側方塊中選取符合您地圖區域的索引鍵欄位。  
   
@@ -84,7 +84,7 @@ SQL Server 行動報表提供三種不同類型的地圖，適用於各種不同
 8. 選取左上角的 [儲存] 圖示，以及 [本機儲存] 於您的電腦上或 [儲存到伺服器]。  
   
 ### <a name="see-also"></a>另請參閱  
--  [Custom maps in Reporting Services mobile reports](../../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md)  
+-  [Reporting Services 行動報表中的自訂地圖](../../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md)  
 - [使用 SQL Server 行動報表發行工具建立與發行行動報表](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
   
   

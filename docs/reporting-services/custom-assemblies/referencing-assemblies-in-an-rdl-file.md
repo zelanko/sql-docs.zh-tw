@@ -20,14 +20,14 @@ helpviewer_keywords:
 - report definition files [Reporting Services]
 ms.assetid: 9a48e552-7d47-4243-9be1-894990c506d9
 caps.latest.revision: 36
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 87609ab5b118eaa696f7152b25cf7e984e7f6e7f
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: 9fd80c818f13972434b72a72ce306e2f494cf56f
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="referencing-assemblies-in-an-rdl-file"></a>參考在 RDL 檔案中的組件
@@ -41,7 +41,7 @@ ms.lasthandoff: 06/22/2017
 </CodeModules>  
 ```  
   
- 而不是呼叫<xref:System.Reflection.Assembly.Load%2A>從自訂程式碼，請手動加入，自訂組件註冊**CodeModule** RDL 檔案，或使用的項目**參考** 索引標籤**報表屬性**對話方塊。 如需詳細資訊，請參閱 [報表設計師中運算式的自訂程式碼及組件參考 &#40;SSRS&#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)。  
+ 而不是呼叫<xref:System.Reflection.Assembly.Load%2A>從自訂程式碼，請手動加入，自訂組件註冊**CodeModule** RDL 檔案，或使用的項目**參考** 索引標籤**報表屬性**對話方塊。 如需詳細資訊，請參閱[報表設計師中運算式的自訂程式碼及組件參考 &#40;SSRS&#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)。  
   
  **類別**項目支援報表定義中使用的執行個體成員。 **類別**是最上層的元素，其中包含的類別名稱和執行個體名稱的參考。 支援使用執行個體成員之報表定義中的項目可能如下所示：  
   
@@ -57,6 +57,6 @@ ms.lasthandoff: 06/22/2017
  如需詳細資訊，請參閱[存取 Custom Assemblies Through Expressions](../../reporting-services/custom-assemblies/accessing-custom-assemblies-through-expressions.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [報表中使用自訂組件](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)  
+ [將自訂組件與報表搭配使用](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)  
   
   

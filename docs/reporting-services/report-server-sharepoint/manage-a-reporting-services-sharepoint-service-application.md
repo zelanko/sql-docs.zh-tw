@@ -15,7 +15,7 @@ caps.latest.revision: 18
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f0930c8f5d3b0af4460c3deac2b8aa780e1f2568
 ms.contentlocale: zh-tw
@@ -98,7 +98,7 @@ ms.lasthandoff: 08/09/2017
 |啟用執行記錄|預設值是 TRUE。<br /><br /> 指定報表伺服器是否產生追蹤記錄以及這些記錄的保存天數。 。 記錄會儲存在報表伺服器電腦的下列資料夾中：\Microsoft SQL Server\MSSQL.n\ReportServer\Log。 每次服務重新啟動時，就會啟動新的記錄。 如需有關記錄檔的詳細資訊，請參閱＜ [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)＞|  
 |執行記錄保留天數|預設值是 60 天。|  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 全都支援 SharePoint ULS 記錄。  如需詳細資訊，請參閱 [開啟 SharePoint 追蹤記錄的 Reporting Services 事件 &#40;ULS&#41;](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 全都支援 SharePoint ULS 記錄。  如需詳細資訊，請參閱[開啟 SharePoint 追蹤記錄的 Reporting Services 事件 &#40;ULS&#41;](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
   
 ###  <a name="bkmk_security_settings_section"></a> 安全性設定  
   
@@ -132,8 +132,8 @@ ms.lasthandoff: 08/09/2017
   
 |頁面|說明|  
 |----------|-----------------|  
-|備份加密金鑰|1) 在 [密碼:] 與 [確認密碼:] 方塊中輸入密碼，然後按一下 [匯出]。 如果您輸入的密碼不符合網域原則的複雜性需求，則會顯示警告。<br /><br /> 2) 系統會提示您提供儲存金鑰檔的檔案位置。 您應考慮將金鑰檔儲存到與執行 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。 預設檔案名稱與服務應用程式的名稱相同。|  
-|還原加密金鑰|1) 在 [檔案位置] 方塊中輸入或瀏覽至金鑰檔<br /><br /> 2) 在 [密碼] 方塊中，輸入要用來備份加密檔案的密碼。<br /><br /> 3) 按一下 [確定]。|  
+|備份加密金鑰|1） 中輸入密碼以**密碼：**和**確認密碼：**方塊，然後按一下**匯出**。 如果您輸入的密碼不符合網域原則的複雜性需求，則會顯示警告。<br /><br /> 2) 系統會提示您提供儲存金鑰檔的檔案位置。 您應考慮將金鑰檔儲存到與執行 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。 預設檔案名稱與服務應用程式的名稱相同。|  
+|還原加密金鑰|1） 輸入或瀏覽至金鑰檔中**檔案位置**方塊<br /><br /> 2） 在**密碼**方塊中，輸入用來備份加密檔案的密碼。<br /><br /> 3） 按一下**[確定]**|  
 |變更加密金鑰|這項作業將建立新的金鑰，並且重新加密已加密的內容。 如果您擁有許多內容，這項作業可能需要數小時才能完成。<br /><br /> 變更加密金鑰作業完成時，建議您製作新金鑰的備份。|  
 |刪除加密的內容|刪除的內容無法復原。<br /><br /> **\*\* 重要事項 \*\*** 刪除和重新建立對稱金鑰的動作無法反轉或恢復。 刪除或重新建立金鑰可能會對您目前的安裝造成重大的影響。 如果您刪除金鑰，將會一併刪除對稱金鑰所加密的任何現有資料。 刪除的資料包括外部報表資料來源的連接字串、預存連接字串和一些訂閱資訊。|  
   

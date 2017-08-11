@@ -20,7 +20,7 @@ caps.latest.revision: 67
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 7cd0ab1950eeaf54da67e7f8dd5bb2da89a26307
 ms.contentlocale: zh-tw
@@ -34,7 +34,7 @@ ms.lasthandoff: 08/09/2017
 
 當您瀏覽本教學課程，您將建立報表專案、 設定連接資訊、 定義查詢、 加入資料表資料區域、 群組和加總某些欄位，和預覽報表。  
   
-## <a name="requirements"></a>需求  
+## <a name="requirements"></a>요구 사항  
 您的系統必須已經安裝下列項目，才能使用這個教學課程：  
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)]SQL Server database engine。  

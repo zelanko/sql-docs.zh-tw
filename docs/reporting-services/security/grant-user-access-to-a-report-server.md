@@ -21,14 +21,14 @@ caps.latest.revision: 54
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: a92c37165b8142b7e96a8bb99dee43ea5f12e247
 ms.contentlocale: zh-tw
 ms.lasthandoff: 08/09/2017
 
 ---
-# <a name="grant-user-access-to-a-report-server"></a>授與使用者存取報表伺服器
+# <a name="grant-user-access-to-a-report-server"></a>將報表伺服器的存取權授與使用者
 
 [!INCLUDE[ssrs-appliesto-sql2016-preview](../../includes/ssrs-appliesto-sql2016-preview.md)]
 
@@ -48,7 +48,7 @@ ms.lasthandoff: 08/09/2017
 
 將使用者加入至原生模式報表伺服器之前，請檢閱下列清單。
 
-- 您在報表伺服器電腦上必須是本機管理員群組的成員。 如果您要將 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 部署在 [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)] 或 Windows Server 2008 上，就必須進行其他組態設定，然後才能在本機管理報表伺服器。 如需詳細資訊，請參閱[設定原生模式報表伺服器進行本機管理](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)。
+- 您在報表伺服器電腦上必須是本機管理員群組的成員。 如果您要將 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 部署在 [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)] 或 Windows Server 2008 上，就必須進行其他組態設定，然後才能在本機管理報表伺服器。 如需詳細資訊，請參閱 [設定原生模式報表伺服器進行本機管理](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)。
 
 - 若要將這項工作委派給其他使用者，請建立角色指派，以便將使用者帳戶對應至「內容管理員」和「系統管理員」角色。 擁有「內容管理員」和「系統管理員」權限的使用者可以將使用者加入至報表伺服器。
 
@@ -102,7 +102,7 @@ ms.lasthandoff: 08/09/2017
 
 ## <a name="next-steps"></a>後續的步驟
 
-[建立和管理角色指派](../../reporting-services/security/create-and-manage-role-assignments.md)   
+[建立及管理角色指派](../../reporting-services/security/create-and-manage-role-assignments.md)   
 [新增角色指派： 編輯角色指派頁面 &#40;報表管理員 &#41;](http://msdn.microsoft.com/library/3319ced0-4b86-42af-b18d-da41a625113c)   
 [安全性屬性頁面，項目 &#40;報表管理員 &#41;](http://msdn.microsoft.com/library/351b8503-354f-4b1b-a7ac-f1245d978da0)   
 [角色指派](../../reporting-services/security/role-assignments.md)   

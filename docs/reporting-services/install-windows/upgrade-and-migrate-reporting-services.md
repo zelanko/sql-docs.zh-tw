@@ -20,7 +20,7 @@ caps.latest.revision: 92
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: e7144b243b14ea3f65d912552ce8e6cdd736ab59
 ms.contentlocale: zh-tw
@@ -100,7 +100,7 @@ ms.lasthandoff: 08/09/2017
   
  但是，如果您遇到下列任何狀況，則需要手動 **移轉** 報表伺服器安裝：  
   
--   您想要變更部署中使用的報表伺服器類型。 例如，您無法將原生模式報表伺服器升級或轉換為 SharePoint 模式。 如需詳細資訊，請參閱[原生至 SharePoint 移轉 &#40;SSRS&#41;](../../reporting-services/install-windows/native-to-sharepoint-migration-ssrs.md)。  
+-   您想要變更部署中使用的報表伺服器類型。 例如，您無法將原生模式報表伺服器升級或轉換為 SharePoint 模式。 如需詳細資訊，請參閱[原生至 SharePoint 移轉 &#40;SSRS &#41;](../../reporting-services/install-windows/native-to-sharepoint-migration-ssrs.md).  
   
 -   您想要在升級過程中，將報表伺服器離線的時間縮到最短。 當您將內容資料複製到新的報表伺服器執行個體並測試安裝時，目前的安裝會保持上線狀態，而不會變更現有報表伺服器安裝的狀態。  
   
@@ -142,7 +142,7 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="bkmk_native_scaleout"></a> 升級 Reporting Services 原生模式向外延展部署  
  以下為如何升級向外延展至多部報表伺服器之 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式部署的摘要。 此程序需要 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 部署的停機時間：  
   
-1.  備份報表伺服器資料庫和加密金鑰。 如需詳細資訊，請參閱 [Reporting Services 的備份與還原作業](../../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md)和[移除向外延展部署的加密金鑰 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)。  
+1.  備份報表伺服器資料庫和加密金鑰。 如需詳細資訊，請參閱[Backup and Restore Operations for Reporting Services](../../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md)和[加入和移除向外延展部署 &#40; 的加密金鑰SSRS 組態管理員 &#41;](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md).  
   
 2.  使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員，將向外延展部署中的所有報表伺服器移除。 如需詳細資訊，請參閱[設定原生模式報表伺服器向外延展部署 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)。  
   
@@ -164,7 +164,7 @@ ms.lasthandoff: 08/09/2017
   
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 適用於 SharePoint 產品的增益集。 如需詳細資訊，請參閱 [安裝或解除安裝 SharePoint 的 Reporting Services 增益集](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)。  
   
- 如需移轉 SharePoint 模式安裝的詳細步驟，請參閱[移轉 Reporting Services 安裝 &#40;SharePoint 模式&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md)。  
+ 如需有關移轉 SharePoint 模式安裝的詳細步驟，請參閱[移轉 Reporting Services 安裝 &#40;SharePoint 模式 &#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md).  
   
 > [!IMPORTANT]  
 >  下列某些狀況因為升級所需的技術不同，而需要將 SharePoint 環境停機。 如果您的情況不允許停機，將需要完成移轉，而非就地升級。  

@@ -20,7 +20,7 @@ caps.latest.revision: 13
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b785da81bc694c8442d2a7a618e2abe8f1cec907
 ms.contentlocale: zh-tw
@@ -28,7 +28,7 @@ ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="granting-permissions-on-report-server-items-on-a-sharepoint-site"></a>授與 SharePoint 網站上報表伺服器項目的權限
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 提供內建的安全性功能，可用來授與從 SharePoint 網站和文件庫存取報表伺服器項目的權限。 如果您已經指定權限給使用者，則在設定 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 與報表伺服器之間的整合設定之後，那些使用者就能立即存取報表伺服器項目和作業。 您可以使用現有權限來上傳報表定義和其他文件、檢視報表、建立訂閱和管理項目。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[SPF2010](../../includes/spf2010-md.md)]提供內建安全性功能，您可以使用授與存取權，您從 SharePoint 網站和文件庫來存取報表伺服器項目。 如果您已經指定權限給使用者，則在設定 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 與報表伺服器之間的整合設定之後，那些使用者就能立即存取報表伺服器項目和作業。 您可以使用現有權限來上傳報表定義和其他文件、檢視報表、建立訂閱和管理項目。  
   
  如果您未指定權限，或是不熟悉 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)]中的安全性功能，請依照下列方針進行：  
   
@@ -80,19 +80,19 @@ ms.lasthandoff: 08/09/2017
  若要使用內建的安全性功能，您必須將 Windows 使用者或群組帳戶指定給 SharePoint 群組。 但伺服器管理員和入口網站擁有者除外，因為在安裝軟體時，他們就自動具有 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 的存取權，至於所有其他使用者都必須經過授與權限後，才能存取伺服器。  
   
 ## <a name="in-this-section"></a>本節內容  
- [在 Windows SharePoint Services 中使用報表伺服器項目的內建安全性](../../reporting-services/security/use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)  
+ [在報表伺服器項目的 Windows SharePoint Services 中使用內建安全性](../../reporting-services/security/use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)  
  說明如何使用預先定義的 SharePoint 群組和權限等級來存取報表伺服器項目。  
   
- [報表伺服器項目的 SharePoint 網站和清單權限參考](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)  
+ [SharePoint 網站和清單權限參考報表伺服器項目](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)  
  提供可用來存取報表伺服器作業之所有 SharePoint 產品權限的參考。  
   
  [在 SharePoint Web 應用程式中設定報表伺服器作業的權限](../../reporting-services/security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)  
  描述隨選報表的權限需求，並建議啟用功能的方法。  
   
  [Reporting Services to SharePoint Groups and Permissions 中比較角色和工作](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)  
- 提供簡短摘要，將 SharePoint 群組與 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中預先定義的角色定義做比較。  
+ 提供簡短摘要，將 SharePoint 群組與 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中預先定義的角色定義做比較。  
   
- [設定 SharePoint 網站上報表伺服器項目的權限 &#40;SharePoint 整合模式的 Reporting Services&#41;](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)  
+ [設定報表伺服器項目的權限在 SharePoint 網站 &#40;Reporting Services SharePoint 整合模式 &#41;](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)  
  提供指示，以建立有權可啟動報表產生器和設定模型項目安全性的新 SharePoint 群組。 本主題也包含有關為任何報表伺服器項目或作業設定自訂權限的一般指導方針。  
   
 ## <a name="see-also"></a>請參閱＜  

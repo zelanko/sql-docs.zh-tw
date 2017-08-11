@@ -15,7 +15,7 @@ caps.latest.revision: 11
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 91700c92ed7f96e00ba05d7ee9ca96590d0a4837
 ms.contentlocale: zh-tw
@@ -37,7 +37,7 @@ ms.lasthandoff: 08/09/2017
 
 若要深入了解 SharePoint 權限，請參閱 [使用者權限與權限等級 (SharePoint Server 2010)](http://technet.microsoft.com/library/cc721640.aspx)。
 
-## <a name="grant-permissions"></a>授與權限
+## <a name="grant-permissions"></a>[授與權限]
   
 1.  移至您要授與權限的 SharePoint 網站。  
   
@@ -59,7 +59,7 @@ ms.lasthandoff: 08/09/2017
 
 ## <a name="see-also"></a>請參閱＜
 
-[設定 SharePoint 網站上報表伺服器項目的權限 &#40;SharePoint 整合模式的 Reporting Services&#41;](../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
+[設定報表伺服器項目的權限在 SharePoint 網站 &#40;Reporting Services SharePoint 整合模式 &#41;](../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
 [Reporting Services Data Alerts](../reporting-services/reporting-services-data-alerts.md)  
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)

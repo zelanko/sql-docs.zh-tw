@@ -17,14 +17,14 @@ helpviewer_keywords:
 - system-specific properties [Reporting Services]
 ms.assetid: cd874117-00e5-4ae6-8629-eb9ba9f40478
 caps.latest.revision: 55
-author: sabotta
+author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: fd0b6d58eb740f9398bd358429f91071b38eefaf
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: d91c1bb43978ab08857c09ffc235da78f5f0ffea
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="reporting-services-properties---report-server-system-properties"></a>Reporting Services 內容-報表伺服器系統屬性
@@ -44,7 +44,7 @@ ms.lasthandoff: 06/13/2017
 |EnableExecutionLogging|指出報表執行記錄是否已啟用。 預設值為 **true**。|  
 |ExecutionLogDaysKept|要將報表執行資訊保留在執行記錄中的天數。 這個屬性的有效值包括 **0** 至 **2**、**147**、**483**和**647**。 如果此值為 **0** ，系統就不會從執行記錄資料表中刪除項目。 預設值是 **60**秒。|  
 |SnapshotCompression|定義快照集的壓縮方式。 預設值是 **SQL**秒。 有效值如下：<br /><br /> **SQL** = 儲存在報表伺服器資料庫時，會壓縮快照集。 這是目前的行為。<br /><br /> **無 =** 系統不會壓縮快照集。<br /><br /> **所有**= 針對所有儲存體選項，其中包含報表伺服器資料庫或檔案系統會壓縮快照集。|  
-|EnableClientPrinting|決定是否可從報表伺服器下載 RSClientPrint ActiveX 控制項。 有效值為 **true** 和 **false**。 預設值為 **true**。 如需此控制項所需之其他設定的詳細資訊，請參閱[啟用和停用 Reporting Services 的用戶端列印功能](../../../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md)。|  
+|EnableClientPrinting|決定是否可從報表伺服器下載 RSClientPrint ActiveX 控制項。 有效值為 **true** 和 **false**。 預設值為 **true**。 如需此控制項所需之其他設定的詳細資訊，請參閱 [啟用和停用 Reporting Services 的用戶端列印功能](../../../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md)。|  
 |EnableIntegratedSecurity|決定整合式安全性是否支援報表資料來源連接。 預設值為 **True**。 有效值如下：<br /><br /> **True** = 整合式安全性已啟用。<br /><br /> **False** = 整合式安全性未啟用。 設定為使用整合式安全性的報表資料來源不會執行。|  
 |EnableRemoteErrors|包含外部錯誤資訊 (例如，有關報表資料來源的錯誤資訊) 以及針對從遠端電腦要求報表之使用者傳回的錯誤訊息。 有效值為 **true** 和 **false**。 預設值是 **false**秒。 如需詳細資訊，請參閱[啟用遠端錯誤 &#40;Reporting Services&#41;](../../../reporting-services/report-server/enable-remote-errors-reporting-services.md)。|  
   

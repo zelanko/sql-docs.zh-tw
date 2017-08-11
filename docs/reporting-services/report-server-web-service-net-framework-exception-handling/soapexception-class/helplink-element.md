@@ -17,24 +17,24 @@ helpviewer_keywords:
 - SoapException class
 ms.assetid: a4489103-a874-44c2-8f75-95cb238928ed
 caps.latest.revision: 30
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: eaf3c480eb8c0886facc7127406fa0b5a2447b25
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: 683da36a3015ee177935823d234968c8486eb51c
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="helplink-element"></a>HelpLink 元素
   **HelpLink**元素**詳細**屬性就是報表伺服器所產生的 URL 字串。 URL 會以 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 說明及支援所管理的網頁為目標，並提供有關 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中發生的特定錯誤之其他說明與知識庫文章。 URL 具有下列語法：  
   
- **http://**www.microsoft.com**/**products**/**ee**/**transform.aspx**?EvtSrc**=v*alue***&EvtID**=*value***&ProdName**=*value***&ProdVer**=*value*  
+ **http://**www.microsoft.com**/**產品**/**ee**/**transform.aspx**嗎？Server&evtsrc**= v*alue***& Mssqlserver&evtid**=*值***& ProdName**=*值***（& s) ProdVer**=*值*  
   
  下表列出的引數**HelpLink** URL。  
   
-|引數|值|  
+|引數|Value|  
 |--------------|-----------|  
 |**Server&evtsrc**|"Microsoft.ReportingServices.Diagnostics.ErrorStrings.resources.Strings"|  
 |**Mssqlserver&evtid**|例如，報表伺服器錯誤碼，rsReservedItem。|  

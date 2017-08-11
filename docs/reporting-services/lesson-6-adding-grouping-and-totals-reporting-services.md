@@ -16,7 +16,7 @@ caps.latest.revision: 56
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5e20b99d995151c14e6c334a647da14d3ff8f365
 ms.contentlocale: zh-tw
@@ -31,27 +31,27 @@ ms.lasthandoff: 08/09/2017
   
 1.  按一下 **[設計]** 索引標籤。  
   
-2.  如果您看不到 [資料列群組] 窗格，請以滑鼠右鍵按一下設計介面，並按一下 [檢視]，然後按一下 [群組]。  
+2.  如果您沒有看到**資料列群組**窗格中以滑鼠右鍵按一下設計介面，然後按一下**檢視**，然後按一下 **分組**。  
   
-3.  將 **Date** 欄位從 [報表資料]  窗格拖曳到 [資料列群組]  窗格。 將它放在稱為 [(詳細資料)] 之資料列的上方。
+3.  將 **Date** 欄位從 [報表資料]  窗格拖曳到 [資料列群組]  窗格。 將它放在稱為資料列上方**（詳細資料）**。
   
     請注意，資料列控制代碼中現在具有一個用來顯示群組的方括號。 資料表現在也具有兩個 [日期] 資料行 – 垂直虛線兩側各有一個。  
   
     ![新增日期群組](../reporting-services/media/rs-basictablegroups1design.png "新增日期群組")  
   
-4.  將 **Order** 欄位從 [報表資料]  窗格拖曳到 [資料列群組]  窗格。 將它放在 [日期] 下方和 [(詳細資料)] 上方。
+4.  將 **Order** 欄位從 [報表資料]  窗格拖曳到 [資料列群組]  窗格。 將日期 下方和以上版本放**（詳細資料）**。
 
 ![ssrs_ssdt_addorderfield](../reporting-services/media/ssrs-ssdt-addorderfield.png)   
   
     Note that the row handle now has two brackets in it ![ssrs_ssdt_rowgroupdoublehandles](../reporting-services/media/ssrs-ssdt-rowgroupdoublehandles.png), to show two groups. The table now has two **Order** columns, too.  
   
-5.  刪除雙線**右側**的原始 [日期] 和 [訂單] 資料行。 這樣會移除這個個別記錄值，所以只有群組值會顯示。 選取這兩個資料行的資料行控制代碼，並按一下滑鼠右鍵，然後按一下 [刪除資料行]。  
+5.  刪除原始**日期**和**順序**欄**右**雙線。 這樣會移除這個個別記錄值，所以只有群組值會顯示。 選取這兩個資料行的資料行控制代碼，並按一下滑鼠右鍵，然後按一下 [刪除資料行]。  
   
     ![選取要刪除資料行](../reporting-services/media/rs-basictablegroupsdeletecols.gif "選取要刪除資料行")  
   
 6.  若要格式化新的日期資料行，請以滑鼠右鍵按一下含有 `[Date]` 欄位運算式的資料格，然後按一下 [文字方塊屬性]。  
   
-7.  按一下 [數字]，然後按一下 [類別目錄] 欄位中的 [日期]。  
+7.  按一下**數目**，然後在**類別**欄位中，按一下**日期**。  
   
 8.  在 **[類型]** 方塊中，選取 **[January 31, 2000]**。  
   
@@ -64,11 +64,11 @@ ms.lasthandoff: 08/09/2017
   
 1.  切換至 [設計] 檢視。  
   
-2.  以滑鼠右鍵按一下含有 `[LineTotal]` 欄位的資料區資料格，然後按一下 [加入總計]。  
+2.  以滑鼠右鍵按一下包含該欄位的資料區資料格`[LineTotal]`，然後按一下**加入總計**。  
   
     這樣會加入每筆訂單的總金額資料列。  
   
-3.  以滑鼠右鍵按一下含有 `[Qty]` 欄位的資料格，然後按一下 [加入總計]。  
+3.  以滑鼠右鍵按一下包含該欄位的資料格`[Qty]`，然後按一下**加入總計**。  
   
     這樣會在總計資料列中加入每筆訂單的總數量。  
   
@@ -84,7 +84,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  以滑鼠右鍵按一下 [訂單] 資料格，並指向 [加入總計]，然後按一下 [之後]。  
   
-    這樣會加入含有每日數量和金額總和的新資料列，以及 [訂單] 資料行底端的 [總計] 標籤。  
+    這會將新的資料列包含的數量和金額總和的每日和標籤"**總**"次序資料行的底部。  
   
 2.  在同一資料格的 **總計** 一詞之前，輸入 **每日** 一詞，使其讀為 **[每日總計]**。  
   
@@ -118,7 +118,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  選擇性步驟是將已完成的報表發行至原生模式報表伺服器，讓您能夠從報表管理員檢視報表。  
   
-2.  按一下 [專案] 功能表，然後按一下 [Tutorial 屬性]  
+2.  按一下**專案**功能表，然後按一下**教學課程內容...**  
   
 3.  在 **TargetServerURL** 中，輸入報表伺服器的名稱，例如   
 - `http:/<servername>/reportserver`  
@@ -129,7 +129,7 @@ ms.lasthandoff: 08/09/2017
 4. 請記住，TargetReportFolder 是 tutorial (即專案名稱)。  這是下一步中將在其中部署報表的資料夾名稱。  
 5. 按一下 **[確定]**。  
   
-6.  在 [建立] 功能表上，按一下 [部署教學課程]。  
+6.  在按一下**建置**功能表，然後按一下**部署教學課程**。  
   
     如果您在輸出視窗中看見類似下面的訊息，就表示部署成功。  
   
@@ -147,10 +147,10 @@ ms.lasthandoff: 08/09/2017
   
     > 「授與使用者 'XXXXXXXX\\[您的使用者名稱]' 的權限不足，無法執行此作業」  
   
-7.  以系統管理員權限瀏覽至 Web 入口網站，例如以滑鼠右鍵按一下 Internet Explorer 的圖示，然後按一下 [以系統管理員​​身分執行​​]。  
+7.  瀏覽至入口網站的系統管理員權限，例如，以滑鼠右鍵按一下 Internet explorer 的圖示，然後按一下**系統管理員身分執行**。  
   
     瀏覽至 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] Web入口網站 URL。   
-    **注意︰***portal* URL 是 "Reports"，而非 "Reportserver" 的 Report *Server* URL。  例如：   
+    **注意：** *入口網站*URL 為"Reports"，不報告*伺服器*"Reportserver"的 URL。  例如：   
     - `http://<server name>/reports`。  
      - `http://localhost/reports` 適用於在報表伺服器上設計報表時。  
   

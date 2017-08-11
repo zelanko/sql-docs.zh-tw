@@ -23,7 +23,7 @@ caps.latest.revision: 56
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 70f9afea9e9fe495c66ac98ea8ec4f3e9b1e3a6d
 ms.contentlocale: zh-tw
@@ -126,10 +126,10 @@ rs –i c:\scriptfiles\script_copycontent.rss -s http://localhost/reportserver
 > [!TIP]  
 >  如需詳細範例，請參閱 [在報表伺服器之間複製內容的範例 Reporting Services rs.exe 指令碼](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
 - [執行 Reporting Services 指令碼檔案](../../reporting-services/tools/run-a-reporting-services-script-file.md)   
-- [指令碼部署和管理工作](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)   
-- [利用 rs.exe 公用程式和 Web 服務編寫指令碼](../../reporting-services/tools/script-with-the-rs-exe-utility-and-the-web-service.md)   
-- [報表伺服器命令提示字元公用程式 &#40;SSRS &#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)  
+- [編寫部署和管理工作的指令碼](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)   
+- [利用 rs.exe 公用程式與 Web 服務編寫指令碼](../../reporting-services/tools/script-with-the-rs-exe-utility-and-the-web-service.md)   
+- [報表伺服器命令提示字元公用程式 &#40;SSRS&#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)  
   
   

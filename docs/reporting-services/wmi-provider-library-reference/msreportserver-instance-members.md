@@ -22,7 +22,7 @@ caps.latest.revision: 22
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 4858da330363297a88c6bcde441b26e5eb384a57
 ms.contentlocale: zh-tw
@@ -38,7 +38,7 @@ ms.lasthandoff: 08/09/2017
 |-|-|  
 |[EditionID](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-editionid.md)|傳回報表伺服器的版本。|  
 |[EditionName](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-editionname.md)|傳回報表伺服器版本之人們可讀取的名稱。|  
-|[InstanceID](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-instanceid.md)|此物件支援 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 基礎結構，而且不能直接從程式碼使用。|  
+|[執行個體識別碼](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-instanceid.md)|此物件支援 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 基礎結構，而且不能直接從程式碼使用。|  
 |[InstanceName](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-instancename.md)|在特定電腦上傳回報表伺服器執行個體的名稱。 唯讀。|  
 |[IsSharePointIntegrated](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-issharepointintegrated.md)|指出是否為 SharePoint 整合模式設定報表伺服器。|  
 |[版本](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-version.md)|傳回報表伺服器的版本。|  
@@ -47,6 +47,6 @@ ms.lasthandoff: 08/09/2017
   
 |||  
 |-|-|  
-|[GetReportServerUrls 方法 &#40;WMI MSReportServer_Instance&#41;](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-methods-getreportserverurls.md)|列出使用者可用來存取報表伺服器和報表管理員的 URL。|  
+|[GetReportServerUrls 方法 &#40;WMI MSReportServer_Instance &#41;](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-methods-getreportserverurls.md)|列出使用者可用來存取報表伺服器和報表管理員的 URL。|  
   
   

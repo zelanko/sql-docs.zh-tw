@@ -16,7 +16,7 @@ caps.latest.revision: 20
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e168601f761a966d494168cd79d3724fc4342b63
 ms.contentlocale: zh-tw
@@ -35,7 +35,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  以滑鼠右鍵按一下含有 `[Date]` 欄位運算式的資料格，然後按一下 [文字方塊屬性]。  
   
-3.  按一下 [數字]，然後按一下 [類別目錄] 欄位中的 [日期]。  
+3.  按一下**數目**，然後在**類別**欄位中，按一下**日期**。  
   
 4.  在 **[類型]** 方塊中，選取 **[January 31, 2000]**。  
   
@@ -50,7 +50,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  以滑鼠右鍵按一下含有 `[LineTotal]` 欄位運算式的資料格，然後按一下 [文字方塊屬性]。  
   
-2.  按一下 [數字]，然後在 [類別目錄] 欄位中按一下 [貨幣]。  
+2.  按一下**數目**，然後在**類別**欄位中，按一下**貨幣**。  
   
 3.  如果您的地區設定為英文 (美國)，預設值應為：  
   

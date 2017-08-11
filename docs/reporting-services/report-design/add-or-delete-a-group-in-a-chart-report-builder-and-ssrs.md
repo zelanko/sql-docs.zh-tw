@@ -15,7 +15,7 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5360240569fcffe5f9708f68d7f95403e45c0909
 ms.contentlocale: zh-tw
@@ -38,7 +38,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  在報表設計介面上，按一下圖表中的任意位置來選取它。 隨即出現 [圖表資料]  窗格。  
   
-2.  以滑鼠右鍵按一下 [類別目錄群組] 區域中的群組，然後按一下 [類別目錄群組屬性]。  
+2.  以滑鼠右鍵按一下 在群組**類別目錄群組**區域，，然後按一下**類別目錄群組屬性**。  
   
 3.  加入或移除群組運算式、篩選、排序運算式和群組變數。  
   
@@ -58,9 +58,9 @@ ms.lasthandoff: 08/09/2017
   
 1.  在報表設計介面上，按一下圖表中的任意位置來選取它。 隨即出現 [圖表資料]  窗格。  
   
-2.  以滑鼠右鍵按一下 [類別目錄群組] 或 [數列群組] 區域中的群組，然後按一下 [刪除]。  
+2.  以滑鼠右鍵按一下 在群組**類別目錄群組**或**數列群組**區域，，然後按一下**刪除**。  
   
 ## <a name="see-also"></a>另請參閱  
- [圖表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
+ [圖表 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
   
   

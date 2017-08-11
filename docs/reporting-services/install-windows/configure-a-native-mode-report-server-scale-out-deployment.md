@@ -18,7 +18,7 @@ caps.latest.revision: 13
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 6a90a566e3e100fff3bb17e838a368a82ac3f4f5
 ms.contentlocale: zh-tw
@@ -32,7 +32,7 @@ ms.lasthandoff: 08/09/2017
   
  SharePoint 模式報表伺服器會利用 SharePoint 產品基礎結構進行向外延展。 SharePoint 模式向外延展是透過將其他 SharePoint 模式報表伺服器加入至 SharePoint 伺服器陣列來執行。 如需 SharePoint 模式中向外延展的相關資訊，請參閱[將其他報表伺服器加入至伺服器陣列 &#40;SSRS 向外延展&#41;](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)。  
  
-  *「向外延展部署」*(Scale-out Deployment) 的使用案例如下：  
+  *「向外延展部署」* (Scale-out Deployment) 的使用案例如下：  
   
 -   這是讓伺服器叢集內的多部報表伺服器負載平衡的必要條件。 在您可以讓多部報表伺服器負載平衡之前，您必須先設定這些伺服器，讓它們共用相同的報表伺服器資料庫。  
   
@@ -106,25 +106,25 @@ An error occurred within the report server database.  This may be due to a conne
   
 3.  請將報表伺服器連接到您用於第一個報表伺服器執行個體的相同資料庫：  
   
-    1.  選取 [資料庫] 開啟 [資料庫] 頁面。  
+    1.  選取**資料庫**以開啟 [資料庫] 頁面。  
   
-    2.  選取 [變更資料庫]。  
+    2.  選取**變更資料庫**。  
   
-    3.  選取 [選擇現有報表伺服器資料庫]。  
+    3.  選取**選擇現有的報表伺服器資料庫**。  
   
     4.  輸入主控您要使用之報表伺服器資料庫的 SQL Server Database Engine 執行個體的伺服器名稱。 這必須是您在先前的指示集內所連接的相同伺服器。  
   
-    5.  選取 [測試連接]，然後選取 [下一步]。  
+    5.  選取**測試連接**，然後選取**下一步**。  
   
-    6.  在 [報表伺服器資料庫] 中，選取您針對第一部報表伺服器所建立的資料庫，然後選取 [下一步]。 預設名稱為 ReportServer。 請勿選取 ReportServerTempDB，因為它只能在處理報表時用來儲存暫存資料。 如果資料庫清單是空的，請重複前四個步驟來建立與伺服器的連接。  
+    6.  在**報表伺服器資料庫**選取第一個報表伺服器中，您建立的資料庫，然後選取**下一步**。 預設名稱為 ReportServer。 請勿選取 ReportServerTempDB，因為它只能在處理報表時用來儲存暫存資料。 如果資料庫清單是空的，請重複前四個步驟來建立與伺服器的連接。  
   
     7.  在 [認證] 頁面中，選取報表伺服器將用來連接到報表伺服器資料庫的帳戶類型和認證。 您可以使用與第一個報表伺服器執行個體相同的認證，或是不同的認證。 選取 **[下一步]**。  
   
-    8.  選取 [摘要]，然後選取 [完成]。  
+    8.  選取**摘要**，然後選取 **完成**。  
   
-4.  設定報表伺服器 [Web 服務 URL]。 還不要測試 URL， 要等到報表伺服器加入向外延展部署之後，才會解析此 URL。  
+4.  設定報表伺服器**Web 服務 URL**。 還不要測試 URL， 要等到報表伺服器加入向外延展部署之後，才會解析此 URL。  
   
-5.  設定 [Web 入口網站 URL]。 還不要測試此 URL 或嘗試驗證部署。 要等到報表伺服器加入向外延展部署之後，報表伺服器才可以使用。  
+5.  設定**Web 入口網站的 URL**。 還不要測試此 URL 或嘗試驗證部署。 要等到報表伺服器加入向外延展部署之後，報表伺服器才可以使用。  
   
 ## <a name="to-join-the-second-report-server-instance-to-the-scale-out-deployment"></a>將第二個報表伺服器執行個體加入向外延展部署  
   
@@ -137,11 +137,11 @@ An error occurred within the report server database.  This may be due to a conne
 3.  在 [向外延展部署] 頁面上，選取正等候加入此部署的報表伺服器執行個體，然後選取 [加入伺服器]。  
   
     > [!NOTE]  
-    >  **問題**：嘗試將 Reporting Services 報表伺服器執行個體加入向外延展部署時，您可能會遇到像是「拒絕存取」之類的錯誤訊息。  
+    >  **問題** ：嘗試將 Reporting Services 報表伺服器執行個體加入向外延展部署時，您可能會遇到像是「拒絕存取」之類的錯誤訊息。  
     >   
     >  **因應措施** ：從第一個 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 執行個體備份 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 加密金鑰，然後將此金鑰還原到第二部 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器。 接著嘗試將第二部伺服器加入 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 向外延展部署。  
   
-4.  您現在應該能夠確認這兩個報表伺服器執行個體都可運作。 若要確認第二個執行個體，您可以使用 Reporting Services 組態工具連接到報表伺服器，然後按一下 [Web 服務 URL] 或 [Web 入口網站 URL]。  
+4.  您現在應該能夠確認這兩個報表伺服器執行個體都可運作。 若要確認第二個執行個體，您可以使用 Reporting Services 組態工具連接到報表伺服器，並按一下**Web 服務 URL**或**入口網站 URL**。  
   
  如果您打算在負載平衡的伺服器叢集中執行報表伺服器，還需要其他組態。 如需詳細資訊，請參閱 [在網路負載平衡叢集上設定報表伺服器](../../reporting-services/report-server/configure-a-report-server-on-a-network-load-balancing-cluster.md)。  
 

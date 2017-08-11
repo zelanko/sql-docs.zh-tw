@@ -16,7 +16,7 @@ caps.latest.revision: 28
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: c0c6cc27711140e96bbf4420e8de596af53ddfcd
 ms.contentlocale: zh-tw
@@ -27,7 +27,7 @@ ms.lasthandoff: 08/09/2017
 
 web 入口網站是用來檢視報表、 管理報表伺服器內容，和授與使用者存取原生模式報表伺服器的 Web 前端應用程式。 web 入口網站會與報表伺服器 Web 服務內相同報表伺服器執行個體一起安裝而且進行選擇性設定 如果您選取**預設原生模式組態中安裝**安裝程式中的選項。 您也可以設定 web 入口網站，以安裝後工作。 本主題提供下列資訊的 web 入口網站設定案例：
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>필수 구성 요소
 
 若要使用 web 入口網站，您必須滿足下列必要條件：
 
@@ -56,7 +56,7 @@ Web 入口網站是使用者在網頁瀏覽器存取的 Web 應用程式。 您�
 
 4. 按一下 **[套用]**。
 
-5. 如果您使用[!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)]或 Windows Server 2008，額外的步驟可能需要您可以使用 web 入口網站之前。 如需詳細資訊，請參閱[設定原生模式報表伺服器進行本機管理 &#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)。
+5. 如果您使用[!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)]或 Windows Server 2008，額外的步驟可能需要您可以使用 web 入口網站之前。 如需詳細資訊，請參閱 [Configure a Native Mode Report Server for Local Administration &#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)。
 
 ## <a name="configure-the-web-portal-to-use-a-specific-report-server-url"></a>設定入口網站，以使用特定的報表伺服器 URL
 
@@ -82,7 +82,7 @@ Web 入口網站是使用者在網頁瀏覽器存取的 Web 應用程式。 您�
 
 #### <a name="to-modify-application-title"></a>修改應用程式標題
 
-1. 使用被指派報表伺服器之 [系統管理員] 權限的帳戶來登入。
+1. 使用指定的帳戶登入**系統管理員**報表伺服器上的權限。
 
 2. 開啟 Internet Explorer。
 

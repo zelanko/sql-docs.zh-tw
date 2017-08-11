@@ -20,14 +20,14 @@ helpviewer_keywords:
 - XML Web service [Reporting Services], SOAP
 ms.assetid: 306d2c06-a25a-40f8-8a35-13dd32e8841e
 caps.latest.revision: 39
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 79f67a1d6e982aa9b83fcc5bf4c043eb378478d1
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: 08aec184077b69d05939fe493bf677043beb99d3
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="using-reporting-services-soap-headers"></a>使用 Reporting Services SOAP 標頭
@@ -37,7 +37,7 @@ ms.lasthandoff: 06/22/2017
   
  報表伺服器 Web 服務定義了多個用於 SOAP 標頭的類別：<xref:ReportService2005.BatchHeader>、<xref:ReportService2010.ItemNamespaceHeader>、<xref:ReportService2010.ServerInfoHeader>、<xref:ReportService2010.TrustedUserHeader> 和 <xref:ReportExecution2005.ExecutionHeader>。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>섹션 내용  
   
 |主題|Description|  
 |-----------|-----------------|  
@@ -47,6 +47,6 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>另請參閱  
  [使用 Web 服務和.NET Framework 建置應用程式](../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
- [技術參考 &#40;SSRS&#41;](../../reporting-services/technical-reference-ssrs.md)  
+ [技術參考 &#40;SSRS &#41;](../../reporting-services/technical-reference-ssrs.md)  
   
   

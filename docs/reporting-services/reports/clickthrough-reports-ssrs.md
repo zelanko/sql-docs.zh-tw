@@ -19,7 +19,7 @@ caps.latest.revision: 28
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 55d22d2fd64faef6e913bf226c831546d71665ca
 ms.contentlocale: zh-tw
@@ -48,7 +48,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="customizing-clickthrough-reports"></a>自訂點選連結報表  
  如果不使用報表伺服器產生的預設範本，您可以在報表產生器中建立報表，然後以它作為自訂點選連結報表。 然後，您就可以在報表管理員中，將報表連結至模型當做體鑽研報表。  
   
- 若要將報表產生器報表轉換為點選連結報表，您必須在報表產生器 [屬性] 對話方塊中選取 [啟用鑽研此報表] 選項。 選取此選項之後，鑽研參數就會加入該報表中，因而無法再直接於報表產生器中執行該報表。 當報表讀者按一下報表產生器報表中的項目時，報表伺服器會自動計算鑽研參數。  
+ 要在報表產生器報表變成點選連結報表，您需要選取**啟用鑽研此報表**選項在報表產生器**屬性** 對話方塊。 選取此選項之後，鑽研參數就會加入該報表中，因而無法再直接於報表產生器中執行該報表。 當報表讀者按一下報表產生器報表中的項目時，報表伺服器會自動計算鑽研參數。  
   
 > [!IMPORTANT]  
 >  報表中使用的主要實體或基底實體，必須與連結報表的實體相同。  

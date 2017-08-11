@@ -14,7 +14,7 @@ caps.latest.revision: 11
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: a17e4965637841339d34d7842b0df1bea5f7757f
 ms.contentlocale: zh-tw
@@ -54,8 +54,8 @@ ms.lasthandoff: 08/09/2017
 |步驟|說明和連結|  
 |----------|--------------------------|  
 |將 SharePoint 伺服器加入伺服器陣列中。|您需安裝 SharePoint 以部署其他 Reporting Services 應用程式。<br/><br/>若是 SharePoint 2013，請參閱 [Add SharePoint server to a farm in SharePoint Server 2013](https://technet.microsoft.com/library/cc261752(v=office.15).aspx)(在 SharePoint Server 2013 中將 SharePoint 伺服器加入伺服陣列)。<br/><br/>若是 SharePoint 2016，請參閱 [Add SharePoint server to a farm in SharePoint Server 2016](https://technet.microsoft.com/library/cc261752(v=office.16).aspx)(在 SharePoint Server 2016 中將 SharePoint 伺服器加入伺服陣列)。|  
-|安裝 SQL Server Reporting Services 增益集適用於 SharePoint 2016 產品。|安裝此增益集的方法有許多種。 下列步驟會使用 SQL Server 安裝精靈。 如需有關安裝增益集的詳細資訊，請參閱 [安裝或解除安裝 SharePoint 的 Reporting Services 增益集](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)。<br /><br /> 1） 執行 SQL Server 安裝程式。<br /><br /> 2) 在 [安裝程式角色] 頁面上，選取 [SQL Server 功能安裝]。<br /><br /> 3) 在 [特徵選取] 頁面上，選取 [適用於 SharePoint 產品的 Reporting Services 增益集]。<br /><br /> 4) 在後續許多頁面上，按 [下一步] 完成安裝選項。<br /><br/>如需有關安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的詳細資訊，請參閱[在 SharePoint 模式中安裝第一部報表伺服器](http://msdn.microsoft.com/en-us/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538)。|  
-|確認新的伺服器可以運作。|1) 在 SharePoint 管理中心內，按一下 [系統設定] 群組中的 [管理此伺服器陣列中的伺服器]。<br /><br /> 2) 確認新的伺服器位於清單中。|  
+|安裝 SQL Server Reporting Services 增益集適用於 SharePoint 2016 產品。|安裝此增益集的方法有許多種。 下列步驟會使用 SQL Server 安裝精靈。 如需有關安裝增益集的詳細資訊，請參閱 [安裝或解除安裝 SharePoint 的 Reporting Services 增益集](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)。<br /><br /> 1） 執行 SQL Server 安裝程式。<br /><br /> 2) 在 [安裝程式角色] 頁面上，選取 [SQL Server 功能安裝]。<br /><br /> 3） 在**特徵選取**頁面上，選取**Reporting Services 增益集適用於 SharePoint 產品**<br /><br /> 4） 按一下**下一步**在後續許多頁面，並完成安裝選項上。<br /><br/>如需有關安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的詳細資訊，請參閱 [在 SharePoint 模式中安裝第一部報表伺服器](http://msdn.microsoft.com/en-us/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538)。|  
+|確認新的伺服器可以運作。|1） 在 SharePoint 管理中心內，按一下 **管理此伺服器陣列中的伺服器**中**系統設定**群組。<br /><br /> 2) 確認新的伺服器位於清單中。|  
 |更新您的 NLB 解決方案。|依照適當的情況，將您的硬體或軟體 NLB 環境更新為包含新的伺服器。|  
 
 ## <a name="next-steps"></a>後續的步驟

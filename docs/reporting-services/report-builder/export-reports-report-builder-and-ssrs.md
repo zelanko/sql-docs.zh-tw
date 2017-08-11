@@ -18,7 +18,7 @@ caps.latest.revision: 23
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: db9a6cef14a145c8546a0f47a71bf83a358d483c
 ms.contentlocale: zh-tw
@@ -59,7 +59,7 @@ ms.lasthandoff: 08/09/2017
   
 3.  選取要使用的格式。  
   
-     [另存新檔] 對話方塊隨即開啟。 依預設，檔案名稱就是您匯出之報表的名稱。 您可以選擇變更檔案名稱。  
+     **存** 對話方塊隨即開啟。 依預設，檔案名稱就是您匯出之報表的名稱。 您可以選擇變更檔案名稱。  
   
 ##  <a name="bkmk_export_from_rm"></a> 從 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 入口網站匯出報表  
   
@@ -196,9 +196,9 @@ http://<Report Server Name/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%
 
 ## <a name="next-steps"></a>後續的步驟
 
-[控制分頁符號、標題、資料行和資料列 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
+[控制分頁符號、 標題、 資料行和資料列 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
 [尋找、檢視和管理報表 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
 [列印報表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)   
-[儲存報表 &#40;報表產生器&#41;](../../reporting-services/report-builder/saving-reports-report-builder.md)  
+[儲存報表 &#40;報表產生器 &#41;](../../reporting-services/report-builder/saving-reports-report-builder.md)  
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)

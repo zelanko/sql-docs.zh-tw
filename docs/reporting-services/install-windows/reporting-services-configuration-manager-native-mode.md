@@ -19,7 +19,7 @@ caps.latest.revision: 49
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: ab787456bd3fdbc727ac1727188edd8ab5db0caa
 ms.contentlocale: zh-tw
@@ -79,15 +79,15 @@ ms.lasthandoff: 08/09/2017
 
     - 選取 [開始]，然後依序指向 [所有程式] 和 [[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]，再指向 [組態工具]。
 
-         如果您想要從舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 設定報表伺服器執行個體，請開啟該版本的程式資料夾。 例如，指向 [[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]] 而不是 [[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]，以開啟 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 伺服器元件的組態工具。
+         如果您想要從舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]設定報表伺服器執行個體，請開啟該版本的程式資料夾。 例如，指向 [ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ] 而不是 [ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] ]，以開啟 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 伺服器元件的組態工具。
 
-         選取 [Reporting Services 組態管理員]。
+         選取**Reporting Services 組態管理員**。
 
 2. **[Reporting Services 組態連接]** 對話方塊隨即出現，可讓您選取所要設定的報表伺服器執行個體。 選取 [連接]。
 
 3. 在 **[伺服器名稱]**中，指定安裝報表伺服器執行個體的電腦名稱。 預設會出現本機電腦的名稱，但是如果您想要連接到遠端電腦上所安裝的報表伺服器，也可以輸入遠端 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱。
 
-4. 如果您指定遠端電腦，請選取 [尋找] 來建立連線。
+4. 如果您指定遠端電腦，選取**尋找**建立連線。
 
 5. 在 **Report Server 在stance**中，選取您要設定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 執行個體。 只有這個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本的報表伺服器執行個體會顯示在清單中。 您不能設定舊版的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。
 

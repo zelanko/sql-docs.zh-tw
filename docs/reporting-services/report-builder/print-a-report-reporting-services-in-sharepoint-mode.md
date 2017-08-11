@@ -18,7 +18,7 @@ caps.latest.revision: 11
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f89c8f0d330561aacd678e4556fdaf2910b5dcc7
 ms.contentlocale: zh-tw
@@ -54,6 +54,6 @@ ms.lasthandoff: 08/09/2017
      若要在列印之前檢視報表，請按一下 **[預覽]** 按鈕。 這樣就會在個別的預覽視窗中開啟報表的第一頁。 其他的頁面在報表於報表伺服器上完成轉譯之後即可使用。 預覽的報表會轉譯成 EMF 格式。 您可以導覽至上一頁或下一頁，直到出現最後一頁為止，此時 **[下一頁]** 按鈕就會停用。 若要在預覽頁面中修改列印邊界，請按一下 **[邊界]** 按鈕。 **[邊界]** 對話方塊隨即出現。 請設定您上、下、左、右邊界，然後按一下 **[確定]**。 對話方塊會關閉並儲存設定，以供轉譯預覽和列印使用。  
   
 ## <a name="see-also"></a>請參閱＜  
- [啟用和停用 Reporting Services 的用戶端列印功能](../../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md)  
+ [啟用和停用 Reporting Services 的用戶端列印](../../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md)  
   
   

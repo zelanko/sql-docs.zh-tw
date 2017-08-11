@@ -18,14 +18,14 @@ helpviewer_keywords:
 - security [Reporting Services], strategies
 ms.assetid: 12161a6c-b93b-4312-9d27-0c922561eb9b
 caps.latest.revision: 15
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: cb8a4502531dbe3ee23434ea126457196b56c701
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: 335ffb51ba87298181e2907be36694c53c6eb701
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="secure-development-reporting-services"></a>安全開發 (Reporting Services)
@@ -40,7 +40,7 @@ ms.lasthandoff: 06/22/2017
  [了解安全性原則](../../../reporting-services/extensions/secure-development/understanding-security-policies.md)  
  描述 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中的各種組件類型，以及程式碼存取安全性如何影響程式碼權限。  
   
- [使用 Reporting Services Security Policy Files](../../../reporting-services/extensions/secure-development/using-reporting-services-security-policy-files.md)  
+ [使用 Reporting Services 安全性原則檔](../../../reporting-services/extensions/secure-development/using-reporting-services-security-policy-files.md)  
  描述不同的 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 元件及對應的原則組態檔。  
   
   

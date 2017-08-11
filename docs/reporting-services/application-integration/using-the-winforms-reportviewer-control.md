@@ -19,7 +19,7 @@ caps.latest.revision: 28
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 4b6a64a6d5832461e7d1d73597499e6a67e4bc4b
 ms.contentlocale: zh-tw
@@ -33,7 +33,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  建立新的 Windows 應用程式使用[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[csprcs](../../includes/csprcs-md.md)]或[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]。  
   
-     \-或者-  
+     \- 或者-  
   
      開啟現有的 Windows 應用程式專案並加入的新表單。  
   
