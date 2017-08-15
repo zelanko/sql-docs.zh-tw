@@ -15,7 +15,7 @@ caps.latest.revision: 23
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 664bf6ff099454060779ff19dd4e07b48acf6d2c
 ms.contentlocale: zh-tw
@@ -76,10 +76,10 @@ ms.lasthandoff: 08/09/2017
  這個步驟會在 SharePoint 模式下安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器以及適用於 SharePoint 產品的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 增益集。 根據電腦上已經安裝的元件而定，您可能不會看見下列步驟所描述的部分安裝頁面。  
  
  > [!IMPORTANT]
- > 對於 SharePoint 2016，將安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的 SharePoint 伺服器需要具有 [自訂] 伺服器角色。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 部署將在非 [自訂] 角色的 SharePoint 伺服器上成功，但在下一個 SharePoint 維護期間，MinRole 將停止 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務，因為它偵測到 SharePoint-整合模式中的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 未指出支援任何其他 SharePoint 伺服器角色。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式僅支援 [自訂] 角色。
+ > 對於 SharePoint 2016，SharePoint 伺服器，[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]將安裝需要具有**自訂**伺服器角色。 部署[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]不是在 SharePoint 伺服器上將會成功**自訂**角色，但在下一個 SharePoint 維護期間，MinRole 將停止[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]服務，因為它偵測到[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]在 SharePoint 整合模式中不會指出支援任何其他 SharePoint 伺服器角色。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]服務應用程式僅支援**自訂**角色。
  
  > [!NOTE]
- > 如果您也打算在 SharePoint 2016 上安裝 Power Pivot 服務，請先安裝該服務，再安裝 Reporting Services。 無法在 [自訂] 角色的 SharePoint 伺服器上安裝 Power Pivot 服務。 這將避免必須多次切換角色。
+ > 如果您也打算在 SharePoint 2016 上安裝 Power Pivot 服務，請先安裝該服務，再安裝 Reporting Services。 無法在 SharePoint 伺服器上安裝 Power Pivot 服務**自訂**角色。 這將避免必須多次切換角色。
  
  ### <a name="apply-the-custom-server-role-to-a-sharepoint-2016-server"></a>將自訂伺服器角色套用至 SharePoint 2016 伺服器
  
@@ -90,7 +90,7 @@ ms.lasthandoff: 08/09/2017
  
  2. 以系統管理員身分啟動 **SharePoint 2016 管理命令介面** 。 
   
-    您可以以滑鼠右鍵按一下 [SharePoint 2016 管理命令介面]，然後選取 [以系統管理員身分執行]。
+    您可以以滑鼠右鍵按一下**SharePoint 2016 管理命令介面**選取**以系統管理員身分執行**。
 
 3. 從 PowerShell 命令提示字元中，執行下列命令。
 
@@ -105,13 +105,13 @@ ms.lasthandoff: 08/09/2017
 
         Get-SPServer SERVERNAME 
  
- 6. [角色] 應該會列出 [自訂]。
+ 6. **角色**應該會列出**自訂**。
  
  ### <a name="install-reporting-services"></a>安裝 Reporting Services
   
 1.  執行 [SQL Server 安裝精靈] (Setup.exe)。  
   
-2.  在精靈的左側選取 [安裝]，然後選取 [新增 SQL Server 獨立安裝或將功能加入至現有安裝]。  
+2.  選取**安裝**的精靈，然後選取左半部**新的 SQL Server 獨立安裝或將功能加入現有安裝**。  
 
 3.  如果您看見 **[產品金鑰]** 頁面，請輸入您的金鑰或接受 "Enterprise Evaluation" 版本的預設值。  
   
@@ -121,17 +121,17 @@ ms.lasthandoff: 08/09/2017
   
      選取 **[下一步]**。  
 
-5.  建議您選取 [使用 Microsoft Update 檢查更新 (建議使用)]。 這是選擇性的。
+5.  建議您選取**使用 Microsoft Update 檢查更新 （建議選項）**。 這是選擇性的。
   
      選取 **[下一步]**。   
   
-6.  在 [安裝安裝程式檔案] 頁面上，根據電腦上已經安裝的元件而定，您可能會看見下列訊息：  
+6.  在**安裝安裝程式檔案**頁面上，根據您的電腦上已安裝功能，您可能會看到下列訊息：  
   
     -   「一個或多個受影響的檔案有暫止的作業。 您必須在安裝程序完成之後重新啟動電腦。」  
   
     -   選取 **[下一步]**。  
   
-7.  如果您看見 [安裝規則] 頁面。 檢閱任何警告或封鎖問題。 然後選取 [下一步]。
+7.  如果您看到**安裝規則**頁面。 檢閱任何警告或封鎖問題。 然後選取**下一步**。
  
 8. 在 **[特徵選取]** 頁面上，選取下列選項：  
   
@@ -139,7 +139,7 @@ ms.lasthandoff: 08/09/2017
   
     -   **適用於 SharePoint 產品的 Reporting Services 增益集**。  
   
-    -   您也可以選擇性地選取完整環境的 [Database Engine 服務]，不過，您應該會有主控 SharePoint 資料庫的 SQL Server Database Engine 執行個體。  
+    -   您可以選擇性地選取也**Database Engine Services**針對完整的環境，不過您應該有 SQL Server Database Engine 執行個體主控 SharePoint 資料庫。  
   
      選取 **[下一步]**。  
   
@@ -153,7 +153,7 @@ ms.lasthandoff: 08/09/2017
   
      選取 **[下一步]**。  
   
-11. 如果您已選取 Database Engine 服務，就會看到 [資料庫引擎組態] 頁面。請將適當的帳戶加入 SQL 系統管理員清單中，然後選取 [下一步]。  
+11. 如果您選取 Database Engine 服務，您會看到**資料庫引擎組態**頁面上，將適當的帳戶加入至 SQL 管理員清單並選取**下一步**。  
   
 12. 在 **[Reporting Services 組態]** 頁面上，您應該會看到已選取 **[只安裝]** 選項。 這個選項會安裝報表伺服器檔案，但是不會設定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的 SharePoint 環境。  
   
@@ -162,9 +162,9 @@ ms.lasthandoff: 08/09/2017
   
      ![ssRS-2016-setup-configuration](../../reporting-services/install-windows/media/ssrs-2016-setup-configuration.png)
   
-13. 如果您停在此頁面上，請檢閱任何警告，然後選取 [功能組態規則] 頁面上的 [下一步]。  
+13. 檢閱任何警告，然後選取**下一步**上**功能組態規則**頁面上，如果您停止此頁面上。  
   
-14. 在 [準備安裝] 頁面上，檢閱安裝摘要。 此摘要將包括其值顯示為 **[SharePointFilesOnlyMode]** 的 **[Reporting Services SharePoint 模式]**子節點。 選取 [安裝]。  
+14. 在**安裝準備就緒**頁面上，檢閱安裝摘要。 此摘要將包括其值顯示為 **[SharePointFilesOnlyMode]** 的 **[Reporting Services SharePoint 模式]**子節點。 選取 [安裝]。  
   
 15. 安裝需要幾分鐘的時間。 您將會看見 **[完成]** 頁面，其中列出功能以及每項功能的狀態。 您可能會看見資訊對話方塊，指出電腦需要重新啟動。  
   
@@ -184,14 +184,14 @@ ms.lasthandoff: 08/09/2017
   
  下列步驟將引導您開啟 SharePoint 管理命令介面並執行 PowerShell Cmdlet：  
   
-1.  選取 [開始] 按鈕。  
+1.  選取**啟動**按鈕  
   
-2.  選取 [Microsoft SharePoint 2016 產品] 或 [Microsoft SharePoint 2013 產品] 群組。  
+2.  選取**Microsoft SharePoint 2016 Products**或**Microsoft SharePoint 2013 產品**群組。  
   
-3.  以滑鼠右鍵按一下 [SharePoint 2016 管理命令介面] 或 [SharePoint 2013 管理命令介面]，然後選取 [以系統管理員身分執行]。 
+3.  以滑鼠右鍵按一下**SharePoint 2016 管理命令介面**，或**SharePoint 2013 管理命令介面**，選取**系統管理員身分執行**。 
 
     > [!NOTE]
-    > 標準 Windows PowerShell 視窗無法辨識 SharePoint 命令。 使用 [SharePoint 管理命令介面]。  
+    > 標準 Windows PowerShell 視窗無法辨識 SharePoint 命令。 使用**SharePoint 管理命令介面**。  
   
 4.  執行下列 PowerShell 命令安裝 Reporting Services SharePoint 服務。 成功完成命令會在管理命令介面中顯示新行。 成功完成命令之後，**不會有任何訊息傳回** 管理命令介面：  
   
@@ -232,14 +232,14 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="bkmk_create_serrviceapplication"></a> 步驟 3：建立 Reporting Services 服務應用程式  
  本節提供建立服務應用程式的步驟，以及屬性的描述 (如果您要檢閱現有的服務應用程式)。  
   
-1.  在 SharePoint 管理中心的 [應用程式管理] 群組中，選取 [管理服務應用程式]。  
+1.  在 SharePoint 管理中心中**應用程式管理**群組中，選取**管理服務應用程式**。  
   
-2.  在 SharePoint 功能區中，選取 [新增] 按鈕。  
+2.  在 SharePoint 功能區中，選取**新增** 按鈕。  
   
-3.  在 [新增] 功能表中，選取 [SQL Server Reporting Services 服務應用程式]。  
+3.  在新的功能表中選取**SQL Server Reporting Services 服務應用程式。**。  
   
     > [!IMPORTANT]  
-    >  如果清單中未出現 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 選項，表示**未安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 共用服務**。 檢閱上一節中，如何使用 PowerShell Cmdlt 來安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務的相關資訊。  
+    >  如果[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]選項沒有出現在清單中，它是**指示的[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]共用的服務未安裝**。 檢閱上一節中，如何使用 PowerShell Cmdlt 來安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務的相關資訊。  
   
 4.  在 **[建立新的 SQL Server Reporting Services 服務應用程式]** 頁面中，輸入應用程式的名稱。 如果您要建立多個 Reporting Services 服務應用程式，描述性名稱和命名慣例將有助於您組織管理作業。  
   
@@ -281,11 +281,11 @@ ms.lasthandoff: 08/09/2017
   
 3.  選取 [網站設定]。  
   
-4.  在 [網站集合管理] 群組中，選取 [網站集合功能]。  
+4.  在**網站集合管理**群組中，選取**網站集合功能**。  
   
 5.  在清單中尋找 **[Power View 整合功能]** 。  
   
-6.  選取 [啟用]。 功能狀態會變更為 **[使用中]**。  
+6.  選取**啟動**。 功能狀態會變更為 **[使用中]**。  
   
  每個網站集合都已完成這個程序。 如需詳細資訊，請參閱 [Activate the Report Server and Power View Integration Features in SharePoint](../../reporting-services/report-server-sharepoint/site-collection-features-report-server-and-power-view.md)。  
   
@@ -412,7 +412,7 @@ Enable-SPfeature -identity "reportserver" -Url http://server/sites/bi
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 訂閱和資料警示可能需要 SQL Server Agent 權限組態。 如果您看到錯誤訊息，指出需要 SQL Server Agent，且您已確認 SQL Server Agent 正在執行，則請更新權限。 您可以在成功建立服務應用程式頁面上，按一下 **[提供訂閱和警示]** 連結，以移至其他頁面並提供 SQL Server Agent。 如果您的部署跨電腦界限 (例如 SQL Server 資料庫執行個體位於其他電腦上)，則需要提供步驟。 如需詳細資訊，請參閱 [SSRS 服務應用程式的佈建訂閱及警示](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)。  
   
 ### <a name="configure-e-mail-for-ssrs-service-applications"></a>設定 SSRS 服務應用程式的電子郵件  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 資料警示功能會以電子郵件訊息傳送警示。 若要傳送電子郵件，您可能需要設定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式，以及修改服務應用程式的電子郵件傳遞延伸模組。 如果您計劃針對 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 訂閱功能使用電子郵件傳遞延伸模組，則需要電子郵件設定。 如需詳細資訊，請參閱[設定 Reporting Services 服務應用程式的電子郵件 &#40;SharePoint 2013 和 SharePoint 2016&#41;](http://msdn.microsoft.com/en-us/38fc34a6-aae7-4dde-9ad2-f1eee0c42a9f)。 
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 資料警示功能會以電子郵件訊息傳送警示。 若要傳送電子郵件，您可能需要設定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式，以及修改服務應用程式的電子郵件傳遞延伸模組。 如果您計劃針對 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 訂閱功能使用電子郵件傳遞延伸模組，則需要電子郵件設定。 如需詳細資訊，請參閱[Reporting Services 服務應用程式 &#40; 設定電子郵件SharePoint 2013 和 SharePoint 2016&#41;](http://msdn.microsoft.com/en-us/38fc34a6-aae7-4dde-9ad2-f1eee0c42a9f). 
   
 ### <a name="add-reporting-services-content-types-to-content-libraries"></a>將 Reporting Services 內容類型加入至內容庫  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會提供預先定義的內容類型，可用來管理共用資料來源 (.rsds) 檔、報表模型 (.smdl) 檔，以及報表產生器的報表定義 (.rdl) 檔。 將 **[報表產生器報表]**、 **[報表模型]**和 **[報表資料來源]** 內容類型加入至文件庫會啟用 **[新增]** 命令，讓您能夠建立該類型的新文件。 如需詳細資訊，請參閱 [將 Reporting Services 內容類型加入至 SharePoint 文件庫](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)。  
