@@ -47,7 +47,7 @@ ms.lasthandoff: 08/03/2017
  選取包含排除詞彙之資料表或檢視中的資料行。  
   
  **設定錯誤輸出**  
- 使用[ [設定錯誤輸出] ](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) 對話方塊，即可指定造成錯誤之資料列的錯誤處理。  
+ 使用 [[設定錯誤輸出](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9)] 對話方塊，即可指定造成錯誤之資料列的錯誤處理。  
   
 ## <a name="see-also"></a>請參閱＜  
  [Integration Services 錯誤和訊息參考](../../../integration-services/integration-services-error-and-message-reference.md)   
