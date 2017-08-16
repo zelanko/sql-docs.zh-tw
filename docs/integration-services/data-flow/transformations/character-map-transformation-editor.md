@@ -30,7 +30,7 @@ ms.lasthandoff: 08/03/2017
   
  若要深入了解字元對應表轉換，請參閱＜ [Character Map Transformation](../../../integration-services/data-flow/transformations/character-map-transformation.md)＞。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **可用的輸入資料行**  
  使用此對話方塊來選取要使用字串函數轉換的資料行。 您的選擇會在下面的資料表中出現。  
   
