@@ -346,7 +346,7 @@ ms.lasthandoff: 08/03/2017
 |DefaultCodePage|Integer|無法從資料來源中取得字碼頁資訊時要使用的預設字碼頁。|  
 |MaxMemoryUsage|Integer|查閱資料表的快取大小上限。 此屬性的預設值為 **25**，表示快取大小沒有任何限制。|  
 |MaxMemoryUsage64|Integer|在 64 位元電腦上，查閱資料表的快取大小上限。|  
-|NoMatchBehavior|整數 (列舉)|一個值，指定在參考資料集中沒有相符項目的資料列是否會被視為錯誤。<br /><br /> 當此屬性設定為 [將無相符項目的資料列視為錯誤] (0) 時，沒有相符項目的資料列就會被視為錯誤。 您可以使用 [查閱轉換編輯器] 對話方塊的 [錯誤輸出] 頁面來指定發生這種錯誤類型時要採取的動作。 如需詳細資訊，請參閱[查閱轉換編輯器 &#40;錯誤輸出頁面&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md)。<br /><br /> 當屬性設定為 [將無相符項目的資料列傳送至無相符結果輸出] (1)，資料列就不會被視為錯誤。<br /><br /> 預設值是 [將無相符項目的資料列視為錯誤] (0)。|  
+|NoMatchBehavior|整數 (列舉)|一個值，指定在參考資料集中沒有相符項目的資料列是否會被視為錯誤。<br /><br /> 當此屬性設定為 [將無相符項目的資料列視為錯誤]\ (0) 時，沒有相符項目的資料列就會被視為錯誤。 您可以使用 [查閱轉換編輯器] 對話方塊的 [錯誤輸出] 頁面來指定發生這種錯誤類型時要採取的動作。 如需詳細資訊，請參閱[查閱轉換編輯器 &#40;錯誤輸出頁面&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md)。<br /><br /> 當屬性設定為 [將無相符項目的資料列傳送至無相符結果輸出] \(1)，資料列就不會被視為錯誤。<br /><br /> 預設值是 [將無相符項目的資料列視為錯誤] \(0)。|  
 |ParameterMap|字串|歷程識別碼的分號分隔清單，而這些歷程識別碼會對應至 **SqlCommand** 陳述式中使用的參數。|  
 |ReferenceMetadataXML|字串|轉換從查閱資料表中複製到輸出之資料行的中繼資料。|  
 |SqlCommand|字串|填入查閱資料表的 SELECT 陳述式。|  
