@@ -1,7 +1,7 @@
 ---
 title: "舊版的 SQL Server Data Tools (SSDT 和 SSDT-BI) | Microsoft Docs"
 ms.custom: 
-ms.date: 01/30/2017
+ms.date: 07/28/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -13,15 +13,16 @@ ms.assetid: 5d32e301-0f44-4916-b0db-76e8322c0ab7
 caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 50ef4db2a3c9eebcdf63ec9329eb22f1e0f001c0
-ms.openlocfilehash: 1f64d004b54f8bc34c17ab3c36c952f9eb831096
+ms.sourcegitcommit: 3f12671ace99d5fefc199c7b1c2db31e5b3cfade
+ms.openlocfilehash: 1fcc7de6bca7ac383f46aa7a76ca4382e706080d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/08/2017
 
 ---
 # <a name="previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi"></a>舊版的 SQL Server Data Tools (SSDT 和 SSDT-BI)
+
 SQL Server Data Tools (SSDT) 提供專案範本及設計介面以建置 SQL Server 內容類型，包括關聯式資料庫、Analysis Services 模型、Reporting Services 報表以及整合服務套件。  
   
 此版本是以 Visual Studio Shell 為基礎，並且與 SQL Server 共同發行。 新版的 SSDT 會整合最新的 SQL Server 功能。 較舊版本包括目前版本中的範本及設計環境。  
@@ -33,18 +34,18 @@ SSDT 可以回溯相容，亦即您可以隨時使用[最新的 SSDT](https://ms
 
 ## <a name="recent-downloads"></a>最近的下載
 
-我們提供最近三次下載的相關資訊，以便您在不幸遇到 [最新版本](https://msdn.microsoft.com/library/mt204009.aspx)相關問題時可參考 (雖然這非常不可能發生)。 
+我們提供最近三次下載的相關資訊，以便您在不幸遇到 [最新版本](download-sql-server-data-tools-ssdt.md)相關問題時可參考 (雖然這非常不可能發生)。 
 
 |版本| Visual Studio 2015|Visual Studio 2013|
 |:---|:---|:---|
+|17.1|[SSDT for VS2015 17.1](https://go.microsoft.com/fwlink/?linkid=849393)| \* 不適用|
 |17.0|[SSDT for VS2015 17.0](https://go.microsoft.com/fwlink/?linkid=846626)| \* 不適用|
 |16.5|[SSDT for VS2015 16.5](https://go.microsoft.com/fwlink/?LinkID=832313)|[SSDT for VS2013 16.5](https://go.microsoft.com/fwlink/?LinkID=832308)|
-|16.4.1|[SSDT for VS2015 16.4.1](https://go.microsoft.com/fwlink/?LinkID=828740)|[SSDT for VS2013 16.4.1](https://go.microsoft.com/fwlink/?LinkID=828737)|
 
 \* SSDT 支援兩個最新版的 Visual Studio。 自 Visual Studio 2017 版起，將不再更新 SSDT for VS2013。 如需其他資訊，請參閱[這篇 SSDT 小組部落格文章](https://blogs.msdn.microsoft.com/ssdt/2017/03/10/sql-server-data-tools-17-0-rc-and-ssdt-in-vs2017/)的 *FAQ* (常見問題集) 一節。
 
   
-## <a name="links-to-download-pages"></a>下載頁面的連結  
+## <a name="links-to-download-pages"></a>下載頁面的連結 
 **SQL 關聯式：資料庫引擎**  
   
 提供範本以建置 RDBMS 和 Azure SQL Database 的關聯式資料庫。 SSDT 版本與關聯式資料庫設計無關。 您可以使用 Visual Studio 2012 或 2013 版本及任何版本的 SQL Server Database Engine 或 Azure SQL Database。  
@@ -76,5 +77,5 @@ Business Intelligence Development Studio (BIDS) 是透過 SQL Server 安裝程�
 ## <a name="see-also"></a>另請參閱  
 [下載 SQL Server Data Tools &#40;SSDT&#41;](../ssdt/download-sql-server-data-tools-ssdt.md)  
 [下載 SQL Server Management Studio &#40;SSMS&#41;](../ssms/download-sql-server-management-studio-ssms.md)  
-  
+[SQL 工具和公用程式](../tools/overview-sql-tools.md)
 

@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Data Tools (SSDT) 的變更記錄 | Microsoft Docs"
 ms.custom: 
-ms.date: 01/30/2017
+ms.date: 08/07/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -13,18 +13,68 @@ ms.assetid: b071f8b8-c8e5-44e0-bbb6-04804dd1863a
 caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 5bd0e1d3955d898824d285d28979089e2de6f322
-ms.openlocfilehash: 243d2e6187a58554cee80066912de7dfcc0c52fc
+ms.sourcegitcommit: 3f12671ace99d5fefc199c7b1c2db31e5b3cfade
+ms.openlocfilehash: 51cfeaf15f9d7a01ce55968907e0074f7f2cb955
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/08/2017
 
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) 的變更記錄
 此變更記錄適用於 [Visual Studio 2015 的 SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx)。  
   
-如需新功能和已變更的詳細文章，請瀏覽 [SSDT 小組部落格](https://blogs.msdn.microsoft.com/ssdt/)
+如需新功能和已變更功能的詳細文章，請參閱 [SSDT 小組部落格](https://blogs.msdn.microsoft.com/ssdt/)。
+
+
+
+## <a name="ssdt-172"></a>SSDT 17.2
+組建編號︰14.0.61707.300
+
+### <a name="whats-new"></a>新功能
+
+
+**AS 專案：**
+- 在 1400 相容性層級表格式模型中，現在可以在進階安全性的 [角色] 對話方塊中設定「物件層級安全性」。
+- 在 VS2017 的 SSDT AS 專案中，AS Azure 模型中沒有電子郵件地址之使用者的新 AAD 角色成員選擇。
+- SSDT AS 表格式專案中自訂 ADAL 認證快取行為的新 AS Azure [一律提示] 專案屬性。
+
+
+### <a name="bug-fixes"></a>錯誤修正
+
+**一般**
+- SQL Server 2017 的已更新商標參考。
+
+**AS 專案**
+- 認可 DAX 量值變更和其他模型編輯時，對改善體驗所進行的大幅效能修正。
+- 修正使用 1400 相容性層級表格式模型之 Analysis Services 專案中的一些 PowerQuery 整合問題。
+- 修正 VS2017 的多維專案中可能無法載入設計彙總設計工具的問題。
+- 修正拖曳 Analysis Services 多維 DSV 圖表中可能會讓 VS 2017 當機之項目時的問題。
+- 修正 AS 專案中 [部署] 對話方塊不一定會在 Visual Studio 前景的問題。
+- 因為已解除服務，所以移除從作為資料來源之 Data Marketplace 的 Analysis Services 匯入。
+- 修正透過 [表格式模型檔案總管] 從現有資料來源 [匯入新資料表] 之後停用資料表設計工具的問題。
+- 修正可能讓 [模型] 功能表項目 [從資料來源匯入]/[新增資料來源] 在錯誤內容中保持隱藏的問題。
+- 改善從 [表格式模型檔案總管] 建立量值以避免將焦點切換回用來建立量值之資料行時的問題。
+- 從 AS 表格式專案中的整合式工作區切換為明確工作空間伺服器時，會立即清除舊的資料庫檔案。
+- 修正 [資料列層級安全性] 核取方塊 UI 狀態一開始顯示為未核取之 AS 表格式 1400 模型專案中的問題，而不論實際基礎物件狀態為何。
+- 修正使用 Power Query 將文字檔或 Excel 檔案匯入至 1400 相容性模式表格式模型時可能發生的當機，以及擲回未處理的例外狀況。
+- 修正 AS 表格式模型設計工具之 DAX 公式編輯控制項中捲軸縮圖可能發生的問題。
+- 修正防止 PowerQuery 混搭資料來源在包含使用者名稱/密碼驗證時進行修改的問題。
+- 修正可防止在連接字串中設定其他屬性時連接資料來源的問題。
+- 修正多個 AS 表格式模型專案載入並關閉第二個模型設計工具時可能會讓 VS 當機的問題，而不需要先與設計工具中的任何項目互動。
+- 修正在某些情況下持續保存對 KPI 格式化進行之編輯的問題。
+- 修正顯示錯誤功能表已核取狀態指出是否顯示公式列之 PowerQuery UI 的問題。
+- 修正 AS 表格式 1400 相容性層級專案中，從 [表格式模型檔案總管] 選取 [變更資料來源] 功能表時可以讓 VS 當機的 PowerQuery 資料來源問題。
+- 修正載入 1400 表格式模型可能會顯示「無法載入檔案或組件 'Microsoft.ProBI.MashupLibrary'」錯誤的間歇性問題。
+
+**RS 專案**
+- 在工作階段之間，正確地記住 [RS 尺規和參數] 方塊設定選取狀態的使用者喜好設定。
+
+**IS 專案**
+- 修正未正確顯示 ADO/ADO.NET ForEachLoop 容器的問題
+- 修正未當地語系化一些工作/元件/精靈的問題
+- 已將最新的 *TargetServerVersion* 從 "SQL Server vNext" 變更為 "SQL Server 2017"
+
 
 ## <a name="ssdt-171"></a>SSDT 17.1
 組建編號︰14.0.61705.170
@@ -33,8 +83,8 @@ ms.lasthandoff: 07/31/2017
 **AS 專案：**
 - 使用者可以在 1400 模型的 UI 資料行上設定編碼提示
 - 非模型相關的 IntelliSense 目前可以在離線模式中使用
-- 表格式 [模型總管] 現在包含一個節點，代表模型 (1400 相容性層級表格式模型) 中可用的具名 M 運算式
-- Azure Active Directory 人員選擇器類似於 Microsoft Azure 入口網站的 IAM，目前在設定表格式模型中的角色成員時即可供使用
+- [表格式模型檔案總管] 現在包含一個節點，代表模型 (1400 相容性層級表格式模型) 中可用的具名 M 運算式
+- Azure Active Directory 人員選擇器類似於 Microsoft Azure 入口網站的 IAM，目前在表格式模型中設定角色成員時即可供使用
 
 **資料庫專案：**
 - 更新為 DacFx 17.1
@@ -42,7 +92,7 @@ ms.lasthandoff: 07/31/2017
 ### <a name="bug-fixes"></a>錯誤修正
 - 修正在 VS2017 的 Visual Studio 選項中，商業智慧設計師群組名稱顯示不正確的問題
 - 修正使用報表專案或 AS 專案產生方案的 Code Map 時，發生當機的問題
-- 修正一些 Analysis Services 1400 相容性層級表格式模型的 PowerQuery 整合問題
+- 修正 Analysis Services 1400 相容性層級表格式模型的一些 PowerQuery 整合問題
 - 修正新的 DAX 編輯器工具視窗中當定義量值時，指派運算子可能不是單獨一行的問題
 - 修正在重新命名檢視方塊中的量值時，阻止更新表格式量值顯示畫面的問題
 - 更新 Analysis Services 整合式工作區引擎和表格式物件模型，以修正造成包含翻譯的 1200 表格式專案在部署到 SQL Server 2016 Analysis Services 伺服器時失敗的迴歸
@@ -122,7 +172,7 @@ ms.lasthandoff: 07/31/2017
 - 部署精靈應該將變更套用到導出資料表分割區，即使已啟用保持分割區的選項也一樣
 - 修正現有 AS 連線的 [進階屬性] 對話方塊要在重新選取後才會顯示完整清單的問題
 - 修正一些裁剪的 UI 字串出現在某些當地語系化組建的問題
-- 修正一些 Analysis Services 1400 相容性層級表格式模型之 PowerQuery 整合的問題
+- 修正 1400 相容性層級 AS 表格式模型的一些 PowerQuery 整合問題
 - 修正報表精靈樣式範本未正確顯示的問題
 - 修正報表精靈在從 SQL 變更為 AS 時，可能會導致資料來源設定不正確的問題
 - 修正導致從命令列 (devenv.com\exe) 執行 Analysis Services (表格式) 專案組建失敗的問題
@@ -326,7 +376,7 @@ SSDT 表格式現在包含內部的 SSAS 執行個體，若啟用整合式工作
         - 已修正根據您如何認可運算式而造成不一致行為的 DAX 運算式問題。
         - 已修正建立 KPI 時的 VS 當機問題。
         - 已修正為 SQL Server 2008 R2、2012 和 2014 產生無效報表的問題。
-        - 已修正造成 .dwpro 專案無限迴圈錯誤的階層順序問題。
+        - 修正造成 .dwpro 專案無限迴圈錯誤的階層順序問題。
         - 已修正降級 RDL 需要完整重建而造成使用者混淆的 RS RDL 問題。
         - 已修正「在用戶端工具中隱藏」沒有作用的 KPI 問題。
         
@@ -358,7 +408,7 @@ SSDT 表格式現在包含內部的 SSAS 執行個體，若啟用整合式工作
 
  * **Analysis Services 與 Reporting Services：**
     * 已修正 MSOLAP OLEDB 提供者中只安裝 32 位元提供者，影響連線到 SQL Server 2014 的 64 位元 Excel 2016 的 SxS 問題 (未重現在從 Office365 的 ClickOnce 安裝，只重現在 MSI Excel 安裝)。
-    * 已修正將含有貼上資料表的 AS 模型從 1103 升級為 1200 相容性層級 (可能產生「關聯性使用無效資料行識別碼」錯誤) 時，要讓極端案例 (corner case) 更健全的問題。
+    * 修正將含有貼上資料表的 AS 模型從 1103 升級為 1200 相容性層級 (可能產生「關聯性使用無效資料行識別碼」錯誤) 時，要讓極端案例 (corner case) 更健全的問題。
     * 已修正當 SSDT-BI 2013 位於相同電腦上，解除安裝 SSDT 2015 之後可能無法再匯入 AS 模型中資料的 SxS 問題 (墨水匣共用登錄設定)。
     * 已改進當 AS 引擎的連線中斷 (亦即 SSDT 整夜開啟並回收 AS 伺服器，或連線暫時中斷的其他情況) 時解決問題/當機的穩固性。 
     * 已修正在多重監視器案例中，在不同於 VS 的螢幕上開啟對話方塊的問題。 
@@ -373,7 +423,7 @@ SSDT 表格式現在包含內部的 SSAS 執行個體，若啟用整合式工作
     * 已修正在程式碼檢視中檢視 model.bim 專案檔屬性時發生物件參考未設定的例外狀況。 
     * 已修正將資料貼上 AS 模型方格以建立貼上的資料表會使用逗點做為小數點分隔符號在國際地區設定產生不正確值的問題。 
     * 已修正在 SSDT 中開啟 2008 RS 專案並選擇不升級的問題。 
-    * 已修正當資料行型別使用預設格式化以允許從 UI 變更格式化類型時，在 1200 相容性層級模型的導出資料表 UI 中的問題。 
+    * 修正使用資料行類型的預設格式化允許從 UI 變更格式化類型時，在 1200 相容性層級模型的導出資料表 UI 中的問題。 
     
 
 ## <a name="ssdt-june-for-sql-server-2016"></a>SSDT 6 月 (適用於 SQL Server 2016)  
@@ -383,135 +433,10 @@ SSDT 表格式現在包含內部的 SSAS 執行個體，若啟用整合式工作
 
 SSDT 公開上市 (GA) 現在已發行。 2016 年 6 月的 SSDT GA 更新加入 SQL Server 2016 RTM 之最新更新的支援，和各種錯誤 (bug) 修正。 如需詳細資訊，請參閱 [2016 年 6 月的 SQL Server Data Tools GA 更新 (英文)](https://blogs.msdn.microsoft.com/ssdt/2016/06/01/sql-server-data-tools-ga-update-for-june-2016/)。
 
-      
-
-## <a name="ssdt-april-for-sql-server-2016-rc3"></a>SSDT 4 月 (適用於 SQL Server 2016 RC3)  
-發行日期︰2016 年 4 月 15 日  
-  
-組建編號︰14.0.60413.0  
-  
-**SQL Server 資料庫**  
-* **Always Encrypted 支援︰**對於包含 Always Encrypted 資料行的資料庫，SSDT 和 DacFx 允許檢視和編輯這些資料庫，以及從資料庫專案發行至這些資料庫。 請注意，未來版本將支援變更有資料行加密的資料行。  
-* **連接對話方塊和 SQL Server 物件總管︰**多個修正和增強功能。  
-    * 列出進階連接屬性的 [詳細資料] 頁面已全面翻修，可在多行方塊中顯示完整的連接字串，並改進對高 DPI 電腦的支援。  
-    * 我們已恢復有詳細連線錯誤的傳統錯誤對話方塊。 這有助於利用更清楚的錯誤訊息和堆疊追蹤診斷登入問題，讓 DBA 或 CSS 可取得協助診斷問題所需的資訊。  
-    * 對於擁有最小權限的使用者，我們已修正在 [連接] 對話方塊和 SQL Server 物件總管中列出資料庫、檢視 [安全性] 資料夾等等許多問題。  
-    * 已改進展開資料庫節點以列出所有資料庫時的 Azure SQL DB 效能。  
-* **SSDT 安裝程式︰**  
-    * 已修正 .Net 在解除安裝時也在下載的問題。  
-    * 現在在高 DPI 的電腦上已正確設定安裝程式的大小。  
-    * 已移除如果有較新版本的 SQL Server 則封鎖 SSDT 安裝的版本檢查。  
-    * 結構描述比較︰已修正在 Visual Studio 中檢查/取消檢查多個項目花費很長時間的效能問題。  
-    * 因為沒有 x86 版本的 SQL Server 2016，支援在 x86 電腦上使用 LocalDB 2014。  
-* **建置和部署︰**  
-    * 已修正時態表不支援計算資料行的問題。  
-    * 部署至 Azure V12 時會忽略 [以單一使用者模式執行部署指令碼] 選項，因為雲端案例中不支援此選項。  
   
   
-## <a name="ssdt-hotfix-for-sql-server-2016-rc2"></a>SSDT Hotfix (適用於 SQL Server 2016 RC2)  
-發行日期︰2016 年 4 月 5 日  
+## <a name="additional-resources"></a>其他資源
   
-組建編號︰14.0.60329.0  
-  
-此組建包含提供 SQL Server Integration Services 功能的 SSDT 版本 hotfix。 組建 14.0.60316.0 也可搭配 SQL Server 2016 中的 Analysis Services 和 Reporting Services 使用。   
-  
-若要取得此 hotfix，請使用[此部落格文章的下載連結](https://blogs.msdn.microsoft.com/ssdt/2016/04/05/ssdt-preview-update-rc2/)。  
-  
-如果報表開發人員使用此組建的 SSDT 建立新報表，請[閱讀已知問題和因應措施](https://blogs.msdn.microsoft.com/ssdt/2016/04/05/ssdt-preview-update-rc2/)了解 SSRS 報表中只在此 hotfix 中找到的暫時性問題。  
-  
-## <a name="ssdt-hotfix-for-sql-server-2016-rc0"></a>SSDT Hotfix (適用於 SQL Server 2016 RC0)  
-發行日期︰ 2016 年 3 月 18 日  
-  
-組建編號︰14.0.60316.0  
-  
-此組建包含提供 SQL Server 2016 RC0 功能的 SSDT 版本 hotfix。 目前沒有 SSDT 的 RC1 版本。 組建 14.0.60316.0 可以搭配 SQL Server 2016 的 RC0 或 RC1 使用。  
-      
-## <a name="ssdt-february-2016-preview-for-sql-server-2016-rc0"></a>SSDT 2016 年 2 月預覽 (SQL Server 2016 RC0)  
-發行日期︰2016 年 3 月 7 日  
-  
-組建編號︰14.0.60305.0  
-  
--   **SQL Server 專案範本**  
-  
-    此 SSDT 預覽版本沒有任何宣告。 請參閱 [Database Engine 的新功能](https://msdn.microsoft.com/library/bb510411.aspx)以了解此版本中的其他功能。  
-  
--   **SSIS 封裝專案範本**  
-  
-    SSIS 設計師會建立和維護適用於 SQL Server 2016、2014 或 2012 的封裝。 新範本已重新命名為組件。 SSIS Hadoop 連接器支援 ORC 格式。 請參閱 [Integration Services 的新功能](https://msdn.microsoft.com/library/bb522534.aspx)以取得詳細資料。  
-  
--   **SSAS 專案範本 (表格式模型專案)**  
-  
-    本月份的 Analysis Services 更新提供表格式模型之顯示資料夾的支援，且現在在 SSIS 封裝中支援使用新的 SQL Server 2016 相容性層級建立的任何模型。 如需詳細資訊， 請參閱 [Analysis Services 的新功能 (部落格文章) (英文)](http://blogs.msdn.com/b/analysisservices/archive/2016/01/28/what-s-new-for-sql-server-2016-analysis-services-in-ctp3-3.aspx) 了解詳細資料。  
-  
--   **SSRS 報表專案範本**  
-  
-    此 SSDT 預覽版本沒有任何宣告。 請參閱 [Reporting Services 的新功能](https://msdn.microsoft.com/library/ms170438.aspx)，以了解此版本中的其他功能。  
-  
-## <a name="ssdt-january-2016-preview"></a>SSDT 2016 年 1 月預覽  
-發行日期︰2016 年 2 月 4 日  
-  
-組建編號︰14.0.60203.0  
-  
--   **SQL Server 專案範本**  
-  
-    此 SSDT 預覽版本沒有任何宣告。 請參閱 [Database Engine 的新功能](https://msdn.microsoft.com/library/bb510411.aspx)以了解此 CTP 中的其他功能。  
-  
--   **SSIS 封裝專案範本**  
-  
-    新增以下支援：ODBC 來源與目的地元件、CDC 控制工作、  
-      CDC 來源與分隔器元件、SAP BW 的 Microsoft Connector，以及適用於 Azure 的 Integration Services 功能套件。 請參閱 [Integration Services 的新功能](https://msdn.microsoft.com/library/bb522534.aspx)以取得詳細資料。  
-  
--   **SSAS 專案範本**  
-  
-    包含下列項目的增強功能：1200 相容性層級的表格式模型、DirectQuery 模式中模型的計算結果欄與資料列層級安全性、模型中繼資料的轉譯、SSIS Analysis Services 執行 DDL 工作的 TMSL 指令碼執行，以及許多 Bug 修正。  
-    請參閱 [Analysis Services 的新功能 (MSDN)](https://msdn.microsoft.com/library/bb522628.aspx) 或 [Analysis Services 的新功能 (部落格文章) (英文)](http://blogs.msdn.com/b/analysisservices/archive/2016/01/28/what-s-new-for-sql-server-2016-analysis-services-in-ctp3-3.aspx)，以取得詳細資料。  
-  
--   **SSRS 報表專案範本**  
-  
-    此 SSDT 預覽版本沒有任何宣告。 請參閱 [Reporting Services 的新功能](https://msdn.microsoft.com/library/ms170438.aspx)，以了解此 CTP 中的其他功能。  
-  
-## <a name="ssdt-december-2015-preview"></a>SSDT 2015 年 12 月預覽  
-  
--   **SQL Server 專案範本**包括 [連接] 對話方塊、最近歷程記錄清單、載入資料庫清單時連接屬性中驗證內容集正確用法的 Bug 修正。  
-  
-    -   測試連線逾時值變更為 15 秒。  
-  
-    -   如果用戶端 IP 在載入資料庫清單時並未註冊，請建立 Azure SQL Database 伺服器。  
-  
-    -   支援 SQL Server 2016 CTP3.2 程式設計功能。  
-  
--   **SSAS 專案範本**新增可根據模型中已定義的 DAX 運算式與其他物件建立導出資料表的支援。  
-  
--   **SSIS 封裝專案範本**的新增項目包含 Avro 檔案格式與 Kerberos 驗證的 SSIS Hadoop 連接器支援。   
-    請注意本次更新尚未包含支援 SSIS 2012 及 2014 的 SSIS 設計工具。  
-  
-## <a name="ssdt-november-2015-preview"></a>SSDT 2015 年 11 月預覽  
-  
--   **SQL Server 專案範本**。 已針對 SQL Server 和 Azure SQL Database 改善的連線體驗預覽。  
-  
--   **SSIS 封裝專案範本**。 SSIS 目錄效能改善：對於 non-ssis-admin 使用者而言，大部分 SSIS 目錄檢視效能已有改善。  
-  
--   **SSAS 專案範本**包括 Analysis Services 中表格式模型專案的增強功能。 您可以使用「檢視程式碼」命令來檢視 JSON 中的模型定義。 如果您並非用 Visual Studio 2015 的完整功能版，可能需要使用此版本才能取得 JSON 編輯器。 您可以免費下載 [Visual Studio Community 版本](https://www.visualstudio.com/downloads/download-visual-studio-vs.aspx)。  
-  
-## <a name="ssdt-october-2015-preview"></a>SSDT 2015 年 10 月預覽  
-  
--   BI 範本 (Analysis Services 模型、Reporting Services 報表和 Integration Services 套件)。 所有 SQL Server 專案範本都位於一個 SSDT 中。  
-  
--   新的 SSIS 功能包括 Hadoop 連接器、控制流程範本，以及資料流程工作的寬鬆緩衝區大小上限。  
-  
--   關聯式資料庫專案支援的 SQL Server 2016 CTP 3.0 功能。  
-  
--   SSIS 中的各種錯誤修正，以及 Windows 7 OS 適用的支援。  
-  
-## <a name="ssdt-september-2015-preview"></a>SSDT 2015 年 9 月預覽  
-  
--   本預覽中新增多語言支援。  
-  
-## <a name="ssdt-august-2015-preview"></a>SSDT 2015 年 8 月預覽  
-  
--   安裝 SSDT 的新獨立 Setup.exe 程式。  您不需要使用修改過的 SQL Server 安裝程式。 此版本的 SSDT 包含用來建置部署到 SQL Server 或 Azure SQL Database 的關聯式資料庫之專案範本。  
-  
-## <a name="see-also"></a>另請參閱  
 [下載 SQL Server Data Tools &#40;SSDT&#41;](../ssdt/download-sql-server-data-tools-ssdt.md)  
 [舊版的 SQL Server Data Tools (SSDT 和 SSDT-BI)](../ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md)  
 [Database Engine 的新功能](https://msdn.microsoft.com/library/bb510411.aspx)  
