@@ -30,7 +30,7 @@ ms.lasthandoff: 08/03/2017
   
  若要深入了解詞彙擷取轉換，請參閱＜ [Term Extraction Transformation](../../../integration-services/data-flow/transformations/term-extraction-transformation.md)＞。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **名詞**  
  指定轉換只擷取個別的名詞。  
   
@@ -56,7 +56,7 @@ ms.lasthandoff: 08/03/2017
  指定擷取是否區分大小寫。 預設值為 **False**。  
   
  **設定錯誤輸出**  
- 使用[ [設定錯誤輸出] ](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) 對話方塊，即可指定造成錯誤之資料列的錯誤處理。  
+ 使用 [設定錯誤輸出](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) 對話方塊，即可指定造成錯誤之資料列的錯誤處理。  
   
 ## <a name="see-also"></a>請參閱＜  
  [Integration Services 錯誤和訊息參考](../../../integration-services/integration-services-error-and-message-reference.md)   
