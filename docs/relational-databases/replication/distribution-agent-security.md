@@ -52,7 +52,7 @@ ms.lasthandoff: 08/03/2017
   
  如果是在進行連接時模擬處理帳戶，則需要其他的權限。 請參閱以下的＜ **連接到散發者** ＞和＜ **連接到訂閱者** ＞章節。  
   
- 無法為 的提取訂閱指定 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], because the Distribution Agent does not run on instances of [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)].  
+ 無法為 的提取訂閱指定 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]，因為散發代理程式無法在 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]。  
   
  **[密碼]** 與 **[確認密碼]**  
  輸入 Windows 帳戶的密碼。  
