@@ -2,7 +2,7 @@
 title: "什麼 &#39; 新的 SSMA for Access(AccessToSQL) s |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 08/16/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -16,73 +16,117 @@ ms.assetid: a24d3fc0-6911-4bfa-828a-197abf222e02
 caps.latest.revision: 37
 author: sabotta
 ms.author: carlasab
-manager: lonnyb
+manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: d4548c4094ff588f16d86bfea115d29978290ad1
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: 244cb7a45ce5b59e81e0332b5227e4ec2fb15538
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="what39s-new-in-ssma-for-accessaccesstosql"></a>什麼 &#39; s SSMA for Access(AccessToSQL) 的新功能
 本主題列出 SSMA 存取每個版本中的變更。  
+
+## <a name="ssma-v74"></a>SSMA v7.4
+SSMA for Access v7.4 版本包含下列變更。
+- **查詢逾時**選項現在時仍可使用在來源和目標結構描述物件探索。
+![查詢逾時選項](../media/query-timeout.png)
+
+- 品質和轉換的度量，而改善了目標的修正程式，根據客戶的意見反應。
+
+> [!IMPORTANT]
+> .Net 4.5.2 是安裝 SSMA v7.4 的必要條件。 此外，開頭 v7.4，32 位元版本的 SSMA 會停止。
+
+## <a name="ssma-v73"></a>SSMA v7.3
+SSMA for Access v7.3 版本包含下列變更。
+- 改善的品質和轉換的度量根據客戶的意見反應目標的修正程式。
+- 透過下列項目公開 SSMA 擴充性架構。
+  - 匯出至 SQL Server Data Tools (SSDT) 專案的功能。
+    -   您現在可以在 SSDT 專案，從 SSMA 匯出結構描述指令碼。 您可以使用結構描述指令碼來進行額外的結構描述變更及部署您的資料庫。
+![將儲存為 SSDT 專案命令](../media/export-schema-scripts.png)
+
+  - 可供 SSMA 執行自訂轉換執行的程式庫。
+    - 您現在可以建構自訂語法轉換和 SSMA 先前未處理的轉換可以處理的程式碼。
+      - 這個部落格文章，指示如何建構自訂轉換子可用[擴充 SQL Server 移轉小幫手的轉換功能](https://blogs.msdn.microsoft.com/datamigration/2017/02/21/2185/)。
+      - 轉換的範例專案可以是下載此[部落格文章](https://blogs.msdn.microsoft.com/datamigration/ssmafororacleconversionsample/)。
+
+## <a name="ssma-v72"></a>SSMA v7.2
+SSMA for Access v7.2 版本包含下列變更。
+- 改善的品質和轉換的度量根據客戶的意見反應目標的修正程式。
+- 遙測增強功能提供更好的資料點，來解決客戶問題，並改善 SSMA 的轉換比率。
+
+## <a name="ssma-v71"></a>SSMA 7.1 版
+SSMA for Access 的 7.1 版發行版本包含下列變更。
+- 在 Windows 和 Linux CTP1 上的 SQL Server 2017 已移轉的支援的目標平台。 這項功能是 technical preview 中，並可讓結構描述和資料移動到目標 SQL 伺服器。
+- SSMA 現在支援自動更新，以下載最新版本的 SSMA，如有的話。
+- SSMA 可安裝二進位檔現在都是透過 Windows installer 封裝檔案 (.msi) 提供。
+
+**資源**
+
+[擴充 SQL Server 移轉小幫手的轉換功能](https://blogs.msdn.microsoft.com/datamigration/2017/02/21/2185/)
   
 ## <a name="may-2016"></a>2016 年  
 2016 年版本的 SSMA for Access 包含下列變更：  
   
-1.  SQL Server 2016 的官方支援
-2.  移除.Net 2.0 的安裝程式檢查
-3.  修正 儲存專案 」 以及 「 開啟專案 」 SSMA 主控台命令
-4.  SSMA 主控台的固定"securepassword 」 命令
-5.  固定的初始載入的物件計數
-6.  固定的資料表資料載入 UI 索引標籤的存取
-7.  通用設定 中修正的 bug 
+-  SQL Server 2016 的官方支援
+
+-  移除安裝程式檢查適用於.Net 2.0。
+
+-  修正 儲存專案 」 以及 「 開啟專案 」 SSMA 主控台命令。
+ 
+-  SSMA 主控台的固定"securepassword"命令。
+ 
+-  已修正的初始載入的物件計數。
+ 
+-  固定資料表資料載入 UI 索引標籤的存取。
+
+-  通用設定 中修正的 bug。 
    
 ## <a name="march-2016"></a>2016 年 3 月  
 2016 年 3 月預覽版本的 SSMA for Access 包含下列變更：  
   
-1.  支援移轉至 SQL Server 2016  
+-  支援移轉至 SQL Server 2016。  
    
 ## <a name="january-2016"></a>2016 年 1 月  
 SSMA for Access 的 2016 年 1 月維護版本包含下列變更：  
   
-1.  預設值是 GUID 欄位 (RFC 3894811) 的固定無效的函式  
+-  固定函式無效的預設值是 GUID 欄位 (RFC 3894811)。  
   
-2.  在匯入記錄，到 SQL Database (Azure) (RFC 4919573) 的固定停止回應  
+-  在匯入至 SQL Database (Azure) (RFC 4919573) 的記錄固定的停止回應。  
   
-3.  加入的檢視記錄檔功能表項目 SSMA (建議 RFC 5706203)  
+-  加入的檢視要 SSMA (建議 RFC 5706203) 的記錄檔 功能表項目。  
   
-4.  加入的遙測  
+-  加入的遙測。  
   
 ## <a name="july-2014"></a>2014 年 7 月  
 SSMA for Access 的 2014 年 7 月版本包含下列變更：  
   
-1.  改善的 Azure SQL DB 程式碼轉換  
+-   改善的 Azure SQL DB 程式碼轉換。  
   
-2.  移至結構描述，以支援 Azure SQL DB 的延伸模組組件功能  
+-   延伸模組組件的功能移至結構描述，以支援 Azure SQL DB。  
   
-3.  測試針對具有超過 10k 的資料庫物件的效能改進  
+-   包含超過 10k 之資料庫的物件測試的效能改進。  
   
-4.  處理大量物件的 UI 增強功能  
+-   處理大量物件的 UI 增強功能。  
   
-5.  反白顯示的 「 已知 」 的 LOB 結構描述 （因此可在轉換中予以忽略）  
+-   反白顯示 「 已知 」 的 LOB 結構描述 （因此可在轉換中予以忽略）。  
   
-6.  轉換速度改善  
+-   轉換速度改善。
   
-7.  顯示在 UI 中的物件計數  
+-   顯示在 UI 中的物件計數。
   
-8.  報表大小縮減超過 25%  
+-   報表大小縮減超過 25%。
   
-9. 未剖析建構的改良的錯誤訊息。  
+-   未剖析建構的改良的錯誤訊息。  
   
 ## <a name="april-2014"></a>2014 年 4 月  
 SSMA for Access 的 2014 年 4 月版本包含下列變更：  
   
-1.  已新增的支援 MS SQL Server 2014。  
+-   已新增的支援 MS SQL Server 2014。  
   
-2.  關於 Azure 的轉換已經修正的 bug。  
+-   關於 Azure 的轉換已經修正的 bug。  
   
-3.  關於不可見的報表頁面在 IE 10 中已修正的 bug。  
+-   關於不可見的報表頁面在 IE 10 中已修正的 bug。  
   
 ## <a name="january-2012"></a>2012 年 1 月  
 SSMA for Access 的 2012 年 1 月版本包含下列變更：  
@@ -103,24 +147,24 @@ SSMA for Access 的 2011 年 4 月版本包含下列變更：
   
 -   單一的 「 SSMA 的存取 」，可支援可安裝[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]2005 年[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]2008年[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]"Denali"與 SQL Azure。  
   
--   連線能力[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]"Denali"  
+-   連線能力[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]"Denali"。  
   
--   如需存取主控台版本的 SSMA 支援回溯相容性。 您可以開啟 SSMA v5.0 稍早的版本所建立的專案  
+-   如需存取主控台版本的 SSMA 支援回溯相容性。 您可以開啟 SSMA v5.0 稍早的版本所建立的專案。
   
 -   SSMA v5.0 產品可以安裝與舊版本的 SSMA 產品的並存 (SxS)。  
   
 ## <a name="july-2010"></a>2010 年 7 月  
 SSMA for Access 2010 年 7 月版本包含下列變更：  
   
--   支援移轉至 SQL Server 2008 R2 和 SQL Azure  
+-   移轉至 SQL Server 2008 R2 和 SQL Azure 支援。
   
 -   SQL Server 和 SQL Azure 的安全連線。  
   
--   Access 2010 資料庫的支援  
+-   支援的 Access 2010 資料庫。
   
--   命令列執行新的 SSMA 主控台應用程式  
+-   命令列執行的新 SSMA 主控台應用程式。
   
--   SQL Server DateTime2 資料類型的支援  
+-   SQL Server DateTime2 資料類型的支援。
   
 ## <a name="june-2008"></a>2008 年 6 月  
 SSMA for Access 的 2008 年 6 月版本包含下列變更：  
@@ -131,7 +175,7 @@ SSMA for Access 的 2008 年 6 月版本包含下列變更：
 SSMA for Access May 2007 版本包含下列變更：  
   
 -   使用群組原則的 Access 資料庫的支援。  
-  
+
 -   若要刪除已轉換的物件，從 SQL Server 中繼資料總管 功能。  
   
 -   支援的 SQL Server 格式化 SQL 模式的使用者輸入註解。  
@@ -147,7 +191,7 @@ SSMA for Access 的 2006 年 11 月版本包含下列變更：
   
 -   提升的查詢的移轉。 現在將更選取檢視的查詢，請查詢移轉。 如需詳細資訊，請參閱[轉換來存取資料庫物件](http://msdn.microsoft.com/en-us/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c)。  
   
--   您現在可以編輯資料表和索引的屬性上[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]**資料表**] 索引標籤。  
+-   您現在可以編輯資料表和索引的屬性上[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]**資料表** 索引標籤。  
   
 -   新的通用設定：  
   
@@ -155,9 +199,9 @@ SSMA for Access 的 2006 年 11 月版本包含下列變更：
   
     -   您可以設定 SSMA 提示來取代重複的物件，或一律或永遠不會取代重複的物件結構描述轉換期間。  
   
--   新的 [轉換] 選項可讓您指定是否 SSMA 複雜的查詢包含萬用字元時顯示警告訊息。  
+-   新的 [轉換] 選項可讓您指定複雜的查詢包含萬用字元時，SSMA 是否顯示警告。  
   
 ## <a name="july-2006"></a>2006 年 7 月  
-2006 年 7 月版的 SSMA for Access 是初始 release.x  
+2006 年 7 月版的 SSMA for Access 是最早的版本。
   
 

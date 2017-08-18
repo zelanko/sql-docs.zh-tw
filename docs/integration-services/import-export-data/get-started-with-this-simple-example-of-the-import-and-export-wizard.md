@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 88683c4fbf4426ffac83ef2091f81087101463e9
+ms.sourcegitcommit: 2800075091835b2d6f2b07ee34e9b897fe86634e
+ms.openlocfilehash: 463a440f0bc0cf2c6ae2d2649286097cffea9467
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="get-started-with-this-simple-example-of-the-import-and-export-wizard"></a>開始使用 「 匯入和匯出精靈的這個簡單的範例
@@ -48,7 +48,7 @@ ms.lasthandoff: 08/03/2017
 如需詳細資訊，請參閱 [啟動 SQL Server 匯入和匯出精靈](../../integration-services/import-export-data/start-the-sql-server-import-and-export-wizard.md)。
 
 ## <a name="step-2---view-the-welcome-page"></a>步驟 2-歡迎使用 頁面檢視
-在精靈的第一頁** 褖畫惎**頁面。 
+在精靈的第一頁**褖畫惎**頁面。 
 
 您可能不想要看到此頁面，一次，因此請繼續並按一下**不要的顯示此開始頁面再次**。
 
@@ -58,9 +58,6 @@ ms.lasthandoff: 08/03/2017
 在下一個頁面上，**選擇資料來源**，您可以挑選 Microsoft Excel 做為資料來源。 然後您瀏覽至選取 Excel 檔案。 最後，您會指定您用來建立檔案的 Excel 版本。
 
 ![選擇 Excel 資料來源](../../integration-services/import-export-data/media/choose-the-excel-data-source.jpg)
-
-> [!NOTE]
-> 通常您會指定版本、 Microsoft Excel 2016 和下載的檔案連接到 Excel 2016 和存取 2016年。 如果您有 Microsoft Office 365 訂閱，不過，您無法安裝 Office 2016 的執行階段。 您只可以與 Microsoft Office 的桌面版本安裝 Excel 2016 和存取 2016年的資料提供者。 因此您只需要指定先前版本的 Excel，Excel 2013。 如有必要，您下載的檔案連接到 Excel 2013 和 Access 2013。 Office 2016 的執行階段的這項限制中有提及[此部落格文章](https://blogs.office.com/2015/12/16/access-2016-runtime-is-now-available-for-download/)。
 
 如需連接至 Excel 的詳細資訊，請參閱[連接到 Excel 資料來源](../../integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md)。 如需此頁面在精靈的詳細資訊，請參閱[選擇資料來源](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)。
 
