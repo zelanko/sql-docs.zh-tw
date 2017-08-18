@@ -16,11 +16,11 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 91683b0358d76a072517e1b5fd5507cf8c6cb57e
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="permissions-and-visual-database-tools-visual-database-tools"></a>權限和 Visual Database Tools (Visual Database Tools)
@@ -29,6 +29,6 @@ ms.lasthandoff: 06/22/2017
 如果資料庫權限只可以用來檢視但不能修改資料庫結構，您可以使用變更指令碼來設計所做的修改，而不須將修改傳送到資料庫。  
   
 ## <a name="see-also"></a>另請參閱  
-[多使用者環境 &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/multiuser-environments-visual-database-tools.md)  
+[多使用者環境 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/multiuser-environments-visual-database-tools.md)  
   
 

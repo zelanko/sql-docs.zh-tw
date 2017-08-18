@@ -19,11 +19,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 1b47f476867e064ac5ffe995605ff9701803be9b
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="show-column-names-in-the-diagram-pane-visual-database-tools"></a>在圖表窗格中顯示資料行名稱 (Visual Database Tools)
@@ -42,6 +42,6 @@ ms.lasthandoff: 06/22/2017
 2.  從快速鍵功能表選擇 [僅顯示名稱]。  
   
 ## <a name="see-also"></a>另請參閱  
-[設計查詢和檢視使用說明主題 &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
+[設計查詢和檢視使用說明主題 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
 

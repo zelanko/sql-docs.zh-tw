@@ -20,11 +20,11 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: c420cccafdda162f8acee678536b4419270c5777
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="add-an-existing-project-to-a-solution"></a>將現有專案加入方案中
@@ -44,7 +44,7 @@ ms.lasthandoff: 06/22/2017
 > 從多重開發人員環境的共用目錄，加入現有專案之前，必須嘗試確定變更不會覆寫其他開發人員的變更，或者對其造成負面影響。  
   
 ## <a name="see-also"></a>另請參閱  
-[專案 &amp;#40;SQL Server Management Studio&amp;#41;](../../ssms/solution/projects-sql-server-management-studio.md)  
-[方案 &amp;#40;SQL Server Management Studio&amp;#41;](../../ssms/solution/solutions-sql-server-management-studio.md)  
+[專案 &#40;SQL Server Management Studio&#41;](../../ssms/solution/projects-sql-server-management-studio.md)  
+[方案 &#40;SQL Server Management Studio&#41;](../../ssms/solution/solutions-sql-server-management-studio.md)  
   
 

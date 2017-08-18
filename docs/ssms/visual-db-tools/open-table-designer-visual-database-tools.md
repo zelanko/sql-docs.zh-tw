@@ -19,11 +19,11 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: ecf6dd4edb70904d902f11940da42dc33765708f
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="open-table-designer-visual-database-tools"></a>開啟資料表設計工具 (Visual Database Tools)
@@ -47,7 +47,7 @@ ms.lasthandoff: 06/22/2017
     [資料表設計工具] 功能表會新增至主功能表中，而且會在設計工具窗格中開啟資料表。  
   
 ## <a name="see-also"></a>另請參閱  
-[設計資料表 &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)  
+[設計資料表 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)  
 [資料表](http://msdn.microsoft.com/en-us/82d7819c-b801-4309-a849-baa63083e83f)  
   
 

@@ -19,11 +19,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: d77c2ce648939486be70ca9ab961bb9697b4d8db
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="diagram-pane-visual-database-tools"></a>圖表窗格 (Visual Database Tools)
@@ -35,7 +35,7 @@ ms.lasthandoff: 06/22/2017
   
 -   建立或修改資料表和資料表值物件之間的聯結。  
   
-當您在 [圖表] 窗格中進行變更時，[準則] 窗格和 [SQL] 窗格將自動更新以反映您所做的變更。 例如，如果您在 [圖表] 窗格的資料表或資料表值物件中選取某資料行進行輸出，[查詢和檢視表設計工具] 會將資料行加入 [準則] 窗格和 [SQL] 窗格中的 SQL 陳述式。  
+當您在 [圖表] 窗格中進行變更時，[準則] 窗格和 [SQL] 窗格將自動更新以反映您所做的變更。 例如，如果您在 [圖表] 窗格的資料表或資料表值物件中選取某資料行進行輸出，[查詢和檢視設計師] 會將資料行加入 [準則] 窗格和 [SQL] 窗格中的 SQL 陳述式。  
   
 [圖表] 窗格中的每一個資料表或資料值物件，都以個別視窗顯示。 每個矩形的標題列圖示都將表示該矩形代表的物件類型，如下表所示。  
   
@@ -69,14 +69,14 @@ ms.lasthandoff: 06/22/2017
   
 |核取方塊或符號|Description|  
 |-----------------------|---------------|  
-|![Visual Database Tools 圖示](../../ssms/visual-db-tools/media/dv3wbi7.gif "Visual Database Tools icon")<br /><br />![Visual Database Tools 圖示](../../ssms/visual-db-tools/media/dv3wbi8.gif "Visual Database Tools icon")<br /><br />![Visual Database Tools 圖示](../../ssms/visual-db-tools/media/dv3wbi9.gif "Visual Database Tools icon")<br /><br />![Visual Database Tools 圖示](../../ssms/visual-db-tools/media/dv3wbia.gif "Visual Database Tools icon")|指定查詢結果集 (選取查詢) 中是否使用資料欄，或者是否在 UPDATE、INSERT FROM、製成資料表 (Make Table) 或 INSERT INTO 查詢中使用資料欄。 選取要新增到結果的資料行。 如果選取 [(所有資料行)]，所有資料行都將出現在輸出中。<br /><br />核取方塊所使用的圖示將根據您建立的查詢類型而有所改變。 建立刪除查詢時，您無法選取個別的資料行。|  
-|![Visual Database Tools 圖示](../../ssms/visual-db-tools/media/dv3wbib.gif "Visual Database Tools icon")<br /><br />![Visual Database Tools 圖示](../../ssms/visual-db-tools/media/dv3wbic.gif "Visual Database Tools icon")|指示用來排列查詢結果 (ORDER BY 子句的一部分) 的資料欄。 如果排列順序為遞增，則圖示將以 A-Z 的方法呈現，如果為遞減排序，則為 Z-A。|  
+|![Visual Database Tools 圖示](../../ssms/visual-db-tools/media/dv3wbi7.gif "Visual Database Tools 圖示")<br /><br />![Visual Database Tools 圖示](../../ssms/visual-db-tools/media/dv3wbi8.gif "Visual Database Tools 圖示")<br /><br />![Visual Database Tools 圖示](../../ssms/visual-db-tools/media/dv3wbi9.gif "Visual Database Tools 圖示")<br /><br />![Visual Database Tools 圖示](../../ssms/visual-db-tools/media/dv3wbia.gif "Visual Database Tools 圖示")|指定查詢結果集 (選取查詢) 中是否使用資料欄，或者是否在 UPDATE、INSERT FROM、製成資料表 (Make Table) 或 INSERT INTO 查詢中使用資料欄。 選取要新增到結果的資料行。 如果選取 [(所有資料行)]，所有資料行都將出現在輸出中。<br /><br />核取方塊所使用的圖示將根據您建立的查詢類型而有所改變。 建立刪除查詢時，您無法選取個別的資料行。|  
+|![Visual Database Tools 圖示](../../ssms/visual-db-tools/media/dv3wbib.gif "Visual Database Tools 圖示")<br /><br />![Visual Database Tools 圖示](../../ssms/visual-db-tools/media/dv3wbic.gif "Visual Database Tools 圖示")|指示用來排列查詢結果 (ORDER BY 子句的一部分) 的資料欄。 如果排列順序為遞增，則圖示將以 A-Z 的方法呈現，如果為遞減排序，則為 Z-A。|  
 |![Visual Database Tools 圖示](../../ssms/visual-db-tools/media/dv3wbid.gif "Visual Database Tools 圖示")|指示在彙總查詢中用來建立群組結果集 (GROUP BY 子句的一部分) 的資料欄。|  
 |![Visual Database Tools 圖示](../../ssms/visual-db-tools/media/dv3wbie.gif "Visual Database Tools 圖示")|指示查詢 (WHERE 或 HAVING 子句的一部分) 的搜尋條件包含該資料欄。|  
 |![Visual Database Tools 圖示](../../ssms/visual-db-tools/media/dv3wbif.gif "Visual Database Tools 圖示")|指示摘要輸出該資料欄內容 (包含在 SUM、AVG 或其他彙總函式)。|  
   
 > [!NOTE]  
-> 如果您沒有足夠的存取權限，或如果資料庫驅動程式無法傳回相關資訊，[查詢和檢視表設計工具] 將不會顯示資料表或資料表值物件的資料行。 在這種情況下，查詢和檢視設計師僅將顯示資料表或表格化物件的標題列。  
+> 如果您沒有足夠的存取權限，或如果資料庫驅動程式無法傳回相關資訊，[查詢和檢視設計師] 將不會顯示資料表或資料表值物件的資料行。 在這種情況下，查詢和檢視設計師僅將顯示資料表或表格化物件的標題列。  
   
 ## <a name="joined-tables-on-the-diagram-pane"></a>圖表窗格中的聯結資料表  
 如果查詢中使用聯結，與聯結相關的資料欄之間將出現聯結線 (Join Line)。 如果聯結的資料行未顯示 (例如，資料表或資料表值物件視窗最小化，或該聯結使用運算式)，[查詢和檢視設計師] 將在該矩形標題列上放置聯結線以表示資料表或資料表值物件。 查詢和檢視設計師可顯示每個聯結狀況的聯結線。  
@@ -100,8 +100,8 @@ ms.lasthandoff: 06/22/2017
 |![Visual Database Tools 圖示](../../ssms/visual-db-tools/media/dv3wbio.gif "Visual Database Tools 圖示")|查詢和檢視設計師無法決定聯結類型|  
   
 ## <a name="see-also"></a>另請參閱  
-[設計查詢和檢視使用說明主題 &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
-[準則窗格 &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)  
-[排序及分組查詢結果 &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  
+[設計查詢和檢視使用說明主題 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
+[準則窗格 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)  
+[排序及分組查詢結果 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  
   
 

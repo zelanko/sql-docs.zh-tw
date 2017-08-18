@@ -20,11 +20,11 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 5bfe05dde95b8fdb47893ea17802b0798de9762a
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="view-information-about-an-alert"></a>檢視有關警示的資訊
@@ -65,11 +65,11 @@ ms.lasthandoff: 06/22/2017
   
     -   [警示屬性 - 新增警示 &amp;#40;一般頁面&amp;#41;](../../ssms/agent/alert-properties-new-alert-general-page.md)  
   
-    -   [警示屬性 - 新增警示 &amp;#40;回應頁面&amp;#41;](../../ssms/agent/alert-properties-new-alert-response-page.md)  
+    -   [警示屬性 - 新增警示 &#40;回應頁面&#41;](../../ssms/agent/alert-properties-new-alert-response-page.md)  
   
-    -   [警示屬性 - 新增警示 &amp;#40;選項頁面&amp;#41;](../../ssms/agent/alert-properties-new-alert-options-page.md)  
+    -   [警示屬性 - 新增警示 &#40;選項頁面&#41;](../../ssms/agent/alert-properties-new-alert-options-page.md)  
   
-    -   [警示屬性 &amp;#40;記錄頁面&amp;#41;](../../ssms/agent/alert-properties-history-page.md)  
+    -   [警示屬性 &#40;記錄頁面&#41;](../../ssms/agent/alert-properties-history-page.md)  
   
 5.  完成後，請按一下 **[確定]**。  
   

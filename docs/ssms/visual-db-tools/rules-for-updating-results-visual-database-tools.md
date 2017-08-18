@@ -19,15 +19,15 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: f617973f041218de7b77b64350b8953dbaa0d149
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="rules-for-updating-results-visual-database-tools"></a>更新結果的規格 (Visual Database Tools)
-大多數的情形下，您可以更新[結果窗格](../../ssms/visual-db-tools/results-pane-visual-database-tools.md)所顯示的結果集。 不過也有些情形無法更新。  
+大多數的情形下，您可以更新 [結果窗格](../../ssms/visual-db-tools/results-pane-visual-database-tools.md)所顯示的結果集。 不過也有些情形無法更新。  
   
 一般說來，為了更新結果， [查詢和檢視表設計工具](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) 必須要有足夠的資訊才能唯一識別資料表中的資料列。 一個例子是輸出清單中的查詢包含主索引鍵。 此外，也必須要有足夠的使用權限可更新資料庫。  
   
@@ -69,6 +69,6 @@ ms.lasthandoff: 06/22/2017
 -   時間戳記或 BLOB 資料行  
   
 ## <a name="see-also"></a>另請參閱  
-[設計查詢和檢視使用說明主題 &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
+[設計查詢和檢視使用說明主題 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
 

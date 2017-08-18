@@ -21,11 +21,11 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 0ba11f05536a52023c382e040738b8d9f9a4a215
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="add-new-rows-in-the-results-pane-visual-database-tools"></a>在結果窗格中加入新的資料列 (Visual Database Tools)
@@ -51,14 +51,14 @@ ms.lasthandoff: 06/22/2017
   
 4.  離開該資料列，讓資料庫對其進行認可。  
   
-儲存資料列時如果發生錯誤，查詢和檢視表設計工具會顯示訊息，然後讓您返回先前所編輯的資料列。 您可以：  
+儲存資料列時如果發生錯誤，查詢和檢視設計工具會顯示訊息，然後讓您返回先前所編輯的資料列。 您可以：  
   
 -   進一步編輯資料列來解決錯誤。  
   
 -   按一下 ESC 鍵來取消編輯。 如果是在變更過的資料格中按 ESC 鍵，那麼該資料格中的變更會取消。 如果在沒有變更的資料格中按 ESC 鍵，整個資料列的變更都會取消。  
   
 ## <a name="see-also"></a>另請參閱  
-[使用結果窗格中的資料 &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)  
-[使用查詢執行基本作業 &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
+[使用結果窗格中的資料 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)  
+[使用查詢執行基本作業 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
   
 

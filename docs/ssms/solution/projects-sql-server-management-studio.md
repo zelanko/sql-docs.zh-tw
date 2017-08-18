@@ -14,11 +14,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: e207a41546270197fa35cccd63348107db2d30f4
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="projects-sql-server-management-studio"></a>專案 (SQL Server Management Studio)
@@ -35,7 +35,7 @@ ms.lasthandoff: 06/22/2017
   
 -   **MDX、DMX 和 XMLA 指令碼**。 使用者常用的 MDX 指令碼。 按兩下專案內的 .mdx 檔，會使編輯器開啟所選的指令碼。  
   
--   **其他**。 不完全符合任何其他預設節點類型的檔案，如包含專案目標的文字檔，可以使用這個資料夾。  
+-   **其他**。不完全符合任何其他預設節點類型的檔案，如包含專案目標的文字檔，可以使用這個資料夾。  
   
 專案也可以整合為一個原始程式碼控制系統。  
   
@@ -61,7 +61,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>另請參閱  
 [方案總管](../../ssms/solution/solution-explorer.md)  
-[方案 &amp;#40;SQL Server Management Studio&amp;#41;](../../ssms/solution/solutions-sql-server-management-studio.md)  
+[方案 &#40;SQL Server Management Studio&#41;](../../ssms/solution/solutions-sql-server-management-studio.md)  
 [方案總管原始檔控制](https://msdn.microsoft.com/en-us/library/ms173879.aspx)  
   
 

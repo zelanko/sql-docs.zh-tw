@@ -18,11 +18,11 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: af137c019a7f96769b801d01f882e1d98b0da2ea
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="start-stop-or-pause-the-sql-server-agent-service"></a>啟動、停止或暫停 SQL Server Agent 服務
@@ -79,6 +79,6 @@ ms.lasthandoff: 06/22/2017
   
 -   [啟動、停止、暫停、繼續、重新啟動 Database Engine、SQL Server Agent 或 SQL Server Browser 服務](http://msdn.microsoft.com/en-us/32660a02-e5a1-411a-9e57-7066ca459df6)  
   
--   [自動啟動t SQL Server Agent &amp;#40;SQL Server Management Studio&amp;#41;](../../ssms/agent/autostart-sql-server-agent-sql-server-management-studio.md)  
+-   [自動啟動t SQL Server Agent &#40;SQL Server Management Studio&#41;](../../ssms/agent/autostart-sql-server-agent-sql-server-management-studio.md)  
   
 

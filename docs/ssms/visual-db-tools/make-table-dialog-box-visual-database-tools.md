@@ -17,11 +17,11 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 55372985e2d5ae739e2e03fd07c3c02e5cbeb97f
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="make-table-dialog-box-visual-database-tools"></a>製成資料表對話方塊 (Visual Database Tools)
@@ -37,7 +37,7 @@ ms.lasthandoff: 06/22/2017
 > 您可以在執行查詢之前，在 [屬性] 視窗中修改屬性，以變更要建立之資料表的屬性。 如需詳細資訊，請參閱＜[查詢屬性 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-properties-visual-database-tools.md)＞。  
   
 ## <a name="see-also"></a>另請參閱  
-[建立製成資料表查詢 &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/create-make-table-queries-visual-database-tools.md)  
-[查詢的類型 &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/types-of-queries-visual-database-tools.md)  
+[建立製成資料表查詢 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-make-table-queries-visual-database-tools.md)  
+[查詢的類型 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/types-of-queries-visual-database-tools.md)  
   
 

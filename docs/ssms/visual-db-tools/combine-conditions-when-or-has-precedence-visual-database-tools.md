@@ -20,11 +20,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 01acb8eb71b820655cb6c77df1495099cd0e7f81
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="combine-conditions-when-or-has-precedence-visual-database-tools"></a>在 OR 具有優先權時結合條件 (Visual Database Tools)
@@ -75,7 +75,7 @@ WHERE (job_lvl = 100 OR status = 'R') AND
 > 如果您使用緊接在 [SQL 窗格](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md)之上的格式輸入搜尋條件，然後變更 [圖表] 或 [準則] 窗格中的查詢，則查詢和檢視表設計工具會重新建立 SQL 陳述式，以便讓格式與明確散發給兩個 OR 條件的 AND 條件相符。  
   
 ## <a name="see-also"></a>另請參閱  
-[在條件窗格中合併搜尋條件的慣例 &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)  
-[指定搜尋準則 &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
+[在條件窗格中合併搜尋條件的慣例 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)  
+[指定搜尋準則 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
   
 

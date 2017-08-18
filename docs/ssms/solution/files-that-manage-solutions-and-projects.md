@@ -22,15 +22,15 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: ae75460f02779117b9c6061ab676795796215c09
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="files-that-manage-solutions-and-projects"></a>管理方案和專案的檔案
-此主題描述 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 專用的檔案類型。 依預設，所有方案及其專案都建立在 \My Documents\SQL Server Management Studio Projects 中。  
+此主題描述 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]專用的檔案類型。 依預設，所有方案及其專案都建立在 \My Documents\SQL Server Management Studio Projects 中。  
   
 ## <a name="management-studio-solution-files"></a>Management Studio 方案檔  
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 所用的檔案類型與 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] 或 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Visual Studio 不同。 這代表您無法在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 或 Visual Studio 中開啟 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] 方案。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 方案檔可讓方案總管顯示一個用以管理檔案的圖形介面。  
@@ -56,8 +56,8 @@ ms.lasthandoff: 06/22/2017
 [利用編碼管理檔案](../../ssms/solution/manage-files-with-encoding.md)  
 [其他檔案](../../ssms/solution/miscellaneous-files.md)  
 [方案總管](../../ssms/solution/solution-explorer.md)  
-[方案 &amp;#40;SQL Server Management Studio&amp;#41;](../../ssms/solution/solutions-sql-server-management-studio.md)  
-[專案 &amp;#40;SQL Server Management Studio&amp;#41;](../../ssms/solution/projects-sql-server-management-studio.md)  
+[方案 &#40;SQL Server Management Studio&#41;](../../ssms/solution/solutions-sql-server-management-studio.md)  
+[專案 &#40;SQL Server Management Studio&#41;](../../ssms/solution/projects-sql-server-management-studio.md)  
 [方案總管原始檔控制](https://msdn.microsoft.com/en-us/library/ms173879.aspx)  
   
 

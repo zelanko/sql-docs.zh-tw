@@ -19,11 +19,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: d1947c39760dc30d22c7b419412288da72fcc9e3
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="sql-server-agent-error-log"></a>SQL Server Agent 錯誤記錄檔
@@ -41,11 +41,11 @@ ms.lasthandoff: 06/22/2017
   
 **若要檢視 SQL Server Agent 錯誤記錄檔**  
   
--   [檢視 SQL Server Agent 錯誤記錄檔 &amp;#40;SQL Server Management Studio&amp;#41;](../../ssms/agent/view-sql-server-agent-error-log-sql-server-management-studio.md)  
+-   [檢視 SQL Server Agent 錯誤記錄檔 &#40;SQL Server Management Studio&#41;](../../ssms/agent/view-sql-server-agent-error-log-sql-server-management-studio.md)  
   
 **若要重新命名 SQL Server Agent 錯誤記錄檔**  
   
--   [重新命名 SQL Server Agent 錯誤記錄檔 &amp;#40;SQL Server Management Studio&amp;#41;](../../ssms/agent/rename-a-sql-server-agent-error-log-sql-server-management-studio.md)  
+-   [重新命名 SQL Server Agent 錯誤記錄檔 &#40;SQL Server Management Studio&#41;](../../ssms/agent/rename-a-sql-server-agent-error-log-sql-server-management-studio.md)  
   
 **若要傳送 SQL Server Agent 錯誤訊息**  
   
@@ -53,6 +53,6 @@ ms.lasthandoff: 06/22/2017
   
 **若要將執行追蹤訊息寫入 SQL Server Agent 錯誤記錄檔**  
   
--   [在 SQL Server Agent 錯誤記錄檔中寫入執行追蹤訊息 &amp;#40;SQL Server Management Studio&amp;#41;](../../ssms/agent/write-execution-trace-messages-to-sql-server-agent-log-ssms.md)  
+-   [在 SQL Server Agent 錯誤記錄檔中寫入執行追蹤訊息 &#40;SQL Server Management Studio&#41;](../../ssms/agent/write-execution-trace-messages-to-sql-server-agent-log-ssms.md)  
   
 

@@ -23,11 +23,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: c2115ca07d5e726a4bdb1fc3bba5ba8f0d202277
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="conventions-for-combining-search-conditions-in-the-criteria-pane-visual-database-tools"></a>在條件窗格中合併搜尋條件的慣例 (Visual Database Tools)
@@ -170,6 +170,6 @@ WHERE (hire_date < '01/01/95' ) AND
 如果您變更查詢 (例如變更 [準則窗格] 中的其中一個值)，查詢和檢視設計工具會在 [SQL 窗格] 中重建 SQL 陳述式。 重建的 SQL 陳述式和 [準則窗格] 中顯示的內容類似，而不是和原始陳述式類似。 例如，[準則窗格] 中如果包含了分散式 AND 子句，[SQL 窗格] 中產生的陳述式將會以明確的分散式 AND 子句重建。 如需詳細資訊，請參閱此主題中的＜AND 和多個 OR 子句配合的方式＞。  
   
 ## <a name="see-also"></a>另請參閱  
-[指定搜尋準則 &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
+[指定搜尋準則 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
   
 

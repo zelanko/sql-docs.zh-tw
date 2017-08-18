@@ -17,21 +17,21 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: f87cf8d01b8a7b00e91df6803936f37df4af4b46
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="design-tables-visual-database-tools"></a>設計資料表 (Visual Database Tools)
 [資料表設計工具] 提供完整的視窗，供您設計個別的資料表。 本節的主題說明如何使用 [資料表設計工具] 建立及修改資料庫資料表。  
   
 ## <a name="in-this-section"></a>本節內容  
-[開啟資料表設計工具 &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/open-table-designer-visual-database-tools.md)  
+[開啟資料表設計工具 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/open-table-designer-visual-database-tools.md)  
 開啟新的資料庫資料表或現有的資料庫資料表。  
   
-[儲存資料表設計工具中的工作 &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/save-your-work-in-table-designer-visual-database-tools.md)  
+[儲存資料表設計工具中的工作 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/save-your-work-in-table-designer-visual-database-tools.md)  
 將變更儲存至特定資料表，或儲存至資料表設計工具中開啟的所有資料表。  
   
 

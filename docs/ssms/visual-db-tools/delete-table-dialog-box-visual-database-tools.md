@@ -17,11 +17,11 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: c6485a4d7020bf63b4650ec70d6eb20c9ccf714f
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="delete-table-dialog-box-visual-database-tools"></a>刪除資料表對話方塊 (Visual Database Tools)
@@ -33,6 +33,6 @@ ms.lasthandoff: 06/22/2017
 > DELETE 查詢會移除資料表中全部的資料列。 如果您要清除個別資料行中的值，請使用 UPDATE 查詢。 如果您要從資料表定義中刪除資料行或刪除資料表本身，請使用您資料庫的 [資料表設計師] 或資料庫設計工具。  
   
 ## <a name="see-also"></a>另請參閱  
-[從查詢移除資料表 &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/remove-tables-from-queries-visual-database-tools.md)  
+[從查詢移除資料表 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/remove-tables-from-queries-visual-database-tools.md)  
   
 

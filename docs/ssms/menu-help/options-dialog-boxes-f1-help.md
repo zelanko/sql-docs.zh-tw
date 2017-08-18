@@ -17,11 +17,11 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 8af8c347e4225f1beb4cef6f4b515568115146f1
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="options-dialog-boxes-f1-help"></a>選項對話方塊 F1 說明
@@ -29,19 +29,19 @@ ms.lasthandoff: 06/22/2017
   
 [選項 &amp;#40;設計工具 - Analysis Services 設計工具 - 一般&amp;#41;](../../ssms/menu-help/options-designers-analysis-services-designers-general.md)  
   
-[選項 &amp;#40;設計工具 - 維護計畫頁面&amp;#41;](../../ssms/menu-help/options-designers-maintenance-plans-page.md)  
+[選項 &#40;設計工具 - 維護計畫頁面&#41;](../../ssms/menu-help/options-designers-maintenance-plans-page.md)  
   
-[選項 &amp;#40;設計工具 - 資料表和資料庫設計工具頁面&amp;#41;](../../ssms/menu-help/options-designers-table-and-database-designers-page.md)  
+[選項 &#40;設計工具 - 資料表和資料庫設計工具頁面&#41;](../../ssms/menu-help/options-designers-table-and-database-designers-page.md)  
   
-[選項 &amp;#40;環境 - 字型和色彩頁面&amp;#41;](../../ssms/menu-help/options-environment-fonts-and-colors-page.md)  
+[選項 &#40;環境 - 字型和色彩頁面&#41;](../../ssms/menu-help/options-environment-fonts-and-colors-page.md)  
   
-[選項 &amp;#40;環境 - 一般頁面&amp;#41;](../../ssms/menu-help/options-environment-general-page.md)  
+[選項 &#40;環境 - 一般頁面&#41;](../../ssms/menu-help/options-environment-general-page.md)  
   
-[選項 &amp;#40;環境 - 說明 - 一般頁面&amp;#41;](../../ssms/menu-help/options-environment-help-general-page.md)  
+[選項 &#40;環境 - 說明 - 一般頁面&#41;](../../ssms/menu-help/options-environment-help-general-page.md)  
   
-[選項 &amp;#40;環境 - 說明 - 線上頁面&amp;#41;](../../ssms/menu-help/options-environment-help-online-page.md)  
+[選項 &#40;環境 - 說明 - 線上頁面&#41;](../../ssms/menu-help/options-environment-help-online-page.md)  
   
-[選項 &amp;#40;環境 - 鍵盤頁面&amp;#41;](../../ssms/menu-help/options-environment-keyboard-page.md)  
+[選項 &#40;環境 - 鍵盤頁面&#41;](../../ssms/menu-help/options-environment-keyboard-page.md)  
   
 [選項 (查詢執行 - Analysis Server - 一般頁面)](http://msdn.microsoft.com/en-us/456867d0-724c-449c-abf9-013a694d7924)  
   

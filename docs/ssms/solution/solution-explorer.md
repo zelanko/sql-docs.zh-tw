@@ -21,15 +21,15 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 54ac206f363cfdb5698d02d16fdf197933b87a72
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="solution-explorer"></a>方案總管
-[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 中的 [方案總管] 窗格提供稱為專案的容器，可用來管理資料庫指令碼、查詢、資料連接和檔案等項目。 一個或多個彼此相關的專案會合併到稱為方案的容器。  
+[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 中的 [方案總管] 窗格提供稱為專案的容器，可用來管理資料庫指令碼、查詢、資料連接和檔案等項目。 一個或多個彼此相關的專案會合併到稱為方案的容器。  
   
 方案包括一個或多個專案，加上有助於將方案當做一個整體來定義的檔案和中繼資料。 專案是一組檔案，加上連接資訊等相關的中繼資料。 方案和專案包含代表建立資料庫方案時所需要之指令碼、查詢、連接資訊和檔案的項目。  
   
@@ -57,8 +57,8 @@ ms.lasthandoff: 06/22/2017
 |||  
 |-|-|  
 |**說明**|**主題**|  
-|描述如何收集方案中的一個或多個專案。|[方案 &amp;#40;SQL Server Management Studio&amp;#41;](../../ssms/solution/solutions-sql-server-management-studio.md)|  
-|描述如何建立專案並加入指令碼和連接等項目。|[專案 &amp;#40;SQL Server Management Studio&amp;#41;](../../ssms/solution/projects-sql-server-management-studio.md)|  
+|描述如何收集方案中的一個或多個專案。|[方案 &#40;SQL Server Management Studio&#41;](../../ssms/solution/solutions-sql-server-management-studio.md)|  
+|描述如何建立專案並加入指令碼和連接等項目。|[專案 &#40;SQL Server Management Studio&#41;](../../ssms/solution/projects-sql-server-management-studio.md)|  
 |提供 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 用來管理方案和檔案之檔案的相關資訊。|[管理方案和專案的檔案](../../ssms/solution/files-that-manage-solutions-and-projects.md)|  
   
 

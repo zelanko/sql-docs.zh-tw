@@ -17,11 +17,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 8fbfa283615298113db6fd52de97c27f73291d8d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="query-properties-visual-database-tools"></a>查詢屬性 (Visual Database Tools)
@@ -87,7 +87,7 @@ ms.lasthandoff: 06/22/2017
 指定檢視中會包含 WITH TIES 子句。 如果檢視中包含了 ORDER BY 和以百分比為基礎的 TOP 子句，WITH TIES 非常實用。 如果設定了此選項，而且百分比截止點落在 ORDER BY 子句裡一組相同值的資料列中間，將會擴充檢視以將這些資料列全部包含。 (只適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 7.0 (含) 以後版本)。  
   
 ## <a name="see-also"></a>另請參閱  
-[使用參數查詢 &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/query-with-parameters-visual-database-tools.md)  
-[設計查詢和檢視使用說明主題 &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
+[使用參數查詢 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-with-parameters-visual-database-tools.md)  
+[設計查詢和檢視使用說明主題 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
 

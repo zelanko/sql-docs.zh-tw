@@ -18,11 +18,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 57821cd36a4684de594df52b0722b7e043097b46
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="join-tables-manually-visual-database-tools"></a>手動聯結資料表 (Visual Database Tools)
@@ -47,6 +47,6 @@ ms.lasthandoff: 06/22/2017
 查詢和檢視表設計工具會將 INNER JOIN 子句新增至 [SQL 窗格](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md)中的 SQL 陳述式。 您可以將類型變更為外部聯結 (Outer Join)。 如需詳細資訊，請參閱[建立外部聯結 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-outer-joins-visual-database-tools.md)。  
   
 ## <a name="see-also"></a>另請參閱  
-[使用聯結查詢 &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/query-with-joins-visual-database-tools.md)  
+[使用聯結查詢 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-with-joins-visual-database-tools.md)  
   
 

@@ -18,18 +18,18 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 65aad0bfb2f6ce9e9ce5987ea47d4858d54c6e9e
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="reconcile-changes-made-by-multiple-users-visual-database-tools"></a>協調多位使用者所做的變更 (Visual Database Tools)
 在多位使用者環境中，可以同時讓多位使用者修改相同的物件。 這樣的情況會發生在當您使用資料表或資料庫圖表設計工具設計物件的結構時，或是發生在 [查詢和檢視設計師] 的 [結果] 窗格中的值。 這樣會產生您需要解決的衝突。  
   
 ## <a name="conflicts-in-the-table-or-database-diagram-designers"></a>在資料表或資料庫圖表設計工具中的衝突  
-例如，另外一位使用者可能會刪除或重新命名您正在 [資料表設計工具] 中使用的相同或相關資料表。 當您嘗試儲存資料表時， [Database Changes Detected Dialog Box &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/database-changes-detected-dialog-box-visual-database-tools.md) 會通知您資料庫已經在您開啟資料表之後經過更新。  
+例如，另外一位使用者可能會刪除或重新命名您正在 [資料表設計工具] 中使用的相同或相關資料表。 當您嘗試儲存資料表時， [偵測到資料庫變更對話方塊 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/database-changes-detected-dialog-box-visual-database-tools.md) 會通知您資料庫已經在您開啟資料表之後經過更新。  
   
 這個對話方塊將同時顯示資料庫物件清單，其中包含儲存資料表時將會受到影響的所有物件。 這個時候您可以採取下列行動：  
   
@@ -63,6 +63,6 @@ ms.lasthandoff: 06/22/2017
     在這種狀況下，您無法變更資料庫。  
   
 ## <a name="see-also"></a>另請參閱  
-[偵測到資料庫變更對話方塊 &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/database-changes-detected-dialog-box-visual-database-tools.md)  
+[偵測到資料庫變更對話方塊 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/database-changes-detected-dialog-box-visual-database-tools.md)  
   
 

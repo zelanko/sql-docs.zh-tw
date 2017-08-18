@@ -19,15 +19,15 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: e64df57000934aca3d532b34a46c799e4a74e542
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="print-query-results-visual-database-tools"></a>列印查詢結果 (Visual Database Tools)
-若要列印查詢結果，可將[結果窗格](../../ssms/visual-db-tools/results-pane-visual-database-tools.md)的內容複製到其他的 Windows 程式，例如 Word Processing 程式，然後格式化並列印。  
+若要列印查詢結果，可將 [結果窗格](../../ssms/visual-db-tools/results-pane-visual-database-tools.md) 的內容複製到其他的 Windows 程式，例如 Word Processing 程式，然後格式化並列印。  
   
 查詢和檢視設計師將查詢結果放入剪貼簿時，會以定位點做為資料行之間的分隔符號，資料列之間的分隔符號則用歸位/換行字元組 (Carriage Return/Line Feed)。  
   
@@ -44,6 +44,6 @@ ms.lasthandoff: 06/22/2017
 5.  格式化並列印出結果。  
   
 ## <a name="see-also"></a>另請參閱  
-[執行查詢的基本作業 &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
+[執行查詢的基本作業 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
   
 

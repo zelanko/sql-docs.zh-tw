@@ -16,11 +16,11 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 0f1b0c2c698e01aac8b8974591843d70488b2ce0
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="index-columns-dialog-box-visual-database-tools"></a>索引資料行對話方塊 (Visual Database Tools)
@@ -36,6 +36,6 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>另請參閱  
 [建立叢集索引](http://msdn.microsoft.com/en-us/47148383-c2c7-4f08-a9e4-7016bf2d1d13)  
 [建立非叢集索引](http://msdn.microsoft.com/en-us/9402029a-1227-46c4-93aa-c2122eb1b943)  
-[索引 - 鍵對話方塊 &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/indexes-keys-dialog-box-visual-database-tools.md)  
+[索引 - 鍵對話方塊 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/indexes-keys-dialog-box-visual-database-tools.md)  
   
 

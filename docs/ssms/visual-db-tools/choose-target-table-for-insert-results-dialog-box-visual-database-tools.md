@@ -17,11 +17,11 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: ad966d13867ed658a9c264cece4a0346b35184e5
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="choose-target-table-for-insert-results-dialog-box-visual-database-tools"></a>選擇插入結果的目標資料表對話方塊 (Visual Database Tools)
@@ -35,6 +35,6 @@ ms.lasthandoff: 06/22/2017
 > 在 [屬性] 視窗中，您可以變更要插入資料列的資料表。  
   
 ## <a name="see-also"></a>另請參閱  
-[建立插入結果查詢 &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/create-insert-results-queries-visual-database-tools.md)  
+[建立插入結果查詢 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-insert-results-queries-visual-database-tools.md)  
   
 

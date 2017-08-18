@@ -17,11 +17,11 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 81ad964781f4d467f27d0693522f601bb86119fc
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="sql-server-management-studio-menu-help"></a>SQL Server Management Studio 功能表說明 [SQL Server]
@@ -31,17 +31,17 @@ ms.lasthandoff: 06/22/2017
   
 [進階儲存選項](../../ssms/menu-help/advanced-save-options.md)  
   
-[選擇 [搜尋資料夾] 對話方塊 &amp;#40;Visual Studio&amp;#41;](../../ssms/menu-help/choose-search-folders-dialog-box-visual-studio.md)  
+[選擇 [搜尋資料夾] 對話方塊 &#40;Visual Studio&#41;](../../ssms/menu-help/choose-search-folders-dialog-box-visual-studio.md)  
   
-[選擇工具箱項目 &amp;#40;維護工作頁面&amp;#41;](../../ssms/menu-help/choose-toolbox-items-maintenance-tasks-page.md)  
+[選擇工具箱項目 &#40;維護工作頁面&#41;](../../ssms/menu-help/choose-toolbox-items-maintenance-tasks-page.md)  
   
-[自訂 &amp;#40;命令頁面&amp;#41;](../../ssms/menu-help/customize-commands-page.md)  
+[自訂 &#40;命令頁面&#41;](../../ssms/menu-help/customize-commands-page.md)  
   
-[自訂 &amp;#40;工具列頁面&amp;#41;](../../ssms/menu-help/customize-toolbars-page.md)  
+[自訂 &#40;工具列頁面&#41;](../../ssms/menu-help/customize-toolbars-page.md)  
   
 [外部工具](../../ssms/menu-help/external-tools.md)  
   
-[開啟檔案 &amp;#40;新檔案&amp;#41;](../../ssms/menu-help/open-with-new-file.md)  
+[開啟檔案 &#40;新檔案&#41;](../../ssms/menu-help/open-with-new-file.md)  
   
 [選項對話方塊 F1 說明](../../ssms/menu-help/options-dialog-boxes-f1-help.md)  
   
@@ -49,6 +49,6 @@ ms.lasthandoff: 06/22/2017
   
 [儲存變更](../../ssms/menu-help/save-changes.md)  
   
-[Windows 對話方塊 &amp;#40;Microsoft 文件總管說明&amp;#41;](../../ssms/menu-help/windows-dialog-box-microsoft-document-explorer-help.md)  
+[Windows 對話方塊 &#40;Microsoft 文件總管說明&#41;](../../ssms/menu-help/windows-dialog-box-microsoft-document-explorer-help.md)  
   
 

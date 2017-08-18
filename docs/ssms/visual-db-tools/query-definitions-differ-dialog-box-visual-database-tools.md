@@ -18,11 +18,11 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 630593a904b4fb28e39e94a81e02481c0e6a8e1d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="query-definitions-differ-dialog-box-visual-database-tools"></a>查詢定義差異對話方塊 (Visual Database Tools)
@@ -55,6 +55,6 @@ ms.lasthandoff: 06/22/2017
 > 如果陳述式正確無誤，但是 [查詢和檢視設計師] 無法提供圖形方面的支援，這個陳述式還是可以執行，只是無法顯示在 [圖表] 和 [準則] 窗格中。 例如，如果您輸入聯合查詢 (Union Query)，陳述式可以執行，但不會顯示在其他窗格中。  
   
 ## <a name="see-also"></a>另請參閱  
-[查詢和檢視表設計工具 &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md)  
+[查詢和檢視表設計工具 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md)  
   
 

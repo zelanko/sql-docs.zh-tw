@@ -22,11 +22,11 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 5c104e70fc7b2e7065f9aa43a16aac88707391ea
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="create-and-attach-schedules-to-jobs"></a>建立及附加排程至作業
@@ -92,7 +92,7 @@ ms.lasthandoff: 06/22/2017
 |**說明**|**主題**|  
 |描述如何建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 作業的排程。|[Create a Schedule](../../ssms/agent/create-a-schedule.md)|  
 |描述如何排程 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 作業。|[排程作業](../../ssms/agent/schedule-a-job.md)|  
-|說明如何定義伺服器的 CPU 閒置條件。|[設定 CPU 閒置與持續時間 &amp;#40;SQL Server Management Studio&amp;#41;](../../ssms/agent/set-cpu-idle-time-and-duration-sql-server-management-studio.md)|  
+|說明如何定義伺服器的 CPU 閒置條件。|[設定 CPU 閒置與持續時間 &#40;SQL Server Management Studio&#41;](../../ssms/agent/set-cpu-idle-time-and-duration-sql-server-management-studio.md)|  
   
 ## <a name="see-also"></a>另請參閱  
 [sp_help_jobschedule](http://msdn.microsoft.com/en-us/2cded902-9272-4667-ac4b-a4f95a9f008e)  

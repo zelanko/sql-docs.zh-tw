@@ -17,11 +17,11 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: b9bb3d6b6f64dae6aa3fc79494fd85730b380daf
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="save-dialog-box-visual-database-tools"></a>儲存對話方塊 (Visual Database Tools)
@@ -38,6 +38,6 @@ ms.lasthandoff: 06/22/2017
 顯示 [另存新檔] 對話方塊，提示您輸入儲存列出資料表的文字檔的位置。 此檔案提供一份資料表清單，其中包含受您所做變更影響的資料表。  
   
 ## <a name="see-also"></a>另請參閱  
-[設計資料表 &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)  
+[設計資料表 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)  
   
 

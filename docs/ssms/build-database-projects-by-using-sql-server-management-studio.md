@@ -19,11 +19,11 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: a3487f9048571511460bc22b5c0b605592ba74f5
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="build-database-projects-by-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 建置資料庫專案
@@ -70,6 +70,6 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>另請參閱  
 [使用 SQL Server Management Studio](../ssms/use-sql-server-management-studio.md)  
 [利用 SQL Server Management Studio 來撰寫、分析和編輯查詢](http://msdn.microsoft.com/en-us/062051e4-4b77-4969-98ae-d2547c24ce3e)  
-[方案 &amp;#40;SQL Server Management Studio&amp;#41;](../ssms/solution/solutions-sql-server-management-studio.md)  
+[方案 &#40;SQL Server Management Studio&#41;](../ssms/solution/solutions-sql-server-management-studio.md)  
   
 

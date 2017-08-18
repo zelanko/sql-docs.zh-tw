@@ -25,11 +25,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: dd01c244e33751b49c4bd811a879eedd500be957
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="sql-editor-visual-database-tools"></a>SQL 編輯器 (Visual Database Tools)
@@ -50,9 +50,9 @@ SQL 編輯器提供許多實用的 SQL 文字編輯功能，包括：
 > [!NOTE]  
 > [SQL 編輯器] 沒有 IntelliSense 提示。  
   
-在編輯 SQL 陳述式時，某些 Transact-SQL 陳述式包含在單一細線條包圍的方塊中。 這樣有助於將 SQL 程式碼分為各個命令區段，並且辨識出可使用 [查詢設計工具] 以圖形方式設計的 SQL 陳述式區塊。 如需使用查詢設計工具的詳細資訊，請參閱[設計查詢和檢視使用說明主題 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)。  
+在編輯 SQL 陳述式時，某些 Transact-SQL 陳述式包含在單一細線條包圍的方塊中。 這樣有助於將 SQL 程式碼分為各個命令區段，並且辨識出可使用 [查詢設計工具] 以圖形方式設計的 SQL 陳述式區塊。 如需使用查詢設計工具的詳細資訊，請參閱 [設計查詢和檢視使用說明主題 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)。  
   
 ## <a name="see-also"></a>另請參閱  
-[設計查詢和檢視使用說明主題 &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
+[設計查詢和檢視使用說明主題 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
 

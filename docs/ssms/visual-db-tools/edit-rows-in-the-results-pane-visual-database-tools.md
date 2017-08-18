@@ -21,15 +21,15 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: ed3ab23388672cda824ad3ccce6e1275908c028d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="edit-rows-in-the-results-pane-visual-database-tools"></a>編輯結果窗格中的資料列 (Visual Database Tools)
-在大多數的狀況下，您都可以編輯[結果窗格](../../ssms/visual-db-tools/results-pane-visual-database-tools.md)中的資料。 如需變更資料的詳細資訊，請參閱[更新結果的規則 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/rules-for-updating-results-visual-database-tools.md) 和[使用結果窗格中的資料 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)。  
+在大多數的狀況下，您都可以編輯 [結果窗格](../../ssms/visual-db-tools/results-pane-visual-database-tools.md)中的資料。 如需變更資料的詳細資訊，請參閱 [更新結果的規則 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/rules-for-updating-results-visual-database-tools.md) 和 [使用結果窗格中的資料 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)中的資料。  
   
 ### <a name="to-edit-data-in-the-results-pane"></a>若要編輯結果窗格中的資料  
   
@@ -45,7 +45,7 @@ ms.lasthandoff: 06/22/2017
 4.  離開資料列便會儲存您的變更。  
   
 ## <a name="see-also"></a>另請參閱  
-[使用結果窗格中的資料 &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)  
-[更新結果的規則 &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/rules-for-updating-results-visual-database-tools.md)  
+[使用結果窗格中的資料 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)  
+[更新結果的規則 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/rules-for-updating-results-visual-database-tools.md)  
   
 

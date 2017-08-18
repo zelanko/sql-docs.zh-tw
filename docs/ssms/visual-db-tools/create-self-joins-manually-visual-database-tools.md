@@ -18,11 +18,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: a44398daffbf1ab25f52430d2b27a0e822427db1
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="create-self-joins-manually-visual-database-tools"></a>手動建立自我聯結 (Visual Database Tools)
@@ -129,7 +129,7 @@ Cheryl Carson       Abraham Bennet
 7.  指定查詢的其他選項，例如輸出資料行、搜尋條件和排序順序。  
   
 ## <a name="see-also"></a>另請參閱  
-[自動建立自我聯結 &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/create-self-joins-automatically-visual-database-tools.md)  
-[使用聯結查詢 &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/query-with-joins-visual-database-tools.md)  
+[自動建立自我聯結 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-self-joins-automatically-visual-database-tools.md)  
+[使用聯結查詢 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-with-joins-visual-database-tools.md)  
   
 

@@ -22,11 +22,11 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 39d9220dc13546a5a1e9c95d034b5a5cf0ac43b5
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="design-database-diagrams-visual-database-tools"></a>設計資料庫圖表 (Visual Database Tools)
@@ -43,7 +43,7 @@ ms.lasthandoff: 06/22/2017
   
 **標題列** ：標題列顯示資料表的名稱  
   
-如果您已經修改某個資料表但尚未儲存，該資料表名稱的後方將出現星號 (*) 表示尚未儲存變更。 如需儲存修改過的資料表和圖表的詳細資訊，請參閱 [Work with Database Diagrams &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
+如果您已經修改某個資料表但尚未儲存，該資料表名稱的後方將出現星號 (*) 表示尚未儲存變更。 如需儲存修改過的資料表和圖表的詳細資訊，請參閱 [使用資料庫圖表 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
   
 **資料列選取器** ：您可以按一下資料列選取器，選取資料表中的資料庫資料行。 如果該資料行位於資料表的主索引鍵，資料列選取器將顯示索引鍵符號。 如需主索引鍵的詳細資訊，請參閱 [使用索引鍵 (Visual Database Tools)](http://msdn.microsoft.com/en-us/31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd)。  
   
@@ -61,19 +61,19 @@ ms.lasthandoff: 06/22/2017
 **相關資料表** ：關聯性行將指出兩個表格之間是否存在外部索引鍵關聯性。 如果是一對多關聯性，外部索引鍵表即為該行 ∞ 符號旁的資料表。 如果該行的兩個結束點都與同一個資料表連接，則該關聯性即為自反關聯性 (Reflexive Relationship)。 如需詳細資訊，請參閱[繪製自反關聯性 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/draw-reflexive-relationships-visual-database-tools.md)。  
   
 ## <a name="in-this-section"></a>本章節內容  
-[了解資料庫圖表擁有權 &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/understand-database-diagram-ownership-visual-database-tools.md)  
+[了解資料庫圖表擁有權 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/understand-database-diagram-ownership-visual-database-tools.md)  
   
-[在資料庫圖表設計工具中導覽 &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/navigate-in-database-diagram-designer-visual-database-tools.md)  
+[在資料庫圖表設計工具中導覽 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/navigate-in-database-diagram-designer-visual-database-tools.md)  
   
-[設定資料庫圖表設計工具 &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/set-up-database-diagram-designer-visual-database-tools.md)  
+[設定資料庫圖表設計工具 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/set-up-database-diagram-designer-visual-database-tools.md)  
   
-[升級舊版的資料庫圖表 &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/upgrade-database-diagrams-from-previous-editions-visual-database-tools.md)  
+[升級舊版的資料庫圖表 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/upgrade-database-diagrams-from-previous-editions-visual-database-tools.md)  
   
-[開啟資料庫圖表設計工具 &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/open-database-diagram-designer-visual-database-tools.md)  
+[開啟資料庫圖表設計工具 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/open-database-diagram-designer-visual-database-tools.md)  
   
 ## <a name="see-also"></a>另請參閱  
-[使用資料庫圖表 &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
-[使用資料庫圖表中的資料表 &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/work-with-tables-in-database-diagram-visual-database-tools.md)  
-[使用圖表配置 &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/work-with-diagram-layout-visual-database-tools.md)  
+[使用資料庫圖表 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
+[使用資料庫圖表中的資料表 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-tables-in-database-diagram-visual-database-tools.md)  
+[使用圖表配置 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-diagram-layout-visual-database-tools.md)  
   
 
