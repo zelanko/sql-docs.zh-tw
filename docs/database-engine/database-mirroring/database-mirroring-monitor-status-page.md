@@ -1,31 +1,36 @@
 ---
 title: "資料庫鏡像監視器 (狀態頁面) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.dbmmonitor.status.f1"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.dbmmonitor.status.f1
 ms.assetid: 4f64b4e1-89e9-4827-98fa-b92c3dc73b48
 caps.latest.revision: 36
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: faa2f672bccc678270d6a7387d27b40e73688425
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 資料庫鏡像監視器 (狀態頁面)
+# <a name="database-mirroring-monitor-status-page"></a>資料庫鏡像監視器 (狀態頁面)
   這個唯讀頁面會針對目前在導覽樹狀目錄中選取的資料庫，顯示其主體和鏡像伺服器執行個體的最新鏡像狀態。 如果有關某個執行個體的資訊目前無法使用，則 [狀態] 方格中與該執行個體對應的某些資料格就會呈現灰色並顯示 [未知]。  
   
  **若要使用 SQL Server Management Studio 監視資料庫鏡像**  
   
 -   [啟動資料庫鏡像監視器 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
-## 選項  
+## <a name="options"></a>選項  
  **狀態**  
  顯示包含了各個主體和鏡像伺服器執行個體之最新高層級鏡像狀態的方格。 [狀態] 方格中的資料列順序如下：  
   
@@ -43,8 +48,8 @@ caps.handback.revision: 36
 |**見證連接**|見證的連接狀態，前面會有一個狀態圖示，可為 [未知]、[已連接] 或 [已中斷連接]。|  
 |**記錄**|按一下即可顯示伺服器執行個體上的鏡像記錄。 這時會開啟 [資料庫鏡像記錄] 對話方塊，顯示特定伺服器執行個體上某個鏡像資料庫的鏡像狀態記錄和統計資料。<br /><br /> 如果監視器未連接到伺服器執行個體，則 [記錄] 按鈕會呈暗灰色。|  
   
- **主體記錄 (** \<時間*>* **)**  
- 主體伺服器執行個體上的記錄狀態，以伺服器執行個體的本地時間為準，此時間是以 *\<時間>* 來表示。 會顯示下列參數：  
+ **主體記錄 (** *\<時間>* **)**  
+ 主體伺服器執行個體上的記錄狀態，以伺服器執行個體的本地時間為準，此時間是以 \<時間> 來表示。 會顯示下列參數：  
   
  **未傳送的記錄**  
  在傳送佇列中等待的記錄量 (以 KB 為單位)。  
@@ -53,7 +58,7 @@ caps.handback.revision: 36
  傳送佇列中最舊尚未傳送之交易的存在時間。 這項交易的存在時間會指出尚未傳送到鏡像伺服器執行個體的交易分鐘數。 這個值有助於從時間方面來測量資料遺失的可能性。  
   
  **傳送記錄的時間 (估計)**  
- 主體伺服器執行個體將目前在傳送佇列中的記錄傳送到鏡像伺服器執行個體所需的大約時間量 (*傳送速率*)。 由於內送交易的速率可能會有極大的差異，因此傳送記錄的時間只是估計值。 但是，傳送速率對於粗略估計手動容錯移轉所需的時間可能會很有用。  
+ 主體伺服器執行個體將目前在傳送佇列中的記錄傳送到鏡像伺服器執行個體所需的大約時間量 ( *傳送速率*)。 由於內送交易的速率可能會有極大的差異，因此傳送記錄的時間只是估計值。 但是，傳送速率對於粗略估計手動容錯移轉所需的時間可能會很有用。  
   
  **目前的傳送速率**  
  將交易傳送到鏡像伺服器執行個體的速率 (以每秒 KB 數為單位)。  
@@ -61,8 +66,8 @@ caps.handback.revision: 36
  **新交易的目前速率**  
  將內送交易輸入到主體記錄中的速率 (以每秒 KB 數為單位)。 若要判斷鏡像是落後、超前，還是趕上進度，請將這個值與 **[傳送記錄的時間 (估計)]** 值加以比較。  
   
- **鏡像記錄 (** \<時間*>* **)**  
- 鏡像伺服器執行個體上的記錄狀態，以伺服器執行個體的本地時間為準，此時間是以 \<時間*>* 來表示。 會顯示下列參數：  
+ **鏡像記錄 (** \<時間> **)**  
+ 鏡像伺服器執行個體上的記錄狀態，以伺服器執行個體的本地時間為準，此時間是以 \<時間> 來表示。 會顯示下列參數：  
   
  **未還原的記錄**  
  在重做佇列中等待的記錄量 (以 KB 為單位)。  
@@ -80,7 +85,7 @@ caps.handback.revision: 36
  傳送與還原到目前時間為止已在主體伺服器上認可之所有記錄所需的時間。 由於傳送與還原可以平行操作，因此這個時間值可能會小於 [傳送記錄的時間 (估計)] 和 [還原記錄的時間 (估計)] 欄位值的總和。 不過，這個估計值確實可以預測在處理傳送佇列中的積存記錄時，如果要傳送與還原在主體伺服器上所認可之新交易所需的時間。  
   
  **見證位址**  
- 見證伺服器執行個體的網路位址。 如需此位址格式的詳細資訊，請參閱[指定伺服器網路位址 &#40;資料庫鏡像&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)。  
+ 見證伺服器執行個體的網路位址。 如需此位址格式的資訊，請參閱[指定伺服器網路位址 &#40;資料庫鏡像&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)。  
   
  **作業模式**  
  資料庫鏡像工作階段的作業模式：  
@@ -91,14 +96,14 @@ caps.handback.revision: 36
   
 -   **具有自動容錯移轉的高安全性 (同步)**  
   
-## 備註  
- **dbm_monitor** 固定資料庫角色的成員可以使用「資料庫鏡像監視器」或 **sp_dbmmonitorresults** 預存程序，檢視現有的鏡像狀態。 但是這些使用者無法更新狀態資料表。 它們必須透過 [資料庫鏡像監視器作業] 來定期更新狀態資料表。 若要了解顯示狀態的時間，使用者可以查看 [主體記錄 (*\<時間>*)] 和 [鏡像記錄 (\<時間*>*] 標籤中的時間。  
+## <a name="remarks"></a>備註  
+ **dbm_monitor** 固定資料庫角色的成員可以使用「資料庫鏡像監視器」或 **sp_dbmmonitorresults** 預存程序，檢視現有的鏡像狀態。 但是這些使用者無法更新狀態資料表。 它們必須透過 [資料庫鏡像監視器作業] 來定期更新狀態資料表。 若要了解顯示狀態的時間，使用者可以查看 **[主體記錄 (***\<時間>***)]** 和 **[鏡像記錄 (***\<時間>***)]** 標籤中的時間。  
   
  如果這項作業不存在，或者 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 已停止，則狀態將會越來越過時，因此可能再也無法反映鏡像工作階段的組態。 例如，在容錯移轉之後，夥伴可能看起來像是共用相同的角色 (主體或鏡像)，或者目前的主體伺服器可能會顯示為鏡像，而目前的鏡像伺服器則顯示為主體。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [啟動資料庫鏡像監視器 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
  [監視資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
- [啟動設定資料庫鏡像安全性精靈 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start the configuring database mirroring security wizard.md)  
+ [啟動設定資料庫鏡像安全性精靈 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  
   
   
