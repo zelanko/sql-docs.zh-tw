@@ -28,7 +28,7 @@ ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="implement-a-custom-conflict-resolver-for-a-merge-article"></a>針對合併發行項實作自訂衝突解析程式
-  本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或是以 COM 為基礎的自訂解析程式 [!INCLUDE[tsql](../../includes/tsql-md.md)] ，在 [](../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md)中針對合併發行項實作自訂衝突解析程式。  
+  本主題描述如何 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]使用[!INCLUDE[tsql](../../includes/tsql-md.md)] [或是以 COM 為基礎的自訂解析程式](../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md)，在中針對合併發行項實作自訂衝突解析程式。  
   
  **本主題內容**  
   
