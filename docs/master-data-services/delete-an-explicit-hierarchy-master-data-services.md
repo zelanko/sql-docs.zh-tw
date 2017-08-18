@@ -48,14 +48,14 @@ ms.lasthandoff: 08/02/2017
   
 4.  按一下 [明確階層] 。  
   
-5.  在 [Manage Explicit Hierarchy]  (管理明確階層) 頁面上，按一下您想要刪除的明確階層。  
+5.  在 [Manage Explicit Hierarchy] \ (管理明確階層) 頁面上，按一下您想要刪除的明確階層。  
   
 6.  按一下 **[編輯]**。  
   
 7.  在確認對話方塊中按一下 **[確定]**。  
   
 ## <a name="see-also"></a>另請參閱  
- [建立明確階層 & #40;Master Data services& #41;](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)   
- [明確階層 & #40;Master Data services& #41;](../master-data-services/explicit-hierarchies-master-data-services.md)  
+ [建立明確階層 &#40;Master Data services&#41;](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)   
+ [明確階層 &#40;Master Data services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)  
   
   

@@ -35,7 +35,7 @@ SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Fold
 ## <a name="data-feed-publishing-components"></a>資料摘要發行元件  
  資料摘要發行元件包括下列元件︰OLE DB Provider for SSIS、資料流目的地和 SSIS 封裝發行精靈。 此精靈可讓您發行 SSIS 封裝做為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫執行個體中的 SQL 檢視。 此精靈會協助您建立連結的伺服器來使用 OLE DB Provider for SSIS，以及一個 SQL 檢視來表示連結伺服器上的查詢。 您可以執行檢視，來查詢 SSIS 封裝的結果做為表格式資料集。  
   
- 若要確認 SSISOLEDB 提供者已安裝，可在 SQL Server Management Studio 中，展開 [伺服器物件] 、[連結的伺服器] 、[提供者] ，然後確認您看到 **SSISOLEDB** 提供者。 按兩下 [SSISOLEDB]、啟用 [允許 Inprocess] (若未啟用)，然後按一下 [確定]。  
+ 若要確認 SSISOLEDB 提供者已安裝，可在 SQL Server Management Studio 中，展開 [伺服器物件] 、[連結的伺服器] 、[提供者] ，然後確認您看到 **SSISOLEDB** 提供者。 按兩下 [SSISOLEDB]、啟用 [允許 Inprocess] \(若未啟用)，然後按一下 [確定]。  
   
 ## <a name="publish-an-ssis-package-as-a-sql-view"></a>發行 SSIS 封裝做為 SQL 檢視  
  下列程序說明發行 SSIS 封裝做為 SQL 檢視的步驟。  
