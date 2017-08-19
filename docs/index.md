@@ -4,10 +4,10 @@ hide_bc: true
 title: "Microsoft SQL 文件 | Microsoft Docs"
 description: "深入了解 SQL"
 ms.translationtype: HT
-ms.sourcegitcommit: 2800075091835b2d6f2b07ee34e9b897fe86634e
-ms.openlocfilehash: ec933d582956a21fee23173f5c08bec3d1fa807e
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: b280992dadacae7b54d94ba90caadff878f1cd4c
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 
@@ -247,11 +247,7 @@ ms.lasthandoff: 08/17/2017
                                                 <ul>
                                                     <li><a href="http://sqldatabase-migrationpreview.azurewebsites.net">Azure 資料庫移轉服務 (私人預覽)</a></li>
                                                     <li><a href="https://www.microsoft.com/download/details.aspx?id=53595">Data Migration Assistant</a></li>
-                                                    <li><a href="https://www.microsoft.com/en-us/download/details.aspx?id=54255">SSMA for Access</a></li>
-                                                    <li><a href="https://www.microsoft.com/en-us/download/details.aspx?id=54254">SSMA for DB2</a></li>
-                                                    <li><a href="https://www.microsoft.com/en-us/download/details.aspx?id=54257">SSMA for MySql</a></li>
-                                                    <li><a href="https://www.microsoft.com/en-us/download/details.aspx?id=54258">SSMA for Oracle</a></li>
-                                                    <li><a href="https://www.microsoft.com/en-us/download/details.aspx?id=54256">SSMA for SAP ASE</a></li>
+                                                    <li><a href="/sql/ssma/sql-server-migration-assistant">SQL Server 移轉小幫手</a></li>
                                                 </ul>
                                                 <h4 class="likeAnH3" style="margin: 1rem 0px;">將您的資料庫移轉至 Azure</h4>
                                                 <ul>
