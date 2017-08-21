@@ -15,10 +15,10 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: b2f5d26757bd436cfd21076b2a4899376ee60c9f
-ms.openlocfilehash: cd57edcb06ea6d9baced3ce5765743769caba04e
+ms.sourcegitcommit: 04245fd42b770129ce4074f8a4ae8377b10cf384
+ms.openlocfilehash: 6494051851601ead6fb3d51e1688b8f1320ed5d4
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/04/2017
+ms.lasthandoff: 08/15/2017
 
 ---
 # <a name="sql-server-2017-release-notes"></a>SQL Server 2017 版本資訊
@@ -29,7 +29,7 @@ ms.lasthandoff: 08/04/2017
 [![從評估中心下載。](../analysis-services/media/download.png)](http://go.microsoft.com/fwlink/?LinkID=829477)  從**[評估中心](http://go.microsoft.com/fwlink/?LinkID=829477)**下載 [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]
 
 ## <a name="sql-server-2017-release-candidate-rc2---august-2017"></a>SQL Server 2017 候選版 (RC2 - 2017 年 8 月)
-此版本沒有 Windows 上的 SQL Servers 版本資訊。 請參閱 [Linux 上的 SQL Server 版本資訊](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-release-notes) \(英文\)。
+此版本沒有 Windows 上的 SQL Server 版本資訊。 請參閱 [Linux 上的 SQL Server 版本資訊](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-release-notes) \(英文\)。
 
 ![horizontal_bar](../sql-server/media/horizontal-bar.png)
 ## <a name="sql-server-2017-release-candidate-rc1---july-2017"></a>SQL Server 2017 候選版 (RC1 - 2017 年 7 月)
@@ -120,3 +120,4 @@ ms.lasthandoff: 08/04/2017
 - [機器學習服務的已知問題](../advanced-analytics/known-issues-for-sql-server-machine-learning-services.md)
 
 ![MS_Logo_X-Small](../sql-server/media/ms-logo-x-small.png)
+

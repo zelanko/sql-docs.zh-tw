@@ -1,7 +1,7 @@
 ---
 title: "連接到伺服器 (連接屬性頁面) 資料庫引擎 | Microsoft Docs"
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 08/14/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -17,26 +17,25 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 22cef3465036947ad6389b41c4c80bfc5ef965cb
+ms.translationtype: HT
+ms.sourcegitcommit: 5316f9d560f7e15bb0699780f67aff641067b203
+ms.openlocfilehash: 67f517ace6307fc4ad5afaf068c04ba6039d1c98
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/15/2017
 
 ---
 # <a name="connect-to-server-connection-properties-page-database-engine"></a>連接到伺服器 (連接屬性頁面) Database Engine
 連接到 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] 執行個體或在 [已註冊的伺服器] 中註冊 [!INCLUDE[ssDE](../../includes/ssde_md.md)] 時，請使用這個索引標籤來檢視或指定選項。 連接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)] 執行個體時，[連接] 和 [選項] 才會出現在這個對話方塊中。 註冊 [!INCLUDE[ssDE](../../includes/ssde_md.md)] 時，[測試] 和 [儲存] 才會出現在這個對話方塊中。  
   
-## <a name="options"></a>選項。  
 **連接到資料庫**  
-從清單中選取要連接的資料庫。 如果您選取 **<default>**，您將會連接到伺服器的預設資料庫。 如果您選取 **<Browse server>**，您就可以瀏覽伺服器來尋找您要連接的資料庫。  
+從清單中選取要連接的資料庫。 如果您選取 **<default>**，就會連線到伺服器的預設資料庫。 如果您選取 **<Browse server>**，您就可以瀏覽伺服器來尋找您要連接的資料庫。  
   
 當您透過 [!INCLUDE[ssSDSfull](../../includes/sssdsfull_md.md)] 連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Database Engine 執行個體時，您必須使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 驗證，並在 [連接到伺服器] 對話方塊的 [連接屬性] 索引標籤上指定資料庫。 請務必選取 [加密連接] 核取方塊。  
   
-根據預設，[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 會連接到 **master**。 如果您指定使用者資料庫，您只會在物件總管中看到該資料庫與其物件。 如果您連接到 **master**，您將能夠看到所有資料庫。 如需詳細資訊，請參閱 [Windows Azure SQL Database 概觀](http://go.microsoft.com/fwlink/?LinkId=163948)。  
+根據預設， [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 會連接到 **master**。 連線到 [!INCLUDE[ssSDS](../../includes/sssds_md.md)] 時，如果您指定使用者資料庫，就只會看到該資料庫及其在物件總管中的物件。 如果您連線到 **master**，您將能夠看到所有資料庫。 如需詳細資訊，請參閱 [Windows Azure SQL Database 概觀](http://go.microsoft.com/fwlink/?LinkId=163948)。  
   
 **網路通訊協定**  
-從清單中選取通訊協定。 可用的用戶端通訊協定就是您在 [電腦管理] 中使用 [用戶端網路組態] 所設定的通訊協定。  
+從清單中選取通訊協定。 可用的用戶端通訊協定會使用 [電腦管理] 中的 [用戶端網路組態] 進行設定。  
   
 **網路封包大小**  
 輸入要傳送之網路封包的大小。 預設值是 4096 個位元組。  
@@ -59,6 +58,9 @@ ms.lasthandoff: 06/22/2017
   
 -   在 [檔案] 功能表上，當您按一下 [新增] 然後按一下 [Database Engine 查詢] 時，您在 [連接到伺服器] 對話方塊內指定的色彩會套用到 [查詢編輯器] 視窗。  
   
+**AD 網域名稱或租用戶識別碼**  
+使用 [Active Directory - 與 MFA 通用] 驗證來連線時，請指定驗證的網域。 此選項僅在使用 SSMS 17.2 版或更新版本時才可使用。 
+
 **全部重設**  
 將所有手動輸入的連接屬性值取代成預設值。  
   
