@@ -15,11 +15,11 @@ caps.latest.revision: 23
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b16232d4a183a75dd9cf76e57ca0751df19e3a2f
+ms.translationtype: HT
+ms.sourcegitcommit: 01f20dd99963b0bb1be86ddc3e173aef6fb3e8b3
+ms.openlocfilehash: 16e5ac5c58c00568541aa10352b11017c1bd9d3e
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="columnstore-indexes---query-performance"></a>資料行存放區索引 - 查詢效能
@@ -116,13 +116,17 @@ ms.lasthandoff: 06/22/2017
  ¹適用於 SQL Server 2016、SQL Database V12 Premium Edition 和 SQL 資料倉儲    
     
 ### <a name="aggregate-pushdown"></a>彙總下推    
- 彙總計算從 SCAN 擷取符合之資料列並在「批次模式」中彙總其值的一般執行路徑。  儘管這提供良好的效能，但在 SQL Server 2016 中，可將彙總作業推入 SCAN 節點，若符合下列條件，則能夠以依據重要順序提升「批次模式」執行上彙總運算的效能    
-    
--   支援的彙總運算子有 MIN、MAX、SUM、COUNT、AVG    
-    
--   支援任何 <= 64 位元的資料類型。  例如，支援 Bigint 因為其大小為 8 個位元組，但小數點 (38.6) 則不支援，因為其大小為 17 個位元組。 此外，不支援字串    
-    
--   彙總運算子必須在 SCAN 節點頂端或包含 group by 的 SCAN 節點頂端    
+ 彙總計算從 SCAN 擷取符合之資料列並在「批次模式」中彙總其值的一般執行路徑。  儘管這提供良好的效能，但在 SQL Server 2016 中，可將彙總作業推入 SCAN 節點，若符合下列條件，則能夠以依據重要順序提升「批次模式」執行上彙總運算的效能 
+ 
+-    彙總是 MIN、MAX、SUM、COUNT 和 COUNT(*)。 
+-  彙總運算子必須在 SCAN 節點頂端或包含 group by 的 SCAN 節點頂端。
+-  此彙總不是相異彙總。
+-  彙總資料行不是字串資料行。
+-  彙總資料行不是虛擬資料行。 
+-  輸入和輸出資料類型必須是下列其中一項，必須納入 64 個位元。
+    -  tiny int、int、big int、small int、bit
+    -  有效位數 <= 18 的 small money、money、decimal 和 numeric
+    -  small date、date、datetime、datetime2、time
     
  彙總下推可透過有效彙總快取相容執行中壓縮過/編碼過的資料，及透過利用 SIMD 來進一步加速。    
     

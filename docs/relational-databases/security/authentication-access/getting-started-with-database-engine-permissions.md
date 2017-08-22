@@ -16,11 +16,11 @@ caps.latest.revision: 15
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 16d16229a267564977addc768e04e804d0b163cf
+ms.translationtype: HT
+ms.sourcegitcommit: 01f20dd99963b0bb1be86ddc3e173aef6fb3e8b3
+ms.openlocfilehash: 376e591e28bbdddbd635392b24c3d6652f3bd94d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>資料庫引擎權限使用者入門
@@ -168,7 +168,7 @@ GRANT CONTROL ON DATABASE::SalesDB TO Ted;
  如需顯示 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 主體與伺服器和資料庫物件間關係的說明圖，請參閱[權限階層 &#40;Database Engine&#41;](../../../relational-databases/security/permissions-hierarchy-database-engine.md)。  
   
 ## <a name="permissions-vs-fixed-server-and-fixed-database-roles"></a>權限與固定伺服器與固定資料庫角色  
- 固定伺服器角色與固定資料庫角色的權限近似，但並非完全相同的細微權限。 例如， `sysadmin` 固定伺服器角色的成員具有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體的所有權限，這是因為其是以 `CONTROL SERVER` 權限登入。 不過，授與 `CONTROL SERVER` 權限並不會登入 sysadmin 固定伺服器角色成員，而新增登入至  `sysadmin` 固定伺服器角色並不會明確授與登入  `CONTROL SERVER` 權限。 有時，預存程序在檢查權限時會檢查固定角色，但不會檢查細微權限。 例如，卸離資料庫需要具有 `db_owner` 固定資料庫角色的成員資格。 對等的 `CONTROL DATABASE` 權限不足。 這兩個系統採平行方式運作，但彼此鮮少互動。 Microsoft 建議盡可能使用最新且更細微的權限系統，來取代固定角色。  
+ 固定伺服器角色與固定資料庫角色的權限近似，但並非完全相同的細微權限。 例如， `sysadmin` 固定伺服器角色的成員具有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體的所有權限，這是因為其是以 `CONTROL SERVER` 權限登入。 不過，授與 `CONTROL SERVER` 權限並不會登入 sysadmin 固定伺服器角色成員，而新增登入至 `sysadmin` 固定伺服器角色並不會明確授與登入 `CONTROL SERVER` 權限。 有時，預存程序在檢查權限時會檢查固定角色，但不會檢查細微權限。 例如，卸離資料庫需要具有 `db_owner` 固定資料庫角色的成員資格。 對等的 `CONTROL DATABASE` 權限不足。 這兩個系統採平行方式運作，但彼此鮮少互動。 Microsoft 建議盡可能使用最新且更細微的權限系統，來取代固定角色。
   
 ## <a name="monitoring-permissions"></a>監視權限  
  下列檢視會傳回安全性資訊。  
