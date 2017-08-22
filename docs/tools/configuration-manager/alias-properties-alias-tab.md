@@ -26,7 +26,7 @@ ms.lasthandoff: 08/02/2017
 # <a name="ltaliasgt-properties-alias-tab"></a>&lt;別名&gt;屬性 （別名索引標籤）
   別名是可用於進行連接的替代名稱。 別名會封裝連接字串的必要元素，並以使用者選擇的名稱來公開這些元素。 使用 [\<Alias name> Properties (<別名名稱> 內容)] 對話方塊的 [別名] 頁面來指定別名的連接字串元素。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **別名名稱**  
  您想要用來代表這個連接的名稱 (別名)。  
   
@@ -39,7 +39,7 @@ ms.lasthandoff: 08/02/2017
  **Server**  
  要連接之目標 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [建立使用共用的記憶體通訊協定有效連接字串](../../tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md)   
  [建立有效的連接字串使用 TCP IP](../../tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)   
  [建立有效的連接字串使用具名的管道](http://msdn.microsoft.com/library/90930ff2-143b-4651-8ae3-297103600e4f)  
