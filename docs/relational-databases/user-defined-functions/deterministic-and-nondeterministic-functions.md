@@ -1,7 +1,7 @@
 ---
 title: "決定性與非決定性函式 | Microsoft Docs"
 ms.custom: 
-ms.date: 09/28/2016
+ms.date: 08/26/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -20,11 +20,11 @@ caps.latest.revision: 43
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cd6393571f06ba7b73f0b52bcfe8bc218279c1af
+ms.translationtype: HT
+ms.sourcegitcommit: 4d56a0bb3893d43943478c6d5addb719ea32bd10
+ms.openlocfilehash: fe23cb7ab3fbc0461f0c0853aedaa4444e4bb543
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/16/2017
 
 ---
 # <a name="deterministic-and-nondeterministic-functions"></a>決定性與非決定性函數
@@ -90,16 +90,16 @@ ms.lasthandoff: 06/22/2017
 |CURRENT_TIMESTAMP|RAND|  
 |DENSE_RANK|RANK|  
 |FIRST_VALUE|ROW_NUMBER|   
-||TEXTPTR|  
+|FORMAT|TEXTPTR|  
   
 ## <a name="calling-extended-stored-procedures-from-functions"></a>從函數呼叫擴充預存程序  
- 呼叫擴充預存程序的函數是不具決定性的，因為擴充預存程序可能對資料庫造成副作用。 副作用是變更資料庫的全域狀態 (例如更新資料表)，或變更檔案或網路這類外部資源 (例如修改檔案或傳送電子郵件訊息)。 從使用者自訂函數執行擴充預存程序時不應該依靠傳回一致的結果集。 不建議您使用會對資料庫造成副作用的使用者自訂函數。  
+ 呼叫擴充預存程序的函數是不具決定性的，因為擴充預存程序可能對資料庫造成副作用。 副作用是變更資料庫的全域狀態 (例如更新資料表)，或變更檔案或網路這類外部資源 (例如修改檔案或傳送電子郵件訊息)。 從使用者定義函式執行擴充預存程序時，請不要仰賴傳回一致的結果集。 不建議您使用會對資料庫造成副作用的使用者自訂函數。  
   
- 從函數內部呼叫時，擴充預存程序無法傳回結果集給用戶端。 傳回結果集給用戶端的任何開放式資料服務 (Open Data Services) API 都會收到 FAIL 的傳回碼。  
+ 從函數內部呼叫時，擴充預存程序無法傳回結果集給用戶端。 將結果集傳回用戶端的任何開放式資料服務 API 都會有 FAIL 傳回碼。  
   
  擴充預存程序不得連回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 而且，程序都無法加入相同的交易成為呼叫擴充預存程序的原始函數。  
   
- 類似從批次或預存程序的引動過程，擴充預存程序是在執行 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 安全帳戶內容中執行。 擴充預存程序的擁有者在授權讓其他使用者可以執行該程序時應該考慮到這一點。  
+ 類似從批次或預存程序的引動過程，擴充預存程序是在執行 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 安全帳戶內容中執行。 擴充預存程序的擁有者在授與其他使用者執行該程序的權限時，應考慮此資訊安全內容的權限。  
   
   
 

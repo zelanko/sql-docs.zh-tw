@@ -2,7 +2,7 @@
 title: "PolyBase T-SQL 物件 | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 07/13/2017
+ms.date: 08/15/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -14,16 +14,15 @@ helpviewer_keywords:
 - PolyBase, fundamentals
 - PolyBase, SQL statements
 - PolyBase, SQL objects
-ms.assetid: ef5d6c40-6ce6-4cf0-8ad3-38f98b32f98e
 caps.latest.revision: 20
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: de25852f9005be687fdb8a547e30a99bbb58cf4c
-ms.openlocfilehash: c2ed145cb54f90bdbb368d120651a6875f9d5b5c
+ms.sourcegitcommit: e4a6157cb56c6db911406585f841046a431eef99
+ms.openlocfilehash: 8a6a21a3cc6317d1eee54cd83ced008e3358e139
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/16/2017
 
 ---
 # <a name="polybase-t-sql-objects"></a>PolyBase T-SQL 物件
@@ -47,7 +46,9 @@ ms.lasthandoff: 07/31/2017
 ## <a name="prerequisites"></a>必要條件  
  設定 PolyBase。 請參閱 [PolyBase configuration](../../relational-databases/polybase/polybase-configuration.md)。  
   
-## <a name="create-external-tables-for-hadoop"></a>建立 Hadoop 的外部資料表  
+## <a name="create-external-tables-for-hadoop"></a>建立 Hadoop 的外部資料表
+適用對象：SQL Server (自 2016 版開始)、平行處理資料倉儲
+  
  **1.建立資料庫範圍認證**  
   
  由 Kerberos 保護的 Hadoop 叢集才需要此步驟。  
@@ -126,6 +127,8 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
 ```  
   
 ## <a name="create-external-tables-for-azure-blob-storage"></a>建立 Azure Blob 儲存體的外部資料表  
+適用對象：SQL Server (自 2016 版開始)、Azure SQL 資料倉儲、平行處理資料倉儲
+
  **1.建立資料庫範圍認證**  
   
 ```sql  
@@ -201,11 +204,11 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
 ```  
  
 ## <a name="create-external-tables-for-azure-data-lake-store"></a>建立 Azure Data Lake Store 的外部資料表
-在 SQL 資料倉儲中，只有 PolyBase 才支援 Azure Data Lake Store。
-如需 Azure SQL Data Warhouse 和 ADLS 的詳細資訊，請移至[使用 Azure Data Lake Store 載入](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store)。
+適用對象：Azure SQL 資料倉儲
+
+如需詳細資訊，請參閱[使用 Azure Data Lake Store 載入](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store)
  
- **1.建立資料庫範圍認證**  
-  
+ **1.建立資料庫範圍認證**   
 
 ```sql
 -- Create a Database Master Key.

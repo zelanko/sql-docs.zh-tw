@@ -1,7 +1,7 @@
 ---
 title: "資料庫檔案立即初始化 | Microsoft 文件"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 08/15/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -19,11 +19,11 @@ caps.latest.revision: 33
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 940f322fb3afe4b7bfff35f0b25b7b7605452a27
+ms.translationtype: HT
+ms.sourcegitcommit: 4d56a0bb3893d43943478c6d5addb719ea32bd10
+ms.openlocfilehash: 8535e2dd63e3842d249c3cc4a90654a3648f51b3
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/16/2017
 
 ---
 # <a name="database-instant-file-initialization"></a>資料庫立即檔案初始化
@@ -31,7 +31,7 @@ ms.lasthandoff: 06/22/2017
   
 -   建立資料庫。  
   
--   新增檔案、記錄或資料到現有的資料庫。  
+-   將資料或記錄檔新增至現有的資料庫。  
   
 -   增加現有檔案的大小 (包括自動成長作業)。  
   
@@ -40,16 +40,16 @@ ms.lasthandoff: 06/22/2017
  檔案初始化會導致這些作業需要較長的時間。 不過，當資料第一次寫入檔案時，作業系統並不需要在檔案中填入 0。  
   
 ## <a name="instant-file-initialization"></a>立即檔案初始化  
- 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，資料檔可以立即初始化。 這可以加快先前提到之檔案作業的執行速度。 立即檔案初始化會回收使用的磁碟空間，卻不會在該空間中填入零。 而是在新資料寫入檔案時將磁碟內容覆寫為新資料。 記錄檔無法立即初始化。  
+ 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，資料檔可以立即初始化。 檔案立即初始化可以加快先前提到的檔案作業執行速度。 立即檔案初始化會回收使用的磁碟空間，卻不會在該空間中填入零。 而是在新資料寫入檔案時將磁碟內容覆寫為新資料。 記錄檔無法立即初始化。  
   
 > [!NOTE]  
 >  檔案立即初始化只在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[winxppro](../../includes/winxppro-md.md)] 或 [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] 或更新版本中提供。  
   
  只有在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (MSSQLSERVER) 服務帳戶被授與 SE_MANAGE_VOLUME_NAME 時，才能使用立即檔案初始化。 Windows Administrator 群組的成員擁有此權限，並可將此權限授與其他使用者 (方法是將他們新增到「執行磁碟區維護工作」  安全性原則。 如需指派使用者權限的詳細資訊，請參閱 Windows 文件集。  
   
- 當 TDE 啟用時，無法使用立即檔案初始化。  
+有些條件 (例如 TDE) 會防止檔案立即初始化。  
   
- 授與帳戶「`Perform volume maintenance tasks`」權限：  
+ 授與帳戶「 `Perform volume maintenance tasks` 」權限：  
   
 1.  在即將建立備份檔案的電腦上，開啟 [本機安全性原則] 應用程式 (`secpol.msc`)。  
   
@@ -64,7 +64,7 @@ ms.lasthandoff: 06/22/2017
 ### <a name="security-considerations"></a>安全性考量  
  刪除的磁碟內容只有在新資料寫入檔案時才會被覆寫，因此，未經授權的主體可能會存取刪除的內容。 當資料庫檔案附加到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的執行個體後，檔案上的任意存取控制清單 (DACL) 可降低此一資訊洩漏威脅。 此 DACL 只允許 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務帳戶和本機系統管理員存取檔案。 但是當檔案卸離後，沒有 SE_MANAGE_VOLUME_NAME 的使用者或服務便能存取該檔案。 備份資料庫時也存在類似的威脅。 如果備份檔案未使用適當的 DACL 保護，未經授權的使用者或服務便可存取刪除的內容。  
   
- 如果洩漏刪除的內容可能是一項隱憂，您應該採取下列其中一項或兩項方法：  
+ 如果洩漏刪除的內容可能是一項隱憂，您應該採取下列其中一或兩個項動作：  
   
 -   務必確保所有卸離的資料檔和備份檔都具有限制的 DACL。  
   
@@ -77,3 +77,4 @@ ms.lasthandoff: 06/22/2017
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)  
   
   
+

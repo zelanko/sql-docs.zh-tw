@@ -1,7 +1,7 @@
 ---
 title: "刪除擁有使用中租用的備份 Blob 檔案 | Microsoft 文件"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 08/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -14,38 +14,38 @@ caps.latest.revision: 16
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a8590c7e7adbf796d44347b66a790f98c13667bc
+ms.translationtype: HT
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: f2b63d34ff5c06d82b6514d7447762546fe2c9e1
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/17/2017
 
 ---
-# <a name="deleting-backup-blob-files-with-active-leases"></a>刪除擁有使用中租用的備份 Blob 檔案
-  備份至 Windows Azure 儲存體或從中還原時，SQL Server 會取得無限期租用，以便鎖定 Blob 的獨佔存取權。 當備份或還原程序順利完成時，就會釋放租用。 如果備份或還原失敗，備份程序會嘗試清除任何無效的 Blob。 不過，如果由於過長或持續性網路連線失敗而無法備份，備份程序可能無法存取 Blob，而該 Blob 可能仍然是被遺棄狀態。 這表示，在釋放租用之前，無法寫入或刪除 Blob。 此主題描述如何釋放租用及刪除 Blob。  
+# <a name="delete-backup-blob-files-with-active-leases"></a>刪除擁有使用中租用的備份 Blob 檔案
+  備份至 Microsoft Azure 儲存體或從中還原時，SQL Server 會取得無限期租用，以鎖定 Blob 的獨佔存取權。 當備份或還原程序順利完成時，就會釋放租用。 如果備份或還原失敗，備份程序會嘗試清除任何無效的 Blob。 不過，如果由於過長或持續性網路連線失敗而無法備份，備份程序可能無法存取 Blob，而該 Blob 可能仍然是被遺棄狀態。 這表示在釋放租用之前，無法寫入或刪除 Blob。 本主題描述如何釋放 (中斷) 租用及刪除 Blob。 
   
- 如需租用類型的詳細資訊，請閱讀這篇 [文章](http://go.microsoft.com/fwlink/?LinkId=275664)。  
+ 如需租用類型的詳細資訊，請閱讀這篇[文章](http://go.microsoft.com/fwlink/?LinkId=275664)。  
   
- 如果備份作業失敗，可能會產生無效的備份檔案。  備份 Blob 檔案可能也擁有使用中租用，導致無法刪除或覆寫此檔案。  若要刪除或覆寫這類 Blob，應該先中斷租用。如果發生備份失敗，我們建議您清除租用並刪除 Blob。 您也可以選擇在儲存體管理工作中進行定期清除。  
+ 如果備份作業失敗，可能會產生無效的備份檔案。 備份 Blob 檔案可能也擁有使用中租用，導致無法刪除或覆寫此檔案。 若要刪除或覆寫這些 Blob，必須先釋放 (中斷) 租用。 如果備份失敗，建議您清除租用及刪除 Blob。 您也可以在儲存體管理工作之中，定期清除租用及刪除 Blob。  
   
- 如果發生還原失敗，系統不會封鎖後續還原，因此使用中租用可能不會產生問題。 只有當您必須覆寫或刪除 Blob 時，才需要中斷租用。  
+ 如果還原失敗，系統並不會封鎖後續還原，因此使用中的租用就不會是問題。 只有當您必須覆寫或刪除 Blob 時，才需要中斷租用。  
   
-## <a name="managing-orphaned-blobs"></a>管理被遺棄的 Blob  
- 下列步驟將說明如何在備份或還原活動失敗之後進行清除。 所有步驟都可以使用 PowerShell 指令碼來完成。 下一節將提供程式碼範例：  
+## <a name="manage-orphaned-blobs"></a>管理孤立的 Blob  
+ 下列步驟將說明如何在備份或還原活動失敗之後進行清除。 您可以使用 PowerShell 指令碼來完成所有步驟。 下一個章節包含範例 PowerShell 指令碼：  
   
-1.  **識別擁有租用的 Blob：** 如果您有執行備份程序的指令碼或處理序，就可以在指令碼或處理序內部擷取失敗，並且使用該項資訊來清除 Blob。   您也可以使用 LeaseStats 和 LeastState 屬性來識別擁有其租用的 Blob。 識別出 Blob 之後，我們建議您檢閱清單、確認備份檔案的有效性，然後再刪除 Blob。  
+1.  **識別擁有租用的 Blob：**如果您有執行備份程序的指令碼或處理序，就可以在指令碼或處理序內部擷取失敗，並將其用於清除 Blob。  您也可以使用 LeaseStats 和 LeastState 屬性來識別擁租用的 Blob。 識別出 Blob 之後，請在刪除 Blob 之前先驗證備份檔案的有效性。  
   
-2.  **中斷租用：** 授權要求可以中斷租用，而不需要提供租用識別碼。 如需詳細資訊，請參閱 [此處](http://go.microsoft.com/fwlink/?LinkID=275664) 。  
+2.  **中斷租用：**授權的要求不必提供租用識別碼就可以中斷租用。 如需詳細資訊，請參閱 [此處](http://go.microsoft.com/fwlink/?LinkID=275664) 。  
   
     > [!TIP]  
     >  SQL Server 會發出租用識別碼，以便在還原作業期間確立獨佔存取權。 還原租用識別碼為 BAC2BAC2BAC2BAC2BAC2BAC2BAC2BAC2。  
   
-3.  **刪除 Blob：** 若要刪除擁有使用中租用的 Blob，您必須先中斷租用。  
+3.  **刪除 Blob：**若要刪除擁有使用中租用的 Blob，必須先中斷租用。  
   
 ###  <a name="Code_Example"></a> PowerShell 指令碼範例  
   
 > [!IMPORTANT]  
->  如果您執行的是 PowerShell 2.0，載入 Microsoft WindowsAzure.Storage.dll 組件時可能會發生問題。 我們建議您升級 Powershell 以解決此問題。 您也可以針對 PowerShell 2.0 使用下列因應措施：  
+>  如果您執行的是 PowerShell 2.0，載入 Microsoft WindowsAzure.Storage.dll 組件時可能會發生問題。 建議您升級 [PowerShell](https://docs.microsoft.com/powershell/) 以解決這項問題。 您也可以針對 PowerShell 2.0 使用下列因應措施：  
 >   
 >  -   使用下列內容來建立或修改 powershell.exe.config 檔案，以便在執行階段載入 .NET 2.0 和 .NET 4.0 組件：  
 >   
@@ -60,14 +60,14 @@ ms.lasthandoff: 06/22/2017
 >   
 >     ```  
   
- 下列範例將說明如何識別擁有使用中租用的 Blob，然後中斷租用。 此範例也會示範如何篩選釋放租用識別碼。  
+ 下列範例指令碼會識別擁有使用中租用的 Blob，並予以中斷。 此範例也會示範如何篩選釋放租用識別碼。  
   
- 執行這個指令碼的秘訣  
+**執行此指令碼的提示**  
   
 > [!WARNING]  
->  如果在執行這個指令碼時正備份到 Windows Azure Blob 儲存體服務，備份可能會失敗，因為這個指令碼會中斷備份嘗試同時取得的租用。 建議在維護期間或預期不會執行任何備份時執行這個指令碼。  
+>  如果 Microsoft Azure Blob 儲存體服務的備份與此指令碼同時執行，因為此指令碼會中斷備份嘗試同時取得的租用，所以備份可能會失敗。 建議在維護時段或未執行或安排備份時執行此指令碼。  
   
-1.  當您執行這個指令碼時，系統會提示您提供儲存體帳戶、儲存體金鑰、容器以及 Windows Azure 儲存體組件路徑和名稱參數的值。 儲存體的路徑是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的安裝目錄。 儲存體組件的檔案名稱是 Microsoft.WindowsAzure.Storage.dll。 下面是提示與輸入值的範例：  
+1.  執行此指令碼時，系統會提示您提供儲存體帳戶、儲存體金鑰、容器及 Azure 儲存體組件路徑與名稱參數的值。 儲存體的路徑是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的安裝目錄。 儲存體組件的檔案名稱是 Microsoft.WindowsAzure.Storage.dll。 下面是提示與輸入值的範例：  
   
     ```  
     cmdlet  at command pipeline position 1  
@@ -116,7 +116,7 @@ $client = New-Object 'Microsoft.WindowsAzure.Storage.Blob.CloudBlobClient' "http
 $container = $client.GetContainerReference($blobContainer)  
   
 #list all the blobs  
-$allBlobs = $container.ListBlobs()   
+$allBlobs = $container.ListBlobs($null,$true) 
   
 $lockedBlobs = @()  
 # filter blobs that are have Lease Status as "locked"  
@@ -163,3 +163,4 @@ if($lockedBlobs.Count -gt 0)
  [SQL Server 備份至 URL 的最佳作法和疑難排解](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
   
   
+
