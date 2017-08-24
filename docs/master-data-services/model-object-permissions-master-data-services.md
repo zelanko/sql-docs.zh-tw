@@ -1,28 +1,33 @@
 ---
-title: "模型物件權限 (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "權限 [Master Data Services], 模型物件"
-  - "模型 [Master Data Services], 物件權限"
+title: "模型物件權限 (Master Data Services) |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- permissions [Master Data Services], model objects
+- models [Master Data Services], object permissions
 ms.assetid: fab6335b-4cae-47de-ae7c-6c4743e0680f
 caps.latest.revision: 9
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ee6ede91067d2b358a403458e07af37b2f895ac3
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 模型物件權限 (Master Data Services)
+# <a name="model-object-permissions-master-data-services"></a>模型物件權限 (Master Data Services)
   模型物件權限是強制性的。 這些權限會決定使用者可以在此 UI 的 [總管] 功能區域中存取的屬性。  
   
- 例如，如果您將 Product 實體的**更新**權限指派給某個使用者，該使用者就可以更新 Product 實體的所有屬性。 如果您指派單一屬性的**更新**權限，使用者僅能更新該屬性。  
+ 例如，如果您將 Product 實體的**更新**權限指派給某個使用者，該使用者就可以更新 Product 實體的所有屬性。 如果您指派單一屬性的 **更新** 權限，使用者僅能更新該屬性。  
   
  若要判斷針對每個個別屬性值指派的安全性，可以將模型物件權限結合階層成員權限，後者可決定使用者可以存取的成員。  
   
@@ -32,17 +37,17 @@ caps.handback.revision: 9
   
  您可以指派模型物件的 [讀取]、[建立]、[更新] 和 [刪除] 或 [拒絕] 權限的組合。 如果您未在 [模型] 索引標籤上指派任何權限，使用者就無法在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 中檢視任何模型或資料。  
   
-## 最佳作法  
+## <a name="best-practice"></a>最佳作法  
  一般而言，您應該指派模型物件的 [全部] 權限，然後明確地指派底下物件的權限。  
   
-## 外部資源  
- 請參考 msdn.com 上的 [Security Improvements](http://go.microsoft.com/fwlink/p/?LinkId=615376) (安全性改進) 部落格文章。  
+## <a name="external-resources"></a>外部資源  
+ 請參考 msdn.com 上的 [Security Improvements](http://go.microsoft.com/fwlink/p/?LinkId=615376)(安全性改進) 部落格文章。  
   
-## 另請參閱  
- [指派模型物件權限 &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   
- [模型權限 &#40;Master Data Services&#41;](../master-data-services/model-permissions-master-data-services.md)   
- [功能區域權限 &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)   
- [階層成員權限 &#40;Master Data Services&#41;](../master-data-services/hierarchy-member-permissions-master-data-services.md)   
- [如何決定權限 &#40;Master Data Services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)  
+## <a name="see-also"></a>另請參閱  
+ [指派模型物件權限 &#40;Master Data services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   
+ [模型權限 &#40;Master Data services&#41;](../master-data-services/model-permissions-master-data-services.md)   
+ [功能區域權限 &#40;Master Data services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)   
+ [階層成員權限 &#40;Master Data services&#41;](../master-data-services/hierarchy-member-permissions-master-data-services.md)   
+ [如何決定權限 &#40;Master Data services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)  
   
   

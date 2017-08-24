@@ -1,31 +1,36 @@
 ---
-title: "準備查詢變更資料 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "累加式載入 [Integration Services], 準備查詢"
+title: "準備查詢變更資料 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- incremental load [Integration Services],preparing query
 ms.assetid: 9ea2db7a-3dca-4bbf-9903-cccd2d494b5f
 caps.latest.revision: 26
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b15733feeca10976315834b2dfc897cc8a9d1216
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 準備查詢變更資料
+# <a name="prepare-to-query-for-the-change-data"></a>準備查詢變更資料
   在執行累加式變更資料載入之 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝的控制流程中，第三個工作 (也就是最後一個工作) 是準備查詢變更資料，並加入「資料流程」工作。  
   
 > [!NOTE]  
 >  控制流程的第二個工作是確保所選間隔的變更資料已就緒。 如需這項工作的詳細資訊，請參閱[判斷變更資料是否就緒](../../integration-services/change-data-capture/determine-whether-the-change-data-is-ready.md)。 如需設計控制流程之完整程序的描述，請參閱[異動資料擷取 &#40;SSIS&#41;](../../integration-services/change-data-capture/change-data-capture-ssis.md)。  
   
-## 設計考量  
- 若要擷取異動資料，您將呼叫 Transact-SQL 資料表值函式，接受間隔的端點做為輸入參數，並傳回指定之間隔的異動資料。 資料流程中的來源元件會呼叫這個函數。 如需此來源元件的資訊，請參閱[擷取與了解變更資料](../../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md)。  
+## <a name="design-considerations"></a>設計考量  
+ 若要擷取異動資料，您將呼叫 Transact-SQL 資料表值函式，接受間隔的端點做為輸入參數，並傳回指定之間隔的異動資料。 資料流程中的來源元件會呼叫這個函數。 如需此來源元件的資訊，請參閱 [擷取與了解變更資料](../../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md)。  
   
  最常用的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 來源元件 (包括 OLE DB 來源、ADO 來源和 ADO NET 來源) 無法衍生資料表值函式的參數資訊。 因此，多數來源無法直接呼叫參數化函數。  
   
@@ -40,10 +45,10 @@ caps.handback.revision: 26
   
  本主題使用第一個設計選項，並將參數化的查詢組合成字串。  
   
-## 準備查詢  
+## <a name="preparing-the-query"></a>準備查詢  
  在您可以將輸入參數的值串連到單一查詢字串前，您必須設定查詢所需的封裝變數。  
   
-#### 設定封裝變數  
+#### <a name="to-set-up-package-variables"></a>設定封裝變數  
   
 -   在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的 [變數] 視窗中，建立具有字串資料類型的變數，以保存「執行 SQL」工作所傳回的查詢字串。  
   
@@ -51,12 +56,12 @@ caps.handback.revision: 26
   
  建立封裝變數後，您可以使用「指令碼」工作或「執行 SQL」工作來串連輸入參數的值。 下列兩個程序描述如何設定這些元件。  
   
-#### 使用指令碼工作串連查詢字串  
+#### <a name="to-use-a-script-task-to-concatenate-the-query-string"></a>使用指令碼工作串連查詢字串  
   
 1.  在 [控制流程] 索引標籤上，將「指令碼」工作加入「For 迴圈」容器後的封裝中，然後將「For 迴圈」容器連接到該工作。  
   
     > [!NOTE]  
-    >  此程序假設封裝會從單一資料表執行累加式載入。 如果封裝從多個資料表載入，而且擁有包含多個子封裝的父封裝，則會將此工作當做第一個元件，加入到每個子封裝中。 如需詳細資訊，請參閱[執行多個資料表的累加式載入](../../integration-services/change-data-capture/perform-an-incremental-load-of-multiple-tables.md)。  
+    >  此程序假設封裝會從單一資料表執行累加式載入。 如果封裝從多個資料表載入，而且擁有包含多個子封裝的父封裝，則會將此工作當做第一個元件，加入到每個子封裝中。 如需詳細資訊，請參閱 [執行多個資料表的累加式載入](../../integration-services/change-data-capture/perform-an-incremental-load-of-multiple-tables.md)。  
   
 2.  在 [指令碼工作編輯器] 的 [指令碼] 頁面上，選取下列選項：  
   
@@ -94,7 +99,7 @@ caps.handback.revision: 26
   
          \- 或 -  
   
-    -   如果您是以 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 撰寫程式，輸入下列程式碼行：  
+    -   如果您是以 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]撰寫程式，輸入下列程式碼行：  
   
         ```  
         Dim dataReady As Integer  
@@ -127,12 +132,12 @@ caps.handback.revision: 26
   
 6.  關閉指令碼開發環境以及 **[指令碼工作編輯器]**。  
   
-#### 使用執行 SQL 工作串連查詢字串  
+#### <a name="to-use-an-execute-sql-task-to-concatenate-the-query-string"></a>使用執行 SQL 工作串連查詢字串  
   
 1.  在 [控制流程] 索引標籤上，將「執行 SQL」工作加入「For 迴圈」容器後的封裝中，然後將「For 迴圈」容器連接到此工作。  
   
     > [!NOTE]  
-    >  此程序假設封裝會從單一資料表執行累加式載入。 如果封裝從多個資料表載入，而且擁有包含多個子封裝的父封裝，則會將此工作當做第一個元件，加入到每個子封裝中。 如需詳細資訊，請參閱[執行多個資料表的累加式載入](../../integration-services/change-data-capture/perform-an-incremental-load-of-multiple-tables.md)。  
+    >  此程序假設封裝會從單一資料表執行累加式載入。 如果封裝從多個資料表載入，而且擁有包含多個子封裝的父封裝，則會將此工作當做第一個元件，加入到每個子封裝中。 如需詳細資訊，請參閱 [執行多個資料表的累加式載入](../../integration-services/change-data-capture/perform-an-incremental-load-of-multiple-tables.md)。  
   
 2.  在 **[執行 SQL 工作編輯器]**的 **[一般]** 頁面上，選取下列選項：  
   
@@ -187,16 +192,16 @@ caps.handback.revision: 26
   
  `select * from CDCSample. uf_Customer('2007-06-11 14:21:58', '2007-06-12 14:21:58')`  
   
-## 加入資料流程工作  
+## <a name="adding-a-data-flow-task"></a>加入資料流程工作  
  設計封裝之控制流程的最後一個步驟是加入「資料流程」工作。  
   
-#### 加入資料流程工作並完成控制流程  
+#### <a name="to-add-a-data-flow-task-and-complete-the-control-flow"></a>加入資料流程工作並完成控制流程  
   
 -   在 [控制流程] 索引標籤上，加入「資料流程」工作，然後連接串連查詢字串的工作。  
   
-## 下一個步驟  
+## <a name="next-step"></a>下一個步驟  
  準備查詢字串並設定「資料流程」工作後，下一個步驟是建立將從資料庫擷取變更資料的資料表值函式。  
   
- **下一個主題**：[建立函數以擷取變更資料](../../integration-services/change-data-capture/create-the-function-to-retrieve-the-change-data.md)  
+ **下一個主題** [建立函數以擷取變更資料](../../integration-services/change-data-capture/create-the-function-to-retrieve-the-change-data.md)  
   
   

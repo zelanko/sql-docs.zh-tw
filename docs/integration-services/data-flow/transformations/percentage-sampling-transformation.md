@@ -1,32 +1,37 @@
 ---
-title: "百分比取樣轉換 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.percentagesamplingtrans.f1"
-helpviewer_keywords: 
-  - "測試採礦模型"
-  - "取樣種子 [Integration Services]"
-  - "資料採礦 [Analysis Services], 範例資料集"
-  - "百分比取樣轉換"
-  - "取樣資料集 [Integration Services]"
-  - "資料集 [Integration Services], 範例"
-  - "定型採礦模型"
+title: "百分比取樣轉換 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.percentagesamplingtrans.f1
+helpviewer_keywords:
+- testing mining models
+- sampling seeds [Integration Services]
+- data mining [Analysis Services], sample data sets
+- Percentage Sampling transformation
+- sample data sets [Integration Services]
+- datasets [Integration Services], sample
+- training mining models
 ms.assetid: 59767e52-f732-4b3f-8602-be50d0a64ef2
 caps.latest.revision: 46
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 46
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b304a50eeec9908427b7fd42319b88d78b151ff0
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 百分比取樣轉換
+# <a name="percentage-sampling-transformation"></a>百分比取樣轉換
   「百分比取樣」轉換會藉由選取轉換輸入資料列的一部分來建立取樣資料集。 取樣資料集是從轉換輸出隨機選取的資料列，用來製作輸入的結果取樣代表。  
   
 > [!NOTE]  
@@ -36,10 +41,10 @@ caps.handback.revision: 46
   
  「百分比取樣」轉換對於建立封裝開發作業的取樣資料集來說亦相當實用。 藉由套用「百分比取樣」轉換至資料流程，即可一致減少資料集的大小，而同時保留其資料特性。 之後，測試封裝即可更快速地執行，因為它使用更小但更具代表性的資料集。  
   
-## 設定轉換取樣率  
+## <a name="configuration-the-percentage-sampling-transformation"></a>設定轉換取樣率  
  您可以指定取樣種子 (Seed)，以修改轉換用來選取資料列的隨機號碼產生器的行為。 如果使用相同的取樣種子 (Seed)，轉換便會固定產生相同的取樣輸出。 如果未指定種子，轉換會使用作業系統的滴答計數建立隨機號碼。 因此，當您要在開發和測試封裝的過程中驗證轉換結果時，可能會選擇使用標準種子，然後在封裝移至生產時改用隨機種子。  
   
- 此轉換與「資料列取樣」轉換相似，但後者是藉由選取指定的輸入資料列數目建立取樣資料集。 如需詳細資訊，請參閱[資料列取樣轉換](../../../integration-services/data-flow/transformations/row-sampling-transformation.md)。  
+ 此轉換與「資料列取樣」轉換相似，但後者是藉由選取指定的輸入資料列數目建立取樣資料集。 如需詳細資訊，請參閱 [資料列取樣轉換](../../../integration-services/data-flow/transformations/row-sampling-transformation.md)。  
   
  百分比取樣轉換包括 **SamplingValue** 自訂屬性。 屬性運算式可以在載入封裝時更新這個屬性。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 運算式](../../../integration-services/expressions/integration-services-ssis-expressions.md)、[在封裝中使用屬性運算式](../../../integration-services/expressions/use-property-expressions-in-packages.md)和[轉換自訂屬性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)。  
   
@@ -51,10 +56,10 @@ caps.handback.revision: 46
   
  **[進階編輯器]** 對話方塊會反映能以程式設計的方式設定之屬性。 如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [通用屬性](../Topic/Common%20Properties.md)  
+-   [通用屬性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [轉換自訂屬性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
- 如需如何設定屬性的詳細資訊，請參閱[設定資料流程元件的屬性](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)。  
+ 如需如何設定屬性的詳細資訊，請參閱 [設定資料流程元件的屬性](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)。  
   
   

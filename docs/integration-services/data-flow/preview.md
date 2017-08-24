@@ -1,22 +1,27 @@
 ---
-title: "預覽 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "預覽 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 551494c4-9e27-4592-9200-c6bf19e80c9a
 caps.latest.revision: 10
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f51bbd1d818a8ffd20e5124180947846c58f98c3
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 預覽
+# <a name="preview"></a>預覽
   使用 **[預覽]** 對話方塊可以預覽 SAP BW 來源即將擷取的資料。  
   
 > [!IMPORTANT]  
@@ -34,7 +39,7 @@ caps.handback.revision: 10
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，開啟包含 SAP BW 來源的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝。  
   
-2.  在 [資料流程] 索引標籤中，按兩下 SAP BW 來源。  
+2.  在 [資料流程] 索引標籤上，按兩下 SAP BW 來源。  
   
 3.  在 **[SAP BW 來源編輯器]**中，按一下 **[連接管理員]** 開啟編輯器的 **[連接管理員]** 頁面。  
   
@@ -45,13 +50,13 @@ caps.handback.revision: 10
     > [!NOTE]  
     >  按一下 **[預覽]** 也會開啟 **[要求記錄檔]** 對話方塊。 如需有關此對話方塊的詳細資訊，請參閱＜ [Request Log](../../integration-services/data-flow/request-log.md)＞。  
   
-## 選項。  
+## <a name="options"></a>選項。  
  **[預覽]** 對話方塊會顯示向 SAP Netweaver BW 系統要求的資料列。 顯示的資料行就是來源資料中定義的資料行。  
   
  這個對話方塊沒有其他選項。  
   
-## 請參閱＜  
- [SAP BW 來源編輯器 &#40;連接管理員頁面&#41;](../../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)   
+## <a name="see-also"></a>請參閱＜  
+ [SAP BW 來源編輯器 &#40;連線管理員頁面&#41;](../../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)   
  [Microsoft Connector for SAP BW F1 說明](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   

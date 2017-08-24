@@ -1,34 +1,39 @@
 ---
-title: "ODBC 流程元件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "ODBC 流程元件 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: cf751f1e-2348-4a77-904c-bd92c0d7d0ae
 caps.latest.revision: 10
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bb47de9a618b4d83e961ff2e032861375b0d6c22
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# ODBC 流程元件
+# <a name="odbc-flow-components"></a>ODBC 流程元件
   此主題描述使用 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]  
   
  適用於 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 的 Connector for Open Database Connectivity (ODBC) by Attunity 有助於 SSIS 開發人員輕鬆建立封裝，從 ODBC 支援的資料庫載入及卸載資料。  
   
- 此 ODBC 連接器設計目的是為了在 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 內容中對 ODBC 支援的資料庫載入或卸載資料時達到最佳效能。  
+ 此 ODBC 連接器設計目的是為了在 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]內容中對 ODBC 支援的資料庫載入或卸載資料時達到最佳效能。  
   
-## 優點  
+## <a name="benefits"></a>優點  
  [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 的 ODBC 來源和 ODBC 目的地為 SSIS 專案處理對 ODBC 支援的資料庫載入或卸載資料，提供競爭優勢。  
   
  ODBC 來源和 ODBC 目的地啟用高效能資料與啟用 ODBC 資料庫的整合。 這兩個元件都可以設定為將資料列取向的參數陣列繫結用於支援此繫結模式的高功能 ODBC 提供者，而將單一資料列的參數繫結用於低功能 ODBC 提供者。  
   
-## 開始使用 ODBC 來源和目的地  
+## <a name="getting-started-with-the-odbc-source-and-destination"></a>開始使用 ODBC 來源和目的地  
  在設定使用 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]的封裝之前，您必須確認具備下列項目。  
   
 -   [ODBC 來源](../../integration-services/data-flow/odbc-source.md)  
@@ -61,10 +66,10 @@ caps.handback.revision: 10
   
  ODBC 目的地編輯器 (錯誤輸出頁面)  
   
-## 作業案例  
+## <a name="operating-scenarios"></a>作業案例  
  本節描述 ODBC 來源和目的地元件的一些主要用途。  
   
-### 從 SQL Server 資料表大量複製資料至任何 ODBC 支援的資料庫資料表  
+### <a name="bulk-copy-data-from-sql-server-tables-to-any-odbc-supported-database-table"></a>從 SQL Server 資料表大量複製資料至任何 ODBC 支援的資料庫資料表  
  您可以使用這些元件，從一或多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表大量複製資料至單一 ODBC 支援的資料庫資料表。  
   
  下列範例示範如何建立 SSIS 資料流程工作，從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表擷取資料並將資料載入 DB2 資料表。  
@@ -79,7 +84,7 @@ caps.handback.revision: 10
   
 -   將 ODBC 目的地拖曳到設計介面，將來源輸出連接到 ODBC 目的地，然後設定目的地將資料載入含有從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫擷取之資料的 DB2 資料表。 使用先前建立的 ODBC 連線管理員。  
   
-### 從 ODBC 支援的資料庫資料表大量複製資料至任何 SQL Server 資料表  
+### <a name="bulk-copy-data-from-odbc-supported-database-tables-to-any-sql-server-table"></a>從 ODBC 支援的資料庫資料表大量複製資料至任何 SQL Server 資料表  
  您可以使用這些元件，從一個或多個 ODBC 支援的資料庫資料表大量複製資料至單一 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫資料表。  
   
  下列範例示範如何建立 SSIS 資料流程工作，從 Sybase 資料庫資料表擷取資料並將資料載入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫資料表。  
@@ -94,7 +99,7 @@ caps.handback.revision: 10
   
 -   將 OLE DB 目的地拖曳到設計介面，將來源輸出連接到 OLE DB 目的地，然後設定目的地將資料載入含有從 Sybase 資料庫擷取之資料的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表。 使用先前建立的 OLE DB 連線管理員。  
   
-## 支援的資料類型  
+## <a name="supported-data-types"></a>支援的資料類型  
  ODBC 大量 SSIS 元件支援所有內建 ODBC 資料類型，包括支援大型物件 (CLOB 和 BLOB)。  
   
 如 ODBC 3.8 規格中所述，對可延伸 C 類型不提供資料類型支援。下表描述每個 ODBC SQL 類型所用的 SSIS 資料類型。 SSIS 開發人員可以覆寫預設對應，為輸入/輸出資料行指定不同的 SSIS 資料類型，而不影響必要資料轉換的效能。  
@@ -128,7 +133,7 @@ caps.handback.revision: 10
 |SQL_INTERVAL_YEAR<br /><br />SQL_INTERVAL_MONTH<br /><br />SQL_INTERVAL_DAY<br /><br />SQL_INTERVAL_HOUR<br /><br />SQL_INTERVAL_MINUTE<br /><br />SQL_INTERVAL_SECOND<br /><br />SQL_INTERVAL_YEAR_TO_MONTH<br /><br />SQL_INTERVAL_DAY_TO_HOUR<br /><br />SQL_INTERVAL_DAY_TO_MINUTE<br /><br />SQL_INTERVAL_DAY_TO_SECOND<br /><br />SQL_INTERVAL_HOUR_TO_MINUTE<br /><br />SQL_INTERVAL_HOUR_TO_SECOND<br /><br />SQL_INTERVAL_MINUTE_TO_SECOND|DT_WSTR|  
 |提供者特定的資料類型|DT_BYTES<br /><br />DT_IMAGE|如果資料行長度小於或等於 8000，則會使用 DT_BYTES。<br /><br />如果資料行長度為零或大於 8000，則會使用 DT_IMAGE。|  
   
-## 本節內容  
+## <a name="in-this-section"></a>本節內容  
   
 -   [ODBC 來源](../../integration-services/data-flow/odbc-source.md)  
   

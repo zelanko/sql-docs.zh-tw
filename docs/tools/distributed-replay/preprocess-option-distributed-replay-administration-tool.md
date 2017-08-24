@@ -1,29 +1,34 @@
 ---
-title: "前置處理選項 (Distributed Replay 管理工具) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "前置處理選項 （Distributed 的 Replay 管理工具） |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9b5012fd-233e-4a25-a2e1-585c63b70502
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 313a794c807faa3adaf95e902526a9ac9504be80
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 前置處理選項 (Distributed Replay 管理工具)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 管理工具 **DReplay.exe** 是命令列工具，可用以與 Distributed Replay Controller 通訊。 本主題描述 **preprocess** 命令列選項與對應的語法。  
+# <a name="preprocess-option-distributed-replay-administration-tool"></a>前置處理選項 (Distributed Replay 管理工具)
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 管理工具 **DReplay.exe**是命令列工具，可用以與 Distributed Replay Controller 通訊。 本主題描述 **preprocess** 命令列選項與對應的語法。  
   
  **preprocess** 選項會起始前置處理階段。 在這個階段中，控制器會準備輸入追蹤資料，以便對目標伺服器重新執行。  
   
- ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.png "主題連結圖示") 如需管理工具語法所使用之語法慣例的詳細資訊，請參閱 [Transact-SQL 語法慣例 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。  
+ ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示")更多系統管理工具語法所使用之語法慣例的詳細資訊，請參閱[TRANSACT-SQL 語法慣例 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -31,7 +36,7 @@ dreplay preprocess [-m controller] -i input_trace_file
     -d controller_working_dir [-c config_file] [-f status_interval]  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  **-m** *controller*  
  指定控制器的電腦名稱。 您可以使用 "`localhost`" 或 "`.`" 表示本機電腦。  
   
@@ -40,7 +45,7 @@ dreplay preprocess [-m controller] -i input_trace_file
  **-i** *input_trace_file*  
  指定控制器上輸入追蹤檔案的完整路徑，例如 `D:\Mytrace.trc`。 **-i** 是必要參數。  
   
- 如果相同的目錄中存在換用檔案，系統就會自動載入並使用它們。 這些檔案必須遵循檔案換用命名慣例，例如：`Mytrace.trc`、`Mytrace_1.trc`、`Mytrace_2.trc`、`Mytrace_3.trc`… `Mytrace_n.trc`。  
+ 如果相同的目錄中存在換用檔案，系統就會自動載入並使用它們。 這些檔案必須遵循檔案換用命名慣例，例如： `Mytrace.trc`、 `Mytrace_1.trc`、 `Mytrace_2.trc`、 `Mytrace_3.trc`… `Mytrace_n.trc`。  
   
 > [!NOTE]  
 >  如果您要在控制器以外的電腦上使用管理工具，就必須將輸入追蹤檔案複製到控制器，以便針對此參數使用本機路徑。  
@@ -68,9 +73,9 @@ dreplay preprocess [-m controller] -i input_trace_file
  **-f** *status_interval*  
  指定顯示狀態訊息的頻率 (以秒為單位)。  
   
- 如果未指定 **-f**，則預設間隔為 30 秒。  
+ 如果未指定 **-f** ，則預設間隔為 30 秒。  
   
-## 範例  
+## <a name="examples"></a>範例  
  在此範例中，前置處理階段是使用所有預設設定來起始。 `localhost` 值指出控制器服務與管理工具在同一部電腦上執行。 *input_trace_file* 參數會指定輸入追蹤資料的位置 `c:\mytrace.trc`。 因為沒有涉及任何追蹤檔案篩選，所以必須指定 **-c** 參數。  
   
 ```  
@@ -83,7 +88,7 @@ dreplay preprocess –m localhost -i c:\mytrace.trc -d c:\WorkingDir
 dreplay preprocess –m localhost -i c:\mytrace.trc -d c:\WorkingDir -c c:\DReplay.exe.preprocess.config  
 ```  
   
- 在修改的前置處理組態檔中，加入了一個篩選條件，它會在分散式重新執行期間篩選出系統工作階段。 此篩選是透過修改前置處理組態檔 `<PreprocessModifiers>` 中的 `DReplay.exe.preprocess.config` 元素來加入。  
+ 在修改的前置處理組態檔中，加入了一個篩選條件，它會在分散式重新執行期間篩選出系統工作階段。 此篩選是透過修改前置處理組態檔 `<PreprocessModifiers>` 中的 `DReplay.exe.preprocess.config`元素來加入。  
   
  下面將顯示已修改組態檔的範例：  
   
@@ -97,14 +102,14 @@ dreplay preprocess –m localhost -i c:\mytrace.trc -d c:\WorkingDir -c c:\DRepl
 </Options>  
 ```  
   
-## Permissions  
+## <a name="permissions"></a>Permissions  
  您必須以互動使用者、本機使用者或網域使用者帳戶來執行管理工具。 若要使用本機使用者帳戶，管理工具和控制器必須在同一部電腦上執行。  
   
  如需詳細資訊，請參閱 [Distributed Replay 安全性](../../tools/distributed-replay/distributed-replay-security.md)。  
   
-## 另請參閱  
- [準備輸入追蹤資料](../../tools/distributed-replay/prepare-the-input-trace-data.md)   
- [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
- [設定 Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)  
+## <a name="see-also"></a>另請參閱  
+ [準備輸入的追蹤資料](../../tools/distributed-replay/prepare-the-input-trace-data.md)   
+ [SQL Server Distributed 的 Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
+ [設定 Distributed 的 Replay](../../tools/distributed-replay/configure-distributed-replay.md)  
   
   

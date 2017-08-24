@@ -1,29 +1,34 @@
 ---
-title: "指令碼元件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.scriptcomponentdetails.f1"
-helpviewer_keywords: 
-  - "指令碼轉換"
-  - "指令碼 [Integration Services], 轉換"
-  - "指令碼元件 [Integration Services], 關於指令碼元件"
-  - "指令碼元件 [Integration Services]"
+title: "指令碼元件 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.scriptcomponentdetails.f1
+helpviewer_keywords:
+- Script transformation
+- scripts [Integration Services], transformations
+- Script component [Integration Services], about Script component
+- Script component [Integration Services]
 ms.assetid: 131c2d0c-2e33-4785-94af-ada5c049821e
 caps.latest.revision: 70
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 70
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b9411fdeb050a63c94c9904cd3f1b6e8aefd6b0a
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 指令碼元件
+# <a name="script-component"></a>指令碼元件
   指令碼元件可裝載指令碼，並讓封裝包含及執行自訂指令碼。 您可在封裝中使用指令碼元件以達到下列目的：  
   
 -   套用多個轉換至資料，而不使用資料流程中的多個轉換。 例如，指令碼可以加總兩個資料行中的值，然後計算總和的平均。  
@@ -34,7 +39,7 @@ caps.handback.revision: 70
   
 -   驗證資料行資料並略過包含無效資料的記錄。 例如，指令碼可評估合理的郵資金額，並略過金額過高或過低的記錄。  
   
- 指令碼元件提供簡單快速的方式，用來將自訂函數包含在資料流程中。 不過，如果您計劃在多個封裝中重複使用指令碼，應該考慮以程式設計自訂元件，而不要使用指令碼元件。 如需詳細資訊，請參閱[開發自訂資料流程元件](../../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md)。  
+ 指令碼元件提供簡單快速的方式，用來將自訂函數包含在資料流程中。 不過，如果您計劃在多個封裝中重複使用指令碼，應該考慮以程式設計自訂元件，而不要使用指令碼元件。 如需詳細資訊，請參閱 [開發自訂資料流程元件](../../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md)。  
   
 > [!NOTE]  
 >  如果指令碼元件包含指令碼，而該指令碼嘗試讀取 NULL 的資料行值，則當您執行封裝時，此指令碼元件就會失敗。 我們建議您讓您的指令碼使用 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer.IsNull%2A> 方法來判斷資料行是否為 NULL，然後再嘗試讀取資料行值。  
@@ -51,11 +56,11 @@ caps.handback.revision: 70
   
  確定指令碼元件是適用於您封裝的選擇之後，您必須設定輸入和輸出、開發該元件使用的指令碼，以及設定元件本身。  
   
-## 了解指令碼元件模式  
- 在「[!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計工具」中，指令碼元件有兩個模式：中繼資料設計模式與程式碼設計模式。 在中繼資料設計模式中，您可以加入和修改指令碼元件輸入和輸出，但是不能編寫程式碼。 設定好所有輸入和輸出後，您可以切換到程式碼設計模式編寫指令碼。 指令碼元件會自動從輸入和輸出的中繼資料產生基底程式碼。 如果您在指令碼元件產生基底程式碼後變更中繼資料，您的程式碼可能無法再編譯，因為更新的基底程式碼可能與您的程式碼不相容。  
+## <a name="understanding-the-script-component-modes"></a>了解指令碼元件模式  
+ 在「 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計工具」中，指令碼元件有兩個模式：中繼資料設計模式與程式碼設計模式。 在中繼資料設計模式中，您可以加入和修改指令碼元件輸入和輸出，但是不能編寫程式碼。 設定好所有輸入和輸出後，您可以切換到程式碼設計模式編寫指令碼。 指令碼元件會自動從輸入和輸出的中繼資料產生基底程式碼。 如果您在指令碼元件產生基底程式碼後變更中繼資料，您的程式碼可能無法再編譯，因為更新的基底程式碼可能與您的程式碼不相容。  
   
-## 撰寫元件使用的指令碼  
- 指令碼元件使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) 當作撰寫指令碼的環境。 您可以從 **[指令碼轉換編輯器]**存取 VSTA。 如需詳細資訊，請參閱[指令碼轉換編輯器 &#40;指令碼頁面&#41;](../../../integration-services/data-flow/transformations/script-transformation-editor-script-page.md)。  
+## <a name="writing-the-script-that-the-component-uses"></a>撰寫元件使用的指令碼  
+ 指令碼元件使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) 當作撰寫指令碼的環境。 您可以從 **[指令碼轉換編輯器]**存取 VSTA。 如需詳細資訊，請參閱 [指令碼轉換編輯器 &#40;指令碼頁面&#41;](../../../integration-services/data-flow/transformations/script-transformation-editor-script-page.md)。  
   
  指令碼元件提供 VSTA 專案，其中包含自動產生的類別，該類別名為 ScriptMain 且代表元件中繼資料。 例如，如果指令碼元件當做具有三個輸出的轉換使用，則 ScriptMain 會包含每個輸出的方法。 ScriptMain 是指令碼的進入點。  
   
@@ -68,13 +73,13 @@ caps.handback.revision: 70
 > [!NOTE]  
 >  不像在舊版中可以指出是否已經先行編譯指令碼，所有指令碼在 [!INCLUDE[ssISversion10](../../../includes/ssisversion10-md.md)] 和更新的版本中都會先行編譯。 指令碼經過先行編譯後，在執行階段不會載入語言引擎，因此封裝的執行速度會更快。 不過，先行編譯的二進位檔案會使用大量的磁碟空間。  
   
-## 設定指令碼元件  
+## <a name="configuring-the-script-component"></a>設定指令碼元件  
  您可以利用下列方式設定指令碼元件：  
   
 -   選取要參考的輸入資料行。  
   
     > [!NOTE]  
-    >  當您使用「[!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計工具」時，僅能設定一個輸入。  
+    >  當您使用「 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計工具」時，僅能設定一個輸入。  
   
 -   提供元件執行的指令碼。  
   
@@ -86,7 +91,7 @@ caps.handback.revision: 70
   
  您可以透過「 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師」或以程式設計方式設定屬性。  
   
-### 在設計工具中設定指令碼元件  
+### <a name="configuring-the-script-component-in-the-designer"></a>在設計工具中設定指令碼元件  
  如需有關可以在 **[指令碼轉換編輯器]** 對話方塊中設定之屬性的詳細資訊，請按下列其中一個主題：  
   
 -   [指令碼轉換編輯器 &#40;輸入資料行頁面&#41;](../../../integration-services/data-flow/transformations/script-transformation-editor-input-columns-page.md)  
@@ -101,10 +106,10 @@ caps.handback.revision: 70
   
 -   [設定資料流程元件的屬性](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
-### 以程式設計的方式設定指令碼元件  
+### <a name="configuring-the-script-component-programmatically"></a>以程式設計的方式設定指令碼元件  
  如需有關可以在 **[屬性]** 視窗中或以程式設計的方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [通用屬性](../Topic/Common%20Properties.md)  
+-   [通用屬性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [轉換自訂屬性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -112,9 +117,9 @@ caps.handback.revision: 70
   
 -   [設定資料流程元件的屬性](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
-## 相關內容  
+## <a name="related-content"></a>相關內容  
  [Integration Services 轉換](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
- [以指令碼元件擴充資料流程](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)  
+ [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)  
   
   

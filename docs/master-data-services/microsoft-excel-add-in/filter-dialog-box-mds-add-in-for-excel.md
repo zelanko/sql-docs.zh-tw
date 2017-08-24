@@ -1,27 +1,32 @@
 ---
-title: "篩選對話方塊 (適用於 Excel 的 MDS 增益集) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "篩選對話方塊 （MDS 增益集的 Excel） |Microsoft 文件"
+ms.custom: 
+ms.date: 03/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b987b141-5abf-4161-a073-4cfc3e7f5aae
 caps.latest.revision: 8
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bc882d5ae5a53577ac1c6aedb1fdf20e2d31d6e6
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 篩選對話方塊 (適用於 Excel 的 MDS 增益集)
-  在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] 中，若要在將 MDS 管理的資料載入 Excel 之前縮小資料的範圍，請使用 [篩選] 對話方塊。  
+# <a name="filter-dialog-box-mds-add-in-for-excel"></a>篩選對話方塊 (適用於 Excel 的 MDS 增益集)
+  在[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]，使用**篩選**載入 Excel 之前縮小 MDS 管理資料的清單對話方塊。  
   
  這個對話方塊包含三個區段：[資料行]、[資料列] 和 [摘要]。  
   
-## 資料行  
+## <a name="columns"></a>資料行  
  使用 [資料行] 區段可決定您想要在 Excel 中顯示的屬性 (資料行)。  
   
 |控制項名稱|說明|  
@@ -33,7 +38,7 @@ caps.handback.revision: 8
 |全部清除|按一下即可清除清單中顯示的選取屬性。<br /><br /> 您無法清除 **Name** 和 **Code**。|  
 |向上鍵/向下鍵|按一下即可將選取的屬性在清單中向上或向下移動。 由上至下順序會對應至資料行在工作表中顯示的由左至右順序。|  
   
-## 資料列  
+## <a name="rows"></a>資料列  
  使用 [資料列] 區段可決定您想要在 Excel 中顯示的成員 (資料列)。 您可以透過定義準則進行此作業，以便篩選即將顯示的資料列。  
   
 |控制項名稱|說明|  
@@ -46,7 +51,7 @@ caps.handback.revision: 8
 |全部移除|從清單中移除所有篩選。|  
 |移除|從清單中移除選取的篩選。|  
   
-## 摘要  
+## <a name="summary"></a>摘要  
  使用 [摘要] 區段即可在載入之前檢視即將載入之資料量的相關詳細資料。  
   
 |控制項名稱|說明|  
@@ -57,7 +62,7 @@ caps.handback.revision: 8
 |資料列|根據 [資料列] 區段中套用的篩選，即將載入 Excel 中的資料列數目。|  
 |資料行|根據 [資料行] 區段中選取的屬性，即將載入 Excel 中的資料行數目。|  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [在匯出之前篩選資料 &#40;適用於 Excel 的 MDS 增益集&#41;](../../master-data-services/microsoft-excel-add-in/filter-data-before-exporting-mds-add-in-for-excel.md)   
  [概觀：將資料匯出至 Excel &#40;適用於 Excel 的 MDS 增益集&#41;](../../master-data-services/microsoft-excel-add-in/overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
   

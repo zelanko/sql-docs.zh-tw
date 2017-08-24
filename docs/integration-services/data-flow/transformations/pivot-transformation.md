@@ -1,30 +1,35 @@
 ---
-title: "樞紐轉換 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.pivottrans.f1"
-helpviewer_keywords: 
-  - "樞紐轉換"
-  - "正規化資料 [Integration Services]"
-  - "PivotUsage 屬性"
-  - "資料集 [Integration Services], 正規化資料"
-  - "較不正規化的資料集 [Integration Services]"
+title: "樞紐轉換 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.pivottrans.f1
+helpviewer_keywords:
+- Pivot transformation
+- normalized data [Integration Services]
+- PivotUsage property
+- datasets [Integration Services], normalized data
+- less normalized data set [Integration Services]
 ms.assetid: 55f5db6e-6777-435f-8a06-b68c129f8437
 caps.latest.revision: 55
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 55
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 79a12bf64f2ec27306a5ca8776b33acdb79ca82d
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 樞紐轉換
+# <a name="pivot-transformation"></a>樞紐轉換
   「樞紐」轉換可藉由樞紐資料行值上的輸入資料，將正規化的資料集轉換為較不正規但更精簡的版本。 例如，列出客戶名稱、產品及購買數量的正規化 **Orders** 資料集，對於購買多個產品的客戶一般都具有多個資料列，且該客戶的每個資料列都顯示不同產品的訂單詳細資料。 藉由樞紐產品資料行上的資料集，「樞紐」轉換可以為每位客戶輸出含單一資料列的資料集。 該單一資料列會列出客戶購買的所有產品，產品名稱顯示為資料行名稱，而數量則顯示為產品資料行中的值。 因為不是每位客戶都會購買所有產品，所以許多資料行可能包含 Null 值。  
   
  當樞紐資料集時，輸入資料行會在樞紐處理中執行不同的角色。 資料行的參與方式如下：  
@@ -39,7 +44,7 @@ caps.handback.revision: 55
   
  這個轉換有一個輸入、一個規則輸出及一個錯誤輸出。  
   
-## 排序和複製資料列  
+## <a name="sort-and-duplicate-rows"></a>排序和複製資料列  
  若要有效地樞紐資料 (即在輸出資料集中建立盡可能少的記錄)，輸入資料必須根據樞紐資料行進行排序。 如果資料未排序，「樞紐」轉換可能會為集索引鍵 (定義集成員資格的資料行) 中的每個值產生多筆記錄。 例如，如果資料集在 **Name** 資料行上進行樞紐但名稱未排序，則輸出資料集中的每位客戶可能會一個以上的資料列，因為 **Name** 中的值在每次變更時都會進行樞紐。  
   
  輸入資料可能會包含重複資料列，因而造成「樞紐」轉換失敗。 「重複資料列」表示集索引鍵資料行及樞紐資料行中有相同值的資料列。 若要避免失敗，您可以設定轉換，而將錯誤資料列重新導向至錯誤輸出，也可以預先彙總值，以確定沒有重複資料列。  
@@ -120,19 +125,19 @@ caps.handback.revision: 55
   
      [2002],[2003],[2004]  
   
-## 設定樞紐轉換  
+## <a name="configuration-of-the-pivot-transformation"></a>設定樞紐轉換  
  您可以透過「 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師」或以程式設計方式設定屬性。  
   
  如需有關 [進階編輯器] 對話方塊中可設定屬性的詳細資訊，請按一下下列其中一個主題：  
   
--   [通用屬性](../Topic/Common%20Properties.md)  
+-   [通用屬性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [轉換自訂屬性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
-## 相關內容  
- 如需如何設定此元件屬性的資訊，請參閱[設定資料流程元件的屬性](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)。  
+## <a name="related-content"></a>相關內容  
+ 如需如何設定此元件屬性的資訊，請參閱 [設定資料流程元件的屬性](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [取消樞紐轉換](../../../integration-services/data-flow/transformations/unpivot-transformation.md)   
  [資料流程](../../../integration-services/data-flow/data-flow.md)   
  [Integration Services 轉換](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  

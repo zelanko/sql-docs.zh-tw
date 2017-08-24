@@ -1,32 +1,37 @@
 ---
-title: "概觀：從資料表匯入資料 (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "暫存處理序 [Master Data Services], 有關暫存處理序"
-  - "匯入資料 [Master Data Services]"
-  - "暫存處理序 [Master Data Services]"
+title: "概觀： 從資料表 (Master Data Services) 匯入資料 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- staging process [Master Data Services], about staging process
+- importing data [Master Data Services]
+- staging process [Master Data Services]
 ms.assetid: 181d1e22-379c-45d1-b03c-e1e22ff14164
 caps.latest.revision: 21
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a33ef299ad64c4bc6ca5a96b43feb888b9147565
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 概觀：從資料表匯入資料 (Master Data Services)
-  在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中為資料建立模型之後，即可開始新增資料，並對資料進行變更。   可以使用 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 暫存資料表、預存程序及主資料管理員。  
+# <a name="overview-importing-data-from-tables-master-data-services"></a>概觀：從資料表匯入資料 (Master Data Services)
+  在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中為資料建立模型之後，即可開始新增資料，並對資料進行變更。   可以使用 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 暫存資料表、預存程序及主資料管理員。  
   
  如需如何新增和修改資料的指示，請參[從資料表匯入資料 &#40;Master Data Services&#41;](../master-data-services/import-data-from-tables-master-data-services.md)。  
   
 > [!NOTE]  
->  您也可以使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] 將資料從 Excel 新增至 MDS 存放庫 ([!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫)。 如需詳細資訊，請參閱[概觀：從 Excel 匯入資料 &#40;適用於 Excel 的 MDS 增益集&#41;](../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)。  
+>  您也可以使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]將資料從 Excel 新增至 MDS 存放庫 ([!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫)。 如需詳細資訊，請參閱[概觀：從 Excel 匯入資料 &#40;適用於 Excel 的 MDS 增益集&#41;](../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)。  
   
  當您新增和修改資料時，可以執行下列作業。  
   
@@ -45,9 +50,9 @@ caps.handback.revision: 21
      您可以使用暫存的預存程序或 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 來載入資料。  
   
 > [!NOTE]  
->  [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 已淘汰對 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 暫存處理序提供支援。  
+>  [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]已淘汰對 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 暫存處理序提供支援。  
   
-## 停用和刪除成員 (MDS)  
+## <a name="deactivating-and-deleting-members-mds"></a>停用和刪除成員 (MDS)  
  停用表示可以重新啟用該成員。 如果重新啟用成員，即會還原成員在階層和集合中的屬性及成員資格。 之前的所有交易會完整無缺。 系統管理員可以在主要資料的 [版本管理]  功能區域中，看到停用的交易。  
   
  刪除表示從系統中永久清除該成員。 該成員的所有交易、所有關聯性及所有屬性都會遭到永久刪除。  
@@ -57,7 +62,7 @@ caps.handback.revision: 21
 >   
 >  您無法使用暫存來刪除或重新啟用集合。 如需手動重新啟用集合的詳細資訊，請參閱[刪除成員或集合 &#40;Master Data Services&#41;](../master-data-services/delete-a-member-or-collection-master-data-services.md)。  
   
-## 移動明確階層成員 (MDS)  
+## <a name="moving-explicit-hierarchy-members-mds"></a>移動明確階層成員 (MDS)  
  大量移動明確階層的成員位置時，可以指定下列項目。  
   
 -   合併成員做為合併成員的父系。  
@@ -68,43 +73,43 @@ caps.handback.revision: 21
   
 -   合併成員做為分葉或合併成員的同層級。  
   
-## 暫存資料表和預存程序 (MDS)  
+## <a name="staging-tables-and-stored-procedures-mds"></a>暫存資料表和預存程序 (MDS)  
  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫包含下列幾種可以填入您資料的暫存資料表類型。  
   
 -   [分葉成員暫存資料表 &#40;Master Data Services&#41;](../master-data-services/leaf-member-staging-table-master-data-services.md)  
   
--   [合併成員暫存資料表 &#40;Master Data Services&#41;](../master-data-services/consolidated-member-staging-table-master-data-services.md)  
+-   [合併的成員暫存資料表 &#40;Master Data services&#41;](../master-data-services/consolidated-member-staging-table-master-data-services.md)  
   
 -   [關聯性暫存資料表 &#40;Master Data Services&#41;](../master-data-services/relationship-staging-table-master-data-services.md)  
   
  模型中的每個實體，都有一個暫存資料表。 資料表名稱表示對應的實體以及像是分葉成員的實體類型。 下圖顯示貨幣、客戶及產品實體的暫存資料表。  
   
- ![Staging Tables in MDS database](../master-data-services/media/mds-staging-tables.png "Staging Tables in MDS database")  
+ ![MDS 資料庫中的暫存資料表](../master-data-services/media/mds-staging-tables.png "MDS 資料庫中的暫存資料表")  
   
  建立實體時會指定資料表的名稱，且無法變更。 如果暫存資料表名稱包含 _1 或其他數字，則表示在建立實體時，該名稱的其他資料表已存在。  
   
  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 包含下列幾種類型的暫存預存程序。  
   
--   stg.udp_\<名稱>_Leaf  
+-   stg.udp_<\<名稱 > _Leaf  
   
--   stg.udp_\<名稱>_Consolidated  
+-   stg.udp_<\<名稱 > _Consolidated  
   
--   stg.udp_\<名稱>_Relationship  
+-   stg.udp_<\<名稱 > s h i p  
   
  模型中的每個實體，都有三個對應至分葉成員、合併的成員以及關聯性暫存資料表的預存程序。  下圖顯示貨幣、客戶及產品實體的暫存預存程序。  
   
- ![Staging stored procedures in the MDS database](../master-data-services/media/mds-staging-storedprocedures.png "Staging stored procedures in the MDS database")  
+ ![暫存預存程序，在 MDS 資料庫](../master-data-services/media/mds-staging-storedprocedures.png "暫存 MDS 資料庫中的預存程序")  
   
  如需預存程序的詳細資訊，請參閱[暫存預存程序 &#40;Master Data Services&#41;](../master-data-services/staging-stored-procedure-master-data-services.md)。  
   
-## 記錄交易 (MDS)  
+## <a name="logging-transactions-mds"></a>記錄交易 (MDS)  
  可以記錄匯入或更新資料或關聯性時發生的所有交易。 預存程序中的選項可允許此記錄。 如果使用 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]起始暫存處理序，不會產生任何記錄。  
   
  在 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]中， **[記錄暫存交易]** 設定不會套用至暫存資料的這個方法。  
   
-## 相關內容  
+## <a name="related-content"></a>相關內容  
   
--   [驗證 &#40;Master Data Services&#41;](../master-data-services/validation-master-data-services.md)  
+-   [驗證 &#40;Master Data services&#41;](../master-data-services/validation-master-data-services.md)  
   
 -   [商務規則 &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
   

@@ -1,0 +1,229 @@
+---
+title: "順序 (MDX) |Microsoft 文件"
+ms.custom: 
+ms.date: 03/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- ORDER
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- Order function
+ms.assetid: 84acff52-2443-4424-a09e-694e6f14c109
+caps.latest.revision: 40
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 98037f9c56523e05a1d3af44078bf8da51cd53e5
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
+---
+# <a name="order-mdx"></a>Order (MDX)
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+
+  安排指定集合的成員，可以選擇保留或者打破階層架構。  
+  
+## <a name="syntax"></a>語法  
+  
+```  
+  
+Numeric expression syntax  
+Order(Set_Expression, Numeric_Expression   
+[ , { ASC | DESC | BASC | BDESC } ] )  
+  
+String expression syntax  
+Order(Set_Expression, String_Expression   
+[ , { ASC | DESC | BASC | BDESC } ] )  
+  
+```  
+  
+## <a name="arguments"></a>引數  
+ *Set_Expression*  
+ 傳回集合的有效多維度運算式 (MDX) 運算式。  
+  
+ *Numeric_Expression*  
+ 有效的數值運算式，這通常是傳回數字之資料格座標的多維度運算式 (MDX) 運算式。  
+  
+ *String_Expression*  
+ 有效的字串運算式，這通常是傳回數字 (以字串表示) 之資料格座標的有效多維度運算式 (MDX) 運算式。  
+  
+## <a name="remarks"></a>備註  
+ **順序**函式可以是階層式 (使用依指定**ASC**或**DESC**旗標) 或非階層式 (依照使用**BASC**或**BDESC**旗標; **B**代表 「 破壞階層 」)。 如果**ASC**或**DESC**指定，則**順序**函式先排列成員根據其在階層中的位置，然後排列每個層級。 如果**BASC**或**BDESC**指定，則**順序**函式會排列集合，而不考慮階層中的成員。 在沒有旗標會指定， **ASC**是預設值。  
+  
+ 如果**順序**函式會搭配一組兩個或多個階層的交叉聯結，而**DESC**使用旗標時，只有在集合中的最後一個階層的成員排序。 這不同於 Analysis Services 2000，其集合內的所有階層都會排序。  
+  
+## <a name="examples"></a>範例  
+ 下列範例會傳回，從**Adventure Works** cube、 Date 維度之日曆階層所有日曆季的零售商訂單數目。**順序**函式會重新排列 ROWS 軸的集合。 **順序**函式會排序的集合`[Reseller Order Count]`的遞減階層順序所決定`[Calendar]`階層。  
+  
+ `SELECT`  
+  
+ `Measures.[Reseller Order Count] ON COLUMNS,`  
+  
+ `Order(`  
+  
+ `[Date].[Calendar].[Calendar Quarter].MEMBERS`  
+  
+ `,Measures.[Reseller Order Count]`  
+  
+ `,DESC`  
+  
+ `) ON ROWS`  
+  
+ `FROM [Adventure Works]`  
+  
+ 請注意在這個範例中，當**DESC**旗標變更為**BDESC**，時會破壞階層，而不考慮階層會傳回日曆季的清單：  
+  
+ `SELECT`  
+  
+ `Measures.[Reseller Order Count] ON COLUMNS,`  
+  
+ `Order(`  
+  
+ `[Date].[Calendar].[Calendar Quarter].MEMBERS`  
+  
+ `,Measures.[Reseller Order Count]`  
+  
+ `,BDESC`  
+  
+ `) ON ROWS`  
+  
+ `FROM [Adventure Works]`  
+  
+ 下列範例不考慮階層，而根據 Reseller Gross Profit 傳回前五名產品銷售子類別的 Reseller Sales 量值。 **子集**函式用於後使用排序結果集中傳回前 5 的 tuple**順序**函式。  
+  
+ `SELECT Subset`  
+  
+ `(Order`  
+  
+ `([Product].[Product Categories].[SubCategory].members`  
+  
+ `,[Measures].[Reseller Gross Profit]`  
+  
+ `,BDESC`  
+  
+ `)`  
+  
+ `,0`  
+  
+ `,5`  
+  
+ `) ON 0`  
+  
+ `FROM [Adventure Works]`  
+  
+ 下列範例會使用**陣序規範**分級 City 階層的成員函式根據 Reseller Sales Amount 量值，然後依此次序顯示。 使用**順序**函數，先排序 City 階層的成員集合，排序是只進行一次並跟著線性掃描之前要呈現在排序順序。  
+  
+```  
+WITH   
+SET OrderedCities AS Order  
+   ([Geography].[City].[City].members  
+   , [Measures].[Reseller Sales Amount], BDESC  
+   )  
+MEMBER [Measures].[City Rank] AS Rank  
+   ([Geography].[City].CurrentMember, OrderedCities)  
+SELECT {[Measures].[City Rank],[Measures].[Reseller Sales Amount]}  ON 0   
+,Order  
+   ([Geography].[City].[City].MEMBERS  
+   ,[City Rank], ASC)  
+    ON 1  
+FROM [Adventure Works]  
+```  
+  
+ 下列範例會傳回的產品數目集中是唯一的使用**順序**函式，來排序非空的 tuple，再利用**篩選**函式。 **CurrentOrdinal**函數用來比較和刪除繫結。  
+  
+```  
+WITH MEMBER [Measures].[PrdTies] AS Count  
+   (Filter  
+      (Order  
+        (NonEmpty  
+          ([Product].[Product].[Product].Members  
+          , {[Measures].[Reseller Order Quantity]}  
+          )  
+       , [Measures].[Reseller Order Quantity]  
+       , BDESC  
+       ) AS OrdPrds  
+    , (OrdPrds.CurrentOrdinal < OrdPrds.Count   
+       AND [Measures].[Reseller Order Quantity] =   
+          ( [Measures].[Reseller Order Quantity]  
+            , OrdPrds.Item  
+               (OrdPrds.CurrentOrdinal  
+               )  
+            )  
+         )  
+         OR (OrdPrds.CurrentOrdinal > 1   
+            AND [Measures].[Reseller Order Quantity] =   
+               ([Measures].[Reseller Order Quantity]  
+               , OrdPrds.Item  
+                  (OrdPrds.CurrentOrdinal-2)  
+                )  
+             )  
+          )  
+       )  
+SELECT {[Measures].[PrdTies]} ON 0  
+FROM [Adventure Works]  
+```  
+  
+ 若要了解如何**DESC**旗標與 tuple 集合的運作方式，請先考慮下列查詢的結果：  
+  
+```  
+  
+SELECT  
+{[Measures].[Tax Amount]} ON 0,  
+ORDER(  
+[Sales Territory].[Sales Territory].[Group].MEMBERS  
+,[Measures].[Tax Amount], DESC)  
+ON 1  
+FROM [Adventure Works]  
+  
+```  
+  
+ 在 Rows 軸上，您可以看到銷售領域群組已經依稅額的遞減次序排序，如下：北美、歐洲、太平洋、NA。 發生什麼情況現在會看到我們銷售領域群組的集合與產品子類別目錄的集合交叉聯結，並套用**順序**函式在相同的方式，如下所示：  
+  
+```  
+  
+SELECT  
+{[Measures].[Tax Amount]} ON 0,  
+ORDER(  
+[Sales Territory].[Sales Territory].[Group].MEMBERS  
+*  
+{[Product].[Product Categories].[subCategory].Members}  
+,[Measures].[Tax Amount], DESC)  
+ON 1  
+FROM [Adventure Works]  
+  
+```  
+  
+ 雖然產品子類別目錄的集合已經依遞減階層次序排序，但現在銷售領域群組並未排序，而是以它們在階層中的順序出現：歐洲、NA、北美和太平洋。 這是因為只有 Tuple 集合中的最後一個階層 (即產品子類別目錄) 才會排序。 若要重現 Analysis Services 2000 的行為，請使用一系列的巢狀**產生**之前交叉聯結，例如排序每個集合的函式：  
+  
+```  
+  
+SELECT  
+{[Measures].[Tax Amount]} ON 0,  
+GENERATE(  
+ORDER(  
+[Sales Territory].[Sales Territory].[Group].MEMBERS  
+,[Measures].[Tax Amount], DESC)  
+,  
+ORDER(  
+[Sales Territory].[Sales Territory].CURRENTMEMBER  
+*  
+{[Product].[Product Categories].[subCategory].Members}  
+,[Measures].[Tax Amount], DESC))  
+ON 1  
+FROM [Adventure Works]  
+```  
+  
+## <a name="see-also"></a>另請參閱  
+ [MDX 函數參考 &#40;MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+  
+  
+

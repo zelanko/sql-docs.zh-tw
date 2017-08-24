@@ -1,34 +1,39 @@
 ---
-title: "在執行階段修改 OData 來源查詢 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "修改在執行階段的 OData 來源查詢 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: bcbba7f4-6e5d-46e6-a73a-3f17d3ff376a
 caps.latest.revision: 7
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e061fe6989d9629d655d9e0c08f2cd4c1d932540
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 在執行階段修改 OData 來源查詢
+# <a name="modify-odata-source-query-at-runtime"></a>在執行階段修改 OData 來源查詢
   您可以在執行階段修改 OData 來源查詢，修改的方式是將運算式加入資料流程工作的 **[OData Source].[Query]** 屬性。  
   
  請注意，資料行必須維持與設計階段所使用的內容相同，否則您在執行封裝時將會收到錯誤。 在使用 $select 查詢選項時，請務必指定相同的資料行 (以相同順序)。 使用 $select 選項有一個更安全的替代方法，也就是直接從來源元件 UI 取消選取您不想要的資料行。  
   
  有幾個不同的方式可以在執行階段動態設定查詢值。 底下是一些較為常見的方法。  
   
-## 將查詢公開為參數  
+## <a name="exposing-the-query-as-a-parameter"></a>將查詢公開為參數  
  下列程序的步驟會將 OData 來源元件所使用的查詢公開為封裝的參數。  
   
 1.  以滑鼠右鍵按一下 [資料流程工作]，然後選取 [參數化…] 選項。  
   
-2.  在 [參數化] 對話方塊中，針對 [屬性] 選取 [\<OData 來源元件的名稱>].[Query]。  
+2.  在**參數化**對話方塊中，選取**[\<OData 來源元件名稱 >]。 [Query]**如**屬性**。  
   
 3.  選擇是要 [建立新的參數] 還是 [使用現有的參數]。  
   
@@ -44,7 +49,7 @@ caps.handback.revision: 7
   
 5.  按一下 **[確定]** ，關閉對話方塊。  
   
-## 使用運算式  
+## <a name="using-an-expression"></a>使用運算式  
  當您想要在執行階段以動態方式建構查詢字串時，此方法相當實用。 在此範例中，MaxRows 變數將會透過其他方式 (指令碼、參數等等) 設定。  
   
 1.  選取包含您的 [OData 來源] 的 [資料流程工作]。  

@@ -1,33 +1,38 @@
 ---
-title: "組織追蹤內顯示的資料行 (SQL Server Profiler) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "組織顯示的追蹤資料行 [SQL Server]"
-  - "排列顯示的追蹤資料行"
-  - "追蹤 [SQL Server], 資料行"
+title: "組織追蹤 (SQL Server Profiler) 中所顯示的資料行 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- organizing trace columns displayed [SQL Server]
+- arranging trace columns displayed
+- traces [SQL Server], data columns
 ms.assetid: 6b923f94-0eb1-467e-82f6-ceed43f77017
 caps.latest.revision: 14
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5f1c097e900a9ed76bb5160ecab37238344d7a33
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 組織追蹤內顯示的資料行 (SQL Server Profiler)
+# <a name="organize-columns-displayed-in-a-trace-sql-server-profiler"></a>組織追蹤內顯示的資料行 (SQL Server Profiler)
   您可以在追蹤資料表或在 [追蹤檔案屬性] 對話方塊中選取 [組織資料行]，以將追蹤內的資料行加以群組；在定義追蹤時，也可以進行群組。 群組資料行可讓您以更佳的方式分析 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 追蹤輸出。 如需詳細資訊，請參閱[使用 SQL Server Profiler 檢視和分析追蹤](../../tools/sql-server-profiler/view-and-analyze-traces-with-sql-server-profiler.md)。  
   
  [組織資料行] 可讓您依照所選取的資料行，來群組追蹤事件，或是群組並彙總追蹤事件。  
   
 -   選取多個資料行來進行群組，只會群組追蹤事件。 當您選擇多個資料行進行群組時，追蹤視窗會依照您為了進行群組而選取的資料行之值，來群組並顯示事件。 下列範例顯示如果選擇 **Duration** 和 **StartTime** 資料行以進行群組，追蹤視窗方格將如何顯示。 請注意，會先依照 **Duration** 資料行之值的遞增順序，接著再依照 **StartTime** 值來顯示。  
   
-|有效期間|StartTime|EventClass|ClientProcessID|  
+|Duration|StartTime|EventClass|ClientProcessID|  
 |--------------|---------------|----------------|---------------------|  
 ||12/12/2006 3:16:43 PM|SQL:StmtStarting|2124|  
 |0|12/12/2006 5:39:23 PM|稽核登入|648|  
@@ -36,14 +41,14 @@ caps.handback.revision: 14
   
 -   只選擇一個資料行來進行群組，則可群組並彙總追蹤事件。 當您只選擇一個資料行來進行群組時，追蹤視窗會根據該資料行的值來群組並顯示事件，並將其下的所有事件都摺疊起來。 在您選擇用來進行群組的資料行中，事件左邊會出現一個加號 (**+**)，而其下已摺疊的事件數目，則會顯示在事件右邊的括弧內。 下列範例顯示如果只選擇 **EventClass** 資料行來進行群組，追蹤視窗方格將如何顯示。 請注意，所有事件都會組識在 **EventClass** 資料行之下。 若要檢視所有事件，請按一下加號，展開並顯示該類型的所有事件類別。  
   
-|EventClass|StartTime|有效期間|ClientProcessID|  
+|EventClass|StartTime|Duration|ClientProcessID|  
 |----------------|---------------|--------------|---------------------|  
 |+ ExistingConnection (6)||||  
 |+ SQL:BatchStarting (25)||||  
 |+ SQL:StmtCompleted (11)||||  
 |+ SQL:SmtStarting (21)||||  
   
-### 若要群組追蹤內顯示的資料行  
+### <a name="to-group-data-columns-displayed-in-a-trace"></a>若要群組追蹤內顯示的資料行  
   
 1.  開啟現有的追蹤檔或資料表。  
   
@@ -63,7 +68,7 @@ caps.handback.revision: 14
   
 7.  若要取消群組所顯示的追蹤資料，請按一下 [檢視] 功能表上的 [群組檢視] 以取消選取。 若要再還原為群組檢視，請再按一下 [檢視] 功能表上的 [群組檢視]，以重新選取它。  
   
-### 若要群組並彙總追蹤內的資料行  
+### <a name="to-group-and-aggregate-data-columns-in-a-trace"></a>若要群組並彙總追蹤內的資料行  
   
 1.  開啟現有的追蹤檔或資料表。  
   
@@ -81,9 +86,9 @@ caps.handback.revision: 14
   
 7.  若要還原為追蹤資料的標準檢視，請按一下 [檢視] 功能表上的 [彙總檢視]，這樣會取消選取。 若要再還原為彙總檢視，請再按一下 [檢視] 功能表上的 [彙總檢視] 以重新選取它。 請注意，您也可以按一下 [檢視] 功能表上的 [群組檢視]，顯示已群組的追蹤事件，但不摺疊它們。  
   
-## 另請參閱  
- [建立追蹤 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)   
- [開啟追蹤資料表 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)   
+## <a name="see-also"></a>另請參閱  
+ [建立追蹤 &#40;SQL Server Profiler &#41;](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)   
+ [開啟追蹤資料表 &#40;SQL Server Profiler &#41;](../../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)   
  [開啟追蹤檔案 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)  
   
   
