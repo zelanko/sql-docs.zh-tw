@@ -45,7 +45,7 @@
 # [一般檔案自訂屬性](flat-file-custom-properties.md)  
 # [OData 來源](odata-source.md)  
 ## [教學課程：使用 OData 來源](tutorial-using-the-odata-source.md)  
-## [在執行階段修改 OData 來源查詢](modify-odata-source-query-at-runtime.md)  
+## [在執行階段提供 OData 來源查詢](modify-odata-source-query-at-runtime.md)  
 ## [OData 來源屬性](odata-source-properties.md)  
 # [ODBC 流程元件](odbc-flow-components.md)  
 ## [ODBC 目的地](odbc-destination.md)  
