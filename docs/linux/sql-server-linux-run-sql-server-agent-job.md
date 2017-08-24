@@ -16,8 +16,10 @@ ms.contentlocale: zh-tw
 ms.lasthandoff: 08/02/2017
 
 ---
-
 # <a name="create-and-run-sql-server-agent-jobs-on-linux"></a>建立和執行在 Linux 上的 SQL Server Agent 作業
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+
 SQL Server 工作可用來定期執行的命令相同的順序，SQL Server 資料庫中。 本主題提供有關如何在 Linux 上建立 SQL Server Agent 作業的範例使用 TRANSACT-SQL 和 SQL Server Management Studio (SSMS)。
 
 在此版本 SQL Server 代理程式的已知問題，請參閱[Release Notes](sql-server-linux-release-notes.md)。

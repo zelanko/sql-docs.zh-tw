@@ -18,6 +18,7 @@ ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="walkthrough-for-the-performance-features-of-sql-server-on-linux"></a>SQL Server on Linux 的效能功能的逐步解說
+
 如果您是 SQL Server 的新的 Linux 使用者時，下列工作會引導您完成一些效能功能。 這些不是唯一或特定 Linux，但是它有助於讓您了解區域，若要進一步調查。 在每個範例中，為該區域的深度文件提供的連結。
 
 > [!NOTE]

@@ -20,7 +20,7 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="encrypting-connections-to-sql-server-on-linux"></a>加密連接到 SQL Server on Linux
 
-[!INCLUDE[tsql-appliesto-sslinx-only_md](../../docs/includes/tsql-appliesto-sslinx-only_md.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
 
 [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)]在 Linux 上可以使用傳輸層安全性 (TLS) 來加密資料的用戶端應用程式和執行個體之間透過網路傳送[!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)]。 [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)]在 Windows 和 Linux 上支援相同的 TLS 通訊協定： TLS 1.2、 1.1 和 1.0。 不過，設定 TLS 的步驟會在其上的作業系統特定的[!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)]正在執行。  
  

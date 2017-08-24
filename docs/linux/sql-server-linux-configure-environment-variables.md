@@ -18,6 +18,8 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>使用 Linux 上的環境變數設定 SQL Server 設定
 
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+
 若要在 Linux 上設定 SQL Server 2017 RC2，您可以使用數個不同的環境變數。 兩個案例中使用這些變數：
 
 - 若要設定與初始設定`mssql-conf setup`命令。

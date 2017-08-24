@@ -16,8 +16,9 @@ ms.contentlocale: zh-tw
 ms.lasthandoff: 08/02/2017
 
 ---
-
 # <a name="configure-sles-shared-disk-cluster-for-sql-server"></a>設定 SQL Server SLES 共用的磁碟叢集
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
 
 本指南提供指示來建立適用於 SQL Server 上 SUSE Linux Enterprise Server (SLES) 的兩個節點共用的磁碟叢集。 叢集的圖層根據 SUSE[高可用性延伸模組 (HAE)](https://www.suse.com/products/highavailability)之上[Pacemaker](http://clusterlabs.org/)。 
 

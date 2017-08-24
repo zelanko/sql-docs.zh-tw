@@ -18,6 +18,8 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="business-continuity-and-database-recovery-sql-server-on-linux"></a>商務持續性和資料庫復原 SQL Server on Linux
 
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+
 在 Linux 上的 SQL Server 可讓組織達成各式各樣的服務等級協定以容納各種商務需求的目標。
 
 最簡單的解決方案會運用虛擬化技術，以達到較高程度的恢復功能針對主機層級失敗容錯功能，針對硬體故障，以及彈性和資源極大化。 這些系統可以執行內部部署私人或公用雲端或混合式環境中。 保護的嚴重損壞修復的最簡單形式是資料庫備份。 SQL Server 2017 RC2 中可用的簡單解決方案包括：

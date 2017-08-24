@@ -18,6 +18,8 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="bulk-copy-data-with-bcp-to-sql-server-on-linux"></a>SQL Server on Linux 的 bcp 大量複製資料
 
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+
 本主題示範如何使用[bcp](https://msdn.microsoft.com/en-us/library/ms162802.aspx) Linux 上的 SQL Server 2017 RC2 執行個體和使用者指定格式資料檔之間大量複製資料的命令列公用程式。
 
 您可以使用`bcp`大量的資料列匯入 SQL Server 資料表，或將資料從 SQL Server 資料表匯出至資料檔案。 Queryout 選項搭配使用時，除非`bcp`不需要知道的 Transact SQL。 `bcp`命令列公用程式的運作方式與在內部部署執行 Microsoft SQL Server，或在雲端中，有關 Linux、 Windows 或 Docker 和 Azure SQL Database 和 Azure SQL 資料倉儲。

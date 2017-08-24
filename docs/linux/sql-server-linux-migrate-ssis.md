@@ -18,6 +18,8 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="extract-transform-and-load-data-on-linux-with-ssis"></a>擷取、 轉換和載入與 SSIS Linux 上的資料
 
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+
 本主題描述如何在 Linux 上執行 SQL Server Integration Services (SSIS) 封裝。 SSIS 能夠載入多個來源或資料格式，解決複雜的資料整合問題轉換並清理資料，及更新多個目的地。 
 
 在 Linux 上執行 SSIS 封裝可以連接到 Microsoft SQL Server 在 Windows 內部部署或在雲端中，在 Linux 上或在 Docker 中執行。 它們也可以連接到 Azure SQL Database、 Azure SQL 資料倉儲、 和 ODBC 資料來源。

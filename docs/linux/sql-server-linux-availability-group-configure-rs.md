@@ -16,8 +16,9 @@ ms.contentlocale: zh-tw
 ms.lasthandoff: 08/02/2017
 
 ---
-
 # <a name="configure-read-scale-out-availability-group-for-sql-server-on-linux"></a>設定 SQL Server on Linux 讀取的向外延展可用性群組
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
 
 您可以設定為讀取的向外延展可用性群組的 SQL Server on Linux。 有兩個可用性群組的架構。 A*高可用性*架構會使用 「 叢集管理員提供改進的業務續航力。 此架構也可以包含唯讀的相應放大複本。 若要建立高可用性架構，請參閱[設定 Alwayson 可用性群組的 SQL Server on Linux](sql-server-linux-availability-group-configure-ha.md)。
 

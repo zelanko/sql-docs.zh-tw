@@ -18,6 +18,8 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>疑難排解 SQL Server on Linux
 
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+
 本文件說明如何疑難排解 Microsoft SQL Server on Linux 或 Docker 容器中執行。 疑難排解 SQL Server on Linux，請記住此私用的預覽版本的限制。 您可以找到這些中項目的清單[版本資訊](sql-server-linux-release-notes.md)。
 
 ## <a id="connection"></a>連接錯誤進行疑難排解

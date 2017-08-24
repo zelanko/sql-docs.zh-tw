@@ -16,8 +16,9 @@ ms.contentlocale: zh-tw
 ms.lasthandoff: 08/02/2017
 
 ---
-
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>設定 SQL Server 的 Red Hat Enterprise Linux 共用的磁碟叢集
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
 
 本指南提供 Red Hat Enterprise Linux 上的 SQL Server 中建立兩個節點共用的磁碟叢集的指示。 叢集的圖層以基礎上 Red Hat Enterprise Linux (RHEL) [HA 附加元件](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf)之上[Pacemaker](http://clusterlabs.org/)。 在上一個節點或其他作用中的 SQL Server 執行個體。
 
