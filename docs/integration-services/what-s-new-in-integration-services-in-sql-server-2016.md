@@ -19,16 +19,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: bdb767ed145a95868bb11e5a9fa4facc837d0c07
+ms.sourcegitcommit: 80642503480add90fc75573338760ab86139694c
+ms.openlocfilehash: 5e1127580ff900077fa3d36abcb339cce57857d2
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/21/2017
 
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>什麼 & #39 的新 SQL Server 2016 中 Integration Services
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
- 本主題說明 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]中已新增或更新的功能。  
+ 本主題說明功能已加入或更新 SQL Server 2016 中[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]。  
   
 ## <a name="improvements-grouped-by-category"></a>依類別分組的改進功能  
   
@@ -156,7 +156,7 @@ ms.lasthandoff: 08/03/2017
 ####  <a name="AlwaysOn"></a> 支援 SSIS 目錄中的AlwaysOn  
  AlwaysOn 可用性群組功能是提供資料庫鏡像之企業級替代方案的高可用性與災害復原解決方案。 可用性群組支援一組可一起容錯移轉之離散化使用者資料庫的容錯移轉環境，也就是所謂的可用性資料庫。 如需詳細資訊，請參閱 [永遠開啟可用性群組](https://msdn.microsoft.com/library/hh510230.aspx)。  
   
- 在 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]中，SSIS 會引進新功能，可讓您輕鬆部署到集中式 SSIS 目錄 (也就是 SSISDB 使用者資料庫)。 為了提供 SSISDB 資料庫及其內容的高可用性 (專案、封裝、執行記錄等)，您可以將 SSISDB 資料庫加入「永遠開啟」可用性群組，就像其他任何使用者資料庫。 發生容錯移轉時，其中一個次要節點會自動變成新的主要節點。  
+ 在 SQL Server 2016 中，SSIS 會引進新功能，可讓您輕鬆部署到集中式 SSIS 目錄 （也就是 SSISDB 使用者資料庫）。 為了提供 SSISDB 資料庫及其內容的高可用性 (專案、封裝、執行記錄等)，您可以將 SSISDB 資料庫加入「永遠開啟」可用性群組，就像其他任何使用者資料庫。 發生容錯移轉時，其中一個次要節點會自動變成新的主要節點。  
   
  詳細的概觀及針對 SSISDB 啟用 Alwayson 的逐步指示，請參閱[SSIS 目錄](../integration-services/service/ssis-catalog.md)。  
 
@@ -193,7 +193,7 @@ ms.lasthandoff: 08/03/2017
  SSIS 目錄中新的 **RuntimeLineage** 記錄層次會收集在資料流程中追蹤歷程資訊所需的資料。 您可以剖析此歷程資訊，以對應工作間的歷程關聯性。 ISV 和開發人員可以使用此資訊來建置自訂歷程對應工具。 
 
 ####  <a name="CustomLogging"></a> SSIS 目錄中新的自訂記錄層級  
- 舊版 SSIS 目錄可讓您在執行封裝時，從四個內建的記錄層次進行選擇： **無、基本、效能或詳細資訊**。 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 新增 **RuntimeLineage** 記錄層級。 此外，您現在可以在 SSIS 目錄中建立和儲存多個自訂記錄層級，並挑選每次您執行封裝時要使用的記錄層級。 針對每個自訂記錄層級，只選取您想要擷取的統計資料和事件。 選擇性地包含事件內容，以查看變數值、連接字串和工作屬性。 如需詳細資訊，請參閱＜ [Enable Logging for Package Execution on the SSIS Server](../integration-services/performance/integration-services-ssis-logging.md#server_logging)＞。 
+ 舊版 SSIS 目錄可讓您在執行封裝時，從四個內建的記錄層次進行選擇： **無、基本、效能或詳細資訊**。 SQL Server 2016 新增**RuntimeLineage**記錄層級。 此外，您現在可以在 SSIS 目錄中建立和儲存多個自訂記錄層級，並挑選每次您執行封裝時要使用的記錄層級。 針對每個自訂記錄層級，只選取您想要擷取的統計資料和事件。 選擇性地包含事件內容，以查看變數值、連接字串和工作屬性。 如需詳細資訊，請參閱＜ [Enable Logging for Package Execution on the SSIS Server](../integration-services/performance/integration-services-ssis-logging.md#server_logging)＞。 
 
 ####  <a name="ErrorColumn"></a> 資料流程中適用於錯誤的資料行名稱  
  當您在資料流程中包含錯誤至錯誤輸出的資料列重新導向時，則輸出會包含錯誤發生，但不會顯示的資料行名稱的資料行的數值識別項。 現在，有數種方式可用來尋找或顯示發生錯誤的資料行名稱。  
@@ -289,7 +289,7 @@ ms.lasthandoff: 08/03/2017
 ### <a name="expanded-connectivity-to-the-cloud"></a>已擴充與雲端的連線
 
 ####  <a name="AFP2016"></a> 針對 SQL Server 2016 發行的 Azure Feature Pack for SSIS  
- 已針對 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]發行 Azure Feature Pack for Integration Services。 此功能套件包含連線管理員，可連接到 Azure 資料來源和工作來執行一般的 Azure 作業。 如需詳細資訊，請參閱 [Azure Feature Pack for Integration Services &#40;SSIS&#41;](../integration-services/azure-feature-pack-for-integration-services-ssis.md)。  
+ 已發行 Azure Feature Pack for Integration Services 的 SQL Server 2016。 此功能套件包含連線管理員，可連接到 Azure 資料來源和工作來執行一般的 Azure 作業。 如需詳細資訊，請參閱 [Azure Feature Pack for Integration Services &#40;SSIS&#41;](../integration-services/azure-feature-pack-for-integration-services-ssis.md)。  
 
 #### <a name="dynamics"></a> Service Pack 1 已發行 Microsoft Dynamics Online 資源的支援
 

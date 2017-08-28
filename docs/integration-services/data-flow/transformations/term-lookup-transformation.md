@@ -11,6 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.termlookuptrans.f1
+- sql13.dts.designer.termlookup.termlookup.f1
+- sql13.dts.designer.termlookup.referencetable.f1
+- sql13.dts.designer.termlookup.advanced.f1
 helpviewer_keywords:
 - extracting data [Integration Services]
 - match extracted terms [Integration Services]
@@ -25,10 +28,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3eefbab1c6f9b3cd5e51faa9e875a44218c33b3f
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: ee1fa267107940169c05942e8614a7bf7148566a
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="term-lookup-transformation"></a>詞彙查閱轉換
@@ -96,14 +99,6 @@ ms.lasthandoff: 08/03/2017
   
  您可以透過「 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師」或以程式設計方式設定屬性。  
   
- 如需有關可在 **[詞彙查閱轉換編輯器]** 對話方塊中設定之屬性的詳細資訊，請按一下下列主題之一：  
-  
--   [詞彙查閱轉換編輯器 &#40;參考資料表索引標籤&#41;](../../../integration-services/data-flow/transformations/term-lookup-transformation-editor-reference-table-tab.md)  
-  
--   [詞彙查閱轉換編輯器 &#40;詞彙查閱索引標籤&#41;](../../../integration-services/data-flow/transformations/term-lookup-transformation-editor-term-lookup-tab.md)  
-  
--   [詞彙查閱轉換編輯器 &#40;進階索引標籤&#41;](../../../integration-services/data-flow/transformations/term-lookup-transformation-editor-advanced-tab.md)  
-  
  如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
 -   [通用屬性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -112,4 +107,53 @@ ms.lasthandoff: 08/03/2017
   
  如需如何設定屬性的詳細資訊，請參閱 [設定資料流程元件的屬性](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)。  
   
+## <a name="term-lookup-transformation-editor-term-lookup-tab"></a>詞彙查閱轉換編輯器 (詞彙查閱索引標籤)
+  使用 **[詞彙查閱轉換編輯器]** 對話方塊的 **[詞彙查閱]** 索引標籤，即可將輸入資料行對應至參考資料表的查閱資料行，並提供每一個輸出資料行的別名。  
   
+### <a name="options"></a>選項  
+ **可用輸入資料行**  
+ 使用核取方塊選取輸入資料行，即可讓這些輸入資料行在不變更的狀況下通過至輸出。 將輸入資料行拖曳至 **[可用的參考資料行]** 清單，即可對應至參考資料表的查閱資料行。 輸入和查閱資料行都必須有相符、受支援的資料類型，包括 DT_NTEXT 或 DT_WSTR。 在 [ [建立關聯性](../../../integration-services/data-flow/transformations/create-relationships.md) ] 對話方塊中選取對應行，並以滑鼠右鍵按一下來編輯對應。  
+  
+ **可用的參考資料行**  
+ 檢視參考資料表中可用的資料行。 選擇包含要比對之詞彙清單的資料行。  
+  
+ **通過資料行**  
+ 從可用的輸入資料行清單中選取。 您的選擇會反映在 **[可用的輸入資料行]** 資料表的核取方塊選擇中。  
+  
+ **輸出資料行別名**  
+ 輸入每一個輸出資料行的別名。 預設為資料行的名稱；不過，您可以選擇任何唯一的描述性名稱。  
+  
+ **設定錯誤輸出**  
+ 使用 [ [設定錯誤輸出](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) ] 對話方塊，即可指定造成錯誤之資料列的錯誤處理選項。  
+  
+## <a name="term-lookup-transformation-editor-reference-table-tab"></a>詞彙查閱轉換編輯器 (參考資料表索引標籤)
+  使用 [詞彙查閱轉換編輯器] 對話方塊的 [參考資料表] 索引標籤，即可指定參考 (查閱) 資料表的連接。  
+  
+### <a name="options"></a>選項。  
+ **OLE DB 連接管理員**  
+ 從清單中選取現有的連線管理員，或按一下 [新增] 來建立新的連線。  
+  
+ **新**  
+ 使用 [設定 OLE DB 連線管理員] 對話方塊來建立新的連線。  
+  
+ **參考資料表名稱**  
+ 從清單中選取項目，以選取資料庫中的查閱資料表或檢視。 資料表或檢視應包含具有現有詞彙清單的資料行，可以用來與來源資料行中的文字進行比較。  
+  
+ **設定錯誤輸出**  
+ 使用 [ [設定錯誤輸出](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) ] 對話方塊，即可指定造成錯誤之資料列的錯誤處理選項。  
+  
+## <a name="term-lookup-transformation-editor-advanced-tab"></a>詞彙查閱轉換編輯器 (進階索引標籤)
+  使用 [詞彙查閱轉換編輯器] 對話方塊的 [進階] 索引標籤，即可指定查閱是否應區分大小寫。  
+  
+### <a name="options"></a>選項  
+ **使用區分大小寫的詞彙查閱**  
+ 指出查閱是否區分大小寫。 預設值為 **False**。  
+  
+ **設定錯誤輸出**  
+ 使用 [ [設定錯誤輸出](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) ] 對話方塊，即可指定造成錯誤之資料列的錯誤處理選項。  
+  
+## <a name="see-also"></a>另請參閱  
+ [Integration Services 錯誤和訊息參考](../../../integration-services/integration-services-error-and-message-reference.md)   
+ [詞彙擷取轉換](../../../integration-services/data-flow/transformations/term-extraction-transformation.md)  
+  
+

@@ -11,6 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.dataminingquerytrans.f1
+- sql13.dts.designer.dmquerytransformation.miningmodel.f1
+- sql13.dts.designer.dmquerytransformation.query.f1
 helpviewer_keywords:
 - Data Mining Query transformation
 - prediction queries [Integration Services]
@@ -20,10 +22,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 544f0aaf11e83b9ba2fc0ae5150b85e537998c25
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: 7ec5d0d1168e49fb38ce8b58eaa75d6c0d6c51b5
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="data-mining-query-transformation"></a>資料採礦查詢轉換
@@ -38,12 +40,6 @@ ms.lasthandoff: 08/03/2017
   
  您可以透過「 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師」或以程式設計方式設定屬性。  
   
- 如需可在 **[資料採礦查詢轉換編輯器]** 對話方塊中設定之屬性的詳細資訊，請按一下下列其中一個主題：  
-  
--   [資料採礦查詢轉換編輯器 &#40;採礦模型索引標籤&#41;](../../../integration-services/data-flow/transformations/data-mining-query-transformation-editor-mining-model-tab.md)  
-  
--   [資料採礦查詢轉換編輯器 &#40;採礦模型索引標籤&#41;](../../../integration-services/data-flow/transformations/data-mining-query-transformation-editor-mining-model-tab.md)  
-  
  **[進階編輯器]** 對話方塊會反映能以程式設計的方式設定之屬性。 如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
 -   [通用屬性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -52,4 +48,30 @@ ms.lasthandoff: 08/03/2017
   
  如需如何設定屬性的詳細資訊，請參閱 [設定資料流程元件的屬性](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)。  
   
+## <a name="data-mining-query-transformation-editor-mining-model-tab"></a>資料採礦查詢轉換編輯器 (採礦模型索引標籤)
+  使用 **[資料採礦查詢轉換編輯器]** 對話方塊的 **[採礦模型]** 索引標籤，來選取資料採礦結構及其採礦模型。  
   
+### <a name="options"></a>選項  
+ **連接**  
+ 使用清單方塊來選取現有的 Analysis Services 連接，或使用 [新增] 按鈕來建立新的連接，如下所述。  
+  
+ **新增**  
+ 使用 [加入 Analysis Services 連接管理員] 對話方塊來建立新的連接。  
+  
+ **採礦結構**  
+ 從可用之採礦模型結構的清單中選取。  
+  
+ **採礦模型**  
+ 檢視與選取的資料採礦結構相關聯的採礦模型清單。  
+  
+## <a name="data-mining-query-transformation-editor-query-tab"></a>資料採礦查詢轉換編輯器 (查詢索引標籤)
+  使用 **[資料採礦查詢轉換編輯器]** 對話方塊的 **[查詢]** 索引標籤，即可建立預測查詢。  
+  
+### <a name="options"></a>選項。  
+ **資料採礦查詢**  
+ 將資料採礦延伸模組 (DMX) 查詢直接輸入文字方塊中。  
+  
+ **建立新查詢**  
+ 按一下 [建立新查詢]，即可使用圖形化查詢產生器建立資料採礦延伸模組 (DMX) 查詢。  
+  
+

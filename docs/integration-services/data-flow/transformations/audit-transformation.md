@@ -11,6 +11,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.audittrans.f1
+- sql13.dts.designer.audittransformation.f1
 helpviewer_keywords:
 - environment data in packages [Integration Services]
 - Audit transformation
@@ -20,10 +21,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c495bd9c116e10877f79f165f0f582938b0347ad
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: 253c8abb921dbd60e571a892f108d283b111e70c
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="audit-transformation"></a>稽核轉換
@@ -51,8 +52,6 @@ ms.lasthandoff: 08/03/2017
   
  您可以透過「 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師」或以程式設計方式設定屬性。  
   
- 如需可在 **[稽核轉換編輯器]** 對話方塊中設定之屬性的詳細資訊，請參閱 [Audit Transformation Editor](../../../integration-services/data-flow/transformations/audit-transformation-editor.md)。  
-  
  **[進階編輯器]** 對話方塊會反映能以程式設計的方式設定之屬性。 如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
 -   [通用屬性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -60,5 +59,27 @@ ms.lasthandoff: 08/03/2017
 -   [轉換自訂屬性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
  如需如何設定屬性的詳細資訊，請參閱 [設定資料流程元件的屬性](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)。  
+  
+## <a name="audit-transformation-editor"></a>稽核轉換編輯器
+  稽核轉換可讓封裝中的資料流程包含有關封裝執行的環境資料。 例如，可以將封裝、電腦與操作員的名稱加入資料流程。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 包括提供此資訊的系統變數。  
+  
+### <a name="options"></a>選項  
+ **輸出資料行名稱**  
+ 提供包含稽核資訊之新輸出資料行的名稱。  
+  
+ **稽核類型**  
+ 選取可用的系統變數以提供稽核資訊。  
+  
+|Value|說明|  
+|-----------|-----------------|  
+|**執行執行個體 GUID**|插入唯一識別封裝之執行執行個體的 GUID。|  
+|**封裝識別碼**|插入唯一識別封裝的 GUID。|  
+|**封裝名稱**|插入封裝名稱。|  
+|**版本識別碼**|插入唯一識別封裝版本的 GUID。|  
+|**執行開始時間**|插入封裝開始執行的時間。|  
+|**電腦名稱**|插入啟動封裝的電腦名稱。|  
+|**使用者名稱**|插入啟動封裝之使用者的登入名稱。|  
+|**工作名稱**|插入與稽核轉換相關聯之資料流程工作的名稱。|  
+|**工作識別碼**|插入唯一識別與稽核轉換相關聯之資料流程工作的 GUID。|  
   
   

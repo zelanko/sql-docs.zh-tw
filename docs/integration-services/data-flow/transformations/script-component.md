@@ -11,6 +11,11 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.scriptcomponentdetails.f1
+- sql13.dts.designer.scriptcomponent.f1
+- sql13.dts.designer.scriptcomponent.connections.f1
+- sql13.dts.designer.scriptcomponent.inputcolumn.f1
+- sql13.dts.designer.scriptcomponent.columnproperties.f1
+- sql13.dts.designer.scriptcomponent.script.f1
 helpviewer_keywords:
 - Script transformation
 - scripts [Integration Services], transformations
@@ -22,10 +27,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b9411fdeb050a63c94c9904cd3f1b6e8aefd6b0a
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: e7b0923968137a76b68d0324223ffbb61e7443b9
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="script-component"></a>指令碼元件
@@ -92,16 +97,6 @@ ms.lasthandoff: 08/03/2017
  您可以透過「 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師」或以程式設計方式設定屬性。  
   
 ### <a name="configuring-the-script-component-in-the-designer"></a>在設計工具中設定指令碼元件  
- 如需有關可以在 **[指令碼轉換編輯器]** 對話方塊中設定之屬性的詳細資訊，請按下列其中一個主題：  
-  
--   [指令碼轉換編輯器 &#40;輸入資料行頁面&#41;](../../../integration-services/data-flow/transformations/script-transformation-editor-input-columns-page.md)  
-  
--   [指令碼轉換編輯器 &#40;輸入及輸出頁面&#41;](../../../integration-services/data-flow/transformations/script-transformation-editor-inputs-and-outputs-page.md)  
-  
--   [指令碼轉換編輯器 &#40;指令碼頁面&#41;](../../../integration-services/data-flow/transformations/script-transformation-editor-script-page.md)  
-  
--   [指令碼轉換編輯器 &#40;連線管理員頁面&#41;](../../../integration-services/data-flow/transformations/script-transformation-editor-connection-managers-page.md)  
-  
  如需有關如何在「 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師」中設定這些屬性的詳細資訊，請按下列主題：  
   
 -   [設定資料流程元件的屬性](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
@@ -116,6 +111,113 @@ ms.lasthandoff: 08/03/2017
  如需有關如何設定屬性的詳細資訊，請按下列其中一個主題：  
   
 -   [設定資料流程元件的屬性](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
+  
+## <a name="select-script-component-type"></a>選取指令碼元件類型
+  使用 **[選取指令碼元件類型]** 對話方塊，即可指定是否建立指令碼轉換，而這類轉換必須預先設定以作為來源、轉換或目的地。  
+  
+ 若要深入了解指令碼元件，請參閱[設定指令碼元件指令碼元件編輯器中](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)。 若要了解如何以程式設計方式編寫指令碼元件，請參閱＜ [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)＞。  
+  
+### <a name="options"></a>選項。  
+ 選擇 **[來源]**、 **[目的地]**或 **[轉換]** ，會影響 [指令碼轉換] 的組態和指令碼轉換編輯器的頁面。  
+  
+## <a name="script-transformation-editor-connection-managers-page"></a>指令碼轉換編輯器 (連接管理員頁面)
+  使用 [指令碼轉換編輯器] 的 [連線管理員] 頁面，即可指定指令碼將要使用的任何連接。  
+  
+ 若要深入了解指令碼元件，請參閱[設定指令碼元件指令碼元件編輯器中](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)。 若要了解如何以程式設計方式編寫指令碼元件，請參閱＜ [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)＞。  
+  
+### <a name="options"></a>選項。  
+ **連接管理員**  
+ 檢視指令碼使用的可用連接清單。  
+  
+ **名稱**  
+ 輸入連接的唯一和描述性名稱。  
+  
+ **連線管理員**  
+ 從可用的連接管理員清單中選取，或選取**\<新增連接 >**開啟**加入 SSIS 連接管理員** 對話方塊。  
+  
+ **說明**  
+ 輸入連接的描述。  
+  
+ **[加入]**  
+ 將其他連接加入 [連線管理員] 清單中。  
+  
+ **移除**  
+ 從 [連線管理員] 中移除選取的連接。  
+  
+## <a name="script-transformation-editor-input-columns-page"></a>指令碼轉換編輯器 (輸入資料行頁面)
+  使用 [指令碼轉換編輯器] 對話方塊的 [輸入資料行] 頁面，對輸入資料行設定屬性。  
+  
+> [!NOTE]  
+>  針對來源元件不會顯示 [輸入資料行] 頁面，因為來源元件只有輸出沒有輸入。  
+  
+ 若要深入了解指令碼元件，請參閱[設定指令碼元件指令碼元件編輯器中](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)。 若要了解如何以程式設計方式編寫指令碼元件，請參閱＜ [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)＞。  
+  
+### <a name="options"></a>選項。  
+ **輸入名稱**  
+ 從可用輸入的清單中選取。  
+  
+ **可用的輸入資料行**  
+ 利用核取方塊來指定指令碼轉換所使用的資料行。  
+  
+ **輸入資料行**  
+ 從每個資料列的可用輸入資料行清單中選取。 您的選擇會反映在 [可用的輸入資料行] 資料表的核取方塊選擇中。  
+  
+ **輸出別名**  
+ 輸入每一個輸出資料行的別名。 預設是輸入資料行的名稱；但是，您可以選擇任何唯一的、描述性名稱。  
+  
+ **使用類型**  
+ 指定指令碼轉換是否要將每個資料行視為 **ReadOnly** 或是 **ReadWrite**。  
+  
+## <a name="script-transformation-editor-inputs-and-outputs-page"></a>指令碼轉換編輯器 (輸入及輸出頁面)
+  使用 **[指令碼轉換編輯器]** 對話方塊的 **[輸入及輸出]** 頁面，即可加入、移除和設定指令碼轉換的輸入及輸出。  
+  
+> [!NOTE]  
+>  來源元件會有輸出但沒有輸入，而目的地元件會有輸入但沒有輸出。 轉換則同時具有輸入和輸出。  
+  
+ 若要深入了解指令碼元件，請參閱[設定指令碼元件指令碼元件編輯器中](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)。 若要了解如何以程式設計方式編寫指令碼元件，請參閱＜ [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)＞。  
+  
+### <a name="options"></a>選項。  
+ **Inputs and outputs**  
+ 在左方選取輸入及輸出，即可在右方檢視其在資料表中的屬性。 可用於編輯的屬性會根據選取範圍而有所不同。 顯示的許多屬性是唯讀的。 如需個別屬性的詳細資訊，請參閱下列主題。  
+  
+ [通用屬性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+  
+ [轉換自訂屬性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
+  
+ **加入輸出**  
+ 將其他輸出加入到清單中。  
+  
+ **加入資料行**  
+ 選取要放置新輸出資料行的資料夾，再按一下 [加入資料行] 將其加入。  
+  
+ **移除輸出**  
+ 選取輸出，然後按一下 [移除輸出] 將它移除。  
+  
+ **移除資料行**  
+ 選取資料行，然後按一下 [移除資料行] 將它移除。  
+  
+## <a name="script-transformation-editor-script-page"></a>指令碼轉換編輯器 (指令碼頁面)
+  使用 **[指令碼轉換編輯器]** 對話方塊的 **[指令碼]** 索引標籤，來指定指令碼和相關的屬性。  
+  
+ 若要深入了解指令碼元件，請參閱[設定指令碼元件指令碼元件編輯器中](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)。 若要了解如何以程式設計方式編寫指令碼元件，請參閱＜ [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)＞。  
+  
+### <a name="options"></a>選項。  
+ **屬性**  
+ 檢視和修改指令碼轉換的屬性。 顯示的許多屬性是唯讀的。 您可以修改下列屬性：  
+  
+|Value|說明|  
+|-----------|-----------------|  
+|**說明**|以其用途來描述指令碼轉換。|  
+|**LocaleID**|指定地區設定以提供排序和日期和時間轉換的特定區域資訊。|  
+|**名稱**|輸入元件的描述性名稱。|  
+|**ValidateExternalMetadata**|指出指令碼轉換在設計階段是否對外部資料來源驗證資料行中繼資料。 **false** 的值將會延遲到執行時間才驗證。|  
+|**ReadOnlyVariables**|輸入以逗號分隔的變數清單，以供指令碼轉換進行唯讀存取。<br /><br /> 注意：變數名稱會區分大小寫。|  
+|**ReadWriteVariables**|輸入以逗號分隔的變數清單，以供指令碼轉換進行可讀寫存取。<br /><br /> 注意：變數名稱會區分大小寫。|  
+|**ScriptLanguage**|選取指令碼元件所要使用的指令碼語言。<br /><br /> 若要為指令碼元件和指令碼工作設定預設指令碼語言，請使用 **[選項]** 對話方塊上 **[一般]** 頁面上的 **[指令碼語言]** 選項。|  
+|**UserComponentTypeName**|指定支援 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost> ScriptComponentHost **類別和** Microsoft.SqlServer.TxScript [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 組件。|  
+  
+ **編輯指令碼**  
+ 使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) 來建立或修改指令碼。  
   
 ## <a name="related-content"></a>相關內容  
  [Integration Services 轉換](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  

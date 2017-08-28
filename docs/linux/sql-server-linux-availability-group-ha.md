@@ -14,19 +14,20 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 8e2d26fd9ce79fc8c47c7499313648d565ae1b97
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 353e7cf5cef8430303e3ee6fbefc92db08f5f733
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/28/2017
 
 ---
-
 # <a name="high-availability-and-data-protection-for-availability-group-configurations"></a>可用性群組組態的高可用性與資料保護
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 這篇文章會提供支援的部署組態，SQL Server Always On 可用性群組中的 Linux 伺服器上。 可用性群組支援高可用性和資料保護。 自動偵測、 自動容錯移轉和透明容錯移轉後的重新連線提供高可用性。 同步處理的複本提供資料保護。 
 
 >[!NOTE]
->除了高可用性和資料保護，可用性群組可以也提供災害復原、 跨平台移轉，以及讀取向外延展。 本文主要討論實作高可用性與資料保護。 
+>除了高可用性和資料保護，可用性群組可以也提供災害復原、 跨平台移轉，以及讀取向外延展。本文主要討論實作高可用性與資料保護。 
 
 使用 Windows Server 容錯移轉叢集，常見的組態，高可用性會使用兩個同步複本和一個[檔案共用見證](http://technet.microsoft.com/library/cc731739.aspx)。 檔案共用見證，例如驗證的可用性群組設定-的同步處理的狀態和複本的角色。 此組態可確保所選為容錯移轉目標有最新的資料和可用性群組組態變更的次要複本。 
 
@@ -74,7 +75,7 @@ ms.lasthandoff: 08/02/2017
 
 ## <a name="two-synchronous-replicas"></a>兩個同步複本
 
-此設定可啟用資料保護。 可用性群組組態，例如，它可以啟用讀取的向外延展。 兩個同步複本組態不提供自動的高可用性。 
+此設定可啟用資料保護。 可用性群組組態，例如，它可以啟用讀取的向外延展。兩個同步複本組態不提供自動的高可用性。 
 
 ![兩個同步複本][1]
 
@@ -114,7 +115,7 @@ ms.lasthandoff: 08/02/2017
 在此案例中，兩個複本都有回應觸發容錯移轉。 成功的主要複本中斷後自動容錯移轉，兩個次要複本必須保持最新狀態並回應預先升級通知。 如果它們是在線上而且同步，也會具有相同的序號。 可用性群組升級其中一個。 如果只有其中一個次要複本會回應預先升級動作，資源代理程式無法保證回應的次要複本具有最高的 sequence_number，且不會觸發容錯移轉。
 
 >[!IMPORTANT]
->當`required_synchronized_secondaries_to_commit`為 0 沒有資料遺失的風險。 在主要複本過時期間，資源代理程式不會自動觸發容錯移轉。 您可以等候主要若要復原，或手動容錯移轉使用`FORCE_FAILOVER_ALLOW_DATA_LOSS`。
+>當 `required_synchronized_secondaries_to_commit` 為 0 時，有遺失資料的風險。 在主要複本過時期間，資源代理程式不會自動觸發容錯移轉。 您可以等候主要若要復原，或手動容錯移轉使用`FORCE_FAILOVER_ALLOW_DATA_LOSS`。
 
 您可以選擇要覆寫預設行為，並避免設定可用性群組資源`required_synchronized_secondaries_to_commit`自動。
 

@@ -11,6 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.cachetrans.f1
+- sql13.dts.designer.cachetranscon.f1
+- sql13.dts.designer.cachetransmap.f1
 helpviewer_keywords:
 - Cache transform
 ms.assetid: a5683fc8-9c32-4634-819e-e9815627e4f1
@@ -19,10 +21,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c03d2c178b4632b334078c72ab87a11d645fe7da
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: 4f1a65ed00262cfc0af0d4c4f117ef022846e26c
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="cache-transform"></a>快取轉換
@@ -39,7 +41,7 @@ ms.lasthandoff: 08/03/2017
   
  在單一封裝中，只有「快取轉換」可以將資料寫入至相同的快取連接管理員。 如果封裝包含多個「快取轉換」，則在封裝執行時呼叫的第一個「快取轉換」會將資料寫入連接管理員。 後續「快取轉換」的寫入作業會失敗。  
   
- 如需詳細資訊，請參閱 [快取連線管理員](../../../integration-services/data-flow/transformations/cache-connection-manager.md) 和 [快取連線管理員編輯器](../../../integration-services/data-flow/transformations/cache-connection-manager-editor.md)。  
+ 如需詳細資訊，請參閱[快取連接管理員](../../../integration-services/data-flow/transformations/cache-connection-manager.md)。  
   
 ## <a name="configuration-of-the-cache-transform"></a>快取轉換的組態  
  您可以將快取連接管理員設定為將資料儲存至快取檔案 (.caw)。  
@@ -57,9 +59,24 @@ ms.lasthandoff: 08/03/2017
   
  您可以透過 [[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 設計師] 設定屬性。 如需可在 [進階編輯器] 對話方塊中設定之屬性的詳細資訊，請參閱[轉換自訂屬性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)。  
   
- 如需如何設定屬性的詳細資訊，請參閱[設定資料流程元件的屬性](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)。  
+ 如需如何設定屬性的詳細資訊，請參閱 [設定資料流程元件的屬性](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="cache-transformation-editor-connection-manager-page"></a>快取轉換編輯器 (連接管理員頁面)
+  使用 **[快取轉換編輯器]** 對話方塊的 **[連接管理員]** 索引標籤，即可選取現有的快取連接管理員或建立新的快取連接管理員。  
+  
+ 若要深入了解快取連接管理員，請參閱＜ [Cache Connection Manager](../../../integration-services/data-flow/transformations/cache-connection-manager.md)＞。  
+  
+### <a name="options"></a>選項。  
+ **[完整快取]**  
+ 使用清單方塊來選取現有的快取連線管理員，或使用 [新增] 按鈕來建立新的連線。  
+  
+ **新增**  
+ 使用 [快取連接管理員編輯器] 對話方塊來建立新的連接。  
+  
+ **編輯**  
+ 修改現有的連接。  
+  
+## <a name="see-also"></a>另請參閱  
  [Integration Services 轉換](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [資料流程](../../../integration-services/data-flow/data-flow.md)  
   

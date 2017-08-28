@@ -11,6 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.fuzzylookuptrans.f1
+- sql13.dts.designer.fuzzylookuptransformation.referencetable.f1
+- sql13.dts.designer.fuzzylookuptransformation.columns.f1
+- sql13.dts.designer.fuzzylookuptransformation.advanced.f1
 helpviewer_keywords:
 - cleaning data
 - comparing data
@@ -35,10 +38,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2c05d44e6a91c79e5a5ce71b1e26ac2f4a319a88
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: ff5f003749572b16e750b5940cd0f05b0b879fda
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="fuzzy-lookup-transformation"></a>模糊查閱轉換
@@ -128,14 +131,6 @@ ms.lasthandoff: 08/03/2017
 ## <a name="configuring-the-fuzzy-lookup-transformation"></a>設定模糊查閱轉換  
  您可以透過「 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師」或以程式設計方式設定屬性。  
   
- 如需有關可在 **[模糊查閱轉換編輯器]** 對話方塊中設定之屬性的詳細資訊，請按下列其中一個主題：  
-  
--   [模糊查閱轉換編輯器 &#40;參考資料表索引標籤&#41;](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation-editor-reference-table-tab.md)  
-  
--   [模糊查閱轉換編輯器 &#40;資料行索引標籤&#41;](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation-editor-columns-tab.md)  
-  
--   [模糊查閱轉換編輯器 &#40;進階索引標籤&#41;](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation-editor-advanced-tab.md)  
-  
  如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
 -   [通用屬性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -145,7 +140,84 @@ ms.lasthandoff: 08/03/2017
 ## <a name="related-tasks"></a>相關工作  
  如需如何設定資料流程元件屬性的詳細資訊，請參閱 [Set the Properties of a Data Flow Component](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)(設定資料流程元件的屬性)。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="fuzzy-lookup-transformation-editor-reference-table-tab"></a>模糊查閱轉換編輯器 (參考資料表索引標籤)
+  使用 **[模糊查閱轉換編輯器]** 對話方塊的 **[參考資料表]** 索引標籤，指定來源資料表和用於查閱的索引。 參考資料來源必須是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫中的資料表。  
+  
+> [!NOTE]  
+>  模糊查閱轉換會建立參考資料表的工作副本。 下面描述的索引是使用特殊資料表，而非使用一般 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 索引在此工作資料表上建立的。 除非您選取 **[維護儲存的索引]**，否則轉換不會修改現有的來源資料表。 在此情況下，它會在參考資料表上建立觸發程序，以根據參考資料表的變更來更新工作資料表和查閱索引資料表。  
+  
+> [!NOTE]  
+>  在 **[模糊查閱轉換編輯器]** 中無法使用模糊查閱轉換的 **Exhaustive** 和 **MaxMemoryUsage**屬性，但可使用 **[進階編輯器]**來設定這兩個屬性。 此外，只有在 **[進階編輯器]** 中，才可指定大於 100 的 **MaxOutputMatchesPerInput**值。 如需有關這些屬性的詳細資訊，請參閱＜ [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)＞的「模糊查閱轉換」一節。  
+  
+### <a name="options"></a>選項  
+ **OLE DB 連接管理員**  
+ 從清單中選取現有的 OLE DB 連線管理員，或按一下 [新增] 來建立新連線。  
+  
+ **新增**  
+ 使用 [設定 OLE DB 連線管理員] 對話方塊來建立新的連線。  
+  
+ **產生新的索引**  
+ 指定轉換應建立新的索引以用來查閱。  
+  
+ **參考資料表名稱**  
+ 選取要用來作為參考 (查閱) 資料表的現有資料表。  
+  
+ **儲存新的索引**  
+ 如果您要儲存新的查閱索引，請選取此選項。  
+  
+ **新增索引名稱**  
+ 如果您已選擇要儲存新的查閱索引，請輸入該索引的描述性名稱。  
+  
+ **[維護儲存的索引]**  
+ 如果您已選擇要儲存新的查閱索引，請指定是否也要 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 維護該索引。  
+  
+> [!NOTE]  
+>  當您在 **[模糊查閱轉換編輯器]** 的 **[參考資料表]** 索引標籤上選取 **[維護儲存的索引]**時，轉換會使用具名預存程序來維護索引。 這些 Managed 預存程序會使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中的 Common Language Runtime (CLR) 整合功能。 根據預設，不會啟用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的 CLR 整合功能。 若要使用 **[維護儲存的索引]** 功能，您必須啟用 CLR 整合。 如需詳細資訊，請參閱 [Enabling CLR Integration](../../../relational-databases/clr-integration/clr-integration-enabling.md)。  
+>   
+>  因為 **[維護儲存的索引]** 選項需要 CLR 整合，因此只有當您在已啟用 CLR 整合的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體上選取參考資料表時，這項功能才有效。  
+  
+ **使用現有的索引**  
+ 指定轉換應使用現有的索引來查閱。  
+  
+ **現有索引的名稱**  
+ 從清單中選取先前建立的查閱索引。  
+  
+## <a name="fuzzy-lookup-transformation-editor-columns-tab"></a>模糊查閱轉換編輯器 (資料行索引標籤)
+  使用 **[模糊查閱轉換編輯器]** 對話方塊的 **[資料行]** 索引標籤，即可設定輸入與輸出資料行的屬性。  
+  
+### <a name="options"></a>選項  
+ **可用輸入資料行**  
+ 拖曳輸入資料行，即可將資料行連接到可用的查閱資料行。 這些資料行必須擁有相符的、支援的資料類型。 在 [ [建立關聯性](../../../integration-services/data-flow/transformations/create-relationships.md) ] 對話方塊中選取對應行，並以滑鼠右鍵按一下來編輯對應。  
+  
+ **名稱**  
+ 檢視可用輸入資料行的名稱。  
+  
+ **通過**  
+ 指定是否在轉換的輸出中包含輸入資料行。  
+  
+ **可用的查閱資料行**  
+ 使用核取方塊即可選取要執行模糊查閱作業的資料行。  
+  
+ **查閱資料行**  
+ 從可用的參考資料表資料行清單中選取查閱資料行。 您的選取項目會反映在 **[可用的查閱資料行]** 資料表的核取方塊選取項目中。 選取 **[可用的查閱資料行]** 資料表中的資料行會建立輸出資料行，其中包含傳回的每個相符資料列的參考資料表資料行值。  
+  
+ **輸出別名**  
+ 輸入每個查閱資料行之輸出的別名。 預設值為附加數值索引值之查閱資料行的名稱；不過，您也可以選擇任何唯一的、描述性名稱。  
+  
+## <a name="fuzzy-lookup-transformation-editor-advanced-tab"></a>模糊查閱轉換編輯器 (進階索引標籤)
+  使用 **[模糊查閱轉換編輯器]** 對話方塊的 **[進階]** 索引標籤，即可設定模糊查閱的參數。  
+  
+### <a name="options"></a>選項  
+ **每次查閱輸出的相符記錄數目上限**  
+ 指定轉換針對每一個輸入資料列，可以傳回的相符項目上限。 預設值是 **1**。  
+  
+ **相似度臨界值**  
+ 使用滑桿設定元件層級的相似度臨界值。 此值越接近 1，查閱值與來源值的相似度必須越接近才能認定為相符。 增加臨界值可改善比對速度，因為需要考慮的候選記錄越少。  
+  
+ **Token 分隔符號**  
+ 指定轉換用來 Token 化資料行值的分隔符號。  
+  
+## <a name="see-also"></a>另請參閱  
  [查閱轉換](../../../integration-services/data-flow/transformations/lookup-transformation.md)   
  [模糊群組轉換](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)   
  [Integration Services 轉換](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  

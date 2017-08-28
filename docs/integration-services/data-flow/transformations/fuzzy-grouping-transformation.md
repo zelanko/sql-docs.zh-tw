@@ -11,6 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.fuzzygroupingtrans.f1
+- sql13.dts.designer.fuzzygroupingtransformation.connection.f1
+- sql13.dts.designer.fuzzygroupingtransformation.columns.f1
+- sql13.dts.designer.fuzzygroupingtransformation.advanced.f1
 helpviewer_keywords:
 - cleaning data
 - comparing data
@@ -30,10 +33,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 009cdda72a100f887adb81e6f526b9a3ebe7651f
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: 6fceec90818b05ae23c04f90cff8f68c8c7c3c42
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="fuzzy-grouping-transformation"></a>模糊群組轉換
@@ -85,14 +88,6 @@ ms.lasthandoff: 08/03/2017
 ## <a name="configuration-of-the-fuzzy-grouping-transformation"></a>模糊群組轉換的組態  
  您可以透過「 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師」或以程式設計方式設定屬性。  
   
- 如需可在 [模糊群組轉換編輯器] 對話方塊中設定之屬性的詳細資訊，請按下列其中一個主題：  
-  
--   [模糊群組轉換編輯器 &#40;連線管理員索引標籤&#41;](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation-editor-connection-manager-tab.md)  
-  
--   [模糊群組轉換編輯器 &#40;資料行索引標籤&#41;](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation-editor-columns-tab.md)  
-  
--   [模糊群組轉換編輯器 &#40;進階索引標籤&#41;](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation-editor-advanced-tab.md)  
-  
  如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
 -   [通用屬性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -106,7 +101,86 @@ ms.lasthandoff: 08/03/2017
   
 -   [設定資料流程元件的屬性](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="fuzzy-grouping-transformation-editor-connection-manager-tab"></a>模糊群組轉換編輯器 (連接管理員索引標籤)
+  使用 **[模糊群組轉換編輯器]** 對話方塊的 **[連接管理員]** 索引標籤，來選取現有的連接或建立新的連接。  
+  
+> [!NOTE]  
+>  連接所指定的伺服器必須正在執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 模糊群組轉換會在 tempdb 中建立暫存資料物件，而這個物件可能會與轉換的完整輸出一樣大。 當轉換執行時，它會對這些暫存物件發出伺服器查詢。 這樣會影響伺服器的整體效能。  
+  
+### <a name="options"></a>選項。  
+ **OLE DB 連接管理員**  
+ 使用清單方塊來選取現有的 OLE DB 連接管理員，或使用 [新增] 按鈕來建立新的連接。  
+  
+ **新增**  
+ 使用 [設定 OLE DB 連線管理員] 對話方塊來建立新的連線。  
+  
+## <a name="fuzzy-grouping-transformation-editor-columns-tab"></a>模糊群組轉換編輯器 (資料行索引標籤)
+  使用 **[模糊群組轉換編輯器]** 對話方塊的 **[資料行]** 索引標籤，即可指定用於將具有重複值之資料列分組的資料行。  
+  
+### <a name="options"></a>選項  
+ **可用的輸入資料行**  
+ 從清單中選取輸入資料行，即可依據該資料行將具有重複值的資料列分組。  
+  
+ **名稱**  
+ 檢視可用之輸入資料行的名稱。  
+  
+ **通過**  
+ 選取轉換的輸出是否包含輸入資料行。 用來分組的所有資料行，都會自動複製到輸出。 您可以核取此資料行來包含其他資料行。  
+  
+ **輸入資料行**  
+ 選取先前在 [可用的輸入資料行] 清單中選取的其中一個輸入資料行。  
+  
+ **輸出別名**  
+ 輸入對應之輸出資料行的描述性名稱。 依預設，輸出資料行的名稱會與輸入資料行的名稱相同。  
+  
+ **群組輸出別名**  
+ 輸入資料行的描述性名稱，資料行包含已分組重複項目的標準值。 此輸出資料行的預設名稱，是輸入資料行的名稱後面附加「_clean」。  
+  
+ **比對類型**  
+ 選取模糊相符或完全相符。 如果資料列在具有模糊比對類型的所有資料行之間非常相似，資料列才會被視為重複項目。 如果您同時在特定資料行上指定完全相符，則只有當需要完全相符之資料行中的資料列值完全相同時，資料列才會被視為可能重複的項目。 因此，如果您知道特定資料行不會有錯誤或不一致的情形，就可以在該資料行上指定完全相符，以提高其他資料行的模糊比對精確度。  
+  
+ **最小相似度**  
+ 使用滑桿設定聯結層級的相似度臨界值。 此值越接近 1，查閱值與來源值的相似度必須越接近才能認定為相符。 增加臨界值可改善比對速度，因為需要考慮的候選記錄越少。  
+  
+ **相似度輸出別名**  
+ 指定新輸出資料行的名稱，此資料行包含所選取聯結的相似度分數。 如果您將此值保留空白，就不會建立輸出資料行。  
+  
+ **數字**  
+ 指定比較資料行資料時，開頭和尾端數字的顯著性。 例如，假設開頭數字屬於顯著，則 "123 Main Street" 和 "456 Main Street" 將不會被分到相同的群組中。  
+  
+|Value|說明|  
+|-----------|-----------------|  
+|**兩者皆非**|開頭和尾端數字皆屬於不顯著。|  
+|**開頭**|僅開頭數字屬於顯著。|  
+|**尾端**|僅尾端數字屬於顯著。|  
+|**LeadingAndTrailing**|開頭和尾端數字皆屬於顯著。|  
+  
+ **比較旗標**  
+ 如需字串比較選項的相關資訊，請參閱 [比較字串資料](../../../integration-services/data-flow/comparing-string-data.md)。  
+  
+## <a name="fuzzy-grouping-transformation-editor-advanced-tab"></a>模糊群組轉換編輯器 (進階索引標籤)
+  使用 **[模糊群組轉換編輯器]** 對話方塊的 **[進階]** 索引標籤，即可指定輸入和輸出資料行、設定類似度臨界值，以及定義分隔符號。  
+  
+> [!NOTE]  
+>  在 **[模糊群組轉換編輯器]** 中無法使用模糊群組轉換的 **Exhaustive** 和 **MaxMemoryUsage**屬性，但可使用 **[進階編輯器]**來設定這兩個屬性。 如需有關這些屬性的詳細資訊，請參閱＜ [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)＞的「模糊群組轉換」一節。  
+  
+### <a name="options"></a>選項  
+ **輸入索引鍵資料行名稱**  
+ 針對每個輸入資料列，指定包含資料列之唯一識別碼的輸出資料行名稱。 **_key_in** 資料行具有能唯一識別每個資料列的值。  
+  
+ **輸出索引鍵資料行名稱**  
+ 針對由一組重複資料列組成的標準資料列，指定包含標準資料列之唯一識別碼的輸出資料行名稱。 **_key_out** 資料行會對應至標準資料之資料列的 **_key_in** 值。  
+  
+ **相似度分數資料行名稱**  
+ 指定包含相似度分數之資料行的名稱。 相似度分數是介於 0 與 1 的值，以表示輸入資料列與標準資料列的相似度。 分數愈接近於 1，資料列與標準資料列的相符程度就愈高。  
+  
+ **相似度臨界值**  
+ 使用滑桿來設定相似度臨界值。 臨界值越接近 1，資料列就必須彼此更相似才能判定為重複。 增加臨界值可以改善比對的速度，因為需要考慮的候選記錄比較少。  
+  
+ **Token 分隔符號**  
+ 此項轉換提供了 Token 化資料所用的預設分隔符號集，但您可以依需要編輯清單來新增或移除分隔符號。  
+  
+## <a name="see-also"></a>另請參閱  
  [模糊查閱轉換](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md)   
  [Integration Services 轉換](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   

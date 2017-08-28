@@ -11,6 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.termextractiontrans.f1
+- sql13.dts.designer.termextraction.termextraction.f1
+- sql13.dts.designer.termextraction.inclusionexclusion.f1
+- sql13.dts.designer.termextraction.advanced.f1
 helpviewer_keywords:
 - word boundaries [Integration Services]
 - extracting data [Integration Services]
@@ -30,10 +33,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1aff30861feebd429bf4c061a3b8cff3031c7528
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: e664673c39b6f60ef9d3a523c46a2415a993d950
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="term-extraction-transformation"></a>詞彙擷取轉換
@@ -175,14 +178,6 @@ ms.lasthandoff: 08/03/2017
   
  您可以透過「 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師」或以程式設計方式設定屬性。  
   
- 如需可在 [詞彙擷取轉換編輯器] 對話方塊中設定之屬性的詳細資訊，請按一下下列其中一個主題：  
-  
--   [詞彙擷取轉換編輯器 &#40;詞彙擷取索引標籤&#41;](../../../integration-services/data-flow/transformations/term-extraction-transformation-editor-term-extraction-tab.md)  
-  
--   [詞彙擷取轉換編輯器 &#40;排除索引標籤&#41;](../../../integration-services/data-flow/transformations/term-extraction-transformation-editor-exclusion-tab.md)  
-  
--   [詞彙擷取轉換編輯器 &#40;進階索引標籤&#41;](../../../integration-services/data-flow/transformations/term-extraction-transformation-editor-advanced-tab.md)  
-  
  如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
 -   [通用屬性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -191,4 +186,77 @@ ms.lasthandoff: 08/03/2017
   
  如需如何設定屬性的詳細資訊，請參閱 [設定資料流程元件的屬性](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)。  
   
+## <a name="term-extraction-transformation-editor-term-extraction-tab"></a>詞彙擷取轉換編輯器 (詞彙擷取索引標籤)
+  使用 **[詞彙擷取轉換編輯器]** 對話方塊的 **[詞彙擷取]** 索引標籤，可指定包含要擷取之文字的文字資料行。  
   
+### <a name="options"></a>選項  
+ **可用的輸入資料行**  
+ 使用此核取方塊，選取用於詞彙擷取的單一文字資料行。  
+  
+ **詞彙**  
+ 提供輸出資料行的名稱，其中將包含所擷取的詞彙。  
+  
+ **分數**  
+ 提供輸出資料行的名稱，其中將包含每個所擷取詞彙的分數。  
+  
+ **設定錯誤輸出**  
+ 使用 [[設定錯誤輸出]](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) 對話方塊，即可指定造成錯誤之資料列的錯誤處理。  
+  
+## <a name="term-extraction-transformation-editor-exclusion-tab"></a>詞彙擷取轉換編輯器 (排除索引標籤)
+  使用 **[詞彙擷取轉換編輯器]** 對話方塊的 **[排除]** 索引標籤，可設定排除資料表的連接，並指定包含排除詞彙的資料行。  
+  
+### <a name="options"></a>選項  
+ **使用排除詞彙**  
+ 藉由指定包含排除詞彙的資料行，指出是否要在詞彙擷取期間排除特定詞彙。 如果您選擇要排除詞彙，就必須指定下列來源屬性。  
+  
+ **OLE DB 連接管理員**  
+ 選取現有的 OLE DB 連線管理員，或按一下 [新增] 來建立新的連接。  
+  
+ **新**  
+ 使用 [設定 OLE DB 連線管理員] 對話方塊，來建立新的資料庫連接。  
+  
+ **資料表或檢視**  
+ 選取包含排除詞彙的資料表或檢視。  
+  
+ **資料行**  
+ 選取包含排除詞彙之資料表或檢視中的資料行。  
+  
+ **設定錯誤輸出**  
+ 使用 [[設定錯誤輸出]](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) 對話方塊，即可指定造成錯誤之資料列的錯誤處理。  
+  
+## <a name="term-extraction-transformation-editor-advanced-tab"></a>詞彙擷取轉換編輯器 (進階索引標籤)
+  使用 [詞彙擷取轉換編輯器] 對話方塊的 [進階] 索引標籤，即可指定擷取的屬性，例如頻率、長度和是否擷取單字或片語。  
+  
+### <a name="options"></a>選項  
+ **名詞**  
+ 指定轉換只擷取個別的名詞。  
+  
+ **名詞片語**  
+ 指定轉換只擷取名詞片語。  
+  
+ **名詞和名詞片語**  
+ 指定轉換同時擷取名詞和名詞片語。  
+  
+ **頻率**  
+ 指定分數是詞彙的頻率。  
+  
+ **TFIDF**  
+ 指定分數是詞彙的 TFIDF 值。 TFIDF 分數是「詞彙頻率」和「反向文件頻率」的乘積，定義為︰詞彙 T 的 TFIDF = (T 的頻率) * log((輸入中的資料列數) / (具有 T 的資料列數))  
+  
+ **頻率臨界值**  
+ 指定擷取單字或片語前，該單字或片語必須出現的次數。 預設值為 2。  
+  
+ **詞彙最大長度**  
+ 指定在文字中，片語的最大長度。 此選項只會影響名詞片語。 預設值為 12。  
+  
+ **使用區分大小寫的詞彙擷取**  
+ 指定擷取是否區分大小寫。 預設值為 **False**。  
+  
+ **設定錯誤輸出**  
+ 使用 [[設定錯誤輸出]](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) 對話方塊，即可指定造成錯誤之資料列的錯誤處理。  
+  
+## <a name="see-also"></a>請參閱＜  
+ [Integration Services 錯誤和訊息參考](../../../integration-services/integration-services-error-and-message-reference.md)   
+ [詞彙查閱轉換](../../../integration-services/data-flow/transformations/term-lookup-transformation.md)  
+
+

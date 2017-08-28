@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: d744e84aa2b4ae0462a5d5a1e4453a9e86abb890
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: b4411fdd2337d93f15b149febf845fb7b0762c40
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="connect-to-an-excel-data-source-sql-server-import-and-export-wizard"></a>連接至 Excel 資料來源 （SQL Server 匯入和匯出精靈）
@@ -50,9 +50,7 @@ ms.lasthandoff: 08/03/2017
 選取來源活頁簿所使用的 Excel 版本。
 
 > [!IMPORTANT]
-> 您可能必須下載並安裝其他檔案，才能連接到您選取的 Excel 版本。 請參閱[取得您需要連接到 Excel 檔案](#officeDownloads)在此頁面上，如需詳細資訊。
-
-如果指定了版本時，您會有問題，請嘗試指定不同的版本，即使較早的版本。 例如，您可能無法安裝 Office 2016 的資料提供者，因為您有 Microsoft Office 365 訂閱。 您只可以與 Microsoft Office 的桌面版本安裝 Excel 2016 和存取 2016年的資料提供者。 在此情況下，您可以指定 Excel 2013，而不是 Excel 2016。 兩個版本的提供者的功能相同。 Office 2016 的執行階段的這項限制中有提及[此部落格文章](https://blogs.office.com/2015/12/16/access-2016-runtime-is-now-available-for-download/)。
+> 您可能要下載並安裝其他要連接到 Excel 檔案的檔案。 請參閱[取得您需要連接到 Excel 檔案](#officeDownloads)在此頁面上，如需詳細資訊。
 
 **第一個資料列有資料行名稱**  
 指出第一個資料列是否包含資料行名稱。
@@ -64,19 +62,19 @@ ms.lasthandoff: 08/03/2017
 ## <a name="i-dont-see-excel-in-the-list-of-data-sources"></a>我沒看到 Excel 中的資料來源清單
 如果您沒有看到 Excel 資料來源的清單中，您會執行 64 位元精靈嗎？ Excel 和 Access 的提供者是一般的 32 位元和 64 位元精靈 中看不到。 請改為執行 32 位元精靈。
 
+> [!NOTE]
+> 若要使用 64 位元版本的 SQL Server 匯入和匯出精靈，您必須安裝 SQL Server。 SQL Server Data Tools (SSDT) 和 SQL Server Management Studio (SSMS) 是 32 位元應用程式，並只安裝 32 位元檔案，包括 32 位元版本的精靈。
+
 ## <a name="officeDownloads"></a>取得您需要連接到 Excel 檔案  
-您可能要下載 Microsoft Office 的資料來源，包括 Excel 和 Access，如果它們尚未安裝連接元件。
+您可能要下載 Microsoft Office 的資料來源，包括 Excel 和 Access，如果它們尚未安裝連接元件。 下載最新版的 Excel 和 Access 檔案的連線元件： [Microsoft Access 資料庫引擎 2016年可轉散發套件](https://www.microsoft.com/download/details.aspx?id=54920)。
+  
+最新版本的元件可以開啟以舊版 Excel 建立的檔案。
 
-新版的元件可以開啟舊版程式所建立的檔案。 在某些情況下，新版的元件也可以開啟舊版程式所建立的檔案。 例如，如果您無法安裝 Office 2016 元件，改用 Office 2013 元件。 兩個版本的提供者的功能相同。 Office 2016 的執行階段的這項限制中有提及[此部落格文章](https://blogs.office.com/2015/12/16/access-2016-runtime-is-now-available-for-download/)。
+如果電腦有 32 位元版本的 Office，則必須安裝 32 位元版本的元件，而且您也必須確定您在 32 位元模式執行封裝。
 
-如果電腦有 32 位元版本的 Office-這是正常的狀況下，即使在 64 位元的電腦-您必須安裝 32 位元版本的元件。 您也必須確定您執行 32 位元精靈時，或執行 SQL Server Integration Services 封裝，精靈會建立在 32 位元模式。 
- 
-|Microsoft Office 版本|下載|  
-|------------------------------|--------------|  
-|2016|[Microsoft Access 2016 執行階段](https://www.microsoft.com/download/details.aspx?id=50040)|
-|2013|[Microsoft Access 2013 執行階段](http://www.microsoft.com/download/details.aspx?id=39358)|
-|2010|[Microsoft Access 2010 執行階段](https://www.microsoft.com/download/details.aspx?id=10910)|  
-|2007|[2007 Office System 驅動程式：資料連接元件](https://www.microsoft.com/download/details.aspx?id=23734)|  
+如果您有 Office 365 訂閱，請確定您在 Access 資料庫引擎 2016年可轉散發套件並不使用 Microsoft Access 2016 執行階段時下載。 當您執行安裝程式時，您可能會看到錯誤訊息，您無法安裝下載的並存 Office 按一下來執行元件。 略過此錯誤訊息，以執行安裝以無訊息模式開啟命令提示字元視窗並執行。下載的 EXE 檔案`/quiet`切換。 例如：
+
+`C:\Users\<user name>\Downloads\AccessDatabaseEngine.exe /quiet`
 
 ## <a name="see-also"></a>另請參閱
 [選擇資料來源](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  

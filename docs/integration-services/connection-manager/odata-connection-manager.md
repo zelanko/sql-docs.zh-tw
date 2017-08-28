@@ -17,26 +17,26 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
-ms.openlocfilehash: b23a158bff546fd6ffb4208638c039d690379ce1
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: f54562b59e8c61f723c17e2812ca39cb2e95f273
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="odata-connection-manager"></a>OData 連接管理員
-  使用 OData 連接管理員連接到 OData 來源。 OData 來源元件會使用 OData 連接線理員連接到 OData 來源，並取用此服務中的資料。 如需詳細資訊，請參閱＜ [OData Source](../../integration-services/data-flow/odata-source.md)＞。  
+ 連接到 OData 資料來源的 OData 連接管理員。 OData 來源元件使用 OData 連接管理員連接到 OData 資料來源，並從服務取用資料。 如需詳細資訊，請參閱＜ [OData Source](../../integration-services/data-flow/odata-source.md)＞。  
   
 ## <a name="adding-an-odata-connection-manager-to-an-ssis-package"></a>將 OData 連接管理員加入 SSIS 封裝中  
- 您可以使用三種方式，將新的 OData 連接管理員加入至 SSIS 封裝：  
+ 您可以將新的 OData 連接管理員加入 SSIS 封裝三種方式：  
   
 -   按一下 [新增…]  按鈕 (位於 [OData 來源編輯器]   
   
 -   在 **方案總管** 中，以滑鼠右鍵按一下 [連線管理員] 資料夾，然後按一下 [新增連線管理員] 。 針對 [連線管理員類型]  選取 [ODATA] 。  
   
--   以滑鼠右鍵按一下封裝設計師底部的 [連線管理員]  窗格，然後選取 [新增連接…] 。 針對 [連線管理員類型]  選取 [ODATA] 。  
+-   以滑鼠右鍵按一下**連接管理員**窗格底部的 封裝設計工具，然後再選取**新連線**。 針對 [連線管理員類型]  選取 [ODATA] 。  
   
 ## <a name="connection-manager-authentication"></a>連接管理員驗證  
- OData 連接管理員支援五種模式的驗證。  
+ OData 連接管理員支援五個模式的驗證。  
   
 -   Windows 驗證  
   
@@ -48,12 +48,14 @@ ms.lasthandoff: 08/09/2017
   
 -   Microsoft Online Services (使用使用者名稱和密碼)  
   
- 如果是匿名存取，請選取 [Windows 驗證] 選項。  
+如果是匿名存取，請選取 [Windows 驗證] 選項。  
+
+若要連線至 Microsoft Dynamics AX Online 或 Microsoft Dynamics CRM online，您無法使用**Microsoft Online Services**驗證選項。 您也無法使用 multi-factor authentication 設定任何選項。
   
 ### <a name="specifying-and-securing-credentials"></a>指定認證及維護認證安全  
  如果 OData 服務需要基本驗證，您可以在 [OData 連線管理員編輯器](../../integration-services/connection-manager/odata-connection-manager-editor.md)中指定使用者名稱和密碼。 您在編輯器中輸入的值會保存在封裝中。 密碼值會根據封裝保護等級進行加密。  
   
- 有多個方式可將使用者名稱和密碼值參數化，或儲存到封裝外部。 例如，您可以使用參數，或是在使用 SQL Server Management Studio 執行封裝時直接設定連接管理員屬性，來執行這項操作。  
+ 有多個方式可將使用者名稱和密碼值參數化，或儲存到封裝外部。 例如，您可以使用參數，或設定連接管理員屬性直接從 SQL Server Management Studio 執行封裝時。  
   
 ## <a name="odata-connection-manager-properties"></a>OData 連接管理員屬性  
  下列清單描述 OData 連接管理員的屬性。  
@@ -62,14 +64,14 @@ ms.lasthandoff: 08/09/2017
 |-|-|  
 |屬性|說明|  
 |Url|服務文件的 URL。|  
-|UserName|基本驗證所使用的使用者名稱。|  
-|密碼|基本驗證所使用的密碼。|  
-|ConnectionString|反映連接管理員的其他屬性。|  
+|UserName|要用於驗證，如果所需的使用者名稱。|  
+|密碼|要用於驗證，如果所需的密碼。|  
+|SubQueries|包含連接管理員的其他屬性。|  
   
 ## <a name="odata-connection-manager-editor"></a>OData 連線管理員編輯器
-  使用 [OData 連線管理員編輯器] 對話方塊加入連線，或編輯現有的 OData 來源連線。  
+  使用**OData 連接管理員編輯器**對話方塊來加入連接，或編輯現有的連接到 OData 資料來源。  
   
-### <a name="options"></a>選項。  
+### <a name="options"></a>選項  
  **連線管理員名稱**  
  連接管理員的名稱。  
   
@@ -77,14 +79,17 @@ ms.lasthandoff: 08/09/2017
  OData 服務的 URL。 例如：http://services.odata.org/V3/Northwind/Northwind.svc/。  
   
  **驗證**  
- 請選取 [Windows 驗證]  或在 [基本驗證]  使用 **此使用者名稱和密碼**。 如果您選取第二個選項，請輸入 [使用者名稱]  和 [密碼] 。 
- 
- 現在還多了三個選項。 選取 [Microsoft Dynamics AX Online]  使用 Dynamics AX Online，選取 [Microsoft Dynamics CRM Online]  使用 Dynamics CRM Online，以及選取 [Microsoft Online Services]  使用 Microsoft Online Services。 如果選取三個選項其中之一，請輸入 **使用者名稱** 及 **密碼**。
-  
+選取下列其中一個選項：
+-   **Windows 驗證**。 匿名存取，請選取這個選項。
+-   **基本驗證** 
+-   **線上 Microsoft Dynamics AX**的 Dynamics AX 線上
+-   **Microsoft Dynamics CRM Online**的 Dynamics CRM Online
+-   **Microsoft Online Services** Microsoft Online services
+
+如果您選取 Windows 驗證以外的選項，輸入**使用者名**和**密碼**。 
+
+若要連線至 Microsoft Dynamics AX Online 或 Microsoft Dynamics CRM online，您無法使用**Microsoft Online Services**驗證選項。 您也無法使用 multi-factor authentication 設定任何選項。
+
  **測試連接**  
  按一下此按鈕，測試 OData 來源的連接。  
-  
-## <a name="see-also"></a>另請參閱  
- [OData 連線管理員編輯器](../../integration-services/connection-manager/odata-connection-manager-editor.md)  
-  
-  
+

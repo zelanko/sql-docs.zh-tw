@@ -20,10 +20,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 0a4240a8ae3f62ac986a871b198ffb2aefe78862
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 22d5628b55be9b20ea86f0625be287568fd4ee8f
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="start-the-sql-server-import-and-export-wizard"></a>啟動 SQL Server 匯入和匯出精靈
@@ -43,6 +43,9 @@ ms.lasthandoff: 08/03/2017
 
 ## <a name="prerequisite---is-the-wizard-installed-on-your-computer"></a>必要條件-是安裝在電腦上的精靈嗎？
 如果您想要執行精靈，但電腦上尚未安裝 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，則可以安裝 SQL Server Data Tools (SSDT) 來安裝 [ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈]。 如需詳細資訊，請參閱 [下載 SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx)。
+
+> [!NOTE]
+> 若要使用 64 位元版本的 SQL Server 匯入和匯出精靈，您必須安裝 SQL Server。 SQL Server Data Tools (SSDT) 和 SQL Server Management Studio (SSMS) 是 32 位元應用程式，並只安裝 32 位元檔案，包括 32 位元版本的精靈。
 
 ## <a name="startStart"></a> [開始] 功能表  
 ### <a name="start-the-sql-server-import-and-export-wizard-from-the-start-menu"></a>從 [開始] 功能表啟動 SQL Server 匯入和匯出精靈

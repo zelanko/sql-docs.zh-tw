@@ -11,6 +11,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.multicasttrans.f1
+- sql13.dts.designer.multicasttransformation.f1
 helpviewer_keywords:
 - multiple outputs
 - Multicast transformation
@@ -22,10 +23,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8619a0ed02ffc73126eb151f4a83a0b6b24c4be8
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: bd3eee42fbb204a9ca1e806d273b7c09a86c87d2
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="multicast-transformation"></a>多點傳送轉換
@@ -40,14 +41,22 @@ ms.lasthandoff: 08/03/2017
 ## <a name="configuration-of-the-multicast-transformation"></a>設定多點傳送轉換  
  您可以透過「 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師」或以程式設計方式設定屬性。  
   
- 如需有關可在 **[多點傳送轉換編輯器]** 對話方塊中設定之屬性的詳細資訊，請參閱＜ [Multicast Transformation Editor](../../../integration-services/data-flow/transformations/multicast-transformation-editor.md)＞。  
-  
  如需有關可以程式設計方式設定之屬性的詳細資訊，請參閱＜ [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)＞。  
   
 ## <a name="related-tasks"></a>相關工作  
  如需如何設定此元件屬性的資訊，請參閱 [設定資料流程元件的屬性](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="multicast-transformation-editor"></a>多點傳送轉換編輯器
+  使用 **[多點傳送轉換編輯器]** 對話方塊檢視和設定每個轉換輸出的屬性。  
+  
+### <a name="options"></a>選項。  
+ **輸出**  
+ 在左方選取輸出，即可在右方檢視其在資料表中的屬性。  
+  
+ **屬性**  
+ 除了 [名稱] 和 [描述] 以外，所有列出的輸出屬性都是唯讀的。  
+  
+## <a name="see-also"></a>另請參閱  
  [資料流程](../../../integration-services/data-flow/data-flow.md)   
  [Integration Services 轉換](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   

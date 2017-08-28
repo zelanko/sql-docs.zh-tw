@@ -11,6 +11,10 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.lookuptrans.f1
+- sql13.dts.designer.lookuptransformation.general.f1
+- sql13.dts.designer.lookuptransformation.referencetable.f1
+- sql13.dts.designer.lookuptransformation.columns.f1
+- sql13.dts.designer.lookuptransformation.advanced.f1
 helpviewer_keywords:
 - Lookup transformation
 - joining columns [Integration Services]
@@ -24,10 +28,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 14e72d1f2d9790cd74c54eb7e152c0b29d278212
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: ee0c7e667e933c98bdbc228244a9dea1cf2c9bdd
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="lookup-transformation"></a>查閱轉換
@@ -59,7 +63,7 @@ ms.lasthandoff: 08/03/2017
   
  「查閱」轉換會嘗試在轉換輸入的值與參考資料集的值之間執行等聯結 (Equi-Join)  (等聯結表示轉換輸入中的各資料列，必須至少符合參考資料集中的某個資料列)。如果無法執行等聯結，則「查閱」轉換會執行下列其中一項動作：  
   
--   如果參考資料集中沒有相符的項目，則不會發生聯結。 根據預設，「查閱」轉換會將沒有相符項目的資料列視為錯誤； 不過，您可以設定「查閱」轉換，以將這些資料列重新導向至無相符結果輸出。 如需詳細資訊，請參閱[查閱轉換編輯器 &#40;一般頁面&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-general-page.md) 和[查閱轉換編輯器 &#40;錯誤輸出頁面&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md)。  
+-   如果參考資料集中沒有相符的項目，則不會發生聯結。 根據預設，「查閱」轉換會將沒有相符項目的資料列視為錯誤； 不過，您可以設定「查閱」轉換，以將這些資料列重新導向至無相符結果輸出。  
   
 -   如果參考資料表中有多個相符項目，「查閱」轉換將只傳回查閱查詢所傳回的第一個相符項目。 如果找到多個相符項目，則「查閱」轉換只會在已設定為將所有參考資料集載入至快取時才產生錯誤或警告。 在這種情況下，「查閱」轉換會在轉換填滿快取時偵測到多個相符項目時產生警告。  
   
@@ -122,7 +126,7 @@ ms.lasthandoff: 08/03/2017
   
 -   [以沒有快取或部分快取模式實作查閱](../../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)  
   
--   [使用快取連線管理員以完整快取模式實作查閱轉換](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md)  
+-   [使用快取連線管理員以完整快取模式來實作查閱轉換](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md)  
   
 -   [使用 OLE DB 連接管理員，以完整快取模式來實作查閱轉換](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-ole-db-connection-manager.md)  
   
@@ -140,7 +144,140 @@ ms.lasthandoff: 08/03/2017
   
      如需安裝 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 產品範例和範例資料庫的資訊，請參閱 [SQL Server Integration Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=267527)(SQL Server Integration Services 產品範例)。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="lookup-transformation-editor-general-page"></a>查閱轉換編輯器 (一般頁面)
+  使用 [查閱轉換編輯器] 對話方塊的 **[一般]** 頁面來選取快取模式、選取連接類型，及指定如何處理無相符項目的資料列。  
+  
+### <a name="options"></a>選項  
+ **完整快取**  
+ 在查閱轉換執行之前產生參考資料集並將其載入快取。  
+  
+ **部分快取**  
+ 在查閱轉換執行期間產生參考資料集。 將參考資料集中具有相符項目的資料列，以及在資料集中沒有相符項目的資料列載入到快取。  
+  
+ **沒有快取**  
+ 在查閱轉換執行期間產生參考資料集。 沒有資料會載入到快取。  
+  
+ **快取連接管理員**  
+ 將查閱轉換設定為使用快取連接管理員。 只有在選取 [完整快取] 選項時，才能使用這個選項。  
+  
+ **OLE DB 連接管理員**  
+ 將查閱轉換設定為使用 OLE DB 連接管理員。  
+  
+ **指定如何處理無相符項目的資料列**  
+ 選取選項以處理沒有至少符合參考資料集中一個項目的資料列。  
+  
+ 當您選取 **[將資料列重新導向無相符結果輸出]**時，資料列會重新導向無相符結果輸出，且不當做錯誤處理。 無法使用 **[查閱轉換編輯器]** 對話方塊的 **[錯誤輸出]** 頁面上的 **[錯誤]** 選項。  
+  
+ 從 **[指定如何處理無相符項目的資料列]** 清單方塊中選取任何其他選項時，會將資料列當做錯誤處理。 可以使用 **[錯誤輸出]** 頁面上的 **[錯誤]** 選項。  
+  
+### <a name="external-resources"></a>外部資源  
+ blogs.msdn.com 上的部落格文章： [查閱快取模式](http://go.microsoft.com/fwlink/?LinkId=219518)   
+  
+## <a name="lookup-transformation-editor-connection-page"></a>查閱轉換編輯器 (連接頁面)
+  使用 **[查閱轉換編輯器]** 對話方塊的 **[連接]** 頁面，來選取連接管理員。 如果您選取 OLE DB 連接管理員，也可以選取查詢、資料表或檢視來產生參考資料集。  
+  
+### <a name="options"></a>選項  
+ 當您在 **[查閱轉換編輯器]** 對話方塊的 [一般] 頁面上選取 **[完整快取]** 和 **[快取連接管理員]** 時，可使用下列選項：  
+  
+ **快取連接管理員**  
+ 從清單中選取現有的快取連線管理員，或按一下 [新增] 來建立新的連線。  
+  
+ **新增**  
+ 使用 [快取連線管理員編輯器] 對話方塊來建立新的連線。  
+  
+ 當您在 **[查閱轉換編輯器]**對話方塊的 [一般] 頁面上選取 **[完整快取]**、 **[部分快取]**或 **[無快取]**以及 **[OLE DB 連接管理員]** 時，可以使用下列選項。  
+  
+ **OLE DB 連接管理員**  
+ 從清單中選取現有的 OLE DB 連線管理員，或按一下 [新增] 來建立新連線。  
+  
+ **新增**  
+ 使用 [設定 OLE DB 連線管理員] 對話方塊來建立新的連線。  
+  
+ **使用資料表或檢視**  
+ 從清單中選取現有的資料表或檢視，或按一下 [新增] 來建立新的資料表。  
+  
+> [!NOTE]  
+>  如果在 **[查閱轉換編輯器]** 的 **[進階]**頁面上指定 SQL 陳述式，則該 SQL 陳述式會覆寫並取代此處所選取的資料表名稱。 如需詳細資訊，請參閱 [查閱轉換編輯器 &#40;進階頁面&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-advanced-page.md)＞。  
+  
+ **新增**  
+ 使用 [建立資料表] 對話方塊建立新的資料表。  
+  
+ **使用 SQL 查詢的結果**  
+ 選擇此選項以瀏覽至預先存在的查詢、建立新查詢、檢查查詢語法，以及預覽查詢結果。  
+  
+ **建立查詢**  
+ 使用 [查詢產生器]\ (用來以瀏覽資料的方式建立查詢的圖形化工具)，來建立要執行的 Transact-SQL 陳述式。  
+  
+ **瀏覽**  
+ 使用此選項即可瀏覽至預先存在且已儲存為檔案的查詢。  
+  
+ **剖析查詢**  
+ 檢查查詢的語法。  
+  
+ **預覽**  
+ 使用 [預覽查詢結果] 對話方塊來預覽結果。 此選項最多可顯示 200 個資料列。  
+  
+### <a name="external-resources"></a>外部資源  
+ blogs.msdn.com 上的部落格文章： [查閱快取模式](http://go.microsoft.com/fwlink/?LinkId=219518)   
+  
+## <a name="lookup-transformation-editor-columns-page"></a>查閱轉換編輯器 (資料行頁面)
+  使用 **[查閱轉換編輯器]** 對話方塊的 **[資料行]** 頁面，即可指定來源資料表和參考資料表之間的聯結，以及從參考資料表中選取查閱資料行。  
+  
+### <a name="options"></a>選項  
+ **可用的輸入資料行**  
+ 檢視可用的輸入資料行清單。 輸入資料行是連接來源的資料流程中的資料行。 輸入資料行和查閱資料行必須有相符的資料類型。  
+  
+ 使用拖放作業，即可將可用的輸入資料行對應到查閱資料行。  
+  
+ 您也可以藉由在 **[可用的輸入資料行]** 資料表中反白顯示資料行，按下應用程式鍵，然後按一下 **[編輯對應]**，使用鍵盤將輸入資料行對應到查閱資料行。  
+  
+ **可用的查閱資料行**  
+ 檢視查閱資料行清單。 查閱資料行是參考資料表中的資料行，您可在其中查閱符合輸入資料行的值。  
+  
+ 使用拖放作業，即可將可用的查閱資料行對應到輸入資料行。  
+  
+ 使用核取方塊即可在參考資料表中，選取要執行查閱作業的查閱資料行。  
+  
+ 您也可以藉由在 **[可用的查閱資料行]** 資料表中反白顯示資料行，按下應用程式鍵，然後按一下 **[編輯對應]**，使用鍵盤將查閱資料行對應到輸入資料行。  
+  
+ **查閱資料行**  
+ 檢視選取的查閱資料行。 您的選擇會反映在 **[可用的查閱資料行]** 資料表的核取方塊選擇中。  
+  
+ **查閱作業**  
+ 從清單中選取要在查閱資料行上執行的查閱作業。  
+  
+ **輸出別名**  
+ 輸入每個查閱資料行之輸出的別名。 預設是查閱資料行的名稱；但是，您可以選取任何唯一的描述性名稱。  
+  
+## <a name="lookup-transformation-editor-advanced-page"></a>查閱轉換編輯器 (進階頁面)
+  使用 [查閱轉換編輯器] 對話方塊的 [進階] 頁面，即可設定部分快取並修改查閱轉換的 SQL 陳述式。  
+  
+### <a name="options"></a>選項  
+ **快取大小 (32 位元)**  
+ 調整 32 位元電腦的快取大小 (以 MB 為單位)。 預設值是 5 MB。  
+  
+ **快取大小 (64 位元)**  
+ 調整 64 位元電腦的快取大小 (以 MB 為單位)。 預設值是 5 MB。  
+  
+ **針對無相符項目的資料列啟用快取**  
+ 將參考資料集中沒有相符項目的資料列存入快取。  
+  
+ **來自快取的配置**  
+ 指定針對在資料集中沒有相符項目的資料列所配置的快取百分比。  
+  
+ **修改 SQL 陳述式**  
+ 修改用來產生參考資料集的 SQL 陳述式。  
+  
+> [!NOTE]  
+>  在此頁面上所指定的選擇性 SQL 陳述式會覆寫並取代在 [查閱轉換編輯器] 的 [連接] 頁面上所指定的資料表名稱。 如需詳細資訊，請參閱 [查閱轉換編輯器 &#40;連接頁面&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-connection-page.md)＞。  
+  
+ **設定參數**  
+ 使用 [設定查詢參數] 對話方塊，即可將輸入資料行對應至參數。  
+  
+### <a name="external-resources"></a>外部資源  
+ blogs.msdn.com 上的部落格文章： [查閱快取模式](http://go.microsoft.com/fwlink/?LinkId=219518)   
+  
+## <a name="see-also"></a>另請參閱  
  [模糊查閱轉換](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md)   
  [詞彙查閱轉換](../../../integration-services/data-flow/transformations/term-lookup-transformation.md)   
  [資料流程](../../../integration-services/data-flow/data-flow.md)   

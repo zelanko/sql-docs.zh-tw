@@ -11,6 +11,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.mergejointrans.f1
+- sql13.dts.designer.mergejointransformation.f1
 helpviewer_keywords:
 - datasets [Integration Services]
 - Merge Join transformation
@@ -23,10 +24,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 38dd168d67b4be972be9c135e754abf3b925dae0
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: 7c3382fb6a61c1362fe10d67a422c0d316a5d663
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="merge-join-transformation"></a>合併聯結轉換
@@ -65,8 +66,31 @@ ms.lasthandoff: 08/03/2017
   
 -   [排序合併和合併聯結轉換的資料](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
-## <a name="see-also"></a>請參閱＜  
- [合併聯結轉換編輯器](../../../integration-services/data-flow/transformations/merge-join-transformation-editor.md)   
+## <a name="merge-join-transformation-editor"></a>合併聯結轉換編輯器
+  使用 [合併聯結轉換編輯器] 對話方塊，即可指定合併兩個由聯結組合之輸入的聯結類型、聯結資料行以及輸出資料行。  
+  
+> [!IMPORTANT]  
+>  合併聯結轉換針對其輸入需要已排序的資料。 如需這項重要需求的詳細資訊，請參閱 [排序合併和合併聯結轉換的資料](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)。  
+  
+### <a name="options"></a>選項  
+ **聯結類型**  
+ 指定要使用內部聯結、左方外部聯結或完整聯結。  
+  
+ **交換輸入**  
+ 使用 [交換輸入] 按鈕，來切換輸入之間的順序。 此選取項目對於左方外部聯結選項可能非常有用。  
+  
+ **輸入**  
+ 針對您要放入合併輸出中的每個資料行，首先從可用的輸入清單中選取。  
+  
+ 輸入會以兩個個別的資料表來顯示。 選取要包含在輸出中的資料行。 拖曳資料行以建立資料表之間的聯結。 若要刪除聯結，請選取聯結然後按下 DELETE 鍵。  
+  
+ **輸入資料行**  
+ 從所選輸入上之可用的資料行清單中，選取要包含在合併輸出中的資料行。  
+  
+ **輸出別名**  
+ 輸入每一個輸出資料行的別名。 預設是輸入資料行的名稱；但是，您可以選擇任何唯一的、描述性名稱。  
+  
+## <a name="see-also"></a>另請參閱  
  [合併轉換](../../../integration-services/data-flow/transformations/merge-transformation.md)   
  [聯集全部轉換](../../../integration-services/data-flow/transformations/union-all-transformation.md)   
  [Integration Services 轉換](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  

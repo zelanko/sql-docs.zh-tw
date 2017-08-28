@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: b2a5deb6e6ec95e6f6707abe9ad85374b2334e05
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 71bb3914e31259bc95a1116c2db03708c0442e8c
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="connect-to-an-access-data-source-sql-server-import-and-export-wizard"></a>連接到 Access 資料來源 （SQL Server 匯入和匯出精靈）
@@ -44,9 +44,7 @@ Microsoft Access 資料提供者的清單可能包含數個項目。 選取最�
 |Microsoft Access (Microsoft Jet Database Engine)|早於 Office 2007 office 版本|
 
 > [!IMPORTANT]
-> 您可能要下載並安裝其他檔案來連線到您選取之存取的版本。 請參閱[取得的檔案，您需要連接到 Access](#officeDownloads)在此頁面上，如需詳細資訊。
-
-如果指定了版本時，您會有問題，請嘗試指定不同的版本，即使較早的版本。 例如，您可能無法安裝 Office 2016 的資料提供者，因為您有 Microsoft Office 365 訂閱。 您只可以與 Microsoft Office 的桌面版本安裝存取 2016年和 Excel 2016 中的資料提供者。 在此情況下，您可以指定 Access 2013，而非 2016 存取。 兩個版本的提供者的功能相同。 Office 2016 的執行階段的這項限制中有提及[此部落格文章](https://blogs.office.com/2015/12/16/access-2016-runtime-is-now-available-for-download/)。
+> 您可能要下載並安裝其他要連接到 Access 資料庫檔案。 請參閱[取得的檔案，您需要連接到 Access](#officeDownloads)在此頁面上，如需詳細資訊。
 
  **檔案名稱**  
 指定存取檔案的路徑和檔案名稱。 例如， **c:\\MyData.mdb**本機電腦上的檔案或 **\\\\銷售\\資料庫\\northwind.mdb 所需**網路共用上的檔案。 或按一下 [瀏覽]。 
@@ -70,20 +68,20 @@ Microsoft Access 資料提供者的清單可能包含數個項目。 選取最�
 
 ## <a name="i-dont-see-access-in-the-list-of-data-sources"></a>我沒看到存取清單中的資料來源
 如果您沒有看到存取資料來源的清單中，您會執行 64 位元精靈嗎？ Excel 和 Access 的提供者是一般的 32 位元和 64 位元精靈 中看不到。 請改為執行 32 位元精靈。
-  
+
+> [!NOTE]
+> 若要使用 64 位元版本的 SQL Server 匯入和匯出精靈，您必須安裝 SQL Server。 SQL Server Data Tools (SSDT) 和 SQL Server Management Studio (SSMS) 是 32 位元應用程式，並只安裝 32 位元檔案，包括 32 位元版本的精靈。
+
 ## <a name="officeDownloads"></a>取得連接到存取所需的檔案  
-您可能要下載 Microsoft Office 的資料來源，包括 Excel 和 Access，如果它們尚未安裝連接元件。
+您可能要下載 Microsoft Office 的資料來源，包括 Access 和 Excel，如果它們尚未安裝連接元件。 下載最新版的連線元件，以下 Access 和 Excel 檔案： [Microsoft Access 資料庫引擎 2016年可轉散發套件](https://www.microsoft.com/download/details.aspx?id=54920)。
+  
+最新版本的元件可以開啟檔案的存取權限的較早版本所建立的。
 
-新版的元件可以開啟舊版程式所建立的檔案。 在許多情況下，較早版本的元件也可以開啟程式的更新版本所建立的檔案。 例如，如果您無法安裝 Office 2016 元件，改用 Office 2013 元件。 兩個版本的提供者的功能相同。 Office 2016 的執行階段的這項限制中有提及[此部落格文章](https://blogs.office.com/2015/12/16/access-2016-runtime-is-now-available-for-download/)。
+如果電腦有 32 位元版本的 Office，則必須安裝 32 位元版本的元件，而且您也必須確定您在 32 位元模式執行封裝。
 
-如果電腦有 32 位元版本的 Office-這是正常的狀況下，即使在 64 位元的電腦-您必須安裝 32 位元版本的元件。 您也必須確定您執行 32 位元精靈時，或執行 SQL Server Integration Services 封裝，精靈會建立在 32 位元模式。
+如果您有 Office 365 訂閱，請確定您在 Access 資料庫引擎 2016年可轉散發套件並不使用 Microsoft Access 2016 執行階段時下載。 當您執行安裝程式時，您可能會看到錯誤訊息，您無法安裝下載的並存 Office 按一下來執行元件。 略過此錯誤訊息，以執行安裝以無訊息模式開啟命令提示字元視窗並執行。下載的 EXE 檔案`/quiet`切換。 例如：
 
-|Microsoft Office 版本|下載|  
-|------------------------------|--------------|  
-|2016|[Microsoft Access 2016 執行階段](https://www.microsoft.com/download/details.aspx?id=50040)|
-|2013|[Microsoft Access 2013 執行階段](http://www.microsoft.com/download/details.aspx?id=39358)|
-|2010|[Microsoft Access 2010 執行階段](https://www.microsoft.com/download/details.aspx?id=10910)|  
-|2007|[2007 Office System 驅動程式：資料連接元件](https://www.microsoft.com/download/details.aspx?id=23734)|    
+`C:\Users\<user name>\Downloads\AccessDatabaseEngine.exe /quiet`
 
 ## <a name="database_password"></a>有密碼保護的資料庫檔案嗎？
 在某些情況下，有密碼保護 Access 資料庫，但不使用工作群組資訊檔案。 所有使用者必須提供相同的密碼，但不需要輸入使用者名稱。 若要提供資料庫密碼，執行下列作業。

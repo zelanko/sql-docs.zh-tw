@@ -11,6 +11,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.unpivottrans.f1
+- sql13.dts.designer.unpivottransformation.f1
 helpviewer_keywords:
 - Unpivot transformation
 - more normalized data set [Integration Services]
@@ -22,10 +23,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d491bb19b4eb86bd0fe75a7b8ca8e7b6e5d226b5
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: 62a84ccfd5fdf3e6b439388e6175804b567f4be3
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="unpivot-transformation"></a>取消樞紐轉換
@@ -48,10 +49,6 @@ ms.lasthandoff: 08/03/2017
   
  您可以透過「 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師」或以程式設計方式設定屬性。  
   
- 如需可在 [取消樞紐轉換編輯器] 對話方塊中設定之屬性的詳細資訊，請按下列其中一個主題：  
-  
--   [取消樞紐轉換編輯器](../../../integration-services/data-flow/transformations/unpivot-transformation-editor.md)  
-  
  如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
 -   [通用屬性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -59,5 +56,47 @@ ms.lasthandoff: 08/03/2017
 -   [轉換自訂屬性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
  如需如何設定屬性的詳細資訊，請參閱 [設定資料流程元件的屬性](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)。  
+  
+## <a name="unpivot-transformation-editor"></a>取消樞紐轉換編輯器
+  使用 **[取消樞紐轉換編輯器]** 對話方塊，即可選取要樞紐轉換為資料列的資料行，以及指定資料行和新的樞紐值輸出資料行。  
+  
+> [!NOTE]  
+>  此主題依賴於 [取消樞紐轉換](../../../integration-services/data-flow/transformations/unpivot-transformation.md) 中所描述的取消樞紐狀況，來說明選項的使用。  
+  
+### <a name="options"></a>選項。  
+ **可用的輸入資料行**  
+ 使用此核取方塊，指定要樞紐轉換為資料列的資料行。  
+  
+ **名稱**  
+ 檢視可用輸入資料行的名稱。  
+  
+ **通過**  
+ 指出是否將資料行包含在取消樞紐的輸出中。  
+  
+ **輸入資料行**  
+ 從每個資料列的可用輸入資料行清單中選取。 您的選擇會反映在 **[可用的輸入資料行]** 資料表的核取方塊選擇中。  
+  
+ 在＜ [Unpivot Transformation](../../../integration-services/data-flow/transformations/unpivot-transformation.md)＞所描述的取消樞紐狀況中，輸入資料行是 **Ham**, **Soda**, **Milk**, **Beer**和 **Chips** 資料行。  
+  
+ **目的地資料行**  
+ 提供資料行的名稱。  
+  
+ 在 [取消樞紐轉換](../../../integration-services/data-flow/transformations/unpivot-transformation.md)所描述的取消樞紐狀況中，目的地資料行就是數量 (**Qty**) 資料行。  
+  
+ **樞紐索引鍵值**  
+ 提供樞紐值的名稱。 預設是輸入資料行的名稱；但是，您可以選擇任何唯一的、描述性名稱。  
+  
+ 此屬性的值可以使用屬性運算式指定。  
+  
+ 在＜ [Unpivot Transformation](../../../integration-services/data-flow/transformations/unpivot-transformation.md)＞所描述的取消樞紐狀況中，樞紐值會在 **[樞紐索引鍵值資料行名稱]** 選項所指定之新 Product 資料行中顯示為下列文字值： **Ham**, **Soda**, **Milk**, **Beer**和 **Chips**。  
+  
+ **[樞紐索引鍵值資料行名稱]**  
+ 提供樞紐值資料行的名稱。 預設為「樞紐索引鍵值」；然而，您可以選擇任何唯一的、描述性名稱。  
+  
+ 在＜ [Unpivot Transformation](../../../integration-services/data-flow/transformations/unpivot-transformation.md)＞所描述的取消樞紐狀況中，樞紐索引鍵值資料行名稱為 **Product** ，並且會將新的 **Product** 資料行指定給 **Ham**, **Soda**, **Milk**, **Beer**和 **Chips** 資料行，以取消樞紐。  
+  
+## <a name="see-also"></a>請參閱＜  
+ [Integration Services 錯誤和訊息參考](../../../integration-services/integration-services-error-and-message-reference.md)   
+ [樞紐轉換](../../../integration-services/data-flow/transformations/pivot-transformation.md)  
   
   

@@ -11,6 +11,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.dataconversiontrans.f1
+- sql13.dts.designer.dataconversiontransformation.f1
 helpviewer_keywords:
 - converting data types [Integration Services]
 - Data Conversion transformation
@@ -21,10 +22,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 897651a9257aadeac68a392eeae8b51d0c87de8d
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: ad8bb1bcb5ad02be3604ff0899074c4ced10cc96
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="data-conversion-transformation"></a>資料轉換
@@ -49,12 +50,46 @@ ms.lasthandoff: 08/03/2017
  這個轉換有一個輸入、一個輸出與一個錯誤輸出。  
   
 ## <a name="related-tasks"></a>相關工作  
- 您可以透過「 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師」或以程式設計方式設定屬性。 如需在 SSIS 設計師中使用「資料轉換」的相關資訊，請參閱 [使用資料轉換將資料轉換至不同的資料類型](../../../integration-services/data-flow/transformations/convert-data-type-by-using-data-conversion-transformation.md) 和 [資料轉換編輯器](../../../integration-services/data-flow/transformations/data-conversion-transformation-editor.md)。 如需以程式設計方式設定此轉換屬性的詳細資訊，請參閱 [通用屬性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796) 和 [轉換自訂屬性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)。  
+ 您可以透過「 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師」或以程式設計方式設定屬性。 在 SSIS 設計師中使用資料轉換 」 的相關資訊，請參閱[資料轉換成不同的資料類型，使用 「 資料轉換 」](../../../integration-services/data-flow/transformations/convert-data-type-by-using-data-conversion-transformation.md)。 如需以程式設計方式設定此轉換屬性的詳細資訊，請參閱 [通用屬性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796) 和 [轉換自訂屬性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)。  
   
 ## <a name="related-content"></a>相關內容  
  blogs.msdn.com 上的部落格文章： [SSIS 2008 中各種資料類型轉換技術的效能比較](http://go.microsoft.com/fwlink/?LinkId=220823)。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="data-conversion-transformation-editor"></a>資料轉換編輯器
+  使用 [資料轉換編輯器] 對話方塊，即可選取要轉換的資料行、選取資料行要轉換成哪一種資料類型，以及設定轉換屬性。  
+  
+> [!NOTE]  
+>  在 [資料轉換編輯器] 中無法使用資料轉換之輸出資料行的 **FastParse** 屬性，但可使用 [進階編輯器] 來設定這兩個屬性。 如需這個屬性的詳細資訊，請參閱[轉換自訂屬性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)的＜資料轉換＞一節。  
+  
+### <a name="options"></a>選項  
+ **可用的輸入資料行**  
+ 使用核取方塊選取要轉換的資料行。 您的選取範圍會將輸入資料行加入下列資料表中。  
+  
+ **輸入資料行**  
+ 從可用的輸入資料行清單中，選取要轉換的資料行。 您的選擇會反映在上面所勾選的核取方塊中。  
+  
+ **輸出別名**  
+ 輸入每一個新資料行的別名。 預設為輸入資料行的名稱，後面接著 **[的副本]** ；但是您也可以選擇任何唯一的描述性名稱。  
+  
+ **資料類型**  
+ 從清單中選取可用的資料類型。 如需詳細資訊，請參閱＜ [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md)＞。  
+  
+ **長度**  
+ 設定字串資料的資料行長度。  
+  
+ **有效位數**  
+ 設定數值資料的有效位數。  
+  
+ **小數位數**  
+ 設定數值資料的小數位數。  
+  
+ **字碼頁**  
+ 為 DT_STR 類型的資料行選取適當的字碼頁。  
+  
+ **設定錯誤輸出**  
+ 使用 [設定錯誤輸出](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) 對話方塊來指定如何處理資料列層級錯誤。  
+  
+## <a name="see-also"></a>另請參閱  
  [快速剖析](http://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95)   
  [資料流程](../../../integration-services/data-flow/data-flow.md)   
  [Integration Services 轉換](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  

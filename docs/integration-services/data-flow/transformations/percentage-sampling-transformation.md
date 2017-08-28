@@ -11,6 +11,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.percentagesamplingtrans.f1
+- sql13.dts.designer.percentagesamplingtransformation.f1
 helpviewer_keywords:
 - testing mining models
 - sampling seeds [Integration Services]
@@ -25,10 +26,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b304a50eeec9908427b7fd42319b88d78b151ff0
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: 0afd2ce4dc8fc999661455a1655d43d21b37f3f4
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="percentage-sampling-transformation"></a>百分比取樣轉換
@@ -52,8 +53,6 @@ ms.lasthandoff: 08/03/2017
   
  您可以透過「 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師」或以程式設計方式設定屬性。  
   
- 如需可在 [百分比取樣轉換編輯器] 對話方塊中設定之屬性的詳細資訊，請參閱[百分比取樣轉換編輯器](../../../integration-services/data-flow/transformations/percentage-sampling-transformation-editor.md)。  
-  
  **[進階編輯器]** 對話方塊會反映能以程式設計的方式設定之屬性。 如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
 -   [通用屬性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -61,5 +60,23 @@ ms.lasthandoff: 08/03/2017
 -   [轉換自訂屬性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
  如需如何設定屬性的詳細資訊，請參閱 [設定資料流程元件的屬性](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)。  
+  
+## <a name="percentage-sampling-transformation-editor"></a>百分比取樣轉換編輯器
+  使用 **[百分比取樣轉換編輯器]** 對話方塊，即可依指定的資料列百分比，將輸入的一部分分割為取樣。 這個轉換會將輸入分成兩個不同的輸出。  
+  
+### <a name="options"></a>選項。  
+ **資料列的百分比**  
+ 指定在輸入中，要作為取樣的資料列百分比。  
+  
+ 此屬性的值可以使用屬性運算式指定。  
+  
+ **取樣輸出名稱**  
+ 提供包含取樣資料列之輸出的唯一名稱。 提供的名稱將顯示在 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師內。  
+  
+ **未選取的輸出名稱**  
+ 提供輸出的唯一名稱，其中包含從取樣排除的資料列。 提供的名稱將顯示在 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師內。  
+  
+ **使用下列隨機種子**  
+ 指定轉換用來建立取樣之隨機號碼產生器的取樣種子。 只建議用於開發和測試。 如果未指定隨機種子，轉換會使用 Microsoft Windows 滴答計數。  
   
   

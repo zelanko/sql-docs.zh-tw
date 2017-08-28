@@ -18,10 +18,10 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
-ms.openlocfilehash: 5baf0e5c9dcc3b9c70fce06024e5bba957c48f65
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 0626dc829e6ae2cd4212dc05deb406740592dc40
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 
@@ -33,7 +33,7 @@ ms.lasthandoff: 08/09/2017
 
 若要開啟此頁面，啟動 SQL Server Management Studio，連接到報表伺服器執行個體，以滑鼠右鍵按一下報表伺服器的名稱，並選取**屬性**。 選取**進階**即可開啟此頁面。
 
-## <a name="options"></a>選項。
+## <a name="options"></a>選項
 
 **EnableMyReports**  
 指出 [我的報表] 功能是否已啟用。 值若為 **true** 表示此功能已啟用。  
@@ -72,7 +72,7 @@ ms.lasthandoff: 08/09/2017
 指出報表伺服器與用戶端瀏覽器通訊時是否應該使用工作階段 Cookie。 預設值為 **true**。  
 
 **ExternalImagesTimeout**  
-決定在連接逾時之前必須擷取外部影像檔的時間長度。 預設值為 **600** 秒。  
+決定在連接逾時之前必須擷取外部影像檔的時間長度。預設值為 **600** 秒。  
 
 **SnapshotCompression**  
 定義快照集的壓縮方式。 預設值是 **SQL**秒。 有效值如下：
@@ -114,7 +114,7 @@ ms.lasthandoff: 08/09/2017
 指定可以在報表編輯工作階段中使用的資料快取項目數目。 預設數目是 5。  
 
 **EditSessionTimeout**  
-指定報表編輯工作階段逾時之前的秒數。 預設值是 7200 秒 (2 小時)。  
+指定報表編輯工作階段逾時之前的秒數。預設值是 7200 秒 (2 小時)。  
 
 **EnableCustomVisuals** ***(Power BI 報表伺服器)***  
 PowerBI ReportServer 應該啟用 power Bi 自訂視覺效果的顯示。 有效值為 True，False。  預設值是 True。  
@@ -125,7 +125,20 @@ PowerBI ReportServer 應該啟用匯出從 power Bi 視覺效果的資料。 有
 **EnableTestConnectionDetailedErrors**  
 指出當使用者使用報表伺服器來測試資料來源連接時，是否要將詳細的錯誤訊息傳送至用戶端電腦。 預設值為 **true**。 如果此選項設定為 **false**，就只會傳送一般錯誤訊息。
 
-## <a name="see-also"></a>請參閱＜
+**AccessControlAllowCredentials**  
+指出當設定 [認證] 旗標時是否可以公開用戶端要求的回應為 true。 預設值是 **false**秒。
+
+**AccessControlAllowHeaders**伺服器允許當用戶端要求的標頭的逗號分隔的清單。 這個屬性可以是空字串，指定 * 將允許所有標頭。
+
+**AccessControlAllowMethods**逗號分隔的清單，當用戶端要求伺服器允許的 HTTP 方法。 預設值為 (GET、 PUT、 POST、 PATCH、 DELETE)，指定 * 將允許所有方法。
+
+**AccessControlAllowOrigin**的伺服器可讓用戶端要求時的來源逗號分隔的清單。 預設值是空白使所有的要求，指定 * 時不會設定認證; 將允許所有來源如果未指定認證，必須指定明確的原始來源清單。
+
+**AccessControlExposeHeaders**伺服器要公開給用戶端的標頭的逗號分隔的清單。 預設值是空白。
+
+**AccessControlMaxAge**指定可以快取預檢要求結果的秒數。 預設值為 600 （10 分鐘）。
+
+## <a name="see-also"></a>另請參閱
 
 [設定報表伺服器屬性 &#40;Management Studio &#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md)   
 [連接至 Management Studio 中的報表伺服器](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   

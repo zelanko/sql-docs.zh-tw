@@ -10,14 +10,15 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: 6f060f110121bc744687b09a15e142112f48c86c
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 07a50a59c320d7abb58c725c717393f8751b337d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/28/2017
 
 ---
-
 # <a name="operate-ha-availability-group-for-sql-server-on-linux"></a>SQL Server on Linux 會操作 HA 可用性群組
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 ## <a name="failover"></a>可用性群組容錯移轉
 
@@ -175,9 +176,6 @@ ms.lasthandoff: 08/02/2017
 
 下列各節說明如何在 Linux 上執行輪流升級 SQL Server 執行個體，與可用性群組。 
 
->[!WARNING]
->在 Linux 上不支援輪流升級至 SQL Server 2017 RC2。 升級次要複本之後，會中斷連線的主要複本之前升級主要複本。 Microsoft 計劃，以解決此問題在未來的版本。 
-
 ### <a name="upgrade-steps-on-linux"></a>在 Linux 上的升級步驟
 
 在 Linux 中的 SQL Server 執行個體上的可用性群組複本時，可用性群組的叢集類型是`EXTERNAL`或`NONE`。 除了 Windows Server 容錯移轉叢集 (WSFC) 是由叢集管理員的可用性群組`EXTERNAL`。 與 Corosync pacemaker 是外部叢集管理員的範例。 沒有叢集管理員與可用性群組有叢集類型`NONE`此處所述的升級步驟特有的可用性群組的叢集類型`EXTERNAL`或`NONE`。
@@ -191,6 +189,15 @@ ms.lasthandoff: 08/02/2017
 
    >[!NOTE]
    >如果可用性群組只有非同步複本-若要避免遺失任何資料會將一個複本變更為同步，並等待同步處理。 接著升級此複本。
+   
+   b.1。 在裝載次要複本升級的目標節點上停止資源
+   
+   然後再執行 [升級] 命令，停止資源，因此叢集將不進行監視並不必要地容錯。 下列範例會將會在節點上的位置限制式上停止資源。 更新`ag_cluster-master`的資源名稱和`nodeName1`與裝載複本升級的目標節點。
+
+   ```bash
+   pcs constraint location ag_cluster-master avoids nodeName1
+   ```
+   b.2。 升級次要複本上的 SQL Server
 
    下列範例會升級`mssql-server`和`mssql-server-ha`封裝。
 
@@ -198,11 +205,18 @@ ms.lasthandoff: 08/02/2017
    sudo yum update mssql-server
    sudo yum update mssql-server-ha
    ```
+   b.3。 移除位置條件約束
+
+   然後再執行 [升級] 命令，停止資源，因此叢集將不進行監視並不必要地容錯。 下列範例會將會在節點上的位置限制式上停止資源。 更新`ag_cluster-master`的資源名稱和`nodeName1`與裝載複本升級的目標節點。
+
+   ```bash
+   pcs constraint remove location-ag_cluster-master-rhel1--INFINITY
+   ```
+   最佳做法，請確定沒有啟動資源 (使用`pcs status`命令) 和連接的次要複本，而且在升級後同步處理狀態。
 
 1. 升級所有次要複本之後，手動容錯移轉到其中一個同步的次要複本。
 
    使用可用性群組的`EXTERNAL`叢集類型，用於叢集管理工具在容錯移轉; 可用性群組`NONE`叢集類型應該使用 TRANSACT-SQL 來容錯移轉。 
-
    下列範例會容錯移轉叢集管理工具的可用性群組。 取代`<targetReplicaName>`同步次要複本將成為主要的名稱：
 
    ```bash
@@ -211,7 +225,6 @@ ms.lasthandoff: 08/02/2017
    
    >[!IMPORTANT]
    >下列步驟僅適用於不需要叢集管理員的可用性群組。  
-
    如果可用性群組叢集類型為`NONE`、 手動容錯移轉。 依序完成下列步驟：
 
       a. 下列命令會將主要複本設定為次要。 取代`AG1`與可用性群組的名稱。 裝載主要複本的 SQL Server 執行個體上執行的 TRANSACT-SQL 命令。
@@ -226,13 +239,27 @@ ms.lasthandoff: 08/02/2017
       ALTER AVAILABILITY GROUP [ag1] FAILOVER;
       ```
 
-1. 容錯移轉之後，升級舊的主要複本上的 SQL Server。 
+1. 容錯移轉之後，SQL Server 升級舊的主要複本上重複相同步驟 b.1 b.3 上面所述的程序。
 
    下列範例會升級`mssql-server`和`mssql-server-ha`封裝。
 
    ```bash
+   # add constraint for the resource to stop on the upgraded node
+   # replace 'nodename2' with the name of the cluster node targeted for upgrade
+   pcs constraint location ag_cluster-master avoids nodeName2
    sudo yum update mssql-server
    sudo yum update mssql-server-ha
+   ```
+   
+   ```bash
+   # upgrade mssql-server and mssql-server-ha packages
+   sudo yum update mssql-server
+   sudo yum update mssql-server-ha
+   ```
+
+   ```bash
+   # remove the constraint; make sure the resource is started and replica is connected and synchronized
+   pcs constraint remove location-ag_cluster-master-rhel1--INFINITY
    ```
 
 1. 外部的叢集與可用性群組的管理員-輸入叢集的地方是外部、 清除所造成的手動容錯移轉的位置限制式。 

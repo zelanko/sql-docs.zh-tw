@@ -11,6 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.exportcolumntrans.f1
+- sql13.dts.designer.fileextractortransformation.columns.f1
+- sql13.dts.designer.fileextractortransformation.errorhandling.f1
 helpviewer_keywords:
 - exporting data
 - append options [Integration Services]
@@ -24,10 +26,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e7e611452f931d049c63c822587dc7610bf1eb25
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: 986a900c49a91578358b0ace380c1fb6e3f5cb9e
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="export-column-transformation"></a>匯出資料行轉換
@@ -65,8 +67,6 @@ ms.lasthandoff: 08/03/2017
   
  您可以透過「 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師」或以程式設計方式設定屬性。  
   
- 如需可在 [匯出資料行轉換編輯器] 對話方塊中設定之屬性的詳細資訊，請參閱[匯出資料行轉換編輯器 &#40;資料行頁面&#41;](../../../integration-services/data-flow/transformations/export-column-transformation-editor-columns-page.md)。  
-  
  **[進階編輯器]** 對話方塊會反映能以程式設計的方式設定之屬性。 如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
 -   [通用屬性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -74,5 +74,49 @@ ms.lasthandoff: 08/03/2017
 -   [轉換自訂屬性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
  如需如何設定屬性的詳細資訊，請參閱 [設定資料流程元件的屬性](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)。  
+  
+## <a name="export-column-transformation-editor-columns-page"></a>匯出資料行轉換編輯器 (資料行頁面)
+  使用 **[匯出資料行轉換編輯器]** 對話方塊的 **[資料行]** 頁面，即可指定資料流程中要擷取至檔案的資料行。 您可以指定匯出資料行轉換將資料附加至檔案或複寫現有的檔案。  
+  
+### <a name="options"></a>選項  
+ **擷取資料行**  
+ 從包含文字或影像資料的輸入資料行清單中選取。 所有資料列應有 **[擷取資料行]** 和 **[檔案路徑資料行]**的定義。  
+  
+ **[檔案路徑資料行]**  
+ 從包含檔案路徑和檔案名稱的輸入資料行清單中選取。 所有資料列應有 **[擷取資料行]** 和 **[檔案路徑資料行]**的定義。  
+  
+ **允許附加**  
+ 指定轉換是否將資料附加至現有的檔案。 預設值為 **false**。  
+  
+ **強制截斷**  
+ 指定轉換是否在寫入資料之前刪除現有檔案的內容。 預設值為 **false**。  
+  
+ **寫入 BOM**  
+ 指定是否將位元組順序標記 (BOM) 寫入檔案。 當資料擁有 **DT_NTEXT** 或 DT_WSTR 資料類型，且未附加至現有的資料檔案時，才會寫入 BOM。  
+  
+## <a name="export-column-transformation-editor-error-output-page"></a>匯出資料行轉換編輯器 (錯誤輸出頁面)
+  使用 **[匯出資料行轉換編輯器]** 對話方塊的 **[錯誤輸出]** 頁面，即可指定如何處理錯誤。  
+  
+### <a name="options"></a>選項。  
+ **輸入/輸出**  
+ 檢視輸出的名稱。 按一下名稱即可展開檢視來包含資料行。  
+  
+ **資料行**  
+ 檢視您在 [匯出資料行轉換編輯器] 對話方塊的 [資料行] 頁面上選取的輸出資料行。  
+  
+ **錯誤**  
+ 指定您要在錯誤發生時採取什麼動作：忽略失敗、重新導向資料列，或使元件失效。  
+  
+ **截斷**  
+ 指定您要在截斷發生時採取什麼動作：忽略失敗、重新導向資料列，或使元件失效。  
+  
+ **說明**  
+ 檢視作業的描述。  
+  
+ **將這個值設定到選取的資料格**  
+ 指定發生錯誤或截斷時要對所有選取之資料格採取的動作：忽略失敗、重新導向資料列，或使元件失效。  
+  
+ **套用**  
+ 將錯誤處理選項套用至選取的資料格。  
   
   

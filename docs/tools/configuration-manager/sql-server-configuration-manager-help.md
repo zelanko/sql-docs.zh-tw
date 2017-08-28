@@ -13,14 +13,14 @@ helpviewer_keywords:
 - SQL Server Configuration Manager, help
 ms.assetid: 6e909911-39a6-469b-b22a-3afdfd08a30b
 caps.latest.revision: 28
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e7c3445dee2fe753506a02e9c828f1835664592a
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: d12d9e8aa7c2a11dfe340897c4b63681591784d5
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="sql-server-configuration-manager-help"></a>SQL Server 組態管理員說明
@@ -71,6 +71,12 @@ ms.lasthandoff: 08/02/2017
   
 -   在 [開始] 功能表上，依序指向 [所有程式]、[Microsoft SQL Server] \(版本) 和 [組態工具]，然後按一下 [SQL Server 組態管理員]。  
   
+  
+ **若要存取[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Configuration Manager 使用[!INCLUDE[win8](../../includes/win8-md.md)]**  
+  
+ 由於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console 程式的嵌入式管理單元，而不是單獨的程式，在執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時並不會出現 [!INCLUDE[win8](../../includes/win8-md.md)] 組態管理員這樣的應用程式。 若要開啟 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員，請在 [搜尋] 常用鍵的 [應用程式] 下，輸入 **SQLServerManager12.msc** (適用於 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) 或 **SQLServerManager11.msc** (適用於 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])，然後按 **Enter**。  
+  
+
 ## <a name="see-also"></a>另請參閱  
  [SQL Server 服務](../../tools/configuration-manager/sql-server-services.md)   
  [SQL Server 網路組態](../../tools/configuration-manager/sql-server-network-configuration.md)   

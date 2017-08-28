@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 4d1a2374d480f2d6b886425a02cb590b00b3564a
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 0e3ffe2ff1695de69be7149f4be7b42f57b0e991
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="connect-to-an-odbc-data-source-sql-server-import-and-export-wizard"></a>連接至 ODBC 資料來源 （SQL Server 匯入和匯出精靈）
@@ -39,6 +39,8 @@ ms.lasthandoff: 08/03/2017
 
 > [!TIP]
 > 如果您知道您的驅動程式安裝，而且您沒有看到它在 64 位元 小程式，查看在 32 位元 小程式改為。 這也會告訴您是否需要執行的 64 位元或 32 位元 SQL Server 匯入和匯出精靈 」。
+>
+> 若要使用 64 位元版本的 SQL Server 匯入和匯出精靈，您必須安裝 SQL Server。 SQL Server Data Tools (SSDT) 和 SQL Server Management Studio (SSMS) 是 32 位元應用程式，並只安裝 32 位元檔案，包括 32 位元版本的精靈。
     
 ## <a name="step-1---select-the-data-source"></a>步驟 1-選取的資料來源
 安裝在電腦上的 ODBC 驅動程式不被列在下拉式清單中的資料來源。 若要連接的 ODBC 驅動程式，一開始選取**.NET Framework Data Provider for ODBC**做為資料來源上**選擇資料來源**或**選擇目的地**精靈頁面。 此提供者做為包裝函式，ODBC 驅動程式。
@@ -70,7 +72,7 @@ ms.lasthandoff: 08/03/2017
 
     ![ODBC 管理員控制台小程式](../../integration-services/import-export-data/media/odbc-administrator-control-panel-applet.png)
     
-3.  如果您想要**使用現有的 DSN**資料來源時，您可以使用任何您在看到的 DSN**使用者 DSN**，**系統 DSN**，或**檔案 DSN**  索引標籤。 請檢查名稱，然後返回精靈並在輸入**Dsn**欄位**選擇資料來源**或**選擇目的地**頁面。 略過此頁面的其餘部分，並繼續精靈的下一個步驟。
+3.  如果您想要**使用現有的 DSN**資料來源時，您可以使用任何您在看到的 DSN**使用者 DSN**，**系統 DSN**，或**檔案 DSN**  索引標籤。請檢查名稱，然後返回精靈並在輸入**Dsn**欄位**選擇資料來源**或**選擇目的地**頁面。 略過此頁面的其餘部分，並繼續精靈的下一個步驟。
 4.  如果您想要**建立新的 DSN**、 決定您想要看是否只會為您 (使用者 DSN) 的電腦的所有使用者看見包括 Windows 服務 （系統 DSN），或儲存於檔案中 (檔案 DSN)。 這個範例會建立新的系統 DSN。
 5. 在**系統 DSN**索引標籤上，按一下 **新增**。
 

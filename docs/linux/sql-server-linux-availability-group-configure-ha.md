@@ -10,18 +10,19 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 3a94bf7646143d687a7300c8ab2a66c3caa2d8d9
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 6ceceaa00b2db22b5f1be9a6e8305da5b4cea49b
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/28/2017
 
 ---
-
 # <a name="configure-always-on-availability-group-for-sql-server-on-linux"></a>設定 Alwayson 可用性群組的 SQL Server on Linux
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 本文說明如何建立 SQL Server Always on Linux 的高可用性的可用性群組上。 有兩個可用性群組的組態類型。 A*高可用性*組態會使用 「 叢集管理員提供業務續航力。 這項設定也可以包含唯讀的相應放大複本。 本文件說明如何建立可用性群組的高可用性組態。
 
-您也可以建立*讀取的向外延展*沒有叢集管理員的可用性群組。 這項設定只會提供向外延展效能的唯讀複本。 它不提供高可用性。 若要建立唯讀的向外延展可用性群組時，請參閱[設定讀取到向外延展可用性群組的 SQL Server on Linux](sql-server-linux-availability-group-configure-rs.md)。
+您也可以建立*讀取的向外延展*沒有叢集管理員的可用性群組。 這項設定只會提供向外延展效能的唯讀複本。它不提供高可用性。 若要建立唯讀的向外延展可用性群組時，請參閱[設定讀取到向外延展可用性群組的 SQL Server on Linux](sql-server-linux-availability-group-configure-rs.md)。
 
 保證高可用性與資料保護的設定，都需要兩個或三個同步認可複本。 包含三個同步複本的可用性群組可以自動修復即使如果一部伺服器無法使用。 如需詳細資訊，請參閱[的可用性群組組態的高可用性與資料保護](sql-server-linux-availability-group-ha.md)。 
 

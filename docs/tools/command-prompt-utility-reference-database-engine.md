@@ -1,5 +1,5 @@
 ---
-title: "命令提示字元公用程式參考 (Database Engine) |Microsoft 文件"
+title: "SQL 命令提示字元公用程式 (Database Engine) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -17,17 +17,17 @@ helpviewer_keywords:
 - command prompt [SQL Server], utilities
 ms.assetid: 48364bd9-6ea7-45e9-a332-acf3d81bbfae
 caps.latest.revision: 90
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 12e1015034b5f933eff620c626ab363cdf5800e7
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 4ef7f8faaebd237d498744554b44283142e2b01e
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/28/2017
 
 ---
-# <a name="command-prompt-utility-reference-database-engine"></a>命令提示字元公用程式參考 (資料庫引擎)
+# <a name="sql-command-prompt-utilities-database-engine"></a>SQL 命令提示字元公用程式 (Database Engine)
   命令提示字元公用程式可編寫 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 作業指令碼。 下表列出 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]隨附的命令提示字元公用程式清單。  
   
 |**公用程式**|**描述**|**安裝位置**|  
@@ -53,11 +53,7 @@ ms.lasthandoff: 08/02/2017
 |[sqlservr 應用程式](../tools/sqlservr-application.md)|用來從命令提示字元啟動和停止 [!INCLUDE[ssDE](../includes/ssde-md.md)] 執行個體，以進行疑難排解。|\<磁碟機 >: \Program Files\Microsoft SQL Server\MSSQL13。MSSQLSERVER\MSSQL\Binn|  
 |[Ssms 公用程式](../tools/sql-server-management-studio/ssms-utility.md)|用來從命令提示字元啟動 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 。|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn\VSShell\Common7\IDE|  
 |[tablediff 公用程式](../tools/tablediff-utility.md)|用來比較兩份資料表，以找出非聚合狀況，當進行複寫拓撲的疑難排解時，它尤其有用。|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]COM|  
-  
- **存取 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員的方式 [!INCLUDE[win8](../includes/win8-md.md)]**  
-  
- 由於 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員是 [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console 程式的嵌入式管理單元，而不是單獨的程式，在執行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 時並不會出現 [!INCLUDE[win8](../includes/win8-md.md)]組態管理員這樣的應用程式。 若要開啟 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員，請在 [搜尋] 常用鍵的 [應用程式] 下，輸入 **SQLServerManager12.msc** (適用於 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]) 或 **SQLServerManager11.msc** (適用於 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)])，然後按 **Enter**。  
-  
+
 ## <a name="command-prompt-utilities-syntax-conventions"></a>命令提示字元公用程式語法慣例  
   
 |**慣例**|**用於**|  

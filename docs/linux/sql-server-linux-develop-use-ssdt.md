@@ -11,13 +11,15 @@ ms.technology: database-engine
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
 ms.custom: H1Hack27Feb2017
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: 05cc425e6411734b0cc300a9e3587fa2196893ab
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: b2e9353126b98cdda0753e1ad6dc4d1a2adbb1eb
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/28/2017
 
 ---
-# <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>使用 Visual Studio 建立資料庫的 SQL Server on Linux 
+# <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>使用 Visual Studio 建立資料庫的 SQL Server on Linux
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 SQL Server Data Tools (SSDT) 會針對 SQL Server on Linux 轉換成強大開發及資料庫生命週期管理 (DLM) 環境的 Visual Studio。 您可以開發、 建置、 測試及發行您的資料庫從原始檔控制專案，就像您開發應用程式程式碼。
 
@@ -37,7 +39,7 @@ SQL Server Data Tools (SSDT) 會針對 SQL Server on Linux 轉換成強大開發
 
 SSDT 版本 17.0 RC 或更新版本支援在 Linux 上的 SQL Server 2017 RC2。
 
-1. [下載並安裝 SSDT 17.0 RC2]。
+* [下載並安裝 SSDT 17.0 RC2](https://go.microsoft.com/fwlink/?linkid=837939)。
 
 ## <a name="create-a-new-database-project-in-source-control"></a>在 原始檔控制中建立新的資料庫專案
 
@@ -110,11 +112,7 @@ SSDT 版本 17.0 RC 或更新版本支援在 Linux 上的 SQL Server 2017 RC2。
 如需開發使用 SQL Data Tools 資料庫的詳細資訊，請參閱[SSDT MSDN 文件]
 
 [下載並安裝 Visual Studio]:https://www.visualstudio.com/downloads/
-[下載並安裝 SSDT 17.0 RC2]:https://aka.ms/ssdt-download
+[Download and Install SSDT 17.0 RC2]:https://aka.ms/ssdt-download
 [SSDT MSDN 文件]: https://msdn.microsoft.com/en-us/library/hh272686(v=vs.103).aspx
 [教學課程： 撰寫 TRANSACT-SQL 陳述式]:https://msdn.microsoft.com/library/ms365303.aspx
 [TRANSACT-SQL 參考 (Database Engine)]:https://msdn.microsoft.com/library/bb510741.aspx
-
-
-
-
