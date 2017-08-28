@@ -18,7 +18,7 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="create-a-linux-sql-server-2017-virtual-machine-with-the-azure-portal"></a>使用 Azure 入口網站建立 Linux SQL Server 2017 虛擬機器
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 Azure 會提供已安裝的 SQL Server 2017 RC2 的 Linux 虛擬機器映像。 本主題提供簡短的逐步解說如何使用 Azure 入口網站來建立 Linux SQL Server 虛擬機器。 
 

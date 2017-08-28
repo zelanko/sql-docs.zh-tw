@@ -18,7 +18,7 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="operate-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>適用於 SQL Server 運作 Red Hat Enterprise Linux 共用的磁碟叢集
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 本文件說明如何在 Red Hat Enterprise Linux 共用的磁碟容錯移轉叢集上，執行下列工作適用於 SQL Server。
 

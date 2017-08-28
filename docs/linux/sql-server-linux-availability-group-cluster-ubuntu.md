@@ -18,7 +18,7 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="configure-ubuntu-cluster-and-availability-group-resource"></a>設定 Ubuntu 叢集和可用性群組資源
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 本文件說明如何在 Ubuntu 上建立三個節點叢集並加入先前建立的可用性群組為叢集中的資源。 高可用性，Linux 上的可用性群組需要三個節點-請參閱[的可用性群組組態的高可用性與資料保護](sql-server-linux-availability-group-ha.md)。
 

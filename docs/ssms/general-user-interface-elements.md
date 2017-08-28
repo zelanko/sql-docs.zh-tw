@@ -37,7 +37,7 @@ ms.lasthandoff: 08/18/2017
 [外部工具對話方塊](../ssms/external-tools-dialog-box.md)  
 可讓您將工具新增至 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] 所沒有的 [工具] 功能表中。  
   
-[屬性視窗 &amp;#40;Management Studio&amp;#41;](../ssms/properties-window-management-studio.md)  
+[屬性視窗 &#40;Management Studio&#41;](../ssms/properties-window-management-studio.md)  
 可讓您檢視在編輯器和設計師中之所選物件的屬性和事件。 另外，它也可讓您編輯和檢視檔案、專案和方案的屬性。 您可以在 [屬性] 視窗中，編輯某些屬性。  
   
 [使用工具箱](../ssms/use-the-toolbox.md)  

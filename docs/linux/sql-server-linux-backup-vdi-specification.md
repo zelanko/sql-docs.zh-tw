@@ -18,7 +18,7 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="sql-server-on-linux-vdi-client-sdk-specification"></a>Linux VDI 用戶端 SDK 規格上的 SQL Server
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 本文件包含 Linux 虛擬裝置介面 (VDI) 用戶端 SDK 上的 SQL Server 所提供的介面。 獨立軟體廠商 (Isv) 可以使用虛擬備份裝置的應用程式發展介面 (API)，若要將 SQL Server 整合到他們的產品。 一般情況下，在 Linux 上的 VDI 運作起來就像在 Windows 上的 VDI 以下列變更：
 

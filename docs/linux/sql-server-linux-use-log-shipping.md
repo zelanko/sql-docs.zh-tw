@@ -18,7 +18,7 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="get-started-with-log-shipping-on-linux"></a>開始使用 Linux 上的記錄傳送
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 SQL Server 記錄傳送是 HA 組態資料庫從主要伺服器複寫到一個或多個次要伺服器上的位置。 簡而言之，來源資料庫的備份還原到次要伺服器。 接著在主要伺服器，會建立交易記錄備份會定期與次要伺服器還原，更新資料庫的次要複本。 
 

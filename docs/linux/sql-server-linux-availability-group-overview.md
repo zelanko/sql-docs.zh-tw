@@ -18,7 +18,7 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="availability-groups-for-sql-server-on-linux"></a>SQL Server on Linux 的可用性群組
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 SQL Server Always On 可用性群組是高可用性 (HA)，災害復原 (DR)，並向外延展方案。 它提供高可用性群組的直接連結存放裝置上的資料庫。 它支援整合式的 HA 和 DR、 自動失敗偵測、 快速透明容錯移轉，以及讀取的負載平衡多個次要複本。 此一組廣泛的功能可讓您達成您的工作負載最佳化可用性 Sla。
 

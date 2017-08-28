@@ -19,7 +19,7 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="how-to-get-started-developing-applications-for-sql-server-on-linux"></a>如何開始開發 SQL Server on Linux 應用程式
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 您可以建立連接並使用 SQL Server 2017 RC2 從各種不同的程式設計語言，例如 C#、 Java、 Node.js、 PHP、 Python、 Ruby、 和 c + + Linux 上的應用程式。 您也可以使用熱門的 web 架構及物件關聯式對應 (ORM) 架構。
 

@@ -18,7 +18,7 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="business-continuity-and-database-recovery-sql-server-on-linux"></a>商務持續性和資料庫復原 SQL Server on Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 在 Linux 上的 SQL Server 可讓組織達成各式各樣的服務等級協定以容納各種商務需求的目標。
 

@@ -63,7 +63,7 @@ ms.lasthandoff: 08/18/2017
   
     如需 [<警示名稱> 警示屬性] 對話方塊中之可用選項的詳細資訊，請參閱：  
   
-    -   [警示屬性 - 新增警示 &amp;#40;一般頁面&amp;#41;](../../ssms/agent/alert-properties-new-alert-general-page.md)  
+    -   [警示屬性 - 新增警示 &#40;一般頁面&#41;](../../ssms/agent/alert-properties-new-alert-general-page.md)  
   
     -   [警示屬性 - 新增警示 &#40;回應頁面&#41;](../../ssms/agent/alert-properties-new-alert-response-page.md)  
   

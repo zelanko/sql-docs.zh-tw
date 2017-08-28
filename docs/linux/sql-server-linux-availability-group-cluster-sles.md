@@ -18,7 +18,7 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>設定 SQL Server 可用性群組的 SLES 叢集
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 本指南提供指示來建立適用於 SQL Server 上 SUSE Linux Enterprise Server (SLES) 12 SP2 的三個節點叢集。 高可用性，Linux 上的可用性群組需要三個節點-請參閱[的可用性群組組態的高可用性與資料保護](sql-server-linux-availability-group-ha.md)。 叢集的圖層根據 SUSE[高可用性延伸模組 (HAE)](https://www.suse.com/products/highavailability)之上[Pacemaker](http://clusterlabs.org/)。 
 

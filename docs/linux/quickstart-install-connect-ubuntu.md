@@ -18,7 +18,7 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="install-sql-server-and-create-a-database-on-ubuntu"></a>安裝 SQL Server 和 Ubuntu 上建立資料庫
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 在本快速入門教學課程中，您先安裝 SQL Server 2017 RC2 Ubuntu 16.04 上。 然後以連接**sqlcmd**來建立您的第一個資料庫和執行查詢。
 

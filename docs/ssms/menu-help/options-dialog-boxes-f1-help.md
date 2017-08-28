@@ -27,7 +27,7 @@ ms.lasthandoff: 08/18/2017
 # <a name="options-dialog-boxes-f1-help"></a>選項對話方塊 F1 說明
 此章節包含在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 中按一下 [工具] 功能表上的 [選項] 時，可用之對話方塊的 F1 說明。  
   
-[選項 &amp;#40;設計工具 - Analysis Services 設計工具 - 一般&amp;#41;](../../ssms/menu-help/options-designers-analysis-services-designers-general.md)  
+[選項 &#40;設計工具 - Analysis Services 設計工具 - 一般&#41;](../../ssms/menu-help/options-designers-analysis-services-designers-general.md)  
   
 [選項 &#40;設計工具 - 維護計畫頁面&#41;](../../ssms/menu-help/options-designers-maintenance-plans-page.md)  
   

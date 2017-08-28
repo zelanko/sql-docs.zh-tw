@@ -19,7 +19,7 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="use-visual-studio-code-to-create-and-run-transact-sql-scripts-for-sql-server"></a>使用 Visual Studio 程式碼來建立和執行 SQL Server 的 TRANSACT-SQL 指令碼
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 本主題示範如何使用**mssql** Visual Studio 程式碼 （VS 程式碼），開發 SQL Server 資料庫的擴充功能。
 

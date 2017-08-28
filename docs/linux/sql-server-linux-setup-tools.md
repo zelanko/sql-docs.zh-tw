@@ -18,7 +18,7 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>Sqlcmd 和 bcp 的 SQL Server 命令列工具 Linux 上安裝
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 下列步驟安裝命令列工具、 Microsoft ODBC 驅動程式，以及它們的相依性。 **Mssql 工具**封裝包含：
 

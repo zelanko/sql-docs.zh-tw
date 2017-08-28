@@ -72,7 +72,7 @@ ms.lasthandoff: 08/18/2017
   
     如需 [<操作員名稱> 屬性] 對話方塊中之可用選項的詳細資訊，請參閱：  
   
-    -   [操作員屬性 - 新增操作員 &amp;#40;一般頁面&amp;#41;](../../ssms/agent/operator-properties-new-operator-general-page.md)  
+    -   [操作員屬性 - 新增操作員 &#40;一般頁面&#41;](../../ssms/agent/operator-properties-new-operator-general-page.md)  
   
     -   [操作員屬性 - 新增操作員 &#40;通知頁面&#41;](../../ssms/agent/operator-properties-new-operator-notifications-page.md)  
   

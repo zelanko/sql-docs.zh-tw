@@ -59,7 +59,7 @@ HAVING AVG(price) > 10
   
 ### <a name="to-specify-a-where-condition-in-an-aggregate-query"></a>若要在彙總查詢指定 WHERE 條件  
   
-1.  為您的查詢指定群組。 如需詳細資訊，請參閱 [群組查詢結果中的資料列 &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/group-rows-in-query-results-visual-database-tools.md)。  
+1.  為您的查詢指定群組。 如需詳細資訊，請參閱 [群組查詢結果中的資料列 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/group-rows-in-query-results-visual-database-tools.md)。  
   
 2.  如果沒有出現在 [準則] 窗格中，加入您想要組成 WHERE 條件的資料行。  
   

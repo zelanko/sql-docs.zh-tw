@@ -18,7 +18,7 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="whats-new-for-sql-server-2017-on-linux"></a>在 Linux 上的 SQL Server 2017 的新功能
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 本主題說明在 Linux 上執行的 SQL Server 2017 的新功能。
 

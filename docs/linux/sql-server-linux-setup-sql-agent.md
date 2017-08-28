@@ -18,7 +18,7 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="install-sql-server-agent-on-linux"></a>Linux 上安裝 SQL Server 代理程式
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 下列步驟安裝 SQL Server Agent (**mssql server agent**) 在 Linux 上。 [SQL Server Agent](https://docs.microsoft.com/sql/ssms/agent/sql-server-agent)執行 SQL Server 的排程的工作。 在這一版的 SQL Server 代理程式所支援之功能的資訊，請參閱[Release Notes](sql-server-linux-release-notes.md)。
 

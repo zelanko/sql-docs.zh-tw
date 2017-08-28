@@ -18,7 +18,7 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="connectivity-libraries-and-frameworks-for-microsoft-sql-server"></a>連接程式庫和適用於 Microsoft SQL Server 的架構
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 請查看我們[快速入門教學課程](http://aka.ms/sqldev)快速開始使用程式設計語言如 C#、 Java、 Node.js、 PHP 以及 Python 和建置在 Linux 或 Windows Docker macOS 上使用 SQL Server 的應用程式。
 

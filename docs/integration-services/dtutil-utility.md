@@ -209,7 +209,7 @@ dtutil /SQL srcPackage /EXISTS
  若要判斷使用 **驗證之** 本機執行個體上 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] msdb [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫中是否存在某個封裝，請使用下列語法：  
   
 ```dos
-dtutil SQL srcPackage /SOURCEUSER srcUserName /SOURCEPASSWORD *hY$d56b /EXISTS  
+dtutil /SQL srcPackage /SOURCEUSER srcUserName /SOURCEPASSWORD *hY$d56b /EXISTS  
 ```  
   
 > [!NOTE]  
@@ -280,3 +280,4 @@ dtutil /FILE PackageToEncrypt.dtsx /ENCRYPT file;EncryptedPackage.dtsx;3;EncPswd
 [執行 Integration Services (SSIS) 套件](../integration-services/packages/run-integration-services-ssis-packages.md)  
   
   
+
