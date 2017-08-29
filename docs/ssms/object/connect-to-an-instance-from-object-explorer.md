@@ -1,7 +1,7 @@
 ---
-title: "從物件總管連接到執行個體 | Microsoft Docs"
+title: "連線至 SQL Server 或 Azure SQL Database | Microsoft Docs"
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 08/25/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -13,45 +13,55 @@ ms.assetid: 9803a8a0-a8f1-4b65-87b8-989b06850194
 caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 53043981ec7d3d66f3a16252a5dd90a9ad323aa6
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 2d5048825b3c71ecaec5da0f6ae75277994d1697
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/28/2017
 
 ---
-# <a name="connect-to-an-instance-from-object-explorer"></a>從物件總管連接到執行個體
-若要使用物件總管管理物件，您必須先將物件總管連接到包含物件的執行個體。 您可以同時將物件總管連接到多個執行個體。  
+# <a name="connect-to-a-sql-server-or-azure-sql-database"></a>連線至 SQL Server 或 Azure SQL Database
+
+若要使用伺服器或資料庫，您必須先連線至伺服器。 您可以同時連線至多部伺服器。
+
+[SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md) 支援多種連線類型。 本文詳細說明如何連線至 SQL Server 與 Azure SQL Database (連線至 Azure SQL 邏輯伺服器)。 如需其他連線選項的詳細資訊，請參閱此頁面底部的[連結](#see-also)。
   
-## <a name="connecting-object-explorer-to-a-server"></a>將物件總管連接到伺服器  
-若要使用物件總管，您必須先連接到伺服器。 請在物件總管工具列上，按一下 [連接]，再從下拉式清單中選取伺服器類型。 [連接到伺服器] 對話方塊隨即開啟。 若要連接，您至少必須先提供伺服器名稱以及正確的驗證資訊。  
-  
-## <a name="optional-object-explorer-connection-settings"></a>選擇性的物件總管連接設定  
-當連接到伺服器時，您可以在 [連接到伺服器] 對話方塊中，指定其他連接資訊。 [連接到伺服器] 對話方塊會保留上次使用的設定，新的連接 (例如新的程式碼編輯器視窗) 將會使用這些設定。  
-  
-若要指定選擇性的連接設定，請遵照下列步驟：  
-  
-1.  在物件總管工具列上，按一下 [連接]，再按一下要連接的伺服器類型。 此時會出現 **[連接到伺服器]** 對話方塊。  
-  
-2.  在 [伺服器名稱] 方塊中，輸入您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 執行個體的名稱。  
-  
-3.  按一下 [選項]。 此時 [連接到伺服器] 對話方塊會顯示其他選項。  
-  
-4.  按一下 [連接屬性] 索引標籤來設定其他設定。 可用的設定會隨著伺服器類型而不同。 [!INCLUDE[ssDE](../../includes/ssde_md.md)]可以使用下列設定。  
-  
-    |設定|說明|  
-    |-----------|---------------|  
-    |**連接到資料庫**|從伺服器的可用資料庫中進行選擇。 這份清單只會顯示您有權檢視的資料庫。|  
-    |**網路通訊協定**|從 [共用記憶體]、[TCP/IP] 或 [具名管道] 中進行選取。|  
-    |**網路封包大小**|以位元組為單位來進行設定。 預設值是 4096 位元組。|  
-    |**連接逾時**|以秒為單位來進行設定。 預設值是 15 秒。|  
-    |**執行逾時**|以秒為單位來進行設定。 預設值 (0) 表示執行動作將永不逾時。|  
-    |**加密連接**|強制加密。|  
-  
-5.  若要將指定的伺服器加入已註冊的伺服器清單中，請按一下 [已註冊的伺服器] 索引標籤，按一下新伺服器將出現的位置，再完成連接。  
-  
-> [!NOTE]  
-> 使用 [其他連接參數] 頁面可將更多連接參數新增到連接字串。 如需詳細資訊，請參閱[連接到伺服器 &#40;其他連接參數頁面&#41;](../../ssms/f1-help/connect-to-server-additional-connection-parameters-page.md)。  
-  
+## <a name="connecting-to-a-server"></a>連接至伺服器  
+
+1. 在**物件總管**，按一下 [連線] > [資料庫引擎...]。
+
+   ![connect](../media/connect-to-server/connect-db-engine.png)
+
+1. 填寫 [連線至伺服器] 表單，並按一下 [連線]：
+
+   ![連線至伺服器](../media/connect-to-server/connect.png)
+
+1. 若您連線至 Azure SQL Server，系統可能會提示您登入以建立防火牆規則。 按一下 [登入...] (如果沒有，請跳至步驟 6)
+
+   ![防火牆](../media/connect-to-server/firewall-rule-sign-in.png)
+
+1. 登入成功後，表單會預先填入您的特定 IP 位址。 若您的 IP 位址常常變更，可能會讓其他位址更容易進行存取，因此，請選取最適合您環境的選項。 
+
+   ![防火牆](../media/connect-to-server/new-firewall-rule.png)
+
+1. 若要建立防火牆規則並連線至伺服器，請按一下 [確定]。
+
+1. 成功連線後，伺服器會顯示在**物件總管**中：
+
+   ![已連線](../media/connect-to-server/connected.png)
+
+## <a name="next-steps"></a>後續步驟
+
+[設計、建立及更新資料表](../visual-db-tools/design-tables-visual-database-tools.md)
+
+## <a name="see-also"></a>另請參閱
+
+[SQL Server Management Studio (SSMS)](../sql-server-management-studio-ssms.md)  
+[下載 SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md)
+
+[Analysis Services (英文)](https://docs.microsoft.com/sql/analysis-services/instances/connect-to-analysis-services)  
+[Integration Services](https://docs.microsoft.com/sql/integration-services/sql-server-integration-services)  
+[Reporting Services](https://docs.microsoft.com/sql/reporting-services/tools/connect-to-a-report-server-in-management-studio)  
+[Azure 儲存體](../f1-help/connect-to-microsoft-azure-storage.md)  
 

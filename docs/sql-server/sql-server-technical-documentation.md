@@ -23,10 +23,10 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 3f12671ace99d5fefc199c7b1c2db31e5b3cfade
-ms.openlocfilehash: 8b8796e2bda252800c836cf7f10cc20f8b7d593c
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: e0bdc95320ea2e696444048156dffefcd89e1910
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/08/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="sql-server-technical-documentation"></a>SQL Server 技術文件
@@ -47,14 +47,11 @@ ms.lasthandoff: 08/08/2017
 - [SQL Server 2016 的新功能](../sql-server/what-s-new-in-sql-server-2016.md)
     
 **試用 SQL Server！**    
-- [![從 Evaluation Center 下載](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [**下載 SQL Server 2017**](http://go.microsoft.com/fwlink/?LinkID=829477)
-- [![從 Evaluation Center 下載](../includes/media/download2.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) [**下載 SQL Server 2016**](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) 
-- **[啟動已安裝 SQL Server 2016 的虛擬機器](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)**   
-- [![從 Evaluation Center 下載](../includes/media/download2.png)](https://msdn.microsoft.com/library/mt238290.aspx) [**下載 SQL Server Management Studio (SSMS)**](https://msdn.microsoft.com/library/mt238290.aspx)   
-- [![從 Evaluation Center 下載](../includes/media/download2.png)](../ssdt/download-sql-server-data-tools-ssdt.md) [**下載 SQL Server Data Tools (SSDT)**](../ssdt/download-sql-server-data-tools-ssdt.md)
- 
-**支援資訊**
-- [Microsoft SQL Server 授權條款及資訊](https://www.microsoft.com/en-us/download/details.aspx?id=39299) 
+- [![從 Evaluation Center 下載](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [下載 SQL Server 2017](http://go.microsoft.com/fwlink/?LinkID=829477)
+- [![從 Evaluation Center 下載](../includes/media/download2.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) [下載 SQL Server 2016](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) 
+- [啟動已安裝 SQL Server 2016 的虛擬機器](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
+- [![從 Evaluation Center 下載](../includes/media/download2.png)](https://msdn.microsoft.com/library/mt238290.aspx) [下載 SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx)   
+- [![從 Evaluation Center 下載](../includes/media/download2.png)](../ssdt/download-sql-server-data-tools-ssdt.md) [下載 SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
     
 ## <a name="sql-server-technologies"></a>SQL Server 技術    
     
@@ -93,8 +90,8 @@ ms.lasthandoff: 08/08/2017
 + [SQL Server 更新中心 - 所有已支援版本的連結和資訊](https://msdn.microsoft.com/library/ff803383.aspx)
   
 ##  <a name="infotipsql-servermediainfo-tippng-get-help"></a>![info_tip](../sql-server/media/info-tip.png) 取得說明 
-- [堆疊溢位 (標記 sql-server) - 詢問技術性問題](http://stackoverflow.com/questions/tagged/sql-server)
+- [Stack Overflow (標記 sql-server) - 詢問 SQL 開發問題](http://stackoverflow.com/questions/tagged/sql-server)
 - [MSDN 論壇 - 詢問技術性問題](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)
 - [Microsoft Connect - 報告錯誤及要求功能](https://connect.microsoft.com/SQLServer/Feedback)
 - [Reddit - 有關 SQL Server 的一般討論](https://www.reddit.com/r/SQLServer/)
-
+- [Microsoft SQL Server 授權條款及資訊](https://www.microsoft.com/en-us/download/details.aspx?id=39299) 

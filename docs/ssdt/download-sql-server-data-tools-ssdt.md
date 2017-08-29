@@ -1,7 +1,7 @@
 ---
 title: "下載 SQL Server Data Tools (SSDT) | Microsoft Docs"
 ms.custom: 
-ms.date: 08/07/2017
+ms.date: 08/23/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -17,45 +17,57 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 3f12671ace99d5fefc199c7b1c2db31e5b3cfade
-ms.openlocfilehash: 4bcceaeca15c3fa20cd797bda0182cf48f73a730
+ms.sourcegitcommit: 71a2cbf181c94c4c1aff877614aadf890b2496e0
+ms.openlocfilehash: 0bdc983c4a80781eaba888c3e214fc23a4ddad22
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/08/2017
+ms.lasthandoff: 08/23/2017
 
 ---
 # <a name="download-sql-server-data-tools-ssdt"></a>下載 SQL Server Data Tools (SSDT)
 
-**[SQL Server Data Tools](https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx)** 是一款免費下載的新式開發工具，可用來建置 SQL Server 關聯式資料庫、Azure SQL Database、Integration Services 封裝、Analysis Services 資料模型以及 Reporting Services 報表。 有了 SSDT，您便可設計和部署任何 SQL Server 內容類型，就像在 Visual Studio 中開發應用程式一樣容易。 此版本 SQL Server 2017 到 SQL Server 2005 的支援，並提供設計環境，以新增 SQL Server 中的新功能。  
-    
-    
-![下載](../ssdt/media/download.png) [下載適用於 Visual Studio 2015 的 SQL Server Data Tools 17.2](https://go.microsoft.com/fwlink/?linkid=852922)
+**[SQL Server Data Tools](https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx)** 是一款免費下載的新式開發工具，可用來建置 SQL Server 關聯式資料庫、Azure SQL Database、Integration Services 封裝、Analysis Services 資料模型以及 Reporting Services 報表。 有了 SSDT，您便可設計和部署任何 SQL Server 內容類型，就像在 Visual Studio 中開發應用程式一樣容易。 
 
-![下載](../ssdt/media/download.png) [下載資料層應用程式架構 (DacFx) 17.2](https://www.microsoft.com/download/details.aspx?id=55713)
+適用於 Visual Studio 2017 (15.3.0 預覽) 的 SSDT 預覽版本現已正式推出。 此版本加入了獨立式網頁安裝體驗，適用於 Visual Studio 2017 15.3 (或更新版本) 的 SQL Server Database、Analysis Services、Reporting Services 與 Integration Services 專案。
 
-## <a name="sql-server-data-tools"></a>SQL Server Data Tools   
+| 適用於 Visual Studio 2017 的 SSDT (預覽) | 適用於 Visual Studio 2015 的 SSDT | 
+|:--|:--|
+|[![下載](../ssdt/media/download.png) 下載適用於 Visual Studio 2017 (15.3.0 預覽) 的 SSDT](https://go.microsoft.com/fwlink/?linkid=853836) | [![下載](../ssdt/media/download.png) 下載適用於 Visual Studio 2015 (17.2) 的 SSDT](https://go.microsoft.com/fwlink/?linkid=852922)|
+|||
+
+> [!IMPORTANT]
+> 在安裝適用於 Visual Studio 2017 (預覽) 的 SSDT 前，請先關閉所有 VS 執行個體，如果 VS 2017 上已安裝 SSAS 與 SSRS，也請將其解除安裝。
+> 
+
+
+適用於 Visual Studio 2015 的 SSDT 與適用於 Visual Studio 2017 的 SSDT，皆使用 DacFx 17.2：[下載資料層應用程式架構 (DacFx) 17.2](https://www.microsoft.com/download/details.aspx?id=55713)
+
+
+
+## <a name="ssdt-for-visual-studio-2017"></a>適用於 Visual Studio 2017 的 SSDT
+**版本資訊**  
+  
+版本號碼：15.3.0 預覽  
+此版本的組建編號：14.0.16121.0
+
+如需變更的完整清單，請參閱[變更記錄](changelog-for-sql-server-data-tools-ssdt.md)。
+
+適用於 Visual Studio 2017 的 SSDT 具有與安裝 VS 相同的系統需求，支援的作業系統為 Windows 7 SP1、Windows 8.1 或 Windows Server 2012 R2、Windows 10 或 Windows Server 2016。  
+
+### <a name="available-languages---ssdt-for-vs-2017"></a>可用語言 - 適用於 VS 2017 的 SSDT
+  
+ 此預覽版本的 SSDT 目前僅提供英文版本。
+
+
+
+## <a name="ssdt-for-visual-studio-2015"></a>適用於 Visual Studio 2015 的 SSDT
 **版本資訊**  
   
 版本號碼：17.2  
 此版本的組建編號：14.0.61707.300
   
-**新功能**
+如需變更的完整清單，請參閱[變更記錄](changelog-for-sql-server-data-tools-ssdt.md)。
 
-**AS**
-
-- 在 1400 相容性層級表格式模型中，現在可以在進階安全性的 [角色] 對話方塊中設定「物件層級安全性」。
-- 在 VS2017 的 SSDT AS 專案中，AS Azure 模型中沒有電子郵件地址之使用者的新 AAD 角色成員選擇。
-- SSDT AS 表格式專案中自訂 ADAL 認證快取行為的新 AS Azure [一律提示] 專案屬性。
-
-
-**已知問題**
-
-- 如需變更的完整清單，請參閱[變更記錄](changelog-for-sql-server-data-tools-ssdt.md)。
-- 在 [SSDT Connect 意見反應](https://connect.microsoft.com/SQLServer/Feedback)網站報告問題。
-
-> [!NOTE]
-> 若要在 Visual Studio 2017 中使用 SQL Server Data Tools，請參閱下方的[這個](#use-ssdt-in-visual-studio-2017)章節
-
-  **可用語言**  
+### <a name="available-languages---ssdt-for-vs-2015"></a>可用語言 - 適用於 VS 2015 的 SSDT
   
  此版本的 SSDT 提供下列語言版本：  
 [中文 (中華人民共和國)]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x804) | 
@@ -70,7 +82,7 @@ ms.lasthandoff: 08/08/2017
 [俄文]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x419) | 
 [西班牙文]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x40a)  
 
-**ISO 映像**
+### <a name="iso-images---ssdt-for-vs-2015"></a>ISO 映像 - 適用於 VS 2015 的 SSDT
 
 SSDT 的 ISO 映像提供了另一種方式，可讓您用來安裝 SSDT 或設定系統管理安裝點。 ISO 是一個獨立的檔案，內含 SSDT 需要的所有元件，而且隨時啟動下載管理員皆可下載，非常適合網路頻寬有限或不穩的情況使用。 下載後，ISO 可掛載為磁碟機或燒錄至 DVD。
 
@@ -86,15 +98,17 @@ SSDT 的 ISO 映像提供了另一種方式，可讓您用來安裝 SSDT 或設�
 [俄文]( https://go.microsoft.com/fwlink/?linkid=852942&clcid=0x419) |
 [西班牙文]( https://go.microsoft.com/fwlink/?linkid=852942&clcid=0x40a)
 
+
 ## <a name="download-visual-studio"></a>下載 Visual Studio
 
-* [**下載 Visual Studio Community 2015**](https://www.visualstudio.com/products/visual-studio-community-vs.aspx)
+* [**下載 Visual Studio**](https://www.visualstudio.com/downloads)
 
 ## <a name="installing-ssdt-without-visual-studio-pre-installed"></a>在沒有預先安裝 Visual Studio 的情況下安裝 SSDT
 
-如果您的電腦上未安裝 Visual Studio，安裝適用於 Visual Studio 2015 的 SSDT 也會安裝 Visual Studio 2015 的最低「整合模式 Shell」版本。 這個 Visual Studio 版本可在您想要的任意數目電腦上免費安裝及使用。 其提供所有 SQL Server 專案類型，加上 SQL Server 物件總管及其他 SQL 工具體驗。
+若您的電腦上未安裝 Visual Studio，安裝適用於 Visual Studio 的 SSDT 將會安裝 Visual Studio 的最低版本。 這個 Visual Studio 版本可在您想要的任意數目電腦上免費安裝及使用。 其提供您所有 SQL Server 專案類型，加上 SQL Server 物件總管及其他 SQL 工具體驗。
 
-如果您已在電腦上安裝 [Visual Studio 2015 Community 版本 (或更新版本)](https://www.visualstudio.com/products/visual-studio-community-vs.aspx)，安裝 SSDT 會將一組完整 SQL Server 工具新增到您的現有 Visual Studio 安裝中。 Visual Studio 包括許多您可能會想用的功能，例如 原始程式碼控制整合及非 SQL 語言支援。 建議您使用 Visual Studio 2015 Community 或更新版本，以在開發 T-SQL 時取得最佳體驗。
+若您已安裝 Visual Studio 2015 (或更新版本)，安裝 SSDT 會將一組完整的 SQL Server 工具新增到您現有的 Visual Studio 安裝中。 Visual Studio 包括許多您可能會想用的功能，例如 原始程式碼控制整合及非 SQL 語言支援。 建議您使用 Visual Studio 2015 或更新版本，以在開發 T-SQL 時取得最佳體驗。
+
 
 ## <a name="supported-sql-versions"></a>支援的 SQL 版本
   
@@ -115,18 +129,7 @@ SSDT 的 ISO 映像提供了另一種方式，可讓您用來安裝 SSDT 或設�
   
 -   [建立基本資料表報表 (SSRS 教學課程)](https://msdn.microsoft.com/library/ms167305.aspx)  
   
-## <a name="use-ssdt-in-visual-studio-2017"></a>在 Visual Studio 2017 中使用 SSDT 
 
-* [**下載 Visual Studio 2017**](https://www.visualstudio.com/) ([依版本比較 Visual Studio 2017 功能 (英文)](https://www.visualstudio.com/vs/compare/))
-
-若要使用關聯式資料庫專案，我們建議在安裝期間檢查「資料儲存和處理」工作負載。 SSDT 資料庫專案支援也包括一些其他工作負載，包含「Azure」、「ASP.Net 和網頁程式開發」，以及「.Net Core 跨平台開發」。
-
-> [!NOTE]
-> Visual Studio 2017 中的 SSDT 資料庫專案目前最多支援到 SQL Server 2016。  SQL Server 2017 的支援即將在 Visual Studio 2017 更新中推出。
-
-如果您搭配使用 SSDT 與 Visual Studio 2017，請安裝 AS 和 RS 元件：
-* [Analysis Services (英文)](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftAnalysisServicesModelingProjects)
-* [Reporting Services (英文)](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftReportProjectsforVisualStudio)
 
 
 ## <a name="see-also"></a>另請參閱  

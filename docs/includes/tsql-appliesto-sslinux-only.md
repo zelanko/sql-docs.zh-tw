@@ -1,1 +1,1 @@
-<Token>**本主題的適用對象：** ![沒有](media/no.png)SQL Server on Windows![是](media/yes.png)SQL Server on Linux![沒有](media/no.png)Azure SQL Database![沒有](media/no.png)Azure SQL 資料倉儲![沒有](media/no.png)Parallel Data Warehouse</Token>
+<Token>**本主題適用於：**![否](media/no.png)Windows 上的 SQL Server![是](media/yes.png)Linux 上的 SQL Server![否](media/no.png)Azure SQL Database![否](media/no.png)Azure SQL 資料倉儲![否](media/no.png)平行處理資料倉儲</Token>

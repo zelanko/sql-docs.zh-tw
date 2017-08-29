@@ -1,7 +1,7 @@
 ---
 title: "SQL Server 2017 版本資訊 | Microsoft Docs"
 ms.custom: 
-ms.date: 05/16/2017
+ms.date: 08/25/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -15,18 +15,18 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 04245fd42b770129ce4074f8a4ae8377b10cf384
-ms.openlocfilehash: 6494051851601ead6fb3d51e1688b8f1320ed5d4
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 0288cee4b9dee5fba6b67b21e81193bdbe374a94
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/15/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="sql-server-2017-release-notes"></a>SQL Server 2017 版本資訊
 本主題描述 [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]的限制及問題。 如需相關資訊，請參閱：
 - [SQL Server 2017 的新功能](../sql-server/what-s-new-in-sql-server-2017.md)。
 - [Linux 上的 SQL Server 版本資訊](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-release-notes) \(英文\)。
-  
-[![從評估中心下載。](../analysis-services/media/download.png)](http://go.microsoft.com/fwlink/?LinkID=829477)  從**[評估中心](http://go.microsoft.com/fwlink/?LinkID=829477)**下載 [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]
+
+[![從 Evaluation Center 下載](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) **試用看看：**[下載最新的 SQL Server 2017 版本：RC2，2017 年 8月](http://go.microsoft.com/fwlink/?LinkID=829477)。
 
 ## <a name="sql-server-2017-release-candidate-rc2---august-2017"></a>SQL Server 2017 候選版 (RC2 - 2017 年 8 月)
 此版本沒有 Windows 上的 SQL Server 版本資訊。 請參閱 [Linux 上的 SQL Server 版本資訊](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-release-notes) \(英文\)。
@@ -109,11 +109,12 @@ ms.lasthandoff: 08/15/2017
 
    裝載次要複本的 SQL Server 執行個體即會復原。
 
-##  <a name="infotipsql-servermediainfo-tippng-engage-with-the-sql-server-engineering-team"></a>![info_tip](../sql-server/media/info-tip.png) 與 SQL Server 工程團隊交流 
-- [堆疊溢位 (標記 sql-server) - 詢問技術性問題](http://stackoverflow.com/questions/tagged/sql-server)
+##  <a name="infotipsql-servermediainfo-tippng-get-help"></a>![info_tip](../sql-server/media/info-tip.png) 取得說明 
+- [Stack Overflow (標記 sql-server) - 詢問 SQL 開發問題](http://stackoverflow.com/questions/tagged/sql-server)
 - [MSDN 論壇 - 詢問技術性問題](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)
 - [Microsoft Connect - 報告錯誤及要求功能](https://connect.microsoft.com/SQLServer/Feedback)
 - [Reddit - 有關 SQL Server 的一般討論](https://www.reddit.com/r/SQLServer/)
+- [Microsoft SQL Server 授權條款及資訊](https://www.microsoft.com/en-us/download/details.aspx?id=39299) 
 
 ## <a name="more-information"></a>詳細資訊
 - [SQL Server Reporting Services 版本資訊](../reporting-services/reporting-services-release-notes.md)的限制及問題。

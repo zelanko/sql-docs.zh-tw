@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Data Tools (SSDT) 的變更記錄 | Microsoft Docs"
 ms.custom: 
-ms.date: 08/07/2017
+ms.date: 08/23/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -15,20 +15,36 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 3f12671ace99d5fefc199c7b1c2db31e5b3cfade
-ms.openlocfilehash: 51cfeaf15f9d7a01ce55968907e0074f7f2cb955
+ms.sourcegitcommit: 71a2cbf181c94c4c1aff877614aadf890b2496e0
+ms.openlocfilehash: e4bc77e76190463864ecab75ae94e28b16624309
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/08/2017
+ms.lasthandoff: 08/23/2017
 
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) 的變更記錄
-此變更記錄適用於 [Visual Studio 2015 的 SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx)。  
+這是 [SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx) 的變更記錄。  
   
 如需新功能和已變更功能的詳細文章，請參閱 [SSDT 小組部落格](https://blogs.msdn.microsoft.com/ssdt/)。
 
+## <a name="ssdt-for-visual-studio-2017-1530-preview"></a>適用於 Visual Studio 2017 (15.3.0 預覽) 的 SSDT
+組建編號︰14.0.16121.0
+  
+### <a name="whats-new"></a>新功能
+
+此預覽為適用於 Visual Studio 2017 的第一個 SSDT 版本。 此版本加入了獨立式網頁安裝體驗，適用於 Visual Studio 2017 15.3 (或更新版本) 的 SQL Server Database、Analysis Services、Reporting Services 與 Integration Services 專案。
 
 
-## <a name="ssdt-172"></a>SSDT 17.2
+**已知問題**
+
+- 安裝程式未當地語系化。
+- SSIS 未當地語系化。
+- 當 *ExecuteOutofProcess* 設定為 *True* 時，SSIS 執行封裝工作不支援偵錯。 此問題僅適用偵錯。 透過 DTExec.exe 或 SSIS 目錄進行的儲存、部署及執行則不受到影響。
+- 如需變更的完整清單，請參閱[變更記錄](changelog-for-sql-server-data-tools-ssdt.md)。
+- 在 [SSDT Connect 意見反應](https://connect.microsoft.com/SQLServer/Feedback)網站報告問題。
+- 包含協力廠商延伸模組的 SSIS 套件無法切換，以將目標設為其他伺服器版本。
+
+
+## <a name="ssdt-172-for-visual-studio-2015"></a>適用於 Visual Studio 2015 的 SSDT 17.2
 組建編號︰14.0.61707.300
 
 ### <a name="whats-new"></a>新功能
@@ -76,7 +92,7 @@ ms.lasthandoff: 08/08/2017
 - 已將最新的 *TargetServerVersion* 從 "SQL Server vNext" 變更為 "SQL Server 2017"
 
 
-## <a name="ssdt-171"></a>SSDT 17.1
+## <a name="ssdt-171-for-visual-studio-2015"></a>適用於 Visual Studio 2015 的 SSDT 17.1
 組建編號︰14.0.61705.170
 
 ### <a name="whats-new"></a>新功能
@@ -106,7 +122,7 @@ ms.lasthandoff: 08/08/2017
 ## <a name="dacfx-1701"></a>DacFx 17.0.1 
 - 修正使用 HSM 的非對稱金鑰與 EKM 提供者[連接項目](https://connect.microsoft.com/SQLServer/feedback/details/3132749/sqlpackage-exe-fails-when-extracting-a-database-which-contains-an-asymmetric-key-using-an-ekm-provider) 的資料庫問題
 
-## <a name="ssdt-170-supports-up-to-sql-server-2017"></a>SSDT 17.0 (最多支援 SQL Server 2017)
+## <a name="ssdt-170-for-visual-studio-2015-supports-up-to-sql-server-2017"></a>適用於 Visual Studio 2015 的 SSDT 17.0 (最高支援 SQL Server 2017)
 組建編號：14.0.61704.140
 
 ### <a name="whats-new"></a>新功能
@@ -208,7 +224,7 @@ ms.lasthandoff: 08/08/2017
 - Always Encrypted：線上加密在取消時不會停用變更追蹤，且如果開始加密之前沒有清理變更追蹤，線上加密便無法正常運作
 
 
-## <a name="ssdt-165-supports-up-to-sql-server-2016"></a>SSDT 16.5 (最多支援 SQL Server 2016)
+## <a name="ssdt-165-for-visual-studio-2015-supports-up-to-sql-server-2016"></a>適用於 Visual Studio 2015 的 SSDT 16.5 (最高支援 SQL Server 2016)
 發行日期︰2016 年 10 月 20 日
 
 組建編號：14.0.61021.0
@@ -303,7 +319,7 @@ Console.WriteLine(result.DeploymentReport);
 
 
 
-## <a name="ssdt-164-for-sql-server-2016"></a>SSDT 16.4 (適用於 SQL Server 2016)
+## <a name="ssdt-164-for-visual-studio-2015-for-sql-server-2016"></a>適用於 Visual Studio 2015 的 SSDT 16.4 (適用於 SQL Server 2016)
 發行日期︰2016 年 9 月 20 日
 
 組建編號：14.0.60918
@@ -343,7 +359,7 @@ SSDT 表格式現在包含內部的 SSAS 執行個體，若啟用整合式工作
 
 
 
-## <a name="ssdt-163-for-sql-server-2016"></a>SSDT 16.3 (適用於 SQL Server 2016)
+## <a name="ssdt-163-for-visual-studio-2015-for-sql-server-2016"></a>適用於 Visual Studio 2015 的 SSDT 16.3 (適用於 SQL Server 2016)
 發行日期︰2016 年 8 月 15 日
 
 組建編號：14.0.60812.0  
@@ -351,7 +367,7 @@ SSDT 表格式現在包含內部的 SSAS 執行個體，若啟用整合式工作
 **新功能**
 
 - **發行版本控制與編號︰**發行版本現在以數值標記而不是依月份標記。 這與新的 SSMS 原則一致，並簡化在一個月中有多個版本或 hotfix 時的情況。 此版本是 16.3，表示在 RTM 版本之後的第三個更新。 任何 hotfix 將是 16.3.1，依此類推，下一個更新 (下個月的計劃) 將是 16.4。
-- **Analysis Services - 表格式模型總管：**表格式模型總管可讓您在模型中方便瀏覽各種中繼資料物件，例如資料來源、資料表、量值和關聯性。 它會實作為獨立的工具視窗，您可以在 Visual Studio 中開啟 [檢視] 功能表，指向 [其他視窗]，然後按一下 [表格式模型總管] 來顯示。 表格式模型總管預設會出現在方案總管區域的另一個索引標籤上。 表格式模型總管會將中繼資料物件組織在與表格式 1200 模型結構描述十分類似的樹狀結構中，而且有更多新功能。
+- **Analysis Services - 表格式模型總管：**表格式模型總管可讓您在模型中方便瀏覽各種中繼資料物件，例如資料來源、資料表、量值和關聯性。 它會實作為獨立的工具視窗，您可以在 Visual Studio 中開啟 [檢視] 功能表，指向 [其他視窗]，然後按一下 [表格式模型總管] 來顯示。 表格式模型總管預設會出現在方案總管區域的另一個索引標籤上。表格式模型總管會將中繼資料物件組織在與表格式 1200 模型結構描述十分類似的樹狀結構中，而且有更多新功能。
 - **資料庫工具 - Always Encrypted**︰此版本提供新的[Always Encrypted 金鑰管理](https://msdn.microsoft.com/library/mt708953.aspx)對話方塊，可輕鬆地將資料行主要金鑰或資料行加密金鑰加入至資料庫專案或 SQL Server 物件總管中的即時資料庫。 此版本支援 Windows 憑證存放區中的憑證。 未來的版本將會支援 Azure 金鑰保存庫和 CNG 提供者。
     - 在建立資料行主要金鑰或資料行加密金鑰時，您可能會發現按一下 [更新資料庫] 之後，SQL Server 物件總管無法立即反映所做的變更。 若要解決這個問題，請重新整理 SQL Server 物件總管中的資料庫節點。
     - 如果您嘗試加密的資料表資料行含有來自 SQL Server 物件總管的資料，您可能會失敗。 目前只有在 SSDT 資料庫專案和 SSMS 中才支援這項功能。 未來版本中將會支援 SQL Server 物件總管。
@@ -383,7 +399,7 @@ SSDT 表格式現在包含內部的 SSAS 執行個體，若啟用整合式工作
 
  
   
-## <a name="ssdt-july-for-sql-server-2016"></a>SSDT 7 月 (適用於 SQL Server 2016)  
+## <a name="ssdt-july-for-visual-studio-2015-for-sql-server-2016"></a>適用於 Visual Studio 2015 的 SSDT 7 月 (適用於 SQL Server 2016)  
 發行日期︰2016 年 6 月 30 日  
   
 組建編號︰14.0.60629.0  
@@ -426,7 +442,7 @@ SSDT 表格式現在包含內部的 SSAS 執行個體，若啟用整合式工作
     * 修正使用資料行類型的預設格式化允許從 UI 變更格式化類型時，在 1200 相容性層級模型的導出資料表 UI 中的問題。 
     
 
-## <a name="ssdt-june-for-sql-server-2016"></a>SSDT 6 月 (適用於 SQL Server 2016)  
+## <a name="ssdt-june-for-visual-studio-2015-for-sql-server-2016"></a>適用於 Visual Studio 2015 的 SSDT 6 月 (適用於 SQL Server 2016)  
 發行日期︰2016 年 6 月 1 日  
   
 組建編號︰14.0.60525.0 

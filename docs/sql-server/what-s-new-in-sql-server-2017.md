@@ -1,7 +1,7 @@
 ---
 title: "SQL Server 2017 的新功能 | Microsoft Docs"
 ms.custom: 
-ms.date: 08/07/2017
+ms.date: 08/25/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -15,16 +15,16 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 64fa56e239432ed01fb908ebcb9bda221a42cd5e
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 8d10f9e80eb1cc0c2495042e03ff746a017f8e2a
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="whats-new-in-sql-server-2017"></a>SQL Server 2017 的新功能
 SQL Server 2017 將 SQL Server 的強大能力整合到 Linux、以 Linux 為基礎的 Docker 容器和 Windows 中，是讓 SQL Server 成為可選擇開發語言、資料類型、內部部署或雲端以及作業系統之平台的重要一步。 本主題摘要說明最新 SQL Server 2017 候選版 (RC2，2017 年 8 月) 和 Community Technical Preview (CTP) 版本中特定功能領域的新功能。
 
-**試用看看：**[下載最新的 SQL Server 2017 版本：RC2，2017 年 8 月](http://go.microsoft.com/fwlink/?LinkID=829477)。
+[![從 Evaluation Center 下載](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) **試用看看：**[下載最新的 SQL Server 2017 版本：RC2，2017 年 8月](http://go.microsoft.com/fwlink/?LinkID=829477)。
 此版本包含 Bug 修正和效能改良。
 
 >**在 Linux 上執行 SQL Server！** 如需詳細資訊，請參閱 [Linux 上的 SQL Server 文件](https://docs.microsoft.com/sql/linux/)。
@@ -66,7 +66,7 @@ SQL Server 2017 包含許多新的 Database Engine 功能、增強功能和效�
     -   SSIS 目錄有新的全域屬性，可指定執行 SSIS 套件的預設模式。
 - 在 SSIS 的新 [相應放大] 功能中，您現在可以在觸發執行時使用 **Use32BitRuntime** 參數。 (CTP 2.1)
 - SQL Server 2017 Integration Services (SSIS) 現在支援 **Linux 上的 SQL Server**，並新增套件讓您從命令列在 Linux 上執行 SSIS 套件。 如需詳細資訊，請參閱[宣佈對 Linux 提供 SSIS 支援的部落格文章](https://blogs.msdn.microsoft.com/ssis/2017/05/17/ssis-helsinki-is-available-in-sql-server-vnext-ctp2-1/)。 (CTP 2.1)
-- SSIS 的新 [相應放大] 功能讓您更容易在多部電腦上執行 SSIS。 請參閱 [Integration Services 相應放大](~/integration-services/scale-out/integration-services-ssis-scale-out.md)。 (CTP 1.0)
+- SSIS 的新 [相應放大] 功能讓您更容易在多部電腦上執行 SSIS。 請參閱 [Integration Services 相應放大](~/integration-services/scale-out/integration-services-ssis-scale-out.md)。(CTP 1.0)
 - OData 來源和 OData 連線管理員現在支援連線到 Microsoft Dynamics AX Online 和 Microsoft Dynamics CRM Online 的 OData 摘要。 (CTP 1.0)
 
 如需詳細資訊，請參閱 [SQL Server 2017 Integration Services 的新功能](~/integration-services/what-s-new-in-integration-services-in-sql-server-2017.md)。
@@ -112,11 +112,12 @@ SQL Server 開發人員現在能夠存取廣大的 Python ML 及 AI 程式庫，
 
 如需詳細資訊，請參閱 [SQL Server Machine Learning 服務的新功能](~/advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md)。
 
-##  <a name="infotipsql-servermediainfo-tippng-engage-with-the-sql-server-engineering-team"></a>![info_tip](../sql-server/media/info-tip.png) 與 SQL Server 工程團隊交流 
-- [堆疊溢位 (標記 sql-server) - 詢問技術性問題](http://stackoverflow.com/questions/tagged/sql-server)
+##  <a name="infotipsql-servermediainfo-tippng-get-help"></a>![info_tip](../sql-server/media/info-tip.png) 取得說明 
+- [Stack Overflow (標記 sql-server) - 詢問 SQL 開發問題](http://stackoverflow.com/questions/tagged/sql-server)
 - [MSDN 論壇 - 詢問技術性問題](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)
 - [Microsoft Connect - 報告錯誤及要求功能](https://connect.microsoft.com/SQLServer/Feedback)
 - [Reddit - 有關 SQL Server 的一般討論](https://www.reddit.com/r/SQLServer/)
+- [Microsoft SQL Server 授權條款及資訊](https://www.microsoft.com/en-us/download/details.aspx?id=39299) 
 
 ## <a name="next-steps"></a>後續的步驟
 - 請參閱 [SQL Server 2017 版本資訊](sql-server-2017-release-notes.md)。
