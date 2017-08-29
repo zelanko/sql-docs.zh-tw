@@ -202,7 +202,7 @@ XMLLocalName :: =
   
      `<Query>`  
   
-8.  按一下 [執行查詢] (!)。  
+8.  按一下 [執行查詢]\(!)。  
   
      結果集會顯示具有下列資料行的 4 行資料： `xmlns`、 `Customer.ID`、 `FirstName`、 `LastName`、 `ID`、 `Qty`、 `Order`。  
   
