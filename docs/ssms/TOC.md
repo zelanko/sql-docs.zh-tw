@@ -32,6 +32,7 @@
 # [SSMS 環境](the-sql-server-management-studio-environment.md)
 # [SSMS 中的屬性頁](property-pages-in-sql-server-management-studio.md)
 # [SSMS 中的屬性視窗](properties-window-management-studio.md)
+# [SSMS 中的輸出視窗](output-window.md)
 
 # [關於對話方塊](about-dialog-box.md)
 # [SSMS 網頁瀏覽器](sql-server-management-studio-web-browser.md)

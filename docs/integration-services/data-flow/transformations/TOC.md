@@ -40,7 +40,6 @@
 # [資料列計數轉換](row-count-transformation.md)  
 # [資料列取樣轉換](row-sampling-transformation.md)  
 # [指令碼元件](script-component.md)  
-## [選取指令碼元件類型](select-script-component-type.md)  
 # [緩時變維度轉換](slowly-changing-dimension-transformation.md)  
 ## [使用緩時變維度精靈來設定輸出](configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
 ## [緩時變維度精靈 F1 說明](slowly-changing-dimension-wizard-f1-help.md)  
