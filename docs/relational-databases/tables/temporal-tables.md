@@ -25,7 +25,7 @@ ms.lasthandoff: 07/31/2017
 # <a name="temporal-tables"></a>時態表
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  SQL Server 2016 引進了對系統控制版本時態表的支援，成為帶來內建支援的資料庫功能，能夠提供資料表中在任何時間點儲存的資料相關資訊，而不只是當下時刻的正確資料。 Temporal 是 ANSI SQL 2011 中引進的資料庫功能， [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]現在可加以支援。  
+  SQL Server 2016 開始支援由系統控制版本的時態表。這項資料庫功能帶來內建支援，能為任何時間點儲存於資料表中的資料提供相關資訊，而不再侷限於當下的時刻。 Temporal 是 ANSI SQL 2011 中引進的資料庫功能， [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]現在可加以支援。  
   
  **快速入門**  
   
@@ -145,7 +145,7 @@ SELECT * FROM Employee
   
 |運算式|查詢資料列|Description|  
 |----------------|---------------------|-----------------|  
-|**AS OF**<日期時間>|SysStartTime \<= date_time AND SysEndTime > date_time|傳回含有資料列的資料表，資料列內含的值是過去指定時間點的實際 (目前) 值。 就內部而言，時態表和其歷程記錄資料表之間會執行等位，且會將結果篩選為傳回資料列中的值，該資料列在 *<date_time>* 參數所指定的時間點為有效。 資料列的值會被視為有效，如果 *system_start_time_column_name* 值小於或等於 *<date_time>* 參數值，且 *system_end_time_column_name* 值大於 *<date_time>* 參數值。|  
+|**AS OF**<日期時間>|SysStartTime \<= date_time AND SysEndTime > date_time|傳回含有資料列的資料表，資料列內含的值是過去指定時間點的實際 (目前) 值。 系統會在內部進行時態表及其記錄資料表之間的聯集運算，並篩選結果，從而根據 *<date_time>* 參數所指定的有效時間點，傳回資料列中的值。 當 *system_start_time_column_name* 的值小於或等於 *<date_time>* 參數的值，且 *system_end_time_column_name* 的值大於 *<date_time>* 參數的值，資料列的值即視為有效。|  
 |**FROM**<start_date_time>**TO**<end_date_time>|SysStartTime < end_date_time AND SysEndTime > start_date_time|傳回資料表，其中內含所有資料列版本的值，該值在所指定的時間範圍內有效，而不論其是否在 FROM 引數的 *<start_date_time>* 參數值之前為作用中，或是在 TO 引數的 *<end_date_time>* 參數值之後就不在作用中。 就內部而言，時態表和其歷程記錄資料表之間會執行等位，且會將結果篩選為傳回所有資料列版本的值，該值在指定的時間範圍任何時間點內皆為作用中。 不包含恰好在 FROM 端點所定義的範圍下限變為作用中的資料列，也不包含恰好在 TO 端點所定義的範圍上限變為作用中的資料列。|  
 |**BETWEEN**<開始日期時間>**AND**<結束日期時間>|SysStartTime \<= end_date_time AND SysEndTime > start_date_time|如同上方 **FOR SYSTEM_TIME FROM**<開始日期時間>**TO**<結束日期時間> 中的描述，唯一的差別在於所傳回資料列的資料表內含的資料列，在 <結束日期時間> 端點所定義的範圍上限變為作用中。|  
 |**CONTAINED IN** (<開始日期時間> , <結束日期時間>)|SysStartTime >= start_date_time AND SysEndTime \<= end_date_time|傳回資料表，其中內含所有資料列版本的值，該值在 CONTAINED IN 引數兩個日期時間值所定義的指定時間範圍內為開啟及關閉。 包含恰好在範圍下限變為作用中的資料列，或是恰好在範圍上限就不在作用中的資料列。|  

@@ -26,7 +26,7 @@ ms.lasthandoff: 07/31/2017
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   時態表在需要追蹤資料變更歷程記錄的案例中通常很有用。    
-建議您在下列使用案例中考慮使用時態表，以獲得主要生產力優勢。  
+建議您在下列使用案例中考慮使用時態表，以獲得卓越的生產力優勢。  
   
 ## <a name="data-audit"></a>資料稽核  
  在您儲存重要資訊，並隨時需要追蹤變更內容和變更時間，以及執行資料鑑識調查的資料表上使用暫時性系統版本設定。    

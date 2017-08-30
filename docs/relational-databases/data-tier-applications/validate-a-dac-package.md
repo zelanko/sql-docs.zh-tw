@@ -140,7 +140,7 @@ $dacChanges = $dacstore.GetDatabaseChanges($dacName) | Out-File -Filepath C:\DAC
 ### <a name="view-upgrade-actions-example-powershell"></a>檢視升級動作範例 (PowerShell)  
  **檢視升級動作範例 (PowerShell)**  
   
- 下列範例報告 Transact-SQL 陳述式，可執行以將 DAC (名稱為 MyApplicaiton) 升級至 MyApplication2017.dacpac 檔案中所定義的結構描述。  
+ 下列範例報告一些 Transact-SQL 陳述式，若要將名為 MyApplicaiton 的 DAC 升級至 MyApplication2017.dacpac 檔案中所定義的結構描述，可執行這些陳述式。  
   
 ```  
 ## Set a SMO Server object to the default instance on the local computer.  
