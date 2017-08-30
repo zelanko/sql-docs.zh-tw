@@ -129,7 +129,7 @@ WITH (
   
 -   針對 JSON 陣列中的每個元素， **OPENJSON** 會在輸出資料表中產生新的資料列。 JSON 陣列中的兩個元素會轉換成所傳回資料表中的兩個資料列。  
   
--   針對使用 `colName type json_path` 語法指定的每個資料行，**OPENJSON** 會將指定路徑上每個陣列元素中所找到的值轉換成指定的類型。 在此範例中，`Date` 資料行的值取自路徑 `$.Order.Date` 上的每個項目，並轉換成日期時間值。  
+-   針對使用 `colName type json_path` 語法指定的每個資料行，**OPENJSON** 會將指定路徑上每個陣列元素中所找到的值轉換成指定的類型。 在此範例中，`Date` 資料行的值取自路徑 `$.Order.Date` 上的每個元素，並已轉換成日期時間值。  
   
 ### <a name="more-info-about-openjson-with-an-explicit-schema"></a>具有明確結構描述之 OPENJSON 的詳細資訊
 如需詳細資訊和範例，請參閱[使用 OPENJSON 與明確結構描述 &#40;SQL Server&#41;](../../relational-databases/json/use-openjson-with-an-explicit-schema-sql-server.md)。
@@ -145,7 +145,7 @@ WITH (
 `ALTER DATABASE <DatabaseName> SET COMPATIBILITY_LEVEL = 130`  
 
 ## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>深入了解 SQL Server 中的內建 JSON 支援  
-對於大量的特定解決方案、使用案例和建議，請參閱 SQL Server 和 Azure SQL Database 中 Microsoft 經理專案 Jovan Popovic 所撰寫的[有關內建 JSON 支援的部落格文章](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)。
+如需更多特定的解決方案、使用案例和建議，請參閱 SQL Server 和 Azure SQL Database 中 Microsoft 經理專案 Jovan Popovic 所撰寫的[有關內建 JSON 支援的部落格文章](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)。
   
 ## <a name="see-also"></a>另請參閱  
  [OPENJSON &#40;Transact-SQL&#41;](../../t-sql/functions/openjson-transact-sql.md)  

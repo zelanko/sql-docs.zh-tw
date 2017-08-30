@@ -33,13 +33,13 @@ ms.lasthandoff: 07/31/2017
 資料庫索引可改善篩選和排序作業的效能。 若不使用索引，則 SQL Server 在您每次查詢資料時必須執行完整的資料表掃描。  
   
 ## <a name="index-json-properties-by-using-computed-columns"></a>使用計算資料行的索引 JSON 屬性  
-您將 JSON 資料儲存於 SQL Server 時，通常會想要依 JSON 文件的一或多個「屬性」來篩選或排序查詢結果。  
+將 JSON 資料儲存於 SQL Server 時，通常都要依 JSON 文件的一或多個「屬性」來篩選或排序查詢結果。  
 
 ### <a name="example"></a>範例 
-在此範例中，假設 AdventureWorks `SalesOrderHeader` 資料表含有 `Info` 資料行，其中包含關於銷售訂單的各種資訊 (JSON 格式)。 例如，它包含客戶、銷售人員、收件和帳單地址等相關資訊。 您想要使用來自 `Info` 資料行的值，篩選客戶的銷售訂單。
+在此範例中，假設 AdventureWorks `SalesOrderHeader` 資料表含有 `Info` 資料行，其中包含關於銷售訂單的各種資訊 (JSON 格式)。 例如，它包含客戶、銷售人員、收件和帳單地址等相關資訊。 而您要使用資料行 `Info` 的值來篩選客戶的銷售訂單。
 
 ### <a name="query-to-optimize"></a>要最佳化的查詢
-以下是您想要使用索引最佳化之查詢類型的範例。  
+以下是要透過索引來最佳化的查詢類型的範例。  
   
 ```sql  
 SELECT SalesOrderNumber,
@@ -52,7 +52,7 @@ WHERE JSON_VALUE(Info, '$.Customer.Name') = N'Aaron Campbell'
 ### <a name="example-index"></a>範例索引
 若您想要針對 JSON 文件中的屬性加速篩選或 `ORDER BY` 子句處理，則可使用與其他資料行所用相同的索引。 不過，您無法「直接」參考 JSON 文件中的屬性。
     
-1.  首先您必須建立「虛擬資料行」，傳回您想要用於篩選的值。
+1.  首先必須建立「虛擬資料行」來傳回要用於篩選的值。
 2.  然後您必須在該虛擬資料行建立索引。  
   
 下列範例會建立可用於索引的計算資料行，然後在該資料行上建立索引。 然後它會在新的計算資料行上建立索引。 此範例會建立公開客戶名稱的資料行，其儲存於 JSON 文件中的 `$.Customer.Name` 路徑。 
@@ -153,5 +153,5 @@ ORDER BY JSON_VALUE(json,'$.name')
  由於索引中的值順序不符合法文定序規則，因此 SQL Server 無法使用索引來排序結果。 因此，其會使用法文定序規則新增 Sort 運算子來排序結果。  
  
 ## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>深入了解 SQL Server 中的內建 JSON 支援  
-對於大量的特定解決方案、使用案例和建議，請參閱 SQL Server 和 Azure SQL Database 中 Microsoft 經理專案 Jovan Popovic 所撰寫的[有關內建 JSON 支援的部落格文章](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)。
+如需更多特定的解決方案、使用案例和建議，請參閱 SQL Server 和 Azure SQL Database 中 Microsoft 經理專案 Jovan Popovic 所撰寫的[有關內建 JSON 支援的部落格文章](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)。
 
