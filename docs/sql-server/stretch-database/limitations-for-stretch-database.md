@@ -62,8 +62,8 @@ ms.lasthandoff: 07/29/2017
   
 -   記憶體最佳化的資料表  
   
- ### <a name="data-types"></a>資料類型  
- -   text、ntext 和 image  
+### <a name="data-types"></a>資料類型  
+-   text、ntext 和 image  
   
 -   timestamp  
   
