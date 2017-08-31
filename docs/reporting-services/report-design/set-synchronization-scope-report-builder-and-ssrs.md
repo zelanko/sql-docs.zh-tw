@@ -15,7 +15,7 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 302cc9fbe2c49f2d28786b6a1addcecdcafd3ee7
 ms.contentlocale: zh-tw
@@ -41,7 +41,7 @@ ms.lasthandoff: 08/09/2017
   
      [(無)] 選項 (會從指標移除同步處理範圍) 永遠可以使用。 其他選項則取決於您報表的版面配置。  
   
-     或者，按一下 [運算式] (*fx*) 按鈕來編輯設定範圍的運算式。  
+     或者，按一下 [運算式]\(*fx*) 按鈕來編輯設定範圍的運算式。  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
