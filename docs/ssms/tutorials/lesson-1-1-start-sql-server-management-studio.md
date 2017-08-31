@@ -70,4 +70,3 @@ ms.lasthandoff: 07/31/2017
 [連接已註冊的伺服器和物件總管](../../tools/sql-server-management-studio/lesson-1-2-connect-with-registered-servers-and-object-explorer.md)  
 
   
-
