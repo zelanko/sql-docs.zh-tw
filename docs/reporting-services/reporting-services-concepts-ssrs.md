@@ -15,7 +15,7 @@ caps.latest.revision: 37
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 522c9f0c5cec7b6966d80c45a890a5be90e60b07
 ms.contentlocale: zh-tw
@@ -59,7 +59,7 @@ ms.lasthandoff: 08/09/2017
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供可用以自訂報表方案的可延伸架構。 報表伺服器支援自訂驗證延伸模組、資料處理延伸模組、報表處理延伸模組、轉譯延伸模組和傳遞延伸模組，以及在 RSReportServer.config 組態檔中適用於使用者的可設定延伸模組。 例如，您可以限制報表檢視器允許使用的匯出格式。 傳遞與報表處理延伸模組是選擇性的，但是您若要支援報表散發或自訂控制項，則是必要的。 如需詳細資訊，請參閱[Reporting Services 延伸模組 &#40;SSRS &#41;](../reporting-services/extensions-ssrs.md).  
   
 ### <a name="report-access"></a>報表存取 
- 視需要存取可讓使用者從報表檢視工具選取報表。 根據報表伺服器組態，您可以使用 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]( [!INCLUDE[msCoName](../includes/msconame-md.md)] SharePoint 2.0 Web 組件)、SharePoint 文件庫 (以 SharePoint 整合模式安裝 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 時)、內嵌的 ReportViewer 控制項，或是使用 URL 存取的瀏覽器。 如需有關視需要存取報表的詳細資訊，請參閱[尋找、 檢視和管理報表 &#40;報表產生器及 SSRS &#41;](../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md).  
+ 視需要存取可讓使用者從報表檢視工具選取報表。 根據報表伺服器組態，您可以使用 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] ( [!INCLUDE[msCoName](../includes/msconame-md.md)] SharePoint 2.0 Web 組件)、SharePoint 文件庫 (以 SharePoint 整合模式安裝 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 時)、內嵌的 ReportViewer 控制項，或是使用 URL 存取的瀏覽器。 如需有關視需要存取報表的詳細資訊，請參閱[尋找、 檢視和管理報表 &#40;報表產生器及 SSRS &#41;](../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md).  
   
  訂閱會提供視需要執行報表的替代方案。 如需詳細資訊，請參閱[訂閱與傳遞 &#40;Reporting Services&#41;](../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)。  
   
