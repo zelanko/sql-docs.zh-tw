@@ -82,7 +82,7 @@ ms.lasthandoff: 08/09/2017
   
 -   觸發事件：ManageWeb  
   
- 如需詳細資訊，請參閱 [Compare Roles and Tasks in Reporting Services to SharePoint Groups and Permissions](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)。  
+ 如需詳細資訊，請參閱 [將 Reporting Services 中的角色和工作與 SharePoint 群組和權限做比較](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)。  
   
 ### <a name="script-usage"></a>指令碼使用方式  
  **建立指令碼檔案 (.ps1)**  
