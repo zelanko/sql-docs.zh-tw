@@ -28,7 +28,7 @@ ms.lasthandoff: 08/18/2017
 您可以使用  或  關鍵字搭配  子句，以遞增或遞減的方式，排序結果集中一個或多個資料行內的查詢結果。  
   
 > [!NOTE]  
-> 排序次序一部份取決於資料行的定序序列。 您可以在 [定序] [](../../ssms/visual-db-tools/collation-dialog-box-visual-database-tools.md)對話方塊中變更定序序列。  
+> 排序次序一部份取決於資料行的定序序列。 您可以在 [[定序]](../../ssms/visual-db-tools/collation-dialog-box-visual-database-tools.md)對話方塊中變更定序序列。  
   
 以下程序假設您已經在查詢和檢視設計工具中使用 ORDER BY 子句排序一個或多個資料行開啟查詢。  
   
