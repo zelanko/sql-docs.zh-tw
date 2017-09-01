@@ -82,7 +82,7 @@ SQL Server Analysis Services 2017 為表格式模型引進許多增強功能。 
 - 以表格式模型作為 Analysis Services 的預設安裝選項。 (CTP 2.0)
 - 物件層級安全性，以保護表格式模型的中繼資料。 (CTP 2.0)
 - 日期關聯性，以輕鬆地根據日期欄位建立關聯性。 (CTP 2.0)
-- 新的 [取得資料] (Power Query) 資料來源，以及 M 查詢的現有 DirectQuery 資料來源支援。 (CTP 2.0) 
+- 新的 [取得資料] \(Power Query) 資料來源，以及 M 查詢的現有 DirectQuery 資料來源支援。 (CTP 2.0) 
 - SSDT 的 DAX 編輯器。 (CTP 2.0)
 - 編碼提示，這是一種進階功能，可針對大型記憶體內部表格式模型的資料重新整理進行最佳化。 (CTP 1.3)
 - 支援表格式模型的 **1400 相容性層級**。 若要建立新的或升級現有的表格式模型專案至 1400 相容性層級，請下載並安裝 [SQL Server Data Tools (SSDT) 17.0 RC2](https://go.microsoft.com/fwlink?LinkId=837939)。 (CTP 1.1)
