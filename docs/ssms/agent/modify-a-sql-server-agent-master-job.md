@@ -28,13 +28,13 @@ ms.lasthandoff: 08/18/2017
 # <a name="modify-a-sql-server-agent-master-job"></a>修改 SQL Server Agent 主要作業
 下列主題描述如何修改 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 主要作業。  
   
-[Change the Scheduling Details for a SQL Server Agent Master Job](../../ssms/agent/change-the-scheduling-details-for-a-sql-server-agent-master-job.md)  
+[變更 SQL Server Agent 主要作業的排程詳細資料](../../ssms/agent/change-the-scheduling-details-for-a-sql-server-agent-master-job.md)  
   
-[Add Steps to a SQL Server Agent Master Job](../../ssms/object/add-steps-to-a-sql-server-agent-master-job.md)  
+[將步驟加入至 SQL Server Agent 主要作業](../../ssms/object/add-steps-to-a-sql-server-agent-master-job.md)  
   
-[Change Steps of a SQL Server Agent Master Job](../../ssms/agent/change-steps-of-a-sql-server-agent-master-job.md)  
+[變更 SQL Server Agent 主要作業的步驟](../../ssms/agent/change-steps-of-a-sql-server-agent-master-job.md)  
   
-[Remove Steps from a SQL Server Agent Master Job](../../ssms/agent/remove-steps-from-a-sql-server-agent-master-job.md)  
+[從 SQL Server Agent 主要作業中移除步驟](../../ssms/agent/remove-steps-from-a-sql-server-agent-master-job.md)  
   
 [修改與 SQL Server Agent 主要作業相關聯的目標伺服器](../../ssms/agent/modify-the-target-server-s-associated-with-a-sql-server-agent-master-job.md)  
   
