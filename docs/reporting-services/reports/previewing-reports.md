@@ -55,7 +55,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="publishing-to-a-test-server"></a>發行至測試伺服器  
  您也可以將報表發行至測試伺服器、瀏覽至報表並預覽，來測試報表。 將報表發行至測試伺服器與發行至實際伺服器相同。 如需發行報表的詳細資訊，請參閱 [將報表發行至報表伺服器](../../reporting-services/reports/publishing-reports-to-a-report-server.md)。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>請參閱  
  [列印報表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)   
  [列印報表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/print-a-report-report-builder-and-ssrs.md)   
  [發行報表](http://msdn.microsoft.com/library/ef5a514e-e818-4041-a8b0-15835f9a046b)   
