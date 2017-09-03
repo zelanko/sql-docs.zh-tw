@@ -1,30 +1,35 @@
 ---
-title: "Reporting Services 與 AlwaysOn 可用性群組 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-  - "reporting-services-native"
-  - "reporting-services-sharepoint"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Reporting Services, AlwaysOn 可用性群組"
-  - "可用性群組 [SQL Server], 互通性"
+title: "Reporting Services與 AlwaysOn 可用性群組 (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+- reporting-services-native
+- reporting-services-sharepoint
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Reporting Services, AlwaysOn Availability Groups
+- Availability Groups [SQL Server], interoperability
 ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
 caps.latest.revision: 22
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "erikre"
-caps.handback.revision: 22
+author: MikeRayMSFT
+ms.author: mikeray
+manager: erikre
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 34063117645178c5e8326c3245d6368baa8480e5
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# Reporting Services 與 AlwaysOn 可用性群組 (SQL Server)
+# <a name="reporting-services-with-always-on-availability-groups-sql-server"></a>Reporting Services 與 AlwaysOn 可用性群組 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  本主題包含將 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 設定為使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] (AG) 的相關資訊。 使用 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 和 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的三種案例包括報表資料來源的資料庫、報表伺服器資料庫以及報表設計。 這三種案例的支援功能和必要組態有所不同。  
+  本主題包含將 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 設定為使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)](AG) 的相關資訊。 使用 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 和 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的三種案例包括報表資料來源的資料庫、報表伺服器資料庫以及報表設計。 這三種案例的支援功能和必要組態有所不同。  
   
  使用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 搭配 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 資料來源的主要優點是能夠運用可讀取的次要複本做為報表資料來源，同時次要複本可針對主要資料庫提供容錯移轉。  
   
@@ -49,9 +54,9 @@ caps.handback.revision: 22
     -   [進行容錯移轉時的報表伺服器行為](#bkmk_failover_behavior)  
   
 ##  <a name="bkmk_requirements"></a> 使用 Reporting Services 和 AlwaysOn 可用性群組的需求  
- [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 使用 .Net framework 4.0，並支援與資料來源搭配使用的[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]連接字串屬性。  
+ [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 使用 .Net framework 4.0，並支援與資料來源搭配使用的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 連接字串屬性。  
   
- 使用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 搭配 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 2014 及更早版本時，您必須下載並安裝 .Net 3.5 SP1 的 Hotfix。 此 Hotfix 會加入 SQL 用戶端對於 AG 功能的支援，以及連接字串屬性 **ApplicationIntent** 和 **MultiSubnetFailover**的支援。 如果裝載報表伺服器的每部電腦沒有安裝此 Hotfix，則嘗試預覽報表的使用者將會看見類似下面的錯誤訊息，而且該錯誤訊息將寫入報表伺服器追蹤記錄：  
+ 使用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 搭配  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 2014 及更早版本時，您必須下載並安裝 .Net 3.5 SP1 的 Hotfix。 此 Hotfix 會加入 SQL 用戶端對於 AG 功能的支援，以及連接字串屬性 **ApplicationIntent** 和 **MultiSubnetFailover**的支援。 如果裝載報表伺服器的每部電腦沒有安裝此 Hotfix，則嘗試預覽報表的使用者將會看見類似下面的錯誤訊息，而且該錯誤訊息將寫入報表伺服器追蹤記錄：  
   
 > **錯誤訊息** ：「不支援關鍵字 ‘applicationintent’」  
   
@@ -59,10 +64,10 @@ caps.handback.revision: 22
   
  如需有關必要 Hotfix 的詳細資訊，請參閱 [KB 2654347A hotfix introduces support for the AlwaysOn features from SQL Server 2012 to the .NET Framework 3.5 SP1](http://go.microsoft.com/fwlink/?LinkId=242896) (KB 2654347A Hotfix 從 SQL Server 2012 將 AlwaysOn 功能支援引進 .NET Framework 3.5 SP1 中)。  
   
- 如需其他 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]需求的資訊，請參閱 [AlwaysOn 可用性群組的必要條件、限制和建議 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs, restrictions, recommendations - always on availability.md)。  
+ 如需其他 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]需求的資訊，請參閱 [AlwaysOn 可用性群組的必要條件、限制和建議 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)。  
   
 > [!NOTE]  
->  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 功能不支援 **組態檔，例如** RSreportserver.config [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 。 如果您對其中一個報表伺服器的組態檔進行手動變更，就必須手動更新複本。  
+>  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 功能不支援 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 組態檔，例如 **RSreportserver.config**。 如果您對其中一個報表伺服器的組態檔進行手動變更，就必須手動更新複本。  
   
 ##  <a name="bkmk_reportdatasources"></a> 報表資料來源和可用性群組  
  以 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 為基礎之 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 資料來源的行為可能會因系統管理員設定 AG 環境的方式而異。  
@@ -75,9 +80,9 @@ caps.handback.revision: 22
   
  連接字串也可以包含新的 AlwaysOn 連接屬性，以便將報表查詢要求設定為使用唯讀報表的次要複本。 將次要複本用於報表要求可降低讀寫主要複本的負載。 下圖是三個複本 AG 組態的範例，其中 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 資料來源連接字串已經使用 ApplicationIntent=ReadOnly 進行設定。 在此範例中，報表查詢要求會傳送至次要複本而非主要複本。  
   
- ![](../Image/rs_Always On_Basic.gif)  
+ 
   
- 下面是連接字串範例，其中 [AvailabilityGroupListenerName] 是建立複本時所設定的 **Listener DNS Name**：  
+ 下面是連接字串範例，其中 [AvailabilityGroupListenerName] 是建立複本時所設定的 **Listener DNS Name** ：  
   
  `Data Source=[AvailabilityGroupListenerName];Initial Catalog = AdventureWorks2016; ApplicationIntent=ReadOnly`  
   
@@ -85,11 +90,11 @@ caps.handback.revision: 22
   
  報表的建立和發行方式將會決定您可以編輯連接字串的位置：  
   
--   **原生模式：**針對已經發行至原生模式報表伺服器的共用的資料來源和報表，請使用[!INCLUDE[ssRSWebPortal-Non-Markdown](../../../includes/ssrswebportal-non-markdown-md.md)]。  
+-   **原生模式：** 針對已經發行至原生模式報表伺服器的共用的資料來源和報表，請使用 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../../includes/ssrswebportal-non-markdown-md.md)] 。  
   
 -   **SharePoint 模式** ：您可以針對已經發行至 SharePoint 伺服器的報表使用文件庫中的 SharePoint 組態頁面。  
   
--   **報表設計：**您可以在建立新報表時使用[!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion-md.md)]或 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]。 如需詳細資訊，請參閱本主題的＜報表設計＞一節。  
+-   **報表設計：** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion-md.md)] 或 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 。 如需詳細資訊，請參閱本主題的＜報表設計＞一節。  
   
  **其他資源：**  
   
@@ -110,16 +115,16 @@ caps.handback.revision: 22
  使用唯讀次要複本做為 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 資料來源時，請務必確定資料更新延遲符合報表使用者的需求。  
   
 ##  <a name="bkmk_reportdesign"></a> 報表設計和可用性群組  
- 在 [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion-md.md)] 中設計報表或在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 中設計報表專案時，使用者可以將報表資料來源連接字串設定為包含 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 所提供的新連接屬性。 新連接屬性的支援主要取決於使用者預覽報表的位置。  
+ 在 [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion-md.md)] 中設計報表或在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]中設計報表專案時，使用者可以將報表資料來源連接字串設定為包含 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]所提供的新連接屬性。 新連接屬性的支援主要取決於使用者預覽報表的位置。  
   
--   **本機預覽：**[!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion-md.md)] 與 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 使用 .Net framework 4.0，並支援 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 連接字串屬性。  
+-   **本機預覽：** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion-md.md)] 和 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 會使用 .Net Framework 4.0 並且支援 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 連接字串屬性。  
   
--   **遠端伺服器模式預覽：**如果將報表發行至報表伺服器或於[!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion-md.md)]中使用預覽後，您看見類似下面的錯誤，就表示您正在針對報表伺服器進行預覽，且 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]的 .Net Framework 3.5 SP1 Hotfix 並未安裝於報表伺服器。  
+-   **遠端或伺服器模式預覽：** 如果將報表發行至報表伺服器或在 [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion-md.md)]中使用預覽功能之後，您看見類似下面的錯誤，就表示您正在根據報表伺服器預覽報表，而且報表伺服器尚未安裝 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的 .Net Framework 3.5 SP1 Hotfix。  
   
 > **錯誤訊息** ：「不支援關鍵字 ‘applicationintent’」  
   
 ##  <a name="bkmk_reportserverdatabases"></a> 報表伺服器資料庫和可用性群組  
- Reporting Services 對於使用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 搭配報表伺服器資料庫提供有限的支援。 您可以在 AG 中將報表伺服器資料庫設定為複本的一部分，但在容錯移轉時，[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 不會自動為報表伺服器資料庫使用不同的複本。 不支援搭配報表伺服器資料庫使用 MultiSubnetFailover。  
+ Reporting Services 對於使用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 搭配報表伺服器資料庫提供有限的支援。 您可以在 AG 中將報表伺服器資料庫設定為複本的一部分，但在容錯移轉時， [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 不會自動為報表伺服器資料庫使用不同的複本。 不支援搭配報表伺服器資料庫使用 MultiSubnetFailover。  
   
  您必須使用手動操作或自訂自動化指令碼，才能完成容錯移轉和復原。 完成這些動作之前，報表伺服器的某些功能可能會在 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 容錯移轉之後無法正確運作。  
   
@@ -143,7 +148,7 @@ caps.handback.revision: 22
   
 -   ReportServerTempDB  
   
- 原生模式不支援或使用警示資料庫及相關功能。 您可以在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 組態管理員中設定原生模式報表伺服器。 若為 SharePoint 模式，您可以將服務應用程式資料庫名稱設定為進行 SharePoint 組態設定時所建立之「用戶端存取點」的名稱。 如需有關使用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]來設定 SharePoint 的詳細資訊，請參閱 [Configure and manage SQL Server availability groups for SharePoint Server (http://go.microsoft.com/fwlink/?LinkId=245165)](http://go.microsoft.com/fwlink/?LinkId=245165) (設定及管理 SharePoint Server 的 SQL Server 可用性群組)。  
+ 原生模式不支援或使用警示資料庫及相關功能。 您可以在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 組態管理員中設定原生模式報表伺服器。 若為 SharePoint 模式，您可以將服務應用程式資料庫名稱設定為進行 SharePoint 組態設定時所建立之「用戶端存取點」的名稱。 如需有關使用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]來設定 SharePoint 的詳細資訊，請參閱 [Configure and manage SQL Server availability groups for SharePoint Server (http://go.microsoft.com/fwlink/?LinkId=245165)](http://go.microsoft.com/fwlink/?LinkId=245165)(設定及管理 SharePoint Server 的 SQL Server 可用性群組)。  
   
 > [!NOTE]  
 >  SharePoint 模式報表伺服器會在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 服務應用程式資料庫與 SharePoint 內容資料庫之間使用同步處理程序。 請務必一起維護報表伺服器資料庫和內容資料庫。 您應該考慮將它們設定在相同的可用性群組中，以便一起容錯移轉和復原。 請考慮下列案例：  
@@ -191,12 +196,14 @@ caps.handback.revision: 22
   
 -   在資料庫容錯移轉完成而且報表伺服器服務重新啟動之後，系統將會自動重新建立 SQL Server Agent 作業。 在建立 SQL 代理程式作業之前，系統將不會處理任何與 SQL Server Agent 作業相關聯的背景執行。 這包括 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 訂閱、排程和快照集。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [高可用性/災害復原的 SQL Server Native Client 支援](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)   
  [AlwaysOn 可用性群組 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [開始使用 AlwaysOn 可用性群組 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/getting-started-with-always-on-availability-groups-sql-server.md)   
  [搭配 SQL Server Native Client 使用連接字串關鍵字](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)   
  [高可用性/災害復原的 SQL Server Native Client 支援](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)   
- [關於可用性複本的用戶端連線存取 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)  
+ [關於可用性複本的用戶端連接存取 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)  
   
   
+
+

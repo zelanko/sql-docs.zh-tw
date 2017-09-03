@@ -1,28 +1,33 @@
 ---
 title: "變更伺服器執行個體的 HADR 叢集內容 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "可用性群組 [SQL Server], WSFC 叢集"
-  - "可用性複本 [SQL Server], 變更 WSFC 叢集內容"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Availability Groups [SQL Server], WSFC clusters
+- Availability replicas [SQL Server], change WSFC cluster context
 ms.assetid: ecd99f91-b9a2-4737-994e-507065a12f80
 caps.latest.revision: 32
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 29d356ca6c432963015a4c9f4a81702b97812c51
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 變更伺服器執行個體的 HADR 叢集內容 (SQL Server)
+# <a name="change-the-hadr-cluster-context-of-server-instance-sql-server"></a>變更伺服器執行個體的 HADR 叢集內容 (SQL Server)
   本主題描述如何使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 和更新版本中的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 切換 [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] 執行個體的 HADR 叢集內容。 「HADR 叢集內容」會決定哪個 Windows Server 容錯移轉叢集 (WSFC) 叢集管理伺服器執行個體所裝載可用性複本的中繼資料。  
   
- 僅在跨叢集移轉 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 至新 WSFC 叢集上的 [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] 執行個體時，才切換 HADR 叢集內容。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的跨叢集移轉支援以最短的可用性群組停機時間升級為 [!INCLUDE[win8](../../../includes/win8-md.md)] 或 [!INCLUDE[win8srv](../../../includes/win8srv-md.md)]。 如需詳細資訊，請參閱 [Cross-Cluster Migration of AlwaysOn Availability Groups for OS Upgrade](http://msdn.microsoft.com/library/jj873730.aspx) (針對作業系統升級進行 AlwaysOn 可用性群組的跨叢集移轉)。  
+ 僅在跨叢集移轉 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 至新 WSFC 叢集上的 [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] 執行個體時，才切換 HADR 叢集內容。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的跨叢集移轉支援以最短的可用性群組停機時間升級為 [!INCLUDE[win8](../../../includes/win8-md.md)] 或 [!INCLUDE[win8srv](../../../includes/win8srv-md.md)] 。 如需詳細資訊，請參閱 [Cross-Cluster Migration of AlwaysOn Availability Groups for OS Upgrade](http://msdn.microsoft.com/library/jj873730.aspx)(針對作業系統升級進行 AlwaysOn 可用性群組的跨叢集移轉)。  
   
 -   **開始之前：**  
   
@@ -74,9 +79,9 @@ caps.handback.revision: 31
   
 ###  <a name="Recommendations"></a> 建議  
   
--   我們建議您指定完整網域名稱。 這是因為，為了尋找簡短名稱的目標 IP 位址，ALTER SERVER CONFIGURATION 會使用 DNS 解析。 在某些情況下，根據 DNS 搜尋順序，使用簡短名稱可能會產生混淆。 例如，請考慮下列命令，該命令是在 `abc` 網域 (`node1.abc.com`) 中的節點上執行。 預期的目的地叢集是 `CLUS01` 網域 (`xyz`) 中的 `clus01.xyz.com` 叢集。 不過，本機網域主機也會裝載名為 `CLUS01` (`clus01.abc.com`) 的叢集。  
+-   我們建議您指定完整網域名稱。 這是因為，為了尋找簡短名稱的目標 IP 位址，ALTER SERVER CONFIGURATION 會使用 DNS 解析。 在某些情況下，根據 DNS 搜尋順序，使用簡短名稱可能會產生混淆。 例如，請考慮下列命令，該命令是在 `abc` 網域 (`node1.abc.com`) 中的節點上執行。 預期的目的地叢集是 `CLUS01` 網域 ( `xyz` ) 中的`clus01.xyz.com`叢集。 不過，本機網域主機也會裝載名為 `CLUS01` (`clus01.abc.com`) 的叢集。  
   
-     如果已指定目標叢集的簡短名稱 `CLUS01`，則 DNS 名稱解析可能會傳回錯誤叢集 `clus01.abc.com` 的 IP 位址。 為避免發生這類混淆情況，請指定目標叢集的完整名稱，如下列範例所示：  
+     如果已指定目標叢集的簡短名稱 `CLUS01`，則 DNS 名稱解析可能會傳回錯誤叢集 `clus01.abc.com`的 IP 位址。 為避免發生這類混淆情況，請指定目標叢集的完整名稱，如下列範例所示：  
   
     ```  
     ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT = 'clus01.xyz.com'  
@@ -115,7 +120,7 @@ caps.handback.revision: 31
      LOCAL  
      本機 WSFC 叢集。  
   
-### 範例  
+### <a name="examples"></a>範例  
  下列範例會將 HADR 叢集內容變更為不同叢集。 為了識別目的地 WSFC 叢集 `clus01`，此範例會指定完整叢集物件名稱 `clus01.xyz.com`。  
   
 ```  
@@ -141,7 +146,7 @@ SELECT cluster_name FROM sys.dm_hadr_cluster
   
  當 HADR 叢集內容切換至新的叢集時：  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體目前裝載的任何可用性複本的中繼資料都會清除。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體目前裝載的任何可用性複本的中繼資料都會清除。  
   
 -   之前屬於某個可用性複本的所有資料庫現在都會是 RESTORING 狀態。  
   
@@ -163,11 +168,12 @@ SELECT cluster_name FROM sys.dm_hadr_cluster
   
 -   [SQL Server 2012 技術文件](http://msdn.microsoft.com/library/bb418445\(SQL.10\).aspx)  
   
--   [SQL Server AlwaysOn 團隊部落格：SQL Server AlwaysOn 官方團隊部落格](http://blogs.msdn.com/b/sqlAlways%20On/)  
+-   [SQL Server AlwaysOn 團隊部落格：SQL Server AlwaysOn 官方團隊部落格](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [AlwaysOn 可用性群組 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [SQL Server 的 Windows Server 容錯移轉叢集 &#40;WSFC&#41;](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)   
  [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-server-configuration-transact-sql.md)  
   
   
+

@@ -1,24 +1,29 @@
 ---
 title: "設定 priority boost 伺服器組態選項 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "priority boost 選項"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- priority boost option
 ms.assetid: 765f1e83-dd52-44fb-b0c8-1078f213607b
 caps.latest.revision: 30
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9546ac1cfb5d2ba83045b80a645677219bf84919
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 設定 priority boost 伺服器組態選項
+# <a name="configure-the-priority-boost-server-configuration-option"></a>設定 priority boost 伺服器組態選項
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   此主題描述如何使用 **或** ，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中設定 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] priority boost [!INCLUDE[tsql](../../includes/tsql-md.md)]伺服器組態選項。 使用 **priority boost** 選項，指定 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是否應以高於同一部電腦上其他處理序的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 2008 或 Windows 2008 R2 排程優先權執行。 如果將此選項設定為 1， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在 Windows 2008 或 Windows Server 2008 R2 排程器中會以優先權基底 13 執行。 預設值是 0，也就是優先權基底 7。  
@@ -51,11 +56,11 @@ caps.handback.revision: 30
 ###  <a name="Security"></a> 安全性  
   
 ####  <a name="Permissions"></a> Permissions  
- 依預設，所有使用者都會取得不含參數或只含第一個參數之 **sp_configure** 的執行權限。 若要執行同時設定了兩個參數的 **sp_configure** 來變更組態選項或執行 RECONFIGURE 陳述式，使用者必須取得 ALTER SETTINGS 伺服器層級權限。 **系統管理員 (sysadmin)** 及 **serveradmin** 固定伺服器角色會隱含 ALTER SETTINGS 權限。  
+ 不含參數或只含第一個參數之 **sp_configure** 上的執行權限預設會授與所有使用者。 以同時設定兩個參數的 **sp_configure** 來變更組態選項或執行 RECONFIGURE 陳述式時，使用者必須取得 ALTER SETTINGS 伺服器層級權限。 **系統管理員 (sysadmin)** 及 **serveradmin** 固定伺服器角色會隱含 ALTER SETTINGS 權限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 若要設定 priority boost 選項  
+#### <a name="to-configure-the-priority-boost-option"></a>若要設定 priority boost 選項  
   
 1.  在物件總管中，以滑鼠右鍵按一下伺服器，然後選取 [屬性]。  
   
@@ -63,11 +68,11 @@ caps.handback.revision: 30
   
 3.  在 **[執行緒]**下，選取 **[提高 SQL Server 優先權]** 核取方塊。  
   
-4.  停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 並重新啟動。  
+4.  停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]並重新啟動。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 若要設定 priority boost 選項  
+#### <a name="to-configure-the-priority-boost-option"></a>若要設定 priority boost 選項  
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
@@ -89,14 +94,15 @@ GO
   
 ```  
   
- 如需詳細資訊，請參閱[伺服器組態選項 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)。  
+ 如需詳細資訊，請參閱 [伺服器組態選項 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)伺服器組態選項。  
   
 ##  <a name="FollowUp"></a> 待處理：設定 priority boost 選項之後  
  伺服器必須重新啟動之後，設定才能生效。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [伺服器組態選項 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
   
+

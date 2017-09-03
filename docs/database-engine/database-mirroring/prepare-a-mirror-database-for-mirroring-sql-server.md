@@ -1,26 +1,31 @@
 ---
 title: "準備鏡像資料庫以進行鏡像 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "資料庫鏡像 [SQL Server], 準備進行鏡像"
-  - "登入 [SQL Server], 資料庫鏡像"
-  - "鏡像資料庫 [SQL Server]"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database mirroring [SQL Server], preparing for mirroring
+- logins [SQL Server], database mirroring
+- mirror database [SQL Server]
 ms.assetid: 8676f9d8-c451-419b-b934-786997d46c2b
 caps.latest.revision: 43
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 43
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: e813cf330d3c2d61b9c3163bac75ec5441d06455
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 準備鏡像資料庫以進行鏡像 (SQL Server)
+# <a name="prepare-a-mirror-database-for-mirroring-sql-server"></a>準備鏡像資料庫以進行鏡像 (SQL Server)
   資料庫擁有者或系統管理員必須確認鏡像資料庫已經建立且做好鏡像的準備，才能啟動資料庫鏡像工作階段。 建立新的鏡像資料庫時，最少需要建立主體資料庫的完整備份，以及一個後續記錄備份，並使用 WITH NORECOVERY 將這兩者同時還原到鏡像伺服器執行個體。  
   
  此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中準備鏡像資料庫。  
@@ -39,7 +44,7 @@ caps.handback.revision: 43
   
 -   [若要準備新的鏡像資料庫](#CombinedProcedure)  
   
--   **後續操作**：[準備鏡像資料庫之後](#FollowUp)  
+-   **後續操作**  [準備鏡像資料庫之後](#FollowUp)  
   
 -   [相關工作](#RelatedTasks)  
   
@@ -47,9 +52,9 @@ caps.handback.revision: 43
   
 ###  <a name="Requirements"></a> 需求  
   
--   主體和鏡像伺服器執行個體必須在相同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本上執行。 雖然鏡像伺服器有可能擁有較高版本的 SQL Server，但是只有在仔細規劃的升級程序中才建議使用這個組態。 在這種組態中，您會遇到自動容錯移轉的風險，此時資料移動會自動暫停，因為資料無法移到較低版本的 SQL Server。 如需詳細資訊，請參閱[升級鏡像執行個體](../../database-engine/database-mirroring/upgrading-mirrored-instances.md)。  
+-   主體和鏡像伺服器執行個體必須在相同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本上執行。 雖然鏡像伺服器有可能擁有較高版本的 SQL Server，但是只有在仔細規劃的升級程序中才建議使用這個組態。 在這種組態中，您會遇到自動容錯移轉的風險，此時資料移動會自動暫停，因為資料無法移到較低版本的 SQL Server。 如需詳細資訊，請參閱 [升級鏡像執行個體](../../database-engine/database-mirroring/upgrading-mirrored-instances.md)。  
   
--   主體和鏡像伺服器執行個體必須在相同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本上執行。 如需 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中資料庫鏡像支援的相關資訊，請參閱 [SQL Server 2016 版本支援的功能](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)。  
+-   主體和鏡像伺服器執行個體必須在相同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本上執行。 如需 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中資料庫鏡像支援的相關資訊，請參閱 [SQL Server 2016 版本支援的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
 -   資料庫必須使用完整復原模式。  
   
@@ -85,9 +90,9 @@ caps.handback.revision: 43
 -   對於實際執行的資料庫，您一定要備份至其他裝置。  
   
 ###  <a name="Security"></a> 安全性  
- 備份資料庫時，TRUSTWORTHY 設為 OFF。 因此，新鏡像資料庫上的 TRUSTWORTHY 一律為 OFF。 您必須採取額外的設定步驟，以確保資料庫在容錯移轉之後的可信度。 如需詳細資訊，請參閱[設定鏡像資料庫以使用 Trustworthy 屬性 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md)。  
+ 備份資料庫時，TRUSTWORTHY 設為 OFF。 因此，新鏡像資料庫上的 TRUSTWORTHY 一律為 OFF。 您必須採取額外的設定步驟，以確保資料庫在容錯移轉之後的可信度。 如需詳細資訊，請參閱 [設定鏡像資料庫以使用 Trustworthy 屬性 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md)中準備鏡像資料庫。  
   
- 如需啟用鏡像資料庫的資料庫主要金鑰之自動解密的相關資訊，請參閱[設定加密鏡像資料庫](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)。  
+ 如需啟用鏡像資料庫的資料庫主要金鑰之自動解密的相關資訊，請參閱 [設定加密鏡像資料庫](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)。  
   
 ####  <a name="Permissions"></a> Permissions  
  資料庫擁有者或系統管理員。  
@@ -95,15 +100,15 @@ caps.handback.revision: 43
 ##  <a name="PrepareToRestartMirroring"></a> 若要準備現有的鏡像資料庫以重新啟動鏡像  
  如果鏡像已經移除，而且鏡像資料庫仍處於 RECOVERING 狀態，您就可以重新啟動鏡像。  
   
-1.  至少取得主體資料庫上的一個記錄備份。 如需詳細資訊，請參閱[備份交易記錄 &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)。  
+1.  至少取得主體資料庫上的一個記錄備份。 如需詳細資訊，請參閱 [備份交易記錄 &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)中準備鏡像資料庫。  
   
-2.  在鏡像資料庫上，使用 RESTORE WITH NORECOVERY 來還原自從移除鏡像之後對主體資料庫進行的所有記錄備份。 如需詳細資訊，請參閱[交易記錄備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)。  
+2.  在鏡像資料庫上，使用 RESTORE WITH NORECOVERY 來還原自從移除鏡像之後對主體資料庫進行的所有記錄備份。 如需詳細資訊，請參閱 [還原交易記錄備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)中準備鏡像資料庫。  
   
 ##  <a name="CombinedProcedure"></a> 若要準備新的鏡像資料庫  
  **準備鏡像資料庫**  
   
 > [!NOTE]  
->  如需這個程序的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 範例，請參閱本節稍後的[範例 (Transact-SQL)](#TsqlExample)。  
+>  如需這個程序的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 範例，請參閱本節稍後的 [範例 (Transact-SQL)](#TsqlExample)。  
   
 1.  連接到主體伺服器執行個體。  
   
@@ -128,7 +133,7 @@ caps.handback.revision: 43
   
     -   [Restore a Database Backup Using SSMS](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)  
   
-    -   [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md) 和 [RESTORE 引數 &#40;Transact-SQL&#41;](../Topic/RESTORE%20Arguments%20\(Transact-SQL\).md)。  
+    -   [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md) 和 [RESTORE 引數 &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md)中準備鏡像資料庫。  
   
 7.  使用 RESTORE WITH NORECOVERY，將任何未完成的記錄備份套用到鏡像資料庫。  
   
@@ -232,17 +237,17 @@ caps.handback.revision: 43
     GO  
     ```  
   
- 如需設定資料庫鏡像、顯示安全性設定、準備鏡像資料庫、設定夥伴及新增見證的完整範例，請參閱[設定資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)。  
+ 如需設定資料庫鏡像、顯示安全性設定、準備鏡像資料庫、設定夥伴及新增見證的完整範例，請參閱 [設定資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)中準備鏡像資料庫。  
   
 ##  <a name="FollowUp"></a> 後續操作：準備鏡像資料庫之後  
   
 1.  如果您在最近的 RESTORE LOG 作業之後已經建立任何額外的記錄備份，則必須使用 RESTORE WITH NORECOVERY 手動套用每一份額外的記錄備份。  
   
-2.  啟動鏡像工作階段。 如需詳細資訊，請參閱[使用 Windows 驗證建立資料庫鏡像工作階段 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish database mirroring session - windows authentication.md) 或[使用 Windows 驗證建立資料庫鏡像工作階段 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)。  
+2.  啟動鏡像工作階段。 如需詳細資訊，請參閱 [使用 Windows 驗證建立資料庫鏡像工作階段 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md) ，在 [使用 Windows 驗證建立資料庫鏡像工作階段 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-establish-session-windows-authentication.md)中準備鏡像資料庫。  
   
 3.  如果已停用主體資料庫上的備份作業，請重新啟用這項作業。  
   
-4.  您必須在鏡像開始之後執行額外的設定步驟，以確保資料庫在容錯移轉之後的可信度。 如需詳細資訊，請參閱[設定鏡像資料庫以使用 Trustworthy 屬性 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md)。  
+4.  您必須在鏡像開始之後執行額外的設定步驟，以確保資料庫在容錯移轉之後的可信度。 如需詳細資訊，請參閱 [設定鏡像資料庫以使用 Trustworthy 屬性 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md)中準備鏡像資料庫。  
   
 ##  <a name="RelatedTasks"></a> 相關工作  
   
@@ -250,23 +255,25 @@ caps.handback.revision: 43
   
 -   [還原交易記錄備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
   
--   [使用 Windows 驗證建立資料庫鏡像工作階段 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish database mirroring session - windows authentication.md)  
+-   [使用 Windows 驗證建立資料庫鏡像工作階段 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
   
--   [使用 Windows 驗證建立資料庫鏡像工作階段 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
+-   [使用 Windows 驗證建立資料庫鏡像工作階段 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-establish-session-windows-authentication.md)  
   
 -   [設定加密鏡像資料庫](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)  
   
 -   [設定鏡像資料庫以使用 Trustworthy 屬性 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md)  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
- [資料庫鏡像和 AlwaysOn 可用性群組的傳輸安全性 &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport security - database mirroring - always on availability.md)   
+ [資料庫鏡像和 AlwaysOn 可用性群組的傳輸安全性 &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
  [設定資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)   
  [備份並還原全文檢索目錄與索引。](../../relational-databases/search/back-up-and-restore-full-text-catalogs-and-indexes.md)   
  [資料庫鏡像和全文檢索目錄 &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-full-text-catalogs-sql-server.md)   
  [資料庫鏡像和複寫 &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)   
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
- [RESTORE 引數 &#40;Transact-SQL&#41;](../Topic/RESTORE%20Arguments%20\(Transact-SQL\).md)  
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
+ [RESTORE 引數 &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md)  
   
   
+
+

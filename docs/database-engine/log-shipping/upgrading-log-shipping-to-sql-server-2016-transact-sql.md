@@ -1,28 +1,33 @@
 ---
 title: "將記錄傳送升級至 SQL Server 2016 (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "記錄傳送 [SQL Server], 升級"
+ms.custom: 
+ms.date: 02/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- log shipping [SQL Server], upgrading
 ms.assetid: b1289cc3-f5be-40bb-8801-0e3eed40336e
 caps.latest.revision: 59
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 59
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 05c650a9f5929704a512b28033d6f06f54415a26
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 將記錄傳送升級至 SQL Server 2016 (Transact-SQL)
+# <a name="upgrading-log-shipping-to-sql-server-2016-transact-sql"></a>將記錄傳送升級至 SQL Server 2016 (Transact-SQL)
   從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記錄傳送組態升級至新的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本、新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Service Pack 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]累積更新時，以適當的順序升級您的記錄傳送伺服器將會保留記錄傳送災害復原解決方案。  
   
 > [!NOTE]  
->  [中所導入的＜](../../relational-databases/backup-restore/backup-compression-sql-server.md) 備份壓縮 [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]＞。 升級的記錄傳送組態會使用**備份壓縮預設**伺服器層級組態選項，來控制備份壓縮是否會用於交易記錄備份檔案。 可以針對每一個記錄傳送組態來指定記錄備份的備份壓縮行為。 如需詳細資訊，請參閱[設定記錄傳送 &#40;SQL Server&#41;](../../database-engine/log-shipping/configure-log-shipping-sql-server.md)。  
+>  [中所導入的＜](../../relational-databases/backup-restore/backup-compression-sql-server.md) 備份壓縮 [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]＞。 升級的記錄傳送組態會使用 **備份壓縮預設** 伺服器層級組態選項，來控制備份壓縮是否會用於交易記錄備份檔案。 可以針對每一個記錄傳送組態來指定記錄備份的備份壓縮行為。 如需詳細資訊，請參閱 [設定記錄傳送 &#40;SQL Server&#41;](../../database-engine/log-shipping/configure-log-shipping-sql-server.md)＞。  
   
  **本主題內容：**  
   
@@ -45,7 +50,7 @@ caps.handback.revision: 59
   
 -   [計劃和測試資料庫引擎升級計劃](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)︰檢閱版本資訊與已知的升級問題、升級前檢查清單，並開發和測試升級計畫。  
   
--   [安裝 SQL Server 2016 的硬體與軟體需求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2016.md)：檢閱安裝 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的軟體需求。 如果需要其他軟體，請先將其安裝在每個節點上，然後開始升級程序，以將任何停機時間降到最低。  
+-   [安裝 SQL Server 2016 的硬體與軟體需求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)：檢閱安裝 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的軟體需求。 如果需要其他軟體，請先將其安裝在每個節點上，然後開始升級程序，以將任何停機時間降到最低。  
   
 ##  <a name="ProtectData"></a> 在升級之前保護資料  
  我們建議的最佳做法是在升級記錄傳送之前先保護資料。  
@@ -85,11 +90,12 @@ caps.handback.revision: 59
 > [!NOTE]  
 >  記錄傳送也支援[容錯移轉至記錄傳送次要 &#40;SQL Server&#41;](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md)選項，以及選擇性地支援[變更主要與次要記錄傳送伺服器間的角色 &#40;SQL Server&#41;](../../database-engine/log-shipping/change-roles-between-primary-and-secondary-log-shipping-servers-sql-server.md)。 不過，由於記錄傳送幾乎不再設定為高可用性解決方案 (較新的選項會更穩定)，因此，容錯移轉通常不會將停機時間降至最低，因為不會同步處理系統資料庫物件，而且讓用戶端可輕鬆地找到並連接到已升級的次要資料庫會是一項嚴峻的考驗。  
   
-## 另請參閱  
- [使用安裝精靈升級為 SQL Server 2016 &#40;安裝程式&#41;](../../database-engine/install-windows/upgrade-to-sql-server-2016-using-the-installation-wizard-setup.md)   
+## <a name="see-also"></a>另請參閱  
+ [使用安裝精靈升級為 SQL Server 2016 &#40;安裝程式&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)   
  [從命令提示字元安裝 SQL Server 2016](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
  [設定記錄傳送 &#40;SQL Server&#41;](../../database-engine/log-shipping/configure-log-shipping-sql-server.md)   
  [監視記錄傳送 &#40;Transact-SQL&#41;](../../database-engine/log-shipping/monitor-log-shipping-transact-sql.md)   
  [記錄傳送資料表與預存程序](../../database-engine/log-shipping/log-shipping-tables-and-stored-procedures.md)  
   
   
+

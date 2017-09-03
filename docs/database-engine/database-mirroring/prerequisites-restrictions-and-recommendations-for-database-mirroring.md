@@ -1,54 +1,47 @@
 ---
 title: "資料庫鏡像的必要條件、限制和建議事項 | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "資料庫鏡像 [SQL Server], 部署"
-  - "夥伴 [SQL Server]"
-  - "資料庫鏡像 [SQL Server], 必要條件"
-  - "資料庫鏡像 [SQL Server], 建議"
-  - "資料庫鏡像 [SQL Server], 限制"
-  - "資料庫鏡像 [SQL Server], 規劃"
-  - "資料庫鏡像 [SQL Server], 關於資料庫鏡像"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database mirroring [SQL Server], deployment
+- partners [SQL Server]
+- database mirroring [SQL Server], prerequisites
+- database mirroring [SQL Server], recommendations
+- database mirroring [SQL Server], restrictions
+- database mirroring [SQL Server], planning
+- database mirroring [SQL Server], about database mirroring
 ms.assetid: fdcf2251-9895-44c6-b81e-768fef32e732
 caps.latest.revision: 55
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 54
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: d07bee6a462ed184e7bceabb4edcf7903110fd26
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 資料庫鏡像的必要條件、限制和建議事項
+# <a name="prerequisites-restrictions-and-recommendations-for-database-mirroring"></a>資料庫鏡像的必要條件、限制和建議事項
     
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 請改用 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]。  
   
- 本主題描述設定資料庫鏡像的必要條件和建議事項。 如需資料庫鏡像的簡介，請參閱[資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)。  
+ 本主題描述設定資料庫鏡像的必要條件和建議事項。 如需資料庫鏡像的簡介，請參閱 [資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)。  
   
- **本主題內容：**  
-  
--   [支援資料庫鏡像](#DbmSupport)  
-  
--   [必要條件](#Prerequisites)  
-  
--   [限制](#Restrictions)  
-  
--   [設定夥伴伺服器的建議](#RecommendationsForPartners)  
-  
--   [部署資料庫鏡像的建議](#RecommendationsForDeploying)  
   
 ##  <a name="DbmSupport"></a> 支援資料庫鏡像  
- 如需 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中資料庫鏡像支援的相關資訊，請參閱 [SQL Server 2016 各版本所支援的功能](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)。  
+ 如需 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中資料庫鏡像支援的相關資訊，請參閱 [SQL Server 2016 的版本和支援的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。
   
- 請注意，資料庫鏡像適用於任何支援的資料庫相容性層級。 如需支援的相容性層級相關資訊，請參閱 [ALTER DATABASE 相容性層級 &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20Compatibility%20Level%20\(Transact-SQL\).md)。  
+ 請注意，資料庫鏡像適用於任何支援的資料庫相容性層級。 如需支援的相容性層級相關資訊，請參閱 [ALTER DATABASE 相容性層級 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。  
   
- [&#91;頁首&#93;](#Top)  
   
 ##  <a name="Prerequisites"></a> 必要條件  
   
@@ -57,7 +50,7 @@ caps.handback.revision: 54
 -   兩個夥伴 (亦即，主體伺服器和鏡像伺服器) 必須都在執行相同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本。 見證 (如果有的話) 可在任一版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上執行，只要該版本支援資料庫鏡像。  
   
     > [!NOTE]  
-    >  您可以將做為鏡像工作階段夥伴的伺服器執行個體升級為最新版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如需詳細資訊，請參閱[升級鏡像執行個體](../../database-engine/database-mirroring/upgrading-mirrored-instances.md)。  
+    >  您可以將做為鏡像工作階段夥伴的伺服器執行個體升級為最新版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如需詳細資訊，請參閱 [升級鏡像執行個體](../../database-engine/database-mirroring/upgrading-mirrored-instances.md)。  
   
 -   資料庫必須使用完整復原模式。 簡單與大量記錄復原模式不支援資料庫鏡像。 因此，鏡像資料庫的大量作業永遠都是完整記錄作業。 如需復原模式的相關資訊，請參閱[復原模式 &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)。  
   
@@ -71,7 +64,6 @@ caps.handback.revision: 54
     > [!IMPORTANT]  
     >  如果資料庫鏡像已停止，您必須先將主體資料庫上建立的所有後續記錄備份套用到鏡像資料庫，然後才能重新啟動鏡像。  
   
- [&#91;頁首&#93;](#Top)  
   
 ##  <a name="Restrictions"></a> 限制  
   
@@ -81,9 +73,8 @@ caps.handback.revision: 54
   
 -   資料庫鏡像不支援 FILESTREAM。 不能在主體伺服器上建立 FILESTREAM 檔案群組。 不能針對包含 FILESTREAM 檔案群組的資料庫設定資料庫鏡像。  
   
--   跨資料庫交易或分散式交易不支援資料庫鏡像。 如需詳細資訊，請參閱[資料庫鏡像或 AlwaysOn 可用性群組不支援跨資料庫交易 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/transactions - always on availability and database mirroring.md)。  
+-   跨資料庫交易或分散式交易不支援資料庫鏡像。 如需詳細資訊，請參閱[資料庫鏡像或 AlwaysOn 可用性群組不支援跨資料庫交易 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)。  
   
- [&#91;頁首&#93;](#Top)  
   
 ##  <a name="RecommendationsForPartners"></a> 設定夥伴伺服器的建議  
   
@@ -105,7 +96,6 @@ caps.handback.revision: 54
   
 -   關於廣域網路 (WAN) 對於高安全性模式的資料庫鏡像而言是否可靠，我們不提供任何建議。 如果您決定在 WAN 上使用高安全性模式，則將見證伺服器加入工作階段時要小心謹慎，因為可能會發生不必要的自動容錯移轉。 如需詳細資訊，請參閱本主題稍後的 [部署資料庫鏡像的建議](#RecommendationsForDeploying)。  
   
- [&#91;頁首&#93;](#Top)  
   
 ##  <a name="RecommendationsForDeploying"></a> 部署資料庫鏡像的建議  
  最佳資料庫鏡像效能是使用非同步作業所取得。 當使用同步作業之鏡像工作階段的工作負載產生大量交易記錄資料時，效能可能會變慢。  
@@ -123,14 +113,14 @@ caps.handback.revision: 54
   
 2.  當您確信非同步作業符合您的商務需求時，可能會想要嘗試同步作業來提升資料保護。 當您測試同步鏡像如何在環境中運作時，建議您先測試不含自動容錯移轉的高安全性模式。 這項測試的主要目的是要了解同步作業如何影響資料庫效能。 如需詳細資訊，請參閱 [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)。  
   
-3.  等候啟用自動容錯移轉，直到您確信不含自動容錯移轉的高安全性模式已符合商務需求，而且網路錯誤不會導致失敗為止。 如需詳細資訊，請參閱[資料庫鏡像工作階段期間的角色切換 &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)。  
+3.  等候啟用自動容錯移轉，直到您確信不含自動容錯移轉的高安全性模式已符合商務需求，而且網路錯誤不會導致失敗為止。 如需詳細資訊，請參閱 [資料庫鏡像工作階段期間的角色切換 &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)(資料庫鏡像和記錄傳送) 技術白皮書。  
   
- [&#91;頁首&#93;](#Top)  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [設定資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)   
- [資料庫鏡像和 Always On 可用性群組的傳輸安全性 &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport security - database mirroring - always on availability.md)   
+ [資料庫鏡像和 AlwaysOn 可用性群組的傳輸安全性 &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
  [資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
- [疑難排解資料庫鏡像組態 &#40;SQL Server&#41;](../../database-engine/database-mirroring/troubleshoot-database-mirroring-configuration-sql-server.md)  
+ [為資料庫鏡像組態疑難排解 &#40;SQL Server&#41;](../../database-engine/database-mirroring/troubleshoot-database-mirroring-configuration-sql-server.md)  
   
   
+

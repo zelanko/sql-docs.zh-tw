@@ -1,27 +1,32 @@
 ---
 title: "檢視記錄傳送報表 (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "檢視記錄傳送報表"
-  - "顯示記錄傳送報表"
-  - "記錄傳送 [SQL Server], 監視"
-  - "記錄傳送 [SQL Server], 檢視報表"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- viewing log shipping reports
+- displaying log shipping reports
+- log shipping [SQL Server], monitoring
+- log shipping [SQL Server], viewing reports
 ms.assetid: 3b549f2f-3683-45e5-b8e8-8095276c41ab
 caps.latest.revision: 18
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: bae6798ce7212ece23767ab31884c1ccabb568fd
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 檢視記錄傳送報表 (SQL Server Management Studio)
+# <a name="view-the-log-shipping-report-sql-server-management-studio"></a>檢視記錄傳送報表 (SQL Server Management Studio)
   此主題說明如何檢視 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的「交易記錄傳送狀態」報表。 您可以在監視伺服器、主要伺服器或次要伺服器執行狀態報表。 若要查看有關記錄傳送組態的最完整資訊，請在監視伺服器執行個體中檢視報表。  
   
  此報表會顯示您所連接的伺服器執行個體中，有可用狀態的任何記錄傳送活動的狀態。 如果該伺服器執行個體牽涉到不同角色的多個組態 (例如，當做某個資料庫的監視伺服器，但同時又是另一個資料庫的次要伺服器)，則顯示的結果將包含每一個角色觀點的所有組態資訊。 如果預存程序可以透過給定的記錄傳送組態連接到監視伺服器執行個體，報表便可以顯示該組態的額外狀態。  
@@ -38,7 +43,7 @@ caps.handback.revision: 18
   
  此報表會呼叫 **sp_help_log_shipping_monitor** 以取得資料。 如需必要權限的相關資訊，請參閱 [sp_help_log_shipping_monitor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-transact-sql.md)。  
   
-### 顯示伺服器執行個體上的交易記錄傳送狀態報表  
+### <a name="to-display-the-transaction-log-shipping-status-report-on-a-server-instance"></a>顯示伺服器執行個體上的交易記錄傳送狀態報表  
   
 1.  連接到監視伺服器、主要伺服器或次要伺服器。  
   
@@ -46,7 +51,7 @@ caps.handback.revision: 18
   
 3.  按一下 **[交易記錄傳送狀態]**。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [監視記錄傳送 &#40;Transact-SQL&#41;](../../database-engine/log-shipping/monitor-log-shipping-transact-sql.md)  
   
   

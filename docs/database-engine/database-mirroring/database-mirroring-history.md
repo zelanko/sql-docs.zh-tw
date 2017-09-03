@@ -1,31 +1,36 @@
 ---
-title: "資料庫鏡像記錄 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.dbmmonitor.databasemirroringhistory.f1"
+title: "資料庫鏡像見證 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.dbmmonitor.databasemirroringhistory.f1
 ms.assetid: 1d6e4b10-4a23-47d7-9918-c417992f09d3
 caps.latest.revision: 25
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 24f7e8d76bc04e82c4403139c575c6c736648c48
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 資料庫鏡像記錄
+# <a name="database-mirroring-history"></a>資料庫鏡像記錄
   使用這個對話方塊，可檢視指定的伺服器執行個體上某個鏡像資料庫的鏡像狀態記錄。  
   
  **若要使用 SQL Server Management Studio 監視資料庫鏡像**  
   
 -   [啟動資料庫鏡像監視器 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
-## 選項  
+## <a name="options"></a>選項  
  **伺服器執行個體**  
  正在報告記錄的伺服器執行個體名稱。  
   
@@ -71,8 +76,8 @@ caps.handback.revision: 25
 |**鏡像狀態**|資料庫狀態：<br /><br /> 已中斷連接<br /><br /> 暫止容錯移轉<br /><br /> 已暫停<br /><br /> 已同步處理<br /><br /> 正在同步處理<br /><br /> Unknown|  
 |**見證連接**|資料庫鏡像工作階段中的見證連接狀態，可為 [已連接] 或 [已中斷連接]。 如果沒有見證，則此值為 NULL。|  
 |**未傳送的記錄**|主體伺服器執行個體上傳送佇列中未傳送記錄的大小 (以 KB 為單位)。|  
-|**傳送的時間**|主體伺服器執行個體將目前在傳送佇列中的記錄，傳送到鏡像伺服器執行個體所需的大約時間量 (*傳送速率*)。 由於內送交易的速率可能會有極大的差異，因此傳送記錄的時間只是估計值。 但是，傳送速率對於粗略估計手動容錯移轉所需的時間可能會很有用。|  
-|**傳送速率**|將交易傳送到鏡像伺服器執行個體的速率 (以每秒 KB 數為單位)。|  
+|**傳送的時間**|主體伺服器執行個體將目前在傳送佇列中的記錄，傳送到鏡像伺服器執行個體所需的大約時間量 ( *傳送速率*)。 由於內送交易的速率可能會有極大的差異，因此傳送記錄的時間只是估計值。 但是，傳送速率對於粗略估計手動容錯移轉所需的時間可能會很有用。|  
+|**Send Rate**|將交易傳送到鏡像伺服器執行個體的速率 (以每秒 KB 數為單位)。|  
 |**新交易的速率**|將內送交易輸入到主體記錄中的速率 (以每秒 KB 數為單位)。 若要判斷鏡像是落後、超前，還是趕上進度，請將這個值與 **[傳送的時間]** 值加以比較。|  
 |**最舊尚未傳送的交易**|傳送佇列中最舊尚未傳送之交易的存在時間。 這項交易的存在時間會指出尚未傳送到鏡像伺服器執行個體的交易分鐘數。 這個值有助於從時間方面來測量資料遺失的可能性。|  
 |**未還原的記錄**|在重做佇列中等待的記錄量 (以 KB 為單位)。|  
@@ -80,9 +85,9 @@ caps.handback.revision: 25
 |**還原速率**|將交易還原到鏡像資料庫中的速率 (以每秒 KB 數為單位)。|  
 |**鏡像認可負擔**|每項交易的平均延遲毫秒數 (只限於同步模式)。 這項延遲是當主體伺服器執行個體等待鏡像伺服器執行個體將交易記錄寫入重做佇列中時所產生的負擔量。|  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [啟動資料庫鏡像監視器 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
  [監視資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
- [啟動設定資料庫鏡像安全性精靈 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start the configuring database mirroring security wizard.md)  
+ [啟動設定資料庫鏡像安全性精靈 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  
   
   

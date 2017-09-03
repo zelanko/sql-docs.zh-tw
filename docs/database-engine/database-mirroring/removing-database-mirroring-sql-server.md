@@ -1,29 +1,34 @@
 ---
 title: "移除資料庫鏡像 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/09/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "資料庫鏡像 [SQL Server], 移除"
-  - "停止資料庫鏡像 [SQL Server]"
-  - "移除資料庫鏡像 [SQL Server]"
+ms.custom: 
+ms.date: 03/09/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database mirroring [SQL Server], removing
+- stopping database mirroring [SQL Server]
+- removing database mirroring [SQL Server]
 ms.assetid: 40c72091-8f03-4037-8b55-5e95309fe145
 caps.latest.revision: 32
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 6bd2dd9e264437e8d40d2fe66a1394c468e99c59
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 移除資料庫鏡像 (SQL Server)
+# <a name="removing-database-mirroring-sql-server"></a>移除資料庫鏡像 (SQL Server)
   資料庫擁有者可隨時在夥伴上手動停止資料庫鏡像工作階段。  
   
-## 移除鏡像的影響  
+## <a name="impact-of-removing-mirroring"></a>移除鏡像的影響  
  移除鏡像後，就會發生下列情況：  
   
 -   夥伴之間以及每個夥伴與見證之間的關聯性會永久中斷 (若有任何關聯性存在的話)。  
@@ -34,7 +39,7 @@ caps.handback.revision: 31
   
 -   每個夥伴伺服器執行個體都會保有個別的資料庫副本。  
   
--   因為鏡像資料庫是利用 RESTORE WITH NORECOVERY 建立的，所以它會處於 RESTORING 狀態 (請參閱 **sys.databases** 的 **state** 資料行)。 此時，您可卸除先前的鏡像資料庫，或利用 WITH RECOVERY 予以還原。 當您復原資料庫時，因為復原會啟動新的復原分岔，所以與先前的主體資料庫有所差異。  
+-   因為鏡像資料庫是利用 RESTORE WITH NORECOVERY 建立的，所以它會處於 RESTORING 狀態 (請參閱 **sys.databases** 的 **state**資料行)。 此時，您可卸除先前的鏡像資料庫，或利用 WITH RECOVERY 予以還原。 當您復原資料庫時，因為復原會啟動新的復原分岔，所以與先前的主體資料庫有所差異。  
   
 > [!NOTE]  
 >  若要在停止工作階段之後繼續鏡像，您就必須建立新的資料庫鏡像工作階段。 若要在停止鏡像之後建立記錄備份，您必須在重新啟動鏡像之前將它套用到鏡像資料庫。  
@@ -46,14 +51,13 @@ caps.handback.revision: 31
   
  **若要啟動資料庫鏡像**  
   
--   [使用 Windows 驗證建立資料庫鏡像工作階段 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish database mirroring session - windows authentication.md)  
+-   [使用 Windows 驗證建立資料庫鏡像工作階段 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
   
--   [使用 Windows 驗證建立資料庫鏡像工作階段 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
+-   [使用 Windows 驗證建立資料庫鏡像工作階段 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-establish-session-windows-authentication.md)  
   
- ![搭配回到頁首連結使用的箭頭圖示](../../analysis-services/instances/media/uparrow16x16.png "搭配回到頁首連結使用的箭頭圖示") [&#91;回到頁首&#93;](#Top)  
   
-## 另請參閱  
- [ALTER DATABASE 資料庫鏡像 &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20Database%20Mirroring%20\(Transact-SQL\).md)   
+## <a name="see-also"></a>另請參閱  
+ [ALTER DATABASE 資料庫鏡像 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)   
  [資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [暫停與繼續資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/pausing-and-resuming-database-mirroring-sql-server.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)  

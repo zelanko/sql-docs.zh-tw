@@ -1,26 +1,31 @@
 ---
 title: "移除記錄傳送 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "記錄傳送 [SQL Server], 移除"
-  - "移除記錄傳送"
-  - "刪除記錄傳送"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- log shipping [SQL Server], removing
+- removing log shipping
+- deleting log shipping
 ms.assetid: 859373db-c744-4a4b-8479-45163f61e8cb
 caps.latest.revision: 18
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: daec2b5c293d683423b85f59fc75b7b27f76f541
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 移除記錄傳送 (SQL Server)
+# <a name="remove-log-shipping-sql-server"></a>移除記錄傳送 (SQL Server)
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 移除 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的記錄傳送。  
   
  **本主題內容**  
@@ -42,11 +47,11 @@ caps.handback.revision: 18
 ###  <a name="Security"></a> 安全性  
   
 ####  <a name="Permissions"></a> Permissions  
- 記錄傳送預存程序需要**系統管理員 (sysadmin)** 固定伺服器角色中的成員資格。  
+ 記錄傳送預存程序需要 **sysadmin** 固定伺服器角色中的成員資格。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 若要移除記錄傳送  
+#### <a name="to-remove-log-shipping"></a>若要移除記錄傳送  
   
 1.  連接至目前是記錄傳送主要伺服器的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，並展開該執行個體。  
   
@@ -60,18 +65,18 @@ caps.handback.revision: 18
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 若要移除記錄傳送  
+#### <a name="to-remove-log-shipping"></a>若要移除記錄傳送  
   
-1.  在記錄傳送主要伺服器上執行 [sp_delete_log_shipping_primary_secondary](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-primary-secondary-transact-sql.md)，以刪除主要伺服器上的次要資料庫相關資訊。  
+1.  在記錄傳送主要伺服器上執行 [sp_delete_log_shipping_primary_secondary](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-primary-secondary-transact-sql.md) ，以刪除主要伺服器上的次要資料庫相關資訊。  
   
-2.  在記錄傳送次要伺服器上執行 [sp_delete_log_shipping_secondary_database](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-secondary-database-transact-sql.md)，以刪除次要資料庫。  
+2.  在記錄傳送次要伺服器上執行 [sp_delete_log_shipping_secondary_database](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-secondary-database-transact-sql.md) ，以刪除次要資料庫。  
   
     > [!NOTE]  
-    >  如果沒有具有相同次要識別碼的其他次要資料庫，就會從 **sp_delete_log_shipping_secondary_database** 叫用 **sp_delete_log_shipping_secondary_primary**，並刪除次要識別碼的項目與複製及還原作業。  
+    >  如果沒有具有相同次要識別碼的其他次要資料庫，就會從 **sp_delete_log_shipping_secondary_database** 叫用 **sp_delete_log_shipping_secondary_primary** ，並刪除次要識別碼的項目與複製及還原作業。  
   
-3.  在記錄傳送主要伺服器上執行 **sp_delete_log_shipping_primary_database**，以刪除主要伺服器上的記錄傳送設定相關資訊。 這也會刪除備份作業。  
+3.  在記錄傳送主要伺服器上執行 **sp_delete_log_shipping_primary_database** ，以刪除主要伺服器上的記錄傳送設定相關資訊。 這也會刪除備份作業。  
   
-4.  在記錄傳送主要伺服器上，停用備份作業。 如需詳細資訊，請參閱 [Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md)。  
+4.  在記錄傳送主要伺服器上，停用備份作業。 如需詳細資訊，請參閱 [Disable or Enable a Job](http://msdn.microsoft.com/library/5041261f-0c32-4d4a-8bee-59a6c16200dd)。  
   
 5.  在記錄傳送次要伺服器上，停用複製與還原作業。  
   
@@ -91,9 +96,9 @@ caps.handback.revision: 18
   
 -   [容錯移轉至記錄傳送次要 &#40;SQL Server&#41;](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md)  
   
--   [啟用或停用作業](../../ssms/agent/disable-or-enable-a-job.md)  
+-   [Disable or Enable a Job](http://msdn.microsoft.com/library/5041261f-0c32-4d4a-8bee-59a6c16200dd)  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [關於記錄傳送 &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [記錄傳送資料表與預存程序](../../database-engine/log-shipping/log-shipping-tables-and-stored-procedures.md)  
   

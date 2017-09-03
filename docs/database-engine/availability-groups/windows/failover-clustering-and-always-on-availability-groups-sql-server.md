@@ -1,32 +1,37 @@
 ---
 title: "容錯移轉叢集和 AlwaysOn 可用性群組 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "叢集 [SQL Server]"
-  - "可用性群組 [SQL Server], WSFC 叢集"
-  - "容錯移轉叢集執行個體 [SQL Server], 請參閱容錯移轉叢集 [SQL Server]"
-  - "仲裁 [SQL Server]"
-  - "容錯移轉叢集 [SQL Server], AlwaysOn 可用性群組"
-  - "可用性群組 [SQL Server], 容錯移轉叢集執行個體"
+ms.custom: 
+ms.date: 07/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- clustering [SQL Server]
+- Availability Groups [SQL Server], WSFC clusters
+- Failover Cluster Instances [SQL Server], see failover clustering [SQL Server]
+- quorum [SQL Server]
+- failover clustering [SQL Server], AlwaysOn Availability Groups
+- Availability Groups [SQL Server], Failover Cluster Instances
 ms.assetid: 613bfbf1-9958-477b-a6be-c6d4f18785c3
 caps.latest.revision: 48
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 47
----
-# 容錯移轉叢集和 AlwaysOn 可用性群組 (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: c1184d2ea29ccf64159df67950b5b078010e73a7
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
 
-   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] (也就是 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中所引進的高可用性和災害復原解決方案) 需要 Windows Server 容錯移轉叢集 (WSFC)。 此外，雖然 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 不依賴 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集，但是您可以使用容錯移轉叢集執行個體 (FCI) 來裝載可用性群組的可用性複本。 請務必了解每個叢集技術的角色，也要知道設計您的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 環境時所必須考量的事項。  
+---
+# <a name="failover-clustering-and-always-on-availability-groups-sql-server"></a>容錯移轉叢集和 AlwaysOn 可用性群組 (SQL Server)
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+
+   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] (也就是 [!INCLUDE[sssql11](../../../includes/sssql11_md.md)] 中所引進的高可用性和災害復原解決方案) 需要 Windows Server 容錯移轉叢集 (WSFC)。 此外，雖然 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 不依賴 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集，但是您可以使用容錯移轉叢集執行個體 (FCI) 來裝載可用性群組的可用性複本。 請務必了解每個叢集技術的角色，也要知道設計您的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 環境時所必須考量的事項。  
   
 > [!NOTE]  
 >  如需 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 概念的資訊，請參閱 [AlwaysOn 可用性群組概觀 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)。  
@@ -40,7 +45,7 @@ caps.handback.revision: 47
 -   [WSFC 容錯移轉叢集管理員與可用性群組一起使用的限制](#FCMrestrictions)  
   
 ##  <a name="WSFC"></a> Windows Server 容錯移轉叢集和可用性群組  
- 部署 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 需要一個 Windows Server 容錯移轉叢集 (WSFC) 叢集。 若要啟用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體必須位於 WSFC 節點上，而且 WSFC 叢集和節點必須在線上。 此外，給定可用性群組的每個可用性複本都必須位在相同 WSFC 叢集的不同節點上。 唯一的例外狀況是在移轉至另一個 WSFC 叢集期間，可用性群組可以暫時跨兩個叢集。  
+ 部署 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 需要一個 Windows Server 容錯移轉叢集 (WSFC) 叢集。 若要啟用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體必須位於 WSFC 節點上，而且 WSFC 叢集和節點必須在線上。 此外，給定可用性群組的每個可用性複本都必須位在相同 WSFC 叢集的不同節點上。 唯一的例外狀況是在移轉至另一個 WSFC 叢集期間，可用性群組可以暫時跨兩個叢集。  
   
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 依賴 Windows 容錯移轉叢集 (WSFC) 叢集來監視及管理屬於給定可用性群組之可用性複本的目前角色，並判斷容錯移轉事件對於可用性複本的影響程度。 對於您建立的每個可用性群組，系統會建立一個 WSFC 資源群組。 WSFC 叢集會監視此資源群組，以評估主要複本的健康情況。  
   
@@ -53,19 +58,19 @@ caps.handback.revision: 47
   
  如需在 Windows Server 容錯移轉叢集 (WSFC) 節點上執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以及 WSFC 仲裁的資訊，請參閱 [SQL Server 的 Windows Server 容錯移轉叢集&#40;WSFC&#41; ](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)。  
   
-### 針對作業系統升級進行 AlwaysOn 可用性群組的跨叢集移轉  
- 從 [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] 開始，[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 對於部署至新的 Windows Server 容錯移轉叢集 (WSFC) 叢集的情況，支援跨叢集移轉可用性群組。 跨叢集移轉是指以最短的停機時間，將一個可用性群組或一批可用性群組移到新的目的地 WSFC 叢集。 跨叢集移轉程序可讓您在升級至 [!INCLUDE[win8srv](../../../includes/win8srv-md.md)] 叢集的同時，維護您的服務等級協定 (SLA)。 [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] (或更新版本) 必須針對目的地 WSFC 叢集上的 AlwaysOn 安裝及啟用。 跨叢集移轉是否成功，取決於目的地 WSFC 叢集整套計畫和準備工作。  
+### <a name="cross-cluster-migration-of-always-on-availability-groups-for-os-upgrade"></a>針對作業系統升級進行 AlwaysOn 可用性群組的跨叢集移轉  
+ 從 [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)]開始， [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 對於部署至新的 Windows Server 容錯移轉叢集 (WSFC) 叢集的情況，支援跨叢集移轉可用性群組。 跨叢集移轉是指以最短的停機時間，將一個可用性群組或一批可用性群組移到新的目的地 WSFC 叢集。 跨叢集移轉程序可讓您在升級至 [!INCLUDE[win8srv](../../../includes/win8srv-md.md)] 叢集的同時，維護您的服務等級協定 (SLA)。 [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] (或更新版本) 必須針對目的地 WSFC 叢集上的 AlwaysOn 安裝及啟用。 跨叢集移轉是否成功，取決於目的地 WSFC 叢集整套計畫和準備工作。  
   
- 如需詳細資訊，請參閱[針對作業系統升級進行 AlwaysOn 可用性群組的跨叢集移轉](http://msdn.microsoft.com/library/jj873730.aspx)。  
+ 如需詳細資訊，請參閱 [針對作業系統升級進行 AlwaysOn 可用性群組的跨叢集移轉](http://msdn.microsoft.com/library/jj873730.aspx)。  
   
 ##  <a name="SQLServerFC"></a> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體 (FCI) 和可用性群組  
  您可以藉由實作 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集連同 WSFC 叢集，在伺服器執行個體層級設定容錯移轉的第二層。 可用性複本可由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 獨立執行個體或 FCI 執行個體所裝載。 只有一個 FCI 夥伴可以裝載給定可用性群組的複本。 在 FCI 上執行可用性複本時，可用性群組的可能擁有者清單只包含使用中 FCI 節點。  
   
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 不依賴任何形式的共用儲存體。 不過，如果您使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體 (FCI) 來裝載一個或多個可用性複本，依照標準 SQL Server 容錯移轉叢集執行個體安裝，這些 FCI 都需要共用儲存體。  
   
- 如需其他必要條件的詳細資訊，請參閱 [AlwaysOn 可用性群組的必要條件、限制和建議 ](../../../database-engine/availability-groups/windows/prereqs, restrictions, recommendations - always on availability.md) 的＜使用 SQL Server 容錯移轉叢集執行個體 (FCI) 裝載可用性複本的必要條件和限制＞一節。  
+ 如需其他必要條件的詳細資訊，請參閱 [AlwaysOn 可用性群組的必要條件、限制和建議 ](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md) 的＜使用 SQL Server 容錯移轉叢集執行個體 (FCI) 裝載可用性複本的必要條件和限制＞一節。  
   
-### 容錯移轉叢集執行個體和可用性群組的比較  
+### <a name="comparison-of-failover-cluster-instances-and-availability-groups"></a>容錯移轉叢集執行個體和可用性群組的比較  
  無論 FCI 中節點的數目有多少，整個 FCI 只能裝載可用性群組的單一複本。 下表描述 FCI 節點和可用性群組複本之間的概念差異。  
   
 ||FCI 內的節點|可用性群組內的複本|  
@@ -83,12 +88,12 @@ caps.handback.revision: 47
  **可用性群組的容錯移轉原則設定適用於所有複本，無論複本裝載於獨立執行個體或 FCI 執行個體。  
   
 > [!NOTE]  
->  如需適用不同 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本之容錯移轉叢集和 **AlwaysOn 可用性群組**內**節點數目**的詳細資訊，請參閱 [SQL Server 2012 版本支援的功能](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473)。  
+>  如需適用不同 **版本之容錯移轉叢集和** AlwaysOn 可用性群組 **內** 節點數目 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的詳細資訊，請參閱 [SQL Server 2012 版本支援的功能](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473)。  
   
-### FCI 裝載可用性複本的考量  
+### <a name="considerations-for-hosting-an-availability-replica-on-an-fci"></a>FCI 裝載可用性複本的考量  
   
 > [!IMPORTANT]  
->  如果您計劃在 SQL Server 容錯移轉叢集執行個體 (FCI) 裝載可用性複本，請確定 Windows Server 2008 主機節點符合容錯移轉叢集執行個體 (FCI) 的 AlwaysOn 必要條件和限制。 如需詳細資訊，請參閱 [AlwaysOn 可用性群組的必要條件、限制和建議 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs, restrictions, recommendations - always on availability.md)。  
+>  如果您計劃在 SQL Server 容錯移轉叢集執行個體 (FCI) 裝載可用性複本，請確定 Windows Server 2008 主機節點符合容錯移轉叢集執行個體 (FCI) 的 AlwaysOn 必要條件和限制。 如需詳細資訊，請參閱 [AlwaysOn 可用性群組的必要條件、限制和建議 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)設定伺服器執行個體時常見的問題。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體 (FCI) 不支援依照可用性群組進行自動容錯移轉，因此任何由 FCI 裝載的可用性複本只能設定為手動容錯移轉。  
   
@@ -98,13 +103,13 @@ caps.handback.revision: 47
   
  下列範例案例說明這個組態可能會如何導致問題的發生：  
   
- Marcel 設定包含兩個節點 `NODE01` 和 `NODE02`的 WSFC 叢集。 他將 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體 `fciInstance1` 同時安裝在 `NODE01` 和 `NODE02` 上，其中 `NODE01` 是 `fciInstance1` 的目前擁有者。  
- Marcel 會在 `NODE02` 上安裝另一個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體 `Instance3`，這是獨立執行個體。  
- Marcel 在 `NODE01` 上讓 fciInstance1 啟用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]。 他在 `NODE02`上讓 `Instance3` 啟用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]。 接著他設定可用性群組，由 `fciInstance1` 裝載其主要複本，並由 `Instance3` 裝載其次要複本。  
- 在某個時間點，`fciInstance1` 變得無法在 `NODE01` 上使用，而且 WSFC 叢集會造成 `fciInstance1` 容錯移轉到 `NODE02`。 在容錯移轉之後，`fciInstance1` 就是具有 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 功能的執行個體，於 `NODE02` 的主要角色之下執行。 但是，`Instance3` 現在位於與 `fciInstance1` 相同的 WSFC 節點上。 這樣會違反 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 條件約束。  
- 若要更正此案例所呈現的問題，獨立執行個體 `Instance3` 必須位於與 `NODE01` 和 `NODE02` 相同的 WSFC 叢集內的另一個節點上。  
+ Marcel 設定包含兩個節點 `NODE01` 和 `NODE02`的 WSFC 叢集。 他將 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體 `fciInstance1`同時安裝在 `NODE01` 和 `NODE02` 上，其中 `NODE01` 是 `fciInstance1`的目前擁有者。  
+ Marcel 會在 `NODE02`上安裝另一個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體 `Instance3`，這是獨立執行個體。  
+ Marcel 在 `NODE01`上讓 fciInstance1 啟用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]。 他在 `NODE02`上讓 `Instance3` 啟用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]。 接著他設定可用性群組，由 `fciInstance1` 裝載其主要複本，並由 `Instance3` 裝載其次要複本。  
+ 在某個時間點， `fciInstance1` 變得無法在 `NODE01`上使用，而且 WSFC 叢集會造成 `fciInstance1` 容錯移轉到 `NODE02`。 在容錯移轉之後， `fciInstance1` 就是具有 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]功能的執行個體，於 `NODE02`的主要角色之下執行。 但是， `Instance3` 現在位於與 `fciInstance1`相同的 WSFC 節點上。 這樣會違反 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 條件約束。  
+ 若要更正此案例所呈現的問題，獨立執行個體 `Instance3`必須位於與 `NODE01` 和 `NODE02`相同的 WSFC 叢集內的另一個節點上。  
   
- 如需 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集的詳細資訊，請參閱 [AlwaysOn 容錯移轉叢集執行個體 &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)。  
+ 如需適用不同 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集的詳細資訊，請參閱 [AlwaysOn 容錯移轉叢集執行個體 &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)。  
   
 ##  <a name="FCMrestrictions"></a> WSFC 容錯移轉叢集管理員與可用性群組一起使用的限制  
  不要使用容錯移轉叢集管理員操作可用性群組，例如：  
@@ -119,9 +124,9 @@ caps.handback.revision: 47
   
 -   **部落格：**  
   
-     [以有限安全性設定 SQL Server 的 Windows 容錯移轉叢集 (可用性群組或 FCI)](http://blogs.msdn.com/b/sqlAlways%20On/archive/2012/06/05/configure-windows-failover-clustering-for-sql-server-availability-group-or-fci-with-limited-security.aspx)  
+     [以有限安全性設定 SQL Server 的 Windows 容錯移轉叢集 (可用性群組或 FCI)](https://blogs.msdn.microsoft.com/sqlalwayson/2012/06/05/configure-windows-failover-clustering-for-sql-server-availability-group-or-fci-with-limited-security/)  
   
-     [SQL Server AlwaysOn 團隊部落格：SQL Server AlwaysOn 官方團隊部落格](http://blogs.msdn.com/b/sqlAlways%20On/)  
+     [SQL Server AlwaysOn 團隊部落格：SQL Server AlwaysOn 官方團隊部落格](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
      [CSS SQL Server 工程師部落格](http://blogs.msdn.com/b/psssql/)  
   
@@ -135,10 +140,11 @@ caps.handback.revision: 47
   
      [SQL Server 客戶諮詢團隊白皮書](http://sqlcat.com/)  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [AlwaysOn 可用性群組概觀 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [啟用和停用 AlwaysOn 可用性群組 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)   
  [監視可用性群組 &#40;Transact-SQL&#41;](../../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
  [AlwaysOn 容錯移轉叢集執行個體 &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)  
   
   
+

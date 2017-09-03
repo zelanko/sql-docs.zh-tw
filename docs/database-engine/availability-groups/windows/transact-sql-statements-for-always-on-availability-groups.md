@@ -1,28 +1,33 @@
 ---
-title: "AlwaysOn 可用性群組的 Transact-SQL 陳述式概觀 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "可用性群組 [SQL Server], 關於"
-  - "可用性群組 [SQL Server], Transact-SQL 陳述式"
+title: "AlwaysOn 可用性群組的 Transact-SQL 陳述式 | Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Availability Groups [SQL Server], about
+- Availability Groups [SQL Server], Transact-SQL statements
 ms.assetid: 184d0a81-2259-4db9-9d0d-01aac0b502c8
 caps.latest.revision: 23
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: fd3581c9da53446ce52a6ac8401f5180476a1cca
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# AlwaysOn 可用性群組的 Transact-SQL 陳述式概觀 (SQL Server)
+# <a name="transact-sql-statements-for-always-on-availability-groups"></a>AlwaysOn 可用性群組的 Transact-SQL 陳述式
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  本主題介紹支援部署 [!INCLUDE[tsql](../../../includes/tsql-md.md)]以及建立及管理給定可用性群組、可用性複本及可用性資料庫的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 陳述式。  
+  本主題介紹支援部署 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 以及建立及管理給定可用性群組、可用性複本及可用性資料庫的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 陳述式。  
   
  **本主題內容：**  
   
@@ -41,12 +46,12 @@ caps.handback.revision: 23
 ##  <a name="CreateEndpoint"></a> CREATE ENDPOINT  
  如果伺服器執行個體上沒有資料庫鏡像端點，[CREATE ENDPOINT … FOR DATABASE_MIRRORING](../../../t-sql/statements/create-endpoint-transact-sql.md) 就會建立資料庫鏡像端點。 您要部署 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 或資料庫鏡像的每個伺服器執行個體都需要一個資料庫鏡像端點。  
   
- 在您要建立端點的伺服器執行個體上執行此陳述式。 每個給定的伺服器執行個體上只能建立一個資料庫鏡像端點。 如需詳細資訊，請參閱[資料庫鏡像端點 &#40;SQL Server&#41;](../../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)。  
+ 在您要建立端點的伺服器執行個體上執行此陳述式。 每個給定的伺服器執行個體上只能建立一個資料庫鏡像端點。 如需詳細資訊，請參閱 [資料庫鏡像端點 &#40;SQL Server&#41;](../../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)。  
   
 ##  <a name="CreateAG"></a> CREATE AVAILABILITY GROUP  
  [CREATE AVAILABILITY GROUP](../../../t-sql/statements/create-availability-group-transact-sql.md) 會建立新的可用性群組並選擇性地建立可用性群組接聽程式。 您至少必須指定本機伺服器執行個體，這會成為初始主要複本。 您最多也可以選擇指定四個次要複本。  
   
- 在您要裝載新可用性群組之初始主要複本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體上執行 CREATE AVAILABILITY GROUP。 這個伺服器執行個體必須位於 Windows Server 容錯移轉叢集 (WSFC) 的節點 (如需詳細資訊，請參閱 [AlwaysOn 可用性群組的必要條件、限制和建議 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs, restrictions, recommendations - always on availability.md)。  
+ 在您要裝載新可用性群組之初始主要複本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體上執行 CREATE AVAILABILITY GROUP。 這個伺服器執行個體必須位於 Windows Server 容錯移轉叢集 (WSFC) 的節點 (如需詳細資訊，請參閱 [AlwaysOn 可用性群組的必要條件、限制和建議 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)。  
   
 ##  <a name="AlterAG"></a> ALTER AVAILABILITY GROUP  
  [ALTER AVAILABILITY GROUP](../../../t-sql/statements/alter-availability-group-transact-sql.md) 支援變更現有的可用性群組或可用性群組接聽程式，並支援可用性群組容錯移轉。  
@@ -54,12 +59,12 @@ caps.handback.revision: 23
  在裝載目前主要複本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體上執行 ALTER AVAILABILITY GROUP。  
   
 ##  <a name="AlterDb"></a> ALTER DATABASE … SET HADR …  
- ALTER DATABASE 陳述式中 [SET HADR](../Topic/ALTER%20DATABASE%20SET%20HADR%20\(Transact-SQL\).md) 子句的選項可讓您將次要資料庫聯結至對應主要資料庫的可用性群組、移除聯結的資料庫、在聯結的資料庫上暫停資料同步處理，以及繼續資料同步處理。  
+ ALTER DATABASE 陳述式中 [SET HADR](../../../t-sql/statements/alter-database-transact-sql-set-hadr.md) 子句的選項可讓您將次要資料庫聯結至對應主要資料庫的可用性群組、移除聯結的資料庫、在聯結的資料庫上暫停資料同步處理，以及繼續資料同步處理。  
   
 ##  <a name="DropAG"></a> DROP AVAILABILITY GROUP  
  [DROP AVAILABILITY GROUP](../../../t-sql/statements/drop-availability-group-transact-sql.md) 可移除指定的可用性群組及其所有複本。 DROP AVAILABILITY GROUP 可從 WSFC 容錯移轉叢集中的任何 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 節點執行。  
   
-##  <a name="Restrictions"></a> AVAILABILITY GROUP Transact-SQL 陳述式的限制  
+##  <a name="Restrictions"></a> Restrictions on the AVAILABILITY GROUP Transact-SQL Statements  
  CREATE AVAILABILITY GROUP、ALTER AVAILABILITY GROUP 及 DROP AVAILABILITY GROUP [!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式具有下列限制：  
   
 -   除了 DROP AVAILABILITY GROUP 之外，執行這些陳述式需要在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體上啟用 HADR 服務。 如需詳細資訊，請參閱[啟用和停用 AlwaysOn 可用性群組 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)。  
@@ -72,7 +77,8 @@ caps.handback.revision: 23
   
 -   如果在其他可用性群組動作或復原進行時執行 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式，陳述式會傳回錯誤。 請等候動作或復原完成，再視需要重試陳述式。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [AlwaysOn 可用性群組概觀 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   
+

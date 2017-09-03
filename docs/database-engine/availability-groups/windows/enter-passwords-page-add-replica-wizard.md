@@ -1,29 +1,34 @@
 ---
-title: "輸入密碼頁面 (加入複本精靈) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.addreplicawizard.enterpasswords.f1"
+title: "輸入密碼頁面 (新增複本精靈) | Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.addreplicawizard.enterpasswords.f1
 ms.assetid: e69207a0-c5c4-44e4-ae9a-4afbb67251d1
 caps.latest.revision: 7
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 0e89f1cedff6ee8b3a18e78ce08d5090331a5694
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 輸入密碼頁面 (加入複本精靈)
+# <a name="enter-passwords-page-add-replica-wizard"></a>輸入密碼頁面 (加入複本精靈)
   本說明主題描述 [輸入密碼] 頁面的選項。 本主題適用於 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 的 [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]。  
   
  如果您在 [指定複本] 頁面上選取的複本包含具有資料庫主要金鑰的資料庫，則會顯示 [輸入密碼] 頁面。  
   
-## 輸入密碼選項  
+## <a name="enter-passwords-options"></a>輸入密碼選項  
  **[這個 SQL Server 執行個體上的使用者資料庫]** 方格會列出每個本機使用者資料庫。 資料行如下：  
   
  **名稱**  
@@ -43,11 +48,12 @@ caps.handback.revision: 7
  **重新整理**  
  按一下以重新整理方格。 輸入必要的密碼之後，這非常有用。  
   
-## 相關工作  
+## <a name="related-tasks"></a>相關工作  
   
--   [使用 [將複本加入可用性群組中精靈] &#40;SQL Server Management Studio&#41;](../Topic/Use%20the%20Add%20Replica%20to%20Availability%20Group%20Wizard%20\(SQL%20Server%20Management%20Studio\).md)  
+-   [使用 [將複本加入可用性群組中精靈] &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)  
   
-## 另請參閱  
- [Always On 可用性群組的必要條件、限制和建議 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs, restrictions, recommendations - always on availability.md)  
+## <a name="see-also"></a>另請參閱  
+ [Always On 可用性群組的必要條件、限制和建議 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)  
   
   
+

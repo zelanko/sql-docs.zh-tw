@@ -1,39 +1,44 @@
 ---
 title: "affinity mask 伺服器組態選項 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "預設 affinity mask 選項"
-  - "重新載入處理器快取"
-  - "處理器快取 [SQL Server]"
-  - "CPU [SQL Server], 授權"
-  - "延緩的程序呼叫"
-  - "affinity mask 選項"
-  - "處理器相似性 [SQL Server]"
-  - "SMP"
-  - "DPC"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- default affinity mask option
+- reloading processor cache
+- processor cache [SQL Server]
+- CPU [SQL Server], licensing
+- deferred process call
+- affinity mask option
+- processor affinity [SQL Server]
+- SMP
+- DPC
 ms.assetid: 5823ba29-a75d-4b3e-ba7b-421c07ab3ac1
 caps.latest.revision: 52
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 52
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0aa50b8c593ced9089a939eb5490380872d38472
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# affinity mask 伺服器組態選項
+# <a name="affinity-mask-server-configuration-option"></a>affinity mask 伺服器組態選項
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
     
 > [!NOTE]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 請改用 [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md) 。  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 請改用 [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md)。  
   
- 為了執行多工作業，[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 有時會在不同的處理器之間移動處理序執行緒。 雖然從作業系統的觀點來看很有效率，但是在繁重的系統負載下，這項活動可能會降低 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的效能，因為每個處理器快取會重複地重新載入資料。 在這些情況中，將特定執行緒指定給處理器，可降低處理器重新載入的情形並減少跨處理器移轉執行緒的問題 (藉此減少內容切換)，進而提升效能，而執行緒與處理器之間的關聯則稱為處理器相似性。  
+ 為了執行多工作業， [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 有時會在不同的處理器之間移動處理序執行緒。 雖然從作業系統的觀點來看很有效率，但是在繁重的系統負載下，這項活動可能會降低 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的效能，因為每個處理器快取會重複地重新載入資料。 在這些情況中，將特定執行緒指定給處理器，可降低處理器重新載入的情形並減少跨處理器移轉執行緒的問題 (藉此減少內容切換)，進而提升效能，而執行緒與處理器之間的關聯則稱為處理器相似性。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 透過兩個相似性遮罩選項支援處理器相似性：affinity mask (也稱為 **CPU affinity mask**) 與 affinity I/O mask。 如需 affinity I/O mask 選項的詳細資訊，請參閱 [affinity Input-Output mask 伺服器組態選項](../../database-engine/configure-windows/affinity-input-output-mask-server-configuration-option.md)。 擁有 33 到 64 個處理器的 CPU 與 I/O 相似性支援需要分別另外使用 [affinity64 mask 伺服器組態選項](../../database-engine/configure-windows/affinity64-mask-server-configuration-option.md) 與 [affinity64 Input-Output mask 伺服器組態選項](../../database-engine/configure-windows/affinity64-input-output-mask-server-configuration-option.md)。  
   
@@ -90,7 +95,7 @@ caps.handback.revision: 52
 > [!CAUTION]  
 >  不要在 Windows 作業系統中設定 CPU 相似性，然後又在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中設定相似性遮罩。 這些設定嘗試達到相同的結果，如果組態不一致，可能會有無法預期的結果。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 設定 CPU 相似性時，最好使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的 sp_configure 選項。  
   
-## 範例  
+## <a name="example"></a>範例  
  以設定 affinity mask 選項為例，如果選取處理器 1、2 與 5 為可用，並將位元 1、2、5 設成 1，位元 0、3、4、6 與 7 設成 0，就會指定十六進位值 0x26 (或相當的十進位值 `38` )。 位元的編號從右算起。 affinity mask 選項會從 0 到 31 開始計算處理器，所以在下列範例中，計數器 `1` 代表伺服器上的第二個處理器。  
   
 ```  
@@ -117,21 +122,21 @@ GO
   
  affinity mask 屬於進階選項。 若使用 sp_configure 系統預存程序來變更設定，只有當 **show advanced options** 設為 1 時，才能變更 **affinity mask** 。 在執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] RECONFIGURE 命令之後，新的設定會立即生效，而不需要重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。  
   
-## 非統一記憶體存取 (NUMA)  
+## <a name="non-uniform-memory-access-numa"></a>非統一記憶體存取 (NUMA)  
  當使用以非統一記憶體存取 (NUMA) 為基礎的硬體且設定相似性遮罩時，節點中的每一個排程器將相似於它自己的 CPU。 若未設定相似性遮罩，則每一個排程器會相似於 NUMA 節點內的 CPU 群組，且對應到 NUMA 節點 N1 的排程器可在該節點的任何 CPU 上設定工作排程，但不能在與另一個節點相關聯的 CPU 上設定。  
   
  在單一 NUMA 節點上執行的任何作業只能使用該節點的緩衝區頁面。 若作業平行執行於多個節點的 CPU 上，則可使用任何相關節點的記憶體。  
   
-## 授權問題  
+## <a name="licensing-issues"></a>授權問題  
  動態相似性受到 CPU 授權的嚴格控制， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 並不允許違反授權原則的任何相似性遮罩選項組態。  
   
-### 啟動  
+### <a name="startup"></a>啟動  
  如果指定的相似性遮罩在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 啟動期間或資料庫附加期間違反授權原則，則引擎層會完成啟動程序或資料庫附加/還原作業，然後將相似性遮罩的 sp_configure 執行值重設為零，發出錯誤訊息至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔。  
   
-### 重新設定  
+### <a name="reconfigure"></a>重新設定  
  如果指定的相似性遮罩在執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] RECONFIGURE 命令期間違反授權原則，就會將錯誤訊息回報至用戶端工作階段和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔，並要求資料庫管理員重新設定相似性遮罩。 在此情況下，不會接受任何 RECONFIGURE WITH OVERRIDE 命令。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [監視資源使用狀況 &#40;系統監視器&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [伺服器組態選項 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
@@ -139,3 +144,4 @@ GO
  [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md)  
   
   
+

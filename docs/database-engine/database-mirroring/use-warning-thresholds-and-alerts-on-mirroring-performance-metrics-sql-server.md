@@ -1,30 +1,35 @@
 ---
-title: "使用鏡像效能標準的警告臨界值與警示 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "監視資料庫鏡像 [SQL Server]"
-  - "臨界值 [SQL Server]"
-  - "資料庫鏡像 [SQL Server], 在 SQL Server Management Studio 中管理"
-  - "警示 [SQL Server], 資料庫鏡像"
-  - "資料庫鏡像 [SQL Server], 監視"
-  - "警告 [資料庫鏡像]"
+title: "使用鏡像效能標準的警告臨界值與警示 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- monitoring database mirroring [SQL Server]
+- thresholds [SQL Server]
+- database mirroring [SQL Server], managing in SQL Server Management Studio
+- alerts [SQL Server], database mirroring
+- database mirroring [SQL Server], monitoring
+- warnings [database mirroring]
 ms.assetid: 8cdd1515-0bd7-4f8c-a7fc-a33b575e20f6
 caps.latest.revision: 40
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 40
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 1d7f8c3105d562dd4203f5f9d2f47852068af819
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 使用鏡像效能標準的警告臨界值與警示 (SQL Server)
-  此主題包含可針對資料庫鏡像設定和管理警告臨界值之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件的相關資訊。 您可以使用「資料庫鏡像監視器」或 **sp_dbmmonitorchangealert**、**sp_dbmmonitorhelpalert** 及 **sp_dbmmonitordropalert** 預存程序。 此主題也包含設定資料庫鏡像事件之警示的相關資訊。  
+# <a name="use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server"></a>使用鏡像效能標準的警告臨界值與警示 (SQL Server)
+  此主題包含可針對資料庫鏡像設定和管理警告臨界值之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件的相關資訊。 您可以使用「資料庫鏡像監視器」或 **sp_dbmmonitorchangealert**、 **sp_dbmmonitorhelpalert**及 **sp_dbmmonitordropalert** 預存程序。 此主題也包含設定資料庫鏡像事件之警示的相關資訊。  
   
  建立鏡像資料庫的監視作業後，系統管理員就可以設定許多項關鍵效能標準的警告臨界值。 此外，管理員還可以設定這些和其他資料庫鏡像事件的警示。  
   
@@ -44,7 +49,7 @@ caps.handback.revision: 40
 |效能標準|警告臨界值|資料庫鏡像監視器標籤|  
 |------------------------|-----------------------|--------------------------------------|  
 |未傳送的記錄|指定會在主體伺服器執行個體上產生警告之未傳送記錄的 KB 數。 這個警告有助於從 KB 方面測量資料遺失的可能性，而且尤其與高效能模式相關。 但是，當鏡像因為夥伴中斷連接而暫停或暫止時，這個警告也會與高安全性模式有關。|**如果未傳送的記錄超過臨界值，即發出警告**|  
-|未還原的記錄|指定會在鏡像伺服器執行個體上產生警告之未還原記錄的 KB 數。 這個警告有助於測量容錯移轉時間。 *容錯移轉時間* 主要包含先前的鏡像伺服器向前復原其重做佇列中剩餘之所有記錄所需的時間，再加上一段很短的額外時間。<br /><br /> 注意：若為自動容錯移轉，則系統發現錯誤的時間與容錯移轉時間無關。<br /><br /> 如需詳細資訊，請參閱[預估角色切換期間的服務中斷時間 &#40;資料庫鏡像&#41;](../../database-engine/database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)。|**如果未還原的記錄超過臨界值，即發出警告**|  
+|未還原的記錄|指定會在鏡像伺服器執行個體上產生警告之未還原記錄的 KB 數。 這個警告有助於測量容錯移轉時間。 *容錯移轉時間* 主要包含先前的鏡像伺服器向前復原其重做佇列中剩餘之所有記錄所需的時間，再加上一段很短的額外時間。<br /><br /> 注意：若為自動容錯移轉，則系統發現錯誤的時間與容錯移轉時間無關。<br /><br /> 如需詳細資訊，請參閱 [預估角色切換期間的服務中斷時間 &#40;資料庫鏡像&#41;](../../database-engine/database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)的程序交換。|**如果未還原的記錄超過臨界值，即發出警告**|  
 |最舊尚未傳送的交易|指定在主體伺服器執行個體上產生警告之前，傳送佇列中可以累積的交易分鐘數。 這個警告有助於從時間方面測量資料遺失的可能性，而且尤其與高效能模式相關。 但是，當鏡像因為夥伴中斷連接而暫停或暫止時，這個警告也會與高安全性模式有關。|**如果最舊未傳送交易的時間超過臨界值，即發出警告**|  
 |鏡像認可負擔|指定在主體伺服器上產生警告之前所容許之每項交易的平均延遲毫秒數。 這項延遲是當主體伺服器執行個體等待鏡像伺服器執行個體將交易記錄寫入重做佇列中時所產生的負擔量。 只有在高安全性模式中才會顯出這個值的重要性。|**如果鏡像認可負擔超過臨界值，即發出警告**|  
   
@@ -59,7 +64,7 @@ caps.handback.revision: 40
   
      在 [資料庫鏡像監視器] 中，管理員可以選取 **[警告]** 索引標籤頁面，藉以同時檢視位於主體和鏡像伺服器執行個體之選取資料庫的目前警告組態。 在該頁面中，管理員可以開啟 **[設定警告臨界值]** 對話方塊，以便啟用和設定一或多個警告臨界值。  
   
-     如需 [資料庫鏡像監視器] 介面的簡介，請參閱＜ [Database Mirroring Monitor Overview](../../database-engine/database-mirroring/database-mirroring-monitor-overview.md)＞。 如需啟動「資料庫鏡像監視器」的相關資訊，請參閱[啟動資料庫鏡像監視器 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)。  
+     如需 [資料庫鏡像監視器] 介面的簡介，請參閱＜ [Database Mirroring Monitor Overview](../../database-engine/database-mirroring/database-mirroring-monitor-overview.md)＞。 如需啟動「資料庫鏡像監視器」的相關資訊，請參閱 [啟動資料庫鏡像監視器 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)。  
   
 -   系統預存程序  
   
@@ -71,7 +76,7 @@ caps.handback.revision: 40
     |[sp_dbmmonitorhelpalert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorhelpalert-transact-sql.md)|傳回有關其中一個或所有關鍵資料庫鏡像監視器效能標準之警告臨界值的資訊。|  
     |[sp_dbmmonitordropalert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitordropalert-transact-sql.md)|卸除指定效能標準的警告。|  
   
-## 傳送至 Windows 事件記錄檔的效能臨界值事件  
+## <a name="performance-threshold-events-sent-to-the-windows-event-log"></a>傳送至 Windows 事件記錄檔的效能臨界值事件  
  如果已經定義效能標準的警告臨界值，當狀態資料表更新後，就會根據臨界值評估最新的值。 如果已經達到臨界值，更新程序 **sp_dbmmonitorupdate** 就會產生此標準的參考用事件 (「效能臨界值事件」) 並將事件寫入 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 事件記錄檔。 下表將列出效能臨界值事件的事件識別碼。  
   
 |效能標準|事件識別碼|  
@@ -98,7 +103,7 @@ caps.handback.revision: 40
      這些是資料庫鏡像工作階段的內部狀態發生變更時產生的 Windows Management Instrumentation (WMI) 事件。  
   
     > [!NOTE]  
-    >  如需詳細資訊，請參閱[伺服器事件的 WMI 提供者概念](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)。  
+    >  如需詳細資訊，請參閱 [伺服器事件的 WMI 提供者概念](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)。  
   
  系統管理員可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 或其他應用程式 (例如 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Operations Manager)，設定這些事件的警示。  
   
@@ -112,9 +117,9 @@ caps.handback.revision: 40
 ##  <a name="RelatedTasks"></a> 相關工作  
  **若要使用 SQL Server Management Studio 建立警示**  
   
--   [使用錯誤號碼建立警示](../../ssms/agent/create-an-alert-using-an-error-number.md)  
+-   [使用錯誤號碼建立警示](http://msdn.microsoft.com/library/03dd7fac-5073-4f86-babd-37e45a86023c)  
   
--   [建立 WMI 事件警示](../../ssms/agent/create-a-wmi-event-alert.md)  
+-   [建立 WMI 事件警示](http://msdn.microsoft.com/library/b8c46db6-408b-484e-98f0-a8af3e7ec763)  
   
  **若要監控資料庫鏡像**  
   
@@ -138,7 +143,7 @@ caps.handback.revision: 40
   
 -   [sp_dbmmonitorupdate &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorupdate-transact-sql.md)  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [監視資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)  
   

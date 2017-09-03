@@ -1,32 +1,37 @@
 ---
-title: "判斷是否已安裝及啟動 Database Engine | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQL Server, 確定是否已安裝"
-  - "驗證 Database Engine 安裝"
-  - "檢視 Database Engine 安裝"
-  - "已安裝的 Database Engine 驗證 [SQL Server]"
+title: "判斷是否已安裝及啟動資料庫引擎 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Server, determining if installed
+- verifying Database Engine installation
+- viewing Database Engine installation
+- installed Database Engine verification [SQL Server]
 ms.assetid: babb02e4-3521-4b75-b5df-e09205594375
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 93b3736aa15a7e4fc7e7a1df829b96a0efa5ba19
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 判斷是否已安裝及啟動 Database Engine
-  只要成功安裝 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]，就會將檔案安裝至檔案系統、在登錄中建立項目並安裝許多工具。 此主題描述如何使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 組態管理員，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中確認 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是否已安裝並啟動。  
+# <a name="determine-whether-the-database-engine-is-installed-and-started"></a>判斷是否已安裝及啟動 Database Engine
+  只要成功安裝 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ，就會將檔案安裝至檔案系統、在登錄中建立項目並安裝許多工具。 此主題描述如何使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 組態管理員，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中確認 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是否已安裝並啟動。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server 組態管理員  
   
-#### 如何使用 SQL Server 組態管理員來檢視並啟動 Database Engine  
+#### <a name="how-to-view-and-start-the-database-engine-by-using-sql-server-configuration-manager"></a>如何使用 SQL Server 組態管理員來檢視並啟動 Database Engine  
   
 1.  按一下 [開始]，依序指向 [所有程式]、[Microsoft SQL Server] 和 [組態工具]，然後按一下 [SQL Server 組態管理員]。  
   

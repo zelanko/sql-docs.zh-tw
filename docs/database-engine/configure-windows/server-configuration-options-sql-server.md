@@ -1,56 +1,61 @@
 ---
 title: "伺服器組態選項 (SQL Server) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-keywords: 
-  - "伺服器組態 (SQL Server)"
-helpviewer_keywords: 
-  - "介面區組態 [SQL Server], sp_configure"
-  - "組態選項 [SQL Server], 何時生效"
-  - "伺服器管理 [SQL Server], 組態選項"
-  - "SQL Server Management Studio [SQL Server], 伺服器"
-  - "伺服器 [SQL Server], 設定"
-  - "組態選項 [SQL Server], 設定"
-  - "選項 [SQL Server], 組態"
-  - "RECONFIGURE 陳述式"
-  - "效能 [SQL Server], 伺服器"
-  - "組態選項 [SQL Server]"
-  - "RECONFIGURE WITH OVERRIDE 陳述式"
-  - "SQL Server, 設定"
-  - "sp_configure"
-  - "預存程序 [SQL Server], 組態選項"
-  - "伺服器組態 [SQL Server]"
-  - "管理 SQL Server, 組態選項"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 04/13/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+keywords:
+- "伺服器組態 (SQL Server)"
+helpviewer_keywords:
+- surface area configuration [SQL Server], sp_configure
+- configuration options [SQL Server], when take effect
+- server management [SQL Server], configuration options
+- SQL Server Management Studio [SQL Server], servers
+- servers [SQL Server], configuring
+- configuration options [SQL Server], setting
+- options [SQL Server], configuration
+- RECONFIGURE statement
+- performance [SQL Server], servers
+- configuration options [SQL Server]
+- RECONFIGURE WITH OVERRIDE statement
+- SQL Server, configuring
+- sp_configure
+- stored procedures [SQL Server], configuration options
+- server configuration [SQL Server]
+- administering SQL Server, configuration options
 ms.assetid: 9f38eba6-39b1-4f1d-ba24-ee4f7e2bc969
 caps.latest.revision: 128
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 128
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: e5fd7bae9ba05669af1b21a931b39aba3132e25e
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 伺服器組態選項 (SQL Server)
+# <a name="server-configuration-options-sql-server"></a>伺服器組態選項 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 sp_configure 系統預存程序，透過組態選項來管理及最佳化 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 資源。 最常使用的伺服器組態選項可以透過 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來使用，而所有組態選項都可以透過 sp_configure 來存取。 在設定這些選項前，請仔細考慮這些選項對系統所造成的效果。 如需詳細資訊，請參閱[檢視或變更伺服器屬性 &#40;SQL Server&#41;](../../database-engine/configure-windows/view-or-change-server-properties-sql-server.md)。  
+  您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 sp_configure 系統預存程序，透過組態選項來管理及最佳化 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 資源。 最常使用的伺服器組態選項可以透過 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]來使用，而所有組態選項都可以透過 sp_configure 來存取。 在設定這些選項前，請仔細考慮這些選項對系統所造成的效果。 如需詳細資訊，請參閱[檢視或變更伺服器屬性 &#40;SQL Server&#41;](../../database-engine/configure-windows/view-or-change-server-properties-sql-server.md)。  
   
->**重要事項！** 只有有經驗的資料庫管理員或通過認證的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 技術人員，才可變更進階選項。  
+>**重要！！** 只有有經驗的資料庫管理員或通過認證的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 技術人員，才可變更進階選項。  
   
-## 設定選項的範疇  
+## <a name="categories-of-configuration-options"></a>設定選項的範疇  
  設定選項的生效方式可能是其中之一：  
   
 -   在設定選項並發出 **RECONFIGURE** 陳述式 (在某些情況下是 **RECONFIGURE WITH OVERRIDE**) 後立即生效。 重新設定特定選項會使得計畫快取的計畫無效，以致編譯新計畫。 如需詳細資訊，請參閱 [DBCC FREEPROCCACHE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md)。
   
      -或-  
   
--   執行上述動作並重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體後。
+-   執行上述動作並重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體後。
   
 需要重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的選項最初只會在 value 資料行中顯示變更後的值。 重新啟動之後，新值將同時出現在 value 資料行及 value_in_use 資料行。  
   
@@ -58,12 +63,12 @@ caps.handback.revision: 128
   
 自我設定的選項是指 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會根據系統需要而自行調整的選項。 在大多數情況下，都不需以手動方式來設定這些值。 範例包括 **min server memory** 與 **max server memory** 選項，以及 user connections 選項。  
   
-## 組態選項表  
+## <a name="configuration-options-table"></a>組態選項表  
  下表列出所有可用的組態選項、可能的設定範圍以及預設值。 組態選項會加上字母標示，如下所示：  
   
 -   A= 進階選項，只能由有經驗的資料庫管理員或通過認證的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 技術人員來變更，而且必須將 show advanced 選項設定為 1。  
   
--   RR = 需要重新啟動 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的選項。  
+-   RR = 需要重新啟動 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的選項。  
   
 -   RP = 需要重新啟動 PolyBase 引擎的選項。  
   
@@ -75,10 +80,10 @@ caps.handback.revision: 128
     |[access check cache quota](../../database-engine/configure-windows/access-check-cache-server-configuration-options.md) (A)|0|2147483647|0|  
     |[ad hoc distributed queries](../../database-engine/configure-windows/ad-hoc-distributed-queries-server-configuration-option.md) (A)|0|1|0|  
     |[affinity I/O mask](../../database-engine/configure-windows/affinity-input-output-mask-server-configuration-option.md) (A、RR)|-2147483648|2147483647|0|  
-    |[affinity64 I/O mask](../../database-engine/configure-windows/affinity64-input-output-mask-server-configuration-option.md) (A，只能在 64 位元版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上使用)|-2147483648|2147483647|0|  
+    |[affinity64 I/O mask](../../database-engine/configure-windows/affinity64-input-output-mask-server-configuration-option.md) (A，只能在 64 位元版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上使用)|-2147483648|2147483647|0|  
     |[affinity mask](../../database-engine/configure-windows/affinity-mask-server-configuration-option.md) (A)|-2147483648|2147483647|0|  
     |[affinity64 mask](../../database-engine/configure-windows/affinity64-mask-server-configuration-option.md) (A、RR)，只能用於 64 位元版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|-2147483648|2147483647|0|  
-    |[Agent XPs](../../database-engine/configure-windows/agent-xps-server-configuration-option.md) (A)|0|1|0<br /><br /> ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 啟動時將變成 1。 如果在安裝期間將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 設定為自動啟動，預設值就是 0)。|  
+    |[Agent XPs](../../database-engine/configure-windows/agent-xps-server-configuration-option.md) (A)|0|1|0<br /><br /> ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 啟動時將變成 1。 如果在安裝期間將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 設定為自動啟動，預設值就是 0)。|  
     |[allow updates](../../database-engine/configure-windows/allow-updates-server-configuration-option.md) (已過時。 請勿使用。 否則會在重新設定期間導致錯誤)。|0|1|0|  
     |[停用自動軟體 NUMA](http://msdn.microsoft.com/library/ms345357.aspx)|0|1|0|  
     |[備份總和檢查碼預設](../../database-engine/configure-windows/backup-checksum-default.md)|0|1|0|  
@@ -86,6 +91,7 @@ caps.handback.revision: 128
     |[已封鎖的處理序臨界值](../../database-engine/configure-windows/blocked-process-threshold-server-configuration-option.md) (A)|0|86400|0|  
     |[c2 audit mode](../../database-engine/configure-windows/c2-audit-mode-server-configuration-option.md) (A、RR)|0|1|0|  
     |[clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)|0|1|0|  
+    |[CLR 嚴格安全性](../../database-engine/configure-windows/clr-strict-security.md) (A) <br /> **適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 至 [目前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658)。 |0|1|0|  
     |[common criteria compliance enabled](../../database-engine/configure-windows/common-criteria-compliance-enabled-server-configuration-option.md) (A、RR)|0|1|0|  
     |[自主資料庫驗證](../../database-engine/configure-windows/contained-database-authentication-server-configuration-option.md)|0|1|0|  
     |[平行處理原則的成本臨界值](../../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md) (A)|0|32767|5|  
@@ -97,7 +103,7 @@ caps.handback.revision: 128
     |[預設追蹤已啟用](../../database-engine/configure-windows/default-trace-enabled-server-configuration-option.md) (A)|0|1|1|  
     |[不允許來自觸發程序的結果](../../database-engine/configure-windows/disallow-results-from-triggers-server-configuration-option.md) (A)|0|1|0|  
     |[EKM provider enabled](../../database-engine/configure-windows/ekm-provider-enabled-server-configuration-option.md)|0|1|0|  
-    |[啟用外部指令碼](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md) (RR)<br /><br /> **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [目前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658)。|0|1|0|  
+    |[啟用外部指令碼](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md) (RR)<br /><br /> **適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [目前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658)。|0|1|0|  
     |[filestream_access_level](../../database-engine/configure-windows/filestream-access-level-server-configuration-option.md)|0|2|0|  
     |[fill factor](../../database-engine/configure-windows/configure-the-fill-factor-server-configuration-option.md) (A、RR)|0|100|0|  
     |ft crawl bandwidth (max)，請參閱 [ft crawl bandwidth](../../database-engine/configure-windows/ft-crawl-bandwidth-server-configuration-option.md)(A)|0|32767|100|  
@@ -112,7 +118,7 @@ caps.handback.revision: 128
     |[max full-text crawl range](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md) (A)|0|256|4|  
     |[max server memory](../../database-engine/configure-windows/server-memory-server-configuration-options.md) (A、SC)|16|2147483647|2147483647|  
     |[max text repl size](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md)|0|2147483647|65536|  
-    |[max worker threads](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md) (A)|128|32767<br /><br /> (1024 是 32 位元 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的最大建議值，64 位元 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 則為 2048。)([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 是 32 位元作業系統上可用的最後一個版本。)|0<br /><br /> 零表示自動設定最大的工作者執行緒數目，而這個數目是根據處理器數目，透過用於 32 位元 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的公式 (256+(*\<處理器>* -4) * 8) 來決定，而 64 位元 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 則為該數目的兩倍。 ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 是 32 位元作業系統上可用的最後一個版本。)|  
+    |[max worker threads](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md) (A)|128|32767<br /><br /> (1024 是 32 位元 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的最大建議值，64 位元 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]則為 2048。)([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 是 32 位元作業系統上可用的最後一個版本。)|0<br /><br /> 零表示自動設定最大的工作者執行緒數目，而這個數目是根據處理器數目，透過用於 32 位元 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的公式 (256+(\<處理器> -4) * 8) 來決定，而 64 位元 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 則為該數目的兩倍。 ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 是 32 位元作業系統上可用的最後一個版本。)|  
     |[media retention](../../database-engine/configure-windows/configure-the-media-retention-server-configuration-option.md) (A、RR)|0|365|0|  
     |[min memory per query](../../database-engine/configure-windows/configure-the-min-memory-per-query-server-configuration-option.md) (A)|512|2147483647|1024|  
     |[min server memory](../../database-engine/configure-windows/server-memory-server-configuration-options.md) (A、SC)|0|2147483647|0|  
@@ -122,7 +128,7 @@ caps.handback.revision: 128
     |[open objects](../../database-engine/configure-windows/open-objects-server-configuration-option.md) (A、RR，已過時)|0|2147483647|0|  
     |[optimize for ad hoc workloads](../../database-engine/configure-windows/optimize-for-ad-hoc-workloads-server-configuration-option.md) (A)|0|1|0|  
     |[PH_timeout](../../database-engine/configure-windows/ph-timeout-server-configuration-option.md) (A)|1|3600|60|  
-    |[PolyBase Hadoop and Azure blob storage](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md) (RP)<br /><br /> **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至[目前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658)。|0|7|0|   
+    |[PolyBase Hadoop and Azure blob storage](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md) (RP)<br /><br /> **適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [目前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658)。|0|7|0|   
     |[precompute rank](../../database-engine/configure-windows/precompute-rank-server-configuration-option.md) (A)|0|1|0|  
     |[priority boost](../../database-engine/configure-windows/configure-the-priority-boost-server-configuration-option.md) (A、RR)|0|1|0|  
     |[query governor cost limit](../../database-engine/configure-windows/configure-the-query-governor-cost-limit-server-configuration-option.md) (A)|0|2147483647|0|  
@@ -146,9 +152,10 @@ caps.handback.revision: 128
     |[user options](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md)|0|32767|0|  
     |[xp_cmdshell](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md) (A)|0|1|0|  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)  
  [DBCC FREEPROCCACHE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md)
   
   
+

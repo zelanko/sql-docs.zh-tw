@@ -1,31 +1,36 @@
 ---
 title: "設定可用性複本上的唯讀存取 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "可用性複本的連接存取"
-  - "可用性群組 [SQL Server], 可讀取次要複本"
-  - "使用中次要複本 [SQL Server], 唯讀存取"
-  - "可用性群組 [SQL Server], 唯讀路由"
-  - "可用性群組 [SQL Server], 用戶端連接性"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- connection access to availability replicas
+- Availability Groups [SQL Server], readable secondary replicas
+- active secondary replicas [SQL Server], read-only access to
+- Availability Groups [SQL Server], read-only routing
+- Availability Groups [SQL Server], client connectivity
 ms.assetid: 22387419-22c4-43fa-851c-5fecec4b049b
 caps.latest.revision: 35
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: ad04708d680bc716c971fa5e24c304b5516d56a8
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 設定可用性複本上的唯讀存取 (SQL Server)
-  預設允許與主要複本之間的讀寫和讀取意圖的存取，但是不允許連接 AlwaysOn 可用性群組的次要複本。 本主題說明如何藉由使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 PowerShell，針對 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中 AlwaysOn 可用性群組的可用性複本設定連接存取。  
+# <a name="configure-read-only-access-on-an-availability-replica-sql-server"></a>設定可用性複本上的唯讀存取 (SQL Server)
+  預設允許與主要複本之間的讀寫和讀取意圖的存取，但是不允許連接 AlwaysOn 可用性群組的次要複本。 本主題說明如何藉由使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或 PowerShell，針對 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中 AlwaysOn 可用性群組的可用性複本設定連接存取。  
   
- 如需針對次要複本啟用唯讀存取的含意資訊，以及連接存取簡介，請參閱[關於可用性複本的用戶端連接存取 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)和[使用中次要：可讀取的次要複本 &#40;AlwaysOn 可用性群組&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)。  
+ 如需針對次要複本啟用唯讀存取的含意資訊，以及連接存取簡介，請參閱 [關於可用性複本的用戶端連接存取 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md) 和 [使用中次要：可讀取的次要複本 &#40;AlwaysOn 可用性群組&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)。  
   
 -   **開始之前：**  
   
@@ -98,7 +103,7 @@ caps.handback.revision: 35
  **若要設定可用性複本的存取**  
   
 > [!NOTE]  
->  如需這個程序的範例，請參閱本節稍後的[範例 &#40;Transact-SQL&#41;](#TsqlExample)。  
+>  如需這個程序的範例，請參閱本節稍後的 [範例 &amp;#40;Transact-SQL&amp;#41;](#TsqlExample)。  
   
 1.  連接到裝載主要複本的伺服器執行個體。  
   
@@ -110,7 +115,7 @@ caps.handback.revision: 35
   
          其中  
   
-         NO  
+         否  
          不允許直接連接這個複本的次要資料庫。 無法讀取這些資料庫。 這是預設值。  
   
          READ_ONLY  
@@ -131,7 +136,7 @@ caps.handback.revision: 35
      ALL  
      主要複本的資料庫允許所有連接。 這是預設值。  
   
-###  <a name="TsqlExample"></a> 範例 (Transact-SQL)  
+###  <a name="TsqlExample"></a> 範例 &amp;#40;Transact-SQL&amp;#41;  
  下列範例會將次要複本加入名為 *AG2*的可用性群組。 接著指定一個獨立伺服器執行個體 *COMPUTER03\HADR_INSTANCE*，以裝載新的可用性複本。 將此複本設定為只允許主要角色的讀寫連接以及只允許次要角色的讀取意圖連接。  
   
 ```  
@@ -150,7 +155,7 @@ GO
  **若要設定可用性複本的存取**  
   
 > [!NOTE]  
->  如需程式碼範例，請參閱本節稍後的[範例 (PowerShell)](#PSExample)。  
+>  如需程式碼範例，請參閱本節稍後的 [範例 (PowerShell)](#PSExample)。  
   
 1.  將目錄 (**cd**) 變更為裝載主要複本的伺服器執行個體。  
   
@@ -162,12 +167,12 @@ GO
          不允許直接連接次要複本的資料庫，這些資料庫也不可用於讀取存取。 這是預設值。  
   
          **AllowReadIntentConnectionsOnly**  
-         次要複本的資料庫只允許 Application Intent 屬性設為 **ReadOnly** 的連接。 如需有關這個屬性的詳細資訊，請參閱＜ [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)＞。  
+         次要複本的資料庫只允許 Application Intent 屬性設為 **ReadOnly**的連接。 如需有關這個屬性的詳細資訊，請參閱＜ [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)＞。  
   
          **AllowAllConnections**  
          次要複本的資料庫允許所有連接進行唯讀存取。  
   
-    -   若要設定主要角色的連接存取，請指定 **ConnectionModeInPrimaryRole***primary_role_keyword* 參數，其中 *primary_role_keyword* 等於下列值之一︰  
+    -   若要設定主要角色的連接存取，請指定 **ConnectionModeInPrimaryRole***primary_role_keyword*參數，其中 *primary_role_keyword* 等於下列值之一︰  
   
          **AllowReadWriteConnections**  
          不允許 Application Intent 連接屬性設為 ReadOnly 的連接。 當 Application Intent 屬性設為 ReadWrite 或是未設定 Application Intent 連接屬性時，便會允許連接。 如需有關 Application Intent 連接屬性的詳細資訊，請參閱＜ [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)＞。  
@@ -176,7 +181,7 @@ GO
          主要複本的資料庫允許所有連接。 這是預設值。  
   
     > [!NOTE]  
-    >  若要檢視 Cmdlet 的語法，請在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] PowerShell 環境中使用 **Get-Help** Cmdlet。 如需詳細資訊，請參閱 [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)。  
+    >  若要檢視 Cmdlet 的語法，請在 **PowerShell 環境中使用** Get-Help [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Cmdlet。 如需詳細資訊，請參閱 [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)。  
   
  **若要設定和使用 SQL Server PowerShell 提供者**  
   
@@ -198,14 +203,14 @@ Set-SqlAvailabilityReplica -ConnectionModeInPrimaryRole "AllowAllConnections" `
 ##  <a name="FollowUp"></a> 後續操作：針對可用性複本設定唯讀存取之後  
  **可讀取的次要複本的唯讀存取**  
   
--   當您使用 [bcp 公用程式](../../../tools/bcp-utility.md)或 [sqlcmd 公用程式](../../../tools/sqlcmd-utility.md)時，您可以藉由指定 **-K ReadOnly** 參數，為啟用唯讀存取的任何次要複本指定唯讀存取。  
+-   當您使用 [bcp 公用程式](../../../tools/bcp-utility.md) 或 [sqlcmd 公用程式](../../../tools/sqlcmd-utility.md)時，您可以藉由指定 **-K ReadOnly** 參數，為啟用唯讀存取的任何次要複本指定唯讀存取。  
   
 -   若要啟用用戶端應用程式以連接到可讀取的次要副本：  
   
     ||必要條件|連結|  
     |-|------------------|----------|  
-    |![Checkbox](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|確定可用性群組擁有接聽程式。|[建立或設定可用性群組接聽程式 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)|  
-    |![Checkbox](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|設定可用性群組的唯讀路由。|[設定可用性群組的唯讀路由 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)|  
+    |![核取方塊](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|確定可用性群組擁有接聽程式。|[建立或設定可用性群組接聽程式 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)|  
+    |![核取方塊](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|設定可用性群組的唯讀路由。|[設定可用性群組的唯讀路由 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)|  
   
  **容錯移轉之後可能會影響觸發程序和作業的因素**  
   
@@ -245,9 +250,10 @@ DATABASEPROPERTYEX([db name],’Updatability’) = N’READ_ONLY’
   
 -   [AlwaysOn：可讀取次要功能和資料延遲](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/Always%20On.aspx)  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [AlwaysOn 可用性群組概觀 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [使用中次要：可讀取的次要複本 &#40;AlwaysOn 可用性群組&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
  [關於可用性複本的用戶端連接存取 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)  
   
   
+

@@ -1,35 +1,40 @@
 ---
-title: "可用性群組屬性：新增可用性群組 (備份喜好設定頁面) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.availabilitygroupproperties.backuppreferences.f1"
-helpviewer_keywords: 
-  - "唯讀路由"
+title: "屬性：新增可用性群組 (備份喜好設定頁面) | Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.availabilitygroupproperties.backuppreferences.f1
+helpviewer_keywords:
+- read-only routing
 ms.assetid: 65fff22d-5963-4a8c-8b31-fe9ab247a03e
 caps.latest.revision: 7
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: c1eccc3d7673f6c8e7f127deda45e9f409447585
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 可用性群組屬性：新增可用性群組 (備份喜好設定頁面)
+# <a name="availability-group-properties-new-availability-group-backup-preferences-page"></a>可用性群組屬性：新增可用性群組 (備份喜好設定頁面)
   使用此對話方塊可以檢視和變更所選可用性群組的備份喜好設定。  
   
  **若要檢視可用性群組屬性**  
   
 -   [檢視可用性群組屬性 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/view-availability-group-properties-sql-server.md)  
   
--   [使用 AlwaysOn 儀表板 &#40;SQL Server Management Studio&#41;](../Topic/Use%20the%20Always On%20Dashboard%20\(SQL%20Server%20Management%20Studio\).md)  
+-   [使用 AlwaysOn 儀表板 &#40;SQL Server Management Studio&#41;](~/database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
   
-## 執行備份的位置  
+## <a name="where-should-backups-occur"></a>執行備份的位置  
  **慣用次要**  
  指定應該在次要複本上進行備份，但是主要複本是唯一線上複本的情況例外。 在此情況下，應該在主要複本上進行備份。 這是預設選項。  
   
@@ -43,9 +48,9 @@ caps.handback.revision: 7
  指定當您選擇要執行備份的複本時，您希望備份作業忽略可用性複本的角色。 請注意，備份作業可能會評估其他因素，例如每個可用性複本的備份優先權，搭配其操作狀態和連接狀態。  
   
 > [!IMPORTANT]  
->  不會強制執行備份喜好設定。 這個喜好設定的解譯取決於您在給定可用性群組之資料庫的備份作業中所編寫的邏輯 (如果有的話)。 如需詳細資訊，請參閱[使用中次要：在次要複本上備份 &#40;AlwaysOn 可用性群組&#41;](../Topic/Active%20Secondaries:%20Backup%20on%20Secondary%20Replicas%20\(Always On%20Availability%20Groups\).md)。  
+>  不會強制執行備份喜好設定。 這個喜好設定的解譯取決於您在給定可用性群組之資料庫的備份作業中所編寫的邏輯 (如果有的話)。 如需詳細資訊，請參閱 [使用中次要：在次要複本上備份 &#40;AlwaysOn 可用性群組&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)。  
   
-## 複本備份優先權  
+## <a name="replica-backup-priorities"></a>複本備份優先權  
  此方格顯示裝載可用性群組複本的每個伺服器執行個體的目前備份優先權。 您可以使用此方格變更一個或多個可用性複本的備份優先權。  
   
  **伺服器執行個體**  
@@ -57,8 +62,10 @@ caps.handback.revision: 7
  **排除複本**  
  決定是否絕對不要選擇這個可用性複本來執行備份。 例如，這對於您永遠不希望將備份容錯移轉到其中的遠端可用性複本十分有用。  
   
-## 另請參閱  
- [使用中次要：在次要複本上備份 &#40;AlwaysOn 可用性群組&#41;](../Topic/Active%20Secondaries:%20Backup%20on%20Secondary%20Replicas%20\(Always On%20Availability%20Groups\).md)   
+## <a name="see-also"></a>另請參閱  
+ [使用中次要：在次要複本上備份 &#40;AlwaysOn 可用性群組&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)   
  [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)  
   
   
+
+

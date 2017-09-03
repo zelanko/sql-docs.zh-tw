@@ -1,29 +1,34 @@
 ---
 title: "將次要複本聯結至可用性群組 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.availabilitygroup.joinreplica.f1"
-helpviewer_keywords: 
-  - "可用性群組 [SQL Server], 可用性複本"
-  - "可用性群組 [SQL Server], 聯結"
-  - "可用性群組 [SQL Server], 設定"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.availabilitygroup.joinreplica.f1
+helpviewer_keywords:
+- Availability Groups [SQL Server], availability replicas
+- Availability Groups [SQL Server], joining
+- Availability Groups [SQL Server], configuring
 ms.assetid: e5bd2489-097a-490e-8ea1-34fe48378ad1
 caps.latest.revision: 41
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 3910ccc8cffbfb261846cf604617bc73f11040e8
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 將次要複本聯結至可用性群組 (SQL Server)
-  此主題描述如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中的 PowerShell，將次要複本聯結至 Always On 可用性群組。 當次要複本加入至 Always On 可用性群組之後，此次要複本必須聯結至可用性群組。 聯結複本作業必須在裝載次要複本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體上執行。  
+# <a name="join-a-secondary-replica-to-an-availability-group-sql-server"></a>將次要複本聯結至可用性群組 (SQL Server)
+  此主題描述如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]或 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中的 PowerShell，將次要複本聯結至 Always On 可用性群組。 當次要複本加入至 Always On 可用性群組之後，此次要複本必須聯結至可用性群組。 聯結複本作業必須在裝載次要複本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體上執行。  
   
 -   **開始之前：**  
   
@@ -81,9 +86,9 @@ caps.handback.revision: 41
   
 2.  使用 [ALTER AVAILABILITY GROUP](../../../t-sql/statements/alter-availability-group-transact-sql.md) 陳述式，如下所示：  
   
-     ALTER AVAILABILITY GROUP \<群組名稱> JOIN  
+     ALTER AVAILABILITY GROUP <群組名稱> JOIN  
   
-     其中 \<群組名稱> 是可用性群組的名稱。  
+     其中 <群組名稱> 是可用性群組的名稱。  
   
      下列範例會將次要複本加入至 `MyAG` 可用性群組。  
   
@@ -92,7 +97,7 @@ caps.handback.revision: 41
     ```  
   
     > [!NOTE]  
-    >  若要查看內容中使用的這個 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式，請參閱[建立可用性群組和 &#40;Transact-SQL&#41;](../../../database-engine/availability-groups/windows/create-an-availability-group-transact-sql.md)。  
+    >  若要查看內容中使用的這個 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式，請參閱 [建立可用性群組和 &#40;Transact-SQL&#41;](../../../database-engine/availability-groups/windows/create-an-availability-group-transact-sql.md)。  
   
 ##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
  **若要將可用性複本聯結至可用性群組**  
@@ -103,14 +108,14 @@ caps.handback.revision: 41
   
 2.  使用可用性群組的名稱執行 **Join-SqlAvailabilityGroup** Cmdlet，將次要複本聯結至可用性群組。  
   
-     例如，下列命令會將位於指定路徑之伺服器執行個體所裝載的次要複本聯結至名為 `MyAg` 的可用性群組。  這個伺服器執行個體必須裝載這個可用性群組中的次要複本。  
+     例如，下列命令會將位於指定路徑之伺服器執行個體所裝載的次要複本聯結至名為 `MyAg`的可用性群組。  這個伺服器執行個體必須裝載這個可用性群組中的次要複本。  
   
     ```  
     Join-SqlAvailabilityGroup -Path SQLSERVER:\SQL\SecondaryServer\InstanceName -Name 'MyAg'  
     ```  
   
     > [!NOTE]  
-    >  若要檢視 Cmdlet 的語法，請在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 環境中使用 **Get-Help** Cmdlet。 如需詳細資訊，請參閱 [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)。  
+    >  若要檢視 Cmdlet 的語法，請在 **PowerShell 環境中使用** Get-Help [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Cmdlet。 如需詳細資訊，請參閱 [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)。  
   
  **若要設定和使用 SQL Server PowerShell 提供者**  
   
@@ -123,9 +128,10 @@ caps.handback.revision: 41
   
 2.  將每一個次要資料庫加入可用性群組。 如需詳細資訊，請參閱[將次要資料庫聯結至可用性群組 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md)。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [建立及設定可用性群組 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)   
- [Always On 可用性群組概觀 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [疑難排解 Always On 可用性群組組態 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
+ [AlwaysOn 可用性群組概觀 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
+ [疑難排解 AlwaysOn 可用性群組組態 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
   
   
+

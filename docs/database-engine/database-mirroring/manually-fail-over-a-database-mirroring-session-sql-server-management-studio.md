@@ -1,29 +1,34 @@
 ---
 title: "手動容錯移轉資料庫鏡像工作階段 (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "容錯移轉 [SQL Server], 資料庫鏡像"
-  - "手動容錯移轉 [SQL Server]"
-  - "資料庫鏡像 [SQL Server], 容錯移轉"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- failover [SQL Server], database mirroring
+- manual failover [SQL Server]
+- database mirroring [SQL Server], failover
 ms.assetid: 4ecf9c63-b3a4-4c54-b553-5bc37973232b
 caps.latest.revision: 32
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 435dc6a75dc991d618d6dcec6ea072f889d0a0ce
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 手動容錯移轉資料庫鏡像工作階段 (SQL Server Management Studio)
+# <a name="manually-fail-over-a-database-mirroring-session-sql-server-management-studio"></a>手動容錯移轉資料庫鏡像工作階段 (SQL Server Management Studio)
   鏡像資料庫已同步處理時 (亦即，資料庫為 SYNCHRONIZED 狀態時)，資料庫擁有者可以初始化至鏡像伺服器的手動容錯移轉。  
   
- 在手動容錯移轉期間，會針對發生容錯移轉的資料庫互換主體伺服器和鏡像伺服器角色。 鏡像資料庫變成主體資料庫，而主體資料庫變成鏡像。 例如，下表顯示手動容錯移轉如何互換這兩個鏡像夥伴 (`SQLDBENGINE0_1` 和 `SQLDBENGINE0_2`) 的角色。  
+ 在手動容錯移轉期間，會針對發生容錯移轉的資料庫互換主體伺服器和鏡像伺服器角色。 鏡像資料庫變成主體資料庫，而主體資料庫變成鏡像。 例如，下表顯示手動容錯移轉如何互換這兩個鏡像夥伴 ( `SQLDBENGINE0_1` 和 `SQLDBENGINE0_2`) 的角色。  
   
 |Server|容錯移轉前|容錯移轉後|  
 |------------|---------------------|--------------------|  
@@ -32,7 +37,7 @@ caps.handback.revision: 32
   
  請注意，其他資料庫鏡像工作階段的伺服器角色不受影響。 如需詳細資訊，請參閱[資料庫鏡像工作階段期間的角色切換 &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)。  
   
-### 若要手動容錯移轉資料庫鏡像  
+### <a name="to-manually-fail-over-database-mirroring"></a>若要手動容錯移轉資料庫鏡像  
   
 1.  連接到主體伺服器執行個體，在 **[物件總管]** 窗格中按一下伺服器名稱，以展開伺服器樹狀目錄。  
   
@@ -53,7 +58,7 @@ caps.handback.revision: 32
   
      對話方塊會自動關閉。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [資料庫屬性 &#40;鏡像頁面&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   
  [資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [手動容錯移轉資料庫鏡像工作階段 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/manually-fail-over-a-database-mirroring-session-transact-sql.md)   

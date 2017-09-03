@@ -1,31 +1,36 @@
 ---
 title: "記錄傳送資料表與預存程序 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "次要伺服器 [SQL Server]"
-  - "監視伺服器 [SQL Server]"
-  - "記錄傳送 [SQL Server]，系統資料表"
-  - "記錄傳送 [SQL Server]，預存程序"
-  - "主要伺服器 [SQL Server]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- secondary servers [SQL Server]
+- monitor servers [SQL Server]
+- log shipping [SQL Server], system tables
+- log shipping [SQL Server], stored procedures
+- primary servers [SQL Server]
 ms.assetid: 03420810-4c38-4c0c-adf0-913eb044c50a
 caps.latest.revision: 20
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 25b36ec7a049001e54726e37024c392f71cd07ab
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 記錄傳送資料表與預存程序
+# <a name="log-shipping-tables-and-stored-procedures"></a>記錄傳送資料表與預存程序
   此主題描述與記錄傳送設定關聯的所有資料表與預存程序。 所有記錄傳送資料表都儲存在每部伺服器上的 **msdb** 中。 下表描述在記錄傳送設定中，會在哪部伺服器上使用哪些資料表與預存程序。  
   
-## 主要伺服器資料表  
+## <a name="primary-server-tables"></a>主要伺服器資料表  
   
 |Table|描述|  
 |-----------|-----------------|  
@@ -36,7 +41,7 @@ caps.handback.revision: 20
 |[log_shipping_primary_databases](../../relational-databases/system-tables/log-shipping-primary-databases-transact-sql.md)|包含特定伺服器上主要資料庫的組態資訊。 每個主要資料庫儲存一列。|  
 |[log_shipping_primary_secondaries](../../relational-databases/system-tables/log-shipping-primary-secondaries-transact-sql.md)|對應主要資料庫到次要資料庫。|  
   
-## 主要伺服器預存程序  
+## <a name="primary-server-stored-procedures"></a>主要伺服器預存程序  
   
 |預存程序|描述|  
 |----------------------|-----------------|  
@@ -50,7 +55,7 @@ caps.handback.revision: 20
 |[sp_help_log_shipping_primary_secondary](../../relational-databases/system-stored-procedures/sp-help-log-shipping-primary-secondary-transact-sql.md)|擷取主要資料庫的次要資料庫名稱。|  
 |[sp_refresh_log_shipping_monitor](../../relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql.md)|替指定的記錄傳送代理程式以最新資訊重新整理監視器。|  
   
-## 次要伺服器資料表  
+## <a name="secondary-server-tables"></a>次要伺服器資料表  
   
 |Table|描述|  
 |-----------|-----------------|  
@@ -64,7 +69,7 @@ caps.handback.revision: 20
 > [!NOTE]  
 >  與特定主要資料庫位於相同次要伺服器上的次要資料庫，會共用 **log_shipping_secondary** 資料表中的設定。 若針對一個次要資料庫變更共用設定，則對於其他資料庫而言該設定也會變更。  
   
-## 次要伺服器預存程序  
+## <a name="secondary-server-stored-procedures"></a>次要伺服器預存程序  
   
 |預存程序|描述|  
 |----------------------|-----------------|  
@@ -75,11 +80,11 @@ caps.handback.revision: 20
 |[sp_cleanup_log_shipping_history](../../relational-databases/system-stored-procedures/sp-cleanup-log-shipping-history-transact-sql.md)|根據保留期限，在本機和監視器上清除記錄。|  
 |[sp_delete_log_shipping_secondary_database](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-secondary-database-transact-sql.md)|移除次要資料庫，以及本機記錄和遠端記錄。|  
 |[sp_delete_log_shipping_secondary_primary](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-secondary-primary-transact-sql.md)|從次要伺服器移除與指定之主要伺服器相關的資訊。|  
-|[sp_help_log_shipping_secondary_database](../../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql.md)|從 **log_shipping_secondary**、**log_shipping_secondary_databases** 和 **log_shipping_monitor_secondary** 資料表擷取次要資料庫的設定。|  
+|[sp_help_log_shipping_secondary_database](../../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql.md)|從 **log_shipping_secondary**、 **log_shipping_secondary_databases**和 **log_shipping_monitor_secondary** 資料表擷取次要資料庫的設定。|  
 |[sp_help_log_shipping_secondary_primary](../../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-primary-transact-sql.md)|這個預存程序會擷取次要伺服器上所指定主要資料庫的設定。|  
 |[sp_refresh_log_shipping_monitor](../../relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql.md)|替指定的記錄傳送代理程式以最新資訊重新整理監視器。|  
   
-## 監視伺服器資料表  
+## <a name="monitor-server-tables"></a>監視伺服器資料表  
   
 |Table|描述|  
 |-----------|-----------------|  
@@ -89,7 +94,7 @@ caps.handback.revision: 20
 |[log_shipping_monitor_primary](../../relational-databases/system-tables/log-shipping-monitor-primary-transact-sql.md)|儲存與此監視伺服器關聯之主要資料庫的一筆監視記錄。|  
 |[log_shipping_monitor_secondary](../../relational-databases/system-tables/log-shipping-monitor-secondary-transact-sql.md)|儲存與此監視伺服器關聯之次要資料庫的一筆監視記錄。|  
   
-## 監視伺服器預存程序  
+## <a name="monitor-server-stored-procedures"></a>監視伺服器預存程序  
   
 |預存程序|描述|  
 |----------------------|-----------------|  

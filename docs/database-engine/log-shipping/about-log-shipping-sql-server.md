@@ -1,37 +1,42 @@
 ---
 title: "關於記錄傳送 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "次要伺服器 [SQL Server]"
-  - "記錄傳送 [SQL Server], 作業"
-  - "複製作業 [SQL Server]"
-  - "主要資料庫 [SQL Server]"
-  - "記錄傳送 [SQL Server], 監視"
-  - "記錄傳送 [SQL Server], 關於記錄傳送"
-  - "警示作業 [SQL Server]"
-  - "可用性 [SQL Server]"
-  - "作業 [SQL Server], 記錄傳送"
-  - "監視伺服器 [SQL Server]"
-  - "還原作業 [SQL Server]"
-  - "記錄傳送 [SQL Server]"
-  - "備份作業 [SQL Server]"
-  - "主要伺服器 [SQL Server]"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- secondary servers [SQL Server]
+- log shipping [SQL Server], jobs
+- copy jobs [SQL Server]
+- primary databases [SQL Server]
+- log shipping [SQL Server], monitoring
+- log shipping [SQL Server], about log shipping
+- alert jobs [SQL Server]
+- availability [SQL Server]
+- jobs [SQL Server], log shipping
+- monitor servers [SQL Server]
+- restore jobs [SQL Server]
+- log shipping [SQL Server]
+- backup jobs [SQL Server]
+- primary servers [SQL Server]
 ms.assetid: 55da6b94-3a4b-4bae-850f-4bf7f6e918ca
 caps.latest.revision: 65
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 65
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: dd5412ff60f00e648452796423fcf715d8e56168
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 關於記錄傳送 (SQL Server)
+# <a name="about-log-shipping-sql-server"></a>關於記錄傳送 (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記錄傳送可讓您將 *「主要伺服器」* 執行個體上 *「主要資料庫」* 中的交易記錄備份，自動傳送到個別的 *「次要伺服器」* 執行個體上的一個或多個 *「次要資料庫」* 。 交易記錄備份會個別套用到每一個次要資料庫。 第三部選擇性的伺服器執行個體，稱為 *「監視伺服器」*，負責記錄備份和還原作業的記錄與狀態，如果這些作業未依排程進行，還可以選擇性地發出警示。  
   
  **本主題內容：**  
@@ -48,26 +53,26 @@ caps.handback.revision: 65
   
 ##  <a name="Benefits"></a> 優點  
   
--   為單一主要資料庫以及一個或多個次要資料庫 (每個資料庫都位於單獨的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上) 提供災害復原方案。  
+-   為單一主要資料庫以及一個或多個次要資料庫 (每個資料庫都位於單獨的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體上) 提供災害復原方案。  
   
 -   支援對次要資料庫的有限唯讀存取 (在還原作業之間的間隔期間)。  
   
 -   可讓使用者指定在主要伺服器備份主要資料庫的記錄檔之後，延遲多久次要伺服器才必須還原 (套用) 記錄備份。 長時間的延遲可能會有幫助，例如，當您意外變更了主要資料庫上的資料時。 如果您很快就注意到這項意外變更，延遲便可讓您在次要資料庫反映變更之前，從次要資料庫擷取尚未變更的資料。  
   
 ##  <a name="TermsAndDefinitions"></a> 詞彙和定義  
- 主要伺服器  
+ 「主要資料庫」  
  做為實際執行伺服器的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。  
   
- 主要資料庫  
+ 「主要伺服器」  
  主要伺服器上的資料庫，也就是您要備份至其他伺服器的資料庫。 所有透過 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 進行的記錄傳送組態管理，都是從主要資料庫執行。  
   
- 次要伺服器 (secondary server)  
+ 「次要資料庫」  
  您要在其中保留主要資料庫暖待命副本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。  
   
  次要資料庫  
  主要資料庫的暖待命副本。 次要資料庫可以處於 RECOVERING 狀態或 STANDBY 狀態，讓資料庫提供有限的唯讀存取。  
   
- 監視伺服器 (monitor server)  
+ 「監視伺服器」  
  選擇性的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，可以追蹤記錄傳送的所有詳細資料，包括：  
   
 -   主要資料庫上次備份交易記錄檔的時間。  
@@ -111,7 +116,7 @@ caps.handback.revision: 65
   
  此外，您可以在記錄傳送組態中設定警示。  
   
-### 典型記錄傳送組態  
+### <a name="a-typical-log-shipping-configuration"></a>典型記錄傳送組態  
  下圖顯示的記錄傳送組態含有主要伺服器執行個體、三個次要伺服器執行個體和一個監視伺服器執行個體。 此圖說明備份、複製和還原作業執行的步驟，如下所示：  
   
 1.  主要伺服器執行個體執行備份作業來備份主要資料庫上的交易記錄。 此伺服器執行個體將記錄備份放在主要記錄備份檔中，再將它傳送到備份資料夾。  在此圖中，備份資料夾位於共用目錄— *「備份共用」*。  
@@ -125,9 +130,9 @@ caps.handback.revision: 65
  ![顯示備份、複製與還原作業的組態](../../database-engine/log-shipping/media/ls-typical-configuration.gif "顯示備份、複製與還原作業的組態")  
   
 ##  <a name="Interoperability"></a> 互通性  
- 記錄傳送只能與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的下列功能或元件搭配使用：  
+ 記錄傳送只能與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的下列功能或元件搭配使用：  
   
--   [從記錄傳送移轉至 AlwaysOn 可用性群組的必要條件 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/prereqs migrating log shipping to always on availability groups.md)  
+-   [從記錄傳送移轉至 AlwaysOn 可用性群組的必要條件 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/prereqs-migrating-log-shipping-to-always-on-availability-groups.md)  
   
 -   [資料庫鏡像和記錄傳送 &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-log-shipping-sql-server.md)  
   
@@ -158,7 +163,8 @@ caps.handback.revision: 65
   
 -   [角色切換後針對登入和作業進行管理 &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [AlwaysOn 可用性群組概觀 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   
+

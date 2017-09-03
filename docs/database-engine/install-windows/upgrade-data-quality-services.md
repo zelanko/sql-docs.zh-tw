@@ -1,28 +1,35 @@
 ---
 title: "升級 Data Quality Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 07/24/2017
+ms.prod:
+- sql-server-2016
+- sql-server-2017
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f396666b-7754-4efc-9507-0fd114cc32d5
 caps.latest.revision: 12
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 7761be949dc472e05d1f5c4cb7f7d9c2d16987e9
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 升級 Data Quality Services
-  本主題提供有關如何將您現有的 Data Quality Services (DQS) 安裝升級至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2。 將 DQS 中的資料品質伺服器升級至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的過程中，您也必須升級 DQS 資料庫結構描述。  
+# <a name="upgrade-data-quality-services"></a>升級 Data Quality Services
+本主題提供如何升級現有的 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Data Quality Services (DQS) 安裝。 升級 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Data Quality Server 的過程中，您也必須升級 DQS 資料庫結構描述。  
   
 > [!IMPORTANT]  
->  -   在升級 DQS 之前，您必須先備份 DQS 資料庫，以免在結構描述升級期間有任何意外的遺失資料狀況。 如需有關備份 DQS 資料庫的詳細資訊，請參閱[備份及還原 DQS 資料庫](../../data-quality-services/backing-up-and-restoring-dqs-databases.md)。  
-> -   您可以使用最新或舊版 Data Quality Client 連接至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版的 Data Quality Server 或 Integration Services 中的 [DQS 清理轉換](../../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)，以執行您的資料品質工作。  
-> -   將 Data Quality Services 和 Master Data Services 升級為 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 之後，所有適用於 Excel 的舊版 Master Data Services 增益集將無法再繼續運作。 您可以從[這裡](http://go.microsoft.com/fwlink/?LinkID=506665)下載 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版適用於 Exel 的 Master Data Services 增益集。  
+>  -   在升級 DQS 之前，您必須先備份 DQS 資料庫，以免在結構描述升級期間有任何意外的遺失資料狀況。 如需有關備份 DQS 資料庫的詳細資訊，請參閱 [備份及還原 DQS 資料庫](../../data-quality-services/backing-up-and-restoring-dqs-databases.md)。  
+> -   您可以使用最新或舊版的 Data Quality Client 連線至 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Data Quality Server，或連線至 Integration Services 的 [DQS 清理轉換](../../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)，執行您的資料品質工作。  
+> -   升級 Data Quality Services 和 Master Data Services 之後，所有適用於 Excel 的舊版 Master Data Services 增益集都無法再繼續運作。 您可以從[這裡](http://go.microsoft.com/fwlink/?LinkID=506665)下載 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 版適用於 Exel 的 Master Data Services 增益集。  
   
 ##  <a name="Prerequisites"></a> 必要條件  
   
@@ -33,29 +40,34 @@ caps.handback.revision: 12
 ##  <a name="Upgrade"></a> 升級 DQS  
  升級 DQS：  
   
-1.  在開始升級程序之前，請先備份 DQS 資料庫。 如需有關備份 DQS 資料庫的詳細資訊，請參閱[備份及還原 DQS 資料庫](../../data-quality-services/backing-up-and-restoring-dqs-databases.md)。  
+1.  在開始升級程序之前，請先備份 DQS 資料庫。 如需有關備份 DQS 資料庫的詳細資訊，請參閱 [備份及還原 DQS 資料庫](../../data-quality-services/backing-up-and-restoring-dqs-databases.md)。  
   
-2.  將安裝 DQS 的 SQL Server 執行個體升級至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+2.  升級已安裝 DQS 的 SQL Server 執行個體。  
   
-    1.  執行 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安裝精靈。  
+    1.  執行 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 安裝精靈。  
   
-    2.  在左窗格中，按一下 [安裝]。  
+    2.  按一下左窗格中的 [安裝]。  
   
-    3.  在右窗格中，按一下 [從 SQL Server 2008、SQL Server 2008 R2、SQL Server 2012，或 SQL Server 2014 升級]。  
+    3.  在右窗格中，按一下 [升級來源] 從舊版 SQL Server 升級。  
   
     4.  完成安裝精靈。  
   
         > [!NOTE]  
-        >  如果 Data Quality Client 先前已安裝在這部電腦上，此作業會將您的 SQL Server 執行個體升級至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，而且也會安裝最新的 Data Quality Client。 如果您已將 Data Quality Client 安裝在其他電腦上，則必須在那些電腦上執行步驟 2 的子步驟，才能安裝 Data Quality Client 的目前版本。 安裝精靈會將 Data Quality Client 的目前版本與 Data Quality Client 的現有版本並列安裝。 升級 DQS 資料庫結構描述之後，您可以使用最新或舊版 Data Quality Client 連接至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版的資料品質伺服器。  
+        >  如果 Data Quality Client 先前已安裝在這部電腦上，此作業會將您的 SQL Server 執行個體升級至 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]，而且也會安裝最新的 Data Quality Client。 如果您已將 Data Quality Client 安裝在其他電腦上，則必須在那些電腦上執行步驟 2 的子步驟，才能安裝 Data Quality Client 的目前版本。 安裝精靈會將 Data Quality Client 的目前版本與 Data Quality Client 的現有版本並列安裝。 升級 DQS 資料庫結構描述之後，您可以使用最新或舊版 Data Quality Client 連接至 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 版的資料品質伺服器。  
   
 3.  升級 DQS 資料庫結構描述。  
   
     1.  以系統管理員身分啟動命令提示字元。  
   
-    2.  在命令提示字元中，將目錄變更為 DQSInstaller.exe 所在的位置。 若為 SQL Server 的預設執行個體，DQSInstaller.exe 檔案位於 C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn：  
-  
+    2.  在命令提示字元中，將目錄變更為 DQSInstaller.exe 所在的位置。 若為 SQL Server 的預設執行個體，DQSInstaller.exe 檔案位於 C:\Program Files\Microsoft SQL Server\MSSQL[nn].MSSQLSERVER\MSSQL\Binn：  
+
+      >[!NOTE]
+      >將資料夾路徑中的 [nn] 替換成 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 版本號碼。
+      >- SQL Server 2016 為 13
+      >- SQL Server 2017 為 14
+
         ```  
-        cd C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn  
+        cd C:\Program Files\Microsoft SQL Server\MSSQL[nn].MSSQLSERVER\MSSQL\Binn  
         ```  
   
     3.  在命令提示字元中輸入下列命令，然後按 ENTER：  
@@ -84,12 +96,12 @@ caps.handback.revision: 12
   
     |ID|UPGRADE_DATE|VERSION_ID|ASSEMBLY_VERSION|USER_NAME|STATUS|ERROR|  
     |--------|-------------------|-----------------|-----------------------|----------------|------------|-----------|  
-    |1000|2013-08-11 05:26:39.567|1200|11.0.3000.0|\< 網域\使用者名稱 >|2||  
-    |1001|2013-09-19 15:09:37.750|1600|12.0.xxxx.0|\< 網域\使用者名稱 >|2||  
+    |1000|2013-08-11 05:26:39.567|1200|11.0.3000.0|\<網域\使用者名稱>|2||  
+    |1001|2013-09-19 15:09:37.750|1600|12.0.xxxx.0|\<網域\使用者名稱>|2||  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [安裝 Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)   
  [移除 Data Quality Server 物件](../../sql-server/install/remove-data-quality-server-objects.md)   
- [升級為 SQL Server 2016](../../database-engine/install-windows/upgrade-to-sql-server-2016.md)  
+ [升級 SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)  
   
   

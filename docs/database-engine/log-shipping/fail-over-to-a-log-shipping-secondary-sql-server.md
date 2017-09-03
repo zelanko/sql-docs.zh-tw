@@ -1,35 +1,40 @@
 ---
 title: "容錯移轉至記錄傳送次要 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "主要資料庫 [SQL Server]"
-  - "次要資料檔 [SQL Server], 手動容錯移轉"
-  - "記錄傳送 [SQL Server]，容錯移轉"
-  - "容錯移轉 [SQL Server]，記錄傳送"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- primary databases [SQL Server]
+- secondary data files [SQL Server], manual fail over
+- log shipping [SQL Server], failover
+- failover [SQL Server], log shipping
 ms.assetid: edfe5d59-4287-49c1-96c9-dd56212027bc
 caps.latest.revision: 31
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 93360a54442a6a959b7044288bd74d16f13fa559
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 容錯移轉至記錄傳送次要 (SQL Server)
+# <a name="fail-over-to-a-log-shipping-secondary-sql-server"></a>容錯移轉至記錄傳送次要 (SQL Server)
   如果主要伺服器執行個體失敗或需要維護，則容錯移轉至記錄傳送次要十分有用。  
   
-## 準備控制的容錯移轉  
+## <a name="preparing-for-a-controlled-failover"></a>準備控制的容錯移轉  
  一般而言，因為主要資料庫的最新備份作業後仍會繼續更新該主要資料庫，所以主要和次要資料庫並不同步。 而且，在某些情況下，最近的交易記錄備份尚未複製到次要伺服器執行個體，或某些複製的記錄備份可能仍未套用至次要資料庫。 建議您，如果可能，請使用主要資料庫開始同步處理所有次要資料庫。  
   
- 如需記錄傳送作業的相關資訊，請參閱[關於記錄傳送 &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)。  
+ 如需記錄傳送作業的相關資訊，請參閱 [關於記錄傳送 &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)。  
   
-## 容錯移轉  
+## <a name="failing-over"></a>容錯移轉  
  若要容錯移轉至次要資料庫：  
   
 1.  將任何未複製的備份檔從備份共用複製到每個次要伺服器的複製目的資料夾。  
@@ -45,7 +50,7 @@ caps.handback.revision: 31
 4.  在同步處理次要伺服器後，您就可以透過復原次要資料庫並將用戶端重新導向至該伺服器執行個體，藉以容錯移轉至偏好的伺服器。 復原會讓資料庫進入一致狀態，並使其連線。  
   
     > [!NOTE]  
-    >  當您讓次要資料庫可以使用時，就應該確保其中繼資料與原始主要資料庫的中繼資料一致。 如需詳細資訊，請參閱[在另一個伺服器執行個體上提供可用的資料庫時，管理中繼資料 &#40;SQL Server&#41;](../../relational-databases/databases/manage metadata when making a database available on another server.md)。  
+    >  當您讓次要資料庫可以使用時，就應該確保其中繼資料與原始主要資料庫的中繼資料一致。 如需詳細資訊，請參閱[在另一個伺服器執行個體上提供可用的資料庫時，管理中繼資料 &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)。  
   
 5.  在復原次要資料庫後，您可以將它重新設定為當做其他次要資料庫的主要資料庫使用。  
   
@@ -57,7 +62,7 @@ caps.handback.revision: 31
   
 -   [角色切換後針對登入和作業進行管理 &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [記錄傳送資料表與預存程序](../../database-engine/log-shipping/log-shipping-tables-and-stored-procedures.md)   
  [關於記錄傳送 &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [結尾記錄備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)  

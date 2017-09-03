@@ -1,31 +1,36 @@
 ---
-title: "加入或取代資料庫鏡像見證 (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "見證 [SQL Server], 建立"
-  - "資料庫鏡像 [SQL Server], 見證"
+title: "新增或取代資料庫鏡像見證 (SQL Server Management Studio) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- witness [SQL Server], establishing
+- database mirroring [SQL Server], witness
 ms.assetid: 4b5ecffd-f025-4ab7-b69d-8958c6477127
 caps.latest.revision: 16
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 004b19ca2fe75f3a34f21eac1fa531e7f72d258b
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 加入或取代資料庫鏡像見證 (SQL Server Management Studio)
+# <a name="add-or-replace-a-database-mirroring-witness-sql-server-management-studio"></a>加入或取代資料庫鏡像見證 (SQL Server Management Studio)
   如果資料庫鏡像端點使用 Windows 驗證，您就可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來加入或取代見證。 在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中加入見證也會將作業模式變更為具有自動容錯移轉的高安全性模式。  
   
 > [!NOTE]  
 >  我們強烈建議見證應該位在任何夥伴的另一台電腦上。 見證使用的服務帳戶必須與主體和鏡像伺服器執行個體使用的服務帳戶位於相同的網域中，否則此帳戶就必須位於受信任網域中。  
   
-### 若要加入或取代見證  
+### <a name="to-add-or-replace-a-witness"></a>若要加入或取代見證  
   
 1.  連接到主體伺服器執行個體後，在 [物件總管] 中按一下伺服器名稱，以展開伺服器樹狀目錄。  
   
@@ -67,11 +72,11 @@ caps.handback.revision: 16
   
      若要啟用見證並將工作階段變更為具有自動容錯移轉的高安全性模式，請按一下 [確定]。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [資料庫鏡像見證](../../database-engine/database-mirroring/database-mirroring-witness.md)   
  [資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [資料庫屬性 &#40;鏡像頁面&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   
- [使用 Windows 驗證建立資料庫鏡像工作階段 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish database mirroring session - windows authentication.md)   
+ [使用 Windows 驗證建立資料庫鏡像工作階段 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)   
  [資料庫鏡像見證](../../database-engine/database-mirroring/database-mirroring-witness.md)  
   
   

@@ -1,27 +1,32 @@
 ---
 title: "變更伺服器驗證模式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "sa 帳戶"
-  - "驗證 [SQL Server], 變更模式"
-  - "伺服器驗證模式 [SQL Server]"
-  - "修改伺服器驗證模式"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- sa account
+- authentication [SQL Server], changing modes
+- server authentication mode [SQL Server]
+- modifying server authentication mode
 ms.assetid: 79babcf8-19fd-4495-b8eb-453dc575cac0
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 08b2ad077cbd029cf1fa4b2ff0243c078467c17a
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 變更伺服器驗證模式
+# <a name="change-server-authentication-mode"></a>變更伺服器驗證模式
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 變更 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的伺服器驗證模式。 在安裝期間， [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 會設為 **[Windows 驗證模式]** 或 **[SQL Server 及 Windows 驗證模式]**。 安裝後，您可以隨時變更驗證模式。  
   
  如果您在安裝期間選取 [Windows 驗證模式]，sa 登入便會停用，且安裝程式會指派密碼。 即使稍後將驗證模式改成 [SQL Server 及 Windows 驗證模式]，sa 登入也會保持停用狀態。 若要使用 sa 登入，請使用 ALTER LOGIN 陳述式啟用 sa 登入並指派新密碼。 sa 登入只能使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證連接到伺服器。  
@@ -45,7 +50,7 @@ caps.handback.revision: 31
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 變更安全性驗證模式  
+#### <a name="to-change-security-authentication-mode"></a>變更安全性驗證模式  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的物件總管中，以滑鼠右鍵按一下伺服器，然後按一下 [屬性]。  
   
@@ -55,7 +60,7 @@ caps.handback.revision: 31
   
 4.  在物件總管中，以滑鼠右鍵按一下伺服器，然後按一下 [重新啟動]。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 正在執行，也必須將它重新啟動。  
   
-#### 若要啟用 sa 登入  
+#### <a name="to-enable-the-sa-login"></a>若要啟用 sa 登入  
   
 1.  在物件總管中，依序展開 [安全性] 和 [登入]，並以滑鼠右鍵按一下 [sa]，然後按一下 [屬性]。  
   
@@ -80,10 +85,10 @@ caps.handback.revision: 31
   
     ```  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [增強式密碼](../../relational-databases/security/strong-passwords.md)   
  [SQL Server 安裝的安全性考量](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)   
  [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)   
- [當系統管理員遭到鎖定時連接到 SQL Server](../../database-engine/configure-windows/connect-to-sql-server-when-system-administrators-are-locked-out.md)  
+ [當系統管理員遭鎖定在外時連線到 SQL Server](../../database-engine/configure-windows/connect-to-sql-server-when-system-administrators-are-locked-out.md)  
   
   

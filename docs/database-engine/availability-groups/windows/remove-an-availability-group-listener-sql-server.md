@@ -1,27 +1,32 @@
 ---
 title: "移除可用性群組接聽程式 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.availabilitygroup.removeaglistener.default.f1"
-helpviewer_keywords: 
-  - "可用性群組 [SQL Server], 接聽程式"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.availabilitygroup.removeaglistener.default.f1
+helpviewer_keywords:
+- Availability Groups [SQL Server], listeners
 ms.assetid: fd9bba9a-d29f-4c23-8ecd-aaa049ed5f1b
 caps.latest.revision: 14
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 7c1751fec54325b1f882e4a16d17cb1a01c42d42
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 移除可用性群組接聽程式 (SQL Server)
-  本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]PowerShell，從 AlwaysOn 可用性群組中移除可用性群組接聽程式。  
+# <a name="remove-an-availability-group-listener-sql-server"></a>移除可用性群組接聽程式 (SQL Server)
+  本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]或 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]PowerShell，從 AlwaysOn 可用性群組中移除可用性群組接聽程式。  
   
 -   **開始之前：**  
   
@@ -62,7 +67,7 @@ caps.handback.revision: 14
   
 3.  展開可用性群組的節點，然後展開 **[可用性群組接聽程式]** 節點。  
   
-4.  以滑鼠右鍵按一下要移除的接聽程式，然後選取 [刪除] 命令。  
+4.  以滑鼠右鍵按一下要移除的接聽程式，然後選取 **[刪除]** 命令。  
   
 5.  這樣就會開啟 **[從可用性群組移除接聽程式]** 對話方塊。 如需詳細資訊，請參閱本主題稍後的＜ [從可用性群組移除接聽程式](#AgListenerPropertiesDialog)＞。  
   
@@ -71,7 +76,7 @@ caps.handback.revision: 14
  要移除的接聽程式名稱。  
   
  **結果**  
- 顯示連結 ([成功] 或 [錯誤])，而且按一下即可取得詳細資訊。  
+ 顯示連結 ( **[成功]** 或 **[錯誤]**)，而且按一下即可取得詳細資訊。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **若要移除可用性群組接聽程式**  
@@ -82,7 +87,7 @@ caps.handback.revision: 14
   
      ALTER AVAILABILITY GROUP *group_name* REMOVE LISTENER **‘***dns_name***’**  
   
-     *group_name* 是可用性群組的名稱，*dns_name* 是可用性群組接聽程式的 DNS 名稱。  
+     *group_name* 是可用性群組的名稱， *dns_name* 是可用性群組接聽程式的 DNS 名稱。  
   
      下列範例會刪除 `AccountsAG` 可用性群組的接聽程式。 DNS 名稱是 AccountsAG_Listener。  
   
@@ -95,7 +100,7 @@ caps.handback.revision: 14
   
 1.  設定預設值 (**cd**) 為裝載主要複本的伺服器執行個體。  
   
-2.  使用內建的 **Remove-Item** Cmdlet 移除接聽程式。 例如，下列命令會從名為 `MyListener` 的可用性群組中移除名為 `MyAg` 的接聽程式。  
+2.  使用內建的 **Remove-Item** Cmdlet 移除接聽程式。 例如，下列命令會從名為 `MyListener` 的可用性群組中移除名為 `MyAg`的接聽程式。  
   
     ```  
     Remove-Item `   
@@ -103,7 +108,7 @@ caps.handback.revision: 14
     ```  
   
     > [!NOTE]  
-    >  若要檢視 Cmdlet 的語法，請在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 環境中使用 **Get-Help** Cmdlet。 如需詳細資訊，請參閱 [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)。  
+    >  若要檢視 Cmdlet 的語法，請在 **PowerShell 環境中使用** Get-Help [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Cmdlet。 如需詳細資訊，請參閱 [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)。  
   
 ##  <a name="RelatedTasks"></a> 相關工作  
   
@@ -111,8 +116,9 @@ caps.handback.revision: 14
   
 -   [檢視可用性群組接聽程式屬性 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/view-availability-group-listener-properties-sql-server.md)  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [AlwaysOn 可用性群組概觀 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [可用性群組接聽程式、用戶端連接性及應用程式容錯移轉 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners, client connectivity, application failover.md)  
+ [可用性群組接聽程式、用戶端連接及應用程式容錯移轉 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
   
   
+

@@ -1,27 +1,32 @@
 ---
 title: "容錯移轉及容錯移轉模式 (AlwaysOn 可用性群組) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "可用性群組 [SQL Server], 可用性複本"
-  - "可用性群組 [SQL Server], 容錯移轉"
-  - "可用性群組 [SQL Server], 容錯移轉模式"
-  - "容錯移轉 [SQL Server], AlwaysOn 可用性群組"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Availability Groups [SQL Server], availability replicas
+- Availability Groups [SQL Server], failover
+- Availability Groups [SQL Server], failover modes
+- failover [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
 caps.latest.revision: 75
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 74
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 54450a69119f344ba40787e7ce076ad84e0b211d
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 容錯移轉及容錯移轉模式 (AlwaysOn 可用性群組)
+# <a name="failover-and-failover-modes-always-on-availability-groups"></a>容錯移轉及容錯移轉模式 (AlwaysOn 可用性群組)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   在可用性群組的內容中，可用性複本的主要角色和次要角色在稱為 *「容錯移轉」*(Failover) 的程序中通常可以互換。 容錯移轉共有三種形式，包括自動容錯移轉 (不會遺失資料)、規劃的手動容錯移轉 (不會遺失資料)，以及強制手動容錯移轉 (可能會遺失資料)，這種形式通常稱為「強制容錯移轉」。 自動及經過規劃的手動容錯移轉會保留您的所有資料。 可用性群組會在可用性複本層級容錯移轉。 亦即可用性群組會容錯移轉至其中一個次要複本 (目前的「容錯移轉目標」)。  
@@ -33,12 +38,12 @@ caps.handback.revision: 74
   
  指定可用性複本支援的容錯移轉形式是由 [容錯移轉模式] 屬性所指定。 指定可用性複本的可能容錯移轉模式取決於複本的[可用性模式](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)，如下所示：  
   
--   **同步認可複本**支援兩個設定：自動或手動。 「自動」設定同時支援自動容錯移轉和手動容錯移轉。 若要避免資料遺失，自動容錯移轉和已規劃的容錯移轉要求容錯移轉目標必須是同步處理狀態良好的同步認可次要複本 (這表示容錯移轉目標上的每個次要資料庫與對應的主要資料庫同步處理)。 當次要複本不符合上述兩項條件時，只會支援強制容錯移轉。 請注意，在角色處於 RESOLVING 狀態的複本中也支援強制容錯移轉。  
+-   **同步認可複本** 支援兩個設定：自動或手動。 「自動」設定同時支援自動容錯移轉和手動容錯移轉。 若要避免資料遺失，自動容錯移轉和已規劃的容錯移轉要求容錯移轉目標必須是同步處理狀態良好的同步認可次要複本 (這表示容錯移轉目標上的每個次要資料庫與對應的主要資料庫同步處理)。 當次要複本不符合上述兩項條件時，只會支援強制容錯移轉。 請注意，在角色處於 RESOLVING 狀態的複本中也支援強制容錯移轉。  
   
--   **非同步認可複本**僅支援手動容錯移轉模式。 此外，因為它們絕對不會同步處理，所以僅支援強制容錯移轉。  
+-   **非同步認可複本** 僅支援手動容錯移轉模式。 此外，因為它們絕對不會同步處理，所以僅支援強制容錯移轉。  
   
 > [!NOTE]  
->  容錯移轉之後，需要存取主要資料庫的用戶端應用程式必須連接至新的主要複本。 若新的次要複本設定為允許唯讀存取，則唯讀用戶端應用程式即可連接至該次要複本。 如需用戶端如何連接到可用性群組的資訊，請參閱[可用性群組接聽程式、用戶端連線及應用程式容錯移轉 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners, client connectivity, application failover.md)。  
+>  容錯移轉之後，需要存取主要資料庫的用戶端應用程式必須連接至新的主要複本。 若新的次要複本設定為允許唯讀存取，則唯讀用戶端應用程式即可連接至該次要複本。 如需用戶端如何連接到可用性群組的資訊，請參閱[可用性群組接聽程式、用戶端連線及應用程式容錯移轉 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)。  
   
  **本主題的章節：**  
   
@@ -89,16 +94,16 @@ caps.handback.revision: 74
  在容錯移轉期間，資料庫無法使用的時間量將依容錯移轉的類型及其原因而定。  
   
 > [!IMPORTANT]  
->  為了在容錯移轉之後支援用戶端連接，除了自主資料庫之外，在任何先前的主要資料庫上定義的登入和作業都必須在新的主要資料庫上手動重新建立。 如需詳細資訊，請參閱[管理可用性群組之資料庫的登入及工作 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/logins and jobs for availability group databases.md)。  
+>  為了在容錯移轉之後支援用戶端連接，除了自主資料庫之外，在任何先前的主要資料庫上定義的登入和作業都必須在新的主要資料庫上手動重新建立。 如需詳細資訊，請參閱 [管理可用性群組之資料庫的登入及工作 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/logins-and-jobs-for-availability-group-databases.md)(Failover) 的程序中通常可以互換。  
   
-### 容錯移轉設定  
+### <a name="failover-sets"></a>容錯移轉設定  
  由容錯移轉設定便能理解給定的可用性群組可能進行的容錯移轉形式。 容錯移轉設定是由支援給定容錯移轉形式的主要複本與次要複本所組成，如下所示：  
   
--   **[!INCLUDE[ssFosAutoC](../../../includes/ssfosautoc-md.md)] (選擇性)：**在指定可用性群組內，是指使用自動容錯移轉設定成同步認可模式 (如果有) 的一對可用性複本 (包括目前的主要複本)。 自動容錯移轉設定只有在次要複本目前與主要複本 SYNCHRONIZED 時才會生效。  
+-   **[!INCLUDE[ssFosAutoC](../../../includes/ssfosautoc-md.md)] (選擇性)：**  在指定可用性群組內，是指使用自動容錯移轉設定成同步認可模式 (如果有) 的一對可用性複本 (包括目前的主要複本)。 自動容錯移轉設定只有在次要複本目前與主要複本 SYNCHRONIZED 時才會生效。  
   
--   **[!INCLUDE[ssFosSyncC](../../../includes/ssfossyncc-md.md)] (選擇性)：**在指定可用性群組內，是指設定成同步認可模式 (如果有) 的一組兩個或三個可用性複本 (包括目前的主要複本)。 同步認可容錯移轉設定只有在次要複本設定成手動容錯移轉模式，而且至少一個次要複本目前與主要複本 SYNCHRONIZED 時才會生效。  
+-   **[!INCLUDE[ssFosSyncC](../../../includes/ssfossyncc-md.md)] (選擇性)：**  在指定可用性群組內，是指設定成同步認可模式 (如果有) 的一組兩個或三個可用性複本 (包括目前的主要複本)。 同步認可容錯移轉設定只有在次要複本設定成手動容錯移轉模式，而且至少一個次要複本目前與主要複本 SYNCHRONIZED 時才會生效。  
   
--   **[!INCLUDE[ssFosEntireC](../../../includes/ssfosentirec-md.md)]：**在指定可用性群組內，是指操作狀態目前 ONLINE (不管是可用性模式還是容錯移轉模式) 的整組所有可用性複本。 完整容錯移轉設定會在次要複本目前與主要複本 SYNCHRONIZED 時變成相關。  
+-   **[!INCLUDE[ssFosEntireC](../../../includes/ssfosentirec-md.md)] ：**  在指定可用性群組內，是指操作狀態目前 ONLINE (不管是可用性模式還是容錯移轉模式) 的整組所有可用性複本。 完整容錯移轉設定會在次要複本目前與主要複本 SYNCHRONIZED 時變成相關。  
   
  當使用自動容錯移轉將可用性複本設定成同步認可時，該可用性複本會變成 [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)]的一部分。 不過，設定是否生效，取決於目前的主要複本。 實際上在給定時間可能進行的容錯移轉形式取決於目前生效的容錯移轉設定。  
   
@@ -106,16 +111,16 @@ caps.handback.revision: 74
   
 |複本|可用性模式與容錯移轉模式設定|  
 |-------------|--------------------------------------------------|  
-|A|包含自動容錯移轉的同步認可|  
+|只有在次要複本設定成手動容錯移轉模式，而且至少一個次要複本目前與主要複本 SYNCHRONIZED 時，|包含自動容錯移轉的同步認可|  
 |B|包含自動容錯移轉的同步認可|  
 |C|僅包含已規劃的手動容錯移轉的同步認可|  
 |D|非同步認可 (僅包含強制容錯移轉)|  
   
  每個次要複本的容錯移轉行為取決於目前是主要複本的可用性複本。 基本上，若是給定的次要複本，容錯移轉行為是最嚴重的目前給定主要複本案例。 下圖說明次要複本的容錯移轉行為如何根據目前主要複本，以及它設定為非同步認可模式 (只使用強制容錯移轉) 或同步認可模式 (不論是否使用自動容錯移轉)，而有所不同。  
   
- ![主要複本設定如何影響容錯移轉](../../../database-engine/availability-groups/windows/media/aoag-failoversetexample.gif "主要複本設定如何影響容錯移轉")  
+ ![主要複本組態如何影響容錯移轉](../../../database-engine/availability-groups/windows/media/aoag-failoversetexample.gif "主要複本組態如何影響容錯移轉")  
   
-##  <a name="AutomaticFailover"></a> 自動容錯移轉  
+##  <a name="AutomaticFailover"></a> Automatic Failover  
  自動容錯移轉會使合格的次要複本在主要複本變成無法使用之後，自動移轉到主要角色。 當裝載主要複本的 WSFC 節點是裝載次要複本的本機節點時，最適合使用自動容錯移轉。 這是因為資料同步處理在電腦之間有低度訊息延遲時效果最佳，而且因為用戶端連接可以保持本機狀態。  
   
  **本節內容：**  
@@ -131,7 +136,7 @@ caps.handback.revision: 74
   
 -   自動容錯移轉設定已存在。 此設定是由一併設定成同步認可模式及 AUTOMATIC 容錯移轉的主要複本與次要複本所組成，後者稱為「自動容錯移轉目標」。 如果主要複本設為 MANUAL 容錯移轉，則即使次要複本是設為 AUTOMATIC 容錯移轉，也不會發生自動容錯移轉。  
   
-     如需詳細資訊，請參閱[可用性模式 &#40;AlwaysOn 可用性群組&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)。  
+     如需詳細資訊，請參閱 [可用性模式 &#40;AlwaysOn 可用性群組&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)(Failover) 的程序中通常可以互換。  
   
 -   自動容錯移轉目標的同步處理狀態良好 (這表示容錯移轉目標上的每一個次要資料庫會與其對應的主要資料庫同步處理)。  
   
@@ -142,7 +147,7 @@ caps.handback.revision: 74
   
 -   Windows Server 容錯移轉叢集 (WSFC) 叢集有仲裁。 如需詳細資訊，請參閱 [WSFC 仲裁模式和投票組態 &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md)。  
   
--   主要複本已經變成無法使用，而且已經符合您靈活的容錯移轉原則所定義的容錯移轉條件層級。 如需容錯移轉條件層級的資訊，請參閱[可用性群組自動容錯移轉的彈性容錯移轉原則 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/flexible automatic failover policy - availability group.md)。  
+-   主要複本已經變成無法使用，而且已經符合您靈活的容錯移轉原則所定義的容錯移轉條件層級。 如需容錯移轉條件層級的資訊，請參閱 [可用性群組自動容錯移轉的彈性容錯移轉原則 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md)(Failover) 的程序中通常可以互換。  
   
 ###  <a name="HowAutoFoWorks"></a> 自動容錯移轉如何運作  
  自動容錯移轉會起始下列動作順序：  
@@ -163,13 +168,13 @@ caps.handback.revision: 74
 ###  <a name="EnableAutoFo"></a> 若要設定自動容錯移轉  
  可用性複本可以設定成在任何時間都支援自動容錯移轉。  
   
- **若要設定自動容錯移轉**  
+ **To configure automatic failover**  
   
-1.  請確認次要複本設定為使用同步認可的可用性模式。 如需詳細資訊，請參閱[變更可用性複本的可用性模式 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/change-the-availability-mode-of-an-availability-replica-sql-server.md)。  
+1.  請確認次要複本設定為使用同步認可的可用性模式。 如需詳細資訊，請參閱 [變更可用性複本的可用性模式 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/change-the-availability-mode-of-an-availability-replica-sql-server.md)(Failover) 的程序中通常可以互換。  
   
-2.  將容錯移轉模式設定為自動。 如需詳細資訊，請參閱[變更可用性複本的容錯移轉模式 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/change-the-failover-mode-of-an-availability-replica-sql-server.md)。  
+2.  將容錯移轉模式設定為自動。 如需詳細資訊，請參閱 [變更可用性複本的容錯移轉模式 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/change-the-failover-mode-of-an-availability-replica-sql-server.md)(Failover) 的程序中通常可以互換。  
   
-3.  (選擇性) 變更可用性群組的靈活容錯移轉原則，指定可造成自動容錯移轉的各種失敗狀況。 如需詳細資訊，請參閱[設定彈性容錯移轉原則以控制自動容錯移轉的條件 &#40;AlwaysOn 可用性群組&#41;](../../../database-engine/availability-groups/windows/configure flexible automatic failover policy.md) 和[容錯移轉叢集執行個體的容錯移轉原則](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)。  
+3.  (選擇性) 變更可用性群組的靈活容錯移轉原則，指定可造成自動容錯移轉的各種失敗狀況。 如需詳細資訊，請參閱 [設定彈性容錯移轉原則以控制自動容錯移轉的條件 &#40;AlwaysOn 可用性群組&#41;](../../../database-engine/availability-groups/windows/configure-flexible-automatic-failover-policy.md) 和 [容錯移轉叢集執行個體的容錯移轉原則](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)(Failover) 的程序中通常可以互換。  
   
 ##  <a name="ManualFailover"></a> 已規劃的手動容錯移轉 (不會遺失資料)  
  在資料庫管理員在裝載目標次要複本的伺服器執行個體上發出手動容錯移轉命令之後，手動容錯移轉會使同步處理的次要複本轉換成主要角色。 為支援手動容錯移轉，次要複本和目前的主要複本 (如果有) 都必須設定成同步認可模式。 可用性複本上的每個次要資料庫都必須聯結至可用性群組，並與其對應的主要資料庫進行同步處理 (亦即，次要複本必須已經同步處理)。 這可確保在先前主要資料庫上認可的每個交易也已經在新的主要資料庫上認可。 因此，新的主要資料庫與舊的主要資料庫相同。  
@@ -178,11 +183,11 @@ caps.handback.revision: 74
   
 1.  在容錯移轉之前，主要複本是由 `Node01`上的伺服器執行個體裝載。  
   
-2.  資料庫管理員會起始已規劃的容錯移轉。 容錯移轉目標是由 `Node02` 上的伺服器執行個體所裝載的可用性複本。  
+2.  資料庫管理員會起始已規劃的容錯移轉。 容錯移轉目標是由 `Node02`上的伺服器執行個體所裝載的可用性複本。  
   
 3.  容錯移轉目標 (位於 `Node02`) 將成為新的主要複本。 因為這是已規劃的容錯移轉，之前的主要複本會在容錯移轉期間切換為次要角色，而且會立即使其資料庫變成線上狀態以做為次要資料庫。  
   
- ![已規劃的手動容錯移轉圖例](../../../database-engine/availability-groups/windows/media/aoag-plannedmanualfailover.gif "已規劃的手動容錯移轉圖例")  
+ ![規劃的手動容錯移轉圖例](../../../database-engine/availability-groups/windows/media/aoag-plannedmanualfailover.gif "規劃的手動容錯移轉圖例")  
   
  **本節內容：**  
   
@@ -220,16 +225,16 @@ caps.handback.revision: 74
     > [!NOTE]  
     >  只要新的次要複本重新同步處理資料庫後，就可以再次容錯移轉，但是方向會相反。  
   
- 容錯移轉之後，用戶端必須重新連接到目前的主要資料庫。 如需詳細資訊，請參閱[可用性群組接聽程式、用戶端連線及應用程式容錯移轉 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners, client connectivity, application failover.md)。  
+ 容錯移轉之後，用戶端必須重新連接到目前的主要資料庫。 如需詳細資訊，請參閱 [可用性群組接聽程式、用戶端連接及應用程式容錯移轉 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)中心概念。  
   
 ###  <a name="ManualFailoverDuringUpgrades"></a> 維護升級期間的可用性  
- 升級硬體或軟體時，可用性群組的資料庫管理員可以使用手動容錯移轉維護資料庫可用性。 若要使用可用性群組進行軟體升級，裝載目標次要複本的伺服器執行個體和/或電腦節點必須已經獲得升級。 如需詳細資訊，請參閱[升級 AlwaysOn 可用性群組複本執行個體](../../../database-engine/availability-groups/windows/upgrading-always-on-availability-group-replica-instances.md)。  
+ 升級硬體或軟體時，可用性群組的資料庫管理員可以使用手動容錯移轉維護資料庫可用性。 若要使用可用性群組進行軟體升級，裝載目標次要複本的伺服器執行個體和/或電腦節點必須已經獲得升級。 如需詳細資訊，請參閱 [升級 AlwaysOn 可用性群組複本執行個體](../../../database-engine/availability-groups/windows/upgrading-always-on-availability-group-replica-instances.md)。  
   
 ##  <a name="ForcedFailover"></a> 強制容錯移轉 (可能會遺失資料)  
- 強制可用性群組容錯移轉 (可能會遺失資料) 是可將次要複本當做暖待命伺服器使用的災害復原方法。由於強制容錯移轉會面臨可能遺失資料的風險，所以應該小心並謹慎使用。 只有在您必須立即還原可用性資料庫的服務，並且願意承擔遺失資料的風險時，才建議使用強制容錯移轉。 如需強制容錯移轉之必要條件和建議的詳細資訊，以及使用強制容錯移轉從重大錯誤復原的範例案例，請參閱[執行可用性群組的強制手動容錯移轉 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)。  
+ 強制可用性群組容錯移轉 (可能會遺失資料) 是可將次要複本當做暖待命伺服器使用的災害復原方法。由於強制容錯移轉會面臨可能遺失資料的風險，所以應該小心並謹慎使用。 只有在您必須立即還原可用性資料庫的服務，並且願意承擔遺失資料的風險時，才建議使用強制容錯移轉。 如需強制容錯移轉之必要條件和建議的詳細資訊，以及使用強制容錯移轉從重大錯誤復原的範例案例，請參閱 [執行可用性群組的強制手動容錯移轉 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)(Failover) 的程序中通常可以互換。  
   
 > [!WARNING]  
->  強制容錯移轉需要 WSFC 叢集有仲裁。 如需設定仲裁和強制仲裁的資訊，請參閱 [SQL Server 的 Windows Server 容錯移轉叢集 &#40;WSFC&#41;](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)。  
+>  強制容錯移轉需要 WSFC 叢集有仲裁。 如需設定仲裁和強制仲裁的資訊，請參閱 [SQL Server 的 Windows Server 容錯移轉叢集 &#40;WSFC&#41;](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)(Failover) 的程序中通常可以互換。  
   
  **本節內容：**  
   
@@ -275,21 +280,21 @@ caps.handback.revision: 74
   
 1.  連接到主要複本。  
   
-2.  查詢 [sys.dm_hadr_database_replica_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) 動態管理檢視的 **last_commit_lsn** (上次認可交易的 LSN) 和 **last_commit_time** (上次認可的時間) 資料行。  
+2.  查詢 **sys.dm_hadr_database_replica_states** 動態管理檢視的 **last_commit_lsn** (上次認可交易的 LSN) 和 [last_commit_time](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) (上次認可的時間) 資料行。  
   
 3.  比較每一個主要資料庫和其每個次要資料庫所傳回的值。 兩者的上次認可 LSN 之間的差異表示落後的程度。  
   
 4.  當一個資料庫或一組資料庫的落後程度超過給定期間的所需落後最大值時，您可以觸發警示。 例如，可由每分鐘在每個主要資料庫上執行的作業來執行查詢。 如果主要資料庫及其任何次要資料庫之間的 **last_commit_time** 差異已經超過上一次執行作業之後的復原點目標 (RPO) (例如 5 分鐘)，則此作業可能會引發警示。  
   
 > [!IMPORTANT]  
->  當 WSFC 叢集缺乏仲裁或已經強制仲裁時，**last_commit_lsn** 和 **last_commit_time** 為 NULL。 如需如何在強制仲裁之後可能避免資料遺失的相關資訊，請參閱[執行可用性群組的強制手動容錯移轉 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md) 中的＜避免在強制仲裁之後遺失資料的可能方式＞。  
+>  當 WSFC 叢集缺乏仲裁或已經強制仲裁時， **last_commit_lsn** 和 **last_commit_time** 為 NULL。 如需如何在強制仲裁之後可能避免資料遺失的相關資訊，請參閱 [執行可用性群組的強制手動容錯移轉 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)(Failover) 的程序中通常可以互換。  
   
 ###  <a name="ForcedFailoverManagingDataLoss"></a> 管理潛在資料遺失  
  強制容錯移轉之後，就會暫停所有次要資料庫。 這包括舊的主要資料庫，在舊的主要複本再次上線之後會發現它現在是次要複本。 您必須以手動方式在每個次要複本上個別繼續每個暫停的資料庫。  
   
  一旦先前的主要複本可以使用，假設其資料庫未損毀，您就可以嘗試管理潛在資料遺失。 管理潛在資料遺失的可用方法會根據原始的主要複本是否已連接至新的主要複本而定。 假設原始的主要複本可以存取新的主要執行個體，就會自動且透明地進行重新連接。  
   
-#### 原始的主要複本已重新連接  
+#### <a name="the-original-primary-replica-has-reconnected"></a>原始的主要複本已重新連接  
  一般而言，在發生故障後，當原始的主要複本重新啟動時，它就會迅速重新連接至其夥伴。 重新連接後，原始的主要複本會變成次要複本。 其資料庫會變成次要資料庫，並進入 SUSPENDED 狀態。 除非您繼續新的次要資料庫，否則它們不會回復。  
   
  不過，暫停的資料庫無法存取，因此您無法檢查這些資料庫來評估繼續給定資料庫時哪些資料會遺失。 所以，要繼續還是移除次要資料庫的決定取決於您是否願意接受任何資料遺失，如下所示：  
@@ -302,7 +307,7 @@ caps.handback.revision: 74
   
      繼續新的次要資料庫會使其回復至同步處理資料庫的第一個步驟。 如果發生故障時，有任何記錄檔記錄正在傳送佇列中等候，就會遺失對應的交易，即使這些交易已認可也一樣。  
   
-#### 原始的主要複本尚未重新連接  
+#### <a name="the-original-primary-replica-has-not-reconnected"></a>原始的主要複本尚未重新連接  
  如果您可以暫時防止原始的主要複本透過網路重新連接至新的主要複本，就可以檢查原始的主要資料庫，以便評估繼續進行時哪些資料會遺失。  
   
 -   如果可以接受潛在資料遺失  
@@ -325,7 +330,7 @@ caps.handback.revision: 74
   
 -   [變更可用性複本的容錯移轉模式 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/change-the-failover-mode-of-an-availability-replica-sql-server.md)  
   
--   [設定彈性容錯移轉原則以控制自動容錯移轉的條件 &#40;AlwaysOn 可用性群組&#41;](../../../database-engine/availability-groups/windows/configure flexible automatic failover policy.md)  
+-   [設定彈性容錯移轉原則以控制自動容錯移轉的條件 &#40;AlwaysOn 可用性群組&#41;](../../../database-engine/availability-groups/windows/configure-flexible-automatic-failover-policy.md)  
   
  **若要執行手動容錯移轉**  
   
@@ -335,7 +340,7 @@ caps.handback.revision: 74
   
 -   [使用容錯移轉可用性群組精靈 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-fail-over-availability-group-wizard-sql-server-management-studio.md)  
   
--   [管理可用性群組之資料庫的登入及工作 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/logins and jobs for availability group databases.md)  
+-   [管理可用性群組之資料庫的登入及工作 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/logins-and-jobs-for-availability-group-databases.md)  
   
  **若要設定 WSFC 仲裁設定**  
   
@@ -347,16 +352,17 @@ caps.handback.revision: 74
   
 ##  <a name="RelatedContent"></a> 相關內容  
   
--   [Microsoft SQL Server AlwaysOn 高可用性和災害復原解決方案指南](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server AlwaysOn 高可用性和災害復原方案指南](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [SQL Server AlwaysOn 團隊部落格：官方 SQL Server AlwaysOn 團隊部落格](http://blogs.msdn.com/b/sqlAlways%20On/)  
+-   [SQL Server AlwaysOn 團隊部落格：官方 SQL Server AlwaysOn 團隊部落格](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [AlwaysOn 可用性群組概觀 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [可用性模式 &#40;AlwaysOn 可用性群組&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)   
  [SQL Server 的 Windows Server 容錯移轉叢集 &#40;WSFC&#41;](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)   
- [AlwaysOn 可用性群組和資料庫鏡像的跨資料庫交易和分散式交易 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/transactions - always on availability and database mirroring.md)   
+ [AlwaysOn 可用性群組和資料庫鏡像的跨資料庫交易和分散式交易 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)   
  [容錯移轉叢集執行個體的容錯移轉原則](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)   
- [可用性群組自動容錯移轉的彈性容錯移轉原則 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/flexible automatic failover policy - availability group.md)  
+ [可用性群組自動容錯移轉的彈性容錯移轉原則 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md)  
   
   
+

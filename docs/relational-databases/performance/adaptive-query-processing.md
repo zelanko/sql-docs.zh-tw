@@ -2,7 +2,7 @@
 title: "Microsoft SQL 資料庫中的彈性查詢處理 | Microsoft Docs | Microsoft Docs"
 description: "可改善 SQL Server (2017 和更新版本) 和 Azure SQL Database 查詢效能的彈性查詢處理功能。"
 ms.custom: 
-ms.date: 07/19/2017
+ms.date: 08/02/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: joesackmsft
 ms.author: josack;monicar
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: cf8509cab2424529ca0ed16c936fa63a139dfca4
-ms.openlocfilehash: eff546e84d3f872406136f68a7fdbbd8147175ca
+ms.sourcegitcommit: d6cf5e76f4edac2aed3842870fdb0362b9661802
+ms.openlocfilehash: b609b1895637dd90cc3fc94422012c5bf4b4bd81
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 
@@ -101,10 +101,10 @@ WHERE   [fo].[Quantity] = 360;
 ![查詢結果 336 個資料列](./media/4_AQPStats336Rows.png)
 
 我們在計劃中看到：
-- 我們使用了資料行存放區索引掃描，為雜湊聯結建置階段提供資料列。
-- 我們有新的自適性聯結運算子。 此運算子定義的閾值是用於決定何時要切換至巢狀迴圈計劃。  本例中的閾值是 78 個資料列。  凡是 &gt;= 78 資料列的計劃都會使用雜湊聯結。  如果小於閾值，就會使用巢狀迴圈聯結。
-- 因為我們傳回 336 個資料列，超過閾值；所以第二個分支表示標準雜湊聯結作業的探查階段。 請注意，即時查詢統計資料會顯示流經運算子的資料列，本例中為 “672 of 672”。
-- 而最後一個分支是我們的叢集索引搜尋，供未超過閾值的巢狀迴圈聯結所使用。 請注意，我們看到的顯示是 “0 of 336” 資料列 (分支未使用)。
+1. 我們使用了資料行存放區索引掃描，為雜湊聯結建置階段提供資料列。
+1. 我們有新的自適性聯結運算子。 此運算子定義的閾值是用於決定何時要切換至巢狀迴圈計劃。  本例中的閾值是 78 個資料列。  凡是 &gt;= 78 資料列的計劃都會使用雜湊聯結。  如果小於閾值，就會使用巢狀迴圈聯結。
+1. 因為我們傳回 336 個資料列，超過閾值；所以第二個分支表示標準雜湊聯結作業的探查階段。 請注意，即時查詢統計資料會顯示流經運算子的資料列，本例中為 “672 of 672”。
+1. 而最後一個分支是我們的叢集索引搜尋，供未超過閾值的巢狀迴圈聯結所使用。 請注意，我們看到的顯示是 “0 of 336” 資料列 (分支未使用)。
  現在來對比使用相同查詢的計劃，但這次的數量值在資料表中只有一個資料列：
  
 ```sql

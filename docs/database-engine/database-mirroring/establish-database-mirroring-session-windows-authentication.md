@@ -1,224 +1,98 @@
 ---
-title: "使用 Windows 驗證建立資料庫鏡像工作階段 (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Windows 驗證 [SQL Server]"
-  - "資料庫鏡像 [SQL Server], 安全性"
+title: "建立資料庫鏡像工作階段 - Windows 驗證 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database mirroring [SQL Server], sessions
 ms.assetid: 7cb418d6-dce1-4a0d-830e-9c5ccfe3bd72
 caps.latest.revision: 58
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 77
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 104c736aa623fa6aa3c55c204559759eb9885800
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 使用 Windows 驗證建立資料庫鏡像工作階段 (Transact-SQL)
+# <a name="establish-database-mirroring-session---windows-authentication"></a>建立資料庫鏡像工作階段 - Windows 驗證
     
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 請改用 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]。  
   
- 準備好鏡像資料庫之後 (請參閱[準備鏡像資料庫以進行鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md))，就可以建立資料庫鏡像工作階段。 主體、鏡像及見證伺服器執行個體必須是個別的伺服器執行個體，且應位於個別的主機系統上。  
+ 若要建立資料庫鏡像工作階段，並修改資料庫的資料庫鏡像屬性，請使用 **[資料庫屬性]** 對話方塊的 **[鏡像]** 頁面。使用 **[鏡像]** 頁面來設定資料庫鏡像之前，請先確定您是否已經符合下列需求：  
   
-> [!IMPORTANT]  
->  我們建議您將資料庫鏡像作業排定在離峰時間執行，因為設定鏡像會影響效能。  
-  
-> [!NOTE]  
->  給定的伺服器執行個體可參與具有相同或不同夥伴的多個並行資料庫鏡像工作階段。 伺服器執行個體可以在某些工作階段中是夥伴，在其他工作階段中是見證。 鏡像伺服器執行個體必須執行與主體伺服器執行個體相同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。 並非所有 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本支援的功能清單，請參閱 [SQL Server 2016 版本支援的功能](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)。 此外，我們強烈建議您在可比較而且可以處理相同工作負載的系統上執行這些伺服器執行個體。  
-  
-### 建立資料庫鏡像工作階段  
-  
-1.  建立鏡像資料庫。 如需詳細資訊，請參閱[準備鏡像資料庫以進行鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)。  
-  
-2.  設定每個伺服器執行個體的安全性。  
-  
-     資料庫鏡像工作階段中的每個伺服器執行個體都需要一個資料庫鏡像端點。 如果端點不存在，您就必須自行建立。  
+-   主體和鏡像伺服器執行個體必須執行相同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本 (Standard 或 Enterprise)。 此外，我們強烈建議您在可比較而且可以處理相同工作負載的系統上執行這些伺服器執行個體。  
   
     > [!NOTE]  
-    >  伺服器執行個體用於資料庫鏡像的驗證格式，是其資料庫鏡像端點的屬性。 資料庫鏡像可用的兩種傳輸安全性類型為：Windows 驗證或以憑證為基礎的驗證。 如需詳細資訊，請參閱[資料庫鏡像和 AlwaysOn 可用性群組的傳輸安全性 &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport security - database mirroring - always on availability.md)。  
+    >  並非所有 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本都可使用見證伺服器執行個體。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本支援的功能清單，請參閱 [SQL Server 2016 版本支援的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
-     確定在每個夥伴伺服器上，資料庫鏡像都有端點可供使用。 不論要支援的鏡像工作階段數有多少，伺服器執行個體只能有一個資料庫鏡像端點。 若要讓資料庫鏡像工作階段的夥伴獨佔使用此伺服器執行個體，您可以將夥伴的角色指派給端點 (ROLE**=**PARTNER)。 如果您也想讓其他資料庫鏡像工作階段的見證使用此伺服器，請將端點的角色指派為 ALL。  
+-   鏡像資料庫必須存在而且保持在最新狀態。  
   
-     若要執行 SET PARTNER 陳述式，兩個夥伴的端點狀態 (STATE) 必須都設為 STARTED。  
+     建立鏡像資料庫會需要在鏡像伺服器執行個體上還原最近的主體資料庫備份 (使用 WITH NORECOVERY)。 此外，在完整備份之後還需要建立一或多個記錄備份，並將這些記錄備份依序還原至鏡像資料庫 (使用 WITH NORECOVERY)。 如需詳細資訊，請參閱 [準備鏡像資料庫以進行鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)版本都可使用見證伺服器執行個體。  
   
-     若要了解伺服器執行個體是否有資料庫鏡像端點，以及它在該執行個體上的角色與狀態，請使用下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式：  
+-   如果伺服器執行個體正在不同的網域使用者帳戶下執行，每個執行個體都會需要登入其他執行個體的 **master** 資料庫。 如果登入不存在，您必須先建立登入，然後再設定鏡像。 如需詳細資訊，請參閱[使用 Windows 驗證允許資料庫鏡像端點的網路存取 &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-allow-network-access-windows-authentication.md)。  
   
-    ```  
-    SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints  
-    ```  
+### <a name="to-configure-database-mirroring"></a>若要設定資料庫鏡像  
   
-    > [!IMPORTANT]  
-    >  請不要重新設定使用中資料庫鏡像端點。 若資料庫鏡像端點存在且已在使用中，我們建議您在該伺服器執行個體上為每個工作階段使用該端點。 卸除使用中端點可能會導致端點重新啟動，並中斷現有工作階段的連接，而這對於其他伺服器執行個體可能會是一項錯誤。 在具有自動容錯移轉的高安全性模式中，這點尤其重要，因為在這種模式中重新設定夥伴上的端點，可能會導致發生容錯移轉。 此外，如果已針對工作階段設定見證，則卸除資料庫鏡像端點可能會導致該工作階段的主體伺服器失去仲裁。若發生此情況，則資料庫會離線，並中斷與資料庫使用者的的連線。 如需詳細資訊，請參閱[仲裁：見證如何影響資料庫可用性 &#40;資料庫鏡像&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md)。  
+1.  連接到主體伺服器執行個體後，在 [物件總管] 中按一下伺服器名稱，以展開伺服器樹狀目錄。  
   
-     如果任一夥伴缺少端點，請參閱[建立 Windows 驗證的資料庫鏡像端點 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)。  
+2.  展開 **[資料庫]**，然後選取要鏡像的資料庫。  
   
-3.  如果伺服器執行個體正在不同的網域使用者帳戶下執行，每個執行個體都會需要登入其他執行個體的 **master** 資料庫。 如果登入不存在，您就必須自行建立。 如需詳細資訊，請參閱[使用 Windows 驗證允許資料庫鏡像端點的網路存取 &#40;SQL Server&#41;](../../database-engine/database-mirroring/database mirroring - allow network access - windows authentication.md)。  
+3.  以滑鼠右鍵按一下資料庫，選取 **[工作]**，然後按一下 **[鏡像]**。 這將會開啟在 **[資料庫屬性]** 對話方塊中的 **[鏡像]** 頁面。  
   
-4.  若要設定主體伺服器做為鏡像資料庫上的夥伴，請連接到該鏡像伺服器，並執行以下陳述式：  
-  
-     ALTER DATABASE \<資料庫名稱> SET PARTNER **=**\<伺服器網路位址>  
-  
-     其中 \<資料庫名稱> 是要鏡像的資料庫名稱 (此名稱在兩個夥伴中都相同)，而 \<伺服器網路位址> 是主體伺服器的伺服器網路位址。  
-  
-     伺服器網路位址的語法如下：  
-  
-     TCP**://**\<*系統位址>***:**\<*連接埠>*  
-  
-     其中 \<系統位址> 是清楚識別目的地電腦系統的字串，而 \<連接埠> 是夥伴伺服器執行個體之鏡像端點使用的連接埠號碼。 如需詳細資訊，請參閱[指定伺服器網路位址 &#40;資料庫鏡像&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)。  
-  
-     例如，在鏡像伺服器執行個體上，下列 ALTER DATABASE 陳述式將夥伴設為原始主體伺服器執行個體。 資料庫名稱是 **AdventureWorks**、系統位址是 DBSERVER1 (夥伴系統的名稱)，而夥伴資料庫鏡像端點使用的通訊埠是 7022：  
-  
-    ```  
-    ALTER DATABASE AdventureWorks   
-       SET PARTNER = 'TCP://DBSERVER1:7022'  
-    ```  
-  
-     此陳述式會準備鏡像伺服器，以便在主體伺服器通知之後建立工作階段。  
-  
-5.  若要設定鏡像伺服器做為主體資料庫上的夥伴，請連接到該主體伺服器，並發出以下陳述式：  
-  
-     ALTER DATABASE \<資料庫名稱> SET PARTNER **=**\<伺服器網路位址>  
-  
-     如需詳細資訊，請參閱步驟 4。  
-  
-     例如，在主體伺服器執行個體上，下列 ALTER DATABASE 陳述式將夥伴設為原始鏡像伺服器執行個體。 資料庫名稱是 **AdventureWorks**，系統位址是 DBSERVER2 (夥伴系統的名稱) 而夥伴資料庫鏡像端點使用的通訊埠是 7025：  
-  
-    ```  
-    ALTER DATABASE AdventureWorks SET PARTNER = 'TCP://DBSERVER2:7022'  
-    ```  
-  
-     在主體伺服器上輸入此陳述式可開始資料庫鏡像工作階段。  
-  
-6.  依預設，工作階段會設定為完整交易安全性 (SAFETY 設定為 FULL)，它會以不含自動容錯移轉的同步高安全性模式啟動工作階段。 您可以依照下列方式，將工作階段重新設定為在具有自動容錯移轉的高安全性模式下執行，或在非同步的高效能模式下執行：  
-  
-    -   **具有自動容錯移轉的高安全性模式**  
-  
-         如果您想讓高安全性模式工作階段支援自動容錯移轉，請加入見證伺服器執行個體。 如需詳細資訊，請參閱[使用 Windows 驗證加入資料庫鏡像見證 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)。  
-  
-    -   **高效能模式**  
-  
-         或者，如果您不想進行自動容錯移轉，而且較注重效能而非可用性，請關閉交易安全性。 如需詳細資訊，請參閱[在資料庫鏡像工作階段中變更交易安全性 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/change-transaction-safety-in-a-database-mirroring-session-transact-sql.md)。  
-  
-        > [!NOTE]  
-        >  在高效能模式中，必須將 WITNESS 設定為 OFF。 如需詳細資訊，請參閱[仲裁：見證如何影響資料庫可用性 &#40;資料庫鏡像&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md)。  
-  
-## 範例  
-  
-> [!NOTE]  
->  下列範例會在夥伴之間為現有的鏡像資料庫建立資料庫鏡像工作階段。 如需建立鏡像資料庫的資訊，請參閱[準備鏡像資料庫以進行鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)。  
-  
- 此範例會顯示建立資料庫鏡像工作階段 (不使用見證) 的基本步驟。 這兩個夥伴是兩個電腦系統 (PARTNERHOST1 和 PARTNERHOST5) 上的預設伺服器執行個體。 這兩個夥伴執行個體會執行相同的 Windows 網域使用者帳戶 (MYDOMAIN\dbousername)。  
-  
-1.  在主體伺服器執行個體 (PARTNERHOST1 上的預設執行個體) 上，使用通訊埠 7022 建立支援所有角色的端點：  
-  
-    ```  
-    --create an endpoint for this instance  
-    CREATE ENDPOINT Endpoint_Mirroring  
-        STATE=STARTED   
-        AS TCP (LISTENER_PORT=7022)   
-        FOR DATABASE_MIRRORING (ROLE=ALL)  
-    GO  
-    --Partners under same domain user; login already exists in master.  
-    ```  
+4.  若要開始設定鏡像，請按一下 **[設定安全性]** 按鈕，啟動「設定資料庫鏡像安全性精靈」。  
   
     > [!NOTE]  
-    >  如需設定登入的範例，請參閱[使用 Windows 驗證允許資料庫鏡像端點的網路存取 &#40;SQL Server&#41;](../../database-engine/database-mirroring/database mirroring - allow network access - windows authentication.md)。  
+    >  在資料庫鏡像工作階段中，您只能使用這個精靈來加入或變更見證伺服器執行個體。  
   
-2.  在鏡像伺服器執行個體 (PARTNERHOST5 上的預設執行個體) 上，使用通訊埠 7022 建立支援所有角色的端點：  
-  
-    ```  
-    --create an endpoint for this instance  
-    CREATE ENDPOINT Endpoint_Mirroring  
-        STATE=STARTED   
-        AS TCP (LISTENER_PORT=7022)   
-        FOR DATABASE_MIRRORING (ROLE=ALL)  
-    GO  
-    --Partners under same domain user; login already exists in master.  
-    ```  
-  
-3.  在主體伺服器執行個體 (位於 PARTNERHOST1) 上，備份資料庫：  
-  
-    ```  
-    BACKUP DATABASE AdventureWorks   
-        TO DISK = 'C:\AdvWorks_dbmirror.bak'   
-        WITH FORMAT  
-    GO  
-    ```  
-  
-4.  在鏡像伺服器執行個體 (在 `PARTNERHOST5` 上) 上，還原資料庫：  
-  
-    ```  
-    RESTORE DATABASE AdventureWorks   
-        FROM DISK = 'Z:\AdvWorks_dbmirror.bak'   
-        WITH NORECOVERY  
-    GO  
-    ```  
-  
-5.  建立完整資料庫備份之後，您必須在主體資料庫上建立記錄備份。 例如，下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式會將記錄備份至前一次資料庫備份所使用的相同檔案：  
-  
-    ```  
-    BACKUP LOG AdventureWorks   
-        TO DISK = 'C:\AdventureWorks.bak'   
-    GO  
-    ```  
-  
-6.  您必須先套用必要的記錄備份 (以及任何後續記錄備份)，才能啟動鏡像。  
-  
-     例如，下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式會從 C:\AdventureWorks.bak 還原第一筆記錄：  
-  
-    ```  
-    RESTORE LOG AdventureWorks   
-        FROM DISK = 'C:\ AdventureWorks.bak'   
-        WITH FILE=1, NORECOVERY  
-    GO  
-    ```  
-  
-7.  在鏡像伺服器執行個體上，將 PARTNERHOST1 上的伺服器執行個體設定為夥伴 (讓它成為初始主體伺服器)：  
-  
-    ```  
-    USE master;  
-    GO  
-    ALTER DATABASE AdventureWorks   
-        SET PARTNER =   
-        'TCP://PARTNERHOST1:7022'  
-    GO  
-    ```  
+5.  「設定資料庫鏡像安全性精靈」會自動在每個伺服器執行個體上建立資料庫鏡像端點 (如果沒有端點的話)，並在伺服器執行個體角色 (**[主體]**、 **[鏡像]**或 **[見證]**) 的對應欄位中輸入其伺服器網路位址。  
   
     > [!IMPORTANT]  
-    >  依預設，資料庫鏡像工作階段會以同步模式執行，前提是必須有完整交易安全性 (SAFETY 設定為 FULL)。 若要讓工作階段以非同步的高效能模式執行，請將 SAFETY 設定為 OFF。 如需詳細資訊，請參閱 [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)。  
+    >  建立端點時，「設定資料庫鏡像安全性精靈」一定會使用 Windows 驗證。 鏡像端點必須已經設定成使用每個伺服器執行個體的憑證，然後您才能使用此精靈搭配以憑證為基礎的驗證。 此外，精靈之 **[服務帳戶]** 對話方塊中的所有欄位都必須保持空白。 如需建立資料庫鏡像端點以便使用憑證的相關資訊，請參閱 [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md)。  
   
-8.  在主體伺服器執行個體上，將 `PARTNERHOST5` 上的伺服器執行個體設定為夥伴 (讓它成為初始鏡像伺服器)：  
+6.  選擇性地變更作業模式。 有些作業模式的可用性，取決於您是否已指定見證的 TCP 位址。 選項如下：  
   
-    ```  
-    USE master;  
-    GO  
-    ALTER DATABASE AdventureWorks   
-        SET PARTNER = 'TCP://PARTNERHOST5:7022'  
-    GO  
-    ```  
+    |選項|見證？|說明|  
+    |------------|--------------|-----------------|  
+    |**高效能 (非同步)**|Null (若存在，則不使用，但工作階段需要仲裁)|為了將效能發揮到極致，鏡像資料庫的狀態總是會比主體資料庫有些延遲，永遠無法真正的同步。 然而，在資料庫之間的間距通常很小。 夥伴的遺失將具有下列結果：<br /><br /> 如果鏡像伺服器執行個體已無法使用，主體將繼續。<br /><br /> 如果主體伺服器執行個體無法使用，鏡像就會停止。但是，如果此工作階段沒有見證 (符合建議) 或者見證連接至鏡像伺服器，此鏡像伺服器就可以當做暖待命伺服器存取。然後，資料庫擁有者可以對鏡像伺服器執行個體進行強制服務 (有遺失資料的可能)。<br /><br /> <br /><br /> 如需詳細資訊，請參閱 [資料庫鏡像工作階段期間的角色切換 &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)版本都可使用見證伺服器執行個體。|  
+    |**不具有自動容錯移轉的高安全性 (同步)**|否|保證會將所有已認可的交易都寫入鏡像伺服器上的磁碟。<br /><br /> 當夥伴相互連接，而且資料庫已同步處理時，可以進行手動容錯移轉。<br /><br /> 夥伴的遺失將具有下列結果：<br /><br /> 如果鏡像伺服器執行個體已無法使用，主體將繼續。<br /><br /> 如果主體伺服器執行個體無法使用，鏡像將停止，但可以當做暖待命伺服器存取。然後，資料庫擁有者可以對鏡像伺服器執行個體進行強制服務 (有遺失資料的可能)。<br /><br /> <br /><br /> 如需詳細資訊，請參閱 [資料庫鏡像工作階段期間的角色切換 &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)版本都可使用見證伺服器執行個體。|  
+    |**具有自動容錯移轉的高安全性 (同步)**|是 (必要)|保證會將所有已認可的交易都寫入鏡像伺服器上的磁碟。<br /><br /> 經由納入見證伺服器執行個體來支援自動容錯移轉，藉以得到最大化的可用性。 請注意，您必須先指定見證伺服器位址，才能選取 **[具有自動容錯移轉的高安全性 (同步)]** 選項。<br /><br /> 當夥伴相互連接，而且資料庫已同步處理時，可以進行手動容錯移轉。<br /><br /> 在有見證的情況下，夥伴的遺失將具有下列結果：<br /><br /> 如果主體伺服器執行個體已無法使用，將發生自動容錯移轉。 鏡像伺服器執行個體將切換到主體的角色，並且提供它的資料庫做為主體資料庫。<br /><br /> 如果鏡像伺服器執行個體已無法使用，主體將繼續。<br /><br /> <br /><br /> 如需詳細資訊，請參閱 [資料庫鏡像工作階段期間的角色切換 &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)版本都可使用見證伺服器執行個體。<br /><br /> **\*\* 重要事項 \*\*** 如果見證中斷連接，則必須將夥伴相互連接，才能使用資料庫。 如需詳細資訊，請參閱[仲裁：見證如何影響資料庫可用性 &#40;資料庫鏡像&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md)。|  
   
-9. 或者，如果您想要使用具有自動容錯移轉的高安全性模式，請設定見證伺服器執行個體。 如需詳細資訊，請參閱[使用 Windows 驗證加入資料庫鏡像見證 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)。  
+7.  若下列條件均符合，請按一下 **[啟動鏡像]** 開始鏡像作業：  
   
-> [!NOTE]  
->  如需顯示安全性設定、準備鏡像資料庫、設定夥伴及新增見證的完整範例，請參閱[設定資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)。  
+    -   您目前連接到主體伺服器執行個體。  
   
-## 另請參閱  
- [設定資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)   
- [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [使用 Windows 驗證允許資料庫鏡像的網路存取 &#40;SQL Server&#41;](../../database-engine/database-mirroring/database mirroring - allow network access - windows authentication.md)   
+    -   安全性已正確設定。  
+  
+    -   已指定主體及鏡像伺服器執行個體的完整 TCP 位址 (在 **[伺服器網路位址]** 區段中)。  
+  
+    -   如果作業模式設定為 **[具有自動容錯移轉的高安全性 (同步)]**，也會指定見證伺服器執行個體的完整 TCP 位址。  
+  
+8.  在鏡像開始後，您可以變更作業模式，並且按一下 **[確定]**以儲存變更。 請注意，您必須先指定見證伺服器位址，才能透過自動容錯移轉切換到高安全性模式。  
+  
+    > [!NOTE]  
+    >  若要移除見證，請從 **[見證]** 欄位刪除其伺服器網路位址。 如果從具有自動容錯移轉的高安全性模式切換到高效能模式，則會自動清除 [見證] 欄位。  
+  
+## <a name="see-also"></a>另請參閱  
+ [資料庫鏡像工作階段期間的角色切換 &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   
  [準備鏡像資料庫以進行鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)   
- [建立 Windows 驗證的資料庫鏡像端點 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)   
- [資料庫鏡像和記錄傳送 &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-log-shipping-sql-server.md)   
- [資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
- [資料庫鏡像和複寫 &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)   
+ [資料庫屬性 &#40;鏡像頁面&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   
+ [暫停或繼續資料庫鏡像工作階段 &#40;SQL Server&#41;](../../database-engine/database-mirroring/pause-or-resume-a-database-mirroring-session-sql-server.md)   
+ [設定鏡像資料庫以使用 Trustworthy 屬性 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md)   
+ [移除資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/remove-database-mirroring-sql-server.md)   
+ [角色切換後針對登入和作業進行管理 &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)   
  [設定資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)   
- [指定伺服器網路位址 &#40;資料庫鏡像&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)   
- [資料庫鏡像作業模式](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)  
+ [在另一個伺服器執行個體上提供可用的資料庫時，管理中繼資料 &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)   
+ [加入或取代資料庫鏡像見證 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  
   
   
+

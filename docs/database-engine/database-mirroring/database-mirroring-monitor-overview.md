@@ -1,26 +1,31 @@
 ---
 title: "資料庫鏡像監視器概觀 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.dbmmonitor.main.f1"
-helpviewer_keywords: 
-  - "資料庫鏡像監視器 [SQL Server], 介面"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.dbmmonitor.main.f1
+helpviewer_keywords:
+- Database Mirroring Monitor [SQL Server], interface
 ms.assetid: 8ebbdcd6-565a-498f-b674-289c84b985eb
 caps.latest.revision: 40
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 40
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 129958519a6115df494479c6c2237d4a611cfed5
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 資料庫鏡像監視器概觀
+# <a name="database-mirroring-monitor-overview"></a>資料庫鏡像監視器概觀
   如果您擁有正確的權限，就可以使用「資料庫鏡像監視器」來監視伺服器執行個體上的任何鏡像資料庫子集。 監視可以讓您確認資料庫鏡像工作階段中的資料是否有流動，以及資料流動是否順暢。 「資料庫鏡像監視器」對於疑難排解資料流動減緩的原因也很有用。  
   
  您可以註冊任何鏡像資料庫，以便在各容錯移轉夥伴上個別進行監視。 當您註冊資料庫時，「資料庫鏡像監視器」會快取下列有關資料庫的資訊：  
@@ -31,25 +36,25 @@ caps.handback.revision: 40
   
 -   各夥伴最後的已知角色 (主體或鏡像)  
   
-## Permissions  
- 若要監視資料庫鏡像，您必須是伺服器執行個體上**系統管理員**固定伺服器角色或 **msdb** 資料庫之 **dbm_monitor** 固定資料庫角色的成員。 如果您只是其中一個夥伴伺服器執行個體上**系統管理員**或 **dbm_monitor** 的成員，則監視器只能連接到該夥伴，不能從其他夥伴那裡擷取資訊。  
+## <a name="permissions"></a>Permissions  
+ 若要監視資料庫鏡像，您必須是伺服器執行個體上 **系統管理員** 固定伺服器角色或 **msdb** 資料庫之 **dbm_monitor** 固定資料庫角色的成員。 如果您只是其中一個夥伴伺服器執行個體上 **系統管理員** 或 **dbm_monitor** 的成員，則監視器只能連接到該夥伴，不能從其他夥伴那裡擷取資訊。  
   
  如果您只是某個伺服器執行個體上 **dbm_monitor** 的成員，則您在該伺服器執行個體上將只具備有限的權限。 您只能檢視最近的狀態資料列。 如果您使用 **dbm_monitor** 權限連接到伺服器執行個體，則「資料庫鏡像監視器」會通知您，您的權限有限。  
   
 > [!IMPORTANT]  
 >  **dbm_monitor** 固定資料庫角色是在「資料庫鏡像監視器」中註冊第一個資料庫時，於 **msdb** 資料庫中建立的。 新的 **dbm_monitor** 角色沒有任何成員，必須由系統管理員指派使用者給該角色。  
   
-## 導覽樹狀目錄  
+## <a name="navigation-tree"></a>導覽樹狀目錄  
  如果已經有任何資料庫註冊要由「資料庫鏡像監視器」進行監視，則已註冊的資料庫清單便會顯示在導覽樹狀目錄中。 此樹狀目錄會每隔 30 秒自動重新整理一次。 若要查看已註冊之資料庫的狀態，請選取該資料庫。 如需詳細資訊，請參閱此主題稍後的「詳細資料窗格」。  
   
  每一個已註冊的資料庫都會顯示下列資訊：  
   
- \<資料庫名稱> **(** \<狀態> **,** \<主體伺服器> **->** \<鏡像伺服器> **)**  
+ <資料庫名稱> **(** \<狀態> **,** <主體伺服器> **->** <鏡像伺服器> **)**  
   
  *<Database_name>*  
  已向「資料庫鏡像監視器」註冊的鏡像資料庫名稱。  
   
- *\<狀態>*  
+ \<狀態>  
  可能的狀態及其相關聯的圖示如下所示：  
   
 |圖示|狀態|描述|  
@@ -63,14 +68,14 @@ caps.handback.revision: 40
  *<PRINCIPAL_SERVER>*  
  目前為主體伺服器執行個體的夥伴名稱。 此名稱採用下列格式：  
   
- \<系統名稱>[**\\**\<執行個體名稱>]  
+ <系統名稱>[**\\**<執行個體名稱>]  
   
- 其中 \<系統名稱> 是伺服器執行個體所在的系統名稱。 如果是非預設的伺服器執行個體，則也會顯示執行個體名稱：\<系統名稱>**\\**\<執行個體名稱>。  
+ 其中 <系統名稱> 是伺服器執行個體所在的系統名稱。 如果是非預設的伺服器執行個體，則也會顯示執行個體名稱：<系統名稱>**\\**<執行個體名稱>。  
   
  *<MIRROR_SERVER>*  
  目前為鏡像伺服器執行個體的夥伴名稱。 其格式和主體伺服器相同。  
   
-## 詳細資料窗格  
+## <a name="detail-pane"></a>詳細資料窗格  
  監視器的外觀是依據是否選取資料庫而定。 當您開啟監視器時，詳細資料窗格會顯示 [註冊鏡像資料庫] 連結。 按一下這個連結即可註冊資料庫。 已註冊的資料庫會列在導覽樹狀目錄中的 [資料庫鏡像監視器] 節點下面。 「資料庫鏡像監視器」一定會嘗試連接到它已儲存認證的每一個伺服器執行個體。  
   
  當您選取資料庫時，其狀態就會顯示在詳細資料窗格中的 [狀態] 索引標籤頁面上。 此頁面的內容來自於主體伺服器執行個體和鏡像伺服器執行個體。 透過與主體和鏡像伺服器執行個體的個別連接蒐集狀態時，會以非同步方式填滿頁面。 此狀態會每隔 30 秒自動重新整理一次。  
@@ -80,9 +85,9 @@ caps.handback.revision: 40
   
  系統管理員只要選取 [警告] 索引標籤頁面，即可檢視資料庫目前的警告組態。 系統管理員可以在這個頁面上啟動 [設定警告臨界值] 對話方塊，以啟用和設定一或多個警告臨界值。  
   
- 在索引標籤上方的橫幅中，詳細資料窗格會將監視器上次重新整理狀態資訊的時間顯示為 [上次重新整理: \<日期>\<時間>]。 「資料庫鏡像監視器」通常會在不同的時間，分別從主體伺服器執行個體和鏡像伺服器執行個體擷取狀態資訊。 所顯示的時間是這兩個重新整理時間中較早的一個。  
+ 在索引標籤上方的橫幅中，詳細資料窗格會將監視器上次重新整理狀態資訊的時間顯示為 上次重新整理:\<日期>\<時間>。 「資料庫鏡像監視器」通常會在不同的時間，分別從主體伺服器執行個體和鏡像伺服器執行個體擷取狀態資訊。 所顯示的時間是這兩個重新整理時間中較早的一個。  
   
-## 動作功能表  
+## <a name="action-menu"></a>動作功能表  
  [動作] 功能表一定會包含下列命令：  
   
 |Command|描述|  
@@ -101,8 +106,8 @@ caps.handback.revision: 40
   
 -   [啟動資料庫鏡像監視器 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [監視資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
- [啟動設定資料庫鏡像安全性精靈 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start the configuring database mirroring security wizard.md)  
+ [啟動設定資料庫鏡像安全性精靈 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  
   
   

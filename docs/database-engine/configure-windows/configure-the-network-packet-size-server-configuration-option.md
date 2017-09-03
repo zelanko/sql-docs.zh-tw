@@ -1,27 +1,32 @@
 ---
 title: "設定 network packet size 伺服器組態選項 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "預設封包大小"
-  - "大小 [SQL Server], 封包"
-  - "封包 [SQL Server], 大小"
-  - "network packet size 選項"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- default packet size
+- size [SQL Server], packets
+- packets [SQL Server], size
+- network packet size option
 ms.assetid: 236985bf-fc4a-4a57-98f7-a71ef977fd7b
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5dff5ae44e8b383d6cb3f10374da36d423c6b4e7
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 設定 network packet size 伺服器組態選項
+# <a name="configure-the-network-packet-size-server-configuration-option"></a>設定 network packet size 伺服器組態選項
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   此主題描述如何使用 **或** ，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中設定 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] network packet size [!INCLUDE[tsql](../../includes/tsql-md.md)]伺服器組態選項。 [網路封包大小] 選項會設定用於整個網路的封包大小 (以位元組為單位)。 封包是在用戶端與伺服器之間傳送要求與結果的固定大小資料區塊。 預設的封包大小為 4096 個位元組。  
@@ -61,18 +66,18 @@ caps.handback.revision: 26
   
 -   在使用不同網路通訊協定的系統上，請將 [網路封包大小] 設定為最常用通訊協定的大小。 當網路通訊協定支援大型封包時，network packet size 選項可以改善網路效能。 用戶端應用程式可以覆寫此值。  
   
--   您也可以呼叫 OLE DB、開放式資料庫連接 (ODBC) 及 DB-Library 函數來要求變更封包大小。 如果伺服器無法支援要求的封包大小，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 將會傳送警告訊息給用戶端。 在某些情況下，變更封包大小可能會導致通訊連結失敗，例如以下狀況：  
+-   您也可以呼叫 OLE DB、開放式資料庫連接 (ODBC) 及 DB-Library 函數來要求變更封包大小。 如果伺服器無法支援要求的封包大小， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 將會傳送警告訊息給用戶端。 在某些情況下，變更封包大小可能會導致通訊連結失敗，例如以下狀況：  
   
      `Native Error: 233, no process is on the other end of the pipe.`  
   
 ###  <a name="Security"></a> 安全性  
   
 ####  <a name="Permissions"></a> Permissions  
- 依預設，所有使用者都會取得不含參數或只含第一個參數之 **sp_configure** 的執行權限。 若要執行同時設定了兩個參數的 **sp_configure** 來變更組態選項或執行 RECONFIGURE 陳述式，使用者必須取得 ALTER SETTINGS 伺服器層級權限。 **系統管理員 (sysadmin)** 及 **serveradmin** 固定伺服器角色會隱含 ALTER SETTINGS 權限。  
+ 不含參數或只含第一個參數之 **sp_configure** 上的執行權限預設會授與所有使用者。 以同時設定兩個參數的 **sp_configure** 來變更組態選項或執行 RECONFIGURE 陳述式時，使用者必須取得 ALTER SETTINGS 伺服器層級權限。 **系統管理員 (sysadmin)** 及 **serveradmin** 固定伺服器角色會隱含 ALTER SETTINGS 權限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 設定 network packet size 選項  
+#### <a name="to-configure-the-network-packet-size-option"></a>設定 network packet size 選項  
   
 1.  在物件總管中，以滑鼠右鍵按一下伺服器，然後選取 [屬性]。  
   
@@ -82,7 +87,7 @@ caps.handback.revision: 26
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 設定 network packet size 選項  
+#### <a name="to-configure-the-network-packet-size-option"></a>設定 network packet size 選項  
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
@@ -104,14 +109,15 @@ GO
   
 ```  
   
- 如需詳細資訊，請參閱[伺服器組態選項 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)。  
+ 如需詳細資訊，請參閱 [伺服器組態選項 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)伺服器組態選項。  
   
 ##  <a name="FollowUp"></a> 待處理：設定 network packet size 選項之後  
  設定會立即生效，不需要重新啟動伺服器。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [伺服器組態選項 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
   
+

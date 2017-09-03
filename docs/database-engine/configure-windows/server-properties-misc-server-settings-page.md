@@ -1,27 +1,32 @@
 ---
 title: "伺服器屬性 (其他伺服器設定頁面) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.serverproperties.miscserversettings.f1"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.serverproperties.miscserversettings.f1
 ms.assetid: b170c066-30cd-42dd-8d34-aa129ea09551
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 53069a083eff6c49fa5198743eb626ca429b96d1
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 伺服器屬性 (其他伺服器設定頁面)
+# <a name="server-properties---misc-server-settings-page"></a>伺服器屬性 - 其他伺服器設定頁面
   使用此頁面來檢視或修改伺服器設定。  
   
-## 選項  
+## <a name="options"></a>選項  
  **使用者的預設語言**  
  指定所有新建立之登入的預設語言。  
   
@@ -34,15 +39,15 @@ caps.handback.revision: 22
  **將兩位數年份解譯為介於**  
  指定用於解譯兩位數年份值的 100 年日期範圍。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將參考指定範圍的年份，來解譯兩位數日期值。  
   
- 以結束年份設定右邊的方塊。 儲存結束年份時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將自動使用開始年份來擴展左邊的方塊。  
+ 以結束年份設定右邊的方塊。 儲存結束年份時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將自動使用開始年份來擴展左邊的方塊。  
   
  **設定的值**  
  針對此窗格中的選項，顯示設定的值。 如果您變更這些值，請按一下 **[執行中的值]** ，即可查看變更是否已生效。 如果變更尚未生效，必須先重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。  
   
- **執行中的值**  
+ **[執行中的值]**  
  針對此窗格中的選項，檢視目前執行中的值。 這些值是唯讀的。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [伺服器組態選項 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)  
   
   

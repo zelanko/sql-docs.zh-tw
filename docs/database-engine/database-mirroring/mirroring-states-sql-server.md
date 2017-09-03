@@ -1,31 +1,36 @@
 ---
 title: "鏡像狀態 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "狀態 [SQL Server], 資料庫鏡像"
-  - "PENDING_FAILOVER 狀態"
-  - "鏡像狀態 [SQL Server]"
-  - "DISCONNECTED 狀態"
-  - "SYNCHRONIZING 狀態"
-  - "SYNCHRONIZED 狀態"
-  - "SUSPENDED 狀態"
-  - "資料庫鏡像 [SQL Server], 狀態"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- states [SQL Server], database mirroring
+- PENDING_FAILOVER state
+- mirroring states [SQL Server]
+- DISCONNECTED state
+- SYNCHRONIZING state
+- SYNCHRONIZED state
+- SUSPENDED state
+- database mirroring [SQL Server], states
 ms.assetid: 90062917-74f9-471b-b49e-bc153ae1a468
 caps.latest.revision: 39
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: ba32ea70f2a3d04753dd3860a798f8673fad032a
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 鏡像狀態 (SQL Server)
+# <a name="mirroring-states-sql-server"></a>鏡像狀態 (SQL Server)
   在資料庫鏡像工作階段期間，鏡像資料庫一定會處於特定狀態 (「鏡像狀態」)。 資料庫的狀態會反映通訊狀態、資料流程，以及夥伴之間的資料差異。 資料庫鏡像工作階段會與主體資料庫採用相同的狀態。  
   
  在資料庫鏡像工作階段內，伺服器執行個體會彼此監視。 夥伴會使用鏡像狀態來監視資料庫。 除了 PENDING_FAILOVER 狀態之外，主體資料庫和鏡像資料庫永遠處於相同的狀態。 若為工作階段設定見證，則每部夥伴伺服器都會利用其連接狀態 (CONNECTED 或 DISCONNECTED) 來監視見證。  
@@ -40,7 +45,7 @@ caps.handback.revision: 39
 |PENDING_FAILOVER|唯有開始進行容錯移轉之後但伺服器尚未轉換為鏡像角色之前，主體伺服器上才會出現此狀態。<br /><br /> 起始容錯移轉時，主體資料庫便會進入 PENDING_FAILOVER 狀態，迅速終止任何使用者連接，然後馬上接替鏡像角色。|  
 |DISCONNECTED|夥伴已經與其他夥伴失去通訊。|  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [監視資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)  
   
   

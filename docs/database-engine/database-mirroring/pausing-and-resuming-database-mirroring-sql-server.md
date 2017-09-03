@@ -1,28 +1,33 @@
 ---
 title: "暫停與繼續資料庫鏡像 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "工作階段 [SQL Server], 資料庫鏡像"
-  - "繼續資料庫鏡像"
-  - "資料庫鏡像 [SQL Server], 暫停"
-  - "資料庫鏡像 [SQL Server], 繼續"
-  - "暫停資料庫鏡像"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- sessions [SQL Server], database mirroring
+- resuming database mirroring
+- database mirroring [SQL Server], pausing
+- database mirroring [SQL Server], resuming
+- pausing database mirroring
 ms.assetid: c67802c6-ee8c-4cbd-a6d4-f7b80413a4ab
 caps.latest.revision: 32
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: ce0495d6bc7b670cade489806e27aa651a89239e
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 暫停與繼續資料庫鏡像 (SQL Server)
+# <a name="pausing-and-resuming-database-mirroring-sql-server"></a>暫停與繼續資料庫鏡像 (SQL Server)
   資料庫擁有者隨時都可以先暫停資料庫鏡像工作階段，稍後再繼續。 暫停會保留工作階段狀態，同時暫停鏡像。 發生瓶頸時，暫停可能會對改進主體伺服器的效能有所幫助。  
   
  工作階段暫停時，主體資料庫仍然可以使用。 暫停會使鏡像工作階段的狀態設定為 SUSPENDED，鏡像資料庫不再與主體資料庫同步，造成主體資料庫需公開執行。  
@@ -55,7 +60,7 @@ caps.handback.revision: 32
   
 -   透過移除鏡像，停止資料庫鏡像工作階段。  
   
-     與暫停工作階段不同的是，移除鏡像會卸除鏡像工作階段的所有相關資訊。 每個夥伴伺服器執行個體，會保留本身的資料庫副本。 如果復原先前的鏡像副本，則可能會與先前的主體副本有所差異，且會落後自工作階段暫停後所經過的時間量。 如需詳細資訊，請參閱[移除資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md)。  
+     與暫停工作階段不同的是，移除鏡像會卸除鏡像工作階段的所有相關資訊。 每個夥伴伺服器執行個體，會保留本身的資料庫副本。 如果復原先前的鏡像副本，則可能會與先前的主體副本有所差異，且會落後自工作階段暫停後所經過的時間量。 如需詳細資訊，請參閱 [移除資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md)＞。  
   
 ##  <a name="RelatedTasks"></a> 相關工作  
  **若要暫停或繼續資料庫鏡像**  
@@ -66,7 +71,7 @@ caps.handback.revision: 32
   
 -   [移除資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/remove-database-mirroring-sql-server.md)  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [移除資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md)  

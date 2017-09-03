@@ -1,35 +1,40 @@
 ---
 title: "伺服器屬性 (連接頁面) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.serverproperties.connections.f1"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.serverproperties.connections.f1
 ms.assetid: 33be8ac5-12dd-4b8a-99e0-68261c219dd2
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 73d0b32c2688c912c282c7c4acab0bd9ecb5633f
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 伺服器屬性 (連接頁面)
+# <a name="server-properties---connections-page"></a>伺服器屬性 - 連接頁面
   使用此頁面來檢視或修改您的連接選項。  
   
-## 連接  
+## <a name="connections"></a>連接  
  **並行連接的最大數目 (0 = 無限制)**  
  如果設定為零以外的值，則會限制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 允許的連接數目。  
   
 > [!CAUTION]  
 >  設定為較小的值，例如 1 或 2，可防止管理員連接管理伺服器；不過，專用管理連接仍可以隨時連接。  
   
-## 預設連接選項  
- **預設連接選項**  
+## <a name="default-connection-options"></a>預設連接選項  
+ **Default connection options**  
  指定預設連接選項，如下表中所述。  
   
 |組態選項|描述|  
@@ -52,9 +57,9 @@ caps.handback.revision: 27
   
  如需連接選項的詳細資訊，請搜尋線上叢書的特定選項。  
   
-## 遠端伺服器連接  
+## <a name="remote-server-connections"></a>遠端伺服器連接  
  **允許此伺服器的遠端連接**  
- 從遠端伺服器執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體，控制預存程序的執行。 選取這個核取方塊的效果與將 **sp_configureremote access** 選項設為 1 相同。 清除該核取方塊可避免從遠端伺服器執行預存程序。  
+ 從遠端伺服器執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的執行個體，控制預存程序的執行。 選取這個核取方塊的效果與將 **sp_configureremote access** 選項設為 1 相同。 清除該核取方塊可避免從遠端伺服器執行預存程序。  
   
  **遠端查詢逾時 (以秒為單位，0 = 不會逾時)**  
  指定在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 逾時之前，遠端作業可以執行多久 (以秒為單位)。 預設值是 600 秒，也就是允許等候十分鐘。  
@@ -62,15 +67,15 @@ caps.handback.revision: 27
  **需要伺服器對伺服器通訊的分散式交易**  
  透過 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 分散式交易協調器 (MS DTC) 交易，保護伺服器對伺服器程序的動作。 如需詳細資訊，請參閱 [Configure the remote proc trans Server Configuration Option](../../database-engine/configure-windows/configure-the-remote-proc-trans-server-configuration-option.md)。  
   
-## 屬性頁面顯示選項  
+## <a name="property-page-display-options"></a>屬性頁面顯示選項  
  **設定的值**  
  針對此窗格中的選項，顯示設定的值。 如果您變更這些值，請按一下 **[執行中的值]** ，即可查看變更是否已生效。 如果沒有的話，就必須先重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。  
   
- **執行中的值**  
+ **[執行中的值]**  
  針對此窗格中的選項，檢視目前執行中的值。 這些值是唯讀的。  
   
-## 另請參閱  
- [選項 &#40;查詢執行/SQL Server/進階頁面&#41;](../Topic/Options%20\(Query%20Execution:%20SQL%20Server:%20Advanced%20Page\).md)   
- [伺服器設定選項 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)  
+## <a name="see-also"></a>另請參閱  
+ [選項 &#40;查詢執行/SQL Server/進階頁面&#41;](http://msdn.microsoft.com/library/3ec788c7-22c3-4216-9ad0-81a168d17074)   
+ [伺服器組態選項 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)  
   
   

@@ -1,27 +1,32 @@
 ---
-title: "將次要資料庫加入至記錄傳送組態 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "加入次要資料庫"
-  - "次要資料庫 [SQL Server], 記錄傳送中"
-  - "次要資料檔 [SQL Server], 新增"
-  - "記錄傳送 [SQL Server], 次要資料庫"
+title: "將次要資料庫新增至記錄傳送組態 (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- adding secondary databases
+- secondary databases [SQL Server], in log shipping
+- secondary data files [SQL Server], adding
+- log shipping [SQL Server], secondary databases
 ms.assetid: b02eba13-f8e6-4684-b7e4-75ea038ea473
 caps.latest.revision: 20
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: d1f64d49c5baf05dc1c7f18c4c0c568a94e424ae
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 將次要資料庫加入至記錄傳送組態 (SQL Server)
+# <a name="add-a-secondary-database-to-a-log-shipping-configuration-sql-server"></a>將次要資料庫加入至記錄傳送組態 (SQL Server)
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，將次要資料庫加入至 [!INCLUDE[tsql](../../includes/tsql-md.md)]中現有的記錄傳送組態。  
   
  **本主題內容**  
@@ -47,7 +52,7 @@ caps.handback.revision: 20
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 若要加入記錄傳送次要資料庫  
+#### <a name="to-add-a-log-shipping-secondary-database"></a>若要加入記錄傳送次要資料庫  
   
 1.  以滑鼠右鍵按一下記錄傳送組態中要作為主要資料庫的資料庫，然後按一下 [屬性]。  
   
@@ -81,17 +86,17 @@ caps.handback.revision: 20
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 若要加入記錄傳送次要資料庫  
+#### <a name="to-add-a-log-shipping-secondary-database"></a>若要加入記錄傳送次要資料庫  
   
-1.  在次要伺服器上，執行 [sp_add_log_shipping_secondary_primary](../../relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-primary-transact-sql.md)，提供主要伺服器與資料庫的詳細資料。 這個預存程序會傳回次要識別碼及複製與還原作業識別碼。  
+1.  在次要伺服器上，執行 [sp_add_log_shipping_secondary_primary](../../relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-primary-transact-sql.md) ，提供主要伺服器與資料庫的詳細資料。 這個預存程序會傳回次要識別碼及複製與還原作業識別碼。  
   
-2.  在次要伺服器上執行 [sp_add_jobschedule](../../relational-databases/system-stored-procedures/sp-add-jobschedule-transact-sql.md)，以設定複製與還原作業的排程。  
+2.  在次要伺服器上執行 [sp_add_jobschedule](../../relational-databases/system-stored-procedures/sp-add-jobschedule-transact-sql.md) ，以設定複製與還原作業的排程。  
   
-3.  在次要伺服器上執行 [sp_add_log_shipping_secondary_database](../../relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-database-transact-sql.md)，以加入次要資料庫。  
+3.  在次要伺服器上執行 [sp_add_log_shipping_secondary_database](../../relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-database-transact-sql.md) ，以加入次要資料庫。  
   
-4.  在主要伺服器上執行 [sp_add_log_shipping_primary_secondary](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-secondary-transact-sql.md)，將有關新次要資料庫的必要資訊加入主要伺服器。  
+4.  在主要伺服器上執行 [sp_add_log_shipping_primary_secondary](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-secondary-transact-sql.md) ，將有關新次要資料庫的必要資訊加入主要伺服器。  
   
-5.  在次要伺服器上，啟用複製與還原作業。 如需詳細資訊，請參閱 [Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md)。  
+5.  在次要伺服器上，啟用複製與還原作業。 如需詳細資訊，請參閱 [Disable or Enable a Job](http://msdn.microsoft.com/library/5041261f-0c32-4d4a-8bee-59a6c16200dd)。  
   
 ##  <a name="RelatedTasks"></a> 相關工作  
   
@@ -109,7 +114,7 @@ caps.handback.revision: 20
   
 -   [容錯移轉至記錄傳送次要 &#40;SQL Server&#41;](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md)  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [關於記錄傳送 &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [記錄傳送資料表與預存程序](../../database-engine/log-shipping/log-shipping-tables-and-stored-procedures.md)  
   

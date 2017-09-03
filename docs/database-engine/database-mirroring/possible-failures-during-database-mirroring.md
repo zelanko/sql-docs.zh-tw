@@ -1,30 +1,35 @@
 ---
 title: "資料庫鏡像期間可能發生的失敗 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "逾時期間 [SQL Server 資料庫鏡像]"
-  - "輕微錯誤 [SQL Server]"
-  - "資料庫鏡像 [SQL Server], 疑難排解"
-  - "逾時錯誤 [SQL Server]"
-  - "疑難排解 [SQL Server], 資料庫鏡像"
-  - "重大錯誤"
-  - "失敗的資料庫鏡像工作階段 [SQL Server]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- time-out period [SQL Server database mirroring]
+- soft errors [SQL Server]
+- database mirroring [SQL Server], troubleshooting
+- timeout errors [SQL Server]
+- troubleshooting [SQL Server], database mirroring
+- hard errors
+- failed database mirroring sessions [SQL Server]
 ms.assetid: d7031f58-5f49-4e6d-9a62-9b420f2bb17e
 caps.latest.revision: 59
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 59
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 8c97371185c1fe7bdd38c7ed172d5a49ae27b58c
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 資料庫鏡像期間可能發生的失敗
+# <a name="possible-failures-during-database-mirroring"></a>資料庫鏡像期間可能發生的失敗
   實體、作業系統或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 問題都可能會在資料庫鏡像工作階段中導致失敗。 資料庫鏡像不會為了確認 Sqlservr.exe 所依賴的元件是正常運作或已失敗，而定期檢查這些元件。 不過，針對某些類型的錯誤，受影響的元件會對 Sqlservr.exe 報告錯誤。 由其他元件所報告的錯誤稱為「重大錯誤」(Hard Error)。 為了偵測其他沒有通知的失敗，資料庫鏡像會實作其本身的逾時機制。 當鏡像逾時發生時，資料庫鏡像會假設失敗已經發生，並宣告「軟性錯誤」。 但是，某些發生在 SQL Server 執行個體層級的失敗並不會造成鏡像逾時，而且可能無法偵測到。  
   
 > [!IMPORTANT]  
@@ -32,7 +37,7 @@ caps.handback.revision: 59
   
  錯誤偵測的速度以及受影響之鏡像工作階段對失敗的反應時間，取決於錯誤為硬性或軟性。 某些硬性錯誤，如網路失敗，會立即報告。 不過，有些情況下，元件專用的逾時期限可以使某些硬性錯誤延遲報告。 至於軟性錯誤，鏡像逾時期限的長度將決定錯誤偵測的速度。 此期限長度預設為 10 秒。 這是最小的建議值。  
   
-## 硬性錯誤造成的失敗  
+## <a name="failures-due-to-hard-errors"></a>硬性錯誤造成的失敗  
  硬性錯誤的可能原因包含 (但不限於) 下列狀況：  
   
 -   連接或連線中斷  
@@ -73,7 +78,7 @@ caps.handback.revision: 59
 > [!NOTE]  
 >  對於用戶端存取伺服器方面的特定問題，鏡像無法加以防止。 例如，試想一個情況，公用網路介面卡處理對主體伺服器執行個體的用戶端連接，而私人網路介面卡則處理伺服器執行個體之間的所有鏡像傳輸。 在這個情況下，公用網路介面卡的失敗將會阻止用戶端存取資料庫，然而資料庫卻繼續進行鏡像。  
   
-## 軟性錯誤造成的失敗  
+## <a name="failures-due-to-soft-errors"></a>軟性錯誤造成的失敗  
  可能會造成鏡像逾時的狀況包括 (但不限於) 下列狀況：  
   
 -   網路錯誤，例如 TCP 連結逾時、卸除或損毀的封包或順序不正確的封包。  
@@ -84,7 +89,7 @@ caps.handback.revision: 59
   
 -   運算資源不足，例如 CPU 或磁碟負擔過重、交易記錄已滿，或系統的記憶體或執行緒用盡。 在這些情況下，您必須增加逾時期限、降低工作負載或更換硬體來因應工作負載。  
   
-### 鏡像逾時機制  
+### <a name="the-mirroring-time-out-mechanism"></a>鏡像逾時機制  
  因為伺服器執行個體無法直接偵測到軟性錯誤，所以軟性錯誤可能會造成伺服器執行個體永遠等候。 為了避免這種狀況，資料庫鏡像會實作本身的逾時機制，而在此機制中，鏡像工作階段中的每個伺服器執行個體都會以固定間隔在每個開啟連接上送出 Ping。  
   
  若要將連接保持為開啟狀態，伺服器執行個體必須於定義的逾時期限加上傳送另一個 Ping 所需的時間內，在該連接上收到 Ping。 在逾時期限接收到 Ping，表示連接仍為開啟狀態，且伺服器執行個體是透過它進行通訊。 接收到 Ping 時，伺服器執行個體會重設它在該連接上的逾時計數器。  
@@ -101,12 +106,12 @@ caps.handback.revision: 59
   
  **若要檢視目前的逾時值**  
   
--   查詢 [sys.database_mirroring](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md) 中的 **mirroring_connection_timeout**。  
+-   查詢 **sys.database_mirroring** 中的 [mirroring_connection_timeout](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md)。  
   
-## 回應錯誤  
- 不論錯誤的類型為何，偵測到錯誤的伺服器執行個體都會根據執行個體的角色、工作階段的作業模式和工作階段中其他連接的狀態，進行適當的回應。 如需有關遺失夥伴時所發生之情況的詳細資訊，請參閱[資料庫鏡像作業模式](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)。  
+## <a name="responding-to-an-error"></a>回應錯誤  
+ 不論錯誤的類型為何，偵測到錯誤的伺服器執行個體都會根據執行個體的角色、工作階段的作業模式和工作階段中其他連接的狀態，進行適當的回應。 如需有關遺失夥伴時所發生之情況的詳細資訊，請參閱 [資料庫鏡像作業模式](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [預估角色切換期間的服務中斷時間 &#40;資料庫鏡像&#41;](../../database-engine/database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)   
  [資料庫鏡像作業模式](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)   
  [資料庫鏡像工作階段期間的角色切換 &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   

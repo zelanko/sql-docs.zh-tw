@@ -1,32 +1,37 @@
 ---
-title: "啟用鎖定記憶體分頁選項 (Windows) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "鎖定記憶體分頁選項"
+title: "啟用記憶體選項中的鎖定頁面 (Windows) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Lock Pages in Memory option
 ms.assetid: cd581fbc-4747-439e-87f9-2f18e39c5bb9
 caps.latest.revision: 35
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f62d2e7f2187433acdaf775d0835b1f5f7d6e5a3
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 啟用鎖定記憶體分頁選項 (Windows)
+# <a name="enable-the-lock-pages-in-memory-option-windows"></a>啟用鎖定記憶體分頁選項 (Windows)
   此 Windows 原則決定哪些帳戶可以使用處理序將資料保留在實體記憶體中，以防止系統將資料傳送到磁碟上的虛擬記憶體。  
   
 > [!NOTE]  
 >  在預期到磁碟的分頁記憶體時，在記憶體中鎖定分頁可能會提升效能。  
   
- 請使用 Windows 群組原則工具 (gpedit.msc)，以針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所使用的帳戶啟用這個原則。 您必須是系統管理員，才可變更這個原則。  
+ 請使用 Windows 群組原則工具 (gpedit.msc)，以針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]所使用的帳戶啟用這個原則。 您必須是系統管理員，才可變更這個原則。  
   
-### 若要啟用鎖定記憶體分頁選項  
+### <a name="to-enable-the-lock-pages-in-memory-option"></a>若要啟用鎖定記憶體分頁選項  
   
 1.  在 **[開始]** 功能表上，按一下 **[執行]**。 在 [開啟舊檔] 方塊中，輸入 **gpedit.msc**。  
   
@@ -46,7 +51,7 @@ caps.handback.revision: 35
   
 8.  登出後再重新登入以使這項變更生效。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [伺服器記憶體伺服器組態選項](../../database-engine/configure-windows/server-memory-server-configuration-options.md)  
   
   

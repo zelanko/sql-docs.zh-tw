@@ -1,25 +1,30 @@
 ---
-title: "Database Mail XP 伺服器組態選項 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Database Mail XP 選項"
-  - "Database Mail [SQL Server], 啟用"
+title: "Database Mail XPs 伺服器組態選項 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Database Mail XPs option
+- Database Mail [SQL Server], enabling
 ms.assetid: e22c4e63-1792-473b-af11-14a7931ca9ed
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 989df51eeeb19f45e1c515637cce16783e5227a1
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# Database Mail XP 伺服器組態選項
+# <a name="database-mail-xps-server-configuration-option"></a>Database Mail XP 伺服器組態選項
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   使用 [DatabaseMail XP] 選項，可在此伺服器上啟用 Database Mail。 可能的值為：  
@@ -36,7 +41,7 @@ caps.handback.revision: 20
   
  將 [Database Mail XP] 選項設為 0，會使 Database Mail 無法啟動。 如果 Database Mail 在該選項設為 0 時仍在執行中，則會繼續執行並傳送郵件，直到 **DatabaseMailExeMinimumLifeTime** 選項所設定的時間才會閒置。  
   
-## 範例  
+## <a name="examples"></a>範例  
  下列範例會啟用 Database Mail 擴充預存程序。  
   
 ```  
@@ -50,7 +55,8 @@ RECONFIGURE
 GO  
 ```  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [Database Mail](../../relational-databases/database-mail/database-mail.md)  
   
   
+

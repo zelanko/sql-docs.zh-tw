@@ -1,40 +1,34 @@
 ---
 title: "資料庫鏡像作業模式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "資料庫鏡像 [SQL Server], 作業模式"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database mirroring [SQL Server], operating modes
 ms.assetid: f8a579c2-55d7-4278-8088-f1da1de5b2e6
 caps.latest.revision: 22
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 4427cd045642ed4f59e1c9fdb0ab1a5916841bf0
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 資料庫鏡像作業模式
+# <a name="database-mirroring-operating-modes"></a>資料庫鏡像作業模式
   本主題描述資料庫鏡像工作階段的同步與非同步作業模式。  
   
 > [!NOTE]  
->  如需資料庫鏡像的簡介，請參閱[資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)。  
+>  如需資料庫鏡像的簡介，請參閱 [資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)。  
   
- **本主題內容：**  
-  
--   [詞彙和定義](#TermsAndDefinitions)  
-  
--   [非同步資料庫鏡像 (高效能模式)](#async)  
-  
--   [同步資料庫鏡像 (高安全性模式)](#Sync)  
-  
--   [Transact-SQL 設定和資料庫鏡像作業模式](#TsqlSettingsAndOpModes)  
-  
--   [相關工作](#RelatedTasks)  
   
 ##  <a name="TermsAndDefinitions"></a> 詞彙和定義  
  本節介紹幾個詞彙，它們是本主題的核心。  
@@ -51,11 +45,11 @@ caps.handback.revision: 21
  Witness  
  只能搭配高安全性模式使用的一種 SQL Server 選擇性執行個體，可讓鏡像伺服器辨別是否要起始自動容錯移轉。 與兩個容錯移轉夥伴不同的是，見證並不是為資料庫服務。 支援自動容錯移轉是見證的唯一角色。  
   
-## 非同步資料庫鏡像 (高效能模式)  
+## <a name="asynchronous-database-mirroring-high-performance-mode"></a>非同步資料庫鏡像 (高效能模式)  
  本節描述非同步資料庫鏡像如何運作、適合使用高效能模式的時機，以及主體伺服器失敗時如何回應。  
   
 > [!NOTE]  
->  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的大部分版本僅支援同步資料庫鏡像 (「僅限 Safety Full」)。 如需哪些版本完全支援資料庫鏡像的資訊，請參閱 [SQL Server 2016 版本支援的功能](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)中的＜高可用性 (AlwaysOn)＞。  
+>  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的大部分版本僅支援同步資料庫鏡像 (「僅限 Safety Full」)。 如需哪些版本完全支援資料庫鏡像的資訊，請參閱 [SQL Server 2016 的版本和支援的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)中的＜高可用性 (AlwaysOn)＞。
   
  當交易安全性設為 OFF 時，資料庫鏡像工作階段就會以非同步的方式運作。 非同步作業只支援一種作業模式：高效能模式。 這種模式可提高效能，但代價是會降低高可用性。 高效能模式僅需使用主體伺服器與鏡像伺服器。 而鏡像伺服器方面的問題絕不會影響到主體伺服器。 如果主體伺服器失效，鏡像資料庫會標示為 DISCONNECTED，但仍可當做暖待命資料庫使用。  
   
@@ -75,7 +69,7 @@ caps.handback.revision: 21
   
 -   [見證對高效能模式的影響](#WitnessImpactOnHighPerf)  
   
--   [回應主體失敗](#WhenPrincipalFails)  
+-   [回應主體的失敗](#WhenPrincipalFails)  
   
 ###  <a name="WhenUseHighPerf"></a> 高效能模式的適當使用時機  
  在主體伺服器與鏡像伺服器的距離相隔很遠，以及您不希望有小失誤影響主體伺服器的災害復原狀況中，高效能模式會非常實用。  
@@ -97,7 +91,7 @@ caps.handback.revision: 21
 > [!NOTE]  
 >  如需仲裁類型的資訊，請參閱[仲裁：見證如何影響資料庫可用性 &#40;資料庫鏡像&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md)。  
   
-###  <a name="WhenPrincipalFails"></a> 回應主體失敗  
+###  <a name="WhenPrincipalFails"></a> 回應主體的失敗  
  當主體失敗時，資料庫擁有者有下列幾項選擇：  
   
 -   在主體能夠再度使用之前，將資料庫保持在無法使用的狀態。  
@@ -154,14 +148,14 @@ caps.handback.revision: 21
 ###  <a name="HighSafetyWithOutAutoFailover"></a> 不具有自動容錯移轉的高安全性模式  
  下圖將顯示不含自動容錯移轉之高安全性模式的組態。 這個組態僅包含兩個夥伴。  
   
- ![在沒有旁觀之情況下通訊的夥伴](../../database-engine/database-mirroring/media/dbm-high-protection-mode.gif "在沒有旁觀之情況下通訊的夥伴")  
+ ![在沒有見證之情況下通訊的夥伴](../../database-engine/database-mirroring/media/dbm-high-protection-mode.gif "在沒有見證之情況下通訊的夥伴")  
   
- 當夥伴已連接而且資料庫已經同步處理後，就會支援手動容錯移轉。 如果鏡像伺服器執行個體效能降低，主體伺服器執行個體不受影響，並且公開執行 (亦即沒有鏡像資料)。 如果遺失主體伺服器，就會暫停鏡像，不過可以將服務強制轉到鏡像伺服器 (可能會遺失資料)。 如需詳細資訊，請參閱[資料庫鏡像工作階段期間的角色切換 &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)。  
+ 當夥伴已連接而且資料庫已經同步處理後，就會支援手動容錯移轉。 如果鏡像伺服器執行個體效能降低，主體伺服器執行個體不受影響，並且公開執行 (亦即沒有鏡像資料)。 如果遺失主體伺服器，就會暫停鏡像，不過可以將服務強制轉到鏡像伺服器 (可能會遺失資料)。 如需詳細資訊，請參閱 [資料庫鏡像工作階段期間的角色切換 &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)(資料庫鏡像和記錄傳送) 技術白皮書。  
   
 ###  <a name="HighSafetyWithAutoFailover"></a> 具有自動容錯移轉的高安全性模式  
  自動容錯移轉可確保某一台伺服器喪失之後，仍能繼續服務資料庫，藉以提供高度的可用性。 自動容錯移轉會要求工作階段包含第三個伺服器執行個體 ( *「見證」*)，而且此執行個體最好是位於第三部電腦上。 下圖將顯示支援自動容錯移轉之高安全性模式工作階段的組態。  
   
- ![工作階段的旁觀與兩個夥伴](../../database-engine/database-mirroring/media/dbm-high-availability-mode.gif "工作階段的旁觀與兩個夥伴")  
+ ![工作階段的見證和兩個夥伴](../../database-engine/database-mirroring/media/dbm-high-availability-mode.gif "工作階段的見證和兩個夥伴")  
   
  與兩位夥伴不同的是，見證並不是為資料庫服務。 見證只是藉由確認主體伺服器是否已啟動而且可以正常運作，來支援自動容錯移轉。 只有當鏡像和見證與主體伺服器中斷連接後仍然保持相互連接時，鏡像伺服器才會開始進行自動容錯移轉。  
   
@@ -187,10 +181,10 @@ caps.handback.revision: 21
 >  若要讓見證中斷連接維持一段較長的時間，我們建議您從工作階段中移除見證，直到它可用為止。  
   
 ##  <a name="TsqlSettingsAndOpModes"></a> Transact-SQL 設定和資料庫鏡像作業模式  
- 本節描述與 ALTER DATABASE 設定和鏡像資料庫與見證狀態相關的資料庫鏡像工作階段 (如果有的話)。 本節適用於主要或專以 [!INCLUDE[tsql](../../includes/tsql-md.md)]\(而非 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]) 管理資料庫鏡像的使用者。  
+ 本節描述與 ALTER DATABASE 設定和鏡像資料庫與見證狀態相關的資料庫鏡像工作階段 (如果有的話)。 本節適用於主要或專以 [!INCLUDE[tsql](../../includes/tsql-md.md)](而非 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]) 管理資料庫鏡像的使用者。  
   
 > [!TIP]  
->  做為使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]的替代方法，您可以使用 **[資料庫屬性]** 對話方塊的 **[鏡像]** 頁面，在物件總管中控制工作階段的作業模式。 如需詳細資訊，請參閱[使用 Windows 驗證建立資料庫鏡像工作階段 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish database mirroring session - windows authentication.md)。  
+>  做為使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]的替代方法，您可以使用 **[資料庫屬性]** 對話方塊的 **[鏡像]** 頁面，在物件總管中控制工作階段的作業模式。 如需詳細資訊，請參閱本主題稍後的 [使用 Windows 驗證建立資料庫鏡像工作階段 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)。  
   
  **本節內容：**  
   
@@ -205,11 +199,11 @@ caps.handback.revision: 21
   
  **本節內容：**  
   
--   [交易安全性](#TxnSafety)  
+-   [Transaction Safety](#TxnSafety)  
   
 -   [見證狀態](#WitnessState)  
   
-####  <a name="TxnSafety"></a> 交易安全性  
+####  <a name="TxnSafety"></a> Transaction Safety  
  交易安全性是鏡像特有的資料庫屬性，用來決定資料庫鏡像工作階段是以同步或非同步方式作業。 有兩個安全性層級：FULL 和 OFF。  
   
 -   SAFETY FULL  
@@ -218,11 +212,11 @@ caps.handback.revision: 21
   
      當您使用 ALTER DATABASE 陳述式建立工作階段時，工作階段一開始會將 SAFETY 屬性設定為 FULL；這表示工作階段會以高安全性模式開始。 在工作階段開始後，您就可以加入見證。  
   
-     如需詳細資訊，請參閱本主題稍早的[同步資料庫鏡像 (高安全性模式)](#Sync)。  
+     如需詳細資訊，請參閱本主題稍早的 [同步資料庫鏡像 (高安全性模式)](#Sync)。  
   
 -   SAFETY OFF  
   
-     關閉交易安全性會使工作階段在高效能模式中以非同步方式運作。 如果將 SAFETY 屬性設定為 OFF，則 WITNESS 屬性也應該設定為 OFF (預設值)。 如需見證在高效能模式中之影響的資訊，請參閱本主題稍後的[見證的狀態](#WitnessState)。 如需關閉交易安全性執行的詳細資訊，請參閱本主題稍早的[非同步資料庫鏡像 (高效能模式)](#async)。  
+     關閉交易安全性會使工作階段在高效能模式中以非同步方式運作。 如果將 SAFETY 屬性設定為 OFF，則 WITNESS 屬性也應該設定為 OFF (預設值)。 如需見證在高效能模式中之影響的資訊，請參閱本主題稍後的 [見證的狀態](#WitnessState)。 如需關閉交易安全性執行的詳細資訊，請參閱本主題稍早的 [非同步資料庫鏡像 (高效能模式)](#asynchronous-database-mirroring-high-performance-mode)。  
   
  資料庫的交易安全性設定會記錄在每個夥伴之 **mirroring_safety_level** 和 **mirroring_safety_level_desc** 資料行的 **sys.database_mirroring** 目錄檢視中。 如需詳細資訊，請參閱 [sys.database_mirroring &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md)。  
   
@@ -246,7 +240,7 @@ caps.handback.revision: 21
 |作業模式|交易安全性|見證狀態|  
 |--------------------|------------------------|-------------------|  
 |高效能模式|OFF|NULL (無見證)**|  
-|沒有自動容錯移轉的高安全性模式|FULL|NULL (無見證)|  
+|不具有自動容錯移轉的高安全性模式|FULL|NULL (無見證)|  
 |具有自動容錯移轉的高安全性模式*|FULL|CONNECTED|  
   
  *如果見證中斷連接，我們建議您設定 WITNESS OFF，直到見證伺服器執行個體可用為止。  
@@ -284,7 +278,7 @@ SELECT mirroring_safety_level_desc, mirroring_witness_name, mirroring_witness_st
   
 -   [加入或取代資料庫鏡像見證 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  
   
--   [使用 Windows 驗證建立資料庫鏡像工作階段 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish database mirroring session - windows authentication.md)  
+-   [使用 Windows 驗證建立資料庫鏡像工作階段 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
   
 -   [使用 Windows 驗證加入資料庫鏡像見證 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)  
   
@@ -292,7 +286,7 @@ SELECT mirroring_safety_level_desc, mirroring_witness_name, mirroring_witness_st
   
 -   [在資料庫鏡像工作階段中變更交易安全性 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/change-transaction-safety-in-a-database-mirroring-session-transact-sql.md)  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [監視資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
  [資料庫鏡像見證](../../database-engine/database-mirroring/database-mirroring-witness.md)  
   

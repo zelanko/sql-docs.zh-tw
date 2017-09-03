@@ -1,27 +1,32 @@
 ---
-title: "[加入 IP 位址] 對話方塊 (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.availabilitygrouplistener.addipaddress.f1"
+title: "新增 IP 位址對話方塊 (SQL Server Management Studio) | Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.availabilitygrouplistener.addipaddress.f1
 ms.assetid: 98c9ad3b-ff3c-4c1d-b344-59a72fca137c
 caps.latest.revision: 10
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: d9083c4b210b5de01a7a15b2c7f438a57199e707
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# [加入 IP 位址] 對話方塊 (SQL Server Management Studio)
+# <a name="add-ip-address-dialog-box-sql-server-management-studio"></a>[加入 IP 位址] 對話方塊 (SQL Server Management Studio)
   此 F1 說明主題描述 **[加入 IP 位址]** 對話方塊的選項。 可從 **[新增可用性群組接聽程式]** 對話方塊以及   或 **的** [指定複本] [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] 頁面的 [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] [接聽程式] [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]索引標籤存取此對話方塊。  
   
-## 必要條件  
+## <a name="prerequisites"></a>必要條件  
  開始將子網路加入至可用性群組接聽程式之前，請務必知道每個子網路的 IP 位址，以及 IPv4 位址的子網路遮罩。  
   
 ##  <a name="PageOptions"></a> 加入 IP 位址選項  
@@ -42,7 +47,7 @@ caps.handback.revision: 10
  **IPv6 位址**  
  如果您選取了子網路的 IPv6 子網路位址，請在這裡輸入有效的 IPv6 靜態位址。  
   
- **確定**  
+ **[確定]**  
  按一下以加入所選位址的子網路，以及指定的靜態 IP 位址。 包含這些值的資料列就會加入至 **[新增可用性群組接聽程式]** 或 **[指定複本]** 對話方塊的子網路方格中。  
   
 > [!IMPORTANT]  
@@ -59,9 +64,10 @@ caps.handback.revision: 10
   
 -   [使用將複本加入至可用性群組精靈 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [AlwaysOn 可用性群組概觀 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [可用性群組接聽程式、用戶端連接性及應用程式容錯移轉 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners, client connectivity, application failover.md)   
+ [可用性群組接聽程式、用戶端連線及應用程式容錯移轉 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
  [AlwaysOn 用戶端連接性 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md)  
   
   
+

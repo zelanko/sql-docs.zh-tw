@@ -1,25 +1,30 @@
 ---
 title: "設定記錄傳送 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "記錄傳送 [SQL Server], 啟用"
-  - "記錄傳送 [SQL Server], 設定"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- log shipping [SQL Server], enabling
+- log shipping [SQL Server], configuring
 ms.assetid: c42aa04a-4945-4417-b4c7-50589d727e9c
 caps.latest.revision: 42
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 42
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: a1703b56628ba9c509f66cb3d722e6636bd29486
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 設定記錄傳送 (SQL Server)
+# <a name="configure-log-shipping-sql-server"></a>設定記錄傳送 (SQL Server)
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 設定 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的記錄傳送。  
   
 > [!NOTE]  
@@ -47,16 +52,16 @@ caps.handback.revision: 42
   
 -   主要資料庫必須使用完整或大量記錄復原模式；若將資料庫切換為簡單復原模式，會使記錄傳送停止運作。  
   
--   在設定記錄傳送之前，您必須建立一個共用，讓次要伺服器能夠使用交易記錄備份。 這是將要產生交易記錄檔備份之目錄的共用。 例如，您若是將交易記錄備份到 c:\data\tlogs\\ 目錄，就可以建立該目錄的 \\\\*primaryserver*\tlogs 共用。  
+-   在設定記錄傳送之前，您必須建立一個共用，讓次要伺服器能夠使用交易記錄備份。 這是將要產生交易記錄檔備份之目錄的共用。 例如，您若是將交易記錄備份到 c:\data\tlogs\\目錄，就可以建立該目錄的 \\\\*primaryserver*\tlogs 共用。  
   
 ###  <a name="Security"></a> 安全性  
   
 ####  <a name="Permissions"></a> Permissions  
- 記錄傳送預存程序需要**系統管理員**固定伺服器角色中的成員資格。  
+ 記錄傳送預存程序需要 **sysadmin** 固定伺服器角色中的成員資格。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 設定記錄傳送  
+#### <a name="to-configure-log-shipping"></a>設定記錄傳送  
   
 1.  以滑鼠右鍵按一下記錄傳送組態中要做為主要資料庫的資料庫，然後按一下 **[屬性]**。  
   
@@ -125,27 +130,27 @@ caps.handback.revision: 42
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 設定記錄傳送  
+#### <a name="to-configure-log-shipping"></a>設定記錄傳送  
   
 1.  在次要伺服器上還原主要資料庫的完整備份，以初始化次要資料庫。  
   
-2.  在主要伺服器上執行 [sp_add_log_shipping_primary_database](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-database-transact-sql.md)，以加入主要資料庫。 預存程序會傳回備份作業識別碼及主要識別碼。  
+2.  在主要伺服器上執行 [sp_add_log_shipping_primary_database](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-database-transact-sql.md) ，以加入主要資料庫。 預存程序會傳回備份作業識別碼及主要識別碼。  
   
-3.  在主要伺服器上執行 [sp_add_jobschedule](../../relational-databases/system-stored-procedures/sp-add-jobschedule-transact-sql.md)，以加入排程來供備份作業使用。  
+3.  在主要伺服器上執行 [sp_add_jobschedule](../../relational-databases/system-stored-procedures/sp-add-jobschedule-transact-sql.md) ，以加入排程來供備份作業使用。  
   
-4.  在監視伺服器上執行 [sp_add_log_shipping_alert_job](../../relational-databases/system-stored-procedures/sp-add-log-shipping-alert-job-transact-sql.md)，以加入警示作業。  
+4.  在監視伺服器上執行 [sp_add_log_shipping_alert_job](../../relational-databases/system-stored-procedures/sp-add-log-shipping-alert-job-transact-sql.md) ，以加入警示作業。  
   
 5.  在主要伺服器上啟用備份作業。  
   
-6.  在次要伺服器上，執行 [sp_add_log_shipping_secondary_primary](../../relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-primary-transact-sql.md)，提供主要伺服器與資料庫的詳細資料。 這個預存程序會傳回次要識別碼及複製與還原作業識別碼。  
+6.  在次要伺服器上，執行 [sp_add_log_shipping_secondary_primary](../../relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-primary-transact-sql.md) ，提供主要伺服器與資料庫的詳細資料。 這個預存程序會傳回次要識別碼及複製與還原作業識別碼。  
   
-7.  在次要伺服器上執行 [sp_add_jobschedule](../../relational-databases/system-stored-procedures/sp-add-jobschedule-transact-sql.md)，以設定複製與還原作業的排程。  
+7.  在次要伺服器上執行 [sp_add_jobschedule](../../relational-databases/system-stored-procedures/sp-add-jobschedule-transact-sql.md) ，以設定複製與還原作業的排程。  
   
-8.  在次要伺服器上執行 [sp_add_log_shipping_secondary_database](../../relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-database-transact-sql.md)，以加入次要資料庫。  
+8.  在次要伺服器上執行 [sp_add_log_shipping_secondary_database](../../relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-database-transact-sql.md) ，以加入次要資料庫。  
   
-9. 在主要伺服器上執行 [sp_add_log_shipping_primary_secondary](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-secondary-transact-sql.md)，將有關新次要資料庫的必要資訊加入主要伺服器。  
+9. 在主要伺服器上執行 [sp_add_log_shipping_primary_secondary](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-secondary-transact-sql.md) ，將有關新次要資料庫的必要資訊加入主要伺服器。  
   
-10. 在次要伺服器上，啟用複製與還原作業。 如需詳細資訊，請參閱 [Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md)。  
+10. 在次要伺服器上，啟用複製與還原作業。 如需詳細資訊，請參閱 [Disable or Enable a Job](http://msdn.microsoft.com/library/5041261f-0c32-4d4a-8bee-59a6c16200dd)。  
   
 ##  <a name="RelatedTasks"></a> 相關工作  
   
@@ -163,7 +168,7 @@ caps.handback.revision: 42
   
 -   [容錯移轉至記錄傳送次要 &#40;SQL Server&#41;](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md)  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [關於記錄傳送 &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [記錄傳送資料表與預存程序](../../database-engine/log-shipping/log-shipping-tables-and-stored-procedures.md)  
   

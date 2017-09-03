@@ -1,26 +1,31 @@
 ---
-title: "使用 Windows 驗證加入資料庫鏡像見證 (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "見證 [SQL Server], 建立"
-  - "Windows 驗證 [SQL Server]"
-  - "資料庫鏡像 [SQL Server], 見證"
+title: "使用 Windows 驗證新增資料庫鏡像見證 (Transact-SQL) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- witness [SQL Server], establishing
+- Windows authentication [SQL Server]
+- database mirroring [SQL Server], witness
 ms.assetid: bf5e87df-91a4-49f9-ae88-2a6dcf644510
 caps.latest.revision: 51
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 51
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 0e37425e42bbe7c320894de9368c0113373d2e4d
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 使用 Windows 驗證加入資料庫鏡像見證 (Transact-SQL)
+# <a name="add-a-database-mirroring-witness-using-windows-authentication-transact-sql"></a>使用 Windows 驗證加入資料庫鏡像見證 (Transact-SQL)
   為設定資料庫的見證，資料庫擁有者會指派 Database Engine 執行個體給見證伺服器的角色。 見證伺服器執行個體可以與主體或鏡像伺服器執行個體在相同電腦上執行，但是這會大幅地減少自動容錯移轉的強固性。  
   
  我們強烈建議見證應該位在另一台電腦上。 給定的伺服器可以參與具有相同或不同夥伴的多個並行資料庫鏡像工作階段。 一個給定的伺服器可以在某些工作階段中是夥伴，在其他工作階段中是見證。  
@@ -30,7 +35,7 @@ caps.handback.revision: 51
 > [!IMPORTANT]  
 >  我們建議您在離峰時間設定資料庫鏡像，因為組態會影響效能。  
   
-### 若要建立見證  
+### <a name="to-establish-a-witness"></a>若要建立見證  
   
 1.  在見證伺服器執行個體上，確定資料庫鏡像有端點存在。 不管要支援的鏡像工作階段有多少個，伺服器執行個體都必須只有一個資料庫鏡像端點。 如果您打算將這個伺服器執行個體專門作為資料庫鏡像工作階段中的見證，請指派見證角色給端點 (ROLE**=**WITNESS)。 如果您打算使用這個伺服器執行個體，作為一或多個其他資料庫鏡像工作階段中的夥伴，請將端點的角色指派為 ALL。  
   
@@ -47,19 +52,19 @@ caps.handback.revision: 51
   
      如果見證缺少端點，請參閱[建立 Windows 驗證的資料庫鏡像端點 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)。  
   
-2.  若夥伴執行個體是以不同網域使用者帳戶執行，請為每個執行個體中 master 資料庫的不同帳戶建立登入。 如需詳細資訊，請參閱[使用 Windows 驗證允許資料庫鏡像端點的網路存取 &#40;SQL Server&#41;](../../database-engine/database-mirroring/database mirroring - allow network access - windows authentication.md)。  
+2.  若夥伴執行個體是以不同網域使用者帳戶執行，請為每個執行個體中 master 資料庫的不同帳戶建立登入。 如需詳細資訊，請參閱 [使用 Windows 驗證允許資料庫鏡像的網路存取 &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-allow-network-access-windows-authentication.md)。  
   
 3.  連接到主體伺服器並執行以下陳述式：  
   
-     ALTER DATABASE *\<資料庫名稱>* SET WITNESS **=***\<伺服器網路位址>*  
+     ALTER DATABASE *<資料庫名稱>* SET WITNESS **=***<伺服器網路位址>*  
   
-     其中 *\<資料庫名稱>* 是要鏡像的資料庫名稱 (此名稱在兩個夥伴中都相同)，而 *\<伺服器網路位址>* 是見證伺服器執行個體的伺服器網路位址。  
+     其中 *<資料庫名稱>* 是要鏡像的資料庫名稱 (此名稱在兩個夥伴中都相同)，而 *<伺服器網路位址>* 是見證伺服器執行個體的伺服器網路位址。  
   
      伺服器網路位址的語法如下：  
   
      TCP**://**\<*系統位址>***:**\<*通訊埠>*  
   
-     其中 \<系統位址> 是清楚識別目的地電腦系統的字串，\<通訊埠> 是夥伴伺服器執行個體之鏡像端點使用的通訊埠編號。 如需詳細資訊，請參閱[指定伺服器網路位址 &#40;資料庫鏡像&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)。  
+     其中 \<系統位址> 是清楚識別目的地電腦系統的字串，\<通訊埠> 是夥伴伺服器執行個體之鏡像端點使用的通訊埠編號。 如需詳細資訊，請參閱 [指定伺服器網路位址 &#40;資料庫鏡像&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)。  
   
      例如，在主體伺服器執行個體上，下列 ALTER DATABASE 陳述式會設定見證。 資料庫名稱是 **AdventureWorks**、系統位址是 DBSERVER3 (見證系統的名稱)，而見證之資料庫鏡像端點所使用的通訊埠是 `7022`：  
   
@@ -68,10 +73,10 @@ caps.handback.revision: 51
       SET WITNESS = 'TCP://DBSERVER3:7022'  
     ```  
   
-## 範例  
- 以下範例會建立資料庫鏡像見證。 在見證伺服器執行個體 (`WITNESSHOST4` 上的預設執行個體) 上：  
+## <a name="example"></a>範例  
+ 以下範例會建立資料庫鏡像見證。 在見證伺服器執行個體 ( `WITNESSHOST4`上的預設執行個體) 上：  
   
-1.  使用通訊埠 `7022` 僅為 WITNESS 角色的此伺服器執行個體建立端點。  
+1.  使用通訊埠 `7022`僅為 WITNESS 角色的此伺服器執行個體建立端點。  
   
     ```  
     CREATE ENDPOINT Endpoint_Mirroring  
@@ -81,7 +86,7 @@ caps.handback.revision: 51
     GO  
     ```  
   
-2.  若見證是以 `SOMEDOMAIN\witnessuser` 執行，但夥伴是以 `MYDOMAIN\dbousername` 執行，請為夥伴執行個體的使用者帳戶建立登入。 為夥伴建立登入，如下所示：  
+2.  若見證是以 `SOMEDOMAIN\witnessuser`執行，但夥伴是以 `MYDOMAIN\dbousername`執行，請為夥伴執行個體的使用者帳戶建立登入。 為夥伴建立登入，如下所示：  
   
     ```  
     --Create a login for the partner server instances,  
@@ -125,11 +130,11 @@ caps.handback.revision: 51
   
  如需顯示安全性設定、準備鏡像資料庫、設定夥伴及新增見證的完整範例，請參閱[設定資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [使用 Windows 驗證允許資料庫鏡像的網路存取 &#40;SQL Server&#41;](../../database-engine/database-mirroring/database mirroring - allow network access - windows authentication.md)   
+ [使用 Windows 驗證允許資料庫鏡像的網路存取 &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-allow-network-access-windows-authentication.md)   
  [建立 Windows 驗證的資料庫鏡像端點 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)   
- [使用 Windows 驗證建立資料庫鏡像工作階段 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)   
+ [使用 Windows 驗證建立資料庫鏡像工作階段 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-establish-session-windows-authentication.md)   
  [從資料庫鏡像工作階段移除見證 &#40;SQL Server&#41;](../../database-engine/database-mirroring/remove-the-witness-from-a-database-mirroring-session-sql-server.md)   
  [資料庫鏡像見證](../../database-engine/database-mirroring/database-mirroring-witness.md)  
   

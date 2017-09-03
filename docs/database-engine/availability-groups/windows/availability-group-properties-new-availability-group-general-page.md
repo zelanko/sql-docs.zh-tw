@@ -1,24 +1,29 @@
 ---
 title: "可用性群組屬性：新增可用性群組 (一般頁面) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.availabilitygroupproperties.general.f1"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.availabilitygroupproperties.general.f1
 ms.assetid: 9af5379f-91b8-4729-9f75-4a80242a30e9
 caps.latest.revision: 15
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 751d94c5aa3e6c2f7d16b25e3e2fa3b2821cbccf
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 可用性群組屬性：新增可用性群組 (一般頁面)
+# <a name="availability-group-properties-new-availability-group-general-page"></a>可用性群組屬性：新增可用性群組 (一般頁面)
   本主題適用於 [新增可用性群組] 對話方塊和 [可用性群組屬性] 對話方塊的 [一般] 索引標籤。  [新增可用性群組] 對話方塊可讓您建立新的可用性群組，而不需要使用 [[!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]]。 [可用性群組屬性] 對話方塊可讓您檢視和改變現有可用性群組的組態。  
   
  **若要檢視可用性群組屬性**  
@@ -27,11 +32,11 @@ caps.handback.revision: 15
   
 -   [使用 Always On 儀表板 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
   
-## UIElement 清單  
+## <a name="uielement-list"></a>UIElement 清單  
  **可用性群組名稱**  
  可用性群組的名稱。 這是使用者指定的名稱，它在 Windows Server 容錯移轉叢集 (WSFC) 內必須是唯一的。  
   
-## 可用性資料庫  
+## <a name="availability-databases"></a>可用性資料庫  
  **資料庫名稱**  
  已經加入至可用性群組的資料庫名稱。  
   
@@ -41,7 +46,7 @@ caps.handback.revision: 15
  **移除**  
  按一下可從可用性群組中移除選取的資料庫。  
   
-## 可用性複本  
+## <a name="availability-replicas"></a>可用性複本  
  **伺服器執行個體**  
  裝載這個複本之 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的伺服器名稱，如果是非預設執行個體，則是它的執行個體名稱。  
   
@@ -64,7 +69,7 @@ caps.handback.revision: 15
  **同步認可**  
  主要複本會等候認可給定交易，直到次要複本將交易寫入磁碟為止。  
   
- 如需詳細資訊，請參閱[可用性模式 &#40;AlwaysOn 可用性群組&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)。  
+ 如需詳細資訊，請參閱 [可用性模式 &#40;AlwaysOn 可用性群組&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)或 PowerShell，針對 AlwaysOn 可用性群組執行規劃的手動容錯移轉或強制手動容錯移轉 (強制容錯移轉)。  
   
  **容錯移轉模式**  
  複本的容錯移轉模式，下列其中一項：  
@@ -82,7 +87,7 @@ caps.handback.revision: 15
  主要複本的資料庫允許所有連接。 這是預設值。  
   
  **允取讀取/寫入連接**  
- 不允許 [應用程式的意圖] 連接屬性設為 [唯讀] 的連接。 當 Application Intent 屬性設為 **ReadWrite** 或是未設定 Application Intent 連接屬性時，便會允許連接。 如需有關 Application Intent 連接屬性的詳細資訊，請參閱＜ [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)＞。  
+ 不允許 Application Intent 連接屬性設為 **ReadOnly** 的連接。 當 Application Intent 屬性設為 **ReadWrite** 或是未設定 Application Intent 連接屬性時，便會允許連接。 如需有關 Application Intent 連接屬性的詳細資訊，請參閱＜ [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)＞。  
   
  **可讀取次要**  
  執行次要角色的可用性複本 (也就是次要複本) 是否可接受來自用戶端的連接，下列其中一個值：  
@@ -100,7 +105,7 @@ caps.handback.revision: 15
  此複本之工作階段逾時期限的秒數。  
   
  **端點 URL**  
- 端點的 URL。 如需這些 URL 格式的資訊，請參閱[在加入或修改可用性複本時指定端點 URL &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/specify endpoint url - adding or modifying availability replica.md)。  
+ 端點的 URL。 如需這些 URL 格式的資訊，請參閱[在加入或修改可用性複本時指定端點 URL &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)。  
   
  **加入**  
  按一下可將次要複本加入至可用性群組。  
@@ -108,7 +113,8 @@ caps.handback.revision: 15
  **移除**  
  按一下可從可用性群組中移除次要複本。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [AlwaysOn 可用性群組概觀 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   
+

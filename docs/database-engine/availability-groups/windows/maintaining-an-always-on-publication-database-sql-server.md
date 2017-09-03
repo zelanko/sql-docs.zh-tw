@@ -1,25 +1,30 @@
 ---
 title: "維護 AlwaysOn 發行集資料庫 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "可用性群組 [SQL Server], 互通性"
-  - "複寫 [SQL Server], AlwaysOn 可用性群組"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Availability Groups [SQL Server], interoperability
+- replication [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 55b345fe-2eb9-4b04-a900-63d858eec360
 caps.latest.revision: 9
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 12c030081ec4015cb20702c0f674f870f8cb829d
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 維護 AlwaysOn 發行集資料庫 (SQL Server)
+# <a name="maintaining-an-always-on-publication-database-sql-server"></a>維護 AlwaysOn 發行集資料庫 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   本主題將討論使用 AlwaysOn 可用性群組時維護發行集資料庫的特殊考量。  
@@ -39,17 +44,17 @@ caps.handback.revision: 9
   
 -   複寫監視器永遠都會在原始發行者底下顯示發行集資訊。 不過，只要加入原始發行者做為伺服器，您就可以在複寫監視器中檢視任何複本的這項資訊。  
   
--   使用預存程序或 Replication Management Objects (RMO) 在目前主要複本上管理複寫時，如果您指定了發行者名稱，就必須指定在其上啟用資料庫以供複寫的執行個體名稱 (原始發行者)。 若要決定適當的名稱，請使用 **PUBLISHINGSERVERNAME** 函數。 當發行資料庫聯結了可用性群組時，儲存在次要資料庫複本中的複寫中繼資料會與主要複本上的中繼資料完全相同。 因此，對於在主要複本上啟用以供複寫的發行集資料庫而言，儲存在次要複本之系統資料表中的發行者執行個體名稱是主要複本的名稱，而不是次要複本的名稱。 如果發行集資料庫容錯移轉至次要複本，這會影響複寫組態和維護。 例如，如果您要在容錯移轉後於次要複本上使用預存程序來設定複寫，而且您想要將提取訂閱加入至不同複本上啟用的發行集資料庫，則必須將原始發行者 (而非目前發行者) 的名稱指定為 **sp_addpullsubscription** 或 **sp_addmergepulllsubscription** 的 *@publisher* 參數。 不過，如果您在容錯移轉後啟用發行集資料庫，則儲存在系統資料表中的發行者執行個體名稱就是目前主要主機的名稱。 在此情況中，您會針對 *@publisher* 參數使用目前主要複本的主機名稱。  
+-   使用預存程序或 Replication Management Objects (RMO) 在目前主要複本上管理複寫時，如果您指定了發行者名稱，就必須指定在其上啟用資料庫以供複寫的執行個體名稱 (原始發行者)。 若要決定適當的名稱，請使用 **PUBLISHINGSERVERNAME** 函數。 當發行資料庫聯結了可用性群組時，儲存在次要資料庫複本中的複寫中繼資料會與主要複本上的中繼資料完全相同。 因此，對於在主要複本上啟用以供複寫的發行集資料庫而言，儲存在次要複本之系統資料表中的發行者執行個體名稱是主要複本的名稱，而不是次要複本的名稱。 如果發行集資料庫容錯移轉至次要複本，這會影響複寫組態和維護。 例如，如果您要在容錯移轉後於次要複本上使用預存程序來設定複寫，而且您想要將提取訂閱加入至不同複本上啟用的發行集資料庫，則必須將原始發行者 (而非目前發行者) 的名稱指定為 *@publisher* 或 **sp_addmergepulllsubscription** 的 **@publisher**參數。 不過，如果您在容錯移轉後啟用發行集資料庫，則儲存在系統資料表中的發行者執行個體名稱就是目前主要主機的名稱。 在此情況中，您會針對 *@publisher* 參數使用目前主要複本的主機名稱。  
   
     > [!NOTE]  
-    >  對於某些程序 (例如 **sp_addpublication**) 而言，*@publisher* 參數僅支援非 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的發行者。在這些情況中，該參數便與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] AlwaysOn 無關。  
+    >  對於某些程序 (例如 **sp_addpublication**) 而言， *@publisher* 參數僅支援非 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體的發行者。在這些情況中，該參數便與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] AlwaysOn 無關。  
   
 -   若要在容錯移轉後同步處理 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 中的訂閱，請從訂閱者同步處理提取訂閱，並從使用中發行者同步處理發送訂閱。  
   
 ##  <a name="RemovePublDb"></a> 從可用性群組中移除已發行的資料庫  
  如果您已從可用性群組中移除已發行的資料庫，或者已卸除具有已發行成員資料庫的可用性群組，請考慮下列問題。  
   
--   如果您已從可用性群組主要複本中移除位於原始發行者端的發行集資料庫，就必須執行 **sp_redirect_publisher**，但不指定 *@redirected_publisher* 參數的值，以便移除發行者/資料庫配對的重新導向。  
+-   如果您已從可用性群組主要複本中移除位於原始發行者端的發行集資料庫，就必須執行 **sp_redirect_publisher** ，但不指定 *@redirected_publisher* 參數的值，以便移除發行者/資料庫配對的重新導向。  
   
     ```  
     EXEC sys.sp_redirect_publisher   
@@ -111,16 +116,17 @@ caps.handback.revision: 9
   
 -   [設定 AlwaysOn 可用性群組的複寫 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-replication-for-always-on-availability-groups-sql-server.md)  
   
--   [複寫、變更追蹤、異動資料擷取和 AlwaysOn 可用性群組 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/replicate, track, change data capture - always on availability.md)  
+-   [複寫、變更追蹤、異動資料擷取和 AlwaysOn 可用性群組 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/replicate-track-change-data-capture-always-on-availability.md)  
   
 -   [管理 &#40;複寫&#41;](../../../relational-databases/replication/administration/administration-replication.md)  
   
 -   [複寫訂閱者及 AlwaysOn 可用性群組 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/replication-subscribers-and-always-on-availability-groups-sql-server.md)  
   
-## 另請參閱  
- [AlwaysOn 可用性群組的必要條件、限制和建議 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs, restrictions, recommendations - always on availability.md)   
+## <a name="see-also"></a>另請參閱  
+ [AlwaysOn 可用性群組的必要條件、限制和建議 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)   
  [AlwaysOn 可用性群組概觀 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [AlwaysOn 可用性群組︰互通性 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)   
  [SQL Server 複寫](../../../relational-databases/replication/sql-server-replication.md)  
   
   
+

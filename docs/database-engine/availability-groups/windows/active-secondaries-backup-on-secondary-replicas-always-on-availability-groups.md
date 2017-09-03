@@ -1,30 +1,35 @@
 ---
-title: "使用中次要：在次要複本上備份 (AlwaysOn 可用性群組) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "備份優先順序"
-  - "在次要複本上備份"
-  - "可用性群組 [SQL Server], 可用性複本"
-  - "可用性群組 [SQL Server], 備份次要複本"
-  - "使用中的次要複本 [SQL Server], 備份"
-  - "自動備份喜好設定"
-  - "可用性群組 [SQL Server], 使用中次要複本"
+title: "使用中次要：在次要複本上備份 (AlwaysOn 可用性) | Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- backup priority
+- backup on secondary replicas
+- Availability Groups [SQL Server], availability replicas
+- Availability Groups [SQL Server], backup on secondary replicas
+- active secondary replicas [SQL Server], backup on
+- automated backup preference
+- Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 82afe51b-71d1-4d5b-b20a-b57afc002405
 caps.latest.revision: 34
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: c3645d6ab80136fc110c85315ba8dfc36e500eb3
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 使用中次要：在次要複本上備份 (AlwaysOn 可用性群組)
+# <a name="active-secondaries-backup-on-secondary-replicas-always-on-availability-groups"></a>使用中次要：在次要複本上備份 (AlwaysOn 可用性群組)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 使用中次要功能包含對次要複本執行備份作業的支援。 備份作業可能會對 I/O 和 CPU 造成相當大的壓力 (備份壓縮已啟用時)。 將備份卸載至已同步處理或正在同步處理的次要複本，可讓裝載主要複本的伺服器執行個體上的資源用於第 1 層工作負載。  
@@ -48,14 +53,14 @@ caps.handback.revision: 34
   
      跨任何複本 (主要或次要) 上所做的記錄檔備份可確保記錄檔鏈結一致，無論其可用性模式為何 (同步認可或非同步認可)。  
   
--   若要備份次要資料庫，次要複本必須能夠與主要複本通訊，而且必須處於 **SYNCHRONIZED** 或 **SYNCHRONIZING** 狀態。  
+-   若要備份次要資料庫，次要複本必須能夠與主要複本通訊，而且必須處於 **SYNCHRONIZED** 或 **SYNCHRONIZING**狀態。  
   
 ##  <a name="WhereBuJobsRun"></a> 設定執行備份作業的位置  
  在次要複本執行備份，以便從主要實際執行伺服器卸載備份工作負載，是一極大的好處。 不過，在次要複本上執行備份會讓決定是否應該執行備份作業的程序複雜許多。 若要解決這個問題，請依照以下方式設定執行備份作業的位置：  
   
-1.  設定可用性群組來指定您想要在哪些可用性複本執行備份。 如需詳細資訊，請參閱 [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/create-availability-group-transact-sql.md) 或 [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md) 的 *AUTOMATED_BACKUP_PREFERENCE* 和 *BACKUP_PRIORITY* 參數。  
+1.  設定可用性群組來指定您想要在哪些可用性複本執行備份。 如需詳細資訊，請參閱 *CREATE AVAILABILITY GROUP &amp;#40;Transact-SQL&amp;#41;* 或 *ALTER AVAILABILITY GROUP &amp;#40;Transact-SQL&amp;#41;* 的 [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/create-availability-group-transact-sql.md) 或 [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)狀態。  
   
-2.  在裝載可用性複本的每個伺服器執行個體，而此可用性複本是執行備份的候選複本，為每個可用性資料庫建立已編寫指令碼的備份作業。 如需詳細資訊，請參閱[設定可用性複本的備份 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md) 中的＜後續操作：設定次要複本的備份之後＞一節。  
+2.  在裝載可用性複本的每個伺服器執行個體，而此可用性複本是執行備份的候選複本，為每個可用性資料庫建立已編寫指令碼的備份作業。 如需詳細資訊，請參閱 [設定可用性複本的備份 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md)狀態。  
   
 ##  <a name="RelatedTasks"></a> 相關工作  
  **若要設定次要複本的備份**  
@@ -70,12 +75,13 @@ caps.handback.revision: 34
   
 -   [使用維護計畫精靈](../../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)  
   
--   [實作作業](../../../ssms/agent/implement-jobs.md)  
+-   [實作作業](http://msdn.microsoft.com/library/69e06724-25c7-4fb3-8a5b-3d4596f21756)  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [AlwaysOn 可用性群組概觀 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [只複製備份 &#40;SQL Server&#41;](../../../relational-databases/backup-restore/copy-only-backups-sql-server.md)   
  [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/create-availability-group-transact-sql.md)   
  [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)  
   
   
+

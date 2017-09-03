@@ -1,29 +1,34 @@
 ---
 title: "繼續可用性資料庫 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.availabilitygroup.resumedatamove.f1"
-helpviewer_keywords: 
-  - "可用性群組 [SQL Server], 繼續資料庫"
-  - "次要資料庫 [SQL Server], 在可用性群組中"
-  - "主要資料庫 [SQL Server], 在可用性群組中"
-  - "可用性群組 [SQL Server], 資料庫"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.availabilitygroup.resumedatamove.f1
+helpviewer_keywords:
+- Availability Groups [SQL Server], resuming a database
+- secondary databases [SQL Server], in availability group
+- primary databases [SQL Server], in availability group
+- Availability Groups [SQL Server], databases
 ms.assetid: 20e9147b-e985-4caa-910e-fc4b38dbf9a1
 caps.latest.revision: 38
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 6fb24ab051691dc582c3b2e454fe60478d074b9d
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 繼續可用性資料庫 (SQL Server)
+# <a name="resume-an-availability-database-sql-server"></a>繼續可用性資料庫 (SQL Server)
   您可以使用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或 [!INCLUDE[tsql](../../../includes/tsql-md.md)]的 PowerShell，在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中繼續暫停的可用性資料庫。 繼續暫停的資料庫會使資料庫處於 SYNCHRONIZING 狀態。 繼續主要資料庫也會繼續因為暫停主要資料庫而暫停的任何次要資料庫。 如果在本機 (從裝載次要複本的伺服器執行個體) 暫停任何次要資料庫，該次要資料庫必須在本機繼續。 給定的次要資料庫與對應的主要資料庫都處於 SYNCHRONIZING 狀態之後，資料同步處理就會在次要資料庫上繼續。  
   
 > [!NOTE]  
@@ -47,7 +52,7 @@ caps.handback.revision: 38
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
-### 限制事項  
+### <a name="limitations-and-restrictions"></a>限制事項  
  一旦裝載目標資料庫的複本接受 RESUME 命令之後，就會將其傳回，但繼續資料庫實際上是以非同步方式進行。  
   
 ###  <a name="Prerequisites"></a> 必要條件  
@@ -86,7 +91,7 @@ caps.handback.revision: 38
   
 1.  連接至裝載您要繼續其資料庫之次要複本的伺服器執行個體。  
   
-2.  使用下列 [ALTER DATABASE](../Topic/ALTER%20DATABASE%20SET%20HADR%20\(Transact-SQL\).md)陳述式，繼續次要資料庫：  
+2.  使用下列 [ALTER DATABASE](../../../t-sql/statements/alter-database-transact-sql-set-hadr.md)陳述式，繼續次要資料庫：  
   
      ALTER DATABASE *database_name* SET HADR RESUME  
   
@@ -97,7 +102,7 @@ caps.handback.revision: 38
   
 2.  使用 **Resume-SqlAvailabilityDatabase** Cmdlet 繼續可用性群組。  
   
-     例如，下列命令會針對可用性群組 `MyDb3` 中的可用性資料庫 `MyAg` 繼續進行資料同步處理。  
+     例如，下列命令會針對可用性群組 `MyDb3` 中的可用性資料庫 `MyAg`繼續進行資料同步處理。  
   
     ```  
     Resume-SqlAvailabilityDatabase `   
@@ -105,7 +110,7 @@ caps.handback.revision: 38
     ```  
   
     > [!NOTE]  
-    >  若要檢視 Cmdlet 的語法，請在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 環境中使用 **Get-Help** Cmdlet。 如需詳細資訊，請參閱 [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)。  
+    >  若要檢視 Cmdlet 的語法，請在 **PowerShell 環境中使用** Get-Help [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Cmdlet。 如需詳細資訊，請參閱 [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)。  
   
  **若要設定和使用 SQL Server PowerShell 提供者**  
   
@@ -115,7 +120,8 @@ caps.handback.revision: 38
   
 -   [暫止可用性資料庫 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/suspend-an-availability-database-sql-server.md)  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [AlwaysOn 可用性群組概觀 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   
+

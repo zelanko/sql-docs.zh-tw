@@ -1,28 +1,33 @@
 ---
 title: "暫停或繼續資料庫鏡像工作階段 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "繼續資料庫鏡像"
-  - "資料庫鏡像 [SQL Server]，工作階段"
-  - "資料庫鏡像 [SQL Server]，暫停"
-  - "資料庫鏡像 [SQL Server], 繼續"
-  - "暫停資料庫鏡像"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- resuming database mirroring
+- database mirroring [SQL Server], sessions
+- database mirroring [SQL Server], pausing
+- database mirroring [SQL Server], resuming
+- pausing database mirroring
 ms.assetid: 05ede3b4-6abe-4442-abb7-9f5aee1d6bc0
 caps.latest.revision: 34
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: c8cb7cac464772284682e74d2f8157df190adcef
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 暫停或繼續資料庫鏡像工作階段 (SQL Server)
+# <a name="pause-or-resume-a-database-mirroring-session-sql-server"></a>暫停或繼續資料庫鏡像工作階段 (SQL Server)
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中暫停或繼續資料庫鏡像。  
   
  **本主題內容**  
@@ -53,7 +58,7 @@ caps.handback.revision: 34
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  若要暫停或繼續資料庫鏡像工作階段，請使用 **[資料庫屬性鏡像]** 頁面。  
   
-#### 若要暫停或繼續資料庫鏡像  
+#### <a name="to-pause-or-resume-database-mirroring"></a>若要暫停或繼續資料庫鏡像  
   
 1.  在資料庫鏡像工作階段過程中，連接到主體伺服器執行個體，在 [物件總管] 中按一下伺服器名稱，以展開伺服器樹狀目錄。  
   
@@ -71,7 +76,7 @@ caps.handback.revision: 34
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 若要暫停資料庫鏡像  
+#### <a name="to-pause-database-mirroring"></a>若要暫停資料庫鏡像  
   
 1.  連接到任一個夥伴的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 。  
   
@@ -89,7 +94,7 @@ caps.handback.revision: 34
     ALTER DATABASE AdventureWorks2012 SET PARTNER SUSPEND;  
     ```  
   
-##### 若要繼續資料庫鏡像  
+##### <a name="to-resume-database-mirroring"></a>若要繼續資料庫鏡像  
   
 1.  連接到任一個夥伴的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 。  
   
@@ -111,7 +116,7 @@ caps.handback.revision: 34
   
 -   **暫停資料庫鏡像之後**  
   
-     在主要資料庫上，採取預防措施來避免交易記錄變滿。 如需詳細資訊，請參閱[交易記錄 &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)。  
+     在主要資料庫上，採取預防措施來避免交易記錄變滿。 如需詳細資訊，請參閱 [交易記錄 &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)。  
   
 -   **繼續資料庫鏡像之後**  
   
@@ -121,7 +126,7 @@ caps.handback.revision: 34
   
 -   [移除資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/remove-database-mirroring-sql-server.md)  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)  
   
   

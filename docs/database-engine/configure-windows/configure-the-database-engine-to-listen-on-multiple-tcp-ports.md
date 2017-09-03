@@ -1,31 +1,36 @@
 ---
-title: "設定 Database Engine 接聽多個 TCP 通訊埠 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "通訊埠 [SQL Server], 多個"
-  - "表格式資料流 (TDS)"
-  - "接聽多個通訊埠"
-  - "端點 [SQL Server], TDS"
-  - "新增通訊埠"
-  - "表格式資料流"
-  - "多個通訊埠"
+title: "設定接聽多個 TCP 通訊埠的資料庫引擎 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ports [SQL Server], multiple
+- TDS
+- listen on multiple ports
+- endpoints [SQL Server], TDS
+- adding ports
+- tabular data stream
+- multiple ports
 ms.assetid: 8e955033-06ef-403f-b813-3d8241b62f1f
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f0ba9063f05af2d7e021244bca5e14b75a8a510b
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 設定 Database Engine 接聽多個 TCP 通訊埠
-  此主題描述如何使用 SQL Server 組態管理員，在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中設定 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 於多個 TCP 通訊埠上接聽。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 啟用 TCP/IP 時，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 將會在由 IP 位址及 TCP 通訊埠編號構成的連接點上接聽內送連接。下列程序會建立表格式資料流 (TDS) 端點，因此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將可以在其他 TCP 通訊埠上接聽。  
+# <a name="configure-the-database-engine-to-listen-on-multiple-tcp-ports"></a>設定 Database Engine 接聽多個 TCP 通訊埠
+  此主題描述如何使用 SQL Server 組態管理員，在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中設定 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 於多個 TCP 通訊埠上接聽。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]啟用 TCP/IP 時， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 將會在由 IP 位址及 TCP 通訊埠編號構成的連接點上接聽內送連接。下列程序會建立表格式資料流 (TDS) 端點，因此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將可以在其他 TCP 通訊埠上接聽。  
   
  必須建立第二個 TDS 端點的原因包括：  
   
@@ -41,11 +46,11 @@ caps.handback.revision: 26
   
 -   指定選取 IP 位址的 TCP 通訊埠編號。  
   
- 如需預設 Windows 防火牆設定的詳細資訊以及影響 Database Engine、Analysis Services、Reporting Services 和 Integration Services 之 TCP 通訊埠的描述，請參閱[設定 Windows 防火牆以允許 SQL Server 存取](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)。  
+ 如需預設 Windows 防火牆設定的詳細資訊以及影響 Database Engine、Analysis Services、Reporting Services 和 Integration Services 之 TCP 通訊埠的描述，請參閱 [設定 Windows 防火牆以允許 SQL Server 存取](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)。  
   
 ##  <a name="SSMSProcedure"></a>  
   
-#### 建立 TDS 端點  
+#### <a name="to-create-a-tds-endpoint"></a>建立 TDS 端點  
   
 -   發出以下陳述式以為伺服器上所有可用的 TCP 位址，為通訊埠 1500 建立一個稱為 **CustomConnection** 的端點。  
   
@@ -62,7 +67,7 @@ caps.handback.revision: 26
   
  當您建立新的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 端點時，就會撤銷預設 TDS 端點的 **public** 連接權限。 如果預設端點需要存取 **public** 群組，請使用 `GRANT CONNECT ON ENDPOINT::[TSQL Default TCP] to [public];` 陳述式重新套用此權限。  
   
-#### 授與端點的存取權  
+#### <a name="to-grant-access-to-the-endpoint"></a>授與端點的存取權  
   
 -   發出以下陳述式以對公司網域的 SQLSupport，授與 **CustomConnection** 端點的存取權。  
   
@@ -71,11 +76,11 @@ caps.handback.revision: 26
     GO  
     ```  
   
-#### 設定 SQL Server Database Engine 接聽其他 TCP 通訊埠。  
+#### <a name="to-configure-the-sql-server-database-engine-to-listen-on-an-additional-tcp-port"></a>設定 SQL Server Database Engine 接聽其他 TCP 通訊埠。  
   
-1.  在 SQL Server 組態管理員中，展開 [SQL Server 網路組態]，然後按一下 [\<執行個體名稱> 的通訊協定]。  
+1.  在 SQL Server 組態管理員中，展開 [SQL Server 網路組態]，然後按一下 [<執行個體名稱> 的通訊協定]。  
   
-2.  展開 [\<執行個體名稱> 的通訊協定]，然後按一下 [TCP/IP]。  
+2.  展開 [<執行個體名稱> 的通訊協定]，然後按一下 [TCP/IP]。  
   
 3.  在右窗格中，以滑鼠右鍵按一下您要啟用之已停用的 IP 位址，然後按一下 [啟用]。  
   
@@ -88,11 +93,11 @@ caps.handback.revision: 26
   
 6.  在左窗格中，按一下 **[SQL Server 服務]**。  
   
-7.  在右窗格中，以滑鼠右鍵按一下 [SQL Server \<執行個體名稱>]，然後按一下 [重新啟動]。  
+7.  在右窗格中，以滑鼠右鍵按一下 [SQL Server <執行個體名稱>]，然後按一下 [重新啟動]。  
   
      當 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 重新啟動時，錯誤記錄檔將會列出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 正在接聽的通訊埠。  
   
-#### 連接新的端點  
+#### <a name="to-connect-to-the-new-endpoint"></a>連接新的端點  
   
 -   使用信任連接，並假設使用者是 [corp\SQLSupport] 群組的成員，在稱為 ACCT 的伺服器上發出以下陳述式，連接 SQL Server 之預設執行個體的 **CustomConnection** 端點。  
   
@@ -100,7 +105,7 @@ caps.handback.revision: 26
     sqlcmd -SACCT,1500  
     ```  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md)   
  [DROP ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-endpoint-transact-sql.md)   
  [GRANT 端點權限 &#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)   

@@ -1,27 +1,32 @@
 ---
 title: "範例：使用憑證設定資料庫鏡像 (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "資料庫鏡像 [SQL Server], 部署"
-  - "憑證 [SQL Server], 資料庫鏡像"
-  - "驗證 [SQL Server], 資料庫鏡像"
-  - "資料庫鏡像 [SQL Server], 安全性"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database mirroring [SQL Server], deployment
+- certificates [SQL Server], database mirroring
+- authentication [SQL Server], database mirroring
+- database mirroring [SQL Server], security
 ms.assetid: df489ecd-deee-465c-a26a-6d1bef6d7b66
 caps.latest.revision: 50
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 50
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: d6e25ad5bb119adb048ee80f89b1ff76baefb7bf
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 範例：使用憑證設定資料庫鏡像 (Transact-SQL)
+# <a name="example-setting-up-database-mirroring-using-certificates-transact-sql"></a>範例：使用憑證設定資料庫鏡像 (Transact-SQL)
   此範例會顯示使用以憑證為基礎的驗證建立資料庫鏡像工作階段所需的所有階段。 此主題中的範例使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]。 除非您可保證網路的安全無虞，否則建議您對資料庫鏡像連接使用加密。  
   
  將憑證複製到另一個系統時，請使用安全複製方法。 務必將您所有的憑證小心保管。  
@@ -41,7 +46,7 @@ caps.handback.revision: 50
   
     2.  設定傳出連接的 Host_B。  
   
-     如需有關此設定資料庫鏡像階段的詳細資訊，請參閱[允許資料庫鏡像端點使用輸出連線的憑證 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database mirroring - use certificates for outbound connections.md)。  
+     如需有關此設定資料庫鏡像階段的詳細資訊，請參閱 [允許資料庫鏡像端點使用輸出連線的憑證 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)。  
   
 2.  [設定傳入連接](#ConfigureInboundConnections)  
   
@@ -51,16 +56,16 @@ caps.handback.revision: 50
   
     2.  設定傳入連接的 Host_B。  
   
-     如需有關此設定資料庫鏡像階段的詳細資訊，請參閱[允許資料庫鏡像端點使用輸入連線的憑證 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database mirroring - use certificates for inbound connections.md)。  
+     如需有關此設定資料庫鏡像階段的詳細資訊，請參閱 [允許資料庫鏡像端點使用輸入連線的憑證 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-inbound-connections.md)。  
   
 3.  建立鏡像資料庫  
   
-     如需有關如何建立鏡像資料庫的資訊，請參閱[準備鏡像資料庫以進行鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)。  
+     如需有關如何建立鏡像資料庫的資訊，請參閱 [準備鏡像資料庫以進行鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)。  
   
 4.  [設定鏡像夥伴](#ConfigureMirroringPartners)  
   
 ###  <a name="ConfiguringOutboundConnections"></a> 設定傳出連接  
- **若要設定傳出連接設定的 Host_A **  
+ **若要設定傳出連接設定的 Host_A**  
   
 1.  在 master 資料庫上，若有需要，請建立資料庫主要索引鍵。  
   
@@ -105,7 +110,7 @@ caps.handback.revision: 50
   
 5.  使用任何安全複製方法，將 C:\HOST_A_cert.cer 複製到 HOST_B。  
   
- **若要設定傳出連接設定的 Host_B **  
+ **若要設定傳出連接設定的 Host_B**  
   
 1.  在 master 資料庫上，若有需要，請建立資料庫主要索引鍵。  
   
@@ -149,12 +154,12 @@ caps.handback.revision: 50
   
 5.  使用任何安全複製方法，將 C:\HOST_B_cert.cer 複製到 HOST_A。  
   
- 如需詳細資訊，請參閱[允許資料庫鏡像端點使用輸出連線的憑證 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database mirroring - use certificates for outbound connections.md)。  
+ 如需詳細資訊，請參閱 [允許資料庫鏡像端點使用輸出連線的憑證 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)。  
   
  [[範例頂端]](#ExampleH2)  
   
 ###  <a name="ConfigureInboundConnections"></a> 設定傳入連接  
- **若要設定傳入連接設定的 Host_A **  
+ **若要設定傳入連接設定的 Host_A**  
   
 1.  在 HOST_A 上建立 HOST_B 的登入。  
   
@@ -187,7 +192,7 @@ caps.handback.revision: 50
     GO  
     ```  
   
- **若要設定傳入連接設定的 Host_B **  
+ **若要設定傳入連接設定的 Host_B**  
   
 1.  在 HOST_B 上建立 HOST_A 的登入。  
   
@@ -223,16 +228,16 @@ caps.handback.revision: 50
 > [!IMPORTANT]  
 >  如果您想要在具有自動容錯移轉的高安全性模式下執行，就必須重複相同的設定步驟，以便設定傳出和傳入連接的見證。 需要見證時若要設定傳入連接，您必須為兩個夥伴上的見證與見證上的兩個夥伴設定登入與使用者。  
   
- 如需詳細資訊，請參閱[允許資料庫鏡像端點使用輸入連線的憑證 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database mirroring - use certificates for inbound connections.md)。  
+ 如需詳細資訊，請參閱 [允許資料庫鏡像端點使用輸入連線的憑證 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-inbound-connections.md)。  
   
  [[範例頂端]](#ExampleH2)  
   
-### 建立鏡像資料庫  
- 如需有關如何建立鏡像資料庫的資訊，請參閱[準備鏡像資料庫以進行鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)。  
+### <a name="creating-the-mirror-database"></a>建立鏡像資料庫  
+ 如需有關如何建立鏡像資料庫的資訊，請參閱 [準備鏡像資料庫以進行鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)。  
   
 ###  <a name="ConfigureMirroringPartners"></a> 設定鏡像夥伴  
   
-1.  在 HOST_B 的鏡像伺服器執行個體上，設定 HOST_A 上的伺服器執行個體為夥伴 (設定初始主體伺服器執行個體)。 以有效網路位址取代 `TCP://HOST_A.Mydomain.Corp.Adventure-Works``.com:7024`。 如需詳細資訊，請參閱[指定伺服器網路位址 &#40;資料庫鏡像&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)。  
+1.  在 HOST_B 的鏡像伺服器執行個體上，設定 HOST_A 上的伺服器執行個體為夥伴 (設定初始主體伺服器執行個體)。 以有效網路位址取代 `TCP://HOST_A.Mydomain.Corp.Adventure-Works``.com:7024`。 如需詳細資訊，請參閱 [指定伺服器網路位址 &#40;資料庫鏡像&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)。  
   
     ```  
     --At HOST_B, set server instance on HOST_A as partner (principal server):  
@@ -268,18 +273,18 @@ caps.handback.revision: 50
   
 -   [準備鏡像資料庫以進行鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)  
   
--   [允許資料庫鏡像端點使用輸入連線的憑證 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database mirroring - use certificates for inbound connections.md)  
+-   [允許資料庫鏡像端點使用輸入連線的憑證 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-inbound-connections.md)  
   
--   [允許資料庫鏡像端點使用輸出連線的憑證 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database mirroring - use certificates for outbound connections.md)  
+-   [允許資料庫鏡像端點使用輸出連線的憑證 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)  
   
 -   [角色切換後針對登入和作業進行管理 &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)  
   
--   [在另一個伺服器執行個體上提供可用的資料庫時，管理中繼資料 &#40;SQL Server&#41;](../../relational-databases/databases/manage metadata when making a database available on another server.md) (SQL Server)  
+-   [在另一個伺服器執行個體上提供可用的資料庫時，管理中繼資料 &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md) (SQL Server)  
   
 -   [為資料庫鏡像組態疑難排解 &#40;SQL Server&#41;](../../database-engine/database-mirroring/troubleshoot-database-mirroring-configuration-sql-server.md)  
   
-## 另請參閱  
- [資料庫鏡像和 AlwaysOn 可用性群組的傳輸安全性 &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport security - database mirroring - always on availability.md)   
+## <a name="see-also"></a>另請參閱  
+ [資料庫鏡像和 AlwaysOn 可用性群組的傳輸安全性 &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
  [指定伺服器網路位址 &#40;資料庫鏡像&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)   
  [資料庫鏡像端點 &#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
  [使用資料庫鏡像端點憑證 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)   
@@ -287,3 +292,4 @@ caps.handback.revision: 50
  [SQL Server Database Engine 和 Azure SQL Database 的資訊安全中心](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   
+

@@ -1,28 +1,33 @@
 ---
-title: "可用性群組為離線 | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.agdashboard.agp2online.issues.f1"
-helpviewer_keywords: 
-  - "可用性群組 [SQL Server], 原則"
+title: "可用性群組已離線 | Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.agdashboard.agp2online.issues.f1
+helpviewer_keywords:
+- Availability Groups [SQL Server], policies
 ms.assetid: 093c5208-bf7a-49f4-a546-72b48197cadf
 caps.latest.revision: 14
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: c64ddb1c8c152594a359c1b10e0cb621e25bc11e
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 可用性群組為離線
+# <a name="availability-group-is-offline"></a>可用性群組為離線
     
-## 簡介  
+## <a name="introduction"></a>簡介  
   
 |||  
 |-|-|  
@@ -31,15 +36,15 @@ caps.handback.revision: 14
 |**類別目錄**|**嚴重**|  
 |**Facet**|可用性群組|  
   
-## 描述  
+## <a name="description"></a>描述  
  這項原則檢查可用性群組的線上或離線狀態。 當可用性群組的叢集資源為離線或可用性群組沒有主要複本時，原則為狀況不良並會引發警示。  
   
  當可用性群組的叢集資源為線上或可用性群組有主要複本時，原則為狀況良好。  
   
 > [!NOTE]  
->  在此 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 版本中，可能原因和解決方案的資訊位於 TechNet Wiki 上的 [Availability group is offline](http://go.microsoft.com/fwlink/p/?LinkId=220850) (可用性群組為離線)。  
+>  在此 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]版本中，可能原因和解決方案的資訊位於 TechNet Wiki 上的 [Availability group is offline](http://go.microsoft.com/fwlink/p/?LinkId=220850) (可用性群組為離線)。  
   
-## 可能的原因  
+## <a name="possible-causes"></a>可能的原因  
  這個問題可能是由於裝載主要複本的伺服器執行個體失敗或由於 Windows Server 容錯移轉叢集 (WSFC) 可用性群組資源離線所造成。 造成可用性群組離線的可能原因如下：  
   
 -   可用性群組未設定為自動容錯移轉模式。 主要複本變為不可用，而且可用性群組中所有複本的角色變為 RESOLVING。  
@@ -60,7 +65,7 @@ caps.handback.revision: 14
   
 -   可用性群組正在進行自動、手動或強制的容錯移轉。  
   
-## 可能的解決方案  
+## <a name="possible-solutions"></a>可能的解決方案  
  此問題的可能解決方案如下：  
   
 -   如果主要複本的 SQL Server 執行個體已關閉，請重新啟動伺服器，然後確認可用性群組是否復原為狀況良好的狀態。  
@@ -71,8 +76,9 @@ caps.handback.revision: 14
   
 -   如果正在進行容錯移轉，請等候容錯移轉完成。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [AlwaysOn 可用性群組概觀 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [使用 AlwaysOn 儀表板 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
+ [使用 Always On 儀表板 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
   
   
+

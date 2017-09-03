@@ -1,25 +1,30 @@
 ---
 title: "原則評估結果 (AlwaysOn) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "swb.agdashboard.policyeval.f1"
-  - "sql13.swb.agdashboard.policyeval.f1"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- swb.agdashboard.policyeval.f1
+- sql13.swb.agdashboard.policyeval.f1
 ms.assetid: 703e947f-d345-4506-be21-34bfbfa7bca6
 caps.latest.revision: 9
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 99e4bfcb27e83991ca69b775f6db846eaec5d585
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 原則評估結果 (AlwaysOn)
+# <a name="policy-evaluation-result-always-on"></a>原則評估結果 (AlwaysOn)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   使用 AlwaysOn 儀表板的 [原則評估結果] 頁面檢視任何目前的原則問題。  
@@ -36,8 +41,8 @@ caps.handback.revision: 9
   
 |圖示|Severity|  
 |----------|--------------|  
-|![UI 圖示：error](../../../database-engine/availability-groups/windows/media/repl-icon-error.png "UI 圖示：error")|嚴重|  
-|![UI 圖示：warning](../../../database-engine/availability-groups/windows/media/repl-icon-warn.png "UI 圖示：warning")|警告|  
+|![UI 圖示︰錯誤](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "UI 圖示︰錯誤")|嚴重|  
+|![UI 圖示︰警告](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI 圖示︰警告")|警告|  
   
  **描述**  
  此方格會顯示所選問題的簡短說明。  
@@ -51,8 +56,9 @@ caps.handback.revision: 9
   
 -   [使用 AlwaysOn 原則檢視可用性群組的健全狀況 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [AlwaysOn 可用性群組概觀 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [AlwaysOn 可用性群組操作問題適用的 AlwaysOn 原則 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always on policies for operational issues - always on availability.md)  
+ [AlwaysOn 可用性群組操作問題適用的 AlwaysOn 原則 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md)  
   
   
+

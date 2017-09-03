@@ -1,29 +1,34 @@
 ---
 title: "伺服器屬性 (資料庫設定頁面) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.serverproperties.databasesettings.f1"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.serverproperties.databasesettings.f1
 ms.assetid: 1cebdbd3-cbfd-4a02-bba6-a5addf4e3ada
 caps.latest.revision: 32
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 17e75c3b87403fc9d27fccdc27464a1470d71743
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 伺服器屬性 (資料庫設定頁面)
+# <a name="server-properties---database-settings-page"></a>伺服器屬性 - 資料庫設定頁面
   使用此頁面來檢視或修改您的資料庫設定。  
   
-## 選項  
+## <a name="options"></a>選項  
  **預設索引填滿因數**  
- 指定當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用現有的資料建立新索引時，它應該填入每個頁面的程度。 填滿因數會影響效能，因為當頁面填滿之後，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就必須花費時間進行頁面的分割。  
+ 指定當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用現有的資料建立新索引時，它應該填入每個頁面的程度。 填滿因數會影響效能，因為當頁面填滿之後， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就必須花費時間進行頁面的分割。  
   
  預設值是 0，有效值的範圍是從 0 到 100。 填滿因數 0 或 100 會以完整分葉頁面建立有完整資料頁面和非叢集索引的叢集索引，但是會在索引樹狀結構的上層保留部分空間。 從各方面來說，填滿因數值 0 和 100 都相同。  
   
@@ -33,10 +38,10 @@ caps.handback.revision: 32
  指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在等候新備份磁帶時永不逾時。  
   
  **嘗試一次**  
- 指定如果需要備份磁帶卻無法使用時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會逾時。  
+ 指定如果需要備份磁帶卻無法使用時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會逾時。  
   
  **嘗試分鐘數**  
- 指定如果在指定期間內沒有備份磁帶可用時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會逾時。  
+ 指定如果在指定期間內沒有備份磁帶可用時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會逾時。  
   
  **預設備份媒體保留 (以天為單位)**  
  提供每個備份媒體的全系統保存預設時間長度，設定當備份用於資料庫或交易記錄備份之後，預設要保存多久。 此選項協助保護備份，在指定的天數經過之前不被覆寫。  
@@ -56,7 +61,7 @@ caps.handback.revision: 32
  如需詳細資訊，請參閱[檢視或設定 backup compression default 伺服器組態選項](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)和[備份壓縮 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-compression-sql-server.md)。  
   
  **復原間隔 (分鐘)**  
- 設定每個資料庫復原的最長時間 (分鐘)。 預設值是 0，指出由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 自動組態。 實務上，這表示復原時間小於一分鐘，而且使用中資料庫幾乎每分鐘有一次檢查點。 如需詳細資訊，請參閱 [Configure the recovery interval Server Configuration Option](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md)。  
+ 設定每個資料庫復原的最長時間 (分鐘)。 預設值是 0，指出由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]自動組態。 實務上，這表示復原時間小於一分鐘，而且使用中資料庫幾乎每分鐘有一次檢查點。 如需詳細資訊，請參閱 [Configure the recovery interval Server Configuration Option](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md)。  
   
  **資料**  
  指定資料檔案的預設位置。 按一下 [瀏覽] 按鈕，即可導覽到新的預設位置。 要等到重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之後才會生效。  
@@ -67,10 +72,10 @@ caps.handback.revision: 32
  **設定的值**  
  針對此窗格中的選項，顯示設定的值。 如果您變更這些值，請按一下 **[執行中的值]** ，即可查看變更是否已生效。 如果沒有的話，就必須先重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。  
   
- **執行中的值**  
+ **[執行中的值]**  
  針對此窗格中的選項，檢視目前執行中的值。 這些值是唯讀的。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [伺服器組態選項 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [指定索引的填滿因素](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)  
   

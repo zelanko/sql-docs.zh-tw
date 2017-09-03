@@ -1,30 +1,35 @@
 ---
-title: "使用 AlwaysOn 儀表板 (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.agdashboard.f1"
-helpviewer_keywords: 
-  - "可用性群組 [SQL Server], 原則"
-  - "可用性群組 [SQL Server], 儀表板"
+title: "使用 AlwaysOn 可用性群組儀表板 (SQL Server Management Studio) | Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.agdashboard.f1
+helpviewer_keywords:
+- Availability Groups [SQL Server], policies
+- Availability Groups [SQL Server], dashboard
 ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
 caps.latest.revision: 30
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: b17125da076312057366a5f2150d513072b074f2
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 使用 AlwaysOn 儀表板 (SQL Server Management Studio)
+# <a name="use-the-always-on-availability-group-dashboard-sql-server-management-studio"></a>使用 AlwaysOn 可用性群組儀表板 (SQL Server Management Studio)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  資料庫管理員可以使用 AlwaysOn 儀表板，在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中取得 AlwaysOn 可用性群組及其可用性複本和資料庫的健全狀況摘要檢視。 AlwaysOn 儀表板的部分一般用法包括：  
+  資料庫管理員可以使用 AlwaysOn 可用性群組儀表板，在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中取得可用性群組及其可用性複本和資料庫的健全狀況摘要檢視。 可用性群組儀表板的一些一般用法如下：  
   
 -   選擇手動容錯移轉的複本。  
   
@@ -34,7 +39,7 @@ caps.handback.revision: 30
   
 -   評估同步認可次要複本的效能影響。  
   
- AlwaysOn 儀表板提供了一些重要的可用性群組狀態和效能指標，可讓您輕鬆地使用下列資訊類型進行高可用性作業決策。  
+ 儀表板提供一些重要的可用性群組狀態和效能指標，可讓您輕鬆地使用下列資訊類型進行高可用性作業決策。  
   
 -   複本積存狀態  
   
@@ -49,34 +54,6 @@ caps.handback.revision: 30
 -   同步處理模式和狀態  
   
 -   還原記錄的時間  
-  
- **本主題內容：**  
-  
--   **開始之前：**  
-  
-     [必要條件](#Prerequisites)  
-  
-     [安全性](#Security)  
-  
-     [Permissions](#Permissions)  
-  
--   **使用者入門：**  
-  
-     [AlwaysOn 儀表板](#SSMSProcedure)  
-  
-     [變更 AlwaysOn 儀表板選項](#DashboardOptions)  
-  
--   **儀表板窗格：**  
-  
-     [可用性群組摘要](#AvGroupsView)  
-  
-     [可用性群組詳細資料](#AvGroupDetails)  
-  
-     [可用性複本詳細資料](#AvReplicaDetails)  
-  
-     [若要將可用性群組資訊分組](#AvDbDetails)  
-  
--   [相關工作](#RelatedTasks)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -120,7 +97,7 @@ caps.handback.revision: 30
 -   **手動**： 表示沒有任何複本處於自動容錯移轉模式。  
   
  **問題**  
- 按一下 [問題] 連結可開啟給定問題的疑難排解文件集。 如需所有 AlwaysOn 原則問題的清單，請參閱[AlwaysOn 可用性群組操作問題適用的 AlwaysOn 原則 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always on policies for operational issues - always on availability.md)。  
+ 按一下 [問題] 連結可開啟給定問題的疑難排解文件集。 如需所有 AlwaysOn 原則問題的清單，請參閱[AlwaysOn 可用性群組操作問題適用的 AlwaysOn 原則 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md)。  
   
 > [!TIP]  
 >  按一下資料行標題可依照可用性群組、主要執行個體、容錯移轉模式或問題的名稱排序可用性群組資訊。  
@@ -131,10 +108,10 @@ caps.handback.revision: 30
  **可用性群組狀態**  
  顯示可用性群組的健全狀態。  
   
- **主要執行個體**  
+ **Primary instance**  
  裝載可用性群組之主要複本的伺服器執行個體名稱。  
   
- **容錯移轉模式**  
+ **Failover mode**  
  顯示複本所設定的容錯移轉模式。 可能的容錯移轉模式值包括：  
   
 -   **自動**： 表示一個或多個複本處於自動容錯移轉模式。  
@@ -151,7 +128,7 @@ caps.handback.revision: 30
  裝載可用性複本的伺服器執行個體名稱。 預設顯示此資料行。  
   
  **角色**  
- 指出可用性複本的目前角色：**主要**或**次要**。 如需 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 角色的詳細資訊，請參閱 [Always On 可用性群組概觀 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)。 預設顯示此資料行。  
+ 指出可用性複本的目前角色： **主要** 或 **次要**。 如需 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 角色的詳細資訊，請參閱 [Always On 可用性群組概觀 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)。 預設顯示此資料行。  
   
  **容錯移轉模式**  
  顯示複本所設定的容錯移轉模式。 可能的容錯移轉模式值包括：  
@@ -175,7 +152,7 @@ caps.handback.revision: 30
 -   **NULL**： 未知的狀態。 當本機伺服器執行個體無法與 WSFC 容錯移轉叢集通訊 (亦即，本機節點不屬於 WSFC 仲裁的一部分) 時，就會出現這個值。  
   
  **問題**  
- 列出問題名稱。 預設顯示此值。 如需所有 AlwaysOn 原則問題的清單，請參閱[AlwaysOn 可用性群組操作問題適用的 AlwaysOn 原則 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always on policies for operational issues - always on availability.md)。  
+ 列出問題名稱。 預設顯示此值。 如需所有 AlwaysOn 原則問題的清單，請參閱[AlwaysOn 可用性群組操作問題適用的 AlwaysOn 原則 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md)。  
   
  **可用性模式**  
  指出您個別針對每個可用性複本所設定的複本屬性。 預設隱藏此值。 可能的值為：  
@@ -237,7 +214,7 @@ caps.handback.revision: 30
   
 -   **可用性資料庫**  
   
--   **同步處理狀態**  
+-   **Synchronization state**  
   
 -   **容錯移轉整備**  
   
@@ -290,7 +267,7 @@ caps.handback.revision: 30
     > [!CAUTION]  
     >  當資料庫處於 INITIALIZING 狀態時，強制容錯移轉至次要複本一定會將資料庫保留在無法啟動的狀態。  
   
- **容錯移轉整備**  
+ **Failover Readiness**  
  指出哪個可用性複本可能會在遺失資料或不遺失資料的情況下容錯移轉。 預設顯示此資料行。 可能的值為：  
   
 -   **資料遺失**  
@@ -304,10 +281,10 @@ caps.handback.revision: 30
   
 -   **關鍵**： 按一下可顯示關鍵問題。  
   
- 如需所有 AlwaysOn 原則問題的清單，請參閱[AlwaysOn 可用性群組操作問題適用的 AlwaysOn 原則 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always on policies for operational issues - always on availability.md)。  
+ 如需所有 AlwaysOn 原則問題的清單，請參閱[AlwaysOn 可用性群組操作問題適用的 AlwaysOn 原則 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md)。  
   
  **已暫停**  
- 指出資料庫 [已暫停] 或 [已繼續]。 預設隱藏此值。  
+ 指出資料庫 **[已暫停]** 或 **[已繼續]**。 預設隱藏此值。  
   
  **暫停原因**  
  指出暫停狀態的原因。 預設隱藏此值。  
@@ -316,7 +293,7 @@ caps.handback.revision: 30
  表示主要複本與次要複本中上一筆交易記錄的時間差異。 如果主要複本失敗，則時間視窗內的所有交易記錄都將遺失。 預設隱藏此值。  
   
  **預估復原時間 (秒)**  
- 指出重做趕上時間所需要的時間 (以秒為單位)。 「趕上時間」是指次要複本趕上主要複本所需的時間。 預設隱藏此值。  
+ 指出重做趕上時間所需要的時間 (以秒為單位)。 *「趕上時間」* (catch-up time) 是指次要複本趕上主要複本所需的時間。 預設隱藏此值。  
   
  **同步處理效能 (秒)**  
  指出在主要與次要複本之間同步處理所需的時間 (以秒為單位)。 預設隱藏此值。  
@@ -379,8 +356,9 @@ caps.handback.revision: 30
   
 -   [使用 AlwaysOn 原則檢視可用性群組的健全狀況 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)   
  [監視可用性群組 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md)  
   
   
+

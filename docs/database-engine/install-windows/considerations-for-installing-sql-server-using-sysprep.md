@@ -1,23 +1,28 @@
 ---
 title: "使用 SysPrep 安裝 SQL Server 的考量 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e1792eeb-2874-4653-b20e-3063f4eb4e5d
 caps.latest.revision: 22
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: ebab112323b9c9ad8b5c8fdba8e3b7e10f69b808
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 使用 SysPrep 安裝 SQL Server 的考量
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 可讓您在電腦上準備 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的獨立執行個體，並於稍後完成設定。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 需要使用包含兩個步驟的程序來取得已設定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 獨立執行個體。 這些步驟包含以下內容：  
+# <a name="considerations-for-installing-sql-server-using-sysprep"></a>使用 SysPrep 安裝 SQL Server 的考量
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 可讓您在電腦上準備 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的獨立執行個體，並於稍後完成設定。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 需要使用包含兩個步驟的程序來取得已設定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]獨立執行個體。 這些步驟包含以下內容：  
   
 -   [準備映像](#BKMK_PrepareImage)  
   
@@ -25,11 +30,11 @@ caps.handback.revision: 22
   
 -   [完成映像](#BKMK_CompleteImage)  
   
-     這個步驟可讓您完成已備妥之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的組態。 在此步驟中，您可以提供電腦、網路和帳戶特有的資訊。  
+     這個步驟可讓您完成已備妥之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的組態。 在此步驟中，您可以提供電腦、網路和帳戶特有的資訊。  
   
- 如需有關如何使用 SysPrep 安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的詳細資訊，請參閱[使用 SysPrep 安裝 SQL Server 2016](../../database-engine/install-windows/install-sql-server-2016-using-sysprep.md)。  
+ 如需有關如何使用 SysPrep 安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的詳細資訊，請參閱 [使用 SysPrep 安裝 SQL Server 2016](../../database-engine/install-windows/install-sql-server-using-sysprep.md)。  
   
-## [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 的常見用法  
+## <a name="common-uses-for-includessnoversionincludesssnoversion-mdmd-sysprep"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 的常見用法  
  您可依照下列任何方法使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 功能：  
   
 -   您可以使用「準備映像」步驟，在同一部電腦上準備一個或多個未設定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 您可以在同一部電腦上使用完整的映像步驟來設定這些備妥的執行個體。  
@@ -40,10 +45,10 @@ caps.handback.revision: 22
   
      Windows SysPrep 工具可用來準備 Windows 作業系統映像， 其目的是為了擷取作業系統的自訂映像，以供整個組織部署。 如需有關 SysPrep 及其用途的詳細資訊，請參閱＜ [什麼是 Sysprep？](http://go.microsoft.com/fwlink/?LinkId=143546)＞。  
   
-## 安裝媒體考量  
+## <a name="installation-media-considerations"></a>安裝媒體考量  
  如果您使用完整版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請考量以下事項：  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的非 Express 版：  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的非 Express 版：  
   
     -   「準備映像」步驟會使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Evaluation Edition 來安裝產品二進位編碼檔案。 當此執行個體完成時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的版本取決於「完成映像」步驟中所提供的產品識別碼。  
   
@@ -55,22 +60,22 @@ caps.handback.revision: 22
   
     -   您不能指定備妥之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 版本執行個體的產品識別碼。  
   
-## 支援的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的 SysPrep 支援所有功能，包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的工具。  
+## <a name="supported-includessnoversionincludesssnoversion-mdmd-installations"></a>支援的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的 SysPrep 支援所有功能，包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的工具。  
   
  您可以針對 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或之前版本的並存安裝準備多個執行個體。 這些執行個體的功能必須支援 SysPrep。  
   
  當準備映像步驟結束時，將會自動安裝及完成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 當您準備 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體時，也會自動準備瀏覽器與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 寫入器。 當您在完成映像步驟中完成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體時，便會完成這兩個項目。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 當您準備 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體時，也會自動準備瀏覽器與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]寫入器。 當您在完成映像步驟中完成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體時，便會完成這兩個項目。  
   
- 如需有關支援的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本的詳細資訊，請參閱 [Features Supported by the Editions of SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md) (SQL Server 2016 各版本所支援的功能)。  
+ 如需有關支援的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本的詳細資訊，請參閱 [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)(SQL Server 2016 各版本所支援的功能)。  
   
- 您可以執行版本升級，同時設定備妥的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 版本不支援這個選項。  
+ 您可以執行版本升級，同時設定備妥的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 版本不支援這個選項。  
   
  從 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]開始， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 支援從命令列進行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集安裝。  
   
-## [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 限制  
+## <a name="includessnoversionincludesssnoversion-mdmd-sysprep-limitations"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 限制  
  不支援修復備妥的執行個體。 如果安裝程式在準備映像或完成映像步驟期間失敗，您必須執行解除安裝。  
   
 ##  <a name="BKMK_PrepareImage"></a> 準備映像  
@@ -91,7 +96,8 @@ caps.handback.revision: 22
   
 -   在 [安裝中心] 的 [進階] 頁面上存取 [Image completion of a prepared stand-alone instance (完成備妥之獨立執行個體的映像)] 步驟。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [規劃 SQL Server 安裝](../../sql-server/install/planning-a-sql-server-installation.md)  
   
   
+
