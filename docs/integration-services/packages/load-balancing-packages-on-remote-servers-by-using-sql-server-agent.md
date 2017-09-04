@@ -121,7 +121,7 @@ ms.lasthandoff: 08/03/2017
 >  您可以使用包含 Transact-SQL 陳述式為 **sp_start_job N'package_name'** 的「執行 SQL 工作」。 如需詳細資訊，請參閱 [sp_start_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md)。  
   
 ### <a name="debugging-environment"></a>環境偵錯  
- 測試父封裝時，請使用 [偵錯] / [開始偵錯] (F5) 來執行以使用設計師的偵錯環境。 或者，也可以使用命令提示公用程式 **dtexec**。 如需詳細資訊，請參閱 [dtexec Utility](../../integration-services/packages/dtexec-utility.md)。  
+ 測試父封裝時，請使用 [偵錯] / [開始偵錯] \(F5) 來執行以使用設計師的偵錯環境。 或者，也可以使用命令提示公用程式 **dtexec**。 如需詳細資訊，請參閱 [dtexec Utility](../../integration-services/packages/dtexec-utility.md)。  
 
 ## <a name="logging-for-load-balanced-packages-on-remote-servers"></a>遠端伺服器上負載平衡封裝的記錄
   當所有子封裝都使用相同的記錄提供者，而且全部寫入同一個目的地時，可以讓管理員較容易管理各種伺服器上執行之所有子封裝的記錄檔。 為所有子封裝建立共用記錄檔的其中一個方法，就是透過設定子封裝，使它們將事件記錄到 SQL Server 記錄提供者。 您可以將所有封裝設定成使用同一個資料庫、同一部伺服器，以及伺服器的同一個執行個體。  

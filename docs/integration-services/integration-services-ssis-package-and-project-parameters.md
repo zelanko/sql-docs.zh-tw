@@ -141,7 +141,7 @@ ms.lasthandoff: 08/03/2017
   
 1.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中開啟專案。  
   
-2.  以滑鼠右鍵按一下方案總管中的 **Project.params**，然後按一下 [開啟] (或) 按兩下 **Project.params** 來開啟它。  
+2.  以滑鼠右鍵按一下方案總管中的 **Project.params**，然後按一下 [開啟] \(或) 按兩下 **Project.params** 來開啟它。  
   
      ![專案參數視窗](../integration-services/media/denali-project-parameters.gif "專案參數視窗")  
   

@@ -22,7 +22,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 4934e49ef7b8e4f6b56439dd3b414fc93d5af832
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-a-subscription-view-to-export-data-master-data-services"></a>建立訂閱檢視以匯出資料 (Master Data Services)
@@ -49,7 +49,7 @@ ms.lasthandoff: 08/02/2017
   
 5.  從 **[模型]** 清單中選取模型。  
   
-6.  選取 [Include soft-deleted members] (包含虛刪除成員) 以包含檢視中的虛刪除成員。  
+6.  選取 [Include soft-deleted members]\ (包含虛刪除成員) 以包含檢視中的虛刪除成員。  
   
 7.  在 [版本選項]  中選取 [版本]  或 [版本旗標] ，然後從對應的清單中選取。  
   
