@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: ee79d0f1b31963b7d13aa07bf4603246139c3a7c
-ms.openlocfilehash: 2d47d1bb82b586890e3bfc250cf09e929a64fb25
+ms.sourcegitcommit: 8cd44c8b384019418a2a913e5f8d13d82120eac2
+ms.openlocfilehash: 87b850c06bea8992ad6869c56acdecd45fa289f4
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/23/2017
+ms.lasthandoff: 08/29/2017
 
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2017"></a>什麼 & #39 的新 SQL Server 2017 中的 Integration Services
@@ -39,7 +39,7 @@ ms.lasthandoff: 08/23/2017
 
 ## <a name="new-in-the-azure-feature-pack"></a>新的 Azure Feature pack
 
-除了 SQL Server 的連線能力增強功能，Integration Services 功能套件，azure 已新增對 Azure 資料湖存放區支援。 如需詳細資訊，請參閱[Azure Feature Pack for Integration Services (SSIS)](azure-feature-pack-for-integration-services-ssis.md)。
+除了 SQL Server 的連線能力增強功能，Integration Services 功能套件，azure 已新增對 Azure 資料湖存放區支援。 如需詳細資訊，請參閱部落格文章[新 Azure 功能套件版本加強 ADLS 連線](https://blogs.msdn.microsoft.com/ssis/2017/08/29/new-azure-feature-pack-release-strengthening-adls-connectivity/)。 另請參閱[Azure Feature Pack for Integration Services (SSIS)](azure-feature-pack-for-integration-services-ssis.md)。
 
 ## <a name="new-in-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) 的新功能
 

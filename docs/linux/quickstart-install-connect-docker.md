@@ -4,16 +4,16 @@ description: "本快速入門教學課程會示範如何使用 Docker 執行 SQL
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 07/17/2017
+ms.date: 08/28/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.translationtype: MT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: 95c360dad72a9cd075f2a85d2581dc8021adf941
+ms.sourcegitcommit: 303d3b74da3fe370d19b7602c0e11e67b63191e7
+ms.openlocfilehash: 10623562f57ae1b4b571dd2e5b7dad56b81b8f8b
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 08/29/2017
 
 ---
 # <a name="run-the-sql-server-2017-container-image-with-docker"></a>執行 SQL Server 2017 容器映像使用 Docker
@@ -66,6 +66,9 @@ ms.lasthandoff: 08/28/2017
 
     > [!TIP]
     > 適用於 Linux，根據您的系統和使用者設定，您可能需要的前面上每個`docker`命令搭配`sudo`。
+
+    > [!NOTE]
+    > 上述命令中提取最新的 SQL Server 容器映像。 如果您想要提取的特定映像，您加上冒號和標記名稱 (例如， `microsoft/mssql-server-linux:rc1`)。 若要查看所有可用的映像，請參閱[mssql-伺服器-linux Docker 中樞頁面](https://hub.docker.com/r/microsoft/mssql-server-linux/tags/)。
 
 1. 若要執行 Docker 容器映像，您可以使用下列命令從 bash 殼層 (Linux/macOS):
 
@@ -259,7 +262,7 @@ SA 帳戶是在安裝期間建立的 SQL Server 執行個體上的系統管理�
 
 ## <a name="next-steps"></a>後續的步驟
 
-若要瀏覽其他案例，例如執行多個容器、 資料持續性和 troublehshooting，請參閱[設定 SQL Server 2017 容器映像 docker](sql-server-linux-configure-docker.md)。
+若要瀏覽其他案例中的，執行多個容器，例如資料持續性和疑難排解，請參閱[設定 SQL Server 2017 容器映像 docker](sql-server-linux-configure-docker.md)。
 
 此外，請參閱[mssql docker GitHub 儲存機制](https://github.com/Microsoft/mssql-docker)資源、 意見反應，和已知的問題。
 

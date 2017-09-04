@@ -4,17 +4,17 @@ description: "瀏覽不同的方式使用，並與其互動在 Docker 中的 SQL
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 07/17/2017
+ms.date: 08/28/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: H1Hack27Feb2017
 ms.translationtype: MT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: 66f625f1739f17f20a6b5e2a564f2d72f81d6b95
+ms.sourcegitcommit: 303d3b74da3fe370d19b7602c0e11e67b63191e7
+ms.openlocfilehash: 8a0c0a07c6874c6015ec3c4b1f561e0a1076482f
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 08/29/2017
 
 ---
 # <a name="configure-sql-server-2017-container-images-on-docker"></a>設定 SQL Server 2017 容器映像 docker
@@ -227,7 +227,7 @@ docker cp /tmp/mydb.mdf d6b75213ef80:/var/opt/mssql/data
 docker cp C:\Temp\mydb.mdf d6b75213ef80:/var/opt/mssql/data
 ```
 
-## <a name="upgrade-sql-server-in-containers"></a>在容器中的 SQL Server 升級
+## <a id="upgrade"></a>在容器中的 SQL Server 升級
 
 若要升級使用 Docker，容器映像，請從登錄中提取最新版本。 使用`docker pull`命令：
 
@@ -237,15 +237,51 @@ docker pull microsoft/mssql-server-linux:latest
 
 這會更新您建立時，任何新容器的 SQL Server 映像，但不會更新任何執行中的容器中的 SQL Server。 若要這樣做，您必須使用最新的 SQL Server 容器映像建立新的容器，並將資料移轉到該新的容器。
 
-1. 首先，請確定您使用其中一個[資料持續性技術](#persist)現有的 SQL Server 容器。
+1. 首先，取得最新的 SQL Server 容器映像。
 
-2. 停止 SQL Server 容器與`docker stop`命令。
+   ```bash
+   docker pull microsoft/mssql-server-linux:latest
+   ```
 
-3. 建立新的 SQL Server 容器與`docker run`並指定對應的主機目錄或資料磁碟區容器。 新的容器現在會使用新的 SQL Server 版本與現有的 SQL Server 資料。
+1. 請確定您使用其中一個[資料持續性技術](#persist)現有的 SQL Server 容器。 這可讓您使用相同的資料開始新的容器。
 
-4. 請確認您的資料庫和新的容器中的資料。
+1. 停止 SQL Server 容器與`docker stop`命令。
 
-5. 選擇性地移除的舊容器`docker rm`。
+1. 建立新的 SQL Server 容器與`docker run`並指定對應的主機目錄或資料磁碟區容器。 新的容器現在會使用新的 SQL Server 版本與現有的 SQL Server 資料。
+
+   > [!IMPORTANT]
+   > RC1 和 RC2 間此時只支援升級。
+
+1. 請確認您的資料庫和新的容器中的資料。
+
+1. 選擇性地移除的舊容器`docker rm`。
+
+## <a name="run-a-specific-sql-server-container-image"></a>執行特定的 SQL Server 容器映像
+
+有的案例中，您可能會不使用最新的 SQL Server 容器映像。 若要執行特定的 SQL Server 容器映像，請使用下列步驟：
+
+1. 識別 Docker**標記**您想要使用的版本。 若要檢視可用的標籤，請參閱[mssql-伺服器-linux Docker 中樞頁面](https://hub.docker.com/r/microsoft/mssql-server-linux/tags/)。
+
+1. 提取 SQL Server 容器映像的結束標記。 例如，若要提取 RC1 映像，取代`<image_tag>`下列命令，以及在`rc1`。
+
+   ```bash
+   docker pull microsoft/mssql-server-linux:<image_tag>
+   ```
+
+1. 若要使用該映像執行新的容器，指定中的標記名稱`docker run`命令。 在下列命令，取代`<image_tag>`與您想要執行的版本。
+
+   ```bash
+   docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1401:1433 -d microsoft/mssql-server-linux:<image_tag>
+   ```
+
+   ```PowerShell
+   docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1401:1433 -d microsoft/mssql-server-linux:<image_tag>
+   ```
+
+這些步驟可以用於降級現有的容器。 例如，您可能想要復原或降級基於疑難排解或測試執行中的容器。 若要降級之後執行的容器，您必須使用持續性技術資料的資料夾。 遵循相同的步驟中所述[升級 > 一節](#upgrade)，但是當您執行新的容器，請指定較舊版本的標記名稱。
+
+> [!IMPORTANT]
+> 升級和降級之間才支援 RC1 和 RC2 這一次。
 
 ## <a id="troubleshooting"></a>疑難排解
 

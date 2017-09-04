@@ -4,19 +4,21 @@ description: "安裝、 更新及解除安裝 SQL Server on Linux。 本主題�
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 08/02/2017
+ms.date: 08/28/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: c5bd1be5cbe08e9454b1640d9dd58584aa54955f
+ms.sourcegitcommit: 303d3b74da3fe370d19b7602c0e11e67b63191e7
+ms.openlocfilehash: f746037f695301881ce9a993f3d556db44f44292
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/29/2017
 
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>SQL Server on Linux 的安裝指南
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 本主題說明如何安裝、 更新及解除安裝 SQL Server 2017 on Linux。 Red Hat Enterprise Linux (RHEL)、 SUSE Linux Enterprise Server (SLES) 和 Ubuntu 支援 SQL Server 2017 RC2。 它也可做為 Docker 映像，可以在 Linux 或 Docker for Windows/mac 上的 Docker 引擎執行
 
@@ -57,11 +59,11 @@ SQL Server 2017 具有適用於 Linux 的下列系統需求：
 - [Red Hat Enterprise Linux 上安裝](quickstart-install-connect-red-hat.md)
 - [SUSE Linux Enterprise Server 上安裝](quickstart-install-connect-suse.md)
 - [在 Ubuntu 上安裝](quickstart-install-connect-ubuntu.md)
-- [執行 docker](quickstart-install-connect-ubuntu.md)
+- [執行 docker](quickstart-install-connect-docker.md)
 
-## <a id="upgrade"></a>升級 SQL Server
+## <a id="upgrade"></a>更新 SQL Server
 
-若要升級**mssql 伺服器**Linux 上的套件，請使用其中一個基礎平台上的下列命令：
+若要更新**mssql 伺服器**封裝最新的版本，請使用其中一個基礎平台上的下列命令：
 
 | 平台 | 套件更新命令 |
 |-----|-----|
@@ -70,6 +72,26 @@ SQL Server 2017 具有適用於 Linux 的下列系統需求：
 | Ubuntu | `sudo apt-get update`<br/>`sudo apt-get install mssql-server` |
 
 這些命令會下載最新的封裝，並取代二進位檔位於`/opt/mssql/`。 使用者產生的資料庫和系統資料庫不會受到這項作業。
+
+## <a id="rollback"></a>復原 SQL Server
+
+若要復原先前版本的 SQL Server 降級，使用下列步驟：
+
+1. 識別您想要降級至 SQL Server 封裝的版本號碼。 如需封裝的數字的清單，請參閱[版本資訊](sql-server-linux-release-notes.md)。
+
+1. 降級為舊版的 SQL Server。 在下列命令，取代`<version_number>`與您在第一個步驟所識別的 SQL Server 版本號碼。
+
+   | 平台 | 套件更新命令 |
+   |-----|-----|
+   | RHEL | `sudo yum downgrade mssql-server-<version_number>.x86_64` |
+   | SLES | `sudo zypper install --oldpackage mssql-server=<version_number>` |
+   | Ubuntu | `sudo apt-get install mssql-server=<version_number>`<br/>`sudo systemctl start mssql-server` |
+
+> [!NOTE]
+> 只支援降級至相同的主要版本，例如 SQL Server 2017 內的版本。
+
+> [!IMPORTANT]
+> RC2 之間 RC1 此時只支援降級。
 
 ## <a id="uninstall"></a>解除安裝 SQL Server
 
@@ -110,7 +132,7 @@ sudo MSSQL_PID=Developer ACCEPT_EULA=Y MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>'
 
 ## <a id="offline"></a>離線安裝
 
-如果您的 Linux 電腦不必存取線上儲存機制中使用[快速入門](#platforms)，您可以直接下載封裝檔案。 這些封裝位於 Microsoft 儲存機制[https://packages.microsoft.com](https://packages.microsoft.com)。
+如果您的 Linux 電腦不必存取線上儲存機制中使用[快速入門](#platforms)，您可以直接下載封裝檔案。 這些封裝位於 Microsoft 儲存機制 [https://packages.microsoft.com](https://packages.microsoft.com) 中。
 
 > [!TIP]
 > 如果您已成功安裝快速入門中的步驟，您不需要下載或以手動方式安裝下列套件。 本節只是為了在離線案例中。
