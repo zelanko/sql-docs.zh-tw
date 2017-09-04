@@ -121,7 +121,7 @@ ms.lasthandoff: 07/31/2017
   
 4.  在 [伺服器角色] 頁面上，如果新登入將成為管理員，請按一下 [系統管理員 (sysadmin)]，否則保留空白。  
   
-5.  在 [使用者對應] 頁面上，對 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 資料庫選取 [對應] (如果有的話)。 否則，請選取 [master]。 請注意，[使用者] 方塊會填入此登入。 當此對話方塊關閉時，會在資料庫中建立此使用者。  
+5.  在 [使用者對應] 頁面上，對 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 資料庫選取 [對應]\ (如果有的話)。 否則，請選取 [master]。 請注意，[使用者] 方塊會填入此登入。 當此對話方塊關閉時，會在資料庫中建立此使用者。  
   
 6.  在 [預設結構描述] 方塊中輸入 **dbo**，將登入對應到資料庫擁有者結構描述。  
   
