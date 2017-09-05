@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: dcbeda6b8372b358b6497f78d6139cad91c8097c
-ms.openlocfilehash: 0052444959911431f68bb40fd5059fb45b0d3412
+ms.sourcegitcommit: 014b531a94b555b8d12f049da1bd9eb749b4b0db
+ms.openlocfilehash: 24f0d590630fb04ff45557dfb72616a8e1795f7e
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/22/2017
 
 ---
 # <a name="query-processing-architecture-guide"></a>查詢處理架構指南
@@ -37,7 +37,7 @@ ms.lasthandoff: 07/31/2017
 
 `SELECT` 陳述式為非程序性，它無法敘述資料庫伺服器應用來擷取所需資料的正確步驟。 這是表示資料庫伺服器應該先分析陳述式，才能判斷出取得所需資料的最有效方式。 這稱為將 `SELECT` 陳述式最佳化。 執行此動作的元件稱為查詢最佳化工具。 查詢最佳化工具的輸入是由查詢、資料庫結構描述 (資料表和索引定義) 以及資料庫統計資料所組成。 查詢最佳化工具的輸出是查詢執行計畫，有時稱為查詢計畫或只是計畫。 在本主題稍後將更詳盡地描述查詢計畫的內容。
 
-The inputs and outputs of the Query Optimizer during optimization of a single `SELECT` 陳述式最佳化期間，查詢最佳化工具的輸入與輸出： ![query_processor_io](../relational-databases/media/query-processor-io.gif)
+下圖說明在單一 `SELECT` 陳述式最佳化期間，查詢最佳化工具的輸入與輸出： ![query_processor_io](../relational-databases/media/query-processor-io.gif)
 
 `SELECT` 陳述式僅定義下列項目：  
 * 結果集的格式。 這大部份是在選取清單中指定。 不過，其他如 `ORDER BY` 和 `GROUP BY` 等子句也會影響結果集的最後格式。
@@ -210,19 +210,19 @@ WHERE TableA.ColZ = TableB.Colz;
 > [!NOTE] 
 > 無論目前的交易隔離等級為何，在此內容中，永遠都會將 `READCOMMITTED` 和 `READCOMMITTEDLOCK` 提示視為不同的提示。
  
-除了 `SET` options and table hints, these are the same rules that the Query Optimizer uses to determine whether a table index covers a query. 不需在查詢中指定其他項目，即可使用索引檢視。
+除了 `SET` 選項與資料表提示的需求以外，這些也是查詢最佳化工具用來判斷資料表索引是否涵蓋查詢的相同規則。 不需在查詢中指定其他項目，即可使用索引檢視。
 
-查詢不一定要在 `FROM` clause for the Query Optimizer to use the indexed view. 如果查詢中包含了基底資料表中的資料行的參考，而這些資料行也同時出現於索引檢視中，且最佳化工具的估計結果是使用索引檢視提供最低成本的存取機制，那麼最佳化工具便選擇索引檢視，這和查詢中並未直接參考基底資料表的索引時，最佳化工具選擇這些索引的方式類似。 當檢視包含查詢所未參考到的資料行，只要檢視針對涵蓋在查詢中所指定的一個或多個資料行提供最低的成本選項，最佳化工具可能就會選擇該檢視。
+查詢不一定要在 `FROM` 子句中明確參考索引檢視表，才能讓最佳化工具使用索引檢視表。 如果查詢中包含了基底資料表中的資料行的參考，而這些資料行也同時出現於索引檢視中，且最佳化工具的估計結果是使用索引檢視提供最低成本的存取機制，那麼最佳化工具便選擇索引檢視，這和查詢中並未直接參考基底資料表的索引時，最佳化工具選擇這些索引的方式類似。 當檢視包含查詢所未參考到的資料行，只要檢視針對涵蓋在查詢中所指定的一個或多個資料行提供最低的成本選項，最佳化工具可能就會選擇該檢視。
 
-The Query Optimizer treats an indexed view referenced in the `FROM` 子句中參考的索引檢視表視為標準檢視表。 在最佳化程序開始時，查詢最佳化工具會將檢視的定義擴充到查詢中。 接著，會執行索引檢視比對。 索引檢視表可用在查詢最佳化工具所選取的最終執行計畫中，或者，此計畫可存取檢視表所參考的基底資料表，藉以從檢視表具體化必要的資料。 查詢最佳化工具會選擇成本最低的方式。
+查詢最佳化工具會將 `FROM` 子句中參考的索引檢視表視為標準檢視表。 在最佳化程序開始時，查詢最佳化工具會將檢視的定義擴充到查詢中。 接著，會執行索引檢視比對。 索引檢視表可用在查詢最佳化工具所選取的最終執行計畫中，或者，此計畫可存取檢視表所參考的基底資料表，藉以從檢視表具體化必要的資料。 查詢最佳化工具會選擇成本最低的方式。
 
 #### <a name="using-hints-with-indexed-views"></a>搭配索引檢視使用提示
 
 您可以使用 `EXPAND VIEWS` 查詢提示來防止在查詢中使用檢視表索引，或者可以使用 `NOEXPAND` 資料表提示，針對查詢的 `FROM` 子句所指定的索引檢視表強制使用索引。 然而，您應該讓查詢最佳化工具動態判斷每個查詢最適用的存取方法。 只有在測試已顯現出其大幅改善效能的特定情況下，才能使用 `EXPAND` 和 `NOEXPAND` 。
 
-`EXPAND VIEWS` option specifies that the Query Optimizer not use any view indexes for the whole query. 
+`EXPAND VIEWS` 選項指定查詢最佳化工具在整個查詢中不會使用任何檢視表索引。 
 
-針對檢視表指定 `NOEXPAND` is specified for a view, the Query Optimizer considers using any indexes defined on the view. (透過選擇性`NOEXPAND` 子句來指定 `INDEX()` clause forces the Query Optimizer to use the specified indexes. `NOEXPAND` 只能指定給索引檢視表，且不得指定給尚未編製索引的檢視表。
+針對檢視表指定 `NOEXPAND` 時，查詢最佳化工具就會考慮使用檢視表中所定義的任何索引。 (透過選擇性`NOEXPAND` 子句來指定 `INDEX()` ) 將強制查詢最佳化工具使用指定的索引。 `NOEXPAND` 只能指定給索引檢視表，且不得指定給尚未編製索引的檢視表。
 
 如果未在含有檢視表的查詢中指定 `NOEXPAND` 或 `EXPAND VIEWS` ，即會展開檢視表以存取基礎資料表。 若構成檢視的查詢中含有任何資料表提示，這些提示便會傳播到基礎資料表。 (此處理序在＜檢視解析＞中有較為詳盡的說明。)只要檢視的基礎資料表上所存在的多個提示彼此相同，則查詢即可與索引檢視比對。 這些提示大多會彼此相符，因為它們都直接繼承自檢視。 然而，若查詢參考資料表 (而非檢視) 以及直接套用於這些資料表的提示不相同，這種查詢將無法與索引檢視進行比對。 若 `INDEX`、 `PAGLOCK`、 `ROWLOCK`、 `TABLOCKX`、 `UPDLOCK`或 `XLOCK` 提示會在檢視表展開後套用到查詢中所參考的資料表，查詢就無法與索引檢視表進行比對。
 
@@ -468,7 +468,7 @@ WHERE ProductSubcategoryID = 4;
 在處理複雜的 SQL 陳述式時，關聯式引擎可能會無法判斷哪個運算式可以參數化。 若要提升關聯式引擎將複雜 SQL 陳述式與現有、未使用之執行計畫配對的能力，請使用 sp_executesql 或參數標記明確指定參數。 
 
 > [!NOTE]
-> 使用 +、-、*、/ 或 % 等算術運算子來將 int、smallint、tinyint 或 bigint 常數值隱含或明確轉換為 float、real、decimal 或 numeric 資料類型時，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會套用特定的規則來計算運算式結果的類型與有效位數。 不過，這些規則會隨著查詢是否參數化而有所不同。 因此，在某些情況下，查詢中類似的運算式可能會產生不同的結果。
+> 使用 +、-、\*、/ 或 % 等算術運算子來將 int、smallint、tinyint 或 bigint 常數值隱含或明確轉換為 float、real、decimal 或 numeric 資料類型時，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會套用特定的規則來計算運算式結果的類型與有效位數。 不過，這些規則會隨著查詢是否參數化而有所不同。 因此，在某些情況下，查詢中類似的運算式可能會產生不同的結果。
 
 在簡單參數化的預設行為下，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 可將較小的查詢類別參數化。 不過，您可以藉由將 `PARAMETERIZATION` 命令的 `ALTER DATABASE` 選項設為 `FORCED`，來指定資料庫中所有查詢都會依據特定限制進行參數化。 這麼做可降低查詢編譯的頻率，進而改善經歷大量並行查詢的資料庫效能。
 
@@ -503,7 +503,7 @@ WHERE ProductSubcategoryID = 4;
 * `CONVERT` 子句的 style 引數。
 * `IDENTITY` 子句中的整數常數。
 * 使用 ODBC 延伸語法指定的常數。
-* 可摺疊常數的運算式，其為 +、-、*、/ 及 % 運算子的引數。 在考量是否可進行強制參數化時，若符合下列其中一項條件，則 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會認定運算式為可摺疊常數的：  
+* 可摺疊常數的運算式，其為 +、-、\*、/ 和 % 運算子的引數。 在考量是否可進行強制參數化時，若符合下列其中一項條件，則 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會認定運算式為可摺疊常數的：  
   * 運算式中未出現資料行、變數或子查詢。  
   * 運算式包含 `CASE` 子句。  
 * 查詢提示子句的引數。 這些包括 `number_of_rows` 查詢提示的 `FAST` 引數、 `number_of_processors` 查詢提示的 `MAXDOP` 引數，以及 `MAXRECURSION` 查詢提示的 number 引數。
@@ -517,7 +517,7 @@ WHERE ProductSubcategoryID = 4;
 
 當 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 將常值參數化時，參數會轉換為下列資料類型：
 
-* 將以其他方式調整大小以符合 int 資料類型的整數常值會參數化為 int。 屬於含有任何比較運算子之述詞的較大整數常值 (包括 <、\<=、=、!=、>、>=,、!\<、!>、<>、`ALL`、`ANY`、`SOME`、`BETWEEN` 和 `IN`) 會參數化為 numeric(38,0)。 不屬於含有比較運算子之述詞的較大常值會參數化為 numeric，其有效位數夠大正好足以支援其大小，而其小數位數為 0。
+* 將以其他方式調整大小以符合 int 資料類型的整數常值會參數化為 int。屬於含有任何比較運算子之述詞的較大整數常值 (包括 <、\<=、=、!=、>、>=,、!\<、!>、<>、`ALL`、`ANY`、`SOME`、`BETWEEN` 和 `IN`) 會參數化為 numeric(38,0)。 不屬於含有比較運算子之述詞的較大常值會參數化為 numeric，其有效位數夠大正好足以支援其大小，而其小數位數為 0。
 * 屬於含有比較運算子之述詞的固定點數值常值會參數化為 numeric，其有效位數為 38，而其小數位數夠大正好足以支援其大小。 不屬於含有比較運算子之述詞的固定點數值常值會參數化為 numeric，其有效位數與小數位數夠大正好足以支援其大小。
 * 浮點數值常值會參數化為 float(53)。
 * 如果非 Unicode 字串常值可容納於 8,000 個字元中，即會參數化為 varchar(8000)，如果該常值大於 8,000 個字元，則會參數化為 varchar(max)。

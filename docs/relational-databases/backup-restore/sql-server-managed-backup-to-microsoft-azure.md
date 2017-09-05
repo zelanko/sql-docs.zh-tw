@@ -13,12 +13,12 @@ ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
 caps.latest.revision: 44
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 529ae718a28d99104d8835ecaf2cdc4eb5fcc63f
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 91098c850b0f6affb8e4831325d0f18fd163d71a
+ms.openlocfilehash: 9061cf182fd1bc245de22ea2bade18b93e231042
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="sql-server-managed-backup-to-microsoft-azure"></a>SQL Server Managed Backup to Microsoft Azure
@@ -111,6 +111,10 @@ ms.lasthandoff: 06/22/2017
  當資料庫正在執行完整的資料庫備份作業時， [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 會等待目前作業完成，然後再為相同的資料庫執行另一個完整的資料庫備份。 同樣地，在指定的時間內，只可執行一個交易記錄備份。 不過，完整資料庫備份與交易記錄備份可以同時執行。 失敗會記錄為擴充事件。  
   
  如果排程超過 10 個並行完整資料庫備份，會透過擴充事件的偵錯通道發出警告。 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 會維護其優先順序佇列，直到所有的備份均已排程並完成為止。  
+
+> [!NOTE]
+> SQL Server Managed Backup 不支援 Proxy 伺服器。
+>
   
 ##  <a name="support_limits"></a> 可支援性  
  下列支援限制和考量專屬於 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]：  

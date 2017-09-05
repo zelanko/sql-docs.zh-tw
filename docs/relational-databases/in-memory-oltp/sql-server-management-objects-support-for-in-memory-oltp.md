@@ -1,7 +1,8 @@
 ---
 title: "記憶體內部 OLTP 的 SQL Server 管理物件支援 | Microsoft Docs"
+description: "描述支援記憶體內部 OLTP 的 SQL Server 管理物件 (SMO) 的項目。"
 ms.custom: 
-ms.date: 08/17/2017
+ms.date: 08/18/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,57 +16,35 @@ author: JennieHubbard
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: f97c2335abf293f70fad454ac9f181a3cb3e439c
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: 249188036af10473b3a17eaeb2d0c47b80420f4a
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="sql-server-management-objects-support-for-in-memory-oltp"></a>記憶體中 OLTP 的 SQL Server 管理物件支援
 
-此主題描述適用於記憶體中 OLTP 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理物件 (SMO) 中的變更。  
-  
-下列類型和成員支援 In-Memory OLTP：  
-  
-- Microsoft.SqlServer.Management.Smo.**<xref:Microsoft.SqlServer.Management.Smo.DurabilityType>** (列舉)
+本主題描述支援記憶體內部 OLTP 的 SQL Server 管理物件 (SMO) 的項目。  
 
-- Microsoft.SqlServer.Management.Smo.FileGroup.**<xref:Microsoft.SqlServer.Management.Smo.FileGroup.FileGroupType%2A>** (屬性)
+## <a name="smo-types-and-members"></a>SMO 類型和成員
 
-- Microsoft.SqlServer.Management.Smo.FileGroup.**<xref:Microsoft.SqlServer.Management.Smo.FileGroup.%23ctor%2A>** (建構函式)
+下列類型和成員位在命名空間 **Microsoft.SqlServer.Management.Smo** 中，都支援記憶體內部 OLTP：
 
-- Microsoft.SqlServer.Management.Smo.**<xref:Microsoft.SqlServer.Management.Smo.FileGroupType>** (列舉)
+- **<xref:Microsoft.SqlServer.Management.Smo.DurabilityType>** (列舉)
+- FileGroup.**<xref:Microsoft.SqlServer.Management.Smo.FileGroup.FileGroupType%2A>** (屬性)
+- FileGroup.**<xref:Microsoft.SqlServer.Management.Smo.FileGroup.%23ctor%2A>** (建構函式)
+- **<xref:Microsoft.SqlServer.Management.Smo.FileGroupType>** (列舉)
+- Index.**<xref:Microsoft.SqlServer.Management.Smo.Index.BucketCount%2A>** (屬性)
+- IndexType.**<xref:Microsoft.SqlServer.Management.Smo.IndexType.NonClusteredHashIndex>** (列舉成員)
+- Index.**<xref:Microsoft.SqlServer.Management.Smo.Index.IsMemoryOptimized%2A>** (屬性)
+- Server.**<xref:Microsoft.SqlServer.Management.Smo.Server.IsXTPSupported%2A>** (屬性)
+- StoredProcedure.**<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.IsNativelyCompiled%2A>** (屬性)
+- StoredProcedure.**<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.IsSchemaBound%2A>** (屬性)
+- Table.**<xref:Microsoft.SqlServer.Management.Smo.Table.Durability%2A>** (屬性)
+- Table.**<xref:Microsoft.SqlServer.Management.Smo.Table.IsMemoryOptimized%2A>** (屬性)
+- UserDefinedTableType.**<xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType.IsMemoryOptimized%2A>** (屬性)
 
-- Microsoft.SqlServer.Management.Smo.Index.**<xref:Microsoft.SqlServer.Management.Smo.Index.BucketCount%2A>** (屬性)
-
-- Microsoft.SqlServer.Management.Smo.IndexType.**<xref:Microsoft.SqlServer.Management.Smo.IndexType.NonClusteredHashIndex>** (列舉成員)
-
-- Microsoft.SqlServer.Management.Smo.Index.**<xref:Microsoft.SqlServer.Management.Smo.Index.IsMemoryOptimized%2A>** (屬性)
-
-- Microsoft.SqlServer.Management.Smo.Server.**<xref:Microsoft.SqlServer.Management.Smo.Server.IsXTPSupported%2A>** (屬性)
-
-- Microsoft.SqlServer.Management.Smo.StoredProcedure.**<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.IsNativelyCompiled%2A>** (屬性)
-
-- Microsoft.SqlServer.Management.Smo.StoredProcedure.**<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.IsSchemaBound%2A>** (屬性)
-
-- Microsoft.SqlServer.Management.Smo.Table.**<xref:Microsoft.SqlServer.Management.Smo.Table.Durability%2A>** (屬性)
-
-- Microsoft.SqlServer.Management.Smo.Table.**<xref:Microsoft.SqlServer.Management.Smo.Table.IsMemoryOptimized%2A>** (屬性)
-
-- Microsoft.SqlServer.Management.Smo.UserDefinedTableType.**<xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType.IsMemoryOptimized%2A>** (屬性)
-
-## <a name="code-sample"></a>程式碼範例
-
-#### <a name="actions-taken-in-the-code-example"></a>程式碼範例中採取的動作
-  
--   建立具有記憶體最佳化檔案群組和記憶體最佳化檔案的資料庫。  
-  
--   建立持久性記憶體最佳化資料表，其中含有主索引鍵、非叢集索引及非叢集雜湊索引。  
-  
--   建立資料行及索引。  
-  
--   建立使用者定義的記憶體最佳化資料表類型。  
-  
--   建立原生編譯的預存程序。
+## <a name="c-code-example"></a>C# 程式碼範例
 
 #### <a name="assemblies-referenced-by-the-compiled-code-example"></a>編譯的程式碼範例所參考的組件
 
@@ -73,6 +52,14 @@ ms.lasthandoff: 08/17/2017
 - Microsoft.SqlServer.Management.Sdk.Sfc.dll
 - Microsoft.SqlServer.Smo.dll
 - Microsoft.SqlServer.SqlEnum.dll
+
+#### <a name="actions-taken-in-the-code-example"></a>程式碼範例中採取的動作
+
+1. 建立具有記憶體最佳化檔案群組和記憶體最佳化檔案的資料庫。  
+2. 建立持久性記憶體最佳化資料表，其中含有主索引鍵、非叢集索引及非叢集雜湊索引。  
+3. 建立資料行及索引。  
+4. 建立使用者定義的記憶體最佳化資料表類型。  
+5. 建立原生編譯的預存程序。
 
 #### <a name="source-code"></a>原始程式碼
   
@@ -180,5 +167,6 @@ public class A {
   
 ## <a name="see-also"></a>另請參閱  
 
-[記憶體中 OLTP 的 SQL Server 支援](sql-server-support-for-in-memory-oltp.md)
+- [記憶體中 OLTP 的 SQL Server 支援](sql-server-support-for-in-memory-oltp.md)
+- [SMO 概觀](../server-management-objects-smo/overview-smo.md)
 

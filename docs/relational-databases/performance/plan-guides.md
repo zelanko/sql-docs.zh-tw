@@ -24,11 +24,11 @@ caps.latest.revision: 52
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e3c1733219769d0a2d08996db9a25e3dd08a1e86
+ms.translationtype: HT
+ms.sourcegitcommit: 014b531a94b555b8d12f049da1bd9eb749b4b0db
+ms.openlocfilehash: 2e8ae8b72d588904cc7b3d4aaeaba1e783a21b48
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/22/2017
 
 ---
 # <a name="plan-guides"></a>計畫指南
@@ -42,12 +42,12 @@ ms.lasthandoff: 06/22/2017
 ## <a name="types-of-plan-guides"></a>計畫指南的類型  
  您可以建立下列類型的計畫指南。  
   
- OBJECT 計畫指南  
+ ### <a name="object-plan-guide"></a>OBJECT 計畫指南  
  OBJECT 計畫指南可搭配在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 預存程序、純量使用者定義函數、多個陳述式資料表值使用者定義函數以及 DML 觸發程序內容中執行的查詢。  
   
- 假設下列採用 `@Country`_`region` 參數的預存程序位於針對 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫所部署的資料庫應用程式中：  
+ 假設下列採用 `@Country_region` 參數的預存程序位於針對 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫所部署的資料庫應用程式中：  
   
-```  
+```t-sql  
 CREATE PROCEDURE Sales.GetSalesOrderByCountry (@Country_region nvarchar(60))  
 AS  
 BEGIN  
@@ -60,11 +60,11 @@ BEGIN
 END;  
 ```  
   
- 假設此預存程序已針對 `@Country`_`region = N'AU'` (澳洲) 編譯及最佳化。 不過，由於來自澳洲的銷售訂單相當少，因此當查詢在多個銷售訂單上使用國家 (地區) 的參數值執行時，效能就會降低。 由於大部分的銷售訂單都是來自美國，所以針對 `@Country`\_`region = N'US'` 所產生的查詢計劃可能會比 `@Country`\_`region` 參數的所有可能值具有更好的執行效能。  
+ 假設此預存程序已針對 `@Country_region = N'AU'` (澳洲) 編譯及最佳化。 不過，由於來自澳洲的銷售訂單相當少，因此當查詢在多個銷售訂單上使用國家 (地區) 的參數值執行時，效能就會降低。 由於大部分的銷售訂單都是來自美國，所以針對 `@Country_region = N'US'` 所產生的查詢計劃可能會比 `@Country_region` 參數的所有可能值具有更好的執行效能。  
   
  您可以修改預存程序並將 `OPTIMIZE FOR` 查詢提示加入查詢以處理此問題。 不過，因為預存程序是在已部署的應用程式中，所以您無法直接修改應用程式的程式碼。 您只能在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫中建立下列計畫指南。  
   
-```  
+```t-sql  
 sp_create_plan_guide   
 @name = N'Guide1',  
 @stmt = N'SELECT *FROM Sales.SalesOrderHeader AS h,  
@@ -81,16 +81,16 @@ sp_create_plan_guide
   
  執行在 `sp_create_plan_guide` 陳述式中指定的查詢時，在最佳化前會先修改查詢以包含 `OPTIMIZE FOR (@Country = N''US'')` 子句。  
   
- SQL 計畫指南  
+ ### <a name="sql-plan-guide"></a>SQL 計畫指南  
  SQL 計畫指南可搭配在不屬於資料庫物件的獨立 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式與批次內容中執行的查詢。 以 SQL 為基礎的計畫指南可用以搭配參數化為指定形式的查詢。 SQL 計畫指南會套用至獨立 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式和批次。 這些陳述式通常是由應用程式使用 [sp_executesql](../../relational-databases/system-stored-procedures/sp-executesql-transact-sql.md) 系統預存程序進行提交。 例如，請考慮下列獨立批次：  
   
-```  
+```t-sql  
 SELECT TOP 1 * FROM Sales.SalesOrderHeader ORDER BY OrderDate DESC;  
 ```  
   
  若要防止這項查詢產生平行執行計畫，請建立下列計畫指南並將 `MAXDOP` 參數中的 `1` 查詢提示設定為 `@hints` 。  
   
-```  
+```t-sql  
 sp_create_plan_guide   
 @name = N'Guide2',   
 @stmt = N'SELECT TOP 1 * FROM Sales.SalesOrderHeader ORDER BY OrderDate DESC',  
@@ -105,31 +105,34 @@ sp_create_plan_guide
   
  當 PARAMETERIZATION 資料庫選項 SET 為 FORCED 時，或是當建立 TEMPLATE 計畫指南以指定要參數化的查詢類別時，SQL 計畫指南也可在參數化為相同形式的查詢上建立 SQL 計畫指南。  
   
- TEMPLATE 計畫指南  
+ ### <a name="template-plan-guide"></a>TEMPLATE 計畫指南  
  TEMPLATE 計畫指南可搭配參數化為指定形式的獨立查詢。 這些計畫指南可用以針對查詢類別，覆寫資料庫目前的 PARAMETERIZATION 資料庫 SET 選項。  
   
  您可以在下列其中一種情況下建立 TEMPLATE 計畫指南：  
   
--   PARAMETERIZATION 資料庫選項設定成 FORCED，但有一些要根據簡單參數化規則編譯的查詢。  
+-   PARAMETERIZATION 資料庫選項設定成 FORCED，但有一些要根據[簡單參數化](../../relational-databases/query-processing-architecture-guide.md#SimpleParam)規則編譯的查詢。  
   
--   PARAMETERIZATION 資料庫選項設定成 SIMPLE (預設值)，但是您要在某個查詢類別嘗試強制參數化。  
+-   PARAMETERIZATION 資料庫選項設定成 SIMPLE (預設值)，但是您要在某個查詢類別嘗試[強制參數化](../../relational-databases/query-processing-architecture-guide.md#ForcedParam)。  
   
 ## <a name="plan-guide-matching-requirements"></a>計畫指南比對需求  
  計畫指南的範圍僅限於建立它們的資料庫。 因此，當查詢執行時，只有位於目前資料庫中的計畫指南才可以配合查詢。 例如，如果 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 是目前的資料庫且執行下列查詢：  
   
- `SELECT FirstName, LastName FROM Person.Person;`  
+ ```t-sql
+ SELECT FirstName, LastName FROM Person.Person;
+ ```  
   
  只有在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫中的計畫指南能夠配合此查詢。 不過，如果 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 是目前的資料庫且執行下列陳述式：  
   
- `USE DB1;`  
-  
- `SELECT FirstName, LastName FROM Person.Person;`  
+ ```t-sql
+ USE DB1; 
+ SELECT FirstName, LastName FROM Person.Person;
+ ```  
   
  只有 `DB1` 中的計畫指南才能夠配合查詢，因為查詢是在 `DB1`的內容中執行。  
   
  對於以 SQL 或 TEMPLATE 為基礎的計畫指南而言，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會逐字元比較查詢的 @module_or_batch 和 @params 引數值，使兩個值相符。 這表示您必須提供與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在實際批次中所收到的文字完全相符的文字。  
   
- @type = 'SQL' 且 @module_or_batch 設定為 NULL 時，@module_or_batch 的值會設定為值 @stmt。 這表示，提供的 *statement_text* 值必須與提交給 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的值採用相同的格式 (逐字元)。 不會執行內部轉換來簡化這個比對作業。  
+ @type = 'SQL' 且 @module_or_batch 設定為 NULL 時，@module_or_batch 的值會設定為值 @stmt。這表示，提供的 *statement_text* 值必須與提交給 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的值採用相同的格式 (逐字元)。 不會執行內部轉換來簡化這個比對作業。  
   
  當一般 (SQL 或 OBJECT) 計畫指南和 TEMPLATE 計畫指南都適用於陳述式時，只會使用一般計畫指南。  
   

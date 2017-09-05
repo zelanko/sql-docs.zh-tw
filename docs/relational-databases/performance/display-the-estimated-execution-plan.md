@@ -1,7 +1,7 @@
 ---
 title: "顯示估計的執行計畫 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 08/21/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -23,15 +23,15 @@ caps.latest.revision: 26
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ab88419f449c00dae258d7cf101d08df56f26d2b
+ms.translationtype: HT
+ms.sourcegitcommit: 014b531a94b555b8d12f049da1bd9eb749b4b0db
+ms.openlocfilehash: 776af20648edd32950f222469b1b0f469a12a925
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/22/2017
 
 ---
 # <a name="display-the-estimated-execution-plan"></a>顯示估計的執行計畫
-  此主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]產生圖形化的估計執行計畫。 產生估計執行計畫時，不會執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢或批次。 不過，所產生的執行計畫會顯示若是真的執行查詢， [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 最有可能使用的查詢執行計畫。  
+  此主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]產生圖形化的估計執行計畫。 產生估計執行計畫時，不會執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢或批次。 因為這個緣故，估計執行計畫不包含任何執行階段資訊，如實際資源使用計量和執行階段警告等。 不過，如果真的執行查詢，所產生的執行計畫會顯示 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 最有可能使用的查詢執行計畫，並顯示流經計劃中數項作業的估計資料列。  
   
  若要使用這個功能，使用者必須具有適當的權限來執行要產生圖形執行計畫的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢，而且必須獲得查詢所參考的所有資料庫的 SHOWPLAN 權限。  
   
@@ -43,6 +43,8 @@ ms.lasthandoff: 06/22/2017
   
 3.  在 [查詢] 功能表上，按一下 [顯示估計執行計畫]，或按一下 [顯示估計執行計畫] 工具列按鈕。 估計執行計畫會顯示在結果窗格中的 [執行計畫] 索引標籤。 若要檢視其他資訊，請將滑鼠暫時放在邏輯與實體運算子的圖示上，即可在顯示的 [工具提示] 中檢視運算子的說明與屬性。 或者，您可以在 [屬性] 視窗中檢視運算子屬性。 如果沒有看到 [屬性] 視窗，請以滑鼠右鍵按一下運算子，然後按一下 [屬性]。 選取運算子以檢視其屬性。  
   
-4.  若要改變執行計劃的顯示，請以滑鼠右鍵按一下 [執行計畫]，然後選取 [放大]、[縮小]、[自訂顯示比例] 或 [縮放至適當比例]。 [放大] 與 [縮小] 可讓您以固定量放大或縮小執行計畫。 [自訂顯示比例] 可讓您定義自己的顯示倍率，例如縮放至百分之 80。 [縮放至適當比例] 會放大執行計畫，以符合結果窗格的大小。  
-  
-  
+4.  若要改變執行計劃的顯示，請以滑鼠右鍵按一下 [執行計畫]，然後選取 [放大]、[縮小]、[自訂顯示比例] 或 [縮放至適當比例]。 [放大] 與 [縮小] 可讓您以固定量放大或縮小執行計畫。 [自訂顯示比例] 可讓您定義自己的顯示倍率，例如縮放至百分之 80。 [縮放至適當比例] 會放大執行計畫，以符合結果窗格的大小。 或者，使用 CTRL 鍵加滑鼠滾輪，啟動**動態縮放**。  
+ 
+ > [!NOTE] 
+ > 或者，使用 [SET STATISTICS XML](../../t-sql/statements/set-showplan-xml-transact-sql.md)，在不執行各個陳述式的情況下傳回其執行計畫資訊。 如果用於 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，[結果] 索引標籤會有連結，以圖形格式開啟執行計畫。   
+

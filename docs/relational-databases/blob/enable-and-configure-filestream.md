@@ -1,7 +1,7 @@
 ---
 title: "啟用及設定 FILESTREAM | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 08/23/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -16,11 +16,11 @@ caps.latest.revision: 25
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 7bee35abc8b2c450a9bd1badb89b18eb31128be8
+ms.translationtype: HT
+ms.sourcegitcommit: 91098c850b0f6affb8e4831325d0f18fd163d71a
+ms.openlocfilehash: 19f5d560766c4bc70bd16fcff4f9f12f23b80146
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="enable-and-configure-filestream"></a>啟用及設定 FILESTREAM
@@ -62,7 +62,7 @@ ms.lasthandoff: 06/22/2017
 13. 重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務。  
   
   
-##  <a name="best"></a> 最佳作法  
+##  <a name="best"></a> 最佳做法  
   
 ###  <a name="config"></a> 實體組態和維護  
  當您設定 FILESTREAM 儲存體磁碟區時，請考慮下列指導方針：  
@@ -73,9 +73,9 @@ ms.lasthandoff: 06/22/2017
   
 -   使用 64-KB NTFS 叢集。 壓縮的磁碟區必須設定為 4-KB NTFS 叢集。  
   
--   停用 FILESTREAM 磁碟區上的索引，並設定 **disablelastaccess** 。若要設定 **disablelastaccess**，請使用 Windows **fsutil** 公用程式。  
+-   針對 FILESTREAM 磁碟區停用索引並且設定 **disablelastaccess**。 若要設定 **disablelastaccess**，請使用 Windows 的 **fsutil** 公用程式。  
   
--   在必要的情況下，停用 FILESTREAM 磁碟區的防毒掃描。 如果防毒掃描是必要的功能，請避免設定自動刪除違規檔案的原則。  
+-   如不需要，請停用 FILESTREAM 磁碟區的防毒掃描。 如果防毒掃描是必要的功能，請避免設定自動刪除違規檔案的原則。  
   
 -   針對容錯和應用程式所需的效能設定並微調 RAID 層級。  
   
@@ -97,3 +97,4 @@ ms.lasthandoff: 06/22/2017
 -   FILESTREAM 無法直接支援空間管理和原則。 不過，您可以透過將每個 FILESTREAM 檔案群組指派至個別的磁碟區，並使用磁碟區的管理功能，以間接方式管理空間和套用原則。  
   
   
+

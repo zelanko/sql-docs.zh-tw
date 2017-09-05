@@ -1,7 +1,7 @@
 ---
 title: "顯示實際執行計畫 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 08/21/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -19,21 +19,21 @@ caps.latest.revision: 24
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 47582568cf0cc2af2e3cd003f37e8077be114739
+ms.translationtype: HT
+ms.sourcegitcommit: 014b531a94b555b8d12f049da1bd9eb749b4b0db
+ms.openlocfilehash: da2e499e231dc55691a9b39929e4ba6589b5e442
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/22/2017
 
 ---
 # <a name="display-an-actual-execution-plan"></a>顯示實際執行計畫
-  此主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]產生實際的圖形執行計畫。 產生實際執行計畫後，就會執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢或批次。 所產生的執行計畫會顯示實際查詢執行計畫， [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 將用來執行查詢。  
+  此主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]產生實際的圖形執行計畫。 實際執行計畫是在執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢或 Batch 後產生。 因為這個緣故，實際執行計畫會包含執行階段資訊，如實際資源使用計量和執行階段警告等 (如果有的話)。 所產生的執行計畫會顯示 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行查詢所使用的實際查詢執行計畫。  
   
  若要使用這個功能，使用者必須具有適當權限，以便執行將會產生圖形執行計畫的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢，同時也需將查詢所參考之所有資料庫的 SHOWPLAN 權限，都授與給使用者。  
   
 ### <a name="to-include-an-execution-plan-for-a-query-during-execution"></a>若要在執行期間包括查詢的執行計畫  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 工具列上，按一下 [Database Engine 查詢]。 您也可以按一下 [開啟檔案] 工具列按鈕並找出現有的查詢，以開啟現有的查詢並顯示估計執行計畫。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 工具列上，按一下 [Database Engine 查詢]。 您也可以按一下 [開啟檔案] 工具列按鈕並找出現有的查詢，以開啟現有的查詢並顯示估計執行計畫。 
   
 2.  輸入您希望顯示其實際執行計畫的查詢。  
   
@@ -43,6 +43,9 @@ ms.lasthandoff: 06/22/2017
   
      或者，您可以在 [屬性] 視窗中檢視運算子屬性。 如果沒有看到 [屬性] 視窗，請以滑鼠右鍵按一下運算子，然後選取 [屬性]。 選取運算子以檢視其屬性。  
   
-5.  您可以用滑鼠右鍵按一下執行計畫，然後選取 [放大]、[縮小]、[自訂顯示比例] 或 [縮放至適當比例]，來改變執行計畫的顯示。 [放大] 及 [縮小] 可讓您放大或縮小執行計畫，而 [自訂顯示比例] 則可讓您定義自己的顯示比例，如 80% 的顯示比例。 [縮放至適當比例] 會放大執行計畫，以符合結果窗格的大小。  
+5.  您可以用滑鼠右鍵按一下執行計畫，然後選取 [放大]、[縮小]、[自訂顯示比例] 或 [縮放至適當比例]，來改變執行計畫的顯示。 [放大] 及 [縮小] 可讓您放大或縮小執行計畫，而 [自訂顯示比例] 則可讓您定義自己的顯示比例，如 80% 的顯示比例。 [縮放至適當比例] 會放大執行計畫，以符合結果窗格的大小。 或者，使用 CTRL 鍵加滑鼠滾輪，啟動**動態縮放**。  
   
-  
+ 
+ > [!NOTE] 
+ > 或者，使用 [SET STATISTICS XML](../../t-sql/statements/set-statistics-xml-transact-sql.md)，在執行各陳述式後傳回其執行計畫資訊。 如果用於 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，[結果] 索引標籤會有連結，以圖形格式開啟執行計畫。   
+

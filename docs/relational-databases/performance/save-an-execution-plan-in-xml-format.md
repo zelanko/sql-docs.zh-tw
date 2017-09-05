@@ -1,7 +1,7 @@
 ---
 title: "以 XML 格式儲存執行計畫 | Microsoft 文件"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 08/21/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -20,11 +20,11 @@ caps.latest.revision: 25
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5e60ae53c74f8f6df450ac6abc5a421f773ce434
+ms.translationtype: HT
+ms.sourcegitcommit: 014b531a94b555b8d12f049da1bd9eb749b4b0db
+ms.openlocfilehash: 6fe7ad1d3aedc20aac792831c0d469816979ae7e
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/22/2017
 
 ---
 # <a name="save-an-execution-plan-in-xml-format"></a>以 XML 格式儲存執行計畫
@@ -36,25 +36,26 @@ ms.lasthandoff: 06/22/2017
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，開啟查詢編輯器並連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  利用下列陳述式開啟 SHOWPLAN_XML：  
+2.  利用下列陳述式開啟 [SHOWPLAN_XML](../../t-sql/statements/set-showplan-xml-transact-sql.md)：  
   
-    ```  
+    ```t-sql  
     SET SHOWPLAN_XML ON;  
     GO  
     ```  
   
-     若要開啟 STATISTICS XML，請使用下列陳述式：  
+     若要開啟 [STATISTICS XML](../../t-sql/statements/set-statistics-xml-transact-sql.md)，請使用下列陳述式：  
   
-    ```  
+    ```t-sql  
     SET STATISTICS XML ON;  
     GO  
     ```  
   
-     SHOWPLAN_XML 會產生查詢的編譯階段查詢執行計畫資訊，但不會執行查詢。 STATISTICS XML 會產生查詢的執行階段查詢執行計畫資訊，並且執行查詢。  
+     > [!NOTE] 
+     > SHOWPLAN_XML 會產生查詢的編譯階段查詢執行計畫資訊，但不會執行查詢。 這就是所謂的**估計**執行計畫。 STATISTICS XML 會產生查詢的執行階段查詢執行計畫資訊，並且執行查詢。 這就是所謂的**實際**執行計畫。  
   
 3.  執行查詢。 範例：  
   
-    ```  
+    ```t-sql  
     USE AdventureWorks2012;  
     GO  
     SET SHOWPLAN_XML ON;  
@@ -75,7 +76,7 @@ ms.lasthandoff: 06/22/2017
   
 ### <a name="to-save-an-execution-plan-by-using-sql-server-management-studio-options"></a>若要使用 SQL Server Management Studio 選項來儲存執行計畫  
   
-1.  使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]來產生一個評估的執行計畫或實際執行計畫。 如需詳細資訊，請參閱[顯示估計執行計畫](../../relational-databases/performance/display-the-estimated-execution-plan.md)或[顯示實際執行計畫](../../relational-databases/performance/display-an-actual-execution-plan.md)。  
+1.  使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]來產生一個評估的執行計畫或實際執行計畫。 如需詳細資訊，請參閱[顯示估計執行計畫](../../relational-databases/performance/display-the-estimated-execution-plan.md)和[顯示實際執行計畫](../../relational-databases/performance/display-an-actual-execution-plan.md)。  
   
 2.  在結果窗格的 [執行計畫] 索引標籤中，以滑鼠右鍵按一下圖形執行計畫，然後選擇 [另存執行計畫為]。  
   
@@ -100,3 +101,4 @@ ms.lasthandoff: 06/22/2017
  [SET STATISTICS XML &#40;Transact-SQL&#41;](../../t-sql/statements/set-statistics-xml-transact-sql.md)  
   
   
+

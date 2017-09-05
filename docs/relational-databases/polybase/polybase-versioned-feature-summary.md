@@ -15,10 +15,10 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: cf69aa2c57e86aab11974b5874039ae7f72b9917
-ms.openlocfilehash: 3384d962c3765bf4feb00f957ad56a668f8d92e4
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: dcfa27ad11e3027519398b9424056b52afb1617b
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="polybase-versioned-feature-summary"></a>PolyBase 建立版本的功能摘要
@@ -35,6 +35,7 @@ ms.lasthandoff: 07/31/2017
 |使用下列項目查詢 Hadoop 資料： [!INCLUDE[tsql](../../includes/tsql-md.md)]|是|否|否|是|
 |從 Hadoop 匯入資料|是|否|否|是|
 |匯出資料至 Hadoop  |是|否|否| 是|
+|在 HDInsights 中查詢、匯入、匯出 |否|否|否|否
 |將查詢計算下推到 Hadoop|是|否|否|是|  
 |從 Azure Blob 儲存體匯入資料|是|否|是|是| 
 |匯出資料至 Azure Blob 儲存體|是|否|是|是|  

@@ -14,17 +14,17 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 6c41a2a22b034f36ebe96508e978096b0ed29524
+ms.translationtype: HT
+ms.sourcegitcommit: 014b531a94b555b8d12f049da1bd9eb749b4b0db
+ms.openlocfilehash: c247025da3c103105e41162cc614b1986796bb42
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/22/2017
 
 ---
 # <a name="configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure"></a>設定 Microsoft Azure 的 SQL Server 受管理備份進階選項
   下列教學課程說明如何設定 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]的進階選項。 這些程序只有在您需要它們所提供的功能時才有必要。 否則，您可以啟用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 並依據預設行為。  
   
- 每個案例中都是使用 `database_name` 參數指定備份。 當 `database_name` 是 NUL 或 * 時，這些變更就會影響執行個體層級的預設設定。 執行個體層級設定也會影響在變更之後所建立的新資料庫。  
+ 每個案例中都是使用 `database_name` 參數指定備份。 當 `database_name` 是 NULL 或 * 時，這些變更就會影響執行個體層級的預設設定。 執行個體層級設定也會影響在變更之後所建立的新資料庫。  
   
  一旦指定這些設定，您就可以使用 [managed_backup.sp_backup_config_basic (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md) 系統預存程序，來啟用資料庫或執行個體的受管理備份。 如需詳細資訊，請參閱 [Enable SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md)。  
   
@@ -120,3 +120,4 @@ ms.lasthandoff: 06/22/2017
  [SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
   
   
+

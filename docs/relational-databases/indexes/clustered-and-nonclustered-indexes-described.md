@@ -1,7 +1,7 @@
 ---
 title: "叢集與非叢集索引說明 | Microsoft 文件"
 ms.custom: 
-ms.date: 11/01/2016
+ms.date: 08/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -17,11 +17,11 @@ caps.latest.revision: 36
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: bc2034ac69dee1a72429e94841aec1763703de7c
-ms.openlocfilehash: 860844c00da732d2a40b4572aff98ec06f5d4ddf
+ms.translationtype: HT
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: 3ddf0231bfbea2137834ffbf7113654af9d9af6a
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="clustered-and-nonclustered-indexes-described"></a>叢集與非叢集索引說明
@@ -46,7 +46,7 @@ ms.lasthandoff: 06/22/2017
   
     -   從非叢集索引中的索引列指向資料列的指標被稱為資料列定位器。 資料列定位器的結構須視資料頁儲存在堆積或叢集資料表而定。 若是堆積，資料列定位器是指向資料列的指標。 若是叢集資料表，資料列定位器就是叢集索引鍵。  
   
-    -   您可以將非索引鍵之資料行加入非叢集索引的分葉層級中，以規避現有索引鍵的限制 (900 個位元組和 16 個索引鍵資料行)，並執行完全涵蓋的索引查詢。 如需詳細資訊，請參閱 [建立內含資料行的索引](../../relational-databases/indexes/create-indexes-with-included-columns.md)。  
+    -   您可以將非索引鍵之資料行新增至非叢集索引的分葉層級中，以規避現有索引鍵的限制，並執行完全涵蓋的索引查詢。 如需詳細資訊，請參閱 [建立內含資料行的索引](../../relational-databases/indexes/create-indexes-with-included-columns.md)。 如需索引碼限制的詳細資料，請參閱 [SQL Server 的最大容量規格](../../sql-server/maximum-capacity-specifications-for-sql-server.md)。 
   
  叢集與非叢集索引都可以是唯一的。 這表示任何兩個資料列不得以相同的值做為索引鍵。 否則，索引就不是唯一的，那麼多個資料列就可以共用同一個索引鍵值。 如需詳細資訊，請參閱 [建立唯一索引](../../relational-databases/indexes/create-unique-indexes.md)。  
   
