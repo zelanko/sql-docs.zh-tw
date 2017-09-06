@@ -4,6 +4,7 @@
 # [逐步解說：設定 Integration Services 相應放大](walkthrough-set-up-integration-services-scale-out.md)
 # [Scale Out 主機](integration-services-ssis-scale-out-master.md)
 # [Scale Out 背景工作角色](integration-services-ssis-scale-out-worker.md)
+# [Scale Out 管理員](integration-services-ssis-scale-out-manager.md)
 # [在 Scale Out 中執行套件](run-packages-in-integration-services-ssis-scale-out.md)
 # [變更 Scale Out 記錄的帳戶](change-logdb-account.md)
 # [處理 Scale Out 的憑證](deal-with-certificates-in-ssis-scale-out.md)
