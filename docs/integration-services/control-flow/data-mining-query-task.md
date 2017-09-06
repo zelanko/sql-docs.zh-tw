@@ -11,6 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.dataminingquerytask.f1
+- sql13.dts.designer.dmquerytask.miningmodel.f1
+- sql13.dts.designer.dmquerytask.query.f1
+- sql13.dts.designer.dmquerytask.output.f1
 helpviewer_keywords:
 - prediction queries [Integration Services]
 - Data Mining Query task [Integration Services]
@@ -20,10 +23,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0b171b2ce21054b6cca5f2de64fa1d04f4fa00c9
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: efffacb30616a880c628894dac2f49201c2b8e24
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="data-mining-query-task"></a>資料採礦查詢工作
@@ -53,14 +56,6 @@ ms.lasthandoff: 08/03/2017
   
  您可以透過「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」或以程式設計方式設定屬性。  
   
- 如需有關可以在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中設定之屬性的詳細資訊，請按下列其中一個主題：  
-  
--   [資料採礦查詢工作編輯器 &#40;採礦模型索引標籤&#41;](../../integration-services/control-flow/data-mining-query-task-editor-mining-model-tab.md)  
-  
--   [資料採礦查詢工作編輯器 &#40;查詢索引標籤&#41;](../../integration-services/control-flow/data-mining-query-task-editor-query-tab.md)  
-  
--   [資料採礦查詢工作編輯器 &#40;輸出索引標籤&#41;](../../integration-services/control-flow/data-mining-query-task-editor-output-tab.md)  
-  
 > [!NOTE]  
 >  「資料採礦查詢編輯器」沒有「運算式」頁面， 而是另外使用 **[屬性]** 視窗存取用來建立和管理「資料採礦查詢」工作屬性之屬性運算式的工具。  
   
@@ -73,4 +68,120 @@ ms.lasthandoff: 08/03/2017
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.DMQueryTask.DMQueryTask>  
   
+## <a name="data-mining-query-task-editor-mining-model-tab"></a>資料採礦查詢工作編輯器 (採礦模型索引標籤)
+  使用 **[資料採礦查詢工作]** 對話方塊的 **[採礦模型]** 索引標籤，即可指定要使用的採礦結構和採礦模型。  
   
+ 若要深入了解在封裝中實作資料採礦，請參閱 [Data Mining Query Task](../../integration-services/control-flow/data-mining-query-task.md) (資料採礦查詢工作) 和 [Data Mining Solutions](../../analysis-services/data-mining/data-mining-solutions.md)(資料採礦方案)。  
+  
+### <a name="general-options"></a>一般選項  
+ **名稱**  
+ 為資料採礦查詢工作提供唯一的名稱。 這個名稱是作為工作圖示中的標籤使用。  
+  
+> [!NOTE]  
+>  工作名稱在封裝內必須是唯一的。  
+  
+ **描述**  
+ 輸入資料採礦查詢工作的描述。  
+  
+### <a name="mining-model-tab-options"></a>採礦模型索引標籤選項  
+ **連接**  
+ 在清單中選取 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 連線管理員，或按一下 [新增] 以建立新的連線管理員。  
+  
+ **相關主題：**[Analysis Services Connection Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md) (Analysis Services 連線管理員)  
+  
+ **新增**  
+ 建立新的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 連線管理員。  
+  
+ **相關主題：**[加入 Analysis Services 連線管理員對話方塊 UI 參考](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
+  
+ **採礦結構**  
+ 從清單中選取採礦結構。  
+  
+ **採礦模型**  
+ 選取在所選取採礦結構上建立的採礦模型。  
+
+## <a name="data-mining-query-task-editor-query-tab"></a>資料採礦查詢工作編輯器 (查詢索引標籤)
+  使用 [資料採礦查詢工作] 對話方塊的 [查詢] 索引標籤，即可依據採礦模型建立預測查詢。 在此對話方塊中，您也可以將參數和結果集繫結到變數。  
+  
+ 若要深入了解在封裝中實作資料採礦，請參閱 [資料採礦查詢工作](../../integration-services/control-flow/data-mining-query-task.md) 和 [資料採礦方案](../../analysis-services/data-mining/data-mining-solutions.md)。  
+  
+### <a name="general-options"></a>一般選項  
+ **名稱**  
+ 為資料採礦查詢工作提供唯一的名稱。 這個名稱是作為工作圖示中的標籤使用。  
+  
+> [!NOTE]  
+>  工作名稱在封裝內必須是唯一的。  
+  
+ **描述**  
+ 輸入資料採礦查詢工作的描述。  
+  
+### <a name="build-query-tab-options"></a>建立查詢索引標籤選項  
+ **資料採礦查詢**  
+ 輸入資料採礦查詢。  
+  
+ **相關主題：**[資料採礦延伸模組 &#40;DMX&#41; 參考](../../dmx/data-mining-extensions-dmx-reference.md)  
+  
+ **建立新查詢**  
+ 使用圖形工具來建立資料採礦查詢。  
+  
+ **相關主題：**[資料採礦查詢](../../integration-services/control-flow/data-mining-query.md)  
+  
+### <a name="parameter-mapping-tab-options"></a>參數對應索引標籤選項  
+ **參數名稱**  
+ 選擇性地更新參數名稱。 在 [變數名稱] 清單中選取變數，即可將參數對應至變數。  
+  
+ **變數名稱**  
+ 在清單中選取變數，以將其對應至參數。  
+  
+ **加入**  
+ 將參數加入清單中。  
+  
+ **移除**  
+ 選取參數，然後按一下 [移除]。  
+  
+### <a name="result-set-tab-options"></a>結果集索引標籤選項  
+ **結果名稱**  
+ 選擇性地更新結果集名稱。 在 [變數名稱] 清單中選取變數，即可將結果對應至變數。  
+  
+ 按一下 [加入] 來加入結果之後，請為該結果提供唯一的名稱。  
+  
+ **變數名稱**  
+ 在清單中選取變數，以將其對應至結果集。  
+  
+ **結果類型**  
+ 指出傳回單一資料列或完整結果集。  
+  
+ **加入**  
+ 將結果集加入清單中。  
+  
+ **移除**  
+ 選取結果，然後按一下 [移除]。  
+## <a name="data-mining-query-task-editor-output-tab"></a>資料採礦查詢工作編輯器 (輸出索引標籤)
+  使用 **[資料採礦查詢工作編輯器]** 對話方塊的 **[輸出]** 索引標籤，即可指定預測查詢的目的地。  
+  
+ 若要深入了解在封裝中實作資料採礦，請參閱 [資料採礦查詢工作](../../integration-services/control-flow/data-mining-query-task.md) 和 [資料採礦方案](../../analysis-services/data-mining/data-mining-solutions.md)。  
+  
+### <a name="general-options"></a>一般選項  
+ **名稱**  
+ 為資料採礦查詢工作提供唯一的名稱。 這個名稱是作為工作圖示中的標籤使用。  
+  
+> [!NOTE]  
+>  工作名稱在封裝內必須是唯一的。  
+  
+ **描述**  
+ 輸入資料採礦查詢工作的描述。  
+  
+### <a name="output-tab-options"></a>輸出索引標籤選項  
+ **連接**  
+ 在清單中選取連線管理員，或按一下 [新增] 來建立新的連線管理員。  
+  
+ **新**  
+ 建立新的連接管理員。 只能使用 ADO.NET 和 OLE DB 連接管理員類型。  
+  
+ **輸出資料表**  
+ 指定供預測查詢撰寫其結果的資料表。  
+  
+ **卸除並重新建立輸出資料表**  
+ 指出預測查詢是否應藉由卸除然後重新建立資料表，來覆寫目的地資料表的內容。  
+  
+

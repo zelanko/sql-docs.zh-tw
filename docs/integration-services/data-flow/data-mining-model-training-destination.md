@@ -11,6 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.dataminingmodeltrainingdest.f1
+- sql13.dts.designer.dmmtrainingtransformation.connection.f1
+- sql13.dts.designer.dmmtrainingtransformation.columns.f1
 helpviewer_keywords:
 - destinations [Integration Services], Data Mining Model Training
 - Data Mining Model Training destination
@@ -22,10 +24,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cdb0903098dee37d88e89519cf6bc375b0fb90f0
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: 570a7e8c6b20ea528f5980fb3ae53a60037d0243
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="data-mining-model-training-destination"></a>資料採礦模型定型目的地
@@ -43,12 +45,6 @@ ms.lasthandoff: 08/03/2017
   
  您可以透過「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」或以程式設計方式設定屬性。  
   
- 如需可在 [資料採礦模型培訓編輯器] 對話方塊中設定之屬性的詳細資訊，請按一下下列其中一個主題：  
-  
--   [資料採礦模型培訓編輯器 &#40;。連線 索引標籤 &#41;](../../integration-services/data-flow/data-mining-model-training-editor-connection-tab.md)  
-  
--   [資料採礦模型培訓編輯器 &#40;資料行索引標籤&#41;](../../integration-services/data-flow/data-mining-model-training-editor-columns-tab.md)  
-  
  **[進階編輯器]** 對話方塊會反映能以程式設計的方式設定之屬性。 如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
 -   [通用屬性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -57,4 +53,39 @@ ms.lasthandoff: 08/03/2017
   
  如需如何設定屬性的詳細資訊，請參閱 [設定資料流程元件的屬性](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)。  
   
+## <a name="data-mining-model-training-editor-connection-tab"></a>資料採礦模型培訓編輯器 (連接索引標籤)
+  使用 **[資料採礦模型培訓編輯器]** 對話方塊的 **[連接]** 頁面，選取要培訓的採礦模型。  
   
+### <a name="options"></a>選項  
+ **連線管理員**  
+ 從現有的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 連接清單中進行選取，或使用 [新增] 按鈕建立新的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 連接，如下所述。  
+  
+ **新增**  
+ 使用 [加入 Analysis Services 連接管理員] 對話方塊來建立新的連接。  
+  
+ **採礦結構**  
+ 從可用的採礦結構清單中選取，或按一下 [新增] 建立新結構。  
+  
+ **新增**  
+ 使用 [資料採礦精靈] 來建立新的採礦結構和採礦模型。  
+  
+ **採礦模型**  
+ 檢視與選取的採礦結構相關聯的採礦模型清單。  
+  
+## <a name="data-mining-model-training-editor-columns-tab"></a>資料採礦模型培訓編輯器 (資料行索引標籤)
+  使用 **[資料採礦模型培訓編輯器]** 對話方塊的 **[資料行]** 頁面，即可將輸入資料行對應至採礦結構的資料行。  
+  
+## <a name="options"></a>選項  
+ **可用的輸入資料行**  
+ 檢視可用的輸入資料行清單。 拖曳輸入資料行以對應至採礦結構資料行。  
+  
+ **採礦結構資料行**  
+ 檢視採礦結構資料行的清單。 拖曳採礦結構資料行以對應至可用的輸入資料行。  
+  
+ **輸入資料行**  
+ 從上述資料表檢視選取的輸入資料行。 若要變更或移除對應選擇，請使用 **[可用的輸入資料行]**清單。  
+  
+ **採礦結構資料行**  
+ 檢視每個可用的目的地資料行，不論是否已經對應。  
+  
+

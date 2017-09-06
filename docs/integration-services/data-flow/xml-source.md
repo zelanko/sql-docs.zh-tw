@@ -11,6 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.xmlsource.f1
+- sql13.dts.designer.xmlsourceadapter.connectionmanager.f1
+- sql13.dts.designer.xmlsourceadapter.columns.f1
+- sql13.dts.designer.xmlsourceadapter.erroroutput.f1
 helpviewer_keywords:
 - sources [Integration Services], XML
 - XML source [Integration Services]
@@ -21,10 +24,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0e3af9fa8b743b01b222d1596197aa83bbb39854
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: 53aaa24f90570856354e1f7ebc46fea9eac0730f
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="xml-source"></a>XML 來源
@@ -77,14 +80,6 @@ ms.lasthandoff: 08/03/2017
   
  您可以透過「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」或以程式設計方式設定屬性。  
   
- 如需 [XML 來源編輯器] 對話方塊中可設定屬性的詳細資訊，請按一下下列其中一個主題：  
-  
--   [XML 來源編輯器 &#40;[連線管理員] 頁面&#41;](../../integration-services/data-flow/xml-source-editor-connection-manager-page.md)  
-  
--   [XML 來源編輯器 &#40;[資料行] 頁面&#41;](../../integration-services/data-flow/xml-source-editor-columns-page.md)  
-  
--   [XML 來源編輯器 &#40;[錯誤輸出] 頁面&#41;](../../integration-services/data-flow/xml-source-editor-error-output-page.md)  
-  
  **[進階編輯器]** 對話方塊會反映能以程式設計的方式設定之屬性。 如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
 -   [通用屬性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -94,6 +89,88 @@ ms.lasthandoff: 08/03/2017
  如需有關如何設定屬性的詳細資訊，請按下列其中一個主題：  
   
 -   [設定資料流程元件的屬性](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
+  
+## <a name="xml-source-editor-connection-manager-page"></a>XML 來源編輯器 (連接管理員頁面)
+  使用 **[XML 來源編輯器]** 的 **[連接管理員]** 頁面，來指定 XML 檔案和轉換 XML 資料的 XSD。  
+  
+### <a name="static-options"></a>靜態選項  
+ **資料存取模式**  
+ 從來源中指定選取資料的方法。  
+  
+|Value|說明|  
+|-----------|-----------------|  
+|XML 檔案位置|從 XML 檔案擷取資料。|  
+|來自變數的 XML 檔案|指定變數中的 XML 檔案名稱。<br /><br /> **相關資訊：**[在封裝中使用變數](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
+|來自變數的 XML 資料|從變數中擷取 XML 資料。|  
+  
+ **使用內嵌結構描述**  
+ 指定 XML 來源資料本身是否包含定義及驗證其結構和資料的 XSD 結構描述。  
+  
+ **XSD 位置**  
+ 輸入 XSD 結構描述檔案的路徑和檔案名稱，或按一下 [瀏覽] 來找出檔案。  
+  
+ **瀏覽**  
+ 使用 [開啟] 對話方塊來找出 XSD 結構描述檔案。  
+  
+ **產生 XSD**  
+ 使用 [另存新檔] 對話方塊，來選取自動產生之 XSD 結構描述檔案的位置。 編輯器會從 XML 資料的結構中推斷結構描述。  
+  
+### <a name="data-access-mode-dynamic-options"></a>資料存取模式動態選項  
+  
+#### <a name="data-access-mode--xml-file-location"></a>資料存取模式 = XML 檔案位置  
+ **XML 位置**  
+ 輸入 XML 資料檔的路徑和檔案名稱，或按一下 [瀏覽] 來找出檔案。  
+  
+ **瀏覽**  
+ 使用 [開啟] 對話方塊來找出 XML 資料檔。  
+  
+#### <a name="data-access-mode--xml-file-from-variable"></a>資料存取模式 = 來自變數的 XML 檔案  
+ **變數名稱**  
+ 選取包含 XML 檔案之路徑和檔案名稱的變數。  
+  
+#### <a name="data-access-mode--xml-data-from-variable"></a>資料存取模式 = 來自變數的 XML 資料  
+ **變數名稱**  
+ 選取包含 XML 資料的變數。  
+  
+## <a name="xml-source-editor-columns-page"></a>XML 來源編輯器 (資料行頁面)
+  使用 [XML 來源編輯器] 對話方塊的 [資料行] 節點，即可將輸出資料行對應至外部 (來源) 資料行。  
+  
+### <a name="options"></a>選項  
+ **可用的外部資料行**  
+ 在資料來源中檢視可用的外部資料行清單。 您無法使用此資料表來加入或刪除資料行。  
+  
+ **[外部資料行]**  
+ 依工作讀取外部 (來源) 資料行的順序來檢視它們。 您可以變更此順序，方法是先在編輯器所顯示的資料表中清除選取的資料行，然後以不同的順序從清單中選取外部資料行。  
+  
+ **輸出資料行**  
+ 為每個輸出資料行提供唯一的名稱。 預設值為選取的外部 (來源) 資料行的名稱；不過，您也可以選擇任何唯一的、描述性的名稱。 提供的名稱將顯示在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師內。  
+  
+## <a name="xml-source-editor-error-output-page"></a>XML 來源編輯器 (錯誤輸出頁面)
+  使用 **[XML 來源編輯器]** 對話方塊的 **[錯誤輸出]** 頁面，以選取錯誤處理選項，並設定錯誤輸出資料行上的屬性。  
+  
+### <a name="options"></a>選項  
+ **輸入/輸出**  
+ 檢視資料來源的名稱。  
+  
+ **資料行**  
+ 檢視您在 [XML 來源編輯器] 對話方塊的 [連線管理員] 頁面上所選取的外部 (來源) 資料行。  
+  
+ **錯誤**  
+ 指定錯誤發生時要採取的動作：忽略失敗、重新導向資料列，或使元件失效。  
+  
+ **相關主題** [處理資料中的錯誤](../../integration-services/data-flow/error-handling-in-data.md)  
+  
+ **截斷**  
+ 指定截斷發生時要採取的動作：忽略失敗、重新導向資料列，或使元件失效。  
+  
+ **說明**  
+ 檢視錯誤的描述。  
+  
+ **將這個值設定到選取的資料格**  
+ 指定發生錯誤或截斷時要對所有選取之資料格採取的動作：忽略失敗、重新導向資料列，或使元件失效。  
+  
+ **套用**  
+ 將錯誤處理選項套用至選取的資料格。  
   
 ## <a name="related-tasks"></a>相關工作  
  [使用 XML 來源擷取資料](../../integration-services/data-flow/extract-data-by-using-the-xml-source.md)  

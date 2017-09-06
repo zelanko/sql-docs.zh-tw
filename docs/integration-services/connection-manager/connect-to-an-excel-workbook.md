@@ -16,29 +16,31 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b36b92c9beb840f6a2ea66250a5a025aa587acef
+ms.sourcegitcommit: 2800075091835b2d6f2b07ee34e9b897fe86634e
+ms.openlocfilehash: f8fb1db80ac1b750950a3401516b54af5ee29686
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="connect-to-an-excel-workbook"></a>連接至 Excel 活頁簿
   若要將 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝連接至 Microsoft Office Excel 活頁簿，您需要使用 Excel 連線管理員。  
   
  您可以從 [ [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師] 的 [連線管理員] 區域或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈建立這些連線管理員。  
+ 
+## <a name="connectivity-components-for-microsoft-excel-and-access-files"></a>Microsoft Excel 和 Access 檔案的連線元件
   
- **Microsoft Excel 和 Access 檔案的提供者和驅動程式**  
+您可能要下載 Microsoft Office 檔案的連線元件，如果它們尚未安裝。 下載最新版的 Excel 和 Access 檔案的連線元件： [Microsoft Access 資料庫引擎 2016年可轉散發套件](https://www.microsoft.com/download/details.aspx?id=54920)。
   
- 如果尚未安裝 Microsoft Office 檔案的 OLE DB 提供者及驅動程式，您必須加以下載。 新版的提供者可以開啟以舊版 Excel 建立的檔案。  
-  
- 如果電腦有 32 位元版本的 Office，則必須安裝 32 位元版本的驅動程式，而且您也必須確定已執行精靈或以 32 位元模式建立的 Integration Services 封裝。  
-  
-|Microsoft Office 版本|下載|  
-|------------------------------|--------------|  
-|2007|[2007 Office System 驅動程式：資料連接元件](https://www.microsoft.com/en-us/download/details.aspx?id=23734)|  
-|2010|[Microsoft Access 2010 執行階段](https://www.microsoft.com/en-us/download/details.aspx?id=10910)|  
-|2013|[Microsoft Access 2013 執行階段](http://www.microsoft.com/en-us/download/details.aspx?id=39358)|  
-  
+最新版本的元件可以開啟以舊版 Excel 建立的檔案。
+
+如果電腦有 32 位元版本的 Office，則必須安裝 32 位元版本的元件，而且您也必須確定您在 32 位元模式執行封裝。
+
+如果您有 Office 365 訂閱，請確定您在 Access 資料庫引擎 2016年可轉散發套件並不使用 Microsoft Access 2016 執行階段時下載。 當您執行安裝程式時，您可能會看到錯誤訊息，您無法安裝下載的並存 Office 按一下來執行元件。 略過此錯誤訊息，並已成功安裝元件，以執行安裝以無訊息模式開啟命令提示字元視窗並執行。下載的 EXE 檔案`/quiet`切換。 例如：
+
+`C:\Users\<user name>\Downloads\AccessDatabaseEngine.exe /quiet`
+
+## <a name="create-an-excel-connection-manager"></a>建立 Excel 連接管理員
+
 ### <a name="to-create-an-excel-connection-manager-from-the-connection-managers-area"></a>若要從連接管理員區域建立 Excel 連接管理員  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，開啟封裝。  

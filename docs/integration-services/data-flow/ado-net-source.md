@@ -11,6 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.adonetsource.f1
+- sql13.dts.designer.adonetsource.connection.f1
+- sql13.dts.designer.adonetsource.columns.f1
+- sql13.dts.designer.adonetsource.erroroutput.f1
 helpviewer_keywords:
 - ADO.NET source
 - sources [Integration Services], ADO.NET
@@ -23,10 +26,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 78aaa7fb855184f1a13e79cf19a2466c83eeee8e
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: 9e7aade0a21f0a77d05c0550aac8aed5b1ace4d8
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="ado-net-source"></a>ADO NET 來源
@@ -89,7 +92,117 @@ ms.lasthandoff: 08/03/2017
   
  如需如何設定屬性的詳細資訊，請參閱 [設定資料流程元件的屬性](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="ado-net-source-editor-connection-manager-page"></a>ADO NET 來源編輯器 (連接管理員頁面)
+  使用 [ADO NET 來源編輯器] 對話方塊的 [連線管理員] 頁面，即可選取來源的 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 連線管理員。 這個頁面也可以讓您從資料庫中選取資料表或檢視。  
+  
+ 若要深入了解 ADO NET 來源，請參閱＜ [ADO NET Source](../../integration-services/data-flow/ado-net-source.md)＞。  
+  
+ **開啟連接管理員頁面**  
+  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，開啟具有 ADO NET 來源的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝。  
+  
+2.  在 [資料流程] 索引標籤中，按兩下 ADO NET 來源。  
+  
+3.  在 [ADO NET 來源編輯器] 中，按一下 [連線管理員]。  
+  
+### <a name="static-options"></a>靜態選項  
+ **ADO.NET 連接管理員**  
+ 從清單中選取現有的連線管理員，或按一下 [新增] 來建立新的連線。  
+  
+ **新增**  
+ 使用 [設定 ADO.NET 連線管理員] 對話方塊建立新的連線管理員。  
+  
+ **資料存取模式**  
+ 從來源中指定選取資料的方法。  
+  
+|選項|說明|  
+|------------|-----------------|  
+|資料表或檢視|從 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 資料來源中的資料表或檢視擷取資料。|  
+|SQL (命令)|使用 SQL 查詢從 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 資料來源中擷取資料。|  
+  
+ **預覽**  
+ 使用 [資料檢視] 對話方塊來預覽結果。 [預覽] 最多可顯示 200 個資料列。  
+  
+> [!NOTE]  
+>  在預覽資料時，具有 CLR 使用者定義型別的資料行不會包含資料。 而是值\<值太大，無法顯示 > 或 System.Byte []。 使用 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 提供者存取資料來源時會顯示前者，而使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 提供者時會顯示後者。  
+  
+### <a name="data-access-mode-dynamic-options"></a>資料存取模式動態選項  
+  
+#### <a name="data-access-mode--table-or-view"></a>資料存取模式 = 資料表或檢視  
+ **資料表或檢視的名稱**  
+ 從資料來源中可用的清單中選取資料表或檢視名稱。  
+  
+#### <a name="data-access-mode--sql-command"></a>資料存取模式 = SQL 命令  
+ **SQL 命令文字**  
+ 輸入 SQL 查詢文字，按一下 [建立查詢] 建立查詢，或按一下 [瀏覽] 找到包含查詢文字的檔案。  
+  
+ **建立查詢**  
+ 使用 [查詢產生器] 對話方塊，以視覺化的方式來建構 SQL 查詢。  
+  
+ **瀏覽**  
+ 使用 [開啟] 對話方塊來找出包含 SQL 查詢文字的檔案。  
+  
+## <a name="ado-net-source-editor-columns-page"></a>ADO NET 來源編輯器 (資料行頁面)
+  使用 [ADO NET 來源編輯器] 對話方塊的 [資料行] 頁面，即可將輸出資料行對應至每個外部 (來源) 資料行。  
+  
+ 若要深入了解 ADO NET 來源，請參閱＜ [ADO NET Source](../../integration-services/data-flow/ado-net-source.md)＞。  
+  
+ **開啟資料行頁面**  
+  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，開啟具有 ADO NET 來源的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝。  
+  
+2.  在 [資料流程] 索引標籤上，按兩下 ADO NET 來源。  
+  
+3.  在 **[ADO NET 來源編輯器]**中，按一下 **[資料行]**。  
+  
+### <a name="options"></a>選項。  
+ **可用的外部資料行**  
+ 在資料來源中檢視可用的外部資料行清單。 您無法使用此資料表來加入或刪除資料行。  
+  
+ **[外部資料行]**  
+ 依您在設定使用此來源之資料的元件時所見的順序來檢視外部 (來源) 資料行。  
+  
+ **輸出資料行**  
+ 為每個輸出資料行提供唯一的名稱。 預設值為選取的外部 (來源) 資料行的名稱；不過，您也可以選擇任何唯一的、描述性的名稱。 提供的名稱將顯示在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師內。  
+  
+## <a name="ado-net-source-editor-error-output-page"></a>ADO NET 來源編輯器 (錯誤輸出頁面)
+  使用 [ADO NET 來源編輯器] 對話方塊的 [錯誤輸出] 頁面，即可選取錯誤處理選項，並設定錯誤輸出資料行的屬性。  
+  
+ 若要深入了解 ADO NET 來源，請參閱＜ [ADO NET Source](../../integration-services/data-flow/ado-net-source.md)＞。  
+  
+ **開啟錯誤輸出頁面**  
+  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，開啟具有 ADO NET 來源的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝。  
+  
+2.  在 [資料流程] 索引標籤中，按兩下 ADO NET 來源。  
+  
+3.  在 [ADO NET 來源編輯器] 中，按一下 [錯誤輸出]。  
+  
+### <a name="options"></a>選項。  
+ **輸入/輸出**  
+ 檢視資料來源的名稱。  
+  
+ **[資料行]**  
+ 檢視您在 [ADO NET 來源編輯器] 對話方塊之 [連接管理員] 頁面上所選取的外部 (來源) 資料行。  
+  
+ **錯誤**  
+ 指定錯誤發生時要採取的動作：忽略失敗、重新導向資料列，或使元件失效。  
+  
+ **相關主題** [處理資料中的錯誤](../../integration-services/data-flow/error-handling-in-data.md)  
+  
+ **截斷**  
+ 指定截斷發生時要採取的動作：忽略失敗、重新導向資料列，或使元件失效。  
+  
+ **說明**  
+ 檢視錯誤的描述。  
+  
+ **將這個值設定到選取的資料格**  
+ 指定發生錯誤或截斷時要對所有選取之資料格採取的動作：忽略失敗、重新導向資料列，或使元件失效。  
+  
+ **套用**  
+ 將錯誤處理選項套用至選取的資料格。  
+  
+## <a name="see-also"></a>另請參閱  
  [DataReader 目的地](../../integration-services/data-flow/datareader-destination.md)   
  [ADO NET 目的地](../../integration-services/data-flow/ado-net-destination.md)   
  [資料流程](../../integration-services/data-flow/data-flow.md)  

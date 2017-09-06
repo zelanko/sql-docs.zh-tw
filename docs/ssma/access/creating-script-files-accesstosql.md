@@ -2,7 +2,7 @@
 title: "建立指令碼檔案 (AccessToSQL) |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 08/17/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -16,12 +16,12 @@ ms.assetid: 64dfe192-965c-49d4-a3ea-848fbc5f619f
 caps.latest.revision: 21
 author: sabotta
 ms.author: carlasab
-manager: lonnyb
+manager: murato
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 0798e4aa2ed032b1ab3b015199c17518c533e3fa
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: cec4cf64fcca4a185d8733121305fe186a0f58a8
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="creating-script-files-accesstosql"></a>建立指令碼檔案 (AccessToSQL)
@@ -353,7 +353,7 @@ ms.lasthandoff: 08/02/2017
   
 例如，Access 資料庫中特定資料表的一般資料移轉如下的階層： 資料庫-&gt;資料表。  
   
-當指令碼檔案中的所有命令都執行成功時，SSMA 主控台應用程式結束，並將控制權傳回給使用者。 指令碼檔案的內容會更多或較少的靜態變數的資訊包含在[變數值的檔案](http://msdn.microsoft.com/en-us/808595c3-8ef1-40bd-a93e-5cf237950e08)或變數值的指令碼檔案中的個別區段中。  
+當指令碼檔案中的所有命令都執行成功時，SSMA 主控台應用程式結束，並將控制權傳回給使用者。 指令碼檔案的內容會更多或較少的靜態變數的資訊包含在[變數值的檔案](http://msdn.microsoft.com/808595c3-8ef1-40bd-a93e-5cf237950e08)或變數值的指令碼檔案中的個別區段中。  
   
 **範例：**  
   
@@ -397,7 +397,7 @@ ms.lasthandoff: 08/02/2017
 ## <a name="script-file-validation"></a>指令碼檔案驗證  
 使用者可以輕鬆地驗證自己的指令碼檔案對結構描述定義檔**'A2SSConsoleScriptSchema.xsd'**可用 '結構描述' 資料夾中。  
   
-## <a name="next-step"></a>下一個步驟  
+## <a name="next-step"></a>下一步
 在操作主控台的下一個步驟是[建立變數值的檔案 &#40;AccessToSQL &#41;](../../ssma/access/creating-variable-value-files-accesstosql.md).  
   
 ## <a name="see-also"></a>另請參閱  
