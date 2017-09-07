@@ -1,25 +1,30 @@
 ---
-title: "Report Server 屬性 (進階索引標籤) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "報表伺服器屬性 （進階頁籤） |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 80aedab6-2be4-409d-88ba-2107e96345fe
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bd77ea1315a7b959dbcfec479cd0da3bb11360bd
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# Report Server 屬性 (進階索引標籤)
+# <a name="report-server-properties-advanced-tab"></a>Report Server 屬性 (進階索引標籤)
   這個服務是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。 如果定義了自訂屬性，屬性與其值會在這個索引標籤上顯示。  
   
-## 選項。  
+## <a name="options"></a>選項。  
  **客戶回函報表**  
  指出是否已在這項服務上啟用「服務品質監控」。 如需有關客戶回函報表的詳細資訊，請搜尋「線上叢書」的＜錯誤報告和使用方式報告設定＞主題。  
   

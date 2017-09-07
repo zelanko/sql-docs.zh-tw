@@ -1,24 +1,29 @@
 ---
-title: "檢閱及產生補充記錄指令碼 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "scripts"
+title: "檢閱及產生補充記錄指令碼 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- scripts
 ms.assetid: 5c858ae2-37d6-42e8-a252-7f6ed4e628a7
 caps.latest.revision: 6
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b3213f6e757e9fc3bcff63d0833d7f0c7fdee201
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# 檢閱及產生補充記錄指令碼
+# <a name="review-and-generate-supplemental-logging-scripts"></a>檢閱及產生補充記錄指令碼
   使用 [指令碼] 索引標籤可在設定補充記錄的 Oracle 來源資料庫上執行或重新執行指令碼。  
   
  在您執行指令碼之前，請選取下列其中一項：  
@@ -34,7 +39,7 @@ caps.handback.revision: 6
   
  當您選取其中一個選項之後，請執行補充記錄指令碼。  
   
-### 若要執行補充記錄指令碼  
+### <a name="to-run-the-supplemental-logging-scripts"></a>若要執行補充記錄指令碼  
   
 1.  按一下 **[執行指令碼]** ，在針對 CDC 執行個體定義的資料表上執行補充記錄指令碼。 此指令碼會指示 Oracle 資料庫在將 UPDATE 作業記錄到擷取的資料表時，將相關的所有資料行寫入其交易記錄中。 通常是由 Oracle 系統管理員檢查和執行此指令碼。  
   
@@ -42,18 +47,18 @@ caps.handback.revision: 6
   
  必要時，您也可以使用 SQL * Plus 手動執行指令碼。  
   
-### 若要手動執行指令碼  
+### <a name="to-run-the-scripts-manually"></a>若要手動執行指令碼  
   
 1.  按一下 **[複製]** ，將指令碼貼到剪貼簿。 開啟 SQL* Plus，然後移至包含 Oracle 來源資料庫的目錄。 將指令碼貼到 SQL\*Plus 中加以執行。  
   
-### 若要將補充記錄指令碼儲存到文字檔中  
+### <a name="to-save-the-supplemental-logging-script-in-a-text-file"></a>若要將補充記錄指令碼儲存到文字檔中  
   
 1.  按一下 **[另存新檔]** ，並瀏覽至您想要儲存檔案的位置。  
   
 2.  提供檔案名稱，然後按一下 **[儲存]** 來儲存檔案。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [如何編輯 CDC 執行個體屬性](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)   
- [執行指令碼的 Oracle 認證](../../integration-services/change-data-capture/oracle-credentials-for-running-script.md)  
+ [執行指令碼的 oracle 認證](../../integration-services/change-data-capture/oracle-credentials-for-running-script.md)  
   
   

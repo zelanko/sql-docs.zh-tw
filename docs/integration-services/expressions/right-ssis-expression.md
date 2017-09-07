@@ -1,45 +1,50 @@
 ---
-title: "RIGHT (SSIS 運算式) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "RIGHT 函數"
+title: "RIGHT （SSIS 運算式） |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- RIGHT function
 ms.assetid: 83e70e75-4be5-4783-a8cf-032f82afe16e
 caps.latest.revision: 41
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b81ead33054642391dcd95d56746a90cf347dcc9
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# RIGHT (SSIS 運算式)
+# <a name="right-ssis-expression"></a>RIGHT (SSIS 運算式)
   傳回來自給定字元運算式最右邊部分的指定字元數。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
 RIGHT(character_expression,integer_expression)  
 ```  
   
-## 引數  
+## <a name="arguments"></a>引數  
  *character_expression*  
  要擷取字元的字元運算式。  
   
  *integer_expression*  
  為表示要傳回字元數的整數運算式。  
   
-## 結果類型  
+## <a name="result-types"></a>結果類型  
  DT_WSTR  
   
-## 備註  
- 如果 *integer_expression* 大於 *character_expression* 的長度，函數會傳回 *character_expression*。  
+## <a name="remarks"></a>備註  
+ 如果 *integer_expression* 大於 *character_expression*的長度，函數會傳回 *character_expression*。  
   
  如果 *integer_expression* 為零，則函數會傳回長度為 0 的字串。  
   
@@ -51,7 +56,7 @@ RIGHT(character_expression,integer_expression)
   
  如果其中一個引數為 Null，則 RIGHT 會傳回 Null 結果。  
   
-## 運算式範例  
+## <a name="expression-examples"></a>運算式範例  
  下列範例會使用字串常值。 傳回結果為 `"Bike"`。  
   
 ```  
@@ -70,8 +75,8 @@ RIGHT(Name, @Times)
 RIGHT(Name, (DT_I2)@Times))  
 ```  
   
-## 請參閱＜  
- [LEFT &#40;SSIS 運算式&#41;](../../integration-services/expressions/left-ssis-expression.md)   
- [函數 &#40;SSIS 運算式&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>請參閱＜  
+ [左 &#40;SSIS 運算式 &#41;](../../integration-services/expressions/left-ssis-expression.md)   
+ [函式 &#40;SSIS 運算式 &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

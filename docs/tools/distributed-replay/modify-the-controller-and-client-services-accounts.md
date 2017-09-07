@@ -1,31 +1,36 @@
 ---
-title: "修改控制器服務帳戶與用戶端服務帳戶 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "修改控制器及用戶端服務帳戶 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 44a73ddb-18ad-415c-bfbe-126ab2e3290b
 caps.latest.revision: 29
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 94a6df60ae3e1acebb9ff7d75cf65c7efb21d6db
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 修改控制器服務帳戶與用戶端服務帳戶
+# <a name="modify-the-controller-and-client-services-accounts"></a>修改控制器服務帳戶與用戶端服務帳戶
   在本主題中，您將了解如何修改 Distributed Replay Controller 和用戶端服務帳戶，然後重新套用存取控制清單 (ACL)。  
   
-### 若要使用電腦管理來啟動或停止 Distributed Replay 服務  
+### <a name="to-start-or-stop-the-distributed-replay-services-using-computer-management"></a>若要使用電腦管理來啟動或停止 Distributed Replay 服務  
   
 1.  在已安裝 Distributed Replay 服務的電腦上，從命令提示字元，輸入 **dcomcnfg**。  
   
-2.  按兩下 [服務]，向下捲動並以滑鼠右鍵按一下 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay \<服務名稱>]，然後按一下 [啟動] 或 [停止]。  
+2.  按兩下**服務**、 向下捲動並以滑鼠右鍵按一下 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay\<服務名稱 >**，然後按一下 **啟動**或**停止**。  
   
-### 若要修改 Distributed Replay Controller 服務  
+### <a name="to-modify-the-distributed-replay-controller-service"></a>若要修改 Distributed Replay Controller 服務  
   
 1.  在控制器電腦上，停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller 服務。  
   
@@ -49,7 +54,7 @@ caps.handback.revision: 29
   
 4.  啟動 Distributed Replay Controller 服務。  
   
-### 若要修改 Distributed Replay Client 服務  
+### <a name="to-modify-the-distributed-replay-client-service"></a>若要修改 Distributed Replay Client 服務  
   
 1.  修改 Distributed Replay Client 服務之前，請先確定已在安裝期間指定您要變更的用戶端服務帳戶 (於控制器電腦的 CTLRUSERS 參數中)。 如果未在安裝期間指定您要變更的用戶端服務帳戶，則必須先執行以下步驟：  
   

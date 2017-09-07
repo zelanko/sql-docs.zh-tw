@@ -1,24 +1,29 @@
 ---
-title: "SAP BW 來源編輯器 (連接管理員頁面) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.sapbwsource.connection.f1"
+title: "SAP BW 來源編輯器 （連接管理員頁面） |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.sapbwsource.connection.f1
 ms.assetid: 2a6dc531-85ca-43c5-a65f-3ad3f7d537c4
 caps.latest.revision: 11
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6f82377abc5fcbbcabed270e8181b1e7bae7b062
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/03/2017
+
 ---
-# SAP BW 來源編輯器 (連接管理員頁面)
+# <a name="sap-bw-source-editor-connection-manager-page"></a>SAP BW 來源編輯器 (連接管理員頁面)
   使用 **[SAP BW 來源編輯器]** 的 **[連接管理員]** 頁面可以選取 SAP BW 來源的 SAP BW 連接管理員。 在這個頁面上，您也可以選取執行模式以及從 SAP Netweaver BW 系統中擷取資料所用的參數。  
   
  若要深入了解 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW 的 SAP BW 來源元件，請參閱 [SAP BW 來源](../../integration-services/data-flow/sap-bw-source.md)。  
@@ -33,11 +38,11 @@ caps.handback.revision: 11
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，開啟包含 SAP BW 來源的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝。  
   
-2.  在 [資料流程] 索引標籤中，按兩下 SAP BW 來源。  
+2.  在 [資料流程] 索引標籤上，按兩下 SAP BW 來源。  
   
 3.  在 **[SAP BW 來源編輯器]**中，按一下 **[連接管理員]** 開啟編輯器的 **[連接管理員]** 頁面。  
   
-## 靜態選項  
+## <a name="static-options"></a>靜態選項  
   
 > [!NOTE]  
 >  如果您不知道設定來源的所有必要值，可能必須詢問 SAP 系統管理員。  
@@ -70,62 +75,62 @@ caps.handback.revision: 11
   
  當您按一下 **[預覽]**時，也會開啟 **[要求記錄檔]** 對話方塊。 您可以使用此對話方塊來檢視對 SAP Netweaver BW 系統提出資料取樣要求期間記錄的事件。 如需詳細資訊，請參閱 [Request Log](../../integration-services/data-flow/request-log.md)。  
   
-## 執行模式動態選項  
+## <a name="execution-mode-dynamic-options"></a>執行模式動態選項  
   
 > [!NOTE]  
 >  如果您不知道設定來源的所有必要值，可能必須詢問 SAP 系統管理員。  
   
-### 執行模式 = P - 觸發處理鏈結  
+### <a name="execution-mode--p---trigger-process-chain"></a>執行模式 = P - 觸發處理鏈結  
   
-#### RFC 目的地選項  
+#### <a name="rfc-destination-options"></a>RFC 目的地選項  
  您不需要事先了解並輸入這些值。 使用 **[查閱]** 按鈕，即可尋找並選取適當的 RFC 目的地。 在您選取 RFC 目的地之後，此元件就會針對這些選項輸入適當的值。  
   
  **閘道器主機**  
  輸入閘道器主機的伺服器名稱或 IP 位址。 此名稱或 IP 位址通常與 SAP 應用程式伺服器相同。  
   
  **閘道器服務**  
- 以 **sapgwNN** 格式輸入閘道器服務的名稱，其中 **NN** 是系統編號。  
+ 以 **sapgwNN**格式輸入閘道器服務的名稱，其中 **NN** 是系統編號。  
   
  **程式識別碼**  
  輸入與 RFC 目的地相關聯的程式識別碼。  
   
- **查閱**  
+ **[查閱]**  
  使用 [查閱 RFC 目的地] 對話方塊來查閱 RFC 目的地。 如需有關此對話方塊的詳細資訊，請參閱＜ [Look Up RFC Destination](../../integration-services/data-flow/look-up-rfc-destination.md)＞。  
   
-#### 處理序鏈結選項  
+#### <a name="process-chain-options"></a>處理序鏈結選項  
  您不需要事先了解並輸入這些值。 使用 **[查閱]** 按鈕，即可尋找並選取適當的處理序鏈結。 在您選取處理序鏈結之後，此元件就會針對選項輸入適當的值。  
   
  **處理序鏈結**  
  輸入要由來源觸發之處理序鏈結的名稱。  
   
- **查閱**  
+ **[查閱]**  
  使用 [查閱 ProcessChain] 對話方塊來查閱處理序鏈結。 如需有關此對話方塊的詳細資訊，請參閱＜ [Look Up Process Chain](../../integration-services/data-flow/look-up-process-chain.md)＞。  
   
-### 執行模式 = W - 等候通知  
+### <a name="execution-mode--w---wait-for-notify"></a>執行模式 = W - 等候通知  
   
-#### RFC 目的地選項  
+#### <a name="rfc-destination-options"></a>RFC 目的地選項  
  您不需要事先了解並輸入這些值。 使用 **[查閱]** 按鈕，即可尋找並選取適當的 RFC 目的地。 在您選取 RFC 目的地之後，此元件就會針對這些選項輸入適當的值。  
   
  **閘道器主機**  
  輸入閘道器主機的伺服器名稱或 IP 位址。 此名稱或 IP 位址通常與 SAP 應用程式伺服器相同。  
   
  **閘道器服務**  
- 以 **sapgwNN** 格式輸入閘道器服務的名稱，其中 **NN** 是系統編號。  
+ 以 **sapgwNN**格式輸入閘道器服務的名稱，其中 **NN** 是系統編號。  
   
  **程式識別碼**  
  輸入與 RFC 目的地相關聯的程式識別碼。  
   
- **查閱**  
+ **[查閱]**  
  使用 [查閱 RFC 目的地] 對話方塊來查閱 RFC 目的地。 如需有關此對話方塊的詳細資訊，請參閱＜ [Look Up RFC Destination](../../integration-services/data-flow/look-up-rfc-destination.md)＞。  
   
-### 執行模式 = E - 僅限擷取  
+### <a name="execution-mode--e---extract-only"></a>執行模式 = E - 僅限擷取  
  **要求識別碼**  
  輸入與擷取相關聯的要求識別碼。  
   
-## 請參閱＜  
- [SAP BW 來源編輯器 &#40;資料行頁面&#41;](../../integration-services/data-flow/sap-bw-source-editor-columns-page.md)   
- [SAP BW 來源編輯器 &#40;錯誤輸出頁面&#41;](../../integration-services/data-flow/sap-bw-source-editor-error-output-page.md)   
- [SAP BW 來源編輯器 &#40;進階頁面&#41;](../../integration-services/data-flow/sap-bw-source-editor-advanced-page.md)   
+## <a name="see-also"></a>請參閱＜  
+ [SAP BW 來源編輯器 &#40;資料行頁面 &#41;](../../integration-services/data-flow/sap-bw-source-editor-columns-page.md)   
+ [SAP BW 來源編輯器 &#40;錯誤輸出頁面 &#41;](../../integration-services/data-flow/sap-bw-source-editor-error-output-page.md)   
+ [SAP BW 來源編輯器 &#40;進階的頁面 &#41;](../../integration-services/data-flow/sap-bw-source-editor-advanced-page.md)   
  [Microsoft Connector for SAP BW F1 說明](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   

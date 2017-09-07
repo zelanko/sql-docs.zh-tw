@@ -1,29 +1,34 @@
 ---
-title: "修改篩選 (SQL Server Profiler) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "篩選 [SQL Server], 修改"
-  - "修改篩選, 修改"
-  - "篩選 [SQL Server], 追蹤"
+title: "修改篩選 (SQL Server Profiler) |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- filters [SQL Server], modifying
+- modifying filters, modifying
+- filters [SQL Server], traces
 ms.assetid: 8b317813-4918-4485-b930-77b1951aa00c
 caps.latest.revision: 15
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7e32fafe033340c67f6f0d88c11bb617d8adc79e
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 修改篩選 (SQL Server Profiler)
+# <a name="modify-a-filter-sql-server-profiler"></a>修改篩選 (SQL Server Profiler)
   您可以將篩選加入包含追蹤定義的追蹤範本，以限制追蹤所蒐集的事件數目。 限制蒐集的事件數目可以降低追蹤的效能影響。 如果您設定追蹤範本的篩選，但發現追蹤並未蒐集您所需要的資訊種類，您就可以編輯篩選。  
   
-### 若要修改篩選  
+### <a name="to-modify-a-filter"></a>若要修改篩選  
   
 1.  在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 中，開啟您要修改的追蹤篩選範本。 在 [檔案] 功能表上，按一下 [範本]，然後選擇 [編輯範本]。  
   
@@ -39,7 +44,7 @@ caps.handback.revision: 15
   
 6.  按一下 [確定] 並儲存範本。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   
