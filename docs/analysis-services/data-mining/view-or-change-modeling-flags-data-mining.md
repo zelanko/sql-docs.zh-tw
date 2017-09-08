@@ -1,34 +1,39 @@
 ---
-title: "檢視或變更模型旗標 (資料採礦) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "檢視或變更模型旗標 （資料採礦） |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d1169735-fb18-417b-b8d6-9a161e444020
 caps.latest.revision: 6
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cbffc4a5312dc83976915653141247d27dc8eae4
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 檢視或變更模型旗標 (資料採礦)
+# <a name="view-or-change-modeling-flags-data-mining"></a>檢視或變更模型旗標 (資料採礦)
   模型旗標是您針對採礦結構資料行或採礦模型資料行設定的屬性，可控制演算法如何在分析期間處理資料。  
   
  在資料採礦設計師中，您可以藉由檢視結構或模型的屬性來檢視及修改與採礦結構或採礦資料行相關聯的模型旗標。 您也可以使用 DMX、AMO 或 XMLA 來設定模型旗標。  
   
  此程序描述如何在設計工具中變更模型旗標。  
   
-### 檢視或變更結構資料行或模型資料行的模型旗標  
+### <a name="view-or-change-the-modeling-flag-for-a-structure-column-or-model-column"></a>檢視或變更結構資料行或模型資料行的模型旗標  
   
 1.  在 SQL Server Design Studio 中開啟 [方案總管]，然後按兩下採礦結構。  
   
-2.  若要設定 NOT NULL 模型旗標，按一下 **[採礦結構]** 索引標籤。 若要設定 REGRESSOR 或 MODEL_EXISTENCE_ONLY 旗標，請按一下 [採礦模型] 索引標籤。  
+2.  若要設定 NOT NULL 模型旗標，按一下 **[採礦結構]** 索引標籤。若要設定 REGRESSOR 或 MODEL_EXISTENCE_ONLY 旗標，請按一下 [採礦模型] 索引標籤。  
   
 3.  以滑鼠右鍵按一下要檢視或變更的資料行，然後選取 [屬性]。  
   
@@ -39,7 +44,7 @@ caps.handback.revision: 6
     > [!NOTE]  
     >  在變更模型旗標後，必須重新處理模型。  
   
-### 取得模型中使用的模型旗標  
+### <a name="get-the-modeling-flags-used-in-the-model"></a>取得模型中使用的模型旗標  
   
 -   在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中開啟 [DMX 查詢] 視窗，然後輸入類似以下的查詢：  
   
@@ -50,7 +55,7 @@ caps.handback.revision: 6
   
     ```  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [採礦模型工作和使用說明](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
  [模型旗標 &#40;資料採礦&#41;](../../analysis-services/data-mining/modeling-flags-data-mining.md)  
   

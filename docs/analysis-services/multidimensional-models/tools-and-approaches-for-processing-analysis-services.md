@@ -1,27 +1,32 @@
 ---
-title: "處理的工具和方式 (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "處理 [Analysis Services]"
-  - "處理 [Analysis Services]"
+title: "工具和方法來處理 (Analysis Services) |Microsoft 文件"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- process [Analysis Services]
+- processing [Analysis Services]
 ms.assetid: 82347a16-4145-4655-8adf-2a300f1fdf99
 caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 34
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5eecf424cf155c53a2f636590ba002028f24db84
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 處理的工具和方式 (Analysis Services)
+# <a name="tools-and-approaches-for-processing-analysis-services"></a>處理的工具和方式 (Analysis Services)
   處理是 Analysis Services 查詢關聯式資料來源，然後使用該資料來擴展 Analysis Services 物件的作業。  
   
  身為 Analysis Services 系統管理員的您，可以使用這些方法執行及監視 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 物件的處理：  
@@ -49,7 +54,7 @@ caps.handback.revision: 34
 > [!NOTE]  
 >  此主題描述用於處理多維度模型的工具和方法。 如需處理表格式模型的詳細資訊，請參閱[處理資料庫、資料表或資料分割 &#40;Analysis Services&#41;](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md) 和[處理資料和 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/process-data-ssas-tabular.md)。  
   
-### 在 SQL Server Management Studio 中處理物件  
+### <a name="processing-objects-in-sql-server-management-studio"></a>在 SQL Server Management Studio 中處理物件  
   
 1.  啟動 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 並連接到 Analysis Services。  
   
@@ -79,7 +84,7 @@ caps.handback.revision: 34
   
      [處理進度] 對話方塊會提供每個命令的進行中狀態。 如果狀態訊息遭到截斷，您可以按一下 **[檢視詳細資料]** 來讀取完整訊息。  
   
-### 在 SQL Server 資料工具中處理物件  
+### <a name="processing-objects-in-sql-server-data-tools"></a>在 SQL Server 資料工具中處理物件  
   
 1.  啟動 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 並開啟已部署的專案。  
   
@@ -101,7 +106,7 @@ caps.handback.revision: 34
   
 3.  按一下 **[影響分析]**。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 就會掃描模型，並報告與已選取進行處理物件相關之物件的重新處理需求。  
   
-### 使用 XMLA 處理物件  
+### <a name="processing-objects-using-xmla"></a>使用 XMLA 處理物件  
   
 1.  啟動 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 並連接到 Analysis Services。  
   
@@ -119,19 +124,19 @@ caps.handback.revision: 34
   
 7.  從功能表列中按一下 **[查詢]**，然後按一下 **[執行]**。  
   
-### 使用 PowerShell 處理物件  
+### <a name="processing-objects-using-powershell"></a>使用 PowerShell 處理物件  
   
 1.  從這個版本的 SQL Server 開始，您可以使用 Analysis Services PowerShell 指令程式處理物件。 下列指令程式可以以互動方式或指令碼執行：  
   
     -   [Invoke-ProcessCube 指令程式](../../analysis-services/powershell/invoke-processcube-cmdlet.md)  
   
-    -   [Invoke-ProcessDimension 指令程式](../../analysis-services/powershell/invoke-processdimension-cmdlet.md)  
+    -   [Invoke-ProcessDimension cmdlet](../../analysis-services/powershell/invoke-processdimension-cmdlet.md)  
   
     -   [Invoke-ProcessPartition 指令程式](../../analysis-services/powershell/invoke-processpartition-cmdlet.md)  
   
     -   [Invoke-ASCmd Cmdlet](../../analysis-services/powershell/invoke-ascmd-cmdlet.md)，可用來執行包含處理命令的 XMLA、MDX 或 DMX 指令碼。  
   
-### 使用 SQL Server Profiler 監視物件處理  
+### <a name="monitoring-object-processing-using-sql-server-profiler"></a>使用 SQL Server Profiler 監視物件處理  
   
 1.  在 SQL Server Profiler 中連接到 Analysis Services 執行個體。  
   
@@ -149,7 +154,7 @@ caps.handback.revision: 34
   
     -   (選擇性) 如果您要診斷處理相關的效能問題，可加入鎖定事件  
   
-### 使用 Integration Services 來處理 Analysis Services 物件  
+### <a name="process-analysis-services-objects-using-integration-services"></a>使用 Integration Services 來處理 Analysis Services 物件  
   
 1.  在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中建立封裝，當您定期更新來源關聯式資料庫時，它會使用 Analysis Services 處理工作自動以新資訊擴展物件。  
   
@@ -157,7 +162,7 @@ caps.handback.revision: 34
   
 3.  編輯工作，以指定資料庫連接、要處理的物件和處理選項。 如需有關如何實作這項工作的詳細資訊，請參閱＜ [Analysis Services Processing Task](../../integration-services/control-flow/analysis-services-processing-task.md)＞。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [處理多維度模型 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
   
   

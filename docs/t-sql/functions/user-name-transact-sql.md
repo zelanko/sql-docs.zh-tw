@@ -1,0 +1,181 @@
+---
+title: "USER_NAME (TRANSACT-SQL) |Microsoft 文件"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- USER_NAME
+- USER_NAME_TSQL
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- usernames [SQL Server]
+- IDs [SQL Server], databases
+- USER_NAME function
+- users [SQL Server], database username
+- names [SQL Server], database users
+- identification numbers [SQL Server], databases
+- database usernames [SQL Server]
+ms.assetid: ab32d644-4228-449a-9ef0-5a975c305775
+caps.latest.revision: 37
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 5179a5d031dbc654f1624f4d64c3e94bf28efe40
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
+---
+# <a name="username-transact-sql"></a>USER_NAME (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+  傳回指定識別碼的資料庫使用者名稱。  
+  
+ ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+  
+## <a name="syntax"></a>語法  
+  
+```  
+-- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
+  
+USER_NAME ( [ id ] )  
+```  
+  
+## <a name="arguments"></a>引數  
+ *id*  
+ 關聯至資料庫使用者的識別碼。 *識別碼*是**int**。它必須用括號括住。  
+  
+## <a name="return-types"></a>傳回類型  
+ **nvarchar(256)**  
+  
+## <a name="remarks"></a>備註  
+ 當*識別碼*已省略，則會假設目前內容中目前的使用者。 如果參數包含 NULL 會傳回 NULL 這個字。當呼叫 USER_NAME 時沒有指定*識別碼*之後 EXECUTE AS 陳述式，USER_NAME 會傳回模擬使用者的名稱。 如果 Windows 主體利用群組中的成員資格來存取資料庫，則 USER_NAME 會傳回 Windows 主體名稱而非群組。  
+  
+## <a name="examples"></a>範例  
+  
+### <a name="a-using-username"></a>A. 使用 USER_NAME  
+ 下列範例會傳回使用者識別碼 `13` 的使用者名稱。  
+  
+```  
+SELECT USER_NAME(13);  
+GO  
+```  
+  
+### <a name="b-using-username-without-an-id"></a>B. 使用 USER_NAME 而不指定識別碼  
+ 下列範例不指定識別碼來尋找目前使用者的名稱。  
+  
+```  
+SELECT USER_NAME();  
+GO  
+```  
+  
+ 使用者是系統管理員 (sysadmin) 固定伺服器角色成員的結果集如下：  
+  
+ `------------------------------`  
+  
+ `dbo`  
+  
+ `(1 row(s) affected)`  
+  
+### <a name="c-using-username-in-the-where-clause"></a>C. 在 WHERE 子句中使用 USER_NAME  
+ 下列範例會在 `sysusers` 中尋找資料列，這個資料列名稱等於套用系統函數 `USER_NAME` 至使用者識別碼 `1` 所得的結果。  
+  
+```  
+SELECT name FROM sysusers WHERE name = USER_NAME(1);  
+GO  
+```  
+  
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+  
+ `name`  
+  
+ `------------------------------`  
+  
+ `dbo`  
+  
+ `(1 row(s) affected)`  
+  
+### <a name="d-calling-username-during-impersonation-with-execute-as"></a>D. 於使用 EXECUTE AS 進行模擬期間呼叫 USER_NAME  
+ 下列範例會顯示 `USER_NAME` 在模擬期間的行為方式。  
+  
+```  
+SELECT USER_NAME();  
+GO  
+EXECUTE AS USER = 'Zelig';  
+GO  
+SELECT USER_NAME();  
+GO  
+REVERT;  
+GO  
+SELECT USER_NAME();  
+GO  
+```  
+  
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+  
+ `DBO`  
+  
+ `Zelig`  
+  
+ `DBO`  
+  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+  
+### <a name="e-using-username"></a>E. 使用 USER_NAME  
+ 下列範例會傳回使用者識別碼 `13` 的使用者名稱。  
+  
+```  
+SELECT USER_NAME(13);  
+```  
+  
+### <a name="f-using-username-without-an-id"></a>F. 使用 USER_NAME 而不指定識別碼  
+ 下列範例不指定識別碼來尋找目前使用者的名稱。  
+  
+```  
+SELECT USER_NAME();  
+```  
+  
+ 以下是結果集目前登入的使用者。  
+  
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+  
+```  
+------------------------------   
+User7                              
+```  
+  
+### <a name="g-using-username-in-the-where-clause"></a>G. 在 WHERE 子句中使用 USER_NAME  
+ 下列範例會在 `sysusers` 中尋找資料列，這個資料列名稱等於套用系統函數 `USER_NAME` 至使用者識別碼 `1` 所得的結果。  
+  
+```  
+SELECT name FROM sysusers WHERE name = USER_NAME(1);  
+```  
+  
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+  
+```  
+name                             
+------------------------------   
+User7                              
+```  
+  
+## <a name="see-also"></a>另請參閱  
+ [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
+ [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
+ [CURRENT_TIMESTAMP &#40;TRANSACT-SQL &#41;](../../t-sql/functions/current-timestamp-transact-sql.md)   
+ [CURRENT_USER &#40;TRANSACT-SQL &#41;](../../t-sql/functions/current-user-transact-sql.md)   
+ [SESSION_USER &#40;TRANSACT-SQL &#41;](../../t-sql/functions/session-user-transact-sql.md)   
+ [系統函數 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
+ [SYSTEM_USER &#40;TRANSACT-SQL &#41;](../../t-sql/functions/system-user-transact-sql.md)  
+  
+  
+
+

@@ -1,32 +1,37 @@
 ---
-title: "部署資料採礦方案 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "採礦模型 [Analysis Services], 部署"
-  - "部署 [Analysis Services], 生產環境"
-  - "部署 [Analysis Services - 資料採礦]"
-  - "解決方案 [Analysis Services], 部署"
-  - "模型 [Analysis Services], 資料採礦"
+title: "資料採礦方案部署 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- mining models [Analysis Services], deploying
+- deploying [Analysis Services], production environments
+- deploying [Analysis Services - data mining]
+- solutions [Analysis Services], deploying
+- models [Analysis Services], data mining
 ms.assetid: d83effc7-437d-42e9-8ac3-b65f79e27043
 caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: aa037f7ff155df158ba2967c5e7c31989ace887d
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 部署資料採礦方案
+# <a name="deployment-of-data-mining-solutions"></a>部署資料採礦方案
   資料採礦程序的最後一個步驟就是將模型部署到實際執行環境。 部署作業非常重要，因為可將模型提供給使用者，好讓您可以執行以下任何工作：  
   
--   使用模型來建立預測，並做出商業決策。 如需您可用來建立查詢之工具的詳細資訊，請參閱[資料採礦查詢工具](../../analysis-services/data-mining/data-mining-query-tools.md)。  
+-   使用模型來建立預測，並做出商業決策。 如需您可用來建立查詢之工具的詳細資訊，請參閱 [資料採礦查詢工具](../../analysis-services/data-mining/data-mining-query-tools.md)。  
   
 -   直接將資料採礦功能內嵌於應用程式中。 您可以包括分析管理物件 (AMO) 或含有一組物件的組件，讓應用程式用來建立、改變、處理以及刪除採礦結構和採礦模型。  
   
@@ -42,7 +47,7 @@ caps.handback.revision: 16
   
  [相關資源](#bkmk_Resources)  
   
-## 本節內容  
+## <a name="in-this-section"></a>本節內容  
  [將資料採礦方案部署到舊版的 SQL Server](../../analysis-services/data-mining/deploy-a-data-mining-solution-to-previous-versions-of-sql-server.md)  
   
  [匯出及匯入資料採礦物件](../../analysis-services/data-mining/export-and-import-data-mining-objects.md)  
@@ -81,9 +86,9 @@ caps.handback.revision: 16
   
  提供有關 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案部署的一般資訊，並描述可當作專案組態之一部分設定的屬性。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [處理多維度模型 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
  [資料採礦查詢工具](../../analysis-services/data-mining/data-mining-query-tools.md)   
- [處理需求和考量 (資料採礦)](../../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
+ [處理需求和考量 &#40;資料採礦&#41;](../../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

@@ -1,29 +1,34 @@
 ---
-title: "表格式模型中的字串儲存和定序 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "字串儲存體和表格式模型中的定序 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8516f0ad-32ee-4688-a304-e705143642ca
 caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 10
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 9009024f08b7c4a4bce3d6b57bd3231025b38a59
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 表格式模型中的字串儲存和定序
+# <a name="string-storage-and-collation-in-tabular-models"></a>表格式模型中的字串儲存和定序
   字串 (文字值) 以高度壓縮的格式儲存在表格式模型中；由於此壓縮，您在擷取整個或部分字串時可能會得到意外結果。 此外，因為字串地區設定和定序是繼承自階層結構上最接近的父物件，所以如果未明確定義字串語言，父物件的地區設定和定序可能會影響各字串的儲存方式以及字串是唯一還是與父定序所定義的相似字串合併。  
   
  此主題描述壓縮和儲存字串的機制，並且提供一些範例，說明定序和語言如何影響表格式模型中文字公式的結果。  
   
-## 儲存空間  
+## <a name="storage"></a>儲存空間  
  在表格式模型中，所有資料都是高度壓縮，以更好地放入記憶體中。 因此，可視為語彙相等的所有字串只儲存一次。 該字串的第一個執行個體做為標準表示，並將此後每個相等字串編制索引為與第一次出現字串相同的壓縮值。  
   
  關鍵問題是：語彙相等字串的構成要素為何？ 如果兩個字串可視為相同字組，它們就是視為語彙相等。 例如，在英語中，當您在字典中搜尋 **violin** 一字時，根據字典的編輯原則，可能會找到項目 **Violin** 或 **violin**，但通常您會認為這兩個字是相等的，並且忽略大小寫的差異。 在表格式模型中，決定兩個字串是否語彙相等的因素不是編輯原則或甚至是使用者喜好設定，而是指派給資料行的地區設定和定序順序。  
@@ -60,7 +65,7 @@ caps.handback.revision: 10
 > [!WARNING]  
 >  您可能決定要根據自己的判斷，來定義哪個字串做為第一個儲存的字串，但可能很難這樣做。 因為有鑑於所有值都是視為相同，沒有簡單的方法可以事先判斷引擎應該先處理哪個資料列。 反之，如果您需要設定標準值，則應在載入模型前清理所有字串。  
   
-## 地區設定和定序順序  
+## <a name="locale-and-collation-order"></a>地區設定和定序順序  
  在比較字串 (文字值) 時，相等的定義要素通常是有關如何解釋這類字串的文化特性方面。 在某些文化特性中，字元的腔調字或大小寫可能會完全變更字串的意義；因此，在判斷任何特定語言或地區的相等時，通常要考慮這類差異。  
   
  通常當您使用電腦時，電腦已設定為符合您自己的文化特性期望和語言行為，並且文字值排序和比較等字串作業會如預期般運作。 控制語言特定行為的設定是透過 Windows [地區及語言選項] 設定來定義。 應用程式會讀取這些設定，並據此變更其行為。 在某些情況下，應用程式具有的功能可讓您變更應用程式的文化特性行為或比較字串的方式。  
@@ -71,7 +76,7 @@ caps.handback.revision: 10
   
 -   定序定義字元的順序及其相等。  
   
- 請務必注意，語言識別碼不僅識別語言，也識別使用該語言的國家或地區。 每個語言識別碼還具有預設的定序規格。 如需有關語言識別碼的詳細資訊，請參閱＜ [Microsoft 指派的地區設定識別碼](http://msdn.microsoft.com/goglobal/bb964664.aspx)＞。 您可以使用 LCID Dec 資料行，在手動插入值時取得正確的識別碼。 如需有關 SQL 定序概念的詳細資訊，請參閱 [COLLATE &#40;Transact-SQL&#41;](../Topic/COLLATE%20\(Transact-SQL\).md)。 如需有關定序指定項和 Windows 定序名稱比較樣式的詳細資訊，請參閱 [Windows 定序名稱 &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md)。 主題 [SQL Server 定序名稱 &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md) 將 Windows 定序名稱對應至用於 SQL 的名稱。  
+ 請務必注意，語言識別碼不僅識別語言，也識別使用該語言的國家或地區。 每個語言識別碼還具有預設的定序規格。 如需有關語言識別碼的詳細資訊，請參閱＜ [Microsoft 指派的地區設定識別碼](http://msdn.microsoft.com/goglobal/bb964664.aspx)＞。 您可以使用 LCID Dec 資料行，在手動插入值時取得正確的識別碼。 如需有關 SQL 定序概念的詳細資訊，請參閱 [COLLATE &#40;Transact-SQL&#41;](../../t-sql/statements/collations.md)。 如需有關定序指定項和 Windows 定序名稱比較樣式的詳細資訊，請參閱 [Windows 定序名稱 &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md)。 主題 [SQL Server 定序名稱 &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md) 將 Windows 定序名稱對應至用於 SQL 的名稱。  
   
  一旦建立您的表格式模型資料庫之後，該模型中的所有新物件都會從資料庫屬性繼承語言和定序屬性。 所有物件都是這樣的。 繼承路徑從物件開始，查看父系中是否有要繼承的任何語言和定序屬性，如果找不到，則繼續向上在資料庫層級尋找語言和定序屬性。 換言之，如果您沒有為物件指定語言和定序屬性，則根據預設，物件會繼承其最接近的父系的屬性。  
   

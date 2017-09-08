@@ -1,37 +1,42 @@
 ---
-title: "量值和量值群組 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "量值群組 [Analysis Services]"
-  - "量值 [Analysis Services], 關於量值"
-  - "OLAP 物件 [Analysis Services], 量值"
-  - "彙總函式 [Analysis Services]"
-  - "資料粒度"
-  - "量值群組 [Analysis Services], 關於量值群組"
-  - "量值 [Analysis Services]"
-  - "彙總 [Analysis Services], 量值"
-  - "事實資料表 [Analysis Services]"
+title: "量值和量值群組 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- measure groups [Analysis Services]
+- measures [Analysis Services], about measures
+- OLAP objects [Analysis Services], measures
+- aggregate functions [Analysis Services]
+- granularity
+- measure groups [Analysis Services], about measure groups
+- measures [Analysis Services]
+- aggregations [Analysis Services], measures
+- fact tables [Analysis Services]
 ms.assetid: 4f0122f9-c3a5-4172-ada3-5bc5f7b1cc9a
 caps.latest.revision: 42
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 42
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bd15969978480e68505747609332f6224355a22f
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 量值和量值群組
+# <a name="measures-and-measure-groups"></a>量值和量值群組
   Cube 包含「量值群組」中的「量值」、商務邏輯，以及可以在求取量值所提供之數值資料的值時提供內容的維度集合。 量值和量值群組均為 Cube 的重要元件。 Cube 的存在至少須具備其中一項元件。  
   
- 本主題描述[量值](#bkmk_measure)和[量值群組](#bkmk_mg)。 它也包含下表，表內有連結可供取得建立及設定量值和量值群組的程序步驟。  
+ 本主題描述 [量值](#bkmk_measure) 和 [量值群組](#bkmk_mg)。 它也包含下表，表內有連結可供取得建立及設定量值和量值群組的程序步驟。  
   
 |**連結**|**說明**|  
 |--------------|---------------------|  
@@ -51,22 +56,22 @@ caps.handback.revision: 42
   
  在此範例中，「轉售商銷售」會彙總成「銷售領域」階層的各種層級。  
   
- ![標註量值與維度的樞紐分析表](../../analysis-services/multidimensional-models/media/ssas-keyconcepts-pivot1-measures-dimensions.png "標註量值與維度的樞紐分析表")  
+ ![樞紐分析表與量值和維度叫出](../../analysis-services/multidimensional-models/media/ssas-keyconcepts-pivot1-measures-dimensions.png "具有量值和維度叫出樞紐分析表")  
   
  當事實資料表中所含的數值來源資料，也包含查詢中所用之維度資料表的指標時，量值會產生有效的結果。 在轉售商銷售的範例中，每個資料列除了儲存銷售金額之外，也會儲存對產品資料表、日期資料表中或銷售領域資料表的指標，如此才能正確地解析包含這些維度成員的查詢。  
   
  若量值與查詢中所用的維度無關會如何？ 一般而言，Analysis Services 會顯示的預設量值，而所有成員的該值皆相同。 在此範例中，「網際網路銷售」(計算客戶使用線上型錄直接下單的銷售) 與銷售組織無關。  
   
- ![Pivottable showing repeated measure values](../../analysis-services/multidimensional-models/media/ssas-unrelatedmeasure.PNG "Pivottable showing repeated measure values")  
+ ![顯示重複的樞紐分析表的量值](../../analysis-services/multidimensional-models/media/ssas-unrelatedmeasure.PNG "樞紐分析表顯示重複的量值")  
   
  若要降低用戶端應用程式發生這些行為的機率，可以在相同的資料庫中建立多個 Cube 或檢視方塊，並確認每個 Cube 或檢視方塊只包含相關的物件。 您必須檢查量值群組 (對應至事實資料表) 與維度之間的關聯性。  
   
 ##  <a name="bkmk_mg"></a> 量值群組  
  在 Cube 中，量值是根據它們的基礎事實資料表分組成量值群組。 量值群組是用來建立維度與量值的關聯。 量值群組也會用於與其彙總行為具有相異計數的量值； 將每一個相異計數量值放入其本身的量值群組時，會最佳化彙總處理。  
   
- 簡單的 <xref:Microsoft.AnalysisServices.MeasureGroup> 物件由群組名稱、儲存模式及處理模式等基本資訊組成。 其同時包含其構成部分：量值、維度，以及組成量值群組組合的資料分割。　  
+ 簡單的 <xref:Microsoft.AnalysisServices.MeasureGroup> 物件由群組名稱、儲存模式及處理模式等基本資訊組成。 其同時包含其構成部分：量值、維度，以及組成量值群組組合的資料分割。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [多維度模型中的 Cube](../../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md)   
  [在多維度模型中建立量值和量值群組](../../analysis-services/multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md)  
   

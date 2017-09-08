@@ -1,24 +1,29 @@
 ---
-title: "使用動態管理檢視 (DMV) 監視 Analysis Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "使用動態管理檢視 (Dmv) 監視 Analysis Services |Microsoft 文件"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 22b82b2d-867f-4ebf-9288-79d1cdd62f18
 caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 16
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0c9faafd33f7abaee582821336dcd471d637a1c1
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 使用動態管理檢視 (DMV) 監視 Analysis Services
+# <a name="use-dynamic-management-views-dmvs-to-monitor-analysis-services"></a>使用動態管理檢視 (DMV) 監視 Analysis Services
   Analysis Services 動態管理檢視 (DMV) 是公開本機伺服器作業和伺服器健全狀況相關資訊的查詢結構。 查詢結構是傳回 Analysis Services 執行個體中繼資料和監視資訊之結構描述資料列集的介面。  
   
  對於大多數 DMV 查詢，都是將 **SELECT** 陳述式和 **$System** 結構描述搭配 XML/A 結構描述資料列集使用。  
@@ -49,7 +54,7 @@ SELECT * FROM $System.<schemaRowset>
 ##  <a name="bkmk_ex"></a> 範例和案例  
  DMV 查詢有助於回答有關使用中工作階段和連接的問題，以及哪些物件在特定時間點耗用最多 CPU 或記憶體的問題。 本節提供最常使用 DMV 查詢的案例範例。 您也可以檢閱＜ [SQL Server 2008 R2 Analysis Services 作業指南](http://go.microsoft.com/fwlink/?LinkID=225539&clcid=0x409) ＞，以取得使用 DMV 查詢監視伺服器執行個體的其他見解。  
   
- `Select * from $System.discover_object_activity` /** 此查詢報告自上次啟動服務後的物件活動。 如需以此 DMV 為基礎的範例查詢，請參閱[新的 System.Discover_Object_Activity](http://go.microsoft.com/fwlink/?linkid=221322)。  
+ `Select * from $System.discover_object_activity` /** 此查詢報告自上次啟動服務後的物件活動。 如需以此 DMV 為基礎的範例查詢，請參閱 [新的 System.Discover_Object_Activity](http://go.microsoft.com/fwlink/?linkid=221322)。  
   
  `Select * from $System.discover_object_memory_usage` /** 此查詢依物件來報告記憶體耗用量。  
   
@@ -99,7 +104,7 @@ ORDER BY TABLE_NAME ASC
 ```  
   
 > [!NOTE]  
->  如果 DMV 不適用於給定的資料列集，伺服器會傳回下列錯誤：「伺服器無法辨識 \<schemarowset> 要求類型」。 所有其他錯誤都指向語法問題。  
+>  如果 DMV 不適用於給定的資料列集，伺服器會傳回下列錯誤:" \<schemarowset > 伺服器無法辨識要求類型 」。 所有其他錯誤都指向語法問題。  
   
 |資料列集|說明|  
 |------------|-----------------|  
@@ -138,7 +143,7 @@ ORDER BY TABLE_NAME ASC
 |[DISCOVER_TRACE_EVENT_CATEGORIES 資料列集](../../analysis-services/schema-rowsets/xml/discover-trace-event-categories-rowset.md)|傳回可用類別目錄的清單。|  
 |[DISCOVER_TRACES 資料列集](../../analysis-services/schema-rowsets/xml/discover-traces-rowset.md)|傳回目前連接上正在執行之追蹤的清單。|  
 |[DISCOVER_TRANSACTIONS 資料列集](../../analysis-services/schema-rowsets/xml/discover-transactions-rowset.md)|傳回目前連接上正在執行之交易的清單。|  
-|[DISCOVER_XEVENT_TRACE_DEFINITION 資料列集](../Topic/DISCOVER_XEVENT_TRACE_DEFINITION%20Rowset.md)|傳回目前連接上正在執行之 XEvent 追蹤的清單。|  
+|[DISCOVER_XEVENT_TRACE_DEFINITION 資料列集](http://msdn.microsoft.com/library/e1ce2d2d-f994-4318-801a-ee0385aecd84)|傳回目前連接上正在執行之 XEvent 追蹤的清單。|  
 |[DMSCHEMA_MINING_COLUMNS 資料列集](../../analysis-services/schema-rowsets/data-mining/dmschema-mining-columns-rowset.md)|列出目前連接上所有可用採礦模型的個別資料行。|  
 |[DMSCHEMA_MINING_FUNCTIONS 資料列集](../../analysis-services/schema-rowsets/data-mining/dmschema-mining-functions-rowset.md)|傳回伺服器上資料採礦演算法所支援之函數的清單。|  
 |[DMSCHEMA_MINING_MODEL_CONTENT 資料列集](../../analysis-services/schema-rowsets/data-mining/dmschema-mining-model-content-rowset.md)|傳回由描述目前模型之資料行組成的資料列集。|  
@@ -163,9 +168,9 @@ ORDER BY TABLE_NAME ASC
 |[MDSCHEMA_PROPERTIES 資料列集](../../analysis-services/schema-rowsets/ole-db-olap/mdschema-properties-rowset.md)|傳回每個屬性的完整名稱，以及屬性類型、資料類型和其他中繼資料。|  
 |[MDSCHEMA_SETS 資料列集](../../analysis-services/schema-rowsets/ole-db-olap/mdschema-sets-rowset.md)|傳回目前連接所定義之集合的清單。|  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [SQL Server 2008 R2 Analysis Services 作業指南](http://go.microsoft.com/fwlink/?LinkID=225539&clcid=0x409)   
  [新的 System.Discover_Object_Activity](http://go.microsoft.com/fwlink/?linkid=221322)   
- [限制資料列集和 DMV 的新 SYSTEMRESTRICTEDSCHEMA 函數](http://go.microsoft.com/fwlink/?LinkId=231885)  
+ [限制資料列集和 Dmv 的新 SYSTEMRESTRICTEDSCHEMA 函數](http://go.microsoft.com/fwlink/?LinkId=231885)  
   
   

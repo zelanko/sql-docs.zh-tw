@@ -1,29 +1,34 @@
 ---
-title: "使用維度精靈建立維度 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "維度 [Analysis Services], 建立"
+title: "使用 「 維度精靈 」 建立維度 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- dimensions [Analysis Services], creating
 ms.assetid: d84f66ae-7551-49bf-99d0-88368ca2dd0e
 caps.latest.revision: 17
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 17
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ff4a16fdc7f18eae35de5023116a11179fb11c5b
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 使用維度精靈建立維度
-  您可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的 [維度精靈] 來建立新的維度。  
+# <a name="create-a-dimension-using-the-dimension-wizard"></a>使用維度精靈建立維度
+  您可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的 [維度精靈] 來建立新的維度。  
   
-### 建立新維度  
+### <a name="to-create-a-new-dimension"></a>建立新維度  
   
 1.  在**方案總管**中，以滑鼠右鍵按一下 [維度]，再按一下 [新增維度]。  
   
@@ -72,7 +77,7 @@ caps.handback.revision: 17
     > [!NOTE]  
     >  您可以在完成「維度精靈」之後，使用 [維度設計師] 在維度中加入、移除和設定屬性與階層。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [使用現有的資料表建立維度](../../analysis-services/multidimensional-models/create-a-dimension-by-using-an-existing-table.md)  
   
   

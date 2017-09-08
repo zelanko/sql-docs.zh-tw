@@ -1,0 +1,54 @@
+---
+title: "XMLA 概念 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- docset-sql-devref
+ms.tgt_pltfrm: 
+ms.topic: reference
+applies_to:
+- SQL Server 2016 Preview
+helpviewer_keywords:
+- XMLA, concepts
+ms.assetid: 816183a7-d2f7-4e14-8e5b-2a4c1798fbc1
+caps.latest.revision: 10
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 2c8df1713f3015e9319f7a1323b43f697bebb625
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
+---
+# <a name="xmla-concepts"></a>XMLA 概念
+  XML for Analysis (XMLA) 開放標準支援對位於全球資訊網上的資料來源進行資料存取。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]依據 XMLA 1.1 規格實作 XMLA。  
+  
+ XML for Analysis (XMLA) 是以簡易物件存取通訊協定 (SOAP) 為基礎的 XML 通訊協定，它是特別針對位在網路上的任何標準多維度資料來源進行通用資料存取而設計。 XMLA 也不需要部署用戶端元件以公開元件物件模型 (COM) 或[!INCLUDE[msCoName](../../../includes/msconame-md.md)].NET Framework 介面。 XMLA 是針對網際網路最佳化，因為在這種環境下，往返伺服器的作業會耗用大量的時間和資源，而且資料來源的可設定狀態連接可能會限制伺服器上的使用者連接。  
+  
+ XMLA 是原生通訊協定[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]，用於用戶端應用程式的執行個體之間的所有互動[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 完全支援 XML for Analysis 1.1，而且也提供延伸模組以支援中繼資料管理、工作階段管理以及鎖定功能。 分析管理物件 (AMO) 與 ADOMD.NET 在與 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 執行個體通訊時，會使用 XMLA 通訊協定。  
+  
+## <a name="handling-xmla-communications"></a>處理 XMLA 通訊  
+ XMLA 開放標準描述兩種普遍可存取的方法：**探索**和**Execute**。 這些方法使用 XML 支援的鬆散偶合的用戶端與伺服器架構，以處理 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 執行個體的傳入和傳出資訊。  
+  
+ **探索**方法可從 Web 服務取得資訊和中繼資料。 這個資訊可包括可用資料來源的清單，以及有關任何資料來源提供者的資訊。 屬性會定義和塑造從資料來源取得的資料。 **探索**方法是定義多種用戶端應用程式可能需要從資料來源的資訊的常用方法[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]執行個體。 屬性與泛型介面提供的擴充性，讓您不需要在用戶端應用程式中重新撰寫已有的函數。  
+  
+ **Execute**方法可讓應用程式針對 XMLA 資料來源執行提供者特有的命令。  
+  
+ 雖然 XMLA 通訊協定是針對 Web 應用程式最佳化，它也可以供 LAN 導向的應用程式使用。 下列應用程式可以從這個以 XML 為基礎的 API 獲益：  
+  
+-   在用戶端與伺服器之間需要彈性技術的用戶端/伺服器應用程式  
+  
+-   以多個作業系統為目標的用戶端/伺服器應用程式  
+  
+-   不需要重要狀態以增加伺服器容量的用戶端  
+  
+## <a name="xmla-and-the-unified-dimensional-model"></a>XMLA 與統一維度模型  
+ XMLA 是運用統一維度模型 (UDM) 方法的商業智慧應用程式所使用的通訊協定。  
+  
+  

@@ -1,38 +1,49 @@
 ---
-title: "New-PowerPivotSystemServiceInstance 指令程式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: "New-powerpivotsystemserviceinstance 指令程式 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: 7ea94113-c0f1-4cca-9228-f1a034fba5db
 caps.latest.revision: 10
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 10
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 8cde819f27942e78bf67c85356602ad1954420c0
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# New-PowerPivotSystemServiceInstance 指令程式
+# <a name="new-powerpivotsystemserviceinstance-cmdlet"></a>New-PowerPivotSystemServiceInstance 指令程式
+
+[!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
+
   將 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系統服務的新執行個體加入至應用程式伺服器中。  
+
+>[!NOTE] 
+>這份文件可能包含過時的資訊和範例。 使用 Get-help cmdlet 取得最新。
   
  **適用於** ：SharePoint 2010 和 SharePoint 2013。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 New-PowerPivotSystemServiceInstance [[-ParentService] <PowerPivotMidTierServicePipeBind>] [-SystemServiceInstanceName <string>] [-Provision] [<CommonParameters>]  
 ```  
   
-## 說明  
+## <a name="description"></a>說明  
  在本機應用程式伺服器上使用 SQL Server 安裝程式安裝 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 之後，使用 New-PowerPivotSystemServiceInstance Cmdlet 在伺服器陣列層級佈建新的 PowerPivotSystemService 物件。 每個應用程式伺服器上只能佈建一個服務執行個體。  如果已佈建此服務，則無法執行這個指令程式。  
   
-## 參數  
+## <a name="parameters"></a>參數  
   
-### -ParentService <PowerPivotMidTierServicePipeBind>\>  
+### <a name="-parentservice-powerpivotmidtierservicepipebind"></a>-ParentService \<PowerPivotMidTierServicePipeBind >  
  指定伺服器陣列中 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系統服務父物件的 GUID。 在此版本中，只允許一個父物件。 您可以使用 Get-PowerPivotSystemService 傳回服務物件或其 GUID。  
   
 |||  
@@ -43,7 +54,7 @@ New-PowerPivotSystemServiceInstance [[-ParentService] <PowerPivotMidTierServiceP
 |接受管線輸入？|true|  
 |接受萬用字元？|false|  
   
-### -SystemServiceInstanceName \<字串>\>  
+### <a name="-systemserviceinstancename-string"></a>-SystemServiceInstanceName\<字串 >  
  指定識別此物件的名稱。  
   
 |||  
@@ -54,7 +65,7 @@ New-PowerPivotSystemServiceInstance [[-ParentService] <PowerPivotMidTierServiceP
 |接受管線輸入？|false|  
 |接受萬用字元？|false|  
   
-### 佈建 [\<切換參數>]  
+### <a name="provision-switchparameter"></a>佈建 [\<SwitchParameter >]  
  讓 SharePoint 可使用服務。 有效值為 $true 或 $false。  
   
 |||  
@@ -65,10 +76,10 @@ New-PowerPivotSystemServiceInstance [[-ParentService] <PowerPivotMidTierServiceP
 |接受管線輸入？|false|  
 |接受萬用字元？|false|  
   
-### \<一般參數>  
+### <a name="commonparameters"></a>\<一般參數 >  
  這個指令程式支援一般參數：Verbose、Debug、ErrorAction、ErrorVariable、WarningAction、WarningVariable、OutBuffer 和 OutVariable。 如需詳細資訊，請參閱 [About_CommonParameters](http://go.microsoft.com/fwlink/?linkID=227825)。  
   
-## 輸入和輸出  
+## <a name="inputs-and-outputs"></a>輸入和輸出  
  輸入類型是可透過管道傳送至指令程式的物件類型。 傳回類型是指令程式所傳回的物件類型。  
   
 |||  
@@ -76,7 +87,7 @@ New-PowerPivotSystemServiceInstance [[-ParentService] <PowerPivotMidTierServiceP
 |輸入|無。|  
 |輸出|無。|  
   
-## 範例 1  
+## <a name="example-1"></a>範例 1  
   
 ```  
 C:\PS>New-PowerPivotSystemServiceInstance -Provision:$true  
@@ -84,7 +95,7 @@ C:\PS>New-PowerPivotSystemServiceInstance -Provision:$true
   
  這個範例示範此指令程式最常見的形式。 它會向伺服器陣列註冊本機應用程式伺服器上的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系統服務。  
   
-## 範例 2  
+## <a name="example-2"></a>範例 2  
   
 ```  
 C:\PS>New-PowerPivotSystemServiceInstance -SystemServiceInstanceName "MyPSSInstance" -provision:$false  

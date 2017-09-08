@@ -1,34 +1,39 @@
 ---
-title: "在 SQL Server Management Studio 中建立 DMX 查詢 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "範本 [Analysis Services], 查詢"
-  - "SQL Server Management Studio [Analysis Services]"
-  - "預測 [Analysis Services], DMX 預測查詢"
-  - "預測 [DMX]"
-  - "prediction queries [DMX]"
-  - "查詢 [DMX], 預測查詢"
-  - "採礦模型 [Analysis Services], DMX"
+title: "在 SQL Server Management Studio 中建立 DMX 查詢 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- templates [Analysis Services], queries
+- SQL Server Management Studio [Analysis Services], DMX queries
+- predictions [Analysis Services], DMX prediction queries
+- predictions [DMX]
+- prediction queries [DMX]
+- queries [DMX], prediction queries
+- mining models [Analysis Services], DMX
 ms.assetid: 568ce40a-1f53-47eb-8c79-14347cdfde83
 caps.latest.revision: 43
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 43
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 51a8ea188eb54adf0ac208225dd7c5fda417178c
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 在 SQL Server Management Studio 中建立 DMX 查詢
+# <a name="create-a-dmx-query-in-sql-server-management-studio"></a>在 SQL Server Management Studio 中建立 DMX 查詢
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供一組功能，可幫助您針對採礦模型和採礦結構建立預測查詢、內容查詢和資料定義查詢。  
   
--   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 和 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中都有提供圖形化預測查詢產生器，可簡化撰寫預測查詢以及將資料集對應至模型的程序。  
+-   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 和 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中都有提供圖形化預測查詢產生器，可簡化撰寫預測查詢以及將資料集對應至模型的程序。  
   
 -   [範本總管] 中所提供的查詢範本會開始建立許多種類的 DMX 查詢，包括許多類型的預測查詢。 內容查詢、使用巢狀資料集的查詢、從採礦結構傳回案例的查詢，甚至是資料定義查詢都有提供範本。  
   
@@ -49,7 +54,7 @@ caps.handback.revision: 43
   
  您也可以針對經常執行的查詢或命令建立自訂範本。  
   
-## XMLA 查詢範本  
+## <a name="xmla-query-templates"></a>XMLA 查詢範本  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 也提供 XMLA 查詢的範本。  
   
  您可以使用 XMLA 和 DMX 執行的查詢類型之間有一些重疊。 例如，您可以使用 DMX 或資料採礦結構描述資料列集來建立某些模型內容查詢，但是結構描述資料列集有時會包含未在 DMX 內容查詢中公開的資訊。  
@@ -58,19 +63,19 @@ caps.handback.revision: 43
   
 ##  <a name="BKMK_Building_Queries"></a> 建立及執行 DMX 查詢  
   
-#### 開啟新的 DMX 查詢視窗  
+#### <a name="open-a-new-dmx-query-window"></a>開啟新的 DMX 查詢視窗  
   
 1.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中按一下 [新增查詢]，然後選取 [新增 Analysis Server DMX 查詢]。  
   
 2.  當 [連接到伺服器] 對話方塊出現時，請選取 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的執行個體，其中包含您要使用的採礦模型。  
   
-#### 開啟範本總管  
+#### <a name="open-template-explorer"></a>開啟範本總管  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的 [檢視] 功能表上，選取 [範本總管]。  
   
 2.  按一下 [Analysis Server]，即可查看要套用至 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 之範本的樹狀檢視。  
   
-#### 套用範本來建立查詢  
+#### <a name="apply-a-template-to-build-a-query"></a>套用範本來建立查詢  
   
 -   以滑鼠右鍵按一下適當的查詢類型，然後選取 [開啟]。  
   
@@ -84,7 +89,7 @@ caps.handback.revision: 43
   
  [建立採礦模型內容查詢](../../analysis-services/data-mining/create-a-content-query-on-a-mining-model.md)  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [資料採礦查詢工具](../../analysis-services/data-mining/data-mining-query-tools.md)   
  [資料採礦延伸模組 &#40;DMX&#41; 參考](../../dmx/data-mining-extensions-dmx-reference.md)  
   

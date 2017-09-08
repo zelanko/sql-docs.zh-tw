@@ -1,39 +1,44 @@
 ---
-title: "資料採礦方案 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "資料採礦 [Analysis Services]，關於資料採礦"
-  - "資料採礦 [Analysis Services], 開發"
+title: "資料採礦方案 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data mining [Analysis Services], about data mining
+- data mining [Analysis Services], development
 ms.assetid: 84f6548d-ebb0-4e10-9b29-66253fa0a04a
 caps.latest.revision: 64
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 64
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ee2196b673eb9a53d5fefe5c62d1158ae94bf702
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 資料採礦方案
+# <a name="data-mining-solutions"></a>資料採礦方案
   資料採礦方案是包含一個或多個資料採礦專案的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 方案。  
   
- 本節的主題會提供有關如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 來設計及實作整合式資料採礦方案的資訊。 如需資料採礦設計程序與相關工具的概觀，請參閱[資料採礦概念](../../analysis-services/data-mining/data-mining-concepts.md)。  
+ 本節的主題會提供有關如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]來設計及實作整合式資料採礦方案的資訊。 如需資料採礦設計程序與相關工具的概觀，請參閱 [資料採礦概念](../../analysis-services/data-mining/data-mining-concepts.md)。  
   
- 如需有關對資料採礦非常實用之其他專案類型的詳細資訊，請參閱[資料採礦方案的相關專案](../../analysis-services/data-mining/related-projects-for-data-mining-solutions.md)。  
+ 如需有關對資料採礦非常實用之其他專案類型的詳細資訊，請參閱 [資料採礦方案的相關專案](../../analysis-services/data-mining/related-projects-for-data-mining-solutions.md)。  
   
- [關聯式與多維度方案的比較](#bkmk_RelMD)  
+ [關聯式與多維度方案](#bkmk_RelMD)  
   
  [部署資料採礦方案](#bkmk_Deploy)  
   
  [方案逐步解說](#bkmk_Walkthru)  
   
-##  <a name="bkmk_RelMD"></a> 關聯式與多維度方案的比較  
+##  <a name="bkmk_RelMD"></a>關聯式與多維度方案的比較  
  資料採礦方案可以根據多維度資料 (也就是現有的 Cube) 或是單純的關聯式資料 (例如資料倉儲中的資料表和檢視表)，或是根據文字檔、Excel 活頁簿或其他外部資料來源。  
   
 -   您可以在現有的多維度資料庫方案內建立資料採礦物件。  
@@ -51,7 +56,7 @@ caps.handback.revision: 64
   
  當您部署方案時，用於資料採礦的物件會在指定的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體中建立 (位於與方案檔同名的資料庫中)。  
   
- 如需有關如何部署關聯式和多維度方案的詳細資訊，請參閱[部署資料採礦方案](../../analysis-services/data-mining/deployment-of-data-mining-solutions.md)。  
+ 如需有關如何部署關聯式和多維度方案的詳細資訊，請參閱 [部署資料採礦方案](../../analysis-services/data-mining/deployment-of-data-mining-solutions.md)。  
   
 ##  <a name="bkmk_Walkthru"></a> 方案逐步解說  
  提供如何使用資料採礦精靈建立資料採礦方案的概觀。  
@@ -62,7 +67,7 @@ caps.handback.revision: 64
  [建立 OLAP 採礦結構](../../analysis-services/data-mining/create-an-olap-mining-structure.md)  
  建立以 OLAP Cube 中的資料為根據的採礦結構 您從 OLAP 資料建立的模型可以儲存為資料採礦維度，或者可以將此資料集和模型儲存為新的 Cube。  
   
-## 本節內容  
+## <a name="in-this-section"></a>本節內容  
  [資料採礦專案](../../analysis-services/data-mining/data-mining-projects.md)  
   
  [處理資料採礦物件](../../analysis-services/data-mining/processing-data-mining-objects.md)  
@@ -71,7 +76,7 @@ caps.handback.revision: 64
   
  [部署資料採礦方案](../../analysis-services/data-mining/deployment-of-data-mining-solutions.md)  
   
-## 相關工作和主題  
+## <a name="related-tasks-and-topics"></a>相關工作和主題  
  在您建立基本的資料採礦方案 (包括資料來源和採礦結構) 之後，您可以在此方案上加入新的模型、測試和比較模型、建立預測及試驗資料子集來進行建置。  
   
  如需詳細資訊，請參閱下列連結：  
@@ -84,7 +89,7 @@ caps.handback.revision: 64
 |將篩選套用到定型模式時所使用的資料來自訂採礦模型。|[將採礦模型加入結構 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
 |更新和管理資料採礦方案。|Link TBD|  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [資料採礦教學課程 &#40;Analysis Services&#41;](../../analysis-services/data-mining-tutorials-analysis-services.md)  
   
   

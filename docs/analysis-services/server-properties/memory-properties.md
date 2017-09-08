@@ -1,35 +1,40 @@
 ---
-title: "記憶體屬性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "LowMemoryLimit 屬性"
-  - "MinimumAllocatedMemory 屬性"
-  - "MidMemoryPrice 屬性"
-  - "MemoryHeapType 屬性"
-  - "記憶體 [Analysis Services]"
-  - "DefaultPagesCountToReuse 屬性"
-  - "TotalMemoryLimit 屬性"
-  - "SessionMemoryLimit 屬性"
-  - "VirtualMemoryLimit 屬性"
-  - "WaitCountIfHighMemory 屬性"
-  - "HighMemoryPrice 屬性"
-  - "HeapTypeForObjects 屬性"
+title: "記憶體屬性 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- LowMemoryLimit property
+- MinimumAllocatedMemory property
+- MidMemoryPrice property
+- MemoryHeapType property
+- memory [Analysis Services]
+- DefaultPagesCountToReuse property
+- TotalMemoryLimit property
+- SessionMemoryLimit property
+- VirtualMemoryLimit property
+- WaitCountIfHighMemory property
+- HighMemoryPrice property
+- HeapTypeForObjects property
 ms.assetid: 085f5195-7b2c-411a-9813-0ff5c6066d13
 caps.latest.revision: 26
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 26
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a26f0b5272c12e45ed1bf99c0d297fa7f89773ae
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 記憶體屬性
+# <a name="memory-properties"></a>記憶體屬性
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 在啟動時會預先配置適度記憶體數量，以立即處理要求。 隨著查詢和處理工作負載的增加，會配置額外的記憶體。 
   
   指定組態設定，即可控制釋放記憶體的臨界值。 例如， **HardMemoryLimit** 設定可指定自行強加的記憶體不足狀況 (依預設，未啟用此臨界值)；其中，變得需要更多資源時，就會立即拒絕新的要求。
@@ -74,7 +79,7 @@ HardMemoryLimit | Analysis Services 因記憶體壓力而立即開始拒絕要�
   
   
 
-設定  |Description  
+設定  |說明  
 ---------|---------
 **0**     |  停用分頁。 如果記憶體不足，處理會失敗，且會出現記憶體不足的錯誤。 如果您停用分頁，就必須授與 Windows 權限給服務帳戶。 如需指示，請參閱[設定服務帳戶 &#40;Analysis Services&#41;](../../analysis-services/instances/configure-service-accounts-analysis-services.md)。 
 **1**     |  (預設值) 此屬性允許使用作業系統分頁檔 (pagefile.sys)，在磁碟中分頁。   
@@ -96,19 +101,19 @@ HardMemoryLimit | Analysis Services 因記憶體壓力而立即開始拒絕要�
  **MemoryHeapType**  
   此為進階屬性，除非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技術支援的指導之下，否則不應隨意變更。 以下為 SQL Server 2016 SP1 和更新版 Analysis Services 中的有效值：
   
-  設定 | Description
+  設定 | 說明
 --------|------------
 **-1** | (預設值) Automatic。 引擎將決定要使用哪一個。
 **1** | Analysis Services 堆積。
 **2** | Windows LFH。
-**5** | 混合式配置器。 此配置器會針對 \<= 16KB 的配置使用 Windows LFH，並針對 > 16KB 的配置使用 AS 堆積。 
+**5** | 混合式配置器。 此配置器會使用針對 Windows LFH \<= 16 KB 的配置和 AS 堆積 > 16 KB 的配置。 
 **6** | Intel TBB 配置器。 適用於 SQL Server 2016 SP1 (和更新版) Analysis Services 中。
   
   
  **HeapTypeForObjects**  
   此為進階屬性，除非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技術支援的指導之下，否則不應隨意變更。 下列是有效值：
   
-   設定 | Description
+   設定 | 說明
 --------|------------
 **0** | Windows LFH 堆積。
 **1** | Analysis Services 位置配置器。
@@ -136,8 +141,9 @@ HardMemoryLimit | Analysis Services 因記憶體壓力而立即開始拒絕要�
  **WaitCountIfHighMemory**  
  此為進階屬性，除非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技術支援的指導之下，否則不應隨意變更。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱＜  
  [Analysis Services 中的伺服器屬性](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
  [判斷 Analysis Services 執行個體的伺服器模式](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   [SQL Server 2008 R2 Analysis Services 作業指南](http://go.microsoft.com/fwlink/?LinkID=225539)
   
+

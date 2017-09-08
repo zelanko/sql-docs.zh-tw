@@ -1,30 +1,35 @@
 ---
-title: "採礦模型 (Analysis Services - 資料採礦) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "演算法 [資料採礦]"
-  - "mining models [Analysis Services]"
-  - "邏輯架構 [Analysis Services - 多維度資料]"
-  - "屬性 [Analysis Services]"
-  - "採礦模型 [Analysis Services], 關於資料採礦模型"
-  - "架構 [Analysis Services]"
+title: "採礦模型 (Analysis Services-資料採礦) |Microsoft 文件"
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- algorithms [data mining]
+- mining models [Analysis Services]
+- logical architecture [Analysis Services Multidimensional Data]
+- properties [Analysis Services]
+- mining models [Analysis Services], about data mining models
+- architecture [Analysis Services]
 ms.assetid: cd4df273-0c6a-4b3e-9572-8a7e313111e8
 caps.latest.revision: 37
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 37
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3425210ee85136d7b85c48c16562d85534a115f8
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 採礦模型 (Analysis Services - 資料採礦)
+# <a name="mining-models-analysis-services---data-mining"></a>採礦模型 (Analysis Services - 資料採礦)
   「採礦模型」透過將演算法套用至資料來建立，但是採礦模型不只是演算法或中繼資料容器，還是可以套用至新資料以產生預測並推斷關聯性的一組資料、統計資料及模式。  
   
  本節說明資料採礦模型及其用途：模型的基本架構和結構、採礦模型的屬性，以及建立及使用採礦模型的方式。  
@@ -46,7 +51,7 @@ caps.handback.revision: 37
   
  採礦模型在採礦結構提供的資料經過處理與分析前是空的。 採礦模型經過處理之後，包含中繼資料、結果，以及回到採礦結構的繫結。  
   
- ![包含中繼資料、模式和繫結](../../analysis-services/data-mining/media/dmcon-modelarch2.gif "包含中繼資料、模式和繫結")  
+ ![模型包含中繼資料、 模式和繫結](../../analysis-services/data-mining/media/dmcon-modelarch2.gif "模型包含中繼資料、 模式和繫結")  
   
  中繼資料會指定模型的名稱與儲存模型的伺服器，以及模型的定義，包括建立模型所使用之採礦結構的資料行、處理模型時套用之任何篩選的定義，以及分析資料所使用的演算法。 上述所有選擇 (資料行及其資料類型、篩選及演算法) 都會大大影響分析的結果。  
   
@@ -88,9 +93,9 @@ caps.handback.revision: 37
   
  每個採礦模型也都擁有衍生自採礦結構的屬性，以及描述模型所使用資料之資料行的屬性。 如果模型使用的任何資料行是巢狀資料表，該資料行也可以套用個別的篩選。  
   
- 此外，每個採礦模型都包含兩個特殊的屬性：<xref:Microsoft.AnalysisServices.MiningModel.Algorithm%2A> 和 <xref:Microsoft.AnalysisServices.MiningModelColumn.Usage%2A>。  
+ 此外，每個採礦模型都包含兩個特殊的屬性： <xref:Microsoft.AnalysisServices.MiningModel.Algorithm%2A> 和 <xref:Microsoft.AnalysisServices.MiningModelColumn.Usage%2A>。  
   
--   **演算法屬性**：指定建立模型所使用的演算法。 可用的演算法取決於您所使用的提供者。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的演算法清單，請參閱[資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)。 **Algorithm** 屬性會套用到採礦模型，而且每一個模型只能設定一次。 您可以在稍後變更演算法，但是如果採礦模型中的某些資料行未受到您所選擇的演算法所支援，這些資料行可能會變成無效。 您一定要在變更此屬性之後重新處理模型。  
+-   **演算法屬性** ：指定建立模型所使用的演算法。 可用的演算法取決於您所使用的提供者。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的演算法清單，請參閱 [資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)。 **Algorithm** 屬性會套用到採礦模型，而且每一個模型只能設定一次。 您可以在稍後變更演算法，但是如果採礦模型中的某些資料行未受到您所選擇的演算法所支援，這些資料行可能會變成無效。 您一定要在變更此屬性之後重新處理模型。  
   
 -   **Usage 屬性**：定義此模型要如何使用每一個資料行。 資料行使用方式可以定義為 [輸入]、[預測]、[僅預測] 或 [金鑰]。 **Usage** 屬性會套用到個別採礦模型，而且必須針對模型中所包含的每一個資料行來個別設定。 如果此結構包含模型中未使用的資料行，使用方式會設為 **Ignore**。 您想包含在採礦結構中但不想用於分析的資料範例可能包括客戶名稱或電子郵件地址。 如此一來，您可以稍後再查詢，而不需要包含在分析階段期間。  
   
@@ -117,11 +122,11 @@ caps.handback.revision: 37
  [採礦模型架構](#bkmk_mdlArch)  
   
 ##  <a name="bkmk_mdlView"></a> 檢視和查詢採礦模型  
- 在您處理模型之後，就可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 和 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中提供的自訂檢視器來瀏覽該模型。 For  
+ 在您處理模型之後，就可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 和 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中提供的自訂檢視器來瀏覽該模型。 For  
   
  您也可以根據採礦模型建立查詢以進行預測，或者擷取模型中繼資料或模型建立的模式。 您可以使用資料採礦擴充模組 (DMX) 建立查詢。  
   
-## 相關內容  
+## <a name="related-content"></a>相關內容  
   
 |主題|連結|  
 |------------|-----------|  
@@ -129,10 +134,10 @@ caps.handback.revision: 37
 |了解不同的演算法，以及選擇的演算法如何影響模型內容。|[採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)<br /><br /> [資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)|  
 |了解您現在可以在模型上設定影響其組成和行為的屬性。|[採礦模型屬性](../../analysis-services/data-mining/mining-model-properties.md)<br /><br /> [模型旗標 &#40;資料採礦&#41;](../../analysis-services/data-mining/modeling-flags-data-mining.md)|  
 |了解資料採礦的程式設計介面。|[使用分析管理物件 &#40;AMO&#41; 來開發](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)<br /><br /> [資料採礦延伸模組 &#40;DMX&#41; 參考](../../dmx/data-mining-extensions-dmx-reference.md)|  
-|了解如何在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中使用自訂資料採礦檢視器。|[資料採礦模型檢視器](../../analysis-services/data-mining/data-mining-model-viewers.md)|  
+|了解如何在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中使用自訂資料採礦檢視器。|[資料採礦模型檢視器](../../analysis-services/data-mining/data-mining-model-viewers.md)|  
 |檢視您可以對資料採礦模型使用的不同查詢類型範例。|[資料採礦查詢](../../analysis-services/data-mining/data-mining-queries.md)|  
   
-## 相關工作  
+## <a name="related-tasks"></a>相關工作  
  使用下列連結以取得使用資料採礦模型的其他特定資訊  
   
 |工作|連結|  
@@ -144,7 +149,7 @@ caps.handback.revision: 37
 |以資料擴展模型，或更新模型中的資料|[處理採礦模型](../../analysis-services/data-mining/process-a-mining-model.md)|  
 |使用 OLAP 模型|[建立資料採礦維度](../../analysis-services/data-mining/create-a-data-mining-dimension.md)|  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [資料庫物件 &#40;Analysis Services - 多維度資料&#41;](../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   
   

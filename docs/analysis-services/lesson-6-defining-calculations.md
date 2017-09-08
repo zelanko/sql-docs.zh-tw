@@ -1,24 +1,29 @@
 ---
-title: "第 6 課：定義計算 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: "第 6 課： 定義計算 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: e0a1e354-e879-4eb8-bb2b-6c3809e32cb6
 caps.latest.revision: 19
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 19
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f31c731b89eeb6673f931dd90adc7c11b1373cbf
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 第 6 課：定義計算
+# <a name="lesson-6-defining-calculations"></a>第 6 課：定義計算
 在這一課中，您要學習定義計算，它們是多維度運算式 (MDX) 運算式或指令碼。 計算可讓您定義導出成員、命名集，以及執行其他指令碼命令，以便擴充 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Cube 的功能。 例如，您可以執行指令碼命令，先定義 Subcube，然後再將計算指派給 Subcube 中的資料格。  
   
 當您在 Cube 設計師定義新的計算時，這些計算會加入至 Cube 設計師之 [計算] 索引標籤的 [指令碼組合管理] 窗格，而特定計算類型的欄位則是顯示在 [計算運算式] 窗格的計算表單中。 計算是以它們列示在 [指令碼組合管理] 窗格的順序來執行的。 您可以用滑鼠右鍵按一下特定的計算，然後選取 [上移] 或 [下移]；或者按一下特定的計算，然後在 [計算] 索引標籤的工具列上，按一下 [上移] 或 [下移] 圖示，重新排列計算。  
@@ -39,23 +44,23 @@ caps.handback.revision: 19
 > [!IMPORTANT]  
 > 在 [計算] 索引標籤上，計算指令碼是以 CALCULATE 命令開頭。 CALCULATE 命令會控制 Cube 中的資料格彙總，不過，只有在您想要手動指定 Cube 資料格的彙總方式時，才編輯這個命令。  
   
-如需詳細資訊，請參閱[計算](../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md)和[多維度模型中的計算](../analysis-services/multidimensional-models/calculations-in-multidimensional-models.md)。  
+如需詳細資訊，請參閱 [計算](../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md)和 [多維度模型中的計算](../analysis-services/multidimensional-models/calculations-in-multidimensional-models.md)。  
   
 > [!NOTE]  
-> 此教學課程中，所有課程已完成的專案都可在線上取得。 您可以從先前的課程中使用已完成的專案做為起點，向前跳到任何課程。 [按一下這裡](http://go.microsoft.com/fwlink/?LinkID=221866)，下載此教學課程隨附的範例專案。  
+> 此教學課程中，所有課程已完成的專案都可在線上取得。 您可以從先前的課程中使用已完成的專案做為起點，向前跳到任何課程。 [按一下這裡](http://go.microsoft.com/fwlink/?LinkID=221866) ，下載此教學課程隨附的範例專案。  
   
 這一課包含下列工作：  
   
-[定義導出成員](../analysis-services/defining-calculated-members.md)  
+[定義導出成員](../analysis-services/lesson-6-1-defining-calculated-members.md)  
 在這項工作中，您要學習定義導出成員。  
   
-[定義命名集](../analysis-services/defining-named-sets.md)  
+[定義命名集](../analysis-services/lesson-6-2-defining-named-sets.md)  
 在這項工作中，您要學習定義命名集。  
   
-## 下一課  
+## <a name="next-lesson"></a>下一課  
 [第 7 課：定義關鍵效能指標 &#40;KPI&#41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
 [Analysis Services 教學課程案例](../analysis-services/analysis-services-tutorial-scenario.md)  
 [多維度模型化 &#40;Adventure Works 教學課程&#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
 [建立命名集](../analysis-services/multidimensional-models/create-named-sets.md)  
@@ -63,3 +68,4 @@ caps.handback.revision: 19
   
   
   
+

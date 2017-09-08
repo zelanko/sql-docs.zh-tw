@@ -1,24 +1,29 @@
 ---
-title: "啟動或停止 Power Pivot for SharePoint Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "啟動或停止 Power Pivot for SharePoint 伺服器 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e38e6366-9f20-4db0-b2a8-da7d5adf00eb
 caps.latest.revision: 8
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 8
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5f512a256765bbba4b1f641fb9752bd09fae4696
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 啟動或停止 Power Pivot for SharePoint Server
+# <a name="start-or-stop-a-power-pivot-for-sharepoint-server"></a>啟動或停止 Power Pivot for SharePoint Server
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系統服務和 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] 執行個體會在相同的本機應用程式伺服器上一起運作，以支援 SharePoint 伺服陣列中協調的要求和資料處理。  
   
  本主題包含下列幾節：  
@@ -35,13 +40,13 @@ caps.handback.revision: 8
  只有當您要診斷或疑難排解問題時，Analysis Services 伺服器才應該獨自執行。 但是在其他情況下，此伺服器則需要在相同的伺服器上以本機執行的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系統服務。  
   
 ##  <a name="startstop"></a> 啟動或停止服務  
- 請務必使用管理中心來啟動或停止 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系統服務或 Analysis Services 伺服器執行個體。 管理中心可讓您從相同的頁面一起啟動或停止服務。 此外，管理中心也會使用稱為**一個或多個服務已經啟動或停止**的計時器工作，以重新啟動它認為應該執行的服務。 如果您使用非 SharePoint 工具停止 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系統服務或 Analysis Services，此服務會在計時器工作執行時重新啟動。  
+ 請務必使用管理中心來啟動或停止 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系統服務或 Analysis Services 伺服器執行個體。 管理中心可讓您從相同的頁面一起啟動或停止服務。 此外，管理中心也會使用稱為 **一個或多個服務已經啟動或停止** 的計時器工作，以重新啟動它認為應該執行的服務。 如果您使用非 SharePoint 工具停止 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系統服務或 Analysis Services，此服務會在計時器工作執行時重新啟動。  
   
  啟動和停止服務是套用至實體服務執行個體的動作。 如果伺服陣列中有其他 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 伺服器，在伺服陣列中的其他伺服器會繼續接受 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料的要求。  
   
  您無法同時啟動或停止在伺服陣列的所有實體服務。 您必須選取每部伺服器，然後啟動或停止特定服務。  
   
- 您無法啟動、暫停或停止特定 Web 應用程式的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系統服務，但是您可以從預設連線清單移除服務，使其無法使用。 如需詳細資訊，請參閱[在管理中心將 Power Pivot 服務應用程式連接到 SharePoint Web 應用程式](../../analysis-services/power-pivot-sharepoint/connect power pivot service app to sharepoint web app in ca.md)。  
+ 您無法啟動、暫停或停止特定 Web 應用程式的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系統服務，但是您可以從預設連線清單移除服務，使其無法使用。 如需詳細資訊，請參閱[在管理中心將 Power Pivot 服務應用程式連接到 SharePoint Web 應用程式](../../analysis-services/power-pivot-sharepoint/connect-power-pivot-service-app-to-sharepoint-web-app-in-ca.md)。  
   
 1.  在管理中心的 [系統設定] 中，按一下 [管理伺服器上的服務]。  
   
@@ -62,7 +67,7 @@ caps.handback.revision: 8
 |對於查詢或資料重新整理的新要求|如果您停止伺服陣列中唯一的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 伺服器，將不會處理對 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料的新要求，而且對於資料的要求將會導致找不到資料的錯誤。<br /><br /> 如果您有額外的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 伺服器，要求將會移至其中一個可用的伺服器。|  
 |使用量資料|停止服務時將不會收集使用量資料。|  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [設定 Power Pivot 服務帳戶](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md)  
   
   

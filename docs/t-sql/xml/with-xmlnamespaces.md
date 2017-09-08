@@ -1,0 +1,111 @@
+---
+title: "WITH XMLNAMESPACES (TRANSACT-SQL) |Microsoft 文件"
+ms.custom: 
+ms.date: 06/10/2016
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- WITH_XMLNAMESPACES_TSQL
+- WITH XMLNAMESPACES
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- adding XML namespaces
+- XML namespace declarations [SQL Server]
+- clauses [SQL Server], WITH XMLNAMESPACES
+- WITH XMLNAMESPACES clause
+- declaring XML namespaces
+ms.assetid: 3b32662b-566f-454d-b7ca-e247002a9a0b
+caps.latest.revision: 17
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: c34d67133c083c0dba5325548971997e8b95d6c5
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
+---
+# <a name="with-xmlnamespaces"></a>WITH XMLNAMESPACES
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+
+  宣告一或多個 XML 命名空間。  
+  
+  
+ ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+  
+## <a name="syntax"></a>語法  
+  
+```  
+  
+WITH XMLNAMESPACES ( <XML namespace declaration item>  
+[ { , <XML namespace declaration item> }...] )   
+  
+<XML namespace declaration item> ::=  
+<xml_namespace_uri> AS <xml_namespace_prefix>  
+| <XML default namespace declaration item>  
+<xml_namespace_uri> ::= <character string literal>  
+```  
+  
+```  
+  
+<xml_namespace_prefix> ::= <identifier>  
+```  
+  
+```  
+  
+<XML default namespace declaration item> ::=  
+DEFAULT <xml_namespace_uri>  
+  
+```  
+  
+## <a name="arguments"></a>引數  
+ *_ u*  
+ 識別所宣告之 XML 命名空間的統一資源識別碼 (URI)。 *_ u*是 SQL 字串。  
+  
+ *xml_namespace_prefix*  
+ 指定要對應並且與指定的命名空間 URI 值相關聯的前置詞*_ u*。 *xml_namespace_prefix*必須[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]識別項。  
+  
+## <a name="remarks"></a>備註  
+ 在另外還包含一般資料表運算式的陳述式中使用 WITH XMLNAMESPACES 子句時，陳述式中的 WITH XMLNAMESPACES 子句必須位在一般資料表運算式之前。  
+  
+ 當您使用 WITH XMLNAMESPACES 子句時，下列一般語法規則適用：  
+  
+-   每一個 XML 命名空間宣告必須包含至少一個 XML 預設命名空間宣告項目。  
+  
+-   使用的每一個 XML 命名空間前置詞必須是非移植 (non-colonized) 名稱 (NCName)，其中冒號字元 (:) 不是名稱的一部分。  
+  
+-   您不能定義兩次命名空間前置詞。  
+  
+-   XML 命名空間前置詞和 URI 有區分大小寫。  
+  
+-   無法宣告 XML 命名空間前置詞 `xmlns`。  
+  
+-   XML 命名空間前置詞 `xml` 不能以命名空間 URI `'http://www.w3.org/XML/1998/namespace'` 以外的命名空間覆寫，而且這個 URI 不能被指派不同的前置詞。  
+  
+-   當 ELEMENTS XSINIL 指示詞使用於查詢時，不能重新宣告 XML 命名空間前置詞 `xsi`。  
+  
+-   URI 字串值是根據目前資料庫定序字碼頁來編碼，在內部是轉換成 Unicode。  
+  
+-   XML 命名空間 URI 是泛空白字元摺疊遵循 XSD 空白摺疊規則用於**xs: anyuri**。 另外，請注意，在 XML 命名空間 URI 值上不執行 entitization 或 deentitization。  
+  
+-   將檢查 XML 命名空間 URI 是否有無效的 XML 1.0 字元，如果有找到 (例如，U+0007)，就會引發錯誤。  
+  
+-   XML 命名空間 URI (在摺疊所有空白之後) 不得為長度零的字串，否則會發生「無效空白命名空間 URI」錯誤。  
+  
+-   在 WITH 子句的內容中已保留 XMLNAMESPACES 關鍵字。  
+  
+## <a name="examples"></a>範例  
+ 如需範例，請參閱[查詢使用 WITH XMLNAMESPACES 新增命名空間](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)。  
+  
+## <a name="see-also"></a>另請參閱  
+ [XQuery 語言參考 &#40;SQL Server&#41;](../../xquery/xquery-language-reference-sql-server.md)  
+  
+  
+

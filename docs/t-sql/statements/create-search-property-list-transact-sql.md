@@ -1,0 +1,141 @@
+---
+title: "建立搜尋屬性清單 (TRANSACT-SQL) |Microsoft 文件"
+ms.custom: 
+ms.date: 04/10/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- CREATE_SEARCH_PROPERTY_LIST_TSQL
+- CREATE SEARCH
+- CREATE_SEARCH_TSQL
+- CREATE_SEARCH_PROPERTY_TSQL
+- CREATE SEARCH PROPERTY
+- CREATE SEARCH PROPERTY LIST
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- full-text search [SQL Server], search property lists
+- search property lists [SQL Server], creating
+- CREATE SEARCH PROPERTY LIST statement
+ms.assetid: 5440cbb8-3403-4d27-a2f9-8e1f5a1bc12b
+caps.latest.revision: 29
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: b055be4f948b62553ddbabb40613971a0e5619d8
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
+---
+# <a name="create-search-property-list-transact-sql"></a>CREATE SEARCH PROPERTY LIST (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+
+  建立新的搜尋屬性清單。 搜尋屬性清單用來指定您想要包含在全文檢索索引中的一個或多個搜尋屬性。  
+  
+ ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+  
+## <a name="syntax"></a>語法  
+  
+```  
+CREATE SEARCH PROPERTY LIST new_list_name  
+   [ FROM [ database_name. ] source_list_name ]  
+   [ AUTHORIZATION owner_name ]  
+;  
+```  
+  
+## <a name="arguments"></a>引數  
+ *new_list_name*  
+ 這是新搜尋屬性清單的名稱。 *new_list_name*是最多 128 個字元的識別碼。 *new_list_name*必須是目前資料庫中的所有屬性清單中唯一的且符合識別碼的規則。 *new_list_name*將在建立全文檢索索引時使用。  
+  
+ *database_name*  
+ 所指定之屬性清單的資料庫名稱*source_list_name*所在。 如果未指定， *database_name*預設為目前的資料庫。  
+  
+ *database_name*必須指定現有資料庫的名稱。 目前連接的登入必須與所指定的資料庫中的現有使用者識別碼相關聯*database_name*。 您也必須擁有所需[權限](#Permissions)在資料庫上。  
+  
+ *source_list_name*  
+ 指定新的屬性清單由複製現有的屬性清單從*database_name*。 如果*source_list_name*不存在，CREATE SEARCH PROPERTY LIST 會失敗並發生錯誤。 中的搜尋屬性*source_list_name*會繼承*new_list_name*。  
+  
+ 授權*owner_name*  
+ 指定擁有屬性清單的使用者或角色的名稱。 *owner_name*必須是其中目前的使用者是成員，或目前使用者必須具有 IMPERSONATE 權限的角色名稱*owner_name*。 若未指定，擁有權便歸目前使用者。  
+  
+> [!NOTE]  
+>  來變更擁有者，請使用[ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式。  
+  
+## <a name="remarks"></a>備註  
+  
+> [!NOTE]  
+>  如需屬性的資訊清單一般情況下，請參閱[使用搜索屬性清單搜索文件屬性](../../relational-databases/search/search-document-properties-with-search-property-lists.md)。  
+  
+ 根據預設，新的搜尋屬性清單是空的，而且您必須改變它，才能手動加入一個或多個搜尋屬性。 或者，您也可以複製現有的搜尋屬性清單。 在此情況下，新的清單會繼承其來源的搜尋屬性，但是您可以改變新的清單以加入或移除搜尋屬性。 下次完整母體擴展時搜尋屬性清單中的任何屬性都會包含在全文檢索索引中。  
+  
+ 在下列任何情況下，CREATE SEARCH PROPERTY LIST 陳述式會失敗：  
+  
+-   如果所指定的資料庫*database_name*不存在。  
+  
+-   如果所指定的清單*source_list_name*不存在。  
+  
+-   如果您沒有正確的權限。  
+  
+ **若要加入或移除清單中的屬性**  
+  
+-   [ALTER SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/alter-search-property-list-transact-sql.md)  
+  
+-   **若要卸除屬性清單**  
+  
+-   [DROP SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/drop-search-property-list-transact-sql.md)  
+  
+##  <a name="Permissions"></a> Permissions  
+ 需要目前資料庫的 CREATE FULLTEXT CATALOG 權限，以及從中複製來源屬性清單的任何資料庫的 REFERENCES 權限。  
+  
+> [!NOTE]  
+>  需要 REFERENCES 權限才能將清單與全文檢索索引產生關聯。 需要 CONTROL 權限才能新增和移除屬性或卸除清單。 屬性清單擁有者可以授與清單的 REFERENCES 或 CONTROL 權限。 具有 CONTROL 權限的使用者也可以將 REFERENCES 權限授與其他使用者。  
+  
+## <a name="examples"></a>範例  
+  
+### <a name="a-creating-an-empty-property-list-and-associating-it-with-an-index"></a>A. 建立空白屬性清單，並將它與索引建立關聯  
+ 下列範例會建立名為 `DocumentPropertyList` 的新搜尋屬性清單。 然後此範例使用[ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md)陳述式來將新的屬性清單與全文檢索索引產生關聯`Production.Document`資料表中`AdventureWorks`資料庫，而不啟動母體擴展。  
+  
+> [!NOTE]  
+>  如需將數個預先定義的已知搜尋屬性加入至這個搜尋屬性清單的範例，請參閱[ALTER SEARCH PROPERTY LIST &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-search-property-list-transact-sql.md). 在將搜尋屬性加入至清單之後，資料庫管理員需要使用另一個 ALTER FULLTEXT INDEX 陳述式搭配 START FULL POPULATION 子句。  
+  
+```  
+CREATE SEARCH PROPERTY LIST DocumentPropertyList;  
+GO  
+USE AdventureWorks2012;  
+ALTER FULLTEXT INDEX ON Production.Document   
+   SET SEARCH PROPERTY LIST DocumentPropertyList  
+   WITH NO POPULATION;   
+GO   
+```  
+  
+### <a name="b-creating-a-property-list-from-an-existing-one"></a>B. 從現有屬性清單建立屬性清單  
+ 下列範例會從範例 A 所建立的清單 `JobCandidateProperties` (此清單與 `DocumentPropertyList` 資料庫中的全文檢索索引相關聯) 建立新的搜尋屬性清單 `AdventureWorks2012`。 然後此範例使用 ALTER FULLTEXT INDEX 陳述式，將新屬性清單與 `HumanResources.JobCandidate` 資料庫中 `AdventureWorks2012` 資料表的全文檢索索引產生關聯。 這個 ALTER FULLTEXT INDEX 陳述式會啟動完整母體擴展，這是 SET SEARCH PROPERTY LIST 子句的預設行為。  
+  
+```  
+CREATE SEARCH PROPERTY LIST JobCandidateProperties 
+FROM AdventureWorks2012.DocumentPropertyList;  
+GO  
+ALTER FULLTEXT INDEX ON HumanResources.JobCandidate   
+   SET SEARCH PROPERTY LIST JobCandidateProperties;  
+GO  
+  
+```  
+  
+## <a name="see-also"></a>另請參閱  
+ [ALTER SEARCH PROPERTY LIST &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-search-property-list-transact-sql.md)   
+ [DROP SEARCH PROPERTY LIST &#40;TRANSACT-SQL &#41;](../../t-sql/statements/drop-search-property-list-transact-sql.md)   
+ [sys.registered_search_properties &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md)   
+ [sys.registered_search_property_lists &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md)   
+ [sys.dm_fts_index_keywords_by_property &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-property-transact-sql.md)   
+ [使用搜索屬性清單搜索文件屬性](../../relational-databases/search/search-document-properties-with-search-property-lists.md)   
+ [尋找搜尋屬性的屬性集 GUID 與屬性整數識別碼](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md)  
+  
+  
+

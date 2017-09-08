@@ -1,27 +1,32 @@
 ---
-title: "線性迴歸模型查詢範例 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "線性迴歸演算法 [Analysis Services]"
-  - "線性迴歸 [Analysis Services]"
-  - "內容查詢 [DMX]"
+title: "線性迴歸模型查詢範例 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- linear regression algorithms [Analysis Services]
+- linear regression [Analysis Services]
+- content queries [DMX]
 ms.assetid: fd3cf312-57a1-44b6-b772-fce6fc1c26d7
 caps.latest.revision: 21
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 36f1f595cd087ff05582250c205681b2b7794702
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 線性迴歸模型查詢範例
+# <a name="linear-regression-model-query-examples"></a>線性迴歸模型查詢範例
   當您針對資料採礦模型建立查詢時，可以建立內容查詢來提供有關分析期間所發現之模式的詳細資料，或是建立預測查詢來使用模型中的模式，為新的資料進行預測。 例如，內容查詢可能會提供有關迴歸公式的其他詳細資料，而預測查詢則會告訴您新資料點是否符合模型。 您也可以使用查詢來擷取有關模型的中繼資料。  
   
  本節說明如何針對以 Microsoft 線性迴歸演算法為基礎的模型來建立查詢。  
@@ -44,7 +49,7 @@ caps.handback.revision: 21
  [搭配迴歸模型使用預測函數](#bkmk_Query5)  
   
 ##  <a name="bkmk_top"></a> 尋找有關線性迴歸模型的資訊  
- 線性迴歸模型的結構相當簡單：採礦模型將資料表示為定義迴歸公式的單一節點。 如需詳細資訊，請參閱[羅吉斯迴歸模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining model content for logistic regression models.md)。  
+ 線性迴歸模型的結構相當簡單：採礦模型將資料表示為定義迴歸公式的單一節點。 如需詳細資訊，請參閱 [羅吉斯迴歸模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)。  
   
  [回頁首](#bkmk_top)  
   
@@ -64,14 +69,14 @@ WHERE MODEL_NAME = 'TM_PredictIncome'
 |COMPLEXITY_PENALTY=0.9,<br /><br /> MAXIMUM_INPUT_ATTRIBUTES=255,<br /><br /> MAXIMUM_OUTPUT_ATTRIBUTES=255,<br /><br /> MINIMUM_SUPPORT=10,<br /><br /> SCORE_METHOD=4,<br /><br /> SPLIT_METHOD=3,<br /><br /> FORCE_REGRESSOR=|  
   
 > [!NOTE]  
->  參數設定「`FORCE_REGRESSOR =`」表示目前用於 FORCE_REGRESSOR 參數的值為 Null 值。  
+>  參數設定「`FORCE_REGRESSOR =` 」表示目前用於 FORCE_REGRESSOR 參數的值為 Null 值。  
   
  [回頁首](#bkmk_top)  
   
 ###  <a name="bkmk_Query2"></a> 範例查詢 2：擷取模型的迴歸公式  
- 下列查詢會針對利用＜ [Basic Data Mining Tutorial](../Topic/Basic%20Data%20Mining%20Tutorial.md)＞中所使用之相同目標郵寄資料來源所建立的線性迴歸模型，傳回採礦模型內容。 此模型會根據年齡預測客戶收入。  
+ 下列查詢會針對利用＜ [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)＞中所使用之相同目標郵寄資料來源所建立的線性迴歸模型，傳回採礦模型內容。 此模型會根據年齡預測客戶收入。  
   
- 查詢會傳回包含迴歸公式之節點的內容。 每個變數和係數都儲存在 NODE_DISTRIBUTION 資料表的個別資料列中。 如果您要檢視完整的迴歸公式，使用 [Microsoft 樹狀檢視器](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)，按一下 [(所有)] 節點，然後開啟 [採礦圖例]。  
+ 查詢會傳回包含迴歸公式之節點的內容。 每個變數和係數都儲存在 NODE_DISTRIBUTION 資料表的個別資料列中。 如果您要檢視完整的迴歸公式，使用 [Microsoft 樹狀檢視器](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)，按一下 **(All)** 節點，然後開啟 **[採礦圖例]**。  
   
 ```  
 SELECT FLATTENED NODE_DISTRIBUTION as t  
@@ -79,7 +84,7 @@ FROM LR_PredictIncome.CONTENT
 ```  
   
 > [!NOTE]  
->  如果您使用 `SELECT <column name> from NODE_DISTRIBUTION` 這類的查詢來參考巢狀資料表的個別資料行，某些資料行 (例如，**SUPPORT** 或 **PROBABILITY**) 必須括在括號內，以便與同名的保留關鍵字區別。  
+>  如果您使用 `SELECT <column name> from NODE_DISTRIBUTION`之類的查詢參考巢狀資料表的個別資料行，某些資料行 (例如， **SUPPORT** 或 **PROBABILITY**) 必須括在刮號內，以便與同名的保留關鍵字區別。  
   
  預期的結果：  
   
@@ -96,7 +101,7 @@ FROM LR_PredictIncome.CONTENT
   
  `Yearly Income = 57,220.919 + 471.688 * (Age - 45.427)`  
   
- 您可以發現，在 [採礦圖例] 中，有些數字會被捨入，不過，NODE_DISTRIBUTION 資料表和 [採礦圖例] 基本上包含相同的值。  
+ 您可以發現，在 **[採礦圖例]**中，有些數字會被捨入，不過，NODE_DISTRIBUTION 資料表和 **[採礦圖例]** 基本上包含相同的值。  
   
  VALUETYPE 資料行中的值會告訴您每個資料列中包含哪種資訊；如果您要以程式設計方式處理結果，哪個比較實用。 下表顯示針對線性迴歸公式輸出的值類型。  
   
@@ -112,7 +117,7 @@ FROM LR_PredictIncome.CONTENT
 |9 (統計資料)|  
 |11 (截距)|  
   
- 如需迴歸模型每個值類型之意義的詳細資訊，請參閱[線性迴歸模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)。  
+ 如需迴歸模型每個值類型之意義的詳細資訊，請參閱 [線性迴歸模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)。  
   
  [回頁首](#bkmk_top)  
   
@@ -137,11 +142,11 @@ FROM LR_PredictIncome.CONTENT
   
  [回頁首](#bkmk_top)  
   
-## 從線性迴歸模型進行預測  
+## <a name="making-predictions-from-a-linear-regression-model"></a>從線性迴歸模型進行預測  
  您可以使用資料採礦設計師中的 [採礦模型預測] 索引標籤，在線性迴歸模型上建立預測查詢。 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 和 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中都提供預測查詢產生器。  
   
 > [!NOTE]  
->  您也可以使用適用於 Excel 的 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 資料採礦增益集或適用於 Excel 的 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 資料採礦增益集，在迴歸模型上建立查詢。 即使適用於 Excel 的資料採礦增益集沒有建立迴歸模型，您也可以瀏覽並查詢儲存在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體上的任何採礦模型。  
+>  您也可以使用適用於 Excel 的 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 資料採礦增益集或適用於 Excel 的 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 資料採礦增益集，在迴歸模型上建立查詢。 即使適用於 Excel 的資料採礦增益集沒有建立迴歸模型，您也可以瀏覽並查詢儲存在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]執行個體上的任何採礦模型。  
   
  [回頁首](#bkmk_top)  
   
@@ -184,7 +189,7 @@ NATURAL PREDICTION JOIN
   
  [回頁首](#bkmk_top)  
   
-## 預測函數的清單  
+## <a name="list-of-prediction-functions"></a>預測函數的清單  
  所有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 演算法都支援一組常用的函數。 不過， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線性迴歸演算法支援下表所列出的其他函數。  
   
 |||  
@@ -200,7 +205,7 @@ NATURAL PREDICTION JOIN
   
  如需所有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 演算法共用之函數的清單，請參閱[資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)。 如需如何使用這些函數的詳細資訊，請參閱[資料採礦延伸模組 &#40;DMX&#41; 函數參考](../../dmx/data-mining-extensions-dmx-function-reference.md)。  
   
-## 請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [Microsoft 線性迴歸演算法](../../analysis-services/data-mining/microsoft-linear-regression-algorithm.md)   
  [資料採礦查詢](../../analysis-services/data-mining/data-mining-queries.md)   
  [Microsoft 線性迴歸演算法技術參考](../../analysis-services/data-mining/microsoft-linear-regression-algorithm-technical-reference.md)   

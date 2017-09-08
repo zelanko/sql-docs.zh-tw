@@ -1,31 +1,36 @@
 ---
-title: "SystemGetClusterCrossValidationResults (Analysis Services - 資料採礦) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "SystemGetClusterCrossValidationResults"
-  - "預存程序 [Analysis Services], 資料採礦"
-  - "交叉驗證 [資料採礦]"
+title: "SystemGetClusterCrossValidationResults (Analysis Services-資料採礦) |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- SystemGetClusterCrossValidationResults
+- stored procedures [Analysis Services], data mining
+- cross-validation [data mining]
 ms.assetid: 79de9b81-9f2e-4f20-ace9-e3b19d6a9759
 caps.latest.revision: 21
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 21
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1c1a4bf1ffb2768e21c323fd8abc80c1e0706b7b
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# SystemGetClusterCrossValidationResults (Analysis Services - 資料採礦)
+# <a name="systemgetclustercrossvalidationresults-analysis-services---data-mining"></a>SystemGetClusterCrossValidationResults (Analysis Services - 資料採礦)
   將採礦結構分割成指定數目的交叉區段、定型每一個資料分割的模型，然後傳回每一個資料分割的精確度度量。  
   
- **注意**：這個預存程序只能搭配至少包含一個叢集模型的採礦結構使用。 若要交叉驗證非叢集模型，您必須使用 [SystemGetCrossValidationResults &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)。  
+ **注意** ：這個預存程序只能搭配至少包含一個叢集模型的採礦結構使用。 若要交叉驗證非叢集模型，您必須使用 [SystemGetCrossValidationResults &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -37,7 +42,7 @@ SystemGetClusterCrossValidationResults(
 <test list>])  
 ```  
   
-## 引數  
+## <a name="arguments"></a>引數  
  *採礦結構*  
  目前資料庫中的採礦結構名稱。  
   
@@ -54,9 +59,9 @@ SystemGetClusterCrossValidationResults(
  (選擇性)  
   
  *摺疊計數*  
- 指定要將資料集分成的資料分割數目的整數。 最小值為 2。 摺疊的最大數目為**最大整數**或是案例數，以較低者為準。  
+ 指定要將資料集分成的資料分割數目的整數。 最小值為 2。 摺疊的最大數目為 **最大整數** 或是案例數，以較低者為準。  
   
- 每一個資料分割都大概包含這個案例數：最大案例數/摺疊計數。  
+ 每一個資料分割都大概包含這個案例數： *最大案例數*/*摺疊計數*。  
   
  沒有預設值。  
   
@@ -77,11 +82,11 @@ SystemGetClusterCrossValidationResults(
  *測試清單*  
  指定測試選項的字串。  
   
- **注意**：這個參數保留給未來使用。  
+ **注意** ：這個參數保留給未來使用。  
   
  (選擇性)  
   
-## 傳回類型  
+## <a name="return-type"></a>傳回類型  
  傳回類型資料表包含每一個個別資料分割的分數及所有模型的彙總。  
   
  下表描述傳回的資料行。  
@@ -90,19 +95,19 @@ SystemGetClusterCrossValidationResults(
 |-----------------|-----------------|  
 |ModelName|已測試的模型名稱。|  
 |AttributeName|可預測的資料行名稱。 若為叢集模型，一律為 **null**。|  
-|AttributeState|可預測資料行內的指定目標值。 若為叢集模型，一律為 **null**。|  
+|AttributeState|可預測資料行內的指定目標值。 若為叢集模型，一律為 **null.**|  
 |PartitionIndex|以 1 為基準的索引，可識別套用結果的資料分割。|  
 |PartitionSize|指示每一個資料分割內包含了多少案例數的整數。|  
 |測試|已執行的測試類型。|  
 |[量值]|測試所傳回之量值的名稱。 每一個模型的量值都取決於可預測值的類型。 如需每個量值的定義，請參閱[交叉驗證 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)。<br /><br /> 如需每一個可預測類型所傳回的量值清單，請參閱[交叉驗證報表中的量值](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md)。|  
 |Value|指定之測試量值的值。|  
   
-## 備註  
+## <a name="remarks"></a>備註  
  若要傳回整個資料集的精確度度量，請使用 [SystemGetClusterAccuracyResults &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)。  
   
- 此外，如果採礦模型已經分割成若干摺疊，您可以使用 [SystemGetClusterAccuracyResults &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md) 來略過處理，並只傳回交叉預測的結果。  
+ 此外，如果採礦模型已經分割成若干摺疊，您可以使用 [SystemGetClusterAccuracyResults &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)。  
   
-## 範例  
+## <a name="examples"></a>範例  
  下列範例示範如何將採礦結構分割成三個摺疊，然後測試與此採礦結構有關的兩個群集模型。  
   
  程式碼的第三行會列出您想要測試的特定採礦模型。 如果您未指定此清單，便會使用與此結構有關的所有群集模型。  
@@ -122,7 +127,7 @@ CALL SystemGetClusterCrossValidationResults(
   
  範例結果：  
   
-|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|測試|量值|Value|  
+|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|測試|[量值]|Value|  
 |---------------|-------------------|--------------------|--------------------|-------------------|----------|-------------|-----------|  
 |叢集 1|||1|3025|群集|案例概似值|0.930524511864121|  
 |叢集 1|||2|3025|群集|案例概似值|0.919184178430778|  
@@ -131,12 +136,12 @@ CALL SystemGetClusterCrossValidationResults(
 |群集 2|||2|1288|群集|案例概似值|0.934865535691068|  
 |群集 2|||3|1288|群集|案例概似值|0.924724595688798|  
   
-## 需求  
- 從 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 開始，交叉驗證只能在 [!INCLUDE[ssEnterprise](../../includes/ssenterprise-md.md)] 中使用。  
+## <a name="requirements"></a>需求  
+ 從 [!INCLUDE[ssEnterprise](../../includes/ssenterprise-md.md)] 開始，交叉驗證只能在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]中使用。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [SystemGetCrossValidationResults &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)   
- [SystemGetAccuracyResults &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
+ [SystemGetAccuracyResults &#40;Analysis Services-資料採礦 &#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
  [SystemGetClusterCrossValidationResults](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
  [SystemGetClusterAccuracyResults &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
   

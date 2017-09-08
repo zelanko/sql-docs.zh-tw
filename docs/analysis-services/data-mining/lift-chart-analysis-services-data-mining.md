@@ -1,30 +1,35 @@
 ---
-title: "增益圖 (Analysis Services - 資料採礦) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "測試資料採礦模型"
-  - "精確度, 圖表"
-  - "檢視採礦精確度"
-  - "增益圖 [Analysis Services]"
-  - "收益圖 [Analysis Services]"
-  - "精確度測試 [資料採礦]"
+title: "增益圖 (Analysis Services-資料採礦) |Microsoft 文件"
+ms.custom: 
+ms.date: 03/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- testing data mining models
+- accuracy, charting
+- viewing mining accuracy
+- lift charts [Analysis Services]
+- profit charts [Analysis Services]
+- accuracy testing [data mining]
 ms.assetid: ab77eca1-bd48-4fef-b27f-ff5b648e0501
 caps.latest.revision: 55
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 55
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2b939d468a964160cd84dbdb60fcae97d4f2ee6a
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 增益圖 (Analysis Services - 資料採礦)
+# <a name="lift-chart-analysis-services---data-mining"></a>增益圖 (Analysis Services - 資料採礦)
   「增益圖」以圖形表示與隨機猜測相較下採礦模型所提供的改進，並測量「增益」分數的相關變更。 藉由比較不同模型的增益分數，您可以判斷哪一個模型是最佳選擇。 您也可以判斷模型的預測在哪個點變得較沒有用。 例如，藉由檢閱增益圖，您了解到促銷活動可能只對 30% 的客戶有效，並使用該圖來限制行銷活動的範圍。  
   
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料採礦中，增益圖可以比較多個具有相同可預測屬性之模型的精確度。 您也可以評估單一結果 (可預測屬性的單一值) 或所有結果 (指定屬性的所有值) 的預測精確度。  
@@ -48,12 +53,12 @@ caps.handback.revision: 55
   
  [回到頁首](#bkmk_Top)  
   
-### 含有目標值的增益圖  
- 下圖顯示您在[資料採礦基本教學課程](../Topic/Basic%20Data%20Mining%20Tutorial.md)中建立之**目標郵寄**模型的增益圖。 在這個圖表中，目標屬性是 [Bike Buyer] 而目標值是 1，表示預期客戶會購買一台自行車。 因此，這個增益圖會顯示識別這些潛在客戶時，此模型所提供的改進。  
+### <a name="lift-chart-with-target-value"></a>含有目標值的增益圖  
+ 下圖顯示您在 **資料採礦基本教學課程** 中建立之 [目標郵寄](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)模型的增益圖。 在這個圖表中，目標屬性是 [Bike Buyer] 而目標值是 1，表示預期客戶會購買一台自行車。 因此，這個增益圖會顯示識別這些潛在客戶時，此模型所提供的改進。  
   
  此圖表包含多個以相同資料為基礎的模型。 其中一個模型已自訂為鎖定特定客戶。 您可以對用於定型模式的資料加入篩選，來自訂模型。 這項篩選會將定型和評估所使用的案例限制為 30 歲以下的客戶。 請注意，篩選的其中一個影響是基本模型和篩選模型使用不同的資料集，因此增益圖中用於評估的案例數也會不同。 當您解譯預測結果和其他統計資料時，請務必記住這點。  
   
- ![顯示兩個模型的增益圖](../../analysis-services/data-mining/media/newliftchart-tm30-30.gif "顯示兩個模型的增益圖")  
+ ![增益圖顯示兩個模型](../../analysis-services/data-mining/media/newliftchart-tm30-30.gif "增益圖顯示兩個模型")  
   
  圖表的 X 軸代表用來比較預測之測試資料集的百分比。 圖表的 Y 軸代表預測值的百分比。  
   
@@ -75,7 +80,7 @@ caps.handback.revision: 55
   
  [回到頁首](#bkmk_Top)  
   
-#### 解譯結果  
+#### <a name="interpreting-the-results"></a>解譯結果  
  根據這些結果，您可以了解到，測量 30% 的所有案例時，一般模型 [目標郵寄全部] 就可以預測 47.40% 之目標母體的自行車購買行為。 換言之，如果您僅寄出目標郵寄給資料庫中 30% 的客戶，可能會連絡到略少於目標對象的一半。 如果您使用了篩選模型，可能會有好一點的結果，並連絡到大約 51% 的目標客戶。  
   
  [預測機率] 的值代表在「可能會購買」案例中包含某位客戶所需的臨界值。 此模型會針對每個案例估計每項預測的精確度並儲存該值，而且您可以使用該值來篩選或鎖定客戶。 例如，若要從可能是購買者的基本模型中識別客戶，您會使用查詢來擷取預測機率至少為 61% 的案例。 若要取得由篩選模型所鎖定的客戶，您會建立擷取符合所有準則之案例的查詢：年齡和至少 46% 的 **PredictProbability** 值。  
@@ -84,19 +89,19 @@ caps.handback.revision: 55
   
  [分數] 的值會透過計算模型在正規化母體擴展中的效能，協助您比較模型。 由於分數越高越好，因此在這個情況下，您可能會決定出鎖定 30 歲以下的客戶是最有效的策略，儘管預測機率較低也一樣。  
   
-#### 如何計算分數？  
+#### <a name="how-is-the-score-calculated"></a>如何計算分數？  
  分數會計算為構成散佈圖之所有點的幾何平均分數，其中 X 軸包含實際值，Y 軸包含預測值，而且每個點都有相關聯的機率。  
   
  任何個別點分數的統計平均就是模型在該點測量到的預測增益。 所有點的平均值會構成模型的分數。  
   
  [回到頁首](#bkmk_Top)  
   
-### 沒有任何目標值之模型的增益圖  
+### <a name="lift-chart-for-model-with-no-target-value"></a>沒有任何目標值之模型的增益圖  
  如果您不指定可預測資料行的狀態，您就會建立下列圖表中所顯示的圖表類型。 這張圖表會針對可預測屬性的所有狀態，顯示此模型的執行效益。 例如，這張圖表會針對可能會購買自行車的客戶與不太可能會購買自行車的客戶，告訴您此模型的預測效益。  
   
  X 軸與指定之可預測資料行的圖表中的 X 軸相同，但 Y 軸現在代表正確預測的百分比。 因此，理想線條是對角線，表示在 50% 的資料中，此模型會正確預測 50% 的案例，亦即可預期的最大值。  
   
- ![顯示正確預測的增益圖](../../analysis-services/data-mining/media/lift1.gif "顯示正確預測的增益圖")  
+ ![增益圖顯示正確的預測](../../analysis-services/data-mining/media/lift1.gif "顯示正確預測的增益圖")  
   
  您可以在圖表中按一下，以便移動垂直灰色列，而且 [採礦圖例] 會顯示整體案例的百分比，以及正確預測之案例的百分比。 例如，如果您將灰色滑動軸定位在 50% 的標示處，[採礦圖例] 就會顯示下列精確度分數。 這些數字是以「資料採礦基本教學課程」中建立的 TM_Decision Tree 模型為基礎。  
   
@@ -109,7 +114,7 @@ caps.handback.revision: 55
   
  [回到頁首](#bkmk_Top)  
   
-### 增益圖的限制  
+### <a name="restrictions-on-lift-charts"></a>增益圖的限制  
  增益圖的可預測屬性必須是離散值。 換句話說，您無法使用增益圖測量預測連續數值之模型的精確度。  
   
  可預測屬性之所有離散值的預測精確度會以單一線條顯示。 如果您想要針對可預測屬性的任何個別值查看預測精確度線條，就必須針對每個目標值建立個別的增益圖。  
@@ -118,10 +123,11 @@ caps.handback.revision: 55
   
  您無法在增益圖或收益圖中顯示時間序列模型。 測量時間序列預測精確度的常見作法，是保留一部分歷程記錄資料，然後將該資料與預測進行比較。 如需詳細資訊，請參閱 [Microsoft 時間序列演算法](../../analysis-services/data-mining/microsoft-time-series-algorithm.md)。  
   
-### 相關內容  
+### <a name="related-content"></a>相關內容  
  [回到頁首](#bkmk_Top)  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [測試和驗證 &#40;資料採礦&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   
+

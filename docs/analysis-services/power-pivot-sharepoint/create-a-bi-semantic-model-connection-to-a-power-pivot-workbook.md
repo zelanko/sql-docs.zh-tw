@@ -1,24 +1,29 @@
 ---
-title: "建立與 Power Pivot 活頁簿的 BI 語意模型連接 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "建立 Power Pivot 活頁簿的 BI 語意模型連接 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b2e3f97f-18a8-42b6-9030-b4f818afc3b9
 caps.latest.revision: 10
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 10
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: f5171b30d867a9e2bd676ff1895ad992b56c5e96
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 建立與 Power Pivot 活頁簿的 BI 語意模型連接
+# <a name="create-a-bi-semantic-model-connection-to-a-power-pivot-workbook"></a>建立與 Power Pivot 活頁簿的 BI 語意模型連接
   使用本主題中的資訊可設定 BI 語意模型連接，該連接會重新導向至相同伺服器陣列中的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿。  
   
  在您建立 BI 語意模型連接並且設定 SharePoint 權限之後，可以將其做為 Excel 或 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 報表的資料來源。  
@@ -38,9 +43,9 @@ caps.handback.revision: 10
 ##  <a name="bkmk_prereq"></a> 檢閱必要條件  
  您必須有 [參與] 以上權限，才能建立 BI 語意模型連接檔案。  
   
- 您必須具有支援 BI 語意模型連接內容類型的文件庫。 如需詳細資訊，請參閱[將 BI 語意模型連接內容類型加入至文件庫 &#40;Power Pivot for SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/add bi semantic model connection content type to library.md)。  
+ 您必須具有支援 BI 語意模型連接內容類型的文件庫。 如需詳細資訊，請參閱[將 BI 語意模型連接內容類型加入至文件庫 &#40;Power Pivot for SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/add-bi-semantic-model-connection-content-type-to-library.md)。  
   
- 您必須知道正在設定 BI 語意模型連接之 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿的 URL (例如 http://adventure-works/shared documents/myworkbook.xlsx)。 活頁簿必須位於相同伺服器陣列中。  
+ 您必須知道的 URL[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]活頁簿，您要設定 BI 語意模型連接 (例如， `http://adventure-works/shared documents/myworkbook.xlsx`)。 活頁簿必須位於相同伺服器陣列中。  
   
  參與連接順序的所有電腦和使用者都必須是在相同網域或受信任網域 (雙向信任) 中。  
   
@@ -48,9 +53,9 @@ caps.handback.revision: 10
   
 1.  在包含 BI 語意模型連接的文件庫中，按一下 SharePoint 功能區上的 [文件]。 按一下 [新文件] 上的向下箭號，然後選取 [BISM 連接檔案] 開啟 [新增 BI 語意模型連接] 頁面。  
   
-     ![SharePoint 文件庫中的新文件子功能表](../../analysis-services/power-pivot-sharepoint/media/ssas-bismconnection-new.gif "SharePoint 文件庫中的新文件子功能表")  
+     ![在 SharePoint 文件庫中的新文件子功能表](../../analysis-services/power-pivot-sharepoint/media/ssas-bismconnection-new.gif "SharePoint 文件庫中的新文件子功能表")  
   
-2.  將 [伺服器] 屬性設為 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿的 SharePoint URL (例如 **http://mysharepoint/shared documents/myWorkbook.xlsx**)。 在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 部署中，可以在伺服器陣列中的任何伺服器上載入資料。 因此，資料來源與 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料的連接只會指定活頁簿的路徑。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系統服務會決定載入資料的伺服器。  
+2.  設定**伺服器**屬性的 SharePoint url[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]活頁簿 (例如， `http://mysharepoint/shared documents/myWorkbook.xlsx`。 在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 部署中，可以在伺服器陣列中的任何伺服器上載入資料。 因此，資料來源與 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料的連接只會指定活頁簿的路徑。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系統服務會決定載入資料的伺服器。  
   
      請不要使用 [資料庫] 屬性；指定 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿的位置時，不會使用這個屬性。  
   
@@ -95,11 +100,11 @@ caps.handback.revision: 10
  如果您使用上一節中的指示建立了「BISM 使用者」群組，則「BISM 使用者」成員的使用者和群組帳戶都會有此活頁簿和 BI 語意模型連接檔案的充足權限 (假設活頁簿使用繼承的權限)。  
   
 ##  <a name="bkmk_next"></a> 後續步驟  
- 在建立 BI 語意模型連接並且確保其安全之後，可以將此連接指定為資料來源。 如需詳細資訊，請參閱[在 Excel 或 Reporting Services 使用 BI 語意模型連接](../../analysis-services/power-pivot-sharepoint/use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)。  
+ 在建立 BI 語意模型連接並且確保其安全之後，可以將此連接指定為資料來源。 如需詳細資訊，請參閱 [在 Excel 或 Reporting Services 使用 BI 語意模型連接](../../analysis-services/power-pivot-sharepoint/use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [Power Pivot BI 語意模型連接 &#40;.bism&#41;](../../analysis-services/power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md)   
- [在 Excel 或 Reporting Services 使用 BI 語意模型連接](../../analysis-services/power-pivot-sharepoint/use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)   
+ [使用 Excel 或 Reporting Services 中的 BI 語意模型連接](../../analysis-services/power-pivot-sharepoint/use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)   
  [建立與表格式模型資料庫的 BI 語意模型連接](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)  
   
   

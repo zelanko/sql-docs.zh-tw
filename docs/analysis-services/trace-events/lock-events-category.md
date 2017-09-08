@@ -1,22 +1,27 @@
 ---
-title: "Lock 事件類別目錄 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: "鎖定事件類別目錄 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: 06427f8e-89bb-4710-a0c1-dc5e42b7e95e
 caps.latest.revision: 6
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 6
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4fbe7cccb4caaa0b87a7f502ed3ca714e3efa515
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# Lock 事件類別目錄
+# <a name="lock-events-category"></a>Lock 事件類別目錄
   鎖定事件的事件類別目錄具有下表所描述的事件類別。  
   
 |Event Class|事件識別碼|說明|  
@@ -29,7 +34,7 @@ caps.handback.revision: 6
   
  如需有關每個鎖定事件類別相關聯之資料行的詳細資訊，請參閱＜ [Lock Events Data Columns](../../analysis-services/trace-events/lock-events-data-columns.md)＞。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [Analysis Services 追蹤事件](../../analysis-services/trace-events/analysis-services-trace-events.md)  
   
   

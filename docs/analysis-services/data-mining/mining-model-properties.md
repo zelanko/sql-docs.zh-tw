@@ -1,29 +1,34 @@
 ---
-title: "採礦模型屬性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/13/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "採礦模型 [Analysis Services], 屬性"
-  - "資料採礦 [Analysis Services], 屬性"
-  - "資料行 [資料採礦], 屬性"
-  - "資料採礦設計師"
-  - "屬性 [資料採礦]"
+title: "採礦模型屬性 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/13/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- mining models [Analysis Services], properties
+- data mining [Analysis Services], properties
+- columns [data mining], properties
+- Data Mining Designer
+- properties [data mining]
 ms.assetid: c5194619-8b31-42be-a95f-585711462945
 caps.latest.revision: 32
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1fa45b604df0a118936f903491e707bd09d58295
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 採礦模型屬性
+# <a name="mining-model-properties"></a>採礦模型屬性
   採礦模型具有以下種類的屬性：  
   
 -   繼承自採礦結構的屬性，這些屬性可定義此模型所使用之資料的資料類型和內容類型。  
@@ -36,7 +41,7 @@ caps.handback.revision: 32
   
  每當您變更模型的任何屬性時，您都必須重新處理模型，才能在模型中反映變更。 即使變更只牽涉到中繼資料 (例如資料行別名或描述)，也需要重新處理。  
   
-## 模型的屬性  
+## <a name="properties-of-models"></a>模型的屬性  
  下表描述採礦模型特有的屬性。 此外，也有一些屬性可以在採礦的個別資料行中設定。  
   
 |屬性|說明|  
@@ -47,7 +52,7 @@ caps.handback.revision: 32
 |**名稱**|設定採礦模型的名稱。|  
 |**AllowDrillThrough**|指定採礦模型上是否啟用鑽研。|  
   
-## 模型資料行的屬性  
+## <a name="properties-of-model-columns"></a>模型資料行的屬性  
  針對採礦模型中的每一個資料行，您可以設定下列資料採礦特有的屬性。 針對採礦結構中的每一個採礦模型，您可以將這些屬性設定為不同的值。  
   
 |屬性|說明|  
@@ -58,7 +63,7 @@ caps.handback.revision: 32
 |**SourceColumnID**|代表模型資料行所依據之採礦結構資料行的名稱。<br /><br /> 此屬性是唯讀的。|  
 |**使用方式**|設定採礦模型如何使用資料行。|  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [採礦模型資料行](../../analysis-services/data-mining/mining-model-columns.md)   
  [採礦結構 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
  [採礦模型工作和使用說明](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   

@@ -1,0 +1,185 @@
+---
+title: "IDENTITY （屬性） (TRANSACT-SQL) |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- IDENTITY_TSQL
+- IDENTITY
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- IDENTITY property
+- columns [SQL Server], creating
+- identity columns [SQL Server], IDENTITY property
+- autonumbers, identity numbers
+ms.assetid: 8429134f-c821-4033-a07c-f782a48d501c
+caps.latest.revision: 27
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 1eb7f960210ec89a66f1307d8476e6d47494861f
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
+---
+# <a name="create-table-transact-sql-identity-property"></a>建立資料表 (TRANSACT-SQL) IDENTITY （屬性）
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md.md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
+
+  建立資料表中的識別欄位。 這個屬性會搭配 CREATE TABLE 和 ALTER TABLE [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式使用。  
+  
+> [!NOTE]  
+>  識別屬性是不同於 SQL-DMO**識別**公開的資料行的資料列識別屬性的屬性。  
+  
+ ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+  
+## <a name="syntax"></a>語法  
+  
+```  
+  
+IDENTITY [ (seed , increment) ]  
+```  
+  
+## <a name="arguments"></a>引數  
+ *種子*  
+ 這是載入資料表的第一個資料列所用的值。  
+  
+ *遞增*  
+ 這是加入先前載入的資料列之識別值的累加值。  
+  
+ 您必須同時指定種子和遞增，或同時不指定這兩者。 如果同時不指定這兩者，預設值便是 (1,1)。  
+  
+## <a name="remarks"></a>備註  
+ 識別欄位可用於產生索引鍵值。 資料行上的識別屬性可確保以下事項：  
+  
+-   根據目前種子 & 增量產生每個新值。  
+  
+-   特定交易的每個新值都與資料表上的其他並行交易不同。  
+  
+ 資料行上的識別屬性不保證以下事項：  
+  
+-   **值的唯一性**– 必須藉由強制執行唯一性**主索引鍵**或**UNIQUE**條件約束或**UNIQUE**索引。  
+  
+-   **在交易內的連續值**– 插入多個資料列的交易不保證連續的值取得的資料列，因為其他並行插入可能會發生在資料表上。 如果值必須是連續，則交易應該在資料表上使用的獨佔鎖定，或使用**SERIALIZABLE**隔離等級。  
+  
+-   **之後重新啟動伺服器或其他失敗的連續值**–[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可能會快取的識別值，基於效能考量，某些指派的值可能會遺失資料庫失敗或伺服器重新啟動期間。 這可能會導致插入識別值之後的間隙。 若不接受間隙，則應用程式應會使用其擁有的機制，產生索引鍵值。 使用順序產生器，搭配**NOCACHE**選項可以限制為從未認可的交易將間隙。  
+  
+-   **重複使用值**– 適用於特定種子/增量值不會重複使用引擎的身分識別的給定的識別屬性。 如果特定 INSERT 陳述式失敗或此 INSERT 陳述式已回復，則取用的識別值將會遺失而且不會再次產生。 這樣在產生後續識別值時會產生間隙。  
+  
+ 這些限制是為了提升效能之設計的一部分，而且也可在許多常見的情況中被接受。 如果您因為這些限制而無法使用識別值，請建立個別的資料表來保存目前的值，並使用您的應用程式管理資料表的存取和數字指派。  
+  
+ 如果發行含識別欄位的資料表來進行複寫，您必須依照使用的複寫類型所適用的方式，來管理識別欄位。 如需詳細資訊，請參閱[複寫識別資料欄](../../relational-databases/replication/publish/replicate-identity-columns.md)。  
+  
+ 每份資料表都只能建立一個識別欄位。  
+  
+ 記憶體最佳化資料表中的種子和增量必須設 1，1。 設定種子或增量為 1 會產生下列錯誤以外的值： 使用種子和增量的值超過 1 不支援記憶體最佳化資料表。  
+  
+## <a name="examples"></a>範例  
+  
+### <a name="a-using-the-identity-property-with-create-table"></a>A. 搭配 CREATE TABLE 使用 IDENTITY 屬性  
+ 下列範例會利用自動累加的識別碼之 `IDENTITY` 屬性，來建立一份新的資料表。  
+  
+```  
+USE AdventureWorks2012;  
+  
+IF OBJECT_ID ('dbo.new_employees', 'U') IS NOT NULL  
+   DROP TABLE new_employees;  
+GO  
+CREATE TABLE new_employees  
+(  
+ id_num int IDENTITY(1,1),  
+ fname varchar (20),  
+ minit char(1),  
+ lname varchar(30)  
+);  
+  
+INSERT new_employees  
+   (fname, minit, lname)  
+VALUES  
+   ('Karin', 'F', 'Josephs');  
+  
+INSERT new_employees  
+   (fname, minit, lname)  
+VALUES  
+   ('Pirkko', 'O', 'Koskitalo');  
+```  
+  
+### <a name="b-using-generic-syntax-for-finding-gaps-in-identity-values"></a>B. 利用一般語法來尋找識別值的間距  
+ 下列範例會顯示在移除資料時，用來尋找識別值間距的一般語法。  
+  
+> [!NOTE]  
+>  下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼的第一部份僅供解說之用。 您可以執行開頭是下列註解的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼：`-- Create the img table`。  
+  
+```  
+-- Here is the generic syntax for finding identity value gaps in data.  
+-- The illustrative example starts here.  
+SET IDENTITY_INSERT tablename ON;  
+DECLARE @minidentval column_type;  
+DECLARE @maxidentval column_type;  
+DECLARE @nextidentval column_type;  
+SELECT @minidentval = MIN($IDENTITY), @maxidentval = MAX($IDENTITY)  
+    FROM tablename  
+IF @minidentval = IDENT_SEED('tablename')  
+   SELECT @nextidentval = MIN($IDENTITY) + IDENT_INCR('tablename')  
+   FROM tablename t1  
+   WHERE $IDENTITY BETWEEN IDENT_SEED('tablename') AND   
+      @maxidentval AND  
+      NOT EXISTS (SELECT * FROM tablename t2  
+         WHERE t2.$IDENTITY = t1.$IDENTITY +   
+            IDENT_INCR('tablename'))  
+ELSE  
+   SELECT @nextidentval = IDENT_SEED('tablename');  
+SET IDENTITY_INSERT tablename OFF;  
+-- Here is an example to find gaps in the actual data.  
+-- The table is called img and has two columns: the first column   
+-- called id_num, which is an increasing identification number, and the   
+-- second column called company_name.  
+-- This is the end of the illustration example.  
+  
+-- Create the img table.  
+-- If the img table already exists, drop it.  
+-- Create the img table.  
+IF OBJECT_ID ('dbo.img', 'U') IS NOT NULL  
+   DROP TABLE img;  
+GO  
+CREATE TABLE img (id_num int IDENTITY(1,1), company_name sysname);  
+INSERT img(company_name) VALUES ('New Moon Books');  
+INSERT img(company_name) VALUES ('Lucerne Publishing');  
+-- SET IDENTITY_INSERT ON and use in img table.  
+SET IDENTITY_INSERT img ON;  
+  
+DECLARE @minidentval smallint;  
+DECLARE @nextidentval smallint;  
+SELECT @minidentval = MIN($IDENTITY) FROM img  
+ IF @minidentval = IDENT_SEED('img')  
+    SELECT @nextidentval = MIN($IDENTITY) + IDENT_INCR('img')  
+    FROM img t1  
+    WHERE $IDENTITY BETWEEN IDENT_SEED('img') AND 32766 AND  
+      NOT    EXISTS (SELECT * FROM img t2  
+          WHERE t2.$IDENTITY = t1.$IDENTITY + IDENT_INCR('img'))  
+ ELSE  
+    SELECT @nextidentval = IDENT_SEED('img');  
+SET IDENTITY_INSERT img OFF;  
+```  
+  
+## <a name="see-also"></a>另請參閱  
+ [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
+ [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
+ [DBCC CHECKIDENT &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md)   
+ [IDENT_INCR &#40;TRANSACT-SQL &#41;](../../t-sql/functions/ident-incr-transact-sql.md)   
+ [@@IDENTITY &#40;Transact-SQL&#41;](../../t-sql/functions/identity-transact-sql.md)   
+ [IDENTITY &#40;函式 &#41;&#40;TRANSACT-SQL &#41;](../../t-sql/functions/identity-function-transact-sql.md)   
+ [IDENT_SEED &#40;TRANSACT-SQL &#41;](../../t-sql/functions/ident-seed-transact-sql.md)   
+ [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
+ [SET IDENTITY_INSERT &#40;TRANSACT-SQL &#41;](../../t-sql/statements/set-identity-insert-transact-sql.md)   
+ [複寫識別欄位](../../relational-databases/replication/publish/replicate-identity-columns.md)  
+  
+  

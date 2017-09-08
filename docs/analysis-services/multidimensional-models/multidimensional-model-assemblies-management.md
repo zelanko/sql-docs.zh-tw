@@ -1,38 +1,43 @@
 ---
-title: "多維度模型組件管理 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "權限 [Analysis Services], 組件"
-  - "呼叫使用者定義函數"
-  - "使用者模擬 [Analysis Services]"
-  - "模擬 [Analysis Services]"
-  - "資料採礦延伸模組 [Analysis Services], 組件"
-  - "MDX [Analysis Services], 組件"
-  - "使用者定義函數 [Analysis Services]"
-  - "Analysis Services 物件, 組件"
-  - "組件 [Analysis Services]"
-  - "應用程式網域 [Analysis Services]"
+title: "多維度模型組件管理 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- permissions [Analysis Services], assemblies
+- calling user-defined functions
+- user impersonation [Analysis Services]
+- impersonation [Analysis Services]
+- Data Mining Extensions [Analysis Services], assemblies
+- MDX [Analysis Services], assemblies
+- user-defined functions [Analysis Services]
+- Analysis Services objects, assemblies
+- assemblies [Analysis Services]
+- application domains [Analysis Services]
 ms.assetid: b2645d10-6d17-444e-9289-f111ec48bbfb
 caps.latest.revision: 35
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 35
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 38bbf72a7fd58be5db3d8672de1ad4269c763020
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 多維度模型組件管理
+# <a name="multidimensional-model-assemblies-management"></a>多維度模型組件管理
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供許多可與多維度運算式 (MDX) 和資料採礦延伸模組 (DMX) 語言搭配使用的內建函數，其設計目的是要完成從標準統計計算一直到階層中周遊成員間的各種運算。 但是，就如同其他複雜且強固的產品一樣，總是有進一步擴充產品功能的需求。  
   
- 因此，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 可讓您將組件加入 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體或資料庫中。 組件可讓您使用任何 Common Language Runtime (CLR) 語言 (例如 Microsoft Visual Basic .NET 或 Microsoft Visual C#) 來建立外部使用者自訂函數。 您也可以使用元件物件模型 (COM) 自動化語言 (例如 Microsoft Visual Basic 或 Microsoft Visual C++)。  
+ 因此， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 可讓您將組件加入 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體或資料庫中。 組件可讓您使用任何 Common Language Runtime (CLR) 語言 (例如 Microsoft Visual Basic .NET 或 Microsoft Visual C#) 來建立外部使用者自訂函數。 您也可以使用元件物件模型 (COM) 自動化語言 (例如 Microsoft Visual Basic 或 Microsoft Visual C++)。  
   
 > [!IMPORTANT]  
 >  COM 組件可能會造成安全性風險。 由於這項風險和其他考量，COM 組件在 [!INCLUDE[ssASversion10](../../includes/ssasversion10-md.md)]中已經被取代。 在未來的版本中，可能不再支援 COM 組件。  
@@ -51,7 +56,7 @@ caps.handback.revision: 35
   
  安全性指定包含用來執行組件的權限集合和模擬。  
   
-## 呼叫使用者自訂函數  
+## <a name="calling-user-defined-functions"></a>呼叫使用者定義函數  
  在組件中呼叫使用者自訂函數的方式，與呼叫內建函數的方式相同，只不過您需要使用完整名稱。 例如，傳回 MDX 所預期類型的使用者自訂函數，會包含在 MDX 查詢中，如下列範例所示：  
   
 ```  
@@ -66,13 +71,13 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
   
  組件的使用讓通用程式碼只需要開發一次，並儲存於單一位置，以簡化資料庫的開發。 用戶端軟體開發人員可針對 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 建立函數程式庫，然後將它們和應用程式一起散發。  
   
- 組件和使用者自訂函數可以重複 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 函數程式庫的函數名稱，或其他組件的函數名稱。 只要您使用完整名稱來呼叫使用者自訂函數，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 就會使用正確的程序。 基於安全性的理由，以及避免呼叫到不同類別庫中之重複名稱的可能性，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會要求您只使用預存程序的完整名稱。  
+ 組件和使用者自訂函數可以重複 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 函數程式庫的函數名稱，或其他組件的函數名稱。 只要您使用完整名稱來呼叫使用者自訂函數， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 就會使用正確的程序。 基於安全性的理由，以及避免呼叫到不同類別庫中之重複名稱的可能性， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會要求您只使用預存程序的完整名稱。  
   
  若要從特定 CLR 組件呼叫使用者自訂函數，該使用者自訂函數將置於組件名稱、完整類別名稱，以及程序名稱之後，如下所示：  
   
  *AssemblyName*.*FullClassName*.*ProcedureName*(*Argument1*, *Argument2*, ...)  
   
- 為了提供較早之 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 版本的回溯相容性，亦可接受下列語法：  
+ 為了提供較早之 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]版本的回溯相容性，亦可接受下列語法：  
   
  *AssemblyName*!*FullClassName*!*ProcedureName*(*Argument1*, *Argument2*, ...)  
   
@@ -80,12 +85,12 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
   
  *AssemblyName*!*InterfaceID*!*ProcedureName*(*Argument1*, *Argument2*, ...)  
   
-## Security  
+## <a name="security"></a>Security  
  組件的安全性是以 .NET Framework 安全性模型為基礎，它是一種程式碼存取安全性模型。 .NET Framework 支援程式碼存取安全性機制，而這個機制假設執行階段可以主控完全信任和部份信任的程式碼。 受 .NET Framework 程式碼存取安全性保護的資源，一般都是以 Managed 程式碼包裝，而 Managed 程式碼在存取資源前會要求對應的權限。 唯有在呼叫堆疊中所有的呼叫者 (在組件層級) 都具有對應的資源權限時，權限的要求才會被滿足。  
   
- 針對組件，執行的權限會透過 **Assembly** 物件的 **PermissionSet** 屬性傳遞。 Managed 程式碼所接收的權限是由實行中的安全性原則決定。 在非 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 主控環境中，已實行三個層級的原則：企業、電腦和使用者。 程式碼所接收的有效權限清單是由這三個層級所取得的權限交集決定。  
+ 針對組件，執行的權限會透過 **Assembly** 物件的 **PermissionSet** 屬性傳遞。 Managed 程式碼所接收的權限是由實行中的安全性原則決定。 在非[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 主控環境中，已實行三個層級的原則：企業、電腦和使用者。 程式碼所接收的有效權限清單是由這三個層級所取得的權限交集決定。  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 在主控 CLR 時，會將主機層級的安全性原則層級提供給該 CLR；這項原則是位在永遠會實行之三個原則層級下的其他原則層級。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 建立的每一個應用程式網域都會設定此原則。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 在主控 CLR 時，會將主機層級的安全性原則層級提供給該 CLR；這項原則是位在永遠會實行之三個原則層級下的其他原則層級。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]建立的每一個應用程式網域都會設定此原則。  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 主機層級原則，是系統組件的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 固定原則，以及使用者組件的使用者指定原則的組合。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 主機原則之使用者自訂部份根據的是指定每個組件之下列其中一種權限值區 (共三種) 的組件擁有者：  
   
@@ -95,25 +100,25 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
 |**ExternalAccess**|提供和 **Safe** 設定相同的存取權，並附帶存取外部系統資源的能力。 這個權限值區不提供安全性保證 (雖然是可以確保此情況的安全)，但是可以提供可靠性的保證。|  
 |**Unsafe**|不提供限制。 在此權限設定下執行的 Managed 程式碼，無法提供安全性或可靠性的保證。 任何權限，即使是管理員納入的自訂權限，皆可被授與在本信任層級執行的程式碼。|  
   
- 當 CLR 是由 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 主控時，以堆疊查核行程為基礎的權限檢查，就會在原生 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 程式碼的界限處停止。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 組件中的任何 Managed 程式碼都一定會落入前面所列之三種權限類別目錄的其中一種。  
+ 當 CLR 是由 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]主控時，以堆疊查核行程為基礎的權限檢查，就會在原生 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 程式碼的界限處停止。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 組件中的任何 Managed 程式碼都一定會落入前面所列之三種權限類別目錄的其中一種。  
   
  COM (或 Unmanaged) 組件常式不支援 CLR 安全性模型。  
   
-### 模擬  
- 只要 Managed 程式碼存取任何在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 外部的資源時，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 就會遵循與組件之 **ImpersonationMode** 屬性設定相關聯的規則，以確定該存取會發生在適當的 Windows 安全性內容中。 因為使用 **Safe** 權限設定的組件無法存取 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 外部的資源，所以這些規則僅適用於使用 **ExternalAccess** 和 **Unsafe** 權限設定的組件。  
+### <a name="impersonation"></a>模擬  
+ 只要 Managed 程式碼存取任何在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]外部的資源時， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 就會遵循與組件之 **ImpersonationMode** 屬性設定相關聯的規則，以確定該存取會發生在適當的 Windows 安全性內容中。 因為使用 **Safe** 權限設定的組件無法存取 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]外部的資源，所以這些規則僅適用於使用 **ExternalAccess** 和 **Unsafe** 權限設定的組件。  
   
 -   如果目前的執行內容對應到 Windows 驗證的登入，且與原始呼叫者的內容相同 (即中間沒有 EXECUTE AS)，則 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會在存取資源之前模擬 Windows 驗證的登入。  
   
 -   如果有中繼 EXECUTE AS 變更了來自原始呼叫者的內容，對外部資源存取的嘗試就會失敗。  
   
- 可將 **ImpersonationMode** 屬性設定為 **ImpersonateCurrentUser** 或 **ImpersonateAnonymous**。 預設值是 **ImpersonateCurrentUser**，會用來以目前使用者的網路登入帳戶執行組件。 如果使用 **ImpersonateAnonymous** 設定，則執行內容會對應到伺服器上的 Windows 登入使用者帳戶 IUSER_*servername*。 這是網際網路 Guest 帳戶，在伺服器上的權限有限。 在這個內容中執行的組件，在本機伺服器上只能存取有限的資源。  
+ 可將 **ImpersonationMode** 屬性設定為 **ImpersonateCurrentUser** 或 **ImpersonateAnonymous**。 預設值是 **ImpersonateCurrentUser**，會用來以目前使用者的網路登入帳戶執行組件。 如果使用 **ImpersonateAnonymous** 設定，則執行內容會對應到伺服器上的 Windows 登入使用者帳戶 IUSER_*servername* 。 這是網際網路 Guest 帳戶，在伺服器上的權限有限。 在這個內容中執行的組件，在本機伺服器上只能存取有限的資源。  
   
-### 應用程式網域  
+### <a name="application-domains"></a>應用程式網域  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 不會直接公開應用程式定義域。 因為組件集是在相同的應用程式定義域中執行，所以應用程式定義域可以在執行時使用 .NET Framework 中的 **System.Reflection** 命名空間或其他方式，來發現彼此，也可用晚期繫結方式呼叫它們。 這種呼叫會遭受以 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 授權為基礎的安全性機制，進行權限檢查。  
   
  因為應用程式網域界限和每個網域中的組件都是由實作所定義，所以您不應該依賴在同一應用程式網域中尋找組件。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [設定預存程序的安全性](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/setting-security-for-stored-procedures.md)   
  [定義預存程序](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
   

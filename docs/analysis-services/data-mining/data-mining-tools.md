@@ -1,28 +1,33 @@
 ---
-title: "資料採礦工具。 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "工具 [Analysis Services]"
-  - "採礦模型 [Analysis Services], 工具"
-  - "資料採礦 [Analysis Services], 工具"
-  - "資料採礦 [Analysis Services], 開發"
+title: "資料採礦工具 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- tools [Analysis Services]
+- mining models [Analysis Services], tools
+- data mining [Analysis Services], tools
+- data mining [Analysis Services], development
 ms.assetid: 003ada6a-0bcd-4f16-8c34-1a9ffc75cd2c
 caps.latest.revision: 49
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 49
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2ebbfe4e003be235b2265c215bfd731f8f2c1562
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 資料採礦工具。
+# <a name="data-mining-tools"></a>資料採礦工具。
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會提供您可用來建立資料採礦方案的以下工具：  
   
 -    中的資料採礦精靈 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 可讓您在 Cube 中使用關聯式資料來源或多維度資料，輕鬆建立採礦結構和採礦模型。  
@@ -39,12 +44,12 @@ caps.handback.revision: 49
   
  下列章節提供有關 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中之資料採礦工具的詳細資訊。  
   
-## 資料採礦精靈  
+## <a name="data-mining-wizard"></a>資料採礦精靈  
  使用資料採礦精靈開始建立資料採礦方案。 此精靈非常快速且容易使用，可引導您建立資料採礦結構和初始相關之採礦模型的程序，並包含選取演算法類型和資料來源以及定義案例資料進行分析的工作。  
   
  **如需詳細資訊︰**[Data Mining Wizard &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/data-mining-wizard-analysis-services-data-mining.md) (資料採礦精靈 (Analysis Services - 資料採礦))。  
   
-## 資料採礦設計師  
+## <a name="data-mining-designer"></a>資料採礦設計師  
  在您使用資料採礦精靈建立採礦結構和採礦模型之後，您可以從 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 使用資料採礦設計師來處理現有的模型與結構。  
   
  此設計師包含適用於以下工作的工具：  
@@ -61,12 +66,12 @@ caps.handback.revision: 49
   
 -   針對現有的採礦模型建立預測和內容查詢。 建立一次性查詢，或是設定查詢來針對外部資料的整個資料表產生預測。  
   
-## Transact-SQL  
+## <a name="sql-server-management-studio"></a>Transact-SQL  
  在您建立並將採礦模型部署到伺服器之後，您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來管理裝載資料採礦物件的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫。 您也可以繼續執行使用此模型的工作，例如瀏覽模型、處理新的資料和建立預測。  
   
  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 也包含查詢編輯器，您可以用來設計及執行資料採礦延伸 (DMX) 查詢，或是透過 XMLA 來處理資料採礦物件。  
   
-## Integration Services 資料採礦工作和轉換  
+## <a name="integration-services-data-mining-tasks-and-transformations"></a>Integration Services 資料採礦工作和轉換  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供了許多支援資料採礦的元件。  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中的一些工具的目的是為了將常見的資料採礦工作自動化，包括預測、模型建立和處理。 例如：  
@@ -87,7 +92,7 @@ caps.handback.revision: 49
   
  **如需詳細資訊：**[Related Projects for Data Mining Solutions](../../analysis-services/data-mining/related-projects-for-data-mining-solutions.md) (資料採礦方案的相關專案)  
   
-## 請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [資料採礦延伸模組 &#40;DMX&#41; 參考](../../dmx/data-mining-extensions-dmx-reference.md)   
  [採礦模型工作和使用說明](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
  [採礦模型檢視器工作和使用說明](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   

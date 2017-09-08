@@ -1,28 +1,33 @@
 ---
-title: "了解累加式產生 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "累加式產生 [Analysis Services]"
-  - "結構描述產生精靈, 累加式產生"
-  - "關聯式結構描述 [Analysis Services], 累加式產生"
+title: "了解累加式產生 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- incremental generation [Analysis Services]
+- Schema Generation Wizard, incremental generation
+- relational schema [Analysis Services], incremental generation
 ms.assetid: 3ca0aa63-3eb5-4fe9-934f-8e96dee84eaa
 caps.latest.revision: 29
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 29
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9e2b3bcd255c35dc0085266ea40c23bd705bbb1e
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 了解累加式產生
+# <a name="understanding-incremental-generation"></a>了解累加式產生
   在初始結構描述產生之後，您可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]來變更 Cube 和維度定義，然後重新執行 [結構描述產生精靈]。 此精靈會更新主題領域資料庫和相關資料來源檢視中的結構描述，以便能夠反映變更，同時盡量保留目前存在於要重新產生之資料表中的資料。 如果您在初始產生之後變更了資料表，結構描述產生精靈會使用下列規則，盡量保留那些變更：  
   
 -   如果資料表是由精靈先前產生的，則會覆寫該資料表。 您可以將資料來源檢視中之資料表的 **AllowChangesDuringGeneration** 屬性變更為 **false**，以防止精靈產生的資料表遭到覆寫。 當您控制資料表時，資料表被視為任何其他使用者自訂資料表來處理，而且在重新產生時不受影響。 從產生移除資料表之後，稍後您可以將資料來源檢視中之資料表的 **AllowChangesDuringGeneration** 屬性變更為 **true** ，並重新開啟資料表供精靈變更。 如需詳細資訊，請參閱[變更資料來源檢視的屬性 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/change-properties-in-a-data-source-view-analysis-services.md)。  
@@ -31,13 +36,13 @@ caps.handback.revision: 29
   
  當結構描述產生精靈重新產生在先前主題領域資料庫中產生的資料表時，您可以選擇由精靈保留那些資料表中的現有資料。  
   
-## 支援資料保留  
+## <a name="supporting-data-preservation"></a>支援資料保留  
  一般而言，結構描述產生精靈會保留儲存在所產生之資料表中的資料。 此外，如果您將資料行加入至精靈已產生的資料表中，精靈也會保留該資料。 您可以使用此功能來加入或修改維度和 Cube，然後重新產生基礎物件，而不必重新載入基礎資料表中所儲存的資料。  
   
 > [!NOTE]  
 >  如果您是從分隔的文字檔載入資料，則也可以選擇結構描述產生精靈在重新產生期間，是否覆寫這些檔案和它們所包含的資料。 文字檔不是完全覆寫，就是完全不覆寫。 結構描述產生精靈不會局部覆寫這些檔案。 依預設，不會覆寫這些檔案。  
   
-### 局部保留  
+### <a name="partial-preservation"></a>局部保留  
  結構描述產生精靈在某些情況下無法保留現有的資料。 下表提供的範例是一些狀況，其中精靈無法在重新產生期間，保留基礎資料表中所有現有的資料。  
   
 |資料變更類型|處理方式|  
@@ -48,7 +53,7 @@ caps.handback.revision: 29
   
  結構描述產生精靈在卸除任何資料之前會發出警告，讓您可以取消精靈，而不會失去任何資料。 不過，結構描述產生精靈無法區分預期的資料流失，和非預期的資料流失。 當您執行精靈時，對話方塊會列出包含要卸除之資料的資料表和資料行。 您可以讓精靈繼續並卸除資料，或取消精靈，以修訂您對資料表和資料行所做的變更。  
   
-## 支援 Cube 和維度變更  
+## <a name="supporting-cube-and-dimension-changes"></a>支援 Cube 和維度變更  
  當您變更維度和 Cube 的屬性時，結構描述產生精靈會在基礎主題領域資料表中，以及相關資料來源檢視中重新產生適當的物件，如下表所述。  
   
  刪除物件，例如維度、Cube 或屬性。  
@@ -65,7 +70,7 @@ caps.handback.revision: 29
   
  如果 [結構描述產生精靈] 因為主題領域資料庫中出現使用者物件，而無法進行必要的變更 (因為 Database Engine 會傳回錯誤)，則 [結構描述產生精靈] 會失敗，並顯示 Database Engine 所傳回的錯誤。 比方說，如果您在精靈產生資料表之後，在該資料表上建立主索引鍵條件約束或非叢集索引，則結構描述產生精靈不會卸除該資料表，因為它不會建立條件約束或索引。  
   
-## 支援結構描述變更  
+## <a name="supporting-schema-changes"></a>支援結構描述變更  
  當您在主題領域資料庫，或在相關聯資料來源檢視中變更資料表或資料行的屬性時，結構描述產生精靈會如下表所述來處理變更。  
   
  刪除結構描述產生精靈所產生的資料表或資料行。  
@@ -77,14 +82,14 @@ caps.handback.revision: 29
  將資料行加入至結構描述產生精靈所產生的資料表，或將資料表加入至主題領域資料庫或臨時區域資料庫中。  
  如果您將資料行加入至結構描述產生精靈所產生的資料表中，在重新產生期間，精靈會保留其他資料行，以及它所儲存的任何資料。 不過，如果您將資料表加入至主題領域資料庫或臨時區域資料庫，結構描述產生精靈不會併入新資料表。 加入的資料行或加入的資料表，不會反映在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫、DTS 封裝、資料來源檢視，或所產生之結構描述中的任何其他地方。  
   
-## 支援資料來源和資料來源檢視變更  
+## <a name="supporting-data-source-and-data-source-view-changes"></a>支援資料來源和資料來源檢視變更  
  當結構描述產生精靈重新執行時，會重新使用它在原始產生所使用的相同資料來源和資料來源檢視。 如果您加入資料來源或資料來源檢視，精靈不會使用它。 如果您在初始產生之後刪除原始資料來源或資料來源檢視，您必須從頭開始執行精靈。 精靈中所有先前的設定也會被刪除。 下次您執行結構描述產生精靈時，對於基礎資料庫中任何繫結到已刪除之資料來源或資料來源檢視的現有物件，將視同使用者建立的物件來處理。  
   
  如果在產生時資料來源檢視不反映基礎資料庫的實際狀態，當結構描述產生精靈產生主題領域資料庫和臨時區域資料庫的結構描述時，會發生錯誤。 比方說，如果資料來源檢視指定資料行的資料類型設為 **int**，但該資料行的資料類型實際上是設為 **string**，則結構描述產生精靈會將外部索引鍵的資料類型設為 **int** ，以符合資料來源檢視，但當它建立關聯性時會失敗，因為實際資料類型是 **string**。  
   
  相反地，如果您將資料來源連接字串，變更為與前一次產生不同的資料庫，則不會產生錯誤。 這時會使用新資料庫，且先前的資料庫不會產生任何變更。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [管理對資料來源檢視及資料來源所做的變更](../../analysis-services/multidimensional-models/manage-changes-to-data-source-views-and-data-sources.md)   
  [結構描述產生精靈 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/schema-generation-wizard-analysis-services.md)  
   

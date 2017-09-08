@@ -1,112 +1,117 @@
 ---
-title: "OLAP 屬性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "AggregationPerfLog 屬性"
-  - "DefaultPageSizeForProp 屬性"
-  - "UseSinglePassForDimSecurityAutoExist 屬性"
-  - "DeepCompressValue 屬性"
-  - "CacheRowsetRows 屬性"
-  - "Income 屬性"
-  - "AggregationNewAlgo 屬性"
-  - "MemoryAdjustFactor 屬性"
-  - "DimensionLatencyAccuracy 屬性"
-  - "InitialBonus 屬性"
-  - "DefaultPageSizeForDataHeader 屬性"
-  - "MaxCPUUsage 屬性"
-  - "DistinctBuffer 屬性"
-  - "PartitionLatencyAccuracy 屬性"
-  - "MaxRetries 屬性"
-  - "UseDataCacheRegistryMultiplyKey 屬性"
-  - "ConvertDeletedToUnknown 屬性"
-  - "DatabaseConnectionPoolMax 屬性"
-  - "DataFileInitEnabled 屬性"
-  - "DefaultPageSizeForHash 屬性"
-  - "MaxRolapOrConditions 屬性"
-  - "UseDataCacheFreeLastPageMemory 屬性"
-  - "OLAP [Analysis Services]，屬性"
-  - "MapHandleAlgorithm 屬性"
-  - "IndexBuildEnabled 屬性"
-  - "MaxObjectsInParallel 屬性"
-  - "IgnoreNullRolapRows 屬性"
-  - "DimensionPropertyCacheSize 屬性"
-  - "DefaultRefreshInterval 屬性"
-  - "CheckDistinctRecordSortOrder 屬性"
-  - "BufferMemoryLimit 屬性"
-  - "EnableTableGrouping 屬性"
-  - "ExpressNonEmptyUseEnabled 屬性"
-  - "CopyLinkedDataCacheAndRegistry 屬性"
-  - "UseDataSlice 屬性"
-  - "MemoryLimitErrorEnabled 屬性"
-  - "Enabled 屬性"
-  - "EnableRolapOptimization 屬性"
-  - "DatabaseConnectionPoolTimeout 屬性"
-  - "UseDataCacheRegistryHashTable 屬性"
-  - "AggregationsBuildEnabled 屬性"
-  - "Tax 屬性"
-  - "DatabaseConnectionPoolGeneralTimeout 屬性"
-  - "DefaultPageSizeForString 屬性"
-  - "DatabaseConnectionPoolConnectTimeout 屬性"
-  - "MinimumBalance 屬性"
-  - "OptimizeSchema 屬性"
-  - "UseCalculationCacheRegistry 屬性"
-  - "MaxTableDepth 屬性"
-  - "DataSliceInitEnabled 屬性"
-  - "PrefetchLowerGranularities 屬性"
-  - "UseVBANet 屬性"
-  - "BufferRecordLimit 屬性"
-  - "DefaultPageSizeForIndexHeader 屬性"
-  - "MaximumBalance 屬性"
-  - "CalculationCacheRegistryMaxIterations 屬性"
-  - "DefaultDrillthroughMaxRows 屬性"
-  - "IndexBuildThreshold 屬性"
-  - "UseDataCacheRegistry 屬性"
-  - "MemoryAdjustConst 屬性"
-  - "ApplyIntersect 屬性"
-  - "IndexFileInitEnabled 屬性"
-  - "CacheRowsetToDisk 屬性"
-  - "DataCacheRegistryMaxIterations 屬性"
-  - "AllowSEFiltering 屬性"
-  - "ForceMultiPass 屬性"
-  - "ApplySubtract 屬性"
-  - "IndexUseEnabled 屬性"
-  - "AggregationsUseEnabled 屬性"
-  - "DataPlacementOptimization 屬性"
-  - "UseMaterializedIterators 屬性"
-  - "CacheRecordLimit 屬性"
-  - "ROLAPDimensionProcessingEffort 屬性"
-  - "DefaultPageSizeForIndex 屬性"
-  - "EnableRolapDimQueryTableGrouping 屬性"
-  - "DimensionPropertyKeyCache 屬性"
-  - "SleepIntervalSecs 屬性"
-  - "DefaultPageSizeForData 屬性"
-  - "MapFormatMask 屬性"
-  - "CalculationEvaluationPolicy 屬性"
-  - "AggregationMemoryLimitMin 屬性"
-  - "RecordsReportGranularity 屬性"
-  - "MemoryLimit 屬性"
-  - "AggregationMemoryLimitMax 屬性"
+title: "OLAP 屬性 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- AggregationPerfLog property
+- DefaultPageSizeForProp property
+- UseSinglePassForDimSecurityAutoExist property
+- DeepCompressValue property
+- CacheRowsetRows property
+- Income property
+- AggregationNewAlgo property
+- MemoryAdjustFactor property
+- DimensionLatencyAccuracy property
+- InitialBonus property
+- DefaultPageSizeForDataHeader property
+- MaxCPUUsage property
+- DistinctBuffer property
+- PartitionLatencyAccuracy property
+- MaxRetries property
+- UseDataCacheRegistryMultiplyKey property
+- ConvertDeletedToUnknown property
+- DatabaseConnectionPoolMax property
+- DataFileInitEnabled property
+- DefaultPageSizeForHash property
+- MaxRolapOrConditions property
+- UseDataCacheFreeLastPageMemory property
+- OLAP [Analysis Services], properties
+- MapHandleAlgorithm property
+- IndexBuildEnabled property
+- MaxObjectsInParallel property
+- IgnoreNullRolapRows property
+- DimensionPropertyCacheSize property
+- DefaultRefreshInterval property
+- CheckDistinctRecordSortOrder property
+- BufferMemoryLimit property
+- EnableTableGrouping property
+- ExpressNonEmptyUseEnabled property
+- CopyLinkedDataCacheAndRegistry property
+- UseDataSlice property
+- MemoryLimitErrorEnabled property
+- Enabled property
+- EnableRolapOptimization property
+- DatabaseConnectionPoolTimeout property
+- UseDataCacheRegistryHashTable property
+- AggregationsBuildEnabled property
+- Tax property
+- DatabaseConnectionPoolGeneralTimeout property
+- DefaultPageSizeForString property
+- DatabaseConnectionPoolConnectTimeout property
+- MinimumBalance property
+- OptimizeSchema property
+- UseCalculationCacheRegistry property
+- MaxTableDepth property
+- DataSliceInitEnabled property
+- PrefetchLowerGranularities property
+- UseVBANet property
+- BufferRecordLimit property
+- DefaultPageSizeForIndexHeader property
+- MaximumBalance property
+- CalculationCacheRegistryMaxIterations property
+- DefaultDrillthroughMaxRows property
+- IndexBuildThreshold property
+- UseDataCacheRegistry property
+- MemoryAdjustConst property
+- ApplyIntersect property
+- IndexFileInitEnabled property
+- CacheRowsetToDisk property
+- DataCacheRegistryMaxIterations property
+- AllowSEFiltering property
+- ForceMultiPass property
+- ApplySubtract property
+- IndexUseEnabled property
+- AggregationsUseEnabled property
+- DataPlacementOptimization property
+- UseMaterializedIterators property
+- CacheRecordLimit property
+- ROLAPDimensionProcessingEffort property
+- DefaultPageSizeForIndex property
+- EnableRolapDimQueryTableGrouping property
+- DimensionPropertyKeyCache property
+- SleepIntervalSecs property
+- DefaultPageSizeForData property
+- MapFormatMask property
+- CalculationEvaluationPolicy property
+- AggregationMemoryLimitMin property
+- RecordsReportGranularity property
+- MemoryLimit property
+- AggregationMemoryLimitMax property
 ms.assetid: 06eb0d78-96c0-42ff-b759-f4c794597c8d
 caps.latest.revision: 18
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 18
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 095706fc60fe06ae2a83969431b390772bee37f2
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# OLAP 屬性
+# <a name="olap-properties"></a>OLAP 屬性
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支援下表列出的 OLAP 伺服器屬性。 如需其他伺服器屬性以及如何設定伺服器屬性的詳細資訊，請參閱 [Analysis Services 中的伺服器屬性](../../analysis-services/server-properties/server-properties-in-analysis-services.md)。  
   
  **適用於** ：僅限於多維度伺服器模式  
   
-## 記憶體  
+## <a name="memory"></a>記憶體  
  **DefaultPageSizeForData**  
  此為進階屬性，除非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技術支援的指導之下，否則不應隨意變更。  
   
@@ -128,7 +133,7 @@ caps.handback.revision: 18
  **DefaultPageSizeForProp**  
  此為進階屬性，除非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技術支援的指導之下，否則不應隨意變更。  
   
-## LazyProcessing  
+## <a name="lazyprocessing"></a>LazyProcessing  
  **已啟用**  
  此為布林值屬性，指定是否啟用延遲彙總處理。  
   
@@ -146,7 +151,7 @@ caps.handback.revision: 18
  **MaxRetries**  
  此為帶正負號的 32 位元整數屬性，定義在引發錯誤之前，延遲處理失敗事件的重試次數。  
   
-## ProcessPlan  
+## <a name="processplan"></a>ProcessPlan  
  **CacheRowsetRows**  
  此為進階屬性，除非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技術支援的指導之下，否則不應隨意變更。  
   
@@ -185,7 +190,7 @@ caps.handback.revision: 18
  **OptimizeSchema**  
  此為進階屬性，除非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技術支援的指導之下，否則不應隨意變更。  
   
-## ProactiveCaching  
+## <a name="proactivecaching"></a>ProactiveCaching  
  **DefaultRefreshInterval**  
  此為進階屬性，除非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技術支援的指導之下，否則不應隨意變更。  
   
@@ -195,7 +200,7 @@ caps.handback.revision: 18
  **PartitionLatencyAccuracy**  
  此為進階屬性，除非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技術支援的指導之下，否則不應隨意變更。  
   
-## 處理  
+## <a name="process"></a>處理  
  **AggregationMemoryLimitMax**  
  此為帶正負號的 64 位元雙精確度浮點數屬性，定義可專用於彙總處理的記憶體數量上限 (以實體記憶體的百分比表示)。  
   
@@ -286,7 +291,7 @@ caps.handback.revision: 18
  **ROLAPDimensionProcessingEffort**  
  此為進階屬性，除非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技術支援的指導之下，否則不應隨意變更。  
   
-## 查詢  
+## <a name="query"></a>查詢  
  **AggregationsUseEnabled**  
  此為布林值屬性，定義在執行階段是否使用預存彙總。 此屬性可以不必變更彙總設計或重新處理而停用彙總，適用於參考和效能評定。  
   
@@ -430,7 +435,7 @@ caps.handback.revision: 18
  **DataCache\ MemoryModel\ Tax**  
  此為進階屬性，除非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技術支援的指導之下，否則不應隨意變更。  
   
-## 作業  
+## <a name="jobs"></a>作業  
  **ProcessAggregation\ MemoryModel\ Income**  
  此為進階屬性，除非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技術支援的指導之下，否則不應隨意變更。  
   
@@ -476,8 +481,8 @@ caps.handback.revision: 18
  **ProcessAggregation\ ProcessProperty\ Tax**  
  此為進階屬性，除非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技術支援的指導之下，否則不應隨意變更。  
   
-## 請參閱＜  
- [Analysis Services 的伺服器屬性](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
+## <a name="see-also"></a>請參閱＜  
+ [Analysis Services 中的伺服器屬性](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
  [判斷 Analysis Services 執行個體的伺服器模式](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

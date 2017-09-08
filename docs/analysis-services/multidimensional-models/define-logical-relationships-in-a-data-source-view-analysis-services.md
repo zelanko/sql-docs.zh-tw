@@ -1,28 +1,33 @@
 ---
-title: "在資料來源檢視中定義邏輯關聯性 (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "加入關聯性"
-  - "關聯性 [Analysis Services], 資料來源檢視"
-  - "資料來源檢視 [Analysis Services], 關聯性"
+title: "定義邏輯關聯性中的資料來源檢視 (Analysis Services) |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- adding relationships
+- relationships [Analysis Services], data source views
+- data source views [Analysis Services], relationships
 ms.assetid: a20d6dae-e769-4131-8a59-7ef56f174220
 caps.latest.revision: 37
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 37
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 08ca218747186a14224809c574a6dc524296cb1a
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 在資料來源檢視中定義邏輯關聯性 (Analysis Services)
+# <a name="define-logical-relationships-in-a-data-source-view-analysis-services"></a>在資料來源檢視中定義邏輯關聯性 (Analysis Services)
   [資料來源檢視精靈] 和資料來源檢視設計工具會根據基礎資料庫關聯性，或是根據您所指定的名稱比對準則，自動定義加入到資料來源檢視 (DSV) 之資料表之間的關聯性。  
   
  在使用多個資料來源之資料的情況下，您可能需要在 DSV 中手動定義邏輯關聯性，以補充那些自動定義的關聯性。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 需要關聯性來識別事實資料表和維度資料表、建構查詢以從基礎資料來源擷取資料和中繼資料，以及利用進階的商業智慧功能。  
@@ -50,7 +55,7 @@ caps.handback.revision: 37
   
 ##  <a name="bkmk_addRel"></a> 在資料表、具名查詢或檢視表之間加入關聯性  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，開啟含有您想在其中加入邏輯關聯性之資料來源檢視的專案，或連接到包含此資料來源檢視的資料庫。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，開啟含有您想在其中加入邏輯關聯性之資料來源檢視的專案，或連接到包含此資料來源檢視的資料庫。  
   
 2.  在方案總管中，展開 [資料來源檢視] 資料夾，然後按兩下資料來源檢視在 [資料來源檢視設計工具] 中開啟檢視。  
   
@@ -85,7 +90,7 @@ caps.handback.revision: 37
   
 3.  以滑鼠右鍵按一下您要修改的關聯性，然後按一下 [編輯關聯性]。  
   
-## 請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [多維度模型中的資料來源檢視](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
   
   

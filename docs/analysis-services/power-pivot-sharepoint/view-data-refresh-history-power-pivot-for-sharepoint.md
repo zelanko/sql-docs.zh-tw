@@ -1,29 +1,34 @@
 ---
-title: "檢視資料重新整理記錄 (Power Pivot for SharePoint) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "自動資料重新整理 [Analysis Services with SharePoint]"
-  - "資料重新整理記錄 [Analysis Services with SharePoint]"
-  - "已排程的資料重新整理 [Analysis Services with SharePoint]"
-  - "資料重新整理 [Analysis Services with SharePoint]"
+title: "檢視資料重新整理記錄 (Power Pivot for SharePoint) |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- unattended data refresh [Analysis Services with SharePoint]
+- data refresh history [Analysis Services with SharePoint]
+- scheduled data refresh [Analysis Services with SharePoint]
+- data refresh [Analysis Services with SharePoint]
 ms.assetid: 4c8d8aa8-794d-4f72-ace3-78d0e688e1a5
 caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 16
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bad4593c84946a2957b6b433de359d4857f116ad
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 檢視資料重新整理記錄 (Power Pivot for SharePoint)
+# <a name="view-data-refresh-history-power-pivot-for-sharepoint"></a>檢視資料重新整理記錄 (Power Pivot for SharePoint)
   資料重新整理記錄是 Excel 活頁簿中 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料之所有資料重新整理活動的記錄。 資料重新整理作業會依您提供的排程，在 SharePoint 伺服器陣列中 Analysis Services 伺服器執行個體上執行。 根據預設，資料重新整理記錄會保留一年。 但是，伺服器陣列管理員可以為使用量和事件記錄指定不同的保留原則，用來決定資料重新整理記錄的保存時間。  
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013 | SharePoint 2010  
@@ -64,7 +69,7 @@ caps.handback.revision: 16
 |項目|說明|  
 |----------|-----------------|  
 |名稱|指定含 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料之 Excel 活頁簿的檔案名稱。|  
-|目前狀態|值包括：[已排程]、[正在重新整理]、[成功] 或 [失敗]。<br /><br /> **已排程**：當您初次建立排程時會顯示此值。 資料重新整理執行過第一次後，就不會再出現此狀態訊息。<br /><br /> **正在重新整理**：表示該資料重新整理在進行中。 要求是在程序佇列中，或正在伺服器上執行。<br /><br /> **成功**：表示上次資料重新整理作業已完成，而且已將更新的活頁簿存回 SharePoint 文件庫中。<br /><br /> **失敗**：表示上次資料重新整理作業並未成功。 已重新整理資料並未儲存。 活頁簿中所包含的資料與資料重新整理開始之前相同。|  
+|目前狀態|值包括：[已排程]、[正在重新整理]、[成功] 或 [失敗]。<br /><br /> **已排程**：當您初次建立排程時會顯示此值。 資料重新整理執行過第一次後，就不會再出現此狀態訊息。<br /><br /> **正在重新整理** ：表示該資料重新整理在進行中。 要求是在程序佇列中，或正在伺服器上執行。<br /><br /> **成功** ：表示上次資料重新整理作業已完成，而且已將更新的活頁簿存回 SharePoint 文件庫中。<br /><br /> **失敗** ：表示上次資料重新整理作業並未成功。 已重新整理資料並未儲存。 活頁簿中所包含的資料與資料重新整理開始之前相同。|  
 |上次成功重新整理|指定上次順利完成資料重新整理的日期。|  
 |下次排程更新|指定下次排程要進行資料重新整理的日期。<br /><br /> [正在設定排程] 連結會跳至 [排程定義] 頁面。 如果您在活頁簿上擁有「參與」權限，您可以按一下連結以檢視及修改排程資訊，控制活頁簿中 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料的自動資料重新整理。|  
 |Started|在 [記錄詳細資料] 區段之中，[已啟動] 會指出實際的處理時間。 實際的處理時間可能與您的排程不同。 在伺服器上有足夠記憶體可用時，就會開始進行處理。 如果伺服器非常忙碌，可能會在您指定的開始時間之後數小時，才開始進行處理。|  
@@ -72,9 +77,9 @@ caps.handback.revision: 16
 |Time|提供從資料重新整理開始到完成的累計時間。|  
 |狀態|提供重新整理作業成功或失敗的歷程記錄。|  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [設定使用量資料收集的對象 &#40;Power Pivot for SharePoint](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)   
- [排定資料重新整理 (Power Pivot for SharePoint)](http://msdn.microsoft.com/zh-tw/8571208f-6aae-4058-83c6-9f916f5e2f9b)   
+ [排程資料重新整理 (Power Pivot for SharePoint)](http://msdn.microsoft.com/en-us/8571208f-6aae-4058-83c6-9f916f5e2f9b)   
  [Power Pivot 資料重新整理](../../analysis-services/power-pivot-sharepoint/power-pivot-data-refresh.md)  
   
   

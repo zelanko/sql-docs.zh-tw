@@ -1,26 +1,31 @@
 ---
-title: "使用預測查詢產生器來建立預測查詢 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "預測查詢 [Analysis Services]"
-  - "採礦模型預測 [Analysis Services], 預測查詢"
+title: "建立預測查詢使用預測查詢產生器 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- prediction queries [Analysis Services]
+- Mining Model Prediction [Analysis Services], prediction queries
 ms.assetid: e02836e5-dd8c-4c97-a078-840ae79d3660
 caps.latest.revision: 30
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3a61c0e05e427ef4d4e693e1594598dafe85f3c2
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 使用預測查詢產生器來建立預測查詢
+# <a name="create-a-prediction-query-using-the-prediction-query-builder"></a>使用預測查詢產生器來建立預測查詢
   您可以建立預測查詢，方法是當您在 BI Development Studio 中建立資料採礦方案時，或是在 SQL Server Management Studio 中以滑鼠右鍵按一下現有的採礦模型，然後選擇 [建立預測查詢] 選項。  
   
  [預測查詢產生器] 有以下三個設計模式，您可以按一下左上角的圖示切換模式。  
@@ -60,7 +65,7 @@ caps.handback.revision: 30
   
  您可以使用視覺工具與文字編輯器的組合來設計資料採礦查詢。 如果在文字編輯器中輸入查詢的變更，然後切換回 **[設計]** 檢視，則所有變更都會遺失，且查詢會還原為預測查詢產生器所建立的原始查詢。本主題會逐步引導您使用圖形化查詢產生器。  
   
-### 若要建立預測查詢  
+### <a name="to-create-a-prediction-query"></a>若要建立預測查詢  
   
 1.  按一下資料採礦設計師中的 **[採礦模型預測]** 索引標籤。  
   
@@ -90,7 +95,7 @@ caps.handback.revision: 30
   
 8.  按一下 **[採礦模型預測]** 索引標籤之工具列上的第一個按鈕，然後選取 **[結果]**來執行查詢。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [在資料採礦設計師中建立單一查詢](../../analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer.md)   
  [資料採礦查詢](../../analysis-services/data-mining/data-mining-queries.md)  
   

@@ -1,32 +1,37 @@
 ---
-title: "建立資料來源 (SSAS 多維度) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.sqlserverstudio.impersonationinfo.f1"
-  - "sql13.asvs.connectionmanager.f1"
-  - "sql13.asvs.datasourcedesigner.f1"
-helpviewer_keywords: 
-  - "模擬 [Analysis Services]"
-  - "資料來源 [Analysis Services], 建立"
-  - "安全性 [Analysis Services], 資料來源連接"
+title: "建立資料來源 (SSAS 多維度) |Microsoft 文件"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.asvs.sqlserverstudio.impersonationinfo.f1
+- sql13.asvs.connectionmanager.f1
+- sql13.asvs.datasourcedesigner.f1
+helpviewer_keywords:
+- impersonation [Analysis Services]
+- data sources [Analysis Services], creating
+- security [Analysis Services], data source connections
 ms.assetid: 9fab8298-10dc-45a9-9a91-0c8e6d947468
 caps.latest.revision: 61
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 61
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 715f23cb80c0de16697b3aa66a4fb07669ad169e
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 建立資料來源 (SSAS 多維度)
+# <a name="create-a-data-source-ssas-multidimensional"></a>建立資料來源 (SSAS 多維度)
   在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 多維度模型中，資料來源物件代表資料來源的連接，您會從其中處理 (或匯入) 資料。 多維度模型至少必須包含一個資料來源物件，不過您可以加入更多資料來源物件，以便結合數個資料倉儲的資料。 使用本主題中的說明為您的模型建立資料來源物件。 如需設定這個物件之屬性的詳細資訊，請參閱[設定資料來源屬性 &#40;SSAS 多維度&#41;](../../analysis-services/multidimensional-models/set-data-source-properties-ssas-multidimensional.md)。  
   
  本主題包含下列各節：  
@@ -51,10 +56,10 @@ caps.handback.revision: 61
 ##  <a name="bkmk_impersonation"></a> 設定認證和模擬選項  
  資料來源連接有時可以使用 Windows 驗證或資料庫管理系統提供的驗證服務，例如連接至 SQL Azure 資料庫時使用 SQL Server 驗證。 您指定的帳戶必須擁有遠端資料庫伺服器的登入及外部資料庫的讀取權限。  
   
-### Windows 驗證  
+### <a name="windows-authentication"></a>Windows 驗證  
  使用 Windows 驗證的連接會在資料來源設計師的 [模擬資訊] 索引標籤中指定。 使用這個索引標籤即可選擇模擬選項，以指定連接至外部資料來源時，執行 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的帳戶。 並非所有選項都可以在所有案例中使用。 如需這些選項及何時使用這些選項的詳細資訊，請參閱[設定模擬選項 &#40;SSAS - 多維度&#41;](../../analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional.md)。  
   
-### 資料庫驗證  
+### <a name="database-authentication"></a>資料庫驗證  
  若不使用 Windows 驗證，您也可以指定連接使用資料庫管理系統所提供的驗證服務。 在某些情況下，需要使用資料庫驗證。 需要使用資料庫驗證的情況包括：使用 SQL Server 驗證連接至 Windows Azure SQL 資料庫，或存取在不同作業系統或非信任網域中執行的關聯式資料來源。  
   
  對於使用資料庫驗證的資料來源，會在連接字串中指定資料庫登入的使用者名稱和密碼。 若在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 模型中設定資料來源連接，當您於 [連接管理員] 中輸入使用者名稱和密碼時，即會將認證新增至連接字串。 記得指定具有資料讀取權限的使用者識別。  
@@ -64,14 +69,14 @@ caps.handback.revision: 61
  在模型中儲存資料來源物件之後，即會加密連接字串和密碼。  基於安全性的理由，當您後續在工具、指令碼或程式碼中檢視時，會隱藏連接字串中的密碼。  
   
 > [!NOTE]  
->  依預設，[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 不會在連接字串中儲存密碼。 如果未儲存此密碼，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會在需要時提示您輸入密碼。 如果您選擇儲存密碼，此密碼會以加密格式儲存在資料連接字串中。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會使用包含資料來源之資料庫的資料庫加密金鑰來加密資料來源的密碼資訊。 將連接資訊加密之後，您必須使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員來變更 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服務帳戶或密碼，否則將無法復原加密的資訊。 如需詳細資訊，請參閱 [SQL Server 組態管理員](../../relational-databases/sql-server-configuration-manager.md)。  
+>  依預設， [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 不會在連接字串中儲存密碼。 如果未儲存此密碼， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會在需要時提示您輸入密碼。 如果您選擇儲存密碼，此密碼會以加密格式儲存在資料連接字串中。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會使用包含資料來源之資料庫的資料庫加密金鑰來加密資料來源的密碼資訊。 將連接資訊加密之後，您必須使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員來變更 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服務帳戶或密碼，否則將無法復原加密的資訊。 如需詳細資訊，請參閱 [SQL Server 組態管理員](../../relational-databases/sql-server-configuration-manager.md)。  
   
-### 定義資料採礦物件的模擬資訊  
+### <a name="defining-impersonation-information-for-data-mining-objects"></a>定義資料採礦物件的模擬資訊  
  資料採礦查詢可以在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服務帳戶的內容中執行，但是也可以在使用者提交查詢的內容或指定之使用者的內容中執行； 查詢執行所在的內容可能會影響查詢結果。 如果是資料採礦 **OPENQUERY** 類型的作業，您可能會希望資料採礦查詢在目前使用者的內容或指定之使用者的內容中執行 (不論執行查詢的使用者是誰)，而不是在此服務帳戶的內容中執行。 如此可使用有限的安全性認證來執行查詢。 如果您希望 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 模擬目前的使用者或是模擬指定的使用者，請選取 [使用特定的使用者名稱和密碼] 或 [使用目前使用者的認證] 選項。  
   
 ##  <a name="bkmk_steps"></a> 使用資料來源精靈建立資料來源  
   
-1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中，開啟您想要在其中定義資料來源的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案，或是連接到您想要在其中定義資料來源的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫。  
+1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中，開啟您想要在其中定義資料來源的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案，或是連接到您想要在其中定義資料來源的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫。  
   
 2.  在**方案總管**中，以滑鼠右鍵按一下 [資料來源] 資料夾，然後按一下 [新增資料來源] 啟動 [資料來源精靈]。  
   
@@ -83,11 +88,11 @@ caps.handback.revision: 61
   
      新連接的預設提供者為原生 OLE DB\\[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 提供者。 此提供者是用來連接到使用 OLE DB 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Database Engine 執行個體。 若要連接到 SQL Server 關聯式資料庫，使用原生 OLE DB\SQL Server Native Client 11.0 通常會比使用其他提供者更快。  
   
-     您可以選擇不同的提供者來存取其他資料來源。 如需 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支援的提供者和關聯式資料庫清單，請參閱[支援的資料來源 &#40;SSAS - 多維度&#41;](../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)。  
+     您可以選擇不同的提供者來存取其他資料來源。 如需 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]支援的提供者和關聯式資料庫清單，請參閱 [支援的資料來源 &#40;SSAS - 多維度&#41;](../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)。  
   
 5.  輸入選定提供者所要求的資訊，以連接到基礎資料來源。 如果已選取**原生 OLE DB\SQL Server Native Client**提供者，請輸入下列資訊：  
   
-    1.  [伺服器名稱] 是 Database Engine 執行個體的網路名稱。 您可以將它指定為 IP 位址、電腦的 NETBIOS 名稱或完整網域名稱。 如果伺服器安裝成具名執行個體，您就必須加入執行個體名稱 (例如 \<電腦名稱>\\<執行個體名稱\>)。  
+    1.  [伺服器名稱] 是 Database Engine 執行個體的網路名稱。 您可以將它指定為 IP 位址、電腦的 NETBIOS 名稱或完整網域名稱。 如果伺服器安裝成具名執行個體，您必須包含執行個體名稱 (例如，\<電腦名稱 >\\< instancename\>)。  
   
     2.  [登入伺服器] 會指定驗證連接的方式。 [使用 Windows 驗證] 會使用 Windows 驗證。 [使用 SQL Server 驗證] 會針對支援混合模式驗證的 Windows Azure SQL Database 或 SQL Server 執行個體指定資料庫使用者登入。  
   
@@ -132,15 +137,15 @@ caps.handback.revision: 61
  當您參考資料來源物件時，只能在參考的物件或專案中編輯該物件， 您無法在包含此參考的資料來源物件中編輯連接字串。 參考的物件或專案中的連接資訊變更會在建立新的資料來源時，出現在其中。 當您建立專案或清除資料來源設計師中的參考時，會同步處理出現在專案之資料來源 (.ds) 檔案中的連接字串資訊。  
   
 ##  <a name="bkmk_ConnectionString"></a> 檢視或編輯連接屬性  
- 連接字串是根據您在 [資料來源設計師] 或 [新增資料來源精靈] 中選取的屬性所構成。 您可以在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中檢視連接字串及其他屬性。  
+ 連接字串是根據您在 [資料來源設計師] 或 [新增資料來源精靈] 中選取的屬性所構成。 您可以在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中檢視連接字串及其他屬性。  
   
  **若要編輯連接字串**  
   
-1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 的方案總管中，按兩下資料來源物件。  
+1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]的方案總管中，按兩下資料來源物件。  
   
 2.  按一下 [編輯]，然後按一下左瀏覽窗格中的 [全部]。  
   
-3.  屬性方格隨即出現，顯示您所使用資料提供者的可用屬性。 如需有關這些屬性的詳細資訊，請參閱提供者的產品文件集。  若是 SQL Server Native Client，請參閱[搭配 SQL Server Native Client 使用連接字串關鍵字](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)。  
+3.  屬性方格隨即出現，顯示您所使用資料提供者的可用屬性。 如需有關這些屬性的詳細資訊，請參閱提供者的產品文件集。  若是 SQL Server Native Client，請參閱 [搭配 SQL Server Native Client 使用連接字串關鍵字](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)。  
   
  若您在方案中有多個資料來源物件，但只想在一處維護連接字串，則可將目前資料來源設定為參考其他資料來源物件。  
   
@@ -152,7 +157,7 @@ caps.handback.revision: 61
  您可以建立多個資料來源物件，以支援與其他資料來源的連接。 每個資料來源都必須擁有可用來建立關聯性的資料行。  
   
 > [!NOTE]  
->  如果已定義多個資料來源，而且在單一查詢中查詢多個來源的資料 (例如針對雪花維度)，您必須使用 **OpenRowset** 定義支援遠端查詢的資料來源。 一般來說，這會是 Microsoft SQL Server 資料來源。  
+>  如果已定義多個資料來源，而且在單一查詢中查詢多個來源的資料 (例如針對雪花維度)，您必須使用 **OpenRowset**定義支援遠端查詢的資料來源。 一般來說，這會是 Microsoft SQL Server 資料來源。  
   
  使用多個資料來源的需求如下：  
   
@@ -172,7 +177,7 @@ caps.handback.revision: 61
   
 5.  尋找並選取您加入的資料表。 以滑鼠右鍵按一下資料表，然後選取 [新增關聯性]。 選擇包含相符資料的來源和目的地資料行。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [支援的資料來源 &#40;SSAS - 多維度&#41;](../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)   
  [多維度模型中的資料來源檢視](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
   

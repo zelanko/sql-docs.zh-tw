@@ -1,33 +1,38 @@
 ---
-title: "採礦結構資料行 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/13/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "資料採礦 [Analysis Services], 結構"
-  - "採礦結構 [Analysis Services], 資料行"
-  - "資料來源 [Analysis Services], 採礦結構資料行"
-  - "資料行 [data mining], 採礦結構資料行"
+title: "採礦結構資料行 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/13/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data mining [Analysis Services], structure
+- mining structures [Analysis Services], columns
+- data sources [Analysis Services], mining structure columns
+- columns [data mining], mining structure columns
 ms.assetid: 20cbf433-70d1-4b61-a462-41a8435b27b4
 caps.latest.revision: 41
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0bf7ffc6f8531385ef9100b3c104db887c2fb565
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 採礦結構資料行
+# <a name="mining-structure-columns"></a>採礦結構資料行
   當您建立採礦結構時會定義採礦結構中的資料行，其方法是選擇外部資料的資料行，然後指定資料如何用於模型化。 因此，採礦結構資料行不只是資料來源中的資料複本：這些資料行會定義採礦模型如何使用來源中的資料。 您可以指派可判斷如何將資料離散化的屬性以及可描述如何分佈資料值的屬性。  
   
  採礦結構資料行的設計就是要提供彈性和擴充性，因為您用於建立採礦模型的每一個演算法，都可能使用結構中的不同資料行來解譯資料。 您可以使用單一採礦結構並使用其中的資料行來自訂每一個模型的資料，而不必在每一個模型中都有一組資料。  
   
-## 定義採礦結構資料行  
+## <a name="defining-mining-structure-columns"></a>定義採礦結構資料行  
  定義結構資料行的基本資料類型和內容類型是衍生自您用於建立結構的資料來源。 您可以在採礦結構內變更這些設定，也可以設定模型旗標和設定連續資料行的分佈。  
   
  採礦結構資料行的定義必須包含下列資訊：  
@@ -48,9 +53,9 @@ caps.handback.revision: 41
   
  協力廠商演算法也可以包括可在採礦結構資料行上定義的自訂屬性。  
   
- 如需資料採礦結構和資料採礦模型的詳細資訊，請參閱[採礦結構 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)。  
+ 如需資料採礦結構和資料採礦模型的詳細資訊，請參閱 [採礦結構 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)。  
   
-## 相關內容  
+## <a name="related-content"></a>相關內容  
  如需有關如何定義及使用採礦結構資料行的詳細資訊，請參閱下列主題。  
   
 |主題|連結|  
@@ -64,7 +69,7 @@ caps.handback.revision: 41
 |描述分類資料行，這是一種特殊類型的資料行，可用來讓採礦結構資料行之間產生關聯。|[分類資料行 &#40;資料採礦&#41;](../../analysis-services/data-mining/classified-columns-data-mining.md)|  
 |學習加入及修改採礦結構資料行。|[採礦結構工作和使用說明](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)|  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [採礦結構 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
  [採礦模型資料行](../../analysis-services/data-mining/mining-model-columns.md)  
   

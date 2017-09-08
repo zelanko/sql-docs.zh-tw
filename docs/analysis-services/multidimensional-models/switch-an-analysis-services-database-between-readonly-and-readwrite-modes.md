@@ -1,28 +1,33 @@
 ---
-title: "在 ReadOnly 和 ReadWrite 模式之間切換 Analysis Services 資料庫 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ReadOnly 屬性"
-  - "ReadWriteMode 命令"
-  - "作業 [Analysis Services - 多維度資料]"
+title: "切換 ReadOnly 和 ReadWrite 模式之間的 Analysis Services 資料庫 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ReadOnly property
+- ReadWriteMode command
+- operations [Analysis Services - multidimensional data]
 ms.assetid: 4eff8181-08dd-4fad-b091-d400fc21a020
 caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 16
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 11eaa65564dcd59442bd8b111c0de009b00e8fd4
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 在 ReadOnly 和 ReadWrite 模式之間切換 Analysis Services 資料庫
+# <a name="switch-an-analysis-services-database-between-readonly-and-readwrite-modes"></a>在 ReadOnly 和 ReadWrite 模式之間切換 Analysis Services 資料庫
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫管理員可以變更表格式或多維度資料庫的讀寫模式，以便將查詢工作負載分散於多部僅供查詢的伺服器。  
   
  您可以使用多種方式來切換資料庫模式。 本文件將說明下列常見狀況：  
@@ -33,7 +38,7 @@ caps.handback.revision: 16
   
 -   使用 XMLA 或 TMSL 的指令碼  
   
-## 以互動方式使用 Management Studio 來切換資料庫的讀取/寫入模式  
+## <a name="switch-the-readwrite-mode-of-a-database-interactively-using-management-studio"></a>以互動方式使用 Management Studio 來切換資料庫的讀取/寫入模式  
   
 1.  在物件總管中，以滑鼠右鍵按一下資料庫，然後選取 [屬性]。  
   
@@ -51,8 +56,8 @@ caps.handback.revision: 16
   
 7.  輸入密碼，然後按一下 [確定] 執行附加命令。  
   
-## 以程式設計方式使用 AMO 來切換資料庫的讀取/寫入模式  
- 在您的 C# 應用程式中，使用必要的參數來叫用 `SwitchReadWrite()`。 編譯並執行程式碼，以便移動資料庫。  
+## <a name="switch-the-readwrite-mode-to-a-database-programmatically-using-amo"></a>以程式設計方式使用 AMO 來切換資料庫的讀取/寫入模式  
+ 在您的 C# 應用程式中，使用必要的參數來叫用 `SwitchReadWrite()` 。 編譯並執行程式碼，以便移動資料庫。  
   
 ```  
 private void SwitchReadWrite(Server server, string dbName, ReadWriteMode dbReadWriteMode)  
@@ -91,7 +96,7 @@ private void SwitchReadWrite(Server server, string dbName, ReadWriteMode dbReadW
   
 ```  
   
-## 使用 XMLA 有指令碼切換資料庫的讀取/寫入模式  
+## <a name="switch-the-readwrite-mode-to-a-database-by-script-using-xmla"></a>使用 XMLA 有指令碼切換資料庫的讀取/寫入模式  
  下列指示適用於相容性模式 1050、1100 或 1103 的多維度資料庫和表格式資料庫。  
   
 1.  在物件總管中，以滑鼠右鍵按一下資料庫，然後選取 [屬性]。  
@@ -126,16 +131,16 @@ private void SwitchReadWrite(Server server, string dbName, ReadWriteMode dbReadW
     </Attach>  
     ```  
   
-8.  將 `%dbFolder%` 取代成資料庫資料夾的完整 UNC 路徑、將 `%ReadOnlyMode%` 取代成對應的 **ReadOnly** 或 **ReadWrite** 值，並將 `%password%` 取代成密碼。 % 字元屬於範本的一部分，而且您必須移除這些字元。  
+8.  將 `%dbFolder%` 取代成資料庫資料夾的完整 UNC 路徑、將 `%ReadOnlyMode%` 取代成對應的 **ReadOnly** 或 **ReadWrite**值，並將 `%password%` 取代成密碼。 % 字元屬於範本的一部分，而且您必須移除這些字元。  
   
 9. 執行 XMLA 命令。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
  [Analysis Services 的高可用性與延展性](../../analysis-services/instances/high-availability-and-scalability-in-analysis-services.md)   
  [附加和卸離 Analysis Services 資料庫](../../analysis-services/multidimensional-models/attach-and-detach-analysis-services-databases.md)   
  [資料庫儲存位置](../../analysis-services/multidimensional-models/database-storage-location.md)   
- [資料庫 ReadWriteMode](../../analysis-services/multidimensional-models/database-readwritemodes.md)   
+ [資料庫 Readwritemode](../../analysis-services/multidimensional-models/database-readwritemodes.md)   
  [Attach 元素](../../analysis-services/xmla/xml-elements-commands/attach-element.md)   
  [Detach 元素](../../analysis-services/xmla/xml-elements-commands/detach-element.md)   
  [ReadWriteMode 元素](../../analysis-services/xmla/xml-elements-properties/readwritemode-element.md)   

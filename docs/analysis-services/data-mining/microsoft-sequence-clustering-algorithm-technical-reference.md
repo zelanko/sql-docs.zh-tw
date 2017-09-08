@@ -1,34 +1,39 @@
 ---
-title: "Microsoft 時序群集演算法技術參考 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "MAXIMUM_SEQUENCE_STATES 參數"
-  - "MINIMUM_SUPPORT 參數"
-  - "MAXIMUM_STATES 參數"
-  - "時序群集演算法 [Analysis Services]"
-  - "CLUSTER_COUNT 參數"
+title: "Microsoft 時序群集演算法技術參考 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- MAXIMUM_SEQUENCE_STATES parameter
+- MINIMUM_SUPPORT parameter
+- MAXIMUM_STATES parameter
+- sequence clustering algorithms [Analysis Services]
+- CLUSTER_COUNT parameter
 ms.assetid: 251c369d-6b02-4687-964e-39bf55c9b009
 caps.latest.revision: 20
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7e26ac40b7cb47370107f348548cf2cc7489efa1
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# Microsoft 時序群集演算法技術參考
+# <a name="microsoft-sequence-clustering-algorithm-technical-reference"></a>Microsoft 時序群集演算法技術參考
   Microsoft 時序叢集演算法是一種混合式演算法，它使用 Markov 鏈結分析來識別已排序的時序，並結合此分析的結果與叢集技術，根據模型中的時序和其他屬性產生叢集。 本主題描述演算法的實作、如何自訂演算法，以及時序叢集模型的特殊需求。  
   
  如需有關演算法的一般詳細資訊，包括如何瀏覽和查詢時序叢集模型，請參閱＜ [Microsoft Sequence Clustering Algorithm](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)＞。  
   
-## Microsoft 時序群集演算法的實作  
+## <a name="implementation-of-the-microsoft-sequence-clustering-algorithm"></a>Microsoft 時序群集演算法的實作  
  Microsoft 時序叢集模型使用 Markov 模型來識別時序，並判斷時序的機率。 Markov 模型是一種導向圖形，可儲存不同狀態間的轉換。 Microsoft 時序叢集演算法使用 n 順序的 Markov 鏈結，而非隱藏的 Markov 模型。  
   
  Markov 鏈結中的順序數目會告訴您使用多少個狀態判斷目前狀態的機率。 在第一優先順序的 Markov 模型中，目前狀態的機率僅取決於先前的狀態。 在第二優先順序的 Markov 鏈結中，狀態的機率取決於先前的兩個狀態，以此類推。 轉換矩陣會針對每個 Markov 鏈結儲存每個狀態組合的轉換。 當 Markov 鏈結的長度增加時，矩陣的大小也會以指數方式增加，而且該矩陣會變得相當疏鬆。 處理時間也會等比例地增加。  
@@ -43,7 +48,7 @@ caps.handback.revision: 20
   
  時序群集模型傾向於建立比一般叢集模型還要更多的叢集。 因此，Microsoft 時序群集演算法會根據時序及其他屬性執行 *「群集分解」*(Cluster Decomposition) 來分割群集。  
   
-### 時序叢集模型中的特徵選取  
+### <a name="feature-selection-in-a-sequence-clustering-model"></a>時序叢集模型中的特徵選取  
  特徵選取不會在建立時序時叫用，但是特徵選取會在群集階段套用。  
   
 |模型類型|特徵選取方法|註解|  
@@ -51,9 +56,9 @@ caps.handback.revision: 20
 |時序群集|未使用|尚未叫用特徵選取。不過，您可以藉由設定 MINIMUM_SUPPORT 和 MINIMUM_PROBABILIITY 參數的值，控制演算法的行為。|  
 |群集|有趣性分數|雖然群集演算法可以使用離散或離散化的演算法，但每個屬性的分數都會計算為距離，而且是連續的；因此會使用有趣性分數。|  
   
- 如需詳細資訊，請參閱 [Feature Selection](../Topic/Feature%20Selection.md)。  
+ 如需詳細資訊，請參閱 [Feature Selection](http://msdn.microsoft.com/library/73182088-153b-4634-a060-d14d1fd23b70)。  
   
-### 最佳化效能  
+### <a name="optimizing-performance"></a>最佳化效能  
  Microsoft 時序群集演算法支援各種最佳化處理的方式：  
   
 -   設定 CLUSTER_COUNT 參數的值來控制所產生之群集的數目。  
@@ -72,10 +77,10 @@ caps.handback.revision: 20
   
  這些方法的完整討論超出本主題的範圍。  
   
-## 自訂時序群集演算法  
+## <a name="customizing-the-sequence-clustering-algorithm"></a>自訂時序群集演算法  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時序群集演算法支援數個會影響所產生之採礦模型的行為、效能和精確度的參數。 您也可以設定控制演算法處理定型資料之方式的模型旗標，修改已完成之模型的行為。  
   
-### 設定演算法參數  
+### <a name="setting-algorithm-parameters"></a>設定演算法參數  
  下表描述可搭配 Microsoft 時序群集演算法使用的參數。  
   
  CLUSTER_COUNT  
@@ -103,7 +108,7 @@ caps.handback.revision: 20
   
  預設值為 100。  
   
-### 模型旗標  
+### <a name="modeling-flags"></a>模型旗標  
  下列模型旗標受到支援，可搭配 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時序叢集演算法使用。  
   
  NOT NULL  
@@ -118,7 +123,7 @@ caps.handback.revision: 20
   
  如需如何在採礦模型中使用 Missing 值，以及遺漏值如何影響機率分數的詳細資訊，請參閱[遺漏值&#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)。  
   
-## 需求  
+## <a name="requirements"></a>需求  
  案例資料表必須有一個案例識別碼資料行。 案例資料表可以選擇性地包含儲存案例之相關屬性的其他資料行。  
   
  Microsoft 時序群集演算法需要儲存為巢狀資料表的時序資訊。 巢狀資料表必須有一個單一的 Key Sequence 資料行。 **Key Sequence** 資料行可以包含能夠儲存的任何資料類型，包括字串資料類型，但資料行對於每個案例，必須包含唯一的值。 此外，處理模型前，您必須確認案例資料表與巢狀資料表都根據與資料表相關的索引鍵，以遞增方式排序。  
@@ -126,7 +131,7 @@ caps.handback.revision: 20
 > [!NOTE]  
 >  如果您建立使用 Microsoft 時序演算法但不使用時序資料行的模型，所產生的模型將不包含任何時序，但是將只根據模型中包含的其他屬性群集案例。  
   
-### 輸入和可預測資料行  
+### <a name="input-and-predictable-columns"></a>輸入和可預測資料行  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時序群集演算法支援下表所列的特定輸入資料行和可預測資料行。 如需內容類型用於採礦模型時所代表意義的詳細資訊，請參閱[內容類型 &#40;資料採礦&#41;](../../analysis-services/data-mining/content-types-data-mining.md)。  
   
 |資料行|內容類型|  
@@ -134,7 +139,7 @@ caps.handback.revision: 20
 |輸入屬性|Continuous、Cyclical、Discrete、Discretized、Key、Key Sequence、Table 和 Ordered|  
 |可預測屬性|Continuous、Cyclical、Discrete、Discretized、Table 和 Ordered|  
   
-## 備註  
+## <a name="remarks"></a>備註  
   
 -   請使用 [PredictSequence &#40;DMX&#41;](../../dmx/predictsequence-dmx.md) 函數以預測時序。 如需支援時序預測的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本詳細資訊，請參閱 [SQL Server 2012 版本支援的功能](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473)。  
   
@@ -142,9 +147,9 @@ caps.handback.revision: 20
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時序群集演算法支援鑽研、OLAP 採礦模型的使用，以及資料採礦維度的使用。  
   
-## 請參閱＜  
- [Microsoft 時序群集演算法](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
- [Sequence Clustering Model Query Examples](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)   
- [時序叢集模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining model content for sequence clustering models.md)  
+## <a name="see-also"></a>請參閱＜  
+ [Microsoft Sequence Clustering Algorithm](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
+ [時序群集模型查詢範例](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)   
+ [時序叢集模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
   
   

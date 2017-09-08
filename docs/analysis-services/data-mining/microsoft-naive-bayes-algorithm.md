@@ -1,39 +1,44 @@
 ---
-title: "Microsoft 貝氏機率分類演算法 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Bayesian 分類器"
-  - "演算法 [資料採礦]"
-  - "預測模型 [Analysis Services]"
-  - "分類演算法 [Analysis Services]"
-  - "貝氏機率分類演算法 [Analysis Services]"
+title: "Microsoft 貝氏機率分類演算法 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Bayesian classifiers
+- algorithms [data mining]
+- predictive modeling [Analysis Services]
+- classification algorithms [Analysis Services]
+- naive bayes algorithms [Analysis Services]
 ms.assetid: 3b53e011-3b1a-4cd1-bdc2-456768ba31b5
 caps.latest.revision: 57
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 57
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 074a93f83cd89449898f0fe66e3680b8dfd95b21
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# Microsoft 貝氏機率分類演算法
+# <a name="microsoft-naive-bayes-algorithm"></a>Microsoft 貝氏機率分類演算法
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 貝氏機率分類演算法是可用於探勘和預測模型的分類演算法 (根據貝氏的定理)。 貝氏 (Naïve Bayes) 名稱中的 naïve 一字源自此演算法使用 Bayesian 技術但卻沒有考量可能存在的相依性。  
   
  此演算法比其他 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 演算法更少計算，因此對於快速產生採礦模型來探索輸入資料行和可預測資料行之間的關聯性很有用。 您可以使用此演算法來執行資料的初始瀏覽，然後您可以套用其結果，以其他更多計算和更精確的演算法來建立其他採礦模型。  
   
-## 範例  
+## <a name="example"></a>範例  
  做為一項正在進行的促銷策略，Adventure Works Cycle 公司的行銷部門決定郵寄廣告傳單來鎖定目標潛在客戶。 為了減少成本，他們想要將廣告傳單只寄給那些有可能回應的客戶。 公司會將有關人口統計資料和舊郵件的回應等資訊儲存在資料庫中。 他們想要使用此資料來了解人口統計資料 (例如年齡和地點) 如何協助預測促銷的回應，藉由將潛在客戶與具有類似特性而且過去曾向公司購買產品的客戶做比較。 尤其，他們想要看看那些有購買腳踏車和沒有購買腳踏車的客戶之間的差異。  
   
  使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 貝氏機率分類演算法，行銷部門可以快速預測特定客戶設定檔的結果，因此可以判斷哪些客戶最有可能對廣告傳單做出回應。 使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 中的 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]貝氏機率分類檢視器，他們還可以利用視覺化方式來調查哪些輸入資料行促成廣告傳單的正面回應。  
   
-## 演算法的運作方式  
+## <a name="how-the-algorithm-works"></a>演算法的運作方式  
  在提供了可預測資料行的每一個可能狀態之後， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 貝氏機率分類演算法可計算出每一個輸入資料行的每一個狀態的機率。  
   
  若要了解其運作方式，請在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 中使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 貝氏機率分類檢視器 (如下圖所示)，以視覺方式瀏覽此演算法如何分配狀態。  
@@ -48,9 +53,9 @@ caps.handback.revision: 57
   
  該檢視器也提供了分佈的值，好讓您可以看到，對於通勤距離為一至二英里的客戶，其購買自行車的機率是 0.387，而不購買自行車的機率則是 0.287。 在此範例中，此演算法會使用從客戶特性衍生的數值資訊 (例如通勤距離) 來預測客戶是否會購買自行車。  
   
- 如需使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 貝氏機率分類檢視器的詳細資訊，請參閱[使用 Microsoft 貝氏機率分類檢視器瀏覽模型](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-naive-bayes-viewer.md)。  
+ 如需使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 貝氏機率分類檢視器的詳細資訊，請參閱 [使用 Microsoft 貝氏機率分類檢視器瀏覽模型](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-naive-bayes-viewer.md)。  
   
-## 貝氏機率分類模型所需的資料  
+## <a name="data-required-for-naive-bayes-models"></a>貝氏機率分類模型所需的資料  
  當您準備資料以供貝氏機率分類模型定型使用時，應該要了解特定演算法的需求，包括所需的資料量及資料的使用方式等。  
   
  貝氏機率分類模型的需求如下：  
@@ -67,19 +72,19 @@ caps.handback.revision: 57
   
      可預期資料行的值可視為輸入。 當您瀏覽新的資料集來尋找資料行之間的關聯性時，這個作法很有用。  
   
-## 檢視模型  
+## <a name="viewing-the-model"></a>檢視模型  
  若要瀏覽此模型，您可以使用 **[Microsoft 貝氏機率分類檢視器]**。 檢視器會顯示輸入屬性與可預測屬性間的關聯。 檢視器也會針對每個群集提供詳細的設定檔、區分各個群集的屬性清單以及整個訓練資料集的特性。 如需詳細資訊，請參閱[使用 Microsoft 貝氏機率分類檢視器瀏覽模型](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-naive-bayes-viewer.md)。  
   
- 如果您想要知道更多詳細資訊，您可以在 [Microsoft 一般內容樹狀檢視器 &#40;資料採礦&#41;](../Topic/Microsoft%20Generic%20Content%20Tree%20Viewer%20\(Data%20Mining\).md) 中瀏覽此模型。 如需此模型所儲存之資訊類型的詳細資訊，請參閱[貝式機率分類模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)。  
+ 如果您想要知道更多詳細資訊，您可以在 [Microsoft 一般內容樹狀檢視器 &#40;資料採礦&#41;](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c) 中瀏覽此模型。 如需此模型所儲存之資訊類型的詳細資訊，請參閱[貝式機率分類模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)。  
   
-## 進行預測  
+## <a name="making-predictions"></a>進行預測  
  在此模型已培訓之後，結果會儲存成一組模式，供您瀏覽或用來做出預測。  
   
  您可以建立查詢來傳回新資料與可預測屬性的關聯方式，或者擷取描述有關群集的描述性統計資料。  
   
- 如需如何針對資料採礦模型建立查詢的資訊，請參閱[資料採礦查詢](../../analysis-services/data-mining/data-mining-queries.md)。 如需如何以貝氏機率分類模型使用查詢的範例，請參閱[貝式機率分類模型查詢範例](../../analysis-services/data-mining/naive-bayes-model-query-examples.md)。  
+ 如需如何針對資料採礦模型建立查詢的資訊，請參閱 [資料採礦查詢](../../analysis-services/data-mining/data-mining-queries.md)。 如需如何以貝氏機率分類模型使用查詢的範例，請參閱 [貝式機率分類模型查詢範例](../../analysis-services/data-mining/naive-bayes-model-query-examples.md)。  
   
-## 備註  
+## <a name="remarks"></a>備註  
   
 -   支援使用預測模型標記語言 (PMML) 來建立採礦模型。  
   
@@ -89,11 +94,12 @@ caps.handback.revision: 57
   
 -   支援 OLAP 採礦模型的使用。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [特徵選取 &#40;資料採礦&#41;](../../analysis-services/data-mining/feature-selection-data-mining.md)   
- [Naive Bayes Model Query Examples](../../analysis-services/data-mining/naive-bayes-model-query-examples.md)   
- [貝氏機率分類模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)   
+ [特徵選取 &#40; 資料採礦 &#41;](../../analysis-services/data-mining/feature-selection-data-mining.md)   
+ [貝氏機率分類模型查詢範例](../../analysis-services/data-mining/naive-bayes-model-query-examples.md)   
+ [貝氏機率分類模型 &#40; 的採礦模型內容Analysis Services-資料採礦 &#41;](../../analysis-services/data-mining/mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)   
  [Microsoft 貝氏機率分類演算法技術參考](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm-technical-reference.md)  
   
   
+

@@ -1,35 +1,33 @@
 ---
-title: "在管理中心建立 Power Pivot 網站的信任位置 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "在管理中心建立 Power Pivot 網站的信任的位置 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a666f365-cd93-43a3-9d3d-e429dfc19b66
 caps.latest.revision: 8
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 7
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 9f2913ee3aa26a01a704fbdd94a4d01b7044f73a
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 在管理中心建立 Power Pivot 網站的信任位置
+# <a name="create-a-trusted-location-for-power-pivot-sites-in-central-administration"></a>在管理中心建立 Power Pivot 網站的信任位置
   Excel Services 可讓您指定哪些位置對於在 SharePoint 伺服器上開啟的活頁簿而言是有效的儲存機制。 這些位置稱為「信任位置」，而且您可以針對每個建立的信任位置使用不同的組態設定。 對於 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 部署，您可以考慮針對包含 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿的網站建立信任位置，讓您可以套用最適合 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料存取的設定，同時針對其餘的伺服器陣列保留預設值。  
   
- 本主題包含下列幾節：  
   
- [必要條件](#prereq)  
-  
- [概觀](#overview)  
-  
- [建立 Power Pivot 資料存取的信任位置](#create)  
-  
-## 必要條件  
+## <a name="prerequisites"></a>必要條件  
  您必須是伺服陣列管理員或服務管理員，才能將 URL 指定為信任位置。  
   
  您必須知道包含 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫或儲存活頁簿之其他文件庫的 SharePoint 網站 URL 位址。 若要取得位址，請開啟包含文件庫的網站，以滑鼠右鍵按一下 **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫**，並選取 [內容]，然後複製包含伺服器名稱和網站路徑之位址 (URL) 的第一個部分。  
@@ -68,8 +66,8 @@ caps.handback.revision: 7
   
 11. 按一下 **[確定]**。  
   
-## 請參閱＜  
- [Power Pivot 圖庫](../Topic/Power%20Pivot%20Gallery.md)   
+## <a name="see-also"></a>請參閱＜  
+ [Power Pivot 圖庫](http://msdn.microsoft.com/library/2a0db616-e08e-4062-aac8-979f8cad7794)   
  [建立及自訂 Power Pivot 圖庫](../../analysis-services/power-pivot-sharepoint/create-and-customize-power-pivot-gallery.md)   
  [使用 Power Pivot 圖庫](../../analysis-services/power-pivot-sharepoint/use-power-pivot-gallery.md)  
   

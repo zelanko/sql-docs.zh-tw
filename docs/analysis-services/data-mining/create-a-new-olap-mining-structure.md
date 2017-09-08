@@ -1,30 +1,35 @@
 ---
-title: "建立新的 OLAP 採礦結構 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "採礦結構 [Analysis Services], OLAP"
-  - "採礦結構 [Analysis Services], 建立"
-  - "OLAP [Analysis Services], 採礦模型"
+title: "建立新的 OLAP 採礦結構 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- mining structures [Analysis Services], OLAP
+- mining structures [Analysis Services], creating
+- OLAP [Analysis Services], mining models
 ms.assetid: 368f4273-a016-4748-bcb6-505a3e745af3
 caps.latest.revision: 32
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 41047907b0e53f6d17fc49a9734ed4b9a52817f1
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 建立新的 OLAP 採礦結構
+# <a name="create-a-new-olap-mining-structure"></a>建立新的 OLAP 採礦結構
   您可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的資料採礦精靈，建立使用多維度模型資料的採礦結構。 以 OLAP Cube 為基礎的採礦模型可以使用事實資料表、維度和量值群組中的資料行和值做為分析屬性。  
   
-### 若要建立新的 OLAP 採礦結構  
+### <a name="to-create-a-new-olap-mining-structure"></a>若要建立新的 OLAP 採礦結構  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的方案總管中，以滑鼠右鍵按一下 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案中的 [採礦結構] 資料夾，然後按一下 [新增採礦結構] 開啟 [資料採礦精靈]。  
   
@@ -129,7 +134,7 @@ caps.handback.revision: 32
   
      **使用採礦模型維度建立 Cube**：選取此核取方塊，並提供新 Cube 的名稱。 當您使用此選項時，所建立的新 Cube 同時會包含建立結構所使用的現有維度，以及包含模型結果的新資料採礦維度。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [採礦結構工作和使用說明](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
   

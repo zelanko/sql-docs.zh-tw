@@ -1,23 +1,28 @@
 ---
-title: "內容查詢 (資料採礦) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "內容查詢 （資料採礦） |Microsoft 文件"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c4f4a5a8-a230-4222-bece-9d563501f65f
 caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2d45986f9907903c6ccdf4d7b1c6bfe5d22eee78
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 內容查詢 (資料採礦)
+# <a name="content-queries-data-mining"></a>內容查詢 (資料採礦)
   內容查詢是一種擷取採礦模型之內部統計資料和結構相關資訊的方法。 內容查詢有時候可以提供檢視器中無法隨時取得的詳細資料。 您也可以使用內容查詢的結果，以程式設計的方式擷取其他用途的資訊。  
   
  本節提供有關可使用內容查詢擷取之資訊類型，以及內容查詢之一般 DMX 語法的一般資訊。  
@@ -164,7 +169,7 @@ ORDER BY NODE_SUPPORT DESC
   
  WHERE 子句指定 NODE_TYPE 的值應該為 8，以便只擷取規則。  
   
- 如需詳細範例，請參閱[關聯模型查詢範例](../../analysis-services/data-mining/association-model-query-examples.md)。  
+ 如需詳細範例，請參閱 [關聯模型查詢範例](../../analysis-services/data-mining/association-model-query-examples.md)。  
   
 ###  <a name="bkmk_DecTree"></a> 範例 2：決策樹模型的內容查詢  
  決策樹模型可用於預測及分類。  此範例假設您正在使用模型預測結果，但是您也會想要查明哪些因素或規則可用來分類結果。  
@@ -188,14 +193,14 @@ FROM [<decision tree model name>]
 WHERE NODE_UNIQUE_NAME= '<node id>'  
 ```  
   
- 如需詳細範例，請參閱[決策樹模型查詢範例](../../analysis-services/data-mining/decision-trees-model-query-examples.md)。  
+ 如需詳細範例，請參閱 [決策樹模型查詢範例](../../analysis-services/data-mining/decision-trees-model-query-examples.md)。  
   
 ##  <a name="bkmk_Results"></a> 使用查詢結果  
  如範例所示，內容查詢主要會傳回表格式資料列集，但也可能包含巢狀資料行中的資訊。 您可以扁平化傳回的資料列集，但是這麼做會讓結果使用起來更複雜。 特別是 NODE_DISTRIBUTION 節點的內容是以巢狀方式內嵌，但是包含了許多有關模型的有趣資訊。  
   
  如需有關如何使用階層式資料列集的詳細資訊，請參閱 MSDN 上的 OLEDB 規格。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [了解 DMX Select 陳述式](../../dmx/understanding-the-dmx-select-statement.md)   
  [資料採礦查詢](../../analysis-services/data-mining/data-mining-queries.md)  
   

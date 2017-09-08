@@ -1,46 +1,51 @@
 ---
-title: "測試和驗證 (資料採礦) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "測試資料採礦模型"
-  - "比較採礦模型"
-  - "連續屬性圖表"
-  - "資料採礦 [Analysis Services], 模型"
-  - "圖表 [Analysis Services]"
-  - "預測模型 [Analysis Services]"
-  - "採礦模型 [Analysis Services], 驗證"
-  - "驗證資料採礦模型"
-  - "檢視採礦精確度"
-  - "信心分數 [資料採礦]"
-  - "顯示採礦精確度"
-  - "預測 [Analysis Services], 比較採礦模型"
-  - "計分 [data mining]"
-  - "增益圖 [Analysis Services]"
-  - "分類矩陣 [Analysis Services]"
-  - "CRISP-DM"
-  - "精確度測試 [資料採礦]"
+title: "測試和驗證 （資料採礦） |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- testing data mining models
+- comparing mining models
+- continuous attribute charts
+- data mining [Analysis Services], models
+- charts [Analysis Services]
+- predictive modeling [Analysis Services]
+- mining models [Analysis Services], validating
+- validating data mining models
+- viewing mining accuracy
+- confidence scores [data mining]
+- displaying mining accuracy
+- predictions [Analysis Services], comparing mining models
+- scoring [data mining]
+- lift charts [Analysis Services]
+- classification matrix [Analysis Services]
+- CRISP-DM
+- accuracy testing [data mining]
 ms.assetid: 197144f5-21ed-4009-b448-fe412fb3916c
 caps.latest.revision: 61
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 61
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: f796cc3a84537df09060cd578a7ed1eb3a9649ed
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 測試和驗證 (資料採礦)
+# <a name="testing-and-validation-data-mining"></a>測試和驗證 (資料採礦)
   驗證是評估採礦模型對實際資料的執行效能有多好的處理程序。 在部署採礦模型至生產環境之前，先了解其品質和特性以驗證採礦模型是很重要的。  
   
- 本章介紹一些與模型品質相關的基本概念，也描述在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中提供的模型驗證策略。 如需模型驗證如何配合較大型資料採礦處理的概觀，請參閱[資料採礦方案](../../analysis-services/data-mining/data-mining-solutions.md)。  
+ 本章介紹一些與模型品質相關的基本概念，也描述在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中提供的模型驗證策略。 如需模型驗證如何配合較大型資料採礦處理的概觀，請參閱 [資料採礦方案](../../analysis-services/data-mining/data-mining-solutions.md)。  
   
-## 測試的方法和資料採礦模型的驗證  
+## <a name="methods-for-testing-and-validation-of-data-mining-models"></a>測試的方法和資料採礦模型的驗證  
  有多種方法可以評估資料採礦模型的品質和特性。  
   
 -   您可以使用各種統計驗證量值來判斷資料或模型中是否有問題。  
@@ -51,7 +56,7 @@ caps.handback.revision: 61
   
  上述所有方法在資料採礦方法中都很有用，可在您建立、測試和精簡模型以解決特定問題時反覆使用。 沒有任何一項規則能完整地可以告訴您模型是否夠好，或是資料是否足夠。  
   
-## 驗證資料採礦模型的準則定義  
+## <a name="definition-of-criteria-for-validating-data-mining-models"></a>驗證資料採礦模型的準則定義  
  資料採礦的量值一般可分為精確度、可靠性和效益等類別目錄。  
   
  *「精確度」* (Accuracy) 是一種量值，代表模型可將結果與所提供資料中的屬性相互關聯的程度。 精確度有多種量值，但所有的精確度量值都是依所使用的資料而定。 事實上，值可能會遺失或僅是近似值，或者資料可能已由多項處理序變更。 特別是在瀏覽和開發階段中，您可能會決定接受資料中特定的錯誤量 (尤其是當資料的特性相當統一時)。 例如，根據過去的銷售量而預測特定店家銷售額的模型，可能會具有強烈的關聯性而且非常正確，即使該店家過去一直使用錯誤的會計方法； 因此，精確度的測量必須藉由可靠性的評估來平衡。  
@@ -60,7 +65,7 @@ caps.handback.revision: 61
   
  *「效益」* 包含多種標準，可表示模型是否提供有用的資訊。 例如，將店家地點與銷售額相互關聯的資料採礦模型可能既精確又可靠，但效益卻可能不高，因為無法新增更多位於相同地點的店家來廣泛應用該結果。 此外，該模型也無法回答為何特定地點的銷售額較高的基本商務問題。 您也可能發現看來成功的模型實際上卻沒有意義，因為它是根據資料中的交叉相互關聯而定。  
   
-## 測試的工具和資料採礦模型的驗證  
+## <a name="tools-for-testing-and-validation-of-mining-models"></a>測試的工具和資料採礦模型的驗證  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支援資料採礦方案的多種驗證方法，且這些方法支援資料採礦測試方法的所有階段。  
   
 -   將資料分割到定型集和測試集中。  
@@ -81,16 +86,16 @@ caps.handback.revision: 61
   
  本節中的主題提供每一種方法的概觀，並逐步引導您使用 SQL Server 資料採礦所建立之測量模型精確度的程序。  
   
-### 相關主題  
+### <a name="related-topics"></a>相關主題  
   
 |主題|連結|  
 |------------|-----------|  
 |了解如何使用精靈或 DMX 命令來設定測試資料集|[定型和測試資料集](../../analysis-services/data-mining/training-and-testing-data-sets.md)|  
 |了解如何測試採礦結構中資料的散發及代表意義|[交叉驗證 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)|  
-|了解 [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)]中提供的精確度圖表類型。|[增益圖 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)<br /><br /> [收益圖 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/profit-chart-analysis-services-data-mining.md)<br /><br /> [散佈圖 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/scatter-plot-analysis-services-data-mining.md)|  
+|深入了解所提供的精確度圖表類型。|[增益圖 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)<br /><br /> [收益圖 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/profit-chart-analysis-services-data-mining.md)<br /><br /> [散佈圖 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/scatter-plot-analysis-services-data-mining.md)|  
 |了解如何建立分類矩陣 (也稱為混淆矩陣) 以評估真肯定、誤判、真否定、誤否定的數量。|[分類矩陣 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)|  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [資料採礦工具。](../../analysis-services/data-mining/data-mining-tools.md)   
  [資料採礦方案](../../analysis-services/data-mining/data-mining-solutions.md)   
  [測試及驗證工作與操作方法 &#40;資料採礦&#41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)  

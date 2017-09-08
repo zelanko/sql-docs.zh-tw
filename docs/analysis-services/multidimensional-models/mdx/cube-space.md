@@ -1,27 +1,32 @@
 ---
-title: "Cube 空間 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Cube 空間 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c3a012b4-9ca0-4fb8-9c26-5ecc0e2e2b2b
 caps.latest.revision: 6
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 6
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 16c39c5d1699c69e7f2dc119e90ff975b637d74f
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# Cube 空間
+# <a name="cube-space"></a>Cube 空間
   「Cube 空間」是 Cube 屬性階層中具有 Cube 量值之成員的乘積。 因此，Cube 空間是由 Cube 所有屬性階層成員和 Cube 量值的組合乘積所決定，定義了 Cube 的大小上限。 請務必注意，此空間包含屬性階層成員的所有可能組合，甚至還包含在真實世界中被視為不可能的組合，例如城市為巴黎而國家/地區為英國、西班牙、日本、印度或其他地方的組合。  
   
-## 自動存在和 Cube 空間  
+## <a name="autoexists-and-cube-space"></a>自動存在和 Cube 空間  
  「自動存在」的概念將此 Cube 空間限制於實際存在的資料格。 維度中屬性階層的成員可能不與相同維度中另一個屬性階層的成員同時存在。  
   
  例如，如果 Cube 有 City 屬性階層、Country 屬性階層及 Internet Sales Amount 量值，此 Cube 的空間只會包含同時存在的成員。 例如，如果 City 屬性階層包含紐約、倫敦、巴黎、東京及墨爾本等城市，並且 Country 屬性階層包含美國、英國、法國、日本及澳洲等國家 (地區)，則 Cube 的空間不會包含巴黎和美國交集的空間 (資料格)。  
@@ -56,7 +61,7 @@ WHERE Measures.[Internet Sales Amount]
 > [!NOTE]  
 >  請注意，0 是用來指定資料行軸，為 axis(0) (即資料行軸) 的縮寫。  
   
- 上述查詢只會針對查詢中每個屬性階層之同時存在的成員傳回資料格。 上述查詢也可以使用 [* (Crossjoin) (MDX)](../../../mdx/crossjoin-mdx.md) 函數中新的 * 變數，改寫如下。  
+ 上述查詢只會針對查詢中每個屬性階層之同時存在的成員傳回資料格。 上述查詢也可以使用 [* (Crossjoin) (MDX)](../../../mdx/crossjoin-mdx-operator-reference.md) 函數中新的 * 變數，改寫如下。  
   
 ```  
 SELECT   
@@ -79,9 +84,9 @@ WHERE (Measures.[Internet Sales Amount],
   
  所傳回的資料格值將會相同，不過結果集中的中繼資料將會不同。 例如，在上述查詢中，Country 階層已移至 slicer 座標軸 (在 WHERE 子句中)，因此不會明確出現在結果集中。  
   
- 上述這三個查詢示範了 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 中自動存在行為的作用。  
+ 上述這三個查詢示範了 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]中自動存在行為的作用。  
   
-## 使用者自訂階層和 Cube 空間  
+## <a name="user-defined-hierarchies-and-cube-space"></a>使用者自訂階層和 Cube 空間  
  在本主題的先前範例中，我們都是使用屬性階層來定義 Cube 空間中的位置。 然而，您也可以利用使用者自訂階層 (已經根據維度中的屬性階層加以定義)，定義 Cube 空間中的位置。 使用者自訂階層是由屬性階層組成的階層，設計目的為幫助使用者瀏覽 Cube 資料。  
   
  例如，上節中的 **CROSSJOIN** 查詢也可以撰寫如下：  
@@ -113,7 +118,7 @@ FROM [Adventure Works]
 ```  
   
 > [!NOTE]  
->  請注意，**WITH** 關鍵字是與 [CurrentMember (MDX)](../../../mdx/currentmember-mdx.md) 和 [Name (MDX)](../../../mdx/name-mdx.md) 函數搭配使用，可建立查詢中所使用的導出成員。 如需詳細資訊，請參閱[基本 MDX 查詢 &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/the-basic-mdx-query-mdx.md)。  
+>  請注意，**WITH** 關鍵字是與 [CurrentMember (MDX)](../../../mdx/currentmember-mdx.md) 和 [Name (MDX)](../../../mdx/name-mdx.md) 函數搭配使用，可建立查詢中所使用的導出成員。 如需詳細資訊，請參閱[基本 MDX 查詢 &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query.md)。  
   
  在上述查詢中，會傳回與 State 屬性階層之每個成員相關的 Country 屬性階層的成員名稱。 預期的 Country 成員會出現 (因為 City 和 Country 屬性之間已定義屬性關聯性)。 然而，如果相同維度中的多個屬性階層之間沒有定義屬性關聯性，則會傳回 (全部) 成員，如下列查詢所說明。  
   
@@ -127,12 +132,12 @@ FROM [Adventure Works]
   
  在上述查詢中，會傳回 (全部) 成員 ("All Customers")，因為 Education 和 City 之間沒有關聯性。 因此，在包含 City 屬性階層但沒有明確提供 Education 成員的任何 Tuple 中，Education 屬性階層的 (全部) 成員將會是 Education 屬性階層的預設成員。  
   
-## 計算內容  
+## <a name="calculation-context"></a>計算內容  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [MDX 的關鍵概念 &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
- [Tuples](../../../analysis-services/multidimensional-models/mdx/tuples.md)   
- [自動存在](../../../analysis-services/multidimensional-models/mdx/autoexists.md)   
+ [Tuple](../../../analysis-services/multidimensional-models/mdx/tuples.md)   
+ [「 自動存在 」](../../../analysis-services/multidimensional-models/mdx/autoexists.md)   
  [使用成員、Tuple 和集合 &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)   
  [視覺化總計和非視覺化總計](../../../analysis-services/multidimensional-models/mdx/visual-totals-and-non-visual-totals.md)   
  [MDX 語言參考 &#40;MDX&#41;](../../../mdx/mdx-language-reference-mdx.md)   

@@ -1,34 +1,39 @@
 ---
 title: "設定鏡像資料庫可使用 Trustworthy 屬性 (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/09/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "TRUSTWORTHY 資料庫選項"
-  - "鏡像資料庫 [SQL Server]"
-  - "資料庫鏡像 [SQL Server], 安全性"
+ms.custom: 
+ms.date: 03/09/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- TRUSTWORTHY database option
+- mirror database [SQL Server]
+- database mirroring [SQL Server], security
 ms.assetid: 6993b076-78ef-453e-b0ea-e341b8e5ee3e
 caps.latest.revision: 15
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 7b99c620aeb148558c5db6cfb15fefd2878ca180
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/02/2017
+
 ---
-# 設定鏡像資料庫可使用 Trustworthy 屬性 (Transact-SQL)
+# <a name="set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql"></a>設定鏡像資料庫可使用 Trustworthy 屬性 (Transact-SQL)
   備份資料庫時，TRUSTWORTHY 資料庫屬性將設為 OFF。 因此，新鏡像資料庫上的 TRUSTWORTHY 一律為 OFF。 您必須在鏡像開始之後執行額外的設定步驟，以確保資料庫在容錯移轉之後的可信度。  
   
 > [!NOTE]  
 >  如需此資料庫屬性的相關資訊，請參閱 [TRUSTWORTHY 資料庫屬性](../../relational-databases/security/trustworthy-database-property.md)。  
   
-## 程序  
+## <a name="procedure"></a>程序  
   
-#### 若要設定鏡像資料庫以使用 Trustworthy 屬性  
+#### <a name="to-setup-a-mirror-database-to-use-the-trustworthy-property"></a>若要設定鏡像資料庫以使用 Trustworthy 屬性  
   
 1.  在主體伺服器執行個體上，確認主體資料庫是否已開啟 Trustworthy 屬性。  
   
@@ -74,9 +79,9 @@ caps.handback.revision: 15
   
      在 SQL Server Management Studio 中：  
   
-    -   [使用 Windows 驗證建立資料庫鏡像工作階段 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish database mirroring session - windows authentication.md)  
+    -   [使用 Windows 驗證建立資料庫鏡像工作階段 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [TRUSTWORTHY 資料庫屬性](../../relational-databases/security/trustworthy-database-property.md)   
  [設定加密鏡像資料庫](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)  
   

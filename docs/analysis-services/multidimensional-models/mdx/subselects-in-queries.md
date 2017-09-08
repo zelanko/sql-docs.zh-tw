@@ -1,27 +1,32 @@
 ---
-title: "查詢中的子選擇 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "子選擇中查詢 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9e361798-688e-4b11-9eef-31fc793e8ba4
 caps.latest.revision: 5
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 5
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 918c7727a7af1f85f93d110652da450f1ea770cb
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 查詢中的子選擇
+# <a name="subselects-in-queries"></a>查詢中的子選擇
   子選擇運算式是巢狀 SELECT 運算式，用於限制評估外部 SELECT 的 Cube 空間。 子選擇可讓您定義評估所有計算的新空間。  
   
-## 子選擇範例  
+## <a name="subselects-by-example"></a>子選擇範例  
  首先，我們先來看一個範例，了解子選擇如何協助產生所要的結果。 假設您受他人之託為多年來前 10 項暢銷產品的銷售行為產生資料表。  
   
  結果應該如下表所示：  
@@ -158,7 +163,7 @@ SELECT [Date].[Calendar Year].MEMBERS on 0
   
  上述結果是在法國透過網際網路通路銷售的前 10 項暢銷產品。  
   
-## 子選擇陳述式  
+## <a name="subselect-statement"></a>子選擇陳述式  
  子選擇的 BNF 為：  
   
 ```  
@@ -339,7 +344,7 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
   
  如您所見，這兩組的結果有差異。 第一個查詢回答在前 5 個銷售區域中最暢銷產品為何的問題，第二個查詢回答前 5 項暢銷產品最大銷售量在哪裡的問題。  
   
-### 備註  
+### <a name="remarks"></a>備註  
  子選擇有下列限制：  
   
 -   WHERE 子句不會篩選子空間。  
@@ -350,6 +355,6 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
   
 -   axis 子句中不允許 HAVING 子句；請改用 [Filter &#40;MDX&#41;](../../../mdx/filter-mdx.md) 函數運算式。  
   
--   根據預設，子選擇中不允許導出成員；不過這項限制可根據每個工作階段變更，方法是將值指派給 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> 中的 **SubQueries** 連接字串屬性或[支援的 XMLA 屬性 &#40;XMLA&#41;](../Topic/Supported%20XMLA%20Properties%20\(XMLA\).md) 中的 **DBPROP_MSMD_SUBQUERIES** 屬性。 如需根據 **SubQueries** 或 **DBPROP_MSMD_SUBQUERIES** 的值導出成員之行為的詳細說明，請參閱[子選擇和 Subcube 中的導出成員](../../../analysis-services/multidimensional-models/mdx/calculated-members-in-subselects-and-subcubes.md)。  
+-   根據預設導出的成員中不允許子選擇。不過，這項限制可以變更，以每個工作階段為基礎，在所指派值給**子查詢**中的連接字串屬性<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>或**DBPROP_MSMD_SUBQUERIES** 屬性[支援的 XMLA 屬性 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md). 如需根據 [SubQueries](../../../analysis-services/multidimensional-models/mdx/calculated-members-in-subselects-and-subcubes.md) 或 **DBPROP_MSMD_SUBQUERIES** 的值導出成員之行為的詳細說明，請參閱 **子選擇和 Subcube 中的導出成員**。  
   
   

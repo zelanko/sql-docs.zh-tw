@@ -1,28 +1,33 @@
 ---
-title: "建立交叉驗證報表 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "驗證資料採礦模型"
-  - "採礦結構 [Analysis Services]，使用說明主題"
-  - "交叉驗證 [資料採礦]"
-  - "統計標準差"
+title: "建立交叉驗證報表 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- validating data mining models
+- mining structures [Analysis Services], how-to topics
+- cross-validation [data mining]
+- statistical standard deviation
 ms.assetid: 7b1fec4c-7053-41eb-b030-5179257967a4
 caps.latest.revision: 17
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 87f3809146240a6e807cad3a5e1e22981f8bbf4d
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 建立交叉驗證報表
+# <a name="create-a-cross-validation-report"></a>建立交叉驗證報表
   此主題逐步解說如何在資料採礦設計師中使用 [精確度圖表] 索引標籤來建立交叉驗證報表。 如需交叉驗證報表外觀及其所含統計量值的一般資訊，請參閱[交叉驗證 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)。  
   
  交叉驗證報表在本質上不同於增益圖或分類矩陣之類的精確度圖表。  
@@ -37,7 +42,7 @@ caps.handback.revision: 17
   
 -   只有在採礦模型不支援任何其他可預測屬性的情況下，您才可以對沒有可預測屬性的叢集模型建立交叉驗證報表。  
   
-### 選取採礦結構  
+### <a name="select-a-mining-structure"></a>選取採礦結構  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中開啟資料採礦設計師。  
   
@@ -49,7 +54,7 @@ caps.handback.revision: 17
   
 5.  按一下 **[交叉驗證]** 索引標籤。  
   
-### 設定交叉驗證選項  
+### <a name="set-cross-validation-options"></a>設定交叉驗證選項  
   
 1.  在 **[交叉驗證]** 索引標籤上，針對 **[摺疊計數]**按一下向下箭頭，選取 1 到 10 之間的數字。 預設值是 10。  
   
@@ -70,17 +75,17 @@ caps.handback.revision: 17
   
 5.  選擇性地針對 **[目標臨界值]**輸入一個介於 0 和 1 之間的小數值，以指定要將預測算為精確時，所必須擁有的最小機率。  
   
-     如需如何設定機率臨界值的更多提示，請參閱[交叉驗證報表中的量值](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md)。  
+     如需如何設定機率臨界值的更多提示，請參閱 [交叉驗證報表中的量值](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md)。  
   
 6.  按一下 **[取得結果]**。  
   
-### 列印交叉驗證報表  
+### <a name="print-the-cross-validation-report"></a>列印交叉驗證報表  
   
 1.  在 [交叉驗證] 索引標籤上，以滑鼠右鍵按一下完成的報表。  
   
 2.  在快速鍵功能表中，選取 **[列印]** ，或選取 **[預覽列印]** 先檢閱報表。  
   
-### 在 Microsoft Excel 中建立報表的複本  
+### <a name="create-a-copy-of-the-report-in-microsoft-excel"></a>在 Microsoft Excel 中建立報表的複本  
   
 1.  在 [交叉驗證] 索引標籤上，以滑鼠右鍵按一下完成的報表。  
   
@@ -90,7 +95,7 @@ caps.handback.revision: 17
   
 4.  將選取範圍貼到開啟的 Excel 活頁簿中。 如果您使用 **[貼上]** 選項，報表將會以 HTML 格式貼到 Excel 中，這樣會保留資料列和資料行的格式設定。 如果您針對文字或 Unicode 文字使用 [選擇性貼上] 選項來貼上報表，報表將會使用資料列分隔的格式貼上。  
   
-## 請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [交叉驗證報表中的量值](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md)  
   
   

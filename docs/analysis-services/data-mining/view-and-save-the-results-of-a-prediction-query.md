@@ -1,39 +1,44 @@
 ---
-title: "檢視及儲存預測查詢的結果 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "預測查詢 [Analysis Services]"
-  - "檢視預測查詢結果"
-  - "顯示預測查詢結果"
-  - "採礦模型預測 [Analysis Services], 檢視結果"
+title: "檢視及儲存預測查詢的結果 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- prediction queries [Analysis Services]
+- viewing prediction query results
+- displaying prediction query results
+- Mining Model Prediction [Analysis Services], viewing results
 ms.assetid: abba4d24-3619-44c1-8279-88f27ad627d3
 caps.latest.revision: 15
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9a28c176cb6d08fee89ea5a0add547d1e2cee48c
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 檢視及儲存預測查詢的結果
+# <a name="view-and-save-the-results-of-a-prediction-query"></a>檢視及儲存預測查詢的結果
   在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中使用預測查詢產生器定義查詢之後，您就可以切換到查詢結果檢視來執行查詢和檢視結果。  
   
  您可以將預測查詢的結果儲存至 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案中所定義之任何資料來源內的資料表。 您可以建立新的資料表，或將查詢結果儲存至現有的資料表。 如果您將結果儲存至現有的資料表，則可選擇覆寫目前儲存在資料表中的資料，否則查詢結果會附加至資料表中的現有資料。  
   
-### 執行查詢並檢視結果  
+### <a name="run-a-query-and-view-the-results"></a>執行查詢並檢視結果  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，於資料採礦設計師之 [採礦模型預測] 索引標籤的工具列上，按一下 [結果]。  
   
      查詢結果檢視會開啟並執行查詢。 結果會顯示在檢視器的方格中。  
   
-### 將預測查詢的結果儲存至資料表  
+### <a name="save-the-results-of-a-prediction-query-to-a-table"></a>將預測查詢的結果儲存至資料表  
   
 1.  在資料採礦設計師之 [採礦模型預測] 索引標籤的工具列上，按一下 [儲存查詢結果]。  
   

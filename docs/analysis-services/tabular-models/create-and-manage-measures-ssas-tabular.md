@@ -1,24 +1,29 @@
 ---
-title: "建立及管理量值 (SSAS 表格式) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "建立及管理量值 (SSAS 表格式) |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: edc1a4b2-96d3-4f34-bb70-6cacec79e819
 caps.latest.revision: 18
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 18
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 19c19be451a22fef66b98ac71355b4963240767a
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 建立及管理量值 (SSAS 表格式)
+# <a name="create-and-manage-measures-ssas-tabular"></a>建立及管理量值 (SSAS 表格式)
   量值是為了在報表或 Excel 樞紐分析表 (或樞紐分析圖) 中使用而建立的公式。 量值可以用標準彙總函式 (例如 COUNT 或 SUM) 做為基礎，或者，您也可以使用 DAX 自行定義公式。 此主題中的工作描述如何使用資料表的量值方格建立及管理量值。  
   
  本主題也包括下列工作：  
@@ -33,7 +38,7 @@ caps.handback.revision: 18
   
 -   [刪除量值](#bkmk_delete)  
   
-## 工作  
+## <a name="tasks"></a>工作  
  若要建立及管理量值，您可以使用資料表的量值方格。 您只能在模型設計師的 [資料檢視] 中，檢視資料表的量值方格。 您無法在 [圖表檢視] 中建立量值或檢視量值方格；但是，您可以在 [圖表檢視] 中檢視現有的量值。 若要顯示資料表的量值方格，請按一下 **[資料表]** 功能表，然後按一下 **[顯示量值方格]**。  
   
 ###  <a name="bkmk_create_stand"></a> 使用標準彙總公式建立量值  
@@ -60,9 +65,9 @@ caps.handback.revision: 18
   
 -   在量值方格的量值上按一下滑鼠右鍵，然後按一下 [刪除]。  
   
-## 請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [量值 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
  [KPI &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
- [導出資料行 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/calculated-columns-ssas-tabular.md)  
+ [導出資料行 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/ssas-calculated-columns.md)  
   
   

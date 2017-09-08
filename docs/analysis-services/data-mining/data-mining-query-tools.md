@@ -1,31 +1,36 @@
 ---
-title: "資料採礦查詢工具 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "預測 [Analysis Services], DMX 預測查詢"
-  - "預測 [DMX]"
-  - "DMX [Analysis Services], 預測查詢"
-  - "prediction queries [DMX]"
-  - "預測 [Analysis Services]"
-  - "查詢 [DMX], 預測查詢"
-  - "採礦模型 [Analysis Services], DMX"
+title: "資料採礦查詢工具 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- predictions [Analysis Services], DMX prediction queries
+- predictions [DMX]
+- DMX [Analysis Services], prediction queries
+- prediction queries [DMX]
+- predictions [Analysis Services]
+- queries [DMX], prediction queries
+- mining models [Analysis Services], DMX
 ms.assetid: a8952427-fd8c-4300-8f62-25f57ac1be0c
 caps.latest.revision: 51
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 51
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 15b23f5cbe20fd7833a02cb6cff276680c30c9fb
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 資料採礦查詢工具
+# <a name="data-mining-query-tools"></a>資料採礦查詢工具
   所有資料採礦查詢都使用資料採礦延伸模組 (DMX) 語言。 DMX 可以用來建立各種機器學習工作的模型，包括分類、風險分析、產生建議及線性迴歸。 您也可以撰寫 DMX 查詢，來取得在處理模型時所產生之模式和統計資料的相關資訊。  
   
  您可以自行撰寫 DMX，或是使用工具，例如預測查詢產生器，建立基本 DMX 然後加以修改。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 和 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 都提供協助您建立 DMX 預測查詢的工具。 此主題描述如何使用這些工具來建立及執行資料採礦查詢。  
@@ -53,7 +58,7 @@ caps.handback.revision: 51
   
  若要使用範本建立查詢，您可以將範本拖曳到開啟的查詢視窗，也可以按兩下範本，開啟新的連接和新的查詢窗格。  
   
- 如需如何根據範本建立預測查詢的範例，請參閱[根據範本建立單一預測查詢](../../analysis-services/data-mining/create-a-singleton-prediction-query-from-a-template.md)。  
+ 如需如何根據範本建立預測查詢的範例，請參閱 [根據範本建立單一預測查詢](../../analysis-services/data-mining/create-a-singleton-prediction-query-from-a-template.md)。  
   
 > [!WARNING]  
 >  適用於 Microsoft Office Excel 的資料採礦增益集也包含許多範本，連同可幫助您撰寫複雜 DMX 陳述式的互動式查詢產生器。 若要使用範本，請在資料採礦用戶端中按一下 [查詢]，再按一下 [進階]。  
@@ -67,20 +72,21 @@ caps.handback.revision: 51
 |資料採礦查詢轉換|使用資料流程來源所提供的資料，在資料流程內執行預測查詢。<br /><br /> 工作編輯器提供預測查詢產生器，以及用來手動修改 DMX 查詢的文字方塊。<br /><br /> 轉換只能用於建立使用資料流程中之資料的查詢，也就是使用 PREDICTION JOIN 語法的查詢。 此元件不能用於執行內容查詢或其他類型的 DMX 陳述式。|  
   
 ##  <a name="bkmk_API"></a> 應用程式開發介面  
- 您可以搭配 OLE DB 或 Analysis Services ADOMD 用戶端等伺服器通訊協定使用各種程式語言，建立針對資料採礦模型執行查詢的自訂應用程式。 如需詳細資訊，請參閱[資料採礦程式設計](../../analysis-services/data-mining-programming.md)。  
+ 您可以搭配 OLE DB 或 Analysis Services ADOMD 用戶端等伺服器通訊協定使用各種程式語言，建立針對資料採礦模型執行查詢的自訂應用程式。 如需詳細資訊，請參閱 [資料採礦程式設計](../../analysis-services/data-mining-programming.md)。  
   
  不過，XMLA 會構成與 Analysis Service 伺服器之所有互動的基礎訊息格式。 在 XMLA 訊息內，查詢的表示方式會根據您傳送的是以 DMX 為基礎的預測查詢、內容查詢，或使用資料採礦結構描述資料列集擷取模型中繼資料的查詢而有所不同。  
   
--   **預測查詢** (及所有其他 DMX 陳述式) 的文字會使用 [Execute 方法 &#40;XMLA&#41;](../Topic/Execute%20Method%20\(XMLA\).md) 方法以 XMLA 傳送，並將 DMX 查詢作為文字放在 XMLA [Command 元素 &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-properties/command-element-xmla.md) 元素的 [Statement 元素 &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-commands/statement-element-xmla.md) 內。  
+-   **預測查詢** (及所有其他 DMX 陳述式) 的文字會使用 [Execute 方法 &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-methods-execute.md) 方法以 XMLA 傳送，並將 DMX 查詢作為文字放在 XMLA [Command 元素 &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-properties/command-element-xmla.md) 元素的 [Statement 元素 &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-commands/statement-element-xmla.md) 內。  
   
--   若要擷取**模型內容**和**模型中繼資料** (例如叢集數、決策樹中所使用的屬性、模型上次處理的日期及建立模型時所使用的演算法參數)，您可以使用 [Discover 方法 &#40;XMLA&#41;](../Topic/Discover%20Method%20\(XMLA\).md) 方法，並在 [RequestType 元素 &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-properties/requesttype-element-xmla.md) 標頭中指定其中一個資料採礦結構描述資料列集。 若要縮小查詢範圍，請輸入準則作為 [RestrictionList 元素 &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-properties/restrictionlist-element-xmla.md) 元素內的限制。  
+-   若要擷取**模型內容**和**模型中繼資料** (例如叢集數、決策樹中所使用的屬性、模型上次處理的日期及建立模型時所使用的演算法參數)，您可以使用 [Discover 方法 &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-methods-discover.md) 方法，並在 [RequestType 元素 &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-properties/requesttype-element-xmla.md) 標頭中指定其中一個資料採礦結構描述資料列集。 若要縮小查詢範圍，請輸入準則作為 [RestrictionList 元素 &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-properties/restrictionlist-element-xmla.md) 元素內的限制。  
   
-## 請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [資料採礦延伸模組 &#40;DMX&#41; 參考](../../dmx/data-mining-extensions-dmx-reference.md)   
  [資料採礦方案](../../analysis-services/data-mining/data-mining-solutions.md)   
  [了解 DMX Select 陳述式](../../dmx/understanding-the-dmx-select-statement.md)   
- [DMX 預測查詢的結構和使用方式](../../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
- [使用預測查詢產生器來建立預測查詢](../../analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)   
+ [結構和使用方式的 DMX 預測查詢](../../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
+ [建立預測查詢使用預測查詢產生器](../../analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)   
  [在 SQL Server Management Studio 中建立 DMX 查詢](../../analysis-services/data-mining/create-a-dmx-query-in-sql-server-management-studio.md)  
   
   
+

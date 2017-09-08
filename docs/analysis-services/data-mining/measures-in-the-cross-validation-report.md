@@ -1,30 +1,35 @@
 ---
-title: "交叉驗證報表中的量值 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "均方根誤差 [資料採礦]"
-  - "交叉驗證 [資料採礦]"
-  - "平均絕對誤差 [資料採礦]"
-  - "對數分數 [資料採礦]"
-  - "可能性 [資料採礦]"
+title: "交叉驗證報表中的量值 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- root mean square error [data mining]
+- cross-validation [data mining]
+- mean absolute error [data mining]
+- log score [data mining]
+- likelihood [data mining]
 ms.assetid: a07b1665-7f72-4266-82a4-43a91ae2571d
 caps.latest.revision: 28
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f046ddaa3152318bfb3fe01d055bf213fdfdec41
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 交叉驗證報表中的量值
-  在交叉驗證期間，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會將採礦結構中的資料分割成多個交叉區段，然後反覆地測試結構及任何相關聯的採礦模型。 根據這項分析，結果會輸出有關結構及每個模型的一組標準精確度量值。  
+# <a name="measures-in-the-cross-validation-report"></a>交叉驗證報表中的量值
+  在交叉驗證期間， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會將採礦結構中的資料分割成多個交叉區段，然後反覆地測試結構及任何相關聯的採礦模型。 根據這項分析，結果會輸出有關結構及每個模型的一組標準精確度量值。  
   
  此報表除了包含一些有關資料中的摺疊數以及每個摺疊中的資料量等基本資訊外，也包含一組描述資料分佈的一般標準。 藉由比較針對每個交叉區段的一般標準，您可以評估結構或模型的可靠性。  
   
@@ -32,7 +37,7 @@ caps.handback.revision: 28
   
  本節提供 [交叉驗證] 報表中含有的量值清單，及其代表的意義。 如需每個量值導出方式的詳細資訊，請參閱[交叉驗證公式](../../analysis-services/data-mining/cross-validation-formulas.md)。  
   
-## 交叉驗證報表中的量值清單  
+## <a name="list-of-measures-in-the-cross-validation-report"></a>交叉驗證報表中的量值清單  
  下表列出交叉驗證報表中顯示的量值清單。 這些量值會依「測試類型」分組，並顯示於下表左欄中。 左欄列出量值在報表中顯示的名稱，並簡短說明其代表的意義。  
   
 |測試類型|量值和描述|  
@@ -54,7 +59,7 @@ caps.handback.revision: 28
 ||**平均數**：<br />                      特定量值的資料分割值的平均值。|  
 ||**標準差**：<br />                      在模型的所有資料分割中，與特定量值平均數的差異平均值。<br /><br /> 針對交叉驗證，此分數的值愈高意味著摺疊數之間會有顯著的變化。|  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [測試和驗證 &#40;資料採礦&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   

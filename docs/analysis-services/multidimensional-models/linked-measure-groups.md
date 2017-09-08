@@ -1,30 +1,35 @@
 ---
-title: "連結量值群組 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "連結量值群組 [Analysis Services]"
-  - "參考量值群組"
-  - "連結量值群組精靈"
-  - "量值群組 [Analysis Services], 連結"
-  - "連結維度 [Analysis Services]"
+title: "連結量值群組 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- linked measure groups [Analysis Services]
+- referencing measure groups
+- Linked Measure Group Wizard
+- measure groups [Analysis Services], linked
+- linked dimensions [Analysis Services]
 ms.assetid: 7f838452-8669-4194-8e15-7afdc7f15251
 caps.latest.revision: 41
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 41
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 390e596ce08f5956f65cc106b50af7b68c4d2da4
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 連結量值群組
+# <a name="linked-measure-groups"></a>連結量值群組
   連結的量值群組會以相同資料庫或不同的 Analysis Services 資料庫中不同之 Cube 中的另一個量值群組為基礎。 如果您想要重複使用多個 Cube 中的一組量值及對應的資料值，您可使用連結量值群組。  
   
  Microsoft 建議原始和連結的量值群組皆位於同一部伺服器上所執行的解決方案中。 連結到遠端伺服器上的量值群組已排定從未來的版本中淘汰 (請參閱 [SQL Server 2016 中已被取代的 Analysis Services 功能](../../analysis-services/deprecated-analysis-services-features-in-sql-server-2016.md))。  
@@ -32,7 +37,7 @@ caps.handback.revision: 41
 > [!IMPORTANT]  
 >  連結量值群組是唯讀的。 若要挑選最新的變更，您必須先刪除所有連結量值群組，再根據修改的來源物件重新建立連結量值群組。 基於這個理由，未來需要修改量值群組時，建議您考慮在專案之間複製並貼上量值群組這個替代方法。  
   
-## 使用方式的限制  
+## <a name="usage-limitations"></a>使用方式的限制  
  如同先前所註明，使用連結量值的一個重要限制就是無法直接自訂連結量值。 修改資料類型、格式、資料繫結和可見度以及量值群組本身之項目的成員資格是原始量值群組中所必須進行的所有變更。  
   
  就作業上而言，透過用戶端應用程式進行存取時，連結量值群組與其他量值群組相同，而查詢方式也與其他量值群組相同。  
@@ -47,11 +52,11 @@ caps.handback.revision: 41
   
 -   連結量值群組不支援回寫。  
   
--   連結量值群組無法用於多個多對多關聯性，特別是當這些關聯性位於不同 Cube 時。 這樣做可能會導致模糊不清的彙總。 如需詳細資訊，請參閱[包含多對多關聯性之 Cube 中連結量值的數量不正確](http://social.technet.microsoft.com/wiki/contents/articles/22911.incorrect-amounts-for-linked-measures-in-cubes-containing-many-to-many-relationships-ssas-troubleshooting.aspx)。  
+-   連結量值群組無法用於多個多對多關聯性，特別是當這些關聯性位於不同 Cube 時。 這樣做可能會導致模糊不清的彙總。 如需詳細資訊，請參閱 [包含多對多關聯性之 Cube 中連結量值的數量不正確](http://social.technet.microsoft.com/wiki/contents/articles/22911.incorrect-amounts-for-linked-measures-in-cubes-containing-many-to-many-relationships-ssas-troubleshooting.aspx)。  
   
  連結量值群組中所包含的量值，只能和從同一個 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫擷取的連結維度直接進行組織。 但是，您可以使用導出成員，將連結量值群組的資訊與您 Cube 中其他非連結維度產生關聯。 您也可以使用間接關聯性，例如參考或多對多關聯性，將非連結維度與連結量值群組產生關聯。  
   
-## 建立或修改連結量值  
+## <a name="create-or-modify-a-linked-measure"></a>建立或修改連結量值  
  使用 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 建立連結量值群組。  
   
 1.  現在完成來源 Cube 中原始量值群組的任何修改，這樣您稍後就不必在後續的 Cube 中重建連結量值群組。 您可以重新命名連結物件，但是不得變更其他任何屬性。  
@@ -66,12 +71,12 @@ caps.handback.revision: 41
   
 6.  按一下 [完成] 即可建立連結物件。 連結物件會出現在 [量值和維度] 窗格中 (以連結圖示指示)。  
   
-## 維護連結量值的安全  
+## <a name="secure-a-linked-measure"></a>維護連結量值的安全  
  定義連結之後，管理連結量值群組中量值的存取權方式，就和管理其他量值群組存取權的方式一樣。 連結物件會連同其非連結的對應項目一起出現在角色設計工具中。 如需管理量值群組之安全性的詳細資訊，請參閱[授與 Cube 或模型權限 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)。  
   
  若要定義或使用連結量值群組，則 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體的 Windows 服務帳戶必須屬於 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫角色 (而此角色擁有來源 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體上對來源 Cube 和量值群組的 **ReadDefinition** 和 **Read** 存取權限)，或必須屬於來源 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 管理員角色。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [定義連結維度](../../analysis-services/multidimensional-models/define-linked-dimensions.md)  
   
   

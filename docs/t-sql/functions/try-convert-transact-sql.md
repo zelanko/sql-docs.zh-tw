@@ -1,0 +1,147 @@
+---
+title: "TRY_CONVERT (TRANSACT-SQL) |Microsoft 文件"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- TRY_CONVERT_TSQL
+- TRY_CONVERT
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- TRY_CONVERT function
+ms.assetid: 3e6e7825-6482-4cb2-a8c2-9abc99e265a6
+caps.latest.revision: 17
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 0cb3854ae349b17dcdb0b0528c6415fd41b1e072
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
+---
+# <a name="tryconvert-transact-sql"></a>TRY_CONVERT (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+
+  如果轉換成功，則會傳回轉換為指定之資料類型的值，否則會傳回 Null。  
+  
+ ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+  
+## <a name="syntax"></a>語法  
+  
+```  
+  
+TRY_CONVERT ( data_type [ ( length ) ], expression [, style ] )  
+```  
+  
+## <a name="arguments"></a>引數  
+ *data_type [（長度）]*  
+ 資料類型轉換成*運算式*。  
+  
+ *expression*  
+ 要進行轉換的值。  
+  
+ *樣式*  
+ 選擇性整數運算式，指定如何**TRY_CONVERT**函式會將轉譯*運算式*。  
+  
+ *樣式*接受相同的值*樣式*參數**轉換**函式。 如需詳細資訊，請參閱 [CAST 和 CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)。  
+  
+ 可接受值的範圍由值*data_type*。 如果*樣式*為 null，則**TRY_CONVERT**會傳回 null。  
+  
+## <a name="return-types"></a>傳回類型  
+ 如果轉換成功，則會傳回轉換為指定之資料類型的值，否則會傳回 Null。  
+  
+## <a name="remarks"></a>備註  
+ **TRY_CONVERT**會傳遞給它的值，並嘗試將它轉換成指定*data_type*。 如果轉換成功， **TRY_CONVERT**傳回所指定的值*data_type*; 如果發生錯誤，就會傳回 null。 不過如果您要求明確不允許，然後轉換**TRY_CONVERT**失敗並發生錯誤。  
+  
+ **TRY_CONVERT**是保留的關鍵字，相容性層級 110 及更高。  
+  
+ 函數能以遠端方式在具有 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本的伺服器上運作。 它在版本低於 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 的伺服器上無法以遠端方式運作。  
+  
+## <a name="examples"></a>範例  
+  
+### <a name="a-tryconvert-returns-null"></a>A. TRY_CONVERT 傳回 Null。  
+ 以下的範例證明當轉換失敗時，TRY_CONVERT 會傳回 null。  
+  
+```tsql  
+SELECT   
+    CASE WHEN TRY_CONVERT(float, 'test') IS NULL   
+    THEN 'Cast failed'  
+    ELSE 'Cast succeeded'  
+END AS Result;  
+GO  
+```  
+  
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+  
+```  
+Result  
+------------  
+Cast failed  
+  
+(1 row(s) affected)  
+```  
+  
+ 下列範例示範運算式必須採用所需的格式。  
+  
+```tsql  
+SET DATEFORMAT dmy;  
+SELECT TRY_CONVERT(datetime2, '12/31/2010') AS Result;  
+GO  
+```  
+  
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+  
+```  
+Result  
+----------------------  
+NULL  
+  
+(1 row(s) affected)  
+```  
+  
+### <a name="b-tryconvert-fails-with-an-error"></a>B. TRY_CONVERT 失敗並出現錯誤  
+ 以下的範例證明當明確不允許轉換時，TRY_CONVERT 會傳回錯誤。  
+  
+```tsql  
+SELECT TRY_CONVERT(xml, 4) AS Result;  
+GO  
+```  
+  
+ 此陳述式的結果為錯誤，因為整數無法轉換為 xml 資料類型。  
+  
+```  
+Explicit conversion from data type int to xml is not allowed.  
+```  
+  
+### <a name="c-tryconvert-succeeds"></a>C. TRY_CONVERT 成功  
+ 這個範例示範運算式必須採用所需的格式。  
+  
+```  
+SET DATEFORMAT mdy;  
+SELECT TRY_CONVERT(datetime2, '12/31/2010') AS Result;  
+GO  
+```  
+  
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+  
+```  
+Result  
+----------------------------------  
+2010-12-31 00:00:00.0000000  
+  
+(1 row(s) affected)  
+```  
+  
+## <a name="see-also"></a>另請參閱  
+ [CAST 和 CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
+  
+  
