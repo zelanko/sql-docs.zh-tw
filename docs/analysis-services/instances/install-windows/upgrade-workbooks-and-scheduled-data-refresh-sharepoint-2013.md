@@ -1,22 +1,27 @@
 ---
-title: "升級活頁簿和排程的資料重新整理 (SharePoint 2013) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "升級活頁簿和排程的資料重新整理 (SharePoint 2013) |Microsoft 文件"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a49c4af4-e243-4926-be97-74da1f9d54eb
 caps.latest.revision: 20
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 20
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 09907013b8a83b70fae3f0bf91f68f49a08290df
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 升級活頁簿和排程的資料重新整理 (SharePoint 2013)
+# <a name="upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013"></a>升級活頁簿和排程的資料重新整理 (SharePoint 2013)
   本主題將說明在先前 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 環境中建立之活頁簿的使用者體驗，以及如何升級 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 活頁簿，以便讓您運用這個版本所導入的新功能。 若要深入了解新功能，請參閱 [What’s New in Power Pivot](http://go.microsoft.com/fwlink/?LinkID=203917)(PowerPivot 的新功能)。  
   
 > [!WARNING]  
@@ -42,11 +47,11 @@ caps.handback.revision: 20
 -   針對搭配 SharePoint 模式之 [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] Analysis Services 伺服器執行的活頁簿啟用排程的資料重新整理。  
   
 > [!IMPORTANT]  
->  您無法回復已升級的活頁簿，所以如果希望在舊版 [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)] 或舊版 [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 中使用該活頁簿，請務必製作檔案的複本。  
+>  您無法回復已升級的活頁簿，所以如果希望在舊版 [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)]或舊版 [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)]中使用該活頁簿，請務必製作檔案的複本。  
   
  下表將根據建立活頁簿的環境列出 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 活頁簿的支援和行為。 描述的行為包括一般使用者體驗、將活頁簿升級為特定環境的支援升級選項，以及尚未升級之活頁簿的排程資料重新整理行為。  
   
-### 活頁簿行為和升級選項  
+### <a name="workbook-behavior-and-upgrade-options"></a>活頁簿行為和升級選項  
   
 |建立於|\<|支援和行為|>|  
 |----------------|--------|--------------------------|--------|  
@@ -84,7 +89,7 @@ caps.handback.revision: 20
   
  如需 Analysis Services 功能變更的詳細資訊，請參閱 [SQL Server 2016 中 Analysis Services 功能的行為變更](../../../analysis-services/behavior-changes-to-analysis-services-features-in-sql-server-2016.md)  
   
- 如需重新整理記錄的詳細資訊，請參閱[檢視資料重新整理記錄 &#40;Power Pivot for SharePoint&#41;](../../../analysis-services/power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md)。  
+ 如需重新整理記錄的詳細資訊，請參閱 [檢視資料重新整理記錄 &#40;Power Pivot for SharePoint&#41;](../../../analysis-services/power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md)(PowerPivot 的新功能)。  
   
 ##  <a name="bkmk_to_2012sp1_from_2012"></a> 從使用 2012 PowerPivot for Excel 增益集所建立的版本升級為 Office 2013 活頁簿  
  本節將描述如何 **從** SQL Server 2012 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for Excel 2010 活頁簿升級 **為** SQL Server 2012 SP1 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for Excel 2013。  
@@ -123,7 +128,7 @@ caps.handback.revision: 20
   
  **如何在資料重新整理期間設定自動升級**  
   
- 若要使用自動升級，您必須在 ** 組態工具中選取 [自動升級 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 活頁簿，以便從伺服器進行資料重新整理]**[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 核取方塊。 在此工具中，該核取方塊位於 [升級 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 系統服務] 頁面上，而且位於 [建立 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 服務應用程式] 頁面上 (如果您要設定新安裝的話)。  
+ 若要使用自動升級，您必須在組態工具中選取 [**自動升級 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 活頁簿，以便從伺服器進行資料重新整理]**核取方塊[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]。 在此工具中，該核取方塊位於 [升級 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 系統服務] 頁面上，而且位於 [建立 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 服務應用程式] 頁面上 (如果您要設定新安裝的話)。  
   
  您可以執行下列指令程式來確認是否已啟用自動升級：  
   
@@ -155,11 +160,11 @@ PS C:\Windows\system32> Set-PowerPivotSystemService –WorkbookUpgradeOnDataRefr
   
 2.  在 **[定義]** 索引標籤上，提供者版本會出現在連接字串的開頭。  
   
-     [Provider=MSOLAP.5] 表示活頁簿為 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]。  
+     [] 表示活頁簿為 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]。  
   
-     [Provider=MSOLAP.4] 則是指 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]。  
+     [] 則是指 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]。  
   
-     [Data Source=$Embedded$] 表示活頁簿是使用內嵌資料庫的 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 活頁簿。  
+     [] 表示活頁簿是使用內嵌資料庫的 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 活頁簿。  
   
 ###  <a name="bkmk_msolappc"></a> 如何檢查本機電腦上目前的 MSOLAP 資料提供者版本  
  請使用下列指示，檢查哪一個 OLE DB 提供者是目前在伺服器或工作站上執行 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 活頁簿的版本。 得知目前版本可協助您在升級之後針對資料連接錯誤進行疑難排解。  
@@ -168,10 +173,10 @@ PS C:\Windows\system32> Set-PowerPivotSystemService –WorkbookUpgradeOnDataRefr
   
 2.  向下捲動至 MSOLAP。 確認 MSOLAP.5 列在系統上所安裝的 OLAP 提供者中。 確認 MSOLAP | CurVer 設定為 MSOLAP.5  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [將 Power Pivot 移轉至 SharePoint 2013](../../../analysis-services/instances/install-windows/migrate-power-pivot-to-sharepoint-2013.md)   
  [升級 Power Pivot for SharePoint](../../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)   
  [Analysis Services 的新功能](../../../analysis-services/what-s-new-in-analysis-services.md)   
- [檢視資料重新整理記錄 &#40;Power Pivot for SharePoint&#41;](../../../analysis-services/power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md)  
+ [檢視資料重新整理記錄 &#40;Power Pivot for sharepoint&#41;](../../../analysis-services/power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md)  
   
   

@@ -193,7 +193,7 @@ ms.lasthandoff: 08/03/2017
   
  若要使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] UI 管理權限，請使用以下對話方塊。  
   
--   針對資料夾，使用 **Folder Properties Dialog Box** 的 [&amp;amp;#91;權限&amp;amp;#93;](../../integration-services/service/folder-properties-dialog-box.md)頁面。  
+-   針對資料夾，使用  [Folder Properties Dialog Box](../../integration-services/service/folder-properties-dialog-box.md) 的 權限 頁面。  
   
 -   針對專案中，使用 **權限** 頁面 [Project Properties Dialog Box](../../integration-services/service/project-properties-dialog-box.md)。  
   
