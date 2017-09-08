@@ -11,6 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.rawfiledest.f1
+- sql13.dts.designer.rawfiledestinationconnectionmanager.f1
+- sql13.dts.designer.rawfiledestinationcolumns.f1
 helpviewer_keywords:
 - append options [Integration Services]
 - destinations [Integration Services], Raw File
@@ -23,10 +25,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a890502e4db72f00d21ed9656441cc27fa5e532d
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: d92f79e7a43f8d8368ec44b33aef7297749eb351
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="raw-file-destination"></a>原始檔案目的地
@@ -136,7 +138,91 @@ ms.lasthandoff: 08/03/2017
 ## <a name="related-content"></a>相關內容  
  Sqlservercentral.com 上的部落格文章： [Raw Files Are Awesome](http://www.sqlservercentral.com/blogs/stratesql/archive/2011/1/1/31-days-of-ssis-_1320_-raw-files-are-awesome-_2800_1_2F00_31_2900_.aspx)(原始檔案令人敬畏)。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="raw-file-destination-editor-connection-manager-page"></a>原始檔案目的地編輯器 (連接管理員頁面)
+  使用原始檔案目的地編輯器設定原始檔案目的地將，以便將原始資料寫入至檔案。  
+  
+ **您想要做什麼事？**  
+  
+-   [開啟原始檔案目的地編輯器](#open)  
+  
+-   [設定連接管理員索引標籤上的選項](#connection)  
+  
+-   [設定資料行索引標籤上的選項](#mapping)  
+  
+###  <a name="open"></a> 開啟原始檔案目的地編輯器  
+  
+1.  將「原始檔案」目的地加入至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中的 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]封裝。  
+  
+2.  以滑鼠右鍵按一下此元件，然後按一下 **[編輯]**。  
+  
+###  <a name="connection"></a> 設定連接管理員索引標籤上的選項  
+ **存取模式**  
+ 選取指定檔案名稱的方式。 選取 **[檔案名稱]** 直接輸入檔案名稱和路徑，或是選取 **[來自變數的檔案名稱]** 指定包含檔案名稱的變數。  
+  
+ **[檔案名稱]** 或 **[變數名稱]**  
+ 輸入原始檔案的名稱和路徑，或是選取包含檔案名稱的變數。  
+  
+ **寫入選項**  
+ 選取用來建立和寫入檔案的方法。  
+  
+ **產生初始的原始檔案**  
+ 按一下此按鈕可以產生僅包含資料行 (僅中繼資料的檔案) 的空白原始檔案，而不必執行封裝。 此檔案包含您在 **[原始檔案目的地編輯器]** 之 **[資料行]**頁面上選取的資料行。 您可以將原始檔案來源指向這個僅中繼資料的檔案。  
+  
+ 當您按一下 **[產生初始原始檔案]**時，隨即顯示訊息方塊。 按一下 **[確定]** ，繼續建立檔案。 按一下 **[取消]** ，在 **[資料行]** 頁面上選取不同的資料行清單。  
+  
+###  <a name="mapping"></a> 設定資料行索引標籤上的選項  
+ **可用的輸入資料行**  
+ 選取要寫入至原始檔案的一個或多個輸入資料行。  
+  
+ **輸入資料行**  
+ 當您在 **[可用的輸入資料行]**底下選取資料表時，輸入資料行會自動加入此資料表中，或者您可以直接在此資料表中選取輸入資料行。  
+  
+ **輸出別名**  
+ 指定要做為輸出資料行使用的替代名稱。  
+  
+## <a name="raw-file-destination-editor-columns-page"></a>原始檔案目的地編輯器 (資料行頁面)
+  使用原始檔案目的地編輯器設定原始檔案目的地將，以便將原始資料寫入至檔案。  
+  
+ **您想要做什麼事？**  
+  
+-   [開啟原始檔案目的地編輯器](#open)  
+  
+-   [設定連接管理員索引標籤上的選項](#connection)  
+  
+-   [設定資料行索引標籤上的選項](#mapping)  
+  
+###  <a name="open"></a> 開啟原始檔案目的地編輯器  
+  
+1.  將「原始檔案」目的地加入至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中的 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]封裝。  
+  
+2.  以滑鼠右鍵按一下此元件，然後按一下 **[編輯]**。  
+  
+###  <a name="connection"></a> 設定連接管理員索引標籤上的選項  
+ **存取模式**  
+ 選取指定檔案名稱的方式。 選取 **[檔案名稱]** 直接輸入檔案名稱和路徑，或是選取 **[來自變數的檔案名稱]** 指定包含檔案名稱的變數。  
+  
+ **[檔案名稱]** 或 **[變數名稱]**  
+ 輸入原始檔案的名稱和路徑，或是選取包含檔案名稱的變數。  
+  
+ **寫入選項**  
+ 選取用來建立和寫入檔案的方法。  
+  
+ **產生初始的原始檔案**  
+ 按一下此按鈕可以產生僅包含資料行 (僅中繼資料的檔案) 的空白原始檔案，而不必執行封裝。 您可以將原始檔案來源指向僅中繼資料的檔案。  
+  
+ 當您按一下該按鈕時，資料行的清單便會出現。 您可以按一下 [取消]，然後修改資料行，或按一下 [確定]，以繼續建立該檔案。  
+  
+###  <a name="mapping"></a> 設定資料行索引標籤上的選項  
+ **可用的輸入資料行**  
+ 選取要寫入至原始檔案的一個或多個輸入資料行。  
+  
+ **輸入資料行**  
+ 當您在 **[可用的輸入資料行]**底下選取資料表時，輸入資料行會自動加入此資料表中，或者您可以直接在此資料表中選取輸入資料行。  
+  
+ **輸出別名**  
+ 指定要做為輸出資料行使用的替代名稱。  
+  
+## <a name="see-also"></a>另請參閱  
  [原始檔案來源](../../integration-services/data-flow/raw-file-source.md)   
  [資料流程](../../integration-services/data-flow/data-flow.md)  
   

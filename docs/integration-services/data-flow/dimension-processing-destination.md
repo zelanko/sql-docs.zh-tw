@@ -11,6 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.dimensionprocessingdest.f1
+- sql13.dts.designer.dimprocessingtransformation.connection.f1
+- sql13.dts.designer.dimprocessingtransformation.mappings.f1
+- sql13.dts.designer.dimprocessingtransformation.advanced.f1
 helpviewer_keywords:
 - Dimension Processing destination
 - loading dimensions
@@ -22,10 +25,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b32a1d596ff1395a693f8316d7a6ee1f0d8aa918
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: ff1dbbe04c9ef1b23662bfaa420b939fff21980d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="dimension-processing-destination"></a>維度處理目的地
@@ -48,21 +51,125 @@ ms.lasthandoff: 08/03/2017
   
  您可以透過「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」或以程式設計方式設定屬性。  
   
- 如需有關 **[維度處理目的地編輯器]** 對話方塊中可設定之屬性的詳細資訊，請按一下下列主題之一：  
-  
--   [維度處理目的地編輯器 &#40;連接管理員頁面&#41;](../../integration-services/data-flow/dimension-processing-destination-editor-connection-manager-page.md)  
-  
--   [維度處理目的地編輯器 &#40;對應頁面&#41;](../../integration-services/data-flow/dimension-processing-destination-editor-mappings-page.md)  
-  
--   [維度處理目的地編輯器 &#40;進階頁面&#41;](../../integration-services/data-flow/dimension-processing-destination-editor-advanced-page.md)  
-  
  **[進階編輯器]** 對話方塊會反映能以程式設計的方式設定之屬性。 如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按一下下列其中一個主題：  
   
 -   [通用屬性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
  如需如何設定屬性的詳細資訊，請參閱 [設定資料流程元件的屬性](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="dimension-processing-destination-editor-connection-manager-page"></a>維度處理目的地編輯器 (連接管理員頁面)
+  使用 **[維度處理目的地編輯器]** 對話方塊的 **[連接管理員]** 頁面，來指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 計畫的連接或 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]之執行個體的連接。  
+  
+### <a name="options"></a>選項  
+ **連線管理員**  
+ 從清單中選取現有的連接管理員，或按一下 [新增] 來建立新的連接管理員。  
+  
+ **新增**  
+ 使用 [加入 Analysis Services 連接管理員] 對話方塊來建立新的連接。  
+  
+ **可用維度清單**  
+ 選取要處理的維度。  
+  
+ **處理方法**  
+ 選取要套用至清單中選取之維度的處理方法。 此選項的預設值是 **[完整]**。  
+  
+|Value|說明|  
+|-----------|-----------------|  
+|**加入 (累加)**|執行維度的累加處理。|  
+|**[完整]**|執行維度的完整處理。|  
+|**Update**|執行維度的更新處理。|  
+  
+## <a name="dimension-processing-destination-editor-mappings-page"></a>維度處理目的地編輯器 (對應頁面)
+  使用 **[維度處理目的地編輯器]** 對話方塊的 **[對應]** 頁面，即可將輸入資料行對應至維度資料行。  
+  
+### <a name="options"></a>選項  
+ **可用的輸入資料行**  
+ 檢視可用的輸入資料行清單。 使用拖放作業，即可將資料表中的可用輸入資料行對應到目的地資料行。  
+  
+ **可用的目的地資料行**  
+ 檢視可用的目的地資料行清單。 使用拖放作業，即可將資料表中的可用目的地資料行對應到輸入資料行。  
+  
+ **輸入資料行**  
+ 從上述資料表檢視選取的輸入資料行。 您可以使用 **[可用的輸入資料行]**清單來變更對應。  
+  
+ **目的地資料行**  
+ 檢視每個可用的目的地資料行，不論是否已經對應。  
+  
+## <a name="dimension-processing-destination-editor-advanced-page"></a>維度處理目的地編輯器 (進階頁面)
+  使用 **[維度處理目的地編輯器]** 對話方塊的 **[進階]** 頁面，來設定錯誤處理。  
+  
+### <a name="options"></a>選項。  
+ **使用預設錯誤組態。**  
+ 指定是否要使用預設的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 錯誤處理。 依預設，此值為 **True**。  
+  
+ **索引鍵錯誤動作**  
+ 指定如何處理具有無法接受之索引鍵值的記錄。  
+  
+|Value|說明|  
+|-----------|-----------------|  
+|**ConvertToUnknown**|將無法接受的索引鍵值轉換為 **UnknownMember** 值。|  
+|**DiscardRecord**|捨棄記錄。|  
+  
+ **忽略錯誤**  
+ 指定應該忽略的錯誤。  
+  
+ **發生錯誤時停止**  
+ 指定發生錯誤時，應該停止處理。  
+  
+ **錯誤數目**  
+ 如果您已選取 [發生錯誤時停止]，則指定處理應該停止的錯誤臨界值。  
+  
+ **發生錯誤時要執行的動作**  
+ 如果您已選取 [發生錯誤時停止]，則指定到達錯誤臨界值時要採取的動作。  
+  
+|Value|說明|  
+|-----------|-----------------|  
+|**StopProcessing**|停止處理。|  
+|**StopLogging**|停止記錄錯誤。|  
+  
+ **找不到索引鍵**  
+ 針對找不到索引鍵錯誤，指定要採取的動作。 依預設，此值為 **ReportAndContinue**。  
+  
+|Value|說明|  
+|-----------|-----------------|  
+|**IgnoreError**|忽略錯誤並繼續處理。|  
+|**ReportAndContinue**|報告錯誤並繼續處理。|  
+|**ReportAndStop**|報告錯誤並停止處理。|  
+  
+ **重複的索引鍵**  
+ 針對重複索引鍵錯誤，指定要採取的動作。 依預設，此值為 **IgnoreError**。  
+  
+|Value|說明|  
+|-----------|-----------------|  
+|**IgnoreError**|忽略錯誤並繼續處理。|  
+|**ReportAndContinue**|報告錯誤並繼續處理。|  
+|**ReportAndStop**|報告錯誤並停止處理。|  
+  
+ **Null 索引鍵已轉換為未知**  
+ 指定當 Null 索引鍵轉換為 **UnknownMember** 值的時候應採取的動作。 依預設，此值為 **IgnoreError**。  
+  
+|Value|說明|  
+|-----------|-----------------|  
+|**IgnoreError**|忽略錯誤並繼續處理。|  
+|**ReportAndContinue**|報告錯誤並繼續處理。|  
+|**ReportAndStop**|報告錯誤並停止處理。|  
+  
+ **不允許 Null 索引鍵**  
+ 指定在不允許 Null 索引鍵的情況下如果發現 Null 索引鍵，所要採取的動作。 依預設，此值為 **ReportAndContinue**。  
+  
+|Value|說明|  
+|-----------|-----------------|  
+|**IgnoreError**|忽略錯誤並繼續處理。|  
+|**ReportAndContinue**|報告錯誤並繼續處理。|  
+|**ReportAndStop**|報告錯誤並停止處理。|  
+  
+ **錯誤記錄路徑**  
+ 輸入錯誤記錄路徑，或者按一下 [瀏覽] \(…) 按鈕以選取目的地。  
+  
+ **瀏覽 (...)**  
+ 選取錯誤記錄的路徑。  
+  
+## <a name="see-also"></a>另請參閱  
  [資料流程](../../integration-services/data-flow/data-flow.md)   
  [Integration Services 轉換](../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   

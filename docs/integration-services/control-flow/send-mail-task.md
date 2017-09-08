@@ -11,6 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.sendmailtask.f1
+- sql13.dts.designer.sendmailtask.general.f1
+- sql13.dts.designer.sendmailtask.mail.f1
 helpviewer_keywords:
 - mail [Integration Services]
 - Send Mail task
@@ -23,10 +25,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: fd6f7a19c1b553ee06013a4a24fbbf26a759a6cd
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: cf06b8fdc020b9c2012d5d710427b64043898e84
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="send-mail-task"></a>傳送郵件工作
@@ -71,11 +73,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="configuring-the-send-mail-task"></a>設定傳送郵件工作  
  您可以透過「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」或以程式設計方式設定屬性。  
   
- 如需有關可以在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中設定之屬性的詳細資訊，請按下列其中一個主題：  
-  
--   [傳送郵件工作編輯器 &#40;一般頁面&#41;](../../integration-services/control-flow/send-mail-task-editor-general-page.md)  
-  
--   [傳送郵件工作編輯器 &#40;郵件頁面&#41;](../../integration-services/control-flow/send-mail-task-editor-mail-page.md)  
+ 如需有關可在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中設定之屬性的詳細資訊，請按下列主題：  
   
 -   [運算式頁面](../../integration-services/expressions/expressions-page.md)  
   
@@ -90,7 +88,82 @@ ms.lasthandoff: 08/03/2017
   
 -   shareourideas.com 上的技術文章： [How to send email with delivery notification in C#](http://go.microsoft.com/fwlink/?LinkId=237625)  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="send-mail-task-editor-general-page"></a>傳送郵件工作編輯器 (一般頁面)
+  使用 [傳送郵件工作編輯器] 對話方塊的 [一般] 頁面，即可命名和描述傳送郵件工作。  
+  
+### <a name="options"></a>選項  
+ **名稱**  
+ 為傳送郵件工作提供唯一的名稱。 這個名稱是作為工作圖示中的標籤使用。  
+  
+ **注意** ：工作名稱在封裝內必須是唯一的。  
+  
+ **說明**  
+ 輸入傳送郵件工作的描述。  
+  
+## <a name="send-mail-task-editor-mail-page"></a>傳送郵件工作編輯器 (郵件頁面)
+  使用 [傳送郵件工作編輯器] 對話方塊的 [郵件] 頁面，即可指定收件者、訊息類型以及訊息的優先權。 您也可以附加檔案至訊息。 訊息文字可以是您提供的字串、包含文字之檔案的檔案連接，或包含文字之變數的名稱。  
+  
+### <a name="options"></a>選項。  
+ **SMTPConnection**  
+ 在清單中，選取 SMTP 連接管理員，或按一下**\<新增連接 … >**以建立新的連接管理員。  
+  
+> [!IMPORTANT]  
+>  SMTP 連接管理員僅支援匿名驗證和 Windows 驗證， 而不支援基本驗證。  
+  
+ **相關主題** [SMTP 連線管理員](../../integration-services/connection-manager/smtp-connection-manager.md)  
+  
+ **來源**  
+ 指定寄件者的電子郵件地址。  
+  
+ **若要**  
+ 提供收件者的電子郵件地址，以分號分隔。  
+  
+ **副本**  
+ 指定也會收到訊息副本之個人的電子郵件地址，以分號分隔。  
+  
+ **密件副本**  
+ 指定也會收到訊息密件副本 (Bcc) 之個人的電子郵件地址，以分號分隔。  
+  
+ **主旨**  
+ 提供電子郵件訊息的主旨。  
+  
+ **MessageSourceType**  
+ 選取訊息的來源類型。 這個屬性具有下表中所列的選項。  
+  
+|Value|說明|  
+|-----------|-----------------|  
+|**直接輸入**|將來源設定為訊息文字。 選取此值會顯示動態選項 [MessageSource]。|  
+|**檔案連接**|將來源設定為包含訊息文字的檔案。 選取此值會顯示動態選項 [MessageSource]。|  
+|**變數**|將來源設定為包含訊息文字的變數。 選取此值會顯示動態選項 [MessageSource]。|  
+  
+ **優先順序**  
+ 設定訊息的優先權。  
+  
+ **附加檔案**  
+ 提供電子郵件訊息之附加檔案的檔案名稱，以垂直線 (|) 字元分隔。  
+  
+> [!NOTE]  
+>  根據網際網路標準，[收件者]、[副本] 和 [密件副本] 欄位限制為 256 個字元。  
+  
+### <a name="messagesourcetype-dynamic-options"></a>MessageSourceType 動態選項  
+  
+#### <a name="messagesourcetype--direct-input"></a>MessageSourceType = 直接輸入  
+ **MessageSource**  
+ 輸入訊息文字或按一下瀏覽按鈕 (…)，然後在 [訊息來源] 對話方塊中輸入訊息。  
+  
+#### <a name="messagesourcetype--file-connection"></a>MessageSourceType = 檔案連接  
+ **MessageSource**  
+ 在清單中選取檔案連接管理員，或按一下\<**新增連接...**> 以建立新的連接管理員。  
+  
+ **相關主題：** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+  
+#### <a name="messagesourcetype--variable"></a>MessageSourceType = 變數  
+ **MessageSource**  
+ 在清單中選取變數，或按一下\<**新增變數...**> 若要建立新的變數。  
+  
+ **相關主題**：[Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、[加入變數](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+  
+## <a name="see-also"></a>另請參閱  
  [Integration Services 工作](../../integration-services/control-flow/integration-services-tasks.md)   
  [控制流程](../../integration-services/control-flow/control-flow.md)  
   

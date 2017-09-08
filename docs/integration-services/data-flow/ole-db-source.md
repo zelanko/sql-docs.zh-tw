@@ -11,6 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.oledbsource.f1
+- sql13.dts.designer.oledbsourceadapter.connection.f1
+- sql13.dts.designer.oledbsourceadapter.columns.f1
+- sql13.dts.designer.oledbsourceadapter.errorhandling.f1
 helpviewer_keywords:
 - sources [Integration Services], OLE DB
 - OLE DB source [Integration Services]
@@ -20,10 +23,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 93d3d15703e1c5a405c523d5e912658246e774ad
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: 995d2688f0e4f8ab9af751c3521e45cb0626451f
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="ole-db-source"></a>OLE DB 來源
@@ -95,14 +98,6 @@ ms.lasthandoff: 08/03/2017
 ## <a name="configuring-the-ole-db-source"></a>設定 OLE DB 來源  
  您可以程式設計方式或透過「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」設定屬性。  
   
- 如需可在 [OLE DB 來源編輯器] 對話方塊中設定之屬性的詳細資訊，請按下列其中一個主題：  
-  
--   [OLE DB 來源編輯器 &#40;連線管理員頁面&#41;](../../integration-services/data-flow/ole-db-source-editor-connection-manager-page.md)  
-  
--   [OLE DB 來源編輯器 &#40;資料行頁面&#41;](../../integration-services/data-flow/ole-db-source-editor-columns-page.md)  
-  
--   [OLE DB 來源編輯器 &#40;錯誤輸出頁面&#41;](../../integration-services/data-flow/ole-db-source-editor-error-output-page.md)  
-  
  **[進階編輯器]** 對話方塊會反映能以程式設計的方式設定之屬性。 如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
 -   [通用屬性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -122,7 +117,119 @@ ms.lasthandoff: 08/03/2017
 ## <a name="related-content"></a>相關內容  
  social.technet.microsoft.com 上的 Wiki 文章： [SSIS with Oracle Connectors](http://go.microsoft.com/fwlink/?LinkId=220670)(SSIS 與 Oracle 連接器)。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="ole-db-source-editor-connection-manager-page"></a>OLE DB 來源編輯器 (連接管理員頁面)
+  使用 [OLE DB 來源編輯器] 對話方塊的 [連接管理員] 頁面，來選取來源的 OLE DB 連接管理員。 這個頁面也可以讓您從資料庫中選取資料表或檢視。  
+  
+> [!NOTE]  
+>  若要從使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007 的資料來源載入資料，請使用 OLE DB 來源。 您無法使用 Excel 來源，從 Excel 2007 資料來源載入資料。 如需詳細資訊，請參閱 [設定 OLE DB 連接管理員](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)。  
+>   
+>  若要從使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2003 或更早版本的資料來源載入資料，請使用 Excel 來源。 如需詳細資訊，請參閱 [Excel 來源編輯器 &#40;連接管理員頁面&#41;](../../integration-services/data-flow/excel-source-editor-connection-manager-page.md)。  
+  
+> [!NOTE]  
+>  在 OLE DB 來源編輯器中無法使用 OLE DB 來源的 **CommandTimeout** 屬性，但可使用進階編輯器來設定這個屬性。 如需這個屬性的詳細資訊，請參閱 [OLE DB 自訂屬性](../../integration-services/data-flow/ole-db-custom-properties.md)的＜Excel 來源＞一節。  
+  
+### <a name="open-the-ole-db-source-editor-connection-manager-page"></a>開啟 OLE DB 來源編輯器 （連接管理員頁面）  
+  
+1.  將 OLE DB 來源加入 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝 (於 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中)。  
+  
+2.  以滑鼠右鍵按一下來源元件，然後按一下 [編輯]。  
+  
+3.  按一下 [連接管理員]。  
+  
+### <a name="static-options"></a>靜態選項  
+ **OLE DB 連接管理員**  
+ 從清單中選取現有的連線管理員，或按一下 [新增] 來建立新的連線。  
+  
+ **新**  
+ 使用 [設定 OLE DB 連線管理員] 對話方塊建立新的連線管理員。  
+  
+ **資料存取模式**  
+ 從來源中指定選取資料的方法。  
+  
+|選項|說明|  
+|------------|-----------------|  
+|資料表或檢視|從 OLE DB 資料來源中的資料表或檢視擷取資料。|  
+|資料表名稱或檢視名稱變數|請在變數中指定資料表或檢視名稱。<br /><br /> **相關資訊︰**[在封裝中使用變數](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
+|SQL (命令)|使用 SQL 查詢從 OLE DB 資料來源中擷取資料。|  
+|來自變數的 SQL 命令|在變數中指定 SQL 查詢文字。|  
+  
+ **預覽**  
+ 使用 [資料檢視] 對話方塊來預覽結果。 [預覽] 最多可顯示 200 個資料列。  
+  
+> [!NOTE]  
+>  在預覽資料時，具有 CLR 使用者定義型別的資料行不會包含資料。 而是值\<值太大，無法顯示 > 或 System.Byte []。 使用 SQL OLE DB 提供者存取資料來源時會顯示前者，而使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 提供者時會顯示後者。  
+  
+### <a name="data-access-mode-dynamic-options"></a>資料存取模式動態選項  
+  
+#### <a name="data-access-mode--table-or-view"></a>資料存取模式 = 資料表或檢視  
+ **資料表或檢視的名稱**  
+ 從資料來源中可用的清單中選取資料表或檢視名稱。  
+  
+#### <a name="data-access-mode--table-name-or-view-name-variable"></a>資料存取模式 = 資料表名稱或檢視名稱變數  
+ **變數名稱**  
+ 請選取包含資料表或檢視名稱的變數。  
+  
+#### <a name="data-access-mode--sql-command"></a>資料存取模式 = SQL 命令  
+ **SQL 命令文字**  
+ 輸入 SQL 查詢文字，按一下 [建立查詢] 建立查詢，或按一下 [瀏覽] 找到包含查詢文字的檔案。  
+  
+ **參數**  
+ 如果您所輸入的參數化查詢使用 ? 做為查詢文字中的參數預留位置，請使用 **[設定查詢參數]** 對話方塊，將查詢輸入參數對應到封裝變數。  
+  
+ **建立查詢**  
+ 使用 [查詢產生器] 對話方塊，以視覺化的方式來建構 SQL 查詢。  
+  
+ **瀏覽**  
+ 使用 [開啟] 對話方塊來找出包含 SQL 查詢文字的檔案。  
+  
+ **剖析查詢**  
+ 請確認查詢文字的語法。  
+  
+#### <a name="data-access-mode--sql-command-from-variable"></a>資料存取模式 = 來自變數的 SQL 命令  
+ **變數名稱**  
+ 選取包含 SQL 查詢文字的變數。  
+  
+## <a name="ole-db-source-editor-columns-page"></a>OLE DB 來源編輯器 (資料行頁面)
+  使用 [OLE DB 來源編輯器] 對話方塊的 [資料行] 頁面，即可將輸出資料行對應至每個外部 (來源) 資料行。  
+  
+### <a name="options"></a>選項。  
+ **可用的外部資料行**  
+ 在資料來源中檢視可用的外部資料行清單。 您無法使用此資料表來加入或刪除資料行。  
+  
+ **[外部資料行]**  
+ 依您在設定使用此來源之資料的元件時所見的順序來檢視外部 (來源) 資料行。 首先取消選取資料表中選取的資料行，然後依不同順序從清單中選取外部資料行，就可以變更此順序。  
+  
+ **輸出資料行**  
+ 為每個輸出資料行提供唯一的名稱。 預設值為選取的外部 (來源) 資料行的名稱；不過，您也可以選擇任何唯一的、描述性的名稱。 提供的名稱將顯示在  設計師內。  
+  
+## <a name="ole-db-source-editor-error-output-page"></a>OLE DB 來源編輯器 (錯誤輸出頁面)
+  使用 [OLE DB 來源編輯器] 對話方塊的 [錯誤輸出] 頁面，以選取錯誤處理選項，並設定錯誤輸出資料行上的屬性。  
+  
+### <a name="options"></a>選項  
+ **輸入/輸出**  
+ 檢視資料來源的名稱。  
+  
+ **[資料行]**  
+ 檢視您在 [OLE DB 來源編輯器] 對話方塊的 [連接管理員] 頁面上所選取的外部 (來源) 資料行。  
+  
+ **錯誤**  
+ 指定錯誤發生時要採取的動作：忽略失敗、重新導向資料列，或使元件失效。  
+  
+ **相關主題** [處理資料中的錯誤](../../integration-services/data-flow/error-handling-in-data.md)  
+  
+ **截斷**  
+ 指定截斷發生時要採取的動作：忽略失敗、重新導向資料列，或使元件失效。  
+  
+ **說明**  
+ 檢視錯誤的描述。  
+  
+ **將這個值設定到選取的資料格**  
+ 指定發生錯誤或截斷時要對所有選取之資料格採取的動作：忽略失敗、重新導向資料列，或使元件失效。  
+  
+ **套用**  
+ 將錯誤處理選項套用至選取的資料格。  
+  
+## <a name="see-also"></a>另請參閱  
  [OLE DB 目的地](../../integration-services/data-flow/ole-db-destination.md)   
  [Integration Services &#40;SSIS &#41;變數](../../integration-services/integration-services-ssis-variables.md)   
  [資料流程](../../integration-services/data-flow/data-flow.md)  

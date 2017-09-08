@@ -11,6 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.asexecuteddltask.f1
+- sql13.dts.designer.asexecuteddltask.general.f1
+- sql13.dts.designer.asexecuteddltask.ddl.f1
 helpviewer_keywords:
 - Analysis Services Execute DDL task
 - DDL
@@ -20,10 +22,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4db091d5934df75f6dd90295e8501a562aa0a0ef
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: a8272f3306050e8d184fd6d5e4e3d349c4e259e9
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="analysis-services-execute-ddl-task"></a>Analysis Services 執行 DDL 工作
@@ -220,11 +222,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="configuration-of-the-analysis-services-execute-ddl-task"></a>設定 Analysis Services 執行 DDL 工作  
  您可以透過「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」或以程式設計方式設定屬性。  
   
- 如需有關可以在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中設定之屬性的詳細資訊，請按下列其中一個主題：  
-  
--   [Analysis Services 執行 DDL 工作編輯器 &#40;一般頁面&#41;](../../integration-services/control-flow/analysis-services-execute-ddl-task-editor-general-page.md)  
-  
--   [Analysis Services 執行 DDL 工作編輯器 &#40;DDL 頁面&#41;](../../integration-services/control-flow/analysis-services-execute-ddl-task-editor-ddl-page.md)  
+ 如需有關可在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中設定之屬性的詳細資訊，請按下列主題：  
   
 -   [運算式頁面](../../integration-services/expressions/expressions-page.md)  
   
@@ -237,4 +235,53 @@ ms.lasthandoff: 08/03/2017
   
 -   <xref:Microsoft.DataTransformationServices.Tasks.DTSProcessingTask.ASExecuteDDLTask>  
   
+## <a name="analysis-services-execute-ddl-task-editor-general-page"></a>Analysis Services 執行 DDL 工作編輯器 (一般頁面)
+  使用 **[Analysis Services 執行 DDL 工作編輯器]** 對話方塊的 **[一般]** 頁面，即可命名並描述 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行 DDL 工作。  
   
+### <a name="options"></a>選項。  
+ **名稱**  
+ 提供 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行 DDL 工作的唯一名稱。 這個名稱是作為工作圖示中的標籤使用。  
+  
+> [!NOTE]  
+>  工作名稱在封裝內必須是唯一的。  
+  
+ **說明**  
+ 輸入 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行 DDL 工作的描述。  
+  
+## <a name="analysis-services-execute-ddl-task-editor-ddl-page"></a>Analysis Services 執行 DDL 工作編輯器 (DDL 頁面)
+  使用 [Analysis Services 執行 DDL 工作編輯器] 對話方塊的 [DDL] 頁面，即可指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案或 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫的連接，並提供資料定義語言 (DDL) 陳述式來源的相關資訊。  
+  
+### <a name="static-options"></a>靜態選項  
+ **連接**  
+ 選取[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]專案或[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]連接管理員 中的清單或按一下\<**新增連接...**>，並使用**加入 Analysis Services 連接管理員**對話方塊，即可建立新的連接。  
+  
+ **相關主題：** [加入 Analysis Services 連線管理員對話方塊 UI 參考](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)、 [Analysis Services 連線管理員](../../integration-services/connection-manager/analysis-services-connection-manager.md)  
+  
+ **SourceType**  
+ 指定 DDL 陳述式的來源類型。 此屬性具有下表所列的選項：  
+  
+|Value|說明|  
+|-----------|-----------------|  
+|**直接輸入**|將來源設定為 **[SourceDirect]** 文字方塊中所儲存的 DDL 陳述式。 選取這個值就會顯示在下列章節中的動態選項。|  
+|**檔案連接**|將來源設定為包含 DDL 陳述式的檔案。 選取這個值就會顯示在下列章節中的動態選項。|  
+|**變數**|將來源設定為變數。 選取這個值就會顯示在下列章節中的動態選項。|  
+  
+### <a name="dynamic-options"></a>動態選項  
+  
+#### <a name="sourcetype--direct-input"></a>SourceType = 直接輸入  
+ **Source**  
+ 輸入 DDL 陳述式或按一下省略符號 **(…)**，然後在 **[DDL 陳述式]** 對話方塊中輸入陳述式。  
+  
+#### <a name="sourcetype--file-connection"></a>SourceType = 檔案連接  
+ **Source**  
+ 在清單中，選取檔案連接，或按一下\<**新增連接...**>，並使用**檔案 」 連接管理員**對話方塊，即可建立新的連接。  
+  
+ **相關主題：** [檔案連線管理員](../../integration-services/connection-manager/file-connection-manager.md)  
+  
+#### <a name="sourcetype--variable"></a>SourceType = 變數  
+ **Source**  
+ 在清單中，選取變數，或按一下\<**新增變數...**>，並使用**加入變數**對話方塊，即可建立新的變數。  
+  
+ **相關主題：** [Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)  
+  
+

@@ -11,6 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.wmieventwatchertask.f1
+- sql13.dts.designer.wmieventwatcher.general.f1
+- sql13.dts.designer.wmieventwatcher.wmiquery.f1
 helpviewer_keywords:
 - WQL [Integration Services]
 - WMI Event Watcher task [Integration Services]
@@ -20,10 +22,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: f91107cf76f48f60b23b7ee1f0f93352468a1422
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: e46d2c926ecd1dd381d358ea6e779bc427116444
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="wmi-event-watcher-task"></a>WMI 事件監看員工作
@@ -93,11 +95,7 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
   
  您可以透過「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」或以程式設計方式設定屬性。  
   
- 如需有關可以在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中設定之屬性的詳細資訊，請按下列其中一個主題：  
-  
--   [WMI 事件監看員工作編輯器 &#40;一般頁面&#41;](../../integration-services/control-flow/wmi-event-watcher-task-editor-general-page.md)  
-  
--   [WMI 事件監看員工作編輯器 &#40;WMI 選項頁面&#41;](../../integration-services/control-flow/wmi-event-watcher-task-editor-wmi-options-page.md)  
+ 如需有關可在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中設定之屬性的詳細資訊，請按下列主題：  
   
 -   [運算式頁面](../../integration-services/expressions/expressions-page.md)  
   
@@ -110,4 +108,75 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.WmiEventWatcherTask.WmiEventWatcherTask>  
   
+## <a name="wmi-event-watcher-task-editor-general-page"></a>WMI 事件監看員工作編輯器 (一般頁面)
+  使用 [WMI 事件監看員工作編輯器] 對話方塊的 [一般] 頁面，即可命名和描述 WMI 事件監看員工作。  
   
+ 如需 WMI 查詢語言 (WQL) 的詳細資訊，請參閱 MSDN Library 中的 Windows Management Instrumentation 主題： [Querying with WQL](http://go.microsoft.com/fwlink/?LinkId=79045)(使用 WQL 查詢)。  
+  
+### <a name="options"></a>選項。  
+ **名稱**  
+ 為「WMI 事件監看員」工作提供唯一的名稱。 這個名稱是作為工作圖示中的標籤使用。  
+  
+> [!NOTE]  
+>  工作名稱在封裝內必須是唯一的。  
+  
+ **說明**  
+ 輸入 WMI 事件監看員工作的描述。  
+  
+## <a name="wmi-event-watcher-task-editor-wmi-options-page"></a>WMI 事件監看員工作編輯器 (WMI 選項頁面)
+  使用 [WMI 事件監看員工作編輯器] 對話方塊的 [WMI 選項] 頁面，即可指定 Windows Management Instrumentation 查詢語言 (WQL) 查詢的來源，以及 WMI 事件監看員工作如何回應 Microsoft Windows Instrumentation (WMI) 事件。  
+  
+ 如需 WMI 查詢語言 (WQL) 的詳細資訊，請參閱 MSDN Library 中的 Windows Management Instrumentation 主題： [Querying with WQL](http://go.microsoft.com/fwlink/?LinkId=79045)(使用 WQL 查詢)。  
+  
+### <a name="static-options"></a>靜態選項  
+ **WMIConnectionName**  
+ 在清單中，選取 WMI 連接管理員，或按一下\<**新增 WMI 連接...**> 以建立新的連接管理員。  
+  
+ **相關主題：**[WMI 連接管理員](../../integration-services/connection-manager/wmi-connection-manager.md)、[WMI 連接管理員編輯器](../../integration-services/connection-manager/wmi-connection-manager-editor.md)  
+  
+ **WQLQuerySourceType**  
+ 選取工作執行之 WQL 查詢的來源類型。 這個屬性具有下表中所列的選項。  
+  
+|Value|說明|  
+|-----------|-----------------|  
+|**直接輸入**|設定 WQL 查詢的來源。 選取此值會顯示動態選項 [WQLQuerySource]。|  
+|**檔案連接**|選取包含 WQL 查詢的檔案。 選取此值會顯示動態選項 [WQLQuerySource]。|  
+|**變數**|將來源設定為定義 WQL 查詢的變數。 選取此值會顯示動態選項 [WQLQuerySource]。|  
+  
+ **ActionAtEvent**  
+ 指定 WMI 事件是否記錄事件並起始 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 動作，或僅記錄事件。  
+  
+ **AfterEvent**  
+ 指定工作接收到 WMI 事件之後成功或失敗，或是工作會繼續監看事件再次發生。  
+  
+ **ActionAtTimeout**  
+ 指定工作是否記錄 WMI 查詢逾時並起始 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 事件作為回應，或僅記錄逾時。  
+  
+ **AfterTimeout**  
+ 指定工作回應逾時成功或失敗，或是工作會繼續監看另一個逾時再次發生。  
+  
+ **NumberOfEvents**  
+ 指定要監看的事件數目。  
+  
+ **逾時**  
+ 指定要等候事件發生的秒數。 值為 0 表示沒有逾時在作用中。  
+  
+### <a name="wqlquerysource-dynamic-options"></a>WQLQuerySource 動態選項  
+  
+#### <a name="wqlquerysource--direct-input"></a>WQLQuerySource = 直接輸入  
+ **WQLQuerySource**  
+ 提供查詢，或按一下省略符號按鈕 (...)，然後使用 [WQL 查詢] 對話方塊輸入查詢。  
+  
+#### <a name="wqlquerysource--file-connection"></a>WQLQuerySource = 檔案連接  
+ **WQLQuerySource**  
+ 在清單中，選取檔案連接管理員，或按一下\<**新增連接...**> 以建立新的連接管理員。  
+  
+ **相關主題：** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+  
+#### <a name="wqlquerysource--variable"></a>WQLQuerySource = 變數  
+ **WQLQuerySource**  
+ 在清單中，選取變數，或按一下\<**新增變數...**> 若要建立新的變數。  
+  
+ **相關主題**：[Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、[加入變數](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+  
+

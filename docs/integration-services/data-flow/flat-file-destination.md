@@ -11,6 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.flatfiledest.f1
+- sql13.dts.designer.flatfiledestadapter.connection.f1
+- sql13.dts.designer.flatfiledestadapter.mappings.f1
 helpviewer_keywords:
 - flat files
 - Flat File destination
@@ -22,10 +24,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 78a0ec526f83dcab8d7358ef5a51f1f6ccfd0a04
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: c7112381911e783e86db2504e3ec12b321be4905
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="flat-file-destination"></a>一般檔案目的地
@@ -46,12 +48,6 @@ ms.lasthandoff: 08/03/2017
 ## <a name="configuration-of-the-flat-file-destination"></a>一般檔案目的地的組態  
  您可以透過「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」或以程式設計方式設定屬性。  
   
- 如需有關 **[一般檔案來源編輯器]** 對話方塊中可設定屬性的詳細資訊，請按一下下列其中一個主題：  
-  
--   [一般檔案目的地編輯器 &#40;連線管理員頁面&#41;](../../integration-services/data-flow/flat-file-destination-editor-connection-manager-page.md)  
-  
--   [一般檔案目的地編輯器 &#40;對應頁面&#41;](../../integration-services/data-flow/flat-file-destination-editor-mappings-page.md)  
-  
  **[進階編輯器]** 對話方塊會反映能以程式設計的方式設定之屬性。 如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
 -   [通用屬性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -61,7 +57,46 @@ ms.lasthandoff: 08/03/2017
 ## <a name="related-tasks"></a>相關工作  
  如需如何設定資料流程元件屬性的資訊，請參閱 [設定資料流程元件的屬性](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="flat-file-destination-editor-connection-manager-page"></a>一般檔案目的地編輯器 (連接管理員頁面)
+  使用 [一般檔案目的地編輯器] 對話方塊的 [連線管理員] 頁面，來選取目的地的一般檔案連接，以及指定是否要覆寫或附加至現有的目的地檔案。 一般檔案目的地會將資料寫入文字檔。 此文字檔的格式可以是分隔、固定寬度、固定寬度且具有資料列分隔符號或不齊右格式。  
+  
+### <a name="options"></a>選項。  
+ **一般檔案連接管理員**  
+ 使用清單方塊選取現有的連線管理員，或按一下 [新增] 建立新的連接。  
+  
+ **新增**  
+ 使用 [一般檔案格式] 與 [一般檔案連線管理員編輯器] 對話方塊來建立新的連接。  
+  
+ 除了標準一般檔案格式的 [使用分隔符號]、[固定寬度] 和 [不齊右] 等選項之外，[一般檔案格式] 對話方塊還有第四個選項 [有資料列分隔符號的固定寬度]。 這個選項代表不齊右格式的特殊狀況，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會加入虛擬資料行當做最後資料行。 這個虛擬資料行可確保最終資料行有固定寬度。  
+  
+ [有資料列分隔符號的固定寬度] 選項不會出現在 [一般檔案連線管理員編輯器] 中。 必要時，您可以在編輯器中模擬這個選項。 若要模擬這個選項，請在 [一般檔案連線管理員編輯器] 的 [一般] 頁面上，針對 [格式] 選取 [不齊右]。 然後在編輯器的 [進階] 頁面上，加入新的虛擬資料行當做最後資料行。  
+  
+ **覆寫檔案中的資料**  
+ 指出是要覆寫現有的檔案，還是將資料附加至檔案中。  
+  
+ **標頭**  
+ 在寫入任何資料之前，輸入要插入檔案中的文字區塊。 使用此選項來包含其他資訊，例如資料行標題。  
+  
+ **預覽**  
+ 使用 [資料檢視] 對話方塊來預覽結果。 預覽最多可顯示 200 個資料列。  
+  
+## <a name="flat-file-destination-editor-mappings-page"></a>一般檔案目的地編輯器 (對應頁面)
+  使用 [一般檔案目的地編輯器] 對話方塊的 [對應] 頁面，即可將輸入資料行對應到目的地資料行。  
+  
+### <a name="options"></a>選項。  
+ **可用的輸入資料行**  
+ 檢視可用的輸入資料行清單。 使用拖放作業，即可將可用的輸入資料行對應到目的地資料行。  
+  
+ **可用的目的地資料行**  
+ 檢視可用的目的地資料行清單。 使用拖放作業，即可將可用的目的地資料行對應到輸入資料行。  
+  
+ **輸入資料行**  
+ 檢視在這個主題中稍早選取的輸入資料行。 您可以使用 **[可用的輸入資料行]**清單來變更對應。 選取**\<忽略 >**從輸出排除資料行。  
+  
+ **目的地資料行**  
+ 檢視每個可用的目的地資料行，不論是否已經對應。  
+  
+## <a name="see-also"></a>另請參閱  
  [一般檔案來源](../../integration-services/data-flow/flat-file-source.md)   
  [資料流程](../../integration-services/data-flow/data-flow.md)  
   

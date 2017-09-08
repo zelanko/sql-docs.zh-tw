@@ -11,6 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.transfermasterspstask.f1
+- sql13.dts.designer.transferstoredprocedurestask.general.f1
+- sql13.dts.designer.transferstoredprocedurestask.storedprocedures.f1
 helpviewer_keywords:
 - Transfer Master Stored Procedures task [Integration Services]
 ms.assetid: 81702560-48a3-46d1-a469-e41304c7af8e
@@ -19,10 +21,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b309790e8ac39e9ac978c56bc451cfd68c5e3c75
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: 83001193fc8cedf13bf7425d6b8bae88ac09c987
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="transfer-master-stored-procedures-task"></a>傳送主要預存程序工作
@@ -66,11 +68,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="configuration-of-the-transfer-master-stored-procedures-task"></a>設定傳送主要預存程序工作  
  您可以透過「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」或以程式設計方式設定屬性。  
   
- 如需有關可以在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中設定之屬性的詳細資訊，請按下列其中一個主題：  
-  
--   [傳送主要預存程序工作編輯器 &#40;一般頁面&#41;](../../integration-services/control-flow/transfer-master-stored-procedures-task-editor-general-page.md)  
-  
--   [傳送主要預存程序工作編輯器 &#40;預存程序頁面&#41;](../../integration-services/control-flow/transfer-master-stored-procedures-task-editor-stored-procedures-page.md)  
+ 如需有關可在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中設定之屬性的詳細資訊，請按下列主題：  
   
 -   [運算式頁面](../../integration-services/expressions/expressions-page.md)  
   
@@ -85,7 +83,58 @@ ms.lasthandoff: 08/03/2017
   
 -   [設定工作或容器的屬性](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="transfer-master-stored-procedures-task-editor-general-page"></a>傳送主要預存程序工作編輯器 (一般頁面)
+  使用 [傳送主要預存程序工作編輯器] 對話方塊的 [一般] 頁面，即可命名和描述傳送主要預存程序工作。  
+  
+> [!NOTE]  
+>  此工作只會從來源伺服器上的 **master** 資料庫，將 **dbo** 擁有的使用者定義預存程序，傳送到目的地伺服器上的 **master** 資料庫。 使用者必須有目的地伺服器上之 **master** 資料庫的 CREATE PROCEDURE 權限，或是目的地伺服器上之 **sysadmin** 固定伺服器角色的成員，才能在目的地伺服器建立預存程序。  
+  
+### <a name="options"></a>選項。  
+ **名稱**  
+ 輸入傳送主要預存程序工作的唯一名稱。 這個名稱是作為工作圖示中的標籤使用。  
+  
+> [!NOTE]  
+>  工作名稱在封裝內必須是唯一的。  
+  
+ **說明**  
+ 輸入傳送主要預存程序工作的描述。  
+  
+## <a name="transfer-master-stored-procedures-task-editor-stored-procedures-page"></a>傳送主要預存程序工作編輯器 (預存程序頁面)
+  使用 [傳送主要預存程序工作編輯器] 對話方塊的 [預存程序] 頁面，即可指定屬性，以將一個或多個使用者定義預存程序從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之某個執行個體的 **master** 資料庫，複製到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之另一個執行個體的 **master** 資料庫中。  
+  
+> [!NOTE]  
+>  此工作只會從來源伺服器上的 **master** 資料庫，將 **dbo** 擁有的使用者定義預存程序，傳送到目的地伺服器上的 **master** 資料庫。 使用者必須有目的地伺服器上之 **master** 資料庫的 CREATE PROCEDURE 權限，或是目的地伺服器上之 **sysadmin** 固定伺服器角色的成員，才能在目的地伺服器建立預存程序。  
+  
+### <a name="options"></a>選項。  
+ **SourceConnection**  
+ 在清單中，選取一個 SMO 連接管理員，或按一下**\<新增連接 … >**來建立新的連接到來源伺服器。  
+  
+ **DestinationConnection**  
+ 在清單中，選取一個 SMO 連接管理員，或按一下**\<新增連接 … >**來建立新的連接到目的地伺服器。  
+  
+ **IfObjectExists**  
+ 選取工作應如何處理在目的地伺服器上的 **master** 資料庫中已經存在有相同名稱的使用者定義預存程序。  
+  
+ 此屬性具有下表所列的選項：  
+  
+|Value|說明|  
+|-----------|-----------------|  
+|**FailTask**|如果目的地伺服器上的 **master** 資料庫中已經存在有相同名稱的預存程序，則工作失敗。|  
+|**Overwrite**|工作會覆寫目的地伺服器上的 **master** 資料庫中有相同名稱的預存程序。|  
+|**Skip**|工作會略過目的地伺服器上的 **master** 資料庫中存在有相同名稱的預存程序。|  
+  
+ **TransferAllStoredProcedures**  
+ 選取是否應將來源伺服器上之 **master** 資料庫中的所有使用者定義預存程序，複製到目的地伺服器。  
+  
+|Value|說明|  
+|-----------|-----------------|  
+|**True**|複製 **master** 資料庫中的所有使用者定義預存程序。|  
+|**False**|只複製指定的預存程序。|  
+  
+ **StoredProceduresList**  
+ 選取應將來源伺服器上之 **master** 資料庫中的哪些使用者定義預存程序，複製到目的地 **master** 資料庫。 只有 [TransferAllStoredProcedures] 設定為 [False] 時，才能使用此選項。  
+  
+## <a name="see-also"></a>另請參閱  
  [傳送 SQL Server 物件工作](../../integration-services/control-flow/transfer-sql-server-objects-task.md)   
  [Integration Services 工作](../../integration-services/control-flow/integration-services-tasks.md)   
  [控制流程](../../integration-services/control-flow/control-flow.md)  

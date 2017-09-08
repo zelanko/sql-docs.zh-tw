@@ -11,6 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.executeprocesstask.f1
+- sql13.dts.designer.executeprocesstask.general.f1
+- sql13.dts.designer.executeprocesstask.process.f1
 helpviewer_keywords:
 - Execute Process task [Integration Services]
 ms.assetid: aca5a0b5-34a9-45bc-a234-8e63ea51a1ee
@@ -19,10 +21,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 86c260189b858f01ef37d736f02e636bd2a9873c
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: e9b4a89e32139f359e049f1f9d3e46d5b27696b1
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="execute-process-task"></a>執行處理工作
@@ -40,12 +42,6 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="configuration-of-the-execute-process-task"></a>執行處理工作的組態  
  您可以透過「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」或以程式設計方式設定屬性。  
-  
- 如需有關可以在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中設定之屬性的詳細資訊，請按下列其中一個主題：  
-  
--   [執行處理工作編輯器 &#40;一般頁面&#41;](../../integration-services/control-flow/execute-process-task-editor-general-page.md)  
-  
--   [執行處理工作編輯器 &#40;處理頁面&#41;](../../integration-services/control-flow/execute-process-task-editor-process-page.md)  
   
  如需有關如何在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中設定這些屬性的詳細資訊，請按下列主題：  
   
@@ -90,7 +86,62 @@ ms.lasthandoff: 08/03/2017
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.ExecuteProcess.ExecuteProcess>  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="execute-process-task-editor-general-page"></a>執行處理工作編輯器 (一般頁面)
+  使用 [執行處理工作編輯器] 對話方塊的 [一般] 頁面，來命名和描述執行處理工作。  
+  
+### <a name="options"></a>選項。  
+ **名稱**  
+ 為執行處理工作提供唯一的名稱。 這個名稱是作為工作圖示中的標籤使用。  
+  
+> [!NOTE]  
+>  工作名稱在封裝內必須是唯一的。  
+  
+ **說明**  
+ 輸入執行處理工作的描述。  
+  
+## <a name="execute-process-task-editor-process-page"></a>執行處理工作編輯器 (處理頁面)
+  使用 **[執行處理工作編輯器]** 對話方塊的 **[處理]** 頁面，即可設定執行處理的選項。 這些選項包括要執行的可執行檔、其位置、命令提示字元引數，以及提供輸入和擷取輸出的變數。  
+  
+### <a name="options"></a>選項。  
+ **RequireFullFileName**  
+ 指出如果在指定位置找不到可執行檔時，工作是否失敗。  
+  
+ **可執行檔**  
+ 輸入要執行的可執行檔名稱。  
+  
+ **引數**  
+ 提供命令提示字元引數。  
+  
+ **WorkingDirectory**  
+ 輸入包含可執行檔的資料夾路徑，或按一下瀏覽按鈕 **(…)** 並尋找資料夾。  
+  
+ **StandardInputVariable**  
+ 選取變數來提供處理序中，輸入或按一下\<**新增變數...**> 若要建立新的變數：  
+  
+ **相關主題：**[加入變數](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+  
+ **StandardOutputVariable**  
+ 選取變數來擷取輸出的程序，或按一下\<**新增變數...**> 若要建立新的變數。  
+  
+ **StandardErrorVariable**  
+ 選取變數來擷取處理器的錯誤輸出，或按一下\<**新增變數...**> 若要建立新的變數。  
+  
+ **FailTaskIfReturnCodeIsNotSuccessValue**  
+ 指出如果處理序的結束碼和 **SuccessValue**中指定的值不同時，工作是否失敗。  
+  
+ **SuccessValue**  
+ 指定可執行檔要表示成功時將傳回的值。 依預設，此值設定為 **0**。  
+  
+ **TimeOut**  
+ 指定處理序可以執行的秒數。 若值為 **0** ，表示不使用逾時值，則處理序會一直執行到完成或發生錯誤為止。  
+  
+ **TerminateProcessAfterTimeOut**  
+ 指出是否要在 **TimeOut** 選項指定的逾時期限之後，強制結束處理序。 只有在 **TimeOut** 不是 **0**時，才可以使用此選項。  
+  
+ **WindowStyle**  
+ 指定用來執行處理序的視窗樣式。  
+  
+## <a name="see-also"></a>另請參閱  
  [Integration Services 工作](../../integration-services/control-flow/integration-services-tasks.md)   
  [控制流程](../../integration-services/control-flow/control-flow.md)  
   

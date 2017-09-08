@@ -11,6 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.bulkinserttask.f1
+- sql13.dts.designer.bulkinserttask.connection.f1
+- sql13.dts.designer.bulkinserttask.general.f1
+- sql13.dts.designer.bulkinserttask.options.f1
 helpviewer_keywords:
 - Bulk Insert task
 - copying data [Integration Services]
@@ -20,10 +23,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 81b72c67ee8d968a2452e7ede94fe8c390c53a9b
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: 72f40019acada98168cf425dca983154e0e2dc8f
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="bulk-insert-task"></a>大量插入工作
@@ -91,13 +94,7 @@ ms.lasthandoff: 08/03/2017
   
  您可以透過「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」或以程式設計方式設定屬性。  
   
- 如需有關可以在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中設定之屬性的詳細資訊，請按下列其中一個主題：  
-  
--   [大量插入工作編輯器 &#40;一般頁面&#41;](../../integration-services/control-flow/bulk-insert-task-editor-general-page.md)  
-  
--   [大量插入工作編輯器 &#40;連接頁面&#41;](../../integration-services/control-flow/bulk-insert-task-editor-connection-page.md)  
-  
--   [大量插入工作編輯器 &#40;選項頁面&#41;](../../integration-services/control-flow/bulk-insert-task-editor-options-page.md)  
+ 如需有關可在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中設定之屬性的詳細資訊，請按下列主題：  
   
 -   [運算式頁面](../../integration-services/expressions/expressions-page.md)  
   
@@ -121,4 +118,103 @@ ms.lasthandoff: 08/03/2017
   
 -   simple-talk.com 上的技術文件： [Using SQL Server Integration Services to Bulk Load Data](http://go.microsoft.com/fwlink/?LinkId=233701)(使用 SQL Server Integration Services 大量載入資料)。  
   
+## <a name="bulk-insert-task-editor-connection-page"></a>大量插入工作編輯器 (連接頁面)
+  使用 [大量插入工作編輯器] 對話方塊的 [連接] 頁面，即可指定大量插入作業的來源和目的地，以及要使用的格式。  
   
+ 若要了解如何使用大量插入，請參閱[大量插入工作](../../integration-services/control-flow/bulk-insert-task.md)和[匯入或匯出資料的格式檔案 &#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)。  
+  
+### <a name="options"></a>選項。  
+ **連接**  
+ 在清單中，選取 OLE DB 連接管理員，或按一下\<**新增連接...**> 若要建立新的連接。  
+  
+ **相關主題：** [OLE DB 連接管理員](../../integration-services/connection-manager/ole-db-connection-manager.md)  
+  
+ **DestinationTable**  
+ 輸入目的地資料表或檢視的名稱，或在清單中選取資料表或檢視。  
+  
+ **格式**  
+ 選取大量插入的格式來源。 這個屬性具有下表中所列的選項。  
+  
+|Value|說明|  
+|-----------|-----------------|  
+|**使用檔案**|選取包含格式規格的檔案。 選取此選項會顯示動態選項 [FormatFile]。|  
+|**指定**|指定格式。 選取此選項會顯示動態選項 [RowDelimiter] 和 [ColumnDelimiter]。|  
+  
+ **檔案**  
+ 在清單中，選取檔案或一般檔案連接管理員，或按一下\<**新增連接...**> 若要建立新的連接。  
+  
+ 檔案位置相對於在此工作之連接管理員中指定的 SQL Server Database Engine。 SQL Server Database Engine 必須可以在伺服器上的本機硬碟，或透過 SQL Server 的共用或對應磁碟機，存取文字檔。 SSIS 執行階段無法存取檔案。  
+  
+ 如果您使用一般檔案連接管理員存取來源檔案，則大量插入工作不會使用一般檔案連接管理員中指定的格式。 而「大量插入」工作會使用格式檔案中指定的格式，或工作之 RowDelimiter 和 ColumnDelimiter 屬性的值。  
+  
+ **相關主題：** [檔案 」 連接管理員](../../integration-services/connection-manager/file-connection-manager.md)，[一般檔案連接管理員](../../integration-services/connection-manager/flat-file-connection-manager.md) 
+  
+ **重新整理資料表**  
+ 重新整理資料表和檢視的清單。  
+  
+### <a name="format-dynamic-options"></a>格式動態選項  
+  
+#### <a name="format--use-file"></a>格式 = 使用檔案  
+ **FormatFile**  
+ 輸入格式檔案的路徑，或按一下省略符號按鈕 **(…)** 以尋找格式檔案。  
+  
+#### <a name="format--specify"></a>格式 = 指定  
+ **RowDelimiter**  
+ 指定來源檔案中的資料列分隔符號。 預設值是 [{CR}{LF}]。  
+  
+ **ColumnDelimiter**  
+ 指定來源檔案中的資料行分隔符號。 預設值是 [定位字元]。  
+  
+## <a name="bulk-insert-task-editor-general-page"></a>大量插入工作編輯器 (一般頁面)
+  使用 **[大量插入工作編輯器]** 對話方塊的 **[一般]** 頁面，即可命名和描述大量插入工作。  
+  
+### <a name="options"></a>選項。  
+ **名稱**  
+ 為大量插入工作提供唯一的名稱。 這個名稱是作為工作圖示中的標籤使用。  
+  
+> [!NOTE]  
+>  工作名稱在封裝內必須是唯一的。  
+  
+ **說明**  
+ 輸入大量插入工作的描述。  
+ 
+## <a name="bulk-insert-task-editor-options-page"></a>大量插入工作編輯器 (選項頁面)
+  使用 **[大量插入工作編輯器]** 對話方塊的 **[選項]** 頁面，即可設定大量插入作業的屬性。 大量插入工作會將大量資料複製至 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表或檢視表。  
+  
+ 若要了解如何使用大量插入，請參閱[大量插入工作](../../integration-services/control-flow/bulk-insert-task.md)和 [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)。  
+  
+### <a name="options"></a>選項。  
+ **CodePage**  
+ 指定資料檔中之資料的字碼頁。  
+  
+ **DataFileType**  
+ 指定載入作業所用的資料類型值。  
+  
+ **BatchSize**  
+ 指定批次中的資料列數目。 預設為整個資料檔。 如果您將 **[BatchSize]** 設定為零，則會以單一批次載入資料。  
+  
+ **LastRow**  
+ 指定要複製的最後一個資料列。  
+  
+ **FirstRow**  
+ 指定要開始複製的第一個資料列。  
+  
+ **[大量插入工作編輯器]**  
+ |詞彙|定義|  
+|----------|----------------|  
+|**檢查條件約束**|選取此選項可檢查資料表與資料行條件約束。|  
+|**保留 Null**|選取此選項可在大量插入作業期間保留 Null 值，而不是在空白資料行插入任何預設值。|  
+|**啟用識別插入**|選取此選項可將現有的值插入識別欄位。|  
+|**資料表鎖定**|選取此選項可在大量插入期間鎖定資料表。|  
+|**引發觸發程序**|選取即可引發資料表上的任何插入、更新或刪除觸發程序。|  
+  
+ **SortedData**  
+ 在大量插入陳述式中指定 ORDER BY 子句。 您所提供的資料行名稱必須是目的資料表中的有效資料行。 預設值為 **false**。 這表示資料並未依 ORDER BY 子句排序。  
+  
+ **MaxErrors**  
+ 指定取消大量插入作業之前，可以發生的錯誤數目上限。 值為 0 指出允許發生無限個錯誤。  
+  
+> [!NOTE]  
+>  大量載入作業無法匯入的每個資料列都會計算為一個錯誤。  
+  
+

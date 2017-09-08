@@ -11,16 +11,19 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.ssis.designer.cdcsource.f1
+- sql13.ssis.designer.cdcsource.connection.f1
+- sql13.ssis.designer.cdcsource.columns.f1
+- sql13.ssis.designer.cdcsource.errorhandling.f1
 ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
 caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 031c5321bc17307a12403d974380eb710c841653
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: 1fa9085d2b60f5416fe11359f1c2965ac38f9ee7
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="cdc-source"></a>CDC 來源
@@ -55,7 +58,7 @@ ms.lasthandoff: 08/03/2017
   
 -   **錯誤資料列資料行**：造成錯誤的記錄資料。  
   
- 根據錯誤行為設定，CDC 來源支援在錯誤輸出中傳回擷取程序期間發生的錯誤 (資料轉換、截斷)。 如需詳細資訊，請參閱 [CDC 來源編輯器 &#40;錯誤輸出頁面&#41;](../../integration-services/data-flow/cdc-source-editor-error-output-page.md)。  
+ 根據錯誤行為設定，CDC 來源支援在錯誤輸出中傳回擷取程序期間發生的錯誤 (資料轉換、截斷)。  
   
 ## <a name="data-type-support"></a>資料類型支援  
  Microsoft 的 CDC 來源元件支援所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型，這些資料類型都會對應至正確的 SSIS 資料類型。  
@@ -115,17 +118,134 @@ use <cdc-enabled-database-name>
   
  如需可在 [進階編輯器] 對話方塊中設定之屬性的詳細資訊，請參閱 [CDC 來源自訂屬性](../../integration-services/data-flow/cdc-source-custom-properties.md)。  
   
-## <a name="in-this-section"></a>섹션 내용  
-  
--   [CDC 來源編輯器 &#40;連線管理員頁面&#41;](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md)  
-  
--   [CDC 來源編輯器 &#40;資料行頁面 &#41;](../../integration-services/data-flow/cdc-source-editor-columns-page.md)  
-  
--   [CDC 來源編輯器 &#40;錯誤輸出頁面&#41;](../../integration-services/data-flow/cdc-source-editor-error-output-page.md)  
+## <a name="in-this-section"></a>本節內容  
   
 -   [CDC 來源自訂屬性](../../integration-services/data-flow/cdc-source-custom-properties.md)  
   
 -   [使用 CDC 來源擷取變更資料](../../integration-services/data-flow/extract-change-data-using-the-cdc-source.md)  
+  
+## <a name="cdc-source-editor-connection-manager-page"></a>CDC 來源編輯器 (連接管理員頁面)
+  使用 [CDC 來源編輯器] 對話方塊的 [連線管理員] 頁面，即可針對 CDC 來源從中讀取變更資料列的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 資料庫 (CDC 資料庫) 選取 ADO.NET 連線管理員。 一旦選取 CDC 資料庫之後，您就必須在資料庫中選取擷取的資料表。  
+  
+ 如需 CDC 來源的詳細資訊，請參閱 [CDC 來源](../../integration-services/data-flow/cdc-source.md)。  
+  
+### <a name="task-list"></a>工作清單  
+ **若要開啟 CDC 來源編輯器的連接管理員頁面**  
+  
+1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中，開啟具有 CDC 來源的 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 封裝。  
+  
+2.  在 [資料流程] 索引標籤中，按兩下 CDC 來源。  
+  
+3.  在 [CDC 來源編輯器] 中，按一下 [連線管理員]。  
+  
+### <a name="options"></a>選項。  
+ **ADO.NET 連接管理員**  
+ 從清單中選取現有的連接管理員，或按一下 [新增] 建立新的連接。 此連接必須指向啟用 CDC 而且包含選取之變更資料表的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫。  
+  
+ **新增**  
+ 按一下 **[新增]**。 [設定 ADO.NET 連線管理員編輯器] 對話方塊隨即開啟，讓您能夠建立新的連線管理員。  
+  
+ **CDC 資料表**  
+ 選取 CDC 來源資料表，其中包含您想要讀取並饋送至下游 SSIS 元件進行處理的擷取變更。  
+  
+ **擷取執行個體**  
+ 選取或輸入包含要讀取之 CDC 資料表的 CDC 擷取執行個體名稱。  
+  
+ 擷取的來源資料表可以具有一個或兩個擷取執行個體，以便透過結構描述變更處理資料表定義的流暢轉換。 如果針對所擷取的來源資料表定義了多個擷取執行個體，請在此選取您想要使用的擷取執行個體。 資料表 [schema] 的預設擷取執行個體名稱。[資料表] 是\<結構描述 > _\<資料表 >，但實際擷取執行個體名稱中使用可能會不同。 從中讀取的實際資料表是 CDC 資料表**cdc。\<擷取執行個體 > _CT**。  
+  
+ **CDC 處理模式**  
+ 選取可有效處理處理需求的處理模式。 可能的選項包括：  
+  
+-   **全部**：傳回目前 CDC 範圍中的變更，不含 [更新之前] 值。  
+  
+-   **全部 (含舊值)**：傳回目前 CDC 處理範圍中的變更，包括舊值 ([更新之前])。 每個更新作業都有兩個資料列：一個包含更新之前的值，另一個則包含更新之後的值。  
+  
+-   **淨**：只針對目前 CDC 處理範圍中修改的每個來源資料列傳回一項變更。 如果來源資料列更新了許多次，就會產生結合的變更 (例如，插入+更新會產生為單一更新，而更新+刪除則產生為單一刪除)。 在淨變更處理模式中工作時，您可以將變更分割成刪除、插入和更新輸出，並且以平行方式處理它們，因為單一來源資料列會出現在多個輸出中。  
+  
+-   **Net 含更新遮罩**： 此模式類似於一般的淨模式，但它也加入了名稱模式的布林資料行**__ $\<資料行名稱 >\__Changed** ，表示在目前的變更資料行變更資料列。  
+  
+-   **淨 (含合併)**：這種模式與一般的淨模式很相似，但是插入和更新作業會合併成單一合併作業 (UPSERT)。  
+  
+> [!NOTE]  
+>  對於所有淨變更選項而言，來源資料表必須具有主索引鍵或唯一索引。 如果資料表沒有主索引鍵或唯一索引，您就必須使用 [全部] 選項。  
+  
+ **包含 CDC 狀態的變數**  
+ 選取針對目前 CDC 內容維護 CDC 狀態的 SSIS 字串封裝變數。 如需 CDC 狀態變數的詳細資訊，請參閱[定義狀態變數](../../integration-services/data-flow/define-a-state-variable.md)。  
+  
+ **包含重新處理指標資料行**  
+ 選取此核取方塊即可建立名為 **__$reprocessing**的特殊輸出資料行。  
+  
+ 當 CDC 處理範圍與初始處理範圍 (對應至初始載入週期之 LSN 的範圍) 重疊，或者上一次執行發生錯誤之後重新處理 CDC 處理範圍時，這個資料行的值就是 **true** 。 這個指標資料行可讓 SSIS 開發人員在重新處理變更時以不同的方式處理錯誤 (例如，可以忽略刪除不存在的資料列以及在重複索引鍵上失敗的插入等動作)。  
+  
+ 如需詳細資訊，請參閱 [CDC 來源自訂屬性](../../integration-services/data-flow/cdc-source-custom-properties.md)。  
+  
+## <a name="cdc-source-editor-columns-page"></a>CDC 來源編輯器 (資料行頁面)
+  使用 [CDC 來源編輯器] 對話方塊的 [資料行] 頁面，即可將輸出資料行對應至每個外部 (來源) 資料行。  
+  
+### <a name="task-list"></a>工作清單  
+ **若要開啟 CDC 來源編輯器的資料行頁面**  
+  
+1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中，開啟具有 CDC 來源的 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 封裝。  
+  
+2.  在 [資料流程] 索引標籤中，按兩下 CDC 來源。  
+  
+3.  在 **[CDC 來源編輯器]**中，按一下 **[資料行]**。  
+  
+### <a name="options"></a>選項。  
+ **可用的外部資料行**  
+ 資料來源中可用的外部資料行清單。 您無法使用此資料表來加入或刪除資料行。 請在來源中選取要使用的資料行。 選取的資料行就會依照選取的順序加入至 **[外部資料行]** 清單。  
+  
+ **[外部資料行]**  
+ 外部 (來源) 資料行的檢視，這些資料行會依照您在設定取用 CDC 來源資料之元件時所看見的順序列出。 若要變更此順序，請先清除 **[可用的外部資料行]** 清單中的選取資料行，然後依照不同的順序，從清單選取外部資料行。 選取的資料行就會依照您選取的順序加入至 **[外部資料行]** 清單。  
+  
+ **輸出資料行**  
+ 為每個輸出資料行輸入唯一的名稱。 預設值為選取之外部 (來源) 資料行的名稱。不過，您也可以選擇任何唯一的描述性名稱。 輸入的名稱就會顯示在 SSIS 設計師中。  
+  
+## <a name="cdc-source-editor-error-output-page"></a>CDC 來源編輯器 (錯誤輸出頁面)
+  使用 [CDC 來源編輯器] 對話方塊的 [錯誤輸出] 頁面，即可選取錯誤處理選項。  
+  
+### <a name="task-list"></a>工作清單  
+ **若要開啟 CDC 來源編輯器的錯誤輸出頁面**  
+  
+1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中，開啟具有 CDC 來源的 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 封裝。  
+  
+2.  在 [資料流程] 索引標籤中，按兩下 CDC 來源。  
+  
+3.  在 [CDC 來源編輯器] 中，按一下 [錯誤輸出]。  
+  
+### <a name="options"></a>選項。  
+ **輸入/輸出**  
+ 檢視資料來源的名稱。  
+  
+ **資料行**  
+ 檢視您在 [CDC 來源編輯器] 對話方塊的 [連線管理員] 頁面上所選取的外部 (來源) 資料行。  
+  
+ **錯誤**  
+ 選取 CDC 來源應該如何處理流程中的錯誤：忽略失敗、重新導向資料列，或使元件失效。  
+  
+ **截斷**  
+ 選取 CDC 來源應該如何處理流程中的截斷：忽略失敗、重新導向資料列，或使元件失效。  
+  
+ **說明**  
+ 未使用。  
+  
+ **將這個值設定到選取的資料格**  
+ 選取發生錯誤或截斷時 CDC 來源如何處理所有選取的資料格：忽略失敗、重新導向資料列，或使元件失效。  
+  
+ **套用**  
+ 將錯誤處理選項套用至選取的資料格。  
+  
+### <a name="error-handling-options"></a>錯誤處理選項  
+ 您可以使用下列選項來設定 CDC 來源處理錯誤和截斷的方式。  
+  
+ **失敗元件**  
+ 當發生錯誤或截斷時，資料流程工作將失敗。 這是預設行為。  
+  
+ **忽略失敗**  
+ 系統會忽略錯誤或截斷，並將資料列導向至 CDC 來源輸出。  
+  
+ **重新導向流程**  
+ 系統會將錯誤或截斷資料列導向至 CDC 來源的錯誤輸出。 在此情況中，就會使用 CDC 來源錯誤處理。 如需詳細資訊，請參閱 [CDC 來源](../../integration-services/data-flow/cdc-source.md)。  
   
 ## <a name="related-content"></a>相關內容  
   

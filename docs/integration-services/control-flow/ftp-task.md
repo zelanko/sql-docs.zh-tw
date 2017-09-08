@@ -11,6 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.ftptask.f1
+- sql13.dts.designer.ftptask.general.f1
+- sql13.dts.designer.ftptask.filetransfer.f1
 helpviewer_keywords:
 - FTP task [Integration Services]
 ms.assetid: 41c3f2c4-ee04-460a-9822-bb9ae4036c2e
@@ -19,10 +21,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 14cfb9dafee9b12bac8864e15cc1a46ac5762680
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: 212e304b2c94004135923a345b592b3c3eef1bcc
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="ftp-task"></a>FTP 工作
@@ -78,9 +80,99 @@ ms.lasthandoff: 08/03/2017
   
  如需以程式設計方式設定這些屬性的詳細資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Tasks.FtpTask.FtpTask>。  
   
-## <a name="see-also"></a>請參閱＜  
- [FTP 工作編輯器 &#40;一般頁面&#41;](../../integration-services/control-flow/ftp-task-editor-general-page.md)   
- [FTP 工作編輯器 &#40;檔案傳輸頁面 &#41;](../../integration-services/control-flow/ftp-task-editor-file-transfer-page.md)   
+## <a name="ftp-task-editor-general-page"></a>FTP 工作編輯器 (一般頁面)
+  使用 **[FTP 工作編輯器]** 對話方塊的 **[一般]** 頁面，即可指定 FTP 連接管理員，以連接到工作進行通訊的 FTP 伺服器。 您也可以命名和描述 FTP 工作。  
+  
+### <a name="options"></a>選項  
+ **FtpConnection**  
+ 選取現有的 FTP 連接管理員，或按一下\<**新增連接...**> 若要建立的連接管理員。  
+  
+> [!IMPORTANT]  
+>  FTP 連接管理員僅支援匿名驗證和基本驗證， 而不支援 Windows 驗證。  
+  
+ **相關主題**： [FTP 連線管理員](../../integration-services/connection-manager/ftp-connection-manager.md)、 [FTP 連線管理員編輯器](../../integration-services/connection-manager/ftp-connection-manager-editor.md)  
+  
+ **StopOnFailure**  
+ 指出當 FTP 作業失敗時，FTP 工作是否結束。  
+  
+ **名稱**  
+ 為 FTP 工作提供唯一的名稱。 這個名稱是作為工作圖示中的標籤使用。  
+  
+> [!NOTE]  
+>  工作名稱在封裝內必須是唯一的。  
+  
+ **說明**  
+ 輸入 FTP 工作的描述。  
+  
+## <a name="ftp-task-editor-file-transfer-page"></a>FTP 工作編輯器 (檔案傳輸頁面)
+  使用 **[FTP 工作編輯器]** 對話方塊的 **[檔案傳輸]** 頁面，來設定工作執行的 FTP 作業。  
+  
+### <a name="options"></a>選項  
+ **IsRemotePathVariable**  
+ 指出遠端路徑是否儲存在變數中。 這個屬性具有下表中所列的選項。  
+  
+|Value|說明|  
+|-----------|-----------------|  
+|**True**|目的地路徑儲存在變數中。 選取此值會顯示動態選項 **[RemoteVariable]**。|  
+|**False**|目的地路徑是在檔案連接管理員中指定。 選取此值會顯示動態選項 **[RemotePath]**。|  
+  
+ **OverwriteFileAtDestination**  
+ 指定是否可以覆寫目的地端的檔案。  
+  
+ **IsLocalPathVariable**  
+ 指出本機路徑是否儲存在變數中。 這個屬性具有下表中所列的選項。  
+  
+|Value|說明|  
+|-----------|-----------------|  
+|**True**|目的地路徑儲存在變數中。 選取此值會顯示動態選項 **[LocalVariable]**。|  
+|**False**|目的地路徑是在檔案連接管理員中指定。 選取此值會顯示動態選項 **[LocalPath]**。|  
+  
+ **運算**  
+ 選取要執行的 FTP 作業。 這個屬性具有下表中所列的選項。  
+  
+|Value|說明|  
+|-----------|-----------------|  
+|**傳送檔案**|傳送檔案。 選取此值會顯示動態選項 **LocalVariable**、 **LocalPathRemoteVariable** 和 **RemotePath**。|  
+|**接收檔案**|接收檔案。 選取此值會顯示動態選項 **LocalVariable**、 **LocalPathRemoteVariable** 和 **RemotePath**。|  
+|**建立本機目錄**|建立本機目錄。 選取此值會顯示動態選項 **[LocalVariable]** 和 **[LocalPath]**。|  
+|**建立遠端目錄**|建立遠端目錄。 選取此值會顯示動態選項 **[RemoteVariable]** 和 **[RemotelPath]**。|  
+|**移除本機目錄**|移除本機目錄。 選取此值會顯示動態選項 **[LocalVariable]** 和 **[LocalPath]**。|  
+|**移除遠端目錄**|移除遠端目錄。 選取此值會顯示動態選項 **[RemoteVariable]** 和 **[RemotePath]**。|  
+|**刪除本機檔案**|刪除本機檔案。 選取此值會顯示動態選項 **[LocalVariable]** 和 **[LocalPath]**。|  
+|**刪除遠端檔案**|刪除遠端檔案。 選取此值會顯示動態選項 **[RemoteVariable]** 和 **[RemotePath]**。|  
+  
+ **IsTransferASCII**  
+ 指出往返遠端 FTP 伺服器的檔案，是否應以 ASCII 模式傳輸。  
+  
+### <a name="isremotepathvariable-dynamic-options"></a>IsRemotePathVariable 動態選項  
+  
+#### <a name="isremotepathvariable--true"></a>IsRemotePathVariable = True  
+ **[RemoteVariable]**  
+ 選取現有的使用者定義變數，或按一下\<**新增變數...**> 以建立使用者定義的變數。  
+  
+ **相關主題**︰[Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、加入變數  
+  
+#### <a name="isremotepathvariable--false"></a>IsRemotePathVariable = False  
+ **[RemotePath]**  
+ 選取現有的 FTP 連接管理員，或按一下\<**新增連接...**> 若要建立的連接管理員。  
+  
+ **相關主題**：[FTP 連線管理員](../../integration-services/connection-manager/ftp-connection-manager.md)、[FTP 連線管理員編輯器](../../integration-services/connection-manager/ftp-connection-manager-editor.md)  
+  
+### <a name="islocalpathvariable-dynamic-options"></a>IsLocalPathVariable 動態選項  
+  
+#### <a name="islocalpathvariable--true"></a>IsLocalPathVariable = True  
+ **[LocalVariable]**  
+ 選取現有的使用者定義變數，或按一下\<**新增變數...**> 若要建立的變數。  
+  
+ **相關主題**︰[Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、加入變數  
+  
+#### <a name="islocalpathvariable--false"></a>IsLocalPathVariable = False  
+ **[LocalPath]**  
+ 選取現有的檔案連接管理員，或按一下\<**新增連接...**> 若要建立的連接管理員。  
+  
+ **相關主題**:[一般檔案連接管理員](../../integration-services/connection-manager/flat-file-connection-manager.md)  
+  
+## <a name="see-also"></a>另請參閱  
  [Integration Services 工作](../../integration-services/control-flow/integration-services-tasks.md)   
  [控制流程](../../integration-services/control-flow/control-flow.md)  
   

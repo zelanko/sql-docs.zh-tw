@@ -21,10 +21,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
-ms.openlocfilehash: 15de3ffdf6b4580918edf3a29d40e856614367fb
+ms.sourcegitcommit: 2800075091835b2d6f2b07ee34e9b897fe86634e
+ms.openlocfilehash: a5ce75f3c1715870113626642150028e31a0d58b
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="excel-connection-manager"></a>Excel 連接管理員
@@ -82,17 +82,17 @@ ms.lasthandoff: 08/09/2017
  **第一個資料列有資料行名稱**  
  指定選取之工作表中資料的第一個資料列是否包含資料行名稱。 此選項的預設值是 **[True]**。  
   
-### <a name="providers-and-drivers-for-microsoft-excel-and-access-file"></a>Microsoft Excel 和 Access 檔案的提供者和驅動程式  
- 如果尚未安裝 Microsoft Office 檔案的 OLE DB 提供者及驅動程式，您必須加以下載。 新版的提供者可以開啟以舊版 Excel 建立的檔案。  
+## <a name="connectivity-components-for-microsoft-excel-and-access-files"></a>Microsoft Excel 和 Access 檔案的連線元件
   
- 如果電腦有 32 位元版本的 Office，則必須安裝 32 位元版本的驅動程式，而且您也必須確定已執行精靈或以 32 位元模式建立的 Integration Services 封裝。  
+您可能要下載 Microsoft Office 檔案的連線元件，如果它們尚未安裝。 下載最新版的 Excel 和 Access 檔案的連線元件： [Microsoft Access 資料庫引擎 2016年可轉散發套件](https://www.microsoft.com/download/details.aspx?id=54920)。
   
-|Microsoft Office 版本|下載|  
-|------------------------------|--------------|  
-|2007|[2007 Office System 驅動程式：資料連接元件](https://www.microsoft.com/download/details.aspx?id=23734)|  
-|2010|[Microsoft Access 2010 執行階段](https://www.microsoft.com/download/details.aspx?id=10910)|  
-|2013|[Microsoft Access 2013 執行階段](http://www.microsoft.com/download/details.aspx?id=39358)|  
-|2016|[Microsoft Access 2016 執行階段](https://www.microsoft.com/download/details.aspx?id=50040)|
+最新版本的元件可以開啟以舊版 Excel 建立的檔案。
+
+如果電腦有 32 位元版本的 Office，則必須安裝 32 位元版本的元件，而且您也必須確定您在 32 位元模式執行封裝。
+
+如果您有 Office 365 訂閱，請確定您在 Access 資料庫引擎 2016年可轉散發套件並不使用 Microsoft Access 2016 執行階段時下載。 當您執行安裝程式時，您可能會看到錯誤訊息，您無法安裝下載的並存 Office 按一下來執行元件。 略過此錯誤訊息，以執行安裝以無訊息模式開啟命令提示字元視窗並執行。下載的 EXE 檔案`/quiet`切換。 例如：
+
+`C:\Users\<user name>\Downloads\AccessDatabaseEngine.exe /quiet`
   
 ## <a name="related-tasks"></a>相關工作  
   

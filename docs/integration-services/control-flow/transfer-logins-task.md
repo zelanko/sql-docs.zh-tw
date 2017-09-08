@@ -11,6 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.transferloginstask.f1
+- sql13.dts.designer.transferloginstask.general.f1
+- sql13.dts.designer.transferloginstask.logins.f1
 helpviewer_keywords:
 - Transfer Logins task [Integration Services]
 ms.assetid: 1df60fd6-c019-405d-8155-c330dbac2cc1
@@ -19,10 +21,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 02215c15fbbbcb4f7fd5ee5638afa4e0092e86c9
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: 2027b3ea760568ced8a41b72a7a2c3cf225de94f
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="transfer-logins-task"></a>傳送登入工作
@@ -70,11 +72,7 @@ ms.lasthandoff: 08/03/2017
   
  您可以透過「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」或以程式設計方式設定屬性。  
   
- 如需有關可以在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中設定之屬性的詳細資訊，請按下列其中一個主題：  
-  
--   [傳送登入工作編輯器 &#40;一般頁面&#41;](../../integration-services/control-flow/transfer-logins-task-editor-general-page.md)  
-  
--   [傳送登入工作編輯器 &#40;登入頁面&#41;](../../integration-services/control-flow/transfer-logins-task-editor-logins-page.md)  
+ 如需有關可在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中設定之屬性的詳細資訊，請按下列主題：  
   
 -   [運算式頁面](../../integration-services/expressions/expressions-page.md)  
   
@@ -87,4 +85,59 @@ ms.lasthandoff: 08/03/2017
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.TransferLoginsTask.TransferLoginsTask>  
   
+## <a name="transfer-logins-task-editor-general-page"></a>傳送登入工作編輯器 (一般頁面)
+  使用 **[傳送登入工作編輯器]** 對話方塊的 **[一般]** 頁面，即可命名和描述傳送登入工作。  
   
+### <a name="options"></a>選項。  
+ **名稱**  
+ 輸入傳送登入工作的唯一名稱。 這個名稱是作為工作圖示中的標籤使用。  
+  
+> [!NOTE]  
+>  工作名稱在封裝內必須是唯一的。  
+  
+ **說明**  
+ 輸入傳送登入工作的描述。  
+  
+## <a name="transfer-logins-task-editor-logins-page"></a>傳送登入工作編輯器 (登入頁面)
+  使用 [傳送登入工作編輯器] 對話方塊的 [登入] 頁面，即可指定屬性將一個或多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入，從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的一個執行個體複製到另一個執行個體。  
+  
+> [!IMPORTANT]  
+>  執行傳送登入工作時，目的地伺服器上會建立具隨機密碼的登入，且會停用這些密碼。 若要使用這些登入， **系統管理員** 固定伺服器角色的成員就必須變更密碼，然後啟用密碼。 無法傳送 **sa** 登入。  
+  
+### <a name="options"></a>選項。  
+ **SourceConnection**  
+ 在清單中，選取一個 SMO 連接管理員，或按一下**\<新增連接 … >**來建立新的連接到來源伺服器。  
+  
+ **DestinationConnection**  
+ 在清單中，選取一個 SMO 連接管理員，或按一下**\<新增連接 … >**來建立新的連接到目的地伺服器。  
+  
+ **LoginsToTransfer**  
+ 選取要從來源複製到目的地伺服器的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 此屬性具有下表所列的選項：  
+  
+|Value|說明|  
+|-----------|-----------------|  
+|**AllLogins**|來源伺服器上的所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入，都會複製到目的地伺服器。|  
+|**SelectedLogins**|只有使用 **LoginsList** 指定的登入，才會複製到目的地伺服器。|  
+|**AllLoginsFromSelectedDatabases**|使用 **DatabasesList** 指定之資料庫中的所有登入，都會複製到目的地伺服器。|  
+  
+ **LoginsList**  
+ 選取來源伺服器上要複製到目的地伺服器的登入。 唯有針對 [LoginsToTransfer] 選取了 [SelectedLogins] 時，才能使用此選項。  
+  
+ **DatabasesList**  
+ 選取來源伺服器上的資料庫，其中包含要複製到目的地伺服器的登入。 唯有針對 [LoginsToTransfer] 選取了 [AllLoginsFromSelectedDatabases] 時，才能使用此選項。  
+  
+ **IfObjectExists**  
+ 選取工作應如何處理已經存在於目的地伺服器上，且具有相同名稱的登入。  
+  
+ 此屬性具有下表所列的選項：  
+  
+|Value|說明|  
+|-----------|-----------------|  
+|**FailTask**|如果具有相同名稱的登入已經存在於目的地伺服器上，工作就會失敗。|  
+|**Overwrite**|工作會覆寫目的地伺服器上具有相同名稱的登入。|  
+|**Skip**|工作會略過目的地伺服器上具有相同名稱的登入。|  
+  
+ **CopySids**  
+ 選取與登入相關聯的安全性識別碼，是否應複製到目的地伺服器。 如果「傳送登入」工作是與「傳送資料庫」工作一併使用，[CopySids] 就必須設定為 [True]。 否則，已傳送的資料庫就無法辨識被複製的登入。  
+  
+

@@ -11,6 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.sqlserverdest.f1
+- sql13.dts.designer.sqlserverdestadapter.connection.f1
+- sql13.dts.designer.sqlserverdestadapter.mappings.f1
+- sql13.dts.designer.sqlserverdestadapter.advanced.f1
 helpviewer_keywords:
 - SQL Server destination
 - loading data
@@ -23,10 +26,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f1224814d165d5763d832b18f6523c6c47f6f59c
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: e85093b58f8fcad60231c0f1a5c24387be686be3
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="sql-server-destination"></a>SQL Server 目的地
@@ -93,14 +96,6 @@ ms.lasthandoff: 08/03/2017
   
  您可以透過「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」或以程式設計方式設定屬性。  
   
- 如需可以在 [SQL Server 目的地編輯器] 對話方塊中設定之屬性的詳細資訊，請按下列其中一個主題：  
-  
--   [SQL 目的地編輯器 &#40;連線管理員頁面&#41;](../../integration-services/data-flow/sql-destination-editor-connection-manager-page.md)  
-  
--   [SQL 目的地編輯器 &#40;對應頁面&#41;](../../integration-services/data-flow/sql-destination-editor-mappings-page.md)  
-  
--   [SQL 目的地編輯器 &#40;進階頁面&#41;](../../integration-services/data-flow/sql-destination-editor-advanced-page.md)  
-  
  **[進階編輯器]** 對話方塊會反映能以程式設計的方式設定之屬性。 如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
 -   [通用屬性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -125,9 +120,90 @@ ms.lasthandoff: 08/03/2017
   
 -   msdn.microsoft.com 上的技術文章： [資料載入效能指南](http://go.microsoft.com/fwlink/?LinkId=233700)。  
   
--   simple-talk.com 上的技術文件： [Using SQL Server Integration Services to Bulk Load Data](http://go.microsoft.com/fwlink/?LinkId=233701)。  
+-   simple-talk.com 上的技術文件： [Using SQL Server Integration Services to Bulk Load Data](http://go.microsoft.com/fwlink/?LinkId=233701)(使用 SQL Server Integration Services 大量載入資料)。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="sql-destination-editor-connection-manager-page"></a>SQL 目的地編輯器 (連接管理員頁面)
+  使用 **[SQL 目的地編輯器]** 對話方塊的 **[連接管理員]** 頁面，即可指定資料來源資訊並預覽結果。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目的地會將資料載入到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中的資料表或檢視。  
+  
+### <a name="options"></a>選項。  
+ **OLE DB 連接管理員**  
+ 從清單中選取現有的連接，或按一下 [新增] 來建立新的連接。  
+  
+ **新增**  
+ 使用 [設定 OLE DB 連線管理員] 對話方塊來建立新的連線。  
+  
+ **使用資料表或檢視**  
+ 從清單中選取現有的資料表或檢視，或按一下 [新增] 來建立新的連接。  
+  
+ **新增**  
+ 使用 [建立資料表] 對話方塊建立新的資料表。  
+  
+> [!NOTE]  
+>  當您按一下 **[新增]**時， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會根據連接的資料來源來產生預設 CREATE TABLE 陳述式。 這個預設 CREATE TABLE 陳述式將不會包含 FILESTREAM 屬性，即使來源資料表包含有宣告 FILESTREAM 屬性的資料行亦然。 若要執行具有 FILESTREAM 屬性的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 元件，請先在目的地資料庫上實作 FILESTREAM 儲存體。 然後在 **[建立資料表]** 對話方塊中，將 FILESTREAM 屬性加入至 CREATE TABLE 陳述式。 如需詳細資訊，請參閱[二進位大型物件 &#40;Blob&#41; 資料 &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)。  
+  
+ **預覽**  
+ 使用 [預覽查詢結果] 對話方塊來預覽結果。 預覽最多可顯示 200 個資料列。  
+  
+## <a name="sql-destination-editor-mappings-page"></a>SQL 目的地編輯器 (對應頁面)
+  使用 **[SQL 目的地編輯器]** 對話方塊的 **[對應]** 頁面，即可將輸入資料行對應至目的地資料行。  
+  
+### <a name="options"></a>選項。  
+ **可用的輸入資料行**  
+ 檢視可用的輸入資料行清單。 使用拖放作業，即可將資料表中的可用輸入資料行對應到目的地資料行。  
+  
+ **可用的目的地資料行**  
+ 檢視可用的目的地資料行清單。 使用拖放作業，即可將資料表中的可用目的地資料行對應到輸入資料行。  
+  
+ **輸入資料行**  
+ 從上述資料表檢視選取的輸入資料行。 您可以使用 **[可用的輸入資料行]**清單來變更對應。  
+  
+ **目的地資料行**  
+ 檢視每個可用的目的地資料行，不論是否已經對應。  
+  
+## <a name="sql-destination-editor-advanced-page"></a>SQL 目的地編輯器 (進階頁面)
+  使用 [SQL 目的地編輯器] 對話方塊的 [進階] 頁面，即可指定進階大量插入選項。  
+  
+### <a name="options"></a>選項  
+ **保留識別**  
+ 指定工作是否應該將值插入識別欄位中。 此屬性的預設值為 **False**。  
+  
+ **保留 Null**  
+ 指定工作是否應該保留 Null 值。 此屬性的預設值為 **False**。  
+  
+ **資料表鎖定**  
+ 指定載入資料時是否鎖定資料表。 此屬性的預設值為 **True**。  
+  
+ **檢查條件約束**  
+ 指定工作是否應該檢查條件約束。 此屬性的預設值為 **True**。  
+  
+ **引發觸發程序**  
+ 指定大量插入是否應該引發資料表上的觸發程序。 此屬性的預設值為 **False**。  
+  
+ **第一個資料列**  
+ 指定要插入的第一個資料列。 此屬性的預設值為 **-1**，表示未指派任何值。  
+  
+> [!NOTE]  
+>  清除 [SQL 目的地編輯器] 中的文字方塊，以指出您不要指派此屬性的值。 在 [屬性] 視窗、[進階編輯器] 和物件模型中，請使用 -1。  
+  
+ **最後一個資料列**  
+ 指定要插入的最後一個資料列。 此屬性的預設值為 **-1**，表示未指派任何值。  
+  
+> [!NOTE]  
+>  清除 [SQL 目的地編輯器] 中的文字方塊，以指出您不要指派此屬性的值。 在 [屬性] 視窗、[進階編輯器] 和物件模型中，請使用 -1。  
+  
+ **最大錯誤數目**  
+ 指定停止大量插入之前可以發生的錯誤數目。 此屬性的預設值為 **-1**，表示未指派任何值。  
+  
+> [!NOTE]  
+>  清除 [SQL 目的地編輯器] 中的文字方塊，以指出您不要指派此屬性的值。 在 [屬性] 視窗、[進階編輯器] 和物件模型中，請使用 -1。  
+  
+ **逾時**  
+ 指定因逾時而停止大量插入之前要等候的秒數。  
+  
+ **排序資料行**  
+ 輸入排序資料行的名稱。 每個資料行都可依遞增或遞減順序來排序。 如果您使用多個排序資料行，請用逗號分隔此清單。  
+  
+## <a name="see-also"></a>另請參閱  
  [資料流程](../../integration-services/data-flow/data-flow.md)  
   
   

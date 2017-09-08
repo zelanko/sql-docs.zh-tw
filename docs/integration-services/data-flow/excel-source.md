@@ -11,6 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.excelsource.f1
+- sql13.dts.designer.excelsourceadapter.connection.f1
+- sql13.dts.designer.excelsourceadapter.columns.f1
+- sql13.dts.designer.excelsourceadapter.erroroutput.f1
 helpviewer_keywords:
 - Excel [Integration Services]
 - sources [Integration Services], Excel
@@ -20,10 +23,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d9db81f159d831fe10aaf99a4b27a34aef0764fc
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: e8b5878513b74faa8df5e7766762f2f7287ec7af
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="excel-source"></a>Excel 來源
@@ -84,14 +87,6 @@ ms.lasthandoff: 08/03/2017
 ## <a name="excel-source-configuration"></a>Excel 來源組態  
  您可以透過「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」或以程式設計方式設定屬性。  
   
- 如需可在 [Excel 來源編輯器] 對話方塊中設定之屬性的詳細資訊，請按下列其中一個主題：  
-  
--   [Excel 來源編輯器 &#40;連線管理員頁面&#41;](../../integration-services/data-flow/excel-source-editor-connection-manager-page.md)  
-  
--   [Excel 來源編輯器 &#40;資料行頁面&#41;](../../integration-services/data-flow/excel-source-editor-columns-page.md)  
-  
--   [Excel 來源編輯器 &#40;錯誤輸出頁面&#41;](../../integration-services/data-flow/excel-source-editor-error-output-page.md)  
-  
  **[進階編輯器]** 對話方塊會反映能以程式設計的方式設定之所有屬性。 如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
 -   [通用屬性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -108,7 +103,103 @@ ms.lasthandoff: 08/03/2017
   
 -   [排序合併和合併聯結轉換的資料](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
--   [使用 Foreach 迴圈容器來循環使用 Excel 檔案和資料表](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  
+-   [迴圈透過 Excel 檔案和資料表使用 「 Foreach 迴圈 」 容器](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  
+  
+## <a name="excel-source-editor-connection-manager-page"></a>Excel 來源編輯器 (連接管理員頁面)
+  使用 **[Excel 來源編輯器]** 對話方塊的 **[連接管理員]** 節點，以選取來源要使用的 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 活頁簿。 Excel 來源會從工作表或現有活頁簿的具名範圍中讀取資料。  
+  
+> [!NOTE]  
+>  在 **[Excel 來源編輯器]** 中無法使用 Excel 來源的 **CommandTimeout**屬性，但可使用 **[進階編輯器]**來設定這個屬性。 如需有關這個屬性的詳細資訊，請參閱＜ [Excel Custom Properties](../../integration-services/data-flow/excel-custom-properties.md)＞的＜Excel 來源＞一節。  
+  
+### <a name="static-options"></a>靜態選項  
+ **OLE DB 連接管理員**  
+ 從清單中選取現有的 Excel 連線管理員，或按一下 [新增] 建立新的連線管理員。  
+  
+ **新**  
+ 使用 [Excel 連線管理員] 對話方塊來建立新的連線管理員。  
+  
+ **資料存取模式**  
+ 從來源中指定選取資料的方法。  
+  
+|Value|說明|  
+|-----------|-----------------|  
+|資料表或檢視|從工作表或 Excel 檔案的具名範圍中擷取資料。|  
+|資料表名稱或檢視名稱變數|在變數中指定工作表或範圍名稱。<br /><br /> **相關資訊︰**[在封裝中使用變數](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
+|SQL (命令)|使用 SQL 查詢從 Excel 檔案中擷取資料。 |  
+|來自變數的 SQL 命令|在變數中指定 SQL 查詢文字。|  
+  
+ **預覽**  
+ 使用 [資料檢視] 對話方塊來預覽結果。 預覽最多可顯示 200 個資料列。  
+  
+### <a name="data-access-mode-dynamic-options"></a>資料存取模式動態選項  
+  
+#### <a name="data-access-mode--table-or-view"></a>資料存取模式 = 資料表或檢視  
+ **Excel 工作表的名稱**  
+ 從 Excel 活頁簿的可用工作表或具名範圍清單中，選取工作表或具名範圍的名稱。  
+  
+#### <a name="data-access-mode--table-name-or-view-name-variable"></a>資料存取模式 = 資料表名稱或檢視名稱變數  
+ **變數名稱**  
+ 選取包含工作表名稱或具名範圍的變數。  
+  
+#### <a name="data-access-mode--sql-command"></a>資料存取模式 = SQL 命令  
+ **SQL 命令文字**  
+ 輸入 SQL 查詢的文字，按一下 [建立查詢] 建立查詢，或按一下 [瀏覽] 瀏覽至包含查詢文字的檔案。  
+  
+ **參數**  
+ 如果您所輸入的參數化查詢使用 ? 做為查詢文字中的參數預留位置，請使用 **[設定查詢參數]** 對話方塊，將查詢輸入參數對應到封裝變數。  
+  
+ **建立查詢**  
+ 使用 [查詢產生器] 對話方塊，以視覺化的方式來建構 SQL 查詢。  
+  
+ **瀏覽**  
+ 使用 [開啟] 對話方塊來找出包含 SQL 查詢文字的檔案。  
+  
+ **剖析查詢**  
+ 請確認查詢文字的語法。  
+  
+#### <a name="data-access-mode--sql-command-from-variable"></a>資料存取模式 = 來自變數的 SQL 命令  
+ **變數名稱**  
+ 選取包含 SQL 查詢文字的變數。  
+  
+## <a name="excel-source-editor-columns-page"></a>Excel 來源編輯器 (資料行頁面)
+  使用 [Excel 來源編輯器] 對話方塊的 [資料行] 頁面，將輸出資料行對應至每個外部 (來源) 資料行。  
+  
+### <a name="options"></a>選項。  
+ **可用的外部資料行**  
+ 在資料來源中檢視可用的外部資料行清單。 您無法使用此資料表來加入或刪除資料行。  
+  
+ **[外部資料行]**  
+ 依工作讀取外部 (來源) 資料行的順序來檢視它們。 首先取消選取上述資料表中選取的資料行，然後依不同順序從清單中選取外部資料行，就可以變更此順序。  
+  
+ **輸出資料行**  
+ 為每個輸出資料行提供唯一的名稱。 預設值為選取的外部 (來源) 資料行的名稱；不過，您也可以選擇任何唯一的、描述性的名稱。 提供的名稱將顯示在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師內。  
+  
+## <a name="excel-source-editor-error-output-page"></a>Excel 來源編輯器 (錯誤輸出頁面)
+  使用 [Excel 來源編輯器] 對話方塊的 [錯誤輸出] 頁面，以選取錯誤處理選項，並設定錯誤輸出資料行上的屬性。  
+  
+### <a name="options"></a>選項  
+ **輸入或輸出**  
+ 檢視資料來源的名稱。  
+  
+ **資料行**  
+ 檢視您在 [Excel 來源編輯器] 對話方塊的 [連線管理員] 頁面上所選取的外部 (來源) 資料行。  
+  
+ **錯誤**  
+ 指定錯誤發生時要採取的動作：忽略失敗、重新導向資料列，或使元件失效。  
+  
+ **相關主題** [處理資料中的錯誤](../../integration-services/data-flow/error-handling-in-data.md)  
+  
+ **截斷**  
+ 指定截斷發生時要採取的動作：忽略失敗、重新導向資料列，或使元件失效。  
+  
+ **說明**  
+ 檢視錯誤的描述。  
+  
+ **將這個值設定到選取的資料格**  
+ 指定發生錯誤或截斷時要對所有選取之資料格採取的動作：忽略失敗、重新導向資料列，或使元件失效。  
+  
+ **套用**  
+ 將錯誤處理選項套用至選取的資料格。  
   
 ## <a name="related-content"></a>相關內容  
   

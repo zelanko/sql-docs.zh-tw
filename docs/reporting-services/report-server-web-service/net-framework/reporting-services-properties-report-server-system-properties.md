@@ -20,11 +20,11 @@ caps.latest.revision: 55
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: MT
 ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
 ms.openlocfilehash: d91c1bb43978ab08857c09ffc235da78f5f0ffea
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/12/2017
 
 ---
 # <a name="reporting-services-properties---report-server-system-properties"></a>Reporting Services 內容-報表伺服器系統屬性

@@ -11,6 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.transferjobstask.f1
+- sql13.dts.designer.transferjobstask.general.f1
+- sql13.dts.designer.transferjobstask.jobs.f1
 helpviewer_keywords:
 - Transfer Jobs task [Integration Services]
 ms.assetid: 1bf33885-9c5b-47e4-a549-f5920b66a1de
@@ -19,10 +21,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 61839f15a36ff679f4edfc4585192100c370bb43
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: a4264d737901fbb7c023e216d3d8faf5309469f9
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="transfer-jobs-task"></a>傳送作業工作
@@ -64,11 +66,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="configuration-of-the-transfer-jobs-task"></a>設定傳送作業工作  
  您可以透過「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」或以程式設計方式設定屬性。  
   
- 如需有關可以在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中設定之屬性的詳細資訊，請按下列其中一個主題：  
-  
--   [傳送作業工作編輯器 &#40;一般頁面&#41;](../../integration-services/control-flow/transfer-jobs-task-editor-general-page.md)  
-  
--   [傳送作業工作編輯器 &#40;作業頁面&#41;](../../integration-services/control-flow/transfer-jobs-task-editor-jobs-page.md)  
+ 如需有關可在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中設定之屬性的詳細資訊，請按下列主題：  
   
 -   [運算式頁面](../../integration-services/expressions/expressions-page.md)  
   
@@ -81,7 +79,75 @@ ms.lasthandoff: 08/03/2017
   
 -   [設定工作或容器的屬性](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="transfer-jobs-task-editor-general-page"></a>傳送作業工作編輯器 (一般頁面)
+  使用 **[傳送作業工作編輯器]** 對話方塊的 **[一般]** 頁面，即可命名和描述傳送作業工作。  
+  
+> [!NOTE]  
+>  只有目的地伺服器上的 **系統管理員 (sysadmin)** 固定伺服器角色的成員，或其中一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 固定資料庫角色的成員，才能在目的地伺服器上成功建立作業。 若要存取來源伺服器上的作業，則在來源伺服器上使用者必須至少是 **SQLAgentUserRole** 固定資料庫角色的成員。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 固定資料庫角色及其權限的詳細資訊，請參閱 [SQL Server Agent 固定資料庫角色](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79)。  
+  
+### <a name="options"></a>選項。  
+ **名稱**  
+ 輸入傳送作業工作的唯一名稱。 這個名稱是作為工作圖示中的標籤使用。  
+  
+> [!NOTE]  
+>  工作名稱在封裝內必須是唯一的。  
+  
+ **說明**  
+ 輸入傳送作業工作的描述。  
+  
+## <a name="transfer-jobs-task-editor-jobs-page"></a>傳送作業工作編輯器 (作業頁面)
+  使用 [傳送作業工作編輯器] 對話方塊的 [作業] 頁面，即可指定屬性用來將一或多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業，從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的一個執行個體複製到另一個。  
+  
+> [!NOTE]  
+>  若要存取來源伺服器上的作業，使用者就必須至少是伺服器上之 **SQLAgentUserRole** 固定資料庫角色的成員。 若要在目的地伺服器上順利建立作業，使用者就必須是 **sysadmin** 固定伺服器角色的成員，或是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 固定資料庫角色的成員。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 固定資料庫角色及其權限的詳細資訊，請參閱 [SQL Server Agent 固定資料庫角色](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79)。  
+  
+### <a name="options"></a>選項。  
+ **SourceConnection**  
+ 在清單中，選取一個 SMO 連接管理員，或按一下**\<新增連接 … >**來建立新的連接到來源伺服器。  
+  
+ **DestinationConnection**  
+ 在清單中，選取一個 SMO 連接管理員，或按一下**\<新增連接 … >**來建立新的連接到目的地伺服器。  
+  
+ **TransferAllJobs**  
+ 選取工作是否應將所有作業或只有指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業，從來源複製到目的地伺服器。  
+  
+ 此屬性具有下表所列的選項：  
+  
+|Value|說明|  
+|-----------|-----------------|  
+|**True**|複製所有作業。|  
+|**False**|只複製指定的作業。|  
+  
+ **JobsList**  
+ 按一下瀏覽按鈕 **(…)** 來選取要複製的作業。 必須至少選取一個作業。  
+  
+> [!NOTE]  
+>  選取要複製的作業之前，請指定 **SourceConnection** 。  
+  
+ 當 **TransferAllJobs** 設定為 **True** 時，無法使用 **JobsList**選項。  
+  
+ **IfObjectExists**  
+ 選取工作應如何處理已經存在於目的地伺服器上，且具有相同名稱的作業。  
+  
+ 此屬性具有下表所列的選項：  
+  
+|Value|說明|  
+|-----------|-----------------|  
+|**FailTask**|如果具有相同名稱的作業己經存在於目的地伺服器上，工作就會失敗。|  
+|**Overwrite**|工作會覆寫目的地伺服器上具有相同名稱的作業。|  
+|**Skip**|工作會略過存在於目的地伺服器上具有相同名稱的作業。|  
+  
+ **EnableJobsAtDestination**  
+ 選取是否應啟用已複製到目的地伺服器的作業。  
+  
+ 此屬性具有下表所列的選項：  
+  
+|Value|說明|  
+|-----------|-----------------|  
+|**True**|啟用目的地伺服器上的作業。|  
+|**False**|停用目的地伺服器上的作業。|  
+  
+## <a name="see-also"></a>另請參閱  
  [Integration Services 工作](../../integration-services/control-flow/integration-services-tasks.md)   
  [控制流程](../../integration-services/control-flow/control-flow.md)  
   
