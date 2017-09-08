@@ -35,9 +35,9 @@ ms.lasthandoff: 08/18/2017
   
 ### <a name="to-remove-a-join"></a>若要移除聯結  
   
--   在 [圖表窗格] [](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md)中，選取要移除之聯結的聯結線，然後按 DELETE 鍵。 可以一次選取和刪除多重聯結線。  
+-   在 [圖表窗格](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md)中，選取要移除之聯結的聯結線，然後按 DELETE 鍵。 可以一次選取和刪除多重聯結線。  
   
-查詢和檢視設計工具會移除聯結線，並隨即變更 [SQL 窗格] [](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md)中的陳述式。  
+查詢和檢視設計工具會移除聯結線，並隨即變更 [SQL 窗格](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md)中的陳述式。  
   
 ## <a name="see-also"></a>另請參閱  
 [自動聯結資料表 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/join-tables-automatically-visual-database-tools.md)  
