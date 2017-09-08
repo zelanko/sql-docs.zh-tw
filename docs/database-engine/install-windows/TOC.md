@@ -26,7 +26,7 @@
 ## [檢查 System Configuration Checker 的參數](check-parameters-for-the-system-configuration-checker.md)  
 ## [在 Server Core 安裝上設定 SQL Server](configure-sql-server-on-a-server-core-installation.md)  
 ## [在 Server Core 上安裝 SQL Server](install-sql-server-on-server-core.md)  
-## [從安裝精靈安裝 SQL Server](install-sql-server-from-the-installation-wizard-setup.md)  
+## [從安裝精靈安裝 SQL Server](install-sql-server-from-the-installation-wizard-setup.md)
 ## [從命令提示字元安裝 SQL Server](install-sql-server-2016-from-the-command-prompt.md)  
 ## [使用設定檔安裝 SQL Server](install-sql-server-2016-using-a-configuration-file.md)  
 ## [使用 SysPrep 安裝 SQL Server](install-sql-server-using-sysprep.md)  
