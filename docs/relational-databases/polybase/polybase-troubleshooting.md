@@ -143,7 +143,7 @@ ms.lasthandoff: 07/31/2017
   
 ## <a name="to-view-the--polybase-query-plan"></a>檢視 PolyBase 查詢計劃  
   
-1.  在 SSMS 中，啟用 [包括實際執行計畫] (Ctrl + M) 並執行查詢。  
+1.  在 SSMS 中，啟用 [包括實際執行計畫] \(Ctrl + M) 並執行查詢。  
   
 2.  按一下 [執行計劃] 索引標籤。  
   
