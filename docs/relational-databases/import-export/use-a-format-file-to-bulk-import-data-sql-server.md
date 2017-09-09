@@ -17,11 +17,11 @@ caps.latest.revision: 45
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 56c7e17bb97577907d21c0e1109ee3336337164b
+ms.translationtype: HT
+ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
+ms.openlocfilehash: 4b5116850d429f147bb5bafc51af800e930c3c30
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="use-a-format-file-to-bulk-import-data-sql-server"></a>使用格式檔案大量匯入資料 (SQL Server)
@@ -76,7 +76,7 @@ cls
 # revise directory as desired
 $dir = 'D:\BCP\';
 
-$bcpFile = $dir + 'MyFirstImport.bcp';
+$bcpFile = Join-Path -Path $dir -ChildPath 'MyFirstImport.bcp';
 
 # Confirm directory exists
 IF ((Test-Path -Path $dir) -eq 0)
