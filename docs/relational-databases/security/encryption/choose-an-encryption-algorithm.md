@@ -20,11 +20,11 @@ caps.latest.revision: 36
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a3cb1a59db35025eda9cf6ea68f0897aaecc9caf
+ms.translationtype: HT
+ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
+ms.openlocfilehash: 77cee9391335f384c94aa0fa3cf71808baf36056
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="choose-an-encryption-algorithm"></a>選擇加密演算法
@@ -73,7 +73,7 @@ ms.lasthandoff: 06/22/2017
 |使用對稱金鑰加密。|[CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-symmetric-key-transact-sql.md)|  
 |使用非對稱金鑰加密。|[CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-asymmetric-key-transact-sql.md)|  
 |使用憑證加密。|[CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../../t-sql/statements/create-certificate-transact-sql.md)|  
-|使用透明資料加密來加密資料庫檔案。|[透明資料加密 &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption-tde.md)|  
+|使用透明資料加密來加密資料庫檔案。|[透明資料加密 &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption.md)|  
 |如何加密資料表的一個資料行。|[加密資料行](../../../relational-databases/security/encryption/encrypt-a-column-of-data.md)|  
   
 ## <a name="see-also"></a>另請參閱  

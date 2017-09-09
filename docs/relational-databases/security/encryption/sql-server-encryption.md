@@ -20,10 +20,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 6d75e0e40c5642993cb17b09e421fbfebf40f87a
-ms.openlocfilehash: c7aee6098b6cf8eca74dd3f34b9ed9a836bb9d20
+ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
+ms.openlocfilehash: 8c449858a5f72cb7647c32a22b7a5906754d23bf
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="sql-server-encryption"></a>SQL Server 加密
@@ -44,7 +44,7 @@ ms.lasthandoff: 07/31/2017
  [選擇加密演算法](../../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)  
  有關如何選取有效加密演算法的詳細資訊。  
   
- [透明資料加密 &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption-tde.md)  
+ [透明資料加密 &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption.md)  
  有關如何以透明方式加密資料的一般資訊。  
   
  [SQL Server 和資料庫加密金鑰 &#40;Database Engine&#41;](../../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)  

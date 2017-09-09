@@ -20,11 +20,11 @@ caps.latest.revision: 41
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 93c2bdc00890de016ad26a45786e2d3a9fef9c33
+ms.translationtype: HT
+ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
+ms.openlocfilehash: ed2f64e9596dd905c0e8b24f6616520942ccc3ce
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="encryption-hierarchy"></a>加密階層
@@ -106,7 +106,7 @@ ms.lasthandoff: 06/22/2017
  對稱金鑰是用來加密與解密的一個金鑰。 使用對稱金鑰來加密與解密非常快速，且適合用來針對資料庫中的機密資料進行日常加密。  
   
 ### <a name="transparent-data-encryption"></a>透明資料加密  
- 透明資料加密 (TDE) 是使用對稱金鑰的特殊加密案例。 TDE 會使用稱為資料庫加密金鑰的對稱金鑰加密整個資料庫。 資料庫加密金鑰受到其他金鑰或憑證的保護，這些金鑰或憑證則受到資料庫主要金鑰或是儲存於 EKM 模組內的非對稱金鑰的保護。 如需詳細資訊，請參閱[透明資料加密 &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption-tde.md)。  
+ 透明資料加密 (TDE) 是使用對稱金鑰的特殊加密案例。 TDE 會使用稱為資料庫加密金鑰的對稱金鑰加密整個資料庫。 資料庫加密金鑰受到其他金鑰或憑證的保護，這些金鑰或憑證則受到資料庫主要金鑰或是儲存於 EKM 模組內的非對稱金鑰的保護。 如需詳細資訊，請參閱[透明資料加密 &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption.md)。  
   
 ## <a name="related-content"></a>相關內容  
  [保護 SQL Server 的安全](../../../relational-databases/security/securing-sql-server.md)  

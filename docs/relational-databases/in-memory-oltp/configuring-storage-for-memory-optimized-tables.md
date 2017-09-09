@@ -15,11 +15,11 @@ caps.latest.revision: 7
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0250c8370960dc17adf13c020c51bfc603b111c8
+ms.translationtype: HT
+ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
+ms.openlocfilehash: 2d0a6459bc0c46e3f19de59875f73e1ebedd14d4
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="configuring-storage-for-memory-optimized-tables"></a>設定記憶體最佳化資料表的儲存體
@@ -42,7 +42,7 @@ ms.lasthandoff: 06/22/2017
 -   如果您的主軸數目為偶數，檢查點檔案將會平均分佈在所有主軸上，這點與 SQL Server 2014 不同。  
   
 ## <a name="encryption"></a>加密  
- 在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中，記憶體最佳化資料表的儲存體將會在啟用資料庫上的 TDE 時加密。 如需詳細資訊，請參閱[透明資料加密 &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption-tde.md)。  
+ 在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中，記憶體最佳化資料表的儲存體將會在啟用資料庫上的 TDE 時加密。 如需詳細資訊，請參閱[透明資料加密 &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [建立及管理記憶體最佳化物件的儲存體](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  

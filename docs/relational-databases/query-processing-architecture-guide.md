@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 014b531a94b555b8d12f049da1bd9eb749b4b0db
-ms.openlocfilehash: 24f0d590630fb04ff45557dfb72616a8e1795f7e
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 70401c6607263bb593d11f0551214d227be1a96a
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/22/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="query-processing-architecture-guide"></a>查詢處理架構指南
@@ -1035,5 +1035,6 @@ GO
 ##  <a name="Additional_Reading"></a> 其他閱讀資料  
  [執行程序邏輯和實體運算子參考](../relational-databases/showplan-logical-and-physical-operators-reference.md)  
  [擴充事件](../relational-databases/extended-events/extended-events.md)  
- [使用查詢存放區的最佳作法](../relational-databases/performance/best-practice-with-the-query-store.md)
+ [使用查詢存放區的最佳作法](../relational-databases/performance/best-practice-with-the-query-store.md)  
+ [基數估計](../relational-databases/performance/cardinality-estimation-sql-server.md)  
 

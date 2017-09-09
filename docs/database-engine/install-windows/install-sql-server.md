@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: f07eec3427ee1e691da665323455bb35690dc93a
+ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
+ms.openlocfilehash: 3bf6c76a72b4414163b68f4cbdd00756b5f4f0bf
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/08/2017
 
 ---
 # <a name="install-sql-server"></a>安裝 SQL Server
@@ -49,11 +49,7 @@ ms.lasthandoff: 08/02/2017
 
 ## <a name="get-the-installation-media"></a>取得安裝媒體
 
-[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 的下載位置因版本而異：
-
-- **SQL Server Enterprise Edition、Standard Edition 與 Express Edition** 的授權可用於生產環境。 如需 Enterprise 和 Standard 版本，請連絡您的軟體廠商取得安裝媒體。 購買資訊和 Microsoft 合作夥伴目錄請見 [Microsoft 購買網站](https://www.microsoft.com/en-us/server-cloud/products/sql-server/overview.aspx)。 
-
-- [SQL Server 下載](http://www.microsoft.com/sql-server/sql-server-downloads)提供**免費版本**。
+[!INCLUDE[GetInstallationMedia](../../includes/getssmedia.md)]
 
 ## <a name="how-to-install-includessnoversionincludesssnoversion-mdmd"></a>[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 安裝方式
  

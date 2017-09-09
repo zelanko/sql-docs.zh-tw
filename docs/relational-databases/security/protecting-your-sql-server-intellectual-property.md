@@ -17,11 +17,11 @@ caps.latest.revision: 3
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 64297656b09d9f0843127887b490cef98d07b835
+ms.translationtype: HT
+ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
+ms.openlocfilehash: 36377fe5db9440651b4e63a2c848efc290470d3e
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="protecting-your-sql-server-intellectual-property"></a>保護 SQL Server 智慧財產權
@@ -34,7 +34,7 @@ ms.lasthandoff: 06/22/2017
 
 預存程序和資料可以進行加密，但無法隱藏資料結構，而且將偵錯工具附加至伺服器處理序的使用者可以在執行階段從記憶體中擷取已解密的程序和資料。
 
-如果用戶端不是電腦上的系統管理員，則您可以防止用戶端進行存取。 您可以使用[透明資料加密](../../relational-databases/security/encryption/transparent-data-encryption-tde.md)來加密資料檔案、加密備份，以及稽核所有使用者的動作。 但 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 系統管理員以及 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 電腦的系統管理員可以反轉這些動作。
+如果用戶端不是電腦上的系統管理員，則您可以防止用戶端進行存取。 您可以使用[透明資料加密](../../relational-databases/security/encryption/transparent-data-encryption.md)來加密資料檔案、加密備份，以及稽核所有使用者的動作。 但 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 系統管理員以及 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 電腦的系統管理員可以反轉這些動作。
 
 ## <a name="solution"></a>方案
 不需要在用戶端電腦上安裝 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 就有各種方式可以設定用戶端資料存取。 最簡單的方法可能是使用 [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)]，但用戶端不是系統管理員，因此可以使用[永遠加密](../../relational-databases/security/encryption/always-encrypted-database-engine.md)。 如需 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 入門的詳細資訊，請參閱[什麼是 SQL Database？SQL Database 簡介](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview)。  

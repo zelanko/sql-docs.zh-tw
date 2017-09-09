@@ -20,10 +20,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: e4a6157cb56c6db911406585f841046a431eef99
-ms.openlocfilehash: bc39be67f0d2fba9195fe2f8e372f05994f0d49d
+ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
+ms.openlocfilehash: 0d4b7b0b668c6ac8ff2808f2d02576c9285e682a
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/16/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>資料庫引擎的新功能 - SQL Server 2016
@@ -42,7 +42,8 @@ ms.lasthandoff: 08/16/2017
 
 - 有 Azure 帳戶嗎？  接著前往 **[這裡](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/)** 來加速已安裝 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 的虛擬機器。
 
-![備註](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "備註") 如需目前的版本資訊，請參閱 [SQL Server 2016 版本資訊](../sql-server/sql-server-2016-release-notes.md)。
+> [!NOTE]
+> 如需目前的版本資訊，請參閱 [SQL Server 2016 版本資訊](../sql-server/sql-server-2016-release-notes.md)。
   
 ## <a name="sql-server-2016-service-pack-1-sp1"></a>SQL Server 2016 Service Pack 1 (SP1)  
 -  [程序](../t-sql/statements/create-procedure-transact-sql.md)、[檢視](../t-sql/statements/create-view-transact-sql.md)、[函式](../t-sql/statements/create-function-transact-sql.md)和[觸發程序](../t-sql/statements/create-trigger-transact-sql.md)現在可以使用 `CREATE OR ALTER <object>` 語法。
@@ -250,7 +251,7 @@ SQL Server 2014 和 2016 的記憶體最佳化資料表的儲存格式已變更�
 
 - [使用 Multiple Active Result Set &#40;MARS&#41;](../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md) 連接現在可以存取記憶體最佳化資料表和原生編譯的預存程序。
 
-- [透明資料加密 (TDE)](../relational-databases/security/encryption/transparent-data-encryption-tde.md) 支援。 如果資料庫已設定加密，則[記憶體最佳化檔案群組](../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md)中的檔案現在也會加密。
+- [透明資料加密 (TDE)](../relational-databases/security/encryption/transparent-data-encryption.md) 支援。 如果資料庫已設定加密，則[記憶體最佳化檔案群組](../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md)中的檔案現在也會加密。
 
 如需詳細資訊，請參閱[記憶體內部 OLTP &#40;記憶體內部最佳化&#41;](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)。
 
