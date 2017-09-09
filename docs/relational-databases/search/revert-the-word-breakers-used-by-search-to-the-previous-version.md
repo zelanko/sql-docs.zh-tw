@@ -26,7 +26,7 @@ ms.lasthandoff: 09/01/2017
   
  本主題不討論以下語言：  
   
--   **英文**。 若要還原英文元件，請參閱＜ [變更用於美式英文與英式英文的斷詞工具](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md)＞。  
+-   **英文**。 若要還原英文元件，請參閱＜ [變更用於美式英文與英式英文的斷詞工具](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md)＞  
   
 -   **丹麥文、波蘭文和土耳其文**： 舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 隨附之丹麥文、波蘭文及土耳其文的協力廠商斷詞工具已取代為 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 元件。  
   
