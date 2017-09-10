@@ -21,7 +21,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: b5c90f2a2df358af81f563f5740450ba130d24e5
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="attribute-groups-master-data-services"></a>屬性群組 (Master Data Services)
@@ -43,7 +43,7 @@ ms.lasthandoff: 08/02/2017
  屬性群組是在[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]的 [系統管理] 功能區域中管理的。  
   
 ## <a name="show-or-hide-attribute-groups"></a>顯示或隱藏屬性群組  
- 當您建立屬性群組時，它會自動隱藏起來不讓所有使用者看到，除了建立它的使用者以外。 如需如何顯示此群組的詳細資訊，請參閱 [Make an Attribute Group Visible to Users &#40;Master Data Services&#41;](../master-data-services/make-an-attribute-group-visible-to-users-master-data-services.md)。  
+ 當您建立屬性群組時，它會自動隱藏起來不讓所有使用者看到，除了建立它的使用者以外。 如需如何顯示此群組的詳細資訊，請參閱 [讓使用者看到屬性群組 &#40;Master Data Services&#41;](../master-data-services/make-an-attribute-group-visible-to-users-master-data-services.md)。  
   
  如果您想要隱藏群組中的特定屬性，您可以將**拒絕**權限指派給此屬性。 如需詳細資訊，請參閱[分葉權限 &#40;Master Data services&#41;](../master-data-services/leaf-permissions-master-data-services.md).  
   
