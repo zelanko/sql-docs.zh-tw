@@ -1,38 +1,43 @@
 ---
-title: "備份與還原 Analysis Services 資料庫 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.ssmsimbi.Restore.f1"
-  - "sql13.asvs.ssmsimbi.Backup.f1"
-helpviewer_keywords: 
-  - "備份資料庫 [Analysis Services]"
-  - "加密 [Analysis Services]"
-  - "資料庫 [Analysis Services], 還原"
-  - "加密 [Analysis Services]"
-  - "資料庫 [Analysis Services], 備份"
-  - "還原資料庫 [Analysis Services]"
-  - "復原 [Analysis Services]"
+title: "Analysis Services 資料庫的備份和還原 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.asvs.ssmsimbi.Restore.f1
+- sql13.asvs.ssmsimbi.Backup.f1
+helpviewer_keywords:
+- backing up databases [Analysis Services]
+- encryption [Analysis Services]
+- databases [Analysis Services], restoring
+- cryptography [Analysis Services]
+- databases [Analysis Services], backing up
+- restoring databases [Analysis Services]
+- recovery [Analysis Services]
 ms.assetid: 947eebd2-3622-479e-8aa6-57c11836e4ec
 caps.latest.revision: 54
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 54
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 917761cf40eca3847cd304ec4e2aafb46fc06c5d
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 備份與還原 Analysis Services 資料庫
+# <a name="backup-and-restore-of-analysis-services-databases"></a>備份與還原 Analysis Services 資料庫
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 包括備份與還原，讓您可以從特定時間點復原資料庫及其物件。 備份與還原也是一種有效的技術，可將資料庫移轉到升級的伺服器、在伺服器之間移動資料庫，或是將資料庫部署到實際伺服器。 如果您還沒有備份計畫，但是您有很重要的資料，就應該盡快設計及實作計畫，以供資料復原之用。  
   
- 備份與還原命令是在已部署的 Analysis Services 資料庫上執行。 針對您在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的專案和方案，您應該使用原始檔控制來確保您可以復原特定版本的來源檔案，然後為您要使用之原始檔控制系統的儲存機制，建立資料復原計畫。  
+ 備份與還原命令是在已部署的 Analysis Services 資料庫上執行。 針對您在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的專案和方案，您應該使用原始檔控制來確保您可以復原特定版本的來源檔案，然後為您要使用之原始檔控制系統的儲存機制，建立資料復原計畫。  
   
  針對包含來源資料的完整備份，您必須備份包含詳細資料的資料庫。 更明確地說，如果您使用 ROLAP 或 DirectQuery 資料庫儲存，詳細資料會儲存在與 Analysis Services 資料庫分開的外部 SQL Server 關聯式資料庫中。 否則，如果所有物件都是表格式或多維度，Analysis Services 備份就會包含中繼資料和來源資料。  
   
@@ -65,10 +70,10 @@ caps.handback.revision: 54
 -   檢查現有檔案是否有相同名稱。 如果同名的檔案已經存在，備份將會失敗，除非您指定覆寫檔案的選項。  
   
 ##  <a name="bkmk_cube"></a> 備份多維度或表格式資料庫  
- 系統管理員可以將 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫備份至單一 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 備份檔 (.abf)，而不用考慮資料庫的大小。 如需逐步指示，請參閱[如何備份 Analysis Services 資料庫 (TechMantra)](http://www.mytechmantra.com/LearnSQLServer/Backup_an_Analysis_Services_Database.html) 和[自動備份 Analysis Services 資料庫 (TechMantra)](http://www.mytechmantra.com/LearnSQLServer/Automate_Backup_of_Analysis_Services_Database.html)。  
+ 系統管理員可以將 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫備份至單一 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 備份檔 (.abf)，而不用考慮資料庫的大小。 如需逐步指示，請參閱 [如何備份 Analysis Services 資料庫 (TechMantra)](http://www.mytechmantra.com/LearnSQLServer/Backup_an_Analysis_Services_Database.html) 和 [自動備份 Analysis Services 資料庫 (TechMantra)](http://www.mytechmantra.com/LearnSQLServer/Automate_Backup_of_Analysis_Services_Database.html)。  
   
 > [!NOTE]  
->  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]\(用來在 SharePoint 環境中載入和查詢 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料模型) 會從 SharePoint 內容資料庫載入其模型。 這些內容資料庫為關聯式，而且會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 關聯式資料庫引擎上執行。 因此，[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料模型沒有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 備份和還原策略。 如果您已經針對 SharePoint 內容設定災害復原計畫，此計畫會包含內容資料庫中所儲存的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料模型。  
+>  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]用於載入和查詢[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]資料模型，在 SharePoint 環境中，從 SharePoint 內容資料庫載入其模型。 這些內容資料庫為關聯式，而且會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 關聯式資料庫引擎上執行。 因此， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料模型沒有 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 備份和還原策略。 如果您已經針對 SharePoint 內容設定災害復原計畫，此計畫會包含內容資料庫中所儲存的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料模型。  
   
  **遠端資料分割**  
   
@@ -96,9 +101,9 @@ caps.handback.revision: 54
 -   是否要加密備份檔案的內容以及在解密和還原檔案之前要求密碼。 根據預設，不加密備份資料。  
   
     > [!IMPORTANT]  
-    >  對於每個備份檔案，執行備份命令的使用者必須擁有寫入針對每個檔案所指定之備份位置的權限。 此外，使用者必須具有下列其中一個角色：[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體之伺服器角色的成員，或在即將備份之資料庫上擁有「完整控制 (系統管理員)」權限的資料庫角色成員。  
+    >  對於每個備份檔案，執行備份命令的使用者必須擁有寫入針對每個檔案所指定之備份位置的權限。 此外，使用者必須具有下列其中一個角色： [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體之伺服器角色的成員，或在即將備份之資料庫上擁有「完整控制 (系統管理員)」權限的資料庫角色成員。  
   
- 如需備份 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫的詳細資訊，請參閱[備份選項](../../analysis-services/multidimensional-models/backup-options.md)。  
+ 如需備份 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫的詳細資訊，請參閱 [備份選項](../../analysis-services/multidimensional-models/backup-options.md)。  
   
 ##  <a name="bkmk_restore"></a> 還原 Analysis Services 資料庫  
  管理員可以從一個或多個備份檔案還原 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫。  
@@ -117,15 +122,15 @@ caps.handback.revision: 54
 -   您可以選擇由還原命令變更每一個要還原之分割區的還原資料夾。 本機資料分割可以還原至 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體的任何本機資料夾位置，資料庫即還原至此處。 遠端分割區可以還原至本機伺服器以外之任何伺服器上的任何資料夾；遠端分割區無法變成本機式。  
   
     > [!IMPORTANT]  
-    >  對於每個備份檔案，執行還原命令的使用者必須擁有從針對每個檔案所指定之備份位置讀取的權限。 若要還原沒有安裝在伺服器上的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫，使用者也必須是該 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體之伺服器角色的成員。 若要覆寫 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫，使用者必須具有下列其中一個角色：[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體之伺服器角色的成員，或在即將還原之資料庫上擁有「完整控制 (系統管理員)」權限的資料庫角色成員。  
+    >  對於每個備份檔案，執行還原命令的使用者必須擁有從針對每個檔案所指定之備份位置讀取的權限。 若要還原沒有安裝在伺服器上的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫，使用者也必須是該 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體之伺服器角色的成員。 若要覆寫 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫，使用者必須具有下列其中一個角色： [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體之伺服器角色的成員，或在即將還原之資料庫上擁有「完整控制 (系統管理員)」權限的資料庫角色成員。  
   
     > [!NOTE]  
     >  還原現有的資料庫之後，還原資料庫的使用者可能會喪失已還原資料庫的存取權。 如果在執行備份時，使用者不是伺服器角色的成員，也不是擁有完整控制權 (管理員) 權限的資料庫角色成員，就可能會發生存取權喪失的情況。  
   
- 如需還原 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫的詳細資訊，請參閱[還原選項](../../analysis-services/multidimensional-models/restore-options.md)。  
+ 如需還原 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫的詳細資訊，請參閱 [還原選項](../../analysis-services/multidimensional-models/restore-options.md)。  
   
-## 請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [備份、還原和同步處理資料庫 &#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)   
- [PowerShell scripting in Analysis Services](../../analysis-services/instances/powershell-scripting-in-analysis-services.md)  
+
   
   

@@ -1,26 +1,37 @@
 ---
-title: "Power Pivot for SharePoint 的 PowerShell 參考 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "11/16/2015"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: "Power Pivot for SharePoint 的 PowerShell 參考 |Microsoft 文件"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 11/16/2015
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: c01735a8-f919-48ad-8d74-35d75a18f821
 caps.latest.revision: 11
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 11
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 39567e2b212761ac2dd726a1f8f33893a83f245c
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# Power Pivot for SharePoint 的 PowerShell 參考
-  本節列出用來設定或管理 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 安裝的 PowerShell 指令程式。 如需啟用 Cmdlet 與檢視內建說明的詳細資訊，請參閱[使用 Windows PowerShell 的 Power Pivot 組態](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell.md)。  
+# <a name="powershell-reference-for-power-pivot-for-sharepoint"></a>Power Pivot for SharePoint 的 PowerShell 參考
+
+[!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
+
+  本節列出用來設定或管理 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 安裝的 PowerShell 指令程式。 如需啟用 Cmdlet 與檢視內建說明的詳細資訊，請參閱 [使用 Windows PowerShell 的 Power Pivot 組態](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell.md)。  
+
+>[!NOTE] 
+>這份文件可能包含過時的資訊和範例。 使用 Get-help cmdlet 取得最新。
   
-## 指令程式清單  
+## <a name="cmdlet-list"></a>指令程式清單  
  從 PowerShell 提示字元查看 Cmdlet 清單︰  
   
 1.  使用 [以系統管理員身分執行] 選項，開啟 SharePoint 管理命令介面。  
@@ -57,3 +68,4 @@ caps.handback.revision: 11
 -   Update-PowerPivotEngineService  
   
   
+

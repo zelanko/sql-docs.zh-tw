@@ -1,33 +1,38 @@
 ---
-title: "使用 SQL Server Profiler 監視 Analysis Services 簡介 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQL Server Profiler，Analysis Services"
-  - "監視 Analysis Services [SQL Server]"
-  - "效能 [Analysis Services]"
-  - "效能 [Analysis Services]，SQL Server Profiler"
-  - "Profiler [SQL Server Profiler]，Analysis Services"
+title: "監視 Analysis Services with SQL Server Profiler 簡介 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Server Profiler, Analysis Services
+- monitoring Analysis Services [SQL Server]
+- performance [Analysis Services]
+- performance [Analysis Services], SQL Server Profiler
+- Profiler [SQL Server Profiler], Analysis Services
 ms.assetid: 568ec549-5ddc-493a-b9f8-3bdc548b562e
 caps.latest.revision: 28
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 28
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e5b4073390d14a50948ad7cf023a394c3f1ef683
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 使用 SQL Server Profiler 監視 Analysis Services 簡介
-  您可以使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 來監視由 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體產生的事件。 使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]，您可以執行下列動作：  
+# <a name="introduction-to-monitoring-analysis-services-with-sql-server-profiler"></a>使用 SQL Server Profiler 監視 Analysis Services 簡介
+  您可以使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 來監視由 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]執行個體產生的事件。 使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]，您可以執行下列動作：  
   
--   監視 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體的效能。  
+-   監視 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]執行個體的效能。  
   
 -   偵錯多維度運算式 (MDX) 陳述式。  
   
@@ -37,11 +42,11 @@ caps.handback.revision: 28
   
 -   藉由在測試系統上重新執行於實際系統上擷取到的事件，即可在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中進行問題的疑難排解。 此方式對測試或偵錯用途很有用，並可讓使用者不受干擾的繼續使用實際系統。  
   
--   發生在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體上的稽核和檢閱活動。 安全性管理員可以檢閱任何一個稽核的事件。 這包含登入嘗試是成功或失敗；以及存取陳述式和物件的權限是成功或失敗。  
+-   發生在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]執行個體上的稽核和檢閱活動。 安全性管理員可以檢閱任何一個稽核的事件。 這包含登入嘗試是成功或失敗；以及存取陳述式和物件的權限是成功或失敗。  
   
 -   在螢幕上顯示有關擷取事件的資料，或擷取有關每個事件的資料並儲存到檔案或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表中，以供未來分析或播放使用。 當您重新執行資料時，可以即時或逐步返回儲存的事件，如同最初發生時一般。  
   
-## 使用 SQL Server Profiler  
+## <a name="using-sql-server-profiler"></a>使用 SQL Server Profiler  
  若要使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 來建立或重新執行追蹤，您必須是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器角色的成員。 如果您是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器角色的成員，就可以從 [開始] 功能表上的 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] 程式集啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
  當您使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 時，請注意下列事項：  
@@ -59,7 +64,7 @@ caps.handback.revision: 28
   
  為了達到最佳效能，請使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 只監視您需要的事件。 監視太多事件會增加負擔，並導致追蹤檔案或資料表變得過於龐大，尤其在進行長期追蹤時。 另外，請使用篩選來限制收集的資料量，以防止追蹤檔案變得太大。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [Analysis Services 追蹤事件](../../analysis-services/trace-events/analysis-services-trace-events.md)   
  [建立 Profiler 追蹤以重新執行 &#40;Analysis Services&#41;](../../analysis-services/instances/create-profiler-traces-for-replay-analysis-services.md)  
   

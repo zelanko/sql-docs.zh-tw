@@ -1,36 +1,41 @@
 ---
-title: "安全性屬性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "安全性 [Analysis Services]，屬性"
-  - "SecurityPackageList 屬性"
-  - "BuiltinAdminsAreServerAdmins 屬性"
-  - "DisableClientImpersonation 屬性"
-  - "ErrorMessageMode 屬性"
-  - "RequiredProtectionLevel 屬性"
-  - "ServiceAccountIsServerAdmin 屬性"
-  - "RequireClientAuthentication 屬性"
+title: "安全性屬性 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- security [Analysis Services], properties
+- SecurityPackageList property
+- BuiltinAdminsAreServerAdmins property
+- DisableClientImpersonation property
+- ErrorMessageMode property
+- RequiredProtectionLevel property
+- ServiceAccountIsServerAdmin property
+- RequireClientAuthentication property
 ms.assetid: 2fc7fe10-0cbb-49ac-aa8c-8ec3f7a7705f
 caps.latest.revision: 15
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 15
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0233cd9c2e9eff5cc776b921e092206524546a52
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 安全性屬性
+# <a name="security-properties"></a>安全性屬性
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支援下表列出的安全性伺服器屬性。 如需其他伺服器屬性以及如何設定伺服器屬性的詳細資訊，請參閱 [Analysis Services 中的伺服器屬性](../../analysis-services/server-properties/server-properties-in-analysis-services.md)。  
   
  **適用於：** 多維度與表格式伺服器模式  
   
-## 屬性  
+## <a name="properties"></a>屬性  
  **RequireClientAuthentication**  
  指出是否需要用戶端驗證的布林屬性。  
   
@@ -67,8 +72,8 @@ caps.handback.revision: 15
  **AdministrativeDataProtection\ RequiredProtectionLevel**  
  此為進階屬性，除非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技術支援的指導之下，否則不應隨意變更。  
   
-## 請參閱＜  
- [Analysis Services 的伺服器屬性](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
+## <a name="see-also"></a>請參閱＜  
+ [Analysis Services 中的伺服器屬性](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
  [判斷 Analysis Services 執行個體的伺服器模式](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

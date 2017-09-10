@@ -1,29 +1,34 @@
 ---
-title: "子選擇和 Subcube 中的導出成員 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "導出成員在子選擇和 Subcube |Microsoft 文件"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6e35e8f7-ae1c-4549-8432-accf036d2373
 caps.latest.revision: 9
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 9
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a06ba2933b415a28d53266e4c02f3768e5044866
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 子選擇和 Subcube 中的導出成員
+# <a name="calculated-members-in-subselects-and-subcubes"></a>子選擇和 Subcube 中的導出成員
   導出成員是值在執行階段從運算式計算而來的維度成員，它能用在子選擇和 Subcube 中以更精確地定義查詢的 Cubespace。  
   
-## 啟用子空間中的導出成員  
- <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> 的 **SubQueries** 連接字串屬性或[支援的 XMLA 屬性 &#40;XMLA&#41;](../Topic/Supported%20XMLA%20Properties%20\(XMLA\).md) 的 **DBPROPMSMDSUBQUERIES** 屬性定義子選擇或 Subcube 上導出成員或導出集合的行為 (或允許)。 在本文的內容中，除非另有說明，否則子選擇同時指子選擇和 Subcube。  
+## <a name="enabling-calculated-members-in-the-subspace"></a>啟用子空間中的導出成員  
+ **子查詢**中的連接字串屬性<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>或**DBPROPMSMDSUBQUERIES**屬性[支援 XMLA 屬性 & #40;XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)定義的行為或允許使用導出的成員或導出的集合在子選擇或 subcube。 在本文的內容中，除非另有說明，否則子選擇同時指子選擇和 Subcube。  
   
  SubQueries 屬性允許下列值。  
   
@@ -121,12 +126,12 @@ Where [Measures].[Reseller Sales Amount]
   
  在以上的結果中，[All Geographies]、[United States]、[Oregon] 和 [Washington] 的彙總值來自 &[Portland]&[OR] 和 &[Spokane]&[WA] 的下階彙總。 沒有任何值來自導出成員。  
   
-### 備註  
+### <a name="remarks"></a>備註  
  子選擇或 Subcube 運算式中只允許使用全域或工作階段導出成員。 如果 MDX 運算式中擁有查詢導出成員，在評估子選擇或 Subcube 運算式時就會引發錯誤。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>   
- [查詢中的子選擇](../../../analysis-services/multidimensional-models/mdx/subselects-in-queries.md)   
- [支援的 XMLA 屬性 &#40;XMLA&#41;](../Topic/Supported%20XMLA%20Properties%20\(XMLA\).md)  
+ [在查詢中的子選擇](../../../analysis-services/multidimensional-models/mdx/subselects-in-queries.md)   
+ [支援的 XMLA 屬性 & #40;XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)  
   
   

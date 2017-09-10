@@ -1,35 +1,40 @@
 ---
-title: "選擇和對應模型測試資料 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "資料行 [資料採礦], 採礦精確度圖表"
-  - "採礦精確度圖表 [Analysis Services], 資料行對應"
-  - "輸入資料行對應 [Analysis Services]"
-  - "對應輸入資料行 [Analysis Services]"
+title: "選擇和對應模型測試資料 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- columns [data mining], mining accuracy charts
+- Mining Accuracy Chart [Analysis Services], column mappings
+- input column mapping [Analysis Services]
+- mapping input columns [Analysis Services]
 ms.assetid: be0d9f20-40c3-4dac-81da-281cfe724126
 caps.latest.revision: 44
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 44
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5374180481138f62346ec1ff3aa83eff82403c05
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 選擇和對應模型測試資料
-  若要在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中建立精確度圖表，您必須選擇將用來測試模型的資料，並將資料對應至模型。  
+# <a name="choose-and-map-model-testing-data"></a>選擇和對應模型測試資料
+  若要在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中建立精確度圖表，您必須選擇將用來測試模型的資料，並將資料對應至模型。  
   
- 根據預設，只要您在建立採礦結構時建立了鑑效組資料集，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 就會使用採礦模型測試資料。 建立鑑效組測試集是測試根據相同採礦結構之模型的最簡單方式，因為資料行名稱和資料類型永遠符合模型，並且您可以合理地確定資料分佈是相似的。 此外，設計工具將自動建立輸入和模型資料行之間的關聯性。  
+ 根據預設，只要您在建立採礦結構時建立了鑑效組資料集， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 就會使用採礦模型測試資料。 建立鑑效組測試集是測試根據相同採礦結構之模型的最簡單方式，因為資料行名稱和資料類型永遠符合模型，並且您可以合理地確定資料分佈是相似的。 此外，設計工具將自動建立輸入和模型資料行之間的關聯性。  
   
  您也可以指定外部資料來源。 對於外部資料，有一些其他需求：  
   
--   外部資料集必須在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的執行個體中定義為資料來源檢視。  
+-   外部資料集必須在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的執行個體中定義為資料來源檢視。  
   
 -   外部資料集至少必須包含一個資料行，而且該資料行可以對應至採礦模型中的可預測資料行。 您可以選擇忽略某些資料行。  
   
@@ -51,7 +56,7 @@ caps.handback.revision: 44
   
 ##  <a name="bkmk_SelectInputs"></a> 若要選取輸入資料表來測試採礦模型的精確度  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的資料採礦設計師中，按兩下包含您想要建立圖表之模型的採礦結構。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]的資料採礦設計師中，按兩下包含您想要建立圖表之模型的採礦結構。  
   
 2.  選取 [採礦精確度圖表] 索引標籤。  
   
@@ -119,7 +124,7 @@ caps.handback.revision: 44
   
      新的資料行對應會顯示在 [指定資料行對應] 對話方塊中。 您可以選取資料行之間的線，然後按 DELETE 鍵來移除對應。 您可以在 [採礦結構] 資料表中選取資料行，並將它拖曳到 [選取輸入資料表] 資料表中的對應資料行，以建立新的連接。  
   
-## 請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [測試及驗證工作與操作方法 &#40;資料採礦&#41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)  
   
   

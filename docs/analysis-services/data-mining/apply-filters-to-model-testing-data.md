@@ -1,27 +1,32 @@
 ---
-title: "將篩選套用至模型測試資料 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "輸入資料列篩選 [SQL Server]"
-  - "篩選輸入資料列 [Analysis Services]"
-  - "採礦精確度圖表 [Analysis Services], 篩選輸入資料列"
+title: "將篩選套用至模型測試資料 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- input row filtering [SQL Server]
+- filtering input rows [Analysis Services]
+- Mining Accuracy Chart [Analysis Services], filtering input rows
 ms.assetid: 9ccc9a23-5597-4b35-a05f-2fc8eb885147
 caps.latest.revision: 44
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 44
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ae4d7899d0b027f912b6320934ddefc2431a303a
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 將篩選套用至模型測試資料
+# <a name="apply-filters-to-model-testing-data"></a>將篩選套用至模型測試資料
   當您指定要用於測試模型的外部資料來源時，可以選擇性地套用篩選，以限制輸入資料。 例如，您可能想要特別針對某個收入範圍的客戶進行預測來測試模型。  
   
  例如，在 Adventure Works 目標郵寄案例中，您可以對 ProspectiveBuyer (這是包含測試資料的資料表) 建立一個如下的篩選運算式，依收入範圍來限制測試案例：  
@@ -53,7 +58,7 @@ caps.handback.revision: 44
   
  如需可套用的篩選類型以及如何評估篩選運算式的詳細資訊，請參閱[模型篩選語法和範例 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining.md)。  
   
-### 針對外部測試資料建立篩選  
+### <a name="create-a-filter-on-external-testing-data"></a>針對外部測試資料建立篩選  
   
 1.  按兩下包含要測試模型的採礦結構，以開啟資料採礦設計師。  
   
@@ -89,9 +94,9 @@ caps.handback.revision: 44
   
      當您建立精確度圖表時，此篩選條件會套用至資料來源。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [選擇和對應模型測試資料](../../analysis-services/data-mining/choose-and-map-model-testing-data.md)   
- [使用巢狀資料表當做精確度圖表的輸入](../../analysis-services/data-mining/using-nested-table-data-as-an-input-for-an-accuracy-chart.md)   
+ [使用巢狀資料表做為輸入用於精確度圖表](../../analysis-services/data-mining/using-nested-table-data-as-an-input-for-an-accuracy-chart.md)   
  [選擇精確度圖表類型及設定圖表選項](../../analysis-services/data-mining/choose-an-accuracy-chart-type-and-set-chart-options.md)  
   
   

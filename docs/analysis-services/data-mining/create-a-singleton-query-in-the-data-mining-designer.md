@@ -1,26 +1,31 @@
 ---
-title: "在資料採礦設計師中建立單一查詢 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "單一查詢 [Analysis Services]"
-  - "採礦模型預測 [Analysis Services], 單一查詢"
+title: "在資料採礦設計師中建立單一查詢 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- singleton queries [Analysis Services]
+- Mining Model Prediction [Analysis Services], singleton queries
 ms.assetid: 6cdca8a0-cf16-46eb-a652-0bff820625ab
 caps.latest.revision: 38
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: dfbb55881c274dee8560cbba14319bcc831b38c2
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 在資料採礦設計師中建立單一查詢
+# <a name="create-a-singleton-query-in-the-data-mining-designer"></a>在資料採礦設計師中建立單一查詢
   如果您想要針對單一案例建立預測，單一查詢便很有用。 如需單一查詢的詳細資訊，請參閱[資料採礦查詢](../../analysis-services/data-mining/data-mining-queries.md)。  
   
  在資料採礦設計師的 [採礦模型預測] 索引標籤中，您可以建立許多不同類型的查詢。 您可以使用此設計師或輸入資料採礦延伸模組 (DMX) 陳述式，藉以建立查詢。 此外，您也可以從設計師開始，然後透過變更 DMX 陳述式或加入 WHERE 或 ORDER BY 子句，修改它所建立的查詢。  
@@ -39,7 +44,7 @@ AS [t]
   
  下列步驟將說明如何建立此預測查詢。  
   
-### 使用資料採礦設計師來建立單一查詢  
+### <a name="to-create-a-singleton-query-by-using-the-data-mining-designer"></a>使用資料採礦設計師來建立單一查詢  
   
 1.  按一下資料採礦設計師中的 **[採礦模型預測]** 索引標籤。  
   
@@ -59,7 +64,7 @@ AS [t]
   
      例如，請針對 [Number Children At Home] 選取 [2]，然後針對 [Age] 輸入 **45**。  
   
-5.  將可預測資料行從 [採礦模型] 資料表拖曳到索引標籤底端的 [來源] 資料行。 (選擇性) 您可以針對資料行輸入別名。  
+5.  將可預測資料行從 [採礦模型] 資料表拖曳到索引標籤底端的 [來源] 資料行。(選擇性) 您可以針對資料行輸入別名。  
   
      例如，將 [Bike Buyer] 拖曳至 [來源] 資料行。  
   
@@ -79,7 +84,7 @@ AS [t]
   
      這時會開啟新的畫面，以顯示查詢的結果。 若要檢視您剛建立的 DMX 陳述式，請按一下 [SQL]。  
   
-## 請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [預測查詢 &#40;資料採礦&#41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
   
   

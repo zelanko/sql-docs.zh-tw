@@ -1,24 +1,29 @@
 ---
-title: "建立及自訂 Power Pivot 圖庫 | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/31/2015"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "建立及自訂 Power Pivot 圖庫 |Microsoft 文件"
+ms.custom: 
+ms.date: 08/31/2015
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b5cd35e0-3d8f-4784-9172-93d60c730321
 caps.latest.revision: 17
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 16
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 9e98f38071c044aab967690ffafffa6ada634141
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 建立及自訂 Power Pivot 圖庫
+# <a name="create-and-customize-power-pivot-gallery"></a>建立及自訂 Power Pivot 圖庫
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫是一種特殊類型的 SharePoint 文件庫，針對包含 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料的已發行 Excel 活頁簿和 Reporting Services 報表，提供豐富的預覽與文件管理功能。  
   
 ##  <a name="bkmk_top"></a> 本主題內容  
@@ -43,7 +48,7 @@ caps.handback.revision: 16
     >  Power Pivot 圖庫需要 Microsoft Silverlight，  但 Microsoft Edge 瀏覽器不支援 Silverlight。   
     > 若要檢視 Edge 中的程式庫內容，請按一下 Powerpivot 圖庫中的 [程式庫]  索引標籤，然後將文件庫檢視變更為 [所有文件] 。    
     > 若要變更預設檢視，請按一下 [程式庫]  索引標籤，然後按一下 [修改檢視]。 按一下 [設定為預設檢視]，然後按一下 [確定] 以儲存預設檢視。  
-    >  如需 Edge 支援項目的詳細資訊，請參閱 Windows 部落格 [揮別以往，第 2 部分：和 ActiveX、VBScript... 說再見](http://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
+    >  如需 Edge 支援項目的詳細資訊，請參閱 Windows 部落格 [揮別以往，第 2 部分：和 ActiveX、VBScript... 說再見](https://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
   
 -   您必須是網站擁有者才能建立文件庫。  
   
@@ -51,16 +56,16 @@ caps.handback.revision: 16
   
 -   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫不可在受限制的網站中。 包含 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫的父網站，必須加入信任的網站或近端內部網路區域。  
   
--   必須已為您的應用程式部署 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Web 應用程式方案，且必須已為網站集合啟用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 功能。 如需詳細資訊，請參閱[將 Power Pivot 方案部署到 SharePoint](../../analysis-services/power-pivot-sharepoint/deploy-power-pivot-solutions-to-sharepoint.md) 和[在管理中心為網站集合啟用 Power Pivot 功能整合](../../analysis-services/power-pivot-sharepoint/activate power pivot integration for site collections in ca.md)。  
+-   必須已為您的應用程式部署 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Web 應用程式方案，且必須已為網站集合啟用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 功能。 如需詳細資訊，請參閱 [將 Power Pivot 方案部署到 SharePoint](../../analysis-services/power-pivot-sharepoint/deploy-power-pivot-solutions-to-sharepoint.md) 和[在管理中心為網站集合啟用 Power Pivot 功能整合](../../analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md)。  
   
 -   若要檢視或建立以 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿為基礎的 Reporting Services 報表，活頁簿和報表必須在相同的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫中。 報表必須使用包含內嵌資料的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿，不然活頁簿最多只能包含一個是 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿的外部資料來源。  
   
 ##  <a name="overview"></a> 概觀  
- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫是一個文件庫範本，當您在 SharePoint 伺服器上安裝 [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] 時，可以使用該圖庫。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫結合準確的檔案內容預覽與文件來源相關事實。 您可以立即看到文件建立者以及上次修改文件的日期。 若要建立預覽影像，[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫會使用可以讀取包含 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料之 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿與 Reporting Services 報表的快照服務。 如果您發行快照服務無法讀取的檔案，該檔案就沒有預覽影像。  
+ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫是一個文件庫範本，當您在 SharePoint 伺服器上安裝 [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] 時，可以使用該圖庫。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫結合準確的檔案內容預覽與文件來源相關事實。 您可以立即看到文件建立者以及上次修改文件的日期。 若要建立預覽影像， [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫會使用可以讀取包含 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料之 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿與 Reporting Services 報表的快照服務。 如果您發行快照服務無法讀取的檔案，該檔案就沒有預覽影像。  
   
  預覽圖像是以 Excel Services 轉譯活頁簿的方式為基礎。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫中的展示方式應該與您在瀏覽器中檢視 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿時所看到的外觀相同。 不過，預覽的介面區有限。 活頁簿或報表的部分可以修整，以便符合可用空間。 您可能需要開啟活頁簿或報表來檢視完整的文件。  
   
- 重新整理來自外部的資料來源的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿資料，在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫中受到完整支援，但需要額外的設定。 伺服器陣列或服務管理員必須將 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫新增為 Excel Services 信任位置。 如需詳細資訊，請參閱[在管理中心建立 Power Pivot 網站的信任位置](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)。  
+ 重新整理來自外部的資料來源的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿資料，在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫中受到完整支援，但需要額外的設定。 伺服器陣列或服務管理員必須將 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫新增為 Excel Services 信任位置。 如需詳細資訊，請參閱 [在管理中心建立 Power Pivot 網站的信任位置](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)。  
   
 ##  <a name="createlib"></a> 建立 Power Pivot 圖庫  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 時，將會為您建立 [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] 圖庫。 如果您將 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 加入至現有的伺服器陣列，或是您想要其他的文件庫，則可以為應用程式或網站建立一個新的文件庫。  
@@ -71,7 +76,7 @@ caps.handback.revision: 16
   
     3.  在文件庫下，按一下 [[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫]。  
   
-    1.  **SharePoint 2013**：按一下設定圖示 ![SharePoint 設定](../../analysis-services/media/as-sharepoint2013-settings-gear.png "SharePoint 設定")。 按一下 **[網站內容]**。  
+    1.  **SharePoint 2013**： 按一下設定圖示![SharePoint 設定](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 設定")。 按一下 **[網站內容]**。  
   
     2.  按一下 **[新增應用程式]**。  
   
@@ -81,7 +86,7 @@ caps.handback.revision: 16
   
 3.  按一下 **[建立]**。  
   
-4.  要求伺服陣列或服務管理員將 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫新增為 Excel Service 的信任位置。 如果使用者為 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料重新整理設定活頁簿，就需要這個步驟以避免錯誤。 如需這項工作的詳細資訊，請參閱[在管理中心建立 Power Pivot 網站的信任位置](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)。  
+4.  要求伺服陣列或服務管理員將 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫新增為 Excel Service 的信任位置。 如果使用者為 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料重新整理設定活頁簿，就需要這個步驟以避免錯誤。 如需這項工作的詳細資訊，請參閱 [在管理中心建立 Power Pivot 網站的信任位置](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)。  
   
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫文件庫的連結會出現在目前網站的導覽 [快速啟動] 窗格中。  
   
@@ -98,7 +103,7 @@ caps.handback.revision: 16
   
  您無法變更控制文件來源資訊的設定。 顯示有關個別文件的事實 (例如加入活頁簿或上次修改活頁簿的人員)，是由無法修改的一組固定資料行所決定。  
   
-#### 變更排序次序、加入篩選，或限制文件的數目  
+#### <a name="change-sort-order-add-filters-or-limit-the-number-of-documents"></a>變更排序次序、加入篩選，或限制文件的數目  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫永遠會顯示「上次修改」與「建立者」值。 您無法停用這些資料行。 您無法啟用文件庫的其他資料行。請使用下列指示來變更排序次序、加入篩選，或是限制可見的文件數目。  
   
 1.  在 SharePoint 網站中，開啟 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫。  
@@ -120,7 +125,7 @@ caps.handback.revision: 16
 ####  <a name="bkmk_hide_refresh_button"></a> 停用或隱藏重新整理按鈕  
  您無法隱藏 **[管理資料重新整理]** 按鈕。 但如果使用者沒有足夠的權限，就會停用此按鈕。  
   
- ![as_powerpivot_refresh_manage_reresh](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-refresh-manage-reresh.png "as_powerpivot_refresh_manage_reresh")  
+ ![as_powerpivot_refresh_manage_reresh](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-refresh-manage-reresh.gif "as_powerpivot_refresh_manage_reresh")  
   
  活頁簿擁有者或作者必須具備 **[參與]** 權限，才能排程活頁簿的資料重新整理。 具備「參與」權限的使用者可以開啟及編輯活頁簿的資料重新整理組態頁面，以指定用於重新整理資料的認證及排程資訊。  
   
@@ -139,7 +144,7 @@ caps.handback.revision: 16
 |所有文件|這是文件庫的標準版面配置。 您可以選擇此檢視來管理個別的文件，或以清單格式來檢視文件庫內容。<br /><br /> 使用此檢視來編輯屬性、刪除或移動個別的文件。<br /><br /> 如果您啟用版本控制，必須使用此檢視來檢查文件庫內外的文件。|  
 |劇場檢視和浮動切換檢視|如果您展示少數相關文件，這些都是效果最佳的特殊檢視。 完整的縮圖輪替包括文件庫中所有文件中的所有頁面。 如果您有大量的文件，這些檢視對想要尋找或開啟特定 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿的使用者來說，可能就不太實用。<br /><br /> 劇場檢視：預覽區域置中。 每個工作表的小型縮圖都會顯示頁面兩側下角。<br /><br /> 浮動切換檢視：預覽區域置中。 緊接在目前縮圖前後的縮圖與預覽區域相鄰。|  
   
-### 切換到不同的檢視  
+### <a name="switch-to-a-different-view"></a>切換到不同的檢視  
   
 1.  在 SharePoint 網站中，開啟 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫。  
   
@@ -147,10 +152,11 @@ caps.handback.revision: 16
   
 3.  在 [自訂] 檢視的 [管理檢視] 中，從清單選取您要使用的檢視。 預先設計好的檢視包括 [圖庫]、[劇場] 和 [浮動切換]。 或者，如果您要移動、刪除或管理文件庫中的文件，您可以選擇 [所有文件]。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [對 PowerPivot for SharePoint 安裝進行疑難排解](../../analysis-services/troubleshoot-a-power-pivot-for-sharepoint-installation.md)   
  [使用 Power Pivot 圖庫](../../analysis-services/power-pivot-sharepoint/use-power-pivot-gallery.md)   
  [在管理中心建立 Power Pivot 網站的信任位置](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
  [刪除 Power Pivot 圖庫](../../analysis-services/power-pivot-sharepoint/delete-power-pivot-gallery.md)  
   
   
+

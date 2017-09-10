@@ -11,10 +11,10 @@ ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: H1Hack27Feb2017
 ms.translationtype: MT
-ms.sourcegitcommit: 303d3b74da3fe370d19b7602c0e11e67b63191e7
-ms.openlocfilehash: 8a0c0a07c6874c6015ec3c4b1f561e0a1076482f
+ms.sourcegitcommit: 60272ce672c0a32738b0084ea86f8907ec7fc0a5
+ms.openlocfilehash: 693b994cd7e00e9db439a445fe0b692bc2d379d5
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/29/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="configure-sql-server-2017-container-images-on-docker"></a>設定 SQL Server 2017 容器映像 docker
@@ -139,7 +139,7 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" --cap
 這項技術也可讓您共用並檢視之外 Docker 主機上的檔案。
 
 > [!IMPORTANT]
-> 在此階段不支援在 Mac 上的 Docker 的 Linux 映像上的 SQL Server 的主機磁碟區對應。 請改用資料磁碟區容器。 這項限制是特有`/var/opt/msql`目錄。 讀取從掛接的目錄運作正常。 例如，您可以掛接主機目錄在 Mac 上使用 – v 並位於主機的.bak 檔案從備份還原。
+> 在此階段不支援在 Mac 上的 Docker 的 Linux 映像上的 SQL Server 的主機磁碟區對應。 請改用資料磁碟區容器。 這項限制是特有`/var/opt/mssql`目錄。 讀取從掛接的目錄運作正常。 例如，您可以掛接主機目錄在 Mac 上使用 – v 並位於主機的.bak 檔案從備份還原。
 
 ### <a name="use-data-volume-containers"></a>使用資料磁碟區容器
 

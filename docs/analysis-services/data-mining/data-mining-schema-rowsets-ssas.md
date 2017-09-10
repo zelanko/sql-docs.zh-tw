@@ -1,36 +1,41 @@
 ---
-title: "資料採礦結構描述資料列集 (SSAS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "結構描述資料列集 [Analysis Services], 資料採礦"
-  - "資料採礦 [Analysis Services], 查詢"
-  - "採礦模型內容"
-  - "資料採礦 [Analysis Services], 結構描述資料列集"
-  - "結構描述資料列集 [Analysis Services], 擷取"
-  - "資料採礦 [Analysis Services], 疑難排解"
+title: "資料採礦結構描述資料列集 (SSAs) |Microsoft 文件"
+ms.custom: 
+ms.date: 03/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- schema rowsets [Analysis Services], data mining
+- data mining [Analysis Services], queries
+- mining model content
+- data mining [Analysis Services], schema rowsets
+- schema rowsets [Analysis Services], retrieving
+- data mining [Analysis Services], troubleshooting
 ms.assetid: 442d8c29-07c7-45de-9a15-d556059f68d7
 caps.latest.revision: 14
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: deaa583071c754683120c1c519232c3c2de6b0b7
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 資料採礦結構描述資料列集 (SSAS)
-  在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，許多現有的 OLE DB 資料採礦結構描述資料列集已經公開成一組系統資料表，而且您可以使用資料採礦延伸模組 (DMX) 陳述式來查詢它們。 透過針對資料採礦結構描述資料列集建立查詢，您可以識別可用的服務、取得模型和結構之狀態的更新，以及找出模型內容或參數的相關詳細資料。 如需資料採礦結構描述資料列集的描述，請參閱＜ [Data Mining Schema Rowsets](../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)＞。  
+# <a name="data-mining-schema-rowsets-ssas"></a>資料採礦結構描述資料列集 (SSAS)
+  在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中，許多現有的 OLE DB 資料採礦結構描述資料列集已經公開成一組系統資料表，而且您可以使用資料採礦延伸模組 (DMX) 陳述式來查詢它們。 透過針對資料採礦結構描述資料列集建立查詢，您可以識別可用的服務、取得模型和結構之狀態的更新，以及找出模型內容或參數的相關詳細資料。 如需資料採礦結構描述資料列集的描述，請參閱＜ [Data Mining Schema Rowsets](../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)＞。  
   
 > [!NOTE]  
->  您也可以使用 XMLA 來查詢資料採礦結構描述資料列集。 如需如何在 SQL Server Management Studio 中執行此動作的詳細資訊，請參閱[使用 XMLA 建立資料採礦查詢](../../analysis-services/data-mining/create-a-data-mining-query-by-using-xmla.md)。  
+>  您也可以使用 XMLA 來查詢資料採礦結構描述資料列集。 如需如何在 SQL Server Management Studio 中執行此動作的詳細資訊，請參閱 [使用 XMLA 建立資料採礦查詢](../../analysis-services/data-mining/create-a-data-mining-query-by-using-xmla.md)。  
   
-## 資料採礦結構描述資料列集的清單  
+## <a name="list-of-data-mining-schema-rowsets"></a>資料採礦結構描述資料列集的清單  
  下表列出可能適用於查詢和監視的資料採礦結構描述資料列集。  
   
 |資料列集名稱|說明|  
@@ -48,10 +53,10 @@ caps.handback.revision: 14
 > [!NOTE]  
 >  資料表中的清單並不完整，因為該清單中只顯示與疑難排解相關的資料列集。  
   
-## 範例  
+## <a name="examples"></a>範例  
  下節會針對資料採礦結構描述資料列集提供查詢的一些範例。  
   
-### 範例 1：列出資料採礦服務  
+### <a name="example-1-list-data-mining-services"></a>範例 1：列出資料採礦服務  
  下列查詢會傳回目前伺服器所提供之採礦服務的清單，表示已啟用的演算法。 針對每個採礦服務提供的資料行包括每個演算法所使用的模型旗標與內容類型、每個服務的 GUID，以及可能已經針對每個服務加入的任何預測限制。  
   
 ```  
@@ -59,7 +64,7 @@ SELECT *
 FROM $system.DMSCHEMA_MINING_SERVICES  
 ```  
   
-### 範例 2：列出採礦模型參數  
+### <a name="example-2-list-mining-model-parameters"></a>範例 2：列出採礦模型參數  
  下列範例會傳回建立特定採礦模型所使用的參數：  
   
 ```  
@@ -68,7 +73,7 @@ FROM $system.DMSCHEMA_MINING_MODELS
 WHERE MODEL_NAME = 'TM Clustering'  
 ```  
   
-### 範例 3：列出所有資料列集  
+### <a name="example-3-list-all-rowsets"></a>範例 3：列出所有資料列集  
  下列範例會傳回目前伺服器所提供之資料列集的完整清單：  
   
 ```  
@@ -77,3 +82,4 @@ FROM $system.DBSCHEMA_TABLES
 ```  
   
   
+

@@ -1,26 +1,31 @@
 ---
-title: "手動處理資料 (SSAS 表格式) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.bidtoolset.datarefreshprogressdb.f1"
+title: "手動處理資料 (SSAS 表格式) |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.asvs.bidtoolset.datarefreshprogressdb.f1
 ms.assetid: 0918c04c-c1e6-45b4-acfa-96fa578e684b
 caps.latest.revision: 18
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 18
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6d421c1f625ee182497be3fbbff0c19f727f1a2b
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 手動處理資料 (SSAS 表格式)
+# <a name="manually-process-data-ssas-tabular"></a>手動處理資料 (SSAS 表格式)
   此主題描述如何手動處理 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的工作空間資料。  
   
  當您撰寫使用外部資料的表格式模型時，可以使用處理命令來手動重新整理資料。 您可以處理單一資料表、模型中的所有資料表或是一個或多個資料分割。 每次處理資料時，您也可能需要重新計算資料。  處理資料表示從外部來源取得最新的資料。 重新計算表示更新使用資料之任何公式的結果。  
@@ -33,19 +38,19 @@ caps.handback.revision: 18
   
 ##  <a name="bkmk_mahually_process"></a> 手動處理資料  
   
-#### 處理模型中單一資料表或所有資料表的資料  
+#### <a name="to-process-data-for-a-single-table-or-all-tables-in-a-model"></a>處理模型中單一資料表或所有資料表的資料  
   
 1.  在模型設計師中，按一下要處理的資料表。  
   
 2.  按一下 **[模型]** 功能表，然後按一下 **[處理]**，再按一下 **[處理]** 或 **[處理全部]**。  
   
-#### 若要使用相同連接處理所有資料表的資料  
+#### <a name="to-process-data-for-all-tables-using-the-same-connection"></a>若要使用相同連接處理所有資料表的資料  
   
 1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中，按一下 **[模型]** 功能表，然後按一下 **[現有連接]**。  
   
 2.  在 **[現有連接]** 對話方塊中，選取連接，然後按一下 **[處理]**。  
   
-#### 若要處理一個或多個資料分割的資料  
+#### <a name="to-process-data-for-one-or-more-partitions"></a>若要處理一個或多個資料分割的資料  
   
 1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中，按一下 **[模型]** 功能表，然後指向 **[處理]**，再按一下 **[處理資料分割]**。  
   
@@ -73,8 +78,8 @@ caps.handback.revision: 18
  **停止重新整理**  
  按一下可暫停處理作業。 如果作業耗費時間過長，或者如果有太多錯誤，這個選項會很有用。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [處理資料 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/process-data-ssas-tabular.md)   
- [疑難排解處理資料 &#40;SSAS 表格式&#41;](../../analysis-services/troubleshoot-process-data-ssas-tabular.md)  
+ [疑難排解處理資料 (SSAS 表格式)](../../analysis-services/troubleshoot-process-data-ssas-tabular.md)  
   
   

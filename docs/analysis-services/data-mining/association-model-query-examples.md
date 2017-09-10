@@ -1,29 +1,34 @@
 ---
-title: "關聯模型查詢範例 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "項目集 [Analysis Services]"
-  - "association algorithms [Analysis Services]"
-  - "規則 [資料採礦]"
-  - "關聯規則"
-  - "內容查詢 [DMX]"
+title: "關聯模型查詢範例 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- itemsets [Analysis Services]
+- association algorithms [Analysis Services]
+- rules [Data Mining]
+- association rules
+- content queries [DMX]
 ms.assetid: 68b39f5c-c439-44ac-8046-6f2d36649059
 caps.latest.revision: 25
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c7e1bd8f5d4b6b70c0d31f1fc4a9e1c06da088e3
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 關聯模型查詢範例
+# <a name="association-model-query-examples"></a>關聯模型查詢範例
   在您針對資料採礦模型建立查詢時，可以建立內容查詢以提供有關在分析期間所發現的規則和項目集的詳細資料，或建立預測查詢以使用在資料中發現的關聯來進行預測。 對關聯模型而言，預測通常會以規則為基礎，而且可以用來進行推薦，而對內容所做的查詢則通常會探索項目集之間的關聯性。 您也可以擷取有關模型的中繼資料。  
   
  本節說明如何針對以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 關聯規則演算法為基礎的模型來建立此類查詢。  
@@ -47,10 +52,10 @@ caps.handback.revision: 25
  [判斷相關項目集的信心](#bkmk_Query7)  
   
 ##  <a name="bkmk_top2"></a> 尋找有關模型的資訊  
- 所有的採礦模型都會公開演算法根據標準化結構描述所學習的內容，也稱為採礦模型結構描述資料列集。 您可以使用資料採礦延伸模組 (DMX) 陳述式或 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 預存程序，針對採礦模型結構描述資料列集建立查詢。 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，您也可以使用類似 SQL 的語法，將結構描述資料列集當做系統資料表直接進行查詢。  
+ 所有的採礦模型都會公開演算法根據標準化結構描述所學習的內容，也稱為採礦模型結構描述資料列集。 您可以使用資料採礦延伸模組 (DMX) 陳述式或 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 預存程序，針對採礦模型結構描述資料列集建立查詢。 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中，您也可以使用類似 SQL 的語法，將結構描述資料列集當做系統資料表直接進行查詢。  
   
 ###  <a name="bkmk_Query1"></a> 範例查詢 1：使用 DMX 取得模型中繼資料  
- 下列查詢會傳回有關關聯模型 `Association` 的基本中繼資料，例如模型的名稱、模型儲存位置所在的資料庫，以及模型中子節點的數目。 此查詢會使用 DMX 內容查詢從模型的父節點擷取中繼資料：  
+ 下列查詢會傳回有關關聯模型 `Association`的基本中繼資料，例如模型的名稱、模型儲存位置所在的資料庫，以及模型中子節點的數目。 此查詢會使用 DMX 內容查詢從模型的父節點擷取中繼資料：  
   
 ```  
 SELECT MODEL_CATALOG, MODEL_NAME, NODE_CAPTION,   
@@ -73,7 +78,7 @@ WHERE NODE_TYPE = 1
 |CHILDREN_CARDINALITY|942|  
 |NODE_DESCRIPTION|Association Rules Model; ITEMSET_COUNT=679; RULE_COUNT=263; MIN_SUPPORT=14; MAX_SUPPORT=4334; MIN_ITEMSET_SIZE=0; MAX_ITEMSET_SIZE=3; MIN_PROBABILITY=0.400390625; MAX_PROBABILITY=1; MIN_LIFT=0.14309369632511; MAX_LIFT=1.95758227647523|  
   
- 如需這些資料行在關聯模型中的定義，請參閱[關聯模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)。  
+ 如需這些資料行在關聯模型中的定義，請參閱 [關聯模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)。  
   
  [回頁首](#bkmk_top2)  
   
@@ -115,7 +120,7 @@ WHERE MODEL_NAME = 'Association'
   
  [回頁首](#bkmk_top2)  
   
-## 尋找有關規則和項目集的資訊  
+## <a name="finding-information-about-rules-and-itemsets"></a>尋找有關規則和項目集的資訊  
  關聯模型有兩種常見用法：探索有關常用項目集的詳細資訊，以及擷取有關特定規則和項目集的詳細資料。 例如，您可能想要擷取計分為特別有趣的規則清單，或建立最常見項目集的清單。 您可以使用 DMX 內容查詢擷取此類資訊。 也可以使用 [Microsoft 關聯檢視器] 瀏覽此資訊。  
   
 ###  <a name="bkmk_Query4"></a> 範例查詢 4：擷取項目集和產品的清單  
@@ -160,13 +165,13 @@ WHERE NODE_TYPE = 7
   
  [回頁首](#bkmk_top2)  
   
-## 使用模型進行預測  
+## <a name="making-predictions-using-the-model"></a>使用模型進行預測  
  關聯規則模型常用來根據項目集中發現的關聯而產生建議。 因此，當您根據關聯規則模型建立預測查詢時，通常是使用模型中的規則來根據新資料進行猜測。  [PredictAssociation &#40;DMX&#41;](../../dmx/predictassociation-dmx.md) 是可傳回建議的函數，提供數個引數，可用來自訂查詢結果。  
   
  另一個說明關聯模型上的查詢可能有用的範例，是傳回不同規則及項目集的信心，讓您可以比較不同交叉銷售策略的效能。 下列範例說明如何建立此類查詢。  
   
 ###  <a name="bkmk_Query6"></a> 範例查詢 6：預測相關聯項目  
- 這個範例會使用[中繼資料採礦教學課程 &#40;Analysis Services - 資料採礦 &#41;](../Topic/Intermediate%20Data%20Mining%20Tutorial%20\(Analysis%20Services%20-%20Data%20Mining\).md) 中建立的關聯模型。 該模型示範如何建立預測查詢，以告訴您要向已購買特定產品的客戶建議什麼產品。 此類型的查詢 (在 **SELECT…UNION** 陳述式中向模型提供值) 稱為單一查詢。 因為與新值相對應的可預測模型資料行是巢狀資料表，所以您必須使用一個 **SELECT** 子句將新值對應到巢狀資料表資料行 `[Model]`，並用另一個 **SELECT** 子句將巢狀資料表資料行對應到案例層級資料行 `[v Assoc Seq Line Items]`。 將關鍵 INCLUDE-STATISTICS 加入至查詢可讓您看到建議的機率和支援。  
+ 這個範例會使用[中繼資料採礦教學課程 &#40;Analysis Services - 資料採礦 &#41;](http://msdn.microsoft.com/library/404b31d5-27f4-4875-bd60-7b2b8613eb1b) 中建立的關聯模型。 該模型示範如何建立預測查詢，以告訴您要向已購買特定產品的客戶建議什麼產品。 此類型的查詢 (在 **SELECT…UNION** 陳述式中向模型提供值) 稱為單一查詢。 因為與新值相對應的可預測模型資料行是巢狀資料表，所以您必須使用一個 **SELECT** 子句將新值對應到巢狀資料表資料行 `[Model]`，並用另一個 **SELECT** 子句將巢狀資料表資料行對應到案例層級資料行 `[v Assoc Seq Line Items]`。 將關鍵 INCLUDE-STATISTICS 加入至查詢可讓您看到建議的機率和支援。  
   
 ```  
 SELECT PredictAssociation([Association].[vAssocSeqLineItems],INCLUDE_STATISTICS, 3)  
@@ -219,8 +224,8 @@ ORDER BY NODE_SUPPORT DESC
   
  [回頁首](#bkmk_top2)  
   
-## 函數清單  
- 所有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 演算法都支援一組常用的函數。 不過，[!INCLUDE[msCoName](../../includes/msconame-md.md)] 關聯分析演算法支援下表所列出的其他函數。  
+## <a name="function-list"></a>函數清單  
+ 所有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 演算法都支援一組常用的函數。 不過， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 關聯分析演算法支援下表所列出的其他函數。  
   
 |||  
 |-|-|  
@@ -235,7 +240,7 @@ ORDER BY NODE_SUPPORT DESC
 |[PredictSupport &#40;DMX&#41;](../../dmx/predictsupport-dmx.md)|傳回指定狀態的支援值。|  
 |[PredictVariance &#40;DMX&#41;](../../dmx/predictvariance-dmx.md)|傳回預測值的變異數。|  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [Microsoft 關聯分析演算法](../../analysis-services/data-mining/microsoft-association-algorithm.md)   
  [Microsoft 關聯分析演算法技術參考](../../analysis-services/data-mining/microsoft-association-algorithm-technical-reference.md)   
  [關聯模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)  

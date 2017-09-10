@@ -1,30 +1,35 @@
 ---
-title: "資料庫 ReadWriteMode | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "資料庫 [Analysis Services], 讀取/寫入"
-  - "資料庫 [Analysis Services], 唯讀"
+title: "資料庫 Readwritemode |Microsoft 文件"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- databases [Analysis Services], read/write
+- databases [Analysis Services], read-only
 ms.assetid: 03d7cb5c-7ff0-4e15-bcd2-7075d1b0dd69
 caps.latest.revision: 19
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 19
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 917f9e3802cdf0c003a956b464c7df8d8b10ca5e
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 資料庫 ReadWriteMode
-  通常在很多情況下，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫管理員 (dba) 會想要將讀取/寫入資料庫變更為唯讀資料庫，反之亦然。 這些情況通常是由商務需求所驅使，例如在許多伺服器之間共用相同的資料庫資料夾，以便向外延展方案並改善效能。 在這些情況下，**ReadWriteMode** 資料庫屬性可讓 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dba 輕易地變更資料庫作業模式。  
+# <a name="database-readwritemodes"></a>資料庫 ReadWriteMode
+  通常在很多情況下， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫管理員 (dba) 會想要將讀取/寫入資料庫變更為唯讀資料庫，反之亦然。 這些情況通常是由商務需求所驅使，例如在許多伺服器之間共用相同的資料庫資料夾，以便向外延展方案並改善效能。 在這些情況下， **ReadWriteMode** 資料庫屬性可讓 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dba 輕易地變更資料庫作業模式。  
   
-## ReadWriteMode 資料庫屬性  
+## <a name="readwritemode-database-property"></a>ReadWriteMode 資料庫屬性  
  **ReadWriteMode** 資料庫屬性會指定資料庫處於讀取/寫入模式或唯讀模式。 此屬性只有這兩種可能的值。 當資料庫處於唯讀模式時，您就無法將任何變更或更新套用至該資料庫。 不過，當資料庫處於讀取/寫入模式時，您就可以進行變更和更新。 **ReadWriteMode** 資料庫屬性定義為唯讀屬性。您只能透過 [連結] 命令來設定它。  
   
  當資料庫處於唯讀模式時，就會產生特定限制，因而影響一般允許對資料庫進行的作業集合。 請參閱下表以便了解這些限制的作業。  
@@ -36,7 +41,7 @@ caps.handback.revision: 19
 |DMX 陳述式<br /><br /> <br /><br /> 注意：當您執行其中一個陳述式時，就會引發錯誤。|**CREATE [SESSION] MINING STRUCTURE**<br /><br /> **ALTER MINING STRUCTURE**<br /><br /> **DROP MINING STRUCTURE**<br /><br /> **CREATE [SESSION] MINING MODEL**<br /><br /> **DROP MINING MODEL**<br /><br /> **IMPORT**<br /><br /> **SELECT INTO**<br /><br /> **INSERT**<br /><br /> **UPDATE**<br /><br /> **DELETE**|  
 |背景作業|任何修改資料庫的背景作業都會被停用。 這包括延遲處理以及主動式快取。|  
   
-## ReadWriteMode 使用方式  
+## <a name="readwritemode-usage"></a>ReadWriteMode 使用方式  
  **ReadWriteMode** 資料庫屬性是要當做 **Attach** 資料庫命令的一部分使用。 **Attach** 命令允許此資料庫屬性設定為 **ReadWrite** 或 **ReadOnly**。 您無法直接更新 **ReadWriteMode** 資料庫屬性值，因為此屬性定義為唯讀。 建立資料庫時，其 **ReadWriteMode** 屬性會設定為 **ReadWrite**。 您無法在唯讀模式下建立資料庫。  
   
  若要在 **ReadWrite** 和 **ReadOnly** 之間切換 **ReadWriteMode** 資料庫屬性，您必須發出一連串的 [中斷連結/連結] 命令。  
@@ -46,7 +51,7 @@ caps.handback.revision: 19
 > [!NOTE]  
 >  您可以從唯讀資料庫建立本機 Cube。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
  [附加和卸離 Analysis Services 資料庫](../../analysis-services/multidimensional-models/attach-and-detach-analysis-services-databases.md)   
  [移動 Analysis Services 資料庫](../../analysis-services/multidimensional-models/move-an-analysis-services-database.md)   

@@ -1,27 +1,32 @@
 ---
-title: "設計彙總 (Analysis Services - 多維度) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "彙總 [Analysis Services], 資料分割"
-  - "分割區 [Analysis Services], 彙總"
+title: "設計彙總 (Analysis Services-多維度) |Microsoft 文件"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- aggregations [Analysis Services], partitions
+- partitions [Analysis Services], aggregations
 ms.assetid: 3072b7e0-6961-42ad-a287-16f391f2cec4
 caps.latest.revision: 33
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 33
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7fef45841f28152dfed66aa95f670e8a21a3d903
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 設計彙總 (Analysis Services - 多維度)
+# <a name="designing-aggregations-analysis-services---multidimensional"></a>設計彙總 (Analysis Services - 多維度)
   彙總是 Cube 資料的預先計算摘要，可幫助啟用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 以提供快速查詢回應。  
   
  若要設定分割區的儲存選項和設計彙總，請使用彙總設計精靈。 此精靈一次操作一個量值群組的單一分割區，因此您可以為每一個分割區選取不同的選項和設計。 此精靈會逐步引導您設定分割區的儲存和設計彙總。 如需設定儲存的詳細資訊，請參閱。  
@@ -42,7 +47,7 @@ caps.handback.revision: 33
   
  精靈的最後步驟可讓您處理或延遲處理。 處理會建立您以精靈設計的彙總，而延遲處理則會儲存所設計的彙總供未來處理，如此可讓設計活動繼續而不進行處理。 視分割區的大小而定，處理可能需要花費很多時間。 您可以選擇中斷處理分割區。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [彙總和彙總設計](../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)  
   
   

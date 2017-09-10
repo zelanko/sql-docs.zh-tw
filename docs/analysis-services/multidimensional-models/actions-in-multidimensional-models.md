@@ -1,29 +1,34 @@
 ---
-title: "多維度模型中的動作 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "動作 [Analysis Services], 建立"
-  - "報表動作 [Analysis Services]"
-  - "鑽研動作 [Analysis Services]"
-  - "Cube [Analysis Services], 動作"
+title: "多維度模型中的動作 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- actions [Analysis Services], creating
+- report actions [Analysis Services]
+- drillthrough actions [Analysis Services]
+- cubes [Analysis Services], actions
 ms.assetid: b9fee2b9-05a5-4077-848d-d8457326dc27
 caps.latest.revision: 20
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 20
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a4b7d3b0523fb19b9b0d7e0542cc587fb1585992
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 多維度模型中的動作
+# <a name="actions-in-multidimensional-models"></a>多維度模型中的動作
   動作是使用者在所選取的 Cube 或部分 Cube 上所起始的作業。 這個作業可以使用所選取項目做為參數來啟動應用程式，或擷取關於所選取項目的資訊。 如需動作的詳細資訊，請參閱[動作 &#40;Analysis Services - 多維度資料&#41;](../../analysis-services/multidimensional-models/actions-analysis-services-multidimensional-data.md)。  
   
  使用 Cube 設計師的 [動作] 索引標籤來建立 Cube 的動作。 指定下列項目：  
@@ -77,12 +82,12 @@ caps.handback.revision: 20
 |**應用程式**|描述動作的應用程式。|  
 |**說明**|描述動作。|  
 |**Caption**|提供為動作顯示的標題。 如果標題是 MDX，請將 [標題是 MDX] 指定為 **True**。|  
-|**標題是 MDX**|如果標題是 MDX，請指定 **True**；如果不是 MDX，則指定 **False**。|  
+|**標題是 MDX**|如果標題是 MDX，請指定 **True** ；如果不是 MDX，則指定 **False** 。|  
   
 > [!NOTE]  
 >  您必須使用 Analysis Services 指令碼語言 (ASSL) 或分析管理物件 (AMO) 來定義 HTML 和命令列動作類型。 如需詳細資訊，請參閱 [Action 元素 &#40;ASSL&#41;](../../analysis-services/scripting/objects/action-element-assl.md)、[Type 元素 &#40;Action&#41; &#40;ASSL&#41;](../../analysis-services/scripting/properties/type-element-action-assl.md) 和[設計 AMO OLAP 進階物件的程式](../../analysis-services/multidimensional-models/analysis-management-objects/programming-amo-olap-advanced-objects.md)。  
   
-## 建立報表動作  
+## <a name="creating-a-reporting-action"></a>建立報表動作  
  報表伺服器會回應以 URL 為基礎的報表要求。 若要建立報表動作，請在 [Cube] 功能表上，按一下 [新增報表動作]。 下列選項是報表動作特有的選項。  
   
  **報表伺服器**  
@@ -95,7 +100,7 @@ caps.handback.revision: 20
 |**報表格式**|HTML5、HTML3、Excel 或 PDF。|  
   
 > [!NOTE]  
->  在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，您可以在伺服器名稱屬性中指定傳輸層安全性 (https:)。  
+>  在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中，您可以在伺服器名稱屬性中指定傳輸層安全性 (https:)。  
   
  **參數 (選擇性)**  
  建立動作時，會將參數傳送到伺服器做為 URL 字串的一部分。 這些參數包括 [參數名稱] 和 [參數值]，後者為 MDX 運算式。  
@@ -121,13 +126,13 @@ parametervalue1
 http://localhost/ReportServer/Sales/YearlySalesByCategory?rs:Command=Render&Region=West  
 ```  
   
-## 建立鑽研動作  
+## <a name="creating-a-drillthrough-action"></a>建立鑽研動作  
  鑽研動作是由資料列集動作定義的，會傳回到用戶端應用程式做為鑽研陳述式。 動作目標是量值群組的成員。 若要建立新的鑽研動作，請在 [Cube] 功能表上，按一下 [新增鑽研動作]。 下列選項是鑽研動作特有的選項：  
   
  **鑽研資料行**  
  選取一或多個維度，並針對每一個維度，選取由動作傳回到用戶端應用程式的鑽研資料行。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [多維度模型中的 Cube](../../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md)  
   
   

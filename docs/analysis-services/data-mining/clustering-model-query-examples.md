@@ -1,27 +1,32 @@
 ---
-title: "叢集模型查詢範例 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "群集 [資料採礦]"
-  - "內容查詢 [DMX]"
-  - "群集演算法 [Analysis Services]"
+title: "叢集模型查詢範例 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- clustering [Data Mining]
+- content queries [DMX]
+- clustering algorithms [Analysis Services]
 ms.assetid: bf2ba332-9bc6-411a-a3af-b919c52432c8
 caps.latest.revision: 28
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0b72ea275e4d396531feabd86780f0dabc736e85
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 叢集模型查詢範例
+# <a name="clustering-model-query-examples"></a>叢集模型查詢範例
   當您根據資料採礦模型建立查詢時，可以擷取有關模型的中繼資料或建立內容查詢，以提供有關在分析中所發現之模式的詳細資料。 或者，您可以建立預測查詢，這會使用模型中的模式對新資料進行預測。 每種查詢都會提供不同的資訊。 例如，內容查詢可能會提供有關所找到群集的詳細資料，預測查詢則會告訴您最可能包含新資料點的群集。  
   
  本節說明如何針對以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 叢集演算法為基礎的模型建立查詢。  
@@ -51,12 +56,12 @@ caps.handback.revision: 28
  [使用機率和距離傳回所有可能的群集](#bkmk_Query10)  
   
 ##  <a name="bkmk_top2"></a> 尋找有關模型的資訊  
- 所有的採礦模型都會公開演算法根據標準化結構描述所學習的內容，也就是採礦模型結構描述資料列集。 您可以藉由使用資料採礦延伸模組 (DMX) 陳述式來針對採礦模型結構描述資料列集建立查詢。 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，您也可以將結構描述資料列集當做系統資料表直接進行查詢。  
+ 所有的採礦模型都會公開演算法根據標準化結構描述所學習的內容，也就是採礦模型結構描述資料列集。 您可以藉由使用資料採礦延伸模組 (DMX) 陳述式來針對採礦模型結構描述資料列集建立查詢。 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中，您也可以將結構描述資料列集當做系統資料表直接進行查詢。  
   
  [回頁首](#bkmk_top2)  
   
 ###  <a name="bkmk_Query1"></a> 範例查詢 1：使用 DMX 取得模型中繼資料  
- 下列查詢會傳回有關您在「基本資料採礦教學課程」中所建立的叢集模型 `TM_Clustering` 的基本中繼資料。 叢集模型的父節點所提供的中繼資料包含模型的名稱、模型儲存位置所在的資料庫，以及模型中子節點的數目。 此查詢會使用 DMX 內容查詢從模型的父節點擷取中繼資料：  
+ 下列查詢會傳回有關您在「基本資料採礦教學課程」中所建立的叢集模型 `TM_Clustering`的基本中繼資料。 叢集模型的父節點所提供的中繼資料包含模型的名稱、模型儲存位置所在的資料庫，以及模型中子節點的數目。 此查詢會使用 DMX 內容查詢從模型的父節點擷取中繼資料：  
   
 ```  
 SELECT MODEL_CATALOG, MODEL_NAME, NODE_CAPTION,   
@@ -106,7 +111,7 @@ WHERE MODEL_NAME = 'TM_Clustering'
   
  [回頁首](#bkmk_top2)  
   
-## 尋找有關群集的資訊  
+## <a name="finding-information-about-clusters"></a>尋找有關群集的資訊  
  叢集模型上最有用的內容查詢所傳回的資訊類型，通常與可以使用 [叢集檢視器] 瀏覽的資訊類型相同。 這包括群集設定檔、群集特性和群集辨識。 本章節提供會擷取這些資訊的查詢範例。  
   
 ###  <a name="bkmk_Query3"></a> 範例查詢 3：傳回群集或群集清單  
@@ -131,14 +136,14 @@ WHERE NODE_TYPE = 5 AND NODE_SUPPORT > 1000
   
 -   NODE_DESCRIPTION 資料行包含以逗號分隔的屬性清單。 請注意屬性清單可以針對顯示用途而進行縮寫。  
   
--   NODE_DISTRIBUTION 資料行中的巢狀資料表包含群集的完整屬性清單。 如果用戶端不支援階層式資料列集，則您可以在 SELECT 資料行清單之前加入 FLATTENED 關鍵字傳回巢狀資料表。 如需 FLATTENED 關鍵字使用的詳細資訊，請參閱 [SELECT FROM &#60;model&#62;.CONTENT &#40;DMX&#41;](../Topic/SELECT%20FROM%20%3Cmodel%3E.CONTENT%20\(DMX\).md)。  
+-   NODE_DISTRIBUTION 資料行中的巢狀資料表包含群集的完整屬性清單。 如果用戶端不支援階層式資料列集，則您可以在 SELECT 資料行清單之前加入 FLATTENED 關鍵字傳回巢狀資料表。 如需 FLATTENED 關鍵字使用的詳細資訊，請參閱 [SELECT FROM &#60;model&#62;.CONTENT &#40;DMX&#41;](../../dmx/select-from-model-content-dmx.md)。  
   
  [回頁首](#bkmk_top2)  
   
 ###  <a name="bkmk_Query4"></a> 範例查詢 4：傳回群集的屬性  
  對於每個叢集而言，[叢集檢視器] 會顯示列出屬性及其值的設定檔。 檢視器也會顯示長條圖，以顯示模型中整個案例母體的值分佈情形。 如果是在檢視器中瀏覽模型，則您可以輕鬆地從「採礦圖例」複製長條圖，然後將它貼入至 Excel 或 Word 文件。 也可以使用檢視器的 [群集特性] 窗格，以圖形方式比較不同群集的屬性。  
   
- 不過，如果一次必須取得一個以上群集的值，對模型進行查詢是比較簡單的方式。 例如，您在瀏覽模型時，可能會注意到最上面兩個叢集在 `Number Cars Owned` 屬性方面不同。 因此可能會想針對每個群集擷取值。  
+ 不過，如果一次必須取得一個以上群集的值，對模型進行查詢是比較簡單的方式。 例如，您在瀏覽模型時，可能會注意到最上面兩個叢集在 `Number Cars Owned`屬性方面不同。 因此可能會想針對每個群集擷取值。  
   
 ```  
 SELECT TOP 2 NODE_NAME,   
@@ -153,10 +158,10 @@ WHERE NODE_TYPE = 5
 > [!NOTE]  
 >  依預設，群集會依支援來排序。 因此，NODE_SUPPORT 資料行可以省略。  
   
- 程式碼的第二行會加入子 SELECT 陳述式，此陳述式僅會從巢狀資料表資料行傳回特定的資料行； 此外，它也會將巢狀資料表的資料列限制為與目標屬性 `Number Cars Owned` 相關的資料列。 為了檢視顯示，巢狀資料表會使用別名。  
+ 程式碼的第二行會加入子 SELECT 陳述式，此陳述式僅會從巢狀資料表資料行傳回特定的資料行； 此外，它也會將巢狀資料表的資料列限制為與目標屬性 `Number Cars Owned`相關的資料列。 為了檢視顯示，巢狀資料表會使用別名。  
   
 > [!NOTE]  
->  巢狀資料表資料行 `PROBABILITY` 必須包含在括號中，因為它也是 MDX 保留關鍵字的名稱。  
+>  巢狀資料表資料行 `PROBABILITY`必須包含在括號中，因為它也是 MDX 保留關鍵字的名稱。  
 >   
 >  範例結果：  
   
@@ -199,7 +204,7 @@ CALL System.Microsoft.AnalysisServices.System.DataMining.Clustering.GetClusterCh
 |Total Children|0|0.993860958572323|893|  
   
 > [!NOTE]  
->  資料採礦系統預存程序供內部使用，[!INCLUDE[msCoName](../../includes/msconame-md.md)] 保留依需求變更這些程序的權利。 在實際執行環境中，建議您使用 DMX、AMO 或 XMLA 建立查詢。  
+>  資料採礦系統預存程序供內部使用， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 保留依需求變更這些程序的權利。 在實際執行環境中，建議您使用 DMX、AMO 或 XMLA 建立查詢。  
   
  [回頁首](#bkmk_top2)  
   
@@ -230,7 +235,7 @@ CALL System.Microsoft.AnalysisServices.System.DataMining.Clustering.GetClusterDi
 ```  
   
 > [!NOTE]  
->  資料採礦系統預存程序供內部使用，[!INCLUDE[msCoName](../../includes/msconame-md.md)] 保留依需求變更這些程序的權利。 在實際執行環境中，建議您使用 DMX、AMO 或 XMLA 建立查詢。  
+>  資料採礦系統預存程序供內部使用， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 保留依需求變更這些程序的權利。 在實際執行環境中，建議您使用 DMX、AMO 或 XMLA 建立查詢。  
   
  [回頁首](#bkmk_top2)  
   
@@ -249,10 +254,10 @@ WHERE IsInNode('001')
   
  [回頁首](#bkmk_top2)  
   
-## 使用模型進行預測  
- 雖然叢集通常是用來描述和了解資料，[!INCLUDE[msCoName](../../includes/msconame-md.md)] 實作也可以讓您進行有關叢集成員資格的預測，並傳回與預測相關聯的機率。 本章節也針對如何在叢集模型上建立預測查詢提供範例。 您可以藉由指定表格式資料來源對多個案例進行預測，或者也可以藉由建立單一查詢，一次提供一個新值。 為了清楚起見，本節中的範例全都是單一查詢。  
+## <a name="making-predictions-using-the-model"></a>使用模型進行預測  
+ 雖然叢集通常是用來描述和了解資料， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 實作也可以讓您進行有關叢集成員資格的預測，並傳回與預測相關聯的機率。 本章節也針對如何在叢集模型上建立預測查詢提供範例。 您可以藉由指定表格式資料來源對多個案例進行預測，或者也可以藉由建立單一查詢，一次提供一個新值。 為了清楚起見，本節中的範例全都是單一查詢。  
   
- 如需如何使用 DMX 建立預測查詢的詳細資訊，請參閱[資料採礦查詢工具](../../analysis-services/data-mining/data-mining-query-tools.md)。  
+ 如需如何使用 DMX 建立預測查詢的詳細資訊，請參閱 [資料採礦查詢工具](../../analysis-services/data-mining/data-mining-query-tools.md)。  
   
  [回頁首](#bkmk_top2)  
   
@@ -271,7 +276,7 @@ NATURAL PREDICTION JOIN
   'F' AS [Gender]) AS t  
 ```  
   
- 當使用方式設定為 **Predict** 時的結果範例：  
+ 當使用方式設定為 **Predict**時的結果範例：  
   
 |Bike Buyer|運算式|  
 |----------------|----------------|  
@@ -310,7 +315,7 @@ NATURAL PREDICTION JOIN
  [回頁首](#bkmk_top2)  
   
 ###  <a name="bkmk_Query9"></a> 範例查詢 9：判斷群集成員資格  
- 此範例會使用 [Cluster &#40;DMX&#41;](../../dmx/cluster-dmx.md) 函數來傳回最可能包含新案例的叢集，並使用 [ClusterProbability &#40;DMX&#41;](../../dmx/clusterprobability-dmx.md) 函數來傳回該叢集中的成員資格機率。  
+ 此範例會使用 [叢集 &#40;DMX&#41;](../../dmx/cluster-dmx.md) 函數來傳回最可能包含新案例的叢集，並使用 [ClusterProbability &#40;DMX&#41;](../../dmx/clusterprobability-dmx.md) 函數來傳回該叢集中的成員資格機率。  
   
 ```  
 SELECT Cluster(), ClusterProbability()  
@@ -328,12 +333,12 @@ NATURAL PREDICTION JOIN
 |--------------|----------------|  
 |群集 2|0.397918596951617|  
   
- **注意**：根據預設，**ClusterProbability** 函數會傳回最可能叢集的機率。 不過，您可以使用 `ClusterProbability('cluster name')` 語法來指定不同的叢集。 如果要這麼做，請注意每個預測函數的結果都與其他結果無關。 因此，第二個資料行中的機率分數所參考的群集可以與命名於第一個資料行中的群集不同。  
+ **注意** ：根據預設， **ClusterProbability** 函數會傳回最可能叢集的機率。 不過，您可以使用 `ClusterProbability('cluster name')`語法來指定不同的叢集。 如果要這麼做，請注意每個預測函數的結果都與其他結果無關。 因此，第二個資料行中的機率分數所參考的群集可以與命名於第一個資料行中的群集不同。  
   
  [回頁首](#bkmk_top2)  
   
 ###  <a name="bkmk_Query10"></a> 範例查詢 10：使用機率和距離傳回所有可能的群集  
- 在以上範例中，機率分數並不很高。 若要判斷是否有更好的叢集，可以使用 [PredictHistogram &#40;DMX&#41;](../../dmx/predicthistogram-dmx.md) 函數搭配 [Cluster &#40;DMX&#41;](../../dmx/cluster-dmx.md) 函數來傳回包含所有可能叢集的巢狀資料表，並附上新案例屬於每個叢集的機率。 FLATTENED 關鍵字可用來將階層式資料列集變更為二維資料表以方便檢視。  
+ 在以上範例中，機率分數並不很高。 若要判斷是否有更好的叢集，可以使用 [PredictHistogram &#40;DMX&#41;](../../dmx/predicthistogram-dmx.md) 函數搭配 [叢集 &#40;DMX&#41;](../../dmx/cluster-dmx.md) 函數來傳回包含所有可能叢集的巢狀資料表，並附上新案例屬於每個叢集的機率。 FLATTENED 關鍵字可用來將階層式資料列集變更為二維資料表以方便檢視。  
   
 ```  
 SELECT FLATTENED PredictHistogram(Cluster())  
@@ -360,11 +365,11 @@ NATURAL PREDICTION JOIN
   
  根據預設值，結果是依機率排序。 結果會告訴您，即使 Cluster 2 的機率相當低，Cluster 2 仍是新資料點的最適合項目。  
   
- **注意**：其他的資料行 `$DISTANCE` 代表從資料點到叢集的距離。 根據預設，[!INCLUDE[msCoName](../../includes/msconame-md.md)] 群集演算法會使用可擴充的 EM 叢集，這種方法會將多個叢集指派給每個資料點，並排列可能叢集的次序。  不過，如果使用 K-means 演算法建立叢集模型，則只能將一個群集指派給每個資料點，且此查詢只會傳回一個資料列。 了解這些差異對於解譯 [PredictCaseLikelihood &#40;DMX&#41;](../../dmx/predictcaselikelihood-dmx.md) 函數的結果是必要的。 如需 EM 和 K-means 叢集之間差異的詳細資訊，請參閱 [Microsoft 群集演算法技術參考](../../analysis-services/data-mining/microsoft-clustering-algorithm-technical-reference.md)。  
+ **注意** ：其他的資料行 `$DISTANCE`代表從資料點到叢集的距離。 根據預設， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 群集演算法會使用可擴充的 EM 叢集，這種方法會將多個叢集指派給每個資料點，並排列可能叢集的次序。  不過，如果使用 K-means 演算法建立叢集模型，則只能將一個群集指派給每個資料點，且此查詢只會傳回一個資料列。 了解這些差異對於解譯 [PredictCaseLikelihood &#40;DMX&#41;](../../dmx/predictcaselikelihood-dmx.md) 函數來包含來自基礎結構的資料行。 如需 EM 和 K-means 叢集之間差異的詳細資訊，請參閱 [Microsoft 群集演算法技術參考](../../analysis-services/data-mining/microsoft-clustering-algorithm-technical-reference.md)。  
   
  [回頁首](#bkmk_top2)  
   
-## 函數清單  
+## <a name="function-list"></a>函數清單  
  所有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 演算法都支援一組常用的函數。 不過，使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 叢集演算法建立的模型支援下表中列出的其他函數。  
   
 |||  
@@ -387,7 +392,7 @@ NATURAL PREDICTION JOIN
   
  如需特定函數的語法，請參閱[資料採礦延伸模組 &#40;DMX&#41; 函數參考](../../dmx/data-mining-extensions-dmx-function-reference.md)。  
   
-## 請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [資料採礦查詢](../../analysis-services/data-mining/data-mining-queries.md)   
  [Microsoft 群集演算法技術參考](../../analysis-services/data-mining/microsoft-clustering-algorithm-technical-reference.md)   
  [Microsoft 群集演算法](../../analysis-services/data-mining/microsoft-clustering-algorithm.md)  

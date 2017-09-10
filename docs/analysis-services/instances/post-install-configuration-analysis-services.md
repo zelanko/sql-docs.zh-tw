@@ -1,33 +1,38 @@
 ---
-title: "後續安裝組態 (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+title: "後續安裝組態 (Analysis Services) |Microsoft 文件"
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+- setup-install
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
 ms.assetid: 7f4417b2-0efb-4361-a79e-fa56e43ee054
 caps.latest.revision: 10
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 10
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8e172989400466a7ab78e3a2ff24022651524bd0
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 後續安裝組態 (Analysis Services)
-  安裝 Analysis Services 之後，還必須進一步設定才能讓伺服器可完整運作並可供一般使用。 本節將介紹完成安裝所需的這些額外設定工作。 視連接需求而定，您可能還必須設定驗證 (請參閱[連接到 Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md))。  
+# <a name="post-install-configuration-analysis-services"></a>後續安裝組態 (Analysis Services)
+  安裝 Analysis Services 之後，還必須進一步設定才能讓伺服器可完整運作並可供一般使用。 本節將介紹完成安裝所需的這些額外設定工作。 視連接需求而定，您可能還必須設定驗證 (請參閱 [連接到 Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md))。  
   
  之後，如果您的資料庫已就緒可供部署，就必須執行額外的工作。 也就是說，您必須為資料庫設定角色成員資格讓使用者能存取資料、設計資料庫備份和復原策略，以及判斷是否需要排程處理工作負載來定期重新整理資料。 如需資料庫部署和管理的詳細資訊，請參閱下列連結︰[多維度模型資料庫 &#40;SSAS&#41;](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md) 和[表格式模型資料庫 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/tabular-model-databases-ssas-tabular.md)。  
   
-## 執行個體組態  
+## <a name="instance-configuration"></a>執行個體組態  
  Analysis Services 是可複寫的服務，表示您可以在單一伺服器上安裝多個服務執行個體。 每一個額外執行個體都是以具名執行個體的形式使用 SQL Server 安裝程式個別安裝，然後個別加以設定以支援原先預期的用途。 例如，開發伺服器可能會執行飛行記錄器或使用預設值進行資料儲存，但是在支援實際執行工作負載的伺服器上，您可能會變更這些設定。 此外，在其他服務所共用的硬體上安裝 Analysis Services 執行個體也是另一個需要調整系統組態的範例。 在同一個硬體上主控多個資料密集的應用程式時，您可能想設定伺服器屬性降低記憶體臨界值，以便最佳化所有應用程式之間的可用資源。  
   
-## 後續安裝工作  
+## <a name="post-installation-tasks"></a>後續安裝工作  
   
 |連結|工作描述|  
 |----------|----------------------|  
@@ -39,12 +44,12 @@ caps.handback.revision: 10
 |[判斷 Analysis Services 執行個體的伺服器模式](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)|在安裝期間，您必須選擇在伺服器上執行的伺服器模式，這個模式會決定模型的類型 (多維度或表格式)。 如果您不確定伺服器模式，請透過本主題中的資訊來判斷已安裝的模式。|  
 |[重新命名 Analysis Services 執行個體](../../analysis-services/instances/rename-an-analysis-services-instance.md)|如果多個執行個體的伺服器模式都不相同，您可以使用描述性名稱加以區別，也可以區分組織中的部門或小組主要使用的執行個體。 如果希望變更執行個體名稱讓您在管理安裝時更容易，請透過本主題中的資訊來了解要如何變更名稱。|  
   
-## 後續步驟  
+## <a name="next-steps"></a>後續步驟  
  了解如何使用用戶端程式庫，從 Microsoft 應用程式或自訂應用程式連接至 Analysis Services。 視方案需求而定，您可能還必須為服務設定 Kerberos 驗證。 有跨網域界限需求的連接就需要 HTTP 存取。 如需有關後續步驟的指示，請參閱＜ [Connect to Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md) ＞。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [SQL Server 2016 安裝](../../database-engine/install-windows/installation-for-sql-server-2016.md)   
- [以多維度及資料採礦模式安裝 Analysis Services](../Topic/Install%20Analysis%20Services%20in%20Multidimensional%20and%20Data%20Mining%20Mode.md)   
+ [以多維度及資料採礦模式安裝 Analysis Services](http://msdn.microsoft.com/library/8a1f33e8-2bd6-4fb8-bd46-c86f2a067f60)   
  [安裝 Analysis Services](../../analysis-services/instances/install-windows/install-analysis-services.md)   
  [以 Power Pivot 模式安裝 Analysis Services](../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)  
   

@@ -1,26 +1,31 @@
 ---
-title: "編輯現有的資料來源連接 (SSAS 表格式) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.bidtoolset.selexistconn.f1"
+title: "編輯現有的資料來源連接 (SSAS 表格式) |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.asvs.bidtoolset.selexistconn.f1
 ms.assetid: 97e63f18-a01d-4c91-a411-e7e6d40a0647
 caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 13
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 67cac388bba3160fe5714a2c21f5741eafd6b32c
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 編輯現有的資料來源連接 (SSAS 表格式)
+# <a name="edit-an-existing-data-source-connection-ssas-tabular"></a>編輯現有的資料來源連接 (SSAS 表格式)
   本主題描述如何編輯表格式模型中現有資料來源連接的屬性。  
   
  當您建立與外部資料來源的連接之後，就可以依照下列方法來修改該連接：  
@@ -31,10 +36,10 @@ caps.handback.revision: 13
   
 -   您可以變更從外部資料來源取得的資料表、檢視表或資料行。  
   
-## 修改連接  
+## <a name="modify-a-connection"></a>修改連接  
  此程序描述如何修改資料庫資料來源連接。 使用資料來源的某些選項會因資料來源類型而異，但是您應該能夠輕鬆識別這些差異。  
   
-#### 若要變更目前連接所使用的外部資料來源  
+#### <a name="to-change-the-external-data-source-used-by-a-current-connection"></a>若要變更目前連接所使用的外部資料來源  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，按一下 **[模型]** 功能表，然後再按一下 **[現有連接]**。  
   
@@ -53,10 +58,10 @@ caps.handback.revision: 13
     > [!NOTE]  
     >  如果新的資料來源包含了原本不在原始資料來源中的其他任何資料表，您必須重新開啟已變更的連接並加入資料表。  
   
-## 編輯資料表和資料行對應 (繫結)  
+## <a name="edit-table-and-column-mappings-bindings"></a>編輯資料表和資料行對應 (繫結)  
  本程序描述如何在變更資料來源之後編輯對應。  
   
-#### 在資料來源變更時編輯資料行對應  
+#### <a name="to-edit-column-mappings-when-a-data-source-changes"></a>在資料來源變更時編輯資料行對應  
   
 1.  在模型設計師中，選取一個資料表。  
   
@@ -78,7 +83,7 @@ caps.handback.revision: 13
   
      當您儲存目前的資料表屬性集時，可能會出現一則訊息，指出您需要處理資料表。 按一下 **[處理]** ，將更新的資料載入模型中。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [處理資料 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/process-data-ssas-tabular.md)   
  [支援的資料來源 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)  
   

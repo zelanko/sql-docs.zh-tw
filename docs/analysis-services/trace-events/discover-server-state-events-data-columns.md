@@ -1,24 +1,29 @@
 ---
-title: "探索伺服器狀態事件資料行 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "探索伺服器狀態事件類別目錄"
+title: "探索伺服器狀態事件資料行 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- Discover Server State event category
 ms.assetid: fbacb187-a4d1-4aa4-be3b-3ddd175f9e19
 caps.latest.revision: 32
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 32
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c71c32614ee4be7fdbe198530d5ce228452d2276
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 探索伺服器狀態事件資料行
+# <a name="discover-server-state-events-data-columns"></a>探索伺服器狀態事件資料行
   探索伺服器狀態事件類別目錄具有下列事件類別：  
   
 |**事件識別碼**|**事件名稱**|**事件描述**|  
@@ -29,13 +34,13 @@ caps.handback.revision: 32
   
  下表列出每一個這類事件類別的資料行。  
   
-## 伺服器狀態探索開始類別—資料行  
+## <a name="server-state-discover-begin-classdata-columns"></a>伺服器狀態探索開始類別—資料行  
   
 |||||  
 |-|-|-|-|  
 |**資料行名稱**|**資料行識別碼**|**資料行類型**|**資料行描述**|  
 |EventClass|0|1|事件類別用於將事件分類。|  
-|EventSubclass|1|1|事件子類別提供有關每個事件類別的額外資訊：<br /><br /> 1：**DISCOVER_CONNECTIONS**<br /><br /> 2： **DISCOVER_SESSIONS**<br /><br /> 3：**DISCOVER_TRANSACTIONS**<br /><br /> 6：**DISCOVER_DB_CONNECTIONS**<br /><br /> 7：**DISCOVER_JOBS**<br /><br /> 8：**DISCOVER_LOCKS**<br /><br /> 12：**DISCOVER_PERFORMANCE_COUNTERS**<br /><br /> 13：**DISCOVER_MEMORYUSAGE**<br /><br /> 14：**DISCOVER_JOB_PROGRESS**<br /><br /> 15：**DISCOVER_MEMORYGRANT**|  
+|EventSubclass|1|1|事件子類別提供有關每個事件類別的額外資訊：<br /><br /> 1： **DISCOVER_CONNECTIONS**<br /><br /> 2： **DISCOVER_SESSIONS**<br /><br /> 3： **DISCOVER_TRANSACTIONS**<br /><br /> 6： **DISCOVER_DB_CONNECTIONS**<br /><br /> 7： **DISCOVER_JOBS**<br /><br /> 8： **DISCOVER_LOCKS**<br /><br /> 12： **DISCOVER_PERFORMANCE_COUNTERS**<br /><br /> 13： **DISCOVER_MEMORYUSAGE**<br /><br /> 14： **DISCOVER_JOB_PROGRESS**<br /><br /> 15： **DISCOVER_MEMORYGRANT**|  
 |CurrentTime|2|5|包含伺服器狀態探索事件的目前時間 (如果有的話)。 篩選所需的格式為 'YYYY-MM-DD' 與 'YYYY-MM-DD HH:MM:SS'。|  
 |StartTime|3|5|包含事件開始的時間 (如果有的話)。 篩選所需的格式為 'YYYY-MM-DD' 與 'YYYY-MM-DD HH:MM:SS'。|  
 |ConnectionID|25|1|包含與伺服器狀態探索事件相關聯的唯一連接識別碼。|  
@@ -50,13 +55,13 @@ caps.handback.revision: 32
 |ServerName|43|8|包含發生伺服器狀態探索事件的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體名稱。|  
 |RequestProperties|45|9|包含目前 XMLA 要求的屬性。|  
   
-## 伺服器狀態探索資料類別—資料行  
+## <a name="server-state-discover-data-classdata-columns"></a>伺服器狀態探索資料類別—資料行  
   
 |||||  
 |-|-|-|-|  
 |**資料行名稱**|**資料行識別碼**|**資料行類型**|**資料行描述**|  
 |EventClass|0|1|事件類別用於將事件分類。|  
-|EventSubclass|1|1|事件子類別提供有關每個事件類別的額外資訊：<br /><br /> 1：**DISCOVER_CONNECTIONS**<br /><br /> 2： **DISCOVER_SESSIONS**<br /><br /> 3：**DISCOVER_TRANSACTIONS**<br /><br /> 6：**DISCOVER_DB_CONNECTIONS**<br /><br /> 7：**DISCOVER_JOBS**<br /><br /> 8：**DISCOVER_LOCKS**<br /><br /> 12：**DISCOVER_PERFORMANCE_COUNTERS**<br /><br /> 13：**DISCOVER_MEMORYUSAGE**<br /><br /> 14：**DISCOVER_JOB_PROGRESS**<br /><br /> 15：**DISCOVER_MEMORYGRANT**|  
+|EventSubclass|1|1|事件子類別提供有關每個事件類別的額外資訊：<br /><br /> 1： **DISCOVER_CONNECTIONS**<br /><br /> 2： **DISCOVER_SESSIONS**<br /><br /> 3： **DISCOVER_TRANSACTIONS**<br /><br /> 6： **DISCOVER_DB_CONNECTIONS**<br /><br /> 7： **DISCOVER_JOBS**<br /><br /> 8： **DISCOVER_LOCKS**<br /><br /> 12： **DISCOVER_PERFORMANCE_COUNTERS**<br /><br /> 13： **DISCOVER_MEMORYUSAGE**<br /><br /> 14： **DISCOVER_JOB_PROGRESS**<br /><br /> 15： **DISCOVER_MEMORYGRANT**|  
 |CurrentTime|2|5|包含伺服器狀態探索事件的目前時間 (如果有的話)。 篩選所需的格式為 'YYYY-MM-DD' 與 'YYYY-MM-DD HH:MM:SS'。|  
 |StartTime|3|5|包含事件開始的時間 (如果有的話)。 篩選所需的格式為 'YYYY-MM-DD' 與 'YYYY-MM-DD HH:MM:SS'。|  
 |ConnectionID|25|1|包含與伺服器狀態探索事件相關聯的唯一連接識別碼。|  
@@ -65,13 +70,13 @@ caps.handback.revision: 32
 |TextData|42|9|包含與伺服器對探索要求之回應相關聯的文字資料。|  
 |ServerName|43|8|包含發生伺服器狀態探索事件的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體名稱。|  
   
-## 伺服器狀態探索結束類別—資料行  
+## <a name="server-state-discover-end-classdata-columns"></a>伺服器狀態探索結束類別—資料行  
   
 |||||  
 |-|-|-|-|  
 |**資料行名稱**|**資料行識別碼**|**資料行類型**|**資料行描述**|  
 |EventClass|0|1|事件類別用於將事件分類。|  
-|EventSubclass|1|1|事件子類別提供有關每個事件類別的額外資訊：<br /><br /> 1：**DISCOVER_CONNECTIONS**<br /><br /> 2： **DISCOVER_SESSIONS**<br /><br /> 3：**DISCOVER_TRANSACTIONS**<br /><br /> 6：**DISCOVER_DB_CONNECTIONS**<br /><br /> 7：**DISCOVER_JOBS**<br /><br /> 8：**DISCOVER_LOCKS**<br /><br /> 12：**DISCOVER_PERFORMANCE_COUNTERS**<br /><br /> 13：**DISCOVER_MEMORYUSAGE**<br /><br /> 14：**DISCOVER_JOB_PROGRESS**<br /><br /> 15：**DISCOVER_MEMORYGRANT**|  
+|EventSubclass|1|1|事件子類別提供有關每個事件類別的額外資訊：<br /><br /> 1： **DISCOVER_CONNECTIONS**<br /><br /> 2： **DISCOVER_SESSIONS**<br /><br /> 3： **DISCOVER_TRANSACTIONS**<br /><br /> 6： **DISCOVER_DB_CONNECTIONS**<br /><br /> 7： **DISCOVER_JOBS**<br /><br /> 8： **DISCOVER_LOCKS**<br /><br /> 12： **DISCOVER_PERFORMANCE_COUNTERS**<br /><br /> 13： **DISCOVER_MEMORYUSAGE**<br /><br /> 14： **DISCOVER_JOB_PROGRESS**<br /><br /> 15： **DISCOVER_MEMORYGRANT**|  
 |CurrentTime|2|5|包含伺服器狀態探索事件的目前時間 (如果有的話)。 篩選所需的格式為 'YYYY-MM-DD' 與 'YYYY-MM-DD HH:MM:SS'。|  
 |StartTime|3|5|包含事件開始的時間 (如果有的話)。 篩選所需的格式為 'YYYY-MM-DD' 與 'YYYY-MM-DD HH:MM:SS'。|  
 |EndTime|4|5|包含事件結束的時間。 此資料行不會因啟動的事件類別 (如 SQL:BatchStarting 或 SP:Starting) 而擴展。 篩選所需的格式為 'YYYY-MM-DD' 與 'YYYY-MM-DD HH:MM:SS'。|  
@@ -88,7 +93,7 @@ caps.handback.revision: 32
 |TextData|42|9|包含與伺服器對探索要求之回應相關聯的文字資料。|  
 |ServerName|43|8|包含發生伺服器狀態探索事件的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體名稱。|  
   
-## 請參閱＜  
- [探索伺服器狀態事件類別目錄](../../analysis-services/trace-events/discover-server-state-event-category.md)  
+## <a name="see-also"></a>請參閱＜  
+ [Discover Server State Event Category](../../analysis-services/trace-events/discover-server-state-event-category.md)  
   
   

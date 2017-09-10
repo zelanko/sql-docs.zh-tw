@@ -1,30 +1,35 @@
 ---
-title: "從採礦模型刪除篩選 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "篩選 [Analysis Services]"
+title: "從採礦模型刪除篩選器 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- filters [Analysis Services]
 ms.assetid: 91220b21-adbc-49a9-b200-8bf0a724eff1
 caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0830b6585e3859cf307ebe2fa4ea493cd8072546
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 從採礦模型刪除篩選
+# <a name="delete-a-filter-from-a-mining-model"></a>從採礦模型刪除篩選
   當您建立採礦模型的篩選時，您可以在資料來源檢視中的資料子集上建立模型。 篩選對於測試原始資料子集上之模型的精確度也非常實用。  
   
  不過，如果想要再次檢視完整的案例集，則必須刪除篩選。 此程序描述如何移除篩選的條件，或完全刪除篩選。  
   
-### 若要從採礦模型的篩選刪除條件  
+### <a name="to-delete-a-condition-from-a-filter-on-a-mining-model"></a>若要從採礦模型的篩選刪除條件  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]的 [方案總管] 中，按一下包含要篩選的採礦模型的採礦結構。  
   
@@ -40,17 +45,17 @@ caps.handback.revision: 13
   
 5.  選取 **[刪除]**。  
   
-### 若要在篩選編輯器對話方塊中清除採礦模型上的篩選  
+### <a name="to-clear-the-filter-on-a-mining-model-in-the-filter-editor-dialog-box"></a>若要在篩選編輯器對話方塊中清除採礦模型上的篩選  
   
 -   在 [篩選編輯器] 對話方塊中，以滑鼠右鍵在方格中按一下任何資料列，然後選取 [全部刪除]。  
   
-## 利用屬性視窗使用模型篩選  
+## <a name="working-with-model-filters-using-the-properties-window"></a>利用屬性視窗使用模型篩選  
  如果想要刪除整個篩選，就不需要開啟篩選編輯器對話方塊。 您建立的篩選條件可用於採礦模型的 **Filter** 屬性。  
   
 > [!NOTE]  
->  您可以在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中檢視採礦模型的屬性，在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中則不能。  
+>  您可以在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中檢視採礦模型的屬性，在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中則不能。  
   
-#### 若要在方案總管中清除採礦模型上的篩選  
+#### <a name="to-clear-the-filter-on-a-mining-model-in-solution-explorer"></a>若要在方案總管中清除採礦模型上的篩選  
   
 1.  在 [方案總管] 中，按一下包含篩選的採礦模型。  
   
@@ -58,7 +63,7 @@ caps.handback.revision: 13
   
 3.  按退格鍵或 Delete 鍵。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [鑽研採礦模型的案例資料](../../analysis-services/data-mining/drill-through-to-case-data-from-a-mining-model.md)   
  [採礦模型工作和使用說明](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
  [採礦模型的篩選 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)  

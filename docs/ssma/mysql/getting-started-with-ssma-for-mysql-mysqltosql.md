@@ -18,14 +18,14 @@ helpviewer_keywords:
 - Getting started,Installing and licensing
 ms.assetid: 8ebfa061-be6f-4a07-923f-8dc832a82f70
 caps.latest.revision: 19
-author: sabotta
-ms.author: carlasab
-manager: lonnyb
+author: Shamikg
+ms.author: Shamikg
+manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 7f46606c1a6ecb368ec92b0f5e3882d5fe9df533
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 38ce5c0e27703094e4d7ff2415d0bc91d501d1b4
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="getting-started-with-ssma-for-mysql-mysqltosql"></a>開始使用 SSMA for MySQL (MySQLToSQL)
@@ -89,7 +89,7 @@ SQL Server 或 Azure SQL DB 中繼資料總管 會顯示 SQL Server 或 Azure SQ
   
 -   在 MySQL 中繼資料總管，您可能會改變對應的型別，字元集對應時，SQL 模式。 若要變更型別對應或字元集對應或 SQL 模式轉換，進行變更之前將結構描述的轉換。  
   
--   在 SQL Server 中繼資料總管，您可能會改變資料表索引標籤上的資料表和索引屬性。 若要查看這些變更的 SQL Server，請先將結構描述載入 SQL Server 進行這些變更。  
+-   在 SQL Server 中繼資料總管，您可能會改變資料表索引標籤上的資料表和索引屬性。若要查看這些變更的 SQL Server，請先將結構描述載入 SQL Server 進行這些變更。  
   
 在 [中繼資料總管] 中所做的變更會反映在專案中繼資料，不在來源或目標資料庫中。  
   
@@ -118,7 +118,7 @@ SSMA 會有兩個工具列： 專案工具列和移轉工具列。
 |**功能表**|**說明**|  
 |**檔案**|包含用來處理專案、 連接至 MySQL，以及連接到 SQL Server 或 Azure SQL DB 命令。|  
 |**編輯**|包含用來尋找及處理的詳細資料頁面中的文字命令。 若要開啟**管理書籤**對話方塊中的，編輯 功能表上按一下 管理書籤。 在對話方塊中您會看到一份現有書籤。 您可以使用對話方塊右側的按鈕，來管理這些書籤。|  
-|**檢視**|包含**同步處理中繼資料瀏覽器**命令。 會同步處理 MySQL 中繼資料總管和 SQL Server 或 Azure SQL DB 中繼資料總管 之間的物件。 還會包含命令來顯示和隱藏**輸出**和**錯誤清單**窗格和選項**配置**管理版面配置。|  
+|**[檢視]**|包含**同步處理中繼資料瀏覽器**命令。 會同步處理 MySQL 中繼資料總管和 SQL Server 或 Azure SQL DB 中繼資料總管 之間的物件。 還會包含命令來顯示和隱藏**輸出**和**錯誤清單**窗格和選項**配置**管理版面配置。|  
 |**工具**|包含建立報表、 將結構描述轉換、 重新整理從資料庫，移轉物件和資料，以及將儲存為指令碼命令。 也提供存取**通用設定]、 [預設的專案設定**和**專案設定**對話方塊。|  
 |**說明**|提供存取至 SSMA 協助和**有關** 對話方塊。|  
   

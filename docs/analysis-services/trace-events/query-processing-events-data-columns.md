@@ -1,22 +1,27 @@
 ---
-title: "查詢處理事件資料行 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: "查詢處理事件的資料行 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: 81a522bd-440d-406c-a524-3af44a3af101
 caps.latest.revision: 6
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 6
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0fafade22e12b14c1e11aab4a44ce65433d2a158
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 查詢處理事件資料行
+# <a name="query-processing-events-data-columns"></a>查詢處理事件資料行
   查詢處理事件類別目錄具有下列事件類別：  
   
 |**事件識別碼**|**事件名稱**|**事件描述**|  
@@ -46,7 +51,7 @@ caps.handback.revision: 6
   
  下表列出每一個這類事件類別的資料行。  
   
-## 查詢 Cube 開始  
+## <a name="query-cube-begin"></a>查詢 Cube 開始  
   
 |||||  
 |-|-|-|-|  
@@ -68,7 +73,7 @@ caps.handback.revision: 6
 |TextData|42|9|與事件相關的文字資料。|  
 |ServerName|43|8|產生事件的伺服器名稱。|  
   
-## 查詢 Cube 結束  
+## <a name="query-cube-end"></a>查詢 Cube 結束  
   
 |**資料行名稱**|**資料行識別碼**|**資料行類型**|**資料行描述**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -89,7 +94,7 @@ caps.handback.revision: 6
 |TextData|42|9|與事件相關的文字資料。|  
 |ServerName|43|8|產生事件的伺服器名稱。|  
   
-## 計算非空白開始  
+## <a name="calculate-non-empty-begin"></a>計算非空白開始  
   
 |**資料行名稱**|**資料行識別碼**|**資料行類型**|**資料行描述**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -110,7 +115,7 @@ caps.handback.revision: 6
 |TextData|42|9|與事件相關的文字資料。|  
 |ServerName|43|8|產生事件的伺服器名稱。|  
   
-## 計算非空白目前  
+## <a name="calculate-non-empty-current"></a>計算非空白目前  
   
 |||||  
 |-|-|-|-|  
@@ -133,7 +138,7 @@ caps.handback.revision: 6
 |TextData|42|9|與事件相關的文字資料。|  
 |ServerName|43|8|產生事件的伺服器名稱。|  
   
-## 計算非空白結束  
+## <a name="calculate-non-empty-end"></a>計算非空白結束  
   
 |**資料行名稱**|**資料行識別碼**|**資料行類型**|**資料行描述**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -154,7 +159,7 @@ caps.handback.revision: 6
 |TextData|42|9|與事件相關的文字資料。|  
 |ServerName|43|8|產生事件的伺服器名稱。|  
   
-## 序列化結果開始  
+## <a name="serialize-results-begin"></a>序列化結果開始  
   
 |**資料行名稱**|**資料行識別碼**|**資料行類型**|**資料行描述**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -175,7 +180,7 @@ caps.handback.revision: 6
 |TextData|42|9|與事件相關的文字資料。|  
 |ServerName|43|8|產生事件的伺服器名稱。|  
   
-## 序列化結果目前  
+## <a name="serialize-results-current"></a>序列化結果目前  
   
 |**資料行名稱**|**資料行識別碼**|**資料行類型**|**資料行描述**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -197,7 +202,7 @@ caps.handback.revision: 6
 |TextData|42|9|與事件相關的文字資料。|  
 |ServerName|43|8|產生事件的伺服器名稱。|  
   
-## 序列化結果結束  
+## <a name="serialize-results-end"></a>序列化結果結束  
   
 |**資料行名稱**|**資料行識別碼**|**資料行類型**|**資料行描述**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -218,50 +223,7 @@ caps.handback.revision: 6
 |TextData|42|9|與事件相關的文字資料。|  
 |ServerName|43|8|產生事件的伺服器名稱。|  
   
-## 執行 MDX 指令碼開始  
-  
-|**資料行名稱**|**資料行識別碼**|**資料行類型**|**資料行描述**|  
-|---------------------|-------------------|---------------------|----------------------------|  
-|EventClass|0|1|事件類別用於將事件分類。|  
-|EventSubclass|1|1|事件子類別提供有關每個事件類別的額外資訊：<br /><br /> 1：MDX 指令碼<br /><br /> 2：MDX 指令碼命令|  
-|CurrentTime|2|5|事件的開始時間 (如果可以取得的話)。 篩選所需的格式為 'YYYY-MM-DD' 與 'YYYY-MM-DD HH:MM:SS'。|  
-|StartTime|3|5|事件的開始時間 (如果可以取得的話)。 篩選所需的格式為 'YYYY-MM-DD' 與 'YYYY-MM-DD HH:MM:SS'。|  
-|EndTime|4|5|事件結束的時間。 此資料行不會因啟動的事件類別 (如 SQL:BatchStarting 或 SP:Starting) 而擴展。 篩選所需的格式為 'YYYY-MM-DD' 與 'YYYY-MM-DD HH:MM:SS'。|  
-|有效期間|5|2|事件所花費的時間量 (以毫秒為單位)。|  
-|CPUTime|6|2|事件所用的 CPU 時間 (以毫秒為單位)。|  
-|ProgressTotal|9|1|整體進度。|  
-|IntegerData|10|1|整數資料。|  
-|ObjectType|12|1|物件類型。|  
-|ObjectPath|14|8|物件路徑。 以物件的父系開頭之父系清單 (以逗號分隔)。|  
-|ConnectionID|25|1|唯一的連接識別碼。|  
-|DatabaseName|28|8|正在執行使用者之陳述式的資料庫名稱。|  
-|NTCanonicalUserName|40|8|標準格式的使用者名稱。 例如，engineering.microsoft.com/software/someone。|  
-|SPID|41|1|伺服器處理序識別碼。 這可唯一識別出使用者工作階段， 直接對應到 XML/A 所使用的工作階段 GUID。|  
-|TextData|42|9|與事件相關的文字資料。|  
-|ServerName|43|8|產生事件的伺服器名稱。|  
-  
-## 執行 MDX 指令碼目前  
-  
-|**資料行名稱**|**資料行識別碼**|**資料行類型**|**資料行描述**|  
-|---------------------|-------------------|---------------------|----------------------------|  
-|EventClass|0|1|事件類別用於將事件分類。|  
-|CurrentTime|2|5|事件的開始時間 (如果可以取得的話)。 篩選所需的格式為 'YYYY-MM-DD' 與 'YYYY-MM-DD HH:MM:SS'。|  
-|StartTime|3|5|事件的開始時間 (如果可以取得的話)。 篩選所需的格式為 'YYYY-MM-DD' 與 'YYYY-MM-DD HH:MM:SS'。|  
-|EndTime|4|5|事件結束的時間。 此資料行不會因啟動的事件類別 (如 SQL:BatchStarting 或 SP:Starting) 而擴展。 篩選所需的格式為 'YYYY-MM-DD' 與 'YYYY-MM-DD HH:MM:SS'。|  
-|有效期間|5|2|事件所花費的時間量 (以毫秒為單位)。|  
-|CPUTime|6|2|事件所用的 CPU 時間 (以毫秒為單位)。|  
-|ProgressTotal|9|1|整體進度。|  
-|IntegerData|10|1|整數資料。|  
-|ObjectType|12|1|物件類型。|  
-|ObjectPath|14|8|物件路徑。 以物件的父系開頭之父系清單 (以逗號分隔)。|  
-|ConnectionID|25|1|唯一的連接識別碼。|  
-|DatabaseName|28|8|正在執行使用者之陳述式的資料庫名稱。|  
-|NTCanonicalUserName|40|8|標準格式的使用者名稱。 例如，engineering.microsoft.com/software/someone。|  
-|SPID|41|1|伺服器處理序識別碼。 這可唯一識別出使用者工作階段， 直接對應到 XML/A 所使用的工作階段 GUID。|  
-|TextData|42|9|與事件相關的文字資料。|  
-|ServerName|43|8|產生事件的伺服器名稱。|  
-  
-## 執行 MDX 指令碼結束  
+## <a name="execute-mdx-script-begin"></a>執行 MDX 指令碼開始  
   
 |**資料行名稱**|**資料行識別碼**|**資料行類型**|**資料行描述**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -283,7 +245,50 @@ caps.handback.revision: 6
 |TextData|42|9|與事件相關的文字資料。|  
 |ServerName|43|8|產生事件的伺服器名稱。|  
   
-## 查詢維度  
+## <a name="execute-mdx-script-current"></a>執行 MDX 指令碼目前  
+  
+|**資料行名稱**|**資料行識別碼**|**資料行類型**|**資料行描述**|  
+|---------------------|-------------------|---------------------|----------------------------|  
+|EventClass|0|1|事件類別用於將事件分類。|  
+|CurrentTime|2|5|事件的開始時間 (如果可以取得的話)。 篩選所需的格式為 'YYYY-MM-DD' 與 'YYYY-MM-DD HH:MM:SS'。|  
+|StartTime|3|5|事件的開始時間 (如果可以取得的話)。 篩選所需的格式為 'YYYY-MM-DD' 與 'YYYY-MM-DD HH:MM:SS'。|  
+|EndTime|4|5|事件結束的時間。 此資料行不會因啟動的事件類別 (如 SQL:BatchStarting 或 SP:Starting) 而擴展。 篩選所需的格式為 'YYYY-MM-DD' 與 'YYYY-MM-DD HH:MM:SS'。|  
+|有效期間|5|2|事件所花費的時間量 (以毫秒為單位)。|  
+|CPUTime|6|2|事件所用的 CPU 時間 (以毫秒為單位)。|  
+|ProgressTotal|9|1|整體進度。|  
+|IntegerData|10|1|整數資料。|  
+|ObjectType|12|1|物件類型。|  
+|ObjectPath|14|8|物件路徑。 以物件的父系開頭之父系清單 (以逗號分隔)。|  
+|ConnectionID|25|1|唯一的連接識別碼。|  
+|DatabaseName|28|8|正在執行使用者之陳述式的資料庫名稱。|  
+|NTCanonicalUserName|40|8|標準格式的使用者名稱。 例如，engineering.microsoft.com/software/someone。|  
+|SPID|41|1|伺服器處理序識別碼。 這可唯一識別出使用者工作階段， 直接對應到 XML/A 所使用的工作階段 GUID。|  
+|TextData|42|9|與事件相關的文字資料。|  
+|ServerName|43|8|產生事件的伺服器名稱。|  
+  
+## <a name="execute-mdx-script-end"></a>執行 MDX 指令碼結束  
+  
+|**資料行名稱**|**資料行識別碼**|**資料行類型**|**資料行描述**|  
+|---------------------|-------------------|---------------------|----------------------------|  
+|EventClass|0|1|事件類別用於將事件分類。|  
+|EventSubclass|1|1|事件子類別提供有關每個事件類別的額外資訊：<br /><br /> 1：MDX 指令碼<br /><br /> 2：MDX 指令碼命令|  
+|CurrentTime|2|5|事件的開始時間 (如果可以取得的話)。 篩選所需的格式為 'YYYY-MM-DD' 與 'YYYY-MM-DD HH:MM:SS'。|  
+|StartTime|3|5|事件的開始時間 (如果可以取得的話)。 篩選所需的格式為 'YYYY-MM-DD' 與 'YYYY-MM-DD HH:MM:SS'。|  
+|EndTime|4|5|事件結束的時間。 此資料行不會因啟動的事件類別 (如 SQL:BatchStarting 或 SP:Starting) 而擴展。 篩選所需的格式為 'YYYY-MM-DD' 與 'YYYY-MM-DD HH:MM:SS'。|  
+|有效期間|5|2|事件所花費的時間量 (以毫秒為單位)。|  
+|CPUTime|6|2|事件所用的 CPU 時間 (以毫秒為單位)。|  
+|ProgressTotal|9|1|整體進度。|  
+|IntegerData|10|1|整數資料。|  
+|ObjectType|12|1|物件類型。|  
+|ObjectPath|14|8|物件路徑。 以物件的父系開頭之父系清單 (以逗號分隔)。|  
+|ConnectionID|25|1|唯一的連接識別碼。|  
+|DatabaseName|28|8|正在執行使用者之陳述式的資料庫名稱。|  
+|NTCanonicalUserName|40|8|標準格式的使用者名稱。 例如，engineering.microsoft.com/software/someone。|  
+|SPID|41|1|伺服器處理序識別碼。 這可唯一識別出使用者工作階段， 直接對應到 XML/A 所使用的工作階段 GUID。|  
+|TextData|42|9|與事件相關的文字資料。|  
+|ServerName|43|8|產生事件的伺服器名稱。|  
+  
+## <a name="query-dimension"></a>查詢維度  
   
 |**資料行名稱**|**資料行識別碼**|**資料行類型**|**資料行描述**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -305,7 +310,7 @@ caps.handback.revision: 6
 |TextData|42|9|與事件相關的文字資料。|  
 |ServerName|43|8|產生事件的伺服器名稱。|  
   
-## 查詢 Subcube  
+## <a name="query-subcube"></a>查詢 Subcube  
   
 |**資料行名稱**|**資料行識別碼**|**資料行類型**|**資料行描述**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -325,7 +330,7 @@ caps.handback.revision: 6
 |TextData|42|9|與事件相關的文字資料。|  
 |ServerName|43|8|產生事件的伺服器名稱。|  
   
-## 查詢 Subcube 詳細資訊  
+## <a name="query-subcube-verbose"></a>查詢 Subcube 詳細資訊  
   
 |**資料行名稱**|**資料行識別碼**|**資料行類型**|**資料行描述**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -345,7 +350,7 @@ caps.handback.revision: 6
 |TextData|42|9|與事件相關的文字資料。|  
 |ServerName|43|8|產生事件的伺服器名稱。|  
   
-## 從彙總取得資料  
+## <a name="get-data-from-aggregation"></a>從彙總取得資料  
   
 |**資料行名稱**|**資料行識別碼**|**資料行類型**|**資料行描述**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -364,7 +369,7 @@ caps.handback.revision: 6
 |TextData|42|9|與事件相關的文字資料。|  
 |ServerName|43|8|產生事件的伺服器名稱。|  
   
-## 從快取取得資料  
+## <a name="get-data-from-cache"></a>從快取取得資料  
   
 |**資料行名稱**|**資料行識別碼**|**資料行類型**|**資料行描述**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -384,7 +389,7 @@ caps.handback.revision: 6
 |TextData|42|9|與事件相關的文字資料。|  
 |ServerName|43|8|產生事件的伺服器名稱。|  
   
-## VertiPaq SE 查詢開始  
+## <a name="vertipaq-se-query-begin"></a>VertiPaq SE 查詢開始  
   
 |**資料行名稱**|**資料行識別碼**|**資料行類型**|**資料行描述**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -409,7 +414,7 @@ caps.handback.revision: 6
 |TextData|42|9|與事件相關的文字資料。|  
 |ServerName|43|8|產生事件的伺服器名稱。|  
   
-## VertiPaq SE 查詢結束  
+## <a name="vertipaq-se-query-end"></a>VertiPaq SE 查詢結束  
   
 |**資料行名稱**|**資料行識別碼**|**資料行類型**|**資料行描述**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -442,7 +447,7 @@ caps.handback.revision: 6
 |TextData|42|9|與事件相關的文字資料。|  
 |ServerName|43|8|產生事件的伺服器名稱。|  
   
-## 資源使用狀況  
+## <a name="resource-usage"></a>資源使用狀況  
   
 |**資料行名稱**|**資料行識別碼**|**資料行類型**|**資料行描述**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -460,7 +465,7 @@ caps.handback.revision: 6
 |TextData|42|9|與事件相關的文字資料。|  
 |ServerName|43|8|產生事件的伺服器名稱。|  
   
-## VertiPaq SE 查詢快取比對  
+## <a name="vertipaq-se-query-cache-match"></a>VertiPaq SE 查詢快取比對  
   
 |**資料行名稱**|**資料行識別碼**|**資料行類型**|**資料行描述**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -484,7 +489,7 @@ caps.handback.revision: 6
 |TextData|42|9|與事件相關的文字資料。|  
 |ServerName|43|8|產生事件的伺服器名稱。|  
   
-## 直接查詢開始  
+## <a name="direct-query-begin"></a>直接查詢開始  
   
 |**資料行名稱**|**資料行識別碼**|**資料行類型**|**資料行描述**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -512,7 +517,7 @@ caps.handback.revision: 6
 |TextData|42|9|與事件相關的文字資料。|  
 |ServerName|43|8|產生事件的伺服器名稱。|  
   
-## 直接查詢結束  
+## <a name="direct-query-end"></a>直接查詢結束  
   
 |**資料行名稱**|**資料行識別碼**|**資料行類型**|**資料行描述**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -540,7 +545,7 @@ caps.handback.revision: 6
 |TextData|42|9|與事件相關的文字資料。|  
 |ServerName|43|8|產生事件的伺服器名稱。|  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [查詢處理事件類別目錄](../../analysis-services/trace-events/query-processing-events-category.md)  
   
   

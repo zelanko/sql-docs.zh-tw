@@ -1,37 +1,30 @@
 ---
-title: "量值 (SSAS 表格式) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "量值 |Microsoft 文件"
+ms.custom: 
+ms.date: 04/10/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 27ec8f99-e9ef-44c9-a83f-f7c88e128ad3
 caps.latest.revision: 19
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 19
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 38b7467cd4ad765d651ea0ebe4ad57c278c987a1
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 量值 (SSAS 表格式)
+# <a name="measures"></a>量值
   在表格式模型中，量值是透過報表用戶端內使用的 DAX 公式所建立的計算。 量值會以使用者在報表用戶端應用程式中選取的欄位、篩選及交叉分析篩選器為依據來計算。  
-  
- 本主題的章節：  
-  
--   [優點](#bkmk_understanding)  
-  
--   [使用量值方格定義量值](#bkmk_def_mg)  
-  
--   [量值屬性](#bkmk_properties)  
-  
--   [使用 KPI 中的量值](#bkmk_KPI)  
-  
--   [相關工作](#bkmk_rel_tasks)  
   
 ##  <a name="bkmk_understanding"></a> 優點  
  量值可以用標準彙總函式 (例如 AVERAGE、COUNT 或 SUM) 做為基礎，或者，您也可以使用 DAX 自行定義公式。 除了公式以外，每個量值都具備由量值資料類型定義的屬性，如名稱、資料表詳細資料、格式及小數位數。  
@@ -62,7 +55,7 @@ Sum of TotalProfit: =SUM([TotalProfit])
 |電視及錄影機|$946,989,702.51|  
 |**總計**|**$4,691,673,731.53**|  
   
-##  <a name="bkmk_def_mg"></a> 使用量值方格定義量值  
+##  <a name="bkmk_def_mg"></a> Defining measures by using the measure grid  
  量值是在設計階段透過使用模型設計師中的量值方格而建立的。 每一個資料表都有量值方格。 根據預設，量值方格會顯示在模型設計師中的每一個資料表下方。 您也可以選擇不檢視特定資料表的量值方格。 若要切換資料表的量值方格顯示，請按一下 **[資料表]** 功能表，然後按一下 **[顯示量值方格]**。  
   
  在量值方格中，您可用下列方式建立量值：  
@@ -73,12 +66,12 @@ Sum of TotalProfit: =SUM([TotalProfit])
   
  依預設，使用自動加總時，量值的名稱會由相關聯的資料行名稱所定義，後面接著冒號和公式。 您可在公式列或 [屬性] 視窗的 **[量值名稱]** 屬性設定中變更名稱。 使用自訂公式建立量值時，您可在公式列中輸入名稱，後接冒號和公式，或者，您可在 [屬性] 視窗的 **[量值名稱]** 屬性設定中輸入名稱。  
   
- 命名量值必須格外謹慎。 量值名稱會和相關聯的資料表一起出現在報表用戶端的欄位清單中。 KPI 也會根據基底量值來命名。 量值不得與模型中任何資料表的任何資料行名稱相同。  
+ 務必命名量值謹慎。 量值名稱會和相關聯的資料表一起出現在報表用戶端的欄位清單中。 KPI 也會根據基底量值來命名。 量值不得與模型中任何資料表的任何資料行名稱相同。  
   
 > [!TIP]  
 >  您可以將多個資料表中的量值群組到一個資料表中，其方式是建立空白資料表，然後將量值移到其中或是在其中建立新的量值。 請牢記，當您參考其他資料表中的資料行時，可能必須在 DAX 公式中包含資料表名稱。  
   
- 若模型已定義檢視方塊，量值不會自動加入這些檢視方塊中。 您必須使用 [檢視方塊] 對話方塊，手動將量值加入檢視方塊中。 如需詳細資訊，請參閱[檢視方塊 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)。  
+ 若模型已定義檢視方塊，量值不會自動加入這些檢視方塊中。 您必須使用 [檢視方塊] 對話方塊，手動將量值加入檢視方塊中。 若要進一步了解，請參閱[檢視方塊](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)。  
   
 ##  <a name="bkmk_properties"></a> 量值屬性  
  每個量值都有定義的屬性。 您可在 [屬性] 視窗中，編輯量值屬性以及相關聯的資料行屬性。 量值具有下列屬性：  
@@ -93,17 +86,17 @@ Sum of TotalProfit: =SUM([TotalProfit])
 ##  <a name="bkmk_KPI"></a> 使用 KPI 中的量值  
  KPI (關鍵效能指標) 是由「基底」值定義，而基底值是由「目標」值 (由量值或絕對值定義) 對應的量值來定義。 KPI 也包括 *「狀態」*(Status)，其為計算基底值和目標值之間的臨界值，且會以圖形格式顯示。 商務專業人士常常利用 KPI 來識別重要商務標準中的趨勢。  
   
- 任何量值都可以做為 KPI 的基底量值。 若要建立 KPI，請在量值方格中，以滑鼠右鍵按一下量值，然後按一下 [建立 KPI]。 [關鍵效能指標] 對話方塊隨即出現，您即可在其中指定目標值 (由量值或絕對值來定義)，及定義狀態臨界值和圖形類型。 如需詳細資訊，請參閱 [KPI &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/kpis-ssas-tabular.md)。  
+ 任何量值都可以做為 KPI 的基底量值。 若要建立 KPI，請在量值方格中，以滑鼠右鍵按一下量值，然後按一下 [建立 KPI]。 [關鍵效能指標] 對話方塊隨即出現，您即可在其中指定目標值 (由量值或絕對值來定義)，及定義狀態臨界值和圖形類型。 若要進一步了解，請參閱[Kpi](../../analysis-services/tabular-models/kpis-ssas-tabular.md)。  
   
 ##  <a name="bkmk_rel_tasks"></a> 相關工作  
   
-|主題|說明|  
+|主題|Description|  
 |-----------|-----------------|  
-|[建立及管理量值 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/create-and-manage-measures-ssas-tabular.md)|描述如何使用模型設計師中的量值方格，建立及管理量值。|  
+|[建立及管理量值](../../analysis-services/tabular-models/create-and-manage-measures-ssas-tabular.md)|描述如何使用模型設計師中的量值方格，建立及管理量值。|  
   
-## 請參閱＜  
- [KPI &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
- [建立及管理 KPI &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/create-and-manage-kpis-ssas-tabular.md)   
- [導出資料行 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/calculated-columns-ssas-tabular.md)  
+## <a name="see-also"></a>另請參閱  
+ [Kpi](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
+ [建立及管理 Kpi](../../analysis-services/tabular-models/create-and-manage-kpis-ssas-tabular.md)   
+ [導出資料行](../../analysis-services/tabular-models/ssas-calculated-columns.md)  
   
   

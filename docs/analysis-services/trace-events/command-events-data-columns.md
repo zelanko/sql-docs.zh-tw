@@ -1,24 +1,29 @@
 ---
-title: "命令事件資料行 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "命令事件的事件類別目錄"
+title: "命令事件資料行 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- Command Events event category
 ms.assetid: 7169f1e2-c6be-4d8c-b147-25719b84bc2c
 caps.latest.revision: 36
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 36
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 39022629aeda9951a01e79ebf45ec099bd5d7205
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 命令事件資料行
+# <a name="command-events-data-columns"></a>命令事件資料行
   下表列出 [命令事件] 事件類別目錄中，每種事件類別的資料行。  
   
  [命令事件] 事件類別目錄含有下列事件類別：  
@@ -71,7 +76,7 @@ caps.handback.revision: 36
 |NTDomainName|包含與命令事件相關聯的 Windows 網域帳戶。|  
 |ClientProcessID|包含與命令事件相關聯的唯一用戶端處理序識別碼。|  
   
-## 請參閱＜  
- [命令事件的事件類別目錄](../../analysis-services/trace-events/command-events-event-category.md)  
+## <a name="see-also"></a>請參閱＜  
+ [Command Events Event Category](../../analysis-services/trace-events/command-events-event-category.md)  
   
   

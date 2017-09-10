@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 ms.translationtype: MT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: 894a3756d9bffcaaf3347e0bfae92abb0f846a97
+ms.sourcegitcommit: 46b16dcf147dbd863eec0330e87511b4ced6c4ce
+ms.openlocfilehash: 5147b648f2b34496bc46f756639ded028b01fe0e
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/05/2017
 
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>設定 SQL Server on Linux mssql conf 工具
@@ -26,6 +26,7 @@ ms.lasthandoff: 08/28/2017
 |---|---|
 | [定序](#collation) | 在 Linux 中設定 SQL Server 的新定序。 |
 | [客戶的意見反應](#customerfeedback) | 選擇 SQL Server 傳送意見給 Microsoft。 |
+| [Database Mail 設定檔](#dbmail) | 設定 SQL Server 的預設資料庫郵件設定檔，在 Linux 上 |
 | [預設資料目錄](#datadir) | 變更新的 SQL Server 資料庫資料檔案 (.mdf) 的預設目錄。 |
 | [預設記錄檔目錄](#datadir) | 變更新的 SQL Server 資料庫記錄檔 (.ldf) 檔案的預設目錄。 |
 | [預設傾印目錄](#dumpdir) | 變更新的記憶體傾印和疑難排解的其他檔案的預設目錄。 |
@@ -207,13 +208,20 @@ ms.lasthandoff: 08/28/2017
 
     下表列出可能**coredump.coredumptype**值。
 
-    | 型別 | Description |
+    | 類型 | Description |
     |-----|-----|
     | **迷你** | 迷你是最小的傾印檔案類型。 它使用 Linux 系統資訊來決定執行緒和處理序中的模組。 傾印包含只有主機環境執行緒堆疊和模組。 它不包含間接記憶體參考或全域變數。 |
     | **miniplus** | MiniPlus 迷你，類似，但它包含額外的記憶體。 其了解 SQLPAL 和主機環境中，傾印中加入下列的記憶體區域的內部資訊：</br></br> -各種全域變數</br> -所有以上 64 TB 的記憶體</br> -All 名為區域中找到**/proc/$ pid/對應**</br> 間接記憶體與執行緒堆疊</br> 執行緒的資訊</br> 關聯 Teb 的和 Peb 的</br> 模組資訊</br> VMM 和 VAD 樹狀結構 |
     | **篩選** | 減法為基礎的篩選會使用設計程序中的所有記憶體其中都包含除非明確地排除。 設計了解 SQLPAL 和主機環境中，從傾印中排除特定區域的內部資訊。
     | **完整** | 完整的完整程序傾印包含所有區域位於**/proc/$ pid/對應**。 這不由控制**coredump.captureminiandfull**設定。 |
 
+## <a id="dbmail"></a>設定 SQL Server 的預設資料庫郵件設定檔，在 Linux 上
+
+**Sqlpagent.databasemailprofile**可讓您設定電子郵件警示的預設 DB 郵件設定檔。
+
+```bash
+sudo /opt/mssq/bin/mssql-conf set sqlagent.databasemailprofile <profile_name>
+```
 ## <a id="hadr"></a>高可用性
 
 **Hadr.hadrenabled**選項可讓您的 SQL Server 執行個體的可用性群組。 下列命令會啟用可用性群組設定**hadr.hadrenabled**設為 1。 您必須重新啟動 SQL Server 的設定才會生效。

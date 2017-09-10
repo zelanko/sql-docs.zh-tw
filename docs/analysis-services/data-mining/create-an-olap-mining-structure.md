@@ -1,23 +1,28 @@
 ---
-title: "建立 OLAP 採礦結構 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "建立 OLAP 採礦結構 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 21cbdc9d-d33c-4026-b9ef-1be2bd92b3b1
 caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: b4c361d8a255b4ef5dc348692bb688a0421b0abd
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 建立 OLAP 採礦結構
+# <a name="create-an-olap-mining-structure"></a>建立 OLAP 採礦結構
   建立以 OLAP Cube 或其他多維度資料存放區為根據的資料採礦模型有許多優點。 OLAP 方案已經包含妥善組織、清理和適當格式化的大量資料，但是這種資料的複雜性在於使用者不太可能根據隨選探索找到有意義的模式。 資料採礦讓您能夠探索新的相互關聯性，並提供可採取動作的洞察力。  
   
  本主題描述如何根據現有多維度方案中的維度和相關量值來建立 OLAP 採礦結構。  
@@ -39,7 +44,7 @@ caps.handback.revision: 12
   
  如果您沒有原始專案檔或者不想要加以改變，您可以使用 Visual Studio 中的 [從伺服器匯入 (多維度和資料採礦)] 選項，取得中繼資料和方案物件的複本。 然後您可以修改部署目標、編輯資料來源，以及在不影響現有物件的情況下處理 Cube 物件。  
   
- 如需詳細資訊，請參閱[使用 Analysis Services 匯入精靈匯入資料採礦專案](../../analysis-services/data-mining/import-a-data-mining-project-using-the-analysis-services-import-wizard.md)。  
+ 如需詳細資訊，請參閱 [使用 Analysis Services 匯入精靈匯入資料採礦專案](../../analysis-services/data-mining/import-a-data-mining-project-using-the-analysis-services-import-wizard.md)。  
   
 ##  <a name="bkmk_Overview"></a> OLAP 資料採礦處理概觀  
  在方案總管中，以滑鼠右鍵按一下 [採礦結構] 節點，然後選取 [新增採礦結構]，即可啟動 [資料採礦精靈]。 此精靈會引導您透過下列步驟來建立新結構和模型的結構：  
@@ -113,7 +118,7 @@ caps.handback.revision: 12
 |尋找特別的或異常的資料格|識別一段時間內與典型趨勢相反的商店銷售。|[!INCLUDE[msCoName](../../includes/msconame-md.md)] 時間序列演算法|  
 |尋找相互關聯|識別與伺服器停機時間相關的因素，包括區域、機器類型、作業系統或購買日期。|[!INCLUDE[msCoName](../../includes/msconame-md.md)] 貝氏機率分類演算法|  
   
-##  <a name="bkmk_Filters"></a> 配量 Cube 與篩選模型的比較  
+##  <a name="bkmk_Filters"></a>配量 Cube 與。篩選模型的比較  
  當您建立模型時配量 Cube 就像是在關聯式採礦模型上建立篩選。 在關聯式模型中，資料來源上的篩選會定義為 SQL 陳述式上的 WHERE 子句；在 Cube 中，您可使用編輯器來建立使用 MDX 的篩選陳述式。  
   
  例如，Cube 可能包含有關全球產品購買的資訊，但是在您的行銷活動中，您想要根據居住在英國地區且年齡 30 歲以上的女性客戶分析來建立模型。  
@@ -124,12 +129,12 @@ caps.handback.revision: 12
   
 -   在第二個篩選中，您會選擇「客戶」維度，選取「性別」屬性，然後從屬性值清單中選取「女性」。  
   
- 在建立採礦結構之後，您可以修改 Cube 資料的定義和篩選準則。 如需詳細資訊，請參閱 [Filter the Source Cube for a Mining Structure](../Topic/Filter%20the%20Source%20Cube%20for%20a%20Mining%20Structure.md)。  
+ 在建立採礦結構之後，您可以修改 Cube 資料的定義和篩選準則。 如需詳細資訊，請參閱[採礦模型的篩選](~/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)。  
   
  **[採礦結構]** 索引標籤和 **[採礦模型]** 索引標籤會提供將篩選加入至現有採礦結構的選項，加入的方法是按一下 **[定義 Cube 配量]**。 **[配量 Cube]** 對話方塊會幫助您從下拉式清單中選擇值來建立有效的 MDX 篩選運算式。  
   
 > [!WARNING]  
->  請注意， [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中已經變更設計和瀏覽 Cube 的介面。 如需詳細資訊，請參閱[瀏覽 Cube 中的資料和中繼資料](../../analysis-services/multidimensional-models/browse-data-and-metadata-in-cube.md)。  
+>  請注意， [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中已經變更設計和瀏覽 Cube 的介面。 如需詳細資訊，請參閱 [瀏覽 Cube 中的資料和中繼資料](../../analysis-services/multidimensional-models/browse-data-and-metadata-in-cube.md)。  
   
  您可以在 Cube 上加入要傳回採礦模型所需資料之必要數量的篩選。 您也可以在個別 Cube 配量上定義配量。 例如，若結構包含兩個以產品為基礎的巢狀資料表，您可以在 2004 年 3 月配量一個資料表，並在 2004 年 4 月配量另一個資料表。 接著您可以使用所產生的模型，依據 3 月的購買來預測 4 月的購買。  
   
@@ -158,7 +163,7 @@ caps.handback.revision: 12
 > [!WARNING]  
 >  只有以下的模型類型才支援資料採礦維度的建立：以 Microsoft 叢集演算法、Microsoft 決策樹演算法或 Microsoft 關聯演算法為根據的模型。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [採礦結構資料行](../../analysis-services/data-mining/mining-structure-columns.md)   
  [採礦模型資料行](../../analysis-services/data-mining/mining-model-columns.md)   
@@ -166,3 +171,4 @@ caps.handback.revision: 12
  [採礦結構和結構資料行的屬性](../../analysis-services/data-mining/properties-for-mining-structure-and-structure-columns.md)  
   
   
+

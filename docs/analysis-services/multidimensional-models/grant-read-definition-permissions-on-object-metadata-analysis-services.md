@@ -1,34 +1,39 @@
 ---
-title: "授與物件中繼資料的讀取定義權限 (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "中繼資料 [Analysis Services]"
-  - "權限 [Analysis Services], 讀取中繼資料"
-  - "讀取中繼資料權限"
+title: "授與讀取權限定義物件中繼資料 (Analysis Services) |Microsoft 文件"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- metadata [Analysis Services]
+- permissions [Analysis Services], read metadata
+- read metadata permissions
 ms.assetid: c857e48e-64b0-4ffe-900d-a0a3ddafcefb
 caps.latest.revision: 32
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 32
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 55c4e6d43ffedd933e968e8fc2355871c698d290
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 授與物件中繼資料的讀取定義權限 (Analysis Services)
+# <a name="grant-read-definition-permissions-on-object-metadata-analysis-services"></a>授與物件中繼資料的讀取定義權限 (Analysis Services)
   讀取所選物件上的物件定義或中繼資料的權限，可讓管理員授與檢視物件資訊的權限，而不必同時授與修改物件定義、修改物件結構或檢視物件實際資料的權限。 [讀取定義] 權限可以在資料庫、資料來源、維度、採礦結構和採礦模型層級上授與。 如果您要求 Cube 的 [讀取定義] 權限，就必須針對資料庫啟用 [讀取定義]。請記住，權限是加總的。 例如，某個角色會授與讀取 Cube 之中繼資料的權限，而第二個角色則會授與讀取維度之中繼資料的相同使用者權限。 兩個不同角色的權限結合之後，使用者就會同時擁有讀取該資料庫內 Cube 之中繼資料和維度之中繼資料的權限。  
   
 > [!NOTE]  
->  讀取資料庫之中繼資料的權限，是要使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 或 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 連接到 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 資料庫所需的最少權限。 有權限讀取中繼資料的使用者．也可以使用 DISCOVER_XML_METADATA 結構描述資料列集，來查詢物件和檢視其中繼資料。 如需詳細資訊，請參閱 [DISCOVER_XML_METADATA Rowset](../../analysis-services/schema-rowsets/xml/discover-xml-metadata-rowset.md)。  
+>  讀取資料庫之中繼資料的權限，是要使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 或 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 連接到 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]資料庫所需的最少權限。 有權限讀取中繼資料的使用者．也可以使用 DISCOVER_XML_METADATA 結構描述資料列集，來查詢物件和檢視其中繼資料。 如需詳細資訊，請參閱 [DISCOVER_XML_METADATA Rowset](../../analysis-services/schema-rowsets/xml/discover-xml-metadata-rowset.md)。  
   
-## 設定資料庫的讀取定義權限  
+## <a name="set-read-definition-permissions-on-a-database"></a>設定資料庫的讀取定義權限  
  授與讀取資料庫中繼資料的權限時，也會授與讀取資料庫中所有物件之中繼資料的權限。  
   
  建議您在設定用於專用處理的角色時，在資料庫層級包含 [讀取定義] 權限。 擁有 [讀取定義] 可讓非管理員的使用者在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中檢視模型的物件階層，並巡覽到個別物件以執行後續處理。  
@@ -41,7 +46,7 @@ caps.handback.revision: 32
   
 4.  按一下 [確定]，完成角色的建立。  
   
-## 設定個別物件的讀取定義權限  
+## <a name="set-read-definition-permissions-on-individual-objects"></a>設定個別物件的讀取定義權限  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，連線到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的執行個體、開啟 [資料庫] 資料夾、選取資料庫、在物件總管中展開適當資料庫的 [角色]，然後按一下資料庫角色 (或建立新的資料庫角色)。  
   
@@ -59,7 +64,7 @@ caps.handback.revision: 32
   
 5.  按一下 [確定]，完成角色的建立。  
   
-## 請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [授與資料庫權限 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-database-permissions-analysis-services.md)   
  [授與處理權限 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md)  
   

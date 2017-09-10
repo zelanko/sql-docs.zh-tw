@@ -1,32 +1,37 @@
 ---
-title: "使用 Microsoft 時間序列檢視器瀏覽模型 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "資料採礦 [Analysis Services], 連續資料行"
-  - "採礦模型內容, 檢視"
-  - "Microsoft 時間序列檢視器"
-  - "圖表 [Analysis Services]"
-  - "時間序列檢視器 [Analysis Services]"
-  - "連續資料行"
-  - "迴歸演算法 [Analysis Services]"
+title: "瀏覽模型，使用 Microsoft 時間序列檢視器 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data mining [Analysis Services], continuous columns
+- mining model content, viewing
+- Microsoft Time Series Viewer
+- charts [Analysis Services]
+- Time Series Viewer [Analysis Services]
+- continuous columns
+- regression algorithms [Analysis Services]
 ms.assetid: a77c16cd-1cd0-4fc5-afeb-d1dab30d1e25
 caps.latest.revision: 44
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 44
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0de59252e18921c4c280143b695000b5913a5aa2
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 使用 Microsoft 時間序列檢視器瀏覽模型
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時間序列檢視器會顯示以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時間序列演算法建立的採礦模型。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時間序列演算法是一種迴歸演算法，在預測狀況下用來建立資料採礦模型，以預測連續的資料行，例如產品銷售。 這些時間序列模型可依照不同的演算法而包含資訊：  
+# <a name="browse-a-model-using-the-microsoft-time-series-viewer"></a>使用 Microsoft 時間序列檢視器瀏覽模型
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 時間序列檢視器會顯示以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時間序列演算法建立的採礦模型。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時間序列演算法是一種迴歸演算法，在預測狀況下用來建立資料採礦模型，以預測連續的資料行，例如產品銷售。 這些時間序列模型可依照不同的演算法而包含資訊：  
   
 -   ARTxp 演算法 (已針對短期預測而最佳化)。  
   
@@ -34,10 +39,10 @@ caps.handback.revision: 44
   
 -   混用 ARTxp 和 ARIMA 演算法。  
   
- 如需這些演算法的詳細資訊，請參閱 [Microsoft 時間序列演算法](../../analysis-services/data-mining/microsoft-time-series-algorithm.md)和 [Microsoft 時間序列演算法技術參考](../../analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)。  
+ 如需這些演算法的詳細資訊，請參閱 [Microsoft 時間序列演算法](../../analysis-services/data-mining/microsoft-time-series-algorithm.md) 和 [Microsoft 時間序列演算法技術參考](../../analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)。  
   
 > [!NOTE]  
->  若要檢視有關此模型中所用的方程式及所探索之模式的詳細資訊，請使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 一般內容樹狀檢視器。 如需詳細資訊，請參閱[使用 Microsoft 一般內容樹狀檢視器瀏覽模型](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)或 [Microsoft 一般內容樹狀檢視器 &#40;資料採礦&#41;](../Topic/Microsoft%20Generic%20Content%20Tree%20Viewer%20\(Data%20Mining\).md)。  
+>  若要檢視有關此模型中所用的方程式及所探索之模式的詳細資訊，請使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 一般內容樹狀檢視器。 如需詳細資訊，請參閱[使用 Microsoft 一般內容樹狀檢視器瀏覽模型](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)或 [Microsoft 一般內容樹狀檢視器 &#40;資料採礦&#41;](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c)。  
   
 ##  <a name="BKMK_ViewerTabs"></a> 檢視器索引標籤  
  在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中瀏覽採礦模型時，該模型會在適合它的檢視器中，顯示於資料採礦設計師的 **[採礦模型檢視器]** 索引標籤上。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時間序列檢視器會提供下列索引標籤：  
@@ -46,10 +51,10 @@ caps.handback.revision: 44
   
 -   [圖表](#BKMK_Charts)  
   
- **注意**：模型內容以及採礦圖例中所顯示的資訊，會依模型所使用的演算法而異。 不過，不論使用了哪些演算法，[模型] 和 [圖表] 索引標籤都相同。  
+ **注意** ：模型內容以及採礦圖例中所顯示的資訊，會依模型所使用的演算法而異。 不過，不論使用了哪些演算法，[模型] 和 [圖表] 索引標籤都相同。  
   
 ###  <a name="BKMK_Tree"></a> 模型  
- 在建立時間序列模型時，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會將完成的模型顯示為樹狀結構。 如果資料包含多個案例序列，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會針對每個序列建立個別的樹狀結構。 例如，假設您要針對太平洋、北美及歐洲地區預測銷售量， 每一個地區的預測都是案例數列。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會針對每個數列建立個別的樹狀結構。 若要檢視特定的序列，請從 [樹狀結構] 清單選取序列。  
+ 在建立時間序列模型時， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會將完成的模型顯示為樹狀結構。 如果資料包含多個案例序列， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會針對每個序列建立個別的樹狀結構。 例如，假設您要針對太平洋、北美及歐洲地區預測銷售量， 每一個地區的預測都是案例數列。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會針對每個數列建立個別的樹狀結構。 若要檢視特定的序列，請從 [樹狀結構] 清單選取序列。  
   
  在時間序列模型中，會針對每個樹狀結構包含一個 [全部] 節點，這個節點會再進一部分割成一序列的節點，代表演算法所發現的週期性結構。 您可以按一下每個節點，即可顯示案例及方程式數目等統計資料。  
   
@@ -77,7 +82,7 @@ caps.handback.revision: 44
   
  如果採礦模型包含多個時間序列，則您可以選取一或多個序列以顯示在圖表中。 只需按一下檢視器右側的清單，然後從清單選取所要的序列即可。 如果圖形變得太過複雜，可以選取或清除圖例中的序列核取方塊以篩選顯示的序列。  
   
- 圖表會顯示記錄資料和未來的資料。 未來的資料會有陰影，以便與記錄資料有所區別。 資料值會以實線表示歷程記錄資料，而以虛線表示預測。 您可以在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中設定屬性，以變更用於每一個數列的線條色彩。 如需詳細資訊，請參閱[變更資料採礦檢視器中使用的色彩](../../analysis-services/data-mining/change-the-colors-used-in-the-data-mining-viewer.md)。  
+ 圖表會顯示記錄資料和未來的資料。 未來的資料會有陰影，以便與記錄資料有所區別。 資料值會以實線表示歷程記錄資料，而以虛線表示預測。 您可以在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中設定屬性，以變更用於每一個數列的線條色彩。 如需詳細資訊，請參閱 [變更資料採礦檢視器中使用的色彩](../../analysis-services/data-mining/change-the-colors-used-in-the-data-mining-viewer.md)。  
   
  您可以使用顯示比例選項，來調整顯示的時間範圍。 您也可以按一下圖表，在圖表上拖曳時間選取範圍，然後再按一下圖表在選取的範圍上放大，以檢視特定的時間範圍。  
   
@@ -85,10 +90,10 @@ caps.handback.revision: 44
   
  [回到頁首](#BKMK_ViewerTabs)  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [採礦模型檢視器工作和使用說明](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [Microsoft 時間序列演算法](../../analysis-services/data-mining/microsoft-time-series-algorithm.md)   
- [Time Series Model Query Examples](../../analysis-services/data-mining/time-series-model-query-examples.md)   
+ [時間序列模型查詢範例](../../analysis-services/data-mining/time-series-model-query-examples.md)   
  [資料採礦模型檢視器](../../analysis-services/data-mining/data-mining-model-viewers.md)  
   
   

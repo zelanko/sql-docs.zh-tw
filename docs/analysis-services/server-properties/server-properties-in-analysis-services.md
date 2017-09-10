@@ -1,30 +1,35 @@
 ---
-title: "Analysis Services 的伺服器屬性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "SSAS, 組態屬性"
-  - "Analysis Services, 組態屬性"
-  - "SQL Server Analysis Services, 組態屬性"
-  - "組態選項 [Analysis Services]"
-  - "伺服器屬性 [Analysis Services]"
-  - "屬性 [Analysis Services], 組態"
-  - "屬性 [Analysis Services]"
+title: "Server Properties in Analysis Services |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- SSAS, configuration properties
+- Analysis Services, configuration properties
+- SQL Server Analysis Services, configuration properties
+- configuration options [Analysis Services]
+- server properties [Analysis Services]
+- properties [Analysis Services], configuration
+- properties [Analysis Services]
 ms.assetid: 274b89cd-14ed-4666-bc13-eedf1de51e18
 caps.latest.revision: 21
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 21
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4157f63f72acd5da6dd369034d1633e7461c9b87
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# Analysis Services 的伺服器屬性
+# <a name="server-properties-in-analysis-services"></a>Analysis Services 的伺服器屬性
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 管理員可以修改 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體的預設伺服器組態屬性。 每一個執行個體都有自己的組態屬性，與同一部伺服器上的其他執行個體分開設定。  
   
  若要設定伺服器，請使用 SQL Server Management Studio，或是編輯特定執行個體的 msmdsrv.ini 檔。  
@@ -34,7 +39,7 @@ SQL Server Management Studio 的 [屬性] 頁會顯示最有可能修改的屬�
 > [!NOTE]  
 >  在預設安裝中，msmdsrv.ini 檔案位於 \Program Files\Microsoft SQL Server\MSAS13.MSSQLSERVER\OLAP\Config 資料夾中。
 > 
-> 其他會影響伺服器組態的屬性包括 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的部署組態屬性。 如需這些屬性的詳細資訊，請參閱[指定方案部署的組態設定](../../analysis-services/multidimensional-models/specifying-configuration-settings-for-solution-deployment.md)。
+> 其他會影響伺服器組態的屬性包括 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的部署組態屬性。 如需這些屬性的詳細資訊，請參閱 [指定方案部署的組態設定](../../analysis-services/multidimensional-models/deployment-script-files-solution-deployment-config-settings.md)。
  
 ##  <a name="bkmk_config"></a> 在 Management Studio 中設定屬性 
   
@@ -85,8 +90,8 @@ SQL Server Management Studio 的 [屬性] 頁會顯示最有可能修改的屬�
 |[安全性屬性](../../analysis-services/server-properties/security-properties.md)|安全性區段包含定義存取權限的基本和進階屬性。 這包含與管理員和使用者有關的設定。|  
 |[執行緒集區屬性](../../analysis-services/server-properties/thread-pool-properties.md)|執行緒集區屬性控制伺服器會建立多少執行緒。 這些屬性主要是進階屬性。|  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [Analysis Services 執行個體管理](../../analysis-services/instances/analysis-services-instance-management.md)   
- [指定方案部署的組態設定](../../analysis-services/multidimensional-models/specifying-configuration-settings-for-solution-deployment.md)  
+ [指定方案部署的組態設定](../../analysis-services/multidimensional-models/deployment-script-files-solution-deployment-config-settings.md)  
   
   

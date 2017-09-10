@@ -1,68 +1,73 @@
 ---
-title: "記錄屬性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "QueryLogFileSize 屬性"
-  - "QueryLogTableName 屬性"
-  - "TraceBackgroundDistributionPeriod 屬性"
-  - "TraceMaxRowsetSize 屬性"
-  - "NullKeyConvertedToUnknown 屬性"
-  - "CrashReportsFolder 屬性"
-  - "TraceDefinitionFile 屬性"
-  - "SQLDumperFlagsOn 屬性"
-  - "KeyErrorLimit 屬性"
-  - "SnapshotDefinitionFile 屬性"
-  - "MinidumpErrorList 屬性"
-  - "ErrorLogFileName 屬性"
-  - "KeyDuplicate 屬性"
-  - "IgnoreDataTruncation 屬性"
-  - "記錄檔 [Analysis Services]"
-  - "Enabled 屬性"
-  - "FileSizeMB 屬性"
-  - "TraceFileWriteTrailerPeriod 屬性"
-  - "TraceQueryResponseTextChunkSize 屬性"
-  - "File 屬性"
-  - "FileBufferSize 屬性"
-  - "TraceRowsetBackgroundFlushPeriod 屬性"
-  - "ErrorLogFileSize 屬性"
-  - "TraceRequestParameters 屬性"
-  - "KeyErrorLimitAction 屬性"
-  - "CreateQueryLogTable 屬性"
-  - "LogDir 屬性"
-  - "TraceBackgroundFlushPeriod 屬性"
-  - "TraceFileBufferSize 屬性"
-  - "SQLDumperFlagsOff 屬性"
-  - "QueryLogConnectionString 屬性"
-  - "KeyNotFound 屬性"
-  - "KeyErrorLogFile 屬性"
-  - "TraceReportFQDN 屬性"
-  - "KeyErrorAction 屬性"
-  - "QueryLogFileName 屬性"
-  - "MessageLogs 屬性"
-  - "MiniDumpFlagsOn 屬性"
-  - "SnapshotFrequencySec 屬性"
-  - "QueryLogSampling 屬性"
-  - "CreateAndSendCrashReports 屬性"
-  - "LogDurationSec 屬性"
+title: "記錄屬性 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- QueryLogFileSize property
+- QueryLogTableName property
+- TraceBackgroundDistributionPeriod property
+- TraceMaxRowsetSize property
+- NullKeyConvertedToUnknown property
+- CrashReportsFolder property
+- TraceDefinitionFile property
+- SQLDumperFlagsOn property
+- KeyErrorLimit property
+- SnapshotDefinitionFile property
+- MinidumpErrorList property
+- ErrorLogFileName property
+- KeyDuplicate property
+- IgnoreDataTruncation property
+- logs [Analysis Services]
+- Enabled property
+- FileSizeMB property
+- TraceFileWriteTrailerPeriod property
+- TraceQueryResponseTextChunkSize property
+- File property
+- FileBufferSize property
+- TraceRowsetBackgroundFlushPeriod property
+- ErrorLogFileSize property
+- TraceRequestParameters property
+- KeyErrorLimitAction property
+- CreateQueryLogTable property
+- LogDir property
+- TraceBackgroundFlushPeriod property
+- TraceFileBufferSize property
+- SQLDumperFlagsOff property
+- QueryLogConnectionString property
+- KeyNotFound property
+- KeyErrorLogFile property
+- TraceReportFQDN property
+- KeyErrorAction property
+- QueryLogFileName property
+- MessageLogs property
+- MiniDumpFlagsOn property
+- SnapshotFrequencySec property
+- QueryLogSampling property
+- CreateAndSendCrashReports property
+- LogDurationSec property
 ms.assetid: 33fd90ee-cead-48f0-8ff9-9b458994c766
 caps.latest.revision: 23
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 23
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 72e9b5094c12d014c361875016b8208264ad2860
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 記錄屬性
+# <a name="log-properties"></a>記錄屬性
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支援下表列出的記錄伺服器屬性。 如需其他伺服器屬性以及如何設定伺服器屬性的詳細資訊，請參閱 [Analysis Services 中的伺服器屬性](../../analysis-services/server-properties/server-properties-in-analysis-services.md)。  
   
-## 一般  
+## <a name="general"></a>一般  
  **檔案**  
  此為字串屬性，識別伺服器記錄檔的名稱。 這個屬性只適用於當記錄會儲存到磁碟檔案，而非資料庫資料表時 (預設行為)。  
   
@@ -74,8 +79,8 @@ caps.handback.revision: 23
  **MessageLogs**  
  此為進階屬性，除非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技術支援的指導之下，否則不應隨意變更。  
   
-## 錯誤記錄檔  
- 您可以在伺服器執行個體層級設定這些屬性，以修改顯示在其他工具和設計師中之錯誤組態的預設值。 如需詳細資訊，請參閱 [Cube、資料分割和維度處理的錯誤組態 &#40;SSAS - 多維度&#41;](../../analysis-services/multidimensional-models/error configuration for cube, partition, and dimension processing.md) 和 <xref:Microsoft.AnalysisServices.MiningStructure.ErrorConfiguration%2A>。  
+## <a name="error-log"></a>錯誤記錄檔  
+ 您可以在伺服器執行個體層級設定這些屬性，以修改顯示在其他工具和設計師中之錯誤組態的預設值。 請參閱[Cube、 資料分割和維度處理 &#40; 的設定時發生錯誤SSAS-多維度 &#41;](../../analysis-services/multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md)和<xref:Microsoft.AnalysisServices.MiningStructure.ErrorConfiguration%2A>如需詳細資訊。  
   
  **ErrorLog\ErrorLogFileName**  
  此屬性在伺服器執行處理作業期間，用來作為預設值。  
@@ -127,7 +132,7 @@ caps.handback.revision: 23
  **ErrorLog\IgnoreDataTruncation**  
  此屬性在伺服器執行處理作業期間，用來作為預設值。  
   
-## 例外狀況  
+## <a name="exception"></a>例外狀況  
  **Exception\CreateAndSendCrashReports**  
  此為進階屬性，除非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技術支援的指導之下，否則不應隨意變更。  
   
@@ -146,7 +151,7 @@ caps.handback.revision: 23
  **Exception\MinidumpErrorList**  
  此為進階屬性，除非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技術支援的指導之下，否則不應隨意變更。  
   
-## 飛行記錄器  
+## <a name="flight-recorder"></a>飛行記錄器  
  **FlightRecorder\Enabled**  
  此為布林值屬性，指出是否啟用飛行記錄器功能。  
   
@@ -169,7 +174,7 @@ caps.handback.revision: 23
   
  此屬性的預設值是空白，因而會預設為 FlightRecorderTraceDef.xml。  
   
-## 查詢記錄  
+## <a name="query-log"></a>查詢記錄  
  **適用於** ：僅限於多維度伺服器模式  
   
  **QueryLog\QueryLogFileName**  
@@ -197,9 +202,9 @@ caps.handback.revision: 23
  此屬性的預設值為 False，表示伺服器不會自動建立記錄資料表，也不會記錄查詢事件。  
   
 > [!NOTE]  
->  如需設定查詢記錄的詳細資訊，請參閱[設定 Analysis Services 查詢記錄](http://go.microsoft.com/fwlink/?LinkId=81890)。  
+>  如需設定查詢記錄的詳細資訊，請參閱 [設定 Analysis Services 查詢記錄](http://go.microsoft.com/fwlink/?LinkId=81890)。  
   
-## Trace  
+## <a name="trace"></a>Trace  
  **Trace\TraceBackgroundDistributionPeriod**  
  此為進階屬性，除非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技術支援的指導之下，否則不應隨意變更。  
   
@@ -230,8 +235,8 @@ caps.handback.revision: 23
  **Trace\TraceRowsetBackgroundFlushPeriod**  
  此為進階屬性，除非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技術支援的指導之下，否則不應隨意變更。  
   
-## 請參閱＜  
- [Analysis Services 的伺服器屬性](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
+## <a name="see-also"></a>請參閱＜  
+ [Analysis Services 中的伺服器屬性](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
  [判斷 Analysis Services 執行個體的伺服器模式](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

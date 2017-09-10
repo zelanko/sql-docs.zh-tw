@@ -4,16 +4,16 @@ description: "本快速入門教學課程會示範如何在 Ubuntu 上安裝 SQL
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 07/24/2017
+ms.date: 09/07/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: 052a2f0a7618c5e160d3c17a3a1efd7d7a4b3fd6
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: f530c1fb9f1d21054631598a2d2ff06d6e2c5f46
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="install-sql-server-and-create-a-database-on-ubuntu"></a>安裝 SQL Server 和 Ubuntu 上建立資料庫
@@ -25,7 +25,7 @@ ms.lasthandoff: 08/02/2017
 > [!TIP]
 > 本教學課程需要使用者輸入和網際網路連線。 如果您有興趣[自動](sql-server-linux-setup.md#unattended)或[離線](sql-server-linux-setup.md#offline)安裝程序，請參閱[SQL Server on Linux 的安裝指南](sql-server-linux-setup.md)。
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>必要條件
 
 您必須擁有的 Ubuntu 機器**至少 3.25 GB**的記憶體。
 
@@ -56,7 +56,7 @@ ms.lasthandoff: 08/02/2017
    sudo apt-get install -y mssql-server
    ```
 
-1. 在套件安裝完成執行之後**mssql conf 安裝**並遵循提示來設定 SA 密碼，並選擇版本。
+1. 在套件安裝完成執行之後**mssql conf 安裝**並遵循提示設定 SA 密碼並選擇您的版本。
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf setup
@@ -117,3 +117,4 @@ ms.lasthandoff: 08/02/2017
 > **Sqlcmd**是一個工具連接到 SQL Server 來執行查詢，並執行管理和開發工作。 其他工具包括[SQL Server Management Studio](sql-server-linux-develop-use-ssms.md)和[Visual Studio Code](sql-server-linux-develop-use-vscode.md)。
 
 [!INCLUDE [Connect, create, and query data](../includes/sql-linux-quickstart-connect-query.md)]
+

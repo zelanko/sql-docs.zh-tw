@@ -1,5 +1,5 @@
 ---
-title: "部署和版本支援在 SQL Server Data Tools (SSRS) |Microsoft 文件"
+title: "部署和版本支援在 SQL Server Data Tools (SSDT) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-server-2016
@@ -15,14 +15,14 @@ caps.latest.revision: 19
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 29df783121de48e39d824b9b9e9666d764717ebc
+ms.translationtype: MT
+ms.sourcegitcommit: 60272ce672c0a32738b0084ea86f8907ec7fc0a5
+ms.openlocfilehash: 173d2a355d1084b22bdc90643484dbab2568e0b0
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/06/2017
 
 ---
-# <a name="deployment-and-version-support-in-sql-server-data-tools-ssrs"></a>SQL Server 資料工具中的部署和版本支援 (SSRS)
+# <a name="deployment-and-version-support-in-sql-server-data-tools-ssdt"></a>部署和版本支援 SQL Server Data Tools (SSDT) 中
   [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 支援以下案例：  
   
 -   開啟報表定義 (*.rdl) 與報表伺服器專案 (\*.rptproj)。  
@@ -78,3 +78,4 @@ ms.lasthandoff: 08/09/2017
  [發行資料來源與報表](../../reporting-services/reports/publishing-data-sources-and-reports.md)  
   
   
+

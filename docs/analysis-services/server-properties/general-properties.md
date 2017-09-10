@@ -1,55 +1,60 @@
 ---
-title: "一般屬性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "IdleConnectionTimeout 屬性"
-  - "InstanceVisible 屬性"
-  - "TempDir 屬性"
-  - "AdminTimeout 屬性"
-  - "MinIdleSessionTimeout 屬性"
-  - "MaxIdleSessionTimeout 屬性"
-  - "IdleOrphanSessionTimeout 屬性"
-  - "BackupDir 屬性"
-  - "CommitTimeout 屬性"
-  - "ExternalCommandTimeout 屬性"
-  - "Enabled 屬性"
-  - "ForceCommitTimeout 屬性"
-  - "Port 屬性"
-  - "CoordinatorShutdownMode 屬性"
-  - "ServerTimeout 屬性"
-  - "AllowedBrowsingFolders 屬性"
-  - "CoordinatorCancelCount 屬性"
-  - "DataDir 屬性"
-  - "CoordinatorQueryMaxThreads 屬性"
-  - "CoordinatorExecutionMode 屬性"
-  - "ExternalConnectionTimeout 屬性"
-  - "CollationName 屬性"
-  - "EnableFast1033Locale 屬性"
-  - "CoordinatorBuildMaxThreads 屬性"
-  - "Language 屬性"
-  - "StatisticsStoreSize 屬性"
-  - "RepositoryConnectionString 屬性"
+title: "一般屬性 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- IdleConnectionTimeout property
+- InstanceVisible property
+- TempDir property
+- AdminTimeout property
+- MinIdleSessionTimeout property
+- MaxIdleSessionTimeout property
+- IdleOrphanSessionTimeout property
+- BackupDir property
+- CommitTimeout property
+- ExternalCommandTimeout property
+- Enabled property
+- ForceCommitTimeout property
+- Port property
+- CoordinatorShutdownMode property
+- ServerTimeout property
+- AllowedBrowsingFolders property
+- CoordinatorCancelCount property
+- DataDir property
+- CoordinatorQueryMaxThreads property
+- CoordinatorExecutionMode property
+- ExternalConnectionTimeout property
+- CollationName property
+- EnableFast1033Locale property
+- CoordinatorBuildMaxThreads property
+- Language property
+- StatisticsStoreSize property
+- RepositoryConnectionString property
 ms.assetid: 88a8117c-396a-469f-a62d-c6f262504021
 caps.latest.revision: 31
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 29
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 007ace0dcec576b4a15909d470a701f442221788
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 一般屬性
+# <a name="general-properties"></a>一般屬性
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支援下表列出的伺服器屬性。 本主題記載 msmdsrv.ini 檔案中，不包含在特定章節中的伺服器屬性，例如 Security、Network 或 ThreadPool。 如需其他伺服器屬性以及如何設定伺服器屬性的詳細資訊，請參閱 [Analysis Services 中的伺服器屬性](../../analysis-services/server-properties/server-properties-in-analysis-services.md)。  
   
- **適用於**：多維度與表格式伺服器模式 (除非另有指示)  
+ **適用於** ：多維度與表格式伺服器模式 (除非另有指示)  
   
-## 非特定類別目錄  
+## <a name="non-specific-category"></a>非特定類別目錄  
  **AdminTimeout**  
  此為帶正負號的 32 位元整數屬性，定義管理員逾時 (以秒為單位)。 此為進階屬性，除非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技術支援的指導之下，否則不應隨意變更。  
   
@@ -73,15 +78,11 @@ caps.handback.revision: 29
  此為帶正負號的 32 位元整數屬性，定義配置給建立資料分割索引的最大執行緒數目。 增加此值就能加速資料分割索引，但要耗用較多記憶體。 如需有關此屬性的詳細資訊，請參閱 [SQL Server 2008 R2 Analysis Services 操作指南](http://go.microsoft.com/fwlink/?LinkID=225539)。  
   
  **CoordinatorCancelCount**  
- 此為帶正負號的 32 位元整數屬性，定義伺服器應檢查取消事件是否發生的頻率 (依據內部反覆運算計數)。 降低此數字就能以更高的頻率檢查取消事件，但要耗用一般效能。  
-  
- 表格式伺服器模式會忽略 **CoordinatorCancelCount**。  
+ 此為帶正負號的 32 位元整數屬性，定義伺服器應檢查取消事件是否發生的頻率 (依據內部反覆運算計數)。 降低此數字就能以更高的頻率檢查取消事件，但要耗用一般效能。 在表格式伺服器模式下，會忽略這個屬性。  
   
  **CoordinatorExecutionMode**  
  此為帶正負號的 32 位元整數屬性，定義伺服器會嘗試的最大平行作業數目，包含處理和查詢作業。 零 (0) 表示伺服器會依據內部演算法決定。 正數表示總計的最大作業數目。 具有反轉符號的負數，表示每個處理器的最大作業數目。  
-  
- 表格式伺服器模式會忽略 **CoordinatorExecutionMode**。  
-  
+
  此屬性的預設值為 -4，表示伺服器限制為每個處理器 4 個平行作業。 如需有關此屬性的詳細資訊，請參閱 [SQL Server 2008 R2 Analysis Services 操作指南](http://go.microsoft.com/fwlink/?LinkID=225539)。  
   
  **CoordinatorQueryMaxThreads**  
@@ -152,7 +153,7 @@ caps.handback.revision: 29
  此為字串屬性，識別包含伺服器記錄檔的目錄名稱。 這個屬性只適用於當記錄會儲存到磁碟檔案，而非資料庫資料表時 (預設行為)。  
   
  **MaxIdleSessionTimeout**  
- 整數屬性，定義最長閒置工作階段逾時 (以秒為單位)。 預設值為零 (0)，表示工作階段永遠不會逾時。 但是，如果伺服器受到資源的條件約束，閒置工作階段仍然會被移除。  
+ 整數屬性，定義最長閒置工作階段逾時 (以秒為單位)。 預設值為零 (0)，表示工作階段永遠不會逾時。但是，如果伺服器受到資源的條件約束，閒置工作階段仍然會被移除。  
   
  **MinIdleSessionTimeout**  
  整數屬性，定義最短閒置工作階段逾時 (以秒為單位)。 預設值是 2700 秒。 此時間過期之後，就允許伺服器結束閒置工作階段，但只有需要記憶體時才會如此做。  
@@ -168,15 +169,15 @@ caps.handback.revision: 29
  **TempDir**  
  此為字串屬性，指定儲存暫存檔的位置，在處理、還原以及其他作業期間使用這些暫存檔。 此屬性的預設值是由安裝程式所決定的。 如果未指定，則預設值為 Data 目錄。  
   
-## RequestPrioritization 類別目錄  
+## <a name="requestprioritization-category"></a>RequestPrioritization 類別目錄  
  **已啟用**  
  此為進階屬性，除非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技術支援的指導之下，否則不應隨意變更。  
   
  **StatisticsStoreSize**  
  此為進階屬性，除非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技術支援的指導之下，否則不應隨意變更。  
   
-## 請參閱＜  
- [Analysis Services 的伺服器屬性](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
+## <a name="see-also"></a>請參閱＜  
+ [Analysis Services 中的伺服器屬性](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
  [判斷 Analysis Services 執行個體的伺服器模式](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

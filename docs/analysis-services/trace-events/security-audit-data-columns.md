@@ -1,24 +1,29 @@
 ---
-title: "安全性稽核資料行 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "安全性稽核事件類別目錄 [SQL Server]"
+title: "安全性稽核資料行 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- Security Audit event category [SQL Server]
 ms.assetid: fac1a7f9-5961-4f4b-bb04-847616b505d7
 caps.latest.revision: 36
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 36
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 77d887822dd132c6e4d3e356e49279fa92d32541
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 安全性稽核資料行
+# <a name="security-audit-data-columns"></a>安全性稽核資料行
   安全性稽核事件類別目錄有下列的事件類別：  
   
 ||||  
@@ -32,7 +37,7 @@ caps.handback.revision: 36
   
  下表列出每一個這類事件類別的資料行。  
   
-## 稽核登入  
+## <a name="audit-login"></a>稽核登入  
   
 |||||  
 |-|-|-|-|  
@@ -52,7 +57,7 @@ caps.handback.revision: 36
 |NTCanonicalUserName|40|8|標準格式的使用者名稱。 例如，engineering.microsoft.com/software/someone。|  
 |ServerName|43|8|產生事件的伺服器名稱。|  
   
-## 稽核登出  
+## <a name="audit-logout"></a>稽核登出  
   
 |**資料行名稱**|**資料行識別碼**|**資料行類型**|**資料行描述**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -71,7 +76,7 @@ caps.handback.revision: 36
 |NTCanonicalUserName|40|8|標準格式的使用者名稱。 例如，engineering.microsoft.com/software/someone。|  
 |ServerName|43|8|產生事件的伺服器名稱。|  
   
-## 稽核伺服器的啟動和停止  
+## <a name="audit-server-starts-and-stops"></a>稽核伺服器的啟動和停止  
   
 |**資料行名稱**|**資料行識別碼**|**資料行類型**|**資料行描述**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -84,7 +89,7 @@ caps.handback.revision: 36
 |TextData|42|9|與事件相關的文字資料。|  
 |ServerName|43|8|產生事件的伺服器名稱。|  
   
-## 稽核物件權限事件  
+## <a name="audit-object-permission-event"></a>稽核物件權限事件  
   
 |**資料行名稱**|**資料行識別碼**|**資料行類型**|**資料行描述**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -109,11 +114,11 @@ caps.handback.revision: 36
 |TextData|42|9|與事件相關的文字資料。|  
 |ServerName|43|8|產生事件的伺服器名稱。|  
   
-## 稽核管理作業事件  
+## <a name="audit-admin-operations-event"></a>稽核管理作業事件  
   
 |**資料行名稱**|**資料行識別碼**|**資料行類型**|**資料行描述**|  
 |---------------------|-------------------|---------------------|----------------------------|  
-|EventSubclass|1|1|事件子類別提供有關每個事件類別的額外資訊：<br /><br /> 1：**Backup**<br /><br /> 2：**Restore**<br /><br /> 3：**Synchronize**<br /><br /> 4：**Detach**<br /><br /> 5：**Attach**<br /><br /> 6：**ImageLoad**<br /><br /> 7：**ImageSave**|  
+|EventSubclass|1|1|事件子類別提供有關每個事件類別的額外資訊：<br /><br /> 1： **Backup**<br /><br /> 2： **Restore**<br /><br /> 3： **Synchronize**<br /><br /> 4： **Detach**<br /><br /> 5： **Attach**<br /><br /> 6： **ImageLoad**<br /><br /> 7： **ImageSave**|  
 |Severity|22|1|例外狀況的嚴重性層級。|  
 |成功|23|1|1 = 成功。 0 = 失敗 (例如，1 表示權限檢查成功，而 0 表示該檢查失敗)。|  
 |錯誤|24|1|給定事件的錯誤號碼。|  
@@ -130,7 +135,7 @@ caps.handback.revision: 36
 |TextData|42|9|與事件相關的文字資料。|  
 |ServerName|43|8|產生事件的伺服器名稱。|  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [安全性稽核事件類別目錄](../../analysis-services/trace-events/security-audit-event-category.md)  
   
   

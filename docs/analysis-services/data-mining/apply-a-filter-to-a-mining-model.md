@@ -1,28 +1,33 @@
 ---
-title: "將篩選套用至採礦模型 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/19/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "模型篩選器 [資料採礦]"
-  - "篩選 [資料採礦]"
-  - "篩選輸入資料列 [Analysis Services]"
-  - "篩選資料 [Analysis Services]"
+title: "將篩選套用至採礦模型 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/19/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- model filter [data mining]
+- filters [data mining]
+- filtering input rows [Analysis Services]
+- filtering data [Analysis Services]
 ms.assetid: 4d0abeb5-e939-46d3-9097-6e0358244300
 caps.latest.revision: 18
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: a3e32512c4cb0139b838195d3a03e8384183a11a
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 將篩選套用至採礦模型
+# <a name="apply-a-filter-to-a-mining-model"></a>將篩選套用至採礦模型
   如果採礦結構包含巢狀資料表，則篩選可以套用至案例資料表、巢狀資料表或兩者。  
   
  下列程序會示範如何建立兩種篩選：案例篩選及巢狀資料表資料列上的篩選。  
@@ -38,7 +43,7 @@ AND EXISTS (SELECT * FROM [<nested table name>]
 WHERE [Model] <> 'Water Bottle' )   
 ```  
   
-### 若要建立採礦模型的案例篩選  
+### <a name="to-create-a-case-filter-on-a-mining-model"></a>若要建立採礦模型的案例篩選  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]的 [方案總管] 中，按一下包含要篩選的採礦模型的採礦結構。  
   
@@ -70,7 +75,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 9. 在方格中，按下一個資料列。  
   
-     您所建立的篩選條件會自動加入 [運算式] 文字方塊。 例如， `[Income] > '30000'`  
+     您所建立的篩選條件會自動加入 [運算式] 文字方塊。 例如，使用 IPv4 位址的 `[Income] > '30000'`  
   
 10. 在方格的下一個資料列中，按一下 [AND/OR] 文字方塊以加入條件。  
   
@@ -84,9 +89,9 @@ WHERE [Model] <> 'Water Bottle' )
   
 13. 在 [運算式] 文字方塊中的篩選條件會自動更新，以包含新的條件。 完成的運算式如下： `[Income] > '30000'AND [Income] < '40000'`  
   
-### 若要在採礦模型中的巢狀資料表加入篩選  
+### <a name="to-add-a-filter-on-the-nested-table-in-a-mining-model"></a>若要在採礦模型中的巢狀資料表加入篩選  
   
-1.  在 [\<名稱> 模型篩選器] 對話方塊中，按一下 [採礦結構資料行] 下方方格中的空白資料列。  
+1.  在**\<名稱 > 模組篩選器**對話方塊方塊中，按一下空白資料列在底下的方格**採礦結構資料行**。  
   
 2.  從下拉式清單選取巢狀資料表的名稱。  
   
@@ -98,7 +103,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 4.  按一下 [值] 方塊，然後按一下 **(…)** 按鈕建置運算式。  
   
-     此時會開啟 [\<名稱>篩選器] 對話方塊。 這個對話方塊只能在目前的資料表上設定條件，在此例中為巢狀資料表。  
+     **\<名稱 > 篩選**對話方塊隨即開啟。 這個對話方塊只能在目前的資料表上設定條件，在此例中為巢狀資料表。  
   
 5.  按一下 [採礦結構資料列] 方塊，然後從巢狀資料表資料行的下拉式清單選取資料行名稱。  
   
@@ -124,11 +129,10 @@ EXISTS (SELECT * FROM [<nested table name>] WHERE [Model] <> 'Water Bottle' )
     > [!NOTE]  
     >  如果您以手動方式變更篩選運算式的任何部分，則該方格會停用，之後就只能在文字編輯模式中使用篩選運算式。 若要還原方格編輯模式，必須清除篩選運算式並重新開始。  
   
-4.  
-  
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [採礦模型的篩選 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)   
  [採礦模型工作和使用說明](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
  [從採礦模型刪除篩選](../../analysis-services/data-mining/delete-a-filter-from-a-mining-model.md)  
   
   
+

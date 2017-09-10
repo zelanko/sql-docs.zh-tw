@@ -1,35 +1,40 @@
 ---
-title: "SharePoint 2013 中的 PowerPivot 資料重新整理 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Power Pivot 資料重新整理與 SharePoint 2013 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 34f03407-2ec4-4554-b16b-bc9a6c161815
 caps.latest.revision: 15
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 14
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 30482b2c269a3d73bd6ef4852d295ae37e52c5e3
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# SharePoint 2013 中的 PowerPivot 資料重新整理
+# <a name="power-pivot-data-refresh-with-sharepoint-2013"></a>SharePoint 2013 中的 PowerPivot 資料重新整理
   在 SharePoint 2013 中， [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料模型重新整理的設計會利用 Excel Services 做為主要元件，在以 SharePoint 模式執行的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體上載入並重新整理資料模型。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器會在 SharePoint 伺服器陣列外部執行。 SharePoint 2013 Excel Services 中的架構同時支援 **互動式資料重新整理** 和 **排定的資料重新整理**。  
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013  
   
  **本主題內容：**  
   
--   [互動式資料重新整理](#bkmk_interactive_refresh)  
+-   [Interactive Data Refresh](#bkmk_interactive_refresh)  
   
 -   [Windows 驗證與活頁簿資料連接以及互動式資料重新整理](#bkmk_windows_auth_interactive_data_refresh)  
   
--   [排定的資料重新整理](#bkmk_scheduled_refresh)  
+-   [Scheduled Data Refresh](#bkmk_scheduled_refresh)  
   
 -   [SharePoint 2013 中排程的資料重新整理架構](#bkmk_refresh_architecture)  
   
@@ -37,7 +42,7 @@ caps.handback.revision: 14
   
 -   [其他資訊](#bkmk_moreinformation)  
   
-## 背景  
+## <a name="background"></a>背景  
  SharePoint Server 2013 Excel Services 會管理 Excel 2013 活頁簿的資料重新整理，並且在以 SharePoint 模式執行的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器上觸發資料模型處理。 若為 Excel 2010 活頁簿，Excel Services 也會管理活頁簿與資料模型的載入和儲存。 不過，Excel Services 會仰賴 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系統服務，將處理命令傳送給資料模型。 下表將摘要說明根據活頁簿的版本傳送資料重新整理命令的元件。 假設的環境是 SharePoint 2013 伺服器陣列，並且設定為使用以 SharePoint 模式執行的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Analysis Server。  
   
 ||||  
@@ -48,7 +53,7 @@ caps.handback.revision: 14
 |在 Analysis Services 執行個體上載入資料模型|SharePoint 2013 Excel Services|SharePoint 2013 Excel Services|  
 |將處理命令傳送至 Analysis Services 執行個體|SharePoint 2013 Excel Services|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系統服務|  
 |更新活頁簿資料|SharePoint 2013 Excel Services|SharePoint 2013 Excel Services|  
-|將活頁簿和資料模型儲存至內容資料庫|**互動式**：無<br /><br /> **已排程** ：SharePoint 2013 Excel Services|SharePoint 2013 Excel Services|  
+|將活頁簿和資料模型儲存至內容資料庫|**互動式** ：無<br /><br /> **已排程** ：SharePoint 2013 Excel Services|SharePoint 2013 Excel Services|  
   
  下表將摘要說明 SharePoint 2013 伺服器陣列 (設定為使用以 SharePoint 模式執行的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Analysis Server) 中支援的重新整理功能：  
   
@@ -60,7 +65,7 @@ caps.handback.revision: 14
   
  **(\*)** 如需活頁簿升級的詳細資訊，請參閱[升級活頁簿和排程的資料重新整理 &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)。  
   
-##  <a name="bkmk_interactive_refresh"></a> 互動式資料重新整理  
+##  <a name="bkmk_interactive_refresh"></a> Interactive Data Refresh  
  SharePoint Server 2013 Excel Services 中的互動式或手動資料重新整理，可以利用原始資料來源中的資料，以重新整理資料模型。 在您透過註冊以 SharePoint 模式執行的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器，設定 Excel Services 應用程式之後，就可以使用互動式資料重新整理。 如需詳細資訊，請參閱 [Manage Excel Services data model settings (SharePoint Server 2013)](http://technet.microsoft.com/library/jj219780.aspx) (管理 Excel Services 資料模型設定 (SharePoint Server 2013)) (http://technet.microsoft.com/library/jj219780.aspx)。  
   
 > [!NOTE]  
@@ -70,7 +75,7 @@ caps.handback.revision: 14
   
 -   互動式資料重新整理只會重新整理目前使用者工作階段中的資料。 資料不會自動儲存回 SharePoint 內容資料庫中的活頁簿項目。  
   
--   **認證**：互動式資料重新整理可以使用目前登入之使用者的識別作為認證或預存認證來連接到資料來源。 使用的認證會取決於針對外部資料來源之活頁簿連接所定義的 Excel Services 驗證設定。  
+-   **認證** ：互動式資料重新整理可以使用目前登入之使用者的識別作為認證或預存認證來連接到資料來源。 使用的認證會取決於針對外部資料來源之活頁簿連接所定義的 Excel Services 驗證設定。  
   
 -   **支援的活頁簿**  ：在 Excel 2013 中建立的活頁簿。  
   
@@ -125,9 +130,9 @@ caps.handback.revision: 14
   
  ![as_interactive_data_refresh2012SP1_windowsauth](../../analysis-services/power-pivot-sharepoint/media/as-interactive-data-refresh2012sp1-windowsauth.gif "as_interactive_data_refresh2012SP1_windowsauth")  
   
- 如需詳細資訊，請參閱[當成作業系統的一部分](http://technet.microsoft.com/library/cc784323\(WS.10\).aspx) (http://technet.microsoft.com/library/cc784323(WS.10).aspx)。  
+ 如需詳細資訊，請參閱 [當成作業系統的一部分](http://technet.microsoft.com/library/cc784323\(WS.10\).aspx) (http://technet.microsoft.com/library/cc784323(WS.10).aspx)。  
   
-##  <a name="bkmk_scheduled_refresh"></a> 排定的資料重新整理  
+##  <a name="bkmk_scheduled_refresh"></a> Scheduled Data Refresh  
  **排程的資料重新整理關鍵重點：**  
   
 -   需要部署 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 增益集。 如需詳細資訊，請參閱[安裝或解除安裝 PowerPivot for SharePoint 增益集 &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)。  
@@ -142,7 +147,7 @@ caps.handback.revision: 14
   
 -   **認證** ：使用預存認證。 不使用目前使用者的識別。  
   
--   **支援的活頁簿**：使用適用於 Excel 2010 的 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 增益集或 Excel 2013 所建立的活頁簿。 不支援在 Excel 2010 中使用 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 增益集所建立的活頁簿。 請至少將活頁簿升級為 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 格式。 如需活頁簿升級的詳細資訊，請參閱[升級活頁簿和排程的資料重新整理 &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)。  
+-   **支援的活頁簿** ：使用適用於 Excel 2010 的 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 增益集或 Excel 2013 所建立的活頁簿。 不支援在 Excel 2010 中使用 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 增益集所建立的活頁簿。 請至少將活頁簿升級為 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 格式。 如需活頁簿升級的詳細資訊，請參閱[升級活頁簿和排程的資料重新整理 &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)。  
   
  若要顯示 **[管理資料重新整理]** 頁面：  
   
@@ -162,7 +167,7 @@ caps.handback.revision: 14
   
     -   將活頁簿儲存回內容資料庫。  
   
- ![管理資料重新整理操作功能表](../../analysis-services/power-pivot-sharepoint/media/as-manage-datarefresh-sharepoint2013.gif "管理資料重新整理操作功能表")  
+ ![管理資料重新整理內容功能表](../../analysis-services/power-pivot-sharepoint/media/as-manage-datarefresh-sharepoint2013.gif "管理資料重新整理內容功能表")  
   
 > [!TIP]  
 >  如需從 SharePoint Online 重新整理活頁簿的資訊，請參閱 [Refreshing Excel workbooks with embedded Power Pivot models from SharePoint Online](http://technet.microsoft.com/library/jj992650.aspx) (從 SharePoint Online 重新整理內嵌 Power Pivot 模型的 Excel 活頁簿) (技術白皮書) (http://technet.microsoft.com/library/jj992650.aspx)。  
@@ -170,9 +175,9 @@ caps.handback.revision: 14
 ##  <a name="bkmk_refresh_architecture"></a> SharePoint 2013 中排程的資料重新整理架構  
  下圖摘要說明 SharePoint 2013 和 SQL Server 2012 SP1 中的資料重新整理架構。  
   
- ![SQL Server 2012 SP1 資料重新整理的架構](../../analysis-services/power-pivot-sharepoint/media/as-scheduled-data-refresh2012sp1-architecture.gif "SQL Server 2012 SP1 資料重新整理的架構")  
+ ![SQL Server 2012 SP1 資料重新整理架構](../../analysis-services/power-pivot-sharepoint/media/as-scheduled-data-refresh2012sp1-architecture.gif "的 SQL Server 2012 SP1 資料重新整理架構")  
   
-||說明||  
+||Description||  
 |-|-----------------|-|  
 |**(1)**|Analysis Services 引擎|以 SharePoint 模式執行的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器上觸發資料模型處理。 此伺服器會在 SharePoint 伺服器陣列外部執行。|  
 |**(2)**|使用者介面|使用者介面是由兩個頁面組成。 第一個頁面用於定義排程，而第二個頁面則用於檢視重新整理記錄。 這些頁面不會直接存取 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式資料庫，而是使用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系統服務來存取資料庫。|  
@@ -191,7 +196,7 @@ caps.handback.revision: 14
 > [!NOTE]  
 >  因為 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系統服務不再載入或儲存 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 模型，所以應用程式伺服器上快取模型的大部分設定都不會套用至 SharePoint 2013 伺服器陣列。  
   
-## 資料重新整理記錄資料  
+## <a name="data-refresh-log-data"></a>資料重新整理記錄資料  
  **使用量資料** ：您可以在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理儀表板中檢視資料重新整理使用量資料。 若要查看使用量資料：  
   
 1.  在 SharePoint 管理中心的 [一般應用程式設定] 群組中，按一下 [[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理儀表板]。  
@@ -208,7 +213,7 @@ caps.handback.revision: 14
   
 -   **[資料重新整理]**的類別。  
   
- 檢閱 **[設定診斷記錄]**。 如需詳細資訊，請參閱[設定及檢視 SharePoint 記錄檔與診斷記錄 &#40;Power Pivot for SharePoint&#41;](../Topic/Configure%20and%20View%20SharePoint%20Log%20Files%20%20and%20Diagnostic%20Logging%20\(Power%20Pivot%20for%20SharePoint\).md)。  
+ 檢閱 **[設定診斷記錄]**。 如需詳細資訊，請參閱[設定及檢視 SharePoint 記錄檔與診斷記錄 &#40;Power Pivot for SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging.md)。
   
 ##  <a name="datarefresh_additional_authentication"></a> 其他驗證考量  
  在 Excel 2013 中， **[Excel Services 驗證設定]** 對話方塊的設定會決定 Excel Services 和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 用於資料重新整理的 Windows 識別。  
@@ -229,7 +234,7 @@ caps.handback.revision: 14
   
 4.  在 **[連線內容]** 對話方塊中，按一下 **[定義]**，然後按一下 **[驗證設定]** 按鈕，可選取色彩。  
   
- ![Excel Services 驗證設定](../../analysis-services/power-pivot-sharepoint/media/as-authentication-settings-4-ecs-in-excel2013.gif "Excel Services 驗證設定")  
+ ![excel services authentication settings](../../analysis-services/power-pivot-sharepoint/media/as-authentication-settings-4-ecs-in-excel2013.gif "excel services authentication settings")  
   
  如需資料重新整理驗證以及認證使用方式的詳細資訊，請參閱部落格文章： [Refreshing PowerPivot Data in SharePoint 2013](http://blogs.msdn.com/b/analysisservices/archive/2012/12/21/refreshing-powerpivot-data-in-sharepoint-2013.aspx)(在 SharePoint 2013 中重新整理 PowerPivot 資料)。  
   
@@ -238,7 +243,7 @@ caps.handback.revision: 14
   
  [Excel Services in SharePoint 2013](http://msdn.microsoft.com/library/sharepoint/jj164076\(v=office.15\)) (SharePoint 2013 中的 Excel Services) (http://msdn.microsoft.com/library/sharepoint/jj164076(v=office.15))。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [以 Power Pivot 模式安裝 Analysis Services](../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)  
   
   

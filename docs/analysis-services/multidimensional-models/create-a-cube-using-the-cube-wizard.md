@@ -1,29 +1,34 @@
 ---
-title: "使用 Cube 精靈來建立 Cube | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Cube [Analysis Services], 建立"
+title: "使用 「 Cube 精靈 」 建立 Cube |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- cubes [Analysis Services], creating
 ms.assetid: d46d659c-3a4e-4364-94ac-f5eb6ba0ec25
 caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 13
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 66e614476f4a609017a023d39c5d58670ad2f5db
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 使用 Cube 精靈來建立 Cube
-  您可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的 [Cube 精靈] 來建立新的 Cube。  
+# <a name="create-a-cube-using-the-cube-wizard"></a>使用 Cube 精靈來建立 Cube
+  您可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的 [Cube 精靈] 來建立新的 Cube。  
   
-### 建立新的 Cube  
+### <a name="to-create-a-new-cube"></a>建立新的 Cube  
   
 1.  在方案總管中，以滑鼠右鍵按一下 [Cube]，然後按一下 [新增 Cube]。  
   

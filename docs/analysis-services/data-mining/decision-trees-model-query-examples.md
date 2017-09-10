@@ -1,27 +1,32 @@
 ---
-title: "決策樹模型查詢範例 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "決策樹演算法 [Analysis Services]"
-  - "內容查詢 [DMX]"
-  - "決策樹 [Analysis Services]"
+title: "決策樹模型查詢範例 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- decision tree algorithms [Analysis Services]
+- content queries [DMX]
+- decision trees [Analysis Services]
 ms.assetid: ceaf1370-9dd1-4d1a-a143-7f89a723ef80
 caps.latest.revision: 24
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2822b60d236ab7d961ce02bf76cbc7ac996aefb0
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 決策樹模型查詢範例
+# <a name="decision-trees-model-query-examples"></a>決策樹模型查詢範例
   當您針對資料採礦模型建立查詢時，可以建立內容查詢來提供有關分析期間所發現之模式的詳細資料，或是建立預測查詢來使用模型中的模式，為新的資料進行預測。 例如，決策樹模型的內容查詢可能會提供有關每一樹狀結構層上之案例數的統計資料，或是區分案例的規則。 或者，預測查詢會將此模型對應到新的資料，以便產生建議、分類等等。 您也可以使用查詢來擷取有關模型的中繼資料。  
   
  本節說明如何針對以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法為基礎的模型來建立查詢。  
@@ -43,7 +48,7 @@ caps.handback.revision: 24
  [從決策樹模型擷取迴歸公式](#bkmk_Query6)  
   
 ##  <a name="bkmk_top2"></a> 尋找有關決策樹模型的資訊  
- 若要在決策樹模型的內容上建立有意義的查詢，您應該了解模型內容的結構，以及哪一種節點類型會儲存那一種資訊。 如需詳細資訊，請參閱[決策樹模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)。  
+ 若要在決策樹模型的內容上建立有意義的查詢，您應該了解模型內容的結構，以及哪一種節點類型會儲存那一種資訊。 如需詳細資訊，請參閱 [決策樹模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)。  
   
 ###  <a name="bkmk_Query1"></a> 範例查詢 1：從資料採礦結構描述資料列集擷取模型參數  
  您可以藉由查詢資料採礦結構描述資料列集來尋找有關此模型的中繼資料，例如此模型建立的時間、上次處理此模型的時間、此模型所根據的採礦結構名稱，以及用來當做可預測屬性的資料行名稱。 您也可以傳回初次建立此模型時所使用的參數。  
@@ -61,7 +66,7 @@ WHERE MODEL_NAME = 'TM_Decision Tree'
  COMPLEXITY_PENALTY=0.5, MAXIMUM_INPUT_ATTRIBUTES=255,MAXIMUM_OUTPUT_ATTRIBUTES=255,MINIMUM_SUPPORT=10,SCORE_METHOD=4,SPLIT_METHOD=3,FORCE_REGRESSOR=  
   
 ###  <a name="bkmk_Query2"></a> 範例查詢 2：使用 DMX 傳回有關模型內容的詳細資料  
- 下列查詢會傳回您在[資料採礦基本教學課程](../Topic/Basic%20Data%20Mining%20Tutorial.md)中建立模型時所建立之決策樹模型的一些基本資訊。 每個樹狀結構都會儲存在它自己的節點中。 由於此模型只包含單一可預測屬性，因此只有一個樹狀節點。 但是，如果您使用決策樹演算法來建立關聯模型，可能會有好幾百個樹狀結構，每一個產品都有一個。  
+ 下列查詢會傳回您在 [資料採礦基本教學課程](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)中建立模型時所建立之決策樹模型的一些基本資訊。 每個樹狀結構都會儲存在它自己的節點中。 由於此模型只包含單一可預測屬性，因此只有一個樹狀節點。 但是，如果您使用決策樹演算法來建立關聯模型，可能會有好幾百個樹狀結構，每一個產品都有一個。  
   
  此查詢會傳回類型 2 的所有節點，這些節點是代表特定可預測屬性之樹狀結構的最上層節點。  
   
@@ -130,7 +135,7 @@ AND NODE_TYPE = 4
 |00000000100010100|Total Children = 3|75|  
 |0000000010001010100|Number Children At Home = 1|75|  
   
-## 使用決策樹模型進行預測  
+## <a name="making-predictions-using-a-decision-trees-model"></a>使用決策樹模型進行預測  
  由於決策樹可用於各種工作，包括分類、迴歸，甚至是關聯，所以當您在決策樹模型上建立預測查詢時，您有許多可用的選項。 您必須了解此模型的建立目的，才能了解預測的結果。 下列查詢範例說明三種不同的案例：  
   
 -   傳回分類模型的預測，連同正確預測的機率，然後根據機率篩選結果。  
@@ -140,7 +145,7 @@ AND NODE_TYPE = 4
 -   當輸入和輸出之間的關係為線性時，針對決策樹的一部分擷取迴歸公式。  
   
 ###  <a name="bkmk_Query4"></a> 範例查詢 4：傳回包含機率的預測  
- 下列範例查詢會使用您在[資料採礦基本教學課程](../Topic/Basic%20Data%20Mining%20Tutorial.md)中建立的決策樹模型。 此查詢會從 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] DW 的 dbo.ProspectiveBuyers 資料表傳入一組新的取樣資料，以便預測新資料集中的哪些客戶將購買自行車。  
+ 下列範例查詢會使用您在 [資料採礦基本教學課程](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)中建立的決策樹模型。 此查詢會從 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] DW 的 dbo.ProspectiveBuyers 資料表傳入一組新的取樣資料，以便預測新資料集中的哪些客戶將購買自行車。  
   
  此查詢使用預測函數 [PredictHistogram &#40;DMX&#41;](../../dmx/predicthistogram-dmx.md)，它會傳回一個巢狀資料表，其中包含此模型所探索之機率的有用資訊。 此查詢的最終 WHERE 子句會篩選結果，以便只傳回預測為可能購買自行車之機率大於 0% 的客戶。  
   
@@ -179,7 +184,7 @@ WHERE [Bike Buyer] = 1
 AND PredictProbability([Bike Buyer]) >'.05'  
 ```  
   
- 依預設，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會傳回具有資料行標籤 **Expression** 的巢狀資料表。 您可以為傳回的資料行設定別名來變更這個標籤。 如果您這樣做，此別名 (此案例中為 **Results**) 會用來當作資料行標題及巢狀資料表中的值。 您必須展開此巢狀資料表，才能看到結果。  
+ 依預設， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會傳回具有資料行標籤 **Expression**的巢狀資料表。 您可以為傳回的資料行設定別名來變更這個標籤。 如果您這樣做，此別名 (此案例中為 **Results**) 會用來當作資料行標題及巢狀資料表中的值。 您必須展開此巢狀資料表，才能看到結果。  
   
  範例結果 **Bike Buyer** = 1：  
   
@@ -192,7 +197,7 @@ AND PredictProbability([Bike Buyer]) >'.05'
  如果提供者不支援階層式資料列集 (例如這裡顯示的內容)，您可以在查詢中使用 FLATTENED 關鍵字，以資料表的形式傳回結果，此資料表包含了用來取代重複資料行值的 Null。 如需詳細資訊，請參閱[巢狀資料表 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/nested-tables-analysis-services-data-mining.md) 或[了解 DMX Select 陳述式](../../dmx/understanding-the-dmx-select-statement.md)。  
   
 ###  <a name="bkmk_Query5"></a> 範例查詢 5：從決策樹模型預測關聯  
- 下列範例查詢是以關聯採礦結構為基礎。 若要依照此範例進行，您可以將新的模型加入至此採礦結構，然後選取 Microsoft 決策樹做為演算法。 如需如何建立關聯採礦模型的詳細資訊，請參閱[第 3 課︰建立購物籃狀況 &#40;中繼資料採礦教學課程&#41;](../Topic/Lesson%203:%20Building%20a%20Market%20Basket%20Scenario%20\(Intermediate%20Data%20Mining%20Tutorial\).md)。  
+ 下列範例查詢是以關聯採礦結構為基礎。 若要依照此範例進行，您可以將新的模型加入至此採礦結構，然後選取 Microsoft 決策樹做為演算法。 如需如何建立關聯採礦模型的詳細資訊，請參閱[第 3 課︰建立購物籃狀況 &#40;中繼資料採礦教學課程&#41;](http://msdn.microsoft.com/library/651eef38-772e-4d97-af51-075b1b27fc5a)。  
   
  下列範例查詢為單一查詢，您可以在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中輕鬆地建立此查詢，其方式是選擇欄位，然後從下拉式清單中選取這些欄位的值。  
   
@@ -232,9 +237,9 @@ NATURAL PREDICTION JOIN
 |Classic Vest|  
   
 ###  <a name="bkmk_Query6"></a> 範例查詢 6：從決策樹模型擷取迴歸公式  
- 當您建立的決策樹模型在連續屬性上包含迴歸時，您可以使用迴歸公式來進行預測，或是可以擷取有關此迴歸公式的資訊。 如需迴歸模型上之查詢的詳細資訊，請參閱[線性迴歸模型查詢範例](../../analysis-services/data-mining/linear-regression-model-query-examples.md)。  
+ 當您建立的決策樹模型在連續屬性上包含迴歸時，您可以使用迴歸公式來進行預測，或是可以擷取有關此迴歸公式的資訊。 如需迴歸模型上之查詢的詳細資訊，請參閱 [線性迴歸模型查詢範例](../../analysis-services/data-mining/linear-regression-model-query-examples.md)。  
   
- 如果決策樹模型包含迴歸節點及分散於離散屬性或範圍上之節點的混合，您只能建立傳回迴歸節點的查詢。 NODE_DISTRIBUTION 資料表包含迴歸公式的詳細資料。 在此範例中，資料行會扁平化，而且會設定 NODE_DISTRIBUTION 資料表的別名來方便檢視。 但是在此模型中，未找到任何迴歸輸入變數可以將 Income 與其他連續屬性產生關聯。 在這類情況下，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會傳回此屬性的平均值以及模型中該屬性的總變異數。  
+ 如果決策樹模型包含迴歸節點及分散於離散屬性或範圍上之節點的混合，您只能建立傳回迴歸節點的查詢。 NODE_DISTRIBUTION 資料表包含迴歸公式的詳細資料。 在此範例中，資料行會扁平化，而且會設定 NODE_DISTRIBUTION 資料表的別名來方便檢視。 但是在此模型中，未找到任何迴歸輸入變數可以將 Income 與其他連續屬性產生關聯。 在這類情況下， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會傳回此屬性的平均值以及模型中該屬性的總變異數。  
   
 ```  
 SELECT FLATTENED NODE_DISTRIBUTION AS t  
@@ -244,7 +249,7 @@ WHERE NODE_TYPE = 25
   
  範例結果：  
   
-|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VARIANCE|t.VALUETYPE|  
+|T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VARIANCE|t.VALUETYPE|  
 |-----------------------|------------------------|---------------|-------------------|----------------|-----------------|  
 |Yearly Income|遺漏|0|0.000457142857142857|0|1|  
 |Yearly Income|57220.8876687257|17484|0.999542857142857|1041275619.52776|3|  
@@ -252,8 +257,8 @@ WHERE NODE_TYPE = 25
   
  如需迴歸模型中所用的值類型和統計資料的詳細資訊，請參閱[線性迴歸模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)。  
   
-## 預測函數的清單  
- 所有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 演算法都支援一組常用的函數。 不過，[!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法支援下表所列出的其他函數。  
+## <a name="list-of-prediction-functions"></a>預測函數的清單  
+ 所有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 演算法都支援一組常用的函數。 不過， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法支援下表所列出的其他函數。  
   
 |||  
 |-|-|  
@@ -271,7 +276,7 @@ WHERE NODE_TYPE = 25
   
  如需所有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 演算法通用函數的清單，請參閱[一般預測函數 &#40;DMX&#41;](../../dmx/general-prediction-functions-dmx.md)。 如需特定函數的語法，請參閱[資料採礦延伸模組 &#40;DMX&#41; 函數參考](../../dmx/data-mining-extensions-dmx-function-reference.md)。  
   
-## 請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [資料採礦查詢](../../analysis-services/data-mining/data-mining-queries.md)   
  [Microsoft 決策樹演算法](../../analysis-services/data-mining/microsoft-decision-trees-algorithm.md)   
  [Microsoft 決策樹演算法技術參考](../../analysis-services/data-mining/microsoft-decision-trees-algorithm-technical-reference.md)   

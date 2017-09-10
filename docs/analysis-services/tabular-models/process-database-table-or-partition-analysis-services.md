@@ -1,27 +1,32 @@
 ---
-title: "處理資料庫、資料表或資料分割 (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.ASVS.SSMS.PARTITIONS.PROCESSINGOPTIONS.IMBI.F1"
+title: "處理資料庫、 資料表或資料分割 (Analysis Services) |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.ASVS.SSMS.PARTITIONS.PROCESSINGOPTIONS.IMBI.F1
 ms.assetid: 307d69c3-cabb-4dfa-b90c-9852492c1213
 caps.latest.revision: 8
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 8
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 89e7f6904f4e47fc6f2047acec2b7bbc02c68c20
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 處理資料庫、資料表或資料分割 (Analysis Services)
-  本主題中的工作描述的是如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的 [處理 \<物件>] 對話方塊來手動處理表格式模型資料庫、資料表或資料分割。  
+# <a name="process-database-table-or-partition-analysis-services"></a>處理資料庫、資料表或資料分割 (Analysis Services)
+  本主題中的工作描述如何使用手動處理表格式模型資料庫、 資料表或資料分割**程序\<物件 >** ] 對話方塊中的[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
   
  如需表格式模型處理的詳細資訊，請參閱[處理資料 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/process-data-ssas-tabular.md)。  
   
@@ -33,7 +38,7 @@ caps.handback.revision: 8
   
 2.  在 **[處理資料庫]** 對話方塊的 **[模式]** 清單方塊中，選取下列其中一個處理模式：  
   
-    |模式|說明|  
+    |[模式]|說明|  
     |----------|-----------------|  
     |**處理預設**|偵測資料庫物件的處理狀態，並且執行必要的處理，以便將尚未處理或部分處理的物件傳遞為完整處理的狀態。 載入空白資料表和資料分割的資料；建立或重新建立 (重新計算) 階層、導出資料行及關聯性。|  
     |**完整處理**|處理資料庫及其包含的所有物件。 對已處理過的物件執行完整處理時， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會先卸除該物件中的所有資料，然後再處理該物件。 當物件已進行過任何結構性變更時，就需要這種處理。 此選項需要最多資源。|  
@@ -48,7 +53,7 @@ caps.handback.revision: 8
   
 2.  在 **[處理資料表]** 對話方塊的 **[模式]** 清單方塊中，選取下列其中一個處理模式：  
   
-    |模式|說明|  
+    |[模式]|說明|  
     |----------|-----------------|  
     |**處理預設**|偵測資料表物件的處理狀態，並且執行必要的處理，以便將尚未處理或部分處理的物件傳遞為完整處理的狀態。 載入空白資料表和資料分割的資料；建立或重新建立 (重新計算) 階層、導出資料行及關聯性。|  
     |**完整處理**|處理資料表物件及其包含的所有物件。 對已處理過的物件執行完整處理時， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會先卸除該物件中的所有資料，然後再處理該物件。 當物件已進行過任何結構性變更時，就需要這種處理。 此選項需要最多資源。|  
@@ -66,7 +71,7 @@ caps.handback.revision: 8
   
 3.  在 **[處理資料分割]** 對話方塊的 **[模式]** 清單方塊中，選取下列其中一個處理模式：  
   
-    |模式|說明|  
+    |[模式]|說明|  
     |----------|-----------------|  
     |**處理預設**|偵測資料分割物件的處理狀態，並且執行必要的處理，以便將尚未處理或部分處理的資料分割物件傳遞為完整處理的狀態。 載入空白資料表和資料分割的資料；建立或重新建立 (重新計算) 階層、導出資料行及關聯性。|  
     |**完整處理**|處理資料分割物件及其包含的所有物件。 對已處理過的物件執行完整處理時， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會先卸除該物件中的所有資料，然後再處理該物件。 當物件已進行過任何結構性變更時，就需要這種處理。|  
@@ -76,7 +81,7 @@ caps.handback.revision: 8
   
 4.  在 **[處理]** 核取方塊資料行中，選取您想透過選取的模式處理的資料分割，然後按一下 **[確定]**。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [表格式模型資料分割 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/tabular-model-partitions-ssas-tabular.md)   
  [建立及管理表格式模型資料分割 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md)  
   

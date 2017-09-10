@@ -1,24 +1,33 @@
 ---
-title: "從用戶端應用程式連接 (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "從用戶端應用程式 (Analysis Services) 連接 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.connection.login.analysisserver.f1
+- sql13.swb.connecttoas.connectionproperties.f1
+- sql13.swb.connecttoas.login.f1
 ms.assetid: b1e0f1d4-0b87-4ad3-8172-f746fe2f16a2
 caps.latest.revision: 9
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 9
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 1316b995a0d12f3ee358a9e355925dfc334473a4
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 從用戶端應用程式連接 (Analysis Services)
+# <a name="connect-from-client-applications-analysis-services"></a>從用戶端應用程式連接 (Analysis Services)
   如果您不熟悉 Analysis Services，請透過本主題中的資訊，使用常用的工具和應用程式連接至 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 現有的執行個體。 本主題也說明如何以不同的使用者識別進行連接，方便測試之用。  
   
 -   [使用 SQL Server Management Studio (SSMS) 連接](#bkmk_SSMS)  
@@ -69,7 +78,7 @@ caps.handback.revision: 9
     ```  
   
 ##  <a name="bkmk_excel"></a> 使用 Excel 連接  
- Microsoft Excel 通常用來分析商務資料。 在 Excel 安裝過程中，Office 會安裝 Analysis Services OLE DB 提供者 (MSOLAP DLL)、ADOMD.NET 和其他資料提供者，好讓您可以更輕易地使用網路伺服器上的資料。 如果您搭配舊版的 Excel 使用較新版的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，您很可能必須在連接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的每一個工作站上安裝較新的資料提供者。 如需詳細資訊，請參閱[用於 Analysis Services 連接的資料提供者](../../analysis-services/instances/data-providers-used-for-analysis-services-connections.md)。  
+ Microsoft Excel 通常用來分析商務資料。 在 Excel 安裝過程中，Office 會安裝 Analysis Services OLE DB 提供者 (MSOLAP DLL)、ADOMD.NET 和其他資料提供者，好讓您可以更輕易地使用網路伺服器上的資料。 如果您搭配舊版的 Excel 使用較新版的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ，您很可能必須在連接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的每一個工作站上安裝較新的資料提供者。 如需詳細資訊，請參閱 [用於 Analysis Services 連接的資料提供者](../../analysis-services/instances/data-providers-used-for-analysis-services-connections.md) 。  
   
  當您設定與 Analysis Services Cube 或表格式模型資料庫的連接時，Excel 會將連接資訊儲存到 .odc 檔案中，以供將來使用。 連接是在目前 Windows 使用者的安全性內容中建立。 使用者帳戶必須擁有資料庫的讀取權限，才能連接成功。  
   
@@ -99,7 +108,7 @@ caps.handback.revision: 9
 -   [Analysis Services 連接管理員](../../integration-services/connection-manager/analysis-services-connection-manager.md)  
   
 > [!NOTE]  
->  使用 SQL Server Data Tools 處理現有的 Analysis Services 專案時，以線上模式專案，請記住您可以使用本機或版本控制專案以離線方式連接，或者使用線上模式連接，在資料庫執行期間更新 Analysis Services 物件。 如需詳細資訊，請參閱[在連線模式下連接至 Analysis Services 資料庫](../../analysis-services/multidimensional-models/connect-in-online-mode-to-an-analysis-services-database.md)。 更常見的情況是，來自 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 的連接會處於專案模式，而且只有當您明確部署專案時，其中的變更才會部署到資料庫。  
+>  使用 SQL Server Data Tools 處理現有的 Analysis Services 專案時，以線上模式專案，請記住您可以使用本機或版本控制專案以離線方式連接，或者使用線上模式連接，在資料庫執行期間更新 Analysis Services 物件。 如需詳細資訊，請參閱 [在連線模式下連接至 Analysis Services 資料庫](../../analysis-services/multidimensional-models/connect-in-online-mode-to-an-analysis-services-database.md)。 更常見的情況是，來自 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 的連接會處於專案模式，而且只有當您明確部署專案時，其中的變更才會部署到資料庫。  
   
 ##  <a name="bkmk_tshoot"></a> 測試連接  
  您可以使用 SQL Server Profiler 監視 Analysis Services 的連接。 「稽核登入」和「稽核登出」事件都會提供連接的辨識項。 識別欄位表示建立連接時遵循的安全性內容。  
@@ -120,18 +129,18 @@ caps.handback.revision: 9
   
      若要測試，請使用 Excel 或 SSMS 並指定 Analysis Services 執行個體使用的 IP 位址和通訊埠，然後連接到遠端電腦。 如果可以連接，表示防火牆規則允許執行個體的傳入連接，而且執行個體也允許遠端連接。  
   
-     此外，使用 TCP/IP 做為連接通訊協定時，請記住用戶端必須位於相同網域或信任網域中才能連接 Analysis Services。 如果連接是跨安全性界限進行，您就必須設定 HTTP 存取。 如需詳細資訊，請參閱[設定 Internet Information Services &#40;IIS&#41; 8.0 上 Analysis Services 的 HTTP 存取](../../analysis-services/instances/configure http access to analysis services on iis 8.0.md)。  
+     此外，使用 TCP/IP 做為連接通訊協定時，請記住用戶端必須位於相同網域或信任網域中才能連接 Analysis Services。 如果連接是跨安全性界限進行，您就必須設定 HTTP 存取。 如需詳細資訊，請參閱[設定 Internet Information Services &#40;IIS&#41; 8.0 上 Analysis Services 的 HTTP 存取](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)。  
   
 -   您是否能使用一些工具連接，但是其他工具就不行？ 這個問題可能是用戶端程式庫版本錯誤。 您可以從 SQL Server 功能套件下載頁面取得用戶端程式庫。  
   
  下列文件也能協助您解決連接失敗的問題：  
   
- [Resolving Common Connectivity Issues in SQL Server 2005 Analysis Services Connectivity Scenarios](http://technet.microsoft.com/library/cc917670.aspx) (在 SQL Server 2005 Analysis Services 連接狀況中解決常見的連接問題)。 這份文件已經有一些歲月，但是其中的資訊和方法仍然適用。  
+ [Resolving Common Connectivity Issues in SQL Server 2005 Analysis Services Connectivity Scenarios](http://technet.microsoft.com/library/cc917670.aspx)(在 SQL Server 2005 Analysis Services 連接狀況中解決常見的連接問題)。 這份文件已經有一些歲月，但是其中的資訊和方法仍然適用。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [連接到 Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)   
  [Analysis Services 支援的驗證方法](../../analysis-services/instances/authentication-methodologies-supported-by-analysis-services.md)   
- [模擬 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/impersonation-ssas-tabular.md)   
+ [模擬 &#40;SSAS 表格式 &#41;](../../analysis-services/tabular-models/impersonation-ssas-tabular.md)   
  [建立資料來源 &#40;SSAS 多維度&#41;](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
   
   

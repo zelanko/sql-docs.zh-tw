@@ -17,10 +17,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c7ece8c33a4c110898134da60aea6595b936e1e9
+ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
+ms.openlocfilehash: e718e67c8756d691338a614c775c2ff71df4b06c
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/08/2017
 
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>資料行模式設定檔要求選項 (資料分析工作)
@@ -36,7 +36,7 @@ ms.lasthandoff: 08/03/2017
   
 -   **分隔符號**：根據預設，分隔符號清單包含下列字元：空格、水平定位字元 (\t)、新行字元 (\n) 和歸位字元 (\r)。 雖然您可以指定其他分隔符號，但是無法移除預設的分隔符號。  
   
--   **符號**根據預設，清單**符號**包含下列字元： `,.;:-"'`~ = （& s) / @ ！？（） <> [] {} | #* ^ %`. For example, if the symbols are "`（)-'"，"(425) 123-4567"的值會 token 化成為 ["（"，"425"，"）"，"123"，"-"，"4567"，")"]。  
+-   **符號**根據預設，清單**符號**包含下列字元： `,.;:-"'~=&/@!?()<>[]{}|#*^%`。 例如，如果這些符號是 "`()-`"，"(425) 123-4567" 值就會 Token 化成為 ["(", "425", ")", "123", "-", "4567", ")"]。  
   
  一個字元無法同時屬於分隔符號和符號。  
   
@@ -79,11 +79,11 @@ ms.lasthandoff: 08/03/2017
   
 -   **一般**  
   
--   **選項。**  
+-   **Options**  
   
 ### <a name="data-options"></a>資料選項  
  **ConnectionManager**  
- 選取現有的 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 連線管理員，以便使用 .NET Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) 來連接至包含要分析之資料表或檢視表的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫。  
+ 選取現有的 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 連線管理員，以便使用 .NET Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) 來連線至包含要分析之資料表或檢視表的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫。  
   
  **[TableOrView]**  
  選取包含要分析之資料行的資料表或檢視表。  
@@ -147,7 +147,8 @@ ms.lasthandoff: 08/03/2017
  如需詳細資訊，請參閱本主題前面的「了解標記資料表的使用方式」。  
   
 ## <a name="see-also"></a>請參閱＜  
- [資料分析工作編輯器 &#40;一般頁面 &#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
+ [資料分析工作編輯器 &#40;一般頁面&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
  [單一資料表快速分析表單 &#40; 資料分析工作 &#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   
   
+

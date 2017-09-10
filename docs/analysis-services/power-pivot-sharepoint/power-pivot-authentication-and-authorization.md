@@ -1,25 +1,30 @@
 ---
-title: "PowerPivot 驗證及授權 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Power Pivot 驗證和授權 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 48230cc0-4037-4f99-8360-dadf4bc169bd
 caps.latest.revision: 31
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 31
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 40b36877a7c64c10fb2eee2933b1ac2461719c0c
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# PowerPivot 驗證及授權
-  在 SharePoint 2010 伺服陣列中執行的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 部署會使用 SharePoint 伺服器所提供的驗證子系統和授權模型。 由於所有 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 相關的內容都儲存在 SharePoint 內容資料庫中，而且 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 相關的所有作業都在伺服器陣列中的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 共用服務上執行，因此 SharePoint 安全性基礎結構會延伸到 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 內容和作業。 使用者若要求包含 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料的活頁簿，就會使用以其 Windows 使用者識別為基礎的 SharePoint 使用者識別進行驗證。 活頁簿上的檢視權限會決定授與或拒絕要求。  
+# <a name="power-pivot-authentication-and-authorization"></a>PowerPivot 驗證及授權
+  在 SharePoint 2010 伺服陣列中執行的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 部署會使用 SharePoint 伺服器所提供的驗證子系統和授權模型。 由於所有 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 相關的內容都儲存在 SharePoint 內容資料庫中，而且 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]相關的所有作業都在伺服器陣列中的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]共用服務上執行，因此 SharePoint 安全性基礎結構會延伸到 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 內容和作業。 使用者若要求包含 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料的活頁簿，就會使用以其 Windows 使用者識別為基礎的 SharePoint 使用者識別進行驗證。 活頁簿上的檢視權限會決定授與或拒絕要求。  
   
  由於自助式資料分析必須與 Excel Services 整合，所以您也必須了解 Excel Services 安全性，才能保護 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 伺服器的安全。 當使用者查詢具有 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料之資料連接的樞紐分析表時，Excel Services 會轉送資料連接要求到伺服陣列中的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 伺服器以載入資料。 您必須了解如何設定這兩部伺服器的安全性設定，才能進行伺服器間的互動。  
   
@@ -48,7 +53,7 @@ caps.handback.revision: 31
   
 -   來自用戶端應用程式或報表的伺服器陣列內要求，該應用程式或報表使用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿作為外部資料來源 (例如，在 Excel 桌面應用程式中建立活頁簿，並將另一個包含 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料的已發佈 Excel 活頁簿做為您的資料來源)  
   
-### 如何檢查應用程式的驗證提供者  
+### <a name="how-to-check-the-authentication-provider-for-your-application"></a>如何檢查應用程式的驗證提供者  
  建立新的 Web 應用程式時，請務必在 [建立新 Web 應用程式] 頁面中選取 **[傳統模式驗證]** 選項。  
   
  若為現有的 Web 應用程式，請使用下列指示來確認 Web 應用程式是否設定為使用 Windows 驗證。  
@@ -72,7 +77,7 @@ caps.handback.revision: 31
   
 -   如果沒有可用的資料，從快取或文件庫載入 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料。 如果對尚未載入系統中的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料要求資料連接， [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] 執行個體會使用 SharePoint 使用者識別，從內容庫擷取資料來源，並載入記憶體中。  
   
--   將資料來源的更新複本儲存至內容庫中活頁簿的資料重新整理作業。 在此情況下，實際登入作業是使用從 Secure Store Service 之目標應用程式擷取的使用者名稱和密碼執行。 認證可以是 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 無人看管的資料重新整理帳戶，或以資料建立時，其重新整理排程儲存的認證。 如需詳細資訊，請參閱[設定 Power Pivot 資料重新整理的預存認證 (Power Pivot for SharePoint)](http://msdn.microsoft.com/zh-tw/987eff0f-bcfe-4bbd-81e0-9aca993a2a75) 和[設定 Power Pivot 無人看管的資料重新整理帳戶 (PowerPivot for SharePoint)](http://msdn.microsoft.com/zh-tw/81401eac-c619-4fad-ad3e-599e7a6f8493)。  
+-   將資料來源的更新複本儲存至內容庫中活頁簿的資料重新整理作業。 在此情況下，實際登入作業是使用從 Secure Store Service 之目標應用程式擷取的使用者名稱和密碼執行。 認證可以是 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 無人看管的資料重新整理帳戶，或以資料建立時，其重新整理排程儲存的認證。 如需詳細資訊，請參閱 [設定 Power Pivot 資料重新整理的預存認證 (Power Pivot for SharePoint)](http://msdn.microsoft.com/en-us/987eff0f-bcfe-4bbd-81e0-9aca993a2a75) 和 [設定 Power Pivot 無人看管的資料重新整理帳戶 (PowerPivot for SharePoint)](http://msdn.microsoft.com/en-us/81401eac-c619-4fad-ad3e-599e7a6f8493)。  
   
 ##  <a name="Permissions"></a> Power Pivot 資料存取的 SharePoint 存取權限  
  發行、管理及保護 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿安全等作業只透過 SharePoint 整合進行支援。 SharePoint 伺服器提供確保合法存取資料的驗證和授權子系統。 並沒有支援案例可用於在 SharePoint 伺服器陣列之外安全部署 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿。  
@@ -92,14 +97,14 @@ caps.handback.revision: 31
 |僅檢視|檢視 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿。<br /><br /> 檢視資料重新整理記錄。<br /><br /> 將本機活頁簿連接至 SharePoint 網站上的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿，以其他方式重新訂定其資料用途。<br /><br /> 下載活頁簿的快照集。 此快照集是資料的靜態複本，不包含交叉分析篩選器、篩選、公式或資料連接。 此快照集的內容類似於從瀏覽器視窗中複製資料格值。|  
   
 ##  <a name="excel"></a> PowerPivot 活頁簿的 Excel Services 安全性考量  
- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 伺服器端查詢處理與 Excel Services 緊密結合。 產品整合開始於文件層級，在此層級中，[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿是包含或參考 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料的 Excel 活頁簿 (.xlsx) 檔案。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿沒有個別的副檔名。  
+ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 伺服器端查詢處理與 Excel Services 緊密結合。 產品整合開始於文件層級，在此層級中， [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿是包含或參考 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料的 Excel 活頁簿 (.xlsx) 檔案。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿沒有個別的副檔名。  
   
  在 SharePoint 網站上開啟 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿時，Excel Services 會讀取內嵌的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料連接字串，並將要求轉送至本機 SQL Server Analysis Services OLE DB 提供者。 接著，此提供者會將連接資訊傳遞到伺服器陣列中的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 伺服器。 若要讓要求在兩部伺服器間順暢地流動，必須將 Excel Services 設定為使用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 所需的設定。  
   
- 在 Excel Services 中，您可以針對信任的位置、信任的資料提供者以及信任的資料連線庫指定安全性相關的組態設定。 下表將描述啟用或強化 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料存取的設定。 如果有設定未列在此處，對 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 伺服器連接並沒有影響。 如需如何逐步指定這些設定的指示，請參閱[初始組態 (PowerPivot for SharePoint)](http://msdn.microsoft.com/zh-tw/3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146) 中的＜啟用 Excel Services＞一節。  
+ 在 Excel Services 中，您可以針對信任的位置、信任的資料提供者以及信任的資料連線庫指定安全性相關的組態設定。 下表將描述啟用或強化 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料存取的設定。 如果有設定未列在此處，對 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 伺服器連接並沒有影響。 如需如何逐步指定這些設定的指示，請參閱 [初始組態 (PowerPivot for SharePoint)](http://msdn.microsoft.com/en-us/3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146)中的＜啟用 Excel Services＞一節。  
   
 > [!NOTE]  
->  與安全性最相關的設定會套用至信任的位置。 如果您要保留預設值或在不同的網站使用不同的值，您可以針對包含 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料的網站建立其他信任的位置，然後只針對該網站進行下列設定。 如需詳細資訊，請參閱[在管理中心建立 Power Pivot 網站的信任位置](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)。  
+>  與安全性最相關的設定會套用至信任的位置。 如果您要保留預設值或在不同的網站使用不同的值，您可以針對包含 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料的網站建立其他信任的位置，然後只針對該網站進行下列設定。 如需詳細資訊，請參閱 [在管理中心建立 Power Pivot 網站的信任位置](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)。  
   
 |區域|設定|說明|  
 |----------|-------------|-----------------|  
@@ -107,14 +112,14 @@ caps.handback.revision: 31
 |信任的位置|位置類型|此值必須設為 **[Microsoft SharePoint Foundation]**。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 伺服器會擷取 .xlsx 檔案的複本，並將其載入伺服陣列中的 Analysis Services 伺服器。 伺服器只能從內容庫擷取 .xlsx 檔。|  
 ||允許外部資料|此值必須設為 **[信任的資料連線庫與內嵌連線]**。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料連接內嵌在活頁簿中。 如果您不允許內嵌連接，使用者可以檢視 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 快取，但是他們將無法與 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料進行互動。|  
 ||重新整理時警告|如果您要使用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫儲存活頁簿與報表，應該停用此值。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫包含文件預覽功能，開啟時重新整理與重新整理時警告同時關閉時效果最好。|  
-|信任的資料提供者|MSOLAP.4<br /><br /> MSOLAP.5|預設隨附 MSOLAP.4，但是 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料存取需要 MSOLAP.4 提供者為 SQL Server 2008 R2 版。<br /><br /> MSOLAP.5 會隨 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] for SharePoint 的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 版安裝。<br /><br /> 請不要從信任的資料提供者清單中移除這些提供者。 在某些情況下，您可能需要在伺服器陣列中的其他 SharePoint 伺服器上，安裝此提供者的額外複本。 如需詳細資訊，請參閱 [在 SharePoint 伺服器上安裝 Analysis Services OLE DB 提供者](http://msdn.microsoft.com/zh-tw/2c62daf9-1f2d-4508-a497-af62360ee859)。|  
+|信任的資料提供者|MSOLAP.4<br /><br /> MSOLAP.5|預設隨附 MSOLAP.4，但是 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料存取需要 MSOLAP.4 提供者為 SQL Server 2008 R2 版。<br /><br /> MSOLAP.5 會隨 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] for SharePoint 的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 版安裝。<br /><br /> 請不要從信任的資料提供者清單中移除這些提供者。 在某些情況下，您可能需要在伺服器陣列中的其他 SharePoint 伺服器上，安裝此提供者的額外複本。 如需詳細資訊，請參閱 [在 SharePoint 伺服器上安裝 Analysis Services OLE DB 提供者](http://msdn.microsoft.com/en-us/2c62daf9-1f2d-4508-a497-af62360ee859)。|  
 |信任的資料連線庫|選擇性。|您可以使用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿中的 Office 資料連接 (.odc) 檔案。 如果您使用 .odc 檔案來提供本機 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿的連接資訊，就可以將相同的 .odc 檔案加入至這個連線庫。|  
 |使用者定義函數組件|不適用。|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 會忽略您為 Excel Services 建立部署的使用者定義函數組件。 如果您依賴使用者定義的組件執行特定行為，請注意 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 查詢處理不會使用您建立的使用者定義函數。|  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [設定 Power Pivot 服務帳戶](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md)   
- [設定 Power Pivot 自動資料重新整理帳戶 (Power Pivot for SharePoint)](http://msdn.microsoft.com/zh-tw/81401eac-c619-4fad-ad3e-599e7a6f8493)   
+ [設定 Powerpivot 無人看管的資料重新整理帳戶 (Power Pivot for SharePoint)](http://msdn.microsoft.com/en-us/81401eac-c619-4fad-ad3e-599e7a6f8493)   
  [在管理中心建立 Power Pivot 網站的信任位置](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
- [PowerPivot 安全性架構](http://go.microsoft.com/fwlink/?linkID=220970)  
+ [Powerpivot 安全性架構](http://go.microsoft.com/fwlink/?linkID=220970)  
   
   

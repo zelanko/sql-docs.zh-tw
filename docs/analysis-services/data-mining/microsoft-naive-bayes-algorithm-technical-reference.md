@@ -1,41 +1,46 @@
 ---
-title: "Microsoft 貝氏機率分類演算法技術參考 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "MINIMUM_DEPENDENCY_PROBABILITY 參數"
-  - "MAXIMUM_INPUT_ATTRIBUTES 參數"
-  - "貝氏機率分類模型 [Analysis Services]"
-  - "Bayesian 分類器"
-  - "貝氏機率分類演算法 [Analysis Services]"
-  - "MAXIMUM_OUTPUT_ATTRIBUTES 參數"
-  - "MAXIMUM_STATES 參數"
+title: "Microsoft 貝氏機率分類演算法技術參考 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- MINIMUM_DEPENDENCY_PROBABILITY parameter
+- MAXIMUM_INPUT_ATTRIBUTES parameter
+- naive bayes model [Analysis Services]
+- Bayesian classifiers
+- naive bayes algorithms [Analysis Services]
+- MAXIMUM_OUTPUT_ATTRIBUTES parameter
+- MAXIMUM_STATES parameter
 ms.assetid: a4cd47fe-2127-4930-b18f-3edd17ee9a65
 caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 91e15d1d56b8d548651c316d3169fc36b4a7fd04
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# Microsoft 貝氏機率分類演算法技術參考
+# <a name="microsoft-naive-bayes-algorithm-technical-reference"></a>Microsoft 貝氏機率分類演算法技術參考
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 貝氏機率分類演算法是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 所提供用於預測模型的分類演算法。 此演算法會計算輸入資料行和可預測資料行之間的條件式機率，並假設資料行是獨立的。 這種獨立性假設產生了貝氏機率分類這個名稱。  
   
-## Microsoft 貝氏機率分類演算法的實作  
+## <a name="implementation-of-the-microsoft-naive-bayes-algorithm"></a>Microsoft 貝氏機率分類演算法的實作  
  此演算法比其他 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 演算法更少計算，因此對於快速產生採礦模型來探索輸入資料行和可預測資料行之間的關聯性很有用。 此演算法會考量輸入屬性值與輸出屬性值的每個配對。  
   
  貝氏理論的數學屬性描述超出本文件集的範圍；如需詳細資訊，請參閱 Microsoft Research 報告中的[學習貝氏網路：知識與統計資料的組合](http://go.microsoft.com/fwlink/?LinkId=207029)。  
   
  如需調整所有模型中的機率來表示可能遺漏值的描述，請參閱[遺漏值 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)。  
   
-### 特徵選取  
+### <a name="feature-selection"></a>特徵選取  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 貝氏機率分類演算法會執行自動特徵選取，藉以限制建立模型時所考量的值數目。 如需詳細資訊，請參閱[特徵選取 &#40;資料採礦&#41;](../../analysis-services/data-mining/feature-selection-data-mining.md)。  
   
 |演算法|分析的方法|註解|  
@@ -50,10 +55,10 @@ caps.handback.revision: 16
   
 -   若要限制可以針對任何一個屬性考量的值數目，減少 MINIMUM_STATES 的值。  
   
-## 自訂貝氏機率分類演算法  
+## <a name="customizing-the-naive-bayes-algorithm"></a>自訂貝氏機率分類演算法  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 貝氏機率分類演算法支援數個會影響所產生之採礦模型的行為、效能和精確度的參數。 您也可以設定模型資料行上的模型旗標來控制處理資料的方式，或設定採礦結構上的旗標來指定處理遺漏值或 Null 值的方式。  
   
-### 設定演算法參數  
+### <a name="setting-algorithm-parameters"></a>設定演算法參數  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 貝氏機率分類演算法支援數個會影響所產生之採礦模型的效能和精確度的參數。 下表描述每一個參數。  
   
  *MAXIMUM_INPUT_ATTRIBUTES*  
@@ -76,7 +81,7 @@ caps.handback.revision: 16
   
  預設值為 100。  
   
-### 模型旗標  
+### <a name="modeling-flags"></a>模型旗標  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法支援下列模型旗標。 當您建立採礦結構或採礦模型時，您會定義模型旗標來指定分析期間要如何處理每個資料行中的值。 如需詳細資訊，請參閱[模型旗標 &#40;資料採礦&#41;](../../analysis-services/data-mining/modeling-flags-data-mining.md)。  
   
 |模型旗標|說明|  
@@ -84,10 +89,10 @@ caps.handback.revision: 16
 |MODEL_EXISTENCE_ONLY|表示資料行將被視為擁有兩個可能狀態：「遺漏」和「現有」。 Null 為遺漏值。<br /><br /> 適用於採礦模型資料行。|  
 |NOT NULL|表示資料行不能包含 Null 值。 如果 Analysis Services 在模型定型期間遇到 Null 值，將會產生錯誤。<br /><br /> 適用於採礦結構資料行。|  
   
-## 需求  
+## <a name="requirements"></a>需求  
  貝氏機率分類樹狀模型必須包含索引鍵資料行、至少一個可預測屬性，以及至少一個輸入屬性。 任何屬性都不得為連續的；如果您的資料包含連續數值資料，將會忽略或離散化該資料。  
   
-### 輸入和可預測資料行  
+### <a name="input-and-predictable-columns"></a>輸入和可預測資料行  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 貝氏機率分類演算法支援下表所列的特定輸入資料行和可預測資料行。 如需內容類型用於採礦模型時所代表意義的詳細資訊，請參閱[內容類型 &#40;資料採礦&#41;](../../analysis-services/data-mining/content-types-data-mining.md)。  
   
 |資料行|內容類型|  
@@ -98,9 +103,9 @@ caps.handback.revision: 16
 > [!NOTE]  
 >  系統支援 Cyclical 和 Ordered 內容類型，但是演算法將它們視為離散值，因此不會執行特殊處理。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [Microsoft 貝氏機率分類演算法](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)   
- [Naive Bayes Model Query Examples](../../analysis-services/data-mining/naive-bayes-model-query-examples.md)   
+ [貝氏機率分類模型查詢範例](../../analysis-services/data-mining/naive-bayes-model-query-examples.md)   
  [貝氏機率分類模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)  
   
   

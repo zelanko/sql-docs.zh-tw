@@ -1,25 +1,30 @@
 ---
-title: "Power Pivot for SharePoint (SSAS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Power Pivot for SharePoint (SSAS) |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c4c393d3-4856-47ac-ab5f-15da2f240d1d
 caps.latest.revision: 32
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 32
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 108c36ae7730a9622f5b8797b3dbb20cf0e96df3
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# Power Pivot for SharePoint (SSAS)
-  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 模式中的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器提供將 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料裝載於 SharePoint 伺服器陣列的功能。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料是您使用下列其中一個項目建立的分析資料模型：  
+# <a name="power-pivot-for-sharepoint-ssas"></a>Power Pivot for SharePoint (SSAS)
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 模式中的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 伺服器提供將 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料裝載於 SharePoint 伺服器陣列的功能。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料是您使用下列其中一個項目建立的分析資料模型：  
   
 -   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel 2010 增益集  
   
@@ -29,18 +34,18 @@ caps.handback.revision: 32
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2016 | [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013  
   
- 這些資料的伺服器裝載需要 SharePoint、Excel Services 和 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 安裝。 資料載入到 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 執行個體上，在此處可透過伺服器為 Excel 2010 活頁簿提供的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料重新整理功能或是為 Excel 2013 和 2016 活頁簿提供的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]，依排程間隔重新整理資料。  
+ 這些資料的伺服器裝載需要 SharePoint、Excel Services 和 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 安裝。 資料載入到 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 執行個體上，在此處可透過伺服器為 Excel 2010 活頁簿提供的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料重新整理功能或是為 Excel 2013 和 2016 活頁簿提供的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ，依排程間隔重新整理資料。  
   
-## Power Pivot for SharePoint 2016  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 支援 [!INCLUDE[msCoName](../../includes/msconame-md.md)] SharePoint 2016 以及包含資料模型和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Power View 報表的 Excel 活頁簿 [!INCLUDE[offOnlineServer](../../includes/offonlineserver-md.md)] 使用。  
+## <a name="power-pivot-for-sharepoint-2016"></a>Power Pivot for SharePoint 2016  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 支援 [!INCLUDE[msCoName](../../includes/msconame-md.md)] SharePoint 2016 以及包含資料模型和 [!INCLUDE[offOnlineServer](../../includes/offonlineserver-md.md)] Power View 報表的 Excel 活頁簿 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 使用。  
   
- [!INCLUDE[offOnlineServer](../../includes/offonlineserver-md.md)]Excel 包含資料模型功能，可在瀏覽器中啟用與 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿的互動。 您不需要將 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2016 增益集部署至伺服器陣列。 您只需要在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 模式中安裝 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器，並向 [!INCLUDE[offOnlineServer](../../includes/offonlineserver-md.md)] 註冊伺服器。  
+ [!INCLUDE[offOnlineServer](../../includes/offonlineserver-md.md)] Excel 包含資料模型功能，可在瀏覽器中啟用與 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿的互動。 您不需要將 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2016 增益集部署至伺服器陣列。 您只需要在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 模式中安裝 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 伺服器，並向 [!INCLUDE[offOnlineServer](../../includes/offonlineserver-md.md)]註冊伺服器。  
   
  若部署 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2016 增益集，會在 SharePoint 伺服器陣列中啟用其他功能與特性。 其他功能包括 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫、排程資料重新整理。  
   
- ![SSAS Power Pivot Mode 3 Server with Office Online Server](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-mode-3server-oos-deploy.png "SSAS Power Pivot Mode 3 Server with Office Online Server")  
+ ![SSAS Power Pivot 模式 3 伺服器與 Office Online Server](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-mode-3server-oos-deploy.png "SSAS Power Pivot 模式 3 伺服器與 Office Online Server")  
   
-## Power Pivot for SharePoint 2013  
+## <a name="power-pivot-for-sharepoint-2013"></a>Power Pivot for SharePoint 2013  
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 支援 [!INCLUDE[msCoName](../../includes/msconame-md.md)] SharePoint 2013 Excel Services 使用包含資料模型和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Power View 報表的 Excel 活頁簿。  
   
  SharePoint 2013 中的 Excel Services 包含資料模型功能，可在瀏覽器中啟用與 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿的互動。 您不需要將 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2013 增益集部署至伺服器陣列。 您只需要在 SharePoint 模式下安裝 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器，並且在 Excel Services **[資料模型]** 設定中註冊伺服器即可。  
@@ -62,7 +67,7 @@ caps.handback.revision: 32
   
  [Power Pivot 管理儀表板和使用量資料](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)  
   
- [Power Pivot 圖庫](../Topic/Power%20Pivot%20Gallery.md)  
+ [Power Pivot 圖庫](http://msdn.microsoft.com/library/2a0db616-e08e-4062-aac8-979f8cad7794)  
   
  [Power Pivot 資料存取](../../analysis-services/power-pivot-sharepoint/power-pivot-data-access.md)  
   
@@ -74,17 +79,17 @@ caps.handback.revision: 32
   
  **其他章節內容**  
   
-## 其他主題  
+## <a name="additional-topics"></a>其他主題  
  [升級 Power Pivot for SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)  
   
  [以 Power Pivot 模式安裝 Analysis Services](../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)  
   
  [Power Pivot for SharePoint 的 PowerShell 參考](../../analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint.md)  
   
- [SQL Server 2016 Business Intelligence 的授權拓撲和成本範例](../Topic/Example%20License%20Topologies%20and%20Costs%20%20for%20SQL%20Server%202016%20Business%20Intelligence.md)  
+ [SQL Server 2016 Business Intelligence 的授權拓撲和成本範例](http://msdn.microsoft.com/library/682b8711-407a-48d1-9807-415d4c24dad6)  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [Power Pivot 規劃和部署](http://go.microsoft.com/fwlink/?linkID=220972)   
- [PowerPivot for SharePoint 災害復原](http://go.microsoft.com/fwlink/p/?LinkId=389570)  
+ [Power pivot for SharePoint 災害復原](http://go.microsoft.com/fwlink/p/?LinkId=389570)  
   
   

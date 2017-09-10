@@ -1,40 +1,45 @@
 ---
-title: "使用 Microsoft 樹狀檢視器瀏覽模型 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "樹狀檢視器 [Analysis Services]"
-  - "預測 [Analysis Services], 分隔屬性"
-  - "採礦模型內容, 檢視"
-  - "預測 [Analysis Services], 連續屬性"
-  - "採礦圖例 [Analysis Services]"
-  - "分隔屬性 [Analysis Services]"
-  - "Microsoft 決策樹演算法 [Analysis Services]"
-  - "決策樹演算法 [Analysis Services]"
-  - "Microsoft 樹狀檢視器"
-  - "決策樹 [Analysis Services]"
-  - "相依性 [Analysis Services]"
-  - "連續屬性"
+title: "瀏覽模型，使用 Microsoft 樹狀檢視器 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Tree Viewer [Analysis Services]
+- predictions [Analysis Services], discrete attributes
+- mining model content, viewing
+- predictions [Analysis Services], continuous attributes
+- mining legend [Analysis Services]
+- discrete attributes [Analysis Services]
+- Microsoft Decision Trees algorithm [Analysis Services]
+- decision tree algorithms [Analysis Services]
+- Microsoft Tree Viewer
+- decision trees [Analysis Services]
+- dependencies [Analysis Services]
+- continuous attributes
 ms.assetid: 0c96d518-ed20-40b7-8d62-b26ad6244287
 caps.latest.revision: 46
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 46
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cf93bd7a9be8f6de5e4f807730fcaa4bcb60ab5c
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 使用 Microsoft 樹狀檢視器瀏覽模型
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 樹狀檢視器會顯示以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法建立的決策樹。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法是同時支援分類與迴歸的混合式決策樹演算法。 因此，您也可以使用這個檢視器來檢視以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線性迴歸演算法為基礎的模型。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法可用於離散和連續屬性的預測模型。 如需有關這個演算法的詳細資訊，請參閱＜ [Microsoft Decision Trees Algorithm](../../analysis-services/data-mining/microsoft-decision-trees-algorithm.md)＞。  
+# <a name="browse-a-model-using-the-microsoft-tree-viewer"></a>使用 Microsoft 樹狀檢視器瀏覽模型
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 樹狀檢視器會顯示以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法建立的決策樹。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法是同時支援分類與迴歸的混合式決策樹演算法。 因此，您也可以使用這個檢視器來檢視以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線性迴歸演算法為基礎的模型。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法可用於離散和連續屬性的預測模型。 如需有關這個演算法的詳細資訊，請參閱＜ [Microsoft Decision Trees Algorithm](../../analysis-services/data-mining/microsoft-decision-trees-algorithm.md)＞。  
   
 > [!NOTE]  
->  若要檢視有關此模型中所用的方程式及所探索之模式的詳細資訊，請使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 一般內容樹狀檢視器。 如需詳細資訊，請參閱[使用 Microsoft 一般內容樹狀檢視器瀏覽模型](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)或 [Microsoft 一般內容樹狀檢視器 &#40;資料採礦&#41;](../Topic/Microsoft%20Generic%20Content%20Tree%20Viewer%20\(Data%20Mining\).md)。  
+>  若要檢視有關此模型中所用的方程式及所探索之模式的詳細資訊，請使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 一般內容樹狀檢視器。 如需詳細資訊，請參閱[使用 Microsoft 一般內容樹狀檢視器瀏覽模型](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)或 [Microsoft 一般內容樹狀檢視器 &#40;資料採礦&#41;](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c)。  
   
 ##  <a name="BKMK_TabsPanes"></a> 檢視器索引標籤  
  在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中瀏覽採礦模型時，該模型會在適合它的檢視器中，顯示於資料採礦設計師的 **[採礦模型檢視器]** 索引標籤上。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 樹狀檢視器包含下列索引標籤和窗格：  
@@ -52,7 +57,7 @@ caps.handback.revision: 46
   
  您可以展開或摺疊樹狀結構中的個別節點，以顯示或隱藏在每一個節點之後發生的分割。 您也可以使用 **[決策樹]** 索引標籤上的選項，影響樹狀結構的顯示方式。 使用 **[顯示層級]** 滑桿，來調整樹狀結構所顯示的層級數目。 使用 **[預設展開]** ，來設定模型中所有樹狀結構所顯示的預設層級數目。  
   
-#### 預測離散屬性  
+#### <a name="predicting-discrete-attributes"></a>預測離散屬性  
  以離散可預測屬性建立樹狀結構時，檢視器會在樹狀結構的每一個節點上顯示下列各項：  
   
 -   造成分割的狀況。  
@@ -63,10 +68,10 @@ caps.handback.revision: 46
   
  每一個節點的背景色彩都會代表您使用 **[背景]** 選項選取之特定屬性狀態案例的集中情形。 您可以使用此選項來反白顯示包含您想要之特定目標的節點。  
   
-#### 預測連續屬性  
+#### <a name="predicting-continuous-attributes"></a>預測連續屬性  
  當樹狀是以連續可預測屬性建立時，檢視器會為樹狀中的每一個節點顯示鑽石形圖表，而非長條圖。 此鑽石形圖表有一條線代表屬性的範圍。 鑽石形位於節點的平均值之處，而鑽石形的寬度代表在該節點的屬性變異數。 鑽石形越窄，表示節點所建立的預測愈精確。 檢視器也會顯示迴歸方程式，它是用來決定節點中的分割。  
   
-#### 其他決策樹顯示選項  
+#### <a name="additional-decision-tree-display-options"></a>其他決策樹顯示選項  
  針對決策樹模型啟用鑽研之後，您可以在樹狀結構中以滑鼠右鍵按一下節點並選取 [鑽研]，來存取支援該節點的培訓案例。 您可以在資料採礦精靈內啟用鑽研，或在 **[採礦模型]** 索引標籤中調整採礦模型上的鑽研屬性。  
   
  您可以使用 **[決策樹]** 索引標籤上的縮放選項來放大或縮小樹狀，或使用 **[調成最適大小]** ，使整個模型調整成檢視器畫面大小。 如果樹狀過大而無法調整成螢幕大小，您可以使用 [導覽] 選項來導覽樹狀。 按一下 **[導覽]** 就會開啟個別導覽視窗，您可以使用它來選取要顯示的模型區段。  
@@ -103,9 +108,9 @@ caps.handback.revision: 46
   
  [回到頁首](#BKMK_TabsPanes)  
   
-## 請參閱＜  
- [Microsoft 決策樹演算法](../../analysis-services/data-mining/microsoft-decision-trees-algorithm.md)   
- [採礦模型檢視器 &#40;資料採礦模型設計師&#41;](../Topic/Mining%20Model%20Viewers%20\(Data%20Mining%20Model%20Designer\).md)   
+## <a name="see-also"></a>請參閱＜  
+ [Microsoft Decision Trees Algorithm](../../analysis-services/data-mining/microsoft-decision-trees-algorithm.md)   
+ [採礦模型檢視器 &#40; 資料採礦模型設計工具 &#41;](http://msdn.microsoft.com/library/4ba391d5-c97b-4848-ba7c-7d096fa4b7dd)   
  [採礦模型檢視器工作和使用說明](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [資料採礦工具。](../../analysis-services/data-mining/data-mining-tools.md)   
  [資料採礦模型檢視器](../../analysis-services/data-mining/data-mining-model-viewers.md)  

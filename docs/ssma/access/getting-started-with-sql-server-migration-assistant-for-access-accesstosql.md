@@ -23,14 +23,14 @@ helpviewer_keywords:
 - user interface overview
 ms.assetid: 462a731f-08f1-44e1-9eeb-4deac6d2f6c5
 caps.latest.revision: 24
-author: sabotta
-ms.author: carlasab
+author: Shamikg
+ms.author: Shamikg
 manager: murato
 ms.translationtype: MT
-ms.sourcegitcommit: e4a6157cb56c6db911406585f841046a431eef99
-ms.openlocfilehash: dfec6c6fdcf4640199c08190b558e68f63cfec1f
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 846d08c9226e6a34e0d0b3bbd5efab8c2548a469
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/16/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="getting-started-with-sql-server-migration-assistant-for-access-accesstosql"></a>開始使用 SQL Server 移轉小幫手存取 (AccessToSQL)
@@ -101,7 +101,7 @@ SSMA 包含兩個中繼資料總管可讓您瀏覽並執行動作的存取和[!I
   
 -   在存取中繼資料總管，您可能會改變型別對應。 請確定您建立報表，或將結構描述轉換之前進行這些變更。  
   
--   在[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]中繼資料總管 中，您可以變更資料表和索引的屬性上**資料表** 索引標籤。 進行這些變更，再將結構描述載入[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 如需詳細資訊，請參閱[轉換來存取資料庫物件](http://msdn.microsoft.com/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c)。  
+-   在[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]中繼資料總管 中，您可以變更資料表和索引的屬性上**資料表** 索引標籤。進行這些變更，再將結構描述載入[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 如需詳細資訊，請參閱[轉換來存取資料庫物件](http://msdn.microsoft.com/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c)。  
   
 ### <a name="toolbars"></a>工具列  
 SSMA 會有兩個工具列： 專案工具列和移轉工具列。  
@@ -114,7 +114,7 @@ SSMA 會有兩個工具列： 專案工具列和移轉工具列。
   
 |按鈕|函數|  
 |----------|------------|  
-|**轉換、 載入和移轉**|將 Access 資料庫轉換、 載入轉換的物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL 資料庫，並移轉資料到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或在一個步驟中，所有的 Azure SQL DB。|  
+|**轉換、載入和移轉**|將 Access 資料庫轉換、 載入轉換的物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL 資料庫，並移轉資料到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或在一個步驟中，所有的 Azure SQL DB。|  
 |**建立報表**|將選取的存取結構描述轉換[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB 語法，然後建立報表來顯示如何成功轉換。<br /><br />只有在存取中繼資料總管 中選取物件時，此命令才能使用。|  
 |**轉換結構描述**|將選取的存取結構描述轉換[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB 結構描述。<br /><br />只有在存取中繼資料總管 中選取物件時，此命令才能使用。|  
 |**將資料移轉**|若要在 Access 資料庫移轉資料[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB。 執行此命令之前，您必須將存取結構描述，以轉換[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB 結構描述，然後載入物件到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB。<br /><br />只有在存取中繼資料總管 中選取物件時，此命令才能使用。|  
@@ -127,7 +127,7 @@ SSMA 會包含下列功能表：
 |--------|---------------|  
 |**檔案**|「 移轉精靈 」，使用專案中，加入和移除存取資料庫檔案，以及連接到包含指令[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB。|  
 |**編輯**|包含用來尋找及處理的詳細資料頁面中，例如，將複製的文字命令[!INCLUDE[tsql](../../includes/tsql_md.md)]從 [SQL 詳細資料] 窗格。 若要開啟**管理書籤**對話方塊中的，編輯 功能表中，按一下 管理書籤。 在對話方塊中，您會看到一份現有書籤。 您可以使用對話方塊右側的按鈕，來管理這些書籤。|  
-|**檢視**|包含**同步處理中繼資料瀏覽器**命令。 這會同步處理存取中繼資料總管 之間的物件和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB 中繼資料總管。 還會包含命令來顯示和隱藏**輸出**和**錯誤清單**窗格和選項**配置**管理版面配置。|  
+|**[檢視]**|包含**同步處理中繼資料瀏覽器**命令。 這會同步處理存取中繼資料總管 之間的物件和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB 中繼資料總管。 還會包含命令來顯示和隱藏**輸出**和**錯誤清單**窗格和選項**配置**管理版面配置。|  
 |**工具**|包含命令來建立報表、 匯出的資料、 物件和資料移轉，連結資料表，並提供存取全域和專案設定 對話方塊。|  
 |**說明**|提供存取至 SSMA 協助和**有關** 對話方塊。|  
   

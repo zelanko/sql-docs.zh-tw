@@ -1,23 +1,28 @@
 ---
-title: "資料採礦架構 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "資料採礦架構 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 105f52e1-ad3b-4cd0-b67b-06dbb451c304
 caps.latest.revision: 11
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3c220da116fb0294ad463d8a0e9c1e4ade6ce652
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 資料採礦架構
+# <a name="data-mining-architecture"></a>資料採礦架構
   本節描述在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的執行個體內裝載的資料採礦方案架構。 本節的主題描述可支援資料採礦之 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體的邏輯和實體架構，也提供有關用戶端、提供者和通訊協定的資訊，該通訊協定可用來與資料採礦伺服器通訊以及在本機或遠端搭配資料採礦物件使用。  
   
  一般來說，SQL Server 資料採礦會當做於多維度模式下執行之 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體一部分的服務來操作；因此，我們建議您也要檢閱以下線上叢書中描述 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 多維度方案操作、維護和組態的章節。  
@@ -32,7 +37,7 @@ caps.handback.revision: 11
   
  如需有關如何在商務智慧方案中實作資料採礦的詳細資訊，請參閱 MSDN Library 的＜方案指南＞章節。  
   
-## 本節內容  
+## <a name="in-this-section"></a>本節內容  
  [邏輯架構 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/logical-architecture-analysis-services-data-mining.md)  
   
  [實體架構 &#40;Analysis Services – 資料採礦&#41;](../../analysis-services/data-mining/physical-architecture-analysis-services-data-mining.md)  
@@ -43,7 +48,7 @@ caps.handback.revision: 11
   
  [安全性概觀 &#40;資料採礦&#41;](../../analysis-services/data-mining/security-overview-data-mining.md)  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [多維度模型程式設計](../../analysis-services/multidimensional-models/multidimensional-model-programming.md)   
  [資料採礦程式設計](../../analysis-services/data-mining-programming.md)  
   

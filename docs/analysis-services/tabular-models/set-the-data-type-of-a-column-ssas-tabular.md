@@ -1,27 +1,32 @@
 ---
-title: "設定資料行的資料類型 (SSAS 表格式) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "設定資料類型資料行 (SSAS 表格式) |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 34e2d508-7b64-4503-a4f0-c6c6ad5f8a44
 caps.latest.revision: 10
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 10
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 770ce419a167c71914334ea6fa1b3fd397566b34
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 設定資料行的資料類型 (SSAS 表格式)
+# <a name="set-the-data-type-of-a-column-ssas-tabular"></a>設定資料行的資料類型 (SSAS 表格式)
   當您將資料匯入或貼上模型時，模型設計師會自動偵測並套用資料類型。 將資料加入至模型之後，您可以手動修改資料行的資料類型，以變更資料儲存的方式。 如果您只要變更資料顯示方式的格式，而不要變更其儲存方式，可以只變更該顯示格式。  
   
-### 若要變更資料行的資料類型或顯示格式  
+### <a name="to-change-the-data-type-or-display-format-for-a-column"></a>若要變更資料行的資料類型或顯示格式  
   
 1.  在模型設計師中，選取您要變更資料類型或顯示格式的資料行。  
   
@@ -31,7 +36,7 @@ caps.handback.revision: 10
   
     -   在 **[資料類型]** 屬性中，選取其他資料類型。  
   
-## 變更資料類型時的考量  
+## <a name="considerations-when-changing-data-types"></a>變更資料類型時的考量  
  有時當您嘗試變更資料行的資料類型或選取資料轉換時，可能會發生下列其中一項錯誤：  
   
 -   無法變更資料類型  
@@ -40,7 +45,7 @@ caps.handback.revision: 10
   
  即使該資料類型以選項的形式出現在 [資料類型] 下拉式清單中提供使用，也可能會發生這些錯誤。 本節將說明這些錯誤的原因及更正方法。  
   
-### 了解自動判斷的資料類型  
+### <a name="understanding-automatically-determined-data-types"></a>了解自動判斷的資料類型  
  當您將資料加入至模型時，模型設計師會檢查資料的資料行，以查看每個資料行所包含的資料類型。 如果該資料行中的資料是一致的，就會指派最精確的資料類型至該資料行。  
   
  但是，如果加入的資料是來自 Excel 或其他不強制在每個資料行內使用單一資料類型的來源時，模型設計師將指派可適合此資料行內所有值的資料類型。 因此，如果資料行包含不同類型的數字 (如整數、長數字和貨幣)，模型設計師會使用十進位資料類型。 或者，如果資料行中混合數字和文字，則模型設計師會使用文字資料類型。 模型設計師不提供與 Excel「通用格式」資料類型類似的資料類型。  
@@ -67,16 +72,16 @@ caps.handback.revision: 10
   
 -   您可以在導出資料行中建立 DAX 公式來建立屬於所需資料類型的新值 例如，可以使用 TRUNC 函數將十進位數字變更為整數，或者可以結合資訊函數和邏輯函數來測試及轉換值。  
   
-### 了解資料轉換  
+### <a name="understanding-data-conversion"></a>了解資料轉換  
  如果您在選取資料轉換選項時發生錯誤，可能是目前資料行的資料類型不支援所選取的轉換。 並非所有資料類型都允許所有轉換。 例如，如果目前資料行的資料類型為數字 (整數或十進位) 或文字，您只能將資料行變更為布林值資料類型。 因此，您必須針對資料行中的資料選擇適當的資料類型。  
   
  當您選擇適當的資料類型之後，模型設計師會警告您可能發生的資料變更，例如失去精確度或截斷。 請按一下 [確定] 接受，然後將資料變更為新的資料類型。  
   
  如果資料類型受到支援，但是模型設計師卻發現不受新資料類型支援的值，您會接到另一項錯誤，並將需要修正資料值，才能再繼續進行。  
   
- 如需商業智慧語意模型中使用的資料類型、如何以隱含方式轉換這些資料類型，以及如何在公式內使用不同資料類型等的詳細資訊，請參閱[支援的資料類型 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md)。  
+ 如需商業智慧語意模型中使用的資料類型、如何以隱含方式轉換這些資料類型，以及如何在公式內使用不同資料類型等的詳細資訊，請參閱 [支援的資料類型 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md)。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [支援的資料類型 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md)  
   
   

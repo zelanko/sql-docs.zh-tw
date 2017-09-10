@@ -1,33 +1,38 @@
 ---
-title: "Analysis Services 追蹤事件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "SQL Server Profiler，Analysis Services"
-  - "監視 Analysis Services [SQL Server]"
-  - "效能 [Analysis Services]，SQL Server Profiler"
-  - "事件 [Analysis Services]"
-  - "事件類別 [Analysis Services]，關於事件類別"
-  - "Profiler [SQL Server Profiler]，Analysis Services"
-  - "事件類別 [Analysis Services]"
+title: "Analysis Services 追蹤事件 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- SQL Server Profiler, Analysis Services
+- monitoring Analysis Services [SQL Server]
+- performance [Analysis Services], SQL Server Profiler
+- events [Analysis Services]
+- event classes [Analysis Services], about event classes
+- Profiler [SQL Server Profiler], Analysis Services
+- event classes [Analysis Services]
 ms.assetid: 6fb219cc-f37e-437a-a544-01cec0953571
 caps.latest.revision: 37
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 37
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b97d63ba708128fbd4d42f2e5278273609d144e1
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# Analysis Services 追蹤事件
+# <a name="analysis-services-trace-events"></a>Analysis Services 追蹤事件
   您可以透過擷取然後分析執行個體所產生的追蹤事件，來追蹤 Microsoft SQL Server Analysis Services (SSAS) 執行個體的活動。  追蹤事件已分組，因此您可以更輕鬆地找到相關追蹤事件。  每個追蹤事件都包含與該事件相關的一組資料；並不是所有資料片段都與所有事件相關。  
   
- 追蹤事件可透過 **[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]** 來啟動和擷取 (請參閱[使用 SQL Server Profiler 監視 Analysis Services](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md))，也可以從 XMLA 命令啟動做為 **SQL Server 擴充事件**並在稍後分析 (請參閱[使用 SQL Server 擴充事件監視 Analysis Services](../../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md))。  
+ 追蹤事件可透過 **[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]**來啟動和擷取 (請參閱 [使用 SQL Server Profiler 監視 Analysis Services](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md))，也可以從 XMLA 命令啟動做為 **SQL Server 擴充事件** 並在稍後分析 (請參閱 [使用 SQL Server 擴充事件監視 Analysis Services](../../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md))。  
   
  下表描述每個事件類別目錄以及類別目錄中的事件。 每個表格包含下列資料行：  
   
@@ -183,7 +188,7 @@ caps.handback.revision: 37
 |42|現有的工作階段|現有的工作階段。|  
 |43|工作階段初始化|工作階段初始化。|  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [使用 SQL Server Profiler 監視 Analysis Services](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md)  
   
   

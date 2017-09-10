@@ -1,0 +1,150 @@
+---
+title: "運算式 (TRANSACT-SQL) |Microsoft 文件"
+ms.custom: 
+ms.date: 03/15/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- Boolean expressions
+- expressions [SQL Server], about expressions
+- combining expressions
+- Transact-SQL expressions
+- expressions [SQL Server], combining
+- simple expressions [SQL Server]
+- complex expressions [SQL Server]
+ms.assetid: ee53c5c8-e36c-40f9-8cd1-d933791b98fa
+caps.latest.revision: 29
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 826d1ab9f4a0a68d692551ae58a529ab8b7ebfae
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
+---
+# <a name="expressions-transact-sql"></a>運算式 (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+  這是 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 進行評估以取得單一資料值的符號和運算子組合。 簡單運算式可以是單一常數、變數、資料行或純量函數。 運算子可用來將兩個或更多簡單運算式聯結成複雜運算式。  
+  
+ ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+  
+## <a name="syntax"></a>語法  
+  
+```  
+-- Syntax for SQL Server and Azure SQL Database  
+  
+{ constant | scalar_function | [ table_name. ] column | variable   
+    | ( expression ) | ( scalar_subquery )   
+    | { unary_operator } expression   
+    | expression { binary_operator } expression   
+    | ranking_windowed_function | aggregate_windowed_function  
+}  
+```  
+  
+```  
+-- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+
+-- Expression in a SELECT statement  
+<expression> ::=   
+{  
+    constant   
+    | scalar_function   
+    | column  
+    | variable  
+    | ( expression  )  
+    | { unary_operator } expression   
+    | expression { binary_operator } expression   
+}  
+[ COLLATE Windows_collation_name ]  
+  
+-- Scalar Expression in a DECLARE, SET, IF…ELSE, or WHILE statement  
+<scalar_expression> ::=  
+{  
+    constant   
+    | scalar_function   
+    | variable  
+    | ( expression  )  
+    | (scalar_subquery )  
+    | { unary_operator } expression   
+    | expression { binary_operator } expression   
+}  
+[ COLLATE { Windows_collation_name ]  
+  
+```  
+  
+## <a name="arguments"></a>引數  
+  
+|詞彙|定義|  
+|----------|----------------|  
+|*常數*|這是代表單一特定資料值的符號。 如需詳細資訊，請參閱[常數 &#40;TRANSACT-SQL &#41;](../../t-sql/data-types/constants-transact-sql.md).|  
+|*scalar_function*|是的單位[!INCLUDE[tsql](../../includes/tsql-md.md)]語法，提供特定的服務，並傳回單一值。 *scalar_function*可以是內建的純量函數，例如 SUM、 GETDATE 或 CAST 函式或純量使用者定義函數。|  
+|[ *table_name***。** ]|這是資料表的名稱或別名。|  
+|*資料行*|這是資料行的名稱。 運算式中只能使用資料行的名稱。|  
+|*變數*|這是變數或參數的名稱。 如需詳細資訊，請參閱 [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)。|  
+|**(** *運算式***)** |這是符合這個主題所定義的任何有效運算式。 括號是分組運算子，可確保會先評估運算式在括號內的所有運算子之後，才組合各個產生的運算式。|  
+|**(** *scalar_subquery* **)**|這是傳回單一值的子查詢。 例如：<br /><br /> `SELECT MAX(UnitPrice)`<br /><br /> `FROM Products`|  
+|{ *unary_operator* }|一元運算子只適用於會評估得出數值資料類型類別目錄之任何資料類型的運算式。 這是只有單一數值運算元的運算子：<br /><br /> + 表示正數。<br /><br /> - 表示負數。<br /><br /> ~ 表示運算元的補充運算子。|  
+|{ *binary_operator* }|這是定義組合兩個運算式來產生單一結果之方式的運算子。 *binary_operator*可以是算術運算子、 指派運算子 （=）、 位元運算子、 比較運算子、 邏輯運算子、 字串串連運算子 （+） 或一元運算子。 如需有關運算子的詳細資訊，請參閱[運算子 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md).|  
+|*ranking_windowed_function*|這是任何 [!INCLUDE[tsql](../../includes/tsql-md.md)] 次序函數。 如需詳細資訊，請參閱[排名函數 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/ranking-functions-transact-sql.md).|  
+|*aggregate_windowed_function*|這是含有 OVER 子句的任何 [!INCLUDE[tsql](../../includes/tsql-md.md)] 彙總函式。 如需詳細資訊，請參閱[OVER 子句 &#40;TRANSACT-SQL &#41;](../../t-sql/queries/select-over-clause-transact-sql.md).|  
+  
+## <a name="expression-results"></a>運算式結果  
+ 單一常數、變數、純量函數或資料行名稱所組成的簡單運算式：運算式的資料類型、定序、有效位數、小數位數和值，就是所參考之元素的資料類型、定序、有效位數、小數位數和值。  
+  
+ 當利用比較或邏輯運算子來組合兩個運算式時，產生的資料類型是布林，而值是下列項目之一：TRUE、FALSE 或 UNKNOWN。 如需有關布林資料類型的詳細資訊，請參閱[比較運算子 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/comparison-operators-transact-sql.md).  
+  
+ 當利用算術、位元或字串運算子來組合兩個運算式時，運算子會決定產生的資料類型。  
+  
+ 許多符號和運算子組成的複雜運算式會評估得出單值結果。 產生之運算式的資料類型、定序、有效位數和值取決於元件運算式的組合，每次兩個，直到到達最終結果為止。 運算式的組合順序是由運算式中的運算子優先順序所定義。  
+  
+## <a name="remarks"></a>備註  
+ 如果兩個運算式都有運算子所支援的資料類型，且至少符合下列條件之一，就可以用這個運算子來組合這兩個運算式：  
+  
+-   運算式有相同的資料類型。  
+  
+-   優先順序較低的資料類型可以隱含地轉換成優先順序較高的資料類型。  
+  
+ 如果運算式不符合這些條件，CAST 或 CONVERT 函數可用來將優先順序較低的資料類型明確地轉換成優先順序較高的資料類型，或明確地轉換成中繼資料類型，這個中繼資料類型必須能夠隱含地轉換成優先順序較高的資料類型。  
+  
+ 如果不支援任何隱含或明確的轉換，便無法組合這兩個運算式。  
+  
+ 評估得出字元字串的任何運算式之定序，是由下列定序優先順序規則來設定的。 如需詳細資訊，請參閱[定序優先順序 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/collation-precedence-transact-sql.md).  
+  
+ 在 C 之類的程式設計語言或[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]，運算式一律會評估得出單一結果。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 選取清單中的運算式會遵循這個規則的變化：此運算式會針對結果集中的每個資料列個別進行評估。 在結果集的每個資料列中，單一運算式可以有不同的值，但每個資料列只能有運算式的單一值。 例如，在下列 `SELECT` 陳述式中，選取清單中的 `ProductID` 參考和 `1+2` 一詞都是運算式：  
+  
+```  
+USE AdventureWorks2012;  
+GO  
+SELECT ProductID, 1+2  
+FROM Production.Product;  
+GO  
+```  
+  
+ 在結果集的每個資料列中，`1+2` 運算式都會評估得出 `3`。 雖然 `ProductID` 運算式會在每個結果集資料列中產生唯一值，但每個資料列都只有 `ProductID` 的一個值。  
+  
+## <a name="see-also"></a>另請參閱  
+ [TIME ZONE &AMP; #40;TRANSACT-SQL &#41;](../../t-sql/queries/at-time-zone-transact-sql.md)   
+ [案例 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/case-transact-sql.md)   
+ [CAST 和 CONVERT &#40;TRANSACT-SQL &#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
+ [聯合 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/coalesce-transact-sql.md)   
+ [資料類型轉換 &#40; Database Engine &#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)   
+ [資料類型優先順序 &#40;TRANSACT-SQL &#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)   
+ [資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
+ [內建函數 &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
+ [像 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/like-transact-sql.md)   
+ [NULLIF &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/nullif-transact-sql.md)   
+ [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
+ [其中 &#40;TRANSACT-SQL &#41;](../../t-sql/queries/where-transact-sql.md)  
+  
+  
+

@@ -1,32 +1,37 @@
 ---
-title: "Sequence Clustering Model Query Examples | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "時序群集演算法 [Analysis Services]"
-  - "content queries [DMX]"
-  - "時序 [Analysis Services]"
+title: "時序群集模型查詢範例 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- sequence clustering algorithms [Analysis Services]
+- content queries [DMX]
+- sequence [Analysis Services]
 ms.assetid: 64bebcdc-70ab-43fb-8d40-57672a126602
 caps.latest.revision: 22
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 580fc9147e787d22bf3a87f7ba2bc6752cf4a816
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# Sequence Clustering Model Query Examples
+# <a name="sequence-clustering-model-query-examples"></a>Sequence Clustering Model Query Examples
   當您針對資料採礦模型建立查詢時，可以建立內容查詢來提供有關模型中排序之資訊的詳細資料，或是建立預測查詢來使用模型中的模式，根據所提供的新資料進行預測。 對於時序群集模型，內容查詢通常會提供找到之群集的其他詳細資料，或提供這些群集中的轉換。 您也可以使用查詢來擷取有關模型的中繼資料。  
   
  時序群集模型的預測查詢通常會根據轉換的時序、包含在模型中的非時序屬性，或者時序與非時序屬性的組合，做出建議。  
   
- 本節說明如何針對以 Microsoft 時序群集演算法為基礎的模型來建立查詢。 如需建立查詢的一般資訊，請參閱[資料採礦查詢](../../analysis-services/data-mining/data-mining-queries.md)。  
+ 本節說明如何針對以 Microsoft 時序群集演算法為基礎的模型來建立查詢。 如需建立查詢的一般資訊，請參閱 [資料採礦查詢](../../analysis-services/data-mining/data-mining-queries.md)。  
   
  **Content Queries**  
   
@@ -41,12 +46,12 @@ caps.handback.revision: 22
  [預測後續的一個或多個狀態](#bkmk_Query4)  
   
 ##  <a name="bkmk_ContentQueries"></a> 尋找有關時序群集模型的資訊  
- 若要在採礦模型的內容上建立有意義的查詢，您必須了解模型內容的結構，以及哪一種節點類型會儲存那一種資訊。 如需詳細資訊，請參閱[時序叢集模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining model content for sequence clustering models.md)。  
+ 若要在採礦模型的內容上建立有意義的查詢，您必須了解模型內容的結構，以及哪一種節點類型會儲存那一種資訊。 如需詳細資訊，請參閱 [時序叢集模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)。  
   
 ###  <a name="bkmk_Query1"></a> 範例查詢 1：使用資料採礦結構描述資料列集傳回模型參數  
  您可以藉由查詢資料採礦結構描述資料列集來尋找有關模型的各種資訊，包括基本中繼資料、此模型建立的日期和時間、上次處理此模型的日期和時間、此模型所依據之採礦結構的名稱，以及當做可預測屬性使用的資料行。  
   
- 下列查詢會傳回用於建立和定型模型 `[Sequence Clustering]`的參數。 您可以在＜ [Basic Data Mining Tutorial](../Topic/Basic%20Data%20Mining%20Tutorial.md)＞的第 5 課中建立此模型。  
+ 下列查詢會傳回用於建立和定型模型 `[Sequence Clustering]`的參數。 您可以在＜ [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)＞的第 5 課中建立此模型。  
   
 ```  
 SELECT MINING_PARAMETERS   
@@ -130,7 +135,7 @@ WHERE NODE_UNIQUE_NAME = '1081365'
   
 |t.Product2|t.P2 Support|t.P2 Probability|  
 |----------------|------------------|----------------------|  
-|Missing|230.7419|0.456012|  
+|遺漏|230.7419|0.456012|  
 |Classic Vest|8.16129|0.016129|  
 |Cycling Cap|60.83871|0.120235|  
 |Half-Finger Gloves|30.41935|0.060117|  
@@ -152,7 +157,7 @@ WHERE NODE_UNIQUE_NAME = '1081365'
   
  本節提供一些如何使用系統預存程序，根據時序群集模型建立查詢的範例：  
   
-#### 群集設定檔與範例案例  
+#### <a name="cluster-profiles-and-sample-cases"></a>群集設定檔與範例案例  
  [群集設定檔] 索引標籤會顯示模型中的群集清單、每個群集的大小，以及表示包含在群集中之狀態的長條圖。 有兩個系統預存程序可以在查詢中用於擷取類似的資訊：  
   
 -   `GetClusterProfile` 會傳回叢集的特性，以及在叢集的 NODE_DISTRIBUTION 資料表中找到的所有資訊。  
@@ -181,9 +186,9 @@ CALL System.Microsoft.AnalysisServices.System.DataMining.Clustering.GetNodeGraph
 SELECT * FROM [Sequence Clustering].SAMPLE_CASES WHERE IsInNode('12')  
 ```  
   
- 如需詳細資訊，請參閱 [SELECT FROM &#60;model&#62;.SAMPLE_CASES &#40;DMX&#41;](../Topic/SELECT%20FROM%20%3Cmodel%3E.SAMPLE_CASES%20\(DMX\).md)。  
+ 如需詳細資訊，請參閱 [SELECT FROM &#60;model&#62;.SAMPLE_CASES &#40;DMX&#41;](../../dmx/select-from-model-sample-cases-dmx.md)。  
   
-#### 群集特性與群集辨識  
+#### <a name="cluster-characteristics-and-cluster-discrimination"></a>群集特性與群集辨識  
  **[群集特性]** 索引標籤會摘要每個群集的主要屬性，並以機率排序。 您可以找出有多少個案例屬於某個群集，以及群集中的案例分配狀況。每個特性都有特定的支援。 若要查看特定群集的特性，您必須知道該群集的識別碼。  
   
  下列範例使用系統預存程序 `GetClusterCharacteristics`，傳回機率分數超過 0.0005 指定臨界值之群集 12 的所有特性。  
@@ -206,13 +211,13 @@ CALL System.Microsoft.AnalysisServices.System.DataMining.Clustering.GetClusterDi
   
  如果您要使用 DMX 撰寫自己的查詢來比較兩個群集，或比較某個群集及其補充，您必須先擷取一組特性，再擷取您感興趣之特定群集的特性，然後比較這兩組特性。 此案例較為複雜，而且通常需要進行某些用戶端處理。  
   
-#### 狀態與轉換  
+#### <a name="states-and-transitions"></a>狀態與轉換  
  Microsoft 時序群集的 **[狀態轉換]** 索引標籤會在後端執行複雜的查詢，藉以擷取並比較不同群集的統計資料。 若要重新產生這些結果，需要更複雜的查詢並進行某些用戶端處理。  
   
  不過，您可以使用＜ [內容查詢](#bkmk_ContentQueries)＞一節的範例 2 中所述的 DMX 查詢，擷取時序或個別轉換的機率和狀態。  
   
-## 使用模型進行預測  
- 時序群集模型的預測查詢可以使用多個搭配其他群集模型使用的預測函數。 此外，您可以使用特殊的預測函數 [PredictSequence &#40;DMX&#41;](../../dmx/predictsequence-dmx.md) 進行建議或預測後續狀態。  
+## <a name="using-the-model-to-make-predictions"></a>使用模型進行預測  
+ 時序群集模型的預測查詢可以使用多個搭配其他群集模型使用的預測函數。 此外，您可以使用特殊的預測函數 [PredictSequence &#40;DMX&#41;](../../dmx/predictsequence-dmx.md)進行建議或預測後續狀態。  
   
 ###  <a name="bkmk_Query4"></a> 範例查詢 4：預測後續的一或多個狀態  
  您可以使用 [PredictSequence &#40;DMX&#41;](../../dmx/predictsequence-dmx.md) 函數來預測給定值下一個最可能的狀態。 您也可以預測多個後續狀態：例如，您可以傳回客戶可能購買的前三個產品的清單來顯示建議清單。  
@@ -235,7 +240,7 @@ AS t
 |1||Cycling Cap|  
 |2||Cycling Cap|  
 |3||Sport-100|  
-|4||Long-Sleeve logo Jersey|  
+|4||Long-Sleeve Logo Jersey|  
 |5||Half-Finger Gloves|  
 |6||All-Purpose Bike Stand|  
 |7||All-Purpose Bike Stand|  
@@ -248,7 +253,7 @@ AS t
   
  資料列 6 和 7 中的值為預留位置。 當您到達可能轉換之鏈結的結尾時，當做輸入傳遞的值會加入到結果中，而非終止預測結果。 例如，如果您將預測的數目增加到 20，資料列 6-20 的值將會相同，也就是 All-Purpose Bike Stand。  
   
-## 函數清單  
+## <a name="function-list"></a>函數清單  
  所有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 演算法都支援一組常用的函數。 不過， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時序群集演算法也支援下表所列出的其他函數。  
   
 |||  
@@ -271,10 +276,10 @@ AS t
   
  如需所有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 演算法通用函數的清單，請參閱[一般預測函數 &#40;DMX&#41;](../../dmx/general-prediction-functions-dmx.md)。 如需特定函數的語法，請參閱[資料採礦延伸模組 &#40;DMX&#41; 函數參考](../../dmx/data-mining-extensions-dmx-function-reference.md)。  
   
-## 請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [資料採礦查詢](../../analysis-services/data-mining/data-mining-queries.md)   
  [Microsoft 時序群集演算法技術參考](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm-technical-reference.md)   
- [Microsoft 時序群集演算法](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
- [時序叢集模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining model content for sequence clustering models.md)  
+ [Microsoft Sequence Clustering Algorithm](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
+ [時序叢集模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
   
   

@@ -1,33 +1,38 @@
 ---
-title: "加入 MSOLAP.5 做為 Excel Services 中受信任的資料提供者 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "加入 MSOLAP.5 做為 Excel Services 中的受信任的資料提供者 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c1f40fa4-de6d-41ee-8124-14b4d65988f5
 caps.latest.revision: 6
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 6
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9c1d5366817d19dea649b24ba17ea776a10fc7c5
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 加入 MSOLAP.5 做為 Excel Services 中受信任的資料提供者
+# <a name="add-msolap5-as-a-trusted-data-provider-in-excel-services"></a>加入 MSOLAP.5 做為 Excel Services 中受信任的資料提供者
   MSOLAP.5 是指 Analysis Services OLE DB Provider for SQL Server 2012。 Excel Services 必須信任此提供者，才能提出連接要求，在伺服器上產生 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料。  
   
- 如果您使用 [[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 組態工具] 設定 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint，MSOLAP.5 可能已經是受信任的提供者，因為工具包含符合此需求的動作。 不過，如果您使用 PowerShell、管理中心，或在組態工具中排除受信任的提供者動作，可能會遺失提供者，在此情況下，您應該趁設定伺服器陣列時立即將其加入，以進行 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料存取。  
+ 如果您使用 [ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 組態工具] 設定 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint，MSOLAP.5 可能已經是受信任的提供者，因為工具包含符合此需求的動作。 不過，如果您使用 PowerShell、管理中心，或在組態工具中排除受信任的提供者動作，可能會遺失提供者，在此情況下，您應該趁設定伺服器陣列時立即將其加入，以進行 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料存取。  
   
  只需要為每個 Excel Services 服務應用程式執行此步驟一次。  
   
- 電腦上必須已安裝 OLE DB 提供者，[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 伺服器或 Excel Services 伺服器等實體伺服器才能處理 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料要求。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 安裝一律包含 OLE DB 提供者，但是如果在沒有 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 的電腦上執行 Excel Services，您必須手動安裝此提供者。 如需詳細資訊，請參閱 [在 SharePoint 伺服器上安裝 Analysis Services OLE DB 提供者](http://msdn.microsoft.com/zh-tw/2c62daf9-1f2d-4508-a497-af62360ee859)。  
+ 電腦上必須已安裝 OLE DB 提供者， [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 伺服器或 Excel Services 伺服器等實體伺服器才能處理 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料要求。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 安裝一律包含 OLE DB 提供者，但是如果在沒有 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 的電腦上執行 Excel Services，您必須手動安裝此提供者。 如需詳細資訊，請參閱 [在 SharePoint 伺服器上安裝 Analysis Services OLE DB 提供者](http://msdn.microsoft.com/en-us/2c62daf9-1f2d-4508-a497-af62360ee859)。  
   
-## 將受信任的提供者加入至 Excel Services  
+## <a name="add-a-trusted-provider-to-excel-services"></a>將受信任的提供者加入至 Excel Services  
   
 1.  在 [管理中心]，按一下 **[管理服務應用程式]**，然後按一下 Excel Services 服務應用程式。  
   

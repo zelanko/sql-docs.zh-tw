@@ -1,23 +1,28 @@
 ---
-title: "資料採礦方案的相關專案 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "資料採礦方案的相關專案 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: dc26489a-4c27-4b89-8215-6d245427c350
 caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 290142e362b4e41148ab2042c8c76738f3e7b54c
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 資料採礦方案的相關專案
+# <a name="related-projects-for-data-mining-solutions"></a>資料採礦方案的相關專案
   資料採礦方案至少需要資料採礦專案，專案中會定義資料來源、資料來源檢視、採礦結構和採礦模型。 但是，當使用資料採礦模型進行每日決策時，資料採礦一定要與預測性分析方案的其他部分整合，該方案可包含這些程序和元件：  
   
 -   準備及選取資料和變數。 包括資料清理、中繼資料管理及整合多個資料來源，以及將資料轉換、合併和上傳到資料倉儲中。  
@@ -113,7 +118,7 @@ caps.handback.revision: 12
  如需有關使用 Reporting Services 當做資料來源展示層的詳細資訊，請參閱＜ [Integrating Reporting Services into Applications](../../reporting-services/application-integration/integrating-reporting-services-into-applications.md)＞。  
   
 ##  <a name="bkmk_DQSetc"></a> Data Quality Services  
- Data Quality Services (DQS) 是 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中的新功能。 因為資料問題可能會讓資料採礦無法進行，所以執行重複分析或是在大型組織處理複雜資料來源的資料採礦人員應該會發現，使用 DQS 的規劃完善資料專案比起使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 或其他指令碼隨選清理資料，為支援資料採礦的一個更可靠的方案。  
+ Data Quality Services (DQS) 是 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中的新功能。 因為資料問題可能會讓資料採礦無法進行，所以執行重複分析或是在大型組織處理複雜資料來源的資料採礦人員應該會發現，使用 DQS 的規劃完善資料專案比起使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 或其他指令碼隨選清理資料，為支援資料採礦的一個更可靠的方案。  
   
  資料採礦方案中的資料準備與資料完整性中，應該考量下列 DQS 功能。  
   
@@ -153,17 +158,17 @@ caps.handback.revision: 12
   
  因為全文檢索查詢是 SQL Server 引擎提供的功能，所以您可以建立參數化查詢、使用文字資料來源上的全文檢索搜尋功能來產生自訂資料集或詞彙向量，並在資料採礦中使用這些來源。  
   
- 如需全文檢索查詢如何與全文檢索索引互動的詳細資訊，請參閱[使用全文檢索搜尋進行查詢](../../relational-databases/search/query-with-full-text-search.md)。  
+ 如需全文檢索查詢如何與全文檢索索引互動的詳細資訊，請參閱 [使用全文檢索搜尋進行查詢](../../relational-databases/search/query-with-full-text-search.md)。  
   
  使用 SQL Server 全文檢索搜尋功能的優點就是可以利用所有 SQL Server 語言隨附之斷詞工具和字幹分析器中所包含的語言智慧。 藉由使用隨附的斷詞工具和字幹分析器，可確保使用適合每種語言的字元來分隔字詞，而且不會忽略以讀音符號或拼字變化為根據的同義字 (例如日文中的多種數字格式)。  
   
  除了控制字詞界限的語言智慧以外，每一個語言的字幹分析器都會根據該語言中的詞形變化和拼字變化規則知識，將字詞的變化減少成單一詞彙。 每一種語言的語言分析規則都不一樣，而且會根據實際生活語料庫的大規模研究而發展。  
   
- 如需詳細資訊，請參閱[設定及管理搜尋的斷詞工具與字幹分析器](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)。  
+ 如需詳細資訊，請參閱 [設定及管理搜尋的斷詞工具與字幹分析器](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)。  
   
  儲存在全文檢索索引之後的字詞版本為壓縮形式的語彙基元。 全文檢索索引後續的查詢會根據該語言的規則產生特定字詞的多個變化形式，以確保能產生所有可能的相符項目。 例如，雖然儲存的語彙基元可能是 “run”，但是查詢引擎也會尋找 "running"、"ran" 和 "runner" 等詞彙，因為這些是根單字 "run" 所正常衍生的形態變化。  
   
- 您也可以建立及產生使用者同義字，以便儲存同義字並啟用更好的搜尋結果或分類詞彙。 透過開發符合全文檢索資料的同義字，您可以有效地擴大針對該資料進行全文檢索查詢的範圍。 如需詳細資訊，請參閱[設定及管理全文檢索搜尋的同義字檔案](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)。  
+ 您也可以建立及產生使用者同義字，以便儲存同義字並啟用更好的搜尋結果或分類詞彙。 透過開發符合全文檢索資料的同義字，您可以有效地擴大針對該資料進行全文檢索查詢的範圍。 如需詳細資訊，請參閱 [設定及管理全文檢索搜尋的同義字檔案](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)。  
   
  使用全文檢索搜尋的需求如下：  
   
@@ -186,9 +191,9 @@ caps.handback.revision: 12
   
 -   傳回相似度分數以及對分數有貢獻的詞彙。  
   
- 如需詳細資訊，請參閱[使用語意搜尋找到文件中的主要片語](../../relational-databases/search/find-key-phrases-in-documents-with-semantic-search.md)和[使用語意搜尋尋找相似及相關的文件](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md)。  
+ 如需詳細資訊，請參閱 [使用語意搜尋找到文件中的主要片語](../../relational-databases/search/find-key-phrases-in-documents-with-semantic-search.md) 和 [使用語意搜尋尋找相似及相關的文件](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md)。  
   
- 如需支援語意索引之資料庫物件的詳細資訊，請參閱[在資料表和資料行上啟用語意搜尋](../../relational-databases/search/enable-semantic-search-on-tables-and-columns.md)。  
+ 如需支援語意索引之資料庫物件的詳細資訊，請參閱 [在資料表和資料行上啟用語意搜尋](../../relational-databases/search/enable-semantic-search-on-tables-and-columns.md)。  
   
  使用語意搜尋的需求如下：  
   
@@ -200,7 +205,7 @@ caps.handback.revision: 12
   
 -   並非所有全文檢索語言都支援語意索引。 如需受支援語言的清單，請參閱 [sys.fulltext_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql.md)。  
   
-## 請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [多維度模型方案 &#40;SSAS&#41;](../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)   
  [表格式模型方案 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/tabular-model-solutions-ssas-tabular.md)  
   

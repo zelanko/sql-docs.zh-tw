@@ -1,25 +1,30 @@
 ---
-title: "將預測函數套用至模型 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "採礦模型預測 [Analysis Services], 選取採礦模型"
+title: "套用至模型的預測函數 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Mining Model Prediction [Analysis Services], selecting mining models
 ms.assetid: cf9a97e2-c249-441b-af12-c977c1a91c44
 caps.latest.revision: 17
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0634ebe36d956f356d13384159eb1171d4fc2ea4
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 將預測函數套用至模型
+# <a name="apply-prediction-functions-to-a-model"></a>將預測函數套用至模型
   若要在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料採礦中建立預測查詢，您必須先選取該查詢要作為基礎的採礦模型。 您可以選取存在於目前專案中的任何採礦模型。  
   
  在您選取模型之後，請將 [預測函數] 加入查詢中。 預測函數可用來取得預測，但您也可以加入傳回相關統計資料的預測函數，例如預測值的機率或用於產生預測的資訊。  
@@ -42,7 +47,7 @@ caps.handback.revision: 17
   
  如需如何查詢特定採礦模型類型的範例，請參閱[資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md) 中的演算法參考主題。  
   
-### 選擇用來預測的採礦模型  
+### <a name="choose-a-mining-model-to-use-for-prediction"></a>選擇用來預測的採礦模型  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，以滑鼠右鍵按一下模型，然後選取 [Build Prediction Query (建立預測查詢)]。  
   
@@ -54,7 +59,7 @@ caps.handback.revision: 17
   
      您可以在目前的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫中選擇任何模型。 若要使用不同資料庫中的模型建立查詢，您必須在該資料庫的內容中開啟新的查詢視窗，或是開啟包含該模型的方案檔。  
   
-### 將預測函數加入至查詢中  
+### <a name="add-prediction-functions-to-a-query"></a>將預測函數加入至查詢中  
   
 1.  在 [Prediction Query Builder (預測查詢產生器)] 中，設定用於預測的輸入資料，其方法是在 [單一查詢輸入] 對話方塊中提供值，或是將模型對應到外部資料來源。  
   
@@ -67,8 +72,8 @@ caps.handback.revision: 17
   
     |||  
     |-|-|  
-    |**\<模型名稱>**|選取此選項，將採礦模型中的值包含在輸出中。 您只能加入可預測的資料行。<br /><br /> 當您加入模型中的資料行時，傳回的結果會是該資料行中的非相異值清單。<br /><br /> 您以這個選項加入的資料行會包含在產生之 DMX 陳述式的 SELECT 部分內。|  
-    |**預測函數**|選取這個選項可瀏覽預測函數清單。<br /><br /> 您選取的值或函數會加入至產生之 DMX 陳述式的 SELECT 部分內。<br /><br /> 系統不會篩選預測函數清單，也不會由您選取的模型類型加以限制。 因此，如果您對於目前模型類型是否支援此函數有任何疑問，您只需要將此函數加入至清單中，並查看是否有錯誤發生。<br /><br /> 前有 $ 的清單項目 (例如 $AdjustedProbability) 代表巢狀資料表中的資料行，當您使用 **PredictHistogram** 函數時，該資料表為輸出。 當您傳回單一資料行而非巢狀資料表時，可以使用這些當做捷徑。|  
+    |**\<模型名稱 >**|選取此選項，將採礦模型中的值包含在輸出中。 您只能加入可預測的資料行。<br /><br /> 當您加入模型中的資料行時，傳回的結果會是該資料行中的非相異值清單。<br /><br /> 您以這個選項加入的資料行會包含在產生之 DMX 陳述式的 SELECT 部分內。|  
+    |**預測函數**|選取這個選項可瀏覽預測函數清單。<br /><br /> 您選取的值或函數會加入至產生之 DMX 陳述式的 SELECT 部分內。<br /><br /> 系統不會篩選預測函數清單，也不會由您選取的模型類型加以限制。 因此，如果您對於目前模型類型是否支援此函數有任何疑問，您只需要將此函數加入至清單中，並查看是否有錯誤發生。<br /><br /> 前有 $ 的清單項目 (例如 $AdjustedProbability) 代表巢狀資料表中的資料行，當您使用 **PredictHistogram**函數時，該資料表為輸出。 當您傳回單一資料行而非巢狀資料表時，可以使用這些當做捷徑。|  
     |**自訂運算式**|選取這個選項來輸入自訂運算式，然後為輸出指派別名。<br /><br /> 此自訂運算式會加入至產生之 DMX 預測查詢的 SELECT 部分中。<br /><br /> 如果您想要針對包含每一個資料列的輸出加入文字、呼叫 VB 函數或是呼叫自訂預存程序，這個選項會非常實用。<br /><br /> 如需從 DMX 使用 VBA 和 Excel 函數的資訊，請參閱 [MDX 和 DAX 中的 VBA 函數](../../mdx/vba-functions-in-mdx-and-dax.md)。|  
   
 3.  在您加入每一個函數或運算式之後，切換到 DMX 檢視可查看此函數如何加入至 DMX 陳述式內。  
@@ -76,9 +81,9 @@ caps.handback.revision: 17
     > [!WARNING]  
     >  要等到您按一下 [結果] 之後，預測查詢產生器才會驗證 DMX。 通常您會發現，查詢產生器所產生的運算式並不是有效的 DMX。 通常原因是因為參考的資料行與可預測資料行無關，或是嘗試預測巢狀資料表中的資料行 (這需要子 SELECT 陳述式)。 此時，您可以切換到 DMX 檢視，並繼續編輯陳述式。  
   
-### 範例：在群集模型上建立查詢  
+### <a name="example-create-a-query-on-a-clustering-model"></a>範例：在群集模型上建立查詢  
   
-1.  如果您沒有叢集模型可用來建立此範例查詢，請使用[資料採礦基本教學課程](../Topic/Basic%20Data%20Mining%20Tutorial.md)建立 [TM_Clustering] 模型。  
+1.  如果您沒有叢集模型可用來建立此範例查詢，請使用[資料採礦基本教學課程](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)建立 [TM_Clustering] 模型。  
   
 2.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，以滑鼠右鍵按一下模型 [TM_Clustering]，然後選取 [Build Prediction Query (建立預測查詢)]。  
   
@@ -124,7 +129,8 @@ caps.handback.revision: 17
   
  如果您想要在陳述式中的其他地方加入其他子句，例如，如果您想要加入 WHERE 子句，您不能使用此方格來加入，而必須先切換到 DMX 檢視。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [資料採礦查詢](../../analysis-services/data-mining/data-mining-queries.md)  
   
   
+

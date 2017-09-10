@@ -1,28 +1,33 @@
 ---
-title: "用於追蹤內的 Analysis Services 物件類型代碼 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: "Analysis Services 物件用於追蹤內的類型代碼 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: e4119db1-4a41-4335-9b33-f1ea95564300
 caps.latest.revision: 5
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 5
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7bd50f15603440953dc2f9c52ae669e5fcbd3108
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 用於追蹤內的 Analysis Services 物件類型代碼
+# <a name="analysis-services-object-type-codes-used-in-traces"></a>用於追蹤內的 Analysis Services 物件類型代碼
   此頁面會列出 Analysis Services 資料模型中，每個物件的物件類型 (六位數數字)。 追蹤記錄檔中會出現這些程式碼，可用於識別與特定鎖定相關聯的物件類型。 例如，資料庫上的鎖定逾時會指出物件類型 100002 (也就是資料庫物件類型)。  
   
 > [!NOTE]  
 >  以下列出的程式碼數，超過追蹤記錄檔中實際出現的數目。 以下清單是每個物件的類型程式碼之完整清單，但只有採用鎖定的物件才會出現在追蹤記錄中內的物件類型程式碼。  
   
-## 物件類型參考  
+## <a name="object-type-reference"></a>物件類型參考  
   
 |物件類型|物件名稱|  
 |-----------------|-----------------|  

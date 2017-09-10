@@ -1,24 +1,29 @@
 ---
-title: "工作階段事件資料行 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "工作階段事件的事件類別目錄"
+title: "工作階段事件資料行 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- Session Events event category
 ms.assetid: 35853451-6768-4a02-8b8f-81a8ae37a333
 caps.latest.revision: 21
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 21
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cb85851bd0c05de09120fa2403c1e47bf0da9a75
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 工作階段事件資料行
+# <a name="session-events-data-columns"></a>工作階段事件資料行
   [工作階段事件] 事件類別目錄有下列事件類別：  
   
 |**事件識別碼**|**事件名稱**|**事件描述**|  
@@ -29,7 +34,7 @@ caps.handback.revision: 21
   
  下表列出此事件類別的資料行。  
   
-## Existing Connection  
+## <a name="existing-connection"></a>Existing Connection  
   
 |**資料行名稱**|**資料行識別碼**|**資料行類型**|**資料行描述**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -44,7 +49,7 @@ caps.handback.revision: 21
 |SPID|41|1|伺服器處理序識別碼。 這可唯一識別出使用者工作階段， 直接對應到 XML/A 所使用的工作階段 GUID。|  
 |ServerName|43|8|產生事件的伺服器名稱。|  
   
-## 現有的工作階段  
+## <a name="existing-session"></a>現有的工作階段  
   
 |**資料行名稱**|**資料行識別碼**|**資料行類型**|**資料行描述**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -65,7 +70,7 @@ caps.handback.revision: 21
 |ServerName|43|8|產生事件的伺服器名稱。|  
 |RequestProperties|45|9|XMLA 要求屬性。|  
   
-## 工作階段初始化  
+## <a name="session-initialize"></a>工作階段初始化  
   
 |||||  
 |-|-|-|-|  
@@ -85,7 +90,7 @@ caps.handback.revision: 21
 |ServerName|43|8|產生事件的伺服器名稱。|  
 |RequestProperties|45|9|XMLA 要求屬性。|  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [安全性稽核事件類別目錄](../../analysis-services/trace-events/security-audit-event-category.md)  
   
   

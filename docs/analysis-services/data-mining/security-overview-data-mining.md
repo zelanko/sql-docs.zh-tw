@@ -1,25 +1,30 @@
 ---
-title: "安全性概觀 (資料採礦) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "安全性 [Analysis Services - 資料採礦], 關於安全性"
+title: "安全性概觀 （資料採礦） |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- security [Analysis Services - data mining], about security
 ms.assetid: 387bde00-bcf3-4612-b27b-f9f608dbf71e
 caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4857608190aa03baca0a6916275641f463c6cf2a
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 安全性概觀 (資料採礦)
+# <a name="security-overview-data-mining"></a>安全性概觀 (資料採礦)
   保護 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 之安全的程序發生在多個層級上。 您必須保護 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的每一個執行個體及其資料來源的安全，以確定只有獲得授權的使用者對於選取的維度、採礦模型和資料來源，具有讀取或讀取/寫入權限。 您也必須保護基礎資料來源的安全，以防止未經授權的使用者惡意破壞機密商業資訊。 下列主題描述保護 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體之安全的程序。  
   
 ##  <a name="bkmk_Architecture"></a> 安全性架構  
@@ -55,7 +60,7 @@ caps.handback.revision: 12
   
  如果您使用 Integration Services 封裝清除資料、更新採礦模型或進行預測，您必須確保 Integration Services 服務具備儲存模型所在之資料庫的適當權限，以及來源資料的適當權限。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [角色與權限 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)  
   
   

@@ -1,31 +1,36 @@
 ---
-title: "設定 PowerPivot 及部署方案 (SharePoint 2016) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "設定 Power Pivot 及部署方案 (SharePoint 2016) |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 18a48995-639f-4782-8b17-6caa5769bb5f
 caps.latest.revision: 9
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 8
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 01d737c9c1ac225ca00f4b824567d013673a8f57
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 設定 PowerPivot 及部署方案 (SharePoint 2016)
-  本主題將描述如何部署和設定 [!INCLUDE[SPS2016](../../../includes/sps2016-md.md)] 中 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 功能的中介層增強功能，包括 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 圖庫、排程資料重新整理、管理儀表板和資料提供者。 請執行 **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2016 組態** 工具以完成下列作業：  
+# <a name="configure-power-pivot-and-deploy-solutions-sharepoint-2016"></a>設定 PowerPivot 及部署方案 (SharePoint 2016)
+  本主題將描述如何部署和設定 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 中 [!INCLUDE[SPS2016](../../../includes/sps2016-md.md)] 功能的中介層增強功能，包括 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 圖庫、排程資料重新整理、管理儀表板和資料提供者。 請執行 **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2016 組態** 工具以完成下列作業：  
   
 -   部署 SharePoint 方案檔。  
   
 -   建立 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 服務應用程式。  
   
--   如需後端服務以及在 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 模式下安裝 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 伺服器的資訊，請參閱[以 PowerPivot 模式安裝 Analysis Services](../../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)。  
+-   如需後端服務以及在 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 模式下安裝 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 伺服器的資訊，請參閱 [以 PowerPivot 模式安裝 Analysis Services](../../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)。  
   
- 如需安裝 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2016 組態工具的資訊，請參閱[安裝或解除安裝 PowerPivot for SharePoint 增益集 &#40;SharePoint 2016&#41;](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2016.md)  
+ 如需有關安裝[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]for SharePoint 2016 組態工具，請參閱[安裝或解除安裝 Powerpivot for SharePoint 增益集 (SharePoint 2016)](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2016.md)。  
   
  本主題包含下列幾節：  
   
@@ -62,7 +67,7 @@ caps.handback.revision: 8
   
     4.  按一下左邊視窗中的 **[建立網站集合]** 。 請記下 **[網站 URL]** ，以便在後續步驟中參考。 如果尚未設定 SharePoint 伺服器，組態精靈會將 Web 應用程式和網站集合 URL 預設為 `http://[ServerName]`的根目錄。 若要修改預設值，請在左邊視窗中檢閱下列頁面： **[建立預設 Web 應用程式]** 和 **[部署 Web 應用程式方案]**  
   
-5.  (選擇性) 檢閱用來完成每個動作的其餘輸入值。 按一下左邊視窗中的每個動作，查看並檢閱動作的詳細資料。 如需每個輸入值的詳細資訊，請參閱本主題中[設定或修復 PowerPivot for SharePoint 2010 (PowerPivot 組態工具)](http://msdn.microsoft.com/zh-tw/d61f49c5-efaa-4455-98f2-8c293fa50046) 的＜用於設定伺服器的輸入值＞一節。  
+5.  (選擇性) 檢閱用來完成每個動作的其餘輸入值。 按一下左邊視窗中的每個動作，查看並檢閱動作的詳細資料。 如需每個輸入值的詳細資訊，請參閱本主題中 [設定或修復 PowerPivot for SharePoint 2010 (PowerPivot 組態工具)](http://msdn.microsoft.com/en-us/d61f49c5-efaa-4455-98f2-8c293fa50046) 的＜用於設定伺服器的輸入值＞一節。  
   
 6.  選擇性地移除您不想在此時處理的任何動作。 例如，如果您想要在稍後設定 Secure Store Service，請選取 [設定 Secure Store Service] ，然後清除 [在工作清單中包含這個動作] 核取方塊。  
   
@@ -70,9 +75,9 @@ caps.handback.revision: 8
   
 8.  選取 [執行]  ，處理工作清單中的所有動作。 請注意， **[執行]** 只在驗證動作之後才可供使用。 如果未啟用 [執行]  ，請先選取 [驗證]  。  
   
- 如需詳細資訊，請參閱[設定或修復 PowerPivot for SharePoint 2010 (PowerPivot 組態工具)](http://msdn.microsoft.com/zh-tw/d61f49c5-efaa-4455-98f2-8c293fa50046)  
+ 如需詳細資訊，請參閱 [設定或修復 PowerPivot for SharePoint 2010 (PowerPivot 組態工具)](http://msdn.microsoft.com/en-us/d61f49c5-efaa-4455-98f2-8c293fa50046)  
   
-##  <a name="bkmk_verify_powerpivot"></a> 驗證 Power Pivot 組態  
+##  <a name="bkmk_verify_powerpivot"></a> 驗證 PowerPivot 組態  
  **服務：**  
   
 1.  在管理中心的 [系統設定] 中，選取 [管理伺服器上的服務] 。  
@@ -89,7 +94,7 @@ caps.handback.revision: 8
   
 1.  瀏覽至組態工具所建立的網站 URL。  
   
-     選取 [設定]![SharePoint 設定](../../../analysis-services/media/as-sharepoint2013-settings-gear.png "SharePoint 設定")，然後按一下 [網站設定]。  
+     選取**設定**![SharePoint 設定](../../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 設定")，然後按一下 **站台設定**。  
   
      選取 [網站集合功能] 。  
   

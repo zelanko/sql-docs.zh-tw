@@ -1,44 +1,49 @@
 ---
-title: "設定分割區儲存 (Analysis Services - 多維度) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "低度延遲 MOLAP"
-  - "標準儲存 [Analysis Services]"
-  - "混合式 OLAP"
-  - "自動 MOLAP"
-  - "關聯式 OLAP"
-  - "多維度 OLAP"
-  - "已排程 MOLAP [Analysis Services]"
-  - "分割區 [Analysis Services], 儲存體"
-  - "HOLAP"
-  - "MOLAP"
-  - "即時 ROLAP"
-  - "即時 HOLAP"
-  - "ROLAP"
-  - "中度延遲 MOLAP"
+title: "設定分割區儲存 (Analysis Services-多維度) |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- low latency MOLAP
+- standard storage [Analysis Services]
+- hybrid OLAP
+- automatic MOLAP
+- relational OLAP
+- multidimensional OLAP
+- scheduled MOLAP [Analysis Services]
+- partitions [Analysis Services], storage
+- HOLAP
+- MOLAP
+- real time ROLAP
+- real time HOLAP
+- ROLAP
+- medium latency MOLAP
 ms.assetid: e525e708-f719-4905-a4cc-20f6a9a3edcd
 caps.latest.revision: 31
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 31
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8915a2890be20925d739ae03098a2f29a1fab8ef
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 設定分割區儲存 (Analysis Services - 多維度)
+# <a name="set-partition-storage-analysis-services---multidimensional"></a>設定分割區儲存 (Analysis Services - 多維度)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會針對儲存模式和快取選項提供數個標準儲存組態。 這些會提供更新通知、延遲以及重建資料的常用組態。  
   
- 您可以在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 之 Cube 的 [分割區] 索引標籤，或在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的分割區屬性頁面上，指定分割區儲存。  
+ 您可以在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]之 Cube 的 [分割區] 索引標籤，或在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的分割區屬性頁面上，指定分割區儲存。  
   
-## 選擇儲存模式的指導方針  
+## <a name="guidelines-for-choosing-a-storage-mode"></a>選擇儲存模式的指導方針  
  針對大型量值群組，為不同的分割區設定不同的儲存是常見的作法。 請考慮下列指導方針：  
   
 -   針對持續更新的目前資料，請使用即時 ROLAP。  
@@ -53,7 +58,7 @@ caps.handback.revision: 31
   
  這些是一般的指導方針，若要為您的資料開發最佳的儲存配置，仍然需要謹慎的分析和測試。 如果標準組態都不符合您的需求，您也可以手動設定分割區的儲存設定。  
   
-## 儲存設定描述  
+## <a name="storage-settings-descriptions"></a>儲存設定描述  
   
 |標準儲存設定|說明|  
 |------------------------------|-----------------|  
@@ -65,7 +70,7 @@ caps.handback.revision: 31
 |已排程 MOLAP|詳細資料和彙總會以多維度格式儲存。 當資料變更時，伺服器不接收通知。 每隔 24 小時會自動執行處理。<br /><br /> 此設定通常用於只需要每日更新的資料來源。 查詢一律以 MOLAP 快取中的資料為對象，在建立新的快取和處理其物件之後才會捨棄這些資料。|  
 |MOLAP|未啟用主動式快取。 詳細資料和彙總會以多維度格式儲存。 當資料變更時，伺服器不接收通知。 必須排程執行或手動執行處理。<br /><br /> 此設定通常用於用戶端應用程式不需要定期更新、但高效能很重要的資料來源。<br /><br /> 如果應用程式不需要最新的資料，則不具主動式快取的 MOLAP 儲存會提供最佳效能。 雖然可以在臨時伺服器上更新和處理 Cube，並使用資料庫同步處理將更新和處理的 MOLAP 物件複製到實際伺服器，藉以將停機時間縮到最短，但實際上並不需要停機來處理更新的物件。|  
   
-## 自訂儲存選項  
+## <a name="custom-storage-options"></a>自訂儲存選項  
  您可以不使用其中一個標準儲存設定，而以手動方式設定儲存和主動式快取。 在建立自訂儲存設定之前，您可以先按一下 [標準設定] 選項，然後將滑桿移到最符合您想要使用之組態的標準設定。 接著，若要建立自訂組態，請按一下 [自訂設定] 選項，然後按一下 [選項]。  
   
 -   您可以指定資料來源中的變更是否觸發快取的更新。 為了要達到可容忍的變更率，您可以指定在資料來源更新之後的最小無回應間隔。 您也可以指定無回應間隔的覆寫，以便資料來源的變更間隔都未達到最小值時，在特定期間之後更新快取。  
@@ -78,7 +83,7 @@ caps.handback.revision: 31
   
  如果您選取 [套用設定至維度] 核取方塊，相同的儲存設定就會套用至與量值群組相關的維度。 維度值一開始與分割區值相同。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [多維度模型中的分割區](../../analysis-services/multidimensional-models/partitions-in-multidimensional-models.md)  
   
   

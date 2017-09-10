@@ -1,24 +1,29 @@
 ---
-title: "設定檔案上傳的大小上限 (Power Pivot for SharePoint) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "設定檔案上傳大小上限 (Power Pivot for SharePoint) |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ac516c63-1e79-4ae8-bca6-32d3c1a09c00
 caps.latest.revision: 9
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 9
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6e79739162ee4eba9fde6af1efddd7b5b273b73d
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 設定檔案上傳的大小上限 (Power Pivot for SharePoint)
+# <a name="configure-maximum-file-upload-size-power-pivot-for-sharepoint"></a>設定檔案上傳的大小上限 (Power Pivot for SharePoint)
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿經常包含大量的資料，這些資料產生的檔案會超出 SharePoint 上傳所允許的檔案大小上限。 當您嘗試上傳的檔案超出上限時，您將會得到以下 SharePoint 錯誤：  
   
 -   「指定的檔案超過支援的檔案大小上限。」  
@@ -27,7 +32,7 @@ caps.handback.revision: 9
   
  您必須是 SharePoint 管理員，才能變更檔案上傳大小上限。  
   
-### 設定 Excel Services 的檔案大小上限  
+### <a name="configure-maximum-file-size-for-excel-services"></a>設定 Excel Services 的檔案大小上限  
   
 1.  在 [管理中心] 的 [應用程式管理] 中，按一下 **[管理服務應用程式]**。  
   
@@ -47,7 +52,7 @@ caps.handback.revision: 9
   
 7.  按一下 **[確定]**。  
   
-### 設定 SharePoint Web 應用程式的檔案大小上限  
+### <a name="configure-maximum-file-size-for-a-sharepoint-web-application"></a>設定 SharePoint Web 應用程式的檔案大小上限  
   
 1.  在管理中心的 [應用程式管理] 中，按一下 **[管理 Web 應用程式]**。  
   

@@ -1,41 +1,46 @@
 ---
-title: "重新命名 Analysis Services 執行個體 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Analysis Services 的執行個體, 重新命名"
-  - "重新命名 Analysis Services 的執行個體"
-  - "名稱 [Analysis Services], 重新命名執行個體"
-  - "名稱 [Analysis Services]"
+title: "重新命名 Analysis Services 執行個體 |Microsoft 文件"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- instances of Analysis Services, renaming
+- renaming instances of Analysis Services
+- names [Analysis Services], renaming instances
+- names [Analysis Services]
 ms.assetid: 87494741-4a2e-4fed-8061-418fd1e111c3
 caps.latest.revision: 53
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 53
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ce3a87eed86b8f876c8bf9bdde305166c2681d18
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 重新命名 Analysis Services 執行個體
+# <a name="rename-an-analysis-services-instance"></a>重新命名 Analysis Services 執行個體
   您可以重新命名現有的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體，方法是使用與 Management Studio (Web 安裝) 一起安裝的 **Instance Rename** Tool。  
   
 > [!IMPORTANT]  
->  重新命名執行個體時，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Instance Rename Tool 會以更高的權限執行，並更新與該執行個體相關聯的 Windows 服務名稱、安全性帳戶，以及登錄項目。 為確保執行這些動作，請務必以本機系統管理員身分執行此工具。  
+>  重新命名執行個體時， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Instance Rename Tool 會以更高的權限執行，並更新與該執行個體相關聯的 Windows 服務名稱、安全性帳戶，以及登錄項目。 為確保執行這些動作，請務必以本機系統管理員身分執行此工具。  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Instance Rename Tool 不會修改針對原始執行個體建立的程式資料夾。 請勿修改程式資料夾名稱以符合您要重命名的執行個體。 變更程式資料夾名稱可以防止安裝程式修復或移除安裝。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體重新命名工具不適用於叢集環境。  
   
-### 若要重新命名 Analysis Services 的執行個體  
+### <a name="to-rename-an-instance-of-analysis-services"></a>若要重新命名 Analysis Services 的執行個體  
   
 1.  從 C:\Program Files (x86)\Microsoft SQL Server\130\Tools\Binn\ManagementStudio 啟動 **Instance Rename** 工具 **asinstancerename.exe**。  
   
@@ -47,13 +52,13 @@ caps.handback.revision: 53
   
      Analysis Services 執行個體將會停止，並在名稱變更時重新啟動。  
   
-### 重新命名後的清單  
+### <a name="post-rename-checklist"></a>重新命名後的清單  
   
-1.  若要繼續存取在重新命名之執行個體上執行的資料庫，您必須在 Excel 或其他用戶端應用程式中手動更新資料連接。 此外，請檢查任何預先定義的連接，例如 Reporting Services 共用資料來源、Excel ODC 檔，或可能參考您剛重新命名之執行個體 BI 語意模型連接檔案。 如需相關資訊，請參閱[連接到 Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)。  
+1.  若要繼續存取在重新命名之執行個體上執行的資料庫，您必須在 Excel 或其他用戶端應用程式中手動更新資料連接。 此外，請檢查任何預先定義的連接，例如 Reporting Services 共用資料來源、Excel ODC 檔，或可能參考您剛重新命名之執行個體 BI 語意模型連接檔案。 如需相關資訊，請參閱 [連接到 Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)。  
   
 2.  更新您例行用來備份、同步處理或處理資料庫的 PowerShell 指令碼或 AMO 指令碼。  
   
-3.  更新您在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中處理之 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案的專案屬性。 針對表格式模式伺服器執行個體，請務必更新 model.bim 檔案的 [工作空間伺服器] 屬性，以及專案的 [伺服器] 屬性。  
+3.  更新您在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中處理之 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]專案的專案屬性。 針對表格式模式伺服器執行個體，請務必更新 model.bim 檔案的 [工作空間伺服器] 屬性，以及專案的 [伺服器] 屬性。  
   
 4.  根據您指定服務帳戶的方式而定，您可能需要更新授與資料存取權限給服務的資料庫登入或檔案權限 (例如，如果您使用服務帳戶處理資料或存取其他伺服器上的連結物件)。  
   
@@ -61,7 +66,7 @@ caps.handback.revision: 53
   
      下列範例提供說明。 假設您使用預設虛擬帳戶，以名稱為 “Tabular” 的執行個體安裝表格式模式伺服器，導致下列設定：  
   
-    1.  執行個體名稱 = \<伺服器>\TABULAR  
+    1.  執行個體名稱 =\<伺服器 > \TABULAR  
   
     2.  服務名稱 = MSOLAP$TABULAR  
   
@@ -69,7 +74,7 @@ caps.handback.revision: 53
   
      現在，假設您將執行個體重新命名為 “TAB2”。 名稱變更之後，您的設定現在看起來如下：  
   
-    1.  執行個體名稱 = \<伺服器>\TAB2  
+    1.  執行個體名稱 =\<伺服器 > \TAB2  
   
     2.  服務名稱 = MSOLAP$TAB2  
   

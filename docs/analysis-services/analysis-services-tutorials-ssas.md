@@ -1,41 +1,47 @@
 ---
-title: "Analysis Services 教學課程 (SSAS) | Microsoft Docs"
-ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: "Analysis Services 教學課程 (SSAS) |Microsoft 文件"
+ms.date: 03/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: b378c3bb-eead-46eb-b213-70d994f2d562
 caps.latest.revision: 17
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 16
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 29b7f0e097ba29eb69dc2fe3b7d6c34dee9e238d
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# Analysis Services 教學課程 (SSAS)
-本節包含 [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)] 的教學課程。  
+# <a name="analysis-services-tutorials-ssas"></a>Analysis Services 教學課程 (SSAS)
+此章節包含 SQL Server Analysis Services 教學課程。  
   
 [表格式模型化 &#40;Adventure Works 教學課程&#41;](../analysis-services/tabular-modeling-adventure-works-tutorial.md)  
-這個教學課程提供如何使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 為虛擬公司 Adventure Works 撰寫基本 Analysis Services 表格式模型的課程。  
+本教學課程提供有關如何使用 SQL Server Data Tools (SSDT) 為虛擬公司 Adventure Works 撰寫基本 Analysis Services 表格式模型的課程。  
   
 [多維度模型化 &#40;Adventure Works 教學課程&#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
-這個教學課程將教導您 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中多維度模型背後的基本技巧和概念。 完成這個教學課程後，您將擁有以 Adventure Works 資料為基礎的 Cube 資料庫，您可從 Excel、Reporting Services 或任何其他連接到 Analysis Services 的用戶端應用程式存取該資料庫。  
+此教學課程將說明的基本技巧和在 SSDT 中的多維度模型背後的概念。 當您完成時，您必須根據 Adventure Works 資料，您可以從 Excel、 Reporting Services 或連接至 Analysis Services 的任何其他用戶端應用程式存取的 cube 資料庫。  
   
 [資料採礦](../analysis-services/data-mining-tutorials-analysis-services.md)  
 此教學課程集合說明如何使用精靈和整合式視覺效果，來建立資料採礦解決方案。  
   
   
-## 其他資源  
+## <a name="additional-resources"></a>其他資源  
 [Codeplex 上的 AdventureWorks 範例資料庫](http://go.microsoft.com/fwlink/?linkID=335807)  
-這個連結將帶您到 codeplex 下載頁面，其中包含適用 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 的 AdventureWorks 範例資料庫。  
+這個連結將帶您到 codeplex 下載頁面，具有 AdventureWorks 範例資料庫。  
   
 [以程式設計方式建立表格式模型的 AMO 程式碼範例](http://go.microsoft.com/fwlink/?linkID=221036)  
-這個連結將帶您到 Codeplex 下載頁面，其中包含適用 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 的 AMO 範例。  
+這個連結將帶您到 Codeplex 下載頁面，具有 AMO 範例。  
   
   
   
+

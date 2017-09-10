@@ -1,24 +1,29 @@
 ---
-title: "查詢事件資料行 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "查詢事件的事件類別目錄"
+title: "查詢事件資料行 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- Queries Events event category
 ms.assetid: 28aa7df5-3e1f-4f4f-8a1c-8bbd29d5da13
 caps.latest.revision: 33
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 33
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 48f2e8dec1939bedda904845dd2e56a237ddc10c
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 查詢事件資料行
+# <a name="queries-events-data-columns"></a>查詢事件資料行
   [查詢事件] 事件類別目錄具有下列事件類別：  
   
 |**事件識別碼**|**事件名稱**|**事件描述**|  
@@ -28,7 +33,7 @@ caps.handback.revision: 33
   
  下表列出每一個這類事件類別的資料行。  
   
-## 查詢開始類別—資料行  
+## <a name="query-begin-classdata-columns"></a>查詢開始類別—資料行  
   
 |**資料行名稱**|**資料行識別碼**|**資料行類型**|**資料行描述**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -50,7 +55,7 @@ caps.handback.revision: 33
 |RequestParameters|44|9|包含與查詢事件相關聯之參數化查詢和命令的參數。|  
 |RequestProperties|45|9|包含 XMLA 要求的屬性。|  
   
-## 查詢結束類別—資料行  
+## <a name="query-end-classdata-columns"></a>查詢結束類別—資料行  
   
 |**資料行名稱**|**資料行識別碼**|**資料行類型**|**資料行描述**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -76,7 +81,7 @@ caps.handback.revision: 33
 |TextData|42|9|包含與查詢事件相關聯的文字資料。|  
 |ServerName|43|8|包含發生查詢事件之 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體的名稱。|  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [查詢事件類別目錄](../../analysis-services/trace-events/queries-events-category.md)  
   
   

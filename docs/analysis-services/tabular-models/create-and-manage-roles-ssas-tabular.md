@@ -1,32 +1,37 @@
 ---
-title: "建立及管理角色 (SSAS 表格式) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.bidtoolset.rolemanager.f1"
-  - "sql13.asvs.bidtoolset.roledb.f1"
+title: "建立及管理角色 (SSAS 表格式) |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.asvs.bidtoolset.rolemanager.f1
+- sql13.asvs.bidtoolset.roledb.f1
 ms.assetid: e23d27a8-e968-4082-9dbe-963fc724b5d9
 caps.latest.revision: 17
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 17
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5c625fce817af3072e059d5d2b1172383fcdafea
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 建立及管理角色 (SSAS 表格式)
-  表格式模型中的角色定義模型的成員權限。 您可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的 [角色管理員] 對話方塊來定義模型專案的角色。 部署模型之後，資料庫管理員即可使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 管理角色。  
+# <a name="create-and-manage-roles-ssas-tabular"></a>建立及管理角色 (SSAS 表格式)
+  表格式模型中的角色定義模型的成員權限。 您可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的 [角色管理員] 對話方塊來定義模型專案的角色。 部署模型之後，資料庫管理員即可使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]管理角色。  
   
  此主題中的工作描述如何使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的 [角色管理員] 對話方塊，在模型撰寫期間建立及管理角色。 如需在已部署的模型資料庫中管理角色的相關資訊，請參閱[表格式模型角色 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/tabular-model-roles-ssas-tabular.md)。  
   
-## 工作  
+## <a name="tasks"></a>工作  
  若要建立、編輯、複製及刪除角色，您要使用 [角色管理員] 對話方塊。 若要檢視 [角色管理員] 對話方塊，請在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中按一下 [模型] 功能表，然後按一下 [角色管理員]。  
   
 ###  <a name="bkmk_new_role"></a> 若要建立新角色  
@@ -64,11 +69,11 @@ caps.handback.revision: 17
   
 9. 按一下 **[確定]**。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [角色 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/roles-ssas-tabular.md)   
  [檢視方塊 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)   
- [在 Excel 中進行分析 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)   
- [USERNAME 函數 (DAX)](http://msdn.microsoft.com/zh-tw/22dddc4b-1648-4c89-8c93-f1151162b93f)   
- [CUSTOMDATA 函數 (DAX)](http://msdn.microsoft.com/zh-tw/58235ad8-226c-43cc-8a69-5a52ac19dd4e)  
+ [在 Excel &#40; 中進行分析SSAS 表格式 &#41;](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)   
+ [USERNAME 函數 (DAX)](http://msdn.microsoft.com/en-us/22dddc4b-1648-4c89-8c93-f1151162b93f)   
+ [CUSTOMDATA 函數 (DAX)](http://msdn.microsoft.com/en-us/58235ad8-226c-43cc-8a69-5a52ac19dd4e)  
   
   

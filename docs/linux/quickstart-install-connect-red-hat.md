@@ -1,19 +1,19 @@
 ---
 title: "開始使用 Red Hat Enterprise Linux 上的 SQL Server 2017 |Microsoft 文件"
 description: "本快速入門教學課程會示範如何在 Red Hat Enterprise Linux 上安裝 SQL Server 2017 然後建立並查詢資料庫，以使用 sqlcmd。"
-author: sabotta
-ms.author: carlasab
-manager: craigg
-ms.date: 07/24/2017
+author: rothja
+ms.author: jroth
+manager: jhubbard
+ms.date: 09/07/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: 53f3c2dbda293d6c3f9beb8bd16287b6aa0d9e26
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 5309c2884fa4bf46a4c9c7224f4c1f21be23e7e6
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="install-sql-server-and-create-a-database-on-red-hat"></a>安裝 SQL Server，並在 Red Hat 上建立資料庫
@@ -25,7 +25,7 @@ ms.lasthandoff: 08/02/2017
 > [!TIP]
 > 本教學課程需要使用者輸入和網際網路連線。 如果您有興趣[自動](sql-server-linux-setup.md#unattended)或[離線](sql-server-linux-setup.md#offline)安裝程序，請參閱[SQL Server on Linux 的安裝指南](sql-server-linux-setup.md)。
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>必要條件
 
 您必須擁有的 RHEL 7.3 機器**至少 3.25 GB**的記憶體。
 
@@ -50,7 +50,7 @@ ms.lasthandoff: 08/02/2017
    sudo yum install -y mssql-server
    ```
 
-1. 在套件安裝完成執行之後**mssql conf 安裝**並遵循提示來設定 SA 密碼，並選擇版本。
+1. 在套件安裝完成執行之後**mssql conf 安裝**並遵循提示設定 SA 密碼並選擇您的版本。
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf setup
@@ -116,3 +116,4 @@ ms.lasthandoff: 08/02/2017
 > **Sqlcmd**是一個工具連接到 SQL Server 來執行查詢，並執行管理和開發工作。 其他工具包括[SQL Server Management Studio](sql-server-linux-develop-use-ssms.md)和[Visual Studio Code](sql-server-linux-develop-use-vscode.md)。
 
 [!INCLUDE [Connect, create, and query data](../includes/sql-linux-quickstart-connect-query.md)]
+

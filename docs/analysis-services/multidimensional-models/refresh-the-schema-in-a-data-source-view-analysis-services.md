@@ -1,28 +1,33 @@
 ---
-title: "在資料來源檢視中重新整理結構描述 (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "資料來源檢視 [Analysis Services], 結構描述更新"
-  - "重新整理資料來源檢視"
-  - "資料來源檢視 [Analysis Services], 重新整理"
+title: "重新整理資料來源檢視 (Analysis Services) 中的結構描述 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data source views [Analysis Services], schema updates
+- refreshing data source views
+- data source views [Analysis Services], refreshing
 ms.assetid: 634b0504-1437-43e7-8ac7-3248ac7989a3
 caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 34
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 646c4b12597380221671a5894118b86a57f84dd1
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 在資料來源檢視中重新整理結構描述 (Analysis Services)
+# <a name="refresh-the-schema-in-a-data-source-view-analysis-services"></a>在資料來源檢視中重新整理結構描述 (Analysis Services)
   當您在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案或資料庫中定義資料來源檢視 (DSV) 之後，基礎資料來源中的結構描述可能會變更。 但在開發專案中不會自動偵測或更新這些變更。 此外，如果您將專案部署至伺服器，當 Analysis Services 無法再連接至外部資料來源時，您現在會發生處理錯誤。  
   
  若要更新 DSV 以符合外部資料來源，您可以在 Business Intelligence Development Studio (BIDS) 中重新整理 DSV。 重新整理 DSV 會偵測做為 DSV 基礎之外部資料來源的變更，並建立變更清單，以列舉外部資料來源中的加入或刪除。 然後，您可以將一組變更套用至 DSV，以將 DSV 重新調整為符合基礎資料來源。 請注意，您通常需要額外的工作，以進一步更新專案中使用 DSV 的 Cube 和維度。  
@@ -42,12 +47,12 @@ caps.handback.revision: 34
   
 -   加入新的唯一條件約束。 如果 DSV 中有資料表的邏輯主索引鍵存在，而且資料來源中的資料表已加入實體索引鍵，則會移除此邏輯索引鍵，並由此實體索引鍵來加以取代。  
   
- 重新整理永遠不會將新資料表加入至 DSV。 如果您想加入新資料表，則必須手動加入。 如需詳細資訊，請參閱[在資料來源檢視中加入或移除資料表或檢視 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)。  
+ 重新整理永遠不會將新資料表加入至 DSV。 如果您想加入新資料表，則必須手動加入。 如需詳細資訊，請參閱 [在資料來源檢視中加入或移除資料表或檢視 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)的 [方案總管] 中執行 [資料來源檢視精靈]。  
   
 ##  <a name="bkmk_DSVrefresh"></a> 在 SQL Server Data Tools 中重新整理 DSV  
- 若要重新整理 DSV，請從 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的方案總管中，按兩下 DSV，然後按一下 [重新整理資料來源檢視] 按鈕，或從 [資料來源檢視] 功能表中選擇 [重新整理]。  
+ 若要重新整理 DSV，請按兩下 [方案總管] 中從 DSV [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]。  這會啟動 DSV 設計工具。  然後按一下 重新整理資料來源檢視 按鈕，在設計工具中的，或選擇**重新整理**從資料來源檢視 功能表。  
   
- 在重新整理期間，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會查詢所有基礎關聯式資料來源，以判斷 DSV 中所包含的資料表/檢視表是否已有變更。 如果可以對所有基礎資料來源建立連接，而且已經有變更，您將會在 [重新整理資料來源檢視] 對話方塊中看到這些變更。  
+ 在重新整理期間， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會查詢所有基礎關聯式資料來源，以判斷 DSV 中所包含的資料表/檢視表是否已有變更。 如果可以對所有基礎資料來源建立連接，而且已經有變更，您將會在 [重新整理資料來源檢視] 對話方塊中看到這些變更。  
   
  ![重新整理資料來源檢視對話方塊](../../analysis-services/multidimensional-models/media/ssas-olapdsv-refresh.gif "重新整理資料來源檢視對話方塊")  
   
@@ -60,7 +65,8 @@ caps.handback.revision: 34
   
  當您檢查報表之後，可以接受變更，或是取消更新來拒絕任何變更。 您必須一起接受或拒絕所有變更。 您無法選擇清單中的個別項目。 您也可以儲存一份含有變更的報表。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [多維度模型中的資料來源檢視](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
   
   
+

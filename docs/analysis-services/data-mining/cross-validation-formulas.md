@@ -1,33 +1,38 @@
 ---
-title: "交叉驗證公式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "交叉驗證公式 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: fd1ea582-29a1-4154-8de2-47bab3539b4d
 caps.latest.revision: 9
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9ae8b6960e04fbbe04a7a536cc75c361d36c907f
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 交叉驗證公式
+# <a name="cross-validation-formulas"></a>交叉驗證公式
   當您產生交叉驗證報表時，報表會根據採礦模型類型包含每一個模型的精確度量值 (也就是之前用來建立模型的演算法)、可預測屬性的資料類型，以及可預測的屬性值 (如果有的話)。  
   
  本節列出交叉驗證報表中所使用的量值，並描述計算的方法。  
   
- 如需依模型類型的精確度量值分解，請參閱[交叉驗證報表中的量值](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md)。  
+ 如需依模型類型的精確度量值分解，請參閱 [交叉驗證報表中的量值](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md)。  
   
-## 交叉驗證量值所使用的公式  
+## <a name="formulas-used-for-cross-validation-measures"></a>交叉驗證量值所使用的公式  
   
 > [!NOTE]  
->  **重要事項**：這些精確度量值是針對每一個目標屬性計算而得。 您可以針對每一個屬性指定或省略目標值。 如果資料集內的案例沒有任何目標屬性值，此案例會視為擁有特殊值，稱為*「遺漏值」*(Missing Value)。 計算特定目標屬性的精確度量值時，不會計算有遺漏值的資料列。 請注意，由於分數是分別針對每一個屬性計算而得，因此如果目標屬性的值存在，而其他屬性有遺漏值，這樣並不會影響目標屬性的分數。  
+>  **重要事項** ：這些精確度量值是針對每一個目標屬性計算而得。 您可以針對每一個屬性指定或省略目標值。 如果資料集內的案例沒有任何目標屬性值，此案例會視為擁有特殊值，稱為 *「遺漏值」*(Missing Value)。 計算特定目標屬性的精確度量值時，不會計算有遺漏值的資料列。 請注意，由於分數是分別針對每一個屬性計算而得，因此如果目標屬性的值存在，而其他屬性有遺漏值，這樣並不會影響目標屬性的分數。  
   
 |[量值]|適用於|實作|  
 |-------------|----------------|--------------------|  
@@ -44,7 +49,7 @@ caps.handback.revision: 9
 |**均方根誤差**|離散屬性。 您可以指定目標值，但並非必要條件。|機率分數補數平方之平均數的平方根，除以資料分割中的案例數目，不包括目標屬性擁有遺漏值的資料列。|  
 |**均方根誤差**|離散屬性，沒有指定的目標。|機率分數補數平方之平均數的平方根，除以資料分割中的案例數目，不包括目標屬性擁有遺漏值的案例。|  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [測試和驗證 &#40;資料採礦&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)   
  [交叉驗證 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)  
   

@@ -1,30 +1,35 @@
 ---
-title: "Power Pivot for SharePoint 2016 的最低權限組態範例 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Power Pivot 最低權限範例 SharePoint 2016 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 35757f68-7bfc-4906-a985-f369690b9237
 caps.latest.revision: 8
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 8
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 9c151cf24a3f91bf5a9502e024d431b868e086e3
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# Power Pivot for SharePoint 2016 的最低權限組態範例
+# <a name="power-pivot-minimum-privilege-example---sharepoint-2016"></a>Power Pivot 最低權限範例 SharePoint 2016
   本主題描述使用最低權限的 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2016 組態範例。 此組態會分別針對三個元件使用不同的帳戶，而且每個帳戶都具有最低層級的權限。  
   
 ||  
 |-|  
 |**[!INCLUDE[applies](../../../includes/applies-md.md)]**  SharePoint 2016|  
   
-## 帳戶摘要  
- [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2016 支援使用網路服務帳戶作為 Analysis Services 服務帳戶。 網路服務帳戶並非 SharePoint 2010 的支援案例。 如需服務帳戶的詳細資訊，請參閱[設定 Windows 服務帳戶與權限](http://msdn.microsoft.com/library/ms143504.aspx) (http://msdn.microsoft.com/library/ms143504.aspx)。  
+## <a name="summary-of-accounts"></a>帳戶摘要  
+ [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2016 支援使用網路服務帳戶作為 Analysis Services 服務帳戶。 網路服務帳戶並非 SharePoint 2010 的支援案例。 如需服務帳戶的詳細資訊，請參閱 [設定 Windows 服務帳戶與權限](http://msdn.microsoft.com/library/ms143504.aspx) (http://msdn.microsoft.com/library/ms143504.aspx)。  
   
  下表將摘要說明用於這個最低權限組態範例的三個帳戶。  
   
@@ -34,13 +39,13 @@ caps.handback.revision: 8
 |SharePoint 伺服器陣列帳戶|**SPFarm**|  
 |Analysis Services 服務帳戶|**SPsvc**|  
   
-### SharePoint 管理員帳戶 (SpAdmin)  
- **SPAdmin** 是您用來安裝和設定伺服器陣列的網域帳戶。 這個帳戶用來執行 [SharePoint 組態精靈] 以及適用於 SharePoint 2016 的 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 組態工具。**SPAdmin** 帳戶是唯一需要本機系統管理員權限的帳戶。 執行 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 組態工具之前，請將 **SPAdmin** 帳戶權限授與 SQL Server 資料庫執行個體，其為 SharePoint 建立內容和組態資料庫的位置。 若要在最低權限案例中設定 SPAdmin 帳戶，它必須是 **securityadmin** 和 **dbcreator** 角色的成員。  
+### <a name="the-sharepoint-administrator-account-spadmin"></a>SharePoint 管理員帳戶 (SpAdmin)  
+ **SPAdmin** 是您用來安裝和設定伺服器陣列的網域帳戶。 這個帳戶用來執行 [SharePoint 組態精靈] 以及適用於 SharePoint 2016 的 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 組態工具。 **SPAdmin** 帳戶是唯一需要本機系統管理員權限的帳戶。 執行 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 組態工具之前，請將 **SPAdmin** 帳戶權限授與 SQL Server 資料庫執行個體，其為 SharePoint 建立內容和組態資料庫的位置。 若要在最低權限案例中設定 SPAdmin 帳戶，它必須是 **securityadmin** 和 **dbcreator**角色的成員。  
   
-### 伺服器陣列帳戶 (SPFarm)  
- **SPFarm** 是 SharePoint Timer Service 和管理中心 Web 應用程式用來存取 SharePoint 內容資料庫的網域帳戶。 這個帳戶不需要是本機系統管理員。 [SharePoint 組態精靈] 會授與後端 SQL Server 資料庫的適當最低權限。最低 SQL Server 權限組態就是 **securityadmin** 和 **dbcreator** 角色的成員資格。  
+### <a name="the-farm-account-spfarm"></a>伺服器陣列帳戶 (SPFarm)  
+ **SPFarm** 是 SharePoint Timer Service 和管理中心 Web 應用程式用來存取 SharePoint 內容資料庫的網域帳戶。 這個帳戶不需要是本機系統管理員。 [SharePoint 組態精靈] 會授與後端 SQL Server 資料庫的適當最低權限。最低 SQL Server 權限組態就是 **securityadmin** 和 **dbcreator**角色的成員資格。  
   
-### Power Pivot 服務的服務帳戶 (SPsvc)  
+### <a name="the-service-account-for-power-pivot-service-spsvc"></a>Power Pivot 服務的服務帳戶 (SPsvc)  
  如果您沒有在執行 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 組態工具之前設定新的 SharePoint 伺服器陣列，則 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 組態工具預設將建立下列項目：  
   
 -   [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 服務應用程式。  

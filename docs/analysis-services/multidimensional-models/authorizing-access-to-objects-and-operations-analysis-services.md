@@ -1,44 +1,49 @@
 ---
-title: "物件和作業的存取權授權 (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.roledesignerdialog.general.f1"
-  - "sql13.asvs.roledesignerdialog.membership.f1"
-helpviewer_keywords: 
-  - "存取權限 [Analysis Services], 使用者"
-  - "權限 [Analysis Services], 使用者"
-  - "安全性 [Analysis Services], 使用者存取權"
-  - "使用者存取權限 [Analysis Services]"
-  - "授與權限 [Analysis Services], 使用者"
+title: "授與物件和作業 (Analysis Services) 存取權 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.asvs.roledesignerdialog.general.f1
+- sql13.asvs.roledesignerdialog.membership.f1
+helpviewer_keywords:
+- access rights [Analysis Services], users
+- permissions [Analysis Services], users
+- security [Analysis Services], user access
+- user access rights [Analysis Services]
+- granting permissions [Analysis Services], users
 ms.assetid: af28524e-5eca-4dce-a050-da4f406ee1c7
 caps.latest.revision: 35
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 35
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5cf85cd6bb5c32e9c8151fa87aa41fcefb7033f3
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 物件和作業的存取權授權 (Analysis Services)
+# <a name="authorizing-access-to-objects-and-operations-analysis-services"></a>物件和作業的存取權授權 (Analysis Services)
   非系統管理使用者對 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫內的 Cube、維度和採礦模型的存取權，是透過一個或多個資料庫角色的成員資格來授與。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 系統管理員可以建立這些資料庫角色、授與這些角色對 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 物件的讀取或讀取/寫入權限，然後將 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 使用者和群組指派給每個角色。  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會結合與使用者或群組所屬的每一個資料庫角色相關聯的權限，來決定特定 Windows 使用者或群組的有效權限。 因此，如果某個資料庫角色沒有授與使用者或群組檢視維度、量值或屬性的權限，但另一個資料庫角色有授與該使用者或群組該權限，則該使用者或群組將具有檢視該物件的權限。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器管理員角色的成員與具有完整控制權 (管理員) 權限之資料庫角色的成員，可以存取資料庫中的所有資料和中繼資料，不需其他權限就可以檢視特定物件。 而且，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器角色成員存取任何資料庫中的任何物件時都不能遭到拒絕，而在資料庫內具有完整控制權 (管理員) 權限的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫角色，存取該資料庫內的任何物件時也不能遭到拒絕。 特殊的系統管理作業 (例如處理) 可透過權限較少的個別角色來授權。 如需詳細資訊，請參閱[授與處理權限 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md)。  
+>  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器管理員角色的成員與具有完整控制權 (管理員) 權限之資料庫角色的成員，可以存取資料庫中的所有資料和中繼資料，不需其他權限就可以檢視特定物件。 而且， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器角色成員存取任何資料庫中的任何物件時都不能遭到拒絕，而在資料庫內具有完整控制權 (管理員) 權限的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫角色，存取該資料庫內的任何物件時也不能遭到拒絕。 特殊的系統管理作業 (例如處理) 可透過權限較少的個別角色來授權。 如需詳細資訊，請參閱[授與處理權限 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md)。  
   
-## 列出為您的資料庫定義的角色  
+## <a name="list-roles-defined-for-your-database"></a>列出為您的資料庫定義的角色  
  系統管理員可以在 SQL Server Management Studio 中執行簡單的 DMV 查詢，以取得伺服器上定義的所有角色清單。  
   
-1.  在 SSMS 中，以滑鼠右鍵按一下資料庫，然後選取 [新增查詢] | [MDX]。  
+1.  在 SSMS 中，以滑鼠右鍵按一下資料庫，然後選取**新查詢** | **MDX**。  
   
 2.  輸入下列查詢並按 F5 來執行：  
   
@@ -48,12 +53,12 @@ caps.handback.revision: 35
   
      結果包含資料庫名稱、描述、角色名稱及上次修改日期。 使用此資訊做為起點，您可以對個別的資料庫繼續執行，以檢查特定角色的成員資格與權限。  
   
-## 由上而下的 Analysis Services 授權概觀  
+## <a name="top-down-overview-of-analysis-services-authorization"></a>由上而下的 Analysis Services 授權概觀  
  本節涵蓋設定權限的基本工作流程。  
   
  **步驟 1︰伺服器管理**  
   
- 第一個步驟是決定誰具有伺服器層級的系統管理員權限。 在安裝期間，安裝 SQL Server 的本機管理員需要指定一或多個 Windows 帳戶做為 Analysis Services 伺服器管理員。 伺服器管理員擁有伺服器上所有可能的權限，包含檢視、修改及刪除伺服器上的任何物件，或檢視相關聯資料的權限。 安裝完成後，伺服器管理員可以新增或移除帳戶來變更這個角色的成員資格。 如需此權限等級的詳細資訊，請參閱[將伺服器管理員權限授與 Analysis Services 執行個體](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md)。  
+ 第一個步驟是決定誰具有伺服器層級的系統管理員權限。 在安裝期間，安裝 SQL Server 的本機管理員需要指定一或多個 Windows 帳戶做為 Analysis Services 伺服器管理員。 伺服器管理員擁有伺服器上所有可能的權限，包含檢視、修改及刪除伺服器上的任何物件，或檢視相關聯資料的權限。 安裝完成後，伺服器管理員可以新增或移除帳戶來變更這個角色的成員資格。 如需此權限等級的詳細資訊，請參閱 [將伺服器管理員權限授與 Analysis Services 執行個體](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md) 。  
   
  **步驟 2︰資料庫管理**  
   
@@ -74,7 +79,7 @@ caps.handback.revision: 35
   
  您也可以根據使用者識別來變動權限。 這通常稱為動態安全性，可以使用 [UserName &#40;MDX&#41;](../../mdx/username-mdx.md) 函數來實作  
   
-## 最佳做法  
+## <a name="best-practices"></a>最佳做法  
  若要以更好的方式管理權限，建議使用如下的處理方式：  
   
 1.  依功能建立角色 (例如，dbadmin、cubedeveloper、processadmin)，如此一來，無論是誰維護角色，都能一眼就看出該角色所允許執行的功能。 如同其他內容所述，您可以在模型定義中定義角色，因而能夠透過後續的解決方案部署來保留這些角色。  
@@ -83,7 +88,7 @@ caps.handback.revision: 35
   
 3.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中產生指令碼，如此一來，每當從模型的來源檔案將模型重新部署到伺服器時，您便能快速複寫角色指派。 如需如何快速產生指令碼的詳細資訊，請參閱[授與 Cube 或模型權限 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)。  
   
-4.  採用可反映角色的範圍與成員資格的命名慣例。 只有在設計和系統管理工具中看得見角色名稱，因此，請使用讓 Cube 安全性專員可以理解的命名慣例。 例如，**processadmin-windowsgroup1** 表示要對組織中個別 Windows 使用者帳戶為 **windowsgroup1** 安全性群組成員的人員授與讀取存取權與處理權限。  
+4.  採用可反映角色的範圍與成員資格的命名慣例。 只有在設計和系統管理工具中看得見角色名稱，因此，請使用讓 Cube 安全性專員可以理解的命名慣例。 例如， **processadmin-windowsgroup1** 表示要對組織中個別 Windows 使用者帳戶為 **windowsgroup1** 安全性群組成員的人員授與讀取存取權與處理權限。  
   
      包含帳戶資訊可協助您追蹤在各種不同角色中使用了哪些帳戶。 由於角色是加總的，因此與 **windowsgroup1** 相關聯的組合角色，能夠為隸屬於該安全性群組的人員組成有效的權限集。  
   
@@ -91,8 +96,8 @@ caps.handback.revision: 35
   
  使用與此類似的方法能避免模型中的角色定義和角色成員資格紊亂，並為角色指派提供能見度，讓 Cube 權限在實作和維護上會更容易些。  
   
-## 請參閱＜  
- [將伺服器系統管理員權限授與 Analysis Services 執行個體](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md)   
+## <a name="see-also"></a>請參閱＜  
+ [將伺服器管理員權限授與 Analysis Services 執行個體](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md)   
  [角色與權限 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)   
  [Analysis Services 支援的驗證方法](../../analysis-services/instances/authentication-methodologies-supported-by-analysis-services.md)  
   

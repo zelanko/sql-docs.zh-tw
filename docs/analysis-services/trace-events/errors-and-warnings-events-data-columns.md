@@ -1,31 +1,36 @@
 ---
-title: "錯誤和警告事件資料行 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "錯誤和警告事件類別目錄 [SQL Server]"
+title: "錯誤和警告事件資料行 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- Errors and Warnings event category [SQL Server]
 ms.assetid: f375d303-7aab-4c51-a955-05a2762cc4d1
 caps.latest.revision: 24
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 24
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a909f39446c2a90347e8253c7fb54c1abe91c353
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 錯誤和警告事件資料行
+# <a name="errors-and-warnings-events-data-columns"></a>錯誤和警告事件資料行
   安全性稽核事件類別目錄含有下列事件類別：  
   
 -   錯誤類別  
   
  下表列出此事件類別的資料行。  
   
-## 錯誤事件類別—資料行  
+## <a name="error-event-classdata-columns"></a>錯誤事件類別—資料行  
   
 |**資料行名稱**|**資料行識別碼**|**資料行類型**|**資料行描述**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -47,7 +52,7 @@ caps.handback.revision: 24
 |TextData|42|9|包含與錯誤事件相關聯的文字資料。|  
 |ServerName|43|8|包含發生錯誤事件的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器執行個體名稱。|  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [安全性稽核事件類別目錄](../../analysis-services/trace-events/security-audit-event-category.md)  
   
   

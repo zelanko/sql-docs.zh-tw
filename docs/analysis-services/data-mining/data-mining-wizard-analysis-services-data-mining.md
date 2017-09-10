@@ -1,33 +1,38 @@
 ---
-title: "資料採礦精靈 (Analysis Services - 資料採礦) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "維度 [Analysis Services], 資料採礦"
-  - "OLAP [Analysis Services], 採礦模型"
-  - "資料採礦精靈"
-  - "關聯式採礦模型 [Analysis Services]"
+title: "資料採礦精靈 (Analysis Services-資料採礦) |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- dimensions [Analysis Services], data mining
+- OLAP [Analysis Services], mining models
+- Data Mining Wizard
+- relational mining models [Analysis Services]
 ms.assetid: d5fea90f-5f38-4639-8851-7707f6606a12
 caps.latest.revision: 57
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 57
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ee0b59c9035d6801bbe7a87d8589e7c337c6c9c2
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 資料採礦精靈 (Analysis Services - 資料採礦)
-  每次將新的採礦結構加入至資料採礦專案時，[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的資料採礦精靈就會啟動。 此精靈可幫助您選擇資料來源及設定資料來源檢視來定義用於分析的資料，然後幫助您建立初始模型。  
+# <a name="data-mining-wizard-analysis-services---data-mining"></a>資料採礦精靈 (Analysis Services - 資料採礦)
+  每次將新的採礦結構加入至資料採礦專案時， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的資料採礦精靈就會啟動。 此精靈可幫助您選擇資料來源及設定資料來源檢視來定義用於分析的資料，然後幫助您建立初始模型。  
   
  在精靈的最後一個階段，您可以選擇將資料分成定型集和測試集，並啟用類似鑽研的功能。  
   
-## 開始之前應該知道的事項  
+## <a name="what-to-know-before-you-start"></a>開始之前應該知道的事項  
  以下是啟動精靈之前所需要知道的事項。  
   
 -   是否要從關聯式資料庫或從 OLAP 資料庫之現有的 Cube 中，建立資料採礦結構和模型？  
@@ -51,10 +56,10 @@ caps.handback.revision: 57
   
  接下來，您將會建立採礦結構以及一個相關聯的資料採礦模型。 您也可以只建立採礦結構，並在之後加入模型，但是先建立測試模型通常是最容易的方式。  
   
-###  <a name="BKMK_Relational"></a> 關聯式與OLAP 採礦模型的比較  
+###  <a name="BKMK_Relational"></a>關聯式與OLAP 採礦模型的比較  
  下一個重要的選項是選擇是否使用關聯式資料來源，或是讓您的模型根據多維度 (OLAP) 資料。  
   
- 資料採礦精靈會在這個點分成兩個路徑，這取決於您的資料來源為關聯式或是在 Cube 中。 資料選取程序以外的所有內容都相同，包括演算法的選擇、加入鑑效組資料集的能力等，但是選取 Cube 資料要比使用關聯式資料複雜一些  (如果您建立的模型是以 Cube 為根據，最後您也可以取得一些其他選項)。  
+ 資料採礦精靈會在這個點分成兩個路徑，這取決於您的資料來源為關聯式或是在 Cube 中。 資料選取程序以外的所有內容都相同，包括演算法的選擇、加入鑑效組資料集的能力等，但是選取 Cube 資料要比使用關聯式資料複雜一些 (如果您建立的模型是以 Cube 為根據，最後您也可以取得一些其他選項)。  
   
  如需每一個選項的詳細逐步解說，請參閱以下主題：  
   
@@ -67,19 +72,19 @@ caps.handback.revision: 57
 > [!NOTE]  
 >  您不需要 Cube 或 OLAP 資料庫，也可以進行資料採礦。 除非您的資料已儲存在 Cube 中，或是您想要採礦 OLAP 維度或是 OLAP 彙總或計算的結果，否則我們建議您針對資料採礦使用關聯式資料表或資料來源。  
   
-### 選擇演算法  
+### <a name="choosing-an-algorithm"></a>選擇演算法  
  接下來，您必須決定要使用哪一個演算法來處理資料。 這個決定可能很困難。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中提供的每一個演算法都有不同的功能而且會產生不同的結果，所以您可以試驗並嘗試幾個不同模型，然後再決定哪一個模型最適合您的資料和商業問題。 如需每一個演算法最適合之工作的說明，請參閱以下主題：  
   
  [資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
  同樣地，您可以使用不同的演算法建立多個模型，或變更演算法的參數以建立不同的模型。 系統不會限制您的演算法選擇，針對相同資料建立幾個不同模型也是很好的作法。  
   
-### 定義用於模型化的資料  
+### <a name="define-the-data-used-for-modeling"></a>定義用於模型化的資料  
  除了從來源中選擇資料以外，您也必須指定資料來源檢視中的哪一個資料表包含「案例資料」。 案例資料表將會用來定型資料採礦模型，因此您應該包含您想要分析的實體：例如，客戶和客戶的人口統計資訊。 每一個案例都必須是獨一無二的，而且必須可由「案例索引鍵」 識別。  
   
  除了指定案例資料表以外，您也可以在資料中包含「巢狀資料表」。 巢狀資料表通常會包含有關案例資料表內實體 (例如客戶所進行之交易) 的詳細資訊，或是與實體具有多對一關聯性的屬性。 例如，聯結到 **Customers** 案例資料表的巢狀資料表可能包含每個客戶所購買的產品清單。 在分析網站流量的模型中，巢狀資料表可能會包含使用者造訪之頁面的順序。 如需詳細資訊，請參閱[巢狀資料表 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/nested-tables-analysis-services-data-mining.md)  
   
-### 其他功能  
+### <a name="additional-features"></a>其他功能  
  為了協助您選擇正確的資料，並正確設定資料來源，資料採礦精靈會提供以下其他功能：  
   
 -   **自動偵測資料類型**：此精靈將會檢查資料行值的唯一性與分佈，然後建議最佳資料類型和資料的使用類型。 您可以從清單中選取值來覆寫這些建議。  
@@ -90,7 +95,7 @@ caps.handback.revision: 57
   
 -   **自動配量 Cube**：如果採礦模型是以 OLAP 資料來源為基礎，則會自動提供使用 Cube 屬性配量模型的功能。 這對於根據 Cube 資料的子集來建立模型非常實用。  
   
-### 正在完成精靈  
+### <a name="completing-the-wizard"></a>正在完成精靈  
  此精靈中的最後一個步驟為命名採礦結構和相關聯的採礦模型。 根據您建立的模型類型而定，您可能也會擁有以下的重要選項：  
   
 -   如果您選取 [允許使用鑽研]，就會在模型中啟用「鑽研」(drill through) 功能。 有了鑽研功能，具有適當權限的使用者便可以瀏覽用來建立此模型的來源資料。  
@@ -101,7 +106,7 @@ caps.handback.revision: 57
   
  [回到頁首](#BKMK_Using_DM_Wizard)  
   
-## 相關內容  
+## <a name="related-content"></a>相關內容  
  若要深入了解當您建立資料採礦模型時所需要做的決策，請參閱以下連結：  
   
  [資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
@@ -116,7 +121,7 @@ caps.handback.revision: 57
   
  [採礦模型的鑽研](../../analysis-services/data-mining/drillthrough-on-mining-models.md)  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [資料採礦工具。](../../analysis-services/data-mining/data-mining-tools.md)   
  [資料採礦方案](../../analysis-services/data-mining/data-mining-solutions.md)  
   

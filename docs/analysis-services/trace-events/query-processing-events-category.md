@@ -1,22 +1,27 @@
 ---
-title: "查詢處理事件類別目錄 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: "查詢處理事件的類別目錄 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: a94b3198-be85-4935-845d-1cd4e121fc94
 caps.latest.revision: 6
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 6
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3e583b0b0a6985ec4c91090b9009df6924c25c75
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 查詢處理事件類別目錄
+# <a name="query-processing-events-category"></a>查詢處理事件類別目錄
   查詢處理事件類別目錄具有下表所描述的事件類別。  
   
 |**Event Class**|**事件識別碼**|**說明**|  
@@ -42,7 +47,7 @@ caps.handback.revision: 6
   
  如需有關每個查詢處理事件類別相關聯之資料行的詳細資訊，請參閱＜ [Query Processing Events Data Columns](../../analysis-services/trace-events/query-processing-events-data-columns.md)＞。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [Analysis Services 追蹤事件](../../analysis-services/trace-events/analysis-services-trace-events.md)  
   
   

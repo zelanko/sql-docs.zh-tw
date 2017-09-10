@@ -1,37 +1,42 @@
 ---
-title: "自動存在 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "「 自動存在 」 |Microsoft 文件"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 56283497-624c-45b5-8a0d-036b0e331d22
 caps.latest.revision: 9
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 9
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 934307b7230a950bc41b5de117cc6f2326b90561
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 自動存在
+# <a name="autoexists"></a>自動存在
   「自動存在」的概念是將 Cube 空間限制為實際存在於 Cube 中的資料格，相對因建立相同階層中的所有屬性階層成員組合而可能存在的資料格。 這是因為某個屬性階層的成員不能與相同維度中另一個屬性階層的成員同時存在。 在 SELECT 陳述式中使用相同維度的兩個以上屬性階層時，Analysis Services 會評估屬性的運算式來確認這些屬性的成員有受到正確的限制以符合所有其他屬性的準則。  
   
  例如，假設您正在使用來自 Geography 維度的屬性。 如果您所擁有的其中一個運算式會從 City 屬性傳回所有成員，而另一個運算式會將 Country 屬性的成員限制為歐洲所有國家 (地區)，這將會使得 City 成員限制為只有屬於歐洲國家 (地區) 的城市。 這是因為 Analysis Services 的自動存在特性所致。 「自動存在」僅適用於相同維度的屬性的原因是，它會嘗試防止某個屬性運算式加入其他屬性運算式中排除的維度記錄。 您也可以將「自動存在」視為不同之屬性運算式在維度資料列上所產生的交集。  
   
-## 資料格存在性  
+## <a name="cell-existence"></a>資料格存在性  
  下列資料格永遠存在：  
   
 -   與相同維度中其他階層的成員相交時，每個階層的 (全部) 成員。  
   
 -   與其非導出同層級相交或與其非導出同層級的父系或下階相交時的導出成員。  
   
-## 提供不存在的資料格  
+## <a name="providing-non-existing-cells"></a>提供不存在的資料格  
  不存在的資料格是系統所提供的資料格，以回應要求不存在於 Cube 中之資料格的查詢或計算。 例如，如果 Cube 有屬於 Geography 維度的 City 屬性階層和 Country 屬性階層，以及 Internet Sales Amount 量值，此 Cube 的空間只會包含同時存在的成員。 例如，如果 City 屬性階層包含紐約、倫敦、巴黎、東京及墨爾本等城市，並且 Country 屬性階層包含美國、英國、法國、日本及澳洲等國家 (地區)，則 Cube 的空間不會包含巴黎和美國交集的空間 (資料格)。  
   
  當查詢不存在的資料格時，不存在的資料格會傳回 Null，也就是說，它們不包含計算，而且您無法定義寫入此空間的計算。 例如，下列陳述式包括了不存在的資料格。  
@@ -64,7 +69,7 @@ WHERE Measures.[Internet Sales Amount]
 > [!NOTE]  
 >  請注意，0 是用來指定資料行軸，為 axis(0) (即資料行軸) 的縮寫。  
   
- 上述查詢只會針對查詢中每個屬性階層之同時存在的成員傳回資料格。 上述查詢也可以使用 [* (Crossjoin) (MDX)](../../../mdx/crossjoin-mdx.md) 函數中新的 * 變數，改寫如下。  
+ 上述查詢只會針對查詢中每個屬性階層之同時存在的成員傳回資料格。 上述查詢也可以使用 [* (Crossjoin) (MDX)](../../../mdx/crossjoin-mdx-operator-reference.md) 函數中新的 * 變數，改寫如下。  
   
 ```  
 SELECT   
@@ -87,9 +92,9 @@ WHERE (Measures.[Internet Sales Amount],
   
  所傳回的資料格值將會相同，不過結果集中的中繼資料將會不同。 例如，在上述查詢中，Country 階層已移至 slicer 座標軸 (在 WHERE 子句中)，因此不會明確出現在結果集中。  
   
- 上述這三個查詢示範了 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 中自動存在行為的作用。  
+ 上述這三個查詢示範了 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]中自動存在行為的作用。  
   
-## 深層和淺層自動存在  
+## <a name="deep-and-shallow-autoexists"></a>深層和淺層自動存在  
  自動存在以「深層」或「淺層」方式套用至運算式。 「深層自動存在」表示在套用 slicer 運算式、軸中的子 SELECT 運算式等之後，會評估所有運算式以符合最深層的可能空間。 「淺層自動存在」表示在目前運算式之前評估外部運算式，並將這些結果傳遞至目前運算式。 預設值是深層自動存在。  
   
  下列案例和範例有助於說明不同類型的自動存在。 在下列範例中會建立兩個集合：一個當做計算運算式，而另一個當做常數運算式。  
@@ -310,12 +315,12 @@ WHERE (Measures.[Internet Sales Amount],
 |**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1.63%**|  
 |**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0.01%**|  
   
- 「自動存在」行為可以在連接字串中，使用 AUTOEXISTS=[1|2|3] 參數進行修改；如需參數的使用方式，請參閱[支援的 XMLA 屬性 &#40;XMLA&#41;](../Topic/Supported%20XMLA%20Properties%20\(XMLA\).md) 和 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>。  
+ 「 自動存在 」 行為可以修改使用 AUTOEXISTS = [1 | 2 | 3] 參數中的連接字串。請參閱[支援 XMLA 屬性 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)和<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>參數用法。  
   
-## 請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [MDX 的關鍵概念 &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
- [Cube 空間](../../../analysis-services/multidimensional-models/mdx/cube-space.md)   
- [Tuples](../../../analysis-services/multidimensional-models/mdx/tuples.md)   
+ [Cube Space](../../../analysis-services/multidimensional-models/mdx/cube-space.md)   
+ [Tuple](../../../analysis-services/multidimensional-models/mdx/tuples.md)   
  [使用成員、Tuple 和集合 &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)   
  [視覺化總計和非視覺化總計](../../../analysis-services/multidimensional-models/mdx/visual-totals-and-non-visual-totals.md)   
  [MDX 語言參考 &#40;MDX&#41;](../../../mdx/mdx-language-reference-mdx.md)   

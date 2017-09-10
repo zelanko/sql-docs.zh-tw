@@ -1,30 +1,35 @@
 ---
-title: "動作 (Analysis Services - 多維度資料) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "動作 [Analysis Services]"
-  - "動作 [Analysis Services]，關於動作"
-  - "MDX [Analysis Services]，動作"
-  - "Cube [Analysis Services]，動作"
-  - "OLAP 物件 [Analysis Services]，動作"
+title: "動作 (Analysis Services-多維度資料) |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- actions [Analysis Services]
+- actions [Analysis Services], about actions
+- MDX [Analysis Services], actions
+- cubes [Analysis Services], actions
+- OLAP objects [Analysis Services], actions
 ms.assetid: 07229bb2-805c-427e-8455-69c9ca5d01e0
 caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 34
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a61563367d64f9122441991d125cf987f6ddc4d6
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 動作 (Analysis Services - 多維度資料)
+# <a name="actions-analysis-services---multidimensional-data"></a>動作 (Analysis Services - 多維度資料)
   動作可以屬於不同類型，而且必須據此來建立。 動作可以是：  
   
 -   鑽研動作，該動作會傳回一組資料列，這些資料列表示動作發生所在之 Cube 中選定資料格的基礎資料。  
@@ -33,7 +38,7 @@ caps.handback.revision: 34
   
 -   標準動作，該動作會傳回與動作發生所在之 Cube 中選定區段有關的動作元素 (URL、HTML、DataSet、RowSet 和其他元素)。  
   
- 查詢介面 (如 ADOMD.NET) 是由用戶端應用程式用來擷取動作，並對使用者公開動作。 如需詳細資訊，請參閱[使用 ADOMD.NET 來開發](../../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md)。  
+ 查詢介面 (如 ADOMD.NET) 是由用戶端應用程式用來擷取動作，並對使用者公開動作。 如需詳細資訊，請參閱 [使用 ADOMD.NET 來開發](../../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md)。  
   
  簡單的 <xref:Microsoft.AnalysisServices.Action> 物件是由基本資訊、動作要發生的目標、限制動作範圍的條件以及類型所組成。 基本資訊包括動作的名稱、動作的描述、動作的建議標題和其他內容。  
   
@@ -41,7 +46,7 @@ caps.handback.revision: 34
   
  條件是指在動作事件上評估的 **Boolean** MDX 運算式。 如果條件評估為 **true**，就會執行此動作。 否則，不會執行此動作。  
   
- 類型是指要執行之動作的種類。 <xref:Microsoft.AnalysisServices.Action> 是抽象類別，因此使用它時，必須使用任何一個衍生類別。 預先定義的動作有兩種：鑽研和報表。 它們具有相對應的衍生類別：<xref:Microsoft.AnalysisServices.DrillThroughAction> 和 <xref:Microsoft.AnalysisServices.ReportAction>。 其他動作已涵蓋在 <xref:Microsoft.AnalysisServices.StandardAction> 類別中。  
+ 類型是指要執行之動作的種類。 <xref:Microsoft.AnalysisServices.Action> 是抽象類別，因此使用它時，必須使用任何一個衍生類別。 預先定義的動作有兩種：鑽研和報表。 它們具有相對應的衍生類別： <xref:Microsoft.AnalysisServices.DrillThroughAction> 和 <xref:Microsoft.AnalysisServices.ReportAction>。 其他動作已涵蓋在 <xref:Microsoft.AnalysisServices.StandardAction> 類別中。  
   
  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，動作是預存的 MDX 陳述式，可呈現給用戶端應用程式並供其使用。 換句話說，動作是定義及儲存在伺服器上的用戶端命令。 動作所包含的資訊還包含指定用戶端應用程式應顯示和處理 MDX 陳述式的時間和方式。 將動作中的資訊當成參數，動作所指定的作業即可啟動應用程式，或可根據動作所提供的準則來擷取資訊。  
   
@@ -54,7 +59,7 @@ caps.handback.revision: 34
 > [!IMPORTANT]  
 >  為了讓商務使用者使用動作，商務使用者所運用的用戶端應用程式必須支援動作。  
   
-## 動作的類型  
+## <a name="types-of-actions"></a>動作的類型  
  下表列出 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中所含的動作類型：  
   
 |動作類型|說明|  
@@ -69,10 +74,10 @@ caps.handback.revision: 34
 |Statement|執行 OLE DB 命令。|  
 |URL|在網際網路瀏覽器中顯示動態網頁。|  
   
-## 解析及執行動作  
+## <a name="resolving-and-executing-actions"></a>解析及執行動作  
  商務使用者存取定義其命令物件的物件時，雖然會自動解析與該動作相關的陳述式，讓用戶端應用程式可使用該陳述式，但是不會自動執行該動作。 只有當商務使用者執行起始動作的用戶端特定作業時，才會執行該動作。 例如，在商務使用者以滑鼠右鍵按一下特定成員或資料格時，用戶端應用程式可能會以快顯功能表形式來顯示動作清單。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [多維度模型中的動作](../../analysis-services/multidimensional-models/actions-in-multidimensional-models.md)  
   
   

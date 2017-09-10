@@ -1,27 +1,32 @@
 ---
-title: "貝式機率分類模型查詢範例 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "naive bayes model [Analysis Services]"
-  - "naive bayes algorithms [Analysis Services]"
-  - "內容查詢 [DMX]"
+title: "貝氏機率分類模型查詢範例 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- naive bayes model [Analysis Services]
+- naive bayes algorithms [Analysis Services]
+- content queries [DMX]
 ms.assetid: e642bd7d-5afa-4dfb-8cca-4f84aadf61b0
 caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6935ffd8851a9454a1a2e53655be814a4eda3af1
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 貝式機率分類模型查詢範例
+# <a name="naive-bayes-model-query-examples"></a>貝式機率分類模型查詢範例
   當您針對資料採礦模型建立查詢時，可以建立內容查詢來提供有關分析期間所發現之模式的詳細資料，或是建立預測查詢來使用模型中的模式，為新的資料進行預測。 您也可以針對資料採礦結構描述資料列集使用查詢，藉以擷取有關模型的中繼資料。 本節說明如何針對以 Microsoft 貝氏機率分類演算法為基礎的模型來建立這些查詢。  
   
  **內容查詢**  
@@ -42,7 +47,7 @@ caps.handback.revision: 13
   
  [預測關聯](#bkmk_Query7)  
   
-## 尋找有關貝式機率分類模型的資訊  
+## <a name="finding-information-about-a-naive-bayes-model"></a>尋找有關貝式機率分類模型的資訊  
  貝氏機率分類模型的模型內容會提供定型資料中，有關值分佈的彙總資訊。 您也可以針對資料採礦結構描述資料列集建立查詢，藉以擷取有關模型之中繼資料的資訊。  
   
 ###  <a name="bkmk_Query1"></a> 範例查詢 1：使用 DMX 取得模型中繼資料  
@@ -67,7 +72,7 @@ WHERE MODEL_NAME = 'TM_NaiveBayes_Filtered'
 |PREDICTION_ENTITY|Bike Buyer,Yearly Income|  
 |FILTER|[Region] = 'Europe' OR [Region] = 'North America'|  
   
- 用於此範例的模型是以您在 [Basic Data Mining Tutorial](../Topic/Basic%20Data%20Mining%20Tutorial.md)中建立的貝氏機率分類模型為基礎，但是透過加入另一個可預測屬性，並將篩選套用到定型資料來修改。  
+ 用於此範例的模型是以您在 [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)中建立的貝氏機率分類模型為基礎，但是透過加入另一個可預測屬性，並將篩選套用到定型資料來修改。  
   
 ###  <a name="bkmk_Query2"></a> 範例查詢 2：擷取定型資料的摘要  
  在貝氏機率分類模型中，臨界統計資料節點會儲存定型資料中，有關值分佈的彙總資訊。 此摘要相當方便，而且您不必根據定型資料建立 SQL 查詢，就可以找到相同的資訊。  
@@ -164,7 +169,7 @@ CALL GetPredictableAttributes ('TM_NaiveBayes')
   
  如需 Analysis Services 系統預存程序的詳細資訊，請參閱[資料採礦預存程序 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining.md)。  
   
-## 使用貝式機率分類模型進行預測  
+## <a name="using-a-naive-bayes-model-to-make-predictions"></a>使用貝式機率分類模型進行預測  
  Microsoft 貝氏機率分類演算法用於預測的頻率通常比用於瀏覽輸入屬性和可預測屬性之間關聯性的頻率低。 不過，此模型支援同時針對預測和關聯使用預測函數。  
   
 ###  <a name="bkmk_Query5"></a> 範例查詢 5：使用單一查詢預測結果  
@@ -213,7 +218,7 @@ NATURAL PREDICTION JOIN
  資料表中的最後一個資料列會顯示支援與機率針對遺漏值所做的調整。 變異數和標準差永遠為 0，因為貝氏機率分類模型無法製作連續值的模型。  
   
 ###  <a name="bkmk_Query7"></a> 範例查詢 7：預測關聯  
- 如果採礦結構包含巢狀資料表與當做索引鍵的可預測屬性，Microsoft 貝氏機率分類演算法可以用於關聯分析。 例如，您可以使用在資料採礦教學課程之[第 3 課：建立購物籃狀況 &#40;中繼資料採礦教學課程&#41;](../Topic/Lesson%203:%20Building%20a%20Market%20Basket%20Scenario%20\(Intermediate%20Data%20Mining%20Tutorial\).md) 中所建立的採礦結構來建立貝氏機率分類模型。 此範例中所使用的模型會遭到修改，以便在案例資料表中加入有關收入和客戶地區的資訊。  
+ 如果採礦結構包含巢狀資料表與當做索引鍵的可預測屬性，Microsoft 貝氏機率分類演算法可以用於關聯分析。 例如，您可以使用在資料採礦教學課程之[第 3 課：建立購物籃狀況 &#40;中繼資料採礦教學課程&#41;](http://msdn.microsoft.com/library/651eef38-772e-4d97-af51-075b1b27fc5a) 中所建立的採礦結構來建立貝氏機率分類模型。 此範例中所使用的模型會遭到修改，以便在案例資料表中加入有關收入和客戶地區的資訊。  
   
  下列查詢範例顯示的單一查詢會預測與購買產品 `'Road Tire Tube'`相關的產品。 您可以使用這項資訊提供產品建議給特定類型的客戶。  
   
@@ -238,7 +243,7 @@ AS t
 |Touring-2000|  
 |Touring-1000|  
   
-## 函數清單  
+## <a name="function-list"></a>函數清單  
  所有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 演算法都支援一組常用的函數。 不過， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 貝氏機率分類演算法支援下表所列出的其他函數。  
   
 |||  
@@ -254,9 +259,9 @@ AS t
   
  若要查看特定函數的語法，請參閱[資料採礦延伸模組 &#40;DMX&#41; 函數參考](../../dmx/data-mining-extensions-dmx-function-reference.md)。  
   
-## 請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [Microsoft 貝氏機率分類演算法技術參考](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm-technical-reference.md)   
- [Microsoft 貝氏機率分類演算法](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)   
+ [Microsoft Naive Bayes Algorithm](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)   
  [貝氏機率分類模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)  
   
   

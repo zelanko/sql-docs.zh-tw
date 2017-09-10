@@ -1,27 +1,32 @@
 ---
-title: "註冊伺服器群組中的 Analysis Services 執行個體 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "註冊的伺服器群組中的 Analysis Services 執行個體 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5fd3826b-8f75-48eb-910c-bf784163e53b
 caps.latest.revision: 8
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 8
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7096b27b40d42ce11035feee9871a151c1460c76
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 註冊伺服器群組中的 Analysis Services 執行個體
+# <a name="register-an-analysis-services-instance-in-a-server-group"></a>註冊伺服器群組中的 Analysis Services 執行個體
   如果您有大量 Analysis Services 伺服器執行個體，可以在 Management Studio 建立伺服器群組，讓伺服器管理變得更輕鬆。 伺服器群組的目的是在管理工作空間內提供一組相關伺服器之間的接近性。 例如，假設您負責管理十個不同的 Analysis Services 執行個體。 依伺服器模式、開機時間準則，或依部門或地區的伺服器群組方式，可讓檢視及連接到共用相同特性的執行個體更輕鬆。 您還可以加入有助於記住伺服器用法的描述性資訊。  
   
- ![具有成員伺服器之已註冊的伺服器窗格](../../analysis-services/instances/media/ssas-ssms-registerserver.gif "具有成員伺服器之已註冊的伺服器窗格")  
+ ![具有成員伺服器已註冊伺服器窗格](../../analysis-services/instances/media/ssas-ssms-registerserver.gif "具有成員伺服器已註冊的伺服器 窗格")  
   
  可以用階層式結構來建立伺服器群組。 [本機伺服器群組] 是根節點， 它永遠包含本機電腦上執行的 Analysis Services 執行個體。 您可以將遠端伺服器加入至任何群組，包括本機群組。  
   
@@ -29,7 +34,7 @@ caps.handback.revision: 8
   
  為伺服器所定義的連接資訊 (包括伺服器名稱) 會隨著伺服器註冊保存。 您不能修改連接資訊，或在透過其他工具連接到伺服器時使用已註冊的名稱。  
   
-## 建立伺服器群組及加入已註冊的伺服器  
+## <a name="create-a-server-group-and-add-registered-servers"></a>建立伺服器群組及加入已註冊的伺服器  
   
 1.  在 Management Studio 中，按一下 [檢視] 功能表上的 [已註冊的伺服器]，在工作空間中開啟 [已註冊的伺服器] 窗格。 根據預設，本機伺服器群組已建立。 在本機伺服器上執行的所有 Analysis Services 執行個體都是成員。  
   

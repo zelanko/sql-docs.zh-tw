@@ -1,22 +1,27 @@
 ---
-title: "鎖定事件資料行 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: "鎖定事件資料行 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: c223157f-41a0-405c-bc1a-41c999506936
 caps.latest.revision: 5
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 5
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9a211ed540b3bddb11c5d84cf0db65ef3dade1ad
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 鎖定事件資料行
+# <a name="lock-events-data-columns"></a>鎖定事件資料行
   鎖定事件類別目錄含有下列事件類別：  
   
 |**事件識別碼**|**事件名稱**|**事件描述**|  
@@ -29,7 +34,7 @@ caps.handback.revision: 5
   
  下表列出此事件類別的資料行。  
   
-## 死結  
+## <a name="deadlock"></a>死結  
   
 |**資料行名稱**|**資料行識別碼**|**資料行類型**|**資料行描述**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -39,7 +44,7 @@ caps.handback.revision: 5
 |TextData|42|9|與事件相關的文字資料。|  
 |ServerName|43|8|產生事件的伺服器名稱。|  
   
-## 鎖定逾時。  
+## <a name="lock-timeout"></a>鎖定逾時。  
   
 |**資料行名稱**|**資料行識別碼**|**資料行類型**|**資料行描述**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -60,7 +65,7 @@ caps.handback.revision: 5
 |SPID|41|1|伺服器處理序識別碼。 這可唯一識別出使用者工作階段， 直接對應到 XML/A 所使用的工作階段 GUID。|  
 |ServerName|43|8|產生事件的伺服器名稱。|  
   
-## 取得的鎖定  
+## <a name="lock-acquired"></a>取得的鎖定  
   
 |**資料行名稱**|**資料行識別碼**|**資料行類型**|**資料行描述**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -78,7 +83,7 @@ caps.handback.revision: 5
 |TextData|42|9|與事件相關的文字資料。|  
 |ServerName|43|8|產生事件的伺服器名稱。|  
   
-## 釋放的鎖定  
+## <a name="lock-released"></a>釋放的鎖定  
   
 |**資料行名稱**|**資料行識別碼**|**資料行類型**|**資料行描述**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -96,7 +101,7 @@ caps.handback.revision: 5
 |TextData|42|9|與事件相關的文字資料。|  
 |ServerName|43|8|產生事件的伺服器名稱。|  
   
-## 正在等候的鎖定  
+## <a name="lock-waiting"></a>正在等候的鎖定  
   
 |**資料行名稱**|**資料行識別碼**|**資料行類型**|**資料行描述**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -114,7 +119,7 @@ caps.handback.revision: 5
 |TextData|42|9|與事件相關的文字資料。|  
 |ServerName|43|8|產生事件的伺服器名稱。|  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [Lock 事件類別目錄](../../analysis-services/trace-events/lock-events-category.md)  
   
   

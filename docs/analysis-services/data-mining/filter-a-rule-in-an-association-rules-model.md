@@ -1,27 +1,32 @@
 ---
-title: "篩選關聯規則模型中的規則 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "篩選規則 [Analysis Services]"
-  - "採礦模型檢視器 [Analysis Services], 規則"
-  - "規則檢視器"
+title: "篩選條件的規則，關聯規則模型 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- filtering rules [Analysis Services]
+- Mining Model Viewer [Analysis Services], rules
+- Rules Viewer
 ms.assetid: 26cdba5b-5bf1-439e-80a3-8759774e918b
 caps.latest.revision: 28
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 88eb75188ed36a8a79178f6b893c5301ffd2d47e
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 篩選關聯規則模型中的規則
+# <a name="filter-a-rule-in-an-association-rules-model"></a>篩選關聯規則模型中的規則
   您可以在關聯模型中使用篩選，將結果限制為您所感興趣的關聯。 例如，您可以篩選規則，只顯示包含特定產品的規則。  
   
  在資料採礦設計師中，您可以使用 **關聯規則檢視器 [規則]**[!INCLUDE[msCoName](../../includes/msconame-md.md)] 索引標籤上的控制項來篩選顯示的規則。  您還可以對模型建立查詢，只查看包含特定值的項目集。  
@@ -29,7 +34,7 @@ caps.handback.revision: 28
 > [!NOTE]  
 >  這個選項僅適用於使用 Microsoft 關聯分析演算法所建立的採礦模型。  
   
-### 篩選關聯模型中的規則  
+### <a name="filter-a-rule-in-an-association-model"></a>篩選關聯模型中的規則  
   
 1.  使用 **[關聯規則檢視器]**開啟此採礦模型。 若要在 SQL Server Management Studio 中進行這項處理，請以滑鼠右鍵按一下模型名稱，然後選取 **[瀏覽]**。 若要在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中進行這項處理，請按兩下包含此模型的採礦結構，然後按一下 [資料採礦設計師] 的 [採礦模型檢視器] 索引標籤。  
   
@@ -54,13 +59,13 @@ caps.handback.revision: 28
     > [!NOTE]  
     >  此檢視器會根據採礦模型的查詢來快取最初的規則清單，而且除非您設定最大資料列數、機率、重要性或完整名稱的顯示來變更此查詢的條件，否則此檢視器不會重新整理規則的清單。 因此，如果您輸入一個條件，而顯示畫面並未立即重新整理，您可以選取 **[顯示完整名稱]** 核取方塊然後再將它取消選取，以強制檢視器重新整理資料。  
   
-### 對關聯模型中的項目集建立查詢  
+### <a name="create-a-query-on-the-itemsets-in-an-association-model"></a>對關聯模型中的項目集建立查詢  
   
 -   [關聯模型查詢範例](../../analysis-services/data-mining/association-model-query-examples.md)  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [採礦模型檢視器工作和使用說明](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
- [使用 Microsoft 關聯規則檢視器瀏覽模型](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)   
- [第 3 課：建立購物籃狀況 &#40;中繼資料採礦教學課程&#41;](../Topic/Lesson%203:%20Building%20a%20Market%20Basket%20Scenario%20\(Intermediate%20Data%20Mining%20Tutorial\).md)  
+ [瀏覽模型，使用 Microsoft 關聯規則檢視器](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)   
+ [第 3 課： 建立購物籃狀況 &#40; 中繼資料採礦教學課程 &#41;](http://msdn.microsoft.com/library/651eef38-772e-4d97-af51-075b1b27fc5a)  
   
   

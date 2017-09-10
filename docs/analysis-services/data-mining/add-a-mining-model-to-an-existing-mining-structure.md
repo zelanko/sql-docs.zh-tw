@@ -1,30 +1,35 @@
 ---
-title: "將採礦模型加入至現有的採礦結構 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "採礦模型 [Analysis Services], 加入"
-  - "採礦結構 [Analysis Services], 採礦模型"
-  - "加入採礦模型"
+title: "將採礦模型加入現有的採礦結構 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- mining models [Analysis Services], adding
+- mining structures [Analysis Services], mining models
+- adding mining models
 ms.assetid: fcf72300-0674-4e73-a826-9b8eeffefbb5
 caps.latest.revision: 24
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 40b3d91f5684a43202ea83ed6f7a4728bad53c98
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 將採礦模型加入至現有的採礦結構
-  在加入初始模型之後，您就可以將更多採礦模型加入至採礦結構中。 每一個模型必須包含存在於結構中的資料行，但您可以為每一個採礦模型定義不同的資料行使用方式。 如需如何定義採礦模型資料行的詳細資訊，請參閱[採礦模型資料行](../../analysis-services/data-mining/mining-model-columns.md)。  
+# <a name="add-a-mining-model-to-an-existing-mining-structure"></a>將採礦模型加入至現有的採礦結構
+  在加入初始模型之後，您就可以將更多採礦模型加入至採礦結構中。 每一個模型必須包含存在於結構中的資料行，但您可以為每一個採礦模型定義不同的資料行使用方式。 如需如何定義採礦模型資料行的詳細資訊，請參閱 [採礦模型資料行](../../analysis-services/data-mining/mining-model-columns.md)。  
   
-### 若要將採礦模型加入至結構  
+### <a name="to-add-a-mining-model-to-the-structure"></a>若要將採礦模型加入至結構  
   
 1.  從 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的 [採礦模型] 功能表項目中，選取 [新增採礦模型]。  
   
@@ -36,9 +41,9 @@ caps.handback.revision: 24
   
 4.  按一下 **[確定]**。  
   
- 新的採礦模型就會出現在 [採礦模型] 索引標籤中。 模型會使用已存在於結構中的預設資料行。 如需如何修改資料行的相關資訊，請參閱[變更採礦模型的屬性](../../analysis-services/data-mining/change-the-properties-of-a-mining-model.md)。  
+ 新的採礦模型就會出現在 [採礦模型] 索引標籤中。模型會使用已存在於結構中的預設資料行。 如需如何修改資料行的相關資訊，請參閱 [變更採礦模型的屬性](../../analysis-services/data-mining/change-the-properties-of-a-mining-model.md)。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [採礦模型工作和使用說明](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
   
   

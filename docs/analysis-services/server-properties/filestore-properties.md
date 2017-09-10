@@ -1,41 +1,46 @@
 ---
-title: "Filestore 屬性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "Income 屬性"
-  - "InitialBonus 屬性"
-  - "PercentScanPerPrice 屬性"
-  - "FileStore 屬性"
-  - "BackgroundTrimCost 屬性"
-  - "Tax 屬性"
-  - "PerformanceTrace 屬性"
-  - "MinimumBalance 屬性"
-  - "UnbufferedThreshold 屬性"
-  - "BackgroundTrimAmount 屬性"
-  - "MaximumBalance 屬性"
-  - "MemoryLimitMin 屬性"
-  - "MemoryLimit 屬性"
+title: "Filestore 屬性 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- Income property
+- InitialBonus property
+- PercentScanPerPrice property
+- FileStore properties
+- BackgroundTrimCost property
+- Tax property
+- PerformanceTrace property
+- MinimumBalance property
+- UnbufferedThreshold property
+- BackgroundTrimAmount property
+- MaximumBalance property
+- MemoryLimitMin property
+- MemoryLimit property
 ms.assetid: 580cf0aa-7425-4d48-aa8d-128f5b488fcd
 caps.latest.revision: 19
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 19
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 68845b8dc5ff1b025134b227605363607db4b7cf
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# Filestore 屬性
+# <a name="filestore-properties"></a>FileStore 屬性
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支援下表列出的 Filestore 伺服器屬性。 這些全部都是進階屬性，除非是在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技術支援人員的指導之下，否則不應隨意變更。 如需其他伺服器屬性以及如何設定伺服器屬性的詳細資訊，請參閱 [Analysis Services 中的伺服器屬性](../../analysis-services/server-properties/server-properties-in-analysis-services.md)。  
   
  **適用於：** 多維度與表格式伺服器模式  
   
-## 屬性  
+## <a name="properties"></a>屬性  
  **MemoryLimit**  
  此為進階屬性，除非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技術支援的指導之下，否則不應隨意變更。  
   
@@ -60,7 +65,7 @@ caps.handback.revision: 19
  **UnbufferedThreshold**  
  此為進階屬性，除非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技術支援的指導之下，否則不應隨意變更。  
   
-## 記憶體模型類別目錄  
+## <a name="memory-model-category"></a>記憶體模型類別目錄  
  **MemoryModel\Tax**  
  此為進階屬性，除非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技術支援的指導之下，否則不應隨意變更。  
   
@@ -76,8 +81,8 @@ caps.handback.revision: 19
  **MemoryModel\InitialBonus**  
  此為進階屬性，除非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技術支援的指導之下，否則不應隨意變更。  
   
-## 請參閱＜  
- [Analysis Services 的伺服器屬性](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
+## <a name="see-also"></a>請參閱＜  
+ [Analysis Services 中的伺服器屬性](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
  [判斷 Analysis Services 執行個體的伺服器模式](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

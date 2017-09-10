@@ -1,26 +1,31 @@
 ---
-title: "使用 Analysis Services 匯入精靈匯入資料採礦專案 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "匯入資料採礦專案，使用 Analysis Services 匯入精靈 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 62bc9fc5-c6ff-4517-b598-d92df76743a2
 caps.latest.revision: 6
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: aaa433e5bd9b8730c38e4853eda591177e592a92
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 使用 Analysis Services 匯入精靈匯入資料採礦專案
+# <a name="import-a-data-mining-project-using-the-analysis-services-import-wizard"></a>使用 Analysis Services 匯入精靈匯入資料採礦專案
   本主題描述如何在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中使用 [從伺服器匯入 (多維度和資料採礦)] 範本，從另一部伺服器上的現有資料採礦專案匯入中繼資料來建立新的資料採礦專案。  
   
-## 從現有的資料採礦專案匯入資料來源、採礦結構和採礦模型  
+## <a name="import-data-sources-mining-structures-and-mining-models-from-an-existing-data-mining-project"></a>從現有的資料採礦專案匯入資料來源、採礦結構和採礦模型  
  當您使用 [從伺服器匯入 (多維度和資料採礦)] 範本時，[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 會建立新的資料採礦專案，然後從指定的資料採礦專案複製中繼資料。 新的專案所包含的資料來源、資料來源檢視、採礦結構和採礦模型與您匯入的來源 ssASnoversion 資料庫相同。 但是，要等到您依照以下所述的內容更新某些屬性及處理物件之後，才能使用專案：  
   
 -   資料本身並不會從來源伺服器複製到新的資料採礦專案，只會匯入資料來源和資料來源檢視的定義。 因此，當您完成匯入程序及建立物件之後，您必須定型採礦結構和相依模型來以資料擴展物件。 您可以使用資料採礦設計師中的 **[全部處理]** 命令來定型模型和結構。  
@@ -35,7 +40,7 @@ caps.handback.revision: 6
   
      如果您無法變更預設部署資料庫來使用在多維度或資料採礦模式中執行的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體，您可以隨時使用 **[專案屬性]** 對話方塊來指定部署資料庫。  
   
-#### 若要匯入現有的資料採礦專案來建立新的資料採礦專案  
+#### <a name="to-create-a-new-data-mining-project-by-importing-an-existing-data-mining-project"></a>若要匯入現有的資料採礦專案來建立新的資料採礦專案  
   
 1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]的 **[檔案]** 功能表上，按一下 **[新增]**，然後再按一下 **[專案]**。  
   
@@ -58,7 +63,7 @@ caps.handback.revision: 6
   
      隨即使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]自動開啟新的專案。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [專案屬性 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/project-properties-ssas-tabular.md)  
   
   

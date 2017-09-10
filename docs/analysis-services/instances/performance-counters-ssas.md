@@ -1,27 +1,32 @@
 ---
-title: "效能計數器 (SSAS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "效能計數器 (SSAS) |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 05d7d5ab-a96c-4f82-94b1-48a657d7c580
 caps.latest.revision: 14
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 14
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0e2d625f6c9060f32fb2a2dc676c84c673f55c8f
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 效能計數器 (SSAS)
+# <a name="performance-counters-ssas"></a>效能計數器 (SSAS)
   使用效能監視器可以透過效能計數器來監視 Microsoft SQL Server Analysis Services (SSAS) 執行個體的效能。  
   
- 效能監視器是追蹤資源使用方式的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Control (MMC) 嵌入式管理單元。 您可以啟動這個 MMC 嵌入式管理單元，方法是在命令提示字元中輸入 **PerfMon**，或是從 [控制台] 按一下 [系統管理工具] 然後按一下 [效能監視器]。 效能監視器可讓您使用預先定義的物件和計數器來追蹤伺服器和處理序效能與活動，並利用使用者定義的計數器來監視事件。 效能監視器會收集計數而非關於事件的資料，例如，記憶體使用量、使用中交易數目或 CPU 活動。 您也可在特定計數器上設定臨界值，以產生通知操作員的警示。  
+ 效能監視器是追蹤資源使用方式的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Control (MMC) 嵌入式管理單元。 您可以啟動這個 MMC 嵌入式管理單元，方法是在命令提示字元中輸入 **PerfMon** ，或是從 [控制台] 按一下 **[系統管理工具]**然後按一下 **[效能監視器]**。 效能監視器可讓您使用預先定義的物件和計數器來追蹤伺服器和處理序效能與活動，並利用使用者定義的計數器來監視事件。 效能監視器會收集計數而非關於事件的資料，例如，記憶體使用量、使用中交易數目或 CPU 活動。 您也可在特定計數器上設定臨界值，以產生通知操作員的警示。  
   
  效能監視器可以監視 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的遠端與本機執行個體。 如需詳細資訊，請參閱 [使用效能監視器](http://technet.microsoft.com/library/cc749115.aspx)。  
   
@@ -29,7 +34,7 @@ caps.handback.revision: 14
   
  計數器已分組，因此您可以更輕鬆地找到相關計數器。  
   
-## 依群組分組的計數器  
+## <a name="counters-by-groups"></a>依群組分組的計數器  
   
 |群組|說明|  
 |-----------|-----------------|  
@@ -161,15 +166,15 @@ caps.handback.revision: 14
 |Page Pool 64 Alloc KB|從系統借用的記憶體大小，以 KB 為單位。  此記憶體會提供給伺服器的其他部分使用。|  
 |Page Pool 64 Lookaside KB|目前在 64KB 對應清單中的記憶體，以 KB 為單位  (備妥供使用的記憶體頁面)。|  
 |Page Pool 8 Alloc KB|從 64KB 分頁集區借用的記憶體大小，以 KB 為單位。  此記憶體會提供給伺服器的其他部分使用。|  
-|Page Pool 8 Lookaside KB|目前在 8KB 對應清單中的記憶體，以 KB 為單位   (備妥供使用的記憶體頁面)。|  
+|Page Pool 8 Lookaside KB|目前在 8KB 對應清單中的記憶體，以 KB 為單位  (備妥供使用的記憶體頁面)。|  
 |Page Pool 1 Alloc KB|從 64KB 分頁集區借用的記憶體大小，以 KB 為單位。  此記憶體會提供給伺服器的其他部分使用。|  
-|Page Pool 1 Lookaside KB|目前在 8KB 對應清單中的記憶體，以 KB 為單位。  (備妥供使用的記憶體頁面)。|  
+|Page Pool 1 Lookaside KB|目前在 8KB 對應清單中的記憶體，以 KB 為單位  (備妥供使用的記憶體頁面)。|  
 |Cleaner Current Price|記憶體目前的價格 ($/位元組/時間)，並正規化為 1000。|  
 |Cleaner Balance/sec|平衡+壓縮作業的速率。|  
 |Cleaner Memory shrunk KB/sec|壓縮的速率，以 KB/秒為單位。|  
 |Cleaner Memory shrinkable KB|背景清除器將清除的記憶體數量，以 KB 為單位。|  
 |Cleaner Memory nonshrinkable KB|背景清除器將不會清除的記憶體數量，以 KB 為單位。|  
-|Cleaner Memory KB|背景清除器所知道的記憶體數量，以 KB 為單位   (可壓縮的清除器記憶體 + 不可壓縮的清除器記憶體)。|  
+|Cleaner Memory KB|背景清除器所知道的記憶體數量，以 KB 為單位  (可壓縮的清除器記憶體 + 不可壓縮的清除器記憶體)。|  
 |Memory Usage KB|伺服器處理序用於計算清除器記憶體價格的記憶體使用量。  等於計數器 Process\PrivateBytes 加上記憶體對應的資料大小，忽略 xVelocity 記憶體中分析引擎 (VertiPaq) 在超出 xVelocity 引擎記憶體限制外對應或配置的任何記憶體。|  
 |Memory Limit Low KB|來自組態檔的記憶體下限。|  
 |Memory Limit High KB|來自組態檔的記憶體上限。|  
@@ -180,8 +185,8 @@ caps.handback.revision: 14
 |Filestore Page Faults/sec|Filestore 頁面錯誤的速率。|  
 |Filestore Reads/sec|Filestore 頁面讀取/秒。|  
 |Filestore KB Reads/sec|Filestore KB 讀取/秒。|  
-|Filestore Writes/sec|Filestore 頁面寫入/秒。  寫入為非同步。|  
-|Filestore KB Write/sec|Filestore KB 寫入/秒。  寫入為非同步。|  
+|Filestore Writes/sec|每秒寫入 Filestore 的頁面數。寫入為非同步。|  
+|Filestore KB Write/sec|每秒寫入 Filestore 的 KB。寫入為非同步。|  
 |Filestore IO Errors/sec|Filestore IO 錯誤率。|  
 |Filestore IO Errors|Filestore IO 錯誤總計。|  
 |Filestore Clock Pages Examined/sec|背景清除器基於收回的考量而檢查頁面的速率。|  

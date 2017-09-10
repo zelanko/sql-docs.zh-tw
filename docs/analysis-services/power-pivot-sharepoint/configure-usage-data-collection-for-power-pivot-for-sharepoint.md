@@ -1,24 +1,29 @@
 ---
-title: "設定使用量資料收集的對象 (PowerPivot for SharePoint | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "設定使用量資料收集 (Powerpivot for SharePoint |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 955ca6d6-9d5b-47a4-a87c-59bd23f1bf74
 caps.latest.revision: 10
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 9
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 98ec79c14a0ac082c75967a9c81fa7b2027f5511
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 設定使用量資料收集的對象 (PowerPivot for SharePoint
+# <a name="configure-usage-data-collection-for-power-pivot-for-sharepoint"></a>設定使用量資料收集的對象 (PowerPivot for SharePoint
   使用量資料收集是伺服陣列層級的 SharePoint 功能。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 會使用並擴充此系統來支援 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理儀表板中的報表，以便顯示 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料與服務的使用方式。 根據您安裝 SharePoint 的方式而定，可能會關閉伺服陣列的使用量資料收集。 伺服器陣列管理員必須啟用使用量記錄，以建立會顯示在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理儀表板中的使用量資料。  
   
  如需 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理儀表板中使用量資料的相關資訊，請參閱 [Power Pivot 管理儀表板和使用量資料](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)。  
@@ -69,7 +74,7 @@ caps.handback.revision: 9
   
 6.  按一下 **[確定]** 儲存您的變更。  
   
-7.  您可以選擇性地指定是否記錄所有的訊息或只記錄錯誤。 如需如何節流事件訊息的詳細資訊，請參閱[設定及檢視 SharePoint 記錄檔與診斷記錄 &#40;Power Pivot for SharePoint&#41;](../Topic/Configure%20and%20View%20SharePoint%20Log%20Files%20%20and%20Diagnostic%20Logging%20\(Power%20Pivot%20for%20SharePoint\).md)。  
+7.  您可以選擇性地指定是否記錄所有的訊息或只記錄錯誤。 如需如何節流事件訊息的詳細資訊，請參閱[設定及檢視 SharePoint 記錄檔與診斷記錄 &#40;Power Pivot for SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging.md)。  
   
 ##  <a name="configdb"></a> 設定記錄檔位置  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 使用量資料一開始會儲存在本機伺服器的使用量記錄檔中，然後再定期移至 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式資料庫。 記錄檔位置是在管理中心內設定的。 預設位置為：  
@@ -182,15 +187,15 @@ caps.handback.revision: 9
   
 |設定|預設值|型別|有效範圍|  
 |-------------|-------------------|----------|-----------------|  
-|**Analysis Services 使用量事件** (連接、載入、卸載、要求)|\<enabled>|布林|啟用或停用這些值。|  
+|**Analysis Services 使用量事件** (連接、載入、卸載、要求)|\<啟用 >|布林|啟用或停用這些值。|  
 |**查詢報告間隔**|300 (以秒為單位)|整數|1 到任何正整數。 預設值是 5 分鐘。|  
-|**使用量資料記錄**|365 (以天為單位)|Integer|0 表示無限制，但是您也可以設定歷程記錄資料到期的上限，並設成可自動刪除資料。 有限的保留週期有效值為 1 到 5000 (以天為單位)。|  
-|簡單式回應時間上限|500 (以毫秒為單位)|Integer|設定會定義簡單式要求-回應交換的上限。 任何介於 0 到 500 毫秒之間完成的要求都是簡單式要求，報告用途會加以忽略。|  
-|快速回應時間上限|1000 (以毫秒為單位)|Integer|設定會定義快速要求-回應交換的上限。|  
-|預期回應時間上限|3000 (以毫秒為單位)|Integer|設定會定義預期要求-回應交換的上限。|  
-|長時間執行回應的上限|10000 (以毫秒為單位)|Integer|設定會定義長時間執行要求-回應交換的上限。 任何超過此上限的要求，都會歸類到沒有上限臨界值的「已超過」類別目錄。|  
+|**Usage data history**|365 (以天為單位)|整數|0 表示無限制，但是您也可以設定歷程記錄資料到期的上限，並設成可自動刪除資料。 有限的保留週期有效值為 1 到 5000 (以天為單位)。|  
+|簡單式回應時間上限|500 (以毫秒為單位)|整數|設定會定義簡單式要求-回應交換的上限。 任何介於 0 到 500 毫秒之間完成的要求都是簡單式要求，報告用途會加以忽略。|  
+|快速回應時間上限|1000 (以毫秒為單位)|整數|設定會定義快速要求-回應交換的上限。|  
+|預期回應時間上限|3000 (以毫秒為單位)|整數|設定會定義預期要求-回應交換的上限。|  
+|長時間執行回應的上限|10000 (以毫秒為單位)|整數|設定會定義長時間執行要求-回應交換的上限。 任何超過此上限的要求，都會歸類到沒有上限臨界值的「已超過」類別目錄。|  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [組態設定參考 &#40;Power Pivot for SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configuration-setting-reference-power-pivot-for-sharepoint.md)   
  [PowerPivot 使用量資料收集](../../analysis-services/power-pivot-sharepoint/power-pivot-usage-data-collection.md)  
   

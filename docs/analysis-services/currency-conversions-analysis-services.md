@@ -1,35 +1,40 @@
 ---
-title: "貨幣轉換 (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "多個貨幣轉換"
-  - "貨幣資料 [SQL Server]"
-  - "貨幣 [Analysis Services]"
-  - "轉換貨幣"
-  - "一對多貨幣轉換"
-  - "多對多貨幣轉換 [Analysis Services]"
-  - "多對一貨幣轉換 [Analysis Services]"
+title: "貨幣轉換 (Analysis Services) |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- multiple currency conversions
+- monetary data [SQL Server]
+- currency [Analysis Services]
+- converting currency
+- one-to-many currency conversions
+- many-to-many currency conversions [Analysis Services]
+- many-to-one currency conversions [Analysis Services]
 ms.assetid: e03f491c-7df8-46a0-ade9-f2e55b68db85
 caps.latest.revision: 18
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 18
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f54b50833ce40a8222925ac2b43591fa89617631
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 貨幣轉換 (Analysis Services)
+# <a name="currency-conversions-analysis-services"></a>貨幣轉換 (Analysis Services)
   [!INCLUDE[applies](../includes/applies-md.md)] 僅限多維度  
   
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 會使用多維度運算式 (MDX) 指令碼提供的一組功能，在支援多重貨幣的 Cube 中提供貨幣轉換支援。  
   
-## 貨幣轉換詞彙  
+## <a name="currency-conversion-terminology"></a>貨幣轉換詞彙  
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 會使用下列詞彙來描述貨幣轉換功能：  
   
  樞紐貨幣  
@@ -80,13 +85,13 @@ caps.handback.revision: 18
   
 -   維度內一個屬性 (Attribute) 的 **Type** 屬性 (Property) 會設定為 CurrencyDestination，且繫結至此屬性 (Attribute) 的資料行包含貨幣識別碼，代表貨幣轉換的報表貨幣。  
   
-## 定義貨幣轉換  
+## <a name="defining-currency-conversions"></a>定義貨幣轉換  
  您可以使用商業智慧精靈來定義 Cube 的貨幣轉換功能，或使用 MDX 指令碼來手動定義貨幣轉換。  
   
-### 必要條件  
+### <a name="prerequisites"></a>必要條件  
  您必須先定義至少一個貨幣維度、至少一個時間維度以及至少一個比率量值群組，才能使用商業智慧精靈來定義 Cube 中的貨幣轉換。 從這些物件中，商業智慧精靈可以擷取資料和中繼資料，這些資料用來建構報表貨幣維度與提供貨幣轉換功能所需的 MDX 指令碼。  
   
-### 決策  
+### <a name="decisions"></a>決策  
  您必須先完成下列決策，商業智慧精靈才能建構報表貨幣維度與提供貨幣轉換功能所需的 MDX 指令碼：  
   
 -   匯率方向  
@@ -99,7 +104,7 @@ caps.handback.revision: 18
   
 -   報表貨幣  
   
-### 匯率方向  
+### <a name="exchange-rate-directions"></a>匯率方向  
  比率量值群組包含量值，代表本地貨幣和樞紐貨幣 (通常稱為公司的貨幣) 之間的匯率。 匯率方向和轉換類型的組合，會決定在以商業智慧精靈產生的 MDX 指令碼所轉換之量值上執行的作業。 下表根據商業智慧精靈中可用的匯率方向選項和轉換方向，描述依據匯率方向和轉換類型而決定執行的作業。  
   
 |||||  
@@ -108,9 +113,9 @@ caps.handback.revision: 18
 |**n 個樞紐貨幣至 1 個範例貨幣**|將待轉換的量值乘以本地貨幣的匯率量值，以轉換量值為樞紐貨幣。|將待轉換的量值除以報表貨幣的匯率量值，以轉換量值為報表貨幣。|將待轉換的量值乘以本地貨幣的匯率量值，以轉換量值為樞紐貨幣，再將已轉換的量值除以報表貨幣的匯率量值，以轉換量值為報表貨幣。|  
 |**n 個範例貨幣至 1 個樞紐貨幣**|將待轉換的量值除以本地貨幣的匯率量值，以轉換量值為樞紐貨幣。|將待轉換的量值乘以報表貨幣的匯率量值，以轉換量值為報表貨幣。|將待轉換的量值除以本地貨幣的匯率量值，以轉換量值為樞紐貨幣，再將已轉換的量值乘以報表貨幣的匯率量值，以轉換量值為報表貨幣。|  
   
- 請在商業智慧精靈的 **[設定貨幣轉換選項]** 頁面上選擇匯率方向。 如需設定轉換方向的詳細資訊，請參閱[設定貨幣轉換選項 &#40;商業智慧精靈&#41;](../Topic/Set%20Currency%20Conversion%20Options%20\(Business%20Intelligence%20Wizard\).md)。  
+ 請在商業智慧精靈的 **[設定貨幣轉換選項]** 頁面上選擇匯率方向。 如需設定轉換方向的詳細資訊，請參閱[設定貨幣轉換選項 &#40;商業智慧精靈&#41;](http://msdn.microsoft.com/library/a49d4e1f-bdda-4a83-ab4f-ce8c500e1d6d)。  
   
-### 轉換的成員  
+### <a name="converted-members"></a>轉換的成員  
  您可以使用商業智慧精靈，從比率量值群組中指定使用哪些量值來轉換下列的值：  
   
 -   其他量值群組中的量值。  
@@ -119,9 +124,9 @@ caps.handback.revision: 18
   
 -   資料庫維度中帳戶屬性的屬性階層之成員所使用的帳戶類型。  
   
- 商業智慧精靈在精靈產生的 MDX 指令碼內會使用這項資訊，來決定貨幣轉換計算的範圍。 如需指定貨幣轉換之成員的詳細資訊，請參閱[選取成員 &#40;商業智慧精靈&#41;](../Topic/Select%20Members%20\(Business%20Intelligence%20Wizard\).md)。  
+ 商業智慧精靈在精靈產生的 MDX 指令碼內會使用這項資訊，來決定貨幣轉換計算的範圍。 如需指定貨幣轉換之成員的詳細資訊，請參閱[選取成員 &#40;商業智慧精靈&#41;](http://msdn.microsoft.com/library/1a147461-d594-41e7-a41d-09d2d003e1e0)。  
   
-### 轉換類型  
+### <a name="conversion-types"></a>轉換類型  
  商業智慧精靈支援三種不同類型的貨幣轉換：  
   
 -   **一對多**  
@@ -144,14 +149,14 @@ caps.handback.revision: 18
   
  指定轉換類型可讓商業智慧精靈定義報表貨幣維度的具名查詢和維度結構，以及貨幣轉換定義之 MDX 指令碼的結構。  
   
-### 本地貨幣  
+### <a name="local-currencies"></a>本地貨幣  
  如果您選擇以多對多或多對一轉換類型執行貨幣轉換，您需要指定如何識別本地貨幣，供商業智慧精靈產生的 MDX 指令碼執行貨幣轉換計算。 事實資料表中交易的本地貨幣有下列兩種識別方式：  
   
 -   量值群組和貨幣維度之間存在一般維度關聯性。 例如，在 [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] 範例 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫中，網際網路銷售量值群組和貨幣維度之間存在一般維度關聯性。 該量值群組的事實資料表包含外部索引鍵資料行，此資料行參考該維度之維度資料表中的貨幣識別碼。 在上述情形中，您可以從量值群組所參考的貨幣維度中選取屬性，來識別該量值群組在事實資料表中交易的本地貨幣。 此情形常見於銀行應用程式，其中交易本身即會決定交易使用的貨幣。  
   
 -   量值群組和貨幣維度之間，透過直接參考貨幣維度的另一個維度，存在參考維度關聯性。 例如，在 [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] 範例 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫中，財務報表量值群組是透過組織維度，而對貨幣維度有參考式維度關聯性。 該量值群組的事實資料表包含外部索引鍵資料行，此資料行參考組織維度之維度資料表中的成員。 而組織維度的維度資料表包含外部索引鍵資料行，此資料行參考貨幣維度之維度資料表中的貨幣識別碼。 此情形常見於財務報表應用程式，其中交易的位置或分公司會決定交易的貨幣。 在上述情形中，您可以從商務實體的維度中選取參考貨幣維度的屬性。  
   
-### 報表貨幣  
+### <a name="reporting-currencies"></a>報表貨幣  
  如果您選擇以多對多或一對多轉換類型執行貨幣轉換，您需要指定報表貨幣，供商業智慧精靈產生的 MDX 指令碼執行貨幣轉換計算。 您可以指定比率量值群組相關之貨幣維度的所有成員，或從維度中選取個別的成員。  
   
  商業智慧精靈會根據使用選取之報表貨幣的貨幣維度，從該貨幣維度的維度資料表所建構的具名查詢來建立報表貨幣維度。  
@@ -161,10 +166,10 @@ caps.handback.revision: 18
   
  Cube 中定義的每一個貨幣轉換，均會定義個別的報表貨幣維度。 報表貨幣維度在建立之後可以變更名稱，但如果名稱變更，您也必須更新該貨幣轉換產生的 MDX 指令碼，以確保在參考報表貨幣維度時，指令碼命令可以使用正確的名稱。  
   
-## 定義多重貨幣轉換  
+## <a name="defining-multiple-currency-conversions"></a>定義多重貨幣轉換  
  利用商業智慧精靈，您可以依照商業智慧方案的需求，定義所需數量的貨幣轉換。 您可以覆寫現有的貨幣轉換，或將新的貨幣轉換附加至 Cube 的 MDX 指令碼。 單一 Cube 中定義的多重貨幣轉換，讓報表需求複雜的商業智慧應用程式更有彈性，例如財務報表應用程式，即支援多個不同的國際報表的轉換需求。  
   
-### 識別貨幣轉換  
+### <a name="identifying-currency-conversions"></a>識別貨幣轉換  
  商業智慧精靈會將貨幣轉換的指令碼命令包覆在下列註解中，來識別每一種貨幣轉換：  
   
  `//<Currency conversion>`  
@@ -183,7 +188,7 @@ caps.handback.revision: 18
   
  您可以視需要變更貨幣轉換中所包含的指令碼命令。 不過，如果覆寫貨幣轉換，將會遺失您的變更。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [Analysis Services 的全球化案例](../analysis-services/globalization-scenarios-for-analysis-services.md)  
   
   

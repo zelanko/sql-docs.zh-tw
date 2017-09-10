@@ -1,34 +1,39 @@
 ---
-title: "使用 Windows PowerShell 的 Power Pivot 組態 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Power Pivot 組態使用 Windows PowerShell |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4d83e53e-04f1-417d-9039-d9e81ae0483d
 caps.latest.revision: 19
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 19
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e25460598e99163c4866b14741bf020208de902b
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 使用 Windows PowerShell 的 Power Pivot 組態
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 包括您可以用來設定 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 安裝的 Windows PowerShell 指令程式。 若要使用 PowerShell 完整設定安裝，需要使用 SharePoint Cmdlet 和 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint Cmdlet。 大部分組態都可以使用其中一項 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工具來完成。 如需工具的詳細資訊，請參閱 [Power Pivot 組態工具](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)。  
+# <a name="power-pivot-configuration-using-windows-powershell"></a>使用 Windows PowerShell 的 Power Pivot 組態
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 包括您可以用來設定 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]安裝的 Windows PowerShell 指令程式。 若要使用 PowerShell 完整設定安裝，需要使用 SharePoint Cmdlet 和 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint Cmdlet。 大部分組態都可以使用其中一項 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工具來完成。 如需工具的詳細資訊，請參閱 [Power Pivot 組態工具](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)。  
   
 > [!IMPORTANT]  
 >  如果是 SharePoint 2010 伺服器陣列，您必須先安裝 SharePoint 2010 SP1，才可設定 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 或使用 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 資料庫伺服器的 SharePoint 伺服器陣列。 如果您尚未安裝該 Service Pack，請在開始設定伺服器之前先加以安裝。  
   
-## 使用 PowerShell 設定 Power Pivot for SharePoint 的優點  
+## <a name="benefits-of-configuring-power-pivot-for-sharepoint-using-powershell"></a>使用 PowerShell 設定 Power Pivot for SharePoint 的優點  
  您可以建立 Windows PowerShell (.ps1) 檔案，將組態工作自動化。 如果您需要可以在任何伺服器上執行的指令碼式安裝和設定步驟，建議使用此方法。 您可以需要此種指令碼做為災難復原計畫的一部分，才能在發生硬體故障時重建伺服器。  
   
-## 在伺服器上檢視 Power Pivot Cmdlet 的清單  
- 若要查看 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Cmdlet 的內容和範例，請參閱[Power Pivot for SharePoint 的 PowerShell 參考](../../analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint.md)。  
+## <a name="view-a-list-of-the-power-pivot-cmdlets-on-a-server"></a>在伺服器上檢視 Power Pivot Cmdlet 的清單  
+ 若要查看 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Cmdlet 的內容和範例，請參閱 [Power Pivot for SharePoint 的 PowerShell 參考](../../analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint.md)。  
   
  使用 PowerShell 檢視 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Cmdlet 的清單：  
   
@@ -60,7 +65,7 @@ caps.handback.revision: 19
     Get-help new-powerpivotserviceapplication -example  
     ```  
   
-## 在伺服器上啟用 Power Pivot Cmdlet  
+## <a name="enable-power-pivot-cmdlets-on-a-server"></a>在伺服器上啟用 Power Pivot Cmdlet  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Cmdlet 可以在您安裝 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 並部署伺服器陣列方案之後使用。 這些方案會在您執行 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 組態工具時部署。 請依照下列步驟啟用指令程式：  
   
 1.  使用 [以系統管理員身分執行] 選項，開啟 SharePoint 管理命令介面。  
@@ -81,7 +86,7 @@ caps.handback.revision: 19
   
 4.  關閉視窗。 再次使用 [以系統管理員身分執行] 選項重新開啟該視窗。  
   
-## 相關內容  
+## <a name="related-content"></a>相關內容  
  [管理中心的 PowerPivot 伺服器管理和組態](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)  
   
  [Power Pivot 組態工具](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)  

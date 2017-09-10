@@ -1,34 +1,39 @@
 ---
-title: "使用 Microsoft 關聯規則檢視器瀏覽模型 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "項目集 [Analysis Services]"
-  - "採礦模型 [Analysis Services], 關聯"
-  - "採礦模型內容, 檢視"
-  - "規則 [資料採礦]"
-  - "關聯規則檢視器 [Analysis Services]"
-  - "購物籃分析 [Analysis Services]"
-  - "關聯 [Analysis Services]"
-  - "Microsoft 關聯規則檢視器"
-  - "相依性 [Analysis Services]"
+title: "瀏覽模型，使用 Microsoft 關聯規則檢視器 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- itemsets [Analysis Services]
+- mining models [Analysis Services], associations
+- mining model content, viewing
+- rules [Data Mining]
+- Association Rules Viewer [Analysis Services]
+- market basket analysis [Analysis Services]
+- associations [Analysis Services]
+- Microsoft Association Rules Viewer
+- dependencies [Analysis Services]
 ms.assetid: 538fc01b-8eb1-467a-9b66-3cd57cf7489f
 caps.latest.revision: 39
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d8145dd87dd2c1e09663a8b6f6c0cea6dcb1ae7f
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 使用 Microsoft 關聯規則檢視器瀏覽模型
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 關聯規則檢視器會顯示以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 關聯演算法建立的採礦模型。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 關聯演算法是用於建立資料採礦模型的關聯演算法，這些模型可用於購物籃分析。 如需有關這個演算法的詳細資訊，請參閱＜ [Microsoft Association Algorithm](../../analysis-services/data-mining/microsoft-association-algorithm.md)＞。  
+# <a name="browse-a-model-using-the-microsoft-association-rules-viewer"></a>使用 Microsoft 關聯規則檢視器瀏覽模型
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 關聯規則檢視器會顯示以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 關聯演算法建立的採礦模型。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 關聯演算法是用於建立資料採礦模型的關聯演算法，這些模型可用於購物籃分析。 如需有關這個演算法的詳細資訊，請參閱＜ [Microsoft Association Algorithm](../../analysis-services/data-mining/microsoft-association-algorithm.md)＞。  
   
  以下是使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 關聯演算法的主要原因：  
   
@@ -37,9 +42,9 @@ caps.handback.revision: 39
 -   若要探索依據現有的項目預測交易中其他項目存在與否的規則。  
   
 > [!NOTE]  
->  若要檢視有關此模型中所用的方程式及所探索之模式的詳細資訊，請使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 一般內容樹狀檢視器。 如需詳細資訊，請參閱[使用 Microsoft 一般內容樹狀檢視器瀏覽模型](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)或 [Microsoft 一般內容樹狀檢視器 &#40;資料採礦&#41;](../Topic/Microsoft%20Generic%20Content%20Tree%20Viewer%20\(Data%20Mining\).md)。  
+>  若要檢視有關此模型中所用的方程式及所探索之模式的詳細資訊，請使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 一般內容樹狀檢視器。 如需詳細資訊，請參閱[使用 Microsoft 一般內容樹狀檢視器瀏覽模型](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)或 [Microsoft 一般內容樹狀檢視器 &#40;資料採礦&#41;](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c)。  
   
- 如需如何建立、瀏覽，以及使用關聯採礦模型的逐步解說，請參閱[第 3 課︰建立購物籃狀況 &#40;中繼資料採礦教學課程&#41;](../Topic/Lesson%203:%20Building%20a%20Market%20Basket%20Scenario%20\(Intermediate%20Data%20Mining%20Tutorial\).md)。  
+ 如需如何建立、瀏覽，以及使用關聯採礦模型的逐步解說，請參閱[第 3 課︰建立購物籃狀況 &#40;中繼資料採礦教學課程&#41;](http://msdn.microsoft.com/library/651eef38-772e-4d97-af51-075b1b27fc5a)。  
   
 ##  <a name="BKMK_ViewerTabs"></a> 檢視器索引標籤  
  在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中瀏覽採礦模型時，該模型會在適合它的檢視器中，顯示於資料採礦設計師的 **[採礦模型檢視器]** 索引標籤上。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 關聯規則檢視器包括下列索引標籤：  
@@ -70,7 +75,7 @@ caps.handback.revision: 39
 ###  <a name="BKMK_Rules"></a> 規則  
  **[規則]** 索引標籤會顯示關聯演算法探索的規則。 **[規則]** 索引標籤有一個方格包含下列資料行： **[機率]**、 **[重要性]**和 **[規則]**。 機率是描述發生規則之結果的可能性。 重要性是設計來測量規則的效益。 雖然規則發生的機率很高，但規則的效益本身可能不重要。 重要性資料行會描述這方面。 例如，若每一個項目集包含屬性的特定狀態，則預測狀態的規則只是一般規則，即使機率很高也一樣。 重要性愈高，規則就愈重要。  
   
- 您可以使用 **[最小機率]** 和 **[最低重要性]** 來篩選規則，類似您在 **[項目集]** 索引標籤上可執行的篩選。 您也可以使用 **[篩選規則]** ，依據規則包含的屬性狀態來篩選規則。  
+ 您可以使用 **[最小機率]** 和 **[最低重要性]** 來篩選規則，類似您在 **[項目集]** 索引標籤上可執行的篩選。您也可以使用 **[篩選規則]** ，依據規則包含的屬性狀態來篩選規則。  
   
  您可以按一下資料行標題來排序方格中的資料列。  
   
@@ -83,8 +88,8 @@ caps.handback.revision: 39
   
  [回到頁首](#BKMK_ViewerTabs)  
   
-## 請參閱＜  
- [Microsoft 關聯分析演算法](../../analysis-services/data-mining/microsoft-association-algorithm.md)   
+## <a name="see-also"></a>請參閱＜  
+ [Microsoft Association Algorithm](../../analysis-services/data-mining/microsoft-association-algorithm.md)   
  [採礦模型檢視器工作和使用說明](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [採礦模型檢視器工作和使用說明](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [資料採礦工具。](../../analysis-services/data-mining/data-mining-tools.md)   

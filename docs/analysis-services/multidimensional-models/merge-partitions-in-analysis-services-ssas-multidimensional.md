@@ -1,27 +1,32 @@
 ---
-title: "在 Analysis Services 中合併分割區 (SSAS - 多維度) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "分割區 [Analysis Services], 合併"
-  - "合併分割區 [Analysis Services]"
+title: "合併資料分割中 Analysis Services (SSAS-多維度) |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- partitions [Analysis Services], merging
+- merging partitions [Analysis Services]
 ms.assetid: b3857b9b-de43-4911-989d-d14da0196f89
 caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 34
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a973f81fbb9eef7294b9beec9251569bcce0bf4f
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 在 Analysis Services 中合併分割區 (SSAS - 多維度)
+# <a name="merge-partitions-in-analysis-services-ssas---multidimensional"></a>在 Analysis Services 中合併分割區 (SSAS - 多維度)
   您可以合併現有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫中的資料分割，以合併相同量值群組中之多個資料分割的事實資料。  
   
  [常見的案例](#bkmk_Scenario)  
@@ -60,7 +65,7 @@ caps.handback.revision: 34
   
  如果目標分割區是空的 (亦即具有彙總設計但沒有彙總)，合併會卸除來源分割區的彙總。 您必須對分割區執行處理索引、完整處理或處理預設，以建立彙總。  
   
- 遠端資料分割只能與相同的遠端 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體所定義的其他遠端資料分割合併。  
+ 遠端資料分割只能與相同的遠端 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]執行個體所定義的其他遠端資料分割合併。  
   
 > [!NOTE]  
 >  如果使用本機和遠端分割區的組合，替代方式是建立包含合併資料的新分割區，並刪除您不再使用的分割區。  
@@ -70,7 +75,7 @@ caps.handback.revision: 34
 ##  <a name="bkmk_Where"></a> 合併分割區之後更新分割區來源  
  分割區會依查詢 (例如用於處理資料之 SQL 查詢的 WHERE 子句) 分割，或依資料表或具名查詢分割，以提供資料給分割區。 資料分割的 **Source** 屬性指出資料分割繫結至查詢或資料表。  
   
- 當您合併資料分割時，會合併資料分割的內容，但不會更新 **Source** 屬性以反映資料分割的其他範圍。 這表示如果您後續重新處理保留其原始 **Source** 的資料分割，會從該資料分割取得不正確的資料。 分割區會錯誤地在父層級彙總資料。 下列範例說明此行為。  
+ 當您合併資料分割時，會合併資料分割的內容，但不會更新 **Source** 屬性以反映資料分割的其他範圍。 這表示如果您後續重新處理保留其原始 **Source**的資料分割，會從該資料分割取得不正確的資料。 分割區會錯誤地在父層級彙總資料。 下列範例說明此行為。  
   
  **問題**  
   
@@ -87,7 +92,7 @@ caps.handback.revision: 34
  合併資料分割之後，請務必檢查 **Source** 以確認篩選對於合併的資料是正確的。 如果您的分割區一開始包含 Q1、Q2 和 Q3 的歷程記錄資料，且您現在想合併 Q4，則必須調整篩選以加入 Q4。 否則，分割區的後續處理將產生錯誤的結果。 此結果對於 Q4 而言將不正確。  
   
 ##  <a name="bkmk_fact"></a> 依事實資料表或具名查詢分割分割區的特殊考量  
- 除了查詢之外，也可依資料表或具名查詢分割分割區。 如果來源資料分割和目標資料分割使用資料來源或資料來源檢視中的相同事實資料表，**Source** 屬性會在合併資料分割之後生效。 它會指定適合結果分割區的事實資料表資料。 由於事實資料表中已存在產生資料分割所需的事實，因此不需要修改 **Source** 屬性。  
+ 除了查詢之外，也可依資料表或具名查詢分割分割區。 如果來源資料分割和目標資料分割使用資料來源或資料來源檢視中的相同事實資料表， **Source** 屬性會在合併資料分割之後生效。 它會指定適合結果分割區的事實資料表資料。 由於事實資料表中已存在產生資料分割所需的事實，因此不需要修改 **Source** 屬性。  
   
  使用多個事實資料表或具名查詢中資料的分割區需要執行額外的工作。 您必須手動將來源分割區的事實資料表中的事實，合併到目標分割區的事實資料表。  
   
@@ -95,13 +100,13 @@ caps.handback.revision: 34
   
  基於相同理由，從具名查詢取得分割資料的分割區也需要更新。 合併的分割區現在必須具有具名查詢，以傳回先前從個別具名查詢取得的合併結果集。  
   
-## 分割區儲存考量：MOLAP  
+## <a name="partition-storage-considerations-molap"></a>分割區儲存考量：MOLAP  
  合併 MOLAP 分割區時，也會合併分割區的多維度結構中儲存的事實。 這會產生內部完整和一致的分割區。 不過，MOLAP 分割區中儲存的事實，只是事實資料表中之事實的副本。 後續處理分割區時，將會刪除多維度結構中的事實 (僅限完整和重新整理的情況)，並從分割區的資料來源和篩選所指定的事實資料表複製資料。 如果來源分割區使用的事實資料表不同於目標分割區，則必須手動合併來源和目標分割區的事實資料表，確保處理結果分割區時有完整的資料集可用。 如果兩個分割區以不同的具名查詢為基礎，情況亦同。  
   
 > [!IMPORTANT]  
 >  具有不完整事實資料表的合併 MOLAP 分割區包含一份內部合併的事實資料表資料副本，並且在處理之前會正確地運作。  
   
-## 分割區儲存考量：HOLAP 和 ROLAP 分割區  
+## <a name="partition-storage-considerations-holap-and-rolap-partitions"></a>分割區儲存考量：HOLAP 和 ROLAP 分割區  
  合併具有不同的事實資料表的 HOLAP 或 ROLAP 分割區時，不會自動合併事實資料表。 除非手動合併事實資料表，否則結果分割區只能使用與目標分割區相關聯的事實資料表。 結果分割區中的向下鑽研無法使用與來源分割區相關聯的事實，而且在處理分割區時，彙總也不會從無法使用的資料表中摘要資料。  
   
 > [!IMPORTANT]  
@@ -118,7 +123,7 @@ caps.handback.revision: 34
   
 1.  在物件總管中，展開包含您要合併的資料分割之 Cube 的 [量值群組] 節點，然後展開 [資料分割]，再以滑鼠右鍵按一下合併作業的目標或目的地資料分割。 例如，如果您要將季度事實資料移至儲存年度事實資料的分割區，請選取包含年度事實資料的分割區。  
   
-2.  按一下 [合併資料分割] 以開啟 [合併資料分割 \<資料分割名稱>] 對話方塊。  
+2.  按一下**合併資料分割**開啟**合併分割區\<分割區名稱 >**  對話方塊。  
   
 3.  在 [來源資料分割] 下，選取要與目標資料分割合併之每個來源資料分割旁的核取方塊，然後按一下 [確定]。  
   
@@ -132,13 +137,13 @@ caps.handback.revision: 34
 ##  <a name="bkmk_partitionsXMLA"></a> 如何使用 XMLA 合併分割區  
  如需詳細資訊，請參閱此主題：[合併資料分割 &#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/merging-partitions-xmla.md)。  
   
-## 請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [處理 Analysis Services 物件](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md)   
  [資料分割 &#40;Analysis Services - 多維度資料&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
  [建立及管理本機資料分割 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)   
- [建立及管理遠端資料分割 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/create-and-manage-a-remote-partition-analysis-services.md)   
+ [建立及管理遠端分割區 &#40;Analysis Services &#41;](../../analysis-services/multidimensional-models/create-and-manage-a-remote-partition-analysis-services.md)   
  [設定分割區回寫](../../analysis-services/multidimensional-models/set-partition-writeback.md)   
- [可寫入的資料分割](../Topic/Write-Enabled%20Partitions.md)   
- [設定維度及分割區的字串存放區](../../analysis-services/multidimensional-models/configure-string-storage-for-dimensions-and-partitions.md)  
+ [可寫入的資料分割](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
+ [設定維度和分割區的字串儲存體](../../analysis-services/multidimensional-models/configure-string-storage-for-dimensions-and-partitions.md)  
   
   

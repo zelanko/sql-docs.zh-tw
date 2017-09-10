@@ -1,37 +1,42 @@
 ---
-title: "從範本建立 Cube，而不使用資料來源檢視 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "從範本建立 Cube，而不使用資料來源檢視 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5c8c09b1-140c-48db-9b9f-d18a051d7dbd
 caps.latest.revision: 7
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 7
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 80680ae03ee8ac059cfe3c9b47c3abe6b67db511
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 從範本建立 Cube，而不使用資料來源檢視
+# <a name="create-a-cube-from-a-template-without-using-a-data-source-view"></a>從範本建立 Cube，而不使用資料來源檢視
   在 [Cube 精靈] 的第一頁上，選取 [Build the cube without using a data source (不使用資料來源而建立 Cube)] 建立 Cube，而不使用資料來源檢視。 稍後，您可以使用 [結構描述產生精靈]，根據 Cube 及其他可能的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 物件結構，來產生資料來源檢視的關聯式結構描述。 如需產生結構描述的詳細資訊，請參閱[結構描述產生精靈 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/schema-generation-wizard-analysis-services.md)。  
   
-## 選取建立方法  
+## <a name="selecting-the-build-method"></a>選取建立方法  
  在 [Cube 精靈] 的 [Select Build Method (選取建立方法)] 頁面上，按一下 [Build the cube without using a data source (不使用資料來源而建立 Cube)]。 若要使用現有的 Cube 範本建立 Cube，請選取 [Use a cube template (使用 Cube 範本)] 核取方塊。 。 如果您不選取使用範本，則必須手動設定選項。  
   
  Cube 範本包含預先定義的量值、量值群組、維度、階層及屬性。 如果選取範本，精靈會使用範本中的物件定義做為基礎，來設定下列頁面中的選項。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 標準 Cube 的數個範本隨附安裝。 伺服器管理員也可以加入專為您的組織資料所設定的 Cube 或維度範本。  
   
-## 選取維度  
+## <a name="selecting-dimensions"></a>選取維度  
  使用精靈的 [Select Dimensions (選取維度)] 頁面，將現有的維度加入 Cube。 只有當專案或資料庫中已含有不使用資料來源的共用維度時，才會顯示此頁面。 此頁面不會列出使用資料來源的維度。  
   
  若要加入現有的維度，請在 [Shared dimensions (共用維度)] 清單中選取一個或多個維度，然後按一下向右箭頭 (**>**) 按鈕將其移至 [Cube 維度] 清單中。 按一下雙箭頭 (**>>**) 按鈕移動清單中的所有維度。  
   
-## 定義新的量值  
+## <a name="defining-new-measures"></a>定義新的量值  
  使用精靈的 [定義新的量值] 頁面，指定新 Cube 中的量值和量值群組。 您在此處指定的量值群組會對應至產生之結構描述中的事實資料表。 您在此處指定的量值會對應至資料表中的數值非索引鍵資料行。  
   
  如果使用範本建立 Cube，範本中的量值會在 [從範本選取量值] 下以方格格式列出。 一開始會選取清單中每個量值旁的核取方塊。 您可以清除不想包含在 Cube 中之任何量值旁的核取方塊。 若要在清單中加入或移除所有量值，請選取或清除方格標題列上的核取方塊。  
@@ -47,7 +52,7 @@ caps.handback.revision: 7
 |**資料類型**|量值的資料類型。 按一下此值，即可變更資料類型。 當您建立量值時，預設值為 **Single**。 此資料行會設定量值物件的 **DataType** 屬性。|  
 |**彙總**|量值的標準彙總。 按一下此資料格，即可為量值指定其中一個標準彙總 (或 [無])。 當您建立量值時，預設值為 **Sum**。 此資料行會設定量值物件的 **AggregationFunction** 屬性。|  
   
-## 定義新的維度  
+## <a name="defining-new-dimensions"></a>定義新的維度  
  使用精靈的 [定義新的維度] 頁面，指定新 Cube 中的維度。  
   
  如果使用範本建立 Cube，[從範本選取維度] 下的方格會顯示範本中的維度。 您可以清除任何維度旁的核取方塊，從 Cube 中移除維度。 清除方格標題列上的核取方塊，即可移除所有列出的維度。 如果您不使用範本，此方格僅會列出「時間」維度。  
@@ -59,11 +64,11 @@ caps.handback.revision: 7
 |資料行|說明|  
 |------------|-----------------|  
 |**型別**|顯示範本維度的維度類型。 按一下此資料格，即可變更維度的維度類型。 此資料行會設定維度物件的 **Type** 屬性。|  
-|**名稱**|顯示維度名稱。 按一下此資料格，即可輸入其他名稱。 此值會設定維度物件的 **Name** 屬性。|  
+|**Name**|顯示維度名稱。 按一下此資料格，即可輸入其他名稱。 此值會設定維度物件的 **Name** 屬性。|  
 |**SCD**|指定這是緩時變維度 (SCD)。 選取此核取方塊，即可將 SCD Start Date、End Date Original ID 及 Status 屬性加入維度。 如果您使用範本建立 Cube，且精靈在範本維度中偵測到這四種屬性類型，預設會選取 [SCD]。|  
 |**屬性**|顯示要為維度建立的屬性。 維度名稱前面是清單中的每個屬性名稱。 這個清單是唯讀的。 完成精靈之後，您可以使用維度設計師來編輯屬性。|  
   
-## 定義時間週期  
+## <a name="defining-time-periods"></a>定義時間週期  
  使用精靈的 [定義時間週期] 頁面，指定您要包含在維度中的日期範圍。 例如，您可以選擇資料當中，從最早年度 1 月 1 日開始，並將年度延長到超過最新的交易。 在此範圍之外的交易不會出現，或以維度的未知成員出現，視維度的 **UnknownMemberVisible** 屬性設定而定。 **UnknownMemberName** 屬性指定未知成員的標題。 您也可以變更資料所使用的每週第一天 (預設為星期日)。  
   
 > [!NOTE]  
@@ -77,7 +82,7 @@ caps.handback.revision: 7
   
  維度設計師的 [時間週期] 窗格中會顯示所有可用的時間週期  (此窗格取代以維度資料表為基礎之維度的 [資料來源檢視] 窗格)。您可以變更維度的 [來源] (時間繫結) 屬性設定，以變更維度的日期範圍。 由於這是結構性變更，因此您必須重新處理維度及任何使用維度的 Cube，再瀏覽資料。  
   
-## 指定其他日曆  
+## <a name="specifying-additional-calendars"></a>指定其他日曆  
  在精靈的 [指定其他日曆] 頁面上，選取以維度中的階層為基礎的日曆。 您可以選擇下列任何一個日曆。  
   
 |日曆|說明|  
@@ -91,10 +96,10 @@ caps.handback.revision: 7
   
  精靈也會建立日曆特定階層，由針對日曆建立的屬性構成。 針對每一個日曆，每一個階層中的每個層級都會彙總至上一層級。 例如，標準的 12 個月日曆當中，精靈會建立年和週，或年和月的階層。 但是，在標準日曆中，每個月的週數並不平均，因此沒有年、月和週的階層。 相對地，報表或製造日曆中的週會平均分配到各月份，因此在這些日曆中，週會積存至月。  
   
-## 定義維度使用方式  
+## <a name="defining-dimension-usage"></a>定義維度使用方式  
  使用精靈的 [定義維度使用方式] 頁面，指定精靈中每個維度所彙總的 Cube 量值。 此頁面上的 [維度使用方式] 方格會以資料列列出維度，並以資料行列出量值群組。 選取任何維度和量值群組組合的核取方塊，在此組合中，維度會彙總該量值群組的量值。  
   
-## 完成 Cube 精靈  
+## <a name="completing-the-cube-wizard"></a>完成 Cube 精靈  
  在 [正在完成精靈] 頁面上，檢閱新 Cube 的結構，然後在 [Cube 名稱] 方塊中輸入名稱。 或者，選取 [立即產生結構描述] 核取方塊以啟動 [結構描述產生精靈]。 在大多數情況下，如果您計畫建立其他物件，則不應選取此核取方塊。 您也可以使用 Cube 設計師稍後再產生結構描述。  
   
   

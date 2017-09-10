@@ -1,37 +1,42 @@
 ---
-title: "授與資料採礦結構和模型的權限 (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.roledesignerdialog.miningmodels.f1"
-helpviewer_keywords: 
-  - "資料採礦 [Analysis Services], 安全性"
-  - "權限 [Analysis Services], 採礦模型"
-  - "採礦模型 [Analysis Services], 安全性"
-  - "採礦結構 [Analysis Services], 安全性"
-  - "權限 [Analysis Services], 採礦結構"
-  - "使用者存取權限 [Analysis Services], 採礦結構"
-  - "使用者存取權限 [Analysis Services], 採礦模型"
+title: "授與權限的資料採礦結構和模型 (Analysis Services) |Microsoft 文件"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.asvs.roledesignerdialog.miningmodels.f1
+helpviewer_keywords:
+- data mining [Analysis Services], security
+- permissions [Analysis Services], mining models
+- mining models [Analysis Services], security
+- mining structures [Analysis Services], security
+- permissions [Analysis Services], mining structures
+- user access rights [Analysis Services], mining structures
+- user access rights [Analysis Services], mining models
 ms.assetid: a0008004-e2b7-47db-acad-5fe7e12b130f
 caps.latest.revision: 37
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 37
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 12b69f08e0c56b614c2e181ca3cb62a24496e2b9
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 授與資料採礦結構和模型的權限 (Analysis Services)
+# <a name="grant-permissions-on-data-mining-structures-and-models-analysis-services"></a>授與資料採礦結構和模型的權限 (Analysis Services)
   根據預設，只有 Analysis Services 伺服器管理員擁有檢視資料庫中資料採礦結構或採礦模型的權限。 請依照下列指示，授與權限給非管理員的使用者。  
   
-## 設定權限以存取採礦結構  
+## <a name="set-permissions-to-access-a-mining-structure"></a>設定權限以存取採礦結構  
   
 1.  在 SSMS 中，連線到 Analysis Services。 如果您需要這些步驟的說明，請參閱[從用戶端應用程式連接 &#40;Analysis Services&#41;](../../analysis-services/instances/connect-from-client-applications-analysis-services.md)。  
   
@@ -47,7 +52,7 @@ caps.handback.revision: 37
   
 7.  按一下 [確定]，完成角色的建立。  
   
-## 設定權限以存取採礦模型  
+## <a name="set-permissions-to-access-a-mining-model"></a>設定權限以存取採礦模型  
  對於資料採礦模型而言，角色可以擁有 [讀取] 或 [讀取/寫入] 權限，以及 [鑽研] 和 [讀取定義] 權限，以允許檢視和瀏覽基礎資料。  
   
  **注意**：如果您在採礦結構和採礦模型上都啟用鑽研，則任何使用者只要是對於採礦模型和採礦結構具有鑽研權限的角色成員，也都可以檢視採礦結構中的資料行，即使這些資料行未包含在採礦模型中。 因此，若要保護機密資訊，您應該設定資料來源檢視來遮罩個人資訊，並只有在必要時才允許採礦結構的鑽研存取。  
@@ -62,15 +67,15 @@ caps.handback.revision: 37
   
 4.  按一下 [確定]，完成角色的建立。  
   
- 若要在使用資料採礦延伸模組 (DMX) OPENQUERY 子句的鑽研查詢中使用資料來源，資料庫角色還需要對適當的資料來源物件具有讀取/寫入權限。 如需詳細資訊，請參閱[授與資料來源物件的權限 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-a-data-source-object-analysis-services.md) 和 [OPENQUERY &#40;DMX&#41;](../Topic/OPENQUERY%20\(DMX\).md)。  
+ 若要在使用資料採礦延伸模組 (DMX) OPENQUERY 子句的鑽研查詢中使用資料來源，資料庫角色還需要對適當的資料來源物件具有讀取/寫入權限。 如需詳細資訊，請參閱[授與資料來源物件的權限 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-a-data-source-object-analysis-services.md) 和 [OPENQUERY &#40;DMX&#41;](../../dmx/source-data-query-openquery.md)。  
   
 > [!NOTE]  
 >  依預設，使用 OPENROWSET 來提交 DMX 查詢的功能已停用。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [將伺服器系統管理員權限授與 Analysis Services 執行個體](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md)   
  [授與 Cube 或模型權限 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)   
- [授與維度資料的自訂存取權 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)   
+ [授與自訂存取維度資料 &#40;Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)   
  [授與資料格資料的自訂存取權 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)  
   
   

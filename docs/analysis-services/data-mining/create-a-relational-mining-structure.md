@@ -1,29 +1,34 @@
 ---
-title: "建立關聯式採礦結構 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/13/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "維度 [Analysis Services], 資料採礦"
-  - "資料採礦 [Analysis Services], 結構"
-  - "採礦結構 [Analysis Services], 建立"
-  - "關聯式採礦模型 [Analysis Services]"
-  - "OLAP 採礦模型 [Analysis Services]"
+title: "建立關聯式採礦結構 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/13/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- dimensions [Analysis Services], data mining
+- data mining [Analysis Services], structure
+- mining structures [Analysis Services], creating
+- relational mining models [Analysis Services]
+- OLAP mining models [Analysis Services]
 ms.assetid: 5547d639-377d-4ca7-88fc-ce1f9e2babc5
 caps.latest.revision: 35
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 82fa652f76c1818ef6538b379723e7f91c8482ab
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 建立關聯式採礦結構
+# <a name="create-a-relational-mining-structure"></a>建立關聯式採礦結構
   大多數的資料採礦模型都是根據關聯式資料來源。 建立關聯式資料採礦模型的優點如下：您可以組合隨選資料及定型和更新模型，而不需要經歷建立 Cube 的複雜程序。  
   
  關聯式採礦結構可以繪製不同來源的資料。 原始資料可以儲存在資料表、檔案或關聯式資料庫系統中，前提是這些資料可以定義為資料來源檢視的一部分。 例如，如果您的資料在 Excel 中、SQL Server 資料倉儲中或 SQL Server 報表資料庫中，或是在透過 OLE DB 或 ODBC 提供者所存取的外部來源中，您應該使用關聯式採礦結構。  
@@ -42,10 +47,10 @@ caps.handback.revision: 35
   
  [如何及為何啟用鑽研](#BKMK_DrillThru)  
   
-## 需求  
+## <a name="requirements"></a>需求  
  首先，您必須擁有現有的資料來源。 您可以使用資料來源設計師來設定資料來源 (如果沒有資料來源存在的話)。 如需詳細資訊，請參閱[建立資料來源 &#40;SSAS 多維度&#41;](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)。  
   
- 接下來，請使用資料來源檢視精靈，將必要的資料組合成單一資料來源檢視。 如需如何使用資料來源檢視選取、轉換、篩選或管理資料的詳細資訊，請參閱[多維度模型中的資料來源檢視](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)。  
+ 接下來，請使用資料來源檢視精靈，將必要的資料組合成單一資料來源檢視。 如需如何使用資料來源檢視選取、轉換、篩選或管理資料的詳細資訊，請參閱 [多維度模型中的資料來源檢視](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)。  
   
 ##  <a name="BKMK_Relational_Structure"></a> 程序概觀  
  在方案總管中，以滑鼠右鍵按一下 [採礦結構] 節點，然後選取 [新增採礦結構]，即可啟動資料採礦精靈。 此精靈會引導您透過下列步驟來建立新關聯式採礦模型的結構：  
@@ -93,7 +98,7 @@ caps.handback.revision: 35
   
  採礦結構中的資料是衍生自現有資料來源檢視中的任何內容。 您可以視需要修改資料來源檢視中的資料，加入在基礎關聯式資料中可能不存在的關聯性或衍生的資料行。 您也可以在資料來源檢視內建立具名的計算或彙總。 如果您對於資料來源中的資料排列方式沒有控制權，或者如果您想要試驗資料採礦模型的不同資料彙總，這些功能會非常實用。  
   
- 您不必使用所有提供的資料，您可以挑選並選擇要將哪些資料行包含在採礦結構中。 然後以該結構為基礎的所有模型都可以使用這些資料行，或者您可以針對特定模型將某些資料行標示為 **Ignore**。 您甚至可以讓資料採礦模型的使用者從採礦模型的結果進行鑽研，以查看未包含在採礦模型本身中的其他採礦結構資料行。  
+ 您不必使用所有提供的資料，您可以挑選並選擇要將哪些資料行包含在採礦結構中。 然後以該結構為基礎的所有模型都可以使用這些資料行，或者您可以針對特定模型將某些資料行標示為 **Ignore** 。 您甚至可以讓資料採礦模型的使用者從採礦模型的結果進行鑽研，以查看未包含在採礦模型本身中的其他採礦結構資料行。  
   
 ##  <a name="bkmk_ContentDataType"></a> 如何指定內容類型和資料類型  
  此資料類型與您在 SQL Server 或其他應用程式介面中指定的資料類型大致相同：日期和時間、不同大小的數目、布林值、文字和其他離散資料。  
@@ -110,7 +115,7 @@ caps.handback.revision: 35
  在接近精靈結尾處，您必須決定是否要將資料分割成定型集和測試集。 佈建隨機取樣的資料部分以供測試的功能非常方便，因為這樣可確保所有與新採礦結構相關聯的採礦模型都能使用一致的測試資料集。  
   
 > [!WARNING]  
->  請注意，並非所有模型類型都可使用此選項。 例如，如果您建立預測模型，您將無法使用鑑效組，因為時間序列演算法要求資料中不得有間距。 如需支援鑑效組資料集之模型類型的清單，請參閱[定型和測試資料集](../../analysis-services/data-mining/training-and-testing-data-sets.md)。  
+>  請注意，並非所有模型類型都可使用此選項。 例如，如果您建立預測模型，您將無法使用鑑效組，因為時間序列演算法要求資料中不得有間距。 如需支援鑑效組資料集之模型類型的清單，請參閱 [定型和測試資料集](../../analysis-services/data-mining/training-and-testing-data-sets.md)。  
   
  若要建立這個鑑效組資料集，您會指定想要用於測試之資料的百分比。 所有其餘資料將會用於定型。 您也可以選擇設定要用於測試的案例數目上限，或者設定啟動隨機選擇程序所要使用的初始值。  
   
@@ -124,9 +129,9 @@ caps.handback.revision: 35
 > [!WARNING]  
 >  若要使用鑽研，當您建立採礦結構時必須啟用鑽研。 您之後可以在模型上設定屬性，於模型上啟用鑽研，但是採礦結構要求一開始就應該設定這個選項。 如需詳細資訊，請參閱[鑽研查詢 &#40;資料採礦&#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)。  
   
-## 請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [資料採礦設計師](../../analysis-services/data-mining/data-mining-designer.md)   
- [資料採礦精靈 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/data-mining-wizard-analysis-services-data-mining.md)   
+ [資料採礦精靈 &#40;Analysis Services-資料採礦 &#41;](../../analysis-services/data-mining/data-mining-wizard-analysis-services-data-mining.md)   
  [採礦模型屬性](../../analysis-services/data-mining/mining-model-properties.md)   
  [採礦結構和結構資料行的屬性](../../analysis-services/data-mining/properties-for-mining-structure-and-structure-columns.md)   
  [採礦結構工作和使用說明](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  

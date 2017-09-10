@@ -1,29 +1,34 @@
 ---
-title: "Analysis Services 的高可用性與延展性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Analysis Services 的高可用性與延展性 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d7040a55-1e4d-4c24-9333-689c1b9e2db8
 caps.latest.revision: 14
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 14
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5417a642fd9522ffb3453caff198480e1d930a0a
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# Analysis Services 的高可用性與延展性
+# <a name="high-availability-and-scalability-in-analysis-services"></a>Analysis Services 的高可用性與延展性
   本文說明提高 Analysis Services 資料庫可用性與延展性的最常用技術。 雖然您可以個別達成每個目標，但實際上這兩個目標經常相互關聯︰可針對大型查詢或處理工作負載擴充的部署通常預期要有高可用性。  
   
  不過反之則不一定。 當任務關鍵性但中等的查詢工作負載有嚴格的服務等級協定時，可以將不含延展性的高可用性當做唯一的目標。  
   
  所有伺服器模式 (多維度、表格式和 SharePoint 整合模式) 通常都會使用相同的技術來提高 Analysis Services 可用性與延展性。 除非另有明確指示，否則您應該假設本文中的資訊適用於所有模式。  
   
-## 重點  
+## <a name="key-points"></a>重點  
  因為可用性與延展性的技術與關聯式資料庫引擎的技術不同，簡短的重點摘要可有效地介紹搭配 Analysis Services 使用的技術︰  
   
 -   Analysis Services 利用內建於 Windows Server 平台的高可用性與延展性機制︰網路負載平衡 (NLB) 及 (或) Window Server 容錯移轉叢集 (WSFC)。  
@@ -60,7 +65,7 @@ caps.handback.revision: 14
   
  達成高可用性需求的另一個策略可能會用到虛擬機器。 若可用性的滿足條件是在幾小時內 (而不是在幾分鐘內) 有取代伺服器，您可以使用虛擬機器，在需要時才啟動，並載入從中央位置擷取的已更新資料庫。  
   
-## 使用唯讀和讀寫資料庫的延展性  
+## <a name="scalability-using-read-only-and-read-write-databases"></a>使用唯讀和讀寫資料庫的延展性  
  建議針對很高或節節升高的查詢和處理工作負載平衡其網路負載。 NLB 方案中的 Analysis Services 資料庫會定義為唯讀資料庫，以確保查詢之間的一致性。  
   
  雖然 [Scale-out querying for Analysis Services using read-only databases](https://technet.microsoft.com/library/ff795582\(v=sql.100\).aspx) (使用唯讀資料庫向外延展 Analysis Services 的查詢) 中的指引 (發佈於 2008 年) 已過時，但通常仍然有效。 雖然伺服器作業系統和電腦硬體的改進使得特定平台和 CPU 限制的參考資料過時，但是針對大量查詢使用唯讀和讀寫資料庫的基本技術仍然不變。  
@@ -73,7 +78,7 @@ caps.handback.revision: 14
   
 -   使用 robocopy 將整個資料目錄從處理伺服器複製到每部查詢伺服器，並將唯讀模式的相同資料庫附加至所有查詢伺服器。 您也可以使用 SAN 快照集、同步處理，或是您用來移動生產資料庫的任何其他工具或方法  
   
-## 表格式和多維度工作負載的資源需求  
+## <a name="resource-demands-for-tabular-and-multidimensional-workloads"></a>表格式和多維度工作負載的資源需求  
  下表是 Analysis Services 如何使用系統資源進行查詢及處理的高階摘要，並依伺服器和儲存模式來區隔。 此摘要可協助您了解處理分散式工作負載的多伺服器部署的強調重點。  
   
 |||  
@@ -84,7 +89,7 @@ caps.handback.revision: 14
 |使用 MOLAP 儲存的多維度模型。|選擇平衡的組態，以提供可快速載入資料的磁碟 IO，並具有足夠的 RAM 來處理快取的資料。|  
 |使用 ROLAP 儲存的多維度模型。|最大化磁碟 IO，並將網路延遲降至最低。|  
   
-## 透過 WSFC 提供高可用性和備援  
+## <a name="highly-availability-and-redundancy-through-wsfc"></a>透過 WSFC 提供高可用性和備援  
  Analysis Services 可安裝到現有的 Windows Server 容錯移轉叢集 (WSFC) 以取得高可用性，盡可能在最短的時間內還原服務。  
   
  容錯移轉叢集提供資料庫的完整存取權 (讀取和回寫)，但一次只會針對一個節點。 次要資料庫會在叢集中的額外節點上執行，並在第一個節點關閉時作為取代伺服器。  
@@ -97,11 +102,11 @@ caps.handback.revision: 14
 - 在對 Analysis Services 進行叢集化時，請確定在叢集中參與之任何節點於相同或非常相似的硬體上執行，且每個節點在作業系統版本和 service pack、Analysis Services 版本和服務套件 (或累計更新)，以及伺服器模式等方面都有相同的操作內容。
 - 避免將被動節點重新規劃為另一個工作負載的作用中節點。 如果節點無法處理這兩個工作負載，在實際容錯移轉狀況時會失去任何短期提升電腦使用量的機會。
  
- 下列白皮書提供在容錯移轉叢集中部署 Analysis Services 的深入指示和背景資訊︰[How to Cluster SQL Server Analysis Services](https://msdn.microsoft.com/library/dn736073.aspx) (如何將 SQL Server Analysis Services 叢集化)。 雖然本指引是針對 SQL Server 2012 所撰寫，但仍適用於較新版本的 Analysis Services。  
+ 下列白皮書提供在容錯移轉叢集中部署 Analysis Services 的深入指示和背景資訊︰ [How to Cluster SQL Server Analysis Services](https://msdn.microsoft.com/library/dn736073.aspx)(如何將 SQL Server Analysis Services 叢集化)。 雖然本指引是針對 SQL Server 2012 所撰寫，但仍適用於較新版本的 Analysis Services。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [同步處理 Analysis Services 資料庫](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md)   
- [Forcing NUMA affinity for Analysis Services Tabular Databases (對 Analysis Services 表格式資料庫強制執行 NUMA 相似性)](https://blogs.msdn.microsoft.com/sqlcat/2013/11/05/forcing-numa-node-affinity-for-analysis-services-tabular-databases/)   
- [An Analysis Services Case Study: Using Tabular Models in a Large-scale Commercial Solution (Analysis Services 案例研究：在大規模的商業方案中使用表格式模型)](https://msdn.microsoft.com/library/dn751533.aspx)  
+ [Analysis Services 表格式資料庫強制執行 NUMA 相似性](https://blogs.msdn.microsoft.com/sqlcat/2013/11/05/forcing-numa-node-affinity-for-analysis-services-tabular-databases/)   
+ [Analysis Services 案例研究： 在大規模商業解決方案中使用表格式模型](https://msdn.microsoft.com/library/dn751533.aspx)  
   
   

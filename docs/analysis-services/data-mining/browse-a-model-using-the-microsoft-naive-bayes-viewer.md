@@ -1,41 +1,46 @@
 ---
-title: "使用 Microsoft 貝氏機率分類檢視器瀏覽模型 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "辨識 [Analysis Services]"
-  - "貝氏機率分類模型 [Analysis Services]"
-  - "Bayesian 分類器"
-  - "採礦模型內容, 檢視"
-  - "預測模型 [Analysis Services]"
-  - "貝氏機率分類檢視器 [Analysis Services]"
-  - "資料採礦 [Analysis Services], 預測模型"
-  - "Microsoft 貝氏機率分類檢視器"
-  - "長條圖 [Analysis Services]"
-  - "採礦模型 [Analysis Services], 預測模型"
-  - "相依性 [Analysis Services]"
+title: "瀏覽模型，使用 Microsoft 貝氏機率分類檢視器 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- discrimination [Analysis Services]
+- naive bayes model [Analysis Services]
+- Bayesian classifiers
+- mining model content, viewing
+- predictive modeling [Analysis Services]
+- Naive Bayes Viewer [Analysis Services]
+- data mining [Analysis Services], predictive modeling
+- Microsoft Naive Bayes Viewer
+- histograms [Analysis Services]
+- mining models [Analysis Services], predictive modeling
+- dependencies [Analysis Services]
 ms.assetid: 19743095-63c1-4486-8c1d-2efc143243be
 caps.latest.revision: 39
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ec5fa6be2358366b181b0608025d3d3a4b94a321
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 使用 Microsoft 貝氏機率分類檢視器瀏覽模型
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 貝氏機率分類檢視器會顯示以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 貝氏機率分類演算法建立的採礦模型。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 貝氏機率分類演算法是可高度適應預測模型工作的分類演算法。 如需有關這個演算法的詳細資訊，請參閱＜ [Microsoft Naive Bayes Algorithm](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)＞。  
+# <a name="browse-a-model-using-the-microsoft-naive-bayes-viewer"></a>使用 Microsoft 貝氏機率分類檢視器瀏覽模型
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 貝氏機率分類檢視器會顯示以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 貝氏機率分類演算法建立的採礦模型。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 貝氏機率分類演算法是可高度適應預測模型工作的分類演算法。 如需有關這個演算法的詳細資訊，請參閱＜ [Microsoft Naive Bayes Algorithm](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)＞。  
   
  由於貝氏機率分類模型的主要用途之一是要提供一個方式來快速瀏覽資料集內的資料，因此 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 貝氏機率分類檢視器會提供數個方法，來顯示可預測屬性和輸入屬性之間的互動。  
   
 > [!NOTE]  
->  如果您要檢視有關此模型中所用的方程式及所探索之模式的詳細資訊，可以切換至 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 一般內容樹狀檢視器。 如需詳細資訊，請參閱[使用 Microsoft 一般內容樹狀檢視器瀏覽模型](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)或 [Microsoft 一般內容樹狀檢視器 &#40;資料採礦&#41;](../Topic/Microsoft%20Generic%20Content%20Tree%20Viewer%20\(Data%20Mining\).md)。  
+>  如果您要檢視有關此模型中所用的方程式及所探索之模式的詳細資訊，可以切換至 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 一般內容樹狀檢視器。 如需詳細資訊，請參閱[使用 Microsoft 一般內容樹狀檢視器瀏覽模型](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)或 [Microsoft 一般內容樹狀檢視器 &#40;資料採礦&#41;](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c)。  
   
 ##  <a name="BKMK_ViewerTabs"></a> 檢視器索引標籤  
  在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中瀏覽採礦模型時，該模型會在適合它的檢視器中，顯示於資料採礦設計師的 **[採礦模型檢視器]** 索引標籤上。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 貝氏機率分類檢視器會提供用來瀏覽資料的下列索引標籤：  
@@ -74,22 +79,22 @@ caps.handback.revision: 39
 ##  <a name="BKMK_Discrimination"></a> 屬性辨識  
  若要使用 **[屬性辨識]** 索引標籤，請從 **[屬性]**、 **[值 1]**和 **[值 2]** 清單中選取可預測屬性和它的兩個狀態。 接著， **[屬性辨識]** 索引標籤上的方格會在資料行中顯示下列資訊：  
   
- **Attribute**  
+ **[屬性]**  
  列出資料集內的其他屬性，這些屬性包含一個非常喜好可預測屬性之其中一個狀態的狀態。  
   
  **值**  
  在 [屬性] 資料行中顯示屬性的值。  
   
- **喜好 \<值 1>**  
+ **喜好\<1 值 >**  
  顯示一個彩色列，它會指出屬性值喜好 [值 1] 中顯示之可預測屬性值的強烈程度。  
   
- **喜好 \<值 2>**  
+ **喜好\<值 2 >**  
  顯示一個彩色列，它會指出屬性值喜好 [值 2] 中顯示之可預測屬性值的強烈程度。  
   
  [回到頁首](#BKMK_ViewerTabs)  
   
-## 請參閱＜  
- [Microsoft 貝氏機率分類演算法](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)   
+## <a name="see-also"></a>請參閱＜  
+ [Microsoft Naive Bayes Algorithm](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)   
  [採礦模型檢視器工作和使用說明](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [資料採礦工具。](../../analysis-services/data-mining/data-mining-tools.md)   
  [資料採礦模型檢視器](../../analysis-services/data-mining/data-mining-model-viewers.md)  

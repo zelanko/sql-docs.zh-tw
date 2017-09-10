@@ -1,29 +1,34 @@
 ---
-title: "Power Pivot BI 語意模型連接 (.bism) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Power Pivot BI 語意模型連接 (.bism) |Microsoft 文件"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 08828eec-4f8c-4f34-a145-e442f7b7031d
 caps.latest.revision: 37
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 37
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 41cfa6b2ca110803ca4b63abf683edf7d508c027
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# Power Pivot BI 語意模型連接 (.bism)
+# <a name="power-pivot-bi-semantic-model-connection-bism"></a>Power Pivot BI 語意模型連接 (.bism)
   BI 語意模型連接 (.bism) 是可攜式連接，可將 Excel 或 Power View 報表連接到 Analysis Services 表格式模型資料庫或多維度模式下的 Analysis Services 執行個體。 如果您熟悉 Office 資料連接 (.odc) 檔案，您會注意到定義和使用 .bism 連接檔案之方式的相似性。  
   
  BI 語意模型連接是透過 SharePoint 來建立和存取。 建立 BI 語意模型連接會針對程式庫中的 BI 語意模型連接啟用命令。 快速啟動命令會開啟新的 Excel 活頁簿或是編輯連接檔案的選項。 如果已安裝 Reporting Services，您也會看到用來建立 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 報表的命令。  
   
- ![BISM 快速啟動命令的螢幕擷取畫面](../../analysis-services/power-pivot-sharepoint/media/ssas-bism-quicklaunch.gif "BISM 快速啟動命令的螢幕擷取畫面")  
+ ![螢幕擷取畫面的 BISM 快速啟動命令](../../analysis-services/power-pivot-sharepoint/media/ssas-bism-quicklaunch.gif "螢幕擷取畫面的 BISM 快速啟動命令")  
   
 ##  <a name="bkmk_prereq"></a> 支援的資料庫  
  BI 語意模型連接指向表格式模型資料庫。 這個資料有三個來源：  
@@ -34,12 +39,12 @@ caps.handback.revision: 37
   
 -   Analysis Services 執行個體上的多維度資料模型。  
   
- 如需資料來源的比較，請參閱社群內容：[Understanding the SQL Server 2012 BI Semantic Model (BISM)](http://www.mssqltips.com/sqlservertip/2818/understanding-the-sql-server-2012-bi-semantic-model-bism/) (了解 SQL Server 2012 BI 語意模型 (BISM)。  
+ 如需資料來源的比較，請參閱社群內容： [Understanding the SQL Server 2012 BI Semantic Model (BISM)](http://www.mssqltips.com/sqlservertip/2818/understanding-the-sql-server-2012-bi-semantic-model-bism/)(了解 SQL Server 2012 BI 語意模型 (BISM)。  
   
-## 了解 BI 語意連接的連接順序  
+## <a name="understanding-the-connection-sequence-for-bi-semantic-connections"></a>了解 BI 語意連接的連接順序  
  本節說明各種用戶端應用程式 (例如 Excel 桌面應用程式或 SharePoint 上的 Power View 報表用戶端) 和 SharePoint 伺服器陣列內部或外部表格式模型資料庫之間的連接行為。  
   
- 表格式模型資料庫的所有連接都是使用要求資料之使用者的認證來建立。 不過，根據連接是伺服器陣列內部連接、單躍點或雙躍點連接，以及 Kerberos 是否啟用，連接機制將會有所不同。 如需 SharePoint 與後端資料來源之間驗證連接的詳細資訊，請參閱[雙躍點驗證：NTLM 失敗與 Kerberos 成功的原因](http://go.microsoft.com/fwlink/?LinkId=237137)。  
+ 表格式模型資料庫的所有連接都是使用要求資料之使用者的認證來建立。 不過，根據連接是伺服器陣列內部連接、單躍點或雙躍點連接，以及 Kerberos 是否啟用，連接機制將會有所不同。 如需 SharePoint 與後端資料來源之間驗證連接的詳細資訊，請參閱 [雙躍點驗證：NTLM 失敗與 Kerberos 成功的原因](http://go.microsoft.com/fwlink/?LinkId=237137)。  
   
  **從 Excel 連接到網路上的表格式資料**  
   
@@ -61,7 +66,7 @@ caps.handback.revision: 37
   
  下圖顯示每個連接都使用相同 Windows 使用者識別的連接順序。 最後一個 Analysis Services 連接上，連接是透過 Reporting Services 服務應用程式識別，使用 **effectiveusername**傳遞 Windows 使用者識別來建立。  
   
- ![與表格式資料庫之間的模擬連接](../../analysis-services/power-pivot-sharepoint/media/ssas-powerpivotbismconnection-2.gif "與表格式資料庫之間的模擬連接")  
+ ![表格式資料庫之間的模擬連接](../../analysis-services/power-pivot-sharepoint/media/ssas-powerpivotbismconnection-2.gif "表格式資料庫之間的模擬連接")  
   
  **從 Power View 連接到 SharePoint 中的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料**  
   
@@ -70,15 +75,15 @@ caps.handback.revision: 37
  在這種情況下，所有連接都是在相同伺服器陣列中發生，因此不需要 Kerberos 或受條件約束的委派。  
   
 ##  <a name="bkmk_rel"></a> 相關工作  
- [將 BI 語意模型連接內容類型加入至文件庫 &#40;Power Pivot for SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/add bi semantic model connection content type to library.md)  
+ [將 BI 語意模型連接內容類型加入至文件庫 &#40;Power Pivot for SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/add-bi-semantic-model-connection-content-type-to-library.md)  
   
  [建立與 Power Pivot 活頁簿的 BI 語意模型連接](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md)  
   
- [建立與表格式模型資料庫的 BI 語意模型連接](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)  
+ [Create a BI Semantic Model Connection to a Tabular Model Database](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)  
   
  [在 Excel 或 Reporting Services 使用 BI 語意模型連接](../../analysis-services/power-pivot-sharepoint/use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [判斷 Analysis Services 執行個體的伺服器模式](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)   
  [連接到 Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)  
   

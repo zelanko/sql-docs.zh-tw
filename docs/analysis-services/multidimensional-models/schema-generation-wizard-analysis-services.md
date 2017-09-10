@@ -1,26 +1,31 @@
 ---
-title: "結構描述產生精靈 (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "關聯式結構描述 [Analysis Services]"
+title: "結構描述產生精靈 (Analysis Services) |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- relational schema [Analysis Services]
 ms.assetid: 68bf7ba3-d0cb-437f-9a3e-9edc0999af19
 caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 16
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 789106378805f50a4a27dbb02ace2e8e0943daed
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 結構描述產生精靈 (Analysis Services)
+# <a name="schema-generation-wizard-analysis-services"></a>結構描述產生精靈 (Analysis Services)
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 支援在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案或資料庫內定義 OLAP 物件時，使用關聯式結構描述的兩個方法。 一般來說，您會根據 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案或資料庫內資料來源檢視中所建構的邏輯資料模型來定義 OLAP 物件。 這個資料來源檢視是根據一個或多個關聯式資料來源中的結構描述元素所定義，如資料來源檢視中所自訂的方式一樣。  
   
  或者，您可以先定義 OLAP 物件，再產生支援這些 OLAP 物件的資料來源檢視、資料來源及基礎關聯式資料庫結構描述。 此關聯式資料庫稱為主題領域資料庫。  
@@ -35,7 +40,7 @@ caps.handback.revision: 16
   
  一般規則是結構描述產生精靈重新產生物件時，會覆寫您對結構描述產生精靈原來產生之物件所做的任何變更。 這個規則的主要例外狀況，是您將資料行加入至結構描述產生精靈所產生的資料表時。 在此情況下，[結構描述產生精靈] 會保留您加入至資料表的資料行，以及這些資料行裡的資料。  
   
-## 本節內容  
+## <a name="in-this-section"></a>本節內容  
  下表列出說明如何使用 [結構描述產生精靈] 的其他主題。  
   
 |主題|說明|  
@@ -44,7 +49,7 @@ caps.handback.revision: 16
 |[了解資料庫結構描述](../../analysis-services/multidimensional-models/understanding-the-database-schemas.md)|描述針對主題領域和臨時區域資料庫產生的結構描述。|  
 |[了解累加式產生](../../analysis-services/multidimensional-models/understanding-incremental-generation.md)|描述結構描述產生精靈的累加產生能力。|  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [多維度模型中的資料來源檢視](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
  [多維度模型中的資料來源](../../analysis-services/multidimensional-models/data-sources-in-multidimensional-models.md)   
  [支援的資料來源 &#40;SSAS - 多維度&#41;](../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)  

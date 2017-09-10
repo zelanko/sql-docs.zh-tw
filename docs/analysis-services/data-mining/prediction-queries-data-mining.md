@@ -1,23 +1,28 @@
 ---
-title: "預測查詢 (資料採礦) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "預測查詢 （資料採礦） |Microsoft 文件"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e5e6686c-1360-480e-8c0d-8a56204fbed9
 caps.latest.revision: 14
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 55dd3cf7af1721a958ebebb70d864a1fd0b873c6
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 預測查詢 (資料採礦)
+# <a name="prediction-queries-data-mining"></a>預測查詢 (資料採礦)
   典型資料採礦專案的目標是要使用採礦模型來進行預測。 例如，您可以預測特定伺服器叢集的預期停機時間，或產生分數以指出特定客戶是否可能回應廣告宣傳活動。 若要執行所有這些作業，您需要建立預測查詢。  
   
  就功能而言，SQL Server 中支援不同類型的預測查詢 (視查詢的輸入類型而定)：  
@@ -82,9 +87,9 @@ caps.handback.revision: 14
  當您成功對應所有相關的資料行之後，您會執行查詢，而且 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會根據模型內的模式來針對新資料中的每一個資料列做出預測。 您可以將結果儲存回資料來源檢視中包含外部資料的新資料表，或者可以複製和貼上資料 (如果您使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)])。  
   
 > [!WARNING]  
->  如果您使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的設計工具，則必須先將外部資料來源定義為資料來源檢視。  
+>  如果您使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的設計工具，則必須先將外部資料來源定義為資料來源檢視。  
   
- 如果是使用 DMX 來建立預測聯結，則可使用 OPENQUERY、OPENROWSET 或 SHAPE 命令來指定外部資料來源。 DMX 範本中的預設資料存取方法是 OPENQUERY。 如需這些方法的相關資訊，請參閱 [&#60;來源資料查詢&#62;](../Topic/%3Csource%20data%20query%3E.md)。  
+ 如果是使用 DMX 來建立預測聯結，則可使用 OPENQUERY、OPENROWSET 或 SHAPE 命令來指定外部資料來源。 DMX 範本中的預設資料存取方法是 OPENQUERY。 如需這些方法的相關資訊，請參閱 [&#60;來源資料查詢&#62;](../../dmx/source-data-query.md)。  
   
 ###  <a name="bkmk_TSQuery"></a> 時間序列採礦模型中的預測  
  時間序列模型與其他模型類型不同；您可以使用此模型的原貌來建立預測，或者可以提供新資料給模型，根據最近的趨勢更新模型和建立預測。 如果您加入新的資料，您可以指定應該使用新資料的方式。  
@@ -104,7 +109,7 @@ caps.handback.revision: 14
 ##  <a name="bkmk_WorkResults"></a> 使用預測查詢的結果  
  根據建立查詢的方式，用於儲存資料採礦預測查詢結果的選項也不相同。  
   
--   當您在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中使用預測查詢產生器建立查詢時，可以將預測查詢的結果儲存至現有的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料來源。 如需詳細資訊，請參閱[檢視及儲存預測查詢的結果](../../analysis-services/data-mining/view-and-save-the-results-of-a-prediction-query.md)。  
+-   當您在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中使用預測查詢產生器建立查詢時，可以將預測查詢的結果儲存至現有的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料來源。 如需詳細資訊，請參閱 [檢視及儲存預測查詢的結果](../../analysis-services/data-mining/view-and-save-the-results-of-a-prediction-query.md)。  
   
 -   當您在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的 [查詢] 窗格中使用 DMX 建立預測查詢時，可以使用查詢輸出選項將結果儲存至檔案，或儲存至 [查詢結果] 窗格中做為文字或方格。 如需詳細資訊，請參閱[查詢與文字編輯器 &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)。  
   
@@ -147,7 +152,7 @@ FROM
   
  如果提供者無法處理階層式資料列集，則您可以在預測查詢中使用 FLATTEN 關鍵字將結果扁平化。 如需包括扁平化資料列集範例的詳細資訊，請參閱 [SELECT &#40;DMX&#41;](../../dmx/select-dmx.md)。  
   
-## 請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [內容查詢 &#40;資料採礦&#41;](../../analysis-services/data-mining/content-queries-data-mining.md)   
  [資料定義查詢 &#40;資料採礦&#41;](../../analysis-services/data-mining/data-definition-queries-data-mining.md)  
   

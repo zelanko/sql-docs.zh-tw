@@ -1,39 +1,44 @@
 ---
-title: "收益圖 (Analysis Services - 資料採礦) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "精確度, 圖表"
-  - "營收, 估計"
-  - "效益, 估計"
-  - "圖表 [Analysis Services]"
-  - "收益圖 [Analysis Services]"
+title: "收益圖 (Analysis Services-資料採礦) |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- accuracy, charting
+- revenue, estimating
+- benefits, estimating
+- charts [Analysis Services]
+- profit charts [Analysis Services]
 ms.assetid: 760ee051-6fd8-48e3-8d2e-82db3ab45e45
 caps.latest.revision: 23
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1d2916b5895028aebea5b05f28a09ad7432e509f
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 收益圖 (Analysis Services - 資料採礦)
+# <a name="profit-chart-analysis-services---data-mining"></a>收益圖 (Analysis Services - 資料採礦)
   收益圖會顯示與使用採礦模型有關聯的預估獲利率。 例如，假設您的模型是預測公司應該在某個商務案例中連絡哪些客戶。 在此情況下，您的收益圖就要加入與執行目標郵寄促銷活動的成本有關的資訊。 然後，您便能在完成的圖表中看到正確鎖定目標客戶相較於隨機連絡客戶的預估收益。  
   
-## 建置收益圖  
+## <a name="build-a-profit-chart"></a>建置收益圖  
  收益圖類似於增益圖。 您首先要建立增益圖，然後再加入成本和收益資訊。  
   
  若要建置收益圖，您必須已有現存的模型。  
   
  本範例使用的是目標郵寄決策樹模型。 此模型識別了可能購買自行車的客戶。 您可以套用 [收益圖] 來判斷能夠達到最高收益的目標客戶數。  
   
- 若您並沒有範例模型，則可使用[資料採礦基本教學課程](../Topic/Basic%20Data%20Mining%20Tutorial.md)予以建立。  
+ 若您並沒有範例模型，則可使用[資料採礦基本教學課程](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)予以建立。  
   
 1.  開啟採礦精確度圖表產生器。  
   
@@ -70,12 +75,12 @@ caps.handback.revision: 23
   
 8.  圖表隨即更新，以顯示收益曲線。  
   
-## 了解收益圖  
+## <a name="understanding-the-profit-chart"></a>了解收益圖  
  下圖顯示以這些參數為基礎的圖表。 圖表的 Y 軸代表收益，而 X 軸則代表目標郵寄促銷活動所連絡的客戶百分比。  
   
  如下所示，使用收益圖能讓您比較多個模型，只要這些模型都預測相同的離散屬性即可。  
   
- ![比較三個模型的收益圖](../../analysis-services/data-mining/media/dm14-profitchartupdated.gif "比較三個模型的收益圖")  
+ ![收益圖表比較三個模型](../../analysis-services/data-mining/media/dm14-profitchartupdated.gif "收益圖表比較三個模型")  
   
  請注意圖表中的灰色垂直線。 當您按一下並拖曳這條線時，工具提示便會顯示曲線底下於各點位置所包括的目標母體的百分比。  
   
@@ -83,21 +88,21 @@ caps.handback.revision: 23
   
  例如，若您使用此模型決定要將促銷文宣寄給哪些人，您可能就會根據預測機率而決定以母體的 25% 為目標。不過，圖表的收益曲線底下介於 40% 到 70% 之間的面積最大，表示就算整體百分比回應偏低，郵寄的人數愈多還是能夠獲得愈高的報酬。  
   
-## 儲存圖表  
+## <a name="saving-charts"></a>儲存圖表  
  當您建立精確度圖表或收益圖時，在伺服器上並不會建立任何物件。 但是，此時會對現有的模型執行查詢，再由檢視器轉譯結果。 如果您需要儲存結果，則必須將圖表或結果複製到 Excel 或其他檔案。  
   
-## 相關內容  
+## <a name="related-content"></a>相關內容  
  下列主題包含您可以如何建立及使用精確度圖表的詳細資訊。  
   
 |主題|連結|  
 |------------|-----------|  
-|提供如何為此目標郵寄模型建立增益圖的逐步解說。|[資料採礦基本教學課程](../Topic/Basic%20Data%20Mining%20Tutorial.md)<br /><br /> [使用增益圖測試精確度 &#40;基本資料採礦教學課程&#41;](../Topic/Testing%20Accuracy%20with%20Lift%20Charts%20\(Basic%20Data%20Mining%20Tutorial\).md)|  
+|提供如何為此目標郵寄模型建立增益圖的逐步解說。|[資料採礦基本教學課程](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)<br /><br /> [使用增益圖測試精確度 &#40;基本資料採礦教學課程&#41;](http://msdn.microsoft.com/library/822d414b-4a39-473f-80c3-53476e30655a)|  
 |說明相關的圖表類型。|[增益圖 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)<br /><br /> [分類矩陣 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)<br /><br /> [散佈圖 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/scatter-plot-analysis-services-data-mining.md)|  
 |描述採礦模型和採礦結構的交叉驗證。|[交叉驗證 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)|  
 |描述建立增益圖及其他精確度圖表的步驟。|[測試及驗證工作與操作方法 &#40;資料採礦&#41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)|  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [測試和驗證 &#40;資料採礦&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)   
- [使用增益圖測試精確度 &#40;基本資料採礦教學課程&#41;](../Topic/Testing%20Accuracy%20with%20Lift%20Charts%20\(Basic%20Data%20Mining%20Tutorial\).md)  
+ [使用增益圖測試精確度 &#40;基本資料採礦教學課程&#41;](http://msdn.microsoft.com/library/822d414b-4a39-473f-80c3-53476e30655a)  
   
   

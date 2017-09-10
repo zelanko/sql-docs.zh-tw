@@ -1,27 +1,32 @@
 ---
-title: "計算內容 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/13/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "計算內容 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/13/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: aec8aa98-b77d-4f8f-9684-2618b1d8e970
 caps.latest.revision: 5
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 5
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6101305123e48bf5194313c852f2a24e45e5847a
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 計算內容
+# <a name="calculation-context"></a>計算內容
   計算內容是 Cube 中評估運算式以及所有座標為明確已知或可衍生自運算式的已知子空間。  
   
-## 決定計算內容  
+## <a name="determining-the-calculation-context"></a>決定計算內容  
  每個集合、成員、Tuple 或數值函數都是在整個 MDX 運算式或陳述式的內容中執行。 傳遞引數 (例如 Tuple) 至函數時，只會明確提供 Cube 空間中的部分座標。 其他座標是根據目前的計算內容取得。  
   
  未指定之資料格座標和屬性成員的計算內容是依下列順序決定：  
@@ -39,7 +44,7 @@ caps.handback.revision: 5
   
 5.  每個座標軸上的 Cube 或 Subcube 資料格，刪除座標軸上的空 Tuple 並且套用 HAVING 子句。  
   
-6.  如需詳細資訊，請參閱[建立查詢中的 Cube 內容 &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/establishing-cube-context-in-a-query-mdx.md)。  
+6.  如需詳細資訊，請參閱 [建立查詢中的 Cube 內容 &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/establishing-cube-context-in-a-query-mdx.md)。  
   
  在下列查詢中，資料列軸的計算內容受到 WHERE 子句中指定之 Country 屬性成員和 Calendar Year 屬性成員限制。  
   
@@ -70,9 +75,9 @@ WHERE (Customer.Country.France,
 > [!IMPORTANT]  
 >  為了提高查詢效能，您應在解析程序中盡早刪除成員和 Tuple。 如此一來，最終一個成員集合上的複雜查詢階段計算便會在最少資料格上運作。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [建立查詢中的 Cube 內容 &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/establishing-cube-context-in-a-query-mdx.md)   
- [MDX 查詢基礎觀念 &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
+ [MDX 查詢基礎觀念 &#40;Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
  [MDX 的關鍵概念 &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)  
   
   

@@ -1,24 +1,29 @@
 ---
-title: "模擬 (SSAS 表格式) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "模擬 (SSAS 表格式) |Microsoft 文件"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: fcc79e96-182a-45e9-8ae2-aeb440e9bedd
 caps.latest.revision: 20
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 20
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1bb694fef39accedea28b1c53576a7ebb161cc51
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 模擬 (SSAS 表格式)
+# <a name="impersonation-ssas-tabular"></a>模擬 (SSAS 表格式)
   本主題讓表格式模型作者了解連接到資料來源匯入與處理 (重新整理) 資料時，Analysis Services 如何使用登入認證。  
   
  本文包含下列各節：  
@@ -34,7 +39,7 @@ caps.handback.revision: 20
 -   [設定模擬](#bkmk_conf_imp_info)  
   
 ##  <a name="bkmk_how_imper"></a> 優點  
- *「模擬」*(Impersonation) 是伺服器應用程式 (例如 Analysis Services) 假設用戶端應用程式身分識別的功能。 Analysis Services 會使用服務帳戶執行，不過，當伺服器建立與資料來源的連接時，它會使用模擬，以便執行用於資料匯入和處理的存取檢查。  
+ *「模擬」* (Impersonation) 是伺服器應用程式 (例如 Analysis Services) 假設用戶端應用程式身分識別的功能。 Analysis Services 會使用服務帳戶執行，不過，當伺服器建立與資料來源的連接時，它會使用模擬，以便執行用於資料匯入和處理的存取檢查。  
   
  用於模擬的認證與目前登入之使用者的認證不同。 製作模型時，已登入的使用者認證可用於特定的用戶端作業。  
   
@@ -68,12 +73,12 @@ caps.handback.revision: 20
   
 |選項|ImpersonationMode*|說明|  
 |------------|-------------------------|-----------------|  
-|**特定的 Windows 使用者名稱和密碼***\*|ImpersonateWindowsUserAccount|此選項會指定模型使用 Windows 使用者帳戶匯入或處理資料來源中的資料。 使用者帳戶的網域和名稱使用下列格式：**\<網域名稱>\\<使用者帳戶名稱\>**。 使用 [資料表匯入精靈] 建立新模型這是預設選項。|  
+|**特定的 Windows 使用者名稱和密碼***\*|ImpersonateWindowsUserAccount|此選項會指定模型使用 Windows 使用者帳戶匯入或處理資料來源中的資料。 網域和使用者帳戶的名稱使用下列格式：**\<網域名稱 >\\< 使用者帳戶名稱\>**。 使用 [資料表匯入精靈] 建立新模型這是預設選項。|  
 |**服務帳戶**|ImpersonateServiceAccount|此選項會指定模型使用與管理該模型之 Analysis Services 服務執行個體相關聯的安全性認證。|  
   
  *ImpersonationMode 會針對資料來源上的 [DataSourceImpersonationInfo 元素 &#40;ASSL&#41;](../../analysis-services/scripting/properties/datasourceimpersonationinfo-element-assl.md) 屬性指定值。  
   
- \*\*使用此選項時，如果工作空間資料庫已從記憶體中移除 (由於重新開機或 [工作空間保留] 屬性設為 [從記憶體卸載] 或 [從工作空間刪除])，而且如果在後續工作階段中關閉模型專案後，嘗試處理資料表資料，系統將提示您輸入每個資料來源的認證。 同樣地，如果部署的模型資料庫已從記憶體中移除，系統將提示您輸入每個資料來源的認證。  
+ \*\*當您使用此選項時，如果工作空間資料庫已從記憶體中，由於重新開機或**工作空間保留**屬性設定為**從記憶體中的卸載**或**刪除工作區**，模型專案，且已關閉，在後續的工作階段中，如果您嘗試處理資料表的資料，系統會提示您輸入每個資料來源的認證。 同樣地，如果部署的模型資料庫已從記憶體中移除，系統將提示您輸入每個資料來源的認證。  
   
 ##  <a name="bkmk_impers_sec"></a> Security  
  搭配模擬使用的認證是透過與管理工作空間資料庫或已部署模型之 Analysis Services 伺服器相關聯的 xVelocity 記憶體中分析引擎 (VertiPaq)™ 引擎，保存在記憶體中。  認證絕不會寫入到磁碟中。 如果工作空間資料庫在部署模型時不在記憶體中，系統將會提示使用者輸入用來連接資料來源並提取資料的認證。  
@@ -93,9 +98,9 @@ caps.handback.revision: 20
   
  針對部署到 Analysis Services 伺服器的模型，可以在 SSMS 的 [連接屬性] > [模擬資訊] 中設定模擬資訊。  
   
-## 請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [DirectQuery 模式 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)   
- [資料來源 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/data-sources-ssas-tabular.md)   
+ [資料來源 (SSAS 表格式)](../../analysis-services/tabular-models/data-sources-ssas-tabular.md)   
  [表格式模型方案部署 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
   
   
