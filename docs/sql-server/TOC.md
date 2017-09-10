@@ -14,17 +14,15 @@
 
 # 版本資訊
 
-## [Microsoft SQL Server](../release-notes/microsoft-sql-server.md)
-## [SQL Server 版本資訊](../release-notes/sql-server-release-notes.md)
+## [SQL Server 版本資訊](sql-server-release-notes.md)
 ## [SQL Server 2016 版本資訊](sql-server-2016-release-notes.md)
 ## [SQL Server 2017 版本資訊](sql-server-2017-release-notes.md)
-
-## [SQL Server 2014 Release Notes](../release-notes/sql-server-2014-release-notes.md)
-## [SQL Server 2012 版本資訊](../release-notes/sql-server-2012-release-notes.md)
-## [SQL Server 2012 SP1 Release Notes](../release-notes/sql-server-2012-sp1-release-notes.md)
-## [SQL Server 2012 SP2 Release Notes](../release-notes/sql-server-2012-sp2-release-notes.md)
-## [SQL Server 2012 SP3 版本資訊](../release-notes/sql-server-2012-sp3-release-notes.md)
-## [SQL Server 2008 R2 SP2 Release Notes](../release-notes/sql-server-2008-r2-sp2-release-notes.md)
+## [SQL Server 2014 Release Notes](sql-server-2014-release-notes.md)
+## [SQL Server 2012 SP3 版本資訊](sql-server-2012-sp3-release-notes.md)
+## [SQL Server 2012 SP2 Release Notes](sql-server-2012-sp2-release-notes.md)
+## [SQL Server 2012 SP1 Release Notes](sql-server-2012-sp1-release-notes.md)
+## [SQL Server 2012 版本資訊](sql-server-2012-release-notes.md)
+## [SQL Server 2008 R2 SP2 Release Notes](sql-server-2008-r2-sp2-release-notes.md)
 
 # [Analysis Services (英文)](../analysis-services/analysis-services.md)
 # [Database Engine](../database-engine/sql-server-database-engine-overview.md)
@@ -35,6 +33,7 @@
 # [Master Data Services](../master-data-services/master-data-services-overview-mds.md)
 # [Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)
 # [SQL Server 移轉小幫手](../ssma/sql-server-migration-assistant.md)
+# [Data Migration Assistant](../dma/dma-overview.md)
 # [Stretch Database](../sql-server/stretch-database/stretch-database.md)
 # [適用於 SQL Server 的教學課程](tutorials-for-sql-server-2016.md)
-# [使用 Help Viewer 的本機內容](../release-notes/sql-server-help-installation.md)
+# [使用 Help Viewer 的本機內容](sql-server-help-installation.md)

@@ -633,7 +633,7 @@
                 - name: 發行
                   href: /sql/relational-databases/replication/publish/
                   homepage: /sql/relational-databases/replication/publish/publish-data-and-database-objects
-                - name: Security
+                - name: 安全性
                   href: /sql/relational-databases/replication/security/
                   homepage: /sql/relational-databases/replication/security/security-overview-replication
                 - name: 異動
@@ -825,7 +825,7 @@
                     - name: 交易
                       href: /sql/relational-databases/clr-integration-data-access-transactions/
                       homepage: /sql/relational-databases/clr-integration-data-access-transactions/clr-integration-and-transactions
-                - name: Security
+                - name: 安全性
                   href: /sql/relational-databases/clr-integration/security/
                   homepage: /sql/relational-databases/clr-integration/security/clr-integration-code-access-security
                   items:
@@ -1007,9 +1007,6 @@
                         - name: 安全性
                           href: /sql/relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/
                           homepage: /sql/relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/sqlxml-4-0-security-considerations
-        - name: SQL Server 版本資訊
-          href: /sql/release-notes/
-          homepage: /sql/release-notes/sql-server-release-notes
         - name: DMX
           href: /sql/dmx/
           homepage: /sql/dmx/data-mining-extensions-dmx-reference
