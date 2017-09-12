@@ -103,7 +103,7 @@ ms.lasthandoff: 08/02/2017
  **若要設定可用性複本的存取**  
   
 > [!NOTE]  
->  如需這個程序的範例，請參閱本節稍後的 [範例 &amp;#40;Transact-SQL&amp;#41;](#TsqlExample)。  
+>  如需這個程序的範例，請參閱本節稍後的 [範例 &#40;Transact-SQL&#41;](#TsqlExample)。  
   
 1.  連接到裝載主要複本的伺服器執行個體。  
   
@@ -136,7 +136,7 @@ ms.lasthandoff: 08/02/2017
      ALL  
      主要複本的資料庫允許所有連接。 這是預設值。  
   
-###  <a name="TsqlExample"></a> 範例 &amp;#40;Transact-SQL&amp;#41;  
+###  <a name="TsqlExample"></a> 範例 &#40;Transact-SQL&#41;  
  下列範例會將次要複本加入名為 *AG2*的可用性群組。 接著指定一個獨立伺服器執行個體 *COMPUTER03\HADR_INSTANCE*，以裝載新的可用性複本。 將此複本設定為只允許主要角色的讀寫連接以及只允許次要角色的讀取意圖連接。  
   
 ```  
