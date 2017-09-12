@@ -78,7 +78,7 @@ ms.lasthandoff: 07/31/2017
 -   若要變更目前的檔案大小 (單位為 KB、MB、GB 和 TB)，請使用 SIZE 選項。  
   -   若要變更成長的增量，請使用 FILEGROWTH 選項。 0 的值表示將自動成長設為關閉，而且不允許任何其他空間。 記錄檔的少量自動成長增量可能會降低效能。 記錄檔的檔案成長量應夠大，才不用經常進行擴充。 通常適當的預設成長量為 10%。  
 
-如需對記錄檔變更檔案成長屬性的相關資訊，請參閱 [ALTER DATABASE &amp;#40;Transact-SQL&amp;#41;](https://msdn.microsoft.com/library/ms174269.aspx)。  
+如需對記錄檔變更檔案成長屬性的相關資訊，請參閱 [ALTER DATABASE &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/ms174269.aspx)。  
   
 -   若要控制記錄檔大小的最大值 (單位為 KB、MB、GB 和 TB) 或是將成長設定為 UNLIMITED，請使用 MAXSIZE 選項。  
   
