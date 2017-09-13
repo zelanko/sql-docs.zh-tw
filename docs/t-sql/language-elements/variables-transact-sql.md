@@ -1,7 +1,7 @@
 ---
 title: "變數 (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 09/12/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -24,7 +24,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="variables-transact-sql"></a>變數 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 TRANSACT-SQL 本機變數是可保存特定類型的單一資料值的物件。 批次和指令碼中的變數通常的用途為： 
 
@@ -39,8 +39,9 @@ TRANSACT-SQL 本機變數是可保存特定類型的單一資料值的物件。 
 
 * 藉由控制迴圈執行次數，來控制插入的資料列數。
 * 提供插入整數資料行的數值。
-* 當作運算式的一部份，用來產生插入字元資料行的文字。
-```
+* 當作運算式的一部份，用來產生插入字元資料行的文字。  
+
+```sql
 -- Create the table.
 CREATE TABLE TestTable (cola int, colb char(3));
 GO
@@ -87,19 +88,19 @@ DECLARE 陳述式會初始化 TRANSACT-SQL 變數：
 * 指派系統提供或使用者自訂的資料類型和長度。 若是數值變數，也會指派有效位數和小數位數。 若是 XML 類型的變數，可能會指派選擇性結構描述集合。
 * 設定值為 NULL。
 
-例如，下列**DECLARE**陳述式會建立名為區域變數 **@mycounter**  int 資料類型。
-```
+例如，下列**DECLARE**陳述式會建立名為區域變數 **@mycounter**  int 資料類型。  
+```sql
 DECLARE @MyCounter int;
 ```
 若要宣告一個以上的本機變數，請在第一個定義的本機變數後加上逗號，再指定下一個本機變數名稱與資料類型。
 
-例如，下列**DECLARE**陳述式會建立三個本機變數，名為 **@LastName** ，  **@FirstName** 和 **@StateProvince** ，均初始化為 NULL:
-```
+例如，下列**DECLARE**陳述式會建立三個本機變數，名為 **@LastName** ，  **@FirstName** 和 **@StateProvince** ，均初始化為 NULL:  
+```sql
 DECLARE @LastName nvarchar(30), @FirstName nvarchar(20), @StateProvince nchar(2);
 ```
 
-變數的範圍是可以參考變數的範圍的 TRANSACT-SQL 陳述式。 變數範圍會維持在宣告點上，直到宣告批次或預存程序的結尾為止。 例如，下列指令碼會產生語法錯誤，因為變數是在某個批次中宣告並在其他批次中參考：
-```
+變數的範圍是可以參考變數的範圍的 TRANSACT-SQL 陳述式。 變數範圍會維持在宣告點上，直到宣告批次或預存程序的結尾為止。 例如，下列指令碼會產生語法錯誤，因為變數是在某個批次中宣告並在其他批次中參考：  
+```sql
 USE AdventureWorks2014;
 GO
 DECLARE @MyVariable int;
@@ -115,9 +116,9 @@ FROM HumanResources.Employee
 WHERE BusinessEntityID = @MyVariable;
 ```
 
-變數具有區域範圍並且只能在定義變數的批次或程序中看到。 在下列範例中，為執行 sp_executesql 所建立的巢狀範圍沒有在較高範圍中宣告變數的存取權，並會傳回錯誤。
+變數具有區域範圍並且只能在定義變數的批次或程序中看到。 在下列範例中，為執行 sp_executesql 所建立的巢狀範圍沒有在較高範圍中宣告變數的存取權，並會傳回錯誤。  
 
-```
+```sql
 DECLARE @MyVariable int;
 SET @MyVariable = 1;
 EXECUTE sp_executesql N'SELECT @MyVariable'; -- this produces an error
@@ -127,9 +128,9 @@ EXECUTE sp_executesql N'SELECT @MyVariable'; -- this produces an error
 
 首次宣告變數時，其值會設為 NULL。 若要指派值給變數，請使用 SET 陳述式。 這是將值指派給變數所慣用的方法。 您也可以參考 SELECT 陳述式的選取清單，將值指派給變數。
 
-若要使用 SET 陳述式指派值給變數，請加入變數名稱和值以指派給變數。 這是將值指派給變數所慣用的方法。 例如，下列批次會宣告兩個變數、指派值給變數，然後在 `WHERE` 陳述式的 `SELECT` 子句中使用這些變數：
+若要使用 SET 陳述式指派值給變數，請加入變數名稱和值以指派給變數。 這是將值指派給變數所慣用的方法。 例如，下列批次會宣告兩個變數、指派值給變數，然後在 `WHERE` 陳述式的 `SELECT` 子句中使用這些變數：  
 
-```
+```sql
 USE AdventureWorks2014;
 GO
 -- Declare two variables.
@@ -148,9 +149,9 @@ WHERE FirstName = @FirstNameVariable
 GO
 ```
 
-您也可以建立參考變數的選取清單，將值指派給變數。 如果變數參考至選取清單，應該指派變數的純量值 (Scalar)，不然 SELECT 陳述式僅傳回一個資料列。 例如：
+您也可以建立參考變數的選取清單，將值指派給變數。 如果變數參考至選取清單，應該指派變數的純量值 (Scalar)，不然 SELECT 陳述式僅傳回一個資料列。 例如：  
 
-```
+```sql
 USE AdventureWorks2014;
 GO
 DECLARE @EmpIDVariable int;
@@ -163,9 +164,9 @@ GO
 > [!WARNING]
 > 如果在單一 SELECT 陳述式中有多個指派子句，SQL Server 則無法保證運算式評估的次序。 請注意，只有當指派中有一些參考時，才能看到產生的效果。
 
-如果 SELECT 陳述式傳回多個資料列，且變數參考非純量運算式，此變數會設為結果集的最後一個資料列中的運算式的傳回值。 例如，在下列批次 **@EmpIDVariable** 設**BusinessEntityID**傳回最後一個資料列的值，也就是 1:
+如果 SELECT 陳述式傳回多個資料列，且變數參考非純量運算式，此變數會設為結果集的最後一個資料列中的運算式的傳回值。 例如，在下列批次 **@EmpIDVariable** 設**BusinessEntityID**傳回最後一個資料列的值，也就是 1:  
 
-```
+```sql
 USE AdventureWorks2014;
 GO
 DECLARE @EmpIDVariable int;
@@ -186,3 +187,4 @@ GO
  [選取@local_variable](../../t-sql/language-elements/select-local-variable-transact-sql.md)  
   
   
+
