@@ -37,7 +37,7 @@ ms.lasthandoff: 08/28/2017
 
    ![連線至伺服器](../media/connect-to-server/connect.png)
 
-1. 若您連線至 Azure SQL Server，系統可能會提示您登入以建立防火牆規則。 按一下 [登入...] (如果沒有，請跳至步驟 6)
+1. 若您連線至 Azure SQL Server，系統可能會提示您登入以建立防火牆規則。 按一下 [登入...]\(如果沒有，請跳至步驟 6)
 
    ![防火牆](../media/connect-to-server/firewall-rule-sign-in.png)
 
