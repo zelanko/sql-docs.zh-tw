@@ -66,12 +66,12 @@ ms.lasthandoff: 08/02/2017
   
 -   **強制加密**  
   
-     可能的值是 **[開啟]** 和 **[關閉]**。 若要使用通道繫結，[ **強制加密** ] 必須設定為 [ **開啟**]，而所有用戶端將會強制加密。 如果設定為 **[關閉]**，則只會保證服務繫結。 **[強制加密]** 位於 **組態管理員的** [MSSQLSERVER 的通訊協定屬性] ([旗標] 索引標籤) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上。  
+     可能的值是 **[開啟]** 和 **[關閉]**。 若要使用通道繫結，[ **強制加密** ] 必須設定為 [ **開啟**]，而所有用戶端將會強制加密。 如果設定為 **[關閉]**，則只會保證服務繫結。 **[強制加密]** 位於 **組態管理員的** [MSSQLSERVER 的通訊協定屬性]\([旗標] 索引標籤) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上。  
   
 -   **擴充保護**  
   
      可能的值是 **[關閉]**、 **[允許]**和 **[必要]**。 
-              **[擴充保護]** 變數可讓使用者設定每個 **執行個體的** 擴充保護層級 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 **[擴充保護]** 位於 **組態管理員的** [MSSQLSERVER 的通訊協定屬性] ([進階] 索引標籤) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上。  
+              **[擴充保護]** 變數可讓使用者設定每個 **執行個體的** 擴充保護層級 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 **[擴充保護]** 位於 **組態管理員的** [MSSQLSERVER 的通訊協定屬性]\([進階] 索引標籤) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上。  
   
     -   當設定為 **[關閉]**時，便會停用 **[擴充保護]** 。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體將會接受來自任何用戶端的連接，不論用戶端是否受到保護。 **[關閉]** 與舊版及未修補的作業系統相容，但是比較不安全。 當您知道用戶端作業系統不支援擴充保護時，請使用這個設定。  
   
@@ -81,7 +81,7 @@ ms.lasthandoff: 08/02/2017
   
 -   **接受的 NTLM SPN**  
   
-     當一個以上的 SPN 知道伺服器時，便需要 **[接受的 NTLM SPN]** 變數。 當用戶端嘗試使用伺服器不知道的有效 SPN 連接到伺服器時，服務繫結將會失敗。 若要避免這個問題，使用者可以使用 **[接受的 NTLM SPN]**來指定代表伺服器的數個 SPN。 **[接受的 NTLM SPN]** 是以分號分隔的一系列 SPN。 例如，若要允許 SPN **MSSQLSvc/ HostName1.Contoso.com** 和 **MSSQLSvc/ HostName2.Contoso.com**，請在 **[接受的 NTLM SPN]** 方塊中輸入 **MSSQLSvc/HostName1.Contoso.com;MSSQLSvc/HostName2.Contoso.com** 。 此變數的最大長度為 2,048 個字元。 **[接受的 NTLM SPN]** 位於 **組態管理員的** [MSSQLSERVER 的通訊協定屬性] ([進階] 索引標籤) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上。  
+     當一個以上的 SPN 知道伺服器時，便需要 **[接受的 NTLM SPN]** 變數。 當用戶端嘗試使用伺服器不知道的有效 SPN 連接到伺服器時，服務繫結將會失敗。 若要避免這個問題，使用者可以使用 **[接受的 NTLM SPN]**來指定代表伺服器的數個 SPN。 **[接受的 NTLM SPN]** 是以分號分隔的一系列 SPN。 例如，若要允許 SPN **MSSQLSvc/ HostName1.Contoso.com** 和 **MSSQLSvc/ HostName2.Contoso.com**，請在 **[接受的 NTLM SPN]** 方塊中輸入 **MSSQLSvc/HostName1.Contoso.com;MSSQLSvc/HostName2.Contoso.com** 。 此變數的最大長度為 2,048 個字元。 **[接受的 NTLM SPN]** 位於 **組態管理員的** [MSSQLSERVER 的通訊協定屬性]\([進階] 索引標籤) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上。  
   
 ## <a name="enabling-extended-protection-for-the-database-engine"></a>啟用 Database Engine 的擴充保護  
  若要使用 **[擴充保護]**，伺服器和用戶端都必須擁有支援 **[擴充保護]**的作業系統，而且必須在作業系統上啟用 **[擴充保護]** 。 如需有關如何針對作業系統啟用 **[擴充保護]** 的詳細資訊，請參閱 [驗證擴充保護](http://support.microsoft.com/kb/968389)。  
