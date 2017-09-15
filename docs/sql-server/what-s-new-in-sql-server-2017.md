@@ -1,7 +1,7 @@
 ---
 title: "SQL Server 2017 的新功能 | Microsoft Docs"
 ms.custom: 
-ms.date: 08/25/2017
+ms.date: 08/31/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: 8d10f9e80eb1cc0c2495042e03ff746a017f8e2a
+ms.sourcegitcommit: cd1366409f9fb0af271b26fad3b8b911f99acc06
+ms.openlocfilehash: 0e254f84039defcc4a1e56cd966e8607efc92503
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/08/2017
 
 ---
 # <a name="whats-new-in-sql-server-2017"></a>SQL Server 2017 的新功能
@@ -34,6 +34,7 @@ SQL Server 2017 包含許多新的 Database Engine 功能、增強功能和效�
 - **CLR 組件**現在可以新增至白名單，以解決 CTP 2.0 中所述的 `clr strict security` 問題。 新增了 [sp_add_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md)、[sp_drop_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md) 和 [sys.trusted_asssemblies](../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md) 以支援信任組件的白名單 (RC1)。  
 - **繼續線上索引重建**可從容錯移轉至複本或磁碟空間不足等失敗後的停止處繼續線上索引重建作業，或暫停並於稍後繼續線上索引重建作業。 請參閱 [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md) 和[線上索引作業的指導方針](../relational-databases/indexes/guidelines-for-online-index-operations.md)。 (CTP 2.0)
 - ALTER DATABASE SCOPED CONFIGURATION 的 **IDENTITY_CACHE** 選項可讓您在伺服器意外地重新啟動或容錯移轉至次要伺服器時，避免識別欄位的值出現間隙。 請參閱 [ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)。 (CTP 2.0)
+- 新一代的查詢處理功能改進會調整最佳化策略，使其符合您應用程式工作負載的執行階段條件。 為了這個第一版**自適性查詢處理**功能家族，我們推出了三項新的功能更新：**批次模式自適性聯結**、**批次模式記憶體授與回饋**，以及適用於多陳述式資料表值函式的**交錯執行**。  請參閱 [SQL 資料庫中的自適性查詢處理](../relational-databases/performance/adaptive-query-processing.md)。
 - **自動資料庫調整**可深入探索潛在的查詢效能問題、建議解決方法，而且可以自動修正找到的問題。 請參閱[自動調整](../relational-databases/automatic-tuning/automatic-tuning.md)。 (CTP 2.0)
 - 新增可模型化多對多關聯性的**圖表資料庫功能**，包括新增用於建立節點和邊緣資料表的 [CREATE TABLE](../t-sql/statements/create-table-sql-graph.md) 語法，以及用於查詢的關鍵字 [MATCH](../t-sql/queries/match-sql-graph.md)。 請參閱[圖形處理與 SQL Server 2017](../relational-databases/graphs/sql-graph-overview.md)。 (CTP 2.0)
 - 預設會啟用 sp_configure 選項 `clr strict security` 以增強 CLR 組件的安全性。 請參閱 [CLR 嚴格安全性](../database-engine/configure-windows/clr-strict-security.md)。 (CTP 2.0)
@@ -82,7 +83,7 @@ SQL Server Analysis Services 2017 為表格式模型引進許多增強功能。 
 - 以表格式模型作為 Analysis Services 的預設安裝選項。 (CTP 2.0)
 - 物件層級安全性，以保護表格式模型的中繼資料。 (CTP 2.0)
 - 日期關聯性，以輕鬆地根據日期欄位建立關聯性。 (CTP 2.0)
-- 新的 [取得資料] \(Power Query) 資料來源，以及 M 查詢的現有 DirectQuery 資料來源支援。 (CTP 2.0) 
+- 新的 [取得資料] (Power Query) 資料來源，以及 M 查詢的現有 DirectQuery 資料來源支援。 (CTP 2.0) 
 - SSDT 的 DAX 編輯器。 (CTP 2.0)
 - 編碼提示，這是一種進階功能，可針對大型記憶體內部表格式模型的資料重新整理進行最佳化。 (CTP 1.3)
 - 支援表格式模型的 **1400 相容性層級**。 若要建立新的或升級現有的表格式模型專案至 1400 相容性層級，請下載並安裝 [SQL Server Data Tools (SSDT) 17.0 RC2](https://go.microsoft.com/fwlink?LinkId=837939)。 (CTP 1.1)
@@ -112,14 +113,9 @@ SQL Server 開發人員現在能夠存取廣大的 Python ML 及 AI 程式庫，
 
 如需詳細資訊，請參閱 [SQL Server Machine Learning 服務的新功能](~/advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md)。
 
-##  <a name="infotipsql-servermediainfo-tippng-get-help"></a>![info_tip](../sql-server/media/info-tip.png) 取得說明 
-- [Stack Overflow (標記 sql-server) - 詢問 SQL 開發問題](http://stackoverflow.com/questions/tagged/sql-server)
-- [MSDN 論壇 - 詢問技術性問題](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)
-- [Microsoft Connect - 報告錯誤及要求功能](https://connect.microsoft.com/SQLServer/Feedback)
-- [Reddit - 有關 SQL Server 的一般討論](https://www.reddit.com/r/SQLServer/)
-- [Microsoft SQL Server 授權條款及資訊](https://www.microsoft.com/en-us/download/details.aspx?id=39299) 
-
 ## <a name="next-steps"></a>後續的步驟
 - 請參閱 [SQL Server 2017 版本資訊](sql-server-2017-release-notes.md)。
 - 了解 [Linux 上的 SQL Server 2017 新功能](https://docs.microsoft.com/sql/linux/sql-server-linux-whats-new)。
 - 了解 [SQL Server 2016 的新功能](what-s-new-in-sql-server-2016.md)。
+
+[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
