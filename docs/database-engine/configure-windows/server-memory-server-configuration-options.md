@@ -86,7 +86,7 @@ ms.lasthandoff: 08/02/2017
 3.  如果已選取 [網路應用程式的資料輸送量最大化]，請選擇其他任何選項，按一下 [確定]，然後關閉其餘的對話方塊。  
   
 ## <a name="lock-pages-in-memory"></a>鎖定記憶體分頁  
- 此 Windows 原則決定哪些帳戶可以使用處理序將資料保留在實體記憶體中，以防止系統將資料傳送到磁碟上的虛擬記憶體。 將記憶體分頁到磁碟時，鎖定記憶體分頁可能會讓伺服器保持回應狀態。 已將具有 sqlservr.exe 執行權限的帳戶授與 Windows [Locked Pages in Memory (已鎖定記憶體中的分頁)] (LPIM) 使用者權限時，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Standard Edition 及更新版本中，SQL Server [鎖定記憶體中的分頁] 選項會設定為 ON。  
+ 此 Windows 原則決定哪些帳戶可以使用處理序將資料保留在實體記憶體中，以防止系統將資料傳送到磁碟上的虛擬記憶體。 將記憶體分頁到磁碟時，鎖定記憶體分頁可能會讓伺服器保持回應狀態。 已將具有 sqlservr.exe 執行權限的帳戶授與 Windows [Locked Pages in Memory (已鎖定記憶體中的分頁)]\(LPIM) 使用者權限時，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Standard Edition 及更新版本中，SQL Server [鎖定記憶體中的分頁] 選項會設定為 ON。  
   
  若要停用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [鎖定記憶體中的分頁] 選項，請移除 SQL Server 啟動帳戶的 [Locked Pages in Memory (已鎖定記憶體中的分頁)] 使用者權限。  
   
