@@ -1,7 +1,7 @@
 ---
 title: "int、 bigint、 smallint 和 tinyint (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
-ms.date: 07/22/2017
+ms.date: 09/08/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -32,16 +32,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 07f5adc3d8ea7bb963b399cce22caa701021d6e9
+ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
+ms.openlocfilehash: 46ac51971b07b38b73ef18d8a953674fc77b4b17
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="int-bigint-smallint-and-tinyint-transact-sql"></a>int、bigint、smallint 和 tinyint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-使用整數資料的 Exact-number 資料類型。
+使用整數資料的 Exact-number 資料類型。 若要在資料庫中儲存空間，請使用可以可靠地包含所有可能值的最小資料類型。 比方說，tinyint 就足以說明人員時代，因為沒有人居住是 255 歲以上。 但 tinyint 不足夠建築物時代，由於一棟建築物可能超過 255 年。
   
 |資料類型|範圍|儲存空間|  
 |---|---|---|
@@ -62,7 +62,7 @@ ms.lasthandoff: 09/01/2017
 >   
 >  因此，查詢中類似的運算式，有時候也會產生不同的結果。 當查詢不是自動參數化時，常數值會先轉換為**數值**，其有效位數夠大正好足以容納常數的值，再轉換為指定的資料類型。 例如，常數值 1 會轉換成**numeric （1，0）**，250 的常數值會轉換為**數值 （3，0）**。  
 >   
->  自動參數化查詢時，常數值一律會轉換成**數值 （10，0）**再轉換為最終資料類型。 如果有用到 / 運算子，則不僅類似查詢的結果類型有效位數不同，結果值也可能不一樣。 例如，包含運算式的自動參數化查詢的結果值`SELECT CAST (1.0 / 7 AS float)`將您的與不是自動參數化，同一個查詢的結果值不同，因為自動參數化查詢的結果將會被截斷以配合到**數值 （10，0）**資料型別。  
+>  自動參數化查詢時，常數值一律會轉換成**數值 （10，0）**再轉換為最終資料類型。 如果有用到 / 運算子，則不僅類似查詢的結果類型有效位數不同，結果值也可能不一樣。 例如，包含運算式的自動參數化查詢的結果值`SELECT CAST (1.0 / 7 AS float)`，與不是自動參數化，同一個查詢的結果值不同，因為在自動參數化查詢的結果會截斷才能容納到**數值 （10，0）**資料型別。  
   
 ## <a name="converting-integer-data"></a>轉換整數資料
 當整數隱含地轉換成字元資料類型時，如果該整數太大而無法放入字元欄位中，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會輸入 ASCII 字元 42，也就是星號 (*)。

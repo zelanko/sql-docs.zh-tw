@@ -16,16 +16,16 @@ caps.latest.revision: 12
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 6e1d0305fff039aad4d387cbc63026f40db9f97e
-ms.openlocfilehash: 9d229fd4764da21612d1b1cf532f1beaf8116769
+ms.translationtype: MT
+ms.sourcegitcommit: 71ca2fac0a6b9f087f9d434c5a701f5656889b9e
+ms.openlocfilehash: 51c6e0a0baa59e49ae482db01253c1998894b5f8
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/13/2017
 
 ---
 # <a name="integrating-reporting-services-using-reportviewer-controls---get-started"></a>整合 Reporting Services 使用 ReportViewer 控制項-快速入門
 
-了解如何開發人員可以在 ASP.Net 網站和 Windows forms 應用程式，透過 Reporting Services 2016 ReportViewer 控制項內嵌分頁的報表。 您可以將控制項加入新的專案，或更新現有的專案。
+了解如何開發人員可以在 ASP.NET 網站和 Windows Forms 應用程式，透過 Reporting Services 2016 ReportViewer 控制項內嵌分頁的報表。 您可以將控制項加入新的專案，或更新現有的專案。
 
 ## <a name="adding-the-reportviewer-control-to-a-new-web-project"></a>將 ReportViewer 控制項加入至新的 web 專案
 
@@ -142,7 +142,7 @@ ms.lasthandoff: 08/09/2017
 <!DOCTYPE html>
 ```
 
-## <a name="adding-the-reportviewer-control-to-a-new-windows-forms-project"></a>將 ReportViewer 控制項加入至新的 Windows form 專案
+## <a name="adding-the-reportviewer-control-to-a-new-windows-forms-project"></a>將 ReportViewer 控制項加入至新的 Windows Form 專案
 
 1. 建立新**Windows Forms 應用程式**或開啟現有的專案。
 
@@ -281,6 +281,6 @@ ms.lasthandoff: 08/09/2017
 ## <a name="see-also"></a>另請參閱
 
 [2016 ReportingViewer 控制項中的資料收集](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls-data-collection.md)  
-更多問題嗎？ [再試一次 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多問題嗎？ [試試 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
 
 

@@ -1,7 +1,7 @@
 ---
 title: "IsNull (geometry 資料類型) |Microsoft 文件"
 ms.custom: 
-ms.date: 08/03/2017
+ms.date: 09/12/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -21,10 +21,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9136a2caf43fea8d5cccd90d8dba85d815511afe
+ms.sourcegitcommit: 15080827744c19120a8474f3142004c4af7a4064
+ms.openlocfilehash: 5e213bd847f2d5836802d93ade5fa46f3dc3d1a9
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/13/2017
 
 ---
 # <a name="isnull-geometry-data-type"></a>IsNull (geometry 資料類型)
@@ -35,7 +35,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 .IsNull  
 ```  
   
@@ -49,8 +48,7 @@ ms.lasthandoff: 09/01/2017
   
  這個方法主要是由 SQL Server 基礎結構所使用；不建議您使用 `IsNull` 來測試例項是否為 Null。  
   
-## <a name="examples"></a>範例  
-  
+
 ## <a name="see-also"></a>另請參閱  
  [幾何例項上擴充的方法](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
   

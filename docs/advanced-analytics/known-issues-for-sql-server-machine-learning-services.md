@@ -1,5 +1,5 @@
 ---
-title: "機器學習服務的已知問題 |Microsoft 文件"
+title: "機器學習服務中的已知問題 |Microsoft 文件"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 06/16/2017
@@ -16,100 +16,102 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b7b9d53a87490e83f888b47b1cff87191b9693a8
+ms.sourcegitcommit: 754242a86367b07b98caa9f70f457b70d0840075
+ms.openlocfilehash: d5d36a57d73bd0f37d9e8aee6a4d154fb096f375
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="known-issues-for-machine-learning-services"></a>機器學習服務的已知的問題
+# <a name="known-issues-in-machine-learning-services"></a>機器學習服務中的已知的問題
 
-本主題描述已知的問題或限制使用機器學習中 SQL Server 2016 和 SQL Server 2017 的選項中提供的元件。
+本文說明已知的問題或在 SQL Server 2016 和 SQL Server 2017 的選項提供的機器學習服務元件的限制。
 
-除非特別指示，適用於所有下列：
+這裡的資訊適用於所有的下列程式碼，除非特別指出：
 
-+ SQL Server 2016
+* SQL Server 2016
 
   - R 服務 (資料庫內)
   - Microsoft R Server (獨立式)
 
-+ SQL Server 2017
+* SQL Server 2017
 
   - 機器學習服務 （資料庫）
   - 機器學習服務 for Python （資料庫）
   - Machine Learning 伺服器 (獨立式)
 
-## <a name="setup-and-configuration-issues"></a>安裝和組態問題
+## <a name="setup-and-configuration-issues"></a>安裝和設定問題
 
-這裡列出與初始安裝和設定相關的處理和一般問題的描述：[升級及安裝常見問題集](r/upgrade-and-installation-faq-sql-server-r-services.md)。
+如需處理程序和初始安裝和設定相關的常見問題的說明，請參閱[升級及安裝常見問題集](r/upgrade-and-installation-faq-sql-server-r-services.md)。 它包含升級、-並存安裝及安裝新的 R 或 Python 元件的相關資訊。
 
-另請參閱本文的升級、-並存安裝及安裝新的 R 或 Python 元件的相關資訊。
+### <a name="unable-to-install-python-components-in-offline-installations-of-sql-server-2017-ctp-20-or-later"></a>無法將 Python 元件安裝在離線安裝的 SQL Server 2017 CTP 2.0 或更新版本
 
-### <a name="unable-to-install-python-components-in-in-offline-installs-of-sql-server-2017"></a>無法安裝在離線的 Python 元件中安裝的 SQL Server 2017
+如果您沒有網際網路存取的電腦上安裝發行前版本的 SQL Server 2017，安裝程式可能無法顯示頁面，提示下載 Python 元件的位置。 在這種情況下，您可以安裝的機器學習服務功能，而非 Python 元件。
 
-如果您沒有網際網路存取的電腦上安裝 SQL Server 2017，安裝程式可能無法顯示頁面，提示為元件的位置下載 Python;因此，您可以安裝的機器學習服務功能，而非 Python 元件。
-
-近期版本中，將會修正此問題。 因應措施，您可以暫時安裝期間啟用網際網路存取。 這項限制不適用於。
+發行版本中修正此問題。 如果您遇到此問題，以解決這個問題，您可以暫時啟用網際網路存取，安裝程式的持續時間。 這項限制不適用於。
 
 **適用於：** SQL Server 2017 使用 Python
 
-### <a name="install-latest-service-release-to-ensure-compatibility-with-microsoft-r-client"></a>安裝最新的服務版本確保與 Microsoft R Client 相容
+### <a name="install-the-latest-service-release-to-ensure-compatibility-with-microsoft-r-client"></a>安裝最新的版本更新服務以確保與 Microsoft R 用戶端的相容性
 
-如果您安裝最新版的 Microsoft R 用戶端，並使用它來執行 R 使用遠端 SQL Server 計算內容，您可能會發生錯誤，如下所示：
+如果您安裝最新版的 Microsoft R 用戶端，並使用它來執行 SQL Server 上的 R 遠端計算內容中，您可能會收到類似下列錯誤：
 
-*您正在 Microsoft R 用戶端版本 9.x.x 您與 Microsoft R Server 版本 8.x.x 不相容的電腦。請下載並安裝相容版本。*
+>*您正在 Microsoft R 用戶端版本 9.x.x 您與 Microsoft R Server 版本 8.x.x 不相容的電腦。請下載並安裝相容版本。*
 
-SQL Server 2016 所需的用戶端上的 R 程式庫會完全符合伺服器上的 R 程式庫。 限制已移除該版本的 R 伺服器 9.0.1 較新版本。 不過，如果您遇到這個錯誤，請確認您的用戶端使用此版本的 R 程式庫和 nad 必要時，伺服器更新用戶端與伺服器版本相符。
+SQL Server 2016 需要用戶端上的 R 程式庫會完全符合伺服器上的 R 程式庫。 限制已移除版本的 R 伺服器 9.0.1 較新版本。 不過，如果您遇到這個錯誤，請確認版本的 R 程式庫會使用您的用戶端和伺服器，而且必要時，更新為符合伺服器版本的用戶端。
 
-安裝 SQL Server 服務版本時，會更新 R 與 SQL Server R Services 一起安裝的版本。 因此，若要確保一直擁有最新版本的 R 元件，您應該安裝所有 service pack。
+安裝 SQL Server 服務版本時，會更新 R 與 SQL Server R Services 一起安裝的版本。 若要確保一直擁有最新版本的 R 元件，請務必安裝所有 service pack。
 
-為與 Microsoft R Client 9.0.0 相容，您必須安裝本 [技術支援文件](https://support.microsoft.com/kb/3210262)中描述的更新。
+為了確保與 Microsoft R 用戶端 9.0.0 相容性，安裝所述的更新在此[技術支援文件](https://support.microsoft.com/kb/3210262)。
 
-若要避免發生問題的 R 封裝，您也可以升級會在伺服器上，安裝中所述，將變更為現代化的生命週期原則的 R 程式庫版本[本節](#bkmk_sqlbindr)。 當您這樣做時，R 與 SQL Server 一起安裝的版本會更新相同的排程的更新會發行 Microsoft R 伺服器，請確定伺服器和用戶端永遠可以有最新版本的 Microsoft。
+若要避免發生問題的 R 封裝，您也可以升級安裝在伺服器上，變更為現代化的生命週期原則中所述的 R 程式庫版本[下一節](#bkmk_sqlbindr)。 當您這樣做時，R 與 SQL Server 一起安裝的版本會更新相同的排程上的更新會發行的 Microsoft R Server 可確保伺服器和用戶端一律有最新版本的 Microsoft。
 
 **適用於：** SQL Server 2016 R Services 中，使用 R Server 9.0.0 版本或更早版本
 
-### <a name="bkmk_sqlbindr"></a>從使用的用戶端連接到舊版的 SQL Server R Services 時，不相容版本的警告[!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]
+### <a name="bkmk_sqlbindr"></a>當您從連線到較舊版本的 SQL Server R Services 用戶端使用的不相容的版本警告[!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]
 
-如已使用 [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] 安裝精靈或 [Microsoft R Server](https://msdn.microsoft.com/microsoft-r/rserver-install-windows)的新獨立安裝程式，在用戶端電腦上安裝 Microsoft R Server，並在使用舊版的 SQL Server R Services 計算內容中執行 R 程式碼，您可能會看到類似下列的錯誤︰
+當您在 SQL Server 2016 計算內容中，執行 R 程式碼，下列兩個陳述式為 true，您可能會看到類似下面的錯誤：
+* 用戶端電腦上安裝 R Server （獨立） 使用的安裝精靈[!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]。
+* 您可以使用來安裝 Microsoft R Server[分隔 Windows installer](https://docs.microsoft.com/r-server/install/r-server-install-windows)。
 
-*您電腦上執行的是 9.0.0 版的 Microsoft R Client，與 Microsoft R Server 8.0.3 版不相容。請下載並安裝相容版本。*
+>*您電腦上執行的是 9.0.0 版的 Microsoft R Client，與 Microsoft R Server 8.0.3 版不相容。請下載並安裝相容版本。*
 
-Microsoft R Server 9.0 版提供的 **SqlBindR.exe** 工具支援 SQL Server 執行個體升級到相容的 9.0 版。 在 SQL Server 服務即將發行的服務版本中，會加入 R Services 執行個體升級至 9.0 的支援。 適合未來的升級版本包含 SQL Server 2016 RTM CU3 + SP1 + 和 SQL Server 2017 CTP 1.1。
+SqlBindR.exe 工具會提供 Microsoft R Server 9.0 以支援升級到相容的 9.0 版的 SQL Server 執行個體的版本。 在即將發行的服務版本的 SQL Server 中，將會加入支援 9.0 R 服務執行個體的升級。 適合未來的升級版本包括 SQL Server 2016 RTM CU3 和 SP1 + 和 SQL Server 2017 CTP 1.1。
 
 **適用於：** SQL Server 2016 R Services 中，使用 R Server 9.0.0 版本或更早版本
 
 ### <a name="setup-for-sql-server-2016-service-releases-might-fail-to-install-newer-versions-of-r-components"></a>SQL Server 2016 服務版本的安裝程式可能無法安裝較新版本的 R 元件
 
-當您安裝累積更新，或在未連接到網際網路的電腦上安裝 SQL Server 2016 Service Pack 時，安裝精靈可能無法顯示提示，以讓您使用下載的封包檔來更新 R 元件。 當多個元件和資料庫引擎一起安裝時通常會發生此問題。
+當您安裝累計更新或未連線到網際網路的電腦上安裝 SQL Server 2016 的 service pack 時，可能會無法安裝精靈顯示提示，可讓您使用下載的 CAB 檔案更新的 R 元件。 Database engine 一起安裝的多個元件時，通常會發生這個失敗。
 
 因應措施，您可以使用命令列，並指定安裝的版本更新服務*/MRCACHEDIRECTORY*引數，此範例中，這會安裝 CU1 更新中所示：
 
 `C:\<path to installation media>\SQLServer2016-KB3164674-x64.exe /Action=Patch /IACCEPTROPENLICENSETERMS /MRCACHEDIRECTORY=<path to CU1 CAB files>`
 
-若要取得最新的安裝程式，請參閱[安裝機器學習 Components without Internet Access](r/installing-ml-components-without-internet-access.md)。
+若要取得最新的安裝程式，請參閱[安裝沒有網際網路存取的機器學習元件](r/installing-ml-components-without-internet-access.md)。
 
 **適用於：** SQL Server 2016 R Services 中，使用 R Server 9.0.0 版本或更早版本
 
-### <a name="launchpad-services-fails-to-start-if-version-is-different-than-r-version"></a>如果版本與 R 版本不同，Launchpad 服務無法啟動。
+### <a name="launchpad-services-fails-to-start-if-the-version-is-different-from-the-r-version"></a>啟動控制板服務無法啟動的 R 版本不同版本時
 
-如果您安裝 R 服務分別從資料庫引擎，而且組建版本不同，您可能會看到系統事件記錄檔中的這個錯誤：_的 SQL Server Launchpad 服務無法啟動，因為發生下列錯誤： 服務不提供支援啟動或控制要求能夠及時回應。_
+如果您安裝 R 服務分別從資料庫引擎，而且組建版本不同，您可能會看到系統事件記錄檔中的下列錯誤： 
 
-例如，如果您安裝使用發行版本的資料庫引擎、套用修補程式以升級資料庫引擎，然後加入使用發行版本的 R Services，可能會發生此錯誤。
+>_SQL Server Launchpad 服務無法啟動，因為發生下列錯誤： 服務未啟動或控制要求能夠及時回應。_
+
+比方說，這項錯誤可能因為您安裝 database engine 所使用的發行版本、 套用修補程式來升級資料庫引擎，和使用發行版本，以新增 R 服務。
 
 為避免此問題，請確定所有的元件都有相同的版本號碼。 如果升級某個元件，所有其他已安裝的元件請務必套用相同的升級。
 
-若要檢視 SQL Server 2016 各版本所需的 R 版本號碼清單，請參閱 [安裝沒有網際網路存取的 R 元件](r/installing-ml-components-without-internet-access.md)。
+若要檢視所需的每個 SQL Server 2016 版本的 R 版本號碼的清單，請參閱[安裝 R 元件沒有網際網路存取](r/installing-ml-components-without-internet-access.md)。
 
-### <a name="remote-compute-contexts-blocked-by-firewall-in-sql-server-instances-running-on-azure-virtual-machines"></a>遠端計算內容遭到執行於 Azure 虛擬機器的 SQL Server 執行個體中防火牆封鎖
+### <a name="remote-compute-contexts-are-blocked-by-a-firewall-in-sql-server-instances-that-are-running-on-azure-virtual-machines"></a>Azure 虛擬機器執行的 SQL Server 執行個體中防火牆封鎖遠端計算內容
 
-若您在 Windows Azure 虛擬機器上安裝了 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] ，則可能無法使用需要虛擬機器工作區的計算內容。 原因在於 Azure VM 防火牆預設包含會封鎖本機 R 使用者帳戶網路存取權的規則。
+如果您已安裝[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]Windows Azure 虛擬機器，您可能無法使用需要虛擬機器的工作區中使用的計算內容。 原因在於 Azure VM 防火牆預設包含會封鎖本機 R 使用者帳戶網路存取權的規則。
 
-因應措施是在 Azure VM 上開啟 [具有進階安全性的 Windows 防火牆] ，選取 [輸出規則] ，然後停用以下規則：「封鎖 SQL Server 執行個體 MSSQLSERVER 中 R 本機使用者帳戶的網路存取權」。
+因應措施，Azure VM 上開啟**具有進階安全性的 Windows 防火牆**，選取**輸出規則**，然後停用下列規則：**封鎖中 R 本機使用者帳戶的網路存取權SQL Server 執行個體 MSSQLSERVER**。
 
 ### <a name="implied-authentication-in-sqlexpress"></a>SQLEXPRESS 的隱含驗證
 
-當您從使用 Windows 整合式驗證的遠端資料科學工作站執行 R 作業時，SQL Server 會使用「隱含的驗證」  來產生指令碼可能需要的任何本機 ODBC 呼叫。 不過，這項功能在 SQL Server Express Edition 的 RTM 組建中不作用。
+當您從遠端資料科學工作站執行 R 工作使用 Windows 整合式的驗證時，SQL Server 會使用*隱含的驗證*來產生指令碼可能需要任何本機 ODBC 呼叫。 不過，這項功能在 SQL Server Express Edition 的 RTM 組建中不作用。
 
 若要修正此問題，建議您升級至較新的服務版本。
 
@@ -117,34 +119,34 @@ Microsoft R Server 9.0 版提供的 **SqlBindR.exe** 工具支援 SQL Server 執
 
 **適用於：** SQL Server 2016 R Services Express Edition
 
-### <a name="performance-limits-when-r-libraries-are-called-from-standalone-r-tools"></a>從獨立 R 工具呼叫 R 程式庫時，會限制效能
+### <a name="performance-limits-when-r-libraries-are-called-from-standalone-r-tools"></a>從獨立 R 工具呼叫 R 程式庫時的效能限制
 
-您可呼叫的 R 工具和程式庫從 RGui 之類的外部 R 應用程式安裝的 SQL Server R Services。 當您安裝新的封裝，或在非常短的程式碼範例執行臨機操作測試，這可能會很方便。
+您可呼叫的 R 工具和程式庫從 RGui 之類的外部 R 應用程式安裝的 SQL Server R Services。 當您安裝新的封裝，或當您執行臨機操作測試在非常短的程式碼範例，這個呼叫可能會很方便。
 
-不過，請注意，SQL Server 外部的效能會受到限制。 例如，即使您已購買 SQL Server 的 Enterprise Edition，R 將執行單一執行緒模式中執行 R 程式碼使用外部工具時。 效能會更好，如果您執行 R 程式碼起始的 SQL Server 連接，並使用[sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)，這會為您呼叫 R 程式庫。
+不過，請注意，SQL Server 外部的效能會受到限制。 比方說，即使您已購買 SQL Server 的 Enterprise Edition，R 將會在單一執行緒模式中時執行您使用外部工具來執行 R 程式碼。 效能會更好，如果您執行 R 程式碼起始的 SQL Server 連接，並使用[sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)，這會為您呼叫 R 程式庫。
 
-+ 避免從外部 R 工具呼叫 SQL Server 所使用的 R 程式庫。
-+ 如果您需要 SQL Server 電腦上執行大量的 R 程式碼，而不使用 SQL server 安裝 R，例如 Microsoft R 用戶端，個別執行個體，然後確定您的 R 開發工具會指向新的程式庫。
+* 避免呼叫 R 程式庫所使用的 SQL Server 上，從外部的 R 工具。
+* 如果您需要 SQL Server 電腦上執行大量的 R 程式碼，而不使用 SQL Server 安裝 R，例如 Microsoft R 用戶端，個別執行個體，然後確定您的 R 開發工具會指向新的程式庫。
 
 如需詳細資訊，請參閱 [建立獨立式 R Server](r/create-a-standalone-r-server.md)。
 
-### <a name="r-script-throttled-due-to-resource-governance-default-values"></a>因為資源控管的預設值，所以節流的 R 指令碼
+### <a name="the-r-script-is-throttled-due-to-resource-governance-default-values"></a>R 指令碼已節流，因為資源控管的預設值
 
-在 Enterprise Edition 中，您可以使用資源集區來管理外部指令碼程序。 在某些早期發行的組建，無法配置給 R 處理序的最大記憶體為 20%。 因此，如果伺服器有 32 GB 的 RAM，R 可執行檔 (RTerm.exe 和 BxlServer.exe) 無法在單一要求中使用上限 6.4 GB。
+在 Enterprise Edition 中，您可以使用資源集區來管理外部指令碼程序。 在某些早期發行的組建，無法配置給 R 處理序的最大記憶體為 20%。 因此，如果伺服器有 32GB 的 RAM，R 可執行檔 （RTerm.exe 和 BxlServer.exe） 無法使用最多 6.4 單一要求中。
 
-如果遇到資源限制，請檢查目前的預設值，如果 20% 不夠，請參閱 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的文件以了解如何變更此值。
+如果您遇到資源限制，請檢查目前的預設值。 若 20%不夠，請參閱文件[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]如何變更此值。
 
 **適用於：** SQL Server 2016 R 服務、 企業版
 
 ## <a name="r-code-execution-and-package-or-function-issues"></a>執行 R 程式碼和封裝或函式的問題
 
-本節包含專屬於 SQL Server 上執行 R 的已知的問題，以及與 R 程式庫和工具由 Microsoft，包括 RevoScaleR 發行相關的一些問題。
+本節包含專屬於 SQL Server 上執行 R 的已知的問題，以及相關的 R 程式庫和工具 Microsoft，包括 RevoScaleR 所發行的一些問題。
 
-如需其他可能會影響 R 解決方案的已知的問題，請參閱 Microsoft R Server 站台：[與 Microsoft R Server 的已知問題](https://msdn.microsoft.com/microsoft-r/rserver-known-issues)
+如需其他可能會影響 R 解決方案的已知問題，請移至[Microsoft R Server 網站](https://msdn.microsoft.com/microsoft-r/rserver-known-issues)。
 
 ### <a name="limitations-on-processor-affinity-for-r-jobs"></a>R 作業處理器相似性的限制
 
-在 SQL Server 2016 的初始發行版本，您可以設定只會針對第一個 k 群組中的 Cpu 處理器親和性。 例如，如果伺服器是有 2 個 k 群組的雙通訊端機器，R 處理程序只會使用第一個 k 群組中的處理器。 設定 R 指令碼作業的資源控管時，適用相同的限制。
+在 SQL Server 2016 的初始發行版本，您可以設定只會針對第一個 k 群組中的 Cpu 處理器親和性。 例如，如果伺服器是包含兩個 k 群組 2 通訊端機器，便會從第一個 k 群組的唯一處理器用於 R 處理序。 當您設定資源控管的 R 指令碼工作時，適用於相同的限制。
 
 SQL Server 2016 Service Pack 1 已修正這個問題。
 
@@ -164,20 +166,22 @@ data <- RxSqlServerData(sqlQuery = "SELECT CRSDepTimeStr, ArrDelay  FROM Airline
 
 未來版本會修正此問題。
 
-因應措施是，您可以重新撰寫 SQL 查詢以使用 CAST 或 CONVERT，並使用正確的資料類型向 R 呈現資料。 通常最好是使用 SQL 時能有效使用資料，而不是在 R 程式碼中變更資料。
+因應措施，您可以重新撰寫 SQL 查詢，以使用轉型或轉換，並將資料呈現給 R，使用正確的資料類型。 一般情況下，效能會更好當您使用的資料使用 SQL，而不是藉由變更 R 程式碼中的資料。
 
 **適用於：** SQL Server 2016 R 服務
 
-### <a name="avoid-clearing-workspaces-when-executing-r-code-in-a-includessnoversionincludesssnoversion-mdmd-compute-context"></a>避免在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 計算內容中執行 R 程式碼時清除工作區。
+### <a name="avoid-clearing-workspaces-when-you-execute-r-code-in-a-includessnoversionincludesssnoversion-mdmd-compute-context"></a>避免在執行中的 R 程式碼時，清除工作區[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]計算內容
 
-如果在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 計算內容中執行 R 程式碼時，使用 R 命令清除物件工作區，或如果將工作區當成使用 [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)呼叫之 R 指令碼的一部分清除，您可能會發生此錯誤︰找不到工作區物件 'revoScriptConnection'。 
+如果您使用 R 命令來清除物件的工作區執行 R 程式碼時[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]計算內容中，如果您清除工作區一部分的 R 指令碼或透過呼叫[sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)，您可能會收到這錯誤： 
+
+>*找不到 ' revoScriptConnection' 的工作區物件*
 
 `revoScriptConnection` 是 R 工作區的物件，包含從 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]呼叫之 R 工作階段的相關資訊。 不過，如果 R 程式碼包含清除工作區的命令，例如 `rm(list=ls()))`，則也會清除工作階段所有資訊和 R 工作區的其他物件。
 
-因應措施是在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中執行 R 時，避免任意清除變數和其他物件。 雖然在 R 主控台內工作時，清除工作區是常見的，但它可能造成意料之外的結果。
+因應措施，避免任意清除變數和其他物件時您在執行 R [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 雖然在 R 主控台內工作時，清除工作區是常見的，但它可能造成意料之外的結果。
 
-+ 若要刪除特定的變數，請使用 R「移除」  函數︰ `remove('name1', 'name2', ...)`
-+ 如有多個變數要刪除，請將暫存變數名稱儲存至清單，並執行定期記憶體回收。
+* 若要刪除特定變數，請使用 R*移除*函式： `remove('name1', 'name2', ...)`。
+* 如有多個變數要刪除，請將暫存變數名稱儲存至清單，並執行定期記憶體回收。
 
 ### <a name="restrictions-on-data-that-can-be-provided-as-input-to-an-r-script"></a>可作為輸出提供給 R 指令碼的資料限制
 
@@ -189,11 +193,9 @@ data <- RxSqlServerData(sqlQuery = "SELECT CRSDepTimeStr, ArrDelay  FROM Airline
   
      若您需要在 R 指令碼中使用遮罩的資料，一項可行的因應措施是在暫存資料表中製作資料複本，並改用該資料。
 
-### <a name="arguments-varstokeep-and-varstodrop-not-supported-for-sql-server-data-sources"></a>引數*varsToKeep*和*varsToDrop*不支援 SQL Server 資料來源
+### <a name="arguments-varstokeep-and-varstodrop-are-not-supported-for-sql-server-data-sources"></a>引數*varsToKeep*和*varsToDrop*不支援 SQL Server 資料來源
 
 當您使用 rxDataStep 函式將結果寫入至資料表時，使用*varsToKeep*和*varsToDrop*是很方便的方式來指定要包含或排除作業的資料行。 目前，SQL Server 資料來源不支援這些引數。
-
-一個版本將移除這項限制。
 
 ### <a name="limited-support-for-sql-data-types-in-spexecuteexternalscript"></a>中的 SQL 資料類型的有限的支援`sp_execute_external_script`
 
@@ -203,9 +205,9 @@ data <- RxSqlServerData(sqlQuery = "SELECT CRSDepTimeStr, ArrDelay  FROM Airline
 
 ### <a name="possible-string-corruption"></a>字串可能損毀
 
-任何從 [!INCLUDE[tsql](../includes/tsql-md.md)] 到 R 再到 [!INCLUDE[tsql](../includes/tsql-md.md)] 的字串資料來回行程都可能造成損毀。 這是因為在 R 和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中使用的編碼不同，而且 R 和 [!INCLUDE[tsql](../includes/tsql-md.md)]也支援不同定序及語言。 任何非 ASCII 編碼的字串都可能不正確地處理。
+從字串資料的任何往返[!INCLUDE[tsql](../includes/tsql-md.md)]到 R 再到[!INCLUDE[tsql](../includes/tsql-md.md)]一次會造成損毀。 這是因為在 R 和使用的編碼不同[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，不同的定序及支援的 R 語言和[!INCLUDE[tsql](../includes/tsql-md.md)]。 任何非 ASCII 編碼的字串都可能不正確地處理。
 
-請盡可能在將字串資料傳送給 R 時，將其轉換為 ASCII 表示法。
+當您字串資料傳送給 R 時，將其轉換為 ASCII 表示法，如果可能的話。
 
 ### <a name="only-one-value-of-type-raw-can-be-returned-from-spexecuteexternalscript"></a>只有一個值的型別`raw`可從傳回`sp_execute_external_script`
 
@@ -213,28 +215,28 @@ data <- RxSqlServerData(sqlQuery = "SELECT CRSDepTimeStr, ArrDelay  FROM Airline
 
 後續版本中將新增多個 **raw** 輸出的支援。
 
-若想要多個輸出集，一項可行的因應措施是對預存程序進行多次呼叫，並使用 ODBC 將結果集傳回 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。
+如果您想要使用多個輸出集，其中一個可能的解決方法是進行多次呼叫預存程序，並將結果集傳回[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]使用 ODBC。
 
-請注意，只要加上 OUTPUT 關鍵字，參數值就可以和預存程序的結果一起傳回。 如需詳細資訊，請參閱 [使用 OUTPUT 參數傳回資料](https://technet.microsoft.com/library/ms187004.aspx)。
+只要加上 OUTPUT 關鍵字，您可以傳回參數值，以及預存程序的結果。 如需詳細資訊，請參閱[使用輸出參數傳回資料](https://technet.microsoft.com/library/ms187004.aspx)。
 
 ### <a name="loss-of-precision"></a>遺失有效位數
 
-[!INCLUDE[tsql](../includes/tsql-md.md)] 和 R 支援不同資料類型；因此數值資料類型可能會在轉換期間遺失有效位數。
+因為[!INCLUDE[tsql](../includes/tsql-md.md)]和 R 支援不同的資料類型，數值資料類型可以在轉換期間，會遺失有效位數。
 
-如需有關隱含資料類型轉換的詳細資訊，請參閱＜ [Working with R Data Types](r/r-libraries-and-data-types.md)＞。
+如需有關隱含資料類型轉換的詳細資訊，請參閱[使用 R 資料型別](r/r-libraries-and-data-types.md)。
 
-### <a name="variable-scoping-error-the-sample-data-set-for-the-analysis-has-no-variables-when-using-the-transformfunc-parameter"></a>使用 transformFunc 參數時發生變數約制錯誤「用於分析的範例資料集沒有任何變數」
+### <a name="variable-scoping-error-when-you-use-the-transformfunc-parameter-the-sample-data-set-for-the-analysis-has-no-variables"></a>變數約制錯誤，當您使用 transformFunc 參數：*分析取樣資料集沒有任何變數*
 
-您可以在 *rxLinmod* 或 `rxLinmod` 等函數中傳遞 `rxLogit` to transf等函數中傳遞m the data while modelling. 不過，巢狀函數呼叫可能會造成 SQL Server 計算內容中發生約制錯誤，即使本機計算內容中的呼叫運作正常亦然。
+若要轉換的資料，當您建立模型時，您可以傳遞*transformFunc*等函數中的引數`rxLinmod`或`rxLogit`。 不過，巢狀的函數呼叫可能會導致發生約制錯誤，SQL Server 計算內容中，即使本機計算內容中呼叫運作正常。
 
-例如，假設您已在本機全域環境中定義了兩個函數 `f` 和 `g` ，而 `g` 呼叫 `f`。 在涉及 `g`的分散式或遠端呼叫中，即使您已將 `g` 和 `f` 都傳遞給遠端呼叫，對 `f` 的呼叫也可能會因為找不到 `g` 而失敗。
+例如，假設您已定義兩個函式，`f`和`g`，在您的本機全域環境中和`g`呼叫`f`。 在涉及 `g`的分散式或遠端呼叫中，即使您已將 `g` 和 `f` 都傳遞給遠端呼叫，對 `f` 的呼叫也可能會因為找不到 `g` 而失敗。
 
 若遇到此問題，您可以在 `f` 定義內嵌 `g`的定義以解決此問題， `g` 前的任何位置則會正常呼叫 `f`。
 
 例如：
 
 ```  
-f <- function(x) { 2*x + 3 }  
+f <- function(x) { 2*x * 3 }  
 g <- function(y) {   
               a <- 10 * y  
                f(a)  
@@ -243,7 +245,7 @@ g <- function(y) {
 ```  
 
 
-若要避免此錯誤，請重寫，如下所示：
+若要避免此錯誤，請重寫的定義，如下所示：
 
 ```  
 g <- function(y){  
@@ -256,21 +258,21 @@ g <- function(y){
 
 ### <a name="data-import-and-manipulation-using-revoscaler"></a>使用 RevoScaleR 匯入及操作資料
 
-從資料庫讀取 **varchar** 資料行時，會修剪空白字元。 若要避免此情況，請在字串頭尾使用非空白字元。
+當**varchar**讀取資料行是從資料庫中，會修剪空白字元。 若要避免此情況，請在字串頭尾使用非空白字元。
 
-使用 `rxDataStep` 等函數建立包含 **varchar** 資料行的資料庫資料表時，會依據資料範例來估計資料行寬度。 若寬度會有差異，則可能需要將所有字串填補到常見長度。
+當函式，如`rxDataStep`用來建立資料庫資料表，其中有**varchar**預估根據資料的範例資料行，資料行寬度。 若寬度會有差異，可能必須將所有字串都填補到常見長度。
 
 使用 `rxImport` 或 `rxTextToXdf` 的重複呼叫來匯入或附加資料列，將多個輸入檔案結合成單一 .xdf 檔案時，不支援使用轉換來變更變數的資料類型。
 
 ### <a name="limited-support-for-rxexec"></a>有限的支援 rxExec
 
-在 SQL Server 2016， `rxExec` RevoScaleR 封裝所提供的函式只能用於單一執行緒模式。
+在 SQL Server 2016，`rxExec`是提供可以在使用 RevoScaleR 封裝只能在單一執行緒模式中的函式。
 
 近期版本中將新增多個處理序間的 `rxExec` 平行處理原則。
 
-### <a name="increase-maximum-parameter-size-to-support-rxgetvarinfo"></a>請提高參數大小上限以支援 rxGetVarInfo
+### <a name="increase-the-maximum-parameter-size-to-support-rxgetvarinfo"></a>參數大小上限以支援 rxGetVarInfo
 
-若您使用變數數目極大 (例如 40,000 個以上) 的資料集，就必須在啟動 R 時設定 `max-ppsize` 旗標，才能使用 `rxGetVarInfo`等函數。  `max-ppsize` 旗標會指定指標保護堆疊的大小上限。
+如果您使用的變數數目極大的資料集 (例如 40,000) 上，設定`max-ppsize`旗標，當您開始使用函式，例如 R `rxGetVarInfo`。 `max-ppsize` 旗標會指定指標保護堆疊的大小上限。
 
 若您使用 R 主控台 (例如在 rgui.exe 或 rterm.exe)，可以將 max-ppsize 的值設為 500000，方法是輸入：
 
@@ -278,7 +280,7 @@ g <- function(y){
 R --max-ppsize=500000  
 ```  
   
-若您使用的是 [!INCLUDE[rsql_developr](../includes/rsql-developr-md.md)] 環境，則可以設定 `max-ppsize` 旗標，方法是對 RevoIDE 可執行檔進行此呼叫：
+如果您使用[!INCLUDE[rsql_developr](../includes/rsql-developr-md.md)]環境，您可以設定`max-ppsize`藉由下列呼叫 RevoIDE 可執行檔的旗標：
 
 ```  
 RevoIDE.exe /RCommandLine --max-ppsize=500000  
@@ -292,25 +294,25 @@ RevoIDE.exe /RCommandLine --max-ppsize=500000
 
 ## <a name="revolution-r-enterprise-and-microsoft-r-open"></a>Revolution R Enterprise 和 Microsoft R Open
 
-本節列出 Revolution Analytics 提供的 R 連線能力、開發及效能工具的特定問題。 舊版的  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]發行前版本提供這些工具。 
+此區段會列出 R 連線能力、 開發和 Revolution Analytics 所提供的效能工具的特定問題。 這些工具提供的發行前版本中[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]。 
 
 一般情況下，我們建議您先解除安裝這些舊版，並安裝最新版的 SQL Server 或 Microsoft R Server。
 
-### <a name="running-side-by-side-versions-of-revolution-r-enterprise"></a>並存執行 Revolution R Enterprise 版本
+### <a name="running-side-by-side-versions-of-revolution-r-enterprise"></a>執行並存的 Revolution R Enterprise 版本
 
-不支援與任何版本 [!INCLUDE[rsql_productname_md](../includes/rsql-productname-md.md)] 並存安裝 Revolution R Enterprise。
+安裝任何版本的 Revolution R Enterprise 並存[!INCLUDE[rsql_productname_md](../includes/rsql-productname-md.md)]不支援。
 
 若您獲授權可使用其他 Revolution R Enterprise 版本，則必須將其放在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體及任何要用以連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體的工作站以外電腦。
 
-### <a name="use-of-r-productivity-environment-not-supported"></a>使用 R Productivity Environment 不支援的
+### <a name="the-use-of-an-r-productivity-environment-is-not-supported"></a>不支援使用 R productivity environment
 
-某些 [!INCLUDE[rsql_productname](../includes/rsql-productname-md.md)] 發行前版本包含 Revolution Analytics 建立的 Windows R 開發環境。 此工具不會再提供，並不支援。
+某些發行前版本[!INCLUDE[rsql_productname](../includes/rsql-productname-md.md)]包含適用於 Windows 的 Revolution Analytics 建立的 R 開發環境。 不再提供這項工具，並不支援。
 
 相容性[!INCLUDE[rsql_productname](../includes/rsql-productname-md.md)]，我們強烈建議您安裝 Microsoft R 用戶端或 Microsoft R Server 而不是 Revolution Analytics 工具。 [R Tools for Visual Studio](https://www.visualstudio.com/vs/rtvs/) 是支援 Microsoft R 解決方案的另一個建議用戶端。
 
 ### <a name="compatibility-issues-with-sqlite-odbc-driver-and-revoscaler"></a>SQLite ODBC 驅動程式與 RevoScaleR 的相容性問題
 
-SQLite ODBC 驅動程式的修訂 0.92 與 RevoScaleR 不相容；修訂 0.88-0.91 和 0.93 及更新版本則已知相容。
+SQLite ODBC 驅動程式的修訂 0.92 是與 RevoScaleR 不相容。 修訂 0.88-0.91 和 0.93 及更新版本則已知相容性。
 
 ## <a name="see-also"></a>另請參閱
 

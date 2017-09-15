@@ -1,7 +1,7 @@
 ---
 title: "建立對稱金鑰 (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
-ms.date: 03/11/2017
+ms.date: 09/12/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -27,10 +27,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: fb573578b51b2e6bf4c5cbedf7ef5bc509523903
+ms.sourcegitcommit: 71ca2fac0a6b9f087f9d434c5a701f5656889b9e
+ms.openlocfilehash: d3b1490b1ac07d0e6a3f0fc3ed1515dd0872d545
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/13/2017
 
 ---
 # <a name="create-symmetric-key-transact-sql"></a>CREATE SYMMETRIC KEY (Transact-SQL)
@@ -97,26 +97,28 @@ CREATE SYMMETRIC KEY key_name
 > [!NOTE]  
 >  自主資料庫無法使用這個選項。  
   
- CREATION_DISPOSITION  **=**  CREATE_NEW  
+ CREATION_DISPOSITION ** = ** CREATE_NEW  
  在可延伸金鑰管理裝置上建立新的金鑰。  如果金鑰已存在於裝置上，陳述式會失敗，並傳回錯誤。  
   
- CREATION_DISPOSITION  **=**  OPEN_EXISTING  
+ CREATION_DISPOSITION ** = ** OPEN_EXISTING  
  將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 對稱金鑰對應到現有的「可延伸金鑰管理」金鑰。 如果未提供 CREATION_DISPOSITION = OPEN_EXISTING，就會預設為 CREATE_NEW。  
   
  *certificate_name*  
  指定要用於加密對稱金鑰的憑證之名稱。 這個憑證必須已存在於資料庫中。  
   
  **'** *密碼* **'**  
- 指定衍生 TRIPLE_DES 金鑰的密碼，其可以用於保護對稱金鑰的安全。 *密碼*必須符合正在執行的執行個體之電腦的 Windows 密碼原則需求[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 您一定要使用增強式密碼。  
+ 指定衍生 TRIPLE_DES 金鑰的密碼，其可以用於保護對稱金鑰的安全。 *密碼*必須符合正在執行的執行個體之電腦的 Windows 密碼原則需求[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 一律使用增強式密碼。  
   
  *symmetric_key_name*  
- 指定要用於加密所要建立之金鑰的對稱金鑰。 指定的金鑰必須已存在於資料庫中，且該金鑰必須是開啟的。  
+ 指定對稱金鑰，用來加密所建立的索引鍵。 指定的金鑰必須已存在於資料庫中，且該金鑰必須是開啟的。  
   
  *asym_key_name*  
- 指定要用於加密所要建立之金鑰的非對稱金鑰。 這個非對稱金鑰必須已存在於資料庫中。  
+ 指定非對稱金鑰，用來加密所建立的索引鍵。 這個非對稱金鑰必須已存在於資料庫中。  
   
  \<演算法 >  
- 開頭為 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]，取代 AES_128、AES_192 和 AES_256 以外的所有演算法。 若要使用較舊的演算法 (不建議使用)，您必須將資料庫相容性層級設定為 120 或更低。  
+指定的加密演算法。   
+> [!WARNING]  
+> 開頭為 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]，取代 AES_128、AES_192 和 AES_256 以外的所有演算法。 若要使用較舊的演算法 （不建議），您必須設定資料庫相容性層級 120 或更低。  
   
 ## <a name="remarks"></a>備註  
  當建立對稱金鑰時，至少必須利用下列一項來加密對稱金鑰：憑證、密碼、對稱金鑰、非對稱金鑰或 PROVIDER。 針對每一種類型，金鑰都可以有多個加密。 換句話說，可以同時利用多個憑證、密碼、對稱金鑰及非對稱金鑰來加密單一對稱金鑰。  
@@ -128,7 +130,7 @@ CREATE SYMMETRIC KEY key_name
   
  暫時金鑰由建立它們的使用者擁有。 暫時金鑰只能用於目前的工作階段。  
   
- IDENTITY_VALUE 會產生 GUID，這個 GUID 可用於標記利用新對稱金鑰加密的資料。 這項標記作業可用於使金鑰符合加密的資料。 特定片語產生的 GUID 永遠相同。 在利用片語產生 GUID 之後，只要至少有一個工作階段正主動使用該片語，就無法重複使用該片語。 IDENTITY_VALUE 是選擇性的子句。不過，當您要儲存利用暫時金鑰加密的資料時，我們建議您使用這個子句。  
+ IDENTITY_VALUE 會產生 GUID，這個 GUID 可用於標記利用新對稱金鑰加密的資料。 這項標記作業可用於使金鑰符合加密的資料。 特定片語產生 GUID 始終是相同的。 在利用片語產生 GUID 之後，只要至少有一個工作階段正主動使用該片語，就無法重複使用該片語。 IDENTITY_VALUE 是選擇性的子句。不過，當您要儲存利用暫時金鑰加密的資料時，我們建議您使用這個子句。  
   
  沒有預設的加密演算法。  
   
@@ -142,14 +144,12 @@ CREATE SYMMETRIC KEY key_name
  **釐清有關 DES 演算法的資訊：**  
   
 -   DESX 未正確命名。 以 ALGORITHM = DESX 建立的對稱金鑰實際上使用具有 192 位元金鑰的 TRIPLE DES 加密。 未提供 DESX 演算法。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
-  
 -   以 ALGORITHM = TRIPLE_DES_3KEY 建立的對稱金鑰使用具有 192 位元金鑰的 TRIPLE DES。  
-  
 -   以 ALGORITHM = TRIPLE_DES 建立的對稱金鑰使用具有 128 位元金鑰的 TRIPLE DES。  
   
  **RC4 演算法的取代：**  
   
- 在不同的資料區塊上重複使用相同的 RC4 或 RC4_128 KEY_GUID，結果會是相同的 RC4 金鑰，因為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不會自動提供 Salt。 重複使用相同的 RC4 金鑰是已知的錯誤，此錯誤會造成加密變弱。 因此，我們取代了 RC4 和 RC4_128 關鍵字。 [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]  
+ 重複的使用相同的 RC4 或 RC4_128 KEY_GUID，在不同的資料區塊上的結果是相同的 RC4 金鑰，因為[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不自動提供 salt。 重複使用相同的 RC4 金鑰是已知的錯誤，此錯誤會造成加密變弱。 因此，我們取代了 RC4 和 RC4_128 關鍵字。 [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]  
   
 > [!WARNING]  
 >  只有 RC4 演算法支援回溯相容性。 只有在資料庫相容性層級為 90 或 100 時，才能使用 RC4 或 RC4_128 加密新資料  (不建議使用)。請改用較新的演算法，例如其中一個 AES 演算法。 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，使用 RC4 或 RC4_128 加密的資料可以在任何相容性層級進行解密。  
