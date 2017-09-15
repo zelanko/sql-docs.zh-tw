@@ -23,7 +23,7 @@ ms.lasthandoff: 08/28/2017
 
 本主題示範如何使用**mssql** Visual Studio 程式碼 （VS 程式碼），開發 SQL Server 資料庫的擴充功能。
 
-Visual Studio 程式碼是適用於 Linux、 macOS 和支援擴充功能的 Windows 圖形化的程式碼編輯器。 [ **Mssql** VS Code 擴充功能]可讓您連接到 SQL Server，使用 TRANSACT-SQL (T-SQL)，查詢和檢視結果。
+Visual Studio 程式碼是適用於 Linux、 macOS 和支援擴充功能的 Windows 圖形化的程式碼編輯器。 [**Mssql** VS Code 擴充功能]可讓您連接到 SQL Server，使用 TRANSACT-SQL (T-SQL)，查詢和檢視結果。
 
 ## <a name="install-vs-code"></a>安裝 Vscode
 1. 如果尚未安裝 VS Code[下載並安裝 VS Code]您的電腦上。
@@ -157,7 +157,7 @@ Visual Studio 程式碼是適用於 Linux、 macOS 和支援擴充功能的 Wind
 
 4. 在片段中，輸入**員工**資料表名稱。
 
-5. 按** 索引標籤**，然後輸入**dbo**結構描述名稱。
+5. 按 **索引標籤**，然後輸入**dbo**結構描述名稱。
 
    > [!NOTE]
    > 之後加入程式碼片段，您必須輸入的資料表和結構描述名稱，而不需要變更焦點從 VS 程式碼編輯器。
