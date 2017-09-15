@@ -1,5 +1,5 @@
 ---
-title: "建立模型 (Master Data Services) |Microsoft 文件"
+title: "建立模型 (Master Data Services) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/01/2017
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - creating models [Master Data Services]
 ms.assetid: 9bb3b3b3-bde8-44aa-ad62-eaae21188141
 caps.latest.revision: 13
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1791558cec3999d3a038bc3b651cd3c8edbd307d
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 1a32cc8f778496f5609d44c17b69623b75b8c240
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="create-a-model-master-data-services"></a>建立模型 (Master Data Services)
@@ -47,7 +47,7 @@ ms.lasthandoff: 08/02/2017
   
 5.  (選擇性) 在 [描述] 欄位中，輸入模型描述。  
   
-6.  在 [Log Retention Days]\ (記錄保留天數)  欄位中，選取其中一個選項來保留記錄資料。 預設值為 [系統設定] ，表示會從 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]中的系統設定繼承值。 如需詳細資訊，請參閱 [系統設定 &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md)。  
+6.  在 [Log Retention Days] (記錄保留天數)  欄位中，選取其中一個選項來保留記錄資料。 預設值為 [系統設定] ，表示會從 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]中的系統設定繼承值。 如需詳細資訊，請參閱 [系統設定 &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md)。  
   
      若要覆寫系統設定而不移除交易記錄資料，請選取 [否] 。 若只要保留今天的記錄資料並截斷過去幾天的所有記錄資料，請選取 [是]  ，然後將 [天數]  欄位設為 0。 若要保留指定天數的記錄資料，請選取 [是]  ，然後將 [天數]  欄位設為該天數。  
   
@@ -57,7 +57,7 @@ ms.lasthandoff: 08/02/2017
   
  對於每個建立的模型，會將含有八個資料行的資料列加入方格中。 八個資料行如下：  
   
--   **狀態**︰模型狀態。 當您按一下**儲存模型** 按鈕，![更新](../master-data-services/media/mds-model-status-updating.png "更新")影像隨即顯示，表示正在更新模型。 如果發生錯誤時建立或編輯模型時，![錯誤](../master-data-services/media/mds-model-status-error.png "錯誤")影像隨即顯示。 否則，狀態為正常並顯示 ![[確定]](../master-data-services/media/mds-model-status-ok.png "[確定]") 影像。  
+-   **狀態**︰模型狀態。 當您按一下 [儲存模型] 按鈕時，會顯示![正在更新](../master-data-services/media/mds-model-status-updating.png "正在更新")影像，表示正在更新模型。 如果建立或編輯模型時發生錯誤，則會顯示![錯誤](../master-data-services/media/mds-model-status-error.png "錯誤")影像。 否則，狀態為正常並顯示 ![[確定]](../master-data-services/media/mds-model-status-ok.png "[確定]") 影像。  
   
 -   **名稱**：模型名稱。  
   
@@ -79,9 +79,9 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="see-also"></a>另請參閱  
  [模型 &#40;Master Data Services&#41;](../master-data-services/models-master-data-services.md)   
- [實體 &#40;Master Data services&#41;](../master-data-services/entities-master-data-services.md)   
- [刪除模型 &#40;Master Data services&#41;](../master-data-services/delete-a-model-master-data-services.md)   
- [編輯模式 &#40;Master Data services&#41;](../master-data-services/edit-model-master-data-services.md)   
+ [實體 &#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)   
+ [刪除模型 &#40;Master Data Services&#41;](../master-data-services/delete-a-model-master-data-services.md)   
+ [編輯模型 &#40;Master Data Services&#41;](../master-data-services/edit-model-master-data-services.md)   
  [交易 &#40;Master Data Services&#41;](../master-data-services/transactions-master-data-services.md)  
   
   

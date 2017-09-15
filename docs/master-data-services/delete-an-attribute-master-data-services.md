@@ -1,5 +1,5 @@
 ---
-title: "刪除屬性 (Master Data Services) |Microsoft 文件"
+title: "刪除屬性 (Master Data Services) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/15/2017
@@ -15,18 +15,18 @@ helpviewer_keywords:
 - deleting attributes [Master Data Services]
 ms.assetid: ec3e66f7-0e35-43d7-a80d-64899948ebfe
 caps.latest.revision: 6
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1d36564680430b7d35c415e23586c7fd0c47e084
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 630faa003648c05c9f159b8dfa5fb6369823c040
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="delete-an-attribute-master-data-services"></a>刪除屬性 (Master Data Services)
-  在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中，如果您想要永久刪除某個屬性以及所有關聯的屬性值，請刪除此屬性。  
+  在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，如果您想要永久刪除某個屬性以及所有關聯的屬性值，請刪除此屬性。  
   
 ## <a name="prerequisites"></a>必要條件  
  若要執行此程序：  
@@ -63,9 +63,9 @@ ms.lasthandoff: 08/02/2017
 8.  在確認對話方塊中按一下 **[確定]**。  
   
 ## <a name="see-also"></a>另請參閱  
- [屬性 & #40;Master Data services& #41;](../master-data-services/attributes-master-data-services.md)   
- [網域型屬性 & #40;Master Data services& #41;](../master-data-services/domain-based-attributes-master-data-services.md)   
- [建立文字屬性 & #40;Master Data services& #41;](../master-data-services/create-a-text-attribute-master-data-services.md)   
- [建立網域屬性 & #40;Master Data services& #41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)  
+ [屬性 &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)   
+ [網域屬性 &#40;Master Data Services&#41;](../master-data-services/domain-based-attributes-master-data-services.md)   
+ [建立文字屬性 &#40;Master Data Services&#41;](../master-data-services/create-a-text-attribute-master-data-services.md)   
+ [建立網域屬性 &#40;Master Data Services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)  
   
   

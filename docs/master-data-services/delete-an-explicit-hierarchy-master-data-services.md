@@ -1,5 +1,5 @@
 ---
-title: "刪除明確階層 (Master Data Services) |Microsoft 文件"
+title: "刪除明確階層 (Master Data Services) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/01/2017
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - deleting explicit hierarchies [Master Data Services]
 ms.assetid: 4ce177b0-9884-47a2-9cea-212e845dd762
 caps.latest.revision: 6
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5f645b7868c035d95fdc42c20828555e7c1a336e
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: c1e0b7164a6ca7d43c2a223839cff9df1960df60
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="delete-an-explicit-hierarchy-master-data-services"></a>刪除明確階層 (Master Data Services)
@@ -48,14 +48,14 @@ ms.lasthandoff: 08/02/2017
   
 4.  按一下 [明確階層] 。  
   
-5.  在 [Manage Explicit Hierarchy] \ (管理明確階層) 頁面上，按一下您想要刪除的明確階層。  
+5.  在 [Manage Explicit Hierarchy]  (管理明確階層) 頁面上，按一下您想要刪除的明確階層。  
   
 6.  按一下 **[編輯]**。  
   
 7.  在確認對話方塊中按一下 **[確定]**。  
   
 ## <a name="see-also"></a>另請參閱  
- [建立明確階層 &#40;Master Data services&#41;](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)   
- [明確階層 &#40;Master Data services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)  
+ [建立明確階層 &#40;Master Data Services&#41;](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)   
+ [明確階層 &#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "建立檔案屬性 (Master Data Services) |Microsoft 文件"
+title: "建立檔案屬性 (Master Data Services) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/15/2017
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - attributes [Master Data Services], creating file attributes
 ms.assetid: d224886b-2ef1-4658-8b01-2213cc4b8df6
 caps.latest.revision: 8
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: edacb4f71f1cb154ebdf2c01fb614e69f0a64713
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: bb8f5926bf65e2a6628244aab3468c76ade7a192
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="create-a-file-attribute-master-data-services"></a>建立檔案屬性 (Master Data Services)
@@ -42,7 +42,7 @@ ms.lasthandoff: 08/02/2017
   
 |資料行|說明|  
 |------------|-----------------|  
-|狀態|屬性狀態。<br /><br /> 當您按一下 [儲存]![更新狀態的圖示](../master-data-services/media/mds-statusicon-updating.png "更新狀態的圖示")影像隨即顯示，指出正在更新屬性。<br /><br /> 如果發生錯誤時建立或編輯屬性，![的錯誤狀態的圖示](../master-data-services/media/mds-statusicon-error.png "的錯誤狀態的圖示")影像隨即顯示。<br /><br /> 否則，狀態為正常並![[確定] 狀態的圖示](../master-data-services/media/mds-statusicon-ok.png "[確定] 狀態的圖示")影像隨即顯示。|  
+|狀態|屬性狀態。<br /><br /> 當您按一下 [儲存] 時，會顯示![正在更新狀態圖示](../master-data-services/media/mds-statusicon-updating.png "正在更新狀態圖示")影像，表示正在更新屬性。<br /><br /> 如果建立或編輯屬性時發生錯誤，則會顯示![錯誤狀態圖示](../master-data-services/media/mds-statusicon-error.png "錯誤狀態圖示")影像。<br /><br /> 否則，狀態為正常，並顯示![正常狀態圖示](../master-data-services/media/mds-statusicon-ok.png "正常狀態圖示")影像。|  
 |名稱|屬性名稱。|  
 |顯示名稱|屬性的顯示名稱。|  
 |說明|屬性描述。|  
@@ -94,8 +94,8 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="see-also"></a>另請參閱  
  [屬性 &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)   
- [變更屬性名稱和資料類型 &#40;Master Data services&#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
- [建立網域屬性 &#40;Master Data services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)   
- [建立文字屬性 &#40;Master Data services&#41;](../master-data-services/create-a-text-attribute-master-data-services.md)  
+ [變更屬性名稱和資料類型 &#40;Master Data Services&#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
+ [建立網域屬性 &#40;Master Data Services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)   
+ [建立文字屬性 &#40;Master Data Services&#41;](../master-data-services/create-a-text-attribute-master-data-services.md)  
   
   

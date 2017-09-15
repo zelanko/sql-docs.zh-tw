@@ -1,5 +1,5 @@
 ---
-title: "模型部署選項 (Master Data Services) |Microsoft 文件"
+title: "模型部署選項 (Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,14 +11,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: cf1b17b4-47d5-4eba-83f9-fb0555806867
 caps.latest.revision: 6
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b32c2f58468c64d4c311b196f012b1a645bb216f
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 6e4cdd4041ee2065b6cd2aa898068289eda66d9e
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="model-deployment-options-master-data-services"></a>模型部署選項 (Master Data Services)
@@ -44,7 +44,7 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="see-also"></a>另請參閱  
  [使用 MDSModelDeploy 部署模型部署封裝](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)   
- [使用精靈部署模型部署封裝](../master-data-services/deploy-a-model-deployment-package-by-using-the-wizard.md)   
- [部署模型 &#40;Master Data services&#41;](../master-data-services/deploying-models-master-data-services.md)  
+ [使用精靈部署模型部署套件](../master-data-services/deploy-a-model-deployment-package-by-using-the-wizard.md)   
+ [部署模型 &#40;Master Data Services&#41;](../master-data-services/deploying-models-master-data-services.md)  
   
   

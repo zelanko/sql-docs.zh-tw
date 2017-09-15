@@ -1,7 +1,7 @@
 ---
 title: "資料庫引擎的新功能 - SQL Server 2017 | Microsoft Docs"
 ms.custom: 
-ms.date: 07/26/2017
+ms.date: 09/05/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: e4a6157cb56c6db911406585f841046a431eef99
-ms.openlocfilehash: e3d06068b28a6870a5c34286f073c32519428e39
+ms.sourcegitcommit: 60272ce672c0a32738b0084ea86f8907ec7fc0a5
+ms.openlocfilehash: 331ef33b70578c955767eb40680644329a2b6519
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/16/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="whats-new-in-database-engine---sql-server-2017"></a>資料庫引擎的新功能 - SQL Server 2017
@@ -29,12 +29,9 @@ ms.lasthandoff: 08/16/2017
 > [!NOTE]  
 > SQL Server 2017 也包含 SQL Server 2016 Service Pack 中新增的功能。 如需這些項目，請參閱 [SQL Server 2016 (Database Engine) 的新功能](../database-engine/configure-windows/what-s-new-in-sql-server-2016-database-engine.md)。
 
+**增強功能**  
 
-## <a name="sql-server-database-engine-rc1"></a>SQL Server Database Engine (RC1)  
-- CLR 組件現在可以新增至白名單，以解決 CTP 2.0 中所述的 `clr strict security` 功能問題。 新增了 [sp_add_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md)、[sp_drop_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md) 和 [sys.trusted_asssemblies](../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md) 以支援信任組件的白名單。
-
-## <a name="sql-server-database-engine-previous-ctps"></a>SQL Server 資料庫引擎 (舊版的 CTP)  
-- CLR 使用 .NET Framework 中的程式碼存取安全性 (CAS)，而這不再作為安全性界限受支援。 使用 `PERMISSION_SET = SAFE` 所建立的 CLR 組件可以存取外部系統資源、呼叫 Unmanaged 程式碼，以及取得系統管理員權限。 從 [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)] 開始，引進稱為 `clr strict security` 的 `sp_configure` 選項，來增強 CLR 組件的安全性。 `clr strict security` 會依預設啟用，且將 `SAFE` 與 `EXTERNAL_ACCESS` 組件視作已標記為 `UNSAFE` 一樣。 可以基於回溯相容性停用 `clr strict security` 選項，但不建議這麼做。 Microsoft 建議透過具有已獲授與 master 資料庫中 `UNSAFE ASSEMBLY` 權限之對應登入的憑證或非對稱金鑰簽署所有組件。 如需詳細資訊，請參閱 [CLR 嚴格安全性](configure-windows/clr-strict-security.md)。  
+- CLR 使用 .NET Framework 中的程式碼存取安全性 (CAS)，而這不再作為安全性界限受支援。 使用 `PERMISSION_SET = SAFE` 所建立的 CLR 組件可以存取外部系統資源、呼叫 Unmanaged 程式碼，以及取得系統管理員權限。 從 [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)] 開始，引進稱為 `clr strict security` 的 `sp_configure` 選項，來增強 CLR 組件的安全性。 `clr strict security` 會依預設啟用，且將 `SAFE` 與 `EXTERNAL_ACCESS` 組件視作已標記為 `UNSAFE` 一樣。 可以基於回溯相容性停用 `clr strict security` 選項，但不建議這麼做。 Microsoft 建議透過具有已獲授與 master 資料庫中 `UNSAFE ASSEMBLY` 權限之對應登入的憑證或非對稱金鑰簽署所有組件。 CLR 組件現在可以新增至白名單，以解決 `clr strict security` 功能問題。 新增了 [sp_add_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md)、[sp_drop_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md) 和 [sys.trusted_asssemblies](../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md) 以支援信任組件的白名單。 如需詳細資訊，請參閱 [CLR 嚴格安全性](configure-windows/clr-strict-security.md)。  
 - 引進新的 DMF [sys.dm_db_log_stats](../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md)，以公開摘要層級屬性與交易記錄檔的資訊；這在監視交易記錄的健康情況時非常實用。  
 - 可繼續的線上索引重建。 「可繼續的線上索引重建」可讓您在線上索引重建作業發生失敗 (例如容錯移轉至複本或磁碟空間不足) 後，從停止處繼續。 您也可以暫停並於稍後繼續線上索引重建作業。 例如，您可能需要暫時釋出系統資源，才能執行高優先順序的工作；或者，如果大型資料表的可用維護期間太短，則會在另一個維護期間完成索引重建。 最後，可繼續線上索引重建不需要大量記錄空間，以讓您在可繼續重建作業執行時執行記錄截斷。 請參閱 [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md) 和[線上索引作業的指導方針](../relational-databases/indexes/guidelines-for-online-index-operations.md)。
 - **ALTER DATABASE SCOPED CONFIGURATION 的 IDENTITY_CACHE 選項**。 新選項 IDENTITY_CACHE 已新增至 `ALTER DATABASE SCOPED CONFIGURATION` T-SQL 陳述式。 此選項設定為 `OFF` 時，可讓資料庫引擎在伺服器意外地重新啟動或容錯移轉至次要伺服器時，避免識別資料行的值出現間隙。 請參閱 [ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)。   

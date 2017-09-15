@@ -1,5 +1,5 @@
 ---
-title: "連接到 MDS 儲存機制 （MDS 增益集的 Excel） |Microsoft 文件"
+title: "連接到 MDS 儲存機制 (適用於 Excel 的 MDS 增益集) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,14 +11,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 8f427312-4c09-4c8b-b9f9-8b235557a74b
 caps.latest.revision: 12
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 87931c60b791fd106d0476ac037e1dfcd4041fb2
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 29208bf4a5d131e47ded0ba55aa167f6ee80ff3f
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="connect-to-an-mds-repository-mds-add-in-for-excel"></a>連接到 MDS 儲存機制 (適用於 Excel 的 MDS 增益集)
@@ -39,7 +39,7 @@ ms.lasthandoff: 08/02/2017
   
 4.  在 [加入新連接] 對話方塊的 [描述] 欄位中，輸入連接的描述。 當您在工具列上按一下 [連接] 按鈕底下的箭號時，就會顯示這個連接。  
   
-5.  在**MDS 伺服器位址**方塊中，輸入的 URL [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] web 應用程式，例如`http://contoso/mds`。  
+5.  在 [MDS 伺服器位址] 方塊中，鍵入 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式的 URL，例如 `http://contoso/mds`。  
   
     > [!NOTE]  
     >  請確認您使用電腦名稱，不要使用 “localhost”。  

@@ -1,5 +1,5 @@
 ---
-title: "結合資料 （MDS 增益集的 Excel） |Microsoft 文件"
+title: "結合資料 (適用於 Excel 的 MDS 增益集) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,20 +11,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: a867dc15-5a0d-457c-8304-ac323bcf9377
 caps.latest.revision: 6
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 87457a33b1fd66f42baab7ea59dbaa9c2f2123df
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 8a8ee3e56e5b8ed42bca6b30192c3b14686d1240
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="combine-data-mds-add-in-for-excel"></a>結合資料 (適用於 Excel 的 MDS 增益集)
-  在[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]，結合來自兩個工作表的資料，當您想要發行前比較資料。 在此程序中，將兩個工作表中的資料結合為一個工作表。 然後可以進一步進行比較，並判斷哪些資料 (如果有) 將發行到 MDS 儲存機制。  
+  在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，當您要在發行前比較資料時，可以結合兩個工作表的資料。 在此程序中，將兩個工作表中的資料結合為一個工作表。 然後可以進一步進行比較，並判斷哪些資料 (如果有) 將發行到 MDS 儲存機制。  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>必要條件  
   
 -   您必須擁有包含 MDS 管理之資料的工作表。 如需詳細資訊，請參閱 [Export Data to Excel from Master Data Services](../../master-data-services/microsoft-excel-add-in/export-data-to-excel-from-master-data-services.md)(將資料從 Master Data Services 匯入 Excel)。  
   
@@ -48,7 +48,7 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="next-steps"></a>後續步驟  
   
--   若要尋找 MDS 管理與外部資料之間的相似度，請參閱[比對相似資料 &#40;MDS 增益集的 Excel &#41;](../../master-data-services/microsoft-excel-add-in/match-similar-data-mds-add-in-for-excel.md).  
+-   若要尋找 MDS 管理之資料和外部資料之間的相似性，請參閱[比對相似資料 &#40;適用於 Excel 的 MDS 增益集&#41;](../../master-data-services/microsoft-excel-add-in/match-similar-data-mds-add-in-for-excel.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [概觀：將資料匯出至 Excel &#40;適用於 Excel 的 MDS 增益集&#41;](../../master-data-services/microsoft-excel-add-in/overview-exporting-data-to-excel-mds-add-in-for-excel.md)   

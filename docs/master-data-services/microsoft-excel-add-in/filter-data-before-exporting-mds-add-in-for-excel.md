@@ -1,5 +1,5 @@
 ---
-title: "篩選資料，然後再匯出 （MDS 增益集的 Excel） |Microsoft 文件"
+title: "在匯出之前篩選資料 (適用於 Excel 的 MDS 增益集) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,25 +11,25 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 9e30eae0-776b-4a09-aac3-0c0249d92ca5
 caps.latest.revision: 10
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d3bc2b1200364c76321c127823c0b9a6161fe4d0
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 13a0720defc0a9e837f771a73f44bca343773ce1
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
-# <a name="filter-data-before-exporting-mds-add-in-for-excel"></a>（MDS 增益集的 Excel） 匯出之前先篩選資料
-  在[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]，篩選資料，當您想要限制的大小或您要匯出至 Excel 的資料範圍。  
+# <a name="filter-data-before-exporting-mds-add-in-for-excel"></a>在匯出之前篩選資料 (適用於 Excel 的 MDS 增益集)
+  在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] 中，當您想要限制匯入至 Excel 的資料大小或範圍時，請篩選資料。  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>必要條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[總管]** 功能區域的權限。  
   
-### <a name="to-filter-data-before-exporting"></a>若要在匯出之前篩選資料  
+### <a name="to-filter-data-before-exporting"></a>在匯出之前篩選資料  
   
 1.  開啟 Excel，然後在 **[主要資料]** 索引標籤上，連接到 MDS 儲存機制。 如需詳細資訊，請參閱[連接到 MDS 儲存機制 &#40;適用於 Excel 的 MDS 增益集&#41;](../../master-data-services/microsoft-excel-add-in/connect-to-an-mds-repository-mds-add-in-for-excel.md)。  
   
@@ -43,7 +43,7 @@ ms.lasthandoff: 08/02/2017
   
 4.  在功能區上，按一下 **[連接和載入]** 群組中的 **[篩選]**。  
   
-5.  選取要顯示的屬性 (資料行)、設定資料行的順序，並且視需要篩選資料以傳回較少資料列，藉以完成 **[篩選]** 對話方塊。 您可以檢視 **[摘要]** 窗格，以便了解系統即將傳回的資料量。 如需詳細資訊，請參閱[篩選對話方塊 &#40;MDS 增益集的 Excel &#41;](../../master-data-services/microsoft-excel-add-in/filter-dialog-box-mds-add-in-for-excel.md).  
+5.  選取要顯示的屬性 (資料行)、設定資料行的順序，並且視需要篩選資料以傳回較少資料列，藉以完成 **[篩選]** 對話方塊。 您可以檢視 **[摘要]** 窗格，以便了解系統即將傳回的資料量。 如需詳細資訊，請參閱[篩選對話方塊 &#40;適用於 Excel 的 MDS 增益集&#41;](../../master-data-services/microsoft-excel-add-in/filter-dialog-box-mds-add-in-for-excel.md)。  
   
 6.  按一下 **[載入資料]**。 工作表就會填入 MDS 管理的資料。  
   
@@ -56,7 +56,7 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="see-also"></a>另請參閱  
  [概觀：將資料匯出至 Excel &#40;適用於 Excel 的 MDS 增益集&#41;](../../master-data-services/microsoft-excel-add-in/overview-exporting-data-to-excel-mds-add-in-for-excel.md)   
- [篩選對話方塊 &#40;MDS 增益集的 Excel &#41;](../../master-data-services/microsoft-excel-add-in/filter-dialog-box-mds-add-in-for-excel.md)   
+ [篩選對話方塊 &#40;適用於 Excel 的 MDS 增益集&#41;](../../master-data-services/microsoft-excel-add-in/filter-dialog-box-mds-add-in-for-excel.md)   
  [重新排序資料行 &#40;適用於 Excel 的 MDS 增益集&#41;](../../master-data-services/microsoft-excel-add-in/reorder-columns-mds-add-in-for-excel.md)  
   
   

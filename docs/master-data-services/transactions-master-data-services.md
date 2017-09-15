@@ -1,5 +1,5 @@
 ---
-title: "交易 (Master Data Services) |Microsoft 文件"
+title: "交易 (Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/10/2017
 ms.prod: sql-server-2016
@@ -14,21 +14,21 @@ helpviewer_keywords:
 - transactions [Master Data Services]
 ms.assetid: 4cd2fa6f-9c76-4b7a-ae18-d4e5fd2f03f5
 caps.latest.revision: 15
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 841657a13d802ba1af2f81436769f76a3c3aa409
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 98cb408b0ec3d5449f0f81dc363e2278ac107f3d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="transactions-master-data-services"></a>交易 (Master Data Services)
 
 
 --------------------------------------------------
-  在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中，每次對成員採取動作時，就會記錄交易。 交易可由所有使用者檢視，並由系統管理員反轉。 交易會顯示日期、時間、採取動作的使用者以及其他詳細資料。 使用者可以在交易中加入註解，指出交易發生的原因。  
+  在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，每次對成員採取動作時，就會記錄交易。 交易可由所有使用者檢視，並由系統管理員反轉。 交易會顯示日期、時間、採取動作的使用者以及其他詳細資料。 使用者可以在交易中加入註解，指出交易發生的原因。  
   
 ## <a name="when-transaction-are-recorded"></a>記錄交易時  
  當成員發生下列情況時，則記錄交易：  
@@ -47,7 +47,7 @@ ms.lasthandoff: 08/02/2017
  在 [版本管理] 功能區域中，系統管理員可以檢視其可存取模型當中所有使用者的全數交易，並反轉任何交易。
  
 > [!NOTE]  
->  系統管理員可以檢視所有使用者的所有交易，只要不會擁有唯讀權限層級中套用**版本管理**功能區域。 例如，如果系統管理員設定的唯讀權限，以及更新權限等級，系統管理員將無法看到其他使用者交易，因為唯讀的權限將優先於更新權限。
+>  只要系統管理員的 [版本管理] 功能區域未套用唯讀權限層級，即可檢視所有使用者的全數交易。 例如，如果系統管理員設定了唯讀權限和更新權限等級，系統管理員就無法查看其他使用者的交易，因為唯讀權限的優先順序高於更新權限。
   
  若要設定交易記錄資料保留的時間長度，您可以設定 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫系統設定中的 **Log retention in Days** 屬性，或是在建立或編輯模型時設定 [記錄保留天數]。 如需詳細資訊，請參閱[系統設定 &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md) 和[建立模型 &#40;Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md)。  
   
@@ -98,9 +98,9 @@ EXEC mdm.udpEntityStagingBatchTableCleanup @ModelID, @CleanupOlderThanDate;
   
 ## <a name="related-content"></a>相關內容  
   
--   [系統管理員 &#40;Master Data services&#41;](../master-data-services/administrators-master-data-services.md)  
+-   [管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)  
   
--   [註解 &#40;Master Data services&#41;](../master-data-services/annotations-master-data-services.md)  
+-   [註解 &#40;Master Data Services&#41;](../master-data-services/annotations-master-data-services.md)  
   
   
 

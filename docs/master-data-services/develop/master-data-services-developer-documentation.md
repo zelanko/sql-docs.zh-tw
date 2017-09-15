@@ -1,5 +1,5 @@
 ---
-title: "Master Data Services 開發人員文件 |Microsoft 文件"
+title: "Master Data Services 開發人員文件 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-server-2016
@@ -13,14 +13,14 @@ applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 067b1f69-84eb-4a13-b220-120cd63704b4
 caps.latest.revision: 8
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 46b9d4302eb2ba1133fb1840c29112aaebad22b4
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: a63efdc2a7d0501bcc64f3f2281e0389d013bbaa
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="master-data-services-developer-documentation"></a>Master Data Services 開發人員文件
@@ -41,20 +41,20 @@ ms.lasthandoff: 08/02/2017
  [建立主資料管理員 Web 服務 Proxy 類別](../../master-data-services/develop/create-master-data-manager-web-service-proxy-classes.md)  
  描述如何從 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 網站啟用中繼資料發佈，以及如何建立可透過程式設計方式，用來存取 Web 服務作業的 Proxy 類別。  
   
- [分類的 Web 服務作業 &#40;Master Data services&#41;](../../master-data-services/develop/categorized-web-service-operations-master-data-services.md)  
+ [分類的 Web 服務作業 &#40;Master Data Services&#41;](../../master-data-services/develop/categorized-web-service-operations-master-data-services.md)  
  <xref:Microsoft.MasterDataServices.ServiceClient> 類別之 Web 服務作業的分類清單。  
   
 ## <a name="custom-workflows"></a>自訂工作流程  
  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 使用商務規則建立基本工作流程解決方案。 您可以自動更新與驗證資料，並根據您所指定的條件傳送電子郵件通知。 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 中的商務規則可用來管理最常見的工作流程案例。 如果您的工作流程需要更複雜的事件處理 (例如多層審核或複雜決策樹)，可以設定 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 將資料傳送到您所建立的自訂組件。 若要處理自訂工作流程，您必須在 Web 應用程式電腦上設定並啟動 SQL Server MDS 工作流程整合服務，然後建立一個實作 <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender> 介面的組件。  
   
 ### <a name="custom-workflow-content"></a>自訂的工作流程內容  
- [建立自訂工作流程 &#40;Master Data services&#41;](../../master-data-services/develop/create-a-custom-workflow-master-data-services.md)  
+ [建立自訂工作流程 &#40;Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-master-data-services.md)  
  有關如何建立工作流程處理常式組件、如何設定並啟動 SQL Server MDS 工作流程整合服務，以及如何在 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 中建立啟動自訂工作流程之商務規則的指示。  
   
 ## <a name="web-server-namespaces"></a>Web 伺服器命名空間  
  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 會將一組組件安裝在 Web 伺服器電腦上。 這些組件包含可用於進階案例的命名空間，這些案例會自訂 Web 伺服器電腦的行為。 下表描述這些命名空間。  
   
-|네임스페이스|Description|  
+|命名空間|Description|  
 |---------------|-----------------|  
 |<xref:Microsoft.MasterDataServices.Deployment>|包含的類別可用來從模型建立部署封裝以及將封裝部署到 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 資料庫。|  
 |<xref:Microsoft.MasterDataServices.Services>|包含的類別可接收和處理透過 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式對 Web 伺服器電腦所做的 Web 服務作業。|  

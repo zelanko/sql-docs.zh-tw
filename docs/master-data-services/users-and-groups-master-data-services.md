@@ -1,5 +1,5 @@
 ---
-title: "使用者和群組 (Master Data Services) |Microsoft 文件"
+title: "使用者和群組 (Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - groups [Master Data Services], about groups
 ms.assetid: ed08dd2d-248e-4b68-91d4-e9961cb50eed
 caps.latest.revision: 8
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8d08ef5501ae6cbbd17f54c31ab36523fbb28c49
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: e7ce67245871cff2682bec6e314a21fdca31a954
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="users-and-groups-master-data-services"></a>使用者和群組 (Master Data Services)
@@ -46,9 +46,9 @@ ms.lasthandoff: 08/02/2017
  請勿指派其他權限給個別使用者，也不要在具有 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]存取權的多個群組中加入使用者。 此外，除非您希望群組擁有特定成員的受限存取權，否則請勿使用階層成員權限。  
   
 ## <a name="see-also"></a>另請參閱  
- [新增使用者 &#40;Master Data services&#41;](../master-data-services/add-a-user-master-data-services.md)   
- [新增群組 &#40;Master Data services&#41;](../master-data-services/add-a-group-master-data-services.md)   
- [刪除使用者或群組 &#40;Master Data services&#41;](../master-data-services/delete-users-or-groups-master-data-services.md)   
- [測試使用者的權限 &#40;Master Data services&#41;](../master-data-services/test-a-user-s-permissions-master-data-services.md)  
+ [新增使用者 &#40;Master Data Services&#41;](../master-data-services/add-a-user-master-data-services.md)   
+ [新增群組 &#40;Master Data Services&#41;](../master-data-services/add-a-group-master-data-services.md)   
+ [刪除使用者或群組 &#40;Master Data Services&#41;](../master-data-services/delete-users-or-groups-master-data-services.md)   
+ [測試使用者的權限 &#40;Master Data Services&#41;](../master-data-services/test-a-user-s-permissions-master-data-services.md)  
   
   

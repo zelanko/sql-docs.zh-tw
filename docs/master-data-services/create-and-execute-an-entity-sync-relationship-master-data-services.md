@@ -1,5 +1,5 @@
 ---
-title: "建立及執行實體同步關係 (Master Data Services) |Microsoft 文件"
+title: "建立及執行實體同步關係 (Master Data Services) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/01/2017
@@ -12,14 +12,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 0ddceab4-d2b3-4bc1-bd9c-6b852200b414
 caps.latest.revision: 6
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f9efe68604f73df42930c5b3eb348e5c2b3e7965
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 14bc03c2c8c462895102d6c34c62cf23724c706f
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="create-and-execute-an-entity-sync-relationship-master-data-services"></a>建立及執行實體同步關係 (Master Data Services)
@@ -99,7 +99,7 @@ ms.lasthandoff: 08/02/2017
   
 |資料行|說明|  
 |------------|-----------------|  
-|狀態|同步關係狀態。<br /><br /> 當您按一下**儲存**或執行同步處理關聯性![更新狀態的圖示](../master-data-services/media/mds-statusicon-updating.png "更新狀態的圖示")影像隨即顯示，表示正在更新同步處理關聯性。<br /><br /> 如果發生錯誤時建立、 編輯或執行同步關係，![的錯誤狀態的圖示](../master-data-services/media/mds-statusicon-error.png "的錯誤狀態的圖示")影像隨即顯示。<br /><br /> 否則，狀態為正常並![[確定] 狀態的圖示](../master-data-services/media/mds-statusicon-ok.png "[確定] 狀態的圖示")影像隨即顯示。|  
+|狀態|同步關係狀態。<br /><br /> 當您按一下 [儲存] 或執行同步關係時，會顯示![正在更新狀態圖示](../master-data-services/media/mds-statusicon-updating.png "正在更新狀態圖示")影像，表示正在更新同步關係。<br /><br /> 如果建立、編輯或執行同步關係時發生錯誤，則會顯示![錯誤狀態圖示](../master-data-services/media/mds-statusicon-error.png "錯誤狀態圖示")影像。<br /><br /> 否則，狀態為正常，並顯示![正常狀態圖示](../master-data-services/media/mds-statusicon-ok.png "正常狀態圖示")影像。|  
 |來源模型|來源模型名稱。|  
 |來源版本|來源版本名稱。|  
 |來源實體|來源實體名稱。|  

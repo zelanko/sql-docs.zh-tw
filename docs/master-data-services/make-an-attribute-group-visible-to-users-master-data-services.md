@@ -1,37 +1,42 @@
 ---
 title: "讓使用者看到屬性群組 (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b2f6cc27-dbc9-4f3f-961e-e81e76375248
 caps.latest.revision: 6
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: e3922c3ad81de37e73f08bd840def40146c8bf12
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/07/2017
+
 ---
-# 讓使用者看到屬性群組 (Master Data Services)
+# <a name="make-an-attribute-group-visible-to-users-master-data-services"></a>讓使用者看到屬性群組 (Master Data Services)
   當您希望使用者在總管 功能區域的方格上方有索引標籤時，可以在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中對使用者或群組顯示屬性群組。  
   
  當您建立屬性群組時，它會自動隱藏起來不讓所有使用者看到，除了建立它的使用者以外。  
   
-## 必要條件  
+## <a name="prerequisites"></a>必要條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  
   
 -   您必須是模型管理員。 如需詳細資訊，請參閱 [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md) (管理員 (Master Data Services))。  
   
--   至少有一個屬性群組必須存在。 如需詳細資訊，請參閱[建立屬性群組 &#40;Master Data Services&#41;](../master-data-services/create-an-attribute-group-master-data-services.md)。  
+-   至少有一個屬性群組必須存在。 如需詳細資訊，請參閱 [建立屬性群組 &#40;Master Data Services&#41;](../master-data-services/create-an-attribute-group-master-data-services.md)(管理員 (Master Data Services))。  
   
-### 若要讓使用者看到屬性群組  
+### <a name="to-make-an-attribute-group-visible-to-users"></a>若要讓使用者看到屬性群組  
   
 1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]**。  
   
@@ -49,7 +54,7 @@ caps.handback.revision: 6
   
 8.  按一下 **[儲存]**。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [屬性群組 &#40;Master Data Services&#41;](../master-data-services/attribute-groups-master-data-services.md)   
  [建立屬性群組 &#40;Master Data Services&#41;](../master-data-services/create-an-attribute-group-master-data-services.md)  
   

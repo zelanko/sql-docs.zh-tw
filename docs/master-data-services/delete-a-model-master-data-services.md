@@ -1,5 +1,5 @@
 ---
-title: "刪除模型 (Master Data Services) |Microsoft 文件"
+title: "刪除模型 (Master Data Services) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/01/2017
@@ -15,18 +15,18 @@ helpviewer_keywords:
 - models [Master Data Services], deleting models
 ms.assetid: f0ad3cc4-aed7-47c8-94bc-2971fe9fe871
 caps.latest.revision: 6
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: be50aa7e9de502b0db2cb427bf894081196b579e
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: f1ac3250d2d1f852ec43bf88fb206b2009fc0430
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="delete-a-model-master-data-services"></a>刪除模型 (Master Data Services)
-  刪除模型，從 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 移除模型及其所有資料。  
+  刪除模型，從 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]移除模型及其所有資料。  
   
 > [!NOTE]  
 >  完成這個程序時，模型中所有版本的所有物件和所有資料都會永久刪除。  
@@ -52,10 +52,10 @@ ms.lasthandoff: 08/02/2017
   
 6.  在另一個確認對話方塊中按一下 [確定]。  
   
- 方格中的 [狀態]  資料行會顯示模型上的作業狀態。 當您按一下**儲存模型** 按鈕，![更新](../master-data-services/media/mds-model-status-updating.png "更新")影像隨即顯示，表示正在更新模型。 如果發生錯誤時建立或編輯模型時，![錯誤](../master-data-services/media/mds-model-status-error.png "錯誤")影像隨即顯示。 否則，狀態為正常並顯示 ![[確定]](../master-data-services/media/mds-model-status-ok.png "[確定]") 影像。  
+ 方格中的 [狀態]  資料行會顯示模型上的作業狀態。 當您按一下 [儲存模型] 按鈕時，會顯示![正在更新](../master-data-services/media/mds-model-status-updating.png "正在更新")影像，表示正在更新模型。 如果建立或編輯模型時發生錯誤，則會顯示![錯誤](../master-data-services/media/mds-model-status-error.png "錯誤")影像。 否則，狀態為正常並顯示 ![[確定]](../master-data-services/media/mds-model-status-ok.png "[確定]") 影像。  
   
 ## <a name="see-also"></a>另請參閱  
- [模型 &#40;Master Data services&#41;](../master-data-services/models-master-data-services.md)   
- [建立模式 &#40;Master Data services&#41;](../master-data-services/create-a-model-master-data-services.md)  
+ [模型 &#40;Master Data Services&#41;](../master-data-services/models-master-data-services.md)   
+ [建立模型 &#40;Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md)  
   
   

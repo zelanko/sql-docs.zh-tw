@@ -1,5 +1,5 @@
 ---
-title: "屬性 (Master Data Services) |Microsoft 文件"
+title: "屬性 (Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-server-2016
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - attributes [Master Data Services]
 ms.assetid: 95ecb75f-c559-41c3-933c-40ae60a4c2fd
 caps.latest.revision: 13
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 55a658c7d4d0638c2dabf82ba910276f29178aa7
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 5e34382b2252af20e0959940f2f7ac9c06bf0379
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="attributes-master-data-services"></a>屬性 (Master Data Services)
@@ -34,7 +34,7 @@ ms.lasthandoff: 08/02/2017
 ## <a name="how-attributes-relate-to-other-model-objects"></a>屬性如何與其他的模型物件相關聯  
  您可以將屬性視為實體資料表中的資料行。 屬性值是用來描述特定成員的值。  
   
- ![以資料表表示 Master Data Services 實體](../master-data-services/media/mds-conc-entity-table.gif "以資料表表示 Master Data Services 實體")  
+ ![以資料表表示的 Master Data Services 實體](../master-data-services/media/mds-conc-entity-table.gif "以資料表表示的 Master Data Services 實體")  
   
  當您建立包含多個屬性的實體時，您可以將屬性組織成屬性群組。 如需詳細資訊，請參閱 [屬性群組 &#40;Master Data Services&#41;](../master-data-services/attribute-groups-master-data-services.md)。  
   
@@ -64,7 +64,7 @@ ms.lasthandoff: 08/02/2017
 ## <a name="attribute-examples"></a>屬性範例  
  在下列範例中，實體有屬性：Name、Code、Subcategory、StandardCost、ListPrice 和 FilePhoto。 這些屬性描述成員。 每個成員都是由單一資料列的屬性值來表示。  
   
- ![Bike 產品實體資料表](../master-data-services/media/mds-conc-entity-table-w-data.gif "Bike 產品實體資料表")  
+ ![自行車產品實體資料表](../master-data-services/media/mds-conc-entity-table-w-data.gif "自行車產品實體資料表")  
   
  在下列範例中，Product 實體包含：  
   

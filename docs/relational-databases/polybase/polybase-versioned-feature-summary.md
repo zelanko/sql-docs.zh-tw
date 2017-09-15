@@ -1,7 +1,7 @@
 ---
 title: "PolyBase 建立版本的功能摘要 | Microsoft Docs"
 ms.custom: 
-ms.date: 04/13/2016
+ms.date: 08/29/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: dcfa27ad11e3027519398b9424056b52afb1617b
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 61b23238b26af3e127ae889e20487987c358e6c2
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="polybase-versioned-feature-summary"></a>PolyBase 建立版本的功能摘要
@@ -44,8 +44,20 @@ ms.lasthandoff: 08/28/2017
 |從 Microsoft 的 BI 工具執行 PolyBase 查詢|是|否|是|是|   
 
 
+## <a name="pushdown-computation-supported-t-sql-operators"></a>支援計算下推的 T-SQL 運算子
+在 SQL Server 和 APS 中，並非所有 T-SQL 運算子都可以下推到 Hadoop 叢集。 下表列出所有支援的運算子和部分不受支援的運算子。 
 
-  
+||||
+|-|-|-| 
+|**運算子類型**|**可推送到 Hadoop**|**可推送到 Blob 儲存體**|
+|資料行投影|是|否|
+|述詞|是|否|
+|彙總|部分|否|
+|外部資料表之間的聯結|否|否|
+|外部資料表和本機資料表之間的聯結|否|否|
+|排序|否|否|
+
+部分彙總表示最後的彙總必須在資料到達 SQL Server 時立即進行，但是一部分的彙總會在 Hadoop 中進行。 這是大量平行處理系統計算彙總的常見方法。  
 ## <a name="see-also"></a>另請參閱  
  [PolyBase 指南](../../relational-databases/polybase/polybase-guide.md)  
   

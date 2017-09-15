@@ -1,5 +1,5 @@
 ---
-title: "集合權限 (Master Data Services) |Microsoft 文件"
+title: "集合權限 (Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - permissions [Master Data Services], collections
 ms.assetid: 703e1bf5-4b4b-4830-8a5b-f979b09f677d
 caps.latest.revision: 6
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6361881ec6af124d7bbfd6cb4b4b225259823a06
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: ffe773af9f7ced030184ce102f221413b5a83ae4
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="collection-permissions-master-data-services"></a>集合權限 (Master Data Services)
@@ -41,8 +41,8 @@ ms.lasthandoff: 08/02/2017
  讀取、建立、更新和刪除權限可以合併。 指派建立、更新和刪除時，將會自動指派讀取權限。  
   
 ## <a name="see-also"></a>另請參閱  
- [指派模型物件權限 &#40;Master Data services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   
- [集合 &#40;Master Data services&#41;](../master-data-services/collections-master-data-services.md)   
- [模型物件權限 &#40;Master Data services&#41;](../master-data-services/model-object-permissions-master-data-services.md)  
+ [指派模型物件權限 &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   
+ [集合 &#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md)   
+ [模型物件權限 &#40;Master Data Services&#41;](../master-data-services/model-object-permissions-master-data-services.md)  
   
   

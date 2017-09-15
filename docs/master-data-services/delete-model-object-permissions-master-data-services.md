@@ -1,5 +1,5 @@
 ---
-title: "刪除模型物件權限 (Master Data Services) |Microsoft 文件"
+title: "刪除模型物件權限 (Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -15,18 +15,18 @@ helpviewer_keywords:
 - models [Master Data Services], deleting object permissions
 ms.assetid: 859c5952-f600-4940-8064-1afd13f7f6dc
 caps.latest.revision: 7
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a5bf923fa19030df4beebcd560de8fe7b8b5be21
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: bbd4b5ff1b7ddfa2abe6b4c42000b0480d26cb70
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="delete-model-object-permissions-master-data-services"></a>刪除模型物件權限 (Master Data Services)
-  在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中，刪除模型物件權限，移除所做的任何指派。  
+  在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，刪除模型物件權限，移除所做的任何指派。  
   
 ## <a name="prerequisites"></a>必要條件  
  若要執行此程序：  
@@ -58,7 +58,7 @@ ms.lasthandoff: 08/02/2017
 9. 按一下 **[儲存]**。  
   
 ## <a name="see-also"></a>另請參閱  
- [模型物件權限 &#40;Master Data services&#41;](../master-data-services/model-object-permissions-master-data-services.md)   
- [指派模型物件權限 &#40;Master Data services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)  
+ [模型物件權限 &#40;Master Data Services&#41;](../master-data-services/model-object-permissions-master-data-services.md)   
+ [指派模型物件權限 &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)  
   
   

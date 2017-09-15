@@ -1,5 +1,5 @@
 ---
-title: "刪除商務規則 (Master Data Services) |Microsoft 文件"
+title: "刪除商務規則 (Master Data Services) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/01/2017
@@ -15,21 +15,21 @@ helpviewer_keywords:
 - business rules [Master Data Services], deleting
 ms.assetid: b97aa4f9-569f-451d-ad62-65b81f980299
 caps.latest.revision: 7
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6ae93d3c89386382b88b470cbfa3a455302c00c2
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 09868e7f137be741ece555316fd71c536a543490
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="delete-a-business-rule-master-data-services"></a>刪除商務規則 (Master Data Services)
-  在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中，刪除不再需要的商務規則。  
+  在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，刪除不再需要的商務規則。  
   
 > [!NOTE]  
->  您可以避免資料使用商務規則來加以驗證，其方式是排除該商務規則，而不是將它刪除。 如需詳細資訊，請參閱[排除商務規則 &#40;Master Data Services&#41;](../master-data-services/exclude-a-business-rule-master-data-services.md)。  
+>  您可以避免資料使用商務規則來加以驗證，其方式是排除該商務規則，而不是將它刪除。 如需詳細資訊，請參閱 [排除商務規則 &#40;Master Data Services&#41;](../master-data-services/exclude-a-business-rule-master-data-services.md)。  
   
 ## <a name="prerequisites"></a>必要條件  
  若要執行此程序：  
@@ -61,8 +61,8 @@ ms.lasthandoff: 08/02/2017
 10. 在確認對話方塊中按一下 **[確定]**。 刪除的商務規則將不再顯示在方格中。  
   
 ## <a name="see-also"></a>另請參閱  
- [排除商務規則 &#40;Master Data services&#41;](../master-data-services/exclude-a-business-rule-master-data-services.md)   
- [建立及發行商務規則 &#40;Master Data services&#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)   
- [商務規則 &#40;Master Data services&#41;](../master-data-services/business-rules-master-data-services.md)  
+ [排除商務規則 &#40;Master Data Services&#41;](../master-data-services/exclude-a-business-rule-master-data-services.md)   
+ [建立及發行商務規則 &#40;Master Data Services&#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)   
+ [商務規則 &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
   
   

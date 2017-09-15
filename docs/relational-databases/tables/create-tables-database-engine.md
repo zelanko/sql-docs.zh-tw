@@ -15,22 +15,20 @@ ms.assetid: 6f7c6ac5-e6d3-4dca-831e-b28442ba535b
 caps.latest.revision: 19
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 57e54a247e190cdf6e52746ca591af5cc4de8507
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 8cd44c8b384019418a2a913e5f8d13d82120eac2
+ms.openlocfilehash: 6251736a0ba3f21e0dca7f97d32efb03205200d8
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/29/2017
 
 ---
 # <a name="create-tables-database-engine"></a>建立資料表 (Database Engine)
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
-  您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中建立新資料表、為資料表命名，並將它加入至現有資料庫。  
+  您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]，建立新資料表、為資料表命名，並將它新增至現有資料庫。  
   
-> **注意：** 如果您連接到 SQL Azure 資料庫，新的資料表選項將會啟動建立資料表範本指令碼。 請編輯參數，然後執行指令碼來建立新的資料表。 如需詳細資訊，請參閱＜ [SQL Azure 概觀](http://go.microsoft.com/fwlink/?LinkId=163948)＞。  
-   
- 
+
   
 ##  <a name="Permissions"></a> 請先檢查您的權限！  
 這項工作需要資料庫的 CREATE TABLE 權限以及用以建立資料表結構描述的 ALTER 權限。  
@@ -48,7 +46,7 @@ ms.lasthandoff: 06/22/2017
   
 3.  在物件總管中，以滑鼠右鍵按一下資料庫的 [資料表] 節點，然後按一下 [新增資料表]。  
   
-4.  輸入資料行名稱，選擇資料類型，然後選擇是否允許讓每個資料行都是 null，如下圖所示。  
+4.  鍵入資料行名稱，選擇資料類型，然後選擇是否允許讓每個資料行都是 null，如下圖所示：  
   
      ![AddColumnsinTableDesigner](../../relational-databases/tables/media/addcolumnsintabledesigner.gif "AddColumnsinTableDesigner")  
   
@@ -56,7 +54,7 @@ ms.lasthandoff: 06/22/2017
   
 6.  若要指定資料行做為主索引鍵，請以滑鼠右鍵按一下資料行並選取 [設定主索引鍵]。 如需詳細資訊，請參閱 [Create Primary Keys](../../relational-databases/tables/create-primary-keys.md)。  
   
-7.  若要建立外部索引鍵關聯性、檢查條件約束或索引，請在 [資料表設計工具] 窗格中按一下滑鼠右鍵並選取清單中的物件，如下圖所示。  
+7.  若要建立外部索引鍵關聯性、檢查條件約束或索引，請在 [資料表設計工具] 窗格中按一下滑鼠右鍵並選取清單中的物件，如下圖所示：  
   
      ![AddTableObjects](../../relational-databases/tables/media/addtableobjects.gif "AddTableObjects")  
   

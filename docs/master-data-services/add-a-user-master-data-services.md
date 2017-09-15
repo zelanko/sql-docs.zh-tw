@@ -1,5 +1,5 @@
 ---
-title: "新增使用者 (Master Data Services) |Microsoft 文件"
+title: "新增使用者 (Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - adding users [Master Data Services]
 ms.assetid: 44262bdd-430c-4337-ac92-9333f54c7039
 caps.latest.revision: 7
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1863b3b30a9b3f52e13cf180681508a64a817c0c
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 1d1a040d33857ffa267a59c446d1990fd6e95058
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="add-a-user-master-data-services"></a>加入使用者 (Master Data Services)
@@ -46,7 +46,7 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="next-steps"></a>後續步驟  
   
--   [指派功能區域權限 &#40;Master Data services&#41;](../master-data-services/assign-functional-area-permissions-master-data-services.md)  
+-   [指派功能區域權限 &#40;Master Data Services&#41;](../master-data-services/assign-functional-area-permissions-master-data-services.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [安全性 &#40;Master Data Services&#41;](../master-data-services/security-master-data-services.md)  

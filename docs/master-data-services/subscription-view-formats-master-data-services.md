@@ -1,5 +1,5 @@
 ---
-title: "訂閱檢視格式 (Master Data Services) |Microsoft 文件"
+title: "訂閱檢視格式 (Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,14 +11,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: ff1e2566-ac8f-467d-a6d9-12c3f13879b9
 caps.latest.revision: 9
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5cddce206adbbec42907f426fcd25d92a5e6d91b
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 770c479f7a4361a6c792e7c299181751ca20072b
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="subscription-view-formats-master-data-services"></a>訂閱檢視格式 (Master Data Services)

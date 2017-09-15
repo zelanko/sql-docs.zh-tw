@@ -1,7 +1,7 @@
 ---
 title: "AlwaysOn 可用性群組的 PowerShell Cmdlet 概觀 (SQL Server) | Microsoft Docs"
 ms.custom: 
-ms.date: 05/17/2016
+ms.date: 08/30/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 85c4fe763b9f8fdbff001c516f23c2e5109120e1
+ms.sourcegitcommit: daec226de4b93ae00997c07e25ba84352c5258e4
+ms.openlocfilehash: c9b62d5874c2fbe00a1a9508a865f866578ef1db
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/31/2017
 
 ---
 # <a name="overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server"></a>AlwaysOn 可用性群組的 PowerShell Cmdlet 概觀 (SQL Server)
@@ -56,8 +56,8 @@ ms.lasthandoff: 08/02/2017
   
 |指令程式|描述|支援的項目|  
 |-------------|-----------------|------------------|  
-|**Disable-SqlAlways On**|在伺服器執行個體上停用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 功能。|**Path**、 **InputObject**或 **Name** 參數所指定的伺服器執行個體。 (必須是支援 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]版本)。|  
-|**Enable-SqlAlways On**|在支援 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 功能的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 執行個體上啟用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 。 如需 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 支援的相關資訊，請參閱 [AlwaysOn 可用性群組的必要條件、限制和建議 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)。|支援 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的任何 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]版本。|  
+|**Disable-SqlAlwaysOn**|在伺服器執行個體上停用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 功能。|**Path**、 **InputObject**或 **Name** 參數所指定的伺服器執行個體。 (必須是支援 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]版本)。|  
+|**Enable-SqlAlwaysOn**|在支援 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 功能的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 執行個體上啟用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 。 如需 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 支援的相關資訊，請參閱 [AlwaysOn 可用性群組的必要條件、限制和建議 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)。|支援 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的任何 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]版本。|  
 |**New-SqlHadrEndPoint**|在伺服器執行個體上建立新的資料庫鏡像端點。 在主要與次要資料庫之間進行資料移動時需要這個端點。|任何 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|  
 |**Set-SqlHadrEndpoint**|變更現有資料庫鏡像端點的屬性，例如名稱、狀態或驗證屬性。|支援 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 且缺少資料庫鏡像端點的伺服器執行個體|  
   

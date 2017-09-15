@@ -1,5 +1,5 @@
 ---
-title: "建立明確階層 (Master Data Services) |Microsoft 文件"
+title: "建立明確階層 (Master Data Services) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 04/01/2016
@@ -15,18 +15,18 @@ helpviewer_keywords:
 - explicit hierarchies, creating
 ms.assetid: ba768393-6990-4eda-8cb0-d58cb3cfc2e2
 caps.latest.revision: 10
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 62f9ade96cdeeb658681abd16c81b48edbd84c1a
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 1bbc9d8a78915c3be4a5530c3d47909505dea599
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="create-an-explicit-hierarchy-master-data-services"></a>建立明確階層 (Master Data Services)
-  當您需要成員可存在於任何層級的不完全階層時，可以在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中建立明確階層。 明確階層包含來自單一實體的成員。  
+  當您需要成員可存在於任何層級的不完全階層時，可以在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中建立明確階層。 明確階層包含來自單一實體的成員。  
   
  建立明確階層之後，您可以在總管 功能區域的這個階層中加入成員。  
   
@@ -62,7 +62,7 @@ ms.lasthandoff: 08/02/2017
   
 |名稱|說明|  
 |----------|-----------------|  
-|狀態|實體狀態。 當您按一下 [儲存] 時，下列影像隨即顯示，指出正在更新實體。<br /><br /> ![更新狀態的圖示](../master-data-services/media/mds-statusicon-updating.png "更新狀態的圖示")<br /><br /> 如果建立或編輯實體時發生錯誤，則會顯示下列影像。<br /><br /> ![如需錯誤狀態的圖示](../master-data-services/media/mds-statusicon-error.png "的錯誤狀態的圖示")<br /><br /> 如果狀態正常，則會顯示下列影像。<br /><br /> ![[確定] 狀態的圖示](../master-data-services/media/mds-statusicon-ok.png "[確定] 狀態的圖示")|  
+|狀態|實體狀態。 當您按一下 [儲存] 時，下列影像隨即顯示，指出正在更新實體。<br /><br /> ![正在更新狀態圖示](../master-data-services/media/mds-statusicon-updating.png "正在更新狀態圖示")<br /><br /> 如果建立或編輯實體時發生錯誤，則會顯示下列影像。<br /><br /> ![錯誤狀態圖示](../master-data-services/media/mds-statusicon-error.png "錯誤狀態圖示")<br /><br /> 如果狀態正常，則會顯示下列影像。<br /><br /> ![正常狀態圖示](../master-data-services/media/mds-statusicon-ok.png "正常狀態圖示")|  
 |名稱|明確階層名稱。|  
 |強制性|指定明確階層是否為強制性。|  
 |建立者|建立明確階層之使用者的使用者名稱。|  
@@ -77,9 +77,9 @@ ms.lasthandoff: 08/02/2017
   
   
 ## <a name="see-also"></a>另請參閱  
- [明確階層 &#40;Master Data services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)   
- [具有明確頂層 &#40; 衍生的階層Master Data services&#41;](../master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md)   
- [變更明確階層名稱 &#40;Master Data services&#41;](../master-data-services/change-an-explicit-hierarchy-name-master-data-services.md)  
+ [明確階層 &#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)   
+ [具有明確頂層的衍生階層 &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md)   
+ [變更明確階層名稱 &#40;Master Data Services&#41;](../master-data-services/change-an-explicit-hierarchy-name-master-data-services.md)  
   
   
 

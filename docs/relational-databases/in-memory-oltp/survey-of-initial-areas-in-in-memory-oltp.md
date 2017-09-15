@@ -1,7 +1,7 @@
 ---
 title: "快速入門 1：可讓 Transact-SQL 擁有更快效能的記憶體內部 OLTP 技術 | Microsoft Docs"
 ms.custom: 
-ms.date: 06/12/2017"
+ms.date: 09/05/2017"
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
-ms.openlocfilehash: db24b73ba03d4cde0dfc090ebf2ed8a1661a55e1
+ms.sourcegitcommit: 60272ce672c0a32738b0084ea86f8907ec7fc0a5
+ms.openlocfilehash: 481c0843888345d3a3440dd22cae2135c00863e1
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="survey-of-initial-areas-in-in-memory-oltp"></a>記憶體內部 OLTP 的初始區域調查
@@ -136,7 +136,7 @@ CREATE TABLE 陳述式上的 T-SQL 關鍵字 MEMORY_OPTIMIZED 是建立資料表
   
 #### <a name="natively-compiled-modules"></a>原生編譯模組  
   
-CREATE PROCEDURE 陳述式上的 T-SQL 關鍵字 NATIVE_COMPILATION 為建立原生程序的方式。 每次資料庫重新上線時，都會在第一次使用原生處理序時將 T-SQL 陳述式編譯成機器碼。 T-SQL 指令無法再忍受緩慢解譯每個指令。  
+CREATE PROCEDURE 陳述式上的 T-SQL 關鍵字 NATIVE_COMPILATION 是建立原生編譯預存程序的方式。 每次資料庫重新上線時，都會在第一次使用原生處理序時將 T-SQL 陳述式編譯成機器碼。 T-SQL 指令無法再忍受緩慢解譯每個指令。  
   
 - 我們已經看到原生編譯可讓持續時間只有解譯之持續時間的 1/100。  
   
@@ -218,14 +218,12 @@ CREATE PROCEDURE 陳述式上的 T-SQL 關鍵字 NATIVE_COMPILATION 為建立原
 在 Azure SQL Database 中，您不需要也無法建立這樣的 FILEGROUP。  
 
 下列 T-SQL 指令碼範例會針對記憶體內部 OLTP 啟用資料庫，並設定所有建議的設定。 它會同時使用 SQL Server 和 Azure SQL Database：[enable-in-memory-oltp.sql](https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/in-memory/t-sql-scripts/enable-in-memory-oltp.sql)。
-  
+
+即使資料庫具有 MEMORY_OPTIMIZED_DATA 檔案群組，也不一定支援所有 SQL Server 功能。 如需相關限制的詳細資料，請參閱[記憶體內部 OLTP 不支援的 SQL Server 功能](unsupported-sql-server-features-for-in-memory-oltp.md)。
   
 <a name="create-a-memory-optimized-table-26y"></a>  
   
 ## <a name="4-create-a-memory-optimized-table"></a>4.建立記憶體最佳化資料表  
-  
-  
-  
   
 重要的 Transact-SQL 關鍵字是 MEMORY_OPTIMIZED。  
   
@@ -302,6 +300,7 @@ ALTER TABLE...ADD/DROP 可以從記憶體最佳化資料表或索引新增或移
   
 關鍵字 SCHEMABINDING 表示原生程序中參考的資料表無法卸除，除非先卸除原生程序。 如需詳細資料，請參閱[建立原生編譯的預存程序](../../relational-databases/in-memory-oltp/creating-natively-compiled-stored-procedures.md)。  
   
+請注意，您並不需要為了存取記憶體最佳化資料表，而建立原生編譯的預存程序。 您也可以透過傳統預存程序和隨選批次，來參考記憶體最佳化資料表。
   
 <a name="execute-the-native-proc-31e"></a>  
   

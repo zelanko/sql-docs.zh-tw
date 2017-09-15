@@ -1,5 +1,5 @@
 ---
-title: "合併成員暫存資料表 (Master Data Services) |Microsoft 文件"
+title: "合併成員暫存資料表 (Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 04/01/2016
 ms.prod: sql-server-2016
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - attributes staging table [Master Data Services]
 ms.assetid: 070681ed-be99-49ae-93bd-6402f2134ace
 caps.latest.revision: 14
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e80d2ee59cc1e7b407c0642e97b4fe2077d6f6f1
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 85205881ceb730739152ea60f886723d3f3827ce
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="consolidated-member-staging-table-master-data-services"></a>合併成員暫存資料表 (Master Data Services)
@@ -42,12 +42,12 @@ ms.lasthandoff: 08/02/2017
 |**[字碼]**<br /><br /> 必要項，除非程式碼自動為 **ImportType1** 或 **2** 產生。如需詳細資訊，請參閱[自動建立代碼 &#40;Master Data Services&#41;](../master-data-services/automatic-code-creation-master-data-services.md)。|成員的唯一代碼。|  
 |**名稱**<br /><br /> 選擇性|成員的名稱。|  
 |**NewCode**|唯有在您要變更成員代碼時才使用。|  
-|\<屬性名稱 >|實體中的每個屬性都有一個資料行存在。 將其搭配 **ImportType** **0** 或 **2**使用。 對於自由格式屬性，指定屬性的新文字或字串值。 對於網域屬性，指定將成為屬性之成員的代碼。 對於連結屬性，URL 開頭必須是 **http://**。<br /><br /> <br /><br /> 注意：您無法暫存檔案屬性。|  
+|\<屬性名稱>|實體中的每個屬性都有一個資料行存在。 將其搭配 **ImportType** **0** 或 **2**使用。 對於自由格式屬性，指定屬性的新文字或字串值。 對於網域屬性，指定將成為屬性之成員的代碼。 對於連結屬性，URL 開頭必須是 **http://**。<br /><br /> <br /><br /> 注意：您無法暫存檔案屬性。|  
   
 ## <a name="see-also"></a>另請參閱  
  [概觀：從資料表匯入資料 &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)   
  [檢視暫存期間發生的錯誤 &#40;Master Data Services&#41;](../master-data-services/view-errors-that-occur-during-staging-master-data-services.md)   
- [暫存處理序錯誤 &#40;Master Data services&#41;](../master-data-services/staging-process-errors-master-data-services.md)  
+ [暫存處理序錯誤 &#40;Master Data Services&#41;](../master-data-services/staging-process-errors-master-data-services.md)  
   
   
 

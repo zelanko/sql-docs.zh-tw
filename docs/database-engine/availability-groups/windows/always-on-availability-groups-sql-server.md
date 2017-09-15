@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 519a66344458046238aa4c8ce1b901fe84bacc7f
+ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
+ms.openlocfilehash: 03997ff880842e2cb088ee5f79237a517aca9abb
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="always-on-availability-groups-sql-server"></a>AlwaysOn 可用性群組 (SQL Server)
@@ -89,28 +89,28 @@ ms.lasthandoff: 08/02/2017
     -   PowerShell 指令程式。 如需詳細資訊，請參閱 [AlwaysOn 可用性群組的 PowerShell Cmdlet 概觀 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)。  
   
 ##  <a name="TermsAndDefinitions"></a> 詞彙和定義  
- 可用性群組  
+ **可用性群組**  
  一組一起容錯移轉之資料庫 (「可用性資料庫」) 的容器。  
   
- 可用性資料庫  
+ **可用性資料庫**  
  屬於可用性群組的資料庫。 對於每個可用性資料庫而言，可用性群組會維護單一讀寫複本 (「主要資料庫」) 以及一到八個唯讀複本 (「次要資料庫」)。  
   
- 主要資料庫  
+ **主要資料庫**  
  可用性資料庫的讀寫複本。  
   
- 次要資料庫  
+ **次要資料庫**  
  可用性資料庫的唯讀複本。  
   
- 「可用性複本」  
+ **可用性複本**  
  特定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體所裝載之可用性群組的具現化，它會維護屬於可用性群組之每個可用性資料庫的本機副本。 有兩種類型的可用性複本存在：單一 *「主要複本」* 以及一到八個 *「次要複本」*。  
   
- 「主要複本」  
+ **主要複本**  
  可用性複本，該複本可讓主要資料庫用於用戶端的讀寫連接，同時也將每個主要資料庫的交易記錄檔記錄傳送到每個次要複本。  
   
- 次要複本  
+ **次要複本**  
  可用性複本，該複本會維護每個可用性資料庫的次要副本，並且當做可用性群組的潛在容錯移轉目標。 (選擇性) 可支援以唯讀方式存取次要資料庫的次要複本，可以支援在次要資料庫上建立備份。  
   
- 可用性群組接聽程式  
+ **可用性群組接聽程式**  
  用戶端可連接的伺服器名稱，以便存取 AlwaysOn 可用性群組之主要或次要複本中的資料庫。 可用性群組接聽程式會將內送連接導向至主要複本或唯讀次要複本。  
   
 > [!NOTE]  
@@ -125,7 +125,7 @@ ms.lasthandoff: 08/02/2017
   
 -   [自主資料庫](../../../relational-databases/databases/contained-databases.md)  
   
--   [資料庫加密](../../../relational-databases/security/encryption/transparent-data-encryption-tde.md)  
+-   [資料庫加密](../../../relational-databases/security/encryption/transparent-data-encryption.md)  
   
 -   [資料庫快照集](../../../database-engine/availability-groups/windows/database-snapshots-with-always-on-availability-groups-sql-server.md)  
   

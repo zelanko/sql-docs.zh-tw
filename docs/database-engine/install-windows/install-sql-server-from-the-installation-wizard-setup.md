@@ -1,8 +1,10 @@
 ---
 title: "從安裝精靈安裝 SQL Server 2016 (安裝程式) | Microsoft Docs"
 ms.custom: 
-ms.date: 05/31/2016
-ms.prod: sql-server-2016
+ms.date: 09/06/2016
+ms.prod:
+- sql-server-2016
+- sql-server-2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -19,31 +21,33 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: bc6e45c9947ec5601ff6fc54e0babbc5073ccb3a
+ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
+ms.openlocfilehash: b97afc1f7fd9464e5ef5074e9e2b3d1ccb98d4b0
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/08/2017
 
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>從安裝精靈安裝 SQL Server 2016 (安裝程式)
 
- > 如需舊版 SQL Server 的相關內容，請參閱[從安裝精靈安裝 SQL Server 2014 (安裝程式)](https://msdn.microsoft.com/en-US/library/ms143219(SQL.120).aspx)。
+ > 本文說明如何使用安裝精靈安裝 SQL Server。 它會套用至 [!INCLUDE[SQLServer2016](../../includes/sssql15-md.md)] 和 [!INCLUDE[SQLServer2017](../../includes/sssqlv14-md.md)]。 如需舊版 SQL Server 的相關內容，請參閱[從安裝精靈安裝 SQL Server 2014 (安裝程式)](http://msdn.microsoft.com/library/ms143219(SQL.120).aspx)。
 
-  本主題提供使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安裝程式的安裝精靈安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之新執行個體的逐步程序。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝精靈會針對所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件的安裝提供單一功能樹狀目錄，所以您不需要個別予以安裝。 如需各項可安裝元件的詳細資訊，請參閱 [安裝 SQL Server 2016](../../database-engine/install-windows/installation-for-sql-server-2016.md)。  如需如何個別安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件的詳細資訊，請參閱 [安裝 SQL Server 2016](../../database-engine/install-windows/install-sql-server.md)。  
+本主題提供使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式的安裝精靈安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之新執行個體的逐步程序。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝精靈會針對所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件的安裝提供單一功能樹狀目錄，所以您不需要個別予以安裝。 如需如何個別安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件的詳細資訊，請參閱[安裝 SQL Server](../../database-engine/install-windows/install-sql-server.md#how-to-install-individual-components)。  
 
  這些額外的主題列出了安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的其他方式：  
 
--   [從命令提示字元安裝 SQL Server 2016](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)  
+-   [從命令提示字元安裝 SQL Server](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)  
   
--   [使用組態檔安裝 SQL Server 2016](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md)  
+-   [使用設定檔安裝 SQL Server](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md)  
   
--   [使用 SysPrep 安裝 SQL Server 2016](../../database-engine/install-windows/install-sql-server-using-sysprep.md)  
+-   [使用 SysPrep 安裝 SQL Server](../../database-engine/install-windows/install-sql-server-using-sysprep.md)  
   
 -   [建立新的 SQL Server 容錯移轉叢集 &#40;安裝程式&#41;](../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)  
   
--   [使用安裝精靈升級為 SQL Server 2016 &#40;安裝程式&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md) 
+-   [使用安裝精靈升級 SQL Server &#40;安裝程式&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md) 
 
--   [直接從網際網路安裝 SQL Server 2016 免費版本](../../database-engine/install-windows/install-sql-server.md) 
+## <a name="get-the-installation-media"></a>取得安裝媒體
+
+[!INCLUDE[GetInstallationMedia](../../includes/getssmedia.md)]
   
 ## <a name="prerequisites"></a>必要條件  
  在安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之前，請檢閱 [規劃 SQL Server 安裝](../../sql-server/install/planning-a-sql-server-installation.md)中的主題。  
@@ -53,31 +57,35 @@ ms.lasthandoff: 08/02/2017
  
  ###  <a name="bkmk_ga_instalpatch"></a> 安裝修補程式需求 
 
-Microsoft 發現特定版本的 Microsoft VC++ 2013 Runtime 二進位檔有問題，SQL Server 2016 必須安裝這些二進位檔。 如果不安裝 VC Runtime 二進位檔的這項更新，SQL Server 2016 就可能在特定情況下遇到穩定性問題。 安裝 SQL Server 2016 之前，請先遵循 [SQL Server 2016 版本資訊](../../sql-server/sql-server-2016-release-notes.md#bkmk_ga_instalpatch) 的指示，查看您的電腦是否需要 VC Runtime 二進位檔的修補程式。 
+Microsoft 發現特定版本的 Microsoft VC++ 2013 Runtime 二進位檔問題，SQL Server 必須安裝這些二進位檔。 如果未安裝 VC Runtime 二進位檔的這項更新，SQL Server 就可能在特定情況下遇到穩定性問題。 安裝 SQL Server 之前，請先遵循 [SQL Server 版本資訊](../../sql-server/sql-server-2016-release-notes.md#bkmk_ga_instalpatch)的指示，查看您的電腦是否需要 VC Runtime 二進位檔的修補程式。  
   
-## <a name="to-install-includesscurrentincludessscurrent-mdmd"></a>安裝 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+## <a name="to-install-includessnoversionincludesssnoversion-mdmd"></a>安裝 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)]  
   
 1.  插入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝媒體。 在根資料夾中，按兩下 Setup.exe。 若要從網路共用進行安裝，請找出共用上的根資料夾，然後按兩下 Setup.exe。  
   
-2.  安裝精靈會執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝中心。 若要建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的新安裝，請在左側導覽區域中，按一下 **[安裝]**，然後按一下 **新增 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 獨立安裝或將功能加入到現有安裝**。  
-  
-3.  在 [產品金鑰] 頁面上，選取選項，指出您要安裝免費的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本，或具有 PID 金鑰之產品的產品版本。 如需詳細資訊，請參閱 [SQL Server 2016 的版本和元件](../../sql-server/editions-and-components-of-sql-server-2016.md)。  
+1.  安裝精靈會執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝中心。 若要建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的新安裝，請在左側導覽區域中，按一下 **[安裝]**，然後按一下 **新增 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 獨立安裝或將功能加入到現有安裝**。  
+
+1.  在 [產品金鑰] 頁面上，選取選項，指出您要安裝免費的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本，或具有 PID 金鑰之產品的產品版本。 如需詳細資訊，請參閱 [SQL Server 2017 的版本及支援功能](../../sql-server/editions-and-components-of-sql-server-2017.md)。  
   
      若要繼續進行，請按 **[下一步]**。  
+
+1.  在 [授權條款] 頁面上，檢閱授權合約，並在同意時，選取 [我接受授權條款]  核取方塊，然後按 [下一步] 。 若要協助提升 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，您也可以啟用功能使用方式選項，並傳送報告給 [!INCLUDE[msCoName](../../includes/msconame-md.md)]。  
   
-4.  在 [授權條款] 頁面上，檢閱授權合約，並在同意時，選取 [我接受授權條款]  核取方塊，然後按 [下一步] 。 若要協助提升 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，您也可以啟用功能使用方式選項，並傳送報告給 [!INCLUDE[msCoName](../../includes/msconame-md.md)]。  
+1.  在 [全域規則] 視窗中，如果沒有規則錯誤，安裝程序會自動前進到 [產品更新] 視窗。  
   
-5.  在 [全域規則] 視窗中，如果沒有規則錯誤，安裝程序會自動前進到 [產品更新] 視窗。  
+1.  如果沒有核取控制台\所有控制台項目\Windows Update\變更設定中的 [ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 更新] 核取方塊，則接著會出現 [ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 更新] 頁面。 如果在 [ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 更新] 頁面中核取，會將電腦設定變更為當您掃描 Windows Update 時，包含最新的更新。  
+
+1.  最新可用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 產品更新會隨即顯示在 [產品更新] 頁面上。 如果未偵測到任何產品更新， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式將不會顯示此頁面，而會自動前往 **[安裝安裝程式檔案]** 頁面。  
+
+1.  安裝程式會在 [安裝安裝程式檔案] 頁面上，顯示下載、擷取及安裝安裝程式檔案的進度。 如有找到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式的更新，並指定要包含該更新，將會一併安裝。 如果找不到任何更新，則安裝程式會自動繼續。 
   
-6.  如果沒有核取控制台\所有控制台項目\Windows Update\變更設定中的 [ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 更新] 核取方塊，則接著會出現 [ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 更新] 頁面。 如果在 [ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 更新] 頁面中核取，會將電腦設定變更為當您掃描 Windows Update 時，包含最新的更新。  
+1. 在 [安裝規則] 上，SQL Server 安裝程式會檢查以識別執行安裝程式時可能發生的潛在問題。 如果失敗，請按一下 [狀態] 資料行以取得詳細資訊。 否則，請按一下 [下一步]。 
+
+1. 在 [安裝類型] 上，選擇執行新安裝，或將功能新增至現有安裝。 按一下 **[下一步]**。 
   
-7.  最新可用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 產品更新會隨即顯示在 [產品更新] 頁面上。 如果未偵測到任何產品更新， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式將不會顯示此頁面，而會自動前往 **[安裝安裝程式檔案]** 頁面。  
-  
-8.  安裝程式會在 [安裝安裝程式檔案] 頁面上，顯示下載、擷取及安裝安裝程式檔案的進度。 如有找到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式的更新，並指定要包含該更新，將會一併安裝。  
-  
-9. 在 [安裝程式角色] 頁面上，選取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [功能安裝]，然後按 [下一步] 繼續前往 [特徵選取] 頁面。  
-  
-10. 在 [特徵選取] 頁面上，選取要安裝的元件。 當您選取功能名稱之後，每一個元件群組的描述就會出現在 [功能描述]  窗格中。 您可以選取核取方塊的任何組合。 如需詳細資訊，請參閱 [SQL Server 2016 的版本和元件](../../sql-server/editions-and-components-of-sql-server-2016.md)和 [SQL Server 2016 的版本和支援的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
+1. 在 [特徵選取] 頁面上，選取要安裝的元件。 例如，若要安裝 SQL Server 資料庫引擎的新執行個體，請檢查 [資料庫引擎服務]。
+
+    當您選取功能名稱之後，每一個元件群組的描述就會出現在 [功能描述]  窗格中。 您可以選取核取方塊的任何組合。 如需詳細資訊，請參閱 [SQL Server 2016 的版本和元件](../../sql-server/editions-and-components-of-sql-server-2016.md)和 [SQL Server 2016 的版本和支援的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。
   
      [選取之功能的必要元件]  窗格會顯示選取功能的必要元件。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式將會在這個程序稍後說明的安裝步驟期間安裝尚未安裝的必要條件。  
   
@@ -85,11 +93,11 @@ Microsoft 發現特定版本的 Microsoft VC++ 2013 Runtime 二進位檔有問�
   
      共用元件的指定路徑必須是絕對路徑。 資料夾不可以為壓縮或加密資料夾。 不支援使用對應磁碟機。  
   
-     如果您在 64 位元的作業系統上安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，將會看到下列選項：  
+     SQL Server 使用兩個共用功能目錄：
   
-    1.  共用功能目錄  
+     * 共用功能目錄  
   
-    2.  共用功能目錄 (x86)  
+     * 共用功能目錄 (x86)  
   
      針對上述每個選項所指定的路徑必須是不同的。  
   
@@ -100,11 +108,11 @@ Microsoft 發現特定版本的 Microsoft VC++ 2013 Runtime 二進位檔有問�
      **執行個體識別碼** ：根據預設，此執行個體名稱會當做執行個體識別碼使用。 這是用來識別 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的安裝目錄和登錄機碼。 這是預設執行個體和具名執行個體的狀況。 如果是預設執行個體，執行個體名稱和執行個體識別碼將會是 MSSQLSERVER。 若要使用非預設的執行個體識別碼，請為 [執行個體識別碼]  文字方塊指定其他值。  
   
     > [!NOTE]  
-    >  標準的獨立 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]執行個體 (不論是預設還是具名執行個體) 都不會針對 [執行個體識別碼] 使用非預設的值。  
+    >  標準的獨立 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)]執行個體 (不論是預設還是具名執行個體) 都不會針對 [執行個體識別碼] 使用非預設的值。  
   
      所有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Pack 和升級項目都會套用至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的每一個元件。  
   
-     **安裝的執行個體** ：此方格會顯示執行安裝程式之電腦上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 如果預設執行個體已經安裝在電腦上，您就必須安裝 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的具名執行個體。  
+     **安裝的執行個體** ：此方格會顯示執行安裝程式之電腦上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 如果預設執行個體已經安裝在電腦上，您就必須安裝 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)]的具名執行個體。  
   
      其餘的安裝工作流程會因您對安裝所指定的功能而不同。 您可能不會看到所有頁面，端視您的選取項目而定。  
   
@@ -181,7 +189,7 @@ Microsoft 發現特定版本的 Microsoft VC++ 2013 Runtime 二進位檔有問�
   
 22. 如果指示您重新啟動電腦，請立刻執行。 當您完成安裝時，請務必閱讀安裝精靈所提供的訊息。 如需詳細資訊，請參閱＜ [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)＞。  
   
-## <a name="next-steps"></a>後續步驟  
+## <a name="next-steps"></a>後續的步驟  
  設定新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝。  
   
  為了減少系統的可攻擊介面區， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以選擇性地安裝和啟用主要服務和功能。 如需詳細資訊，請參閱＜ [Surface Area Configuration](../../relational-databases/security/surface-area-configuration.md)＞。  

@@ -1,5 +1,5 @@
 ---
-title: "驗證狀態 (Master Data Services) |Microsoft 文件"
+title: "驗證狀態 (Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,14 +11,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: fc829d25-b3e8-4801-8a94-4df19a7a5971
 caps.latest.revision: 7
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 265ebeb5a23fcc566cbdc20fec235e78bf7ffd93
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 57dc43d11e51b3fcc86746e3f7d9ba6a798d7003
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="validation-statuses-master-data-services"></a>驗證狀態 (Master Data Services)
@@ -34,6 +34,6 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="see-also"></a>另請參閱  
  [根據商務規則驗證版本 &#40;Master Data Services&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)   
- [版本 &#40;Master Data services&#41;](../master-data-services/versions-master-data-services.md)  
+ [版本 &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)  
   
   

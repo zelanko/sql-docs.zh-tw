@@ -1,5 +1,5 @@
 ---
-title: "實體 (Master Data Services) |Microsoft 文件"
+title: "實體 (Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 04/01/2016
 ms.prod: sql-server-2016
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - entities [Master Data Services]
 ms.assetid: 0af057d5-6b73-472b-99eb-9f5eb61a9b5b
 caps.latest.revision: 10
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9d59e75dac7220c1ce03913c0c765e816623cc2a
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: ae0e3ae300d2b896261e7426491448989a5e0f45
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="entities-master-data-services"></a>實體 (Master Data Services)
@@ -35,7 +35,7 @@ ms.lasthandoff: 08/02/2017
 ## <a name="how-entities-relate-to-other-model-objects"></a>實體如何與其他的模型物件相關聯  
  您可以將實體視為包含主要資料的資料表，其中資料列代表成員，而資料行代表屬性。  
   
- ![以資料表表示 Master Data Services 實體](../master-data-services/media/mds-conc-entity-table.gif "以資料表表示 Master Data Services 實體")  
+ ![以資料表表示的 Master Data Services 實體](../master-data-services/media/mds-conc-entity-table.gif "以資料表表示的 Master Data Services 實體")  
   
  以您要管理的主要資料清單來擴展實體。  
   
@@ -55,7 +55,7 @@ ms.lasthandoff: 08/02/2017
 ## <a name="entity-examples"></a>實體範例  
  下列範例顯示具有下列屬性的實體：Name、Code、Subcategory、StandardCost、ListPrice 和 FilePhoto。 這些屬性描述成員。 每個成員都是由單一資料列的屬性值來表示。  
   
- ![Bike 產品實體資料表](../master-data-services/media/mds-conc-entity-table-w-data.gif "Bike 產品實體資料表")  
+ ![自行車產品實體資料表](../master-data-services/media/mds-conc-entity-table-w-data.gif "自行車產品實體資料表")  
   
  在下列範例中，Product 實體是中央實體。 Subcategory 實體是 Product 實體的網域屬性。 Category 實體是 Subcategory 實體的網域屬性。 StandardCost 和 ListPrice 是 Product 實體的自由格式屬性，FilePhoto 則是 Product 實體的檔案屬性。  
   

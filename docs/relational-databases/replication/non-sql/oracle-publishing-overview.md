@@ -1,7 +1,7 @@
 ---
 title: "Oracle 發行概觀 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 08/29/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -20,20 +20,31 @@ caps.latest.revision: 40
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b9a7e0593342073272cfe3aae01ea4c28e5e2304
+ms.translationtype: HT
+ms.sourcegitcommit: 8cd44c8b384019418a2a913e5f8d13d82120eac2
+ms.openlocfilehash: 5574123253385152cc04e879439b8ea8b26b3b27
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/29/2017
 
 ---
-# <a name="oracle-publishing-overview"></a>Oracle 發行概觀
-  從 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]開始，您可以將 Oracle 發行者包含在複寫拓撲中 (從 Oracle 9i 版開始)。 發行伺服器可以部署在任何 Oracle 支援的硬體和作業系統上。 此功能是建立在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 快照式複寫與異動複寫的堅實基礎上，可以提供相近的效能與可用性。  
+# <a name="oracle-publishing-overview"></a>Oracle 發行概觀  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]  
+
+從 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]開始，您可以將 Oracle 發行者包含在複寫拓撲中 (從 Oracle 9i 版開始)。 發行伺服器可以部署在任何 Oracle 支援的硬體和作業系統上。 此功能是建立在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 快照式複寫與異動複寫的堅實基礎上，可以提供相近的效能與可用性。  
   
- Oracle 發行已被取代。 非 SQL Server 訂閱者的異質性複寫已被取代。 若要移動資料，請使用異動資料擷取和 [!INCLUDE[ssIS](../../../includes/ssis-md.md)]建立方案。  
+[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支援下列交易式與快照式複寫的異質性情況：  
   
-> [!CAUTION]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]  
+-   將資料從 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 發行到非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的訂閱者  
+
+-   若要在 Oracle 之間發行資料，具有如下限制：  
+  | |2016 或更早版本 |2017 或更新版本 |
+  |-------|-------|--------|
+  |從 Oracle 複寫 |只支援 Oracle 10g 或更早版本 |只支援 Oracle 10g 或更早版本 |
+  |複寫到 Oracle |最高到 Oracle 12c |不支援 |
+
+
+ 非 SQL Server 訂閱者的異質性複寫已被取代。 Oracle 發行已被取代。 若要移動資料，請使用異動資料擷取和 [!INCLUDE[ssIS](../../../includes/ssis-md.md)]建立方案。  
+
   
 ## <a name="snapshot-replication-for-oracle"></a>Oracle 的快照式複寫  
  實作 Oracle 快照式發行集的方法與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 快照式發行集相似。 針對 Oracle 發行集執行快照集代理程式時，代理程式會連接到 Oracle 發行者，並處理複寫中的每個資料表。 代理程式在處理每個資料表時，會擷取資料表資料列並建立結構描述指令碼，然後儲存在發行集的快照集共用裡。 快照集代理程式每次執行時都會建立整組資料，所以變更追蹤觸發程序不會像使用異動複寫時一樣加入 Oracle 資料表。 快照式複寫提供一個便利的方式，能在對發行系統影響最小的情形下移轉資料。  
@@ -49,3 +60,4 @@ ms.lasthandoff: 06/22/2017
  [異質資料庫複寫](../../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)  
   
   
+

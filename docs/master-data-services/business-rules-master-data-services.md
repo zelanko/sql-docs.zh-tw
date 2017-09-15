@@ -1,5 +1,5 @@
 ---
-title: "商務規則 (Master Data Services) |Microsoft 文件"
+title: "商務規則 (Master Data Services) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/18/2017
@@ -15,25 +15,25 @@ helpviewer_keywords:
 - business rules [Master Data Services]
 ms.assetid: a9f9e41a-2461-4845-b947-58b3a205543f
 caps.latest.revision: 16
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3c8929bcaf6bc937ae6c8bf4bdb0e1b0d2e02f64
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: f28a6820698413cd3e5b2a6f827fd7b5a055d7c1
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="business-rules-master-data-services"></a>商務規則 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，商務規則是用來確保主要資料品質和正確性的規則。 您可以使用商務規則自動更新資料、傳送電子郵件，或啟動商務程序或工作流程。  
   
- 若要檢視的商務規則範例，請參閱[商務規則範例 &#40;Master Data services&#41;](../master-data-services/business-rule-examples-master-data-services.md).  
+ 若要檢視商務規則範例，請參閱[商務規則範例 &#40;Master Data Services&#41;](../master-data-services/business-rule-examples-master-data-services.md)。  
   
 ## <a name="create-and-publish-business-rules"></a>建立及發行商務規則  
  商務規則是您在 **ssMDSmdm** 中建立的 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]陳述式。 如果屬性值符合指定的條件，便會執行動作，否則會執行 Else 動作。 可能的動作包含設定預設值或變更值。 這些動作可以結合傳送電子郵件通知。  
   
- 商務規則可以以特定的屬性值 (例如，如果 Color=Blue，則採取動作) 為基礎，或當屬性值變更 (例如，如果 Color 屬性的值變更時，則採取動作)。 如需有關追蹤非特定變更的詳細資訊，請參閱[變更追蹤 &#40;Master Data services&#41;](../master-data-services/change-tracking-master-data-services.md).  
+ 商務規則可以以特定的屬性值 (例如，如果 Color=Blue，則採取動作) 為基礎，或當屬性值變更 (例如，如果 Color 屬性的值變更時，則採取動作)。 如需追蹤非特定變更的詳細資訊，請參閱[變更追蹤 &#40;Master Data Services&#41;](../master-data-services/change-tracking-master-data-services.md)。  
   
  若要使用商務規則，您必須先建立並發行規則，然後將已發行的規則套用至資料。 您可以透過驗證版本，將規則套用至某個版本的資料子集或所有資料。 直到所有屬性都通過商務規則驗證之後，才能認可版本。  
   
@@ -77,26 +77,26 @@ ms.lasthandoff: 08/02/2017
   
 |工作描述|主題|  
 |----------------------|-----------|  
-|建立及發行新的商務規則。|[建立及發行商務規則 &#40;Master Data services&#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)|  
-|將多個條件加入至商務規則。|[將多個條件加入至商務規則 &#40;Master Data services&#41;](../master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md)|  
-|建立商務規則來要求屬性包含值。|[需要屬性值 &#40;Master Data services&#41;](../master-data-services/require-attribute-values-master-data-services.md)|  
-|建立商務規則根據屬性值變更來執行動作。|[根據屬性值的變更 &#40; 起始動作Master Data services&#41;](../master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)|  
-|建立商務規則，採用使用者定義指令碼作為條件|[商務規則延伸模組 &#40;Master Data services&#41;](../master-data-services/business-rules-extension-master-data-services.md)|  
-|建立商務規則，採用使用者定義指令碼作為動作|[商務規則延伸模組 &#40;Master Data services&#41;](../master-data-services/business-rules-extension-master-data-services.md)|  
-|變更現有商務規則的名稱。|[變更商務規則名稱 &#40;Master Data services&#41;](../master-data-services/change-a-business-rule-name-master-data-services.md)|  
-|設定 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 在套用商務規則時傳送通知。|[設定商務規則來傳送通知 &#40;Master Data services&#41;](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)|  
-|將商務規則套用至特定成員。|[根據商務規則 &#40; 驗證特定成員Master Data services&#41;](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md)|  
-|排除商務規則以便不使用該規則。|[排除商務規則 &#40;Master Data services&#41;](../master-data-services/exclude-a-business-rule-master-data-services.md)|  
-|刪除現有商務規則。|[刪除商務規則 &#40;Master Data services&#41;](../master-data-services/delete-a-business-rule-master-data-services.md)|  
+|建立及發行新的商務規則。|[建立及發行商務規則 &#40;Master Data Services&#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)|  
+|將多個條件加入至商務規則。|[將多個條件新增至商務規則 &#40;Master Data Services&#41;](../master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md)|  
+|建立商務規則來要求屬性包含值。|[要求屬性值 &#40;Master Data Services&#41;](../master-data-services/require-attribute-values-master-data-services.md)|  
+|建立商務規則根據屬性值變更來執行動作。|[根據屬性值變更來起始動作 &#40;Master Data Services&#41;](../master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)|  
+|建立商務規則，採用使用者定義指令碼作為條件|[商務規則延伸模組 &#40;Master Data Services&#41;](../master-data-services/business-rules-extension-master-data-services.md)|  
+|建立商務規則，採用使用者定義指令碼作為動作|[商務規則延伸模組 &#40;Master Data Services&#41;](../master-data-services/business-rules-extension-master-data-services.md)|  
+|變更現有商務規則的名稱。|[變更商務規則名稱 &#40;Master Data Services&#41;](../master-data-services/change-a-business-rule-name-master-data-services.md)|  
+|設定 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 在套用商務規則時傳送通知。|[設定商務規則來傳送通知 &#40;Master Data Services&#41;](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)|  
+|將商務規則套用至特定成員。|[根據商務規則驗證特定成員 &#40;Master Data Services&#41;](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md)|  
+|排除商務規則以便不使用該規則。|[排除商務規則 &#40;Master Data Services&#41;](../master-data-services/exclude-a-business-rule-master-data-services.md)|  
+|刪除現有商務規則。|[刪除商務規則 &#40;Master Data Services&#41;](../master-data-services/delete-a-business-rule-master-data-services.md)|  
   
 ## <a name="related-content"></a>相關內容  
   
 -   [Master Data Services 概觀 &#40;MDS&#41;](../master-data-services/master-data-services-overview-mds.md)  
   
--   [版本 &#40;Master Data services&#41;](../master-data-services/versions-master-data-services.md)  
+-   [版本 &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)  
   
--   [驗證 &#40;Master Data services&#41;](../master-data-services/validation-master-data-services.md)  
+-   [驗證 &#40;Master Data Services&#41;](../master-data-services/validation-master-data-services.md)  
   
--   [變更追蹤 &#40;Master Data services&#41;](../master-data-services/change-tracking-master-data-services.md)  
+-   [變更追蹤 &#40;Master Data Services&#41;](../master-data-services/change-tracking-master-data-services.md)  
   
   

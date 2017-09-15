@@ -1,5 +1,5 @@
 ---
-title: "執行 DQSInstaller.exe 完成 Data Quality Server 安裝 |Microsoft 文件"
+title: "執行 DQSInstaller.exe 完成 Data Quality Server 安裝 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -14,11 +14,11 @@ caps.latest.revision: 33
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: MT
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3e61f0e79491b3c55505031e4b4e1ddef34278ea
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="run-dqsinstallerexe-to-complete-data-quality-server-installation"></a>執行 DQSInstaller.exe 完成 Data Quality Server 安裝
@@ -74,10 +74,10 @@ ms.lasthandoff: 08/02/2017
 |--------------------------------|-----------------|-------------------|  
 |-collation|要用於安裝 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]的伺服器定序。<br /><br /> DQS 僅支援不區分大小寫的定序。 如果您指定區分大小寫的定序，則安裝程式會嘗試使用所指定定序的不區分大小寫版本。 如果沒有不區分大小寫的版本，或是 SQL 不支援定序，則 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 安裝會失敗。<br /><br /> 如果未指定伺服器定序，則會使用預設定序 SQL_Latin1_General_CP1_CI_AS。|`dqsinstaller.exe –collation <collation_name>`|  
 |-upgradedlls|略過重新建立 DQS 資料庫 (DQS_MAIN、DQS_PROJECTS 和 DQS_STAGING_DATA)，並且僅更新 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 資料庫中 DQS 所使用的 SQL Common Language Runtime (SQLCLR) 組件。<br /><br /> 如需詳細資訊，請參閱 [在 .NET Framework 更新之後升級 SQLCLR 組件](../../data-quality-services/install-windows/upgrade-sqlclr-assemblies-after-net-framework-update.md)。|`dqsinstaller.exe -upgradedlls`|  
-|-exportkbs|將所有知識庫匯出到 DQS 備份檔 (.dqsb)。 您還必須指定要匯出所有知識庫的目標完整路徑和檔案名稱。<br /><br /> 如需詳細資訊，請參閱 [Export and Import DQS Knowledge Bases Using DQSInstaller.exe](../../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)。|`dqsinstaller.exe –exportkbs <path><filename>`<br /><br /> 例如， `dqsinstaller.exe –exportkbs c:\DQSBackup.dqsb`|  
-|-importkbs|完成 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 安裝後，從 DQS 備份檔 (.dqsb) 匯入所有知識庫。 您還必須指定要匯入所有知識庫的來源完整路徑和檔案名稱。<br /><br /> 如需詳細資訊，請參閱 [Export and Import DQS Knowledge Bases Using DQSInstaller.exe](../../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)。|`dqsinstaller.exe –importkbs <path><filename>`<br /><br /> 例如， `dqsinstaller.exe –importkbs c:\DQSBackup.dqsb`|  
+|-exportkbs|將所有知識庫匯出到 DQS 備份檔 (.dqsb)。 您還必須指定要匯出所有知識庫的目標完整路徑和檔案名稱。<br /><br /> 如需詳細資訊，請參閱＜ [Export and Import DQS Knowledge Bases Using DQSInstaller.exe](../../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)＞。|`dqsinstaller.exe –exportkbs <path><filename>`<br /><br /> 例如， `dqsinstaller.exe –exportkbs c:\DQSBackup.dqsb`|  
+|-importkbs|完成 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 安裝後，從 DQS 備份檔 (.dqsb) 匯入所有知識庫。 您還必須指定要匯入所有知識庫的來源完整路徑和檔案名稱。<br /><br /> 如需詳細資訊，請參閱＜ [Export and Import DQS Knowledge Bases Using DQSInstaller.exe](../../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)＞。|`dqsinstaller.exe –importkbs <path><filename>`<br /><br /> 例如， `dqsinstaller.exe –importkbs c:\DQSBackup.dqsb`|  
 |-upgrade|升級 DQS 資料庫結構描述。 在先前設定的 DQS 執行個體上安裝 SQL Server 更新之後，您必須使用這個參數。 如需詳細資訊，請參閱＜ [Upgrade DQS Databases Schema After Installing SQL Server Update](../../data-quality-services/install-windows/upgrade-dqs-databases-schema-after-installing-sql-server-update.md)＞。|`dqsinstaller.exe -upgrade`|  
-|-uninstall|從目前的 SQL Server 執行個體解除安裝 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 。<br /><br /> 您也可以將現有資料品質伺服器安裝中的所有知識庫匯出到 DQS 備份檔，然後解除安裝資料品質伺服器。 如需詳細資訊，請參閱 [Export and Import DQS Knowledge Bases Using DQSInstaller.exe](../../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)。<br /><br /> **\*\*重要\* \*** 如果您解除安裝[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]從 SQL server 執行個體使用`–uninstall`命令列參數，所有 DQS 已刪除的物件做為解除安裝程序的一部分。 如 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 移除 Data Quality Server 物件 [中所述，您不必在解除安裝](../../sql-server/install/remove-data-quality-server-objects.md)之後手動刪除這些物件。|**若只要解除安裝資料品質伺服器：**<br /><br /> `dqsinstaller.exe –uninstall`<br /><br /> **若要將所有知識庫匯出到檔案，然後解除安裝資料品質伺服器：**<br /><br /> `dqsinstaller.exe –uninstall <path><filename>`<br /><br /> 例如， `dqsinstaller.exe –uninstall c:\DQSBackup.dqsb`|  
+|-uninstall|從目前的 SQL Server 執行個體解除安裝 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 。<br /><br /> 您也可以將現有資料品質伺服器安裝中的所有知識庫匯出到 DQS 備份檔，然後解除安裝資料品質伺服器。 如需詳細資訊，請參閱＜ [Export and Import DQS Knowledge Bases Using DQSInstaller.exe](../../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)＞。<br /><br /> **\*\* 重要事項 \*\*** 如果使用 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 命令列參數解除安裝 SQL Server 執行個體上的 `–uninstall` ，則在解除安裝過程中將刪除所有 DQS 物件。 如 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 移除 Data Quality Server 物件 [中所述，您不必在解除安裝](../../sql-server/install/remove-data-quality-server-objects.md)之後手動刪除這些物件。|**若只要解除安裝資料品質伺服器：**<br /><br /> `dqsinstaller.exe –uninstall`<br /><br /> **若要將所有知識庫匯出到檔案，然後解除安裝資料品質伺服器：**<br /><br /> `dqsinstaller.exe –uninstall <path><filename>`<br /><br /> 例如， `dqsinstaller.exe –uninstall c:\DQSBackup.dqsb`|  
   
  **若要從命令提示字元執行 DQSInstaller.exe：**  
   
@@ -107,7 +107,7 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="see-also"></a>另請參閱  
  [安裝 Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)   
- [.NET Framework 更新之後升級 SQLCLR 組件](../../data-quality-services/install-windows/upgrade-sqlclr-assemblies-after-net-framework-update.md)   
- [使用 DQSInstaller.exe 的匯出和匯入 DQS Knowledge Bases](../../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)  
+ [在 .NET Framework 更新之後升級 SQLCLR 組件](../../data-quality-services/install-windows/upgrade-sqlclr-assemblies-after-net-framework-update.md)   
+ [使用 DQSInstaller.exe 匯出及匯入 DQS 知識庫](../../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)  
   
   

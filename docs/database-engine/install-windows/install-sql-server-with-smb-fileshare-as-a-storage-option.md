@@ -1,8 +1,10 @@
 ---
-title: "將 SQL Server 與 SMB Fileshare 作為儲存選項一起安裝 | Microsoft Docs"
+title: "安裝 SQL Server 與 SMB 檔案共用儲存體 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.date: 09/05/2017
+ms.prod:
+- sql-server-2016
+- sql-server-2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -15,28 +17,28 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 1f56f9b3716e8950ceea9110f7ece301ac8c0c74
+ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
+ms.openlocfilehash: 862addca6027f4bb5b45a059d9dd65b254c9f92a
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/08/2017
 
 ---
-# <a name="install-sql-server-with-smb-fileshare-as-a-storage-option"></a>將 SQL Server 與 SMB Fileshare 當做儲存選項一起安裝
-  從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]開始，系統資料庫 (Master、Model、MSDB 和 TempDB) 與 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 使用者資料庫可以當作儲存選項與伺服器訊息區塊 (SMB) 檔案伺服器一起安裝。 這同時適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 獨立安裝和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集安裝 (FCI)。  
+# <a name="install-sql-server-with-smb-fileshare-storage"></a>安裝 SQL Server 與 SMB 檔案共用儲存體
+從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]開始，系統資料庫 (Master、Model、MSDB 和 TempDB) 與 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 使用者資料庫可以當作儲存選項與伺服器訊息區塊 (SMB) 檔案伺服器一起安裝。 這同時適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 獨立安裝和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集安裝 (FCI)。  
   
 > [!NOTE]  
 >  SMB 檔案共用目前不支援檔案資料流。  
   
 ## <a name="installation-considerations"></a>安裝考量  
   
-### <a name="smb-file-share-formats"></a>SMB 檔案共用格式：  
+### <a name="smb-fileshare-formats"></a>SMB 檔案共用格式：  
  指定 SMB 檔案共用時，支援獨立和 FCI 資料庫的通用命名慣例 (UNC) 路徑格式如下：  
   
 -   \\\ServerName\ShareName\  
   
 -   \\\ServerName\ShareName  
   
- 如需通用命名慣例的詳細資訊，請參閱 [UNC](http://go.microsoft.com/fwlink/?LinkId=245534) (http://go.microsoft.com/fwlink/?LinkId=245534)。  
+ 如需通用命名慣例的詳細資訊，請參閱 [UNC](http://msdn.microsoft.com/library/gg465305.aspx)。  
   
  不建議使用回送 UNC 路徑 (伺服器名稱為 localhost (127.0.0.1) 的 UNC 路徑，或是本機電腦名稱)。 使用檔案伺服器叢集的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (裝載於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行的相同節點上) 也不受支援，這是特殊案例。 為了避免這個狀況發生，建議將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和檔案伺服器叢集建立在不同的 Windows 叢集上。  
   
@@ -60,10 +62,6 @@ ms.lasthandoff: 08/02/2017
 3.  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
   
 4.  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)  
-  
-5.  [sp_attach_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-db-transact-sql.md)  
-  
-6.  [sp_attach_single_file_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-single-file-db-transact-sql.md)  
   
 ### <a name="installation-options"></a>安裝選項  
   
@@ -102,12 +100,12 @@ ms.lasthandoff: 08/02/2017
     > [!NOTE]  
     >  SMB 共用資料夾的 FULL CONTROL 共用權限及 NTFS 權限僅限於： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務帳戶、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務帳戶以及具有管理伺服器角色的 Windows 使用者。  
   
-     建議使用網域帳戶當做 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務帳戶。 如果將系統帳戶當作服務帳戶使用，請以下列格式授與電腦帳戶的權限：<網域名稱>**\\**<電腦名稱>**$**。  
+     建議使用網域帳戶當做 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務帳戶。 如果將系統帳戶當作服務帳戶使用，請以下列格式授與電腦帳戶的權限：\<<網域名稱>>\\<電腦名稱><>\*$*。  
   
     > [!NOTE]  
     >  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝期間，如果將 SMB 檔案共用指定為儲存選項，則必須將網域帳戶指定為服務帳戶。 在 SMB 檔案共用中，系統帳戶只能指定為服務帳戶後續 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝。  
     >   
-    >  虛擬帳戶無法對遠端位置驗證。 所有虛擬帳戶都使用電腦帳戶的權限。 使用下列格式提供電腦帳戶：<網域名稱>**\\**<電腦名稱>**$**。  
+    >  虛擬帳戶無法對遠端位置驗證。 所有虛擬帳戶都使用電腦帳戶的權限。 使用下列格式佈建電腦帳戶：\<<網域名稱>>\\<<電腦名稱>>\*$*。  
   
 -   在叢集安裝期間，用來安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的帳戶應該擁有當做資料目錄使用之 SMB 檔案共用資料夾，或是其他任何資料夾 (使用者資料庫目錄、使用者資料庫記錄檔目錄、TempDB 目錄、TempDB 記錄檔目錄、備份目錄) 的 FULL CONTROL 權限。  
   

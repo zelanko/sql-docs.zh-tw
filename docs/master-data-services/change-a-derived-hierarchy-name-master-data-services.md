@@ -1,5 +1,5 @@
 ---
-title: "變更衍生的階層名稱 (Master Data Services) |Microsoft 文件"
+title: "變更衍生階層名稱 (Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -13,18 +13,18 @@ helpviewer_keywords:
 - derived hierarchies, changing name
 ms.assetid: 5765e710-d273-4675-aee2-5718273bfdc4
 caps.latest.revision: 6
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fc5f01765ac92ad49b45fbd48b035d8303fd609a
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: c8451eb8bc285c16720b27bf9592c83caa73a4d9
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="change-a-derived-hierarchy-name-master-data-services"></a>變更衍生階層名稱 (Master Data Services)
-  在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中，您可以變更衍生階層的名稱。  
+  在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，您可以變更衍生階層的名稱。  
   
 ## <a name="prerequisites"></a>必要條件  
  若要執行此程序：  
@@ -52,8 +52,8 @@ ms.lasthandoff: 08/02/2017
 8.  按一下 [儲存衍生階層]。  
   
 ## <a name="see-also"></a>另請參閱  
- [衍生的階層 &#40;Master Data services&#41;](../master-data-services/derived-hierarchies-master-data-services.md)   
- [建立衍生的階層 &#40;Master Data services&#41;](../master-data-services/create-a-derived-hierarchy-master-data-services.md)   
- [刪除衍生的階層 &#40;Master Data services&#41;](../master-data-services/delete-a-derived-hierarchy-master-data-services.md)  
+ [衍生階層 &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md)   
+ [建立衍生階層 &#40;Master Data Services&#41;](../master-data-services/create-a-derived-hierarchy-master-data-services.md)   
+ [刪除衍生階層 &#40;Master Data Services&#41;](../master-data-services/delete-a-derived-hierarchy-master-data-services.md)  
   
   

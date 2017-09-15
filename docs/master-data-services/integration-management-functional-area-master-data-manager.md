@@ -1,5 +1,5 @@
 ---
-title: "整合管理功能區域 （主資料管理員） |Microsoft 文件"
+title: "整合管理功能區域 (主資料管理員) | Microsoft Docs"
 ms.custom: 
 ms.date: 04/01/2016
 ms.prod: sql-server-2016
@@ -11,14 +11,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 41ac0e62-860a-4905-a318-68d6f814fb59
 caps.latest.revision: 11
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b8f1c15349368286dcf84a6bd8497be55cf01b60
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: e13e255b24d69ae54561fa9ac6fcd88524615c40
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="integration-management-functional-area-master-data-manager"></a>整合管理功能區域 (主資料管理員)

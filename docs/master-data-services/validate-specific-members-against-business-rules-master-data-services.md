@@ -1,5 +1,5 @@
 ---
-title: "根據商務規則 (Master Data Services) 驗證特定成員 |Microsoft 文件"
+title: "根據商務規則驗證特定成員 (Master Data Services) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/01/2017
@@ -15,21 +15,21 @@ helpviewer_keywords:
 - business rules [Master Data Services], applying to select members
 ms.assetid: 2288ef43-5392-47ea-b651-ec25e5692a14
 caps.latest.revision: 7
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5ca1beaf471a1adfb91ec4fa66c32e0bde3c6514
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 293a1a5f1614df67cd1a28d88a432cc55a3927b7
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="validate-specific-members-against-business-rules-master-data-services"></a>根據商務規則驗證特定成員 (Master Data Services)
   如果您想要更新或依照商務規則驗證成員子集，請在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中選擇性地套用商務規則。  
   
 > [!NOTE]  
->  如果您想要將商務規則套用至某版本模型中的所有成員，請參閱[根據商務規則驗證版本 &#40;Master Data Services&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)。  
+>  如果您想要將商務規則套用至某版本模型中的所有成員，請參閱 [根據商務規則驗證版本 &#40;Master Data Services&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)。  
   
 ## <a name="prerequisites"></a>必要條件  
  若要執行此程序：  

@@ -1,5 +1,5 @@
 ---
-title: "技術參考 (Master Data Services) |Microsoft 文件"
+title: "技術參考 (Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,14 +11,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 54865b00-563a-4932-ad4d-cbfd36b1e6c5
 caps.latest.revision: 12
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 1558b83f4f7a06823b31efede735d915c00fc021
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: db936ba2d68b14a5744f0eac22b0abfd6cb44441
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="technical-reference-master-data-services"></a>技術參考 (Master Data Services)

@@ -1,5 +1,5 @@
 ---
-title: "資料庫物件安全性 (Master Data Services) |Microsoft 文件"
+title: "資料庫物件安全性 (Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-server-2016
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - security [Master Data Services], database objects
 ms.assetid: dd5ba503-7607-45d9-ad0d-909faaade179
 caps.latest.revision: 10
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8bfccd4e9d3df93dbc6a968a1fc5961400afe234
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: f4aef82cdb9291215f41bad29e4de8ff61b031a8
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="database-object-security-master-data-services"></a>資料庫物件安全性 (Master Data Services)
@@ -64,7 +64,7 @@ ms.lasthandoff: 08/02/2017
 |------------|---------------|-----------------|  
 |依商務規則驗證資料版本|mdm.udpValidateModel|EXECUTE|  
   
- 如需詳細資訊，請參閱 [Validation Stored Procedure &#40;Master Data Services&#41;](../master-data-services/validation-stored-procedure-master-data-services.md)。  
+ 如需詳細資訊，請參閱 [驗證預存程序 &#40;Master Data Services&#41;](../master-data-services/validation-stored-procedure-master-data-services.md)。  
   
 ##  <a name="Versions"></a> 刪除版本  
   

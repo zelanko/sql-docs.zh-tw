@@ -1,5 +1,5 @@
 ---
-title: "變更版本名稱 (Master Data Services) |Microsoft 文件"
+title: "變更版本名稱 (Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -13,18 +13,18 @@ helpviewer_keywords:
 - versions [Master Data Services], changing name
 ms.assetid: cba8b814-155f-49c5-b636-afddc5b0de4f
 caps.latest.revision: 7
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c00530ff2b9938314e50cdde09e6f9fc33791fd8
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 52436cbd38e92c97ce939af21eacb089f3b4797f
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="change-a-version-name-master-data-services"></a>變更版本名稱 (Master Data Services)
-  在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中，變更版本名稱，為您的組織進行自訂。  
+  在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，變更版本名稱，為您的組織進行自訂。  
   
 ## <a name="prerequisites"></a>必要條件  
  若要執行此程序：  
@@ -47,8 +47,8 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="see-also"></a>另請參閱  
  [根據商務規則驗證版本 &#40;Master Data Services&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)   
- [鎖定版本 &#40;Master Data services&#41;](../master-data-services/lock-a-version-master-data-services.md)   
- [認可版本 &#40;Master Data services&#41;](../master-data-services/commit-a-version-master-data-services.md)   
- [版本 &#40;Master Data services&#41;](../master-data-services/versions-master-data-services.md)  
+ [鎖定版本 &#40;Master Data Services&#41;](../master-data-services/lock-a-version-master-data-services.md)   
+ [認可版本 &#40;Master Data Services&#41;](../master-data-services/commit-a-version-master-data-services.md)   
+ [版本 &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)  
   
   

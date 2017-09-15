@@ -1,7 +1,7 @@
 ---
 title: MSSQLSERVER_5235 | Microsoft Docs
 ms.custom: 
-ms.date: 04/04/2017
+ms.date: 09/05/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -16,11 +16,11 @@ caps.latest.revision: 16
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: bb6ed08c7ffad0e723dea7ad4774439049de3d99
+ms.translationtype: HT
+ms.sourcegitcommit: 60272ce672c0a32738b0084ea86f8907ec7fc0a5
+ms.openlocfilehash: 4374db61b2ae314fe9a11307d083588e4b15800c
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="mssqlserver5235"></a>MSSQLSERVER_5235
@@ -43,24 +43,25 @@ ms.lasthandoff: 06/22/2017
   
 |錯誤狀態|定義|  
 |---------------|--------------|  
-|狀態 0|陳述式因為中繼資料嚴重損毀而結束。 此訊息將伴隨錯誤 8930 的一或多個執行個體一起出現。|  
-|狀態 1|陳述式因為內部檢查失敗而結束。 此訊息將伴隨錯誤 8967 的一個或多個執行個體一起出現。|  
-|狀態 2|核心儲存引擎系統資料表的基本系統資料表檢查失敗。 此訊息將伴隨錯誤 [7984](../../relational-databases/errors-events/mssqlserver-7984-database-engine-error.md)、7985、[7986](~/relational-databases/errors-events/mssqlserver-7986-database-engine-error.md)、[7987](~/relational-databases/errors-events/mssqlserver-7987-database-engine-error.md) 或 [7988](~/relational-databases/errors-events/mssqlserver-7988-database-engine-error.md) 的一或多個執行個體一起出現。|  
-|狀態 3|DBCC 緊急模式修復失敗，因為重建交易記錄檔之後，無法啟動資料庫。 此訊息將伴隨錯誤 7909 一起出現。|  
-|狀態 4|命令執行期間發生宣告失敗或存取違規。|  
-|狀態 5|發生使 DBCC 命令意外終止的未知錯誤。|  
+|狀態 1|陳述式因為中繼資料嚴重損毀而結束。 此訊息會伴隨錯誤 8930 的一或多個執行個體一起出現。|  
+|狀態 2|陳述式因為內部檢查失敗而結束。 此訊息會伴隨錯誤 8967 的一或多個執行個體一起出現。|  
+|狀態 3|核心儲存引擎系統資料表的基本系統資料表檢查失敗。 此訊息會伴隨錯誤 [7984](../../relational-databases/errors-events/mssqlserver-7984-database-engine-error.md)、7985、[7986](~/relational-databases/errors-events/mssqlserver-7986-database-engine-error.md)、[7987](~/relational-databases/errors-events/mssqlserver-7987-database-engine-error.md) 或 [7988](~/relational-databases/errors-events/mssqlserver-7988-database-engine-error.md) 的一或多個執行個體一起出現。|  
+|狀態 4|DBCC 緊急模式修復失敗，因為重建交易記錄檔之後，無法啟動資料庫。 此訊息會伴隨錯誤 7909 一起出現。|  
+|狀態 5|命令執行期間發生宣告失敗或存取違規。|  
+|狀態 6|發生使 DBCC 命令意外終止的未知錯誤。|  
+|狀態 7|因複本錯誤而異常終止 (AlwaysOn)。|  
   
 ## <a name="user-action"></a>使用者動作  
 下表提供適用於指定之錯誤狀態的使用者動作。  
   
 |錯誤狀態|使用者動作|  
 |---------------|---------------|  
-|狀態 0|從備份還原。|  
-|狀態 1|連絡 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 客戶服務及支援中心 (CSS)。|  
-|狀態 2|從備份還原。|  
+|狀態 1|從備份還原。|  
+|狀態 2|連絡 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 客戶服務及支援中心 (CSS)。|  
 |狀態 3|從備份還原。|  
+|狀態 4|從備份還原。|  
 |狀態 4|連絡 CSS。|  
-|狀態 5|重新執行命令。 如果問題仍然存在，請連絡 CSS。|  
+|狀態 6|重新執行命令。 如果問題仍然存在，請連絡 CSS。|  
   
 ## <a name="see-also"></a>另請參閱  
 [DBCC &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-transact-sql.md)  

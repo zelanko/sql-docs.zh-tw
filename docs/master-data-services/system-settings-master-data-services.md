@@ -1,5 +1,5 @@
 ---
-title: "系統設定 (Master Data Services) |Microsoft 文件"
+title: "系統設定 (Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - system settings [Master Data Services]
 ms.assetid: 83075cdf-f059-4646-8ba2-19be8202f130
 caps.latest.revision: 17
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 0856c24aee54589941ba96aad979ef732d143f37
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: c2c1d9b5af3b0825e7002c44344ac9428d0e8980
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="system-settings-master-data-services"></a>系統設定 (Master Data Services)
@@ -108,11 +108,11 @@ ms.lasthandoff: 08/02/2017
   
 |組態管理員設定|系統設定|說明|  
 |-----------------------------------|--------------------|-----------------|  
-|**通知的主資料管理員 URL**|**MDMRootURL**|URL [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] web 應用程式，例如使用電子郵件通知中的連結`http://constoso/mds`。|  
+|**通知的主資料管理員 URL**|**MDMRootURL**|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式的 URL，其為電子郵件通知中所用的連結，例如 `http://constoso/mds`。|  
 |**通知電子郵件間隔**|**NotificationInterval**|傳送電子郵件的頻率 (以秒為單位)。 預設值為 **120** 秒 (2 分鐘)。|  
 |**單一電子郵件中的通知數**|**NotificationsPerEmail**|將在單一通知電子郵件中列出的驗證問題最大數目。 如果存在其他問題，則這些問題將不包含在該電子郵件中，但會在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中提供。|  
 |**預設電子郵件格式**|**EmailFormat**|所有電子郵件通知的格式。 預設值是 **HTML** 或 **1**。 資料庫設定 **2** 表示 [文字]。<br /><br /> 注意：您可以在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 中覆寫個別使用者的此項目，方式為在使用者的 [一般] 索引標籤上變更並儲存 [電子郵件格式]。|  
-|**電子郵件地址的規則運算式**|**EmailRegExPattern**|在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] [使用者及群組的權限] 功能區域中，用來驗證在使用者 [一般] 索引標籤上輸入之電子郵件地址的規則運算式。 如需規則運算式的詳細資訊，請參閱 MSDN Library 中的 [規則運算式語言項目](http://go.microsoft.com/fwlink/?LinkId=164401) 。|  
+|**電子郵件地址的規則運算式**|**EmailRegExPattern**|在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] [使用者及群組的權限] 功能區域中，用來驗證在使用者 [一般] 索引標籤上輸入之電子郵件地址的規則運算式。如需規則運算式的詳細資訊，請參閱 MSDN Library 中的[規則運算式語言項目](http://go.microsoft.com/fwlink/?LinkId=164401)。|  
 |**Database Mail 帳戶**|**EmailProfilePrincipalAccount**|顯示傳送電子郵件通知時所要使用的 Database Mail 帳戶。 預設的設定檔是 **mds_email_user**。|  
 |**Database Mail 設定檔**|**DatabaseMailProfile**|傳送電子郵件通知時所要使用的 Database Mail 設定檔。 預設值是空白。|  
 ||**ValidationIssueHTML**|當商務規則驗證失敗時，使用者所取得 HTML 格式的電子郵件文字。|  
@@ -150,6 +150,6 @@ ms.lasthandoff: 08/02/2017
 -   **AttributeExplorerMarkAllActionMemberCount**  
   
 ## <a name="see-also"></a>另請參閱  
- [資料庫物件安全性 &#40;Master Data services&#41;](../master-data-services/database-object-security-master-data-services.md)  
+ [資料庫物件安全性 &#40;Master Data Services&#41;](../master-data-services/database-object-security-master-data-services.md)  
   
   

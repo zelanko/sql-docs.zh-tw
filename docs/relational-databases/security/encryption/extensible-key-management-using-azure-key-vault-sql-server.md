@@ -22,11 +22,11 @@ caps.latest.revision: 66
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bbb8b979ba447263a450a9ac4e617977619298a3
+ms.translationtype: HT
+ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
+ms.openlocfilehash: 24d344d6dc7f42ed57c53442f7fada245d25c65a
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>使用 Azure Key Vault 進行可延伸金鑰管理 (SQL Server)
@@ -37,7 +37,7 @@ ms.lasthandoff: 06/22/2017
  本主題描述 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 連接器。 [使用 Azure 金鑰保存庫進行可延伸金鑰管理的設定步驟](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)、[搭配使用 SQL Server 連接器與 SQL 加密功能](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)和 [SQL Server 連接器維護和疑難排解](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)中提供其他資訊。  
   
 ##  <a name="Uses"></a> 什麼是可延伸金鑰管理 (EKM) 以及使用它的原因？  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 提供數種類型的加密來協助保護敏感性資料，包括[透明資料加密 &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption-tde.md)、[資料行層級加密](../../../t-sql/functions/cryptographic-functions-transact-sql.md) (CLE) 和[備份加密](../../../relational-databases/backup-restore/backup-encryption.md)。 在上述所有情況的這個傳統金鑰階層中，資料會使用對稱資料加密金鑰 (DEK) 進行加密。 對稱資料加密金鑰會以儲存在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中的金鑰階層加密，受到更進一步的保護。 替代方案是 EKM 提供者模型，而不是此模型。 使用 EKM 提供者架構可讓 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 透過儲存在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之外部密碼編譯提供者中的非對稱金鑰，來保護資料加密金鑰。 此模型會多增加一層安全性，並分開管理金鑰和資料。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 提供數種類型的加密來協助保護敏感性資料，包括[透明資料加密 &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption.md)、[資料行層級加密](../../../t-sql/functions/cryptographic-functions-transact-sql.md) (CLE) 和[備份加密](../../../relational-databases/backup-restore/backup-encryption.md)。 在上述所有情況的這個傳統金鑰階層中，資料會使用對稱資料加密金鑰 (DEK) 進行加密。 對稱資料加密金鑰會以儲存在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中的金鑰階層加密，受到更進一步的保護。 替代方案是 EKM 提供者模型，而不是此模型。 使用 EKM 提供者架構可讓 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 透過儲存在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之外部密碼編譯提供者中的非對稱金鑰，來保護資料加密金鑰。 此模型會多增加一層安全性，並分開管理金鑰和資料。  
    
  下圖比較使用 Azure 金鑰保存庫系統的傳統服務管理金鑰階層。  
   

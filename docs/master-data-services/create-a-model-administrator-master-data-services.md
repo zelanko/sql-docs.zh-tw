@@ -1,5 +1,5 @@
 ---
-title: "建立模型管理員 (Master Data Services) |Microsoft 文件"
+title: "建立模型管理員 (Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - administrators [Master Data Services], creating
 ms.assetid: dae17afc-3b39-490e-b51f-2d8da26d429e
 caps.latest.revision: 6
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 637227399e0ecd6c1feb1f75b95e38d0b370d816
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: bd9067c224c1ee9f34222f3135bafdd7ddf2b34e
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="create-a-model-administrator-master-data-services"></a>建立模型管理員 (Master Data Services)
@@ -60,9 +60,9 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="see-also"></a>另請參閱  
  [管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)   
- [指派模型物件權限 &#40;Master Data services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   
- [指派階層成員權限 &#40;Master Data services&#41;](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   
- [模型物件權限 &#40;Master Data services&#41;](../master-data-services/model-object-permissions-master-data-services.md)   
- [階層成員權限 &#40;Master Data services&#41;](../master-data-services/hierarchy-member-permissions-master-data-services.md)  
+ [指派模型物件權限 &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   
+ [指派階層成員權限 &#40;Master Data Services&#41;](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   
+ [模型物件權限 &#40;Master Data Services&#41;](../master-data-services/model-object-permissions-master-data-services.md)   
+ [階層成員權限 &#40;Master Data Services&#41;](../master-data-services/hierarchy-member-permissions-master-data-services.md)  
   
   

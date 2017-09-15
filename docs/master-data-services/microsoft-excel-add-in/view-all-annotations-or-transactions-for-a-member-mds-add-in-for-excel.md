@@ -1,5 +1,5 @@
 ---
-title: "檢視所有註解或交易的成員 （MDS 增益集的 Excel） |Microsoft 文件"
+title: "檢視成員的所有註解或交易 (適用於 Excel 的 MDS 增益集) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/01/2017
@@ -12,18 +12,18 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: de90c81c-9e7f-4997-bf96-e22b97b2862c
 caps.latest.revision: 7
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 468c203df40b817dd22ada447172fb4d2afee340
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 84b4772712d6b921614470cff72a6d33f3b1df0e
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="view-all-annotations-or-transactions-for-a-member-mds-add-in-for-excel"></a>檢視成員的所有註解或交易 (適用於 Excel 的 MDS 增益集)
-  在[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]，檢視註解 （註解） 和資料列 （成員） 的交易，當您想要一段時間之後檢視資料的更新。  
+  在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，當您想要在一段時間之後檢視資料的更新時，請檢視資料列 (成員) 的註解和交易。  
   
 ## <a name="prerequisites"></a>必要條件  
  若要執行此程序：  

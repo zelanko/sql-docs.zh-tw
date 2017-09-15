@@ -1,5 +1,5 @@
 ---
-title: "編輯實體 (Master Data Services) |Microsoft 文件"
+title: "編輯實體 (Master Data Services) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/01/2017
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - entities [Master Data Services], changing name
 ms.assetid: 6a5b9f14-6dfc-49d7-a771-e96461d4feae
 caps.latest.revision: 8
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1364db68abbbff7ff13899180af78dc87478737d
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: bd0a151b21d3c8bfb138b4aac457587b84699228
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="edit-an-entity-master-data-services"></a>編輯實體 (Master Data Services)
@@ -63,19 +63,19 @@ ms.lasthandoff: 08/02/2017
 ## <a name="status"></a>狀態  
  方格中的狀態資料行會顯示實體的作業狀態。 當您按一下 [儲存實體] 時，下列影像隨即顯示，指出正在更新實體。  
   
- ![更新狀態的圖示](../master-data-services/media/mds-statusicon-updating.png "更新狀態的圖示")  
+ ![正在更新狀態圖示](../master-data-services/media/mds-statusicon-updating.png "正在更新狀態圖示")  
   
  如果建立或編輯實體時發生錯誤，則會顯示下列影像。  
   
- ![如需錯誤狀態的圖示](../master-data-services/media/mds-statusicon-error.png "的錯誤狀態的圖示")  
+ ![錯誤狀態圖示](../master-data-services/media/mds-statusicon-error.png "錯誤狀態圖示")  
   
  如果狀態正常，則會顯示下列影像。  
   
- ![[確定] 狀態的圖示](../master-data-services/media/mds-statusicon-ok.png "[確定] 狀態的圖示")  
+ ![正常狀態圖示](../master-data-services/media/mds-statusicon-ok.png "正常狀態圖示")  
   
 ## <a name="see-also"></a>另請參閱  
  [明確階層 &#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)   
- [刪除實體 &#40;Master Data services&#41;](../master-data-services/delete-an-entity-master-data-services.md)   
+ [刪除實體 &#40;Master Data Services&#41;](../master-data-services/delete-an-entity-master-data-services.md)   
  [實體 &#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)  
   
   

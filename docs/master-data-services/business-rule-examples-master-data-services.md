@@ -1,5 +1,5 @@
 ---
-title: "商務規則範例 (Master Data Services) |Microsoft 文件"
+title: "商務規則範例 (Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/05/2017
 ms.prod: sql-server-2016
@@ -11,20 +11,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 3974b9be-4b7c-4a37-ab26-1a36ef455744
 caps.latest.revision: 21
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 73f7c989b5a2d99f4eb826f2445adddc7bf9d374
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 57ecfaefcf4ba428e05617b89423e72774a50a51
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="business-rule-examples-master-data-services"></a>商務規則範例 (Master Data Services)
 本文說明 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]的商務規則範例。 您也可以在 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]安裝隨附的範例模型中找到這些範例。   
   
-如需如何部署範例模型的指示，請參閱[Master Data Services 安裝和設定](../master-data-services/master-data-services-installation-and-configuration.md)。  
+如需如何部署範例模型的指示，請參閱 [Master Data Services 安裝和組態](../master-data-services/master-data-services-installation-and-configuration.md)。  
   
   
 ## <a name="business-rule-examples"></a>商務規則範例  
@@ -137,7 +137,7 @@ Else
 範例模型  |實體  |商務規則名稱|說明    
 ---------|---------|---------|------------  
 產品     | 產品        |  預設名稱| 依據 Color 和 Class 屬性值指定預設的產品名稱。 當 Color 屬性值不是 YLO 而 Class 屬性值不是 NA 時，預設名稱是 Yellow NA。         
-在下列商務規則中，如果不符合的色彩和類別屬性`is equal`規則條件， `defaults to` [規則動作](../master-data-services/business-rule-actions-master-data-services.md)套用到名稱屬性。  
+在下列商務規則中，如果 Color 和 Class 屬性不符合 `is equal` 規則條件，則 `defaults to` [規則動作](../master-data-services/business-rule-actions-master-data-services.md)會套用至 Name 屬性。  
 ```  
 If  
     (Color is equal to YLO AND Class is equal to NA) is not true  
@@ -152,7 +152,7 @@ Else
   
 **若要檢視範例模型中的商務規則範例**  
 1. 瀏覽至 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 網站 (您在安裝 MDS 之後所設定)，然後按一下 [系統管理] 方塊。   
-如需設定網站的指示，請參閱[Master Data Services 安裝和設定](../master-data-services/master-data-services-installation-and-configuration.md)。  
+如需設定網站的指示，請參閱 [Master Data Services 安裝和組態](../master-data-services/master-data-services-installation-and-configuration.md)。  
 2. 按一下含有商務規則的範例模型 (如上述表格所列)，然後按一下 [實體]。  
 3. 按一下要套用規則的實體 (如上述表格所列)，然後按一下 [商務規則]。  
 4. 按一下您想要檢視的商務規則名稱。 隨即展開 UI 以顯示 **If**、 **Then** 和 **Else** 陳述式。  

@@ -1,5 +1,5 @@
 ---
-title: "啟用 Data Quality Services 整合與 Master Data Services |Microsoft 文件"
+title: "啟用 Data Quality Services 與 Master Data Services 的整合 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -11,18 +11,18 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: ab32938d-a80e-4106-80d4-94b2de3d67dc
 caps.latest.revision: 5
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2086ab8ca26f813fe2e6c0a6ab3ec924f6024ab3
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 50488f539ba00055f4b515a41dca47594c5d3f0d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="enable-data-quality-services-integration-with-master-data-services"></a>啟用 Data Quality Services 與 Master Data Services 的整合
-  在[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]，比對功能提供 Data Quality Services (DQS)。 此功能必須啟用才能使用。  
+  在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，比對功能是由 Data Quality Services (DQS) 提供。 此功能必須啟用才能使用。  
   
 ## <a name="prerequisites"></a>必要條件  
   
@@ -43,8 +43,8 @@ ms.lasthandoff: 08/02/2017
 5.  在確認對話方塊中按一下 **[確定]**。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料品質比對中的 MDS 增益集的 Excel](../../master-data-services/microsoft-excel-add-in/data-quality-matching-in-the-mds-add-in-for-excel.md)   
- [Master Data Services 增益集的 Microsoft Excel](../../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md)   
+ [適用於 Excel 的 MDS 增益集中的資料品質比對](../../master-data-services/microsoft-excel-add-in/data-quality-matching-in-the-mds-add-in-for-excel.md)   
+ [適用於 Microsoft Excel 的 Master Data Services 增益集](../../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md)   
  [安裝 Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)  
   
   

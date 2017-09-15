@@ -1,7 +1,7 @@
 ---
 title: "異質資料庫複寫 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 08/28/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -18,27 +18,34 @@ caps.latest.revision: 41
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6eee43a7755f2e018a7ed4e9f822983b03b7181a
+ms.translationtype: HT
+ms.sourcegitcommit: 8cd44c8b384019418a2a913e5f8d13d82120eac2
+ms.openlocfilehash: 5fae2c0c64f4aa703661792641dd99009562ba1a
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/29/2017
 
 ---
-# <a name="heterogeneous-database-replication"></a>異質資料庫複寫
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支援下列交易式與快照式複寫的異質性情況：  
-  
--   將資料從 Oracle 發行到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
+# <a name="heterogeneous-database-replication"></a>異質資料庫複寫  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支援下列交易式與快照式複寫的異質性情況：  
   
 -   將資料從 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 發行到非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的訂閱者  
-  
+
+-   在 Oracle 之間發行資料的限制如下：  
+  | |2016 或更早版本 |2017 或更新版本 |
+  |-------|-------|--------|
+  |從 Oracle 複寫 |只支援 Oracle 10g 或更早版本 |只支援 Oracle 10g 或更早版本 |
+  |複寫到 Oracle |最高到 Oracle 12c |不支援 |
+
+
  非 SQL Server 訂閱者的異質性複寫已被取代。 Oracle 發行已被取代。 若要移動資料，請使用異動資料擷取和 [!INCLUDE[ssIS](../../../includes/ssis-md.md)]建立方案。  
   
 > [!CAUTION]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]  
   
 ## <a name="publishing-data-from-oracle"></a>從 Oracle 發行資料  
- 您可以使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 從大部份功能及易用性皆與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 快照式和異動複寫相同的 Oracle 中發行資料。 下列狀況適合從 Oracle 發行資料：  
+ 您可以使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 從大部份功能及易用性皆與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 快照式和異動複寫相同的 Oracle 中發行資料。 這項功能需要 Oracle 10g 或更早版本。 下列狀況適合從 Oracle 發行資料：  
   
 |狀況|描述|  
 |--------------|-----------------|  
@@ -58,3 +65,4 @@ ms.lasthandoff: 06/22/2017
  如需詳細資訊，請參閱 [Non-SQL Server Subscribers](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)。  
   
   
+

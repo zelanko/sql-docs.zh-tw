@@ -1,5 +1,5 @@
 ---
-title: "Web 應用程式的需求 (Master Data Services) |Microsoft 文件"
+title: "Web 應用程式需求 (Master Data Services) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 02/13/2017
@@ -14,14 +14,14 @@ keywords:
 - Master Data Services
 ms.assetid: 9455d3cf-c1b7-4d48-8aff-7dc636ed5dc3
 caps.latest.revision: 40
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: b3ca26f48614ee2ed12275ec148dcaec3c044ce5
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: e8e0c4a9f925192c79dcb998c159d311c80256c5
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="web-application-requirements-master-data-services"></a>Web 應用程式需求 (Master Data Services)
@@ -77,13 +77,13 @@ Install-WindowsFeature Web-App-Dev, NET-Framework-45-Features -IncludeAllSubFeat
 |型別|說明|  
 |----------|-----------------|  
 |Windows 帳戶|您必須使用具備設定 Windows 角色、角色服務與功能，以及在本機電腦之 IIS 中建立與管理應用程式集區、網站與 Web 應用程式的 Windows 帳戶登入 Web 伺服器電腦。|  
-|服務帳戶|建立 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 中的 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]Web 應用程式時，必須為應用程式執行所在之應用程式集區指定識別。 此帳戶可能與建立 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 資料庫時所指定的服務帳戶不同。<br /><br /> 這個識別必須是網域使用者帳戶，而且加入至 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 資料庫的 mds_exec 資料庫角色來進行資料庫存取。 如需詳細資訊，請參閱[資料庫登入、 使用者和角色](../../master-data-services/database-logins-users-and-roles-master-data-services.md)。 這個帳戶也會加入 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Windows 群組 **MDS_ServiceAccounts**，而這個群組在檔案系統中已被授與暫存編譯目錄 **MDSTempDir**的權限。 如需詳細資訊，請參閱[資料夾和檔案的權限 &#40;Master Data Services&#41;](../../master-data-services/folder-and-file-permissions-master-data-services.md)。|  
+|服務帳戶|建立 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 中的 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]Web 應用程式時，必須為應用程式執行所在之應用程式集區指定識別。 此帳戶可能與建立 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 資料庫時所指定的服務帳戶不同。<br /><br /> 這個識別必須是網域使用者帳戶，而且加入至 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 資料庫的 mds_exec 資料庫角色來進行資料庫存取。 如需詳細資訊，請參閱[資料庫登入、使用者和角色](../../master-data-services/database-logins-users-and-roles-master-data-services.md)。 這個帳戶也會加入 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Windows 群組 **MDS_ServiceAccounts**，而這個群組在檔案系統中已被授與暫存編譯目錄 **MDSTempDir**的權限。 如需詳細資訊，請參閱[資料夾和檔案的權限 &#40;Master Data Services&#41;](../../master-data-services/folder-and-file-permissions-master-data-services.md)。|  
   
 ## <a name="see-also"></a>另請參閱  
  [安裝 Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)   
       
  [建立主資料管理員 Web 應用程式 &#40;Master Data Services&#41;](../../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)   
- [Web 組態頁面 &#40;Master Data Services 組態管理員 &#41;](../../master-data-services/web-configuration-page-master-data-services-configuration-manager.md)  
+ [Web 組態頁面 &#40;Master Data Services 組態管理員&#41;](../../master-data-services/web-configuration-page-master-data-services-configuration-manager.md)  
   
   
 

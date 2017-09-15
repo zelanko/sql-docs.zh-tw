@@ -1,5 +1,5 @@
 ---
-title: "概觀： 從資料表 (Master Data Services) 匯入資料 |Microsoft 文件"
+title: "概觀：從資料表匯入資料 (Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - staging process [Master Data Services]
 ms.assetid: 181d1e22-379c-45d1-b03c-e1e22ff14164
 caps.latest.revision: 21
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a33ef299ad64c4bc6ca5a96b43feb888b9147565
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 98127d5652b06fa012d5ac3f6865d73adcce9f7e
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="overview-importing-data-from-tables-master-data-services"></a>概觀：從資料表匯入資料 (Master Data Services)
@@ -78,7 +78,7 @@ ms.lasthandoff: 08/02/2017
   
 -   [分葉成員暫存資料表 &#40;Master Data Services&#41;](../master-data-services/leaf-member-staging-table-master-data-services.md)  
   
--   [合併的成員暫存資料表 &#40;Master Data services&#41;](../master-data-services/consolidated-member-staging-table-master-data-services.md)  
+-   [合併成員暫存資料表 &#40;Master Data Services&#41;](../master-data-services/consolidated-member-staging-table-master-data-services.md)  
   
 -   [關聯性暫存資料表 &#40;Master Data Services&#41;](../master-data-services/relationship-staging-table-master-data-services.md)  
   
@@ -90,15 +90,15 @@ ms.lasthandoff: 08/02/2017
   
  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 包含下列幾種類型的暫存預存程序。  
   
--   stg.udp_<\<名稱 > _Leaf  
+-   stg.udp_\<名稱>_Leaf  
   
--   stg.udp_<\<名稱 > _Consolidated  
+-   stg.udp_\<名稱>_Consolidated  
   
--   stg.udp_<\<名稱 > s h i p  
+-   stg.udp_\<名稱>_Relationship  
   
  模型中的每個實體，都有三個對應至分葉成員、合併的成員以及關聯性暫存資料表的預存程序。  下圖顯示貨幣、客戶及產品實體的暫存預存程序。  
   
- ![暫存預存程序，在 MDS 資料庫](../master-data-services/media/mds-staging-storedprocedures.png "暫存 MDS 資料庫中的預存程序")  
+ ![MDS 資料庫中的暫存預存程序](../master-data-services/media/mds-staging-storedprocedures.png "MDS 資料庫中的暫存預存程序")  
   
  如需預存程序的詳細資訊，請參閱[暫存預存程序 &#40;Master Data Services&#41;](../master-data-services/staging-stored-procedure-master-data-services.md)。  
   
@@ -109,7 +109,7 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="related-content"></a>相關內容  
   
--   [驗證 &#40;Master Data services&#41;](../master-data-services/validation-master-data-services.md)  
+-   [驗證 &#40;Master Data Services&#41;](../master-data-services/validation-master-data-services.md)  
   
 -   [商務規則 &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
   

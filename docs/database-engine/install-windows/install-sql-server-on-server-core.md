@@ -1,8 +1,10 @@
 ---
 title: "在 Server Core 上安裝 SQL Server 2016 | Microsoft Docs"
 ms.custom: 
-ms.date: 11/10/2016
-ms.prod: sql-server-2016
+ms.date: 09/05/2017
+ms.prod:
+- sql-server-2016
+- sql-server-2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -15,16 +17,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 043a3dbcfcdfe75e77e8d50bd9698a05fbbf02c4
+ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
+ms.openlocfilehash: df7853f5a49a4c3b2bab4f5573cd9559e55c8b44
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/08/2017
 
 ---
 # <a name="install-sql-server-on-server-core"></a>在 Server Core 上安裝 SQL Server
-  您可以在 Server Core 安裝上安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 本主題提供在 Server Core 上安裝 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的安裝程式特定詳細資料。  
+您可以在 Server Core 安裝上安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。   
   
- Server Core 安裝選項提供執行特定伺服器角色的基本環境。 可協助降低這些伺服器角色的維護和管理需求，以及減少其攻擊面。 如需 Server Core 的詳細資訊，請參閱[安裝 Server Core](https://technet.microsoft.com/en-us/windows-server-docs/get-started/getting-started-with-server-core)。 如需在 [!INCLUDE[win8srv](../../includes/win8srv-md.md)]上實作之 Server Core 的詳細資訊，請參閱 [Windows Server 2012 的 Server Core](http://msdn.microsoft.com/library/hh846323\(VS.85\).aspx) (http://msdn.microsoft.com/library/hh846323(VS.85).aspx)。  
+Server Core 安裝選項提供執行特定伺服器角色的基本環境。 可協助降低這些伺服器角色的維護和管理需求，以及減少其攻擊面。 如需 Server Core 的詳細資訊，請參閱[安裝 Server Core](http://docs.microsoft.com/windows-server/get-started/getting-started-with-server-core)。 如需在 [!INCLUDE[win8srv](../../includes/win8srv-md.md)]上實作之 Server Core 的詳細資訊，請參閱 [Windows Server 2012 的 Server Core](http://msdn.microsoft.com/library/hh846323\(VS.85\).aspx) (http://msdn.microsoft.com/library/hh846323(VS.85).aspx)。  
   
  如需目前支援的作業系統清單，請參閱[安裝 SQL Server 的硬體和軟體需求](https://docs.microsoft.com/en-us/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server)。
 
@@ -78,9 +80,6 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="install"></a>Install  
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 不支援在 Server Core 作業系統上使用 [安裝精靈] 進行安裝。 在 Server Core 上安裝時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式支援使用 /Q 參數的完整無訊息模式或使用 /QS 參數的簡單無訊息模式。 如需詳細資訊，請參閱 [從命令提示字元安裝 SQL Server 2016](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)。  
-  
-> [!IMPORTANT]  
->  在執行 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] Server Core SP1 或 [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Server Core 的電腦上，無法將 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 與舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 並行安裝。  
   
  除非軟體的使用方式受到個別的合約 (例如 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 大量授權合約或與 ISV 或 OEM 簽訂的協力廠商合約) 所管制，否則不論安裝方法為何，您都必須確認以個人身分或代表實體接受軟體授權條款。  
   
@@ -263,7 +262,7 @@ ms.lasthandoff: 08/02/2017
          如果 DefaultSetup.ini 檔案不存在，請建立檔案並將其複製到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 來源媒體根層級的 \x86 和 \x64 資料夾中。  
   
 ## <a name="configure-remote-access-of-includessnoversionincludesssnoversion-mdmd-on-server-core"></a>設定 Server Core 上 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的遠端存取  
- 執行下面描述的動作，以設定在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] SP1 或 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] 的 Server Core 安裝上執行之 [!INCLUDE[win8srv](../../includes/win8srv-md.md)]執行個體的遠端存取。  
+ 您可以執行下面描述的動作，設定在 Server Core 上執行之 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 執行個體的遠端存取。  
   
 ### <a name="enable-remote-connections-on-the-instance-of-includessnoversionincludesssnoversion-mdmd"></a>在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的執行個體上啟用遠端連接  
 
@@ -291,7 +290,7 @@ ms.lasthandoff: 08/02/2017
 ### <a name="enable-tcpip-on-the-instance-of-includessnoversionincludesssnoversion-mdmd"></a>在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的執行個體上啟用 TCP/IP  
  您可以針對 Server Core 上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，透過 Windows PowerShell 啟用 TCP/IP 通訊協定。 請遵循下列步驟：  
   
-1.  在執行 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] Server Core SP1 或 [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Server Core 的電腦上，啟動 [工作管理員]。  
+1.  在伺服器上，啟動 [工作管理員]。  
   
 2.  在 [應用程式] 索引標籤上，按一下 [新工作]。  
   
@@ -299,7 +298,7 @@ ms.lasthandoff: 08/02/2017
   
 4.  在 [**Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell**] 視窗中，執行下列指令碼以啟用 TCP/IP 通訊協定：  
   
-```  
+```powershell  
 $smo = 'Microsoft.SqlServer.Management.Smo.'  
 $wmi = new-object ($smo + 'Wmi.ManagedComputer')  
 # Enable the TCP protocol on the default instance.  If the instance is named, replace MSSQLSERVER with the instance name in the following line.  
@@ -331,9 +330,9 @@ Setup.exe /Q /Action=Uninstall /FEATURES=SQLEngine,AS,IS /INSTANCENAME=MSSQLSERV
 3.  在 [建立新工作] 對話方塊的 [開啟] 欄位中，輸入 **cmd**，然後[!INCLUDE[clickOK](../../includes/clickok-md.md)]。  
   
 ## <a name="see-also"></a>另請參閱  
- [使用組態檔安裝 SQL Server 2016](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md)   
- [從命令提示字元安裝 SQL Server 2016](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
- [SQL Server 2016 版本支援的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)   
+ [使用組態檔安裝 SQL Server](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md)   
+ [從命令提示字元安裝 SQL Server](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
+ [SQL Server 2017 的版本與支援功能](../../sql-server/editions-and-components-of-sql-server-2017.md)   
  [安裝 Server Core](http://technet.microsoft.com/windows-server-docs/get-started/getting-started-with-server-core)   
  [以 Sconfig.cmd 設定 Windows Server 2016 的 Server Core 安裝](http://technet.microsoft.com/windows-server-docs/get-started/sconfig-on-ws2016)   
  [Windows PowerShell 中的容錯移轉叢集 Cmdlet](http://technet.microsoft.com/itpro/powershell/windows/failover-clusters/index)   

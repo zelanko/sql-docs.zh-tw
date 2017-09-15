@@ -1,5 +1,5 @@
 ---
-title: "分類 Web 服務作業 (Master Data Services) |Microsoft 文件"
+title: "分類的 Web 服務作業 (Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-server-2016
@@ -13,14 +13,14 @@ applies_to:
 - SQL Server 2016 Preview
 ms.assetid: e3f346b5-7e26-481d-9821-1846e2e91289
 caps.latest.revision: 7
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 5363c242248d57e23da9aae986f39825896d5162
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 783893453fecd48f129bd2936ed6e5f1b5a3bd2e
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="categorized-web-service-operations-master-data-services"></a>分類的 Web 服務作業 (Master Data Services)
@@ -38,7 +38,7 @@ ms.lasthandoff: 08/02/2017
 |<xref:Microsoft.MasterDataServices.ServiceClient.MetadataUpdate%2A>|  
   
 ## <a name="entity-operations"></a>實體作業  
- 這些作業用於建立、更新與刪除單一實體的成員。 如需詳細資訊，請參閱[實體 &#40;Master Data services&#41;](../../master-data-services/entities-master-data-services.md)和[成員 &#40;Master Data services&#41;](../../master-data-services/members-master-data-services.md).  
+ 這些作業用於建立、更新與刪除單一實體的成員。 如需詳細資訊，請參閱[實體 &#40;Master Data Services&#41;](../../master-data-services/entities-master-data-services.md) 和[成員 &#40;Master Data Services&#41;](../../master-data-services/members-master-data-services.md)。  
   
 ||  
 |-|  
@@ -61,7 +61,7 @@ ms.lasthandoff: 08/02/2017
 |<xref:Microsoft.MasterDataServices.ServiceClient.ModelMembersGet%2A>|  
   
 ## <a name="attribute-and-hierarchy-operations"></a>屬性和階層作業  
- 這些作業用於取得屬性和階層資訊。 您也可以使用模型作業 (例如 <xref:Microsoft.MasterDataServices.ServiceClient.MetadataUpdate%2A>) 來修改屬性和階層。 如需詳細資訊，請參閱[屬性 &#40;Master Data services&#41;](../../master-data-services/attributes-master-data-services.md)和[階層 &#40;Master Data services&#41;](../../master-data-services/hierarchies-master-data-services.md).  
+ 這些作業用於取得屬性和階層資訊。 您也可以使用模型作業 (例如 <xref:Microsoft.MasterDataServices.ServiceClient.MetadataUpdate%2A>) 來修改屬性和階層。 如需詳細資訊，請參閱[屬性 &#40;Master Data Services&#41;](../../master-data-services/attributes-master-data-services.md) 和[階層 &#40;Master Data Services&#41;](../../master-data-services/hierarchies-master-data-services.md)。  
   
 ||  
 |-|  
@@ -82,7 +82,7 @@ ms.lasthandoff: 08/02/2017
 |<xref:Microsoft.MasterDataServices.ServiceClient.BusinessRulesUpdate%2A>|  
   
 ## <a name="annotation-operations"></a>註解作業  
- 這些作業用於建立、更新與刪除註解。 如需詳細資訊，請參閱[註解 &#40;Master Data services&#41;](../../master-data-services/annotations-master-data-services.md).  
+ 這些作業用於建立、更新與刪除註解。 如需詳細資訊，請參閱[註解 &#40;Master Data Services&#41;](../../master-data-services/annotations-master-data-services.md)。  
   
 ||  
 |-|  
@@ -102,7 +102,7 @@ ms.lasthandoff: 08/02/2017
 |<xref:Microsoft.MasterDataServices.ServiceClient.TransactionsReverse%2A>|  
   
 ## <a name="version-and-validation-operations"></a>版本和驗證作業  
- 這些作業用於複製和驗證版本。 如需詳細資訊，請參閱[版本 &#40;Master Data services&#41;](../../master-data-services/versions-master-data-services.md)和[驗證 &#40;Master Data services&#41;](../../master-data-services/validation-master-data-services.md).  
+ 這些作業用於複製和驗證版本。 如需詳細資訊，請參閱[版本 &#40;Master Data Services&#41;](../../master-data-services/versions-master-data-services.md) 和[驗證 &#40;Master Data Services&#41;](../../master-data-services/validation-master-data-services.md)。  
   
 ||  
 |-|  

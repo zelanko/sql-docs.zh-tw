@@ -1,5 +1,5 @@
 ---
-title: "根據商務規則 (Master Data Services) 驗證版本 |Microsoft 文件"
+title: "根據商務規則驗證版本 (Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -16,20 +16,20 @@ helpviewer_keywords:
 - business rules [Master Data Services], applying to all members
 ms.assetid: 5aee7901-6d05-41d4-8bbb-c6f26791d1df
 caps.latest.revision: 8
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 036659fbe3b6cafd1272180bbd37737062ed0967
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 2a31c8b91872276636addc25c673f07ba5b11bc7
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="validate-a-version-against-business-rules-master-data-services"></a>根據商務規則驗證版本 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，驗證版本，以便將商務規則套用到模型版本中的所有成員。  
   
- 此程序說明如何使用 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式來驗證資料。 如果您具有 MDS 資料庫的權限，則可以改用預存程序。 如需詳細資訊，請參閱 [Validation Stored Procedure &#40;Master Data Services&#41;](../master-data-services/validation-stored-procedure-master-data-services.md)。  
+ 此程序說明如何使用 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式來驗證資料。 如果您具有 MDS 資料庫的權限，則可以改用預存程序。 如需詳細資訊，請參閱 [驗證預存程序 &#40;Master Data Services&#41;](../master-data-services/validation-stored-procedure-master-data-services.md)。  
   
 > [!NOTE]  
 >  所有成員都必須通過驗證之後，才能認可版本。  
@@ -62,13 +62,13 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="next-steps"></a>後續步驟  
   
--   [鎖定版本 &#40;Master Data services&#41;](../master-data-services/lock-a-version-master-data-services.md)  
+-   [鎖定版本 &#40;Master Data Services&#41;](../master-data-services/lock-a-version-master-data-services.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [驗證狀態 &#40;Master Data services&#41;](../master-data-services/validation-statuses-master-data-services.md)   
- [驗證預存程序 &#40;Master Data services&#41;](../master-data-services/validation-stored-procedure-master-data-services.md)   
- [版本 &#40;Master Data services&#41;](../master-data-services/versions-master-data-services.md)   
- [商務規則 &#40;Master Data services&#41;](../master-data-services/business-rules-master-data-services.md)   
- [根據商務規則 &#40; 驗證特定成員Master Data services&#41;](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
+ [驗證狀態 &#40;Master Data Services&#41;](../master-data-services/validation-statuses-master-data-services.md)   
+ [驗證預存程序 &#40;Master Data Services&#41;](../master-data-services/validation-stored-procedure-master-data-services.md)   
+ [版本 &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)   
+ [商務規則 &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)   
+ [根據商務規則驗證特定成員 &#40;Master Data Services&#41;](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
   
   

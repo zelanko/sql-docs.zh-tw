@@ -1,5 +1,5 @@
 ---
-title: "建立訂閱檢視，以匯出資料 (Master Data Services) |Microsoft 文件"
+title: "建立訂閱檢視以匯出資料 (Master Data Services) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/01/2017
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - creating subscription views [Master Data Services]
 ms.assetid: a5e28961-af16-414a-9845-d2e06aac5214
 caps.latest.revision: 10
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4934e49ef7b8e4f6b56439dd3b414fc93d5af832
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 863c5976f20cda1edc4ecba9ae81db599ec94d99
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="create-a-subscription-view-to-export-data-master-data-services"></a>建立訂閱檢視以匯出資料 (Master Data Services)
@@ -49,7 +49,7 @@ ms.lasthandoff: 09/01/2017
   
 5.  從 **[模型]** 清單中選取模型。  
   
-6.  選取 [Include soft-deleted members]\ (包含虛刪除成員) 以包含檢視中的虛刪除成員。  
+6.  選取 [Include soft-deleted members] (包含虛刪除成員) 以包含檢視中的虛刪除成員。  
   
 7.  在 [版本選項]  中選取 [版本]  或 [版本旗標] ，然後從對應的清單中選取。  
   
@@ -69,7 +69,7 @@ ms.lasthandoff: 09/01/2017
   
 |資料行|說明|  
 |------------|-----------------|  
-|狀態|檢視狀態。<br /><br /> 當您按一下**儲存**、![更新狀態的圖示](../master-data-services/media/mds-statusicon-updating.png "更新狀態的圖示")影像隨即顯示，指出正在更新檢視。<br /><br /> 如果發生錯誤時建立或編輯檢視中，![的錯誤狀態的圖示](../master-data-services/media/mds-statusicon-error.png "的錯誤狀態的圖示")影像隨即顯示。<br /><br /> 否則，狀態為正常並![[確定] 狀態的圖示](../master-data-services/media/mds-statusicon-ok.png "[確定] 狀態的圖示")影像隨即顯示。|  
+|狀態|檢視狀態。<br /><br /> 當您按一下 [儲存] 時，會顯示![正在更新狀態圖示](../master-data-services/media/mds-statusicon-updating.png "正在更新狀態圖示")影像，表示正在更新檢視。<br /><br /> 如果建立或編輯檢視時發生錯誤，則會顯示![錯誤狀態圖示](../master-data-services/media/mds-statusicon-error.png "錯誤狀態圖示")影像。<br /><br /> 否則，狀態為正常，並顯示![正常狀態圖示](../master-data-services/media/mds-statusicon-ok.png "正常狀態圖示")影像。|  
 |名稱|訂閱檢視名稱。|  
 |[模型]|模型名稱。|  
 |版本|版本名稱。|  
@@ -92,7 +92,7 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="see-also"></a>另請參閱  
  [概觀：匯出資料 &#40;Master Data Services&#41;](../master-data-services/overview-exporting-data-master-data-services.md)   
- [刪除訂閱檢視 &#40;Master Data services&#41;](../master-data-services/delete-a-subscription-view-master-data-services.md)   
- [建立版本旗標 &#40;Master Data services&#41;](../master-data-services/create-a-version-flag-master-data-services.md)  
+ [刪除訂閱檢視 &#40;Master Data Services&#41;](../master-data-services/delete-a-subscription-view-master-data-services.md)   
+ [建立版本旗標 &#40;Master Data Services&#41;](../master-data-services/create-a-version-flag-master-data-services.md)  
   
   

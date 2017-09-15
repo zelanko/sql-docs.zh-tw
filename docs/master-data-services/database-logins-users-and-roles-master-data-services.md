@@ -1,5 +1,5 @@
 ---
-title: "資料庫登入、 使用者和角色 (Master Data Services) |Microsoft 文件"
+title: "資料庫登入、使用者和角色 (Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-server-2016
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - security [Master Data Services], database logins
 ms.assetid: 72ee383e-a619-461b-9f9d-1cac162ab0c5
 caps.latest.revision: 9
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 87acd8344bdce17c711c317518d7b47845458e24
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: dc95616efefbe35dc835accc377743451556288e
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="database-logins-users-and-roles-master-data-services"></a>資料庫登入、使用者和角色 (Master Data Services)
@@ -68,6 +68,6 @@ ms.lasthandoff: 08/02/2017
 |**stg**|包含 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫資料表、預存程序以及與暫存處理序有關的檢視表。 請勿刪除這些物件的任何一個。 如需暫存處理序的詳細資訊，請參閱[概觀︰從資料表匯入資料 &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)。|  
   
 ## <a name="see-also"></a>另請參閱  
- [資料庫物件安全性 &#40;Master Data services&#41;](../master-data-services/database-object-security-master-data-services.md)  
+ [資料庫物件安全性 &#40;Master Data Services&#41;](../master-data-services/database-object-security-master-data-services.md)  
   
   

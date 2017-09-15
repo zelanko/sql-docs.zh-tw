@@ -1,5 +1,5 @@
 ---
-title: "概觀： 匯入資料，從 Excel （MDS 增益集的 Excel） |Microsoft 文件"
+title: "概觀：從 Excel 匯入資料 (適用於 Excel 的 MDS 增益集) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/01/2017
@@ -12,20 +12,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: ea84a9aa-aeec-411b-ab8d-bc1b14f864a3
 caps.latest.revision: 13
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: c84ecb3308a641a538bcb8aaf85ebcf728d15cb3
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: e6aa429d0435515189a28199ca4653a623c50a0f
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="overview-importing-data-from-excel-mds-add-in-for-excel"></a>概觀：從 Excel 匯入資料 (適用於 Excel 的 MDS 增益集)
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，如果您想要與其他使用者共用資料，請將資料發行至 MDS 存放庫。 一旦發行資料之後，這項資料就可供此增益集的其他使用者下載。  
   
- 發行資料時，您已加入或更新的任何資料都會發行至 MDS 儲存機制。 不過，您已刪除的資料則不會發行。您必須個別刪除資料。 如需詳細資訊，請參閱[刪除資料列 &#40;MDS 適用於 Excel 的增益集&#41;](../../master-data-services/microsoft-excel-add-in/delete-a-row-mds-add-in-for-excel.md)。  
+ 發行資料時，您已加入或更新的任何資料都會發行至 MDS 儲存機制。 不過，您已刪除的資料則不會發行。您必須個別刪除資料。 如需詳細資訊，請參閱 [刪除資料列 &#40;適用於 Excel 的 MDS 增益集&#41;](../../master-data-services/microsoft-excel-add-in/delete-a-row-mds-add-in-for-excel.md)。  
   
 > [!NOTE]  
 >  發行無法用來建立新的實體。 如需建立實體的詳細資訊，請參閱[建立實體 &#40;MDS 適用於 Excel 的增益集&#41;](../../master-data-services/microsoft-excel-add-in/create-an-entity-mds-add-in-for-excel.md)。  
@@ -44,7 +44,7 @@ ms.lasthandoff: 08/02/2017
   
 -   您可以檢視其他使用者對成員所做的交易。 您也可以檢視自己對成員所做的所有交易，即使您不再擁有特定屬性的權限也一樣。 您無法檢視涉及您的權限設定為拒絕之屬性的交易。  
   
- 您可以檢視對成員所做的所有交易。 如需詳細資訊，請參閱[檢視成員的所有註解或交易 &#40;適用於 Excel 的 MDS 增益集&#41;](../../master-data-services/microsoft-excel-add-in/view-all-annotations-or-transactions-for-a-member-mds-add-in-for-excel.md)。  
+ 您可以檢視對成員所做的所有交易。 如需詳細資訊，請參閱 [檢視成員的所有註解或交易 &#40;適用於 Excel 的 MDS 增益集&#41;](../../master-data-services/microsoft-excel-add-in/view-all-annotations-or-transactions-for-a-member-mds-add-in-for-excel.md)。  
   
 > [!IMPORTANT]  
 >  如果您輸入了超過 500 個字元的註解，系統將自動截斷註解。  
@@ -66,6 +66,6 @@ ms.lasthandoff: 08/02/2017
   
 -   [重新整理資料 &#40;適用於 Excel 的 MDS 增益集&#41;](../../master-data-services/microsoft-excel-add-in/refreshing-data-mds-add-in-for-excel.md)  
   
--   [Master Data Services 增益集的 Microsoft Excel](../../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md)  
+-   [適用於 Microsoft Excel 的 Master Data Services 增益集](../../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md)  
   
   

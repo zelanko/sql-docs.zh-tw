@@ -1,25 +1,30 @@
 ---
 title: "回復成員修訂歷程記錄 (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d39d3474-20e7-429f-9c8d-fcc4eb0854fc
 caps.latest.revision: 5
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 5
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: a242f91eb8259b8941a61db94f59c4e331d5b06b
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/07/2017
+
 ---
-# 回復成員修訂歷程記錄 (Master Data Services)
+# <a name="rollback-member-revision-history-master-data-services"></a>回復成員修訂歷程記錄 (Master Data Services)
   每次變更成員時會記錄成員修訂歷程記錄。 您可以將成員修訂歷程記錄回復至舊版。  
   
-## 必要條件  
+## <a name="prerequisites"></a>必要條件  
   
 -   您必須具有更新至少一個選取的成員之屬性的權限。 當您復原修訂歷程記錄時，可更新的所有屬性值將會都回復為先前的版本值。  
   
@@ -35,7 +40,7 @@ caps.handback.revision: 5
   
 4.  選擇要回復的修訂，然後按一下 [回復]。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [成員修訂歷程記錄 &#40;Master Data Services&#41;](../master-data-services/member-revision-history-master-data-services.md)   
  [變更實體交易記錄類型 &#40;Master Data Services&#41;](../master-data-services/change-the-entity-transaction-log-type-master-data-services.md)  
   

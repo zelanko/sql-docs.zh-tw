@@ -1,5 +1,5 @@
 ---
-title: "版本 (Master Data Services) |Microsoft 文件"
+title: "版本 (Master Data Services) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/01/2017
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - versions [Master Data Services], version flags
 ms.assetid: 752ec96d-53d7-4160-8ed2-92e0324645f3
 caps.latest.revision: 9
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4aa3e9252b57b596ab576616820bbad706a4ea92
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 5c633441058f1db8843de596824b235d30ec2eba
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="versions-master-data-services"></a>版本 (Master Data Services)
-  在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中，您可以在模型內建立多個版本的主要資料。 系統會在您驗證資料時鎖定版本，並在驗證資料之後認可版本。 認可的版本會形成可稽核的變更記錄。 您建立的每個版本都包含該模型的所有成員、屬性值、階層成員、階層關聯性和集合。  
+  在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，您可以在模型內建立多個版本的主要資料。 系統會在您驗證資料時鎖定版本，並在驗證資料之後認可版本。 認可的版本會形成可稽核的變更記錄。 您建立的每個版本都包含該模型的所有成員、屬性值、階層成員、階層關聯性和集合。  
   
 ## <a name="when-to-use-versions"></a>使用版本的時機  
  使用版本可進行以下作業：  
@@ -74,23 +74,23 @@ ms.lasthandoff: 08/02/2017
   
 |工作描述|主題|  
 |----------------------|-----------|  
-|變更現有版本的名稱。|[變更版本名稱 &#40;Master Data services&#41;](../master-data-services/change-a-version-name-master-data-services.md)|  
-|鎖定版本，僅讓管理員可以編輯其資料。|[鎖定版本 &#40;Master Data services&#41;](../master-data-services/lock-a-version-master-data-services.md)|  
-|解除鎖定版本，讓使用者可以編輯其資料。|[解除鎖定版本 &#40;Master Data services&#41;](../master-data-services/unlock-a-version-master-data-services.md)|  
-|在驗證所有資料之後認可版本。|[認可版本 &#40;Master Data services&#41;](../master-data-services/commit-a-version-master-data-services.md)|  
-|建立新旗標來標示版本。|[建立版本旗標 &#40;Master Data services&#41;](../master-data-services/create-a-version-flag-master-data-services.md)|  
-|變更現有版本旗標的名稱。|[變更版本旗標名稱 &#40;Master Data services&#41;](../master-data-services/change-a-version-flag-name-master-data-services.md)|  
-|將現有旗標指派給版本。|[將旗標指派給版本 &#40;Master Data services&#41;](../master-data-services/assign-a-flag-to-a-version-master-data-services.md)|  
-|建立現有版本的新副本|[複製版本 &#40;Master Data services&#41;](../master-data-services/copy-a-version-master-data-services.md)|  
+|變更現有版本的名稱。|[變更版本名稱 &#40;Master Data Services&#41;](../master-data-services/change-a-version-name-master-data-services.md)|  
+|鎖定版本，僅讓管理員可以編輯其資料。|[鎖定版本 &#40;Master Data Services&#41;](../master-data-services/lock-a-version-master-data-services.md)|  
+|解除鎖定版本，讓使用者可以編輯其資料。|[解除鎖定版本 &#40;Master Data Services&#41;](../master-data-services/unlock-a-version-master-data-services.md)|  
+|在驗證所有資料之後認可版本。|[認可版本 &#40;Master Data Services&#41;](../master-data-services/commit-a-version-master-data-services.md)|  
+|建立新旗標來標示版本。|[建立版本旗標 &#40;Master Data Services&#41;](../master-data-services/create-a-version-flag-master-data-services.md)|  
+|變更現有版本旗標的名稱。|[變更版本旗標名稱 &#40;Master Data Services&#41;](../master-data-services/change-a-version-flag-name-master-data-services.md)|  
+|將現有旗標指派給版本。|[將旗標指派給版本 &#40;Master Data Services&#41;](../master-data-services/assign-a-flag-to-a-version-master-data-services.md)|  
+|建立現有版本的新副本|[複製版本 &#40;Master Data Services&#41;](../master-data-services/copy-a-version-master-data-services.md)|  
 |刪除現有版本。|[刪除版本 &#40;Master Data Services&#41;](../master-data-services/delete-a-version-master-data-services.md)|  
 |從版本清除虛刪除成員|[清除版本成員 &#40;Master Data Services&#41;](../master-data-services/purge-version-members-master-data-services.md)|  
   
 ## <a name="related-content"></a>相關內容  
   
--   [反轉交易 &#40;Master Data services&#41;](../master-data-services/reverse-a-transaction-master-data-services.md)  
+-   [反轉交易 &#40;Master Data Services&#41;](../master-data-services/reverse-a-transaction-master-data-services.md)  
   
--   [通知 &#40;Master Data services&#41;](../master-data-services/notifications-master-data-services.md)  
+-   [通知 &#40;Master Data Services&#41;](../master-data-services/notifications-master-data-services.md)  
   
--   [商務規則 &#40;Master Data services&#41;](../master-data-services/business-rules-master-data-services.md)  
+-   [商務規則 &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
   
   

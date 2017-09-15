@@ -1,5 +1,5 @@
 ---
-title: "安全性 (Master Data Services) |Microsoft 文件"
+title: "安全性 (Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,14 +11,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 56bc41ea-de28-4184-aa7e-99111ae55af5
 caps.latest.revision: 10
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7a011cac6d34c73cffb9fba286ebe64ebb9e7103
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 4b540d7f5a204d6543bc32b5ec46fef766c9b973
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="security-master-data-services"></a>安全性 (Master Data Services)
@@ -57,18 +57,18 @@ ms.lasthandoff: 08/02/2017
   
 |工作描述|主題|  
 |----------------------|-----------|  
-|建立具有模型完整權限的使用者。|[建立模型管理員 &#40;Master Data services&#41;](../master-data-services/create-a-model-administrator-master-data-services.md)|  
-|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]將 Active Directory 群組加入至 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] ；這是提供群組權限，以存取  Web 應用程式中資料的第一步。|[新增群組 &#40;Master Data services&#41;](../master-data-services/add-a-group-master-data-services.md)|  
-|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 將權限指派給  Web 應用程式的功能區域。|[指派功能區域權限 &#40;Master Data services&#41;](../master-data-services/assign-functional-area-permissions-master-data-services.md)|  
-|透過將權限指派給模型物件，來將權限指派給屬性值。|[指派模型物件權限 &#40;Master Data services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)|  
-|透過將權限指派給階層節點，來將權限指派給成員值。|[指派階層成員權限 &#40;Master Data services&#41;](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)|  
+|建立具有模型完整權限的使用者。|[建立模型管理員 &#40;Master Data Services&#41;](../master-data-services/create-a-model-administrator-master-data-services.md)|  
+|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]將 Active Directory 群組加入至 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] ；這是提供群組權限，以存取  Web 應用程式中資料的第一步。|[新增群組 &#40;Master Data Services&#41;](../master-data-services/add-a-group-master-data-services.md)|  
+|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 將權限指派給  Web 應用程式的功能區域。|[指派功能區域權限 &#40;Master Data Services&#41;](../master-data-services/assign-functional-area-permissions-master-data-services.md)|  
+|透過將權限指派給模型物件，來將權限指派給屬性值。|[指派模型物件權限 &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)|  
+|透過將權限指派給階層節點，來將權限指派給成員值。|[指派階層成員權限 &#40;Master Data Services&#41;](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)|  
   
 ## <a name="see-also"></a>另請參閱  
- [系統管理員 &#40;Master Data services&#41;](../master-data-services/administrators-master-data-services.md)   
- [使用者和群組 &#40;Master Data services&#41;](../master-data-services/users-and-groups-master-data-services.md)   
- [功能區域權限 &#40;Master Data services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)   
- [模型物件權限 &#40;Master Data services&#41;](../master-data-services/model-object-permissions-master-data-services.md)   
- [階層成員權限 &#40;Master Data services&#41;](../master-data-services/hierarchy-member-permissions-master-data-services.md)   
- [如何決定權限 &#40;Master Data services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)  
+ [管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)   
+ [使用者和群組 &#40;Master Data Services&#41;](../master-data-services/users-and-groups-master-data-services.md)   
+ [功能區域權限 &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)   
+ [模型物件權限 &#40;Master Data Services&#41;](../master-data-services/model-object-permissions-master-data-services.md)   
+ [階層成員權限 &#40;Master Data Services&#41;](../master-data-services/hierarchy-member-permissions-master-data-services.md)   
+ [如何決定權限 &#40;Master Data Services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)  
   
   

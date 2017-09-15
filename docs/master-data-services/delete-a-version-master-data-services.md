@@ -1,5 +1,5 @@
 ---
-title: "Delete a Version (Master Data Services) |Microsoft 文件"
+title: "刪除版本 (Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - deleting versions [Master Data Services]
 ms.assetid: 2a4eeffe-8379-4744-ad44-c27d8c8ac9a8
 caps.latest.revision: 6
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bf3a315d60bed733bd2d72cd6ba2317a8ab84ae5
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: fa6979d6ce1aadbbf6c7f1ac1929a5579cc862bc
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="delete-a-version-master-data-services"></a>刪除版本 (Master Data Services)
@@ -57,7 +57,7 @@ ms.lasthandoff: 08/02/2017
     >  您可能需要等候幾分鐘，Web 應用程式才會反映變更。  
   
 ## <a name="see-also"></a>另請參閱  
- [版本 &#40;Master Data services&#41;](../master-data-services/versions-master-data-services.md)   
- [複製版本 &#40;Master Data services&#41;](../master-data-services/copy-a-version-master-data-services.md)  
+ [版本 &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)   
+ [複製版本 &#40;Master Data Services&#41;](../master-data-services/copy-a-version-master-data-services.md)  
   
   

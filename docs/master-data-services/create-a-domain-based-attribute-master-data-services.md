@@ -1,5 +1,5 @@
 ---
-title: "建立網域屬性 (Master Data Services) |Microsoft 文件"
+title: "建立網域屬性 (Master Data Services) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 07/25/2017
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - attributes [Master Data Services], creating domain-based attributes
 ms.assetid: 11c31c9f-e6cc-47b7-b76a-d691f84c93c6
 caps.latest.revision: 12
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 963b974e68187ecf4f42ad06c90ff1cb0ab3aa67
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: a8242d0b8f5285201c32721c793aff995d50b88d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="create-a-domain-based-attribute-master-data-services"></a>建立網域屬性 (Master Data Services)
@@ -45,7 +45,7 @@ ms.lasthandoff: 08/02/2017
   
 |資料行|說明|  
 |------------|-----------------|  
-|狀態|屬性狀態。<br /><br /> 當您按一下 [儲存]![更新狀態的圖示](../master-data-services/media/mds-statusicon-updating.png "更新狀態的圖示")影像隨即顯示，指出正在更新屬性。<br /><br /> 如果發生錯誤時建立或編輯屬性，![的錯誤狀態的圖示](../master-data-services/media/mds-statusicon-error.png "的錯誤狀態的圖示")影像隨即顯示。<br /><br /> 否則，狀態為正常並![[確定] 狀態的圖示](../master-data-services/media/mds-statusicon-ok.png "[確定] 狀態的圖示")影像隨即顯示。|  
+|狀態|屬性狀態。<br /><br /> 當您按一下 [儲存] 時，會顯示![正在更新狀態圖示](../master-data-services/media/mds-statusicon-updating.png "正在更新狀態圖示")影像，表示正在更新屬性。<br /><br /> 如果建立或編輯屬性時發生錯誤，則會顯示![錯誤狀態圖示](../master-data-services/media/mds-statusicon-error.png "錯誤狀態圖示")影像。<br /><br /> 否則，狀態為正常，並顯示![正常狀態圖示](../master-data-services/media/mds-statusicon-ok.png "正常狀態圖示")影像。|  
 |名稱|屬性名稱。|  
 |顯示名稱|屬性的顯示名稱。|  
 |說明|屬性描述。|  
@@ -103,8 +103,8 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="see-also"></a>另請參閱  
  [網域屬性 &#40;Master Data Services&#41;](../master-data-services/domain-based-attributes-master-data-services.md)   
- [建立衍生的階層 &#40;Master Data services&#41;](../master-data-services/create-a-derived-hierarchy-master-data-services.md)   
- [變更屬性名稱和資料類型 &#40;Master Data services&#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
+ [建立衍生階層 &#40;Master Data Services&#41;](../master-data-services/create-a-derived-hierarchy-master-data-services.md)   
+ [變更屬性名稱和資料類型 &#40;Master Data Services&#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
  [刪除屬性 &#40;Master Data Services&#41;](../master-data-services/delete-an-attribute-master-data-services.md)  
   
   

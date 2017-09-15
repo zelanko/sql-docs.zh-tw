@@ -1,5 +1,5 @@
 ---
-title: "建立資料庫郵件設定檔和帳戶對話方塊 |Microsoft 文件"
+title: "建立 Database Mail 設定檔和帳戶對話方塊 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/20/2017
 ms.prod: sql-server-2016
@@ -13,14 +13,14 @@ f1_keywords:
 - sql13.mds.configmanager.dbmailprofileacct.f1
 ms.assetid: b93ea3d4-9f22-490e-8e26-d766b454aed6
 caps.latest.revision: 7
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: e8f05588d7ad0a4ab6b723f495a34b5343caab63
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 240967b3909a2b3796534cb29c42dfa5838be692
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="create-database-mail-profile-and-account-dialog-box"></a>建立 Database Mail 設定檔和帳戶對話方塊
@@ -41,10 +41,10 @@ ms.lasthandoff: 08/02/2017
   
 |控制項名稱|說明|  
 |------------------|-----------------|  
-|**電子郵件地址**|輸入帳戶之電子郵件地址的名稱。 這是寄出電子郵件的電子郵件地址，而且必須使用以下格式： *email_name*@*domain_name*。 範例電子郵件地址sales@contoso.com。|  
+|**電子郵件地址**|輸入帳戶之電子郵件地址的名稱。 這是寄出電子郵件的電子郵件地址，而且必須使用以下格式： *email_name*@*domain_name*。 範例電子郵件地址為 sales@contoso.com。|  
 |**顯示名稱**|選擇性設定。 輸入要在這個帳戶所送出的電子郵件訊息上顯示的名稱。 範例顯示名稱為 Contoso 業務小組。|  
-|**回覆電子郵件地址**|選擇性設定。 輸入將用來回覆這個帳戶所送出之電子郵件訊息的電子郵件地址。 範例回覆電子郵件地址是admin@contoso.com。|  
-|**SMTP 伺服器**|輸入帳戶用來傳送電子郵件的 SMTP 伺服器名稱或 IP 位址。 範例 SMTP 伺服器格式為 **smtp.***<公司名稱>***.com**。 如需相關說明，請洽詢您的郵件管理員。|  
+|**回覆電子郵件地址**|選擇性設定。 輸入將用來回覆這個帳戶所送出之電子郵件訊息的電子郵件地址。 範例回覆電子郵件地址為 admin@contoso.com。|  
+|**SMTP 伺服器**|輸入帳戶用來傳送電子郵件的 SMTP 伺服器名稱或 IP 位址。 範例 SMTP 伺服器格式為 **smtp.***<公司名稱>***.com**。如需相關說明，請洽詢您的郵件管理員。|  
 |**通訊埠編號**|輸入此帳戶之 SMTP 伺服器的通訊埠編號。 預設 SMTP 通訊埠為 25。|  
 |**這個伺服器需要安全連接 (SSL)**|使用安全通訊端層 (SSL) 將通訊加密。|  
   
@@ -62,6 +62,6 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="see-also"></a>另請參閱  
  [資料庫組態頁面 &#40;Master Data Services 組態管理員&#41;](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
-[Master Data Services 的安裝和設定](../master-data-services/master-data-services-installation-and-configuration.md)
+[Master Data Services 安裝和組態](../master-data-services/master-data-services-installation-and-configuration.md)
   
   

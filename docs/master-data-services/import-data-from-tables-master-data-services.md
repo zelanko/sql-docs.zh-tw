@@ -1,5 +1,5 @@
 ---
-title: "匯入資料，從資料表 (Master Data Services) |Microsoft 文件"
+title: "從資料表匯入資料 (Master Data Services) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/14/2017
@@ -12,14 +12,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: ad5b83b1-8e40-4ef8-9ba8-4ea17a58b672
 caps.latest.revision: 10
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 47c83a225b97e203875f940a03fe52db80525060
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 7d059b2852c864f734c924383a115e61431bcccc
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="import-data-from-tables-master-data-services"></a>從資料表匯入資料 (Master Data Services)
@@ -27,9 +27,9 @@ ms.lasthandoff: 08/02/2017
   
  **必要條件**  
   
--   您必須擁有權限，將資料插入 stg.<\<名稱 > _Leaf，stg.<\<名稱 > _Consolidated，stg.<\<名稱 > s h i p 資料表中的[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]資料庫。  
+-   您必須具備權限，才能將資料插入 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫的 stg.\<名稱>_Leaf、stg.\<名稱>_Consolidated、stg.\<名稱>_Relationship 資料表中。  
   
--   您必須擁有權限來執行任一 stg.udp_<\<名稱 > _Leaf，stg.udp\_\<名稱 > _Consolidated，或 stg.udp\_\<名稱 > s h i p 預存程序中的[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]資料庫。  
+-   您必須具備權限，才能執行 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫中的 stg.udp_\<名稱>_Leaf、stg.udp\_\<名稱>_Consolidated 或 stg.udp\_\<名稱>_Relationship 預存程序。  
   
 -   模型的狀態不得為 [已認可] 。  
   
@@ -37,11 +37,11 @@ ms.lasthandoff: 08/02/2017
   
 1.  準備要匯入 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫之適當暫存資料表中的成員，這包括為必要欄位提供值。 如需暫存資料表的概觀，請參閱[概觀︰從資料表匯入資料 &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
   
-    -   分葉成員資料表是 stg.<\<名稱 > _Leaf，其中\<名稱 > 指的是對應的實體。 如需必要欄位的資訊，請參閱[分葉成員暫存資料表 &#40;Master Data Services&#41;](../master-data-services/leaf-member-staging-table-master-data-services.md)  
+    -   對於分葉成員，資料表為 stg.\<名稱>_Leaf，其中 \<名稱> 是指對應的實體。 如需必要欄位的資訊，請參閱[分葉成員暫存資料表 &#40;Master Data Services&#41;](../master-data-services/leaf-member-staging-table-master-data-services.md)  
   
-    -   若是合併成員，資料表是 stg.<\<名稱 > _Consolidated。 如需必要欄位的資訊，請參閱[合併成員暫存資料表 &#40;Master Data Services&#41;](../master-data-services/consolidated-member-staging-table-master-data-services.md)。  
+    -   對於合併成員，資料表是 stg.\<名稱>_Consolidated。 如需必要欄位的資訊，請參閱[合併成員暫存資料表 &#40;Master Data Services&#41;](../master-data-services/consolidated-member-staging-table-master-data-services.md)。  
   
-    -   移動明確階層的成員位置，資料表是 stg.<\<名稱 > s h i p。 如需必要欄位的資訊，請參閱[合併成員暫存資料表 &#40;Master Data Services&#41;](../master-data-services/relationship-staging-table-master-data-services.md)。  
+    -   對於要移動明確階層中的成員位置，資料表是 stg.\<名稱>_Relationship。 如需必要欄位的資訊，請參閱[合併成員暫存資料表 &#40;Master Data Services&#41;](../master-data-services/relationship-staging-table-master-data-services.md)。  
   
          如需在明確階層中移動成員的概觀，請參閱[概觀︰從資料表匯入資料 &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)。  
   
@@ -67,7 +67,7 @@ ms.lasthandoff: 08/02/2017
   
          在 [暫存批次]  頁面上，從下拉式清單中，選取要接收您所加入之資料的模型，然後按一下 [啟動批次] 。 批次處理的狀態會顯示在 [狀態]  欄位中。 如需狀態的詳細資訊，請參閱[匯入狀態 &#40;Master Data Services&#41;](../master-data-services/import-statuses-master-data-services.md)。  
   
-         ![臨時批次頁面在主資料管理員](../master-data-services/media/mds-stagingbatchespage.png "臨時批次在主資料管理員 頁面")  
+         ![主資料管理員中的暫存批次頁面](../master-data-services/media/mds-stagingbatchespage.png "主資料管理員中的暫存批次頁面")  
   
          暫存程序的啟動間隔，由 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 中的 [暫存批次間隔] 設定決定。 如需詳細資訊，請參閱 [系統設定 &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md)。  
   

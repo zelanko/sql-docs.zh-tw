@@ -1,5 +1,5 @@
 ---
-title: "導覽存取權 (Master Data Services) |Microsoft 文件"
+title: "導覽存取權 (Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - security [Master Data Services], navigational access
 ms.assetid: 3403b7b0-44e2-48c3-a1b7-9c4612b874b8
 caps.latest.revision: 5
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e3979b0f5749182f3188ee3baafd43cd3e0cbb8b
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 7a26c6e03d53fcd619446a82b2d2196476d159dc
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="navigational-access-master-data-services"></a>導覽存取權 (Master Data Services)
@@ -46,6 +46,6 @@ ms.lasthandoff: 08/02/2017
  當您指派權限給集合時，您可以讀取或更新名稱、程式碼、描述和擁有者識別碼。 您也可以讀取模型名稱。  
   
 ## <a name="see-also"></a>另請參閱  
- [如何決定權限 &#40;Master Data services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)  
+ [如何決定權限 &#40;Master Data Services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)  
   
   

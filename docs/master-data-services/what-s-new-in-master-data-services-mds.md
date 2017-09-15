@@ -1,5 +1,5 @@
 ---
-title: "什麼 & #39 的新 Master Data Services (MDS) |Microsoft 文件"
+title: "Master Data Services (MDS) 的新功能 | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 07/08/2016
@@ -12,17 +12,17 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
 caps.latest.revision: 85
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e341e5b15e33af6338447f5422138aea1b94240a
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 32a43f651f20ca257837de0440505b9ac4179708
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
-# <a name="what39s-new-in-master-data-services-mds"></a>什麼 & #39 的新 Master Data Services (MDS)
+# <a name="what39s-new-in-master-data-services-mds"></a>Master Data Services (MDS) 的新功能
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
   本主題摘要 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 的 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]版本中變更及更新。 
@@ -33,7 +33,7 @@ ms.lasthandoff: 08/02/2017
   
  **下載**  
   
--   若要下載 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]，請前往  **[評估中心](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**。  
+-   若要下載 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]，請前往  **[Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**。  
   
 -   有 Azure 帳戶嗎？  接著前往 **[這裡](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** 來加速已安裝 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 的虛擬機器。  
   

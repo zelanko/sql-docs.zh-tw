@@ -1,5 +1,5 @@
 ---
-title: "建立索引 (Master Data Services) |Microsoft 文件"
+title: "建立索引 (Master Data Services) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/01/2017
@@ -12,14 +12,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: d694a105-69b1-4ff6-99d3-1f408b916b81
 caps.latest.revision: 6
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a4d03606ab8a45d6c7b326fd64b6900ac7e67356
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: ee405ebea31b8ca2a178b2d287a1ba1b8d4e97f8
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="create-an-index-master-data-services"></a>建立索引 (Master Data Services)
@@ -30,7 +30,7 @@ ms.lasthandoff: 08/02/2017
   
 -   您必須擁有存取系統管理功能區域的權限。 如需詳細資訊，請參閱[功能區域權限 &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)。  
   
--   您必須是模型管理員。 如需詳細資訊，請參閱 [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md) (管理員 (Master Data Services))。  
+-   您必須是模型管理員。 如需詳細資訊，請參閱 [管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)，您就可以在群組中加入及移除使用者。  
   
  **建立索引**  
   
@@ -54,7 +54,7 @@ ms.lasthandoff: 08/02/2017
   
 |資料行名稱|說明|  
 |-----------------|-----------------|  
-|狀態|索引狀態。<br /><br /> 當您按一下**儲存**、![更新狀態的圖示](../master-data-services/media/mds-statusicon-updating.png "更新狀態的圖示")影像會顯示表示正在更新索引。<br /><br /> 如果發生錯誤時建立或編輯索引![的錯誤狀態的圖示](../master-data-services/media/mds-statusicon-error.png "的錯誤狀態的圖示")影像隨即顯示。<br /><br /> 否則，狀態為正常，而![[確定] 狀態的圖示](../master-data-services/media/mds-statusicon-ok.png "[確定] 狀態的圖示")影像隨即顯示。|  
+|狀態|索引狀態。<br /><br /> 當您按一下 [儲存] 時，會顯示![正在更新狀態圖示](../master-data-services/media/mds-statusicon-updating.png "正在更新狀態圖示")影像，表示正在更新索引。<br /><br /> 如果建立或編輯索引時發生錯誤，則會顯示![錯誤狀態圖示](../master-data-services/media/mds-statusicon-error.png "錯誤狀態圖示")影像。<br /><br /> 否則，狀態為正常，並顯示![正常狀態圖示](../master-data-services/media/mds-statusicon-ok.png "正常狀態圖示")影像。|  
 |名稱|索引名稱。|  
 |是唯一的|指定索引是否是唯一的。|  
 |依據屬性|顯示定義索引的屬性顯示名稱。|  

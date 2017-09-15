@@ -1,7 +1,7 @@
 ---
 title: "非 SQL Server 發行者 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 08/29/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -19,17 +19,31 @@ caps.latest.revision: 31
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 72a1a8c69a7c18f02da6439af94fefffe73a03a3
+ms.translationtype: HT
+ms.sourcegitcommit: 05497c347c94b42bb22488560c89b7f9a7783a4d
+ms.openlocfilehash: 4e65d8ec7c2e9e00955238e44e27be20f6bb3c74
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/30/2017
 
 ---
-# <a name="non-sql-server-publishers"></a>非 SQL Server 發行者
-  從非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 來源發行資料，可讓您合併 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中的資料。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可訂閱從 Oracle 資料庫發行的快照或交易資料。 如需從 Oracle 發行的詳細資訊，請參閱 [Oracle 發行概觀](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)。  
+# <a name="non-sql-server-publishers"></a>非 SQL Server 發行者  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]  
+
+從非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 來源發行資料，可讓您合併 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中的資料。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可訂閱從 Oracle 資料庫發行的快照或交易資料。 如需從 Oracle 發行的詳細資訊，請參閱 [Oracle 發行概觀](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)。  
   
+[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支援下列交易式與快照式複寫的異質性情況：  
+  
+-   將資料從 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 發行到非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的訂閱者  
+
+-   若要在 Oracle 之間發行資料，具有如下限制：  
+  | |2016 或更早版本 |2017 或更新版本 |
+  |-------|-------|--------|
+  |從 Oracle 複寫 |只支援 Oracle 10g 或更早版本 |只支援 Oracle 10g 或更早版本 |
+  |複寫到 Oracle |最高到 Oracle 12c |不支援 |
+
+
  非 SQL Server 訂閱者的異質性複寫已被取代。 Oracle 發行已被取代。 若要移動資料，請使用異動資料擷取和 [!INCLUDE[ssIS](../../../includes/ssis-md.md)]建立方案。  
+  
   
 > [!CAUTION]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]  
@@ -46,3 +60,4 @@ ms.lasthandoff: 06/22/2017
  [Heterogeneous Database Replication](../../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)  
   
   
+

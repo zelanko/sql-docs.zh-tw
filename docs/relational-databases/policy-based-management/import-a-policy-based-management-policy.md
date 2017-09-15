@@ -16,11 +16,11 @@ caps.latest.revision: 12
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f55d3c5e57dfbd0d80e02d5c2fcb0fc6aa9ae81d
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: fc3420c4b87cc1d304e7a58b540d7f9210aac18a
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="import-a-policy-based-management-policy"></a>匯入原則式管理原則
@@ -41,7 +41,7 @@ ms.lasthandoff: 06/22/2017
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
 ###  <a name="Restrictions"></a> 限制事項  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 隨附一些可用來監視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的原則。 依預設，這些原則不會安裝在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]上，但是您可以從預設位置 C:\Program Files\Microsoft SQL Server\130\Tools\Policies\DatabaseEngine\1033 匯入這些原則。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 隨附一些可用來監視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的原則。 這些原則預設不會安裝在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 上，但是您可以從預設位置 C:\Program Files\Microsoft SQL Server\###\Tools\Policies\DatabaseEngine\1033 或 C:\Program Files (x86)\Microsoft SQL Server\###\Tools\Policies\DatabaseEngine\1033 (在 64 位元安裝上) 匯入這些原則。
   
 ###  <a name="Security"></a> 安全性  
   
@@ -65,3 +65,4 @@ ms.lasthandoff: 06/22/2017
 6.  完成後，請按一下 **[確定]**。  
   
   
+

@@ -1,5 +1,5 @@
 ---
-title: "認可版本 (Master Data Services) |Microsoft 文件"
+title: "認可版本 (Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -14,18 +14,18 @@ helpviewer_keywords:
 - versions [Master Data Services], committing
 ms.assetid: 6b967a39-b333-4b84-9e5f-4fb07e156826
 caps.latest.revision: 7
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 28fd453f17c08b708b4a49f1f4646eb1be7a51ab
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: f038c98b3299103753cd9daa58e3edc5ebae568b
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="commit-a-version-master-data-services"></a>認可版本 (Master Data Services)
-  在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中，您可認可模型版本，以防止模型成員及其屬性的變更。 已認可的版本無法解除鎖定。  
+  在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，您可認可模型版本，以防止模型成員及其屬性的變更。 已認可的版本無法解除鎖定。  
   
 ## <a name="prerequisites"></a>必要條件  
  若要執行此程序：  
@@ -54,13 +54,13 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="next-steps"></a>後續步驟  
   
--   [建立版本旗標 &#40;Master Data services&#41;](../master-data-services/create-a-version-flag-master-data-services.md)  
+-   [建立版本旗標 &#40;Master Data Services&#41;](../master-data-services/create-a-version-flag-master-data-services.md)  
   
--   [將旗標指派給版本 &#40;Master Data services&#41;](../master-data-services/assign-a-flag-to-a-version-master-data-services.md)  
+-   [將旗標指派給版本 &#40;Master Data Services&#41;](../master-data-services/assign-a-flag-to-a-version-master-data-services.md)  
   
--   [複製版本 &#40;Master Data services&#41;](../master-data-services/copy-a-version-master-data-services.md)  
+-   [複製版本 &#40;Master Data Services&#41;](../master-data-services/copy-a-version-master-data-services.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [版本 &#40;Master Data services&#41;](../master-data-services/versions-master-data-services.md)  
+ [版本 &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)  
   
   

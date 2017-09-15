@@ -14,17 +14,17 @@ caps.latest.revision: 16
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b60c6ab2bc24a2865d06c949a0bb5b765fdc7454
+ms.translationtype: HT
+ms.sourcegitcommit: 60272ce672c0a32738b0084ea86f8907ec7fc0a5
+ms.openlocfilehash: 57fa80162feb8a294733ef15ffaec86d11fcf677
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="columnstore-indexes---design-guidance"></a>資料行存放區索引 - 設計指引
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-資料行存放區索引設計的高階建議。 下列幾個良好的決策，有助您實現資料行存放區索引所設計的高資料壓縮和查詢效能。 
+資料行存放區索引設計的高階建議。 下列幾個良好的設計決策，有助您實現資料行存放區索引所設計的高資料壓縮和查詢效能。 
 
 ## <a name="prerequisites"></a>必要條件
 

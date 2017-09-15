@@ -1,5 +1,5 @@
 ---
-title: "以電子郵件傳送捷徑查詢檔案 （MDS 增益集的 Excel） |Microsoft 文件"
+title: "以電子郵件傳送捷徑查詢檔案 (適用於 Excel 的 MDS 增益集) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,14 +11,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 5d46f20a-b04a-45c7-82af-02a2baaabbd7
 caps.latest.revision: 7
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4dcd70bc9764d3d4c4eb3243343878e7419fe6ed
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 6a6639138b8ce1c737934310dd33c853927fe227
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="email-a-shortcut-query-file-mds-add-in-for-excel"></a>以電子郵件傳送捷徑查詢檔案 (適用於 Excel 的 MDS 增益集)

@@ -23,11 +23,11 @@ caps.latest.revision: 40
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8302d2481e9fe2f6d47c87e2fbc9accd2e3c560d
+ms.translationtype: HT
+ms.sourcegitcommit: daec226de4b93ae00997c07e25ba84352c5258e4
+ms.openlocfilehash: 28b5c5dbf4ab85b11818648e2daf62621df64219
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/31/2017
 
 ---
 # <a name="estimate-the-size-of-a-nonclustered-index"></a>估計非叢集索引的大小
@@ -185,7 +185,7 @@ ms.lasthandoff: 06/22/2017
   
 5.  計算索引資料列的大小：  
   
-     ***Leaf_Row_Size***  = ***Fixed_Leaf_Size*** + ***Variable_Leaf_Size*** + ***Leaf_Null_Bitmap*** + 1 (索引資料列的資料列標頭上方) + 6 (子頁面識別碼指標)  
+     ***Leaf_Row_Size***  = ***Fixed_Leaf_Size*** + ***Variable_Leaf_Size*** + ***Leaf_Null_Bitmap*** + 1 (索引資料列的資料列標頭上方)  
   
 6.  計算每個分頁的索引資料列數目 (每個分頁包含 8096 個可用位元組)：  
   

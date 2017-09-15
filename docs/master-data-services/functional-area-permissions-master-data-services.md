@@ -1,5 +1,5 @@
 ---
-title: "功能區域權限 (Master Data Services) |Microsoft 文件"
+title: "功能區域權限 (Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - permissions [Master Data Services], functional areas
 ms.assetid: a80b87b3-b904-4cda-8582-0761c2617c57
 caps.latest.revision: 10
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e0ad6fd33d69b9b6e3b76dcf1d2c18da528083d5
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 34aa40c2c999709c871fe7b1e283c5d6e30ab1b4
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="functional-area-permissions-master-data-services"></a>功能區域權限 (Master Data Services)
@@ -50,9 +50,9 @@ ms.lasthandoff: 08/02/2017
  使用者或群組至少必須擁有 [模型] 索引標籤上的一個功能區域和一個模型的權限，才能存取 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]。  
   
 ## <a name="see-also"></a>另請參閱  
- [指派功能區域權限 &#40;Master Data services&#41;](../master-data-services/assign-functional-area-permissions-master-data-services.md)   
- [模型物件權限 &#40;Master Data services&#41;](../master-data-services/model-object-permissions-master-data-services.md)   
- [階層成員權限 &#40;Master Data services&#41;](../master-data-services/hierarchy-member-permissions-master-data-services.md)   
- [如何決定權限 &#40;Master Data services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)  
+ [指派功能區域權限 &#40;Master Data Services&#41;](../master-data-services/assign-functional-area-permissions-master-data-services.md)   
+ [模型物件權限 &#40;Master Data Services&#41;](../master-data-services/model-object-permissions-master-data-services.md)   
+ [階層成員權限 &#40;Master Data Services&#41;](../master-data-services/hierarchy-member-permissions-master-data-services.md)   
+ [如何決定權限 &#40;Master Data Services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)  
   
   

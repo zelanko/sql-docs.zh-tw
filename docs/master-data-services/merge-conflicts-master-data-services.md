@@ -1,33 +1,38 @@
 ---
 title: "合併衝突 (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 797219ad-5109-4666-94d3-dd1d59440a33
 caps.latest.revision: 5
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 5
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 2f16388a8db8e5a0cee7809549c74efd4ba2fc7f
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/07/2017
+
 ---
-# 合併衝突 (Master Data Services)
-  在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中，如果您嘗試發佈已由另一位使用者變更的資料，則該發佈將會失敗並會出現衝突錯誤。 若要解決此錯誤，可以執行合併衝突，然後重新發佈所做的變更。  
+# <a name="merge-conflicts-master-data-services"></a>合併衝突 (Master Data Services)
+  在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，如果您嘗試發佈已由另一位使用者變更的資料，則該發佈將會失敗並會出現衝突錯誤。 若要解決此錯誤，可以執行合併衝突，然後重新發佈所做的變更。  
   
-## 必要條件  
+## <a name="prerequisites"></a>必要條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[總管]** 功能區域的權限。  
   
 -   針對要更新的實體分葉模型物件，您必須至少擁有最小的更新權限。  
   
-### 合併衝突  
+### <a name="to-merge-conflicts"></a>合併衝突  
   
 1.  在 [總管] 頁面上，更新成員屬性。  
   
@@ -43,7 +48,7 @@ caps.handback.revision: 5
   
 4.  按一下 [套用] 之後，您可以進行其他變更，並重新發佈。 或是按一下 [取消] 取消更新，並重新載入來自伺服器的最新版本。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [成員 &#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)  
   
   

@@ -2,7 +2,7 @@
 title: "PolyBase 疑難排解 | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 10/25/2016
+ms.date: 8/29/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -21,10 +21,10 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: fa59193fcedb1d5437d8df14035fadca2b3a28f1
-ms.openlocfilehash: e65ea926f3a2d2fb3c30c511a1fbba6150de7b42
+ms.sourcegitcommit: 4941d8eb846e9d47b008447fe0e346d43de5d87f
+ms.openlocfilehash: ec61aa036b77b827ac021b56066e8047bd74c44a
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/30/2017
 
 ---
 # <a name="polybase-troubleshooting"></a>PolyBase, 疑難排解
@@ -143,7 +143,7 @@ ms.lasthandoff: 07/31/2017
   
 ## <a name="to-view-the--polybase-query-plan"></a>檢視 PolyBase 查詢計劃  
   
-1.  在 SSMS 中，啟用 [包括實際執行計畫] \(Ctrl + M) 並執行查詢。  
+1.  在 SSMS 中，啟用 [包括實際執行計畫] (Ctrl + M) 並執行查詢。  
   
 2.  按一下 [執行計劃] 索引標籤。  
   
@@ -227,8 +227,18 @@ ms.lasthandoff: 07/31/2017
  - 可能的最大資料列大小 (包括可變長度資料行的完整長度) 不能超過 1 MB。 
  - PolyBase 不支援 Hive 0.12 以上的資料類型 (也就是 Char()、VarChar())   
  - 將資料從 SQL Server 或 Azure SQL 資料倉儲匯出為 ORC 檔案格式時，可以將具有大量文字的資料行限制為最少 50 個資料行，因為會發生 Java 記憶體不足錯誤。 若要解決這個問題，只需要匯出資料行的子集。
-- [將節點新增至 SQL Server 2016 容錯移轉叢集時，不會安裝 PolyBase](https://support.microsoft.com/en-us/help/3173087/fix-polybase-feature-doesn-t-install-when-you-add-a-node-to-a-sql-server-2016-failover-cluster)
-  
+ - 無法讀取或寫入在 Hadoop 中靜止加密的資料， 包括 HDFS 加密區域或透明加密。
+ - 如果已啟用 KNOX，PolyBase 就無法連接至 Hortonworks 執行個體。 
+ - 如果 hadoop.RPC.Protection 設定不是設為「驗證」，PolyBase 就無法連接到 Hadoop 執行個體。
+
+[將節點新增至 SQL Server 2016 容錯移轉叢集時，不會安裝 PolyBase](https://support.microsoft.com/en-us/help/3173087/fix-polybase-feature-doesn-t-install-when-you-add-a-node-to-a-sql-server-2016-failover-cluster)
+
+## <a name="hadoop-name-node-high-availability"></a>Hadoop 名稱節點的高可用性
+PolyBase 不會與名稱節點 HA 服務互動，例如目前的 Zookeeper 或 Knox。 不過，有一個經證實有效的因應措施可以提供這項功能。 
+
+因應措施：使用 DNS 名稱，將連線重新路由到作用中的名稱節點。 若要這樣做，您必須確認外部資料來源是使用 DNS 名稱來與名稱節點通訊。 發生名稱節點容錯移轉時，您必須變更與外部資料來源定義中所用的 DNS 名稱建立關聯的 IP 位址。 如此即會將所有新的連線重新路由至正確的名稱節點。 發生容錯移轉時，現有的連線將會失敗。 若要自動化此程序，「活動訊號」可 Ping 到作用中的名稱節點。 如果活動訊號失敗，我們就可以假設發生過容錯移轉，並自動切換至次要的 IP 位址。
+
+
 ## <a name="error-messages-and-possible-solutions"></a>錯誤訊息與可能的解決方案
 
 為外部資料表錯誤疑難排解時，請參閱 Murshed Zaman 的部落格 [https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/](https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/ "PolyBase setup errors and possible solutions")(PolyBase 安裝程式錯誤和可能的解決方案)。

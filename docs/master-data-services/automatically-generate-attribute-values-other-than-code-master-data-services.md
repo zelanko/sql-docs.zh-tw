@@ -1,5 +1,5 @@
 ---
-title: "自動產生程式碼 (Master Data Services) 以外的屬性值 |Microsoft 文件"
+title: "自動產生 Code 以外的屬性值 (Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,18 +11,18 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: b82f6f81-6e9c-4918-9ea9-4ab5f5d11b15
 caps.latest.revision: 5
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: aa9f904e870324a51ae46e94986c3b20cd84f354
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 2709d8389e92b9688e18fba0a055263fa67e33e7
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="automatically-generate-attribute-values-other-than-code-master-data-services"></a>自動產生 Code 以外的屬性值 (Master Data Services)
-  在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中，當您希望每次套用商務規則時，自動將整數指派為值，請自動為實體的屬性自動產生值。  
+  在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，當您希望每次套用商務規則時，自動將整數指派為值，請自動為實體的屬性自動產生值。  
   
 ## <a name="prerequisites"></a>必要條件  
  若要執行此程序：  
@@ -71,13 +71,13 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="next-steps"></a>後續步驟  
   
--   [根據商務規則 &#40; 驗證特定成員Master Data services&#41;](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
+-   [根據商務規則驗證特定成員 &#40;Master Data Services&#41;](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
   
--   [根據商務規則 &#40; 驗證版本Master Data services&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
+-   [根據商務規則驗證版本 &#40;Master Data Services&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [自動建立代碼 &#40;Master Data services&#41;](../master-data-services/automatic-code-creation-master-data-services.md)   
- [商務規則 &#40;Master Data services&#41;](../master-data-services/business-rules-master-data-services.md)   
- [驗證 &#40;Master Data services&#41;](../master-data-services/validation-master-data-services.md)  
+ [自動建立代碼 &#40;Master Data Services&#41;](../master-data-services/automatic-code-creation-master-data-services.md)   
+ [商務規則 &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)   
+ [驗證 &#40;Master Data Services&#41;](../master-data-services/validation-master-data-services.md)  
   
   

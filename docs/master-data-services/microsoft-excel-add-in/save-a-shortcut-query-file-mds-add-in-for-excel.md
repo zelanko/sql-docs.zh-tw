@@ -1,5 +1,5 @@
 ---
-title: "儲存捷徑查詢檔案 （MDS 增益集的 Excel） |Microsoft 文件"
+title: "儲存捷徑查詢檔案 (適用於 Excel 的 MDS 增益集) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,14 +11,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 98385f84-67cc-421a-b729-91847954e03e
 caps.latest.revision: 8
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a867bcd86664a8d3d771718c7ba359cbc0cb32a2
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 5d46b0cc674a916aea86c153571de2af0da4ca12
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="save-a-shortcut-query-file-mds-add-in-for-excel"></a>儲存捷徑查詢檔案 (適用於 Excel 的 MDS 增益集)

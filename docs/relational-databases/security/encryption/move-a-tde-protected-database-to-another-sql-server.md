@@ -17,49 +17,25 @@ caps.latest.revision: 18
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 61dab0bbd770679206c7eebee438f2fa22807ac2
+ms.translationtype: HT
+ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
+ms.openlocfilehash: 512d13d8349be9370bb222e1513f5166f2cabeee
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>將 TDE 保護的資料庫移至另一個 SQL Server
   此主題描述如何使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ，透過透明資料加密 (TDE) 保護資料庫，然後將資料庫移到另一個 [!INCLUDE[tsql](../../../includes/tsql-md.md)]執行個體。 TDE 會執行資料和記錄檔的即時 I/O 加密和解密。 此加密會使用資料庫加密金鑰 (DEK)，該金鑰儲存於資料庫開機記錄中，以便在復原期間可供使用。 DEK 是對稱金鑰，而其維護安全的方式是使用儲存於伺服器之 **master** 資料庫內的憑證或是受到 EKM 模組所保護的非對稱金鑰。  
+   
+##  <a name="Restrictions"></a> 限制事項  
   
- **本主題內容**  
-  
--   **開始之前：**  
-  
-     [限制事項](#Restrictions)  
-  
-     [安全性](#Security)  
-  
--   **若要使用下列項目，建立透明資料加密所保護的資料庫：**  
-  
-     [SQL Server Management Studio](#SSMSCreate)  
-  
-     [Transact-SQL](#TsqlCreate)  
-  
--   **若要使用下列項目移動資料庫：**  
-  
-     [SQL Server Management Studio](#SSMSMove)  
-  
-     [Transact-SQL](#TsqlMove)  
-  
-##  <a name="BeforeYouBegin"></a> 開始之前  
-  
-###  <a name="Restrictions"></a> 限制事項  
-  
--   移動 TDE 保護的資料庫時，您也必須移動用來開啟 DEK 的憑證或非對稱金鑰。 憑證或非對稱金鑰必須安裝在目的地伺服器的 **master** 資料庫中， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 才能存取資料庫檔案。 如需詳細資訊，請參閱[透明資料加密 &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption-tde.md)。  
+-   移動 TDE 保護的資料庫時，您也必須移動用來開啟 DEK 的憑證或非對稱金鑰。 憑證或非對稱金鑰必須安裝在目的地伺服器的 **master** 資料庫中， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 才能存取資料庫檔案。 如需詳細資訊，請參閱[透明資料加密 &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption.md)。  
   
 -   您必須同時保留憑證檔案和私密金鑰檔案的副本，才能復原憑證。 私密金鑰的密碼不必與資料庫主要金鑰密碼相同。  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 預設會將此處建立的檔案儲存在 **C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\DATA** 。 您的檔案名稱和位置可能會不同。  
   
-###  <a name="Security"></a> 安全性  
-  
-####  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Permissions  
   
 -   需要 **master** 資料庫的 **CONTROL DATABASE** 權限，才能建立資料庫主要金鑰。  
   
@@ -68,6 +44,8 @@ ms.lasthandoff: 06/22/2017
 -   需要加密資料庫的 **CONTROL DATABASE** 權限，以及用於加密資料庫加密金鑰之憑證或非對稱金鑰的 **VIEW DEFINITION** 權限。  
   
 ##  <a name="SSMSProcedure"></a> 建立透明資料加密所保護的資料庫  
+
+下列程序示範您必須使用 SQL Server Management Studio 以及 Transact-SQL 建立 TDE 所保護的資料庫。
   
 ###  <a name="SSMSCreate"></a> 使用 SQL Server Management Studio  
   
@@ -109,7 +87,7 @@ ms.lasthandoff: 06/22/2017
   
 3.  將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]**。  
   
-    ```  
+    ```sql  
     -- Create a database master key and a certificate in the master database.  
     USE master ;  
     GO  
@@ -161,7 +139,9 @@ ms.lasthandoff: 06/22/2017
   
 -   [ALTER DATABASE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-database-transact-sql.md)  
   
-##  <a name="TsqlProcedure"></a> 若要移動資料庫  
+##  <a name="TsqlProcedure"></a> 移動透明資料加密所保護的資料庫 
+
+下列程序示範您必須使用 SQL Server Management Studio 以及 Transact-SQL 移動 TDE 所保護的資料庫。
   
 ###  <a name="SSMSMove"></a> 使用 SQL Server Management Studio  
   
@@ -282,7 +262,7 @@ ms.lasthandoff: 06/22/2017
   
 3.  將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]**。  
   
-    ```  
+    ```sql  
     -- Detach the TDE protected database from the source server.   
     USE master ;  
     GO  
@@ -327,6 +307,6 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>另請參閱  
  [資料庫卸離和附加 &#40;SQL Server&#41;](../../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
- [Azure SQL Database 的透明資料加密](../../../relational-databases/security/encryption/transparent-data-encryption-with-azure-sql-database.md)  
+ [Azure SQL Database 的透明資料加密](../../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "連接 （MDS 增益集的 Excel） |Microsoft 文件"
+title: "連接 (適用於 Excel 的 MDS 增益集) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -11,20 +11,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 2f2b2f9d-7744-460e-83cd-56d34ea70ff0
 caps.latest.revision: 12
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 3223a2a26e9476549afd5bd5dbdef84337414ac8
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 1c301a0192a0fd8a894a92dacc5503b27ce180f1
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="connections-mds-add-in-for-excel"></a>連接 (適用於 Excel 的 MDS 增益集)
   若要將資料下載至 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，您必須先建立連接。 連接可讓 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Web 服務知道要連接的目標 MDS 資料庫。  
   
- 連接字串通常是 URL [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] web 應用程式，例如`http://contoso/mds`。  
+ 連接字串通常是 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式的 URL，例如 `http://contoso/mds`。  
   
  每次您啟動 Excel 時，都必須連接到 MDS 儲存機制。 唯一的例外狀況是使用中試算表已經包含 MDS 管理的資料。 在此情況中，每次您重新整理或發行工作表中的資料時，系統就會自動建立連接。  
   
@@ -42,7 +42,7 @@ ms.lasthandoff: 08/02/2017
   
 |工作描述|主題|  
 |----------------------|-----------|  
-|建立 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 資料庫的連接。|[連接到 MDS 存放庫 &#40;適用於 Excel 的 MDS 增益集&#41;](../../master-data-services/microsoft-excel-add-in/connect-to-an-mds-repository-mds-add-in-for-excel.md)|  
+|建立 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 資料庫的連接。|[連接到 MDS 儲存機制 &#40;適用於 Excel 的 MDS 增益集&#41;](../../master-data-services/microsoft-excel-add-in/connect-to-an-mds-repository-mds-add-in-for-excel.md)|  
 |將 MDS 資料載入 Excel 中。|[將資料從 Master Data Services 匯出至 Excel](../../master-data-services/microsoft-excel-add-in/export-data-to-excel-from-master-data-services.md)|  
 |在將 MDS 資料載入 Excel 之前篩選資料。|[在匯出之前篩選資料 &#40;適用於 Excel 的 MDS 增益集&#41;](../../master-data-services/microsoft-excel-add-in/filter-data-before-exporting-mds-add-in-for-excel.md)|  
   

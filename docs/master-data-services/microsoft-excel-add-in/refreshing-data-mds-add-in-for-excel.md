@@ -1,5 +1,5 @@
 ---
-title: "重新整理資料 （MDS 增益集的 Excel） |Microsoft 文件"
+title: "重新整理資料 (適用於 Excel 的 MDS 增益集) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,18 +11,18 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 58dbe99a-288d-4f1c-9cd5-704d6836c945
 caps.latest.revision: 10
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6159c4b30b0cd2c4f718efaddc7c915f1fb43dfd
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: ac5d258c4c59154bbf03528cd81ac53a6901f15f
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="refreshing-data-mds-add-in-for-excel"></a>重新整理資料 (適用於 Excel 的 MDS 增益集)
-  在[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]，當您想要從 MDS 儲存機制取得最新的資訊，而不開啟新的工作表時，請重新整理資料。 您可以重新整理所有資料格或資料格的選取範圍。 當您已經插入含有自訂公式或不在 MDS 中管理之資料的資料行，而且想要加以保留時，這樣做可能很有用。  
+  在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，當您想要從 MDS 存放庫取得最新資訊，而不開啟新的工作表時，請重新整理資料。 您可以重新整理所有資料格或資料格的選取範圍。 當您已經插入含有自訂公式或不在 MDS 中管理之資料的資料行，而且想要加以保留時，這樣做可能很有用。  
   
 ## <a name="when-you-can-refresh-mds-managed-data"></a>何時能夠重新整理 MDS 管理的資料  
  如果使用中工作表已經包含 MDS 管理的資料，您就可以在使用中工作表中重新整理 MDS 管理的資料。 如果您已經變更屬性值或將成員加入至工作表，就必須先發行變更，然後才能重新整理。  
@@ -50,7 +50,7 @@ ms.lasthandoff: 08/02/2017
   
 |工作描述|主題|  
 |----------------------|-----------|  
-|建立 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 資料庫的連接。|[連接到 MDS 存放庫 &#40;適用於 Excel 的 MDS 增益集&#41;](../../master-data-services/microsoft-excel-add-in/connect-to-an-mds-repository-mds-add-in-for-excel.md)|  
+|建立 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 資料庫的連接。|[連接到 MDS 儲存機制 &#40;適用於 Excel 的 MDS 增益集&#41;](../../master-data-services/microsoft-excel-add-in/connect-to-an-mds-repository-mds-add-in-for-excel.md)|  
 |將 MDS 資料載入 Excel 中。|[將資料從 Master Data Services 匯出至 Excel](../../master-data-services/microsoft-excel-add-in/export-data-to-excel-from-master-data-services.md)|  
   
 ## <a name="related-content"></a>相關內容  

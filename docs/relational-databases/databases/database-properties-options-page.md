@@ -2,7 +2,7 @@
 title: "資料庫屬性 (選項頁面) | Microsoft 文件"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 04/29/2016
+ms.date: 08/28/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -17,11 +17,11 @@ caps.latest.revision: 67
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 49b5572874fd642d738b8ffee362cc84540709ea
+ms.translationtype: HT
+ms.sourcegitcommit: 8cd44c8b384019418a2a913e5f8d13d82120eac2
+ms.openlocfilehash: 8d3a9c04f09d48823638e1608722268b360610e8
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/29/2017
 
 ---
 # <a name="database-properties-options-page"></a>資料庫屬性 (選項頁面)
@@ -37,7 +37,7 @@ ms.lasthandoff: 06/22/2017
  指定下列其中一個復原資料庫模式：[完整]、[大量記錄] 或 [簡單]。 如需復原模式的詳細資訊，請參閱[復原模式 &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)。  
   
  **相容性層級**  
- 指定資料庫所支援的最新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。 可能的值為  **SQL Server 2014 (120)**、  **SQL Server 2012 (110)**和 **SQL Server 2008 (100)**。 當 SQL Server 2005 資料庫升級到 SQL Server 2014 時，該資料庫的相容性層級會從 90 變更為 100。  SQL Server 2014 不支援 90 相容性層級。 如需詳細資訊，請參閱 [ALTER DATABASE 相容性層級 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。  
+ 指定資料庫所支援的最新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。 如需可能的值，請參閱 [ALTER DATABASE (Transact-SQL) 相容性層級](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。 升級 SQL Server 資料庫之後，會盡可能保留該資料庫的相容性層級，或變更為新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所支援的最低層級。 
   
  **內含項目類型**  
  指定無或部分以指定其是否為自主資料庫。 如需自主資料庫的詳細資訊，請參閱[自主資料庫](../../relational-databases/databases/contained-databases.md)。 必須先將伺服器屬性 [啟用自主資料庫] 設為 [TRUE]，才能將資料庫設為自主。  
@@ -49,7 +49,7 @@ ms.lasthandoff: 06/22/2017
  **自動關閉**  
  指定最後一個使用者結束後，資料庫是否正常關閉並釋出資源。 可能的值為 **True** 和 **False**。 若為 [True]，資料庫會正常關閉，並在最後一位使用者登出之後釋放其資源。  
   
- 自動建立累加統計資料  
+ **自動建立累加統計資料**  
  指定是否在每個分割區的統計資料建立時使用累加選項。 如需累加統計資料的資訊，請參閱 [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)。  
   
  **自動建立統計資料**  
@@ -62,7 +62,7 @@ ms.lasthandoff: 06/22/2017
  指定資料庫是否自動更新過時的最佳化統計資料。 可能的值為 **True** 和 **False**。 若為 [True]，針對最佳化查詢所需之任何過時的統計資料，都會在最佳化時自動建立。 如需詳細資訊，請參閱 [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)。  
   
  **自動非同步更新統計資料**  
- 若為 [True]，初始化自動更新過期統計資料的查詢，將不會在編譯之前等待統計資料更新。 當有可用的更新統計資料時，後續的查詢會使用這些統計資料。  
+ 若為 [True]，起始自動更新過期統計資料的查詢，不會在編譯之前等待統計資料更新。 當有可用的更新統計資料時，後續的查詢會使用這些統計資料。  
   
  若為 [False]，初始化自動更新過期統計資料的查詢，則會等到可在查詢最佳化計畫中使用更新的統計資料。  
   
@@ -130,6 +130,9 @@ ms.lasthandoff: 06/22/2017
  針對從檔案系統到 FileTable 中所儲存之 FILESTREAM 資料的非交易存取，指定下列其中一個選項： **OFF**、 **READ_ONLY**或 **FULL**。 如果伺服器上未啟用 FILESTREAM，這個值會設定為 OFF 而且會停用。 如需詳細資訊，請參閱 [FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md)。  
   
 ## <a name="miscellaneous"></a>其他  
+**允許快照集隔離**  
+啟用這項功能。  
+
  **ANSI NULL 預設值**  
  針對在 **CREATE TABLE** 或 **ALTER TABLE** 陳述式期間未明確定義為 **NOT NULL** 的所有使用者定義資料類型或資料行，允許 Null 值 (預設狀態)。 如需詳細資訊，請參閱 [SET ANSI_NULL_DFLT_ON &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-null-dflt-on-transact-sql.md) 和 [SET ANSI_NULL_DFLT_OFF &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-null-dflt-off-transact-sql.md)。  
   
@@ -155,7 +158,13 @@ ms.lasthandoff: 06/22/2017
  若為 [True]，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會在資料庫中由 FOREIGN KEY 條件約束所連結且具有 **datetime** 資料行的任意兩個資料表之間，維護相互關聯統計資料。  
   
  若為 [False]，則不會維謢相互關聯統計資料。  
-  
+ 
+ **延遲持久性**  
+ 啟用這項功能。  
+ 
+ **為啟用讀取認可快照**  
+ 啟用這項功能。  
+ 
  **數值捨入中止**  
  指定資料庫如何處理捨入錯誤。 可能的值為 **True** 和 **False**。 若為 [True]，如果運算式中發生遺失有效位數便會產生錯誤。 若為 [False]，遺失有效位數並不會產生錯誤訊息，而且結果將進位到儲存該結果之資料行或變數的有效位數。 如需詳細資訊，請參閱 [SET NUMERIC_ROUNDABORT &#40;Transact-SQL&#41;](../../t-sql/statements/set-numeric-roundabort-transact-sql.md)。  
   
@@ -192,14 +201,27 @@ ms.lasthandoff: 06/22/2017
   
  **目標復原時間 (秒)**  
  指定發生損毀時，復原指定之資料庫的時間上限 (以秒鐘表示)。 如需詳細資訊，請參閱[資料庫檢查點 &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md)。  
-  
+
+## <a name="service-broker"></a>Service Broker  
+**Broker 已啟用**  
+啟用或停用 Service Broker。  
+
+**接受 Broker 優先權**  
+唯讀 Service Broker 屬性。  
+
+**Service Broker 識別碼**  
+唯讀識別碼。  
+
 ## <a name="state"></a>State  
  **資料庫唯讀**  
- 指定資料庫是否為唯讀。 可能的值為 **True** 和 **False**。 若為 [True]，使用者只能讀取資料庫中的資料。 使用者無法修改資料或資料庫物件，但可以使用 DROP DATABASE 陳述式刪除該資料庫。 在指定 [資料庫唯讀] 選項的新值時，資料庫不可在使用中。 master 資料庫為例外，只有系統管理員可以在設定此選項時使用 master。  
+ 指定資料庫是否為唯讀。 可能的值為 **True** 和 **False**。 若為 [True]，使用者只能讀取資料庫中的資料。 使用者無法修改資料或資料庫物件，但可以使用 `DROP DATABASE` 陳述式刪除資料庫本身。 在指定 [資料庫唯讀] 選項的新值時，資料庫不可在使用中。 master 資料庫為例外，只有系統管理員可以在設定此選項時使用 master。  
   
  **資料庫狀態**  
  檢視資料庫的目前狀態。 它是不可編輯的。 如需 [資料庫狀態] 的詳細資訊，請參閱[資料庫狀態](../../relational-databases/databases/database-states.md)。  
-  
+
+ **加密已啟用**  
+ 若為 [True]，這個資料庫就會啟用資料庫加密。 「資料庫加密金鑰」都需要加密。 如需詳細資訊，請參閱[透明資料加密 &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)。  
+ 
  **限制存取**  
  指定哪些使用者可以存取資料庫。 可能的值為：  
   
@@ -215,12 +237,10 @@ ms.lasthandoff: 06/22/2017
   
      只有 db_owner、dbcreator 或 sysadmin 角色的成員可以使用資料庫。  
   
- **加密已啟用**  
- 若為 [True]，這個資料庫就會啟用資料庫加密。 「資料庫加密金鑰」都需要加密。 如需詳細資訊，請參閱[透明資料加密 &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption-tde.md)。  
-  
+
+
 ## <a name="see-also"></a>另請參閱  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)  
-  
   
 

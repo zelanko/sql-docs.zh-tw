@@ -1,5 +1,5 @@
 ---
-title: "使用 MDSModelDeploy 建立模型部署封裝 |Microsoft 文件"
+title: "使用 MDSModelDeploy 建立模型部署套件 | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/01/2017
@@ -12,18 +12,18 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: c2687e39-dc20-494f-a707-2aa29f4c329e
 caps.latest.revision: 13
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 59f983bc7fb8b25956a6edd61a6a9226384ffb8a
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: f264d1d4daeae6a4577e7ad88d0ea5839afb6d96
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="create-a-model-deployment-package-by-using-mdsmodeldeploy"></a>使用 MDSModelDeploy 建立模型部署封裝
-  在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中，使用 MDSModelDeploy 工具來建立封裝。 根據您指定的命令，此封裝可以包含：  
+  在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，使用 MDSModelDeploy 工具來建立封裝。 根據您指定的命令，此封裝可以包含：  
   
 -   僅限模型物件。  
   
@@ -101,7 +101,7 @@ ms.lasthandoff: 08/02/2017
 -   [使用 MDSModelDeploy 部署模型部署封裝](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [模型部署選項 &#40;Master Data services&#41;](../master-data-services/model-deployment-options-master-data-services.md)   
- [部署模型 &#40;Master Data services&#41;](../master-data-services/deploying-models-master-data-services.md)  
+ [模型部署選項 &#40;Master Data Services&#41;](../master-data-services/model-deployment-options-master-data-services.md)   
+ [部署模型 &#40;Master Data Services&#41;](../master-data-services/deploying-models-master-data-services.md)  
   
   

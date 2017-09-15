@@ -1,5 +1,5 @@
 ---
-title: "成員 (Master Data Services) |Microsoft 文件"
+title: "成員 (Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-server-2016
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - members [Master Data Services]
 ms.assetid: 0fda32b9-677d-4ba2-bb28-f76f2383a30f
 caps.latest.revision: 16
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: abda6e0259b924a184d9d7cf888fdf5f430a8dd6
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 3161b24f55c5473829b5d0a0ea090763d1203295
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="members-master-data-services"></a>成員 (Master Data Services)
@@ -36,7 +36,7 @@ ms.lasthandoff: 08/02/2017
   
  在此範例中，資料表代表實體、資料表中的資料列代表成員，而資料表中的資料行則代表屬性。 每個資料格代表特定成員的屬性值。  
   
- ![以資料表表示 Master Data Services 實體](../master-data-services/media/mds-conc-entity-table.gif "以資料表表示 Master Data Services 實體")  
+ ![以資料表表示的 Master Data Services 實體](../master-data-services/media/mds-conc-entity-table.gif "以資料表表示的 Master Data Services 實體")  
   
 ## <a name="member-types"></a>成員類型  
  有三種類型的成員：分葉成員、合併成員和集合成員。  
@@ -59,7 +59,7 @@ ms.lasthandoff: 08/02/2017
 ## <a name="member-example"></a>成員範例  
  在下列範例中，每個成員是由 Name、Code、Subcategory、StandardCost、ListPrice 和 FilePhoto 屬性值所組成。  
   
- ![Bike 產品實體資料表](../master-data-services/media/mds-conc-entity-table-w-data.gif "Bike 產品實體資料表")  
+ ![自行車產品實體資料表](../master-data-services/media/mds-conc-entity-table-w-data.gif "自行車產品實體資料表")  
   
 ## <a name="related-tasks"></a>相關工作  
   

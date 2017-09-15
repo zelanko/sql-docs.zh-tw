@@ -1,5 +1,5 @@
 ---
-title: "刪除階層成員權限 (Master Data Services) |Microsoft 文件"
+title: "刪除階層成員權限 (Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -15,18 +15,18 @@ helpviewer_keywords:
 - permissions [Master Data Services], deleting member permissions
 ms.assetid: 7f22d5e2-70c1-422c-99c2-e995a47d812a
 caps.latest.revision: 6
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3c06cb0309491e9663e4b130b9a641bbbc3a07be
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 97e377cb8b63384fbbe3f58ef0b535e2c2da0877
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="delete-hierarchy-member-permissions-master-data-services"></a>刪除階層成員權限 (Master Data Services)
-  在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中，刪除模型物件權限，移除所做的任何指派。  
+  在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，刪除模型物件權限，移除所做的任何指派。  
   
 ## <a name="prerequisites"></a>必要條件  
  若要執行此程序：  
@@ -61,7 +61,7 @@ ms.lasthandoff: 08/02/2017
 10. 按一下 **[儲存]**。  
   
 ## <a name="see-also"></a>另請參閱  
- [階層成員權限 &#40;Master Data services&#41;](../master-data-services/hierarchy-member-permissions-master-data-services.md)   
- [指派階層成員權限 &#40;Master Data services&#41;](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)  
+ [階層成員權限 &#40;Master Data Services&#41;](../master-data-services/hierarchy-member-permissions-master-data-services.md)   
+ [指派階層成員權限 &#40;Master Data Services&#41;](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)  
   
   

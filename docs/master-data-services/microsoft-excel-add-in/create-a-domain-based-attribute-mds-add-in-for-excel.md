@@ -1,5 +1,5 @@
 ---
-title: "建立網域屬性 （MDS 增益集的 Excel） |Microsoft 文件"
+title: "建立網域屬性 (適用於 Excel 的 MDS 增益集) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/25/2017
 ms.prod: sql-server-2016
@@ -11,14 +11,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 7b3e30dc-8f41-4a5d-8009-ae5a4426a64b
 caps.latest.revision: 6
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: f67b43f772e9693f5abbb396b6987527a5220a1d
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 0183ba6f178fbc9f392b4e711ccaba49220ffa3e
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="create-a-domain-based-attribute-mds-add-in-for-excel"></a>建立網域屬性 (適用於 Excel 的 MDS 增益集)
@@ -54,7 +54,7 @@ ms.lasthandoff: 08/02/2017
   
     -   若要使用現有實體中的值，請選擇實體的名稱。
     
-    如果有多個五十個實體，您可以篩選和搜尋的實體。 否則，請從下拉式清單中選取的實體。  
+    如果有五十個以上的實體，您可以篩選並搜尋實體。 否則，請從下拉式清單選取實體。  
   
 6.  如果您在上一個步驟中選擇 [選取的資料行]，請在 [新實體名稱] 方塊中輸入新實體的名稱。 此名稱可以與資料行 (屬性) 名稱相同。  
   
@@ -66,7 +66,7 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="see-also"></a>另請參閱  
  [網域屬性 &#40;Master Data Services&#41;](../../master-data-services/domain-based-attributes-master-data-services.md)   
- [建立實體 &#40;MDS 增益集的 Excel &#41;](../../master-data-services/microsoft-excel-add-in/create-an-entity-mds-add-in-for-excel.md)   
+ [建立實體 &#40;適用於 Excel 的 MDS 增益集&#41;](../../master-data-services/microsoft-excel-add-in/create-an-entity-mds-add-in-for-excel.md)   
  [建立模型 &#40;適用於 Excel 的 MDS 增益集&#41;](../../master-data-services/microsoft-excel-add-in/building-a-model-mds-add-in-for-excel.md)  
   
   

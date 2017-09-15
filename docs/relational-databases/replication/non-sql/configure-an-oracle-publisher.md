@@ -1,7 +1,7 @@
 ---
 title: "設定 Oracle 發行者 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 09/05/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -16,11 +16,11 @@ caps.latest.revision: 60
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2eb98196756e47a5118c8cf777a6ef5e05b950f4
+ms.translationtype: HT
+ms.sourcegitcommit: 46b16dcf147dbd863eec0330e87511b4ced6c4ce
+ms.openlocfilehash: c5fb2503568339307c8e63a66f7a3b25bed20cfc
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/05/2017
 
 ---
 # <a name="configure-an-oracle-publisher"></a>設定 Oracle 發行者
@@ -28,12 +28,25 @@ ms.lasthandoff: 06/22/2017
   
 1.  使用提供的指令碼在 Oracle 資料庫中建立複寫管理使用者。  
   
-2.  對於您將發行的資料表，則在每個資料表上直接 (不透過角色) 將 SELECT 權限授與您在步驟一中建立的 Oracle 管理使用者。  
+2.  對於您發行的資料表，則在每個資料表上直接 (不透過角色) 將 SELECT 權限授與您在步驟一中建立的 Oracle 管理使用者。  
   
 3.  在「 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 散發者」上安裝 Oracle 用戶端軟體和 OLE DB 提供者，然後停止並重新啟動 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體。 如果「散發者」在 64 位元平台上執行，則必須使用 Oracle OLE DB 提供者的 64 位元版本。  
   
 4.  在「 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 散發者」端將 Oracle 資料庫設為「發行者」。  
+
+[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支援下列交易式與快照式複寫的異質性情況：  
   
+-   將資料從 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 發行到非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的訂閱者  
+
+-   若要在 Oracle 之間發行資料，具有如下限制：  
+  | |2016 或更早版本 |2017 或更新版本 |
+  |-------|-------|--------|
+  |從 Oracle 複寫 |只支援 Oracle 10g 或更早版本 |只支援 Oracle 10g 或更早版本 |
+  |複寫到 Oracle |最高到 Oracle 12c |不支援 |
+
+ 非 SQL Server 訂閱者的異質性複寫已被取代。 Oracle 發行已被取代。 若要移動資料，請使用異動資料擷取和 [!INCLUDE[ssIS](../../../includes/ssis-md.md)]建立方案。  
+
+
  如需可以從 Oracle 資料庫複寫的物件清單，請參閱 [Oracle 發行者的設計考量與限制](../../../relational-databases/replication/non-sql/design-considerations-and-limitations-for-oracle-publishers.md)。  
   
 > [!NOTE]  
@@ -47,7 +60,7 @@ ms.lasthandoff: 06/22/2017
   
  在 Oracle 複寫使用者結構描述的安裝程式中會提供範例指令碼進行輔助。 安裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 後，可在下列目錄中取得此指令碼：*\<磁碟機>*:\\\Program Files\Microsoft SQL Server\\*\<執行個體名稱>*\MSSQL\Install\oracleadmin.sql。 它也包含在＜ [Script to Grant Oracle Permissions](../../../relational-databases/replication/non-sql/script-to-grant-oracle-permissions.md)＞主題中。  
   
- 使用具有 DBA 權限的帳戶連接到 Oracle 資料庫並執行指令碼。 此指令碼會提示輸入複寫管理使用者結構描述的使用者與密碼，以及要在其中建立物件的預設資料表空間 (資料表空間必須已經存在於 Oracle 資料庫中)。 如需如何為物件指定其他資料表空間的資訊，請參閱[管理 Oracle 資料表空間](../../../relational-databases/replication/non-sql/manage-oracle-tablespaces.md)。 可以選擇任何使用者名稱和增強式密碼，但是需將兩者都記下來，因為稍後當您將 Oracle 資料庫設為「發行者」時會提示需要此資訊。 建議僅將結構描僅用於複寫所需的物件；不要建立資料表來發行於此結構描述中。  
+ 使用具有 DBA 權限的帳戶連接到 Oracle 資料庫並執行指令碼。 此指令碼會提示輸入複寫管理使用者結構描述的使用者與密碼，以及要在其中建立物件的預設資料表空間 (資料表空間必須已經存在於 Oracle 資料庫中)。 如需如何為物件指定其他資料表空間的資訊，請參閱[管理 Oracle 資料表空間](../../../relational-databases/replication/non-sql/manage-oracle-tablespaces.md)。 可以選擇任何使用者名稱和強式密碼，但是需將兩者都記下來，因為稍後當您將 Oracle 資料庫設為「發行者」時必須提供此資訊。 建議僅將結構描僅用於複寫所需的物件；不要建立資料表來發行於此結構描述中。  
   
 ### <a name="creating-the-user-schema-manually"></a>手動建立使用者結構描述  
  如果您手動建立複寫管理使用者結構描述，則必須授與結構描述下列權限 (不論是直接或透過資料庫角色)。  
@@ -76,7 +89,7 @@ ms.lasthandoff: 06/22/2017
   
  安裝和設定用戶端網路軟體最直接的方法是使用 Oracle Client 磁碟上的 Oracle Universal Installer 和 Net Configuration Assistant。  
   
- 在 Oracle Universal Installer 中，您將提供下列資訊：  
+ 在 Oracle Universal Installer 中，您必須提供下列資訊：  
   
 |資訊|描述|  
 |-----------------|-----------------|  
@@ -111,7 +124,7 @@ ms.lasthandoff: 06/22/2017
   
      例如： `sqlplus replication/$tr0ngPasswerd@Oracle90Server`  
   
-4.  如果網路組態成功，登入將會成功，您也會看到 `SQL` 提示字元。  
+4.  如果網路組態成功，登入會成功，您也會看到 `SQL` 提示字元。  
   
 5.  如果您遇到連接到 Oracle 資料庫的問題，請參閱在＜ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ＞中的「 [ssNoVersion](../../../relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md)＞。  
   
@@ -139,3 +152,4 @@ ms.lasthandoff: 06/22/2017
  [Oracle Publishing Overview](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
   
   
+
