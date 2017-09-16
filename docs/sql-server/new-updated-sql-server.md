@@ -16,10 +16,10 @@ ms.devlang: na
 ms.date: 07/17/2017
 ms.author: genemi
 ms.translationtype: HT
-ms.sourcegitcommit: 71203bfa7cb4dcd06cc14ad8e49e5bc1113f8605
-ms.openlocfilehash: 748f2ec122ea9a889b33cbcf15a188acd5da8459
+ms.sourcegitcommit: 8cd44c8b384019418a2a913e5f8d13d82120eac2
+ms.openlocfilehash: d61aed44a16e78107c36ed4f7b1be387043b6746
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/29/2017
 
 ---
 # <a name="new-and-recently-updated-sql-server-docs"></a>新文章和最近更新的文章：SQL Server 文件
@@ -169,7 +169,7 @@ Developer Edition 只持續支援 1 個 [SQL Server Distributed Replay--../tools
 
 ## <a name="similar-articles"></a>類似的文章
 
-本節會在 GitHub 儲存機制中，列出與其他主題區中最近更新的文章十分相似的文章：[MicrosoftDocs/**sql-docs-pr**](https://github.com/microsoftdocs/sql-docs-pr/)。
+本節會在 GitHub 儲存機制中，列出與其他主題區中最近更新的文章十分相似的文章：[MicrosoftDocs/**sql-docs-pr**](https://github.com/microsoftdocs/sql-docs/)。
 
 <!--  20170717-1101  -->
 
