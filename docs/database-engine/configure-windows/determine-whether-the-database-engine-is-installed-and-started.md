@@ -37,7 +37,7 @@ ms.lasthandoff: 08/02/2017
   
      如果您在 [開始] 功能表上找不到這些項目，就表示未正確安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 請執行安裝程式來安裝 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]。  
   
-2.  在 [SQL Server 組態管理員] 中，按一下左窗格中的 [SQL Server 服務]。 右窗格會列出與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 相關的許多服務。 如果 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 已安裝，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 服務就會列為 [SQL Server (MSSQLSERVER)] (如果它是預設執行個體的話) 或 [SQL Server (\<*執行個體名稱*>)] (如果 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 安裝成具名執行個體的話)。 除非執行個體名稱已變更，否則 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 會安裝為 **SQLEXPRESS** 名稱的具名執行個體。 綠色的三角形圖示是表示 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 正在執行。 紅色的正方形圖示則表示 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 已停止。  
+2.  在 [SQL Server 組態管理員] 中，按一下左窗格中的 [SQL Server 服務]。 右窗格會列出與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 相關的許多服務。 如果 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 已安裝，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 服務就會列為 [SQL Server (MSSQLSERVER)]\(如果它是預設執行個體的話) 或 [SQL Server (\<*執行個體名稱*>)]\(如果 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 安裝成具名執行個體的話)。 除非執行個體名稱已變更，否則 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 會安裝為 **SQLEXPRESS** 名稱的具名執行個體。 綠色的三角形圖示是表示 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 正在執行。 紅色的正方形圖示則表示 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 已停止。  
   
 3.  若要啟動 [!INCLUDE[ssDE](../../includes/ssde-md.md)]，請以滑鼠右鍵按一下右窗格中的 [!INCLUDE[ssDE](../../includes/ssde-md.md)]，然後按一下 [啟動]。  
   

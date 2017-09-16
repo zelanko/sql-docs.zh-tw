@@ -51,7 +51,7 @@ ms.lasthandoff: 08/02/2017
 
    ![AlwaysOn 啟用資料庫健全狀況核取方塊](../../../database-engine/availability-groups/windows/media/always-on-enable-database-health-checkbox.png)
 
-2. 在 SQL Server Management Studio 中檢視現有可用性群組的 [屬性]。 連接到 SQL Server。 使用 [物件總管] 視窗，展開 [AlwaysOn 高可用性] 節點。 展開 [可用性群組]。 以滑鼠右鍵按一下可用性群組，然後選擇 [屬性]。 核取 [資料庫層級健全狀況偵測] 選項，然後按一下 [確定] 或 [Script the change] (指令碼變更)。 
+2. 在 SQL Server Management Studio 中檢視現有可用性群組的 [屬性]。 連接到 SQL Server。 使用 [物件總管] 視窗，展開 [AlwaysOn 高可用性] 節點。 展開 [可用性群組]。 以滑鼠右鍵按一下可用性群組，然後選擇 [屬性]。 核取 [資料庫層級健全狀況偵測] 選項，然後按一下 [確定] 或 [Script the change]\(指令碼變更)。 
 
    ![AlwaysOn AG 屬性資料庫層級健全狀況偵測](../../../database-engine/availability-groups/windows/media/always-on-ag-properties-database-level-health-detection.png)
 
