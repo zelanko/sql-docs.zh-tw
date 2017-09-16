@@ -98,7 +98,7 @@ Database Engine 會將每個資料行的加密設定儲存在資料庫中繼資�
 
 ## <a name="getting-started-with-always-encrypted"></a>開始使用 [永遠加密]
 
-使用 [永遠加密的精靈] [](../../../relational-databases/security/encryption/always-encrypted-wizard.md) 來快速開始使用 Always Encrypted。 精靈將會佈建必要的金鑰，並針對所選的資料行設定加密。 如果您要設定加密的資料行已經包含一些資料，則精靈會加密這些資料。 下列範例會示範加密資料行的程序。
+使用 [永遠加密的精靈] [Always Encrypted 精靈](../../../relational-databases/security/encryption/always-encrypted-wizard.md) 來快速開始使用 Always Encrypted。 精靈將會佈建必要的金鑰，並針對所選的資料行設定加密。 如果您要設定加密的資料行已經包含一些資料，則精靈會加密這些資料。 下列範例會示範加密資料行的程序。
 
 > [!NOTE]  
 >  如需使用精靈的影片，請參閱 [Getting Started with Always Encrypted with SSMS](https://channel9.msdn.com/Shows/Data-Exposed/Getting-Started-with-Always-Encrypted-with-SSMS)(搭配 SSMS 開始使用永遠加密)。
