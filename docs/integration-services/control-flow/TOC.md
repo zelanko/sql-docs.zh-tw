@@ -16,6 +16,7 @@
 ## [Azure HDInsight 建立叢集工作](azure-hdinsight-create-cluster-task.md)  
 ## [Azure HDInsight 刪除叢集工作](azure-hdinsight-delete-cluster-task.md)  
 ## [Azure SQL DW 上傳工作](azure-sql-dw-upload-task.md)  
+## [Azure Data Lake Store 檔案系統工作](azure-data-lake-store-file-system-task.md) 
 ## [備份資料庫工作](back-up-database-task.md)  
 ## [大量插入工作](bulk-insert-task.md)  
 ## [CDC 控制工作](cdc-control-task.md)  

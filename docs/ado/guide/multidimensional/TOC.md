@@ -1,0 +1,6 @@
+# [ADO MD 基本概念](ado-md-fundamentals.md)
+# [搭配 ADO MD 使用 ADO](using-ado-with-ado-md.md)
+# [多維度結構描述和資料的概觀](overview-of-multidimensional-schemas-and-data.md)
+# [使用 ADO MD 進行程式設計](programming-with-ado-md.md)
+# [使用多維度資料](working-with-multidimensional-data.md)
+# [ADO (多維度) (ADO MD)](ado-multidimensional-ado-md.md)
