@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
-ms.openlocfilehash: df7853f5a49a4c3b2bab4f5573cd9559e55c8b44
+ms.sourcegitcommit: 1df54edd5857ac2816fa4b164d268835d9713638
+ms.openlocfilehash: 501fac02e6146d417572dfb9f4f3906de7b2eeeb
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 09/12/2017
 
 ---
 # <a name="install-sql-server-on-server-core"></a>在 Server Core 上安裝 SQL Server
@@ -28,7 +28,7 @@ ms.lasthandoff: 09/08/2017
   
 Server Core 安裝選項提供執行特定伺服器角色的基本環境。 可協助降低這些伺服器角色的維護和管理需求，以及減少其攻擊面。 如需 Server Core 的詳細資訊，請參閱[安裝 Server Core](http://docs.microsoft.com/windows-server/get-started/getting-started-with-server-core)。 如需在 [!INCLUDE[win8srv](../../includes/win8srv-md.md)]上實作之 Server Core 的詳細資訊，請參閱 [Windows Server 2012 的 Server Core](http://msdn.microsoft.com/library/hh846323\(VS.85\).aspx) (http://msdn.microsoft.com/library/hh846323(VS.85).aspx)。  
   
- 如需目前支援的作業系統清單，請參閱[安裝 SQL Server 的硬體和軟體需求](https://docs.microsoft.com/en-us/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server)。
+ 如需目前支援的作業系統清單，請參閱[安裝 SQL Server 的硬體和軟體需求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)。
 
 ## <a name="prerequisites"></a>必要條件  
   

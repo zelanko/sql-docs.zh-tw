@@ -21,10 +21,10 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 4941d8eb846e9d47b008447fe0e346d43de5d87f
-ms.openlocfilehash: ec61aa036b77b827ac021b56066e8047bd74c44a
+ms.sourcegitcommit: 71ca2fac0a6b9f087f9d434c5a701f5656889b9e
+ms.openlocfilehash: 4026b6c7c7ae2945d49d6c4b63792239608ffea0
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/30/2017
+ms.lasthandoff: 09/13/2017
 
 ---
 # <a name="polybase-troubleshooting"></a>PolyBase, 疑難排解
@@ -229,7 +229,6 @@ ms.lasthandoff: 08/30/2017
  - 將資料從 SQL Server 或 Azure SQL 資料倉儲匯出為 ORC 檔案格式時，可以將具有大量文字的資料行限制為最少 50 個資料行，因為會發生 Java 記憶體不足錯誤。 若要解決這個問題，只需要匯出資料行的子集。
  - 無法讀取或寫入在 Hadoop 中靜止加密的資料， 包括 HDFS 加密區域或透明加密。
  - 如果已啟用 KNOX，PolyBase 就無法連接至 Hortonworks 執行個體。 
- - 如果 hadoop.RPC.Protection 設定不是設為「驗證」，PolyBase 就無法連接到 Hadoop 執行個體。
 
 [將節點新增至 SQL Server 2016 容錯移轉叢集時，不會安裝 PolyBase](https://support.microsoft.com/en-us/help/3173087/fix-polybase-feature-doesn-t-install-when-you-add-a-node-to-a-sql-server-2016-failover-cluster)
 
