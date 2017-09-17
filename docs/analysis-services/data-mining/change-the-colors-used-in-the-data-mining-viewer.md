@@ -1,28 +1,33 @@
 ---
-title: "變更資料採礦檢視器中使用的色彩 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VS.TOOLSOPTIONSPAGES.BUSINESS_INTELLIGENCE_DESIGNERS.ANALYSIS_SERVICES_DESIGNERS.DATA_MINING_VIEWERS"
+title: "變更資料採礦檢視器中使用的色彩 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VS.TOOLSOPTIONSPAGES.BUSINESS_INTELLIGENCE_DESIGNERS.ANALYSIS_SERVICES_DESIGNERS.DATA_MINING_VIEWERS
 ms.assetid: 9de2fc2a-fca5-456b-b2bd-13586e7951e6
 caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 325bc785030aa4606d91e40dfa30cb51ee4b03af
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 變更資料採礦檢視器中使用的色彩
+# <a name="change-the-colors-used-in-the-data-mining-viewer"></a>變更資料採礦檢視器中使用的色彩
   您可以變更資料採礦檢視器中使用的色彩，以顯示資料數列、節點或群集。 您可以在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中設定選項來完成這項處理。 當您變更設定以後，色彩選擇會套用到您使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]所檢視的所有模型中；但是，您必須關閉 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ，然後在檢視器中重新開啟此模型，才能看到新的色彩。  
   
-### 若要變更資料採礦檢視器中使用的色彩  
+### <a name="to-change-the-colors-used-in-the-data-mining-viewers"></a>若要變更資料採礦檢視器中使用的色彩  
   
 1.  在 **或** 的 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] [工具] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]功能表中，選取 **[選項]**。  
   

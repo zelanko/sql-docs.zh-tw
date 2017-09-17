@@ -1,38 +1,43 @@
 ---
-title: "附加和卸離 Analysis Services 資料庫 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.ssmsimbi.AttachDatabase.f1"
-  - "sql13.asvs.ssms.attachdatabase.f1"
-  - "sql13.asvs.ssmsimbi.DetachDatabase.f1"
-  - "sql13.asvs.ssms.detachdatabase.f1"
-helpviewer_keywords: 
-  - "資料庫 [Analysis Services], 附加"
-  - "資料庫 [Analysis Services], 卸離"
+title: "附加和卸離 Analysis Services 資料庫 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.asvs.ssmsimbi.AttachDatabase.f1
+- sql13.asvs.ssms.attachdatabase.f1
+- sql13.asvs.ssmsimbi.DetachDatabase.f1
+- sql13.asvs.ssms.detachdatabase.f1
+helpviewer_keywords:
+- databases [Analysis Services], attach
+- databases [Analysis Services], detach
 ms.assetid: 41887413-2d47-49b8-8614-553cb799fb18
 caps.latest.revision: 24
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 24
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f4c193def48b92245c1e2f2955262d3fb0850957
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 附加和卸離 Analysis Services 資料庫
-  通常在很多情況下，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫管理員 (dba) 會想要讓資料庫保持離線一段時間，然後在相同或不同的伺服器執行個體上，讓該資料庫恢復連線狀態。 這些情況通常是由商務需求所驅使，例如將資料庫移至不同的磁碟以提升效能、取得讓資料庫成長的空間，或升級產品。 不論是哪一種情況，**Attach** 和 **Detach** 命令都可讓 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dba 輕鬆地將資料庫保持離線並恢復連線狀態。  
+# <a name="attach-and-detach-analysis-services-databases"></a>附加和卸離 Analysis Services 資料庫
+  通常在很多情況下， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫管理員 (dba) 會想要讓資料庫保持離線一段時間，然後在相同或不同的伺服器執行個體上，讓該資料庫恢復連線狀態。 這些情況通常是由商務需求所驅使，例如將資料庫移至不同的磁碟以提升效能、取得讓資料庫成長的空間，或升級產品。 不論是哪一種情況， **Attach** 和 **Detach** 命令都可讓 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dba 輕鬆地將資料庫保持離線並恢復連線狀態。  
   
-## Attach 和 Detach 命令  
+## <a name="attach-and-detach-commands"></a>Attach 和 Detach 命令  
  **Attach** 命令可讓您將離線的資料庫恢復連線狀態。 您可以將資料庫附加至原始伺服器執行個體或其他執行個體。 當您附加資料庫時，使用者可以指定資料庫的 **[ReadWriteMode]** 設定。 **Detach** 命令可讓您中斷資料庫與伺服器的連線。  
   
-## Attach 和 Detach 使用方式  
+## <a name="attach-and-detach-usage"></a>Attach 和 Detach 使用方式  
  **Attach** 命令是用來讓現有的資料庫結構恢復連線狀態。 如果資料庫是以 **ReadWrite** 模式附加，它就只能附加至伺服器執行個體一次。 不過，如果資料庫是以 **ReadOnly** 模式附加，它就可以附加至不同的伺服器執行個體許多次。 不過，相同的資料庫無法附加至相同的伺服器執行個體超過一次。 當您嘗試附加相同的資料庫超過一次時，即使資料已經複製到個別的資料夾，還是會引發錯誤。  
   
 > [!IMPORTANT]  
@@ -57,11 +62,11 @@ caps.handback.revision: 24
 > [!IMPORTANT]  
 >  您必須擁有伺服器管理員權限才能執行 **Attach** 命令。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
  [移動 Analysis Services 資料庫](../../analysis-services/multidimensional-models/move-an-analysis-services-database.md)   
- [資料庫 ReadWriteMode](../../analysis-services/multidimensional-models/database-readwritemodes.md)   
- [在 ReadOnly 和 ReadWrite 模式之間切換 Analysis Services 資料庫](../../analysis-services/multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)   
+ [資料庫 Readwritemode](../../analysis-services/multidimensional-models/database-readwritemodes.md)   
+ [切換 ReadOnly 和 ReadWrite 模式之間的 Analysis Services 資料庫](../../analysis-services/multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)   
  [Detach 元素](../../analysis-services/xmla/xml-elements-commands/detach-element.md)   
  [Attach 元素](../../analysis-services/xmla/xml-elements-commands/attach-element.md)  
   

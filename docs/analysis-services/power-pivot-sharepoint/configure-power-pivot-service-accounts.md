@@ -1,24 +1,29 @@
 ---
-title: "設定 Power Pivot 服務帳戶 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "設定 Power Pivot Service Accounts |Microsoft 文件"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 76a85cd0-af93-40c9-9adf-9eb0f80b30c1
 caps.latest.revision: 15
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 15
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7bdd53a084d7438152d4ae83eeeb884984d48e51
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 設定 Power Pivot 服務帳戶
+# <a name="configure-power-pivot-service-accounts"></a>設定 Power Pivot 服務帳戶
   [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]安裝包含兩個支援伺服器作業的服務。 **SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])** 服務是一種 Windows 服務，它會在應用程式伺服器上提供 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料處理和查詢支援。 當您在 SharePoint 整合模式下安裝 Analysis Services 時，一定會在進行 SQL Server 安裝程式期間指定這個服務的登入帳戶。  
   
  此外，您必須針對 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式指定第二個帳戶，此服務應用程式是一種共用 Web 服務，其會以 SharePoint 伺服器陣列中的應用程式集區身分識別執行。 此帳戶是在使用 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]組態工具或 PowerShell 來設定 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 安裝時所指定。  
@@ -45,7 +50,7 @@ caps.handback.revision: 15
   
 ##  <a name="bkmk_passwordssas"></a> 更新 SQL Server Analysis Services (Power Pivot) 執行個體的過期密碼  
   
-1.  指向 [開始]，然後按一下 **[系統管理工具]**，再按一下 **[服務]**。 按兩下 [SQL Server Analysis Services]** ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])**。 按一下 **[登入]**，然後輸入帳戶的新密碼。  
+1.  指向 [開始]，然後按一下 **[系統管理工具]**，再按一下 **[服務]**。 按兩下 [SQL Server Analysis Services] **([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])**。 按一下 **[登入]**，然後輸入帳戶的新密碼。  
   
 2.  在 [管理中心] 的 [安全性] 區段中，按一下 **[設定 Managed 帳戶]**。  
   
@@ -69,7 +74,7 @@ caps.handback.revision: 15
   
 1.  在 [管理中心] 的 [安全性] 區段中，按一下 **[設定服務帳戶]**。  
   
-2.  選取 [Windows 服務 - SQL Server Analysis Services]，以變更 Analysis Services 服務帳戶。  
+2.  選取 **[Windows 服務 - SQL Server Analysis Services]** ，以變更 Analysis Services 服務帳戶。  
   
 3.  在 **[選取此服務的帳戶]**中，選擇現有的 Managed 帳戶或建立新的 Managed 帳戶。 此帳戶必須是網域使用者帳戶。  
   
@@ -98,16 +103,16 @@ caps.handback.revision: 15
   
 -   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式集區。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式已與 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系統服務建立關聯，後者會在伺服器陣列中提供 SharePoint 整合與 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 查詢處理的基礎結構。 您為 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式指定的應用程式集區為 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系統服務的服務識別。 您可以在伺服器陣列中具有多個 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式。 您所建立的每一個應用程式都應該在其本身的應用程式集區內執行。  
   
-#### Analysis Services 服務帳戶  
+#### <a name="analysis-services-service-account"></a>Analysis Services 服務帳戶  
   
 |需求|說明|  
 |-----------------|-----------------|  
 |提供需求|此帳戶必須在 SQL Server 安裝程式執行期間，使用安裝精靈中的 [Analysis Services - 組態] 頁面 (或是命令列安裝程式中的 **ASSVCACCOUNT** 安裝參數) 加以指定。<br /><br /> 您可以使用管理中心、PowerShell 或 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 組態工具，來修改使用者名稱或密碼。 不支援使用其他工具來變更帳戶和密碼。|  
 |網域使用者帳戶需求|此帳戶必須是 Windows 網域使用者帳戶。 禁止使用內建電腦帳戶 (如，網路服務或本機服務)。 只要指定電腦帳戶，SQL Server 安裝程式就會封鎖安裝，以強制滿足網域使用者帳戶需求。|  
-|權限需求|這個帳戶必須是本機電腦上 SQLServerMSASUser$\<伺服器>$PowerPivot 安全性群組和 WSS_WPG 安全性群組的成員。 這些權限應該會自動授與。 如需如何檢查或授與權限的詳細資訊，請參閱本主題中的[手動授與 Power Pivot 服務帳戶管理權限](#updatemanually)和[初始組態 (Power Pivot for SharePoint)](http://msdn.microsoft.com/zh-tw/3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146)。|  
+|權限需求|此帳戶必須是成員的 SQLServerMSASUser\<伺服器 > $PowerPivot 安全性群組和 WSS_WPG 安全性群組本機電腦上的。 這些權限應該會自動授與。 如需如何檢查或授與權限的詳細資訊，請參閱本主題中的 [手動授與 Power Pivot 服務帳戶管理權限](#updatemanually) 和 [初始組態 (Power Pivot for SharePoint)](http://msdn.microsoft.com/en-us/3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146)。|  
 |向外延展需求|如果您在伺服器陣列中安裝多個 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 伺服器執行個體，則所有 Analysis Services 伺服器執行個體都必須在相同的網域使用者帳戶下執行。 例如，如果您設定第一個 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] 執行個體，以 Contoso\ssas-srv01 的身分執行，則之後部署於相同伺服器陣列中的所有其他 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] 執行個體，都必須以 Contoso\ssas-srv01 (或任何目前帳戶) 的身分執行。<br /><br /> 將所有服務執行個體設定為在相同帳戶下執行時，可讓 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系統服務將查詢處理或資料重新整理作業配置給伺服器陣列中的任何 Analysis Services 服務執行個體。 此外，也可以將管理中心的管理帳戶功能用於 Analysis Services 伺服器執行個體。 當所有 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] 執行個體都使用相同的帳戶時，您可以變更帳戶或密碼一次，而所有使用這些認證的服務執行個體都會自動更新。<br /><br /> SQL Server 安裝程式會強制滿足相同帳戶需求。 在已安裝 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 執行個體之 SharePoint 伺服器陣列的向外延展部署中，如果指定的 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] 帳戶與伺服器陣列中已使用的帳戶不同，則安裝程式會封鎖新的安裝。|  
   
-#### Power Pivot 服務應用程式集區  
+#### <a name="power-pivot-service-application-pool"></a>Power Pivot 服務應用程式集區  
   
 |需求|說明|  
 |-----------------|-----------------|  
@@ -125,11 +130,11 @@ caps.handback.revision: 15
   
 3.  按一下 **[立即執行]**。  
   
- 最後一種方法是，您可以將 Analysis Services 系統管理權限授與 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式來確認正確權限，然後明確地將服務應用程式識別加入 SQLServerMSASUser$\<伺服器名稱>$PowerPivot Windows 安全性群組。 您必須針對與 SharePoint 伺服陣列整合的每個 Analysis Services 執行個體重複這些步驟。  
+ 最後一個步驟中，您可以確認正確權限，Analysis Services 系統管理權限授與[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]服務應用程式，並特別將服務應用程式識別加入 SQLServerMSASUser\<servername > $PowerPivot Windows 安全性群組。 您必須針對與 SharePoint 伺服陣列整合的每個 Analysis Services 執行個體重複這些步驟。  
   
  您必須是本機系統管理員才能更新 Windows 安全性群組。  
   
-1.  在 SQL Server Management Studio 中，以 \<伺服器名稱>\POWERPIVOT 連接至 Analysis Services 執行個體。  
+1.  在 SQL Server Management Studio 中，連接到 Analysis Services 執行個體\<伺服器名稱 > \POWERPIVOT。  
   
 2.  以滑鼠右鍵按一下伺服器名稱，然後選取 [屬性]。  
   
@@ -145,7 +150,7 @@ caps.handback.revision: 15
   
 8.  開啟 **[群組]**。  
   
-9. 按兩下 SQLServerMSASUser$\<伺服器名稱>$PowerPivot。  
+9. 按兩下 SQLServerMSASUser$\<servername > $PowerPivot。  
   
 10. 按一下 **[加入]**。  
   
@@ -158,7 +163,7 @@ caps.handback.revision: 15
   
 2.  如果網站或管理中心應用程式集區的識別是密碼過期的網域使用者帳戶，請執行下列操作：  
   
-    1.  以滑鼠右鍵按一下應用程式集區名稱，然後選取 [進階設定]。  
+    1.  以滑鼠右鍵按一下應用程式集區名稱，然後選取 **[進階設定]**。  
   
     2.  選取 **[識別]** ，然後按一下... 按鈕，以開啟 [應用程式集區識別] 對話方塊。  
   
@@ -178,10 +183,10 @@ caps.handback.revision: 15
   
 8.  輸入密碼，然後按一下 **[確定]**。  
   
- 如果已安裝 Reporting Services，請使用 Reporting Services 組態管理員更新報表伺服器的密碼，以及報表伺服器資料庫的連接。 如需詳細資訊，請參閱[設定和管理報表伺服器 &#40;Reporting Services SharePoint 模式&#41;](../../reporting-services/report-server-sharepoint/configuration and administration of a report server.md)。  
+ 如果已安裝 Reporting Services，請使用 Reporting Services 組態管理員更新報表伺服器的密碼，以及報表伺服器資料庫的連接。 如需詳細資訊，請參閱[設定和管理報表伺服器 &#40;Reporting Services SharePoint 模式&#41;](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md)。  
   
-## 請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [啟動或停止 Power Pivot for SharePoint Server](../../analysis-services/power-pivot-sharepoint/start-or-stop-a-power-pivot-for-sharepoint-server.md)   
- [設定 Power Pivot 自動資料重新整理帳戶 (Power Pivot for SharePoint)](http://msdn.microsoft.com/zh-tw/81401eac-c619-4fad-ad3e-599e7a6f8493)  
+ [設定 Power Pivot 自動資料重新整理帳戶 (Power Pivot for SharePoint)](http://msdn.microsoft.com/en-us/81401eac-c619-4fad-ad3e-599e7a6f8493)  
   
   

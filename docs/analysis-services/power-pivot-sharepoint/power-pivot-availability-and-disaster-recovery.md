@@ -1,24 +1,29 @@
 ---
-title: "Power Pivot 可用性和災害復原 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Power Pivot 可用性和災害復原 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4aaf008c-3bcb-4dbf-862c-65747d1a668c
 caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 15
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 7c2534d88a10602dcabb594e5a18925ce2547194
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# Power Pivot 可用性和災害復原
+# <a name="power-pivot-availability-and-disaster-recovery"></a>Power Pivot 可用性和災害復原
   [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 的可用性和災害復原計畫主要取決於您的 SharePoint 伺服器陣列的設計、不同元件可接受的停機時間以及針對 SharePoint 可用性所實作的工具和最佳作法。 本主題將摘要說明相關技術，並包含為 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 部署規劃可用性和災害復原時所要考量的範例拓撲圖表。  
   
 ||  
@@ -40,7 +45,7 @@ caps.handback.revision: 15
   
  下圖描述 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 部署範例。 這個範例支援 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 服務的正常可用性，並假設資料庫會定期備份。  
   
- ![2013 中的 powerpivot 可用性](../../analysis-services/power-pivot-sharepoint/media/ssas-powerpivot-services-2013.png "2013 中的 powerpivot 可用性")  
+ ![2013 中的 powerpivot 可用性](../../analysis-services/power-pivot-sharepoint/media/ssas-powerpivot-services-2013.png "2013年中的 powerpivot 可用性")  
   
 -   **(1)** Web 前端伺服器。 使用 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 增益集，將資料提供者安裝在每部伺服器上。 如需詳細資訊，請參閱[安裝或解除安裝 PowerPivot for SharePoint 增益集 &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)。  
   
@@ -48,9 +53,9 @@ caps.handback.revision: 15
   
 -   **(3)** Excel Calculation Services 會在每部應用程式伺服器上執行，並允許服務應用程式跨應用程式伺服器來執行。 因此，如果單一應用程式伺服器離線，Excel Calculation Services 依然可以使用。  
   
--   **(4)** 和 **(6)** SharePoint 模式下的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體會在 SharePoint 伺服器陣列外部的伺服器上執行，其中包括 Windows 服務 **SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])**。 這些執行個體都會向 Excel Services 註冊 **(3)**。 Excel Services 會管理傳送給 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 伺服器之要求的負載平衡。 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 架構可讓您擁有 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 適用的多部伺服器，好讓您可以視需要輕鬆地加入更多執行個體。 如需詳細資訊，請參閱 [Manage Excel Services data model settings (SharePoint Server 2013)](http://technet.microsoft.com/library/jj219780\(v=office.15\).aspx) (管理 Excel Services 資料模型設定 (SharePoint Server 2013))。  
+-   **(4)** 和 **(6)** SharePoint 模式下的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體會在 SharePoint 伺服器陣列外部的伺服器上執行，其中包括 Windows 服務 **SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])**。 這些執行個體都會向 Excel Services 註冊 **(3)**。 Excel Services 會管理傳送給 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 伺服器之要求的負載平衡。 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 架構可讓您擁有 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 適用的多部伺服器，好讓您可以視需要輕鬆地加入更多執行個體。 如需詳細資訊，請參閱 [Manage Excel Services data model settings (SharePoint Server 2013)](http://technet.microsoft.com/library/jj219780\(v=office.15\).aspx)(管理 Excel Services 資料模型設定 (SharePoint Server 2013))。  
   
--   **(5)** 用於內容、組態和應用程式資料庫的 SQL Server 資料庫。 其中包括 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式資料庫。 您的 DR 計畫應該包括資料庫層。 在此設計中，資料庫會在其中一個 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 執行個體上與 **(4)** 相同的伺服器上執行。 **(4)** 和 **(5)** 也可能會在不同的伺服器上。  
+-   **(5)** 用於內容、組態和應用程式資料庫的 SQL Server 資料庫。 其中包括 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式資料庫。 您的 DR 計畫應該包括資料庫層。 在此設計中，資料庫會在其中一個 **執行個體上與** (4) [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 相同的伺服器上執行。 **(4)** 和 **(5)** 也可能會在不同的伺服器上。  
   
 -   **(7)** 某個形式的 SQL Server 資料庫備份或備援。  
   
@@ -61,7 +66,7 @@ caps.handback.revision: 15
   
  ![sharepoint 2010 中的 powerpivot 可用性](../../analysis-services/power-pivot-sharepoint/media/ssas-powerpivot-services-2010.png "sharepoint 2010 中的 powerpivot 可用性")  
   
--   **(1)** Web 前端伺服器。 在每部伺服器上安裝資料提供者。 如需詳細資訊，請參閱 [在 SharePoint 伺服器上安裝 Analysis Services OLE DB 提供者](http://msdn.microsoft.com/zh-tw/2c62daf9-1f2d-4508-a497-af62360ee859)。  
+-   **(1)** Web 前端伺服器。 在每部伺服器上安裝資料提供者。 如需詳細資訊，請參閱 [在 SharePoint 伺服器上安裝 Analysis Services OLE DB 提供者](http://msdn.microsoft.com/en-us/2c62daf9-1f2d-4508-a497-af62360ee859)。  
   
 -   **(2)** 兩個 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 共用服務和 **(4)** Windows 服務 **SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])** 都會安裝在 SharePoint 應用程式伺服器上。  
   
@@ -76,7 +81,7 @@ caps.handback.revision: 15
 -   **(6)** 某個形式的 SQL Server 資料庫備份或備援。  
   
 ##  <a name="bkmk_sql_server_technologies"></a> PowerPivot 服務應用程式資料庫及 SQL Server 可用性和復原技術  
- 在您的 SharePoint 高可用性規劃中包含 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 服務應用程式資料庫。 這個資料庫的預設名稱為 `DefaultPowerPivotServiceApplicationDB-<GUID>`。 以下是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可用性技術的摘要和搭配使用 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 資料庫時的建議。 如需詳細資訊，請參閱 [Supported high availability and disaster recovery options for SharePoint databases (SharePoint 2013)](http://technet.microsoft.com/library/jj841106.aspx) (SharePoint 資料庫支援的高可用性和災害復原選項 (SharePoint 2013))。  
+ 在您的 SharePoint 高可用性規劃中包含 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 服務應用程式資料庫。 這個資料庫的預設名稱為 `DefaultPowerPivotServiceApplicationDB-<GUID>`。 以下是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可用性技術的摘要和搭配使用 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 資料庫時的建議。 如需詳細資訊，請參閱 [Supported high availability and disaster recovery options for SharePoint databases (SharePoint 2013)](http://technet.microsoft.com/library/jj841106.aspx)(SharePoint 資料庫支援的高可用性和災害復原選項 (SharePoint 2013))。  
   
 ||註解|  
 |-|--------------|  
@@ -91,12 +96,12 @@ caps.handback.revision: 15
   
  如需有關如何使用 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]規劃冷待命案例的詳細資訊，請參閱＜ [PowerPivot 災害復原](http://social.technet.microsoft.com/wiki/contents/articles/22137.sharepoint-powerpivot-disaster-recovery.aspx)＞。  
   
-## 驗證  
- 如需指引和指令碼來協助您在災害復原週期前後驗證 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 部署，請參閱[檢查清單：使用 PowerShell 驗證 Power Pivot for SharePoint](../../analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md)。  
+## <a name="verification"></a>驗證  
+ 如需指引和指令碼來協助您在災害復原週期前後驗證 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 部署，請參閱 [檢查清單：使用 PowerShell 驗證 Power Pivot for SharePoint](../../analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md)。  
   
 ##  <a name="bkmk_more_resources"></a> 詳細資訊連結  
   
--   [SharePoint 資料庫支援的高可用性和災害復原選項 (SharePoint 2013)](http://technet.microsoft.com/library/jj841106.aspx)  
+-   [Supported high availability and disaster recovery options for SharePoint databases (SharePoint 2013)](http://technet.microsoft.com/library/jj841106.aspx)  
   
 -   [規劃嚴重損壞修復 (SharePoint Server 2010)](http://technet.microsoft.com/library/ff628971\(v=office.14\).aspx)  
   
@@ -108,6 +113,4 @@ caps.handback.revision: 15
   
 -   [在 SharePoint 2013 上管理服務執行個體](http://www.petri.co.il/manage-service-instances-sharepoint-2013.htm)  
   
--   [備份資料庫 SQL Server 指令碼](http://megaupl0ad.net/free/backup%20database%20sql%20server%20script)  
-  
-  
+

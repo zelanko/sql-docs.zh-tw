@@ -1,22 +1,30 @@
 ---
-title: "在設計模式中將範例資料加入 DirectQuery 模型中 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "將範例資料加入至設計模式中的 DirectQuery 模型 |Microsoft 文件"
+ms.custom: 
+ms.date: 07/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1af1e823-85aa-4319-a93f-98b35f7c7322
 caps.latest.revision: 9
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 9
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: c470244cfbf90ba7f2c65395a9a0c39064a55bb1
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 在設計模式中將範例資料加入 DirectQuery 模型中
+# <a name="add-sample-data-to-a-directquery-model-in-design-mode"></a>在設計模式中將範例資料加入 DirectQuery 模型中
+
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
  在 DirectQuery 模式中，資料表資料分割可用來建立模型設計期間所使用的範例資料子集，或建立完整資料檢視的替代品。
  
  部署 DirectQuery 表格式模型時，每個資料表只允許有一個資料分割，且該資料分割必須是完整資料檢視。 任何其他的資料分割都是完整資料檢視或範例資料的替代品。 在本主題中，我們將描述如何使用資料子集來建立範例資料分割。
@@ -28,14 +36,14 @@ caps.handback.revision: 9
 > [!TIP]  
 >  即使是在空模型的 DirectQuery 模式中，您一律可以檢視每個資料表的小型內建資料列集。 在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中，按一下 [資料表] > [資料表屬性] 以檢視 50 列的資料集。  
   
-## 建立範例資料分割
- 這些指示適用於在相容性層級 1200 建立或升級至相容性層級 1200 的表格式模型。 較低相容性層級的模型會使用不同的屬性來取得快取資料。 如需屬性描述，請參閱[在 SSMS 中啟用 DirectQuery 模式](../../analysis-services/tabular-models/enable-directquery-mode-in-ssms.md)。  
+## <a name="create-a-sample-partition"></a>建立範例資料分割
+ 這些指示是在建立或升級至 1200年或更高的相容性層級的表格式模型。 較低相容性層級的模型會使用不同的屬性來取得快取資料。 如需屬性描述，請參閱 [在 SSMS 中啟用 DirectQuery 模式](../../analysis-services/tabular-models/enable-directquery-mode-in-ssms.md) 。  
   
 1.  在 SQL Server Data Tools 的圖表檢視或資料檢視中，按一下事實資料表以開啟其屬性頁面。 事實資料表提供模型中彙總的數值資料以及量值。 您可能會擁有一個以上的表格。  
   
 2.  按一下 [資料表] > [屬性] 以開啟 [資料分割管理] 對話方塊。  
   
-    請注意，預設的資料分割為 [(直接查詢) \<資料表名稱>]。 這是完整資料檢視。 請勿刪除此資料分割。 部署模型時，將會使用此資料分割。  
+    請注意預設資料分割是**（直接查詢）\<資料表名稱 >**。 這是完整資料檢視。 請勿刪除此資料分割。 部署模型時，將會使用此資料分割。  
   
 4.  選取資料分割，然後按一下 [複製]。  
 

@@ -1,27 +1,32 @@
 ---
-title: "專案屬性 (SSAS 表格式) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.bidtoolset.depservconfig.f1"
-  - "sql13.asvs.bidtoolset.semmodelprojprop.f1"
+title: "專案屬性 (SSAS 表格式) |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.asvs.bidtoolset.depservconfig.f1
+- sql13.asvs.bidtoolset.semmodelprojprop.f1
 ms.assetid: 333c1fc0-361c-415a-bd68-4e057f67bcb7
 caps.latest.revision: 27
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 27
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f87694c9f464aee76eec4fe34e5888e5e6e4ef02
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 專案屬性 (SSAS 表格式)
+# <a name="project-properties-ssas-tabular"></a>專案屬性 (SSAS 表格式)
   本主題描述模型專案屬性。 每個表格式模型專案都含有部署選項與部署伺服器選項，可指定專案及模型的部署方式。 例如，模型要部署至的伺服器及部署的模型資料庫名稱。 這些設定不同於模型屬性，後者會影響模型工作空間資料庫。 此處所述的專案屬性位於強制回應屬性對話方塊中，與用於顯示其他屬性類型的屬性視窗不同。 若要在顯示強制回應專案屬性，請在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 方案總管 中，以滑鼠右鍵按一下專案，然後按一下 [屬性]。  
   
  本主題的章節：  
@@ -43,7 +48,7 @@ caps.handback.revision: 27
   
 |屬性|預設設定|說明|  
 |--------------|---------------------|-----------------|  
-|**Server**|**localhost**|指定 Analysis Services 的執行個體。 依預設，模型將會部署到本機電腦上的預設 Analysis Services 執行個體。 您可以變更這項設定，以便在本機電腦上或是您有權建立 Analysis Services 物件之任何遠端電腦上的任何執行個體上指定具名執行個體。 這通常是管理員的權限。<br /><br /> 您可以在 [部署] 頁面之 [工具\選項] 對話方塊的 [Analysis Server 設定] 中，使用 [預設部署伺服器] 屬性變更此屬性的預設值。 如需詳細資訊，請參閱[設定預設的資料模型和部署屬性&#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)。|  
+|**Server**|**localhost**|指定 Analysis Services 的執行個體。 依預設，模型將會部署到本機電腦上的預設 Analysis Services 執行個體。 您可以變更這項設定，以便在本機電腦上或是您有權建立 Analysis Services 物件之任何遠端電腦上的任何執行個體上指定具名執行個體。 這通常是管理員的權限。<br /><br /> 您可以在 [部署] 頁面之 [工具\選項] 對話方塊的 [Analysis Server 設定] 中，使用 [預設部署伺服器] 屬性變更此屬性的預設值。 如需詳細資訊，請參閱 [設定預設的資料模型和部署屬性 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)。|  
 |**版本**|**開發人員**|會指定要將模型部署到哪一個版本的 Analysis Services 伺服器。 這些伺服器版本會定義可以納入專案中的多種功能。|  
 |**資料庫**|**模型**|指定一旦部署之後，模型物件會立刻具現化所在的 Analysis Services 資料庫名稱。 此名稱將會在資料連接或 .rsds 資料連接檔案中指定。 建議名稱要能反映將使用模型執行之分析的類型，例如 AdventureWorksSalesModel。<br /><br /> 若要避免已部署模型的名稱重複，您應該變更 **[資料庫]** 屬性名稱設定以反映模型用途。 當使用者連接至做為資料來源的模型時，這是他們會看到的名稱。|  
 |**Cube 名稱**|**模型**|指定報告用戶端資料連接中顯示的資料庫 Cube 名稱。|  
@@ -61,9 +66,9 @@ caps.handback.revision: 27
   
 2.  在 **[屬性]** 視窗中，按一下屬性，然後輸入值，或按一下向下鍵選取設定選項。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [設定預設的資料模型和部署屬性 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)   
- [模型屬性 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/model-properties-ssas-tabular.md)   
+ [模型屬性 &#40;SSAS 表格式 &#41;](../../analysis-services/tabular-models/model-properties-ssas-tabular.md)   
  [表格式模型方案部署 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
   
   

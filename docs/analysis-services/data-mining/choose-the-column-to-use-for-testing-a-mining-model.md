@@ -1,27 +1,32 @@
 ---
-title: "選擇用於測試採礦模型的資料行 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "資料行 [資料採礦], 可預測採礦資料行"
-  - "採礦精確度圖表 [Analysis Services], 資料行"
-  - "可預測採礦資料行 [Analysis Services]"
+title: "選擇要用於測試採礦模型的資料行 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- columns [data mining], predictable mining columns
+- Mining Accuracy Chart [Analysis Services], columns
+- predictable mining columns [Analysis Services]
 ms.assetid: c6a8f23a-da21-4f31-9521-99460d624649
 caps.latest.revision: 35
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 995738c17a385d26e647a6c650c21a791b872a0e
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 選擇用於測試採礦模型的資料行
+# <a name="choose-the-column-to-use-for-testing-a-mining-model"></a>選擇用於測試採礦模型的資料行
   在您可以衡量採礦模型的精確度之前，您必須決定您想要評估哪一種結果。 大多數的資料採礦模型都會要求您至少選擇一個資料行，以便在您建立模型時當做可預測的屬性使用。 因此，當您測試模型的精確度時，您通常必須選取該屬性進行測試。  
   
  下列清單描述在選擇測試用的可預測屬性時的一些其他考量事項：  
@@ -40,7 +45,7 @@ caps.handback.revision: 35
   
 -   當選取 [同步處理預測資料行和值] 選項時，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會自動選擇擁有相同名稱和相符之資料類型的可預測資料行。 如果您的資料行不符合這些準則，您可以關閉這個選項，並手動選擇可預測資料行。 如果您正在使用外部資料集來測試模型 (此資料集擁有的資料行與模型的資料行不同)，您可能需要進行這項處理。 但是，如果您選擇具有錯誤資料類型的資料行，您將會得到錯誤或錯誤結果。  
   
-### 指定預測的結果  
+### <a name="specify-the-outcome-to-predict"></a>指定預測的結果  
   
 1.  按兩下採礦結構，在資料採礦設計師中將它開啟。  
   
@@ -54,7 +59,7 @@ caps.handback.revision: 35
   
 5.  如果您要判斷模型的增益，您必須從 [預測值] 清單中選取要衡量的特定結果值。  
   
-## 請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [選擇和對應模型測試資料](../../analysis-services/data-mining/choose-and-map-model-testing-data.md)   
  [選擇精確度圖表類型及設定圖表選項](../../analysis-services/data-mining/choose-an-accuracy-chart-type-and-set-chart-options.md)  
   

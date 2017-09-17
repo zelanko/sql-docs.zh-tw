@@ -1,25 +1,30 @@
 ---
-title: "Analysis Services 執行個體管理 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Analysis Services 執行個體管理 |Microsoft 文件"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 0455fa4f-b92d-4a8b-a8f0-f2a268a5c84e
 caps.latest.revision: 25
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 25
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 15aeda3b7b6ecb758aa2a0c0f3b8b2b85368dbf0
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# Analysis Services 執行個體管理
+# <a name="analysis-services-instance-management"></a>Analysis Services 執行個體管理
   Analysis Services 的執行個體是當做作業系統服務執行之 **msmdsrv.exe** 可執行檔的複本。 每一個執行個體與相同伺服器上的其他執行個體之間完全獨立，而且擁有它自己的組態設定、權限、通訊埠、啟動帳戶、檔案儲存體和伺服器模式屬性。  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的每一個執行個體都會在所定義之登入帳戶的安全性內容中，以 Windows 服務 Msmdsrv.exe 執行。  
@@ -44,20 +49,19 @@ caps.handback.revision: 25
 > [!NOTE]  
 >  例外狀況是 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 部署的伺服器管理一定會在 SharePoint 伺服陣列的內容中進行。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 與其他伺服器模式不同之處在於它永遠都是單一執行個體，而且一定會透過 SharePoint 管理中心或 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 組態工具來管理。 雖然可在 SQL Server Management Studio 或 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 中連接到 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]for SharePoint，但是不需要這樣做。 SharePoint 伺服器陣列包含的基礎結構會同步處理伺服器狀態及監視伺服器可用性。 使用其他工具可能會干擾這些作業。 如需 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 伺服器管理的詳細資訊，請參閱 [Power Pivot for SharePoint &#40;SSAS&#41;](../../analysis-services/power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md)。  
   
-## 本節內容  
+## <a name="in-this-section"></a>本節內容  
   
 |連結|工作描述|  
 |----------|----------------------|  
 |[後續安裝組態 &#40;Analysis Services&#41;](../../analysis-services/instances/post-install-configuration-analysis-services.md)|描述完成或修改 Analysis Services 安裝的必要工作和選擇性工作。|  
 |[連接到 Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)|描述建立或清除連接時所用的連接字串屬性、用戶端程式庫、驗證方法和步驟。|  
 |[監視 Analysis Services 執行個體](../../analysis-services/instances/monitor-an-analysis-services-instance.md)|描述用於監視伺服器執行個體的工具和技術，包括如何使用效能監視器和 SQL Server Profiler。|  
-|[在 Analysis Services 中編寫管理工作的指令碼](../../analysis-services/instances/script-administrative-tasks-in-analysis-services.md)|說明如何將許多管理工作 (包括處理) 自動化。|  
 |[高可用性與延展性](../../analysis-services/instances/high-availability-and-scalability-in-analysis-services.md)|說明提高 Analysis Services 資料庫可用性與延展性的最常用技術。 |  
 |[Analysis Services 的全球化案例](../../analysis-services/globalization-scenarios-for-analysis-services.md)|說明語言和定序支援、變更這兩個屬性的步驟，以及設定和測試語言和定序行為的秘訣。|  
 |[Analysis Services 中的記錄作業](../../analysis-services/instances/log-operations-in-analysis-services.md)|描述記錄檔並說明如何設定它們。|  
   
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [比較表格式和多維度解決方案 &#40;SSAS&#41;](../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)   
  [Power Pivot 組態工具](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)   
  [管理中心的 PowerPivot 伺服器管理和組態](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)   

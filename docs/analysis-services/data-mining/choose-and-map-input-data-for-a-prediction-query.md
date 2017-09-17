@@ -1,27 +1,32 @@
 ---
-title: "為預測查詢選擇和對應輸入資料 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "資料表 [Analysis Services]，預測查詢"
-  - "採礦模型預測 [Analysis Services]，輸入資料表"
+title: "選擇和對應輸入的資料的預測查詢 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- tables [Analysis Services], prediction queries
+- Mining Model Prediction [Analysis Services], input tables
 ms.assetid: 00d330a0-879d-4da0-9f29-53c288116f4d
 caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b95fd2fc60fa252e8ad9de34768c12846a45e322
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/01/2017
+
 ---
-# 為預測查詢選擇和對應輸入資料
-  從採礦模型建立預測時，通常是透過饋送新資料至模型  (時間序列模型是例外，它只能根據歷程記錄資料進行預測)。若要提供新資料給模型，您必須確保資料是做為資料來源檢視的一部分提供。 如果您事先知道哪些資料要用於預測，可以將資料包含在用於建立模型的資料來源檢視中。 否則，您可能需要建立新的資料來源檢視。 如需詳細資訊，請參閱 [Data Source Views in Multidimensional Models](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md) (多維度模型中的資料來源檢視)。  
+# <a name="choose-and-map-input-data-for-a-prediction-query"></a>為預測查詢選擇和對應輸入資料
+  從採礦模型建立預測時，通常是透過饋送新資料至模型  (時間序列模型是例外，它只能根據歷程記錄資料進行預測)。若要提供新資料給模型，您必須確保資料是做為資料來源檢視的一部分提供。 如果您事先知道哪些資料要用於預測，可以將資料包含在用於建立模型的資料來源檢視中。 否則，您可能需要建立新的資料來源檢視。 如需詳細資訊，請參閱 [Data Source Views in Multidimensional Models](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)(多維度模型中的資料來源檢視)。  
   
  有時候，所需資料可能包含在一對多聯結中的多個資料表內。 當資料用於關聯模型或時序叢集模型，而其中所用的案例資料表連結至包含產品或交易詳細資料的巢狀資料表時，就是這種情況。 如果您的模型使用案例巢狀資料表結構，則用於預測的資料也必須具有案例巢狀資料表結構。  
   
@@ -38,7 +43,7 @@ caps.handback.revision: 16
   
  下列程序描述如何使用 **[指定巢狀聯結]** 對話方塊來修改案例資料表和巢狀資料表之間已建立的聯結 (當做預測查詢的輸入)。  
   
-### 選取輸入資料表  
+### <a name="select-an-input-table"></a>選取輸入資料表  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，於資料採礦設計師中之 [採礦精確度圖表] 的 [選取輸入資料表] 資料表上，按一下 [選取案例資料表]。  
   
@@ -52,7 +57,7 @@ caps.handback.revision: 16
   
      採礦結構中的資料行，會自動對應到輸入資料表中之名稱相同的資料行。  
   
-### 變更輸入資料對應至模型的方式  
+### <a name="change-the-way-that-input-data-is-mapped-to-the-model"></a>變更輸入資料對應至模型的方式  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]的資料採礦設計師中，選取 **[採礦模型預測]** 索引標籤。  
   
@@ -68,7 +73,7 @@ caps.handback.revision: 16
   
      新的資料行對應會在設計師中顯示。  
   
-### 移除輸入資料表之間的關聯性  
+### <a name="remove-a-relationship-between-input-tables"></a>移除輸入資料表之間的關聯性  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的資料採礦設計師中，[採礦模型預測] 索引標籤的 [選取輸入資料表] 資料表上，按一下 [修改聯結]。  
   
@@ -82,7 +87,7 @@ caps.handback.revision: 16
   
      即移除案例資料表和巢狀資料表之間的關聯性。  
   
-### 建立輸入資料表之間的新關聯性  
+### <a name="create-a-new-relationship-between-input-tables"></a>建立輸入資料表之間的新關聯性  
   
 1.  在資料採礦設計師的 [採礦模型預測] 索引標籤中，於 [選取輸入資料表] 資料表上，按一下 [修改聯結]。  
   
@@ -102,7 +107,7 @@ caps.handback.revision: 16
   
      即在案例資料表和巢狀資料表之間建立新的關聯性。  
   
-### 加入巢狀資料表至預測查詢的輸入資料表  
+### <a name="add-a-nested-table-to-the-input-tables-of-a-prediction-query"></a>加入巢狀資料表至預測查詢的輸入資料表  
   
 1.  在資料採礦設計師的 **[採礦模型預測]** 索引標籤上，按一下 **[選取案例資料表]** 來開啟 **[選取資料表]** 對話方塊。  
   
@@ -117,7 +122,7 @@ caps.handback.revision: 16
   
      如果關聯性已經存在，採礦模型中的資料行就會自動對應到輸入資料表中的同名資料行。 您可以按一下 **[修改聯結]**，這會開啟 **[建立關聯性]** 對話方塊，在其中修改巢狀資料表和案例資料表之間的關聯性。  
   
-## 請參閱＜  
+## <a name="see-also"></a>請參閱＜  
  [預測查詢 &#40;資料採礦&#41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
   
   
