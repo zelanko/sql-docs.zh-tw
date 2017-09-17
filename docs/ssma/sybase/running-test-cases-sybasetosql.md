@@ -34,11 +34,11 @@ ms.lasthandoff: 08/02/2017
 ## <a name="run-test-case"></a>執行測試案例  
 若要執行已備妥的測試案例：  
   
-1.  按一下**執行**] 按鈕。  
+1.  按一下**執行** 按鈕。  
   
 2.  在**連接到 Sybase**對話方塊中，輸入連接資訊，，然後按一下**連接**。  
   
-測試完成時，會建立測試案例報表。 按一下**報表**按鈕，以檢視[檢視測試案例報表 & #40;SybaseToSQL & #41;](../../ssma/sybase/viewing-test-case-reports-sybasetosql.md). 測試 （測試案例報表） 的結果會自動儲存在[使用測試儲存機制 & #40;SybaseToSQL & #41;](../../ssma/sybase/using-test-repositories-sybasetosql.md)供日後使用。  
+測試完成時，會建立測試案例報表。 按一下**報表**按鈕，以檢視[檢視測試案例報表 &#40;SybaseToSQL&#41;](../../ssma/sybase/viewing-test-case-reports-sybasetosql.md). 測試 （測試案例報表） 的結果會自動儲存在[使用測試儲存機制 &#40;SybaseToSQL&#41;](../../ssma/sybase/using-test-repositories-sybasetosql.md)供日後使用。  
   
 ## <a name="test-case-execution-steps"></a>測試案例執行步驟  
   
@@ -75,11 +75,11 @@ SSMA 軟體測試人員會檢查測試在測試執行開始之前是否符合所
 在最終處理期間 SSMA 軟體測試人員會清除在建立輔助物件**初始化**步驟。  
   
 ## <a name="next-step"></a>下一個步驟  
-[檢視測試案例報表 & #40;SybaseToSQL & #41;](../../ssma/sybase/viewing-test-case-reports-sybasetosql.md)  
+[檢視測試案例報表 &#40;SybaseToSQL&#41;](../../ssma/sybase/viewing-test-case-reports-sybasetosql.md)  
   
 ## <a name="see-also"></a>另請參閱  
-[選取並設定測試 & #40; 物件SybaseToSQL & #41;](../../ssma/sybase/selecting-and-configuring-objects-to-test-sybasetosql.md)  
-[選取並設定受影響的物件 & #40;SybaseToSQL & #41;](../../ssma/sybase/selecting-and-configuring-affected-objects-sybasetosql.md)  
-[測試移轉的資料庫物件 & #40;SybaseToSQL & #41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
+[選取並設定測試 &#40;物件SybaseToSQL&#41;](../../ssma/sybase/selecting-and-configuring-objects-to-test-sybasetosql.md)  
+[選取並設定受影響的物件 &#40;SybaseToSQL&#41;](../../ssma/sybase/selecting-and-configuring-affected-objects-sybasetosql.md)  
+[測試移轉的資料庫物件 &#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   
 

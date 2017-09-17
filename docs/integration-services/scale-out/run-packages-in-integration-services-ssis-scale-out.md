@@ -106,10 +106,10 @@ GO
 -   **sysadmin** 伺服器角色中的成員資格  
 
 ## <a name="set-default-execution-mode"></a>設定預設的執行模式
-若要設定預設的執行模式以 「 小數位數出 」，以滑鼠右鍵按一下**SSISDB**節點在物件總管] 中的 SSMS，並選取**屬性**。
+若要設定預設的執行模式以 「 小數位數出 」，以滑鼠右鍵按一下**SSISDB**節點在物件總管 中的 SSMS，並選取**屬性**。
 在**目錄屬性**對話方塊中，設定**全伺服器的預設執行模式**至**向外**。
 
-此設定之後, 就不需要指定** @runinscaleout **參數 [catalog]。 [create_execution]。 執行會在向外自動執行。 
+此設定之後, 就不需要指定 **@runinscaleout** 參數 [catalog]。 [create_execution]。 執行會在向外自動執行。 
 
 ![Exe 模式](media\exe-mode.PNG)
 
