@@ -1,6 +1,6 @@
 ---
-title: "已更新-SQL Server 文件的 DMX |Microsoft 文件"
-description: "顯示程式碼片段的最近變更過的文件，針對資料採礦延伸模組 (DMX) 的 Microsoft SQL Server 的更新內容。"
+title: "已更新-ODBC SQL Server 文件 |Microsoft 文件"
+description: "顯示更新的內容，如需適用於 Microsoft SQL Server ODBC （開放式資料庫連接） 的最近變更過的文件的程式碼片段。"
 services: na
 documentationcenter: 
 author: MightyPen
@@ -14,15 +14,15 @@ ms.tgt_pltfrm: na
 ms.devlang: na
 ms.date: 09/11/2017
 ms.author: genemi
-ms.workload: dmx-data-mining-extensions
+ms.workload: odbc
 ms.translationtype: MT
 ms.sourcegitcommit: 15080827744c19120a8474f3142004c4af7a4064
-ms.openlocfilehash: 238da3efdb84d8b88ad1e5913ff8d74f9dd5db8f
+ms.openlocfilehash: 40128bccd17d4e1a8d83314a1cb7c159a6fe85de
 ms.contentlocale: zh-tw
 ms.lasthandoff: 09/13/2017
 
 ---
-# <a name="new-and-recently-updated-data-mining-extensions-dmx-for-sql-server"></a>新增和更新最近： 適用於 SQL Server 資料採礦延伸模組 (DMX)
+# <a name="new-and-recently-updated-odbc-for-sql-server"></a>新增和更新最近： 適用於 SQL Server ODBC
 
 
 
@@ -35,7 +35,7 @@ Microsoft 幾乎每天都會在其 [Docs.Microsoft.com](http://docs.microsoft.co
 
 
 - *日期範圍的更新：* &nbsp; **2017年-07-18** &nbsp; -到- &nbsp; **2017年-09-11**
-- *主旨區域：* &nbsp; **資料採礦延伸模組 (DMX)，適用於 SQL Server**。
+- *主旨區域：* &nbsp; **ODBC （開放式資料庫連接） for SQL Server**。
 
 
 
