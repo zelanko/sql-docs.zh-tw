@@ -252,7 +252,7 @@ ms.lasthandoff: 09/14/2017
 在欄位中，指定可供 Microsoft Azure VM 服務存取的共用資料夾。  
   
 ##  <a name="Azure_sign-in"></a> Microsoft Azure 登入  
- 使用您的 Microsoft 帳戶或您的組織帳戶登入 Microsoft Azure。 您的 Microsoft 或組織帳戶是電子郵件地址格式，例如 patc@contoso.com。 如需 Azure 認證的詳細資訊，請參閱 [Microsoft Account for Organizations FAQ](http://technet.microsoft.com/jj592903) (組織的 Microsoft 帳戶常見問題集) 和 [Troubleshooting Problems](https://technet.microsoft.com/dn197220)(針對問題進行疑難排解)。  
+ 使用您的 Microsoft 帳戶或您的組織帳戶登入 Microsoft Azure。 您的 Microsoft 或組織帳戶是電子郵件地址格式，例如 patc@contoso.com。如需 Azure 認證的詳細資訊，請參閱 [Microsoft Account for Organizations FAQ](http://technet.microsoft.com/jj592903) (組織的 Microsoft 帳戶常見問題集) 和 [Troubleshooting Problems](https://technet.microsoft.com/dn197220)(針對問題進行疑難排解)。  
   
 ##  <a name="Deployment_settings"></a> 部署設定
  使用此頁面來指定目的地伺服器以及提供新資料庫的詳細資料。  
