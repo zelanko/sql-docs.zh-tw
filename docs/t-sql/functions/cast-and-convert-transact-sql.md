@@ -1,7 +1,7 @@
 ---
 title: "CAST 和 CONVERT (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
-ms.date: 09/07/2017
+ms.date: 09/08/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -39,8 +39,8 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
-ms.openlocfilehash: 40f0515c07d78963dd10dc8c4ff52e31e096aba8
+ms.sourcegitcommit: cd1366409f9fb0af271b26fad3b8b911f99acc06
+ms.openlocfilehash: e1ea8183c7655af863fe5f6267958f4c8df367dc
 ms.contentlocale: zh-tw
 ms.lasthandoff: 09/08/2017
 
@@ -48,7 +48,19 @@ ms.lasthandoff: 09/08/2017
 # <a name="cast-and-convert-transact-sql"></a>CAST 和 CONVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-轉換運算式的資料類型。
+轉換運算式的資料類型。  
+例如，下列範例將輸入的資料類型，變更兩個其他資料型別，與不同層級的有效位數。
+```sql  
+SELECT 9.5 AS Original, CAST(9.5 AS int) AS int, 
+    CAST(9.5 AS decimal(6,4)) AS decimal;
+SELECT 9.5 AS Original, CONVERT(int, 9.5) AS int, 
+    CONVERT(decimal(6,4), 9.5) AS decimal;
+```  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+|原始   |int    |decimal |  
+|----|----|----|  
+|9.5 |9 |9.5000 |  
+
 > [!TIP]
 > 許多[範例](#BKMK_examples)是本主題底部。  
   
@@ -75,17 +87,13 @@ CONVERT ( data_type [ ( length ) ] , expression [ , style ] )
 這是指定目標資料類型之長度的選擇性整數。 預設值是 30。
   
 *樣式*  
-是整數運算式，指定要如何轉譯 CONVERT 函數*運算式*。 如果 style 是 NULL，就會傳回 NULL。 範圍由*data_type*。 如需詳細資訊，請參閱＜備註＞一節。
+是整數運算式，指定要如何轉譯 CONVERT 函數*運算式*。 如果 style 是 NULL，就會傳回 NULL。 範圍由*data_type*。 
   
 ## <a name="return-types"></a>傳回型別
 傳回*運算式*轉譯成*data_type*。
 
-[跳到 15 的範例，本主題的結尾](#BKMK_examples)
-  
-## <a name="remarks"></a>備註  
-  
 ## <a name="date-and-time-styles"></a>日期和時間樣式  
-當*運算式*是日期或時間資料類型，*樣式*可以是下表中所顯示的值之一。 其他值則當做 0 處理。 執行個體時提供 SQL Server 登入。 開頭為[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]，唯一的樣式時從轉換支援的日期和時間類型，以**datetimeoffset**是 0 或 1。 所有其他轉換樣式都會傳回錯誤 9809。
+當*運算式*是日期或時間資料類型，*樣式*可以是下表中所顯示的值之一。 其他值則當做 0 處理。 開頭為[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]，唯一的樣式時從轉換支援的日期和時間類型，以**datetimeoffset**是 0 或 1。 所有其他轉換樣式都會傳回錯誤 9809。
   
 >  [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 利用科威特演算法來支援阿拉伯文樣式的日期格式。

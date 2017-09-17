@@ -1,7 +1,7 @@
 ---
 title: "ROLLBACK TRANSACTION (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
-ms.date: 06/10/2016
+ms.date: 09/12/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -29,10 +29,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e31f62560b4061610c0d3c0ec3147110a3e84644
+ms.sourcegitcommit: 6e754198cf82a7ba0752fe8f20c3780a8ac551d7
+ms.openlocfilehash: 7a7cf37490b1dab17a061104ab14b5d11d26632d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/14/2017
 
 ---
 # <a name="rollback-transaction-transact-sql"></a>ROLLBACK TRANSACTION (Transact-SQL)
@@ -46,7 +46,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 ROLLBACK { TRAN | TRANSACTION }   
      [ transaction_name | @tran_name_variable  
      | savepoint_name | @savepoint_variable ]   
@@ -55,7 +54,7 @@ ROLLBACK { TRAN | TRANSACTION }
   
 ## <a name="arguments"></a>引數  
  *transaction_name*  
- 指派給 BEGIN TRANSACTION 之交易的名稱。 *transaction_name*必須符合識別碼規則，但使用的交易名稱的前 32 個字元。 當建立巢狀交易， *transaction_name*必須是從最外層的 BEGIN TRANSACTION 陳述式的名稱。 *transaction_name*一律區分大小寫，即使是執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不區分大小寫。  
+ 指派給 BEGIN TRANSACTION 之交易的名稱。 *transaction_name*必須符合識別碼規則，但使用的交易名稱的前 32 個字元。 當建立巢狀交易， *transaction_name*必須是從最外層的 BEGIN TRANSACTION 陳述式的名稱。 *transaction_name*一定是區分大小寫，即使執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不區分大小寫。  
   
  **@***tran_name_variable*  
  這是包含有效交易名稱之使用者定義變數的名稱。 變數必須宣告與**char**， **varchar**， **nchar**，或**nvarchar**資料型別。  
@@ -74,7 +73,7 @@ ROLLBACK { TRAN | TRANSACTION }
   
  ROLLBACK TRANSACTION 無法參考*savepoint_name*分散式交易中明確啟動 BEGIN DISTRIBUTED TRANSACTION，或從本機交易擴大。  
   
- 在執行 COMMIT TRANSACTION 陳述式之後，無法回復交易，但是當 COMMIT TRANSACTION 與所要回復之交易內含的巢狀交易相關聯時，則為例外。 在此情況下，即使您已發出 COMMIT TRANSACTION，也會回復巢狀交易。  
+ 在執行 COMMIT TRANSACTION 陳述式之後，無法回復交易，但是當 COMMIT TRANSACTION 與所要回復之交易內含的巢狀交易相關聯時，則為例外。 在本例中，巢狀的交易會會回復，即使您已為其發出 COMMIT TRANSACTION。  
   
  交易內可以有重複的儲存點名稱，但使用重複儲存點名稱的 ROLLBACK TRANSACTION 只會回復到最近一個使用這個儲存點名稱的 SAVE TRANSACTION。  
   
@@ -89,11 +88,11 @@ ROLLBACK { TRAN | TRANSACTION }
   
 -   不會執行在引發觸發程序的陳述式之後的批次中之陳述式。  
   
- @@TRANCOUNT輸入觸發程序，即使在自動認可模式下時，以一遞增。 (系統會將觸發程序當做一項隱含的巢狀交易來處理。)  
+@@TRANCOUNT輸入觸發程序，即使在自動認可模式下時，以一遞增。 (系統會將觸發程序當做一項隱含的巢狀交易來處理。)  
   
- 預存程序中的 ROLLBACK TRANSACTION 陳述式並不會影響在批次中呼叫程序的後續陳述式；仍會執行批次中的後續陳述式。 觸發程序中的 ROLLBACK TRANSACTION 陳述式會終止包含引發觸發程序之陳述式的批次；不會繼續執行批次中的後續陳述式。  
+預存程序中的 ROLLBACK TRANSACTION 陳述式並不會影響在批次中呼叫程序的後續陳述式；仍會執行批次中的後續陳述式。 觸發程序中的 ROLLBACK TRANSACTION 陳述式會終止包含引發觸發程序之陳述式的批次；不會繼續執行批次中的後續陳述式。  
   
- 下列三個規則定義 ROLLBACK 對資料指標的作用：  
+下列三個規則定義 ROLLBACK 對資料指標的作用：  
   
 1.  當 CURSOR_CLOSE_ON_COMMIT 設為 ON，ROLLBACK 會關閉所有開啟的資料指標，但不會將它們取消配置。  
   
@@ -108,21 +107,15 @@ ROLLBACK { TRAN | TRANSACTION }
  需要 **public** 角色的成員資格。  
   
 ## <a name="examples"></a>範例  
- 下列範例顯示回復具名交易的作用。  
+ 下列範例顯示回復具名交易的作用。 之後建立的資料表，下列陳述式啟動具名的交易、 插入兩個資料列，並會復原交易在變數中名為@TransactionName。 具名交易外的另一個陳述式會插入兩個資料列。 查詢會傳回前一個陳述式的結果。   
   
-```  
+```sql    
 USE tempdb;  
 GO  
-CREATE TABLE ValueTable ([value] int;)  
+CREATE TABLE ValueTable ([value] int);  
 GO  
   
 DECLARE @TransactionName varchar(20) = 'Transaction1';  
-  
---The following statements start a named transaction,  
---insert two rows, and then roll back  
---the transaction named in the variable @TransactionName.  
---Another statement outside of the named transaction inserts two rows.  
---The query returns the results of the previous statements.  
   
 BEGIN TRAN @TransactionName  
        INSERT INTO ValueTable VALUES(1), (2);  
@@ -133,13 +126,15 @@ INSERT INTO ValueTable VALUES(3),(4);
 SELECT [value] FROM ValueTable;  
   
 DROP TABLE ValueTable;  
-  
---Results  
---value  
--------------  
---3  
---4  
 ```  
+[!INCLUDE[ssresult-md](../../includes/ssresult-md.md)]  
+```  
+value  
+-----   
+3    
+4  
+```  
+  
   
 ## <a name="see-also"></a>另請參閱  
  [BEGIN DISTRIBUTED TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-distributed-transaction-transact-sql.md)   

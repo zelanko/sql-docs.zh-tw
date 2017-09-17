@@ -1,7 +1,7 @@
 ---
 title: "SET LOCK_TIMEOUT (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 09/11/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -29,10 +29,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ff2f355774338fc94a37411a74706c9b46b7c256
+ms.sourcegitcommit: 754242a86367b07b98caa9f70f457b70d0840075
+ms.openlocfilehash: 3de86c7f33afd6e708ad8e773470ec650e092d2c
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/12/2017
 
 ---
 # <a name="set-locktimeout-transact-sql"></a>SET LOCK_TIMEOUT (Transact-SQL)
@@ -45,8 +45,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="syntax"></a>語法  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 SET LOCK_TIMEOUT timeout_period  
 ```  
   
@@ -70,10 +68,10 @@ SET LOCK_TIMEOUT timeout_period
   
 ## <a name="examples"></a>範例  
   
-### <a name="a-set-the-lock-timeout-to-1800-seconds"></a>答： 設定為 1800 秒鎖定逾時  
+### <a name="a-set-the-lock-timeout-to-1800-milliseconds"></a>答： 設定為 1800年毫秒的鎖定逾時  
  下列範例將鎖定逾時期限設為 `1800` 毫秒。  
   
-```  
+```sql  
 SET LOCK_TIMEOUT 1800;  
 GO  
 ```  
@@ -83,13 +81,13 @@ GO
 ### <a name="b-set-the-lock-timeout-to-wait-forever-for-a-lock-to-be-released"></a>B. 設定永久等待鎖定釋出鎖定逾時。  
  下列範例會設定在鎖定逾時，永遠等候，並永遠不過期。 這是預設行為，已設定每個連線的開頭。  
   
-```  
+```sql  
 SET LOCK_TIMEOUT -1;  
 ```  
   
  下列範例將鎖定逾時期限設為 `1800` 毫秒。 在此版本中，[!INCLUDE[ssDW](../../includes/ssdw-md.md)]將會剖析陳述式成功，但會忽略此值為 1800年並繼續使用預設行為。  
   
-```  
+```sql  
 SET LOCK_TIMEOUT 1800;  
 ```  
   
