@@ -31,7 +31,10 @@
       "version": 0
     }
   ],
-  "notification_subscribers": [],
+  "notification_subscribers": [
+    "CnE_Content_Brno@moravia.com",
+    "CnE_UE_Bugfixing_ENG@moravia.com"
+  ],
   "branches_to_filter": [
     "live-oldev",
     "live"
@@ -41,7 +44,7 @@
   "continue_with_document_error": true,
   "skip_source_output_uploading": false,
   "need_preview_pull_request": true,
-  "contribution_branch_mappings":{
+  "contribution_branch_mappings": {
     "live-sxs": "live"
   },
   "dependent_repositories": [
@@ -60,7 +63,8 @@
     {
       "path_to_root": "_themes.pdf",
       "url": "https://github.com/Microsoft/templates.docs.msft.pdf",
-      "branch": "master"
+      "branch": "master",
+      "branch_mapping": {}
     },
     {
       "path_to_root": "_repo.en-us",
@@ -72,6 +76,7 @@
       }
     }
   ],
+  "branch_target_mapping": {},
   "need_generate_pdf_url_template": false,
   "need_generate_pdf": false,
   "need_generate_intellisense": false,
