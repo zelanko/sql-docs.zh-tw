@@ -42,7 +42,7 @@ ms.lasthandoff: 08/03/2017
  您可以將自訂衝突解決器撰寫為每一個發行者上的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 預存程序。 在同步處理期間，當註冊解決器的發行項中遇到衝突時，就會叫用此預存程序，而且衝突資料列的相關資訊會由合併代理程式傳遞給此程序所需的參數。 一定會在發行者上建立以預存程序為基礎的自訂衝突解決器。  
   
 > [!NOTE]  
->  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stored procedure resolvers are only invoked to handle row change-based conflicts. 這些解決器不能用於處理其他類型的衝突，例如因為 PRIMARY KEY 違規或唯一索引條件約束違規而發生的插入失敗。  
+>  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 預存程序解析程式的叫用目的，只是為了處理資料列變更衝突。 這些解決器不能用於處理其他類型的衝突，例如因為 PRIMARY KEY 違規或唯一索引條件約束違規而發生的插入失敗。  
   
 #### <a name="to-create-a-stored-procedure-based-custom-conflict-resolver"></a>建立以預存程序為基礎的自訂衝突解決器  
   
