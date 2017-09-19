@@ -2,7 +2,7 @@
 
 # 概觀
 ## [版本資訊](sql-server-linux-release-notes.md)
-## [此版本中有什麼新增功能？](sql-server-linux-whats-new.md)
+## [此版本有什麼新功能？](sql-server-linux-whats-new.md)
 ## [新的與最近更新的文件](new-updated-linux.md)
 
 # 快速入門
@@ -12,20 +12,19 @@
 ## [執行與連線 - Docker](quickstart-install-connect-docker.md)
 
 # 概念
-## 安裝
+## Install
 ### [安裝 SQL Server](sql-server-linux-setup.md)
 ### [安裝 SQL Server 工具](sql-server-linux-setup-tools.md)
 ### [安裝 SQL Server Agent](sql-server-linux-setup-sql-agent.md)
 ### [安裝 SQL Server 全文檢索搜尋](sql-server-linux-setup-full-text-search.md)
 ### [安裝 SQL Server Integration Services](sql-server-linux-setup-ssis.md)
 ### [在 Azure 中佈建 SQL VM](sql-server-linux-azure-virtual-machine.md)
-### [註冊 GA 存放庫](sql-server-linux-change-repo.md)
 
 ## 設定
 ### [使用 mssql-conf 進行設定](sql-server-linux-configure-mssql-conf.md)
 ### [環境變數](sql-server-linux-configure-environment-variables.md)
 ### [Docker](sql-server-linux-configure-docker.md)
-### [客戶意見反應](sql-server-linux-customer-feedback.md)
+### [客戶回函](sql-server-linux-customer-feedback.md)
 
 ## [開發](sql-server-linux-develop-overview.md)
 ### [連線程式庫](sql-server-linux-develop-connectivity-libraries.md)
@@ -85,5 +84,5 @@
 ## [DBA Stack Exchange](https://dba.stackexchange.com/questions/tagged/sql-server)
 ## [Stack Overflow](http://stackoverflow.com/questions/tagged/sql-server)
 ## [MSDN 論壇](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)
-## [Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback) \(英文\)
+## [Microsoft Connect (英文)](https://connect.microsoft.com/SQLServer/Feedback)
 ## [Reddit](https://www.reddit.com/r/SQLServer)
