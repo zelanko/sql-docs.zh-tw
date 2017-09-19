@@ -19,11 +19,11 @@ caps.latest.revision: 19
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 679625527f4f29d086b50e2291af4cff14b74d3e
+ms.translationtype: HT
+ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
+ms.openlocfilehash: 2172a7e83454030f0cee9eaec1909c0cfb019d63
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/19/2017
 
 ---
 # <a name="invoke-sqlcmd-cmdlet"></a>Invoke-Sqlcmd 指令程式
@@ -129,7 +129,7 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
 |字元輸出的最大長度。|-w|-MaxCharLength|  
 |二進位輸出的最大長度。|-w|-MaxBinaryLength|  
 |使用 SSL 加密進行連接|無參數|-EncryptConnection|  
-|顯示錯誤|無參數|-OutputSqlErrors|  
+|顯示錯誤|無參數|-OutputSqlErrors：需要布林值參數 $true 或 $false|  
 |輸出訊息至 stderr。|-r|無參數|  
 |使用用戶端的地區設定|-r|無參數|  
 |執行指定的查詢並維持執行中狀態。|-Q|無參數|  
