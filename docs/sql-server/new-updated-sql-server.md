@@ -13,13 +13,13 @@ ms.custom: UpdArt.exe
 ms.workload: sql-server
 ms.tgt_pltfrm: na
 ms.devlang: na
-ms.date: 07/17/2017
+ms.date: 09/11/2017
 ms.author: genemi
 ms.translationtype: HT
-ms.sourcegitcommit: 8cd44c8b384019418a2a913e5f8d13d82120eac2
-ms.openlocfilehash: d61aed44a16e78107c36ed4f7b1be387043b6746
+ms.sourcegitcommit: 15080827744c19120a8474f3142004c4af7a4064
+ms.openlocfilehash: bd22355518bde09b5af006062b2ec03cf11a7597
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/29/2017
+ms.lasthandoff: 09/13/2017
 
 ---
 # <a name="new-and-recently-updated-sql-server-docs"></a>新文章和最近更新的文章：SQL Server 文件
@@ -34,7 +34,7 @@ Microsoft 幾乎每天都會在其 [Docs.Microsoft.com](http://docs.microsoft.co
 
 
 
-- 更新日期範圍：&nbsp;**2017 年 5 月 23 日** &nbsp; -至- &nbsp; **2017 年 7 月 17 日**
+- 更新日期範圍：&nbsp;**2017 年 7 月 18 日** &nbsp; -至- &nbsp; **2017 年 7 月 17 日**
 - *主旨區域：*&nbsp;**SQL Server**。
 
 
@@ -47,8 +47,26 @@ Microsoft 幾乎每天都會在其 [Docs.Microsoft.com](http://docs.microsoft.co
 下列連結會跳至最近新增的新文章。
 
 
-1. [版本和支援的 SQL Server 2017 功能](editions-and-components-of-sql-server-2017.md)
-2. [設定 SQL Server 以將意見反應傳送給 Microsft](sql-server-customer-feedback.md)
+1. [SQL Server 2008 R2 SP2 Release Notes](sql-server-2008-r2-sp2-release-notes.md)
+2. [SQL Server 2012 版本資訊](sql-server-2012-release-notes.md)
+3. [SQL Server 2012 SP1 Release Notes](sql-server-2012-sp1-release-notes.md)
+4. [SQL Server 2012 SP2 Release Notes](sql-server-2012-sp2-release-notes.md)
+5. [SQL Server 2012 SP3 版本資訊](sql-server-2012-sp3-release-notes.md)
+6. [SQL Server 2014 Release Notes](sql-server-2014-release-notes.md)
+7. [SQL Server 說明檢視器與離線內容](sql-server-help-installation.md)
+
+
+
+&nbsp;
+
+## <a name="updated-articles-with-excerpts"></a>更新文章與摘要
+
+本節會顯示從最近發生大規模更新的文章所收集的更新摘錄。
+
+此處顯示的摘錄不同於其適當語意內容。 此外，有時摘錄也與實際文件四周的重要 Markdown 語法不同。 因此，這些摘錄僅適用於一般指導方針。 摘錄只能讓您知道您感興趣的項目，是否值得花時間按一下並瀏覽實際文章。
+
+由於這些和其他原因，請勿從這些摘錄中複製程式碼，而且不要將任何文字摘錄視為確切事實。 請改瀏覽實際文章。
+
 
 
 
@@ -61,17 +79,8 @@ Microsoft 幾乎每天都會在其 [Docs.Microsoft.com](http://docs.microsoft.co
 
 此壓縮清單提供所有更新文章的連結，並將列於＜摘要＞一節。
 
+1. [SQL Server 2016 的新功能](#TitleNum_1)
 
-
-&nbsp;
-
-## <a name="updated-articles-with-excerpts"></a>更新文章與摘要
-
-本節會顯示從最近發生大規模更新的文章所收集的更新摘錄。
-
-此處顯示的摘錄不同於其適當語意內容。 此外，有時摘錄也與實際文件四周的重要 Markdown 語法不同。 因此，這些摘錄僅適用於一般指導方針。 摘錄只能讓您知道您感興趣的項目，是否值得花時間按一下並瀏覽實際文章。
-
-由於這些和其他原因，請勿從這些摘錄中複製程式碼，而且不要將任何文字摘錄視為確切事實。 相反地，請瀏覽實際文章。
 
 
 
@@ -81,129 +90,81 @@ Microsoft 幾乎每天都會在其 [Docs.Microsoft.com](http://docs.microsoft.co
 
 <a name="TitleNum_1"/>
 
-### <a name="1-nbsp-customer-experience-improvement-program-for-sql-server-data-toolscustomer-experience-improvement-program-for-sql-server-data-toolsmd"></a>1.&nbsp;[SQL Server Data Tools 的客戶經驗改進計劃](customer-experience-improvement-program-for-sql-server-data-tools.md)
+### <a name="1-nbsp-whats-new-in-sql-server-2016what-s-new-in-sql-server-2016md"></a>1.&nbsp;[SQL Server 2016 的新功能](what-s-new-in-sql-server-2016.md)
 
-*Updated: 2017-06-14* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Next](#TitleNum_2))
+*Updated: 2017-09-08* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
 
-<!-- Source markdown line 25.  ms.author= "sstein".  -->
-
-&nbsp;
-
-
-<!-- git diff --ignore-all-space --unified=0 e35a35aaa3c8ee8a4419b6318ebff9db027aa73d 16a623cf0ab4c9e6d7a17f4617804432c863ac86  (PR=2038  ,  Filename=customer-experience-improvement-program-for-sql-server-data-tools.md  ,  Dirpath=docs\sql-server\  ,  MergeCommitSha40=be884b2d1b316506592f939167c5be91ddc2a9f6) -->
-
-
-
- 客戶經驗改進計畫是設計來協助 Microsoft 在經過一段時間之後改進其產品的計畫。 此計畫會收集電腦硬體相關資訊以及使用者如何使用我們的產品，而不會中斷使用者在電腦上的工作。 所收集的資訊可協助 Microsoft 找出應改善的功能。 在本文件中，我們將討論如何針對 Visual Studio 2017、Visual Studio 2015 和 Visual Studio 2013 選擇加入或退出 SQL Server Data Tools (SSDT) 的 CEIP。  
-
-**選擇與控制 CEIP 與 SQL Server Data Tools for Visual Studio 2017 **
-
- Visual Studio 2017 的 SSDT 是隨附於 SQL Server 2017 的資料模型化工具。 它會使用內建於 Visual Studio 2017 的 CEIP 選項。 您可以從這份 [Visual Studio 的說明文件](https://www.visualstudio.com/en-us/docs/work/connect/give-feedback)深入了解如何在 Visual Studio 2017 中透過 CEIP 提交意見反應。  
-  
- 如果是 SQL Server 2017 的預覽版本，預設會開啟 CEIP。 您可以依照下列指示來將它關閉或重新開啟。  
-  
- **在 Visual Studio (適用於 Visual Studio 2017 的完整語言安裝) 中**  
-  
- 如果您在已經具備 Visual Studio 的電腦上執行 SSDT 安裝程式，就只會新增 SQL Server 和商業智慧專案範本。 在此案例中，Visual Studio 提供的客戶回函選項可用來選擇加入或退出 CEIP。  
-  
-1.  啟動 Visual Studio。  
-  
-2.  從 [說明] 功能表中，選取 [傳送意見反應]  >  [設定]。  
-  
-3.  若要關閉 CEIP，請按一下 [否，我不願意參加]，然後按一下 [確定]。  
-  
-     若要開啟 CEIP，請按一下 [是，我願意參加]，然後按一下 [確定]。  
-  
-
-  
- **使用以登錄為基礎的原則或群組原則**  
-
-
-
-
-&nbsp;
-
-&nbsp;
-
----
-
-<a name="TitleNum_2"/>
-
-### <a name="2-nbsp-editions-and-supported-features-of-sql-server-2016editions-and-components-of-sql-server-2016md"></a>2.&nbsp; [SQL Server 2016 的版本及支援功能](editions-and-components-of-sql-server-2016.md)
-
-*更新日期：2017 年 6 月 16 日* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([上一個](#TitleNum_1))
-
-<!-- Source markdown line 113.  ms.author= "mikeray".  -->
+<!-- Source markdown line 34.  ms.author= "craigg".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 471ad35ebf1898470033d43c7bd43cbac5ddfece 7814e4d7428907161a9a2567280fb9fe20d5f273  (PR=2064  ,  Filename=editions-and-components-of-sql-server-2016.md  ,  Dirpath=docs\sql-server\  ,  MergeCommitSha40=727d9ccd8cd1e40d89cfe74291edae92988b407c) -->
+<!-- git diff --ignore-all-space --unified=0 e5bc0c05f120289f09a535400a4d521e4113ae55 0607d0a9af1c9a8dd9d3d7b0606895ff23bbffdc  (PR=0  ,  Filename=what-s-new-in-sql-server-2016.md  ,  Dirpath=docs\sql-server\  ,  MergeCommitSha40=b97cc9723d563b19c85661f5ad7049a96fc904ff) -->
 
 
 
-**Developer 和 Evaluation 版本**  
-如需 Developer 和 Evaluation 版本所支援的功能，請參閱下列各表中針對 SQL Server Enterprise Edition 列出的功能。
-如需已新增至 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1 之 Developer 版本的功能清單，請參閱 [SQL Server 2016 SP1 版本 (英文)](https://aka.ms/uw6cw4)。  
+- 下載「免費的」[**SQL Server 2016 Developer Edition！**](https://www.microsoft.com/en-us/cloud-platform/sql-server-editions-developers)
+- 下載最新版的 [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx)。
+- 有 Azure 帳戶嗎？ 啟動[已安裝 SQL Server 2016 的虛擬機器](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/)。
 
-Developer Edition 只持續支援 1 個 [SQL Server Distributed Replay--../tools/distributed-replay/sql-server-distributed-replay.md) 用戶端。 
-  
-**<a name="Cross-BoxScaleLimits"></a> 調整限制 **
+**SQL Server 2016 Database Engine**
 
-  
-|功能|Enterprise|Standard|Web|Express with Advanced Services|Express| 
-|-------------|----------------|--------------|---------|------------------------------------|------------------------|
-|單一執行個體使用的計算容量上限 - [!INCLUDE[ssDEnoversion--../includes/ssdenoversion-md.md)]<sup>1</sup>|作業系統最大值|限制為 4 個插槽或 24 個核心的較小者|限制為 4 個插槽或 16 個核心的較小者|限制為 1 個插槽或 4 個核心的較小者|限制為 1 個插槽或 4 個核心的較小者| 
-|單一執行個體使用的計算容量上限 - [!INCLUDE[ssASnoversion--../includes/ssasnoversion-md.md)] 或 [!INCLUDE[ssRSnoversion--../includes/ssrsnoversion-md.md)]|作業系統最大值|限制為 4 個插槽或 24 個核心的較小者|限制為 4 個插槽或 16 個核心的較小者|限制為 1 個插槽或 4 個核心的較小者|限制為 1 個插槽或 4 個核心的較小者|  
-|每個 [!INCLUDE[ssDEnoversion--../includes/ssdenoversion-md.md)] 執行個體的緩衝集區記憶體上限|作業系統最大值|128 GB|64 GB|1410 MB|1410 MB|
-|每個 [!INCLUDE[ssDEnoversion--../includes/ssdenoversion-md.md)] 執行個體的資料行存放區區段快取記憶體上限|無限制的記憶體| 32 GB<sup>2</sup>| 16 GB<sup>2</sup>| 352 MB<sup>2</sup>| 352 MB<sup>2</sup>|  
-|[!INCLUDE[ssDEnoversion--../includes/ssdenoversion-md.md)] 中每個資料庫的記憶體最佳化資料大小上限|無限制的記憶體| 32 GB<sup>2</sup>| 16 GB<sup>2</sup>| 352 MB<sup>2</sup>| 352 MB<sup>2</sup>|  
+- 您現在可以在 SQL Server 安裝及設定期間，設定「多個 TempDB」資料庫檔案。
+- 新的「查詢存放區」可將查詢文字、執行計畫和效能計量儲存於資料庫內，使您可以輕鬆地監視效能問題並進行疑難排解。 儀表板會顯示哪些查詢使用最多時間、記憶體或 CPU 資源。
+- 「時態表」是記錄所有資料變更的記錄資料表，能完整記錄發生資料變更的日期和時間。
+- 在 SQL Server 中全新內建的「JSON 支援」可支援 JSON 匯入、匯出、剖析和儲存。
+- 新的 **PolyBase** 查詢引擎整合了 SQL Server 與 Hadoop 或 Azure Blob 儲存體中的外部資料。 您可以匯入或匯出資料，也可以執行查詢。
+- 新的 **Stretch Database** 功能可讓您動態且安全地將本機 SQL Server 資料庫的資料封存到雲端的 Azure SQL 資料庫。 SQL Server 會自動查詢本機資料，以及位於連結資料庫內的遠端資料。
+- **記憶體內 OLTP：**
+    - 現在支援 FOREIGN KEY、UNIQUE 和 CHECK 限制式，以及原生編譯的預存程序 OR、NOT、SELECT DISTINCT、OUTER JOIN，以及 SELECT 中的子查詢。
+    - 支援上至 2TB 的資料表 (原本為 256GB)。
+    - 具備針對排序的資料行存放區索引增強功能，以及 Always On 可用性群組支援。
+- 新的安全性功能：
+    - **Always Encrypted：**啟用時，只有具備加密金鑰的應用程式才能存取 SQL Server 2016 資料庫中加密的敏感性資料。 金鑰一律不會傳遞至 SQL Server。
 
 
 
 
 
-<a name="similars2"/>
 
-&nbsp;
 
 ## <a name="similar-articles"></a>類似的文章
 
-本節會在 GitHub 儲存機制中，列出與其他主題區中最近更新的文章十分相似的文章：[MicrosoftDocs/**sql-docs-pr**](https://github.com/microsoftdocs/sql-docs/)。
+<!--  HOW TO:
+    Refresh this file's line items with the latest 'Count-in-Similars*' content.
+    Then run Run-533-*.BAT
+-->
 
-<!--  20170717-1101  -->
+本節會在公開的 GitHub 存放庫中，列出與其他主題區中最近更新的文章十分相似的文章：[MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/)。
 
 #### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>具有新文章或最近更新文章的主題區
 
-- [新文章 + 更新文章 (4+4)：**SQL 進階分析**文件](../advanced-analytics/new-updated-advanced-analytics.md)
-- [新文章 + 更新文章 (2+0)：**SQL Analysis Services** 文件](../analysis-services/new-updated-analysis-services.md)
-- [新文章 + 更新文章 (1+2)：**連線到 SQL** 文件](../connect/new-updated-connect.md)
-- [新文章 + 更新文章 (6+0)：**SQL 資料庫引擎**文件](../database-engine/new-updated-database-engine.md)
-- [新文章 + 更新文章 (13+2)：**Linux for SQL** 文件](../linux/new-updated-linux.md)
-- [新文章 + 更新文章 (1+0)：**SQL Master Data Services (MDS)** 文件](../master-data-services/new-updated-master-data-services.md)
-- [新文章 + 更新文章 (1+0)：**SQL ODBC (開放式資料庫連接)** 文件](../odbc/new-updated-odbc.md)
-- [新文章 + 更新文章 (8+4)：**SQL 關聯式資料庫**文件](../relational-databases/new-updated-relational-databases.md)
-- [新文章 + 更新文章 (2+2)：**Microsoft SQL Server** 文件](../sql-server/new-updated-sql-server.md)
-- [新文章 + 更新文章 (0+1)：**SQL Server Management Studio (SSMS)** 文件](../ssms/new-updated-ssms.md)
-- [新文章 + 更新文章 (1+0)：**Transact-SQL** 文件](../t-sql/new-updated-t-sql.md)
-- [新文章 + 更新文章 (1+0)：**SQL 工具**文件](../tools/new-updated-tools.md)
-
+- [新文章 + 更新文章 (3+12)：**SQL 進階分析**文件](../advanced-analytics/new-updated-advanced-analytics.md)
+- [新文章 + 更新文章 (5+0)：**連線到 SQL** 文件](../connect/new-updated-connect.md)
+- [新文章 + 更新文章 (5+1)：**SQL 資料庫引擎**文件](../database-engine/new-updated-database-engine.md)
+- [新文章 + 更新文章 (19+82)：**SQL Integration Services** 文件](../integration-services/new-updated-integration-services.md)
+- [新文章 + 更新文章 (1+8)：**Linux for SQL** 文件](../linux/new-updated-linux.md)
+- [新文章 + 更新文章 (12+1)：**SQL 關聯式資料庫**文件](../relational-databases/new-updated-relational-databases.md)
+- [新文章 + 更新文章 (0+1)：**SQL Reporting Services** 文件](../reporting-services/new-updated-reporting-services.md)
+- [新文章 + 更新文章 (7+1)：**Microsoft SQL Server** 文件](../sql-server/new-updated-sql-server.md)
+- [新文章 + 更新文章 (1+1)：**SQL Server Data Tools (SSDT)** 文件](../ssdt/new-updated-ssdt.md)
+- [新文章 + 更新文章 (0+2)：**SQL Server 移轉小幫手 (SSMA)** 文件](../ssma/new-updated-ssma.md)
+- [新文章 + 更新文章 (1+4)：**SQL Server Management Studio (SSMS)** 文件](../ssms/new-updated-ssms.md)
+- [新文章 + 更新文章 (4+1)：**Transact-SQL** 文件](../t-sql/new-updated-t-sql.md)
+- [新文章 + 更新文章 (0+1)：**SQL 工具**文件](../tools/new-updated-tools.md)
 
 #### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>沒有新文章或最近更新文章的主題區
 
 - [新文章 + 更新文章 (0+0)：**ActiveX Data Objects (ADO) for SQL** 文件](../ado/new-updated-ado.md)
+- [新文章 + 更新文章 (0+0)：**SQL Analysis Services** 文件](../analysis-services/new-updated-analysis-services.md)
 - [新文章 + 更新文章 (0+0)：**Data Quality Services for SQL** 文件](../data-quality-services/new-updated-data-quality-services.md)
 - [新文章 + 更新文章 (0+0)：**SQL 資料採礦延伸模組 (DMX)** 文件](../dmx/new-updated-dmx.md)
-- [新文章 + 更新文章 (0+0)：**SQL Integration Services** 文件](../integration-services/new-updated-integration-services.md)
+- [新文章 + 更新文章 (0+0)：**SQL Master Data Services (MDS)** 文件](../master-data-services/new-updated-master-data-services.md)
 - [新文章 + 更新文章 (0+0)：**SQL 多維度運算式 (MDX)** 文件](../mdx/new-updated-mdx.md)
+- [新文章 + 更新文章 (0+0)：**SQL ODBC (開放式資料庫連接)** 文件](../odbc/new-updated-odbc.md)
 - [新文章 + 更新文章 (0+0)：**PowerShell for SQL** 文件](../powershell/new-updated-powershell.md)
-- [新文章 + 更新文章 (0+0)：**SQL Reporting Services** 文件](../reporting-services/new-updated-reporting-services.md)
 - [新文章 + 更新文章 (0+0)：**SQL 範例**文件](../sample/new-updated-sample.md)
-- [新文章 + 更新文章 (0+0)：**SQL Server Data Tools (SSDT)** 文件](../ssdt/new-updated-ssdt.md)
-- [新文章 + 更新文章 (0+0)：**SQL Server 移轉小幫手 (SSMA)** 文件](../ssma/new-updated-ssma.md)
 - [新文章 + 更新文章 (0+0)：**XQuery for SQL** 文件](../xquery/new-updated-xquery.md)
 
-
-&nbsp;
 
 
