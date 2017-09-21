@@ -296,7 +296,7 @@ ms.lasthandoff: 08/02/2017
   
 -   [讓可用性群組恢復其原始拓撲](#ReturnToOrigTopology)  
   
-###  <a name="FailureResponse"></a> Responding to the Catastrophic Failure of the Main Data Center  
+###  <a name="FailureResponse"></a> 回應主要資料中心的重大錯誤  
  下圖說明為了回應主要資料中心的重大錯誤，在遠端資料中心執行的一系列動作。  
   
  ![回應主要資料中心失敗的步驟](../../../database-engine/availability-groups/windows/media/aoag-failurerecovery-actions-part1.gif "回應主要資料中心失敗的步驟")  
