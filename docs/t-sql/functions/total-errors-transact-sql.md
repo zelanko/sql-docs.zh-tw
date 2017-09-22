@@ -1,7 +1,7 @@
 ---
 title: "@@TOTAL_ERRORS (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 09/18/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -28,13 +28,13 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 83d639209d35d6516bd9348f40f4eddfd30ddff5
+ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
+ms.openlocfilehash: 65268d94ec7a12fd66587751ac9a93dc192be566
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/19/2017
 
 ---
-# <a name="totalerrors-transact-sql"></a>@@TOTAL_ERRORS (TRANSACT-SQL)
+# <a name="x40x40totalerrors-transact-sql"></a>（& s) #x 40; & #x 40。TOTAL_ERRORS (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   傳回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在上次啟動之後，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所發生的磁碟寫入錯誤數目。  
@@ -44,7 +44,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 @@TOTAL_ERRORS  
 ```  
   
@@ -74,3 +73,4 @@ Errors      As of
  [系統統計函數 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
   
   
+

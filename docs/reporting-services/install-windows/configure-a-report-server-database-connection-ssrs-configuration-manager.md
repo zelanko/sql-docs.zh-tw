@@ -1,7 +1,7 @@
 ---
 title: "設定報表伺服器資料庫連接 （SSRS 組態管理員） |Microsoft 文件"
 ms.custom: 
-ms.date: 05/24/2017
+ms.date: 09/20/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -9,31 +9,24 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- connections [Reporting Services], configuring
-- connections [Reporting Services]
-- report servers [Reporting Services], connections
-- report server database
-- databases [Reporting Services], connections
-- security [Reporting Services], database connections
-ms.assetid: 9759a9fb-35e9-4215-969b-a9f1fea18487
-caps.latest.revision: 11
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 6d7a1e1b9b0c8fb3fe60022f79ebfd21d6c44a09
+ms.translationtype: MT
+ms.sourcegitcommit: f684f0168e57c5cd727af6488b2460eeaead100c
+ms.openlocfilehash: 7faf4e41db0b37dddbdc28b33b3abf621ecad24b
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 
 # <a name="configure-a-report-server-database-connection--ssrs-configuration-manager"></a>設定報表伺服器資料庫連接 (SSRS 組態管理員)
 
-[!INCLUDE[ssrs-appliesto-sql2016-preview](../../includes/ssrs-appliesto-sql2016-preview.md)]
+[!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
-每個報表伺服器執行個體都必須連接至儲存伺服器所管理之報表、報表模型、共用資料來源、資源和中繼資料的報表伺服器資料庫。 如果您要安裝預設組態，您可以在報表伺服器安裝期間建立初始連接。 在大部分的情況下，您將利用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具，在安裝程式完成之後設定連接。 您可以隨時修改連接，以變更帳戶類型或重設認證。 如需如何建立資料庫及設定連接的逐步指示，請參閱[建立原生模式報表伺服器資料庫 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)。
+[!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
+
+每個報表伺服器執行個體都必須連接至儲存伺服器所管理之報表、報表模型、共用資料來源、資源和中繼資料的報表伺服器資料庫。 如果您要安裝預設組態，您可以在報表伺服器安裝期間建立初始連接。 在大部分的情況下，您將利用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具，在安裝程式完成之後設定連接。 您可以隨時修改連接，以變更帳戶類型或重設認證。 如需如何建立資料庫，並設定連接的逐步指示，請參閱[建立原生模式報表伺服器資料庫 &#40;SSRS 組態管理員 &#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).
 
  您必須在下列情況下設定報表伺服器資料庫連接：  
   
@@ -41,18 +34,18 @@ ms.lasthandoff: 08/09/2017
   
 -   設定報表伺服器來使用其他的報表伺服器資料庫。  
   
--   變更用於資料庫連接的使用者帳戶或密碼。 帳戶資訊若是儲存在 RSReportServer.config 檔案中，您只需要更新資料庫連接。 如果您是使用服務帳戶進行連接 (這會使用 Windows 整合式安全性做為認證類型)，則不會儲存密碼，因此不必更新連接資訊。 如需變更帳戶的詳細資訊，請參閱[設定報表伺服器服務帳戶 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)。  
+-   變更用於資料庫連接的使用者帳戶或密碼。 帳戶資訊若是儲存在 RSReportServer.config 檔案中，您只需要更新資料庫連接。 如果您是使用服務帳戶進行連接 (這會使用 Windows 整合式安全性做為認證類型)，則不會儲存密碼，因此不必更新連接資訊。 如需變更帳戶的詳細資訊，請參閱 [設定報表伺服器服務帳戶 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)。  
   
--   設定報表伺服器向外延展部署。 若要設定向外延展部署，您必須建立到報表伺服器資料庫的多個連接。 如需如何執行此多步驟作業的詳細資訊，請參閱[設定原生模式報表伺服器向外延展部署 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)。  
+-   設定報表伺服器向外延展部署。 若要設定向外延展部署，您必須建立到報表伺服器資料庫的多個連接。 如需如何執行此多步驟作業的詳細資訊，請參閱[設定原生模式報表伺服器向外延展部署 &#40;SSRS 組態管理員 &#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
   
 ## <a name="how-reporting-services-connects-to-the-database-engine"></a>Reporting Services 如何連接到 Database Engine  
- 報表伺服器對報表伺服器資料庫的存取會視認證與連接資訊，以及針對使用該資料庫之報表伺服器執行個體有效的加密金鑰而定。 必須要有有效的加密金鑰，才能儲存和擷取機密資料。 當您第一次設定資料庫時，會自動建立加密金鑰。 建立金鑰之後，如果您變更報表伺服器服務識別，則必須更新金鑰。 如需使用加密金鑰的詳細資訊，請參閱[設定和管理加密金鑰 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)。  
+ 報表伺服器對報表伺服器資料庫的存取會視認證與連接資訊，以及針對使用該資料庫之報表伺服器執行個體有效的加密金鑰而定。 必須要有有效的加密金鑰，才能儲存和擷取機密資料。 當您第一次設定資料庫時，會自動建立加密金鑰。 建立金鑰之後，如果您變更報表伺服器服務識別，則必須更新金鑰。 如需有關使用加密金鑰的詳細資訊，請參閱[設定和管理加密金鑰 &#40;SSRS 組態管理員 &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).  
   
  報表伺服器資料庫為內部元件，只能由報表伺服器存取。 您為報表伺服器資料庫指定的認證和連接資訊是報表伺服器所專用。 要求報表的使用者不需要資料庫權限或是報表伺服器資料庫的資料庫登入。  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會使用 **System.Data.SqlClient** 連接到主控報表伺服器資料庫的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 。 如果您要使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的本機執行個體，報表伺服器將會使用共用記憶體建立連接。 如果您要使用報表伺服器資料庫的遠端資料庫伺服器，您可能必須根據您使用的版本來啟用遠端連接。 如果您正在使用 Enterprise Edition，預設會啟用 TCP/IP 的遠端連接。  
   
- 若要確認此執行個體可接受遠端連接，請依序按一下 [開始]、[所有程式]、[[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]、[組態工具] 和 [SQL Server 組態管理員]，然後確認每一個服務都已啟用 TCP/IP 通訊協定。  
+ 若要確認執行個體可接受遠端連接，請按一下**啟動**，按一下 **所有程式**，按一下[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]，按一下**組態工具**，按一下**SQL Server 組態管理員**，然後確認已為每個服務啟用 TCP/IP 通訊協定。  
   
  當您啟用遠端連接時，也會啟用用戶端和伺服器通訊協定。 若要確認通訊協定已啟用，請依序按一下 **[開始]**、 **[所有程式]**、[ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]、 **[組態工具]**、 **[SQL Server 組態管理員]**、 **[SQL Server 網路組態]**，再按一下 **[MSSQLSERVER 的通訊協定]**。 如需詳細資訊，請參閱《 [線上叢書》中的](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md) 啟用或停用伺服器網路通訊協定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
@@ -61,7 +54,7 @@ ms.lasthandoff: 08/09/2017
   
 -   主控報表伺服器資料庫之 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體的名稱。  
   
--   報表伺服器資料庫的名稱。 第一次建立連接時，您可以建立新的報表伺服器資料庫或選取現有的資料庫。 如需詳細資訊，請參閱[建立報表伺服器資料庫 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)。  
+-   報表伺服器資料庫的名稱。 第一次建立連接時，您可以建立新的報表伺服器資料庫或選取現有的資料庫。 如需詳細資訊，請參閱《 [建立報表伺服器資料庫 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)。  
   
 -   認證類型。 您可以使用服務帳戶、Windows 網域帳戶或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫登入。  
   
@@ -101,7 +94,7 @@ ms.lasthandoff: 08/09/2017
 ##### <a name="using-service-accounts-and-integrated-security"></a>使用服務帳戶和整合式安全性  
  您可以使用 Windows 整合式安全性，以透過報表伺服器服務帳戶進行連接。 此帳戶會被授與報表伺服器資料庫的登入權限。 如果您以預設的組態安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，這是安裝程式選擇的預設認證類型。  
   
- 此服務帳戶是信任帳戶，可提供管理報表伺服器資料庫連接的低維護方法。 由於此服務帳戶會使用 Windows 整合式安全性進行連接，因此不需要儲存認證。 但是，如果您接著變更服務帳戶密碼或識別 (例如，從內建帳戶切換到網域帳戶)，請務必使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具進行變更。 此工具會自動更新資料庫權限，以使用修訂過的帳戶資訊。 如需詳細資訊，請參閱[設定報表伺服器服務帳戶 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)。  
+ 此服務帳戶是信任帳戶，可提供管理報表伺服器資料庫連接的低維護方法。 由於此服務帳戶會使用 Windows 整合式安全性進行連接，因此不需要儲存認證。 但是，如果您接著變更服務帳戶密碼或識別 (例如，從內建帳戶切換到網域帳戶)，請務必使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具進行變更。 此工具會自動更新資料庫權限，以使用修訂過的帳戶資訊。 如需詳細資訊，請參閱《 [設定報表伺服器服務帳戶 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)。  
   
  如果將資料庫連接設定為使用此服務帳戶，則當報表伺服器資料庫位於遠端電腦上時，該帳戶必須具有網路權限。 如果報表伺服器資料庫位於不同的網域、在防火牆後面，或者您使用的是工作群組安全性而非網域安全性，則請勿使用服務帳戶。 您應該改用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫使用者帳戶。  
   
@@ -124,7 +117,7 @@ ms.lasthandoff: 08/09/2017
  使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具，以判斷特定報表伺服器執行個體使用了哪一個報表伺服器資料庫。 若要尋找名稱，請連接到報表伺服器執行個體，然後開啟 [資料庫安裝] 頁面。  
   
 ## <a name="using-a-different-report-server-database-or-moving-a-report-server-database"></a>使用不同的報表伺服器資料庫，或移動報表伺服器資料庫  
- 您可以變更連接資訊，來設定報表伺服器執行個體使用不同的報表伺服器資料庫。 通常，需要切換資料庫的狀況會發生在部署實際報表伺服器的時候。 通常，實際伺服器首展的時候，就會從測試報表伺服器資料庫切換到實際報表伺服器資料庫。 您也可以將報表伺服器資料庫移到另一部電腦。 如需詳細資訊，請參閱《 [線上叢書》中的](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md) 升級和移轉 Reporting Services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+ 您可以變更連接資訊，來設定報表伺服器執行個體使用不同的報表伺服器資料庫。 通常，需要切換資料庫的狀況會發生在部署實際報表伺服器的時候。 通常，實際伺服器首展的時候，就會從測試報表伺服器資料庫切換到實際報表伺服器資料庫。您也可以將報表伺服器資料庫移到另一部電腦。 如需詳細資訊，請參閱《 [線上叢書》中的](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md) 升級和移轉 Reporting Services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="configuring-multiple-reports-servers-to-use-the-same-report-server-database"></a>設定多個報表伺服器使用同一個報表伺服器資料庫  
  您可以設定多個報表伺服器，使用同一個報表伺服器資料庫。 這個部署組態稱為向外延展部署。 如果您想要在伺服器叢集中執行多部報表伺服器，此組態為必要條件。 但是，如果您想要分割服務應用程式，或是測試新報表伺服器執行個體的安裝和設定，將它與現有的報表伺服器安裝做比較，也可以使用這個組態。 如需詳細資訊，請參閱[設定原生模式報表伺服器向外延展部署 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)。  

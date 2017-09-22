@@ -1,7 +1,7 @@
 ---
 title: "Reporting Services 組態管理員 （原生模式） |Microsoft 文件"
 ms.custom: 
-ms.date: 05/25/2017
+ms.date: 09/20/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -14,22 +14,22 @@ helpviewer_keywords:
 - configuration options [Reporting Services]
 - report servers [Reporting Services], configuring
 - components [Reporting Services], Reporting Services Configuration tool
-ms.assetid: 379eab68-7f13-4997-8d64-38810240756e
-caps.latest.revision: 49
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: ab787456bd3fdbc727ac1727188edd8ab5db0caa
+ms.translationtype: MT
+ms.sourcegitcommit: f684f0168e57c5cd727af6488b2460eeaead100c
+ms.openlocfilehash: c9aa72267460ed2d52ae3e2d42a73071b4d7a0f3
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 
 # <a name="reporting-services-configuration-manager-native-mode"></a>Reporting Services 組態管理員 (原生模式)
 
-[!INCLUDE[ssrs-appliesto-sql2016-preview](../../includes/ssrs-appliesto-sql2016-preview.md)]
+[!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
+
+[!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
 您可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員設定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式安裝。 如果您是利用僅限檔案安裝選項來安裝報表伺服器，就必須利用組態管理員來設定伺服器，才能使用該伺服器。 如果您使用預設組態安裝選項來安裝報表伺服器，則可以使用組態管理員來驗證或修改在安裝過程中所指定的設定。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員可用於設定本機或遠端報表伺服器執行個體。
 

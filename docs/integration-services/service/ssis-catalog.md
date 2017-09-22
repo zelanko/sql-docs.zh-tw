@@ -19,10 +19,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 0bcdf5c7eec91bccabc4b7b54f6121bec4d6c7f2
-ms.openlocfilehash: 82784542c0f6c21bf803590aa4af0ea7942516cf
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 0d019b77e70316f3976a610cb399e270b54f52b6
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 
@@ -193,7 +193,7 @@ ms.lasthandoff: 08/03/2017
   
  若要使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] UI 管理權限，請使用以下對話方塊。  
   
--   針對資料夾，使用  [Folder Properties Dialog Box](../../integration-services/service/folder-properties-dialog-box.md) 的 權限 頁面。  
+-   針對資料夾，使用 **Folder Properties Dialog Box** 的 [&#91;權限&#93;](../../integration-services/service/folder-properties-dialog-box.md)頁面。  
   
 -   針對專案中，使用 **權限** 頁面 [Project Properties Dialog Box](../../integration-services/service/project-properties-dialog-box.md)。  
   
@@ -357,10 +357,10 @@ ms.lasthandoff: 08/03/2017
   
     ```  
   
-     如需如何使用 Windows PowerShell 的範例和<xref:Microsoft.SqlServer.Management.IntegrationServices>命名空間，請參閱部落格文章： [SSIS 和 PowerShell，在 SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=242539)，blogs.msdn.com 上。 如需此命名空間的概觀和程式碼範例，請參閱 blogs.msdn.com 上的部落格文章： [SSIS 目錄管理物件模型初探](http://go.microsoft.com/fwlink/?LinkId=254267)。  
+     如需如何使用 Windows PowerShell 的範例和<xref:Microsoft.SqlServer.Management.IntegrationServices>命名空間，請參閱部落格文章： [SSIS 和 PowerShell，在 SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=242539)，blogs.msdn.com 上。如需此命名空間的概觀和程式碼範例，請參閱 blogs.msdn.com 上的部落格文章： [SSIS 目錄管理物件模型初探](http://go.microsoft.com/fwlink/?LinkId=254267)。  
 
 ## <a name="catalog-properties-dialog-box"></a>目錄屬性對話方塊
-  使用 [目錄屬性] 對話方塊來設定 SSISDB 目錄。 目錄屬性定義如何加密敏感性資料，如何保留作業和專案版本設定資料，以及何時驗證作業逾時。 SSISDB 目錄是 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案、封裝、參數與環境的中央儲存和管理點。  
+  使用 [目錄屬性] 對話方塊來設定 SSISDB 目錄。 目錄屬性定義如何加密敏感性資料，如何保留作業和專案版本設定資料，以及何時驗證作業逾時。SSISDB 目錄是 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案、封裝、參數與環境的中央儲存和管理點。  
   
  您也可以在 catalog.catalog_property 檢視表中檢視目錄屬性，以及使用 catalog.configure_catalog 預存程序來設定屬性。 如需詳細資訊，請參閱 [catalog.catalog_properties &#40;SSISDB 資料庫&#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md) 和 [catalog.configure_catalog &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database.md)。  
   
@@ -455,7 +455,7 @@ ms.lasthandoff: 08/03/2017
   
     ```  
   
-     [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] CLR 預存程序需要授與 UNSAFE 權限給登入，因為登入需要對於限制資源的額外存取，例如 Microsoft Win32 API。 如需 UNSAFE 程式碼權限的詳細資訊，請參閱[建立組件](../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)。  
+     [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] CLR 預存程序需要授與 UNSAFE 權限給登入，因為登入需要對於限制資源的額外存取，例如 Microsoft Win32 API。 如需 UNSAFE 程式碼權限的詳細資訊，請參閱 [建立組件](../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)。  
   
     ```  
     Create Login MS_SQLEnableSystemAssemblyLoadingUser  
@@ -473,7 +473,7 @@ ms.lasthandoff: 08/03/2017
   
     -   [還原資料庫 &#40;選項頁面&#41;](../../relational-databases/backup-restore/restore-database-options-page.md)  
   
-4.  針對 ##MS_SSISServerCleanupJobLogin##、sp_ssis_startup 和 SSIS 伺服器維護作業，執行您在[備份 SSIS 資料庫](#backup)中所建立的指令碼。 確認已啟動 SQL Server Agent。  
+4.  針對 ##MS_SSISServerCleanupJobLogin##、sp_ssis_startup 和 SSIS 伺服器維護作業，執行您在 [備份 SSIS 資料庫](#backup) 中所建立的指令碼。 確認已啟動 SQL Server Agent。  
   
 5.  執行下列陳述式以設定 sp_ssis_startup 程序進行自動執行。 如需詳細資訊，請參閱 [sp_procoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-procoption-transact-sql.md)。  
   
@@ -563,7 +563,7 @@ ms.lasthandoff: 08/03/2017
      ![SSISDB 升級精靈中檢閱結果](../../integration-services/service/media/ssisdb-upgrade-wizard-3.png "SSISDB 升級精靈中檢閱結果")  
 
 ## <a name="always-on-for-ssis-catalog-ssisdb"></a>Alwayson 的 SSIS 目錄 (SSISDB)
-  AlwaysOn 可用性群組功能是提供資料庫鏡像之企業級替代方案的高可用性與災害復原解決方案。 可用性群組支援一組可一起容錯移轉之離散化使用者資料庫的容錯移轉環境，也就是所謂的可用性資料庫。 如需詳細資訊，請參閱 [AlwaysOn 可用性群組 (SQL Server)](https://msdn.microsoft.com/library/hh510230.aspx)。  
+  AlwaysOn 可用性群組功能是提供資料庫鏡像之企業級替代方案的高可用性與災害復原解決方案。 可用性群組支援一組可一起容錯移轉之離散化使用者資料庫的容錯移轉環境，也就是所謂的可用性資料庫。 如需詳細資訊，請參閱 [AlwaysOn 可用性群組 (SQL Server)](/sql-docs/docs/database-engine/availability-groups/windows/always-on-availability-groups-sql-server)。  
   
  為了提供 SSIS 目錄 (SSISDB) 及其內容 (專案、封裝、執行記錄等) 的高可用性，您可以將 SSISDB 資料庫 (就像任何其他使用者資料庫) 加入 AlwaysOn 可用性群組。 發生容錯移轉時，其中一個次要節點會自動變成新的主要節點。  
  
@@ -585,7 +585,7 @@ ms.lasthandoff: 08/03/2017
   
 2.  在叢集的每個節點上，安裝含有 Integration Services (SSIS) 功能的 SQL Server 2016。  
   
-3.  每個 SQL Server 執行個體啟用 Alwayson 可用性群組。 如需詳細資訊，請參閱 [啟用和停用 AlwaysOn 可用性群組 (SQL Server)](https://msdn.microsoft.com/library/ff878259.aspx) 。  
+3.  每個 SQL Server 執行個體啟用 Alwayson 可用性群組。 如需詳細資訊，請參閱 [啟用和停用 AlwaysOn 可用性群組 (SQL Server)](/sql-docs/docs/database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server) 。  
   
 ###  <a name="Firsttime"></a> 設定適用於 AlwaysOn 的 SSIS 支援  
   
@@ -607,12 +607,12 @@ ms.lasthandoff: 08/03/2017
   
 3.  按一下 **[啟用 CLR 整合]**。 目錄便會使用 CLR 預存程序。  
   
-4.  按一下 [在 SQL Server 啟動時允許自動執行 Integration Services 預存程序]  ，讓 [catalog.startup](https://msdn.microsoft.com/library/hh230984.aspx) 預存程序會在每次 SSIS 伺服器執行個體重新啟動時執行。 預存程序會執行 SSISDB 目錄之作業狀態的維護。 它會在 SSIS 伺服器執行個體效能降低時，修正任何正在執行之封裝的狀態。  
+4.  按一下 [在 SQL Server 啟動時允許自動執行 Integration Services 預存程序]  ，讓 [catalog.startup](/sql-docs/docs/integration-services/system-stored-procedures/catalog-startup) 預存程序會在每次 SSIS 伺服器執行個體重新啟動時執行。 預存程序會執行 SSISDB 目錄之作業狀態的維護。 它會在 SSIS 伺服器執行個體效能降低時，修正任何正在執行之封裝的狀態。  
   
-5.  輸入 **密碼**，然後按一下 [確定] 。 此密碼保護用來加密目錄資料的資料庫主要金鑰。 請將密碼儲存在安全位置。 建議您同時備份資料庫主要金鑰。 如需詳細資訊，請參閱 [備份資料庫主要金鑰](https://msdn.microsoft.com/library/aa337546.aspx)。  
+5.  輸入 **密碼**，然後按一下 [確定] 。 此密碼保護用來加密目錄資料的資料庫主要金鑰。 請將密碼儲存在安全位置。 建議您同時備份資料庫主要金鑰。 如需詳細資訊，請參閱 [備份資料庫主要金鑰](/sql-docs/docs/relational-databases/security/encryption/back-up-a-database-master-key)。  
   
 ####  <a name="Step2"></a> 步驟 2：將 SSISDB 新增至 AlwaysOn 可用性群組  
- 將 SSISDB 資料庫加入 AlwaysOn 可用性群組，幾乎等於是將任何其他使用者資料庫加入可用性群組。 請參閱 [使用可用性群組精靈](https://msdn.microsoft.com/library/hh403415.aspx)。  
+ 將 SSISDB 資料庫加入 AlwaysOn 可用性群組，幾乎等於是將任何其他使用者資料庫加入可用性群組。 請參閱 [使用可用性群組精靈](/sql-docs/docs/database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio)。  
   
  您需要提供您在 **新增可用性群組** 精靈的 [選取資料庫]  頁面中建立 SSIS 目錄時指定的密碼。  
   

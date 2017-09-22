@@ -33,10 +33,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 542fba03b289dd0f393e3e5013cad0730c6d0756
+ms.sourcegitcommit: 6214ff450fd85eb3bd580850aef1e56056a43a54
+ms.openlocfilehash: 0b3842a160ba6a98db1aabb39585d76caa8743f5
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/22/2017
 
 ---
 # <a name="trycatch-transact-sql"></a>TRY...CATCH (Transact-SQL)
@@ -95,21 +95,21 @@ END CATCH
 ## <a name="retrieving-error-information"></a>擷取錯誤資訊  
  在 CATCH 區塊的範圍內，下列系統函數可用來取得造成執行 CATCH 區塊之錯誤的相關資訊：  
   
--   ERROR_NUMBER() 會傳回錯誤碼。  
+-   [Error_number （)](../../t-sql/functions/error-number-transact-sql.md)傳回的錯誤數目。  
   
--   ERROR_SEVERITY() 會傳回嚴重性。  
+-   [Error_severity （)](../../t-sql/functions/error-severity-transact-sql.md)傳回嚴重性。  
   
--   ERROR_STATE() 會傳回錯誤狀態碼。  
+-   [Error_state （)](../../t-sql/functions/error-state-transact-sql.md)傳回的錯誤狀態碼。  
   
--   ERROR_PROCEDURE() 會傳回發生錯誤的預存程序或觸發程序的名稱。  
+-   [Error_procedure （)](../../t-sql/functions/error-procedure-transact-sql.md)會傳回預存程序或觸發程序的名稱發生錯誤。  
   
--   ERROR_LINE() 會傳回常式內造成錯誤的行號。  
+-   [Error_line （)](../../t-sql/functions/error-line-transact-sql.md)傳回造成錯誤的常式內的行號。  
   
--   ERROR_MESSAGE() 會傳回錯誤訊息的完整文字。 文字包括提供給任何可替代參數的值，例如，長度、物件名稱或次數。  
+-   [Error_message （)](../../t-sql/functions/error-message-transact-sql.md)傳回錯誤訊息的完整文字。 文字包括提供給任何可替代參數的值，例如，長度、物件名稱或次數。  
   
  如果是在 CATCH 區塊範圍之外呼叫這些函數，它們會傳回 NULL。 這些函數可以從 CATCH 區塊範圍內的任何位置擷取錯誤資訊。 例如，下列指令碼顯示包含錯誤處理函數的預存程序。 在 `CATCH`建構的 `TRY…CATCH`區塊中，會呼叫預存程序，並傳回錯誤的相關資訊。  
   
-```  
+```t-sql  
 -- Verify that the stored procedure does not already exist.  
 IF OBJECT_ID ( 'usp_GetErrorInfo', 'P' ) IS NOT NULL   
     DROP PROCEDURE usp_GetErrorInfo;  
@@ -137,7 +137,7 @@ BEGIN CATCH
 END CATCH;   
 ```  
   
- 錯誤 * 函式也適用於`CATCH`封鎖內[原生編譯的預存程序](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)。  
+ 錯誤\_\*函式也適用於`CATCH`封鎖內[原生編譯的預存程序](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)。  
   
 ## <a name="errors-unaffected-by-a-trycatch-construct"></a>不受 TRY…CATCH 建構影響的錯誤  
  TRY…CATCH 建構不會擷取下列狀況：  
@@ -162,7 +162,7 @@ END CATCH;
   
  下列範例顯示 `SELECT` 陳述式所產生的物件名稱解析錯誤，是在預存程序內執行相同的 `TRY…CATCH` 陳述式時，由 `CATCH` 區塊來擷取，而不是由 `SELECT` 建構來擷取。  
   
-```  
+```t-sql  
 BEGIN TRY  
     -- Table does not exist; object name resolution  
     -- error not caught.  
@@ -179,7 +179,7 @@ END CATCH
   
  在預存程序內執行 `SELECT` 陳述式，會使錯誤發生在低於 `TRY` 區塊的層級。 這個錯誤由 `TRY…CATCH` 建構來處理。  
   
-```  
+```t-sql  
 -- Verify that the stored procedure does not exist.  
 IF OBJECT_ID ( N'usp_ExampleProc', N'P' ) IS NOT NULL   
     DROP PROCEDURE usp_ExampleProc;  
@@ -212,7 +212,7 @@ END CATCH;
 ### <a name="a-using-trycatch"></a>A. 使用 TRY…CATCH  
  下列範例顯示將會產生除以零的錯誤之 `SELECT` 陳述式。 這個錯誤會使執行動作跳到相關聯的 `CATCH` 區塊。  
   
-```  
+```t-sql  
 BEGIN TRY  
     -- Generate a divide-by-zero error.  
     SELECT 1/0;  
@@ -232,7 +232,7 @@ GO
 ### <a name="b-using-trycatch-in-a-transaction"></a>B. 在交易中使用 TRY…CATCH  
  下列範例顯示 `TRY…CATCH` 區塊在交易內運作的方式。 `TRY` 區塊內的陳述式產生條件約束違規錯誤。  
   
-```  
+```t-sql  
 BEGIN TRANSACTION;  
   
 BEGIN TRY  
@@ -261,7 +261,7 @@ GO
 ### <a name="c-using-trycatch-with-xactstate"></a>C. 使用 TRY…CATCH 搭配 XACT_STATE  
  下列範例顯示如何利用 `TRY…CATCH` 建構來處理交易內所發生的錯誤。 `XACT_STATE` 函數會判斷是否應該認可或回復交易。 在此範例中，`SET XACT_ABORT` 是 `ON`。 當發生條件約束違規錯誤時，會使交易成為無法認可。  
   
-```  
+```t-sql  
 -- Check to see whether this stored procedure exists.  
 IF OBJECT_ID (N'usp_GetErrorInfo', N'P') IS NOT NULL  
     DROP PROCEDURE usp_GetErrorInfo;  
@@ -330,7 +330,7 @@ GO
 ### <a name="d-using-trycatch"></a>D. 使用 TRY…CATCH  
  下列範例顯示將會產生除以零的錯誤之 `SELECT` 陳述式。 這個錯誤會使執行動作跳到相關聯的 `CATCH` 區塊。  
   
-```  
+```t-sql  
 BEGIN TRY  
     -- Generate a divide-by-zero error.  
     SELECT 1/0;  

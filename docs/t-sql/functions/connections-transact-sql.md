@@ -1,7 +1,7 @@
 ---
 title: "@@CONNECTIONS (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
-ms.date: 07/24/2017
+ms.date: 09/18/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -26,13 +26,13 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5619f7fd0ea769af7a614178be5242174cc66fde
+ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
+ms.openlocfilehash: d70742d1afeed9148a0118d928797ca529f05cdc
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/19/2017
 
 ---
-# <a name="connections-transact-sql"></a>@@CONNECTIONS (TRANSACT-SQL)
+# <a name="x40x40connections-transact-sql"></a>（& s) #x 40; & #x 40。連接 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
 傳回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上次啟動之後所嘗試的連接次數，成功和失敗都包括在內。

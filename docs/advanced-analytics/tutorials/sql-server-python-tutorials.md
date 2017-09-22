@@ -2,7 +2,7 @@
 title: "SQL Server Python 教學課程 |Microsoft 文件"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 08/29/2017
+ms.date: 09/19/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -19,10 +19,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b891cda72d5a69aafe461918674218fd3279c423
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 70b2ada0c6b2cade444af1f7dde67f0adfd90b35
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="sql-server-python-tutorials"></a>SQL Server Python 教學課程
@@ -47,10 +47,6 @@ ms.lasthandoff: 09/01/2017
 
    您將建立模型，使用**rxLinMod**，從新**revoscalepy**程式庫。 您將會啟動遠端的 Python 終端機中的程式碼，但模型，就會進行 SQL Server 計算內容中。
 
-+ [建置預測模型使用 Python (GitHub)](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/machine-learning-services/python/getting-started/rental-prediction)
-
-  建立機器學習模型來預測 ski 以租用方式佔用商務需求，並進行操作該模型進行日常要求預測使用預存程序。 提供所有的程式碼和資料。
-
 + [在資料庫 Python 分析的 SQL 開發人員](sqldev-in-database-python-for-sql-developers.md)
 
   新增！ 建置完整的 Python 解決方案使用 T-SQL 預存程序。 所有的 Python 程式碼包含項目。
@@ -67,7 +63,10 @@ ms.lasthandoff: 09/01/2017
 
   了解 ski 以租用方式佔用企業可能會使用機器學習來預測未來出租，它可以幫助商務計劃和人員，以符合未來的要求。
 
-+ [新功能 ！執行客戶群集使用 Python 和 SQL Server](https://microsoft.github.io/sql-ml-tutorials/python/customerclustering/)
+  > [!TIP]
+  > 現在包含原生計分 Python 模型 ！
+
++ [執行客戶群集使用 Python 和 SQL Server](https://microsoft.github.io/sql-ml-tutorials/python/customerclustering/)
 
     了解如何使用 Kmeans 演算法來執行不受監督的群集的客戶。
 
@@ -83,14 +82,14 @@ ms.lasthandoff: 09/01/2017
 
 執行 SQL Server 安裝程式，別忘了下列重要步驟：
 
-+ 執行啟用外部指令碼執行功能`sp_configure 'external scripts enabled', 1`
-+ 重新啟動伺服器
-+ 請確定呼叫外部執行階段的服務具有必要權限
-+ 請確認您的 SQL 登入或 Windows 使用者帳戶具有必要權限連接到伺服器，來讀取資料，並建立此範例所需的任何資料庫物件
++ 執行啟用外部指令碼執行功能`sp_configure 'external scripts enabled', 1`。
++ 重新啟動伺服器。
++ 請確定呼叫外部執行階段的服務具有必要權限。
++ 請確定您的 SQL 登入或 Windows 使用者帳戶具有必要權限連接到伺服器，來讀取資料，並建立此範例所需的任何資料庫物件。
 
 如果您遇到問題，請參閱本文章的一些常見問題：[疑難排解機器學習服務](../machine-learning-troubleshooting-faq.md)
 
 ## <a name="see-also"></a>另請參閱
 
-[SQL Server 的 R 教學課程](sql-server-r-tutorials.md)
+[適用於 SQL Server 的 R 教學課程](sql-server-r-tutorials.md)
 

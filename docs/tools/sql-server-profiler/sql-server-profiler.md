@@ -30,10 +30,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 55fa14d4d8e28f602c49613cf81e981c12856177
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 0ab5d4cbddc6922bc13a37dc42c1915cdd149367
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="sql-server-profiler"></a>SQL Server Profiler
@@ -49,7 +49,7 @@ ms.lasthandoff: 08/02/2017
 
  ## <a name="where-is-the-profiler"></a>Profiler 位於何處？
  
- 您可以從 SSMS 內以數種方式啟動 Profiler。 [以下是列出啟動分析工具的方式的主題。](https://msdn.microsoft.com/library/ms173799.aspx)
+ 您可以從 SSMS 內以數種方式啟動 Profiler。 [以下是列出啟動分析工具的方式的主題。](/sql-docs/docs/tools/sql-server-profiler/start-sql-server-profiler)
   
 ## <a name="capture-and-replay-trace-data"></a>擷取並重新執行追蹤資料 
 下表顯示我們建議在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中用來擷取和重新執行追蹤資料的功能。
@@ -57,8 +57,8 @@ ms.lasthandoff: 08/02/2017
 ||||  
 |-|-|-|  
 |**功能 \ 目標工作負載**|**關聯式引擎**|**Analysis Services (英文)**|  
-|**追蹤擷取**|SQL Server Management Studio 中的[擴充事件](https://msdn.microsoft.com/library/bb630282.aspx) 圖形化使用者介面|SQL Server Profiler|  
-|**重新執行追蹤**|[Distributed 的 Replay](https://msdn.microsoft.com/library/ff878183.aspx)|SQL Server Profiler|  
+|**追蹤擷取**|SQL Server Management Studio 中的[擴充事件](/sql-docs/docs/relational-databases/extended-events/extended-events) 圖形化使用者介面|SQL Server Profiler|  
+|**重新執行追蹤**|[Distributed Replay](/sql-docs/docs/tools/distributed-replay/sql-server-distributed-replay)|SQL Server Profiler|  
   
 ## <a name="sql-server-profiler"></a>SQL Server Profiler  
  Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 是「SQL 追蹤」的圖形化使用者介面，可用來監視 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 或 Analysis Services 的執行個體。 您可以擷取每一個事件的相關資料，並將資料儲存至檔案或資料表，以供稍後分析。 例如，您可以監視生產環境，查看哪些預存程序由於執行速度過慢而影響效能。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]用於活動例如：  
@@ -132,7 +132,7 @@ ms.lasthandoff: 08/02/2017
   
  SQL Server 提供兩種方式來追蹤 SQL Server 的執行個體：您可以透過 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 追蹤，或是使用系統預存程序追蹤。  
   
- **篩選器**  
+ **篩選**  
  建立追蹤或範本時，您可以定義條件來篩選由事件所收集的資料。 若不想讓追蹤變得太大，您可加以篩選，只收集某些事件資料的子集。 例如，您可以在追蹤中將 Microsoft Windows 使用者名稱限制在特定的使用者，進而減少輸出資料。  
   
  如果沒有設定篩選條件，選定事件類別的所有事件都會傳回到追蹤輸出。  

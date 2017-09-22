@@ -28,10 +28,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 2800075091835b2d6f2b07ee34e9b897fe86634e
-ms.openlocfilehash: 22419ce21476588f4ff2859185c8b833306fa896
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 58908fc8a7b18cff36a41ee26e7a3eab8e84a5d0
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="import-and-export-data-with-the-sql-server-import-and-export-wizard"></a>使用 SQL Server 匯入和匯出精靈來匯入或匯出資料
@@ -41,11 +41,11 @@ ms.lasthandoff: 08/17/2017
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈是將資料從來源複製到目的地的簡單方式。 本概觀說明資料來源精靈可作為來源和目的地，以及您執行精靈所需的權限。
 
 ## <a name="get-the-wizard"></a>取得精靈
-如果您想要執行精靈，但電腦上尚未安裝 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，則可以安裝 SQL Server Data Tools (SSDT) 來安裝 [ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈]。 如需詳細資訊，請參閱 [下載 SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx)。
+如果您想要執行精靈時，但您沒有 [！包含[m](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt)。
 
 ## <a name="what-happens-when-i-run-the-wizard"></a>在執行精靈時，會發生什麼事？
 -    **請參閱步驟清單。** 如需精靈中的步驟的說明，請參閱[的 SQL Server 匯入和匯出精靈 」 中的步驟](../../integration-services/import-export-data/steps-in-the-sql-server-import-and-export-wizard.md)。 也是在精靈的每一頁的文件的個別頁面。  
-    \-或\-
+    \- 或 [選擇目的地] \-
 -   **簡單的範例，請參閱。** 快速瀏覽數個您在一般的工作階段中看到的畫面，看看這個簡單的端對端範例在單一頁面-[開始匯入和匯出精靈 」 的這個簡單的範例使用](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)。  
 
 ##  <a name="wizardSources"></a>哪些來源和目的地可以使用？  
@@ -62,7 +62,7 @@ ms.lasthandoff: 08/17/2017
 
 ## <a name="how-do-i-connect-to-my-data"></a>如何連接到我的資料？
 如需如何連接至常用的資料來源資訊，請參閱下列頁面。
--   [連接到 SQL Server](../../integration-services/import-export-data/connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard.md)
+-   [連線到 SQL Server](../../integration-services/import-export-data/connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard.md)
 -   [連接到 Oracle](../../integration-services/import-export-data/connect-to-an-oracle-data-source-sql-server-import-and-export-wizard.md)
 -   [連接到一般檔案 （文字檔）](../../integration-services/import-export-data/connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard.md)
 -   [連接到 Excel](../../integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md)

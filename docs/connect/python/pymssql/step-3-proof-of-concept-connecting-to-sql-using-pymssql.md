@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 732e6fd574d80d58aef81a149acc54376231e6cc
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 5796c2d5faefdeef1a9bafe1a438b68c7461dd53
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-pymssql"></a>步驟 3： 連接到使用 pymssql SQL 的概念證明
@@ -54,7 +54,7 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="step-3--insert-a-row"></a>步驟 3： 插入資料列  
   
-在您將了解如何執行此範例[插入](https://msdn.microsoft.com/library/ms174335.aspx)陳述式，將參數可保護您的應用程式，從[SQL 資料隱碼](https://technet.microsoft.com/library/ms161953(v=sql.105).aspx)弱點和擷取自動產生的[主索引鍵](https://msdn.microsoft.com/library/ms179610.aspx)值。    
+在您將了解如何執行此範例[插入](/sql-docs/docs/t-sql/statements/insert-transact-sql)陳述式，將參數可保護您的應用程式，從[SQL 資料隱碼](/sql-docs/docs/relational-databases/tables/primary-and-foreign-key-constraints)值。    
   
   
 ```python

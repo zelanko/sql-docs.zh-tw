@@ -17,10 +17,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3e5e277b421f98dbabedcb4df80ee902ea87fbd1
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 06b07e613856bd9c3c66ec06d76c5e14ee8d4f4e
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="data-sources"></a>資料來源
@@ -30,7 +30,7 @@ ms.lasthandoff: 08/03/2017
   
 > **注意：** 您只能將資料來源加入到設定為使用套件部署模型的專案。 若專案設定為使用專案部署模型，您就可以使用在專案層級建立的連接管理員來共用連接，取代使用資料來源的方式。  
 >   
->  如需有關部署模型的詳細資訊，請參閱＜ [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx)＞。 如需將專案轉換為專案部署模型的詳細資訊，請參閱 [將專案部署至 Integration Services 伺服器](https://msdn.microsoft.com/library/hh231102.aspx)。  
+>  如需有關部署模型的詳細資訊，請參閱＜ [Deployment of Projects and Packages](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages)＞。 如需將專案轉換為專案部署模型的詳細資訊，請參閱 [將專案部署至 Integration Services 伺服器](https://msdn.microsoft.com/library/hh231102.aspx)。  
   
  在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝中使用資料來源的好處包括：  
   

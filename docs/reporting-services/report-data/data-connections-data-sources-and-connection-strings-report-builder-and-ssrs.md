@@ -1,7 +1,7 @@
 ---
 title: "資料連接、 資料來源、 連接字串報表產生器 SSRS |Microsoft 文件"
 ms.custom: 
-ms.date: 05/10/2017
+ms.date: 09/20/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -10,32 +10,23 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- connections [Reporting Services], data sources
-- reports [Reporting Services], data
-- expressions [Reporting Services], data sources
-- data sources [Reporting Services], connections
-- connection strings [Reporting Services]
-- shared data sources [Reporting Services]
-- Reporting Services, data sources
-- logins [Reporting Services]
-ms.assetid: 4d8f0ae1-102b-4b3d-9155-fa584c962c9e
-caps.latest.revision: 118
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 51be2879461864ce67992e12d7cfd95014e03e40
+ms.translationtype: MT
+ms.sourcegitcommit: f684f0168e57c5cd727af6488b2460eeaead100c
+ms.openlocfilehash: a0930e4f060379be894870fe6ac22b85cd225283
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="data-connections-data-sources-and-connection-strings-report-builder-and-ssrs"></a>資料連接、資料來源及連接字串 (報表產生器和 SSRS)
 
-[!INCLUDE[ssrs-appliesto-sql2016-preview](../../includes/ssrs-appliesto-sql2016-preview.md)][!包含 [ssrs-appliesto-sharepoint-2013年-2016i].../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
+[!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 
-  若要在[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]和[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]分頁報表中包括資料，您必須先建立「資料來源」與「資料集」。 本主題說明資料來源的類型、如何建立資料來源，以及與資料來源認證相關的重要資訊。 資料來源包括資料來源類型、連接資訊，以及要使用的認證類型。 資料來源有兩種類型：內嵌和共用。 內嵌資料來源是定義在報表中，而且只能供該報表使用。 共用資料來源則與報表分開定義，而且可以供多個報表使用。 如需詳細資訊，請參閱[內嵌和共用資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)。  
+[!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
+
+  若要在[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]和[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]分頁報表中包括資料，您必須先建立「資料來源」與「資料集」。 本主題說明資料來源的類型、如何建立資料來源，以及與資料來源認證相關的重要資訊。 資料來源包括資料來源類型、連接資訊，以及要使用的認證類型。 資料來源有兩種類型：內嵌和共用。 內嵌資料來源是定義在報表中，而且只能供該報表使用。 共用資料來源則與報表分開定義，而且可以供多個報表使用。 如需詳細資訊，請參閱[內嵌和共用資料集 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md).  
 
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]
@@ -174,6 +165,6 @@ ms.lasthandoff: 08/09/2017
 [建立、 修改及刪除共用的資料來源](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)   
 [建立和修改內嵌資料來源](../../reporting-services/report-data/create-and-modify-embedded-data-sources.md)   
 [設定部署屬性](../../reporting-services/tools/set-deployment-properties-reporting-services.md)   
-[指定報表資料來源的認證及連接資訊](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
+[指定報表資料來源的認證及連線資訊](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)

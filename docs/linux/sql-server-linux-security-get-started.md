@@ -11,10 +11,10 @@ ms.technology: database-engine
 ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
 ms.custom: H1Hack27Feb2017
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 5256cf1d1c63139c43fbb9900876297294f2d30a
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 9aaa786ec53296804f6300aad6add8c10b7fd699
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>SQL Server on Linux 的安全性功能的逐步解說
@@ -27,7 +27,7 @@ ms.lasthandoff: 08/02/2017
 
 ## <a name="create-a-login-and-a-database-user"></a>建立登入和資料庫使用者 
 
-授與其他人所建立的登入在 master 資料庫中使用的 SQL Server 存取[CREATE LOGIN](https://msdn.microsoft.com/library/ms189751.aspx)陳述式。 例如：
+授與其他人所建立的登入在 master 資料庫中使用的 SQL Server 存取[CREATE LOGIN](/sql-docs/docs/t-sql/statements/create-login-transact-sql)陳述式。 例如：
 
 ```
 CREATE LOGIN Larry WITH PASSWORD = '************';  
@@ -36,7 +36,7 @@ CREATE LOGIN Larry WITH PASSWORD = '************';
 >  [!NOTE]
 >  一律使用增強式密碼來取代上述星號。
 
-登入可以連接到 SQL Server，並具有 （具有有限的權限） 到 master 資料庫的存取。 若要連接至使用者資料庫，登入必須對應的識別身分，在資料庫層級，呼叫資料庫使用者。 使用者只適用於每個資料庫，而且必須授與存取權的每個資料庫中分別建立。 下列的範例中為 AdventureWorks2014 資料庫中，將您移至，然後再使用[CREATE USER](https://msdn.microsoft.com/library/ms173463.aspx)陳述式來建立名為 Larry 與名為 Larry 登入相關聯的使用者。 登入和使用者關聯 （彼此對應），但它們是不同的物件。 登入是伺服器層級原則。 使用者是資料庫層級主體。
+登入可以連接到 SQL Server，並具有 （具有有限的權限） 到 master 資料庫的存取。 若要連接至使用者資料庫，登入必須對應的識別身分，在資料庫層級，呼叫資料庫使用者。 使用者只適用於每個資料庫，而且必須授與存取權的每個資料庫中分別建立。 下列的範例中為 AdventureWorks2014 資料庫中，將您移至，然後再使用[CREATE USER](/sql-docs/docs/t-sql/statements/create-user-transact-sql)陳述式來建立名為 Larry 與名為 Larry 登入相關聯的使用者。 登入和使用者關聯 （彼此對應），但它們是不同的物件。 登入是伺服器層級原則。 使用者是資料庫層級主體。
 
 ```
 USE AdventureWorks2014;
@@ -67,7 +67,7 @@ GO
 
 系統管理員和資料庫擁有者帳戶，將會連接至使用者資料庫的第一個人。 不過這些使用者擁有所有可用的資料庫上的權限。 這是多個權限超過大部分使用者應該擁有。 
 
-當您剛開始時，您就可以使用內建指派的權限某些一般分類*固定資料庫角色*。 例如，`db_datareader`固定的資料庫角色可以讀取資料庫中的所有資料表，但不會變更。 使用授與固定的資料庫角色的成員資格[ALTER ROLE](https://msdn.microsoft.com/library/ms189775.aspx)陳述式。 下列範例會將使用者加入`Jerry`至`db_datareader`固定的資料庫角色。   
+當您剛開始時，您就可以使用內建指派的權限某些一般分類*固定資料庫角色*。 例如，`db_datareader`固定的資料庫角色可以讀取資料庫中的所有資料表，但不會變更。 使用授與固定的資料庫角色的成員資格[ALTER ROLE](/sql-docs/docs/t-sql/statements/alter-role-transact-sql)陳述式。 下列範例會將使用者加入`Jerry`至`db_datareader`固定的資料庫角色。   
    
 ```   
 USE AdventureWorks2014;   
@@ -76,9 +76,9 @@ GO
 ALTER ROLE db_datareader ADD MEMBER Jerry;   
 ```   
 
-如需固定的資料庫角色的清單，請參閱[資料庫層級角色](https://msdn.microsoft.com/library/ms189121.aspx)。
+如需固定的資料庫角色的清單，請參閱[資料庫層級角色](/sql-docs/docs/relational-databases/security/authentication-access/database-level-roles)。
 
-稍後，當您準備好要設定資料 （強烈建議使用） 更精確的存取，建立您自己使用的使用者定義資料庫角色[CREATE ROLE](https://msdn.microsoft.com/library/ms187936.aspx)陳述式。 然後您的自訂角色指派特定的細微權限。
+稍後，當您準備好要設定資料 （強烈建議使用） 更精確的存取，建立您自己使用的使用者定義資料庫角色[CREATE ROLE](/sql-docs/docs/t-sql/statements/create-role-transact-sql)陳述式。 然後您的自訂角色指派特定的細微權限。
 
 例如，下列陳述式建立名為的資料庫角色`Sales`，授與`Sales`群組的能力，請參閱、 更新和刪除資料列`Orders`資料表，並將使用者`Jerry`至`Sales`角色。   
    
@@ -90,12 +90,12 @@ GRANT DELETE ON Object::Sales TO Orders;
 ALTER ROLE Sales ADD MEMBER Jerry;   
 ```   
 
-如需權限系統的詳細資訊，請參閱[資料庫引擎權限使用者入門](https://msdn.microsoft.com/library/mt667986.aspx)。
+如需權限系統的詳細資訊，請參閱[資料庫引擎權限使用者入門](/sql-docs/docs/relational-databases/security/authentication-access/getting-started-with-database-engine-permissions)。
 
 
 ## <a name="configure-row-level-security"></a>設定資料列層級安全性  
 
-[資料列層級安全性](https://msdn.microsoft.com/library/dn765131.aspx)可讓您根據使用者執行查詢的資料庫中的資料列限制存取。 這項功能可用於確保客戶只能存取自己的資料或工作者只能存取其部門相關的資料等案例。   
+[資料列層級安全性](/sql-docs/docs/relational-databases/security/row-level-security)可讓您根據使用者執行查詢的資料庫中的資料列限制存取。 這項功能可用於確保客戶只能存取自己的資料或工作者只能存取其部門相關的資料等案例。   
 
 下列逐步設定與兩位使用者不同步驟的資料列層級的存取權`Sales.SalesOrderHeader`資料表。 
 
@@ -165,7 +165,7 @@ WITH (STATE = OFF);
 
 ## <a name="enable-dynamic-data-masking"></a>啟用動態資料遮罩
 
-[動態資料遮罩](https://msdn.microsoft.com/library/mt130841.aspx)可讓您限制應用程式的使用者公開機密資料的完整或部分遮罩某些資料行。 
+[動態資料遮罩](/sql-docs/docs/relational-databases/security/dynamic-data-masking)可讓您限制應用程式的使用者公開機密資料的完整或部分遮罩某些資料行。 
 
 使用`ALTER TABLE`陳述式將遮罩功能至`EmailAddress`中的資料行`Person.EmailAddress`資料表： 
  
@@ -248,9 +248,9 @@ SET ENCRYPTION ON;
 SQL server 加密和解密作業排定在背景執行緒上。 您可以使用本主題稍後出現之清單內的目錄檢視和動態管理檢視，以檢視這些作業的狀態。   
 
 >  [!WARNING]
->  啟用了 TDE 的資料庫備份檔案也會使用資料庫加密金鑰來加密。 因此，當您要還原這些備份時，保護資料庫加密金鑰的憑證必須可以使用。 這表示，除了備份資料庫以外，您也必須確定可維護伺服器憑證的備份，以免資料遺失。 如果此憑證無法再使用，就會造成資料遺失。 如需詳細資訊，請參閱 [SQL Server Certificates and Asymmetric Keys](https://msdn.microsoft.com/library/bb895327.aspx)。  
+>  啟用了 TDE 的資料庫備份檔案也會使用資料庫加密金鑰來加密。 因此，當您要還原這些備份時，保護資料庫加密金鑰的憑證必須可以使用。 這表示，除了備份資料庫以外，您也必須確定可維護伺服器憑證的備份，以免資料遺失。 如果此憑證無法再使用，就會造成資料遺失。 如需詳細資訊，請參閱 [SQL Server Certificates and Asymmetric Keys](/sql-docs/docs/relational-databases/security/sql-server-certificates-and-asymmetric-keys)。  
 
-如需 TDE 的詳細資訊，請參閱[透明資料加密 (TDE)](https://msdn.microsoft.com/en-us/library/bb934049.aspx)。   
+如需 TDE 的詳細資訊，請參閱[透明資料加密 (TDE)](/sql-docs/docs/relational-databases/security/encryption/transparent-data-encryption-tde)。   
 
 
 ## <a name="configure-backup-encryption"></a>設定備份加密
@@ -280,10 +280,10 @@ WITH
 GO  
 ```
 
-如需詳細資訊，請參閱[備份加密](https://msdn.microsoft.com/library/dn449489.aspx)。
+如需詳細資訊，請參閱[備份加密](/sql-docs/docs/relational-databases/backup-restore/backup-encryption)。
 
 
 ## <a name="next-steps"></a>後續的步驟
 
-SQL server 安全性功能的相關資訊，請參閱[SQL Server Database Engine 和 Azure SQL Database 的資訊安全中心](https://msdn.microsoft.com/library/bb510589.aspx)。
+SQL server 安全性功能的相關資訊，請參閱[SQL Server Database Engine 和 Azure SQL Database 的資訊安全中心](/sql-docs/docs/relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database)。
 

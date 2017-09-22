@@ -1,7 +1,7 @@
 ---
 title: "@@SERVERNAME (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 09/17/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -23,13 +23,13 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 525da30f048b8d6ca405783c98eea6bcb0f55671
+ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
+ms.openlocfilehash: 93d03e11df97075b2d608d7bfcc4e234c37971cd
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/19/2017
 
 ---
-# <a name="servername-transact-sql"></a>@@SERVERNAME (TRANSACT-SQL)
+# <a name="x40x40servername-transact-sql"></a>（& s) #x 40; & #x 40。SERVERNAME (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   傳回本機伺服器執行名稱[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
@@ -84,3 +84,4 @@ ACCTG
  [sp_addserver &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)  
   
   
+

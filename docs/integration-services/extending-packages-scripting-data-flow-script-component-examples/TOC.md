@@ -1,0 +1,5 @@
+# [其他指令碼元件範例](additional-script-component-examples.md)
+# [使用指令碼元件建立 ODBC 目的地](creating-an-odbc-destination-with-the-script-component.md)
+# [使用指令碼元件增強錯誤輸出](enhancing-an-error-output-with-the-script-component.md)
+# [使用指令碼元件剖析非標準文字檔案格式](parsing-non-standard-text-file-formats-with-the-script-component.md)
+# [模擬指令碼元件的錯誤輸出](simulating-an-error-output-for-the-script-component.md)

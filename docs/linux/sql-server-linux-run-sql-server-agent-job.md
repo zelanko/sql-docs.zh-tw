@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 1d93d95e-9c89-4274-9b3f-fa2608ec2792
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 3ffb76838940f42d7a696e1c17f227517d89012d
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 8d05ec1ae3be89b7a087938c44b356ccc9dbca43
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="create-and-run-sql-server-agent-jobs-on-linux"></a>建立和執行在 Linux 上的 SQL Server Agent 作業
@@ -24,7 +24,7 @@ SQL Server 工作可用來定期執行的命令相同的順序，SQL Server 資�
 
 在此版本 SQL Server 代理程式的已知問題，請參閱[Release Notes](sql-server-linux-release-notes.md)。
 
-## <a name="prerequisites"></a>필수 구성 요소 
+## <a name="prerequisites"></a>必要條件 
 若要建立並執行工作，您必須先安裝 SQL Server Agent 服務。 如需安裝指示，請參閱[SQL Server 代理程式安裝主題](sql-server-linux-setup-sql-agent.md)。
 
 ## <a name="create-a-job-with-transact-sql"></a>使用 TRANSACT-SQL 建立工作
@@ -35,7 +35,7 @@ SQL Server 工作可用來定期執行的命令相同的順序，SQL Server 資�
 > [!TIP]
 > 您可以使用任何 T-SQL 的用戶端來執行下列命令。 例如，在 Linux 上您可以使用[sqlcmd](sql-server-linux-setup-tools.md)或[Visual Studio Code](sql-server-linux-develop-use-vscode.md)。 從遠端 Windows 伺服器，您也可以在 SQL Server Management Studio (SSMS) 執行查詢或使用 UI 介面進行作業管理下, 一節中所述。
 
-1. **建立作業**。 下列範例會使用[sp_add_job](https://msdn.microsoft.com/library/ms182079.aspx)來建立名為作業`Daily AdventureWorks Backup`。
+1. **建立作業**。 下列範例會使用[sp_add_job](/sql-docs/docs/relational-databases/system-stored-procedures/sp-add-job-transact-sql)來建立名為作業`Daily AdventureWorks Backup`。
 
     ```tsql
      -- Adds a new job executed by the SQLServerAgent service 
@@ -49,7 +49,7 @@ SQL Server 工作可用來定期執行的命令相同的順序，SQL Server 資�
 
     ```
 
-2. **加入一或多個作業步驟**。 下列的 TRANSACT-SQL 指令碼會使用[sp_add_jobstep](https://msdn.microsoft.com/library/ms187358.aspx)建立作業步驟所建立的備份`AdventureWlorks2014`資料庫。
+2. **加入一或多個作業步驟**。 下列的 TRANSACT-SQL 指令碼會使用[sp_add_jobstep](/sql-docs/docs/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)建立作業步驟所建立的備份`AdventureWlorks2014`資料庫。
 
     ```tsql
     -- Adds a step (operation) to the job  
@@ -65,7 +65,7 @@ SQL Server 工作可用來定期執行的命令相同的順序，SQL Server 資�
     GO
     ```
 
-3. **建立作業排程**。 這個範例會使用[sp_add_schedule](https://msdn.microsoft.com/library/ms366342.aspx)建立作業每日排程。
+3. **建立作業排程**。 這個範例會使用[sp_add_schedule](/sql-docs/docs/relational-databases/system-stored-procedures/sp-add-jobschedule-transact-sql)建立作業每日排程。
 
     ```tsql
     -- Creates a schedule called 'Daily'  
@@ -78,7 +78,7 @@ SQL Server 工作可用來定期執行的命令相同的順序，SQL Server 資�
    GO
     ```
 
-4. **將作業排程附加至作業**。 使用[sp_attach_schedule](https://msdn.microsoft.com/library/ms186766.aspx)附加至作業的 作業排程。
+4. **將作業排程附加至作業**。 使用[sp_attach_schedule](/sql-docs/docs/relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql)附加至作業的 作業排程。
 
     ```tsql
     -- Sets the 'Daily' schedule to the 'Daily AdventureWorks Backup' Job  
@@ -88,7 +88,7 @@ SQL Server 工作可用來定期執行的命令相同的順序，SQL Server 資�
     GO
     ```
 
-5. **將工作指派給目標伺服器**。 將工作指派給目標伺服器與[sp_add_jobserver](https://msdn.microsoft.com/library/ms178625.aspx)。 在此範例中，本機伺服器為目標。
+5. **將工作指派給目標伺服器**。 將工作指派給目標伺服器與[sp_add_jobserver](/sql-docs/docs/relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql)。 在此範例中，本機伺服器為目標。
 
     ```tsql
     EXEC dbo.sp_add_jobserver  

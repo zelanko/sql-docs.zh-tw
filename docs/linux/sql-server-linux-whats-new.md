@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: 649c7cbd03b6d2e61dbbb572a34cdbcd2a7ab7cd
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 622e0ed2242ddc454028962c63b5760a6baad38a
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="whats-new-for-sql-server-2017-on-linux"></a>在 Linux 上的 SQL Server 2017 的新功能
@@ -131,7 +131,7 @@ CTP 1.1 版本包含下列增強功能和修正程式：
 [Service Pack 1 的改良功能](https://blogs.msdn.microsoft.com/sqlreleaseservices/sql-server-2016-service-pack-1-sp1-released/)CTP1.1 本版：
 - CLR、 Filestream/Filetable、 記憶體和查詢存放區物件複製的資料庫。
 - **建立**或**ALTER**運算子可程式性物件。
-- 新**USE 提示**查詢選項，以提供查詢處理器的提示。 深入了解：[查詢提示](https://msdn.microsoft.com/en-us/library/ms181714.aspx)。
+- 新**USE 提示**查詢選項，以提供查詢處理器的提示。 深入了解：[查詢提示](/sql-docs/docs/t-sql/queries/hints-transact-sql-query)。
 - SQL 服務帳戶現在可以透過程式設計方式識別啟用鎖定的分頁記憶體和立即檔案初始化的權限。
 - TempDB 檔案計數、 檔案大小和檔案成長設定支援。
 - Showplan XML 中的診斷延伸。

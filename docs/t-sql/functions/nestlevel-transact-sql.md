@@ -1,7 +1,7 @@
 ---
 title: "@@NESTLEVEL (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 09/17/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -24,13 +24,13 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ce6980ba008189a1588dc87e955a26125dc6a30d
+ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
+ms.openlocfilehash: d02995ee7093d311cbdc6f4b69430a8bc66a618c
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/19/2017
 
 ---
-# <a name="nestlevel-transact-sql"></a>@@NESTLEVEL (TRANSACT-SQL)
+# <a name="x40x40nestlevel-transact-sql"></a>（& s) #x 40; & #x 40。NESTLEVEL (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   傳回本機伺服器中執行目前預存程序的巢狀層級 (最初是 0)。  
@@ -40,7 +40,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 @@NESTLEVEL  
 ```  
   
@@ -136,3 +135,4 @@ GO
  [@@TRANCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/trancount-transact-sql.md)  
   
   
+

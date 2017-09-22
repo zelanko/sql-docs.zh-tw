@@ -11,10 +11,10 @@ ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: H1Hack27Feb2017
 ms.translationtype: MT
-ms.sourcegitcommit: 60272ce672c0a32738b0084ea86f8907ec7fc0a5
-ms.openlocfilehash: 693b994cd7e00e9db439a445fe0b692bc2d379d5
+ms.sourcegitcommit: f684f0168e57c5cd727af6488b2460eeaead100c
+ms.openlocfilehash: 6a187e6ad238743d0643ef56b76ace7977def228
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/06/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="configure-sql-server-2017-container-images-on-docker"></a>設定 SQL Server 2017 容器映像 docker
@@ -96,13 +96,13 @@ Docker 可用來在同一部主機機器上執行多個 SQL Server 容器。 這
 下列範例會建立兩個 SQL Server 容器，並將之對應至連接埠**1401年**和**1402年**主機電腦上。
 
 ```bash
-docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' --cap-add SYS_PTRACE -p 1401:1433 -d microsoft/mssql-server-linux
-docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' --cap-add SYS_PTRACE -p 1402:1433 -d microsoft/mssql-server-linux
+docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1401:1433 -d microsoft/mssql-server-linux
+docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1402:1433 -d microsoft/mssql-server-linux
 ```
 
 ```PowerShell
-docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" --cap-add SYS_PTRACE -p 1401:1433 -d microsoft/mssql-server-linux
-docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" --cap-add SYS_PTRACE -p 1402:1433 -d microsoft/mssql-server-linux
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1401:1433 -d microsoft/mssql-server-linux
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1402:1433 -d microsoft/mssql-server-linux
 ```
 
 現在有兩個不同的容器中執行的 SQL Server 執行個體。 用戶端可以使用容器的 Docker 主機和連接埠號碼的 IP 位址連線至每個 SQL Server 執行個體。
@@ -129,11 +129,11 @@ sqlcmd -S 10.3.2.4,1402 -U SA -P "<YourPassword>"
 第一個選項是裝載在主機上的目錄，為您容器中的資料磁碟區。 若要這樣做，請使用`docker run`命令搭配`-v <host directory>:/var/opt/mssql`旗標。 這可讓還原容器執行之間的資料。
 
 ```bash
-docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' --cap-add SYS_PTRACE -p 1433:1433 -v <host directory>:/var/opt/mssql -d microsoft/mssql-server-linux
+docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>:/var/opt/mssql -d microsoft/mssql-server-linux
 ```
 
 ```PowerShell
-docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" --cap-add SYS_PTRACE -p 1433:1433 -v <host directory>:/var/opt/mssql -d microsoft/mssql-server-linux
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v <host directory>:/var/opt/mssql -d microsoft/mssql-server-linux
 ```
 
 這項技術也可讓您共用並檢視之外 Docker 主機上的檔案。
@@ -146,11 +146,11 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" --cap
 第二個選項是使用資料磁碟區容器。 您可以藉由指定的磁碟區名稱，而不是與主應用程式目錄中建立資料磁碟區容器`-v`參數。 下列範例會建立名為共用的資料磁碟區**sqlvolume**。
 
 ```bash
-docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' --cap-add SYS_PTRACE -p 1433:1433 -v sqlvolume:/var/opt/mssql -d microsoft/mssql-server-linux
+docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v sqlvolume:/var/opt/mssql -d microsoft/mssql-server-linux
 ```
 
 ```PowerShell
-docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" --cap-add SYS_PTRACE -p 1433:1433 -v sqlvolume:/var/opt/mssql -d microsoft/mssql-server-linux
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v sqlvolume:/var/opt/mssql -d microsoft/mssql-server-linux
 ```
 
 > [!NOTE]
@@ -170,6 +170,7 @@ docker volume ls
 > 如果您刪除資料磁碟區容器，容器中的任何 SQL Server 資料是*永久*刪除。
 
 ### <a name="backup-and-restore"></a>備份與還原
+
 除了這些容器技術，您也可以使用標準的 SQL Server 備份和還原技術。 您可以使用備份檔案，來保護您的資料，或將資料移到另一個 SQL Server 執行個體。 如需詳細資訊，請參閱[Linux 上的資料庫備份和還原 SQL Server](sql-server-linux-backup-and-restore-database.md)。
 
 > [!WARNING]
@@ -210,6 +211,8 @@ docker cp d6b75213ef80:/var/opt/mssql/log/errorlog /tmp/errorlog
 ```PowerShell
 docker cp d6b75213ef80:/var/opt/mssql/log/errorlog C:\Temp\errorlog
 ```
+
+## <a name="copy-files-into-a-container"></a>將檔案複製到容器
 
 若要將檔案複製到容器中，使用下列命令：
 
@@ -313,11 +316,11 @@ sudo systemctl start docker
 - 如果您收到錯誤，例如**' 無法建立端點 CONTAINER_NAME 上網路橋接器。啟動 proxy 時發生錯誤： 接聽 tcp 0.0.0.0:1433 繫結： 已經在使用中的位址。 '**，則您嘗試對應到已在使用連接埠的容器連接埠 1433年。 如果您在主機電腦，在本機執行 SQL Server，也可能會發生。 它也可會發生，如果您啟動兩個 SQL Server 容器，並嘗試將其同時對應到相同的主機連接埠。 如果發生這種情況，使用`-p`參數對應到不同的主機連接埠的容器連接埠 1433年。 例如： 
 
     ```bash
-    docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' --cap-add SYS_PTRACE -p 1400:1433 -d microsoft/mssql-server-linux`.
+    docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1400:1433 -d microsoft/mssql-server-linux`.
     ```
 
     ```PowerShell
-    docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" --cap-add SYS_PTRACE -p 1400:1433 -d microsoft/mssql-server-linux`.
+    docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1400:1433 -d microsoft/mssql-server-linux`.
     ```
 
 - 請檢查是否有任何錯誤訊息，從容器。
@@ -331,6 +334,14 @@ sudo systemctl start docker
 - 如果您使用任何容器管理軟體，請確定它支援執行為根目錄的容器處理程序。 根容器中的 sqlservr 程序執行。
 
 - 檢閱[SQL Server 安裝程式和錯誤記錄檔](#errorlogs)。
+
+### <a name="enable-dump-captures"></a>啟用傾印擷取
+
+如果 SQL Server 處理序失敗的容器，您應該建立新的容器使用**SYS_PTRACE**啟用。 這樣會加入追蹤處理序，也就是建立傾印檔案的例外狀況所需的 Linux 能力。 傾印檔案可供支援，以協助疑難排解問題。 下列的 docker run 命令可讓這項功能。
+
+```bash
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -e "MSSQL_PID=Developer" --cap-add SYS_PTRACE -p 1401:1433 -d microsoft/mssql-server-linux
+```
 
 ### <a name="sql-server-connection-failures"></a>SQL Server 連線失敗
 

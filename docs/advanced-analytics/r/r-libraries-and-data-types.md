@@ -16,10 +16,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 2661e1b32d604f4bdda75d478af9d9ea48ea2d4d
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: bedc8b9d5e8e4c2a9bd8c3271a8463fc860f3fd5
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="r-libraries-and-r-data-types"></a>R 程式庫和 R 資料類型
@@ -80,7 +80,7 @@ R 服務和機器學習服務使用 R，這兩種產品與特定版本的 Micros
 
 ## <a name="data-types-not-supported-by-r"></a>R 不支援的資料類型
 
-在 [SQL Server 類型系統](https://msdn.microsoft.com/library/ms187752.aspx)所支援的資料類型類別中，以下幾個類型在傳遞到 R 程式碼時很有可能會造成問題：
+在 [SQL Server 類型系統](/sql-docs/docs/t-sql/data-types/data-types-transact-sql)所支援的資料類型類別中，以下幾個類型在傳遞到 R 程式碼時很有可能會造成問題：
 
 + 中所列的資料類型**其他**SQL 類型系統主題的章節：**游標**，**時間戳記**， **hierarchyid**， **uniqueidentifier**， **sql_variant**， **xml**，**資料表**
 + 所有空間類型
@@ -111,7 +111,7 @@ Microsoft SQL Server 2016 和 Microsoft Azure SQL Database 包含資料類型轉
 
 當您從資料庫擷取要用於 R 程式碼的資料時，應該一律刪除無法用於 R 的資料行，以及其他對於分析沒有幫助的資料行，例如 GUIDS (Uniqueidentifier)、時間戳記和其他用於稽核的資料行，或是由 ETL 處理序建立的歷程資訊。 
 
-請注意，包含不必要的資料行可能會大幅降低 R 程式碼的效能，尤其是使用高基數資料行做為因素的時候。 因此，我們建議您事先使用 SQL Server 系統預存程序和資訊檢視取得特定資料表的資料類型，並刪除或轉換不相容的資料行。 如需詳細資訊，請參閱 [Transact-SQL 中的資訊結構描述檢視](https://msdn.microsoft.com/library/ms186778.aspx)
+請注意，包含不必要的資料行可能會大幅降低 R 程式碼的效能，尤其是使用高基數資料行做為因素的時候。 因此，我們建議您事先使用 SQL Server 系統預存程序和資訊檢視取得特定資料表的資料類型，並刪除或轉換不相容的資料行。 如需詳細資訊，請參閱 [Transact-SQL 中的資訊結構描述檢視](/sql-docs/docs/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql)
 
 如果 R 不支援特定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型，但您需要在 R 指令碼中使用該資料的數個資料行，建議您先使用 [CAST 和 CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md) 函數，以確保資料類型轉換會如預期般地執行，再於 R 指令碼中使用該資料。  
 

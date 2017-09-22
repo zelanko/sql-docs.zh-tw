@@ -10,23 +10,23 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 30cc4564-f389-4707-9b25-8ba782cc5150
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: a999ca0248e83d2d9ef59f7ec04ad2dd58378132
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 3c48596ed8bb4b4febc5982a3f37609f2ef4281f
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="use-sql-server-management-studio-ssms-on-windows-to-manage-sql-server-on-linux"></a>使用 Windows 上的 SQL Server Management Studio (SSMS) 來管理 SQL Server on Linux
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-本主題示範如何使用[SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx)連接到在 Linux 上的 SQL Server 2017 RC2。 SSMS 是 Windows 應用程式，因此使用 SSMS 時可以連線到遠端的 SQL Server 執行個體，在 Linux 上的 Windows 電腦。 
+本主題示範如何使用[SQL Server Management Studio (SSMS)](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms)連接到在 Linux 上的 SQL Server 2017 RC2。 SSMS 是 Windows 應用程式，因此使用 SSMS 時可以連線到遠端的 SQL Server 執行個體，在 Linux 上的 Windows 電腦。 
 
 已成功連接之後，您可以執行簡單的 TRANSACT-SQL (T-SQL) 查詢，以便驗證與資料庫通訊。
 
 ## <a name="install-the-newest-version-of-sql-server-management-studio"></a>安裝最新版本的 SQL Server Management Studio
 
-當使用 SQL Server，您應該一律使用最新版本的 SQL Server Management Studio (SSMS)。 SSMS 的最新版本而不斷更新並最佳化，目前適用於 SQL Server 2017 on Linux。 若要下載並安裝最新版本，請參閱[下載 SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx)。 若要保持最新狀態，最新版本的 SSMS 會提示您有新的版本可供下載時。 
+當使用 SQL Server，您應該一律使用最新版本的 SQL Server Management Studio (SSMS)。 SSMS 的最新版本而不斷更新並最佳化，目前適用於 SQL Server 2017 on Linux。 若要下載並安裝最新版本，請參閱[下載 SQL Server Management Studio](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms)。 若要保持最新狀態，最新版本的 SSMS 會提示您有新的版本可供下載時。 
 
 ## <a name="connect-to-sql-server-on-linux"></a>連接到 SQL Server on Linux
 
@@ -59,9 +59,9 @@ ms.lasthandoff: 08/02/2017
      
 ## <a name="run-sample-queries"></a>執行範例查詢
 
-您連接到您的伺服器之後，您可以連接到資料庫並執行範例查詢。 如果您不熟悉撰寫查詢，請參閱[撰寫 TRANSACT-SQL 陳述式](https://msdn.microsoft.com/library/ms365303.aspx)。
+您連接到您的伺服器之後，您可以連接到資料庫並執行範例查詢。 如果您不熟悉撰寫查詢，請參閱[撰寫 TRANSACT-SQL 陳述式](/sql-docs/docs/t-sql/tutorial-writing-transact-sql-statements)。
 
-1. 識別要用來執行針對查詢資料庫。 這可能是您在建立新資料庫[TRANSACT-SQL 教學課程](https://msdn.microsoft.com/library/ms365303.aspx)。 或者，它可以是**AdventureWorks**範例資料庫，您[下載及還原](sql-server-linux-migrate-restore-database.md)。
+1. 識別要用來執行針對查詢資料庫。 這可能是您在建立新資料庫[TRANSACT-SQL 教學課程](/sql-docs/docs/t-sql/tutorial-writing-transact-sql-statements)。 或者，它可以是**AdventureWorks**範例資料庫，您[下載及還原](sql-server-linux-migrate-restore-database.md)。
 2. 在**物件總管 中**，瀏覽至目標資料庫伺服器上。
 2. 以滑鼠右鍵按一下資料庫，然後選取**新查詢**:
 
@@ -81,7 +81,7 @@ ms.lasthandoff: 08/02/2017
 
 除了查詢之外，您可以使用 T-SQL 陳述式來建立和管理資料庫。
 
-如果您還不熟悉 T-SQL，請參閱[教學課程： 撰寫 TRANSACT-SQL 陳述式](https://msdn.microsoft.com/library/ms365303.aspx)和[TRANSACT-SQL 參考 (Database Engine)](https://msdn.microsoft.com/library/bb510741.aspx)。
+如果您還不熟悉 T-SQL，請參閱[教學課程： 撰寫 TRANSACT-SQL 陳述式](/sql-docs/docs/t-sql/tutorial-writing-transact-sql-statements)和[TRANSACT-SQL 參考 (Database Engine)](https://msdn.microsoft.com/library/bb510741.aspx)。
 
 如需有關如何使用 SSMS 的詳細資訊，請參閱[使用 SQL Server Management Studio](https://msdn.microsoft.com/library/ms174173.aspx)。
 

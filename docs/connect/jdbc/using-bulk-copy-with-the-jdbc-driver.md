@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f42cd86be5f91b54e0ae862bee0fa64fb483c27d
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 7069c168d1d144335ac0d1121158193127c67e75
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="using-bulk-copy-with-the-jdbc-driver"></a>搭配 JDBC Driver 使用大量複製
@@ -858,7 +858,7 @@ public class Program
  下列應用程式示範如何使用 SQLServerBulkCopy 類別載入資料。 在此範例中，將使用一個 CSV 檔案將從 SQL Server AdventureWorks 資料庫的 Production.Product 資料表匯出的資料複製到該資料庫中的類似資料表。  
   
 > [!IMPORTANT]  
->  此範例不會執行，除非您已建立工作資料表中所述[資料表設定](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#BKMK_TableSetup)。 您也必須用從 Production.Product 資料表匯出的資料建立 CSV 檔案，同時您可以用 SQL Server Management Studio (SSMS) 執行這項操作。  如果您沒有 SSMS，您可以瀏覽[下載 SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx)取得它。  
+>  此範例不會執行，除非您已建立工作資料表中所述[資料表設定](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms)取得它。  
   
 1.  開啟**SQL Server Management Studio**並連接到 AdventureWorks 資料庫的 SQL 伺服器。  
   

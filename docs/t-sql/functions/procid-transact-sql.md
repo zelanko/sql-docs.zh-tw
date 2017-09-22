@@ -1,7 +1,7 @@
 ---
 title: "@@PROCID (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
-ms.date: 03/16/2017
+ms.date: 09/18/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -29,13 +29,13 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b44e112203f0933d90a4161e0b9dd0ceb0292332
+ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
+ms.openlocfilehash: 9288f472601621b3177e3fa978bb2f53324881c8
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/19/2017
 
 ---
-# <a name="procid-transact-sql"></a>@@PROCID (TRANSACT-SQL)
+# <a name="x40x40procid-transact-sql"></a>（& s) #x 40; & #x 40。PROCID (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   傳回目前 [!INCLUDE[tsql](../../includes/tsql-md.md)] 模組的物件識別碼。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 模組可能是預存程序、使用者自訂函數或觸發程序。 @@PROCID不能指定 CLR 模組或同處理序資料存取提供者。  
@@ -45,7 +45,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 @@PROCID  
 ```  
   
@@ -87,3 +86,4 @@ EXECUTE dbo.usp_FindName 'P%', 'A%';
  [RAISERROR &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/raiserror-transact-sql.md)  
   
   
+

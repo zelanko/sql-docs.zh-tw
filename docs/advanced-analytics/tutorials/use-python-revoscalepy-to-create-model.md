@@ -2,8 +2,8 @@
 title: "使用 Python revoscalepy 建立模型 |Microsoft 文件"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 07/03/2017
-ms.prod: sql-server-2016
+ms.date: 09/19/2017
+ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -15,19 +15,19 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6b7e166971ff74add56bce628838c82a9a6c1128
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: c497ad3e302f2950a65cf41aaa41237f19171ab4
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="use-python-with-revoscalepy-to-create-a-model"></a>使用 Python revoscalepy 建立模型
 
-這個範例會示範如何建立羅吉斯迴歸模型，以及在 SQL server 會使用從演算法**revoscalepy**封裝。
+這個範例會示範如何建立線性迴歸模型，以及在 SQL server 會使用從演算法**revoscalepy**封裝。
 
 **Revoscalepy**封裝 Python 包含轉換的物件，並提供類似的演算法**RevoScaleR**的 R 語言套件。 與此媒體櫃，您可以建立計算內容，移動之間的資料計算內容、 轉換資料，以及定型使用熱門的演算法，例如羅吉斯和線性迴歸、 決策樹，以及更多的預測模型。
 
-如需詳細資訊，請參閱[revoscalepy 是什麼？](../python/what-is-revoscalepy.md)
+如需詳細資訊，請參閱[revoscalepy 是什麼？](../python/what-is-revoscalepy.md)和[Python 函數參考](https://docs.microsoft.com/r-server/python-reference/introducing-python-package-reference)
 
 ## <a name="prerequisites"></a>必要條件
 
@@ -112,8 +112,8 @@ def test_linmod_sql():
 
 資料來源與不同的計算內容。 _資料來源_定義您的程式碼中使用的資料。 _計算內容_定義執行程式碼。
 
-1. 建立 Python 變數，例如`sql_query`和`sql_connection_string`，定義來源和您想要使用的資料。 將這些變數傳遞給 RxSqlServerData 建構函式來實作**資料來源物件**名為`data_source`。
-2. 使用建立的計算內容物件**RxInSqlServer**建構函式。 在此範例中，您可以傳遞定義前面，假設您將會當成計算內容使用的相同 SQL Server 執行個體上的資料相同的連接字串。 不過，在資料來源和計算內容可能會在不同伺服器上。 產生**計算內容物件**名為`sql_cc`。
+1. 建立 Python 變數，例如`sql_query`和`sql_connection_string`，定義來源和您想要使用的資料。 將這些變數來傳遞[RxSqlServerData](https://docs.microsoft.com/r-server/python-reference/revoscalepy/rxsqlserverdata)建構函式來實作**資料來源物件**名為`data_source`。
+2. 使用建立的計算內容物件[RxInSqlServer](https://docs.microsoft.com/r-server/python-reference/revoscalepy/rxinsqlserverdata)建構函式。 在此範例中，您可以傳遞定義前面，假設您將會當成計算內容使用的相同 SQL Server 執行個體上的資料相同的連接字串。 不過，在資料來源和計算內容可能會在不同伺服器上。 產生**計算內容物件**名為`sql_cc`。
 3. 選擇 使用中的計算內容。 根據預設，作業會於本機執行，這表示，如果您未指定不同的計算內容、 將資料來源擷取資料和模型調整將會執行目前的 Python 環境中。
 
 ### <a name="changing-compute-contexts"></a>變更計算內容
@@ -126,17 +126,15 @@ def test_linmod_sql():
 
 `summary = rx_summary("ArrDelay ~ DayOfWeek", data = data_source, compute_context = sql_compute_context)`
 
-您也可以使用此函式**rxsetcomputecontext**之間已定義的計算內容切換。 
+您也可以使用此函式[rx_set_computecontext](https://docs.microsoft.com/r-server/python-reference/revoscalepy/rx-set-compute-context)之間已定義的計算內容切換。
 
 ### <a name="setting-the-degree-of-parallelism"></a>設定平行處理原則程度
 
-當您定義的計算內容時，您也可以設定參數的計算內容資料的處理方式來控制。 這些參數是根據資料來源類型而有所不同。 
+當您定義的計算內容時，您也可以設定參數的計算內容資料的處理方式來控制。 這些參數是根據資料來源類型而有所不同。
 
 針對 SQL Server 計算內容，您可以設定批次大小，或提供有關使用中執行的工作平行處理原則程度提示。
 
-因此我們設定此範例執行四個處理器的電腦上*num_tasks*參數設為 4。 如果您設定此值為 0 時，SQL Server 會使用預設值，也就是盡可能，伺服器目前的 MAXDOP 設定平行執行多工作。 不過，即使在多處理器的伺服器，可能會配置工作的確切數目取決於許多其他因素，例如伺服器設定並執行其他工作。 
-
-如需詳細資訊，請參閱[RxInSqlServer](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxinsqlserver)。
+因此我們設定此範例執行四個處理器的電腦上*num_tasks*參數設為 4。 如果您設定此值為 0 時，SQL Server 會使用預設值，也就是盡可能，伺服器目前的 MAXDOP 設定平行執行多工作。不過，即使在多處理器的伺服器，可能會配置工作的確切數目取決於許多其他因素，例如伺服器設定並執行其他工作。
 
 ## <a name="related-samples"></a>相關的範例
 

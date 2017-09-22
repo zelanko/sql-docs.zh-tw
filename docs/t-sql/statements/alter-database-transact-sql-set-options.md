@@ -32,10 +32,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 802642d2c9ba70c2a8750dc0ed5536e198a33f6f
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: d3e4af471573ffa2220eb9dfb1ee7a129899b5eb
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 選項 (Transact-SQL) 
@@ -45,7 +45,7 @@ ms.lasthandoff: 09/01/2017
   
 -   [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)  
 
--   [ALTER DATABASE &#40;Azure SQL Database &#41;](https://msdn.microsoft.com/library/mt574871.aspx) 
+-   [ALTER DATABASE &#40;Azure SQL Database &#41;](/sql-docs/docs/t-sql/statements/alter-database-azure-sql-database) 
 
 -   [ALTER DATABASE &#40;Azure SQL 資料倉儲 &#41;](../../t-sql/statements/alter-database-azure-sql-data-warehouse.md)  
   
@@ -654,7 +654,7 @@ MULTI_USER
  FULL  
  已啟用 FileTable 中 FILESTREAM 資料的完整非交易式存取。  
   
- DIRECTORY_NAME =  *\<directory_name >*  
+ DIRECTORY_NAME = * \<directory_name >*  
  Windows 相容的目錄名稱。 此名稱在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的所有資料庫層級目錄名稱之間必須是唯一的。 無論定序設定為何，唯一性比較皆不會區分大小寫。 在此資料庫中建立 FileTable 之前，必須先設定這個選項。  
   
  **\<HADR_options >:: =**  

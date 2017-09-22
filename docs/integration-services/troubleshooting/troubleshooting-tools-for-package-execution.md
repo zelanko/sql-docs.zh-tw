@@ -22,10 +22,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: d4d50bedde83e493c8327d9321ebcfb12bc12985
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 2aeb88c7c6829c0efd0cd5f422f65690dd3da2b6
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>封裝執行的疑難排解工具
@@ -72,9 +72,9 @@ ms.lasthandoff: 08/03/2017
 ## <a name="troubleshoot-package-execution-by-using-logging"></a>使用記錄功能針對封裝執行進行疑難排解  
  您可以啟用記錄功能，追蹤執行中之封裝所發生的大部分事件。 記錄提供者會擷取指定之事件的相關資訊，以供稍後分析，並使用資料庫資料表、一般檔案、XML 檔案或其他支援的輸出格式儲存這項資訊。  
   
--   **啟用記錄功能**。 您可以只選取想要擷取其資訊的事件與項目，藉以精簡記錄輸出。 如需詳細資訊，請參閱 [Integration Services (SSIS) 記錄](https://msdn.microsoft.com/library/ms140246.aspx)。  
+-   **啟用記錄功能**。 您可以只選取想要擷取其資訊的事件與項目，藉以精簡記錄輸出。 如需詳細資訊，請參閱 [Integration Services (SSIS) 記錄](/sql-docs/docs/integration-services/performance/integration-services-ssis-logging)。  
   
--   **選取封裝的 [診斷] 事件以疑難排解提供者問題。** 現在有可幫助您疑難排解封裝與外部資料來源之間互動的記錄訊息。 如需詳細資訊，請參閱 [Troubleshooting Tools Package Connectivity](https://msdn.microsoft.com/library/cc879309.aspx)。  
+-   **選取封裝的 [診斷] 事件以疑難排解提供者問題。** 現在有可幫助您疑難排解封裝與外部資料來源之間互動的記錄訊息。 如需詳細資訊，請參閱 [Troubleshooting Tools Package Connectivity](/sql-docs/docs/integration-services/troubleshooting/troubleshooting-tools-for-package-connectivity)。  
   
 -   **增強預設的記錄輸出**。 每次執行封裝時，記錄功能通常會將資料列附加至記錄目的地。 雖然記錄輸出的每一個資料列都會以封裝的名稱和唯一識別碼來識別封裝，並且以唯一的 ExecutionID 來識別封裝的執行，但單一清單中若有大量記錄輸出，分析就會變得很困難。  
   

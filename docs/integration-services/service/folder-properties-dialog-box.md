@@ -19,14 +19,14 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 37ac39c3aa4aea9c4c2d9ed65b7aadde7a27887b
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: dc9e7c04025c01db9eee05d467fc9b5317aa11ec
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="folder-properties-dialog-box"></a>資料夾屬性對話方塊
-  資料夾會包含 **SSISDB** 目錄中的專案和環境。 每個資料夾都會定義套用到資料夾內容的權限。 如需 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 權限的詳細資訊，請參閱 [catalog.grant_permission (SSISDB 資料庫)](../../integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database.md)。  
+  資料夾會包含 **SSISDB** 目錄中的專案和環境。 每個資料夾都會定義套用到資料夾內容的權限。 如需 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 權限的詳細資訊，請參閱 [catalog.grant_permission &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database.md)。  
   
 ## <a name="to-set-folder-description-and-permissions"></a>若要設定資料夾描述和權限  
   
@@ -41,7 +41,7 @@ ms.lasthandoff: 08/03/2017
 5.  按一下 [確定] 接受變更，並關閉 [資料夾屬性] 對話方塊。  
   
 ## <a name="see-also"></a>另請參閱  
- [Integration Services &#40;SSIS &#41;伺服器](https://msdn.microsoft.com/library/ms141134.aspx)   
+ [Integration Services &#40;SSIS &#41;伺服器](/sql-docs/docs/integration-services/integration-services-ssis-packages)   
  [catalog.grant_permission &#40;SSISDB 資料庫 &#41;](../../integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database.md)  
   
   

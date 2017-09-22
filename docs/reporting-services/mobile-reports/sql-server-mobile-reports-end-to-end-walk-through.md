@@ -15,11 +15,11 @@ caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: fc9ca2f7181dbda59726b9c38352c349bcf8a472
+ms.translationtype: MT
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 180690083e39317694190a89edc2b57fd9d4bbcf
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>SQL Server 行動報表： 端對端逐步解說
@@ -37,11 +37,11 @@ ms.lasthandoff: 08/09/2017
 ## <a name="before-we-start"></a>開始之前  
 若要跟著做，您會需要這些產品︰  
   
-* 若要建立資料來源和 KPI 並發佈資料集和行動報表，您需要存取 [!INCLUDE[ssRSCurrent_md](../../includes/ssrscurrent-md.md)] [的原生模式報表伺服器](https://msdn.microsoft.com/library/ms143711.aspx)。  
-* 若要 [建立共用資料集](#shared-dataset)，您需要 [安裝報表產生器](https://msdn.microsoft.com/library/ff519551.aspx)。  
+* 若要建立資料來源和 Kpi，並將資料集和行動報表發行，您需要存取 [！包含[ssRSCurrent_md](/sql-docs/docs/reporting-services/install-windows/install-reporting-services-native-mode-report-server)。  
+* 若要[建立共用資料集](/sql-docs/docs/reporting-services/install-windows/install-report-builder)。  
 * 若要建立行動報表， [請安裝 SQL Server 行動報表發行工具](http://go.microsoft.com/fwlink/?LinkId=717766)。  
 * [AdventureWorks 範例資料庫和指令碼](http://msftdbprodsamples.codeplex.com/)。  
-*  或者：World Wide Importers 範例資料庫，可從 [Microsoft SQL Server 範例](https://msdn.microsoft.com/library/mt748083.aspx) 頁面取得。
+*  OR: World Wide Importers 範例資料庫，可從[Microsoft SQL Server Samples](/sql-docs/docs/sample/microsoft-sql-server-samples)頁面。
 * 若要檢視結果︰ 
   *   [註冊 Power BI 服務](http://go.microsoft.com/fwlink/?LinkID=513879) ，並且
   *  [下載 Power BI 行動應用程式](https://powerbi.microsoft.com/en-us/documentation/powerbi-power-bi-apps-for-mobile-devices/) 到您的行動裝置：iOS、Android 手機或 Windows 10 裝置。  
@@ -49,7 +49,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="create-a-shared-data-source"></a>建立共用資料來源  
   
-您可以從 Reporting Services 支援的任何資料來源，為您的行動報表建立共用資料來源。 請參閱 [支援的資料來源清單](https://msdn.microsoft.com/library/ms159219.aspx)。  
+您可以從 Reporting Services 支援的任何資料來源，為您的行動報表建立共用資料來源。 請參閱[支援的資料來源清單](/sql-docs/docs/reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs)。  
   
 1. 從您[!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)]web 入口網站中，按一下**新增** > **資料來源**。  
   
@@ -66,11 +66,11 @@ ms.lasthandoff: 08/09/2017
   
    ![PBI_SSMRP_PortlDataSource](../../reporting-services/mobile-reports/media/pbi-ssmrp-portldatasource.png)  
   
-深入了解 [Reporting Services 中的共用資料來源](https://msdn.microsoft.com/library/ms155845.aspx)。  
+深入了解 [Reporting Services 中的共用資料來源](/sql-docs/docs/reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs)。  
    
 ## <a name="shared-dataset">建立共用資料集</a>  
   
-使用現有的 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] 用戶端工具 (例如 [!INCLUDE[ssBIDevStudioFull_md](../../includes/ssbidevstudiofull-md.md)]中的「報表設計師」) 建立共用資料集。  本逐步解說使用 [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]。 [安裝報表產生器](https://msdn.microsoft.com/library/ff519551.aspx)，或從您的入口網站啟動它。 您將建立三個資料集，分別針對：KPI 值、KPI 趨勢，以及 Reporting Services 行動報表 (含有更多欄位)。   
+使用現有的 [！包含[PRODUCT_NAME](/sql-docs/docs/reporting-services/install-windows/install-report-builder)，或從您的 web 入口網站啟動它。 您將建立三個資料集，分別針對：KPI 值、KPI 趨勢，以及 Reporting Services 行動報表 (含有更多欄位)。   
   
 1. 從您[!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)]web 入口網站中，按一下**新增** > **分頁報表**啟動[!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]。  
   

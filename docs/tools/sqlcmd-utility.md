@@ -31,10 +31,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 2be7d74bde1731e9b4312ec80eb8a9a75b0c4d70
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 49b2acefb625107a65ee8e88ae3f28fc6473851d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd 工用程式
@@ -115,7 +115,7 @@ sqlcmd
 ## <a name="command-line-options"></a>命令列選項  
  **登入相關選項**  
   **-A**  
- 記錄中，以利用專用的管理員連接 (DAC) 的 SQL Server。 這種連接可用以進行伺服器的疑難排解。 只有在支援 DAC 的伺服器電腦上才可進行。 如果無法使用 DAC， **sqlcmd** 會產生一則錯誤訊息，並結束作業。 如需有關 DAC 的詳細資訊，請參閱[資料庫管理員的診斷連線](../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)。 -A 選項不支援使用-G 選項。 當連接到 SQL Database 使用-A，您必須是 SQL server 系統管理員。 DAC 不是 Azure Active Directory 系統管理員的了。
+ 記錄中，以利用專用的管理員連接 (DAC) 的 SQL Server。 這種連接可用以進行伺服器的疑難排解。 只有在支援 DAC 的伺服器電腦上才可進行。 如果無法使用 DAC， **sqlcmd** 會產生一則錯誤訊息，並結束作業。 如需有關 DAC 的詳細資訊，請參閱 [資料庫管理員的診斷連線](../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)。 -A 選項不支援使用-G 選項。 當連接到 SQL Database 使用-A，您必須是 SQL server 系統管理員。 DAC 不是 Azure Active Directory 系統管理員的了。
   
  **-C**  
  這個參數由用戶端所設定，以隱含方式信任伺服器憑證而且不進行驗證。 這個選項相當於 ADO.NET 選項 `TRUSTSERVERCERTIFICATE = true`。  
@@ -177,10 +177,10 @@ sqlcmd
 **-j** ：將原始錯誤訊息列印至畫面。
   
  **-K** *application_intent*  
- 宣告連接到伺服器時的應用程式工作負載類型。 目前唯一支援的值是 **ReadOnly**。 若未指定 **-K** ，sqlcmd 公用程式將無法支援在 AlwaysOn 可用性群組中連接至次要複本。 如需詳細資訊，請參閱 [使用中次要：可讀取的次要複本 (AlwaysOn 可用性群組)](https://msdn.microsoft.com/library/ff878253.aspx)  
+ 宣告連接到伺服器時的應用程式工作負載類型。 目前唯一支援的值是 **ReadOnly**。 若未指定 **-K** ，sqlcmd 公用程式將無法支援在 AlwaysOn 可用性群組中連接至次要複本。 如需詳細資訊，請參閱[使用中次要：可讀取的次要複本 (AlwaysOn 可用性群組)](/sql-docs/docs/database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups)  
   
  **-M** *multisubnet_failover*  
- 請務必指定**-M**連接到 SQL Server 可用性群組或 SQL Server 容錯移轉叢集執行個體的可用性群組接聽程式時。 **-M** 可提供對 (目前) 作用中伺服器更快速的偵測與連接。 如果未指定 **–M**，則會關閉 **-M**。 如需 [!INCLUDE[ssHADR](../includes/sshadr-md.md)] 的詳細資訊，請參閱[可用性群組接聽程式、用戶端連接及應用程式容錯移轉 (SQL Server)](https://msdn.microsoft.com/library/hh213417.aspx)、[建立及設定可用性群組 &#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)、＜容錯移轉叢集和 AlwaysOn 可用性群組 (SQL Server)＞(https://msdn.microsoft.comlibrary/ff929171.aspx) 和＜使用中次要：可讀取的次要複本 (AlwaysOn 可用性群組)＞(https://msdn.microsoft.com/library/ff878253.aspx)。  
+ 請務必指定**-M**連接到 SQL Server 可用性群組或 SQL Server 容錯移轉叢集執行個體的可用性群組接聽程式時。 **-M** 可提供對 (目前) 作用中伺服器更快速的偵測與連接。 如果未指定 **–M** ，則會關閉 **-M** 。 如需詳細資訊 [！包含[Hadr](/sql-docs/docs/database-engine/availability-groups/windows/listeners-client-connectivity-application-failover)，[建立和設定可用性群組 &#40;SQL Server &#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)，[容錯移轉叢集和 Alwayson 可用性群組 (SQL Server)] (https://msdn.microsoft.comlibrary/ff929171.aspx，和 [使用中次要： 可讀取的次要複本 (Alwayson 可用性群組）](https://msdn.microsoft.com/library/ff878253.aspx.  
   
  **-N**  
  用戶端會用這個參數要求加密的連接。  
@@ -215,11 +215,11 @@ sqlcmd
  **-S** [*protocol*:]*server*[**\\***instance_name*][**,***port*]  
  指定要連接 SQL Server 執行的個體。 它會設定 **sqlcmd** 指令碼變數 SQLCMDSERVER。  
   
- 指定*server_name*連接到 SQL Server 的預設執行個體，該伺服器電腦上。 指定*server_name* [  **\\**  *instance_name* ] 連接到該伺服器電腦上的 SQL Server 的具名執行個體。 如果未不指定任何伺服器電腦，則**sqlcmd**會連接到本機電腦上的 SQL Server 預設執行個體。 當您從網路的遠端電腦執行 **sqlcmd** 時，需要這個選項。  
+ 指定*server_name*連接到 SQL Server 的預設執行個體，該伺服器電腦上。 指定*server_name* [ ** \\ ** *instance_name* ] 連接到該伺服器電腦上的 SQL Server 的具名執行個體。 如果未不指定任何伺服器電腦，則**sqlcmd**會連接到本機電腦上的 SQL Server 預設執行個體。 當您從網路的遠端電腦執行 **sqlcmd** 時，需要這個選項。  
   
  *protocol* 可以是 **tcp** (TCP/IP)、 **lpc** (共用記憶體) 或 **np** (具名管道)。  
   
- 如果您未指定*server_name* [  **\\**  *instance_name* ] 啟動時**sqlcmd**，檢查是否有 SQL Server，並使用 SQLCMDSERVER 環境變數。  
+ 如果您未指定*server_name* [ ** \\ ** *instance_name* ] 啟動時**sqlcmd**，檢查是否有 SQL Server，並使用 SQLCMDSERVER 環境變數。  
   
 > [!NOTE]  
 >  保留 OSQLSERVER 環境變數的目的是為了與舊版相容。 SQLCMDSERVER 環境變數優先於 OSQLSERVER 環境變數；這表示您可以先後使用 **sqlcmd** 和 **osql** ，它們不會互相干擾，舊的指令碼仍能運作。  
@@ -273,7 +273,7 @@ sqlcmd
   
  包含空格的檔案路徑必須用引號括住。  
   
- 這個選項可以使用一次以上：**-i***input_file* **-I***I input_file*。  
+ 這個選項可以使用一次以上： **-i***input_file* **-I***I input_file*。  
   
  **-o** *output_file*  
  識別用來接收 **sqlcmd**輸出的檔案。  
@@ -336,7 +336,7 @@ sqlcmd
  如果使用此選項時指定 **-b** ， **sqlcmd** 會發生錯誤，並結束作業。 本主題稍後將說明**-b** 。  
   
  **-t** *query_timeout*  
- 指定命令 (或 SQL 陳述式) 逾時之前的秒數。 這個選項會設定 **sqlcmd** 指令碼變數 SQLCMDSTATTIMEOUT。 如果未指定 *time_out* 值，命令不會逾時。 *query**time_out* 必須是介於 1 與 65534 之間的數字。 如果所提供的值不是數值或不在該範圍內， **sqlcmd** 就會產生錯誤訊息。  
+ 指定命令 (或 SQL 陳述式) 逾時之前的秒數。這個選項會設定 **sqlcmd** 指令碼變數 SQLCMDSTATTIMEOUT。 如果未指定 *time_out* 值，命令不會逾時。*query**time_out* 必須是介於 1 與 65534 之間的數字。 如果所提供的值不是數值或不在該範圍內， **sqlcmd** 就會產生錯誤訊息。  
   
 > [!NOTE]  
 >  實際逾時值可能與指定的 *time_out* 值之間有幾秒的差異。  
@@ -685,7 +685,7 @@ sqlcmd
   
  **其他命令**  
   **:r \<** *filename***>**  
- 剖析其他 TRANSACT-SQL 陳述式和**sqlcmd**命令所指定的檔案從 **\<**  *filename***>**到陳述式快取。  
+ 剖析其他 TRANSACT-SQL 陳述式和**sqlcmd**命令所指定的檔案從** \< ** *filename***>**到陳述式快取。  
   
  如果該檔案包含 TRANSACT-SQL 陳述式未緊接著**移**，您必須輸入**移**後面的那一行上**: r**。  
   

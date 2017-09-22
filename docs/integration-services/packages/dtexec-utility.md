@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 0f9706a6faa2743091db5f65853a173a7215aaf7
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: f76aa1cfbcad38e383abca8a79005b3851767e2a
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="dtexec-utility"></a>dtexec 公用程式
@@ -51,7 +51,7 @@ ms.lasthandoff: 08/03/2017
 -   [範例](#example)  
   
 ##  <a name="server"></a> Integration Services 伺服器及專案檔案  
- 當您使用 **dtexec** 執行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器上的封裝時，**dtexec** 會呼叫 [catalog.create_execution &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md)、[catalog.set_execution_parameter_value &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md) 和 [catalog.start_execution &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md) 預存程序來建立執行、 設定參數值以及啟動執行。 所有執行記錄都可以從伺服器的相關檢視中查看，或透過 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中提供的標準報表查看。 如需報表的詳細資訊，請參閱 [Integration Services 伺服器的報表 ](../../integration-services/performance/monitor-running-packages-and-other-operations.md#reports)。  
+ 當您使用 **dtexec** 執行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器上的封裝時，**dtexec** 會呼叫 [catalog.create_execution &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md)、[catalog.set_execution_parameter_value &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md) 和 [catalog.start_execution &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md) 預存程序來建立執行、 設定參數值以及啟動執行。 所有執行記錄都可以從伺服器的相關檢視中查看，或透過 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中提供的標準報表查看。 如需報表的詳細資訊，請參閱 [Integration Services 伺服器的報表](../../integration-services/performance/monitor-running-packages-and-other-operations.md#reports)。  
   
  以下是執行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器上的封裝範例。  
   
@@ -105,7 +105,7 @@ DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /
   
  封裝執行期間， **dtexec** 可能會傳回結束碼。 結束碼可用來擴展 ERRORLEVEL 變數，讓您可以在批次檔內的條件陳述式或分支邏輯中測試此變數的值。 下表列出 **dtexec** 公用程式結束時所能設定的值。  
   
-|Value|설명|  
+|Value|描述|  
 |-----------|-----------------|  
 |0|順利執行封裝。|  
 |1|封裝失敗。|  
@@ -179,7 +179,7 @@ dtexec /option [value] [/option [value]]...
   
 -   **/Cons[oleLog]** [[*displayoptions*];[*list_options*;*src_name_or_guid*]...]：(選擇性)。 在執行封裝期間，於主控台中顯示指定的記錄項目。 如果省略了這個選項，主控台便不會顯示任何記錄項目。 如果指定了這個選項，但未設定用來限制顯示的參數，就會顯示每個記錄項目。 若要限制主控台顯示的項目，您可以使用 *displayoptions* 參數指定要顯示的資料行，以及使用 *list_options* 參數來限制記錄項目類型。  
   
-    > **注意：**  當您使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] /ISSERVER **參數在** 伺服器上執行套件時，主控台輸出會有所限制，且大部分的 **/Cons[oleLog]** 選項皆不適用。 所有執行記錄都可以從伺服器的相關檢視中查看，或透過 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中提供的標準報表查看。 如需報表的詳細資訊，請參閱 [Integration Services 伺服器的報表 ](../../integration-services/performance/monitor-running-packages-and-other-operations.md#reports)。  
+    > **注意：**  當您使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] /ISSERVER **參數在** 伺服器上執行套件時，主控台輸出會有所限制，且大部分的 **/Cons[oleLog]** 選項皆不適用。 所有執行記錄都可以從伺服器的相關檢視中查看，或透過 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中提供的標準報表查看。 如需報表的詳細資訊，請參閱 [Integration Services 伺服器的報表](../../integration-services/performance/monitor-running-packages-and-other-operations.md#reports)。  
   
      *displayoptions* 值如下：  
   
@@ -217,7 +217,7 @@ dtexec /option [value] [/option [value]]...
   
      如需 **/ConsoleLog** 選項的若干範例，請參閱＜ **備註** ＞一節。  
   
--   **/D[ts]** *package_path*：(選擇性)。 從 SSIS 封裝存放區中載入封裝。 儲存在 SSIS 封裝存放區中的封裝是使用舊版封裝部署模型所部署。 若要使用專案部署模型，執行部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器的封裝，請使用 **/ISServer** 選項。 如需有關封裝和專案部署模型的詳細資訊，請參閱＜ [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx)＞。  
+-   * * /D[ts](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages)。  
   
      *package_path* 引數指定 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝的相對路徑，從 SSIS 封裝存放區的根目錄開始，並包括 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝的名稱。 如果 *package_path* 引數中指定的路徑或檔案名稱包含空格，必須將 *package_path* 引數括以引號。  
   
@@ -263,7 +263,7 @@ dtexec /option [value] [/option [value]]...
   
      此參數是由 SQL Server Agent 所使用。  
   
--   **/F[ile]** *filespec*：(選擇性)。 載入儲存在檔案系統中的封裝。 儲存在檔案系統中的封裝是使用舊版封裝部署模型所部署。 若要使用專案部署模型，執行部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器的封裝，請使用 **/ISServer** 選項。 如需封裝和專案部署模型的詳細資訊，請參閱＜ [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx)＞。  
+-   * * /F[ile](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages)  
   
      *filespec* 引數指定封裝的路徑和檔案名稱。 您可以指定路徑為通用命名慣例 (UNC) 路徑或本機路徑。 如果 *filespec* 引數中指定的路徑或檔案名稱包含空格，必須將 *filespec* 引數括以引號。  
   
@@ -297,13 +297,13 @@ dtexec /option [value] [/option [value]]...
   
         -   ClassID: {59B2C6A5-663F-4C20-8863-C83F9B72E2EB}  
   
-    -   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]：  
+    -   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]:  
   
         -   ProgID: DTS.LogProviderSQLProfiler.1  
   
         -   ClassID: {5C0B8D21-E9AA-462E-BA34-30FF5F7A42A1}  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]：  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
         -   ProgID: DTS.LogProviderSQLServer.1  
   
@@ -413,7 +413,7 @@ dtexec /option [value] [/option [value]]...
   
      指定 **/ISServer** 選項時，需要 **/Ser[ver]** 選項。  
   
--   **/SQ[L]** *package_path*：載入儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]msdb **資料庫之** 中的封裝。 儲存在 **msdb** 資料庫中的封裝是使用封裝部署模型所部署。 若要使用專案部署模型，執行部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器的封裝，請使用 **/ISServer** 選項。 如需有關封裝和專案部署模型的詳細資訊，請參閱＜ [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx)＞。  
+-   * * /SQ[L](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages)。  
   
      *package_path* 引數指定要擷取的封裝名稱。 如果路徑包含資料夾，則其結尾應為反斜線 ("\\")。 *Package_path* 值可以加上引號。 如果 *package_path* 引數中指定的路徑或檔案名稱包含空格，必須將 *package_path* 引數括以引號。  
   

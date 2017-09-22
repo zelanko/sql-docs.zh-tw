@@ -15,10 +15,10 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 572af6f86f015c88141bb6e78b781b5825be155c
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: eb98483d6237f2db2fdb0cb9aa444dd938a431f0
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="what39s-new-in-sql-server-2017-analysis-services"></a>什麼 &#39; 的新功能 SQL Server 2017 Analysis Services
@@ -185,7 +185,7 @@ EVALUATE DETAILROWS([Internet Total Sales])
 ```
 
 ## <a name="dax-enhancements"></a>DAX 增強功能
-此版本包含 DAX 運算式的 `IN` 運算子。 這類似於 [`TSQL IN`](https://msdn.microsoft.com/library/ms177682.aspx) 子句中常用來指定多個值的 `WHERE` 運算子。
+此版本包含 DAX 運算式的 `IN` 運算子。 這類似於 `WHERE` 子句中常用來指定多個值的 [`TSQL IN`](/sql-docs/docs/t-sql/language-elements/in-transact-sql) 運算子。
 
 過去通常使用邏輯 `OR` 運算子指定多重值的篩選條件，如下列量值運算式中所示︰
 

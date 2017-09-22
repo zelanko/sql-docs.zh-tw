@@ -20,21 +20,21 @@ caps.latest.revision: 67
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 7cd0ab1950eeaf54da67e7f8dd5bb2da89a26307
+ms.translationtype: MT
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: f20330dab55ad3670f6d30037cb6b1962dd5c02c
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 
 # <a name="create-a-basic-table-report-ssrs-tutorial"></a>建立基本資料表報表 (SSRS 教學課程)
 
-在本教學課程中，您使用報表設計師在 SQL Server Data Tools 中建立基本[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)]分頁報表使用的資料表，根據 **[!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)]** 資料庫。 您也可以建立[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)]分頁報表使用報表產生器。 
+在本教學課程中，您使用報表設計師在 SQL Server Data Tools 中建立基本[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)]分頁報表使用的資料表，根據** [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] **資料庫。 您也可以建立[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)]分頁報表使用報表產生器。 
 
 當您瀏覽本教學課程，您將建立報表專案、 設定連接資訊、 定義查詢、 加入資料表資料區域、 群組和加總某些欄位，和預覽報表。  
   
-## <a name="requirements"></a>요구 사항  
+## <a name="requirements"></a>需求  
 您的系統必須已經安裝下列項目，才能使用這個教學課程：  
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)]SQL Server database engine。  
@@ -43,7 +43,7 @@ ms.lasthandoff: 08/09/2017
   
 -   [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] 資料庫。  如需詳細資訊，請參閱 [Adventure Works 2014 Sample Databases](https://msftdbprodsamples.codeplex.com/releases/view/125550)(Adventure Works 2014 範例資料庫)。  
   
- -   已安裝 "SQL Server Reporting Services" 元件的[SQL Server Data Tools](https://msdn.microsoft.com/library/mt204009.aspx) ，以便擁有 [報表設計師]。    
+ -   [SQL Server Data Tools](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt)與 「 SQL Server Reporting Services 」 元件安裝，因此您必須在報表設計工具。    
   
 另外，您也必須擁有從 [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] 資料庫擷取資料的唯讀權限。
 

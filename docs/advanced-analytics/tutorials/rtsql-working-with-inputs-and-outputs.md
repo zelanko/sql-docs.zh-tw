@@ -18,15 +18,15 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 81b5951a4f4a79d7d56fbf01af3fc1cef247510c
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 5cebde92184ac69093222d57eb91750fa13e369c
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="working-with-inputs-and-outputs-r-in-sql-quickstart"></a>使用輸入和輸出 (SQL 快速入門中的 R)
 
-當您想要在 SQL Server 中執行 R 程式碼時，您必須包裝 R 指令碼中的系統預存程序， [sp_execute_external_script](https://msdn.microsoft.com/library/mt604368.aspx)。 這個預存程序是用來在 SQL Server 內容中啟動 R 執行階段，這會將資料傳遞到 R，安全地管理 R 使用者工作階段，並將任何結果傳回用戶端。
+當您想要在 SQL Server 中執行 R 程式碼時，您必須包裝 R 指令碼中的系統預存程序， [sp_execute_external_script](/sql-docs/docs/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)。 這個預存程序是用來在 SQL Server 內容中啟動 R 執行階段，這會將資料傳遞到 R，安全地管理 R 使用者工作階段，並將任何結果傳回用戶端。
 
 ## <a name="bkmk_SSMSBasics"></a>建立一些簡單的測試資料
 
@@ -143,5 +143,5 @@ EXECUTE sp_execute_external_script
 
 您會檢查一些在 R 和 SQL Server 之間傳遞資料時可能會遇到的問題，例如隱含轉換，以及 R 和 SQL 之間的表格式資料差異。
 
-[R 與 SQL 資料類型和資料物件](../tutorials/rtsql-r-and-sql-data-types-and-data-objects.md)
+[R 與 SQL 資料類型及資料物件](../tutorials/rtsql-r-and-sql-data-types-and-data-objects.md)
 

@@ -27,10 +27,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 3cc307b473ce31150de8a970a6d44e46dcdc04c3
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 0ec83d1e567c44abba880716bbd700af2810be60
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="integration-services-service-ssis-service"></a>Integration Services 服務 (SSIS 服務)
@@ -71,7 +71,7 @@ ms.lasthandoff: 08/03/2017
  當安裝 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]元件時，也會安裝 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務。 根據預設， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務會啟動，而且服務的啟動類型會設為自動。 不過，您也必須安裝 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 才能使用此服務來管理已儲存和執行中的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝。  
   
 > [!NOTE]
-> 若要直接連接到舊版 Integration Services 服務的執行個體，您必須使用 SQL Server Management Studio (SSMS) 版本以及在其上執行 Integration Services 服務的 SQL Server 版本。 例如，若要連接到 SQL Server 2016 執行個體上執行的舊版 Integration Services 服務，您必須使用針對 SQL Server 2016 所發行的 SSMS 版本。 [下載 SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx)。
+> 若要直接連接到舊版 Integration Services 服務的執行個體，您必須使用 SQL Server Management Studio (SSMS) 版本以及在其上執行 Integration Services 服務的 SQL Server 版本。 例如，若要連接到 SQL Server 2016 執行個體上執行的舊版 Integration Services 服務，您必須使用針對 SQL Server 2016 所發行的 SSMS 版本。 [下載 SQL Server Management Studio (SSMS)](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms)。
 >
 >   在 SSMS [連接到伺服器] 對話方塊中，您無法輸入執行舊版 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務的伺服器名稱。 不過，若要管理儲存在遠端伺服器上的封裝，您不必連接到該遠端伺服器上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務執行個體。 而是要編輯 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務的組態檔，好讓 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 顯示儲存在遠端伺服器上的封裝。   
   
@@ -126,7 +126,7 @@ ms.lasthandoff: 08/03/2017
   
 4.  在 **[SQL Server Integration Services 屬性]** 對話方塊中，您可以執行下列動作：  
   
-    -   按一下 **[一般]** 索引標籤。 若要啟用服務，請選取手動或自動啟動類型。 若要停用服務，請在 **[啟動類型]** 方塊中選取 [停用]。 選取 [停用] 不會停止目前正在執行的服務。  
+    -   按一下 **[一般]** 索引標籤。若要啟用服務，請選取手動或自動啟動類型。 若要停用服務，請在 **[啟動類型]** 方塊中選取 [停用]。 選取 [停用] 不會停止目前正在執行的服務。  
   
          如果已啟用服務，則可以按一下 **[停止]** 停止服務，或按一下 **[啟動]** 啟動服務。  
   
@@ -278,7 +278,7 @@ ms.lasthandoff: 08/03/2017
  從 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 或其他管理應用程式連接到遠端伺服器上的 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 執行個體時，應用程式的使用者必須具備一組特定的伺服器權限。  
   
 > [!IMPORTANT]
-> 若要直接連接到舊版 Integration Services 服務的執行個體，您必須使用 SQL Server Management Studio (SSMS) 版本以及在其上執行 Integration Services 服務的 SQL Server 版本。 例如，若要連接到 SQL Server 2016 執行個體上執行的舊版 Integration Services 服務，您必須使用針對 SQL Server 2016 所發行的 SSMS 版本。 [下載 SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx).
+> 若要直接連接到舊版 Integration Services 服務的執行個體，您必須使用 SQL Server Management Studio (SSMS) 版本以及在其上執行 Integration Services 服務的 SQL Server 版本。 例如，若要連接到 SQL Server 2016 執行個體上執行的舊版 Integration Services 服務，您必須使用針對 SQL Server 2016 所發行的 SSMS 版本。 [下載 SQL Server Management Studio (SSMS)](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms).
 >
 >  若要管理儲存在遠端伺服器上的封裝，您不必連接到該遠端伺服器上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務執行個體， 而是要編輯 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務的組態檔，好讓 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 顯示儲存在遠端伺服器上的封裝。
   

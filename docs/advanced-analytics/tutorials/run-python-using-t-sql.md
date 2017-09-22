@@ -1,8 +1,8 @@
 ---
 title: "執行 Python 使用 T-SQL |Microsoft 文件"
 ms.custom: 
-ms.date: 07/31/2017
-ms.prod: sql-server-2016
+ms.date: 09/19/2017
+ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -18,10 +18,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c7ab513960d3e102725bde6762fcf4de117554db
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: f2eba50d5c5e57025462c46b38fc0ddbfc947ea0
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="run-python-using-t-sql"></a>執行 Python 使用 T-SQL
@@ -57,7 +57,7 @@ GO
 
 下列程式碼載入 Python 可執行檔、 將傳遞的輸入的資料，並針對每個輸入資料列，更新資料表中的日期名稱以數字代表一週的索引。
 
-記下參數的 *@RowsPerRead* 。 這個參數會指定傳遞至 Python 執行階段從 SQL Server 的資料列數目。
+記下參數的* @RowsPerRead *。 這個參數會指定傳遞至 Python 執行階段從 SQL Server 的資料列數目。
 
 Python 資料分析程式庫，又稱為**熊**，需要將資料傳遞至 SQL Server，以及包含根據預設，使用機器學習服務。
 
@@ -127,7 +127,7 @@ GO
 
 ## <a name="step-3-view-the-results"></a>步驟 3： 檢視結果
 
-預存程序傳回的原始資料、 適用於指令碼，然後傳回已修改的資料在**結果**Management Studio 或其他 SQL 查詢工具窗格。
+預存程序取得原始資料、 套用 Python 指令碼，然後傳回 中修改的資料**結果**Management Studio 或其他 SQL 查詢工具窗格。
 
 
 |DayOfWeek （之前）| Amount|DayOfWeek （之後） |
@@ -173,9 +173,11 @@ ParamINT=2
 ParamCharN=OUTPUT
 ```
 
-+ 訊息包括用來執行指令碼的工作目錄。 在此範例中，MSSQLSERVER01 是指 SQL Server 來管理工作所配置的背景工作帳戶。 GUID 是建立來儲存資料和指令碼的成品的指令碼執行期間的暫存資料夾的名稱。 這些暫存資料夾受保護的 SQL Server，而由 Windows 作業物件之後清除指令碼已終止。
++ **訊息**輸出包含指令碼執行時使用的工作目錄。 在此範例中，MSSQLSERVER01 是指 SQL Server 來管理工作所配置的背景工作帳戶。 
 
-+ 包含"Hello World"訊息區段會列印兩次。 這是因為值 *@RowsPerRead* 已設定為 5 並在資料表中有 10 個資料列; 因此，Python 的兩個呼叫會需要處理資料表中的所有資料列。
+    GUID 是建立來儲存資料和指令碼的成品的指令碼執行期間的暫存資料夾的名稱。 這些暫存資料夾受保護的 SQL Server，而由 Windows 作業物件之後清除指令碼已終止。
+
++ 包含"Hello World"訊息區段會列印兩次。 這是因為值* @RowsPerRead *已設定為 5 並在資料表中有 10 個資料列; 因此，Python 的兩個呼叫會需要處理資料表中的所有資料列。
 
     在實際執行時，我們建議您試驗不同的值，以判斷應該在每個批次中傳遞的資料列的數目上限。 最佳的資料列數目與相關資料，並受到集中的資料行數目和您要傳遞的資料類型。
 
@@ -189,4 +191,4 @@ ParamCharN=OUTPUT
 
 ## <a name="troubleshooting"></a>疑難排解
 
-如果找不到預存程序， `sp_execute_external_script`，這表示您可能尚未完成設定要支援外部執行階段的執行個體。 執行 SQL Server 2017 安裝程式並選取後 Python 和機器學習語言，您必須同時也可以明確啟用功能使用`sp_configure`，然後重新啟動執行個體。 如需詳細資訊，請參閱[安裝程式的機器學習服務使用 Python](../python/setup-python-machine-learning-services.md)。
+如果找不到預存程序， `sp_execute_external_script`，這表示您可能尚未完成設定要支援外部指令碼執行的執行個體。 執行 SQL Server 2017 安裝程式並選取後 Python 和機器學習語言，您必須同時也可以明確啟用功能使用`sp_configure`，然後重新啟動執行個體。 如需詳細資訊，請參閱[安裝程式的機器學習服務使用 Python](../python/setup-python-machine-learning-services.md)。

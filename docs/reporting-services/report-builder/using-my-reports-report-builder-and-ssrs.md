@@ -15,11 +15,11 @@ caps.latest.revision: 8
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f394a1ad055276cc7f0a6d28f923215dde8e437a
+ms.translationtype: MT
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 48a6c898c5381bb777863ed7569c6ac302560eb3
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="using-my-reports-report-builder-and-ssrs"></a>使用我的報表 (報表產生器及 SSRS)
@@ -27,9 +27,9 @@ ms.lasthandoff: 08/09/2017
   
  在概念上，[我的報表] 資料夾類似於 Windows 檔案系統的 [我的文件] 資料夾。 雖然每一位使用者都有稱為 [我的報表] 的資料夾，但每一位使用者存取的資料夾與其他人都不相同。 除了報表伺服器管理員之外，其他使用者都無法存取屬於您的 [我的報表] 資料夾的內容。  
   
- [我的報表] 功能是選擇性的，可以由報表伺服器管理員停用。 如果有啟用「我的報表」，您就會在 [主資料夾] 資料夾中看到 [我的報表] 資料夾，您可以使用報表管理員或 Web 瀏覽器來存取其內容。 如需詳細資訊，請參閱[在報表管理員中尋找及檢視報表 &#40;報表產生器及 SSRS&#41;](https://msdn.microsoft.com/library/dd255286.aspx)。  
+ [我的報表] 功能是選擇性的，可以由報表伺服器管理員停用。 如果有啟用「我的報表」，您就會在 [主資料夾] 資料夾中看到 [我的報表] 資料夾，您可以使用報表管理員或 Web 瀏覽器來存取其內容。 如需詳細資訊，請參閱[尋找及檢視報表在報表管理員 &#40;報表產生器及 SSRS &#41;](/sql-docs/docs/reporting-services/report-builder/finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs).  
   
- 在設定為 SharePoint 整合模式的報表伺服器上，[我的報表] 資料夾沒有任何對等項目。 如需詳細資訊，請參閱[尋找、檢視和管理報表 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)。  
+ 在設定為 SharePoint 整合模式的報表伺服器上，[我的報表] 資料夾沒有任何對等項目。 如需詳細資訊，請參閱 [尋找、檢視和管理報表 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -37,11 +37,11 @@ ms.lasthandoff: 08/09/2017
 ## <a name="ways-to-use-my-reports"></a>使用我的報表的方式  
  在您加入報表、資料夾和其他項目之前，[我的報表] 是空的。 以下是將內容加入至 [我的報表] 的一些方法。  
   
--   建立個人的連結報表，並將它儲存至 [我的報表]。 並非所有的報表都可以連結。 如需詳細資訊，請參閱[建立連結報表](../../reporting-services/reports/create-a-linked-report.md)。  
+-   建立個人的連結報表，並將它儲存至 [我的報表]。 並非所有的報表都可以連結。 如需詳細資訊，請參閱 [建立連結報表](../../reporting-services/reports/create-a-linked-report.md)。  
   
--   從檔案系統上傳報表定義檔 (.rdl)、報表模型檔 (.smdl) 或其他檔案。 您可以上傳任何檔案，但報表伺服器只會處理副檔名為 .rdl 或 .smdl 的報表檔案。 如需詳細資訊，請參閱《SQL Server 線上叢書》中 [Reporting Services 文件](http://go.microsoft.com/fwlink/?linkid=121312)的＜報表定義＞以及[上傳檔案或報表 &#40;報表管理員&#41;](../../reporting-services/reports/upload-a-file-or-report-report-manager.md)。  
+-   從檔案系統上傳報表定義檔 (.rdl)、報表模型檔 (.smdl) 或其他檔案。 您可以上傳任何檔案，但報表伺服器只會處理副檔名為 .rdl 或 .smdl 的報表檔案。 如需詳細資訊，請參閱報表定義 」 中[Reporting Services 文件](http://go.microsoft.com/fwlink/?linkid=121312)SQL Server 線上叢書 》 和[上傳檔案或報表 &#40;報表管理員 &#41;](../../reporting-services/reports/upload-a-file-or-report-report-manager.md).  
   
--   建立並發行自己的報表至 [我的報表]。 如需詳細資訊，請參閱[報表設計檢視 &#40;報表產生器&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)。  
+-   建立並發行自己的報表至 [我的報表]。 如需詳細資訊，請參閱[報表設計檢視 &#40;報表產生器 &#41;](../../reporting-services/report-builder/report-design-view-report-builder.md).  
   
  通常 [我的報表] 的權限設定，可以讓您自行管理此資料夾。 不過，報表伺服器管理員才是最終決定使用者可執行哪些工作的人。 如果因權限不足而無法使用 [我的報表]，請洽詢報表伺服器管理員。  
   
@@ -49,6 +49,6 @@ ms.lasthandoff: 08/09/2017
  在搜尋報表伺服器資料庫時，[我的報表] 資料夾的內容將包含在搜尋中，但是會排除其他使用者的 [我的報表] 資料夾的內容。 搜尋結果清單只會包含您有權存取的報表。  
   
 ## <a name="see-also"></a>請參閱＜  
- [尋找、 檢視和管理報表 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
+ [尋找、檢視和管理報表 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

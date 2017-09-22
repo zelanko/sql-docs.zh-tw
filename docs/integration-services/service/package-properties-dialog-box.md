@@ -18,16 +18,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2269955b34d8077a56c83044bf12c262be166aa8
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 07d44a56b531bc2e933480559a2f6d3d2457578e
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="package-properties-dialog-box"></a>封裝屬性對話方塊
   使用 [封裝屬性] 對話方塊，檢視儲存在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器上之封裝的屬性。  
   
- 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 伺服器](https://msdn.microsoft.com/library/ms141134.aspx)。  
+ 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 伺服器](/sql-docs/docs/integration-services/integration-services-ssis-packages)。  
   
  **您想要做什麼事？**  
   

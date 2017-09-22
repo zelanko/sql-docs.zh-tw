@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 9dab69c7-73af-4340-aef0-de057356b791
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: d7317cad5aa1e77653431c128ce1549bc4349e18
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 736b7e0744a95d859bd25a6c7974dc13e79d4bb7
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="extract-transform-and-load-data-on-linux-with-ssis"></a>擷取、 轉換和載入與 SSIS Linux 上的資料
@@ -26,7 +26,7 @@ ms.lasthandoff: 08/02/2017
 
 您可以使用 SSIS 在 Linux 上執行封裝時，您也可以建立和維護封裝的 Windows 電腦。 SSIS 設計和管理工具是 Windows 應用程式。 
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>必要條件
 
 若要在 Linux 電腦上執行 SSIS 封裝，您需要先安裝 SQL Server Integration Services。 如需安裝指示，請參閱[安裝 SQL Server Integration Services](sql-server-linux-setup-ssis.md)。
 
@@ -79,10 +79,10 @@ SSIS 包含下列功能：
 - 各種不同的轉換清除、 彙總、 合併和複製資料
 - 應用程式開發介面 (Api)，與您自己的自訂指令碼元件擴充 SSIS
 
-若要開始使用 SSIS，下載最新版[SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)。 然後依照本教學課程[方式來建立 ETL 封裝的 SSIS](https://msdn.microsoft.com/en-us/library/ms169917.aspx)。
+若要開始使用 SSIS，下載最新版[SQL Server Data Tools (SSDT)](/sql-docs/docs/integration-services/ssis-how-to-create-an-etl-package)。
 
 ## <a name="see-also"></a>另請參閱
-- [深入了解 SQL Server Integration Services](https://msdn.microsoft.com/en-us/library/ms141026.aspx)
-- [SQL Server Integration Services (SSIS) 開發和管理工具](https://msdn.microsoft.com/en-us/library/ms140028.aspx)
-- [SQL Server Integration Services 教學課程](https://msdn.microsoft.com/en-us/library/jj720568.aspx)
+- [深入了解 SQL Server Integration Services](/sql-docs/docs/integration-services/sql-server-integration-services)
+- [SQL Server Integration Services (SSIS) 開發和管理工具](/sql-docs/docs/integration-services/integration-services-ssis-development-and-management-tools)
+- [SQL Server Integration Services 教學課程](/sql-docs/docs/integration-services/integration-services-tutorials)
 

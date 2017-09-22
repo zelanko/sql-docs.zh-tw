@@ -15,18 +15,18 @@ ms.author: v-chojas
 manager: jhubbard
 author: MightyPen
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e02c46bc1e068d75d9a67413f45b303616ccd82b
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 2d0ac1f1a8e9a78539a2c7824f06d3ed3507c0b5
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-131-for-sql-server"></a>搭配使用一律加密 with the ODBC Driver 13.1 for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
 
-本文提供有關如何開發使用 ODBC 應用程式資訊[一律加密 (Database Engine)](https://msdn.microsoft.com/library/mt163865.aspx)和[ODBC Driver 13.1 for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md)。
+本文提供有關如何開發使用 ODBC 應用程式資訊[一律加密 (Database Engine)](/sql-docs/docs/relational-databases/security/encryption/always-encrypted-database-engine)和[ODBC Driver 13.1 for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md)。
 
-[永遠加密] 可讓用戶端應用程式加密敏感性資料，且永遠不會顯示資料或 SQL Server 或 Azure SQL Database 的加密金鑰。 啟用 永遠加密驅動程式，例如 SQL server ODBC Driver 13.1 的做法是明確地加密和解密用戶端應用程式中的機密資料。 驅動程式會自動判斷哪一個查詢參數對應至敏感性資料庫資料行 (使用 [永遠加密] 保護)，然後加密這些參數值後再將資料傳遞至 SQL Server 或 Azure SQL Database。 同樣地，驅動程式會以清晰簡明的方式，將擷取自查詢結果的加密資料庫資料行資料進行解密。 如需詳細資訊，請參閱 [一律加密 (Database Engine)](https://msdn.microsoft.com/library/mt163865.aspx)。
+[永遠加密] 可讓用戶端應用程式加密敏感性資料，且永遠不會顯示資料或 SQL Server 或 Azure SQL Database 的加密金鑰。 啟用 永遠加密驅動程式，例如 SQL server ODBC Driver 13.1 的做法是明確地加密和解密用戶端應用程式中的機密資料。 驅動程式會自動判斷哪一個查詢參數對應至敏感性資料庫資料行 (使用 [永遠加密] 保護)，然後加密這些參數值後再將資料傳遞至 SQL Server 或 Azure SQL Database。 同樣地，驅動程式會以清晰簡明的方式，將擷取自查詢結果的加密資料庫資料行資料進行解密。 如需詳細資訊，請參閱 [一律加密 (Database Engine)](/sql-docs/docs/relational-databases/security/encryption/always-encrypted-database-engine)。
 
 ### <a name="prerequisites"></a>必要條件
 
@@ -240,7 +240,7 @@ while (SQL_SUCCEEDED(SQLFetch(hstmt)))
 
 ##### <a name="unsupported-data-type-conversion-errors"></a>不支援的資料類型轉換錯誤
 
-[永遠加密] 支援極少數的加密資料類型轉換。 請參閱[一律加密 (Database Engine)](https://msdn.microsoft.com/library/mt163865.aspx)支援的類型轉換詳細清單。 若要避免資料類型轉換錯誤，請確定使用 SQLBindParameter 具有加密的資料行為目標的參數時，觀察下列各點：
+[永遠加密] 支援極少數的加密資料類型轉換。 請參閱[一律加密 (Database Engine)](/sql-docs/docs/relational-databases/security/encryption/always-encrypted-database-engine)支援的類型轉換詳細清單。 若要避免資料類型轉換錯誤，請確定使用 SQLBindParameter 具有加密的資料行為目標的參數時，觀察下列各點：
 
 - 參數的 SQL 型別也可以完全相同的目標資料行中，類型或支援從 SQL 類型轉換成資料行的類型。
 
@@ -284,7 +284,7 @@ string queryText = "SELECT [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo
 
 ### <a name="controlling-round-trips-to-retrieve-metadata-for-query-parameters"></a>控制反覆存取以擷取中繼資料的查詢參數
 
-如果連接啟用一律加密時，ODBC Driver 13.1 根據預設，SQL Server 將呼叫[sys.sp_describe_parameter_encryption](https://msdn.microsoft.com/library/mt631693.aspx)每個參數化查詢，將傳遞查詢陳述式 （不含任何參數SQL server 數值）。 這個預存程序會分析查詢陳述式，以找出，如果任何參數需要加密，而且如果是，傳回每個參數，以允許驅動程式才能將其加密的加密相關資訊。 上述行為可確保高透明度，用戶端應用程式： 應用程式 （及應用程式開發人員） 不需要留意哪些查詢存取加密資料行，只要以加密的資料行為目標的值會傳遞至參數中的驅動程式。
+如果連接啟用一律加密時，ODBC Driver 13.1 根據預設，SQL Server 將呼叫[sys.sp_describe_parameter_encryption](/sql-docs/docs/relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql)每個參數化查詢，將傳遞查詢陳述式 （不含任何參數SQL server 數值）。 這個預存程序會分析查詢陳述式，以找出，如果任何參數需要加密，而且如果是，傳回每個參數，以允許驅動程式才能將其加密的加密相關資訊。 上述行為可確保高透明度，用戶端應用程式： 應用程式 （及應用程式開發人員） 不需要留意哪些查詢存取加密資料行，只要以加密的資料行為目標的值會傳遞至參數中的驅動程式。
 
 ### <a name="per-statement-always-encrypted-behavior"></a>每個陳述式永遠加密行為
 
@@ -344,7 +344,7 @@ SQLSetDescField(ipd, paramNum, SQL_CA_SS_FORCE_ENCRYPT, (SQLPOINTER)TRUE, SQL_IS
 |Azure 金鑰保存庫 |在 Azure 金鑰保存庫中儲存 Cmk | `AZURE_KEY_VAULT` |Windows、 Linux macOS|
 |Windows 憑證存放區|本機儲存在 Windows 的金鑰存放區的 Cmk| `MSSQL_CERTIFICATE_STORE`|Windows|
 
-- 您 （或您的 DBA） 需要確定提供者名稱，在資料行主要金鑰中繼資料中，設定正確，而且資料行主要金鑰路徑符合指定的提供者的金鑰路徑格式。 建議您使用 SQL Server Management Studio 等工具設定金鑰，這樣在發出 [CREATE COLUMN MASTER KEY (Transact-SQL)](https://msdn.microsoft.com/library/mt146393.aspx) 陳述式時，會自動產生有效的提供者名稱和金鑰路徑。
+- 您 （或您的 DBA） 需要確定提供者名稱，在資料行主要金鑰中繼資料中，設定正確，而且資料行主要金鑰路徑符合指定的提供者的金鑰路徑格式。 建議您使用 SQL Server Management Studio 等工具設定金鑰，這樣在發出 [CREATE COLUMN MASTER KEY (Transact-SQL)](/sql-docs/docs/t-sql/statements/create-column-master-key-transact-sql) 陳述式時，會自動產生有效的提供者名稱和金鑰路徑。
 
 - 您必須確定您的應用程式可以存取該金鑰在金鑰存放區。 這可能會授與您的應用程式存取金鑰和/或金鑰存放區根據金鑰存放區，或執行其他的金鑰存放區特有的組態步驟。 例如，若要存取 Azure 金鑰保存庫，您需要提供正確的憑證金鑰存放區。
 
@@ -514,10 +514,10 @@ SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 ## <a name="limitations-of-the-odbc-driver-when-using-always-encrypted"></a>使用永遠加密時的 ODBC 驅動程式的限制
 
 ### <a name="bulk-copy-function-usage"></a>大量複製函數使用方式
-使用[SQL 大量複製函數](https://msdn.microsoft.com/library/ms130792.aspx)永遠加密時，使用 ODBC 驅動程式時，不支援。 不透明的加密/解密會在 SQL 大量複製函數所使用的加密資料行上進行。
+使用[SQL 大量複製函數](/sql-docs/docs/relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc)永遠加密時，使用 ODBC 驅動程式時，不支援。 不透明的加密/解密會在 SQL 大量複製函數所使用的加密資料行上進行。
 
 ### <a name="asynchronous-operations"></a>非同步作業
-當 ODBC 驅動程式將會允許使用[非同步作業](https://msdn.microsoft.com/library/ms131658.aspx)透過永遠加密，效能造成影響的作業時沒有啟用 永遠加密。 若要呼叫`sys.sp_describe_parameter_encryption`為決定加密中繼資料會封鎖陳述式，並會導致驅動程式等候伺服器傳回中繼資料，再傳回`SQL_STILL_EXECUTING`。
+當 ODBC 驅動程式將會允許使用[非同步作業](/sql-docs/docs/relational-databases/native-client/odbc/creating-a-driver-application-asynchronous-mode-and-sqlcancel)透過永遠加密，效能造成影響的作業時沒有啟用 永遠加密。 若要呼叫`sys.sp_describe_parameter_encryption`為決定加密中繼資料會封鎖陳述式，並會導致驅動程式等候伺服器傳回中繼資料，再傳回`SQL_STILL_EXECUTING`。
 
 ## <a name="always-encrypted-api-summary"></a>一律加密 API 摘要
 
@@ -552,7 +552,7 @@ SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 
 ## <a name="see-also"></a>另請參閱
 
-- [一律加密 (Database Engine)](https://msdn.microsoft.com/library/mt163865.aspx)
+- [一律加密 (Database Engine)](/sql-docs/docs/relational-databases/security/encryption/always-encrypted-database-engine)
 - [永遠加密部落格](http://blogs.msdn.com/b/sqlsecurity/archive/tags/always-encrypted/)
 
 

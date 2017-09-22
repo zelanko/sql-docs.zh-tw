@@ -21,10 +21,10 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: b5706abc4f362ee3bd4f042c1e081951dcd9ad1d
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 46bb863944694292395b50621acaf87259a3260b
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 
@@ -126,7 +126,7 @@ ms.lasthandoff: 08/17/2017
   
     2.  升級到新版本的報表伺服器組態工具和公用程式包括原生模式 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具、命令列公用程式 (例如 RS.exe) 和報表產生器。  
   
-    3.  其他用戶端工具，如 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，要另行下載且需要個別升級。 如需詳細資訊，請參閱 [Download SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx)(下載 SQL Server Management Studio (SSMS))。
+    3.  其他用戶端工具，例如 [！包含[s](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms)。
   
     4.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 是不同的下載。 如需詳細資訊，請參閱 [SQL Server Data Tools in Visual Studio 2015](https://msdn.microsoft.com/mt186501)(Visual Studio 中的 SQL Server Data Tools)。  
   

@@ -15,11 +15,11 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: aef6ef0fe1f32f015abe3b48177f6e4d3e45648d
+ms.translationtype: MT
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: c13295c229dc4450b9661c25f86d7eacf669787d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="change-row-height-or-column-width-report-builder-and-ssrs"></a>變更資料列高度或資料行寬度 (報表產生器及 SSRS)
@@ -56,10 +56,10 @@ ms.lasthandoff: 08/09/2017
   
 2.  按一下資料列控制代碼，即可選取此資料列。  
   
-3.  在 [屬性] 窗格中，將 CanGrow 設為 [False]。  
+3.  在 [屬性] 窗格中，設定為 CanGrow **False**。  
   
     > [!NOTE]  
-    >  如果您看不到 [屬性] 窗格，請按一下 [檢視] 功能表上的 [屬性]。  
+    >  如果您看不到 [屬性] 窗格，請按一下 **[檢視]** 功能表上的 **[屬性]**。  
   
 ### <a name="to-change-column-width"></a>若要變更資料行寬度  
   
@@ -70,11 +70,11 @@ ms.lasthandoff: 08/09/2017
 3.  按一下以抓取資料行的邊緣，然後向左或向右移動，以便調整資料行寬度。  
   
 ## <a name="see-also"></a>另請參閱  
- [Tablix 資料區 (報表產生器及 SSRS)](https://msdn.microsoft.com/library/dd220587.aspx)   
- [Tablix 資料區域資料格、 列和資料行 （報表產生器） 和 SSRS](https://msdn.microsoft.com/library/dd220511.aspx)   
+ [Tablix 資料區域 （報表產生器及 SSRS）](/sql-docs/docs/reporting-services/report-design/tablix-data-region-report-builder-and-ssrs)   
+ [Tablix 資料區域資料格、 列和資料行 （報表產生器） 和 SSRS](/sql-docs/docs/reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs)   
  [資料表 （報表產生器及 SSRS）](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
- [矩陣 （報表產生器及 SSRS）](https://msdn.microsoft.com/library/dd207149.aspx)   
- [清單 （報表產生器及 SSRS）](https://msdn.microsoft.com/library/dd239330.aspx)   
+ [矩陣 （報表產生器及 SSRS）](/sql-docs/docs/reporting-services/report-design/create-a-matrix-report-builder-and-ssrs)   
+ [清單 （報表產生器及 SSRS）](/sql-docs/docs/reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs)   
  [資料表、 矩陣和清單 （報表產生器及 SSRS）](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

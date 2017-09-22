@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8221755d220caec5588c8ed1343e360799b82694
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: cffe6569f7bac5308d49bb89f4fb4db259be445b
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="jdbc-41-compliance-for-the-jdbc-driver"></a>適用於 JDBC 驅動程式的 JDBC 4.1 相容性
@@ -56,7 +56,7 @@ ms.lasthandoff: 09/09/2017
   
 |新功能|Description|  
 |-----------------|-----------------|  
-|新的逸出函數<br /><br /> 限制傳回的資料列逸出|部分支援<br /><br /> 逸出語法： 限制\<資料列 > [OFFSET < 資料列位移 >]<br /><br /> 逸出語法有兩個部分： 必要的部分為「資料列」，指定要傳回的資料列數目，選擇性的部分為「資料列位移」，指定開始傳回資料列之前要略過的資料列數目。<br /><br /> 此驅動程式只支援必要的部分，方法是轉換查詢為使用 'TOP’，而非 LIMIT (SQL Server 不支援 'LIMIT')。<br /><br /> 如果使用了選擇性部分「資料列位移」，則此驅動程式會擲回例外狀況，因為 SQL Server 並沒有任何支援的內建建構。<br /><br /> 如需詳細資訊，請參閱[使用 SQL 逸出序列](https://msdn.microsoft.com/en-us/library/ms378045.aspx)。|  
+|新的逸出函數<br /><br /> 限制傳回的資料列逸出|部分支援<br /><br /> 逸出語法： 限制\<資料列 >[位移 < 資料列位移 >](/sql-docs/docs/connect/jdbc/using-sql-escape-sequences)。|  
   
  Microsoft JDBC Driver 4.2 for SQL Server 可使用下列資料類型對應，支援 Java 資料庫連線 API 4.1 規格。  
   

@@ -15,10 +15,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 811709fae77dee6daa46a97a51c44c02e372d9a8
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 87d6c0b358d7747b20ed37f159e713cc10018866
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="install-microsoft-r-server-from-the-command-line"></a>從命令列安裝 Microsoft R Server
@@ -83,7 +83,7 @@ Setup.exe /q /ACTION=Install /FEATURES=SQL_SHARED_MR /IACCEPTROPENLICENSETERMS /
 
 會為安裝的每個功能建立個別的子資料夾。
 
-若要設定 Microsoft R Server 的另一個執行個體具有相同參數，您可以重新使用的在安裝期間建立的組態檔。 如需詳細資訊，請參閱 [使用組態檔安裝 SQL Server](https://msdn.microsoft.com/library/dd239405.aspx)
+若要設定 Microsoft R Server 的另一個執行個體具有相同參數，您可以重新使用的在安裝期間建立的組態檔。 如需詳細資訊，請參閱[使用組態檔安裝 SQL Server](/sql-docs/docs/database-engine/install-windows/install-sql-server-2016-using-a-configuration-file)
 
 
 ## <a name="customize-your-r-environment"></a>自訂您的 R 環境

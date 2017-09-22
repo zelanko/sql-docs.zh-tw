@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 5aee9077dcf9c0c31746c3e8d3b056376a8e61dc
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 44308a0c36e49852f199fb8dbfdb6de9db789c9f
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="generating-dump-files-for-package-execution"></a>產生封裝執行的傾印檔案
@@ -36,7 +36,7 @@ ms.lasthandoff: 08/03/2017
   
      呼叫此預存程序，使執行中的封裝暫停並建立傾印檔案。  
   
- 如果您要使用套件部署模型，請使用 **dtexec** 公用程式或 **dtutil** 公用程式，在命令列指定偵錯傾印選項以建立偵錯傾印檔案。 如需詳細資訊，請參閱 [dtexec 公用程式](../../integration-services/packages/dtexec-utility.md)和 [dtutil 公用程式](../../integration-services/dtutil-utility.md)。 如需套件部署模型的詳細資訊，請參閱[部署 Integration Services (SSIS) 專案和套件](https://msdn.microsoft.com/library/hh213290.aspx)和[舊版套件部署 &#40;SSIS&#41;](../../integration-services/packages/legacy-package-deployment-ssis.md)。  
+ 如果您要使用套件部署模型，請使用 **dtexec** 公用程式或 **dtutil** 公用程式，在命令列指定偵錯傾印選項以建立偵錯傾印檔案。 如需詳細資訊，請參閱[dtexec 公用程式](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages)和[舊版封裝部署 &#40;SSIS &#41;](../../integration-services/packages/legacy-package-deployment-ssis.md).  
   
 ## <a name="debug-dump-file-format"></a>偵錯傾印檔案格式  
  當您指定偵錯傾印選項時， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 就會建立下列偵錯傾印檔案：  

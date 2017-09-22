@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 91659ce1d2946923480c1fc1a0bcf9a6a15094d8
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: a645a57cac6eef7507aed9ea81df9fc75eb32dd4
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-ruby"></a>步驟 3： 連接到使用 Ruby SQL 的概念證明
@@ -58,7 +58,7 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="step-3--insert-a-row"></a>步驟 3： 插入資料列  
   
-在您將了解如何執行此範例[插入](https://msdn.microsoft.com/library/ms174335.aspx)陳述式，將參數可保護您的應用程式，從[SQL 資料隱碼](https://technet.microsoft.com/library/ms161953(v=sql.105).aspx)弱點和擷取自動產生的[主索引鍵](https://msdn.microsoft.com/library/ms179610.aspx)值。    
+在您將了解如何執行此範例[插入](/sql-docs/docs/t-sql/statements/insert-transact-sql)陳述式，將參數可保護您的應用程式，從[SQL 資料隱碼](/sql-docs/docs/relational-databases/tables/primary-and-foreign-key-constraints)值。    
   
 若要搭配 Azure 使用 TinyTDS，建議您執行多個`SET`陳述式來變更目前工作階段處理的特定資訊的方式。 建議`SET`陳述式所提供的程式碼範例。 例如，`SET ANSI_NULL_DFLT_ON`會允許新的資料行允許 null 值，即使未明確指定資料行的 null 屬性狀態建立。  
   

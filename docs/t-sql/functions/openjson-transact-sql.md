@@ -23,10 +23,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: def6c774a66262f2baa7cdfc726a0ddf6c299075
+ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
+ms.openlocfilehash: 936a53d9174b199860432e0cfcb9c8add97529ca
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/19/2017
 
 ---
 # <a name="openjson-transact-sql"></a>OPENJSON (TRANSACT-SQL)
@@ -67,7 +67,7 @@ OPENJSON( jsonExpression [ , path ] )  [ <with_clause> ]
   
 ![OPENJSON TVF 中子句語法](../../relational-databases/json/media/openjson-shema-syntax.png "WITH OPENJSON 語法")
 
-*with_clause*包含針對其類型的資料行清單**OPENJSON**傳回。 根據預設， **OPENJSON**符合中的索引鍵*jsonExpression*中的資料行名稱*with_clause*。 如果資料行名稱不相符的索引鍵的名稱，您可以提供選擇性*column_path*，也就是[JSON 路徑運算式](../../relational-databases/json/json-path-expressions-sql-server.md)內的索引鍵參考的*jsonExpression*。 
+*with_clause*包含針對其類型的資料行清單**OPENJSON**傳回。 根據預設， **OPENJSON**符合中的索引鍵*jsonExpression*中的資料行名稱*with_clause* （在此情況下，相符項目索引鍵意味著會區分大小寫）。 如果資料行名稱不相符的索引鍵的名稱，您可以提供選擇性*column_path*，也就是[JSON 路徑運算式](../../relational-databases/json/json-path-expressions-sql-server.md)內的索引鍵參考的*jsonExpression*。 
 
 ## <a name="arguments"></a>引數  
 ### <a name="jsonexpression"></a>*jsonExpression*  

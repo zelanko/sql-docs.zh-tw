@@ -20,10 +20,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 90af75d4481d87442a6460f0d875b1a4e79712d5
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 6aa23c7a8f2daefcf0b138bb39926eb2e377c22b
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="work-with-sql-server-data-using-r"></a>使用 SQL Server 資料使用 R
@@ -100,7 +100,7 @@ CREATE USER [DDUser01] FOR LOGIN [DDUser01] WITH DEFAULT_SCHEMA=[db_datareader]
 
 - **如何確認資料庫連線和檢查 SQL 查詢？**
   
-    在使用伺服器執行 R 程式碼之前，您可能想檢查資料庫是否能與 R 開發環境連線。 [Visual Studio 中的伺服器總管](https://msdn.microsoft.com/library/x603htbk.aspx) 和 [SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx) 都是免費工具，具有功能強大的資料庫連線和管理功能。
+    在使用伺服器執行 R 程式碼之前，您可能想檢查資料庫是否能與 R 開發環境連線。 [Visual Studio 中的伺服器總管](https://msdn.microsoft.com/library/x603htbk.aspx) 和 [SQL Server Management Studio](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms) 都是免費工具，具有功能強大的資料庫連線和管理功能。
   
     如果您不想安裝其他資料庫管理工具，可以使用控制台的 [ODBC 資料來源管理員](https://msdn.microsoft.com/library/ms714024.aspx) ，建立與 SQL Server 執行個體的測試連線。 如果資料庫已正確設定且輸入的使用者名稱和密碼皆無誤時，您應可看到剛建立的資料庫，並可將其選取為預設資料庫。
   

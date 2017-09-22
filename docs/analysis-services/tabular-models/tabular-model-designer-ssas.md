@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ee8b777d6e7439e94a2e5687a28ccf521e8aebdc
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: f8f894ec1836e12eb57a7b2e629ff06464f266fb
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="tabular-model-designer-ssas"></a>表格式模型設計師 (SSAS)
-  此表格式模型設計師是與 Microsoft [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]整合之 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]的一部分，具有特別用來開發專業表格式模型方案的額外專案類型範本。  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 可從 Web 免費下載安裝。 如需詳細資訊，請參閱 [下載 SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx) 。   
+  表格式模型設計師屬於 [！包含[s](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt)如需詳細資訊。   
   
 ##  <a name="bkmk_benefits"></a> 優點  
  當您安裝 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]時，用來建立表格式模型的專案範本會加入至可用的專案類型中。 在使用其中一個範本建立新的表格式模型專案之後，您可以使用表格式模型設計師工具和精靈開始撰寫模型。  

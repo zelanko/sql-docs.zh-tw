@@ -16,10 +16,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 14789bafd555a4980875de78c85b32f535a8c0fe
+ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
+ms.openlocfilehash: b52fcc1e4ac77df2968a4ea6cbd6e546ff1b74ac
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/19/2017
 
 ---
 # <a name="install-pretrained-machine-learning-models-on-sql-server"></a>安裝預先定型的機器學習模型 SQL Server 上
@@ -37,8 +37,8 @@ ms.lasthandoff: 09/01/2017
 
 目前可用的模型是情緒分析和影像分類的深度類神經網路 (DNN) 模型。 所有四個預先定型的模型已定型 CNTK。 每個網路的設定根據下列參考實作：
 
-+ Resnet 18
-+ Resnet 50
++ ResNet 18
++ ResNet 50
 + ResNet 101
 + AlexNet
 
@@ -133,3 +133,4 @@ ms.lasthandoff: 09/01/2017
 這個範例示範用於分類的預先定型的模型：
 
 [使用文字 Featurizer 情緒分析](https://github.com/Microsoft/microsoft-r/tree/master/microsoft-ml/Samples/101/BinaryClassification/SimpleSentimentAnalysis)
+

@@ -18,10 +18,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
-ms.openlocfilehash: 411086a4a75b002faa7e07befa77e7277a494bab
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: e36aeea4440f7c565e9517ebb1b80d21116b4342
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="monitor-running-packages-and-other-operations"></a>監視執行封裝和其他作業
@@ -94,7 +94,7 @@ ms.lasthandoff: 08/03/2017
   
  如需有關可用來檢視執行中封裝清單之其他方法的詳細資訊，請參閱下列主題。  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)] 存取  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] access  
  若要檢視正在伺服器上執行之封裝的清單，請針對狀態 2 的封裝查詢檢視 [catalog.executions &#40;SSISDB 資料庫&#41;](../../integration-services/system-views/catalog-executions-ssisdb-database.md) 。  
   
  透過 Managed API 來以設計程式方式存取  
@@ -105,7 +105,7 @@ ms.lasthandoff: 08/03/2017
   
  如需有關可用來停止執行中封裝之其他方法的詳細資訊，請參閱下列主題。  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)] 存取  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] access  
  若要停止正在伺服器上執行的封裝，請呼叫預存程序 [catalog.stop_operation &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-stop-operation-ssisdb-database.md)。  
   
  透過 Managed API 來以設計程式方式存取  
@@ -116,14 +116,14 @@ ms.lasthandoff: 08/03/2017
   
  如需有關可用來檢視執行中封裝記錄之其他方法的詳細資訊，請參閱下列主題。  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)] 存取  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] access  
  若要檢視已執行封裝的資訊，請查詢檢視 [catalog.executions &#40;SSISDB 資料庫&#41;](../../integration-services/system-views/catalog-executions-ssisdb-database.md)。  
   
  透過 Managed API 來以設計程式方式存取  
  請參閱<xref:Microsoft.SqlServer.Management.IntegrationServices>命名空間和其類別。  
 
 ## <a name="reports"></a> Reports for the Integration Services Server
-  在目前版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]，都可使用標準報表[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]可協助您監視[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]專案部署至[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]伺服器。 這些報表可協助您檢視封裝狀態及記錄，如有必要，也可協助您識別封裝執行失敗的原因。  
+  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]的目前版本中， [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中提供標準報表，協助您監視已部署至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案。 這些報表可協助您檢視封裝狀態及記錄，如有必要，也可協助您識別封裝執行失敗的原因。  
   
  在每個報表頁面上方，上一步圖示可前往檢視的上一頁，重新整理圖示會重新整理頁面上顯示的資訊，而列印圖示可讓您列印目前頁面。  
   
@@ -182,7 +182,7 @@ ms.lasthandoff: 08/03/2017
  如需如何建立和加入自訂報表的指示，請參閱 [將自訂報表加入 Management Studio](http://msdn.microsoft.com/library/3cf8d726-0a90-4f80-98d0-352a2a59be0f)。  
 
 ## <a name="view-reports-for-the-integration-services-server"></a>檢視 Integration Services 伺服器的報表
-  在目前版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]，都可使用標準報表[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]可協助您監視[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]專案部署至[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]伺服器。  如需報表的詳細資訊，請參閱 [Integration Services 伺服器的報表](#reports)。  
+  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]的目前版本中，於 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 內提供標準報表，協助您監視已部署至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案。  如需報表的詳細資訊，請參閱 [Integration Services 伺服器的報表](#reports)。  
   
 ### <a name="to-view-reports-for-the-integration-services-server"></a>若要檢視 Integration Services 伺服器的報表  
   
@@ -203,6 +203,6 @@ ms.lasthandoff: 08/03/2017
     -   **所有連接**  
 
 ## <a name="see-also"></a>另請參閱  
- [執行專案和封裝](https://msdn.microsoft.com/library/hh213290.aspx)   
- [套件執行的疑難排解報告](https://msdn.microsoft.com/library/gg471512.aspx)  
+ [執行專案和封裝](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages)   
+ [套件執行的疑難排解報告](/sql-docs/docs/integration-services/troubleshooting/troubleshooting-reports-for-package-execution)  
 

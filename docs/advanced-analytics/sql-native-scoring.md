@@ -1,8 +1,8 @@
 ---
 title: "原生計分 |Microsoft 文件"
 ms.custom: 
-ms.date: 07/16/2017
-ms.prod: sql-server-2016
+ms.date: 09/19/2017
+ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -13,10 +13,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e1cb06223e5274c1fa439eb9f7d82a005e93a47d
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: fe571e3e432d6445c76133c4c2a9c56f2f67eff0
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 
@@ -30,25 +30,26 @@ ms.lasthandoff: 09/01/2017
 
 ## <a name="what-is-native-scoring-and-how-is-it-different-from-realtime-scoring"></a>什麼是原生計分，以及如何與不同即時計分？
 
-在 SQL Server 2016 中，Microsoft 建立擴充性架構，可讓從 T-SQL 中執行 R 指令碼。 此架構支援 R，範圍從簡單的函式到定型複雜機器學習模型中，您可能會執行任何作業。 不過，組 R 與 SQL Server 的雙重同處理序架構表示必須在每次呼叫，不論作業的複雜度叫用外部 R 處理序。 如果您從資料表和計分對它已經在 SQL Server 中的資料載入預先定型的模型，呼叫外部 R 處理序的負擔會代表不必要的效能成本。
+在 SQL Server 2016 中，Microsoft 建立擴充性架構，可讓從 T-SQL 中執行 R 指令碼。 此架構支援 R，範圍從簡單的函式到定型複雜機器學習模型中，您可能會執行任何作業。 不過，雙同處理序架構需要叫用外部 R 處理序每次呼叫，不論作業的複雜度。 如果您從資料表和計分對它已經在 SQL Server 中的資料載入預先定型的模型，呼叫外部 R 處理序的負擔會代表不必要的效能成本。
 
-_計分_是兩個步驟的程序： 從資料表中，載入預先定型的模型和新輸入的資料、 表格式或單一資料列，會傳遞到模型，會產生新的值 (或_分數_)。 輸出可能是單一資料行值代表機率或數個值，包括信賴區間、 錯誤或其他有用的補數與預測。
+_計分_是兩個步驟的程序。 首先，您可以指定預先定型的模型資料表中載入。 第二，新傳遞輸入函式，來產生預測值的資料 (或_分數_)。 輸入可以是表格式或單一資料列。 您可以選擇輸出單一資料行值代表機率，或您可能會輸出數個值，例如信賴區間、 錯誤或其他有用的補數與預測。
 
-計分的資料有多個資料列，當新的值通常插入資料表計分的程序的一部分。  不過，您也可以擷取即時的單一分數。 當計分連續輸入，以便快速記憶體載入可能會快取模型。
+當輸入包含多個資料列的資料時，通常是更快將預測值插入資料表，計分的程序的一部分。  產生單一的分數是更一般的案例，您的表單或使用者的要求，從取得輸入的值並傳回至用戶端應用程式的分數。 若要產生連續的分數時改善效能，SQL Server 可能會快取模型，以便載入記憶體。
 
 若要支援快速計分，SQL Server 機器學習服務 （和 Microsoft 機器學習 Server） 提供內建在計分，可以在 R 中或在 T-SQL 中的程式庫。 有不同的選項，在您有版本而定。
 
-**原生計分**
+**原生評分**
 
-+ 在 TRANSACT-SQL 中的 PREDICT 函數可用於_原生計分_從 SQL Server 2017 任何執行個體。 它只需要您具有已經定型，並儲存在資料表中的模型中或透過 T-SQL 進行呼叫。 它是一種即時計分使用原生 T-SQL 函式。不需要其他組態。
++ 預測函數，在 TRANSACT-SQL 支援_原生計分_中的 SQL Server 2017 任何執行個體。 它只需要您有模型已經定型過，您可以使用 T-SQL 來呼叫。 使用 T-SQL 原生計分具有下列優點：
 
-   不會呼叫 R 執行階段，並不需要安裝。
+    + 不需要進行其他組態設定。
+    + 不會呼叫 R 執行階段。 不需要安裝。
 
 **即時計分**
 
 + **sp_rxPredict**是預存程序的即時計分，可用來從任何支援的模型型別，產生分數，而不需要呼叫 R 執行階段。
 
-  此選項可使用即時計分也會提供在 SQL Server 2016 中，如果您升級使用 Microsoft R Server 的獨立安裝程式的 R 元件。 sp_rxPredict 也適用於 SQL Server 2017，而且可能很好的選項，如果您計分預測函式不支援的模型型別上。
+  這個預存程序也會提供在 SQL Server 2016 中，如果您升級使用 Microsoft R Server 的獨立安裝程式的 R 元件。 SQL Server 2017 也支援 sp_rxPredict 功能。 因此，您可以使用此函式時使用預測函式不支援類型的模型產生分數。
 
 + RxPredict 函式可用於快速計分的 R 程式碼中。
 
@@ -58,7 +59,7 @@ _計分_是兩個步驟的程序： 從資料表中，載入預先定型的模�
 
 ## <a name="how-native-scoring-works"></a>計分的原生如何運作
 
-原生計分會使用原生 c + + 程式庫，microsoft 可從一種特殊的二進位格式讀取模型和產生分數。 因為模型可以發行，而且用於計分不必呼叫 R 解譯器，會降低額外負荷的多個處理程序互動。 這在企業生產案例中支援多更快的預測效能。
+原生計分會使用原生 c + + 程式庫，microsoft 可從一種特殊的二進位格式讀取模型和產生分數。 因為模型可以發行，而且用於計分不必呼叫 R 解譯器，會降低額外負荷的多個處理程序互動。 因此，原生計分支援更快的預測效能企業實際執行案例中。
 
 若要產生分數，使用這個程式庫，您呼叫計分函式，並傳遞下列必要的輸入：
 
@@ -71,6 +72,11 @@ _計分_是兩個步驟的程序： 從資料表中，載入預先定型的模�
 
 + [如何執行即時計分](r/how-to-do-realtime-scoring.md)
 
+完整的解決方案，其中包含原生計分，請參閱 SQL Server 開發小組的這些範例：
+
++ 部署您的 ML 指令碼：[使用 Python 模型](https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/step/3.html)
++ 部署您的 ML 指令碼：[使用 R 模型](https://microsoft.github.io/sql-ml-tutorials/R/rentalprediction/step/3.html)
+
 ## <a name="requirements"></a>需求
 
 支援的平台如下所示：
@@ -80,11 +86,11 @@ _計分_是兩個步驟的程序： 從資料表中，載入預先定型的模�
     原生計分使用預測需要 SQL Server 2017。
     它適用於任何版本的 SQL Server 2017，包括 Linux。
 
-    您也可以執行即時計分使用 sp_rxPredict，需要啟用 SQL CLR。
+    您也可以執行即時計分使用 sp_rxPredict。 若要使用這個預存程序需要啟用[SQL Server CLR 整合](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/introduction-to-sql-server-clr-integration)。
 
 + SQL Server 2016
 
-   即時計分使用 sp_rxPredict 可與 SQL Server 2016，而也可以在 Microsoft R Server 上執行。 此選項需要 SQLCLR 啟用，以及您安裝 Microsoft R Server 升級。
+   即時計分使用 sp_rxPredict 可能有 SQL Server 2016，並也可以在 Microsoft R Server 上執行。 此選項需要 SQLCLR 啟用，以及您安裝 Microsoft R Server 升級。
    如需詳細資訊，請參閱[即時計分](Real-time-scoring.md)
 
 ### <a name="model-preparation"></a>模型的準備工作
@@ -100,7 +106,7 @@ _計分_是兩個步驟的程序： 從資料表中，載入預先定型的模�
   + [rxLogit](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxlogit)
   + [rxBTrees](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxbtrees)
   + [rxDtree](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdtree)
-  + [rxdForest](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdforest)
+  + [rxDForest](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdforest)
 
 如果您要使用從 MicrosoftML 模型，請使用即時 sp_rxPredict 與計分。
 
@@ -112,5 +118,5 @@ _計分_是兩個步驟的程序： 從資料表中，載入預先定型的模�
 + 模型使用`rxGlm`或`rxNaiveBayes`RevoScaleR 的演算法
 + PMML 模型
 + 使用 CRAN 或其他儲存機制從其他 R 程式庫建立的模型
-+ 模型包含任何其他種類的 R 轉換
++ 模型包含任何其他的 R 轉換
 

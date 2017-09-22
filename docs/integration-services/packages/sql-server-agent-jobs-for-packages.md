@@ -20,10 +20,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 88c4fec1697c91daa3cb97fe61d76f75a67546f3
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 009c30b7f14fe10099257c97a5a310aa41df71b0
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>封裝的 SQL Server Agent 作業
@@ -133,7 +133,7 @@ ms.lasthandoff: 08/03/2017
     |**SSIS 目錄**|儲存在 SSISDB 資料庫中的封裝。 封裝會包含在部署至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案中。|  
     |**SQL Server**|儲存在 MSDB 資料庫中的封裝。 您會使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務管理這些封裝。|  
     |**SSIS 封裝存放區**|儲存在您電腦上預設資料夾中的封裝。 預設資料夾是*\<磁碟機 >*: \Program Files\Microsoft SQL Server\110\DTS\Packages。 您會使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務管理這些封裝。<br /><br /> 注意：您可以指定不同的資料夾，或指定檔案系統中 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務要管理的其他資料夾，方法是修改 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]的組態檔。 如需詳細資訊，請參閱 [Integration Services Service &#40;SSIS Service&#41;](../../integration-services/service/integration-services-service-ssis-service.md) (Integration Services 服務 (SSIS 服務))。|  
-    |**檔案系統**|儲存在您本機電腦上任何資料夾中的封裝。|  
+    |**[File System]**|儲存在您本機電腦上任何資料夾中的封裝。|  
   
      **下表描述根據您選取的封裝來源，可供作業步驟使用的組態選項。**  
   
@@ -189,7 +189,7 @@ ms.lasthandoff: 08/03/2017
     >  當您為排程命名時，請考慮使用唯一的描述性名稱，以便更容易區分此排程與其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 排程。  
 
 ## <a name="see-also"></a>請參閱＜  
- [執行專案和封裝](https://msdn.microsoft.com/library/hh213290.aspx)  
+ [執行專案和封裝](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages)  
 
 ## <a name="external-resources"></a>外部資源  
   

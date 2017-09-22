@@ -18,16 +18,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 581215c25f688b2f1e5661d370a31b5de4aed652
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: fb0172c59d4ba114a98191b5ac5b5c88c94bb4a3
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="tcpip-properties-ip-addresses-tab"></a>TCP/IP 屬性 (IP 位址索引標籤)
   您可以使用 [TCP/IP 屬性 (IP 位址索引標籤)] 對話方塊，設定特定 IP 位址的 TCP/IP 通訊協定選項。 您只能透過選取 **[IPAll]** ，一次設定所有位址的 **[TCP 動態通訊埠]** 和 **[TCP 通訊埠]**。  
   
- 重新啟動 SQL Server 之後，變更才會生效。 如需啟動和停止 SQL Server Browser 服務的資訊，請參閱[啟動、停止、暫停、繼續、重新啟動 Database Engine、SQL Server Agent 或 SQL Server Browser 服務](https://msdn.microsoft.com/library/hh403394.aspx)。  
+ 重新啟動 SQL Server 之後，變更才會生效。 如需啟動和停止 SQL Server Browser 服務的資訊，請參閱[啟動、停止、暫停、繼續、重新啟動 Database Engine、SQL Server Agent 或 SQL Server Browser 服務](/sql-docs/docs/database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services)。  
   
 ## <a name="static-vs-dynamic-ports"></a>靜態與動態通訊埠  
  預設的 SQL Server 執行個體使用通訊埠 1433 接聽內送連接。 為了安全上的理由或因為用戶端應用程式的需求，可以變更此通訊埠。 根據預設，具名執行個體 (包括 SQL Server Express) 設定為接聽動態通訊埠。 若要設定靜態通訊埠，請將 **[TCP 動態通訊埠]** 方塊保留空白，並於 **[TCP 通訊埠]** 方塊中提供可用的通訊埠編號。 如需有關在防火牆中開啟通訊埠的詳細資訊，請參閱線上叢書中的＜將 Windows 防火牆設定成允許 SQL Server 存取＞。  
@@ -65,7 +65,7 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="see-also"></a>請參閱＜  
  [選擇網路通訊協定](https://msdn.microsoft.com/library/ms187892(v=sql.120).aspx)   
- [建立有效的連接字串使用 TCP IP](https://msdn.microsoft.com/library/ms191260.aspx)   
+ [建立有效的連接字串使用 TCP IP](/sql-docs/docs/tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip)   
  [SQL Server Browser 服務](https://msdn.microsoft.com/library/ms181087(v=sql.130).aspx)  
   
   

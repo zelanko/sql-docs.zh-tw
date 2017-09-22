@@ -18,10 +18,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: e16cfa9447a63e1bb9b627bc3045727e7f481ef3
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 1afd17d5ba2879fd13f0b3703ca84ea02b3cd416
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="events-logged-by-an-integration-services-package"></a>Integration Services 封裝所記錄的事件
@@ -29,7 +29,7 @@ ms.lasthandoff: 08/03/2017
   
  本主題會提供封裝記錄至應用程式事件記錄檔之常見事件訊息的相關資訊。 根據預設，封裝會記錄其中某些訊息，即使您尚未針對此封裝啟用記錄也一樣。 不過，只有當您針對此封裝啟用記錄時，封裝才會記錄其他訊息。 不論此封裝預設記錄這些訊息或因為已經啟用記錄，訊息的事件來源都是 SQLISPackage。  
   
- 如需如何執行 SSIS 套件的一般資訊，請參閱 [執行專案和套件](https://msdn.microsoft.com/library/ms141708.aspx)。  
+ 如需如何執行 SSIS 套件的一般資訊，請參閱[執行專案和套件](/sql-docs/docs/integration-services/packages/run-integration-services-ssis-packages)。  
   
  如需如何針對執行中封裝進行疑難排解的詳細資訊，請參閱 [封裝執行的疑難排解工具](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)。  
   

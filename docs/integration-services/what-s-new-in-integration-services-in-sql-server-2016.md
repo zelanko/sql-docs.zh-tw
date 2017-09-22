@@ -19,10 +19,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 80642503480add90fc75573338760ab86139694c
-ms.openlocfilehash: 5e1127580ff900077fa3d36abcb339cce57857d2
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 82347011d4650d52cca30f43e87f7ba63eca9057
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>什麼 & #39 的新 SQL Server 2016 中 Integration Services
@@ -154,7 +154,7 @@ ms.lasthandoff: 08/21/2017
  如需詳細資訊，請參閱[SSIS 目錄 &#40;SSISDB &#41;](../integration-services/service/ssis-catalog.md). 
 
 ####  <a name="AlwaysOn"></a> 支援 SSIS 目錄中的AlwaysOn  
- AlwaysOn 可用性群組功能是提供資料庫鏡像之企業級替代方案的高可用性與災害復原解決方案。 可用性群組支援一組可一起容錯移轉之離散化使用者資料庫的容錯移轉環境，也就是所謂的可用性資料庫。 如需詳細資訊，請參閱 [永遠開啟可用性群組](https://msdn.microsoft.com/library/hh510230.aspx)。  
+ AlwaysOn 可用性群組功能是提供資料庫鏡像之企業級替代方案的高可用性與災害復原解決方案。 可用性群組支援一組可一起容錯移轉之離散化使用者資料庫的容錯移轉環境，也就是所謂的可用性資料庫。 如需詳細資訊，請參閱 [永遠開啟可用性群組](/sql-docs/docs/database-engine/availability-groups/windows/always-on-availability-groups-sql-server)。  
   
  在 SQL Server 2016 中，SSIS 會引進新功能，可讓您輕鬆部署到集中式 SSIS 目錄 （也就是 SSISDB 使用者資料庫）。 為了提供 SSISDB 資料庫及其內容的高可用性 (專案、封裝、執行記錄等)，您可以將 SSISDB 資料庫加入「永遠開啟」可用性群組，就像其他任何使用者資料庫。 發生容錯移轉時，其中一個次要節點會自動變成新的主要節點。  
   
@@ -313,7 +313,7 @@ ms.lasthandoff: 08/21/2017
 ### <a name="better-design-experience"></a>更好的設計體驗
 
 ####  <a name="OneDesigner"></a> SSIS 設計師中的多目標和多個版本支援  
- 您現在可以在適用於 Visual Studio 2015 的 SQL Server Data Tools &#40;SSDT&#41; 中使用 SSIS 設計師，來建立、維護和執行目標為 SQL Server 2016、SQL Server 2014 或 SQL Server 2012 的封裝。 若要取得 SSDT，請參閱 [下載最新的 SQL Server Data Tools](https://msdn.microsoft.com/library/mt204009.aspx)。 
+ 您現在可以在適用於 Visual Studio 2015 的 SQL Server Data Tools &#40;SSDT&#41; 中使用 SSIS 設計師，來建立、維護和執行目標為 SQL Server 2016、SQL Server 2014 或 SQL Server 2012 的封裝。 若要取得 SSDT，請參閱 [下載最新的 SQL Server Data Tools](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt)。 
 
  在方案總管中，在 Integration Services 專案上按一下滑鼠右鍵，然後選取 [屬性]  以開啟專案的屬性頁。 在 [組態屬性]  的 [一般] 索引標籤中，選取 [TargetServerVersion]  屬性，然後選擇 SQL Server 2016、SQL Server 2014 或 SQL Server 2012。  
    

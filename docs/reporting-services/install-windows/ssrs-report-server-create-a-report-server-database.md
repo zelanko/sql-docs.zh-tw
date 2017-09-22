@@ -1,7 +1,7 @@
 ---
 title: "建立報表伺服器資料庫 （SSRS 組態管理員） |Microsoft 文件"
 ms.custom: 
-ms.date: 05/24/2017
+ms.date: 09/20/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -9,26 +9,22 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- report servers [Reporting Services], databases
-- report server database
-- databases [Reporting Services], creating
-ms.assetid: 8a3a6ffe-4001-46be-8548-94532550f6a5
-caps.latest.revision: 12
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 526abc46fe3b7fc3f923c29f4b4857b06f55a37c
+ms.translationtype: MT
+ms.sourcegitcommit: f684f0168e57c5cd727af6488b2460eeaead100c
+ms.openlocfilehash: aac0bcb0b004a0c8225b580313281c9668c1c882
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 
 # <a name="create-a-report-server-database"></a>建立報表伺服器資料庫
 
-[!INCLUDE[ssrs-appliesto-sql2016-preview](../../includes/ssrs-appliesto-sql2016-preview.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
+[!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
+
+[!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **原生模式** 會使用兩個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 關聯式資料庫來儲存報表伺服器中繼資料和物件。 一個資料庫做為主要儲存體，而另一個用來儲存暫存資料。 兩個資料庫會一起建立，並依名稱繫結。 使用預設的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體時，資料庫會命名為 **reportserver** 和 **reportservertempdb**。 這兩個資料庫統稱為「報表伺服器資料庫」或「報表伺服器目錄」。
 
@@ -71,7 +67,7 @@ ms.lasthandoff: 08/09/2017
   
 -   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]  
   
- 在遠端電腦上建立報表伺服器資料庫時，您必須設定連接以使用網域使用者帳戶，或是擁有網路存取權的服務帳戶。 如果您決定使用遠端 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，請仔細考慮報表伺服器要用來連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的認證。 如需詳細資訊，請參閱[設定報表伺服器資料庫連接 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)。  
+ 在遠端電腦上建立報表伺服器資料庫時，您必須設定連接以使用網域使用者帳戶，或是擁有網路存取權的服務帳戶。 如果您決定使用遠端 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，請仔細考慮報表伺服器要用來連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的認證。 如需詳細資訊，請參閱 [設定報表伺服器資料庫連接 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)主題中受支援的版本。  
   
 > [!IMPORTANT]  
 >  報表伺服器與主控報表伺服器資料庫的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，可以在不同的網域中。 針對網際網路部署，常會使用位於防火牆後方的伺服器。 如果您要設定供網際網路存取的報表伺服器，請使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認證，以連接到位於防火牆後方之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體，並使用 IPSEC 來保護連接的安全。  

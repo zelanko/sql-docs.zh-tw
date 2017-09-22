@@ -15,11 +15,11 @@ caps.latest.revision: 19
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 69c0ea4110b678e9bffa959992d48f2c28df5897
+ms.translationtype: MT
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 0a59b89b558922f27c91fb2452df157f7baa3918
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="plan-for-report-design-and-report-deployment--reporting-services"></a>規劃報表設計與報表部署 | Reporting Services
@@ -96,7 +96,7 @@ ms.lasthandoff: 08/09/2017
   
 -   [SQL Server Data Tools 中的部署和版本支援 &#40;SSRS&#41;](../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
   
--   [SQL Server Data Tools for Visual Studio 2015](https://msdn.microsoft.com/library/mt204009.aspx)。  
+-   [SQL Server Data Tools for Visual Studio 2015](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt)。  
   
 ##  <a name="bkmk_reportviewer"></a> ReportViewer 控制項  
  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ReportViewer 控制項可採用本機預覽模式或遠端模式顯示 .rdlc 報表，此控制項可以顯示 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 報表伺服器上裝載的 .rdl 檔案。 下表提供 ReportViewer 控制項所支援、用於本機處理 (.rdlc) 的 RDL 版本清單。 伺服器端 RDL 支援的摘要在此節中 [報表伺服器與 RDL 結構描述支援](#bkmk_report_server_rdl_schema_support)。  
@@ -117,7 +117,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="see-also"></a>請參閱＜  
  [報表、報表組件和報表定義 &#40;報表產生器及 SSRS&#41;](../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
  [Reporting Services 工具](../reporting-services/tools/reporting-services-tools.md)   
- [報表定義語言 &#40;SSRS &#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
+ [報表定義語言 &#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
   
   
 

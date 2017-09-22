@@ -16,19 +16,19 @@ ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 4102284612e0838fb876708b959266994a0f2b96
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 38890f32a5431b1c67a75f2330cc97ae3428b2fb
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="installation-and-configuration"></a>安裝和組態
 Wide World Importers OLTP 資料庫安裝和組態指示。
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>必要條件
 
 - [SQL Server 2016](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) （或更新版本） 或[Azure SQL Database](https://azure.microsoft.com/services/sql-database/)。 如需範例的完整版本，使用 SQL Server Evaluation/Developer/Enterprise Edition。
-- [SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx)。 對於獲得最佳結果，請使用 2016 年 6 月版本或更新版本。
+- [SQL Server Management Studio](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms)。 對於獲得最佳結果，請使用 2016 年 6 月版本或更新版本。
 
 ## <a name="download"></a>下載
 

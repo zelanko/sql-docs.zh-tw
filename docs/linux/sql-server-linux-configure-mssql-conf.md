@@ -1,19 +1,19 @@
 ---
 title: "在 Linux 上的 SQL Server 設定 |Microsoft 文件"
 description: "本主題描述如何在 Linux 上設定 SQL Server 2017 設定使用 mssql conf 工具。"
-author: luisbosquez
-ms.author: lbosq
+author: rothja
+ms.author: jroth
 manager: jhubbard
-ms.date: 08/24/2017
+ms.date: 09/20/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 ms.translationtype: MT
-ms.sourcegitcommit: 46b16dcf147dbd863eec0330e87511b4ced6c4ce
-ms.openlocfilehash: 5147b648f2b34496bc46f756639ded028b01fe0e
+ms.sourcegitcommit: f684f0168e57c5cd727af6488b2460eeaead100c
+ms.openlocfilehash: 68b895f4497fc5e111bc346d01eb85f1bf0ab222
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/05/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>設定 SQL Server on Linux mssql conf 工具
@@ -53,7 +53,11 @@ ms.lasthandoff: 09/05/2017
 
 ## <a id="collation"></a>變更 SQL Server 定序
 
-**組定序**選項變更為任何支援的定序的定序值：
+**組定序**選項變更為任何支援的定序的定序值。
+
+1. 第一個[備份任何使用者資料庫](sql-server-linux-backup-and-restore-database.md)您伺服器上。
+
+1. 然後使用[sp_detach_db](../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)預存程序來卸離的使用者資料庫。
 
 1. 執行**組定序**選項，然後遵循提示：
 
@@ -61,7 +65,9 @@ ms.lasthandoff: 09/05/2017
    sudo /opt/mssql/bin/mssql-conf set-collation
    ```
 
-1. Mssql conf 公用程式會嘗試使用指定的定序還原資料庫，然後重新啟動服務。 如果有任何錯誤，便會復原定序為先前的值。
+1. Mssql conf 公用程式會嘗試將指定的定序值變更，然後重新啟動服務。 如果有任何錯誤，便會復原定序為先前的值。
+
+1. 還原使用者資料庫備份。
 
 如需支援的定序的清單，請執行[sys.fn_helpcollations](../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)函式： `SELECT Name from sys.fn_helpcollations()`。
 

@@ -31,10 +31,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1c5ebfc41763553e0f77af06b743ca9c8d2166ec
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 218bc141af70829a34ea91f0cf0e22ad05860652
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
@@ -122,7 +122,7 @@ ALTER DATABASE { database_name  | CURRENT }
   
  指定應該改變正在使用中的目前資料庫。  
   
- MODIFY NAME  **=**  *new_database_name*  
+ MODIFY NAME ** = ** *new_database_name*  
  重新命名資料庫名稱指定為*new_database_name*。  
   
  COLLATE *sys.databases*  
@@ -252,7 +252,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
-- [ALTER DATABASE &#40;Azure SQL Database &#41;](https://msdn.microsoft.com/library/mt574871.aspx)  
+- [ALTER DATABASE &#40;Azure SQL Database &#41;](/sql-docs/docs/t-sql/statements/alter-database-azure-sql-database)  
 - [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
 - [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md)   
 - [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md)   

@@ -18,10 +18,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d642d8d9d732a51c210e5d83cecf2b090ac2f426
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: b840ffc9c1cf621d1c59ee927fff26949b013c0d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="installing-integration-services-versions-side-by-side"></a>並存安裝 Integration Services 版本
@@ -29,7 +29,7 @@ ms.lasthandoff: 08/03/2017
       [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]Integration Services (SSIS)-並存與舊版 SSIS。 本主題說明並存安裝的一些限制。  
   
 ## <a name="designing-and-maintaining-packages"></a>設計和維護封裝  
- 若要設計和維護目標為 SQL Server 2016、SQL Server 2014 或 SQL Server 2012 的封裝，請使用適用於 Visual Studio 2015 的 SQL Server Data Tools (SSDT)。 若要取得 SSDT，請參閱 [下載最新的 SQL Server Data Tools](https://msdn.microsoft.com/library/mt204009.aspx)。  
+ 若要設計和維護目標為 SQL Server 2016、SQL Server 2014 或 SQL Server 2012 的封裝，請使用適用於 Visual Studio 2015 的 SQL Server Data Tools (SSDT)。 若要取得 SSDT，請參閱 [下載最新的 SQL Server Data Tools](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt)。  
   
  在 Integration Services 專案屬性頁面 [組態屬性] 的 [一般] 索引標籤中，選取 [TargetServerVersion] 屬性，然後選擇 SQL Server 2016、SQL Server 2014 或 SQL Server 2012。  
   

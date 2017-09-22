@@ -17,10 +17,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c1a3d4995d3cc79f9a31533b918268f14204d511
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: a37c630af512d85e22b3547eb520aebe22546040
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # TCP/IP 屬性 (通訊協定索引標籤)
@@ -43,7 +43,7 @@ ms.lasthandoff: 08/02/2017
   
 ## 另請參閱  
  [選擇網路通訊協定](https://msdn.microsoft.com/library/ms187892(v=sql.130).aspx)   
- [建立有效的連接字串使用 TCP IP](https://msdn.microsoft.com/library/ms191260.aspx)  
+ [Creating a Valid Connection String Using TCP IP](/sql-docs/docs/tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip)  
   
   
 

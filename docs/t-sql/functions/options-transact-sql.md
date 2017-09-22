@@ -1,7 +1,7 @@
 ---
 title: "@@OPTIONS (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
-ms.date: 10/11/2016
+ms.date: 09/18/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -24,13 +24,13 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: bc5a7b7899715ee06b8b0e6924893d0d8a04b14d
+ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
+ms.openlocfilehash: 9480ffeffa83650b5cf44ad51547c36d5563b13b
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/19/2017
 
 ---
-# <a name="options-transact-sql"></a>@@OPTIONS (TRANSACT-SQL)
+# <a name="x40x40options-transact-sql"></a>（& s) #x 40; & #x 40; 選項 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   傳回目前 SET 選項的相關資訊。  
@@ -40,7 +40,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 @@OPTIONS  
 ```  
   
@@ -50,11 +49,11 @@ ms.lasthandoff: 09/01/2017
 ## <a name="remarks"></a>備註  
  選項可來自使用**設定**命令或從**sp_configure 使用者選項**值。 使用設定的工作階段值**設定**命令覆寫**sp_configure**選項。 許多工具 (例如 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]) 會自動設定 set 選項。 每個使用者擁有 @@OPTIONS代表設定的函式。  
   
- 您可以利用 SET 陳述式來變更特定使用者工作階段的語言和查詢處理選項。 **@@OPTIONS** 只能偵測的選項設定為 ON 或 OFF。  
+ 您可以利用 SET 陳述式來變更特定使用者工作階段的語言和查詢處理選項。 **@@OPTIONS **只能偵測的選項設定為 ON 或 OFF。  
   
- **@@OPTIONS** 函式會傳回選項，並轉換成基底 10 （十進位） 的整數的點陣圖。 位元設定會儲存在本主題中的資料表中所述的位置[設定 user options 伺服器組態選項](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md)。  
+ **@@OPTIONS **函式會傳回選項，並轉換成基底 10 （十進位） 的整數的點陣圖。 位元設定會儲存在本主題中的資料表中所述的位置[設定 user options 伺服器組態選項](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md)。  
   
- 要解碼**@@OPTIONS** 值時，所傳回的整數轉換**@@OPTIONS** 為二進位，然後在資料表上的值查詢[設定 user options 伺服器組態選項](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md)。 例如，如果`SELECT @@OPTIONS;`傳回的值`5496`，使用 Windows 工程型小算盤 (**calc.exe**) 要轉換的十進位`5496`二進位檔。 結果為 `1010101111000`。 右大部分字元 （二進位 1、 2 和 4） 都是 0，表示資料表中的前三個項目已關閉。 查閱資料表，您會看到這些是**DISABLE_DEF_CNST_CHK**和**IMPLICIT_TRANSACTIONS**，和**CURSOR_CLOSE_ON_COMMIT**。 下一個項目 (**ANSI_WARNINGS**中`1000`位置) 上。 繼續透過使用左位元對應中，並在選項清單中向下。 0 的最左邊的選項時，它們會被截斷的類型轉換。 點陣圖 `1010101111000` 實際上是 `001010101111000` 來表示所有 15 個選項。  
+ 要解碼**@@OPTIONS **值時，所傳回的整數轉換**@@OPTIONS **為二進位，然後在資料表上的值查詢[設定 user options 伺服器組態選項](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md)。 例如，如果`SELECT @@OPTIONS;`傳回的值`5496`，使用 Windows 工程型小算盤 (**calc.exe**) 要轉換的十進位`5496`二進位檔。 結果為 `1010101111000`。 右大部分字元 （二進位 1、 2 和 4） 都是 0，表示資料表中的前三個項目已關閉。 查閱資料表，您會看到這些是**DISABLE_DEF_CNST_CHK**和**IMPLICIT_TRANSACTIONS**，和**CURSOR_CLOSE_ON_COMMIT**。 下一個項目 (**ANSI_WARNINGS**中`1000`位置) 上。 繼續透過使用左位元對應中，並在選項清單中向下。 0 的最左邊的選項時，它們會被截斷的類型轉換。 點陣圖 `1010101111000` 實際上是 `001010101111000` 來表示所有 15 個選項。  
   
 ## <a name="examples"></a>範例  
   

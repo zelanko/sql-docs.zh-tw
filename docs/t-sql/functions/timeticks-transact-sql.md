@@ -1,7 +1,7 @@
 ---
 title: "@@TIMETICKS (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
-ms.date: 03/03/2017
+ms.date: 09/18/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -26,13 +26,13 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: fb883a5cf2266bfd8fb79273f601c4564e9e8eed
+ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
+ms.openlocfilehash: 51139d84f42be25fe41c42907ddc6640b95899e3
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/19/2017
 
 ---
-# <a name="timeticks-transact-sql"></a>@@TIMETICKS (TRANSACT-SQL)
+# <a name="x40x40timeticks-transact-sql"></a>（& s) #x 40; & #x 40。TIMETICKS (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   傳回每個刻度的百萬分之一秒數。  
@@ -62,3 +62,4 @@ SELECT @@TIMETICKS AS 'Time Ticks';
  [系統統計函數 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
   
   
+

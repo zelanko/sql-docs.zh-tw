@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 64da74cc-14bf-4636-a55e-8cc1fce2aaff
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 74357e2741e01e44f0f9d504456fca10f29f78e7
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 6823b8a9cd3f92781d0fd3518f50b8866ba12d48
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="security-limitations-for-sql-server-on-linux"></a>SQL Server on Linux 的安全性限制
@@ -27,7 +27,7 @@ ms.lasthandoff: 08/02/2017
 * 不支援使用儲存在 Azure 金鑰保存庫金鑰。
 * SQL Server 會產生自己的自我簽署的憑證來加密連線。 目前，SQL Server 無法設定為使用使用者提供憑證以進行 SSL 或 TLS。 
 
-如需 SQL Server 中可用的安全性功能的詳細資訊，請參閱[SQL Server Database Engine 和 Azure SQL Database 的資訊安全中心](https://msdn.microsoft.com/library/bb510589.aspx)。
+如需 SQL Server 中可用的安全性功能的詳細資訊，請參閱[SQL Server Database Engine 和 Azure SQL Database 的資訊安全中心](/sql-docs/docs/relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database)。
 
 ## <a name="next-steps"></a>後續的步驟
 

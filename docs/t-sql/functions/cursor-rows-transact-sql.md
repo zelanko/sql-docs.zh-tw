@@ -1,7 +1,7 @@
 ---
 title: "@@CURSOR_ROWS (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
-ms.date: 07/24/2017
+ms.date: 08/18/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -25,13 +25,13 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0e3251891dfaa079933ea79c76154f76f7c2e148
+ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
+ms.openlocfilehash: 10a3a6cabae8d25de670cbacb037a62f4c5a2d54
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/19/2017
 
 ---
-# <a name="cursorrows-transact-sql"></a>@@CURSOR_ROWS (TRANSACT-SQL)
+# <a name="x40x40cursorrows-transact-sql"></a>（& s) #x 40; & #x 40。CURSOR_ROWS (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 傳回在連接所開啟的最後一個資料指標中，目前符合的資料列數。 若要提升效能，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以非同步地擴展大型索引鍵集和靜態資料指標。 @@CURSOR_ROWS可以呼叫以判斷符合資料指標的資料列數目會擷取 @ 次@CURSOR_ROWS呼叫。
@@ -40,7 +40,7 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="syntax"></a>語法  
   
-```sql
+```
 @@CURSOR_ROWS  
 ```  
   

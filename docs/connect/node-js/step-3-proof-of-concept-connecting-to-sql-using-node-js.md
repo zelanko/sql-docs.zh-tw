@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0332c6a7636341086abedebe5289e9a2f34d843b
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 783e6bc2e9dd928aaef2b5ecfb71efe47588a9b6
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-nodejs"></a>步驟 3： 連接到使用 Node.js SQL 的概念證明
@@ -101,7 +101,7 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="step-3-insert-a-row"></a>步驟 3： 插入資料列  
   
-在您將了解如何執行此範例[插入](https://msdn.microsoft.com/library/ms174335.aspx)陳述式，將參數可保護您的應用程式，從[SQL 資料隱碼](https://technet.microsoft.com/library/ms161953(v=sql.105).aspx)弱點和擷取自動產生的[主索引鍵](https://msdn.microsoft.com/library/ms179610.aspx)值。    
+在您將了解如何執行此範例[插入](/sql-docs/docs/t-sql/statements/insert-transact-sql)陳述式，將參數可保護您的應用程式，從[SQL 資料隱碼](/sql-docs/docs/relational-databases/tables/primary-and-foreign-key-constraints)值。    
   
   
 ```javascript  
