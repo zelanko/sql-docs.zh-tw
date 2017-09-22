@@ -69,7 +69,7 @@ ms.lasthandoff: 08/02/2017
 |**char varying [\*..8000]**|**varchar [\*]**|  
 |**char varying [8001..\*]**|**varchar(max)**|  
 |**char[\*..8000]**|**char[\*]**|  
-|**char [8001..\&# 42;]**|**varchar(max)**|  
+|**char [8001..\&#42;]**|**varchar(max)**|  
 |**字元**|**char**|  
 |**可變長度字元**|**varchar**|  
 |**可變長度字元 [\*..8000]**|**varchar [\*]**|  
