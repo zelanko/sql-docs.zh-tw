@@ -60,7 +60,7 @@ TLS 用來加密從用戶端應用程式的連線[!INCLUDE[ssNoVersion](../inclu
 - 限制存取權`mssql`  
    ```  
    sudo chown mssql:mssql mssql.pem mssql.key 
-   sudo chmod 400 mssql.pem mssql.key 
+   sudo chmod 600 mssql.pem mssql.key 
    ```  
  
 - 移至系統 SSL 目錄 （選擇性）  
