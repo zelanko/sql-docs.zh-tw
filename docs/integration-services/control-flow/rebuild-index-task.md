@@ -1,29 +1,34 @@
 ---
-title: "重建索引工作 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.rebuildindextask.f1"
-helpviewer_keywords: 
-  - "重建索引"
-  - "索引 [Integration Services]"
-  - "重建索引工作"
+title: "重建索引工作 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.rebuildindextask.f1
+helpviewer_keywords:
+- rebuilding indexes
+- indexes [Integration Services]
+- Rebuild Index task
 ms.assetid: 021884dd-e72d-47b2-99e8-b741410509c3
 caps.latest.revision: 50
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 50
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 514473610c4e1ba415e1f663a2abf52616cd23ab
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/26/2017
+
 ---
-# 重建索引工作
-  「重建索引」工作會重建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫資料表與檢視中的索引。 如需管理索引的詳細資訊，請參閱[重新組織與重建索引](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)。  
+# <a name="rebuild-index-task"></a>重建索引工作
+  「重建索引」工作會重建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫資料表與檢視中的索引。 如需管理索引的詳細資訊，請參閱 [重新組織與重建索引](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)。  
   
  藉由使用「重建索引」工作，封裝可重建單一資料庫或多重資料庫中的索引。 如果此工作只重建單一資料庫中的索引，您可以選擇要由此工作重建索引的檢視與資料表。  
   
@@ -40,7 +45,7 @@ caps.handback.revision: 50
 -   設定 ONLINE = ON，不要持有資料表鎖定，以便對基礎資料表的查詢或更新可在重建索引期間繼續進行。  
   
     > [!NOTE]  
-    >  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的所有版本都無法使用線上索引作業。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本支援的功能清單，請參閱 [SQL Server 2016 版本支援的功能](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)。  
+    >  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的所有版本都無法使用線上索引作業。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本支援的功能清單，請參閱 [SQL Server 2016 版本支援的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
 -   請指定 MAXDOP 值來限制執行平行計畫所用的處理器數目。  
   
@@ -51,18 +56,19 @@ caps.handback.revision: 50
 > [!IMPORTANT]  
 >  此工作用於建立工作執行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式之時間，與工作重建的索引數目成正比。 如果此工作設定成重建含有大量索引的資料庫內所有資料表與檢視中的索引，或是重建多重資料庫中的索引，則此工作可能會花費相當多的時間產生 Transact-SQL 陳述式。  
   
-## 設定重建索引工作  
+## <a name="configuration-of-the-rebuild-index-task"></a>設定重建索引工作  
  您可以透過「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」設定屬性 這項工作位於「 **設計師」中** [工具箱] **的** [維護計畫工作] [!INCLUDE[ssIS](../../includes/ssis-md.md)] 區段。  
   
  如需有關可在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中設定之屬性的詳細資訊，請按下列主題：  
   
  [重建索引工作 &#40;維護計畫&#41;](../../relational-databases/maintenance-plans/rebuild-index-task-maintenance-plan.md)  
   
-## 相關工作  
- 如需如何在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計工具中設定這些屬性的詳細資訊，請參閱 [Set the Properties of a Task or Container](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md) (設定工作或容器的屬性)。  
+## <a name="related-tasks"></a>相關工作  
+ 如需如何在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計工具中設定這些屬性的詳細資訊，請參閱 [Set the Properties of a Task or Container](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)(設定工作或容器的屬性)。  
   
-## 請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [Integration Services 工作](../../integration-services/control-flow/integration-services-tasks.md)   
  [控制流程](../../integration-services/control-flow/control-flow.md)  
   
   
+

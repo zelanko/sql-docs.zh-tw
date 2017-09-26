@@ -16,11 +16,11 @@ caps.latest.revision: 276
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0447dd94774287a71028252723508ebc5e2e50f8
+ms.translationtype: HT
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 287e4d57ae890b6ba9c7e6fc92b3bf209263abf5
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="sql-server-2016-release-notes"></a>SQL Server 2016 版本資訊
@@ -32,7 +32,7 @@ ms.lasthandoff: 06/22/2017
     
 [![Azure 虛擬機器小型](../analysis-services/media/azure-virtual-machine-small.png)](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/) 擁有 Azure 帳戶嗎？  接著前往 **[這裡](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/)** 來啟動已安裝 SQL Server 2016 SP1 的虛擬機器。
     
-[![下載 SSMS](../analysis-services/media/download.png)](https://msdn.microsoft.com/library/mt238290.aspx) **SSMS：**若要取得最新版的 SQL Server Management Studio，請參閱**[下載 SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx)**。   
+[![下載 SSMS](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms) **SSMS：**若要取得最新版的 SQL Server Management Studio，請參閱**[下載 SQL Server Management Studio (SSMS)](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms)**。   
     
  如需新功能的相關資訊，請參閱 [SQL Server 2016 的新功能](http://msdn.microsoft.com/library/8223c19b-4b0d-4b1d-a042-9a726c18e708)。
     

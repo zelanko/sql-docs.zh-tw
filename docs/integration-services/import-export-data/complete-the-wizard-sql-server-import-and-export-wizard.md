@@ -1,38 +1,48 @@
 ---
-title: "完成精靈 (SQL Server 匯入和匯出精靈) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.impexpwizard.completewizard.f1"
+title: "完成精靈 （SQL Server 匯入和匯出精靈） |Microsoft 文件"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.impexpwizard.completewizard.f1
 ms.assetid: fbf0aa37-fd9e-47e1-82b4-26c1359ec3da
 caps.latest.revision: 46
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 43
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: c2592ac0539b2cd693e4aef48d7652c7970ec71c
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/26/2017
+
 ---
-# 完成精靈 (SQL Server 匯入和匯出精靈)
-指定是否要立即執行複製作業之後，以及選擇性儲存封裝之後，[[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈] 會顯示 [完成精靈]。 在此頁面上，您可以檢閱在精靈中的選擇，然後按一下 [完成] 開始複製作業。
+# <a name="complete-the-wizard-sql-server-import-and-export-wizard"></a>完成精靈 (SQL Server 匯入和匯出精靈)
+而且您選擇儲存封裝精靈所建立，您可以指定您是否要立即執行複製作業之後[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]匯入和匯出精靈 」 會顯示**完成精靈**。 在此頁面上，您可以檢閱在精靈中的選擇，然後按一下 [完成]  開始複製作業。
  
 ## <a name="screen-shot-of-the-complete-the-wizard-page"></a>[完成精靈] 頁面的螢幕擷取畫面 
- 下列螢幕擷取畫面顯示精靈的 [完成精靈] 頁面。  
+ 下列螢幕擷取畫面顯示簡單的範例**完成精靈**精靈頁面。  
   
- ![Complete the Wizard page of the Import and Export Wizard](../../integration-services/import-export-data/media/complete.png "Complete the Wizard page of the Import and Export Wizard")  
+ ![完成精靈頁面的匯入和匯出精靈](../../integration-services/import-export-data/media/complete.png "完成精靈頁面的匯入和匯出精靈")  
   
 ## <a name="review-the-options-you-selected"></a>檢閱您選取的選項  
  
- 檢視包括下列資訊的摘要：  
+檢閱摘要，並確認下列資訊：  
 -   要複製之資料的來源和目的地。
 -   要複製的資料。
 -   是否儲存封裝。
 -   是否立即執行套件。  
   
 ## <a name="whats-next"></a>下一步  
- 檢閱在精靈中的選擇並按一下 [完成] 之後，下一頁是 [正在執行作業]。 在此頁面上，您會看到在前幾頁設定之作業的進度和結果。 如需詳細資訊，請參閱[執行作業](../../integration-services/import-export-data/performing-operation-sql-server-import-and-export-wizard.md)。  
+ 檢閱在精靈中的選擇並按一下 [完成] 之後，下一頁是 [正在執行作業] 。 在此頁面上，您會看到在前幾頁設定之作業的進度和結果。 如需詳細資訊，請參閱 [執行作業](../../integration-services/import-export-data/performing-operation-sql-server-import-and-export-wizard.md)。
+ 
+## <a name="see-also"></a>另請參閱
+[透過匯入和匯出精靈的簡單範例開始使用](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
+
+

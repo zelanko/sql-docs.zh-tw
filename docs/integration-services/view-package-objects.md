@@ -1,32 +1,37 @@
 ---
-title: "檢視封裝物件 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Integration Services 封裝，屬性"
-  - "屬性 [Integration Services]"
-  - "封裝總管視窗 [Integration Services]"
-  - "封裝 [Integration Services]，屬性"
-  - "總管檢視 [Integration Services]"
-  - "SSIS 封裝，屬性"
-  - "檢視封裝物件"
-  - "SQL Server Integration Services 封裝，屬性"
+title: "檢視封裝物件 |Microsoft 文件"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Integration Services packages, properties
+- properties [Integration Services]
+- Package Explorer window [Integration Services]
+- packages [Integration Services], properties
+- explorer view [Integration Services]
+- SSIS packages, properties
+- viewing package objects
+- SQL Server Integration Services packages, properties
 ms.assetid: a85c0245-0a68-4eb0-83b1-9b11df80bd10
 caps.latest.revision: 36
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 4314664538d2f3f328e0fbc48965e2541089a95c
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/26/2017
+
 ---
-# 檢視封裝物件
+# <a name="view-package-objects"></a>檢視封裝物件
   在「[!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師」中，[封裝總管] 索引標籤提供封裝的總管檢視。 此檢視反映 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 架構的容器階層。 封裝容器位於階層的頂端，您可以展開封裝以檢視其中的連接、可執行檔、事件處理常式、記錄提供者、優先順序條件約束和變數。  
   
  可執行檔 (封裝中的容器和工作) 可包含事件處理常式、優先順序條件約束和變數。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 支援容器的巢狀階層，而「For 迴圈」、「Foreach 迴圈」和「時序」容器可包含其他可執行檔。  
@@ -39,16 +44,30 @@ caps.handback.revision: 35
   
  ![封裝總管索引標籤的螢幕擷取畫面](../integration-services/media/packageexplorer.gif "封裝總管索引標籤的螢幕擷取畫面")  
   
-### 檢視封裝內容  
+## <a name="view-the-package-structure-and-content"></a>檢視封裝結構及內容  
   
--   [在封裝總管中檢視封裝物件](../Topic/View%20Package%20Objects%20in%20Package%20Explorer.md)  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，開啟包含您要在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] [封裝總管] **中檢視之封裝的**專案。  
   
-## 請參閱＜  
+2.  按一下 **[封裝總管]** 索引標籤。  
+  
+3.  若要檢視 **[變數]**、 **[優先順序條件約束]**、 **[事件處理常式]**、 **[連接管理員]**、 **[記錄提供者]**或 **[可執行檔]** 資料夾的內容，請展開各個資料夾。  
+  
+4.  視封裝結構而定，展開任何下一層級資料夾。  
+  
+## <a name="view-the-properties-of-a-package-object"></a>檢視封裝物件的屬性
+  
+-   以滑鼠右鍵按一下物件，然後按一下 [屬性]以開啟 [屬性] 視窗。  
+  
+## <a name="delete-an-object-in-a-package"></a>刪除封裝中的物件  
+  
+-   以滑鼠右鍵按一下物件，然後按一下 [刪除]。 
+ 
+## <a name="see-also"></a>另請參閱  
  [Integration Services 工作](../integration-services/control-flow/integration-services-tasks.md)   
  [整合服務容器](../integration-services/control-flow/integration-services-containers.md)   
  [優先順序條件約束](../integration-services/control-flow/precedence-constraints.md)   
  [Integration Services &#40;SSIS&#41; 變數](../integration-services/integration-services-ssis-variables.md)   
- [Integration Services &#40;SSIS&#41; 事件處理常式](../integration-services/integration-services-ssis-event-handlers.md)   
- [Integration Services &#40;SSIS&#41; 記錄](../integration-services/performance/integration-services-ssis-logging.md)  
+ [Integration Services &#40;SSIS &#41;事件處理常式](../integration-services/integration-services-ssis-event-handlers.md)   
+ [Integration Services &#40;SSIS &#41;記錄](../integration-services/performance/integration-services-ssis-logging.md)  
   
   

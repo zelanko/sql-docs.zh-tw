@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 71a2cbf181c94c4c1aff877614aadf890b2496e0
-ms.openlocfilehash: e4bc77e76190463864ecab75ae94e28b16624309
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 45915dbb8ce5883c379c0cebdbc62e6ff43ede1a
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/23/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) 的變更記錄
-這是 [SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx) 的變更記錄。  
+這是 [SQL Server Data Tools (SSDT)](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt) 的變更記錄。  
   
 如需新功能和已變更功能的詳細文章，請參閱 [SSDT 小組部落格](https://blogs.msdn.microsoft.com/ssdt/)。
 
@@ -368,7 +368,7 @@ SSDT 表格式現在包含內部的 SSAS 執行個體，若啟用整合式工作
 
 - **發行版本控制與編號︰**發行版本現在以數值標記而不是依月份標記。 這與新的 SSMS 原則一致，並簡化在一個月中有多個版本或 hotfix 時的情況。 此版本是 16.3，表示在 RTM 版本之後的第三個更新。 任何 hotfix 將是 16.3.1，依此類推，下一個更新 (下個月的計劃) 將是 16.4。
 - **Analysis Services - 表格式模型總管：**表格式模型總管可讓您在模型中方便瀏覽各種中繼資料物件，例如資料來源、資料表、量值和關聯性。 它會實作為獨立的工具視窗，您可以在 Visual Studio 中開啟 [檢視] 功能表，指向 [其他視窗]，然後按一下 [表格式模型總管] 來顯示。 表格式模型總管預設會出現在方案總管區域的另一個索引標籤上。表格式模型總管會將中繼資料物件組織在與表格式 1200 模型結構描述十分類似的樹狀結構中，而且有更多新功能。
-- **資料庫工具 - Always Encrypted**︰此版本提供新的[Always Encrypted 金鑰管理](https://msdn.microsoft.com/library/mt708953.aspx)對話方塊，可輕鬆地將資料行主要金鑰或資料行加密金鑰加入至資料庫專案或 SQL Server 物件總管中的即時資料庫。 此版本支援 Windows 憑證存放區中的憑證。 未來的版本將會支援 Azure 金鑰保存庫和 CNG 提供者。
+- **資料庫工具 - Always Encrypted**︰此版本提供新的[Always Encrypted 金鑰管理](/sql-docs/docs/relational-databases/security/encryption/overview-of-key-management-for-always-encrypted)對話方塊，可輕鬆地將資料行主要金鑰或資料行加密金鑰加入至資料庫專案或 SQL Server 物件總管中的即時資料庫。 此版本支援 Windows 憑證存放區中的憑證。 未來的版本將會支援 Azure 金鑰保存庫和 CNG 提供者。
     - 在建立資料行主要金鑰或資料行加密金鑰時，您可能會發現按一下 [更新資料庫] 之後，SQL Server 物件總管無法立即反映所做的變更。 若要解決這個問題，請重新整理 SQL Server 物件總管中的資料庫節點。
     - 如果您嘗試加密的資料表資料行含有來自 SQL Server 物件總管的資料，您可能會失敗。 目前只有在 SSDT 資料庫專案和 SSMS 中才支援這項功能。 未來版本中將會支援 SQL Server 物件總管。
 
@@ -456,7 +456,7 @@ SSDT 公開上市 (GA) 現在已發行。 2016 年 6 月的 SSDT GA 更新加入
 [下載 SQL Server Data Tools &#40;SSDT&#41;](../ssdt/download-sql-server-data-tools-ssdt.md)  
 [舊版的 SQL Server Data Tools (SSDT 和 SSDT-BI)](../ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md)  
 [Database Engine 的新功能](https://msdn.microsoft.com/library/bb510411.aspx)  
-[Analysis Services 的新功能](https://msdn.microsoft.com/library/bb522628.aspx)  
-[Integration Services 的新功能](https://msdn.microsoft.com/library/bb522534.aspx)  
+[Analysis Services 的新功能](/sql-docs/docs/analysis-services/what-s-new-in-analysis-services)  
+[Integration Services 的新功能](/sql-docs/docs/integration-services/what-s-new-in-integration-services-in-sql-server-2016)  
   
 
