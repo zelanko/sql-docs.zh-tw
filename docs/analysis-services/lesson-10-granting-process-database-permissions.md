@@ -59,7 +59,7 @@ ms.lasthandoff: 09/01/2017
     現在您已經順利定義和部署處理資料庫物件安全性角色了。 當您把 Cube 部署到實際環境之後，部署 Cube 的管理員就可以根據需要，把使用者加入這個角色中，將處理責任委託給特定的使用者。  
   
 > [!NOTE]  
-> 您可以下載並安裝範例，取得完成第 10 課的專案。 如需詳細資訊，請參閱 [Install Sample Data and Projects for the Analysis Services Multidimensional Modeling Tutorial](../analysis-services/install-sample-data-and-projects.md)。  
+> 您可以下載並安裝範例，取得完成第 10 課的專案。 如需詳細資訊，請參閱 [安裝 Analysis Services 多維度模型化教學課程的範例資料和專案](../analysis-services/install-sample-data-and-projects.md)。  
   
 ## <a name="see-also"></a>另請參閱  
 [角色與權限 &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)  
