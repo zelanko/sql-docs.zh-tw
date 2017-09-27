@@ -2,7 +2,7 @@
 title: "什麼 &#39; 新的 SSMA for Access(AccessToSQL) s |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.custom: 
-ms.date: 08/17/2017
+ms.date: 09/22/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -18,14 +18,20 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: 80642503480add90fc75573338760ab86139694c
-ms.openlocfilehash: 06347e6e199fe2aea5f4854b3b355bf28d8d1769
+ms.sourcegitcommit: 8c43a46a3fef09fa2c8b3510b541cd545e438313
+ms.openlocfilehash: d955f186e5a533839becdec5aefebc0af750bef1
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
+ms.lasthandoff: 09/22/2017
 
 ---
 # <a name="what39s-new-in-ssma-for-access-accesstosql"></a>什麼 &#39; s SSMA for Access (AccessToSQL) 的新功能
 本主題列出 SSMA 存取每個版本中的變更。  
+
+## <a name="ssma-v75"></a>SSMA v7.5
+SSMA for Access v7.5 發行已經增強，以確保行動不便人士更大的存取範圍的數個增強功能。
+
+> [!IMPORTANT]
+> .Net 4.5.2 是安裝 SSMA v7.5 的必要條件。 此外，開頭 v7.4，32 位元版本的 SSMA 會停止。
 
 ## <a name="ssma-v74"></a>SSMA v7.4
 SSMA for Access v7.4 版本包含下列變更：
@@ -157,7 +163,7 @@ SSMA for Access 的 2006 年 11 月版本包含下列變更：
 -   加入新的 Database 移轉精靈可引導您完成移轉單一資料庫的存取權從[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  
 -   加入新的轉換，負載，並將 Access 資料庫的移轉命令載入轉換的物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，並移轉資料到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]所有以一個步驟。  
 -   提升的查詢的移轉。 現在將更選取檢視的查詢，請查詢移轉。 如需詳細資訊，請參閱[轉換來存取資料庫物件](http://msdn.microsoft.com/en-us/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c)。  
--   加入編輯資料表和索引的屬性上的功能[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]**資料表**索引標籤。  
+-   加入編輯資料表和索引的屬性上的功能[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]**資料表** 索引標籤。  
 -   加入新的通用設定：  
     -   您可以選擇在編輯器視窗中顯示行號。  
     -   您可以設定 SSMA 提示來取代重複的物件，或一律或永遠不會取代重複的物件結構描述轉換期間。  

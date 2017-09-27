@@ -1,7 +1,7 @@
 ---
 title: "SQL Server 移轉小幫手 |Microsoft 文件"
 ms.custom: 
-ms.date: 08/17/2017
+ms.date: 09/22/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -18,14 +18,14 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: 80642503480add90fc75573338760ab86139694c
-ms.openlocfilehash: e6cdbf2e39051ad4298966863f16fb7295f6a8a5
+ms.sourcegitcommit: 8c43a46a3fef09fa2c8b3510b541cd545e438313
+ms.openlocfilehash: 6310f16ee3f3a57c46e1aab1023c18fcaf6bf074
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
+ms.lasthandoff: 09/22/2017
 
 ---
 # <a name="sql-server-migration-assistant"></a>SQL Server 移轉小幫手
-Microsoft SQL Server 移轉小幫手 (SSMA) 是要從 Microsoft Access、 DB2、 MySQL、 Oracle 和 Sybase 自動化 SQL Server 資料庫移轉所設計的工具。  
+Microsoft SQL Server 移轉小幫手 (SSMA) 是要從 Microsoft Access、 DB2、 MySQL、 Oracle 和 SAP ASE 自動化 SQL Server 資料庫移轉所設計的工具。  
   
 ## <a name="migration-sources"></a>移轉來源  
   
@@ -37,7 +37,7 @@ Microsoft SQL Server 移轉小幫手 (SSMA) 是要從 Microsoft Access、 DB2、
   
 -   [Oracle 的 SQL Server 移轉小幫手](../ssma/oracle/sql-server-migration-assistant-for-oracle-oracletosql.md)  
   
--  [Sybase ASE 的 SQL Server 移轉小幫手](../ssma/sybase/sql-server-migration-assistant-for-sybase-sybasetosql.md)  
+-  [SAP ASE 的 SQL Server 移轉小幫手](../ssma/sybase/sql-server-migration-assistant-for-sybase-sybasetosql.md)  
 
 ## <a name="supported-sources-and-target-versions"></a>支援的來源和目標版本
 對於支援的來源，請檢閱 SSMA 下載下載中心上的資訊。
@@ -55,13 +55,12 @@ SSMA 支援下列版本的目標。
 
 * * SSMA for Oracle 只有才支援此目標。
  
-
 ## <a name="downloads"></a>下載
 - [SSMA for Access](http://aka.ms/ssmaforaccess)
 - [SSMA for DB2](http://aka.ms/ssmafordb2)
 - [SSMA for MySql](http://aka.ms/ssmaformysql)
 - [SSMA for Oracle](http://aka.ms/ssmafororacle)
-- [SSMA for Sybase ASE](http://aka.ms/ssmaforsybase)
+- [SSMA for SAP ASE](http://aka.ms/ssmaforsybase)
  
 ## <a name="getting-ssma-support"></a>取得 SSMA 支援  
 **說明及支援的 Microsoft SQL Server 移轉小幫手 (SSMA):**  

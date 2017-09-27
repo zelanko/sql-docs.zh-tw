@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 ms.translationtype: MT
-ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
-ms.openlocfilehash: baa5826e9722bfb23afacf729d80bebf88985ed3
+ms.sourcegitcommit: dbe6f832d4af55ddd15e12fba17a4da490fe19ae
+ms.openlocfilehash: 14277304baaaf6aa40fe279af407c7ce915eaa60
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/25/2017
 
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>在 Linux 上的 SQL Server 2017 的版本資訊
@@ -22,7 +22,7 @@ ms.lasthandoff: 08/09/2017
 
 下表列出本主題中涵蓋的 SQL Server 2017 的發行版本。
 
-| 版本 | 版本 | 發行日期 |
+| 版本 | Version | 發行日期 |
 |-----|-----|-----|
 | [RC2](#RC2) | 14.0.900.75 | 8-2017 |
 | [RC1](#RC1) | 14.0.800.90 | 7-2017 |
@@ -45,7 +45,7 @@ ms.lasthandoff: 08/09/2017
 | Red Hat Enterprise Linux 7.3 工作站、 伺服器和桌面 | XFS 或 EXT4 | [安裝指南](quickstart-install-connect-red-hat.md) | 
 | SUSE Enterprise Linux Server v12 SP2 | EXT4 | [安裝指南](quickstart-install-connect-suse.md) |
 | Ubuntu 16.04LTS | EXT4 | [安裝指南](quickstart-install-connect-ubuntu.md) | 
-| Docker 引擎 1.8 + Windows、 Mac 或 Linux 上 | 해당 사항 없음 | [安裝指南](quickstart-install-connect-docker.md) | 
+| Docker 引擎 1.8 + Windows、 Mac 或 Linux 上 | 不適用 | [安裝指南](quickstart-install-connect-docker.md) | 
 
 > [!NOTE]
 > 您需要至少 3.25 GB 的記憶體來執行 SQL Server on Linux。
@@ -73,7 +73,7 @@ ms.lasthandoff: 08/09/2017
 | [SQL Server Data Tools for Visual Studio](https://go.microsoft.com/fwlink/?linkid=846626) | 17.0 |
 | [Visual Studio Code](https://code.visualstudio.com)與[mssql 延伸模組](https://aka.ms/mssql-marketplace) | 最新 |
 
-### <a name="unsupported-features-and-services"></a>不支援的功能和服務
+### <a name="Unsupported"></a>不支援的功能和服務
 
 下列功能和服務並不適用於 Linux 這一次。 這些功能的支援會逐漸啟用期間每月更新的頻率，預覽計畫。
 
@@ -232,7 +232,7 @@ ms.lasthandoff: 08/09/2017
 | Red Hat Enterprise Linux 7.3 工作站、 伺服器和桌面 | XFS 或 EXT4 | [安裝指南](quickstart-install-connect-red-hat.md) | 
 | SUSE Enterprise Linux Server v12 SP2 | EXT4 | [安裝指南](quickstart-install-connect-suse.md) |
 | Ubuntu 16.04LTS | EXT4 | [安裝指南](quickstart-install-connect-ubuntu.md) | 
-| Docker 引擎 1.8 + Windows、 Mac 或 Linux 上 | 해당 사항 없음 | [安裝指南](quickstart-install-connect-docker.md) | 
+| Docker 引擎 1.8 + Windows、 Mac 或 Linux 上 | 不適用 | [安裝指南](quickstart-install-connect-docker.md) | 
 
 > [!NOTE]
 > 您需要至少 3.25 GB 的記憶體來執行 SQL Server on Linux。
@@ -422,7 +422,7 @@ RC1 中叢集資源代理程式會設定虛擬伺服器名稱，在 Windows 上�
 | Red Hat Enterprise Linux 7.3 工作站、 伺服器和桌面 | XFS 或 EXT4 | [安裝指南](quickstart-install-connect-red-hat.md) | 
 | SUSE Enterprise Linux Server v12 SP2 | EXT4 | [安裝指南](quickstart-install-connect-suse.md) |
 | Ubuntu 16.04LTS | EXT4 | [安裝指南](quickstart-install-connect-ubuntu.md) | 
-| Docker 引擎 1.8 + Windows、 Mac 或 Linux 上 | 해당 사항 없음 | [安裝指南](quickstart-install-connect-docker.md) | 
+| Docker 引擎 1.8 + Windows、 Mac 或 Linux 上 | 不適用 | [安裝指南](quickstart-install-connect-docker.md) | 
 
 > [!NOTE]
 > 您需要至少 3.25 GB 的記憶體來執行 SQL Server on Linux。
@@ -579,7 +579,7 @@ RC1 中叢集資源代理程式會設定虛擬伺服器名稱，在 Windows 上�
 | Red Hat Enterprise Linux 7.3 工作站、 伺服器和桌面 | XFS 或 EXT4 | [安裝指南](quickstart-install-connect-red-hat.md) | 
 | SUSE Enterprise Linux Server v12 SP2 | EXT4 | [安裝指南](quickstart-install-connect-suse.md) |
 | Ubuntu 16.04LTS 和 16.10 | EXT4 | [安裝指南](quickstart-install-connect-ubuntu.md) | 
-| Docker 引擎 1.8 + Windows、 Mac 或 Linux 上 | 해당 사항 없음 | [安裝指南](quickstart-install-connect-docker.md) | 
+| Docker 引擎 1.8 + Windows、 Mac 或 Linux 上 | 不適用 | [安裝指南](quickstart-install-connect-docker.md) | 
 
 > [!NOTE] 
 > 您需要至少 3.25 GB 的記憶體來執行 SQL Server on Linux。
@@ -726,7 +726,7 @@ RC1 中叢集資源代理程式會設定虛擬伺服器名稱，在 Windows 上�
 | Red Hat Enterprise Linux 7.3 工作站、 伺服器和桌面 | XFS 或 EXT4 | [安裝指南](quickstart-install-connect-red-hat.md) | 
 | SUSE Enterprise Linux Server v12 SP2 | EXT4 | [安裝指南](quickstart-install-connect-suse.md) |
 | Ubuntu 16.04LTS 和 16.10 | EXT4 | [安裝指南](quickstart-install-connect-ubuntu.md) | 
-| Docker 引擎 1.8 + Windows、 Mac 或 Linux 上 | 해당 사항 없음 | [安裝指南](quickstart-install-connect-docker.md) | 
+| Docker 引擎 1.8 + Windows、 Mac 或 Linux 上 | 不適用 | [安裝指南](quickstart-install-connect-docker.md) | 
 
 > [!NOTE] 
 > 您需要至少 3.25 GB 的記憶體來執行 SQL Server on Linux。
@@ -905,7 +905,7 @@ RC1 中叢集資源代理程式會設定虛擬伺服器名稱，在 Windows 上�
 | Red Hat Enterprise Linux 7.3 工作站、 伺服器和桌面 | XFS 或 EXT4 | [安裝指南](quickstart-install-connect-red-hat.md) | 
 | SUSE Enterprise Linux Server v12 SP2 | EXT4 | [安裝指南](quickstart-install-connect-suse.md) |
 | Ubuntu 16.04LTS 和 16.10 | EXT4 | [安裝指南](quickstart-install-connect-ubuntu.md) | 
-| Docker 引擎 1.8 + Windows、 Mac 或 Linux 上 | 해당 사항 없음 | [安裝指南](quickstart-install-connect-docker.md) | 
+| Docker 引擎 1.8 + Windows、 Mac 或 Linux 上 | 不適用 | [安裝指南](quickstart-install-connect-docker.md) | 
 
 > [!NOTE] 
 > 您需要至少 3.25 GB 的記憶體來執行 SQL Server on Linux。
@@ -1063,7 +1063,7 @@ RC1 中叢集資源代理程式會設定虛擬伺服器名稱，在 Windows 上�
 | Red Hat Enterprise Linux 7.3 工作站、 伺服器和桌面 | XFS 或 EXT4 | [安裝指南](quickstart-install-connect-red-hat.md) | 
 | SUSE Enterprise Linux Server v12 SP2 | EXT4 | [安裝指南](quickstart-install-connect-suse.md) |
 | Ubuntu 16.04LTS 和 16.10 | EXT4 | [安裝指南](quickstart-install-connect-ubuntu.md) | 
-| Docker 引擎 1.8 + Windows、 Mac 或 Linux 上 | 해당 사항 없음 | [安裝指南](quickstart-install-connect-docker.md) | 
+| Docker 引擎 1.8 + Windows、 Mac 或 Linux 上 | 不適用 | [安裝指南](quickstart-install-connect-docker.md) | 
 
 > [!NOTE] 
 > 您需要至少 3.25 GB 的記憶體來執行 SQL Server on Linux。
@@ -1208,7 +1208,7 @@ RC1 中叢集資源代理程式會設定虛擬伺服器名稱，在 Windows 上�
 |-----|-----|-----|
 | Red Hat Enterprise Linux 工作站、 伺服器和桌面 | XFS 或 EXT4 | [安裝指南](quickstart-install-connect-red-hat.md) | 
 | Ubuntu 16.04LTS 和 16.10 | EXT4 | [安裝指南](quickstart-install-connect-ubuntu.md) | 
-| Docker 引擎 1.8 + Windows、 Mac 或 Linux 上 | 해당 사항 없음 | [安裝指南](quickstart-install-connect-docker.md) | 
+| Docker 引擎 1.8 + Windows、 Mac 或 Linux 上 | 不適用 | [安裝指南](quickstart-install-connect-docker.md) | 
 
 > [!NOTE] 
 > 您需要至少 3.25 GB 的記憶體來執行 SQL Server on Linux。
@@ -1344,7 +1344,7 @@ v
 |-----|-----|-----|
 | Red Hat Enterprise Linux 7.2 工作站、 伺服器和桌面 | XFS 或 EXT4 | [安裝指南](quickstart-install-connect-red-hat.md) | 
 | Ubuntu 16.04LTS | EXT4 | [安裝指南](quickstart-install-connect-ubuntu.md) | 
-| Docker 引擎 1.8 + Windows、 Mac 或 Linux 上 | 해당 사항 없음 | [安裝指南](quickstart-install-connect-docker.md) | 
+| Docker 引擎 1.8 + Windows、 Mac 或 Linux 上 | 不適用 | [安裝指南](quickstart-install-connect-docker.md) | 
 
 > [!NOTE] 
 > 您需要至少 3.25 GB 的記憶體來執行 SQL Server on Linux。

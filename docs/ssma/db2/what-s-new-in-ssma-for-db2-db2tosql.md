@@ -2,7 +2,7 @@
 title: "什麼 &#39; s SSMA for DB2 中的新 (DB2ToSQL) |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.custom: 
-ms.date: 08/17/2017
+ms.date: 09/22/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -18,14 +18,20 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: 80642503480add90fc75573338760ab86139694c
-ms.openlocfilehash: 66c14c087752244985886ca539c8ea80504f8159
+ms.sourcegitcommit: 8c43a46a3fef09fa2c8b3510b541cd545e438313
+ms.openlocfilehash: 03a3de915ae5426f15f04b95c0148610ec917047
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
+ms.lasthandoff: 09/22/2017
 
 ---
 # <a name="what39s-new-in-ssma-for-db2-db2tosql"></a>什麼 &#39; s SSMA for DB2 中的新 (DB2ToSQL)
 本主題列出每個版本中的 DB2 變更 SSMA。  
+
+## <a name="ssma-v75"></a>SSMA v7.5
+V7.5 版的 SSMA for DB2 已經增強，以確保行動不便人士更大的存取範圍的數個增強功能。
+
+> [!IMPORTANT]
+> .Net 4.5.2 是安裝 SSMA v7.5 的必要條件。 此外，開頭 v7.4，32 位元版本的 SSMA 會停止。
 
 ## <a name="ssma-v74"></a>SSMA v7.4
 V7.4 版的 SSMA for DB2 會包含下列變更：
