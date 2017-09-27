@@ -6,6 +6,28 @@
 ## [新的與最近更新的文件](new-updated-integration-services.md)
 ## [SQL Server 各版本支援的 Integration Services 功能](integration-services-features-supported-by-the-editions-of-sql-server.md)
 ## [Integration Services 回溯相容性](integration-services-backward-compatibility.md)
+
+# 快速入門
+## 部署
+### [使用 SSMS 部署](./ssis-quickstart-deploy-ssms.md)
+### [使用 Transact-SQL (SSMS) 部署](./ssis-quickstart-deploy-tsql-ssms.md)
+### [使用 Transact-SQL (VS Code) 部署](ssis-quickstart-deploy-tsql-vscode.md)
+### [從命令提示字元部署](./ssis-quickstart-deploy-cmdline.md)
+### [使用 PowerShell 部署](ssis-quickstart-deploy-powershell.md)
+### [使用 C# 部署](./ssis-quickstart-deploy-dotnet.md) 
+## [執行]
+### [使用 SSMS 執行](./ssis-quickstart-run-ssms.md)
+### [使用 Transact-SQL (SSMS) 執行](./ssis-quickstart-run-tsql-ssms.md)
+### [使用 Transact-SQL (VS Code) 執行](ssis-quickstart-run-tsql-vscode.md)
+### [從命令提示字元執行](./ssis-quickstart-run-cmdline.md)
+### [使用 PowerShell 執行](ssis-quickstart-run-powershell.md)
+### [使用 C# 執行](./ssis-quickstart-run-dotnet.md) 
+
+# [將 SSIS 套件隨即轉移至 Azure](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)
+## [教學課程 - 部署、執行和監視 Azure 上的套件](lift-shift/ssis-azure-deploy-run-monitor-tutorial.md)
+## [連線到 Azure 上的 SSIS 目錄](lift-shift/ssis-azure-connect-to-catalog-database.md)
+## [在 Azure 上排程套件執行](lift-shift/ssis-azure-schedule-packages.md)
+## [使用 Windows 驗證連線到資料來源](lift-shift/ssis-azure-connect-with-windows-auth.md)
 # [安裝或升級](../integration-services/install-windows/install-integration-services.md)
 
 # [開發與管理工具](integration-services-ssis-development-and-management-tools.md)

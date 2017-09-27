@@ -31,7 +31,7 @@ ms.lasthandoff: 09/01/2017
 # <a name="thread-pool-properties"></a>執行緒集區屬性
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 為許多作業使用多執行緒處理，透過平行執行多個作業改善整體伺服器效能。 為了更有效率地管理執行緒， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 使用執行緒集區預先配置執行緒，以使下一個作業有可用的執行緒。  
   
- 每個 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體各自維護一組執行緒集區。 表格式執行個體和多維度執行個體使用執行緒集區的方式不同。 例如，只有多維度執行個體使用 **IOProcess** 執行緒集區。 因此，如同本主題所述， **PerNumaNode** 屬性對於表格式執行個體沒有意義。 在下面的 [屬性參考] [](#bkmk_propref) 區段中，會呼叫每個屬性的模式需求。
+ 每個 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體各自維護一組執行緒集區。 表格式執行個體和多維度執行個體使用執行緒集區的方式不同。 例如，只有多維度執行個體使用 **IOProcess** 執行緒集區。 因此，如同本主題所述， **PerNumaNode** 屬性對於表格式執行個體沒有意義。 在下面的 [屬性參考](#bkmk_propref) 區段中，會呼叫每個屬性的模式需求。
   
  本主題包含下列幾節：  
   
