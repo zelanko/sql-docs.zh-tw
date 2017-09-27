@@ -1,7 +1,7 @@
 ---
 title: "啟用資料庫引擎的加密連接 | Microsoft Docs"
 ms.custom: 
-ms.date: 06/12/2017
+ms.date: 09/11/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -25,10 +25,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 5dba6e8516e97ce603b529b8ad4c07eac0db2981
+ms.sourcegitcommit: 754242a86367b07b98caa9f70f457b70d0840075
+ms.openlocfilehash: a00e09f47685eba578296b8e390d3c7d15fc6953
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/12/2017
 
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>啟用資料庫引擎的加密連接
@@ -50,9 +50,7 @@ ms.lasthandoff: 08/02/2017
 > 在 Azure VM 上建立 Azure 搜尋服務索引子到 SQL Server 的加密連線時，請參閱 [在 Azure VM 上設定從 Azure 搜尋服務索引子到 SQL Server 的連線](https://azure.microsoft.com/documentation/articles/search-howto-connecting-azure-sql-iaas-to-azure-search-using-indexers/)。 
   
  
-##  <a name="SSMSProcedure"></a>  
-  
-###  <a name="Provision"></a> 若要在伺服器上提供 (安裝) 憑證  
+##  <a name="Provision"></a> 若要在伺服器上提供 (安裝) 憑證  
   
 1.  在 [開始]  功能表中按一下 [執行] ，然後在 [開啟]  方塊中輸入 **MMC** ，然後按一下 [確定] 。  
   
@@ -74,13 +72,13 @@ ms.lasthandoff: 08/02/2017
   
 10. 完成 **[憑證匯入精靈]**以加入憑證至電腦中，然後關閉 MMC 主控台。 如需新增憑證至電腦的詳細資訊，請參閱 Windows 文件集。  
   
-###  <a name="Export"></a> 若要匯出伺服器憑證  
+##  <a name="Export"></a> 若要匯出伺服器憑證  
   
 1.  從 [憑證] 嵌入式管理單元的 [憑證] / [個人] 資料夾中找到憑證，以滑鼠右鍵按一下 [憑證]，並指向 [所有工作]，然後按一下 [匯出]。  
   
 2.  完成 **[憑證匯出精靈]**，並將憑證檔儲存在方便取得的位置。  
   
-###  <a name="ConfigureServerConnections"></a> 若要設定伺服器接受加密的連接  
+##  <a name="ConfigureServerConnections"></a> 若要設定伺服器接受加密的連接  
   
 1.  在 [SQL Server 組態管理員] 中，展開 [SQL Server 網路組態]，並以滑鼠右鍵按一下 [\<伺服器執行個體> 的通訊協定]，然後選取 [屬性]。  
   
@@ -89,8 +87,13 @@ ms.lasthandoff: 08/02/2017
 3.  在 **[旗標]** 索引標籤的 **[ForceEncryption]** 方塊中選取 **[是]**，然後按一下 **[確定]** 以關閉對話方塊。  
   
 4.  重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務。  
+
+### <a name="wildcard-certificates"></a>萬用字元憑證  
+開頭為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的原生用戶端，支援萬用字元憑證。 其他用戶端可能不支援萬用字元憑證。 如需詳細資訊，請參閱用戶端文件。 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager 不能選取萬用字元憑證。 若要使用萬用字元憑證，您必須編輯 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQLServer\SuperSocketNetLib` 登錄機碼，在 [憑證] 值輸入不含空格的憑證指紋。  
+> [!WARNING]  
+> [!INCLUDE[ssnoteregistry_md](../../includes/ssnoteregistry_md.md)]  
   
-###  <a name="ConfigureClientConnections"></a> 若要設定用戶端要求加密的連接  
+##  <a name="ConfigureClientConnections"></a> 若要設定用戶端要求加密的連接  
   
 1.  將原始憑證或匯出的憑證檔複製到用戶端電腦。  
   
@@ -100,7 +103,7 @@ ms.lasthandoff: 08/02/2017
   
 4.  在 **[旗標]** 頁面的 **[強制通訊協定加密]** 方塊中，按一下 **[是]**。  
   
-###  <a name="EncryptConnection"></a> 若要從 SQL Server Management Studio 加密連接  
+##  <a name="EncryptConnection"></a> 若要從 SQL Server Management Studio 加密連接  
   
 1.  在 [物件總管] 工具列上，按一下 **[連接]**，再按一下 **[Database Engine]**。  
   

@@ -1,25 +1,30 @@
 ---
 title: "建立定義域規則 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/08/2011"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dqs.dm.testdomainrule.f1"
-  - "sql13.dqs.dm.rules.f1"
+ms.custom: 
+ms.date: 11/08/2011
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dqs.dm.testdomainrule.f1
+- sql13.dqs.dm.rules.f1
 ms.assetid: 339fa10d-e22c-4468-b366-080c33f1a23f
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: dc02a0d982ceb08f631fbdf628dff293f1f8e5c7
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/09/2017
+
 ---
-# 建立定義域規則
+# <a name="create-a-domain-rule"></a>建立定義域規則
   本主題描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中建立定義域規則。 定義域規則是用來驗證、更正並標準化定義域值的條件。 定義域規則必須在定義域中成立，才能讓定義域值被視為正確且符合商務需求。 定義域規則所包含的驗證規則可用來驗證定義域值，但是無法用來更正資料品質專案中的資料。 此外，規則也包含針對有效資料套用以及用於資料更正的標準化規則。  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
@@ -34,7 +39,7 @@ caps.handback.revision: 28
   
 ##  <a name="Build"></a> 建置定義域規則  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [執行資料品質用戶端應用程式](../data-quality-services/run-the-data-quality-client-application.md)。  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [執行 Data Quality Client 應用程式](../data-quality-services/run-the-data-quality-client-application.md)。  
   
 2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 首頁畫面上，開啟或建立知識庫。 選取 **[定義域管理]** 當做活動，然後按一下 **[開啟]** 或 **[建立]**。 如需相關資訊，請參閱 [Create a Knowledge Base](../data-quality-services/create-a-knowledge-base.md) 或 [Open a Knowledge Base](../data-quality-services/open-a-knowledge-base.md)。  
   
@@ -47,9 +52,9 @@ caps.handback.revision: 28
   
 5.  按一下 **[加入新的定義域規則]**，然後輸入在知識庫中唯一的名稱以及規則的描述。  
   
-6.  選取 **Active** 指定規則將會執行 （預設值），或取消選取以防止執行規則。  
+6.  選取 **[使用中]** 指定將要執行此規則 (預設值)，或取消選取以防止執行此規則。  
   
-7.  在 **建置規則** ] 窗格中，選取從下拉式清單中的規則子句方塊的條件。  
+7.  在 **[建置規則]** 窗格中，從規則子句方塊的下拉式清單中選取條件。  
   
 8.  如果條件需要值，請在相關聯的文字方塊中輸入值。  
   
@@ -94,10 +99,10 @@ caps.handback.revision: 28
   
 2.  按一下 **[放棄所有變更]** 移除您對定義域規則所做的任何變更，並還原成先前套用的規則，結果就是上次套用規則之後所做的任何變更將不再套用。 定義域中每個值的有效性將會更新成符合先前套用的規則，而非放棄的變更。  
   
-3.  按一下 **[完成]** ，完成定義域管理活動，如＜ [End the Domain Management Activity](../Topic/End%20the%20Domain%20Management%20Activity.md)＞中所述。  
+3.  按一下 **[完成]** ，完成定義域管理活動，如＜ [End the Domain Management Activity](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)＞中所述。  
   
 ##  <a name="FollowUp"></a> 後續操作：建立定義域規則之後  
- 在建立定義域規則之後，您可以針對定義域執行其他定義域管理工作、執行知識探索來將知識加入至定義域，或者將比對原則加入至定義域。 如需詳細資訊，請參閱 [執行知識探索](../data-quality-services/perform-knowledge-discovery.md), ，[管理定義域](../data-quality-services/managing-a-domain.md), ，或 [建立比對原則](../data-quality-services/create-a-matching-policy.md)。  
+ 在建立定義域規則之後，您可以針對定義域執行其他定義域管理工作、執行知識探索來將知識加入至定義域，或者將比對原則加入至定義域。 如需詳細資訊，請參閱[執行知識探索](../data-quality-services/perform-knowledge-discovery.md)、[管理定義域](../data-quality-services/managing-a-domain.md)或[建立比對原則](../data-quality-services/create-a-matching-policy.md)。  
   
 ##  <a name="Conditions"></a> 定義域規則條件  
  下表描述的是可在定義域規則中套用的條件，並且提供範例以說明如何套用這些條件。  
@@ -113,8 +118,8 @@ caps.handback.revision: 28
 |長度等於|只有由運算元指定之字元數所組成的值才有效。|範例運算元：3<br /><br /> 有效值：BB1<br /><br /> 無效值：AA|  
 |長度大於或等於|只有由運算元指定之字元數或更多字元數所組成的值才有效。|範例運算元：3<br /><br /> 有效值：BB1、BBAA<br /><br /> 無效值：AA|  
 |長度小於或等於|只有由運算元指定之字元數或更少字元數所組成的值才有效。|範例運算元：3<br /><br /> 有效值：BB1、AA<br /><br /> 無效值：BBAA|  
-|值等於|只有與運算元完全相同的值才有效。|範例運算元：BB1<br /><br /> 有效值：BB1<br /><br /> 不是有效的值︰ BB、 BB1#|  
-|值不等於|只有與運算元不相同的值才有效。|範例運算元：BB1<br /><br /> 有效值︰ BB、 BB1#<br /><br /> 無效值：BB1|  
+|值等於|只有與運算元完全相同的值才有效。|範例運算元：BB1<br /><br /> 有效值：BB1<br /><br /> 無效值：BB、BB1#|  
+|值不等於|只有與運算元不相同的值才有效。|範例運算元：BB1<br /><br /> 有效值：BB、BB1#<br /><br /> 無效值：BB1|  
 |值包含|只有其所有字元以任何順序包含在運算元中的值才有效。|範例運算元：A1<br /><br /> 有效值：A1、AA1<br /><br /> 無效值：1A、AA|  
 |值不包含|只有不包含在運算元中的值才有效。|範例運算元：A1<br /><br /> 有效值：1A、AA<br /><br /> 無效值：A1、AA1|  
 |值開頭為|只有開頭為運算元中之字元的值才有效。|範例運算元：AA<br /><br /> 有效值：AA1<br /><br /> 無效值：1AAB|  
@@ -123,10 +128,10 @@ caps.handback.revision: 28
 |值為日期/時間|只有具有 SQL Server 日期/時間資料類型的值才有效。 這包括 datetime、time、date 等等。|範例運算元：無<br /><br /> 有效值：1916-06-04、1916-06-04 18:24:24、March 21, 2001、5/18/2011、18:24:24<br /><br /> 無效值：March 213, 2006|  
 |值在|只有位於運算元之集合中的值才有效。<br /><br /> 若要在集合中輸入值，請按一下運算元文字方塊、輸入第一個值、按下 Enter、輸入第二個值、針對您想要在集合中輸入的值重複上述步驟，然後再次按一下運算元文字方塊。 DQS 將會在集合中的值之間加入逗號。 如果您輸入包含逗號但不包含歸位字元的單一字串 (例如 “A1, B1”)，DQS 就會將該字串視為集合中的單一值。|範例運算元：[A1, B1]<br /><br /> 有效值：A1、B1<br /><br /> 無效值：AA、11|  
 |值不在|只有不在運算元之集合中的值才有效。|範例運算元：[A1, B1]<br /><br /> 有效值：AA、11<br /><br /> 無效值：A1、B1|  
-|值符合模式|只有符合運算元中之字元、數字和特殊字元模式的值才有效。<br /><br /> 任何字母 (A…Z) 都可以當做任何字母的模式使用；不區分大小寫。 任何數字 (0…9) 都可以當做任何數字的模式使用。 除了字母或數字之外，任何特殊字元都可以當做其本身的模式使用。 方括號 [] 用於定義選擇性比對。|範例運算元︰ 000 (的模式 *任何* 兩個字元後面接著冒號 （:），後面同樣再 *任何* 三位數。<br /><br /> 有效值：AB:012、df:257<br /><br /> 無效值：abc:123、FJ-369<br /><br /> 如需 DQS 與範例中模式規則的詳細資訊，請參閱 [DQS 定義域規則的模式比對](http://blogs.msdn.com/b/dqs/archive/2012/10/08/pattern-matching-in-dqs-domain-rules.aspx)。|  
-|值不符合模式|只有不符合運算元中之字元、數字和特殊字元模式的值才有效。|範例運算元︰ A1 (值必須符合的模式 *任何* 後面接著一個字元 *任何* 一個數字。)<br /><br /> 有效值：AB1、A、A:5<br /><br /> 無效值：B7、c9|  
-|值包含模式|只有包含運算元中之字元、數字和特殊字元模式的值才有效。|範例運算元︰ aa-12 (值包含的模式 *任何* 兩個字元後面接著連字號 （-），後面同樣再 *任何* 兩位數。)<br /><br /> 有效值：AAA-01、ab-975<br /><br /> 有效值：A7、AA-6、C-45、aa;98|  
-|值不包含模式|只有不包含運算元中之字元模式的值才有效。|範例運算元︰ ab-12 (值不得包含的模式 *任何* 兩個字元後面接著連字號 （-），後面同樣再 *任何* 兩位數。)<br /><br /> 有效值：A7、AA-6、C-45、aa;98<br /><br /> 無效值：AAA-01、ab-975|  
+|值符合模式|只有符合運算元中之字元、數字和特殊字元模式的值才有效。<br /><br /> 任何字母 (A…Z) 都可以當做任何字母的模式使用；不區分大小寫。 任何數字 (0…9) 都可以當做任何數字的模式使用。 除了字母或數字之外，任何特殊字元都可以當做其本身的模式使用。 方括號 [] 用於定義選擇性比對。|範例運算元：AA:000 ( *任* 兩個字元後面接著冒號 (:) 的模式，後面同樣再接著 *任* 三個數字)。<br /><br /> 有效值：AB:012、df:257<br /><br /> 無效值：abc:123、FJ-369<br /><br /> 如需 DQS 與範例中模式規則的詳細資訊，請參閱 [DQS 定義域規則的模式比對](http://blogs.msdn.com/b/dqs/archive/2012/10/08/pattern-matching-in-dqs-domain-rules.aspx)。|  
+|值不符合模式|只有不符合運算元中之字元、數字和特殊字元模式的值才有效。|範例運算元：A1 (值不得符合 *任* 一個字元後面接著 *任* 一個數字的模式)。<br /><br /> 有效值：AB1、A、A:5<br /><br /> 無效值：B7、c9|  
+|值包含模式|只有包含運算元中之字元、數字和特殊字元模式的值才有效。|範例運算元：AA-12 (值包含 *任* 兩個字元後面接著連字號 (-) 的模式，後面同樣再接著 *任* 兩個數字)。<br /><br /> 有效值：AAA-01、ab-975<br /><br /> 有效值：A7、AA-6、C-45、aa;98|  
+|值不包含模式|只有不包含運算元中之字元模式的值才有效。|範例運算元：AB-12 (值包含 *任* 兩個字元後面接著連字號 (-) 的模式，後面同樣再接著 *任* 兩個數字)。<br /><br /> 有效值：A7、AA-6、C-45、aa;98<br /><br /> 無效值：AAA-01、ab-975|  
 |值符合規則運算式|只有等於運算元中之規則運算式的值才會被視為有效。<br /><br /> 請勿在規則運算式中加入 “^” 錨點或 “$” 錨點，因為 DQS 會自動將這些錨點加入至包含「值等於規則運算式」的子句  (或者，您也可以使用括號來括住包含 “^” 和 “$” 錨點的規則運算式)。如需有關規則運算式的詳細資訊，請參閱＜ [規則運算式語言項目](http://go.microsoft.com/fwlink/?LinkId=225561)＞。|範例運算元：[1-5]+ (每個字元都必須是介於 1 到 5 之間的數字，並出現一次或多次)<br /><br /> 有效值：123、12345、14352<br /><br /> 無效值：456、ABC|  
 |值不符合規則運算式|只有不符合運算元中之規則運算式的值才會被視為有效。|範例運算元：[1-5]+ (字串不得只包含介於 1 到 5 之間的數字)<br /><br /> 有效值：456、ABC<br /><br /> 無效值：123、123456、14352|  
   

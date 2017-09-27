@@ -1,29 +1,34 @@
 ---
-title: "為 DQS 記錄檔設定進階設定 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "記錄檔, 進階設定"
-  - "dqs 記錄檔, 進階設定"
+title: "設定 DQS 記錄檔的進階設定 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- log files,advanced settings
+- dqs log files,advanced settings
 ms.assetid: 1d565748-9759-425c-ae38-4d2032a86868
 caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5182c032b4a0c21358631df64f43dc16cdbd9ecf
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/09/2017
+
 ---
-# 為 DQS 記錄檔設定進階設定
+# <a name="configure-advanced-settings-for-dqs-log-files"></a>為 DQS 記錄檔設定進階設定
   本主題描述如何設定 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 和 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 記錄檔的進階設定，例如設定記錄檔的輪替檔案大小限制、設定事件的時間戳記模式等等。  
   
 > [!NOTE]  
->  這些活動無法使用 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 來執行，而且僅適用於進階使用者。  
+>  這些活動無法使用 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]來執行，而且僅適用於進階使用者。  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -36,7 +41,7 @@ caps.handback.revision: 13
 -   您必須在想要修改 DQLog.Client.xml 檔案的電腦上，以 Administrators 群組成員的身分登入，才能設定 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 記錄設定。  
   
 ##  <a name="DQSServer"></a> 設定 Data Quality Server 記錄設定  
-  [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 記錄設定會以 XML 格式存在 **值** 資料行的 **ServerLogging** DQS_MAIN 資料庫中 A_CONFIGURATION 資料表中的資料列。 您可以執行下列 SQL 查詢，以便檢視組態資訊：  
+ 在 DQS_MAIN 資料庫的 A_CONFIGURATION 資料表中， [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 記錄設定會以 XML 格式存在 **[ServerLogging]** 資料列的 **[VALUE]** 資料行中。 您可以執行下列 SQL 查詢，以便檢視組態資訊：  
   
 ```  
 select * from DQS_MAIN.dbo.A_CONFIGURATION where NAME='ServerLogging'  
@@ -46,7 +51,7 @@ select * from DQS_MAIN.dbo.A_CONFIGURATION where NAME='ServerLogging'
   
 1.  啟動 Microsoft SQL Server Management Studio，並連接到適當的 SQL Server 執行個體。  
   
-2.  在物件總管] 中，以滑鼠右鍵按一下伺服器，以及 [ **新查詢**。  
+2.  在 [物件總管] 中，以滑鼠右鍵按一下伺服器，然後按一下 **[新增查詢]**。  
   
 3.  在 [查詢編輯器] 視窗中，複製下列 SQL 陳述式：  
   
@@ -109,10 +114,10 @@ select * from DQS_MAIN.dbo.A_CONFIGURATION where NAME='ServerLogging'
 6.  按 F5 執行陳述式。 檢查 **[結果]** 窗格，確認陳述式是否皆已成功地執行。  
   
 > [!NOTE]  
->   [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 記錄設定組態以動態方式產生並儲存在 DQS_MAIN。記錄檔通常位於 C:\Program Files\Microsoft SQL Server\MSSQL13。如果您安裝 SQL Server 的預設執行個體，MSSQLSERVER\MSSQL\Log。 不過，直接在此檔案中進行的變更不會保存，而且 DQS_MAIN 資料庫中 A_CONFIGURATION 資料表的組態設定會覆寫這些變更。  
+>  [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 記錄設定組態是以動態方式產生並儲存在 DQS_MAIN.Log 檔案中，而該檔案通常位於 C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Log (如果您安裝了 SQL Server 預設執行個體的話)。 不過，直接在此檔案中進行的變更不會保存，而且 DQS_MAIN 資料庫中 A_CONFIGURATION 資料表的組態設定會覆寫這些變更。  
   
 ##  <a name="DQSClient"></a> 設定 Data Quality Client 記錄設定  
-  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 記錄設定組態檔 DQLog.Client.xml 通常會在 C:\Program Files\Microsoft SQL Server\130\Tools\Binn\DQ\config。 此 XML 檔案的內容與您之前針對 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 記錄組態設定所修改的 XML 檔案很相似。 若要設定 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 記錄設定：  
+ [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 記錄設定組態檔 DQLog.Client.xml 通常位於 C:\Program Files\Microsoft SQL Server\130\Tools\Binn\DQ\config。此 XML 檔案的內容與您之前針對 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 記錄組態設定所修改的 XML 檔案很相似。 若要設定 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 記錄設定：  
   
 1.  以系統管理員的身分執行任何 XML 編輯工具或 [記事本]。  
   
@@ -120,7 +125,7 @@ select * from DQS_MAIN.dbo.A_CONFIGURATION where NAME='ServerLogging'
   
 3.  進行所需的變更，然後儲存檔案，即可套用新的記錄變更。  
   
-## 另請參閱  
- [Configure Severity Levels for DQS Log Files](../data-quality-services/configure-severity-levels-for-dqs-log-files.md)  
+## <a name="see-also"></a>另請參閱  
+ [設定 DQS 記錄檔的嚴重性層級](../data-quality-services/configure-severity-levels-for-dqs-log-files.md)  
   
   

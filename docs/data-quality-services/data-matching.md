@@ -1,22 +1,27 @@
 ---
 title: "資料比對 | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/01/2012"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 10/01/2012
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: fe66d098-bec3-4258-b42a-479ae460feb3
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 04c6e34258d4e732373ea003e8457582bea9c4eb
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/09/2017
+
 ---
-# 資料比對
+# <a name="data-matching"></a>資料比對
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 資料比對程序可讓您減少資料重複，並提高資料來源中的資料精確度。 比對會分析單一資料來源之所有記錄中的重複程度，傳回每一組比較之記錄之間相符的加權機率。 然後您可以決定哪些記錄相符，並針對來源資料採取適當的動作。  
   
  DQS 比對程序的優點如下：  
@@ -31,7 +36,7 @@ caps.handback.revision: 29
   
 -   您可以針對從來源複製到暫存資料表的資料重新建立索引或是不重新建立索引 (根據比對原則和來源資料的狀態)。 不重新建立索引可以提高效能。  
   
- 您可以搭配其他資料清理程序來執行比對程序，以改善整體資料品質。 您也可以使用內建在 Master Data Services 中的 DQS 功能來執行資料刪除重複作業。 如需詳細資訊，請參閱 [Master Data Services 概觀 & #40。MDS & #41;](../master-data-services/master-data-services-overview-mds.md)。  
+ 您可以搭配其他資料清理程序來執行比對程序，以改善整體資料品質。 您也可以使用內建在 Master Data Services 中的 DQS 功能來執行資料刪除重複作業。 如需詳細資訊，請參閱 [Master Data Services 概觀 &#40;MDS&#41;](../master-data-services/master-data-services-overview-mds.md)。  
   
  下圖顯示如何在 DQS 中進行資料比對：  
   
@@ -67,12 +72,12 @@ caps.handback.revision: 29
   
  您可以將比對程序的結果匯出到 SQL Server 資料表或 .csv 檔案。 您可使用兩種形式匯出比對結果：首先是相符記錄和不相符記錄，然後是只包含叢集存活者記錄和不相符結果的存活記錄。 在存活記錄中，如果將相同記錄識別為多個叢集的存活者，該記錄只會匯出一次。  
   
-## 本節內容  
+## <a name="in-this-section"></a>本節內容  
  您可以在 DQS 中執行與比對相關的以下工作：  
   
 |||  
 |-|-|  
-|在比對原則中建立及測試比對規則|[Create a Matching Policy](../data-quality-services/create-a-matching-policy.md)|  
-|在資料品質專案中執行比對|[Run a Matching Project](../data-quality-services/run-a-matching-project.md)|  
+|在比對原則中建立及測試比對規則|[建立比對原則](../data-quality-services/create-a-matching-policy.md)|  
+|在資料品質專案中執行比對|[執行比對專案](../data-quality-services/run-a-matching-project.md)|  
   
   

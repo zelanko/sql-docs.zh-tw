@@ -1,22 +1,27 @@
 ---
 title: "DQS 中的資料分析與通知 | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/01/2012"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 10/01/2012
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a778bb5b-8e35-4a7b-b04a-ae2b46dec21b
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 57de348a0ce74aa33b3d19baa60116580ad30b3c
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/09/2017
+
 ---
-# DQS 中的資料分析與通知
+# <a name="data-profiling-and-notifications-in-dqs"></a>DQS 中的資料分析與通知
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中的資料分析程序會分析現有資料來源中的資料，以及顯示有關 DQS 活動資料的統計資料。 此程序為您提供資料品質的自動化度量。 DQS 分析會整合到 DQS 知識管理與資料品質專案中。 它是動態的，而且可以調整。 分析有兩個主要目標：首先是在資料品質程序中引導您並支援您的決策，第二個目標是評估程序的效用。 DQS 分析程序的優點如下：  
   
 -   分析會提供來源資料品質的洞察能力，並幫助您識別資料品質問題。  
@@ -65,11 +70,11 @@ caps.handback.revision: 25
   
 -   [執行知識探索](../data-quality-services/perform-knowledge-discovery.md)  
   
--   [使用 DQS & #40; 清理資料內部 & #41;知識](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)  
+-   [使用 DQS &#40;內部&#41; 知識清理資料](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)  
   
--   [Create a Matching Policy](../data-quality-services/create-a-matching-policy.md)  
+-   [建立比對原則](../data-quality-services/create-a-matching-policy.md)  
   
--   [Run a Matching Project](../data-quality-services/run-a-matching-project.md)  
+-   [執行比對專案](../data-quality-services/run-a-matching-project.md)  
   
 ##  <a name="Monitoring"></a> 活動監控中的分析資料  
  知識探索、比對原則、比對和清理活動的分析資訊不但有在 Data Quality Client 活動頁面中提供，活動監控中也有提供。 活動監控為您提供目前和過去活動的概觀。 除了活動的屬性及相關的計算程序之外，您也可以檢視針對某個位置的每一個活動所產生的分析資訊。 您可在活動資料表中選取活動，於底下的資料表中顯示分析結果。 您也可以匯出分析結果。 如需詳細資訊，請參閱 [DQS Administration](../data-quality-services/dqs-administration.md)。  
@@ -79,24 +84,24 @@ caps.handback.revision: 25
   
  DQS 通知是用來引發您可能會感興趣的問題，或是對付潛在問題。 您是否要對通知採取行動取決於該通知是否與您的目的相關。 例如，假設 DQS 在以下情況下發佈通知：資料清理未產生任何更正值或建議值，而完整性與精確度同時為 100%。 此通知指示，該活動可能不需要執行。 但是，不論您是否選擇執行活動，都是您自己的決定。  
   
- 通知是由工具提示中， **[分析]** 索引標籤中的驚嘆號所指示。 與通知有關的統計資料會以紅色顯示，以指示該通知的統計理由。  
+ 通知是由工具提示中， **[分析]** 索引標籤中的驚嘆號所指示。與通知有關的統計資料會以紅色顯示，以指示該通知的統計理由。  
   
- 您可以啟用 （預設值） 或停用通知中的 **一般設定** ] 索引標籤的 **管理** Data Quality Client 首頁的區段。 當停用通知時，工具提示並不會顯示，而且統計資料不會以紅色表示。 停用通知並不會顯著改善效能。 如果您停用通知，分析依然可運作。  
+ 您可以在 Data Quality Client 首頁之 **[管理]** 區段的 **[一般設定]** 索引標籤中，啟用 (預設值) 或停用通知。 當停用通知時，工具提示並不會顯示，而且統計資料不會以紅色表示。 停用通知並不會顯著改善效能。 如果您停用通知，分析依然可運作。  
   
  如果是與活動之通知有關的特定情況，請參閱下列資源：  
   
 -   [執行知識探索](../data-quality-services/perform-knowledge-discovery.md)  
   
--   [使用 DQS & #40; 清理資料內部 & #41;知識](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)  
+-   [使用 DQS &#40;內部&#41; 知識清理資料](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)  
   
--   [Create a Matching Policy](../data-quality-services/create-a-matching-policy.md)  
+-   [建立比對原則](../data-quality-services/create-a-matching-policy.md)  
   
--   [Run a Matching Project](../data-quality-services/run-a-matching-project.md)  
+-   [執行比對專案](../data-quality-services/run-a-matching-project.md)  
   
-## 相關工作  
+## <a name="related-tasks"></a>相關工作  
   
 |工作描述|主題|  
 |----------------------|-----------|  
-|描述如何啟用或停用 DQS 中的通知。|[Enable or Disable Profiling Notifications in DQS](../data-quality-services/enable-or-disable-profiling-notifications-in-dqs.md)|  
+|描述如何啟用或停用 DQS 中的通知。|[啟用或停用 DQS 中的分析通知](../data-quality-services/enable-or-disable-profiling-notifications-in-dqs.md)|  
   
   

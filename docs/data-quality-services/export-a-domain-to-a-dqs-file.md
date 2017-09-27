@@ -1,23 +1,28 @@
 ---
-title: "將定義域匯出成 .dqs 檔案 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "將定義域匯出為 .dqs 檔案 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: eba10d3d-b5c4-447b-8a30-fa07996cb28e
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 197f51ab86d1ac46ab77d34dd64d98c1034317d6
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/09/2017
+
 ---
-# 將定義域匯出成 .dqs 檔案
-  此主題描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中將定義域匯出至 .dqs 檔案。 您可以將定義域或整個知識庫匯出到資料檔。 匯出知識庫的相關資訊，請參閱 [將知識庫匯出到.dqs 檔案](../data-quality-services/export-a-knowledge-base-to-a-dqs-file.md)。  
+# <a name="export-a-domain-to-a-dqs-file"></a>將定義域匯出成 .dqs 檔案
+  此主題描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中將定義域匯出至 .dqs 檔案。 您可以將定義域或整個知識庫匯出到資料檔。 如需匯出知識庫的資訊，請參閱[將知識庫匯出為 .dqs 檔案](../data-quality-services/export-a-knowledge-base-to-a-dqs-file.md)。  
   
  將某個知識庫中的定義域匯出到 .dqs 資料檔，然後將它匯入另一個知識庫將會簡化知識產生程序，以節省時間與精力。 這樣可讓您將定義域和定義域的知識與其他人分享。  
   
@@ -35,18 +40,18 @@ caps.handback.revision: 18
 ####  <a name="Permissions"></a> Permissions  
  您必須擁有 DQS_MAIN 資料庫的 dqs_kb_editor 角色或 dqs_administrator 角色，才能將定義域匯出到 .dqs 資料檔。  
   
-##  <a name="Export"></a> 將定義域匯出成 .dqs 檔案  
+##  <a name="Export"></a> Export a domain to a .dqs file  
  您可以從任何 [定義域管理] 頁面匯出。 您可以從使用者介面的控制項或是 [定義域清單] 窗格之內容功能表的命令中取得匯出命令。  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [執行資料品質用戶端應用程式](../data-quality-services/run-the-data-quality-client-application.md)。  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [執行 Data Quality Client 應用程式](../data-quality-services/run-the-data-quality-client-application.md)。  
   
 2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 首頁畫面中，於 [定義域管理] 活動中開啟知識庫。  
   
-3.  在 **網域管理頁面** （包含任何索引標籤選取），選取單一定義域或複合定義域中的 **網域** 清單。  
+3.  在 **[定義域管理]** 頁面 (包含任何選取的索引標籤) 中，於 **[定義域]** 清單中選取單一定義域或複合定義域。  
   
-4.  按一下定義域清單上方的 **[匯出知識庫資料]** 圖示，然後按一下 **[匯出定義域]**。 或者，您可以以滑鼠右鍵按一下網域中的 **網域** 清單中，指向 [ **匯出**, ，然後按一下 [ **匯出定義域**。  
+4.  按一下定義域清單上方的 **[匯出知識庫資料]** 圖示，然後按一下 **[匯出定義域]**。 另外，您也可以用滑鼠右鍵按一下 **[定義域]** 清單中的定義域，指向 **[匯出]**，然後按一下 **[匯出定義域]**。  
   
-5.  在 **匯出到資料檔** ] 對話方塊中，移至您想要儲存檔案名稱中的檔案，或保留預設名稱，資料夾保留 **DQS 資料檔 (\*.dqs)** 為 **檔案類型**, ，然後按一下 [ **儲存**。  
+5.  在 [匯出到資料檔] 對話方塊中，移至您想要用來儲存檔案的資料夾、為檔案命名或是保留預設名稱、將 [DQS 資料檔 (\*.dqs)] 保留為 [檔案類型]，然後按一下 [儲存]。  
   
 6.  在 **[匯出定義域]** 對話方塊中，確認此對話方塊中的狀態行指出已完成匯出。 按一下 **[確定]**。  
   

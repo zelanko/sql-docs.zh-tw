@@ -1,29 +1,34 @@
 ---
 title: "Data Quality Client 首頁畫面 | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/29/2012"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dqs.clienthome.f1"
+ms.custom: 
+ms.date: 02/29/2012
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dqs.clienthome.f1
 ms.assetid: 7c6ec469-bc7d-4d19-8e21-11dcf8ade108
 caps.latest.revision: 14
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 00ed6a9eaa24ff9981ca4184a7ec8ef3107ffc0f
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/09/2017
+
 ---
-# Data Quality Client 首頁畫面
+# <a name="data-quality-client-home-screen"></a>Data Quality Client 首頁畫面
   使用這個畫面以存取 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 三大工作群組的使用者介面：知識庫管理、資料品質專案，以及系統管理。  
   
-## 選項  
+## <a name="options"></a>選項  
   
-### 知識庫管理  
+### <a name="knowledge-base-management"></a>知識庫管理  
  DQS 知識庫是中繼資料的儲存機制，DQS 使用中繼資料以改善資料品質。 此中繼資料是由 DQS 平台在電腦輔助的知識探索程序中以及資料服務員在互動式定義域管理程序中所建立。  
   
  **新增知識庫**  
@@ -37,7 +42,7 @@ caps.handback.revision: 14
   
  您僅能開啟您鎖定的知識庫並進行編輯。 若是如此，知識庫將會以關閉時所處的狀態開啟，並將該狀態顯示在括弧中。 如果某個知識庫遭到鎖定，而且不是您鎖定的，則僅能以唯讀模式開啟該知識庫。  
   
-### 資料品質專案  
+### <a name="data-quality-projects"></a>資料品質專案  
  資料品質專案是 DQS 透過電腦輔助的資料更正和互動式資料清理，執行資料清理或資料比對的程序。  
   
  **新增資料品質專案**  
@@ -49,7 +54,7 @@ caps.handback.revision: 14
  **最近使用的資料品質專案**  
  從畫面上的清單選取已經建立的專案。 您僅能開啟您鎖定的專案。 若是如此，專案將會以關閉時所處的狀態開啟，並將該狀態顯示在括弧中。 如果該專案已完成，將會在活動的「匯出」步驟開啟。  
   
-### 系統管理  
+### <a name="administration"></a>系統管理  
  DQS 管理可讓您監視、設定及維護 DQS。  
   
  **活動監控**  
@@ -58,9 +63,9 @@ caps.handback.revision: 14
  **組態**  
  顯示 Reference Data Service 帳戶 (透過 Windows Azure Marketplace 並直接到 Reference Data Services) 的組態屬性、一般設定 (互動式清理、比對和分析)，以及記錄嚴重性設定。  
   
-## 另請參閱  
- [DQS Knowledge Bases and Domains](../data-quality-services/dqs-knowledge-bases-and-domains.md)   
- [資料品質專案 #40; DQS & #41;](../data-quality-services/data-quality-projects-dqs.md)   
+## <a name="see-also"></a>另請參閱  
+ [DQS 知識庫與定義域](../data-quality-services/dqs-knowledge-bases-and-domains.md)   
+ [資料品質專案 &#40;DQS&#41;](../data-quality-services/data-quality-projects-dqs.md)   
  [DQS 管理](../data-quality-services/dqs-administration.md)  
   
   

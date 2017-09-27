@@ -1,28 +1,28 @@
 ---
-title: "已更新 - 資料庫引擎文件 | Microsoft Docs"
-description: "顯示最近變更過的文件更新內容，資料庫引擎的程式碼片段。"
+title: "已更新 - Data Quality Services for SQL Server 文件 | Microsoft Docs"
+description: "針對 Data Quality Services for Microsoft SQL Server，顯示文件最新變更之已更新內容的程式碼片段。"
 services: na
 documentationcenter: 
 author: MightyPen
 manager: jhubbard
-editor: barbkess
+editor: 
 ms.service: na
 ms.topic: updart-autogen
 ms.technology: database-engine
 ms.custom: UpdArt.exe
-ms.workload: database-engine
 ms.tgt_pltfrm: na
 ms.devlang: na
 ms.date: 09/11/2017
 ms.author: genemi
+ms.workload: data-quality-services
 ms.translationtype: HT
 ms.sourcegitcommit: 15080827744c19120a8474f3142004c4af7a4064
-ms.openlocfilehash: ce80496cdf82c2bc2df2447ed043216e6c78ad7e
+ms.openlocfilehash: c28c7e0a78c4fbbed04e2b30b7bdaff2638163ad
 ms.contentlocale: zh-tw
 ms.lasthandoff: 09/13/2017
 
 ---
-# <a name="new-and-recently-updated-database-engine-docs"></a>新的與最近的更新：資料庫引擎文件
+# <a name="new-and-recently-updated-data-quality-services-for-sql-server"></a>新增和最近更新：Data Quality Services for SQL Server
 
 
 
@@ -35,7 +35,7 @@ Microsoft 幾乎每天都會在其 [Docs.Microsoft.com](http://docs.microsoft.co
 
 
 - *更新日期範圍：* &nbsp; **2017 年 7 月 18 日** &nbsp; -至- &nbsp; **2017 年 9 月 11 日**
-- *主旨區域：* &nbsp; **資料庫引擎**。
+- *主旨區域：* &nbsp; **Data Quality Services for SQL Server**。
 
 
 
@@ -47,11 +47,7 @@ Microsoft 幾乎每天都會在其 [Docs.Microsoft.com](http://docs.microsoft.co
 下列連結會跳至最近新增的新文章。
 
 
-1. [SQL Server 安裝](install-windows/installation-for-sql-server.md)
-2. [支援的版本與版本升級 - SQL Server 2017](install-windows/supported-version-and-edition-upgrades-2017.md)
-3. [SQL Server 資料庫引擎](sql-server-database-engine-overview.md)
-4. [資料庫引擎的新功能 - SQL Server 2016](whats-new-in-sql-server-2016.md)
-5. [資料庫引擎的新功能 - SQL Server 2017](whats-new-in-sql-server-2017.md)
+***目前無新文章列出。***
 
 
 
@@ -77,53 +73,13 @@ Microsoft 幾乎每天都會在其 [Docs.Microsoft.com](http://docs.microsoft.co
 
 此壓縮清單提供所有更新文章的連結，並將列於＜摘要＞一節。
 
-1. [自動植入次要複本](#TitleNum_1)
 
 
 
 
 &nbsp;
 
-&nbsp;
-
-<a name="TitleNum_1"/>
-
-### <a name="1-nbsp-automatic-seeding-for-secondary-replicasavailability-groupswindowsautomatic-seeding-secondary-replicasmd"></a>1.&nbsp; [自動植入次要複本](availability-groups/windows/automatic-seeding-secondary-replicas.md)
-
-*更新日期：2017 年 8 月 21 日* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-
-<!-- Source markdown line 55.  ms.author= "mikeray".  -->
-
-&nbsp;
-
-
-<!-- git diff --ignore-all-space --unified=0 0b7b6a23f38bfe5959ccd170527a9bbdb308dc4b dc51fdf69649ed6cae03584cff7bc900d5b72149  (PR=2896  ,  Filename=automatic-seeding-secondary-replicas.md  ,  Dirpath=docs\database-engine\availability-groups\windows\  ,  MergeCommitSha40=80642503480add90fc75573338760ab86139694c) -->
-
-
-
-在 SQL Server 2016 和舊版中，自動植入所建立資料庫的資料夾必須已經存在，而且和主要複本位在同一路徑下。
-
-在 SQL Server 2017 中，Microsoft 建議所有加入可用性群組的複本都使用相同的資料和記錄檔路徑，但如有必要，您可以使用不同的路徑。 例如，在跨平台的可用性群組中，一個 SQL Server 執行個體在 Windows，而另一個 SQL Server 執行個體在 Linux。 不同的平台有不同的預設路徑。 SQL Server 2017 支援 SQL Server 的執行個體可用性群組複本可使用不同的預設路徑。
-
-下表顯示的範例，是支援的資料磁碟配置可以支援自動植入：
-
-|主要執行個體</br>預設資料路徑|次要執行個體</br>預設資料路徑|主要執行個體</br>來源檔案位置|次要執行個體</br> 目標檔案位置
-|:------|:------|:------|:------
-|c:\\data\\ |/var/opt/mssql/data/ |c:\\data\\ |/var/opt/mssql/data/|
-|c:\\data\\ |/var/opt/mssql/data/ |c:\\data\\group1\\ |/var/opt/mssql/data/group1/|
-|c:\\data\\ |d:\\data\\ |c:\\data\\ |d:\\data\\
-|c:\\data\\ |d:\\data\\ |c:\\data\\group1\\ |d:\\data\\group1\
-
-主要和次要複本資料庫位置不是執行個體預設路徑的案例，不受此變更影響。 次要複本檔案路徑符合主要複本檔案路徑的需求維持不變。
-
-|主要執行個體</br>預設資料路徑|次要執行個體</br>預設資料路徑|主要執行個體</br>檔案位置|次要執行個體</br> 檔案位置
-|:------|:------|:------|:------
-|c:\\data\\ |c:\\data\\ |d:\\group1\\ |d:\\group1\\
-|c:\\data\\ |c:\\data\\ |d:\\data\\ |d:\\data\\
-|c:\\data\\ |c:\\data\\ |d:\\data\\group1\\ |d:\\data\\group1\\
-
-如果您混用了主要和次要複本的預設和非預設路徑，SQL Server 2017 的行為表現會和舊版不同。 下表說明 SQL Server 2017 的行為。
-
+***本區目前沒有最近更新的文章。***
 
 
 

@@ -1,32 +1,37 @@
 ---
 title: "建立跨定義域規則 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/22/2011"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dqs.dm.testcdrule.f1"
-  - "sql13.dqs.dm.cdrules.f1"
+ms.custom: 
+ms.date: 11/22/2011
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dqs.dm.testcdrule.f1
+- sql13.dqs.dm.cdrules.f1
 ms.assetid: 0f3f5ba4-cc47-4d66-866e-371a042d1f21
 caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 73b05f76f59141094279a8b4231b88e9d9ba6999
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/09/2017
+
 ---
-# 建立跨定義域規則
+# <a name="create-a-cross-domain-rule"></a>建立跨定義域規則
   本主題描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中的知識庫內建立複合定義域的跨定義域規則。 跨定義域規則會在複合定義域所包含的單一定義域中測試值之間的關聯性。 跨定義域規則必須在複合定義域中成立，才能讓定義域值被視為正確且符合商務需求。 跨定義域規則是用來驗證、更正並標準化定義域值。  
   
  跨定義域規則的 If 子句和 Then 子句是分別針對複合定義域的其中一個單一定義域所定義。 您必須針對不同的單一定義域定義每個子句。 跨定義域規則必須與多個單一定義域相關。您無法針對複合定義域定義簡單定義域規則 (僅適用於單一定義域)。 您可以針對單一定義域定義定義域規則，藉以進行此作業。 If 子句和 Then 子句可以分別包含一個或多個條件。  
   
  具有最終條件的跨定義域規則會將規則邏輯套用至條件中值的同義字，以及值本身。 If 和 Then 子句的最終條件包括 [值等於]、[值不等於]、[值在] 或 [值不在]。 例如，假設您擁有複合定義域的下列跨定義域規則：「對於 ‘City’ 而言，如果值等於 ‘Los Angeles’，則對於 ‘State’ 而言，值等於 ‘CA’」。 如果 ‘Los Angeles’ 和 ‘LA’ 是同義字，此規則會針對 ‘Los Angeles CA’ 和 ‘LA CA’ 傳回正確，而針對 ‘Los Angeles WA’ 和 ‘LA WA’ 傳回錯誤。  
   
- 除了只讓您知道跨定義域規則，最終的有效性 *然後* 子句中的跨定義域規則， **值等於**, ，也會在資料清理活動期間更正資料。 如需詳細資訊，請參閱＜ [Data Correction using Definitive Cross-Domain Rules](../data-quality-services/cleanse-data-in-a-composite-domain.md#CDCorrection) ＞中的 [Cleanse Data in a Composite Domain](../data-quality-services/cleanse-data-in-a-composite-domain.md)。  
+ 除了只讓您知道跨定義域規則是否有效之外，跨定義域規則中的最終 *Then* 子句 **[值等於]**也會在資料清理活動期間更正資料。 如需詳細資訊，請參閱＜ [Data Correction using Definitive Cross-Domain Rules](../data-quality-services/cleanse-data-in-a-composite-domain.md#CDCorrection) ＞中的 [Cleanse Data in a Composite Domain](../data-quality-services/cleanse-data-in-a-composite-domain.md)。  
   
  跨定義域規則會在只影響單一定義域的所有簡單規則之後納入考量。 只有當某個值通過單一定義域規則 (如果存在的話) 時，才會套用跨定義域規則。 您必須先定義所有要執行規則的複合定義域和單一定義域，然後才能執行規則。  
   
@@ -42,7 +47,7 @@ caps.handback.revision: 13
   
 ##  <a name="Create"></a> 建立跨定義域規則  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [執行資料品質用戶端應用程式](../data-quality-services/run-the-data-quality-client-application.md)。  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [執行 Data Quality Client 應用程式](../data-quality-services/run-the-data-quality-client-application.md)。  
   
 2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 首頁畫面上，開啟或建立知識庫。 選取 **[定義域管理]** 當做活動，然後按一下 **[開啟]** 或 **[建立]**。 如需相關資訊，請參閱 [Create a Knowledge Base](../data-quality-services/create-a-knowledge-base.md) 或 [Open a Knowledge Base](../data-quality-services/open-a-knowledge-base.md)。  
   
@@ -55,7 +60,7 @@ caps.handback.revision: 13
   
 5.  按一下 **[加入新的定義域規則]**，然後輸入規則的名稱和描述。  
   
-6.  選取 **Active** 來指定此規則將會執行 （預設值），並取消選取以防止執行規則。  
+6.  選取 **[使用中]** 指定將要執行此規則 (預設值)，或取消選取以防止執行此規則。  
   
 7.  依照下列方式建立 If 子句：  
   
@@ -79,11 +84,11 @@ caps.handback.revision: 13
   
 1.  依照下列方式測試跨定義域規則：  
   
-    1.  按一下 [ **測試資料上執行選取的定義域規則** 複合定義域窗格右上角的圖示。  
+    1.  按一下複合定義域窗格右上角的 **[在測試資料上執行選取的定義域規則]** 圖示。  
   
     2.  在 **[測試定義域規則]** 對話方塊中，按一下 **[加入定義域規則的新測試詞彙]** 圖示。  
   
-    3.  針對與 If 子句相關聯的單一定義域以及與 Then 子句相關聯的單一定義域輸入測試值。 輸入的測試值在 If 子句必須符合的條件，該子句中，或將以輸入問號 **有效性** 資料行會指出，跨定義域規則不適用於測試資料。  
+    3.  針對與 If 子句相關聯的單一定義域以及與 Then 子句相關聯的單一定義域輸入測試值。 在 If 子句中輸入的測試值必須符合該子句的條件，否則系統將在 **[有效性]** 資料行中輸入問號，表示跨定義域規則不適用於測試資料。  
   
     4.  再次按一下 **[加入定義域規則的新測試詞彙]** 圖示，加入另一組測試值。  
   
@@ -91,9 +96,9 @@ caps.handback.revision: 13
   
     6.  測試完成之後，請在 **[測試複合定義域規則]** 對話方塊中按一下 **[關閉]** 。  
   
-2.  當您完成跨定義域規則時，按一下 [ **完成** 中所述，完成定義域管理活動， [結束定義域管理活動](../Topic/End%20the%20Domain%20Management%20Activity.md)。  
+2.  當您完成跨定義域規則時，請按一下 **[完成]** ，完成定義域管理活動，如＜ [End the Domain Management Activity](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)＞中所述。  
   
 ##  <a name="FollowUp"></a> 後續操作：建立跨定義域規則之後  
- 在建立跨定義域規則之後，您可以針對定義域執行其他定義域管理工作、執行知識探索來將知識加入至定義域，或者將比對原則加入至定義域。 如需詳細資訊，請參閱 [執行知識探索](../data-quality-services/perform-knowledge-discovery.md), ，[管理定義域](../data-quality-services/managing-a-domain.md), ，或 [建立比對原則](../data-quality-services/create-a-matching-policy.md)。  
+ 在建立跨定義域規則之後，您可以針對定義域執行其他定義域管理工作、執行知識探索來將知識加入至定義域，或者將比對原則加入至定義域。 如需詳細資訊，請參閱[執行知識探索](../data-quality-services/perform-knowledge-discovery.md)、[管理定義域](../data-quality-services/managing-a-domain.md)或[建立比對原則](../data-quality-services/create-a-matching-policy.md)。  
   
   

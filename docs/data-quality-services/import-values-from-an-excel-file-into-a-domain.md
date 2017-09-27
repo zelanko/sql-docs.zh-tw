@@ -1,27 +1,32 @@
 ---
-title: "將 Excel 檔案中的值匯入定義域中 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dqs.kb.importfailing.f1"
-  - "sql13.dqs.kb.importselect.f1"
-  - "sql13.dqs.kb.failingvalues.f1"
+title: "將 Excel 檔案中的值匯入定義域 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dqs.kb.importfailing.f1
+- sql13.dqs.kb.importselect.f1
+- sql13.dqs.kb.failingvalues.f1
 ms.assetid: 04cde693-2043-477f-8417-fcc463ca7195
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c007da5bb365b81cd3a8bdd570c139077e44afbd
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/09/2017
+
 ---
-# 將 Excel 檔案中的值匯入定義域中
-  本主題描述如何將 Excel 檔案中的值匯入 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 的定義域中。 使用 Excel 檔案將定義域值匯入 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 應用程式可簡化知識產生程序，進而節省時間與精力。 此程序可讓在 Excel 檔案或文字檔案中擁有有效資料值清單的人，將這些值匯入定義域中。 透過 Excel 檔案，您可以將定義域值匯入定義域或將定義域匯入知識庫中 (請參閱 [從 Excel 檔案在知識探索中匯入定義域](../data-quality-services/import-domains-from-an-excel-file-in-knowledge-discovery.md) 如需有關定義域匯入知識庫。)匯出至 Excel 檔案不受支援。  
+# <a name="import-values-from-an-excel-file-into-a-domain"></a>將 Excel 檔案中的值匯入定義域中
+  本主題描述如何將 Excel 檔案中的值匯入 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 的定義域中。 使用 Excel 檔案將定義域值匯入 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 應用程式可簡化知識產生程序，進而節省時間與精力。 此程序可讓在 Excel 檔案或文字檔案中擁有有效資料值清單的人，將這些值匯入定義域中。 透過 Excel 檔案，您可以將定義域值匯入定義域或將定義域匯入知識庫中 (如需將定義域匯入知識庫的詳細資訊，請參閱[在知識探索中匯入 Excel 檔案中的定義域](../data-quality-services/import-domains-from-an-excel-file-in-knowledge-discovery.md)。)匯出至 Excel 檔案不受支援。  
   
  您可以用兩種方式匯入資料值：  
   
@@ -32,16 +37,16 @@ caps.handback.revision: 26
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
 ###  <a name="Prerequisites"></a> 必要條件  
- 從 Excel 檔案，匯入定義域，Excel 必須安裝在電腦上的 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 上安裝應用程式以匯入定義域值或完整定義域; 您必須使用定義域值建立 Excel 檔案 (請參閱 [匯入的運作](#How)); 以及您必須已建立並開啟要匯入定義域到知識庫。  
+ 若要從 Excel 檔案匯入定義域，安裝 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 應用程式的電腦上必須已安裝 Excel，才能匯入定義域值或完整定義域；您必須已經使用定義域值建立 Excel 檔案 (請參閱＜ [How the import works](#How)＞)；而且您必須已經建立及開啟要匯入定義域到其中的知識庫。  
   
 ###  <a name="Security"></a> 安全性  
   
 ####  <a name="Permissions"></a> Permissions  
  您必須擁有 DQS_MAIN 資料庫的 dqs_kb_editor 或 dqs_administrator 角色，才能從 Excel 檔案匯入定義域值。  
   
-##  <a name="Import"></a> 將 Excel 檔案中的值匯入定義域中  
+##  <a name="Import"></a> Import values from an Excel file into a domain  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [執行資料品質用戶端應用程式](../data-quality-services/run-the-data-quality-client-application.md)。  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [執行 Data Quality Client 應用程式](../data-quality-services/run-the-data-quality-client-application.md)。  
   
 2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 首頁畫面中，於 [定義域管理] 活動中開啟知識庫。  
   
@@ -53,9 +58,9 @@ caps.handback.revision: 26
   
 6.  在 **[匯入定義域值]** 對話方塊中，按一下 **[瀏覽]**。  
   
-7.  在 **選取檔案** ] 對話方塊中，移至包含您想要匯入定義域值，從選取的檔案 （副檔名為.xlsx、.xls 或.csv），，然後按一下 [Excel 檔案的資料夾 **開啟**。 此檔案必須位於您從中執行 DQS 的用戶端上，或位於使用者擁有存取權的共用檔案中。  
+7.  在 **[選取檔案]** 對話方塊中，移至您想要匯入定義域值之來源 Excel 檔案所在的資料夾、選取此檔案 (副檔名為 .xlsx、.xls 或 .csv)，然後按一下 **[開啟]**。 此檔案必須位於您從中執行 DQS 的用戶端上，或位於使用者擁有存取權的共用檔案中。  
   
-8.  從 **工作表** 下拉式清單中，選取您要從匯入的工作表。  
+8.  在 **[工作表]** 下拉式清單中，選取您要匯入的來源工作表。  
   
 9. 如果試算表中的第一個資料列代表定義域名稱，而且所有其他資料列都代表有效的定義域值，請選取 **[使用第一個資料列做為標頭]** 。  
   
@@ -70,7 +75,7 @@ caps.handback.revision: 26
 14. 按一下 **[完成]** ，將值加入至知識庫。  
   
 ##  <a name="FollowUp"></a> 後續操作：將 Excel 檔案中的值匯入定義域之後  
- 將值匯入定義域之後，您可以針對定義域執行其他定義域管理工作、執行知識探索以將知識加入至定義域，或者將比對原則加入至定義域。 如需詳細資訊，請參閱 [執行知識探索](../data-quality-services/perform-knowledge-discovery.md), ，[管理定義域](../data-quality-services/managing-a-domain.md), ，或 [建立比對原則](../data-quality-services/create-a-matching-policy.md)。  
+ 將值匯入定義域之後，您可以針對定義域執行其他定義域管理工作、執行知識探索以將知識加入至定義域，或者將比對原則加入至定義域。 如需詳細資訊，請參閱[執行知識探索](../data-quality-services/perform-knowledge-discovery.md)、[管理定義域](../data-quality-services/managing-a-domain.md)或[建立比對原則](../data-quality-services/create-a-matching-policy.md)。  
   
 ##  <a name="Synonyms"></a> 匯入同義字  
  同義字的匯入方式如下：  
@@ -87,7 +92,7 @@ caps.handback.revision: 26
   
 -   如果由於任何原因而無法在應用程式中手動連接值，表示該值可能不適用於匯入作業。  
   
-##  <a name="How"></a> 匯入的運作方式  
+##  <a name="How"></a> How the import works  
  此作業將匯入下列值：  
   
  在匯入作業中，DQS 會依照以下方式從 Excel 檔案匯入資料：  
@@ -102,11 +107,11 @@ caps.handback.revision: 26
   
 -   每個資料列都代表一個定義域值。  
   
--   第一個資料列表示定義域名稱，或者為第一個資料值或記錄 (根據 **[使用第一個資料列做為標頭]** 核取方塊的設定而定)。 如果您在使用 .xslx 或 .xls 檔案時選取 **[使用第一個資料列做為標頭]** ，任何 Null 資料行名稱都將自動轉換成 F*n*，而且任何重複的資料行都會附加一個數字。  
+-   第一個資料列表示定義域名稱，或者為第一個資料值或記錄 (根據 **[使用第一個資料列做為標頭]** 核取方塊的設定而定)。 如果您在使用 .xslx 或 .xls 檔案時選取 **Use First Row as header** ，任何 Null 資料行名稱都將自動轉換成 F*n*，而且任何重複的資料行都會附加一個數字。  
   
 -   如果您在匯入作業完成之前加以取消，系統將回復此作業，而且不會匯入任何資料。  
   
--   第一個資料行中的值會匯入定義域中。 如果除了第一個資料行中，系統會填入一個或多個其他資料行，則這些資料行中的值將會加入成為同義字 (請參閱 [匯入同義字](#Synonyms))。  
+-   第一個資料行中的值會匯入定義域中。 如果除了第一個資料行以外，已填入一個或多個其他資料行，則這些資料行中的值將會加入成為同義字 (請參閱＜ [匯入同義字](#Synonyms)＞)。  
   
     -   預期的格式如下：第一個資料行成為前置值，而第二個以上的資料行則成為同義字。  
   

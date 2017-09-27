@@ -1,22 +1,27 @@
 ---
-title: "備份及還原 DQS 資料庫 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "備份與還原 DQS 資料庫 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f3091f62-2234-4a80-a615-cf14c2a1da85
 caps.latest.revision: 12
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6bab5e3ddb4473a949b12f0ce001a947262966c7
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/09/2017
+
 ---
-# 備份及還原 DQS 資料庫
+# <a name="backing-up-and-restoring-dqs-databases"></a>備份及還原 DQS 資料庫
   此主題描述如何備份及還原 DQS 資料庫。  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
@@ -43,7 +48,7 @@ caps.handback.revision: 12
   
 2.  在 [物件總管] 中，展開 **[資料庫]** 節點。  
   
-3.  備份 DQS_STAGING_DATA 資料庫。 如需備份 SQL Server 資料庫的逐步指示，請參閱 [建立完整資料庫備份和 #40。SQL Server & #41;](../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)。  
+3.  備份 DQS_STAGING_DATA 資料庫。 如需備份 SQL Server 資料庫的逐步指示，請參閱[建立完整資料庫備份 &#40;SQL Server&#41;](../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)。  
   
 4.  備份 DQS_PROJECTS 資料庫。  
   
@@ -51,15 +56,15 @@ caps.handback.revision: 12
   
 6.  中斷連接目前的 SQL Server 執行個體，並連接到您想要還原這些資料庫的 SQL Server 執行個體。  
   
-7.  還原 DQS_MAIN 資料庫。 如需還原 SQL Server 資料庫的逐步指示，請參閱 [還原資料庫備份使用 SSMS](../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)。  
+7.  還原 DQS_MAIN 資料庫。 如需還原 SQL Server 資料庫的逐步指示，請參閱[使用 SSMS 還原資料庫備份](../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)。  
   
 8.  還原 DQS_PROJECTS 資料庫。  
   
 9. 還原 DQS_STAGING_DATA 資料庫。  
   
-10. 在物件總管] 中，以滑鼠右鍵按一下伺服器，以及 [ **新查詢**。  
+10. 在 [物件總管] 中，以滑鼠右鍵按一下伺服器，然後按一下 **[新增查詢]**。  
   
-11. 在 [查詢編輯器] 視窗中，複製下列 SQL 陳述式，並取代 *\< 密碼>* 以資料庫主要金鑰的 DQS 安裝期間所提供的密碼︰  
+11. 在 [查詢編輯器] 視窗中複製以下 SQL 陳述式，並使用您在 DQS 安裝期間為資料庫主要金鑰提供的密碼來取代 <密碼>*\<*：  
   
     ```  
     USE [DQS_MAIN]  
@@ -71,7 +76,7 @@ caps.handback.revision: 12
   
 12. 按 F5 執行陳述式。 檢查 **[結果]** 窗格，確認陳述式是否皆已成功地執行。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [管理 DQS 資料庫](../data-quality-services/manage-dqs-databases.md)  
   
   

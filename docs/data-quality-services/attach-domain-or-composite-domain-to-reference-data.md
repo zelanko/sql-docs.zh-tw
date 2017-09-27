@@ -1,25 +1,30 @@
 ---
 title: "將定義域或複合定義域附加至參考資料 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dqs.dm.refdata.f1"
-  - "sql13.dqs.dm.refcatalog.f1"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dqs.dm.refdata.f1
+- sql13.dqs.dm.refcatalog.f1
 ms.assetid: 36af981c-d0d0-4dc6-afe5-bbb3c97845dc
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5c59c87fa8fc86a1e760e90f7ee2a4f4d733836f
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/09/2017
+
 ---
-# 將定義域或複合定義域附加至參考資料
+# <a name="attach-domain-or-composite-domain-to-reference-data"></a>將定義域或複合定義域附加至參考資料
   此主題描述如何將資料品質知識庫中的定義域/複合定義域附加至 Windows Azure Marketplace 中的參考資料服務，以便針對高品質參考資料建立知識。 每一項參考資料服務都包含結構描述 (資料行)。 將定義域或複合定義域附加至參考資料服務之後，您必須將附加的複合定義域內的附加定義域或個別定義域對應至參考資料服務結構描述中的適當資料行。 將複合定義域附加至參考資料服務可讓您只將一個定義域附加至參考資料服務，然後將複合定義域中的個別定義域對應至參考資料服務結構描述中的適當資料行。  
   
 > [!WARNING]  
@@ -29,19 +34,19 @@ caps.handback.revision: 17
   
  本主題中，我們將建立四個定義域： **[地址行]**、 **[縣/市]**、 **[州/省]**和 **[郵遞區號]**，在複合定義域 **[地址驗證]**下，將複合定義域附加至 **Melissa Data – Address Check** 參考資料服務，然後將複合定義域內的個別定義域對應至參考資料服務結構描述中適當的資料行。  
   
-## 開始之前  
+## <a name="before-you-begin"></a>開始之前  
   
 ###  <a name="Prerequisites"></a> 必要條件  
- 您必須已設定 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS)，才能使用參考資料服務。 請參閱 [設定 DQS 使用參考資料](../data-quality-services/configure-dqs-to-use-reference-data.md)。  
+ 您必須已設定 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS)，才能使用參考資料服務。 請參閱[設定 DQS 使用參考資料](../data-quality-services/configure-dqs-to-use-reference-data.md)。  
   
 ###  <a name="Security"></a> 安全性  
   
-#### Permissions  
+#### <a name="permissions"></a>Permissions  
  您必須擁有 DQS_MAIN 資料庫的 dqs_kb_editor 角色，才能將定義域對應至參考資料。  
   
 ##  <a name="Map"></a> 將定義域對應至 Melissa Data 中的參考資料  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [執行資料品質用戶端應用程式](../data-quality-services/run-the-data-quality-client-application.md)。  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [執行 Data Quality Client 應用程式](../data-quality-services/run-the-data-quality-client-application.md)。  
   
 2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 首頁畫面的 **[知識庫管理]**底下，按一下 **[新增知識庫]**。  
   
@@ -66,9 +71,9 @@ caps.handback.revision: 17
          ![線上參考資料提供者目錄對話方塊](../data-quality-services/media/dqs-onlinereferencedataproviderscatalog.gif "線上參考資料提供者目錄對話方塊")  
   
         > [!NOTE]  
-        >  -   在 **[線上參考資料提供者目錄]** 對話方塊中， **[DataMarket Data Quality Services]** 節點會顯示您在 Windows Azure Marketplace 中所訂閱的所有參考資料服務提供者。 如果您已在 DQS 中設定直接線上協力廠商參考資料服務提供者，它們會出現另一個節點稱為 **第 3 個合作對象 Direct 的線上提供者** （無法使用現在為不直接線上協力廠商參考資料服務提供者會在 DQS 中設定）。  
+        >  -   在 **[線上參考資料提供者目錄]** 對話方塊中， **[DataMarket Data Quality Services]** 節點會顯示您在 Windows Azure Marketplace 中所訂閱的所有參考資料服務提供者。 如果您已在 DQS 中設定直接線上協力廠商參考資料服務提供者，這些提供者會出現在稱為 **[協力廠商直接上線提供者]** 的另一個節點底下 (現在不會出現這個節點，因為 DQS 中尚未設定直接線上協力廠商參考資料服務提供者)。  
   
-9. 您將回到 **[參考資料]** 索引標籤。 在 **[提供者設定]** 區域中，視需要變更以下方塊中的值：  
+9. 您將回到 **[參考資料]** 索引標籤。在 [提供者設定] 區域中，視需要變更以下方塊中的值：  
   
     -   **自動校正臨界值**：如果參考資料服務提供之更正的信賴等級高於這個臨界值，將會自動執行更正。 請使用對應百分比值的十進位表示法來輸入值。 例如，輸入 0.9 表示 90%。  
   
@@ -81,9 +86,9 @@ caps.handback.revision: 17
  您現在可以使用此知識庫來清理資料品質專案中的活動，以便根據透過 Windows Azure Marketplace 的 Melissa Data 提供的知識來標準化和清理來源資料中的美國地址。  
   
 ##  <a name="FollowUp"></a> 後續操作：將定義域對應至參考資料之後  
- 建立資料品質專案，並針對包含美國地址的來源資料執行清理活動，方法是將它與本主題建立的知識庫相比較。 請參閱 [使用參考資料和 #40; 清理資料外部 & #41;知識](../data-quality-services/cleanse-data-using-reference-data-external-knowledge.md)。  
+ 建立資料品質專案，並針對包含美國地址的來源資料執行清理活動，方法是將它與本主題建立的知識庫相比較。 請參閱[使用參考資料 &#40;外部&#41; 知識清理資料](../data-quality-services/cleanse-data-using-reference-data-external-knowledge.md)。  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [DQS 中的 Reference Data Services](../data-quality-services/reference-data-services-in-dqs.md)   
  [資料清理](../data-quality-services/data-cleansing.md)  
   

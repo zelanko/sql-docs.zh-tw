@@ -1,7 +1,7 @@
 ---
 title: "PolyBase 組態 | Microsoft Docs"
 ms.custom: 
-ms.date: 07/11/2017
+ms.date: 09/13/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 109b5a18604b2111f3344ba216a6d3d98131d116
-ms.openlocfilehash: dd9edc9dccf29c21bb37bb0347c8a8cdb87e2b21
+ms.sourcegitcommit: 71ca2fac0a6b9f087f9d434c5a701f5656889b9e
+ms.openlocfilehash: 95a149c4a59de88373206f1b90419c0b7359bb90
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/13/2017
 
 ---
 # <a name="polybase-configuration"></a>PolyBase 設定
@@ -30,8 +30,7 @@ ms.lasthandoff: 07/31/2017
  您必須確定可從 SQL Server 連線到外部資料來源。 連線類型能大幅影響查詢效能。 例如，針對 PolyBase 查詢，10Gbit 乙太網路連結將產生比 1Gbit 乙太網路連結更快速的回應時間。  
   
  您必須使用 **sp_configure**設定 SQL Server，以連接到 Hadoop 版本或 Azure Blob 儲存體。 PolyBase 支援兩種 Hadoop 散發：Hortonworks Data Platform (HDP) 和 Cloudera 分散式 Hadoop (CDH)。  如需支援的外部資料來源的完整清單，請參閱 [PolyBase 組態 &#40;Transact-SQL&#41;](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md)。  
- 
- 請注意：PolyBase 不支援 Cloudera 加密區域。 
+1 請注意：PolyBase 不支援 Cloudera 加密區域。 
   
 ### <a name="run-spconfigure"></a>執行 sp_configure  
   
@@ -67,6 +66,20 @@ ms.lasthandoff: 07/31/2017
 3.  在 SQL Server 電腦上，尋找 **yarn.site.xml** 檔案中的 **yarn.application.classpath** 屬性。 將 Hadoop 電腦的值貼到 value 元素中。  
 
 4. 針對所有 CDH 5.X 版本，您需要將 **mapreduce.application.classpath** 組態參數新增至 **yarn.site.xml 檔案**結尾或 **mapred-site.xml 檔案**。 HortonWorks 會將這些組態包含在 **yarn.application.classpath** 組態內。
+
+## <a name="connecting-to-hadoop-cluster-with-hadooprpcprotection-setting"></a>使用 Hadoop.RPC.Protection 設定連接到 Hadoop 叢集
+hadoop 叢集中保護通訊的常見方式，是將 hadoop.rpc.protection 組態變更為「私人」或「完整性」。 根據預設，PolyBase 會假設組態設定為「驗證」。 若要覆寫此預設值，您需要將下列屬性新增至 core-site.xml 檔案。 變更此組態可保護 hadoop 節點間以及 SSL 連線到 SQL Server 的資料傳輸。
+
+```
+<!-- RPC Encryption information, PLEASE FILL THESE IN ACCORDING TO HADOOP CLUSTER CONFIG -->
+  <property>
+    <name>hadoop.rpc.protection</name>
+    <value></value>
+  </property> 
+```
+
+
+
 
 ## <a name="example-yarn-sitexml-and-mapred-sitexml-files-for-cdh-5x-cluster"></a>適用於 CDH 5.X 叢集的範例 yarn-site.xml 和 mapred-site.xml 檔案。
 

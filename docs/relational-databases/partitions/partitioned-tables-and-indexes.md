@@ -20,10 +20,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 00d990aa777630847e0993631ee1c7bbce781d54
+ms.sourcegitcommit: 71ca2fac0a6b9f087f9d434c5a701f5656889b9e
+ms.openlocfilehash: f723156f18ee6661ffb26f615f9c3598bd6875b4
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/13/2017
 
 ---
 # <a name="partitioned-tables-and-indexes"></a>分割資料表與索引
@@ -68,9 +68,8 @@ ms.lasthandoff: 08/03/2017
 -   索引鍵是唯一的，並且不含資料表的分割資料行。  
   
 -   您希望使用不同的聯結資料行，讓基底資料表參與具有多個資料表的共置聯結。  
-  
- 分割區刪除  
- 查詢最佳化工具用來只存取相關分割區以滿足查詢篩選準則的程序。  
+
+ 分割區刪除：查詢最佳化工具用來只存取相關分割區以滿足查詢篩選準則的程序。  
   
 ## <a name="performance-guidelines"></a>效能方針  
  15,000 個分割區中新的且較高的限制會影響記憶體、資料分割索引作業、DBCC 命令和查詢。 此節描述將分割區數目增加為超過 1,000 個的效能含意，並視需要提供解決方案。 具有最大分割區數目增加為 15,000 的限制，就可以較長時間地儲存資料。 不過，您只應該保留必要的資料，並維護效能與資料分割數目之間的平衡。  
