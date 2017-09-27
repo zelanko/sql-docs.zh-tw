@@ -123,7 +123,7 @@ ms.lasthandoff: 08/11/2017
 |每個資料庫的記錄檔案數||1|  
 |每部電腦的磁碟區數||3|  
   
- *由 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 公用程式所支援的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 受管理之執行個體最大數可能會根據伺服器的硬體組態而有所不同。 如需入門資訊，請參閱 [SQL Server 公用程式的功能與工作](https://msdn.microsoft.com/library/ee210548.aspx)。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本都提供 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]。 如需 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]版本支援的功能清單，請參閱 [SQL Server 2016 版本支援的功能](https://msdn.microsoft.com/library/cc645993.aspx)。  
+ *由 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 公用程式所支援的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 受管理之執行個體最大數可能會根據伺服器的硬體組態而有所不同。 如需入門資訊，請參閱 [SQL Server 公用程式的功能與工作](https://msdn.microsoft.com/library/ee210548.aspx)。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本都提供 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]。 如需 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]版本支援的功能清單，請參閱 [SQL Server 2016 版本支援的功能](https://msdn.microsoft.com/library/cc645993.aspx)。    
   
 ##  <a name="DAC"></a> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料層應用程式物件  
  在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料層應用程式 (DAC) 中測試之各種物件的大小和數目上限。  

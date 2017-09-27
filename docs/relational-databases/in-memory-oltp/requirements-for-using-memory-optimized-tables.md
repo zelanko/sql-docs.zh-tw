@@ -44,7 +44,7 @@ ms.lasthandoff: 06/22/2017
   
 -   記憶體內部 OLTP 會安裝為 **Database Engine Services**的一部分。  
   
-     若要安裝報表產生 ([判斷是否應將資料表或預存程序匯出至記憶體內部 OLTP](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) 和 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (透過 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 物件總管來管理記憶體內部 OLTP)，請 [下載 SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx)。  
+     若要安裝報表產生 ([判斷是否應將資料表或預存程序匯出至記憶體內部 OLTP](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) 和 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (透過 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 物件總管來管理記憶體內部 OLTP)，請 [下載 SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx)。   
   
 ## <a name="important-notes-on-using-includehek2includeshek-2-mdmd"></a>使用 [!INCLUDE[hek_2](../../includes/hek-2-md.md)]的重要注意事項  
   

@@ -36,7 +36,7 @@ ms.lasthandoff: 08/02/2017
 1.  匯入公用儲存機制 GPG 索引鍵。
 
     ```bash
-    curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add –
+    curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
     ```
 
 

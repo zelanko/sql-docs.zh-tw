@@ -36,7 +36,7 @@ ms.lasthandoff: 09/21/2017
   
 -   [下載 SQL Server Data Tools (SSDT)](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt)  
   
- 您需要 SSMS 和 SSDT 使用 Analysis Services 執行個體和資料。 工具可以安裝在任何地方，但請務必在伺服器上設定連接埠，然後再嘗試連線。 如需詳細資訊，請參閱＜ [Configure the Windows Firewall to Allow Analysis Services Access](../../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md) ＞。  
+ 您需要 SSMS 和 SSDT 使用 Analysis Services 執行個體和資料。 工具可以安裝在任何地方，但請務必在伺服器上設定連接埠，然後再嘗試連線。 如需詳細資訊，請參閱＜ [設定 Windows 防火牆以允許 Analysis Services 存取](../../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md) ＞。  
   
 ## <a name="install-using-a-wizard"></a>使用精靈安裝  
  下列清單顯示 [SQL Server 安裝精靈] 中用來安裝 Analysis Services 的頁面：  
