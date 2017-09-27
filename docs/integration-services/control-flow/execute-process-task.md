@@ -60,7 +60,7 @@ ms.lasthandoff: 08/11/2017
   
  您可以使用運算式來設定各種「執行處理」工作屬性。  
   
- 當您使用 **StandardInputVariable** 屬性設定「執行處理」工作來提供輸入時，請從應用程式呼叫 **Console.ReadLine** 方法來讀取輸入。 如需詳細資訊，請參閱 [](http://go.microsoft.com/fwlink/?LinkId=129201)類別庫中的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Class Library.  
+ 當您使用 **StandardInputVariable** 屬性設定「執行處理」工作來提供輸入時，請從應用程式呼叫 **Console.ReadLine** 方法來讀取輸入。 如需詳細資訊，請參閱 [Console.ReadLine 方法](http://go.microsoft.com/fwlink/?LinkId=129201)類別庫中的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Class Library.  
   
  當您使用 **Arguments** 屬性設定「執行處理」工作來提供輸入時，請執行下列其中一個步驟來取得引數：  
   
