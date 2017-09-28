@@ -4,6 +4,7 @@
 ## [版本資訊](sql-server-linux-release-notes.md)
 ## [此版本有什麼新功能？](sql-server-linux-whats-new.md)
 ## [新的與最近更新的文件](new-updated-linux.md)
+## [版本和支援的功能](sql-server-linux-editions-and-components-2017.md)
 
 # 快速入門
 ## [安裝與連線 - Red Hat](quickstart-install-connect-red-hat.md)
@@ -44,7 +45,10 @@
 ### [從 Windows 匯出和匯入 BACPAC](sql-server-linux-migrate-ssms.md)
 ### [使用 SQL Server 移轉小幫手來移轉](sql-server-linux-migrate-ssma.md)
 ### [使用 bcp 大量複製](sql-server-linux-migrate-bcp.md)
-### [使用 (SSIS) 載入資料](sql-server-linux-migrate-ssis.md)
+
+## [擷取、轉換、載入](sql-server-linux-migrate-ssis.md)
+### [設定 SSIS](sql-server-linux-configure-ssis.md)
+### [排程 SSIS 套件](sql-server-linux-schedule-ssis-packages.md)
 
 ## [設定商務持續性](sql-server-linux-business-continuity-dr.md)
 ### [備份與還原](sql-server-linux-backup-and-restore-database.md)
