@@ -36,10 +36,10 @@ ms.lasthandoff: 09/26/2017
   
 |屬性名稱|Description|  
 |-------------------|-----------------|  
-|**ENCRYPTION_ALGORITHM 指定**|用來加密機密資料的加密演算法類型。 支援的值包括：`DES`、`TRIPLE_DES`、`TRIPLE_DES_3KEY`、`DESX`、`AES_128`、`AES_192` 和 `AES_256`。 注意：目錄資料庫必須處於單一使用者模式，才可以變更這個屬性。|  
+|**ENCRYPTION_ALGORITHM**|用來加密機密資料的加密演算法類型。 支援的值包括：`DES`、`TRIPLE_DES`、`TRIPLE_DES_3KEY`、`DESX`、`AES_128`、`AES_192` 和 `AES_256`。 注意：目錄資料庫必須處於單一使用者模式，才可以變更這個屬性。|  
 |**MAX_PROJECT_VERSIONS**|單一專案將會保留的新專案版本數目。 已啟用版本清除時，會刪除超過這個計數的較舊版本。|  
 |**OPERATION_CLEANUP_ENABLED**|當這個值是`TRUE`，作業詳細資料和作業訊息超過**將 RETENTION_WINDOW** （天） 會從目錄中刪除。 當值為 `FALSE` 時，所有作業詳細資訊和作業訊息都會儲存在目錄中。 注意：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工作會執行作業清除。|  
-|**將 RETENTION_WINDOW**|作業詳細資訊和作業訊息儲存在目錄中的天數。 當值為 `-1` 時，保留週期為無限。 注意： 如果您想要使用不清除，設定**OPERATION_CLEANUP_ENABLED**至**FALSE**。|  
+|**RETENTION_WINDOW**|作業詳細資訊和作業訊息儲存在目錄中的天數。 當值為 `-1` 時，保留週期為無限。 注意： 如果您想要使用不清除，設定**OPERATION_CLEANUP_ENABLED**至**FALSE**。|  
 |**VALIDATION_TIMEOUT**|如果驗證沒有在這個屬性指定的秒數中完成，驗證將會停止。|  
 |**VERSION_CLEANUP_ENABLED**|當這個值是`TRUE`，則只**MAX_PROJECT_VERSIONS**專案版本數目會儲存在目錄和所有其他專案版本都會被刪除。 當這個值是**FALSE**，所有專案版本會都儲存在目錄中。 注意：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工作會執行作業清除。|  
 |**SERVER_LOGGING_LEVEL**|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器的預設記錄層級。|  
