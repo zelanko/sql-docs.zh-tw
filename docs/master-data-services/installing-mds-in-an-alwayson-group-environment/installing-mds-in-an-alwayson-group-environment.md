@@ -115,7 +115,7 @@ Windows Server 作業系統安裝於所有執行個體上，並修補所有更�
 
 3.  選取 [容錯移轉叢集] 核取方塊，然後按一下 [下一步] 完成安裝。 請參閱圖 2。
 
-    如果系統要求您確認 [Add features that are required for Failover clustering] (新增容錯移轉叢集所需的功能)，請按一下 [新增功能]。 請參閱圖 3。
+    如果系統要求您確認 [Add features that are required for Failover clustering]\(新增容錯移轉叢集所需的功能)，請按一下 [新增功能]。 請參閱圖 3。
 
     ![新增角色及功能精靈、容錯移轉叢集](media/Fig2_SelectFeatures.png)
 
