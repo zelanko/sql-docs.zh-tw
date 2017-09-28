@@ -21,14 +21,14 @@ ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 003e0fcc98a267342aaf7c77bf344cdfdc71880b
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="-logical-not-ssis-expression"></a>! (邏輯 Not) (SSIS 運算式)
   執行布林運算元的否定運算。  
   
 > [!NOTE]  
->  ! 運算子不可搭配其他運算子使用。 例如，您不可以將 !  及 > 運算子結合至 !>。 運算子。  
+>  ! 運算子不可搭配其他運算子使用。 例如，您不可以將 ! 及 > 運算子結合至 !>。 運算子。  
   
 ## <a name="syntax"></a>語法  
   
@@ -68,7 +68,7 @@ ms.lasthandoff: 08/03/2017
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [運算子優先順序和關聯性](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [運算子 &#40;SSIS 運算式 &#41;](../../integration-services/expressions/operators-ssis-expression.md)  
+ [運算子優先順序與關聯性](../../integration-services/expressions/operator-precedence-and-associativity.md)   
+ [運算子 &#40;SSIS 運算式&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   
   

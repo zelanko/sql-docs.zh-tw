@@ -21,7 +21,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 47f7ac32826faacd2ad38c0a09750012222fde7e
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="substring-ssis-expression"></a>SUBSTRING (SSIS 運算式)
@@ -95,7 +95,7 @@ SUBSTRING (@PostalCode,6,4)
 SUBSTRING ("Redmond",4,0)  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [函式 &#40;SSIS 運算式 &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>另請參閱  
+ [函數 &#40;SSIS 運算式&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

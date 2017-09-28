@@ -18,7 +18,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 754f96b5e43b26d59bb1e42be6dd2af008c28dd2
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="request-log"></a>要求記錄檔
@@ -63,7 +63,7 @@ ms.lasthandoff: 08/03/2017
  **訊息**  
  顯示與記錄之事件相關聯的訊息文字。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [SAP BW 來源編輯器 &#40;連線管理員頁面&#41;](../../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)   
  [Microsoft Connector for SAP BW F1 說明](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   

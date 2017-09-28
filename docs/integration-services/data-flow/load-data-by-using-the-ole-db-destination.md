@@ -22,7 +22,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
 ms.openlocfilehash: eada84a10a9163c3a5bf0757def7948e18bf35da
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="load-data-by-using-the-ole-db-destination"></a>使用 OLE DB 目的地來載入資料
@@ -65,7 +65,7 @@ ms.lasthandoff: 08/03/2017
   
 11. 若要儲存已更新的封裝，請在 **[檔案]** 功能表上，按一下 **[儲存選取項目]** 。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [OLE DB 目的地](../../integration-services/data-flow/ole-db-destination.md)   
  [Integration Services 轉換](../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Integration Services 路徑](../../integration-services/data-flow/integration-services-paths.md)   

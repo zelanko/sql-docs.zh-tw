@@ -19,7 +19,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: 2800075091835b2d6f2b07ee34e9b897fe86634e
 ms.openlocfilehash: f8fb1db80ac1b750950a3401516b54af5ee29686
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="connect-to-an-excel-workbook"></a>連接至 Excel 活頁簿
@@ -59,7 +59,7 @@ ms.lasthandoff: 08/17/2017
   
      如需適用於這個連接類型之組態選項的詳細資訊，請參閱 [Excel 連線管理員編輯器](../../integration-services/connection-manager/excel-connection-manager-editor.md)。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [連接至 Access 資料庫](../../integration-services/connection-manager/connect-to-an-access-database.md)  
   
   

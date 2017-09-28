@@ -20,7 +20,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b212ccfd61c11a8c06a840260918cc581564a6fc
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="manage-a-cdc-service"></a>管理 CDC 服務
@@ -46,7 +46,7 @@ ms.lasthandoff: 08/03/2017
   
  按一下 **[停止所有執行個體]** ，針對服務中的所有執行個體停止異動資料擷取。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [如何建立 SQL Server 變更資料庫執行個體](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)   
  [如何從 CDC 設計工具主控台管理 CDC 服務](../../integration-services/change-data-capture/how-to-manage-a-cdc-service-from-the-cdc-designer-console.md)   
  [使用新的執行個體精靈](../../integration-services/change-data-capture/use-the-new-instance-wizard.md)  

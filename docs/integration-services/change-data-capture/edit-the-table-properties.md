@@ -20,7 +20,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5213e0c5757afd3a74c8b76f43bf1a2c88ced7e4
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="edit-the-table-properties"></a>編輯資料表屬性
@@ -54,7 +54,7 @@ ms.lasthandoff: 08/03/2017
   
  在此對話方塊中輸入資訊完畢後，請按一下 **[確定]** 接受變更。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [如何編輯 CDC 執行個體屬性](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)   
  [變更為了擷取變更所選取的資料表](../../integration-services/change-data-capture/make-changes-to-the-tables-selected-for-capturing-changes.md)  
   

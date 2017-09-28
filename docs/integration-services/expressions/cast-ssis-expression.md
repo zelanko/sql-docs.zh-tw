@@ -25,7 +25,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 199dca85523f6ba2f4d53ef89e1b9a73667a6472
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="cast-ssis-expression"></a>Cast (SSIS 運算式)
@@ -147,10 +147,10 @@ ms.lasthandoff: 08/03/2017
 (DT_DBTIMESTAMPOFFSET, 7) "1999-10-11 16:34:52.1234567 + 5:35"  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [運算子優先順序和關聯性](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [運算子 &#40;SSIS 運算式 &#41;](../../integration-services/expressions/operators-ssis-expression.md)   
- [Integration Services &#40;SSIS &#41;運算式](../../integration-services/expressions/integration-services-ssis-expressions.md)   
+## <a name="see-also"></a>另請參閱  
+ [運算子優先順序與關聯性](../../integration-services/expressions/operator-precedence-and-associativity.md)   
+ [運算子 &#40;SSIS 運算式&#41;](../../integration-services/expressions/operators-ssis-expression.md)   
+ [Integration Services &#40;SSIS&#41; 運算式](../../integration-services/expressions/integration-services-ssis-expressions.md)   
  [Integration Services Data Types in Expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md)  
   
   

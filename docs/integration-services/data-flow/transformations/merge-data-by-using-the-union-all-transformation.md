@@ -24,7 +24,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b2f9933f48083b0849ba01312979911bacb4fd86
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="merge-data-by-using-the-union-all-transformation"></a>使用聯集全部轉換來合併資料
@@ -58,8 +58,8 @@ ms.lasthandoff: 08/03/2017
   
 9. 若要儲存已更新的封裝，請在 **[檔案]** 功能表上，按一下 **[儲存選取項目]** 。  
   
-## <a name="see-also"></a>請參閱＜  
- [聯集全部轉換](../../../integration-services/data-flow/transformations/union-all-transformation.md)   
+## <a name="see-also"></a>另請參閱  
+ [Union All Transformation](../../../integration-services/data-flow/transformations/union-all-transformation.md)   
  [Integration Services 轉換](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Integration Services 路徑](../../../integration-services/data-flow/integration-services-paths.md)   
  [資料流程工作](../../../integration-services/control-flow/data-flow-task.md)  

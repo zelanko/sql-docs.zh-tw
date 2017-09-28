@@ -18,7 +18,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 406cb1233d871603a38dc2d904d7ecd894b5f0cd
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="sql-server-connection-required-permissions-for-the-cdc-service"></a>SQL Server 連接所需的 CDC 服務權限
@@ -36,8 +36,8 @@ ms.lasthandoff: 08/03/2017
 |編輯 Oracle CDC 服務登入，以供在 MSXDBCDC 中更新服務註冊使用。|`db_datareader` 和 `db_datawriter` 角色|  
 |刪除 Oracle CDC 服務登入，以供在 MSXDBCDC 中更新服務註冊使用。|`db_datareader` 和 `db_datawriter` 角色|  
   
-## <a name="see-also"></a>請參閱＜  
- [SQL Server 連接](../../integration-services/change-data-capture/connection-to-sql-server.md)   
+## <a name="see-also"></a>另請參閱  
+ [連接到 SQL Server](../../integration-services/change-data-capture/connection-to-sql-server.md)   
  [連接到 SQL Server 進行刪除](../../integration-services/change-data-capture/connection-to-sql-server-for-delete.md)  
   
   

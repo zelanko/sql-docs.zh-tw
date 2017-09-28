@@ -20,7 +20,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b99116c19f5ec69fcf382069a1ca3c76ee65b3d6
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="inferred-dimension-members-slowly-changing-dimension-wizard"></a>推斷的維度成員 (緩時變維度精靈)
@@ -41,7 +41,7 @@ ms.lasthandoff: 08/03/2017
  **推斷的成員指標**  
  如果您已經選擇使用布林資料行來指出上述推斷的成員，請從清單中選取資料行。  
   
-## <a name="see-also"></a>請參閱＜  
- [使用 「 緩時變更維度精靈 」 來設定輸出](../../../integration-services/data-flow/transformations/configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
+## <a name="see-also"></a>另請參閱  
+ [使用緩時變維度精靈來設定輸出](../../../integration-services/data-flow/transformations/configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
   
   

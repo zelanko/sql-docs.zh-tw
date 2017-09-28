@@ -37,7 +37,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
 ms.openlocfilehash: 22c1126b8d5555dc743f7c8906230cf5dbcb08a8
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="integration-services-ssis-logging"></a>Integration Services (SSIS) 記錄
@@ -238,7 +238,7 @@ ms.lasthandoff: 08/03/2017
   
     -   若為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請使用 OLE DB 連接管理員。 如需相關資訊，請參閱 [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md)。  
   
-    -   若為 Windows 事件記錄檔，不需任何動作。 [!INCLUDE[ssIS](../../includes/ssis-md.md)]會自動建立記錄檔。  
+    -   若為 Windows 事件記錄檔，不需任何動作。 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 會自動建立記錄檔。  
   
     -   若為 XML 檔案，請使用「檔案」連接管理員。  
   
@@ -298,7 +298,7 @@ ms.lasthandoff: 08/03/2017
 ###  <a name="provider"></a> 設定 [提供者與記錄] 索引標籤上的選項  
  使用 [設定 SSIS 記錄] 對話方塊的 [提供者與記錄] 索引標籤，即可建立和設定用於擷取執行階段事件的記錄。  
   
-#### <a name="options"></a>選項  
+#### <a name="options"></a>選項。  
  **提供者類型**  
  從清單中選取記錄提供者的類型。  
   
@@ -311,7 +311,7 @@ ms.lasthandoff: 08/03/2017
  **說明**  
  描述欄位是可編輯的。 按一下，然後修改記錄的預設描述。  
   
- **組態**  
+ **Configuration**  
  在清單中，選取現有的連接管理員，或按一下\<**新增連接...**> 以建立新的連接管理員。 視記錄提供者的類型而定，您可以設定 OLE DB 連接管理員或檔案連接管理員。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 事件記錄檔的記錄提供者不需要有連接。  
   
  相關主題： [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md) 、 [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)  
@@ -471,13 +471,13 @@ SQL Server Integration Services 提供一組豐富的自訂事件，為套件和
   
  [傳送資料庫工作](#TransferDatabase)  
   
- [傳送錯誤訊息工作](#TransferErrorMessages)  
+ [傳輸錯誤訊息工作](#TransferErrorMessages)  
   
- [傳送作業工作](#TransferJobs)  
+ [傳輸作業工作](#TransferJobs)  
   
- [傳送登入工作](#TransferLogins)  
+ [傳輸登入工作](#TransferLogins)  
   
- [傳送主要預存程序工作](#TransferMasterStoredProcedures)  
+ [傳輸主要預存程序工作](#TransferMasterStoredProcedures)  
   
  [傳送 SQL Server 物件工作](#TransferSQLServerObjects)  
   
@@ -679,7 +679,7 @@ SQL Server Integration Services 提供一組豐富的自訂事件，為套件和
 ## <a name="related-tasks"></a>相關工作  
  下列清單包含說明如何執行記錄功能相關工作的主題連結。  
   
--   [Integration Services 封裝所記錄的事件](../../integration-services/performance/events-logged-by-an-integration-services-package.md)  
+-   [Integration Services 套件所記錄的事件](../../integration-services/performance/events-logged-by-an-integration-services-package.md)  
   
 ## <a name="related-content"></a>相關內容  
  [用於完整及詳細記錄的 DTLoggedExec 工具 (CodePlex 專案)](http://go.microsoft.com/fwlink/?LinkId=150579)  

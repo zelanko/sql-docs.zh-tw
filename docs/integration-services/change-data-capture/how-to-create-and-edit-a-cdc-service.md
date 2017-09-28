@@ -18,7 +18,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: daf64f88220832573485701883921ad575e789bc
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="how-to-create-and-edit-a-cdc-service"></a>如何建立及編輯 CDC 服務
@@ -64,8 +64,8 @@ ms.lasthandoff: 08/03/2017
   
 5.  在 [連接到 Oracle] 對話方塊中按一下 **[確定]** 。 隨即關閉這兩個對話方塊，而且會更新及註冊此服務。  
   
-## <a name="see-also"></a>請參閱＜  
- [Attunity oracle 異動資料擷取設計工具](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md)   
+## <a name="see-also"></a>另請參閱  
+ [Attunity Oracle 異動資料擷取設計工具](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md)   
  [建立及編輯 Oracle CDC 服務](../../integration-services/change-data-capture/create-and-edit-an-oracle-cdc-service.md)  
   
   

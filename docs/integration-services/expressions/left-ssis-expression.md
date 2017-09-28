@@ -18,7 +18,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: aad5c2de4903b5ad79fd5087be7801a8195e943f
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="left-ssis-expression"></a>LEFT (SSIS 運算式)
@@ -61,8 +61,8 @@ LEFT(character_expression,number)
 LEFT("Mountain Bike", 8)  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [權限 &#40;SSIS 運算式 &#41;](../../integration-services/expressions/right-ssis-expression.md)   
- [函式 &#40;SSIS 運算式 &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>另請參閱  
+ [RIGHT &#40;SSIS 運算式&#41;](../../integration-services/expressions/right-ssis-expression.md)   
+ [函數 &#40;SSIS 運算式&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

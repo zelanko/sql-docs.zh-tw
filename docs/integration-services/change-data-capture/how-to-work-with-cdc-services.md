@@ -18,7 +18,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: bd4d1ea9deb9451701f84470ed2f35f7aa220df2
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="how-to-work-with-cdc-services"></a>如何使用 CDC 服務
@@ -28,7 +28,7 @@ ms.lasthandoff: 08/03/2017
   
 1.  從 **[開始]** 功能表，選取 **[Oracle CDC 服務組態]**。  
   
-2.  從左窗格選取 [本機 CDC 服務]\ (根層級)。  
+2.  從左窗格選取 [本機 CDC 服務] (根層級)。  
   
 3.  您會執行下列其中一項或兩項工作：  
   
@@ -58,7 +58,7 @@ ms.lasthandoff: 08/03/2017
   
          如需如何輸入擁有 MSXDBCDC 資料庫寫入權限之登入認證的資訊，例如 **db_owner** 資料庫角色，請參閱 [建立及編輯 Oracle CDC 服務](../../integration-services/change-data-capture/create-and-edit-an-oracle-cdc-service.md) 和 [連接到 SQL Server](../../integration-services/change-data-capture/connection-to-sql-server.md)。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [使用 CDC 服務](../../integration-services/change-data-capture/work-with-cdc-services.md)  
   
   

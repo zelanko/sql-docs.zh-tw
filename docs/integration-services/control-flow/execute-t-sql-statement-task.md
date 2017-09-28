@@ -24,7 +24,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 94fd411504f1781041e8d36f3f1cf41f6082aa09
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="execute-t-sql-statement-task"></a>執行 T-SQL 陳述式工作
@@ -43,9 +43,9 @@ ms.lasthandoff: 08/03/2017
   
 -   [設定工作或容器的屬性](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [Integration Services 工作](../../integration-services/control-flow/integration-services-tasks.md)   
  [控制流程](../../integration-services/control-flow/control-flow.md)   
- [合併在 Integration Services 封裝](../../integration-services/control-flow/merge-in-integration-services-packages.md)  
+ [Integration Services 套件中的 MERGE](../../integration-services/control-flow/merge-in-integration-services-packages.md)  
   
   

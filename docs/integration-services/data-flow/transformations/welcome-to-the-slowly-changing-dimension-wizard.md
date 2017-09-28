@@ -20,7 +20,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a4686cf6a08a2f51b4cf63bb7413bb96781a2486
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="welcome-to-the-slowly-changing-dimension-wizard"></a>歡迎使用緩時變維度精靈
@@ -32,7 +32,7 @@ ms.lasthandoff: 08/03/2017
  **不要再顯示此頁面**  
  下次開啟精靈時略過歡迎頁面。  
   
-## <a name="see-also"></a>請參閱＜  
- [使用 「 緩時變更維度精靈 」 來設定輸出](../../../integration-services/data-flow/transformations/configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
+## <a name="see-also"></a>另請參閱  
+ [使用緩時變維度精靈來設定輸出](../../../integration-services/data-flow/transformations/configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
   
   

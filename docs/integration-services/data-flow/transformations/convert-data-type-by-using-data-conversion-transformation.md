@@ -22,7 +22,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
 ms.openlocfilehash: 3a6de227fc2fd0e93abfc9e8ac5300dbf0a137ac
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="convert-data-type-by-using-data-conversion-transformation"></a>使用資料轉換 」 轉換資料類型
@@ -57,8 +57,8 @@ ms.lasthandoff: 08/03/2017
   
 12. 若要儲存已更新的封裝，請在 **[檔案]** 功能表上，按一下 **[儲存選取項目]** 。  
   
-## <a name="see-also"></a>請參閱＜  
- [資料轉換](../../../integration-services/data-flow/transformations/data-conversion-transformation.md)   
+## <a name="see-also"></a>另請參閱  
+ [Data Conversion Transformation](../../../integration-services/data-flow/transformations/data-conversion-transformation.md)   
  [Integration Services 轉換](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Integration Services 路徑](../../../integration-services/data-flow/integration-services-paths.md)   
  [Integration Services 資料類型](../../../integration-services/data-flow/integration-services-data-types.md)   

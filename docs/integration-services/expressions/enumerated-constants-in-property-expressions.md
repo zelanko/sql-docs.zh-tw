@@ -25,7 +25,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8483c36dca5a24485e865b1115e766aa579635b9
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="enumerated-constants-in-property-expressions"></a>屬性運算式中的列舉常數
@@ -605,9 +605,9 @@ ms.lasthandoff: 08/03/2017
 ## <a name="related-tasks"></a>相關工作  
  [加入或變更屬性運算式](../../integration-services/expressions/add-or-change-a-property-expression.md)  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [在封裝中使用屬性運算式](../../integration-services/expressions/use-property-expressions-in-packages.md)   
- [Integration Services &#40;SSIS &#41;封裝](../../integration-services/integration-services-ssis-packages.md)   
+ [Integration Services &#40;SSIS&#41; 封裝](../../integration-services/integration-services-ssis-packages.md)   
  [整合服務容器](../../integration-services/control-flow/integration-services-containers.md)   
  [Integration Services 工作](../../integration-services/control-flow/integration-services-tasks.md)   
  [優先順序條件約束](../../integration-services/control-flow/precedence-constraints.md)  

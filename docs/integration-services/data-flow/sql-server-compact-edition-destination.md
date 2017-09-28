@@ -24,7 +24,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ec7fef9755b0bfd277282de54696d6f6cff5547c
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="sql-server-compact-edition-destination"></a>SQL Server Compact Edition 目的地
@@ -53,7 +53,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="related-tasks"></a>相關工作  
  如需如何設定此元件屬性的詳細資訊，請參閱 [設定資料流程元件的屬性](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [資料流程](../../integration-services/data-flow/data-flow.md)  
   
   

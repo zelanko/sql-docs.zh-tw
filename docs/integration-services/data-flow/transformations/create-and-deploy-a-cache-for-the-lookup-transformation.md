@@ -22,7 +22,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
 ms.openlocfilehash: 88d6515c29c789c12818dfc51c86c5b1d4537247
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="create-and-deploy-a-cache-for-the-lookup-transformation"></a>針對查閱轉換來建立及部署快取
@@ -94,7 +94,7 @@ ms.lasthandoff: 08/03/2017
   
 5.  將封裝部署到檔案系統。 如需詳細資訊，請參閱 [使用部署公用程式來部署封裝](../../../integration-services/packages/deploy-packages-by-using-the-deployment-utility.md)。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [建立部署公用程式](../../../integration-services/packages/create-a-deployment-utility.md)  
   
   

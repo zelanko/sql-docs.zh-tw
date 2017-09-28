@@ -20,7 +20,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: da3350dc91dff2547ca683f8c69a7160640e37da
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="process-inserts-updates-and-deletes"></a>處理插入、更新與刪除
@@ -73,7 +73,7 @@ select
   
  **下一個主題︰** [將變更套用到目的地](../../integration-services/change-data-capture/apply-the-changes-to-the-destination.md)  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [條件式分割轉換](../../integration-services/data-flow/transformations/conditional-split-transformation.md)   
  [使用條件式分割轉換來分割資料集](../../integration-services/data-flow/transformations/split-a-dataset-by-using-the-conditional-split-transformation.md)  
   

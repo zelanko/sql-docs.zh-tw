@@ -20,7 +20,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 51b1f3bfd75179ec1a66d31d167a1827e8bf8d5c
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="microsoft-connector-for-sap-bw-f1-help"></a>Microsoft Connector for SAP BW F1 說明
@@ -37,17 +37,17 @@ ms.lasthandoff: 08/03/2017
   
 ### <a name="sap-bw-source-f1-help"></a>SAP BW 來源 F1 說明  
   
--   [SAP BW 來源編輯器 &#40;連接管理員頁面 &#41;](../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)  
+-   [SAP BW 來源編輯器 &#40;連線管理員頁面&#41;](../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)  
   
--   [SAP BW 來源編輯器 &#40;資料行頁面 &#41;](../integration-services/data-flow/sap-bw-source-editor-columns-page.md)  
+-   [SAP BW 來源編輯器 &#40;資料行頁面&#41;](../integration-services/data-flow/sap-bw-source-editor-columns-page.md)  
   
--   [SAP BW 來源編輯器 &#40;錯誤輸出頁面 &#41;](../integration-services/data-flow/sap-bw-source-editor-error-output-page.md)  
+-   [SAP BW 來源編輯器 &#40;錯誤輸出頁面&#41;](../integration-services/data-flow/sap-bw-source-editor-error-output-page.md)  
   
--   [SAP BW 來源編輯器 &#40;進階的頁面 &#41;](../integration-services/data-flow/sap-bw-source-editor-advanced-page.md)  
+-   [SAP BW 來源編輯器 &#40;進階頁面&#41;](../integration-services/data-flow/sap-bw-source-editor-advanced-page.md)  
   
 -   [查閱 RFC 目的地](../integration-services/data-flow/look-up-rfc-destination.md)  
   
--   [查閱 Processchain](../integration-services/data-flow/look-up-process-chain.md)  
+-   [查閱 ProcessChain](../integration-services/data-flow/look-up-process-chain.md)  
   
 -   [要求記錄檔](../integration-services/data-flow/request-log.md)  
   
@@ -55,13 +55,13 @@ ms.lasthandoff: 08/03/2017
   
 ### <a name="sap-bw-destination-f1-help"></a>SAP BW 目的地 F1 說明  
   
--   [SAP BW 目的地編輯器 &#40;連接管理員頁面 &#41;](../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)  
+-   [SAP BW 目的地編輯器 &#40;連線管理員頁面&#41;](../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)  
   
--   [SAP BW 目的地編輯器 &#40;[對應] 頁面 &#41;](../integration-services/data-flow/sap-bw-destination-editor-mappings-page.md)  
+-   [SAP BW 目的地編輯器 &#40;對應頁面&#41;](../integration-services/data-flow/sap-bw-destination-editor-mappings-page.md)  
   
--   [SAP BW 目的地編輯器 &#40;錯誤輸出頁面 &#41;](../integration-services/data-flow/sap-bw-destination-editor-error-output-page.md)  
+-   [SAP BW 目的地編輯器 &#40;錯誤輸出頁面&#41;](../integration-services/data-flow/sap-bw-destination-editor-error-output-page.md)  
   
--   [SAP BW 目的地編輯器 &#40;進階的頁面 &#41;](../integration-services/data-flow/sap-bw-destination-editor-advanced-page.md)  
+-   [SAP BW 目的地編輯器 &#40;進階頁面&#41;](../integration-services/data-flow/sap-bw-destination-editor-advanced-page.md)  
   
 -   [查閱 InfoPackage](../integration-services/data-flow/look-up-infopackage.md)  
   
@@ -69,7 +69,7 @@ ms.lasthandoff: 08/03/2017
   
 -   [建立交易資料的 InfoCube](../integration-services/data-flow/create-infocube-for-transaction-data.md)  
   
--   [查閱 InfoObject](../integration-services/data-flow/look-up-infoobject.md)  
+-   [查詢 InfoObject](../integration-services/data-flow/look-up-infoobject.md)  
   
 -   [建立 InfoSource](../integration-services/data-flow/create-infosource.md)  
   
@@ -79,7 +79,7 @@ ms.lasthandoff: 08/03/2017
   
 -   [建立 InfoPackage](../integration-services/data-flow/create-infopackage.md)  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [Microsoft Connector for SAP BW 元件](../integration-services/microsoft-connector-for-sap-bw-components.md)  
   
   

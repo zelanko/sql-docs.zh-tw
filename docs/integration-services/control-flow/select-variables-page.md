@@ -23,7 +23,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 98e0cdc9e81497aafb35ca3b0dfed662d06bac28
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="select-variables-page"></a>選取變數頁面
@@ -41,7 +41,7 @@ ms.lasthandoff: 08/03/2017
  **型別**  
  指定變數的資料類型。  
   
-## <a name="see-also"></a>請參閱＜  
- [指令碼工作編輯器 &#40;指令碼頁面 &#41;](../../integration-services/control-flow/script-task-editor-script-page.md)  
+## <a name="see-also"></a>另請參閱  
+ [指令碼工作編輯器 &#40;指令碼頁面&#41;](../../integration-services/control-flow/script-task-editor-script-page.md)  
   
   

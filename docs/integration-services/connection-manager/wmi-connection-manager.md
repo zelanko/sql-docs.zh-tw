@@ -24,7 +24,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
 ms.openlocfilehash: 6e314655d6a230bde897ffceb54fadb8d180d1db
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="wmi-connection-manager"></a>WMI 連接管理員
@@ -79,5 +79,5 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>另請參閱  
  [Web 服務工作](../../integration-services/control-flow/web-service-task.md)   
- [Integration Services &#40;SSIS &#41;連線](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
+ [Integration Services &#40;SSIS&#41; 連接](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
 

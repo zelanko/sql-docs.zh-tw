@@ -20,7 +20,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e92bac20c6f709964dabf08710c2b18b5db0c1e4
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # 用戶端通訊協定屬性 (順序索引標籤)
@@ -58,7 +58,7 @@ ms.lasthandoff: 08/02/2017
 > [!NOTE]  
 >  若通訊協定是以前置詞或連接字串的一部份來指定，則只會嘗試使用指定的通訊協定。  
   
-## 請參閱＜  
+## 另請參閱  
  [選擇網路通訊協定](http://msdn.microsoft.com/library/6565fb7d-b076-4447-be90-e10d0dec359a)  
   
   

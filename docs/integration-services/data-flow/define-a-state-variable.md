@@ -18,7 +18,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 2ebec44b7492ead6e3417758ac653360f44d4df9
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="define-a-state-variable"></a>定義狀態變數
@@ -88,8 +88,8 @@ ms.lasthandoff: 08/03/2017
   
  如果您不打算將 CDC 控制工作與 [自動狀態持續性] 搭配使用，則必須從上次封裝執行時儲存其值的永續性儲存體中載入變數值，並在目前處理範圍已完成處理時將變數值寫回該永續性儲存體。  
   
-## <a name="see-also"></a>請參閱＜  
- [CDC 控制工作](../../integration-services/control-flow/cdc-control-task.md)   
+## <a name="see-also"></a>另請參閱  
+ [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)   
  [CDC 控制工作編輯器](../../integration-services/control-flow/cdc-control-task-editor.md)  
   
   

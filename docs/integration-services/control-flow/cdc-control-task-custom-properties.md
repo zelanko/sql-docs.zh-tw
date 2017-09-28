@@ -18,7 +18,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 2ed58b63b6bbeff9ffea04325c94d85fe06de1ab
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="cdc-control-task-custom-properties"></a>CDC 控制工作自訂屬性
@@ -36,8 +36,8 @@ ms.lasthandoff: 08/03/2017
 |StateTable|字串|指定 CDC 內容狀態儲存所在的資料表名稱。 此資料表必須可透過為此元件設定的連接進行存取。 此資料表必須包含名為 **name** 和 **state**的 varchar 資料行 ( **state** 資料行必須至少有 256 個字元)。<br /><br /> 此屬性只在 **AutomaticStatePersistence** 設為 **true**時才適用。|  
 |CommandTimeout|integer|此值表示與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫通訊時所用的逾時 (以秒為單位)。 當資料庫的回應時間非常慢，而且預設值 (30 秒) 不夠時，使用此值。|  
   
-## <a name="see-also"></a>請參閱＜  
- [CDC 控制工作](../../integration-services/control-flow/cdc-control-task.md)   
+## <a name="see-also"></a>另請參閱  
+ [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)   
  [CDC 控制工作編輯器](../../integration-services/control-flow/cdc-control-task-editor.md)  
   
   

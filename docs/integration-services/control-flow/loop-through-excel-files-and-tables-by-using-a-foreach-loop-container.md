@@ -22,7 +22,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0b4b4a69b1712a5b84b49c63aee4242cb6355bc5
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="loop-through-excel-files-and-tables-by-using-a-foreach-loop-container"></a>使用 Foreach 迴圈容器來循環使用 Excel 檔案和資料表
@@ -36,7 +36,7 @@ ms.lasthandoff: 08/03/2017
   
      如果您沒有針對 [擴充屬性] 引數使用變數，就必須手動將它加入至包含連接字串的運算式。  
   
-3.  將 Foreach 迴圈容器加入 [控制流程] 索引標籤。 如需如何設定 Foreach 迴圈容器的資訊，請參閱[設定 Foreach 迴圈容器](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)。  
+3.  將 Foreach 迴圈容器加入 [控制流程] 索引標籤。如需如何設定 Foreach 迴圈容器的資訊，請參閱[設定 Foreach 迴圈容器](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)。  
   
 4.  在 [Foreach 迴圈編輯器] 的 [集合] 頁面上，選取 Foreach 檔案列舉值、指定 Excel 活頁簿所在位置的資料夾，並指定檔案篩選 (通常是 *.xls)。  
   
@@ -77,7 +77,7 @@ ms.lasthandoff: 08/03/2017
   
 2.  建立會接收迴圈每個反覆運算上目前資料表名稱的字串變數。  
   
-3.  將 Foreach 迴圈容器加入 [控制流程] 索引標籤。 如需如何設定Foreach 迴圈容器的資訊，請參閱[設定 Foreach 迴圈容器](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)。  
+3.  將 Foreach 迴圈容器加入 [控制流程] 索引標籤。如需如何設定Foreach 迴圈容器的資訊，請參閱[設定 Foreach 迴圈容器](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)。  
   
 4.  在 [Foreach 迴圈編輯器] 的 [集合] 頁面上，選取 [Foreach ADO.NET 結構描述資料列集] 列舉值。  
   
@@ -94,12 +94,12 @@ ms.lasthandoff: 08/03/2017
   
 9. 在「Foreach 迴圈」容器中建立工作，以便使用 Excel 連接管理員在指定之活頁簿中的每個 Excel 資料表上執行相同的作業。 如果您使用指令碼工作檢查列舉的資料表名稱，或者用來處理每個資料表，請記得將字串變數加入指令碼工作的 ReadOnlyVariables 屬性中。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [設定 Foreach 迴圈容器](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)   
  [新增或變更屬性運算式](../../integration-services/expressions/add-or-change-a-property-expression.md)   
  [Excel 連接管理員](../../integration-services/connection-manager/excel-connection-manager.md)   
  [Excel 來源](../../integration-services/data-flow/excel-source.md)   
  [Excel 目的地](../../integration-services/data-flow/excel-destination.md)   
- [使用 with the Script Task Excel 檔案](../../integration-services/extending-packages-scripting-task-examples/working-with-excel-files-with-the-script-task.md)  
+ [以指令碼工作處理 Excel 檔案](../../integration-services/extending-packages-scripting-task-examples/working-with-excel-files-with-the-script-task.md)  
   
   

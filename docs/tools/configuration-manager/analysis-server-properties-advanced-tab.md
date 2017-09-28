@@ -18,7 +18,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7b6148a96e9846341dd5635333a891576ea74220
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="analysis-server-properties-advanced-tab"></a>Analysis Server 屬性 (進階索引標籤)

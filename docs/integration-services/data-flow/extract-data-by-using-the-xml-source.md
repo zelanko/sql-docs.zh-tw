@@ -22,7 +22,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
 ms.openlocfilehash: ba401b0f0a97415ecd2a24f168129d3a3c312811
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="extract-data-by-using-the-xml-source"></a>使用 XML 來源來擷取資料
@@ -65,7 +65,7 @@ ms.lasthandoff: 08/03/2017
   
 11. 若要儲存已更新的封裝，請在 **[檔案]** 功能表上，按一下 **[儲存選取項目]** 。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [XML 來源](../../integration-services/data-flow/xml-source.md)   
  [Integration Services 轉換](../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Integration Services 路徑](../../integration-services/data-flow/integration-services-paths.md)   

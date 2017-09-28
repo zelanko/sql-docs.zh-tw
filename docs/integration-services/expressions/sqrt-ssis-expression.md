@@ -21,7 +21,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f5ae5e55d52ba0e4232d8e7a83d3aab2f70a6b56
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="sqrt-ssis-expression"></a>SQRT (SSIS 運算式)
@@ -70,7 +70,7 @@ SQRT(SQUARE(@Side1) + SQUARE(@Side2))
 > [!NOTE]  
 >  在運算式中，變數名稱會固定包含 @ 前置字元。  
   
-## <a name="see-also"></a>請參閱＜  
- [函式 &#40;SSIS 運算式 &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>另請參閱  
+ [函數 &#40;SSIS 運算式&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

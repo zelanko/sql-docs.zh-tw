@@ -20,7 +20,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8809f1e5f91ad5746b66d4640747b1ec0a923f0f
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="data-mining-query"></a>資料採礦查詢
@@ -66,7 +66,7 @@ ms.lasthandoff: 08/03/2017
  **準則/引數**  
  指定套用至資料行的條件或使用者運算式。 可以將資料行從包含採礦模型和輸入資料行的資料表，拖曳至資料格。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [資料採礦查詢工具](../../analysis-services/data-mining/data-mining-query-tools.md)   
  [資料採礦延伸模組 &#40; DMX &#41;陳述式參考](../../dmx/data-mining-extensions-dmx-statements.md)  
   

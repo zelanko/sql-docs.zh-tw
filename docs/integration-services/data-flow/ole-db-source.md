@@ -26,7 +26,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
 ms.openlocfilehash: 995d2688f0e4f8ab9af751c3521e45cb0626451f
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="ole-db-source"></a>OLE DB 來源
@@ -130,17 +130,17 @@ ms.lasthandoff: 08/17/2017
   
 ### <a name="open-the-ole-db-source-editor-connection-manager-page"></a>開啟 OLE DB 來源編輯器 （連接管理員頁面）  
   
-1.  將 OLE DB 來源加入 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝 (於 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中)。  
+1.  將 OLE DB 來源加入 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝 (於 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中)。  
   
 2.  以滑鼠右鍵按一下來源元件，然後按一下 [編輯]。  
   
 3.  按一下 [連接管理員]。  
   
 ### <a name="static-options"></a>靜態選項  
- **OLE DB 連接管理員**  
+ **[無快取]**  
  從清單中選取現有的連線管理員，或按一下 [新增] 來建立新的連線。  
   
- **新**  
+ **新增**  
  使用 [設定 OLE DB 連線管理員] 對話方塊建立新的連線管理員。  
   
  **資料存取模式**  
@@ -205,11 +205,11 @@ ms.lasthandoff: 08/17/2017
 ## <a name="ole-db-source-editor-error-output-page"></a>OLE DB 來源編輯器 (錯誤輸出頁面)
   使用 [OLE DB 來源編輯器] 對話方塊的 [錯誤輸出] 頁面，以選取錯誤處理選項，並設定錯誤輸出資料行上的屬性。  
   
-### <a name="options"></a>選項  
+### <a name="options"></a>選項。  
  **輸入/輸出**  
  檢視資料來源的名稱。  
   
- **[資料行]**  
+ **資料行**  
  檢視您在 [OLE DB 來源編輯器] 對話方塊的 [連接管理員] 頁面上所選取的外部 (來源) 資料行。  
   
  **錯誤**  
@@ -231,7 +231,7 @@ ms.lasthandoff: 08/17/2017
   
 ## <a name="see-also"></a>另請參閱  
  [OLE DB 目的地](../../integration-services/data-flow/ole-db-destination.md)   
- [Integration Services &#40;SSIS &#41;變數](../../integration-services/integration-services-ssis-variables.md)   
+ [Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)   
  [資料流程](../../integration-services/data-flow/data-flow.md)  
   
   

@@ -21,7 +21,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5e297f7021239ded4aa76ad61e75fddba528ccf6
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="day-ssis-expression"></a>DAY (SSIS 運算式)
@@ -70,12 +70,12 @@ DAY(ModifiedDate)
 DAY(GETDATE())  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [DATEADD &#40;SSIS 運算式 &#41;](../../integration-services/expressions/dateadd-ssis-expression.md)   
- [DATEDIFF &#40;SSIS 運算式 &#41;](../../integration-services/expressions/datediff-ssis-expression.md)   
+## <a name="see-also"></a>另請參閱  
+ [DATEADD &#40;SSIS 運算式&#41;](../../integration-services/expressions/dateadd-ssis-expression.md)   
+ [DATEDIFF &#40;SSIS 運算式&#41;](../../integration-services/expressions/datediff-ssis-expression.md)   
  [DATEPART &#40;SSIS 運算式 &#41;](../../integration-services/expressions/datepart-ssis-expression.md)   
  [月份 &#40;SSIS 運算式 &#41;](../../integration-services/expressions/month-ssis-expression.md)   
  [年份 &#40;SSIS 運算式 &#41;](../../integration-services/expressions/year-ssis-expression.md)   
- [函式 &#40;SSIS 運算式 &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+ [函數 &#40;SSIS 運算式&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

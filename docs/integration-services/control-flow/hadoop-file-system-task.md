@@ -21,7 +21,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e86c35bf891b0e83a74c6e9b7cd30295b5e52d5f
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="hadoop-file-system-task"></a>Hadoop 檔案系統工作
@@ -31,7 +31,7 @@ ms.lasthandoff: 08/03/2017
   
  ![Hadoop 檔案系統工作編輯器](../../integration-services/control-flow/media/hadoop-filesystem-task.png "Hadoop 檔案系統工作編輯器")  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  在 Hadoop 檔案系統工作編輯器) 對話方塊中設定下列選項。  
   
 |欄位|說明|  
@@ -44,8 +44,8 @@ ms.lasthandoff: 08/03/2017
 |**本機檔案連線**|指定現有的檔案連線管理員或建立新的連線管理員。 此連線管理員會指出來源檔案的裝載位置。|  
 |**是否遞迴**|指定是否要以遞迴方式複製所有的子資料夾。|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [Hadoop 連接管理員](../../integration-services/connection-manager/hadoop-connection-manager.md)   
- [檔案連接管理員](../../integration-services/connection-manager/file-connection-manager.md)  
+ [檔案連線管理員](../../integration-services/connection-manager/file-connection-manager.md)  
   
   

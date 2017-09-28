@@ -23,7 +23,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
 ms.openlocfilehash: c0106d70fa5a3b31f0a92edf5c7088cf427c59a8
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="derive-column-values-by-using-the-derived-column-transformation"></a>使用衍生的資料行轉換來衍生資料行值
@@ -62,12 +62,12 @@ ms.lasthandoff: 08/03/2017
   
 12. 若要儲存已更新的封裝，請在 **[檔案]** 功能表上，按一下 **[儲存選取項目]** 。  
   
-## <a name="see-also"></a>請參閱＜  
- [在衍生的資料行轉換](../../../integration-services/data-flow/transformations/derived-column-transformation.md)   
+## <a name="see-also"></a>另請參閱  
+ [Derived Column Transformation](../../../integration-services/data-flow/transformations/derived-column-transformation.md)   
  [Integration Services 資料類型](../../../integration-services/data-flow/integration-services-data-types.md)   
  [Integration Services 轉換](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Integration Services 路徑](../../../integration-services/data-flow/integration-services-paths.md)   
  [資料流程工作](../../../integration-services/control-flow/data-flow-task.md)   
- [Integration Services & #40;SSIS & #41;運算式](../../../integration-services/expressions/integration-services-ssis-expressions.md)  
+ [Integration Services &#40;SSIS &#41;運算式](../../../integration-services/expressions/integration-services-ssis-expressions.md)  
   
   

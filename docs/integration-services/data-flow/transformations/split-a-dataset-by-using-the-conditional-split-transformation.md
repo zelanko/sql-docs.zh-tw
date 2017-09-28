@@ -22,7 +22,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
 ms.openlocfilehash: 8248e068541c6bd72b21f78d121811f4851850bb
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="split-a-dataset-by-using-the-conditional-split-transformation"></a>使用條件式分割轉換來分割資料集
@@ -63,8 +63,8 @@ ms.lasthandoff: 08/03/2017
   
 12. 若要儲存已更新的封裝，請在 **[檔案]** 功能表上，按一下 **[儲存選取項目]** 。  
   
-## <a name="see-also"></a>請參閱＜  
- [條件式分割轉換](../../../integration-services/data-flow/transformations/conditional-split-transformation.md)   
+## <a name="see-also"></a>另請參閱  
+ [Conditional Split Transformation](../../../integration-services/data-flow/transformations/conditional-split-transformation.md)   
  [Integration Services 轉換](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Integration Services 路徑](../../../integration-services/data-flow/integration-services-paths.md)   
  [Integration Services 資料類型](../../../integration-services/data-flow/integration-services-data-types.md)   

@@ -29,7 +29,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
 ms.openlocfilehash: 9e7aade0a21f0a77d05c0550aac8aed5b1ace4d8
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="ado-net-source"></a>ADO NET 來源
@@ -182,7 +182,7 @@ ms.lasthandoff: 08/17/2017
  **輸入/輸出**  
  檢視資料來源的名稱。  
   
- **[資料行]**  
+ **資料行**  
  檢視您在 [ADO NET 來源編輯器] 對話方塊之 [連接管理員] 頁面上所選取的外部 (來源) 資料行。  
   
  **錯誤**  

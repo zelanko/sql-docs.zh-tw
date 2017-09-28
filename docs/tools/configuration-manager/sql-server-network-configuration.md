@@ -18,13 +18,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 30c02a677783db2800ef7ce5eed32ca8bc1a3127
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="sql-server-network-configuration"></a>SQL Server 網路組態
   本節包含「SQL Server 組態管理員」中 **[伺服器網路組態]** 對話方塊的 F1 說明主題。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [SQL Server 組態管理員說明](../../tools/configuration-manager/sql-server-configuration-manager-help.md)  
   
   

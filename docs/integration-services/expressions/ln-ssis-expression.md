@@ -21,7 +21,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 6d34eb7a3087f30709a55912f1c60b97569fb209
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="ln-ssis-expression"></a>LN (SSIS 運算式)
@@ -65,8 +65,8 @@ LN(Length)
 LN(@Length)   
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [記錄檔 &#40;SSIS 運算式 &#41;](../../integration-services/expressions/log-ssis-expression.md)   
- [函式 &#40;SSIS 運算式 &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>另請參閱  
+ [LOG &#40;SSIS 運算式&#41;](../../integration-services/expressions/log-ssis-expression.md)   
+ [函數 &#40;SSIS 運算式&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

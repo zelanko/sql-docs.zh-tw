@@ -20,7 +20,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ee8cd785cdb0facdba880ee0502ec51508bca618
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="add-tables-to-a-cdc-instance"></a>將資料表加入至 CDC 執行個體
@@ -51,7 +51,7 @@ ms.lasthandoff: 08/03/2017
 > [!NOTE]  
 >  您可以在檢視器中檢視資料表清單。 當使用檢視器時，此資訊是唯讀的。 檢視器也包括資料表中擷取的資料行清單。 如需有關如何存取此檢視器的詳細資訊，請參閱＜ [How to Manage a CDC Instance](../../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md)＞。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [如何編輯 CDC 執行個體屬性](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)   
  [如何管理 CDC 執行個體](../../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md)   
  [選取 Oracle 資料表來擷取變更](../../integration-services/change-data-capture/select-oracle-tables-for-capturing-changes.md)  

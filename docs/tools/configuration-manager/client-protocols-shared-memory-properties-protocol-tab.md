@@ -21,7 +21,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 008982fcfc51aa3cfccb2e3d0c43be0928ff281a
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # 用戶端通訊協定 - 共用記憶體屬性 (通訊協定索引標籤)

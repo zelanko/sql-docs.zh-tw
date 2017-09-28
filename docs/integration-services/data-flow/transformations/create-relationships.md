@@ -20,7 +20,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a9f511b91e0e085c07dcf4dfb7742514ddad6070
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="create-relationships"></a>建立關聯性
@@ -52,10 +52,10 @@ ms.lasthandoff: 08/03/2017
  **相似度輸出別名**  
  指定新輸出資料行的名稱，資料行中包含該選取資料行的相似度分數。 如果您將此值保留空白，就不會建立輸出資料行。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../../integration-services/integration-services-error-and-message-reference.md)   
  [模糊查閱轉換編輯器 &#40;資料行索引標籤 &#41;](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation-editor-columns-tab.md)   
  [查閱轉換編輯器 &#40;資料行頁面 &#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-columns-page.md)   
- [詞彙查閱轉換編輯器 &#40;詞彙查閱 索引標籤 &#41;](../../../integration-services/data-flow/transformations/term-lookup-transformation-editor-term-lookup-tab.md)  
+ [詞彙查閱轉換編輯器 &#40;詞彙查閱索引標籤&#41;](../../../integration-services/data-flow/transformations/term-lookup-transformation-editor-term-lookup-tab.md)  
   
   

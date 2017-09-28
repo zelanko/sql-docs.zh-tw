@@ -18,7 +18,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 9acfe256755294f134decddc31a7cbb9c7966f78
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="xml-source-custom-properties"></a>XML 來源自訂屬性
@@ -43,7 +43,7 @@ ms.lasthandoff: 08/03/2017
   
  如需詳細資訊，請參閱 [XML 來源](../../integration-services/data-flow/xml-source.md)。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [通用屬性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
   

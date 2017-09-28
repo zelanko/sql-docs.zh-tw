@@ -22,7 +22,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 2b1ae38e8b7ba0a9e584a80d1c6cacc76938576a
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="connect-to-a-dbase-or-other-dbf-file"></a>連接到 dBASE 或其他 DBF 檔案
@@ -47,7 +47,7 @@ ms.lasthandoff: 08/03/2017
   
 7.  若要在封裝的資料流程中使用您的連接管理員，請選取 OLE DB 來源或目的地，並將它設定為使用您在先前步驟中所建立的連接管理員。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [OLE DB 連接管理員](../../integration-services/connection-manager/ole-db-connection-manager.md)  
   
   

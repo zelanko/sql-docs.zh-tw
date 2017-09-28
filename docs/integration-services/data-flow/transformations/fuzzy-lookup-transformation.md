@@ -41,7 +41,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
 ms.openlocfilehash: ff5f003749572b16e750b5940cd0f05b0b879fda
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/19/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="fuzzy-lookup-transformation"></a>模糊查閱轉換
@@ -149,8 +149,8 @@ ms.lasthandoff: 08/19/2017
 > [!NOTE]  
 >  在 **[模糊查閱轉換編輯器]** 中無法使用模糊查閱轉換的 **Exhaustive** 和 **MaxMemoryUsage**屬性，但可使用 **[進階編輯器]**來設定這兩個屬性。 此外，只有在 **[進階編輯器]** 中，才可指定大於 100 的 **MaxOutputMatchesPerInput**值。 如需有關這些屬性的詳細資訊，請參閱＜ [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)＞的「模糊查閱轉換」一節。  
   
-### <a name="options"></a>選項  
- **OLE DB 連接管理員**  
+### <a name="options"></a>選項。  
+ **[無快取]**  
  從清單中選取現有的 OLE DB 連線管理員，或按一下 [新增] 來建立新連線。  
   
  **新增**  
@@ -185,8 +185,8 @@ ms.lasthandoff: 08/19/2017
 ## <a name="fuzzy-lookup-transformation-editor-columns-tab"></a>模糊查閱轉換編輯器 (資料行索引標籤)
   使用 **[模糊查閱轉換編輯器]** 對話方塊的 **[資料行]** 索引標籤，即可設定輸入與輸出資料行的屬性。  
   
-### <a name="options"></a>選項  
- **可用輸入資料行**  
+### <a name="options"></a>選項。  
+ **可用的輸入資料行**  
  拖曳輸入資料行，即可將資料行連接到可用的查閱資料行。 這些資料行必須擁有相符的、支援的資料類型。 在 [ [建立關聯性](../../../integration-services/data-flow/transformations/create-relationships.md) ] 對話方塊中選取對應行，並以滑鼠右鍵按一下來編輯對應。  
   
  **名稱**  
@@ -207,8 +207,8 @@ ms.lasthandoff: 08/19/2017
 ## <a name="fuzzy-lookup-transformation-editor-advanced-tab"></a>模糊查閱轉換編輯器 (進階索引標籤)
   使用 **[模糊查閱轉換編輯器]** 對話方塊的 **[進階]** 索引標籤，即可設定模糊查閱的參數。  
   
-### <a name="options"></a>選項  
- **每次查閱輸出的相符記錄數目上限**  
+### <a name="options"></a>選項。  
+ **每次查閱輸出的相符項目上限**  
  指定轉換針對每一個輸入資料列，可以傳回的相符項目上限。 預設值是 **1**。  
   
  **相似度臨界值**  
@@ -219,7 +219,7 @@ ms.lasthandoff: 08/19/2017
   
 ## <a name="see-also"></a>另請參閱  
  [查閱轉換](../../../integration-services/data-flow/transformations/lookup-transformation.md)   
- [模糊群組轉換](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)   
+ [Fuzzy Grouping Transformation](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)   
  [Integration Services 轉換](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   

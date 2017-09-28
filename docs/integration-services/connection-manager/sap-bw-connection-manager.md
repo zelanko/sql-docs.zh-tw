@@ -20,7 +20,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
 ms.openlocfilehash: 83bcf5846d976b805bd9b5392fe7bed22ebd1deb
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="sap-bw-connection-manager"></a>SAP BW 連接管理員
@@ -66,7 +66,7 @@ ms.lasthandoff: 08/09/2017
   
  **若要開啟 SAP BW 連接管理員編輯器**  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，開啟包含 SAP BW 連線管理員的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，開啟包含 SAP BW 連線管理員的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝。  
   
 2.  在 [控制流程] 索引標籤上的 [連線管理員] 區域中，執行下列其中一個步驟：  
   
@@ -98,7 +98,7 @@ ms.lasthandoff: 08/09/2017
   
  若要連接到負載平衡的伺服器群組，請改用 [使用負載平衡] 選項。  
   
- **主應用程式**  
+ **Host**  
  如果要連接到單一應用程式伺服器，請指定主機名稱。  
   
 > [!NOTE]  

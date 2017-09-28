@@ -21,7 +21,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 79b0782d0d01733f10310f1eaac611fc688dbf21
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="hadoop-connection-manager"></a>Hadoop 連接管理員
@@ -65,7 +65,7 @@ ms.lasthandoff: 08/03/2017
   
 6.  按一下 **[確定]** ，關閉對話方塊。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [Hadoop Hive 工作](../../integration-services/control-flow/hadoop-hive-task.md)   
  [Hadoop Pig 工作](../../integration-services/control-flow/hadoop-pig-task.md)   
  [Hadoop 檔案系統工作](../../integration-services/control-flow/hadoop-file-system-task.md)  

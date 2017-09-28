@@ -22,7 +22,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0d7feb12fd7b258fb876ff1ed554159e54a7ac33
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="transform-data-with-transformations"></a>使用轉換來轉換資料
@@ -62,7 +62,7 @@ ms.lasthandoff: 08/03/2017
   
 -   [設定資料流程元件的屬性](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [資料流程工作](../../../integration-services/control-flow/data-flow-task.md)   
  [資料流程](../../../integration-services/data-flow/data-flow.md)   
  [以路徑連接元件](http://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8)   

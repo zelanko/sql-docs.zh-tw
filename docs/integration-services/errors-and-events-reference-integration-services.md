@@ -23,11 +23,11 @@ ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c98113795981fb4c080fac83f3f69a6242c1e86b
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="errors-and-events-reference-integration-services"></a>錯誤和事件參考 (Integration Services)
-  文件集中的這一節包含一些與 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 相關之錯誤和事件的資訊， 包含錯誤訊息的原因和解決方案資訊。  
+  文件集中的這一節包含一些與 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]相關之錯誤和事件的資訊， 包含錯誤訊息的原因和解決方案資訊。  
   
  如需 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 錯誤訊息的詳細資訊，包括大部分 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 錯誤及其描述的清單，請參閱 [Integration Services 錯誤和訊息參考](../integration-services/integration-services-error-and-message-reference.md)。 不過，此清單目前並不包含疑難排解的資訊。  
   
@@ -80,7 +80,7 @@ ms.lasthandoff: 08/03/2017
 |SQLISService_273|指出組態檔無法讀取或無效。|  
 |SQLISService_274|指出包含組態檔位置的登錄項目不存在或是空的。|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../integration-services/integration-services-error-and-message-reference.md)  
   
   

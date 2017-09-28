@@ -25,7 +25,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
 ms.openlocfilehash: d05d290cd9468eb7fd0b208e00a88db76cfae61a
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/19/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="copy-column-transformation"></a>複製資料行轉換

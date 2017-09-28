@@ -23,7 +23,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: fd7919482026f85d9261c2a36d16defdf6b59cd9
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="getutcdate-ssis-expression"></a>GETUTCDATE (SSIS 運算式)
@@ -61,8 +61,8 @@ DATEDIFF("dd",ModifiedDate,GETUTCDATE())
 DATEADD("Month",3,GETUTCDATE())  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [GETDATE &#40;SSIS 運算式 &#41;](../../integration-services/expressions/getdate-ssis-expression.md)   
- [函式 &#40;SSIS 運算式 &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>另請參閱  
+ [GETDATE &#40;SSIS 運算式&#41;](../../integration-services/expressions/getdate-ssis-expression.md)   
+ [函數 &#40;SSIS 運算式&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

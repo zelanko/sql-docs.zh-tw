@@ -22,7 +22,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 6d5dad9457bbafe0218c1e71358d2c9c445f79a8
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="amp-bitwise-and-ssis-expression"></a>&amp;(位元 AND)（SSIS 運算式）
@@ -97,9 +97,9 @@ ReorderPoint & SafetyStockLevel
   
  00000001  
   
-## <a name="see-also"></a>請參閱＜  
- [& & &#40;邏輯 AND &#41;&#40;SSIS 運算式 &#41;](../../integration-services/expressions/logical-and-ssis-expression.md)   
- [運算子優先順序和關聯性](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [運算子 &#40;SSIS 運算式 &#41;](../../integration-services/expressions/operators-ssis-expression.md)  
+## <a name="see-also"></a>另請參閱  
+ [&& &#40;邏輯 AND&#41; &#40;SSIS 運算式&#41;](../../integration-services/expressions/logical-and-ssis-expression.md)   
+ [運算子優先順序與關聯性](../../integration-services/expressions/operator-precedence-and-associativity.md)   
+ [運算子 &#40;SSIS 運算式&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   
   

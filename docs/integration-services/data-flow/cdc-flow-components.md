@@ -18,7 +18,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: 6e754198cf82a7ba0752fe8f20c3780a8ac551d7
 ms.openlocfilehash: 7fea154af206b964206f7e04eddde0cea6cf08f9
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="cdc-flow-components"></a>CDC 流程元件
@@ -218,7 +218,7 @@ ms.lasthandoff: 09/14/2017
   
 -   technet.microsoft.com 上的影片： [CDC for Oracle Databases using SQL Server Integration Services 2012](http://technet.microsoft.com/sqlserver/jj218898)(使用 SQL Server Integration Services 2012 的 Oracle CDC 資料庫) (SQL Server 影片)。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [CDC 控制工作](../../integration-services/control-flow/cdc-control-task.md)  
   
   

@@ -49,7 +49,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 62ff6e04e7f26e6ca1af9760ebb17c5f41d37f0d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="transformation-custom-properties"></a>轉換自訂屬性
@@ -122,7 +122,7 @@ ms.lasthandoff: 08/03/2017
   
  稽核轉換的輸入、輸入資料行和輸出沒有任何自訂屬性。  
   
- 如需詳細資訊，請參閱[稽核轉換](../../../integration-services/data-flow/transformations/audit-transformation.md)。  
+ 如需詳細資訊，請參閱 [稽核轉換](../../../integration-services/data-flow/transformations/audit-transformation.md)。  
   
 ##  <a name="cachetransform"></a> 快取轉換轉換自訂屬性  
  快取轉換轉換同時具有自訂屬性以及所有資料流程元件通用的屬性。  
@@ -135,7 +135,7 @@ ms.lasthandoff: 08/03/2017
 |ValidateExternalMetadata|布林|指出快取轉換是否在設計階段使用外部資料來源進行驗證。 如果此屬性設定為 [False]，就會在執行階段根據外部資料來源進行驗證。<br /><br /> 預設值為 [True]。|  
 |AvailableInputColumns|字串|可用輸入資料行的清單。|  
 |InputColumns|字串|選取之輸入資料行的清單。|  
-|CacheColumnName|字串|指定對應至選取之輸入資料行的資料行名稱。<br /><br /> CacheColumnName 屬性中的資料行名稱必須與快取連接管理員編輯器之 [資料行] 頁面上所列的對應資料行名稱相符。<br /><br /> 如需詳細資訊，請參閱[快取連接管理員編輯器](../../../integration-services/data-flow/transformations/cache-connection-manager-editor.md)|  
+|CacheColumnName|字串|指定對應至選取之輸入資料行的資料行名稱。<br /><br /> CacheColumnName 屬性中的資料行名稱必須與快取連接管理員編輯器之 [資料行] 頁面上所列的對應資料行名稱相符。<br /><br /> 如需詳細資訊，請參閱 [快取連接管理員編輯器](../../../integration-services/data-flow/transformations/cache-connection-manager-editor.md)|  
   
 ##  <a name="charmap"></a> 字元對應轉換自訂屬性  
  字元對應轉換只有元件層級上所有資料流程元件通用的屬性。  
@@ -225,7 +225,7 @@ ms.lasthandoff: 08/03/2017
   
  衍生的資料行轉換的輸入和輸出沒有任何自訂屬性。  
   
- 如需詳細資訊，請參閱[衍生的資料行轉換](../../../integration-services/data-flow/transformations/derived-column-transformation.md)。  
+ 如需詳細資訊，請參閱 [衍生的資料行轉換](../../../integration-services/data-flow/transformations/derived-column-transformation.md)。  
   
 ##  <a name="extract"></a> 匯出資料行轉換自訂屬性  
  匯出資料行轉換只有元件層級上所有資料流程元件通用的屬性。  
@@ -346,7 +346,7 @@ ms.lasthandoff: 08/03/2017
 |DefaultCodePage|Integer|無法從資料來源中取得字碼頁資訊時要使用的預設字碼頁。|  
 |MaxMemoryUsage|Integer|查閱資料表的快取大小上限。 此屬性的預設值為 **25**，表示快取大小沒有任何限制。|  
 |MaxMemoryUsage64|Integer|在 64 位元電腦上，查閱資料表的快取大小上限。|  
-|NoMatchBehavior|整數 (列舉)|一個值，指定在參考資料集中沒有相符項目的資料列是否會被視為錯誤。<br /><br /> 當此屬性設定為 [將無相符項目的資料列視為錯誤]\ (0) 時，沒有相符項目的資料列就會被視為錯誤。 您可以使用 [查閱轉換編輯器] 對話方塊的 [錯誤輸出] 頁面來指定發生這種錯誤類型時要採取的動作。 如需詳細資訊，請參閱[查閱轉換編輯器 &#40;錯誤輸出頁面&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md)。<br /><br /> 當屬性設定為 [將無相符項目的資料列傳送至無相符結果輸出] \(1)，資料列就不會被視為錯誤。<br /><br /> 預設值是 [將無相符項目的資料列視為錯誤] \(0)。|  
+|NoMatchBehavior|整數 (列舉)|一個值，指定在參考資料集中沒有相符項目的資料列是否會被視為錯誤。<br /><br /> 當此屬性設定為 [將無相符項目的資料列視為錯誤] (0) 時，沒有相符項目的資料列就會被視為錯誤。 您可以使用 [查閱轉換編輯器] 對話方塊的 [錯誤輸出] 頁面來指定發生這種錯誤類型時要採取的動作。 如需詳細資訊，請參閱[查閱轉換編輯器 &#40;錯誤輸出頁面&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md)。<br /><br /> 當屬性設定為 [將無相符項目的資料列傳送至無相符結果輸出] (1)，資料列就不會被視為錯誤。<br /><br /> 預設值是 [將無相符項目的資料列視為錯誤] (0)。|  
 |ParameterMap|字串|歷程識別碼的分號分隔清單，而這些歷程識別碼會對應至 **SqlCommand** 陳述式中使用的參數。|  
 |ReferenceMetadataXML|字串|轉換從查閱資料表中複製到輸出之資料行的中繼資料。|  
 |SqlCommand|字串|填入查閱資料表的 SELECT 陳述式。|  
@@ -398,7 +398,7 @@ ms.lasthandoff: 08/03/2017
   
 |屬性名稱|資料類型|說明|  
 |-------------------|---------------|-----------------|  
-|CommandTimeout|Integer|逾時之前 SQL 命令可以執行的秒數上限。 值為 **0** 指出無限的時間。 這個屬性的預設值為 **0**。|  
+|CommandTimeout|Integer|逾時之前 SQL 命令可以執行的秒數上限。值為 **0** 指出無限的時間。 這個屬性的預設值為 **0**。|  
 |DefaultCodePage|Integer|無法從資料來源中取得字碼頁資訊時要使用的字碼頁。|  
 |SqlCommand|字串|轉換針對資料流程中每個資料列執行的 Transact-SQL 陳述式。<br /><br /> 此屬性的值可以使用屬性運算式指定。|  
   
@@ -630,7 +630,7 @@ ms.lasthandoff: 08/03/2017
   
  如需詳細資訊，請參閱 [取消樞紐轉換](../../../integration-services/data-flow/transformations/unpivot-transformation.md)。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [Integration Services 轉換](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [通用屬性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)   
  [路徑屬性](http://msdn.microsoft.com/library/89b1e347-9579-4f6b-af74-c6519ea08eea)   

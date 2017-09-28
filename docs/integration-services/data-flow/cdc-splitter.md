@@ -20,7 +20,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0e2bee6609acacd6c9d441eae62d178818aea27a
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="cdc-splitter"></a>CDC 分隔器
@@ -61,7 +61,7 @@ ms.lasthandoff: 08/03/2017
   
 -   在 **專案的** [資料流程] [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 畫面中，以滑鼠右鍵按一下 CDC 分隔器，然後選取 **[顯示進階編輯器]**。  
   
-## <a name="see-also"></a>請參閱＜  
- [導向 CDC 資料流，以根據變更的類型](../../integration-services/data-flow/direct-the-cdc-stream-according-to-the-type-of-change.md)  
+## <a name="see-also"></a>另請參閱  
+ [依據變更類型來導向 CDC 資料流](../../integration-services/data-flow/direct-the-cdc-stream-according-to-the-type-of-change.md)  
   
   

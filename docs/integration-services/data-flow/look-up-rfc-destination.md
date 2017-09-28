@@ -18,7 +18,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3c9db6a056a69d502b4a93b9575cb565da798adf
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="look-up-rfc-destination"></a>查閱 RFC 目的地
@@ -31,7 +31,7 @@ ms.lasthandoff: 08/03/2017
   
  **若要開啟查閱 RFC 目的地對話方塊**  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，開啟包含 SAP BW 來源或目的地的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，開啟包含 SAP BW 來源或目的地的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝。  
   
 2.  在 [資料流程] 索引標籤中，按兩下 SAP BW 來源或目的地。  
   
@@ -54,9 +54,9 @@ ms.lasthandoff: 08/03/2017
  **程式識別碼**  
  檢視與 RFC 目的地相關聯的程式識別碼。  
   
-## <a name="see-also"></a>請參閱＜  
- [SAP BW 來源編輯器 &#40;連接管理員頁面 &#41;](../../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)   
- [SAP BW 目的地編輯器 &#40;連接管理員頁面 &#41;](../../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)   
+## <a name="see-also"></a>另請參閱  
+ [SAP BW 來源編輯器 &#40;連線管理員頁面&#41;](../../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)   
+ [SAP BW 目的地編輯器 &#40;連線管理員頁面&#41;](../../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)   
  [Microsoft Connector for SAP BW F1 說明](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   

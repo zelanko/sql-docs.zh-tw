@@ -20,7 +20,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ea3c68e0320216c81ce2a47f426112dd4a25f22f
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="incorporate-a-data-profiling-task-in-package-workflow"></a>在封裝工作流程中納入資料分析工作
@@ -331,7 +331,7 @@ ms.lasthandoff: 08/03/2017
   
 7.  在將指令碼工作連接至工作流程中下游分支的優先順序條件約束中，撰寫使用變數值來導向工作流程的運算式。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [資料分析工作的設定](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)   
  [資料設定檔檢視器](../../integration-services/control-flow/data-profile-viewer.md)  
   

@@ -23,7 +23,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0a7d7b4a2af89c855a6269d90d94f79465bfad8a
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="extend-a-dataset-by-using-the-merge-join-transformation"></a>使用合併聯結轉換來擴充資料集
@@ -64,8 +64,8 @@ ms.lasthandoff: 08/03/2017
   
 11. 若要儲存已更新的封裝，請在 **[檔案]** 功能表上，按一下 **[儲存選取項目]** 。  
   
-## <a name="see-also"></a>請參閱＜  
- [合併聯結轉換](../../../integration-services/data-flow/transformations/merge-join-transformation.md)   
+## <a name="see-also"></a>另請參閱  
+ [Merge Join Transformation](../../../integration-services/data-flow/transformations/merge-join-transformation.md)   
  [Integration Services 轉換](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Integration Services 路徑](../../../integration-services/data-flow/integration-services-paths.md)   
  [資料流程工作](../../../integration-services/control-flow/data-flow-task.md)  

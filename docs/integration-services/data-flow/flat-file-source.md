@@ -28,7 +28,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
 ms.openlocfilehash: 3460c0a209af8b587617e81c28fdccc2d5ff0eed
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="flat-file-source"></a>一般檔案來源
@@ -78,7 +78,7 @@ ms.lasthandoff: 08/17/2017
   
 -   如果來源為多個一般檔案，而且資料流程工作位於迴圈容器 (如 For 迴圈容器) 內，則為「多個一般檔案」連接管理員。 在此容器的每一個迴圈上，「一般檔案」來源會從「多個一般檔案」連接管理員提供的下一個檔案名稱中載入資料。 如需詳細資訊，請參閱 [Multiple Flat Files Connection Manager](../../integration-services/connection-manager/multiple-flat-files-connection-manager.md)。  
   
-### <a name="options"></a>選項  
+### <a name="options"></a>選項。  
  **Flat file connection manager**  
  從清單中選取現有的連線管理員，或按一下 [新增] 建立新的連線管理員。  
   
@@ -95,7 +95,7 @@ ms.lasthandoff: 08/17/2017
   使用 [一般檔案來源編輯器] 對話方塊的 [資料行] 節點，將輸出資料行對應至每個外部 (來源) 資料行。  
   
 > [!NOTE]  
->  在 [一般檔案來源編輯器] 中無法使用一般檔案來源的 **FileNameColumnName** 屬性，以及其輸出資料行的 **FastParse** 屬性，但可使用 [進階編輯器] 來設定這兩個屬性。 如需這些屬性的詳細資訊，請參閱[一般檔案自訂屬性](../../integration-services/data-flow/flat-file-custom-properties.md)的＜一般檔案來源＞一節。  
+>  在 [一般檔案來源編輯器] 中無法使用一般檔案來源的 **FileNameColumnName** 屬性，以及其輸出資料行的 **FastParse** 屬性，但可使用 [進階編輯器] 來設定這兩個屬性。 如需這些屬性的詳細資訊，請參閱 [一般檔案自訂屬性](../../integration-services/data-flow/flat-file-custom-properties.md)的＜一般檔案來源＞一節。  
   
 ### <a name="options"></a>選項。  
  **可用的外部資料行**  

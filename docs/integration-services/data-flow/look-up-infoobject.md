@@ -18,7 +18,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f25c00406ce375a2a7a380859ca0eaa5031b54d3
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="look-up-infoobject"></a>查閱 InfoObject
@@ -82,13 +82,13 @@ ms.lasthandoff: 08/03/2017
   
  出現可用的 InfoObject 清單時，請選取您要的 InfoObject，然後目的地就會將必要的值填入相關聯的選項。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [建立交易資料的 InfoCube](../../integration-services/data-flow/create-infocube-for-transaction-data.md)   
  [建立 InfoSource](../../integration-services/data-flow/create-infosource.md)   
  [建立交易資料的 InfoSource](../../integration-services/data-flow/create-infosource-for-transaction-data.md)   
  [建立主要資料的 InfoSource](../../integration-services/data-flow/create-infosource-for-master-data.md)   
  [建立新的 InfoObject](../../integration-services/data-flow/create-new-infoobject.md)   
- [SAP BW 目的地編輯器 &#40;連接管理員頁面 &#41;](../../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)   
+ [SAP BW 目的地編輯器 &#40;連線管理員頁面&#41;](../../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)   
  [Microsoft Connector for SAP BW F1 說明](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   

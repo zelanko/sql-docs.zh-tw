@@ -22,7 +22,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 33d801033e2431f465e97502dcabf37f6a9c4847
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # 用戶端通訊協定 - 具名管道內容 (通訊協定索引標籤)
@@ -30,7 +30,7 @@ ms.lasthandoff: 08/02/2017
   
 ## 選項。  
  **[預設管道]**  
- 指定「具名管道網路」程式庫嘗試連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的目標執行個體時要使用的預設管道。 根據預設，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會接聽：`\\.\pipe\sql\query`  
+ 指定「具名管道網路」程式庫嘗試連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的目標執行個體時要使用的預設管道。 根據預設， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會接聽： `\\.\pipe\sql\query`  
   
  若要連接到預設管道，請輸入 `sql\query`  
   

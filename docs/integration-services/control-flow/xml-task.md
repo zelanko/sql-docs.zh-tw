@@ -24,10 +24,10 @@ ms.translationtype: MT
 ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
 ms.openlocfilehash: 05d4d7b905c0539a67120983a562ee6936791c97
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/11/2017
+ms.lasthandoff: 09/28/2017
 
 ---
-# <a name="xml-task"></a>XML Task
+# <a name="xml-task"></a>XML 工作
   XML 工作用於處理 XML 資料。 使用此工作，封裝可以擷取 XML 文件、使用「可延伸樣式表語言轉換」(XSLT) 樣式表和 XPath 運算式將作業套用到文件、合併多個文件，或者驗證、比較更新的文件，並將其儲存至檔案和變數。  
   
  此工作可讓 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝在執行階段動態修改 XML 文件。 您可將 XML 工作用於下列用途：  
@@ -124,7 +124,7 @@ ms.lasthandoff: 08/11/2017
   
  如需有關可以在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [使用 XML 工作驗證 XML](../../integration-services/control-flow/validate-xml-with-the-xml-task.md)  
+-   [以 XML 工作驗證 XML](../../integration-services/control-flow/validate-xml-with-the-xml-task.md)  
   
 -   [運算式頁面](../../integration-services/expressions/expressions-page.md)  
   

@@ -22,7 +22,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a04115502f54ce1731c0d8aa14b2f264bc66709f
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="data-viewer"></a>資料檢視器
@@ -45,7 +45,7 @@ ms.lasthandoff: 08/03/2017
  **複製資料**  
  將目前緩衝區中的資料複製到剪貼簿。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [偵錯資料流程](../../integration-services/troubleshooting/debugging-data-flow.md)  
   
   

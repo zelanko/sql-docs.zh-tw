@@ -23,7 +23,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 1d8887035d26ba829dae2153e4e9261836ada70d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="lower-ssis-expression"></a>LOWER (SSIS 運算式)
@@ -67,8 +67,8 @@ LOWER(SUBSTRING(Color, 2, 15))
 LOWER(@CityName)  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [上限 &#40;SSIS 運算式 &#41;](../../integration-services/expressions/upper-ssis-expression.md)   
- [函式 &#40;SSIS 運算式 &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>另請參閱  
+ [UPPER &#40;SSIS 運算式&#41;](../../integration-services/expressions/upper-ssis-expression.md)   
+ [函數 &#40;SSIS 運算式&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

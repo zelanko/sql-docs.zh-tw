@@ -26,7 +26,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
 ms.openlocfilehash: 69a0a8b907fcb45cf6ecd0576fb6fba04775d237
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="excel-destination"></a>Excel 目的地
@@ -120,7 +120,7 @@ ms.lasthandoff: 08/17/2017
  **Excel 連接管理員**  
  從清單中選取現有的 Excel 連線管理員，或按一下 [新增] 建立新的連線管理員。  
   
- **新**  
+ **新增**  
  使用 [Excel 連線管理員] 對話方塊來建立新的連線管理員。  
   
  **資料存取模式**  
@@ -135,7 +135,7 @@ ms.lasthandoff: 08/17/2017
  **Excel 工作表的名稱**  
  從下拉式清單中選取 Excel 目的地。 如果此清單為空，請按一下 **[新增]**。  
   
- **新**  
+ **新增**  
  按一下 [新增] 以啟動 [建立工資料表] 對話方塊。 按一下 **[確定]**時，對話方塊會建立 **[Excel 連接管理員]** 指向的 Excel 檔案。  
   
  **檢視現有的資料**  
@@ -170,7 +170,7 @@ ms.lasthandoff: 08/17/2017
 ## <a name="excel-destination-editor-mappings-page"></a>Excel 目的地編輯器 (對應頁面)
   使用 **[Excel 目的地編輯器]** 對話方塊的 **[對應]** 頁面，將輸入資料行對應至目的地資料行。  
   
-### <a name="options"></a>選項  
+### <a name="options"></a>選項。  
  **可用的輸入資料行**  
  檢視可用的輸入資料行清單。 使用拖放作業，即可將資料表中的可用輸入資料行對應到目的地資料行。  
   
@@ -186,11 +186,11 @@ ms.lasthandoff: 08/17/2017
 ## <a name="excel-destination-editor-error-output-page"></a>Excel 目的地編輯器 (錯誤輸出頁面)
   使用 [Excel 目的地編輯器] 對話方塊的 [進階] 頁面，即可指定錯誤處理的選項。  
   
-### <a name="options"></a>選項  
+### <a name="options"></a>選項。  
  **輸入或輸出**  
  檢視資料來源的名稱。  
   
- **[資料行]**  
+ **資料行**  
  檢視您在 [Excel 來源編輯器] 對話方塊的 [連線管理員] 節點中所選取的外部 (來源) 資料行。  
   
  **錯誤**  
@@ -212,8 +212,8 @@ ms.lasthandoff: 08/17/2017
   
 ## <a name="see-also"></a>另請參閱  
  [Excel 來源](../../integration-services/data-flow/excel-source.md)   
- [Integration Services &#40;SSIS &#41;變數](../../integration-services/integration-services-ssis-variables.md)   
+ [Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)   
  [資料流程](../../integration-services/data-flow/data-flow.md)   
- [使用 with the Script Task Excel 檔案](../../integration-services/extending-packages-scripting-task-examples/working-with-excel-files-with-the-script-task.md)  
+ [以指令碼工作處理 Excel 檔案](../../integration-services/extending-packages-scripting-task-examples/working-with-excel-files-with-the-script-task.md)  
   
   

@@ -18,7 +18,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 35ea6e547458b142db58800a820e71767adc3442
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="create-infosource-for-master-data"></a>建立主要資料的 InfoSource
@@ -76,7 +76,7 @@ ms.lasthandoff: 08/03/2017
  **儲存並啟用**  
  儲存並啟用新的 InfoSource。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [建立 InfoSource](../../integration-services/data-flow/create-infosource.md)   
  [Microsoft Connector for SAP BW F1 說明](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   

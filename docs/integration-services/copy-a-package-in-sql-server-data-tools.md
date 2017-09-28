@@ -23,7 +23,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 59a001e0aa360183e5e393faedc613cfabda0f02
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="copy-a-package-in-sql-server-data-tools"></a>在 SQL Server Data Tools 中複製封裝
@@ -56,8 +56,8 @@ ms.lasthandoff: 08/03/2017
   
 11. 在 **[檔案]** 功能表上按一下 **[儲存選取項目]** 以儲存新封裝。  
   
-## <a name="see-also"></a>請參閱＜  
- [儲存封裝的副本](http://msdn.microsoft.com/library/21482a20-e420-4452-b7eb-8f9fa1929f31)   
+## <a name="see-also"></a>另請參閱  
+ [儲存封裝的複本](http://msdn.microsoft.com/library/21482a20-e420-4452-b7eb-8f9fa1929f31)   
  [在 SQL Server Data Tools 中建立封裝](../integration-services/create-packages-in-sql-server-data-tools.md)   
  [Integration Services &#40;SSIS &#41;封裝](../integration-services/integration-services-ssis-packages.md)  
   

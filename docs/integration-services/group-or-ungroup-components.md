@@ -23,7 +23,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 1162e9b3617c16dc057e899515b9125da35e070b
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="group-or-ungroup-components"></a>將元件分組或取消分組
@@ -63,8 +63,8 @@ ms.lasthandoff: 08/03/2017
   
 5.  若要儲存已更新的封裝，請在 **[檔案]** 功能表上，按一下 **[儲存選取項目]** 。  
   
-## <a name="see-also"></a>請參閱＜  
- [加入或刪除工作或容器中的控制流程](../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
+## <a name="see-also"></a>另請參閱  
+ [在控制流程中加入或刪除工作或容器](../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
  [使用預設的優先順序條件約束連接工作和容器](http://msdn.microsoft.com/library/8f31f15f-98ff-4c35-b41f-8b8cfd148d75)  
   
   

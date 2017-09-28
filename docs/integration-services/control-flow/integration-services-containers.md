@@ -24,7 +24,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 95b6e69e463bd8e3b44e55c11d308b3d5a25ce63
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="integration-services-containers"></a>整合服務容器
@@ -101,7 +101,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="break-points"></a>中斷點  
  當您在容器上設定中斷點，且中斷條件為 **[當容器接收 OnVariableValueChanged 事件時中斷]**時，請在容器範圍中定義變數。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [控制流程](../../integration-services/control-flow/control-flow.md)  
   
   

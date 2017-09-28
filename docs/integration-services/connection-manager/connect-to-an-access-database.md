@@ -21,7 +21,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: 2800075091835b2d6f2b07ee34e9b897fe86634e
 ms.openlocfilehash: b5e60880b40a66a6f669bcfd53dcc59e497bbf0a
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="connect-to-an-access-database"></a>連接至 Access 資料庫
@@ -99,7 +99,7 @@ ms.lasthandoff: 08/17/2017
   
      當您選取 **[Microsoft Office 12.0 Access 資料庫引擎 OLE DB 提供者]** 當做 **[資料來源]**時，精靈就會自動使用正確的資料提供者來建立必要的 OLE DB 連接管理員。 如需相關資訊，請參閱 [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md)。  
   
-## <a name="see-also"></a>請參閱＜  
- [連接到 Excel 活頁簿](../../integration-services/connection-manager/connect-to-an-excel-workbook.md)  
+## <a name="see-also"></a>另請參閱  
+ [連接至 Excel 活頁簿](../../integration-services/connection-manager/connect-to-an-excel-workbook.md)  
   
   

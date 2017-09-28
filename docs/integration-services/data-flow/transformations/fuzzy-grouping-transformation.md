@@ -36,7 +36,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
 ms.openlocfilehash: 6fceec90818b05ae23c04f90cff8f68c8c7c3c42
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/19/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="fuzzy-grouping-transformation"></a>模糊群組轉換
@@ -108,7 +108,7 @@ ms.lasthandoff: 08/19/2017
 >  連接所指定的伺服器必須正在執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 模糊群組轉換會在 tempdb 中建立暫存資料物件，而這個物件可能會與轉換的完整輸出一樣大。 當轉換執行時，它會對這些暫存物件發出伺服器查詢。 這樣會影響伺服器的整體效能。  
   
 ### <a name="options"></a>選項。  
- **OLE DB 連接管理員**  
+ **[無快取]**  
  使用清單方塊來選取現有的 OLE DB 連接管理員，或使用 [新增] 按鈕來建立新的連接。  
   
  **新增**  
@@ -117,7 +117,7 @@ ms.lasthandoff: 08/19/2017
 ## <a name="fuzzy-grouping-transformation-editor-columns-tab"></a>模糊群組轉換編輯器 (資料行索引標籤)
   使用 **[模糊群組轉換編輯器]** 對話方塊的 **[資料行]** 索引標籤，即可指定用於將具有重複值之資料列分組的資料行。  
   
-### <a name="options"></a>選項  
+### <a name="options"></a>選項。  
  **可用的輸入資料行**  
  從清單中選取輸入資料行，即可依據該資料行將具有重複值的資料列分組。  
   
@@ -156,7 +156,7 @@ ms.lasthandoff: 08/19/2017
 |**LeadingAndTrailing**|開頭和尾端數字皆屬於顯著。|  
   
  **比較旗標**  
- 如需字串比較選項的相關資訊，請參閱 [比較字串資料](../../../integration-services/data-flow/comparing-string-data.md)。  
+ 如需字串比較選項的資訊，請參閱 [比較字串資料](../../../integration-services/data-flow/comparing-string-data.md)。  
   
 ## <a name="fuzzy-grouping-transformation-editor-advanced-tab"></a>模糊群組轉換編輯器 (進階索引標籤)
   使用 **[模糊群組轉換編輯器]** 對話方塊的 **[進階]** 索引標籤，即可指定輸入和輸出資料行、設定類似度臨界值，以及定義分隔符號。  
@@ -164,7 +164,7 @@ ms.lasthandoff: 08/19/2017
 > [!NOTE]  
 >  在 **[模糊群組轉換編輯器]** 中無法使用模糊群組轉換的 **Exhaustive** 和 **MaxMemoryUsage**屬性，但可使用 **[進階編輯器]**來設定這兩個屬性。 如需有關這些屬性的詳細資訊，請參閱＜ [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)＞的「模糊群組轉換」一節。  
   
-### <a name="options"></a>選項  
+### <a name="options"></a>選項。  
  **輸入索引鍵資料行名稱**  
  針對每個輸入資料列，指定包含資料列之唯一識別碼的輸出資料行名稱。 **_key_in** 資料行具有能唯一識別每個資料列的值。  
   

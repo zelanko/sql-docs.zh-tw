@@ -18,7 +18,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d1c3535f7818b1865d9ff7b0da1d098884b042ca
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="the-oracle-cdc-service"></a>Oracle CDC 服務
@@ -96,8 +96,8 @@ CREATE ASYMMETRIC KEY xdbcdc_asym_key
   
 -   [使用 Oracle CDC 服務](../../integration-services/change-data-capture/working-with-the-oracle-cdc-service.md)  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [如何管理本機 CDC 服務](../../integration-services/change-data-capture/how-to-manage-a-local-cdc-service.md)   
- [管理 Oracle CDC 服務](../../integration-services/change-data-capture/manage-an-oracle-cdc-service.md)  
+ [Manage an Oracle CDC Service](../../integration-services/change-data-capture/manage-an-oracle-cdc-service.md)  
   
   

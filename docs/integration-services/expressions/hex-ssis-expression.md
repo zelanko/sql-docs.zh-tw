@@ -21,7 +21,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f44919fb8992a26ce5adddfabba9f3b1164ee7be
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="hex-ssis-expression"></a>HEX (SSIS 運算式)
@@ -79,7 +79,7 @@ HEX(ReorderPoint)
 HEX(@LocaleID)  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [函式 &#40;SSIS 運算式 &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>另請參閱  
+ [函數 &#40;SSIS 運算式&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

@@ -31,7 +31,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
 ms.openlocfilehash: 4b765081a3897553bef2791bf72631908b5adc2c
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="ole-db-destination"></a>OLE DB 目的地
@@ -131,10 +131,10 @@ ms.lasthandoff: 08/17/2017
 >  在 **[OLE DB 目的地編輯器]** 中無法使用 OLE DB 目的地的 **CommandTimeout**屬性，但可使用 **[進階編輯器]**來設定這個屬性。 此外， **[進階編輯器]**中只會有特定的快速載入選項。 如需有關這些屬性的詳細資訊，請參閱＜ [OLE DB Custom Properties](../../integration-services/data-flow/ole-db-custom-properties.md)＞的＜OLE DB 目的地＞一節。  
   
 ### <a name="static-options"></a>靜態選項  
- **OLE DB 連接管理員**  
+ **[無快取]**  
  從清單中選取現有的連線管理員，或按一下 [新增] 來建立新的連線。  
   
- **新**  
+ **新增**  
  使用 [設定 OLE DB 連線管理員] 對話方塊建立新的連線管理員。  
   
  **資料存取模式**  

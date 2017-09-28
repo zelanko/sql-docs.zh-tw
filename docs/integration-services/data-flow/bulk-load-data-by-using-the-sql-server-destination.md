@@ -24,7 +24,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 6592de5c7bd0ca674c797d2d3e28f3adbe7dd339
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="bulk-load-data-by-using-the-sql-server-destination"></a>使用 SQL Server 目的地來大量載入資料
@@ -69,8 +69,8 @@ ms.lasthandoff: 08/03/2017
   
 11. 若要儲存已更新的封裝，請在 **[檔案]** 功能表上，按一下 **[儲存選取項目]** 。  
   
-## <a name="see-also"></a>請參閱＜  
- [SQL Server 目的地](../../integration-services/data-flow/sql-server-destination.md)   
+## <a name="see-also"></a>另請參閱  
+ [SQL Server Destination](../../integration-services/data-flow/sql-server-destination.md)   
  [Integration Services 轉換](../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Integration Services 路徑](../../integration-services/data-flow/integration-services-paths.md)   
  [資料流程工作](../../integration-services/control-flow/data-flow-task.md)  

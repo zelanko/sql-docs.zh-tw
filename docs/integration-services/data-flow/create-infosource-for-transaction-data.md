@@ -18,7 +18,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: aae1b77456b66a00a547fa35f9a253f0199963cc
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="create-infosource-for-transaction-data"></a>建立交易資料的 InfoSource
@@ -95,7 +95,7 @@ ms.lasthandoff: 08/03/2017
  **單位欄位**  
  指定 InfoObject 將使用的單位。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [建立 InfoSource](../../integration-services/data-flow/create-infosource.md)   
  [Microsoft Connector for SAP BW F1 說明](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   

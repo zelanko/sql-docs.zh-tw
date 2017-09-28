@@ -31,7 +31,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c812dc44b0348d6f77e7f7e8efe23acab85a0d48
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="data-flow-performance-features"></a>Data Flow Performance Features
@@ -163,7 +163,7 @@ ms.lasthandoff: 08/03/2017
  您可能會發現將資料儲存至目的地所花費的時間超出預期。 若要識別速度很慢是否是因為目的地無法夠快地處理資料，您可以暫時使用「資料列計數器」轉換來取代目的地。 如果輸送量顯著提高，則很可能是正在載入資料的目的地導致速度變慢。  
   
 ### <a name="review-the-information-on-the-progress-tab"></a>檢視進度索引標籤上的資訊  
- [!INCLUDE[ssIS](../../includes/ssis-md.md)]當您執行封裝時，設計工具提供控制流程和資料流程的資訊[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]。 **[進度]** 索引標籤會以執行順序列出工作和容器，並包含每個工作和容器 (包括封裝本身) 的開始與完成時間、警告及錯誤訊息。 此外，還會以執行順序列出資料流程元件，並包含有關進度 (以完成百分比顯示) 以及已經處理的資料列數目等資訊。  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」會提供在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]。 **[進度]** 索引標籤會以執行順序列出工作和容器，並包含每個工作和容器 (包括封裝本身) 的開始與完成時間、警告及錯誤訊息。 此外，還會以執行順序列出資料流程元件，並包含有關進度 (以完成百分比顯示) 以及已經處理的資料列數目等資訊。  
   
  若要啟用或停用 **[進度]** 索引標籤上的訊息顯示，請在 **[SSIS]** 功能表上切換 **[偵錯進度報表]** 選項。 停用進度報告有助於在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中執行複雜封裝時改善效能。  
   
@@ -204,8 +204,8 @@ ms.lasthandoff: 08/03/2017
   
 -   technet.microsoft.com 上的影片： [平衡型資料散發者](http://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409)  
   
-## <a name="see-also"></a>請參閱＜  
- [疑難排解封裝開發工具](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)   
- [疑難排解封裝執行的工具](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
+## <a name="see-also"></a>另請參閱  
+ [疑難排解封裝開發的工具](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)   
+ [套件執行的疑難排解工具](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
   
   

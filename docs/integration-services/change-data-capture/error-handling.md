@@ -18,7 +18,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 9243f40c5088c8ed2abcb92c435d662b408b45d5
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="error-handling"></a>錯誤處理
@@ -116,8 +116,8 @@ ms.lasthandoff: 08/03/2017
 ### <a name="handling-unexpected-oracle-cdc-instance-failures"></a>處理非預期的 Oracle CDC 執行個體失敗  
  Oracle CDC 服務會監視其 CDC 執行個體子處理序。 當 CDC 執行個體子處理序中止時，CDC 服務會在 MSXDBCDC.dbo.xdbcdc_databases 資料表中停用它，並將其 cdc.xdbcdc_state 狀態更新為 ABORTED。 在此情況下，標準 Windows 錯誤報告對話方塊會用來報告這個錯誤，以供進一步分析。  
   
-## <a name="see-also"></a>請參閱＜  
- [Attunity oracle 異動資料擷取設計工具](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md)   
+## <a name="see-also"></a>另請參閱  
+ [Attunity Oracle 異動資料擷取設計工具](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md)   
  [Oracle CDC 執行個體](../../integration-services/change-data-capture/the-oracle-cdc-instance.md)  
   
   

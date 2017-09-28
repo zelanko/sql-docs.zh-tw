@@ -20,7 +20,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
 ms.openlocfilehash: 599665d49b8512ec772ac5ca522cb4e0b7a521ec
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="general-page-of-integration-services-designers-options"></a>Integration Services 設計師選項的 [一般]頁面
@@ -30,7 +30,7 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="options"></a>選項。  
  **載入封裝時檢查數位簽章**  
- 選取即可讓 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 在載入封裝時檢查數位簽章。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]只會檢查數位簽章存在、 是否有效，和來自受信任的來源。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]將不會檢查之後已簽署封裝，封裝是否已經變更。  
+ 選取即可讓 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 在載入封裝時檢查數位簽章。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 只會檢查數位簽章是否存在、是否有效，以及是否來自信任的來源。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 將不會檢查此封裝在簽署之後是否已經變更。  
   
  如果您設定 **BlockedSignatureStates** 登錄值，此登錄值會覆寫 [載入封裝時檢查數位簽章] 選項。 如需詳細資訊，請參閱[透過設定登錄值實作簽署原則](../integration-services/packages/implement-a-signing-policy-by-setting-a-registry-value.md)。  
   
@@ -46,7 +46,7 @@ ms.lasthandoff: 08/03/2017
  選取新指令碼工作和指令碼元件的預設指令碼語言。  
   
  **更新連接字串以使用新的提供者名稱**  
- 在開啟或升級[!INCLUDE[ssISversion2005](../includes/ssisversion2005-md.md)]套件，更新連接字串，以使用下列提供者，名稱為目前版本的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]:  
+ 在開啟或升級 [!INCLUDE[ssISversion2005](../includes/ssisversion2005-md.md)] 封裝時，請為目前版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]更新連接字串，以使用下列提供者的名稱：  
   
 -   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] OLE DB 提供者  
   
@@ -57,8 +57,8 @@ ms.lasthandoff: 08/03/2017
  **建立新的封裝識別碼**  
  在升級 [!INCLUDE[ssISversion2005](../includes/ssisversion2005-md.md)] 封裝時，針對升級版本的封裝建立新的封裝識別碼。  
   
-## <a name="see-also"></a>請參閱＜  
- [安全性概觀 &#40; Integration Services &#41;](../integration-services/security/security-overview-integration-services.md)   
- [使用指令碼擴充封裝](../integration-services/extending-packages-scripting/extending-packages-with-scripting.md)  
+## <a name="see-also"></a>另請參閱  
+ [安全性概觀 (Integration Services)](../integration-services/security/security-overview-integration-services.md)   
+ [使用指令碼擴充套件](../integration-services/extending-packages-scripting/extending-packages-with-scripting.md)  
   
   

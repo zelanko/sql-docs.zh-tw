@@ -18,10 +18,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: a7479a6682c2cd95e3cc465b74642347bf682951
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 8e540a232445e0df9f6eb313b5fadfa839a73fea
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>逐步解說︰發行 SSIS 封裝做為 SQL 檢視
@@ -32,7 +32,7 @@ ms.lasthandoff: 09/21/2017
   
 1.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或更新版本以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]。  
   
-2.  [SQL Server Data Tools](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt)。  
+2.  [SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md)。  
   
 ## <a name="step-1-build-and-deploy-ssis-project-to-the-ssis-catalog"></a>步驟 1︰建置 SSIS 專案並部署至 SSIS 目錄  
  在此步驟中，您會建立 SSIS 封裝，從 SSIS 支援的資料來源 (在此範例中，我們使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫) 擷取資料，並使用資料流目的地元件輸出資料。 然後您會建置 SSIS 專案並部署至 SSIS 目錄。  
@@ -270,7 +270,7 @@ SELECT * FROM OPENQUERY(<LinkedServer Name>, N’Folder=<Folder Name from SSIS C
   
  正斜線 (\\) – 查詢子句中使用的每個 \ 都必須使用逸出字元。 例如，系統會將查詢子句中的 \\\ 評估為 \。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [資料流目的地](../../integration-services/data-flow/data-streaming-destination.md)   
  [設定資料流目的地](../../integration-services/data-flow/configure-data-streaming-destination.md)  
   

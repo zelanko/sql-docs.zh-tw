@@ -20,7 +20,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 6934f245f0878e3491a7d1751e764dcf3db7bb46
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="create-the-sql-server-change-database"></a>建立 SQL Server 變更資料庫
@@ -54,7 +54,7 @@ ms.lasthandoff: 08/03/2017
   
      在您建立資料庫之後，可以按 **[下一步]** [Connect to an Oracle Source Database](../../integration-services/change-data-capture/connect-to-an-oracle-source-database.md)。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [如何建立 SQL Server 變更資料庫執行個體](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)   
  [Oracle CDC 服務](../../integration-services/change-data-capture/the-oracle-cdc-service.md)  
   

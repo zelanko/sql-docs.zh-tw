@@ -20,7 +20,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 79ce587ac6e1f0da8bf0c2ae237b6b9c3ae2623f
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="column-value-distribution-profile-request-options-data-profiling-task"></a>資料行值散發設定檔要求選項 (資料分析工作)
@@ -38,11 +38,11 @@ ms.lasthandoff: 08/03/2017
   
 -   **一般**  
   
--   **選項。**  
+-   **Options**  
   
 ### <a name="data-options"></a>資料選項  
  **ConnectionManager**  
- 選取現有的 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 連線管理員，以便使用 .NET Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) 來連接至包含要分析之資料表或檢視表的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫。  
+ 選取現有的 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 連線管理員，以便使用 .NET Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) 來連線至包含要分析之資料表或檢視表的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫。  
   
  **[TableOrView]**  
  選取包含要分析之資料行的資料表或檢視表。  
@@ -105,8 +105,8 @@ ms.lasthandoff: 08/03/2017
  **FrequentValueThreshold**  
  指定臨界值 (使用介於 0 與 1 之間的值)，而且超過此值就應該報告資料行值。 當您選取 **AllValues** 當作 **ValueDistributionOption**時，這個選項是停用的。 這個選項的預設值為 0.001。  
   
-## <a name="see-also"></a>請參閱＜  
- [資料分析工作編輯器 &#40;一般頁面 &#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
+## <a name="see-also"></a>另請參閱  
+ [資料分析工作編輯器 &#40;一般頁面&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
  [單一資料表快速分析表單 &#40; 資料分析工作 &#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   
   

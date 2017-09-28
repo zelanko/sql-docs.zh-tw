@@ -20,7 +20,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: eb4d89741a2bbdbd4e93d983a7cc49b358df8d63
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="suggest-column-types-dialog-box-ui-reference"></a>建議資料行類型對話方塊 UI 參考
@@ -47,8 +47,8 @@ ms.lasthandoff: 08/03/2017
  **百分比填補**  
  輸入或選取資料行長度的百分比，以用來增加字元資料類型之資料行的長度。 百分比必須是整數。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../integration-services/integration-services-error-and-message-reference.md)   
- [一般檔案連接管理員](../../integration-services/connection-manager/flat-file-connection-manager.md)  
+ [一般檔案連線管理員](../../integration-services/connection-manager/flat-file-connection-manager.md)  
   
   

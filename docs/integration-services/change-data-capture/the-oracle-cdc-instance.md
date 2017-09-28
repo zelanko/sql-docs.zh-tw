@@ -18,7 +18,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 13704cfef54e3401d31eb22f6dca9c9f247c079b
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="the-oracle-cdc-instance"></a>Oracle CDC 執行個體
@@ -46,7 +46,7 @@ ms.lasthandoff: 08/03/2017
   
 -   **處理復原**：當 Oracle CDC 執行個體啟動時，其內部狀態會從 **xdbcdc_state** 和 **xdbcdc_staged_transactions** 資料表中還原。 還原狀態之後，CDC 執行個體會如往常一樣繼續進行。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [錯誤處理](../../integration-services/change-data-capture/error-handling.md)  
   
   

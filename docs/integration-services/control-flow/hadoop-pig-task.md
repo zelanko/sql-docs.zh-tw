@@ -21,7 +21,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 816ca947c45128a996686d1269815ac909e364fe
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="hadoop-pig-task"></a>Hadoop Pig 工作
@@ -31,7 +31,7 @@ ms.lasthandoff: 08/03/2017
   
  ![Hadoop Pig 工作編輯器](../../integration-services/control-flow/media/hadoop-pig-task.png "Hadoop Pig 工作編輯器")  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  在 [Hadoop Pig 工作編輯器] 對話方塊中設定下列選項。  
   
 |欄位|說明|  
@@ -42,7 +42,7 @@ ms.lasthandoff: 08/03/2017
 |**HadoopScriptFilePath**|當 **SourceType** 的值為 **ScriptFile**時，在 Hadoop 上指定指令碼檔案路徑。|  
 |**TimeoutInMinutes**|以分鐘為單位來指定逾時值。 如果在逾時之前尚未完成的話，則 Hadoop 工作將會停止。 指定 0 以為 Hadoop 工作進行排程，以便以非同步方式執行。|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [Hadoop 連接管理員](../../integration-services/connection-manager/hadoop-connection-manager.md)  
   
   

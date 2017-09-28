@@ -18,7 +18,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e4fe8f6aefb8e191e0648666db7e7faf63f8f845
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="create-infosource"></a>建立 InfoSource
@@ -43,14 +43,14 @@ ms.lasthandoff: 08/03/2017
  **交易資料**  
  建立交易資料的新 InfoSource。  
   
- 如果您選取此選項，就會開啟 [建立交易資料的 InfoSource] 對話方塊。 您可以使用 [建立交易資料的 InfoSource] 對話方塊來建立新的 InfoSource。 如需此對話方塊的詳細資訊，請參閱[建立交易資料的 InfoSource](../../integration-services/data-flow/create-infosource-for-transaction-data.md)。  
+ 如果您選取此選項，就會開啟 [建立交易資料的 InfoSource] 對話方塊。 您可以使用 [建立交易資料的 InfoSource] 對話方塊來建立新的 InfoSource。 如需此對話方塊的詳細資訊，請參閱 [建立交易資料的 InfoSource](../../integration-services/data-flow/create-infosource-for-transaction-data.md)。  
   
  **主要資料**  
  建立主要資料的新 InfoSource。  
   
  如果您選取此選項，就會開啟 [建立主要資料的 InfoSource] 對話方塊。 您可以使用 [建立主要資料的 InfoSource] 對話方塊來建立新的 InfoSource。 如需此對話方塊的詳細資訊，請參閱[建立主要資料的 InfoSource](../../integration-services/data-flow/create-infosource-for-master-data.md)。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [Microsoft Connector for SAP BW F1 說明](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   

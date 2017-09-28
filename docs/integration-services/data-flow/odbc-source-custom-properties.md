@@ -18,7 +18,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 15c78bdb8f093b07ce62a7d710ba583aad96548d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="odbc-source-custom-properties"></a>ODBC 來源自訂屬性
@@ -40,8 +40,8 @@ ms.lasthandoff: 08/03/2017
 |LobChunckSize|Integer|LOB 資料行的區塊大小配置。|  
 ||||  
   
-## <a name="see-also"></a>請參閱＜  
- [ODBC 來源](../../integration-services/data-flow/odbc-source.md)   
- [ODBC 來源編輯器 &#40;連接管理員頁面 &#41;](../../integration-services/data-flow/odbc-source-editor-connection-manager-page.md)  
+## <a name="see-also"></a>另請參閱  
+ [ODBC Source](../../integration-services/data-flow/odbc-source.md)   
+ [ODBC 來源編輯器 &#40;連線管理員頁面&#41;](../../integration-services/data-flow/odbc-source-editor-connection-manager-page.md)  
   
   

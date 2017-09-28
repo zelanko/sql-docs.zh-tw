@@ -30,7 +30,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
 ms.openlocfilehash: f9069538cef2a85ed3e23e9ae3505a9fbfef01ae
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="multiple-flat-files-connection-manager"></a>多個一般檔案連接管理員
@@ -77,7 +77,7 @@ ms.lasthandoff: 08/09/2017
  若要深入了解多個一般檔案連線管理員，請參閱＜ [Multiple Flat Files Connection Manager](../../integration-services/connection-manager/multiple-flat-files-connection-manager.md)＞。  
   
 ### <a name="options"></a>選項。  
- **連接管理員名稱**  
+ **連線管理員名稱**  
  提供唯一的名稱給工作流程中的多個一般檔案連接。 提供的名稱將顯示在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師內。  
   
  **說明**  
@@ -228,7 +228,7 @@ ms.lasthandoff: 08/09/2017
  **連接管理員名稱**  
  提供唯一的名稱給工作流程中的多個一般檔案連接管理員。 提供的名稱將顯示在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師的 [連線管理員] 區域內。  
   
- **描述**  
+ **說明**  
  描述連接管理員。 最佳作法是以其用途描述連接管理員，使封裝可以自我記錄並易於維護。  
   
  **設定每一個資料行的屬性**  
@@ -259,7 +259,7 @@ ms.lasthandoff: 08/09/2017
  選取資料行，然後按一下 [刪除] 將其移除。  
   
  **建議類型**  
- 使用 [建議資料行類型] 對話方塊，可評估第一個選定檔案中的範例資料，並取得對每個資料行之資料類型和長度的建議。 如需詳細資訊，請參閱[建議資料行類型對話方塊 UI 參考](../../integration-services/connection-manager/suggest-column-types-dialog-box-ui-reference.md)。  
+ 使用 [建議資料行類型] 對話方塊，可評估第一個選定檔案中的範例資料，並取得對每個資料行之資料類型和長度的建議。 如需詳細資訊，請參閱 [建議資料行類型對話方塊 UI 參考](../../integration-services/connection-manager/suggest-column-types-dialog-box-ui-reference.md)。  
   
 ## <a name="multiple-flat-files-connection-manager-editor-preview-page"></a>多個一般檔案連接管理員編輯器 (預覽頁面)
   使用 [多個一般檔案連線管理員編輯器] 對話方塊的 [預覽] 頁面，即可根據您定義的資料行分隔，來檢視第一個所選取來源檔的內容。  
@@ -267,10 +267,10 @@ ms.lasthandoff: 08/09/2017
  若要深入了解多個一般檔案連接管理員，請參閱＜ [Multiple Flat Files Connection Manager](../../integration-services/connection-manager/multiple-flat-files-connection-manager.md)＞。  
   
 ### <a name="options"></a>選項。  
- **連接管理員名稱**  
+ **連線管理員名稱**  
  提供唯一的名稱給工作流程中的多個一般檔案連接。 提供的名稱將顯示在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師的 [連線管理員] 區域內。  
   
- **描述**  
+ **說明**  
  描述連接。 最佳作法是以其用途描述連接，使封裝可以自我記錄並易於維護。  
   
  **略過的資料列數**  
@@ -282,6 +282,6 @@ ms.lasthandoff: 08/09/2017
 ## <a name="see-also"></a>另請參閱  
  [[一般檔案來源]](../../integration-services/data-flow/flat-file-source.md)   
  [一般檔案目的地](../../integration-services/data-flow/flat-file-destination.md)   
- [Integration Services &#40;SSIS &#41;連線](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
+ [Integration Services &#40;SSIS&#41; 連接](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
   
   

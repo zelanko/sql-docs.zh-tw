@@ -24,7 +24,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 988f9993207daeebe6c5aaea0f60d887fe74024c
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="integration-services-ssis-expressions"></a>Integration Services (SSIS) 運算式
@@ -72,7 +72,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="related-content"></a>相關內容  
  social.technet.microsoft.com 上的技術文件： [SSIS 運算式範例](http://go.microsoft.com/fwlink/?LinkId=220761)  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)  
   
   

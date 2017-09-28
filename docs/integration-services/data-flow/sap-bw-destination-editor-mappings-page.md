@@ -20,7 +20,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 245ff83f84ff1a60a08f4a73d24ee76179b31e2b
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="sap-bw-destination-editor-mappings-page"></a>SAP BW 目的地編輯器 (對應頁面)
@@ -82,8 +82,8 @@ ms.lasthandoff: 08/03/2017
  **目的地資料行**  
  檢視每個可用的目的地資料行，不論該資料行是否已經對應。  
   
-## <a name="see-also"></a>請參閱＜  
- [SAP BW 目的地編輯器 &#40;連接管理員頁面 &#41;](../../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)   
+## <a name="see-also"></a>另請參閱  
+ [SAP BW 目的地編輯器 &#40;連線管理員頁面&#41;](../../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)   
  [SAP BW 目的地編輯器 &#40;錯誤輸出頁面 &#41;](../../integration-services/data-flow/sap-bw-destination-editor-error-output-page.md)   
  [SAP BW 目的地編輯器 &#40;進階的頁面 &#41;](../../integration-services/data-flow/sap-bw-destination-editor-advanced-page.md)   
  [Microsoft Connector for SAP BW F1 說明](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  

@@ -19,7 +19,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7d6381f105146c23e0813a37a8ab7acc3562ffe8
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs"></a>設定量測計的最小值或最大值 (報表產生器及 SSRS)
@@ -35,15 +35,15 @@ ms.lasthandoff: 08/09/2017
   
 1.  以滑鼠右鍵按一下標尺，然後選取 [標尺屬性]。 [標尺屬性] 對話方塊隨即顯示。  
   
-2.  在 [一般] 中，指定 [最小值] 的值。 根據預設，這個值為 0。 您可以選擇按一下 [運算式] \(*fx*) 按鈕來編輯設定選項值的運算式。  
+2.  在 [一般] 中，指定 [最小值] 的值。 根據預設，這個值為 0。 您可以選擇按一下 [運算式]\(*fx*) 按鈕來編輯設定選項值的運算式。  
   
-3.  指定 [最大值] 的值。 根據預設，此值為 100。 您可以選擇按一下 [運算式] \(*fx*) 按鈕來編輯設定選項值的運算式。  
+3.  指定 [最大值] 的值。 根據預設，此值為 100。 您可以選擇按一下 [運算式]\(*fx*) 按鈕來編輯設定選項值的運算式。  
   
 4.  (選擇性) 如果最小值和最大值的值很大，請指定 [標尺標籤乘數] 選項的值。 若要指定減少標尺的乘數，請使用十進位數字。 例如，如果您的標尺為從 0 到 1000，就可以指定乘數值 0.01 來減少標尺，以便顯示成 0 到 10。  
   
-## <a name="see-also"></a>請參閱＜  
- [格式化量測計 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
- [格式化量測計 &#40; 上的指標報表產生器及 SSRS &#41;](../../reporting-services/report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
- [量測計 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  
+## <a name="see-also"></a>另請參閱  
+ [格式化量測計上的標尺 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
+ [格式化量測計上的指標 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
+ [量測計 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  
   
   

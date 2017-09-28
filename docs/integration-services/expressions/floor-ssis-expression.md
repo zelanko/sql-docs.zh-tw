@@ -21,7 +21,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 9a4c5ee6351735c7f133cc93c082f7497b9b0dc1
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="floor-ssis-expression"></a>FLOOR (SSIS 運算式)
@@ -65,8 +65,8 @@ FLOOR(0.00)
   
  傳回 0.00  
   
-## <a name="see-also"></a>請參閱＜  
- [CEILING &#40;SSIS 運算式 &#41;](../../integration-services/expressions/ceiling-ssis-expression.md)   
- [函式 &#40;SSIS 運算式 &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>另請參閱  
+ [CEILING &#40;SSIS 運算式&#41;](../../integration-services/expressions/ceiling-ssis-expression.md)   
+ [函數 &#40;SSIS 運算式&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

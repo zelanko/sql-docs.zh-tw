@@ -24,7 +24,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a19014f742ea4be55028bd93d07b0c388159e0a0
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="advanced-editor"></a>進階編輯器
@@ -56,7 +56,7 @@ ms.lasthandoff: 08/03/2017
   
 -   [Integration Services 轉換](../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../integration-services/integration-services-error-and-message-reference.md)  
   
   

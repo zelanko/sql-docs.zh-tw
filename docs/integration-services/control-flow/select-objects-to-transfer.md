@@ -20,7 +20,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8b53bbf65d82e7c3b0b8f4c6e033afaaa513cdd3
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="select-objects-to-transfer"></a>選取要傳送的物件
@@ -30,12 +30,12 @@ ms.lasthandoff: 08/03/2017
   
  若要選擇特定物件進行傳送，請在列出物件的方格中，選取資料列之第一個資料行中的核取方塊。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../integration-services/integration-services-error-and-message-reference.md)   
  [傳送作業工作編輯器 &#40;一般頁面 &#41;](../../integration-services/control-flow/transfer-jobs-task-editor-general-page.md)   
  [傳送登入工作編輯器 &#40;登入頁面 &#41;](../../integration-services/control-flow/transfer-logins-task-editor-logins-page.md)   
  [傳送 SQL Server 物件工作編輯器 &#40; 物件頁面 &#41;](../../integration-services/control-flow/transfer-sql-server-objects-task-editor-objects-page.md)   
  [傳送主要預存程序工作編輯器 &#40;預存程序頁面 &#41;](../../integration-services/control-flow/transfer-master-stored-procedures-task-editor-stored-procedures-page.md)   
- [傳送錯誤訊息工作編輯器 &#40;訊息頁面 &#41;](../../integration-services/control-flow/transfer-error-messages-task-editor-messages-page.md)  
+ [傳送錯誤訊息工作編輯器 &#40;訊息頁面&#41;](../../integration-services/control-flow/transfer-error-messages-task-editor-messages-page.md)  
   
   

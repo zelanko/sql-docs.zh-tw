@@ -21,7 +21,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
 ms.openlocfilehash: 229fd23eb82ff7b6a1139bf1bd00554162cfc038
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="add-or-delete-a-component-in-a-data-flow"></a>在資料流程中加入或刪除元件
@@ -55,7 +55,7 @@ ms.lasthandoff: 08/03/2017
   
 6.  若要儲存已更新的封裝，請在 **[檔案]** 功能表上，按一下 **[儲存選取項目]** 。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [連接資料流程中的元件](../../integration-services/data-flow/connect-components-in-a-data-flow.md)   
  [偵錯資料流程](../../integration-services/troubleshooting/debugging-data-flow.md)   
  [資料流程](../../integration-services/data-flow/data-flow.md)  

@@ -22,7 +22,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 820179477a33b18a634c509d2793d8f0bac79ddd
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="expression-builder"></a>運算式產生器
@@ -50,10 +50,10 @@ ms.lasthandoff: 08/03/2017
 |**評估值**|列出運算式的評估結果。|  
 |**評估運算式**|按一下 **[評估運算式]** ，即可檢視運算式的評估結果。|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [運算式頁面](../../integration-services/expressions/expressions-page.md)   
  [屬性運算式編輯器](../../integration-services/expressions/property-expressions-editor.md)   
- [Integration Services &#40;SSIS &#41;變數](../../integration-services/integration-services-ssis-variables.md)   
+ [Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)   
  [系統變數](../../integration-services/system-variables.md)  
   
   

@@ -24,7 +24,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
 ms.openlocfilehash: c4c51f83c7e691f9c77c4d035e7dd80ead4f4a94
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="troubleshooting-tools-for-package-development"></a>疑難排解封裝開發的工具
@@ -60,7 +60,7 @@ ms.lasthandoff: 08/03/2017
   
 -   **使用偵錯視窗**。 執行具有中斷點的封裝時， [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的偵錯視窗可讓您存取變數值和狀態訊息。  
   
--   **檢視 [進度] 索引標籤上的資訊**。 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」會提供在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]。 [進度] 索引標籤會以執行順序列出工作和容器，並包含每個工作和容器 (包括封裝本身) 的開始與完成時間、警告及錯誤訊息。  
+-   **檢視 [進度] 索引標籤上的資訊**。[!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」會提供在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]。 [進度] 索引標籤會以執行順序列出工作和容器，並包含每個工作和容器 (包括封裝本身) 的開始與完成時間、警告及錯誤訊息。  
   
  如需這些功能的詳細資訊，請參閱＜ [Debugging Control Flow](../../integration-services/troubleshooting/debugging-control-flow.md)＞。  
   
@@ -75,7 +75,7 @@ ms.lasthandoff: 08/03/2017
   
 -   **擷取已處理的資料列計數**。 當您在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中執行封裝時，經由路徑傳送的資料列數目會顯示在資料流程設計師中。 隨著資料不斷經由路徑移動，這個數目會定期更新。 您也可以將「資料列計數」轉換加入資料流程，以擷取變數中的最後資料列計數。 如需詳細資訊，請參閱 [Row Count Transformation](../../integration-services/data-flow/transformations/row-count-transformation.md)。  
   
--   **檢視 [進度] 索引標籤上的資訊**。 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」會提供在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]。 [進度] 索引標籤會以執行順序列出資料流程元件，並包含封裝每個階段的進度資訊 (以完成百分比顯示)，以及包含寫入目的地之資料列數目的資訊。  
+-   **檢視 [進度] 索引標籤上的資訊**。[!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」會提供在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]。 [進度] 索引標籤會以執行順序列出資料流程元件，並包含封裝每個階段的進度資訊 (以完成百分比顯示)，以及包含寫入目的地之資料列數目的資訊。  
   
  如需這些功能的詳細資訊，請參閱＜ [Debugging Data Flow](../../integration-services/troubleshooting/debugging-data-flow.md)＞。  
   
@@ -92,8 +92,8 @@ ms.lasthandoff: 08/03/2017
 ## <a name="troubleshooting-errors-without-a-description"></a>疑難排解沒有隨附描述的錯誤  
  如果您在封裝開發期間遇到沒有隨附描述的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 錯誤號碼，可以在 [Integration Services 錯誤和訊息參考](../../integration-services/integration-services-error-and-message-reference.md)中找到描述。 此清單這次沒有包含疑難排解資訊。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [封裝執行的疑難排解工具](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)   
- [Data Flow Performance Features](../../integration-services/data-flow/data-flow-performance-features.md)  
+ [資料流程效能功能](../../integration-services/data-flow/data-flow-performance-features.md)  
   
   

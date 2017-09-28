@@ -24,7 +24,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
 ms.openlocfilehash: 7502a4c00ff680dd372114debbfc4d8de4067da3
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="debugging-data-flow"></a>偵錯資料流程
@@ -114,7 +114,7 @@ order by source_component_name desc
 ```  
 
 ## <a name="configure-an-error-output-in-a-data-flow-component"></a>在資料流程元件中設定錯誤輸出
-  許多資料流程元件都支援錯誤輸出，因元件的不同，[!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師會以不同的方式設定錯誤輸出。 除了設定錯誤輸出以外，您也可以設定錯誤輸出的資料行。 其中包括設定此元件所加入的 **ErrorCode** 和 **ErrorColumn** 資料行。  
+  許多資料流程元件都支援錯誤輸出，因元件的不同， [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師會以不同的方式設定錯誤輸出。 除了設定錯誤輸出以外，您也可以設定錯誤輸出的資料行。 其中包括設定此元件所加入的 **ErrorCode** 和 **ErrorColumn** 資料行。  
   
 ### <a name="configuring-an-error-output"></a>設定錯誤輸出  
  若要設定錯誤輸出，您有兩個選項：  
@@ -282,6 +282,6 @@ select * from [SSISDB].[catalog].execution_data_taps where execution_id=@execid
  這部 [TechNet 上的影片](http://technet.microsoft.com/sqlserver/dn600163) 示範了如何在 SQL Server 2012 SSISDB 目錄中加入/使用資料點選，協助您以程式設計方式對封裝進行偵錯及在執行階段擷取部分結果。 該影片也將討論如何列出/移除這些資料點選，以及在 SSIS 封裝中使用資料點選的最佳作法。  
  
 ## <a name="see-also"></a>另請參閱  
- [資料中的錯誤處理](../../integration-services/data-flow/error-handling-in-data.md)  
+ [處理資料中的錯誤](../../integration-services/data-flow/error-handling-in-data.md)  
   
   

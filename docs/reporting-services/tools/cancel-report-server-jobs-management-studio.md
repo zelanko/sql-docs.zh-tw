@@ -21,7 +21,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5348146e3cce3c1f3f6288797f8a4e2bbd520cab
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="cancel-report-server-jobs-management-studio"></a>取消報表伺服器作業 (Management Studio)
@@ -59,9 +59,9 @@ ms.lasthandoff: 08/09/2017
  **確定**  
  取消單一作業或多項作業。 作業會立即取消而且無法繼續進行。 如果您不小心取消了作業，就必須再次要求報表或訂閱，才能啟動新的作業。  
   
-## <a name="see-also"></a>請參閱＜  
- [Report Server in Management Studio F1 說明](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
- [連接到 Management Studio 中的報表伺服器](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
- [管理執行程序](../../reporting-services/subscriptions/manage-a-running-process.md)  
+## <a name="see-also"></a>另請參閱  
+ [Management Studio F1 說明中的報表伺服器](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
+ [連接至 Management Studio 中的報表伺服器](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
+ [管理執行中的處理序](../../reporting-services/subscriptions/manage-a-running-process.md)  
   
   
