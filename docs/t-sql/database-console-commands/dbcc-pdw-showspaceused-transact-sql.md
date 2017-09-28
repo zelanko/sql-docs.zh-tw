@@ -34,8 +34,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="syntax"></a>語法  
   
 ```sql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
 -- Show the space used for all user tables and system tables in the current database  
 DBCC PDW_SHOWSPACEUSED  
 [;]  

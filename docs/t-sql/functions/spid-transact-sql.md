@@ -44,8 +44,6 @@ ms.lasthandoff: 09/19/2017
 ## <a name="syntax"></a>語法  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 @@SPID  
 ```  
   

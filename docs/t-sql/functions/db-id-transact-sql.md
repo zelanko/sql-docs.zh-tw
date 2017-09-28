@@ -43,8 +43,6 @@ ms.lasthandoff: 09/06/2017
 ## <a name="syntax"></a>語法  
   
 ```sql
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 DB_ID ( [ 'database_name' ] )   
 ```  
   

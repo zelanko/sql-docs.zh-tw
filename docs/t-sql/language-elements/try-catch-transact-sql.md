@@ -49,8 +49,6 @@ ms.lasthandoff: 09/22/2017
 ## <a name="syntax"></a>語法  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 BEGIN TRY  
      { sql_statement | statement_block }  
 END TRY  
