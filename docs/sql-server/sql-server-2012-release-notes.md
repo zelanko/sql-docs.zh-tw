@@ -342,7 +342,7 @@ Analysis Services (AS) 的 SQL Server Integration Services (SSIS) 元件未以�
 **因應措施** ：若要避免這種狀況，請發行您需要保存在知識探索中的工作，再啟動新的活動。  
   
 ### <a name="45-controls-do-not-scale-properly-on-large-font-sizes"></a>4.5 控制項無法針對大字型適當縮放  
-**問題** ：如果您將文字大小變更為 [大 - 150%] (在 Windows Server 2008 或 Windows 7 中)，或將 [自訂 DPI 設定] 變更為 200% (在 Windows 7 中)，便無法存取 [新增知識庫]  頁面上的 [取消]  和 [建立]  按鈕。  
+**問題** ：如果您將文字大小變更為 [大 - 150%]\(在 Windows Server 2008 或 Windows 7 中)，或將 [自訂 DPI 設定] 變更為 200% (在 Windows 7 中)，便無法存取 [新增知識庫]  頁面上的 [取消]  和 [建立]  按鈕。  
   
 **因應措施**：若要解決這個問題，請將字型設定為較小的大小。  
   
