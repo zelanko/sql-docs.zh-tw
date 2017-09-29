@@ -298,4 +298,4 @@ ms.lasthandoff: 09/14/2017
  [準備移轉到 Windows Azure 虛擬機器中的 SQL Server](http://msdn.microsoft.com/library/dn133142.aspx)  
   
   
-<!--aaa-->
+
