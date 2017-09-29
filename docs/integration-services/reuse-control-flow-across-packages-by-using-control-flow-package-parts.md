@@ -92,16 +92,16 @@ ms.lasthandoff: 08/03/2017
 -   如果取消選取，則組件檔案的複本就會加入專案中。  
   
 ## <a name="configure-a-control-flow-package-part"></a>設定控制流程封裝組件  
- 若要在控制流程封裝組件加入封裝的控制流程之後設定它們，請使用 [Package Part Configuration] (封裝組件組態)    對話方塊。  
+ 若要在控制流程封裝組件加入封裝的控制流程之後設定它們，請使用 [Package Part Configuration]\(封裝組件組態)    對話方塊。  
   
-#### <a name="to-open-the-package-part-configuration-dialog-box"></a>開啟 [Package Part Configuration] (封裝組件組態) 對話方塊  
+#### <a name="to-open-the-package-part-configuration-dialog-box"></a>開啟 [Package Part Configuration]\(封裝組件組態) 對話方塊  
   
-1.  若要設定組件執行個體，請按兩下控制流程中的組件執行個體。 或以滑鼠右鍵按一下組件執行個體並選取 [編輯]。 [Package Part Configuration] (封裝組件組態)  對話方塊隨即開啟。  
+1.  若要設定組件執行個體，請按兩下控制流程中的組件執行個體。 或以滑鼠右鍵按一下組件執行個體並選取 [編輯]。 [Package Part Configuration]\(封裝組件組態)  對話方塊隨即開啟。  
   
 2.  設定組件執行個體的屬性和連線管理員。  
   
 ### <a name="properties-tab"></a>屬性索引標籤  
- 使用 [Package Part Configuration] (封裝組件組態)  對話方塊的 [屬性]   索引標籤來指定組件的屬性。  
+ 使用 [Package Part Configuration]\(封裝組件組態)  對話方塊的 [屬性]   索引標籤來指定組件的屬性。  
   
  ![範本設定 對話方塊的 [內容] 索引標籤](../integration-services/media/template-configuration-properties-tab.png "範本設定 對話方塊的 [內容] 索引標籤")  
   
@@ -120,7 +120,7 @@ ms.lasthandoff: 08/03/2017
 -   **值**。 已設定的值。 這個值會覆寫預設值。  
   
 ### <a name="connection-managers-tab"></a>[連線管理員] 索引標籤  
- 使用 [Package Part Configuration] (封裝組件組態)   對話方塊的 [連線管理員]   索引標籤來指定組件執行個體的連線管理員屬性。  
+ 使用 [Package Part Configuration]\(封裝組件組態)   對話方塊的 [連線管理員]   索引標籤來指定組件執行個體的連線管理員屬性。  
   
  ![範本設定 對話方塊中的連接管理員索引標籤](../integration-services/media/template-configuration-connection-managers-tab.png "範本設定對話方塊中的連接管理員索引標籤")  
   
