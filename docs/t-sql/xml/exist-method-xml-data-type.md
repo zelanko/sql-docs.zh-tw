@@ -63,7 +63,7 @@ select @x.exist('true()');
  下列範例顯示如何指定**exist （)**方法。  
   
 ### <a name="example-specifying-the-exist-method-against-an-xml-type-variable"></a>範例：針對 xml 類型變數指定 exist() 方法  
- 在下列範例中，@x是**xml**類型變數 (不具類型 xml) 和@f是整數類型變數，可儲存所傳回的值**exist （)**方法。 **Exist （)**方法會傳回 True (1) 如果儲存 XML 執行個體中的日期值是`2002-01-01`。  
+ 在下列範例中， @x 是 **xml** 類型變數 (不具類型 xml) 和 @f 是整數類型變數，可儲存所傳回的值 **exist （)** 方法。 **Exist （)**方法會傳回 True (1) 如果儲存 XML 執行個體中的日期值是`2002-01-01`。  
   
 ```  
 declare @x xml;  
