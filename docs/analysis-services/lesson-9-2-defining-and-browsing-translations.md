@@ -122,7 +122,7 @@ ms.lasthandoff: 09/01/2017
   
     請注意，月份是以西班牙文顯示，如下圖所示。  
   
-    ![在 [資料] 窗格中的 [西班牙文月份名稱](../analysis-services/media/l9-translations-7.gif "資料] 窗格中的，以西班牙文月份名稱")  
+    ![在資料窗格中的西班牙文月份名稱](../analysis-services/media/l9-translations-7.gif "資料窗格中的，以西班牙文月份名稱")  
   
 10. 在工具列上，選取 [語言] 清單中的 [法文 (法國)]。  
   
