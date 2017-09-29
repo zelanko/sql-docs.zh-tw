@@ -48,7 +48,7 @@ ms.lasthandoff: 09/07/2017
   
 4.  按一下 [明確階層] 。  
   
-5.  在 [Manage Explicit Hierarchy]  (管理明確階層) 頁面上，按一下您想要刪除的明確階層。  
+5.  在 [Manage Explicit Hierarchy]  \(管理明確階層) 頁面上，按一下您想要刪除的明確階層。  
   
 6.  按一下 **[編輯]**。  
   
