@@ -599,7 +599,7 @@ fail-script>" (optional)
   
 -   `write-summary-report-to`指定產生的摘要報告所在的路徑。 如果只提及的資料夾路徑，然後檔案名稱**ConvertSQLReport.XML**建立。 （選擇性的屬性）  
   
-    建立具有子類別，取得進一步的 viz 2 的摘要報告。。，：  
+    建立具有子類別，取得進一步的 viz 2 的摘要報告..,:  
   
     -   報告錯誤 （="true/false"，預設值為"false"（選擇性的屬性））。  
   

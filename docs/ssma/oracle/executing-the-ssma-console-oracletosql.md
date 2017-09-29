@@ -673,7 +673,7 @@ SSMA for Oracle 主控台應用程式支援回溯相容性。 您可以開啟 �
   
 -   `write-summary-report-to`指定要產生報表的路徑。 如果只提及的資料夾路徑，然後檔案名稱**ConvertSQLReport.XML**建立。 （選擇性的屬性）  
   
-    報表建立了 2 子類別，取得進一步的 viz。。，：  
+    報表建立了 2 子類別，取得進一步的 viz..,:  
   
     -   報告錯誤 （="true/false"，預設值為"false"（選擇性的屬性））。  
   
