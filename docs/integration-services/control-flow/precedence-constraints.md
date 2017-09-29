@@ -240,7 +240,7 @@ ms.lasthandoff: 09/26/2017
 ### <a name="logicaland-property"></a>LogicalAnd 屬性  
  如果工作或容器具有多個條件約束，則 **LogicalAnd** 屬性會指定是只評估優先順序條件約束，還是同時評估其他條件約束。  
   
- 您可以使用 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中的 [優先順序條件約束編輯器] (或在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 提供的 [屬性] 視窗中)，設定 **LogicalAnd** 屬性。  
+ 您可以使用 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中的 [優先順序條件約束編輯器]\(或在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 提供的 [屬性] 視窗中)，設定 **LogicalAnd** 屬性。  
 
 ## <a name="set-the-default-value-for-precedence-constraints"></a>設定優先順序條件約束的預設值  
 首次使用 [ [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師] 時，優先順序條件約束的預設值為 **Success**。 請遵循下列步驟來設定「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」，以便使用優先順序條件約束的其他預設值。
