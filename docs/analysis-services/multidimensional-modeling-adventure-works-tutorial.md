@@ -43,7 +43,7 @@ ms.lasthandoff: 09/01/2017
 案例描述隨附此教學課程，讓您可以更了解這些課程的內容。 如需詳細資訊，請參閱＜ [Analysis Services Tutorial Scenario](../analysis-services/analysis-services-tutorial-scenario.md)＞。  
   
 ## <a name="prerequisites"></a>必要條件  
-若要完成這個教學課程的所有課程，您將需要範例資料、範例專案檔及軟體。 如需如何尋找及安裝這個教學課程之必要條件的指示，請參閱＜ [Install Sample Data and Projects for the Analysis Services Multidimensional Modeling Tutorial](../analysis-services/install-sample-data-and-projects.md)＞。  
+若要完成這個教學課程的所有課程，您將需要範例資料、範例專案檔及軟體。 如需如何尋找及安裝這個教學課程之必要條件的指示，請參閱＜ [安裝 Analysis Services 多維度模型化教學課程的範例資料和專案](../analysis-services/install-sample-data-and-projects.md)＞。  
   
 另外還要具備下列權限才能順利完成這個教學課程：  
   
@@ -71,7 +71,7 @@ ms.lasthandoff: 09/01/2017
 > 您將在此教學課程中建立的 Cube 資料庫是簡化的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 多維度模型專案版本，此專案是 Adventure Works 範例資料庫的一部分，可在 codeplex 網站下載。 Adventure Works 多維度資料庫的教學課程版本經過簡化，更著重在您想要立即熟練的特定技巧上。 完成此教學課程之後，請考慮自行瀏覽多維度模型專案，以更了解 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 多維度模型。  
   
 ## <a name="next-step"></a>下一個步驟  
-若要開始本教學課程，請繼續進行第一課： [Lesson 1: Defining a Data Source View within an Analysis Services Project](../analysis-services/lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md)。  
+若要開始本教學課程，請繼續進行第一課： [第 1 課：在 Analysis Services 專案內定義資料來源檢視](../analysis-services/lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md)。  
   
   
   

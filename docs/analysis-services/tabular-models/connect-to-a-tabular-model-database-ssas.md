@@ -27,7 +27,7 @@ ms.lasthandoff: 09/01/2017
   建置表格式模型，並將其部署到 Analysis Services 表格式模式伺服器之後，您需要設定權限，使其可供用戶端應用程式使用。 此主題說明如何設定權限和如何從用戶端應用程式連接到資料庫。  
   
 > [!NOTE]  
->  根據預設，在設定防火牆之前，無法使用 Analysis Services 的遠端連接。 如果您要為用戶端連接設定具名或預設的執行個體，請確認您已經開放適當的連接埠。 如需詳細資訊，請參閱 [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)。  
+>  根據預設，在設定防火牆之前，無法使用 Analysis Services 的遠端連接。 如果您要為用戶端連接設定具名或預設的執行個體，請確認您已經開放適當的連接埠。 如需詳細資訊，請參閱 [設定 Windows 防火牆以允許 Analysis Services 存取](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)。  
   
  本主題包含下列幾節：  
   

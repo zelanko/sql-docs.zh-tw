@@ -28,7 +28,7 @@ ms.lasthandoff: 09/01/2017
 # <a name="deploy-from-sql-server-data-tools"></a>從 SQL Server 資料工具部署
   使用本主題中的工作，若要使用 [部署] 命令在 SSDT 中部署表格式模型方案。  
   
-##  <a name="bkmk_deploy"></a> Configure deployment options and deployment server properties  
+##  <a name="bkmk_deploy"></a> 設定部署選項與部署伺服器屬性  
  在您部署表格式模型方案之前，必須先指定 [部署選項] 與 [部署伺服器] 屬性。 如需部署屬性和設定的詳細資訊，請參閱[表格式模型方案部署](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)。  
   
 #### <a name="to-configure-options-and-properties"></a>若要設定選項和屬性  
@@ -43,7 +43,7 @@ ms.lasthandoff: 09/01/2017
     > [!NOTE]  
     >  您無法在 DirectQuery 模式下指定模型的 [模擬設定]。  
   
-3.  在 [部署伺服器] 中，指定 [伺服器] (名稱)、[版本]、[資料庫] (名稱) 及 [Cube 名稱] 屬性設定 (如果與預設設定不同)，然後按一下 [確定]。  
+3.  在 [部署伺服器] 中，指定 [伺服器] \(名稱)、[版本]、[資料庫] \(名稱) 及 [Cube 名稱] 屬性設定 (如果與預設設定不同)，然後按一下 [確定]。  
   
 > [!NOTE]  
 >  您也可以指定 [預設部署伺服器] 屬性設定，自動將您建立的任何新專案部署至指定的伺服器。 如需詳細資訊，請參閱[設定預設資料模型化和部署屬性](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)。  
