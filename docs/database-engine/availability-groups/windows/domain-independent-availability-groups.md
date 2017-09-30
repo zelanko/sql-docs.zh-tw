@@ -1,7 +1,7 @@
 ---
 title: "網域獨立的可用性群組 (SQL Server) | Microsoft Docs"
 ms.custom: 
-ms.date: 05/12/2017
+ms.date: 09/25/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], domain independent
 ms.assetid: 
 caps.latest.revision: 
-author: MikeRayMSFT
+author: allanhirt
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 847c34fedcaa48149a6545d830af021aae26f530
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: b6953bbfb9af88bb0d6c4bb575feb97557c43ea2
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 
@@ -45,7 +45,7 @@ Windows Server 2016 引進以「已中斷連結 Active Directory 的叢集」為
 
 ![具有兩個加入網域之節點的 Workgroup 叢集][2]
 
-「網域獨立的可用性群組」不只是適用於多網站或災害復原案例。 它可以部署於單一資料中心，甚至可以與[基本可用性群組](https://msdn.microsoft.com/library/mt614935.aspx) (也稱為 Standard Edition 可用性群組) 搭配使用，以提供用來搭配使用資料庫鏡像與憑證達成之作業的類似架構，如下所示。
+「網域獨立的可用性群組」不只是適用於多網站或災害復原案例。 它可以部署於單一資料中心，甚至可以與[基本可用性群組](basic-availability-groups-always-on-availability-groups.md) (也稱為 Standard Edition 可用性群組) 搭配使用，以提供用來搭配使用資料庫鏡像與憑證達成之作業的類似架構，如下所示。
 
 
 ![Standard Edition 中的 AG 高階檢視][3]
@@ -123,7 +123,7 @@ CREATE CERTIFICATE [InstanceB_Cert]
 AUTHORIZATION InstanceB_User
 FROM FILE = 'Restore_path\InstanceB_Cert.cer'
 ```
-12. 建立要由每個執行個體上將為複本之可用性群組使用的端點。 針對可用性群組，端點必須有一種類型的 DATABASE_MIRRORING。 端點會使用步驟 4 中針對該執行個體所建立的憑證來進行驗證。 如下顯示的範例語法會使用憑證來建立端點。 使用適當的加密方法以及您環境的其他相關選項。 如需可用選項的詳細資訊，請參閱 [CREATE ENDPOINT (Transact-SQL)](https://msdn.microsoft.com/library/ms181591.aspx)。
+12. 建立要由每個執行個體上將為複本之可用性群組使用的端點。 針對可用性群組，端點必須有一種類型的 DATABASE_MIRRORING。 端點會使用步驟 4 中針對該執行個體所建立的憑證來進行驗證。 如下顯示的範例語法會使用憑證來建立端點。 使用適當的加密方法以及您環境的其他相關選項。 如需可用選項的詳細資訊，請參閱 [CREATE ENDPOINT (Transact-SQL)](../../../t-sql/statements/create-endpoint-transact-sql.md)。
 ```
 CREATE ENDPOINT DIAG_EP
 STATE = STARTED
@@ -141,7 +141,7 @@ FOR DATABASE_MIRRORING (
 GRANT CONNECT ON ENDPOINT::DIAG_EP TO 'InstanceX_User';
 GO
 ```
-14. 設定基礎憑證和端點安全性之後，請使用慣用方法來建立可用性群組。 建議您手動備份、複製和還原用來初始化次要的備份，或使用[自動植入](https://msdn.microsoft.com/library/mt735149.aspx)。 使用精靈來初始化次要複本，涉及使用伺服器訊息區塊 (SMB) 檔案，這在使用未加入網域的 Workgroup 叢集時可能未運作。
+14. 設定基礎憑證和端點安全性之後，請使用慣用方法來建立可用性群組。 建議您手動備份、複製和還原用來初始化次要的備份，或使用[自動植入](automatically-initialize-always-on-availability-group.md)。 使用精靈來初始化次要複本，涉及使用伺服器訊息區塊 (SMB) 檔案，這在使用未加入網域的 Workgroup 叢集時可能未運作。
 15. 如果建立接聽程式，請確定已在 DNS 中註冊其名稱和其 IP 位址。
 
 ### <a name="next-steps"></a>後續的步驟 
@@ -151,8 +151,6 @@ GO
 - [使用新增可用性群組對話方塊 (SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)
  
 - [使用 Transact-SQL 建立可用性群組](create-an-availability-group-transact-sql.md)
-
->此內容的作者：[Allan Hirt](http://mvp.microsoft.com/en-us/PublicProfile/4025254?fullName=Allan%20Hirt)，Microsoft 最有價值專家。
 
 <!--Image references-->
 [1]: ./media/diag-wsfc-two-data-centers-same-domain.png

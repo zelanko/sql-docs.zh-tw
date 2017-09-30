@@ -14,11 +14,11 @@ caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 611fcbd96531e57dd47a7ae61e5b4b32d84dcb46
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 8333a497795ae7968b5d297b62aba83944f1b3ba
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="overview-of-key-management-for-always-encrypted"></a>永遠加密的金鑰管理概觀
@@ -70,7 +70,7 @@ ms.lasthandoff: 06/22/2017
 
 ## <a name="tools-for-managing-always-encrypted-keys"></a>管理永遠加密金鑰的工具
 
-永遠加密金鑰可透過 [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/ms174173.aspx) 和 [PowerShell](https://msdn.microsoft.com/library/hh245198.aspx)進行管理：
+永遠加密金鑰可透過 [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/ms174173.aspx) 和 [PowerShell](../../scripting/sql-server-powershell.md)進行管理：
 
 - **SQL Server Management Studio (SSMS)** - 提供結合與金鑰存放區存取和資料庫存取相關之工作的對話方塊和精靈，因此 SSMS 雖然不支援角色隔離，但可讓您輕鬆地設定金鑰。 如需使用 SSMS 管理金鑰的詳細資訊，請參閱：
     - [佈建資料行主要金鑰](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md#provisioncmk)

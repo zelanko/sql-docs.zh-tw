@@ -15,11 +15,11 @@ caps.latest.revision: 31
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 9113272fdba93720cdca5dcedb737092af8d4e1d
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 69fce52c0c651388656f5065b1b7b84ff98cbe82
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="columnstore-indexes---data-loading-guidance"></a>資料行存放區索引 - 資料載入指引
@@ -32,7 +32,7 @@ ms.lasthandoff: 06/22/2017
 
 ## <a name="what-is-bulk-loading"></a>什麼是大量載入？
 「大量載入」指的是在資料存放區中新增大量資料列的方式。 這是將資料移至資料行存放區索引的最有效方式，因為它是以資料列批次的方式操作。 大量載入會填滿資料列群組的最大容量，並將它們直接壓縮到資料行存放區。 只有載入尾端未達每個資料列群組至少 102,400 個資料列的資料列才會移至差異存放區。  
-若要執行大量載入，您可以使用 [bcp 公用程式](https://msdn.microsoft.com/library/ms162802.aspx)、[Integration Services](https://msdn.microsoft.com/library/ms141026.aspx)，或從暫存資料表中選取資料列。
+若要執行大量載入，您可以使用 [bcp 公用程式](../../tools/bcp-utility.md)、[Integration Services](../../integration-services/sql-server-integration-services.md)，或從暫存資料表中選取資料列。
 
 ![載入至叢集資料行存放區索引](../../relational-databases/indexes/media/sql-server-pdw-columnstore-loadprocess.gif "載入至叢集資料行存放區索引")  
   
@@ -103,7 +103,7 @@ INSERT INTO <columnstore index>  WITH (TABLOCK)  SELECT <list of columns> FROM <
   
 ## <a name="what-is-trickle-insert"></a>什麼是緩慢插入？
 
-「緩慢插入」指的是個別資料列移至資料行存放區索引的方式。 緩慢插入會使用 [INSERT INTO](https://msdn.microsoft.com/library/ms174335.aspx) 陳述式。 透過緩慢插入，所有資料列都會進入差異存放區。 此功能對於少量資料列很有用，但不適用於大量載入。
+「緩慢插入」指的是個別資料列移至資料行存放區索引的方式。 緩慢插入會使用 [INSERT INTO](../../t-sql/statements/insert-transact-sql.md) 陳述式。 透過緩慢插入，所有資料列都會進入差異存放區。 此功能對於少量資料列很有用，但不適用於大量載入。
   
 ```  
 INSERT INTO <table-name> VALUES (<set of values>)  

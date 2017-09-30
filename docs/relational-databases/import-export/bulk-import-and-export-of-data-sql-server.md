@@ -29,10 +29,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: c51503eae95459aa4530032ef551d0eedf60caa4
-ms.openlocfilehash: 284ecb40056837fac33f71bcadf0a886293db6f6
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 0cd72ac1a99d3a2ccf121b4b659229b2fc6117c0
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="bulk-import-and-export-of-data-sql-server"></a>資料的大量匯入及匯出 (SQL Server)
@@ -50,7 +50,7 @@ ms.lasthandoff: 07/31/2017
 |[bcp 公用程式](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)|可大量匯出和大量匯入資料並產生格式檔案的命令列公用程式 (Bcp.exe)。|是|是|  
 |[BULK INSERT 陳述式](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)|[!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，可將資料直接從資料檔案匯入至資料庫資料表或非資料分割的檢視。|是|否|  
 |[INSERT ...SELECT * FROM OPENROWSET(BULK...) 陳述式](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)|[!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，其指定 OPENROWSET(BULK…) 函數選取 INSERT 陳述式中的資料，以使用 OPENROWSET BULK 資料列集提供者，將資料大量匯入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表。|是|否| 
-|[SQL Server 匯入和匯出精靈](https://msdn.microsoft.com/library/ms141209.aspx)|精靈會建立簡單套件，以在許多常用的資料格式之間匯入和匯出資料，這些格式包括資料庫、試算表和文字檔。|是|是|  
+|[SQL Server 匯入和匯出精靈](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)|精靈會建立簡單套件，以在許多常用的資料格式之間匯入和匯出資料，這些格式包括資料庫、試算表和文字檔。|是|是|  
   
 > [!IMPORTANT]
 > SQL Server 大量匯入作業不支援逗號分隔值 (CSV) 檔案。 不過，在某些情況下，您可以使用 CSV 檔案作為資料檔案，以便將資料大量匯入 SQL Server。 請注意，CSV 檔案的欄位結束字元不必是逗號。 如需詳細資訊，請參閱 [準備大量匯出或匯入的資料 (SQL Server)](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md)。

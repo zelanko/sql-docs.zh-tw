@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
-ms.openlocfilehash: 40b7bd5f5f8bf6682a7c85d332cce420baf06105
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 54be2f39c2f0b3c8ea640c1df720213f7936823d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="transactions-with-memory-optimized-tables"></a>Transactions with Memory-Optimized Tables
@@ -84,18 +84,18 @@ SQL Server 有下列交易初始模式：
   
   
   
-    SET TRANSACTION ISOLATION LEVEL READ COMMITTED;  
-    GO  
+      SET TRANSACTION ISOLATION LEVEL READ COMMITTED;  
+      GO  
   
-    BEGIN TRANSACTION;  -- 明確交易。  
+      BEGIN TRANSACTION;  -- Explicit transaction.  
   
       -- Order_mo  is a memory-optimized table.  
-    SELECT *  
+      SELECT *  
        FROM  
-                dbo.Order_mo  as o  WITH (SNAPSHOT)  -- 資料表提示。  
+                dbo.Order_mo  as o  WITH (SNAPSHOT)  -- Table hint.  
            JOIN dbo.Customer  as c  on c.CustomerId = o.CustomerId;  
       
-    COMMIT TRANSACTION;  
+      COMMIT TRANSACTION;  
   
 請注意，透過使用資料庫選項 `WITH (SNAPSHOT)` ，即不需要 `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT`提示。 當此選項設為 `ON`時，較低隔離等級的記憶體最佳化資料表存取權，會自動提升為 SNAPSHOT 隔離。  
   
@@ -308,7 +308,7 @@ SQL Server 有下列交易初始模式：
   
 - 原生程序的主體中不允許任何明確交易控制陳述式。 BEGIN TRANSACTION、ROLLBACK TRANSACTION 等均不允許。  
   
-- 如需使用 ATOMIC 區塊之交易控制的詳細資訊，請參閱 [不可部分完成的區塊](https://msdn.microsoft.com/library/dn452281.aspx)。  
+- 如需使用 ATOMIC 區塊之交易控制的詳細資訊，請參閱 [不可部分完成的區塊](atomic-blocks-in-native-procedures.md)。  
   
 <a name="othertxnlinks44ni"/>  
   

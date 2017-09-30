@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: c0e55c0e35039490f0ce4cd8a7fb6d7e232c05aa
-ms.openlocfilehash: c105f4fae3b3fffb61ef892cecbbe75754ccfd28
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: fb653826a9a53251cbd5fe6ef20b4b0f664c1422
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>Microsoft Azure 中的 SQL Server 資料檔案
@@ -30,7 +30,7 @@ ms.lasthandoff: 07/31/2017
   
  本主題介紹將 SQL Server 資料檔案儲存在 Microsoft Azure 儲存體服務中的核心概念與考量。  
   
- 如需如何使用此新功能的實際操作體驗，請參閱 [教學課程：搭配使用 Microsoft Azure Blob 儲存體服務和 SQL Server 2016 資料庫 ](https://msdn.microsoft.com/library/dn466438.aspx)。  
+ 如需如何使用此新功能的實際操作體驗，請參閱 [教學課程：搭配使用 Microsoft Azure Blob 儲存體服務和 SQL Server 2016 資料庫 ](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)。  
   
 ## <a name="why-use-sql-server-data-files-in-microsoft-azure"></a>為何要在 Microsoft Azure 中使用 SQL Server 資料檔案？ 
   
@@ -134,7 +134,7 @@ ON
 ### <a name="sql-server-management-studio-support"></a>SQL Server Management Studio 支援  
  SQL Server Management Studio 可讓您經由許多對話方塊視窗使用此功能。 例如，您可以在幾個對話方塊視窗中，輸入儲存體容器的 URL 路徑 (例如 https://teststorageaccnt.blob.core.windows.net/testcontainer/)
  
- 作為**路徑**，例如 [新增資料庫]、[附加資料庫] 和 [還原資料庫]。 如需詳細資訊，請參閱[教學課程：搭配使用 Microsoft Azure Blob 儲存體服務和 SQL Server 2016 資料庫](https://msdn.microsoft.com/library/dn466438.aspx)。  
+ 作為**路徑**，例如 [新增資料庫]、[附加資料庫] 和 [還原資料庫]。 如需詳細資訊，請參閱[教學課程：搭配使用 Microsoft Azure Blob 儲存體服務和 SQL Server 2016 資料庫](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)。  
   
 ### <a name="sql-server-management-objects-support"></a>SQL Server 管理物件支援  
  使用 Azure 功能中的 SQL Server 資料檔案時，可支援所有 SQL Server 管理物件 (SMO)。 如果 SMO 物件需要檔案路徑，請使用 BLOB URL 格式而非本機檔案路徑，例如 `https://teststorageaccnt.blob.core.windows.net/testcontainer/`。 如需 SQL Server 管理物件 (SMO) 的詳細資訊，請參閱《SQL Server 線上叢書》中的 [SQL Server 管理物件 &#40;SMO&#41; 程式設計指南](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)。  
@@ -155,10 +155,10 @@ ON
     解決方式：當您嘗試卸除的認證仍然由 Azure 儲存體中的作用中資料庫檔案使用時，就可能會看見此錯誤。 若要卸除認證，您必須先刪除具有此資料庫檔案的相關聯 Blob。 若要刪除擁有使用中租用的 Blob，您必須先中斷租用。  
   
 -   *尚未在容器上正確建立共用存取簽章。*   
-     解決方式：請確定您已經在容器上正確建立共用存取簽章。 請檢閱 [教學課程：搭配使用 Microsoft Azure Blob 儲存體服務和 SQL Server 2016 資料庫 ](https://msdn.microsoft.com/library/dn466435.aspx)中第 2 課所提供的指示。  
+     解決方式：請確定您已經在容器上正確建立共用存取簽章。 請檢閱 [教學課程：搭配使用 Microsoft Azure Blob 儲存體服務和 SQL Server 2016 資料庫 ](../lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)中第 2 課所提供的指示。  
   
 -   *尚未正確建立 SQL Server 認證。*   
-    解決方式：請確定您已經針對 [識別] 欄位使用「共用存取簽章」並且正確建立密碼。 請檢閱 [教學課程：搭配使用 Microsoft Azure Blob 儲存體服務和 SQL Server 2016 資料庫](https://msdn.microsoft.com/library/dn466436.aspx)中第 3 課所提供的指示。  
+    解決方式：請確定您已經針對 [識別] 欄位使用「共用存取簽章」並且正確建立密碼。 請檢閱 [教學課程：搭配使用 Microsoft Azure Blob 儲存體服務和 SQL Server 2016 資料庫](../lesson-3-database-backup-to-url.md)中第 3 課所提供的指示。  
   
  **租用 Blob 錯誤：**  
   
@@ -167,10 +167,10 @@ ON
  **資料庫錯誤**  
   
 1.  *建立資料庫時發生錯誤*   
-    解決方式：請檢閱 [教學課程：搭配使用 Microsoft Azure Blob 儲存體服務和 SQL Server 2016 資料庫](https://msdn.microsoft.com/library/dn466431.aspx)中第 4 課所提供的指示。  
+    解決方式：請檢閱 [教學課程：搭配使用 Microsoft Azure Blob 儲存體服務和 SQL Server 2016 資料庫](../lesson-4-restore-database-to-virtual-machine-from-url.md)中第 4 課所提供的指示。  
   
 2.  *執行 Alter 陳述式時發生錯誤*   
-    解決方式：請務必在資料庫上線時執行 Alter Database 陳述式。 將資料檔案複製到 Azure 儲存體時，一定要建立分頁 Blob 而非區塊 Blob。 否則，ALTER Database 將會失敗。 請檢閱 [教學課程：搭配使用 Microsoft Azure Blob 儲存體服務和 SQL Server 2016 資料庫](https://msdn.microsoft.com/library/dn466438.aspx)中第 7 課所提供的指示。  
+    解決方式：請務必在資料庫上線時執行 Alter Database 陳述式。 將資料檔案複製到 Azure 儲存體時，一定要建立分頁 Blob 而非區塊 Blob。 否則，ALTER Database 將會失敗。 請檢閱 [教學課程：搭配使用 Microsoft Azure Blob 儲存體服務和 SQL Server 2016 資料庫](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)中第 7 課所提供的指示。  
   
 3.  *錯誤碼 5120 無法開啟實體檔案 "%.\*ls"。作業系統錯誤 %d: "%ls"*   
     解決方式：目前，這項新的增強功能不支援多個 SQL Server 執行個體同時存取 Azure 儲存體中的相同資料庫檔案。 如果 ServerA 在線上且具有作用中的資料庫檔案，而 ServerB 意外啟動，而且也有指向相同資料檔案的資料庫，則第二部伺服器將無法啟動資料庫，錯誤碼為 *5120 無法開啟實體檔案 "%.\*ls"。作業系統錯誤 %d: "%ls"*。  

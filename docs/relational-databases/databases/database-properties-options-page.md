@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 8cd44c8b384019418a2a913e5f8d13d82120eac2
-ms.openlocfilehash: 8d3a9c04f09d48823638e1608722268b360610e8
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 24561dd19ef8992aba1d5e48ceadd49a68f18c1f
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/29/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="database-properties-options-page"></a>資料庫屬性 (選項頁面)
@@ -105,10 +105,10 @@ ms.lasthandoff: 08/29/2017
  指定與資料庫相容性層級無關之次要 (如果有的話) 的查詢最佳化工具基數估計模型。 這與 [追蹤旗標 9481](https://support.microsoft.com/en-us/kb/2801413)相同。  
   
  **最大 DOP**  
- 指定應該用於陳述式之主要的預設 [MAXDOP](https://msdn.microsoft.com/en-us/library/ms189094.aspx) 設定。  
+ 指定應該用於陳述式之主要的預設 [MAXDOP](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) 設定。  
   
  **次要的最大 DOP**  
- 指定應該用於陳述式之次要 (如果有的話) 的預設 [MAXDOP](https://msdn.microsoft.com/en-us/library/ms189094.aspx) 設定。  
+ 指定應該用於陳述式之次要 (如果有的話) 的預設 [MAXDOP](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) 設定。  
   
  **參數探測**  
  啟用或停用主要的參數探測。 這與 [追蹤旗標 4136](https://support.microsoft.com/en-us/kb/980653)相同。  

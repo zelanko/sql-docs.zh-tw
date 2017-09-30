@@ -18,11 +18,11 @@ caps.latest.revision: 49
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ba3bc85a1b6fced603f9f0a137f638a921c0f447
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 41831fe1852600666f5f3cf370cbab675e723cca
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="back-up-a-transaction-log-sql-server"></a>備份交易記錄 (SQL Server)
@@ -31,11 +31,11 @@ ms.lasthandoff: 06/22/2017
    
 ##  <a name="Restrictions"></a> 限制事項  
   
--   在明確或 [隱含](https://msdn.microsoft.com/library/ms187807.aspx) 的交易中，並不允許使用 BACKUP 陳述式。  明確交易是明確定義交易的啟動與結束的一種交易。
+-   在明確或 [隱含](../../t-sql/statements/set-implicit-transactions-transact-sql.md) 的交易中，並不允許使用 BACKUP 陳述式。  明確交易是明確定義交易的啟動與結束的一種交易。
   
 ##  <a name="Recommendations"></a> 建議  
   
--   如果資料庫使用完整復原模式或大量記錄[復原模式](https://msdn.microsoft.com/library/ms189275.aspx)，您必須定期備份交易記錄，使其足以保護您的資料，並避免[交易記錄填滿](https://msdn.microsoft.com/library/ms175495.aspx)。 這會截斷記錄並支援將資料庫還原到特定時間點。 
+-   如果資料庫使用完整復原模式或大量記錄[復原模式](recovery-models-sql-server.md)，您必須定期備份交易記錄，使其足以保護您的資料，並避免[交易記錄填滿](../logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)。 這會截斷記錄並支援將資料庫還原到特定時間點。 
   
 -   根據預設，每項成功的備份作業都會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔與系統事件記錄檔中，加入一個項目。 如果您經常備份記錄檔，這些成功訊息可能會快速累積，因而產生龐大的錯誤記錄檔，讓您難以尋找其他訊息。 在這類情況下，如果沒有任何指令碼相依於這些記錄項目，您就可以使用追蹤旗標 3226 來隱藏這些記錄項目。 如需詳細資訊，請參閱[追蹤旗標 &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。  
   

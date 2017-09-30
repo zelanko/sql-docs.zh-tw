@@ -18,11 +18,11 @@ caps.latest.revision: 65
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: d23b661d9fd99090a5140100513886d8351460b9
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 6e2b36af7393ecd115feefb5c3dffba5e28d1304
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="the-transaction-log-sql-server"></a>交易記錄 (SQL Server)
@@ -78,7 +78,7 @@ ms.lasthandoff: 06/22/2017
 -  交易記錄檔可實作於多個檔案上。 可以設定記錄檔的 FILEGROWTH 值，以定義記錄檔為自動擴充。 這減少了交易記錄檔用完空間的可能性，而同時又減少了管理上的額外負擔。 如需詳細資訊，請參閱 [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)。
 -  重複使用記錄檔空間的機制很迅速，並對於交易輸送量的影響很小。
 
-##  <a name="Truncation"></a> Transaction log truncation  
+##  <a name="Truncation"></a> 交易記錄截斷  
  記錄截斷會釋出記錄檔中的空間，以供交易記錄重複使用。 您必須定期截斷交易記錄，以防止它填滿所分配的空間，而且它真地會填滿！ 有數種因素會延遲記錄的截斷，所以監控記錄大小很重要。 某些作業可使用最低限度記錄，以減少其對交易記錄大小的影響。  
  
   記錄截斷會從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的邏輯交易記錄中，刪除非使用中的虛擬記錄檔，釋出邏輯記錄中的空間以供實體交易記錄重複使用。 如果永遠都不截斷交易記錄，最終將會填滿分配給實體記錄檔的所有磁碟空間。  
@@ -118,12 +118,12 @@ ms.lasthandoff: 06/22/2017
 |13|OLDEST_PAGE|如果將資料庫設定為使用間接檢查點，資料庫中最舊的頁面可能會比檢查點 LSN 更舊。 在此情況下，最舊的頁面可能會延遲記錄截斷。 (所有復原模式)<br /><br /> 如需間接檢查點的相關資訊，請參閱 [Database Checkpoints &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md)。|  
 |14|OTHER_TRANSIENT|這個值目前尚未使用。|  
   
-##  <a name="MinimallyLogged"></a> Operations that can be minimally logged  
- 「最低限度記錄」 包含僅記錄復原交易所需的資訊，不支援時間點復原。 這個主題將識別在大量記錄 [復原模式](https://msdn.microsoft.com/library/ms189275.aspx) 下 (以及簡單復原模式下，但備份正在執行時除外) 會進行最低限度記錄的作業。  
+##  <a name="MinimallyLogged"></a> 可以進行最低限度記錄的作業  
+ 「最低限度記錄」 包含僅記錄復原交易所需的資訊，不支援時間點復原。 這個主題將識別在大量記錄 [復原模式](../backup-restore/recovery-models-sql-server.md) 下 (以及簡單復原模式下，但備份正在執行時除外) 會進行最低限度記錄的作業。  
   
 > **注意！！** 記憶體最佳化資料表不支援最低限度記錄。  
   
-> **另請注意！** 在完整 [復原模式](https://msdn.microsoft.com/library/ms189275.aspx)下，將完整記錄所有大量作業。 不過，您可以暫時針對大量作業，將資料庫切換成大量記錄復原模式，藉以將大量作業集的記錄降至最低。 最低限度記錄會比完整記錄更具效率，並降低大規模的大量作業在大量交易期間，填滿可用交易記錄空間的可能性。 然而，如果資料庫在最低限度記錄作用時損毀或遺失，您就無法將資料庫復原至失敗點。  
+> **另請注意！** 在完整 [復原模式](../backup-restore/recovery-models-sql-server.md)下，將完整記錄所有大量作業。 不過，您可以暫時針對大量作業，將資料庫切換成大量記錄復原模式，藉以將大量作業集的記錄降至最低。 最低限度記錄會比完整記錄更具效率，並降低大規模的大量作業在大量交易期間，填滿可用交易記錄空間的可能性。 然而，如果資料庫在最低限度記錄作用時損毀或遺失，您就無法將資料庫復原至失敗點。  
   
  下列作業 (在完整復原模式下會完整記錄) 在簡單和大量記錄復原模式下會進行最低限度記錄：  
   
@@ -151,7 +151,7 @@ ms.lasthandoff: 06/22/2017
   
     -   DROP INDEX 新堆積重建 (如果適用)。 [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) 作業期間的索引頁取消配置 **永遠** 都是完整記錄。
   
-##  <a name="RelatedTasks"></a> Related tasks  
+##  <a name="RelatedTasks"></a> 相關工作  
  **管理交易記錄**  
   
 -   [管理交易記錄檔的大小](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)  

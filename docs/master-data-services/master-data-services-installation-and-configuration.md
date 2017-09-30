@@ -16,10 +16,10 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: da09783f5d8bdcd491f73a1b46390918bbb7dd8d
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 1993aee7d27d51a3788df44288a014374fcf430c
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/07/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Master Data Services 安裝和組態
@@ -140,7 +140,7 @@ ms.lasthandoff: 09/07/2017
 
     ![mds_2016ConfigManager_CreateDatabaseWizard_DatabasePage](../master-data-services/media/mds-2016configmanager-createdatabasewizard-databasepage.png)  
   
-     如需 Windows 定序的詳細資訊，請參閱 [Windows 定序名稱 (Transact-SQL)](https://msdn.microsoft.com/library/ms188046.aspx)。  
+     如需 Windows 定序的詳細資訊，請參閱 [Windows 定序名稱 (Transact-SQL)](../t-sql/statements/windows-collation-name-transact-sql.md)。  
   
 5.  在 [使用者名稱] 欄位中，指定要成為預設 Master Data Services 進階使用者的 Windows 使用者帳戶。 進階使用者具有所有功能區域的存取權，並可新增、刪除及更新所有模型。  
 

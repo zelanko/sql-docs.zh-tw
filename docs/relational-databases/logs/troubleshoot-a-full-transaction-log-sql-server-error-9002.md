@@ -23,10 +23,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 09bb30a44ef1675353fe8fa5bd9245c3f25c3894
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 6631665bbb24d8404e6b115ee0dd608bb6dbef85
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="troubleshoot-a-full-transaction-log-sql-server-error-9002"></a>寫滿交易記錄疑難排解 (SQL Server 錯誤 9002)
@@ -40,7 +40,7 @@ ms.lasthandoff: 07/31/2017
  若要探索指定情況下無法進行記錄截斷的原因，請使用 **sys.database** 目錄檢視的 **log_reuse_wait** 和 **log_reuse_wait_desc** 資料行。 如需詳細資訊，請參閱 [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)。 如需可能延遲記錄截斷之其他因素的描述，請參閱[交易記錄 &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)。  
   
 > **重要！！**  
->  如果發生 9002 錯誤時資料庫處於復原狀態，請在解決問題後，使用 [ALTER DATABASE *資料庫名稱* SET ONLINE](https://msdn.microsoft.com/library/bb522682.aspx) 來復原資料庫。  
+>  如果發生 9002 錯誤時資料庫處於復原狀態，請在解決問題後，使用 [ALTER DATABASE *資料庫名稱* SET ONLINE](../../t-sql/statements/alter-database-transact-sql-set-options.md) 來復原資料庫。  
   
  寫滿交易記錄的替代回應方式包括：  
   
@@ -104,14 +104,14 @@ ms.lasthandoff: 07/31/2017
 ## <a name="complete-or-kill-a-long-running-transaction"></a>完成或刪除長時間執行的交易
 ### <a name="discovering-long-running-transactions"></a>探索長時間執行的交易
 非常長時間執行的交易可能會造成交易記錄被填滿。 若要尋找長時間執行的交易，請使用下列其中一種方式：
- - **[sys.dm_tran_database_transactions](https://msdn.microsoft.com/library/ms186957.aspx)。**
-這個動態管理檢視傳回有關資料庫層級之交易的資訊。 對於長時間執行的交易，較重要的資料行包括第一筆記錄檔記錄的時間 [(database_transaction_begin_time)](https://msdn.microsoft.com/library/ms186957.aspx)、交易的目前狀態 [(database_transaction_state)](https://msdn.microsoft.com/library/ms186957.aspx)和交易記錄之開始記錄的 [記錄序號 (LSN)](https://msdn.microsoft.com/library/ms191459.aspx) [(database_transaction_begin_lsn)](https://msdn.microsoft.com/library/ms186957.aspx)。
+ - **[sys.dm_tran_database_transactions](../system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md)。**
+這個動態管理檢視傳回有關資料庫層級之交易的資訊。 對於長時間執行的交易，較重要的資料行包括第一筆記錄檔記錄的時間 [(database_transaction_begin_time)](../system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md)、交易的目前狀態 [(database_transaction_state)](../system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md)和交易記錄之開始記錄的 [記錄序號 (LSN)](../backup-restore/recover-to-a-log-sequence-number-sql-server.md) [(database_transaction_begin_lsn)](../system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md)。
 
- - **[DBCC OPENTRAN](https://msdn.microsoft.com/library/ms182792.aspx)。**
+ - **[DBCC OPENTRAN](../../t-sql/database-console-commands/dbcc-opentran-transact-sql.md)。**
 此陳述式可讓您識別交易擁有者的使用者識別碼，如此就可以追蹤交易來源，以便更有條理地終止交易 (進行認可而非回復)。
 
 ### <a name="kill-a-transaction"></a>刪除交易
-有時您必須結束處理序；您可能必須使用 [KILL](https://msdn.microsoft.com/library/ms173730.aspx) 陳述式。 請小心使用此陳述式，尤其是執行您不想刪除的重要處理序時。 如需詳細資訊，請參閱 [KILL (Transact-SQL)](https://msdn.microsoft.com/library/ms173730.aspx)
+有時您必須結束處理序；您可能必須使用 [KILL](../../t-sql/language-elements/kill-transact-sql.md) 陳述式。 請小心使用此陳述式，尤其是執行您不想刪除的重要處理序時。 如需詳細資訊，請參閱 [KILL (Transact-SQL)](../../t-sql/language-elements/kill-transact-sql.md)
 
 ## <a name="see-also"></a>另請參閱  
 [知識庫支援文章 - SQL Server 中的交易記錄意外地擴充或滿溢](https://support.microsoft.com/en-us/kb/317375) [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   

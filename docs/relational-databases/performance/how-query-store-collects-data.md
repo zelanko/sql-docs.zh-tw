@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 0c85f3e3417afc5943baee86eff0c3248172f82a
-ms.openlocfilehash: f13f4f60d8df7d2a2fb668cc6d5a93f092973116
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: dcc8a068ee429f889726cfc1b5fa3d0be579135e
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="how-query-store-collects-data"></a>查詢存放區如何收集資料
@@ -45,7 +45,7 @@ ms.lasthandoff: 07/31/2017
 |**sys.query_store_runtime_stats_interval**|查詢存放區會將時間細分為自動產生的時間範圍 (間隔)，並在每個執行計畫的該間隔中儲存彙總統計資料。 間隔的大小是透過組態選項 「統計資料收集間隔」 (在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中) 或使用 [ALTER DATABASE SET 選項 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md) 的 `INTERVAL_LENGTH_MINUTES` 來控制。|  
 |**sys.query_store_runtime_stats**|針對執行計畫彙總的執行階段統計資料。 所有擷取的計量均會以 4 個統計函數形式來表示︰平均值、最小值、最大值及標準差。|  
   
- 如需查詢存放區檢視的詳細資訊，請參閱 **使用查詢存放區監視效能** 中的 [相關檢視、函數與程序](https://msdn.microsoft.com/library/dn817826.aspx)一節。  
+ 如需查詢存放區檢視的詳細資訊，請參閱 **使用查詢存放區監視效能** 中的 [相關檢視、函數與程序](monitoring-performance-by-using-the-query-store.md)一節。  
   
 ## <a name="query-processing"></a>查詢處理  
  查詢存放區會在下列關鍵時刻，與查詢處理管線互動︰  

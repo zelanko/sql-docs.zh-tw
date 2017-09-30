@@ -17,18 +17,18 @@ caps.latest.revision: 35
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 08287922d15adabd1128da2edbb1caa65bc3f85f
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 121ec11d9bf1dbd380716da37e78463467d41f54
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="execute-user-defined-functions"></a>執行使用者定義函數
   使用 Transact-SQL 執行使用者定義函數。
   
 
-> **注意** ︰造訪  [使用者定義的函式](https://msdn.microsoft.com/library/ms191007.aspx) 和 [Create Function (Transact SQL](https://msdn.microsoft.com/library/ms186755.aspx) 以取得使用者定義函式的詳細資訊。 
+> **注意** ︰造訪  [使用者定義的函式](user-defined-functions.md) 和 [Create Function (Transact SQL](../../t-sql/statements/create-function-transact-sql.md) 以取得使用者定義函式的詳細資訊。 
   
  
 ##  <a name="BeforeYouBegin"></a> 開始之前  
@@ -38,7 +38,7 @@ ms.lasthandoff: 06/22/2017
   
 ###  <a name="Security"></a> 安全性  
   
- 執行 [EXECUTE](https://msdn.microsoft.com/library/ms188332.aspx) 陳述式不需要任何權限。 不過，您 **必須** 對 EXECUTE 字串內所參考的安全性實體具備權限。 例如，如果字串包含 [INSERT](https://msdn.microsoft.com/library/ms174335.aspx) 陳述式，EXECUTE 陳述式的呼叫端就必須有目標資料表的 INSERT 權限。 遇到 EXECUTE 陳述式時會檢查權限，即使模組內包含 EXECUTE 陳述式也一樣。 如需詳細資訊，請參閱 [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)  
+ 執行 [EXECUTE](../../t-sql/language-elements/execute-transact-sql.md) 陳述式不需要任何權限。 不過，您 **必須** 對 EXECUTE 字串內所參考的安全性實體具備權限。 例如，如果字串包含 [INSERT](../../t-sql/statements/insert-transact-sql.md) 陳述式，EXECUTE 陳述式的呼叫端就必須有目標資料表的 INSERT 權限。 遇到 EXECUTE 陳述式時會檢查權限，即使模組內包含 EXECUTE 陳述式也一樣。 如需詳細資訊，請參閱 [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

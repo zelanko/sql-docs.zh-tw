@@ -20,17 +20,17 @@ caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 80c832db0ffdb9a3666b60a19fdf11a01750b2e1
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 097ce7fb331df64de9b293a6af9e05e7d95f1b37
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="configure-always-encrypted-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 設定永遠加密
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-本文所說明的工作是有關設定永遠加密以及管理搭配使用永遠加密與 [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx) 的資料庫。
+本文所說明的工作是有關設定永遠加密以及管理搭配使用永遠加密與 [SQL Server Management Studio (SSMS)](../../../ssms/download-sql-server-management-studio-ssms.md) 的資料庫。
 
 當您使用 SSMS 設定永遠加密時，SSMS 會同時處理永遠加密金鑰和敏感性資料，因此金鑰和資料會以純文字形式出現在 SSMS 處理序內。 因此，請務必在安全的電腦上執行 SSMS。 如果您的資料庫裝載在 SQL Server 上，請確定在與裝載 SQL Server 執行個體不同的電腦上執行 SSMS。 因為永遠加密的主要目標是為了確保已加密的敏感性資料安全無虞，即使資料庫系統遭到入侵亦然，所以在 SQL Server 電腦上執行處理金鑰或敏感性資料的 PowerShell 指令碼，可能會降低或損害此功能的優點。 如需其他建議，請參閱 [金鑰管理的安全性考量](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md#SecurityForKeyManagement)。
 
@@ -38,7 +38,7 @@ SSMS 不支援下列兩者之間的角色隔離：管理資料庫的人員 (DBA)
 
 ## <a name="configuring-always-encrypted-using-the-always-encrypted-wizard"></a>使用永遠加密精靈設定永遠加密
 
-[[永遠加密精靈](../../../relational-databases/security/encryption/always-encrypted-wizard.md)] 是一個功能強大的工具，可讓您設定所選取資料庫資料行的所需加密組態。 根據目前永遠加密組態和所要的目標組態，精靈可以加密資料行、將其解密 (移除加密) 或重新加密 (例如，使用新的資料行加密金鑰，或與針對資料行設定的目前類型不同的加密類型)。 在精靈的單一執行中，可以設定多個資料行。
+[永遠加密精靈] [](../../../relational-databases/security/encryption/always-encrypted-wizard.md) 是一個功能強大的工具，可讓您設定所選取資料庫資料行的所需加密組態。 根據目前永遠加密組態和所要的目標組態，精靈可以加密資料行、將其解密 (移除加密) 或重新加密 (例如，使用新的資料行加密金鑰，或與針對資料行設定的目前類型不同的加密類型)。 在精靈的單一執行中，可以設定多個資料行。
 
 如果您尚未佈建永遠加密的任何金鑰，精靈將會自動產生金鑰。 您只需要挑選資料行主要金鑰的金鑰存放區：Windows 憑證存放區或 Azure 金鑰保存庫。 精靈將自動產生資料庫中金鑰和其中繼資料物件的名稱。 如果您需要深入控制如何佈建您的金鑰 (以及含有資料行主要金鑰之金鑰存放區的更多選擇)，則可以先使用 [新增資料行主要金鑰]  和 [新增資料行加密金鑰]  對話方塊 (如下所述) 來佈建金鑰，再啟動精靈。 在 [永遠加密精靈] 中，您接著可以挑選現有的資料行加密金鑰。
 
@@ -89,7 +89,7 @@ SSMS 不支援下列兩者之間的角色隔離：管理資料庫的人員 (DBA)
 
 ![always-encrypted-patients](../../../relational-databases/security/encryption/media/always-encrypted-patients.png)
  
-### <a name="en-dis"></a> Enabling and disabling Always Encrypted for a database connection   
+### <a name="en-dis"></a> 針對資料庫連線啟用和停用 Always Encrypted   
 
 針對資料庫連線啟用和停用 Always Encrypted，會指示 .NET Framework Data Provider for SQL Server (SQL Server Management Studio 所使用) 明確地嘗試進行下列動作：   
 -   將從加密資料行擷取以及查詢結果中傳回的任何值解密。   
@@ -105,7 +105,7 @@ SSMS 不支援下列兩者之間的角色隔離：管理資料庫的人員 (DBA)
 >  4.   選取 [其他屬性] 索引標籤，然後輸入 `Column Encryption Setting=Enabled` (以啟用 Always Encrypted 行為) 或移除設定 (以停用 Always Encrypted 行為)。   
 >  5.   按一下 **[連接]**。   
    
-### <a name="param"></a>Parameterization for Always Encrypted   
+### <a name="param"></a>Always Encrypted 的參數化   
  
 [Always Encrypted 的參數化] 是 SQL Server Management Studio 中的一項功能，可將 Transact-SQL 變數自動轉換為查詢參數 ([SqlParameter 類別](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.aspx)的執行個體)。 (至少需要 SSMS 17.0 版。)這讓基礎的 .NET Framework Data Provider for SQL Server 能夠偵測目標為加密資料行的資料，並且在將這類資料傳送至資料庫之前，先進行加密。 
   

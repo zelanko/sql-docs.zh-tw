@@ -22,11 +22,11 @@ caps.latest.revision: 40
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d848c756eee54184aa10b5553779d0ebf1807366
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: c5a9e33d2ea86fa57c0e7fee684b2096f4c459f5
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="view-or-change-the-recovery-model-of-a-database-sql-server"></a>檢視或變更資料庫的復原模式 (SQL Server)
@@ -36,13 +36,13 @@ ms.lasthandoff: 06/22/2017
   
   「復原模式」是一項資料庫屬性，可控制交易的記錄方式、是否需要 (及允許) 備份交易記錄，以及可用的還原作業類型。 復原模式共有三種：簡單、完整和大量記錄。 一般而言，資料庫會使用完整復原模式或簡單復原模式。 資料庫可以隨時切換到另一個復原模式。 **model** 資料庫會設定新資料庫的預設復原模式。  
   
-  如需 [復原模式](https://msdn.microsoft.com/library/ms189275.aspx)的更深入說明，請參閱 [SQL Server Recovery Models](https://www.mssqltips.com/sqlservertutorial/2/sql-server-recovery-models/) 人員提供的 [SQL Server Recovery Models](https://www.mssqltips.com/)(SQL Server 復原模式)。
+  如需 [復原模式](recovery-models-sql-server.md)的更深入說明，請參閱 [SQL Server Recovery Models](https://www.mssqltips.com/sqlservertutorial/2/sql-server-recovery-models/) 人員提供的 [SQL Server Recovery Models](https://www.mssqltips.com/)(SQL Server 復原模式)。
   
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
 
--   從[完整復原模式或大量記錄復原模式](https://msdn.microsoft.com/library/ms179478.aspx) **before** switching from the [full recovery or bulk-logged recovery model](https://msdn.microsoft.com/library/ms189275.aspx).  
+-   從[完整復原模式或大量記錄復原模式](back-up-a-transaction-log-sql-server.md) **before** switching from the [full recovery or bulk-logged recovery model](recovery-models-sql-server.md).  
   
 -   在大量記錄模式下無法使用時間點復原。 在需要交易記錄還原的大量記錄復原模式下執行交易，可能會有資料遺失的風險。 若要在災害復原的情況下獲得最佳資料復原能力，請只在下列情況下切換到大量記錄復原模式：  
   

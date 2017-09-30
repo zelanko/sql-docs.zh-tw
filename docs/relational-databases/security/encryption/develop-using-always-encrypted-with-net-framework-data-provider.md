@@ -14,11 +14,11 @@ caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 09253894ace06e9bd0b6a515e133eb8e2f5860a1
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: de7909d5b33568c0218b7f9895d36952c7cdd3af
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="develop-using-always-encrypted-with-net-framework-data-provider"></a>搭配使用 Always Encrypted 與 .NET Framework Data Provider 進行開發
@@ -289,7 +289,7 @@ cmd.ExecuteNonQuery();
   
 應用程式程式碼不需要任何變更即可使用這些提供者，但請注意下列事項︰
 
-- 您 (或您的 DBA) 需要確認設定在資料行主要金鑰中繼資料的提供者名稱是否正確，且資料行主要金鑰路徑符合指定提供者有效的金鑰路徑格式。 建議您使用 SQL Server Management Studio 等工具設定金鑰，這樣在發出 [CREATE COLUMN MASTER KEY (Transact-SQL)](https://msdn.microsoft.com/library/mt146393.aspx) 陳述式時，會自動產生有效的提供者名稱和金鑰路徑。 如需詳細資訊，請參閱 [使用 SQL Server Management Studio 設定永遠加密](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md) 和 [使用 PowerShell 設定永遠加密](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)。
+- 您 (或您的 DBA) 需要確認設定在資料行主要金鑰中繼資料的提供者名稱是否正確，且資料行主要金鑰路徑符合指定提供者有效的金鑰路徑格式。 建議您使用 SQL Server Management Studio 等工具設定金鑰，這樣在發出 [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md) 陳述式時，會自動產生有效的提供者名稱和金鑰路徑。 如需詳細資訊，請參閱 [使用 SQL Server Management Studio 設定永遠加密](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md) 和 [使用 PowerShell 設定永遠加密](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)。
 - 您需要確定應用程式可以存取金鑰存放區中的金鑰。 這可能牽涉到授與應用程式金鑰和/或金鑰存放區的存取權 (視金鑰存放區而定)，或執行其他的金鑰存放區特定組態步驟。 例如，若要存取實作 CNG 或 CAPI 的金鑰存放區 (例如硬體安全性模組)，您需要確定應用程式電腦上已安裝存放區實作 CNG 或 CAPI 的程式庫。 如需詳細資訊，請參閱 [建立和儲存資料行主要金鑰 (永遠加密)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)。
 
 ### <a name="using-azure-key-vault-provider"></a>使用 Azure 金鑰保存庫提供者
@@ -373,7 +373,7 @@ static byte[]  GetEncryptedColumnEncryptonKey()
 
 ### <a name="controlling-round-trips-to-retrieve-metadata-for-query-parameters"></a>控制反覆存取以擷取查詢參數的中繼資料
 
-如果連線已啟用 [永遠加密]，.NET Framework Data Provider for SQL Server 預設會針對每個參數化的查詢呼叫 [sys.sp_describe_parameter_encryption](https://msdn.microsoft.com/library/mt631693.aspx) ，將查詢陳述式 (不含任何參數值) 傳遞至 SQL Server。 **sys.sp_describe_parameter_encryption** 會分析查詢陳述式，找出是否有任何參數需要加密；如果有，則對每個需要加密的參數傳回加密相關資訊，讓 .NET Framework Data Provider for SQL Server 加密參數值。 上述行為可對用戶端應用程式確保高透明度。 只要將以加密資料行為目標的值傳遞給 SqlParameter 物件中的 .NET Framework Data Provider for SQL Server，應用程式 (及應用程式開發人員) 就不需要留意哪些查詢存取了加密資料行。
+如果連線已啟用 [永遠加密]，.NET Framework Data Provider for SQL Server 預設會針對每個參數化的查詢呼叫 [sys.sp_describe_parameter_encryption](../../system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md) ，將查詢陳述式 (不含任何參數值) 傳遞至 SQL Server。 **sys.sp_describe_parameter_encryption** 會分析查詢陳述式，找出是否有任何參數需要加密；如果有，則對每個需要加密的參數傳回加密相關資訊，讓 .NET Framework Data Provider for SQL Server 加密參數值。 上述行為可對用戶端應用程式確保高透明度。 只要將以加密資料行為目標的值傳遞給 SqlParameter 物件中的 .NET Framework Data Provider for SQL Server，應用程式 (及應用程式開發人員) 就不需要留意哪些查詢存取了加密資料行。
 
 
 ### <a name="query-metadata-caching"></a>查詢中繼資料快取
@@ -392,7 +392,7 @@ static byte[]  GetEncryptedColumnEncryptonKey()
 > [!NOTE]
 > 設定查詢層級的 [永遠加密] 會限制實作參數加密中繼資料快取之 .NET 4.6.2 和更新版本的效能優勢。
 
-若要控制個別查詢的 [永遠加密] 行為，您需要使用  [SqlCommand](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcommand.aspx) 和 [SqlCommandColumnEncryptionSetting](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcommandcolumnencryptionsetting.aspx)的這個建構函式。 以下是一些實用的方針：
+若要控制個別查詢的 [永遠加密] 行為，您需要使用 [SqlCommand](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcommand.aspx) 和 [SqlCommandColumnEncryptionSetting](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcommandcolumnencryptionsetting.aspx)的這個建構函式。 以下是一些實用的方針：
 - 如果用戶端應用程式透過資料庫連接傳送的大多數查詢都會存取加密資料行：
     - 將**資料行加密設定**連接字串關鍵字設為 [啟用]。
     - 對不會存取任何加密資料行的個別查詢設定 **SqlCommandColumnEncryptionSetting.Disabled**。 這會停用呼叫 sys.sp_describe_parameter_encryption 以及嘗試解密結果集內的任何值。
@@ -544,7 +544,7 @@ static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 
 ## <a name="always-encrypted-api-reference"></a>永遠加密 API 參考
 
-**Namespace:** [System.Data.SqlClient](https://msdn.microsoft.com/library/system.data.sqlclient.aspx)
+**命名空間：** [System.Data.SqlClient](https://msdn.microsoft.com/library/system.data.sqlclient.aspx)
 
 **組件︰** System.Data (in System.Data.dll)
 

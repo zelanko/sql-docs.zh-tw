@@ -16,11 +16,11 @@ caps.latest.revision: 34
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ed2e98c34b3efed454130e7e1c6de86545ba6aea
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 509c4b512bc1f0aeafcd82eb896b9291af450aff
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="file-snapshot-backups-for-database-files-in-azure"></a>Azure 中資料庫檔案的檔案快照集備份
@@ -51,7 +51,7 @@ ms.lasthandoff: 06/22/2017
 >  完成建立交易記錄備份鏈結所需的初始完整備份 (可能是檔案快照集備份) 之後，您就只需要執行交易記錄備份備份，因為每個交易記錄檔案快照集備份組，包含所有資料庫檔案的檔案快照集，並可用來執行資料庫還原或記錄還原。 初始完整備份之後，您就不需要其他完整或差異備份，因為 Azure Blob 儲存體服務會處理每個檔案快照集之間的差異，以及每個資料庫檔案目前基底 Blob 的狀態。  
   
 > [!NOTE]  
->  如需搭配使用 SQL Server 2016 和 Microsoft Azure Blob 儲存體服務的教學課程，請參閱 [教學課程：搭配使用 Microsoft Azure Blob 儲存體服務和 SQL Server 2016 資料庫](https://msdn.microsoft.com/library/dn466438.aspx)  
+>  如需搭配使用 SQL Server 2016 和 Microsoft Azure Blob 儲存體服務的教學課程，請參閱 [教學課程：搭配使用 Microsoft Azure Blob 儲存體服務和 SQL Server 2016 資料庫](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
   
 ### <a name="restore-using-file-snapshot-backups"></a>使用檔案快照集還原  
  因為每個檔案快照集備份組，都包含每個資料庫檔案的檔案快照集，而還原程序需要最近的兩組檔案快照集備份組。 不論備份組是來自完整資料庫備份或記錄備份都是如此。 這和使用傳統資料流備份檔案來執行還原的程序非常不同。 透過傳統的資料流備份，還原成需需要使用備份組的整個鏈結：完整備份、差異備份，及一或多個交易記錄備份。 不論是使用檔案快照集備份或資料流備份組來還原，還原程序的復原部分仍維持相同。  
@@ -184,7 +184,7 @@ GO
  您要尋找哪些資訊？找到了嗎？ 我們會持續聽取您的意見來改進內容。 請將您的意見傳送到 [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20File-Snapshot%20Backups%20for%20Database%20Files%20in%20Azure%20page)  
   
 ## <a name="see-also"></a>另請參閱  
- [教學課程：搭配使用 Microsoft Azure Blob 儲存體服務和 SQL Server 2016 資料庫](https://msdn.microsoft.com/library/dn466438.aspx)  
+ [教學課程：搭配使用 Microsoft Azure Blob 儲存體服務和 SQL Server 2016 資料庫](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
   
   
 

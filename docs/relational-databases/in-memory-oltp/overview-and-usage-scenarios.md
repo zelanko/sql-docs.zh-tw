@@ -14,11 +14,11 @@ caps.latest.revision: 5
 author: jodebrui
 ms.author: jodebrui
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: edf397a4e4922167ae2eafd2c8e78ac97858bd37
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 13128a755dcfd302224a8291a006878a68bdd09f
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="overview-and-usage-scenarios"></a>概觀和使用案例
@@ -63,8 +63,8 @@ ms.lasthandoff: 06/22/2017
 針對您的核心交易資料表 (亦即，含有效能最嚴重不足之交易的資料表)，使用記憶體最佳化資料表。 使用原生編譯的預存程序，以最佳化方式執行與商務交易相關聯的邏輯。 您可以向下推送到預存程序的邏輯越多，您可從記憶體內部 OLTP 中看見的效益就越多。
 
 開始使用現有的應用程式：
-1. 使用 [交易效能分析報表](https://msdn.microsoft.com/library/dn205133.aspx) ，以識別您想要移轉的物件， 
-2. 以及使用 [記憶體最佳化](https://msdn.microsoft.com/library/dn284308.aspx) 和 [原生編譯](https://msdn.microsoft.com/library/dn358355.aspx) 建議程式來協助移轉。
+1. 使用 [交易效能分析報表](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md) ，以識別您想要移轉的物件， 
+2. 以及使用 [記憶體最佳化](memory-optimization-advisor.md) 和 [原生編譯](native-compilation-advisor.md) 建議程式來協助移轉。
 
 #### <a name="customer-case-studies"></a>客戶案例研究
 
@@ -82,8 +82,8 @@ ms.lasthandoff: 06/22/2017
 
 使用記憶體最佳化資料表進行資料擷取。 如果擷取包含大部分的插入 (而非更新)，而且顧慮到資料的記憶體內部 OLTP 資料儲存體使用量，則可
 
-- 使用工作，利用進行 [的工作，定期將資料批次卸載到含有](https://msdn.microsoft.com/library/gg492088.aspx)叢集資料行存放區索引 `INSERT INTO <disk-based table> SELECT FROM <memory-optimized table>`且磁碟為基礎的資料表，或者
-- 使用 [暫時的記憶體最佳化資料表](https://msdn.microsoft.com/library/mt590207.aspx) 來管理歷程記錄資料 - 在此模式中，歷程記錄資料會存留於磁碟上，而資料移動是由系統所管理。
+- 使用工作，利用進行 [的工作，定期將資料批次卸載到含有](../indexes/columnstore-indexes-overview.md)叢集資料行存放區索引 `INSERT INTO <disk-based table> SELECT FROM <memory-optimized table>`且磁碟為基礎的資料表，或者
+- 使用 [暫時的記憶體最佳化資料表](../tables/system-versioned-temporal-tables-with-memory-optimized-tables.md) 來管理歷程記錄資料 - 在此模式中，歷程記錄資料會存留於磁碟上，而資料移動是由系統所管理。
 
 SQL Server 範例儲存機制包含智慧型格線應用程式，其會使用暫時的記憶體最佳化資料表、記憶體最佳化資料表類型及原生編譯的預存程序來加速資料擷取，同時管理感應器資料的記憶體內部 OLTP 儲存體使用量： 
 
@@ -228,10 +228,10 @@ ETL 工作流程通常包含將資料載入暫存資料表、轉換資料，然�
 - 如需使用記憶體內部 OLTP 的效能示範，請參閱： [in-memory-oltp-perf-demo-v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/in-memory-oltp-demo-v1.0)
 - [說明記憶體內部 OLTP 並顯示示範的 17 分鐘影片](https://www.youtube.com/watch?v=l5l5eophmK4) (示範是 8:25)
 - [啟用記憶體內部 OLTP 並設定建議選項的指令碼](https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/in-memory/t-sql-scripts/enable-in-memory-oltp.sql)
-- [主要的記憶體內部 OLTP 文件](https://msdn.microsoft.com/library/dn133186.aspx)
+- [主要的記憶體內部 OLTP 文件](in-memory-oltp-in-memory-optimization.md)
 - [Performance and resource utilization benefits of In-Memory OLTP in Azure SQL Database](https://azure.microsoft.com/blog/in-memory-oltp-in-azure-sql-database/) (Azure SQL Database 中記憶體內部 OLTP 的效能與資源使用率優點)
 - [使用記憶體最佳化提升暫存資料表與資料表變數效能](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/21/improving-temp-table-and-table-variable-performance-using-memory-optimization/)
 [在 SQL 資料庫中使用記憶體內部技術最佳化效能](https://docs.microsoft.com/azure/sql-database/sql-database-in-memory)
-- [系統版本設定時態表與記憶體最佳化資料表](https://msdn.microsoft.com/library/mt590207.aspx)
+- [系統版本設定時態表與記憶體最佳化資料表](../tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)
 - [記憶體內部 OLTP - 一般工作負載模式和移轉考量](http://msdn.microsoft.com/library/dn673538.aspx)。 
 

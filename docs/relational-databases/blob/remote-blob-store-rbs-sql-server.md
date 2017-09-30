@@ -17,11 +17,11 @@ caps.latest.revision: 19
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5dd24af4232914ff6b86e036827364f1cb8c16a1
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 11edeb0ba81666ecf64adf189bd704de81af5a32
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="remote-blob-store-rbs-sql-server"></a>遠端 Blob 存放區 (RBS) (SQL Server)
@@ -53,7 +53,7 @@ ms.lasthandoff: 06/22/2017
  有好幾個協力廠商儲存方案廠商已經開發了符合這些標準 API，並在多種儲存平台上支援 BLOB 儲存的 RBS 提供者。  
   
 ## <a name="rbs-requirements"></a>RBS 需求  
- RBS 在儲存 BLOB 中繼資料所在的主要資料庫伺服器中，需要使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise。  不過，如果您使用提供的 FILESTREAM 提供者，可以將 BLOB 本身儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard 上。 若要連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，RBS 至少需要 [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)] 的 ODBC 驅動程式第 11 版和 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]的 ODBC 驅動程式第 13 版。 這些驅動程式可透過 [Download ODBC Driver for SQL Server](https://msdn.microsoft.com/library/mt703139.aspx)(下載 ODBC Driver for SQL Server) 取得。   
+ - RBS 在儲存 BLOB 中繼資料所在的主要資料庫伺服器中，需要使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise。  不過，如果您使用提供的 FILESTREAM 提供者，可以將 BLOB 本身儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard 上。 若要連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，RBS 至少需要 [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)] 的 ODBC 驅動程式第 11 版和 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]的 ODBC 驅動程式第 13 版。 這些驅動程式可透過 [Download ODBC Driver for SQL Server](https://msdn.microsoft.com/library/mt703139.aspx)(下載 ODBC Driver for SQL Server) 取得。    
   
  RBS 包含一個 FILESTREAM 提供者，可讓您使用 RBS，將 BLOB 儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的執行個體上。 如果您要使用 RBS 將 BLOB 儲存在不同的儲存方案中，您必須使用針對該儲存方案開發的 RBS 提供者，或使用 RBS API 開發一個自訂的 RBS 提供者。 將 BLOB 儲存在 NTFS 檔案系統中的範例提供者，在 [Codeplex](http://go.microsoft.com/fwlink/?LinkId=210190)上作為學習資源提供。  
   
@@ -77,7 +77,7 @@ ms.lasthandoff: 06/22/2017
  使用 RBS 時，您應該定期更換認證存放區對稱金鑰。 這是符合組織安全性原則的一般安全性最佳作法。  更換 RBS 認證存放區對稱金鑰的其中一個方法是，在 RBS 資料庫中使用 [下列指令碼](#Key_rotation) 。  您也可以使用此指令碼移轉到更強的加密強度屬性，例如演算法或金鑰長度。 更換金鑰之前，請備份您的資料庫。  在指令碼結束時，會有一些驗證步驟。  
 如果您的安全性原則需要的金鑰屬性 (例如演算法或金鑰長度) 與所提供的不同，則可以使用指令碼作為範本。 您可以在兩種情況下修改金鑰屬性：1) 建立暫存金鑰時 2) 建立永久金鑰時。  
   
-##  <a name="rbsresources"></a> RBS resources  
+##  <a name="rbsresources"></a> RBS 資源  
   
  **RBS 範例**  
  [Codeplex](http://go.microsoft.com/fwlink/?LinkId=210190) 上提供的 RBS 範例會示範如何開發 RBS 應用程式，以及如何開發與安裝自訂的 RBS 提供者。  
@@ -85,7 +85,7 @@ ms.lasthandoff: 06/22/2017
  **RBS 部落格**  
  [RBS 部落格](http://go.microsoft.com/fwlink/?LinkId=210315) 會提供其他資訊來協助您了解、部署，以及維護 RBS。  
   
-##  <a name="Key_rotation"></a> Key rotation script  
+##  <a name="Key_rotation"></a> 金鑰輪替指令碼  
  此範例會建立名為 `sp_rotate_rbs_symmetric_credential_key` 的預存程序，以您選擇的金鑰來取代目前使用的 RBS  
 認證存放區對稱金鑰。  如果安全性原則需要定期更換金鑰，   
 或者如果有特定演算法需求，您可能會想要執行這項作業。  
