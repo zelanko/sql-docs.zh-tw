@@ -20,10 +20,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: be884b2d1b316506592f939167c5be91ddc2a9f6
-ms.openlocfilehash: 141c83e009e1cf135690297442c6a4864a871bfc
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: a5f180c837af757fd5a8df7f356b8c644916612f
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>建立完整資料庫備份 (SQL Server)
@@ -138,7 +138,7 @@ ms.lasthandoff: 07/31/2017
   
 20. 指定備份組逾期的時間，和不需明確略過逾期資料的驗證即可覆寫的時間：  
   
-    -   若要讓備份組在特定的天數後過期，請按一下 [之後] (預設選項)，然後輸入備份組建立之後將會過期的天數。 這個值可以介於 0 到 99999 日之間；值為 0 日意指備份組永遠不會過期。  
+    -   若要讓備份組在特定的天數後過期，請按一下 [之後] \(預設選項)，然後輸入備份組建立之後將會過期的天數。 這個值可以介於 0 到 99999 日之間；值為 0 日意指備份組永遠不會過期。  
   
          預設值會在 [伺服器屬性] 對話方塊 ([資料庫設定] 頁面) 的 [預設備份媒體保留 (以天為單位)] 選項中設定。 若要存取，請以滑鼠右鍵按一下物件總管中的伺服器名稱並選取 [屬性]，然後選取 [資料庫設定] 頁面。  
   
@@ -153,7 +153,7 @@ ms.lasthandoff: 07/31/2017
 22. 在 [加密] 區段中，使用 [加密備份] 核取方塊決定是否加密備份。 使用 [演算法] 下拉式清單，選取加密演算法。  使用 [憑證或非對稱金鑰] 下拉式清單，選取現有憑證或非對稱金鑰。 SQL Server 2014 或更新版本支援加密。 如需加密選項的詳細資訊，請參閱 [備份資料庫 &#40;備份選項頁面&#41;](../../relational-databases/backup-restore/back-up-database-backup-options-page.md)。  
   
   
-您可以使用 [[維護計畫精靈]](https://msdn.microsoft.com/library/ms191002.aspx) 來建立資料庫備份。 
+您可以使用 [[維護計畫精靈]](../maintenance-plans/use-the-maintenance-plan-wizard.md) 來建立資料庫備份。 
 
 ### <a name="examples"></a>範例  
 #### <a name="a--full-back-up-to-disk-to-default-location"></a>**A.完整備份至預設位置的磁碟**

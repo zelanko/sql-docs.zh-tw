@@ -24,10 +24,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 0d09693778fa9382d40dfb02f0c3fb4b212f86ed
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 4557b2183cf0043050cbf240b837b53796150653
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="restore-a-database-backup-using-ssms"></a>Restore a Database Backup Using SSMS
@@ -36,7 +36,7 @@ ms.lasthandoff: 07/31/2017
   本主題說明如何使用 SQL Server Management Studio 還原完整資料庫備份。    
        
 ### <a name="important"></a>重要！    
-您可能必須先備份使用中的交易記錄 (也稱為 [記錄結尾](https://msdn.microsoft.com/library/ms179314.aspx))，才能在完整或大量記錄復原模式下還原資料庫。 如需詳細資訊，請參閱 [備份交易記錄 &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md))，才能在完整或大量記錄復原模式下還原資料庫。  
+您可能必須先備份使用中的交易記錄 (也稱為 [記錄結尾](tail-log-backups-sql-server.md))，才能在完整或大量記錄復原模式下還原資料庫。 如需詳細資訊，請參閱 [備份交易記錄 &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md))，才能在完整或大量記錄復原模式下還原資料庫。  
 
 從另一個執行個體還原資料庫時，請考慮 [在另一個伺服器執行個體上提供可用的資料庫時，管理中繼資料 (SQL Server)](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)中的資訊。   
     
@@ -208,7 +208,7 @@ ms.lasthandoff: 07/31/2017
 6.  在 [目的地] 區段中，按一下 [時間表] 存取 [備份時間表] 對話方塊，手動選取停止復原動作的時間點。
 
 7.  選取 [特定的日期與時間]。
-8.  將 [時間表間隔] 變更為下拉式方塊中的 [小時] (選擇性)。
+8.  將 [時間表間隔] 變更為下拉式方塊中的 [小時] \(選擇性)。
 9.  將滑桿移至想要的時間。
 
 10. 按一下 [確定] 回到 [一般] 頁面。
