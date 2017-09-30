@@ -29,11 +29,11 @@ ms.lasthandoff: 09/07/2017
   
 它有助於回答「誰正在使用我的實體，且其做法為何？」問題。 此檢視與 [衍生階層] 總管頁面類似，但它包含的範圍更廣。 它會顯示所有 DBA 關聯性，而不只是定義為特定階層一部分的 DBA 關聯性。 不需要階層定義，因為只會從現有 DBA 推斷所顯示的階層結構。  
   
-在 [總管] 頁面功能表中，[Entity Dependencies] (實體相依性) 功能表項目會列出模型中至少有一個實體所相依的所有實體 (即至少有一個實體具有參考所列實體的 DBA)。 實體名稱旁邊會顯示相依性 (直接和間接) 數目，並依這個數目排序清單，而且大量參考的實體會在頂端。 下列螢幕擷取畫面取自 [範例資料](https://msdn.microsoft.com/library/master-data-services-sample.aspx)的客戶模型，並顯示有 7 個實體參考 BigArea 實體 (直接或間接)：  
+在 [總管] 頁面功能表中，[Entity Dependencies]\(實體相依性) 功能表項目會列出模型中至少有一個實體所相依的所有實體 (即至少有一個實體具有參考所列實體的 DBA)。 實體名稱旁邊會顯示相依性 (直接和間接) 數目，並依這個數目排序清單，而且大量參考的實體會在頂端。 下列螢幕擷取畫面取自 [範例資料](https://msdn.microsoft.com/library/master-data-services-sample.aspx)的客戶模型，並顯示有 7 個實體參考 BigArea 實體 (直接或間接)：  
   
 ![MDS_EntityDependencies_Menu.jpg](../master-data-services/media/mds-entitydependencies-menu-jpg.jpg)  
     
-按一下這個功能表項目會開啟 BigArea 實體的新 [Entity Dependencies] (實體相依性) 總管頁面，這個頁面會顯示如何使用實體成員。 它會在樹狀結構的頂端顯示具有 BigArea 成員的階層檢視，而其 7 個耗用實體的成員巢狀如下：  
+按一下這個功能表項目會開啟 BigArea 實體的新 [Entity Dependencies]\(實體相依性) 總管頁面，這個頁面會顯示如何使用實體成員。 它會在樹狀結構的頂端顯示具有 BigArea 成員的階層檢視，而其 7 個耗用實體的成員巢狀如下：  
   
 ![MDS_EntityDependencies_Tree.jpg](../master-data-services/media/mds-entitydependencies-tree-jpg.jpg)  
     
