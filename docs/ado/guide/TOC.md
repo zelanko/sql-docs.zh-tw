@@ -1,0 +1,17 @@
+# [ADO 程式設計人員指南](ado-programmer-s-guide.md)
+
+# [資料 +](../../ado/guide/data/ado-fundamentals.md)
+# [延伸模組 +](../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)
+# [多維度 +](../../ado/guide/multidimensional/ado-md-fundamentals.md)
+# [遠端資料服務 +](../../ado/guide/remote-data-service/remote-data-service-rds.md)
+# [附錄 +](../../ado/guide/appendixes/appendix-a-providers.md)
+
+# [在 Visual C++ 應用程式中參考 ADO 程式庫](referencing-the-ado-libraries-in-a-visual-c-application.md)
+# [在 Visual Basic 6 應用程式中參考 ADO 程式庫](referencing-the-ado-libraries-in-a-visual-basic-6-application.md)
+# [ADO 簡介](ado-introduction.md)
+# [ADO 安全性設計問題](ado-security-design-issues.md)
+# [ADO 歷程記錄](ado-history.md)
+# [參考 ADO 程式庫](referencing-the-ado-libraries.md)
+# [使用 ADO 文件的必要條件](prerequisites-for-using-the-ado-documentation.md)
+# [ADO 技術資料表](ado-technology-table.md)
+# [ADO 工作資料表](ado-task-table.md)
