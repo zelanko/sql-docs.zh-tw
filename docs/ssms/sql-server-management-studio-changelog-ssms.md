@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 3f12671ace99d5fefc199c7b1c2db31e5b3cfade
-ms.openlocfilehash: 5fa4b384ee88f85c681f7600ebade1a0e5b5d17e
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: f12afa26bb406a17c41059b12cc8e1b7a9c411a1
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/08/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
@@ -109,7 +109,7 @@ The connection is broken and recovery is not possible. The client driver attempt
 - 修正在嘗試列印查詢結果 (文字格式) 時的問題。  https://connect.microsoft.com/SQLServer/feedback/details/3055225/
 - 修正 SSMS 在 SQL Azure Database 上編寫這類物件刪除指令碼時不正確地卸除資料表和其他物件的問題。
 - 修正 SSMS 偶而因下列這類錯誤而拒絕啟動的問題：「找不到一或多個元件。 請重新安裝該應用程式」。
-- 修正 SSMS UI 中的 SPID 可能過時和不同步的問題。 https://connect.microsoft.com/SQLServer/feedback/details/1898875
+- 已修正 SSMS UI 中 SPID 無法取得過時及不同步的問題。https://connect.microsoft.com/SQLServer/feedback/details/1898875
 - 修正將 /passive 引數視為 /quiet 的 SSMS (無訊息) 安裝程式問題。
 - 修正 SSMS 偶而在啟動時擲回「物件參考未設定成物件的執行個體」錯誤的問題。 http://connect.microsoft.com/SQLServer/feedback/details/3134698
 - 修正 [資料壓縮精靈] 上導致 SSMS 在 [圖形資料表] 上按 [計算] 時當機的問題
@@ -355,7 +355,7 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 
 * 修正 SSMS 16.5.2 中出現的問題，這造成 'Table' 節點會在資料表有多個疏鬆資料行時展開。
 
-* 使用者可以將包含 OData 連線管理員且連線到 Microsoft Dynamics AX/CRM Online 資源的 SSIS 套件部署到 SSIS 目錄。 如需詳細資訊，請參閱 [OData 連線管理員](https://msdn.microsoft.com/library/dn584133.aspx)。
+* 使用者可以將包含 OData 連線管理員且連線到 Microsoft Dynamics AX/CRM Online 資源的 SSIS 套件部署到 SSIS 目錄。 如需詳細資訊，請參閱 [OData 連線管理員](/sql-docs/docs/integration-services/connection-manager/odata-connection-manager)。
 
 * 在現有資料表上設定 Always Encrypted 失敗，不相關的物件發生錯誤。 [Connect 識別碼 3103181](https://connect.microsoft.com/SQLServer/feedback/details/3103181/setting-up-always-encrypted-on-an-existing-table-fails-with-errors-on-unrelated-objects)
 
@@ -481,7 +481,7 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 
 * [新驗證選項：「Active Directory 通用驗證」](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/)。 這個一個由 Azure Active Directory 驅動的權杖型驗證機制，支援多因素、密碼及整合式驗證機制。
 
-* 符合 SQL Server Profiler 範本的新擴充事件範本 [(Microsoft Connect 項目 #2543925)](https://connect.microsoft.com/SQLServer/feedback/details/2543925/sql-server-extended-events-profiler-tool)。 深入了解包含的 [SQL Server Profiler 範本](https://msdn.microsoft.com/library/ms190176.aspx)。
+* 符合 SQL Server Profiler 範本的新擴充事件範本 [(Microsoft Connect 項目 #2543925)](/sql-docs/docs/tools/sql-server-profiler/sql-server-profiler-templates)。
 
 * 針對 Azure SQL 資料庫推出新的 [建立資料庫和資料庫屬性] 對話方塊。
 

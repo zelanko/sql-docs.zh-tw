@@ -3,7 +3,7 @@ title: "SQL Server 2017 的版本及支援功能 | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 - SQL2017_New_Updated
-ms.date: 07/14/2017
+ms.date: 09/14/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -40,10 +40,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: 22507f627c33c9424d725ca5d249bd04628b3ea6
+ms.sourcegitcommit: dbe6f832d4af55ddd15e12fba17a4da490fe19ae
+ms.openlocfilehash: 0a51b818a33e2ee3eb4ce3c3d5682ee571c1c412
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/25/2017
 
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017"></a>SQL Server 2017 的版本及支援功能
@@ -57,8 +57,6 @@ ms.lasthandoff: 08/28/2017
 * [SQL Server 2016](editions-and-components-of-sql-server-2016.md)。  
 * [SQL Server 2014](http://msdn.microsoft.com/library/cc645993(v=sql.120).aspx)。
 
->[!NOTE]
->本文中的所有資訊適用於初步發行的 SQL Server 2017，因此可能會變更。 
   
 安裝需求根據應用程式的需要而異。 不同的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本可配合組織和個人的獨特效能、執行階段和價格需求。 安裝的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 元件也將取決於您的特定需求。 下列章節幫助您了解如何在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的可用版本和元件之間做出最好的選擇。  
 
@@ -84,7 +82,7 @@ SQL Server Evaluation Edition 提供了 180 天的試用期。
 |Enterprise|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Enterprise Edition 這套頂級產品不但提供完整的高階資料中心功能，而且具備急速效能、不受限制的虛擬化以及端對端商業智慧 - 為關鍵任務工作負載提供最高的服務等級，並且讓使用者獲得資料洞察能力。|  
 |Standard|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Standard Edition 針對部門和小型組織提供基本的資料管理與商業智慧資料庫來執行應用程式，並且支援內部部署和雲端的一般開發工具 - 以最少的 IT 資源提供最有效率的資料庫管理。|  
 |Web|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Web Edition 對於 Web 主控者和 Web VAP 而言是一個整體擁有成本很低的選擇，可針對小型到大型規模的 Web 屬性提供可擴充、負擔輕鬆而且管理方便的功能。|  
-|開發人員|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Developer Edition 可讓開發人員在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]上建立任何類型的應用程式。 其中包含 Enterprise Edition 的所有功能，但是只授權做為開發和測試系統使用，而不做為實際伺服器使用。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer 對建置<br />                [!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] 及測試應用程式的人員而言是絕佳選項。|  
+|開發人員|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Developer Edition 可讓開發人員在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]上建立任何類型的應用程式。 其中包含 Enterprise Edition 的所有功能，但是只授權做為開發和測試系統使用，而不做為實際伺服器使用。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer 是供應用程式建立和測試人員使用的理想選擇。|  
 |Express 版本|Express Edition 是入門級免費伺服器，非常適合用來學習及建置桌上型電腦和小型伺服器資料驅動應用程式。 這個版本是獨立軟體廠商、開發人員及建置用戶端應用程式之愛好者的最佳選擇。 如果您需要更進階的資料庫功能， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express 可以順利地升級為其他更高階的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]版本。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express LocalDB 是輕量版 Express，其中包含所有程式設計功能但是以使用者模式執行，並配備快速的零設定安裝，而且所需必要條件很少。|  
   
 ## <a name="using-includessnoversionincludesssnoversion-mdmd-with-an-internet-server"></a>搭配網際網路伺服器使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
@@ -157,9 +155,9 @@ Developer edition 會持續支援的只有 1 個用戶端[SQL Server Distributed
 |資料庫鏡像|是|是<br /><br /> 僅限 FULL 安全性|僅限見證|僅限見證|僅限見證| 
 |備份壓縮|是|是|否|否|否| 
 |資料庫快照集|是|是|是|是|是|
-|AlwaysOn 容錯移轉叢集執行個體|是<br /><br /> 節點數目是作業系統最大值|是<br /><br /> 支援 2 個節點|否|否|否|  
-|AlwaysOn 可用性群組|是<br /><br /> 最多 8 個次要複本，包括 2 個同步次要複本。|否|否|否|否|
-|基本可用性群組 <sup>2</sup>|否|是<br /><br /> 支援 2 個節點|否|否|否|
+|AlwaysOn 容錯移轉叢集執行個體 <sup>2</sup>|是|是|否|否|否|  
+|AlwaysOn 可用性群組 <sup>3</sup>|是|否|否|否|否|
+|基本可用性群組 <sup>4</sup>|否|是|否|否|否|
 |線上頁面和檔案還原|是|否|否|否|否|
 |線上檢索索引|是|否|否|否|否|
 |繼續線上索引重建|是|否|否|否|否|
@@ -170,12 +168,18 @@ Developer edition 會持續支援的只有 1 個用戶端[SQL Server Distributed
 |資料庫復原建議程式|是|是|是|是|是|
 |加密的備份|是|是|否|否|否|
 |混合式備份至 Windows Azure (備份至 URL)|是|是|否|否|否|
-|無叢集的可用性群組|是|是|是|否|否|否|
+|無叢集的可用性群組|是|是|否|否|否|否|
 |最小複本認可可用性群組|是|是|是|否|否|否|
   
- <sup>1</sup>如需在 Server Core 上安裝 SQL Server 的詳細資訊，請參閱[在 Server Core 上安裝 SQL Server](../database-engine/install-windows/install-sql-server-on-server-core.md)。 
 
-<sup>2</sup> 如需基本可用性群組的詳細資訊，請參閱 [基本可用性群組](../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md)。  
+<sup>1</sup>如需在 Server Core 上安裝 SQL Server 的詳細資訊，請參閱[在 Server Core 上安裝 SQL Server](../database-engine/install-windows/install-sql-server-on-server-core.md)。 
+
+<sup>2</sup> 在 Enterprise Edition 上，節點數目是作業系統最大值。 Standard Edition 支援兩個節點。 
+
+<sup>3</sup> Enterprise Edition 最多支援 8 個次要複本，包括 2 個同步次要複本。 
+
+<sup>4</sup> Standard Edition 支援基本可用性群組。 基本可用性群組支援兩個複本，使用一個資料庫。 如需基本可用性群組的詳細資訊，請參閱[基本可用性群組](../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md)。  
+
 
 ##  <a name="RDBMSSP"></a> RDBMS 延展性和效能  
   
@@ -263,8 +267,8 @@ Developer edition 會持續支援的只有 1 個用戶端[SQL Server Distributed
 |使用者執行個體|否|否|否|是|是| 
 |LocalDB|否|否|否|是|否| 
 |專用管理員連接|是|是|是|是，附追蹤旗標|是，附追蹤旗標|   
-|PowerShell 指令碼支援|是|是|是|是|是| 
 |SysPrep 支援 <sup>1</sup>|是|是|是|是|是| 
+|PowerShell 指令碼支援 <sup>2</sup>|是|是|是|是|是| 
 |資料層應用程式元件作業的支援 - 擷取、部署、升級、刪除|是|是|是|是|是| 
 |原則自動化 (依排程和變更檢查)|是|是|是|否|否|   
 |效能資料收集器|是|是|是|否|否| 
@@ -282,6 +286,7 @@ Developer edition 會持續支援的只有 1 個用戶端[SQL Server Distributed
   
  <sup>1</sup> 如需詳細資訊，請參閱 [使用 SysPrep 安裝 SQL Server 的考量](../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md)。  
  
+ <sup>2</sup> 在 Linux 上，以 Linux 上的 SQL Server 為目標的 Windows 電腦支援 PowerShell 指令碼。 
 ##  <a name="DevTools"></a> 開發工具  
   
 |功能|Enterprise|Standard|Web|Express with Advanced Services|Express| 
@@ -393,7 +398,7 @@ Developer edition 會持續支援的只有 1 個用戶端[SQL Server Distributed
 |StreamInsight|StreamInsight Premium 版|StreamInsight Standard 版|StreamInsight Standard 版|否|否| 
 |StreamInsight HA|StreamInsight Premium 版|否|否|否|否|   
   
-> [![Download SSMS](../analysis-services/media/download.png)](https://msdn.microsoft.com/library/mt238290.aspx) **[Download the latest version of SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx)**    
+> [![Download SSMS](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms) n**[Download the latest version of SQL Server Management Studio](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms)**    
   
 ## <a name="next-steps"></a>後續的步驟 
  [SQL Server 的產品規格](http://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)   
