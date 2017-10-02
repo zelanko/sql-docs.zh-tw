@@ -43,7 +43,7 @@ ms.lasthandoff: 09/21/2017
   
 -   **使用交易協助確保資料的完整性**。 如需詳細資訊，請參閱 [Integration Services 交易](../../integration-services/integration-services-transactions.md)。  
   
--   **使用檢查點從失敗點重新啟動封裝**。 如需詳細資訊，請參閱 [Restart Packages by Using Checkpoints](../../integration-services/packages/restart-packages-by-using-checkpoints.md)。  
+-   **使用檢查點從失敗點重新啟動封裝**。 如需詳細資訊，請參閱 [使用檢查點來重新啟動封裝](../../integration-services/packages/restart-packages-by-using-checkpoints.md)。  
   
 ## <a name="catch-and-handle-package-errors-by-using-event-handlers"></a>使用事件處理常式擷取及處理封裝錯誤  
  您可以使用事件處理常式，回應封裝以及封裝中的物件所引發的許多事件。  
