@@ -33,7 +33,7 @@ ms.lasthandoff: 09/09/2017
   
 -   DQS 資料庫之外必須有一些實體存在，DQS 資料庫才能當做 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]運作，特別是兩個 SQL Server 登入 (##MS_dqs_db_owner_login## 和 ##MS_dqs_service_login##) 及 master 資料庫中的初始化預存程序 (DQInitDQS_MAIN)。  
   
- 如需有關 SQL Server 中之備份與還原的詳細資訊，請參閱＜ [Back Up and Restore of SQL Server Databases](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)＞。  
+ 如需有關 SQL Server 中之備份與還原的詳細資訊，請參閱＜ [SQL Server 資料庫的備份與還原](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)＞。  
   
 ### <a name="default-autogrowth-size-and-recovery-model-for-the-dqs-databases"></a>DQS 資料庫的預設自動成長大小和復原模式  
  為了避免 DQS 資料庫和交易記錄無限成長而且可能填滿硬碟：  
