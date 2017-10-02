@@ -4,7 +4,7 @@ description: "本主題描述如何在 Linux 上安裝 SQL Server 工具。"
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 07/17/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
