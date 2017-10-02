@@ -70,7 +70,7 @@ ms.lasthandoff: 09/08/2017
 ```  
   
 ## <a name="arguments"></a>引數  
- PAD_INDEX ** = ** {ON |**OFF** }  
+ PAD_INDEX  **=**  {ON |**OFF** }  
  **適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
  指定索引填補。 預設值為 OFF。  
@@ -81,7 +81,7 @@ ms.lasthandoff: 09/08/2017
  關閉或*填滿因數*未指定  
  在中繼頁面上提供索引鍵組之後，中繼層級頁面容量的填滿程度會保留至少足以容納一個資料列的空間，且該資料列的大小上限是索引所能擁有的大小上限。  
   
- 填滿因數** = ***填滿因數*  
+ 填滿因數 **=** *填滿因數*  
  **適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
  指定一個百分比來指出在建立或改變索引期間，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 應該使各索引頁面之分葉層級填滿的程度。 指定的值必須是 1 至 100 之間的整數值。 預設值是 0。  
@@ -89,7 +89,7 @@ ms.lasthandoff: 09/08/2017
 > [!NOTE]  
 >  從各方面來說，填滿因數值 0 和 100 都相同。  
   
- IGNORE_DUP_KEY ** = ** {ON |**OFF** }  
+ IGNORE_DUP_KEY  **=**  {ON |**OFF** }  
  指定當插入作業嘗試將重複的索引鍵值插入唯一索引時所產生的錯誤回應。 IGNORE_DUP_KEY 選項只適用於在建立或重建索引之後所發生的插入作業。 選項沒有任何作用，執行時[CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md)， [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)，或[更新](../../t-sql/queries/update-transact-sql.md)。 預設值為 OFF。  
   
  ON  
@@ -104,7 +104,7 @@ ms.lasthandoff: 09/08/2017
   
  在與舊版本相容的語法中，WITH IGNORE_DUP_KEY 相當於 WITH IGNORE_DUP_KEY = ON。  
   
- STATISTICS_NORECOMPUTE ** = ** {ON |**OFF** }  
+ STATISTICS_NORECOMPUTE  **=**  {ON |**OFF** }  
  指定是否要重新計算統計資料。 預設值為 OFF。  
   
  ON  
@@ -113,7 +113,7 @@ ms.lasthandoff: 09/08/2017
  OFF  
  啟用自動統計資料更新。  
   
- ALLOW_ROW_LOCKS ** = ** { **ON** |OFF}  
+ ALLOW_ROW_LOCKS  **=**  { **ON** |OFF}  
  **適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
  指定是否允許資料列鎖定。 預設值是 ON。  
@@ -124,7 +124,7 @@ ms.lasthandoff: 09/08/2017
  OFF  
  不使用資料列鎖定。  
   
- ALLOW_PAGE_LOCKS ** = ** { **ON** |OFF}  
+ ALLOW_PAGE_LOCKS  **=**  { **ON** |OFF}  
  **適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
  指定是否允許頁面鎖定。 預設值是 ON。  
@@ -135,7 +135,7 @@ ms.lasthandoff: 09/08/2017
  OFF  
  不使用頁面鎖定。  
   
- SORT_IN_TEMPDB ** = ** {ON |**OFF** }  
+ SORT_IN_TEMPDB  **=**  {ON |**OFF** }  
  **適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
  指定是否要排序結果儲存在**tempdb**。 預設值為 OFF。  
@@ -146,7 +146,7 @@ ms.lasthandoff: 09/08/2017
  OFF  
  中繼排序結果會儲存在與用來儲存索引相同的資料庫中。  
   
- 線上** = ** {ON |**OFF** }  
+ 線上 **=**  {ON |**OFF** }  
  **適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
  指定在索引作業期間，查詢和資料修改是否能夠使用基礎資料表和相關聯的索引。 預設值為 OFF。 REBUILD 可以執行為 ONLINE 作業。  
@@ -168,7 +168,7 @@ ms.lasthandoff: 09/08/2017
 > [!NOTE]  
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的所有版本都無法使用線上索引作業。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本支援的功能清單，請參閱 [SQL Server 2016 版本支援的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
- MAXDOP ** = ** *max_degree_of_parallelism*  
+ MAXDOP  **=**  *max_degree_of_parallelism*  
  **適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
  覆寫**的最大平行處理原則程度**索引作業期間的組態選項。 如需詳細資訊，請參閱 [設定 max degree of parallelism 伺服器組態選項](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。 請利用 MAXDOP 來限制執行平行計畫所用的處理器數目。 最大值是 64 個處理器。  
@@ -210,7 +210,7 @@ ms.lasthandoff: 09/08/2017
   
  如需有關壓縮的詳細資訊，請參閱[資料壓縮](../../relational-databases/data-compression/data-compression.md)。  
   
-在資料分割上**(** {\<編號運算式 > |\<範圍 >}[ **,**...* n * ] **)** **適用於**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+在資料分割上**(** {\<編號運算式 > |\<範圍 >}[ **,**... *n*  ] **)** **適用於**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
  指定套用 DATA_COMPRESSION 設定的分割區。 如果資料表未分割，ON PARTITIONS 引數會產生錯誤。 如果未提供 ON PARTITIONS 子句，DATA_COMPRESSION 選項會套用至資料分割資料表的所有資料分割。  
   
