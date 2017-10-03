@@ -15,11 +15,11 @@ caps.latest.revision: 15
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fe007313e57ec01c5c456b0623b642555a25bf35
+ms.translationtype: MT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 9cf879fae78095f5fa6cb6f10d20cb0dfe6d12a1
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="data-for-reporting-services-mobile-reports"></a>Reporting Services 行動報表資料
@@ -27,7 +27,7 @@ ms.lasthandoff: 08/09/2017
   
 您可以從兩種類型的來源匯入資料：   
   
-* **本機 Excel 檔案**：選取 Excel 文件，並挑選要匯入的工作表。 匯入之後，會將資料儲存在行動報表定義內。 若要重新整理原始 Excel 檔案中的資料，請使用 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] [資料] 索引標籤右上角的 [重新整理資料] 命令。 深入了解[準備 SSRS 行動報表的 Excel 資料](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md)。  
+* **本機 Excel 檔案**：選取 Excel 文件，並挑選要匯入的工作表。 匯入之後，會將資料儲存在行動報表定義內。 若要重新整理原始 Excel 檔案中的資料，請使用**重新整理資料**右上角中的命令上[!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]**資料** 索引標籤。深入了解[準備 SSRS 行動報表的 Excel 資料](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md)。  
   
 * **[!INCLUDE[PRODUCT_NAME](../../includes/server-product-name.md)] 共用資料集**︰瀏覽伺服器上的已發行資料集清單，並選取要加入行動報表中的已發行資料集。 根據伺服器資料的行動報表一律會保持連接至原始伺服器資料集，並反映伺服器上資料的最新狀態。 請參閱 [支援的資料來源清單](https://msdn.microsoft.com/library/ms159219.aspx)。   
   
@@ -42,7 +42,7 @@ ms.lasthandoff: 08/09/2017
 行動報表執行階段提供量測計的彙總值 (根據使用者選取)。 請注意，相同星形量測計執行個體的比較值可以繫結至不同資料集中的欄位。   
   
 ### <a name="see-also"></a>另請參閱  
--  [準備 Reporting Services 行動報表的資料](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md)
+-  [Prepare data for Reporting Services mobile reports (準備 Reporting Services 行動報表的資料)](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md)
 - [使用 SQL Server 行動報表發行工具建立與發行行動報表](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
 - [從共用資料集取得資料](../../reporting-services/mobile-reports/get-data-from-shared-datasets-in-reporting-services-mobile-reports.md)
 - [保留行動報表中 Analysis Services 資料的日期格式](../../reporting-services/mobile-reports/retain-date-formatting-for-analysis-services-in-mobile-reports.md) 

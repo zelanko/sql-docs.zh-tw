@@ -18,14 +18,20 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: 8c43a46a3fef09fa2c8b3510b541cd545e438313
-ms.openlocfilehash: d955f186e5a533839becdec5aefebc0af750bef1
+ms.sourcegitcommit: e3c781449a8f7a1b236508cd21b8c00ff175774f
+ms.openlocfilehash: 7595c51bf8cc0ec07a464a65c992c2f3a56b15c2
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/22/2017
+ms.lasthandoff: 09/30/2017
 
 ---
 # <a name="what39s-new-in-ssma-for-access-accesstosql"></a>什麼 &#39; s SSMA for Access (AccessToSQL) 的新功能
 本主題列出 SSMA 存取每個版本中的變更。  
+
+## <a name="ssma-v76"></a>SSMA v7.6
+SSMA for Access v7.6 發行已經增強，改善品質和轉換的度量資訊的目標修正程式與 SQL Server 2017 （公開預覽狀態） 的支援。 支援在 Windows 和 Linux 上的 SQL Server 2017 是公開預覽狀態，而且不應該用於實際執行移轉。
+
+> [!IMPORTANT]
+> SSMA v7.4 和更新版本，.Net 4.5.2 為安裝必要元件，而 32 位元版本的工具已停用。
 
 ## <a name="ssma-v75"></a>SSMA v7.5
 SSMA for Access v7.5 發行已經增強，以確保行動不便人士更大的存取範圍的數個增強功能。

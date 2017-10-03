@@ -23,10 +23,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 926c0c51b5a55a2869b73666f5620fa56e139cca
-ms.openlocfilehash: 331468a55b793f81b7d5d53e5b1f4e5f24a53cca
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 6a4d17b808332b595589cb663636b91bf82feee9
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>部署 Integration Services (SSIS) 專案和封裝
@@ -141,7 +141,7 @@ ms.lasthandoff: 08/03/2017
   
      -或-  
   
-     在[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，依序展開[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]  >  **SSISDB**節點在 [物件總管並找出您想要部署專案的專案資料夾。 以滑鼠右鍵按一下 [專案] 資料夾，然後按一下 [部署專案]。  
+     在[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，依序展開[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]  >  **SSISDB**節點在物件總管並找出您想要部署專案的專案資料夾。 以滑鼠右鍵按一下 [專案] 資料夾，然後按一下 [部署專案]。  
   
      -或-  
   
@@ -271,7 +271,7 @@ static void Main()
   
 2.  如果專案和所有封裝通過相容性測試，則按一下 **[確定]** 以轉換封裝。  
   
-> **注意：**若要將專案轉換為專案部署模型，請使用 [Integration Services 專案轉換精靈]。 如需相關資訊，請參閱 [Integration Services Project Conversion Wizard](https://msdn.microsoft.com/library/hh213290.aspx)。  
+> **注意：**若要將專案轉換為專案部署模型，請使用 [Integration Services 專案轉換精靈]。 如需相關資訊，請參閱 [Integration Services Project Conversion Wizard](deploy-integration-services-ssis-projects-and-packages.md)。  
 
 ## <a name="integration-services-deployment-wizard"></a>Integration Services 部署精靈
   [Integration Services 部署精靈] 支援兩種部署模型：
@@ -415,13 +415,13 @@ static void Main()
 > 3.  請視需要在 **[進階]** 索引標籤中設定參數值、連接管理員屬性和選項，例如記錄層次。  
 >   
 >      如需有關記錄層級的詳細資訊，請參閱＜ [Enable Logging for Package Execution on the SSIS Server](../../integration-services/performance/integration-services-ssis-logging.md#server_logging)＞。  
-> 4.  在按一下 **[確定]** 執行封裝之前，請按一下 **[指令碼]**。 Transact-SQL 會出現在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的 [查詢編輯器] 視窗中。  
+> 4.  在按一下 **[確定]** 執行封裝之前，請按一下 **[指令碼]**。 Transact-SQL 會出現在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的 [查詢編輯器] 視窗中。  
   
 ### <a name="to-deploy-and-execute-a-package-using-stored-procedures"></a>若要使用預存程序部署及執行封裝  
   
 1.  呼叫 [catalog.deploy_project &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-deploy-project-ssisdb-database.md) 將包含封裝的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器。  
   
-     若要擷取的二進位內容[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]專案部署檔案，如 *@project_stream* 參數，使用 SELECT 陳述式搭配 OPENROWSET 函數和 BULK 資料列集提供者。 BULK 資料列集提供者可讓您從檔案讀取資料。 BULK 資料列集提供者的 SINGLE_BLOB 引數會傳回資料檔的內容當做類型為 varbinary(max) 的單一資料列、單一資料行資料列集。 如需詳細資訊，請參閱 [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)。  
+     若要擷取 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案部署檔案的二進位內容，請針對 *@project_stream* 參數使用 SELECT 陳述式搭配 OPENROWSET 函數和 BULK 資料列集提供者。 BULK 資料列集提供者可讓您從檔案讀取資料。 BULK 資料列集提供者的 SINGLE_BLOB 引數會傳回資料檔的內容當做類型為 varbinary(max) 的單一資料列、單一資料行資料列集。 如需詳細資訊，請參閱 [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)。  
   
      在下列範例中，SSISPackages_ProjectDeployment 專案會部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器上的 [SSIS 封裝] 資料夾。 二進位資料會從專案檔 (SSISPackage_ProjectDeployment.ispac) 讀取，並且儲存在類型為 varbinary(max) 的 *@ProjectBinary* 參數中。  *@ProjectBinary* 參數值會指派給 *@project_stream* 參數。  
   

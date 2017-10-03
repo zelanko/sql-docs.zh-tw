@@ -124,7 +124,7 @@ ms.lasthandoff: 09/01/2017
   
 1.  針對 [員工] 維度開啟 [維度設計師]，以滑鼠右鍵按一下 [資料來源檢視] 窗格中的 [SalesTerritoryKey]，然後按一下 [從資料行新增屬性]。  
   
-2.  在 [屬性] (attribute) 窗格中，選取 [SalesTerritoryKey]，然後在 [屬性] (property) 視窗中，將 [AttributeHierarchyVisible] 屬性 (property) 設定為 [False]、將 [AttributeHierarchyOptimizedState] 屬性 (property) 設定為 [NotOptimized]，並且將 [AttributeHierarchyOrdered] 屬性 (property) 設定為 [False]。  
+2.  在 [屬性]\(attribute) 窗格中，選取 [SalesTerritoryKey]，然後在 [屬性]\(property) 視窗中，將 [AttributeHierarchyVisible] 屬性 (property) 設定為 [False]、將 [AttributeHierarchyOptimizedState] 屬性 (property) 設定為 [NotOptimized]，並且將 [AttributeHierarchyOrdered] 屬性 (property) 設定為 [False]。  
   
     這是要將 [銷售領域] 維度連結至 [銷售配額] 和 [銷售配額 1] 量值群組成為參考維度時必要的屬性。  
   
