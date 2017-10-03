@@ -29,10 +29,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 03e33d60d1d19449d8f7275ae957b4fa2a74e8e2
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 2a0e055789734939dacb7074ec6de5765eecbd88
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="ssis-designer"></a>SSIS 設計師
@@ -85,7 +85,7 @@ ms.lasthandoff: 09/21/2017
 ### <a name="parameters-tab"></a>參數索引標籤  
  Integration Services (SSIS) 參數可讓您在封裝執行時，將值指派給封裝內的屬性。 您可以在專案層級建立專案參數，並在封裝層級建立封裝參數。 專案參數可用於向專案中的一個或多個封裝提供專案接收的任何外部輸入。 封裝參數可讓您修改封裝執行，而不需要編輯和重新部署封裝。 此索引標籤可讓您管理封裝參數。  
   
- 如需參數的詳細資訊，請參閱 [Integration Services (SSIS) 參數](/sql-docs/docs/integration-services/integration-services-ssis-package-and-project-parameters)。  
+ 如需參數的詳細資訊，請參閱 [Integration Services (SSIS) 參數](integration-services-ssis-package-and-project-parameters.md)。  
   
 > **重要！！**  參數只能用於針對專案部署模型而開發的專案。 因此，僅對於屬於設定為使用專案部署模型之專案一部分的封裝，您才會看到 [參數] 索引標籤。  
   
@@ -188,7 +188,7 @@ ms.lasthandoff: 09/21/2017
   
 -   [在 SQL Server 資料工具中建立封裝](../integration-services/create-packages-in-sql-server-data-tools.md)  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [Integration Services User Interface](../integration-services/integration-services-user-interface.md)  
   
   

@@ -1,7 +1,7 @@
 ---
 title: "發佈和取用的 Python 程式碼 |Microsoft 文件"
 ms.custom: 
-ms.date: 04/14/2017
+ms.date: 09/29/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -13,25 +13,26 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 77a4c36636b48474a6d227f6ea18e08e50add4bc
+ms.sourcegitcommit: e3c781449a8f7a1b236508cd21b8c00ff175774f
+ms.openlocfilehash: 550056f595b881484f3be272b8ae8b2a6d5455af
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/30/2017
 
 ---
 
 # <a name="publish-and-consume-python-web-services"></a>發佈和取用 Python web 服務
 
-**適用於： SQL Server 2017 CTP 2.0 （公開預覽）**
+您可以部署至 web 服務的可運作的 Python 方案 Server Microsoft 機器學習中使用實施功能。 本主題說明已成功發行，然後再執行您的方案的步驟。
 
-您可以部署至 web 服務的可運作的 Python 方案 Server Microsoft 機器學習中使用實施功能。
-
-本主題說明的步驟進行，以成功發行，並接著執行您的方案。
+> [!IMPORTANT]
+>
+> 這個範例是針對隨附機器學習伺服器 （獨立），並且會使用機器學習伺服器版本 9.1.0 中功能的 Python 版本所開發。
+ > 
+ > 類似的範例會使用在 Microsoft Machine Learning 伺服器版本 9.2.0，最新版本的功能，請參閱 < 請在 機器學習伺服器網站上參閱本文章：[部署及管理 web 服務以 Python](https://docs.microsoft.com/machine-learning-server/operationalize/python/how-to-deploy-manage-web-services)。
 
 這份文件的目標對象為想要了解如何為 web 服務裝載於 Microsoft Machine Learning 伺服器發行的 Python 程式碼或模型的資料科學家。 本文也說明如何應用程式可以使用程式碼或模型。 本文假設您已精通 Python。
 
-> [!IMPORTANT]
-> Python web 服務是只能搭配 Python 啟用安裝的 SQL Server 2017 CTP 2.0 （公開預覽狀態）。 這項功能的可用性將會展開在未來的版本。
+**適用於： 機器 2017年的 SQL Server 中的 學習伺服器 （獨立）**
 
 ## <a name="overview-of-workflow"></a>工作流程的概觀
 

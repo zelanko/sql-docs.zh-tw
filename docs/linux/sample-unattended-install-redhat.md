@@ -4,27 +4,27 @@ description: "SQL Server 指令碼範例在 Red Hat Enterprise Linux 上的自�
 author: edmacauley
 ms.author: edmacauley
 manager: jhubbard
-ms.date: 07/17/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: 8b97ec59acf463f73a9277566a89f32a2498a856
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 50f3e867f17987c36a15810eaace668d59b738f2
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-red-hat-enterprise-linux"></a>Red Hat Enterprise Linux 的範例： 無人看管的 SQL Server 安裝指令碼
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-這個範例 Bash 指令碼會安裝 SQL Server 2017 RC2 上 Red Hat Enterprise Linux (RHEL) 沒有互動式的輸入。 提供範例的安裝 database engine，SQL Server 命令列工具，SQL Server Agent，並且會執行後續安裝步驟。 您可以選擇性地安裝全文檢索搜尋，並建立系統管理使用者。
+這個範例 Bash 指令碼會安裝 SQL Server 2017 上 Red Hat Enterprise Linux (RHEL) 沒有互動式的輸入。 提供範例的安裝 database engine，SQL Server 命令列工具，SQL Server Agent，並且會執行後續安裝步驟。 您可以選擇性地安裝全文檢索搜尋，並建立系統管理使用者。
 
 > [!TIP]
 > 如果您不需要自動的安裝指令碼，是遵循最快速的方式安裝 SQL Server [Red Hat 的快速入門教學課程](quickstart-install-connect-red-hat.md)。 其他安裝資訊，請參閱[SQL Server on Linux 的安裝指南](sql-server-linux-setup.md)。
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>必要條件
 
 - 您需要至少 3.25 GB 的記憶體來執行 SQL Server on Linux。
 - 檔案系統必須是**XFS**或**EXT4**。 其他檔案系統，例如**BTRFS**，不受支援。

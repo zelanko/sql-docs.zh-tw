@@ -19,10 +19,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 0d019b77e70316f3976a610cb399e270b54f52b6
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 3e2139cf2c56b1f716aac32aa6b3f71cb49a2d61
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 
@@ -47,7 +47,7 @@ ms.lasthandoff: 09/21/2017
 > [!NOTE]
 > 如果附加 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SSISDB **資料庫的** 執行個體停止或沒有回應，ISServerExec.exe 處理序便會結束。 會在 Windows 事件記錄檔中寫入一則訊息。  
 >   
->  如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資源的容錯移轉是叢集容錯移轉的一部分，就不會重新啟動執行中的封裝。 您可以使用檢查點重新啟動封裝。 如需詳細資訊，請參閱 [Restart Packages by Using Checkpoints](../../integration-services/packages/restart-packages-by-using-checkpoints.md)。  
+>  如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資源的容錯移轉是叢集容錯移轉的一部分，就不會重新啟動執行中的封裝。 您可以使用檢查點重新啟動封裝。 如需詳細資訊，請參閱 [使用檢查點來重新啟動封裝](../../integration-services/packages/restart-packages-by-using-checkpoints.md)。  
   
 ## <a name="features-and-capabilities"></a>特色與功能  
   
@@ -563,7 +563,7 @@ ms.lasthandoff: 09/21/2017
      ![SSISDB 升級精靈中檢閱結果](../../integration-services/service/media/ssisdb-upgrade-wizard-3.png "SSISDB 升級精靈中檢閱結果")  
 
 ## <a name="always-on-for-ssis-catalog-ssisdb"></a>Alwayson 的 SSIS 目錄 (SSISDB)
-  AlwaysOn 可用性群組功能是提供資料庫鏡像之企業級替代方案的高可用性與災害復原解決方案。 可用性群組支援一組可一起容錯移轉之離散化使用者資料庫的容錯移轉環境，也就是所謂的可用性資料庫。 如需詳細資訊，請參閱 [AlwaysOn 可用性群組 (SQL Server)](/sql-docs/docs/database-engine/availability-groups/windows/always-on-availability-groups-sql-server)。  
+  AlwaysOn 可用性群組功能是提供資料庫鏡像之企業級替代方案的高可用性與災害復原解決方案。 可用性群組支援一組可一起容錯移轉之離散化使用者資料庫的容錯移轉環境，也就是所謂的可用性資料庫。 如需詳細資訊，請參閱 [AlwaysOn 可用性群組 (SQL Server)](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)。  
   
  為了提供 SSIS 目錄 (SSISDB) 及其內容 (專案、封裝、執行記錄等) 的高可用性，您可以將 SSISDB 資料庫 (就像任何其他使用者資料庫) 加入 AlwaysOn 可用性群組。 發生容錯移轉時，其中一個次要節點會自動變成新的主要節點。  
  
@@ -585,7 +585,7 @@ ms.lasthandoff: 09/21/2017
   
 2.  在叢集的每個節點上，安裝含有 Integration Services (SSIS) 功能的 SQL Server 2016。  
   
-3.  每個 SQL Server 執行個體啟用 Alwayson 可用性群組。 如需詳細資訊，請參閱 [啟用和停用 AlwaysOn 可用性群組 (SQL Server)](/sql-docs/docs/database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server) 。  
+3.  每個 SQL Server 執行個體啟用 Alwayson 可用性群組。 如需詳細資訊，請參閱 [啟用和停用 AlwaysOn 可用性群組 (SQL Server)](../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md) 。  
   
 ###  <a name="Firsttime"></a> 設定適用於 AlwaysOn 的 SSIS 支援  
   
@@ -607,12 +607,12 @@ ms.lasthandoff: 09/21/2017
   
 3.  按一下 **[啟用 CLR 整合]**。 目錄便會使用 CLR 預存程序。  
   
-4.  按一下 [在 SQL Server 啟動時允許自動執行 Integration Services 預存程序]  ，讓 [catalog.startup](/sql-docs/docs/integration-services/system-stored-procedures/catalog-startup) 預存程序會在每次 SSIS 伺服器執行個體重新啟動時執行。 預存程序會執行 SSISDB 目錄之作業狀態的維護。 它會在 SSIS 伺服器執行個體效能降低時，修正任何正在執行之封裝的狀態。  
+4.  按一下 [在 SQL Server 啟動時允許自動執行 Integration Services 預存程序]  ，讓 [catalog.startup](../system-stored-procedures/catalog-startup.md) 預存程序會在每次 SSIS 伺服器執行個體重新啟動時執行。 預存程序會執行 SSISDB 目錄之作業狀態的維護。 它會在 SSIS 伺服器執行個體效能降低時，修正任何正在執行之封裝的狀態。  
   
-5.  輸入 **密碼**，然後按一下 [確定] 。 此密碼保護用來加密目錄資料的資料庫主要金鑰。 請將密碼儲存在安全位置。 建議您同時備份資料庫主要金鑰。 如需詳細資訊，請參閱 [備份資料庫主要金鑰](/sql-docs/docs/relational-databases/security/encryption/back-up-a-database-master-key)。  
+5.  輸入 **密碼**，然後按一下 [確定] 。 此密碼保護用來加密目錄資料的資料庫主要金鑰。 請將密碼儲存在安全位置。 建議您同時備份資料庫主要金鑰。 如需詳細資訊，請參閱 [備份資料庫主要金鑰](../../relational-databases/security/encryption/back-up-a-database-master-key.md)。  
   
 ####  <a name="Step2"></a> 步驟 2：將 SSISDB 新增至 AlwaysOn 可用性群組  
- 將 SSISDB 資料庫加入 AlwaysOn 可用性群組，幾乎等於是將任何其他使用者資料庫加入可用性群組。 請參閱 [使用可用性群組精靈](/sql-docs/docs/database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio)。  
+ 將 SSISDB 資料庫加入 AlwaysOn 可用性群組，幾乎等於是將任何其他使用者資料庫加入可用性群組。 請參閱 [使用可用性群組精靈](../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)。  
   
  您需要提供您在 **新增可用性群組** 精靈的 [選取資料庫]  頁面中建立 SSIS 目錄時指定的密碼。  
   

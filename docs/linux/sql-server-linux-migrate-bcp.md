@@ -4,23 +4,23 @@ description:
 author: sanagama
 ms.author: sanagama
 manager: jhubbard
-ms.date: 03/17/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 7b93d0d7-7946-4b78-b33a-57d6307cdfa9
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 7fc69e2d9a5e86e63ceb40e43befa65ab2cfdb7d
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 1463c56a247a2d578fc0a69f96cb8ead829dfba3
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="bulk-copy-data-with-bcp-to-sql-server-on-linux"></a>SQL Server on Linux 的 bcp 大量複製資料
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-本主題示範如何使用[bcp](/sql-docs/docs/tools/bcp-utility) Linux 上的 SQL Server 2017 RC2 執行個體和使用者指定格式資料檔之間大量複製資料的命令列公用程式。
+本主題示範如何使用[bcp](../tools/bcp-utility.md) Linux 上的 SQL Server 2017 的執行個體和使用者指定格式資料檔之間大量複製資料的命令列公用程式。
 
 您可以使用`bcp`大量的資料列匯入 SQL Server 資料表，或將資料從 SQL Server 資料表匯出至資料檔案。 Queryout 選項搭配使用時，除非`bcp`不需要知道的 Transact SQL。 `bcp`命令列公用程式的運作方式與在內部部署執行 Microsoft SQL Server，或在雲端中，有關 Linux、 Windows 或 Docker 和 Azure SQL Database 和 Azure SQL 資料倉儲。
 
@@ -136,8 +136,8 @@ cat ~/test_export.txt
 ```
 
 ## <a name="see-also"></a>另請參閱
-- [bcp 公用程式](/sql-docs/docs/tools/bcp-utility)
-- [使用 bcp 時的相容性的資料格式](/sql-docs/docs/relational-databases/import-export/specify-data-formats-for-compatibility-when-using-bcp-sql-server)
-- [使用 BULK INSERT 匯入大量資料](/sql-docs/docs/relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server)
-- [BULK INSERT (TRANSACT-SQL)](/sql-docs/docs/t-sql/statements/bulk-insert-transact-sql)
+- [bcp 公用程式](../tools/bcp-utility.md)
+- [使用 bcp 時的相容性的資料格式](../relational-databases/import-export/specify-data-formats-for-compatibility-when-using-bcp-sql-server.md)
+- [使用 BULK INSERT 匯入大量資料](../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)
+- [BULK INSERT (TRANSACT-SQL)](../t-sql/statements/bulk-insert-transact-sql.md)
 

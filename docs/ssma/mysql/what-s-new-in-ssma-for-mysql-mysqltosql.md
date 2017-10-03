@@ -2,7 +2,7 @@
 title: "什麼 &#39; s SSMA for MySQL (MySQLToSql) 的新功能 |Microsoft 文件"
 ms.prod: sql-non-specified
 ms.custom: 
-ms.date: 09/22/2017
+ms.date: 09/30/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -18,14 +18,20 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: 8c43a46a3fef09fa2c8b3510b541cd545e438313
-ms.openlocfilehash: e5d5ca50b24eb8c7d21fa2058e9be6fed0af2270
+ms.sourcegitcommit: e3c781449a8f7a1b236508cd21b8c00ff175774f
+ms.openlocfilehash: 30529df439a1910573b2e4b8f9e1a5f21075c4d7
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/22/2017
+ms.lasthandoff: 09/30/2017
 
 ---
 # <a name="what39s-new-in-ssma-for-mysql-mysqltosql"></a>什麼 &#39; s SSMA for MySQL (MySQLToSql) 的新功能
 本主題列出每個版本中的 MySQL 變更 SSMA。 
+
+## <a name="ssma-v76"></a>SSMA v7.6
+V7.6 版的 SSMA for MySQL 已經增強，改善品質和轉換的度量資訊的目標修正程式與 SQL Server 2017 （公開預覽狀態） 的支援。 支援在 Windows 和 Linux 上的 SQL Server 2017 是公開預覽狀態，而且不應該用於實際執行移轉。
+
+> [!IMPORTANT]
+> SSMA v7.4 和更新版本，.Net 4.5.2 為安裝必要元件，而 32 位元版本的工具已停用。
 
 ## <a name="ssma-v75"></a>SSMA v7.5
 V7.5 版的 SSMA for MySQL 已經增強，以確保行動不便人士更大的存取範圍的數個增強功能。

@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 4bc5be85fddcc86de0a3fe845620f5152b568015
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 84cf217faf0980d3ef1daf9a86a4aa362931d199
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>搭配使用一律加密與 JDBC 驅動程式
@@ -152,7 +152,7 @@ catch (Exception e)
 - 列印程式的所有值都會以純文字形式 Microsoft JDBC Driver for SQL Server 會以透明的方式解密從 SSN 和 BirthDate 資料行擷取的資料。
 
 > [!NOTE]  
->  如果使用具確定性的加密來進行加密，則查詢可執行資料行的相等比較。 如需詳細資訊，請參閱**選取具確定性或隨機化加密**區段[一律加密 (Database Engine)](/sql-docs/docs/relational-databases/security/encryption/always-encrypted-database-engine)主題。  
+>  如果使用具確定性的加密來進行加密，則查詢可執行資料行的相等比較。 如需詳細資訊，請參閱**選取具確定性或隨機化加密**區段[一律加密 (Database Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)主題。  
 
 ```
 String connectionString =  "jdbc:sqlserver://localhost:1433;databaseName=Clinic;user=sa;password=******;columnEncryptionSetting=Enabled;" ;
@@ -214,7 +214,7 @@ catch (Exception e)
 
 ### <a name="unsupported-data-type-conversion-errors"></a>不支援的資料類型轉換錯誤
 
-[永遠加密] 支援極少數的加密資料類型轉換。 請參閱[一律加密 (Database Engine)](/sql-docs/docs/relational-databases/security/encryption/always-encrypted-database-engine)支援的類型轉換詳細清單。 以下是避免資料類型轉換錯誤時可以做的事，請確定︰
+[永遠加密] 支援極少數的加密資料類型轉換。 請參閱[一律加密 (Database Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)支援的類型轉換詳細清單。 以下是避免資料類型轉換錯誤時可以做的事，請確定︰
 
 - 您的適當 setter 方法傳遞時使用加密的資料行為目標之參數的值以便參數的 SQL Server 資料類型可能是完全相同做為目標資料行或參數的 SQL Server 資料類型轉換的類型目標支援的資料行的類型。 請注意新的 API 方法已加入 SQLServerPreparedStatement、 SQLServerCallableStatement 和 SQLServerResultSet 類別傳遞參數對應到特定的 SQL Server 資料類型。 例如，如果未加密的資料行可以使用 setTimestamp() 方法將參數 datetime2 或 datetime 資料行。 但是，資料行加密時必須使用表示在資料庫中資料行的類型的確切方法。 例如，將值傳遞至加密的 datetime2 資料行，並將值傳遞到加密的日期時間資料行使用 setDateTime() 使用 setTimestamp()。 請參閱[一律加密 API 參考 JDBC 驅動程式](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md)的新應用程式開發介面的完整清單。 
 - 以小數和數值 SQL Server 資料類型資料行為目標之參數的有效位數和小數位數，和為目標資料行設定的有效位數和小數位數相同。 請注意，已加入新的應用程式開發介面方法給 SQLServerPreparedStatement、 SQLServerCallableStatement 和 SQLServerResultSet 類別，以接受有效位數和小數位數，以及代表 decimal 和 numeric 資料類型的參數/資料行的資料值。 請參閱[一律加密 API 參考 JDBC 驅動程式](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md)的新/多載的應用程式開發介面的完整清單。  
@@ -314,7 +314,7 @@ SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
 >  [azure-activedirectory-程式庫-如-java 文件庫](https://github.com/AzureAD/azure-activedirectory-library-for-java)  
   
 ### <a name="using-windows-certificate-store-provider"></a>使用 Windows 憑證存放區提供者
-SQLServerColumnEncryptionCertificateStoreProvider 可以用來將資料行主要金鑰儲存在 Windows 憑證存放區。 使用 [SQL Server Management Studio (SSMS) 永遠加密精靈] 或其他支援的工具來建立資料行主要金鑰和資料行加密金鑰定義資料庫中。 相同的精靈可以用來產生自我簽署的憑證是在 Windows 憑證存放區為資料行主要金鑰用於永遠加密的資料。 如需有關資料行主要金鑰和資料行加密金鑰的 T-SQL 語法瀏覽[CREATE COLUMN MASTER KEY](/sql-docs/docs/t-sql/statements/create-column-master-key-transact-sql)和[CREATE COLUMN 如此 KEY](/sql-docs/docs/t-sql/statements/create-column-encryption-key-transact-sql)分別。
+SQLServerColumnEncryptionCertificateStoreProvider 可以用來將資料行主要金鑰儲存在 Windows 憑證存放區。 使用 [SQL Server Management Studio (SSMS) 永遠加密精靈] 或其他支援的工具來建立資料行主要金鑰和資料行加密金鑰定義資料庫中。 相同的精靈可以用來產生自我簽署的憑證是在 Windows 憑證存放區為資料行主要金鑰用於永遠加密的資料。 如需有關資料行主要金鑰和資料行加密金鑰的 T-SQL 語法瀏覽[CREATE COLUMN MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md)和[CREATE COLUMN 如此 KEY](../../t-sql/statements/create-column-encryption-key-transact-sql.md)分別。
 
 SQLServerColumnEncryptionCertificateStoreProvider 名稱是"MSSQL_CERTIFICATE_STORE 」，而且可以進行查詢 getName() 應用程式開發介面的提供者物件。 它會自動註冊的驅動程式，並可以順暢地使用，而不需要任何應用程式變更。
 
@@ -356,7 +356,7 @@ SQLServerColumnEncryptionJavaKeyStoreProvider 可以搭配 JKS 或 PKCS12 金鑰
 
 您也可以從 Windows 憑證存放區，以.pfx 格式匯出憑證，並使用可搭配 SQLServerColumnEncryptionJavaKeyStoreProvider。 匯出的憑證也可匯入 Java 金鑰存放區為 JKS 金鑰存放區型別。 
 
-建立 keytool 項目之後，您必須在需要金鑰存放區提供者名稱和金鑰路徑的資料庫中建立的資料行主要金鑰中繼資料。 如需有關如何建立資料行主要金鑰中繼資料瀏覽[CREATE COLUMN MASTER KEY](/sql-docs/docs/t-sql/statements/create-column-master-key-transact-sql)。 SQLServerColumnEncryptionJavaKeyStoreProvider，機碼路徑中的索引鍵的別名。 而 SQLServerColumnEncryptionJavaKeyStoreProvider 名稱為 'MSSQL_JAVA_KEYSTORE'。 您也可以查詢此使用 getName() SQLServerColumnEncryptionJavaKeyStoreProvider 類別的公用 API 的名稱。 
+建立 keytool 項目之後，您必須在需要金鑰存放區提供者名稱和金鑰路徑的資料庫中建立的資料行主要金鑰中繼資料。 如需有關如何建立資料行主要金鑰中繼資料瀏覽[CREATE COLUMN MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md)。 SQLServerColumnEncryptionJavaKeyStoreProvider，機碼路徑中的索引鍵的別名。 而 SQLServerColumnEncryptionJavaKeyStoreProvider 名稱為 'MSSQL_JAVA_KEYSTORE'。 您也可以查詢此使用 getName() SQLServerColumnEncryptionJavaKeyStoreProvider 類別的公用 API 的名稱。 
 
 建立資料行主要金鑰的 T-SQL 的語法是：
 
@@ -429,7 +429,7 @@ SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
   
 ## <a name="using-column-master-key-store-providers-for-programmatic-key-provisioning"></a>使用資料行主要金鑰存放區提供者以程式設計方式佈建金鑰
 
-當存取加密資料行時，Microsoft JDBC Driver for SQL Server 會明確地尋找並呼叫正確的資料行主要金鑰存放區提供者來解密資料行加密金鑰。 一般來說，一般應用程式程式碼不會直接呼叫資料行主要金鑰存放區提供者。 但是您可以明確具現化和呼叫提供者，以程式設計方式佈建和管理永遠加密金鑰︰產生加密的資料行加密金鑰和解密資料行加密金鑰 (例如作為部分資料行主要金鑰輪替)。 如需詳細資訊，請參閱 [永遠加密的金鑰管理概觀](/sql-docs/docs/relational-databases/security/encryption/overview-of-key-management-for-always-encrypted)。
+當存取加密資料行時，Microsoft JDBC Driver for SQL Server 會明確地尋找並呼叫正確的資料行主要金鑰存放區提供者來解密資料行加密金鑰。 一般來說，一般應用程式程式碼不會直接呼叫資料行主要金鑰存放區提供者。 但是您可以明確具現化和呼叫提供者，以程式設計方式佈建和管理永遠加密金鑰︰產生加密的資料行加密金鑰和解密資料行加密金鑰 (例如作為部分資料行主要金鑰輪替)。 如需詳細資訊，請參閱 [永遠加密的金鑰管理概觀](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)。
 請注意，只有使用自訂的金鑰存放區提供者時，才可能需要實作您自己的金鑰管理工具。 在使用儲存在 Windows 憑證存放區或 Azure 金鑰保存庫中的金鑰時，您可以使用現有的工具，例如 SQL Server Management Studio 或 PowerShell，來管理和佈建金鑰。 當使用 Java 金鑰存放區中的金鑰時，您需要以程式設計方式佈建金鑰。 下列範例中，說明如何使用 SQLServerColumnEncryptionJavaKeyStoreProvider 類別來加密金鑰儲存在 Java 金鑰存放區索引鍵。
 
 ```  
@@ -650,6 +650,6 @@ connection.close();
 注意： 這可能會導致這些資料庫損毀，因為 Microsoft JDBC Driver for SQL Server 不會檢查資料確實加密，或是正確加密使用相同的加密，請指定 AllowEncryptedValueModifications 時，請使用警告類型、 演算法和金鑰設成目標資料行。
 
 ## <a name="see-also"></a>另請參閱  
- [一律加密 (Database Engine)](/sql-docs/docs/relational-databases/security/encryption/always-encrypted-database-engine)  
+ [一律加密 (Database Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)  
   
   

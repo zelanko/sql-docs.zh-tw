@@ -1,7 +1,7 @@
 ---
 title: "什麼 &#39; s SSMA for SAP ASE (SybaseToSQL) 的新功能 |Microsoft 文件"
 ms.custom: 
-ms.date: 09/22/2017
+ms.date: 09/30/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -18,14 +18,22 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: 8c43a46a3fef09fa2c8b3510b541cd545e438313
-ms.openlocfilehash: ceb656fe1a2a210f26ce9f548a6c5ab7c68a29f7
+ms.sourcegitcommit: e3c781449a8f7a1b236508cd21b8c00ff175774f
+ms.openlocfilehash: 91c748f24b360934e160cea8b03c2c2259766a5c
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/22/2017
+ms.lasthandoff: 09/30/2017
 
 ---
 # <a name="what39s-new-in-ssma-for-sap-ase-sybasetosql"></a>什麼 &#39; s SSMA for SAP ASE (SybaseToSQL) 的新功能
 本主題列出每個版本中的 SAP ASE (先前稱為 SSMA for Sybase) 變更 SSMA。 
+
+## <a name="ssma-v76"></a>SSMA v7.6
+SAP ASE v7.6 版的 SSMA 包含下列變更：
+- SSMA for SAP ASE 已經增強，改善品質和轉換的度量資訊的目標修正程式與 SQL Server 2017 （公開預覽狀態） 的支援。 支援在 Windows 和 Linux 上的 SQL Server 2017 是公開預覽狀態，而且不應該用於實際執行移轉。
+- SSMA for SAP ASE 已更新為轉換的 Sybase 函式提供支援。
+
+> [!IMPORTANT]
+> SSMA v7.4 和更新版本，.Net 4.5.2 為安裝必要元件，而 32 位元版本的工具已停用。
 
 ## <a name="ssma-v75"></a>SSMA v7.5
 SAP ASE v7.5 版的 SSMA 包含下列變更：

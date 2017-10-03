@@ -16,10 +16,10 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 48a6c898c5381bb777863ed7569c6ac302560eb3
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: fc31861f7eef73a2ddb88faa4aa59b1bf289d2ea
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="using-my-reports-report-builder-and-ssrs"></a>使用我的報表 (報表產生器及 SSRS)
@@ -27,7 +27,7 @@ ms.lasthandoff: 09/21/2017
   
  在概念上，[我的報表] 資料夾類似於 Windows 檔案系統的 [我的文件] 資料夾。 雖然每一位使用者都有稱為 [我的報表] 的資料夾，但每一位使用者存取的資料夾與其他人都不相同。 除了報表伺服器管理員之外，其他使用者都無法存取屬於您的 [我的報表] 資料夾的內容。  
   
- [我的報表] 功能是選擇性的，可以由報表伺服器管理員停用。 如果有啟用「我的報表」，您就會在 [主資料夾] 資料夾中看到 [我的報表] 資料夾，您可以使用報表管理員或 Web 瀏覽器來存取其內容。 如需詳細資訊，請參閱[尋找及檢視報表在報表管理員 &#40;報表產生器及 SSRS &#41;](/sql-docs/docs/reporting-services/report-builder/finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs).  
+ [我的報表] 功能是選擇性的，可以由報表伺服器管理員停用。 如果有啟用「我的報表」，您就會在 [主資料夾] 資料夾中看到 [我的報表] 資料夾，您可以使用報表管理員或 Web 瀏覽器來存取其內容。 如需詳細資訊，請參閱[尋找及檢視報表在報表管理員 &#40;報表產生器及 SSRS &#41;](finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs.md).  
   
  在設定為 SharePoint 整合模式的報表伺服器上，[我的報表] 資料夾沒有任何對等項目。 如需詳細資訊，請參閱 [尋找、檢視和管理報表 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)。  
   
@@ -48,7 +48,7 @@ ms.lasthandoff: 09/21/2017
 ## <a name="searching-my-reports"></a>搜尋 [我的報表]  
  在搜尋報表伺服器資料庫時，[我的報表] 資料夾的內容將包含在搜尋中，但是會排除其他使用者的 [我的報表] 資料夾的內容。 搜尋結果清單只會包含您有權存取的報表。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [尋找、檢視和管理報表 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

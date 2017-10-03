@@ -25,10 +25,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: ced8482c76d970ccd2c146fff04d63279082b1c9
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 0dd4e2e79166b803cc70220bcad12dc422eed337
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="deploy-packages-with-ssis"></a>使用 SSIS 部署封裝
@@ -57,14 +57,14 @@ ms.lasthandoff: 09/21/2017
 - 範例資料、完成的套件、組態和讀我檔案。 如果您下載 [Adventure Works 2014 範例資料庫](https://msftdbprodsamples.codeplex.com/releases/view/125550)，則會同時安裝這些檔案。     
 > **注意！** 請確定您具有在 AdventureWorks 中建立和卸除資料表或您使用的其他資料的權限。         
     
--   [SQL Server Data Tools (SSDT)](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt)。    
+-   [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)。    
     
 **目的地電腦。** 要在其中部署套件的電腦 **必須安裝下列元件：**    
     
 - SQL Server
 - 範例資料、完成的套件、組態和讀我檔案。 如果您下載 [Adventure Works 2014 範例資料庫](https://msftdbprodsamples.codeplex.com/releases/view/125550)，則會同時安裝這些檔案。 
     
-- [SQL Server Management Studio](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms)。    
+- [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)。    
     
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]。    
     

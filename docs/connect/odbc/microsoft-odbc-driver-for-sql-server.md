@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: cf501a1e52a499ac2e2df8df49024da9763ed66d
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: bbb36ba4a739f0c7871261b61d298428ec3b2191
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="microsoft-odbc-driver-for-sql-server"></a>Microsoft ODBC Driver for SQL Server
@@ -27,7 +27,7 @@ ms.lasthandoff: 09/21/2017
 
 ODBC 是在 SQL Server 的 C 和 c + + 撰寫的應用程式的主要原生料存取 API。 沒有多數資料來源的 ODBC 驅動程式。 其他可以使用 ODBC 的語言包括 COBOL、 Perl、 PHP 和 Python。 ODBC 廣泛用於資料整合案例。
 
-ODBC 驅動程式隨附工具例如[ **sqlcmd** ](/sql-docs/docs/tools/sqlcmd-utility)和[ **bcp**](/sql-docs/docs/tools/bcp-utility)。 **Sqlcmd**公用程式可讓您執行 TRANSACT-SQL 陳述式、 系統程序和 SQL 指令碼。 **Bcp**公用程式之間大量複製資料的 Microsoft SQL Server 執行個體和資料檔案中您所選擇的格式。 您可以使用**bcp**許多新的資料列匯入 SQL Server 資料表或資料表的資料匯出至資料檔。  
+ODBC 驅動程式隨附工具例如[ **sqlcmd** ](../../tools/sqlcmd-utility.md)和[ **bcp**](../../tools/bcp-utility.md)。 **Sqlcmd**公用程式可讓您執行 TRANSACT-SQL 陳述式、 系統程序和 SQL 指令碼。 **Bcp**公用程式之間大量複製資料的 Microsoft SQL Server 執行個體和資料檔案中您所選擇的格式。 您可以使用**bcp**許多新的資料列匯入 SQL Server 資料表或資料表的資料匯出至資料檔。  
 
 ## <a name="code-example-in-c"></a>在 c + + 程式碼範例
 

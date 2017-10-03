@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 11fd98c520a8af114c872662cc2c96a7df7e3eb0
+ms.sourcegitcommit: 59c7e1cc3c31f77652acb21d375e1294bdc93397
+ms.openlocfilehash: d4107dab192ae5f0bfa3c221dcb7997f83642eb8
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="connect-to-data-sources-with-the-sql-server-import-and-export-wizard"></a>連接到資料來源的 SQL Server 匯入和匯出精靈
@@ -57,7 +57,7 @@ ms.lasthandoff: 09/21/2017
 
 -   **啟動精靈。** 如果您準備好要執行精靈，且只是想要知道其啟動方式，請參閱[啟動 SQL Server 匯入和匯出精靈](../../integration-services/import-export-data/start-the-sql-server-import-and-export-wizard.md)。
 
--   **取得精靈。** 如果您想要執行精靈時，但您沒有 [！包含[m](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt)。
+-   **取得精靈。** 如果您想要執行精靈，但電腦上尚未安裝 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，則可以安裝 SQL Server Data Tools (SSDT) 來安裝 [ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈]。 如需詳細資訊，請參閱 [下載 SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx)。
 
 ## <a name="see-also"></a>另請參閱
 [選擇資料來源](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  

@@ -1,38 +1,261 @@
 ---
 title: "在 Linux 上的 SQL Server 2017 的版本資訊 |Microsoft 文件"
-description: "本主題包含的版本資訊，並支援在 Linux 上執行的 SQL Server 2017 的功能。 版本資訊會包含以 RC2 和先前版本。"
+description: "本主題包含的版本資訊，並支援在 Linux 上執行的 SQL Server 2017 的功能。 版本資訊會包含最新的版次和數個先前發行的版本。"
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 08/07/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 ms.translationtype: MT
-ms.sourcegitcommit: dbe6f832d4af55ddd15e12fba17a4da490fe19ae
-ms.openlocfilehash: 14277304baaaf6aa40fe279af407c7ce915eaa60
+ms.sourcegitcommit: 7811cfe9238c92746673fac4fce40a4af44d6dcd
+ms.openlocfilehash: 80c0813accf9f84204f057b9ef4efcad69142ec2
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>在 Linux 上的 SQL Server 2017 的版本資訊
 
-下列版本資訊適用於 SQL Server 2017 在 Linux 上執行。 這個版本支援 SQL Server database engine 功能的許多 for Linux。 下列主題會分成區段，每個版本中，從最新版本，也就是 RC2。 請參閱每個支援的平台、 工具、 功能和已知的問題的章節中的資訊。
+下列版本資訊適用於 SQL Server 2017 在 Linux 上執行。 這個版本支援 SQL Server database engine 功能的許多 for Linux。 下列主題會分成區段，每個版本中，從最新的一般上市 (GA) 版本和先前的兩個版本。 請參閱每個支援的平台、 工具、 功能和已知的問題的章節中的資訊。
 
-下表列出本主題中涵蓋的 SQL Server 2017 的發行版本。
+下表列出 SQL Server 2017 的發行記錄。
 
 | 版本 | Version | 發行日期 |
 |-----|-----|-----|
+| [GA](#GA) | 14.0.1000.169 | 10-2017 |
 | [RC2](#RC2) | 14.0.900.75 | 8-2017 |
 | [RC1](#RC1) | 14.0.800.90 | 7-2017 |
-| [CTP 2.1](#ctp21) | 14.0.600.250 | 5-2017 |
-| [CTP 2.0](#ctp20) | 14.0.500.272 | 4-2017 |
-| [CTP 1.4](#ctp14) | 14.0.405.198 | 3-2017 |
-| [CTP 1.3](#ctp13) | 14.0.304.138 | 2-2017 |
-| [CTP 1.2](#ctp12) | 14.0.200.24 | 1-2017 |
-| [CTP 1.1](#ctp11) | 14.0.100.187 | 12-2016 |
-| [CTP 1.0](#ctp10) | 14.0.1.246 | 11-2016 |
+| CTP 2.1 | 14.0.600.250 | 5-2017 |
+| CTP 2.0 | 14.0.500.272 | 4-2017 |
+| CTP 1.4 | 14.0.405.198 | 3-2017 |
+| CTP 1.3 | 14.0.304.138 | 2-2017 |
+| CTP 1.2 | 14.0.200.24 | 1-2017 |
+| CTP 1.1 | 14.0.100.187 | 12-2016 |
+| CTP 1.0 | 14.0.1.246 | 11-2016 |
+
+## <a id="GA"></a>GA (第 2017 年 10 月)
+
+這是一般可用性 (GA) 版本的 SQL Server 2017。 此版本的 SQL Server 引擎版本是 14.0.1000.169。
+
+### <a name="supported-platforms"></a>支援的平台
+
+| 平台 | 檔案系統 | 安裝指南 |
+|-----|-----|-----|
+| Red Hat Enterprise Linux 7.3 或 7.4 工作站、 伺服器和桌面 | XFS 或 EXT4 | [安裝指南](quickstart-install-connect-red-hat.md) | 
+| SUSE Enterprise Linux Server v12 SP2 | EXT4 | [安裝指南](quickstart-install-connect-suse.md) |
+| Ubuntu 16.04LTS | EXT4 | [安裝指南](quickstart-install-connect-ubuntu.md) | 
+| Docker 引擎 1.8 + Windows、 Mac 或 Linux 上 | 不適用 | [安裝指南](quickstart-install-connect-docker.md) | 
+
+> [!NOTE]
+> 您需要至少 3.25 GB 的記憶體來執行 SQL Server on Linux。
+> SQL Server 引擎已在此階段中測試 1.5 TB 的記憶體。
+
+### <a name="package-details"></a>封裝詳細資料
+
+下表中會列出套件詳細資料及針對 RPM 和 Debian 封裝的下載位置。 請注意，您不需要直接下載這些封裝，如果您使用下列的安裝指南中的步驟：
+
+- [安裝 SQL Server 封裝](sql-server-linux-setup.md)
+- [安裝全文檢索搜尋的套件](sql-server-linux-setup-full-text-search.md)
+- [安裝 SQL Server 代理程式套件](sql-server-linux-setup-sql-agent.md)
+
+| 封裝 | 封裝版本 | 下載 |
+|-----|-----|-----|
+| Red Hat RPM 套件 | 14.0.1000.169-2 | [引擎 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.1000.169-2.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.1000.169-2.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.1000.169-2.x86_64.rpm)</br>[SQL Server 代理程式 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-agent-14.0.1000.169-2.x86_64.rpm)</br>[SSIS 封裝](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
+| SLES RPM 套件 | 14.0.1000.169-2 | [mssql 伺服器引擎 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.1000.169-2.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.1000.169-2.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.1000.169-2.x86_64.rpm)</br>[SQL Server 代理程式 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-agent-14.0.1000.169-2.x86_64.rpm) | 
+| Ubuntu 16.04 Debian 封裝 | 14.0.1000.169-2 | [引擎 Debian 封裝](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.1000.169-2_amd64.deb)</br>[高可用性 Debian 封裝](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.1000.169-2_amd64.deb)</br>[全文檢索搜尋 Debian 封裝](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.1000.169-2_amd64.deb)</br>[SQL Server Agent Debian 封裝](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-agent/mssql-server-agent_14.0.1000.169-2_amd64.deb)<br/>[SSIS 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
+
+### <a name="supported-client-tools"></a>支援的用戶端工具
+
+| 工具 | 最小版本 |
+|-----|-----|
+| [SQL Server Management Studio (SSMS) for Windows](https://go.microsoft.com/fwlink/?linkid=847722) | 17.0 |
+| [SQL Server Data Tools for Visual Studio](https://go.microsoft.com/fwlink/?linkid=846626) | 17.0 |
+| [Visual Studio Code](https://code.visualstudio.com)與[mssql 延伸模組](https://aka.ms/mssql-marketplace) | 最新 |
+
+### <a name="Unsupported"></a>不支援的功能和服務
+
+下列功能和服務並不適用於 Linux 這一次。 這些功能的支援會逐漸啟用期間每月更新的頻率，預覽計畫。
+
+| 區域 | 不支援的功能或服務 |
+|-----|-----|
+| **資料庫引擎** | 異動複寫 |
+| &nbsp; | 合併式複寫 |
+| &nbsp; | Stretch DB |
+| &nbsp; | Polybase |
+| &nbsp; | 合作對象第 3 層連線與分散式的查詢 |
+| &nbsp; | 系統擴充預存程序 （XP_CMDSHELL 等等） |
+| &nbsp; | Filetable |
+| &nbsp; | CLR 組件與 EXTERNAL_ACCESS 或 UNSAFE 權限設定 |
+| &nbsp; | 緩衝集區擴充 |
+| **SQL Server Agent** |  子系統： CmdExec、 PowerShell、 佇列讀取器、 SSIS、 SSAS、 SSRS |
+| &nbsp; | 警示 |
+| &nbsp; | 記錄讀取器代理程式 |
+| &nbsp; | 異動資料擷取 |
+| &nbsp; | 受管理備份 |
+| **高可用性** | 資料庫鏡像  |
+| **安全性** | 可延伸金鑰管理 |
+| &nbsp; | 連結伺服器的 AD 驗證 | 
+| &nbsp; | AD Authenticatin 的可用性群組 (Ag) | 
+| **服務** | SQL Server Browser |
+| &nbsp; | SQL Server R 服務 |
+| &nbsp; | StreamInsight |
+| &nbsp; | Analysis Services |
+| &nbsp; | Reporting Services |
+| &nbsp; | Data Quality Services |
+| &nbsp; | Master Data Services |
+
+### <a name="known-issues"></a>已知問題
+
+下列章節說明在 Linux 上的一般上市 （GA) 版本的 SQL Server 2017 的已知的問題。
+
+#### <a name="general"></a>一般
+
+- 只能從 CTP 2.1 或更新版本支援升級至 GA 版本的 SQL Server 2017。 
+
+- SQL Server 安裝，需要 15 個字元或更少所在的主機名稱的長度。 
+
+    - **解析**: /etc/hosts 主機名稱中的將名稱變更為項目 15 個字元長或較少。
+
+- 回溯時間手動將系統時間會導致 SQL Server 停止更新 SQL Server 中的內部系統時間。
+
+    - **解析**： 重新啟動 SQL Server。
+
+- 支援只有單一執行個體安裝。
+
+    - **解析**： 如果您想要在指定的主機上有多個執行個體，請考慮使用 Vm 或 Docker 容器。 
+
+- SQL Server 組態管理員無法連線到 SQL Server on Linux。
+
+- 預設語言**sa**登入是英文。
+
+    - **解析**： 變更語言**sa**登入，而且**ALTER LOGIN**陳述式。
+
+#### <a name="databases"></a>資料庫
+
+- Master 資料庫無法移動 mssql conf 公用程式。 可將其他系統資料庫移具備 mssql configuration manager
+
+- 還原 Windows 上的 SQL Server 備份資料庫時，您必須使用**WITH MOVE**子句在 TRANSACT-SQL 陳述式中的。
+
+- 在 Linux 上執行的 SQL Server 上不支援需要 Microsoft 分散式交易協調器服務的分散式交易。 SQL Server 到 SQL Server 支援分散式的交易。
+
+- 某些演算法 （加密套件） 的傳輸層安全性 (TLS) 無法正常運作的 SQL Server on Linux。 這會導致連接失敗時嘗試連線到 SQL Server，以及建立高可用性群組複本之間的連線問題。
+
+   - **解析**： 修改**mssql.conf**組態指令碼的 SQL Server on Linux 停用有問題的加密套件，執行下列步驟：
+
+      1. 將下列加入至 /var/opt/mssql/mssql.conf。
+
+      ```
+      [network]
+      tlsciphers=ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA:!ECDHE-ECDSA-AES256-GCM-SHA384:!ECDHE-ECDSA-AES128-GCM-SHA256:!ECDHE-ECDSA-AES256-SHA384:!ECDHE-ECDSA-AES128-SHA256:!ECDHE-ECDSA-AES256-SHA:!ECDHE-ECDSA-AES128-SHA:!ECDHE-RSA-AES256-SHA384:!ECDHE-RSA-AES128-SHA256:!ECDHE-RSA-AES256-SHA:!ECDHE-RSA-AES128-SHA:!DHE-RSA-AES256-GCM-SHA384:!DHE-RSA-AES128-GCM-SHA256:!DHE-RSA-AES256-SHA:!DHE-RSA-AES128-SHA:!DHE-DSS-AES256-SHA256:!DHE-DSS-AES128-SHA256:!DHE-DSS-AES256-SHA:!DHE-DSS-AES128-SHA:!DHE-DSS-DES-CBC3-SHA:!NULL-SHA256:!NULL-SHA
+      ```
+
+      1. 使用下列命令，重新啟動 SQL Server。
+
+      ```bash
+      sudo systemctl restart mssql-server
+      ```
+
+- 在 Linux 上的 SQL Server 2017，無法還原使用記憶體內部 OLTP 的 Windows 上的 SQL Server 2014 資料庫。 若要還原使用記憶體內部 OLTP 的 SQL Server 2014 資料庫，先將資料庫升級到 SQL Server 2016 或 Windows 上的 SQL Server 2017 之前將其移至 SQL Server on Linux 透過備份/還原或卸離/附加。
+
+- 使用者的權限**ADMINISTER BULK OPERATIONS**此時不支援在 Linux 上。
+
+#### <a name="networking"></a>網路
+
+如果符合下列條件，可能無法運作的功能，需要從 sqlservr 程序，例如連結的伺服器或可用性群組的輸出 TCP 連線：
+
+1. 目標伺服器已指定為主機名稱而不是 IP 位址。
+
+1. 來源執行個體已在核心中停用 IPv6。 若要確認您的系統是否在核心中啟用 IPv6 的情況，必須通過所有下列測試：
+
+   - `cat /proc/cmdline`將會列印目前的核心的開機 cmdline。 輸出不能包含`ipv6.disable=1`。
+   - Proc/sys/網路/ipv6/目錄必須存在。
+   - C 程式中呼叫`socket(AF_INET6, SOCK_STREAM, IPPROTO_IP)`應該會成功-syscall 必須傳回 fd ！ =-1，而且不會因 EAFNOSUPPORT。
+
+確切的錯誤而定的功能。 連結的伺服器，這表示做為登入逾時錯誤。 可用性群組，`ALTER AVAILABILITY GROUP JOIN`因下載設定逾時錯誤的 5 分鐘之後將會失敗的次要複本上的 DDL。
+
+若要解決此問題，請執行下列其中一項：
+
+1. 若要指定 TCP 連線的目標，而不是主機名稱使用 Ip。
+
+1. 藉由移除啟用 ipv6 環境中，核心`ipv6.disable=1`從開機 cmdline。 若要這樣做的方式取決於 Linux 散發套件和開機載入器，例如幼蟲。 如果您想要停用 IPv6，您仍可停用它藉由設定`net.ipv6.conf.all.disable_ipv6 = 1`中`sysctl`組態 (例如`/etc/sysctl.conf`)。 這仍會避免系統的網路介面卡 IPv6 位址，但是允許 sqlservr 功能運作。
+
+#### <a name="network-file-system-nfs"></a>Network File System (NFS)
+如果您使用**網路檔案系統 (NFS)**遠端共用實際執行環境，請注意下列的支援需求：
+
+- 使用 NFS 版本**4.2 或更新版本**。 NFS 的舊版本不支援必要的功能，例如 fallocate 和通用的現代的檔案系統的疏鬆檔案建立。
+- 只尋找**/var/opt/mssql**上 NFS 掛接的目錄。 不支援其他檔案，例如 SQL Server 系統二進位檔。
+- 確定 NFS 用戶端在掛接的遠端共用時，會使用 'nolock' 選項。
+
+#### <a name="localization"></a>當地語系化
+
+- 如果您的地區設定不是英文 (en_us) 在安裝期間，您必須使用 utf-8 編碼您 bash 工作階段/終端機中。 如果您使用 ASCII 編碼方式，您可能會看到類似下面的錯誤：
+
+   ```
+   UnicodeEncodeError: 'ascii' codec can't encode character u'\xf1' in position 8: ordinal not in range(128)
+   ```
+
+   如果您無法使用 utf-8 編碼方式，執行安裝程式使用 MSSQL_LCID 環境變數來指定您選擇的語言。
+
+   ```bash
+   sudo MSSQL_LCID=<LcidValue> /opt/mssql/bin/mssql-conf setup
+   ```
+
+- 當當地語系化文字，[設定 SQL Server] 則會顯示執行 mssql conf 安裝和執行擴充字元不正確的 SQL Server 的非英文版安裝。 或者，若為非拉丁型安裝，句子可能會遺失完全。 遺失一句應該會顯示下列的當地語系化的字串:"授權 PID 已順利處理。  新的版本是 [<Name> edition]"。 這個字串資訊僅供參考，輸出和 下一步的 SQL Server 累計更新可解決此適用於所有語言。 這不會影響以任何方式安裝成功的 SQL Server。 
+
+#### <a name="full-text-search"></a>全文檢索搜尋
+
+- 並非所有的篩選是適用於此版本中，包括 Office 文件的篩選。 如需支援的篩選器的清單，請參閱[Linux 上安裝 SQL Server 全文檢索搜尋](sql-server-linux-setup-full-text-search.md#filters)。
+
+#### <a id="ssis"></a> SQL Server Integration Services (SSIS)
+
+- **Mssql 伺服器是**封裝 SUSE 上不支援此版本中。 目前支援在 Ubuntu 上及在 Red Hat Enterprise Linux (RHEL)。
+
+- 在重新整理 Linux CTP 2.1 和更新版本的 SSIS，SSIS 封裝可以使用 ODBC 連接 on Linux。 這項功能經過測試可與 SQL Server 及 MySQL ODBC 驅動程式，但也應該使用 ODBC 規格會觀察到的任何 Unicode ODBC 驅動程式。 在設計階段，您可以提供 DSN 或連接字串連接至 ODBC 資料;您也可以使用 Windows 驗證。 如需詳細資訊，請參閱[部落格文章發表的 ODBC 支援在 Linux 上](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/)。
+
+- 當您在 Linux 上執行 SSIS 封裝時，下列功能不支援此版本中：
+  - SSIS 目錄資料庫
+  - SQL Agent 排程的封裝執行
+  - Windows 驗證
+  - 第三方元件
+  - 異動資料擷取 (CDC)
+  - SSIS 向外延展
+  - 適用於 SSIS 的 azure 功能套件
+  - Hadoop 和 HDFS 的支援
+  - Microsoft Connector for SAP BW
+
+如需內建的 SSIS 元件，目前不支援，或是支援有限制的清單，請參閱[擷取、 轉換及載入資料，SSIS 與 Linux 上的](sql-server-linux-migrate-ssis.md#components)。
+
+如需在 Linux 上的 SSIS 的詳細資訊，請參閱下列文章：
+-   [部落格文章宣佈適用於 SSIS 支援適用於 Linux](https://blogs.msdn.microsoft.com/ssis/2017/05/17/ssis-helsinki-is-available-in-sql-server-vnext-ctp2-1/)。
+-   [Linux 上安裝 SQL Server Integration Services (SSIS)](sql-server-linux-setup-ssis.md)
+-   [擷取、 轉換和載入與 SSIS Linux 上的資料](sql-server-linux-migrate-ssis.md)
+
+#### <a name="sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS)
+
+下列限制適用於 SSMS 連接到 SQL Server on Linux 的 Windows 上。
+
+- 維護計畫不支援。
+
+- 不支援管理資料倉儲 (MDW) 和資料收集器，在 SSMS 中。 
+
+- SSMS UI 元件的 Windows 驗證或 Windows 事件記錄檔選項與 Linux 無法運作。 您仍然可以使用這些功能與其他選項，例如 SQL 登入。 
+
+- 若要保留的記錄檔的數目不能修改。
+
+### <a name="next-steps"></a>後續的步驟
+
+若要開始，請參閱下列快速入門教學課程：
+
+- [Red Hat Enterprise Linux 上安裝](quickstart-install-connect-red-hat.md)
+- [SUSE Linux Enterprise Server 上安裝](quickstart-install-connect-suse.md)
+- [在 Ubuntu 上安裝](quickstart-install-connect-ubuntu.md)
+- [執行 docker](quickstart-install-connect-ubuntu.md)
+<br/>
+<br/>
+
+![分隔列圖形](./media/sql-server-linux-release-notes/seperationbar3.png)
 
 ## <a id="RC2"></a>RC2 (第 2017 年 8 月)
 
@@ -73,7 +296,7 @@ ms.lasthandoff: 09/25/2017
 | [SQL Server Data Tools for Visual Studio](https://go.microsoft.com/fwlink/?linkid=846626) | 17.0 |
 | [Visual Studio Code](https://code.visualstudio.com)與[mssql 延伸模組](https://aka.ms/mssql-marketplace) | 最新 |
 
-### <a name="Unsupported"></a>不支援的功能和服務
+### <a name="unsupported-features-and-services"></a>不支援的功能和服務
 
 下列功能和服務並不適用於 Linux 這一次。 這些功能的支援會逐漸啟用期間每月更新的頻率，預覽計畫。
 
@@ -148,7 +371,7 @@ ms.lasthandoff: 09/25/2017
 
       1. 使用下列命令，重新啟動 SQL Server。
    
-      ```
+      ```bash
       sudo systemctl restart mssql-server
       ```
 
@@ -398,1070 +621,6 @@ RC1 中叢集資源代理程式會設定虛擬伺服器名稱，在 Windows 上�
 - SSMS UI 元件的 Windows 驗證或 Windows 事件記錄檔選項與 Linux 無法運作。 您仍然可以使用這些功能與其他選項，例如 SQL 登入。 
 
 - 若要保留的記錄檔的數目不能修改。
-
-### <a name="next-steps"></a>後續的步驟
-
-若要開始，請參閱下列快速入門教學課程：
-
-- [Red Hat Enterprise Linux 上安裝](quickstart-install-connect-red-hat.md)
-- [SUSE Linux Enterprise Server 上安裝](quickstart-install-connect-suse.md)
-- [在 Ubuntu 上安裝](quickstart-install-connect-ubuntu.md)
-- [執行 docker](quickstart-install-connect-ubuntu.md)
-<br/>
-<br/>
-
-![分隔列圖形](./media/sql-server-linux-release-notes/seperationbar3.png)
-
-## <a id="ctp21"></a>CTP 2.1 (可能 2017)
-此版本的 SQL Server 引擎版本是 14.0.600.250。
-
-### <a name="supported-platforms"></a>支援的平台 
-
-| 平台 | 檔案系統 | 安裝指南 |
-|-----|-----|-----|
-| Red Hat Enterprise Linux 7.3 工作站、 伺服器和桌面 | XFS 或 EXT4 | [安裝指南](quickstart-install-connect-red-hat.md) | 
-| SUSE Enterprise Linux Server v12 SP2 | EXT4 | [安裝指南](quickstart-install-connect-suse.md) |
-| Ubuntu 16.04LTS | EXT4 | [安裝指南](quickstart-install-connect-ubuntu.md) | 
-| Docker 引擎 1.8 + Windows、 Mac 或 Linux 上 | 不適用 | [安裝指南](quickstart-install-connect-docker.md) | 
-
-> [!NOTE]
-> 您需要至少 3.25 GB 的記憶體來執行 SQL Server on Linux。
-> SQL Server 引擎已在此階段中測試 1 TB 的記憶體。
-
-### <a name="package-details"></a>封裝詳細資料
-下表中會列出套件詳細資料及針對 RPM 和 Debian 封裝的下載位置。 您不需要直接下載這些封裝，如果您使用下列的安裝指南中的步驟：
-
-- [安裝 SQL Server 封裝](sql-server-linux-setup.md)
-- [安裝全文檢索搜尋的套件](sql-server-linux-setup-full-text-search.md)
-- [安裝 SQL Server 代理程式套件](sql-server-linux-setup-sql-agent.md)
-
-| 封裝 | 封裝版本 | 下載 |
-|-----|-----|-----|
-| Red Hat RPM 套件 | 14.0.600.250-2 | [引擎 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server/mssql-server-14.0.600.250-2.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server/mssql-server-ha-14.0.600.250-2.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server/mssql-server-fts-14.0.600.250-2.x86_64.rpm)</br>[SQL Server 代理程式 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server/mssql-server-agent-14.0.600.250-2.x86_64.rpm) | 
-| SLES RPM 套件 | 14.0.600.250-2 | [mssql 伺服器引擎 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server/mssql-server-14.0.600.250-2.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server/mssql-server-ha-14.0.600.250-2.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server/mssql-server-fts-14.0.600.250-2.x86_64.rpm)</br>[SQL Server 代理程式 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server/mssql-server-agent-14.0.600.250-2.x86_64.rpm) | 
-| Ubuntu 16.04 Debian 封裝 | 14.0.600.250-2 | [引擎 Debian 封裝](https://packages.microsoft.com/ubuntu/16.04/mssql-server/pool/main/m/mssql-server/mssql-server_14.0.600.250-2_amd64.deb)</br>[高可用性 Debian 封裝](https://packages.microsoft.com/ubuntu/16.04/mssql-server/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.600.250-2_amd64.deb)</br>[全文檢索搜尋 Debian 封裝](https://packages.microsoft.com/ubuntu/16.04/mssql-server/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.600.250-2_amd64.deb)</br>[SQL Server Agent Debian 封裝](https://packages.microsoft.com/ubuntu/16.04/mssql-server/pool/main/m/mssql-server-agent/mssql-server-agent_14.0.600.250-2_amd64.deb) |
-
-### <a name="supported-client-tools"></a>支援的用戶端工具
-
-| 工具 | 最小版本 |
-|-----|-----|
-| [SQL Server Management Studio (SSMS) for Windows](https://go.microsoft.com/fwlink/?linkid=847722) | 17.0 |
-| [SQL Server Data Tools for Visual Studio](https://go.microsoft.com/fwlink/?linkid=846626) | 17.0 |
-| [Visual Studio Code](https://code.visualstudio.com)與[mssql 延伸模組](https://aka.ms/mssql-marketplace) | 最新 (1.12) |
-
-### <a name="unsupported-features-and-services"></a>不支援的功能和服務
-下列功能和服務並不適用於 Linux 這一次。 這些功能的支援會逐漸啟用期間每月更新的頻率，預覽計畫。
-
-| 區域 | 不支援的功能或服務 |
-|-----|-----|
-| **資料庫引擎** | 複寫 |
-| &nbsp; | Stretch DB |
-| &nbsp; | Polybase |
-| &nbsp; | Distributed Query |
-| &nbsp; | 系統擴充預存程序 （XP_CMDSHELL 等等） |
-| &nbsp; | Filetable |
-| &nbsp; | CLR 組件與 EXTERNAL_ACCESS 或 UNSAFE 權限設定 |
-| **高可用性** | 資料庫鏡像  |
-| **安全性** | Active Directory 驗證 |
-| &nbsp; | Windows 驗證 |
-| &nbsp; | 可延伸金鑰管理 |
-| &nbsp; | 使用使用者提供的憑證進行 SSL 或 TLS |
-| **服務** | SQL Server Browser |
-| &nbsp; | SQL Server R 服務 |
-| &nbsp; | StreamInsight |
-| &nbsp; | Analysis Services |
-| &nbsp; | Reporting Services |
-| &nbsp; | Data Quality Services |
-| &nbsp; | Master Data Services |
-
-### <a name="known-issues"></a>已知問題
-下列章節說明在 Linux 上的這一版的 SQL Server 2017 CTP 2.1 的已知的問題。
-
-#### <a name="general"></a>一般
-- SQL Server 安裝，需要 15 個字元或更少所在的主機名稱的長度。 
-
-    - **解析**: /etc/hosts 主機名稱中的將名稱變更為項目 15 個字元長或較少。
-
-- 回溯時間手動將系統時間會導致 SQL Server 停止更新 SQL Server 中的內部系統時間。
-
-    - **解析**： 重新啟動 SQL Server。
-
-- 支援只有單一執行個體安裝。
-
-    - **解析**： 如果您想要在指定的主機上有多個執行個體，請考慮使用 Vm 或 Docker 容器。 
-
-- SQL Server 組態管理員無法連線到 SQL Server on Linux。
-
-- 預設語言**sa**登入是英文。
-
-    - **解析**： 變更語言**sa**登入，而且**ALTER LOGIN**陳述式。
-
-#### <a name="databases"></a>資料庫
-- 無法移動系統資料庫使用 mssql conf 公用程式。
-
-- 還原 Windows 上的 SQL Server 備份資料庫時，您必須使用**WITH MOVE**子句在 TRANSACT-SQL 陳述式中的。
-
-- 在 Linux 上執行的 SQL Server 上不支援需要 Microsoft 分散式交易協調器服務的分散式交易。 SQL Server 到 SQL Server 支援分散式的交易。
-
-#### <a name="always-on-availability-group"></a>Always On 可用性群組
-- `sys.fn_hadr_backup_is_preffered_replica`不適用於`CLUSTER_TYPE=NONE`或`CLUSTER_TYPE=EXTERNAL`因為其依賴 WSFC 複寫叢集登錄機碼無法使用它。 我們會努力提供類似的功能，透過不同的函式。 
-
-#### <a name="full-text-search"></a>全文檢索搜尋
-- 並非所有的篩選是適用於此版本中，包括 Office 文件的篩選。 如需支援的篩選器的清單，請參閱[Linux 上安裝 SQL Server 全文檢索搜尋](sql-server-linux-setup-full-text-search.md#filters)。
-
-#### <a name="sql-agent"></a>SQL 代理程式
-- 下列元件和子系統的 SQL 代理程式作業目前不支援在 Linux 上：
-
-    - 子系統： CmdExec、 PowerShell、 複寫散發者、 快照集、 合併、 佇列讀取器、 SSIS、 SSAS、 SSRS
-    - 警示
-    - DB 郵件
-    - 記錄讀取器代理程式 
-    - 異動資料擷取
-
-#### <a name="sqlpackage"></a>SqlPackage
-- 透過 SqlPackage 必須指定檔案的絕對路徑。 使用相對路徑會對應 」 / tmp/sqlpackage 下檔案。\<程式碼 \> /系統/system32"資料夾。 
-
-  - **解析**： 使用絕對檔案路徑。
-
-- SqlPackage 顯示檔案的位置"c:\\"前置詞。
-
-#### <a name="ssis"></a> SQL Server Integration Services (SSIS)
-您可以在 Linux 上執行 SSIS 封裝。 如需詳細資訊，請參閱[部落格文章宣佈適用於 SSIS 支援適用於 Linux](https://blogs.msdn.microsoft.com/ssis/2017/05/17/ssis-helsinki-is-available-in-sql-server-vnext-ctp2-1/)。 請注意在此版本的下列已知的問題。
-
-- **Mssql 伺服器是**封裝在 Ubuntu 上才支援這一次。
-
-- Linux 上執行 SSIS 封裝時，不支援下列功能：
-  - SSIS 目錄資料庫
-  - SQL 代理程式排程封裝執行
-  - Windows 驗證
-  - 第三方元件
-  - 第三方 ODBC 驅動程式
-  - ODBC 連接管理員、 來源和目的地 （使用重新整理 Linux CTP 2.1 上的 SSIS 支援）
-  - 異動資料擷取 (CDC)
-  - 相應放大
-  - Azure 功能套件
-  - Hadoop 和 HDFS 支援
-  - Microsoft Connector for SAP BW
-
-與 Linux CTP 2.1 重新整理 SSIS，SSIS 封裝可以在 Linux 上使用 ODBC 連接。 如需詳細資訊，請參閱[部落格文章發表的 ODBC 支援在 Linux 上](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/)。
-
-#### <a name="sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS)
-下列限制適用於 SSMS 連接到 SQL Server on Linux 的 Windows 上。
-
-- 維護計畫不支援。
-
-- 不支援管理資料倉儲 (MDW) 和資料收集器，在 SSMS 中。 
-
-- SSMS UI 元件的 Windows 驗證或 Windows 事件記錄檔選項與 Linux 無法運作。 您仍然可以使用這些功能與其他選項，例如 SQL 登入。 
-
-- 若要保留的記錄檔的數目不能修改。
-
-### <a name="next-steps"></a>後續的步驟
-
-若要開始，請參閱下列快速入門教學課程：
-
-- [Red Hat Enterprise Linux 上安裝](quickstart-install-connect-red-hat.md)
-- [SUSE Linux Enterprise Server 上安裝](quickstart-install-connect-suse.md)
-- [在 Ubuntu 上安裝](quickstart-install-connect-ubuntu.md)
-- [執行 docker](quickstart-install-connect-ubuntu.md)
-<br/>
-<br/>
-
-![分隔列圖形](./media/sql-server-linux-release-notes/seperationbar3.png)
-
-## <a id="ctp20"></a>CTP 2.0 (第 2017 年 4 月)
-此版本的 SQL Server 引擎版本是 14.0.500.272。
-
-### <a name="supported-platforms"></a>支援的平台 
-
-| 平台 | 檔案系統 | 安裝指南 |
-|-----|-----|-----|
-| Red Hat Enterprise Linux 7.3 工作站、 伺服器和桌面 | XFS 或 EXT4 | [安裝指南](quickstart-install-connect-red-hat.md) | 
-| SUSE Enterprise Linux Server v12 SP2 | EXT4 | [安裝指南](quickstart-install-connect-suse.md) |
-| Ubuntu 16.04LTS 和 16.10 | EXT4 | [安裝指南](quickstart-install-connect-ubuntu.md) | 
-| Docker 引擎 1.8 + Windows、 Mac 或 Linux 上 | 不適用 | [安裝指南](quickstart-install-connect-docker.md) | 
-
-> [!NOTE] 
-> 您需要至少 3.25 GB 的記憶體來執行 SQL Server on Linux。
-> SQL Server 引擎已在此階段中測試 1 TB 的記憶體。
-
-### <a name="package-details"></a>封裝詳細資料
-下表中會列出套件詳細資料及針對 RPM 和 Debian 封裝的下載位置。 請注意，您不需要直接下載這些封裝，如果您使用下列的安裝指南中的步驟：
-
-- [安裝 SQL Server 封裝](sql-server-linux-setup.md)
-- [安裝全文檢索搜尋的套件](sql-server-linux-setup-full-text-search.md)
-- [安裝 SQL Server 代理程式套件](sql-server-linux-setup-sql-agent.md)
-
-| 封裝 | 封裝版本 | 下載 |
-|-----|-----|-----|
-| Red Hat RPM 套件 | 14.0.500.272-2 | [引擎 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server/mssql-server-14.0.500.272-2.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server/mssql-server-ha-14.0.500.272-2.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server/mssql-server-fts-14.0.500.272-2.x86_64.rpm)</br>[SQL Server 代理程式 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server/mssql-server-agent-14.0.500.272-2.x86_64.rpm) | 
-| SLES RPM 套件 | 14.0.500.272-2 | [mssql 伺服器引擎 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server/mssql-server-14.0.500.272-2.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server/mssql-server-ha-14.0.500.272-2.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server/mssql-server-fts-14.0.500.272-2.x86_64.rpm)</br>[SQL Server 代理程式 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server/mssql-server-agent-14.0.500.272-2.x86_64.rpm) | 
-| Ubuntu 16.04 Debian 封裝 | 14.0.500.272-2 | [引擎 Debian 封裝](https://packages.microsoft.com/ubuntu/16.04/mssql-server/pool/main/m/mssql-server/mssql-server_14.0.500.272-2_amd64.deb)</br>[高可用性 Debian 封裝](https://packages.microsoft.com/ubuntu/16.04/mssql-server/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.500.272-2_amd64.deb)</br>[全文檢索搜尋 Debian 封裝](https://packages.microsoft.com/ubuntu/16.04/mssql-server/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.500.272-2_amd64.deb)</br>[SQL Server Agent Debian 封裝](https://packages.microsoft.com/ubuntu/16.04/mssql-server/pool/main/m/mssql-server-agent/mssql-server-agent_14.0.500.272-2_amd64.deb) |
-| Ubuntu 16.10 Debian 封裝 | 14.0.500.272-2 | [引擎 Debian 封裝](https://packages.microsoft.com/ubuntu/16.10/mssql-server/pool/main/m/mssql-server/mssql-server_14.0.500.272-2_amd64.deb)</br>[高可用性 Debian 封裝](https://packages.microsoft.com/ubuntu/16.10/mssql-server/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.500.272-2_amd64.deb)</br>[全文檢索搜尋 Debian 封裝](https://packages.microsoft.com/ubuntu/16.10/mssql-server/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.500.272-2_amd64.deb)</br>[SQL Server Agent Debian 封裝](https://packages.microsoft.com/ubuntu/16.10/mssql-server/pool/main/m/mssql-server-agent/mssql-server-agent_14.0.500.272-2_amd64.deb) |
-
-### <a name="supported-client-tools"></a>支援的用戶端工具
-
-| 工具 | 最小版本 |
-|-----|-----|
-| [SQL Server Management Studio (SSMS) 適用於 Windows 的候選版 2](https://go.microsoft.com/fwlink/?linkid=840957) | 17.0 |
-| [SQL Server Data Tools for Visual Studio-候選版 2](https://go.microsoft.com/fwlink/?linkid=837939) | 17.0 |
-| [Visual Studio Code](https://code.visualstudio.com)與[mssql 延伸模組](https://aka.ms/mssql-marketplace) | 最新 (0.2.1) |
-
-> [!NOTE] 
-> 指定的 SQL Server Management Studio 和 SQL Server Data Tools 版本上方會發行候選項目，因此不建議在生產環境中使用。
-
-### <a name="unsupported-features-and-services"></a>不支援的功能和服務
-下列功能和服務並不適用於 Linux 這一次。 這些功能的支援會逐漸啟用期間每月更新的頻率，預覽計畫。
-
-| 區域 | 不支援的功能或服務 |
-|-----|-----|
-| **資料庫引擎** | 複寫 |
-| &nbsp; | Stretch DB |
-| &nbsp; | Polybase |
-| &nbsp; | Distributed Query |
-| &nbsp; | 系統擴充預存程序 （XP_CMDSHELL 等等） |
-| &nbsp; | Filetable |
-| &nbsp; | CLR 組件與 EXTERNAL_ACCESS 或 UNSAFE 權限設定 |
-| **高可用性** | 資料庫鏡像  |
-| **安全性** | Active Directory 驗證 |
-| &nbsp; | Windows 驗證 |
-| &nbsp; | 可延伸金鑰管理 |
-| &nbsp; | 使用使用者提供的憑證進行 SSL 或 TLS |
-| **服務** | SQL Server Browser |
-| &nbsp; | SQL Server R 服務 |
-| &nbsp; | StreamInsight |
-| &nbsp; | Analysis Services |
-| &nbsp; | Reporting Services |
-| &nbsp; | Integration Services | 
-| &nbsp; | Data Quality Services |
-| &nbsp; | Master Data Services |
-
-### <a name="known-issues"></a>已知問題
-下列各節說明在 Linux 上的這一版的 SQL Server 2017 CTP 2.0 已知的問題。
-
-#### <a name="general"></a>一般
-- SQL Server 安裝，需要 15 個字元或更少所在的主機名稱的長度。 
-
-    - **解析**: /etc/hosts 主機名稱中的將名稱變更為項目 15 個字元長或較少。
-
-- 回溯時間手動將系統時間會導致 SQL Server 停止更新 SQL Server 中的內部系統時間。
-
-    - **解析**： 重新啟動 SQL Server。
-
-- 支援只有單一執行個體安裝。
-
-    - **解析**： 如果您想要在指定的主機上有多個執行個體，請考慮使用 Vm 或 Docker 容器。 
-
-- SQL Server 組態管理員無法連線到 SQL Server on Linux。
-
-- 預設語言**sa**登入是英文。
-
-    - **解析**： 變更語言**sa**登入，而且**ALTER LOGIN**陳述式。
-
-#### <a name="databases"></a>資料庫
-- 無法移動系統資料庫使用 mssql conf 公用程式。
-
-- 還原 Windows 上的 SQL Server 備份資料庫時，您必須使用**WITH MOVE**子句在 TRANSACT-SQL 陳述式中的。
-
-- 在 Linux 上執行的 SQL Server 上不支援需要 Microsoft 分散式交易協調器服務的分散式交易。 SQL Server 到 SQL Server 支援分散式的交易。
-
-#### <a name="always-on-availability-group"></a>Always On 可用性群組
-- 所有的 HA 組態-這表示做為資源建立前 CTP2.0 封裝 Pacemaker 叢集-新增可用性群組不相容於新的封裝。 刪除所有先前設定的叢集的資源，並建立新的可用性群組與`CLUSTER_TYPE=EXTERNAL`。 請參閱[設定 Alwayson 可用性群組的 SQL Server on Linux](sql-server-linux-availability-group-configure-ha.md)。
-- 可用性群組，以建立`CLUSTER_TYPE=NONE`，不會加入叢集中的資源將會在升級之後繼續工作。 使用向外延展讀取案例。 請參閱[設定向外延展讀取可用性群組的 SQL Server on Linux](sql-server-linux-availability-group-configure-rs.md)。
-- `sys.fn_hadr_backup_is_preffered_replica`不適用於`CLUSTER_TYPE=NONE`或`CLUSTER_TYPE=EXTERNAL`因為其依賴 WSFC 複寫叢集登錄機碼無法使用它。 我們會努力提供類似的功能，透過不同的函式。 
-
-#### <a name="full-text-search"></a>全文檢索搜尋
-- 並非所有的篩選是適用於此版本中，包括 Office 文件的篩選。 如需支援的篩選器的清單，請參閱[Linux 上安裝 SQL Server 全文檢索搜尋](sql-server-linux-setup-full-text-search.md#filters)。
-
-- 韓文的斷詞工具會採用幾秒鐘的時間載入，並產生錯誤第一次使用。 之後此初始錯誤，它應該會運作正常。
-
-#### <a name="sql-agent"></a>SQL 代理程式
-- 下列元件和子系統的 SQL 代理程式作業目前不支援在 Linux 上：
-
-    - 子系統： CmdExec、 PowerShell、 複寫散發者、 快照集、 合併、 佇列讀取器、 SSIS、 SSAS、 SSRS
-    - 警示
-    - DB 郵件
-    - 記錄讀取器代理程式 
-    - 異動資料擷取
-
-#### <a name="sqlpackage"></a>SqlPackage
-- 透過 SqlPackage 必須指定檔案的絕對路徑。 使用相對路徑會對應 」 / tmp/sqlpackage 下檔案。\<程式碼 \> /系統/system32"資料夾。 
-
-    - **解析**： 使用絕對檔案路徑。
-
-- SqlPackage 顯示檔案的位置"c:\\"前置詞。
-
-    
-#### <a name="sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS)
-下列限制適用於 SSMS 連接到 SQL Server on Linux 的 Windows 上。
-
-- 維護計畫不支援。
-
-- 不支援管理資料倉儲 (MDW) 和資料收集器，在 SSMS 中。 
-
-- SSMS UI 元件的 Windows 驗證或 Windows 事件記錄檔選項與 Linux 無法運作。 您仍然可以使用這些功能與其他選項，例如 SQL 登入。 
-
-- 若要保留的記錄檔的數目不能修改。
-
-### <a name="next-steps"></a>後續的步驟
-
-若要開始，請參閱下列快速入門教學課程：
-
-- [Red Hat Enterprise Linux 上安裝](quickstart-install-connect-red-hat.md)
-- [SUSE Linux Enterprise Server 上安裝](quickstart-install-connect-suse.md)
-- [在 Ubuntu 上安裝](quickstart-install-connect-ubuntu.md)
-- [執行 docker](quickstart-install-connect-ubuntu.md)
-<br/>
-<br/>
-
-![分隔列圖形](./media/sql-server-linux-release-notes/seperationbar3.png)
-
-## <a id="ctp14"></a>CTP 1.4 (第 2017 年 3 月)
-此版本的 SQL Server 引擎版本是 14.0.405.198。
-
-### <a name="supported-platforms"></a>支援的平台 
-
-| 平台 | 檔案系統 | 安裝指南 |
-|-----|-----|-----|
-| Red Hat Enterprise Linux 7.3 工作站、 伺服器和桌面 | XFS 或 EXT4 | [安裝指南](quickstart-install-connect-red-hat.md) | 
-| SUSE Enterprise Linux Server v12 SP2 | EXT4 | [安裝指南](quickstart-install-connect-suse.md) |
-| Ubuntu 16.04LTS 和 16.10 | EXT4 | [安裝指南](quickstart-install-connect-ubuntu.md) | 
-| Docker 引擎 1.8 + Windows、 Mac 或 Linux 上 | 不適用 | [安裝指南](quickstart-install-connect-docker.md) | 
-
-> [!NOTE] 
-> 您需要至少 3.25 GB 的記憶體來執行 SQL Server on Linux。
-> SQL Server 引擎已在此階段中測試 1 TB 的記憶體。
-
-### <a name="package-details"></a>封裝詳細資料
-下表中會列出套件詳細資料及針對 RPM 和 Debian 封裝的下載位置。 請注意，您不需要直接下載這些封裝，如果您使用下方的安裝指南中的步驟
--   [安裝 SQL Server 封裝](sql-server-linux-setup.md)
--   [安裝全文檢索搜尋的套件](sql-server-linux-setup-full-text-search.md)
--   [安裝 SQL Server 代理程式套件](sql-server-linux-setup-sql-agent.md)
-
-| 封裝 | 封裝版本 | 下載 |
-|-----|-----|-----|
-| Red Hat RPM 套件 | 14.0.405.200-1 | [引擎 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server/mssql-server-14.0.405.200-1.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server/mssql-server-ha-14.0.405.200-1.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server/mssql-server-fts-14.0.405.200-1.x86_64.rpm)</br>[SQL Server 代理程式 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server/mssql-server-agent-14.0.405.200-1.x86_64.rpm) | 
-| SLES RPM 套件 | 14.0.405.200-1 | [mssql 伺服器引擎 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server/mssql-server-14.0.405.200-1.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server/mssql-server-ha-14.0.405.200-1.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server/mssql-server-fts-14.0.405.200-1.x86_64.rpm)</br>[SQL Server 代理程式 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server/mssql-server-agent-14.0.405.200-1.x86_64.rpm) | 
-| Ubuntu 16.04 Debian 封裝 | 14.0.405.200-1 | [引擎 Debian 封裝](https://packages.microsoft.com/ubuntu/16.04/mssql-server/pool/main/m/mssql-server/mssql-server_14.0.405.200-1_amd64.deb)</br>[高可用性 Debian 封裝](https://packages.microsoft.com/ubuntu/16.04/mssql-server/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.405.200-1_amd64.deb)</br>[全文檢索搜尋 Debian 封裝](https://packages.microsoft.com/ubuntu/16.04/mssql-server/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.405.200-1_amd64.deb)</br>[SQL Server Agent Debian 封裝](https://packages.microsoft.com/ubuntu/16.04/mssql-server/pool/main/m/mssql-server-agent/mssql-server-agent_14.0.405.200-1_amd64.deb) |
-| Ubuntu 16.10 Debian 封裝 | 14.0.405.200-1 | [引擎 Debian 封裝](https://packages.microsoft.com/ubuntu/16.10/mssql-server/pool/main/m/mssql-server/mssql-server_14.0.405.200-1_amd64.deb)</br>[高可用性 Debian 封裝](https://packages.microsoft.com/ubuntu/16.10/mssql-server/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.405.200-1_amd64.deb)</br>[全文檢索搜尋 Debian 封裝](https://packages.microsoft.com/ubuntu/16.10/mssql-server/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.405.200-1_amd64.deb)</br>[SQL Server Agent Debian 封裝](https://packages.microsoft.com/ubuntu/16.10/mssql-server/pool/main/m/mssql-server-agent/mssql-server-agent_14.0.405.200-1_amd64.deb) |
-
-### <a name="supported-client-tools"></a>支援的用戶端工具
-
-| 工具 | 最小版本 |
-|-----|-----|
-| [SQL Server Management Studio (SSMS) 適用於 Windows 的候選版 2](https://go.microsoft.com/fwlink/?linkid=840957) | 17.0 |
-| [SQL Server Data Tools for Visual Studio-候選版 2](https://go.microsoft.com/fwlink/?linkid=837939) | 17.0 |
-| [Visual Studio Code](https://code.visualstudio.com)與[mssql 延伸模組](https://aka.ms/mssql-marketplace) | 最新 (0.2.1) |
-
-> [!NOTE] 
-> 指定的 SQL Server Management Studio 和 SQL Server Data Tools 版本上方會發行候選項目，因此不建議在生產環境中使用。
-
-### <a name="unsupported-features-and-services"></a>不支援的功能和服務
-下列功能和服務並不適用於 Linux 這一次。 這些功能的支援會逐漸啟用期間每月更新的頻率，預覽計畫。
-
-| 區域 | 不支援的功能或服務 |
-|-----|-----|
-| **資料庫引擎** | 複寫 |
-| &nbsp; | Stretch DB |
-| &nbsp; | Polybase |
-| &nbsp; | Distributed Query |
-| &nbsp; | 系統擴充預存程序 （XP_CMDSHELL 等等） |
-| &nbsp; | Filetable |
-| &nbsp; | CLR 組件與 EXTERNAL_ACCESS 或 UNSAFE 權限設定 |
-| **高可用性** | 資料庫鏡像  |
-| **安全性** | Active Directory 驗證 |
-| &nbsp; | Windows 驗證 |
-| &nbsp; | 可延伸金鑰管理 |
-| &nbsp; | 使用使用者提供的憑證進行 SSL 或 TLS |
-| **服務** | SQL Server Browser |
-| &nbsp; | SQL Server R 服務 |
-| &nbsp; | StreamInsight |
-| &nbsp; | Analysis Services |
-| &nbsp; | Reporting Services |
-| &nbsp; | Integration Services | 
-| &nbsp; | Data Quality Services |
-| &nbsp; | Master Data Services |
-
-### <a name="known-issues"></a>已知問題
-下列章節說明在 Linux 上的這一版的 SQL Server 2017 CTP 1.4 的已知的問題。
-
-#### <a name="general"></a>一般
-- SQL Server 安裝，需要 15 個字元或更少所在的主機名稱的長度。 
-
-    - **解析**: /etc/hosts 主機名稱中的將名稱變更為項目 15 個字元長或較少。
-
-- 無法執行命令`ALTER SERVICE MASTER KEY REGENERATE`。 沒有已知的錯誤會造成 SQL Server 變得不穩定。 如果您需要重新產生服務主要金鑰，您應該備份資料庫檔案，解除安裝和重新安裝 SQL Server，然後還原資料庫檔案一次。
-
-- 回溯時間手動將系統時間會導致 SQL Server 停止更新 SQL Server 中的內部系統時間。
-
-    - **解析**： 重新啟動 SQL Server。
-
-- 在 Linux 中的有些時區名稱不對應於 Windows 時區名稱。
-
-    - **解析**： 使用從 TZID 資料行中的時區名稱 ' 的對應： Windows' 區段資料表上的[Unicode.org 文件頁面](http://www.unicode.org/cldr/charts/latest/supplemental/zone_tzid.html)。
-
-- SQL Server 引擎預期終止 CR lf （Windows 樣式線條格式） 的文字檔案中的行。
-
-- 支援只有單一執行個體安裝。
-
-    - **解析**： 如果您想要在指定的主機上有多個執行個體，請考慮使用 Vm 或 Docker 容器。 
-
-- 所有記錄檔，以及錯誤記錄檔中會以 utf-16 編碼。
-
-- SQL Server 組態管理員無法連線到 SQL Server on Linux。
-
-- **CREATE ASSEMBLY**時嘗試使用的檔案將無法運作。 使用**FROM\<位元\>**方法而現在。 
-
-#### <a name="databases"></a>資料庫
-- 無法移動系統資料庫使用 mssql conf 公用程式。
-
-- 還原 Windows 上的 SQL Server 備份資料庫時，您必須使用**WITH MOVE**子句在 TRANSACT-SQL 陳述式中的。
-
-- 在 Linux 上執行的 SQL Server 上不支援需要 Microsoft 分散式交易協調器服務的分散式交易。 SQL Server 到 SQL Server 支援分散式的交易。
-
-#### <a name="always-on-availability-group"></a>Always On 可用性群組
-- Alwayson 可用性群組之後升級 HA 封裝 (mssql-伺服器-ha)，在 Linux 上使用 CTP 1.3 所建立的叢集的資源將會失敗。 
-
-   - **解析**： 升級 HA 封裝之前，請設定叢集資源參數`notify=true`。 
-   
-      - 下列範例會設定名為的資源上的叢集資源參數**ag1** RHEL 或 Ubuntu 上： 
-
-      ```bash
-      sudo pcs resource update ag1-master notify=true
-      ```
-
-      - Sles，更新可用性群組資源設定，以新增`notify=true`。  
-
-      ```bash
-      crm configure edit ms-ag_cluster 
-      ```
-
-      新增`notify=true`並儲存資源設定。
-
-- 如果複本皆處於同步認可模式，alwayson 可用性群組在 Linux 中可能會受限於資料遺失。 視您的 Linux 散發套件，請參閱詳細資料。 
-
-   - [RHEL](sql-server-linux-availability-group-cluster-rhel.md)
-   - [SLES](sql-server-linux-availability-group-cluster-sles.md)
-   - [Ubuntu](sql-server-linux-availability-group-cluster-ubuntu.md)
-
-#### <a name="full-text-search"></a>全文檢索搜尋
-- 並非所有的篩選是適用於此版本中，包括 Office 文件的篩選。 如需支援的篩選器的清單，請參閱[Linux 上安裝 SQL Server 全文檢索搜尋](sql-server-linux-setup-full-text-search.md#filters)。
-
-- 韓文的斷詞工具會採用幾秒鐘的時間載入，並產生錯誤第一次使用。 之後此初始錯誤，它應該會運作正常。
-
-#### <a name="sql-agent"></a>SQL 代理程式
-- 下列元件和子系統的 SQL 代理程式作業目前不支援在 Linux 上：
-    - 子系統： CmdExec、 PowerShell、 複寫散發者、 快照集、 合併、 佇列讀取器、 SSIS、 SSAS、 SSRS
-    - 警示
-    - DB 郵件
-    - 記錄傳送
-    - 記錄讀取器代理程式 
-    - 異動資料擷取
-
-#### <a name="in-memory-oltp"></a>In-Memory OLTP
-- 記憶體內部 OLTP 資料庫只能建立 /var/opt/mssql 目錄中。 如需詳細資訊，請瀏覽[記憶體中 OLTP 主題](sql-server-linux-performance-get-started.md#use-in-memory-oltp)。
-
-#### <a name="sqlpackage"></a>SqlPackage
-- 透過 SqlPackage 必須指定檔案的絕對路徑。 使用相對路徑會對應 」 / tmp/sqlpackage 下檔案。\<程式碼 \> /系統/system32"資料夾。 
-
-    - **解析**： 使用絕對檔案路徑。
-
-- SqlPackage 顯示檔案的位置"c:\\"前置詞。
-
-    
-#### <a name="sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS)
-下列限制適用於 SSMS 連接到 SQL Server on Linux 的 Windows 上。
-
-- 維護計畫不支援。
-
-- 管理資料倉儲 (MDW) 和資料收集器，在 SSMS 中的不支援。 
-
-- SSMS UI 元件的 Windows 驗證或 Windows 事件記錄檔選項與 Linux 無法運作。 您仍然可以使用這些功能與其他選項，例如 SQL 登入。 
-
-- 檔案瀏覽器受限於"c:\\"範圍內，可解析成/var/選擇/mssql/Linux 上。 若要使用其他路徑，產生 UI 作業的指令碼，取代 c:\\ Linux 路徑的路徑。 然後以手動方式在 SSMS 中執行指令碼。
-
-- 若要保留的記錄檔的數目不能修改。
-
-### <a name="next-steps"></a>後續的步驟
-
-若要開始，請參閱下列快速入門教學課程：
-
-- [Red Hat Enterprise Linux 上安裝](quickstart-install-connect-red-hat.md)
-- [SUSE Linux Enterprise Server 上安裝](quickstart-install-connect-suse.md)
-- [在 Ubuntu 上安裝](quickstart-install-connect-ubuntu.md)
-- [執行 docker](quickstart-install-connect-ubuntu.md)
-<br/>
-<br/>
-
-![分隔列圖形](./media/sql-server-linux-release-notes/seperationbar3.png)
-
-## <a id="ctp13"></a>CTP 1.3 (第 2017 年 2 月)
-此版本的 SQL Server 引擎版本是 14.0.304.138。
-
-### <a name="supported-platforms"></a>支援的平台 
-
-| 平台 | 檔案系統 | 安裝指南 |
-|-----|-----|-----|
-| Red Hat Enterprise Linux 7.3 工作站、 伺服器和桌面 | XFS 或 EXT4 | [安裝指南](quickstart-install-connect-red-hat.md) | 
-| SUSE Enterprise Linux Server v12 SP2 | EXT4 | [安裝指南](quickstart-install-connect-suse.md) |
-| Ubuntu 16.04LTS 和 16.10 | EXT4 | [安裝指南](quickstart-install-connect-ubuntu.md) | 
-| Docker 引擎 1.8 + Windows、 Mac 或 Linux 上 | 不適用 | [安裝指南](quickstart-install-connect-docker.md) | 
-
-> [!NOTE] 
-> 您需要至少 3.25 GB 的記憶體來執行 SQL Server on Linux。
-> SQL Server 引擎已在此階段中測試 1 TB 的記憶體。
-
-### <a name="package-details"></a>封裝詳細資料
-下表中會列出套件詳細資料及針對 RPM 和 Debian 封裝的下載位置。 如果您使用中的步驟，請注意，您不需要下載這些封裝直接[安裝指南](sql-server-linux-setup.md)。
-
-| 封裝 | 封裝版本 | 下載 |
-|-----|-----|-----|
-| Red Hat RPM 套件 | 14.0.304.138-1 | [mssql 伺服器引擎 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server/mssql-server-14.0.304.138-1.x86_64.rpm)</br>[mssql-伺服器-ha 高可用性 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server/mssql-server-ha-14.0.304.138-1.x86_64.rpm)</br>[mssql-伺服器-fts 全文檢索搜尋 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server/mssql-server-fts-14.0.304.138-1.x86_64.rpm) | 
-| SLES RPM 套件 | 14.0.304.138-1 | [mssql 伺服器引擎 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server/mssql-server-14.0.304.138-1.x86_64.rpm)</br>[mssql-伺服器-ha 高可用性 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server/mssql-server-ha-14.0.304.138-1.x86_64.rpm)</br>[mssql-伺服器-fts 全文檢索搜尋 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server/mssql-server-fts-14.0.304.138-1.x86_64.rpm) | 
-| Ubuntu 16.04 Debian 封裝 | 14.0.304.138-1 | [mssql 伺服器引擎 Debian 封裝](https://packages.microsoft.com/ubuntu/16.04/mssql-server/pool/main/m/mssql-server/mssql-server_14.0.304.138-1_amd64.deb)</br>[mssql-伺服器-ha 高可用性 Debian 封裝](https://packages.microsoft.com/ubuntu/16.04/mssql-server/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.304.138-1_amd64.deb)</br>[mssql-伺服器-fts 全文檢索搜尋 Debian 封裝](https://packages.microsoft.com/ubuntu/16.04/mssql-server/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.304.138-1_amd64.deb) |
-| Ubuntu 16.10 Debian 封裝 | 14.0.304.138-1 | [mssql 伺服器引擎 Debian 封裝](https://packages.microsoft.com/ubuntu/16.10/mssql-server/pool/main/m/mssql-server/mssql-server_14.0.304.138-1_amd64.deb)</br>[mssql-伺服器-ha 高可用性 Debian 封裝](https://packages.microsoft.com/ubuntu/16.10/mssql-server/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.304.138-1_amd64.deb)</br>[mssql-伺服器-fts 全文檢索搜尋 Debian 封裝](https://packages.microsoft.com/ubuntu/16.10/mssql-server/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.304.138-1_amd64.deb) |
-
-### <a name="supported-client-tools"></a>支援的用戶端工具
-
-| 工具 | 最小版本 |
-|-----|-----|
-| [SQL Server Management Studio (SSMS) 適用於 Windows 的候選版 2](https://go.microsoft.com/fwlink/?linkid=840957) | 17.0 |
-| [SQL Server Data Tools for Visual Studio-候選版 2](https://go.microsoft.com/fwlink/?linkid=837939) | 17.0 |
-| [Visual Studio Code](https://code.visualstudio.com)與[mssql 延伸模組](https://aka.ms/mssql-marketplace) | 最新 (0.2.1) |
-
-> [!NOTE] 
-> 指定的 SQL Server Management Studio 和 SQL Server Data Tools 版本上方會發行候選項目，因此不建議在生產環境中使用。
-
-### <a name="unsupported-features-and-services"></a>不支援的功能和服務
-下列功能和服務並不適用於 Linux 這一次。 這些功能的支援會逐漸啟用期間每月更新的頻率，預覽計畫。
-
-| 區域 | 不支援的功能或服務 |
-|-----|-----|
-| **資料庫引擎** | 複寫 |
-| &nbsp; | Stretch DB |
-| &nbsp; | Polybase |
-| &nbsp; | Distributed Query |
-| &nbsp; | 系統擴充預存程序 （XP_CMDSHELL 等等） |
-| &nbsp; | Filetable |
-| &nbsp; | CLR 組件與 EXTERNAL_ACCESS 或 UNSAFE 權限設定 |
-| **高可用性** | 資料庫鏡像  |
-| **安全性** | Active Directory 驗證 |
-| &nbsp; | Windows 驗證 |
-| &nbsp; | 可延伸金鑰管理 |
-| &nbsp; | 使用使用者提供的憑證進行 SSL 或 TLS |
-| **服務** | SQL Server Agent |
-| &nbsp; | SQL Server Browser |
-| &nbsp; | SQL Server R 服務 |
-| &nbsp; | StreamInsight |
-| &nbsp; | Analysis Services |
-| &nbsp; | Reporting Services |
-| &nbsp; | Integration Services | 
-| &nbsp; | Data Quality Services |
-| &nbsp; | Master Data Services |
-
-### <a name="known-issues"></a>已知問題
-下列章節說明在 Linux 上的這一版的 SQL Server 2017 CTP 1.3 的已知的問題。
-
-#### <a name="general"></a>一般
-- SQL Server 安裝，需要 15 個字元或更少所在的主機名稱的長度。 
-
-    - **解析**: /etc/hosts 主機名稱中的將名稱變更為項目 15 個字元長或較少。
-
-- 無法執行命令`ALTER SERVICE MASTER KEY REGENERATE`。 沒有已知的錯誤會造成 SQL Server 變得不穩定。 如果您需要重新產生服務主要金鑰，您應該備份資料庫檔案，解除安裝和重新安裝 SQL Server，然後還原資料庫檔案一次。
-
-- 回溯時間手動將系統時間會導致 SQL Server 停止更新 SQL Server 中的內部系統時間。
-
-    - **解析**： 重新啟動 SQL Server。
-
-- 在 Linux 中的有些時區名稱不對應於 Windows 時區名稱。
-
-    - **解析**： 使用從 TZID 資料行中的時區名稱 ' 的對應： Windows' 區段資料表上的[Unicode.org 文件頁面](http://www.unicode.org/cldr/charts/latest/supplemental/zone_tzid.html)。
-
-- SQL Server 引擎預期終止 CR lf （Windows 樣式線條格式） 的文字檔案中的行。
-
-- 支援只有單一執行個體安裝。
-
-    - **解析**： 如果您想要在指定的主機上有多個執行個體，請考慮使用 Vm 或 Docker 容器。 
-
-- 所有記錄檔，以及錯誤記錄檔中會以 utf-16 編碼。
-
-- SQL Server 組態管理員無法連線到 SQL Server on Linux。
-
-- **CREATE ASSEMBLY**時嘗試使用的檔案將無法運作。 使用**FROM\<位元\>**方法而現在。 
-
-#### <a name="databases"></a>資料庫
-- 不支援變更 TempDB 資料和記錄檔的位置。
-
-- 無法移動系統資料庫使用 mssql conf 公用程式。
-
-- 還原 Windows 上的 SQL Server 備份資料庫時，您必須使用**WITH MOVE**子句在 TRANSACT-SQL 陳述式中的。
-
-- 在 Linux 上執行的 SQL Server 上不支援需要 Microsoft 分散式交易協調器服務的分散式交易。 SQL Server 到 SQL Server 支援分散式的交易。
-
-- 如果複本皆處於同步認可模式，alwayson 可用性群組在 Linux 中可能會受限於資料遺失。 請參閱 
- 
-   - [RHEL](sql-server-linux-availability-group-cluster-rhel.md)
-   - [SLES](sql-server-linux-availability-group-cluster-sles.md)
-   - [Ubuntu](sql-server-linux-availability-group-cluster-ubuntu.md)
-
-   
-#### <a name="full-text-search"></a>全文檢索搜尋
-- 並非所有的篩選是適用於此版本中，包括 Office 文件的篩選。 如需支援的篩選器的清單，請參閱[Linux 上安裝 SQL Server 全文檢索搜尋](sql-server-linux-setup-full-text-search.md#filters)。
-
-- 韓文的斷詞工具會採用幾秒鐘的時間載入，並產生錯誤第一次使用。 之後此初始錯誤，它應該會運作正常。
-
-#### <a name="in-memory-oltp"></a>In-Memory OLTP
-- 記憶體內部 OLTP 資料庫只能建立 /var/opt/mssql 目錄中。 如需詳細資訊，請瀏覽[記憶體中 OLTP 主題](sql-server-linux-performance-get-started.md#use-in-memory-oltp)。  
-
-#### <a name="sqlpackage"></a>SqlPackage
-- 透過 SqlPackage 必須指定檔案的絕對路徑。 使用相對路徑會對應下的檔案 」 /tmp/sqlpackage./ <code/> /系統/system32"資料夾。 
-
-    - **解析**： 使用絕對檔案路徑。
-
-- SqlPackage 顯示檔案的位置"c:\\"前置詞。
-
-#### <a name="sqlcmdbcp--odbc"></a>Sqlcmd/BCP 和 ODBC 
-- SQL Server 命令列工具 （mssql 工具） 和 ODBC 驅動程式 (msodbcsql) 相依於自訂 unixODBC 驅動程式管理員。 這會導致衝突，如果您先前安裝的 unixODBC 驅動程式管理員。 
-
-    - **解析**： 上 Ubuntu，將會自動解決衝突。 當系統提示您想要解除安裝現有的 unixODBC 驅動程式管理員，請輸入 'y'，然後繼續進行安裝。 在 RedHat，您必須手動移除現有的 unixODBC 驅動程式管理員使用`yum remove unixODBC`。 我們努力修正這項限制的 RHEL 和 SUSE，應該已更新為您很快。  
-    
-#### <a name="sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS)
-下列限制適用於 SSMS 連接到 SQL Server on Linux 的 Windows 上。
-
-- 維護計畫不支援。
-
-- 管理資料倉儲 (MDW) 和資料收集器，在 SSMS 中的不支援。 
-
-- SSMS UI 元件的 Windows 驗證或 Windows 事件記錄檔選項與 Linux 無法運作。 您仍然可以使用這些功能與其他選項，例如 SQL 登入。 
-
-- 尚不支援 SQL Server 代理程式。 因此，在 SSMS 中的 SQL Server 代理程式功能不適用於 Linux 目前。
-
-- 檔案瀏覽器受限於"c:\\"範圍內，可解析成/var/選擇/mssql/Linux 上。 若要使用其他路徑，產生 UI 作業的指令碼，取代 c:\\ Linux 路徑的路徑。 然後以手動方式在 SSMS 中執行指令碼。
-
-- 若要保留的記錄檔的數目不能修改。
-
-### <a name="next-steps"></a>後續的步驟
-
-若要開始，請參閱下列快速入門教學課程：
-
-- [Red Hat Enterprise Linux 上安裝](quickstart-install-connect-red-hat.md)
-- [SUSE Linux Enterprise Server 上安裝](quickstart-install-connect-suse.md)
-- [在 Ubuntu 上安裝](quickstart-install-connect-ubuntu.md)
-- [執行 docker](quickstart-install-connect-ubuntu.md)
-<br/>
-<br/>
-
-![分隔列圖形](./media/sql-server-linux-release-notes/seperationbar3.png)
-
-## <a name="a-idctp12-ctp-12-january-2017"></a><a id="ctp12">CTP 1.2 (第 2017 年 1 月)
-此版本的 SQL Server 引擎版本是 14.0.200.24。
-
-### <a name="supported-platforms"></a>支援的平台 
-
-| 平台 | 檔案系統 | 安裝指南 |
-|-----|-----|-----|
-| Red Hat Enterprise Linux 7.3 工作站、 伺服器和桌面 | XFS 或 EXT4 | [安裝指南](quickstart-install-connect-red-hat.md) | 
-| SUSE Enterprise Linux Server v12 SP2 | EXT4 | [安裝指南](quickstart-install-connect-suse.md) |
-| Ubuntu 16.04LTS 和 16.10 | EXT4 | [安裝指南](quickstart-install-connect-ubuntu.md) | 
-| Docker 引擎 1.8 + Windows、 Mac 或 Linux 上 | 不適用 | [安裝指南](quickstart-install-connect-docker.md) | 
-
-> [!NOTE] 
-> 您需要至少 3.25 GB 的記憶體來執行 SQL Server on Linux。
-> SQL Server 引擎只被測試這一次最多為 256 GB 的記憶體。
-
-### <a name="package-details"></a>封裝詳細資料
-下表中會列出套件詳細資料及針對 RPM 和 Debian 封裝的下載位置。 如果您使用中的步驟，請注意，您不需要下載這些封裝直接[安裝指南](sql-server-linux-setup.md)。
-
-| 封裝 | 封裝版本 | 下載 |
-|-----|-----|-----|
-| RPM 套件 | 14.0.200.24-2 | [mssql 伺服器 14.0.200.24-2 引擎 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server/mssql-server-14.0.200.24-2.x86_64.rpm)</br>[mssql 伺服器 14.0.200.24-2 高可用性 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server/mssql-server-ha-14.0.200.24-2.x86_64.rpm) | 
-| Debian 封裝 | 14.0.200.24-2 | [mssql server 14.0.200.24-2 引擎 Debian 封裝](https://packages.microsoft.com/ubuntu/16.04/mssql-server/pool/main/m/mssql-server/mssql-server_14.0.200.24-2_amd64.deb) |
-
-### <a name="supported-client-tools"></a>支援的用戶端工具
-
-| 工具 | 最小版本 |
-|-----|-----|
-| [SQL Server Management Studio (SSMS) 適用於 Windows 的候選版 1](https://go.microsoft.com/fwlink/?LinkID=835608) | 17.0 |
-| [SQL Server Data Tools for Visual Studio-候選版 1](https://go.microsoft.com/fwlink/?LinkID=835150) | 17.0 |
-| [Visual Studio Code](https://code.visualstudio.com)與[mssql 延伸模組](https://aka.ms/mssql-marketplace) | 最新 (0.2) |
-
-> [!NOTE] 
-> 指定的 SQL Server Management Studio 和 SQL Server Data Tools 版本上方會發行候選項目，因此不建議在生產環境中使用。
-
-### <a name="unsupported-features-and-services"></a>不支援的功能和服務
-下列功能和服務並不適用於 Linux 這一次。 這些功能的支援會逐漸啟用期間每月更新的頻率，預覽計畫。
-
-| 區域 | 不支援的功能或服務 |
-|-----|-----|
-| **資料庫引擎** | 全文檢索搜尋 |
-| &nbsp; | 複寫 |
-| &nbsp; | Stretch DB |
-| &nbsp; | Polybase |
-| &nbsp; | Distributed Query |
-| &nbsp; | 系統擴充預存程序 （XP_CMDSHELL 等等） |
-| &nbsp; | Filetable |
-| &nbsp; | CLR 組件與 EXTERNAL_ACCESS 或 UNSAFE 權限設定 |
-| **高可用性** | AlwaysOn 可用性群組 |
-| &nbsp; | 資料庫鏡像  |
-| **安全性** | Active Directory 驗證 |
-| &nbsp; | Windows 驗證 |
-| &nbsp; | 可延伸金鑰管理 |
-| &nbsp; | 使用使用者提供的憑證進行 SSL 或 TLS |
-| **服務** | SQL Server Agent |
-| &nbsp; | SQL Server Browser |
-| &nbsp; | SQL Server R 服務 |
-| &nbsp; | StreamInsight |
-| &nbsp; | Analysis Services |
-| &nbsp; | Reporting Services |
-| &nbsp; | Integration Services | 
-| &nbsp; | Data Quality Services |
-| &nbsp; | Master Data Services |
-
-### <a name="known-issues"></a>已知問題
-下列章節說明在 Linux 上的這一版的 SQL Server 2017 CTP 1.2 的已知的問題。
-
-#### <a name="general"></a>一般
-- SQL Server 安裝，需要 15 個字元或更少所在的主機名稱的長度。 
-
-    - **解析**: /etc/hosts 主機名稱中的將名稱變更為項目 15 個字元長或較少。
-
-- 無法執行命令`ALTER SERVICE MASTER KEY REGENERATE`。 沒有已知的錯誤會造成 SQL Server 變得不穩定。 如果您需要重新產生服務主要金鑰，您應該備份資料庫檔案，解除安裝和重新安裝 SQL Server，然後還原資料庫檔案一次。
-
-- 從 ocf:sql:fci 變成 ocf:mssql:fci SQL 資源的資源名稱。 設定共用的磁碟容錯移轉叢集，您可以找到更多詳細[這裡](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-shared-disk-cluster-red-hat-7-configure)。
-
-- 回溯時間手動將系統時間會導致 SQL Server 停止更新 SQL Server 中的內部系統時間。
-
-    - **解析**： 重新啟動 SQL Server。
-
-- 在 Linux 中的有些時區名稱不對應於 Windows 時區名稱。
-
-    - **解析**： 使用從 TZID 資料行中的時區名稱 ' 的對應： Windows' 區段資料表上的[Unicode.org 文件頁面](http://www.unicode.org/cldr/charts/latest/supplemental/zone_tzid.html)。
-
-- SQL Server 引擎預期終止 CR lf （Windows 樣式線條格式） 的文字檔案中的行。
-
-- 支援只有單一執行個體安裝。
-
-    - **解析**： 如果您想要在指定的主機上有多個執行個體，請考慮使用 Vm 或 Docker 容器。 
-
-- 所有記錄檔，以及錯誤記錄檔中會以 utf-16 編碼。
-
-- SQL Server 組態管理員無法連線到 SQL Server on Linux。
-
-- **CREATE ASSEMBLY**時嘗試使用的檔案將無法運作。 使用**FROM\<位元\>**方法而現在。 
-
-#### <a name="databases"></a>資料庫
-- 不支援變更 TempDB 資料和記錄檔的位置。
-
-- 無法移動系統資料庫使用 mssql conf 公用程式。
-
-- 還原 Windows 上的 SQL Server 備份資料庫時，您必須使用**WITH MOVE**子句在 TRANSACT-SQL 陳述式中的。
-
-- 在 Linux 上執行的 SQL Server 上不支援需要 Microsoft 分散式交易協調器服務的分散式交易。 SQL Server 到 SQL Server 支援分散式的交易。
-
-#### <a name="in-memory-oltp"></a>In-Memory OLTP
-- 記憶體內部 OLTP 資料庫只能建立 /var/opt/mssql 目錄中。 這些資料庫也必須以"c:\\"標記法時參考。 如需詳細資訊，請瀏覽[記憶體中 OLTP 主題](sql-server-linux-performance-get-started.md#use-in-memory-oltp)。  
-
-#### <a name="sqlpackage"></a>SqlPackage
-- 透過 SqlPackage 必須指定檔案的絕對路徑。 使用相對路徑會對應 」 / tmp/sqlpackage 下檔案。\<程式碼 \> /系統/system32"資料夾。 
-
-    - **解析**： 使用絕對檔案路徑。
-
-- SqlPackage 顯示檔案的位置"c:\\"前置詞。
-
-#### <a name="sqlcmdbcp--odbc"></a>Sqlcmd/BCP 和 ODBC 
-- 如果您有較舊版本的 SQL Server 命令列工具 （mssql 工具） 和 ODBC 驅動程式 (msodbcsql)，您可能已安裝自訂的 unixODBC 驅動程式管理員 (unixODBC utf16)。 這可能會造成潛在的衝突，因為我們無法再使用自訂的驅動程式管理員。 
-
-    - **解析**： 在 Ubuntu 和 SLES，將會自動解決衝突。 當系統提示您想要解除安裝現有的 unixODBC 驅動程式管理員，請輸入 'y'，然後繼續進行安裝。 在 RedHat，您必須手動移除現有的 unixODBC 驅動程式管理員使用`yum remove unixODBC-utf16 unixODBC-utf16-devel`，然後重試安裝。
-    
-#### <a name="sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS)
-下列限制適用於 SSMS 連接到 SQL Server on Linux 的 Windows 上。
-
-- 維護計畫不支援。
-
-- 管理資料倉儲 (MDW) 和資料收集器，在 SSMS 中的不支援。 
-
-- SSMS UI 元件的 Windows 驗證或 Windows 事件記錄檔選項與 Linux 無法運作。 您仍然可以使用這些功能與其他選項，例如 SQL 登入。 
-
-- 尚不支援 SQL Server 代理程式。 因此，在 SSMS 中的 SQL Server 代理程式功能不適用於 Linux 目前。
-
-- 檔案瀏覽器受限於"c:\\"範圍內，可解析成/var/選擇/mssql/Linux 上。 若要使用其他路徑，產生 UI 作業的指令碼，取代 c:\\ Linux 路徑的路徑。 然後以手動方式在 SSMS 中執行指令碼。
-
-### <a name="next-steps"></a>後續的步驟
-
-若要開始，請參閱下列快速入門教學課程：
-
-- [Red Hat Enterprise Linux 上安裝](quickstart-install-connect-red-hat.md)
-- [SUSE Linux Enterprise Server 上安裝](quickstart-install-connect-suse.md)
-- [在 Ubuntu 上安裝](quickstart-install-connect-ubuntu.md)
-- [執行 docker](quickstart-install-connect-ubuntu.md)
-<br/>
-<br/>
-
-![分隔列圖形](./media/sql-server-linux-release-notes/seperationbar3.png)
-
-## <a name="a-idctp11-ctp-11-december-2016"></a><a id="ctp11">CTP 1.1 (年 12 月 2016)
-此版本的 SQL Server 引擎版本是 14.0.100.187。
-
-### <a name="supported-platforms"></a>支援的平台 
-
-| 平台 | 檔案系統 | 安裝指南 |
-|-----|-----|-----|
-| Red Hat Enterprise Linux 工作站、 伺服器和桌面 | XFS 或 EXT4 | [安裝指南](quickstart-install-connect-red-hat.md) | 
-| Ubuntu 16.04LTS 和 16.10 | EXT4 | [安裝指南](quickstart-install-connect-ubuntu.md) | 
-| Docker 引擎 1.8 + Windows、 Mac 或 Linux 上 | 不適用 | [安裝指南](quickstart-install-connect-docker.md) | 
-
-> [!NOTE] 
-> 您需要至少 3.25 GB 的記憶體來執行 SQL Server on Linux。
-> SQL Server 引擎只被測試這一次最多為 256 GB 的記憶體。
-
-### <a name="package-details"></a>封裝詳細資料
-下表中會列出套件詳細資料及針對 RPM 和 Debian 封裝的下載位置。 如果您使用中的步驟，請注意，您不需要下載這些封裝直接[安裝指南](sql-server-linux-setup.md)。
-
-| 封裝 | 封裝版本 | 下載 |
-|-----|-----|-----|
-| RPM 套件 | 14.0.100.187-1 | [mssql 伺服器 14.0.100.187-1 引擎 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server/mssql-server-14.0.100.187-1.x86_64.rpm)</br>[mssql 伺服器 14.0.100.187-1 高可用性 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server/mssql-server-ha-14.0.100.187-1.x86_64.rpm) | 
-| Debian 封裝 | 14.0.100.187-1 | [mssql server 14.0.100.187-1 引擎 Debian 封裝](https://packages.microsoft.com/ubuntu/16.04/mssql-server/pool/main/m/mssql-server/mssql-server_14.0.100.187-1_amd64.deb) |
-
-### <a name="supported-client-tools"></a>支援的用戶端工具
-
-| 工具 | 最小版本 |
-|-----|-----|
-| [SQL Server Management Studio (SSMS) 適用於 Windows 的候選版 1](https://go.microsoft.com/fwlink/?LinkID=835608) | 17.0 |
-| [SQL Server Data Tools for Visual Studio-候選版 1](https://go.microsoft.com/fwlink/?LinkID=835150) | 17.0 |
-| [Visual Studio Code](https://code.visualstudio.com)與[mssql 延伸模組](https://aka.ms/mssql-marketplace) | 最新 (0.2) |
-
-> [!NOTE] 
-> 指定的 SQL Server Management Studio 和 SQL Server Data Tools 版本上方會發行候選項目，因此不建議在生產環境中使用。
-
-### <a name="unsupported-features-and-services"></a>不支援的功能和服務
-下列功能和服務並不適用於 Linux 這一次。 這些功能的支援會逐漸啟用期間每月更新的頻率，預覽計畫。
-
-| 區域 | 不支援的功能或服務 |
-|-----|-----|
-| **資料庫引擎** | 全文檢索搜尋 |
-| &nbsp; | 複寫 |
-| &nbsp; | Stretch DB |
-| &nbsp; | Polybase |
-| &nbsp; | Distributed Query |
-| &nbsp; | 系統擴充預存程序 （XP_CMDSHELL 等等） |
-| &nbsp; | Filetable |
-| &nbsp; | CLR 組件與 EXTERNAL_ACCESS 或 UNSAFE 權限設定 |
-| **高可用性** | AlwaysOn 可用性群組 |
-| &nbsp; | 資料庫鏡像  |
-| **安全性** | Active Directory 驗證 |
-| &nbsp; | Windows 驗證 |
-| &nbsp; | 可延伸金鑰管理 |
-| &nbsp; | 使用使用者提供的憑證進行 SSL 或 TLS |
-| **服務** | SQL Server Agent |
-| &nbsp; | SQL Server Browser |
-| &nbsp; | SQL Server R 服務 |
-| &nbsp; | StreamInsight |
-| &nbsp; | Analysis Services |
-| &nbsp; | Reporting Services |
-| &nbsp; | Integration Services | 
-| &nbsp; | Data Quality Services |
-| &nbsp; | Master Data Services |
-
-### <a name="known-issues"></a>已知問題
-下列章節說明在 Linux 上的這一版的 SQL Server 2017 CTP 1.1 的已知的問題。
-
-#### <a name="general"></a>一般
-- SQL Server 安裝，需要 15 個字元或更少所在的主機名稱的長度。 
-
-    - **解析**: /etc/hosts 主機名稱中的將名稱變更為項目 15 個字元長或較少。
-
-- 無法執行命令`ALTER SERVICE MASTER KEY REGENERATE`。 沒有已知的錯誤會造成 SQL Server 變得不穩定。 如果您需要重新產生服務主要金鑰，您應該備份資料庫檔案，解除安裝和重新安裝 SQL Server，然後還原資料庫檔案一次。
-
-- 從 ocf:sql:fci 變成 ocf:mssql:fci SQL 資源的資源名稱。 設定共用的磁碟容錯移轉叢集，您可以找到更多詳細[這裡](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-shared-disk-cluster-red-hat-7-configure)。
-
-- 回溯時間手動將系統時間會導致 SQL Server 停止更新 SQL Server 中的內部系統時間。
-
-    - **解析**： 重新啟動 SQL Server。
-
-- 在 Linux 中的有些時區名稱不對應於 Windows 時區名稱。
-
-    - **解析**： 使用從 TZID 資料行中的時區名稱 ' 的對應： Windows' 區段資料表上的[Unicode.org 文件頁面](http://www.unicode.org/cldr/charts/latest/supplemental/zone_tzid.html)。
-
-- SQL Server 引擎預期終止 CR lf （Windows 樣式線條格式） 的文字檔案中的行。
-
-- 支援只有單一執行個體安裝。
-
-    - **解析**： 如果您想要在指定的主機上有多個執行個體，請考慮使用 Vm 或 Docker 容器。 
-
-- 所有記錄檔，以及錯誤記錄檔中會以 utf-16 編碼。
-
-- SQL Server 組態管理員無法連線到 SQL Server on Linux。
-
-- **CREATE ASSEMBLY**時嘗試使用的檔案將無法運作。 使用**FROM\<位元\>**方法而現在。 
-
-#### <a name="databases"></a>資料庫
-- 不支援變更 TempDB 資料和記錄檔的位置。
-
-- 無法移動系統資料庫使用 mssql conf 公用程式。
-
-- 還原 Windows 上的 SQL Server 備份資料庫時，您必須使用**WITH MOVE**子句在 TRANSACT-SQL 陳述式中的。
-
-- 在 Linux 上執行的 SQL Server 上不支援需要 Microsoft 分散式交易協調器服務的分散式交易。 SQL Server 到 SQL Server 支援分散式的交易。
-
-#### <a name="in-memory-oltp"></a>In-Memory OLTP
-- 記憶體內部 OLTP 資料庫只能建立 /var/opt/mssql 目錄中。 這些資料庫也必須以"c:\"所參考的標記法。 如需詳細資訊，請瀏覽[記憶體中 OLTP 主題](sql-server-linux-performance-get-started.md#use-in-memory-oltp)。  
-
-#### <a name="sqlpackage"></a>SqlPackage
-- 透過 SqlPackage 必須指定檔案的絕對路徑。 使用相對路徑會對應 」 / tmp/sqlpackage 下檔案。\<程式碼 \> /系統/system32"資料夾。 
-
-    - **解析**： 使用絕對檔案路徑。
-
-- SqlPackage 顯示檔案的位置"c:\\"前置詞。
-
-#### <a name="sqlcmdbcp--odbc"></a>Sqlcmd/BCP 和 ODBC 
-- SQL Server 命令列工具 （mssql 工具） 和 ODBC 驅動程式 (msodbcsql) 相依於自訂 unixODBC 驅動程式管理員。 這會導致衝突，如果您先前安裝的 unixODBC 驅動程式管理員。 
-
-    - **解析**： 上 Ubuntu，將會自動解決衝突。 當系統提示您想要解除安裝現有的 unixODBC 驅動程式管理員，請輸入 'y'，然後繼續進行安裝。 在 RedHat，您必須手動移除現有的 unixODBC 驅動程式管理員使用`yum remove unixODBC`。 我們努力修正這項限制的 RHEL 和 SUSE，應該已更新為您很快。  
-    
-#### <a name="sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS)
-下列限制適用於 SSMS 連接到 SQL Server on Linux 的 Windows 上。
-
-- 維護計畫不支援。
-
-- 管理資料倉儲 (MDW) 和資料收集器，在 SSMS 中的不支援。 
-
-- SSMS UI 元件的 Windows 驗證或 Windows 事件記錄檔選項與 Linux 無法運作。 您仍然可以使用這些功能與其他選項，例如 SQL 登入。 
-
-- 尚不支援 SQL Server 代理程式。 因此，在 SSMS 中的 SQL Server 代理程式功能不適用於 Linux 目前。
-
-- 檔案瀏覽器受限於"c:\\"範圍內，可解析成/var/選擇/mssql/Linux 上。 若要使用其他路徑，產生 UI 作業的指令碼，取代 c:\\ Linux 路徑的路徑。 然後以手動方式在 SSMS 中執行指令碼。
-
-v
-
-![分隔列圖形](./media/sql-server-linux-release-notes/seperationbar3.png)
-
-## <a name="a-idctp10-ctp-10-november-2016"></a><a id="ctp10">CTP 1.0 (11 月版 2016)
-此版本的 SQL Server 引擎版本是 14.0.1.246。
-
-### <a name="supported-platforms"></a>支援的平台 
-
-| 平台 | 檔案系統 | 安裝指南 |
-|-----|-----|-----|
-| Red Hat Enterprise Linux 7.2 工作站、 伺服器和桌面 | XFS 或 EXT4 | [安裝指南](quickstart-install-connect-red-hat.md) | 
-| Ubuntu 16.04LTS | EXT4 | [安裝指南](quickstart-install-connect-ubuntu.md) | 
-| Docker 引擎 1.8 + Windows、 Mac 或 Linux 上 | 不適用 | [安裝指南](quickstart-install-connect-docker.md) | 
-
-> [!NOTE] 
-> 您需要至少 3.25 GB 的記憶體來執行 SQL Server on Linux。
-> SQL Server 引擎只被測試這一次最多為 256 GB 的記憶體。
-
-### <a name="package-details"></a>封裝詳細資料
-下表中會列出套件詳細資料及針對 RPM 和 Debian 封裝的下載位置。 如果您使用中的步驟，請注意，您不需要下載這些封裝直接[安裝指南](sql-server-linux-setup.md)。
-
-| 封裝 | 封裝版本 | 下載 |
-|-----|-----|-----|
-| RPM 套件 | 14.0.1.246-6 | [mssql 伺服器 14.0.1.246-6 引擎 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server/mssql-server-14.0.1.246-6.x86_64.rpm)</br>[mssql 伺服器 14.0.1.246-6 高可用性 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server/mssql-server-ha-14.0.1.246-6.x86_64.rpm) | 
-| Debian 封裝 | 14.0.1.246-6 | [mssql server 14.0.1.246-6 引擎 Debian 封裝](https://packages.microsoft.com/ubuntu/16.04/mssql-server/pool/main/m/mssql-server/mssql-server_14.0.1.246-6_amd64.deb) |
-
-### <a name="supported-client-tools"></a>支援的用戶端工具
-
-| 工具 | 最小版本 |
-|-----|-----|
-| [SQL Server Management Studio (SSMS) 適用於 Windows 的候選版 1](https://go.microsoft.com/fwlink/?LinkID=835608) | 17.0 |
-| [SQL Server Data Tools for Visual Studio-候選版 1](https://go.microsoft.com/fwlink/?LinkID=835150) | 17.0 |
-| [Visual Studio Code](https://code.visualstudio.com)與[mssql 延伸模組](https://aka.ms/mssql-marketplace) | 最新 (0.1.5) |
-
-> [!NOTE] 
-> 指定的 SQL Server Management Studio 和 SQL Server Data Tools 版本上方會發行候選項目，因此不建議在生產環境中使用。
-
-### <a name="unsupported-features-and-services"></a>不支援的功能和服務
-下列功能和服務並不適用於 Linux 這一次。 這些功能的支援會逐漸啟用期間每月更新的頻率，預覽計畫。
-
-| 區域 | 不支援的功能或服務 |
-|-----|-----|
-| **資料庫引擎** | 全文檢索搜尋 |
-| &nbsp; | 複寫 |
-| &nbsp; | Stretch DB |
-| &nbsp; | Polybase |
-| &nbsp; | Distributed Query |
-| &nbsp; | 系統擴充預存程序 （XP_CMDSHELL 等等） |
-| &nbsp; | Filetable |
-| &nbsp; | CLR 組件與 EXTERNAL_ACCESS 或 UNSAFE 權限設定 |
-| **高可用性** | AlwaysOn 可用性群組 |
-| &nbsp; | 資料庫鏡像  |
-| **安全性** | Active Directory 驗證 |
-| &nbsp; | Windows 驗證 |
-| &nbsp; | 可延伸金鑰管理 |
-| &nbsp; | 使用使用者提供的憑證進行 SSL 或 TLS |
-| **服務** | SQL Server Agent |
-| &nbsp; | SQL Server Browser |
-| &nbsp; | SQL Server R 服務 |
-| &nbsp; | StreamInsight |
-| &nbsp; | Analysis Services |
-| &nbsp; | Reporting Services |
-| &nbsp; | Integration Services | 
-| &nbsp; | Data Quality Services |
-| &nbsp; | Master Data Services |
-
-### <a name="known-issues"></a>已知問題
-下列章節說明在 Linux 上的這一版的 SQL Server 2017 CTP1 的已知的問題。
-
-#### <a name="general"></a>一般
-- SQL Server 安裝，需要 15 個字元或更少所在的主機名稱的長度。 
-
-    - **解析**: /etc/hosts 主機名稱中的將名稱變更為項目 15 個字元長或較少。
-
-- 回溯時間手動將系統時間會導致 SQL Server 停止更新 SQL Server 中的內部系統時間。
-
-    - **解析**： 重新啟動 SQL Server。
-
-- 在 Linux 中的有些時區名稱不對應於 Windows 時區名稱。
-
-    - **解析**： 使用從 TZID 資料行中的時區名稱 ' 的對應： Windows' 區段資料表上的[Unicode.org 文件頁面](http://www.unicode.org/cldr/charts/latest/supplemental/zone_tzid.html)。
-
-- SQL Server 引擎預期終止 CR lf （Windows 樣式線條格式） 的文字檔案中的行。
-
-- 支援只有單一執行個體安裝。
-
-    - **解析**： 如果您想要在指定的主機上有多個執行個體，請考慮使用 Vm 或 Docker 容器。 
-
-- 所有記錄檔，以及錯誤記錄檔中會以 utf-16 編碼。
-
-- SQL Server 組態管理員無法連線到 SQL Server on Linux。
-
-- **CREATE ASSEMBLY**時嘗試使用的檔案將無法運作。 使用**FROM\<位元\>**方法而現在。
-
-#### <a name="databases"></a>資料庫
-- 不支援變更 TempDB 資料和記錄檔的位置。
-
-- 無法移動系統資料庫使用 mssql conf 公用程式。
-
-- 還原 Windows 上的 SQL Server 備份資料庫時，您必須使用**WITH MOVE**子句在 TRANSACT-SQL 陳述式中的。
-
-- 在 Linux 上執行的 SQL Server 上不支援需要 Microsoft 分散式交易協調器服務的分散式交易。 SQL Server 到 SQL Server 支援分散式的交易。
-
-#### <a name="in-memory-oltp"></a>In-Memory OLTP
-- 記憶體內部 OLTP 資料庫只能建立 /var/opt/mssql 目錄中。 這些資料庫也必須以"c:\\"標記法時參考。 如需詳細資訊，請瀏覽[記憶體中 OLTP 主題](sql-server-linux-performance-get-started.md#use-in-memory-oltp)。  
-
-#### <a name="sqlpackage"></a>SqlPackage
-- 透過 SqlPackage 需要指定檔案的絕對路徑。 使用相對路徑會對應 」 / tmp/sqlpackage 下檔案。\<程式碼 \> /系統/system32"資料夾。 
-
-    - **解析**： 使用絕對檔案路徑。
-
-- SqlPackage 顯示檔案的位置"c:\\"前置詞。
-
-#### <a name="sqlcmdbcp--odbc"></a>Sqlcmd/BCP 和 ODBC 
-- SQL Server 命令列工具 （mssql 工具） 和 ODBC 驅動程式 (msodbcsql) 相依於自訂 unixODBC 驅動程式管理員。 這會導致衝突，如果您先前安裝的 unixODBC 驅動程式管理員。 
-
-    - **解析**： 上 Ubuntu，將會自動解決衝突。 當系統提示您想要解除安裝現有的 unixODBC 驅動程式管理員，請輸入 'y'，然後繼續進行安裝。 在 RedHat，您必須手動移除現有的 unixODBC 驅動程式管理員使用`yum remove unixODBC`。 我們努力修正這項限制的 RHEL 和 SUSE，應該已更新為您很快。  
-    
-#### <a name="sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS)
-下列限制適用於 SSMS 連接到 SQL Server on Linux 的 Windows 上。
-
-- 維護計畫不支援。
-
-- 管理資料倉儲 (MDW) 和資料收集器，在 SSMS 中的不支援。 
-
-- SSMS UI 元件的 Windows 驗證或 Windows 事件記錄檔選項與 Linux 無法運作。 您仍然可以使用這些功能與其他選項，例如 SQL 登入。 
-
-- 尚不支援 SQL Server 代理程式。 因此，在 SSMS 中的 SQL Server 代理程式功能不適用於 Linux 目前。
-
-- 檔案瀏覽器受限於"c:\\"範圍內，可解析成/var/選擇/mssql/Linux 上。 若要使用其他路徑，產生 UI 作業的指令碼，取代 c:\\ Linux 路徑的路徑。 然後以手動方式在 SSMS 中執行指令碼。
 
 ### <a name="next-steps"></a>後續的步驟
 

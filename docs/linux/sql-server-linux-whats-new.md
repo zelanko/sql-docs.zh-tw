@@ -1,19 +1,19 @@
 ---
-title: "在 Linux 上的 SQL Server 2017 RC1 的新功能 |Microsoft 文件"
+title: "新功能 SQL Server on Linux 2017 |Microsoft 文件"
 description: "本主題中，反白顯示目前版本的 SQL Server 2017 Linux 上的新功能。"
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 08/02/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 622e0ed2242ddc454028962c63b5760a6baad38a
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 381dcb3e22f123bfa07c2b387598d3429398e21f
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="whats-new-for-sql-server-2017-on-linux"></a>在 Linux 上的 SQL Server 2017 的新功能
@@ -21,6 +21,13 @@ ms.lasthandoff: 09/21/2017
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 本主題說明在 Linux 上執行的 SQL Server 2017 的新功能。
+
+## <a name="ga"></a>GA
+
+一般 Availaiblity (GA) 版本包含下列增強功能和修正程式：
+
+- 現在可以在 NFS 上裝載資料庫檔案。 這會修正問題的 NFS 共用磁碟案例中，掛接遠端儲存體容器的平台，及掛接 Docker Windows 的資料夾。
+- 其他的其他錯誤修正和增強功能。
 
 ## <a name="rc2"></a>RC2
 
@@ -131,7 +138,7 @@ CTP 1.1 版本包含下列增強功能和修正程式：
 [Service Pack 1 的改良功能](https://blogs.msdn.microsoft.com/sqlreleaseservices/sql-server-2016-service-pack-1-sp1-released/)CTP1.1 本版：
 - CLR、 Filestream/Filetable、 記憶體和查詢存放區物件複製的資料庫。
 - **建立**或**ALTER**運算子可程式性物件。
-- 新**USE 提示**查詢選項，以提供查詢處理器的提示。 深入了解：[查詢提示](/sql-docs/docs/t-sql/queries/hints-transact-sql-query)。
+- 新**USE 提示**查詢選項，以提供查詢處理器的提示。 深入了解：[查詢提示](../t-sql/queries/hints-transact-sql-query.md)。
 - SQL 服務帳戶現在可以透過程式設計方式識別啟用鎖定的分頁記憶體和立即檔案初始化的權限。
 - TempDB 檔案計數、 檔案大小和檔案成長設定支援。
 - Showplan XML 中的診斷延伸。

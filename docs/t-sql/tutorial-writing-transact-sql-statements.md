@@ -19,10 +19,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 71703ec9a931538f5865f0a2792cb704d6969d8c
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 509334a16689e2aa8fda308fcb7ca20b24badb93
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="tutorial-writing-transact-sql-statements"></a>教學課程：撰寫國際性通用的 Transact-SQL 陳述式
@@ -54,7 +54,7 @@ ms.lasthandoff: 09/21/2017
   
 -   任何版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。  
   
--  [SQL Server Management Studio](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms)  
+-  [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)  
   
 
  

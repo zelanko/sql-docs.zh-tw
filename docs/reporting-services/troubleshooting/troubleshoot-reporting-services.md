@@ -16,16 +16,16 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 8768b00b0bfcd64fae9db63350b94ab4edce2c20
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: a48df35dacab91324966eff5c26609c00ecfbfe6
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="troubleshoot-reporting-services"></a>針對 Reporting Services 進行疑難排解
   檢閱本節中的主題，以便識別及疑難排解 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的問題。  
 
-![小型檔案資料夾圖示](../../reporting-services/troubleshooting/media/filefolder-small.png)**疑難排解 Reporting Services 的問題   **  
+![小型檔案資料夾圖示](../../reporting-services/troubleshooting/media/filefolder-small.png)**疑難排解 Reporting Services 的問題**   
 + [Reporting Services 報表問題疑難排解](../../reporting-services/troubleshooting/troubleshoot-reporting-services-report-issues.md)    
 +  [為 Reporting Services 訂閱與傳遞疑難排解](../../reporting-services/troubleshooting/troubleshoot-reporting-services-subscriptions-and-delivery.md)  
 
@@ -39,14 +39,14 @@ ms.lasthandoff: 09/21/2017
 
 +  [在原生模式報表伺服器上疑難排解發行或檢視報表](../../reporting-services/troubleshooting/troubleshoot-publishing-or-viewing-a-report-on-a-native-mode-report-server.md)  
 
-+  [伺服器與搭配 Reporting serivces 為資料庫連接問題疑難排解](/sql-docs/docs/reporting-services/troubleshooting/troubleshoot-server-and-database-connection-problems-with-reporting-services)  
++  [伺服器與搭配 Reporting serivces 為資料庫連接問題疑難排解](troubleshoot-server-and-database-connection-problems-with-reporting-services.md)  
 
- ![小型檔案資料夾圖示](../../reporting-services/troubleshooting/media/filefolder-small.png)**錯誤和事件參考   **  
+ ![小型檔案資料夾圖示](../../reporting-services/troubleshooting/media/filefolder-small.png)**錯誤和事件參考**   
  + [錯誤和事件參考 &#40;Reporting Services&#41;](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
 
 +  [Reporting Services 錯誤的原因和解決方案](../../reporting-services/troubleshooting/cause-and-resolution-of-reporting-services-errors.md)  
 
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [Reporting Services 記錄檔和來源](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
  [開啟 SharePoint 追蹤記錄檔 &#40; Reporting Services 事件ULS &#41;](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
 

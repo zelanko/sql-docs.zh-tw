@@ -4,16 +4,16 @@ description: "本主題描述如何在 Linux 上安裝 SQL Server 全文檢索�
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 07/17/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 67f11f3e21151dba66127b6a86fe0b82a245ad23
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 1f19074764820bddf2cc2a0e8fe4204120a5041d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>Linux 上安裝 SQL Server 全文檢索搜尋
@@ -86,7 +86,7 @@ sudo zypper update mssql-server-fts
 
 ## <a name="supported-languages"></a>支援的語言
 
-全文檢索搜尋會使用[斷詞工具](/sql-docs/docs/relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search)，以決定如何識別個別單字語言為基礎。 您可以藉由查詢來取得一份已註冊的斷詞工具**sys.fulltext_languages**目錄檢視。 針對下列語言的斷詞工具會隨 SQL Server 2017 RC2:
+全文檢索搜尋會使用[斷詞工具](../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)，以決定如何識別個別單字語言為基礎。 您可以藉由查詢來取得一份已註冊的斷詞工具**sys.fulltext_languages**目錄檢視。 針對下列語言的斷詞工具會隨 SQL Server 2017:
 
 | 語言 | 語言識別碼 |
 |---|---|
@@ -146,9 +146,9 @@ sudo zypper update mssql-server-fts
 
 ## <a id="filters"></a>篩選器
 
-全文檢索搜尋也可以搭配儲存在二進位檔案中的文字。 但在此情況下，必須已安裝的篩選器處理檔案。 如需篩選器的詳細資訊，請參閱[設定及管理搜尋的篩選](/sql-docs/docs/relational-databases/search/configure-and-manage-filters-for-search)。
+全文檢索搜尋也可以搭配儲存在二進位檔案中的文字。 但在此情況下，必須已安裝的篩選器處理檔案。 如需篩選器的詳細資訊，請參閱[設定及管理搜尋的篩選](../relational-databases/search/configure-and-manage-filters-for-search.md)。
 
-您可以看到一份已安裝篩選器藉由呼叫**sp_help_fulltext_system_components 'filter'**。 SQL Server 2017 rc2，會安裝下列的篩選器：
+您可以看到一份已安裝篩選器藉由呼叫**sp_help_fulltext_system_components 'filter'**。 針對 SQL Server 2017，會安裝下列的篩選器：
 
 | 元件名稱 | 類別識別碼 | Version |
 |---|---|---|
@@ -258,37 +258,28 @@ sudo zypper update mssql-server-fts
 |.xml | 41B9BE05-B3AF-460C-BF0B-2CDD44A093B1 | 12.0.9735.0 |
 
 ## <a name="semantic-search"></a>語意搜尋
-[語意搜尋](/sql-docs/docs/relational-databases/search/semantic-search-sql-server)來擷取和索引統計上相關的全文檢索搜尋功能為基礎*主要片語*。 這可讓您查詢資料庫中的文件中的意義。 這也有助於識別相似的文件。
+[語意搜尋](../relational-databases/search/semantic-search-sql-server.md)來擷取和索引統計上相關的全文檢索搜尋功能為基礎*主要片語*。 這可讓您查詢資料庫中的文件中的意義。 這也有助於識別相似的文件。
 
-若要使用語意搜尋，您必須先下載並附加[語義語言統計資料庫](/sql-docs/docs/relational-databases/search/install-and-configure-semantic-search)。
+若要使用語意搜尋，您必須先還原語義語言統計資料庫到您的電腦。
 
-1. 在 Windows 電腦、[下載。語意語言統計資料庫的 MSI 檔案](https://www.microsoft.com/download/details.aspx?id=54277)。
+1. 使用工具，例如[sqlcmd](sql-server-linux-setup-tools.md)、 Linux SQL Server 執行個體上執行下列 TRANSACT-SQL 命令。 此命令會還原語言統計資料庫。
 
-    > [!NOTE]
-    > 在此時間是資料庫的下載。MSI 檔案，因此一部 Windows 電腦需要此步驟。
+   ```sql
+   RESTORE DATABASE [semanticsdb] FROM
+   DISK = N'/opt/mssql/misc/semanticsdb.bak' WITH FILE = 1,
+   MOVE N'semanticsdb' TO N'/var/opt/mssql/data/semanticsDB.mdf',
+   MOVE N'semanticsdb_log' TO N'/var/opt/mssql/data/semanticsdb_log.ldf', NOUNLOAD, STATS = 5
+   GO
+   ```
 
-2. 執行。要擷取資料庫和記錄檔的 MSI 檔案。
+   > [!NOTE]
+   > 必要時，更新先前的 RESTORE 命令，來調整您的組態中的路徑。
 
-3. 將資料庫和記錄檔移至您的 Linux SQL Server 電腦。
+1. 執行下列 TRANSACT-SQL 命令註冊語意語言統計資料庫。
 
-    > [!TIP]
-    > 如需有關如何將檔案從 Windows 移至 Linux 指引，請參閱[檔案傳輸至 Linux](sql-server-linux-migrate-restore-database.md#scp)。
-
-4. 若要附加的語言統計資料庫 Linux SQL Server 執行個體上執行下列 TRANSACT-SQL 命令。
-
-    ```tsql
-    CREATE DATABASE semanticsdb  
-            ON ( FILENAME = N'var/opt/mssql/data/semanticsdb.mdf' )  
-            LOG ON ( FILENAME = N'var/opt/mssql/data/semanticsdb_log.ldf' )  
-            FOR ATTACH;  
-    GO  
-    ```
-
-5. 執行下列 TRANSACT-SQL 命令註冊語意語言統計資料庫。
-
-    ```tsql
+    ```sql
     EXEC sp_fulltext_semantic_register_language_statistics_db @dbname = N'semanticsdb';  
-    GO  
+    GO
     ```
 
 ## <a name="next-steps"></a>後續的步驟

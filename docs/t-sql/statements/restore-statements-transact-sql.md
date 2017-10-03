@@ -44,10 +44,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: ea93e3764e23cd34662abd693908c6218b30e977
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: e233de35336d5246c439c5dfb7b934cd2469b92c
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="restore-statements-transact-sql"></a>RESTORE 陳述式 (TRANSACT-SQL)
@@ -680,7 +680,7 @@ RESTORE DATABASE Sales
 ## <a name="much-more-information"></a>更多的資訊!!  
  - [SQL Server 資料庫的備份與還原](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md) 
 - [備份和還原系統資料庫 (SQL Server)](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md) 
- - [Restore a Database Backup Using SSMS](/sql-docs/docs/relational-databases/backup-restore/restore-a-database-backup-using-ssms)
+ - [Restore a Database Backup Using SSMS](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)
  - [備份並還原全文檢索目錄與索引](../../relational-databases/search/back-up-and-restore-full-text-catalogs-and-indexes.md)   
  - [備份及還原複寫的資料庫](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)   
  - [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   

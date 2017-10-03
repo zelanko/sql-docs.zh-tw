@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: f76aa1cfbcad38e383abca8a79005b3851767e2a
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 0c021c5f17266bfbba65d3d364136dd0d61d74f3
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="dtexec-utility"></a>dtexec 公用程式
@@ -217,11 +217,11 @@ dtexec /option [value] [/option [value]]...
   
      如需 **/ConsoleLog** 選項的若干範例，請參閱＜ **備註** ＞一節。  
   
--   **/D[ts](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages)。  
+--   **/D [ts]** *package_path*: （選擇性）。 從 SSIS 封裝存放區中載入封裝。 儲存在 SSIS 封裝存放區中的封裝是使用舊版封裝部署模型所部署。 若要使用專案部署模型，執行部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器的封裝，請使用 **/ISServer** 選項。 如需有關封裝和專案部署模型的詳細資訊，請參閱＜ [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx)＞。  
   
-     *package_path* 引數指定 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝的相對路徑，從 SSIS 封裝存放區的根目錄開始，並包括 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝的名稱。 如果 *package_path* 引數中指定的路徑或檔案名稱包含空格，必須將 *package_path* 引數括以引號。  
+     The *package_path* argument specifies the relative path of the [!INCLUDE[ssIS](../../includes/ssis-md.md)] package, starting at the root of the SSIS Package Store, and includes the name of the [!INCLUDE[ssIS](../../includes/ssis-md.md)] package. If the path or file name specified in the *package_path* argument contains a space, you must put quotation marks around the *package_path* argument.  
   
-     **/DTS** 選項不可與 **/File** 或 **/SQL** 選項並用。 若指定了多個選項， **dtexec** 便會失敗。  
+     The **/DTS** option cannot be used together with the **/File** or **/SQL** option. If multiple options are specified, **dtexec** fails.  
   
 -   **/De[crypt]**  *密碼*：(選擇性)。 設定載入含密碼加密的封裝時，所用的解密密碼。  
   
@@ -262,10 +262,9 @@ dtexec /option [value] [/option [value]]...
      您同時使用了 **/Env[Reference]** 選項以及 **/ISServer** 與 **/Server** 選項。  
   
      此參數是由 SQL Server Agent 所使用。  
-  
--   * * /F[ile](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages)  
-  
-     *filespec* 引數指定封裝的路徑和檔案名稱。 您可以指定路徑為通用命名慣例 (UNC) 路徑或本機路徑。 如果 *filespec* 引數中指定的路徑或檔案名稱包含空格，必須將 *filespec* 引數括以引號。  
+  --   **/F [ile]** *filespec*: （選擇性）。 載入儲存在檔案系統中的封裝。 儲存在檔案系統中的封裝是使用舊版封裝部署模型所部署。 若要使用專案部署模型，執行部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器的封裝，請使用 **/ISServer** 選項。 如需封裝和專案部署模型的詳細資訊，請參閱＜ [Deployment of Projects and Packages](deploy-integration-services-ssis-projects-and-packages.md)＞。  
+
+  *filespec* 引數指定封裝的路徑和檔案名稱。 您可以指定路徑為通用命名慣例 (UNC) 路徑或本機路徑。 如果 *filespec* 引數中指定的路徑或檔案名稱包含空格，必須將 *filespec* 引數括以引號。  
   
      **/File** 選項不可與 **/DTS** 或 **/SQL** 選項並用。 若指定了多個選項， **dtexec** 便會失敗。  
   
@@ -413,21 +412,21 @@ dtexec /option [value] [/option [value]]...
   
      指定 **/ISServer** 選項時，需要 **/Ser[ver]** 選項。  
   
--   * * /SQ[L](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages)。  
+--   **/SQ [L]** *package_path*： 載入儲存在封裝[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請在**msdb**資料庫。 儲存在 **msdb** 資料庫中的封裝是使用封裝部署模型所部署。 若要使用專案部署模型，執行部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器的封裝，請使用 **/ISServer** 選項。 如需有關封裝和專案部署模型的詳細資訊，請參閱＜ [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx)＞。   
   
-     *package_path* 引數指定要擷取的封裝名稱。 如果路徑包含資料夾，則其結尾應為反斜線 ("\\")。 *Package_path* 值可以加上引號。 如果 *package_path* 引數中指定的路徑或檔案名稱包含空格，必須將 *package_path* 引數括以引號。  
+     The *package_path* argument specifies the name of the package to retrieve. If folders are included in the path, they are terminated with backslashes ("\\"). The *package_path* value can be quoted. If the path or file name specified in the *package_path* argument contains a space, you must put quotation marks around the *package_path* argument.  
   
-     **/User**、 **/Password**和 **/Server** 選項可以與 **/SQL** 選項一起使用。  
+     You can use the **/User**, **/Password**, and **/Server** options together with the **/SQL** option.  
   
-     若省略 **/User** 選項，將會使用 Windows 驗證存取封裝。 若使用 **/User** 選項，指定的 **/User** 登入名稱將會與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證建立關聯。  
+     If you omit the **/User** option, Windows Authentication is used to access the package. If you use the **/User** option, the **/User** login name specified is associated with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication.  
   
-     **/Password** 選項只能與 **/User** 選項一起使用。 若使用 **/Password** 選項，將會使用所提供的使用者名稱與密碼資訊存取封裝。 若省略 **/Password** 選項，將會使用空白密碼。  
+     The **/Password** option is used only together with the **/User** option. If you use the **/Password** option, the package is accessed with the user name and password information provided. If you omit the **/Password** option, a blank password is used.  
   
-    > **重要！！** [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+    > **IMPORTANT!!** [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
-     如果省略 **/Server** 選項，將假設使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的預設本機執行個體。  
+     If the **/Server** option is omitted, the default local instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is assumed.  
   
-     **/SQL** 選項不可與 **/DTS** 或 **/File** 選項並用。 若指定了多個選項， **dtexec** 便會失敗。  
+     The **/SQL** option cannot be used together with the **/DTS** or **/File** option. If multiple options are specified, **dtexec** fails.  
   
 -   **/Su[m]**：(選擇性)。 顯示包含下一個元件將接收之列數的累加計數器。  
   

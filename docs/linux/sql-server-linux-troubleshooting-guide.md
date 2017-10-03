@@ -10,17 +10,17 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 21b7d94bcf15e1ae2d99dd44f4b0030929b92111
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: fdaa3435a26bc96a0dfbd3b1043e92f800ab9915
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>疑難排解 SQL Server on Linux
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-本文件說明如何疑難排解 Microsoft SQL Server on Linux 或 Docker 容器中執行。 疑難排解 SQL Server on Linux，請記住此私用的預覽版本的限制。 您可以找到這些中項目的清單[版本資訊](sql-server-linux-release-notes.md)。
+本文件說明如何疑難排解 Microsoft SQL Server on Linux 或 Docker 容器中執行。 疑難排解 SQL Server on Linux，請務必檢閱支援的功能與中的已知的限制[SQL Server on Linux 版本資訊](sql-server-linux-release-notes.md)。
 
 ## <a id="connection"></a>連接錯誤進行疑難排解
 如果您無法連線到您的 Linux SQL Server，有幾件事檢查。 
@@ -38,11 +38,11 @@ ms.lasthandoff: 08/02/2017
    >   ```bash
    >   sudo ip addr show eth0 | grep "inet"
    >   ```
-   > Azure Vm 與這項技術的例外狀況。 對於 Azure Vm， [Azure 入口網站中，找到的 VM 的公用 IP](sql-server-linux-azure-virtual-machine.md#connect)。
+   > Azure Vm 與這項技術的例外狀況。 對於 Azure Vm， [Azure 入口網站中，找到的 VM 的公用 IP](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine#connect)。
 
 - 如果適用的話，請檢查您已開啟防火牆上的 SQL Server 連接埠 （預設值 1433年）。
 
-- 對於 Azure Vm，請確認您已[網路安全性群組規則的預設 SQL Server 連接埠](sql-server-linux-azure-virtual-machine.md#remote)。
+- 對於 Azure Vm，請確認您已[網路安全性群組規則的預設 SQL Server 連接埠](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine#remote)。
 
 - 請確認的使用者名稱和密碼不包含任何拼字錯誤或額外的空格或不正確的大小寫。
 

@@ -20,10 +20,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 009c30b7f14fe10099257c97a5a310aa41df71b0
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 2cb08ab16291e87a25eb2596f75f4d01616a80db
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>封裝的 SQL Server Agent 作業
@@ -188,8 +188,8 @@ ms.lasthandoff: 09/21/2017
     > [!TIP]  
     >  當您為排程命名時，請考慮使用唯一的描述性名稱，以便更容易區分此排程與其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 排程。  
 
-## <a name="see-also"></a>請參閱＜  
- [執行專案和封裝](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages)  
+## <a name="see-also"></a>另請參閱  
+ [執行專案和封裝](deploy-integration-services-ssis-projects-and-packages.md)  
 
 ## <a name="external-resources"></a>外部資源  
   

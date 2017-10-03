@@ -1,6 +1,6 @@
 ---
 title: "拿起，然後移至雲端的 SQL Server Integration Services 工作負載 |Microsoft 文件"
-ms.date: 09/25/2017
+ms.date: 09/28/2017
 ms.topic: article
 ms.prod: sql-server-2017
 ms.technology:
@@ -9,10 +9,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: dbe6f832d4af55ddd15e12fba17a4da490fe19ae
-ms.openlocfilehash: 3d22689e440b2a498f76d43ede74ad3f6f756796
+ms.sourcegitcommit: e76675099ab290d29231d434eb74e92b613185b7
+ms.openlocfilehash: a3693b84ed02583cd47921fbfda84c7df9559b68
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
+ms.lasthandoff: 09/29/2017
 
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>拿起，然後移至雲端的 SQL Server Integration Services 工作負載
@@ -48,14 +48,20 @@ Azure Data Factory 會裝載在 Azure 上的 SSIS 封裝的執行階段引擎。
 
 Data Factory 也支援其他類型的整合執行階段。 若要了解有關 SSIS IR 和整合執行階段的其他類型的詳細資訊，請參閱[Azure Data Factory 中的整合執行階段](/azure/data-factory/concepts-integration-runtime.md)。
 
-## <a name="package-features-on-azure"></a>在 Azure 上的封裝功能
+## <a name="prerequisites"></a>必要條件
+本主題中所述的功能需要 SQL Server Data Tools (SSDT) 版本 17.2 或更新版本，但不是需要 SQL Server 2017 或 SQL Server 2016。 當您將封裝部署至 Azure 時，套件部署精靈 」 一律為最新的封裝格式升級的封裝。
+
+如需在 Azure 中的必要條件的詳細資訊，請參閱[增益及 shift SQL Server Integration Services (SSIS) 封裝至 Azure](/azure/data-factory/quickstart-lift-shift-ssis-packages-powershell.md)。
+
+## <a name="ssis-features-on-azure"></a>在 Azure 上的 SSIS 功能
+
 當您佈建到主控 SSISDB 的 SQL Database 的執行個體時，會安裝 Azure Feature Pack，for SSIS，以及存取可轉散發套件。 這些元件提供連線至 Excel 和 Access 檔案和各種不同的 Azure 資料來源。 您無法安裝適用於 SSIS 的協力廠商元件，這一次。
 
-您繼續設計和建置封裝內部在 SSDT 中，或在 Visual Studio 中有了 SSDT 安裝。
+主控 SSISDB 的 SQL 資料庫的名稱會變成您部署和管理封裝，SSDT 和 SSMS-從時所要使用的四部分名稱的第一個部分`<sql_database_name>.database.windows.net`。
 
 您必須使用專案部署模型，而非封裝部署模型，您將部署到 Azure SQL Database 上的 SSISDB 的專案。
 
-主控 SSISDB 的 SQL 資料庫的名稱會變成您部署和管理封裝，SSDT 和 SSMS-從時所要使用的四部分名稱的第一個部分`<sql_database_name>.database.windows.net`。
+您繼續設計和建置封裝內部在 SSDT 中，或在 Visual Studio 中有了 SSDT 安裝。
 
 如需如何從使用 Windows 驗證雲端至內部部署資料來源連接資訊，請參閱[連接到內部部署資料來源使用 Windows 驗證](ssis-azure-connect-with-windows-auth.md)。
 

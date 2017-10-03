@@ -48,10 +48,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 68aa9ada24b5bcf1dedf7ff8d60d5fad31d68126
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: f61b6469e40ba303cbff14db9bde15161b225ca7
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
@@ -251,7 +251,7 @@ PARTITION
    
 **適用於**: SQL Server （從 SQL Server 2008 開始） 和 Azure SQL Database。  
   
- SORT_IN_TEMPDB、 MAXDOP 和 DATA_COMPRESSION 是重建單一分割區時，可以指定的選項 (資料分割 = * n *)。 不能在單一分割區重建作業中指定 XML 索引。  
+ SORT_IN_TEMPDB、 MAXDOP 和 DATA_COMPRESSION 是重建單一分割區時，可以指定的選項 (資料分割 =  *n* )。 不能在單一分割區重建作業中指定 XML 索引。  
   
  DISABLE  
  將索引標示為已停用，無法供 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 使用。 任何索引都可以停用。 已停用之索引的索引定義會保留在系統目錄中，但不含基礎索引資料。 停用叢集索引可以防止使用者存取基礎資料表資料。 若要啟用索引，請使用 ALTER INDEX REBUILD 或 CREATE INDEX WITH DROP_EXISTING。 如需詳細資訊，請參閱[停用索引和條件約束](../../relational-databases/indexes/disable-indexes-and-constraints.md)和[Enable Indexes and Constraints](../../relational-databases/indexes/enable-indexes-and-constraints.md)。  
@@ -356,7 +356,7 @@ PAD_INDEX = { ON | OFF }
   
  如需詳細資訊，請參閱[索引的 SORT_IN_TEMPDB 選項](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md)。  
   
- IGNORE_DUP_KEY ** = ** {ON |OFF}  
+ IGNORE_DUP_KEY  **=**  {ON |OFF}  
  指定當插入作業嘗試將重複的索引鍵值插入唯一索引時所產生的錯誤回應。 IGNORE_DUP_KEY 選項只適用於在建立或重建索引之後所發生的插入作業。 預設值為 OFF。  
   
  ON  
@@ -371,7 +371,7 @@ PAD_INDEX = { ON | OFF }
   
  在與舊版本相容的語法中，WITH IGNORE_DUP_KEY 相當於 WITH IGNORE_DUP_KEY = ON。  
   
- STATISTICS_NORECOMPUTE ** = ** {ON |OFF}  
+ STATISTICS_NORECOMPUTE  **=**  {ON |OFF}  
  指定是否要重新計算散發統計資料。 預設值為 OFF。  
   
  ON  
@@ -407,7 +407,7 @@ PAD_INDEX = { ON | OFF }
  
 **適用於**: SQL Server （從 SQL Server 2014 開始） 和 Azure SQL Database。  
   
- 線上** = ** {ON |**OFF** }\<在套用至 rebuild_index_option 時 >  
+ 線上 **=**  {ON |**OFF** }\<在套用至 rebuild_index_option 時 >  
  指定在索引作業期間，查詢和資料修改是否能夠使用基礎資料表和相關聯的索引。 預設值為 OFF。  
   
  如果是 XML 索引或空間索引，則只支援 ONLINE = OFF，而如果將 ONLINE 設定為 ON，將會引發錯誤。  
@@ -433,7 +433,7 @@ PAD_INDEX = { ON | OFF }
 
 -  在 V12 之前的 SQL Database 和 SQL Server 2012 之前, 的 SQL Server 不允許`ONLINE`選項的叢集的索引建立或重建作業，當基底資料表包含**varchar （max)**或**varbinary （max)**資料行。
 
-可繼續** = ** {ON |**OFF**}
+可繼續 **=**  {ON |**OFF**}
 
 **適用於**： 開始使用 SQL Server 2017 和 Azure SQL Database （功能處於公開預覽狀態）  
 
@@ -443,13 +443,13 @@ PAD_INDEX = { ON | OFF }
 
  關閉索引作業會繼續。
 
-MAX_DURATION ** = ** *時間*[**分鐘**] 搭配使用**可繼續 = ON** (需要**ONLINE = ON**).
+MAX_DURATION  **=**  *時間*[**分鐘**] 搭配使用**可繼續 = ON** (需要**ONLINE = ON**).
  
 **適用於**： 開始使用 SQL Server 2017 和 Azure SQL Database （功能處於公開預覽狀態）  
 
 表示時間 （以分鐘為單位的整數值） 可繼續線上索引作業之前在暫停執行。 
 
-ALLOW_ROW_LOCKS ** = ** { **ON** |OFF}  
+ALLOW_ROW_LOCKS  **=**  { **ON** |OFF}  
  
 **適用於**: SQL Server （從 SQL Server 2008 開始） 和 Azure SQL Database。  
   
@@ -461,7 +461,7 @@ ALLOW_ROW_LOCKS ** = ** { **ON** |OFF}
  OFF  
  不使用資料列鎖定。  
   
-ALLOW_PAGE_LOCKS ** = ** { **ON** |OFF}  
+ALLOW_PAGE_LOCKS  **=**  { **ON** |OFF}  
   
 **適用於**: SQL Server （從 SQL Server 2008 開始） 和 Azure SQL Database。
   
@@ -476,7 +476,7 @@ ALLOW_PAGE_LOCKS ** = ** { **ON** |OFF}
 > [!NOTE]
 >  當 ALLOW_PAGE_LOCKS 設為 OFF 時，無法重新組織索引。  
   
- MAXDOP ** = ** max_degree_of_parallelism  
+ MAXDOP  **=**  max_degree_of_parallelism  
  
 **適用於**: SQL Server （從 SQL Server 2008 開始） 和 Azure SQL Database。  
   
@@ -501,7 +501,7 @@ ALLOW_PAGE_LOCKS ** = ** { **ON** |OFF}
 > [!NOTE]
 >  並非 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的每個版本都無法使用平行索引作業。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本支援的功能清單，請參閱 [SQL Server 2016 版本和支援的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
- COMPRESSION_DELAY ** = ** { **0** |*持續時間 [分鐘]* }  
+ COMPRESSION_DELAY  **=**  { **0** |*持續時間 [分鐘]* }  
  這項功能可從 SQL Server 2016 開始  
   
  針對以磁碟為基礎的資料表，延遲指定分鐘的時間必須保持在關閉狀態的差異資料列群組的最小數目差異資料列群組之前中 SQL Server 可以壓縮到壓縮的資料列群組。 因為磁碟基礎的資料表不會追蹤插入和更新時間在個別的資料列，SQL Server 適用於延遲差異資料列群組處於已關閉狀態。  
@@ -564,7 +564,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
 );  
 ```  
   
- 線上** = ** {ON |**OFF** }\<在套用至 single_partition_rebuild_index_option 時 >  
+ 線上 **=**  {ON |**OFF** }\<在套用至 single_partition_rebuild_index_option 時 >  
  指定線上或離線是否重建索引或基礎資料表的索引資料分割。 如果**重建**線上執行 (**ON**) 這個資料表中的資料可供索引作業期間的查詢和資料修改。  預設值是**OFF**。  
   
  ON  
@@ -580,7 +580,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  
 **適用於**: SQL Server （從 SQL Server 2014 開始） 和 Azure SQL Database。
   
- 線上索引重建必須等候這個資料表的封鎖作業。 **WAIT_AT_LOW_PRIORITY**表示線上索引重建作業將會等候低優先權鎖定，讓其他作業，線上索引建立作業等候時繼續進行。 省略**WAIT AT LOW PRIORITY**選項相當於`WAIT_AT_LOW_PRIORITY (MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`。 如需詳細資訊，請參閱[WAIT_AT_LOW_PRIORITY](/sql-docs/docs/t-sql/statements/alter-index-transact-sql)。 
+ 線上索引重建必須等候這個資料表的封鎖作業。 **WAIT_AT_LOW_PRIORITY**表示線上索引重建作業將會等候低優先權鎖定，讓其他作業，線上索引建立作業等候時繼續進行。 省略**WAIT AT LOW PRIORITY**選項相當於`WAIT_AT_LOW_PRIORITY (MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`。 如需詳細資訊，請參閱[WAIT_AT_LOW_PRIORITY](alter-index-transact-sql.md)。 
   
  MAX_DURATION =*時間*[**分鐘**]  
   
@@ -618,7 +618,7 @@ MAX_DURATION 搭配**可繼續 = ON**
   
 **適用於**： 開始使用 SQL Server 2017 和 Azure SQL Database （功能處於公開預覽狀態）
   
- 等候這個資料表的封鎖作業已暫停之後繼續線上索引重建。 **WAIT_AT_LOW_PRIORITY**表示線上索引重建作業將會等候低優先權鎖定，讓其他作業，線上索引建立作業等候時繼續進行。 省略**WAIT AT LOW PRIORITY**選項相當於`WAIT_AT_LOW_PRIORITY (MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`。 如需詳細資訊，請參閱[WAIT_AT_LOW_PRIORITY](/sql-docs/docs/t-sql/statements/alter-index-transact-sql)。 
+ 等候這個資料表的封鎖作業已暫停之後繼續線上索引重建。 **WAIT_AT_LOW_PRIORITY**表示線上索引重建作業將會等候低優先權鎖定，讓其他作業，線上索引建立作業等候時繼續進行。 省略**WAIT AT LOW PRIORITY**選項相當於`WAIT_AT_LOW_PRIORITY (MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`。 如需詳細資訊，請參閱[WAIT_AT_LOW_PRIORITY](alter-index-transact-sql.md)。 
 
 
 PAUSE

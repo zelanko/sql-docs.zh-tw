@@ -1,7 +1,7 @@
 ---
 title: "什麼 &#39; 在 2017年的 SQL Server Integration Services 中的新 s |Microsoft 文件"
 ms.custom: 
-ms.date: 07/11/2017
+ms.date: 09/28/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 8cd44c8b384019418a2a913e5f8d13d82120eac2
-ms.openlocfilehash: 87b850c06bea8992ad6869c56acdecd45fa289f4
+ms.sourcegitcommit: e76675099ab290d29231d434eb74e92b613185b7
+ms.openlocfilehash: 63aba0f64bc63a3a86e5aa07245375938acdf6e4
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/29/2017
+ms.lasthandoff: 09/29/2017
 
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2017"></a>什麼 & #39 的新 SQL Server 2017 中的 Integration Services
@@ -29,13 +29,23 @@ ms.lasthandoff: 08/29/2017
 
 ## <a name="highlights-of-this-release"></a>此版本中的反白顯示
 
-在 Integration Services 中的 SQL Server 2017，以下是最重要的新功能。
+以下是最重要的新功能的 SQL Server 2017 中的 Integration Services。
 
 -   **向外延展**。將 SSIS 封裝執行更輕鬆地分散到多個背景工作電腦，以及管理執行和背景工作從單一的主要電腦。 如需詳細資訊，請參閱[Integration Services 向外](../integration-services/scale-out/integration-services-ssis-scale-out.md)。
 
 -   **在 Linux 上的 integration Services**。 在 Linux 電腦上執行 SSIS 封裝。 如需詳細資訊，請參閱[擷取、 轉換及載入資料，SSIS 與 Linux 上的](../linux/sql-server-linux-migrate-ssis.md)。
 
 -   **改善連線性**。 連接到 Microsoft Dynamics AX Online 和 Microsoft Dynamics CRM Online OData 摘要與更新的 OData 元件。 
+
+## <a name="new-in-azure-data-factory"></a>Azure Data Factory 的新功能
+
+Azure Data Factory 2017 年 9 月的第 2 版的公用預覽，您現在可以執行下列動作：
+-   將封裝部署到 Azure SQL Database 上 SSIS 目錄資料庫 (SSISDB)。
+-   執行封裝部署至 Azure 上 Azure SSIS 整合執行階段，Azure Data Factory 第 2 版的元件。
+
+如需詳細資訊，請參閱[增益和 shift SQL Server Integration Services 工作負載至雲端](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)。
+
+這些新功能需要 SQL Server Data Tools (SSDT) 版本 17.2 或更新版本，但不是需要 SQL Server 2017 或 SQL Server 2016。 當您將封裝部署至 Azure 時，套件部署精靈 」 一律為最新的封裝格式升級的封裝。
 
 ## <a name="new-in-the-azure-feature-pack"></a>新的 Azure Feature pack
 

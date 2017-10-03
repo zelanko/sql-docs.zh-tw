@@ -18,15 +18,15 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 5cebde92184ac69093222d57eb91750fa13e369c
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: a5ffcfafc29f0b741d8e6ada0d50ef6f94fecc7f
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="working-with-inputs-and-outputs-r-in-sql-quickstart"></a>使用輸入和輸出 (SQL 快速入門中的 R)
 
-當您想要在 SQL Server 中執行 R 程式碼時，您必須包裝 R 指令碼中的系統預存程序， [sp_execute_external_script](/sql-docs/docs/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)。 這個預存程序是用來在 SQL Server 內容中啟動 R 執行階段，這會將資料傳遞到 R，安全地管理 R 使用者工作階段，並將任何結果傳回用戶端。
+當您想要在 SQL Server 中執行 R 程式碼時，您必須包裝 R 指令碼中的系統預存程序， [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)。 這個預存程序是用來在 SQL Server 內容中啟動 R 執行階段，這會將資料傳遞到 R，安全地管理 R 使用者工作階段，並將任何結果傳回用戶端。
 
 ## <a name="bkmk_SSMSBasics"></a>建立一些簡單的測試資料
 

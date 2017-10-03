@@ -15,14 +15,20 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: 8c43a46a3fef09fa2c8b3510b541cd545e438313
-ms.openlocfilehash: 0dfba12d3b2d06677817bb087f11cbd922ca390d
+ms.sourcegitcommit: e3c781449a8f7a1b236508cd21b8c00ff175774f
+ms.openlocfilehash: cc5ee3189d00f7124754769b12f5d3cb1b8156b5
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/22/2017
+ms.lasthandoff: 09/30/2017
 
 ---
 # <a name="what39s-new-in-ssma-for-oracle-oracletosql"></a>什麼 &#39; s SSMA for Oracle (OracleToSQL) 的新功能
 本主題列出每個版本中的 Oracle 變更 SSMA。  
+
+## <a name="ssma-v76"></a>SSMA v7.6
+SSMA for Oracle 的 v7.6 版本已經過增強，改善品質和轉換的度量資訊的目標修正程式與 SQL Server 2017 （公開預覽狀態） 的支援。 支援在 Windows 和 Linux 上的 SQL Server 2017 是公開預覽狀態，而且不應該用於實際執行移轉。
+
+> [!IMPORTANT]
+> SSMA v7.4 和更新版本，.Net 4.5.2 為安裝必要元件，而 32 位元版本的工具已停用。
 
 ## <a name="ssma-v75"></a>SSMA v7.5
 SSMA for Oracle 的 v7.5 版本包含下列變更：

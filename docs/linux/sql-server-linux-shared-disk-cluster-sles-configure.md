@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: e5ad1bdd-c054-4999-a5aa-00e74770b481
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 02cf781a1035326ad5073f6a6d3219e8a7d9c070
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 8e4f84fe50051d1d09c5057a04840cbf19c4d1b0
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="configure-sles-shared-disk-cluster-for-sql-server"></a>設定 SQL Server SLES 共用的磁碟叢集
@@ -24,10 +24,7 @@ ms.lasthandoff: 08/02/2017
 
 如需叢集設定、 資源代理程式的選項、 管理、 最佳做法和建議的詳細資訊，請參閱[SUSE Linux Enterprise 高可用性延伸 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html)。
 
-> [!NOTE]
-> 此時，不是與使用 Windows 上的 WSFC 為結合與 Pacemaker Linux 上的 SQL Server 的整合。 從 SQL、 內沒有存在叢集的認知，所有的協調流程外中，服務由 Pacemaker 控制做為獨立執行個體。 此外，虛擬網路名稱是屬於 WSFC、 沒有對等的 Pacemaker 中相同。 預期的是，@@servername和 sys.servers 返回節點名稱，而叢集 dmv sys.dm_os_cluster_nodes 並且 sys.dm_os_cluster_properties，不將任何記錄。 若要使用連接字串指向字串伺服器名稱並不會使用 IP，則必須註冊在他們的 DNS 伺服器 IP 用來建立所選的伺服器名稱與虛擬 IP 資源 （如下所述）。
-
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>必要條件
 
 若要完成以下的端對端案例中，您需要部署兩個節點叢集與另一部伺服器來設定 NFS 共用的兩部電腦。 下列步驟概述這些伺服器設定的方式。
 

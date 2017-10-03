@@ -16,10 +16,10 @@ ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: b26e8e92a00fd23441a0417daa15897bab48501c
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 036afa491ae8390c38520d7dff2e5c6cd0d1a419
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="database-catalog"></a>資料庫目錄
@@ -181,7 +181,7 @@ WideWorldImporters 會使用少量的結構描述，讓您很容易了解資料�
 
 ### <a name="integration-schema"></a>整合的結構描述
 
-ETL 程序會使用此結構描述中的預存程序。 取得所需的時間範圍的各種資料表所需的資料[ETL 封裝](/sql-docs/docs/sample/world-wide-importers/etl-workflow)。
+ETL 程序會使用此結構描述中的預存程序。 取得所需的時間範圍的各種資料表所需的資料[ETL 封裝](etl-workflow.md)。
 
 ### <a name="dataloadsimulation-schema"></a>DataLoadSimulation 結構描述
 

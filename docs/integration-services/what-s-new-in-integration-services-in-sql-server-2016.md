@@ -2,7 +2,7 @@
 title: "什麼 &#39; SQL Server 2016 中 Integration Services 中的新 s |Microsoft 文件"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 03/16/2017
+ms.date: 09/28/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -19,18 +19,28 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 82347011d4650d52cca30f43e87f7ba63eca9057
+ms.sourcegitcommit: e76675099ab290d29231d434eb74e92b613185b7
+ms.openlocfilehash: 084c6eeaf3b83df5435092f3fc424fb9c86ea446
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/29/2017
 
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>什麼 & #39 的新 SQL Server 2016 中 Integration Services
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
- 本主題說明功能已加入或更新 SQL Server 2016 中[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]。  
-  
-## <a name="improvements-grouped-by-category"></a>依類別分組的改進功能  
+本主題說明功能已加入或更新 SQL Server 2016 中[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]。 它也包含中新增或更新功能[Azure Feature Pack for Integration Services &#40;SSIS &#41;](../integration-services/azure-feature-pack-for-integration-services-ssis.md) SQL Server 2016 的時間範圍內。  
+
+## <a name="new-for-ssis-in-azure-data-factory"></a>新的 Azure Data Factory 中的 SSIS
+
+Azure Data Factory 2017 年 9 月的第 2 版的公用預覽，您現在可以執行下列動作：
+-   將封裝部署到 Azure SQL Database 上 SSIS 目錄資料庫 (SSISDB)。
+-   執行封裝部署至 Azure 上 Azure SSIS 整合執行階段，Azure Data Factory 第 2 版的元件。
+
+如需詳細資訊，請參閱[增益和 shift SQL Server Integration Services 工作負載至雲端](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)。
+
+這些新功能需要 SQL Server Data Tools (SSDT) 版本 17.2 或更新版本，但不是需要 SQL Server 2017 或 SQL Server 2016。 當您將封裝部署至 Azure 時，套件部署精靈 」 一律為最新的封裝格式升級的封裝。
+
+## <a name="2016-improvements-by-category"></a>依分類 2016年增強功能  
   
 -   **管理能力**  
   
@@ -154,7 +164,7 @@ ms.lasthandoff: 09/21/2017
  如需詳細資訊，請參閱[SSIS 目錄 &#40;SSISDB &#41;](../integration-services/service/ssis-catalog.md). 
 
 ####  <a name="AlwaysOn"></a> 支援 SSIS 目錄中的AlwaysOn  
- AlwaysOn 可用性群組功能是提供資料庫鏡像之企業級替代方案的高可用性與災害復原解決方案。 可用性群組支援一組可一起容錯移轉之離散化使用者資料庫的容錯移轉環境，也就是所謂的可用性資料庫。 如需詳細資訊，請參閱 [永遠開啟可用性群組](/sql-docs/docs/database-engine/availability-groups/windows/always-on-availability-groups-sql-server)。  
+ AlwaysOn 可用性群組功能是提供資料庫鏡像之企業級替代方案的高可用性與災害復原解決方案。 可用性群組支援一組可一起容錯移轉之離散化使用者資料庫的容錯移轉環境，也就是所謂的可用性資料庫。 如需詳細資訊，請參閱 [永遠開啟可用性群組](../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)。  
   
  在 SQL Server 2016 中，SSIS 會引進新功能，可讓您輕鬆部署到集中式 SSIS 目錄 （也就是 SSISDB 使用者資料庫）。 為了提供 SSISDB 資料庫及其內容的高可用性 (專案、封裝、執行記錄等)，您可以將 SSISDB 資料庫加入「永遠開啟」可用性群組，就像其他任何使用者資料庫。 發生容錯移轉時，其中一個次要節點會自動變成新的主要節點。  
   
@@ -313,7 +323,7 @@ ms.lasthandoff: 09/21/2017
 ### <a name="better-design-experience"></a>更好的設計體驗
 
 ####  <a name="OneDesigner"></a> SSIS 設計師中的多目標和多個版本支援  
- 您現在可以在適用於 Visual Studio 2015 的 SQL Server Data Tools &#40;SSDT&#41; 中使用 SSIS 設計師，來建立、維護和執行目標為 SQL Server 2016、SQL Server 2014 或 SQL Server 2012 的封裝。 若要取得 SSDT，請參閱 [下載最新的 SQL Server Data Tools](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt)。 
+ 您現在可以在適用於 Visual Studio 2015 的 SQL Server Data Tools &#40;SSDT&#41; 中使用 SSIS 設計師，來建立、維護和執行目標為 SQL Server 2016、SQL Server 2014 或 SQL Server 2012 的封裝。 若要取得 SSDT，請參閱 [下載最新的 SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md)。 
 
  在方案總管中，在 Integration Services 專案上按一下滑鼠右鍵，然後選取 [屬性]  以開啟專案的屬性頁。 在 [組態屬性]  的 [一般] 索引標籤中，選取 [TargetServerVersion]  屬性，然後選擇 SQL Server 2016、SQL Server 2014 或 SQL Server 2012。  
    

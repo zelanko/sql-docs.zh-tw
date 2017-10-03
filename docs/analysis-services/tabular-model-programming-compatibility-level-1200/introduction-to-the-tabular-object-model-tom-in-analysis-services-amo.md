@@ -16,10 +16,10 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 2f9e5d07831070ad69ccf23a3975fbdc19fa4c83
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: ab4bfb890124538878fd4d618dee05d393a4864c
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="introduction-to-the-tabular-object-model-tom-in-analysis-services-amo"></a>Analysis Services AMO 中表格式物件模型 (TOM) 簡介
@@ -55,11 +55,11 @@ TOM 建置 AMO 基礎結構，也適用於多維度和相容性層級低於 1200
 
 ### <a name="tom-and-xmla"></a>TOM 和 XMLA
 
-在線上，TOM 會使用 XMLA 通訊協定，通訊與 Analysis Services 伺服器，以及管理物件。 當管理非表格式物件時，會使用 TOM [ASSL](/sql-docs/docs/analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla)，Analysis Services 指令碼語言擴充功能的 XMLA。 當管理表格式物件，TOM 使用 SSAS 表格式通訊協定，也 XMLA 的延伸模組。 請參閱[MS-SSAS T SQL Server Analysis Services 表格式通訊協定文件](https://msdn.microsoft.com/library/mt719260.aspx)如需詳細資訊。
+在線上，TOM 會使用 XMLA 通訊協定，通訊與 Analysis Services 伺服器，以及管理物件。 當管理非表格式物件時，會使用 TOM [ASSL](../scripting/analysis-services-scripting-language-assl-for-xmla.md)，Analysis Services 指令碼語言擴充功能的 XMLA。 當管理表格式物件，TOM 使用 SSAS 表格式通訊協定，也 XMLA 的延伸模組。 請參閱[MS-SSAS T SQL Server Analysis Services 表格式通訊協定文件](https://msdn.microsoft.com/library/mt719260.aspx)如需詳細資訊。
 
 ### <a name="tom-and-json"></a>TOM 和 JSON
 
-表格式中繼資料，其中會結構化成 JSON 文件，都具有新命令和物件模型定義的語法透過表格式模型指令碼語言[TMSL](/sql-docs/docs/analysis-services/tabular-model-scripting-language-tmsl-reference)。 指令碼語言使用 JSON 要求和回應的主體。
+表格式中繼資料，其中會結構化成 JSON 文件，都具有新命令和物件模型定義的語法透過表格式模型指令碼語言[TMSL](../tabular-model-scripting-language-tmsl-reference.md)。 指令碼語言使用 JSON 要求和回應的主體。
 
 雖然 TMSL 和 TOM 公開 （expose） 相同的物件 (**資料表**，**資料行**等等) 和相同的作業 (**建立**，**刪除**， **重新整理**)，TOM 不會使用 （它會使用 MS SSAS 表格式的通訊協定，如先前所述） 在網路上的 TMSL。
 

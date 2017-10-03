@@ -4,23 +4,23 @@ description: "本快速入門教學課程會示範如何在 SUSE Linux Enterpris
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 09/20/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
 ms.translationtype: MT
-ms.sourcegitcommit: f684f0168e57c5cd727af6488b2460eeaead100c
-ms.openlocfilehash: 57be01c49643bafada701849a32b532679513c71
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: b39414933684939c69bb3fd80d4e8aba21efa824
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>安裝 SQL Server 和 SUSE Linux Enterprise Server 上建立資料庫
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-在本快速入門教學課程中，您先安裝 SQL Server 2017 RC2 SUSE Linux Enterprise Server (SLES) v12 SP2 上。 然後以連接**sqlcmd**來建立您的第一個資料庫和執行查詢。
+在本快速入門教學課程中，您先安裝 SQL Server 2017 SUSE Linux Enterprise Server (SLES) v12 SP2 上。 然後以連接**sqlcmd**來建立您的第一個資料庫和執行查詢。
 
 > [!TIP]
 > 本教學課程需要使用者輸入和網際網路連線。 如果您有興趣[自動](sql-server-linux-setup.md#unattended)或[離線](sql-server-linux-setup.md#offline)安裝程序，請參閱[SQL Server on Linux 的安裝指南](sql-server-linux-setup.md)。
@@ -37,12 +37,18 @@ ms.lasthandoff: 09/21/2017
 
 若要設定 SQL Server SLES 上，執行下列命令中安裝終端機**mssql 伺服器**封裝：
 
+> [!IMPORTANT]
+> 如果您先前曾安裝 CTP 或 RC 版本的 SQL Server 2017，您必須先移除舊的存放庫，再註冊 GA 儲存機制的其中一個。 如需詳細資訊，請參閱[從預覽儲存機制的儲存機制變更至 GA 儲存機制](sql-server-linux-change-repo.md)
+
 1. 下載 Microsoft SQL Server SLES 儲存機制設定檔：
 
    ```bash
-   sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server.repo
+   sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017.repo
    sudo zypper --gpg-auto-import-keys refresh
    ```
+
+   > [!NOTE]
+   > 這是累計更新 (CU) 儲存機制。 如需有關您的儲存機制選項以及其差異的詳細資訊，請參閱[變更來源儲存機制](sql-server-linux-setup.md#repositories)。
 
 1. 執行下列命令來安裝 SQL Server:
 
@@ -57,14 +63,10 @@ ms.lasthandoff: 09/21/2017
    ```
 
    > [!TIP]
-   > 請務必指定 SA 帳戶 （最小長度為 8 個字元，包括大寫和小寫字母、 10 進位數字及/或非英數符號） 的強式密碼。
+   > 如果您嘗試在此教學課程中的 SQL Server 2017，自由地滹砅下列版本： Evaluation、 Developer 和 Express。
 
-   > [!TIP]
-   > 當安裝 RC2，沒有購買的授權才能任何版本再試一次。 因為它是發行候選版本，不論您選取的版本為何會出現下列訊息：
-   >
-   > `This is an evaluation version.  There are [175] days left in the evaluation period.`
-   >
-   > 此訊息並不會反映您所選取的版本。 它在預覽期間與相關 rc2。
+   > [!NOTE]
+   > 請務必指定 SA 帳戶 （最小長度為 8 個字元，包括大寫和小寫字母、 10 進位數字及/或非英數符號） 的強式密碼。
 
 1. 一旦完成設定，請確認服務正在執行：
 

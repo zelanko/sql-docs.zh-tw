@@ -4,27 +4,27 @@ description: "SQL Server 指令碼範例在 Ubuntu 上自動安裝"
 author: edmacauley
 ms.author: edmacauley
 manager: jhubbard
-ms.date: 07/17/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: 191d39779fd38fcf342dcbeae1ee3a14632ab59a
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 9ab85f20c1bc8660c54d8d1a2ec946a2121f59f9
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-ubuntu"></a>Ubuntu 的範例： 無人看管的 SQL Server 安裝指令碼
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-這個範例 Bash 指令碼 Ubuntu 16.04 上安裝 SQL Server 2017 RC2，沒有互動式的輸入。 提供範例的安裝 database engine，SQL Server 命令列工具，SQL Server Agent，並且會執行後續安裝步驟。 您可以選擇性地安裝全文檢索搜尋，並建立系統管理使用者。
+這個範例 Bash 指令碼 Ubuntu 16.04 上安裝 SQL Server 2017，沒有互動式的輸入。 提供範例的安裝 database engine，SQL Server 命令列工具，SQL Server Agent，並且會執行後續安裝步驟。 您可以選擇性地安裝全文檢索搜尋，並建立系統管理使用者。
 
 > [!TIP]
 > 如果您不需要自動的安裝指令碼，是遵循最快速的方式安裝 SQL Server [Ubuntu 的快速入門教學課程](quickstart-install-connect-ubuntu.md)。 其他安裝資訊，請參閱[SQL Server on Linux 的安裝指南](sql-server-linux-setup.md)。
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>必要條件
 
 - 您需要至少 3.25 GB 的記憶體來執行 SQL Server on Linux。
 - 檔案系統必須是**XFS**或**EXT4**。 其他檔案系統，例如**BTRFS**，不受支援。

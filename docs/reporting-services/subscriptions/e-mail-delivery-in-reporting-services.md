@@ -20,10 +20,10 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: bd3def842c9171dd20e53eff37128a7a95779ddf
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 0b50ccb5717de8f64f915d7cbedc663ec8345400
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>Reporting Services 中的電子郵件傳遞
@@ -88,7 +88,7 @@ ms.lasthandoff: 09/21/2017
  對於原生模式報表伺服器，您可以透過原生模式 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員並藉由編輯 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態檔，設定電子郵件傳遞延伸模組。 對於 SharePoint 模式報表伺服器，您可在 SharePoint 管理頁面和 PowerShell 指令碼中設定電子郵件傳遞延伸模組。  
   
  
- 如需如何設定原生模式報表伺服器的資訊，請參閱[電子郵件設定-Reporting Services 原生模式 （組態管理員）](/sql-docs/docs/reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager)
+ 如需如何設定原生模式報表伺服器的資訊，請參閱[電子郵件設定-Reporting Services 原生模式 （組態管理員）](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)
  
  
  如需如何設定 SharePoint 模式報表伺服器的詳細資訊，請參閱下列內容：  

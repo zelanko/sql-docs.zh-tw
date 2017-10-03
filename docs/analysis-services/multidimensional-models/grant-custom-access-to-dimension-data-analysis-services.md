@@ -30,10 +30,10 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 4ef09ff12c41b6bb5a7610134cb317a81caaf3cf
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 42ea70f08c2f051970898fa4e3e9498f7f8c1627
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="grant-custom-access-to-dimension-data-analysis-services"></a>授與維度資料的自訂存取權 (Analysis Services)
@@ -48,7 +48,7 @@ ms.lasthandoff: 09/21/2017
  基本維度安全性是最簡單的；您只需選取要在角色中包含或排除的維度屬性和屬性階層。 進階安全性較複雜，而且需要 MDX 指令碼的專業知識。 以下是這兩種方法的敘述。  
 
 > [!NOTE]  
->  下列指示假設用戶端連接使用 MDX 發出查詢。 如果用戶端使用 DAX (例如 Power BI 中的 Power View)，則查詢結果中不會顯示維度安全性。 如需詳細資訊，請參閱[了解適用於多維度模型的 Power View](/sql-docs/docs/analysis-services/multidimensional-models/understanding-power-view-for-multidimensional-models)。
+>  下列指示假設用戶端連接使用 MDX 發出查詢。 如果用戶端使用 DAX (例如 Power BI 中的 Power View)，則查詢結果中不會顯示維度安全性。 如需詳細資訊，請參閱[了解適用於多維度模型的 Power View](understanding-power-view-for-multidimensional-models.md)。
       
 ## <a name="prerequisites"></a>必要條件  
  並非所有量值或維度成員均可用在自訂存取案例中。 如果某個角色禁止存取預設的量值或成員，或是該角色禁止存取的量值為量值運算式的一部分，則連線將會失敗。  
@@ -134,7 +134,7 @@ ms.lasthandoff: 09/21/2017
  **檢查**  
  按一下即可測試此頁面定義的 MDX 語法。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [授與 Cube 或模型權限 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)   
  [授與自訂資料 &#40; 的儲存格的存取Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)   
  [授與權限的資料採礦結構和模型 &#40;Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   

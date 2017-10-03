@@ -1,7 +1,7 @@
 ---
 title: "SQL Server 移轉小幫手 |Microsoft 文件"
 ms.custom: 
-ms.date: 09/22/2017
+ms.date: 09/30/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -18,10 +18,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: 8c43a46a3fef09fa2c8b3510b541cd545e438313
-ms.openlocfilehash: 6310f16ee3f3a57c46e1aab1023c18fcaf6bf074
+ms.sourcegitcommit: e3c781449a8f7a1b236508cd21b8c00ff175774f
+ms.openlocfilehash: 7a199b65ceb8fdd1692b37e307dd544c52ad618b
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/22/2017
+ms.lasthandoff: 09/30/2017
 
 ---
 # <a name="sql-server-migration-assistant"></a>SQL Server 移轉小幫手
@@ -31,13 +31,13 @@ Microsoft SQL Server 移轉小幫手 (SSMA) 是要從 Microsoft Access、 DB2、
   
 -   [存取的 SQL Server 移轉小幫手](../ssma/access/sql-server-migration-assistant-for-access-accesstosql.md)  
   
-- [DB2 的 SQL Server 移轉小幫手](../ssma/db2/sql-server-migration-assistant-for-db2-db2tosql.md)  
+-   [DB2 的 SQL Server 移轉小幫手](../ssma/db2/sql-server-migration-assistant-for-db2-db2tosql.md)  
   
 -   [用於 MySQL 的 SQL Server 移轉小幫手](../ssma/mysql/sql-server-migration-assistant-for-mysql-mysqltosql.md)  
   
 -   [Oracle 的 SQL Server 移轉小幫手](../ssma/oracle/sql-server-migration-assistant-for-oracle-oracletosql.md)  
   
--  [SAP ASE 的 SQL Server 移轉小幫手](../ssma/sybase/sql-server-migration-assistant-for-sybase-sybasetosql.md)  
+-   [SAP ASE 的 SQL Server 移轉小幫手](../ssma/sybase/sql-server-migration-assistant-for-sybase-sybasetosql.md)  
 
 ## <a name="supported-sources-and-target-versions"></a>支援的來源和目標版本
 對於支援的來源，請檢閱 SSMA 下載下載中心上的資訊。
@@ -77,7 +77,7 @@ SSMA 支援下列版本的目標。
   
 -   頂級支援-如果您有頂級合約，您可以取得頂級支援[Premier Online 入口網站](https://premier.microsoft.com/)。  
   
--   夥伴協助移轉的諮詢服務 – 請移至[合作夥伴入口網站](https://www.platformmodernization.org/Pages/default.aspx)。  
+-   諮詢服務 – 夥伴協助移轉，go[合作夥伴入口網站](https://www.platformmodernization.org/Pages/default.aspx)。  
   
 ## <a name="legal-notice-ssma"></a>法律注意事項 (SSMA)  
 本文件集 (包括其中所用的範例應用程式) 僅為資訊用途而提供，本文件集亦不提供任何明示或默示之擔保。 本文件集中的資訊，包括 URL 及其他網際網路網站參考資料，如有變更恕不另行通知。 本文件集之使用或因使用本文件集所衍生之一切後果，概由使用者自行承擔所有風險。  
@@ -88,7 +88,7 @@ SSMA 支援下列版本的目標。
   
 Microsoft 可能擁有本文件集所提及內容中所含之專利權、專利優先權、商標、著作權，或其他智慧財產權。 除非 Microsoft 書面授權合約所明示規定者外，提供本文件集並不授與貴用戶上述專利權、商標、著作權或其他智慧財產權。  
   
-© 2015 Microsoft Corporation. 著作權所有，並保留一切權利。  
+© Microsoft Corporation 2017。 著作權所有，並保留一切權利。  
   
 Microsoft、Windows、Windows NT、Windows Server、Active Directory、ActiveX、BackOffice、bCentral、BizTalk、DirectX、Excel、Hotmail、IntelliSense、J/Direct、Jscript、Microsoft Press、MSDN、MS-DOS、Outlook、PivotChart、PivotTable、PowerPoint、SharePoint、SQL Server、Visual Basic、Visual C#、Visual C++、Visual FoxPro、Visual InterDev、Visual J#、Visual J++、Visual SourceSafe、Visual Studio、Win32、Win32s、Windows Mobile、Windows Server System 及 WinFX 係 Microsoft Corporation 在美國及 (或) 其他國家/地區的註冊商標或商標。  
   
@@ -101,7 +101,7 @@ SQL Server 文件集中的內容均經過充分測試才發佈。 《SQL Server 
   
 在某些情況下，某項特定功能未供客戶直接使用，因此未受記載。 除非 Microsoft 所發佈的 SQL Server 文件集也討論到某項功能，否則 Microsoft 客戶支援並不支援來自協力廠商叢書或網站的內容，並且不得用於產品資料庫或應用程式。  
   
-客戶不得使用未記載的 API，包括 (但不限於)：預存程序、擴充預存程序、函式、檢視、資料表、資料行、屬性或中繼資料。 Microsoft 客戶支援不支援利用或使用未記載之進入點的資料庫或應用程式。  
+客戶不得使用未記載的 API，包括 (但不限於)：預存程序、擴充預存程序、函式、檢視、資料表、資料行、屬性或中繼資料。 Microsoft 客戶支援服務不支援資料庫或應用程式利用或使用未記載之的進入點。  
   
 對於利用及使用未記載之進入點的應用程式或資料庫，則不保證能夠升級至 SQL Server 未來版本的伺服器或資料庫。 SQL Server 功能的用途不得超出 Microsoft SQL Server 文件集所含內容。 如果某功能未記載於 Microsoft SQL Server 文件集，即屬於 SQL Server 不支援的部分。  
   

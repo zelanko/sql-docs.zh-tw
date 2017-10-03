@@ -34,10 +34,10 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: a4e3b602b026d359c7eac492fc44480d4b1a18a9
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 0fb8883678dad7a62cac9c2109b093ee79e27b27
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 
@@ -54,12 +54,12 @@ ms.lasthandoff: 09/21/2017
 -   [非叢集資料行存放區索引的範例](../../t-sql/statements/create-columnstore-index-transact-sql.md#nonclustered)  
   
 請移至案例：  
--   [資料行存放區索引進行即時作業分析](/sql-docs/docs/relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics)  
--   [資料倉儲的資料行存放區索引](/sql-docs/docs/relational-databases/indexes/columnstore-indexes-data-warehouse)  
+-   [資料行存放區索引進行即時作業分析](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)  
+-   [資料倉儲的資料行存放區索引](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)  
   
 深入了解：  
--   [資料行存放區索引指南](/sql-docs/docs/relational-databases/indexes/columnstore-indexes-overview)  
--   [資料行存放區索引功能摘要](/sql-docs/docs/relational-databases/indexes/columnstore-indexes-what-s-new)  
+-   [資料行存放區索引指南](../../relational-databases/indexes/columnstore-indexes-overview.md)  
+-   [資料行存放區索引功能摘要](../../relational-databases/indexes/columnstore-indexes-what-s-new.md)  
   
 ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -298,14 +298,14 @@ ON
 ##  <a name="LimitRest"></a> 限制事項  
 
 **資料行存放區索引中的每個資料行必須是下列的一般商務資料類型的其中一個：** 
--   datetimeoffset [( * n * )]  
--   datetime2 [( * n * )]  
+-   datetimeoffset [(  *n*  )]  
+-   datetime2 [(  *n*  )]  
 -   datetime  
 -   smalldatetime  
 -   date  
--   時間 [( * n * )]  
--   float [( * n * )]  
--   實際 [( * n * )]  
+-   時間 [(  *n*  )]  
+-   float [(  *n*  )]  
+-   實際 [(  *n*  )]  
 -   小數 [(*精確度*[ *，標尺*] **)** ]
 -   數字 [(*精確度*[ *，標尺*] **)** ]    
 -   money  
@@ -315,15 +315,15 @@ ON
 -   smallint  
 -   tinyint  
 -   bit  
--   nvarchar [( * n * )] 
+-   nvarchar [(  *n*  )] 
 -   nvarchar （max) (適用於[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]和 Azure SQL Database premium 定價層，僅限叢集資料行存放區索引中)   
--   nchar [( * n * )]  
--   varchar [( * n * )]  
+-   nchar [(  *n*  )]  
+-   varchar [(  *n*  )]  
 -   varchar （max) (適用於[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]和 Azure SQL Database premium 定價層，僅限叢集資料行存放區索引中)
--   char [( * n * )]  
--   varbinary [( * n * )] 
+-   char [(  *n*  )]  
+-   varbinary [(  *n*  )] 
 -   varbinary (max) (適用於[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]和 Azure SQL Database premium 定價層，僅限叢集資料行存放區索引中)
--   二進位 [( * n * )]  
+-   二進位 [(  *n*  )]  
 -   uniqueidentifier (適用於[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]和更新版本)
   
 如果基礎資料表的資料行存放區索引不支援資料類型的資料行，必須省略該資料行從非叢集資料行存放區索引。  

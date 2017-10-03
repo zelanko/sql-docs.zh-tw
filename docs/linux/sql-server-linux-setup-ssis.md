@@ -3,17 +3,18 @@ title: "Linux 上安裝 SQL Server Integration Services |Microsoft 文件"
 description: "本主題描述如何在 Linux 上安裝 SQL Server Integration Services。"
 author: leolimsft
 ms.author: lle
+ms.reviewer: douglasl
 manager: craigg
-ms.date: 07/17/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: integration-services
 ms.assetid: 
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: c3943870ec10b8430ac4819398908c5459a8b03c
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 520b650e0f1dac950797d481609478c6c6548f5a
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="install-sql-server-integration-services-ssis-on-linux"></a>Linux 上安裝 SQL Server Integration Services (SSIS)
@@ -27,11 +28,8 @@ ms.lasthandoff: 08/02/2017
 - [Ubuntu](#ubuntu)
 - [Red Hat Enterprise Linux](#RHEL)
 
-
-
 ## <a name="ubuntu"></a>在 Ubuntu 上中安裝 SSIS
 若要安裝`mssql-server-is`Ubuntu 上的套件，請遵循下列步驟：
-
 
 1.  匯入公用儲存機制 GPG 索引鍵。
 
@@ -39,13 +37,11 @@ ms.lasthandoff: 08/02/2017
     curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
     ```
 
-
 2.  註冊 Microsoft SQL Server Ubuntu 儲存機制。
 
     ```bash
     curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server.list | sudo tee /etc/apt/sources.list.d/mssql-server.list
     ```
-
 
 3.  執行下列命令來安裝 SQL Server Integration Services。
 
@@ -55,12 +51,11 @@ ms.lasthandoff: 08/02/2017
     ```
 
 
-4.  安裝 Integration Services 之後，執行`ssis-conf`。
+4.  安裝 Integration Services 之後，執行`ssis-conf`。 如需詳細資訊，請參閱[設定 ssis conf 與 Linux 上的 SSIS](sql-server-linux-configure-ssis.md)。
 
     ```bash
     sudo /opt/ssis/bin/ssis-conf setup
     ```
-
 
 5.  完成設定之後，設定的路徑。
 
@@ -68,20 +63,18 @@ ms.lasthandoff: 08/02/2017
     export PATH=/opt/ssis/bin:$PATH
     ```
 
-
+### <a name="update-ssis"></a>更新 SSIS
 如果您已經有`mssql-server-is`安裝，您可以更新為最新版本，使用下列命令：
 
 ```bash
 sudo apt-get install mssql-server-is
 ```
 
-
+### <a name="remove-ssis"></a>移除 SSIS
 若要移除`mssql-server-is`，您可以執行下列命令：
 ```bash
 sudo apt-get remove msssql-server-is
 ```
-
-
 
 ## <a name="RHEL"></a>RHEL 上中安裝 SSIS
 若要安裝`mssql-server-is`RHEL 上的套件，請遵循下列步驟：
@@ -115,7 +108,7 @@ sudo apt-get remove msssql-server-is
     ```
 
 
-5.  安裝之後，請執行`ssis-conf`。
+5.  安裝之後，執行`ssis-conf`。 如需詳細資訊，請參閱[設定 ssis conf 與 Linux 上的 SSIS](sql-server-linux-configure-ssis.md)。
 
     ```bash
     sudo /opt/ssis/bin/ssis-conf setup
@@ -128,14 +121,14 @@ sudo apt-get remove msssql-server-is
     export PATH=/opt/ssis/bin:$PATH
     ```
 
-
+### <a name="update-ssis"></a>更新 SSIS
 如果您已經有`mssql-server-is`安裝，您可以更新為最新版本，使用下列命令：
 
 ```bash
 sudo yum update mssql-server-is
 ```
 
-
+### <a name="remove-ssis"></a>移除 SSIS
 若要移除`mssql-server-is`，您可以執行下列命令：
 ```bash
 sudo yum remove msssql-server-is

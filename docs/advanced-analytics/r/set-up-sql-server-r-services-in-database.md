@@ -1,7 +1,7 @@
 ---
 title: "設定 SQL Server 機器學習服務 （資料庫） |Microsoft 文件"
 ms.custom: 
-ms.date: 07/29/2017
+ms.date: 09/28/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -17,10 +17,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: f0065068d53517626c7157c9be884549573ae08b
+ms.sourcegitcommit: e76675099ab290d29231d434eb74e92b613185b7
+ms.openlocfilehash: 9b3449e8c1f19ee69b36107f3530eac80fae0227
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/07/2017
+ms.lasthandoff: 09/29/2017
 
 ---
 # <a name="set-up-sql-server-machine-learning-services-in-database"></a>設定 SQL Server 機器學習服務 （資料庫）
@@ -97,15 +97,15 @@ SQL Server 安裝程式會提供安裝機器學習的下列選項：
 
 6. 在**安裝準備就緒**頁面上，確認下列項目都包含在內，然後選取**安裝**。
 
-   **SQL Server 2016**
-   - Database Engine 服務
-   - R 服務 (資料庫內)
-
    **SQL Server 2017**
    - Database Engine 服務
    - Machine Learning 服務 (資料庫內)
    - R、 Python 或兩者
-    
+
+   **SQL Server 2016**
+   - Database Engine 服務
+   - R 服務 (資料庫內)
+
 7. 安裝完成時，重新啟動電腦。
 
 ##  <a name="bkmk_enableFeature"></a>步驟 2： 啟用外部指令碼服務
@@ -189,12 +189,15 @@ SQL Server 安裝程式會提供安裝機器學習的下列選項：
 
 1. 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的 [物件總管] 中，展開 [安全性] ，以滑鼠右鍵按一下 [登入] ，然後選取 [新增登入] 。
 2. 在**登入-新增**對話方塊中，選取**搜尋**。
-3. 選取**物件類型**和**群組**核取方塊，然後清除其他所有核取方塊。 
-4. 在**輸入物件名稱來選取**，型別**SQLRUserGroup**，然後選取**檢查名稱**。  
-    本機群組的執行個體啟動控制板服務相關聯的名稱應該解析為類似*instancename\SQLRUserGroup*。 
-5. 選取 [確定]。
-6. 依預設，登入指派給 **公用** 角色，並有連接到資料庫引擎的權限。
-7. 選取 [確定]。
+3. 選取**物件類型**和**群組**核取方塊，然後清除其他所有核取方塊。
+4. 按一下**進階**，確認要搜尋的位置是目前的電腦，然後按一下**立即尋找**。
+5. 捲動清單，直到您找到一開始在伺服器上的群組帳戶的`SQLRUserGroup`。
+    
+    + 群組為 Launchpad 服務相關聯的名稱_預設執行個體_只是一律**SQLRUserGroup**。 選取此帳戶僅針對預設執行個體。
+    + 如果您使用_具名執行個體_，執行個體名稱會附加至的預設名稱， `SQLRUserGroup`。 因此，如果您的執行個體的名稱為"MLTEST"，這個執行個體的預設使用者群組名稱會是**SQLRUserGroupMLTest**。
+5. 按一下**確定**以關閉 [進階的搜尋] 對話方塊中，並確認您已選取正確的帳戶，執行個體。 每個執行個體可以使用只有自己 Launchpad 服務並為該服務建立的群組。
+6. 按一下**確定**以關閉 [**選取使用者或群組**] 對話方塊。
+7. 在**登入-新增**對話方塊中，按一下 **確定**。 依預設，登入指派給 **公用** 角色，並有連接到資料庫引擎的權限。
 
 ### <a name="bkmk_AllowLogon"></a>提供使用者執行外部指令碼的權限
 

@@ -31,10 +31,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 49b2acefb625107a65ee8e88ae3f28fc6473851d
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: d8bec900fef84f2a1c75105b39a9c8aad31db250
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd 工用程式
@@ -177,10 +177,10 @@ sqlcmd
 **-j** ：將原始錯誤訊息列印至畫面。
   
  **-K** *application_intent*  
- 宣告連接到伺服器時的應用程式工作負載類型。 目前唯一支援的值是 **ReadOnly**。 若未指定 **-K** ，sqlcmd 公用程式將無法支援在 AlwaysOn 可用性群組中連接至次要複本。 如需詳細資訊，請參閱[使用中次要：可讀取的次要複本 (AlwaysOn 可用性群組)](/sql-docs/docs/database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups)  
+ 宣告連接到伺服器時的應用程式工作負載類型。 目前唯一支援的值是 **ReadOnly**。 若未指定 **-K** ，sqlcmd 公用程式將無法支援在 AlwaysOn 可用性群組中連接至次要複本。 如需詳細資訊，請參閱[使用中次要：可讀取的次要複本 (AlwaysOn 可用性群組)](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)  
   
  **-M** *multisubnet_failover*  
- 請務必指定**-M**連接到 SQL Server 可用性群組或 SQL Server 容錯移轉叢集執行個體的可用性群組接聽程式時。 **-M** 可提供對 (目前) 作用中伺服器更快速的偵測與連接。 如果未指定 **–M** ，則會關閉 **-M** 。 如需詳細資訊 [！包含[Hadr](/sql-docs/docs/database-engine/availability-groups/windows/listeners-client-connectivity-application-failover)，[建立和設定可用性群組 &#40;SQL Server &#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)，[容錯移轉叢集和 Alwayson 可用性群組 (SQL Server)] (https://msdn.microsoft.comlibrary/ff929171.aspx，和 [使用中次要： 可讀取的次要複本 (Alwayson 可用性群組）](https://msdn.microsoft.com/library/ff878253.aspx.  
+ 請務必指定**-M**連接到 SQL Server 可用性群組或 SQL Server 容錯移轉叢集執行個體的可用性群組接聽程式時。 **-M** 可提供對 (目前) 作用中伺服器更快速的偵測與連接。 如果未指定 **–M** ，則會關閉 **-M** 。 如需詳細資訊 [！包含[Hadr](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)，[建立和設定可用性群組 &#40;SQL Server &#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)，[容錯移轉叢集和 Alwayson 可用性群組 (SQL Server)] (https://msdn.microsoft.comlibrary/ff929171.aspx，和 [使用中次要： 可讀取的次要複本 (Alwayson 可用性群組）](https://msdn.microsoft.com/library/ff878253.aspx.  
   
  **-N**  
  用戶端會用這個參數要求加密的連接。  
@@ -215,11 +215,11 @@ sqlcmd
  **-S** [*protocol*:]*server*[**\\***instance_name*][**,***port*]  
  指定要連接 SQL Server 執行的個體。 它會設定 **sqlcmd** 指令碼變數 SQLCMDSERVER。  
   
- 指定*server_name*連接到 SQL Server 的預設執行個體，該伺服器電腦上。 指定*server_name* [ ** \\ ** *instance_name* ] 連接到該伺服器電腦上的 SQL Server 的具名執行個體。 如果未不指定任何伺服器電腦，則**sqlcmd**會連接到本機電腦上的 SQL Server 預設執行個體。 當您從網路的遠端電腦執行 **sqlcmd** 時，需要這個選項。  
+ 指定*server_name*連接到 SQL Server 的預設執行個體，該伺服器電腦上。 指定*server_name* [  **\\**  *instance_name* ] 連接到該伺服器電腦上的 SQL Server 的具名執行個體。 如果未不指定任何伺服器電腦，則**sqlcmd**會連接到本機電腦上的 SQL Server 預設執行個體。 當您從網路的遠端電腦執行 **sqlcmd** 時，需要這個選項。  
   
  *protocol* 可以是 **tcp** (TCP/IP)、 **lpc** (共用記憶體) 或 **np** (具名管道)。  
   
- 如果您未指定*server_name* [ ** \\ ** *instance_name* ] 啟動時**sqlcmd**，檢查是否有 SQL Server，並使用 SQLCMDSERVER 環境變數。  
+ 如果您未指定*server_name* [  **\\**  *instance_name* ] 啟動時**sqlcmd**，檢查是否有 SQL Server，並使用 SQLCMDSERVER 環境變數。  
   
 > [!NOTE]  
 >  保留 OSQLSERVER 環境變數的目的是為了與舊版相容。 SQLCMDSERVER 環境變數優先於 OSQLSERVER 環境變數；這表示您可以先後使用 **sqlcmd** 和 **osql** ，它們不會互相干擾，舊的指令碼仍能運作。  
@@ -685,7 +685,7 @@ sqlcmd
   
  **其他命令**  
   **:r \<** *filename***>**  
- 剖析其他 TRANSACT-SQL 陳述式和**sqlcmd**命令所指定的檔案從** \< ** *filename***>**到陳述式快取。  
+ 剖析其他 TRANSACT-SQL 陳述式和**sqlcmd**命令所指定的檔案從 **\<**  *filename***>**到陳述式快取。  
   
  如果該檔案包含 TRANSACT-SQL 陳述式未緊接著**移**，您必須輸入**移**後面的那一行上**: r**。  
   

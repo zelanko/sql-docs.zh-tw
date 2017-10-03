@@ -4,21 +4,21 @@ description: "本主題描述 SQL Server 如何在 Linux 上執行，並提供�
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 08/02/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: 1192afb7032f34f0af98c3c1051808e89dc22b63
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 6fdb36fbf294ea1f109728a1f304b5a3f3662122
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="sql-server-on-linux"></a>Linux 上的 SQL Server
 
-現在 Linux 上執行 SQL Server ！ 這個最新版本中，SQL Server 2017 RC2，在執行 Linux 上，而且會在許多方面直接 SQL Server。 它是相同的 SQL Server 資料庫引擎，有許多類似的功能與服務，不論您的作業系統。
+SQL Server 2017 現在會在 Linux 上執行。 它是相同的 SQL Server 資料庫引擎，有許多類似的功能與服務，不論您的作業系統。
 
 ## <a name="install"></a>Install
 

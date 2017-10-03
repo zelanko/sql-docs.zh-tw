@@ -2,7 +2,7 @@
 title: "什麼 &#39; s 機器學習服務的新功能 |Microsoft 文件"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 09/08/2017
+ms.date: 09/29/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -16,10 +16,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: fffe2ab906f659a2fb0e2996363ac8e7da000707
-ms.openlocfilehash: 34a404511d72c5775f25dd182b018926b6d0d62e
+ms.sourcegitcommit: e3c781449a8f7a1b236508cd21b8c00ff175774f
+ms.openlocfilehash: 0452a71d844cea46ac48871a9e987171a4c241d3
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/18/2017
+ms.lasthandoff: 09/30/2017
 
 ---
 # <a name="whats-new-in-machine-learning-services-in-sql-server"></a>新功能 SQL Server 中的機器學習服務
@@ -30,16 +30,13 @@ SQL Server 2017，在機器學習變得更強大了，加入對受歡迎的 Pyth
 
 攔截最新的 announcement ！ [在 SQL Server 2017 Python： 增強式資料庫中的機器學習服務](https://blogs.technet.microsoft.com/dataplatforminsider/2017/04/19/python-in-sql-server-2017-enhanced-in-database-machine-learning/)
 
+[!NOTE]
+> 現在您可以在 Azure SQL 資料庫中執行 R ！ 如需詳細資訊，請參閱[本文](r/using-r-in-azure-sql-database.md)，或 SQL Server 開發小組的這篇部落格：[機器學習服務與 Azure SQL Database 中的 R 支援 Announcing 預覽](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2017/09/25/announcing-preview-of-machine-learning-services-with-r-support-in-azure-sql-database/)。
+
 ## <a name="whats-new-in-sql-server-2017"></a>SQL Server 2017 的新功能
 
 Microsoft 機器學習 Server SQL Server 中現在會提供用於建置及部署 Python 或 R 中的機器學習解決方案的完整支援。 以下是此版本的重點：
 
-> [!IMPORTANT]
-> 
-> 機器學習服務，包括使用 R 或 Python，目前不支援執行 SQL Server on Linux，或 Azure SQL 資料庫中時。 尋找下一個版本的變更。
-> 
-> 目前支援的 Linux 版本中使用預測函數的原生計分。
- 
 ### <a name="in-database-python-integration"></a>資料庫 Python 整合
 
 您可以在預存程序中執行 Python 或執行 Python 當成計算內容使用遠端 SQL Server 電腦。 這項整合會開啟新途徑 vast 的 Python 開發人員及資料科學家使用的 SQL Server 社群。 
@@ -60,9 +57,13 @@ SQL Server 開發人員可以存取的更詳盡的 Python 程式庫的開放原�
 
 + Python 支援在 Microsoft Machine Learning 伺服器 （獨立）
 
-    SQL Server 2017 包含安裝 Microsoft 機器學習平台的獨立版本的選項。 使用機器學習伺服器，您就可以發佈，並調整 R 或 Python 程式碼，而不需要使用 SQL Server。
+    SQL Server 2017 包含安裝 Microsoft Machine Learning 伺服器的獨立版本的選項。 使用機器學習伺服器，您就可以發佈，並調整 R 或 Python 程式碼，而不需要使用 SQL Server。
 
-    如需在 Microsoft Machine Learning 伺服器上執行的 Python 的範例，請參閱[發行和取用的 Python 程式碼](python/publish-consume-python-code.md)。
+### <a name="linux-support"></a>Linux 支援
+
+使用 R 或 Python 資料庫內的機器學習服務目前不支援在 SQL Server on Linux。 尋找下一個版本的公告。
+
+不過，在 Linux 上您可以執行[原生計分](sql-native-scoring.md)使用 T-SQL 的預測函數。 原生計分，可讓您從預先定型的模型非常快速，分數，而不需要呼叫，或甚至 R 執行階段。 這表示您可以使用 SQL Server on Linux 來產生預測的速度非常快，來服務用戶端應用程式。
 
 ### <a name="new-algorithms"></a>新的演算法
 

@@ -10,17 +10,17 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: 4951f503a7b5c395f86cb6daf2ba705ca69fbd83
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 2bbb64b775ab59665ac2c8eefdd21e514b4906cd
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>使用 Linux 上的環境變數設定 SQL Server 設定
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-若要在 Linux 上設定 SQL Server 2017 RC2，您可以使用數個不同的環境變數。 兩個案例中使用這些變數：
+若要在 Linux 上設定 SQL Server 2017，您可以使用數個不同的環境變數。 兩個案例中使用這些變數：
 
 - 若要設定與初始設定`mssql-conf setup`命令。
 - 若要設定新[在 Docker 中的 SQL Server 容器](quickstart-install-connect-docker.md)。
@@ -71,13 +71,13 @@ sudo ACCEPT_EULA='Y' MSSQL_PID='Developer' MSSQL_SA_PASSWORD='<YourStrong!Passw0
 如果您在 Linux/macOS 上執行 Docker，請使用單引號中使用下列語法：
 
 ```bash
-docker run -e ACCEPT_EULA=Y -e MSSQL_PID='Developer' -e MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>' -e MSSQL_TCP_PORT=1234 -p 1234:1234 -d microsoft/mssql-server-linux
+docker run -e ACCEPT_EULA=Y -e MSSQL_PID='Developer' -e MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>' -e MSSQL_TCP_PORT=1234 -p 1234:1234 -d microsoft/mssql-server-linux:2017-latest
 ```
 
 如果您在 Windows 上執行 Docker，請用雙引號使用下列語法：
 
 ```bash
-docker run -e ACCEPT_EULA=Y -e MSSQL_PID="Developer" -e MSSQL_SA_PASSWORD="<YourStrong!Passw0rd>" -e MSSQL_TCP_PORT=1234 -p 1234:1234 -d microsoft/mssql-server-linux
+docker run -e ACCEPT_EULA=Y -e MSSQL_PID="Developer" -e MSSQL_SA_PASSWORD="<YourStrong!Passw0rd>" -e MSSQL_TCP_PORT=1234 -p 1234:1234 -d microsoft/mssql-server-linux:2017-latest
 ```
 
 ## <a name="next-steps"></a>後續的步驟

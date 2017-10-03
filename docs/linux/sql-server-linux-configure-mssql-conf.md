@@ -10,17 +10,17 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 ms.translationtype: MT
-ms.sourcegitcommit: f684f0168e57c5cd727af6488b2460eeaead100c
-ms.openlocfilehash: 68b895f4497fc5e111bc346d01eb85f1bf0ab222
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 14a7f9cb0f9888339140a226d31368deaf7b32f5
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>設定 SQL Server on Linux mssql conf 工具
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-**mssql conf**是隨 SQL Server 2017 RC2 Red Hat Enterprise Linux、 SUSE Linux Enterprise Server 和 Ubuntu 的組態指令碼。 您可以使用此公用程式來設定下列參數：
+**mssql conf**是隨 SQL Server 2017 Red Hat Enterprise Linux、 SUSE Linux Enterprise Server 和 Ubuntu 的組態指令碼。 您可以使用此公用程式來設定下列參數：
 
 |||
 |---|---|

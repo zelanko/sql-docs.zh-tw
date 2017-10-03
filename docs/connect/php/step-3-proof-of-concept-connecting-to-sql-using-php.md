@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 9b2fb2de59b10315691ea177522fd9c36da4f4c8
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: f1ea7333aa847916f45d648c582f07de0774eda6
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-php"></a>步驟 3︰使用 PHP 連接到 SQL 的概念證明
@@ -83,7 +83,7 @@ ms.lasthandoff: 09/21/2017
   
 ## <a name="step-3--insert-a-row"></a>步驟 3： 插入資料列  
   
-在您將了解如何執行此範例[插入](/sql-docs/docs/t-sql/statements/insert-transact-sql)陳述式，將參數可保護您的應用程式，從[SQL 資料隱碼](/sql-docs/docs/relational-databases/tables/primary-and-foreign-key-constraints)值。    
+在您將了解如何執行此範例[插入](../../t-sql/statements/insert-transact-sql.md)陳述式，將參數可保護您的應用程式，從[SQL 資料隱碼](../../relational-databases/tables/primary-and-foreign-key-constraints.md)值。    
   
   
 ```php 

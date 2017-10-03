@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: eb3ac975b6962a36e1aaa60a421e977fe42cda90
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 1708138f5eeb082f022f78dfb685f333f3f0a17b
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>設定 SQL Server 的 Red Hat Enterprise Linux 共用的磁碟叢集
@@ -38,7 +38,7 @@ ms.lasthandoff: 08/02/2017
 
 下列各節逐步解說的步驟來設定容錯移轉叢集解決方案。 
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>必要條件
 
 若要完成以下的端對端案例中，您需要兩部電腦部署兩個節點叢集並設定 NFS 伺服器的另一部伺服器。 下列步驟概述這些伺服器設定的方式。
 
@@ -90,7 +90,7 @@ ms.lasthandoff: 08/02/2017
    sudo ip addr show
    ```
 
-   每個節點上設定的電腦名稱。 為每個節點指定唯一的名稱是 15 個字元或更少。 將電腦名稱，將它加入至`/etc/hosts`。 下列指令碼可讓您編輯`/etc/hosts`與`vi`。 
+   每個節點上設定的電腦名稱。 為每個節點指定唯一的名稱是 15 個字元或更少。 將電腦名稱，將它加入至`/etc/hosts`。 下列指令碼可讓您使用 `vi` 編輯 `/etc/hosts`。 
 
    ```bash
    sudo vi /etc/hosts
@@ -315,7 +315,7 @@ NFS 伺服器上執行下列作業：
    sudo pcs cluster start --all
    ```
 
-   > RHEL HA 附加元件的 VMWare 及 KVM 柵欄代理程式。 範圍必須停用所有其他 hypervisor 上。 不建議在生產環境中停用圍欄代理程式。 為準，RC2 時間範圍內，有 HyperV 或雲端環境中沒有圍欄代理程式。 如果您執行其中一個組態，您需要停用範圍。 \**建議您不要在生產系統中 ！**
+   > RHEL HA 附加元件的 VMWare 及 KVM 柵欄代理程式。 範圍必須停用所有其他 hypervisor 上。 不建議在生產環境中停用圍欄代理程式。 從開始時間範圍內，有 HyperV 或雲端環境中沒有圍欄代理程式。 如果您執行其中一個組態，您需要停用範圍。 \**建議您不要在生產系統中 ！**
 
    下列命令會停用圍欄代理程式。
 

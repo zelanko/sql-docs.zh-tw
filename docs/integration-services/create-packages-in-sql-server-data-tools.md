@@ -20,10 +20,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 6b712ca0975108b0b7fb4bfe0a5ffa50ce44c8fb
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 0d949644408de74f118d352a89047137cdcd0350
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="create-packages-in-sql-server-data-tools"></a>在 SQL Server 資料工具中建立封裝
@@ -52,7 +52,7 @@ ms.lasthandoff: 09/21/2017
  如需示範如何使用預設封裝範本建立基本封裝的影片，請參閱 [建立基本封裝 (SQL Server 影片)](http://go.microsoft.com/fwlink/?LinkId=131023)。  
 
 ## <a name="get-sql-server-data-tools"></a>取得 SQL Server Data Tools
-若要安裝 SQL Server Data Tools (SSDT)，請參閱 [下載 SQL Server Data Tools (SSDT)](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt)。
+若要安裝 SQL Server Data Tools (SSDT)，請參閱 [下載 SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)。
 
 ## <a name="create-a-package-in-sql-server-data-tools-using-the-package-template"></a>在 SQL Server Data Tools 中使用封裝範本來建立封裝  
   

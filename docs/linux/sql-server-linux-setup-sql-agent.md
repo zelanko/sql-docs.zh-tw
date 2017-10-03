@@ -4,16 +4,16 @@ description: "本主題描述如何在 Linux 上安裝 SQL Server 代理程式�
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 07/17/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 77f16adc-e6cb-4a57-82f3-7b9780369868
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: 1f6f741a87a13e5b5bc8ba83741e86b065378bad
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 83f6e12a38d5fef4ab27cc39257906c4263aa846
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="install-sql-server-agent-on-linux"></a>Linux 上安裝 SQL Server 代理程式
@@ -23,7 +23,7 @@ ms.lasthandoff: 08/02/2017
 下列步驟安裝 SQL Server Agent (**mssql server agent**) 在 Linux 上。 [SQL Server Agent](https://docs.microsoft.com/sql/ssms/agent/sql-server-agent)執行 SQL Server 的排程的工作。 在這一版的 SQL Server 代理程式所支援之功能的資訊，請參閱[Release Notes](sql-server-linux-release-notes.md)。
 
 > [!NOTE]
-> 之前先安裝 SQL Server Agent，[安裝 SQL Server RC2 +](sql-server-linux-setup.md#platforms)。 這會設定索引鍵和您在安裝時使用的儲存機制**mssql server agent**封裝。
+> 之前先安裝 SQL Server Agent，[安裝 SQL Server 2017](sql-server-linux-setup.md#platforms)。 這會設定索引鍵和您在安裝時使用的儲存機制**mssql server agent**封裝。
 
 安裝 SQL Server 代理程式，您為平台：
 

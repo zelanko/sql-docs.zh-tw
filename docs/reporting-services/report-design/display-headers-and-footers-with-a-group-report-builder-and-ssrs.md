@@ -16,16 +16,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 052e0f66818fd3d9e4cd4ad59720da4a7280c988
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 36fd7c4ac62280fb980bb24c89306a006605b665
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="display-headers-and-footers-with-a-group-report-builder-and-ssrs"></a>與群組一起顯示頁首和頁尾 (報表產生器及 SSRS)
   您可以協助控制靜態資料列 (例如群組頁首或頁尾) 是否會與動態資料列 (與 Tablix 資料區中的群組有關聯) 一起轉譯。  
   
- 若要在多個頁面上重複所有資料行標題或資料列標題，您可以設定 Tablix 資料區的屬性。 如需詳細資訊，請參閱[顯示資料列和資料行標頭 （報表產生器及 SSRS） 的多個頁面上](/sql-docs/docs/reporting-services/report-design/display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs)。  
+ 若要在多個頁面上重複所有資料行標題或資料列標題，您可以設定 Tablix 資料區的屬性。 如需詳細資訊，請參閱[顯示資料列和資料行標頭 （報表產生器及 SSRS） 的多個頁面上](display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md)。  
   
  若要控制與巢狀群組相關聯之動態資料列和資料行的轉譯行為，或與標籤或小計相關聯之靜態資料列和資料行的轉譯行為，您必須設定 Tablix 成員的屬性。 Tablix 成員代表靜態或動態資料列或資料行。 靜態成員會重複一次。 例如，總計資料列就是靜態資料列。 動態成員會針對每個群組執行個體重複一次。 例如，與具有群組運算式 [Territory] 之群組相關聯的資料列會針對領域的每個唯一值重複一次。 如需有關 tablix 成員的詳細資訊，請參閱[Tablix 資料區域資料格、 資料列和資料行 &#40;報表產生器 &#41;和 SSRS](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)。  
   
@@ -74,7 +74,7 @@ ms.lasthandoff: 09/21/2017
 5.  (選擇性) 預覽報表。 在可能的狀況下，報表轉譯器都會將此成員與指定的資料行群組成員保持在一起。  
   
 ## <a name="see-also"></a>另請參閱  
- [Tablix 資料區域資料格、 列和資料行 （報表產生器） 和 SSRS](/sql-docs/docs/reporting-services/report-design/tablix-data-region-report-builder-and-ssrs)   
+ [Tablix 資料區域資料格、 列和資料行 （報表產生器） 和 SSRS](tablix-data-region-report-builder-and-ssrs.md)   
  
   
   

@@ -36,10 +36,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 54d2ef0f186916fa79f7af606b33e42e8f241cb7
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 15c21ac27069d582a7006c38993f48dc3f4ed0be
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="legacy-package-deployment-ssis"></a>舊版封裝部署 (SSIS)
@@ -58,7 +58,7 @@ ms.lasthandoff: 09/21/2017
 ## <a name="package-configurations"></a>封裝組態
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供可用以在執行階段更新屬性值的封裝組態。  
   
-> **注意** ：組態可用於套件部署模型。 參數是用來取代專案部署模型的組態。 專案部署模型可讓您部署 [！包含[n](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages)。  
+> **注意** ：組態可用於套件部署模型。 參數是用來取代專案部署模型的組態。 專案部署模型讓您能將 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器。 如需有關部署模型的詳細資訊，請參閱＜ [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx)＞。   
   
  組態是您加入已完成封裝的一組屬性/值配對。 一般而言，您建立封裝、在封裝開發期間設定封裝物件的屬性，然後將組態加入至封裝。 當封裝執行時，它會從組態取得新的屬性值； 舉例來說，經由使用組態，您可以變更連接管理員的連接字串，或更新變數的值。  
   
@@ -181,7 +181,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **注意：**
 >您按一下**組態**屬性旁邊的省略符號按鈕，也可以存取 [套件組態組合管理]。 [組態] 屬性會顯示在封裝的屬性視窗中。  
   
->組態可用於封裝部署模型。 參數是用來取代專案部署模型的組態。 專案部署模型可讓您部署 [！包含[n](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages)。  
+>組態可用於封裝部署模型。 參數是用來取代專案部署模型的組態。 專案部署模型讓您能將 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器。 如需有關部署模型的詳細資訊，請參閱＜ [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx)＞。    
   
 >在 [封裝組態組合管理] 對話方塊中，您可啟用封裝以使用組態、加入和刪除組態，以及設定載入組態的慣用順序。 
  
@@ -256,7 +256,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 ## <a name="package-configurations-organizer"></a>[封裝組態組合管理]
   使用 **[封裝組態組合管理]** 對話方塊，即可啟用封裝組態、檢視目前封裝的組態清單，以及指定載入組態的喜好順序。  
   
-> **注意** ：組態可用於套件部署模型。 參數是用來取代專案部署模型的組態。 專案部署模型可讓您部署 [！包含[n](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages)。  
+> **注意** ：組態可用於套件部署模型。 參數是用來取代專案部署模型的組態。 專案部署模型讓您能將 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器。 如需有關部署模型的詳細資訊，請參閱＜ [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx)＞。    
   
  如果組態更新相同的屬性，列於組態清單較下面的組態值會取代清單中較上面的組態值。 載入屬性的最後一個值是封裝執行時所使用的值。 此外，如果封裝使用如 XML 組態檔案等直接組態以及如環境變數等間接組態的組合，則指向直接組態位置的間接組態必須是清單中較上面的部份。  
   
@@ -298,7 +298,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 ## <a name="package-configuration-wizard-ui-reference"></a>封裝組態精靈 UI 參考
   使用 **[封裝組態精靈]** ，即可建立在執行階段更新 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝及其物件之屬性的組態。 當您在 **[封裝組態組合管理]** 對話方塊中加入新的組態或修改現有的組態時，這個精靈便會執行 若要開啟 **[封裝組態組合管理]** 對話方塊，請在 **中選取** [SSIS] **功能表上的** [封裝組態] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]。 如需詳細資訊，請參閱 [建立封裝組態](../../integration-services/packages/create-package-configurations.md)。  
   
-> **注意** ：組態可用於套件部署模型。 參數是用來取代專案部署模型的組態。 專案部署模型可讓您部署 [！包含[n](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages)。  
+> **注意** ：組態可用於套件部署模型。 參數是用來取代專案部署模型的組態。 專案部署模型讓您能將 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器。 如需有關部署模型的詳細資訊，請參閱＜ [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx)＞。  
   
  下列章節描述精靈頁面。  
   

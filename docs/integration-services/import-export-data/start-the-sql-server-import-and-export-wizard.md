@@ -20,10 +20,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: ada9817d628b9c146899807bba35a6651842afa3
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 4fd91a36594a8d0d50e3f4eb8490497d6fe0e172
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="start-the-sql-server-import-and-export-wizard"></a>啟動 SQL Server 匯入和匯出精靈
@@ -42,7 +42,7 @@ ms.lasthandoff: 09/21/2017
 -   如果您匯入 SQL Server 或從中匯出，可以使用 [搭配 SQL Server Data Tools (SSDT) 使用 Visual Studio](#startVS)。
 
 ## <a name="prerequisite---is-the-wizard-installed-on-your-computer"></a>必要條件-是安裝在電腦上的精靈嗎？
-如果您想要執行精靈時，但您沒有 [！包含[m](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt)。
+如果您想要執行精靈，但電腦上尚未安裝 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，則可以安裝 SQL Server Data Tools (SSDT) 來安裝 [ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈]。 如需詳細資訊，請參閱 [下載 SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx)。
 
 > [!NOTE]
 > 若要使用 64 位元版本的 SQL Server 匯入和匯出精靈，您必須安裝 SQL Server。 SQL Server Data Tools (SSDT) 和 SQL Server Management Studio (SSMS) 是 32 位元應用程式，並只安裝 32 位元檔案，包括 32 位元版本的精靈。
@@ -87,7 +87,7 @@ ms.lasthandoff: 09/21/2017
 
     ![啟動精靈 (SSMS)](../../integration-services/import-export-data/media/start-wizard-ssms.jpg) 
 
-如果您未安裝 SQL Server，或您有 SQL Server 但未安裝 SQL Server Management Studio，請參閱[下載 SQL Server Management Studio (SSMS)](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms)。
+如果您未安裝 SQL Server，或您有 SQL Server 但未安裝 SQL Server Management Studio，請參閱[下載 SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md)。
   
 ## <a name="startVS"></a>Visual Studio
 ### <a name="start-the-sql-server-import-and-export-wizard-from-visual-studio-with-sql-server-data-tools-ssdt"></a>從 SQL Server Data Tools (SSDT) 與 Visual Studio 中啟動 SQL Server 匯入和匯出精靈 
@@ -103,10 +103,10 @@ ms.lasthandoff: 09/21/2017
 
     ![啟動精靈 (封裝)](../../integration-services/import-export-data/media/start-wizard-packages.jpg)
 
-如果您未安裝 Visual Studio，或您有 Visual Studio 但未安裝 SQL Server Data Tools，請參閱下載 [SQL Server Data Tools (SSDT)](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt)。
+如果您未安裝 Visual Studio，或您有 Visual Studio 但未安裝 SQL Server Data Tools，請參閱下載 [SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md)。
 
 ## <a name="get-the-wizard"></a>取得精靈
-如果您想要執行精靈時，但您沒有 [！包含[m](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt)。
+如果您想要執行精靈，但電腦上尚未安裝 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，則可以安裝 SQL Server Data Tools (SSDT) 來安裝 [ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈]。 如需詳細資訊，請參閱 [下載 SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx)。
 
 ## <a name="get-help-while-the-wizard-is-running"></a>在精靈執行時取得說明
 > [!TIP]

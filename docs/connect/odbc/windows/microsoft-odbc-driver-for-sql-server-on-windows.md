@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: ec9cbf6cc2e8d74fdc87881622e1a1258aeea260
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: be37bf73c0fe662b15c8ad26210ed243b5ca317c
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="microsoft-odbc-driver-for-sql-server-on-windows"></a>Windows 上適用於 SQL Server 的 Microsoft ODBC 驅動程式
@@ -55,8 +55,8 @@ Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_m
   
 ## <a name="see-also"></a>另請參閱  
 - [關於 SQL Server Native Client](https://msdn.microsoft.com/sqlserver/ff658532.aspx)   
-- [使用 SQL Server Native Client 建立應用程式](/sql-docs/docs/relational-databases/native-client/applications/building-applications-with-sql-server-native-client)   
+- [使用 SQL Server Native Client 建立應用程式](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)   
 - [SQL Server Native Client 常見問題集](https://msdn.microsoft.com/sqlserver/aa937707.aspx)   
-- [ODBC Programmer's Reference (ODBC 程式設計人員參考)](../../../odbc/reference/odbc-programmer-s-reference.md)   
-- [SQL Server Native Client (ODBC)](/sql-docs/docs/relational-databases/native-client/odbc/sql-server-native-client-odbc)  
+- [ODBC 程式設計人員參考](../../../odbc/reference/odbc-programmer-s-reference.md)   
+- [SQL Server Native Client (ODBC)](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
 

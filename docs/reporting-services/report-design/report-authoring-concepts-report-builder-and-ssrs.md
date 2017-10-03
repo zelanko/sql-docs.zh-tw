@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 0bbbee2d86c0ec82172ec63317039ace7a19b50c
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: f063c61d46765587cb4b298544d5aa51960efd2e
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="report-authoring-concepts-report-builder-and-ssrs"></a>報表撰寫概念 (報表產生器及 SSRS)
@@ -41,10 +41,10 @@ ms.lasthandoff: 09/21/2017
  [資料區與地圖 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/data-regions-and-maps-report-builder-and-ssrs.md)  
  描述可加入至報表配置的資料區域類型。 資料區會決定報表的外觀：表格式、矩陣、清單或圖表。  
   
- [報表參數概念 （報表產生器及 SSRS）](/sql-docs/docs/reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs)  
+ [報表參數概念 （報表產生器及 SSRS）](report-parameters-concepts-report-builder-and-ssrs.md)  
  描述用來定義與使用報表參數的方式，以及如何從報表伺服器上的報表定義個別進行管理。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [SQL Server 2016 的報表產生器](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
   

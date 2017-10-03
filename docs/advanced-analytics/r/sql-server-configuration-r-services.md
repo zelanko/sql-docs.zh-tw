@@ -15,10 +15,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: d581d48098ab1ee1b983a98a18d53ba68b1e8728
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: dbd29457adf7a3dd05211c2dc0688d45a54e405e
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="sql-server-configuration-for-use-with-r"></a>使用 R 與 SQL Server 組態
@@ -96,7 +96,7 @@ IO 效能通常可以提升使用壓縮或單欄式資料存放區。 一般而�
 
 + [啟用資料表或索引的壓縮](../../relational-databases/data-compression/enable-compression-on-a-table-or-index.md)
 
-+ [資料行存放區索引指南](/sql-docs/docs/relational-databases/indexes/columnstore-indexes-overview)
++ [資料行存放區索引指南](../../relational-databases/indexes/columnstore-indexes-overview.md)
 
 ### <a name="memory-optimized-tables"></a>記憶體最佳化的資料表
 

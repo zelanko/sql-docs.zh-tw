@@ -20,10 +20,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 6e754198cf82a7ba0752fe8f20c3780a8ac551d7
-ms.openlocfilehash: a37fc487615827eb2a380c3fe608b9c29cfda3a8
+ms.sourcegitcommit: d9a995f7d29fe91e14affa9266a9bce73acc9010
+ms.openlocfilehash: 75efc7b5a58b3739a196e36b2c80d4ee37a92003
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 
@@ -107,7 +107,7 @@ ms.lasthandoff: 09/14/2017
   
 |||  
 |-|-|  
-|[cursor](../../t-sql/data-types/cursor-transact-sql.md)|[timestamp](../../t-sql/data-types/rowversion-transact-sql.md)|  
+|[cursor](../../t-sql/data-types/cursor-transact-sql.md)|[rowversion](../../t-sql/data-types/rowversion-transact-sql.md)|  
 |[hierarchyid](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)|[uniqueidentifier](../../t-sql/data-types/uniqueidentifier-transact-sql.md)|  
 |[sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md)|[xml](../../t-sql/xml/xml-transact-sql.md)|  
 |[Geometry 空間類型](../../t-sql/spatial-geometry/spatial-types-geometry-transact-sql.md) |[空間地理位置類型](../../t-sql/spatial-geography/spatial-types-geography.md)|  

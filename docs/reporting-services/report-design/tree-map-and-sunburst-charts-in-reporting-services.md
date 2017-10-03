@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: e09afe4634c02db6e74413e7c1c10565450b3559
+ms.sourcegitcommit: 7811cfe9238c92746673fac4fce40a4af44d6dcd
+ms.openlocfilehash: b9f7ca16589b2383eaed959c6556f0b2b6c4cf74
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="tree-map-and-sunburst-charts-in-reporting-services"></a>Reporting Services 中的樹狀圖與放射環狀圖
@@ -32,12 +32,13 @@ ms.lasthandoff: 08/09/2017
   
  樹狀圖會將圖表區域分割成矩形，該矩形代表資料階層的不同層級與相對大小。 樹狀圖類似樹上的樹枝，從主幹開始，分割為越來越小的分支。 每個矩形會分成較小的矩形，表示階層中的下一個層級。 最上層的樹狀圖矩形的排列方式是，最大的矩形排列在圖表左上角，最小的矩形在右下角。  在矩形中，更高的下一層級也會從左上到右下排列矩形。  
   
- 例如，在以下範例樹狀圖的影像中，Southwest (西南) 的領域最大，而 Germany (德國) 最小。 Southwest (西南) 當中，Road Bikes (公路自行車) 比 Mountain Bikes (登山自行車) 大。  
+ 例如，在以下範例樹狀圖的影像，southwest （西南） 的領域是最大而德國是最小值。 Southwest (西南) 當中，Road Bikes (公路自行車) 比 Mountain Bikes (登山自行車) 大。  
   
  ![ssrs_treemap_example](../../reporting-services/report-design/media/ssrs-treemap-example.png "ssrs_treemap_example")  
   
 ### <a name="to-insert-a-tree-map-chart-and-configure-for-the-sample-adventureworks-data"></a>插入樹狀圖圖表並設定範例 Adventureworks 資料  
- **注意：** 在您新增圖表到報表前，請建立資料來源和資料集。  如需範例資料和範例查詢，請參閱本主題中的 [範例 Adventureworks 資料](#bkmk_sample_data) 章節。  
+   
+[!NOTE] 您可以將圖表加入至報表之前，請建立資料來源和資料集。  如需範例資料和範例查詢，請參閱本主題中的 [範例 Adventureworks 資料](#bkmk_sample_data) 章節。  
   
 1.  以滑鼠右鍵按一下設計介面，按一下 [插入]，然後按一下 [圖表]。  
   
@@ -80,7 +81,7 @@ ms.lasthandoff: 08/09/2017
  ![ssrs_sunburst_example](../../reporting-services/report-design/media/ssrs-sunburst-example.png "ssrs_sunburst_example")  
   
 ### <a name="to-insert-a-sunburst-chart-and-configure-for-the-sample-adventureworks-data"></a>插入放射環狀圖表並設定範例 Adventureworks 資料  
- **注意：** 在您新增圖表到報表前，請建立資料來源和資料集。  如需範例資料和範例查詢，請參閱本主題中的 [範例 Adventureworks 資料](#bkmk_sample_data) 章節。  
+ [!NOTE] 您可以將圖表加入至報表之前，請建立資料來源和資料集。  如需範例資料和範例查詢，請參閱本主題中的 [範例 Adventureworks 資料](#bkmk_sample_data) 章節。  
   
 1.  以滑鼠右鍵按一下設計介面，按一下 [插入]，然後按一下 [圖表]。  
   
@@ -100,11 +101,13 @@ ms.lasthandoff: 08/09/2017
   
 5.  將預設圖表標題變更為「按領域分類的銷售量 (包含銷售原因)」。  
   
-6.  |||  
+6.
+    |||  
     |-|-|  
-    |![ssrs_sunburst_linetotalproperties](../../reporting-services/report-design/media/ssrs-sunburst-linetotalproperties.png "ssrs_sunburst_linetotalproperties")|若要新增類別群組的值到放射環狀圖作為標籤，請設定標籤屬性 **Visible** = true 和 **UseValueAsLabel**=False。<br /><br /> 顯示的標籤值會受字型大小、整體圖表區域大小，和特定矩形的大小影響。  若要看到更多標籤，將 LineTotal 的 Label font 屬性變更為 8pt，取代預設的 10pt。|  
+    |![ssrs_sunburst_linetotalproperties](../../reporting-services/report-design/media/ssrs-sunburst-linetotalproperties.png "ssrs_sunburst_linetotalproperties")|若要新增類別群組的值到放射環狀圖作為標籤，請設定標籤屬性 **Visible** = true 和 **UseValueAsLabel**=False。<br /><br /> 顯示的標籤值會受字型大小、整體圖表區域大小，和特定矩形的大小影響。  若要看到更多標籤，將 LineTotal 的 Label font 屬性變更為 8pt，取代預設的 10pt。|
   
 7.  如果您想要不同的色彩範圍，請變更圖表的 **Palette** 屬性。  
+  
   
      ![ssrs_visualization_palette](../../reporting-services/report-design/media/ssrs-visualization-palette.png "ssrs_visualization_palette")  
   
@@ -171,7 +174,7 @@ ms.lasthandoff: 08/09/2017
                                  Sales.SalesOrderHeaderSalesReason.SalesReasonID = Sales.SalesReason.SalesReasonID  
         ```  
   
-    -   按一下 [確定] 。  
+    -   按一下 **[確定]**。  
   
      如需建立資料集的詳細資訊，請參閱 [Create a Shared Dataset or Embedded Dataset &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md) (建立共用資料集或內嵌資料集 (報表產生器及 SSRS))。  
   

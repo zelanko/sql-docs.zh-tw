@@ -27,10 +27,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 0fbb1f0699328a59749e5bba7efd7661e9b36e5a
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 19d2d42ff513020b5d4bb9492f0714893101bdcb
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (TRANSACT-SQL)
@@ -80,7 +80,7 @@ ALTER DATABASE SCOPED CONFIGURATION
  
 指定次要資料庫 （所有次要資料庫必須有相同的值） 的設定。  
   
-MAXDOP ** = ** {\<值 > |主要}  
+MAXDOP  **=**  {\<值 > |主要}  
 **\<值 >**  
   
 指定的預設的 MAXDOP 設定，應該用於陳述式。 0 是預設值，並指出將會改為使用伺服器組態。 （除非它已設為 0），會覆寫在資料庫範圍 MAXDOP**的最大平行處理原則程度**sp_configure 設定伺服器層級。 查詢提示仍然可以覆寫資料庫範圍 MAXDOP 以微調需要不同設定的特定查詢。 所有這些設定都受到工作負載群組設定 MAXDOP。   
@@ -96,7 +96,7 @@ PRIMARY
   
 只能設定為次要，當資料庫中，在主要伺服器上，並指出組態將會設定為主要。 如果組態中的主要變更，也就是次要資料庫上的值會變更據以而不需要設定次要資料庫的值上明確地。 **主要**是次要資料庫的預設設定。  
   
-LEGACY_CARDINALITY_ESTIMATION ** = ** {ON |**OFF** |主要}  
+LEGACY_CARDINALITY_ESTIMATION  **=**  {ON |**OFF** |主要}  
 
 可讓您設定資料庫相容性層級無關之 SQL Server 2012 和舊版查詢最佳化工具基數估計模型。 預設值是**OFF**，查詢最佳化工具基數估計模型會根據資料庫的相容性層級的設定。 將此設定為**ON**相當於啟用[追蹤旗標 9481](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。 
 
@@ -107,7 +107,7 @@ PRIMARY
   
 此值才有效，當資料庫中主要、 次要和指定的查詢最佳化工具基數估計模型設定所有次要資料庫上會設定為主要的值。 如果查詢最佳化工具基數估計模型的主要組態變更時，次要資料庫上的值會跟著變更。 **主要**是次要資料庫的預設設定。  
   
-PARAMETER_SNIFFING ** = ** { **ON** |關閉 |主要}  
+PARAMETER_SNIFFING  **=**  { **ON** |關閉 |主要}  
 
 啟用或停用[參數探測](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing)。 預設值是 ON。 這與 [追蹤旗標 4136](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)相同。   
 
@@ -118,7 +118,7 @@ PRIMARY
   
 此值才有效，當資料庫中主要、 次要資料庫上，並指定所有次要資料庫上的這個設定的值將會針對主要設定的值。 如果在主要伺服器上使用的組態[參數探測](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing)變更時，變更次要資料庫上的值會隨之而不需要設定次要資料庫的值上明確地。 這是次要資料庫的預設設定。  
   
-QUERY_OPTIMIZER_HOTFIXES ** = ** {ON |**OFF** |主要}  
+QUERY_OPTIMIZER_HOTFIXES  **=**  {ON |**OFF** |主要}  
 
 啟用或停用查詢最佳化 hotfix，不論資料庫的相容性層級。 預設值是**OFF**。 這相當於啟用[追蹤旗標 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。   
 
@@ -282,7 +282,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE=OFF ;
 * [建議和指導方針 SQL Server 中的"max degree of parallelism"組態選項](https://support.microsoft.com/en-us/kb/2806535) 
 
 ### <a name="legacycardinalityestimation-resources"></a>LEGACY_CARDINALITY_ESTIMATION 資源    
-* [基數估計 (SQL Server)](/sql-docs/docs/relational-databases/performance/cardinality-estimation-sql-server)
+* [基數估計 (SQL Server)](../../relational-databases/performance/cardinality-estimation-sql-server.md)
 * [Optimizing Your Query Plans with the SQL Server 2014 Cardinality Estimator](https://msdn.microsoft.com/library/dn673537.aspx) (使用 SQL Server 2014 基數估算程式最佳化您的查詢計劃)
 
 ### <a name="parametersniffing-resources"></a>PARAMETER_SNIFFING 資源    

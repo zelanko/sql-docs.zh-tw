@@ -4,23 +4,23 @@ description: "安裝、 更新及解除安裝 SQL Server on Linux。 本主題�
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 08/28/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ms.translationtype: MT
-ms.sourcegitcommit: 303d3b74da3fe370d19b7602c0e11e67b63191e7
-ms.openlocfilehash: f746037f695301881ce9a993f3d556db44f44292
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 0220ef0349acac274567bb75bcb0e8b38a3126ce
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/29/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>SQL Server on Linux 的安裝指南
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-本主題說明如何安裝、 更新及解除安裝 SQL Server 2017 on Linux。 Red Hat Enterprise Linux (RHEL)、 SUSE Linux Enterprise Server (SLES) 和 Ubuntu 支援 SQL Server 2017 RC2。 它也可做為 Docker 映像，可以在 Linux 或 Docker for Windows/mac 上的 Docker 引擎執行
+本主題說明如何安裝、 更新及解除安裝 SQL Server 2017 on Linux。 SQL Server 2017 Red Hat Enterprise Linux (RHEL)、 SUSE Linux Enterprise Server (SLES) 和 Ubuntu 支援。 它也可做為 Docker 映像，可以在 Linux 或 Docker for Windows/mac 上的 Docker 引擎執行
 
 > [!TIP]
 > 若要快速地開始，跳至其中的快速入門教學課程[RHEL](quickstart-install-connect-red-hat.md)， [SLES](quickstart-install-connect-suse.md)， [Ubuntu](quickstart-install-connect-ubuntu.md)，或[Docker](quickstart-install-connect-docker.md)。
@@ -43,7 +43,7 @@ SQL Server 2017 具有適用於 Linux 的下列系統需求：
 |||
 |-----|-----|
 | **記憶體** | 3.25 GB |
-| **檔案系統** | **XFS**或**EXT4** (其他檔案系統，例如**BTRFS**，不支援) |
+| **[File System]** | **XFS**或**EXT4** (其他檔案系統，例如**BTRFS**，不支援) |
 | **磁碟空間** | 6 GB |
 | **處理器速度** | 2 GHz |
 | **處理器核心** | 2 核心 |
@@ -51,6 +51,12 @@ SQL Server 2017 具有適用於 Linux 的下列系統需求：
 
 > [!NOTE]
 > SQL Server 引擎已在此階段中測試 1 TB 的記憶體。
+
+如果您使用**網路檔案系統 (NFS)**遠端共用實際執行環境，請注意下列的支援需求：
+
+- 使用 NFS 版本**4.2 或更新版本**。 NFS 的舊版本不支援必要的功能，例如 fallocate 和通用的現代的檔案系統的疏鬆檔案建立。
+- 只尋找**/var/opt/mssql**上 NFS 掛接的目錄。 不支援其他檔案，例如 SQL Server 系統二進位檔。
+- 確定 NFS 用戶端在掛接的遠端共用時，會使用 'nolock' 選項。
 
 ## <a id="platforms"></a> 安裝 SQL Server
 
@@ -91,7 +97,55 @@ SQL Server 2017 具有適用於 Linux 的下列系統需求：
 > 只支援降級至相同的主要版本，例如 SQL Server 2017 內的版本。
 
 > [!IMPORTANT]
-> RC2 之間 RC1 此時只支援降級。
+> RTM、 RC2 和 RC1 之間此時只支援降級。
+
+## <a id="repositories"></a>變更來源儲存機制
+
+當您安裝或升級 SQL Server 時，您收到最新版本的 SQL Server 設定的 Microsoft 儲存機制。 請務必注意，有兩種類型的儲存機制的每個散發：
+
+- **累計更新 (CU)**: 累計更新 (CU) 儲存機制自該版本包含基底的 SQL Server 版本和 bug 修正或改進的封裝。 累計更新的發行版本，例如 SQL Server 2017 特有。 它們會以一般的步調發行。
+
+- **GDR**: GDR 儲存機制 含有該發行以來的基底的 SQL Server 版本和僅重大修正程式和安全性更新的封裝。 這些更新也會新增到下一個 CU 版本。
+
+每個 CU 和 GDR 版本包含完整的 SQL Server 封裝和所有先前的更新，該儲存機制。 從 GDR 發行更新至目前的版本支援適用於 SQL Server 變更設定的儲存機制。 您也可以[降級](#rollback)至您的主要版本內任何發佈 (例如： 2017年)。
+
+> [!NOTE]
+> 更新不支援從 CU GDR 發行的版本。
+
+若要從變更到目前的儲存機制的 GDR 儲存機制，請使用下列步驟：
+
+1. 移除先前設定的預覽儲存機制。
+
+   | 平台 | 儲存機制移除命令 |
+   |-----|-----|
+   | RHEL | `sudo rm -rf /etc/yum.repos.d/mssql-server.repo` |
+   | SLES | `sudo zypper removerepo 'packages-microsoft-com-mssql-server'` |
+   | Ubuntu | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server xenial main'` |
+
+1. 設定新的儲存機制。
+
+   | 平台 | Repository | Command |
+   |-----|-----|-----|
+   | RHEL | CU | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo` |
+   | RHEL | GDR | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017-gdr.repo` |
+   | SLES | CU  | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles12/mssql-server-2017.repo` |
+   | SLES | GDR | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles12/mssql-server-2017-gdr.repo` |
+   | Ubuntu | CU | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"` |
+   | Ubuntu | GDR | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017-gdr.list)"` |
+
+1. 更新您的系統。
+
+   | 平台 | Update 命令 |
+   |-----|-----|
+   | RHEL | `sudo yum update` |
+   | SLES | `sudo zypper --gpg-auto-import-keys refresh` |
+   | Ubuntu | `sudo apt-get update` |
+
+
+1. [安裝](#platforms)或[更新](#upgrade)從新的儲存機制的 SQL Server。
+
+   > [!IMPORTANT]
+   > 此時，如果您選擇執行完整安裝使用[快速入門教學課程](#platforms)，請記住您剛才設定的目標儲存機制。 教學課程中不重複該步驟。 特別是如果您設定的 GDR 儲存機制，因為快速入門教學課程會使用目前的儲存機制。
 
 ## <a id="uninstall"></a>解除安裝 SQL Server
 

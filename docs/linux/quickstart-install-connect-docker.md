@@ -4,23 +4,23 @@ description: "本快速入門教學課程會示範如何使用 Docker 執行 SQL
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 09/20/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.translationtype: MT
-ms.sourcegitcommit: f684f0168e57c5cd727af6488b2460eeaead100c
-ms.openlocfilehash: 7fe6626cf8c5b9b348e95b956cee9ac67db16f97
+ms.sourcegitcommit: 7811cfe9238c92746673fac4fce40a4af44d6dcd
+ms.openlocfilehash: dc105fd46a14d241bb375f0d7f3a6c5471797818
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="run-the-sql-server-2017-container-image-with-docker"></a>執行 SQL Server 2017 容器映像使用 Docker
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-在這個快速入門教學課程中，您必須使用 Docker 提取並執行 SQL Server 2017 RC2 容器映像[mssql-伺服器-linux](https://hub.docker.com/r/microsoft/mssql-server-linux/)。 然後以連接**sqlcmd**來建立您的第一個資料庫和執行查詢。
+在這個快速入門教學課程中，您必須使用 Docker 提取並執行 SQL Server 2017 容器映像[mssql-伺服器-linux](https://hub.docker.com/r/microsoft/mssql-server-linux/)。 然後以連接**sqlcmd**來建立您的第一個資料庫和執行查詢。
 
 此映像包含根據 Ubuntu 16.04 Linux 上執行的 SQL Server。 它可以用 Docker 引擎 1.8 + Docker 或 Linux 上的 Mac/windows。
 
@@ -29,7 +29,7 @@ ms.lasthandoff: 09/21/2017
 
 ## <a id="requirements"></a> 必要條件
 
-- Docker 引擎 1.8 + 任何支援 Mac/Windows Linux 發佈或 Docker。
+- Docker 引擎 1.8 + 任何支援 Mac/Windows Linux 發佈或 Docker。 如需詳細資訊，請參閱[安裝 Docker](https://docs.docker.com/engine/installation/)。
 - 至少 4 GB 的磁碟空間
 - 至少 4 GB 的 RAM
 - [SQL Server on Linux 的系統需求](sql-server-linux-setup.md#system)。
@@ -58,28 +58,28 @@ ms.lasthandoff: 09/21/2017
 
 ## <a name="pull-and-run-the-container-image"></a>提取和執行容器映像
 
-1. 從 Docker Hub 提取容器映像。
+1. 從 Docker Hub 提取 SQL Server 2017 Linux 容器映像。
 
     ```bash
-    docker pull microsoft/mssql-server-linux
+    docker pull microsoft/mssql-server-linux:2017-latest
     ```
 
     > [!TIP]
     > 適用於 Linux，根據您的系統和使用者設定，您可能需要的前面上每個`docker`命令搭配`sudo`。
 
     > [!NOTE]
-    > 上述命令中提取最新的 SQL Server 容器映像。 如果您想要提取的特定映像，您加上冒號和標記名稱 (例如， `microsoft/mssql-server-linux:rc1`)。 若要查看所有可用的映像，請參閱[mssql-伺服器-linux Docker 中樞頁面](https://hub.docker.com/r/microsoft/mssql-server-linux/tags/)。
+    > 上述命令會提取 SQL Server 2017 GA 容器映像。 如果您想要提取的特定映像，您加上冒號和標記名稱 (例如， `microsoft/mssql-server-linux:rc1`)。 若要查看所有可用的映像，請參閱[mssql-伺服器-linux Docker 中樞頁面](https://hub.docker.com/r/microsoft/mssql-server-linux/tags/)。
 
 1. 若要執行 Docker 容器映像，您可以使用下列命令從 bash 殼層 (Linux/macOS):
 
     ```bash
-    docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -e 'MSSQL_PID=Developer' -p 1401:1433 --name sqlcontainer1 -d microsoft/mssql-server-linux
+    docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -e 'MSSQL_PID=Developer' -p 1401:1433 --name sql1 -d microsoft/mssql-server-linux:2017-latest
     ```
 
     如果您使用 Docker for Windows，請使用下列命令，從提升權限 PowerShell 命令提示字元：
 
     ```PowerShell
-    docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -e "MSSQL_PID=Developer" -p 1401:1433 --name sqlcontainer1 -d microsoft/mssql-server-linux
+    docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -e "MSSQL_PID=Developer" -p 1401:1433 --name sql1 -d microsoft/mssql-server-linux:2017-latest
     ```
 
     > [!NOTE]
@@ -93,8 +93,8 @@ ms.lasthandoff: 09/21/2017
     | **-e ' MSSQL_SA_PASSWORD =\<YourStrong ！Passw0rd\>'** | 指定您自己的強式密碼至少為 8 個字元，並符合[SQL Server 的密碼需求](../relational-databases/security/password-policy.md)。 需要設定 SQL Server 映像。 |
     | **-e ' MSSQL_PID = 開發人員 '** | 指定的版本或產品金鑰。 在此範例中，自由地授權的 Developer Edition 用於非實際執行測試。 如需其他值，請參閱[Linux 上的環境變數與設定 SQL Server 設定](sql-server-linux-configure-environment-variables.md)。 |
     | **-p 1401:1433** | 將主機環境上的 TCP 通訊埠對應 （第一個值） 與容器中的 TCP 連接埠 （第二個值）。 在此範例中，SQL Server 接聽 TCP 1433 容器中，這連接埠，公開 1401，主機上。 |
-    | **-名稱 sqlcontainer1** | 指定容器，而不是一個隨機產生的自訂名稱。 如果您執行多個容器，您無法重複使用這個相同的名稱。 |
-    | **microsoft/mssql 伺服器-linux** | SQL Server Linux 容器映像。 除非另行指定，預設值為**最新**映像。 |
+    | **-名稱 sql1** | 指定容器，而不是一個隨機產生的自訂名稱。 如果您執行多個容器，您無法重複使用這個相同的名稱。 |
+    | **microsoft/mssql 伺服器-linux:2017-最新版** | SQL Server 2017 Linux 容器映像。 |
 
 
 1. 若要檢視您的 Docker 容器，請使用`docker ps`命令。
@@ -122,34 +122,22 @@ SELECT @@SERVERNAME,
 
 ## <a name="change-the-sa-password"></a>變更 SA 的密碼
 
-SA 帳戶是在安裝期間建立的 SQL Server 執行個體上的系統管理員。 建立您的 SQL Server 容器之後`MSSQL_SA_PASSWORD`執行您指定的環境變數是可探索`echo $MSSQL_SA_PASSWORD`容器中。 基於安全性考量，變更 SA 密碼。
-
-1. 選擇要使用 SA 使用者的強式密碼。
-
-1. 使用`docker exec`執行**sqlcmd**變更密碼使用 Transact SQL。 取代`<YourStrong!Passw0rd>`和`<YourNewStrong!Passw0rd>`以您自己的密碼值。
-
-   ```bash
-   docker exec -it sqlcontainer1 /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P '<YourStrong!Passw0rd>' -Q 'ALTER LOGIN SA WITH PASSWORD="<YourNewStrong!Passw0rd>"'
-   ```
-
-   ```PowerShell
-   docker exec -it sqlcontainer1 /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P "<YourStrong!Passw0rd>" -Q "ALTER LOGIN SA WITH PASSWORD='<YourNewStrong!Passw0rd>'"
-   ```
+[!INCLUDE [Change docker password](../includes/sql-server-linux-change-docker-password.md)]
 
 ## <a name="connect-to-sql-server"></a>連接至 SQL Server
 
 下列步驟是使用 SQL Server 命令列工具， **sqlcmd**，連接到 SQL Server 的容器。
 
-1. 使用`docker exec -it`命令來啟動的互動式 bash 殼層內執行的容器。 在下列範例中`sqlcontainer1`名稱所指定`--name`參數建立容器時。
+1. 使用`docker exec -it`命令來啟動的互動式 bash 殼層內執行的容器。 在下列範例中`sql1`名稱所指定`--name`參數建立容器時。
 
     ```bash
-    docker exec -it sqlcontainer1 "bash"
+    docker exec -it sql1 "bash"
     ```
 
 1. 一次的容器中，連接在本機使用 sqlcmd。 Sqlcmd 不在路徑中，依預設，所以您不必指定完整路徑。
 
     ```bash
-    /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P '<YourPassword>'
+    /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P '<YourNewStrong!Passw0rd>'
     ```
 
    > [!TIP]
@@ -237,7 +225,7 @@ SA 帳戶是在安裝期間建立的 SQL Server 執行個體上的系統管理�
 
 1. 若要結束互動式命令提示字元在容器中，輸入`exit`。 您的容器會繼續執行之後結束互動式 bash 殼層。
 
-## <a name="connect-from-outside-the-container"></a>從連線容器外
+## <a id="connectexternal"></a>從連線容器外
 
 您也可以連接到 SQL Server 執行個體在 Docker 電腦上從任何外部 Linux、 Windows 或 macOS 工具，可支援 SQL 連線。
 
@@ -248,11 +236,11 @@ SA 帳戶是在安裝期間建立的 SQL Server 執行個體上的系統管理�
 1. 執行指定的 IP 位址和連接埠對應到您的容器中的通訊埠 1433年的 sqlcmd。 在此範例中，這是在主機上的連接埠 1401年。
 
    ```bash
-   sqlcmd -S 10.3.2.4,1401 -U SA -P '<YourPassword>'
+   sqlcmd -S 10.3.2.4,1401 -U SA -P '<YourNewStrong!Passw0rd>'
    ```
 
    ```PowerShell
-   sqlcmd -S 10.3.2.4,1401 -U SA -P "<YourPassword>"
+   sqlcmd -S 10.3.2.4,1401 -U SA -P "<YourNewStrong!Passw0rd>"
    ```
 
 1. 執行 TRANSACT-SQL 命令。 完成後，請輸入`QUIT`。

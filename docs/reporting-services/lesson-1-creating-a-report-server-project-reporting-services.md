@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 3b9b3bea0adf69916e698b03df1601a7fd6a62d4
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 6292a812cb1456892a6dad78408d0d64ce0b1a9e
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="lesson-1-creating-a-report-server-project-reporting-services"></a>第 1 課：建立報表伺服器專案 (Reporting Services)
@@ -47,7 +47,7 @@ ms.lasthandoff: 09/21/2017
 
 5. 按一下 [報表伺服器專案]  ![ssrs_ssdt_report_server_project](../reporting-services/media/ssrs-ssdt-report-server-project.png)。 
 
-   >**請注意**： 如果您沒有看到**Business Intelligence**或**報表伺服器專案**選項，您必須使用來更新 SSDT 商業智慧範本。 請參閱 [下載 SQL Server Data Tools (SSDT)](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt)  
+   >**請注意**： 如果您沒有看到**Business Intelligence**或**報表伺服器專案**選項，您必須使用來更新 SSDT 商業智慧範本。 請參閱 [下載 SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)  
   
 5.  在 [名稱] 中，輸入 **Tutorial**。  
 

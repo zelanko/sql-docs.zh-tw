@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 80efe5ff-09ba-48a0-ac93-a91d62cff47c
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 1e89361f76d5e56044633bf43f2b43567b097489
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: f692639531a133652787dfe818fe25847c0d910b
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="connectivity-libraries-and-frameworks-for-microsoft-sql-server"></a>連接程式庫和適用於 Microsoft SQL Server 的架構
@@ -29,9 +29,9 @@ ms.lasthandoff: 09/21/2017
 | C# | Windows、 Linux、 macOS | [Microsoft ADO.NET for SQL Server](http://msdn.microsoft.com/library/mt657768.aspx) | [下載](https://msdn.microsoft.com/vstudio/aa496123.aspx) | [快速入門](https://www.microsoft.com/en-us/sql-server/developer-get-started/csharp/ubuntu)
 | Java | Windows、 Linux、 macOS | [Microsoft JDBC Driver for SQL Server](http://msdn.microsoft.com/library/mt484311.aspx) | [下載](http://go.microsoft.com/fwlink/?LinkId=245496) |  [快速入門](https://www.microsoft.com/en-us/sql-server/developer-get-started/java/ubuntu)
 | PHP | Windows、 Linux、 macOS| [SQL Server 的 PHP SQL 驅動程式](http://msdn.microsoft.com/library/dn865013.aspx) | 作業系統： <br/> \*[Windows](https://www.microsoft.com/download/details.aspx?id=20098) <br/> \*[Linux](https://github.com/Microsoft/msphpsql/tree/dev#install-unix) <br/> \*[macOS](https://github.com/Microsoft/msphpsql/tree/dev#install-unix) |  [快速入門](https://www.microsoft.com/en-us/sql-server/developer-get-started/php/ubuntu)
-| Node.js | Windows、 Linux、 macOS | [Node.js Driver for SQL Server](/sql-docs/docs/connect/node-js/node-js-driver-for-sql-server) |  [快速入門](https://www.microsoft.com/en-us/sql-server/developer-get-started/node/ubuntu)
-| Python | Windows、 Linux、 macOS | [Python SQL 驅動程式](/sql-docs/docs/connect/python/python-driver-for-sql-server) <br/> \*[pyodbc](http://msdn.microsoft.com/library/mt763257.aspx) |  [快速入門](https://www.microsoft.com/en-us/sql-server/developer-get-started/python/ubuntu)
-| Ruby | Windows、 Linux、 macOS | [拼音 Driver for SQL Server](/sql-docs/docs/connect/ruby/ruby-driver-for-sql-server) | [快速入門](https://www.microsoft.com/en-us/sql-server/developer-get-started/ruby/ubuntu)
+| Node.js | Windows、 Linux、 macOS | [Node.js Driver for SQL Server](../connect/node-js/node-js-driver-for-sql-server.md) |  [快速入門](https://www.microsoft.com/en-us/sql-server/developer-get-started/node/ubuntu)
+| Python | Windows、 Linux、 macOS | [Python SQL 驅動程式](../connect/python/python-driver-for-sql-server.md) <br/> \*[pyodbc](http://msdn.microsoft.com/library/mt763257.aspx) |  [快速入門](https://www.microsoft.com/en-us/sql-server/developer-get-started/python/ubuntu)
+| Ruby | Windows、 Linux、 macOS | [適用於 SQL Server 的 Ruby 驅動程式](../connect/ruby/ruby-driver-for-sql-server.md) | [快速入門](https://www.microsoft.com/en-us/sql-server/developer-get-started/ruby/ubuntu)
 | C++ | Windows、 Linux、 macOS | [Microsoft ODBC Driver for SQL Server](https://msdn.microsoft.com/en-us/library/mt654048(v=sql.1).aspx) | [下載](https://msdn.microsoft.com/en-us/library/mt654048(v=sql.1).aspx) |  
 
 下表列出物件關聯式對應 (ORM) 架構和 web 架構用戶端應用程式可以使用與 Microsoft SQL Server 在內部部署執行，或在雲端中，在 Linux、 Windows 或 Docker 和 Azure SQL Database 和 Azure SQL 資料倉儲的一些的範例。 

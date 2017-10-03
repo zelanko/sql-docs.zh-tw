@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: c13295c229dc4450b9661c25f86d7eacf669787d
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 085a86b5ae97ea07a33049c0755af2677a3c5217
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="change-row-height-or-column-width-report-builder-and-ssrs"></a>變更資料列高度或資料行寬度 (報表產生器及 SSRS)
@@ -70,11 +70,11 @@ ms.lasthandoff: 09/21/2017
 3.  按一下以抓取資料行的邊緣，然後向左或向右移動，以便調整資料行寬度。  
   
 ## <a name="see-also"></a>另請參閱  
- [Tablix 資料區域 （報表產生器及 SSRS）](/sql-docs/docs/reporting-services/report-design/tablix-data-region-report-builder-and-ssrs)   
- [Tablix 資料區域資料格、 列和資料行 （報表產生器） 和 SSRS](/sql-docs/docs/reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs)   
+ [Tablix 資料區域 （報表產生器及 SSRS）](tablix-data-region-report-builder-and-ssrs.md)   
+ [Tablix 資料區域資料格、 列和資料行 （報表產生器） 和 SSRS](tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)   
  [資料表 （報表產生器及 SSRS）](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
- [矩陣 （報表產生器及 SSRS）](/sql-docs/docs/reporting-services/report-design/create-a-matrix-report-builder-and-ssrs)   
- [清單 （報表產生器及 SSRS）](/sql-docs/docs/reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs)   
+ [矩陣 （報表產生器及 SSRS）](create-a-matrix-report-builder-and-ssrs.md)   
+ [清單 （報表產生器及 SSRS）](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
  [資料表、 矩陣和清單 （報表產生器及 SSRS）](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

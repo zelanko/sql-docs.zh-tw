@@ -15,10 +15,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: be817ff6961e68227cdae8aff14049b55652099c
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 1837605f8eaf59224b90a2a00f7dffa32a6d63b1
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="common-issues-with-external-script-execution-in-sql-server"></a>SQL Server 中的外部指令碼執行的一般問題
@@ -64,7 +64,7 @@ Launchpad 服務 (Launchpad.exe) 會使用低權限的服務帳戶執行。 不�
 - 略過跨越檢查 (SeChangeNotifyPrivilege)
 - 調整處理序 (SeIncreaseQuotaSizePrivilege) 的記憶體配額
 
-如需這些使用者權限資訊，請參閱中的 < Windows 權限和權限 > 一節[設定 Windows 服務帳戶與權限](/sql-docs/docs/database-engine/configure-windows/configure-windows-service-accounts-and-permissions)。
+如需這些使用者權限資訊，請參閱中的 < Windows 權限和權限 > 一節[設定 Windows 服務帳戶與權限](../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)。
 
 > [!TIP]
 > 如果您熟悉 SQL Server 診斷支援診斷平台 (SDP) 工具使用，您可以使用 SDP 名稱 MachineName_UserRights.txt 輸出檔案。

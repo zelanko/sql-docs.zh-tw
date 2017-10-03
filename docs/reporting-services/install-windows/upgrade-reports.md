@@ -25,10 +25,10 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 56ab6a26866958c27b5fc4895fae24316e8a3517
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 640c298b1fbbc22561d04e62e236e683b186ef87
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 
@@ -46,7 +46,7 @@ ms.lasthandoff: 09/21/2017
   
  在本機或報表伺服器上升級報表之後，您可能會發現其他錯誤、警告和訊息。 這是內部報表物件模型的變更和處理元件的結果，造成偵測到報表中的根本問題時出現訊息。 如需詳細資訊，請參閱 [Reporting Services 回溯相容性][](../../reporting-services/reporting-services-backward-compatibility.md "回溯相容性 |Reporting Services")。  
   
- 如需有關新功能 [！包含[ssRSCurrent](/sql-docs/docs/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs)。  
+ 如需有關新功能 [！包含[ssRSCurrent](../what-s-new-in-sql-server-reporting-services-ssrs.md)。  
 
 ##  <a name="bkmk_versionsupported"></a> 升級支援的版本  
  在任何舊版 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中建立的報表都可以升級。 這包括以下版本：  
