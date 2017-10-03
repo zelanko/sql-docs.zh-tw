@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 0a64043328380b107fb7e33716ec0bb48d061dd1
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 2417dafd4e1410a32f988ea950008da1dbaaaaa9
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="download-sql-server-data-tools-ssdt"></a>下載 SQL Server Data Tools (SSDT)
@@ -123,11 +123,11 @@ SSDT 的 ISO 映像提供了另一種方式，可讓您用來安裝 SSDT 或設�
   
 -   [專案導向的離線資料庫開發](https://msdn.microsoft.com/library/hh272702(v=vs.103).aspx)  
   
--   [SSIS 教學課程：建立簡易 ETL 封裝](/sql-docs/docs/integration-services/ssis-how-to-create-an-etl-package)  
+-   [SSIS 教學課程：建立簡易 ETL 封裝](../integration-services/ssis-how-to-create-an-etl-package.md)  
   
--   [Analysis Services 教學課程](/sql-docs/docs/analysis-services/analysis-services-tutorials-ssas)  
+-   [Analysis Services 教學課程](../analysis-services/analysis-services-tutorials-ssas.md)  
   
--   [建立基本資料表報表 (SSRS 教學課程)](/sql-docs/docs/reporting-services/create-a-basic-table-report-ssrs-tutorial)  
+-   [建立基本資料表報表 (SSRS 教學課程)](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)  
   
 
 

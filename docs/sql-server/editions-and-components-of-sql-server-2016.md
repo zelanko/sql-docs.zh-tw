@@ -39,10 +39,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 49ad187a9cdee375d8e03dfabff37fc110b60d94
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: da8692d3cf786157c5e573e18df51e27c41c19c2
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="editions-and-supported-features-of-sql-server-2016"></a>SQL Server 2016 的版本及支援功能
@@ -378,7 +378,7 @@ Developer Edition 只持續支援 1 個 [SQL Server Distributed Replay](../tools
 |StreamInsight|StreamInsight Premium 版|StreamInsight Standard 版|StreamInsight Standard 版|否|否| 
 |StreamInsight HA|StreamInsight Premium 版|否|否|否|否|   
   
-> [![Download SSMS](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms) n**[Download the latest version of SQL Server Management Studio](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms)**    
+> [![Download SSMS](../ssms/download-sql-server-management-studio-ssms.md) n**[Download the latest version of SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)**    
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server 的產品規格](http://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)   

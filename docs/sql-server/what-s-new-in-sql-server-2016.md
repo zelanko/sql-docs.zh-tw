@@ -23,10 +23,10 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: fbfcabf1804a8438e07966bac9f612922b37fa4d
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 2ef79a82259dee5a8767b382ca5ddaa0795dab7e
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="whats-new-in-sql-server-2016"></a>SQL Server 2016 中的新功能
@@ -38,7 +38,7 @@ ms.lasthandoff: 09/21/2017
 
  **立即試用 SQL Server！** 
 - 下載「免費的」[**SQL Server 2016 Developer Edition！**](https://www.microsoft.com/en-us/cloud-platform/sql-server-editions-developers)
-- 下載最新版的 [SQL Server Management Studio (SSMS)](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms)。 
+- 下載最新版的 [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)。 
 - 有 Azure 帳戶嗎？ 啟動[已安裝 SQL Server 2016 的虛擬機器](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/)。
 
 ## <a name="sql-server-2016-database-engine"></a>SQL Server 2016 Database Engine
@@ -99,7 +99,7 @@ Microsoft 在此版本中徹底翻新了 Reporting Services。
 - 「重新設計的報表轉譯引擎」，支援 HTML5 
 - 新的樹狀圖和放射環狀圖「圖表類型」 
 
-請參閱 [Reporting Services (SSRS)](/sql-docs/docs/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs) \(機器翻譯\)。
+請參閱 [Reporting Services (SSRS)](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md) \(機器翻譯\)。
 
 ## <a name="next-steps"></a>後續的步驟   
 - [SQL Server 安裝程式](../database-engine/install-windows/installation-for-sql-server-2016.md)   

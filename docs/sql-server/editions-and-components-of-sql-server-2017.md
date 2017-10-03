@@ -40,10 +40,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: dbe6f832d4af55ddd15e12fba17a4da490fe19ae
-ms.openlocfilehash: 0a51b818a33e2ee3eb4ce3c3d5682ee571c1c412
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 5625df3149ad6386cf903d00a655e56d070bd792
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017"></a>SQL Server 2017 的版本及支援功能
@@ -398,7 +398,7 @@ Developer edition 會持續支援的只有 1 個用戶端[SQL Server Distributed
 |StreamInsight|StreamInsight Premium 版|StreamInsight Standard 版|StreamInsight Standard 版|否|否| 
 |StreamInsight HA|StreamInsight Premium 版|否|否|否|否|   
   
-> [![Download SSMS](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms) n**[Download the latest version of SQL Server Management Studio](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms)**    
+> [![Download SSMS](../ssms/download-sql-server-management-studio-ssms.md) n**[Download the latest version of SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)**    
   
 ## <a name="next-steps"></a>後續的步驟 
  [SQL Server 的產品規格](http://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)   

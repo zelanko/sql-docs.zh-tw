@@ -17,10 +17,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 6cc0ed90b88e52e4812011f56714a1f1a662636c
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: dab569e1d758587233b6f6a0cd00e966e325fcd1
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="lesson-1-1---start-sql-server-management-studio"></a>課程 1-1 - 啟動 SQL Server Management Studio
@@ -35,7 +35,7 @@ ms.lasthandoff: 09/21/2017
   * 若是舊版 Windows，請在 [開始] 功能表上依序指向 [所有程式] 和 [[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]，然後按一下 [SQL Server Management Studio]。 或者，您可以在 [執行] 對話方塊中，輸入 **SSMS.exe**，然後按一下 [確定]。  
   
     > [!NOTE]  
-    >  如果沒有出現 SSMS，則可能未成功安裝 SSMS。 您可透過 [下載中心](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms)來安裝 SSMS。 SSMS 不會與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 一起自動安裝。 若要存取所有功能，請使用最新版本。  
+    >  如果沒有出現 SSMS，則可能未成功安裝 SSMS。 您可透過 [下載中心](../download-sql-server-management-studio-ssms.md)來安裝 SSMS。 SSMS 不會與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 一起自動安裝。 若要存取所有功能，請使用最新版本。  
   
 2.  在下一個步驟中，您會使用 SSMS 的**物件總管**元件，連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如果未顯示物件總管窗格，請在 [檢視] 功能表上，按一下**物件總管**。 在物件總管功能表上，按一下 [連接] 按鈕，再按一下 [Database Engine]。 此時會出現 [連接到伺服器] 對話方塊  (如果您先前已安裝 SSMS，其中的使用者設定可能會讓 [連接到伺服器] 對話方塊自動出現)。  
   

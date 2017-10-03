@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: fbd9bb9d0edbbeae81ebc074f28386476fd8635f
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: cb4fd4eebca0f88f1b630598be30bca780fad3b9
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi"></a>舊版的 SQL Server Data Tools (SSDT 和 SSDT-BI)
@@ -27,10 +27,10 @@ SQL Server Data Tools (SSDT) 提供專案範本及設計介面以建置 SQL Serv
   
 此版本是以 Visual Studio Shell 為基礎，並且與 SQL Server 共同發行。 新版的 SSDT 會整合最新的 SQL Server 功能。 較舊版本包括目前版本中的範本及設計環境。  
   
-SSDT 可以回溯相容，亦即您可以隨時使用[最新的 SSDT](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt) 設計及部署要在舊版 SQL Server 上執行的資料庫、模型、報表及套件。  
+SSDT 可以回溯相容，亦即您可以隨時使用[最新的 SSDT](download-sql-server-data-tools-ssdt.md) 設計及部署要在舊版 SQL Server 上執行的資料庫、模型、報表及套件。  
   
 > [!NOTE]  
-> 過去會使用 Visual Studio Shell 來建立已用其他各種名稱發行的 SQL Server 內容類型，包括 **SQL Server Data Tools**、 **SQL Server Data Tools - Business Intelligence**以及 **Business Intelligence Development Studio**。 舊版隨附不同的專案範本集。 若要在一個 SSDT 中取得所有專案範本，您需要使用 [最新版本](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt)。 否則，您可能會需要安裝多個舊版本才能取得 SQL Server 中使用的所有範本。  每個 Visual Studio 版本只會安裝一個 Shell；安裝第二個 SSDT 只會新增缺少的範本。  
+> 過去會使用 Visual Studio Shell 來建立已用其他各種名稱發行的 SQL Server 內容類型，包括 **SQL Server Data Tools**、 **SQL Server Data Tools - Business Intelligence**以及 **Business Intelligence Development Studio**。 舊版隨附不同的專案範本集。 若要在一個 SSDT 中取得所有專案範本，您需要使用 [最新版本](download-sql-server-data-tools-ssdt.md)。 否則，您可能會需要安裝多個舊版本才能取得 SQL Server 中使用的所有範本。  每個 Visual Studio 版本只會安裝一個 Shell；安裝第二個 SSDT 只會新增缺少的範本。  
 
 ## <a name="recent-downloads"></a>最近的下載
 

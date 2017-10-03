@@ -17,10 +17,10 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 287e4d57ae890b6ba9c7e6fc92b3bf209263abf5
+ms.sourcegitcommit: d9a995f7d29fe91e14affa9266a9bce73acc9010
+ms.openlocfilehash: d9c156a1305606948daf277d7b4436372c291e53
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="sql-server-2016-release-notes"></a>SQL Server 2016 版本資訊
@@ -32,7 +32,7 @@ ms.lasthandoff: 09/21/2017
     
 [![Azure 虛擬機器小型](../analysis-services/media/azure-virtual-machine-small.png)](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/) 擁有 Azure 帳戶嗎？  接著前往 **[這裡](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/)** 來啟動已安裝 SQL Server 2016 SP1 的虛擬機器。
     
-[![下載 SSMS](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms) **SSMS：**若要取得最新版的 SQL Server Management Studio，請參閱**[下載 SQL Server Management Studio (SSMS)](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms)**。   
+[![下載 SSMS](../ssms/download-sql-server-management-studio-ssms.md) **SSMS：**若要取得最新版的 SQL Server Management Studio，請參閱**[下載 SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)**。   
     
  如需新功能的相關資訊，請參閱 [SQL Server 2016 的新功能](http://msdn.microsoft.com/library/8223c19b-4b0d-4b1d-a042-9a726c18e708)。
     
@@ -115,11 +115,11 @@ Microsoft 發現影響 Microsoft VC++ 2013 Runtime 二進位檔的問題，SQL S
 
 亦請執行下列查詢存放區預存程序，定期清理執行階段統計資料、特定的查詢或計劃︰
 
--    ```sp_query_store_reset_exec_stats```
+- `sp_query_store_reset_exec_stats`
 
--    ```sp_query_store_remove_plan```
+- `sp_query_store_remove_plan`
 
--    ```sp_query_store_remove_query```
+- `sp_query_store_remove_query`
 
 
 ###  <a name="bkmk_ga_docs"></a> 產品文件 (GA) 
