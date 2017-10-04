@@ -31,7 +31,7 @@ ms.contentlocale: zh-tw
 ms.lasthandoff: 09/19/2017
 
 ---
-# <a name="x40x40language-transact-sql"></a>（& s) #x 40; & #x 40。語言 (TRANSACT-SQL)
+# <a name="x40x40language-transact-sql"></a>&#x40;&#x40;語言 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   傳回目前所用的語言名稱。  

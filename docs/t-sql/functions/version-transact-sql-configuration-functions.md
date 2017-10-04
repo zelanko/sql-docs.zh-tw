@@ -31,7 +31,7 @@ ms.contentlocale: zh-tw
 ms.lasthandoff: 09/19/2017
 
 ---
-# <a name="x40x40version---transact-sql-configuration-functions"></a>（& s) #x 40; & #x 40。版本-Transact SQL 設定函式
+# <a name="x40x40version---transact-sql-configuration-functions"></a>&#x40;&#x40;版本-Transact SQL 設定函式
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   傳回系統和建立資訊 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的目前安裝的。  

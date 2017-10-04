@@ -32,7 +32,7 @@ ms.contentlocale: zh-tw
 ms.lasthandoff: 09/19/2017
 
 ---
-# <a name="x40x40maxconnections-transact-sql"></a>（& s) #x 40; & #x 40。MAX_CONNECTIONS (TRANSACT-SQL)
+# <a name="x40x40maxconnections-transact-sql"></a>&#x40;&#x40;MAX_CONNECTIONS (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   傳回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體所能接受的最大同時使用者連接數目。 傳回的數目不一定是目前所設定的數目。  

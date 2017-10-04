@@ -31,7 +31,7 @@ ms.contentlocale: zh-tw
 ms.lasthandoff: 09/19/2017
 
 ---
-# <a name="x40x40cursorrows-transact-sql"></a>（& s) #x 40; & #x 40。CURSOR_ROWS (TRANSACT-SQL)
+# <a name="x40x40cursorrows-transact-sql"></a>&#x40;&#x40;CURSOR_ROWS (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 傳回在連接所開啟的最後一個資料指標中，目前符合的資料列數。 若要提升效能，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以非同步地擴展大型索引鍵集和靜態資料指標。 @@CURSOR_ROWS可以呼叫以判斷符合資料指標的資料列數目會擷取 @ 次@CURSOR_ROWS呼叫。

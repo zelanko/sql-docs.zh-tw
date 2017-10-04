@@ -32,7 +32,7 @@ ms.contentlocale: zh-tw
 ms.lasthandoff: 09/19/2017
 
 ---
-# <a name="x40x40packeterrors-transact-sql"></a>（& s) #x 40; & #x 40。PACKET_ERRORS (TRANSACT-SQL)
+# <a name="x40x40packeterrors-transact-sql"></a>&#x40;&#x40;PACKET_ERRORS (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   傳回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上次啟動之後，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 連接上所發生的網路封包錯誤數目。  

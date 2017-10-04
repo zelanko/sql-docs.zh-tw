@@ -30,7 +30,7 @@ ms.contentlocale: zh-tw
 ms.lasthandoff: 09/19/2017
 
 ---
-# <a name="x40x40servicename-transact-sql"></a>（& s) #x 40; & #x 40。SERVICENAME (TRANSACT-SQL)
+# <a name="x40x40servicename-transact-sql"></a>&#x40;&#x40;SERVICENAME (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   傳回用來執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的登錄機碼名稱。 @@SERVICENAME傳回 'MSSQLSERVER'，如果目前的執行個體是預設執行個體; 如果目前的執行個體是具名執行個體，此函數會傳回執行個體名稱。  

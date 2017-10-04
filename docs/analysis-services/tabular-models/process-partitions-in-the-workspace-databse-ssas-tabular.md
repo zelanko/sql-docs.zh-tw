@@ -30,7 +30,7 @@ ms.lasthandoff: 09/01/2017
   
 ###  <a name="bkmk_create_new"></a> 處理資料分割  
   
-1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中，依序按一下 [模型] 功能表、[處理] (重新整理) 及 [處理資料分割]。  
+1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中，依序按一下 [模型] 功能表、[處理]\ (重新整理) 及 [處理資料分割]。  
   
 2.  在 **[模式]** 清單方塊，選取下列其中一個處理模式：  
   

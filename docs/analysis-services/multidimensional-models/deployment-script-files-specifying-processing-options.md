@@ -51,7 +51,7 @@ ms.lasthandoff: 09/01/2017
   
 -   **交易式部署**此設定控制中繼資料變更與處理命令的部署是發生於單一交易或個別交易中。  
   
-    -   如果此選項為 [True] (預設值)，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 就會在單一交易中部署所有的中繼資料變更與所有的處理命令。  
+    -   如果此選項為 [True] \(預設值)，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 就會在單一交易中部署所有的中繼資料變更與所有的處理命令。  
   
     -   如果此選項為 [False]，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 就會在單一交易中部署中繼資料變更，並在個別的交易中部署每個處理命令。  
   

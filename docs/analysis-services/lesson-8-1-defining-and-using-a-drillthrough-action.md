@@ -114,7 +114,7 @@ ms.lasthandoff: 09/01/2017
   
 7.  將 [到期日索引鍵] 屬性 (attribute) 的 [名稱] 屬性 (property) 變更為**到期日**。然後，使用處理 [訂單日期索引鍵] 屬性 (attribute) 的相同方法，將這個屬性的 [名稱資料行] 屬性 (property) 變更為 **Date.SimpleDate (WChar)**。  
   
-8.  將 [出貨日期索引鍵] 屬性 (attribute) 的 [名稱] (property) 屬性變更為**出貨日期**，然後將這個屬性 (attribute) 的 [名稱資料行] 屬性 (property) 變更為 **Date.SimpleDate (WChar)**。  
+8.  將 [出貨日期索引鍵] 屬性 (attribute) 的 [名稱] \(property) 屬性變更為**出貨日期**，然後將這個屬性 (attribute) 的 [名稱資料行] 屬性 (property) 變更為 **Date.SimpleDate (WChar)**。  
   
 9. 針對 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程 Cube，切換到 [Cube 設計師] 的 [動作] 索引標籤。  
   

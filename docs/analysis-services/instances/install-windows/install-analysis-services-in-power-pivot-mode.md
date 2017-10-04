@@ -86,7 +86,7 @@ ms.lasthandoff: 09/01/2017
 ##  <a name="InstallSQL"></a> 步驟 1：安裝 Power Pivot for SharePoint  
  在此步驟中，您會執行 SQL Server 安裝程式，以在 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 模式中安裝 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 伺服器。 在後續步驟中，您針對活頁簿資料模型設定 Excel Services 使用此伺服器。  
   
-1.  執行 [SQL Server 安裝精靈] (Setup.exe)。  
+1.  執行 [SQL Server 安裝精靈] \(Setup.exe)。  
   
 2.  選取位於左邊功能窗格的 [安裝]  。  
   

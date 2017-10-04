@@ -34,7 +34,7 @@ ms.contentlocale: zh-tw
 ms.lasthandoff: 09/19/2017
 
 ---
-# <a name="x40x40spid-transact-sql"></a>（& s) #x 40; & #x 40。SPID (TRANSACT-SQL)
+# <a name="x40x40spid-transact-sql"></a>&#x40;&#x40;SPID (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   傳回目前使用者處理序的工作階段識別碼。  

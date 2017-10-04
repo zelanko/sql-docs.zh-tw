@@ -31,7 +31,7 @@ ms.lasthandoff: 09/01/2017
 
 例如，從 Bioconductor 取得 [FISHalyseR](http://bioconductor.org/packages/release/bioc/html/FISHalyseR.html) 封裝：  
   
-1.  在 [Package Archives] (封裝封存)  清單中找到 **Windows 二進位** 版本。  
+1.  在 [Package Archives] \(封裝封存)  清單中找到 **Windows 二進位** 版本。  
   
 2.  以滑鼠右鍵按一下 .ZIP 檔案的連結，然後選取 [另存目標]  。  
   

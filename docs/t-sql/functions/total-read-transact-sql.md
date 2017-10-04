@@ -32,7 +32,7 @@ ms.contentlocale: zh-tw
 ms.lasthandoff: 09/19/2017
 
 ---
-# <a name="x40x40totalread-transact-sql"></a>（& s) #x 40; & #x 40。TOTAL_READ (TRANSACT-SQL)
+# <a name="x40x40totalread-transact-sql"></a>&#x40;&#x40;TOTAL_READ (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   傳回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在上次啟動之後，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所進行的磁碟讀取 (不是快取讀取) 數目。  

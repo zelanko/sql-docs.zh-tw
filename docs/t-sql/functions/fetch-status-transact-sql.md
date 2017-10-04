@@ -30,7 +30,7 @@ ms.contentlocale: zh-tw
 ms.lasthandoff: 09/19/2017
 
 ---
-# <a name="x40x40fetchstatus-transact-sql"></a>（& s) #x 40; & #x 40。SP_DESCRIBE_CURSOR (TRANSACT-SQL)
+# <a name="x40x40fetchstatus-transact-sql"></a>&#x40;&#x40;SP_DESCRIBE_CURSOR (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   傳回針對連接目前開啟的任何資料指標而發出的最後一個資料指標 FETCH 陳述式的狀態。  
