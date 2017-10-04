@@ -19,10 +19,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bf5b724d58fde9162bc75a4052f569b5218bbe8c
+ms.sourcegitcommit: 12b379c1d02dc07a5581a5a3f3585f05f763dad7
+ms.openlocfilehash: 77cde7d5ad701ec6d2ae98ade32a77f6af6b9e8a
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="xml-format-files-sql-server"></a>XML 格式檔案 (SQL Server)
@@ -181,7 +181,7 @@ ms.lasthandoff: 08/03/2017
 ####  <a name="AttrOfFieldElement"></a> \<欄位> 項目的屬性  
  本節描述 \<欄位> 項目的屬性，這些屬性會摘要在下列的結構描述語法中：  
   
- \<欄位  
+ <FIELD  
   
  ID **="***fieldID***"**  
   
@@ -232,7 +232,7 @@ ms.lasthandoff: 08/03/2017
 ####  <a name="AttrOfColumnElement"></a> \<資料行> 項目的屬性  
  本節描述 \<資料行> 項目的屬性，這些屬性會摘要在下列的結構描述語法中：  
   
- \<元素的 xsi:type 值  
+ <COLUMN  
   
  SOURCE = "*fieldID*"  
   
@@ -313,7 +313,7 @@ ms.lasthandoff: 08/03/2017
 ###  <a name="PutXsiTypeValueIntoDataSet"></a> 將 xsi:type 值放到資料集中  
  當您使用 XML Schema Definition (XSD) 語言來驗證 XML 文件時，xsi:type 值不會放到資料集中。 然而，您可以透過將 XML 格式檔案載入到 XML 文件 (例如： `myDoc`)，來將 xsi:type 資訊放到資料集中，如以下程式碼片段所示：  
   
-```  
+```cs
 ...;  
 myDoc.LoadXml(xmlFormat);  
 XmlNodeList ColumnList = myDoc.GetElementsByTagName("COLUMN");  
@@ -362,7 +362,7 @@ for(int i=0;i<ColumnList.Count;i++)
   
  資料欄位是以一對一的方式，來對應資料表的資料行。 在 `<ROW>` 元素中，格式檔案會將資料行 `Age` 對應到第一個欄位、資料行 `FirstName` 對應到第二個欄位，以及資料行 `LastName` 對應到第三個欄位。  
   
-```  
+```xml
 <?xml version="1.0"?>  
 <BCPFORMAT   
 xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
@@ -398,7 +398,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   
  在 `<ROW>` 元素中，格式檔案會將資料行 `Age` 對應到第一個欄位、資料行 `FirstName` 對應到第三個欄位，以及資料行 `LastName` 對應到第二個欄位。  
   
-```  
+```xml
 <?xml version="1.0"?>  
 <BCPFORMAT   
 xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
@@ -433,7 +433,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   
  在 `<ROW>` 元素中，格式檔案會將資料行 `Age` 對應到第一個欄位、資料行 `FirstName` 對應到第三個欄位，以及資料行 `LastName` 對應到第四個欄位。  
   
-```  
+```xml
+<?xml version = "1.0"?>  
 <BCPFORMAT   
 xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
@@ -464,7 +465,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ###  <a name="MapXSItype"></a> D. 將 \<欄位> xsi:type 對應到 \<資料行> xsi:type  
  下列範例顯示不同類型的欄位，以及它們與資料行的對應關係。  
   
-```  
+```xml
 <?xml version = "1.0"?>  
 <BCPFORMAT  
 xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
@@ -501,13 +502,13 @@ xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"
 ###  <a name="MapXMLDataToTbl"></a> E. 將 XML 資料對應到資料表  
  下列範例建立包含兩個資料行的空資料表 (`t_xml`)，其中第一個資料行對應到 `int` 資料類型，而第二個資料行則對應到 `xml` 資料類型。  
   
-```  
+```sql
 CREATE TABLE t_xml (c1 int, c2 xml)  
 ```  
   
  下列 XML 格式檔案將會在資料表 `t_xml`中載入資料檔。  
   
-```  
+```xml
 <?xml version="1.0"?>  
 <BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
@@ -525,7 +526,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ###  <a name="ImportFixedFields"></a> F. 匯入固定長度或固定寬度的欄位  
  下列範例描述各有 `10` 個或 `6` 個字元的固定欄位。 格式檔案分別以 `LENGTH="10"` 和 `LENGTH="6"`來表示這些欄位長度/寬度。 資料檔案的每一列都是以歸位字元和換行字元的組合 {CR}{LF} 作為結束，這在格式檔案中是以 `TERMINATOR="\r\n"`來表示。  
   
-```  
+```xml
 <?xml version="1.0"?>  
 <BCPFORMAT  
        xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"  
