@@ -39,8 +39,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="syntax"></a>語法  
   
 ```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
 -- Create a new table. 
 CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name   
     ( 

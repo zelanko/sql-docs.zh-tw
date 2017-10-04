@@ -34,8 +34,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="syntax"></a>語法  
   
 ```  
--- Syntax for Azure SQL Data Warehouse  
-  
 CREATE DATABASE database_name [ COLLATE collation_name ]  
 (  
     [ MAXSIZE = { 250 | 500 | 750 | 1024 | 5120 | 10240 | 20480 | 30720 | 40960 | 51200 | 61440 | 71680 | 81920 | 92160 | 102400 | 153600 | 204800 | 245760 } GB ,]  

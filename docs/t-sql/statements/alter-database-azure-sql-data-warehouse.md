@@ -36,8 +36,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="syntax"></a>語法  
   
 ```  
--- Syntax for Azure SQL Data Warehouse  
-  
 ALTER DATABASE database_name  
 
   MODIFY NAME = new_database_name  
