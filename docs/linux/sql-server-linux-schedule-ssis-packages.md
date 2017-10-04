@@ -7,7 +7,7 @@ manager: craigg
 ms.date: 09/26/2017
 ms.topic: article
 ms.prod: sql-linux
-ms.technology: integration-services
+ms.technology: database-engine
 ms.assetid: 
 ms.translationtype: MT
 ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
@@ -40,7 +40,7 @@ Cron 作業是您可以設定定期依指定的間隔執行的工作。 作業�
 
 以下是包含只有單一命令，以執行封裝的殼層指令碼的簡單範例。 您可以視需要新增更多的命令。
 
-```
+```bash
 # A simple shell script that contains a simple package execution command
 # Script name: SSISpackageName.daily
 

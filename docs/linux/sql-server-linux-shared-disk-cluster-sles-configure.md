@@ -160,7 +160,7 @@ ms.lasthandoff: 10/02/2017
 4. **安裝 SQL Server 的 FCI 資源代理程式**。 在這兩個節點上執行下列命令：
 
     ```bash
-    sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server.repo
+    sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017.repo
     sudo zypper --gpg-auto-import-keys refresh
     sudo zypper install mssql-server-ha
     ```
