@@ -101,23 +101,17 @@ GO
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`Transaction information for database 'master'.`
-  
-`Oldest active transaction:`
-  
-`SPID (server process ID) : 52`
-  
-`UID (user ID) : -1`
-  
-`Name          : user_transaction`
-  
-`LSN           : (518:1576:1)`
-  
-`Start time    : Jun  1 2004  3:30:07:197PM`
-  
-`SID           : 0x010500000000000515000000a065cf7e784b9b5fe77c87709e611500`
-  
-`DBCC execution completed. If DBCC printed error messages, contact your system administrator.`
+```
+Transaction information for database 'master'.
+Oldest active transaction:
+SPID (server process ID) : 52
+UID (user ID) : -1
+Name          : user_transaction
+LSN           : (518:1576:1)
+Start time    : Jun  1 2004  3:30:07:197PM
+SID           : 0x010500000000000515000000a065cf7e784b9b5fe77c87709e611500
+DBCC execution completed. If DBCC printed error messages, contact your system administrator.
+```
   
 > [!NOTE]  
 >  「UID (使用者識別碼)」結果無意義而且將會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未來版本中移除。  

@@ -66,11 +66,11 @@ SELECT @@CPU_BUSY * CAST(@@TIMETICKS AS float) AS 'CPU microseconds',
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`CPU microseconds As of`
-  
-`---------------- -----------------------`
-  
-`18406250         2006-12-05 17:00:50.600`
+```
+CPU microseconds As of
+---------------- -----------------------
+18406250         2006-12-05 17:00:50.600
+```
   
 ## <a name="see-also"></a>另請參閱
 [sys.dm_os_sys_info &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)  

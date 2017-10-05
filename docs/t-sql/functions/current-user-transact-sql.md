@@ -104,13 +104,13 @@ GO
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`order_id    cust_id     order_date           order_amt    order_person`
+```
+order_id    cust_id     order_date           order_amt    order_person
+----------- ----------- -------------------- ------------ ------------
+1000        5105        2005-04-03 23:34:00  577.95       Wanida
   
-`----------- ----------- -------------------- ------------ ------------`
-  
-`1000        5105        2005-04-03 23:34:00  577.95       Wanida`
-  
-`(1 row(s) affected)`
+(1 row(s) affected)
+```
   
 ### <a name="c-using-currentuser-from-an-impersonated-context"></a>C. 使用模擬內容的 CURRENT_USER  
 在下列範例中，`Wanida` 使用者會執行下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼。
@@ -130,11 +130,11 @@ GO
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`Wanida`
-  
-`Arnalfo`
-  
-`Wanida`
+```
+Wanida
+Arnalfo
+Wanida
+```
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
