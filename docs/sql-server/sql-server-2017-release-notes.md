@@ -1,7 +1,7 @@
 ---
 title: "SQL Server 2017 版本資訊 | Microsoft Docs"
 ms.custom: 
-ms.date: 08/25/2017
+ms.date: 10/02/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -15,21 +15,56 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: 0288cee4b9dee5fba6b67b21e81193bdbe374a94
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 373d01cf6a8032d76c36af0b84be7180c79a7117
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="sql-server-2017-release-notes"></a>SQL Server 2017 版本資訊
-本主題描述 [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]的限制及問題。 如需相關資訊，請參閱：
-- [SQL Server 2017 的新功能](../sql-server/what-s-new-in-sql-server-2017.md)。
-- [Linux 上的 SQL Server 版本資訊](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-release-notes) \(英文\)。
+此主題說明 SQL Server 2017 的限制及問題。 如需相關資訊，請參閱：
+- [SQL Server 2017 的新功能](../sql-server/what-s-new-in-sql-server-2017.md)
+- [Linux 上的 SQL Server 版本資訊](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-release-notes)
 
-[![從 Evaluation Center 下載](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) **試用看看：**[下載最新的 SQL Server 2017 版本：RC2，2017 年 8月](http://go.microsoft.com/fwlink/?LinkID=829477)。
+**試用 SQL Server！**
+- [![從 Evaluation Center 下載](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [下載 SQL Server 2017](http://go.microsoft.com/fwlink/?LinkID=829477)
+- [![建立虛擬機器](../includes/media/azure-vm.png)](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [使用 SQL Server 2017 加速虛擬機器](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
 
+## <a name="sql-server-2017---general-availability-release-october-2017"></a>SQL Server 2017 - 正式運作版本 (2017 年 10 月)
+### <a name="database-engine"></a>Database Engine
+
+- **問題和客戶的影響：**升級之後，現有的 FILESTREAM 網路共用可能無法再使用。
+
+- **因應措施：**首先請重新啟動電腦，並檢查 FILESTREAM 網路共用是否可用。 如果仍無法使用此共用，請執行下列動作：
+
+    1. 在 SQL Server 組態管理員中，以滑鼠右鍵按一下 SQL Server 執行個體，並按一下 [屬性]。 
+    2. 在 [FILESTREAM]索引標籤上，清除 [啟用 FILESTREAM 的檔案 I/O 資料流存取]，然後按一下 [套用]。
+    3. 使用原始共用名稱再次選取 [啟用 FILESTREAM 的檔案 I/O 資料流存取]，然後按一下 [套用]。
+
+### <a name="master-data-services-mds"></a>Master Data Services (MDS)
+- **問題和客戶的影響：**在使用者權限頁面上，當您將權限授予實體樹狀檢視中的根層級時，會看到下列錯誤：`"The model permission cannot be saved. The object guid is not valid"`
+
+- **因應措施：** 
+  - 將權限授予樹狀檢視中的子節點而不是根層級。
+  - 或
+  - 執行「[在實體層級上套用權限時發生錯誤](http://sqlblog.com/blogs/mds_team/archive/2017/09/05/sql-server-2016-sp1-cu4-regression-error-while-applying-permission-on-entity-level-quick-workaround.aspx)」這個 MDS 小組部落格中說明的指令碼
+
+### <a name="analysis-services"></a>Analysis Services
+- **問題和客戶的影響：**若表格式模型的相容性層級為 1400，當使用 [取得資料] 時，某些資料來源 (如：Amazon Redshift、IBM Netezza 和 Impala) 的資料連接器尚無法使用。
+- **因應措施** ：無。   
+
+- **問題和客戶的影響：**具有檢視方塊且相容性層級為 1400 的直接查詢模型可能會在查詢或探索中繼資料時失敗。
+- **因應措施：**移除檢視方塊，然後重新部署。
+
+### <a name="tools"></a>工具
+- **問題和客戶的影響：**執行 *DReplay* 失敗，出現下列訊息：「錯誤 DReplay 發生未預期的錯誤！」。
+- **因應措施** ：無。
+
+
+![horizontal_bar](../sql-server/media/horizontal-bar.png)
 ## <a name="sql-server-2017-release-candidate-rc2---august-2017"></a>SQL Server 2017 候選版 (RC2 - 2017 年 8 月)
 此版本沒有 Windows 上的 SQL Server 版本資訊。 請參閱 [Linux 上的 SQL Server 版本資訊](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-release-notes) \(英文\)。
+
 
 ![horizontal_bar](../sql-server/media/horizontal-bar.png)
 ## <a name="sql-server-2017-release-candidate-rc1---july-2017"></a>SQL Server 2017 候選版 (RC1 - 2017 年 7 月)
@@ -52,7 +87,7 @@ ms.lasthandoff: 08/28/2017
 ### <a name="sql-server-reporting-services-ctp-21"></a>SQL Server Reporting Services (CTP 2.1)
 
 - **問題和對客戶的影響：**如果 SQL Server Reporting Services 和 Power BI 報表伺服器在同一部電腦上，而您將其中之一解除安裝，則會無法以報表伺服器組態管理員連線到其餘的報表伺服器。
-- **因應措施：**若要解決此問題，必須在解除安裝其中一部伺服器之後，執行下列作業。
+- **因應措施：**若要解決此問題，您必須在執行下列作業之後解除安裝其中一個伺服器。
 
     1. 以系統管理員模式啟動命令提示字元。
     2. 前往剩餘的報表伺服器安裝所在目錄。
@@ -81,7 +116,7 @@ ms.lasthandoff: 08/28/2017
 
    此外，嘗試重新安裝 TSqlLanguageService.msi 的 2016 版本將會失敗，並顯示如下訊息：「安裝 Microsoft SQL Server 2016 T-SQL 語言服務失敗，因為電腦上已經有較新的版本」。
 
-- **因應措施：**若要解決此問題，並修正相依於 v13 版本組件的應用程式，請遵循下列步驟：
+- **因應措施：**若要暫時解決此問題，並修正相依於 v13 版本組件的應用程式，請遵循下列步驟：
 
    1. 移至**新增/移除程式**
    2. 尋找 *Microsoft SQL Server vNext T-SQL 語言服務 CTP2.1*，以滑鼠右鍵按一下，然後選取**解除安裝**。

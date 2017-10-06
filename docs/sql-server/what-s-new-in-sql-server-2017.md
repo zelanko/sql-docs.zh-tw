@@ -1,7 +1,7 @@
 ---
 title: "SQL Server 2017 的新功能 | Microsoft Docs"
 ms.custom: 
-ms.date: 09/14/2017
+ms.date: 10/02/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -15,18 +15,16 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: a9397f427cac18d0c8bfc663f6bd477b0440b8a3
-ms.openlocfilehash: 42798d6ad1bf9554be5cb3bffd97f56e70ebbf9e
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: cde40ec53dafbd750c21e1f4148f29db26e0bbda
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="whats-new-in-sql-server-2017"></a>SQL Server 2017 的新功能
+SQL Server 2017 將 SQL Server 的強大能力整合到 Linux、以 Linux 為基礎的 Docker 容器和 Windows 中，是讓 SQL Server 成為可選擇開發語言、資料類型、內部部署或雲端以及作業系統之平台的重要一步。 本主題摘要說明特定功能區的新功能，並包含其他詳細資料的連結。
 
-SQL Server 2017 將 SQL Server 的強大能力整合到 Linux、以 Linux 為基礎的 Docker 容器和 Windows 中，是讓 SQL Server 成為可選擇開發語言、資料類型、內部部署或雲端以及作業系統之平台的重要一步。 本主題摘要說明最新 SQL Server 2017 候選版 (RC2，2017 年 8 月) 和 Community Technical Preview (CTP) 版本中特定功能領域的新功能。
-
-[![從 Evaluation Center 下載](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) **試用看看：**[下載最新的 SQL Server 2017 版本：RC2，2017 年 8月](http://go.microsoft.com/fwlink/?LinkID=829477)。
-此版本包含 Bug 修正和效能改良。
+[![從 Evaluation Center 下載](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) **試用看看：** [下載 SQL Server 2017 版 - 2017 年 10月：](http://go.microsoft.com/fwlink/?LinkID=829477)。
 
 >**在 Linux 上執行 SQL Server！** 如需詳細資訊，請參閱 [Linux 上的 SQL Server 文件](https://docs.microsoft.com/sql/linux/)。
 
