@@ -1,5 +1,6 @@
 # [安裝 SSMA for Oracle (OracleToSQL)](installing-ssma-for-oracle-oracletosql.md)
 # [開始使用 SSMA for Oracle (OracleToSQL)](getting-started-with-ssma-for-oracle-oracletosql.md)
+# [將 Oracle HR 結構描述轉換為 SQL Server](sql-server-linux-convert-from-oracle.md)
 # [法律注意事項 (SSMA for Oracle)](legal-notice-ssma-for-oracle.md)
 # [安裝 SSMA for Oracle 用戶端 (OracleToSQL)](installing-ssma-for-oracle-client-oracletosql.md)
 # [SSMA  for Oracle 的新功能 (OracleToSQL)](what-s-new-in-ssma-for-oracle-oracletosql.md)
