@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 8b45a33dadae04400fbc0602f2aa4f6fc08d5df1
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 5ea0741bdfd8ff724390de6bb8c298af2e138648
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/07/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="cardinality-estimation-sql-server"></a>基數估計 (SQL Server)
@@ -59,9 +59,9 @@ SELECT d.name, d.compatibility_level
 go  
 ```  
   
- 針對相容性層級設定為 120 的 SQL Server 資料庫，啟用[追蹤旗標](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481 會強制系統使用 CE 版本 70。  
+ 若是相容性層級設定為 120 或以上的 SQL Server 資料庫，啟用[追蹤旗標](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481 會強制系統使用 CE 版本 70。  
   
- **舊版 CE：**針對相容性層級設定為 130 的 SQL Server 資料庫，可使用 [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 在資料庫層級啟用 CE 版本 70。
+ **舊版 CE：**若是相容性層級設定為 120 以上的 SQL Server 資料庫，可使用 [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 在資料庫層級啟用 CE 版本 70。
   
 ```tsql  
 ALTER DATABASE
@@ -74,7 +74,7 @@ SELECT name, value
     WHERE name = 'LEGACY_CARDINALITY_ESTIMATION';  
 ```  
  
- 或者從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 開始，使用[查詢提示](../../t-sql/queries/hints-transact-sql-query.md) `FORCE_LEGACY_CARDINALITY_ESTIMATION`。
+ 或者從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 開始，使用[查詢提示](../../t-sql/queries/hints-transact-sql-query.md) `USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION')`。
  
  ```tsql  
 SELECT CustomerId, OrderAddedDate  
@@ -163,7 +163,7 @@ go
   
 6.  在結果窗格的 [結果] 索引標籤上，按兩下包含 XML 格式統計資料的資料格。 圖形查詢計劃隨即顯示。  
   
-7.  以滑鼠右鍵按一下圖形查詢計劃中的第一個方塊，然後按一下 [屬性]。  
+7.  以滑鼠右鍵按一下圖形查詢計劃中的第一個方塊，然後按一下屬性。  
   
 8.  為了在稍後比較不同的組態，請記下下列屬性的值：  
   
@@ -219,7 +219,7 @@ go
   
 - 執行 **sp_query_store_force_plan**。  
   
-- 在 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 中，展開您的 [查詢存放區] 節點，以滑鼠右鍵按一下 [Top Resource Consuming Nodes] (資源耗用量排名在前的節點)，然後按一下 [View Top Resource Consuming Nodes] (檢視資源耗用量排名在前的節點)。 這會顯示標示為 [強制執行計畫] 和 [取消強制執行計畫] 的按鈕。  
+- 在 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 中，展開您的 [查詢存放區] 節點，以滑鼠右鍵按一下 [Top Resource Consuming Nodes]\(資源耗用量排名在前的節點)，然後按一下View Top Resource Consuming Nodes]\(檢視資源耗用量排名在前的節點)。 這會顯示標示為 **[強制執行計畫]** 和 **[取消強制執行計畫]** 的按鈕。  
   
  如需查詢存放區的詳細資訊，請參閱 [使用查詢存放區監視效能](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)。  
   
