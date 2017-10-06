@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1df54edd5857ac2816fa4b164d268835d9713638
-ms.openlocfilehash: 501fac02e6146d417572dfb9f4f3906de7b2eeeb
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: d6ba2f29d8c6c21a6f96c575dbebc354e0885f8d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/12/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="install-sql-server-on-server-core"></a>在 Server Core 上安裝 SQL Server
@@ -52,7 +52,7 @@ Server Core 安裝選項提供執行特定伺服器角色的基本環境。 可�
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|否||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Tools (SSDT)|否||  
 |用戶端工具連接性|是||  
-|Integration Services 伺服器|是|如需新的 Integration Services 伺服器以及其在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中之功能的詳細資訊，請參閱 [Integration Services (SSIS) 伺服器](https://msdn.microsoft.com/library/bb522534.aspx)。|  
+|Integration Services 伺服器|是|如需新 Integration Services 伺服器及其功能的詳細資訊，請前往 [!INCLUDE[ssCurren](../../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md)。|  
 |用戶端工具回溯相容性|否||  
 |用戶端工具 SDK|否||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書|否||  

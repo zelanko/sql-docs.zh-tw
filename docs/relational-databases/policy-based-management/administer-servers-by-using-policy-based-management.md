@@ -24,11 +24,11 @@ caps.latest.revision: 76
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bc3d3e94cd6d5993b9647a394338649fe357f021
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 401b50d1999f5b5c2ffec0391b8703c873abd3ed
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="administer-servers-by-using-policy-based-management"></a>使用原則式管理來管理伺服器
@@ -74,11 +74,9 @@ ms.lasthandoff: 06/22/2017
      未啟用自動原則時，原則式管理將不會影響系統效能。  
   
 ## <a name="terms"></a>詞彙  
- **原則式管理 Managed 目標** 
-：以原則式管理所管理的實體，例如 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的執行個體、資料庫、資料表或索引。 伺服器執行個體中的所有目標都會構成目標階層。 目標集是指將一組目標篩選套用至目標階層所產生的目標集，例如 HumanResources 結構描述所擁有之資料庫中的所有資料表。  
+ **原則式管理 Managed 目標**：以原則式管理所管理的實體，例如 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的執行個體、資料庫、資料表或索引。 伺服器執行個體中的所有目標都會構成目標階層。 目標集是指將一組目標篩選套用至目標階層所產生的目標集，例如 HumanResources 結構描述所擁有之資料庫中的所有資料表。  
   
- **原則式管理 Facet**
-：針對特定 Managed 目標類型建立行為或特性模型的一組邏輯屬性。 屬性的數目和特性會建立在 Facet 中，而且只能由 Facet 的建立者加入或移除。 一個目標類型可以實作一或多個管理 Facet，而一個管理 Facet 可以由一或多個目標類型實作。 Facet 的某些屬性只能套用至特定版本。  
+ **原則式管理 Facet：**為特定 Managed 目標類型建立行為或特性建立模型的一組邏輯屬性。 屬性的數目和特性會建立在 Facet 中，而且只能由 Facet 的建立者加入或移除。 一個目標類型可以實作一或多個管理 Facet，而一個管理 Facet 可以由一或多個目標類型實作。 Facet 的某些屬性只能套用至特定版本。  
   
  **以原則為基礎的管理條件**  
  一種布林運算式，可指定以原則為基礎之管理 Managed 目標所允許的一組狀態 (與管理 Facet 有關)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會在評估條件時嘗試觀察定序。 當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 定序不完全符合 Windows 定序時，請測試您的條件，以決定演算法如何解決衝突。  
@@ -108,7 +106,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="links-to-specific-tasks"></a>特定工作的連結 
 
- - [儲存原則式管理原則。](https://msdn.microsoft.com/library/hh213476.aspx)|  
+ - [儲存原則式管理原則。](policy-based-management-storage.md)|  
  - [設定警示以便向原則管理員通知原則失敗](../../relational-databases/policy-based-management/configure-alerts-to-notify-policy-administrators-of-policy-failures.md)  
  - [建立新的原則式管理條件](../../relational-databases/policy-based-management/create-a-new-policy-based-management-condition.md) 
  - [刪除原則式管理條件](../../relational-databases/policy-based-management/delete-a-policy-based-management-condition.md)
@@ -121,8 +119,8 @@ ms.lasthandoff: 06/22/2017
 
   
  ## <a name="examples"></a>範例
- - [建立依預設為關閉的原則](https://msdn.microsoft.com/library/bb500172.aspx)
-  - [將伺服器設定為執行 Off By Default 原則](https://msdn.microsoft.com/library/bb522470.aspx)
+ - [建立依預設為關閉的原則](lesson-1-1-create-the-off-by-default-policy.md)
+  - [將伺服器設定為執行 Off By Default 原則](lesson-1-2-configure-a-server-to-run-the-off-by-default-policy.md)
 ## <a name="see-also"></a>另請參閱  
  [以原則為基礎的管理檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
   

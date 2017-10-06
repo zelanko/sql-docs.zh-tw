@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], distributed
 ms.assetid: 
 caps.latest.revision: 
-author: MikeRayMSFT
+author: allanhirt
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 978e780dd19e34c27ceef49ff8388f6ae1f155ed
-ms.openlocfilehash: d523a3270815fc263fe0ee6fdf7cbce6350529ed
+ms.sourcegitcommit: 0463d237614b25667c8402da70b7c5e4217d4ef5
+ms.openlocfilehash: ee06ae8d3a3a60d77e72ee9e55ee615a1bcf0cb9
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/02/2017
+ms.lasthandoff: 09/26/2017
 
 ---
 # <a name="distributed-availability-groups"></a>分散式可用性群組
@@ -40,7 +40,7 @@ ms.lasthandoff: 09/02/2017
 
 分散式可用性群組需要基礎可用性群組具有接聽程式。 當您建立分散式可用性群組時，可以使用 ENDPOINT_URL 參數指定它的已設定接聽程式，而不是像使用傳統可用性群組一樣地提供獨立執行個體的基礎伺服器名稱 (或者，如果是 SQL Server 容錯移轉叢集執行個體 [FCI]，則是與網路名稱資源建立關聯的值)。 雖然分散式可用性群組的每個基礎可用性群組都具有接聽程式，但是分散式可用性群組沒有接聽程式。
 
-下圖顯示跨兩個可用性群組 (AG 1 和 AG 2) 之分散式可用性群組的高階檢視，而這兩個可用性群組都設定於其專屬 WSFC 叢集上。 分散式可用性群組共有四個複本，而每個可用性群組各有兩個複本。 每個可用性群組最多可以支援最大複本數目，因此根據 Standard Edition 的分散式可用性群組最多可以有四個複本，而根據 Enterprise Edition 的分散式可用性群組最多共有 18 個複本。
+下圖顯示跨兩個可用性群組 (AG 1 和 AG 2) 之分散式可用性群組的高階檢視，而這兩個可用性群組都設定於其專屬 WSFC 叢集上。 分散式可用性群組共有四個複本，而每個可用性群組各有兩個複本。 每個可用性群組皆可支援最大複本數，因此分散式可用性最多可以有總共 18 個複本。
 
 <a name="fig1"></a>
 ![分散式可用性群組的高階檢視][1]
@@ -59,7 +59,7 @@ ms.lasthandoff: 09/02/2017
 分散式可用性群組目前只能與使用相同主要 SQL Server 版本所建立的可用性群組搭配運作。 例如，目前必須使用 SQL Server 2016 建立所有參與分散式可用性群組的可用性群組。 因為 SQL Server 2012 或 2014 中沒有分散式可用性群組功能，所以使用這些版本所建立的可用性群組不能參與分散式可用性群組。 
 
 > [!NOTE]
-> 您可以使用 Standard 或 Enterprise Edition 設定分散式可用性群組，但不支援在分散式可用性群組中混合使用這兩個版本。
+> 無法使用 Standard 版本或混用 Standard 與 Enterprise 版本來設定分散式可用性群組。
 
 因為有兩個不同的可用性群組，所以在參與分散式可用性群組的複本上安裝 Service Pack 或累積更新的程序會與傳統可用性群組的程序略有不同：
 
@@ -267,8 +267,6 @@ and ag.is_distributed = 1
 * [使用新增可用性群組對話方塊 (SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)
  
 * [使用 Transact-SQL 建立可用性群組](create-an-availability-group-transact-sql.md)
-
-此內容的作者：[Allan Hirt](http://mvp.microsoft.com/en-us/PublicProfile/4025254?fullName=Allan%20Hirt)，Microsoft 最有價值專家。
 
 <!--Image references-->
 [1]: ./media/dag-01-high-level-view-distributed-ag.png

@@ -1,7 +1,7 @@
 ---
 title: "將 SQL Server Audit 事件寫入安全性記錄檔 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 09/21/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -19,45 +19,32 @@ caps.latest.revision: 19
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 268f1fbd8ea57db8626c84999a3454e4c4459511
+ms.translationtype: HT
+ms.sourcegitcommit: f684f0168e57c5cd727af6488b2460eeaead100c
+ms.openlocfilehash: 990b47afdf34cc16f15a658f5a69f840d44a27fe
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/21/2017
 
----
-# <a name="write-sql-server-audit-events-to-the-security-log"></a>將 SQL Server Audit 事件寫入安全性記錄檔
-  在高度安全性的環境中，Windows 安全性記錄檔是寫入記錄物件存取之事件的適當位置。 雖然支援其他稽核位置，但是這些位置容易遭算改。  
+---  
+
+# <a name="write-sql-server-audit-events-to-the-security-log"></a>將 SQL Server Audit 事件寫入安全性記錄檔  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]  
+
+在高度安全性的環境中，Windows 安全性記錄檔是寫入記錄物件存取之事件的適當位置。 雖然支援其他稽核位置，但是這些位置容易遭算改。  
   
  將 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 伺服器稽核寫入 Windows 安全性記錄檔有兩個重要需求：  
   
 -   稽核物件存取設定必須設定為可擷取事件。 稽核原則工具 (`auditpol.exe`) 會在 **audit object access** 類別目錄中公開各種子原則設定。 若要允許 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 稽核物件存取，請設定 **application generated** 設定。  
-  
 -   執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務所使用的帳戶必須擁有 [產生安全性稽核]  權限，才能寫入 Windows 安全性記錄檔。 根據預設，LOCAL SERVICE 和 NETWORK SERVICE 帳戶都擁有這個權限。 如果 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 是在其中一個帳戶底下執行，就不需要進行這個步驟。  
+-   為 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務帳戶提供登錄區的完整權限`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\EventLog\Security`。  
+
+  > [!IMPORTANT]  
+  > [!INCLUDE[ssnoteregistry-md](../../../includes/ssnoteregistry-md.md)]   
   
- 如果 Windows 稽核原則設定為寫入 Windows 安全性記錄檔，它就可能會影響 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 稽核，而且如果稽核原則的設定不正確，甚至可能會遺失事件。 一般而言，Windows 安全性記錄檔會設定為覆寫較舊的事件。 這樣做會保留最近的事件。 不過，如果 Windows 安全性記錄檔並非設定為覆寫較舊的事件，只要安全性記錄檔已滿，系統就會發出 Windows 事件 1104 (記錄檔已滿)。 此時：  
-  
+如果 Windows 稽核原則設定為寫入 Windows 安全性記錄檔，它就可能會影響 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 稽核，而且如果稽核原則的設定不正確，甚至可能會遺失事件。 一般而言，Windows 安全性記錄檔會設定為覆寫較舊的事件。 這樣做會保留最近的事件。 不過，如果 Windows 安全性記錄檔並非設定為覆寫較舊的事件，只要安全性記錄檔已滿，系統就會發出 Windows 事件 1104 (記錄檔已滿)。 此時：  
 -   系統將不會記錄其他安全性事件。  
-  
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 將無法偵測出系統無法在安全性記錄檔中記錄事件，進而導致可能遺失稽核事件。  
-  
 -   在方塊管理員修正安全性記錄檔之後，記錄行為才會返回正常狀態。  
-  
- **本主題內容**  
-  
--   **開始之前：**  
-  
-     [限制事項](#Restrictions)  
-  
-     [安全性](#Security)  
-  
--   **若要將 SQL Server 稽核事件寫入安全性記錄檔：**  
-  
-     [使用 auditpol 在 Windows 中設定稽核物件存取設定](#auditpolAccess)  
-  
-     [使用 secpol 在 Windows 中設定稽核物件存取設定](#secpolAccess)  
-  
-     [使用 secpol 將 generate security audits 權限授與帳戶](#secpolPermission)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -73,7 +60,7 @@ ms.lasthandoff: 06/22/2017
   
 1.  以系統管理權限開啟命令提示字元。  
   
-    1.  在 [開始] 功能表上，依序指向 [所有程式] 和 [附屬應用程式]、以滑鼠右鍵按一下 [命令提示字元]，然後按一下 [以系統管理員身分執行]。  
+    1.  在 開始 功能表上，依序指向 所有程式 和 附屬應用程式、以滑鼠右鍵按一下 命令提示字元，然後按一下以系統管理員身分執行。  
   
     2.  如果開啟 **[使用者帳戶控制]** 對話方塊，請按一下 **[繼續]**。  
   
@@ -125,3 +112,4 @@ ms.lasthandoff: 06/22/2017
  [SQL Server Audit &#40;Database Engine&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md)  
   
   
+

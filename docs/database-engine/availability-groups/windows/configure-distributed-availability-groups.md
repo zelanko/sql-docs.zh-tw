@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 80642503480add90fc75573338760ab86139694c
-ms.openlocfilehash: 01f0e6dfacfab0d8528d3b399267c45afef95a11
+ms.sourcegitcommit: ec9c558fedd7cf0bb96ee4dec34a1c072418a343
+ms.openlocfilehash: 5112630e01953d16f1ed6cec04e16ee5af55d470
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
+ms.lasthandoff: 09/20/2017
 
 ---
 
@@ -233,7 +233,10 @@ GO
         );  
        
       ```  
-  
+   >[!NOTE]
+   >與一般可用性群組相似，分散式可用性群組中兩個可用性群組複本的同步處理狀態會取決於這兩個複本的可用性模式。 例如，若要發生同步認可，目前的主要可用性群組與次要可用性群組都必須設定成同步認可可用性模式。  
+
+
 1. 等到分散式可用性群組的狀態變更為 `SYNCHRONIZED`。 在裝載主要可用性群組之主要複本的 SQL Server 上，執行下列查詢。 
     
       ```sql  
@@ -340,3 +343,4 @@ ALTER AVAILABILITY GROUP [SQLFCIDAG]
  [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)  
   
   
+

@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: dcbeda6b8372b358b6497f78d6139cad91c8097c
-ms.openlocfilehash: a13e098829fdf1ffee42075a57750513234dc997
+ms.sourcegitcommit: f684f0168e57c5cd727af6488b2460eeaead100c
+ms.openlocfilehash: 2204d520152b1363657a407e5e0534e5051a4e94
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="best-practice-with-the-query-store"></a>使用查詢存放區的最佳作法
@@ -320,7 +320,15 @@ WHERE is_forced_plan = 1;
  執行計劃參考使用三部分名稱 `database.schema.object` 的物件。   
 
 如果您重新命名資料庫，強制執行計畫將會失敗，而導致重新編譯所有後續查詢執行。  
+
+##  <a name="Recovery"></a> 在任務關鍵性伺服器上使用追蹤旗標來改善災害復原
+ 
+  在高可用性和災害復原案例期間，全域追蹤旗標 7745 及 7752 可用於改進查詢存放區的效能。
   
+  追蹤旗標 7745 會在 SQL Server 能夠關閉前，防止查詢存放區將資料寫入磁碟中的預設行為。
+  
+  追蹤旗標 7752 可讓 SQL Server 在查詢存放區完整載入前執行查詢。 預設查詢存放區行為會防止在查詢存放區復原前執行查詢。
+
 ## <a name="see-also"></a>另請參閱  
  [查詢存放區目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
  [查詢存放區預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   

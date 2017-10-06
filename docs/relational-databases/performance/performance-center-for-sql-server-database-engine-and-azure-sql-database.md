@@ -28,10 +28,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 179a23bbe2d53febcf01d02d5129ca94e18243b1
-ms.openlocfilehash: ebb2cf6bdd6d776fc8f960f7d763f62e82fb15d5
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 6490c2356c0753f68e7ef5261ede3d699a08b863
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/12/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="performance-center-for-sql-server-database-engine-and-azure-sql-database"></a>SQL Server Database Engine 和 Azure SQL Database 的效能中心
@@ -63,8 +63,8 @@ ms.lasthandoff: 08/12/2017
 |-|-|  
 |![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both")  **[索引](../../relational-databases/indexes/indexes.md)**|-   [重新組織與重建索引](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)<br />-   [指定索引的填滿因素](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)<br />-   [設定平行索引作業](../../relational-databases/indexes/configure-parallel-index-operations.md)<br />-   [索引的 SORT_IN_TEMPDB 選項](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md)<br />-   [改善全文檢索索引的效能](../../relational-databases/search/improve-the-performance-of-full-text-indexes.md)|  
 |![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both")  **[資料分割資料表與索引](../../relational-databases/partitions/partitioned-tables-and-indexes.md)**|-   [資料分割的優點](https://msdn.microsoft.com/library/ms190787.aspx#Anchor_0)|  
-|![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both")  **[預存程序](../../relational-databases/native-client/ole-db/stored-procedures.md)**|-   [預存程序的好處](https://msdn.microsoft.com/en-us/library/ms190782.aspx)|  
-|![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both")  **[使用者定義的函式](../../relational-databases/user-defined-functions/user-defined-functions.md)**|-   [使用者自訂函數的好處](https://msdn.microsoft.com/en-us/library/ms191007.aspx)|  
+|![security-center-both](../stored-procedures/stored-procedures-database-engine.md)|  
+|![security-center-both](../user-defined-functions/user-defined-functions.md)|  
 |![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") **平行處理原則最佳化**|-   [設定 max worker threads 伺服器組態選項](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md)<br />-   [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)|  
 |![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") **查詢最佳化工具最佳化**|-   [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)|  
 |![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both")  **[統計資料](../../relational-databases/statistics/statistics.md)**|-   [何時更新統計資料](https://msdn.microsoft.com/library/ms190397.aspx#Anchor_3)<br />-   [更新統計資料](../../relational-databases/statistics/update-statistics.md)|  
