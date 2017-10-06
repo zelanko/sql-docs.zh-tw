@@ -1,8 +1,10 @@
 ---
 title: "基本可用性群組 (AlwaysOn 可用性群組) | Microsoft Docs"
 ms.custom: 
-ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.date: 09/27/2016
+ms.prod:
+- sql-server-2016
+- sql-server-2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -15,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: dbe6f832d4af55ddd15e12fba17a4da490fe19ae
-ms.openlocfilehash: ff8775c5af9f11abeec6ec04b894010a43f722ef
+ms.sourcegitcommit: b5ac9749e7ba4aecad3f6211750623afa71c9e69
+ms.openlocfilehash: 83bccd06657b880cc4ebf7a21f8b327753dc4bee
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="basic-availability-groups-always-on-availability-groups"></a>基本可用性群組 (AlwaysOn 可用性群組)
@@ -32,23 +34,25 @@ ms.lasthandoff: 09/25/2017
 ## <a name="limitations"></a>限制  
  基本可用性群組使用相較於 SQL Server 2016 Enterprise Edition 上進階可用性群組的一小部分功能。 基本可用性群組包含下列限制︰  
   
--   兩個複本 (主要和次要) 的限制。  
+- 兩個複本 (主要和次要) 的限制。  
   
--   次要複本上沒有讀取權限。  
+- 次要複本上沒有讀取權限。  
   
--   次要複本上沒有備份。  
-  
--   不支援將複本裝載於執行 SQL Server 2016 Community Technology Preview 3 (CTP3) 之前版本 SQL Server 的伺服器上。  
-  
--   不支援在現有的基本可用性群組中加入或移除複本。  
-  
--   支援一個可用性資料庫。  
-  
--   基本可用性群組無法升級至進階可用性群組。 您必須卸除群組，再重新加入包含只執行 SQL Server 2016 Enterprise Edition 之伺服器的群組。  
-  
--   只有 Standard Edition 伺服器才支援基本可用性群組。 
+- 次要複本上沒有備份。  
 
--   基本可用性群組不能是分散式可用性群組的一部分。 
+- 次要複本上沒有完整性檢查。 
+
+- 不支援將複本裝載於執行 SQL Server 2016 Community Technology Preview 3 (CTP3) 之前版本 SQL Server 的伺服器上。  
+  
+- 不支援在現有的基本可用性群組中加入或移除複本。  
+  
+- 支援一個可用性資料庫。  
+  
+- 基本可用性群組無法升級至進階可用性群組。 您必須卸除群組，再重新加入包含只執行 SQL Server 2016 Enterprise Edition 之伺服器的群組。  
+  
+- 只有 Standard Edition 伺服器才支援基本可用性群組。 
+
+- 基本可用性群組不能是分散式可用性群組的一部分。 
   
 ## <a name="configuration"></a>組態  
  AlwaysOn 基本可用性群組可在任兩部 SQL Server 2016 Standard Edition 伺服器上建立。 當您建立基本可用性群組時，您必須在建立期間指定兩個複本。  
