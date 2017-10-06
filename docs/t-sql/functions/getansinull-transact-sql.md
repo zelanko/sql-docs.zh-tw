@@ -75,11 +75,12 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `------`  
-  
- `1`  
-  
- `(1 row(s) affected)`  
+ ```
+ ------  
+1  
+
+(1 row(s) affected)
+ ```  
   
 ## <a name="see-also"></a>另請參閱  
  [系統函數 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  

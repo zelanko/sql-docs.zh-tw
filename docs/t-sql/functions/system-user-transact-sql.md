@@ -75,11 +75,12 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `----------------------------------------------------------`  
-  
- `The current system user is: WillisJo`  
-  
- `(1 row(s) affected)`  
+ ```
+----------------------------------------------------------
+The current system user is: WillisJo
+
+(1 row(s) affected)
+ ```  
   
 ### <a name="b-using-systemuser-with-default-constraints"></a>B. 使用 SYSTEM_USER 搭配 DEFAULT 條件約束  
  下列範例會建立一份資料表，將 `SYSTEM_USER` 做為 `DEFAULT` 資料行的 `SRep_tracking_user` 條件約束。  
@@ -117,21 +118,17 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Territory_id Rep_id Last_sale            SRep_tracking_user`  
+ ```
+Territory_id Rep_id Last_sale            SRep_tracking_user
+-----------  ------ -------------------- ------------------
+2000         151    Mar 4 1998 10:36AM   ArvinDak
+2001         293    May 15 1998 12:00AM  ArvinDak
+2003         21392  Mar 4 1998 10:36AM   ArvinDak
+2004         24283  Nov 3 1998 12:00AM   ArvinDak
+2002         27882  Jun 20 1998 12:00AM  ArvinDak
   
- `-----------  ------ -------------------- ------------------`  
-  
- `2000         151    Mar 4 1998 10:36AM   ArvinDak`  
-  
- `2001         293    May 15 1998 12:00AM  ArvinDak`  
-  
- `2003         21392  Mar 4 1998 10:36AM   ArvinDak`  
-  
- `2004         24283  Nov 3 1998 12:00AM   ArvinDak`  
-  
- `2002         27882  Jun 20 1998 12:00AM  ArvinDak`  
-  
- `(5 row(s) affected)`  
+(5 row(s) affected)
+ ```  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   

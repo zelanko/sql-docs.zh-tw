@@ -100,17 +100,14 @@ ORDER BY EmployeeKey;
   
  以下為部分結果集。  
   
- `Name`  
-  
- `-----`  
-  
- `lbert`  
-  
- `Brown`  
-  
- `rello`  
-  
- `lters`  
+ ```
+Name
+-----
+lbert
+Brown
+rello
+lters
+ ```  
   
 ### <a name="c-using-right-with-a-character-string"></a>C. 直接使用搭配字元字串  
  下列範例會使用`RIGHT`傳回字元字串的兩個最右邊字元`abcdefg`。  
@@ -123,9 +120,10 @@ SELECT TOP(1) RIGHT('abcdefg',2) FROM dbo.DimProduct;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `-------`  
-  
- `fg`  
+```
+-------  
+fg
+```  
   
 ## <a name="see-also"></a>另請參閱  
  [CAST 和 CONVERT & #40;TRANSACT-SQL & #41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   

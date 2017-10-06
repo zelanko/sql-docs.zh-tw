@@ -86,13 +86,13 @@ SELECT @startdate + 1.25 AS 'Start Date',
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Start Date                  Add Date`  
+ ```
+Start Date                  Add Date
+--------------------------- ---------------------------
+1900-01-11 06:00:00.000     1900-01-15 00:00:00.000
   
- `--------------------------- ---------------------------`  
-  
- `1900-01-11 06:00:00.000     1900-01-15 00:00:00.000`  
-  
- `(1 row(s) affected)`  
+(1 row(s) affected)
+ ```  
   
 ### <a name="c-adding-character-and-integer-data-types"></a>C. 加入字元和整數資料類型  
  下列範例會將**int**資料類型值和字元值轉換字元資料類型，以**int**。如果不是有效的字元存在於**char**字串[!INCLUDE[tsql](../../includes/tsql-md.md)]會傳回錯誤。  
@@ -105,11 +105,12 @@ SELECT '125127' + @addvalue;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `-----------------------`  
+ ```
+-----------------------
+125142
   
- `125142`  
-  
- `(1 row(s) affected)`  
+(1 row(s) affected)
+ ```  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   

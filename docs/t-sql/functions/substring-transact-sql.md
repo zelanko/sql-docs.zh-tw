@@ -105,13 +105,13 @@ SELECT x = SUBSTRING('abcdef', 2, 3);
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `x`  
+ ```
+x  
+----------  
+bcd  
   
- `----------`  
-  
- `bcd`  
-  
- `(1 row(s) affected)`  
+(1 row(s) affected)
+```  
   
 ### <a name="b-using-substring-with-text-ntext-and-image-data"></a>B. 使用 SUBSTRING 與 text、ntext 以及 image 資料  
   
@@ -130,13 +130,13 @@ WHERE pub_id = '1756';
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `pub_id logo    pr_info`  
-  
- `------ ---------------------- ----------`  
-  
- `1756   0x474946383961E3002500 This is sa`  
-  
- `(1 row(s) affected)`  
+ ```
+ pub_id logo    pr_info
+------ ---------------------- ----------
+1756   0x474946383961E3002500 This is sa
+
+(1 row(s) affected)
+```  
   
  下列範例示範在兩者的 SUBSTRING 效果**文字**和**ntext**資料。 首先，這個範例會在名稱為 `pubs` 的 `npub_info` 資料庫中，建立一份新的資料表。 其次，這個範例會從 `pr_info` 資料行的前 80 個字元中，建立 `npub_info` 資料表的 `pub_info.pr_info` 資料行，再加入 `ü` 來作為第一個字元。 最後，`INNER JOIN`擷取所有簽發者識別碼和`SUBSTRING`兩者的**文字**和**ntext**發行者資訊資料行。  
   
@@ -196,15 +196,13 @@ ORDER BY LastName;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `LastName             Initial`  
-  
- `-------------------- -------`  
-  
- `Barbariol            A`  
-  
- `Barber               D`  
-  
- `Barreto de Mattos    P`  
+ ```
+LastName             Initial
+-------------------- -------
+Barbariol            A
+Barber               D
+Barreto de Mattos    P
+```  
   
  下列範例示範如何傳回第二、 第三和第四個字元的字串常數`abcdef`。  
   
@@ -216,11 +214,11 @@ SELECT TOP 1 SUBSTRING('abcdef', 2, 3) AS x FROM dbo.DimCustomer;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `x`  
-  
- `-----`  
-  
- `bcd`  
+ ```
+x
+-----
+bcd
+```  
   
 ## <a name="see-also"></a>另請參閱  
  [字串函數 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  

@@ -68,11 +68,12 @@ GO
   
  這是當工作階段使用者是 `Surya` 的結果集：  
   
- `--------------------------------------------------------------`  
-  
- `This session's current user is: Surya`  
-  
- `(1 row(s) affected)`  
+ ```
+--------------------------------------------------------------
+This session's current user is: Surya
+
+(1 row(s) affected)
+```  
   
 ### <a name="b-using-sessionuser-with-default-constraints"></a>B. 使用 SESSION_USER 搭配 DEFAULT 條件約束  
  下列範例會建立一份資料表，針對記錄出貨回條者的名稱，利用 `SESSION_USER` 作為 `DEFAULT` 條件約束。  
@@ -127,21 +128,17 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Order #   Customer #  When Delivered       Received By`  
-  
- `--------  ----------  -------------------  -----------`  
-  
- `5000      7510        2005-03-16 12:02:14  Wanida`  
-  
- `5001      7231        2005-03-16 12:02:14  Wanida`  
-  
- `5002      7028        2005-03-16 12:02:14  Sylvester`  
-  
- `5003      7392        2005-03-16 12:02:14  Alejandro`  
-  
- `5004      7452        2005-03-16 12:02:14  Alejandro`  
-  
- `(5 row(s) affected)`  
+ ```
+Order #   Customer #  When Delivered       Received By
+--------  ----------  -------------------  -----------
+5000      7510        2005-03-16 12:02:14  Wanida
+5001      7231        2005-03-16 12:02:14  Wanida
+5002      7028        2005-03-16 12:02:14  Sylvester
+5003      7392        2005-03-16 12:02:14  Alejandro
+5004      7452        2005-03-16 12:02:14  Alejandro
+
+(5 row(s) affected)
+```  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   

@@ -73,9 +73,11 @@ SELECT FLOOR(123.45), FLOOR(-123.45), FLOOR($123.45);
   
  結果是相同的資料類型中的導出值的整數部分*numeric_expression*。  
   
- `-----   ---------    -----------`  
+ ```
+ -----   ---------    -----------  
   
- `123     -124         123`  
+ 123     -124         123
+ ```  
   
 ## <a name="see-also"></a>另請參閱  
  [數學函數 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  

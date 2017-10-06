@@ -133,9 +133,10 @@ SELECT SYSDATETIME();
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `--------------------------`  
-  
- `7/20/2013 2:49:59 PM`  
+ ```
+--------------------------  
+7/20/2013 2:49:59 PM
+```  
   
 ## <a name="see-also"></a>另請參閱  
  [CAST 和 CONVERT &#40;TRANSACT-SQL &#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   

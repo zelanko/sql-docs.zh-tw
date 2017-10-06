@@ -104,17 +104,15 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Color`  
-  
- `--------------- --------------------- ---------------------`  
-  
- `Black           27404.84              5214.9616`  
-  
- `Silver          26462.84              14665.6792`  
-  
- `White           19.00                 6.7926`  
-  
- `(3 row(s) affected)`  
+ ```
+Color
+--------------- --------------------- ---------------------
+Black           27404.84              5214.9616
+Silver          26462.84              14665.6792
+White           19.00                 6.7926
+
+(3 row(s) affected)
+ ```  
   
 ### <a name="b-using-the-over-clause"></a>B. 使用 OVER 子句  
  下列範例搭配 OVER 子句使用 SUM 函數，為 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫之 `Sales.SalesPerson` 資料表中各領域的年度銷售提供累計總和。 `TerritoryID` 負責分割資料，而 `SalesYTD` 會進行邏輯性地排序。 這表示，將會根據銷售年度來針對每一個領域計算 SUM 函數。 請注意，在 `TerritoryID` 1 中，2005 銷售年度有兩個資料列，分別表示在該年度有銷售業績的兩個銷售人員。 計算這兩個資料列的累計銷售額，然後將表示 2006 年度銷售額的第三個資料列納入計算。  
@@ -207,17 +205,14 @@ ORDER BY ProductKey;
   
  以下為部分結果集。  
   
- `ProductKey  TotalPerProduct`  
-  
- `----------  ---------------`  
-  
- `214         31421.0200`  
-  
- `217         31176.0900`  
-  
- `222         29986.4300`  
-  
- `225          7956.1500`  
+ ```
+ProductKey  TotalPerProduct
+----------  ---------------
+214         31421.0200
+217         31176.0900
+222         29986.4300
+225          7956.1500
+ ```
   
 ### <a name="d-calculating-group-totals-with-more-than-one-column"></a>D. 計算具有一個以上的資料行群組總計  
  下列範例會針對 `ListPrice` 資料表中所列出的每個顏色，來計算 `StandardCost` 和 `Product` 的總和。  
@@ -234,19 +229,15 @@ ORDER BY Color;
   
  結果集的第一個部分如下所示：  
   
- `Color       TotalList      TotalCost`  
-  
- `----------  -------------  --------------`  
-  
- `Black       101295.7191    57490.5378`  
-  
- `Blue         24082.9484    14772.0524`  
-  
- `Grey           125.0000       51.5625`  
-  
- `Multi          880.7468      526.4095`  
-  
- `NA            3162.3564     1360.6185`  
+ ```
+Color       TotalList      TotalCost
+----------  -------------  --------------
+Black       101295.7191    57490.5378
+Blue         24082.9484    14772.0524
+Grey           125.0000       51.5625
+Multi          880.7468      526.4095
+NA            3162.3564     1360.6185
+ ```  
   
 ## <a name="see-also"></a>另請參閱  
  [彙總函式 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)   

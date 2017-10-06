@@ -67,15 +67,14 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Lower                    Upper                    LowerUpper`  
+ ```
+Lower                    Upper                    LowerUpper  
+---------------------    ---------------------    --------------------  
+minipump                 MINIPUMP                 minipump 
+taillights - battery     TAILLIGHTS - BATTERY     taillights - battery  
   
- `---------------------    ---------------------    --------------------`  
-  
- `minipump                 MINIPUMP                 minipump`  
-  
- `taillights - battery     TAILLIGHTS - BATTERY     taillights - battery`  
-  
- `(2 row(s) affected)`  
+(2 row(s) affected)
+```  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  下列範例會利用 `LOWER` 函數、`UPPER` 函數，且將 `UPPER` 函數巢狀放置於 `LOWER` 函數內，以選取價格在 $11 和 $20 之間的產品名稱。  
@@ -93,13 +92,12 @@ WHERE ListPrice between 11.00 and 20.00;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Lower                 Upper                  LowerUpper`  
-  
- `--------------------  ---------------------  --------------------`  
-  
- `minipump              MINIPUMP               minipump`  
-  
- `taillights – battery  TAILLIGHTS – BATTERY   taillights - battery`  
+ ```
+Lower                 Upper                  LowerUpper  
+--------------------  ---------------------  --------------------  
+minipump              MINIPUMP               minipump  
+taillights – battery  TAILLIGHTS – BATTERY   taillights - battery
+```  
   
 ## <a name="see-also"></a>另請參閱  
  [資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   

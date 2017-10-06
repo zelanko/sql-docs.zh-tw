@@ -158,9 +158,10 @@ WHERE SalesOrderNumber IN (N'SO43659', N'SO43660', N'SO43664');
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `------`  
-  
- `5.1865`  
+ ```
+ ------  
+ 5.1865
+ ```  
   
 ### <a name="d-using-min-with-over"></a>D. 使用最小值與移轉  
  下列範例會使用 MIN OVER() 分析函數，傳回最便宜產品的價格每個銷售訂單中。 結果集依分割`SalesOrderID`資料行。  
@@ -177,15 +178,13 @@ ORDER BY SalesOrderNumber;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `LeastExpensiveProduct SalesOrderID`  
-  
- `--------------------- ----------`  
-  
- `5.1865                SO43659`  
-  
- `419.4589              SO43660`  
-  
- `28.8404               SO43664`  
+ ```
+LeastExpensiveProduct SalesOrderID  
+--------------------- ----------  
+5.1865                SO43659  
+419.4589              SO43660  
+28.8404               SO43664
+```  
   
 ## <a name="see-also"></a>另請參閱  
  [彙總函式 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)   

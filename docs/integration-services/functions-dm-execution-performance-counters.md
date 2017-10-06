@@ -28,7 +28,7 @@ ms.lasthandoff: 09/26/2017
   
 ## <a name="syntax"></a>語法  
   
-```tsql  
+```sql  
 dm_execution_performance_counters [ @execution_id = ] execution_id  
   
 ```  
@@ -69,14 +69,14 @@ dm_execution_performance_counters [ @execution_id = ] execution_id
 ## <a name="example"></a>範例  
  在下列範例中，函數會傳回識別碼為 34 之執行中執行作業的統計資料。  
   
-```  
+```sql
 select * from [catalog].[dm_execution_performance_counters] (34)  
 ```  
   
 ## <a name="example"></a>範例  
  在下列範例中，函數會依據您的權限傳回 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 伺服器上執行之所有執行作業的統計資料。  
   
-```  
+```sql
 select * from [catalog].[dm_execution_performance_counters] (NULL)  
   
 ```  

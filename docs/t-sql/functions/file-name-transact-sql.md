@@ -71,13 +71,13 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `File Name 1           File Name 2`  
-  
- `----------------      ------------------------`  
-  
- `AdventureWorks2012_Data   AdventureWorks2012_Log`  
-  
- `(1 row(s) affected)`  
+```
+File Name 1           File Name 2  
+----------------      ------------------------  
+AdventureWorks2012_Data   AdventureWorks2012_Log  
+
+(1 row(s) affected)
+``` 
   
 ## <a name="see-also"></a>另請參閱  
  [FILE_IDEX & #40;TRANSACT-SQL & #41;](../../t-sql/functions/file-idex-transact-sql.md)   

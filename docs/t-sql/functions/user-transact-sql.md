@@ -72,11 +72,12 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `-----------------------------------------------------------------------`  
+ ```
+-----------------------------------------------------------------------  
+The current user's database username is: dbo  
   
- `The current user's database username is: dbo`  
-  
- `(1 row(s) affected)`  
+(1 row(s) affected)
+```  
   
 ### <a name="b-using-user-with-default-constraints"></a>B. 搭配 DEFAULT 條件約束來使用 USER  
  下列範例會使用 `USER` 做為銷售資料列之銷售員的 `DEFAULT` 條件約束，來建立資料表。  
@@ -113,21 +114,17 @@ GO
   
  結果集如下 (請注意 `entry-person` 的值)：  
   
- `part_id     description                    entry_person`  
+ ```
+part_id     description                    entry_person
+----------- ------------------------------ -------------------------
+100         Red pencil                     dbo
+101         Blue pencil                    dbo
+102         Green pencil                   dbo
+103         Black pencil                   dbo
+104         Yellow pencil                  dbo
   
- `----------- ------------------------------ -------------------------`  
-  
- `100         Red pencil                     dbo`  
-  
- `101         Blue pencil                    dbo`  
-  
- `102         Green pencil                   dbo`  
-  
- `103         Black pencil                   dbo`  
-  
- `104         Yellow pencil                  dbo`  
-  
- `(5 row(s) affected)`  
+(5 row(s) affected)
+```  
   
 ### <a name="c-using-user-in-combination-with-execute-as"></a>C. 與 EXECUTE AS 合併使用 USER  
  下列範例說明在模擬工作階段中進行呼叫時，`USER` 的行為。  
@@ -147,11 +144,11 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `DBO`  
-  
- `Mario`  
-  
- `DBO`  
+ ```
+DBO
+Mario
+DBO
+```  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
@@ -167,11 +164,12 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `-----------------------------------------------------------------------`  
+ ```
+-----------------------------------------------------------------------  
+The current user's database username is: dbo  
   
- `The current user's database username is: dbo`  
-  
- `(1 row(s) affected)`  
+(1 row(s) affected)
+```  
   
 ## <a name="see-also"></a>另請參閱  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   

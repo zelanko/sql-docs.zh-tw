@@ -79,27 +79,20 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `obj_name        col_name                  type_name`  
-  
- `--------------- ------------------------ --------------`  
-  
- `Vendor          AccountNumber            AccountNumber`  
-  
- `Vendor          ActiveFlag               Flag`  
-  
- `Vendor          BusinessEntityID         int`  
-  
- `Vendor          CreditRating             tinyint`  
-  
- `Vendor          ModifiedDate             datetime`  
-  
- `Vendor          Name                     Name`  
-  
- `Vendor          PreferredVendorStatus    Flag`  
-  
- `Vendor          PurchasingWebServiceURL  nvarchar`  
-  
- `(8 row(s) affected)`  
+ ```
+obj_name        col_name                  type_name
+--------------- ------------------------ --------------
+Vendor          AccountNumber            AccountNumber
+Vendor          ActiveFlag               Flag
+Vendor          BusinessEntityID         int
+Vendor          CreditRating             tinyint
+Vendor          ModifiedDate             datetime
+Vendor          Name                     Name
+Vendor          PreferredVendorStatus    Flag
+Vendor          PurchasingWebServiceURL  nvarchar
+
+(8 row(s) affected)
+```  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  下列範例會傳回`TYPE ID`識別碼資料型別的`1`。  

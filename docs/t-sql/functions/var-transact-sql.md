@@ -102,11 +102,11 @@ FROM dbo.FactSalesQuota;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Distinct_Values   All_Values`  
-  
- `----------------  ----------------`  
-  
- `159180469909.18   158762853821.10`  
+ ```
+Distinct_Values   All_Values
+----------------  ----------------
+159180469909.18   158762853821.10
+ ```  
   
 ### <a name="c-using-var-with-over"></a>C. VAR 使用容錯移轉  
  下列範例會傳回日曆年度中每一季的銷售配額值的統計變異數。 請注意，OVER 子句中的 ORDER BY 排序的統計變異數與 ORDER BY 的 SELECT 陳述式會排序結果集。  
@@ -123,17 +123,14 @@ ORDER BY CalendarQuarter;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Year  Quarter  SalesQuota              Variance`  
-  
- `----  -------  ----------------------  -------------------`  
-  
- `2002  1         91000.0000             null`  
-  
- `2002  2        140000.0000             1200500000.00`  
-  
- `2002  3         70000.0000             1290333333.33`  
-  
- `2002  4        154000.0000             1580250000.00`  
+ ```
+Year  Quarter  SalesQuota              Variance
+----  -------  ----------------------  -------------------
+2002  1         91000.0000             null
+2002  2        140000.0000             1200500000.00
+2002  3         70000.0000             1290333333.33
+2002  4        154000.0000             1580250000.00
+ ```  
   
 ## <a name="see-also"></a>另請參閱  
  [彙總函式 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)   

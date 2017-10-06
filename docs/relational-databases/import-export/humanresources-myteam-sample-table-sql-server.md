@@ -40,7 +40,7 @@ ms.lasthandoff: 10/04/2017
 |**Title**|**nvarchar(50)**|可為 Null|小組中工作的員工之職稱。|  
 |**背景**|**nvarchar(50)**|非 Null|資料列上次更新的日期和時間。 (預設值)|  
   
- **若要建立 HumanResources.myTeam**  
+**若要建立 HumanResources.myTeam**  
   
 -   使用下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式：  
   
@@ -57,7 +57,7 @@ ms.lasthandoff: 10/04/2017
     GO  
     ```  
   
- **若要擴展 HumanResources.myTeam**  
+**若要擴展 HumanResources.myTeam**  
   
 -   執行下列 `INSERT` 陳述式，將資料表擴展為兩個資料列：  
   

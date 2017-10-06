@@ -213,9 +213,10 @@ GO
   
  結果集會顯示 `ufnGetProductDealerPrice` 不是具決定性的函數。  
   
- `-----`  
-  
- `0`  
+ ```
+-----  
+0
+```  
   
 ### <a name="c-finding-the-objects-that-belong-to-a-specific-schema"></a>C. 尋找屬於特定結構描述的物件  
  下列範例會利用 `SchemaId` 屬性來傳回屬於 `Production` 結構描述的所有物件。  

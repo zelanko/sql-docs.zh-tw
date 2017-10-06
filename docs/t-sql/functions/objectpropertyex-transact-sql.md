@@ -207,11 +207,11 @@ GO
   
  結果集顯示基礎物件 (`Employee` 資料表) 的基底類型是使用者資料表。  
   
- `Base Type`  
-  
- `--------`  
-  
- `U`  
+ ```
+Base Type 
+--------  
+U
+```  
   
 ### <a name="b-returning-a-property-value"></a>B. 傳回屬性值  
  以下的範例傳回了指定資料表的 UPDATE 觸發程序數量。  

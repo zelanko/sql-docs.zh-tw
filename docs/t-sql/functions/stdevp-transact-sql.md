@@ -103,11 +103,11 @@ FROM ProductInventory;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Distinct_Values   All_Values`  
-  
- `----------------  ----------------`  
-  
- `397676.79         397226.44`  
+ ```
+Distinct_Values   All_Values  
+----------------  ----------------  
+397676.79         397226.44
+```  
   
 ### <a name="c-using-stdevp-with-over"></a>C. STDEVP 使用容錯移轉  
  下列範例會傳回`STDEVP`日曆年度的每一季的銷售配額值。 請注意，`ORDER BY` 子句中的 `OVER` 會排列 `STDEVP` 的順序，而 `ORDER BY` 陳述式的 `SELECT` 會排列結果集的順序。  
@@ -124,17 +124,14 @@ ORDER BY CalendarQuarter;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Year  Quarter  SalesQuota              StdDeviation`  
-  
- `----  -------  ----------------------  -------------------`  
-  
- `2002  1         91000.0000             0.00`  
-  
- `2002  2        140000.0000             24500.00`  
-  
- `2002  3         70000.0000             29329.55`  
-  
- `2002  4        154000.0000             34426.55`  
+ ```
+Year  Quarter  SalesQuota              StdDeviation  
+----  -------  ----------------------  -------------------  
+2002  1         91000.0000             0.00  
+2002  2        140000.0000             24500.00  
+2002  3         70000.0000             29329.55  
+2002  4        154000.0000             34426.55
+```  
   
 ## <a name="see-also"></a>另請參閱  
  [彙總函式 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)   

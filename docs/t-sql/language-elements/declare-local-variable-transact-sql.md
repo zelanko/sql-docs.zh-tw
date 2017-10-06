@@ -216,17 +216,15 @@ WHERE LastName LIKE @find;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `LastName            FirstName               Phone`  
+ ```
+LastName            FirstName               Phone
+------------------- ----------------------- -------------------------
+Manchepalli         Ajay                    1 (11) 500 555-0174
+Manek               Parul                   1 (11) 500 555-0146
+Manzanares          Tomas                   1 (11) 500 555-0178
   
- `------------------- ----------------------- -------------------------`  
-  
- `Manchepalli         Ajay                    1 (11) 500 555-0174`  
-  
- `Manek               Parul                   1 (11) 500 555-0146`  
-  
- `Manzanares          Tomas                   1 (11) 500 555-0178`  
-  
- `(3 row(s) affected)`  
+(3 row(s) affected)
+```  
   
 ### <a name="b-using-declare-with-two-variables"></a>B. 使用 DECLARE 與兩個變數  
  下列範例會擷取在北美銷售地區且年度銷售額至少 $2,000,000 的 [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] 銷售代表姓名。  

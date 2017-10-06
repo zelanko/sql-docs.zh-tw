@@ -117,17 +117,14 @@ SELECT CONVERT (date, SYSDATETIME())
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `SYSDATETIME()          2007-05-03`  
-  
- `SYSDATETIMEOFFSET()    2007-05-03`  
-  
- `SYSUTCDATETIME()       2007-05-04`  
-  
- `CURRENT_TIMESTAMP      2007-05-03`  
-  
- `GETDATE()              2007-05-03`  
-  
- `GETUTCDATE()           2007-05-04`  
+```
+SYSDATETIME()          2007-05-03  
+SYSDATETIMEOFFSET()    2007-05-03  
+SYSUTCDATETIME()       2007-05-04  
+CURRENT_TIMESTAMP      2007-05-03  
+GETDATE()              2007-05-03  
+GETUTCDATE()           2007-05-04
+``` 
   
 ### <a name="c-getting-the-current-system-time"></a>C. 取得目前的系統時間  
   
@@ -143,17 +140,14 @@ SELECT CONVERT (time, SYSDATETIME())
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `SYSDATETIME()      13:18:45.3490361`  
-  
- `SYSDATETIMEOFFSET()13:18:45.3490361`  
-  
- `SYSUTCDATETIME()   20:18:45.3490361`  
-  
- `CURRENT_TIMESTAMP  13:18:45.3470000`  
-  
- `GETDATE()          13:18:45.3470000`  
-  
- `GETUTCDATE()       20:18:45.3470000`  
+```
+SYSDATETIME()      13:18:45.3490361  
+SYSDATETIMEOFFSET()13:18:45.3490361  
+SYSUTCDATETIME()   20:18:45.3490361  
+CURRENT_TIMESTAMP  13:18:45.3470000  
+GETDATE()          13:18:45.3470000  
+GETUTCDATE()       20:18:45.3470000  
+```
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  下列範例會使用三個[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]系統函數傳回目前的日期和時間來傳回日期、 時間或兩者。 由於這些值會依序傳回，因此其小數秒數可能會不同。  

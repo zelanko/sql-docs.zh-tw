@@ -61,17 +61,14 @@ SELECT @@TEXTSIZE AS 'Text Size'
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Text Size`  
-  
- `-----------`  
-  
- `4096`  
-  
- `Text Size`  
-  
- `-----------`  
-  
- `2048`  
+ ```
+Text Size
+-----------
+4096
+Text Size
+-----------
+2048
+ ```  
   
 ## <a name="see-also"></a>另請參閱  
  [組態函式 &#40;Transact-SQL&#41;](../../t-sql/functions/configuration-functions-transact-sql.md)   

@@ -83,17 +83,14 @@ SELECT SYSDATETIME() AS SYSDATETIME
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `SYSDATETIME()      2007-04-30 13:10:02.0474381`  
-  
- `SYSDATETIMEOFFSET()2007-04-30 13:10:02.0474381 -07:00`  
-  
- `SYSUTCDATETIME()   2007-04-30 20:10:02.0474381`  
-  
- `CURRENT_TIMESTAMP  2007-04-30 13:10:02.047`  
-  
- `GETDATE()          2007-04-30 13:10:02.047`  
-  
- `GETUTCDATE()       2007-04-30 20:10:02.047`  
+ ```
+SYSDATETIME()      2007-04-30 13:10:02.0474381
+SYSDATETIMEOFFSET()2007-04-30 13:10:02.0474381 -07:00
+SYSUTCDATETIME()   2007-04-30 20:10:02.0474381
+CURRENT_TIMESTAMP  2007-04-30 13:10:02.047
+GETDATE()          2007-04-30 13:10:02.047
+GETUTCDATE()       2007-04-30 20:10:02.047
+```  
   
 ### <a name="b-converting-date-and-time-to-date"></a>B. 將日期和時間轉換成日期  
  下列範例會顯示如何將日期和時間值轉換成 `date`。  
@@ -109,17 +106,14 @@ SELECT CONVERT (date, SYSDATETIME())
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `2007-04-30`  
-  
- `2007-04-30`  
-  
- `2007-04-30`  
-  
- `2007-04-30`  
-  
- `2007-04-30`  
-  
- `2007-04-30`  
+ ```
+2007-04-30
+2007-04-30
+2007-04-30
+2007-04-30
+2007-04-30
+2007-04-30
+```  
   
 ### <a name="c-converting-date-and-time-to-times"></a>C. 將日期和時間轉換成時間  
  下列範例會顯示如何將日期和時間值轉換成 `time`。  
@@ -135,17 +129,14 @@ SELECT CONVERT (time, SYSDATETIME()) AS SYSDATETIME()
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `SYSDATETIME()      13:18:45.3490361`  
-  
- `SYSDATETIMEOFFSET()13:18:45.3490361`  
-  
- `SYSUTCDATETIME()   20:18:45.3490361`  
-  
- `CURRENT_TIMESTAMP  13:18:45.3470000`  
-  
- `GETDATE()          13:18:45.3470000`  
-  
- `GETUTCDATE()       20:18:45.3470000`  
+ ```
+SYSDATETIME()      13:18:45.3490361
+SYSDATETIMEOFFSET()13:18:45.3490361
+SYSUTCDATETIME()   20:18:45.3490361
+CURRENT_TIMESTAMP  13:18:45.3470000
+GETDATE()          13:18:45.3470000
+GETUTCDATE()       20:18:45.3470000
+```  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  下列範例會使用六個可傳回目前日期和時間的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統函數來傳回日期、時間或這兩者。 由於這些值會依序傳回，因此其小數秒數可能會不同。  
@@ -164,17 +155,14 @@ SELECT SYSDATETIME() AS SYSDATETIME
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `SYSDATETIME()      2007-04-30 13:10:02.0474381`  
-  
- `SYSDATETIMEOFFSET()2007-04-30 13:10:02.0474381 -07:00`  
-  
- `SYSUTCDATETIME()   2007-04-30 20:10:02.0474381`  
-  
- `CURRENT_TIMESTAMP  2007-04-30 13:10:02.047`  
-  
- `GETDATE()          2007-04-30 13:10:02.047`  
-  
- `GETUTCDATE()       2007-04-30 20:10:02.047`  
+ ```
+SYSDATETIME()      2007-04-30 13:10:02.0474381
+SYSDATETIMEOFFSET()2007-04-30 13:10:02.0474381 -07:00
+SYSUTCDATETIME()   2007-04-30 20:10:02.0474381
+CURRENT_TIMESTAMP  2007-04-30 13:10:02.047
+GETDATE()          2007-04-30 13:10:02.047
+GETUTCDATE()       2007-04-30 20:10:02.047
+```  
   
 ### <a name="e-converting-date-and-time-to-date"></a>E. 將日期和時間轉換成日期  
  下列範例會顯示如何將日期和時間值轉換成 `date`。  
@@ -190,17 +178,14 @@ SELECT CONVERT (date, SYSDATETIME())
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `2007-04-30`  
-  
- `2007-04-30`  
-  
- `2007-04-30`  
-  
- `2007-04-30`  
-  
- `2007-04-30`  
-  
- `2007-04-30`  
+ ```
+2007-04-30
+2007-04-30
+2007-04-30
+2007-04-30
+2007-04-30
+2007-04-30
+```  
   
 ### <a name="f-converting-date-and-time-to-times"></a>F. 將日期和時間轉換成時間  
  下列範例會顯示如何將日期和時間值轉換成 `time`。  
@@ -216,17 +201,14 @@ SELECT CONVERT (time, SYSDATETIME()) AS SYSDATETIME()
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `SYSDATETIME()      13:18:45.3490361`  
-  
- `SYSDATETIMEOFFSET()13:18:45.3490361`  
-  
- `SYSUTCDATETIME()   20:18:45.3490361`  
-  
- `CURRENT_TIMESTAMP  13:18:45.3470000`  
-  
- `GETDATE()          13:18:45.3470000`  
-  
- `GETUTCDATE()       20:18:45.3470000`  
+ ```
+SYSDATETIME()      13:18:45.3490361
+SYSDATETIMEOFFSET()13:18:45.3490361
+SYSUTCDATETIME()   20:18:45.3490361
+CURRENT_TIMESTAMP  13:18:45.3470000
+GETDATE()          13:18:45.3470000
+GETUTCDATE()       20:18:45.3470000
+```  
   
 ## <a name="see-also"></a>另請參閱  
  [CAST 和 CONVERT &#40;TRANSACT-SQL &#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   

@@ -149,9 +149,10 @@ SELECT POWER(2.0, 3);
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `------------`  
-  
- `8.0`  
+ ```
+------------ 
+8.0
+```  
   
 ## <a name="see-also"></a>另請參閱  
  [decimal 和 numeric &#40;TRANSACT-SQL &#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)   

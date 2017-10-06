@@ -69,19 +69,16 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `FirstName      Reverse`  
-  
- `-------------- --------------`  
-  
- `Ken            neK`  
-  
- `Rob            boR`  
-  
- `Roberto        otreboR`  
-  
- `Terri          irreT`  
-  
- `(4 row(s) affected)`  
+ ```
+FirstName      Reverse
+-------------- --------------
+Ken            neK
+Rob            boR
+Roberto        otreboR
+Terri          irreT
+
+(4 row(s) affected)
+```  
   
  下列範例會將變數中的字元反轉。  
   

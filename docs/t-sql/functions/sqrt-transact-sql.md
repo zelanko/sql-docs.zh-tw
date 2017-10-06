@@ -95,9 +95,10 @@ SELECT SQRT(1.00), SQRT(10.00);
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `----------  ------------`  
-  
- `1.00        3.16`  
+ ```
+----------  ------------  
+1.00        3.16
+```  
   
 ## <a name="see-also"></a>另請參閱  
  [數學函數 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  

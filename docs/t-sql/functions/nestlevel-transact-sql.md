@@ -78,17 +78,15 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Outer Level`  
+ ```
+Outer Level  
+-----------  
+1  
   
- `-----------`  
-  
- `1`  
-  
- `Inner Level`  
-  
- `-----------`  
-  
- `2`  
+Inner Level  
+-----------  
+2
+```  
   
 ### <a name="b-calling-nestlevel"></a>B. 呼叫@NESTLEVEL  
  下列範例會顯示 `SELECT`、`EXEC` 和 `sp`_`executesql` 呼叫 `@@NESTLEVEL` 時，它們所傳回之值的差異。  
@@ -105,29 +103,25 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Current Nest Level`  
+ ```
+Current Nest Level  
+------------------  
+1  
   
- `------------------`  
+(1 row(s) affected)  
   
- `1`  
+OneGreater  
+-----------  
+2  
   
- `(1 row(s) affected)`  
+(1 row(s) affected)  
   
- `OneGreater`  
+TwoGreater  
+-----------  
+3  
   
- `-----------`  
-  
- `2`  
-  
- `(1 row(s) affected)`  
-  
- `TwoGreater`  
-  
- `-----------`  
-  
- `3`  
-  
- `(1 row(s) affected)`  
+(1 row(s) affected)
+```  
   
 ## <a name="see-also"></a>另請參閱  
  [組態函式 &#40;Transact-SQL&#41;](../../t-sql/functions/configuration-functions-transact-sql.md)   

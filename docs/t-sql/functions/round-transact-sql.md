@@ -118,17 +118,17 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `----------`  
-  
- `123.4500`  
-  
- `(1 row(s) affected)`  
-  
- `--------`  
-  
- `100.00`  
-  
- `(1 row(s) affected)`  
+ ```
+----------
+123.4500
+
+(1 row(s) affected)
+
+--------
+100.00
+
+(1 row(s) affected)
+```
   
 ### <a name="c-using-round-to-truncate"></a>C. 利用 ROUND 截斷  
  下列範例利用兩個 `SELECT` 陳述式，來示範捨入和截斷之間的差異。 第一個陳述式會捨入結果。 第二個陳述式會截斷結果。  
@@ -164,10 +164,11 @@ SELECT ROUND(123.994999, 3), ROUND(123.995444, 3);
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
- `--------  ---------`  
-  
- `123.995000    123.995444`  
+
+ ```
+--------  ---------
+123.995000    123.995444
+```
   
 ### <a name="e-using-round-and-rounding-approximations"></a>E. 使用 ROUND 與捨入近似值  
  下列範例顯示捨入和近似值。  
@@ -177,10 +178,11 @@ SELECT ROUND(123.4545, 2), ROUND(123.45, -2);
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
- `--------  ----------`  
-  
- `123.45    100.00`  
+
+ ```
+--------  ----------
+123.45    100.00
+```
   
 ## <a name="see-also"></a>另請參閱  
  [CEILING &#40;TRANSACT-SQL &#41;](../../t-sql/functions/ceiling-transact-sql.md)   

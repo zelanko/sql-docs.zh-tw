@@ -130,9 +130,10 @@ SELECT LOG(EXP (10));
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `---------`  
-  
- `10.00`  
+ ```
+---------  
+10.00
+```  
   
 ## <a name="see-also"></a>另請參閱  
  [數學函數 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)   

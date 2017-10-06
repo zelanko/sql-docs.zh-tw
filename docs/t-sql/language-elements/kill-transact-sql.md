@@ -116,8 +116,10 @@ JOIN sys.dm_exec_connections AS conn
   
  如果工作階段識別碼或 UOW 的回復已經完成時終止*工作階段識別碼*|*UOW* WITH STATUSONLY 陳述式時，或如果沒有工作階段識別碼或 UOW 正在回復，KILL *工作階段識別碼*|*UOW* WITH STATUSONLY 會傳回下列錯誤：  
   
- `"Msg 6120, Level 16, State 1, Line 1"`  
- `"Status report cannot be obtained. Rollback operation for Process ID <session ID> is not in progress."`  
+ ```
+"Msg 6120, Level 16, State 1, Line 1"  
+"Status report cannot be obtained. Rollback operation for Process ID <session ID> is not in progress."
+```  
   
  您可以取得相同的狀態報告重複相同的 KILL*工作階段識別碼*|*UOW*陳述式，而不使用 WITH STATUSONLY 選項; 不過，我們不建議這樣。 重複 KILL*工作階段識別碼*陳述式可能會終止新處理序，如果復原已完成，且工作階段識別碼已重新指派至新的工作之前執行新的 KILL 陳述式。 指定 WITH STATUSONLY 會防止發生這個情況。  
   

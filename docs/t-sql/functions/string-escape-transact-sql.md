@@ -83,11 +83,11 @@ SELECT STRING_ESCAPE('\   /
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `escapedText`  
-  
- `-------------------------------------------------------------`  
-  
- `\\\t\/\n\\\\\t\"\t`  
+ ```
+escapedText  
+-------------------------------------------------------------  
+\\\t\/\n\\\\\t\"\t
+```  
   
 ### <a name="b-format-json-object"></a>B. 格式的 JSON 物件  
  下列查詢會從數字和字串的變數，建立 JSON 文字並逸出任何特殊的 JSON 字元變數中。  

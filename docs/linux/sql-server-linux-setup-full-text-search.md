@@ -36,7 +36,6 @@ ms.lasthandoff: 10/02/2017
 使用下列命令，安裝**mssql-伺服器-fts** Red Hat Enterprise Linux 上。 
 
 ```bash
-sudo yum update
 sudo yum install -y mssql-server-fts
 ```
 
