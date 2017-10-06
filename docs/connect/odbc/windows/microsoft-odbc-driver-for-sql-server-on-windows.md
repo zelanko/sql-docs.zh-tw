@@ -48,7 +48,7 @@ Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_m
 -   [使用 ODBC 驅動程式搭配使用一律加密](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)
 -   [使用 Azure Active Directory 的 ODBC 驅動程式](../../../connect/odbc/using-azure-active-directory.md) 
 -   [使用透明網路 IP 解析](../../../connect/odbc/using-transparent-network-ip-resolution.md)   
-  
+
 ## <a name="community"></a>社群  
 - [Microsoft ODBC Driver For SQL Server 小組部落格](http://blogs.msdn.com/sqlnativeclient/default.aspx)  
 - [SQL Server Data Access Forum](http://social.technet.microsoft.com/Forums/en/sqldataaccess/threads)  
