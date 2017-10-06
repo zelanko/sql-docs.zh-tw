@@ -12,14 +12,14 @@ ms.technology: database-engine
 ms.custom: UpdArt.exe
 ms.tgt_pltfrm: na
 ms.devlang: na
-ms.date: 09/11/2017
+ms.date: 09/27/2017
 ms.author: genemi
 ms.workload: ssms-sql-server-management-studio
 ms.translationtype: HT
-ms.sourcegitcommit: 15080827744c19120a8474f3142004c4af7a4064
-ms.openlocfilehash: 917198902baf85f2bae57c9ade9f8d3e29dea357
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 15d706d713a813af8831c191aca85781a9c98472
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="new-and-recently-updated-sql-server-management-studio-ssms-for-sql-server"></a>新文章和最近更新的文章：SQL Server Management Studio (SSMS) for SQL Server
@@ -34,7 +34,7 @@ Microsoft 幾乎每天都會在其 [Docs.Microsoft.com](http://docs.microsoft.co
 
 
 
-- *更新的日期範圍：* &nbsp;**2017-07-18** &nbsp; 到 &nbsp; **2017-09-11**
+- *更新的日期範圍：* &nbsp; **2017-09-11** &nbsp; 到 &nbsp; **2017-09-27**
 - *主題區：*&nbsp; **SQL Server Management Studio (SSMS)**。
 
 
@@ -47,7 +47,7 @@ Microsoft 幾乎每天都會在其 [Docs.Microsoft.com](http://docs.microsoft.co
 下列連結會跳至最近新增的新文章。
 
 
-1. [SQL Server Management Studio 中的輸出視窗](output-window.md)
+***目前無新文章列出。***
 
 
 
@@ -69,14 +69,11 @@ Microsoft 幾乎每天都會在其 [Docs.Microsoft.com](http://docs.microsoft.co
 
 <a name="compactupdatedlist"/>
 
-## <a name="compact-list-of-articles-updated-recently"></a>最近更新文章的壓縮清單
+### <a name="compact-list-of-articles-updated-recently"></a>最近更新文章的壓縮清單
 
 此壓縮清單提供＜摘要＞一節中所有更新文章的連結。
 
-1. [下載 SQL Server Management Studio (SSMS)](#TitleNum_1)
-2. [連線至 SQL Server 或 Azure SQL Database](#TitleNum_2)
-3. [SQL Server Management Studio - 變更記錄 (SSMS)](#TitleNum_3)
-4. [建立及更新資料表](#TitleNum_4)
+1. [下載 SQL Server PowerShell 模組](#TitleNum_1)
 
 
 
@@ -87,194 +84,39 @@ Microsoft 幾乎每天都會在其 [Docs.Microsoft.com](http://docs.microsoft.co
 
 <a name="TitleNum_1"/>
 
-### <a name="1-nbsp-download-sql-server-management-studio-ssmsdownload-sql-server-management-studio-ssmsmd"></a>1.&nbsp; [下載 SQL Server Management Studio (SSMS)](download-sql-server-management-studio-ssms.md)
+### <a name="1-nbsp-download-sql-server-powershell-moduledownload-sql-server-ps-modulemd"></a>1.&nbsp;[下載 SQL Server PowerShell 模組](download-sql-server-ps-module.md)
 
-*更新日期：2017-08-07* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([下一個](#TitleNum_2))
+*更新於：2017-09-26* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
 
-<!-- Source markdown line 63.  ms.author= "sstein".  -->
-
-&nbsp;
-
-
-<!-- git diff --ignore-all-space --unified=0 23260f301f86651061b47065bee43d42c92a7be4 0c2178d96b621b96bfcd2fbb782f24792debb407  (PR=2775  ,  Filename=download-sql-server-management-studio-ssms.md  ,  Dirpath=docs\ssms\  ,  MergeCommitSha40=3f12671ace99d5fefc199c7b1c2db31e5b3cfade) -->
-
-
-
-SSMS 17.2 是 SQL Server Management Studio 的最新版本。 17.x 世代的 SSMS 幾乎支援 SQL Server 2008 到 SQL Server 2017 的所有功能領域。 17.x 版也支援 SQL Analysis Service PaaS。
-
-17.2 版包括：
-
-- Multi-Factor Authentication (MFA)
-  - 適用於具 Multi-Factor Authentication 的通用驗證 (具 MFA 的 UA) 的多使用者 Azure AD 驗證
-  - 已針對具 MFA 的通用驗證新增使用者認證輸入欄位，以支援多使用者驗證。
-- 連接對話方塊現在支援下列 5 種驗證方法：
-  - Windows 驗證
-  - SQL Server 驗證
-  - Active Directory - 含 MFA 的通用支援
-  - Active Directory - 密碼
-  - Active Directory - 整合式
-
-- DacFx 的資料庫匯入/匯出精靈現在可以使用具 MFA 的通用驗證。
-- 如需 API 支援，請參閱 [IUniversalAuthProvider 介面](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.iuniversalauthprovider.aspx)。
-- 具 MFA 的 Azure AD 通用驗證所使用的 ADAL Managed 程式庫已升級至 3.13.9 版。
-- 新的 CLI 介面支援 SQL Database 和 SQL 資料倉儲的 Azure AD 管理員設定。
-
- 如需 Active Directory 驗證方法的詳細資訊，請參閱 [SQL Database 和 SQL 資料倉儲的通用驗證 (MFA 的 SSMS 支援)](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication) 和[設定適用於 SQL Server Management Studio 的 Azure SQL Database Multi-Factor Authentication](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication-configure)。
-
-- 輸出視窗包含在展開 [物件總管] 節點期間所執行查詢的項目
-- Azure SQL Database 的已啟用檢視表設計工具
-- SSMS 中從物件總管編寫物件指令碼的預設指令碼選項已變更：
-
-
-
-&nbsp;
-
-&nbsp;
-
----
-
-<a name="TitleNum_2"/>
-
-### <a name="2-nbsp-connect-to-a-sql-server-or-azure-sql-databaseobjectconnect-to-an-instance-from-object-explorermd"></a>2.&nbsp; [連線至 SQL Server 或 Azure SQL Database](object/connect-to-an-instance-from-object-explorer.md)
-
-*更新日期：2017-08-25* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([上一個](#TitleNum_1) | [下一個](#TitleNum_3))
-
-<!-- Source markdown line 40.  ms.author= "sstein".  -->
+<!-- Source markdown line 37.  ms.author= "sstein".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 cfd72893c35c87df96dc8605807e542be28936e2 840981d3a115a15774a8e47ee2f6a0e5c4177b01  (PR=2961  ,  Filename=connect-to-an-instance-from-object-explorer.md  ,  Dirpath=docs\ssms\object\  ,  MergeCommitSha40=21f0cfd102a6fcc44dfc9151750f1b3c936aa053) -->
+<!-- git diff --ignore-all-space --unified=0 3953870af5dca04eb3753e88a34fae69d365d6eb 10085b77284e957e34e5302975e5bc9cfd23fd0c  (PR=105  ,  Filename=download-sql-server-ps-module.md  ,  Dirpath=docs\ssms\  ,  MergeCommitSha40=ed34b77d3f23e46c7736ef96c775990261290870) -->
 
 
 
-   ![firewall--../media/connect-to-server/new-firewall-rule.png)
+如果以系統管理員身分執行，且要安裝適用於電腦上所有使用者的模組
 
-1. 若要建立防火牆規則並連線至伺服器，請按一下 [確定]。
+> Install-Module -Name SqlServer -AllowClobber
 
-1. 成功連線後，伺服器會顯示在**物件總管**中：
+如果無法以系統管理員身分執行，或要安裝僅適用於目前使用者的模組
 
-   ![connected--../media/connect-to-server/connected.png)
+> Install-Module -Name SqlServer -Scope CurrentUser -AllowClobber
 
-**後續步驟**
+若更新版的 SqlServer 模組已可使用，就可以使用 Update-Module 命令來更新版本
 
+> Update-Module -Name SqlServer
 
-[設計、建立及更新資料表--../visual-db-tools/design-tables-visual-database-tools.md)
+若要檢視安裝在電腦上的模組版本，可以使用
 
-**另請參閱**
+> Get-Module SqlServer -ListAvailable
 
+若要在指令碼中使用特定版本的模組，可以使用此命令將其匯入
 
-[SQL Server Management Studio (SSMS)--../sql-server-management-studio-ssms.md) [下載 SQL Server Management Studio (SSMS)--../download-sql-server-management-studio-ssms.md)
+> Import-Module SqlServer -Version 21.0.17178
 
-[Analysis Services](https://docs.microsoft.com/sql/analysis-services/instances/connect-to-analysis-services)
-[Integration Services](https://docs.microsoft.com/sql/integration-services/sql-server-integration-services)
-[Reporting Services](https://docs.microsoft.com/sql/reporting-services/tools/connect-to-a-report-server-in-management-studio)
-
-
-
-&nbsp;
-
-&nbsp;
-
----
-
-<a name="TitleNum_3"/>
-
-### <a name="3-nbsp-sql-server-management-studio---changelog-ssmssql-server-management-studio-changelog-ssmsmd"></a>3.&nbsp; [SQL Server Management Studio - 變更記錄 (SSMS)](sql-server-management-studio-changelog-ssms.md)
-
-*更新日期：2017-08-07* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([上一個](#TitleNum_2) | [下一個](#TitleNum_4))
-
-<!-- Source markdown line 20.  ms.author= "sstein".  -->
-
-&nbsp;
-
-
-<!-- git diff --ignore-all-space --unified=0 1733ce3c556db1e51cb27bf830429f2c42e8f97e 2abb24fd6547e438181039d095cbad027473a57e  (PR=2775  ,  Filename=sql-server-management-studio-changelog-ssms.md  ,  Dirpath=docs\ssms\  ,  MergeCommitSha40=3f12671ace99d5fefc199c7b1c2db31e5b3cfade) -->
-
-
-
-本文提供目前版本和舊版本之 SSMS 的更新、改善和 Bug 修正詳細資料。 下載[下面的舊版 SSMS--#previous-ssms-releases)。
-
-**[SSMS 17.2--download-sql-server-management-studio-ssms.md)**
-
-
-正式運作 | 組建編號：14.0.17177.0
-
-**增強功能**
-
-
-- Multi-Factor Authentication (MFA)
-  - 適用於具 Multi-Factor Authentication 的通用驗證 (具 MFA 的 UA) 的多使用者 Azure AD 驗證
-  - 已針對具 MFA 的通用驗證新增使用者認證輸入欄位，以支援多使用者驗證。
-- 連接對話方塊現在支援下列 5 種驗證方法：
-  - Windows 驗證
-  - SQL Server 驗證
-  - Active Directory - 含 MFA 的通用支援
-  - Active Directory - 密碼
-  - Active Directory - 整合式
-
-- DacFx 的資料庫匯入/匯出精靈現在可以使用具 MFA 的通用驗證。
-- 如需 API 支援，請參閱 [IUniversalAuthProvider 介面](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.iuniversalauthprovider.aspx)。
-- 具 MFA 的 Azure AD 通用驗證所使用的 ADAL Managed 程式庫已升級至 3.13.9 版。
-- 此外，提供的新 CLI 介面可支援 SQL Database 和 SQL 資料倉儲的 Azure AD 管理員設定。
-
- 如需 Active Directory 驗證方法的詳細資訊，請參閱 [SQL Database 和 SQL 資料倉儲的通用驗證 (MFA 的 SSMS 支援)](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication) 和[設定適用於 SQL Server Management Studio 的 Azure SQL Database Multi-Factor Authentication](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication-configure)。
-
-- 輸出視窗包含在展開 [物件總管] 節點期間所執行查詢的項目
-
-
-
-&nbsp;
-
-&nbsp;
-
----
-
-<a name="TitleNum_4"/>
-
-### <a name="4-nbsp-create-and-update-database-tablesvisual-db-toolsdesign-tables-visual-database-toolsmd"></a>4.&nbsp; [建立及更新資料表](visual-db-tools/design-tables-visual-database-tools.md)
-
-*更新日期：2017-08-25* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([上一個](#TitleNum_3))
-
-<!-- Source markdown line 30.  ms.author= "sstein".  -->
-
-&nbsp;
-
-
-<!-- git diff --ignore-all-space --unified=0 f63884ac2d04889e70c505cb5262c8dd81d73ee7 4b4c7aa5e8a0548405f02d11a66b722219fa78f0  (PR=2961  ,  Filename=design-tables-visual-database-tools.md  ,  Dirpath=docs\ssms\visual-db-tools\  ,  MergeCommitSha40=21f0cfd102a6fcc44dfc9151750f1b3c936aa053) -->
-
-
-
-**建立資料表**
-
-
-1. 以滑鼠右鍵按一下資料庫中的 [資料表] 節點，然後選取 [新增] > [資料表]：
-
-    ![新增資料表--../media/design-tables/new-table.png)
-
-1. 新增[資料行--column-properties-visual-database-tools.md)到您的資料表：
-
-    ![設計資料表--../media/design-tables/new-table2.png)
-
-1. 關閉設計工具並儲存變更。
-
-**更新資料表**
-
-
-1. 以滑鼠右鍵按一下資料庫中，[資料表] 節點下的資料表，然後選取 [設計]：
-
-   ![更新資料表--../media/design-tables/update-table.png)
-
-1. 更新想要的資料表設定：
-
-   ![--../media/design-tables/update-table2.png)
-
-1. 關閉設計工具並儲存變更。
-
-**另請參閱**
-
-
-[資料表](http://msdn.microsoft.com/82d7819c-b801-4309-a849-baa63083e83f) [資料表屬性 &#40;Visual Database Tools&#41;--../../ssms/visual-db-tools/table-properties-visual-database-tools.md) [資料行屬性--column-properties-visual-database-tools.md) [將資料行新增到資料表--../../relational-databases/tables/add-columns-to-a-table-database-engine.md) [主要與外部索引鍵--../../relational-databases/tables/primary-and-foreign-key-constraints.md) [索引--../../relational-databases/indexes/indexes.md) [資料類型 (Transact-SQL)--../../t-sql/data-types/data-types-transact-sql.md) [下載 SQL Server Management Studio (SSMS)--../download-sql-server-management-studio-ssms.md)
 
 
 
@@ -293,24 +135,20 @@ SSMS 17.2 是 SQL Server Management Studio 的最新版本。 17.x 世代的 SSM
 
 #### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>具有新文章或最近更新文章的主題區
 
-- [新文章 + 更新文章 (3+12)：**SQL 進階分析**文件](../advanced-analytics/new-updated-advanced-analytics.md)
-- [新文章 + 更新文章 (5+0)：**連線到 SQL** 文件](../connect/new-updated-connect.md)
-- [新文章 + 更新文章 (5+1)：**SQL 資料庫引擎**文件](../database-engine/new-updated-database-engine.md)
-- [新文章 + 更新文章 (19+82)：**SQL Integration Services** 文件](../integration-services/new-updated-integration-services.md)
-- [新文章 + 更新文章 (1+8)：**Linux for SQL** 文件](../linux/new-updated-linux.md)
-- [新文章 + 更新文章 (12+1)：**SQL 關聯式資料庫**文件](../relational-databases/new-updated-relational-databases.md)
-- [新文章 + 更新文章 (0+1)：**SQL Reporting Services** 文件](../reporting-services/new-updated-reporting-services.md)
-- [新文章 + 更新文章 (7+1)：**Microsoft SQL Server** 文件](../sql-server/new-updated-sql-server.md)
-- [新文章 + 更新文章 (1+1)：**SQL Server Data Tools (SSDT)** 文件](../ssdt/new-updated-ssdt.md)
-- [新文章 + 更新文章 (0+2)：**SQL Server 移轉小幫手 (SSMA)** 文件](../ssma/new-updated-ssma.md)
-- [新文章 + 更新文章 (1+4)：**SQL Server Management Studio (SSMS)** 文件](../ssms/new-updated-ssms.md)
-- [新文章 + 更新文章 (4+1)：**Transact-SQL** 文件](../t-sql/new-updated-t-sql.md)
-- [新文章 + 更新文章 (0+1)：**SQL 工具**文件](../tools/new-updated-tools.md)
+- [新文章 + 更新文章 (0+1)：**SQL 的進階分析**文件](../advanced-analytics/new-updated-advanced-analytics.md)
+- [新文章 + 更新文章 (0+1)：**SQL 的 Analysis Services** 文件](../analysis-services/new-updated-analysis-services.md)
+- [新文章 + 更新文章 (4+1)：**SQL 的資料庫引擎**文件](../database-engine/new-updated-database-engine.md)
+- [新文章 + 更新文章 (17+0)：**SQL 的 Integration Services** 文件](../integration-services/new-updated-integration-services.md)
+- [新文章 + 更新文章 (3+0)：**SQL 適用的 Linux** 文件](../linux/new-updated-linux.md)
+- [新文章 + 更新文章 (1+1)：**SQL 的關聯式資料庫**文件](../relational-databases/new-updated-relational-databases.md)
+- [新文章 + 更新文章 (2+0)：**SQL 的 Reporting Services** 文件](../reporting-services/new-updated-reporting-services.md)
+- [新文章 + 更新文章 (0+1)：**SQL Server Management Studio (SSMS)** 文件](../ssms/new-updated-ssms.md)
+- [新文章 + 更新文章 (0+1)：**Transact-SQL** 文件](../t-sql/new-updated-t-sql.md)
 
 #### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>沒有新文章或最近更新文章的主題區
 
 - [新文章 + 更新文章 (0+0)：**ActiveX Data Objects (ADO) for SQL** 文件](../ado/new-updated-ado.md)
-- [新文章 + 更新文章 (0+0)：**SQL Analysis Services** 文件](../analysis-services/new-updated-analysis-services.md)
+- [新文章 + 更新文章 (0+0)：**連線到 SQL** 文件](../connect/new-updated-connect.md)
 - [新文章 + 更新文章 (0+0)：**Data Quality Services for SQL** 文件](../data-quality-services/new-updated-data-quality-services.md)
 - [新文章 + 更新文章 (0+0)：**SQL 資料採礦延伸模組 (DMX)** 文件](../dmx/new-updated-dmx.md)
 - [新文章 + 更新文章 (0+0)：**SQL Master Data Services (MDS)** 文件](../master-data-services/new-updated-master-data-services.md)
@@ -318,6 +156,10 @@ SSMS 17.2 是 SQL Server Management Studio 的最新版本。 17.x 世代的 SSM
 - [新文章 + 更新文章 (0+0)：**SQL ODBC (開放式資料庫連接)** 文件](../odbc/new-updated-odbc.md)
 - [新文章 + 更新文章 (0+0)：**PowerShell for SQL** 文件](../powershell/new-updated-powershell.md)
 - [新文章 + 更新文章 (0+0)：**SQL 範例**文件](../sample/new-updated-sample.md)
+- [新文章 + 更新文章 (0+0)：**Microsoft SQL Server** 文件](../sql-server/new-updated-sql-server.md)
+- [新文章 + 更新文章 (0+0)：**SQL Server Data Tools (SSDT)** 文件](../ssdt/new-updated-ssdt.md)
+- [新文章 + 更新文章 (0+0)：**SQL Server 移轉小幫手 (SSMA)** 文件](../ssma/new-updated-ssma.md)
+- [新文章 + 更新文章 (0+0)：**SQL 的工具** 文件](../tools/new-updated-tools.md)
 - [新文章 + 更新文章 (0+0)：**XQuery for SQL** 文件](../xquery/new-updated-xquery.md)
 
 

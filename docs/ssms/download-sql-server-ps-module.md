@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: b68d454230d414ff52d90b4f3f71dd68ee65c6bc
-ms.openlocfilehash: f55266b6ec28e2552047cc36a5060945006b2caa
+ms.sourcegitcommit: d9a995f7d29fe91e14affa9266a9bce73acc9010
+ms.openlocfilehash: 7449932a07aa0284fe2248828270b7f391713175
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="download-sql-server-powershell-module"></a>下載 SQL Server PowerShell 模組
@@ -30,9 +30,35 @@ ms.lasthandoff: 07/31/2017
 
 安裝 SQL Server 模組的 PowerShell 命令如下：
 
-> Install-module -Name SqlServer -Scope CurrentUser
+> Install-Module -Name SqlServer
+
+此命令會安裝適用於電腦上所有使用者的模組。 您必須以系統管理員身分執行 PowerShell 處理序。
+
+> Install-Module -Name SqlServer -Scope CurrentUser
+
+此命令會安裝適用於執行 PowerShell 目前處理序之使用者的模組。 您無須使用系統管理員權限執行 PowerShell 處理序。
 
 如果電腦上有舊版的 SQL Server PowerShell 模組，可能需要提供 "-AllowClobber" 參數。  
 
-提供給 PowerShell 資源庫的 SQL Server PowerShell 模組版本支援版本設定，而且需要 PowerShell 5.0 版或更新版本。
+如果以系統管理員身分執行，且要安裝適用於電腦上所有使用者的模組
+
+> Install-Module -Name SqlServer -AllowClobber
+
+如果無法以系統管理員身分執行，或要安裝僅適用於目前使用者的模組
+
+> Install-Module -Name SqlServer -Scope CurrentUser -AllowClobber
+
+若更新版的 SqlServer 模組已可使用，就可以使用 Update-Module 命令來更新版本
+
+> Update-Module -Name SqlServer
+
+若要檢視安裝在電腦上的模組版本，可以使用
+
+> Get-Module SqlServer -ListAvailable
+
+若要在指令碼中使用特定版本的模組，可以使用此命令將其匯入
+
+> Import-Module SqlServer -Version 21.0.17178
+
+提供給 PowerShell 資源庫的 SQL Server PowerShell 模組版本支援版本設定，而且需要 PowerShell 5.0 版或更新版本。 您可以在 [PowerShell 資源庫](https://www.powershellgallery.com/packages/Sqlserver/)找到 SqlServer 模組 
 
