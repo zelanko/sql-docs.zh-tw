@@ -28,7 +28,7 @@ ms.lasthandoff: 09/01/2017
   
  雖然 DAX 會使用在 Analysis Services、 Power BI Desktop 和 Power Pivot，在 Excel 中，本主題適用於多撰寫在 SQL Server Data Tools (SSDT) 的 Analysis Services 表格式模型專案。  
   
-##  <a name="bkmk_DAX"></a> DAX formulas in calculated columns, measures, and row filters  
+##  <a name="bkmk_DAX"></a> 導出資料行、量值和資料列篩選中的 DAX 公式  
  在 SSDT 中撰寫表格式模型，DAX 公式用於導出資料行、 量值和資料列篩選器。  
   
 ### <a name="calculated-columns"></a>導出資料行  
@@ -97,10 +97,10 @@ ms.lasthandoff: 09/01/2017
   
  如需 DAX 公式中使用之運算子的詳細資訊，請參閱 [DAX Operator Reference](http://msdn.microsoft.com/en-us/1befbddc-6178-472c-8bc4-05dafd62207e)。  
   
-##  <a name="bkmk_DAX_Formulas"></a> DAX formulas  
+##  <a name="bkmk_DAX_Formulas"></a> DAX 公式  
  DAX 公式對於在導出資料行和量值中建立計算，以及使用資料列層級篩選保護資料安全相當重要。 若要建立導出資料行和量值的公式，您將使用模型設計師視窗或 DAX 編輯器上方的公式列。 若要建立資料列篩選的公式，您要使用 [角色管理員] 對話方塊。 本節中的資訊是為了讓您開始了解 DAX 公式的基本概念。  
   
-###  <a name="basics"></a> Formula basics  
+###  <a name="basics"></a> 公式基本概念  
  DAX 可讓表格式模型作者在兩個模型資料表中定義自訂計算當做導出資料行的一部分，以及當做與資料表相關但是未直接出現在其中之量值的一部分。 DAX 也可讓模型作者保護資料安全，方法是，建立傳回布林值的計算、定義相關聯角色的成員使用者可以在特定或相關資料表中查詢的資料列。  
   
  DAX 公式可以很簡單也可以很複雜。 下表顯示可能會在導出資料行中使用的一些簡單公式範例。  
@@ -175,7 +175,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
 > [!NOTE]  
 >  為確保效能不受到資料行間相依性所需之多個計算的影響，在量值中巢狀函數有一些限制。  
   
-##  <a name="bkmk_DAX_functions"></a> DAX functions  
+##  <a name="bkmk_DAX_functions"></a> DAX 函數  
  本節提供 DAX 支援之函數類型  的概觀。 如需詳細資訊，請參閱 [DAX Function Reference](http://msdn.microsoft.com/en-us/4dbb28a1-dd1a-4fca-bcd5-e90f74864a7b)。  
   
  DAX 會提供各種函數，您可以使用這些函數來執行使用日期和時間的計算、建立條件式值、處理字串、根據關聯性執行查閱，而且能夠逐一查看資料表以執行遞迴計算。 如果您熟悉 Excel 公式，這些功能很多似乎非常相似，不過，DAX 公式在以下重要方面不同：  
@@ -212,7 +212,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
 ### <a name="time-intelligence-functions"></a>時間智慧函數  
  DAX 中提供的時間智慧函數可讓您建立使用行事曆與日期之內建知識的計算。 若將時間和日期範圍與彙總或計算搭配使用，您可以針對銷售量、存貨等等，根據類似的時間範圍建立有意義的比較。 如需詳細資訊，請參閱[時間智慧函數 (DAX)](http://msdn.microsoft.com/en-us/91df278d-4b28-40c1-a572-cdb91f081517)。  
   
-###  <a name="bkmk_TableFunc"></a> Table-valued functions  
+###  <a name="bkmk_TableFunc"></a> 資料表值函式  
  有 DAX 函數可以輸出資料表並 (或) 採用資料表做為輸入。 資料表可能會只有單一資料行，因此資料表值函式也會採用單一資料行做為輸入。 了解如何使用這些資料表值函式對於善用 DAX 公式相當重要。 DAX 包括下列類型的資料表值函式：  
   
   **篩選函數**-傳回資料行、 資料表或目前的資料列相關的值。  
@@ -221,7 +221,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
     
   **時間智慧函數**-傳回資料表的日期，或計算彙總使用的日期資料表。  
   
-##  <a name="bkmk_context"></a> Context in DAX formulas  
+##  <a name="bkmk_context"></a> DAX 公式中的內容  
  *「內容」* (Context) 是使用 DAX 建立公式時要了解的重要概念。 內容可讓您執行動態分析當做公式變更的結果，以反映目前的資料列或資料格選擇以及任何相關的資料。 了解內容並有效地使用內容對於建立高效能的動態分析及排除公式內的問題而言將會非常關鍵。  
   
  表格式模型中的公式可以在不同內容中評估，這取決於其他設計元素：  
@@ -234,7 +234,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
  內容可分為以下不同類型： *「資料列內容」*(Row Context)、 *「查詢內容」*(Query Context) 和 *「篩選內容」*(Filter Context)。  
   
-###  <a name="bkmk_row_context"></a> Row context  
+###  <a name="bkmk_row_context"></a> 資料列內容  
  *「資料列內容」* (Row context) 可以被視為「目前的資料列」。 如果您已經在導出資料行中建立公式，該公式的「資料列內容」(Row Context) 就會包含目前資料列中所有資料行的值。 如果資料表與另一個資料表相關，則內容也會包含後者中與目前資料列相關的所有值。  
   
  例如，假設您建立導出資料行 `=[Freight] + [Tax]`，將相同資料表中兩個資料行 Freight 和 Tax 的值相加。 此公式只會從指定之資料行中目前的資料列自動取得值。  
@@ -264,7 +264,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
  總而言之，EARLIER 函數會儲存目前運算前之運算中的資料列內容。 函數隨時都會在記憶體中儲存兩組內容：一組內容代表公式內部迴圈的目前資料列，另一組內容代表公式外部迴圈的目前資料列。 DAX 會自動在兩個迴圈之間選取饋入值，讓您能夠建立複雜的彙總。  
   
-####  <a name="bkmk_query_context"></a> Query context  
+####  <a name="bkmk_query_context"></a> 查詢內容  
  *「查詢內容」* (Query Context) 指的是以隱含方式針對公式擷取之資料的子集。 當使用者將量值或其他值欄位放入樞紐分析表中或是以表格式模型為基礎的報表中時，引擎會檢查資料列和資料行標頭、交叉分析篩選器和報表篩選來判斷內容。 然後，將會針對資料來源執行必要查詢來取得正確的資料子集、執行公式所定義的計算，然後填入樞紐分析表或報表中的每個資料格。 所擷取的資料集就是每個資料格的查詢內容。  
   
 > [!WARNING]  
@@ -278,7 +278,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
  您可以加入或移除資料行和資料列標頭，以及加入或移除交叉分析篩選器，來變更樞紐分析表中的內容。 每當使用者將資料行或資料列標題加入樞紐分析表時，都會變更評估量值的查詢內容。 配量和篩選作業也會影響內容。 因此，用於量值中的同一個公式會以不同的 *「查詢內容」* (Query Context) 為每個資料格進行評估。  
   
-####  <a name="bkmk_filter_context"></a> Filter context  
+####  <a name="bkmk_filter_context"></a> 篩選內容  
  *「篩選內容」* (Filter Context) 是每一個資料行中或是從相關資料表擷取的值中所允許的一組值。 篩選可以在設計工具或展示層 (報表與樞紐分析表) 中套用到資料行。 也可以由公式內的篩選運算式明確定義篩選。  
   
  當您使用公式的引數來指定資料行或資料表內允許之值組的篩選條件約束時，就會加入「篩選內容」(Filter Context)。 篩選內容會套用到其他內容 (如資料列內容或查詢內容) 之上。  
@@ -291,7 +291,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
  如需如何在公式中選擇性清除及套用篩選的範例，請參閱 [ALLEXCEPT 函數 (DAX)](http://msdn.microsoft.com/en-us/a6f575a1-9803-4bb2-85b3-c95c060f1fb1)。  
   
-####  <a name="bkmk_determine_context"></a> Determining context in formulas  
+####  <a name="bkmk_determine_context"></a> 決定公式內的內容  
  當您建立 DAX 公式時，會先測試公式的語法是否有效，然後再測試來確定公式內包含的資料行和資料表名稱可以在目前內容中找到。 如果找不到公式所指定的任何資料行或資料表，就會傳回錯誤。  
   
  如前幾節中所述，驗證期間的內容 (和重算運算) 是使用模型中可用的資料表、資料表之間的任何關聯性，以及已套用的任何篩選來決定。  
@@ -312,7 +312,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
 5.  [EARLIER 函數 (DAX)](http://msdn.microsoft.com/en-us/6d126c4d-2315-49ec-899d-cb396eefbae6) 和 [EARLIEST 函數 (DAX)](http://msdn.microsoft.com/en-us/9befa04d-78db-492e-a463-80b8b77206d6) 都可讓您透過執行計算對資料表執行迴圈，同時參考內部迴圈的值。 如果您很熟悉遞迴的概念以及內部和外部迴圈，將深刻領會 EARLIER 和 EARLIEST 函數所提供的強大效用。 如果您不太熟悉這些概念，應該小心地遵循範例中的步驟執行，以了解內部和外部內容如何運用於計算中。  
   
-##  <a name="bkmk_RelModel"></a> Formulas and the tabular model  
+##  <a name="bkmk_RelModel"></a> 公式與表格式模型  
  模型設計師中的，在 SSDT 中，是一個區域，您可以在此使用多個資料表的資料，並連接表格式模型中的資料表。 在此模型內，將會透過資料行與一般值 (索引鍵) 的關聯性來聯結資料表。 此表格式模型可讓您將值連結到其他資料表內的資料行，並建立更有趣的計算。 正如在關聯式資料庫中一樣，您可以連接許多層級的相關資料表，並使用結果內任何資料表中的資料行。  
   
  例如，您可以連結銷售資料表、產品資料表和產品類別資料表，而且使用者可以在樞紐分析表和報表內使用各種不同的資料行組合。 相關欄位可以用來篩選連接的資料表，或是用來建立子集的計算 (如果您不熟悉關聯式資料庫以及如何使用資料表和聯結，請參閱[關聯性](../../analysis-services/tabular-models/relationships-ssas-tabular.md)。)  
@@ -325,7 +325,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
 -   當您在模型中使用關聯性來連結資料表時，便會放大評估公式所在的範圍或 *「內容」*(Context)。 因為增加新的資料表、新的關聯性或是使用中關聯性的變更而導致的內容變更可能會導致您的結果以意外的方式改變。 如需詳細資訊，請參閱本主題先前的 [DAX 公式中的內容](#bkmk_context) 。  
   
-##  <a name="bkmk_tables"></a> Working with tables and columns  
+##  <a name="bkmk_tables"></a> 使用資料表和資料行  
  表格式模型中資料表的外觀就像 Excel 資料表，但其搭配資料與公式使用的方式有所不同：  
   
 -   公式只能搭配資料表和資料行運作，而不能搭配個別的資料格、範圍參考或陣列。  
@@ -350,7 +350,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
  許多 DAX 函數都需要在資料表之間，或是在多個資料表中存在關聯性，才能找到您所參考的資料行，並且傳合理的結果。 其他函數會嘗試識別關聯性。不過，如需達成最佳的結果，您都應該盡可能多加建立關聯性。 如需詳細資訊，請參閱本主題稍早的 [公式與表格式模型](#bkmk_RelModel) 。  
   
-##  <a name="bkmk_RefreshRecalc"></a> Updating the results of formulas (Process)  
+##  <a name="bkmk_RefreshRecalc"></a> 更新公式的結果 (處理序)  
  *「資料處理」* (Data Process) 和 *「重新計算」* (Recalculation) 是兩個不同但相關的作業。 當您要設計的模型包含複雜公式、大量資料，或包含從外部資料來源取得的資料時，您應該徹底了解這兩個概念。  
   
  *「處理資料」* (Processing Data) 是以外部資料來源的新資料來更新模型中資料的程序。  
@@ -365,7 +365,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
  如需詳細資訊，請參閱 [處理資料 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/process-data-ssas-tabular.md)。  
   
-##  <a name="bkmk_troubleshoot"></a> Troubleshooting errors in formulas  
+##  <a name="bkmk_troubleshoot"></a> 疑難排解公式中的錯誤  
  如果您在定義公式時出現錯誤，該公式可能包含 *「語法錯誤」*(Syntactic Error)、 *「語意錯誤」*(Semantic Error) 或 *「計算錯誤」*(Calculation Error)。  
   
  語法錯誤最容易解決。 它們通常與遺漏括號或逗號有關。 如需個別函數語法的說明，請參閱 [DAX Function Reference](http://msdn.microsoft.com/en-us/4dbb28a1-dd1a-4fca-bcd5-e90f74864a7b)。  
@@ -384,7 +384,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
  在前四種情況下，DAX 會針對包含無效公式的整個資料行加上旗標。 在最後一種情況下，DAX 會使資料行呈現灰色，表示該資料行處於尚未處理的狀態。  
   
-##  <a name="bkmk_addional_resources"></a> Additional resources  
+##  <a name="bkmk_addional_resources"></a> 其他資源  
  [表格式模型化 &#40;Adventure Works 教學課程&#41;](../../analysis-services/tabular-modeling-adventure-works-tutorial.md) 對於如何建立在導出資料行、量值和資料列篩選中包含許多計算的表格式模型，提供逐步指示。 對於大部分的公式，則會提供該公式用途的描述。  
   
  [Analysis Services 團隊部落格](http://go.microsoft.com/fwlink/?LinkID=220949&clcid=0x409)提供最新的資訊、 提示、 新聞和宣告。 
