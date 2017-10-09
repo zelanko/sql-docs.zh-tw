@@ -3,7 +3,7 @@ title: "記憶體最佳化資料表的交易 | Microsoft 文件"
 ms.custom:
 - MSDN content
 - MSDN - SQL DB
-ms.date: 06/12/2017
+ms.date: 09/29/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.service: 
@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 54be2f39c2f0b3c8ea640c1df720213f7936823d
+ms.sourcegitcommit: e3c781449a8f7a1b236508cd21b8c00ff175774f
+ms.openlocfilehash: 8301993dd05a833c07bd2b30674e59c6cb293c0e
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 09/30/2017
 
 ---
 # <a name="transactions-with-memory-optimized-tables"></a>Transactions with Memory-Optimized Tables
@@ -56,7 +56,7 @@ SQL Server 中的交易隔離等級會分別套用到記憶體最佳化資料表
   
 SQL Server 有下列交易初始模式：  
   
-- **自動認可** ：簡單查詢或 DML 陳述式一開始會隱含開啟交易，而陳述式的結尾會隱含認可交易。 這是預設值。  
+- **自動認可** ：簡單查詢或 DML 陳述式一開始會隱含開啟交易，而陳述式的結尾會隱含認可交易。 **自動認可**是預設值。  
   - 在自動認可模式中，您通常不需要使用 FROM 子句撰寫記憶體最佳化資料表交易隔離等級的資料表提示程式碼。  
   
 - **明確** - 您的 Transact-SQL 包含程式碼 BEGIN TRANSACTION，以及最終的 COMMIT TRANSACTION。 相同交易中可以包含二或多個陳述式。  
@@ -64,7 +64,7 @@ SQL Server 有下列交易初始模式：
   
 - **隱含** - 強制使用 SET IMPLICIT_TRANSACTION ON 時。 IMPLICIT_BEGIN_TRANSACTION 可能會是更適合的名稱，因為此選項的作用就只是在 0 = @@trancount 時，在每個 UPDATE 陳述式之前隱含執行明確 BEGIN TRANSACTION 的對等項目。 因此，您的 T-SQL 程式碼會決定最終要不要發出明確 COMMIT TRANSACTION。   
   
-- **區塊** ：ATOMIC 區塊中的所有陳述式，需有原生編譯預存程序，一律執行為單一交易的一部分；所以如果發生錯誤，不是認可整體 ATOMIC 區塊的動作，就是全部回復。  
+- **ATOMIC 區塊** - ATOMIC 區塊中的所有陳述式一律執行為單一交易的一部分。 成功時將 ATOMIC 區塊的所有動作視為一個整體認可，或失敗後復原所有動作。 每個原生編譯的預存程序都需要 ATOMIC 區塊。  
   
 <a name="codeexamexpmode25ni"/>  
   
@@ -72,35 +72,37 @@ SQL Server 有下列交易初始模式：
   
 以下解譯的 Transact-SQL 指令碼使用：  
   
-- 明確交易。  
-  
-- 記憶體最佳化資料表，名為 dbo.Order_mo。  
-  
+- 明確交易。
+- 記憶體最佳化資料表，名為 dbo.Order_mo。
 - READ COMMITTED 交易隔離等級內容。  
   
 因此，記憶體最佳化資料表上必須要有資料表提示。 提示必須提供給 SNAPSHOT 或隔離程度更高的等級。 在程式碼範例的案例中，提示為 WITH (SNAPSHOT)。 如果移除此提示，指令碼就會發生錯誤 41368，亦即無法執行自動重試。  
+
+#### <a name="error-41368"></a>錯誤 41368
+
+只有自動認可交易才支援使用 READ COMMITTED 隔離等級來存取記憶體最佳化的資料表。 明確或隱含交易則不支援。 請為使用 WITH (SNAPSHOT) 等資料表提示的記憶體最佳化資料表，提供支援的隔離等級。
+
+```sql
+SET TRANSACTION ISOLATION LEVEL READ COMMITTED;  
+GO  
+
+BEGIN TRANSACTION;  -- Explicit transaction.  
+
+-- Order_mo  is a memory-optimized table.  
+SELECT * FROM  
+           dbo.Order_mo  as o  WITH (SNAPSHOT)  -- Table hint.  
+      JOIN dbo.Customer  as c  on c.CustomerId = o.CustomerId;  
+     
+COMMIT TRANSACTION;
+```
   
-- 41368：只有自動認可交易支援使用 READ COMMITTED 隔離等級存取記憶體最佳化資料表。 明確或隱含交易則不支援。 請為使用 WITH (SNAPSHOT) 等資料表提示的記憶體最佳化資料表，提供支援的隔離等級。  
-  
-  
-  
-      SET TRANSACTION ISOLATION LEVEL READ COMMITTED;  
-      GO  
-  
-      BEGIN TRANSACTION;  -- Explicit transaction.  
-  
-      -- Order_mo  is a memory-optimized table.  
-      SELECT *  
-       FROM  
-                dbo.Order_mo  as o  WITH (SNAPSHOT)  -- Table hint.  
-           JOIN dbo.Customer  as c  on c.CustomerId = o.CustomerId;  
-      
-      COMMIT TRANSACTION;  
-  
-請注意，透過使用資料庫選項 `WITH (SNAPSHOT)` ，即不需要 `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT`提示。 當此選項設為 `ON`時，較低隔離等級的記憶體最佳化資料表存取權，會自動提升為 SNAPSHOT 隔離。  
-  
-    ALTER DATABASE CURRENT SET MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT=ON  
-  
+透過使用資料庫選項 `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT`，即不需要 `WITH (SNAPSHOT)` 提示。 當此選項設為 `ON`時，較低隔離等級的記憶體最佳化資料表存取權，會自動提升為 SNAPSHOT 隔離。  
+
+```sql
+ALTER DATABASE CURRENT
+    SET MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT = ON;
+```
+
 <a name="rowver28ni"/>  
   
 ## <a name="row-versioning"></a>資料列版本設定  
@@ -118,7 +120,7 @@ SQL Server 有下列交易初始模式：
 | 隔離等級 | 描述 |   
 | :-- | :-- |   
 | READ UNCOMMITTED | 無法使用：READ UNCOMMITTED 隔離下無法存取記憶體最佳化資料表。 如果工作階段層級的 TRANSACTION ISOLATION LEVEL 設為 READ UNCOMMITTED，使用 WITH (SNAPSHOT) 資料表提示或將資料庫設定 MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT 設為 ON，仍有可能存取 SNAPSHOT 隔離下的記憶體最佳化資料表。 | 
-| READ COMMITTED | 只有在自動認可模式作用時，才受記憶體最佳化資料表支援。 如果工作階段層級的 TRANSACTION ISOLATION LEVEL 設為 READ COMMITTED，使用 WITH (SNAPSHOT) 資料表提示或將資料庫設定 MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT 設為 ON，仍有可能存取 SNAPSHOT 隔離下的記憶體最佳化資料表。 <br/><br/> 請注意，如果資料庫選項 READ_COMMITTED_SNAPSHOT 設為 ON，不允許存取相同陳述式中 READ COMMITTED 隔離下的記憶體最佳化和磁碟資料表。 |  
+| READ COMMITTED | 只有在自動認可模式作用時，才受記憶體最佳化資料表支援。 如果工作階段層級的 TRANSACTION ISOLATION LEVEL 設為 READ COMMITTED，使用 WITH (SNAPSHOT) 資料表提示或將資料庫設定 MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT 設為 ON，仍有可能存取 SNAPSHOT 隔離下的記憶體最佳化資料表。<br/><br/>如果資料庫選項 READ_COMMITTED_SNAPSHOT 設為 ON，不允許存取相同陳述式中 READ COMMITTED 隔離下的記憶體最佳化和磁碟資料表。 |  
 | SNAPSHOT | 受到記憶體最佳化資料表支援。 <br/><br/> 內部 SNAPSHOT 是記憶體最佳化資料表最基本的交易隔離等級。 <br/><br/> SNAPSHOT 使用的系統資源比 REPEATABLE READ 或 SERIALIZABLE 更少。 |  
 | REPEATABLE READ | 受到記憶體最佳化資料表支援。 REPEATABLE READ 隔離保證在認可時，不會有並行交易更新此交易讀取的任何資料列。 <br/><br/> 因為是開放式模型，所以不會阻止並行交易更新此交易讀取的資料列。 反倒是在認可時，此交易會驗證不違反 REPEATABLE READ 隔離。 如果此交易違規，則會回復且必須重試。 | 
 | SERIALIZABLE | 受到記憶體最佳化資料表支援。 <br/><br/> 命名為 *Serializable* 的原因是隔離相當嚴格，幾乎像是讓交易接續執行，而非並行執行。 | 
@@ -130,7 +132,7 @@ SQL Server 有下列交易初始模式：
   
 ## <a name="transaction-phases-and-lifetime"></a>交易階段和存留期  
   
-當涉及記憶體最佳化資料表時，交易的存留期會隨階段增加，如下圖所示。  
+當涉及記憶體最佳化資料表時，交易的存留期會隨階段增加，如下圖所示：
   
 ![hekaton_transactions](../../relational-databases/in-memory-oltp/media/hekaton-transactions.gif)  
   
@@ -143,8 +145,8 @@ SQL Server 有下列交易初始模式：
   
 #### <a name="validation-phase-2-of-3"></a>驗證：階段 2 (之 3)  
   
-- 指定結束時間即開始驗證階段，將交易標示為邏輯方面已完成。 這樣可讓其他交易看到交易的所有變更，這樣會依賴這筆交易但不允許認可，直到此交易成功認可為止。 此外，不允許保留這類相依性的交易將結果集傳回用戶端，以確保用戶端只會看到已成功向資料庫認可的資料。  
-- 這個階段包含可重複的讀取和可序列化的驗證。 針對可重複讀取驗證，會檢查是否有任何交易讀取的資料列在此之後更新。 針對可序列化驗證，會檢查是否已將任何資料列插入此交易掃描的任何資料範圍。 請注意，根據 [隔離等級和衝突](#confdegreeiso30ni)中的資料表，使用快照集隔離時，都會發生可重複讀取和可序列化驗證，以驗證唯一外部索引鍵條件約束的一致性。  
+- 指定結束時間即開始驗證階段，將交易標示為邏輯方面已完成。 完成此作業可讓依賴這筆交易的其他交易看到交易的所有變更。 成功認可此交易前，不允許認可相依的交易。 此外，不允許保留這類相依性的交易將結果集傳回用戶端，以確保用戶端只會看到已成功向資料庫認可的資料。  
+- 這個階段包含可重複的讀取和可序列化的驗證。 針對可重複讀取驗證，會檢查是否有任何交易讀取的資料列在此之後更新。 針對可序列化驗證，會檢查是否已將任何資料列插入此交易掃描的任何資料範圍。 根據 [隔離等級和衝突](#confdegreeiso30ni)中的資料表，使用快照集隔離時，都會發生可重複讀取和可序列化驗證，以驗證唯一外部索引鍵條件約束的一致性。  
   
 #### <a name="commit-processing-phase-3-of-3"></a>認可處理：階段 3 (之 3)  
   
@@ -161,7 +163,7 @@ SQL Server 有下列交易初始模式：
 - 並行交易間的衝突。 這些是更新衝突和驗證失敗，而且可能是因為交易隔離等級違規或條件約束違規。
 - 相依性失敗。 這是因為您依賴的交易無法認可，或相依性數目變得太大。
 
-以下是可能導致交易存取記憶體最佳化資料表失敗的錯誤狀況。
+以下是當交易存取記憶體最佳化資料表時，會導致交易失敗的錯誤狀況。
 
 | 錯誤碼 | 描述 | 原因 |
 | :-- | :-- | :-- |
@@ -169,7 +171,7 @@ SQL Server 有下列交易初始模式：
 | **41305**| 可重複的讀取驗證失敗。 這筆交易完成認可前，從記憶體最佳化資料表讀取的資料列已為另一筆認可的交易更新。 | 使用 REPEATABLE READ 或 SERIALIZABLE 隔離時，如果並行交易的動作又造成 FOREIGN KEY 條件約束違規，就會發生此錯誤。 <br/><br/>這種外部索引鍵條件約束的並行違規很少見，通常是應用程式邏輯或資料項目的問題。 不過，如果和 FOREIGN KEY 條件約束有關的資料行沒有索引，也會發生此錯誤。 因此，指引是一律在記憶體最佳化資料表中，建立外部索引鍵資料行的索引的上。 <br/><br/> 如需外部索引鍵違規所致驗證失敗的詳細考量，請參閱 SQL Server 客戶諮詢小組的 [部落格文章](https://blogs.msdn.microsoft.com/sqlcat/2016/03/24/considerations-around-validation-errors-41305-and-41325-on-memory-optimized-tables-with-foreign-keys/) 。 |  
 | **41325** | 可序列化的驗證失敗。 目前交易稍早掃描的範圍中插入了新的資料列。 我們將這種資料列稱為虛設項目列。 | 使用 SERIALIZABLE 隔離時，如果並行交易的動作又造成 PRIMARY KEY、UNIQUE 或 FOREIGN KEY 條件約束違規，就會發生此錯誤。 <br/><br/> 這種並行條件約束違規很少見，通常是應用程式邏輯或資料項目的問題。 不過，與可重複讀取驗證失敗相似，如果相關資料行的 FOREIGN KEY 條件約束不含任何索引，也會發生此錯誤。 |  
 | **41301** | 相依性失敗︰相依性建立在稍後無法認可的另一個交易上。 | 這筆交易 (Tx1) 藉由讀取 Tx2 寫入的資料相依於另一筆交易 (Tx2)，而後者 (Tx2) 當時處於其驗證或認可處理階段。 接下來 Tx2 認可失敗。 Tx2 認可失敗最常見的原因是可重複讀取 (41305) 和可序列化 (41325) 驗證失敗，較不常見的原因則是記錄 IO 失敗。 |
-| **41839** | 交易超過認可相依性的數目上限。 | 給定的交易 (Tx1) 能夠相依的交易數目有限制，這些是連出的相依性。 此外，能夠相依於指定交易 (Tx1) 的交易數目也有限制，這些是連入的相依性。 兩者的限制皆為 8。 <br/><br/> 發生此錯誤的最常見情況，是大量的讀取交易存取由單一寫入交易寫入的資料。 如果讀取交易全都執行相同資料的大型掃描，以及如果寫入交易長時間處理驗證或認可，例如寫入交易在可序列化隔離下執行大型掃描 (延長驗證階段) 或交易記錄檔位於慢速記錄 IO 裝置 (延長認可處理的時間)，觸發這個狀況的可能性就會增加。 如果讀取交易正在執行大型掃描，但原本只想存取少數資料列，這可能是因為沒有指示索引。 同樣地，如果寫入交易使用可序列化隔離且正在執行大型掃描，原本只想存取少數資料列，這也是沒有指示索引所致。 <br/><br/> 使用追蹤旗標 **9926**可以提高認可相依性的數目限制。 只有在確認未曾遺漏任何索引後，仍然發生這個錯誤狀況時，才使用此追蹤旗標，因為在前列案例中，它可能會遮罩這些問題。 另一個警告是，每筆交易都有大量連入及連出相依性且個別交易都有多層相依性的複雜相依性圖表，可能會造成系統沒有效率。  |
+| **41839** | 交易超過認可相依性的數目上限。 | 給定的交易 (Tx1) 能夠相依的交易數目有限制。 這些交易是連出的相依性。 此外，能夠相依於指定交易 (Tx1) 的交易數目也有限制。 這些交易是連入的相依性。 兩者的限制皆為 8。 <br/><br/> 發生此錯誤的最常見情況，是大量的讀取交易存取由單一寫入交易寫入的資料。 如果讀取交易全都執行相同資料的大型掃描，以及如果寫入交易長時間處理驗證或認可，例如寫入交易在可序列化隔離下執行大型掃描 (延長驗證階段) 或交易記錄檔位於慢速記錄 IO 裝置 (延長認可處理的時間)，觸發這個狀況的可能性就會增加。 如果讀取交易正在執行大型掃描，且應該只存取少數資料列，可能會遺漏索引。 同樣地，如果寫入交易使用可序列化隔離且正在執行大型掃描，原本只想存取少數資料列，這也是沒有指示索引所致。 <br/><br/> 使用追蹤旗標 **9926**可以提高認可相依性的數目限制。 只有在確認未曾遺漏任何索引後，仍然發生這個錯誤狀況時，才使用此追蹤旗標，因為在前列案例中，它可能會遮罩這些問題。 另一個警告是，每筆交易都有大量連入及連出相依性且個別交易都有多層相依性的複雜相依性圖表，可能會造成系統沒有效率。  |
  
   
 ### <a name="retry-logic"></a>重試邏輯 
@@ -182,63 +184,65 @@ SQL Server 有下列交易初始模式：
   
 #### <a name="retry-t-sql-code-example"></a>重試 T-SQL 程式碼範例  
   
-只有不將結果集傳回給用戶端的交易，才應該使用以 T-SQL 進行的伺服器端重試邏輯，因為重試有可能會將額外的結果集傳回給非預期的用戶端。  
+使用 T-SQL 的伺服器端重試邏輯，應該只用於不會將結果集傳回給用戶端的交易。 否則，重試會在預期要傳回給用戶端的結果集外，還可能產生其他結果集。  
   
-以下解譯的 T-SQL 指令碼將說明，對於涉及記憶體最佳化資料表的交易衝突相關錯誤，重試邏輯可能會是什麼樣子。  
-  
-      -- Retry logic, in Transact-SQL.  
-    DROP PROCEDURE If Exists usp_update_salesorder_dates;  
-    GO  
-  
-    CREATE PROCEDURE usp_update_salesorder_dates  
-    AS  
-    BEGIN  
-        DECLARE @retry INT = 10;  
-  
-        WHILE (@retry > 0)  
-        BEGIN  
-            BEGIN TRY  
-                BEGIN TRANSACTION;  
-  
-                UPDATE dbo.SalesOrder_mo WITH (SNAPSHOT)  
-                    set OrderDate = GetUtcDate()  
-                    where CustomerId = 42;  
-  
-                UPDATE dbo.SalesOrder_mo WITH (SNAPSHOT)  
-                    set OrderDate = GetUtcDate()  
-                    where CustomerId = 43;  
-  
-                COMMIT TRANSACTION;  
-                SET @retry = 0;  -- //Stops the loop.  
-            END TRY  
-  
-            BEGIN CATCH  
-                SET @retry -= 1;  
-  
-                IF (@retry > 0 AND  
-                    ERROR_NUMBER() in (41302, 41305, 41325, 41301, 41839, 1205)  
-                    )  
-                BEGIN  
-                    IF XACT_STATE() = -1  
-                        ROLLBACK TRANSACTION;  
-  
-                    WAITFOR DELAY '00:00:00.001';  
-                END  
-                ELSE  
-                BEGIN  
-                    PRINT 'Suffered an error for which Retry is inappropriate.';  
-                    THROW;  
-                END  
-            END CATCH  
-  
-        END -- //While loop  
-    END;  
-    GO  
-  
-      --  EXECUTE usp_update_salesorder_dates;  
-  
-  
-  
+以下解譯的 T-SQL 指令碼將說明，對於涉及記憶體最佳化資料表的交易衝突相關錯誤，重試邏輯可能會是什麼樣子。
+
+```sql
+-- Retry logic, in Transact-SQL.
+DROP PROCEDURE If Exists usp_update_salesorder_dates;
+GO
+
+CREATE PROCEDURE usp_update_salesorder_dates
+AS
+BEGIN
+    DECLARE @retry INT = 10;
+
+    WHILE (@retry > 0)
+    BEGIN
+        BEGIN TRY
+            BEGIN TRANSACTION;
+
+            UPDATE dbo.SalesOrder_mo WITH (SNAPSHOT)
+                set OrderDate = GetUtcDate()
+                where CustomerId = 42;
+
+            UPDATE dbo.SalesOrder_mo WITH (SNAPSHOT)
+                set OrderDate = GetUtcDate()
+                where CustomerId = 43;
+
+            COMMIT TRANSACTION;
+
+            SET @retry = 0;  -- //Stops the loop.
+        END TRY
+
+        BEGIN CATCH
+            SET @retry -= 1;
+
+            IF (@retry > 0 AND
+                ERROR_NUMBER() in (41302, 41305, 41325, 41301, 41839, 1205)
+                )
+            BEGIN
+                IF XACT_STATE() = -1
+                    ROLLBACK TRANSACTION;
+
+                WAITFOR DELAY '00:00:00.001';
+            END
+            ELSE
+            BEGIN
+                PRINT 'Suffered an error for which Retry is inappropriate.';
+                THROW;
+            END
+        END CATCH
+
+    END -- //While loop
+END;
+GO
+
+--  EXECUTE usp_update_salesorder_dates;
+```
+
+
 <a name="crossconttxn38ni"/>  
   
 ## <a name="cross-container-transaction"></a>跨容器交易  
@@ -257,36 +261,35 @@ SQL Server 有下列交易初始模式：
   
 - 磁碟資料表 Table_D1，是使用 READ COMMITTED 隔離等級存取。  
 - 記憶體最佳化資料表 Table_MO7，是使用 SERIALIZABLE 隔離等級存取。 Table_MO6 沒有特定的關聯隔離層級，因為插入永遠一致且基本在可序列化隔離下執行。  
-  
-  
-  
-      -- Different isolation levels for  
-      -- disk-based tables versus memory-optimized tables,  
-      -- within one explicit transaction.  
-  
-    SET TRANSACTION ISOLATION LEVEL READ COMMITTED;  
-    GO  
-  
-    BEGIN TRANSACTION;  
-  
-        -- Table_D1 is a traditional disk-based table, accessed using READ COMMITTED isolation.  
-        --  
-        SELECT * FROM Table_D1;  
-  
-  
-  
-        -- Table_MO6 and Table_MO7 are memory-optimized tables. Table_MO7 is accessed using SERIALIZABLE isolation,  
-    --   雖然 Table_MO6 沒有特定的   
-        --  
-        INSERT Table_MO6  
-            SELECT * FROM Table_MO7 WITH (SERIALIZABLE);  
-  
-  
-    COMMIT TRANSACTION;  
-    GO  
-  
-  
-  
+
+
+```sql
+-- Different isolation levels for
+-- disk-based tables versus memory-optimized tables,
+-- within one explicit transaction.
+
+SET TRANSACTION ISOLATION LEVEL READ COMMITTED;
+go
+
+BEGIN TRANSACTION;
+
+    -- Table_D1 is a traditional disk-based table, accessed using READ COMMITTED isolation.
+
+    SELECT * FROM Table_D1;
+
+
+    -- Table_MO6 and Table_MO7 are memory-optimized tables.
+    -- Table_MO7 is accessed using SERIALIZABLE isolation,
+    --   while Table_MO6 does not have a specific isolation level.
+
+    INSERT Table_MO6
+        SELECT * FROM Table_MO7 WITH (SERIALIZABLE);
+
+COMMIT TRANSACTION;
+go
+```
+
+
 <a name="limitations40ni"/>  
   
 ## <a name="limitations"></a>限制  
@@ -308,7 +311,7 @@ SQL Server 有下列交易初始模式：
   
 - 原生程序的主體中不允許任何明確交易控制陳述式。 BEGIN TRANSACTION、ROLLBACK TRANSACTION 等均不允許。  
   
-- 如需使用 ATOMIC 區塊之交易控制的詳細資訊，請參閱 [不可部分完成的區塊](atomic-blocks-in-native-procedures.md)。  
+- 如需使用 ATOMIC 區塊之交易控制的詳細資訊，請參閱 [ATOMIC 區塊](atomic-blocks-in-native-procedures.md)。  
   
 <a name="othertxnlinks44ni"/>  
   

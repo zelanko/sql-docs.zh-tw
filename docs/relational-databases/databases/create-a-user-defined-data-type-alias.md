@@ -19,11 +19,11 @@ caps.latest.revision: 27
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9646e838fa2d1c8e7f22fd8b53287060a871a686
+ms.translationtype: HT
+ms.sourcegitcommit: e76675099ab290d29231d434eb74e92b613185b7
+ms.openlocfilehash: 77a4561aa148a98a593d0279f217a354d01c7b31
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/29/2017
 
 ---
 # <a name="create-a-user-defined-data-type-alias"></a>建立使用者定義資料類型別名
@@ -58,7 +58,7 @@ ms.lasthandoff: 06/22/2017
   
 #### <a name="to-create-a-user-defined-data-type"></a>若要建立使用者自訂的資料類型  
   
-1.  在物件總管中，依序展開 [資料庫]、某個資料庫、[可程式性] 和 [類型]，並以滑鼠右鍵按一下 [使用者定義資料類型]，然後按一下 [新增使用者定義資料類型]。  
+1.  在物件總管中，依序展開 資料庫、某個資料庫、可程式性 和 類型，並以滑鼠右鍵按一下 使用者定義資料類型，然後按一下新增使用者定義資料類型。  
   
      **允許 NULL**  
      指定使用者定義資料類型是否可接受 NULL 值。 無法編輯現有使用者定義資料類型的 Null 屬性。  
@@ -67,7 +67,7 @@ ms.lasthandoff: 06/22/2017
      從清單方塊中選取基底資料類型。 這個清單方塊會顯示除了 **geography**、 **geometry**、 **hierarchyid**、 **sysname**、 **timestamp** 和 **xml** 資料類型以外的所有資料類型。 無法編輯現有使用者定義資料類型的資料類型。  
   
      **預設值**  
-     選擇性地選取繫結到使用者定義資料類型別名的規則或預設值。  
+     選擇性地選取繫結到使用者定義資料類型別名的預設值。  
   
      **長度/有效位數**  
      顯示適用之資料類型的長度或有效位數。 [長度] 適用於字元為主的使用者定義資料類型；[有效位數] 只適用於數值為主的使用者定義資料類型。 標籤會根據稍早選取的資料類型而變更。 如果選取之資料類型的長度或有效位數是固定的，則無法編輯此方塊。  
@@ -132,3 +132,4 @@ FROM varchar(11) NOT NULL ;
  [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md)  
   
   
+

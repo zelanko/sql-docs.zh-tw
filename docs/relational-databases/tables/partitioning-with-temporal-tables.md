@@ -16,10 +16,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0134010294aec01d47271a7e00e6a13e4a3ad208
+ms.sourcegitcommit: e76675099ab290d29231d434eb74e92b613185b7
+ms.openlocfilehash: cb93e468300aea6a666ad04e9ce6ad20e1b85fc2
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/29/2017
 
 ---
 # <a name="partitioning-with-temporal-tables"></a>對時態表進行資料分割
@@ -28,7 +28,7 @@ ms.lasthandoff: 08/03/2017
   您可以各自在目前的資料表和記錄資料表上使用資料分割。 不過，您無法使用資料分割來變更沒有設定系統版本的資料內容。  
   
 > [!NOTE]  
->  資料分割是企業版功能。  
+>  資料分割是 SQL Server 2016 在 Service Pack 1 和舊版以前的 Enterprise Edition 功能。 SQL Server 2016 Service Pack 1 所有版本和更新版本都支援資料分割。
   
 -   **目前的資料表：**  
   

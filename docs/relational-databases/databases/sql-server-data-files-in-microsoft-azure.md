@@ -1,8 +1,10 @@
 ---
 title: "Microsoft Azure 中的 SQL Server 資料檔案 | Microsoft Docs"
 ms.custom: 
-ms.date: 08/31/2016
-ms.prod: sql-server-2016
+ms.date: 10/02/2017
+ms.prod:
+- sql-server-2016
+- sql-server-2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -15,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: fb653826a9a53251cbd5fe6ef20b4b0f664c1422
+ms.sourcegitcommit: 12b379c1d02dc07a5581a5a3f3585f05f763dad7
+ms.openlocfilehash: 59dd3517d0b0e4cfdafb470132e620576f1ffbc7
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>Microsoft Azure 中的 SQL Server 資料檔案
@@ -26,7 +28,9 @@ ms.lasthandoff: 09/27/2017
   
  Microsoft Azure 中的 SQL Server 資料檔案可提供將 SQL Server 資料庫檔案儲存為 Microsoft Azure Blob 的原生支援。 它可讓您在內部部署執行的 SQL Server 或 Microsoft Azure 虛擬機器執行的 SQL Server 中建立資料庫，以將您的 Microsoft Azure Blob 儲存體資料儲存在專用儲存位置。 此增強功能特別簡化了使用卸離和附加作業，在電腦之間移動資料庫的工作。 此外，它可讓您還原至 Microsoft Azure 儲存體或從中還原，為您的資料庫備份檔案提供替代儲存位置。 因此，它會針對資料虛擬化、資料移動、安全性和可用性提供許多優點，進而實現許多混合式方案，而且成本低廉、維護簡單，即可達到高可用性和彈性調整的效果。
  
-> [AZURE.IMPORTANT]不建議且不支援將系統資料庫儲存在 Azure Blob 儲存體中。 
+> [!IMPORTANT]  
+>  不建議且不支援將系統資料庫儲存在 Azure Blob 儲存體中。 
+
   
  本主題介紹將 SQL Server 資料檔案儲存在 Microsoft Azure 儲存體服務中的核心概念與考量。  
   
@@ -49,10 +53,10 @@ ms.lasthandoff: 09/27/2017
 ### <a name="azure-storage-concepts"></a>Azure 儲存體概念  
  使用 Windows Azure 功能中的 SQL Server 資料檔案時，您必須在 Windows Azure 中建立儲存體帳戶和容器。 然後，您必須建立 SQL Server 認證，其中包括容器原則的相關資訊以及存取容器所需的共用存取簽章。  
   
- 在 [Microsoft Azure](https://azure.microsoft.com)中， [Azure 儲存體](https://azure.microsoft.com/services/storage/) 帳戶代表存取 Blob 之命名空間的最高層級。 儲存體帳戶可以包含不限制數目的容器，只要其總大小低於 500 TB 即可。 如需有關儲存體限制的最新資訊，請參閱 [Azure 訂閱與服務限制、配額及條件約束](http://azure.microsoft.com/documentation/articles/azure-subscription-service-limits/)。 容器會提供一組 [Blob](https://azure.microsoft.com/documentation/articles/storage-introduction/#blob-storage)的群組。 所有 Blob 都必須位於容器中。 帳戶可以包含不限制數目的容器。 同樣地，容器也可以儲存不限制數目的 Blob。 Azure 儲存體可以儲存的 Blob 類型有兩種：區塊和分頁 Blob。 這項新功能使用的是分頁 Blob (大小最高可達 1TB)，而且當檔案中的位元組範圍經常修改時，更有效率。 您可以使用以下 URL 格式存取 Blob： `http://storageaccount.blob.core.windows.net/<container>/<blob>`。  
+ 在 [Microsoft Azure](https://azure.microsoft.com)中， [Azure 儲存體](https://azure.microsoft.com/services/storage/) 帳戶代表存取 Blob 之命名空間的最高層級。 儲存體帳戶可以包含不限制數目的容器，只要其總大小低於儲存體限制即可。 如需有關儲存體限制的最新資訊，請參閱 [Azure 訂閱與服務限制、配額及條件約束](http://docs.microsoft.com/azure/azure-subscription-service-limits)。 容器會提供一組 [Blob](http://docs.microsoft.com/azure/storage/common/storage-introduction#blob-storage)的群組。 所有 Blob 都必須位於容器中。 帳戶可以包含不限制數目的容器。 同樣地，容器也可以儲存不限制數目的 Blob。 Azure 儲存體可以儲存的 Blob 類型有兩種：區塊和分頁 Blob。 這項新功能使用的是分頁 Blob，而且當檔案中的位元組範圍經常修改時，更有效率。 您可以使用以下 URL 格式存取 Blob： `http://storageaccount.blob.core.windows.net/<container>/<blob>`。  
   
 ### <a name="azure-billing-considerations"></a>Azure 計費考量  
- 在決策和規劃程序中，估計使用 Azure 服務的成本是很重要的事項。 將 SQL Server 資料檔案儲存在 Azure 儲存體中時，需要支付與儲存體和交易相關聯的成本。 此外，實作 Azure 儲存體功能中的 SQL Server 資料檔案時，還需要每隔 45 至 60 秒，隱含地更新 Blob 租用一次。 這也會產生每個資料庫檔案 (例如 .mdf 或 .ldf) 的交易成本。 根據我們的估計，按照目前的定價模式，兩個資料庫檔案 (.mdf 和 .ldf) 更新租用的成本大約是每月 2 美分。 建議您使用 [Azure 價格](http://azure.microsoft.com/pricing/) 頁面上的資訊來協助估計與使用 Azure 儲存體和 Azure 虛擬機器的每月相關成本。  
+ 在決策和規劃程序中，估計使用 Azure 服務的成本是很重要的事項。 將 SQL Server 資料檔案儲存在 Azure 儲存體中時，需要支付與儲存體和交易相關聯的成本。 此外，實作 Azure 儲存體功能中的 SQL Server 資料檔案時，還需要每隔 45 至 60 秒，隱含地更新 Blob 租用一次。 這也會產生每個資料庫檔案 (例如 .mdf 或 .ldf) 的交易成本。 使用 [Azure 價格](http://azure.microsoft.com/pricing/)頁面上的資訊來協助估計與使用 Azure 儲存體和 Azure 虛擬機器的每月相關成本。  
   
 ### <a name="sql-server-concepts"></a>SQL 伺服器概念  
  使用這項新的增強功能時，您必須執行下列動作：  
@@ -63,16 +67,13 @@ ms.lasthandoff: 09/27/2017
   
 -   您必須將 Azure 儲存體容器的相關資訊、其相關聯的原則名稱以及 SAS 金鑰，儲存在 SQL Server 認證存放區中。  
   
- 下列範例會假設已經建立 Azure 儲存體容器，而且已經建立具有讀取、寫入和列出權限的原則。 在容器上建立原則會產生 SAS 金鑰，這個金鑰會以未加密狀態安全地保存在記憶體中，而且 SQL Server 需要此金鑰才能存取容器中的 Blob 檔案。 在下列程式碼片段中，使用與下列類似的項目取代 `'your SAS key'` ： `'sr=c&si=<MYPOLICYNAME>&sig=<THESHAREDACCESSSIGNATURE>'`。 如需詳細資訊，請參閱 [管理 Azure 儲存體資源的存取](http://azure.microsoft.com/en-us/documentation/articles/storage-manage-access-to-resources/)  
+ 下列範例會假設已經建立 Azure 儲存體容器，而且已經建立具有讀取、寫入和列出權限的原則。 在容器上建立原則會產生 SAS 金鑰，這個金鑰會以未加密狀態安全地保存在記憶體中，而且 SQL Server 需要此金鑰才能存取容器中的 Blob 檔案。 在下列程式碼片段中，使用與下列類似的項目取代 `'<your SAS key>'` ： `'sr=c&si=<MYPOLICYNAME>&sig=<THESHAREDACCESSSIGNATURE>'`。 如需詳細資訊，請參閱 [管理 Azure 儲存體資源的存取](http://docs.microsoft.com/azure/storage/blobs/storage-manage-access-to-resources)  
   
-```  
-  
--- Create a credential  
+```sql
 CREATE CREDENTIAL [https://testdb.blob.core.windows.net/data]  
 WITH IDENTITY='SHARED ACCESS SIGNATURE',  
-SECRET = 'your SAS key'  
+SECRET = '<your SAS key>'  
   
--- Create database with data and log files in Windows Azure container.  
 CREATE DATABASE testdb   
 ON  
 ( NAME = testdb_dat,  
@@ -80,7 +81,6 @@ ON
  LOG ON  
 ( NAME = testdb_log,  
     FILENAME =  'https://testdb.blob.core.windows.net/data/TestLog.ldf')  
-  
 ```  
   
  **重要注意事項** ：如果有任何作用中參考指向容器中的資料檔案，則嘗試刪除對應的 SQL Server 認證將會失敗。  
@@ -94,12 +94,12 @@ ON
   
 -   此外，我們建議您繼續針對資料庫實作傳統的內部部署安全性作法。  
   
-### <a name="installation-prerequisites"></a>安裝的必要條件  
+### <a name="installation-prerequisites"></a>安裝必要條件  
  以下是將 SQL Server 資料檔案儲存在 Azure 中的安裝必要條件。  
   
--   **SQL Server 內部部署** ：SQL Server 2016 版本包含這項功能。 若要了解如何下載 SQL Server 2016，請參閱 [SQL Server 2016](https://www.microsoft.com/en-us/cloud-platform/sql-server)。  
+-   **SQL Server 內部部署：**SQL Server 2016 及更新版本包含這項功能。 若要了解如何下載最新版的 SQL Server，請參閱 [SQL Server](http://www.microsoft.com/sql-server/sql-server-downloads)。  
   
--   在 Azure 虛擬機器中執行的 SQL Server：如果您要 [將 SQL Server 安裝在 Azure 虛擬機器上](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)，請安裝 SQL Server 2016，或是更新現有的執行個體。 同樣地，您也可以使用 SQL Server 2016 平台映像，在 Azure 中建立新的虛擬機器。
+-   在 Azure 虛擬機器中執行的 SQL Server：如果您要 [將 SQL Server 安裝在 Azure 虛擬機器上](http://azuremarketplace.microsoft.com/marketplace/apps?search=sql%20server&page=1)，請安裝 SQL Server 2016，或是更新現有的執行個體。 同樣地，您也可以使用 SQL Server 2016 平台映像，在 Azure 中建立新的虛擬機器。
 
   
 ###  <a name="bkmk_Limitations"></a> 限制  
@@ -112,13 +112,13 @@ ON
   
 -   使用 Azure 功能中的 SQL Server 資料檔案時，您的儲存體帳戶不支援異地備援。 如果儲存體帳戶進行異地備援，然後進行異地容錯移轉，可能會發生資料庫損毀。  
   
--   每個 Blob 的大小最高可達 1 TB。 這會針對 Azure 儲存體可儲存的個別資料庫資料和記錄檔建立上限。  
+-   如需容量限制，請參閱 [Blob 儲存體簡介](http://docs.microsoft.com/azure/storage/blobs/storage-blobs-introduction)。  
   
 -   您無法使用 Azure 儲存體功能中的 SQL Server 資料檔案，將記憶體內部 OLTP 資料儲存在 Azure Blob 中。 這是因為記憶體內部 OLTP 相依於 **FileStream** ，而在目前版本的功能中，不支援將 **FileStream** 資料儲存在 Azure 儲存體中。  
   
 -   使用 Azure 功能中的 SQL Server 資料檔案時，SQL Server 會使用 **master** 資料庫中設定的定序執行所有 URL 或檔案路徑比較。  
   
--   只要您不要將新的資料庫檔案加入主要資料庫，就支援**AlwaysOn 可用性群組** 。 如果資料庫作業需要在主要資料庫中建立新的檔案，請先在次要節點中停用 AlwaysOn 可用性群組。 然後，在主要資料庫上執行資料庫作業，並且備份主要節點中的資料庫。 接著，將資料庫還原到次要節點，並且在次要節點中啟用 AlwaysOn 可用性群組。 請注意，使用 Azure 功能中的 SQL Server 資料檔案時，不支援 AlwaysOn 容錯移轉叢集執行個體。  
+-   只要您不要將新的資料庫檔案新增至主要資料庫，就支援 **AlwaysOn 可用性群組**。 如果資料庫作業需要在主要資料庫中建立新的檔案，請先在次要節點中停用 AlwaysOn 可用性群組。 然後，在主要資料庫上執行資料庫作業，並且備份主要節點中的資料庫。 接著，將資料庫還原到次要節點，並且在次要節點中啟用 AlwaysOn 可用性群組。 請注意，使用 Azure 功能中的 SQL Server 資料檔案時，不支援 AlwaysOn 容錯移轉叢集執行個體。  
   
 -   一般作業期間，SQL Server 會使用暫時租用來保留 Blob 進行儲存，而且每隔 45 至 60 秒就會更新每個 Blob 租用。 如果伺服器當機，而且設定為使用相同 Blob 的另一個 SQL Server 執行個體啟動，新的執行個體最多會等候 60 秒，讓現有的 Blob 租用過期。 如果您想要將資料庫附加至另一個執行個體，而且您無法等候租用在 60 秒內過期，可以明確中斷 Blob 租用，避免附加作業發生任何失敗。  
   
@@ -136,7 +136,7 @@ ON
  
  作為**路徑**，例如 [新增資料庫]、[附加資料庫] 和 [還原資料庫]。 如需詳細資訊，請參閱[教學課程：搭配使用 Microsoft Azure Blob 儲存體服務和 SQL Server 2016 資料庫](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)。  
   
-### <a name="sql-server-management-objects-support"></a>SQL Server 管理物件支援  
+### <a name="sql-server-management-objects-smo-support"></a>SQL Server 管理物件 (SMO) 支援  
  使用 Azure 功能中的 SQL Server 資料檔案時，可支援所有 SQL Server 管理物件 (SMO)。 如果 SMO 物件需要檔案路徑，請使用 BLOB URL 格式而非本機檔案路徑，例如 `https://teststorageaccnt.blob.core.windows.net/testcontainer/`。 如需 SQL Server 管理物件 (SMO) 的詳細資訊，請參閱《SQL Server 線上叢書》中的 [SQL Server 管理物件 &#40;SMO&#41; 程式設計指南](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)。  
   
 ### <a name="transact-sql-support"></a>Transact-SQL 支援  
@@ -185,6 +185,6 @@ ON
   
     4.  將資料庫設為上線。  
 
+## <a name="next-steps"></a>後續的步驟  
   
-  
-
+[建立資料庫](create-a-database.md)

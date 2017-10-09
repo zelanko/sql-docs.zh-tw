@@ -41,7 +41,7 @@ ms.lasthandoff: 09/01/2017
 ## <a name="partition-source"></a>分割區來源  
  指定分割區的來源資料表或具名查詢。 若要變更來源資料表，請按一下資料格，然後按一下瀏覽 (**...**) 按鈕。  
   
- ![分割區] 窗格中的來源資料行](../../analysis-services/multidimensional-models/media/ssas-partitionsource.png "分割區] 窗格中的來源資料行")  
+ ![分割區 窗格中的來源資料行](../../analysis-services/multidimensional-models/media/ssas-partitionsource.png "分割區 窗格中的來源資料行")  
   
  如果分割區是以查詢為基礎，請按一下 [瀏覽] (**...**) 按鈕以編輯查詢。 這樣可以編輯分割區的 **Source** 屬性。 如需詳細資訊，請參閱 [變更資料分割來源以使用不同的事實資料表](../../analysis-services/multidimensional-models/change-a-partition-source-to-use-a-different-fact-table.md)。  
   
@@ -54,7 +54,7 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="see-also"></a>另請參閱  
  [建立及管理本機資料分割 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)   
- [設計彙總 & #40;Analysis Services-多維度 & #41;](../../analysis-services/multidimensional-models/designing-aggregations-analysis-services-multidimensional.md)   
+ [設計彙總 &#40;Analysis Services-多維度 &#41;](../../analysis-services/multidimensional-models/designing-aggregations-analysis-services-multidimensional.md)   
  [在 Analysis Services 中合併分割區 &#40;SSAS - 多維度&#41;](../../analysis-services/multidimensional-models/merge-partitions-in-analysis-services-ssas-multidimensional.md)  
   
   

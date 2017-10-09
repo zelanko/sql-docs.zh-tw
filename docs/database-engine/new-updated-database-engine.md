@@ -13,13 +13,13 @@ ms.custom: UpdArt.exe
 ms.workload: database-engine
 ms.tgt_pltfrm: na
 ms.devlang: na
-ms.date: 09/11/2017
+ms.date: 09/27/2017
 ms.author: genemi
 ms.translationtype: HT
-ms.sourcegitcommit: 15080827744c19120a8474f3142004c4af7a4064
-ms.openlocfilehash: ce80496cdf82c2bc2df2447ed043216e6c78ad7e
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: dc4a5516662b200b4224facbb4c9cf4588c1b42e
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="new-and-recently-updated-database-engine-docs"></a>新的與最近的更新：資料庫引擎文件
@@ -34,7 +34,7 @@ Microsoft 幾乎每天都會在其 [Docs.Microsoft.com](http://docs.microsoft.co
 
 
 
-- *更新日期範圍：* &nbsp; **2017 年 7 月 18 日** &nbsp; -至- &nbsp; **2017 年 9 月 11 日**
+- *更新的日期範圍：* &nbsp; **2017-09-11** &nbsp; 到 &nbsp; **2017-09-27**
 - *主旨區域：* &nbsp; **資料庫引擎**。
 
 
@@ -47,11 +47,10 @@ Microsoft 幾乎每天都會在其 [Docs.Microsoft.com](http://docs.microsoft.co
 下列連結會跳至最近新增的新文章。
 
 
-1. [SQL Server 安裝](install-windows/installation-for-sql-server.md)
-2. [支援的版本與版本升級 - SQL Server 2017](install-windows/supported-version-and-edition-upgrades-2017.md)
-3. [SQL Server 資料庫引擎](sql-server-database-engine-overview.md)
-4. [資料庫引擎的新功能 - SQL Server 2016](whats-new-in-sql-server-2016.md)
-5. [資料庫引擎的新功能 - SQL Server 2017](whats-new-in-sql-server-2017.md)
+1. [將功能新增至 SQL Server 的執行個體 (安裝)](install-windows/add-features-to-an-instance-of-sql-server-setup.md)
+2. [從命令提示字元安裝 SQL Server](install-windows/install-sql-server-from-the-command-prompt.md)
+3. [使用設定檔安裝 SQL Server](install-windows/install-sql-server-using-a-configuration-file.md)
+4. [商務持續性與資料庫復原 - SQL Server](sql-server-business-continuity-dr.md)
 
 
 
@@ -73,11 +72,11 @@ Microsoft 幾乎每天都會在其 [Docs.Microsoft.com](http://docs.microsoft.co
 
 <a name="compactupdatedlist"/>
 
-## <a name="compact-list-of-articles-updated-recently"></a>最近更新文章的壓縮清單
+### <a name="compact-list-of-articles-updated-recently"></a>最近更新文章的壓縮清單
 
-此壓縮清單提供所有更新文章的連結，並將列於＜摘要＞一節。
+此壓縮清單提供＜摘要＞一節中所有更新文章的連結。
 
-1. [自動植入次要複本](#TitleNum_1)
+1. [從命令提示字元安裝更新](#TitleNum_1)
 
 
 
@@ -88,41 +87,36 @@ Microsoft 幾乎每天都會在其 [Docs.Microsoft.com](http://docs.microsoft.co
 
 <a name="TitleNum_1"/>
 
-### <a name="1-nbsp-automatic-seeding-for-secondary-replicasavailability-groupswindowsautomatic-seeding-secondary-replicasmd"></a>1.&nbsp; [自動植入次要複本](availability-groups/windows/automatic-seeding-secondary-replicas.md)
+### <a name="1-nbsp-installing-updates-from-the-command-promptinstall-windowsinstalling-updates-from-the-command-promptmd"></a>1.&nbsp; [從命令提示字元安裝更新](install-windows/installing-updates-from-the-command-prompt.md)
 
-*更新日期：2017 年 8 月 21 日* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+*更新於：2017-09-12* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
 
-<!-- Source markdown line 55.  ms.author= "mikeray".  -->
+<!-- Source markdown line 48.  ms.author= "mikeray".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 0b7b6a23f38bfe5959ccd170527a9bbdb308dc4b dc51fdf69649ed6cae03584cff7bc900d5b72149  (PR=2896  ,  Filename=automatic-seeding-secondary-replicas.md  ,  Dirpath=docs\database-engine\availability-groups\windows\  ,  MergeCommitSha40=80642503480add90fc75573338760ab86139694c) -->
+<!-- git diff --ignore-all-space --unified=0 04abb23d0682c23654a55e7926d2140f0b6ae408 a4bb1e27ae99460a66da72848ace1417b148f85c  (PR=3122  ,  Filename=installing-updates-from-the-command-prompt.md  ,  Dirpath=docs\database-engine\install-windows\  ,  MergeCommitSha40=1df54edd5857ac2816fa4b164d268835d9713638) -->
 
 
 
-在 SQL Server 2016 和舊版中，自動植入所建立資料庫的資料夾必須已經存在，而且和主要複本位在同一路徑下。
+- 更新電腦上所有的 ..!NCLUDE-NotShown--ssNoVersion--../../includes/ssnoversion-md.md)] 執行個體及所有共用的元件，例如 ..!NCLUDE-NotShown--ssISnoversion--../../includes/ssisnoversion-md.md)] 和管理工具：
 
-在 SQL Server 2017 中，Microsoft 建議所有加入可用性群組的複本都使用相同的資料和記錄檔路徑，但如有必要，您可以使用不同的路徑。 例如，在跨平台的可用性群組中，一個 SQL Server 執行個體在 Windows，而另一個 SQL Server 執行個體在 Linux。 不同的平台有不同的預設路徑。 SQL Server 2017 支援 SQL Server 的執行個體可用性群組複本可使用不同的預設路徑。
+```
+    <package_name>.exe /qs /IAcceptSQLServerLicenseTerms /Action=Patch /AllInstances.
+```
 
-下表顯示的範例，是支援的資料磁碟配置可以支援自動植入：
+- 移除 ..!NCLUDE-NotShown--ssNoVersion--../../includes/ssnoversion-md.md)] 單一執行個體的更新及所有共用的元件，例如 ..!NCLUDE-NotShown--ssISnoversion--../../includes/ssisnoversion-md.md)] 和管理工具：
 
-|主要執行個體</br>預設資料路徑|次要執行個體</br>預設資料路徑|主要執行個體</br>來源檔案位置|次要執行個體</br> 目標檔案位置
-|:------|:------|:------|:------
-|c:\\data\\ |/var/opt/mssql/data/ |c:\\data\\ |/var/opt/mssql/data/|
-|c:\\data\\ |/var/opt/mssql/data/ |c:\\data\\group1\\ |/var/opt/mssql/data/group1/|
-|c:\\data\\ |d:\\data\\ |c:\\data\\ |d:\\data\\
-|c:\\data\\ |d:\\data\\ |c:\\data\\group1\\ |d:\\data\\group1\
+```
+    <package_name>.exe /qs /Action=RemovePatch /InstanceName=MyInstance.
+```
 
-主要和次要複本資料庫位置不是執行個體預設路徑的案例，不受此變更影響。 次要複本檔案路徑符合主要複本檔案路徑的需求維持不變。
+- 只移除 ..!NCLUDE-NotShown--ssNoVersion--../../includes/ssnoversion-md.md)] 共用元件的更新，例如 ..!NCLUDE-NotShown--ssISnoversion--../../includes/ssisnoversion-md.md)] 和管理工具：
 
-|主要執行個體</br>預設資料路徑|次要執行個體</br>預設資料路徑|主要執行個體</br>檔案位置|次要執行個體</br> 檔案位置
-|:------|:------|:------|:------
-|c:\\data\\ |c:\\data\\ |d:\\group1\\ |d:\\group1\\
-|c:\\data\\ |c:\\data\\ |d:\\data\\ |d:\\data\\
-|c:\\data\\ |c:\\data\\ |d:\\data\\group1\\ |d:\\data\\group1\\
-
-如果您混用了主要和次要複本的預設和非預設路徑，SQL Server 2017 的行為表現會和舊版不同。 下表說明 SQL Server 2017 的行為。
+```
+    <package_name>.exe /qs /Action=RemovePatch
+```
 
 
 
@@ -137,28 +131,24 @@ Microsoft 幾乎每天都會在其 [Docs.Microsoft.com](http://docs.microsoft.co
     Then run Run-533-*.BAT
 -->
 
-本節會在公開的 GitHub 存放庫中，列出與其他主題區中最近更新的文章十分相似的文章：[MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/)。
+本節會在我們的公開 GitHub 存放庫中，列出與其他主題區中最近更新的文章十分相似的文章：[MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/)。
 
 #### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>具有新文章或最近更新文章的主題區
 
-- [新文章 + 更新文章 (3+12)：**SQL 進階分析**文件](../advanced-analytics/new-updated-advanced-analytics.md)
-- [新文章 + 更新文章 (5+0)：**連線到 SQL** 文件](../connect/new-updated-connect.md)
-- [新文章 + 更新文章 (5+1)：**SQL 資料庫引擎**文件](../database-engine/new-updated-database-engine.md)
-- [新文章 + 更新文章 (19+82)：**SQL Integration Services** 文件](../integration-services/new-updated-integration-services.md)
-- [新文章 + 更新文章 (1+8)：**Linux for SQL** 文件](../linux/new-updated-linux.md)
-- [新文章 + 更新文章 (12+1)：**SQL 關聯式資料庫**文件](../relational-databases/new-updated-relational-databases.md)
-- [新文章 + 更新文章 (0+1)：**SQL Reporting Services** 文件](../reporting-services/new-updated-reporting-services.md)
-- [新文章 + 更新文章 (7+1)：**Microsoft SQL Server** 文件](../sql-server/new-updated-sql-server.md)
-- [新文章 + 更新文章 (1+1)：**SQL Server Data Tools (SSDT)** 文件](../ssdt/new-updated-ssdt.md)
-- [新文章 + 更新文章 (0+2)：**SQL Server 移轉小幫手 (SSMA)** 文件](../ssma/new-updated-ssma.md)
-- [新文章 + 更新文章 (1+4)：**SQL Server Management Studio (SSMS)** 文件](../ssms/new-updated-ssms.md)
-- [新文章 + 更新文章 (4+1)：**Transact-SQL** 文件](../t-sql/new-updated-t-sql.md)
-- [新文章 + 更新文章 (0+1)：**SQL 工具**文件](../tools/new-updated-tools.md)
+- [新文章 + 更新文章 (0+1)：**SQL 的進階分析**文件](../advanced-analytics/new-updated-advanced-analytics.md)
+- [新文章 + 更新文章 (0+1)：**SQL 的 Analysis Services** 文件](../analysis-services/new-updated-analysis-services.md)
+- [新文章 + 更新文章 (4+1)：**SQL 的資料庫引擎**文件](../database-engine/new-updated-database-engine.md)
+- [新文章 + 更新文章 (17+0)：**SQL 的 Integration Services** 文件](../integration-services/new-updated-integration-services.md)
+- [新文章 + 更新文章 (3+0)：**SQL 適用的 Linux** 文件](../linux/new-updated-linux.md)
+- [新文章 + 更新文章 (1+1)：**SQL 的關聯式資料庫**文件](../relational-databases/new-updated-relational-databases.md)
+- [新文章 + 更新文章 (2+0)：**SQL 的 Reporting Services** 文件](../reporting-services/new-updated-reporting-services.md)
+- [新文章 + 更新文章 (0+1)：**SQL Server Management Studio (SSMS)** 文件](../ssms/new-updated-ssms.md)
+- [新文章 + 更新文章 (0+1)：**Transact-SQL** 文件](../t-sql/new-updated-t-sql.md)
 
 #### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>沒有新文章或最近更新文章的主題區
 
 - [新文章 + 更新文章 (0+0)：**ActiveX Data Objects (ADO) for SQL** 文件](../ado/new-updated-ado.md)
-- [新文章 + 更新文章 (0+0)：**SQL Analysis Services** 文件](../analysis-services/new-updated-analysis-services.md)
+- [新文章 + 更新文章 (0+0)：**連線到 SQL** 文件](../connect/new-updated-connect.md)
 - [新文章 + 更新文章 (0+0)：**Data Quality Services for SQL** 文件](../data-quality-services/new-updated-data-quality-services.md)
 - [新文章 + 更新文章 (0+0)：**SQL 資料採礦延伸模組 (DMX)** 文件](../dmx/new-updated-dmx.md)
 - [新文章 + 更新文章 (0+0)：**SQL Master Data Services (MDS)** 文件](../master-data-services/new-updated-master-data-services.md)
@@ -166,6 +156,10 @@ Microsoft 幾乎每天都會在其 [Docs.Microsoft.com](http://docs.microsoft.co
 - [新文章 + 更新文章 (0+0)：**SQL ODBC (開放式資料庫連接)** 文件](../odbc/new-updated-odbc.md)
 - [新文章 + 更新文章 (0+0)：**PowerShell for SQL** 文件](../powershell/new-updated-powershell.md)
 - [新文章 + 更新文章 (0+0)：**SQL 範例**文件](../sample/new-updated-sample.md)
+- [新文章 + 更新文章 (0+0)：**Microsoft SQL Server** 文件](../sql-server/new-updated-sql-server.md)
+- [新文章 + 更新文章 (0+0)：**SQL Server Data Tools (SSDT)** 文件](../ssdt/new-updated-ssdt.md)
+- [新文章 + 更新文章 (0+0)：**SQL Server 移轉小幫手 (SSMA)** 文件](../ssma/new-updated-ssma.md)
+- [新文章 + 更新文章 (0+0)：**SQL 的工具** 文件](../tools/new-updated-tools.md)
 - [新文章 + 更新文章 (0+0)：**XQuery for SQL** 文件](../xquery/new-updated-xquery.md)
 
 

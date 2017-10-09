@@ -13,13 +13,13 @@ ms.custom: UpdArt.exe
 ms.workload: relational-databases
 ms.tgt_pltfrm: na
 ms.devlang: na
-ms.date: 09/11/2017
+ms.date: 09/27/2017
 ms.author: genemi
 ms.translationtype: HT
-ms.sourcegitcommit: 15080827744c19120a8474f3142004c4af7a4064
-ms.openlocfilehash: ee7d66bcd8720234f4aec97d24ce16ed21888a3c
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 70cb071dc7b6f4ff15c5c7dee3f24bb352d6eb61
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="new-and-recently-updated-relational-databases-docs"></a>新的與最近更新的文章： 關聯式資料庫文件
@@ -34,7 +34,7 @@ Microsoft 幾乎每天都會在其 [Docs.Microsoft.com](http://docs.microsoft.co
 
 
 
-- *更新日期範圍：* &nbsp; **2017 年 7 月 18 日** &nbsp; -至- &nbsp; **2017 年 9 月 11 日**
+- *更新的日期範圍：* &nbsp; **2017-09-11** &nbsp; 到 &nbsp; **2017-09-27**
 - *主旨區域：* &nbsp; **關聯式資料庫**。
 
 
@@ -47,18 +47,7 @@ Microsoft 幾乎每天都會在其 [Docs.Microsoft.com](http://docs.microsoft.co
 下列連結會跳至最近新增的新文章。
 
 
-1. [將 Excel 中的資料匯入 SQL Server 或 Azure SQL Database](import-export/import-data-from-excel-to-sql.md)
-2. [對 PolyBase Kerberos 的連線問題進行疑難排解](polybase/polybase-troubleshoot-connectivity.md)
-3. [透明資料加密 (TDE)](security/encryption/transparent-data-encryption.md)
-4. [Azure SQL Database 和資料倉儲的透明資料加密](security/encryption/transparent-data-encryption-azure-sql.md)
-5. [Azure SQL Database 和資料倉儲的透明資料加密與攜帶您自己的金鑰支援](security/encryption/transparent-data-encryption-byok-azure-sql.md)
-6. [PowerShell：使用您自己的 Azure Key Vault 金鑰來啟用透明資料加密](security/encryption/transparent-data-encryption-byok-azure-sql-configure.md)
-7. [使用 PowerShell 輪替透明資料加密 (TDE) 保護裝置](security/encryption/transparent-data-encryption-byok-azure-sql-key-rotation.md)
-8. [使用 PowerShell 移除透明資料加密 (TDE) 保護裝置](security/encryption/transparent-data-encryption-byok-azure-sql-remove-tde-protector.md)
-9. [SQL Server 共用管理物件 (SMO) 授權條款](server-management-objects-smo/smo-license-terms.md)
-10. [sys.external_libraries (Transact-SQL)](system-catalog-views/sys-external-libraries-transact-sql.md)
-11. [sys.external_library_files (Transact-SQL)](system-catalog-views/sys-external-library-files-transact-sql.md)
-12. [sp_rxPredict](system-stored-procedures/sp-rxpredict-transact-sql.md)
+1. [匯入和匯出 SQL Server 和 Azure SQL Database 的資料](import-export/overview-import-export.md)
 
 
 
@@ -80,11 +69,11 @@ Microsoft 幾乎每天都會在其 [Docs.Microsoft.com](http://docs.microsoft.co
 
 <a name="compactupdatedlist"/>
 
-## <a name="compact-list-of-articles-updated-recently"></a>最近更新文章的壓縮清單
+### <a name="compact-list-of-articles-updated-recently"></a>最近更新文章的壓縮清單
 
-此壓縮清單提供所有更新文章的連結，並將列於＜摘要＞一節。
+此壓縮清單提供＜摘要＞一節中所有更新文章的連結。
 
-1. [自動調整](#TitleNum_1)
+1. [空間資料類型概觀](#TitleNum_1)
 
 
 
@@ -95,44 +84,34 @@ Microsoft 幾乎每天都會在其 [Docs.Microsoft.com](http://docs.microsoft.co
 
 <a name="TitleNum_1"/>
 
-### <a name="1-nbsp-automatic-tuningautomatic-tuningautomatic-tuningmd"></a>1.&nbsp; [自動調整](automatic-tuning/automatic-tuning.md)
+### <a name="1-nbsp-spatial-data-types-overviewspatialspatial-data-types-overviewmd"></a>1.&nbsp; [空間資料類型概觀](spatial/spatial-data-types-overview.md)
 
-*更新日期：2017 年 8 月 16 日* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+*更新於：2017-09-26* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
 
-<!-- Source markdown line 64.  ms.author= "jovanpop".  -->
+<!-- Source markdown line 27.  ms.author= "rickbyh".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 be765a1acf9bdfd5485520d16160677583e81f8e 135d926227094374e6ec5484e7babee625b44bb2  (PR=2860  ,  Filename=automatic-tuning.md  ,  Dirpath=docs\relational-databases\automatic-tuning\  ,  MergeCommitSha40=e4a6157cb56c6db911406585f841046a431eef99) -->
+<!-- git diff --ignore-all-space --unified=0 96dd44cf49e96d1d543a629d49de297dba9c1753 2e9629f852ea42a213c7c24831bcfa53e40358f2  (PR=0  ,  Filename=spatial-data-types-overview.md  ,  Dirpath=docs\relational-databases\spatial\  ,  MergeCommitSha40=b33976cf92f23fbb13cee0c353fd40608d002d94) -->
 
 
 
-**自動計畫選擇更正**
-
-
-..!NCLUDE-NotShown--ssde_md--../../includes/ssde_md.md)] 只要偵測到計畫選擇迴歸，就可以自動切換到最後一個已知的良好計畫。
-
-![SQL plan choice correction--media/force-last-good-plan.png "SQL 計畫選擇更正")
-
-..!NCLUDE-NotShown--ssde_md--../../includes/ssde_md.md)] 會自動偵測任何可能的計畫選擇迴歸，包括應該使用的計畫，而不是錯誤的計畫。
-當 ..!NCLUDE-NotShown--ssde_md--../../includes/ssde_md.md)] 運用最後一個已知的計畫時，會自動監視強制計畫的效能。 如果強制執行的計畫不比迴歸的計畫好，則不會強制執行新的計畫，且 ..!NCLUDE-NotShown--ssde_md--../../includes/ssde_md.md)] 會編譯新的計畫。 如果 ..!NCLUDE-NotShown--ssde_md--../../includes/ssde_md.md)] 確認強制計畫比迴歸計畫好，則保留強制計畫直到重新編譯 (例如，下次統計資料或結構描述變更)，如果它比迴歸計畫好。
-
-**啟用自動計畫選擇更正**
-
-
-您可以依每個資料庫啟用自動調整，並指定只要偵測到某些計畫變更迴歸，就應該強制執行最後一個良好的計畫。 自動調整已使用下列命令啟用：
-
-```
-ALTER DATABASE current
-SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON );
-```
-一旦您開啟此選項，..!NCLUDE-NotShown--ssde_md--../../includes/ssde_md.md)] 就會自動強制執行估計的 CPU 增量高於 10 秒，或新計畫錯誤數目高於建議計畫錯誤數目的任何建議，並確認強制執行的計畫比目前的計畫更好。
-
-**其他選項 - 手動計畫選擇更正**
-
-
-沒有自動調整，使用者必須定期監視系統，並尋找迴歸的查詢。 如有任何計畫迴歸，使用者應該會發現一些。
+ -  空間資料有兩種類型： **geometry** 資料類型支援平面或 Euclidean (扁平表面) 資料。 **geometry** 資料類型同時符合開放式地理空間協會 (Open Geospatial Consortium, OGC) 的 SQL 簡單特徵規格 1.1.0 版，而且符合 SQL MM (ISO 標準)。
+ -
+ - 此外，..!NCLUDE-NotShown--ssNoVersion--../../includes/ssnoversion-md.md)] 也支援 **geography** 資料類型，它會儲存橢圓體 (圓形表面) 資料，例如 GPS 經緯度座標。
+ -
+ -> [!IMPORTANT]
+ ->  如需 ..!NCLUDE-NotShown--ssSQL11--../../includes/sssql11-md.md)] 引入的空間功能詳細描述及範例，包括空間資料類型的增強功能，請下載技術白皮書：[New Spatial Features in SQL Server Code-Named "Denali"](http://go.microsoft.com/fwlink/?LinkId=226407) (SQL Server 中代號 "Denali" 的新空間功能)。
+ -
+ -##  <a name="objects"></a> 空間資料物件
+ - **geometry** 和 **geography** 資料類型支援十六種空間資料物件或執行個體類型。 但是，其中只有十一種執行個體類型「可具現化」；因此，您可以在資料庫中建立及處理這些執行個體 (或加以具現化)。 這些執行個體會從父資料類型衍生某些屬性，這些資料類型會將其區分為 **Points**、 **LineStrings, CircularStrings**、 **CompoundCurves**、 **Polygons**、 **CurvePolygons** ，或是 **geometry** 中的多個 **geography** 或 **GeometryCollection**執行個體。 **Geography** 類型具有一種額外的執行個體類型： **FullGlobe**。
+ -
+ - 下圖說明 **geometry** 和 **geometry** 資料類型所根據的 **geography** 階層。 可具現化的 **geometry** 和 **geography** 類型是以藍色標示。
+ -
+ - ![geom_hierarchy--../../relational-databases/spatial/media/geom-hierarchy.gif)
+ -
+ - 如圖中所指示， **geometry** 和 **geography** 資料類型中，十種可具現化的類型為 **Point**、 **MultiPoint**、 **LineString**、 **CircularString**、 **MultiLineString**、 **CompoundCurve**、 **Polygon**、 **CurvePolygon**、 **MultiPolygon**和 **GeometryCollection**。 geography 資料類型還有一種額外的可具現化類型： **FullGlobe**。 **geometry** 和 **geography** 類型可以辨識特定的執行個體 (只要格式正確)，即使未明確定義執行個體亦然。 例如，如果您使用 STPointFromText() 方法明確定義 **Point** 執行個體，則只要方法輸入的格式正確， **geometry** 和 **geography** 會將此執行個體辨識為 **Point**。 如果您使用 `STGeomFromText()` 方法定義相同的執行個體， **geometry** 和 **geography** 資料類型都會將此執行個體辨識為 **Point**。
 
 
 
@@ -147,28 +126,24 @@ SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON );
     Then run Run-533-*.BAT
 -->
 
-本節會在公開的 GitHub 存放庫中，列出與其他主題區中最近更新的文章十分相似的文章：[MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/)。
+本節會在我們的公開 GitHub 存放庫中，列出與其他主題區中最近更新的文章十分相似的文章：[MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/)。
 
 #### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>具有新文章或最近更新文章的主題區
 
-- [新文章 + 更新文章 (3+12)：**SQL 進階分析**文件](../advanced-analytics/new-updated-advanced-analytics.md)
-- [新文章 + 更新文章 (5+0)：**連線到 SQL** 文件](../connect/new-updated-connect.md)
-- [新文章 + 更新文章 (5+1)：**SQL 資料庫引擎**文件](../database-engine/new-updated-database-engine.md)
-- [新文章 + 更新文章 (19+82)：**SQL Integration Services** 文件](../integration-services/new-updated-integration-services.md)
-- [新文章 + 更新文章 (1+8)：**Linux for SQL** 文件](../linux/new-updated-linux.md)
-- [新文章 + 更新文章 (12+1)：**SQL 關聯式資料庫**文件](../relational-databases/new-updated-relational-databases.md)
-- [新文章 + 更新文章 (0+1)：**SQL Reporting Services** 文件](../reporting-services/new-updated-reporting-services.md)
-- [新文章 + 更新文章 (7+1)：**Microsoft SQL Server** 文件](../sql-server/new-updated-sql-server.md)
-- [新文章 + 更新文章 (1+1)：**SQL Server Data Tools (SSDT)** 文件](../ssdt/new-updated-ssdt.md)
-- [新文章 + 更新文章 (0+2)：**SQL Server 移轉小幫手 (SSMA)** 文件](../ssma/new-updated-ssma.md)
-- [新文章 + 更新文章 (1+4)：**SQL Server Management Studio (SSMS)** 文件](../ssms/new-updated-ssms.md)
-- [新文章 + 更新文章 (4+1)：**Transact-SQL** 文件](../t-sql/new-updated-t-sql.md)
-- [新文章 + 更新文章 (0+1)：**SQL 工具**文件](../tools/new-updated-tools.md)
+- [新文章 + 更新文章 (0+1)：**SQL 的進階分析**文件](../advanced-analytics/new-updated-advanced-analytics.md)
+- [新文章 + 更新文章 (0+1)：**SQL 的 Analysis Services** 文件](../analysis-services/new-updated-analysis-services.md)
+- [新文章 + 更新文章 (4+1)：**SQL 的資料庫引擎**文件](../database-engine/new-updated-database-engine.md)
+- [新文章 + 更新文章 (17+0)：**SQL 的 Integration Services** 文件](../integration-services/new-updated-integration-services.md)
+- [新文章 + 更新文章 (3+0)：**SQL 適用的 Linux** 文件](../linux/new-updated-linux.md)
+- [新文章 + 更新文章 (1+1)：**SQL 的關聯式資料庫**文件](../relational-databases/new-updated-relational-databases.md)
+- [新文章 + 更新文章 (2+0)：**SQL 的 Reporting Services** 文件](../reporting-services/new-updated-reporting-services.md)
+- [新文章 + 更新文章 (0+1)：**SQL Server Management Studio (SSMS)** 文件](../ssms/new-updated-ssms.md)
+- [新文章 + 更新文章 (0+1)：**Transact-SQL** 文件](../t-sql/new-updated-t-sql.md)
 
 #### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>沒有新文章或最近更新文章的主題區
 
 - [新文章 + 更新文章 (0+0)：**ActiveX Data Objects (ADO) for SQL** 文件](../ado/new-updated-ado.md)
-- [新文章 + 更新文章 (0+0)：**SQL Analysis Services** 文件](../analysis-services/new-updated-analysis-services.md)
+- [新文章 + 更新文章 (0+0)：**連線到 SQL** 文件](../connect/new-updated-connect.md)
 - [新文章 + 更新文章 (0+0)：**Data Quality Services for SQL** 文件](../data-quality-services/new-updated-data-quality-services.md)
 - [新文章 + 更新文章 (0+0)：**SQL 資料採礦延伸模組 (DMX)** 文件](../dmx/new-updated-dmx.md)
 - [新文章 + 更新文章 (0+0)：**SQL Master Data Services (MDS)** 文件](../master-data-services/new-updated-master-data-services.md)
@@ -176,6 +151,10 @@ SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON );
 - [新文章 + 更新文章 (0+0)：**SQL ODBC (開放式資料庫連接)** 文件](../odbc/new-updated-odbc.md)
 - [新文章 + 更新文章 (0+0)：**PowerShell for SQL** 文件](../powershell/new-updated-powershell.md)
 - [新文章 + 更新文章 (0+0)：**SQL 範例**文件](../sample/new-updated-sample.md)
+- [新文章 + 更新文章 (0+0)：**Microsoft SQL Server** 文件](../sql-server/new-updated-sql-server.md)
+- [新文章 + 更新文章 (0+0)：**SQL Server Data Tools (SSDT)** 文件](../ssdt/new-updated-ssdt.md)
+- [新文章 + 更新文章 (0+0)：**SQL Server 移轉小幫手 (SSMA)** 文件](../ssma/new-updated-ssma.md)
+- [新文章 + 更新文章 (0+0)：**SQL 的工具** 文件](../tools/new-updated-tools.md)
 - [新文章 + 更新文章 (0+0)：**XQuery for SQL** 文件](../xquery/new-updated-xquery.md)
 
 

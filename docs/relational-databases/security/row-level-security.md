@@ -21,11 +21,11 @@ caps.latest.revision: 47
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 0141c681779c12bf63162751f93dcd6495fb1a94
+ms.translationtype: HT
+ms.sourcegitcommit: d9a995f7d29fe91e14affa9266a9bce73acc9010
+ms.openlocfilehash: 8a5a44c3da9c34cf3bc64b632ce8cb8f86ff53e9
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="row-level-security"></a>資料列層級安全性
@@ -53,7 +53,7 @@ ms.lasthandoff: 06/22/2017
   
  定義為內嵌資料表值函數的安全性述詞，會限制資料表中資料列層級資料的存取權。 然後叫用函式並強制執行安全性原則。 對篩選述詞而言，沒有應用程式指示已從結果集篩選資料列；若所有資料列皆經過篩選，將會傳回 null 設定。 對 Block 述詞而言，任何違反述詞的作業都將會失敗並產生錯誤。  
   
- 篩選器述詞會在讀取資料時從基底資料表中套用，它會影響所有 get 作業： **SELECT**、 **DELETE** (亦即， 使用者無法刪除篩選的資料列)，以及 **UPDATE** (亦即， 使用者無法更新資料列篩選，雖然您可以用後續篩選它們的這類方式更新資料列。 Block 述詞會影響所有寫入作業。  
+ 從基底資料表中讀取資料時會套用篩選器述詞，並且會影響所有取得作業：**SELECT**、**DELETE** (也就是使用者無法刪除篩選的資料列)，和 **UPDATE** (也就是使用者無法更新篩選的資料列，雖然您可以這樣更新資料列使其後續進行篩選)。 Block 述詞會影響所有寫入作業。  
   
 -   AFTER INSERT 和 AFTER UPDATE 述詞可以防止使用者將資料列更新為違反述詞的值。  
   
@@ -63,9 +63,7 @@ ms.lasthandoff: 06/22/2017
   
  篩選器述詞、Block 述詞及安全性原則皆具有下列行為：  
   
--   您可定義與另一個資料表聯結和/或叫用函數的述詞函數。 如果以 `SCHEMABINDING = ON`來建立安全性原則，則聯結或函數可從查詢存取，並且如預期般運作，而不需任何額外的權限檢查。 如果以 `SCHEMABINDING = OFF`來建立安全性原則，則使用者需要對這些額外的資料表和函數具有 **SELECT** 或 **EXECUTE** 權限，才能查詢目標資料表。  
-  
-     您可定義與另一個資料表聯結和/或叫用函數的述詞函數。 聯結/函式可如預期般從查詢存取，而不需任何額外的權限檢查的運作方式。  
+-   您可定義與另一個資料表聯結和/或叫用函數的述詞函數。 如果以 `SCHEMABINDING = ON`來建立安全性原則，則聯結或函數可從查詢存取，並且如預期般運作，而不需任何額外的權限檢查。 如果以 `SCHEMABINDING = OFF`來建立安全性原則，則使用者需要對這些額外的資料表和函數具有 **SELECT** 或 **EXECUTE** 權限，才能查詢目標資料表。
   
 -   可對己定義但停用安全性述詞的資料表發出查詢。 不會影響任何屆時已篩選或封鎖的資料列。  
   
@@ -81,7 +79,7 @@ ms.lasthandoff: 06/22/2017
   
  篩選器述詞具有下列行為：  
   
--   定義篩選資料表的資料列的安全性原則。 應用程式不會察覺到任何已篩選出的資料列 **SELECT**， **UPDATE**，和 **DELETE** 作業，包括所有資料列已經篩選掉的情況。 應用程式可以 **INSERT** 任何資料列，不論在任何其他作業期間是否進行篩選。  
+-   定義篩選資料表的資料列的安全性原則。 應用程式不會察覺到任何已篩選出的資料列 **SELECT**， **UPDATE**，和 **DELETE** 作業，包括所有資料列已經篩選掉的情況。應用程式可以 **INSERT** 任何資料列，不論在任何其他作業期間是否進行篩選。  
   
  Block 述詞具有下列行為：  
   

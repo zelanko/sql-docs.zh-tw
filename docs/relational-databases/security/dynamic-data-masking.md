@@ -15,10 +15,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 2a16a7b0399a696c670887e49b4cf5c32012afb1
+ms.sourcegitcommit: d9a995f7d29fe91e14affa9266a9bce73acc9010
+ms.openlocfilehash: 6ea14b40f988028a714323bc4e35fcd7a357e27c
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="dynamic-data-masking"></a>動態資料遮罩
@@ -30,10 +30,10 @@ ms.lasthandoff: 07/31/2017
 
 動態資料遮罩讓使用者能夠指定要顯示多少機密資料，藉此協助防止未經授權存取機密資料，同時盡可能減少對應用程式層的影響。 可以在資料庫上設定 DDM，隱藏在指定資料庫欄位查詢結果集內的機密資料，而資料庫中的資料則不會變更。 在現有應用程式使用動態資料遮罩相當容易，原因是遮罩規則已套用到查詢結果中。 許多應用程式都不需要修改現有查詢，就能遮罩機密資料。
 
-*  中央資料遮罩原則可直接作用於資料庫中的機密欄位上。
-*  指定無法存取機密資料的特殊權限的使用者或角色。
-*  DDM 的特色在於完整遮罩和部分遮罩功能，以及數值資料的隨機遮罩。
-*  簡單的 [!INCLUDE[tsql_md](../../includes/tsql-md.md)] 命令可定義和管理遮罩。
+* 中央資料遮罩原則可直接作用於資料庫中的機密欄位上。
+* 指定無法存取敏感性資料之特殊權限的使用者或角色。
+* DDM 的特色在於完整遮罩和部分遮罩功能，以及數值資料的隨機遮罩。
+* 簡單的 [!INCLUDE[tsql_md](../../includes/tsql-md.md)] 命令可定義和管理遮罩。
 
 例如，話務中心支援人員可以從來電者的社會安全號碼或信用卡號碼其中幾個數字加以識別，但這些資料項目都不應該完全對支援人員曝光。 此時可以定義遮罩規則，使其遮罩任何查詢結果集內的任何社會安全號碼或信用卡號碼，只顯示最後四碼。 另一個例子是，開發人員可以使用適當的資料遮罩保護個人識別資訊 (PII) 資料，為疑難排解目的查詢生產環境，而不會違反法務遵循規定。
 

@@ -17,10 +17,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e2360e69486a82a375c038135616753bf0ed19c0
+ms.sourcegitcommit: 12b379c1d02dc07a5581a5a3f3585f05f763dad7
+ms.openlocfilehash: 7f4686ae082a68b7c5d866e5c2c885936c5450dc
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="create-a-format-file-sql-server"></a>建立格式檔案 (SQL Server)
@@ -73,7 +73,7 @@ ms.lasthandoff: 07/31/2017
   
  在 Windows 命令提示字元中，輸入下列 `bcp` 命令：  
   
-```  
+```cmd
 bcp AdventureWorks2012.HumanResources.Department format nul -T -n -f Department-n.fmt  
 ```  
   
@@ -103,7 +103,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -n -f Department-
   
  在 Windows 命令提示字元中，輸入下列 `bcp` 命令：  
   
-```  
+```cmd
 bcp AdventureWorks2012.HumanResources.Department format nul -c -f Department-c.fmt -T  
 ```  
   
@@ -139,7 +139,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
  如需如何使用 Unicode 字元資料的詳細資訊，請參閱[使用 Unicode 字元格式匯入或匯出資料 &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)。  
   
 #### <a name="f-using-a-format-file-with-the-code-page-option"></a>F. 使用格式檔案與字碼頁選項  
- 如果您使用 bcp 命令建立格式檔案 (例如 使用 “`bcp forma`t...” )，則定序/字碼頁的相關資訊會寫入格式檔案中。   
+ 如果您建立格式檔案的方式是使用 bcp 命令 (也就是使用 “`bcp forma`t...” )，則定序/字碼頁的相關資訊會寫入格式檔案中。   
 下列範例格式檔案屬於具 5 個資料行的資料表且包含定序。  
   
 ```  
@@ -203,13 +203,13 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
   
  在 Windows 命令提示字元中，輸入下列 `bcp` 命令：  
   
-```  
+```cmd
 bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-c..xml –t, -T  
 ```  
   
  產生的格式檔案 `Department-c.xml`包含下列 XML 元素：  
   
-```  
+```xml
 <?xml version="1.0"?>  
 <BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
  <RECORD>  
@@ -242,13 +242,13 @@ bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-
   
  在 Windows 命令提示字元中，輸入下列 `bcp` 命令：  
   
-```  
+```cmd
 bcp AdventureWorks2012.HumanResources.Department format nul -x -f Department-n..xml -n -T  
 ```  
   
  產生的格式檔案 `Department-n.xml`包含下列 XML 元素：  
   
-```  
+```xml
 <?xml version="1.0"?>  
 <BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
  <RECORD>  

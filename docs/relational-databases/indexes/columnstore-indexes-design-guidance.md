@@ -15,10 +15,10 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 60272ce672c0a32738b0084ea86f8907ec7fc0a5
-ms.openlocfilehash: 57fa80162feb8a294733ef15ffaec86d11fcf677
+ms.sourcegitcommit: e3c781449a8f7a1b236508cd21b8c00ff175774f
+ms.openlocfilehash: 22b8b23b9bbee402de83a5327ea7fb8b7ec734e2
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/06/2017
+ms.lasthandoff: 09/30/2017
 
 ---
 # <a name="columnstore-indexes---design-guidance"></a>資料行存放區索引 - 設計指引
@@ -113,7 +113,7 @@ ms.lasthandoff: 09/06/2017
 
 例如，資料列存放區和資料行存放區資料表皆會使用分割區，以便：
 
-- 控制增量備份的大小。 您可以將分割區備份至個別檔案群組，然後將它們標示為唯讀。 如此一來，未來的備份就會略過唯讀檔案群組。 
+- 控制增量備份的大小。 您可以將分割區備份至不同的檔案群組，然後將它們標示為唯讀。 如此一來，未來的備份就會略過唯讀檔案群組。 
 - 藉由將較舊的分割區移至較便宜的儲存體，以節省儲存成本。 例如，您可以使用分割區切換，將分割區移至較便宜的儲存位置。
 - 藉由限制分割區的作業，以有效率地執行作業。 例如，您可以僅鎖定片段的分割區進行索引維護。
 
@@ -166,7 +166,7 @@ ms.lasthandoff: 09/06/2017
     ```sql
     CREATE CLUSTERED COLUMNSTORE INDEX ClusteredIndex_d473567f7ea04d7aafcac5364c241e09  
     ON MyFactTable  
-    WITH DROP_EXISTING = ON;  
+    WITH (DROP_EXISTING = ON);  
     ```
 
 ## <a name="related-tasks"></a>相關工作  
