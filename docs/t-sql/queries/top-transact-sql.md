@@ -113,13 +113,12 @@ ORDER BY Price ASC;
   
  以下為結果集：  
   
- `Model         Color      Price`  
-  
- `------------- ---------- -------`  
-  
- `sedan         red        10000.00`  
-  
- `convertible   blue       15000.00`  
+ ```
+ Model         Color      Price  
+ ------------- ---------- -------  
+ sedan         red        10000.00  
+ convertible   blue       15000.00
+ ```  
   
  傳回未預期的結果，因為 TOP 子句邏輯上在 ORDER BY 子句之前執行，這樣會排序運算子的結果 (在此例中為 UNION ALL)。 因此，上一個查詢會傳回任何一輛紅色汽車和任何一輛藍色汽車，然後依價格來排序該聯集的結果。 下列範例會顯示為了達到所要的結果，正確撰寫查詢的方法。  
   
@@ -141,13 +140,12 @@ FROM (SELECT TOP(1) Model, Color, Price
   
  以下為結果集：  
   
- `Model         Color      Price`  
-  
- `------------- ---------- -------`  
-  
- `sedan         red        10000.00`  
-  
- `van           blue        8000.00`  
+ ```
+ Model         Color      Price  
+ ------------- ---------- -------  
+ sedan         red        10000.00  
+ van           blue        8000.00
+ ```  
   
 ## <a name="limitations-and-restrictions"></a>限制事項  
  搭配 INSERT、UPDATE、MERGE 或 DELETE 使用 TOP 時，不會以任何順序排列參考的資料列，也不可以直接在這些陳述式中指定 ORDER BY 子句。 如果您需要使用 TOP 依有意義的時序來插入、刪除或修改資料列，TOP 必須與子選擇陳述式中指定的 ORDER BY 子句一起使用。 請參閱本主題稍後的＜範例＞一節。  

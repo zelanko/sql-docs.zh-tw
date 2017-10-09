@@ -58,27 +58,19 @@ ConvexHullAggregate ( geometry_operand )
 ## <a name="examples"></a>範例  
  下列範例會傳回資料表變數資料行中 geometry 物件集的凸殼。  
   
- `-- Setup table variable for ConvexHullAggregate example`  
-  
- `DECLARE @Geom TABLE`  
-  
- `(`  
-  
- `shape geometry,`  
-  
- `shapeType nvarchar(50)`  
-  
- `)`  
-  
- `INSERT INTO @Geom(shape,shapeType) VALUES('CURVEPOLYGON(CIRCULARSTRING(2 3, 4 1, 6 3, 4 5, 2 3))', 'Circle'),`  
-  
- `('POLYGON((1 1, 4 1, 4 5, 1 5, 1 1))', 'Rectangle');`  
-  
- `-- Perform ConvexHullAggregate on @Geom.shape column`  
-  
- `SELECT geometry::ConvexHullAggregate(shape).ToString()`  
-  
- `FROM @Geom;`  
+ ```
+ -- Setup table variable for ConvexHullAggregate example  
+ DECLARE @Geom TABLE  
+ (  
+ shape geometry,  
+ shapeType nvarchar(50)  
+ )  
+ INSERT INTO @Geom(shape,shapeType) VALUES('CURVEPOLYGON(CIRCULARSTRING(2 3, 4 1, 6 3, 4 5, 2 3))', 'Circle'),  
+ ('POLYGON((1 1, 4 1, 4 5, 1 5, 1 1))', 'Rectangle');  
+ -- Perform ConvexHullAggregate on @Geom.shape column  
+ SELECT geometry::ConvexHullAggregate(shape).ToString()  
+ FROM @Geom;
+ ```  
   
 ## <a name="see-also"></a>另請參閱  
  [擴充的靜態幾何方法](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)  

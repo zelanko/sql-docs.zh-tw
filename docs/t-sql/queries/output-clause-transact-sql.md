@@ -548,11 +548,11 @@ GO
   
  以下是 2004 年 4 月 12 日 ('`2004-04-12'`) 所產生的結果集。 請注意，`ScrapReasonIDActual` 和 `ModifiedDate` 資料行反映了觸發程序作業所產生的值，而不是 `INSERT` 陳述式所提供的值。  
   
- `ScrapReasonID  Name             ModifiedDate`  
-  
- `-------------  ---------------- -----------------------`  
-  
- `17             My scrap reason  2004-04-12 16:23:33.050`  
+ ```
+ ScrapReasonID  Name             ModifiedDate  
+ -------------  ---------------- -----------------------  
+ 17             My scrap reason  2004-04-12 16:23:33.050
+ ```  
   
 ### <a name="i-using-output-into-with-identity-and-computed-columns"></a>I. 使用 OUTPUT INTO 搭配識別和計算資料行  
  下列範例會建立 `EmployeeSales` 資料表，之後再利用含有 `INSERT` 陳述式的 `SELECT` 陳述式來擷取來源資料表中的資料，以插入幾個資料列。 `EmployeeSales` 資料表包含一個識別欄位 (`EmployeeID`) 和一個計算資料行 (`ProjectedSales`)。  

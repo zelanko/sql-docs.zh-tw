@@ -58,15 +58,13 @@ ConvexHullAggregate ( geography_operand )
 ## <a name="examples"></a>範例  
  下列範例會傳回`GeometryCollection`執行個體，其中包含一組**geography**物件。  
   
- `USE AdventureWorks2012`  
-  
- `GO`  
-  
- `SELECT geography::CollectionAggregate(SpatialLocation).ToString() AS SpatialLocation`  
-  
- `FROM Person.Address`  
-  
- `WHERE City LIKE ('Bothell')`  
+ ```
+ USE AdventureWorks2012  
+ GO  
+ SELECT geography::CollectionAggregate(SpatialLocation).ToString() AS SpatialLocation  
+ FROM Person.Address  
+ WHERE City LIKE ('Bothell')
+ ```  
   
 ## <a name="see-also"></a>另請參閱  
  [擴充的靜態地理方法](../../t-sql/spatial-geography/extended-static-geography-methods.md)  

@@ -1042,21 +1042,17 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `(1 row(s) affected)`  
-  
- `Test1Col`  
-  
- `-----------`  
-  
- `1`  
-  
- `(1 row(s) affected)`  
-  
- `Test2Col`  
-  
- `-----------`  
-  
- `2`  
+ ```
+ (1 row(s) affected) 
+ Test1Col 
+ ----------- 
+ 1 
+
+ (1 row(s) affected) 
+ Test2Col 
+ ----------- 
+ 2 
+ ```
   
  當您建立本機或全域暫存資料表時，CREATE TABLE 語法會支援 FOREIGN KEY 條件約束以外的條件約束定義。 如果在暫存資料表中指定 FOREIGN KEY 條件約束，陳述式會傳回一則說明已略過條件約束的警告訊息。 這份資料表仍會建立，但不含 FOREIGN KEY 條件約束。 FOREIGN KEY 條件約束不能參考暫存資料表。  
   

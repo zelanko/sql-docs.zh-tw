@@ -271,19 +271,15 @@ CREATE TABLE t_float(c1 float, c2 decimal (5,4));
   
  下列格式檔案使用 `SQLFLT8` 資料類型，將第二個資料欄位對應到第二個資料行：  
   
- `<?xml version="1.0"?>`  
-  
- `<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">`  
-  
- `<RECORD>`  
-  
- `<FIELD ID="1" xsi:type="CharTerm" TERMINATOR="\t" MAX_LENGTH="30"/>`  
-  
- `<FIELD ID="2" xsi:type="CharTerm" TERMINATOR="\r\n" MAX_LENGTH="30"/>  </RECORD>  <ROW>`  
-  
- `<COLUMN SOURCE="1" NAME="c1" xsi:type="SQLFLT8"/>`  
-  
- `<COLUMN SOURCE="2" NAME="c2" xsi:type="SQLFLT8"/>  </ROW> </BCPFORMAT>`  
+ ```
+ <?xml version="1.0"?> 
+ <BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> 
+ <RECORD> 
+ <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="\t" MAX_LENGTH="30"/> 
+ <FIELD ID="2" xsi:type="CharTerm" TERMINATOR="\r\n" MAX_LENGTH="30"/>  </RECORD>  <ROW> 
+ <COLUMN SOURCE="1" NAME="c1" xsi:type="SQLFLT8"/> 
+ <COLUMN SOURCE="2" NAME="c2" xsi:type="SQLFLT8"/>  </ROW> </BCPFORMAT> 
+ ```
   
  若要使用此格式檔案 (使用檔案名稱 `C:\t_floatformat-c-xml.xml`) 將測試資料匯入測試資料表，請發出下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式：  
   

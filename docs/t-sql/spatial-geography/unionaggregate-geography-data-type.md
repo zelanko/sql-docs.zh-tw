@@ -58,19 +58,15 @@ UnionAggregate ( geography_operand )
 ## <a name="examples"></a>範例  
  下列範例會執行`UnionAggregate`上一組**geography**縣 （市） 內的位置點。  
   
- `USE AdventureWorks2012`  
-  
- `GO`  
-  
- `SELECT City,`  
-  
- `geography::UnionAggregate(SpatialLocation) AS SpatialLocation`  
-  
- `FROM Person.Address`  
-  
- `WHERE PostalCode LIKE('981%')`  
-  
- `GROUP BY City;`  
+ ```
+ USE AdventureWorks2012  
+ GO  
+ SELECT City,  
+ geography::UnionAggregate(SpatialLocation) AS SpatialLocation  
+ FROM Person.Address  
+ WHERE PostalCode LIKE('981%')  
+ GROUP BY City;
+ ```  
   
 ## <a name="see-also"></a>另請參閱  
  [擴充的靜態地理方法](../../t-sql/spatial-geography/extended-static-geography-methods.md)  

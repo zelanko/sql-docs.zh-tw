@@ -201,10 +201,10 @@ ALTER ASSEMBLY assembly_name
 > [!NOTE]  
 >  您可以執行 UserDefinedDataType 範例指令碼，來建立組件 `ComplexNumber`。 如需詳細資訊，請參閱[使用者定義型別](http://msdn.microsoft.com/library/a9b75f36-d7f5-47f7-94d6-b4448c6a2191)。  
   
- `ALTER ASSEMBLY ComplexNumber`  
-  
- `FROM 'C:\Program Files\Microsoft SQL Server\130\Tools\Samples\1033\Engine\Programmability\CLR\UserDefinedDataType\CS\ComplexNumber\obj\Debug\ComplexNumber.dll'`  
-  
+ ```
+ ALTER ASSEMBLY ComplexNumber 
+ FROM 'C:\Program Files\Microsoft SQL Server\130\Tools\Samples\1033\Engine\Programmability\CLR\UserDefinedDataType\CS\ComplexNumber\obj\Debug\ComplexNumber.dll' 
+  ```
 ### <a name="b-adding-a-file-to-associate-with-an-assembly"></a>B. 加入檔案，與組件建立關聯  
  下列範例會上傳即將與組件 `Class1.cs` 建立關聯的原始程式碼檔案 `MyClass`。 這個範例假設組件 `MyClass` 已在資料庫中建立。  
   

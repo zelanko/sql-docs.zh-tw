@@ -83,9 +83,11 @@ THROW 51000, 'The record does not exist.', 1;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Msg 51000, Level 16, State 1, Line 1`  
+ ```
+ Msg 51000, Level 16, State 1, Line 1  
   
- `The record does not exist.`  
+ The record does not exist.
+ ```  
   
 ### <a name="b-using-throw-to-raise-an-exception-again"></a>B. 使用 THROW 來重新引發例外狀況  
  下列範例示範如何使用 `THROW` 陳述式，重新引發上次擲回的例外狀況。  
@@ -111,13 +113,12 @@ END CATCH;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `PRINT 'In catch block.';`  
-  
- `Msg 2627, Level 14, State 1, Line 1`  
-  
- `Violation of PRIMARY KEY constraint 'PK__TestReth__3214EC272E3BD7D3'. Cannot insert duplicate key in object 'dbo.TestRethrow'.`  
-  
- `The statement has been terminated.`  
+ ```
+ PRINT 'In catch block.';  
+ Msg 2627, Level 14, State 1, Line 1  
+ Violation of PRIMARY KEY constraint 'PK__TestReth__3214EC272E3BD7D3'. Cannot insert duplicate key in object 'dbo.TestRethrow'.  
+ The statement has been terminated.
+ ```  
   
 ### <a name="c-using-formatmessage-with-throw"></a>C. 使用 FORMATMESSAGE 搭配 THROW  
  下列範例示範如何使用 `FORMATMESSAGE` 函數搭配 `THROW` 來擲回自訂的錯誤訊息。 此範例會先使用 `sp_addmessage` 來建立使用者定義的錯誤訊息。 因為 THROW 陳述式不允許在替代參數*訊息*參數中使用而 RAISERROR，FORMATMESSAGE 函數用來傳遞錯誤訊息 60000 所預期的三個參數值。  
@@ -138,9 +139,10 @@ THROW 60000, @msg, 1;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Msg 60000, Level 16, State 1, Line 2`  
-  
- `This is a test message with one numeric parameter (500), one string parameter (First string), and another string parameter (second string).`  
+ ```
+ Msg 60000, Level 16, State 1, Line 2  
+ This is a test message with one numeric parameter (500), one string parameter (First string), and another string parameter (second string).
+ ```  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
@@ -153,9 +155,11 @@ THROW 51000, 'The record does not exist.', 1;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Msg 51000, Level 16, State 1, Line 1`  
+ ```
+ Msg 51000, Level 16, State 1, Line 1  
   
- `The record does not exist.`  
+ The record does not exist.
+ ```  
   
 ## <a name="see-also"></a>另請參閱  
  [FORMATMESSAGE &#40;TRANSACT-SQL &#41;](../../t-sql/functions/formatmessage-transact-sql.md)   

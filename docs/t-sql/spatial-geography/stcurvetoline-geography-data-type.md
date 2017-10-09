@@ -57,13 +57,12 @@ ms.lasthandoff: 09/01/2017
 ## <a name="examples"></a>範例  
  下列範例會傳回 `LineString` 執行個體，這是 `CircularString` 執行個體的多邊形近似值：  
   
- `DECLARE @g1 geography = 'CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653)';`  
-  
- `DECLARE @g2 geography;`  
-  
- `SET @g2 = @g1.STCurveToLine();`  
-  
- `SELECT @g1.STNumPoints() AS G1, @g2.STNumPoints() AS G2;`  
+```
+ DECLARE @g1 geography = 'CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653)';  
+ DECLARE @g2 geography;  
+ SET @g2 = @g1.STCurveToLine();  
+ SELECT @g1.STNumPoints() AS G1, @g2.STNumPoints() AS G2;
+ ```  
   
 ## <a name="see-also"></a>另請參閱  
  [STLength &#40; geography 資料類型 &#41;](../../t-sql/spatial-geography/stlength-geography-data-type.md)   

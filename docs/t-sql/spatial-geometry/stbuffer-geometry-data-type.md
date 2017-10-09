@@ -77,23 +77,26 @@ ms.lasthandoff: 09/01/2017
 ### <a name="a-calling-stbuffer-with-parametervalue--0-on-one-dimensional-geometry-instance"></a>A. 在一維幾何例項上，以 parameter_value < 0 呼叫 STBuffer()  
  下列範例會傳回空白 `GeometryCollection` 執行個體：  
   
- `DECLARE @g geometry= 'LINESTRING(3 4, 8 11)';`  
-  
- `SELECT @g.STBuffer(-1).ToString();`  
+```
+ DECLARE @g geometry= 'LINESTRING(3 4, 8 11)'; 
+ SELECT @g.STBuffer(-1).ToString();
+ ```  
   
 ### <a name="b-calling-stbuffer-with-parametervalue--0-on-a-polygon-instance"></a>B. 在 Polygon 執行個體上，以 parameter_value < 0 呼叫 STBuffer()  
  下列範例會傳回具有負數緩衝的 `Polygon` 執行個體：  
   
- `DECLARE @g geometry = 'POLYGON((1 1, 1 5, 5 5, 5 1, 1 1))';`  
-  
- `SELECT @g.STBuffer(-1).ToString();`  
+```
+ DECLARE @g geometry = 'POLYGON((1 1, 1 5, 5 5, 5 1, 1 1))'; 
+ SELECT @g.STBuffer(-1).ToString();
+ ```  
   
 ### <a name="c-calling-stbuffer-with-parametervalue--0-on-a-curvepolygon-instance"></a>C. 在 CurvePolygon 執行個體上，以 parameter_value < 0 呼叫 STBuffer()  
  下列範例會從 `Polygon` 執行個體傳回具有負數緩衝的 `CurvePolygon` 執行個體：  
   
- `DECLARE @g geometry = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(0 4, 4 0, 8 4), (8 4, 0 4)))';`  
-  
- `SELECT @g.STBuffer(-1).ToString();`  
+```
+ DECLARE @g geometry = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(0 4, 4 0, 8 4), (8 4, 0 4)))'; 
+ SELECT @g.STBuffer(-1).ToString();
+ ```  
   
 > [!NOTE]  
 >  傳回 `Polygon` 執行個體，而不是 `CurvePolygon` 執行個體。  要傳回`CurvePolygon`執行個體，請參閱[BufferWithCurves &#40; geometry 資料類型 &#41;](../../t-sql/spatial-geometry/bufferwithcurves-geometry-data-type.md)  
@@ -101,47 +104,52 @@ ms.lasthandoff: 09/01/2017
 ### <a name="d-calling-stbuffer-with-a-negative-parameter-value-that-returns-an-empty-instance"></a>D. 以負數參數值呼叫 STBuffer()，傳回空白執行個體  
  下列範例會顯示發生什麼事時*距離*參數等於-2 前, 一個範例。  
   
- `DECLARE @g geometry = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(0 4, 4 0, 8 4), (8 4, 0 4)))';`  
-  
- `SELECT @g.STBuffer(-2).ToString();`  
+```
+ DECLARE @g geometry = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(0 4, 4 0, 8 4), (8 4, 0 4)))'; 
+ SELECT @g.STBuffer(-2).ToString();
+ ```  
   
  這**選取**陳述式會傳回`GEOMETRYCOLLECTION EMPTY.`  
   
 ### <a name="e-calling-stbuffer-with-parametervalue--0"></a>E. 以 parameter_value = 0 呼叫 STBuffer()  
  下列範例會傳回呼叫 `geometry` 執行個體的副本：  
   
- `DECLARE @g geometry = 'LINESTRING(3 4, 8 11)';`  
-  
- `SELECT @g.STBuffer(0).ToString();`  
+```
+ DECLARE @g geometry = 'LINESTRING(3 4, 8 11)'; 
+ SELECT @g.STBuffer(0).ToString();
+ ```  
   
 ### <a name="f-calling-stbuffer-with-a-non-zero-parameter-value-that-is-extremely-small"></a>F. 以極小的非零參數值呼叫 STBuffer()  
  下列範例也會傳回呼叫 `geometry` 執行個體的副本：  
   
- `DECLARE @g geometry = 'LINESTRING(3 4, 8 11)';`  
-  
- `DECLARE @distance float = 1e-20;`  
-  
- `SELECT @g.STBuffer(@distance).ToString();`  
+```
+ DECLARE @g geometry = 'LINESTRING(3 4, 8 11)';  
+ DECLARE @distance float = 1e-20;  
+ SELECT @g.STBuffer(@distance).ToString();
+ ```  
   
 ### <a name="g-calling-stbuffer-with-parametervalue--0"></a>G. 以 parameter_value > 0 呼叫 STBuffer()  
  下列範例會傳回 `Polygon` 執行個體：  
   
- `DECLARE @g geometry= 'LINESTRING(3 4, 8 11)';`  
-  
- `SELECT @g.STBuffer(2).ToString();`  
+```
+ DECLARE @g geometry= 'LINESTRING(3 4, 8 11)'; 
+ SELECT @g.STBuffer(2).ToString();
+ ```  
   
 ### <a name="h-calling-stbuffer-with-a-string-parameter-value"></a>H. 以字串參數值呼叫 STBuffer()  
  下列範例會傳回與上述範例相同的 `Polygon` 執行個體，但傳遞字串參數至方法：  
   
- `DECLARE @g geometry= 'LINESTRING(3 4, 8 11)';`  
-  
- `SELECT @g.STBuffer('2').ToString();`  
+```
+ DECLARE @g geometry= 'LINESTRING(3 4, 8 11)'; 
+ SELECT @g.STBuffer('2').ToString();
+ ```  
   
  下列範例會擲回錯誤：  
   
- `DECLARE @g geometry = 'LINESTRING(3 4, 8 11)';`  
-  
- `SELECT @g.STBuffer('a').ToString();`  
+```
+ DECLARE @g geometry = 'LINESTRING(3 4, 8 11)'; 
+ SELECT @g.STBuffer('a').ToString();
+ ```  
   
 > [!NOTE]  
 >  上述兩個範例傳遞字串常值至 `STBuffer()`。  第一個範例可行，因為字串常值可轉換為數值。 但是，第二個範例會擲回 `ArgumentException`。  
@@ -149,13 +157,12 @@ ms.lasthandoff: 09/01/2017
 ### <a name="i-calling-stbuffer-on-a-multipoint-instance"></a>I. 在 MultiPoint 執行個體上呼叫 STBuffer()  
  下列範例會傳回兩個 `MultiPolygon` 執行個體和一個 `Polygon` 執行個體：  
   
- `DECLARE @g geometry = 'MULTIPOINT((1 1),(1 4))';`  
-  
- `SELECT @g.STBuffer(1).ToString();`  
-  
- `SELECT @g.STBuffer(1.5).ToString();`  
-  
- `SELECT @g.STBuffer(1.6).ToString();`  
+```
+ DECLARE @g geometry = 'MULTIPOINT((1 1),(1 4))'; 
+ SELECT @g.STBuffer(1).ToString(); 
+ SELECT @g.STBuffer(1.5).ToString(); 
+ SELECT @g.STBuffer(1.6).ToString();
+ ```  
   
  前兩個**選取**陳述式會傳回`MultiPolygon`執行個體，因為參數*距離*小於或等於 1/2 的距離兩個點 (1 1) 和 (1 4)。 第三個**選取**陳述式會傳回`Polygon`執行個體，因為緩衝的執行個體的兩個點 (1 1) 和 (1 4) 重疊。  
   
