@@ -38,7 +38,7 @@ ms.lasthandoff: 09/01/2017
   
  **案例 1：未啟動服務**  
   
- 未啟動 SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) 執行個體。 過期的密碼使伺服器停止執行。 如需有關變更密碼的詳細資訊，請參閱＜ [Configure Power Pivot Service Accounts](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md) ＞和＜ [Start or Stop a Power Pivot for SharePoint Server](../../analysis-services/power-pivot-sharepoint/start-or-stop-a-power-pivot-for-sharepoint-server.md)＞。  
+ 未啟動 SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) 執行個體。 過期的密碼使伺服器停止執行。 如需有關變更密碼的詳細資訊，請參閱＜ [設定 Power Pivot 服務帳戶](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md) ＞和＜ [啟動或停止 Power Pivot for SharePoint Server](../../analysis-services/power-pivot-sharepoint/start-or-stop-a-power-pivot-for-sharepoint-server.md)＞。  
   
  **案例 2a：在伺服器上開啟舊版活頁簿**  
   

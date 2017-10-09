@@ -9,3 +9,10 @@
 # [ODBC Driver for SQL Server 中可感知驅動程式的連接共用](driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md)
 
 # [非同步執行 (通知方法) 範例](asynchronous-execution-notification-method-sample.md)
+
+# 說明主題
+## [資料來源精靈畫面 1](dsn-wizard-1.md)
+## [資料來源精靈畫面 2](dsn-wizard-2.md)
+## [資料來源精靈畫面 3](dsn-wizard-3.md)
+## [資料來源精靈畫面 4](dsn-wizard-4.md)
+## [SQL Server 登入對話方塊](sql-server-login-dialog.md)

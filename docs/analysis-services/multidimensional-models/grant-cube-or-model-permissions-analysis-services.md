@@ -64,7 +64,7 @@ ms.lasthandoff: 09/01/2017
   
 #### <a name="step-3-set-cube-permissions"></a>步驟 3：設定 Cube 權限  
   
-1.  在 [Cube] 窗格中，選取 Cube，然後按一下 [讀取] 或 [讀取/寫入] 存取權。  
+1.  在 Cube 窗格中，選取 Cube，然後按一下讀取 或 讀取/寫入 存取權。  
   
      [讀取] 存取權就足以執行大部分作業。 [讀取/寫入] 僅適用於回寫，不適用於處理。 如需此功能的詳細資訊，請參閱[設定分割區回寫](../../analysis-services/multidimensional-models/set-partition-writeback.md)。  
   

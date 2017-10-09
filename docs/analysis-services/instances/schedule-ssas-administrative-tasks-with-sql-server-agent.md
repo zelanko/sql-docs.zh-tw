@@ -35,7 +35,7 @@ ms.lasthandoff: 09/01/2017
   
  根據預設，作業會在此服務帳戶底下執行。 在[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]，SQL Server Agent 的預設帳戶是 NT Service\SQLAgent$\<執行個體名稱 >。 若要執行備份或處理工作，此帳戶必須是 Analysis Services 執行個體的系統管理員。 如需詳細資訊，請參閱 [將伺服器系統管理員權限授與 Analysis Services 執行個體](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md)。  
   
- 您也應該擁有要使用的測試資料庫。 您可以部署 AdventureWorks 多維度範例資料庫或是要用於此逐步解說之 Analysis Services 多維度教學課程中的專案。 如需詳細資訊，請參閱 [Install Sample Data and Projects for the Analysis Services Multidimensional Modeling Tutorial](../../analysis-services/install-sample-data-and-projects.md)。  
+ 您也應該擁有要使用的測試資料庫。 您可以部署 AdventureWorks 多維度範例資料庫或是要用於此逐步解說之 Analysis Services 多維度教學課程中的專案。 如需詳細資訊，請參閱 [安裝 Analysis Services 多維度模型化教學課程的範例資料和專案](../../analysis-services/install-sample-data-and-projects.md)。  
   
 ## <a name="example-1-processing-a-dimension-in-a-scheduled-task"></a>範例 1：在排程工作中處理維度  
  這則範例會示範如何建立和排程處理維度的作業。  
