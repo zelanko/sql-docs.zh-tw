@@ -13,7 +13,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: 71ca2fac0a6b9f087f9d434c5a701f5656889b9e
 ms.openlocfilehash: 000325a2e2c53e36f7a74a725962b8dd3be98988
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="homepage-for-client-programming-to-microsoft-sql-server"></a>用戶端程式設計與 Microsoft SQL Server 首頁
@@ -52,9 +52,9 @@ ms.lasthandoff: 09/13/2017
 
 | &nbsp; | &nbsp; | &nbsp; |
 | :-- | :-- | :-- |
-| &nbsp;[![C# 標誌][映像-ref-320 位 csharp]](#an-110-ado-net-docu) | &nbsp;[![ORM Entity Framework 中，.NET framework][映像-ref-333-ef]](#an-116-csharp-ef-orm) | &nbsp;[![Java 標誌][映像-ref-330-java]](#an-130-jdbc-docu) |
-| &nbsp;[![Node.js 標誌][映像-ref-340-節點]](#an-140-node-js-docu) | &nbsp; [**`ODBC for C++`**](#an-160-odbc-cpp-docu) | &nbsp;[![PHP 標誌][映像-ref-360-php]](#an-170-php-docu) |
-| &nbsp;[![Python 標誌][映像-ref-370-python]](#an-180-python-docu) | &nbsp;[![拼音標誌][映像-ref-380-ruby]](#an-190-ruby-docu) | &nbsp; ... |
+| &nbsp;[ ![C# 標誌][image-ref-320-csharp]](#an-110-ado-net-docu) | &nbsp;[ ![ORM Entity Framework 的.NET Framework][image-ref-333-ef]](#an-116-csharp-ef-orm) | &nbsp;[ ![Java 標誌][image-ref-330-java]](#an-130-jdbc-docu) |
+| &nbsp;[ ![Node.js 標誌][image-ref-340-node]](#an-140-node-js-docu) | &nbsp; [**`ODBC for C++`**](#an-160-odbc-cpp-docu) | &nbsp;[ ![PHP 標誌][image-ref-360-php]](#an-170-php-docu) |
+| &nbsp;[ ![Python 標誌][image-ref-370-python]](#an-180-python-docu) | &nbsp;[![拼音標誌][image-ref-380-ruby]](#an-190-ruby-docu) | &nbsp; ... |
 | &nbsp; | &nbsp; | <br />|
 
 
@@ -152,7 +152,7 @@ JDBC 文件包含下列主要區域：
 | :-- | :-- |
 | [Java 資料庫連線 (JDBC)](./jdbc/index.md) | JDBC 文件的根節點。 |
 | [參考](./jdbc/reference/index.md) | 介面、 類別和成員。 |
-| [程式設計手冊 JDBC SQL 驅動程式](./jdbc/programming-guide-for-jdbc-sql-driver.md) | 組態資訊，以及程式碼範例。 |
+| [JDBC SQL Driver 程式設計指南](./jdbc/programming-guide-for-jdbc-sql-driver.md) | 組態資訊，以及程式碼範例。 |
 | &nbsp; | <br /> |
 
 
