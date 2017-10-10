@@ -14,7 +14,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
 ms.openlocfilehash: 2d8ba0dcd52de143cd935eab6e8bba95e924409d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="use-visual-studio-code-to-create-and-run-transact-sql-scripts-for-sql-server"></a>使用 Visual Studio 程式碼來建立和執行 SQL Server 的 TRANSACT-SQL 指令碼
@@ -23,7 +23,7 @@ ms.lasthandoff: 08/28/2017
 
 本主題示範如何使用**mssql** Visual Studio 程式碼 （VS 程式碼），開發 SQL Server 資料庫的擴充功能。
 
-Visual Studio 程式碼是適用於 Linux、 macOS 和支援擴充功能的 Windows 圖形化的程式碼編輯器。 [**Mssql** VS Code 擴充功能] 可讓您連接到 SQL Server，使用 TRANSACT-SQL (T-SQL)，查詢和檢視結果。
+Visual Studio 程式碼是適用於 Linux、 macOS 和支援擴充功能的 Windows 圖形化的程式碼編輯器。 [ **Mssql** VS Code 擴充功能]可讓您連接到 SQL Server，使用 TRANSACT-SQL (T-SQL)，查詢和檢視結果。
 
 ## <a name="install-vs-code"></a>安裝 Vscode
 1. 如果尚未安裝 VS Code[下載並安裝 VS Code]您的電腦上。
@@ -256,7 +256,7 @@ Visual Studio 程式碼是適用於 Linux、 macOS 和支援擴充功能的 Wind
 
 如需有關使用 VS 程式碼的詳細資訊，請參閱[Visual Studio 程式碼文件](https://code.visualstudio.com/docs)。
 
-[* * mssql * * VS Code 擴充功能]:https://aka.ms/mssql-marketplace
+[* * mssql * * 的 VS Code 擴充功能]:https://aka.ms/mssql-marketplace
 [下載並安裝 VS Code]:https://code.visualstudio.com/Download
 [.Net 核心指示]:https://www.microsoft.com/net/core
 [管理連線設定檔]:https://github.com/Microsoft/vscode-mssql/wiki/manage-connection-profiles
