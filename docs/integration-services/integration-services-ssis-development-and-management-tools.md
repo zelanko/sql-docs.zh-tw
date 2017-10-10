@@ -23,14 +23,14 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bae8b462da5b34b7eb5200eac3d23e1122e9bbc3
+ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
+ms.openlocfilehash: b0b765912f6cd4e6128453918d2a30b3ef1e1a63
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="integration-services-ssis-development-and-management-tools"></a>Integration Services (SSIS) 開發和管理工具
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包含兩個可搭配 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]使用的 Studio：  
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]包含兩個可使用封裝：  
   
 -   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 可用於開發商務解決方案所需的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝。 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 會提供 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案，讓您在其中建立封裝。  
   

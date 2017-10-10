@@ -9,16 +9,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: 656e62f36446db4ef5b232129130a0253d2aebdf
-ms.openlocfilehash: a1df574e0436a9fa81e714dfdc21bcbd43c0bda8
+ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
+ms.openlocfilehash: 0f1c7733f0ce6b132c209961a1fd12da80cbd282
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/22/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="deploy-an-ssis-project-from-the-command-prompt-with-isdeploymentwizardexe"></a>SSIS 專案部署從 ISDeploymentWizard.exe 在命令提示字元
 本快速入門教學課程示範如何執行 Integration Services 部署精靈，以部署的 SSIS 專案，從命令提示字元`ISDeploymentWizard.exe`。
 
-如需 Integration Services 部署精靈的詳細資訊，請參閱[Integration Services 部署精靈](/sql/integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md#integration-services-deployment-wizard)。
+如需 Integration Services 部署精靈的詳細資訊，請參閱[Integration Services 部署精靈](packages/deploy-integration-services-ssis-projects-and-packages.md#integration-services-deployment-wizard)。
 
 ## <a name="start-the-integration-services-deployment-wizard"></a>啟動 Integration Services 部署精靈
 1. 開啟 [命令提示字元] 視窗。

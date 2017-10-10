@@ -1,7 +1,7 @@
 ---
 title: "導出資料行 (SSAS 表格式) |Microsoft 文件"
 ms.custom: 
-ms.date: 05/22/2017
+ms.date: 10/03/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -17,17 +17,15 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5155ce65d240db9bec2f01ada5dcba61c9926037
+ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
+ms.openlocfilehash: 3c36cd3b55617c7ca6c20c244a9488227a2f6ff5
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="calculated-columns"></a>導出資料行
   導出資料行，在表格式模型中，可讓您將新資料加入至模型。 您可以建立定義資料行之資料列層級值的 DAX 公式，而不是將值貼上或匯入至資料行中。 然後就可以像是其他任何資料行一樣，在報表、樞紐分析表或樞紐分析圖中使用導出資料行。  
-  
-> [!NOTE]  
->  在 DirectQuery 模式下的表格式模型不支援導出資料行。 如需詳細資訊，請參閱[DirectQuery 模式](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)。  
+ 
   
   
 ##  <a name="bkmk_understanding"></a> 優點  
@@ -49,7 +47,7 @@ ms.lasthandoff: 09/01/2017
  此公式從 StartDate 資料行中擷取月份。 接著再計算資料表中每個資料列的月底值。 第二個參數是指定在 StartDate 當月之前或之後的月數，本例為 0 即表示同一個月份。 例如，若 StartDate 資料行的值為 6/1/2001，則導出資料行的值將是 6/30/2001。  
   
 ##  <a name="bkmk_naming"></a> Naming a calculated column  
- 根據預設，新的導出資料行會加入至資料表中其他資料行的右邊，而且將自動為這類資料行指派預設名稱 **CalculatedColumn1**、 **CalculatedColumn2**，依此類推。 您也可以在資料行上按一下滑鼠右鍵，然後按一下 [插入資料行]，在兩個現有的資料行之間建立新資料行。 您可以按一下再拖曳，來重新排列相同資料表中的資料行，也可以在建立資料行之後，重新命名資料行；但是，您應該注意下列有關變更導出資料行的限制：  
+ 根據預設，新的導出資料行會加入至資料表中其他資料行的右邊，而且將自動為這類資料行指派預設名稱 **CalculatedColumn1**、 **CalculatedColumn2**，依此類推。 您也可以在資料行上按一下滑鼠右鍵，然後按一下插入資料行，在兩個現有的資料行之間建立新資料行。 您可以按一下再拖曳，來重新排列相同資料表中的資料行，也可以在建立資料行之後，重新命名資料行；但是，您應該注意下列有關變更導出資料行的限制：  
   
 -   每個資料行名稱在資料表中都必須是唯一的。  
   
@@ -86,3 +84,4 @@ ms.lasthandoff: 09/01/2017
  [計算](../../analysis-services/tabular-models/calculations-ssas-tabular.md)  
   
   
+

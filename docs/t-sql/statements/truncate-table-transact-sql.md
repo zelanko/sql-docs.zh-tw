@@ -29,10 +29,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7ee541357482633787726addb17434dbd59b82d9
+ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
+ms.openlocfilehash: 1d393c67c8489765aa92c861bc28c8e4d0e2eea4
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="truncate-table-transact-sql"></a>TRUNCATE TABLE (Transact-SQL)
@@ -122,7 +122,13 @@ TRUNCATE TABLE [ { database_name . [ schema_name ] . | schema_name . ] table_nam
   
  如果資料表含有一個或多個這些特性，請改用 DELETE 陳述式。  
   
- TRUNCATE TABLE 無法啟動觸發程序，因為作業不會記錄個別的資料列刪除動作。 如需詳細資訊，請參閱 [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)。  
+ TRUNCATE TABLE 無法啟動觸發程序，因為作業不會記錄個別的資料列刪除動作。 如需詳細資訊，請參閱 [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)。 
+ 
+ 在[!INCLUDE[sssdwfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[sspdw](../../includes/sspdw-md.md)]:
+
+- TRUNCATE TABLE 解釋陳述式內不允許。
+
+- TRUNCATE TABLE 無法執行交易內。
   
 ## <a name="truncating-large-tables"></a>截斷大型資料表  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]能夠卸除或截斷擁有超過 128 個範圍，而不會卸除所需的所有範圍中保持同步鎖定的資料表。  

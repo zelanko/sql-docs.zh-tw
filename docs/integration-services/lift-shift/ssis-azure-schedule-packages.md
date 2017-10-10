@@ -9,10 +9,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: dbe6f832d4af55ddd15e12fba17a4da490fe19ae
-ms.openlocfilehash: 7efd6f635391afba3133b508fadeeab1132273c0
+ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
+ms.openlocfilehash: a3ecfce9a6adac332b72033955ba51271ed8197b
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="schedule-the-execution-of-an-ssis-package-on-azure"></a>排程的 SSIS 封裝在 Azure 上執行
@@ -58,13 +58,13 @@ ms.lasthandoff: 09/25/2017
 
 ## <a name="elastic"></a>排程 SQL Database 彈性工作的封裝
 
-如需在 SQL Database 彈性作業的詳細資訊，請參閱[管理向外延展雲端資料庫](/azure/sql-database/sql-database-elastic-jobs-overview.md)。
+如需在 SQL Database 彈性作業的詳細資訊，請參閱[管理向外延展雲端資料庫](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-overview)。
 
 ### <a name="prerequisites"></a>必要條件
 
 您可以使用彈性的作業來排程儲存在 Azure SQL Database 伺服器上的 SSISDB 目錄資料庫的 SSIS 封裝之前，您必須執行下列動作：
 
-1.  安裝和設定的彈性資料庫工作元件。 如需詳細資訊，請參閱[安裝彈性資料庫工作概觀](/azure/sql-database/sql-database-elastic-jobs-service-installation.md)。
+1.  安裝和設定的彈性資料庫工作元件。 如需詳細資訊，請參閱[安裝彈性資料庫工作概觀](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-service-installation)。
 
 2. 建立工作可用來將命令傳送至 SSIS 目錄資料庫的資料庫範圍認證。 如需詳細資訊，請參閱[CREATE DATABASE SCOPED CREDENTIAL (TRANSACT-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)。
 
@@ -110,7 +110,7 @@ EXEC jobs.sp_update_job @job_name='ExecutePackageJob', @enabled=1,
 3.  建立輸出資料集的磁碟機的排程。
 4.  建立 Data Factory 管線用來執行 SSIS 封裝的 SQL Server 預存程序活動。
 
-本節提供這些步驟的概觀。 完整的 Data Factory 教學課程已超出本文的範圍。 如需詳細資訊，請參閱[SQL Server 預存程序活動](/azure/data-factory/data-factory-stored-proc-activity.md)。
+本節提供這些步驟的概觀。 完整的 Data Factory 教學課程已超出本文的範圍。 如需詳細資訊，請參閱[SQL Server 預存程序活動](https://docs.microsoft.com/en-us/azure/data-factory/data-factory-stored-proc-activity)。
 
 ### <a name="created-a-linked-service-for-the-sql-database-that-hosts-ssisdb"></a>建立連結的服務，SQL database 主控 SSISDB
 連結的服務可讓連接到 SSISDB 的 Data Factory。
@@ -221,4 +221,4 @@ GO
 ## <a name="next-steps"></a>後續的步驟
 如需 SQL Server Agent 的詳細資訊，請參閱[封裝的 SQL Server Agent 作業](../packages/sql-server-agent-jobs-for-packages.md)。
 
-如需在 SQL Database 彈性作業的詳細資訊，請參閱[管理向外延展雲端資料庫](/azure/sql-database/sql-database-elastic-jobs-overview.md)。
+如需在 SQL Database 彈性作業的詳細資訊，請參閱[管理向外延展雲端資料庫](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-overview)。

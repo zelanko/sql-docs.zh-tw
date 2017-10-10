@@ -1,6 +1,6 @@
 ---
 title: "拿起，然後移至雲端的 SQL Server Integration Services 工作負載 |Microsoft 文件"
-ms.date: 09/28/2017
+ms.date: 10/09/2017
 ms.topic: article
 ms.prod: sql-server-2017
 ms.technology:
@@ -9,10 +9,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: e76675099ab290d29231d434eb74e92b613185b7
-ms.openlocfilehash: a3693b84ed02583cd47921fbfda84c7df9559b68
+ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
+ms.openlocfilehash: 85ab11747276f0c6c58b13cd409df3e5774915ae
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/29/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>拿起，然後移至雲端的 SQL Server Integration Services 工作負載
@@ -46,12 +46,15 @@ Azure Data Factory 會裝載在 Azure 上的 SSIS 封裝的執行階段引擎。
 
 您只需要佈建 SSIS IR 一次。 之後，您可以使用熟悉的工具，例如 SQL Server Data Tools (SSDT) 和 SQL Server Management Studio (SSMS) 來部署、 設定、 執行、 監視、 排程及管理封裝。
 
-Data Factory 也支援其他類型的整合執行階段。 若要了解有關 SSIS IR 和整合執行階段的其他類型的詳細資訊，請參閱[Azure Data Factory 中的整合執行階段](/azure/data-factory/concepts-integration-runtime.md)。
+> [!NOTE]
+> 這個公用預覽期間，Azure SSIS 整合執行階段功能僅適用於美國東部和北部歐洲地區。
+
+Data Factory 也支援其他類型的整合執行階段。 若要了解有關 SSIS IR 和整合執行階段的其他類型的詳細資訊，請參閱[Azure Data Factory 中的整合執行階段](https://docs.microsoft.com/en-us/azure/data-factory/concepts-integration-runtime)。
 
 ## <a name="prerequisites"></a>必要條件
 本主題中所述的功能需要 SQL Server Data Tools (SSDT) 版本 17.2 或更新版本，但不是需要 SQL Server 2017 或 SQL Server 2016。 當您將封裝部署至 Azure 時，套件部署精靈 」 一律為最新的封裝格式升級的封裝。
 
-如需在 Azure 中的必要條件的詳細資訊，請參閱[增益及 shift SQL Server Integration Services (SSIS) 封裝至 Azure](/azure/data-factory/quickstart-lift-shift-ssis-packages-powershell.md)。
+如需在 Azure 中的必要條件的詳細資訊，請參閱[增益及 shift SQL Server Integration Services (SSIS) 封裝至 Azure](https://docs.microsoft.com/en-us/azure/data-factory/tutorial-deploy-ssis-packages-azure)。
 
 ## <a name="ssis-features-on-azure"></a>在 Azure 上的 SSIS 功能
 
@@ -68,7 +71,7 @@ Data Factory 也支援其他類型的整合執行階段。 若要了解有關 SS
 ## <a name="common-tasks"></a>一般工作
 
 ### <a name="provision"></a>佈建
-您可以部署，並在 Azure 中執行 SSIS 封裝之前，您必須佈建 SSISDB 目錄資料庫和 Azure SSIS 整合執行階段。 後續的佈建這篇文章中的步驟：[增益及 shift SQL Server Integration Services (SSIS) 封裝至 Azure](/azure/data-factory/quickstart-lift-shift-ssis-packages-powershell.md)。
+您可以部署，並在 Azure 中執行 SSIS 封裝之前，您必須佈建 SSISDB 目錄資料庫和 Azure SSIS 整合執行階段。 後續的佈建這篇文章中的步驟：[增益及 shift SQL Server Integration Services (SSIS) 封裝至 Azure](https://docs.microsoft.com/en-us/azure/data-factory/tutorial-deploy-ssis-packages-azure)。
 
 ### <a name="deploy-and-run-packages"></a>部署和執行封裝
 若要將專案部署和 SQL Database 上執行封裝，您可以使用數個熟悉的工具和指令碼選項的其中一個：
@@ -92,6 +95,6 @@ Data Factory 也支援其他類型的整合執行階段。 若要了解有關 SS
 
 ## <a name="next-steps"></a>後續的步驟
 若要開始使用 Azure 上的 SSIS 工作負載，請參閱下列文章：
--   [拿起，然後移至 Azure 的 SQL Server Integration Services (SSIS) 封裝](/azure/data-factory/quickstart-lift-shift-ssis-packages-powershell.md)
+-   [拿起，然後移至 Azure 的 SQL Server Integration Services (SSIS) 封裝](https://docs.microsoft.com/en-us/azure/data-factory/tutorial-deploy-ssis-packages-azure)
 -   [部署、 執行和監視 Azure 上的 SSIS 封裝](ssis-azure-deploy-run-monitor-tutorial.md)
 

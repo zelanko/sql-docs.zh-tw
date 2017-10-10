@@ -2,7 +2,7 @@
 title: "Power BI 報表伺服器整合 （組態管理員） |Microsoft 文件"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 08/17/2017
+ms.date: 10/05/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -14,16 +14,14 @@ f1_keywords:
 - pbi
 - power bi
 - power bi integration
-ms.assetid: 902b7c31-7399-4855-90f2-42f89d847fff
-caps.latest.revision: 22
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 3d39c8851c43adba12102f7d2440ae55e8216e1e
+ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
+ms.openlocfilehash: c6f8c9440a6229726c655dae42ea7ab955e35f54
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 
@@ -33,13 +31,11 @@ ms.lasthandoff: 08/17/2017
 
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員中的 [Power BI 整合] 頁面是用來向所需的 Azure Active Directory (AD) 受管理租用戶註冊報表伺服器，以允許報表伺服器的使用者將支援的報表項目釘選到 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 儀表板。 如需您可以釘選的支援項目清單，請參閱 [將 Reporting Services 項目釘選到 Power BI 儀表板](../../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)。
 
-![rs_powerbi_icon](../../reporting-services/media/ssrs-powerbi-icon.png "rs_powerbi_icon")
-
 ##  <a name="bkmk_requirements"></a> Power BI 整合的需求
 
 除了使用中的網際網路連線，您還可以瀏覽至 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 服務，以下是完成 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)]整合的需求。
 
-- **Azure Active Directory：** 貴組織必須使用 Azure Active Directory，為 Azure 服務和 Web 應用程式提供目錄和身分識別管理。 如需詳細資訊，請參閱 [什麼是 Azure Active Directory？](https://azure.microsoft.com/en-us/documentation/articles/active-directory-whatis/)
+- **Azure Active Directory：** 貴組織必須使用 Azure Active Directory，為 Azure 服務和 Web 應用程式提供目錄和身分識別管理。 如需詳細資訊，請參閱[什麼是 Azure Active Directory？](https://azure.microsoft.com/documentation/articles/active-directory-whatis/)
 
 - **受管理的租用戶︰** 您要在其中釘選報表項目的 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 儀表板必須是 Azure AD 受管理租用戶的一部分。  貴組織首次訂閱如 Office 365 和 Microsoft Intune 等 Azure 服務時，受管理的租用戶便會自動建立。   目前不支援病毒式租用戶。  如需詳細資訊，請參閱 [什麼是 Azure AD 目錄？](https://msdn.microsoft.com/library/azure/jj573650.aspx#BKMK_WhatIsAnAzureADTenant)中的＜什麼是 Azure AD 租用戶＞和＜如何取得 Azure AD 目錄＞二節。
 
@@ -53,7 +49,7 @@ ms.lasthandoff: 08/17/2017
 
 如需有關如何儲存認證，請參閱 > 一節 「 設定預存認證的報表特定資料來源 」 中[Reporting Services 資料來源中儲存的認證](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)。
 
-系統管理員可以檢閱  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 記錄檔以取得詳細資訊。  其會看到與下列文字類似的訊息。 ![請注意](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "注意")檢閱及監視的好方法[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]記錄檔是使用[!INCLUDE[msCoName](../../includes/msconame-md.md)]Power Query。  如需詳細資訊和短片，請參閱 [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)。
+系統管理員可以檢閱  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 記錄檔以取得詳細資訊。  其會看到與下列文字類似的訊息。 將 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Power Query 用於檔案是檢閱及監視 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 記錄檔的好方法。  如需詳細資訊和短片，請參閱 [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)。
 
     subscription!WindowsService_1!1458!09/24/2015-00:09:27:: e ERROR: PowerBI Delivery error: dashboard: IT Spend Analysis Sample, visual: Chart2, error: The current action cannot be completed. The user data source credentials do not meet the requirements to run this report or shared dataset. Either the user data source credentials are not stored in the report server database, or the user data source is configured not to require credentials but the unattended execution account is not specified.
 
@@ -65,15 +61,13 @@ ms.lasthandoff: 08/17/2017
 
 1. 選取 [ [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 整合] 頁面。
 
-     ![rs_powerbi_integration](../../reporting-services/install-windows/media/ssrs-powerbi-integration.png "rs_powerbi_integration")
-
 2. 選取 [向 Power BI 註冊]。
 
 3. 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 登入對話方塊中，輸入您用來登入 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)]的認證。
 
 4. 註冊完成之後， **Power BI 註冊詳細資料**區段將記下 Azure 租用戶識別碼和重新導向 URL。  在 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 儀表板登入和通訊過程中會使用這些 URL，來向後與已註冊的報表伺服器通訊。
 
-5. ![請注意](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "注意")選取**複製**按鈕**結果**視窗複製到 Windows 剪貼簿的註冊詳細資料，以便您加以儲存供日後參考。
+5. 在 [結果] 視窗中選取 [複製] 按鈕，將註冊詳細資料複製到 Windows 剪貼簿，以便您加以儲存供日後參考。
 
 ##  <a name="bkmk_unregister"></a> 取消註冊 Power BI
 
@@ -127,7 +121,7 @@ ms.lasthandoff: 08/17/2017
 
 1. 使用者在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 中預覽報表，並首次按一下以從 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]釘選報表項目。
 
-2. 系統會將他們重新導向至 Azure AD 的登入頁面。 使用者也可以從[!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] [我的設定] 頁面登入。 當使用者登入 Azure 受管理的租用戶時，其 Azure 帳戶與 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 權限之間會建立關聯性。  如需詳細資訊，請參閱 [Power BI 整合的我的設定 &#40;入口網站&#41;](http://msdn.microsoft.com/en-us/85c2fac7-80bf-45b7-8654-764b5f5231f5)。
+2. 系統會將他們重新導向至 Azure AD 的登入頁面。 使用者也可以從[!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] [我的設定] 頁面登入。 當使用者登入 Azure 受管理的租用戶時，其 Azure 帳戶與 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 權限之間會建立關聯性。  如需詳細資訊，請參閱 [Power BI 整合的我的設定 &#40;入口網站&#41;](http://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)。
 
 3. 使用者安全性權杖會傳回到報表伺服器。
 
@@ -139,7 +133,7 @@ ms.lasthandoff: 08/17/2017
 
 7. 建立 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 訂用帳戶，以管理儀表板磚上報表項目排定的重新整理。 訂閱會採用使用者登入時所建立的安全性權杖。
 
-     **注意︰**  權杖的期限為 **90 天**，使用者需在該期限過後再次登入以建立新的使用者權杖。 權杖到期時，已釘選的磚仍會顯示在儀表板上，但資料不會再重新整理。  為釘選的項目所使用的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 訂閱會發生錯誤，直到建立新的使用者權杖為止。 請參閱 [Power BI 整合的我的設定 &#40;入口網站&#41;](http://msdn.microsoft.com/en-us/85c2fac7-80bf-45b7-8654-764b5f5231f5)。 以取得詳細資訊。
+     權杖的期限為**90 天**之後哪些使用者需要登入一次，以建立新的使用者權杖。 權杖到期時，已釘選的磚仍會顯示在儀表板上，但資料不會再重新整理。  為釘選的項目所使用的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 訂閱會發生錯誤，直到建立新的使用者權杖為止。 請參閱[我的設定，Power BI 整合 &#40; 入口網站 &#41;](http://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)。 以取得詳細資訊。
 
 使用者再次釘選項目時，會略過步驟 1-4，改為從 ReportServer 資料庫中擷取應用程式識別碼與 URL，然後接續執行步驟 5。
 
@@ -163,7 +157,7 @@ ms.lasthandoff: 08/17/2017
 
 ## <a name="next-steps"></a>後續的步驟
 
-[Power BI 整合的我的設定](http://msdn.microsoft.com/en-us/85c2fac7-80bf-45b7-8654-764b5f5231f5)  
+[Power BI 整合的我的設定](http://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)  
 [將 Reporting Services 項目釘選到 Power BI 儀表板](../../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)   
 [Power BI 的儀表板](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)  
 

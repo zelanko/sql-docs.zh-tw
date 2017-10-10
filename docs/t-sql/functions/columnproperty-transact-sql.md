@@ -24,10 +24,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: bc9d610cf1c2ee7163f0de53e06a609ba7765ed0
+ms.sourcegitcommit: 80c1228faeaaa4012afc0fd27992a2f5cf389f6e
+ms.openlocfilehash: c6c2af8d231f03c40ee87d3468977c3b66cbeeb4
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/05/2017
 
 ---
 # <a name="columnproperty-transact-sql"></a>COLUMNPROPERTY (Transact-SQL)
@@ -104,15 +104,15 @@ GO
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`Column Length`
-  
-------------\-
-  
- `50`  
+```
+Column Length
+-------------
+50
+```  
   
 ## <a name="see-also"></a>另請參閱
 [中繼資料函數 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)  
-ms.date:"07/24/2017" [TYPEPROPERTY &#40;TRANSACT-SQL &#41;](../../t-sql/functions/typeproperty-transact-sql.md)
+[TYPEPROPERTY &#40;TRANSACT-SQL &#41;](../../t-sql/functions/typeproperty-transact-sql.md)
   
   
 

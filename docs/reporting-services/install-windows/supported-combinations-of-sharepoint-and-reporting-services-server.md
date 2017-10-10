@@ -1,5 +1,5 @@
 ---
-title: "支援的 SharePoint 與 Reporting Services 伺服器組合 |Microsoft 文件"
+title: "支援的 SharePoint 與 Reporting Services 的伺服器組合 |Microsoft 文件"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 07/01/2017
@@ -19,15 +19,15 @@ caps.latest.revision: 39
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: 507c09d09f22f8326898b557997bc109785f30c0
+ms.translationtype: MT
+ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
+ms.openlocfilehash: b9fc7191c5ebb97cca0596b40e7db149d8293fd2
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 
-# <a name="supported-combinations-of-sharepoint-and-reporting-services-server"></a>支援的 SharePoint 與 Reporting Services 伺服器組合
+# <a name="supported-combinations-of-sharepoint-and-reporting-services-server"></a>支援的 SharePoint 與 Reporting Services 的伺服器組合
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../../includes/ssrs-appliesto-not-pbirs.md)]
 
@@ -66,7 +66,7 @@ ms.lasthandoff: 08/09/2017
 
  如需詳細資訊，請參閱 [尋找適用於 SharePoint 產品之 Reporting Services 增益集的位置](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)。  
 
- **其他注意事項：**
+ **其他考量：**
 
 - 請務必升級伺服器陣列內的所有 SharePoint 伺服器。 這包括應用程式和 Web 前端伺服器。
 

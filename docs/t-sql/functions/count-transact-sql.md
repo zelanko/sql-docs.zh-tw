@@ -27,10 +27,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6750b73e1b6833c9cb80c69d758351d961990f7a
+ms.sourcegitcommit: 80c1228faeaaa4012afc0fd27992a2f5cf389f6e
+ms.openlocfilehash: e2d11d2cc57d275e952ff371ddf99c34dcae323d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/05/2017
 
 ---
 # <a name="count-transact-sql"></a>COUNT (Transact-SQL)
@@ -106,11 +106,12 @@ GO
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`-----------`
+```
+-----------
+67  
   
- `67`  
-  
-`(1 row(s) affected)`
+(1 row(s) affected)
+```
   
 ### <a name="b-using-count"></a>B. 使用 COUNT(*)  
 下列範例會尋找在 [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] 工作的員工總數。
@@ -123,11 +124,12 @@ GO
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`-----------`
+```
+-----------
+290  
   
- `290`  
-  
-`(1 row(s) affected)`
+(1 row(s) affected)
+```
   
 ### <a name="c-using-count-with-other-aggregates"></a>C. 搭配其他彙總使用 COUNT(*)  
 下列範例會顯示 `COUNT(*)` 可以結合選取清單中的其他彙總函式。 此範例會使用 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫。
@@ -141,13 +143,14 @@ GO
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`----------- ---------------------`
+```
+----------- ---------------------
+14            3472.1428
   
-`14            3472.1428`
+(1 row(s) affected)
+```
   
-`(1 row(s) affected)`
-  
-### <a name="c-using-the-over-clause"></a>C. 使用 OVER 子句  
+### <a name="d-using-the-over-clause"></a>D. 使用 OVER 子句  
 下列範例會將 MIN、MAX、AVG 和 COUNT 函數搭配 OVER 子句一起使用，為 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫之 `HumanResources.Department` 資料表中的各部門提供彙總值。
   
 ```sql
@@ -192,7 +195,7 @@ Tool Design                   8.62                  29.8462               23.505
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-using-count-and-distinct"></a>D. 使用 COUNT 與 DISTINCT  
+### <a name="e-using-count-and-distinct"></a>E. 使用 COUNT 與 DISTINCT  
 下列範例會列出特定公司的員工可以保存的不同項目數目。
   
 ```sql
@@ -204,11 +207,12 @@ FROM dbo.DimEmployee;
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`-----------`
+```
+-----------
+67
+```  
   
- `67`  
-  
-### <a name="e-using-count"></a>E. 使用 COUNT(*)  
+### <a name="f-using-count"></a>F. 使用 COUNT(*)  
 下列範例會傳回中的資料列總數`dbo.DimEmployee`資料表。
   
 ```sql
@@ -220,11 +224,12 @@ FROM dbo.DimEmployee;
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`-------------`
+```
+-------------
+296
+```  
   
- `296`  
-  
-### <a name="f-using-count-with-other-aggregates"></a>F. 搭配其他彙總使用 COUNT(*)  
+### <a name="g-using-count-with-other-aggregates"></a>G. 搭配其他彙總使用 COUNT(*)  
 下列範例會結合`COUNT(*)`與選取清單中的其他彙總函式。 查詢會傳回與年度的銷售配額的銷售代表的數量大於 $500000，平均銷售配額。
   
 ```sql
@@ -238,13 +243,13 @@ WHERE SalesAmountQuota > 500000 AND CalendarYear = 2001;
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`TotalCount  Average Sales Quota`
+```
+TotalCount  Average Sales Quota
+----------  -------------------
+10          683800.0000
+```
   
-`----------  -------------------`
-  
-`10          683800.0000`
-  
-### <a name="g-using-count-with-having"></a>G. 使用 HAVING COUNT  
+### <a name="h-using-count-with-having"></a>H. 使用 HAVING COUNT  
 下列範例會傳回部門中有超過 15 個員工的公司使用與 HAVING 子句的計數。
   
 ```sql
@@ -259,15 +264,14 @@ HAVING COUNT(EmployeeKey) > 15;
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`DepartmentName  EmployeesInDept`
+```
+DepartmentName  EmployeesInDept
+--------------  ---------------
+Sales           18
+Production      179
+```
   
-`--------------  ---------------`
-  
-`Sales           18`
-  
-`Production      179`
-  
-### <a name="h-using-count-with-over"></a>H. 使用容錯移轉的計數  
+### <a name="i-using-count-with-over"></a>I. 使用容錯移轉的計數  
 下列範例搭配 OVER 子句使用計數，來傳回每個指定的銷售訂單中所包含的產品數目。
   
 ```sql
@@ -281,13 +285,12 @@ WHERE SalesOrderNumber IN (N'SO53115',N'SO55981');
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`ProductCount   SalesOrderID`
-  
-`------------   -----------------`
-  
-`3              SO53115`
-  
-`1              SO55981`
+```
+ProductCount   SalesOrderID`
+------------   -----------------
+3              SO53115
+1              SO55981
+```
   
 ## <a name="see-also"></a>另請參閱
 [彙總函式 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)  

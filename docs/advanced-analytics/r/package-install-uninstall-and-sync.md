@@ -1,7 +1,7 @@
 ---
-title: "封裝安裝、 解除安裝，以及同步 |Microsoft 文件"
+title: "SQL Server 的 R 封裝同步 |Microsoft 文件"
 ms.custom: 
-ms.date: 04/12/2017
+ms.date: 10/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -13,127 +13,106 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 959282395d178a090a3d447769ced4dca8882f89
+ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
+ms.openlocfilehash: ed7dbf99b0f492b5ca8879bb67a7256fdfae3306
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 
 # <a name="r-package-synchronization-for-sql-server"></a>SQL Server 的 R 封裝同步處理
 
-SQL Server 2017 CTP 2.0 包含新的函式之同步處理的 R 封裝，以支援備份和還原的 SQL Server 資料庫與相關聯的 R 封裝集合。 這項功能可協助確保使用者所建立的 R 封裝的複雜設定不會遺失，而且可以輕鬆地還原。  
+SQL Server 2017 包含了可同步處理的檔案系統和執行個體與資料庫之間使用封裝的 R 封裝的集合。
+這項功能提供給更輕鬆地備份 SQL Server 資料庫與相關聯的 R 封裝集合。 使用這項功能，系統管理員可以還原不只是在資料庫中，但是任何使用該資料庫中的資料科學家所使用的 R 封裝。
 
-本主題描述封裝的同步處理功能的作用，以及如何使用`rxSyncPackages()`函式來執行下列工作：
+本主題描述封裝的同步處理功能，以及如何使用[rxSyncPackages](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsyncpackages)函式來執行下列工作：
 
-+  同步處理整個 SQL Server 資料庫的封裝清單
-+  使用個別使用者或使用者群組的同步處理封裝
++ 同步處理整個 SQL Server 資料庫的封裝清單
+
++ 同步處理個別使用者或使用者群組所使用的封裝
+
++ 如果使用者移到不同的 SQL Server，您可以使用使用者的工作資料庫的備份，並將它還原到新的伺服器，和使用者的套件會安裝到所需的 r 新的伺服器上的檔案系統
+
+例如，您可能會在這些案例中使用封裝同步處理：
+
++ DBA 已還原至新的機器的 SQL Server 執行個體，並要求使用者從其 R 用戶端連接及執行`rxSyncPackages`重新整理，然後還原其封裝。
+
++ 您將 R 封裝，在檔案系統上的已損毀，因此您執行`rxSyncPackages`SQL Server 上。
+
+## <a name="requirements"></a>需求
+
+您可以使用封裝的同步處理之前，您必須擁有適當版本的 Microsoft R，並啟用相關的資料庫功能。
+
+### <a name="determine-whether-your-server-supports-package-management"></a>判斷您的伺服器是否支援封裝管理
+
+這個功能就可以在 SQL Server 2017 CTP 2 或更新版本。
+
+由於這項功能會使用 Microsoft R 版本 9.1.0 中 R 函式，您可以加入這項功能的 SQL Server 2016 執行個體的執行個體升級為使用最新版的 Microsoft。如需詳細資訊，請參閱[升級 SQL Server R services 使用 SqlBindR.exe](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)。
+
+### <a name="enable-the-package-management-feature"></a>啟用封裝管理功能
+
+若要使用封裝的同步處理需要個別用於執行 R 工作的資料庫和 SQL Server 執行個體上啟用新的封裝管理功能。
+
+1. 伺服器系統管理員可讓 SQL Server 執行個體的功能。
+2. 每個資料庫，系統管理員會授與使用者的能力，安裝或共用的 R 封裝。
+
+完成此動作後，使用者和他們已安裝的套件相關資訊會儲存在 SQL Server 執行個體。 您可以接著套用這項資訊來更新檔案系統中的 R 封裝。
+
+每當您將新的封裝，封裝管理函式的使用，會更新 SQL Server 和檔案系統中的兩筆記錄。
 
 > [!NOTE]
-> 此函式提供發行前版本軟體的一部分，並可能有所變更，最終發行前。
+> 如果您有已安裝的 R 封裝的傳統方法，直接在檔案系統中安裝的封裝中使用的 R 工具，您無法使用封裝的同步處理。
+### <a name="permissions"></a>Permissions
 
-## <a name="what-is-package-synchronization"></a>何謂封裝同步處理 
++ 執行封裝的同步處理函式的人員必須是安全性主體在 SQL Server 執行個體和具有之封裝的資料庫。
 
-封裝的同步處理的新功能，特別適用於 SQL Server 計算內容。 它被設計來取得特定的資料庫中，為特定使用者或群組所安裝的 R 封裝的清單，並確認封裝列在檔案系統的相符項目與資料庫中。 
++ 函式的呼叫端必須是其中一個這些封裝管理角色的成員： **rpkgs 共用**或**rpkgs 私用**。
 
-這是需要移動使用者資料庫和移動資料庫以及封裝時相當實用。 當您備份和還原 SQL Server 資料庫，用於 R 工作時，您也可以使用封裝的同步處理。
++ 若要同步處理封裝標示為**共用**，正在執行的函式的人員必須擁有成員資格**rpkgs 共用**角色，然後在移動封裝必須已安裝到共用範圍程式庫。
 
-封裝的同步處理所使用的新函式， `rxSyncPackages()`。 若要同步的封裝清單，您可以開啟 R 命令提示字元、 傳遞的執行個體和您想要使用的資料庫定義的計算內容，然後提供封裝範圍或使用者或擁有者名稱。 
++ 若要同步處理封裝標示為**私人**，可能是系統管理員或封裝的擁有者必須執行函式，並封裝必須是私用。
 
-### <a name="how-packages-are-managed-in-r-and-sql-server"></a>如何在 R 和 SQL Server 管理套件
++ 若要同步處理封裝代表其他使用者，擁有者必須是隸屬**db_owner**資料庫角色。
 
-一般而言，當您執行 R 指令碼使用標準的 R 工具，R 封裝會安裝在檔案系統上。 如果有多人在同一部電腦上使用 R，可能會有許多相同的封裝，在不同的資料夾，或不同的使用者文件庫中的複本。
+## <a name="how-package-synchronization-works"></a>封裝同步化的運作方式
 
-不過，若要使用從 SQL Server R 封裝，封裝必須安裝在執行個體相關聯的預設 R 程式庫。 多個啟用，R 與 SQL Server 執行個體可能裝載伺服器電腦，並在此情況下，每個執行個體可以有一組個別的 R 封裝。 
+若要使用封裝的同步處理，呼叫[rxSyncPackages](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsyncpackages)，這是新的函式中[RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)。 您可以呼叫此函式使用 sp_execute_external_script，從 SQL Server，或您可以從遠端的 R 用戶端執行，並指定 SQL Server 計算內容。 
 
-資料庫管理員負責安裝封裝的執行個體上。 不過，封裝管理程式庫，系統管理員可以委派此責任給使用者。 
+因為封裝的管理是在資料庫層級，每次呼叫`rxSyncPackages`，您必須指定 SQL Server 執行個體和資料庫，然後列出封裝，或是指定封裝範圍。
 
-+ 每個資料庫，系統管理員就能給予使用者能夠自由地安裝所需的 R 封裝。 這項機制可確保多個使用者可以安裝不同版本的 R 封裝，而不會造成衝突的 SQL Server 電腦的其他使用者。 個別使用者可以安裝自己使用，套件使用標示為的檔案系統位置**私人**，如果其所屬的資料庫角色**rpkgs 私用**。
+1. 建立 SQL Server 計算內容使用`RxInSqlServer`函式。 如果您未指定的計算內容，則會使用目前的計算內容。
 
-+ 系統管理員可以設定在資料庫上，封裝使用者的群組，並安裝共用的所有使用者群組中的封裝。 封裝可以共用資料庫角色的成員**rpkgs 共用**。 這類使用者也可以將封裝安裝到私用範圍的位置。 
+2. 指定的計算內容中執行個體上提供資料庫的名稱。 封裝管理每個資料庫。
 
-### <a name="goal-of-package-synchronization"></a>封裝的同步處理的目標
+3. 列出要同步處理的封裝。
 
-如果伺服器上的資料庫遺失，或必須移動，利用封裝同步處理，您可以還原特定的封裝集至資料庫、 使用者或群組。 
+4.  （選擇性） 使用*範圍*引數以指示是否正在同步處理為單一使用者，或使用者群組的套件。 如果您在執行函式未指定**私人**或**共用**的範圍，請整組可用的所有領域的封裝，並將複製的使用者。
 
-使用者和安裝軟體套件的相關資訊會儲存在 SQL Server 執行個體，並用來更新檔案系統中的封裝。 每當您將新的封裝，封裝管理函式的使用，會更新 SQL Server 和檔案系統中的兩筆記錄。 因此，如果使用者移到不同的 SQL Server，您可以使用使用者的工作資料庫的備份，並將它還原到新的伺服器，而且使用者的套件會安裝到所需的 r 新的伺服器上的檔案系統
+如果命令執行成功，檔案系統中現有的封裝會加入至資料庫，使用指定的範圍和擁有者。 如果檔案系統損毀時，會還原封裝，根據資料庫中維護的清單。
 
-
-### <a name="supported-versions"></a>支援的版本
-
-此函式包含在 SQL Server 2017 CTP 2.0 中。
-
-因為此函式是 Microsoft R 版本 9.1.0 的一部分，您可以將這項功能加入 SQL Server 2016 的執行個體的執行個體升級為使用最新版的 Microsoft。如需詳細資訊，請參閱[升級 SQL Server R services 使用 SqlBindR.exe](../r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)。
-
-## <a name="to-synchronize-packages"></a>若要同步處理封裝
-
-您呼叫`rxSyncPackages`之後，請將 SQL Server 執行個體還原到新的電腦，或如果 R 封裝在檔案系統上確認已損毀。
-
-如果命令執行成功，檔案系統中現有的封裝會新增至資料庫、 範圍及所指定的擁有者。 如果檔案系統損毀時，封裝就會是 restred 根據資料庫中維護的清單。
-
-### <a name="syntax"></a>語法
-`rxSyncPackages(computeContext = rxGetOption("computeContext"),  scope = c("shared", "private"), owner = c(), verbose = getOption("verbose"))`
-
-+ 計算內容
-
-    定義組成的執行個體和資料庫，然後同步處理封裝的 SQL Server 計算內容。使用建立 SQ Server 內容`RxInSqlServer`函式。 如果您未指定的計算內容，則會使用目前的計算內容。 
-
-+ 範圍。
-
-  指出您要安裝為單一使用者，或使用者群組的套件： 
-
-    + **私用**作業將會包含只有在有已指定的擁有者所安裝的封裝。
-    + **共用**oepration 會包含所有的使用者群組所安裝的封裝。 
-
-  如果您未指定私用或共用的範圍中執行函式，會套用兩個領域。 如此一來，將複製的整組所有範圍和使用者可用的封裝。
-
-+ 擁有者 
-
-    指定要同步處理之封裝的擁有者。 擁有者名稱必須是有效的 SQL 資料庫使用者。 如果您將保留空白，則會使用在連接中指定的 SQL 登入的使用者名稱。
-
-
-### <a name="requirements"></a>需求
-
-+ 執行的函式的人員必須是安全性主體上的 SQL Server 執行個體和資料庫有封裝，而且必須是封裝管理角色的成員： **rpkgs 共用**或**rpkgs 私用** 
-  + 若要同步處理封裝標示為**共用**，正在執行的函式的人員必須擁有成員資格**rpkgs 共用**角色，然後在移動封裝必須已安裝到共用範圍程式庫。
-  + 標示為還套件**私人**，可能是系統管理員或封裝的擁有者必須執行函式，並封裝必須是私用。
-+ **rpkgs 使用者**-這個角色的成員可以執行程式碼會使用 SQL Server 執行個體上安裝的封裝，但是您無法安裝或同步處理封裝。
-+ 若要同步代表其他使用者的封裝，擁有者必須是成員**db_owner**資料庫角色。
-
-## <a name="examples"></a>範例
-
-下列範例會建立特定 SQL Server 執行個體的連接、 指定資料庫，，然後指定一組封裝，來同步處理。 
-
-當呼叫`rxSyncPackages`進行時，清單會在檔案系統與資料庫之間同步處理的封裝。 
-
-### <a name="synchronize-all-by-database"></a>所有同步處理資料庫
+### <a name="example-1-synchronize-all-package-by-database"></a>範例 1： 資料庫同步處理所有的封裝
 
 這個範例會取得所有封裝安裝在資料庫中 [TestDB]。 因為沒有擁有者是特定項目，此清單包含已安裝的私用和共用範圍的所有封裝。
 
 ```R
 connectionString <- "Driver=SQL Server;Server=myServer;Database=TestDB;Trusted_Connection=True;"
 computeContext <- RxInSqlServer(connectionString = connectionString )
-
 rxSyncPackages(computeContext=computeContext, verbose=TRUE)
 ```
 
-### <a name="restrict-synchronized-packages-by-scope"></a>限制已同步處理對封裝進行範圍 
+### <a name="example-2-restrict-synchronized-packages-by-scope"></a>範例 2： 限制已同步處理對封裝進行範圍
 
-下列範例同步處理共用的範圍或私用範圍中的封裝。
-
-**共用範圍**
+下列範例會同步處理指定之範圍中的封裝。
 
 ```R
+#Shared scope
 rxSyncPackages(computeContext=computeContext, scope="shared", verbose=TRUE)
-```
 
-**私用範圍**
-
-```R
+#Private scope
 rxSyncPackages(computeContext=computeContext, scope="private", verbose=TRUE)
 ```
 
-### <a name="restrict-synchronized-packages-by-owner"></a>限制已同步處理的封裝擁有者 
+### <a name="example-3-restrict-synchronized-packages-by-owner"></a>範例 3。 限制已同步處理的封裝擁有者
 
 下列範例示範如何取得特定使用者的已安裝的封裝。 在此範例中，SQL 登入名稱來識別使用者*user1*。
 
@@ -141,6 +120,20 @@ rxSyncPackages(computeContext=computeContext, scope="private", verbose=TRUE)
 rxSyncPackages(computeContext=computeContext, scope="private", owner = "user1", verbose=TRUE))
 ```
 
-## <a name="see-also"></a>另請參閱
+### <a name="example-4-restrict-synchronized-packages-by-owner"></a>範例 4。 限制已同步處理的封裝擁有者
 
-[SQL Server 的 R 封裝管理](../r/r-package-management-for-sql-server-r-services.md)
+下列範例會同步處理管理資料庫中的封裝清單之檔案系統中已安裝的套件。 如果遺漏任何封裝，它會安裝在檔案系統。
+
+```R
+# Instantiate the compute context
+connectionString <- "Driver=SQL Server;Server=myServer;Database=TestDB;Trusted_Connection=True;"
+computeContext <- RxInSqlServer(connectionString = connectionString )
+
+# Synchronize the packages in the file system for all scopes and users
+rxSyncPackages(computeContext=computeContext, verbose=TRUE)
+```
+
+## <a name="related-resources"></a>相關資源
+
+[SQL Server 的 R 封裝管理](r-package-management-for-sql-server-r-services.md)
+

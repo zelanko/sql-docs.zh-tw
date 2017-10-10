@@ -1,7 +1,7 @@
 ---
-title: "部署 SharePoint 網站上的報表檢視器 web 組件 |Microsoft 文件"
+title: "部署 SharePoint 網站上的 SQL Server Reporting Services 報表檢視器 web 組件 |Microsoft 文件"
 ms.custom: 
-ms.date: 09/15/2017
+ms.date: 10/05/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -14,27 +14,24 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: a9397f427cac18d0c8bfc663f6bd477b0440b8a3
-ms.openlocfilehash: ed93b0fd5161686becb4cca05c005fd281f2c176
+ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
+ms.openlocfilehash: a75ad193204e17e1d053aa4e00adba5f551d684b
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 
-# <a name="deploy-the-report-viewer-web-part-on-a-sharepoint-site"></a>部署 SharePoint 網站上的報表檢視器 web 組件
+# <a name="deploy-the-sql-server-reporting-services-report-viewer-web-part-on-a-sharepoint-site"></a>部署 SharePoint 網站上的 SQL Server Reporting Services 報表檢視器 web 組件
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
-報表檢視器 Web 組件是自訂的 Web 組件可以用來檢視 SharePoint 網站中的 SQL Server Reporting Services （原生模式） 報表。 您可以使用 Web 組件來檢視、 導覽、 列印並匯出報表的報表伺服器上。 報表檢視器 Web 組件都與 SQL Server Reporting Services 報表伺服器或 Power BI 報表伺服器所處理的報表定義 (.rdl) 檔案。 此報表檢視器 web 組件不能與 Power BI 報表伺服器中主控的 Power BI 報表。
+報表檢視器 web 組件是可用來檢視 SharePoint 網站中的 SQL Server Reporting Services （原生模式） 報表的自訂 web 組件。 您可以使用 web 組件來檢視、 導覽、 列印並匯出報表的報表伺服器上。 報表檢視器 web 組件都與 SQL Server Reporting Services 報表伺服器或 Power BI 報表伺服器所處理的報表定義 (.rdl) 檔案。 此報表檢視器 web 組件不能與 Power BI 報表伺服器中主控的 Power BI 報表。
 
 使用下列指示手動部署方案套件，將報表檢視器 web 組件加入至 SharePoint Server 2013 或 SharePoint Server 2016 的環境。 部署方案是設定網頁組件的必要的步驟。
 
 **報表檢視器 web 組件是獨立的方案套件，並不是相關聯的 SQL Server Reporting Services SharePoint 整合模式。**
 
 ## <a name="requirements"></a>需求
-
-**支援的作業系統：**  
-* Windows Server 2008 R2 SP1 和更新版本
 
 **支援 SharePoint Server 版本：**  
 * SharePoint Server 2016
@@ -48,7 +45,7 @@ ms.lasthandoff: 09/15/2017
 
 Microsoft Download Center 上可用的報表檢視器 web 組件。
 
-[下載報表檢視器 web 組件的方案套件](https://www.microsoft.com/en-us/download/details.aspx?id=55949)
+[下載報表檢視器 web 組件的方案套件](https://www.microsoft.com/download/details.aspx?id=55949)
 
 ## <a name="deploy-the-farm-solution"></a>部署伺服器陣列方案
 
@@ -84,15 +81,15 @@ Microsoft Download Center 上可用的報表檢視器 web 組件。
 
     ![站台設定，從齒輪圖示。](media/sharepoint-site-settings.png)
 
-    根據預設，SharePoint Web 應用程式會經由通訊埠 80 進行存取。 這表示您通常可以存取 SharePoint 網站輸入*http://<computer name> *以開啟根網站集合。
+    根據預設，SharePoint Web 應用程式會經由通訊埠 80 進行存取。 這表示您通常可以存取 SharePoint 網站輸入*http://<computer name>* 以開啟根網站集合。
 
 3. 在**網站集合管理**，選取**網站集合功能**。
 
-4. 網頁向下捲動直到您找到**報表檢視器 Web 組件**功能。
+4. 網頁向下捲動直到您找到**報表檢視器 web 組件**功能。
 
 5. 選取**啟動**。
 
-    ![啟用報表檢視器 Web 組件功能](media/web-part-activiate-feature.png)
+    ![啟用報表檢視器 web 組件功能](media/web-part-activiate-feature.png)
 
 6. 開啟每個站台，然後按一下 [網站動作] 中，以重複其他網站集合。
 
@@ -124,9 +121,9 @@ Get-SPWebApplication "<web application url>" | Get-SPSite -Limit ALL |
 
     ![站台設定，從齒輪圖示。](media/sharepoint-site-settings.png)
 
-    根據預設，SharePoint Web 應用程式會經由通訊埠 80 進行存取。 這表示您通常可以存取 SharePoint 網站輸入*http://<computer name> *以開啟根網站集合。
+    根據預設，SharePoint Web 應用程式會經由通訊埠 80 進行存取。 這表示您通常可以存取 SharePoint 網站輸入*http://<computer name>* 以開啟根網站集合。
 
-2. 在下**Web 設計工具庫**，選取**Web 組件**。
+2. 在下**Web 設計工具庫**，選取**web 組件**。
 
 3. 選取**編輯圖示**旁**ReportViewerNativeMode.dwp**。 它可能不會列在結果的第一頁中。
 
@@ -134,7 +131,23 @@ Get-SPWebApplication "<web application url>" | Get-SPSite -Limit ALL |
 
     ![編輯和刪除原生模式的報表檢視器 web 組件](media/report-viewer-native-mode-edit-delete.png)
 
-使用 PowerShell，嘗試進行刪除 web 組件，但不是它的直接命令。 如需指令碼的範例，請參閱[如何從 Web 組件庫中刪除 Web 組件](https://gallery.technet.microsoft.com/office/How-to-delete-Web-Parts-1132701f)。
+使用 PowerShell，嘗試進行刪除 web 組件，但不是它的直接命令。 如需指令碼的範例，請參閱[如何從 web 組件庫中刪除 web 組件](https://gallery.technet.microsoft.com/office/How-to-delete-Web-Parts-1132701f)。
+
+## <a name="supported-languages"></a>支援的語言
+
+Web 組件支援下列語言：
+
+* 英文 (en)
+* 德文 (de)
+* 西班牙文 (sp)
+* 法文 (fr)
+* 義大利文 （它）
+* 日文 (ja)
+* 韓文 (ko)
+* 葡萄牙文 (pt)
+* 俄文 (ru)
+* 中文 （簡體-zh-chs 和 HANS 和 ZH-CHS）
+* 中文 （繁體-zh-chs 和 HANT 和 zh-chs 和 ZH-CHT）
 
 ## <a name="next-steps"></a>後續的步驟
 

@@ -10,24 +10,24 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 19493e3abce27068f71ca5640b62fe1b17261eb4
+ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
+ms.openlocfilehash: d70cf0645f00dc8a5296588548edb29b56380034
 ms.contentlocale: zh-tw
-ms.lasthandoff: 10/02/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="install-sql-server-and-create-a-database-on-red-hat"></a>安裝 SQL Server，並在 Red Hat 上建立資料庫
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-在本快速入門教學課程中，您先安裝 SQL Server 2017 上 Red Hat Enterprise Linux (RHEL) 7.3。 然後以連接**sqlcmd**來建立您的第一個資料庫和執行查詢。
+在本快速入門教學課程中，您先安裝 SQL Server 2017 上 Red Hat Enterprise Linux (RHEL) 7.3 +。 然後以連接**sqlcmd**來建立您的第一個資料庫和執行查詢。
 
 > [!TIP]
 > 本教學課程需要使用者輸入和網際網路連線。 如果您有興趣[自動](sql-server-linux-setup.md#unattended)或[離線](sql-server-linux-setup.md#offline)安裝程序，請參閱[SQL Server on Linux 的安裝指南](sql-server-linux-setup.md)。
 
 ## <a name="prerequisites"></a>必要條件
 
-您必須擁有的 RHEL 7.3 機器**至少 3.25 GB**的記憶體。
+您必須擁有 RHEL 7.3 或 7.4 機器**至少 3.25 GB**的記憶體。
 
 若要在自己電腦上安裝 Red Hat Enterprise Linux，請移至[http://access.redhat.com/products/red-hat-enterprise-linux/evaluation](http://access.redhat.com/products/red-hat-enterprise-linux/evaluation)。 您也可以在 Azure 中建立 RHEL 虛擬機器。 請參閱[建立和管理 Linux Vm 與 Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)，並使用`--image RHEL`呼叫`az vm create`。
 
@@ -52,7 +52,6 @@ ms.lasthandoff: 10/02/2017
 1. 執行下列命令來安裝 SQL Server:
 
    ```bash
-   sudo yum update
    sudo yum install -y mssql-server
    ```
 
@@ -95,14 +94,12 @@ ms.lasthandoff: 10/02/2017
 1. 如果您在舊版的**mssql 工具**安裝，請移除任何舊版 unixODBC 封裝。
 
    ```bash
-   sudo yum update
    sudo yum remove unixODBC-utf16 unixODBC-utf16-devel
    ```
 
 1. 執行下列命令安裝**mssql 工具**unixODBC 開發人員套件。
 
    ```bash
-   sudo yum update
    sudo yum install -y mssql-tools unixODBC-devel
    ```
 

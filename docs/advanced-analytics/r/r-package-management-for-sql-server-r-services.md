@@ -1,7 +1,7 @@
 ---
 title: "SQL Server 的 R 封裝管理 |Microsoft 文件"
 ms.custom: 
-ms.date: 08/20/2017
+ms.date: 10/09/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -17,97 +17,88 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f19982251b629d12215595685c0633b4c6b61c98
+ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
+ms.openlocfilehash: e0c6725ff2c0c541e2546858dc02f1021812bbc5
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="r-package-management-for-sql-server"></a>SQL Server 的 R 封裝管理
 
-本主題描述可用來管理 SQL Server 執行個體執行的 R 封裝的封裝管理功能。
+本文描述 SQL Server 2017 和 SQL Server 2016 中的 R 封裝的管理功能。
+
++ 2017 2016年之間的 R 封裝安裝方法中的變更
++ 管理 R 封裝的建議的方法
++ 新的資料庫角色的 SQL Server 2017 封裝管理
++ 新的 T-SQL 陳述式的 SQL Server 2017 封裝管理
 
 **適用於：** SQL Server 2016 R Services、 SQL Server 2017 機器學習服務
 
-## <a name="package-management-using-t-sql"></a>使用 T-SQL 的封裝管理
+## <a name="differences-in-package-management-between-sql-server-2016-and-sql-server-2017"></a>封裝管理 SQL Server 2016 和 SQL Server 2017 之間的差異
 
-您可以繼續的電腦上，系統管理員身分安裝 R 封裝，如果您沒有這些權限，而且如果您是唯一的人使用機器學習工作的伺服器。
+在**SQL Server 2017**，您可以啟用封裝管理執行個體層級，並管理使用者權限，以新增或使用資料庫層級的封裝。
 
-不過，如果您要與他人共用封裝，或有多人需要在伺服器上執行機器學習工作，它會更有效率，設定套件共用程式庫。 SQL Server 支援透過資料庫角色。
+這需要資料庫管理員，啟用執行指令碼會建立必要資料庫物件的封裝管理功能。 如需詳細資訊，請參閱[如何啟用 R 封裝管理](r-package-how-to-enable-or-disable.md)。
 
-資料庫管理員負責設定角色，以及新增使用者至角色。 透過角色，資料庫管理員可以控制已加入或移除 SQL Server 環境中，R 封裝的權限的人員，以及可以稽核套件安裝。
+在**SQL Server 2016**，系統管理員必須安裝在執行個體相關聯的 R 程式庫中的 R 封裝。 所有使用者執行個體中執行 R 程式碼會都使用這些封裝。 SQL server 中執行的 R 程式碼無法使用安裝在使用者程式庫中的封裝。 不過，系統管理員可以授與個別使用者執行特定資料庫內的 R 指令碼的能力。
+
+**差異及優點的摘要**
+
++ 如果您在 SQL Server 2017 使用機器學習服務，您可以管理和安裝的 R 封裝使用的傳統方法，根據 R 工具，或藉由使用新的資料庫角色和 T-SQL 陳述式。
+
++ 我們建議您在第二個方法，因為它提供更細微的控制，由系統管理員，結合其他更多的自由，讓使用者。 例如，使用者可以安裝自己的封裝，請使用預存程序或 R 程式碼以及與其他人共用封裝。 
+
+    因為封裝可以限定在資料庫中，而且每個使用者取得隔離的套件沙箱，所以很容易安裝不同版本的相同的 R 封裝。 也很容易，您可以複製或移動資料庫之間的使用者和其封裝。 
+
++ 使用 SQL Server 中的封裝管理功能可讓您更容易備份和還原作業。 當您將工作資料庫移轉至新的伺服器時，您可以使用封裝的同步處理函式來讀取您的封裝清單，並將其安裝在新的伺服器上的資料庫。
+
++ 您可能會發現的電腦上，如果您是唯一的人使用機器學習工作的伺服器，使用傳統的 R 工具，以系統管理員身分安裝 R 封裝更方便。
+
++ 如果您使用 SQL Server 2016 R 服務，您應該繼續安裝 R 封裝所使用的 R 工具的執行個體使用 > 確定要使用的執行個體相關聯的 R 程式庫。
+
+下列章節提供有關如何管理封裝的其他詳細資料使用這兩個選項來執行。
+
+## <a name="r-package-management-using-t-sql"></a>使用 T-SQL 的 R 封裝管理
+
+SQL Server 2017 包含新的 T-SQL 陳述式讓 DBA 更充分掌控資料庫層級的 R 封裝。 同時，DBA 可以讓使用者能夠安裝的套件的必要且與他人共用。
+
+如果您需要與他人共用封裝，或如果多位人員需要在伺服器上執行機器學習工作，建議您啟用封裝管理，將使用者指派至資料庫角色，並上傳封裝，讓使用者可以共用它們。
+
+在 SQL Server 2017 封裝管理會依賴這些新的資料庫物件和功能：
+
++ 新的資料庫角色，來管理封裝的存取和使用
++ 封裝範圍，另一個共用和私用套件
++ 建立外部程式庫的陳述式中上, 傳到伺服器的新程式碼程式庫
++ 新的 R 函數 RevoScaleR，以支援 SQL Server 中的安裝封裝中計算內容
++ 封裝的同步處理，以確保輕鬆備份和還原封裝
 
 ### <a name="database-roles-for-package-management"></a>用於封裝管理的資料庫角色
 
-下列新的資料庫角色支援安全的安裝 R 封裝管理中與 SQL Server:
+資料庫管理員必須建立用於封裝管理述這裡執行的指令碼的角色：[啟用或停用封裝管理](r-package-how-to-enable-or-disable.md)。
 
-- `rpkgs-users`： 可讓使用者使用所安裝的成員的任何共用的封裝`rpkgs-shared`角色。
+執行這個指令碼之後，您應該會看到下列新的資料庫角色：
 
-- `rpkgs-private`： 提供的相同權限與共用封裝的存取權`rpkgs-users`角色。 此角色成員也可以安裝、移除和使用具有私用範圍的封裝。
++ `rpkgs-users`： 此角色的成員可以使用另一個已安裝任何共用的封裝`rpkgs-shared`角色成員。
 
--  `rpkgs-shared`： 提供相同的權限`rpkgs-private`角色。 屬於此角色成員的使用者也可以安裝或移除共用封裝。
++ `rpkgs-private`： 此角色的成員有共用封裝，做為成員的相同的權限的存取權`rpkgs-users`角色。 此角色的成員也可以安裝、 移除和使用非公開已設定領域的封裝。
 
-- `db_owner`： 具有相同的權限`rpkgs-shared`角色。 也可以授與使用者安裝或移除共用和私用封裝的權限。
++ `rpkgs-shared`： 此角色的成員具有相同的權限的成員`rpkgs-private`角色。 此外，此角色的成員可以安裝或移除共用的封裝。
 
-### <a name="creating-an-external-package-library-using-t-sql"></a>建立使用 T-SQL 的外部封裝程式庫
++ `db_owner`： 此角色的成員具有相同的權限的成員`rpkgs-shared`角色。 此外，此角色的成員可以**授與**其他使用者的權限安裝或移除兩者共用和私用的封裝。
 
-此外，SQL Server 2017 支援 T-SQL 陳述式**建立外部程式庫**、 支援的資料庫管理員外部的程式庫的管理。 目前您可以使用此陳述式來建立 Windows 架構的程式庫 r 額外支援已規劃未來 Python 封裝和其他平台，例如 Linux 上執行寫入的封裝。
+DBA 會將使用者加入至每個資料庫為基礎來控制使用者的能力來安裝封裝的角色。
 
-如需詳細資訊，請參閱[建立外部程式庫](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)。
+### <a name="package-scope"></a>封裝範圍
 
-## <a name="package-management-using-r"></a>使用 R 封裝管理
+新的封裝管理功能來它們是私用，或是可由多個使用者共用區分封裝。
 
-**RevoScaleR**封裝現在包含函式來支援更容易安裝及管理的 R 封裝。 這些新的函式，資料庫角色的封裝管理與結合可支援這些案例：
++ **共用範圍**
 
-- 資料科學家可以安裝 SQL Server 上所需的 R 封裝，而不需要 SQL Server 電腦的系統管理權限。
-- 針對每個資料庫上會安裝封裝和封裝當移動資料庫時，隨著一起移動。
-- 它很容易與其他人共用封裝。 如果您設定本機封裝儲存機制時，每個資料科學家可以使用儲存機制安裝套件，他或她自己的資料庫。
-- 資料庫管理員不需要了解如何執行 R 命令，並不需要追蹤複雜封裝的相依性。
-- DBA 可以使用熟悉的資料庫角色，來控制允許哪些 SQL Server 的使用者安裝、 解除安裝，或使用封裝。
+    *共用範圍*表示具有共用的範圍角色的權限之使用者 (`rpkgs-shared`) 可以安裝和解除安裝指定的資料庫中的封裝。 安裝在共用範圍中的封裝可供 SQL Server 資料庫的其他使用者使用，但前提是這些使用者可以使用已安裝的 R 封裝。
 
-### <a name="r-package-management-functions"></a>R 封裝管理功能
++ **私用範圍**
 
-RevoScaleR，提供下列封裝管理功能的安裝與移除指定的計算內容中的封裝：
-
-+ [rxInstalledPackages](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxinstalledpackages)： 尋找指定的計算內容中安裝套件的相關資訊。
-
-+ [rxInstallPackages](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxinstallpackages)： 安裝封裝到計算內容中，從指定的儲存機制，或藉由讀取本機儲存壓縮封裝。
-
-+ [rxRemovePackages](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxremovepackages)： 移除計算內容從安裝套件。
-
-+ [rxFindPackage](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxfindpackage)： 取得指定的計算內容中的一個或多個封裝的路徑。
-
-+ [rxSyncPackages](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsyncpackages)： 在指定的計算內容中複製封裝程式庫檔案系統與資料庫之間。
-
-+ [rxSqlLibPaths](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqllibpaths)： 在 SQL Server 內執行時取得封裝程式庫的樹狀目錄的搜尋路徑。
-
-根據預設，在 SQL Server 2017 也包含這些封裝。 您可以將封裝加入 SQL Server 2016 的執行個體，如果您執行個體升級到最少使用 Microsoft R 9.0.1。 如需詳細資訊，請參閱[使用 SqlBindR.exe 升級 R](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)。
-
-如需這些函數的資訊，請參閱 RevoScaleR 函式參考頁面: (https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)
-
-## <a name="how-package-management-works"></a>封裝管理的運作方式
-
-如果您具有安裝封裝的權限，您可以從 R 程式碼執行其中一個封裝管理函數，並指定要加入或移除封裝的計算內容。 計算內容可以是您的本機電腦，或 SQL Server 執行個體上的資料庫。 如果在 SQL Server 上執行安裝封裝的呼叫，您的認證會決定是否可以在伺服器上完成作業。 封裝安裝函數會檢查相依性，並確保所有相關的封裝都會安裝至 SQL Server，就像是本機計算內容中的 R 封裝安裝一樣。 解除安裝封裝的函數也會計算相依性，並確保移除 SQL Server 上的其他封裝不再使用的封裝，以便釋出資源。
-
-每個資料科學家可以安裝不會顯示給其他人的私人封裝建立 R 封裝的私用沙箱。 因為封裝可以限定在資料庫和每一位使用者每個資料庫中取得隔離的套件沙箱，所以您更輕鬆地安裝不同版本的相同的 R 封裝。
-
-如果您將工作資料庫移轉至新的伺服器時，您可以使用封裝的同步處理函式來讀取您的封裝清單，並將其安裝在新的伺服器上的資料庫。
-
-> [!NOTE]
-> 
-> 開始使用 Microsoft R Server 9.0.1 提供封裝管理的 R 函數。 如果您在 RevoScaleR 中找不到函式，您可能需要升級至最新版本。
-
-### <a name="bkmk_scope"></a>封裝範圍的角色
-
-新的封裝管理函數提供兩種範圍，可在 SQL Server 的特定資料庫上安裝和使用封裝：
-
-- **共用範圍**
-
-  *共用範圍*表示具有共用的範圍角色的權限之使用者 (`rpkgs-shared`) 可以安裝和解除安裝指定的資料庫中的封裝。 安裝在共用範圍中的封裝可供 SQL Server 資料庫的其他使用者使用，但前提是這些使用者可以使用已安裝的 R 封裝。
-
-- **私用範圍**
-
-  *私用範圍*表示使用者已經提供成員資格的私用範圍的角色 (`rpkgs-private`) 可以安裝或解除封裝安裝到每個使用者定義的私用程式庫位置。 因此，安裝在私用範圍中的任何封裝只能供安裝的使用者使用。 換句話說，SQL Server 上的使用者無法使用其他使用者所安裝的私用封裝。
+    *私用範圍*表示使用者已經提供成員資格的私用範圍的角色 (`rpkgs-private`) 可以安裝或解除封裝安裝到每個使用者定義的私用程式庫位置。 因此，安裝在私用範圍中的任何封裝只能供安裝的使用者使用。 換句話說，SQL Server 上的使用者無法使用其他使用者所安裝的私用封裝。
 
 您可以結合這些「共用」  和「私用」  範圍模型，開發可在 SQL Server 上部署和管理封裝的自訂安全系統。
 
@@ -115,101 +106,94 @@ RevoScaleR，提供下列封裝管理功能的安裝與移除指定的計算內�
 
 另一種情況可能需要提高使用者之間的隔離，或使用不同版本的封裝。 在此情況下，負責只安裝和使用所需封裝的資料科學家，可透過私用範圍來取得個別權限。 由於這些封裝是針對每位使用者所安裝，因此某位使用者所安裝的封裝不會影響使用相同 SQL Server 資料庫之其他使用者的工作。
 
-### <a name="synchronizing-r-package-libraries"></a>同步處理的 R 封裝程式庫
+### <a name="create-external-library"></a>建立外部程式庫
+
+[建立外部程式庫](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)是可協助資料庫管理員，而不需要使用者 R 工具處理封裝的 SQL Server 2017 中導入新的 T-SQL 陳述式。 
+
+您使用**建立外部程式庫**陳述式來將外部程式庫上傳至 zip 的檔案格式中的執行個體。 授權的使用者可以存取文件庫，並安裝，以供自己使用。
+
+例如，您可以建立您的 R 專案，每個不同版本的多個複本。 將其上傳做為個別的程式庫，可讓您保留某些版本的私用，並與其他使用者共用某些版本。
+
+「 媒體櫃 」 基本上是您想要讓使用者以單一名稱使用的外部封裝的集合。 比方說，您可能會發行下列任一項到 SQL Server 做為外部程式庫：
+
++ 單一的 R 封裝，您所撰寫，不含相依性
++ 您想要安裝封裝和安裝所需的相依性
++ 與特定工作或專案中，與它們的相依性的 R 封裝的集合
+
+程式庫名稱是用來管理封裝或 SQL Server 中的封裝的集合，而且可以是獨立的安裝套件。 不過，程式庫名稱必須是唯一的整個執行個體。
+
+若要使用此陳述式，封裝管理功能必須啟用執行個體上。 如需詳細資訊，請參閱[建立外部程式庫](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)。
+
+> [!NOTE]
+> 目前您可以使用此陳述式，可以建立僅以 Windows 為基礎的文件庫，針對 r 支援已規劃未來的 Python 封裝，以及在其他平台，例如 Linux 執行的封裝。
+
+外部程式庫已上傳到伺服器之後，您必須安裝執行個體相關聯的 R 封裝程式庫。 有數種方式來執行這項操作：
+
++ 執行標準 R 命令`install.packages`sp_execute_external_script 內。 請務必使用具有權限才能安裝封裝的帳戶進行連接。
+
++ 從遠端的 R 用戶端連接到 SQL Server 和執行[rxInstallPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinstallpackages) SQL Server 計算內容中。 同樣地，您必須具有權限才能安裝封裝在私用或共用的範圍內，若要這樣做。
+
+若要查看使用 R 和 T-SQL 安裝範例，請參閱[SQL Server 上安裝其他封裝](install-additional-r-packages-on-sql-server.md)。
+
+### <a name="new-r-functions-for-package-installation"></a>封裝安裝新的 R 函數
+
+已啟用封裝管理的資料庫角色之後，使用者也可以使用新的函式中[ **RevoScaleR** ](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)指定為 SQL Server 計算內容執行個體上安裝的封裝。
+
++ 資料科學家可以安裝 SQL Server 上所需的 R 封裝，而不需要直接存取 SQL Server 電腦。
+
++ 使用者可以安裝封裝，並與他人共用安裝的套件共用的範圍。 然後相同的 SQL Server 資料庫的其他授權的使用者可以存取封裝。
+
++ 使用者可以安裝不會顯示給其他人的私人封裝建立 R 封裝的私用沙箱。
+
+RevoScaleR，提供下列封裝管理功能的安裝與移除指定的計算內容中的封裝：
+
+-   [rxInstalledPackages](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxinstalledpackages)： 尋找指定的計算內容中安裝套件的相關資訊。
+
+-   [rxInstallPackages](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxinstallpackages)： 安裝封裝到計算內容中，從指定的儲存機制，或藉由讀取本機儲存壓縮封裝。
+
+-   [rxRemovePackages](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxremovepackages)： 移除計算內容從安裝套件。
+
+-   [rxFindPackage](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxfindpackage)： 取得指定的計算內容中的一個或多個封裝的路徑。
+
+-   [rxSyncPackages](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsyncpackages)： 在指定的計算內容中複製封裝程式庫檔案系統與資料庫之間。
+
+-   [rxSqlLibPaths](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqllibpaths)： 在 SQL Server 內執行時取得封裝程式庫的樹狀目錄的搜尋路徑。
+
+若要使用這些函式，連接到 SQL Server 具有必要的權限，使用 SQL Server 計算內容執行個體。 當您連線時，您的認證會決定是否可以在伺服器上完成作業。
+
+封裝安裝函數會檢查相依性，並確保所有相關的封裝都會安裝至 SQL Server，就像是本機計算內容中的 R 封裝安裝一樣。 解除安裝封裝的函數也會計算相依性，並確保移除 SQL Server 上的其他封裝不再使用的封裝，以便釋出資源。
+
+> [!NOTE]
+> 
+> 根據預設，在 SQL Server 2017 包括這些新的函式。 您可以更新，以取得這些函式執行個體升級為使用較新版的 Microsoft R Server，例如 Microsoft R Server 9.0.1 RevoScaleR 版本。
+> 
+> 如需詳細資訊，請參閱[使用 SqlBindR.exe 至 upgradeR](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)。
+
+### <a name="synchronization-of-r-package-libraries"></a>同步處理的 R 封裝程式庫
 
 CTP 2.0 版本的 SQL Server 2017 （和 Microsoft R Server 2017 年 4 月發行） 包含新的 R 函數，如*同步處理封裝*。
 
 封裝的同步處理表示 database engine 會追蹤由特定擁有者和群組，並視需要將這些封裝寫入數個檔案系統的封裝。 在這些情況下，您可以使用封裝的同步處理：
 
-+ 您想要 SQL Server 執行個體之間移動的 R 封裝
-+ 您需要重新安裝套件的特定使用者或群組之後還原資料庫
++ 您想要 SQL Server 執行個體之間移動的 R 封裝。
++ 您需要重新安裝套件的特定使用者或群組之後還原資料庫。
 
-如需詳細資訊，請參閱[rxSyncPackages](../r/package-install-uninstall-and-sync.md)。
+如需如何啟用和使用這項功能的詳細資訊，請參閱[R 封裝的同步處理 SQL server](package-install-uninstall-and-sync.md)。
 
-## <a name="examples"></a>範例
+## <a name="r-package-management-using-traditional-r-tools"></a>使用傳統的 R 工具的 R 封裝管理
 
-這些範例示範基本的使用方式，封裝管理功能。 若要執行這些命令需要您有執行個體上執行 R 命令的權限。
+管理 R 封裝的執行個體上的傳統方法是安裝，並列出封裝使用的 R 工具和命令。 
 
-+ 從終端機遠端 R 執行時，您會建立計算內容物件，指定 SQL Server 執行個體，然後再執行此函式，做為引數傳遞的計算內容。
++ 如果您使用 SQL Server 2016 的早期版本，此選項可能是唯一的選項。  
++ 如果您的 R 封裝的唯一使用者，且有系統管理伺服器的存取權，此選項可能也會很方便。
++ 若要簡化管理的 R 封裝版本，您可以使用[miniCRAN](create-a-local-package-repository-using-minicran.md)來建立本機儲存機制和的執行個體之間共用。
 
-+ 若要從預存程序中執行封裝管理功能，您必須將它們包裝在呼叫`sp_execute_external_script`。
+如需詳細資訊，請參閱下列文章：
 
-### <a name="package-scoping"></a>封裝範圍
++ [SQL Server 上安裝其他的 R 封裝](install-additional-r-packages-on-sql-server.md)
++ [決定要安裝在 SQL Server 上的套件](determine-which-packages-are-installed-on-sql-server.md)
 
-這個範例會檢查執行個體已安裝的封裝`myServer`，在資料庫中`TestDB`。 封裝管理範圍的特定資料庫和使用者。 如果使用者未指定，則會假設執行計算內容，請呼叫的使用者。 如需詳細資訊，請參閱[封裝角色的領域設定](#bkmk_scope)。
-
-```R
-sqlServerCompute <- RxInSqlServer(connectionString = "Driver=SQL Server;Server=myServer;Database=TestDB;Uid=myID;Pwd=myPwd;");
-sqlPackagePaths <- rxFindPackage(package = "RevoScaleR", computeContext = sqlServerCompute);
-```
-
-### <a name="get-package-location-on-a-remote-sql-server-compute-context"></a>取得遠端的 SQL Server 計算內容上的封裝位置
-
-此範例會取得計算內容 **sqlServer** 上的 *RevoScaleR*封裝路徑。
-
-  ```R
-  sqlPackagePaths <- rxFindPackage(package = "RevoScaleR", computeContext = sqlServerL)
-  ```
-
-### <a name="get-locations-for-multiple-packages"></a>取得多個封裝的位置
-
-下列範例會取得計算內容 **sqlServer** 上的 **RevoScaleR** 和 *lattice*封裝路徑。 若要取得多個封裝的相關資訊，請傳遞字串向量，其中包含封裝名稱。
-
-  ```R
-  packagePaths <- rxFindPackage(package = c("RevoScaleR", "lattice"), computeContext = sqlServer)
-  ```
-
-### <a name="use-a-stored-procedure-to-list-packages-in-sql-server"></a>使用 SQL Server 中的列出封裝的預存程序
-
-從 Management Studio 或其他工具，可支援 T-SQL，以取得已安裝的封裝清單，在目前的執行個體，執行此命令使用`rxInstalledPackages`預存程序。
-
-```SQL
-EXEC sp_execute_external_script 
-  @language=N'R', 
-  @script=N'
-    myPackages <- rxInstalledPackages();
-    OutputDataSet <- as.data.frame(myPackages);
-    '
-```
-
-### <a name="get-package-versions-on-a-remote-compute-context"></a>取得遠端計算內容上的封裝版本
-
-執行此命令從 R 主控台上計算內容中，安裝的封裝中取得的組建編號和版本號碼*sqlServer*。
-
-  ```R
-  sqlPackages <- rxInstalledPackages(fields = c("Package", "Version", "Built"), computeContext = sqlServer)
-```
-
-### <a name="install-a-package-on-sql-server"></a>在 SQL Server 上安裝封裝
-
-此範例會將 **ggplot2** 封裝及其相依性安裝到計算內容 *sqlServer*中。
-
-  ```R
-  pkgs <- c("ggplot2")
-  rxInstallPackages(pkgs = pkgs, verbose = TRUE, scope = "private", computeContext = sqlServer)
-  ```
-
-### <a name="remove-a-package-from-sql-server"></a>從 SQL Server 移除封裝
-
-此範例會從計算內容 **sqlServer** 移除 *ggplot2*封裝及其相依性。
-
-  ```R
-  pkgs <- c("ggplot2")
-  rxRemovePackages(pkgs = pkgs, verbose = TRUE, scope = "private", computeContext = sqlServer)
-  ```
-
-### <a name="package-synchronization"></a>封裝的同步處理
-
-下列範例會同步處理管理資料庫中的封裝清單之檔案系統中已安裝的套件。 如果遺漏了某些封裝，它們會安裝在檔案系統。
-
-```R
-# Instantiate the compute context
-connectionString <- "Driver=SQL Server;Server=myServer;Database=TestDB;Trusted_Connection=True;"
-computeContext <- RxInSqlServer(connectionString = connectionString )
-
-# Synchronize the packages in the file system for all scopes and users
-rxSyncPackages(computeContext=computeContext, verbose=TRUE)
-```
+SQL Server 2017，我們建議您使用建立外部程式庫並管理使用者和他們的 R 封裝提供的資料庫角色。
 
 ## <a name="next-steps"></a>後續的步驟
 

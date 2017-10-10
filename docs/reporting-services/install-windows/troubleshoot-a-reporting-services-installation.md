@@ -1,7 +1,7 @@
 ---
-title: "疑難排解 Reporting Services 安裝 |Microsoft 文件"
+title: "Reporting Services 安裝問題疑難排解 |Microsoft 文件"
 ms.custom: 
-ms.date: 05/30/2017
+ms.date: 09/29/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -14,11 +14,11 @@ caps.latest.revision: 16
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 79d064c7ddb43531fdff086eda71ba1e28d71fd6
+ms.translationtype: MT
+ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
+ms.openlocfilehash: 8a70fbb9bd9f54b06544f8d9b625c7998f74109d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 
@@ -28,9 +28,9 @@ ms.lasthandoff: 08/09/2017
   
  如需有關與 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 相關之其他錯誤和問題的詳細資訊，請參閱 [疑難排解 SSRS 問題和錯誤](http://social.technet.microsoft.com/wiki/contents/articles/ssrs-troubleshooting-issues-and-errors.aspx)。  
   
- 如果您碰到的問題在版本資訊中有描述，請檢閱 [線上版本資訊](http://go.microsoft.com/fwlink/?linkid=236893) 。  
+ 檢閱[線上版本資訊](http://go.microsoft.com/fwlink/?linkid=236893)萬一您碰到的問題所述的版本資訊。  
   
-##  <a name="bkmk_setuplogs"></a> 檢查安裝記錄檔  
+##  <a name="bkmk_setuplogs"></a>檢查安裝記錄檔  
  安裝錯誤會記錄在 **[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Setup Bootstrap\Log** 資料夾的記錄檔中。 每當您執行安裝程式時，都會建立一個子資料夾， 此子資料夾的名稱就是您執行安裝程式的時間和日期。 如需如何檢視安裝記錄檔的指示，請參閱 [檢視與讀取 SQL Server 安裝記錄檔](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)。  
   
 -   記錄檔包含檔案的集合。  
@@ -41,7 +41,7 @@ ms.lasthandoff: 08/09/2017
   
 -   開啟 *_RS\_\*_ComponentUpdateSetup.log，即可檢視 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝程式資訊。  
   
-##  <a name="bkmk_prereq"></a> 檢查必要條件  
+##  <a name="bkmk_prereq"></a>在先決條件檢查  
  安裝程式會自動檢查必要條件。 但是，如果您正在排除安裝問題，知道安裝程式正在檢查哪些需求將會很有協助。  
   
 -   執行安裝程式的帳戶需求包括本機管理員群組的成員資格。 安裝程式必須具有加入檔案、登錄設定、建立本機安全性群組及設定權限的權限。 如果您要安裝預設組態，安裝程式必須具有在您進行安裝所在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上建立報表伺服器資料庫的權限。  
@@ -56,7 +56,7 @@ ms.lasthandoff: 08/09/2017
   
  安裝程式不再檢查 Internet Information Services (IIS) 或 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 需要 MDAC 2.0 與 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0 版；如果尚未安裝，則安裝程式會加以安裝。  
   
-##  <a name="bkmk_tshoot_sharepoint"></a> 疑難排解 SharePoint 模式安裝的問題  
+##  <a name="bkmk_tshoot_sharepoint"></a>疑難排解 SharePoint 模式安裝 oroblems  
   
 -   [Reporting Services 組態管理員未啟動](#bkmk_configmanager_notstart)  
   
@@ -74,7 +74,7 @@ ms.lasthandoff: 08/09/2017
   
 -   [您會看到使用 PREPAREIMAGE 時不支援 RS_SHP 的錯誤訊息](#bkmk_RS_SHP_notsupported)  
 
-### <a name="bkmk_configmanager_notstart"></a> Reporting Services 組態管理員未啟動
+### <a name="bkmk_configmanager_notstart"></a>Reporting Services 組態管理員未啟動
 
  **描述：**這個問題是設計在 SQL Server 2012 和更新版本。 Reporting Services 的架構為 SharePoint 服務架構。 在 SharePoint 模式中設定及管理 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 時，不再需要組態管理員。  
   
@@ -122,13 +122,13 @@ ms.lasthandoff: 08/09/2017
   
 -   從 SQL Server 安裝媒體安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式。  
   
- **注意：**如果**SharePoint 2013/2016年管理命令介面**已開啟，當您完成下列其中一種因應措施、 關閉並重新開啟管理命令介面。  
+ 如果**SharePoint 2013/2016年管理命令介面**已開啟，當您完成下列其中一種因應措施、 關閉並重新開啟管理命令介面。  
   
  如需詳細資訊，請參閱下列內容：  
   
 -   [尋找適用於 SharePoint 產品之 Reporting Services 增益集的位置](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)  
   
--   [在 SharePoint 模式中安裝第一部報表伺服器](http://msdn.microsoft.com/en-us/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538)  
+-   [以 SharePoint 模式安裝第一部報表伺服器](http://msdn.microsoft.com/en-us/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538)  
   
  ![搭配回到頁首連結使用的箭號圖示](../../analysis-services/instances/media/uparrow16x16.gif "搭配回到頁首連結使用的箭號圖示")[疑難排解 SharePoint 模式安裝的問題](#bkmk_tshoot_sharepoint)  
   
@@ -197,7 +197,7 @@ ms.lasthandoff: 08/09/2017
   
  ![搭配回到頁首連結使用的箭號圖示](../../analysis-services/instances/media/uparrow16x16.gif "搭配回到頁首連結使用的箭號圖示")[疑難排解 SharePoint 模式安裝的問題](#bkmk_tshoot_sharepoint)  
   
-##  <a name="bkmk_tshoot_native"></a> 疑難排解原生模式安裝的問題  
+##  <a name="bkmk_tshoot_native"></a>疑難排解原生模式安裝的問題  
   
 ###  <a name="PerfCounters"></a> 升級到 Windows Vista 或 Windows Server 2008 之後，看不到效能計數器  
  如果您在執行 [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] 的電腦上，將作業系統升級為 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 或 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，在升級之後將不會設定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 效能計數器。  
@@ -231,7 +231,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  在 [登錄編輯程式] 中，選取下列登錄機碼： `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MSRS 2016 Web Service\Performance`  
   
-3.  以滑鼠右鍵按一下 [Performance] 節點，並指向 [新增]，然後按一下 [多字串值]。  
+3.  以滑鼠右鍵按一下 Performance 節點，並指向 新增，然後按一下多字串值。  
   
 4.  輸入 **Counter Names** ，然後按 ENTER。  
   
@@ -239,7 +239,7 @@ ms.lasthandoff: 08/09/2017
   
 6.  瀏覽到以下的登錄機碼： `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MSRS 2016 Web Service\Performance`  
   
-7.  以滑鼠右鍵按一下 [Performance] 節點，並指向 [新增]，然後按一下 [多字串值]。  
+7.  以滑鼠右鍵按一下 Performance 節點，並指向 新增，然後按一下多字串值。  
   
 8.  輸入 **Counter Names** ，然後按 ENTER。  
   

@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 6fdb36fbf294ea1f109728a1f304b5a3f3662122
+ms.sourcegitcommit: 80c1228faeaaa4012afc0fd27992a2f5cf389f6e
+ms.openlocfilehash: 48e2d1ae54100f7ea83bdd677bf4a98859825b67
 ms.contentlocale: zh-tw
-ms.lasthandoff: 10/02/2017
+ms.lasthandoff: 10/05/2017
 
 ---
 # <a name="sql-server-on-linux"></a>Linux 上的 SQL Server
@@ -28,6 +28,7 @@ SQL Server 2017 現在會在 Linux 上執行。 它是相同的 SQL Server 資�
 - [SUSE Linux Enterprise Server 上安裝](quickstart-install-connect-suse.md)
 - [在 Ubuntu 上安裝](quickstart-install-connect-ubuntu.md)
 - [執行 docker](quickstart-install-connect-docker.md)
+- [在 Azure 中佈建 SQL VM](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
 
 > [!NOTE]
 > Docker 本身會執行多個平台上，這表示您可以在 Linux、 Mac 和 Windows 上執行的 Docker 映像。

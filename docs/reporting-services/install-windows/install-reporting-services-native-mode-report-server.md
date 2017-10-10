@@ -20,10 +20,10 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 3e535ef444e43860e35befbf0f33fe1eb582801d
+ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
+ms.openlocfilehash: a8c8f93212e62b148671305354599b88e6f3d318
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="install-reporting-services-native-mode-report-server"></a>安裝 Reporting Services 原生模式報表伺服器
@@ -155,7 +155,7 @@ ms.lasthandoff: 08/17/2017
   
 9. 功能組態規則︰驗證通過的規則。 如果規則都通過，則安裝精靈會自動移到 [準備安裝]  。  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]特有的是規則會確認報表伺服器目錄和 temp 目錄資料庫尚未存在。  
   
-10. ![請注意](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "注意")上**準備好安裝**頁面上，記下您可以在稍後對於伺服器初始的良好摘要，參考的組態檔的路徑[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]組態包括已安裝元件、 服務帳戶和系統管理員。  
+10. 在 [準備安裝] 頁面上，記下稍後可參考的組態檔路徑，以取得伺服器初始 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態的良好摘要 (包括已安裝的元件、服務帳戶和系統管理員)。  
   
 11. SQL Server 安裝精靈完成後，請利用下列基本步驟驗證預設的原生模式安裝。  
   
@@ -188,7 +188,7 @@ ms.lasthandoff: 08/17/2017
 [設定報表伺服器資料庫連接](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
 [僅限檔案安裝 &#40;Reporting Services&#41;](../../reporting-services/install-windows/files-only-installation-reporting-services.md)   
 [將報表伺服器初始化](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
-[原生模式報表伺服器上設定 SSL 連接](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)   
+[在原生模式報表伺服器上設定 SSL 連接](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)   
 [設定 Windows 服務帳戶與權限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)

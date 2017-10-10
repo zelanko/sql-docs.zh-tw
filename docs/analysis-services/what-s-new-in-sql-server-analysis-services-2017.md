@@ -1,37 +1,34 @@
 ---
-title: "什麼 &#39; 的新功能 SQL Server 2017 Analysis Services |Microsoft 文件"
-ms.custom: 
-ms.date: 09/21/2017
+title: "什麼是 SQL Server 2017 Analysis Services 的新功能 |Microsoft 文件"
+ms.date: 10/03/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1eb6afc9-76ed-45a2-a188-374a4fc23224
-caps.latest.revision: 17
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 656e62f36446db4ef5b232129130a0253d2aebdf
-ms.openlocfilehash: c75d1ec210f3511408e2c976df28f9db22d7272f
+ms.sourcegitcommit: 12b379c1d02dc07a5581a5a3f3585f05f763dad7
+ms.openlocfilehash: 59f753e85f2d10d70d7784335205e0d231c5ae00
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/22/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 
-# <a name="what39s-new-in-sql-server-2017-analysis-services"></a>什麼 &#39; 的新功能 SQL Server 2017 Analysis Services
+# <a name="whats-new-in-sql-server-2017-analysis-services"></a>SQL Server 2017 Analysis Services 中最新消息
 [!INCLUDE[ssas-appliesto-sql2017](../includes/ssas-appliesto-sql2017.md)]
 
 SQL Server 2017 Analysis Services 會看到一些最重要的增強功能自 SQL Server 2012。 這一版為基礎的表格式模式 （SQL Server 2012 Analysis Services 中首次引進） 成功，可讓表格式模型比以往更強大。
 
 多維度模式和 Power Pivot for SharePoint 模式是許多 Analysis Services 部署裝訂。 Analysis Services 產品開發週期中，這些模式才成熟。 沒有這些模式，在此版本中的任何新功能。 然而，在錯誤修正和效能增強功能會加入。
 
-這裡說明的功能會包含在 SQL Server 2017 Analysis Services。 若要利用它們，您也必須使用的最新版本，但是[SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md) (SSDT) 和[SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md) (SSMS)。 SSDT 和 SSMS 會更新每月使用新的和改進功能通常 conincide 搭配 SQL Server 中的新功能。  
+這裡說明的功能會包含在 SQL Server 2017 Analysis Services。 若要利用它們，您也必須使用的最新版本，但是[SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md) (SSDT) 和[SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md) (SSMS)。 SSDT 和 SSMS 會隨每月新功能和改進功能通常符合 SQL Server 中的新功能。  
 
-雖然很有趣，才會關閉所有新功能的包裝函式，也很重要知道什麼正在已被取代，而且在此版本和未來的版本中停用。 請務必查看[回溯相容性 (SQL Server 2017 Analysis Services)](analysis-services-backward-compatibility-sql2017.md)。
+時請務必了解所有新功能，也很重要知道什麼被取代，而且在此版本和未來的版本中已停止。 請務必查看[回溯相容性 (SQL Server 2017 Analysis Services)](analysis-services-backward-compatibility-sql2017.md)。
 
 在此版本中，讓我們看看一些重要的新功能。
 
@@ -56,12 +53,12 @@ SQL Server 2017 Analysis Services 會看到一些最重要的增強功能自 SQL
 
 ![AS_Get_Data_in_SSDT](../analysis-services/media/as-get-data-in-ssdt.png)
 
- 功能強大且直覺式使用者介面，請選取您的資料和資料轉換/mashup 功能比以往更為容易。
+ 功能強大且直覺式使用者介面可讓您選取您的資料和資料轉換/mashup 功能比以往更為容易。
 
 ![進階的 mashup](../analysis-services/media/as-get-data-advanced.png)
 
 
-現代的 取得資料體驗，M mashup 功能不會套用到現有的表格式模型 ugraded 從 1400年 1200年相容性層級。 1400 相容性層級建立新的模型僅適用於新的體驗。
+現代的 取得資料體驗，M mashup 功能不會套用到現有的表格式模型 upraded 從 1400年 1200年相容性層級。 1400 相容性層級建立新的模型僅適用於新的體驗。
 
 ## <a name="encoding-hints"></a>編碼的提示
 此版本導入編碼提示，並用來最佳化的大型記憶體中的表格式模型的處理 （資料重新整理） 的進階功能。 若要進一步了解編碼方式，請參閱[效能微調的表格式模型 SQL Server 2012 Analysis Services 中](https://msdn.microsoft.com/library/dn393915.aspx)以深入了解編碼方式的技術白皮書。
@@ -70,9 +67,9 @@ SQL Server 2017 Analysis Services 會看到一些最重要的增強功能自 SQL
 
 * 雜湊編碼，最好群組依據資料行 （通常是維度資料表值） 和外部索引鍵。 字串資料行一律會編碼的雜湊。
 
-數值資料行可以使用其中一種編碼的方法。 當 Analysis Services 開始處理資料表時，如果任一個資料表是空的 （或如果沒有資料分割） 或正在執行完整資料表處理操作時，每個數值資料行來判斷是否要套用的值或雜湊編碼採取範例值. 根據預設，值編碼選擇是當資料行中相異值的範例是夠大，否則雜湊編碼通常會提供更好的壓縮。 您可根據 進一步了解資料的分佈，部分處理的資料行之後，變更編碼方式，並重新啟動在編碼程序的 Analysis services。 這當然會增加處理時間，而沒有效率。 效能微調技術白皮書討論更多詳細資料中重新編碼，並說明如何使用 SQL Server Profiler 會偵測到。
+數值資料行可以使用其中一種編碼的方法。 當 Analysis Services 開始處理資料表時，如果任一個資料表是空的 （或如果沒有資料分割） 或正在執行完整資料表處理操作時，每個數值資料行來判斷是否要套用的值或雜湊編碼採取範例值. 根據預設，值編碼選擇是當資料行中相異值的範例是夠大，否則雜湊編碼通常會提供更好的壓縮。 您可根據 進一步了解資料的分佈，部分處理的資料行之後，變更編碼方式，並重新啟動在編碼程序; Analysis services不過，這會增加處理時間，並沒有效率。 效能微調技術白皮書討論更多詳細資料中重新編碼，並說明如何使用 SQL Server Profiler 會偵測到。
 
-編碼提示允許指定之提供背景知識從資料分析和 （或） 重新編碼追蹤事件的回應編碼方式的喜好設定模型師 」。 因為雜湊編碼的資料行的彙總為速度較慢，超過值編碼的資料行值編碼可指定做為這類資料行的提示。 不保證，則會套用喜好設定;因此，它是提示，而不是一種設定。 若要指定編碼的提示，請在資料行上設定 EncodingHint 屬性。 可能的值為 「 預設 」、 「 值 」 和 「 雜湊 」。 下列程式碼片段的 JSON 型 Model.bim 檔案中的中繼資料指定編碼 Sales Amount 資料行的值。
+編碼提示允許指定之提供背景知識從資料分析和 （或） 重新編碼追蹤事件的回應編碼方式的喜好設定模型師 」。 因為雜湊編碼的資料行的彙總為速度較慢，超過值編碼的資料行值編碼可指定做為這類資料行的提示。 不保證會套用喜好設定。 這是相對於設定的提示。 若要指定編碼的提示，請在資料行上設定 EncodingHint 屬性。 可能的值為 「 預設 」、 「 值 」 和 「 雜湊 」。 下列程式碼片段的 JSON 型 Model.bim 檔案中的中繼資料指定編碼 Sales Amount 資料行的值。
 
 ```
 {
@@ -105,7 +102,7 @@ SQL Server 2017 Analysis Services 會看到一些最重要的增強功能自 SQL
 ## <a name="detail-rows"></a>詳細資料列
 您現在可以定義參與量值的自訂資料列集。 詳細資料列類似多維度模型中的預設鑽研動作。 這可讓使用者檢視比彙總層級更詳細的資訊。 
 
-下列的樞紐分析表會依年份顯示 Adventure Works 範例表格式模型的 Internet Total Sales (網際網路總銷售額)。 您可以滑鼠右鍵按一下量值中有彙總值的儲存格，然後按一下 [顯示詳細資料]  檢視詳細資料列。
+下列的樞紐分析表會依年份顯示 Adventure Works 範例表格式模型的 Internet Total Sales (網際網路總銷售額)。 您可以滑鼠右鍵按一下量值中有彙總值的儲存格，然後按一下顯示詳細資料  檢視詳細資料列。
 
 ![AS_Show_Details](../analysis-services/media/as-show-details.png)
 
@@ -116,7 +113,7 @@ SQL Server 2017 Analysis Services 會看到一些最重要的增強功能自 SQL
 
 ![AS_Detail_Rows_Expression_Property](../analysis-services/media/as-detail-rows-expression-property.png)
 
-Detail Rows Expression (詳細資料列運算式) 中會經常使用 [SELECTCOLUMNS](https://msdn.microsoft.com/library/mt761759.aspx) DAX 函數。 下例會定義範例 Adventure Works 表格式模型的 Internet Sales 資料表中，資料列要傳回的資料行︰
+[SELECTCOLUMNS](https://msdn.microsoft.com/library/mt761759.aspx) DAX 函數通常用在詳細資料列運算式中。 下例會定義範例 Adventure Works 表格式模型的 Internet Sales 資料表中，資料列要傳回的資料行︰
 
 ```
 SELECTCOLUMNS(
@@ -133,7 +130,7 @@ SELECTCOLUMNS(
 ![AS_Detail_Rows](../analysis-services/media/as-detail-rows.png)
 
 #### <a name="default-detail-rows-expression-property-for-tables"></a>資料表的預設 Detail Rows Expression (詳細資料列運算式) 屬性
-除量值之外，資料表也有定義詳細資料列運算式的屬性。 **Default Detail Rows Expression** (預設詳細資料列運算式) 屬性的作用如同資料表中所有量值的預設值。 未定義本身運算式的量值會繼承資料表的運算式，並顯示為資料表定義的資料列集。 這允許重複使用運算式，而之後加入資料表的新量值會自動繼承運算式。
+除量值之外，資料表也有定義詳細資料列運算式的屬性。 **Default Detail Rows Expression** (預設詳細資料列運算式) 屬性的作用如同資料表中所有量值的預設值。 沒有自己的運算式定義的量值運算式會繼承資料表，並顯示在資料列集定義的資料表。 這可讓重複使用運算式，以及新的量值加入至資料表稍後會自動繼承運算式。
 
 ![AS_Default_Detail_Rows_Expression](../analysis-services/media/as-default-detail-rows-expression.png)
  
@@ -244,7 +241,7 @@ Filtered Sales:=CALCULATE (
 * 階層和資料行重複使用形式出現在 Power BI 的欄位清單中更有用的位置。
 * 若要輕鬆地建立與日期欄位為基礎的日期維度關聯性的日期關聯性。
 * Analysis Services 的預設安裝選項現在是為表格式模式。
-* 新資料來源取得資料 (電源 Qery)。
+* 新資料來源取得資料 (Power Query)。
 * SSDT 的 DAX 編輯器。
 * 現有 DirectQuery 資料來源支援的 M 查詢。
 * SSMS 增強功能，例如檢視、 編輯和指令碼支援的結構化的資料來源。

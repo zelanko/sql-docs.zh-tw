@@ -19,10 +19,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1edcf3e322d8348436d2cfd6b0097226db7ce3e3
+ms.sourcegitcommit: 41c2caf816ca412e4a6048713dc66f97da5155ae
+ms.openlocfilehash: 5d37c9150d19c3e39ea76b48fb0453d159ca0f44
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/07/2017
 
 ---
 # <a name="deploy-the-r-model-and-use-it-in-sql"></a>部署 R 模型，並將它用於 SQL
@@ -213,7 +213,7 @@ ms.lasthandoff: 09/01/2017
 
 + [資料科學案例和解決方案範本](data-science-scenarios-and-solution-templates.md)
 
-+ [資料庫內的進階分析](/sqldev-in-database-r-for-sql-developers.md)
++ [資料庫內的進階分析](sqldev-in-database-r-for-sql-developers.md)
 
 + [Microsoft R - 深入探討資料分析](https://msdn.microsoft.com/microsoft-r/data-analysis-in-microsoft-r)
 
@@ -221,7 +221,7 @@ ms.lasthandoff: 09/01/2017
 
 ## <a name="previous-lesson"></a>上一課
 
-[建立 R 模型，並將它儲存在 SQL Server](/walkthrough-build-and-save-the-model.md)
+[建立 R 模型，並將它儲存在 SQL Server](walkthrough-build-and-save-the-model.md)
 
 ## <a name="next-steps"></a>後續的步驟
 

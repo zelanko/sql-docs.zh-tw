@@ -21,10 +21,10 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 972ab981eccb6271dfa2f18e0b482f43020ff36b
+ms.sourcegitcommit: 6419c75df8a5b6742b102a3f56adfa7e2efd9ef1
+ms.openlocfilehash: 630c835cf7be720ad235b0f33bb093ac5a1ed926
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/03/2017
 
 ---
 # <a name="analysis-services-backward-compatibility-sql-2017"></a>Analysis Services 回溯相容性 (SQL 2017)
@@ -40,10 +40,11 @@ A*已被取代功能*會停止從產品在未來版本中，但仍支援，且�
 |||  
 |-|-|  
 |**模式/類別**|**功能**|
-|表格式|遠端連結量值群組|
+|多維度|資料採礦|
+|多維度|遠端連結量值群組|
 |表格式|模型 1100年和 1103年相容性層級|
 |表格式|表格式物件模型的屬性： Column.TableDetailPosition，Column.IsDefaultLabel，Column.IsDefaultImage|
-|多維度|資料採礦|
+
 
 ## <a name="discontinued-features"></a>已停止的功能
 A*已停止的功能*先前的版本中已被取代。 它包含在目前版本中，可以繼續，但已不再支援。 已停止的功能可能會移除整個未來版本或更新。
@@ -70,8 +71,9 @@ A*中斷變更*升級至目前的版本之後造成功能、 資料模型、 應
 ## <a name="behavior-changes"></a>行為變更
 A*行為變更*都會影響在目前的版本相較於舊版的相同功能的運作方式。 描述重要行為所做的變更。 不包含使用者介面中的變更。
 
-在此版本中沒有任何行為變更。
+MDSCHEMA_MEASUREGROUP_DIMENSIONS 和 DISCOVER_CALC_DEPENDENCY，變更中詳述[的新功能 Analysis Services 的 SQL Server 2017 CTP 2.1](https://blogs.msdn.microsoft.com/analysisservices/2017/05/18/whats-new-in-sql-server-2017-ctp-2-1-for-analysis-services/)公告。
 
 
 ## <a name="see-also"></a>另請參閱
 [Analysis Services 回溯相容性 (SQL Server 2016)](analysis-services-backward-compatibility.md)
+

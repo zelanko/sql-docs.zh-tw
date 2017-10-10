@@ -26,10 +26,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f79bc1df77566540cdce25e12e7ed20c6836e122
+ms.sourcegitcommit: b6d6655b1640eff66182c78ea919849194d9714c
+ms.openlocfilehash: fc0a9e68c9dc3ad664a4f091b73b073038c7f4c1
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/05/2017
 
 ---
 # <a name="time-transact-sql"></a>時間 (Transact-SQL)
@@ -44,12 +44,12 @@ ms.lasthandoff: 09/01/2017
   
 |屬性|值|  
 |--------------|-----------|  
-|語法|**時間**[(*小數秒有效位數*)]|  
+|語法|**時間**[(*小數的第二個小數位數*)]|  
 |使用方式|宣告@MyTime **time （7)**<br /><br /> 建立資料表 Table1 (Column1 **time （7)** )|  
-|*小數秒數有效位數*|指定秒鐘小數部分的位數。<br /><br /> 這可以是介於 0 至 7 之間的整數。 Informatica，這可以介於 0 到 3 的整數。<br /><br /> 預設的小數有效位數是 7 (100ns)。|  
+|*小數秒小數位數*|指定秒鐘小數部分的位數。<br /><br /> 這可以是介於 0 至 7 之間的整數。 Informatica，這可以介於 0 到 3 的整數。<br /><br /> 預設小小數位數為 7 (100ns)。|  
 |預設的字串常值格式<br /><br /> (用於下層用戶端)|ss [.nnnnnnn] (如 Informatica ss [.nnn])<br /><br /> 如需詳細資訊，請參閱下列的＜下層用戶端的回溯相容性＞一節。|  
 |範圍|00:00:00.0000000 透過 23:59:59.9999999 (透過 Informatica 的 23:59:59.999 00:00:00.000)|  
-|元素範圍|hh 是代表小時的兩位數，範圍介於 0 至 23 之間。<br /><br /> mm 是代表分鐘的兩位數，範圍介於 0 至 59 之間。<br /><br /> ss 是代表秒鐘的兩位數，範圍介於 0 至 59 之間。<br /><br /> n* 是代表小數秒數的零至七位數，範圍介於 0 至 9999999 之間。 Informatica，for n\*是零到三位數，範圍從 0 到 999。|  
+|元素範圍|hh 是代表小時的兩位數，範圍介於 0 至 23 之間。<br /><br /> mm 是代表分鐘的兩位數，範圍介於 0 至 59 之間。<br /><br /> ss 是代表秒鐘的兩位數，範圍介於 0 至 59 之間。<br /><br /> n\*為零至七位數，範圍從 0 至 9999999 之間，代表小數秒數。 Informatica，for n\*是零到三位數，範圍從 0 到 999。|  
 |字元長度|最小 8 個 hh: mm （:） 到最大 16 個 (ss.nnnnnnn)。 Informatica，針對最大值為 12 (hh:mm:ss.nnn)。|  
 |有效位數，小數位數<br /><br /> (使用者僅指定小數位數)|請參閱下表。|  
 |儲存體大小|固定的 5 個位元組是具有預設 100ns 小數秒數有效位數的預設值。 Informatica，預設值是 4 個位元組，固定的預設值為 1 毫秒的小數秒有效位數。|  

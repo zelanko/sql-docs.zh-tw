@@ -36,10 +36,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 303d3b74da3fe370d19b7602c0e11e67b63191e7
-ms.openlocfilehash: 709fd98f48764c19b4e358812c20cbf1dc52b8e4
+ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
+ms.openlocfilehash: 21fdac9e8c4fffa0a87eee72e3587c2a3378ad66
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/29/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="foreach-loop-container"></a>Foreach 迴圈容器
@@ -49,7 +49,7 @@ ms.lasthandoff: 08/29/2017
   
 -   Foreach ADO 列舉值，用來列舉資料表中的資料列。 例如，您可以在 ADO 資料錄集中取得資料列。  
   
-     資料錄集目的地會將記憶體中的資料儲存到 **Object** 資料類型之封裝變數中儲存的資料錄集。 您通常會使用具有 Foreach ADO 列舉值的 Foreach 迴圈容器來一次處理資料錄集的一個資料列。 針對 Foreach ADO 列舉值指定的變數必須屬於 Object 資料類型。 如需有關資料錄集目的地的詳細資訊，請參閱＜ [Use a Recordset Destination](../../integration-services/data-flow/use-a-recordset-destination.md)＞。  
+     資料錄集目的地會將記憶體中的資料儲存到 **Object** 資料類型之封裝變數中儲存的資料錄集。 您通常會使用具有 Foreach ADO 列舉值的 Foreach 迴圈容器來一次處理資料錄集的一個資料列。 針對 Foreach ADO 列舉值指定的變數必須屬於 Object 資料類型。 如需有關資料錄集目的地的詳細資訊，請參閱[Use a Recordset Destination](../../integration-services/data-flow/use-a-recordset-destination.md)。  
   
 -   「Foreach ADO.NET 結構描述資料列集」列舉值，用來列舉有關資料來源的結構描述資訊。 例如，您可以列舉並取得一份 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中資料表的清單。  
   
@@ -67,7 +67,7 @@ ms.lasthandoff: 08/29/2017
   
 -   Foreach Azure Blob 列舉值會列舉在 Azure 儲存體 blob 容器中的 Blob。  
 
--   列舉 ADLS 目錄中的檔案的 ADLS Foreach 檔案列舉值。
+-   列舉在 Azure 資料湖存放區中的目錄中檔案的 ADLS Foreach 檔案列舉值。
   
  下列圖表顯示擁有「檔案系統」工作的「Foreach 迴圈」容器。 Foreach 迴圈會使用「Foreach 檔案」列舉值，而「檔案系統」工作則設定為複製檔案。 如果列舉值指定的資料夾含有四個檔案，則迴圈會重複四次並複製四個檔案。  
   
@@ -97,7 +97,7 @@ ms.lasthandoff: 08/29/2017
 |Foreach SMO|指定資料庫的連接和要列舉的 SMO 物件。|  
 |Foreach HDFS 檔案列舉值|指定資料夾和要列舉的檔案、所擷取檔案的檔名格式，以及是否往返子資料夾。|  
 |Foreach Azure Blob|指定要列舉的 blob 容器的 Azure Blob 容器。|  
-|Foreach ADLS 檔案|指定包含要列舉的有些篩選條件以及檔案的 ADLS 目錄。|
+|Foreach ADLS 檔案|指定包含要列舉之檔案的 Azure 資料湖存放區目錄。|
 
 ## <a name="add-enumeration-to-a-control-flow-with-a-foreach-loop-container"></a>將列舉加入控制流程，與 Foreach 迴圈容器
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]包含 「 Foreach 迴圈 」 容器，可簡化包括列舉檔案及物件中封裝的控制流程的迴圈建構的控制流程元素。 如需詳細資訊，請參閱 [Foreach 迴圈容器](../../integration-services/control-flow/foreach-loop-container.md)＞。  
@@ -129,7 +129,7 @@ ms.lasthandoff: 08/29/2017
   
 5.  指定列舉值並設定列舉值選項如下：  
   
-    -   若要使用 Foreach 檔案列舉值，請提供包含要列舉之檔案的資料夾，指定檔案名稱及類型的篩選，並指定是否應該傳回完整的檔案名稱。 同時，指示是否遞迴所有子資料夾，以取得更多檔案。  
+    -   若要使用 Foreach 檔案列舉值，提供包含要列舉，指定的篩選條件的檔案名稱和型別，以及指定是否應該傳回完整的檔案名稱的檔案的資料夾。 同時，指示是否遞迴所有子資料夾，以取得更多檔案。  
   
     -   若要使用 Foreach 項目列舉值，請按一下 [資料行]，然後在 [For Each 項目資料行] 對話方塊中，按一下 [加入]以加入資料行。 在 [資料類型] 清單中為每個資料行選取資料類型，然後按一下 [確定]。  
   
@@ -151,20 +151,20 @@ ms.lasthandoff: 08/29/2017
   
     -   若要使用 Foreach From Variable 列舉值，請在 [變數] 清單中選取變數。  
   
-    -   若要使用 Foreach NodeList 列舉值，請按一下 [DocumentSourceType] 並從清單中選取來源類型，然後按一下 [DocumentSource]。 視 DocumentSourceType 所選的值而定，從清單中選取變數或檔案連接、建立新的變數或檔案連接，或在 [文件來源編輯器] 中輸入 XML 來源。  
+    -   若要使用 Foreach NodeList 列舉值，請按一下 DocumentSourceType 並從清單中選取來源類型，然後按一下DocumentSource。 視 DocumentSourceType 所選的值而定，從清單中選取變數或檔案連接、建立新的變數或檔案連接，或在 [文件來源編輯器] 中輸入 XML 來源。  
   
-         接著，按一下 [EnumerationType] 並從清單中選取列舉類型。 如果 EnumerationType 是 **Navigator、Node 或 NodeText**，請按一下 [OuterXPathStringSourceType] 並選取來源類型，然後按一下 [OuterXPathString]。 視 OuterXPathStringSourceType 所設定的值而定，從清單中選取變數或檔案連接、建立新的變數或檔案連接，或為外部 XML 路徑語言 (XPath) 運算式輸入字串。  
+         接著，按一下 [EnumerationType] 並從清單中選取列舉類型。 如果 EnumerationType 是 **Navigator、Node 或 NodeText**，請按一下 OuterXPathStringSourceType 並選取來源類型，然後按一下OuterXPathString。 視 OuterXPathStringSourceType 所設定的值而定，從清單中選取變數或檔案連接、建立新的變數或檔案連接，或為外部 XML 路徑語言 (XPath) 運算式輸入字串。  
   
-         如果 EnumerationType 是 **ElementCollection**，請如上所述設定 OuterXPathStringSourceType 和 OuterXPathString。 然後，按一下 [InnerElementType] 並為內部元素選取列舉類型，再按一下 [InnerXPathStringSourceType]。 視 InnerXPathStringSourceType 所設定的值而定，選取變數或檔案連接、建立新的變數或檔案連接，或為內部 XPath 運算式輸入字串。  
+         如果是 EnumerationType **ElementCollection**，設定 OuterXPathStringSourceType 和 OuterXPathString，如上面所述。 然後，按一下 [InnerElementType] 並為內部元素選取列舉類型，再按一下 [InnerXPathStringSourceType]。 視 InnerXPathStringSourceType 所設定的值而定，選取變數或檔案連接、建立新的變數或檔案連接，或為內部 XPath 運算式輸入字串。  
   
     -   若要使用 Foreach SMO 列舉值，請選取現有的 ADO.NET 連接，或按一下 [連接] 清單中的 [新增連接]，然後輸入要使用的字串或按一下 [瀏覽]。 如果按一下 [選取 SMO 列舉] 對話方塊中的 [瀏覽]，請選取要列舉的物件類型及列舉類型，然後按一下 [確定]。  
   
 6.  (選擇性) 按一下 [集合] 頁面上 [運算式] 文字方塊中的瀏覽按鈕 **(…)**，以建立更新屬性值的運算式。 如需詳細資訊，請參閱[加入或變更屬性運算式](../../integration-services/expressions/add-or-change-a-property-expression.md)。  
   
     > [!NOTE]  
-    >  [屬性] 清單中列出的屬性會依列舉值而不同。  
+    >  列出的屬性**屬性**清單會因列舉值。  
   
-7.  (選擇性) 按一下 [變數對應]，以將物件屬性對應至集合值，然後執行下列操作：  
+7.  （選擇性） 按一下**變數對應**為集合的值，對應物件屬性，然後執行下列動作：  
   
     1.  在**變數**清單中，選取變數，或按一下**\<新增變數 >**以建立新的變數。  
   
@@ -191,17 +191,17 @@ ms.lasthandoff: 08/29/2017
 > [!NOTE]  
 >  物件名稱在封裝內必須是唯一的。  
   
- **描述**  
+ **說明**  
  輸入 Foreach 迴圈容器的描述。  
 
 ## <a name="collection-page---foreach-loop-editor"></a>集合頁面-Foreach 迴圈編輯器
- 使用 [Foreach 迴圈編輯器] 對話方塊的 [集合] 頁面，即可指定列舉值類型和設定列舉值。  
+ 使用**集合**頁面**Foreach 迴圈編輯器**對話方塊，即可指定列舉值類型和設定列舉值。  
   
- 若要了解 Foreach 迴圈容器以及如何設定該容器，請參閱 [Foreach 迴圈容器](../../integration-services/control-flow/foreach-loop-container.md)和[設定 Foreach 迴圈容器](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)。  
+ 若要了解 Foreach 迴圈容器以及如何設定該容器，請參閱 [Foreach 迴圈容器](../../integration-services/control-flow/foreach-loop-container.md) 和 [設定 Foreach 迴圈容器](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)。  
   
 ### <a name="static-options"></a>靜態選項  
  **列舉值**  
- 從清單中選取列舉值類型。 這個屬性具有下表中所列的選項。  
+ 從清單中選取列舉值類型。 此屬性具有下表所列的選項：  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -214,7 +214,7 @@ ms.lasthandoff: 08/29/2017
 |**Foreach SMO 列舉值**|列舉 SMO 物件。 選取這個值就會在 **[Foreach SMO 列舉值]**區段中顯示動態選項。|  
 |**Foreach HDFS 檔案列舉值**|列舉所指定 HDFS 位置中的 HDFS 檔案。 選取這個值就會在 [Foreach HDFS 檔案列舉值] 區段中顯示動態選項。|  
 |**Foreach Azure Blob 列舉值**|列舉指定 Blob 位置中的 Blob 檔案。 選取此值可在 **[Foreach ADO 列舉值]**區段中顯示動態選項。|  
-|**ADLS Foreach 檔案列舉值**|列舉 ADLS 上具有篩選條件的檔案。 選取此值區段中顯示動態選項**Foreach ADLS 檔案列舉值**。|
+|**ADLS Foreach 檔案列舉值**|列舉指定之資料湖存放區目錄中的檔案。 選取此值區段中顯示動態選項**Foreach ADLS 檔案列舉值**。|
   
  **運算式**  
  按一下或展開 **[運算式]** ，即可檢視現有屬性運算式的清單。 按一下省略符號 **(...)** 按鈕以加入列舉值屬性的屬性運算式，或是編輯和評估現有的屬性運算式。  
@@ -226,13 +226,13 @@ ms.lasthandoff: 08/29/2017
 #### <a name="enumerator--foreach-file-enumerator"></a>列舉值 = Foreach 檔案列舉值  
  Foreach 檔案列舉值可用來列舉資料夾中的檔案。 例如，如果 Foreach 迴圈包括「執行 SQL」工作，則您可使用 Foreach 檔案列舉值來列舉檔案，而這些檔案包含執行「執行 SQL」工作的 SQL 陳述式。 您也可以將列舉值設定成包括子資料夾。  
   
- 因為迴圈中的外部處理序或工作在迴圈執行時加入、重新命名或刪除檔案，所以 Foreach 檔案列舉值所列舉的資料夾和子資料夾內容在迴圈執行時可能會變更。 這表示可能會發生一些非預期的狀況：  
+ 因為迴圈中的外部處理序或工作在迴圈執行時加入、重新命名或刪除檔案，所以 Foreach 檔案列舉值所列舉的資料夾和子資料夾內容在迴圈執行時可能會變更。 這些變更可能會造成非預期的狀況的數字：  
   
--   如果是刪除檔案，則 Foreach 迴圈中的其中一個工作可能會針對與後續工作所用之檔案不同的一組檔案執行工作。  
+-   如果刪除檔案，則 Foreach 迴圈中的一項工作的動作可能會影響一組不同的檔案比後續工作所用的檔案。  
   
--   如果是重新命名檔案，且外部處理序自動加入檔案以取代重新命名的檔案，則 Foreach 迴圈可能會針對相同的檔案內容執行兩次工作。  
+-   如果重新命名檔案和外部處理序會自動加入檔案以取代重新命名的檔案，Foreach 迴圈 」 中工作的動作可能會影響相同檔案兩次。  
   
--   如果是加入檔案，則可能會很難判斷 Foreach 迴圈執行的是哪個檔案的工作。  
+-   如果加入檔案，可能會難以判斷其檔案 「 Foreach 迴圈 」 的影響。  
   
  **資料夾**  
  提供要列舉的根資料夾之路徑。  
@@ -246,12 +246,12 @@ ms.lasthandoff: 08/29/2017
 > [!NOTE]  
 >  使用萬用字元 (*) 即可指定要包含在集合中的檔案。 例如，若要包括名稱內含 "abc" 的檔案，可使用下列篩選： \*abc\*。  
 >   
->  當您指定副檔名時，此列舉值也會傳回附加其他字元之相同副檔名的檔案 (這個行為與作業系統中 **dir** 命令的行為相同，而且此命令也會針對回溯相容性比較 8.3 檔案名稱)。列舉值的這個行為可能會導致非預期的結果。 例如，您只想要列舉 Excel 2003 檔案，而且指定了 "*.xls"。 不過，此列舉值也會傳回 Excel 2007 檔案，因為這些檔案的副檔名為 ".xlsx"。  
+>  當您指定副檔名時，此列舉值也會傳回附加其他字元之相同副檔名的檔案 (這個行為與作業系統中 **dir** 命令的行為相同，而且此命令也會針對回溯相容性比較 8.3 檔案名稱)。列舉值的這個行為可能會導致非預期的結果。 例如，您只想要列舉 Excel 2003 檔案，而且指定了 "*.xls"。 不過，列舉值也會傳回 Excel 2007 檔案，因為這些檔案的副檔名為".xlsx"。  
 >   
 >  您可以使用運算式指定要包括在集合內的檔案，方法是展開 [集合] 頁面上的 [運算式]，選取 **FileSpec** 屬性，然後按一下省略符號按鈕 (…) 加入屬性運算式。  
   
  **完整**  
- 選取即可擷取檔案名稱的完整路徑。 如果在檔案選項中指定萬用字元，則會傳回符合篩選的完整路徑。  
+ 選取即可擷取檔案名稱的完整路徑。 如果在檔案選項中指定萬用字元，則會傳回完整的路徑符合篩選。  
   
  **僅名稱**  
  選取即可只擷取檔案名稱。 如果在檔案選項中指定萬用字元，則會傳回符合篩選的檔案名稱。  
@@ -342,7 +342,7 @@ ms.lasthandoff: 08/29/2017
  若要深入了解 XML 文件和資料，請參閱 MSDN Library 中的[在 .NET Framework 內採用 XML](http://go.microsoft.com/fwlink/?LinkId=56214)。  
   
  **DocumentSourceType**  
- 選取 XML 文件的來源類型。 這個屬性具有下表中所列的選項。  
+ 選取 XML 文件的來源類型。 此屬性具有下表所列的選項：  
   
 |Value|說明|  
 |-----------|-----------------|  
@@ -362,7 +362,7 @@ ms.lasthandoff: 08/29/2017
  **相關主題**：[Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、[加入變數](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)。  
   
  **EnumerationType**  
- 從清單中選取列舉類型。 這個屬性具有下表中所列的選項。  
+ 從清單中選取列舉類型。 此屬性具有下表所列的選項：  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -372,7 +372,7 @@ ms.lasthandoff: 08/29/2017
 |**ElementCollection**|列舉 XPath 作業傳回的元素節點。|  
   
  **OuterXPathStringSourceType**  
- 選取 XPath 字串的來源類型。 這個屬性具有下表中所列的選項。  
+ 選取 XPath 字串的來源類型。 此屬性具有下表所列的選項： 
   
 |Value|說明|  
 |-----------|-----------------|  
@@ -395,7 +395,7 @@ ms.lasthandoff: 08/29/2017
  如果 **[EnumerationType]** 設定為 **[ElementCollection]**，請在清單中選取內部元素的類型。  
   
  **InnerXPathStringSourceType**  
- 選取內部 XPath 字串的來源類型。 這個屬性具有下表中所列的選項。  
+ 選取內部 XPath 字串的來源類型。 此屬性具有下表所列的選項：  
   
 |Value|說明|  
 |-----------|-----------------|  
@@ -415,7 +415,7 @@ ms.lasthandoff: 08/29/2017
  **相關主題**：[Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、[加入變數](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)。  
   
 #### <a name="enumerator--foreach-smo-enumerator"></a>列舉值 = Foreach SMO 列舉值  
- Foreach SMO 列舉值可用來列舉 SQL Server 管理物件 (SMO) 物件。 例如，如果 Foreach 迴圈包括「執行 SQL」工作，您可以使用 Foreach SMO 列舉值來列舉 **AdventureWorks** 資料庫中的資料表，並執行用來計算每個資料表中資料列數目的查詢。  
+ Foreach SMO 列舉值可用來列舉 SQL Server 管理物件 (SMO) 物件。 例如，如果 Foreach 迴圈包括 「 執行 SQL 」 工作，可以使用 Foreach SMO 列舉值列舉中的資料表**AdventureWorks**資料庫並執行查詢，會計算每個資料表中的資料列數目。  
   
  **連接**  
  選取現有的 ADO.NET 連接管理員，或按一下\<**新增連接...**> 以建立新的連接管理員。  
@@ -440,14 +440,14 @@ ms.lasthandoff: 08/29/2017
  指定包含要列舉之 HDFS 檔案的 HDFS 目錄名稱。  
   
  **檔案名稱篩選**  
- 指定名稱篩選，以選取具有特定名稱模式的檔案。 例如，MySheet*.xls\* 會包含 MySheet001.xls 和 MySheetABC.xlsx 這類的檔案。  
+ 指定名稱篩選，以選取具有特定名稱模式的檔案。 例如，Mysheet\*包含 MySheet001.xls 及 mysheetabc.xlsx 等檔案。  
   
  **擷取檔案名稱**  
  指定 SSIS 所擷取的檔案名稱類型。  
   
--   [完整名稱] 表示包含目錄路徑和檔案名稱的完整名稱。  
+-   **完整格式的名稱**表示的完整名稱，其中包含目錄路徑和檔案名稱。  
   
--   [只有名稱] 表示僅擷取檔案名稱。  
+-   **只有名稱**表示不含路徑擷取檔案名稱。  
   
  **周遊子資料夾**  
  指定是否要遞迴地循環使用子資料夾。  
@@ -455,7 +455,7 @@ ms.lasthandoff: 08/29/2017
  在編輯器的 [變數對應] 頁面上，選取或建立變數來儲存所列舉 HDFS 檔案的名稱。  
   
 ####  <a name="ForeachAzureBlob"></a>列舉值 = Foreach Azure Blob 列舉值  
- [Azure Blob Enumerator (Azure Blob 列舉值)] 可讓 SSIS 封裝列舉所指定 Blob 位置中的 Blob 檔案。 列舉之 Blob 檔案的名稱可以儲存在變數中，也可以用於 Foreach 迴圈容器中的工作中。  
+ [Azure Blob Enumerator (Azure Blob 列舉值)] 可讓 SSIS 封裝列舉所指定 Blob 位置中的 Blob 檔案。 您可以列舉之 blob 檔案的名稱儲存在變數中，並在 「 Foreach 迴圈 」 容器內的工作中使用它。  
   
  [Azure Blob Enumerator (Azure Blob 列舉值)] 是適用於 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 之 Azure SQL Server Integration Services (SSIS) 功能套件的元件。 請在 [這裡](http://go.microsoft.com/fwlink/?LinkID=626967)。  
   
@@ -465,28 +465,28 @@ ms.lasthandoff: 08/29/2017
  相關主題： [Azure 儲存體連線管理員](../../integration-services/connection-manager/azure-storage-connection-manager.md)。  
   
  **Blob 容器名稱**  
- 指定包含要列舉之 Blob 檔案的 Blob 容器之名稱。  
+ 指定包含要列舉之 blob 檔案的 blob 容器名稱。
   
  **Blob 目錄**  
- 指定指定包含要列舉之 Blob 檔案的 Blob 目錄。 Blob 目錄是虛擬的階層式結構。  
+ 指定包含要列舉之 blob 檔案的 blob 目錄。 Blob 目錄是虛擬的階層式結構。  
   
  **Blob 名稱篩選條件**  
- 指定名稱篩選條件以列舉具有特定名稱模式的檔案。 例如 MySheet*.xls\* 會包含 MySheet001.xls 及 MySheetABC.xlsx 一類的檔案。  
+ 指定名稱篩選條件以列舉具有特定名稱模式的檔案。 例如，`MySheet*.xls\*`包含 MySheet001.xls 及 mysheetabc.xlsx 等檔案。  
   
  **Blob 自/至篩選的時間範圍**  
- 指定時間範圍篩選條件。 這會列舉在 **TimeRangeFrom** 之後及在 **TimeRangeTo** 之前修改的檔案。 
+ 指定時間範圍篩選條件。 檔案之後修改**TimeRangeFrom**之前**TimeRangeTo**列舉。 
 
 ####  <a name="ForeachAdlsFile"></a>列舉值 = Foreach ADLS 檔案列舉值 
-**ADLS 檔案列舉值**可讓 SSIS 封裝列舉 ADLS 上具有篩選條件的檔案。 斜線 (`/`)-帶有前置詞的完整路徑的列舉檔案可以儲存在變數中，並用於 Foreach 迴圈容器中的工作。
+**ADLS 檔案列舉值**可讓 SSIS 封裝列舉 Azure 資料湖存放區中的檔案。 您可以儲存列舉檔案的完整路徑 (加上斜線- `/`) 在變數中並使用 「 Foreach 迴圈 」 容器內的工作中的檔案路徑。
   
 **AzureDataLakeConnection**  
 指定的 Azure 資料湖連接管理員，或建立參考 ADLS 帳戶的新連線。   
   
 **AzureDataLakeDirectory**  
-指定要搜尋的 ADLS 目錄。
+指定包含要列舉之檔案的 ADLS 目錄。
   
 **FileNamePattern**  
-指定檔案名稱篩選條件。 會列舉其名稱符合指定的模式的檔案。 萬用字元`*`和`?`支援。 
+指定檔案名稱篩選條件。 會列舉名稱符合指定的模式的檔案。 萬用字元`*`和`?`支援。 
   
 **SearchRecursively**  
 指定是否要搜尋以遞迴方式在指定的目錄。  
@@ -494,27 +494,27 @@ ms.lasthandoff: 08/29/2017
 ## <a name="variable-mappings-page---foreach-loop-editor"></a>Foreach 迴圈編輯器變數對應頁面
  使用 [Foreach 迴圈編輯器] 對話方塊的 [變數對應] 頁面，即可將變數對應至集合值。 會用迴圈之每個反覆運算上的集合值來更新變數的值。  
   
- 若要了解如何在 Integration Services 封裝中使用「Foreach 迴圈」容器，請參閱 [Foreach 迴圈容器](../../integration-services/control-flow/foreach-loop-container.md) 。 若要了解如何設定此容器，請參閱 [設定 Foreach 迴圈容器](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)。  
+ 若要深入了解如何在 Integration Services 封裝中使用 「 Foreach 迴圈 」 容器，請參閱[Foreach 迴圈 」 容器](../../integration-services/control-flow/foreach-loop-container.md)。 若要了解如何設定此容器，請參閱 [設定 Foreach 迴圈容器](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)。  
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 教學課程中的＜建立簡易 ETL 封裝教學課程＞包含了一門教您加入和設定「Foreach 迴圈」的課程。  
   
-### <a name="options"></a>選項  
+### <a name="options"></a>選項。  
  **變數**  
- 選取現有的變數，或按一下\<**新增變數...**> 若要建立新的變數。  
+ 選取現有的變數，或按一下**新增變數...**以建立新的變數。  
   
 > [!NOTE]  
 >  對應變數之後，新資料列會自動加入 [變數] 清單。  
   
  **相關主題**：[Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、[加入變數](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
- **索引**  
+ **Index**  
  如果使用 Foreach 項目列舉值，請指定集合值中要對應至變數的資料行索引。 針對其他列舉值類型，此索引是唯讀的。  
   
 > [!NOTE]  
 >  索引是以 0 為基底。  
   
 **Delete**  
- 選取變數，然後按一下 [刪除]。  
+ 選取變數，然後按一下刪除。  
 
 ## <a name="schema-restrictions-dialog-box-adonet"></a>結構描述限制對話方塊 (ADO.NET)
 使用 [結構描述限制] 對話方塊，即可設定要套用至 Foreach ADO.NET 結構描述資料列集列舉值的結構描述限制。  
@@ -528,7 +528,7 @@ ms.lasthandoff: 08/29/2017
   
  **相關主題：**[Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、[加入變數](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
- **文字**  
+ **Text**  
  提供文字以定義限制。  
  
 ## <a name="for-each-item-columns-dialog-box"></a>For Each 項目資料行對話方塊
@@ -545,12 +545,12 @@ ms.lasthandoff: 08/29/2017
  加入新資料行。  
   
  **移除**  
- 選取資料行，然後按一下 [移除]。  
+ 選取資料行，然後按一下移除。  
  
  ## <a name="select-smo-enumeration-dialog-box"></a>選取 SMO 列舉對話方塊
 使用 [選取 SMO 列舉] 對話方塊，即可在指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理物件 (SMO) 物件，以列舉和選取列舉類型。  
   
-### <a name="options"></a>選項  
+### <a name="options"></a>選項。  
  **列舉**  
  展開伺服器並選取 SMO 物件。  
   
@@ -576,7 +576,7 @@ ms.lasthandoff: 08/29/2017
   
  為了避免可執行檔平行執行時機不確定的負面影響，您應該將封裝設定為一次只執行一個可執行檔。 例如，如果封裝可以同時執行多項工作，當執行 SQL 工作的兩個執行個體試圖同時進行寫入時，負責列舉資料夾中的檔案、擷取檔案名稱，然後使用執行 SQL 工作將檔案名稱插入資料表等步驟的「Foreach 迴圈」容器可能會引發寫入衝突。 如需詳細資訊，請參閱 [在封裝中使用屬性運算式](../../integration-services/expressions/use-property-expressions-in-packages.md)。  
 
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [控制流程](../../integration-services/control-flow/control-flow.md)   
  [Integration Services 容器](../../integration-services/control-flow/integration-services-containers.md)  
   

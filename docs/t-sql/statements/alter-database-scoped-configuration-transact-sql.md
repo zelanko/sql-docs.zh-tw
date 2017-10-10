@@ -27,10 +27,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 19d2d42ff513020b5d4bb9492f0714893101bdcb
+ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
+ms.openlocfilehash: 75ab644da296ecc613c803916eb0b70907ad0cf6
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (TRANSACT-SQL)
@@ -55,13 +55,12 @@ ms.lasthandoff: 09/27/2017
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 ALTER DATABASE SCOPED CONFIGURATION  
 {        
      {  [ FOR SECONDARY] SET <set_options>  }    
 }  
 | CLEAR PROCEDURE_CACHE  
-| SET IDENTITY_CACHE = { ON | OFF }
+| SET < set_options >
 [;]    
   
 < set_options > ::=    
@@ -69,9 +68,9 @@ ALTER DATABASE SCOPED CONFIGURATION
     MAXDOP = { <value> | PRIMARY}    
     | LEGACY_CARDINALITY_ESTIMATION = { ON | OFF | PRIMARY}    
     | PARAMETER_SNIFFING = { ON | OFF | PRIMARY}    
-    | QUERY_OPTIMIZER_HOTFIXES = { ON | OFF | PRIMARY}    
+    | QUERY_OPTIMIZER_HOTFIXES = { ON | OFF | PRIMARY}
+    | IDENTITY_CACHE = { ON | OFF }
 }  
-  
 ```  
   
 ## <a name="arguments"></a>引數  
@@ -131,13 +130,13 @@ PRIMARY
   
 清除 PROCEDURE_CACHE  
 
-清除程序快取中的資料庫。 這可以同時在主要和次要資料庫上執行。  
+清除程序 （計劃） 快取中的資料庫。 這可以同時在主要和次要資料庫上執行。  
 
-IDENTITY_CACHE = { **ON** |OFF}  
+IDENTITY_CACHE  **=**  { **ON** |OFF}  
 
-**適用於**: SQL Server 2017 和 Azure SQL Database （功能處於公開預覽狀態） 
+**適用於**:[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]和[!INCLUDE[ssSDS](../../includes/sssds-md.md)]（功能處於公開預覽狀態） 
 
-啟用或停用識別快取，在資料庫層級。 預設值是**ON**。 識別快取用來改善插入具有識別資料行的資料表上的效能。 若要避免伺服器意外重新啟動或容錯移轉至次要伺服器的狀況中的識別欄位的值的間距，停用 IDENTITY_CACHE 選項。 這個選項是現有 SQL Server 追蹤旗標 272，類似，不同之處在於它可在資料庫層級，而不是只能在伺服器層級設定。   
+啟用或停用識別快取，在資料庫層級。 預設值是**ON**。 識別快取用來改善插入具有識別資料行的資料表上的效能。 若要避免伺服器意外重新啟動或容錯移轉至次要伺服器識別資料行值的間距，停用 IDENTITY_CACHE 選項。 這個選項是類似現有[追蹤旗標 272](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)，不同之處在於它可在資料庫層級，而不是只能在伺服器層級設定。   
 
 > [!NOTE] 
 > 這個選項只能設定為主要。 如需詳細資訊，請參閱[識別資料行](create-table-transact-sql-identity-property.md)。  
@@ -145,7 +144,7 @@ IDENTITY_CACHE = { **ON** |OFF}
 
 ##  <a name="Permissions"></a> Permissions  
  需要改變任何資料庫範圍組態   
-在資料庫中。 使用者具有在資料庫上的 CONTROL 權限可授與此權限  
+在資料庫中。 控制資料庫上的權限的使用者可以授與此權限。  
   
 ## <a name="general-remarks"></a>一般備註  
  雖然您可以設定次要資料庫具有從其主要的不同範圍的組態設定，所有次要資料庫會使用相同的設定。 不同的設定不能設定為個別的次要。  
@@ -268,7 +267,7 @@ ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE ;
 
 ### <a name="g-set-identitycache"></a>G. 設定 IDENTITY_CACHE
 
-**適用於**: SQL Server 2017 和 Azure SQL Database （功能處於公開預覽狀態） 
+**適用於**:[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]和[!INCLUDE[ssSDS](../../includes/sssds-md.md)]（功能處於公開預覽狀態） 
 
 這個範例會停用識別快取。
 
@@ -279,6 +278,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE=OFF ;
 ## <a name="additional-resources"></a>其他資源
 
 ### <a name="maxdop-resources"></a>MAXDOP 資源 
+* [平行處理原則的程度](../../relational-databases/query-processing-architecture-guide.md#DOP)
 * [建議和指導方針 SQL Server 中的"max degree of parallelism"組態選項](https://support.microsoft.com/en-us/kb/2806535) 
 
 ### <a name="legacycardinalityestimation-resources"></a>LEGACY_CARDINALITY_ESTIMATION 資源    
@@ -286,18 +286,18 @@ ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE=OFF ;
 * [Optimizing Your Query Plans with the SQL Server 2014 Cardinality Estimator](https://msdn.microsoft.com/library/dn673537.aspx) (使用 SQL Server 2014 基數估算程式最佳化您的查詢計劃)
 
 ### <a name="parametersniffing-resources"></a>PARAMETER_SNIFFING 資源    
+* [參數探測](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing)
 * [「 我想也參數 ！ 」](https://blogs.msdn.microsoft.com/queryoptteam/2006/03/31/i-smell-a-parameter/)
 
 ### <a name="queryoptimizerhotfixes-resources"></a>QUERY_OPTIMIZER_HOTFIXES 資源    
+* [追蹤旗標 &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
 * [SQL Server 查詢最佳化工具 hotfix 追蹤旗標 4199 服務模型](https://support.microsoft.com/en-us/kb/974006)
 
 ## <a name="more-information"></a>詳細資訊  
  [sys.database_scoped_configurations &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)   
  [sys.configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)   
  [資料庫和檔案目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
- [伺服器組態選項 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
- [追蹤旗標 &#40;TRANSACT-SQL &#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)   
- [sys.configurations &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)  
+ [伺服器組態選項 &#40;SQL Server &#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md) [sys.configurations &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)  
   
   
 

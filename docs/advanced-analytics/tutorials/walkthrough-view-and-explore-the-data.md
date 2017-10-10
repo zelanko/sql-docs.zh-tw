@@ -19,10 +19,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3f531d6b3bd3732c6c4d8c257561a3b3c5c865f2
+ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
+ms.openlocfilehash: 3508b4ac9188906a85a272918ae5cabf4628a3eb
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="view-and-explore-the-data-using-sql-walkthrough"></a>檢視及瀏覽的資料，使用 SQL （逐步解說）
@@ -53,7 +53,7 @@ ms.lasthandoff: 09/01/2017
     ```SQL
     SELECT TOP 1000 * FROM [dbo].[nyctaxi_sample]
     ```
-    如果您在資料表中看不到任何資料，請參閱上一個主題中的 [疑難排解](/walkthrough-prepare-the-data.md) 一節。
+    如果您在資料表中看不到任何資料，請參閱上一個主題中的 [疑難排解](walkthrough-prepare-the-data.md) 一節。
 
 4. 此資料表已透過加入[資料行存放區索引](../../relational-databases/indexes/columnstore-indexes-overview.md)，針對集合式計算最佳化。 執行此陳述式產生的資料表上的簡短摘要。
 
@@ -69,9 +69,9 @@ ms.lasthandoff: 09/01/2017
 
 ## <a name="next-lesson"></a>下一課
 
-[使用 R 的資料摘要](/walkthrough-view-and-summarize-data-using-r.md)
+[使用 R 的資料摘要](walkthrough-view-and-summarize-data-using-r.md)
 
 ## <a name="previous-lesson"></a>上一課
 
-[準備要使用 PowerShell 的資料](/walkthrough-prepare-the-data.md)
+[準備要使用 PowerShell 的資料](walkthrough-prepare-the-data.md)
 

@@ -1,7 +1,7 @@
 ---
-title: "啟用和停用 RDL 沙箱 |Microsoft 文件"
+title: "啟用和停用 RDL 沙箱 Reporting services 中的 SharePoint 整合模式 |Microsoft 文件"
 ms.custom: 
-ms.date: 03/20/2017
+ms.date: 09/25/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -10,27 +10,33 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: d5619e9f-ec5b-4376-9b34-1f74de6fade7
-caps.latest.revision: 9
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2a435c6f6b5dc2d9df676f504837393d448820a4
+ms.translationtype: MT
+ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
+ms.openlocfilehash: 62c6df096133ec0d41996a4df99173cb8727e408
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 10/06/2017
 
 ---
-# <a name="enable-and-disable-rdl-sandboxing"></a>啟用或停用 RDL 沙箱
-  RDL (報表定義語言) 沙箱功能可在多個租用戶使用報表伺服器之單一 Web 伺服陣列的環境中，讓您偵測及限制個別租用戶使用特定資源類型的情形。 這種情形的一個範例是裝載服務案例，在此案例中，您可能要為由多個可能分屬不同公司的租用戶所使用的報表伺服器，維護單一 Web 伺服器陣列。 您身為報表伺服器管理員，可以啟用此功能來幫助您達成下列目標：  
+# <a name="enable-and-disable-rdl-sandboxing-for-reporting-services-in-sharepoint-integrated-mode"></a>啟用和停用 RDL 沙箱 Reporting services 中的 SharePoint 整合模式
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
+
+[!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
+
+RDL （報表定義語言） 沙箱功能可讓您偵測及限制特定類型的資源，使用報表伺服器的單一 web 伺服陣列的多個租用戶環境中的個別租用戶的使用方式。 這種情形的一個範例是裝載服務案例，在此案例中，您可能要為由多個可能分屬不同公司的租用戶所使用的報表伺服器，維護單一 Web 伺服器陣列。 您身為報表伺服器管理員，可以啟用此功能來幫助您達成下列目標：  
   
 -   限制外部資源的大小。 外部資源包括影像、.xslt 檔案和對應資料。  
   
 -   在報表發行時間，限制用於運算式文字的型別和成員。  
   
--   在報表處理時間，限制運算式的文字長度和傳回值大小。  
-  
+-   在報表處理時間，限制運算式的文字長度和傳回值大小。
+
+> [!NOTE]
+> SQL Server 2016 之後已無法再使用 reporting Services 與 SharePoint 整合。
+
  當啟用 RDL 沙箱功能時，將會停用下列功能：  
   
 -   中的自訂程式碼**\<程式碼 >**報表定義的項目。  
@@ -41,7 +47,7 @@ ms.lasthandoff: 08/09/2017
   
  本主題說明中的每個項目\< **RDLSandboxing**> RSReportServer.Config 檔案中的項目。 如需如何編輯此檔案的詳細資訊，請參閱[Modify a Reporting Services Configuration File (RSreportserver.config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md) (修改 Reporting Services 組態檔 (RSreportserver.config))。 伺服器追蹤記錄會記錄與 RDL 沙箱功能有關的活動。 如需追蹤紀錄的詳細資訊，請參閱 [報表伺服器服務追蹤記錄](../../reporting-services/report-server/report-server-service-trace-log.md)。  
   
-## <a name="example-configuration"></a>範例組態  
+## <a name="example-configuration"></a>設定範例
  下列範例示範設定和範例值\< **RDLSandboxing**> RSReportServer.Config 檔案中的項目。  
   
 ```  
@@ -59,9 +65,10 @@ ms.lasthandoff: 08/09/2017
       <Deny>StrDup</Deny>  
    </Members>  
 </RDLSandboxing>  
-```  
-  
-## <a name="configuration-settings"></a>組態設定  
+```
+
+## <a name="configuration-settings"></a>組態設定
+
  下表提供有關組態設定的資訊。 設定會依其出現在組態檔的順序顯示。  
   
 |設定|說明|  
@@ -73,13 +80,14 @@ ms.lasthandoff: 08/09/2017
 |**類型**|RDL 運算式中允許的成員清單。|  
 |**Allow**|RDL 運算式中允許的類型或類型集合。|  
 |**命名空間**|**Allow** 的屬性，這是包含一或多個套用至 Value 之類型的命名空間。 這個屬性不區分大小寫。|  
-|**AllowNew**|布林值屬性，如**允許**，控制是否允許類型的新執行個體建立 RDL 運算式或 RDL **\<類別 >**項目。<br /><br /> 注意：當啟用 **RDLSandboxing** 時，無論是否設定 [AllowNew]，都無法在 RDL 運算式中建立新的陣列。|  
+|**AllowNew**|布林值屬性，如**允許**，控制是否允許類型的新執行個體建立 RDL 運算式或 RDL **\<類別 >**項目。<br /><br /> 當**RDLSandboxing**啟用時，無法建立新的陣列，在 RDL 運算式中，不論設定為何**AllowNew**。|  
 |**值**|**Allow** 的值，這是 RDL 運算式中允許之類型的名稱。 **\*** 值表示允許命名空間中的所有類型。 這個屬性不區分大小寫。|  
 |**成員**|如需中所包含之型別的清單**\<類型 >**元素中，不允許在 RDL 運算式中的成員名稱的清單。|  
-|**拒絕**|RDL 運算式中不允許的成員名稱。 這個屬性不區分大小寫。<br /><br /> 注意： 當**拒絕**指定成員，不允許具有這個名稱的所有類型的所有成員。|  
+|**拒絕**|RDL 運算式中不允許的成員名稱。 這個屬性不區分大小寫。<br /><br /> 當**拒絕**指定成員，不允許具有這個名稱的所有類型的所有成員。|  
   
-## <a name="working-with-expressions-when-rdl-sandboxing-is-enabled"></a>在啟用 RDL 沙箱功能時使用運算式  
- 您可以修改 RDL 沙箱功能，透過下列方式幫助管理運算式所使用的資源：  
+## <a name="working-with-expressions-when-rdl-sandboxing-is-enabled"></a>使用運算式時已啟用 RDL 沙箱
+
+您可以修改 RDL 沙箱功能，透過下列方式幫助管理運算式所使用的資源：  
   
 -   限制用於運算式的字元數。  
   
@@ -96,7 +104,8 @@ ms.lasthandoff: 08/09/2017
   
  RDL 運算式的結果會在執行階段驗證。 當發行報表時，便會在報表定義中驗證 RDL 運算式。 監視報表伺服器追蹤記錄，查看是否有違規情形。 如需詳細資訊，請參閱 [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)。  
   
-### <a name="working-with-types"></a>處理類型  
+### <a name="working-with-types"></a>使用型別
+
  當您將某個類型加入至允許清單時，您會控制存取 RDL 運算式的下列進入點：  
   
 -   某個類型的靜態成員。  
@@ -139,7 +148,8 @@ ms.lasthandoff: 08/09/2017
   
  將自訂組件中的類型加入至允許清單並不會以隱含方式授與此組件的執行權限。 您必須特別修改程式碼存取安全性檔案，並提供組件的執行權限。 如需詳細資訊，請參閱 [Code Access Security in Reporting Services](../../reporting-services/extensions/secure-development/code-access-security-in-reporting-services.md)(Reporting Services 中的程式碼存取安全性)。  
   
-#### <a name="maintaining-the-deny-list-of-members"></a>維護\<拒絕 > 清單中的成員  
+#### <a name="maintaining-the-deny-list-of-members"></a>維護\<拒絕 > 清單中的成員
+
  當您將新的類型加入至允許清單時，請使用下列清單來判斷何時可能需要更新成員的封鎖清單：  
   
 -   當您使用導入新類型的版本來更新自訂組件時。  
@@ -152,7 +162,8 @@ ms.lasthandoff: 08/09/2017
   
 -   當您因為新的成員可能已加入至 RDL 類型，而更新報表伺服器來處理較新的 RDL 結構描述時。  
   
-### <a name="working-with-operators-and-new"></a>使用運算子及 New  
+### <a name="working-with-operators-and-new"></a>使用運算子及 new
+
  依預設，一定會允許 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework 語言運算子，但是 **New**除外。 **新增**運算子由**AllowNew**屬性**\<允許 >**項目。 其他語言運算子，例如預設集合存取子運算子 **!** 以及像是 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] CInt  .NET Framework 轉換巨集，都一律允許。  
   
  不支援將運算子加入至封鎖清單中，包括自訂運算子。 若要排除某個類型的運算子，您必須執行下列動作：  
@@ -169,8 +180,9 @@ ms.lasthandoff: 08/09/2017
   
 -   將此類別加入至允許清單。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱
+
  [RsReportServer.config 組態檔](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [報表伺服器服務追蹤記錄](../../reporting-services/report-server/report-server-service-trace-log.md)  
-  
-  
+
+更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)

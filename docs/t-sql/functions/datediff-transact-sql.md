@@ -35,10 +35,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d8231f0207ed1b0575327ac85f31604132acb590
+ms.sourcegitcommit: 80c1228faeaaa4012afc0fd27992a2f5cf389f6e
+ms.openlocfilehash: dba834b51bab48c2bd30d1bbbb4abe11694ab321
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/05/2017
 
 ---
 # <a name="datediff-transact-sql"></a>DATEDIFF (Transact-SQL)
@@ -105,25 +105,18 @@ DATEDIFF ( datepart , startdate , enddate )
 ## <a name="datepart-boundaries"></a>datepart 界限  
 下列陳述式具有相同*startdate*和相同*endate*。 這些日期都很接近而且時間差距為 .0000001 秒。 之間的差異*startdate*和*endate*每個陳述式中已超過一個日曆或時間界限的其*datepart*。 每個陳述式都會傳回 1。 如果這個範例會使用不同的年份，如果兩個*startdate*和*endate*位於相同的日曆週的傳回值**週**就是 0。
   
-`SELECT DATEDIFF(year, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');`
-  
-`SELECT DATEDIFF(quarter, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');`
-  
-`SELECT DATEDIFF(month, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');`
-  
-`SELECT DATEDIFF(dayofyear, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');`
-  
-`SELECT DATEDIFF(day, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');`
-  
-`SELECT DATEDIFF(week, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');`
-  
-`SELECT DATEDIFF(hour, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');`
-  
-`SELECT DATEDIFF(minute, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');`
-  
-`SELECT DATEDIFF(second, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');`
-  
-`SELECT DATEDIFF(millisecond, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');`
+```sql
+SELECT DATEDIFF(year, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
+SELECT DATEDIFF(quarter, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
+SELECT DATEDIFF(month, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
+SELECT DATEDIFF(dayofyear, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
+SELECT DATEDIFF(day, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
+SELECT DATEDIFF(week, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
+SELECT DATEDIFF(hour, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
+SELECT DATEDIFF(minute, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
+SELECT DATEDIFF(second, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
+SELECT DATEDIFF(millisecond, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
+```
   
 ## <a name="remarks"></a>備註  
 DATEDIFF 可用於選取清單、WHERE、HAVING、GROUP BY 和 ORDER BY 子句中。

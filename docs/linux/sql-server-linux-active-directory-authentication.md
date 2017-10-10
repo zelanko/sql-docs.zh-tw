@@ -2,7 +2,7 @@
 title: "Active Directory 驗證 Linux 上的 SQL server |Microsoft 文件"
 description: "本教學課程提供的 SQL Server on Linux 的 AAD 驗證的設定步驟。"
 author: meet-bhagdev
-ms.date: 09/25/2017
+ms.date: 10/09/2017
 ms.author: meetb
 manager: jhubbard
 ms.topic: article
@@ -11,10 +11,10 @@ ms.technology: database-engine
 helpviewer_keywords:
 - Linux, AAD authentication
 ms.translationtype: MT
-ms.sourcegitcommit: dbe6f832d4af55ddd15e12fba17a4da490fe19ae
-ms.openlocfilehash: 57b03ac7c571bc23477b49c39104fa48220495cb
+ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
+ms.openlocfilehash: 09a837b606b0fad62c77db982000cf3d7dc5c48f
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="active-directory-authentication-with-sql-server-on-linux"></a>Active Directory 驗證與 SQL Server on Linux
@@ -50,13 +50,15 @@ AD 驗證透過具有下列優點[!INCLUDE[ssNoVersion](../includes/ssnoversion-
   * [Ubuntu](quickstart-install-connect-ubuntu.md)
 
 > [!IMPORTANT]
-> 此時，資料庫鏡像端點支援的唯一的驗證方法是憑證。 在未來版本中，將會啟用 WINDOWS 驗證方法。
+> 限制：
+> - 此時，資料庫鏡像端點支援的唯一的驗證方法是憑證。 在未來版本中，將會啟用 WINDOWS 驗證方法。
+> - 第 3 個合作對象 AD 工具不支援 Centrify、 Powerbroker 和 Vintela 
 
 ## <a name="join-includessnoversionincludesssnoversion-mdmd-host-to-ad-domain"></a>加入[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]AD 網域的主機
 
 使用下列步驟來加入[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Active Directory 網域的主機：
 
-1. 使用** [realmd](https://www.freedesktop.org/software/realmd/docs/guide-active-directory-join.html) **主機電腦加入 AD 網域。 如果您還沒有這麼做，realmd 和 Kerberos 用戶端套件上安裝[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]主機電腦使用您的 Linux 散發套件管理員：
+1. 使用 **[realmd](https://www.freedesktop.org/software/realmd/docs/guide-active-directory-join.html)** 主機電腦加入 AD 網域。 如果您還沒有這麼做，realmd 和 Kerberos 用戶端套件上安裝[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]主機電腦使用您的 Linux 散發套件管理員：
 
    ```bash
    # RHEL
@@ -206,7 +208,7 @@ AD 驗證透過具有下列優點[!INCLUDE[ssNoVersion](../includes/ssnoversion-
    kvno MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**
    ```
 
-2. 建立 AD 使用者，您在上一個步驟中建立的 keytab 檔案。 若要這樣做，我們將使用** [ktutil](https://web.mit.edu/kerberos/krb5-1.12/doc/admin/admin_commands/ktutil.html)**。 出現提示時，輸入該 AD 帳戶的密碼。
+2. 建立 AD 使用者，您在上一個步驟中建立的 keytab 檔案。 若要這樣做，我們將使用 **[ktutil](https://web.mit.edu/kerberos/krb5-1.12/doc/admin/admin_commands/ktutil.html)**。 出現提示時，輸入該 AD 帳戶的密碼。
 
    ```bash
    sudo ktutil

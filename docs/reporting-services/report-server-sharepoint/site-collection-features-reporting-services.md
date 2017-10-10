@@ -1,7 +1,7 @@
 ---
 title: "Reporting Services 網站集合功能 |Microsoft 文件"
 ms.custom: 
-ms.date: 05/30/2017
+ms.date: 09/25/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -10,30 +10,35 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: e05ae162-a4b2-489d-9853-d6b09414e632
-caps.latest.revision: 8
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: b68204ab4c9a008db7c43d2c568d1c3ccedbcb7a
+ms.translationtype: MT
+ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
+ms.openlocfilehash: 7c86f9ecdbbf4955ba224e40c245fc412742fc30
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 10/06/2017
 
 ---
+# <a name="reporting-services-site-collection-features"></a>Reporting Services 網站集合功能
 
-# <a name="site-collection-features---reporting-services"></a>網站集合功能-Reporting Services
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 
-[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式提供了三個 SharePoint 網站集合功能。 這些功能支援一般[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]SharePoint 模式報表環境、 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]，SQL Server 2016 Reporting Services 增益集，以及管理作業的一項功能[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]在 SharePoint 管理中心內。  
+[!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
+
+Reporting Services SharePoint 模式會提供三個 SharePoint 網站集合功能。 這些功能支援一般的 Reporting Services SharePoint 模式報表環境、 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]，SQL Server 2016 Reporting Services 增益集，以及 Reporting Services 在 SharePoint 管理中心內的管理作業的一項功能。
+
+> [!NOTE]
+> SQL Server 2016 之後已無法再使用 reporting Services 與 SharePoint 整合。
   
-## <a name="site-collection-features"></a>網站集合功能  
- 下表描述 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 網站集合功能。  
+## <a name="site-collection-features"></a>網站集合功能
+
+ 下表描述 Reporting Services 網站集合功能。  
   
 |功能|說明|  
 |-------------|-----------------|  
-|**報表伺服器管理中心功能**|啟用管理與 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器之整合的功能。 此功能只在 SharePoint 管理中心網站集合中安裝及使用。<br /><br /> 在安裝適用於 SharePoint 產品的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 增益集後，SharePoint 管理中心網站集合中會自動啟用報表伺服器整合功能。 在某些情況下，您必須手動啟動此功能。 若要啟用報表伺服器功能，請使用 SharePoint 管理中心內 [網站設定] 頁面中的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 頁面。<br /><br /> 適用於 SharePoint 產品的 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 增益集 (含) 以後版本將會在安裝此增益集時，針對所有現有的網站集合啟用報表伺服器整合功能。 此外，新的網站集合將會自動啟用這項功能。|  
-|**報表伺服器整合功能**|使用下列方式啟用豐富的報表功能 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]<br /><br /> 此功能預設為使用中。|  
+|**報表伺服器管理中心功能**|啟用管理與 Reporting Services 報表伺服器整合的功能。 此功能只在 SharePoint 管理中心網站集合中安裝及使用。<br /><br /> 在安裝適用於 SharePoint 產品的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 增益集後，SharePoint 管理中心網站集合中會自動啟用報表伺服器整合功能。 在某些情況下，您需要手動啟用這個功能。 若要啟動報表伺服器功能，使用 SharePoint 管理中心內的站台設定 頁面中的 Reporting Services 頁面。<br /><br /> [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Reporting Services 版本稍後增益集的 SharePoint 產品時，啟動報表伺服器整合功能，針對所有現有的網站集合安裝增益集。 此外，該功能是新的網站集合自動啟用。|  
+|**報表伺服器整合功能**|可讓豐富的報表使用[!INCLUDE[msCoName](../../includes/msconame-md.md)]Reporting Services<br /><br /> 此功能預設為使用中。|  
 |**Power View 整合功能**|針對 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿與 Analysis Services 表格式資料庫啟用互動式資料瀏覽及視覺化簡報。<br /><br /> 此功能可透過下列資料來源的操作功能表存取：<br /><br /> **.rdlx**<br /><br /> **.rsds**<br /><br /> **.bism** 連線檔案<br /><br /> <br /><br /> 如果 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 未出現在操作功能表中，請確認已啟用 [Power View 整合功能]。<br /><br /> 此功能預設為停用。|  
 
 ## <a name="next-steps"></a>後續的步驟

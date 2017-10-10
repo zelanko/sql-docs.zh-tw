@@ -1,7 +1,7 @@
 ---
 title: "ALTER 外部程式庫 (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
-ms.date: 08/18/2017
+ms.date: 10/05/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -20,16 +20,17 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 541419770828e01cca82fb33ead1b22170f8e4f3
+ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
+ms.openlocfilehash: b728fa43959ee047173b1533e70d46e5b1e0f7c1
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="alter-external-library-transact-sql"></a>ALTER 外部程式庫 (TRANSACT-SQL)  
-[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]  
 
-修改現有的文件庫內容。  
+[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
+
+修改現有的外部封裝程式庫的內容。
 
 ## <a name="syntax"></a>語法
 
@@ -77,6 +78,13 @@ WITH ( LANGUAGE = 'R' )
 
 指定包含程式庫檔案的位置的外部資料來源的名稱。 這個位置應該參考 Azure blob 儲存體路徑。 若要建立外部資料來源，使用[CREATE EXTERNAL DATA SOURCE (TRANSACT-SQL)](create-external-data-source-transact-sql.md)。
 
+> [!IMPORTANT] 
+> 目前，blob 不支援做為 SQL Server 2017 版本中的資料來源。
+
+**library_bits**
+
+指定套件的內容做為十六進位常值，類似於組件。 此選項可讓使用者建立文件庫來變更文件庫，如果有必要的權限，但不是需要任何伺服器可以存取的資料夾檔案路徑存取。
+
 **平台 = WINDOWS**
 
 指定的平台程式庫的內容。 修改現有的程式庫加入不同的平台時，則需要此值。 視窗是唯一支援的平台。
@@ -84,22 +92,29 @@ WITH ( LANGUAGE = 'R' )
 ## <a name="remarks"></a>備註
 
 R 語言中，封裝必須先備妥的 zip 的封存檔案格式。適用於 Windows 的 ZIP 延伸模組。 目前支援 Windows 平台。  
+
 `ALTER EXTERNAL LIBRARY`陳述式只會將上傳的文件庫的位元到資料庫。 修改過的程式庫不實際安裝直到使用者執行外部指令碼之後，藉由執行[sp_execute_external_script (TRANSACT-SQL)](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)。
 
 ## <a name="permissions"></a>Permissions
+
 需要`ALTER ANY EXTERNAL LIBRARY`權限。 建立外部程式庫的使用者可以改變該外部的程式庫。
 
 ## <a name="examples"></a>範例
 
 下列範例會修改呼叫 customPackage 外部程式庫。
 
-```sql  
+### <a name="a-replace-the-contents-of-a-library-using-a-file"></a>A. 取代文件庫使用檔案的內容
+
+下列範例會修改外部程式庫呼叫 customPackage，使用包含更新的位元的 zip 的檔案。
+
+```sql
 ALTER EXTERNAL LIBRARY customPackage 
 SET 
   (CONTENT = 'C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\customPackage.zip')
 WITH (LANGUAGE = 'R');
 ```  
-然後執行`sp_execute_external_script`程序中，安裝程式庫。
+
+若要安裝更新的程式庫，執行預存程序`sp_execute_external_script`。
 
 ```sql   
 EXEC sp_execute_external_script 
@@ -107,15 +122,22 @@ EXEC sp_execute_external_script
 @script=N'
 # load customPackage
 library(customPackage)
-
 # call customPackageFunc
 OutputDataSet <- customPackageFunc()
 '
-with result sets (([result] int));    
+WITH RESULT SETS (([result] int));
 ```
 
+### <a name="b-alter-an-existing-library-using-a-byte-stream"></a>B. 改變現有的程式庫使用位元組資料流
+
+下例會變更現有的程式庫傳遞做為十六進位的新位元常值。
+
+```SQL
+ALTER EXTERNAL LIBRARY customLibrary FROM (CONTENT = 0xabc123) WITH (LANGUAGE = 'R');
+```
 
 ## <a name="see-also"></a>另請參閱  
+
 [建立外部程式庫 (TRANSACT-SQL)](create-external-library-transact-sql.md)
 [卸除的外部程式庫 (TRANSACT-SQL)](drop-external-library-transact-sql.md)  
 [sys.external_library_files](../../relational-databases/system-catalog-views/sys-external-library-files-transact-sql.md)  

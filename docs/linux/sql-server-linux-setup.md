@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 0220ef0349acac274567bb75bcb0e8b38a3126ce
+ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
+ms.openlocfilehash: d8e99fdb0c3383190c140997e619a05feb9bf3ee
 ms.contentlocale: zh-tw
-ms.lasthandoff: 10/02/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>SQL Server on Linux 的安裝指南
@@ -31,7 +31,7 @@ ms.lasthandoff: 10/02/2017
 
 | 平台 | 支援的版本 | Get
 |-----|-----|-----
-| **Red Hat Enterprise Linux** | 7.3 | [取得 RHEL 7.3](http://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
+| **Red Hat Enterprise Linux** | 7.3 或 7.4 | [取得 RHEL 7.4](http://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
 | **SUSE Linux Enterprise Server** | v12 SP2 | [取得 SLES v12 SP2](https://www.suse.com/products/server)
 | **Ubuntu** | 16.04 | [取得 Ubuntu 16.04](http://www.ubuntu.com/download/server)
 | **Docker 引擎** | 1.8+ | [取得 Docker](http://www.docker.com/products/overview)
@@ -49,9 +49,6 @@ SQL Server 2017 具有適用於 Linux 的下列系統需求：
 | **處理器核心** | 2 核心 |
 | **處理器類型** | 只有 x64-相容 |
 
-> [!NOTE]
-> SQL Server 引擎已在此階段中測試 1 TB 的記憶體。
-
 如果您使用**網路檔案系統 (NFS)**遠端共用實際執行環境，請注意下列的支援需求：
 
 - 使用 NFS 版本**4.2 或更新版本**。 NFS 的舊版本不支援必要的功能，例如 fallocate 和通用的現代的檔案系統的疏鬆檔案建立。
@@ -66,6 +63,7 @@ SQL Server 2017 具有適用於 Linux 的下列系統需求：
 - [SUSE Linux Enterprise Server 上安裝](quickstart-install-connect-suse.md)
 - [在 Ubuntu 上安裝](quickstart-install-connect-ubuntu.md)
 - [執行 docker](quickstart-install-connect-docker.md)
+- [在 Azure 中佈建 SQL VM](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
 
 ## <a id="upgrade"></a>更新 SQL Server
 
@@ -122,6 +120,12 @@ SQL Server 2017 具有適用於 Linux 的下列系統需求：
    | SLES | `sudo zypper removerepo 'packages-microsoft-com-mssql-server'` |
    | Ubuntu | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server xenial main'` |
 
+1. 如**Ubuntu 只**，匯入公用儲存機制 GPG 索引鍵。
+
+   ```bash
+   sudo curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+   ```
+
 1. 設定新的儲存機制。
 
    | 平台 | Repository | Command |
@@ -130,17 +134,8 @@ SQL Server 2017 具有適用於 Linux 的下列系統需求：
    | RHEL | GDR | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017-gdr.repo` |
    | SLES | CU  | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017.repo` |
    | SLES | GDR | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017-gdr.repo` |
-   | Ubuntu | CU | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"` |
-   | Ubuntu | GDR | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017-gdr.list)"` |
-
-1. 更新您的系統。
-
-   | 平台 | Update 命令 |
-   |-----|-----|
-   | RHEL | `sudo yum update` |
-   | SLES | `sudo zypper --gpg-auto-import-keys refresh` |
-   | Ubuntu | `sudo apt-get update` |
-
+   | Ubuntu | CU | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)" && sudo apt-get update` |
+   | Ubuntu | GDR | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017-gdr.list)" && sudo apt-get update` |
 
 1. [安裝](#platforms)或[更新](#upgrade)從新的儲存機制的 SQL Server。
 

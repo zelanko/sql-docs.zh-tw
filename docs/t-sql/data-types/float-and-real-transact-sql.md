@@ -27,10 +27,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 913aa9c71234d1b170a14f9707be82d45b1cd5b8
+ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
+ms.openlocfilehash: 0ce2e3272c30057f533796e0822256c6235de0c1
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="float-and-real-transact-sql"></a>float 和 real (Transact-SQL)
@@ -65,7 +65,7 @@ ms.lasthandoff: 09/01/2017
   
 當您想要轉換的**float**或**真實**成字元資料，使用 STR 字串函數是比 CAST （） 來得有用。 這是因為 STR 可以對格式有較多的控制。 如需詳細資訊，請參閱[STR &#40;TRANSACT-SQL &#41;](../../t-sql/functions/str-transact-sql.md)和[函式 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/functions.md).
   
-轉換**float**值使用科學記號標記法來**十進位**或**數值**限制為 17 個有效位數僅的值。 有效位數超過 17 的任何值都會捨入為零。
+轉換**float**值使用科學記號標記法來**十進位**或**數值**限制為 17 個有效位數僅的值。 任何值 < 5e-18 無條件捨去為 0。
   
 ## <a name="see-also"></a>另請參閱
 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  

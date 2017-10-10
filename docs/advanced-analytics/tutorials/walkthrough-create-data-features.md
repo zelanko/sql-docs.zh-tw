@@ -19,10 +19,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ccdcc20a9bb66ba18f74975f725f24deb7028265
+ms.sourcegitcommit: 41c2caf816ca412e4a6048713dc66f97da5155ae
+ms.openlocfilehash: 4f3f5463e6a0117780add65feb9916ff78dad68d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/07/2017
 
 ---
 # <a name="create-data-features-using-r-and-sql-walkthrough"></a>建立資料的功能使用 R 和 SQL （逐步解說）
@@ -244,10 +244,10 @@ print(paste("It takes CPU Time=", round(used.time[1]+used.time[2],2)," seconds, 
 
 ## <a name="next-lesson"></a>下一課
 
-[建立 R 模型，並將儲存至 SQL](/walkthrough-build-and-save-the-model.md)
+[建立 R 模型，並將儲存至 SQL](walkthrough-build-and-save-the-model.md)
 
 ## <a name="previous-lesson"></a>上一課
 
-[檢視及使用 R 的資料摘要](/walkthrough-view-and-summarize-data-using-r.md)
+[檢視及使用 R 的資料摘要](walkthrough-view-and-summarize-data-using-r.md)
 
 

@@ -26,10 +26,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7e1eeda5d365f5c625e68c498c741754bf59c9d7
+ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
+ms.openlocfilehash: 49ff2aa300fc8f8e74424ae6e334bee823e8176c
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="create-database-scoped-credential-transact-sql"></a>建立 DATABASE SCOPED CREDENTIAL (TRANSACT-SQL)
@@ -103,7 +103,7 @@ GO
 ```  
 
 ### <a name="b-creating-a-database-scoped-credential-for-a-shared-access-signature"></a>B. 建立資料庫範圍認證的共用的存取簽章。   
-下列範例會建立可以用來建立資料庫範圍認證[外部資料來源](../../t-sql/statements/create-external-data-source-transact-sql.md)，可以執行大量作業，例如[BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)和[OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md).   
+下列範例會建立可以用來建立資料庫範圍認證[外部資料來源](../../t-sql/statements/create-external-data-source-transact-sql.md)，可以執行大量作業，例如[BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)和[OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md). 共用的存取簽章不能使用 PolyBase，SQL Server、 AP 或 SQL DW 中。
 ```tsql
 CREATE DATABASE SCOPED CREDENTIAL MyCredentials  
 WITH IDENTITY = 'SHARED ACCESS SIGNATURE',

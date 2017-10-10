@@ -18,10 +18,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 77c02b875a22fefec54c59518f4972cbd7aefd4b
+ms.sourcegitcommit: 49a4391c9542ab57ed815dc2670bed997a10a064
+ms.openlocfilehash: 87c5ee7f5c4ab77748b11677994eecc7e5575490
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="project-settings-type-mapping-sybasetosql"></a>專案設定 （型別對應） (SybaseToSQL)
@@ -33,7 +33,7 @@ ms.lasthandoff: 08/02/2017
   
 -   若要指定目前的專案中，設定**工具**功能表上，選取**專案設定**，然後選取**類型對應**在左窗格底部。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
 **來源類型**  
 對應的 ASE 資料類型。  
   
@@ -69,7 +69,7 @@ ms.lasthandoff: 08/02/2017
 |**char varying [\*..8000]**|**varchar [\*]**|  
 |**char varying [8001..\*]**|**varchar(max)**|  
 |**char[\*..8000]**|**char[\*]**|  
-|**char [8001..\&#42;]**|**varchar(max)**|  
+|**char [8001..\*。]**|**varchar(max)**|  
 |**字元**|**char**|  
 |**可變長度字元**|**varchar**|  
 |**可變長度字元 [\*..8000]**|**varchar [\*]**|  

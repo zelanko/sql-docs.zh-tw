@@ -20,10 +20,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 143e9ac0dbe042ebbb034dff847cfc01ea5a5411
+ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
+ms.openlocfilehash: ac2814f7c0b0d1bf6de60d52ea65e54caab0f72d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="drop-external-library-transact-sql"></a>卸除的外部程式庫 (TRANSACT-SQL)  
@@ -32,6 +32,7 @@ ms.lasthandoff: 09/01/2017
 刪除現有的封裝程式庫。
 
 ## <a name="syntax"></a>語法  
+
 ```
 DROP EXTERNAL LIBRARY library_name  
 [ AUTHORIZATION owner_name ];  
@@ -61,17 +62,17 @@ DROP EXTERNAL LIBRARY library_name
 
 ## <a name="examples"></a>範例
 
-Ggplot2 加入資料庫：
+加入自訂的 R 封裝，名為`customPackage`，資料庫：
 
 ```sql
-CREATE EXTERNAL LIBRARY ggplot2 
-FROM 'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\ggplot2.zip';
+CREATE EXTERNAL LIBRARY customPackage 
+FROM 'C:\Users\Username\CustomPackages\customPackage.zip';
 ```
 
-刪除 ggplot2 程式庫。
+刪除`customPackage`程式庫。
 
 ```sql
-DROP EXTERNAL LIBRARY ggplot2 <user_name>;
+DROP EXTERNAL LIBRARY customPackage <user_name>;
 ```
 
 ## <a name="see-also"></a>另請參閱  

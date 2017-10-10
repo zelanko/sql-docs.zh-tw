@@ -31,10 +31,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e8b6972868c221ec0368b689164eff740ae6f1a7
+ms.sourcegitcommit: a85dbb34e357d4d00a411e35dce877991337d876
+ms.openlocfilehash: 885ff94e3cecb82bb93e0abac26838d6c265275c
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="select-clause-transact-sql"></a>SELECT 子句 (Transact-SQL)
@@ -140,13 +140,12 @@ FROM Cities;
   
  另外，別名也用來指定運算式結果的名稱，例如：  
   
- `USE AdventureWorks2012`;  
-  
- `GO`  
-  
- `SELECT AVG(UnitPrice) AS [Average Price]`  
-  
- `FROM Sales.SalesOrderDetail;`  
+ ```sql
+ USE AdventureWorks2012;  
+ GO  
+ SELECT AVG(UnitPrice) AS [Average Price]  
+ FROM Sales.SalesOrderDetail;
+ ```  
   
  *column_alias*可用在 ORDER BY 子句中。 不過，它不能用在 WHERE、GROUP BY 或 HAVING 子句中。 如果查詢運算式是 DECLARE CURSOR 陳述式的一部分*column_alias*不能在 FOR UPDATE 子句。  
   

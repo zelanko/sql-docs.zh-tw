@@ -19,10 +19,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 437ec62abb0107e8a70926fd60d0c54cc6064122
+ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
+ms.openlocfilehash: 281f5026bc3aa7dc67cff418eb0868eeb81bc80a
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="build-an-r-model-and-save-to-sql-server"></a>建立 R 模型，並儲存至 SQL Server
@@ -146,8 +146,9 @@ ms.lasthandoff: 09/01/2017
     ```R
     library('ROCR');
     pred <- prediction(scoredOutput$Score, scoredOutput$tipped);
+    ```
 
-3. Generate a local plot, based on the values stored in the output variable `pred`.
+3. 產生的輸出變數中儲存的值為基礎的本機圖`pred`。
 
     ```R
     acc.perf = performance(pred, measure = 'acc');
@@ -232,10 +233,10 @@ ms.lasthandoff: 09/01/2017
 
 ## <a name="next-lesson"></a>下一課
 
-[部署 R 模型，並在 SQL 中使用](/walkthrough-deploy-and-use-the-model.md)
+[部署 R 模型，並在 SQL 中使用](walkthrough-deploy-and-use-the-model.md)
 
 ## <a name="previous-lesson"></a>上一課
 
-[建立使用 R 和 SQL 資料功能](/walkthrough-create-data-features.md)
+[建立使用 R 和 SQL 資料功能](walkthrough-create-data-features.md)
 
 

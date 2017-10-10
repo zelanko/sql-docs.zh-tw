@@ -21,10 +21,10 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: d4fe098c9d9f9b8e01deee95c1d52e3582b13658
+ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
+ms.openlocfilehash: 5462b0eb9a5eedc48e841ba8aae3bb3514be447d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="hierarchy-mdx"></a>Hierarchy (MDX)
@@ -51,7 +51,7 @@ Level_Expression.Hierarchy
  傳回層級的有效多維度運算式 (MDX) 運算式。  
   
 ### <a name="examples"></a>範例  
- 下列範例會傳回 Adventure Works Cube 中 Data 維度的 Calendar 階層名稱。  
+ 下列範例會傳回 AdventureWorks cube 中 Date 維度中 Calendar 階層的名稱。  
   
  `WITH`  
   

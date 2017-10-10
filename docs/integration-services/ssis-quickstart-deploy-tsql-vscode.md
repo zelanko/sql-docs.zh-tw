@@ -9,10 +9,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: 656e62f36446db4ef5b232129130a0253d2aebdf
-ms.openlocfilehash: cfc4ae035e699ac496760cd0fc540e72fd463a50
+ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
+ms.openlocfilehash: 2dc6de798ca76b43627a3c381fe628506c3e7480
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/22/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="deploy-an-ssis-project-from-visual-studio-code-with-transact-sql"></a>部署 SSIS 專案從 Visual Studio 程式碼使用 TRANSACT-SQL
@@ -21,7 +21,7 @@ ms.lasthandoff: 09/22/2017
 > [!NOTE]
 > 您連接到 Azure SQL Database 伺服器以 VS 程式碼時，不使用本文章中所述的方法。 `catalog.deploy_project`預存程序必須要有路徑`.ispac`（內部部署） 的本機檔案系統中的檔案。
 
-Visual Studio 程式碼是程式碼編輯器視窗、 macOS，及可支援擴充功能，包括 Linux`mssql`延伸模組連接到 Microsoft SQL Server、 Azure SQL Database 或 Azure SQL 資料倉儲。 如需 VS 程式碼的詳細資訊，請參閱[Visual Studio Cod](https://code.visualstudio.com/)。
+Visual Studio 程式碼是程式碼編輯器視窗、 macOS，及可支援擴充功能，包括 Linux`mssql`延伸模組連接到 Microsoft SQL Server、 Azure SQL Database 或 Azure SQL 資料倉儲。 如需 VS 程式碼的詳細資訊，請參閱[Visual Studio Code](https://code.visualstudio.com/)。
 
 ## <a name="prerequisites"></a>必要條件
 
@@ -31,7 +31,7 @@ Visual Studio 程式碼是程式碼編輯器視窗、 macOS，及可支援擴充
 
 ## <a name="set-language-mode-to-sql-in-vs-code"></a>將語言模式設定為與程式碼中的 SQL
 
-若要啟用`mssql`組語言模式命令和 T-SQL IntelliSense，設定為**SQL** Visual Studio 程式碼中。
+若要啟用`mssql`命令和 T-SQL IntelliSense、 語言模式設定為  **SQL** Visual Studio 程式碼中。
 
 1. 開啟 Visual Studio 程式碼，然後開啟 新的視窗。 
 
