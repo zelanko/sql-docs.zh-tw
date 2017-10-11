@@ -23,7 +23,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
 ms.openlocfilehash: a5f180c837af757fd5a8df7f356b8c644916612f
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/11/2017
 
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>建立完整資料庫備份 (SQL Server)
@@ -72,7 +72,7 @@ ms.lasthandoff: 09/27/2017
   
 2.  展開 [資料庫]，並選取使用者資料庫或展開 [系統資料庫]，然後選取系統資料庫。  
   
-3.  以滑鼠右鍵按一下資料庫，指向 [工作]，然後按一下 [備份]。 會出現 **[備份資料庫]** 對話方塊。  
+3.  以滑鼠右鍵按一下資料庫，指向 工作，然後按一下備份。 會出現 **[備份資料庫]** 對話方塊。  
 
   #### <a name="general-page"></a>**一般頁面**
   
@@ -138,7 +138,7 @@ ms.lasthandoff: 09/27/2017
   
 20. 指定備份組逾期的時間，和不需明確略過逾期資料的驗證即可覆寫的時間：  
   
-    -   若要讓備份組在特定的天數後過期，請按一下 [之後] \(預設選項)，然後輸入備份組建立之後將會過期的天數。 這個值可以介於 0 到 99999 日之間；值為 0 日意指備份組永遠不會過期。  
+    -   若要讓備份組在特定的天數後過期，請按一下 [之後] (預設選項)，然後輸入備份組建立之後將會過期的天數。 這個值可以介於 0 到 99999 日之間；值為 0 日意指備份組永遠不會過期。  
   
          預設值會在 [伺服器屬性] 對話方塊 ([資料庫設定] 頁面) 的 [預設備份媒體保留 (以天為單位)] 選項中設定。 若要存取，請以滑鼠右鍵按一下物件總管中的伺服器名稱並選取 [屬性]，然後選取 [資料庫設定] 頁面。  
   
@@ -160,7 +160,7 @@ ms.lasthandoff: 09/27/2017
 在此範例中， `Sales` 資料庫將會備份至預設備份位置的磁碟。  絕不會備份 `Sales`。
 1.  在物件總管中，連接到 SQL Server Database Engine 的執行個體，然後展開該執行個體。
 
-2.  展開 [資料庫]，以滑鼠右鍵按一下 `Sales`，指向 [工作]，然後按一下 [備份...]。
+2.  展開 資料庫，以滑鼠右鍵按一下 `Sales`，指向 工作，然後按一下備份...。
 
 3.  按一下 **[確定]**。
 
@@ -168,7 +168,7 @@ ms.lasthandoff: 09/27/2017
 在此範例中， `Sales` 資料庫將會備份至 `E:\MSSQL\BAK`的磁碟。  先前已備份 `Sales`。
 1.  在物件總管中，連接到 SQL Server Database Engine 的執行個體，然後展開該執行個體。
 
-2.  展開 [資料庫]，以滑鼠右鍵按一下 `Sales`，指向 [工作]，然後按一下 [備份...]。
+2.  展開 資料庫，以滑鼠右鍵按一下 `Sales`，指向 工作，然後按一下備份...。
 
 3.  在 [一般] 頁面之 [目的地] 區段的 [備份至] 下拉式清單中，選取 [磁碟]。
 
@@ -186,7 +186,7 @@ ms.lasthandoff: 09/27/2017
 在此範例中， `Sales` 資料庫將會使用加密備份至預設備份位置。  已建立  [**資料庫主要金鑰**](../../relational-databases/security/encryption/create-a-database-master-key.md) 。  已建立稱為  [**的**](../../t-sql/statements/create-certificate-transact-sql.md) 憑證 `MyCertificate`。 [建立加密備份](../../relational-databases/backup-restore/create-an-encrypted-backup.md)中提供建立**資料庫主要金鑰**和**憑證**的T-SQL 範例。  
 1.  在物件總管中，連接到 SQL Server Database Engine 的執行個體，然後展開該執行個體。
 
-2.  展開 [資料庫]，以滑鼠右鍵按一下 `Sales`，指向 [工作]，然後按一下 [備份...]。
+2.  展開 資料庫，以滑鼠右鍵按一下 `Sales`，指向 工作，然後按一下備份...。
 
 3.  在 [媒體選項] 頁面的 [覆寫媒體] 區段中，選取 [備份至新的媒體集，並清除所有現有的備份組]。
 
@@ -203,7 +203,7 @@ ms.lasthandoff: 09/27/2017
 下列範例會將 `Sales` 資料庫完整備份至 Microsoft Azure Blob 儲存體服務。  儲存體帳戶名稱為 `mystorageaccount`。  容器名稱為 `myfirstcontainer`。  為求簡潔，前四個步驟只會在此列出一次，所有範例將從**步驟 5** 開始進行。
 1.  在物件總管中，連接到 SQL Server Database Engine 的執行個體，然後展開該執行個體。
 
-2.  展開 [資料庫]，以滑鼠右鍵按一下 `Sales`，指向 [工作]，然後按一下 [備份...]。
+2.  展開 資料庫，以滑鼠右鍵按一下 `Sales`，指向 工作，然後按一下備份...。
 
 3.  在 [一般] 頁面之 [目的地] 區段的 [備份至:] 下拉式清單中，選取 [URL]。
 
@@ -238,7 +238,7 @@ ms.lasthandoff: 09/27/2017
     **D3.共用存取簽章不存在**
   5.    按一下 [新增容器] 按鈕，[連接至 Microsoft 訂用帳戶] 對話方塊隨即開啟。  
   
-  6.    完成 [連接至 Microsoft 訂用帳戶] 對話方塊，然後按一下 [確定] 回到 [選取備份目的地] 對話方塊。  如需其他資訊，請參閱[連接到 Microsoft Azure 訂用帳戶](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md)。
+  6.    完成 連接至 Microsoft 訂用帳戶 對話方塊，然後按一下確定 回到 選取備份目的地 對話方塊。  如需其他資訊，請參閱[連接到 Microsoft Azure 訂用帳戶](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md)。
   
   7.    在 [選取備份目的地] 對話方塊中，按一下 [確定]。
   
