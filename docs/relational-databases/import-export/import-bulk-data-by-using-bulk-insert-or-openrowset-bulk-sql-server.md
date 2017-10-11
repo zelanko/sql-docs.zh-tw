@@ -26,10 +26,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 12b379c1d02dc07a5581a5a3f3585f05f763dad7
-ms.openlocfilehash: 67952c30acf82b7ad073ab243e0f38ed4a2aa23f
+ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
+ms.openlocfilehash: f594525c8d79e53b6b4ae1b223ab9b50e85e6a5d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 10/04/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="import-bulk-data-by-using-bulk-insert-or-openrowsetbulk-sql-server"></a>使用 BULK INSERT 或 OPENROWSET(BULK...) 匯入大量資料 (SQL Server)
@@ -37,7 +37,8 @@ ms.lasthandoff: 10/04/2017
 
   本主題提供一個概觀，說明如何使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] BULK INSERT 陳述式與 INSERT...SELECT * FROM OPENROWSET(BULK...) 陳述式，從資料檔案大量匯入資料到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表中。 本主題也將說明有關使用 BULK INSERT 和 OPENROWSET(BULK…)，以及使用這些方法從遠端資料來源大量匯入時的安全性考量。  
   
-> **注意** ：當您使用 BULK INSERT 或 OPENROWSET(BULK…) 時，了解 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本處理模擬的方式相當重要。 如需詳細資訊，請參閱本主題稍後的「安全性考量」。  
+> [!NOTE]
+> 當您使用 BULK INSERT 或 OPENROWSET(BULK…) 時，了解 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本處理模擬的方式相當重要。 如需詳細資訊，請參閱本主題稍後的「安全性考量」。  
   
 ## <a name="bulk-insert-statement"></a>BULK INSERT 陳述式  
  BULK INSERT 會從資料檔案將資料載入資料表。 此功能與 **bcp** 命令的 **in** 選項相似，但卻是由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序來讀取資料檔案。 如需 BULK INSERT 語法的描述，請參閱 [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)。  
@@ -112,7 +113,7 @@ ms.lasthandoff: 10/04/2017
 ## <a name="bulk-importing-from-a-remote-data-file"></a>從遠端資料檔案大量匯入  
  若要使用 BULK INSERT 或 INSERT...SELECT \* FROM OPENROWSET(BULK...) 從另一部電腦大量匯入資料，則必須在兩部電腦之間共用資料檔案。 若要指定共用資料檔案，請使用它的通用命名慣例 (UNC) 名稱，其使用一般格式：**\\\\**<伺服器名稱>**\\**<共用名稱>**\\**<路徑>**\\**<檔案名稱>。 此外，用來存取資料檔案的帳戶必須擁有在遠端磁碟上讀取檔案所需的權限。  
   
- 例如，下列 `BULK INSERT` 陳述式會從名為 `SalesOrderDetail` 的資料檔案大量匯入資料到 `AdventureWorks` 資料庫的 `newdata.txt`資料表。 此資料檔案位於 `\dailyorders` 系統上的 `salesforce` 網路共用目錄上的 `computer2`共用資料夾中。  
+ 例如，下列 `BULK INSERT` 陳述式會從名為 `SalesOrderDetail` 的資料檔案大量匯入資料到 `AdventureWorks` 資料庫的 `newdata.txt`資料表。 此資料檔案位於 `\dailyorders` 系統上的 `salesforce` 網路共用目錄上的 `computer2` 共用資料夾中。  
   
 ```sql
 BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail  
@@ -120,7 +121,8 @@ BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail
 GO  
 ```  
   
-> **注意** ：這個限制並不適用於 **bcp** 公用程式，因為用戶端可以獨立讀取檔案，不受 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]影響。  
+> [!NOTE]
+> 這個限制並不適用於 **bcp** 公用程式，因為用戶端可以獨立讀取檔案，不受 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 影響。  
   
 ## <a name="see-also"></a>另請參閱  
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   

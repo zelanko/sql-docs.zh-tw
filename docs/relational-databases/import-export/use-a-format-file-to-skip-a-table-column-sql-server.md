@@ -17,11 +17,11 @@ caps.latest.revision: 50
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1de1c7d6881885035eaa3537ff287a7b45857485
+ms.translationtype: HT
+ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
+ms.openlocfilehash: d933bccabc8db140dd3807741cdb044f8a1f87ff
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="use-a-format-file-to-skip-a-table-column-sql-server"></a>使用格式檔案以略過資料表資料行 (SQL Server)
@@ -30,7 +30,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="sample-table-and-data-file"></a>範例資料表與資料檔  
  下列範例會要求在 `myTestSkipCol` dbo [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 結構描述下之 **範例資料庫中有一個名為** 的資料表。 使用如下陳述式建立此資料表：  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 CREATE TABLE myTestSkipCol   
@@ -48,7 +48,6 @@ GO
 1,DataForColumn3  
 1,DataForColumn3  
 1,DataForColumn3  
-  
 ```  
   
  若要將資料從 `myTestSkipCol2.dat` 大量匯入 `myTestSkipCol` 資料表中，格式檔案必須將第一個資料欄位對應到 `Col1`、第二個欄位對應到 `Col3`，但是要略過 `Col2`。  
@@ -59,7 +58,7 @@ GO
 ### <a name="creating-a-default-non-xml-format-file"></a>建立預設的非 XML 格式檔案  
  本主題使用 `myTestSkipCol` 範例資料表的預設非 XML 格式檔案，這是使用下列 **bcp** 命令所建立：  
   
-```  
+```cmd
 bcp AdventureWorks2012..myTestSkipCol format nul -f myTestSkipCol_Default.fmt -c -T  
 ```  
   
@@ -109,7 +108,7 @@ bcp AdventureWorks2012..myTestSkipCol format nul -f myTestSkipCol_Default.fmt -c
 #### <a name="using-bulk-insert"></a>使用 BULK INSERT  
  這個範例要使用本主題先前在「修改非 XML 格式檔案的方法」中建立的任一修改過的非 XML 格式檔案，才能運作。 在這個範例中，修改的格式檔案命名為 `C:\myTestSkipCol2.fmt`。 若要使用 `BULK INSERT` 大量匯入 `myTestSkipCol2.dat` 資料檔，請在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 查詢編輯器中執行下列程式碼：  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 BULK INSERT myTestSkipCol   
@@ -130,13 +129,13 @@ GO
 ### <a name="creating-a-default-xml-format-file"></a>建立預設的 XML 格式檔案  
  修改的格式檔案的範例以本主題先前在＜範例資料表與資料檔＞中建立的 `myTestSkipCol` 範例資料表與資料檔為基礎。 下列 **bcp** 命令會建立 `myTestSkipCol` 資料表的預設 XML 格式檔案：  
   
-```  
+```cmd
 bcp AdventureWorks2012..myTestSkipCol format nul -f myTestSkipCol_Default.xml -c -x -T  
 ```  
   
  產生的預設非 XML 格式檔案描述的是資料檔欄位與資料表資料行之間的一對一對應，如下所示：  
   
-```  
+```xml
 \<?xml version="1.0"?>  
 \<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
  <RECORD>  
@@ -158,7 +157,7 @@ bcp AdventureWorks2012..myTestSkipCol format nul -f myTestSkipCol_Default.xml -c
 ### <a name="examples"></a>範例  
  本節中的範例使用本主題先前在「範例資料表與資料檔」中建立的 `myTestSkipCol` 範例資料表以及 `myTestSkipCol2.dat` 範例資料檔案。 為了將資料從 `myTestSkipCol2.dat` 匯入至 `myTestSkipCol` 資料表，這個範例使用修改過的 XML 格式檔案 `myTestSkipCol2-x.xml`。 這個檔案是以本主題先前在＜建立預設的 XML 格式檔案＞中建立的格式檔案為基礎。  
   
-```  
+```xml
 \<?xml version="1.0"?>  
 \<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
  <RECORD>  
@@ -177,7 +176,7 @@ bcp AdventureWorks2012..myTestSkipCol format nul -f myTestSkipCol_Default.xml -c
   
  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 查詢編輯器中，執行下列程式碼：  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 INSERT INTO myTestSkipCol  
@@ -194,7 +193,7 @@ GO
   
  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 查詢編輯器中，執行下列程式碼：  
   
-```tsql  
+```sql  
 CREATE VIEW v_myTestSkipCol AS  
     SELECT Col1,Col3  
     FROM myTestSkipCol;  
