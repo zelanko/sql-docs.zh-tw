@@ -36,7 +36,7 @@ ms.lasthandoff: 09/12/2017
 >   
 >  使用 Integration Services 中的 DQS 清理轉換，在 Integration Services 封裝程序中執行資料清除；當您安裝 Integration Services 時，系統會自動安裝此元件。 如需安裝 Integration Services 的資訊，請參閱 [安裝 Integration Services](../../integration-services/install-windows/install-integration-services.md)。  
 >   
->  在 Master Data Services 中啟用 DQS 整合，以便在 Master Data Services Add-in for Excel 中使用 DQS 相符的功能。 如需相關資訊，請參閱 [Enable Data Quality Services Integration with Master Data Services](../../master-data-services/install-windows/enable-data-quality-services-integration-with-master-data-services.md)。  
+>  在 Master Data Services 中啟用 DQS 整合，以便在 Master Data Services Add-in for Excel 中使用 DQS 相符的功能。 如需相關資訊，請參閱 [啟用 Data Quality Services 與 Master Data Services 的整合](../../master-data-services/install-windows/enable-data-quality-services-integration-with-master-data-services.md)。  
   
  DQS 安裝程序包含三個部分：  
   
