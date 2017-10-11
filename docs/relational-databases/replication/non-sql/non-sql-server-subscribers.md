@@ -81,7 +81,7 @@ Oracle 版本資訊：
   
     -   在 Oracle 中，伺服器最多只有一個資料庫，所以不需要指定資料庫。  
   
-    -   對於 IBM DB2，在 DB2 連接字串中指定資料庫。 如需相關資訊，請參閱 [Create a Subscription for a Non-SQL Server Subscriber](../../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)。  
+    -   對於 IBM DB2，在 DB2 連接字串中指定資料庫。 如需相關資訊，請參閱 [為非 SQL Server 訂閱者建立訂閱](../../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)。  
   
 -   如果「[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 散發者」是在 64 位元平台上執行，則必須使用適當的 64 位元版本 OLE DB 提供者。  
   
