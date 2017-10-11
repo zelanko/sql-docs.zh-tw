@@ -20,6 +20,7 @@
 ### [支援的資料來源](data-sources-supported-ssas-tabular.md)  
 ### [支援的資料類型](data-types-supported-ssas-tabular.md)  
 ### [模擬](impersonation-ssas-tabular.md)  
+### [使用原生查詢匯入資料](ssas-import-query.md)
 ### [匯入資料 - 關聯式資料來源](ssas-import-data-relational-data-source.md)  
 ### [匯入資料 - 多維度資料來源](ssas-import-data-multidimensional-data-source.md)  
 ### [匯入資料 - 資料摘要](ssas-import-data-data-feed.md)  
