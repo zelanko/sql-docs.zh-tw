@@ -104,15 +104,24 @@
 
 # [操作說明](r/sql-server-machine-learning-tasks.md)
 
-## [R 套件管理](r/r-package-management-for-sql-server-r-services.md)
+## [SQL Server 的 R 套件管理](r/r-package-management-for-sql-server-r-services.md)
+
+### [在 SQL Server 上安裝新的 R 套件](r/install-additional-r-packages-on-sql-server.md)
 
 ### [啟用 SQL Server 執行個體的 R 套件管理](r/r-package-how-to-enable-or-disable.md)
-### [何處可取得 R 套件](r/installing-and-managing-r-packages.md)
-### [在 SQL Server 上安裝其他機器學習服務套件](r/install-additional-r-packages-on-sql-server.md)
-### [使用 miniCRAN 建立本機套件存放庫](r/create-a-local-package-repository-using-minicran.md)
+
 ### [決定要安裝在 SQL Server 上的套件](r/determine-which-packages-are-installed-on-sql-server.md)
-### [使用者套件程式庫](r/packages-installed-in-user-libraries.md)
-### [同步處理 SQL Server 所使用的 R 套件](r/package-install-uninstall-and-sync.md)
+
+### [使用 RevoScaleR 函式，在 SQL Server 上尋找或安裝 R 套件](r/use-revoscaler-to-manage-r-packages.md)
+
+### [同步處理安裝在 SQL Server 上的 R 套件](r/package-install-uninstall-and-sync.md)
+
+### [與 SQL Server 一起安裝的 R 套件](r/installing-and-managing-r-packages.md)
+
+### [使用 miniCRAN 建立本機套件存放庫](r/create-a-local-package-repository-using-minicran.md)
+
+### [避免 R 使用者套件程式庫的錯誤](r/packages-installed-in-user-libraries.md)
+
 
 ## 資料探索和模型化
 

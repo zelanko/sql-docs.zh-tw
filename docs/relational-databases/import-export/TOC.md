@@ -29,6 +29,7 @@
 ### [使用格式檔案略過資料表資料行](use-a-format-file-to-skip-a-table-column-sql-server.md)  
 ### [使用格式檔案略過資料欄位](use-a-format-file-to-skip-a-data-field-sql-server.md)  
 ### [使用格式檔案將資料表資料行對應至資料檔欄位](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)
+# [使用匯入一般檔案精靈來匯入一般檔案](import-flat-file-wizard.md)
 # [使用匯入和匯出精靈來匯入和匯出](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)
 # [從 Excel 匯入](import-data-from-excel-to-sql.md) 
 # [匯入 JSON 文件](../json/import-json-documents-into-sql-server.md)
