@@ -87,7 +87,7 @@ ms.lasthandoff: 09/28/2017
  為 DT_STR 類型的資料行選取適當的字碼頁。  
   
  **設定錯誤輸出**  
- 使用 [設定錯誤輸出] [](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) 對話方塊來指定如何處理資料列層級錯誤。  
+ 使用 [[設定錯誤輸出]](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) 對話方塊來指定如何處理資料列層級錯誤。  
   
 ## <a name="see-also"></a>另請參閱  
  [快速剖析](http://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95)   
