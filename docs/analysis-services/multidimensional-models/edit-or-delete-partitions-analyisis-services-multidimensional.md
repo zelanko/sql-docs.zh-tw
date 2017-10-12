@@ -43,7 +43,7 @@ ms.lasthandoff: 09/01/2017
   
  ![分割區 窗格中的來源資料行](../../analysis-services/multidimensional-models/media/ssas-partitionsource.png "分割區 窗格中的來源資料行")  
   
- 如果分割區是以查詢為基礎，請按一下 [瀏覽] (**...**) 按鈕以編輯查詢。 這樣可以編輯分割區的 **Source** 屬性。 如需詳細資訊，請參閱 [變更資料分割來源以使用不同的事實資料表](../../analysis-services/multidimensional-models/change-a-partition-source-to-use-a-different-fact-table.md)。  
+ 如果分割區是以查詢為基礎，請按一下 [瀏覽]\(**...**) 按鈕以編輯查詢。 這樣可以編輯分割區的 **Source** 屬性。 如需詳細資訊，請參閱 [變更資料分割來源以使用不同的事實資料表](../../analysis-services/multidimensional-models/change-a-partition-source-to-use-a-different-fact-table.md)。  
   
  您可以在具有與原始來源資料表 (在從其擷取資料的外部資料來源中) 相同結構的資料來源檢視中，指定資料表。 來源可以在 Cube 資料庫的任何資料來源或資料來源檢視中。  
   
