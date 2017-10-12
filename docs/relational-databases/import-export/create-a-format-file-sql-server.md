@@ -17,10 +17,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 12b379c1d02dc07a5581a5a3f3585f05f763dad7
-ms.openlocfilehash: 7f4686ae082a68b7c5d866e5c2c885936c5450dc
+ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
+ms.openlocfilehash: f043381909cd5a7fb7146f424163af69a443022c
 ms.contentlocale: zh-tw
-ms.lasthandoff: 10/04/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="create-a-format-file-sql-server"></a>建立格式檔案 (SQL Server)
@@ -139,7 +139,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
  如需如何使用 Unicode 字元資料的詳細資訊，請參閱[使用 Unicode 字元格式匯入或匯出資料 &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)。  
   
 #### <a name="f-using-a-format-file-with-the-code-page-option"></a>F. 使用格式檔案與字碼頁選項  
- 如果您建立格式檔案的方式是使用 bcp 命令 (也就是使用 “`bcp forma`t...” )，則定序/字碼頁的相關資訊會寫入格式檔案中。   
+若使用 bcp 命令 (也就是 `bcp format`) 建立格式檔案，就會在格式檔案中寫入定序/字碼頁的資訊。   
 下列範例格式檔案屬於具 5 個資料行的資料表且包含定序。  
   
 ```  

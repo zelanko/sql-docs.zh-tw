@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
-ms.openlocfilehash: da7bf96dbacf57f7086c5cfda298b2e810c43a07
+ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
+ms.openlocfilehash: 559172415fef699a60e88111a5e13eb6accbeb3c
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>SQL Server 交易記錄架構與管理指南
@@ -66,8 +66,15 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="physical_arch"></a> 交易記錄實體架構  
  資料庫中的交易記錄會對應到一個或多個實體檔案。 從概念上來說，記錄檔是記錄的字串。 就實際上來說，記錄的順序必須有效地儲存在實作交易記錄的一組實體檔案中。 每個資料庫至少要有一個記錄檔。  
   
- [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 會在內部將每個實體記錄檔分成數個虛擬記錄檔。 虛擬記錄檔沒有固定的大小，一個實體記錄檔也沒有固定的虛擬記錄檔數目。 [!INCLUDE[ssDE](../includes/ssde-md.md)] 在建立或擴充記錄檔時，會動態選擇虛擬記錄檔的大小。 [!INCLUDE[ssDE](../includes/ssde-md.md)] 會盡量維持少量的虛擬檔。 記錄檔擴充之後的虛擬檔大小，是現有記錄檔大小以及新檔案所增加的大小總和。 系統管理員無法設定虛擬記錄檔的大小或數目。  
-  
+ [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 會在內部將每個實體記錄檔分成數個虛擬記錄檔 (VLF)。 虛擬記錄檔沒有固定的大小，一個實體記錄檔也沒有固定的虛擬記錄檔數目。 [!INCLUDE[ssDE](../includes/ssde-md.md)] 在建立或擴充記錄檔時，會動態選擇虛擬記錄檔的大小。 [!INCLUDE[ssDE](../includes/ssde-md.md)] 會盡量維持少量的虛擬檔。 記錄檔擴充之後的虛擬檔大小，是現有記錄檔大小以及新檔案所增加的大小總和。 系統管理員無法設定虛擬記錄檔的大小或數目。  
+
+> [!NOTE]
+> VLF 建立遵循此方法：
+> - 若下一個成長小於目前記錄實體大小的 1/8，請建立 1 個能夠涵蓋成長大小的 VLF (從 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 開始)
+> - 若成長小於 64MB，請建立 4 個能夠涵蓋成長大小的 VLF (例如：成長若為 1 MB，請建立四個 256KB 的 VLF)
+> - 若成長介於 64MB 到 1GB 之間，請建立 8 個能夠涵蓋成長大小的 VLF (例如：成長若為 512MB，請建立八個 64MB 的 VLF)
+> - 若成長大於 1GB，請建立 16 個能夠涵蓋成長大小的 VLF (例如：成長若為 8 GB，請建立十六個 512MB 的 VLF)
+
  只有當實體記錄檔是以較小的 *size* 和 *growth_increment* 值來定義時，虛擬記錄檔才會影響到系統效能。 *size* 值是記錄檔的初始大小，而 *growth_increment* 值則是每次需要新空間時加入檔案的空間量。 如果記錄檔因為許多少量增加而變得很龐大，將會產生許多虛擬記錄檔。 這樣會減慢資料庫啟動的速度，也會降低記錄備份和還原作業的執行速度。 建議您使用接近最後所需大小的 *size* 值來指派記錄檔，並使用相對較大的 *growth_increment* 值。 如需這些參數的詳細資訊，請參閱 [ALTER DATABASE 檔案及檔案群組選項 &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)。  
   
  交易記錄是循環使用的檔案。 例如，假設資料庫的一個實體記錄檔分成四個虛擬記錄檔。 資料庫建立時，邏輯記錄檔從實體記錄檔的最前面開始。 新的記錄會加在邏輯記錄檔的最後，並朝向實體記錄檔的結尾處擴充。 記錄截斷會釋出記錄出現在最小復原記錄序號 (MinLSN) 前面的所有虛擬記錄。 *MinLSN* 是成功回復全資料庫所需之最舊記錄檔記錄的記錄序號。 範例資料庫中的交易記錄看起來如下圖所示。  
@@ -82,7 +89,7 @@ ms.lasthandoff: 08/09/2017
   
 -   如果記錄檔啟用 FILEGROWTH 設定，而且磁碟也有可用的空間，則檔案會以 *growth_increment* 參數所指定的數量擴大，並將新的記錄新增到擴充部分。 如需 FILEGROWTH 設定的詳細資訊，請參閱 [ALTER DATABASE 檔案及檔案群組選項 &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)。  
   
--   如果未啟用 FILEGROWTH，或保存記錄檔的磁碟可用空間少於 *growth_increment* 所指定的數量，則會產生 9002 錯誤。  
+-   如果未啟用 FILEGROWTH，或保存記錄檔的磁碟可用空間少於 *growth_increment* 所指定的數量，則會產生 9002 錯誤。 如需詳細資訊，請參閱[為完整交易記錄進行疑難排解](../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)。  
   
  如果記錄檔包含多個實體記錄檔，邏輯記錄檔會從頭到尾在所有的實體記錄檔移動之後，才繞回第一個實體記錄檔的起點。  
   
@@ -106,7 +113,7 @@ ms.lasthandoff: 08/09/2017
  記錄截斷可能會因為各種因素而延遲。 如果在記錄截斷中發生長時間的延遲，交易記錄可能會填滿。 如需詳細資訊，請參閱[可能會延遲記錄截斷的因素](../relational-databases/logs/the-transaction-log-sql-server.md#FactorsThatDelayTruncation)和[寫滿交易記錄疑難排解 &#40;SQL Server 錯誤 9002&#41;](../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)。  
   
 ##  <a name="WAL"></a> 預先寫入交易記錄  
- 本章節說明預先寫入交易記錄在將資料修改記錄至磁碟時所扮演的角色。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會使用預先寫入記錄 (WAL)，而這項功能可確保在關聯的記錄檔記錄寫入磁碟之前，不會有任何資料修改寫入磁碟。 如此可保留交易的 ACID 屬性。  
+ 本章節說明預先寫入交易記錄在將資料修改記錄至磁碟時所扮演的角色。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會使用預先寫入記錄 (WAL) 演算法，而這項功能可確保在相關記錄檔的記錄寫入磁碟之前，不會將任何資料修改寫入磁碟。 如此可保留交易的 ACID 屬性。  
   
  若要了解預寫記錄檔的運作方式，您一定要知道如何將修改的資料寫入磁碟。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會維護緩衝快取，當需要擷取資料時，就可以將資料頁讀取到其中。 當緩衝快取中的頁面被修改時，不會立即重新寫入磁碟；而是將頁面標示為「中途」。 在實際將資料頁寫入磁碟之前，可以進行多次邏輯寫入。 每次邏輯寫入時，都會有交易記錄插入至記載修改的記錄快取中。 記錄檔記錄必須在關聯的中途分頁從緩衝區快取移除而寫入至磁碟之前，先寫入磁碟中。 檢查點處理序會定期掃描緩衝快取，檢查是否有內含來自指定資料庫之頁面的緩衝區，並將所有中途分頁寫入磁碟。 藉由建立一個點來確保所有中途分頁都已寫入磁碟中，檢查點可讓稍後的復原節省時間。  
   
@@ -217,8 +224,11 @@ LSN 148 是交易記錄中最後一個記錄。 當記錄於 LSN 147 的檢查�
 ## <a name="additional-reading"></a>其他閱讀資料  
  建議您閱覽下列文章和書籍，了解交易記錄的其他相關資訊。  
   
- [了解 SQL Server 中的記錄和復原，作者 Paul Randal](http://technet.microsoft.com/magazine/2009.02.logging.aspx)  
-  
+ [管理交易記錄檔的大小](../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)   
+ [sys.dm_db_log_info &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)  
+ [sys.dm_db_log_space_usage &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)     
+ [交易記錄 &#40;SQL Server&#41;](../relational-databases/logs/the-transaction-log-sql-server.md)        
+ [了解 SQL Server 中的記錄與復原，作者 Paul Randal](http://technet.microsoft.com/magazine/2009.02.logging.aspx)    
  [《SQL Server Transaction Log Management》，作者 Tony Davis 和 Gail Shaw](http://www.simple-talk.com/books/sql-books/sql-server-transaction-log-management-by-tony-davis-and-gail-shaw/)  
   
   

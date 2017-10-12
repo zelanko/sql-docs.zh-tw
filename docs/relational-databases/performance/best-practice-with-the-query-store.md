@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: f684f0168e57c5cd727af6488b2460eeaead100c
-ms.openlocfilehash: 2204d520152b1363657a407e5e0534e5051a4e94
+ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
+ms.openlocfilehash: 69f93d0bc7a7a0126f505bbe7e97c68d5677c7eb
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="best-practice-with-the-query-store"></a>使用查詢存放區的最佳作法
@@ -323,11 +323,11 @@ WHERE is_forced_plan = 1;
 
 ##  <a name="Recovery"></a> 在任務關鍵性伺服器上使用追蹤旗標來改善災害復原
  
-  在高可用性和災害復原案例期間，全域追蹤旗標 7745 及 7752 可用於改進查詢存放區的效能。
+  在高可用性和災害復原案例期間，全域追蹤旗標 7745 及 7752 可用於改進查詢存放區的效能。 如需詳細資訊，請參閱[追蹤旗標](../..//t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
   
   追蹤旗標 7745 會在 SQL Server 能夠關閉前，防止查詢存放區將資料寫入磁碟中的預設行為。
   
-  追蹤旗標 7752 可讓 SQL Server 在查詢存放區完整載入前執行查詢。 預設查詢存放區行為會防止在查詢存放區復原前執行查詢。
+  追蹤旗標 7752 會啟用查詢存放區的非同步載入，並允許 SQL Server 在完整載入查詢存放區之前執行查詢。 預設查詢存放區行為會防止在查詢存放區復原前執行查詢。
 
 ## <a name="see-also"></a>另請參閱  
  [查詢存放區目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   

@@ -21,10 +21,10 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 71ca2fac0a6b9f087f9d434c5a701f5656889b9e
-ms.openlocfilehash: 4026b6c7c7ae2945d49d6c4b63792239608ffea0
+ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
+ms.openlocfilehash: 240e02e3dd0d40f53f8436e241af228b503a43d9
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="polybase-troubleshooting"></a>PolyBase, 疑難排解
@@ -143,7 +143,7 @@ ms.lasthandoff: 09/13/2017
   
 ## <a name="to-view-the--polybase-query-plan"></a>檢視 PolyBase 查詢計劃  
   
-1.  在 SSMS 中，啟用 [包括實際執行計畫] \(Ctrl + M) 並執行查詢。  
+1.  在 SSMS 中，啟用 [包括實際執行計畫] (Ctrl + M) 並執行查詢。  
   
 2.  按一下 [執行計劃] 索引標籤。  
   
@@ -229,6 +229,8 @@ ms.lasthandoff: 09/13/2017
  - 將資料從 SQL Server 或 Azure SQL 資料倉儲匯出為 ORC 檔案格式時，可以將具有大量文字的資料行限制為最少 50 個資料行，因為會發生 Java 記憶體不足錯誤。 若要解決這個問題，只需要匯出資料行的子集。
  - 無法讀取或寫入在 Hadoop 中靜止加密的資料， 包括 HDFS 加密區域或透明加密。
  - 如果已啟用 KNOX，PolyBase 就無法連接至 Hortonworks 執行個體。 
+ - 若您使用 Hive 資料表，且 transactional = true，PolyBase 就無法存取 Hive 資料表目錄中的資料。 
+
 
 [將節點新增至 SQL Server 2016 容錯移轉叢集時，不會安裝 PolyBase](https://support.microsoft.com/en-us/help/3173087/fix-polybase-feature-doesn-t-install-when-you-add-a-node-to-a-sql-server-2016-failover-cluster)
 

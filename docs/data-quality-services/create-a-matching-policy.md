@@ -80,7 +80,7 @@ ms.lasthandoff: 09/09/2017
 4.  在 **[對應]**底下，針對 **[來源資料行]**選取資料來源中的欄位，然後選取對應的定義域。 針對您在比對程序中使用的所有定義域重複以上步驟。 視需要按一下 **[建立定義域]** 或 **[建立複合定義域]**來建立定義域。  
   
     > [!NOTE]  
-    >  只有當 DQS 支援來源資料類型，而且該類型符合 DQS 定義域資料類型時，您才能將來源資料對應至 DQS 定義域，同時建立比對原則。 如需有關 DQS 支援之資料類型的詳細資訊，請參閱＜ [Supported SQL Server and SSIS Data Types for DQS Domains](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md)＞。  
+    >  只有當 DQS 支援來源資料類型，而且該類型符合 DQS 定義域資料類型時，您才能將來源資料對應至 DQS 定義域，同時建立比對原則。 如需有關 DQS 支援之資料類型的詳細資訊，請參閱＜ [DQS 定義域支援的 SQL Server 和 SSIS 資料類型](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md)＞。  
   
 5.  按一下 **[加號 (+)]** 控制項，將資料列加入至對應資料表，或按一下 **[減號 (–)]** 控制項，移除資料列。  
   
@@ -191,7 +191,7 @@ ms.lasthandoff: 09/09/2017
 9. 按一下 **[取消]** ，結束 [比對原則] 活動，不儲存工作並返回 DQS 首頁。  
   
 ##  <a name="FollowUp"></a> 後續操作：在建立比對原則之後  
- 在您建立比對原則之後，您可以根據包含此比對原則的知識庫來執行比對專案。 如需詳細資訊，請參閱 [Run a Matching Project](../data-quality-services/run-a-matching-project.md)。  
+ 在您建立比對原則之後，您可以根據包含此比對原則的知識庫來執行比對專案。 如需詳細資訊，請參閱 [執行比對專案](../data-quality-services/run-a-matching-project.md)。  
   
 ##  <a name="Tabs"></a> 分析工具和結果索引標籤  
  [分析工具] 和 [結果] 索引標籤包含 [比對原則] 和 [比對結果] 頁面的統計資料。  

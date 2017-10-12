@@ -1,7 +1,7 @@
 ---
 title: "交易記錄 (SQL Server) | Microsoft Docs"
 ms.custom: 
-ms.date: 02/01/2017
+ms.date: 10/03/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -19,19 +19,22 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 6e2b36af7393ecd115feefb5c3dffba5e28d1304
+ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
+ms.openlocfilehash: 5a9d2a8533e95c275e62071c37ab44d887ac32c1
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="the-transaction-log-sql-server"></a>交易記錄 (SQL Server)
   每個 SQL Server 資料庫都擁有交易記錄來記錄所有交易，以及交易在資料庫中所作的修改。
   
-交易記錄是資料庫的重要元件。 若系統故障，您便需要該記錄檔讓資料庫返回一致的狀態。 永遠不要刪除或移動此記錄檔，除非您完全了解這麼做的後果。 
+交易記錄是資料庫的重要元件。 若系統故障，您便需要該記錄檔讓資料庫返回一致的狀態。 
 
-  
- > **小知識！** 檢查點會在資料庫復原期間建立開始套用交易記錄的已知恰當起點。 如需詳細資訊，請參閱[資料庫檢查點 (SQL Server)](../../relational-databases/logs/database-checkpoints-sql-server.md)。  
+> [!IMPORTANT] 
+> 永遠不要刪除或移動此記錄檔，除非您完全了解這麼做的後果。 
+
+> [!TIP]
+> 檢查點會在資料庫復原期間建立開始套用交易記錄的已知恰當起點。 如需詳細資訊，請參閱[資料庫檢查點 (SQL Server)](../../relational-databases/logs/database-checkpoints-sql-server.md)。  
   
 ## <a name="operations-supported-by-the-transaction-log"></a>交易記錄所支援的作業  
  交易記錄檔支援下列作業：  
@@ -73,9 +76,9 @@ ms.lasthandoff: 09/27/2017
 ##  <a name="Characteristics"></a>Transaction Log characteristics
 
 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 交易記錄的特性： 
--  交易記錄是實作成資料庫中的個別檔案或一組檔案。 記錄檔快取是與資料頁的緩衝區快取分開管理，以在 Database Engine 內產生簡單、快速和健全的程式碼。
+-  交易記錄是實作成資料庫中的個別檔案或一組檔案。 記錄檔快取是與資料頁的緩衝區快取分開管理，以在 Database Engine 內產生簡單、快速和健全的程式碼。 如需詳細資訊，請參閱[交易記錄實體架構](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)。
 -  記錄檔記錄與頁面的格式並不一定要遵照資料頁的格式。
--  交易記錄檔可實作於多個檔案上。 可以設定記錄檔的 FILEGROWTH 值，以定義記錄檔為自動擴充。 這減少了交易記錄檔用完空間的可能性，而同時又減少了管理上的額外負擔。 如需詳細資訊，請參閱 [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)。
+-  交易記錄檔可實作於多個檔案上。 可以設定記錄檔的 FILEGROWTH 值，以定義記錄檔為自動擴充。 這減少了交易記錄檔用完空間的可能性，而同時又減少了管理上的額外負擔。 如需詳細資訊，請參閱 [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)。
 -  重複使用記錄檔空間的機制很迅速，並對於交易輸送量的影響很小。
 
 ##  <a name="Truncation"></a> 交易記錄截斷  
@@ -91,12 +94,13 @@ ms.lasthandoff: 09/27/2017
   
  如需詳細資訊，請參閱本主題稍後的＜ [可能會延遲記錄截斷的因素](#FactorsThatDelayTruncation)＞。  
   
-> **注意！** 記錄截斷並不會讓實體記錄檔變小。 若要減少實體記錄檔的實體大小，則必須壓縮記錄檔。 如需有關壓縮實體記錄檔大小的詳細資訊，請參閱＜ [Manage the Size of the Transaction Log File](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)＞。  
+> [!NOTE]
+> 記錄截斷並不會讓實體記錄檔變小。 若要減少實體記錄檔的實體大小，則必須壓縮記錄檔。 如需有關壓縮實體記錄檔大小的詳細資訊，請參閱＜ [Manage the Size of the Transaction Log File](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)＞。  
   
 ##  <a name="FactorsThatDelayTruncation"></a> Factors that can delay log truncation  
  當記錄檔記錄有一段很長的時間維持在使用中狀態時，交易記錄截斷會延遲，並填滿交易記錄，就像我們在這個長主題前面所提的一樣。  
   
-> **重要！！** 如需如何對應寫滿交易記錄的相關資訊，請參閱 [Troubleshoot a Full Transaction Log &#40;SQL Server Error 9002&#41;](../../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)。  
+> [!重要} 如需如何回應完整交易記錄的相關資訊，請參閱 [為完整交易記錄進行疑難排解 &#40;SQL Server 錯誤 9002&#41;](../../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)。  
   
  實際上，記錄截斷可能會因為各種原因而延遲。 查詢 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目錄檢視的 **log_reuse_wait** 和 **log_reuse_wait_desc** 資料行，了解是否有任何原因導致無法進行記錄截斷。 下表描述這些資料行的值。  
   
@@ -121,9 +125,11 @@ ms.lasthandoff: 09/27/2017
 ##  <a name="MinimallyLogged"></a> 可以進行最低限度記錄的作業  
  「最低限度記錄」 包含僅記錄復原交易所需的資訊，不支援時間點復原。 這個主題將識別在大量記錄 [復原模式](../backup-restore/recovery-models-sql-server.md) 下 (以及簡單復原模式下，但備份正在執行時除外) 會進行最低限度記錄的作業。  
   
-> **注意！！** 記憶體最佳化資料表不支援最低限度記錄。  
+> [!NOTE]
+> 記憶體最佳化資料表不支援最低限度記錄。  
   
-> **另請注意！** 在完整 [復原模式](../backup-restore/recovery-models-sql-server.md)下，將完整記錄所有大量作業。 不過，您可以暫時針對大量作業，將資料庫切換成大量記錄復原模式，藉以將大量作業集的記錄降至最低。 最低限度記錄會比完整記錄更具效率，並降低大規模的大量作業在大量交易期間，填滿可用交易記錄空間的可能性。 然而，如果資料庫在最低限度記錄作用時損毀或遺失，您就無法將資料庫復原至失敗點。  
+> [!NOTE]
+> 在完整 [復原模式](../backup-restore/recovery-models-sql-server.md)下，將完整記錄所有大量作業。 不過，您可以暫時針對大量作業，將資料庫切換成大量記錄復原模式，藉以將大量作業集的記錄降至最低。 最低限度記錄會比完整記錄更具效率，並降低大規模的大量作業在大量交易期間，填滿可用交易記錄空間的可能性。 然而，如果資料庫在最低限度記錄作用時損毀或遺失，您就無法將資料庫復原至失敗點。  
   
  下列作業 (在完整復原模式下會完整記錄) 在簡單和大量記錄復原模式下會進行最低限度記錄：  
   
@@ -139,7 +145,8 @@ ms.lasthandoff: 09/27/2017
   
 -   將新的資料插入或附加至[UPDATETEXT](../../t-sql/queries/writetext-transact-sql.md) 、 [nUPDATETEXT](../../t-sql/queries/updatetext-transact-sql.md) 和 **UPDATETEXT**, **nUPDATETEXT**, 、 **UPDATETEXT** 陳述式。 請注意，更新現有值時不使用最低限度記錄。  
   
-    >  WRITETEXT 與 UPDATETEXT 陳述式 **已被取代**，所以您應該避免在新的應用程式中加以使用。  
+    > [!IMPORTANT]
+    > WRITETEXT 與 UPDATETEXT 陳述式 **已被取代**，所以您應該避免在新的應用程式中加以使用。  
   
 -   如果資料庫設定為簡單或大量記錄復原模式，則不管作業是離線執行或線上執行，某些索引 DDL 作業都是以最低限度的方式記錄。 以最低限度方式記錄的索引作業如下：  
   
@@ -147,7 +154,8 @@ ms.lasthandoff: 09/27/2017
   
     -   [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) REBUILD 或 DBCC DBREINDEX 作業。  
   
-        > 「DBCC DBREINDEX 陳述式」  已「被取代」 ；請勿將它用於新的應用程式。  
+        > [!IMPORTANT]
+        > **DBCC DBREINDEX 陳述式****即將淘汰**；請避免在新的應用程式中使用。  
   
     -   DROP INDEX 新堆積重建 (如果適用)。 [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) 作業期間的索引頁取消配置 **永遠** 都是完整記錄。
   
