@@ -56,7 +56,7 @@ ms.lasthandoff: 09/26/2017
   
 -   執行 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安裝程式，並選取**從 SQL Server 2008、SQL Server 2008 R2、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** 升級的選項。  
   
--   在命令提示字元上執行 **setup.exe**，並指定 **/ACTION=upgrade** 選項。 如需詳細資訊，請參閱 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]從命令提示字元安裝 SQL Server 2016 [中的＜](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)的安裝指令碼＞一節。  
+-   在命令提示字元上執行 **setup.exe**，並指定 **/ACTION=upgrade** 選項。 如需詳細資訊，請參閱 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] [從命令提示字元安裝 SQL Server 2016](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md) 中的＜的安裝指令碼＞一節。  
   
  您無法使用升級作業來執行下列動作：  
   
