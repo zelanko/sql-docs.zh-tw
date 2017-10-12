@@ -59,7 +59,7 @@ dqsinstaller.exe –importkbs c:\DQSBackup.dqsb
  如果 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 中目前已經存在與您要匯入的知識庫同名的知識庫，則匯入的知識庫名稱將會附加底線 (_)，後面緊接著以 1 開頭的整數值。 例如，如果 “CompanyName” 定義域是重複的，則匯入的定義域名稱將會是 “CompanyName_1”。  
   
 ## <a name="see-also"></a>另請參閱  
- [Run DQSInstaller.exe to Complete Data Quality Server Installation](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)   
+ [執行 DQSInstaller.exe 完成 Data Quality Server 安裝](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)   
  [安裝 Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)   
  [將知識庫匯出到 .dqs 檔案](../../data-quality-services/export-a-knowledge-base-to-a-dqs-file.md)   
  [從 .dqs 檔案匯入知識](../../data-quality-services/import-a-knowledge-base-from-a-dqs-file.md)  
