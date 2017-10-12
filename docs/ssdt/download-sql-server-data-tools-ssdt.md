@@ -1,7 +1,7 @@
 ---
 title: "下載 SQL Server Data Tools (SSDT) | Microsoft Docs"
 ms.custom: 
-ms.date: 08/23/2017
+ms.date: 10/09/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 2417dafd4e1410a32f988ea950008da1dbaaaaa9
+ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
+ms.openlocfilehash: 1f3f61e959e495126e59b634a397647799184973
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="download-sql-server-data-tools-ssdt"></a>下載 SQL Server Data Tools (SSDT)
@@ -31,7 +31,7 @@ ms.lasthandoff: 09/27/2017
 
 | 適用於 Visual Studio 2017 的 SSDT (預覽) | 適用於 Visual Studio 2015 的 SSDT | 
 |:--|:--|
-|[![下載](../ssdt/media/download.png) 下載適用於 Visual Studio 2017 (15.3.0 預覽) 的 SSDT](https://go.microsoft.com/fwlink/?linkid=853836) | [![下載](../ssdt/media/download.png) 下載適用於 Visual Studio 2015 (17.2) 的 SSDT](https://go.microsoft.com/fwlink/?linkid=852922)|
+|[![下載](../ssdt/media/download.png) 下載適用於 Visual Studio 2017 (15.3.0 預覽) 的 SSDT](https://go.microsoft.com/fwlink/?linkid=853836) | [![下載](../ssdt/media/download.png) 下載適用於 Visual Studio 2015 (17.3) 的 SSDT](https://go.microsoft.com/fwlink/?linkid=858660)|
 |||
 
 > [!IMPORTANT]
@@ -39,7 +39,7 @@ ms.lasthandoff: 09/27/2017
 > 
 
 
-適用於 Visual Studio 2015 的 SSDT 與適用於 Visual Studio 2017 的 SSDT，皆使用 DacFx 17.2：[下載資料層應用程式架構 (DacFx) 17.2](https://www.microsoft.com/download/details.aspx?id=55713)
+適用於 Visual Studio 2015 的 SSDT 與適用於 Visual Studio 2017 的 SSDT，皆使用 DacFx 17.3：[下載資料層應用程式架構 (DacFx) 17.3](https://www.microsoft.com/download/details.aspx?id=56048)
 
 
 
@@ -59,32 +59,39 @@ ms.lasthandoff: 09/27/2017
 
 
 
+
 ## <a name="ssdt-for-visual-studio-2015"></a>適用於 Visual Studio 2015 的 SSDT
 **版本資訊**  
   
-版本號碼：17.2  
-此版本的組建編號：14.0.61707.300
+版本號碼：17.3
+
+此版本的組建編號：14.0.61709.290
   
 如需變更的完整清單，請參閱[變更記錄](changelog-for-sql-server-data-tools-ssdt.md)。
 
 ### <a name="available-languages---ssdt-for-vs-2015"></a>可用語言 - 適用於 VS 2015 的 SSDT
   
  此版本的 SSDT 提供下列語言版本：  
-[中文 (中華人民共和國)]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x804) | 
-[中文 (台灣)]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x404) | 
-[英文 (美國)]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x409) | 
-[法文]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x40c)  
-[德文]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x407) | 
-[義大利文]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x410) | 
-[日文]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x411) | 
-[韓文]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x412) | 
-[葡萄牙文 (巴西)]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x416) | 
-[俄文]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x419) | 
-[西班牙文]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x40a)  
+[中文 (中華人民共和國)]( https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x804) | 
+[中文 (台灣)]( https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x404) | 
+[英文 (美國)]( https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x409) | 
+[法文]( https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x40c)  
+[德文]( https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x407) | 
+[義大利文]( https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x410) | 
+[日文]( https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x411) | 
+[韓文]( https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x412) | 
+[葡萄牙文 (巴西)]( https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x416) | 
+[俄文]( https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x419) | 
+[西班牙文]( https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x40a)  
 
 ### <a name="iso-images---ssdt-for-vs-2015"></a>ISO 映像 - 適用於 VS 2015 的 SSDT
 
 SSDT 的 ISO 映像提供了另一種方式，可讓您用來安裝 SSDT 或設定系統管理安裝點。 ISO 是一個獨立的檔案，內含 SSDT 需要的所有元件，而且隨時啟動下載管理員皆可下載，非常適合網路頻寬有限或不穩的情況使用。 下載後，ISO 可掛載為磁碟機或燒錄至 DVD。
+
+> [!IMPORTANT]
+> 下列 ISO 連結會安裝適用於 VS 2015 17.2 的 SSDT。
+>
+> 17.3 的 ISO 連結即將推出。
 
 [中文 (中華人民共和國)]( https://go.microsoft.com/fwlink/?linkid=852942&clcid=0x804) |
 [中文 (台灣)]( https://go.microsoft.com/fwlink/?linkid=852942&clcid=0x404) |

@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Management Studio - 變更記錄 (SSMS) | Microsoft Docs"
 ms.custom: 
-ms.date: 08/07/2017
+ms.date: 10/09/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -15,18 +15,113 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 8675cc8601681a6915281c6d9ea1bfd618db7df6
+ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
+ms.openlocfilehash: 9b477c4c755e98d5aaae6ba92f4a67ff4d02d190
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
 
 本文提供目前版本和舊版本之 SSMS 的更新、改善和 Bug 修正詳細資料。 下載[下面的舊版 SSMS](#previous-ssms-releases)。
 
-## <a name="ssms-172download-sql-server-management-studio-ssmsmd"></a>[SSMS 17.2](download-sql-server-management-studio-ssms.md)
 
+## <a name="ssms-173download-sql-server-management-studio-ssmsmd"></a>[SSMS 17.3](download-sql-server-management-studio-ssms.md)
+正式運作 | 組建編號：14.0.17199.0
+
+### <a name="enhancements"></a>功能增強
+
+- 已新增 [匯入一般檔案精靈]，其使用智慧型架構來簡化 CSV 檔案的匯入體驗，需要最少使用者介入或專業領域知識。 如需詳細資料，請參閱[匯入一般檔案至 SQL 精靈](../relational-databases/import-export/import-flat-file-wizard.md)。
+- 已將 [XEvent Profiler] 節點新增至物件總管。 如需詳細資料，請參閱[使用 SSMS XEvent Profiler](../relational-databases/extended-events/use-the-ssms-xe-profiler.md)。
+- 已更新效能儀表板等候歷程記錄報表中的等候篩選和分類。
+- 已新增 "Predict" 函式的語法檢查。
+- 已新增外部程式庫管理查詢的語法檢查。
+- 已新增外部程式庫管理的 SMO 支援。
+- 已將 [啟動 PowerShell] 支援新增至 [已註冊的伺服器] 視窗 (需要新的 SQL PowerShell 模組)。
+- AlwaysOn：已新增對可用性群組的[唯讀路由支援](../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)。
+- 已將傳送追蹤詳細資料的選項新增至 [具 MFA 支援的 Active Directory - 通用] 登入的輸出視窗 (預設為關閉；需要在 [工具] > [選項] > [Azure 服務] > [Azure 雲端] > [ADAL 輸出視窗的追蹤層級] 下的 [使用者設定] 中開啟)。 
+- 查詢存放區： 
+  - 只要 QDS 已記錄任何資料，即使 QDS 處於 [關閉] 狀態，仍可存取 [查詢存放區] UI。
+  - [查詢存放區] UI 現在會在所有現有的報表中公開等候分類。 這可讓客戶解除鎖定熱門等候查詢及更多案例。
+- 已選擇性包括指令碼參數標頭 (預設為關閉；可在 [工具] > [選項] > SQL Server 物件總管 > [指令碼] > [包括指令碼參數標頭] 下的 [使用者設定] 中啟用)- [Connect 項目 3139199](https://connect.microsoft.com/SQLServer/feedback/details/3139199)。
+- 已移除 "RC" 商標。
+
+### <a name="bug-fixes"></a>錯誤修正
+
+**一般 SSMS**
+
+- XEvent： 
+   - 已修正 SSMS 只會開啟 .xel 檔案中部分事件的問題。
+   - 已改善預設資料庫不是 'master' 時的「監看即時資料」體驗 - [Connect 項目 1222582](https://connect.microsoft.com/SQLServer/feedback/details/1222582)。
+- AlwaysOn：已修正「還原記錄備份」可能因錯誤「這個備份組的記錄於 LSN x 結束，要套用到資料庫還太早」而失敗的問題。
+- 作業活動監視器：已修正不一致的圖示 - [Connect 項目 3133100](https://connect.microsoft.com/SQLServer/feedback/details/3133100)。
+- 查詢存放區︰已修正使用者無法針對查詢存放區報表選擇「自訂」日期範圍的問題。 已連結至下列 Connect 項目。
+   - [Connect 項目 3139842](https://connect.microsoft.com/SQLServer/feedback/details/3139842)
+   - [Connect 項目 3139399](http://connect.microsoft.com/SQLServer/feedback/details/3139399)
+- 已修正連接對話方塊未「清除」最近使用之資料庫的問題；當儲存的資訊包含具名資料庫且使用者選取 <default> 時，就會發生此問題。
+- 物件指令碼：
+    - 已修正「產生資料庫指令碼」無法運作並擲回錯誤的問題；當使用者在伺服器上有已暫停的 DW 資料庫，但選取了另一個非 DW 資料庫並嘗試對其進行指令碼處理時，就會發生此問題。
+    - 已修正指令碼預存程序的標頭不符合指令碼設定，而導致可能造成誤導之指令碼的問題 - [Connect 項目 3139784](http://connect.microsoft.com/SQLServer/feedback/details/3139784)。
+    - 已重新啟用目標為 SQL Azure 物件時的「指令碼按鈕」。
+    - 已修正 SSMS 不允許在某些物件 (UDF、檢視、SP、觸發程序) 上撰寫「改變」或「執行」指令碼的問題；當連接到 Azure SQL Database 時，就會發生此問題 - [Connect 項目 3136386](https://connect.microsoft.com/SQLServer/feedback/details/3136386)。
+- 查詢編輯器：
+  - 已改善目標為 Azure SQL Database 時的 IntelliSense。
+  - 已修正查詢因驗證權杖 (通用驗證) 過期而失敗的問題。
+  - 已改善針對 Azure SQL Database 使用時的 IntelliSense (特別是連接到 Azure SQL Database 時，將會使用最新的 T-SQL 文法 (140))。
+  - 已修正開啟連接到伺服器上非 DataWarehouse 資料庫的查詢視窗，會導致該伺服器對 DataWarehouse 資料庫的所有後續查詢視窗擲回未支援類型/選項之各種相關錯誤的問題。
+- 一律開啟：
+   - 已將植入模式資料行新增至 AlwaysOn 儀表板和 AG 屬性頁面。
+   - 已修正主要在 Windows 上時無法建立 Linux AG 的問題 - [Connect 項目 3139856](https://connect.microsoft.com/SQLServer/feedback/details/3139856)。
+- 已修正執行查詢時 SSMS 中的數種「記憶體不足」問題 - [Connect 項目 2845190](https://connect.microsoft.com/SQLServer/feedback/details/2845190)、[Connect 項目 3123864](https://connect.microsoft.com/SQLServer/feedback/details/3123864)。
+- Profiler： 
+   - 已修正目標為 SQL 2005 時 Profiler 無法運作的問題。
+   - 已修正 Profiler 不允許 [信任伺服器憑證] 連接選項的問題。
+- 活動監視器：已修正活動監視器在指向 Linux 上執行的 SQL Server 時無法運作的問題。
+- 已修正 SMO 傳送類別無法傳送外部資料來源或外部檔案格式物件的問題，這些類型的物件現在應該可以正確地包含在傳送中。
+- 已註冊的伺服器：
+   - 已啟用 UA 伺服器的多伺服器查詢 (它將會嘗試對群組中的每部 UA 伺服器使用相同的權杖)。
+- AD 通用驗證：
+   - 已修正不支援 Azure AD 驗證的問題。
+   - 已修正資料表/檢視表設計工具無法運作的問題。
+   - 已修正 [選取前 1000 個資料列] 和 [編輯前 200 個資料列] 無法運作的問題。
+- 資料庫還原：已修正還原作業在將檔案移至其他位置時省略路徑中最後一個資料夾的問題。
+- 壓縮精靈：
+   - 已修正為索引管理 [壓縮精靈] 的問題；已修正 [壓縮資料精靈] 在 SQL 2016 和舊版中遭中斷的問題。
+        https://connect.microsoft.com/SQLServer/feedback/details/3139342
+   - 已將 [壓縮精靈] 新增至 Azure 資料表和索引。
+- 執行程序表： 
+   - 已修正無法辨識 PDW 運算子的問題。
+- 伺服器屬性：
+   - 已修正無法修改伺服器處理器親和性的問題。
+
+
+**Analysis Services (AS)**
+
+- 已修正 [部署精靈] 的一些問題來支援表格式 1400 相容性層級模型和 Power Query 資料來源。
+- 從命令列執行時，[部署精靈] 現在可以部署至 AS Azure。
+- 在 AS Azure 中使用 Windows 驗證時，使用者現在會在物件總管中看到正確的使用者帳戶名稱。
+
+
+### <a name="known-issues-in-this-173-release"></a>此 17.3 版本的已知問題：
+
+**一般 SSMS**
+
+- 使用具 MFA 之 UA 的 Azure AD 驗證不支援下列 SSMS 功能：
+   - Azure AD 驗證不支援 Database Engine Tuning Advisor；有一個已知問題，其向使用者呈現的錯誤訊息不太容易了解：「無法載入檔案或組件 'Microsoft.IdentityModel.Clients.ActiveDirectory'…」 而不是預期的「Database Engine Tuning Advisor 不支援 Microsoft Azure SQL Database (DTAClient)」。
+- 嘗試分析 DTA 中的查詢會導致錯誤：「物件必須實作 IConvertible (mscorlib)」。
+- 物件總管中報表的 [查詢存放區] 清單遺漏「迴歸查詢」。
+   - 因應措施：以滑鼠右鍵按一下 [查詢存放區] 節點，然後選取 [檢視迴歸查詢]。
+
+**Integration Services (IS)**
+
+- [catalog].[event_messagea] 中的 [execution_path] 不是 Scale Out 中正確的套件執行路徑。[execution_path] 會以 “\Package” 開頭，而不是套件可執行檔的物件名稱。 在 SSMS 中檢視套件執行的概觀報表時，[執行概觀] 中 [執行路徑] 的連結無法運作。 因應措施是按一下概觀報表中的 [檢視訊息] 以檢查所有事件訊息。
+
+
+## <a name="previous-ssms-releases"></a>舊版 SSMS
+
+按一下下列各節中的標題連結，以下載舊版 SSMS。
+
+## <a name="downloadssdtmediadownloadpng-ssms-172httpsgomicrosoftcomfwlinklinkid854085"></a>![下載](../ssdt/media/download.png) [SSMS 17.2](https://go.microsoft.com/fwlink/?linkid=854085)
 正式運作 | 組建編號：14.0.17177.0
 
 ### <a name="enhancements"></a>功能增強
@@ -77,11 +172,11 @@ ms.lasthandoff: 09/27/2017
   - 使用 CTRL+F
 
 
-### <a name="analysis-services-as"></a>Analysis Services (AS)
+**Analysis Services (AS)**
 
 - 在 SSMS 的 AS Azure 模型中，沒有電子郵件地址之使用者的新 AAD 角色成員選擇
 
-### <a name="integration-services-is"></a>Integration Services (IS)
+**Integration Services (IS)**
 
 - 已將新的資料行 ([已執行的計數]) 新增至 SSIS 的執行報表
 
@@ -100,7 +195,7 @@ The connection is broken and recovery is not possible. The client driver attempt
   - [已註冊的伺服器] 元件不支援 Azure AD 驗證。
   - 不支援 **Database Engine Tuning Advisor** 進行 Azure AD 驗證。 有一個已知問題，其向使用者呈現的錯誤訊息較無幫助：*無法載入檔案或組件 'Microsoft.IdentityModel.Clients.ActiveDirectory,…* 而不是預期的 *Database Engine Tuning Advisor 不支援 Microsoft Azure SQL Database。(DTAClient)*.
 
-**AS**
+**Analysis Services (AS)**
 
 - SSAS 中的物件總管不會在 AS Azure 連接內容中顯示「Windows 驗證」使用者名稱。
 
@@ -140,7 +235,8 @@ The connection is broken and recovery is not possible. The client driver attempt
 - DTA：修正在評估具有特定界限值的資料分割函式時，DTAEngine.exe 因堆積損毀而終止的問題。
 
 
-Analysis Services (AS)
+**Analysis Services (AS)**
+
 - 修正 DB 的名稱和識別碼不同時，[AS 還原資料庫] 因錯誤而失敗的問題
 - 修正導致 DAX 查詢視窗捨棄切換 [IntelliSense 已啟用] 之功能表選項的問題
 - 修正避免透過 msmdpump IIS http/https 位址連接至 SSAS 的問題
@@ -149,14 +245,9 @@ Analysis Services (AS)
 - 修正導致刪除資料庫對話方塊在載入時引發錯誤的極罕見問題
 - 修正嘗試檢視包含混用 SQL 查詢和 M 資料分割定義的 1400 相容性層級模型中的資料分割時可能發生的問題
 
-Integration Services (IS)
+**Integration Services (IS)**
 - 修正無法顯示 SSISDB 目錄之執行資訊報表的問題
 - 解決 SSMS 中大量專案/套件之效能不良的相關問題
-
-
-## <a name="previous-ssms-releases"></a>舊版 SSMS
-
-按一下下列各節中的標題連結，以下載舊版 SSMS。
 
 ## <a name="downloadssdtmediadownloadpng-ssms-171httpsgomicrosoftcomfwlinklinkid849819"></a>![下載](../ssdt/media/download.png) [SSMS 17.1](https://go.microsoft.com/fwlink/?linkid=849819)
 正式推出 |組建編號： 14.0.17119.0

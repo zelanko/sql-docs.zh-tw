@@ -1,7 +1,7 @@
 ---
 title: "下載 SQL Server Management Studio (SSMS) | Microsoft Docs"
 ms.custom: 
-ms.date: 08/07/2017
+ms.date: 10/09/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -28,10 +28,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 3f12671ace99d5fefc199c7b1c2db31e5b3cfade
-ms.openlocfilehash: a689293fadb1a442f94d88cc06a9e7a4ef06650f
+ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
+ms.openlocfilehash: be3d22491e1cf5e6446f9ac597d613e1d203a28e
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/08/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>下載 SQL Server Management Studio (SSMS)
@@ -44,9 +44,9 @@ SSMS 是整合式環境，用於管理任何 SQL 基礎結構，從 SQL Sever �
 
 SSMS 17.x 是最新一代的 *SQL Server Management Studio*，並提供 SQL Server 2017 的支援。
 
-**[![下載](../ssdt/media/download.png) 下載 SQL Server Management Studio 17.2](https://go.microsoft.com/fwlink/?linkid=854085)**
+**[![下載](../ssdt/media/download.png) 下載 SQL Server Management Studio 17.3](https://go.microsoft.com/fwlink/?linkid=858904)**
 
-**[![下載](../ssdt/media/download.png) 下載 SQL Server Management Studio 17.2 升級套件 (從 17.x 升級至 17.2)](https://go.microsoft.com/fwlink/?linkid=854087)**
+**[![下載](../ssdt/media/download.png) 下載 SQL Server Management Studio 17.3 升級套件 (從 17.x 升級至 17.3)](https://go.microsoft.com/fwlink/?linkid=858906)**
 
 SSMS 17.x 安裝不會升級或取代 SSMS 16.x 版或更早版本。 SSMS 17.x 會與舊版本並存安裝，讓兩個版本同時可供使用。
 如果電腦包含 SSMS 並存安裝，請確認已針對您的特定需求啟動正確的版本。 最新版本會標上 Microsoft SQL Server Management Studio 17，並且具有新的圖示： 
@@ -61,58 +61,30 @@ SSMS 17.x 安裝不會升級或取代 SSMS 16.x 版或更早版本。 SSMS 17.x 
 
 **版本資訊**
 
-版本號碼：17.2 此版本的組建編號：14.0.17177.0
+版本號碼：17.3
+
+此版本的組建編號：14.0.17199.0
 
 ## <a name="new-in-this-release"></a>此版本中的新功能
 
-SSMS 17.2 是 SQL Server Management Studio 的最新版本。 17.x 世代的 SSMS 幾乎支援 SQL Server 2008 到 SQL Server 2017 的所有功能領域。 17.x 版也支援 SQL Analysis Service PaaS。
+SSMS 17.3 是 SQL Server Management Studio 的最新版本。 17.x 世代的 SSMS 幾乎支援 SQL Server 2008 到 SQL Server 2017 的所有功能領域。 17.x 版也支援 SQL Analysis Service PaaS。
 
-17.2 版包括：
+17.3 版包括：
 
-- Multi-Factor Authentication (MFA)
-  - 適用於具 Multi-Factor Authentication 的通用驗證 (具 MFA 的 UA) 的多使用者 Azure AD 驗證
-  - 已針對具 MFA 的通用驗證新增使用者認證輸入欄位，以支援多使用者驗證。
-- 連接對話方塊現在支援下列 5 種驗證方法：
-  - Windows 驗證
-  - SQL Server 驗證
-  - Active Directory - 含 MFA 的通用支援
-  - Active Directory - 密碼
-  - Active Directory - 整合式
-
-- DacFx 的資料庫匯入/匯出精靈現在可以使用具 MFA 的通用驗證。
-- 如需 API 支援，請參閱 [IUniversalAuthProvider 介面](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.iuniversalauthprovider.aspx)。
-- 具 MFA 的 Azure AD 通用驗證所使用的 ADAL Managed 程式庫已升級至 3.13.9 版。
-- 新的 CLI 介面支援 SQL Database 和 SQL 資料倉儲的 Azure AD 管理員設定。
-
- 如需 Active Directory 驗證方法的詳細資訊，請參閱 [SQL Database 和 SQL 資料倉儲的通用驗證 (MFA 的 SSMS 支援)](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication) 和[設定適用於 SQL Server Management Studio 的 Azure SQL Database Multi-Factor Authentication](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication-configure)。
-
-- 輸出視窗包含在展開 [物件總管] 節點期間所執行查詢的項目
-- Azure SQL Database 的已啟用檢視表設計工具
-- SSMS 中從物件總管編寫物件指令碼的預設指令碼選項已變更：
-  - 以前，新安裝上的預設值是讓產生的指令碼以最新版的 SQL Server (目前為 SQL Server 2017) 為目標。
-  - 在 SSMS 17.2 中，已新增一個新選項：[使指令碼設定與來源相符]。 設定為 True 時，產生的指令碼是以與從中編寫物件指令碼之伺服器相同的版本、引擎類型和引擎版本為目標。
-  - [使指令碼設定與來源相符] 值預設為 *True*，讓新的 SSMS 安裝自動預設為一律將物件指令碼編寫成與原始伺服器相同的目標。
-  - [使指令碼設定與來源相符] 值設定為 *False* 時，會啟用一般指令碼目標選項，並且運作方式與以前一樣。
-  - 此外，所有指令碼選項都已移至其專屬區段：[版本選項]。 它們不再位於 [一般指令碼選項] 下方。
-
-- [從 URL 還原] 中已新增國內雲端支援
-- QueryStoreUI 報表現在支援來自 sys.query_store_runtime_stats 的其他計量 (RowCount、DOP、CLR 時間等)。
-- Azure SQL Database 現在支援 IntelliSense
-    - https://connect.microsoft.com/SQLServer/feedback/details/3100677/ssms-2016-would-be-nice-to-have-intellisense-on-azure-sql-databases
-- 安全性：連接對話方塊將會預設為不信任伺服器憑證，並要求加密 Azure SQL Database 連接
-- Linux 上 SQL Server 支援的一般改善：
- - 已回復 Database Mail 節點
- - 解決一些與路徑相關的問題
- - 活動監視器穩定性改善
- - [連接屬性] 對話方塊會顯示正確平台
-- 效能儀表板伺服器報表現在可作為預設報表：
-  - 可以連接至 SQL Server 2008 和較新版本。
-  - 遺漏索引子報表使用計分來協助識別最有用的索引。
-  - 歷程記錄等候統計資料子報表現在會彙總為類別的等候。 預設已篩選出閒置和睡眠等候。
-  - 新的閂鎖歷史記錄子報表。
-- 執行程序表節點搜尋允許在計畫屬性中搜尋。 輕鬆地尋找任何運算子屬性，例如資料表名稱。 在檢視計畫時使用此選項：
-  - 以滑鼠右鍵按一下計畫，並按一下內容功能表中的 [尋找節點] 選項
-  - 使用 CTRL+F
+- 已新增 [匯入一般檔案精靈]，其使用智慧型架構來簡化 CSV 檔案的匯入體驗，需要最少使用者介入或專業領域知識。 如需詳細資料，請參閱[匯入一般檔案至 SQL 精靈](../relational-databases/import-export/import-flat-file-wizard.md)。
+- 已將 [XEvent Profiler] 節點新增至物件總管。 如需詳細資料，請參閱[使用 SSMS XEvent Profiler](../relational-databases/extended-events/use-the-ssms-xe-profiler.md)。
+- 已更新效能儀表板等候歷程記錄報表中的等候篩選和分類。
+- 已新增 "Predict" 函式的語法檢查。
+- 已新增外部程式庫管理查詢的語法檢查。
+- 已新增外部程式庫管理的 SMO 支援。
+- 已將 [啟動 PowerShell] 支援新增至 [已註冊的伺服器] 視窗 (需要新的 SQL PowerShell 模組)。
+- AlwaysOn：已新增對可用性群組的[唯讀路由支援](../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)。
+- 已將傳送追蹤詳細資料的選項新增至 [具 MFA 支援的 Active Directory - 通用] 登入的 [輸出] 視窗 (預設為關閉；需要在 [工具] > [選項] > [Azure 服務] > [Azure 雲端] > [ADAL 輸出視窗的追蹤層級] 下的 [使用者設定] 中開啟)。 
+- 查詢存放區： 
+  - 只要 QDS 已記錄任何資料，即使 QDS 處於 [關閉] 狀態，仍可存取 [查詢存放區] UI。
+  - [查詢存放區] UI 現在會在所有現有的報表中公開等候分類。 這可讓客戶解除鎖定熱門等候查詢及更多案例。
+- 已選擇性包括指令碼參數標頭 (預設為關閉；可在 [工具] > [選項] > SQL Server 物件總管 > [指令碼] > [包括指令碼參數標頭] 下的 [使用者設定] 中啟用)- [Connect 項目 3139199](https://connect.microsoft.com/SQLServer/feedback/details/3139199)。
+- 已移除 "RC" 商標。
 
 如需完整變更清單，請參閱 [SQL Server Management Studio - 變更記錄 (SSMS)](../ssms/sql-server-management-studio-changelog-ssms.md)。
 
@@ -158,33 +130,29 @@ SSMS 17.2 是 SQL Server Management Studio 的最新版本。 17.x 世代的 SSM
 
 此版 SSMS 提供下列語言版本：
 
-SQL Server Management Studio 17.2：<br>
-[中文 (中華人民共和國)](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x804) | [中文 (台灣)](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x40a)
+SQL Server Management Studio 17.3：<br>
+[中文 (中華人民共和國)](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x804) | [中文 (台灣)](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x40a)
 
-SQL Server Management Studio 17.2 升級套件 (從 17.x 升級至 17.2)：<br>
-[中文 (中華人民共和國)](https://go.microsoft.com/fwlink/?linkid=854087&clcid=0x804) | [中文 (台灣)](https://go.microsoft.com/fwlink/?linkid=854087&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=854087&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=854087&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=854087&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=854087&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=854087&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=854087&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=854087&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=854087&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=854087&clcid=0x40a)
+SQL Server Management Studio 17.3 升級套件 (從 17.x 升級至 17.3)：<br>
+[中文 (中華人民共和國)](https://go.microsoft.com/fwlink/?linkid=858906&clcid=0x804) | [中文 (台灣)](https://go.microsoft.com/fwlink/?linkid=858906&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=858906&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=858906&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=858906&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=858906&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=858906&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=858906&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=858906&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=858906&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=858906&clcid=0x40a)
 
 ## <a name="release-notes"></a>版本資訊
 
-以下是這個 17.2 版本的問題和限制：
+以下是這個 17.3 版本的問題和限制：
 
-- 在開啟大約一小時 (含) 以上之後嘗試執行查詢時，使用「具 MFA 支援的 Active Directory - 通用」驗證的查詢視窗可能會發生與下列類似的錯誤：
+**一般 SSMS**
 
-   `Msg 0, Level 11, State 0, Line 0
-The connection is broken and recovery is not possible. The client driver attempted to recover the connection one or more times and all attempts failed. Increase the value of *ConnectRetryCount* to increase the number of recovery attempts.`
+- 使用具 MFA 之 UA 的 Azure AD 驗證不支援下列 SSMS 功能：
+   - Azure AD 驗證不支援 Database Engine Tuning Advisor；有一個已知問題，其向使用者呈現的錯誤訊息不太容易了解：「無法載入檔案或組件 'Microsoft.IdentityModel.Clients.ActiveDirectory'…」 而不是預期的「Database Engine Tuning Advisor 不支援 Microsoft Azure SQL Database (DTAClient)」。
+- 嘗試分析 DTA 中的查詢會導致錯誤：「物件必須實作 IConvertible (mscorlib)」。
+- 物件總管中報表的 [查詢存放區] 清單遺漏「迴歸查詢」。
+   - 因應措施：以滑鼠右鍵按一下 [查詢存放區] 節點，然後選取 [檢視迴歸查詢]。
 
-   重新執行查詢應該可更正錯誤並成功。
+**Integration Services (IS)**
 
-- 使用具 MFA 的通用驗證的 Azure AD 不支援下列 SSMS 功能：
-  - [新增資料表/檢視] 設計工具會顯示舊式登入提示，並不適用於 Azure AD 驗證。
-  - [編輯前 200 個資料列] 功能不支援 Azure AD 驗證。
-  - [已註冊的伺服器] 元件不支援 Azure AD 驗證。
-  - 不支援 **Database Engine Tuning Advisor** 進行 Azure AD 驗證。 有一個已知問題，其向使用者呈現的錯誤訊息較無幫助：*無法載入檔案或組件 'Microsoft.IdentityModel.Clients.ActiveDirectory,…* 而不是預期的 *Database Engine Tuning Advisor 不支援 Microsoft Azure SQL Database。(DTAClient)*.
+- [catalog].[event_messagea] 中的 [execution_path] 不是 Scale Out 中正確的套件執行路徑。[execution_path] 會以 “\Package” 開頭，而不是套件可執行檔的物件名稱。 在 SSMS 中檢視套件執行的概觀報表時，[執行概觀] 中 [執行路徑] 的連結無法運作。 因應措施是按一下概觀報表中的 [檢視訊息] 以檢查所有事件訊息。
 
-**AS**
 
-- SSAS 中的物件總管不會在 AS Azure 連接內容中顯示「Windows 驗證」使用者名稱。
-如需詳細資訊，請參閱 [SSMS 變更記錄](sql-server-management-studio-changelog-ssms.md)。
 
 ## <a name="previous-releases"></a>舊版
 

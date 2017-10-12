@@ -15,10 +15,10 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: cde40ec53dafbd750c21e1f4148f29db26e0bbda
+ms.sourcegitcommit: a85dbb34e357d4d00a411e35dce877991337d876
+ms.openlocfilehash: a432f7d48ff537832d76a998bc34c0d012b76b32
 ms.contentlocale: zh-tw
-ms.lasthandoff: 10/02/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="whats-new-in-sql-server-2017"></a>SQL Server 2017 的新功能
@@ -111,7 +111,7 @@ SQL Server 開發人員現在能夠存取廣大的 Python ML 及 AI 程式庫，
 - **microsoftml** - 這個機器學習演算法及轉換的最新型套件具有 Python 繫結，包括深度類神經網路、迅速的決策樹及決策森林，以及用於線性及羅吉斯迴歸的最佳化演算法。 您也可以取得以 ResNet 模型為基礎的預先訓練模型，用於影像擷取或情感分析。
 - **透過 T-SQL 進行 Python 作業化** - 使用預存程序 `sp_execute_external_script` 輕鬆部署 Python 程式碼。 將資料從 SQL 串流到 Python 處理序及使用 MPI 通道平行處理，以獲得優異效能。
 - **SQL Server 計算內容中的 Python** - 資料科學家及開發人員可以在遠端從他們的開發環境執行 Python 程式碼，不必四處移動資料即可探索資料及開發模型。
-- **原生計分** -  Transact-SQL 中的 PREDICT 函式可用來在任何 SQL Server 2017 執行個體中執行計分，即使未安裝 R 亦然。 您需要做的動作是使用其中一個支援的 RevoScaleR 與 revoscalepy 演算法將模型定型，並將模型儲存為新的壓縮二進位黨格式。
+- **原生計分** -  Transact-SQL 中的 PREDICT 函式可用來在任何 SQL Server 2017 執行個體中執行計分，即使未安裝 R 亦然。 您需要採取的動作是使用其中一個支援的 RevoScaleR 與 revoscalepy 演算法將模型定型，並將模型儲存為新的壓縮二進位檔格式。
 - **套件管理** - T-SQL 現在支援 CREATE EXTERNAL LIBRARY 陳述式，可讓 DBA 更能全面管理 R 套件。 使用角色來控制權限或共用套件存取權、將 R 套件儲存在資料庫中並與使用者共用這些套件。
 - **效能改進** - 預存程序 `sp_execute_external_script` 已最佳化，可支援資料行存放區的批次模式執行。
 

@@ -1,5 +1,5 @@
 ---
-title: "SSIS 設計師 |Microsoft 文件"
+title: "SSIS 設計師 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/31/2016
 ms.prod: sql-server-2016
@@ -32,7 +32,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
 ms.openlocfilehash: 2a0e055789734939dacb7074ec6de5765eecbd88
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/11/2017
 
 ---
 # <a name="ssis-designer"></a>SSIS 設計師
@@ -52,7 +52,7 @@ ms.lasthandoff: 09/27/2017
   
  下圖顯示 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師與 [工具箱] 視窗。  
   
- ![螢幕擷取畫面的 SSIS 設計師與工具箱](../integration-services/media/denali-designerandtoolbox.gif "螢幕擷取畫面的 SSIS 設計師與工具箱")  
+ ![設計師與工具箱的螢幕擷取畫面](../integration-services/media/denali-designerandtoolbox.gif "設計師與工具箱的螢幕擷取畫面")  
   
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包含用來在封裝中加入功能的其他對話方塊和視窗， [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 則提供用於設定開發環境及使用封裝的視窗和對話方塊。 如需詳細資訊，請參閱 [Integration Services User Interface](../integration-services/integration-services-user-interface.md)(Integration Services 使用者介面)。  
   
@@ -158,7 +158,7 @@ ms.lasthandoff: 09/27/2017
  **Delete**  
  選取事件處理常式，然後按一下 [刪除] 即可從封裝中移除它。  
   
- **按一下這裡可建立\<事件處理常式名稱\>可執行檔\<可執行檔名稱\>**  
+ **按一下此處即可為可執行檔\<可執行檔名稱\>建立\<事件處理常式名稱\>**  
  按一下即可建立事件處理常式。  
   
  從 [工具箱] 中，將代表 [!INCLUDE[ssIS](../includes/ssis-md.md)] 工作和容器的圖形物件拖曳至 [事件處理常式] 索引標籤的設計介面來建立控制流程，然後使用優先順序條件約束以定義它們執行的順序來連接物件。  

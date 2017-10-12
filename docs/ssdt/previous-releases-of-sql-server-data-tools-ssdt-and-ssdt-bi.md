@@ -1,7 +1,7 @@
 ---
 title: "舊版的 SQL Server Data Tools (SSDT 和 SSDT-BI) | Microsoft Docs"
 ms.custom: 
-ms.date: 07/28/2017
+ms.date: 09/28/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: cb4fd4eebca0f88f1b630598be30bca780fad3b9
+ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
+ms.openlocfilehash: dcc05f9e7bb009bb164f3577b7a82ba7b1c9b215
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi"></a>舊版的 SQL Server Data Tools (SSDT 和 SSDT-BI)
@@ -34,10 +34,11 @@ SSDT 可以回溯相容，亦即您可以隨時使用[最新的 SSDT](download-s
 
 ## <a name="recent-downloads"></a>最近的下載
 
-我們提供最近三次下載的相關資訊，以便您在不幸遇到 [最新版本](download-sql-server-data-tools-ssdt.md)相關問題時可參考 (雖然這非常不可能發生)。 
+我們提供最近幾次下載的相關資訊，以便您在不幸遇到[最新版本](download-sql-server-data-tools-ssdt.md)相關問題時可參考 (雖然這非常不可能發生)。 
 
 |版本| Visual Studio 2015|Visual Studio 2013|
 |:---|:---|:---|
+|17.2|[適用於 VS2015 17.2 的 SSDT](https://go.microsoft.com/fwlink/?linkid=852922)| \* 不適用|
 |17.1|[SSDT for VS2015 17.1](https://go.microsoft.com/fwlink/?linkid=849393)| \* 不適用|
 |17.0|[SSDT for VS2015 17.0](https://go.microsoft.com/fwlink/?linkid=846626)| \* 不適用|
 |16.5|[SSDT for VS2015 16.5](https://go.microsoft.com/fwlink/?LinkID=832313)|[SSDT for VS2013 16.5](https://go.microsoft.com/fwlink/?LinkID=832308)|

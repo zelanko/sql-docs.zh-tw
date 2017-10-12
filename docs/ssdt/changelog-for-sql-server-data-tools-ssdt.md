@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Data Tools (SSDT) 的變更記錄 | Microsoft Docs"
 ms.custom: 
-ms.date: 08/23/2017
+ms.date: 10/09/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -15,16 +15,107 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 0de164b7e0a0330902bc8d967d32d333c5ac15fe
+ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
+ms.openlocfilehash: e3901423d7f9e2a8f8a6c3753c284c1727644829
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) 的變更記錄
 這是 [SQL Server Data Tools (SSDT)](download-sql-server-data-tools-ssdt.md) 的變更記錄。  
   
 如需新功能和已變更功能的詳細文章，請參閱 [SSDT 小組部落格](https://blogs.msdn.microsoft.com/ssdt/)。
+
+## <a name="ssdt-173-for-visual-studio-2015"></a>適用於 Visual Studio 2015 的 SSDT 17.3
+組建編號︰14.0.61709.290
+
+### <a name="whats-new"></a>新功能
+
+**Analysis Services (AS)**
+
+- 已啟用 1400 模型中的 Cosmos DB 和 HDI Spark。
+- 表格式資料來源屬性。
+- 現在支援使用 [空白查詢] 選項，在查詢編輯器中為 1400 相容性層級的模型建立新的查詢。
+- 適用於 1400 模式模型的查詢編輯器現在允許儲存查詢，而不自動處理新的資料表。
+
+**Reporting Services (RS)**
+
+- 專案現在會提示開啟至已升級的格式來支援使用 MSBuild 進行建置和部署。
+
+### <a name="known-issues"></a>已知問題
+
+**Analysis Services (AS)**
+
+- 直接查詢模式中的 1400 相容性層級模型若具有檢視方塊，則會在查詢或探索中繼資料時失敗。
+
+**Reporting Services (RS)**
+
+- 新的報表專案格式不會保留原始檔控制繫結，而且會引發類似下列訊息的錯誤：
+
+   「專案檔 C:\path 並未繫結至原始檔控制，但方案中卻含有該專案檔的原始檔控制繫結資訊」。
+ 
+   若要解決此問題，請在每次開啟方案時，按一下 [使用方案繫結]。
+
+- 將您的專案升級至新的 MSBuild 格式之後，儲存可能會失敗並顯示類似如下的訊息：
+
+   「參數 "unevaluatedValue" 不可為 null」。
+
+   若要解決此問題，請更新您的 [專案設定] 並填入 [平台] 屬性。
+
+### <a name="bug-fixes"></a>錯誤修正
+
+**Analysis Services (AS)**
+
+- 大幅提升載入表格式模型圖表檢視的效能。
+- 已修正一些問題來改善 1400 相容性層級模型中的 PowerQuery 整合與體驗。
+   - 已修正導致沒有權限可編輯檔案來源的問題。
+   - 已修正無法變更檔案來源之來源的問題。
+   - 已修正針對檔案來源顯示的 UI 不正確的問題。
+- 已修正 "Join on Date" 關聯性設成停用時導致 "JoinOnDate" 屬性被移除的問題。
+- 查詢產生器中的新 [查詢] 選項現在允許建立新的空白查詢。
+- 已修正導致對現有資料來源查詢所做的編輯無法更新 1400 相容性層級中資料表之模型定義的問題。
+- 已修正自訂內容運算式可能會造成例外狀況的問題。
+- 在 1400 表格式模型中匯入具有重複名稱的新資料表時，現在會通知使用者發生名稱衝突，並調整為唯一的名稱。
+- 目前的使用者模擬模式由於不是支援的案例，因此已從匯入模式的模型中移除。
+- PowerQuery 整合現在支援其他資料來源選項 (OData.Feed、Odbc.DataSource、Access.Database、SapBusinessWarehouse.Cubes)。
+- 資料來源的 PowerQuery 選項字串現在會根據用戶端地區設定正確顯示當地語系化的文字。
+- 圖表檢視現在會顯示 1400 相容性層級模型中從 M 查詢編輯器新建立的資料行。
+- Power Query 編輯器現在提供不匯入資料的選項。
+- 已修正安裝用來在 VS2017 多維度模型中，從 Oracle 匯入資料表的資料夾時所發生的問題。
+- 已修正在罕見的情況下，當滑鼠游標離開表格式公式列時可能導致當機的問題。
+- 已修正 [編輯資料表屬性] 對話方塊的問題；當變更資料表名稱未正確變更來源資料表名稱時，就會發生未預期的錯誤。
+- 已修正嘗試在多維度專案中使用 [角色] 設計工具/[資料格資料] 索引標籤設計工具叫用 [測試 Cube 安全性] 時，VS2017 中可能會發生當機的問題。
+- SSDT：無法編輯表格式資料來源的屬性。
+- 已修正在使用方案檔的某些情況下，可能導致 MSBuild 和 DevEnv 組建無法正確運作的問題。
+- 已大幅提升表格式模型包含較大中繼資料時的認可模型變更 (量值、計算結果欄的 DAX 編輯) 效能
+- 已修正在 1400 相容性層級模型中使用 PowerQuery 匯入資料的一些問題
+   - 按一下 [匯入] 之後需要很長的時間匯入，而且 UI 未顯示任何狀態
+   - 當嘗試選取要匯入之資料表的速度很慢時，導覽檢視上的資料表清單很大
+   - 在查詢編輯器檢視中使用 35 個查詢的清單時，查詢編輯器的效能低落 (PBI Desktop 也會發生此問題)
+   - 匯入多個資料表已停用工具列，而且在特定情況下可能永遠不會完成 
+   - 模型設計師似乎已停用，而且在使用 PQ 匯入資料表之後未顯示任何資料
+   - 在 PQ UI 中取消選取 [建立新的資料表] 之後仍會建立新的資料表
+   - 資料夾資料來源未出現輸入認證的提示 
+   - 嘗試更新結構化資料來源中的認證時，可能會發生物件參考未設定的例外狀況
+   - 使用 M 運算式開啟資料分割管理員的速度很慢
+   - 在 PQ 編輯器中選取資料表上的屬性未顯示屬性
+- 已改善 Power Query UI 整合來攔截最上層例外狀況並在 [輸出] 視窗中顯示
+- 已修正在結構資料來源上變更來源不會在內容運算式中保留變更的問題
+- 已修正 M 運算式錯誤可能會導致更新模型失敗但未顯示錯誤訊息的問題
+- 已修正關閉 SSDT 並出現錯誤「此組建必須在方案可被關閉前停止」的問題
+- 已修正在 1400 相容性層級模型中設定錯誤的模擬模式時，VS 可能看似已停止回應的問題 
+- 詳細資料列屬性現在只會在非空白時 (預設值已變更)，才能序列化為 JSON
+- 表格式直接查詢模式清單現在提供 Oracle OLEDB 驅動程式
+- 在 1400 相容性表格式模型中新增 M 運算式現在會在表格式模型檔案總管 (TME) 中顯示/重新整理
+- 已修正嘗試在 1400 之前版本的相容性層級模型中使用「其他」資料來源匯入時，導致 MSOLAP 提供者未在 VS2017 中顯示的問題
+- 已修正透過 TME 新增轉譯可能造成的問題 
+- 已修正「物件層級安全性」介面造成索引標籤在某些情況下未正確顯示/隱藏的問題
+- 已修正嘗試使用 [連接到資料庫] 對話方塊開啟先前載入的多維度模型時可能發生失敗的問題
+- 已修正將自訂組件新增至多維度模型時造成錯誤的問題
+
+**Reporting Services (RS)**
+
+- 已修正在 VS 2017 中編譯和建置 RDLC 的問題
 
 ## <a name="ssdt-for-visual-studio-2017-1530-preview"></a>適用於 Visual Studio 2017 (15.3.0 預覽) 的 SSDT
 組建編號︰14.0.16121.0
@@ -143,8 +234,8 @@ ms.lasthandoff: 09/27/2017
     - 在 PowerQuery 中透過範例新增資料行
     - 1400 模型 (M 引擎所使用的模型層級屬性) 中的資料存取選項
         - 啟用快速合併 (預設值為 false - 設定為 true 時，交互式 Web 應用程式引擎會在合併資料時忽略資料來源的隱私權等級)
-        - 啟用舊版重新導向 (預設值為 false – 設為 true 時，交互式 Web 應用程式引擎會遵循可能不安全的 HTTP 重新導向。  例如，從 HTTPS 至 HTTP URI 的重新導向)  
-        - 以 Null 傳回錯誤值 (預設值為 false – 設為 true 時，資料格層級的錯誤會以 null 傳回。 設為 false 時，將引發的例外狀況是資料格包含錯誤)  
+        - 啟用舊版重新導向 (預設值為 false - 設為 true 時，交互式 Web 應用程式引擎會遵循可能不安全的 HTTP 重新導向。  例如，從 HTTPS 至 HTTP URI 的重新導向)  
+        - 以 Null 傳回錯誤值 (預設值為 false - 設為 true 時，資料格層級的錯誤會以 null 傳回。 設為 false 時，所引發的例外狀況是資料格包含錯誤)  
     - 使用 PowerQuery 的額外資料來源 (檔案資料來源)
         - Excel 
         - 文字/CSV 
@@ -169,7 +260,7 @@ ms.lasthandoff: 09/27/2017
 - 表格式：DAX 剖析和資料編輯列的各種功能增強及效能修正。
 - 表格式：如果未開啟任何 SSAS Tabular 專案，Tabular Model Explorer 就不會再顯示。
 - 多維度：修正處理對話方塊在高 DPI 機器上無法使用的問題。
-- 表格式：修正 SSDT 會在 SSMS 已開啟的情況下開啟任何 BI 專案時發生錯誤的問題。[Connect 項目](http://connect.microsoft.com/SQLServer/feedback/details/3100900/ssdt-faults-when-opening-any-bi-project-when-ssms-is-already-open)
+- 表格式：已修正 SSDT 會在 SSMS 已開啟的情況下開啟任何 BI 專案時發生錯誤的問題。 [Connect 項目](http://connect.microsoft.com/SQLServer/feedback/details/3100900/ssdt-faults-when-opening-any-bi-project-when-ssms-is-already-open)
 - 表格式：修正階層未正確儲存到 1103 模型中 BIM 檔案的問題。[Connect 項目](http://connect.microsoft.com/SQLServer/feedback/details/3105222/vs-2015-ssdt)
 - 表格式：修正即使不支援，但在 32 位元機器上仍允許整合式工作區模式的問題。
 - 表格式：修正在半選取模式 (例如鍵入 DAX 運算式但按下量值) 下按一下任何項目都會造成損毀的問題。
@@ -367,7 +458,7 @@ SSDT 表格式現在包含內部的 SSAS 執行個體，若啟用整合式工作
 **新功能**
 
 - **發行版本控制與編號︰**發行版本現在以數值標記而不是依月份標記。 這與新的 SSMS 原則一致，並簡化在一個月中有多個版本或 hotfix 時的情況。 此版本是 16.3，表示在 RTM 版本之後的第三個更新。 任何 hotfix 將是 16.3.1，依此類推，下一個更新 (下個月的計劃) 將是 16.4。
-- **Analysis Services - 表格式模型總管：**表格式模型總管可讓您在模型中方便瀏覽各種中繼資料物件，例如資料來源、資料表、量值和關聯性。 它會實作為獨立的工具視窗，您可以在 Visual Studio 中開啟 [檢視] 功能表，指向 [其他視窗]，然後按一下 [表格式模型總管] 來顯示。 表格式模型總管預設會出現在方案總管區域的另一個索引標籤上。表格式模型總管會將中繼資料物件組織在與表格式 1200 模型結構描述十分類似的樹狀結構中，而且有更多新功能。
+- **Analysis Services - 表格式模型總管：**表格式模型總管可讓您在模型中方便瀏覽各種中繼資料物件，例如資料來源、資料表、量值和關聯性。 它會實作為獨立的工具視窗，您可以在 Visual Studio 中開啟 檢視 功能表，指向 其他視窗，然後按一下表格式模型總管 來顯示。 表格式模型總管預設會出現在方案總管區域的另一個索引標籤上。表格式模型總管會將中繼資料物件組織在與表格式 1200 模型結構描述十分類似的樹狀結構中，而且有更多新功能。
 - **資料庫工具 - Always Encrypted**︰此版本提供新的[Always Encrypted 金鑰管理](../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)對話方塊，可輕鬆地將資料行主要金鑰或資料行加密金鑰加入至資料庫專案或 SQL Server 物件總管中的即時資料庫。 此版本支援 Windows 憑證存放區中的憑證。 未來的版本將會支援 Azure 金鑰保存庫和 CNG 提供者。
     - 在建立資料行主要金鑰或資料行加密金鑰時，您可能會發現按一下 [更新資料庫] 之後，SQL Server 物件總管無法立即反映所做的變更。 若要解決這個問題，請重新整理 SQL Server 物件總管中的資料庫節點。
     - 如果您嘗試加密的資料表資料行含有來自 SQL Server 物件總管的資料，您可能會失敗。 目前只有在 SSDT 資料庫專案和 SSMS 中才支援這項功能。 未來版本中將會支援 SQL Server 物件總管。
