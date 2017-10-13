@@ -93,7 +93,9 @@ ms.lasthandoff: 08/28/2017
 
 此範例中所要使用下列連接字串中，連接到 Microsoft SQL Server。
 
+    ```
     Driver={ODBC Driver 13 for SQL Server};server=localhost;database=WideWorldImporters;trusted_connection=Yes;
+    ```
 
 輸入中的連接字串**ConnectionString**欄位**選擇資料來源**或**選擇目的地**頁面。 您輸入的連接字串之後，精靈會剖析字串，並會顯示個別的屬性及其值清單中。
 
@@ -138,20 +140,24 @@ ms.lasthandoff: 08/28/2017
 
 10. 使用 [記事本] 或其他文字編輯器中開啟已儲存的檔案。 以下是我們的 SQL Server 範例的內容。
 
-        [ODBC]  
-        DRIVER=ODBC Driver 13 for SQL Server  
-        TrustServerCertificate=No  
-        DATABASE=WideWorldImporters    
-        WSID=<local computer name>  
-        APP=Microsoft® Windows® Operating System  
-        Trusted_Connection=Yes  
-        SERVER=localhost   
+    ```   
+    [ODBC]  
+    DRIVER=ODBC Driver 13 for SQL Server  
+    TrustServerCertificate=No  
+    DATABASE=WideWorldImporters    
+    WSID=<local computer name>  
+    APP=Microsoft® Windows® Operating System  
+    Trusted_Connection=Yes  
+    SERVER=localhost   
+    ```
         
 11. 複製並貼到連接字串名稱 / 值組會以分號分隔的必要的值。
 
     您從範例檔案 DSN 組合需要的值之後，您會有下列連接字串。
     
+        ```
         DRIVER=ODBC Driver 13 for SQL Server;SERVER=localhost;DATABASE=WideWorldImporters;Trusted_Connection=Yes
+        ```
 
     您通常不需要建立的 ODBC 資料來源管理員來建立搭配連接字串的 DSN 中的所有設定。  
     -   您一定要指定 ODBC 驅動程式。

@@ -72,14 +72,18 @@ PostgreSQL 資料庫的名稱。
 ### <a name="connection-string-format"></a>連接字串格式
 以下是一般連接字串的格式。 
 
+    ```
     Driver={PostgreSQL ODBC Driver(UNICODE)};Server=<server>;Port=<port>;Database=<database>;UID=<user id>;PWD=<password>
+    ```
 
 ### <a name="enter-the-connection-string"></a>輸入連接字串
 輸入中的連接字串**ConnectionString**欄位，或輸入中的 DSN 名稱**Dsn**欄位上**選擇資料來源**或**選擇目的地**頁面。 您輸入的連接字串之後，精靈會剖析字串，並會顯示個別的屬性及其值清單中。
 
 下列範例會使用此連接字串。
 
+    ```
     Driver={PostgreSQL ODBC Driver(UNICODE)};Server=127.0.0.1;Port=5432;Database=postgres;UID=postgres;PWD=********
+    ```
 
 以下是您輸入的連接字串之後，請參閱螢幕。
 

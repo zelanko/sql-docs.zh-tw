@@ -65,19 +65,19 @@ WHERE CommissionPct > 0.015
 有三種您可以查詢的 Excel 物件。
 -   **工作表。** 若要查詢工作表，請在工作表名稱結尾加上 $ 字元，並以分隔符號括住字串，例如 **[Sheet1$]**。
 
-    ```
+    ```sql
     SELECT * FROM [Sheet1$]
     ```
 
 -   **命名範圍。** 若要查詢命名範圍，請只使用範圍名稱，例如 **MyDataRange**。
     
-    ```
+    ```sql
     SELECT * FROM MyDataRange
     ```
 
 -   **未命名範圍。** 若要指定尚未命名的儲存格範圍，請在工作表名稱結尾加上 $ 字元、指定範圍，再以分隔符號括住字串，例如 **[Sheet1$A1:B4]**。
 
-    ```
+    ```sql
     SELECT * FROM [Sheet1$A1:B4]
     ```
 

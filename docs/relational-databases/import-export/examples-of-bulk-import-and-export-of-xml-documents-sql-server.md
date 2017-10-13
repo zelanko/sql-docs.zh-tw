@@ -39,7 +39,7 @@ ms.lasthandoff: 10/04/2017
  若要從資料檔將資料大量匯入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表或非資料分割檢視，您可以使用下列方式：  
   
 -   **bcp** 公用程式  
- 您也可以使用 **bcp** 公用程式，從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中能執行 SELECT 陳述式的任意位置 (包括資料分割檢視) 匯出資料。  
+    您也可以使用 **bcp** 公用程式，從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中能執行 SELECT 陳述式的任意位置 (包括資料分割檢視) 匯出資料。  
   
 -   BULK INSERT  
   
