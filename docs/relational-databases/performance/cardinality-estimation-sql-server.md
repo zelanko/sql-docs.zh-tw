@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 5ea0741bdfd8ff724390de6bb8c298af2e138648
+ms.sourcegitcommit: b6d6655b1640eff66182c78ea919849194d9714c
+ms.openlocfilehash: 2d334f4397fdbf4097adbbc75d284202fd0fd8df
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/05/2017
 
 ---
 # <a name="cardinality-estimation-sql-server"></a>基數估計 (SQL Server)
@@ -59,7 +59,7 @@ SELECT d.name, d.compatibility_level
 go  
 ```  
   
- 若是相容性層級設定為 120 或以上的 SQL Server 資料庫，啟用[追蹤旗標](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481 會強制系統使用 CE 版本 70。  
+ 若是相容性層級設定為 120 或以上的 SQL Server 資料庫，啟用[追蹤旗標 9481](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 會強制系統使用 CE 版本 70。  
   
  **舊版 CE：**若是相容性層級設定為 120 以上的 SQL Server 資料庫，可使用 [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 在資料庫層級啟用 CE 版本 70。
   
@@ -83,7 +83,7 @@ SELECT CustomerId, OrderAddedDate
     OPTION (USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION'));  
 ```
  
- **查詢存放區**︰從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 開始，提供查詢存放區工具，以方便您檢查查詢的效能。  在 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] (SSMS.exe) 中，當開啟查詢存放區時，**物件總管**中的 [資料庫] 節點下會顯示 [查詢存放區] 節點。  
+ **查詢存放區**︰從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始，提供查詢存放區工具，方便您檢查查詢的效能。 在 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 中，啟用查詢存放區的情況下，**物件總管**中的資料庫節點下會顯示**查詢存放區**節點。  
   
 ```tsql  
 ALTER DATABASE <yourDatabase>  
@@ -103,9 +103,9 @@ ALTER DATABASE <yourDatabase>
 ```  
   
  > [!TIP] 
- > 建議您每個月安裝最新版的 [(SSMS.exe)](http://msdn.microsoft.com/library/mt238290.aspx)。  
+ > 建議您安裝最新版本的 [Management Studio](http://msdn.microsoft.com/library/mt238290.aspx)，並經常進行更新。  
   
- 追蹤基數估計處理序的另一個做法，是使用名為 **query_optimizer_estimate_cardinality** 的擴充事件。  下列 T-SQL 程式碼範例會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上執行。 它會將 .xel 檔案寫入 C:\Temp\ (不過您可以變更此路徑)。 當您在 SSMS 中開啟 .xel 檔案時，會以方便使用的方式來顯示其詳細資訊。  
+ 追蹤基數估計處理序的另一個做法，是使用名為 **query_optimizer_estimate_cardinality** 的擴充事件。 下列 T-SQL 程式碼範例會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上執行。 它會將 .xel 檔案寫入 C:\Temp\ (不過您可以變更此路徑)。 當您在 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 中開啟 .xel 檔案時，會以使用方便的方式來顯示其詳細資訊。  
   
 ```tsql  
 DROP EVENT SESSION Test_the_CE_qoec_1 ON SERVER;  
@@ -134,7 +134,7 @@ ALTER EVENT SESSION Test_the_CE_qoec_1
 go  
 ```  
   
- 如需為 Azure SQL Database 量身訂做之擴充事件的資訊，請參閱 [SQL Database 中的擴充事件](http://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)。  
+ 如需為 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 量身訂做之擴充事件的相關資訊，請參閱 [SQL Database 中的擴充事件](http://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)。  
   
   
 ## <a name="steps-to-assess-the-ce-version"></a>評估 CE 版本的步驟  
@@ -219,7 +219,7 @@ go
   
 - 執行 **sp_query_store_force_plan**。  
   
-- 在 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 中，展開您的 [查詢存放區] 節點，以滑鼠右鍵按一下 [Top Resource Consuming Nodes]\(資源耗用量排名在前的節點)，然後按一下View Top Resource Consuming Nodes]\(檢視資源耗用量排名在前的節點)。 這會顯示標示為 **[強制執行計畫]** 和 **[取消強制執行計畫]** 的按鈕。  
+- 在 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 中，展開您的 [查詢存放區] 節點，以滑鼠右鍵按一下 [Top Resource Consuming Nodes] (資源耗用量排名在前的節點)，然後按一下 「View Top Resource Consuming Nodes」 (檢視資源耗用量排名在前的節點)。 這會顯示標示為 **[強制執行計畫]** 和 **[取消強制執行計畫]** 的按鈕。  
   
  如需查詢存放區的詳細資訊，請參閱 [使用查詢存放區監視效能](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)。  
   
