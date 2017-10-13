@@ -28,7 +28,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: 80c1228faeaaa4012afc0fd27992a2f5cf389f6e
 ms.openlocfilehash: 5467f9d98562fac8262e537887d03c1d68b25d88
 ms.contentlocale: zh-tw
-ms.lasthandoff: 10/05/2017
+ms.lasthandoff: 10/12/2017
 
 ---
 # <a name="charindex-transact-sql"></a>CHARINDEX (Transact-SQL)

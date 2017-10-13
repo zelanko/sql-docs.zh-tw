@@ -29,7 +29,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: 80c1228faeaaa4012afc0fd27992a2f5cf389f6e
 ms.openlocfilehash: 08f27953aac5fa36f1b38e243d8465f57458dafe
 ms.contentlocale: zh-tw
-ms.lasthandoff: 10/05/2017
+ms.lasthandoff: 10/12/2017
 
 ---
 # <a name="datediffbig-transact-sql"></a>DATEDIFF_BIG (TRANSACT-SQL)

@@ -26,7 +26,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: 80c1228faeaaa4012afc0fd27992a2f5cf389f6e
 ms.openlocfilehash: 6b36878b5c26053a18c868baf2ddf8a4741fe724
 ms.contentlocale: zh-tw
-ms.lasthandoff: 10/05/2017
+ms.lasthandoff: 10/12/2017
 
 ---
 # <a name="cos-transact-sql"></a>COS (Transact-SQL)

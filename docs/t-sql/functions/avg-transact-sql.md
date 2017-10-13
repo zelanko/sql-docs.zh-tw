@@ -29,7 +29,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: 80c1228faeaaa4012afc0fd27992a2f5cf389f6e
 ms.openlocfilehash: 1e7598f8ee20f88346dfcbba1757f1173b34fe5c
 ms.contentlocale: zh-tw
-ms.lasthandoff: 10/05/2017
+ms.lasthandoff: 10/12/2017
 
 ---
 # <a name="avg-transact-sql"></a>AVG (Transact-SQL)
