@@ -59,14 +59,14 @@ ms.lasthandoff: 09/09/2017
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [執行 Data Quality Client 應用程式](../data-quality-services/run-the-data-quality-client-application.md)。  
   
-2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 首頁畫面上，開啟或建立知識庫。 選取 **[定義域管理]** 當做活動，然後按一下 **[開啟]** 或 **[建立]**。 如需相關資訊，請參閱 [Create a Knowledge Base](../data-quality-services/create-a-knowledge-base.md) 或 [Open a Knowledge Base](../data-quality-services/open-a-knowledge-base.md)。  
+2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 首頁畫面上，開啟或建立知識庫。 選取 **[定義域管理]** 當做活動，然後按一下 **[開啟]** 或 **[建立]**。 如需相關資訊，請參閱 [建立知識庫](../data-quality-services/create-a-knowledge-base.md) 或 [開啟知識庫](../data-quality-services/open-a-knowledge-base.md)。  
   
     > [!NOTE]  
     >  定義域管理會在 Data Quality Services 用戶端的頁面上執行，該頁面包含個別定義域管理作業所適用的五個索引標籤。 這不是精靈驅動的程序，任何管理作業都可以個別執行。  
   
-3.  從 **[定義域管理]** 頁面的 **[定義域清單]** 中，選取您想要變更值的定義域或是建立新的定義域。 如果您必須建立新的定義域，請參閱＜ [Create a Domain](../data-quality-services/create-a-domain.md)＞。 按一下 **[定義域值]** 索引標籤。  
+3.  從 **[定義域管理]** 頁面的 **[定義域清單]** 中，選取您想要變更值的定義域或是建立新的定義域。 如果您必須建立新的定義域，請參閱＜ [建立定義域](../data-quality-services/create-a-domain.md)＞。 按一下 **[定義域值]** 索引標籤。  
   
-4.  在 **[值]** 資料表中顯示您需要修改的值。 如需詳細資訊，請參閱以下的＜ [How to Display the Appropriate Values](#Display) ＞。  
+4.  在 **[值]** 資料表中顯示您需要修改的值。 如需詳細資訊，請參閱以下的＜ [如何顯示適當的值](#Display) ＞。  
   
 5.  若要變更值的狀態，請依照以下方式繼續進行：  
   
@@ -120,7 +120,7 @@ ms.lasthandoff: 09/09/2017
   
  當您在 **[清理]** 活動的 **[管理和檢視結果]** 頁面中執行互動式資料清理時，無效和錯誤的值都會包含在 **[管理和檢視結果]** 頁面的 **[無效]** 索引標籤上。  
   
-##  <a name="Display"></a> How to Display the Appropriate Values  
+##  <a name="Display"></a> 如何顯示適當的值  
  您可以依照以下方式修改顯示：  
   
 -   選取**[篩選]** 下拉式清單中的狀態，在資料表中 **[篩選]** 您想要的結果 (根據結果的狀態)。  

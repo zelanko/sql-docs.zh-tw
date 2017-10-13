@@ -22,7 +22,7 @@ ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="import-a-knowledge-base-from-a-dqs-file"></a>從 .dqs 檔案匯入知識庫
-  此主題描述如何從 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中的 .dqs 資料檔匯入整個知識庫。 您從 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 應用程式匯出現有的知識庫來建立此資料檔 (請參閱＜ [Export a Knowledge Base to a .dqs File](../data-quality-services/export-a-knowledge-base-to-a-dqs-file.md)＞)。  
+  此主題描述如何從 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中的 .dqs 資料檔匯入整個知識庫。 您從 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 應用程式匯出現有的知識庫來建立此資料檔 (請參閱＜ [將知識庫匯出到.dqs 檔案](../data-quality-services/export-a-knowledge-base-to-a-dqs-file.md)＞)。  
   
  使用 .dqs 資料檔匯出知識庫的內容，然後將內容匯入相同 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 或不同 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 上的另一個知識庫會簡化知識產生程序，以節省時間與精力。 這樣可讓您將知識庫和知識庫的知識與其他人分享，以節省他們的時間。 .dqs 檔將包含所有知識庫資訊，包括定義域和比對原則，但不包括附加的參考資料資訊。 已發行和未發行的資料都將匯入。  
   
