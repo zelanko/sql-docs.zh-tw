@@ -52,7 +52,7 @@ ms.lasthandoff: 10/11/2017
   
  下圖顯示 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師與 [工具箱] 視窗。  
   
- ![設計師與工具箱的螢幕擷取畫面](../integration-services/media/denali-designerandtoolbox.gif "設計師與工具箱的螢幕擷取畫面")  
+ ![設計師與工具箱的螢幕擷取畫面]\(../integration-services/media/denali-designerandtoolbox.gif "設計師與工具箱的螢幕擷取畫面")  
   
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包含用來在封裝中加入功能的其他對話方塊和視窗， [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 則提供用於設定開發環境及使用封裝的視窗和對話方塊。 如需詳細資訊，請參閱 [Integration Services User Interface](../integration-services/integration-services-user-interface.md)(Integration Services 使用者介面)。  
   
