@@ -60,7 +60,7 @@ Oracle 版本資訊：
 
  非 SQL Server 訂閱者的異質性複寫已被取代。 Oracle 發行已被取代。 若要移動資料，請使用異動資料擷取和 [!INCLUDE[ssIS](../../../includes/ssis-md.md)]建立方案。  
 
-如需建立 Oracle 和 IBM DB2, 之訂閱的詳細資訊，請參閱＜ [Oracle Subscribers](../../../relational-databases/replication/non-sql/oracle-subscribers.md) ＞和＜ [IBM DB2 Subscribers](../../../relational-databases/replication/non-sql/ibm-db2-subscribers.md)建立方案。  
+如需建立 Oracle 和 IBM DB2, 之訂閱的詳細資訊，請參閱＜ [Oracle 訂閱者](../../../relational-databases/replication/non-sql/oracle-subscribers.md) ＞和＜ [IBM DB2 Subscribers](../../../relational-databases/replication/non-sql/ibm-db2-subscribers.md)建立方案。  
   
 ## <a name="considerations-for-non-sql-server-subscribers"></a>非 SQL Server 訂閱者之考量  
  當複寫到非「[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 訂閱者」時，請記住下列考量：  
@@ -73,7 +73,7 @@ Oracle 版本資訊：
   
 -   如果發行集擁有「[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 訂閱者」和「非 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 訂閱者」，則必須先為「非 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 訂閱者」啟用發行集，之後再建立「[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 訂閱者」的任何訂閱。  
   
--   根據預設，由「快照集代理程式」為「非 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 訂閱者」產生的指令碼會在 `CREATE TABLE` 語法中使用未加引號的識別碼。 因此，名稱為 test 的已發行資料表會複寫為 TEST。 若要使用與發行集資料庫中資料表相同的大小寫，請使用「散發代理程式」的 **-QuotedIdentifier** 參數。 如果發行的物件名稱 (如資料表、資料行或條件約束) 包含空格或非「 **訂閱者」端之資料庫版本中的保留字，則還必須使用** -QuotedIdentifier[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 參數。 如需有關此參數的詳細資訊，請參閱＜ [Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)＞。  
+-   根據預設，由「快照集代理程式」為「非 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 訂閱者」產生的指令碼會在 `CREATE TABLE` 語法中使用未加引號的識別碼。 因此，名稱為 test 的已發行資料表會複寫為 TEST。 若要使用與發行集資料庫中資料表相同的大小寫，請使用「散發代理程式」的 **-QuotedIdentifier** 參數。 如果發行的物件名稱 (如資料表、資料行或條件約束) 包含空格或非「 **訂閱者」端之資料庫版本中的保留字，則還必須使用** -QuotedIdentifier[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 參數。 如需有關此參數的詳細資訊，請參閱＜ [複寫散發代理程式](../../../relational-databases/replication/agents/replication-distribution-agent.md)＞。  
   
 -   「散發代理程式」執行時所用的帳戶必須具有 OLE DB 提供者安裝目錄的讀取權限。  
   
@@ -93,7 +93,7 @@ Oracle 版本資訊：
   
 -   不同資料庫以不同方式處理值 NULL，這會影響空白值、空字串和 NULL 的表示方式。 進而會影響插入到定義了唯一條件約束的資料行之值的行為。 例如，Oracle 在視為唯一的資料行中允許有多個 NULL 值，而 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 在唯一的資料行中只允許有一個 NULL 值。  
   
-     另一個因素是，當資料行定義為 NOT NULL 時，如何處理 NULL 值、空字串和空白值。 如需為「Oracle 訂閱者」解決此問題的詳細資訊，請參閱＜ [Oracle Subscribers](../../../relational-databases/replication/non-sql/oracle-subscribers.md)＞。  
+     另一個因素是，當資料行定義為 NOT NULL 時，如何處理 NULL 值、空字串和空白值。 如需為「Oracle 訂閱者」解決此問題的詳細資訊，請參閱＜ [Oracle 訂閱者](../../../relational-databases/replication/non-sql/oracle-subscribers.md)＞。  
   
 -   移除訂閱時，與複寫相關的中繼資料 (交易序號資料表) 不會從非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 訂閱者刪除。  
   
