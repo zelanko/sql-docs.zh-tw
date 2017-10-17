@@ -53,7 +53,7 @@ ms.lasthandoff: 09/19/2017
   
 若要顯示報表，包含多項[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]統計資料，包括連接嘗試，執行**sp_monitor**。
   
-@@MAX_CONNECTIONS是同時允許伺服器的連線數目上限。 @@CONNECTIONS會隨著每次登入嘗試，因此@CONNECTIONS可能大於 @@MAX_CONNECTIONS。
+@@MAX_CONNECTIONS是同時允許伺服器的連線數目上限。 @@CONNECTIONS 會隨著每次登入嘗試，因此 @@CONNECTIONS 可能大於 @@MAX_CONNECTIONS 。
   
 ## <a name="examples"></a>範例  
 下列範例會顯示傳回迄今 (到目前的日期和時間為止) 的登入嘗試次數。

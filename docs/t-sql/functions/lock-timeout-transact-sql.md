@@ -68,7 +68,7 @@ Lock Timeout
 -1  
 ```  
   
- 這個範例會將 LOCK_TIMEOUT 設為 1800年毫秒，，然後呼叫@LOCK_TIMEOUT。  
+ 這個範例會將 LOCK_TIMEOUT 設為 1800年毫秒，，然後呼叫@LOCK_TIMEOUT 。  
   
 ```  
 SET LOCK_TIMEOUT 1800;  
