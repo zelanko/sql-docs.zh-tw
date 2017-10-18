@@ -102,10 +102,10 @@ ms.lasthandoff: 08/17/2017
 > [!NOTE]  
 >  如果 SQL Server 或 Sybase 來源資料表包含識別欄位，您必須使用執行 SQL 」 工作，才能啟用 IDENTITY_INSERT ADO NET 目的地之前以及將它一次之後停用。 （identity 資料行屬性會指定資料行的累加值。 SET IDENTITY_INSERT 陳述式可讓來源資料表中明確值插入至目的地資料表中的識別欄位。）  
 >   
->   若要執行 SET IDENTITY_INSERT 陳述式和資料載入成功，您必須執行下列動作。
->       1. 針對執行 SQL 工作和 ADO.NET 目的地，請使用相同的 ADO.NET 連接管理員。
->       2. 在 連接管理員上設定**RetainSameConnection**屬性和**MultipleActiveResultSets**屬性設定為 True。
->       3. 在 ADO.NET 目的地中，設定**UseBulkInsertWhenPossible**屬性設定為 False。
+>   若要執行 SET IDENTITY_INSERT 陳述式和資料載入成功，您必須執行下列動作。 
+>       1. 針對執行 SQL 工作和 ADO.NET 目的地，請使用相同的 ADO.NET 連接管理員。 
+>       2. 在 連接管理員上設定**RetainSameConnection**屬性和**MultipleActiveResultSets**屬性設定為 True。 
+>       3. 在 ADO.NET 目的地中，設定**UseBulkInsertWhenPossible**屬性設定為 False。 
 >
 >  如需詳細資訊，請參閱 [SET IDENTITY_INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/set-identity-insert-transact-sql.md) 和 [IDENTITY &#40;屬性&#41; &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql-identity-property.md)。  
   
@@ -172,3 +172,4 @@ ms.lasthandoff: 08/17/2017
  將錯誤處理選項套用至選取的資料格。  
   
   
+
