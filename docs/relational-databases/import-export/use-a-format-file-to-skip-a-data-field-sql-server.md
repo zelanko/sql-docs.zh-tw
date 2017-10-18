@@ -17,11 +17,11 @@ caps.latest.revision: 38
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 41484cb9478231533d5d48fb445582f08e5762f9
+ms.translationtype: HT
+ms.sourcegitcommit: 560965a241b24a09f50a23faf63ce74d0049d5a7
+ms.openlocfilehash: 07658ca2dbba706c7355220349f78b3703fe988e
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 10/13/2017
 
 ---
 # <a name="use-a-format-file-to-skip-a-data-field-sql-server"></a>使用格式檔案略過資料欄位 (SQL Server)
@@ -40,7 +40,7 @@ ms.lasthandoff: 06/22/2017
 ### 範例資料表<a name="sample_table"></a>
 下列指令碼會建立測試資料庫和名為 `myTestSkipField`的資料表。  在 Microsoft SQL Server Management Studio (SSMS) 中執行下列 Transact-SQL：
  
-```tsql
+```sql
 CREATE DATABASE TestDatabase;
 GO
 
@@ -184,7 +184,7 @@ bcp TestDatabase.dbo.myTestSkipField IN D:\BCP\myTestSkipField.bcp -f D:\BCP\myT
 
 ### 使用 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 和 [非 XML 格式檔案](../../relational-databases/import-export/non-xml-format-files-sql-server.md)<a name="bulk_nonxml"></a>
 在 Microsoft SQL Server Management Studio (SSMS) 中執行下列 Transact-SQL：
-```tsql
+```sql
 USE TestDatabase;  
 GO
 
@@ -200,7 +200,7 @@ SELECT * FROM TestDatabase.dbo.myTestSkipField;
 
 ### 使用 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 和 [XML 格式檔案](../../relational-databases/import-export/xml-format-files-sql-server.md)<a name="bulk_xml"></a>
 在 Microsoft SQL Server Management Studio (SSMS) 中執行下列 Transact-SQL：
-```tsql
+```sql
 USE TestDatabase;  
 GO
 
@@ -216,7 +216,7 @@ SELECT * FROM TestDatabase.dbo.myTestSkipField;
 
 ### 使用 [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 和 [非 XML 格式檔案](../../relational-databases/import-export/non-xml-format-files-sql-server.md)<a name="openrowset_nonxml"></a>    
 在 Microsoft SQL Server Management Studio (SSMS) 中執行下列 Transact-SQL：
-```tsql
+```sql
 USE TestDatabase;
 GO
 
@@ -235,7 +235,7 @@ SELECT * FROM TestDatabase.dbo.myTestSkipField;
 
 ### 使用 [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 和 [XML 格式檔案](../../relational-databases/import-export/xml-format-files-sql-server.md)<a name="openrowset_xml"></a>
 在 Microsoft SQL Server Management Studio (SSMS) 中執行下列 Transact-SQL：
-```tsql
+```sql
 USE TestDatabase;  
 GO
 

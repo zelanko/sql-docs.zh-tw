@@ -19,11 +19,11 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bfa6eb722a8dcbd4c3a9e72d731fe8a59d436ba8
+ms.translationtype: HT
+ms.sourcegitcommit: 54e4c8309c290255cb2885fab04bb394bc453046
+ms.openlocfilehash: 008cdb3fc158b36793f7d4b42ee4b24fd2b56ea5
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 10/16/2017
 
 ---
 # <a name="view-the-extended-events-equivalents-to-sql-trace-event-classes"></a>檢視同等於 SQL 追蹤事件類別的擴充事件項目
@@ -71,20 +71,8 @@ ms.lasthandoff: 06/22/2017
   
 -   如果是使用者可設定的 SQL 追蹤事件類別 (透過 UserConfigurable:9 的 UserConfigurable:1)，擴充事件會使用單一事件來取代這些項目。 此事件命名為 user_event。 這個事件是使用 sp_trace_generateevent 所引發，這與 SQL 追蹤所使用的預存程序相同。 不論傳遞給預存程序的事件識別碼為何，都會傳回 user_event 事件。 但是，event_id 欄位會當作事件資料的一部分傳回。 這可讓您建立以事件識別碼為基礎的述詞。 例如，如果您在程式碼中使用 UserConfigurable:0 (事件識別碼 = 82)，您可以將 user_event 事件加入至工作階段中，並指定 'event_id = 82' 的述詞。 因此，您不必變更程式碼，因為 sp_trace_generateevent 預存程序會產生擴充事件 user_event 事件及同等的 SQL 追蹤事件類別。  
   
--   如果事件類別資料行以外的所有其他資料行都傳回 NULL，表示並未從 SQL 追蹤移轉事件類別。  
-  
--   如果只有擴充事件動作資料行中的值為 NULL，表示下列其中一個條件成立：  
-  
-    -   SQL 追蹤資料行對應到與「擴充事件」事件相關聯的其中一個資料欄位。  
-  
-        > [!NOTE]  
-        >  每一個「擴充事件」事件都有一組預設資料欄位，這些欄位會自動包含在結果集內。  
-  
-    -   此動作資料行並沒有有意義的「擴充事件」同等項目。 其中一個範例就是 SQL 追蹤中的 EventClass 資料行。 「擴充事件」中不需要此資料行，因為事件名稱有相同的用途。  
-  
--   如果是使用者可設定的 SQL 追蹤事件類別 (透過 UserConfigurable:9 的 UserConfigurable:1)，擴充事件會使用單一事件來取代這些項目。 此事件命名為 user_event。 這個事件是使用 sp_trace_generateevent 所引發，這與 SQL 追蹤所使用的預存程序相同。 不論傳遞給預存程序的事件識別碼為何，都會傳回 user_event 事件。 但是，event_id 欄位會當作事件資料的一部分傳回。 這可讓您建立以事件識別碼為基礎的述詞。 例如，如果您在程式碼中使用 UserConfigurable:0 (事件識別碼 = 82)，您可以將 user_event 事件加入至工作階段中，並指定 'event_id = 82' 的述詞。 因此，您不必變更程式碼，因為 sp_trace_generateevent 預存程序會產生擴充事件 user_event 事件及同等的 SQL 追蹤事件類別。  
-  
 ## <a name="see-also"></a>另請參閱  
  [sp_trace_generateevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)  
   
   
+

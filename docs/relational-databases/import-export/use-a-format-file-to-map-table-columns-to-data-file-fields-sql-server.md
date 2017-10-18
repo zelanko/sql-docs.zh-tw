@@ -17,11 +17,11 @@ caps.latest.revision: 40
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d90982485ab979118f4f7b02881aa8ea53cc9818
+ms.translationtype: HT
+ms.sourcegitcommit: 560965a241b24a09f50a23faf63ce74d0049d5a7
+ms.openlocfilehash: 9d5d0f33d21e61741bd021dc012c70a43207a13f
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 10/13/2017
 
 ---
 # <a name="use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server"></a>使用格式檔案將資料表資料行對應至資料檔欄位 (SQL Server)
@@ -29,7 +29,7 @@ ms.lasthandoff: 06/22/2017
 
 |外框|
 |---|
-|[範例測試條件](#etc)<br />&emsp;&#9679;&emsp;[範例資料表](#sample_table)<br />&emsp;&#9679;&emsp;[範例資料檔案](#sample_data_file)<br />[建立格式檔案](#create_format_file)<br />&emsp;&#9679;&emsp;[建立非 XML 格式檔案](#nonxml_format_file)<br />&emsp;&#9679;&emsp;[修改非 XML 格式檔案](#modify_nonxml_format_file)<br />&emsp;&#9679;&emsp;[建立 XML 格式檔案](#xml_format_file)<br />&emsp;&#9679;&emsp;[修改 XML 格式檔案](#modify_xml_format_file)<br />[使用格式檔案匯入資料，將資料表資料行對應至資料檔案欄位](#import_data)<br />&emsp;&#9679;&emsp;[使用 BCP 和非 XML 格式檔案](#bcp_nonxml)<br />&emsp;&#9679;&emsp;[使用 BCP 和 XML 格式檔案](#bcp_xml)<br />&emsp;&#9679;&emsp;[使用 BULK INSERT 和非 XML 格式檔案](#bulk_nonxml)<br />&emsp;&#9679;&emsp;[使用 BULK INSERT 和 XML 格式檔案](#bulk_xml)<br />&emsp;&#9679;&emsp;[使用 OPENROWSET(BULK...) 和非 XML 格式檔案](#openrowset_nonxml)<br />&emsp;&#9679;&emsp;[使用 OPENROWSET(BULK...) 和 XML 格式檔案](#openrowset_xml)<p>                                                                                                                                                                                                                  </p>|
+|[範例測試條件](#etc)<br />&emsp;&#9679;&emsp;[範例資料表](#sample_table)<br />&emsp;&#9679;&emsp;[範例資料檔案](#sample_data_file)<br />[建立格式檔案](#create_format_file)<br />&emsp;&#9679;&emsp;[建立非 XML 格式檔案](#nonxml_format_file)<br />&emsp;&#9679;&emsp;[修改非 XML 格式檔案](#modify_nonxml_format_file)<br />&emsp;&#9679;&emsp;[建立 XML 格式檔案](#xml_format_file)<br />&emsp;&#9679;&emsp;[修改 XML 格式檔案](#modify_xml_format_file)<br />[使用格式檔案匯入資料，將資料表資料行對應至資料檔案欄位](#import_data)<br />&emsp;&#9679;&emsp;[使用 BCP 和非 XML 格式檔案](#bcp_nonxml)<br />&emsp;&#9679;&emsp;[使用 BCP 和 XML 格式檔案](#bcp_xml)<br />&emsp;&#9679;&emsp;[使用 BULK INSERT 和非 XML 格式檔案](#bulk_nonxml)<br />&emsp;&#9679;&emsp;[使用 BULK INSERT 和 XML 格式檔案](#bulk_xml)<br />&emsp;&#9679;&emsp;[使用 OPENROWSET(BULK...) 和非 XML 格式檔案](#openrowset_nonxml)<br />&emsp;&#9679;&emsp;[使用 OPENROWSET(BULK...) 和 XML 格式檔案](#openrowset_xml)|
 
 > [!NOTE]  
 >  您可以透過下列項目，使用非 XML 或 XML 格式檔案，將資料檔案大量匯入至資料表：[bcp 公用程式](../../tools/bcp-utility.md)命令、[BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 陳述式或 INSERT ...SELECT * FROM [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 陳述式。 如需詳細資訊，請參閱[使用格式檔案大量匯入資料 &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md)。  
@@ -39,7 +39,7 @@ ms.lasthandoff: 06/22/2017
 
 ### 範例資料表<a name="sample_table"></a>
 下列指令碼會建立測試資料庫和名為 `myRemap`的資料表。  在 Microsoft SQL Server Management Studio (SSMS) 中執行下列 Transact-SQL：
-```tsql
+```sql
 CREATE DATABASE TestDatabase;
 GO
 
@@ -77,9 +77,9 @@ bcp TestDatabase.dbo.myRemap format nul -c -f D:\BCP\myRemap.fmt -t, -T
 ```
 ### 修改非 XML 格式檔案 <a name="modify_nonxml_format_file"></a>
 請參閱 [非 XML 格式檔案的結構](../../relational-databases/import-export/non-xml-format-files-sql-server.md#Structure) 以了解此術語。  在 [記事本] 中開啟 `D:\BCP\myRemap.fmt` 並執行下列修改：
-1) 重新排列格式檔案資料列的順序，讓資料列的順序與 `myRemap.bcp`中的資料順序相同。
-2) 確定主機檔案欄位的順序值是連續的。
-3) 確定最後一個格式檔案資料列後面沒有歸位字元。
+1.  重新排列格式檔案資料列的順序，讓資料列的順序與 `myRemap.bcp`中的資料順序相同。
+2.  確定主機檔案欄位的順序值是連續的。
+3.  確定最後一個格式檔案資料列後面沒有歸位字元。
 
 比較下列變更：     
 **之前**
@@ -115,9 +115,9 @@ bcp TestDatabase.dbo.myRemap format nul -c -x -f D:\BCP\myRemap.xml -t, -T
 ```
 ### 修改 XML 格式檔案 <a name="modify_xml_format_file"></a>
 請參閱 [XML 格式檔案的結構描述語法](../../relational-databases/import-export/xml-format-files-sql-server.md#StructureOfXmlFFs) 以了解此術語。  在 [記事本] 中開啟 `D:\BCP\myRemap.xml` 並執行下列修改：
-1) 在格式檔案中宣告 \<FIELD> 元素的順序會是這些欄位出現在資料檔案中的順序，因此請將識別碼屬性 2 和 3 的 \<FIELD> 元素順序反轉。
-2) 確定 \<FIELD> 識別碼屬性值是連續的。
-3) \<ROW> 元素中的 \<COLUMN> 元素順序會定義大量作業傳回這些元素的順序。  XML 格式檔案會將本機名稱指派給每個 \<COLUMN> 元素，而此名稱與大量匯入作業之目標資料表中的資料行沒有任何關聯性。  \<COLUMN> 元素的順序與 \<RECORD> 定義中的 \<FIELD> 元素順序無關。  每個 \<COLUMN> 元素都會對應到 \<FIELD> 元素 (其識別碼是在 \<COLUMN> 元素的 SOURCE 屬性中指定)。  因此，\<COLUMN> SOURCE 的值是唯一需要修訂的屬性。  將 \<COLUMN> SOURCE 屬性 2 和 3 的順序反轉。
+1. 在格式檔案中宣告 \<FIELD> 元素的順序會是這些欄位出現在資料檔案中的順序，因此請將識別碼屬性 2 和 3 的 \<FIELD> 元素順序反轉。
+2. 確定 \<FIELD> 識別碼屬性值是連續的。
+3. \<ROW> 元素中的 \<COLUMN> 元素順序會定義大量作業傳回這些元素的順序。  XML 格式檔案會將本機名稱指派給每個 \<COLUMN> 元素，而此名稱與大量匯入作業之目標資料表中的資料行沒有任何關聯性。  \<COLUMN> 元素的順序與 \<RECORD> 定義中的 \<FIELD> 元素順序無關。  每個 \<COLUMN> 元素都會對應到 \<FIELD> 元素 (其識別碼是在 \<COLUMN> 元素的 SOURCE 屬性中指定)。  因此，\<COLUMN> SOURCE 的值是唯一需要修訂的屬性。  將 \<COLUMN> SOURCE 屬性 2 和 3 的順序反轉。
 
 比較下列變更  
 **之前**
@@ -180,7 +180,7 @@ bcp TestDatabase.dbo.myRemap IN D:\BCP\myRemap.bcp -f D:\BCP\myRemap.xml -T
 
 ### 使用 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 和 [非 XML 格式檔案](../../relational-databases/import-export/non-xml-format-files-sql-server.md)<a name="bulk_nonxml"></a>
 在 Microsoft SQL Server Management Studio (SSMS) 中執行下列 Transact-SQL：
-```tsql
+```sql
 USE TestDatabase;  
 GO
 
@@ -196,7 +196,7 @@ SELECT * FROM TestDatabase.dbo.myRemap;
 
 ### 使用 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 和 [XML 格式檔案](../../relational-databases/import-export/xml-format-files-sql-server.md)<a name="bulk_xml"></a>
 在 Microsoft SQL Server Management Studio (SSMS) 中執行下列 Transact-SQL：
-```tsql
+```sql
 USE TestDatabase;  
 GO
 
@@ -212,7 +212,7 @@ SELECT * FROM TestDatabase.dbo.myRemap;
 
 ### 使用 [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 和 [非 XML 格式檔案](../../relational-databases/import-export/non-xml-format-files-sql-server.md)<a name="openrowset_nonxml"></a>    
 在 Microsoft SQL Server Management Studio (SSMS) 中執行下列 Transact-SQL：
-```tsql
+```sql
 USE TestDatabase;
 GO
 
@@ -231,7 +231,7 @@ SELECT * FROM TestDatabase.dbo.myRemap;
 
 ### 使用 [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 和 [XML 格式檔案](../../relational-databases/import-export/xml-format-files-sql-server.md)<a name="openrowset_xml"></a>
 在 Microsoft SQL Server Management Studio (SSMS) 中執行下列 Transact-SQL：
-```tsql
+```sql
 USE TestDatabase;  
 GO
 
