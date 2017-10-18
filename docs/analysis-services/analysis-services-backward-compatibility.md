@@ -51,7 +51,7 @@ A*已被取代功能*會停止從產品在未來版本中，但仍支援，且�
 |多維度|工作階段 Cube。 沒有取代項目。|  
 |多維度|本機 Cube。 沒有取代項目。|  
 |表格式|未來版本將不支援表格式模型 1100 和 1103 相容性層級。 取代為 1200年或更高版本，將模型定義轉換成表格式中繼資料，在相容性層級設定模型。 請參閱 [Analysis Services 中表格式模型的相容性層級](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)。|  
-|工具|SQL Server Profiler for Trace Capture<br /><br /> 取代為使用 SQL Server Management Studio 內嵌的擴充事件分析工具。  <br /> 請參閱 [Monitor Analysis Services with SQL Server Extended Events](../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md)。|  
+|工具|SQL Server Profiler for Trace Capture<br /><br /> 取代為使用 SQL Server Management Studio 內嵌的擴充事件分析工具。  <br /> 請參閱 [使用 SQL Server 擴充事件監視 Analysis Services](../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md)。|  
 |工具|Server Profiler for Trace Replay <br />取代。 沒有取代項目。|  
 |追蹤管理物件和 Trace API|Microsoft.AnalysisServices.Trace 物件 (包含 Analysis Services Trace 和 Replay 物件的 API)。 取代為多部分：<br /><br /> -   追蹤組態︰ Microsoft.SqlServer.Management.XEvent<br />-   追蹤讀取︰ Microsoft.SqlServer.XEvent.Linq<br />-   追蹤重新執行：無|  
   
