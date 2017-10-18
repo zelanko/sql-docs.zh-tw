@@ -30,7 +30,7 @@ ms.contentlocale: zh-tw
 ms.lasthandoff: 09/01/2017
 
 ---
-# <a name="x40x40error-transact-sql"></a>（& s) #x 40; & #x 40。錯誤 (TRANSACT-SQL)
+# <a name="x40x40error-transact-sql"></a>&#x40;&#x40; 錯誤 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   傳回最後執行之 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的錯誤號碼。  
@@ -53,11 +53,11 @@ ms.lasthandoff: 09/01/2017
   
  因為 @@ERROR已清除且在執行每個陳述式重設、 立即檢查它在陳述式，或將它儲存到本機變數，稍後能夠檢查。  
   
- 使用 TRY...CATCH 建構來處理錯誤。 再試一次...CATCH 建構也支援其他的系統函數 （ERROR_LINE、 ERROR_MESSAGE、 ERROR_PROCEDURE、 ERROR_SEVERITY 和 ERROR_STATE） 傳回錯誤更多資訊比 @@ERROR。 TRY...CATCH 也支援 ERROR_NUMBER 函數，ERROR_NUMBER 函數並不限於在緊接於產生錯誤的陳述式之後的陳述式中傳回錯誤號碼。 如需詳細資訊，請參閱 [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)。  
+ 使用 TRY...CATCH 建構來處理錯誤。 再試一次...CATCH 建構也支援其他的系統函數 （ERROR_LINE、 ERROR_MESSAGE、 ERROR_PROCEDURE、 ERROR_SEVERITY 和 ERROR_STATE） 傳回錯誤更多資訊比 @@ERROR 。 TRY...CATCH 也支援 ERROR_NUMBER 函數，ERROR_NUMBER 函數並不限於在緊接於產生錯誤的陳述式之後的陳述式中傳回錯誤號碼。 如需詳細資訊，請參閱 [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)。  
   
 ## <a name="examples"></a>範例  
   
-### <a name="a-using-error-to-detect-a-specific-error"></a>A. 使用@ERROR來偵測特定錯誤  
+### <a name="a-using-error-to-detect-a-specific-error"></a>A. 使用 @@ERROR 來偵測特定錯誤  
  下列範例利用 `@@ERROR` 來檢查 `UPDATE` 陳述式的 CHECK 條件約束違規 (錯誤號碼 547)。  
   
 ```  
@@ -71,7 +71,7 @@ IF @@ERROR = 547
 GO  
 ```  
   
-### <a name="b-using-error-to-conditionally-exit-a-procedure"></a>B. 使用@ERROR有條件地結束程序  
+### <a name="b-using-error-to-conditionally-exit-a-procedure"></a>B. 使用 @@ERROR 有條件地結束程序  
  下列範例會使用`IF...ELSE`陳述式，以測試`@@ERROR`之後`INSERT`預存程序中的陳述式。 `@@ERROR` 變數的值決定了傳給呼叫端程式來指出程序成功或失敗的傳回碼。  
   
 ```  
@@ -106,7 +106,7 @@ ELSE
 GO  
 ```  
   
-### <a name="c-using-error-with-rowcount"></a>C. 使用@ERROR與 @@ROWCOUNT  
+### <a name="c-using-error-with-rowcount"></a>C. 使用 @@ERROR 與 @@ROWCOUNT   
  下列範例搭配 `@@ERROR` 使用 `@@ROWCOUNT` 來驗證 `UPDATE` 陳述式的作業。 `@@ERROR` 的值用來針對任何錯誤指示來進行檢查，而 `@@ROWCOUNT` 則用來確保更新已成功套用至資料表中的資料列。  
   
 ```  
@@ -178,7 +178,7 @@ GO
  [ERROR_SEVERITY &#40;Transact-SQL&#41;](../../t-sql/functions/error-severity-transact-sql.md)   
  [ERROR_STATE &#40;TRANSACT-SQL &#41;](../../t-sql/functions/error-state-transact-sql.md)   
  [@@ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md)   
- [sys.messages &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)  
+ [sys.messages &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)  
   
   
 
