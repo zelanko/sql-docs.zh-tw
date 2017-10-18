@@ -159,7 +159,7 @@ DECLARE @result int;
 EXECUTE @result = my_proc;  
 ```  
   
- 傳回碼常用於程序的流程控制區塊中，以設定每個可能錯誤狀況的傳回碼值。 您可以在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式之後使用 @@ERROR，來偵測陳述式執行過程中是否曾發生錯誤。  
+ 傳回碼常用於程序的流程控制區塊中，以設定每個可能錯誤狀況的傳回碼值。 您可以在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式之後使用 @@ERROR ，來偵測陳述式執行過程中是否曾發生錯誤。  
   
 ### <a name="examples-of-return-codes"></a>傳回碼的範例  
  下列範例顯示具有可為各種錯誤設定特別傳回碼值之錯誤處理的 `usp_GetSalesYTD` 程序。 下表顯示由程序指派給每個可能錯誤的整數值，以及每個值對應的意義。  
