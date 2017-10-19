@@ -15,10 +15,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 754242a86367b07b98caa9f70f457b70d0840075
-ms.openlocfilehash: 3d753f75344e4958d36d214fcc74957204579088
+ms.sourcegitcommit: 5051d2d668105bd0a309eb64f2b8becd459d8a6b
+ms.openlocfilehash: 6cc679441602d4aa1d125c2f61f9d538e3b716a2
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/12/2017
+ms.lasthandoff: 10/12/2017
 
 ---
 # <a name="whats-new-in-database-engine---sql-server-2017"></a>資料庫引擎的新功能 - SQL Server 2017
@@ -39,11 +39,11 @@ ms.lasthandoff: 09/12/2017
 - 新一代的查詢處理功能改進會調整最佳化策略，使其符合您應用程式工作負載的執行階段條件。 為了這個第一版**自適性查詢處理**功能家族，我們推出了三項新的功能更新：**批次模式自適性聯結**、**批次模式記憶體授與回饋**，以及適用於多陳述式資料表值函式的**交錯執行**。  請參閱 [SQL 資料庫中的自適性查詢處理](../relational-databases/performance/adaptive-query-processing.md)。
 - 「自動調整」是一種資料庫功能，可深入探索潛在的查詢效能問題、建議解決方法，並且自動修正找到的問題。 [!INCLUDE[ssnoversion](../includes/ssnoversion.md)] 中的自動調整只要偵測到潛在的效能問題時就會通知您，並可讓您套用矯正措施，或可讓 [!INCLUDE[ssde-md](../includes/ssde-md.md)] 自動修正效能問題。 如需詳細資訊，請參閱[自動微調](../relational-databases/automatic-tuning/automatic-tuning.md)。
 - 記憶體最佳化資料表上非叢集索引建置的效能增強。 資料庫復原期間 MEMORY_OPTIMIZED 資料表的 bwtree (非叢集) 索引建置效能已大幅最佳化。 這項改善可在使用非叢集索引時大幅減少資料庫復原時間。  
-- [sys.dm_os_sys_info](../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md) 有三個新的資料行：socket_count、cores_per_socket、numa_node_count。
+- [sys.dm_os_sys_info](../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md) 有三個新的資料行：socket_count、cores_per_socket、numa_node_count。 這在您於 VM 中執行伺服器的情況下很有用處，因為超出 NUMA 可能會造成過度認可的主機，並於最終轉變成效能問題。
 - [sys.dm_db_file_space_usage](../relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md) 中引進新的資料行 modified_extent_page_count\,，以追蹤資料庫之每個資料庫檔案中的差異變更。 新的資料行 modified_extent_page_count 可讓您建置智慧型備份解決方案，以在資料庫中的百分比變更頁面低於臨界值 (即 70-80%) 時執行差異備份，否則請執行完整資料庫備份。
 - SELECT INTO … ON FileGroup - [SELECT INTO](../t-sql/queries/select-into-clause-transact-sql.md) 現在使用 SELECT INTO TSQL 語法中所新增的 **ON** 關鍵字支援，來支援將資料表載入使用者預設檔案群組以外的檔案群組。
 - Tempdb 安裝程式改善 - 安裝程式可讓您指定每個檔案最多 **256 GB (262,144 MB)** 的初始 tempdb 檔案大小，並出現警告向客戶提醒檔案大小是否設定為大於 1 GB 的值，以及是否未啟用 IFI。 務必了解這表示未啟用檔案立即初始化 (IFI)，其中，根據所指定 tempdb 資料檔案的初始大小，安裝時間可能會以指數方式大幅增加。 IFI 不適用於交易記錄大小，因此指定交易記錄的較大值一律可以增加安裝時間，但會在安裝期間啟動 tempdb，而與 SQL Server 服務帳戶的 IFI 設定無關。
-- 引進新的 dmv [sys.dm_tran_version_store_space_usage](../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-space-usage.md)，以追蹤每個資料庫的版本存放區使用量。 這個新的 dmv 適用於監視 tempdb 的版本存放區使用量，可讓您根據每個資料庫的版本存放區使用量需求來主動規劃 tempdb 大小，而且在執行實際伺服器上執行它不會有任何效能損失或額外負荷。
+- 已引進新的 dmv [sys.dm_tran_version_store_space_usage](../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-space-usage.md)，以追蹤每個資料庫的版本存放區使用量。 這個新的 dmv 適用於監視 tempdb 的版本存放區使用量，可讓您根據每個資料庫的版本存放區使用量需求來主動規劃 tempdb 大小，而且在執行實際伺服器上執行它不會有任何效能損失或額外負荷。
 - 引進新的 DMF [sys.dm_db_log_info](../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)，以公開與 DBCC LOGINFO 類似的 VLF 資訊來監視、警示以及避免因客戶所遇到之 VLF 數目、VLF 大小或 shrinkfile 問題所造成的潛在交易記錄問題。
 - 改善高端伺服器上小型資料庫的備份效能 - 在 SQL Server 中執行資料庫的備份時，備份程序需要多次反覆運算緩衝集區，才能清空進行中 I/O。 因此，備份時間不只是資料庫大小的函式，也是使用中緩衝集區大小的函式。 在 SQL Server 2017 中，備份已最佳化，避免多次反覆運算緩衝集區，因而導致大幅提升小型到中型資料庫的備份效能。 效能提升會隨著資料庫大小增加而減少，因為要備份的頁面和備份 IO 與反覆運算緩衝集區相較之下需要更多時間。  
 - 查詢存放區現在會追蹤等候統計資料摘要資訊。 追蹤查詢存放區中每個查詢的等候統計資料別，可啟用下個層級的效能疑難排解體驗，甚至深入了解工作負載效能和其瓶頸，同時保留重要的查詢存放區優點。  

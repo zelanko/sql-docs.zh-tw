@@ -1,7 +1,7 @@
 ---
 title: "執行程序邏輯和實體運算子參考 | Microsoft 文件"
 ms.custom: 
-ms.date: 05/31/2017
+ms.date: 10/12/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -140,10 +140,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 3fc2a681f001906cf9e819084679db097bca62c7
-ms.openlocfilehash: f9a7d0d8023cac77ef0a2d9e7308a419a4518931
+ms.sourcegitcommit: 246ea9f306c7d99b835c933c9feec695850a861b
+ms.openlocfilehash: 12177becd4b5d228cd65562b4da36708c61e70da
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 10/13/2017
 
 ---
 # <a name="showplan-logical-and-physical-operators-reference"></a>執行程序邏輯和實體運算子參考
@@ -232,7 +232,7 @@ ms.lasthandoff: 07/31/2017
 |![插入 (資料庫引擎) 運算子圖示](../relational-databases/media/insert-32x.gif "插入 (資料庫引擎) 運算子圖示")|**Insert**|「插入」邏輯運算子會將輸入的每一個資料列，插入 **Argument** 資料行中指定的物件。 實體運算子是「資料表插入」、「索引插入」或「叢集索引插入」運算子。|  
 |![插入的掃描運算子圖示](../relational-databases/media/inserted-scan-32x.gif "插入的掃描運算子圖示")|**插入的掃描**|「插入的掃描」運算子會掃描 **inserted** 資料表。 「插入的掃描」是邏輯與實體運算子。|  
 |![內建語言項目圖示](../relational-databases/media/intrinsic-32x.gif "內建語言項目圖示")|**內建**|「內建」運算子會叫用內部 [!INCLUDE[tsql](../includes/tsql-md.md)] 函數。 「內建」是語言元素。|  
-|![迭代器 catchall 運算子圖示](../relational-databases/media/iterator-catch-all.gif "迭代器 catchall 運算子圖示")|**Iterator**|產生圖形執行程序表的邏輯若找不到適當的 Iterator 圖示，就會顯示 **Iterator** 雜物箱圖示。 [雜物箱] 圖示不一定會指出錯誤條件。 [雜物箱] 圖示有三種：藍色 (Iterator)、橙色 (資料指標) 與綠色 ( [!INCLUDE[tsql](../includes/tsql-md.md)] 語言建構)。|  
+![迭代器 catchall 運算子圖示](../relational-databases/media/iterator-catch-all.gif "迭代器 catchall 運算子圖示")|**Iterator**|產生圖形執行程序表的邏輯若找不到適當的 Iterator 圖示，就會顯示 **Iterator** 雜物箱圖示。 [雜物箱] 圖示不一定會指出錯誤條件。 [雜物箱] 圖示有三種：藍色 (Iterator)、橙色 (資料指標) 與綠色 ( [!INCLUDE[tsql](../includes/tsql-md.md)] 語言建構)。|  
 |![書籤查閱運算子圖示](../relational-databases/media/bookmark-lookup-32x.gif "書籤查閱運算子圖示")|**索引鍵查閱**|「索引鍵查閱」運算子可在包含叢集索引的資料行上進行書籤查閱。 **Argument** 資料行包含叢集索引的名稱和叢集索引鍵，可用來查閱叢集索引中的資料列。 「索引鍵查閱」一律都會伴隨「巢狀迴圈」運算子。 如果 **Argument** 資料行中出現 WITH PREFETCH 子句，表示查詢處理器已決定在叢集索引中查詢書籤時，使用非同步預先提取 (預先讀取) 是最佳方法。<br /><br /> 在查詢計畫中使用「索引鍵查閱」運算子，表示查詢可以進行效能微調。 例如，您可以加入涵蓋索引來提高查詢效能。|  
 |![索引鍵集資料指標運算子圖示](../relational-databases/media/keyset-32x.gif "索引鍵集資料指標運算子圖示")|**索引鍵集**|「索引鍵集」運算子使用可以查看更新，但無法插入其他人所製作的資料指標。|  
 |![語言項目 catchall 圖示](../relational-databases/media/language-construct-catch-all.gif "語言項目 catchall 圖示")|**Language 元素**|「執行程序表」輸出中顯示的 **Language 元素** 雜物箱圖示。 [雜物箱] 圖示不一定會指出錯誤條件。 [雜物箱] 圖示有三種：藍色 (Iterator)、橙色 (資料指標) 與綠色 ( [!INCLUDE[tsql](../includes/tsql-md.md)] 語言建構)。|  
@@ -251,7 +251,7 @@ ms.lasthandoff: 07/31/2017
 |![非叢集索引多工緩衝處理運算子圖示](../relational-databases/media/index-spool-32x.gif "非叢集索引多工緩衝處理運算子圖示")|**索引多工緩衝處理**|「索引多工緩衝處理」實體運算子在 **Argument** 資料行中包含 SEEK:() 述詞。 「索引多工緩衝處理」運算子會掃描其輸入資料列，將每一列的副本放入隱藏的多工緩衝處理檔中 (儲存在 **tempdb** 資料庫中，直到查詢結束就不再存在)，並對資料列建立非叢集索引。 這讓您可以使用索引的搜尋能力來輸出滿足 SEEK:() 述詞的資料列。 如果倒轉運算子 (例如，利用「巢狀迴圈」運算子)，但是不需要重新繫結，會使用多工緩衝處理資料，而非重新掃描輸入。|  
 |![非叢集索引更新運算子圖示](../relational-databases/media/nonclust-index-update-32x.gif "非叢集索引更新運算子圖示")|**非叢集索引更新**|「非叢集索引更新」實體運算子會在 **Argument** 資料行中指定的非叢集索引內，從它的輸入更新資料列。 如果出現 SET:() 述詞，則每個更新的資料行都會設為這個值。 「非叢集索引更新」是實體運算子。|  
 |![線上索引插入運算子圖示](../relational-databases/media/online-index-32x.gif "線上索引插入運算子圖示")|**線上索引插入**|「線上索引插入」實體運算子指出索引之建立、改變或卸除作業將於線上進行。 也就是說，基礎資料表資料在索引操作期間仍然可供使用者使用。|  
-|無|**平行處理原則**|「平行處理原則」運算子會執行散發資料流、蒐集資料流及重新分割資料流的邏輯作業。 **Argument** 資料行可以包含 PARTITION COLUMNS:() 述詞，以及被分割的資料行清單 (以逗點分隔)。 **Argument** 資料行也可以包含 ORDER BY:() 述詞，用以列出分割期間要保留排序順序的資料行。 「平行處理原則」是實體運算子。<br /><br /> <br /><br /> 注意：如果查詢已經編譯為平行查詢，但在執行階段是以序列查詢的方式執行，則由 SET STATISTICS XML 或使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 的 [包括實際執行計畫] 選項所產生的「執行程序表」輸出中，將不會包含「平行處理原則」運算子的 **RunTimeInformation** 元素。 在 SET STATISTICS PROFILE 輸出中，「平行處理原則」運算子的實際資料列計數和實際執行次數會顯示為零。 不論發生的情況為何，都表示「平行處理原則」運算子只用於查詢編譯期間，而不用於執行階段查詢計畫。 請注意，如果伺服器上有大量的並行載入，平行查詢計畫有時會以序列方式執行。|  
+|無|**平行處理原則**|**平行處理原則**運算子 (或交換迭代器) 會執行散發資料流、蒐集資料流及重新分割資料流的邏輯作業。 **Argument** 資料行可以包含 PARTITION COLUMNS:() 述詞，以及被分割的資料行清單 (以逗點分隔)。 **Argument** 資料行也可以包含 ORDER BY:() 述詞，用以列出分割期間要保留排序順序的資料行。 「平行處理原則」是實體運算子。 如需平行處理原則運算子的詳細資訊，請參閱 [Craig Freedman 的部落格系列](http://blogs.msdn.microsoft.com/craigfr/tag/parallelism/) \(英文\)。<br /><br />**注意：**如果查詢已經編譯為平行查詢，但在執行階段是以序列查詢的方式執行，則由 SET STATISTICS XML 或使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 之 [包括實際執行計劃] 選項所產生的「執行程序表」輸出中，將不會包含**平行處理原則**運算子的 **RunTimeInformation** 元素。 在 SET STATISTICS PROFILE 輸出中，「平行處理原則」運算子的實際資料列計數和實際執行次數會顯示為零。 不論發生的情況為何，都表示「平行處理原則」運算子只用於查詢編譯期間，而不用於執行階段查詢計畫。 請注意，如果伺服器上有大量的並行載入，平行查詢計畫有時會以序列方式執行。|  
 |![參數資料表掃描運算子圖示](../relational-databases/media/parameter-table-scan-32x.gif "參數資料表掃描運算子圖示")|**參數資料表掃描**|「參數資料表掃描」運算子會掃描在目前的查詢中當做參數使用的資料表。 一般而言，這是用於預存程序中的 INSERT 查詢。 「參數資料表掃描」是邏輯與實體運算子。|  
 |無|**部分彙總**|「部分彙總」用於平行計畫。 它將彙總函式套用至盡可能最多的輸入資料列，因此不需要寫入磁碟 (稱為「溢出」)。 「雜湊比對」是唯一可以實作資料分割彙總的實體運算子 (Iterator)。 **部分彙總** 是邏輯運算子。|  
 |![母體擴展查詢資料指標運算子圖示](../relational-databases/media/poulation-query-32x.gif "母體擴展查詢資料指標運算子圖示")|**母體擴展查詢**|「母體擴展查詢」運算子會在開啟資料指標時，擴展資料指標的工作資料表。|  
@@ -263,7 +263,7 @@ ms.lasthandoff: 07/31/2017
 |![遠端查詢運算子圖示](../relational-databases/media/remote-query-32x.gif "遠端查詢運算子圖示")|**遠端查詢**|「遠端查詢」運算子會對遠端來源送出查詢。 傳給遠端伺服器的查詢文字會出現在 **Argument** 資料行中。 「遠端查詢」是邏輯與實體運算子。|  
 |![遠端掃描運算子圖示](../relational-databases/media/remote-scan-32x.gif "遠端掃描運算子圖示")|**遠端掃描**|「遠端掃描」運算子會掃描遠端物件。 遠端物件的名稱會出現在 **Argument** 資料行中。 「遠端掃描」是邏輯與實體運算子。|  
 |![遠端更新運算子圖示](../relational-databases/media/remote-update-32x.gif "遠端更新運算子圖示")|**遠端更新**|「遠端更新」運算子會更新遠端物件中的輸入資料列。 「遠端更新」是邏輯與實體運算子。|  
-|![重新分割資料流平行處理原則運算子圖示](../relational-databases/media/parallelism-repartition-stream.gif "重新分割資料流平行處理原則運算子圖示")|**重新分割資料流**|「重新分割資料流」運算子會消耗多個資料流，並產生多個記錄的資料流。 記錄內容與格式不會變更。 如果查詢最佳化工具使用點陣圖篩選，輸出資料流中的資料列數會減少。 輸入資料流的每個資料錄會被放入一個輸出資料流。 如果這個運算子要保留次序，那麼所有輸入資料流都必須排序好，而且合併成數個排序的輸出資料流。 如果輸出經過分割，則 **Argument** 資料行中會包含 PARTITION COLUMNS:() 述詞與分割資料行。如果輸出經過排序，則 **Argument** 資料行中會包含 ORDER BY:() 述詞，以及要排序的資料行。 **重新分割資料流** 是邏輯運算子。 此運算子只用於平行查詢計畫。|  
+|![重新分割資料流平行處理原則運算子圖示](../relational-databases/media/parallelism-repartition-stream.gif "重新分割資料流平行處理原則運算子圖示")|**重新分割資料流**|**重新分割資料流**運算子 (或交換迭代器) 會消耗多個資料流，並產生多個記錄的資料流。 記錄內容與格式不會變更。 如果查詢最佳化工具使用點陣圖篩選，輸出資料流中的資料列數會減少。 輸入資料流的每個資料錄會被放入一個輸出資料流。 如果這個運算子要保留次序，那麼所有輸入資料流都必須排序好，而且合併成數個排序的輸出資料流。 如果輸出經過分割，則 **Argument** 資料行中會包含 PARTITION COLUMNS:() 述詞與分割資料行。如果輸出經過排序，則 **Argument** 資料行中會包含 ORDER BY:() 述詞，以及要排序的資料行。 **重新分割資料流** 是邏輯運算子。 此運算子只用於平行查詢計畫。| 
 |![結果語言項目圖示](../relational-databases/media/result-32x.gif "結果語言項目圖示")|**結果**|「結果」運算子是在查詢計畫結束時所傳回的資料。 這通常是 Showplan 的根元素。 「結果」是語言元素。|  
 |![RID 查閱運算子圖示](../relational-databases/media/rid-nonclust-locate-32x.gif "RID 查閱運算子圖示")|**RID 查閱**|「RID 查閱」是堆積上的書籤查閱，它會使用提供的資料列識別碼 (RID)。 **Argument** 資料行包含書籤標籤，可用以查閱資料表中的資料列，以及已查閱過之資料列的資料表名稱。 「RID 查閱」一律都會伴隨 NESTED LOOP JOIN。 「RID 查閱」是實體運算子。 如需書籤查閱的詳細資訊，請參閱 MSDN SQL Server 部落格中的[書籤查閱](http://go.microsoft.com/fwlink/?LinkId=132568)。|  
 |無|**右方反半聯結**|「右方反半聯結」運算子會在第一個 (上方) 輸入中沒有符合資料列存在時，輸出第二個 (下方) 輸入中的每一列。 相符合的資料列定義是滿足 **Argument** 資料行中述詞的資料列 (如果沒有任何述詞，則每一列都是相符列)。 **右方反半聯結** 是邏輯運算子。|  

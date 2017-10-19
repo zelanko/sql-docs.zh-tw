@@ -1,7 +1,7 @@
 ---
 title: "查詢處理架構指南 | Microsoft Docs"
 ms.custom: 
-ms.date: 05/03/2017
+ms.date: 10/13/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 70401c6607263bb593d11f0551214d227be1a96a
+ms.sourcegitcommit: 246ea9f306c7d99b835c933c9feec695850a861b
+ms.openlocfilehash: 3189dade2df1e1767ba26263960a59d6b8241aa4
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/07/2017
+ms.lasthandoff: 10/13/2017
 
 ---
 # <a name="query-processing-architecture-guide"></a>查詢處理架構指南
@@ -64,7 +64,7 @@ ms.lasthandoff: 09/07/2017
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢最佳化工具並不僅是選擇最低資源成本的執行計畫，也選擇傳回給使用者的結果中，具合理的資源成本，以及傳回結果速度最快的計畫。 例如，一般平行處理查詢時，需使用比循序處理時使用更多的資源，但完成的速度較快。 如果伺服器的負載不會受到負面的影響，則 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢最佳化工具將會使用平行執行計畫來傳回結果。
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢最佳化工具在估計以不同方法擷取資料表或索引中資訊的資源成本時，是根據散發統計資料。 散發統計資料適用於資料行和索引。 他們可指出特殊索引或資料行中值的選擇性。 例如，在表示車種的資料表中，許多車種的製造商都是相同的，但每輛車都有一個唯一的汽車識別號碼。 因此索引 VIN 比索引製造商更具選擇性。 如果目前沒有索引統計資料，則最佳化工具可能無法針對目前的資料表狀態做出最佳選擇。 如需讓索引統計資料保持最新的詳細資訊，請參閱＜使用統計資料來改善查詢效能＞。 
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢最佳化工具在估計以不同方法擷取資料表或索引中資訊的資源成本時，是根據散發統計資料。 散發統計資料適用於資料行和索引。 他們可指出特殊索引或資料行中值的選擇性。 例如，在表示車種的資料表中，許多車種的製造商都是相同的，但每輛車都有一個唯一的汽車識別號碼。 因此索引 VIN 比索引製造商更具選擇性。 如果目前沒有索引統計資料，則最佳化工具可能無法針對目前的資料表狀態做出最佳選擇。 如需讓索引統計資料保持最新的詳細資訊，請參閱[統計資料](../relational-databases/statistics/statistics.md)。 
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢最佳化工具非常重要，因為它可以讓資料庫伺服器隨著資料庫中的狀況變更來進行動態調整，而不需要由程式設計人員或資料庫管理員來輸入。 這樣程式設計師便不用將焦點集中在描述查詢的最後結果。 他們可以相信每次執行陳述式時，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢最佳化工具將依資料庫的狀態建立最有效率的執行計畫。
 
@@ -384,6 +384,7 @@ SELECT *
 FROM AdventureWorks2014.Production.Product 
 WHERE ProductSubcategoryID = 1;
 ```
+
 ```tsql
 SELECT * 
 FROM AdventureWorks2014.Production.Product 
@@ -1037,4 +1038,5 @@ GO
  [擴充事件](../relational-databases/extended-events/extended-events.md)  
  [使用查詢存放區的最佳作法](../relational-databases/performance/best-practice-with-the-query-store.md)  
  [基數估計](../relational-databases/performance/cardinality-estimation-sql-server.md)  
+ [彈性查詢處理](../relational-databases/performance/adaptive-query-processing.md)
 

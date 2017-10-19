@@ -18,10 +18,10 @@ ms.topic: article
 ms.date: 08/07/2017
 ms.author: rebeccaz
 ms.translationtype: HT
-ms.sourcegitcommit: 46b16dcf147dbd863eec0330e87511b4ced6c4ce
-ms.openlocfilehash: fddb53ecae2ab1f15ba50a42ea59f30bff740804
+ms.sourcegitcommit: 54e4c8309c290255cb2885fab04bb394bc453046
+ms.openlocfilehash: 2950cf2e403cd0afd337c1578d7bbe656f2a6e53
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/05/2017
+ms.lasthandoff: 10/16/2017
 
 --- 
 
@@ -141,7 +141,7 @@ ms.lasthandoff: 09/05/2017
 
 為確保快速修復金鑰，並且能夠在 Azure 之外存取資料，我們建議︰
 - 在本機 HSM 裝置上，本機建立加密金鑰。 (請確定這是非對稱的 RSA 2048 金鑰，以便它可存放在 Azure Key Vault。)
-- 將加密金鑰檔案 (.pfx、.byok 或 .backup) 匯入 Azure Key Vault。 
+- 將加密金鑰檔案 (.pfx、.byok 或 .backup) 匯入 Azure Key Vault。 請考慮使用已啟用 [soft-delete](https://docs.microsoft.com/azure/key-vault/key-vault-ovw-soft-delete) 的金鑰保存庫，以確保在意外刪除金鑰時能夠取得復原保護。
 - 第一次使用 Azure 金鑰保存庫中的金鑰之前，請先備份 Azure 金鑰保存庫金鑰。 深入了解 [Backup-AzureKeyVaultKey](https://msdn.microsoft.com/library/mt126292.aspx) 命令。
 - 每當對金鑰進行任何變更時 (例如新增 ACL、新增標籤、新增金鑰屬性)，請務必先另行備份 Azure Key Vault 金鑰。
 - 金鑰變換期間，請在金鑰保存庫中**保留舊版金鑰**，以便可以還原較舊的資料庫備份。 

@@ -1,7 +1,7 @@
 ---
 title: "匯入和匯出 SQL Server 和 Azure SQL Database 的資料 | Microsoft Docs"
 ms.custom: 
-ms.date: 09/12/2017
+ms.date: 10/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -13,10 +13,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 6e754198cf82a7ba0752fe8f20c3780a8ac551d7
-ms.openlocfilehash: 3c41be0642b13b63367c5601b716b506808472e7
+ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
+ms.openlocfilehash: 1d37d86ab2e2bac04ceb8ce36fad63ae25f0f92b
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 10/18/2017
 
 ---
 # <a name="import-and-export-data-from-sql-server-and-azure-sql-database"></a>匯入和匯出 SQL Server 和 Azure SQL Database 的資料
@@ -31,6 +31,11 @@ ms.lasthandoff: 09/14/2017
 
 ### <a name="use-bcp-from-the-command-prompt"></a>從命令提示字元使用 BCP
 您可以使用 BCP 命令列公用程式匯入和匯出資料。 如需詳細資訊，請參閱[使用 bcp 公用程式匯入及匯出大量資料](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)。
+
+### <a name="use-the-import-flat-file-wizard"></a>使用「匯入一般檔案精靈」
+如果您不需要使用「匯入及匯出精靈」和其他工具中的所有設定選項，則可以使用 SQL Server Management Studio (SSMS) 中的**匯入一般檔案精靈**將文字檔匯入 SQL Server。 如需詳細資訊，請參閱下列文章：
+- [SQL Server Management Studio 17.3 的新功能](https://blogs.technet.microsoft.com/dataplatforminsider/2017/10/10/whats-new-in-sql-server-management-studio-17-3/) \(英文\)
+- [在 SSMS 17.3 中新推出的「匯入一般檔案精靈」簡介](https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-new-Import-Flat-File-Wizard-in-SSMS-173) \(英文\)
 
 ### <a name="use-the-sql-server-import-and-export-wizard"></a>使用 SQL Server 匯入和匯出精靈
 您可以使用 [SQL Server 匯入和匯出精靈] 從各種不同的來源和目的地匯入資料或匯出資料。 若要使用精靈，您必須安裝 SQL Server Integration Services (SSIS) 或 SQL Server Data Tools (SSDT)。 如需詳細資訊，請參閱[使用 SQL Server 匯入和匯出精靈匯入和匯出資料](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)。

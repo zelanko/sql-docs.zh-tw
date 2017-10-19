@@ -21,10 +21,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 4d56a0bb3893d43943478c6d5addb719ea32bd10
-ms.openlocfilehash: fe23cb7ab3fbc0461f0c0853aedaa4444e4bb543
+ms.sourcegitcommit: 8cc1fcfdeae8742a93916dfb08c9db1215f88721
+ms.openlocfilehash: 2a25a75485ecfb5bae812b01f142a9650ce2933c
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/16/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="deterministic-and-nondeterministic-functions"></a>決定性與非決定性函數
@@ -35,7 +35,7 @@ ms.lasthandoff: 08/16/2017
  此主題會識別內建系統函數的決定性，以及當使用者自訂函數的具決定性屬性包含擴充預存程序的呼叫時，所造成的影響。  
   
 ## <a name="built-in-function-determinism"></a>內建函數決定性  
- 您無法影響任何內建函數的決定論。 每個內建函數屬於具決定性或不具決定性，主要取決於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]實作函數的方式。 例如，在查詢中指定 ORDER BY 子句不會變更該查詢所使用之函數的決定性。  
+ 您無法影響任何內建函數的決定論。 每個內建函數屬於具決定性或不具決定性，主要取決於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]實作函數的方式。 例如，在查詢中指定 ORDER BY 子句不會變更該查詢所使用之函式的決定性。  
   
  所有的字串內建函數都具有決定性。 如需這些函數的清單，請參閱[字串函數 &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)。  
   

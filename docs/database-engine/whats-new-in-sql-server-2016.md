@@ -20,10 +20,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 0feecce7b6f80df96d77273863ca1873bd74523e
+ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
+ms.openlocfilehash: 687bddd3ce51c60e286cfa0e2634790a8a492500
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/18/2017
 
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>資料庫引擎的新功能 - SQL Server 2016
@@ -349,7 +349,8 @@ SQL Server 2016 新增對匯入和匯出 JSON 以及使用 JSON 字串的內建�
 - [ALTER TABLE &#40;Transact-SQL&#41;](../t-sql/statements/alter-table-transact-sql.md) 現在允許在資料表仍可使用時，執行多個改變資料行動作。
 - 全文檢索索引 DMV [sys.dm_fts_index_keywords_position_by_document &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-position-by-document-transact-sql.md) 會傳回文件中關鍵字的位置。 此 DMV 也已加入 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] SP2 和 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] SP1 中。
 - 新的查詢提示 **NO_PERFORMANCE_SPOOL** 可以防止多工緩衝處理運算子加入查詢計劃。 這可以改善利用多工緩衝處理作業執行許多並行查詢時的效能。 如需詳細資訊，請參閱[查詢提示 &#40;Transact-SQL&#41;](../t-sql/queries/hints-transact-sql-query.md)。
-- 增強 [FORMATMESSAGE &#40;Transact-SQL&#41;](../t-sql/functions/formatmessage-transact-sql.md) 陳述式以接受 msg_string 引數。非叢集索引的索引鍵大小上限已增加至 1700 個位元組。
+- [FORMATMESSAGE &#40;Transact-SQL&#41;](../t-sql/functions/formatmessage-transact-sql.md) 陳述式已增強以接受 msg_string 引數。
+- NONCLUSTERED 索引的索引金鑰大小上限已提升至 1700 個位元組。
 - 針對與 AGGREGATE、ASSEMBLY、COLUMN、CONSTRAINT、DATABASE、DEFAULT、FUNCTION、INDEX、PROCEDURE、ROLE、RULE、SCHEMA、SECURITY POLICY、SEQUENCE、SYNONYM、TABLE、TRIGGER、TYPE、USER 和 VIEW 相關的 DROP 陳述式加入新的 DROP IF 語法。 請參閱個別語法主題中的語法。
 - MAXDOP 選項已加入 [DBCC CHECKTABLE &#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-checktable-transact-sql.md)、[DBCC CHECKDB &#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) 和 [DBCC CHECKFILEGROUP &#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-checkfilegroup-transact-sql.md)，以便指定平行處理原則的程度。
 - 現在可以設定 SESSION_CONTEXT。 包含 [SESSION_CONTEXT &#40;Transact-SQL&#41;](../t-sql/functions/session-context-transact-sql.md) 函數、[CURRENT_TRANSACTION_ID &#40;Transact-SQL&#41;](../t-sql/functions/current-transaction-id-transact-sql.md) 函數和 [sp_set_session_context &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md) 程序。

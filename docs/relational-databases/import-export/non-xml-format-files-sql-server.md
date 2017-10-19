@@ -18,11 +18,11 @@ caps.latest.revision: 63
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7593a0015328cba74de239f55575217687ff5193
+ms.translationtype: HT
+ms.sourcegitcommit: 560965a241b24a09f50a23faf63ce74d0049d5a7
+ms.openlocfilehash: 990578bd6e9efd4e29f5db35fad27089b04512d5
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 10/13/2017
 
 ---
 # <a name="non-xml-format-files-sql-server"></a>非 XML 格式檔案 (SQL Server)
@@ -46,7 +46,7 @@ ms.lasthandoff: 06/22/2017
   
 -   您可以為特定資料類型 (如字元資料或原生資料) 建立格式檔案。  
   
-     您可以建立非 XML 格式檔案，其中包含以互動方式，針對每個資料欄位所指定的屬性。 如需詳細資訊，請參閱[使用 bcp 時指定相容性的資料格式 &#40;SQL Server&#41;](../../relational-databases/import-export/specify-data-formats-for-compatibility-when-using-bcp-sql-server.md)。  
+-   您可以建立非 XML 格式檔案，其中包含以互動方式，針對每個資料欄位所指定的屬性。 如需詳細資訊，請參閱[使用 bcp 時指定相容性的資料格式 &#40;SQL Server&#41;](../../relational-databases/import-export/specify-data-formats-for-compatibility-when-using-bcp-sql-server.md)。  
   
 > [!NOTE]  
 >  XML 格式檔案提供了許多優於非 XML 格式檔案的優點。 如需詳細資訊，請參閱 [XML 格式檔案 &#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md)。  
@@ -56,7 +56,7 @@ ms.lasthandoff: 06/22/2017
   
  下圖說明非 XML 格式範例檔案的格式檔案欄位。  
   
- ![識別非 XML 格式檔案的欄位](../../relational-databases/import-export/media/mydepart-fmt-ident-c.gif "識別非 XML 格式檔案的欄位")  
+ ![識別非 XML 格式檔案的欄位](../../relational-databases/import-export/media/mydepart-fmt-ident-c.gif)
   
  **Version** 和 **Number of columns** 欄位只出現一次。 下表描述其意義。  
   

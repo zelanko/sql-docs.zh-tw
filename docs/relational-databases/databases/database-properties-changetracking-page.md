@@ -16,11 +16,11 @@ caps.latest.revision: 13
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2aab898a267244d585d1d09bc66eaca4814895a1
+ms.translationtype: HT
+ms.sourcegitcommit: 1c55b7b8b39e7b1ec296ee529bc66d2e14256994
+ms.openlocfilehash: 6edc4a6d0a4a72e8cec739b78419ce8ce3b4f6cc
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 10/12/2017
 
 ---
 # <a name="database-properties-changetracking-page"></a>資料庫屬性 (變更追蹤頁面)
@@ -37,7 +37,7 @@ ms.lasthandoff: 06/22/2017
  您也可以使用 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md)設定變更追蹤。  
   
  **保留週期**  
- 指定在資料庫中保存變更追蹤資訊的最小週期。 只有當 [自動清除] 值為 [True] 時，才會移除資料。  
+ 指定在資料庫中保存變更追蹤資訊的最小週期。 只有當**自動清除**值為 **True** 時，才會移除資料。  
   
  預設值為 2。  
   

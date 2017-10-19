@@ -21,10 +21,10 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
-ms.openlocfilehash: 240e02e3dd0d40f53f8436e241af228b503a43d9
+ms.sourcegitcommit: 1c55b7b8b39e7b1ec296ee529bc66d2e14256994
+ms.openlocfilehash: aa1563089c53ca7cbc972bd27597f3a86006f48a
 ms.contentlocale: zh-tw
-ms.lasthandoff: 10/06/2017
+ms.lasthandoff: 10/12/2017
 
 ---
 # <a name="polybase-troubleshooting"></a>PolyBase, 疑難排解
@@ -224,7 +224,7 @@ ms.lasthandoff: 10/06/2017
  ## <a name="known-limitations"></a>已知限制
  
  PolyBase 具有下列限制： 
- - 可能的最大資料列大小 (包括可變長度資料行的完整長度) 不能超過 1 MB。 
+ - 可能的最大資料列大小 (包括變數長度資料行的完整長度) 在 SQL Server 中不能超過 32 KB，而在 Azure SQL 資料倉儲中則不能超過 1 MB。 
  - PolyBase 不支援 Hive 0.12 以上的資料類型 (也就是 Char()、VarChar())   
  - 將資料從 SQL Server 或 Azure SQL 資料倉儲匯出為 ORC 檔案格式時，可以將具有大量文字的資料行限制為最少 50 個資料行，因為會發生 Java 記憶體不足錯誤。 若要解決這個問題，只需要匯出資料行的子集。
  - 無法讀取或寫入在 Hadoop 中靜止加密的資料， 包括 HDFS 加密區域或透明加密。

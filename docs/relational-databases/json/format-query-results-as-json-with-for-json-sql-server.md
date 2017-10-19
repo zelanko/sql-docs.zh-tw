@@ -20,10 +20,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
-ms.openlocfilehash: bfda43cbc97a641a5e2654f7cb4c92cdddaf1532
+ms.sourcegitcommit: 560965a241b24a09f50a23faf63ce74d0049d5a7
+ms.openlocfilehash: 8ee99c52515908e93a44e936504fd8ccbd74793f
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 10/13/2017
 
 ---
 # <a name="format-query-results-as-json-with-for-json-sql-server"></a>使用 FOR JSON 將查詢結果格式化為 JSON (SQL Server)
@@ -39,14 +39,14 @@ ms.lasthandoff: 07/31/2017
   
 以下是含 **FOR JSON** 子句的 **SELECT** 陳述式範例和其輸出。
   
- ![FOR JSON](../../relational-databases/json/media/jsonslides2forjson.png "FOR JSON")  
+ ![FOR JSON](../../relational-databases/json/media/jsonslides2forjson.png)
   
 ## <a name="option-1---you-control-output-with-for-json-path"></a>選項 1 - 使用 FOR JSON PATH 控制輸出
 在 **PATH** 模式中，您可以使用點語法 (例如 `'Item.Price'` ) 來格式化巢狀的輸出。  
 
 以下是使用 **PATH** 模式搭配 **FOR JSON** 子句的範例。 下列範例也會使用 **ROOT** 選項來指定具名根項目。 
   
- ![FOR JSON 輸出流程圖表](../../relational-databases/json/media/forjson-example1.png "FOR JSON 輸出流程圖表")  
+ ![FOR JSON 輸出的流程圖表](../../relational-databases/json/media/forjson-example1.png) 
 
 ### <a name="more-info-about-for-json-path"></a>FOR JSON PATH 的詳細資訊
 如需詳細資訊和範例，請參閱[以 PATH 模式格式化巢狀 JSON 輸出 &#40;SQL Server&#41;](../../relational-databases/json/format-nested-json-output-with-path-mode-sql-server.md)。
@@ -102,7 +102,7 @@ FOR JSON AUTO
         -   根據預設，SQL Server Management Studio (SSMS) 會在輸出設定為 [以方格顯示結果] 時，將結果串連成單一資料列。 SSMS 的狀態列會顯示實際資料列計數。
         -   其他用戶端應用程式可能需要程式碼，藉由串連多個資料列的內容，來將較長的結果重新合併成有效的單一 JSON 字串。 如需這個程式碼在 C# 應用程式中的範例，請參閱[在 C# 用戶端應用程式中使用 FOR JSON 輸出](https://docs.microsoft.com/en-us/sql/relational-databases/json/use-for-json-output-in-sql-server-and-in-client-apps-sql-server#use-for-json-output-in-a-c-client-app)。
   
-     ![FOR JSON 輸出範例](../../relational-databases/json/media/forjson-example2.png "FOR JSON 輸出範例")  
+     ![FOR JSON 輸出的範例](../../relational-databases/json/media/forjson-example2.png)  
   
 2.  結果會格式化為 JSON 物件陣列。  
   
@@ -148,14 +148,15 @@ FOR JSON AUTO
 ```  
 
  如需您在 **FOR JSON** 子句輸出中所看到之項目的詳細資訊，請參閱下列主題。  
+
 -   [FOR JSON 如何將 SQL Server 資料類型轉換為 JSON 資料類型 &#40;SQL Server&#41;](../../relational-databases/json/how-for-json-converts-sql-server-data-types-to-json-data-types-sql-server.md)  
-**FOR JSON** 子句使用本主題中描述的規則，在 JSON 輸出中將 SQL 資料類型轉換為 JSON 類型。  
+    **FOR JSON** 子句使用本主題中描述的規則，在 JSON 輸出中將 SQL 資料類型轉換為 JSON 類型。  
 
 -   [FOR JSON 如何逸出特殊字元和控制字元 &#40;SQL Server&#41;](../../relational-databases/json/how-for-json-escapes-special-characters-and-control-characters-sql-server.md)  
- **FOR JSON** 子句會逸出特殊字元，並在 JSON 輸出中代表控制字元，如本主題中所描述。  
+    **FOR JSON** 子句會逸出特殊字元，並在 JSON 輸出中代表控制字元，如本主題中所描述。  
 
 ## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>深入了解 SQL Server 中的內建 JSON 支援  
-如需更多特定的解決方案、使用案例和建議，請參閱 SQL Server 和 Azure SQL Database 中 Microsoft 經理專案 Jovan Popovic 所撰寫的[有關內建 JSON 支援的部落格文章](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)。
+對於大量的特定解決方案、使用案例和建議，請參閱 SQL Server 和 Azure SQL Database 中 Microsoft 經理專案 Jovan Popovic 所撰寫的[有關內建 JSON 支援的部落格文章](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)。
   
 ## <a name="see-also"></a>另請參閱  
  [FOR 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-for-clause-transact-sql.md)   
