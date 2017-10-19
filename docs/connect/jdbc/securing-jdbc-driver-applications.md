@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e8033e1690fcaa01ca73ce1a7d0d9972ac2d3ba9
+ms.sourcegitcommit: 5051d2d668105bd0a309eb64f2b8becd459d8a6b
+ms.openlocfilehash: 097978fa39709dc3c5cd1b8ef150ce4f4c189b17
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 10/12/2017
 
 ---
 # <a name="securing-jdbc-driver-applications"></a>保護 JDBC Driver 應用程式
@@ -36,9 +36,10 @@ ms.lasthandoff: 09/09/2017
 |[驗證使用者輸入](../../connect/jdbc/validating-user-input.md)|描述驗證使用者輸入的技術。|  
 |[應用程式安全性](../../connect/jdbc/application-security.md)|描述如何使用 Java 原則權限協助保護 JDBC 驅動程式應用程式。|  
 |[使用 SSL 加密](../../connect/jdbc/using-ssl-encryption.md)|描述如何建立使用安全通訊通道[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料庫使用安全通訊端層 (SSL)。|  
-|[在 FIPS 模式](../../connect/jdbc/fips-mode.md)|描述如何在 FIPS complainant 模式中使用 JDBC 驅動程式。| 
+|[FIPS 模式](../../connect/jdbc/fips-mode.md)|描述如何在 FIPS 相容模式中使用 JDBC 驅動程式。| 
   
 ## <a name="see-also"></a>另請參閱  
- [JDBC 驅動程式概觀](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+ [JDBC Driver 概觀](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   
+

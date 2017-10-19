@@ -1,7 +1,7 @@
 ---
 title: "如何執行即時計分或 SQL Server 中的原生計分 |Microsoft 文件"
 ms.custom: 
-ms.date: 08/20/2017
+ms.date: 10/16/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -13,15 +13,15 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 2a72ac24f681d562adc7b43f02a4e91cdeb80bbc
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: 175a9bc664a2032d828ca790312920339f971b9b
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="how-to-perform-realtime-scoring-or-native-scoring-in-sql-server"></a>如何執行即時計分或 SQL Server 中的原生計分
 
-本主題提供如何執行即時計分和 SQL Server 2016 和 SQL Server 2017 中的原生計分功能的指示和範例程式碼。 同時即時計分和原生計分的目標是要提升以小型批次計分作業的效能。
+本主題提供如何執行即時計分和 SQL Server 2017 和 SQL Server 2016 中的原生計分功能的指示和範例程式碼。 同時即時計分和原生計分的目標是要提升以小型批次計分作業的效能。
 
 同時即時計分和原生計分設計為可讓您使用的機器學習模型，而不需要安裝。您只需要為取得預先定型的模型，以相容的格式，並將它儲存在 SQL Server 資料庫。
 
@@ -30,11 +30,11 @@ ms.lasthandoff: 09/01/2017
 下列選項可支援快速的批次預測：
 
 + **原生計分**: SQL Server 2017 T-SQL 預測函式
-+ **即時計分**： 在 SQL Server 2016 或 SQL Server 2017 使用 sp_rxPredict 預存程序。
++ **即時計分**： 使用 sp\_rxPredict 中 SQL Server 2016 或 SQL Server 2017 預存程序。
 
 > [!NOTE]
 > 在 SQL Server 2017，建議使用預測函數。
-> 若要使用 sp_rxPredict 需要您啟用 SQLCLR 整合。 啟用此選項之前，請考慮的安全性含意。
+> 若要使用預存程序\_rxPredict 需要啟用 SQLCLR 整合。 啟用此選項之前，請考慮的安全性含意。
 
 正在準備模型，並接著分數的整體程序是非常類似：
 
@@ -49,7 +49,7 @@ ms.lasthandoff: 09/01/2017
 
 + 如果使用預存程序\_rxPredict，一些額外的步驟所需。 請參閱[啟用即時計分](#bkmk_enableRtScoring)。
 
-+ 在撰寫本文時，只有 RevoScaleR 和 MicrosoftML 可以建立相容的模型。 其他的模型型別可能會在未來。 如需目前支援的演算法的清單，請參閱[即時計分](../real-time-scoring.md)。
++ 此時，只有 RevoScaleR 和 MicrosoftML 可以建立相容的模型。 其他的模型型別可能會在未來。 如需目前支援的演算法的清單，請參閱[即時計分](../real-time-scoring.md)。
 
 ### <a name="serialization-and-storage"></a>序列化和儲存體
 
@@ -80,7 +80,7 @@ ms.lasthandoff: 09/01/2017
 
 ## <a name="native-scoring-with-predict"></a>原生與預測計分
 
-在此範例中，您將建立模型，然後呼叫 T-SQL 即時預測函數。
+在此範例中，建立模型，然後呼叫 T-SQL 即時預測函數。
 
 ### <a name="step-1-prepare-and-save-the-model"></a>步驟 1： 準備並儲存模型
 
@@ -159,7 +159,7 @@ FROM ml_models;
 DECLARE @model varbinary(max) = (
   SELECT native_model_object
   FROM ml_models
-  WHERE model_name = 'iris.dtree.model'
+  WHERE model_name = 'iris.dtree'
   AND model_version = 'v1');
 SELECT d.*, p.*
   FROM PREDICT(MODEL = @model, DATA = dbo.iris_rx_data as d)
@@ -181,7 +181,7 @@ go
 您必須啟用每個資料庫，您想要用於計分這項的功能。 伺服器系統管理員應該執行的命令列公用程式，RegisterRExt.exe 隨附 RevoScaleR 封裝。
 
 > [!NOTE]
-> 為了讓即時計分工作，SQL CLR 功能，才能啟用執行個體中，資料庫必須標示為值得信任。 當您執行指令碼時，讓您執行這些動作。 不過，您應該考慮這麼做的額外的安全性含意。
+> 為了讓即時計分工作，SQL CLR 功能，才能啟用執行個體中，資料庫必須標示為值得信任。 當您執行指令碼時，讓您執行這些動作。 不過，您應該考慮的額外的安全性含意。
 
 1. 開啟提升權限的命令提示字元並瀏覽至 RegisterRExt.exe 所在的資料夾。 在預設安裝中可用的下列路徑：
     
@@ -209,12 +209,9 @@ go
 > 
 > 在 SQL Server 2017，其他安全性量值都位於來防止 CLR 整合的問題。 這些量值會使用這個預存程序以及其他限制。
 
-
 ### <a name="step-2-prepare-and-save-the-model"></a>步驟 2： 準備並儲存模型
 
-預存程序所需的二進位格式\_rxPredict 是相同的預測。
-
-因此，在 R 程式碼中包含對[rxSerializeModel](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxserializemodel)，而且一定要指定_realtimeScoringOnly_ = TRUE，如此範例所示：
+預存程序所需的二進位格式\_rxPredict 是相同的預測。 因此，在 R 程式碼中包含對[rxSerializeModel](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxserializemodel)，而且一定要指定_realtimeScoringOnly_ = TRUE，如此範例所示：
 
 ```R
 model <- rxSerializeModel(model.name, realtimeScoringOnly = TRUE)
@@ -222,7 +219,7 @@ model <- rxSerializeModel(model.name, realtimeScoringOnly = TRUE)
 
 ### <a name="step-3-call-sprxpredict"></a>步驟 3： 呼叫 sp_rxPredict
 
-呼叫 sp_rxPredict 如同任何其他預存程序呼叫。 在目前版本中，預存程序會採用只有兩個參數：  _@model_ 的二進位格式，模型和 _@inputData_ 用於計分的資料定義為有效的 SQL 查詢.
+您呼叫 sp\_rxPredict，就像其他任何預存程序。 在目前版本中，預存程序會採用只有兩個參數：  _@model_ 的二進位格式，模型和 _@inputData_ 用於計分的資料定義為有效的 SQL 查詢.
 
 二進位格式中都相同，以供預測函式，因為您可以使用前面範例中模型和資料的資料表。
 
@@ -238,17 +235,22 @@ EXEC sp_rxPredict
 
 > [!NOTE]
 > 
-> 若要呼叫`sp_rxPredict`如果計分的輸入的資料不包含符合的需求之模型的資料行就會失敗。 目前支援只能使用下列的.NET 資料類型： 雙精確度、 float、 short、 ushort、 long、 ulong 和字串。
+> 預存程序呼叫\_rxPredict 失敗時，如果計分的輸入的資料不包含符合的需求之模型的資料行。 目前支援只能使用下列的.NET 資料類型： 雙精確度、 float、 short、 ushort、 long、 ulong 和字串。
 > 
 > 因此，您可能需要篩選出您的輸入資料中不支援的型別，才能將它用於即時計分。
 > 
 > 如需對應的 SQL 型別資訊，請參閱[SQL CLR 類型對應](https://msdn.microsoft.com/library/bb386947.aspx)或[對應 CLR 參數資料](https://docs.microsoft.com/sql/relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data)。
 
-### <a name="disable-realtime-scoring"></a>停用即時計分
+## <a name="disable-realtime-scoring"></a>停用即時計分
 
 若要停用即時計分功能，請開啟提升權限的命令提示字元並執行下列命令：`RegisterRExt.exe /uninstallrts /database:<database_name> [/instance:name]`
 
-### <a name="realtime-scoring-in-microsoft-r-server"></a>即時 Microsoft R Server 的計分方法
+## <a name="realtime-scoring-in-microsoft-r-server-or-machine-learning-server"></a>即時 Microsoft R Server 或 Server 機器學習的計分方法
 
-如需有關即時資訊計分在分散式環境中根據 Microsoft R Server，請參閱[publishService](https://msdn.microsoft.com/microsoft-r/mrsdeploy/packagehelp/publishservice)函式用於[mrsDeploy 封裝](https://msdn.microsoft.com/microsoft-r/mrsdeploy/mrsdeploy)，支援發行為新計分 R 伺服器上執行的 web 服務的即時的模型。
+機器學習 Server 支援分散式的即時計分模型發佈為 web 服務。 如需詳細資訊，請參閱下列文章：
 
++ [機器學習伺服器中的 web 服務有哪些？](https://docs.microsoft.com/machine-learning-server/operationalize/concept-what-are-web-services)
++ [實施是什麼？](https://docs.microsoft.com/machine-learning-server/operationalize/concept-operationalize-deploy-consume)
++ [Python 模型部署為 web 服務與 azureml 模型-管理 sdk](https://docs.microsoft.com/machine-learning-server/operationalize/python/quickstart-deploy-python-web-service)
++ [將 R 程式碼區塊或即時模型發行為新的 web 服務](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/publishservice)
++ [R 的 mrsdeploy 封裝](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/mrsdeploy-package)

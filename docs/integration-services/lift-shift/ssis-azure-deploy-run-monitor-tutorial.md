@@ -9,10 +9,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
-ms.openlocfilehash: c2dbdf818ef15dc97020dd7b35f88cfa080537d3
+ms.sourcegitcommit: 560965a241b24a09f50a23faf63ce74d0049d5a7
+ms.openlocfilehash: 2e16666c412870cc55024e7156752f43ddbc1800
 ms.contentlocale: zh-tw
-ms.lasthandoff: 10/06/2017
+ms.lasthandoff: 10/13/2017
 
 ---
 # <a name="deploy-run-and-monitor-an-ssis-package-on-azure"></a>部署、 執行和監視 Azure 上的 SSIS 封裝
@@ -22,7 +22,7 @@ ms.lasthandoff: 10/06/2017
 
 開始之前，請確定您有 17.2 或更新版本的 SQL Server Management Studio 的版本。 若要下載最新版本的 SSMS，請參閱[下載 SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
 
-也請確定您已將 SSISDB 資料庫設定和佈建 Azure SSIS 整合執行階段。 如需如何在 Azure 上的 SSIS 佈建資訊，請參閱[增益及 shift SQL Server Integration Services (SSIS) 封裝至 Azure](https://docs.microsoft.com/en-us/azure/tutorial-deploy-ssis-packages-azure)。
+也請確定您已將 SSISDB 資料庫設定和佈建 Azure SSIS 整合執行階段。 如需如何在 Azure 上的 SSIS 佈建資訊，請參閱[增益及 shift SQL Server Integration Services (SSIS) 封裝至 Azure](https://docs.microsoft.com/en-us/azure/data-factory/tutorial-deploy-ssis-packages-azure)。
 
 ## <a name="connect-to-the-ssisdb-database"></a>連接到 SSISDB 資料庫
 

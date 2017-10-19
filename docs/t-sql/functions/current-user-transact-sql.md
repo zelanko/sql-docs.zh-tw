@@ -26,10 +26,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9edbc344723da335de150f5e829820eaef1d983e
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: 7fbb100c34c2a8b1b33a585cb5ead6aaca56f0d8
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="currentuser-transact-sql"></a>CURRENT_USER (Transact-SQL)
@@ -135,15 +135,6 @@ Wanida
 Arnalfo
 Wanida
 ```
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### <a name="d-using-currentuser-to-return-the-current-user-name"></a>D： 使用 CURRENT_USER 傳回目前的使用者名稱  
-下列範例會傳回目前使用者的名稱。
-  
-```sql
-SELECT CURRENT_USER;  
-```  
   
 ## <a name="see-also"></a>另請參閱
 [USER_NAME &#40;TRANSACT-SQL &#41;](../../t-sql/functions/user-name-transact-sql.md)  

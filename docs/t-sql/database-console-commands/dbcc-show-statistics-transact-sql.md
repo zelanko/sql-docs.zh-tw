@@ -37,10 +37,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 03651b89f8cc8b7694e9e07531804053e64568ac
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: 38abfb552f1bb969c132d5086ca007d36541a76c
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="dbcc-showstatistics-transact-sql"></a>DBCC SHOW_STATISTICS (Transact-SQL)
@@ -190,10 +190,10 @@ GO
 ```  
   
 ### <a name="b-specifying-the-histogram-option"></a>B. 指定 HISTOGRAM 選項  
-下列範例會限制 HISTOGRAM 資料之 `AK_Address_rowguid` 索引所顯示的統計資料資訊。
+這會限制針對 Customer_LastName 顯示長條圖資料的統計資料資訊。
   
 ```t-sql
-DBCC SHOW_STATISTICS ("Person.Address", AK_Address_rowguid) WITH HISTOGRAM;  
+DBCC SHOW_STATISTICS ("dbo.DimCustomer",Customer_LastName) WITH HISTOGRAM;  
 GO  
 ```  
   
@@ -214,14 +214,6 @@ GO
 結果會顯示標頭、 密度向量和長條圖的一部分。
   
 ![DBCC SHOW_STATISTICS 結果](../../t-sql/database-console-commands/media/aps-sql-dbccshow-statistics.JPG "DBCC SHOW_STATISTICS 結果")
-  
-### <a name="d-specifying-the-histogram-option"></a>D. 指定 HISTOGRAM 選項  
-這會限制針對 Customer_LastName 顯示長條圖資料的統計資料資訊。
-  
-```t-sql
-DBCC SHOW_STATISTICS ("dbo.DimCustomer",Customer_LastName) WITH HISTOGRAM;  
-GO  
-```  
   
 ## <a name="see-also"></a>另請參閱  
 [統計資料](../../relational-databases/statistics/statistics.md)  

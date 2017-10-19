@@ -17,10 +17,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e604c8c55cfa0bdb977840ee742d062573abeeeb
+ms.sourcegitcommit: 560965a241b24a09f50a23faf63ce74d0049d5a7
+ms.openlocfilehash: 93fbd5e9429d06e3f011f6f0aff03d76a3db9000
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/26/2017
+ms.lasthandoff: 10/13/2017
 
 ---
 # <a name="configure-flat-file-destination-sql-server-import-and-export-wizard"></a>設定一般檔案目的地 (SQL Server 匯入和匯出精靈)
@@ -33,7 +33,7 @@ ms.lasthandoff: 09/26/2017
 -   **資料列分隔符號**。 每個輸出中的資料列結尾歸位換行字元組合。
 -   **資料行分隔符號**。 資料行中每個資料列的資料會以逗號分隔。
 
- ![設定一般檔案 頁面的匯入和匯出精靈](../../integration-services/import-export-data/media/flat-file.png "設定一般檔案 頁面的匯入和匯出精靈")  
+ ![設定一般檔案匯入和匯出精靈 頁面](../../integration-services/import-export-data/media/flat-file.png)
   
 ## <a name="pick-a-source-table"></a>挑選來源資料表
  **來源資料表或檢視表**  
@@ -81,7 +81,7 @@ ms.lasthandoff: 09/26/2017
 **預覽**  
 （選擇性） 按一下**預覽**預覽最多 200 個範例中的資料列**預覽資料** 對話方塊。 這會確認精靈即將複製您想要複製的資料。 如需詳細資訊，請參閱 [預覽資料](../../integration-services/import-export-data/preview-data-dialog-box-sql-server-import-and-export-wizard.md)。  
   
-在您預覽資料之後，可能會想要變更已在精靈的先前頁面上選取的選項。 若要進行這些變更，請返回 [設定一般檔案目的地]  頁面，然後按一下 [上一步]  返回先前的頁面，如此您就可以在其中變更選取項目。  
+在您預覽資料之後，可能會想要變更已在精靈的先前頁面上選取的選項。 若要進行這些變更，請返回 設定一般檔案目的地  頁面，然後按一下上一步  返回先前的頁面，如此您就可以在其中變更選取項目。  
 
 ## <a name="whats-next"></a>下一步  
  指定目的地一般檔案的格式化選項之後，下一個頁面是 [Save and Execute Package (儲存和執行封裝)] 。 在此頁面上，您可以指定是否要立即執行作業。 根據您設定，您也可以儲存為您設定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]加以自訂，以及供日後重複使用的封裝。 如需詳細資訊，請參閱 [儲存和執行封裝](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md)。  

@@ -27,10 +27,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: 75ab644da296ecc613c803916eb0b70907ad0cf6
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: fce97e74e2b4bbc5ae0fbdadf596734677734155
 ms.contentlocale: zh-tw
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (TRANSACT-SQL)
@@ -119,7 +119,7 @@ PRIMARY
   
 QUERY_OPTIMIZER_HOTFIXES  **=**  {ON |**OFF** |主要}  
 
-啟用或停用查詢最佳化 hotfix，不論資料庫的相容性層級。 預設值是**OFF**。 這相當於啟用[追蹤旗標 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。   
+啟用或停用查詢最佳化 hotfix，不論資料庫的相容性層級。 預設值是**OFF**，讓停用查詢最佳化 hotfix，發行後的特定版本引進的高可用的相容性層級 (post RTM)。 將此設定為**ON**相當於啟用[追蹤旗標 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。   
 
 > [!TIP] 
 > 若要完成此工作在查詢層級，將**QUERYTRACEON** [查詢提示](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。 從開始[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP1，才能完成這項作業在查詢層級中，加入 USE 提示[查詢提示](../../t-sql/queries/hints-transact-sql-query.md)而不是使用追蹤旗標。  
@@ -140,7 +140,6 @@ IDENTITY_CACHE  **=**  { **ON** |OFF}
 
 > [!NOTE] 
 > 這個選項只能設定為主要。 如需詳細資訊，請參閱[識別資料行](create-table-transact-sql-identity-property.md)。  
->
 
 ##  <a name="Permissions"></a> Permissions  
  需要改變任何資料庫範圍組態   
@@ -156,7 +155,7 @@ IDENTITY_CACHE  **=**  { **ON** |OFF}
  ALTER_DATABASE_SCOPED_CONFIGURATION 事件會新增為可用來引發 DDL 觸發程序的 DDL 事件。 這是 ALTER_DATABASE_EVENTS 觸發程序群組的子系。  
   
 ## <a name="limitations-and-restrictions"></a>限制事項  
- **MAXDOP**  
+**MAXDOP**  
   
  細微的設定可以覆寫的全域項目，以及該資源管理員可以限制在所有其他的 MAXDOP 設定。  MAXDOP 設定的邏輯如下所示：  
   
@@ -170,15 +169,15 @@ IDENTITY_CACHE  **=**  { **ON** |OFF}
   
 -   資源管理員設定會覆寫 sp_configure 設定。  
   
- **QUERY_OPTIMIZER_HOTFIXES**  
+**QUERY_OPTIMIZER_HOTFIXES**  
   
  啟用查詢最佳化工具 hotfix 的舊版查詢最佳化工具使用 QUERYTRACEON 提示時，將查詢提示與資料庫範圍組態設定，這就表示的選項會套用如果是已啟用，OR 條件。  
   
- **具有 GeoDR**  
+**具有 GeoDR**  
   
  可讀取的次要資料庫，例如 Alwayson 可用性群組和 GeoReplication，使用第二個值，藉由檢查資料庫狀態。 雖然我們不在容錯移轉時重新編譯，而且技術上新的主要查詢所使用的次要的設定值，這個概念是主要與次要資料庫之間的設定將只會改變時的工作負載是不同結果，因此快取的查詢而新的查詢將會挑選新的設定，也就是他們使用的最佳的設定。  
   
- **DacFx**  
+**DacFx**  
   
  由於 ALTER DATABASE SCOPED CONFIGURATION 是 Azure SQL Database 和 SQL Server 2016 會影響資料庫結構描述中的新功能，將匯出的結構描述 （不論有無資料） 將無法匯入至較舊版本的 SQL Server 例如[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]或 <c2 > [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] 。 例如，若要匯出[DACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_3)或[BACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_4)從[!INCLUDE[ssSDS](../../includes/sssds-md.md)]或[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]使用這項新功能的資料庫將無法匯入到下層伺服器。  
   
@@ -245,7 +244,7 @@ ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING=OFF ;
 在地理複寫的案例。  
   
 ```tsql  
-ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING =PRIMARY ;  
+ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING=PRIMARY ;  
 ```  
   
 ### <a name="e-set-queryoptimizerhotfixes"></a>E. 設定 QUERY_OPTIMIZER_HOTFIXES  

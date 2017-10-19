@@ -24,10 +24,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c8b61f59733fa0696e8176f6c380139330c575e9
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: 5eeb03620e210cebec1afece563c5e10b8101361
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="ceiling-transact-sql"></a>CEILING (Transact-SQL)
@@ -66,21 +66,6 @@ GO
   
 (1 row(s) affected)  
 ```  
-  
-[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-
-下列範例會示範使用正數、 負數和零值的 CEILING 函數的值。
-  
-```sql
-SELECT CEILING(123.45), CEILING(-123.45), CEILING(0.0);  
-```  
-  
-[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
-  
-```
-------- --------- --------
-124.00  -123.00   0.00
-```
   
 ## <a name="see-also"></a>另請參閱
 [系統函數 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)

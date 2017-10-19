@@ -25,10 +25,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3028e409a8218b35bbf7cd4773e80ca27e8db8be
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: c697b619907bb3d80fbbff800b2ac29ef574af8d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="colname-transact-sql"></a>COL_NAME (Transact-SQL)
@@ -65,29 +65,6 @@ COL_NAME ( table_id , column_id )
 如需有關取得資料表和資料行識別碼的詳細資訊，請參閱[OBJECT_ID &#40;TRANSACT-SQL &#41;](../../t-sql/functions/object-id-transact-sql.md).
   
 ## <a name="examples"></a>範例  
-下列範例會傳回 `Employee` 資料庫的 `AdventureWorks2012` 資料表中第一個資料行的名稱。
-  
-```sql
-USE AdventureWorks2012;  
-GO  
-SET NOCOUNT OFF;  
-GO  
-SELECT COL_NAME(OBJECT_ID('HumanResources.Employee'), 1) AS 'Column Name';  
-GO  
-```  
-  
-[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
-  
-```
-Column Name
-------------------
-BusinessEntityID
-```
-  
-## <a name="examples"></a>範例
-
-[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-
 下列範例會傳回在範例中的第一個資料行名稱`Employee`資料表。
   
 ```sql

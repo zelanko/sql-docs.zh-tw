@@ -23,10 +23,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 749f817ff4bb6a11798f9065aa08d1ca43967726
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: b70c591517177ad9febd1d0d9873a41192bf9414
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="nchar-transact-sql"></a>NCHAR (Transact-SQL)
@@ -90,153 +90,6 @@ GO
 ```  
   
 ### <a name="b-using-substring-unicode-convert-and-nchar"></a>B. 使用 SUBSTRING、UNICODE、CONVERT 和 NCHAR  
- 下列範例會利用 `SUBSTRING`、`UNICODE`、`CONVERT` 和 `NCHAR` 函數來列印 `København` 字串中的字元數目、Unicode 字元，以及各字元的 UNICODE 值。  
-  
-```  
--- The @position variable holds the position of the character currently  
--- being processed. The @nstring variable is the Unicode character   
--- string to process.  
-DECLARE @position int, @nstring nchar(9);  
--- Initialize the current position variable to the first character in   
--- the string.  
-SET @position = 1;  
--- Initialize the character string variable to the string to process.  
--- Notice that there is an N before the start of the string. This   
--- indicates that the data following the N is Unicode data.  
-SET @nstring = N'København';  
--- Print the character number of the position of the string you are at,   
--- the actual Unicode character you are processing, and the UNICODE   
--- value for this particular character.  
-PRINT 'Character #' + ' ' + 'Unicode Character' + ' ' + 'UNICODE Value';  
-WHILE @position <= DATALENGTH(@nstring)  
-   BEGIN  
-   SELECT @position,   
-      NCHAR(UNICODE(SUBSTRING(@nstring, @position, 1))),  
-      CONVERT(NCHAR(17), SUBSTRING(@nstring, @position, 1)),  
-      UNICODE(SUBSTRING(@nstring, @position, 1))  
-   SELECT @position = @position + 1  
-   END;  
-GO  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
-```  
-Character # Unicode Character UNICODE Value  
-  
------------ ---- ----------------- -----------   
-1           K    K                 75  
-  
-(1 row(s) affected)  
-  
------------ ---- ----------------- -----------   
-2           ø    ø                 248  
-  
-(1 row(s) affected)  
-  
------------ ---- ----------------- -----------   
-3           b    b                 98  
-  
-(1 row(s) affected)  
-  
------------ ---- ----------------- -----------   
-4           e    e                 101  
-  
-(1 row(s) affected)  
-  
------------ ---- ----------------- -----------   
-5           n    n                 110  
-  
-(1 row(s) affected)  
-  
------------ ---- ----------------- -----------   
-6           h    h                 104  
-  
-(1 row(s) affected)  
-  
------------ ---- ----------------- -----------   
-7           a    a                 97  
-  
-(1 row(s) affected)  
-  
------------ ---- ----------------- -----------   
-8           v    v                 118  
-  
-(1 row(s) affected)  
-  
------------ ---- ----------------- -----------   
-9           n    n                 110  
-  
-(1 row(s) affected)  
-  
------------ ---- ----------------- -----------   
-10          NULL                   NULL  
-  
-(1 row(s) affected)  
-  
------------ ---- ----------------- -----------   
-11          NULL                   NULL  
-  
-(1 row(s) affected)  
-  
------------ ---- ----------------- -----------   
-12          NULL                   NULL  
-  
-(1 row(s) affected)  
-  
------------ ---- ----------------- -----------   
-13          NULL                   NULL  
-  
-(1 row(s) affected)  
-  
------------ ---- ----------------- -----------   
-14          NULL                   NULL  
-  
-(1 row(s) affected)  
-  
------------ ---- ----------------- -----------   
-15          NULL                   NULL  
-  
-(1 row(s) affected)  
-  
------------ ---- ----------------- -----------   
-16          NULL                   NULL  
-  
-(1 row(s) affected)  
-  
------------ ---- ----------------- -----------   
-17          NULL                   NULL  
-  
-(1 row(s) affected)  
-  
------------ ---- ----------------- -----------   
-18          NULL                   NULL  
-  
-(1 row(s) affected)  
-```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### <a name="c-using-nchar-and-unicode"></a>C. 使用 NCHAR 和 UNICODE  
- 下列範例會利用 `UNICODE` 和 `NCHAR` 函數來列印 `UNICODE` 字元字串第二個字元的 `NCHAR` 值和 `København` (Unicode 字元)，以及列印實際的第二個字元 `ø`。  
-  
-```  
-DECLARE @nstring nchar(8);  
-SET @nstring = N'København';  
-SELECT UNICODE(SUBSTRING(@nstring, 2, 1)),   
-   NCHAR(UNICODE(SUBSTRING(@nstring, 2, 1)));  
-GO  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
-```  
------------ -   
-248         ø  
-(1 row(s) affected)  
-```  
-  
-### <a name="d-using-substring-unicode-convert-and-nchar"></a>D. 使用 SUBSTRING、UNICODE、CONVERT 和 NCHAR  
  下列範例會利用 `SUBSTRING`、`UNICODE`、`CONVERT` 和 `NCHAR` 函數來列印 `København` 字串中的字元數目、Unicode 字元，以及各字元的 UNICODE 值。  
   
 ```  

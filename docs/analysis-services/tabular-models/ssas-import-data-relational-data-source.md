@@ -1,7 +1,7 @@
 ---
 title: "從關聯式資料來源 (SSAS 表格式) 匯入 |Microsoft 文件"
 ms.custom: 
-ms.date: 05/22/2017
+ms.date: 10/16/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -17,15 +17,15 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1db6dd24d059f8c478967bc3c69652aaec0aeb51
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: d45d72ca09a8abce6d29f018fcbaa8f54415a637
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="import-data---relational-data-source"></a>匯入資料的關聯式資料來源
-  您可以使用 [資料表匯入精靈]，從各種關聯式資料庫匯入資料。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]提供此精靈，位於 [模型]  功能表。 若要連接至資料來源，您必須先在電腦上安裝適當的提供者。 如需支援的資料來源和提供者的詳細資訊，請參閱 [支援的資料來源 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)(支援的資料來源 (SSAS 表格式))。  
-  
+  在 1200年的表格式模型和較低的相容性層級，您可以匯入資料從各種關聯式資料庫使用 「 資料表匯入精靈 」。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]提供此精靈，位於 [模型]  功能表。 若要連接至資料來源，您必須先在電腦上安裝適當的提供者。 如需支援的資料來源和提供者的詳細資訊，請參閱 [支援的資料來源 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)(支援的資料來源 (SSAS 表格式))。 
+ 
  [資料表匯入精靈] 支援從下列資料來源匯入資料：  
   
  **關聯式資料庫**  
@@ -64,8 +64,9 @@ ms.lasthandoff: 09/01/2017
   
 3.  請遵循 [資料表匯入精靈] 中的步驟來進行。 在後續頁面中，您即可選取特定的資料表及檢視，或使用 **[選取資料表和檢視表]** 頁面，或在 **[指定 SQL 查詢]** 頁面上建立 SQL 查詢，以套用篩選。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [匯入資料 &#40;SSAS 表格式&#41;](http://msdn.microsoft.com/library/6617b2a2-9f69-433e-89e0-4c5dc92982cf)   
  [支援的資料來源 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)  
   
   
+

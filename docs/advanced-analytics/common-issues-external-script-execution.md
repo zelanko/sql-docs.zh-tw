@@ -2,7 +2,7 @@
 title: "SQL Server 中的外部指令碼執行的一般問題 |Microsoft 文件"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 08/20/2017
+ms.date: 10/11/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 1837605f8eaf59224b90a2a00f7dffa32a6d63b1
+ms.sourcegitcommit: 560965a241b24a09f50a23faf63ce74d0049d5a7
+ms.openlocfilehash: 2be854d38728670d5f68325da0bcf8136aef53f9
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/13/2017
 
 ---
 # <a name="common-issues-with-external-script-execution-in-sql-server"></a>SQL Server 中的外部指令碼執行的一般問題
@@ -92,7 +92,7 @@ Launchpad 服務 (Launchpad.exe) 會使用低權限的服務帳戶執行。 不�
 > [!NOTE] 
 > 未來的版本已經移除此限制。 如果您遇到此問題，請安裝下列其中一項：
 > * SQL Server 2016 SP1 和 CU1: [for SQL Server 的累計更新 1](https://support.microsoft.com/help/3208177/cumulative-update-1-for-sql-server-2016-sp1)。
-> * SQL Server 2016 RTM、 Service Pack 3，而這[hotfix](https://support.microsoft.com/help/3210110/on-demand-hotfix-update-package-for-sql-server-2016-cu3)，即可以視需要使用。
+> * SQL Server 2016 RTM 累積更新 3，且這[hotfix](https://support.microsoft.com/help/3210110/on-demand-hotfix-update-package-for-sql-server-2016-cu3)，即可以視需要使用。
 
 #### <a name="the-user-group-for-launchpad-cannot-log-on-locally"></a>啟動控制板的使用者群組無法在本機登入
 
@@ -102,7 +102,7 @@ Launchpad 服務 (Launchpad.exe) 會使用低權限的服務帳戶執行。 不�
 
 若要修正此問題，請確定群組 **SQLRUserGroup** 擁有系統權限「允許本機登入」。
 
-如需詳細資訊，請參閱 [設定 Windows 服務帳戶與權限](https://msdn.microsoft.com/library/ms143504.aspx#Windows)。
+如需詳細資訊，請參閱[設定 Windows 服務帳戶與權限](https://msdn.microsoft.com/library/ms143504.aspx#Windows)。
 
 #### <a name="improper-setup-leading-to-mismatched-dlls"></a>不正確的安裝程式導致不相符的 Dll
 
@@ -110,19 +110,19 @@ Launchpad 服務 (Launchpad.exe) 會使用低權限的服務帳戶執行。 不�
 
 若要避免這個問題，請確定安裝在相同的修補程式層級的任何新功能與伺服器執行個體。
 
-**若要升級錯誤的方式**:
+**若要升級錯誤的方式：**
 
 1. 不使用 R 服務的 SQL Server 2016 安裝。
 2. 升級 SQL Server 2016 累計更新 2。
 3. 使用 RTM 媒體安裝 R 服務 （資料庫）。
 
-**若要升級的正確方式**:
+**升級的正確方式：**
 
 1. 不使用 R 服務的 SQL Server 2016 安裝。
 2. 升級 SQL Server 2016 的所需的修補程式等級。 例如，安裝 Service Pack 1，然後累計更新 2。
 3. 將功能加入正確的修補程式層級，執行 SP1 CU2 再次，安裝程式並選擇 R 服務 （資料庫）。 
 
-#### <a name="check-to-see-whether-a-user-has-rights-to-run-external-scripts"></a>請檢查使用者是否具有權限才能執行外部指令碼
+#### <a name="check-whether-a-user-has-rights-to-run-external-scripts"></a>檢查使用者是否有權限才能執行外部指令碼
 
 即使已正確設定 [啟動列]，它會傳回錯誤如果使用者沒有執行 R 或 Python 指令碼的權限。
 
@@ -131,8 +131,10 @@ Launchpad 服務 (Launchpad.exe) 會使用低權限的服務帳戶執行。 不�
 若要更正此問題，在 SQL Server Management Studio，安全性系統管理員可以修改 SQL 登入或 Windows 使用者帳戶執行下列指令碼：
 
 ```SQL
-GRANT EXECUTE ANY EXTERNAL SCRIPT
+GRANT EXECUTE ANY EXTERNAL SCRIPT TO <username>
 ```
+
+如需詳細資訊，請參閱[GRANT (TRANSACT-SQL](../t-sql/statements/grant-transact-sql.md)。
 
 ### <a name="common-launchpad-errors"></a>常見的 「 啟動列 」 錯誤
 
@@ -212,17 +214,17 @@ GRANT EXECUTE ANY EXTERNAL SCRIPT
 
 ## <a name="r-script-issues"></a>R 指令碼問題
 
-本章節包含 R 指令碼執行和 R 指令碼錯誤特有的一些常見問題。 清單不完整，因為有許多的 R 封裝，且錯誤可能會與不同版本之間的相同的 R 封裝。 我們建議您將 R 指令碼錯誤張貼上[Microsoft R Server 論壇](https://social.msdn.microsoft.com/Forums/home?forum=MicrosoftR)，可支援所有相關的產品： R 服務 （資料庫）、 Python、 Microsoft R 用戶端，與 Microsoft R Server 的機器學習服務。
+本章節包含 R 指令碼執行和 R 指令碼錯誤特有的一些常見問題。 清單不完整，因為有許多的 R 封裝，且錯誤可能會與不同版本之間的相同的 R 封裝。 我們建議您將 R 指令碼錯誤張貼上[Microsoft R Server 論壇](https://social.msdn.microsoft.com/Forums/home?category=MicrosoftR)，可支援機器學習中 R 服務 （資料庫內）、 Python、 Microsoft R 用戶端，與 Microsoft R 的機器學習服務使用的元件伺服器。
 
 ### <a name="multiple-r-instances-on-the-same-computer"></a>在相同電腦上的多個 R 執行個體
 
-很容易在相同的電腦上安裝的 R 的多個散發，或在不同的版本中安裝多份相同的 R 封裝。 比方說，如果您安裝機器學習伺服器 （獨立） 和機器學習服務 （資料庫），安裝程式會建立不同的 R 程式庫的版本。 
+它可以很容易發現自己使用的同一部電腦中，R 的多個散發，以及相同的 R 封裝的多份不同的版本。 比方說，如果您安裝機器學習伺服器 （獨立） 和機器學習服務 （資料庫），安裝程式會建立不同的 R 程式庫的版本。 
 
-當您嘗試從命令列執行指令碼，而且您不確定您使用的程式庫時，重複可能會令人混淆。 它可能也會造成混淆如果您將套件安裝到錯誤的媒體櫃，而且找不到封裝當您嘗試從 SQL Server 執行。
+當您嘗試從命令列執行指令碼，而且您不確定您使用的程式庫時，這類重複會成為問題。 或者，您可能會將套件安裝到錯誤的媒體櫃，然後稍後納悶為什麼找不到封裝從 SQL Server。
 
 + 請避免直接使用的 R 程式庫及工具，除了使用 SQL Server 執行個體的安裝，在某些限制狀況下，例如疑難排解或安裝新的封裝。 
-+ 如果您需要使用 R 命令列工具，您可以安裝[Microsoft R 用戶端](https://docs.microsoft.com/r-server/r-client/what-is-microsoft-r-client)。
-+ SQL Server 提供 R 封裝的資料庫中的管理。 這是最簡單的方式來建立可在使用者之間共用的 R 封裝程式庫。 如需詳細資訊，請參閱[安裝和管理的 R 封裝](r/installing-and-managing-r-packages.md)。
++ 如果您需要使用 R 命令列工具，您可以安裝[Microsoft R 用戶端](https://docs.microsoft.com/r-server/r-client/what-is-microsoft-r-client)。 
++ SQL Server 提供 R 封裝的資料庫中的管理。 這是最簡單的方式來建立可在使用者之間共用的 R 封裝程式庫。 如需詳細資訊，請參閱[for SQL Server 的 R 封裝管理](r/r-package-management-for-sql-server-r-services.md)。
 
 ### <a name="avoid-clearing-the-workspace-while-youre-running-r-in-a-sql-compute-context"></a>避免您在 SQL 計算內容中執行 R 時清除工作區
 
@@ -325,7 +327,7 @@ EXEC sp_execute_external_script @language = N'R',
 
 ## <a name="next-steps"></a>後續的步驟
 
-[機器學習疑難排解和已知問題](machine-learning-troubleshooting-faq.md)
+[機器學習服務疑難排解和已知的問題](machine-learning-troubleshooting-faq.md)
 
 [如需疑難排解機器學習的資料收集](data-collection-ml-troubleshooting-process.md)
 

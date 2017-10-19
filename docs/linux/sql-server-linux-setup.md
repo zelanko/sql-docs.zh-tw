@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ms.translationtype: MT
-ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
-ms.openlocfilehash: d8e99fdb0c3383190c140997e619a05feb9bf3ee
+ms.sourcegitcommit: 51f60c4fecb56aca3f4fb007f8e6a68601a47d11
+ms.openlocfilehash: 308bac675b9d2563d45106cf3332e5ed6ce2e6b2
 ms.contentlocale: zh-tw
-ms.lasthandoff: 10/06/2017
+ms.lasthandoff: 10/14/2017
 
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>SQL Server on Linux 的安裝指南
@@ -97,7 +97,7 @@ SQL Server 2017 具有適用於 Linux 的下列系統需求：
 > [!IMPORTANT]
 > RTM、 RC2 和 RC1 之間此時只支援降級。
 
-## <a id="repositories"></a>變更來源儲存機制
+## <a id="repositories"></a>設定來源儲存機制
 
 當您安裝或升級 SQL Server 時，您收到最新版本的 SQL Server 設定的 Microsoft 儲存機制。 請務必注意，有兩種類型的儲存機制的每個散發：
 
@@ -110,9 +110,9 @@ SQL Server 2017 具有適用於 Linux 的下列系統需求：
 > [!NOTE]
 > 更新不支援從 CU GDR 發行的版本。
 
-若要從變更到目前的儲存機制的 GDR 儲存機制，請使用下列步驟：
+若要設定 CU 或 GDR 儲存機制，請使用下列步驟：
 
-1. 移除先前設定的預覽儲存機制。
+1. 如有必要，移除先前設定的儲存機制。
 
    | 平台 | 儲存機制移除命令 |
    |-----|-----|

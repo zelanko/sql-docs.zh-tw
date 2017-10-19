@@ -1,7 +1,7 @@
 ---
 title: "DBCC INPUTBUFFER (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
-ms.date: 07/16/2017
+ms.date: 10/13/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -28,10 +28,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ba54322c814911babe19e172a2cfafc4f00011a7
+ms.sourcegitcommit: 54e4c8309c290255cb2885fab04bb394bc453046
+ms.openlocfilehash: 3d9b6acfbfef3125d6ee715708492de1cae2b3a2
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/16/2017
 
 ---
 # <a name="dbcc-inputbuffer-transact-sql"></a>DBCC INPUTBUFFER (Transact-SQL)
@@ -49,22 +49,23 @@ DBCC INPUTBUFFER ( session_id [ , request_id ])
 ```  
   
 ## <a name="arguments"></a>引數  
- *session_id*  
- 這是每個使用中的主要連接所關聯的工作階段識別碼。  
+*session_id*  
+這是每個使用中的主要連接所關聯的工作階段識別碼。  
   
- *request_id*  
- 這是要在目前工作階段內搜尋的確實要求 (批次)。  
- 下列查詢會傳回*request_id*:  
+*request_id*  
+這是要在目前工作階段內搜尋的確實要求 (批次)。  
+
+下列查詢會傳回*request_id*:  
 ```sql
 SELECT request_id   
 FROM sys.dm_exec_requests   
 WHERE session_id = @@spid;  
 ```  
- 取代所有提及的  
- 啟用要指定的選項。  
+取代所有提及的  
+啟用要指定的選項。  
   
- NO_INFOMSGS  
- 抑制所有嚴重性層級在 0 到 10 的參考用訊息。  
+NO_INFOMSGS  
+抑制所有嚴重性層級在 0 到 10 的參考用訊息。  
   
 ## <a name="result-sets"></a>結果集  
 DBCC INPUTBUFFER 會傳回含有下列資料行的資料列集。
@@ -77,7 +78,7 @@ DBCC INPUTBUFFER 會傳回含有下列資料行的資料列集。
   
 例如，當緩衝區內的最後一個事件是 DBCC INPUTBUFFER(11)，DBCC INPUTBUFFER 會傳回下列結果集。
   
-```sql
+```
 EventType      Parameters EventInfo               
 -------------- ---------- ---------------------   
 Language Event 0          DBCC INPUTBUFFER (11)  
@@ -86,7 +87,10 @@ Language Event 0          DBCC INPUTBUFFER (11)
   
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
-  
+
+> [!NOTE]
+> 從開始[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]SP2 中，使用[sys.dm_exec_input_buffer](../../relational-databases/system-dynamic-management-views/sys-dm-exec-input-buffer-transact-sql.md)傳回陳述式的執行個體送出有關[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。
+
 ## <a name="permissions"></a>Permissions  
 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]需要下列其中之一：
 -   使用者必須是成員**sysadmin**固定的伺服器角色。  
@@ -120,7 +124,8 @@ DBCC INPUTBUFFER (52);
 
 ## <a name="see-also"></a>另請參閱  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
-[sp_who &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)
+[sp_who &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)  
+[sys.dm_exec_input_buffer &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-input-buffer-transact-sql.md)
   
   
 

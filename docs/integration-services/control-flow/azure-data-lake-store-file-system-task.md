@@ -16,10 +16,10 @@ author: Lingxi-Li
 ms.author: lingxl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: 4cb0585acf73e734662847401c60686b54ae6410
+ms.sourcegitcommit: 29b296b2ae7e04871e81a9c236cb990bdd19562b
+ms.openlocfilehash: cbc72958f992e0b5cae12cdfc8c0996378f9708c
 ms.contentlocale: zh-tw
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 10/11/2017
 
 ---
 # <a name="azure-data-lake-store-file-system-task"></a>Azure Data Lake Store 檔案系統工作
@@ -37,6 +37,7 @@ Azure 資料湖存放區檔案系統工作是一種元件的[Azure 的 SQL Serve
 - **CopyToADLS:**檔案上傳至 ADLS。
 - **CopyFromADLS:**從 ADLS 下載檔案。
 
+## <a name="configure-the-properties-for-the-operation"></a>設定作業的屬性
 對於任何作業，您必須指定 Azure 資料湖連接管理員。
 
 以下是屬性特定的每一項作業：

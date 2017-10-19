@@ -22,10 +22,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 43e6b8f2d234e0b2dd11299c56f1c6b9d0e06518
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: e7cb7497251a0a61cff9f71c07d3c5d9e9028d5d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="timefromparts-transact-sql"></a>TIMEFROMPARTS (Transact-SQL)
@@ -119,60 +119,6 @@ GO
   
 (1 row(s) affected)  
 ```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### <a name="c-simple-example-without-fractions-of-a-second"></a>C. 不包含秒的小數部分的簡單範例  
-  
-```  
-SELECT TIMEFROMPARTS ( 23, 59, 59, 0, 0 ) AS Result;  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
-```  
-Result  
---------------------  
-23:59:59.0000000  
-  
-(1 row(s) affected)  
-```  
-  
-### <a name="d-example-with-fractions-of-a-second"></a>D. 含秒的小數部分的範例  
- 下列範例示範如何使用*分數*和*精確度*參數：  
-  
-1.  當*分數*的值為 5 和*精確度*然後的值具有值為 1，*分數*代表 5/10 秒。  
-  
-2.  當*分數*的值為 50 和*精確度*然後的值具有值為 2，*分數*表示 50/100 的第二個。  
-  
-3.  當*分數*的值為 500 和*精確度*然後的值具有值為 3，*分數*表示 500/1000 秒。  
-  
-```tsql  
-SELECT TIMEFROMPARTS ( 14, 23, 44, 5, 1 );  
-SELECT TIMEFROMPARTS ( 14, 23, 44, 50, 2 );  
-SELECT TIMEFROMPARTS ( 14, 23, 44, 500, 3 );  
-GO  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
-```  
-----------------  
-14:23:44.5  
-  
-(1 row(s) affected)  
-  
-----------------  
-14:23:44.50  
-  
-(1 row(s) affected)  
-  
-----------------  
-14:23:44.500  
-  
-(1 row(s) affected)  
-```  
-  
   
 
 

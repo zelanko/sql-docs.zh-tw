@@ -1,7 +1,7 @@
 ---
 title: "DBCC FREEPROCCACHE (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
-ms.date: 07/16/2017
+ms.date: 10/13/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -29,10 +29,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
-ms.openlocfilehash: b91dcf6191f6ec3336c9bf3d3588e8f1daad0867
+ms.sourcegitcommit: 54e4c8309c290255cb2885fab04bb394bc453046
+ms.openlocfilehash: 58eed9c590594f8c2cff402418aa2ebebd0c65db
 ms.contentlocale: zh-tw
-ms.lasthandoff: 10/06/2017
+ms.lasthandoff: 10/16/2017
 
 ---
 # <a name="dbcc-freeproccache-transact-sql"></a>DBCC FREEPROCCACHE (Transact-SQL)
@@ -62,20 +62,20 @@ DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ]
   
 ## <a name="arguments"></a>引數  
  ({ *plan_handle* | *sql_handle* | *pool_name* })  
- *plan_handle*唯一識別批次已經執行且其計畫位於計畫快取的查詢計劃。 *plan_handle*是**varbinary(64)** ，且可以從下列動態管理物件取得：  
+*plan_handle*唯一識別批次已經執行且其計畫位於計畫快取的查詢計劃。 *plan_handle*是**varbinary(64)** ，且可以從下列動態管理物件取得：  
  -   [sys.dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
  -   [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
  -   [sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)  
  -   [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
 
- *sql_handle*来清除之批次的 SQL 控制代碼。 *sql_handle*是**varbinary(64)** ，且可以從下列動態管理物件取得：  
+*sql_handle*来清除之批次的 SQL 控制代碼。 *sql_handle*是**varbinary(64)** ，且可以從下列動態管理物件取得：  
  -   [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
  -   [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
  -   [sys.dm_exec_cursors](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cursors-transact-sql.md)  
  -   [sys.dm_exec_xml_handles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-xml-handles-transact-sql.md)  
  -   [sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)  
 
- *pool_name*是資源管理員資源集區的名稱。 *pool_name*是**sysname**而且可以藉由查詢取得[sys.dm_resource_governor_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)動態管理檢視。  
+*pool_name*是資源管理員資源集區的名稱。 *pool_name*是**sysname**而且可以藉由查詢取得[sys.dm_resource_governor_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)動態管理檢視。  
  若要將資源管理員工作負載群組與資源集區產生關聯，查詢[sys.dm_resource_governor_workload_groups](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md)動態管理檢視。 工作階段的工作負載群組的相關資訊，如查詢[sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)動態管理檢視。  
 
   
@@ -87,11 +87,14 @@ DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ]
   
  ALL  
  從每個計算節點和 [控制] 節點，請清除查詢計劃快取。  
-  
-## <a name="remarks"></a>備註  
-請利用 DBCC FREEPROCCACHE 小心清除計畫快取。 釋出計畫快取會導致例如重新編譯預存程序，而不是從快取中重複使用這個預存程序。 
 
-這可能會導致查詢效能突然暫時下降。 針對每次清除計畫快取的快取存放區，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔會包含下列參考訊息：「由於 'DBCC FREEPROCCACHE' 或 'DBCC FREESYSTEMCACHE' 作業，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 '%s' 快取存放區 (計畫快取的一部分) 發生 %d 次快取存放區排清。」 只要在該時間間隔內快取發生排清，這個訊息就會每五分鐘記錄一次。
+> [!NOTE]
+> 從開始[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]、`ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE`清除程序 （計劃） 快取範圍中的資料庫。
+
+## <a name="remarks"></a>備註  
+請利用 DBCC FREEPROCCACHE 小心清除計畫快取。 清除程序 （計劃） 快取會使所有的計劃被收回或傳入的查詢執行會編譯新的計畫，而不要重複使用任何先前的快取的計畫。 
+
+這可能會造成的新編譯增加而增加數字的查詢效能突然暫時下降。 針對每次清除計畫快取的快取存放區，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔會包含下列參考訊息：「由於 'DBCC FREEPROCCACHE' 或 'DBCC FREESYSTEMCACHE' 作業，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 '%s' 快取存放區 (計畫快取的一部分) 發生 %d 次快取存放區排清。」 只要在該時間間隔內快取發生排清，這個訊息就會每五分鐘記錄一次。
 
 下列重新設定作業也會清除程序快取：
 -   存取檢查快取 Bucket 計數  
@@ -115,16 +118,15 @@ DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ]
 當未指定 WITH NO_INFOMSGS 子句時，DBCC FREEPROCCACHE 會傳回:"DBCC 執行已完成。 如果 DBCC 印出錯誤訊息，請連絡您的系統管理員」。
   
 ## <a name="permissions"></a>Permissions  
-適用於： SQL Server、 Parallel Data Warehouse 
-
+適用於： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 
 - 需要伺服器的 ALTER SERVER STATE 權限。  
 
-適用對象：Azure SQL 資料倉儲
+適用於：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]
 - 需要 DB_OWNER 固定的伺服器角色的成員資格。  
 
 ## <a name="general-remarks-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>一般備註[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 可以同時執行多個 DBCC FREEPROCCACHE 命令。
-在[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，清除查詢計劃快取時可能會造成暫時降低查詢效能會重新編譯查詢。 
+在[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]清除計畫快取可能會導致查詢效能降低暫存傳入的查詢編譯新的計畫，而不要重複使用任何先前的快取計畫。 
 
 DBCC FREEPROCCACHE （運算） 只會導致[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]計算節點上執行時重新編譯查詢。 不會造成[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]平行查詢計畫所產生的控制節點上，重新編譯。
 DBCC FREEPROCCACHE 可以在執行期間取消。
@@ -135,11 +137,11 @@ DBCC FREEPROCCACHE 不可以在交易內執行。
   
 ## <a name="metadata-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>中繼資料[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 新的資料列加入 sys.pdw_exec_requests 系統檢視表，當執行 DBCC FREEPROCCACHE。
-  
+
 ## <a name="examples-includessnoversionincludesssnoversion-mdmd"></a>範例：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 ### <a name="a-clearing-a-query-plan-from-the-plan-cache"></a>A. 從計畫快取清除查詢計劃  
-下列範例會從計畫快取中指定查詢計劃控制代碼，藉以清除查詢計劃。 為確保範例查詢位於計畫快取中，會先執行查詢。 `sys.dm`_`exec` \_ `cached_plans`和`sys.dm` \_ `exec` \_ `sql` \_ `text`動態管理檢視會查詢來傳回查詢的計畫控制代碼。 
+下列範例會從計畫快取中指定查詢計劃控制代碼，藉以清除查詢計劃。 為確保範例查詢位於計畫快取中，會先執行查詢。 `sys.dm_exec_cached_plans`和`sys.dm_exec_sql_text`動態管理檢視會查詢來傳回查詢的計畫控制代碼。 
 
 然後會將結果集中的計畫控制代碼值插入到 `DBCC FREEPROCACHE` 陳述式中，就可以從計畫快取中僅移除該計畫。
   
@@ -195,7 +197,7 @@ GO
   
 ```sql
 USE UserDbSales;  
-DBCC FREEPROCCACHE (COMPUTE) WITH NO_INFOMSGS;  
+DBCC FREEPROCCACHE (COMPUTE) WITH NO_INFOMSGS;
 ```  
   
  下列範例具有相同的結果與前一個範例中，不同之處在於告知性訊息會顯示在結果中。  
@@ -211,12 +213,14 @@ DBCC FREEPROCCACHE (COMPUTE);
 下列範例會提供登入執行 DBCC FREEPROCCACHE David 權限。  
   
 ```sql
-GRANT ALTER SERVER STATE TO David;  
+GRANT ALTER SERVER STATE TO David; 
+GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
-[資源管理員](../../relational-databases/resource-governor/resource-governor.md)
+[資源管理員](../../relational-databases/resource-governor/resource-governor.md)  
+[ALTER DATABASE SCOPED CONFIGURATION &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)
   
   
 

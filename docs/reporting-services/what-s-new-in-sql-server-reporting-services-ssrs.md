@@ -1,6 +1,6 @@
 ---
 title: "Reporting Services (SSRS) 中最新消息 |Microsoft 文件"
-ms.date: 07/02/2017
+ms.date: 10/10/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -9,21 +9,14 @@ ms.technology:
 - reporting-services-sharepoint
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-helpviewer_keywords:
-- what's new [Reporting Services]
-- Reporting Services, what's new
-- SQL Server Reporting Services, what's new
-- SSRS, what's new
-ms.assetid: bc909063-6b84-4b3a-80d2-e93fc04b4b9d
-caps.latest.revision: 206
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: 3a8ed8433d06f9f0250c42f6e5a190bc64e30235
+ms.translationtype: MT
+ms.sourcegitcommit: 52c2f8fae79884b025e067b7d628cd3154ba93f4
+ms.openlocfilehash: 323873f42f6d3abd8442683731deef478dd2ebfb
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 
@@ -32,20 +25,32 @@ ms.lasthandoff: 08/09/2017
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../includes/ssrs-appliesto-not-pbirs.md)]
 
 深入了解新功能 SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]。 這會涵蓋主要功能領域，並在發行新的項目時更新。
-  
+
   如需新功能的 SQL Server 的其他區域中的資訊，請參閱[What's New in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)或[What's New in SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)。
-  
+
  **下載** ![download](../analysis-services/media/download.png "download")
- 
-- 若要下載 SQL Server Reporting Services 中的 Power BI 報表 2017 年 1 月技術預覽，以及 Power BI Desktop 版本 (SQL Server Reporting Services)，請移至 **[Microsoft 下載中心](https://go.microsoft.com/fwlink/?linkid=839351)**。
-  
--   若要下載 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]，請前往  **[Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**。  
-  
--   有 Azure 帳戶嗎？  接著前往**[這裡](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016sp1enterprisewindowsserver2016/)**來加速已安裝 SQL Server 虛擬機器。  
 
- ![請注意](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "注意")目前的版本資訊，請參閱[SQL Server 2016 Release Notes](../sql-server/sql-server-2016-release-notes.md)或[Power BI 報表伺服器版本資訊](https://powerbi.microsoft.com/documentation/reportserver-release-notes/)。
+- 若要下載 SQL Server 2017 Reporting Services，請移至 **[Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=55252)**。
 
-Power BI 報表伺服器的相關資訊，請參閱[開始使用 Power BI 報表伺服器](https://powerbi.microsoft.com/documentation/reportserver-get-started/)。
+如需目前的版本資訊，請參閱[SQL Server 2017 Release Notes](../sql-server/sql-server-2017-release-notes.md)或[Power BI 報表伺服器版本資訊](https://powerbi.microsoft.com/documentation/reportserver-release-notes/)。 Power BI 報表伺服器的相關資訊，請參閱[開始使用 Power BI 報表伺服器](https://powerbi.microsoft.com/documentation/reportserver-get-started/)。
+
+## <a name="whats-new-in-sql-server-2017"></a>SQL Server 2017 的新功能
+
+### <a name="comments-on-reports"></a>在報表上的註解
+
+報表現在提供留言功能，可新增觀點並與其他人共同作業。 您也可以在留言內包含附件。
+
+![報表伺服器中的註解](media/what-s-new-in-sql-server-reporting-services-ssrs/report-server-comments.png)
+
+如需詳細資訊，請參閱[至報表伺服器的報表中加入註解](https://powerbi.microsoft.com/documentation/reportserver-add-comments/)。
+
+### <a name="dax-queries-in-reporting-tools"></a>在報告工具中的 DAX 查詢
+
+在最新版的報表產生器和 SQL Server Data Tools 中，您可以藉由在查詢設計工具中拖放所需的欄位，來對支援的 SQL Server Analysis Services 表格式資料模型建立原生 DAX 查詢。 請參閱 [Reporting Services 部落格](https://blogs.msdn.microsoft.com/sqlrsteamblog/2017/03/09/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools/)。
+
+### <a name="rest-api-support"></a>REST API 支援
+
+若要啟用現代化應用程式和自訂的開發，SQL Server Reporting Services 現在支援完全 OpenAPI 相容 rest 式 API。 完整的 API 規格和文件現在位於[swaggerhub](https://app.swaggerhub.com/apis/microsoft-rs/SSRS/2.0)。
 
 ## <a name="query-designer-support-for-dax-now-in-report-builder-and-sql-server-data-tools"></a>查詢設計工具支援現在在報表產生器及 SQL Server Data Tools 中的 DAX
 
@@ -69,12 +74,12 @@ Power BI 報表伺服器的相關資訊，請參閱[開始使用 Power BI 報表
   
  ![ssRSPortal](../reporting-services/media/ssrsportal.png "ssRSPortal")  
  
- #### <a name="custom-branding-for-the-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a>[!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 的自訂商標 
-  您可以使用商標套件，以組織的標誌和色彩自訂[!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)]。  
+ #### <a name="custom-branding-for-the-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a>[!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 
+  您可以使用商標套件，以組織的標誌和色彩自訂 [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 。  
   
-  如需自訂商標的詳細資訊，請參閱[建立入口網站品牌形象](http://msdn.microsoft.com/en-us/6dac97f7-02a6-4711-81a3-e850a6b40bf1)
+  如需自訂商標的詳細資訊，請參閱 [建立入口網站品牌形象](http://msdn.microsoft.com/en-us/6dac97f7-02a6-4711-81a3-e850a6b40bf1)
  
- #### <a name="key-performance-indicators-kpi-in-the-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a>[!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)]中的關鍵效能指標 (KPI) 
+ #### <a name="key-performance-indicators-kpi-in-the-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a>[!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 
 
 您可以直接在 [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 中，建立與所在資料夾內容相關的 KPI。 建立 KPI 時，您可以選擇資料集欄位並彙總這些值。 您也可以選取相關內容，以鑽研至更多詳細資料。
   
@@ -102,11 +107,11 @@ Reporting Services 行動報表是針對各種外形規格最佳化的專用報�
  根據預設，您必須進行幾項組態變更才能連接。 如需如何允許 Power BI Mobile 應用程式連接到報表伺服器的詳細資訊，請參閱 [Enable a report server for Power BI Mobile access](../reporting-services/report-server/enable-a-report-server-for-power-bi-mobile-access.md)。
   
 ### <a name="support-of-sharepoint-mode-and-sharepoint-2016"></a>支援 SharePoint 模式和 SharePoint 2016 模式。  
- [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] supports integration with SharePoint 2013 and SharePoint 2016.
+ [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 支援與 SharePoint 2013 和 SharePoint 2016 整合。
  
 如需詳細資訊，請參閱：  
   
--   [支援的 SharePoint 和 Reporting Services 伺服器與增益集的組合 &#40;SQL Server 2016&#41;](../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)  
+-   [支援的 SharePoint 和 Reporting Services 伺服器與增益集 &#40; 組合SQL Server 2016 &#41;](../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)  
   
 -   [尋找適用於 SharePoint 產品之 Reporting Services 增益集的位置](../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)  
   
@@ -131,9 +136,9 @@ Reporting Services 行動報表是針對各種外形規格最佳化的專用報�
   
  ![ssRS_Pin_to_PowerBI](../reporting-services/media/ssrs-pin-to-powerbi.png) 
   
- 如需詳細資訊，請參閱 [Power BI 報表伺服器整合 &#40;組態管理員&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md) 和[將 Reporting Services 項目釘選到 Power BI 儀表板](../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)。  
+ 如需詳細資訊，請參閱[Power BI 報表伺服器整合 &#40;組態管理員 &#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)和[Power BI 儀表板的釘選 Reporting Services 項目](../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)。  
  
- **PowerPoint 轉譯及匯出**：Microsoft PowerPoint (PPTX) 格式是新的 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 轉譯延伸模組。 您可以使用 PPTX 格式從下列常用應用程式匯出報表：報表產生器、報表設計師 (在 SSDT 中) 和 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]。 如需範例，下圖顯示了 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]的匯出功能表。 
+ **PowerPoint 轉譯及匯出** ：Microsoft PowerPoint (PPTX) 格式是新的 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 轉譯延伸模組。 您可以使用 PPTX 格式從下列常用應用程式匯出報表：報表產生器、報表設計師 (在 SSDT 中) 和 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]。 如需範例，下圖顯示了 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]的匯出功能表。 
   
  ![ssrs-export-powerpoint](../reporting-services/media/ssrs-export-powerpoint.png) 
   
@@ -175,7 +180,7 @@ http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportf
  ![在 [報表資料] 窗格中，並在參數窗格中的參數清單](../reporting-services/media/ssrs-customizeparameter-parameterlist-reportdatapane.png "報表資料 窗格中，並在參數窗格中的參數清單")  
 
   
-**高 DPI 支援：** [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion-md.md)]支援高 DPI （每英吋點數） 縮放比例及裝置。  如需高 DPI 的詳細資訊，請參閱下列主題：  
+**高 DPI 支援** [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion-md.md)] 支援高 DPI (每英吋點數) 縮放比例及裝置。  如需高 DPI 的詳細資訊，請參閱下列主題：  
   
 -   [Windows 8.1 DPI 縮放比例功能加強 (英文)](https://blogs.windows.com/windowsexperience/2013/07/15/windows-8-1-dpi-scaling-enhancements/)  
   
@@ -189,7 +194,7 @@ http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportf
 [回溯相容性](http://msdn.microsoft.com/en-us/675b0e0e-cfee-4790-9675-80fc3ea6d30f)   
 [SQL Server 2016 版本支援的 Reporting Services 功能](http://msdn.microsoft.com/en-us/39f03d2d-6e48-4b34-a9d3-07f86313b937)   
 [升級和移轉 Reporting Services](../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
-[Reporting Services (英文)](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)  
+[Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)  
 [Power BI 報表伺服器](https://powerbi.microsoft.com/documentation/reportserver-get-started/)  
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)

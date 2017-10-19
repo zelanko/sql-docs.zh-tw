@@ -22,10 +22,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 2573d9f42b48205dab712ca401a1ac61ae4a17e2
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: 046278bb3016b39df8039a1450a58b177d2bc180
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="concat-transact-sql"></a>CONCAT (Transact-SQL)
@@ -107,23 +107,6 @@ NameLastname
 (1 row(s) affected)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### <a name="c-using-concat"></a>C. 使用 CONCAT  
-  
-```sql
-SELECT CONCAT ( 'Happy ', 'Birthday ', 11, '/', '25' ) AS Result;  
-```  
-  
-[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
-  
-```sql
-Result  
--------------------------  
-Happy Birthday 11/25  
-  
-(1 row(s) affected)  
-```  
 ## <a name="see-also"></a>另請參閱
 [字串函數 (TRANSACT-SQL)](../../t-sql/functions/string-functions-transact-sql.md)  
 [CONCAT_WS (TRANSACT-SQL)](../../t-sql/functions/concat-ws-transact-sql.md)   

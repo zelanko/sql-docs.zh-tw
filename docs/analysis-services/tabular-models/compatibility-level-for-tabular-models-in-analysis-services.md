@@ -1,7 +1,7 @@
 ---
 title: "Analysis Services 中表格式模型的相容性層級 |Microsoft 文件"
 ms.custom: 
-ms.date: 07/07/2017
+ms.date: 10/16/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -19,10 +19,10 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 58710676e09a49ecc1b49ad37c656e3589ee1257
+ms.sourcegitcommit: 54e4c8309c290255cb2885fab04bb394bc453046
+ms.openlocfilehash: 93b718beae4e42b2544ca18ada707f4459d12bf6
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/16/2017
 
 ---
 # <a name="compatibility-level-for-analysis-services-tabular-models"></a>Analysis Services 表格式模型的相容性層級
@@ -47,7 +47,7 @@ ms.lasthandoff: 09/01/2017
 |||  
 |-|-|- 
 |**相容性層級**|**伺服器版本**| 
-|1400|Azure Analysis Services （預覽），SQL Server 2017 |  
+|1400|Azure Analysis Services、 SQL Server 2017 |  
 |1200|Azure Analysis Services、 SQL Server 2017，SQL Server 2016| 
 |1103|SQL Server 2017 *，SQL Server 2016、 SQL Server 2014、 SQL Server 2012 SP1|  
 |1100|SQL Server 2017 *，SQL Server 2016、 SQL Server 2014、 SQL Server 2012 SP1、 SQL Server 2012| 

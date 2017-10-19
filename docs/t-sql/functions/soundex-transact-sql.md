@@ -26,10 +26,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ec170c756fd207c648e210de15df9d18024ea718
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: a31ab0658470cb614e1b9d633f19fbb1d8fe4a29
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="soundex-transact-sql"></a>SOUNDEX (Transact-SQL)
@@ -71,57 +71,6 @@ SOUNDEX ( character_expression )
 -   如果索引 (包括索引檢視表) 包含使用 SOUNDEX 定義之保存的計算資料行，在執行 `ALTER INDEX ALL ON <object> REBUILD` 陳述式重建索引之前，將無法查詢這類索引。  
   
 ## <a name="examples"></a>範例  
- 下列範例會顯示 SOUNDEX 函數和相關的 DIFFERENCE 函數。 在第一個範例中，傳回所有子音的標準 `SOUNDEX` 值。 傳回 `SOUNDEX` 和 `Smith` 的 `Smythe`，會傳回相同的 SOUNDEX 結果，因為所有母音、`y` 字母、雙重字母和 `h` 字母都不包括在內。  
-  
-```  
--- Using SOUNDEX  
-SELECT SOUNDEX ('Smith'), SOUNDEX ('Smythe');  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]適用於 Latin1_General 定序。  
-  
-```  
-  
------ -----   
-S530  S530    
-  
-(1 row(s) affected)  
-```  
-  
- `DIFFERENCE` 函數會比較 `SOUNDEX` 模式結果的差異。 下列範例會顯示母音不同的兩個字串。 傳回的差異是 `4`，這是最低的可能差異。  
-  
-```  
--- Using DIFFERENCE  
-SELECT DIFFERENCE('Smithers', 'Smythers');  
-GO  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]適用於 Latin1_General 定序。  
-  
-```  
------------   
-4             
-  
-(1 row(s) affected)  
-```  
-  
- 在下列範例中，字串的子音不同；因此，傳回的差異是 `2`，差異比較大。  
-  
-```  
-SELECT DIFFERENCE('Anothers', 'Brothers');  
-GO  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]適用於 Latin1_General 定序。  
-  
-```  
------------   
-2             
-  
-(1 row(s) affected)  
-```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  下列範例會顯示 SOUNDEX 函數和相關的 DIFFERENCE 函數。 在第一個範例中，傳回所有子音的標準 `SOUNDEX` 值。 傳回 `SOUNDEX` 和 `Smith` 的 `Smythe`，會傳回相同的 SOUNDEX 結果，因為所有母音、`y` 字母、雙重字母和 `h` 字母都不包括在內。  
   
 ```  
