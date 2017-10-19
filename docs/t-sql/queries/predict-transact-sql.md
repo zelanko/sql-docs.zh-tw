@@ -70,7 +70,7 @@ MODEL = @model | model_literal
 
 參數的參數用來指定用於計分或預測選擇性使用者定義參數。
 
-每個參數的名稱是模型類型特有的。 例如，在 RevoScaleR rxPredict 函式支援參數_@computeResiduals元_評分羅吉斯迴歸模型時，支援計算剩餘數。 您可以傳遞至參數名稱，且值`PREDICT`函式。
+每個參數的名稱是模型類型特有的。 例如，在 RevoScaleR rxPredict 函式支援參數_@computeResiduals元_評分羅吉斯迴歸模型時，支援計算剩餘數。  您可以傳遞至參數名稱，且值`PREDICT`函式。
 
 > [注意]這個選項不支援的 SQL Server 2017 發行前版本，並隨附僅供向前相容性。
 

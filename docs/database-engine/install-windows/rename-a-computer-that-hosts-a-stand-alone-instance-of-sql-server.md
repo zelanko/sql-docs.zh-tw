@@ -82,7 +82,7 @@ ms.lasthandoff: 09/12/2017
   
 ## <a name="verify-renaming-operation"></a>確認重新命名作業  
   
--   從 @@SERVERNAME 或 sys.servers 中選取資訊。 @@SERVERNAME 函式會傳回新名稱，而且 sys.servers 資料表會顯示新名稱。 下列範例示範如何使用 @@SERVERNAME。  
+-   從 @@SERVERNAME 或 sys.servers 中選取資訊。 @@SERVERNAME 函式會傳回新名稱，而且 sys.servers 資料表會顯示新名稱。 下列範例示範如何使用 @@SERVERNAME。   
   
     ```  
     SELECT @@SERVERNAME AS 'Server Name';  
