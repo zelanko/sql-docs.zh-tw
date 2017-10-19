@@ -56,7 +56,7 @@ ms.lasthandoff: 07/29/2017
   
  若要以手動方式在伺服器上啟用 Stretch Database，請執行 **sp_configure** 並開啟 [遠端資料封存] 選項。 下列範例會將 **remote data archive** 選項的值設為 1 來啟用它。  
   
-```  
+```sql
 EXEC sp_configure 'remote data archive' , '1';  
 GO
 
