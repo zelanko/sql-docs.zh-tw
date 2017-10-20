@@ -29,11 +29,10 @@ ms.lasthandoff: 09/26/2017
 ## <a name="syntax"></a>語法  
   
 ```sql  
-set_environment_variable_protection [ @folder_name = ] folder_name  
+catalog.set_environment_variable_protection [ @folder_name = ] folder_name  
     , [ @environment_name = ] environment_name  
     , [ @variable_name = ] variable_name  
     , [ @is_sensitive = ] is_sensitive  
-  
 ```  
   
 ## <a name="arguments"></a>引數  

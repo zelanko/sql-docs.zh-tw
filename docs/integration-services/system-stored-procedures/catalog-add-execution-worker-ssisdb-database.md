@@ -29,7 +29,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="syntax"></a>語法
 
 ```sql
-add_execution_worker [@execution_id = ] execution_id, [@workeragent_id = ] workeragent_id
+catalog.add_execution_worker [@execution_id = ] execution_id, [@workeragent_id = ] workeragent_id
 ```
 
 ## <a name="arguments"></a>引數

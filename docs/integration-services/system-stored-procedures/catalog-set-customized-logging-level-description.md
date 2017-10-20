@@ -29,9 +29,8 @@ ms.lasthandoff: 09/26/2017
 ## <a name="syntax"></a>語法  
   
 ```sql  
-set_customized_logging_level_description [ @level_name = ] level_name  
+catalog.set_customized_logging_level_description [ @level_name = ] level_name  
     , [ @level_description = ] level_description  
-  
 ```  
   
 ## <a name="arguments"></a>引數  

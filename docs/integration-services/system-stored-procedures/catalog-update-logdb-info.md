@@ -28,7 +28,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="syntax"></a>語法
 
 ```sql
-update_logdb_info [@server_name = ] server_name, [@connection_string = ] connection_string
+catalog.update_logdb_info [@server_name = ] server_name, [@connection_string = ] connection_string
 ```
 
 ## <a name="arguments"></a>引數

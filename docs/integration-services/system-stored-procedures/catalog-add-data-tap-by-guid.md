@@ -29,12 +29,12 @@ ms.lasthandoff: 09/26/2017
 ## <a name="syntax"></a>語法  
   
 ```sql  
-add_data_tap_by_guid [ @execution_id = ] execution_id  
-[ @dataflow_task_guid = ] dataflow_task_guid   
-[ @dataflow_path_id_string = ] dataflow_path_id_string  
-[ @data_filename = ] data_filename  
-[ @max_rows = ] max_rows  
-[ @data_tap_id = ] data_tap_id  
+catalog add_data_tap_by_guid [ @execution_id = ] execution_id  
+, [ @dataflow_task_guid = ] dataflow_task_guid   
+, [ @dataflow_path_id_string = ] dataflow_path_id_string  
+, [ @data_filename = ] data_filename  
+, [ @max_rows = ] max_rows  
+, [ @data_tap_id = ] data_tap_id  
 ```  
   
 ## <a name="arguments"></a>引數  
@@ -63,12 +63,11 @@ add_data_tap_by_guid [ @execution_id = ] execution_id
 ## <a name="example"></a>範例  
  在下列範例中，資料流程路徑上建立資料點選`Paths[SRC DimDCVentor.OLE DB Source Output]`，請在資料流程工作`{D978A2E4-E05D-4374-9B05-50178A8817E8}`。 點選資料會儲存在 DCVendorOutput.csv 檔案中。  
   
-```  
+```sql
 exec catalog.add_data_tap_by_guid   @execution_id,   
 '{D978A2E4-E05D-4374-9B05-50178A8817E8}',   
 'Paths[SRC DimDCVentor.OLE DB Source Output]',   
 'D:\demos\datafiles\DCVendorOutput.csv'  
-  
 ```  
   
 ## <a name="remarks"></a>備註  

@@ -29,7 +29,7 @@ ms.lasthandoff: 09/26/2017
 ## <a name="syntax"></a>語法  
   
 ```sql  
-create_execution_dump [ @execution_id = ] execution_id  
+catalog.create_execution_dump [ @execution_id = ] execution_id  
   
 ```  
   
@@ -40,10 +40,8 @@ create_execution_dump [ @execution_id = ] execution_id
 ## <a name="example"></a>範例  
  在下列範例中，會提示執行識別碼為 88 的執行中封裝建立傾印檔案。  
   
-```  
-  
+```sql
 EXEC create_execution_dump @execution_id = 88  
-  
 ```  
   
 ## <a name="return-codes"></a>傳回碼  
