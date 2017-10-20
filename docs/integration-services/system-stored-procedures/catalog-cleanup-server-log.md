@@ -85,7 +85,7 @@ cleanup_server_log
 ## <a name="example"></a>範例  
  下列範例會呼叫 cleanup_server_log 預存程序。  
   
-```tsql  
+```sql  
 USE [SSISDB]  
 GO  
   

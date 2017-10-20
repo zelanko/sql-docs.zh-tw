@@ -28,7 +28,7 @@ ms.lasthandoff: 09/26/2017
   
 ## <a name="syntax"></a>語法  
   
-```tsql  
+```sql  
 delete_folder [ @folder_name = ] folder_name  
 ```  
   

@@ -73,7 +73,7 @@ Azure 的 SQL Server Stretch Database 服務，會在卸除資料庫前擷取資
   
     -   指定是否要複製一份遠端資料，並連接到複本 (建議選項)。  
   
-    ```tsql  
+    ```sql  
     USE <Stretch-enabled database name>;
     GO
     EXEC sp_rda_reauthorize_db

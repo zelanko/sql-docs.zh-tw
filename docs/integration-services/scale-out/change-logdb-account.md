@@ -34,7 +34,7 @@ ms.lasthandoff: 08/03/2017
 呼叫預存程序 [catalog]。[update_logdb_info] 做為參數的 Sql Server 名稱和連接字串。
 
 #### <a name="example"></a>範例
-```tsql
+```sql
 SET @serverName = CONVERT(sysname, SERVERPROPERTY('servername'))
 SET @connectionString = 'Data Source=' + @serverName + ';Initial Catalog=SSISDB;Integrated Security=SSPI;'
 EXEC [internal].[update_logdb_info] @serverName, @connectionString

@@ -28,7 +28,7 @@ ms.lasthandoff: 09/26/2017
   
 ## <a name="syntax"></a>語法  
   
-```tsql  
+```sql  
 create_customized_logging_level [ @level_name = ] level_name  
     , [ @level_description = ] level_description  
     , [ @profile_value = ] profile_value  

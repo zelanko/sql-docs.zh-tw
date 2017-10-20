@@ -28,7 +28,7 @@ ms.lasthandoff: 08/03/2017
 
 ## <a name="syntax"></a>語法
 
-```tsql
+```sql
 add_execution_worker [@execution_id = ] execution_id, [@workeragent_id = ] workeragent_id
 ```
 

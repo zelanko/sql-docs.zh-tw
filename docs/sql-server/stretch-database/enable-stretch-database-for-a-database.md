@@ -84,7 +84,7 @@ GO
   
 3.  若要設定 SQL Server 資料庫以使用 Stretch Database ，該資料庫必須要有資料庫主要金鑰。 資料庫主要金鑰會保護 Stretch Database 用來連接遠端資料庫的認證。 以下範例會建立新的資料庫主要金鑰。  
   
-    ```tsql  
+    ```sql  
     USE <database>; 
     GO  
   
@@ -103,7 +103,7 @@ GO
         
         以下範例會建立新的認證。
   
-        ```tsql  
+        ```sql  
         CREATE DATABASE SCOPED CREDENTIAL <db_scoped_credential_name>  
             WITH IDENTITY = '<identity>' , SECRET = '<secret>' ;
         GO   
@@ -127,7 +127,7 @@ GO
   
     2.  以 CREDENTIAL 引數提供現有的系統管理員認證，或指定 FEDERATED_SERVICE_ACCOUNT = ON。 下列範例提供現有的認證。  
   
-    ```tsql  
+    ```sql  
     ALTER DATABASE <database name>  
         SET REMOTE_DATA_ARCHIVE = ON  
             (  
