@@ -20,8 +20,8 @@
 # 版本資訊
 
 ## [SQL Server 版本資訊](sql-server-release-notes.md)
-## [SQL Server 2016 版本資訊](sql-server-2016-release-notes.md)
 ## [SQL Server 2017 版本資訊](sql-server-2017-release-notes.md)
+## [SQL Server 2016 版本資訊](sql-server-2016-release-notes.md)
 ## [SQL Server 2014 Release Notes](sql-server-2014-release-notes.md)
 ## [SQL Server 2012 SP4 版本資訊](sql-server-2012-sp4-release-notes.md)
 ## [SQL Server 2012 SP3 版本資訊](sql-server-2012-sp3-release-notes.md)
