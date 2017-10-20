@@ -30,7 +30,7 @@ ms.contentlocale: zh-tw
 ms.lasthandoff: 09/19/2017
 
 ---
-# <a name="x40x40nestlevel-transact-sql"></a>&#x40;&#x40;NESTLEVEL (TRANSACT-SQL)
+# <a name="x40x40nestlevel-transact-sql"></a>&#x40;&#x40; NESTLEVEL (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   傳回本機伺服器中執行目前預存程序的巢狀層級 (最初是 0)。  
@@ -49,11 +49,11 @@ ms.lasthandoff: 09/19/2017
 ## <a name="remarks"></a>備註  
  每次預存程序呼叫另一個預存程序時，或參考 Common Language Runtime (CLR) 常式、類型或彙總來執行 Managed 程式碼時，巢狀層級都會遞增。 當到達最大值 32 時，交易便告終止。  
   
- 當 @@NESTLEVEL內執行時[!INCLUDE[tsql](../../includes/tsql-md.md)]字串，則傳回值 1 + 目前的巢狀層級。 當 @@NESTLEVEL執行動態使用 sp_executesql 傳回的值是 2 + 目前的巢狀層級。  
+ 當 @@NESTLEVEL 內執行時[!INCLUDE[tsql](../../includes/tsql-md.md)]字串，則傳回值 1 + 目前的巢狀層級。 當 @@NESTLEVEL 執行動態使用 sp_executesql 傳回的值是 2 + 目前的巢狀層級。  
   
 ## <a name="examples"></a>範例  
   
-### <a name="a-using-nestlevel-in-a-procedure"></a>A. 使用@NESTLEVEL程序中  
+### <a name="a-using-nestlevel-in-a-procedure"></a>A. 使用 @@NESTLEVEL 程序中  
  下列範例會建立兩個程序：一個程序呼叫另一個程序，一個程序顯示各程序的 `@@NESTLEVEL` 設定。  
   
 ```  
@@ -88,7 +88,7 @@ Inner Level
 2
 ```  
   
-### <a name="b-calling-nestlevel"></a>B. 呼叫@NESTLEVEL  
+### <a name="b-calling-nestlevel"></a>B. 呼叫 @@NESTLEVEL  
  下列範例會顯示 `SELECT`、`EXEC` 和 `sp`_`executesql` 呼叫 `@@NESTLEVEL` 時，它們所傳回之值的差異。  
   
 ```  
