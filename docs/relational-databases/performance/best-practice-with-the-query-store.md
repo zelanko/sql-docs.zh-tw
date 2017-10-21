@@ -76,7 +76,7 @@ SET QUERY_STORE (MAX_STORAGE_SIZE_MB = 1024);
  **統計資料收集間隔：** 定義已收集之執行階段統計資料的資料粒度層級 (預設值是 1 小時)。 如果您需要更精細的資料粒度或使用較短的時間偵測與解決問題，請考慮使用較低的值，但請注意，它會直接影響查詢存放區資料的大小。 使用 SSMS 或 Transact-SQL 來針對統計資料收集間隔設定不同的值：  
   
 ```tsql  
-ALTER DATABASE [QueryStoreDB] SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 30);  
+ALTER DATABASE [QueryStoreDB] SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 60);  
 ```  
   
  **過時的查詢臨界值 (天)：** 以時間為基礎的清除原則，可控制保存的執行階段統計資料和非使用中查詢的保留期限。  
@@ -86,7 +86,7 @@ ALTER DATABASE [QueryStoreDB] SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 30);
   
 ```tsql  
 ALTER DATABASE [QueryStoreDB]   
-SET QUERY_STORE (CLEANUP_POLICY = (STALE_QUERY_THRESHOLD_DAYS = 14));  
+SET QUERY_STORE (CLEANUP_POLICY = (STALE_QUERY_THRESHOLD_DAYS = 90));  
 ```  
   
  **大小基礎的清除模式** ：指定查詢存放區的資料大小到達限制時是否自動清除資料。  

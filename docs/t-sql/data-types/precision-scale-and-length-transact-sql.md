@@ -1,7 +1,7 @@
 ---
 title: "有效位數、 小數位數和長度 (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
-ms.date: 07/22/2017
+ms.date: 7/22/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -25,6 +25,7 @@ caps.latest.revision: 31
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 557d7a5c45e9cc5a0839dfb4a1fdb0d08c2bf83f
