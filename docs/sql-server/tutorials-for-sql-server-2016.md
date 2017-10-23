@@ -11,9 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
 caps.latest.revision: 40
-author: BYHAM
-ms.author: rickbyh
-manager: craigg
+author: craigg-msft
+ms.author: craigg
+manager: jhubbard
 ms.translationtype: HT
 ms.sourcegitcommit: 76839e39427e24688609353b8708d59fee772d28
 ms.openlocfilehash: cd54a753fe83bc4b535e31c3cd6481c73424e1bb
@@ -22,8 +22,6 @@ ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="tutorials-for-sql-server"></a>適用於 SQL Server 的教學課程
-[!INCLUDE[feedback_stackoverflow_msdn_connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
-
 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 提供可協助您了解新技術和功能的教學課程。 舊版的教學課程通常可用於較新版本。 當教學課程提及較新的功能時，將指出完成該教學課程所需的最低版本。  
      
 -   如果教學課程使用其中一個 [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] 資料庫，那麼您應該從 CodePlex 下載最新版本並加以使用。 如需詳細資訊，請參閱 [AdventureWorks 資料庫與 SQL Server 2016 CTP3 的指令碼](https://www.microsoft.com/download/details.aspx?id=49502)。    
