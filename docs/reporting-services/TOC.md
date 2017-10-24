@@ -71,6 +71,8 @@
 
 
 # 開發人員
+## [REST API](developer/rest-api.md)
+## [REST API 範例](https://github.com/Microsoft/Reporting-Services)
 ## [應用程式整合](../reporting-services/application-integration/integrating-reporting-services-into-applications.md)
 ## [報表伺服器 Web 服務](../reporting-services/report-server-web-service/report-server-web-service.md)
 ## [延伸模組](../reporting-services/extensions/reporting-services-extension-library.md)
