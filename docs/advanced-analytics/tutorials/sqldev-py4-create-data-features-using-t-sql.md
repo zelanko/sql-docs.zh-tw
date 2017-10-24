@@ -1,7 +1,7 @@
 ---
 title: "步驟 4︰使用 T-SQL 建立資料特徵 | Microsoft Docs"
 ms.custom: 
-ms.date: 05/25/2017
+ms.date: 10/17/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -20,15 +20,17 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e429c4ee6874538af52784f5dbe841cb0a420b7d
+ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
+ms.openlocfilehash: aec9f035404cbd08c40d518db576e443b28a210a
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/18/2017
 
 ---
 # <a name="step-4-create-data-features-using-t-sql"></a>步驟 4︰使用 T-SQL 建立資料特徵
 
 資料探索之後, 您已經從資料收集一些深入資訊後，即可移至*功能工程*。 這個程序的功能建立從原始資料可以是進階的分析模型的重要步驟。
+
+這篇文章的教學課程中，屬於[SQL 開發人員的資料庫中的 Python 分析](sqldev-in-database-python-for-sql-developers.md)。 
 
 在此步驟中，您將了解如何使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函數，從原始資料建立特徵。 接著您將從預存程序呼叫該函數，以建立包含特徵值的資料表。
 
@@ -119,16 +121,13 @@ ms.lasthandoff: 09/01/2017
 
 在下一個步驟中，您將學習如何使用這些資料功能來建立及定型使用 Python 的機器學習模型。
 
-## <a name="next-step"></a>下一個步驟
+## <a name="next-step"></a>下一步
 
-[步驟 5︰使用 T-SQL 定型及儲存模型](sqldev-py5-train-and-save-a-model-using-t-sql.md)
+[步驟 5： 訓練並儲存使用 T-SQL Python 模型](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
 ## <a name="previous-step"></a>上一個步驟
 
 [步驟 3：瀏覽及視覺化資料](sqldev-py3-explore-and-visualize-the-data.md)
 
-## <a name="see-also"></a>另請參閱
-
-[使用 Python 的機器學習服務](../python/sql-server-python-services.md)
 
 

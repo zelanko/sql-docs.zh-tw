@@ -39,11 +39,12 @@ caps.latest.revision: 212
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4e80db92abd988b86b1224f07c92ecb2b20bb883
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: de8574d6d4f2322c63743828b7b8a03d4e6fa576
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="create-database-sql-server-transact-sql"></a>CREATE DATABASE (SQL Server Transact-SQL)
@@ -535,9 +536,9 @@ GO
 ```  
   
 ### <a name="b-creating-a-database-that-specifies-the-data-and-transaction-log-files"></a>B. 建立指定資料檔案和交易記錄檔的資料庫  
- 下列範例會建立資料庫 `Sales`。 因為沒有使用關鍵字 PRIMARY，所以第一個檔案 (`Sales`_`dat`) 會成為主要檔案。 因為 `Sales`\_`dat` 檔的 SIZE 參數中沒有指定 MB 或 KB，所以它會使用 MB 並 MB 來配置。 每當建立、修改或卸除使用者資料庫時，都應該備份 `Sales`\_`log` 檔會以 MB 為單位配置，因為 `MB` 參數中明確陳述 `SIZE` 後置詞。  
+ 下列範例會建立資料庫 `Sales`。 因為主要沒有使用的關鍵字，第一個檔案 (`Sales_dat`) 會成為主要檔案。 因為 `Sales_dat` 檔的 SIZE 參數中沒有指定 MB 或 KB，所以它會使用 MB 並 MB 來配置。 每當建立、修改或卸除使用者資料庫時，都應該備份 `Sales_log` 檔會以 MB 為單位配置，因為 `MB` 參數中明確陳述 `SIZE` 後置詞。  
   
-```  
+```tsql  
 USE master;  
 GO  
 CREATE DATABASE Sales  
@@ -559,7 +560,7 @@ GO
 ### <a name="c-creating-a-database-by-specifying-multiple-data-and-transaction-log-files"></a>C. 利用指定多個資料檔案和交易記錄檔的方式建立資料庫  
  下列範例會建立資料庫 `Archive`，這個資料庫有三個 `100-MB` 的資料檔案和兩個 `100-MB` 的交易記錄檔。 主要檔案是清單中的第一個檔案，並以關鍵字 `PRIMARY` 明確指定。 交易記錄檔是以關鍵字 `LOG ON` 指定的。 請注意 `FILENAME` 選項中之檔案的副檔名：`.mdf` 用於主要資料庫，`.ndf` 用於次要資料檔案，`.ldf` 則用於交易記錄檔。 此範例會將此資料庫放在 `D:` 磁碟機上，而不是與 `master` 資料庫放在一起。  
   
-```  
+```tsql  
 USE master;  
 GO  
 CREATE DATABASE Archive   
@@ -597,7 +598,7 @@ GO
 ### <a name="d-creating-a-database-that-has-filegroups"></a>D. 建立含有檔案群組的資料庫  
  下列範例會建立含有下列檔案群組的資料庫 `Sales`：  
   
--   主要檔案群組與檔案`Spri1`_`dat`和`Spri2` \_ `dat`。 這些檔案的 FILEGROWTH 遞增指定為 `15%`。  
+-   主要檔案群組與檔案`Spri1_dat`和`Spri2_dat`。 這些檔案的 FILEGROWTH 遞增指定為 `15%`。  
   
 -   名為 `SalesGroup1` 的檔案群組，該檔案群組含有檔案 `SGrp1Fi1` 和 `SGrp1Fi2`。  
   
@@ -605,7 +606,7 @@ GO
   
  此範例將資料和記錄檔放在不同的磁碟上，藉此改進效能。  
   
-```  
+```tsql  
 USE master;  
 GO  
 CREATE DATABASE Sales  
@@ -654,7 +655,7 @@ GO
 ### <a name="e-attaching-a-database"></a>E. 附加資料庫  
  下列範例會先卸離在範例 D 中建立的資料庫 `Archive`，再利用 `FOR ATTACH` 子句附加該資料庫。 `Archive` 定義為具有多個資料檔案和記錄檔。 不過，因為檔案建立之後並未改變位置，所以在 `FOR ATTACH` 子句中只需要指定主要檔案。 從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 開始，所附加之資料庫中的任何全文檢索檔案，都會隨著資料庫而一起附加。  
   
-```  
+```tsql  
 USE master;  
 GO  
 sp_detach_db Archive;  
@@ -666,11 +667,11 @@ GO
 ```  
   
 ### <a name="f-creating-a-database-snapshot"></a>F. 建立資料庫快照集  
- 下列範例會建立資料庫快照集 `sales`_`snapshot0600`。 因為資料庫快照集是唯讀的，所以不能指定記錄檔。 依照語法規定，會指定來源資料庫中的每個檔案，但不會指定檔案群組。  
+ 下列範例會建立資料庫快照集`sales_snapshot0600`。 因為資料庫快照集是唯讀的，所以不能指定記錄檔。 依照語法規定，會指定來源資料庫中的每個檔案，但不會指定檔案群組。  
   
  這個範例中的來源資料庫就是在範例 D 中建立的資料庫 `Sales`。  
   
-```  
+```tsql  
 USE master;  
 GO  
 CREATE DATABASE sales_snapshot0600 ON  
@@ -687,7 +688,7 @@ GO
 ### <a name="g-creating-a-database-and-specifying-a-collation-name-and-options"></a>G. 建立資料庫並指定定序名稱和選項  
  下列範例會建立資料庫 `MyOptionsTest`。 它指定定序名稱，並將 `TRUSTYWORTHY` 和 `DB_CHAINING` 選項設為 `ON`。  
   
-```  
+```tsql  
 USE master;  
 GO  
 IF DB_ID (N'MyOptionsTest') IS NOT NULL  
@@ -708,7 +709,7 @@ GO
 ### <a name="h-attaching-a-full-text-catalog-that-has-been-moved"></a>H. 附加已移動的全文檢索目錄  
  下列範例會附加全文檢索目錄 `AdvWksFtCat` 以及 `AdventureWorks2012` 資料檔案和記錄檔。 在這個範例中，全文檢索目錄會從預設位置移至新的位置 `c:\myFTCatalogs`。 資料檔案和記錄檔仍保留在它們的預設位置中。  
   
-```  
+```tsql  
 USE master;  
 GO  
 --Detach the AdventureWorks2012 database  
@@ -733,7 +734,7 @@ GO
   
 -   `FileStreamResumes` 包含 FILESTREAM 資料。 其包含一個 FILESTREAM 資料容器 `FSResumes` (位於 `C:\MyFSfolder\Resumes`)。  
   
-```  
+```tsql  
 USE master;  
 GO  
 -- Get the SQL Server data path.  

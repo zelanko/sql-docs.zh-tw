@@ -1,7 +1,7 @@
 ---
 title: "步驟 1： 下載範例資料 |Microsoft 文件"
 ms.custom: 
-ms.date: 05/25/2017
+ms.date: 10/17/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -20,48 +20,57 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 147860e9af8cce86d1a7ccbd3e53f20d240fcd49
+ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
+ms.openlocfilehash: b2ac1eeb53ba9f9a0dcbf86ee772db9c8b2d3553
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/18/2017
 
 ---
-# <a name="step-1-download-the-sample-data"></a>步驟 1︰下載範例資料
+# <a name="step-1-download-the-sample-data"></a>步驟 1： 下載範例資料
 
-在此步驟中，您將下載的範例資料集和指令碼。 Github 上有共用的資料和指令碼檔案，但 PowerShell 指令碼會將資料和指令碼檔案下載到您選擇的本機目錄。
+這篇文章的教學課程中，屬於[SQL 開發人員的資料庫中的 Python 分析](sqldev-in-database-python-for-sql-developers.md)。 
 
-## <a name="download-the-data-and-scripts"></a>下載資料和指令碼
+Github 上共用資料，此教學課程中的指令碼。 在此步驟中，您可以使用 PowerShell 指令碼以將資料和指令碼檔案下載至您所選擇的本機目錄。
+
+## <a name="run-the-script"></a>執行指令碼
 
 1. 開啟 Windows PowerShell 命令主控台。
 
     使用選項，**系統管理員身分執行**，如果需要系統管理權限來建立目的地目錄，或將檔案寫入指定的目的地。
 
-2. 執行下列 PowerShell 命令，將參數 *DestDir* 的值變更為任何本機目錄。  我們這裡使用預設值是**TempPythonSQL**。
+2. 執行下列 PowerShell 命令，將參數 *DestDir* 的值變更為任何本機目錄。  我們這裡使用預設值是`C:\temp\pysql`。
 
-    ```
+    ```ps
     $source = 'https://raw.githubusercontent.com/Azure/Azure-MachineLearning-DataScience/master/Misc/PythonSQL/Download_Scripts_SQL_Walkthrough.ps1'
     $ps1_dest = "$pwd\Download_Scripts_SQL_Walkthrough.ps1"
     $wc = New-Object System.Net.WebClient
     $wc.DownloadFile($source, $ps1_dest)
-    .\Download_Scripts_SQL_Walkthrough.ps1 –DestDir 'C:\tempPythonSQL'
+    .\Download_Scripts_SQL_Walkthrough.ps1 –DestDir 'C:\temp\pysql'
     ```
     
     如果您在 *DestDir* 中指定的資料夾不存在，PowerShell 指令碼就會加以建立。
     
-    如果您收到錯誤，您可以暫時設定的 PowerShell 指令碼來執行原則**不受限制**僅適用於此逐步解說中，使用**略過**引數及範圍設定為目前的變更工作階段。 執行此命令不會導致設定變更。
+    如果您收到錯誤，請暫時設定執行 PowerShell 指令碼的原則**不受限制**這個逐步解說中，使用**略過**引數和範圍所做的變更目前工作階段。 執行此命令不會導致設定變更。
     
-    `Set\-ExecutionPolicy Bypass \-Scope Process`
-
-3. 按照網際網路的連線速度，下載可能需要一些時間。 當所有檔案皆已下載時，PowerShell 指令碼會開啟  *DestDir*所指定的資料夾。 在 PowerShell 命令提示字元中，執行下列命令，並檢閱已下載的檔案。
-
+    ```ps
+    Set-ExecutionPolicy Bypass -Scope Process
     ```
+
+3. 根據您的網際網路連線，下載可能需要一些時間。 
+
+## <a name="view-the-results"></a>檢視結果
+
+當所有檔案皆已下載時，PowerShell 指令碼會開啟  *DestDir*所指定的資料夾。 
+
++ 在 PowerShell 命令提示字元中，執行下列命令，列出已下載的檔案。
+
+    ```ps
     ls
     ```
-**結果：**
 
 ![PowerShell 指令碼下載的檔案清單](media/sqldev-python-filelist.png "PowerShell 指令碼下載的檔案清單")
 
-## <a name="next-step"></a>下一個步驟
+## <a name="next-step"></a>下一步
 
 [步驟 2︰使用 PowerShell 將資料匯入 SQL Server](sqldev-py2-import-data-to-sql-server-using-powershell.md)
 

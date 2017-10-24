@@ -22,11 +22,12 @@ caps.latest.revision: 33
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 2a453b99d7ab0512e57275b5ad1805f5a66522ba
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 39bd8a393a9cc3e19e457cda98c0521492e07911
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="newsequentialid-transact-sql"></a>NEWSEQUENTIALID (Transact-SQL)
@@ -37,7 +38,7 @@ ms.lasthandoff: 09/01/2017
 > [!IMPORTANT]  
 >  如果您有隱私權顧慮，請勿使用這個函數。 因為使用者不難猜出下一個產生的 GUID 值，進而存取與該 GUID 相關聯的資料。  
   
- NEWSEQUENTIALID 是 windows 的包裝函數[UuidCreateSequential](http://go.microsoft.com/fwlink/?LinkId=164027)函式。  
+ NEWSEQUENTIALID 是 windows 的包裝函數[UuidCreateSequential](http://go.microsoft.com/fwlink/?LinkId=164027)函式，但有一些[位元組要跳過套用](https://blogs.msdn.microsoft.com/dbrowne/2012/07/03/how-to-generate-sequential-guids-for-sql-server-in-net/)。
   
 > [!WARNING]  
 >  UuidCreateSequential 函式有硬體相依性。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，（例如自主資料庫） 的資料庫移動到其他電腦時，可以開發的循序值的叢集。 使用 Alwayson 時，並在[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]，如果資料庫容錯移轉至另一部電腦，可以開發的循序值的叢集。  

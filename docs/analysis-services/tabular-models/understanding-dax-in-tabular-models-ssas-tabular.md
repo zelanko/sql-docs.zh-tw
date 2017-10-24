@@ -1,7 +1,7 @@
 ---
 title: "DAX 中表格式模型 (SSAS 表格式) |Microsoft 文件"
 ms.custom: 
-ms.date: 04/10/2017
+ms.date: 10/21/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 653c715b8a3b990cc6073b2455887232c71c32b4
+ms.sourcegitcommit: 5bca339c13cb407e497cfa283a08833f2f4e666a
+ms.openlocfilehash: 2a72b3e1ec1dad514eb8394460267b44bca79d7d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/23/2017
 
 ---
 # <a name="dax-in-tabular-models-ssas-tabular"></a>DAX 中表格式模型 (SSAS 表格式)
-  Data Analysis Expressions (DAX) 是一種公式語言，用來分析服務，Power BI Desktop，並在 Excel 中的 Power Pivot 中建立自訂計算。 DAX 公式包含函數、運算子和值，可對資料表和資料行中的資料執行進階計算。  
+  Data Analysis Expressions (DAX) 是一種公式語言，用來在 Analysis Services、 Power BI Desktop 和 Power Pivot，在 Excel 中建立自訂計算。 DAX 公式包含函數、運算子和值，可對資料表和資料行中的資料執行進階計算。  
   
  雖然 DAX 會使用在 Analysis Services、 Power BI Desktop 和 Power Pivot，在 Excel 中，本主題適用於多撰寫在 SQL Server Data Tools (SSDT) 的 Analysis Services 表格式模型專案。  
   
@@ -202,6 +202,9 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
 ### <a name="mathematical-and-trigonometric-functions"></a>數學和三角函數  
  DAX 中的數學函數與 Excel 的數學和三角函數非常類似。 在 DAX 函數所使用的數值資料類型中有一些小差異。 如需詳細資訊，請參閱 [數學與三角函數 (DAX)](http://msdn.microsoft.com/en-us/1f408ec1-e769-43d6-a68c-567bc30d893f)。  
+ 
+### <a name="other-functions"></a>其他函式  
+ 這些函式執行不定義任何其他大部分函式所屬類別的唯一動作。 如需詳細資訊，請參閱[其他函數 (DAX)](https://msdn.microsoft.com/mt150101)。
   
 ### <a name="statistical-functions"></a>統計函數  
  DAX 提供執行彙總的統計函數。 在 DAX 中，除了可以建立加總與平均值，或尋找最小與最大值之外，您還可以先篩選資料行再進行彙總，或是根據相關資料表建立彙總。 如需詳細資訊，請參閱 [統計函數 (DAX)](http://msdn.microsoft.com/en-us/ba4c1298-57a0-40fc-b6f6-00e187ace559)。  
@@ -391,7 +394,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
  [DAX 資源中心](http://go.microsoft.com/fwlink/?LinkID=220966&clcid=0x409) 會提供關於 DAX 的內外部資訊，包括由主要的 Business Intelligence 專業人員所提交的多個 DAX 解決方案。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [Data Analysis Expressions (DAX) 參考](http://msdn.microsoft.com/en-us/70a82136-0926-4a91-bcb3-e18e82593b0d)   
  [量值](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
  [導出資料行](../../analysis-services/tabular-models/ssas-calculated-columns.md)   
@@ -400,3 +403,4 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
  [支援的資料來源](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)  
   
   
+

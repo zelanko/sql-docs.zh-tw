@@ -18,11 +18,12 @@ caps.latest.revision: 30
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 03913120309e861eab5bb89523467e8736e5b50b
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 0f43310dfd52210d23bae3a34f22b52845a41706
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="analyze-queries-with-showplan-results-in-sql-server-profiler"></a>在 SQL Server Profiler 中使用 SHOWPLAN 結果分析查詢
@@ -30,7 +31,7 @@ ms.lasthandoff: 08/02/2017
   
  若要從追蹤中擷取顯示計畫事件，可以使用下列其中一個方式來進行：  
   
--   在追蹤組態時，使用 [事件擷取設定] 索引標籤。 請注意，必須先選取 [事件選取範圍] 索引標籤上的其中一個 Showplan 事件，此索引標籤才會顯示。  
+-   在追蹤組態時，使用 [事件擷取設定] 索引標籤。請注意，必須先選取 [事件選取範圍] 索引標籤上的其中一個 Showplan 事件，此索引標籤才會顯示。  
   
 -   使用 [檔案] 功能表上的 [擷取 SQL Server 事件] 選項。  
   
@@ -55,3 +56,4 @@ ms.lasthandoff: 08/02/2017
  [Performance 事件類別目錄](../../relational-databases/event-classes/performance-event-category.md)  
   
   
+

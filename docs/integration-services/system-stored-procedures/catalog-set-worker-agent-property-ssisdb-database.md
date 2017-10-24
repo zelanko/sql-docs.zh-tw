@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: cd1366409f9fb0af271b26fad3b8b911f99acc06
-ms.openlocfilehash: d0476bbb67cff44a05aed1441a31d679882b4cb3
+ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
+ms.openlocfilehash: c1caf4a71e5802968d9471711b8206a26f9c28d5
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 10/20/2017
 
 ---
 # <a name="catalogsetworkeragentproperty-ssisdb-database"></a>catalog.set_worker_agent_property （SSISDB 資料庫）
@@ -28,22 +28,22 @@ ms.lasthandoff: 09/08/2017
 
 ## <a name="syntax"></a>語法
 
-```tsql
-set_worker_agent_property [ @WorkerAgentId = ] WorkerAgentId, [ @PropertyName = ] PropertyName, [ @PropertyValue = ] PropertyValue 
+```sql
+catalog.set_worker_agent_property [@WorkerAgentId =] WorkerAgentId, [@PropertyName =] PropertyName, [@PropertyValue =] PropertyValue 
 ```
 
 ## <a name="arguments"></a>引數
-[ @WorkerAgentId =] *WorkerAgentId*  
-標尺出背景工作的背景工作代理程式識別碼。 *WorkerAgentId*是**uniqueidentifier**。
+[@WorkerAgentId =] *WorkerAgentId*  
+背景工作代理程式識別碼的標尺出背景工作。 *WorkerAgentId*是**uniqueidentifier**。
 
-[ @PropertyName =] *PropertyName*  
+[@PropertyName =] *PropertyName*  
 屬性的名稱。 *PropertyName*是**nvarchar （256)**。
 
-[ @PropertyValue =] *PropertyValue*  
-屬性值。 *PropertyValue*是**nvarchar （max)**。
+[@PropertyValue =] *PropertyValue*  
+屬性的值。 *PropertyValue*是**nvarchar （max)**。
 
 ## <a name="remarks"></a>備註
-有效的屬性名稱是**DisplayName**，**描述**，**標記**。
+有效的屬性名稱都是**DisplayName**，**描述**，**標記**。
 
 ## <a name="return-code-value"></a>傳回碼值  
  0 (成功)  
@@ -58,7 +58,7 @@ set_worker_agent_property [ @WorkerAgentId = ] WorkerAgentId, [ @PropertyName = 
   
 -   成員資格**sysadmin**伺服器角色
 
-## <a name="erros-and-warnings"></a>錯誤和警告
+## <a name="errors-and-warnings"></a>錯誤和警告
   下列清單將描述可能會引發錯誤或警告的某些條件：  
   
 -   使用者未具備適當的權限 
@@ -67,4 +67,4 @@ set_worker_agent_property [ @WorkerAgentId = ] WorkerAgentId, [ @PropertyName = 
 
 -   屬性名稱無效。
 
--   屬性值不是 vilid。  
+-   屬性值無效。  

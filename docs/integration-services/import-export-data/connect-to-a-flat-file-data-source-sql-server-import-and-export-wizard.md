@@ -15,14 +15,19 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b765b02717c0eef59fda5dfa12cb64a1b9197587
+ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
+ms.openlocfilehash: 568d02ef58102b47501415d35f64369e997e875b
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/26/2017
+ms.lasthandoff: 10/18/2017
 
 ---
 # <a name="connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard"></a>連接到一般檔案資料來源 （SQL Server 匯入和匯出精靈）
-本主題說明如何連接到**一般檔案**（文字檔） 資料來源從**選擇資料來源**或**選擇目的地**SQL Server 匯入和匯出頁面精靈。 一般檔案，精靈的這兩個分頁呈現不同組的選項，因此本主題可描述的一般檔案來源和目的分開。
+本主題說明如何連接到**一般檔案**（文字檔） 資料來源從**選擇資料來源**或**選擇目的地**SQL Server 匯入和匯出頁面精靈。 用於一般檔案、 在精靈的這兩個分頁呈現不同組的選項，因此本主題描述一般檔案來源和一般檔案目的地分開。
+
+## <a name="an-alternative-for-simple-text-import"></a>替代的簡單文字檔匯入
+如果您有文字檔匯入 SQL Server，而且您不需要匯入和匯出精靈 」 中提供所有設定選項，請考慮使用**匯入精靈的一般檔案**中 SQL Server Management Studio (SSMS)。 如需詳細資訊，請參閱下列文章：
+- [SQL Server Management Studio 17.3 的新功能](https://blogs.technet.microsoft.com/dataplatforminsider/2017/10/10/whats-new-in-sql-server-management-studio-17-3/) \(英文\)
+- [在 SSMS 17.3 中新推出的「匯入一般檔案精靈」簡介](https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-new-Import-Flat-File-Wizard-in-SSMS-173) \(英文\)
 
 ## <a name="connect-to-a-flat-file-source"></a>連接到一般檔案來源
  
@@ -202,10 +207,10 @@ ms.lasthandoff: 09/26/2017
   
 |屬性|Description|  
 |--------------|-----------------|  
-|**名稱**|提供描述性資料行名稱。 如果未輸入名稱， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會自動以 Column 0、Column 1 等等的格式建立名稱。|
+|**名稱**|提供描述性資料行名稱。 如果您未輸入名稱，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]自動建立名稱資料行 0 格式、 資料行 1 等等。|
 |**ColumnDelimiter**|從可用的資料行分隔符號清單中選取。 請選擇不太可能會在文字中出現的分隔符號。 固定寬度資料行將忽略這個值。<br /><br /> **{CR}{LF}**： 資料行是以歸位字元和換行字元的組合分隔。<br /><br /> **{CR}**： 資料行是以歸位字元分隔。<br /><br /> **{LF}**： 資料行是以換行字元分隔。<br /><br /> **分號 {;}**： 資料行是以分號分隔。<br /><br /> **冒號 {:}**： 資料行是以冒號分隔。<br /><br /> **逗號 {,}**： 資料行是以逗號分隔。<br /><br /> **定位字元 {t}**： 資料行是以定位字元分隔。<br /><br /> **分隔號 {&#124;}**： 資料行是以分隔號分隔。|
 |**ColumnType**|代表資料行是否為分隔的、固定寬度或不齊右。 此屬性是唯讀的。 不齊右檔案就是除了最後一個資料行之外，其他所有資料行都有固定寬度的檔案。 它是以資料列分隔符號分隔。|  
-|**InputColumnWidth**|指定將儲存為位元組計數的值；針對 Unicode 檔案，這將會顯示為字元計數。 分隔資料行將忽略這個值。<br /><br /> **注意** ︰在物件模型中，這個屬性的名稱為 ColumnWidth。|
+|**InputColumnWidth**|指定要儲存為位元組; 計數的值針對 Unicode 檔案，這個值會是字元計數。 分隔資料行將忽略這個值。<br /><br /> **注意** ︰在物件模型中，這個屬性的名稱為 ColumnWidth。|
 |**DataPrecision**|指定數值資料的有效位數。 有效位數是指位數的數目。|
 |**DataScale**|指定數值資料的小數位數。 小數位數是指小數位數的數目。|
 |**DataType**|從可用的資料類型清單中選取。<br/>如需詳細資訊，請參閱＜ [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)＞。|
@@ -229,7 +234,7 @@ ms.lasthandoff: 09/26/2017
  
 按一下 [建議類型] 以顯示 [建議資料行類型] 對話方塊。 
 
-![一般檔案連接建議](../../integration-services/import-export-data/media/flat-file-connection-suggest.png)
+![一般檔案連接建議類型 對話方塊](../../integration-services/import-export-data/media/flat-file-connection-suggest.png)
 
 您選擇的選項之後**建議資料行類型**對話方塊，按一下**確定**，精靈可能會變更資料類型的某些資料行。
 
@@ -293,7 +298,7 @@ ms.lasthandoff: 09/26/2017
  如果檔案所使用的任何項目，，指定的文字限定詞。 例如，您可以指定文字欄位加上引號。 （這個屬性只適用於分隔檔案。） 
   
 > [!NOTE] 
-> 選取文字限定詞之後，就無法重新選取**無**選項。 輸入 **None** 即可取消選取文字限定詞。  
+> 選取文字限定詞之後，您無法重新選取**無**選項。 輸入 **None** 即可取消選取文字限定詞。  
 
 ## <a name="see-also"></a>另請參閱
 [選擇資料來源](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  

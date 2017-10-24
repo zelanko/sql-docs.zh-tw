@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 381dcb3e22f123bfa07c2b387598d3429398e21f
+ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
+ms.openlocfilehash: f76985a8721e154269b36b0bdcb40a83f6136cb3
 ms.contentlocale: zh-tw
-ms.lasthandoff: 10/02/2017
+ms.lasthandoff: 10/20/2017
 
 ---
 # <a name="whats-new-for-sql-server-2017-on-linux"></a>在 Linux 上的 SQL Server 2017 的新功能
@@ -137,6 +137,7 @@ CTP 1.1 版本包含下列增強功能和修正程式：
 
 [Service Pack 1 的改良功能](https://blogs.msdn.microsoft.com/sqlreleaseservices/sql-server-2016-service-pack-1-sp1-released/)CTP1.1 本版：
 - CLR、 Filestream/Filetable、 記憶體和查詢存放區物件複製的資料庫。
+  - **更新 10/18/2017年**： 時進一步測試使用，Filestream 目前不支援在 Linux 上的 SQL Server 2017 GA 版本中  
 - **建立**或**ALTER**運算子可程式性物件。
 - 新**USE 提示**查詢選項，以提供查詢處理器的提示。 深入了解：[查詢提示](../t-sql/queries/hints-transact-sql-query.md)。
 - SQL 服務帳戶現在可以透過程式設計方式識別啟用鎖定的分頁記憶體和立即檔案初始化的權限。

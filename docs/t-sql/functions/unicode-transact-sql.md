@@ -23,11 +23,12 @@ caps.latest.revision: 35
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a7366ab75865bca6f0e1220799a50c7c8d650863
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 60d3a635b15cd1413b3c7ba6db145cd5717b7e41
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="unicode-transact-sql"></a>UNICODE (Transact-SQL)
@@ -72,95 +73,6 @@ SELECT UNICODE(@nstring), NCHAR(UNICODE(@nstring));
 ```  
   
 ### <a name="b-using-substring-unicode-and-convert"></a>B. 使用 SUBSTRING、UNICODE 和 CONVERT  
- 下列範例會利用 `SUBSTRING`、`UNICODE` 和 `CONVERT` 函數來列印 `Åkergatan 24` 字串中的字元數目、Unicode 字元，以及每個字元的 UNICODE 值。  
-  
-```  
--- The @position variable holds the position of the character currently  
--- being processed. The @nstring variable is the Unicode character   
--- string to process.  
-DECLARE @position int, @nstring nchar(12);  
--- Initialize the current position variable to the first character in   
--- the string.  
-SET @position = 1;  
--- Initialize the character string variable to the string to process.   
--- Notice that there is an N before the start of the string, which   
--- indicates that the data following the N is Unicode data.  
-SET @nstring = N'Åkergatan 24';  
--- Print the character number of the position of the string you are at,   
--- the actual Unicode character you are processing, and the UNICODE   
--- value for this particular character.  
-PRINT 'Character #' + ' ' + 'Unicode Character' + ' ' + 'UNICODE Value';  
-WHILE @position <= DATALENGTH(@nstring)  
--- While these are still characters in the character string,  
-   BEGIN;  
-   SELECT @position,   
-      CONVERT(char(17), SUBSTRING(@nstring, @position, 1)),  
-      UNICODE(SUBSTRING(@nstring, @position, 1));  
-   SELECT @position = @position + 1;  
-   END;  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
-```  
-Character # Unicode Character UNICODE Value  
-  
------------ ----------------- -----------   
-1           Å                 197           
-  
------------ ----------------- -----------   
-2           k                 107           
-  
------------ ----------------- -----------   
-3           e                 101           
-  
------------ ----------------- -----------   
-4           r                 114           
-  
------------ ----------------- -----------   
-5           g                 103           
-  
------------ ----------------- -----------   
-6           a                 97            
-  
------------ ----------------- -----------   
-7           t                 116           
-  
------------ ----------------- -----------   
-8           a                 97            
-  
------------ ----------------- -----------   
-9           n                 110           
-  
------------ ----------------- -----------   
-10                            32            
-  
------------ ----------------- -----------   
-11          2                 50            
-  
------------ ----------------- -----------   
-12          4                 52  
-```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### <a name="c-using-unicode-and-the-nchar-function"></a>C. 使用 UNICODE 和 NCHAR 函數  
- 下列範例會利用 `UNICODE` 和 `NCHAR` 函數來列印 `Åkergatan` 24 個字元字串中第一個字元的 UNICODE 值，以及列印實際的第一個字元 `Å`。  
-  
-```  
-DECLARE @nstring nchar(12);  
-SET @nstring = N'Åkergatan 24';  
-SELECT UNICODE(@nstring), NCHAR(UNICODE(@nstring));  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
-```  
------------ -   
-197         Å  
-```  
-  
-### <a name="d-using-substring-unicode-and-convert"></a>D. 使用 SUBSTRING、UNICODE 和 CONVERT  
  下列範例會利用 `SUBSTRING`、`UNICODE` 和 `CONVERT` 函數來列印 `Åkergatan 24` 字串中的字元數目、Unicode 字元，以及每個字元的 UNICODE 值。  
   
 ```  

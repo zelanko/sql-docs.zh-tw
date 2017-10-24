@@ -23,11 +23,12 @@ caps.latest.revision: 43
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9b0cfaf45b7b4f68979691272c90962da42709b2
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 8608de51a13d2bc0109b9874b30749b10b65eaea
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="typeproperty-transact-sql"></a>TYPEPROPERTY (Transact-SQL)
@@ -77,15 +78,6 @@ FROM sys.types;
 ```  
   
 ### <a name="b-returning-the-precision-of-the-tinyint-data-type"></a>B. 傳回 tinyint 資料類型的有效位數  
- 下列範例會傳回 `tinyint` 資料類型的有效位數或位數數目。  
-  
-```  
-SELECT TYPEPROPERTY( 'tinyint', 'PRECISION');  
-```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### <a name="c-returning-the-precision-of-the-tinyint-data-type"></a>C： 傳回 tinyint 資料類型的有效位數  
  下列範例會傳回 `tinyint` 資料類型的有效位數或位數數目。  
   
 ```  

@@ -26,24 +26,24 @@ caps.latest.revision: 35
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: df818b30ca850fbb3b7cb0df816aacb6afa12a76
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 9a65a49a1e6d8c23a28b117fc90b0276ce185556
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="fileidex-transact-sql"></a>FILE_IDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  傳回目前資料庫中資料、記錄或全文檢索檔案之指定邏輯檔案名稱的檔案識別碼 (ID)。  
+傳回目前資料庫中資料、記錄或全文檢索檔案之指定邏輯檔案名稱的檔案識別碼 (ID)。  
   
- ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 FILE_IDEX ( file_name )  
 ```  
   
@@ -64,12 +64,12 @@ FILE_IDEX ( file_name )
 ## <a name="examples"></a>範例  
   
 ### <a name="a-retrieving-the-file-id-of-a-specified-file"></a>A. 擷取指定檔案的檔案識別碼  
- 下列範例會傳回 `AdventureWorks_Data` 檔案的檔案識別碼。  
+下列範例會傳回 `AdventureWorks_Data` 檔案的檔案識別碼。  
   
 ```tsql  
 USE AdventureWorks2012;  
 GO  
-SELECT FILE_IDEX('AdventureWorks2012_Data')AS 'File ID';  
+SELECT FILE_IDEX('AdventureWorks2012_Data') AS 'File ID';  
 GO  
 ```  
   
@@ -83,13 +83,12 @@ File ID
 ```  
   
 ### <a name="b-retrieving-the-file-id-when-the-file-name-is-not-known"></a>B. 當檔案名稱未知時，擷取檔案識別碼  
- 下列範例會從檔案類型等於 `AdventureWorks` (記錄) 的 `sys.database`_`files` 目錄檢視中，選取邏輯檔案名稱來傳回 `1` 記錄檔的檔案識別碼。  
+下列範例會傳回的檔案識別碼`AdventureWorks`選取邏輯檔案名稱，從記錄檔`sys.database_files`目錄的檢視，其中的檔案類型等於`1`（記錄）。  
   
 ```tsql  
 USE AdventureWorks2012;  
 GO  
-SELECT FILE_IDEX((SELECT TOP(1)name FROM sys.database_files   
-WHERE type = 1))AS 'File ID';  
+SELECT FILE_IDEX((SELECT TOP (1) name FROM sys.database_files WHERE type = 1)) AS 'File ID';  
 GO  
 ```  
   
@@ -102,7 +101,7 @@ File ID
 ```  
   
 ### <a name="c-retrieving-the-file-id-of-a-full-text-catalog-file"></a>C. 擷取全文檢索目錄檔的檔案識別碼  
- 下列範例會從檔案類型等於 `sys.database` (全文檢索) 的 `files`_`4` 目錄檢視中，選取邏輯檔案名稱來傳回全文檢索檔的檔案識別碼。 如果全文檢索目錄不存在，此範例將會傳回 NULL。  
+下列範例會傳回全文檢索檔案的檔案識別碼選取邏輯檔案名稱，從`sys.database_files`目錄的檢視，其中的檔案類型等於`4`（全文檢索）。 如果全文檢索目錄不存在，此範例將會傳回 NULL。  
   
 ```tsql  
 SELECT FILE_IDEX((SELECT name FROM sys.master_files WHERE type = 4))  
@@ -115,3 +114,4 @@ AS 'File_ID';
  [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
   
   
+

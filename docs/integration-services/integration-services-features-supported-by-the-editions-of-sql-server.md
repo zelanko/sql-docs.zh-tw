@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 365fb52c9808e0402323d52c85371c35555d833e
+ms.sourcegitcommit: 8cc1fcfdeae8742a93916dfb08c9db1215f88721
+ms.openlocfilehash: e9d1b8851f113fa44264230a79d0e496007ed96b
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="integration-services-features-supported-by-the-editions-of-sql-server"></a>SQL server 版本所支援的 integration Services 功能
@@ -29,7 +29,7 @@ ms.lasthandoff: 08/03/2017
 最新的版本資訊和什麼是新的資訊，請參閱下列文章：
 -   [SQL Server 2016 版本資訊](../sql-server/sql-server-2016-release-notes.md)
 -   [SQL Server 2016 Integration Services 的新功能](../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md)
--   [在 SQL Server 2017 Integration Services 中最新消息](../integration-services/what-s-new-in-integration-services-in-sql-server-2017.md)
+-   [SQL Server 2017 中的 Integration Services 新增功能](../integration-services/what-s-new-in-integration-services-in-sql-server-2017.md)
     
 **試用 SQL Server 2016！**    
 
@@ -70,8 +70,8 @@ SQL Server Evaluation Edition 提供了 180 天的試用期。
   
 |功能|Enterprise|Standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|By Attunity 的高效能 Oracle 目的地|是|||||  
-|高效能 Teradata by Attunity 的目的地|是|||||  
+|高效能 Oracle 來源和 by Attunity 的目的地|是|||||  
+|高效能 Teradata 來源和 by Attunity 的目的地|是|||||  
 |SAP BW 來源和目的地|是|||||  
 |資料採礦模型定型目的地|是|||||  
 |維度處理目的地|是|||||  
@@ -81,7 +81,6 @@ SQL Server Evaluation Edition 提供了 180 天的試用期。
   
 |功能|Enterprise|Standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|持續性 （高效能） 查閱|是|||||  
 |異動資料擷取元件 by Attunity <sup>1</sup>|是|||||  
 |資料採礦查詢轉換|是|||||  
 |模糊群組 」 和 「 模糊查閱轉換|是|||||  

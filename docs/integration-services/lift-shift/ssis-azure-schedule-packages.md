@@ -9,10 +9,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
-ms.openlocfilehash: a3ecfce9a6adac332b72033955ba51271ed8197b
+ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
+ms.openlocfilehash: 2130e68d5e29671a2881d8762666cf852ff51259
 ms.contentlocale: zh-tw
-ms.lasthandoff: 10/06/2017
+ms.lasthandoff: 10/18/2017
 
 ---
 # <a name="schedule-the-execution-of-an-ssis-package-on-azure"></a>排程的 SSIS 封裝在 Azure 上執行
@@ -47,7 +47,7 @@ ms.lasthandoff: 10/06/2017
     EXEC @return_value = [YourLinkedServer].[SSISDB].[catalog].[create_execution] 
     @folder_name=N'folderName', @project_name=N'projectName', 
     @package_name=N'packageName', @use32bitruntime=0, 
-    @runincluster=1, @useanyworker=1, @execution_id=@exe_id OUTPUT 
+    @runinscaleout=1, @useanyworker=1, @execution_id=@exe_id OUTPUT 
  
     EXEC [YourLinkedServer].[SSISDB].[catalog].[start_execution] @execution_id=@exe_id
 
@@ -91,7 +91,7 @@ EXEC jobs.sp_add_jobstep @job_name='ExecutePackageJob',
         EXEC [SSISDB].[catalog].[create_execution]
             @folder_name=N''folderName'', @project_name=N''projectName'',
             @package_name=N''packageName'', @use32bitruntime=0,
-            @runincluster=1, @useanyworker=1, 
+            @runinscaleout=1, @useanyworker=1, 
             @execution_id=@exe_id OUTPUT         
         EXEC [SSISDB].[catalog].[start_execution] @exe_id, @retry_count=0', 
     @credential_name='YourDBScopedCredentials', 
@@ -104,10 +104,17 @@ EXEC jobs.sp_update_job @job_name='ExecutePackageJob', @enabled=1,
 
 ## <a name="sproc"></a>排程封裝，以與 Azure 資料 Factory SQL Server 預存程序活動
 
+> [!IMPORTANT]
+> 在下列範例中使用 Azure Data Factory 第 1 版使用 JSON 指令碼預存程序活動。
+
 若要排程封裝，以與 Azure 資料 Factory SQL Server 預存程序活動，執行下列動作：
+
 1.  建立 Data Factory。
+
 2.  建立連結的服務，SQL database 主控 SSISDB。
+
 3.  建立輸出資料集的磁碟機的排程。
+
 4.  建立 Data Factory 管線用來執行 SSIS 封裝的 SQL Server 預存程序活動。
 
 本節提供這些步驟的概觀。 完整的 Data Factory 教學課程已超出本文的範圍。 如需詳細資訊，請參閱[SQL Server 預存程序活動](https://docs.microsoft.com/en-us/azure/data-factory/data-factory-stored-proc-activity)。
@@ -122,7 +129,7 @@ EXEC jobs.sp_update_job @job_name='ExecutePackageJob', @enabled=1,
         "description": "",
         "type": "AzureSqlDatabase",
         "typeProperties": {
-            "connectionString": "Data Source = tcp: YourSQLDBServer.database.windows.net, 1433; Initial Catalog = SSISDB; User ID = YourUsername; Password = YourPassword; Integrated Security = False; Encrypt = True; Connect Timeout = 30 "
+            "connectionString": "Data Source = tcp: YourSQLDBServer.database.windows.net, 1433; Initial Catalog = SSISDB; User ID = YourUsername; Password = YourPassword; Integrated Security = False; Encrypt = True; Connect Timeout = 30"
         }
     }
 }
@@ -178,16 +185,23 @@ EXEC jobs.sp_update_job @job_name='ExecutePackageJob', @enabled=1,
 }
 ```
 
-您不必建立新的預存程序，將封裝以建立並啟動 SSIS 封裝執行所需的 Transact SQL 命令。 您可以提供指令碼的值為`stmt`上述的 JSON 範例中的參數。 以下是範例指令碼：
+您不必建立新的預存程序，將封裝以建立並啟動 SSIS 封裝執行所需的 Transact SQL 命令。 您可以提供完整的指令碼的值為`stmt`上述的 JSON 範例中的參數。 以下是範例指令碼：
 
 ```sql
 -- T-SQL script to create and start SSIS package execution using SSISDB catalog stored procedures
 DECLARE @return_value INT,@exe_id BIGINT,@err_msg NVARCHAR(150)
 
-EXEC @return_value=[SSISDB].[catalog].[create_execution] @folder_name=N'folderName', @project_name=N'projectName', @package_name=N'packageName', @use32bitruntime=0, @runincluster=1,@useanyworker=1, @execution_id=@exe_id OUTPUT
-                                                         
+-- Create the exectuion
+EXEC @return_value=[SSISDB].[catalog].[create_execution] @folder_name=N'folderName', @project_name=N'projectName', @package_name=N'packageName', @use32bitruntime=0, @runinscaleout=1,@useanyworker=1, @execution_id=@exe_id OUTPUT
+
+-- To synchronize SSIS package execution, set the SYNCHRONIZED execution parameter
+EXEC [SSISDB].[catalog].[set_execution_parameter_value] @exe_id, @object_type=50, @parameter_name=N'SYNCHRONIZED', @parameter_value=1
+
+-- Start the execution                                                         
 EXEC [SSISDB].[catalog].[start_execution] @execution_id=@exe_id,@retry_count=0
--- To synchronize SSIS package execution, poll package execution status
+                                          
+-- Raise an error for unsuccessful package execution
+-- Execution status values include the following:
 -- created (1)
 -- running (2)
 -- canceled (3)
@@ -197,20 +211,11 @@ EXEC [SSISDB].[catalog].[start_execution] @execution_id=@exe_id,@retry_count=0
 -- succeeded (7)
 -- stopping (8)
 -- completed (9) 
-                                          
-WHILE(SELECT [status]
-      FROM [SSISDB].[catalog].[executions]
-      WHERE execution_id=@exe_id) NOT IN(3,4,6,7,9)
-BEGIN
-    WAITFOR DELAY '00:00:01';
-END
-
--- Raise an error for unsuccessful package execution
 IF(SELECT [status]
    FROM [SSISDB].[catalog].[executions]
    WHERE execution_id=@exe_id)<>7
 BEGIN
-    SET @err_msg=N'Your package execution did not succeed for execution ID: '+CAST(@exe_id AS NVARCHAR(20))
+    SET @err_msg=N'Your package execution did not succeed for execution ID: ' + CAST(@exe_id AS NVARCHAR(20))
     RAISERROR(@err_msg,15,1)
 END
 GO

@@ -23,11 +23,12 @@ caps.latest.revision: 13
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 929b037e2d3bc844e284adb51e96f0e4c5b4e1f7
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 71f9af15e8cfeaccabc87be787172fed44246967
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="analyze-deadlocks-with-sql-server-profiler"></a>使用 SQL Server Profiler 分析死結
@@ -35,7 +36,7 @@ ms.lasthandoff: 08/02/2017
   
  若要追蹤死結事件，請將 **Deadlock graph** 事件類別加入追蹤。 此事件類別會用死結相關處理序和物件的 XML 資料來擴展追蹤中的 **TextData** 資料行。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 可將 XML 文件擷取至死結 XML (.xdl) 檔案，您稍後可在 SQL Server Management Studio 中檢視該檔案。 您可以設定 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ，將 **Deadlock graph** 事件擷取到單一檔案 (其中包含所有的 **Deadlock graph** 事件)，或將各個事件擷取到不同的檔案。 這種擷取可以利用下列任一方法來完成：  
   
--   在追蹤組態時，使用 [事件擷取設定] 索引標籤。 請注意，您需在 [事件選取範圍] 索引標籤上選取 **Deadlock graph** 事件，這個索引標籤才會出現。  
+-   在追蹤組態時，使用 [事件擷取設定] 索引標籤。請注意，您需在 [事件選取範圍] 索引標籤上選取 **Deadlock graph** 事件，這個索引標籤才會出現。  
   
 -   使用 [檔案] 功能表上的 [擷取 SQL Server 事件] 選項。  
   
@@ -72,3 +73,4 @@ ms.lasthandoff: 08/02/2017
  在死結中，有兩個處理序正在互相等待彼此所保留的資源。 在死結圖形中，資源會顯示為資源節點。  
   
   
+

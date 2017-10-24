@@ -18,10 +18,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 8b4dbd030c457bfb90ac4ec7fae886de28f96854
+ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
+ms.openlocfilehash: 869b758e3ac922762c293eb8aa9a9537a4397bd6
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/26/2017
+ms.lasthandoff: 10/20/2017
 
 ---
 # <a name="catalogvalidatepackage-ssisdb-database"></a>catalog.validate_package (SSISDB 資料庫)
@@ -31,9 +31,8 @@ ms.lasthandoff: 09/26/2017
   
 ## <a name="syntax"></a>語法  
   
-```  
-  
-validate_package [ @folder_name = ] folder_name  
+```sql
+catalog.validate_package [ @folder_name = ] folder_name  
     , [ @project_name = ] project_name  
     , [ @package_name = ] package_name  
     , [ @validation_id = ] validation_id OUTPUT  
@@ -59,7 +58,7 @@ validate_package [ @folder_name = ] folder_name
  指出是否要使用 32 位元執行階段，在 64 位元作業系統上執行封裝。 使用的值`1`在 64 位元作業系統上執行時執行 32 位元執行階段。 使用 `0` 值，即可在執行 64 位元作業系統時執行 64 位元執行階段。 這個參數是選擇性的。 *Use32bitruntime*是**元**。  
   
  [ @environment_scope =] *environment_scope*  
- 指出由驗證考量的環境參考。 當值為 `A` 時，驗證中會包含與專案相關的所有環境參考。 當值為 `S` 時，只會包含單一環境參考。 當值為 `D` 時，不會包含任何環境參考，而且每個參數必須為常值預設值，才能通過驗證。 這是選擇性參數，根據預設，將會使用字元 `D`。 *Environment_scope*是**char （1)**。  
+ 指出由驗證考量的環境參考。 當值為 `A` 時，驗證中會包含與專案相關的所有環境參考。 當值為 `S` 時，只會包含單一環境參考。 當值為 `D` 時，不會包含任何環境參考，而且每個參數必須為常值預設值，才能通過驗證。 這個參數是選擇性的。 字元`D`預設會使用。 *Environment_scope*是**char （1)**。  
   
  [ @reference_id =] *e _ i d*  
  環境參考的唯一識別碼。 只有在單一環境參考包含在驗證時，就需要這個參數時*environment_scope*是`S`。 *E _ i d*是**bigint**。  
@@ -97,6 +96,6 @@ validate_package [ @folder_name = ] folder_name
 -   封裝參數中已參考變數，但驗證中沒有包含參考環境  
   
 ## <a name="remarks"></a>備註  
- 驗證有助於識別讓封裝無法成功執行的問題。 使用[catalog.validations](../../integration-services/system-views/catalog-validations-ssisdb-database.md)或[catalog.operations](../../integration-services/system-views/catalog-operations-ssisdb-database.md)来監視驗證狀態檢視。  
+ 驗證有助於識別問題，可能會導致無法成功執行封裝。 使用[catalog.validations](../../integration-services/system-views/catalog-validations-ssisdb-database.md)或[catalog.operations](../../integration-services/system-views/catalog-operations-ssisdb-database.md)来監視驗證狀態檢視。  
   
   

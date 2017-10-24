@@ -28,11 +28,12 @@ caps.latest.revision: 51
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c433b6c78ce1ce62c9d64d7d6dfd7f8ddbe0ff27
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: b0b48a95c9eee3cf2ca77d532deb716c874523b7
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="declare-cursor-transact-sql"></a>DECLARE CURSOR (Transact-SQL)
@@ -179,7 +180,9 @@ DECLARE cursor_name CURSOR [ LOCAL | GLOBAL ]
 ## <a name="examples"></a>範例  
   
 ### <a name="a-using-simple-cursor-and-syntax"></a>A. 使用簡單資料指標和語法  
- 在開啟這個資料指標時所產生的結果集內，包含了資料表的所有資料列及所有資料行。 可以更新這個資料指標，而且所有更新和刪除都會在針對這個資料指標所做的提取中表示。 `FETCH``NEXT` 是唯一可用的提取，因為尚未指定 `SCROLL` 選項。  
+
+在開啟這個資料指標時所產生的結果集內，包含了資料表的所有資料列及所有資料行。 可以更新這個資料指標，而且所有更新和刪除都會在針對這個資料指標所做的提取中表示。 `FETCH NEXT` 是唯一可用的提取，因為尚未指定 `SCROLL` 選項。  
+
   
 ```  
 DECLARE vend_cursor CURSOR  
@@ -261,3 +264,4 @@ DEALLOCATE vendor_cursor;
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
   
+

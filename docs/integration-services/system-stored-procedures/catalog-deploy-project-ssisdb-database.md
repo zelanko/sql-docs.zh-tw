@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a2e3655bedbb24f2174a62c8792cd168e7642592
-ms.openlocfilehash: 9871d26467a300119c742d398ff88f87825d930c
+ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
+ms.openlocfilehash: 5682cd23cb65e097bccb8cc69d5f2ec88ece7709
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 10/20/2017
 
 ---
 # <a name="catalogdeployproject-ssisdb-database"></a>catalog.deploy_project (SSISDB 資料庫)
@@ -28,28 +28,28 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="syntax"></a>語法  
   
-```tsql  
-deploy_project [ @folder_name = ] folder_name   
-      , [ @project_name = ] project_name   
-      , [ @project_stream = ] projectstream   
+```sql  
+catalog.deploy_project [@folder_name =] folder_name   
+      , [@project_name =] project_name   
+      , [@project_stream =] projectstream   
     [ , [@operation_id ] = operation_id OUTPUT ]   
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @folder_name =] *folder_name*  
- 要將專案部署到其中的資料夾名稱。 *Folder_name*是**nvarchar （128)**。  
+ [@folder_name =] *folder_name*  
+ 部署專案所在的資料夾名稱。 *Folder_name*是**nvarchar （128)**。  
   
- [ @project_name =] *project_name*  
+ [@project_name =] *project_name*  
  資料夾中全新或已更新專案的名稱。 *Project_name*是**nvarchar （128)**。  
   
- [ @projectstream =] *j*  
+ [@projectstream =] *j*  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案部署檔案 (副檔名為 .ispac) 的二進位內容。  
   
  您可以使用 SELECT 陳述式搭配 OPENROWSET 函數和 BULK 資料列集提供者，以擷取檔案的二進位內容。 如需範例，請參閱[部署 Integration Services (SSIS) 專案和封裝](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)。 如需有關 OPENROWSET 的詳細資訊，請參閱[OPENROWSET &#40;TRANSACT-SQL &#41;](../../t-sql/functions/openrowset-transact-sql.md).  
   
  *j*是**varbinary （max)**  
   
- [ @operation_id =] *operation_id*  
+ [@operation_id =] *operation_id*  
  傳回部署作業的唯一識別碼。 *Operation_id*是**bigint**。  
   
 ## <a name="return-code-value"></a>傳回碼值  

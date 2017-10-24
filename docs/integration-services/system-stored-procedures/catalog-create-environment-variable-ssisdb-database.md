@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 62aa7f67d7c7b33ac61d63b10fe45d604029500b
+ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
+ms.openlocfilehash: 5636651cccbb43c6c1627d1f28eccd9b3f9b5b0d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/26/2017
+ms.lasthandoff: 10/20/2017
 
 ---
 # <a name="catalogcreateenvironmentvariable-ssisdb-database"></a>catalog.create_environment_variable (SSISDB 資料庫)
@@ -28,36 +28,36 @@ ms.lasthandoff: 09/26/2017
   
 ## <a name="syntax"></a>語法  
   
-```tsql  
-create_environment_variable [ @folder_name = ] folder_name  
-    , [ @environment_name = ] environment_name  
-    , [ @variable_name = ] variable_name  
-    , [ @data_type = ] data_type  
-    , [ @sensitive = ] sensitive  
-    , [ @value = ] value  
-    , [ @description = ] description  
+```sql  
+catalog.create_environment_variable [@folder_name =] folder_name  
+    , [@environment_name =] environment_name  
+    , [@variable_name =] variable_name  
+    , [@data_type =] data_type  
+    , [@sensitive =] sensitive  
+    , [@value =] value  
+    , [@description =] description  
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @folder_name =] *folder_name*  
+ [@folder_name =] *folder_name*  
  包含環境之資料夾的名稱。 *Folder_name*是**nvarchar （128)**。  
   
- [ @environment_name =] *environment_name*  
+ [@environment_name =] *environment_name*  
  環境的名稱。 *Environment_name*是**nvarchar （128)**。  
   
- [ @variable_name =] *variable_name*  
+ [@variable_name =] *variable_name*  
  環境變數的名稱。 *Variable_name*是**nvarchar （128)**。  
   
- [ @data_type =] *data_type*  
+ [@data_type =] *data_type*  
  變數的資料類型。 支援的環境變數資料類型包括**布林**，**位元組**， **DateTime**， **Double**， **Int16**， **Int32**， **Int64**，**單一**，**字串**， **UInt32**，和**UInt64**。 不支援的環境變數資料類型包括**Char**， **DBNull**，**物件**，和**Sbyte**。 資料型別*data_type*參數是**nvarchar （128)**。  
   
- [ @sensitive =]*機密*  
+ [@sensitive =]*機密*  
  指出變數是否包含機密值。 使用 `1` 值表示環境變數的值是機密值，或者，使用 `0` 值則表示該值不是機密值。 機密值會在儲存時加密。 機密值則不會儲存為純文字。*機密*是**元**。  
   
- [ @value =]*值*  
+ [@value =]*值*  
  環境變數的值。 *值*是**sql_variant**。  
   
- [ @description =]*描述*  
+ [@description =]*描述*  
  環境變數的描述。 *值*是**nvarchar （1024)**。  
   
 ## <a name="return-code-value"></a>傳回碼值  
@@ -105,7 +105,7 @@ create_environment_variable [ @folder_name = ] folder_name
 |**Int64**|**bigint**|  
 |**Single**|精確數值：**十進位**，**數值**;近似數值： **float**，**真實**|  
 |**字串**|**varchar**， **nvarchar**， **char**|  
-|**UInt32**|**int** (這是最接近可用對應**Uint32**。)|  
-|**UInt64**|**bigint** (這是最接近可用對應**Uint64**。)|  
+|**UInt32**|**int** (**int**是最接近可用對應**Uint32**。)|  
+|**UInt64**|**bigint** (**int**是最接近可用對應**Uint64**。)|  
   
   

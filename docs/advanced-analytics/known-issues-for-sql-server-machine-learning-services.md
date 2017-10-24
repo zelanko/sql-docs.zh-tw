@@ -2,7 +2,7 @@
 title: "機器學習服務中的已知問題 |Microsoft 文件"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 09/19/2017
+ms.date: 10/18/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,11 +15,12 @@ caps.latest.revision: 53
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 2d21756a05e9e51379faa194ec331517e510988d
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 63ad249e32f259eca850d5b872d940faa313750c
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="known-issues-in-machine-learning-services"></a>機器學習服務中的已知的問題
@@ -167,6 +168,19 @@ data <- RxSqlServerData(sqlQuery = "SELECT CRSDepTimeStr, ArrDelay  FROM Airline
 因應措施，您可以重新撰寫 SQL 查詢，以使用轉型或轉換，並將資料呈現給 R，使用正確的資料類型。 一般情況下，效能會更好當您使用的資料使用 SQL，而不是藉由變更 R 程式碼中的資料。
 
 **適用於：** SQL Server 2016 R 服務
+
+### <a name="limits-on-size-of-serialized-models"></a>序列化模型大小限制
+
+當您將模型儲存至 SQL Server 資料表時，必須將模型序列化，並將它儲存在二進位格式。 理論上可以使用這個方法儲存模型的大小上限是 2 GB，也就是 SQL Server 中的 varbinary 資料行的大小上限。
+
+如果您需要使用更大的模型，下列因應措施是使用：
+
++ 使用[memCompress](https://www.rdocumentation.org/packages/base/versions/3.4.1/topics/memCompress)中降低模型的大小，再將它傳遞至 SQL Server 的基底 R 函數。 當模型很接近 2 GB 的限制，最好使用此選項。
++ 對於較大的模型，而不使用 varbinary 資料行來儲存模型，您可以使用[FileTable](..\relational-databases\blob\filetables-sql-server.md) SQL Server 中提供的功能。
+
+    若要使用 Filetable，您必須加入防火牆例外狀況，因為在 Filetable 中儲存的資料由 SQL Server 中的 Filestream 檔案系統驅動程式所管理，而預設的防火牆規則封鎖網路檔案的存取。 如需詳細資訊，請參閱[啟用 FileTable 的必要條件](../relational-databases/blob/enable-the-prerequisites-for-filetable.md)。 
+
+    啟用 FileTable 之後，撰寫模型，您 SQL 使用 FileTable 的 API，從取得的路徑，然後撰寫模型對該位置從您的 R 程式碼。 當您需要讀取模型時，您會從 SQL 取得的路徑，，然後呼叫模型使用從 R 指令碼的路徑。 如需詳細資訊，請參閱[存取 Filetable 與檔案輸入輸出 Api](../relational-databases/blob/access-filetables-with-file-input-output-apis.md)。
 
 ### <a name="avoid-clearing-workspaces-when-you-execute-r-code-in-a-includessnoversionincludesssnoversion-mdmd-compute-context"></a>避免在執行中的 R 程式碼時，清除工作區[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]計算內容
 

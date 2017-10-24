@@ -27,11 +27,12 @@ caps.latest.revision: 49
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 64781fa0b670cc854f5f8a5ff687c8ab481ce922
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: b55693fd4a51c335db63d879a1c255f9d8a855c5
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="osql-utility"></a>osql 公用程式
@@ -107,10 +108,10 @@ C:\>osql
  啟動 *osql* 時發出 USE **db_name**陳述式。  
   
  **-l** *time_out*  
- 指定 **osql** 登入逾時之前的秒數。 **osql** 的預設登入逾時值是八秒。  
+ 指定 **osql** 登入逾時之前的秒數。**osql** 的預設登入逾時值是八秒。  
   
  **-t** *time_out*  
- 指定命令逾時之前的秒數。 如果未指定 *time_out* 值，命令不會逾時。  
+ 指定命令逾時之前的秒數。如果未指定 *time_out* 值，命令不會逾時。  
   
  **-h** *headers*  
  指定資料行標頭之間所要列印的資料列數。 預設值是每一組查詢結果各列印一次標頭。 請利用 -1 來指定不列印任何標頭。 若使用 –1，則參數和設定之間不能有空格 (**-h-1**而非 **-h -1**)。  
@@ -173,7 +174,7 @@ osql -E -q "select name, object_id from %table%"
  列印效能統計資料。  
   
  **-b**  
- 指定在發生錯誤時， **osql** 會結束作業並傳回 DOS ERRORLEVEL 值。 當 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 錯誤訊息的嚴重性層級大於或等於 11 時，傳回 DOS ERRORLEVEL 變數的值是 1；否則，傳回的值是 0。 [!INCLUDE[msCoName](../includes/msconame-md.md)]MS-DOS 批次檔可以測試 DOS ERRORLEVEL 的值，並適當處理錯誤。  
+ 指定在發生錯誤時， **osql** 會結束作業並傳回 DOS ERRORLEVEL 值。 當 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 錯誤訊息的嚴重性層級大於或等於 11 時，傳回 DOS ERRORLEVEL 變數的值是 1；否則，傳回的值是 0。 [!INCLUDE[msCoName](../includes/msconame-md.md)] MS-DOS 批次檔可以測試 DOS ERRORLEVEL 的值，而且能夠適當處理錯誤。  
   
  **-u**  
  指定無論 *input_file* 的格式為何， *output_file*均以 Unicode 格式儲存。  
@@ -339,9 +340,9 @@ GO
  這個陳述式會產生 `10.3496`的結果，這表示在儲存值時，所有小數點保留不動。  
   
 ## <a name="see-also"></a>另請參閱  
- [註解 &#40;MDX &#41;](../mdx/comment-mdx.md)   
+ [註解 &#40;MDX&#41;](../mdx/comment-mdx.md)   
  [-&#40;註解 &#41;&#40;MDX &#41;](../mdx/comment-mdx-operator-reference.md)   
- [CAST 和 CONVERT &#40;Transact-SQL&#41;](../t-sql/functions/cast-and-convert-transact-sql.md)   
+ [CAST 和 CONVERT &#40;TRANSACT-SQL &#41;](../t-sql/functions/cast-and-convert-transact-sql.md)   
  [RAISERROR &#40;TRANSACT-SQL &#41;](../t-sql/language-elements/raiserror-transact-sql.md)  
   
   

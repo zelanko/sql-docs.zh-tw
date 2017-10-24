@@ -38,11 +38,12 @@ caps.latest.revision: 97
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 03f3352a494bef2072ca7527dd3da804a072689e
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 6ae83ccf18cac45339d63e4ce1326c72a58c0339
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="from-transact-sql"></a>FROM (Transact-SQL)
@@ -670,18 +671,7 @@ WHERE ManagerID = 5;
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="n-using-a-simple-from-clause"></a>N. 使用簡單的 FROM 子句  
- 下列範例會擷取`SalesTerritoryID`和`SalesTerritoryRegion`中的資料行`DimSalesTerritory`資料表。  
-  
-```tsql
--- Uses AdventureWorks  
-  
-SELECT SalesTerritoryKey, SalesTerritoryRegion  
-FROM DimSalesTerritory  
-ORDER BY SalesTerritoryKey;  
-```  
-  
-### <a name="o-using-the-inner-join-syntax"></a>O. 使用 INNER JOIN 語法  
+### <a name="n-using-the-inner-join-syntax"></a>N. 使用 INNER JOIN 語法  
  下列範例會傳回`SalesOrderNumber`， `ProductKey`，和`EnglishProductName`中的資料行`FactInternetSales`和`DimProduct`資料表 where 聯結索引鍵， `ProductKey`，比對兩個資料表中。 `SalesOrderNumber`和`EnglishProductName`個資料行中存在其中一個資料表，所以不需要使用這些資料行中，指定資料表別名，所顯示，則這些別名會包含為提高可讀性。 Word **AS**之前別名名稱不需要但建議為了可讀性，以及符合 ANSI 標準。  
   
 ```tsql
@@ -717,7 +707,7 @@ WHERE fis.SalesOrderNumber > 'SO50000'
 ORDER BY fis.SalesOrderNumber;  
 ```  
   
-### <a name="p-using-the-left-outer-join-and-right-outer-join-syntax"></a>P. 使用 LEFT OUTER JOIN 和 RIGHT OUTER JOIN 語法  
+### <a name="o-using-the-left-outer-join-and-right-outer-join-syntax"></a>O. 使用 LEFT OUTER JOIN 和 RIGHT OUTER JOIN 語法  
  下列範例聯結`FactInternetSales`和`DimProduct`資料表上`ProductKey`資料行。 左方外部聯結語法保留不相符的資料列，從左邊 (`FactInternetSales`) 資料表。 因為`FactInternetSales`資料表不包含任何`ProductKey`值不符合`DimProduct`資料表，此查詢會傳回第一個內部聯結上述範例中為相同的資料列。  
   
 ```tsql
@@ -766,7 +756,7 @@ RIGHT OUTER JOIN DimSalesTerritory AS dst
 ORDER BY fis.SalesOrderNumber;  
 ```  
   
-### <a name="q-using-the-full-outer-join-syntax"></a>Q. 使用 FULL OUTER JOIN 語法  
+### <a name="p-using-the-full-outer-join-syntax"></a>P. 使用 FULL OUTER JOIN 語法  
  下列範例會示範完整外部聯結中，這兩個聯結的資料表傳回所有資料列，但從另一個資料表不相符的值會傳回 NULL。  
   
 ```tsql
@@ -791,7 +781,7 @@ FULL JOIN FactInternetSales AS fis
 ORDER BY fis.SalesOrderNumber;  
 ```  
   
-### <a name="r-using-the-cross-join-syntax"></a>R. 使用 CROSS JOIN 語法  
+### <a name="q-using-the-cross-join-syntax"></a>Q. 使用 CROSS JOIN 語法  
  下列範例會傳回的交叉乘積`FactInternetSales`和`DimSalesTerritory`資料表。 所有可能組合的清單`SalesOrderNumber`和`SalesTerritoryKey`會傳回。 請注意如果沒有`ON`交叉聯結查詢中的子句。  
   
 ```tsql
@@ -803,7 +793,7 @@ CROSS JOIN FactInternetSales AS fis
 ORDER BY fis.SalesOrderNumber;  
 ```  
   
-### <a name="s-using-a-derived-table"></a>S. 使用衍生資料表  
+### <a name="r-using-a-derived-table"></a>R. 使用衍生資料表  
  下列範例會使用衍生的資料表 (`SELECT`之後的陳述式`FROM`子句) 來傳回`CustomerKey`和`LastName`中所有客戶的資料行`DimCustomer`資料表具有`BirthDate`值晚於年 1 月 1 日從 1970年和姓氏 'smith ' 距離。  
   
 ```tsql
@@ -817,7 +807,7 @@ WHERE LastName = 'Smith'
 ORDER BY LastName;  
 ```  
   
-### <a name="t-reduce-join-hint-example"></a>T. 減少聯結提示範例  
+### <a name="s-reduce-join-hint-example"></a>S. 減少聯結提示範例  
  下列範例會使用`REDUCE`改變查詢中的衍生資料表的處理聯結提示。 當使用`REDUCE`聯結提示，在此查詢中，`fis.ProductKey`投影、 複寫和進行不同，，然後加入至`DimProduct`期間的隨機`DimProduct`上`ProductKey`。 衍生的資料表的結果分佈在`fis.ProductKey`。  
   
 ```tsql
@@ -833,7 +823,7 @@ FROM
 ORDER BY SalesOrderNumber;  
 ```  
   
-### <a name="u-replicate-join-hint-example"></a>U. 複寫的聯結提示範例  
+### <a name="t-replicate-join-hint-example"></a>T. 複寫的聯結提示範例  
  下一個範例顯示相同的查詢，上述範例中，不同處在於`REPLICATE`而不是使用聯結提示`REDUCE`聯結提示。 使用`REPLICATE`提示會造成中的值`ProductKey`（聯結） 的資料行從`FactInternetSales`資料表複寫到所有節點。 `DimProduct`資料表已加入至複寫版本的這些值。  
   
 ```tsql
@@ -849,7 +839,7 @@ FROM
 ORDER BY SalesOrderNumber;  
 ```  
   
-### <a name="v-using-the-redistribute-hint-to-guarantee-a-shuffle-move-for-a-distribution-incompatible-join"></a>V. 若要保證發佈不相容的聯結的隨機移動使用 REDISTRIBUTE 提示  
+### <a name="u-using-the-redistribute-hint-to-guarantee-a-shuffle-move-for-a-distribution-incompatible-join"></a>U. 若要保證發佈不相容的聯結的隨機移動使用 REDISTRIBUTE 提示  
  下列查詢會使用轉散發查詢提示上發佈不相容的聯結。 這可確保查詢最佳化工具會在查詢計畫中使用隨機移動。 這也會保證查詢計畫將不會使用廣播移動將分散式的資料表移到複寫資料表。  
   
  在下列範例中，REDISTRIBUTE 提示會強制 FactInternetSales 資料表上的隨機移動，因為 ProductKey 是 DimProduct 的散發資料行，而且不是 FactInternetSales 的散發資料行。  

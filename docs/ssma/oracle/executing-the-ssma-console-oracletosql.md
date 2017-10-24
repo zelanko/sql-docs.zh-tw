@@ -21,10 +21,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 2e86935bc6eef3ea1e709cd27c916d972dd13b9f
+ms.sourcegitcommit: 685286966599c4dcd3dc2f7029413c77f3ff2689
+ms.openlocfilehash: 4ca3c3557b7f57b93dc41b23232754c5df046bdb
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/20/2017
 
 ---
 # <a name="executing-the-ssma-console-oracletosql"></a>執行 SSMA 主控台 (OracleToSQL)
@@ -673,7 +673,7 @@ SSMA for Oracle 主控台應用程式支援回溯相容性。 您可以開啟 �
   
 -   `write-summary-report-to`指定要產生報表的路徑。 如果只提及的資料夾路徑，然後檔案名稱**ConvertSQLReport.XML**建立。 （選擇性的屬性）  
   
-    報表建立了 2 子類別，取得進一步的 viz..,:  
+    報表建立了 2 子類別，取得進一步的 viz。:  
   
     -   報告錯誤 （="true/false"，預設值為"false"（選擇性的屬性））。  
   

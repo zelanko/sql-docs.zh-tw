@@ -14,10 +14,10 @@ author: haoqian
 ms.author: haoqian
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 9cc5c653fe454b45148583f2e17654657a85b0a5
+ms.sourcegitcommit: 685286966599c4dcd3dc2f7029413c77f3ff2689
+ms.openlocfilehash: c386b01043764405872365af379cfdedb036b65f
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 10/20/2017
 
 ---
 # <a name="walkthrough-set-up-integration-services-scale-out"></a>逐步解說：設定 Integration Services 相應放大
@@ -62,7 +62,7 @@ ms.lasthandoff: 08/03/2017
   ![主要組態](media/master-config.PNG "主要組態")
   4.  指定用來執行下列其中一項動作來保護標尺出主要和標尺出背景工作之間的通訊的 SSL 憑證。
     * 讓安裝程序，即可建立預設的自我簽署的 SSL 憑證**建立新的 SSL 憑證**。  預設憑證會安裝到 [受信任的根憑證授權單位] 的 [本機電腦] 下方。 您可以指定此憑證的 Cn。 主要端點的主機名稱應該併入 Cn。 根據預設，電腦名稱和 ip 的主要節點會包含。
-    * 選取現有的 SSL 憑證在本機電腦上，依序按一下**使用現有的 SSL 憑證**，然後按一下 **瀏覽**選取憑證。 憑證的指紋會出現在文字方塊中。 按一下 [瀏覽]  會顯示在 [受信任的根憑證授權單位] 的 [本機電腦] 中所儲存的憑證。 您選取的憑證必須儲存在這裡。       
+    * 選取現有的 SSL 憑證在本機電腦上，依序按一下**使用現有的 SSL 憑證**，然後按一下**瀏覽**選取憑證。 憑證的指紋會出現在文字方塊中。 按一下 [瀏覽]  會顯示在 [受信任的根憑證授權單位] 的 [本機電腦] 中所儲存的憑證。 您選取的憑證必須儲存在這裡。       
 ![主要設定 2](media/master-config-2.PNG "主要設定 2")
   5.  完成 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 安裝精靈。
 - 命令提示字元的步驟
@@ -112,7 +112,7 @@ ms.lasthandoff: 08/03/2017
 
 在標尺出工作者的安裝時，背景工作憑證會自動建立及安裝在電腦上。 同時，會在 \<磁碟機\>:\Program Files\Microsoft SQL Server\140\DTS\Binn 下方安裝對應的用戶端憑證 SSISScaleOutWorker.cer。 標尺出主要驗證標尺出背景工作，您必須將此用戶端憑證新增到標尺出主機之本機電腦的根存放區。
   
-若要將用戶端憑證新增至根存放區，請連按兩下 .cer 檔案，然後按一下 [憑證] 對話方塊中的 [安裝憑證]  。 即會顯示 [憑證匯入精靈]  。  
+若要將用戶端憑證新增至根存放區，請連按兩下 .cer 檔案，然後按一下憑證 對話方塊中的 安裝憑證  。 即會顯示 [憑證匯入精靈]  。  
 
 ## <a name="Firewall"></a> 開啟防火牆通訊埠
 
@@ -144,7 +144,7 @@ ms.lasthandoff: 08/03/2017
 
 #### <a name="example"></a>範例
 這個範例會啟用電腦 a 上出工作者小數位數。
-```tsql
+```sql
 SELECT WorkerAgentId, MachineName FROM [catalog].[worker_agents]
 GO
 -- Result: --
@@ -155,4 +155,4 @@ EXEC [catalog].[enable_worker_agent] '6583054A-E915-4C2A-80E4-C765E79EF61D'
 GO 
 ```
 ## <a name="next-steps"></a>後續的步驟
-已完成相應放大功能設定。 您現在可以在向外執行封裝。 如需詳細資訊，請參閱[在 Integration Services (SSIS) 相應放大中執行套件](run-packages-in-integration-services-ssis-scale-out.md)。
+已完成相應放大功能設定。 您現在可以在向外執行封裝。如需詳細資訊，請參閱[在 Integration Services (SSIS) 相應放大中執行套件](run-packages-in-integration-services-ssis-scale-out.md)。

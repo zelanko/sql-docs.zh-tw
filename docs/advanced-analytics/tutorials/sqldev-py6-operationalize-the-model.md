@@ -1,7 +1,7 @@
 ---
-title: "步驟 6： 實施模型 |Microsoft 文件"
+title: "步驟 6： 實施 Python 模型使用 SQL Server |Microsoft 文件"
 ms.custom: 
-ms.date: 05/25/2017
+ms.date: 10/17/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -20,34 +20,52 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b33f3876f054d7e7150a18967d5cfa37dd2d82bf
+ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
+ms.openlocfilehash: 7dcda2d17413e6c660510498c4b3ea770bb0b09d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/18/2017
 
 ---
-# <a name="step-6-operationalize-the-model"></a>步驟 6︰操作模型
+# <a name="step-6-operationalize-the-python-model-using-sql-server"></a>步驟 6： 實施 Python 模型使用 SQL Server
 
-在此步驟中，您將學習到*實施*定型，且在先前步驟中儲存的模型。 實施在此情況下部署模型至生產環境適用於計分 」 的方式。 這是容易如果 Python 程式碼包含在預存程序。 然後，您就可以從應用程式，以便預測新的觀察值上呼叫預存程序。
+這篇文章的教學課程中，屬於[SQL 開發人員的資料庫中的 Python 分析](sqldev-in-database-python-for-sql-developers.md)。 
 
-您將瞭解兩種方法來呼叫預存程序的 Python 模型：
+在此步驟中，您學會*實施*定型，且在先前步驟中儲存的模型。
 
-- **批次計分模式**︰使用 SELECT 查詢來提供多個資料列。 此預存程序會傳回對應至輸入案例的觀察值資料表。
-- **個別計分模式**︰傳遞一組個別參數值作為輸入。  此預存程序會傳回單一資料列或值。
+實施這個案例中，表示將模型部署到生產環境適用於計分。 與 SQL Server 的整合可讓此相當簡單，因為您可以在預存程序中內嵌的 Python 程式碼。 若要從模型根據新的輸入取得預測，只要應用程式呼叫預存程序，並傳遞新的資料。
 
-## <a name="scoring-using-the-scikit-learn-model"></a>計分使用 scikit-了解模型
+這一課會示範兩種建立 Python 模型為基礎的預測方法： 批次計分，和計分的資料列。
 
-預存程序_PredictTipSciKitPy_使用 scikit-學習模型。 這個預存程序說明 Python 預測呼叫包裝在預存程序的基本語法。
+- **批次計分：**若要提供多個輸入資料列，將選取的查詢當做引數傳遞至預存程序。 結果會是對應於輸入案例的觀察值的資料表。
+- **個別計分：**將一組個別的參數值傳遞做為輸入。  此預存程序會傳回單一資料列或值。
 
-- 若要使用模型的名稱被提供做為輸入參數，預存程序。 
-- 預存程序會再從資料庫資料表載入序列化的模型`nyc_taxi_models`.table，在預存程序中使用 SELECT 陳述式。
+所需的計分的 Python 程式碼會提供預存程序的一部分。
+
+| 預存程序名稱 | 批次或單一 | 模型的來源|
+|----|----|----|
+|PredictTipRxPy|批次 (batch)| revoscalepy 模型|
+|PredictTipSciKitPy|批次 (batch) |scikit-了解模型|
+|PredictTipSingleModeRxPy|單一資料列| revoscalepy 模型|
+|PredictTipSingleModeSciKitPy|單一資料列| scikit-了解模型|
+
+## <a name="batch-scoring"></a>批次計分
+
+前兩個預存程序說明了 Python 預測呼叫包裝在預存程序的基本語法。 這兩個預存程序需要資料的資料表做為輸入。
+
+- 做為輸入參數，預存程序提供精確的模型使用的名稱。 預存程序會從資料庫資料表中載入序列化的模型`nyc_taxi_models`.table，在預存程序中使用 SELECT 陳述式。
 - 序列化的模型儲存在 Python 變數`mod`以便進一步處理使用 Python。
 - 要計分的新案例所取自[!INCLUDE[tsql](../../includes/tsql-md.md)]中指定查詢`@input_data_1`。 讀取查詢資料之後，這些資料列會儲存在預設資料框架 `InputDataSet`中。
-- 此資料框架會傳遞至`predict_proba`羅吉斯迴歸模型中，函式`mod`，使用 scikit 建立時所-學習模型。 
-- `predict_proba`函式 (`probArray = mod.predict_proba(X)`) 傳回**float**表示的機率，將指定的提示 （的任何數量）。
-- 預存程序也能計算精確度的度量，AUC （曲線底下區域）。 如果您也可以提供目標標籤 （也就是 （雪人） 資料行），只會產生精確度度量，例如 AUC。 預測不需要目標標籤 (變數`y`)，但精確度度量計算。
+- 這兩個預存程序使用函式從`sklearn`來計算精確度的度量，AUC （曲線底下區域）。 如果您也可以提供目標標籤，可以只會產生精確度度量，例如 AUC (_傾斜_資料行)。 預測不需要目標標籤 (變數`y`)，但精確度度量計算。
 
-  因此，如果您沒有目標標籤要計分的資料，您可以修改預存程序，移除 AUC 計算，並只傳回從功能的提示機率 (變數`X`預存程序)。
+    因此，如果您沒有目標標籤要計分的資料，您可以修改預存程序，移除 AUC 計算，並傳回提示機率從功能 (變數`X`預存程序)。
+
+### <a name="predicttipscikitpy"></a>PredictTipSciKitPy
+
+預存程序應該已經建立了。 如果您找不到它，請執行下列 T-SQL 陳述式來建立預存程序。
+
+此預存程序需要 scikit 所根據的模型-了解封裝，因為它會使用該套件的特定函式：
+
++ 包含輸入資料框架會傳遞至`predict_proba`羅吉斯迴歸模型中，函式`mod`。 `predict_proba`函式 (`probArray = mod.predict_proba(X)`) 傳回**float**表示的機率，將指定的提示 （的任何數量）。
 
 ```SQL
 CREATE PROCEDURE [dbo].[PredictTipSciKitPy] (@model varchar(50), @inquery nvarchar(max))
@@ -59,7 +77,6 @@ BEGIN
     @script = N'
         import pickle;
         import numpy;
-        import pandas;
         from sklearn import metrics
         
         mod = pickle.loads(lmodel2)
@@ -88,33 +105,33 @@ END
 GO
 ```
 
-## <a name="scoring-using-the-revoscalepy-model"></a>計分使用 revoscalepy 模型
+### <a name="predicttiprxpy"></a>PredictTipRxPy
 
-預存程序_PredictTipRxPy_使用模型，建立使用**revoscalepy**程式庫。 它的運作方式一樣為_PredictTipSciKitPy_程序，但有一些變更，如**revoscalepy**函式。
+這個預存程序會使用相同的輸入並且會建立相同類型的分數為先前的預存程序，但會使用函式從**revoscalepy**隨附 SQL Server 機器學習的封裝。
+
+> [!NOTE] 
+> 這個預存程序的程式碼已稍微變更早期發行版本和 RTM 版本，以反映變更 revoscalepy 封裝之間。 請參閱[變更](#changes)如需詳細資訊的資料表。
 
 ```SQL
 CREATE PROCEDURE [dbo].[PredictTipRxPy] (@model varchar(50), @inquery nvarchar(max))
 AS
 BEGIN
   DECLARE @lmodel2 varbinary(max) = (select model from nyc_taxi_models2 where name = @model);
-  
+
   EXEC sp_execute_external_script 
     @language = N'Python',
     @script = N'
       import pickle;
       import numpy;
-      import pandas;
       from sklearn import metrics
-      from revoscalepy.functions.RxPredict import rx_predict_ex;
+      from revoscalepy.functions.RxPredict import rx_predict;
       
       mod = pickle.loads(lmodel2)
       X = InputDataSet[["passenger_count", "trip_distance", "trip_time_in_secs", "direct_distance"]]
       y = numpy.ravel(InputDataSet[["tipped"]])
       
-      probArray = rx_predict_ex(mod, X)
-      probList = []
-      for i in range(len(probArray._results["tipped_Pred"])):
-        probList.append((probArray._results["tipped_Pred"][i]))
+      probArray = rx_predict(mod, X)
+      prob_list = prob_array["tipped_Pred"].values 
       
       probArray = numpy.asarray(probList)
       fpr, tpr, thresholds = metrics.roc_curve(y, probArray)
@@ -131,16 +148,16 @@ END
 GO
 ```
 
-## <a name="batch-scoring-using-a-select-query"></a>使用 SELECT 查詢的批次計分
+## <a name="run-batch-scoring-using-a-select-query"></a>執行批次計分使用 SELECT 查詢
 
 預存程序**PredictTipSciKitPy**和**PredictTipRxPy**需要兩個輸入參數： 
 
 - 擷取計分的資料的查詢
 - 定型模型的名稱
 
-在本節中，您將學習如何將這些引數傳遞給預存程序，輕鬆地變更模型和用於計分的資料。
+將這些引數傳遞給預存程序之後，您可以選取特定的模型，或變更用於計分的資料。
 
-1. 定義輸入的資料，並呼叫預存程序進行評分，如下所示。 此範例中使用預存程序 PredictTipSciKitPy 計分，並傳入模型的名稱和查詢字串
+1. 若要使用**scikit-了解**的計分模型，請呼叫預存程序**PredictTipSciKitPy**、 傳遞模型名稱和查詢字串做為輸入。
 
     ```SQL
     DECLARE @query_string nvarchar(max) -- Specify input query
@@ -151,30 +168,37 @@ GO
     EXEC [dbo].[PredictTipSciKitPy] 'SciKit_model', @query_string;
     ```
 
-    預存程序會傳回傳入的輸入查詢的一部分的每個路線的預測的機率。 如果您使用 SSMS (SQL Server Management Studio) 來執行查詢，機率會顯示為中的資料表**結果**窗格。 **訊息**窗格具有值為大約 0.56 輸出 （AUC 或曲線底下區域） 的精確度度量。
+    預存程序會傳回傳入的輸入查詢的一部分的每個路線的預測的機率。 
+    
+    如果您使用 SSMS (SQL Server Management Studio) 來執行查詢，機率會顯示為中的資料表**結果**窗格。 **訊息**窗格具有值為大約 0.56 輸出 （AUC 或曲線底下區域） 的精確度度量。
 
-2. 若要使用**revoscalepy**的計分模型，請呼叫預存程序**PredictTipRxPy**、 模型名稱和查詢字串中傳遞。
+2. 若要使用**revoscalepy**的計分模型，請呼叫預存程序**PredictTipRxPy**、 傳遞模型名稱和查詢字串做為輸入。
 
     ```SQL
     EXEC [dbo].[PredictTipRxPy] 'revoscalepy_model', @query_string;
     ```
 
-## <a name="score-individual-rows-using-scikit-learn-model"></a>分數為個別的資料列使用 scikit-了解模型
+## <a name="single-row-scoring"></a>單一資料列計分
 
-有時候，而不是批次計分，您可能會想要在單一的情況下，傳遞從應用程式中，取得值，並根據這些值產生單一結果。 例如，您可以設定 Excel 工作表、Web 應用程式或 Reporting Services 報表來呼叫預存程序，並提供使用者鍵入或選取的輸入。
+有時候，而不是批次計分，您可以將在單一的情況下，從應用程式中，取得值，並傳回單一結果，根據這些值。 例如，您無法設定 Excel 工作表、 web 應用程式或報表來呼叫預存程序，並將傳遞給它的輸入型別或由使用者選取。
 
-在本節中，您將學習如何透過呼叫預存程序來建立單一預測。
+在本節中，您將學習如何建立單一預測，藉由呼叫兩個預存程序：
 
-1. 花點時間檢閱程式碼的預存程序[PredictTipSingleModeSciKitPy](#PredictTipSingleModeSciKitPy)和[PredictTipSingleModeRxPy](#PredictTipSingleModeRxPy)，這會下載的一部分。 這些預存程序使用 scikit-了解和 revoscalepy 模型，以及執行評分，如下所示：
++ [PredictTipSingleModeSciKitPy](#PredictTipSingleModeSciKitPy)針對單一資料列計分使用 scikit-學習模型。
++ [PredictTipSingleModeRxPy](#PredictTipSingleModeRxPy)針對單一資料列計分使用 revoscalepy 模型。
++ 如果您尚未尚未定型模型，傳回至[步驟 5](sqldev-py5-train-and-save-a-model-using-t-sql.md)！
 
-  - 做為輸入提供模型的名稱和多個單一值。 這些輸入包括旅客計數、 旅行距離等等。
-  - 資料表值函式，`fnEngineerFeatures`會接受輸入的值，並將經緯度和直接距離的您該轉換。 [第 4 課](sqldev-py4-create-data-features-using-t-sql.md)包含這個資料表值函式的描述。
-  - 如果您從外部應用程式呼叫預存程序，請確定輸入的資料符合 Python 模型的必要輸入的功能。 這可能包括轉型或轉換的輸入的資料 Python 資料型別，或驗證的資料類型和資料長度。
-  - 預存程序會建立預存的 Python 模型為基礎的分數。
+這兩種模型會採用做為輸入一系列的單一值，例如旅客計數、 旅行距離等等。 資料表值函式， `fnEngineerFeatures`，用來從一項新功能的輸入轉換緯度與經度值、 直接距離。 [第 4 課](sqldev-py4-create-data-features-using-t-sql.md)包含這個資料表值函式的描述。
+
+這兩個預存程序建立 Python 模型為基礎的分數。
+
+> [!NOTE]
+> 
+> 請務必您提供當您從外部應用程式呼叫預存程序時，Python 模型所需的所有輸入的功能。 若要避免錯誤，您可能需要轉型或轉換的輸入的資料 Python 資料型別，除了驗證的資料類型和資料長度。
 
 ### <a name="predicttipsinglemodescikitpy"></a>PredictTipSingleModeSciKitPy
 
-以下是執行計分使用預存程序的定義**scikit-了解**模型。
+花點時間檢閱程式碼會執行計分使用預存程序**scikit-了解**模型。
 
 ```SQL
 CREATE PROCEDURE [dbo].[PredictTipSingleModeSciKitPy] (@model varchar(50), @passenger_count int = 0,
@@ -202,7 +226,6 @@ BEGIN
     @script = N'
       import pickle;
       import numpy;
-      import pandas;
       
       # Load model and unserialize
       mod = pickle.loads(model)
@@ -239,7 +262,7 @@ GO
 
 ### <a name="predicttipsinglemoderxpy"></a>PredictTipSingleModeRxPy
 
-以下是執行計分使用預存程序的定義**revoscalepy**模型。
+下列預存程序執行計分使用**revoscalepy**模型。
 
 ```SQL
 CREATE PROCEDURE [dbo].[PredictTipSingleModeRxPy] (@model varchar(50), @passenger_count int = 0,
@@ -267,8 +290,7 @@ BEGIN
     @script = N'
       import pickle;
       import numpy;
-      import pandas;
-      from revoscalepy.functions.RxPredict import rx_predict_ex;
+      from revoscalepy.functions.RxPredict import rx_predict;
       
       # Load model and unserialize
       mod = pickle.loads(model)
@@ -278,10 +300,10 @@ BEGIN
       
       # Score data to get tip prediction probability as a list (of float)
       
-      probArray = rx_predict_ex(mod, X)
+      probArray = rx_predict(mod, X)
       
       probList = []
-      probList.append(probArray._results["tipped_Pred"])
+      prob_list = prob_array["tipped_Pred"].values
       
       # Create output data frame
       OutputDataSet = pandas.DataFrame(data = probList, columns = ["predictions"])
@@ -306,33 +328,51 @@ END
 GO
 ```
 
-2.  若要試試看，開啟 新**查詢**視窗中，並呼叫預存程序，每個特徵資料行的輸入參數。
+### <a name="generate-scores-from-models"></a>若要從模型產生分數
 
+建立預存程序之後，很容易產生分數，根據這兩種模式。 只要開啟 新**查詢**視窗，並針對每個特徵資料行的輸入或貼上參數。 第七個所需的值為這些特徵資料行，順序為：
+    
++ *passenger_count*
++ *trip_distance* v*trip_time_in_secs*
++ *pickup_latitude*
++ *pickup_longitude*
++ *dropoff_latitude*
++ *dropoff_longitude*
+
+1. 使用來產生預測**revoscalepy**模型中，執行此陳述式：
+  
     ```SQL
-    -- Call stored procedure PredictTipSingleModeSciKitPy to score using SciKit-Learn model
-    EXEC [dbo].[PredictTipSingleModeSciKitPy] 'linear_model', 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
-    -- Call stored procedure PredictTipSingleModeRxPy to score using revoscalepy model
     EXEC [dbo].[PredictTipSingleModeRxPy] 'revoscalepy_model', 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
     ```
-    
-    七個的值為這些特徵資料行，順序為：
-    
-    -   *passenger_count*
-    -   *trip_distance*
-    -   *trip_time_in_secs*
-    -   *pickup_latitude*
-    -   *pickup_longitude*
-    -   *dropoff_latitude*
-    -   *dropoff_longitude*
 
-3. 提示要支付計程車旅程上述參數或功能的可能性就這兩個程序的輸出。
+2. 若要使用產生的分數**scikit-了解**模型中，執行此陳述式：
+
+    ```SQL
+    EXEC [dbo].[PredictTipSingleModeSciKitPy] 'linear_model', 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
+    ```
+
+兩個程序的輸出是提示的機率為要支付計程車旅程功能或指定的參數。
+
+### <a name="changes"></a>變更
+
+此區段會列出此教學課程中使用的程式碼變更。 這些變更會反映最新**revoscalepy**版本。 應用程式開發介面的協助，請參閱[Python 函式程式庫參考](https://docs.microsoft.com/machine-learning-server/python-reference/introducing-python-package-reference)。
+
+| 變更詳細資料 | 注意|
+| ----|----|
+| 刪除`import pandas`中所有的範例| 預設立即載入熊|
+| 函式`rx_predict_ex`變更為`rx_predict`| RTM 和發行前版本需要`rx_predict_ex`|
+| 函式`rx_logit_ex`變更為`rx_logit`| RTM 和發行前版本需要`rx_logit_ex`|
+| ` probList.append(probArray._results["tipped_Pred"])`變更為`prob_list = prob_array["tipped_Pred"].values`| 更新應用程式開發介面|
+
+如果您安裝 Python 的服務使用發行前版本的 SQL Server 2017，我們建議您升級。 您也可以使用最新版的機器學習伺服器升級的 Python 和 R 元件。 如需詳細資訊，請參閱[繫結使用的 SQL Server 執行個體升級](../r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)。
 
 ## <a name="conclusions"></a>結論
 
 在本教學課程中，您學到如何使用預存程序中內嵌的 Python 程式碼。 與整合[!INCLUDE[tsql](../../includes/tsql-md.md)]可以更容易部署 Python 模型來進行預測，並納入企業資料工作流程的模型定型。
 
 ## <a name="previous-step"></a>上一個步驟
-[步驟 6︰操作模型](sqldev-py6-operationalize-the-model.md)
+
+[步驟 5： 定型和儲存 Python 模型](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
 ## <a name="see-also"></a>另請參閱
 

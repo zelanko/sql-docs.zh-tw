@@ -26,11 +26,12 @@ caps.latest.revision: 39
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: 60272ce672c0a32738b0084ea86f8907ec7fc0a5
-ms.openlocfilehash: 99497c63e037054daf249ac75ef35073f102a498
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 30d34b3509517d18559d4fbb0aa02a92e6d6cfe8
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/06/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="dbid-transact-sql"></a>DB_ID (Transact-SQL)
@@ -78,7 +79,7 @@ GO
 ```  
   
 ### <a name="c-using-dbid-to-specify-the-value-of-a-system-function-parameter"></a>C. 使用 DB_ID 來指定系統函數參數的值  
-下列範例會使用`DB`_`ID`要傳回的資料庫識別碼[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]系統函數中的資料庫`sys.dm_db` \_ `index` \_ `operational` \_ `stats`. 該函數是以資料庫識別碼作為第一個參數。
+下列範例會使用`DB_ID`要傳回的資料庫識別碼[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]系統函數中的資料庫`sys.dm_db_index_operational_stats`。 該函數是以資料庫識別碼作為第一個參數。
   
 ```sql
 DECLARE @db_id int;  

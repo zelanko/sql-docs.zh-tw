@@ -30,11 +30,12 @@ caps.latest.revision: 49
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: eba2bdb31a805c61b92a88ce5699c05dfa7fe09f
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 24c17668fb4d89f192ad7c9468f8dbedacd13814
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="set-dateformat-transact-sql"></a>SET DATEFORMAT (Transact-SQL)
@@ -42,7 +43,7 @@ ms.lasthandoff: 09/01/2017
 
   設定解譯之月份、 日期與年份日期部分順序**日期**， **smalldatetime**， **datetime**， **datetime2**和**datetimeoffset**字元字串。  
   
- 如需所有[!INCLUDE[tsql](../../includes/tsql-md.md)]日期和時間資料型別和函式，請參閱[日期和時間資料型別和函數 & #40;TRANSACT-SQL & #41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
+ 如需所有[!INCLUDE[tsql](../../includes/tsql-md.md)]日期和時間資料型別和函式，請參閱[日期和時間資料型別和函數 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -54,7 +55,7 @@ SET DATEFORMAT { format | @format_var }
   
 ## <a name="arguments"></a>引數  
  *格式* | **@***format_var*  
- 這是日期部分的順序。 有效的參數為**mdy**， **dmy**， **ymd**， **ydm**， **myd**，和**dym**. 這個引數可以是 Unicode 或轉換成 Unicode 的雙位元組字集 (DBCS)。 U.S.English 預設值是**mdy**。 所有的預設 DATEFORMAT 支援的語言，請參閱[sp_helplanguage & #40;TRANSACT-SQL & #41;](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md).  
+ 這是日期部分的順序。 有效的參數為**mdy**， **dmy**， **ymd**， **ydm**， **myd**，和**dym**. 這個引數可以是 Unicode 或轉換成 Unicode 的雙位元組字集 (DBCS)。 U.S.English 預設值是**mdy**。 所有的預設 DATEFORMAT 支援的語言，請參閱[sp_helplanguage &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md).  
   
 ## <a name="remarks"></a>備註  
  DATEFORMAT **ydm**不支援**日期**， **datetime2**和**datetimeoffset**資料型別。  
@@ -89,16 +90,6 @@ GO
 -- Result: Msg 241: Conversion failed when converting date and/or time -- from character string.  
   
 GO  
-```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-```  
--- Set date format to month/day/year.  
-SET DATEFORMAT mdy;  
-DECLARE @datevar datetime2 = '12/31/2012 09:01:01.1234567';  
-SELECT @datevar;  
-  
 ```  
   
 ## <a name="see-also"></a>另請參閱  

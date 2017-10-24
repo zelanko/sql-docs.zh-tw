@@ -28,17 +28,18 @@ caps.latest.revision: 33
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e47fdb9e12a632323971558d2e894fb7b181498e
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: a8992de1c0eadc11902bae537b97100a4b3cda55
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="-wildcard---match-one-character-transact-sql"></a>_ (萬用字元 - 符合單一字元) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  使用底線字元`_`要比對任何單一字元，例如包含模式比對的字串比較作業中`LIKE`和`PATINDEX`。  
+若要比對任何單一字元，例如包含模式比對的字串比較作業中使用底線字元 _`LIKE`和`PATINDEX`。  
   
 ## <a name="examples"></a>範例  
 
@@ -62,10 +63,10 @@ msdb
 您可以使用多個底線來表示多個字元。 變更`LIKE`準則，以包含兩個底線`'m__%`在結果中包含 master 資料庫。
 
 ### <a name="b-more-complex-example"></a>B： 更複雜的範例
- 下列範例會利用 `_` 運算子來尋找在 `Person` 資料表中，所有名字都是三個字母且結尾是 `an` 的人員。  
+ 下列範例會尋找中的所有人員使用 _ 運算子`Person`資料表具有三個字母的名字結束於`an`。  
   
 ```tsql  
--- Uses AdventureWorks  
+-- USE AdventureWorks2012
   
 SELECT FirstName, LastName  
 FROM Person.Person  
@@ -104,6 +105,5 @@ db_securityadmin
   [%（萬用字元-相符的字元）](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)   
   [&#91;&#93;（萬用字元-相符的字元）](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)   
  [&#91; ^ &#93;（萬用字元-不相符的字元）](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)     
-  
   
 

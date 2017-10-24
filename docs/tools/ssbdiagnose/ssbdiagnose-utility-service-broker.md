@@ -29,11 +29,12 @@ caps.latest.revision: 45
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 84a8489536783d1a9cb1d97aa95022ca7e952118
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 1649bfe2e52102242f8850b343c1e5616666c0f2
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>ssbdiagnose 公用程式 [Service Broker]
@@ -253,7 +254,7 @@ WHERE database_id = DB_ID();
  指定保存要分析之 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 服務的資料庫。 如果此資料庫不存在，就會產生錯誤訊息。 如未指定 **-d** ，預設值就是登入之預設資料庫屬性中所指定的資料庫。  
   
  **-l** *login_timeout*  
- 指定嘗試連接至伺服器會發生逾時之前，所經過的秒數。 如未指定 **-l** ， **ssbdiagnose** 就會使用針對 SQLCMDLOGINTIMEOUT 環境變數所設定的值。 如果也沒有指定 SQLCMDLOGINTIMEOUT，預設的逾時就是三十秒。 此登入逾時必須是介於 0 和 65534 之間的數字。 如果所提供的值不是數值或不在該範圍內， **ssbdiagnose** 就會產生錯誤訊息。 0 值指定逾時值無限。  
+ 指定嘗試連接至伺服器會發生逾時之前，所經過的秒數。如未指定 **-l** ， **ssbdiagnose** 就會使用針對 SQLCMDLOGINTIMEOUT 環境變數所設定的值。 如果也沒有指定 SQLCMDLOGINTIMEOUT，預設的逾時就是三十秒。 此登入逾時必須是介於 0 和 65534 之間的數字。 如果所提供的值不是數值或不在該範圍內， **ssbdiagnose** 就會產生錯誤訊息。 0 值指定逾時值無限。  
   
  **-?**  
  顯示命令列說明。  
@@ -468,3 +469,4 @@ ssbdiagnose -XML -E -d MyDatabase CONFIGURATION FROM SERVICE
  [sys.conversation_endpoints &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-conversation-groups-transact-sql.md)  
   
   
+

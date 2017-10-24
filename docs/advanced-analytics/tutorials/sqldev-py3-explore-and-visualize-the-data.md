@@ -1,7 +1,7 @@
 ---
-title: "步驟 3：瀏覽及視覺化資料 | Microsoft Docs"
+title: "步驟 3： 瀏覽及視覺化資料 |Microsoft 文件"
 ms.custom: 
-ms.date: 05/25/2017
+ms.date: 10/17/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -20,60 +20,76 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: dfb80fcd3241b22f0ac72c2cf4cd8a18d1add857
+ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
+ms.openlocfilehash: 31fa666c98948dc18f7aad988de795809594d2dd
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/18/2017
 
 ---
-# <a name="step-3-explore-and-visualize-the-data"></a>步驟 3：瀏覽及視覺化資料
+# <a name="step-3-explore-and-visualize-the-data"></a>步驟 3： 瀏覽及視覺化資料
 
-開發資料科學方案通常會包含大量資料瀏覽和資料視覺化。 在此步驟中，將探索範例資料，並產生一些繪圖。 稍後，您將學習如何序列化圖形物件，在 [Python]，然後將那些物件還原序列化，以進行繪圖。
+這篇文章的教學課程中，屬於[SQL 開發人員的資料庫中的 Python 分析](sqldev-in-database-python-for-sql-developers.md)。 
 
-> [!NOTE]
-> 本逐步解說示範只有二元分類工作。您可以隨意地嘗試建立其他兩個機器學習工作、 迴歸和多級分類不同的模型。
+在此步驟中，您可以探索範例資料，並產生一些繪圖。 稍後，您會了解如何序列化圖形物件，在 [Python]，然後還原序列化的物件，以進行繪圖。
 
-## <a name="review-the-data"></a>檢閱資料
+## <a name="review-the-data"></a>檢視資料
 
-在原始資料集中，計程車識別碼和車程記錄會提供在不同的檔案中。 不過，為了更輕鬆地使用範例資料，已根據 _medallion_、 _hack_license_和 _pickup_datetime_資料行來聯結兩個原始資料集。  也會對記錄進行抽樣，只取得 1% 的原始記錄數目。 產生的向下取樣資料集有 1,703,957 個資料列和 23 個資料行。
+首先，請花幾分鐘瀏覽資料結構描述中，我們已進行一些變更，以便更輕鬆地使用 NYC 計程車資料
+
++ 原始資料集的計程車識別碼和路線記錄用於不同的檔案。 我們已加入兩個原始資料集的資料行上_medallion_， _hack_license_，和_pickup_datetime_。  
++ 原始資料集跨越許多檔案，並已相當大。 我們已 downsampled 取得剛 1%的原始的記錄數目。 目前資料表有 1,703,957 資料列和 23 的資料行。
 
 **計程車識別碼**
 
-- _medallion_ 資料行代表計程車的唯一識別碼。
-- _hack_license_ 資料行包含計程車司機駕照號碼 (匿名)。
+_Medallion_資料行代表計程車的唯一識別碼。
+
+_Hack_license_資料行包含計程車驅動程式的授權數量 （匿名）。
 
 **車程和小費記錄**
 
-- 每筆車程記錄都會包含上車和下車位置與時間，以及車程距離。
-- 每筆費用記錄都會包括付款資訊，例如付款類型、總付款金額和小費金額。
-- 最後三個資料行可以用於各種機器學習工作。  _tip_amount_ 資料行包含連續數值，而且可以當成 **label** 資料行來進行迴歸分析。 _tipped_ 資料行只有是/否值，並且用於二元分類。 _tip_class_ 資料行有多個 **類別標籤** ，因此可以當成多類別分類工作的標籤使用。
-- 使用這些商務規則，用於 label 資料行的值都是根據 _tip_amount_ 資料行︰
-  
-    |衍生的資料行名稱|規則|
-    |-|-|
-     |tipped|If tip_amount > 0, tipped = 1, otherwise tipped = 0|
-    |tip_class|Class 0: tip_amount = $0<br /><br />Class 1: tip_amount > $0 and tip_amount <= $5<br /><br />Class 2: tip_amount > $5 and tip_amount <= $10<br /><br />Class 3: tip_amount > $10 and tip_amount <= $20<br /><br />Class 4: tip_amount > $20|
+每筆車程記錄都會包含上車和下車位置與時間，以及車程距離。
+
+每筆費用記錄都會包括付款資訊，例如付款類型、總付款金額和小費金額。
+
+最後三個資料行可以用於各種機器學習工作。  _tip_amount_ 資料行包含連續數值，而且可以當成 **label** 資料行來進行迴歸分析。 _tipped_ 資料行只有是/否值，並且用於二元分類。 _tip_class_ 資料行有多個 **類別標籤** ，因此可以當成多類別分類工作的標籤使用。
+
+用於標籤資料行的值都以基礎`tip_amount`資料行中，使用這些商務規則：
+
++ 標籤資料行`tipped`有可能的值 0 和 1
+
+    如果`tip_amount`> 0， `tipped` = 1，否則為`tipped`= 0
+
++ 標籤資料行`tip_class`有可能的類別值 0-4
+
+    類別 0: `tip_amount` = $0
+
+    類別 1: `tip_amount` > $0 和`tip_amount`< = $5
+    
+    等級 2: `tip_amount` > $5 和`tip_amount`< = $10
+    
+    類別 3: `tip_amount` > $10 和`tip_amount`< = $20
+    
+    等級 4: `tip_amount` > $20
 
 ## <a name="create-plots-using-python-in-t-sql"></a>建立 T-SQL 中使用 Python 的繪圖
 
-由於視覺效果是這種功能強大的工具來了解在極端值與資料的分佈，Python 提供許多封裝將資料視覺化。 **Matplotlib**模組是常用的程式庫包含許多函數，可建立長條圖、 散佈圖、 方塊繪圖和其他資料瀏覽圖形。
+開發資料科學方案通常會包含大量資料瀏覽和資料視覺化。 由於視覺效果是這種功能強大的工具來了解在極端值與資料的分佈，Python 提供許多封裝將資料視覺化。 **Matplotlib**模組是其中一個視覺效果中，常見的程式庫，而且包含了許多函數，可建立長條圖、 散佈圖、 方塊繪圖和其他資料瀏覽圖形。
 
-在本節中，您將學習如何使用預存程序的繪圖使用。 想要儲存`plot`Python 物件當做**varbinary**資料類型，並儲存在伺服器上產生的繪圖。
+在本節中，您可以了解如何搭配使用預存程序的繪圖。 而是比開啟伺服器上的映像，您將 Python 物件儲存`plot`為**varbinary**資料，以及該檔案，可以是共用或其他地方檢視再寫入。
 
-### <a name="storing-plots-as-varbinary-data-type"></a>將繪圖儲存為 varbinary 資料類型
+### <a name="create-a-plot-as-varbinary-data"></a>建立圖做為 varbinary 資料
 
-**Revoscalepy**隨附於 SQL Server 2017 機器學習服務模組包含類似於 RevoScaleR 封裝中的 R 程式庫的程式庫。 在此範例中，您將使用 Python 相當於`rxHistogram`要繪製的長條圖的資料[!INCLUDE[tsql](../../includes/tsql-md.md)]查詢。 若要讓您更輕鬆，您會將它包裝在預存程序， _PlotHistogram_。
+**Revoscalepy**模組隨附於 SQL Server 2017 機器學習服務支援的功能類似於**RevoScaleR**的 r 封裝 這個範例會使用 Python 相當於`rxHistogram`要繪製的長條圖的資料[!INCLUDE[tsql](../../includes/tsql-md.md)]查詢。 
 
 預存程序會傳回已序列化的 Python`figure`物件做為資料流**varbinary**資料。 您無法直接管理，檢視的二進位資料，但是您可以使用用戶端上的 Python 程式碼，以還原序列化，並檢視數字，並再儲存在用戶端電腦的映像檔案。
 
-### <a name="create-the-stored-procedure-plotspython"></a>建立預存程序 Plots_Python
+1. 建立預存程序_SerializePlots_，如果 PowerShell 指令碼未已經這樣做。
 
-1.  在[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，開啟新**查詢**視窗。
-
-2.  選取逐步解說的資料庫，然後使用此陳述式建立程序。 必要時，請務必修改程式碼來使用正確的資料表名稱。
+    - 變數`@query`定義的查詢文字`SELECT tipped FROM nyctaxi_sample`，為指令碼輸入變數的引數傳遞給 Python 程式碼區塊`@input_data_1`。
+    - Python 指令碼是相當簡單： **matplotlib** `figure`物件可用來讓色階分佈圖和散佈圖，這些物件會接著使用序列化`pickle`程式庫。
+    - Python 圖形物件序列化為**熊**輸出資料框架。
   
     ```SQL
-    
     CREATE PROCEDURE [dbo].[SerializePlots]
     AS
     BEGIN
@@ -120,82 +136,74 @@ ms.lasthandoff: 09/01/2017
 
     OutputDataSet = plot0.append(plot1, ignore_index=True).append(plot2, ignore_index=True).append(plot3, ignore_index=True)
     ',
-                                     @input_data_1 = @query
-      WITH RESULT SETS ((plot varbinary(max)))
+    @input_data_1 = @query
+    WITH RESULT SETS ((plot varbinary(max)))
     END
-
     GO
-  
     ```
-**注意：**
 
-- 變數`@query`定義的查詢文字 (`'SELECT tipped FROM nyctaxi_sample'`)，為指令碼輸入變數的引數傳遞給 Python 程式碼區塊`@input_data_1`。
-- Python 指令碼是相當簡單： **matplotlib** `figure`物件可用來讓色階分佈圖和散佈圖，這些物件會接著使用序列化`pickle`程式庫。
-- Python 圖形物件序列化為 Python**熊**輸出資料框架。
+2. 現在不使用引數來產生繪圖硬式編碼為輸入的查詢將資料從執行預存程序。
 
-### <a name="output-varbinary-data-to-viewable-graphics-file"></a>可檢視的圖形檔的輸出 varbinary 資料
-
-1.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中，執行下列陳述式：
-  
     ```
     EXEC [dbo].[SerializePlots]
     ```
+
+3. 結果應該類似這樣：
   
-    **結果**
-  
-    *繪圖*
-    *0xFFD8FFE000104A4649...* 
-     *0xFFD8FFE000104A4649...* 
-     *0xFFD8FFE000104A4649...* 
-     *0xFFD8FFE000104A4649...*
+    ```
+    plot
+    0xFFD8FFE000104A4649...
+    0xFFD8FFE000104A4649...
+    0xFFD8FFE000104A4649...
+    0xFFD8FFE000104A4649...
+    ```
 
   
-2.  用戶端在電腦上，執行下列 Python 程式碼，並取代伺服器名稱、 資料庫名稱及適當的認證。
+4. 從 Python 用戶端，現在可以連接到產生的二進位繪圖物件，SQL Server 執行個體，並檢視繪圖。 
+
+    若要這樣做，請執行下列 Python 程式碼，並取代伺服器名稱、 資料庫名稱及適當的認證。 請確定 Python 版本用戶端和伺服器上相同。 也請確定您的用戶端 （例如 matplotlib) 上的 Python 程式庫的相對於安裝在伺服器上的程式庫的相同或更高版本。
   
-    **SQL server 驗證：**
+    **使用 SQL Server 驗證：**
     
-        ```python
-        import pyodbc
-        import pickle
-        import os
-        cnxn = pyodbc.connect('DRIVER={SQL Server};SERVER={SERVER_NAME};DATABASE={DB_NAME};UID={USER_NAME};PWD={PASSOWRD}')
-        cursor = cnxn.cursor()
-        cursor.execute("EXECUTE [dbo].[SerializePlots]")
-        tables = cursor.fetchall()
-        for i in range(0, len(tables)):
-            fig = pickle.loads(tables[i][0])
-            fig.savefig(str(i)+'.png')
-        print("The plots are saved in directory: ",os.getcwd())
-        ```  
-    **Windows 驗證：**
+    ```python
+    import pyodbc
+    import pickle
+    import os
+    cnxn = pyodbc.connect('DRIVER={SQL Server};SERVER={SERVER_NAME};DATABASE={DB_NAME};UID={USER_NAME};PWD={PASSWORD}')
+    cursor = cnxn.cursor()
+    cursor.execute("EXECUTE [dbo].[SerializePlots]")
+    tables = cursor.fetchall()
+    for i in range(0, len(tables)):
+        fig = pickle.loads(tables[i][0])
+        fig.savefig(str(i)+'.png')
+    print("The plots are saved in directory: ",os.getcwd())
+    ```
 
-        ```python
-        import pyodbc
-        import pickle
-        import os
-        cnxn = pyodbc.connect('DRIVER={SQL Server};SERVER={SERVER_NAME};DATABASE={DB_NAME};Trusted_Connection=yes;')
-        cursor = cnxn.cursor()
-        cursor.execute("EXECUTE [dbo].[SerializePlots]")
-        tables = cursor.fetchall()
-        for i in range(0, len(tables)):
-            fig = pickle.loads(tables[i][0])
-            fig.savefig(str(i)+'.png')
-        print("The plots are saved in directory: ",os.getcwd())
-        ```
+    **使用 Windows 驗證：**
 
-    > [!NOTE]
-    > 請確定 Python 版本用戶端和伺服器上相同。 此外，請確定您在您的用戶端 （例如 matplotlib) 使用的 Python 程式庫是相對於安裝在伺服器上的程式庫之相同或更高版本。
+    ```python
+    import pyodbc
+    import pickle
+    import os
+    cnxn = pyodbc.connect('DRIVER={SQL Server};SERVER={SERVER_NAME};DATABASE={DB_NAME};Trusted_Connection=yes;')
+    cursor = cnxn.cursor()
+    cursor.execute("EXECUTE [dbo].[SerializePlots]")
+    tables = cursor.fetchall()
+    for i in range(0, len(tables)):
+        fig = pickle.loads(tables[i][0])
+        fig.savefig(str(i)+'.png')
+    print("The plots are saved in directory: ",os.getcwd())
+    ```
 
-
-3.  如果連線成功時，您會看到以下的結果
+5.  如果連接成功，您應該會看到類似下列訊息：
   
     *會儲存在目錄中的繪圖： xxxx*
   
-4.  Python 的工作目錄中，將會建立輸出檔案。 若要檢視繪圖，只要開啟 Python 工作目錄。 下圖顯示在用戶端電腦上儲存範例圖。
+6.  Python 的工作目錄中建立輸出檔案。 若要檢視繪圖，找出 Python 工作目錄，並開啟檔案。 下圖顯示儲存在用戶端電腦上的圖。
   
     ![提示量 vs 價位量](media/sqldev-python-sample-plot.png "提示量 vs 價位數量") 
 
-## <a name="next-step"></a>下一個步驟
+## <a name="next-step"></a>下一步
 
 [步驟 4︰使用 T-SQL 建立資料特徵](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
@@ -203,7 +211,4 @@ ms.lasthandoff: 09/01/2017
 
 [步驟 2︰使用 PowerShell 將資料匯入 SQL Server](sqldev-py2-import-data-to-sql-server-using-powershell.md)
 
-## <a name="see-also"></a>另請參閱
-
-[使用 Python 的機器學習服務](../python/sql-server-python-services.md)
 

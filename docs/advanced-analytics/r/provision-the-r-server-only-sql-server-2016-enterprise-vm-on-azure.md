@@ -1,7 +1,7 @@
 ---
-title: "在 Azure 上佈建 R Server 專用的 SQL Server 2016 Enterprise VM | Microsoft Docs"
+title: "佈建虛擬機器上 Azure 機器學習 |Microsoft 文件"
 ms.custom: 
-ms.date: 06/05/2017
+ms.date: 10/16/2017
 ms.prod: r-server
 ms.reviewer: 
 ms.suite: 
@@ -15,120 +15,144 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a3bfca0753984f09220d8ca4e4f6933c949daf2b
+ms.sourcegitcommit: 8cc1fcfdeae8742a93916dfb08c9db1215f88721
+ms.openlocfilehash: 7cb9e069fc3b537f8aab9d048a152435ad0cc6ac
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
-# <a name="advanced-analytics-virtual-machines-on-azure"></a>進階的分析 Azure 上的虛擬機器
+# <a name="provision-a-virtual-machine-for-machine-learning-on-azure"></a>佈建虛擬機器上 Azure 機器學習
 
-在 Azure 上的虛擬機器是快速設定機器學習解決方案的完整伺服器環境的方便選項。 本主題列出一些包含 R Server、 SQL Server 與 machine learning 中或其他資料科學工具，從 Microsoft 的虛擬機器映像。
+在 Azure 上的虛擬機器是快速設定機器學習解決方案的完整伺服器環境的方便選項。 本文列出一些使用機器學習中包含 R Server、 機器學習伺服器或 SQL Server 的虛擬機器映像。
+
+這份清單不是完整的但只提供機器學習伺服器或 SQL Server 機器學習服務，以便探索相關的映像的名稱。
 
 > [!TIP]
 > 我們建議您使用新版 Azure 入口網站和 Azure Marketplace。 如果瀏覽在傳統入口網站上 Azure 資源庫，便無法使用一些映像。
 
-Azure Marketplace 包含支援資料科學的多部虛擬機器。 這份清單不是完整的但只提供，包括 Microsoft R Server 或 SQL Server 的機器學習服務，以便探索映像的名稱。
-
-## <a name="how-to-provision-a-vm"></a>如何佈建 VM
+## <a name="how-to-provision-a-virtual-machine"></a>如何佈建虛擬機器
 
 如果您不熟悉使用 Azure Vm，建議您看到這些文件，如需有關使用入口網站，並設定虛擬機器。
 
 + [虛擬機器 - 快速入門](https://azure.microsoft.com/documentation/learning-paths/virtual-machines/)
-+ [開始使用 Windows 虛擬機器](https://azure.microsoft.com/en-us/documentation/articles/virtual-machines-windows-hero-tutorial/)
++ [開始使用 Windows 虛擬機器](https://azure.microsoft.com/documentation/articles/virtual-machines-windows-hero-tutorial/)
 
-### <a name="find-an-image"></a>尋找映像
+## <a name="find-a-machine-learning-image"></a>找到的機器學習映像
 
-1. 從 Azure 儀表板中，按一下 [ **Marketplace**。
+1. 從 Azure 入口網站 (portal.azure.com)，按一下 **虛擬機器**，或按一下**新增**。
 
-    - 按一下**智慧及分析**或**資料庫**，然後在中輸入"R"**篩選**控制項以查看 R Server 虛擬機器的清單。
-    - 其他可能字串**篩選**控制是*資料科學*和*機器學習*
-    - 在搜尋中使用 %萬用字元，來尋找包含目標字串，例如 VM 名稱*R*或*Julia*。
+2. 找出在頁面上，依名稱篩選資源，您可以使用頂端的 [搜尋] 方塊。 
 
-2. 若要取得 R Server for Windows，請選取**R 伺服器只有 SQL Server 2016 Enterprise**。
+3. 在中，輸入 「 R 伺服器 」 （或 「 ML 伺服器 」）**篩選**控制項以查看相關資源的清單。 按一下**Marketplace 中的搜尋**以檢視虛擬機器。
+
+    > [!TIP]
+    > 
+    > 篩選控制項的其他可能的字串為"資料科學 」 和 「 機器學習 」。
+    > 
+    > 使用`%`萬用字元搜尋來尋找虛擬機器的名稱中。 例如，您可以輸入`"`%julia%` or `%R %'。
+
+4. 若要取得 R Server for Windows，請選取**R 伺服器只有 SQL Server 2016 Enterprise**。
   
-    [R 伺服器](https://msdn.microsoft.com/microsoft-r/rserver-whats-new)授權為 SQL Server Enterprise Edition 的功能，但版本 9.1。 會安裝成獨立伺服器和服務的現代的生命週期支援原則。
+    [R 伺服器](https://msdn.microsoft.com/microsoft-r/rserver-whats-new)授權 SQL Server Enterprise Edition 的功能，但版本 9.1 安裝成獨立伺服器和服務的現代的生命週期支援原則。
 
-3. VM 已建立並在執行之後，按一下 [連接] 按鈕以開啟連線並登入新電腦。
+    > [!NOTE] 
+    > 
+    > 這是落在查看新的虛擬機器，其中包含 SQL Server 2017 和 9.2.1 發行的機器學習 Server 版本。
+    > 之前，您可以更新使用 SQL Server 安裝中心，然後選擇 [升級] 選項安裝這部虛擬機器上的 SQL Server 版本。 如需詳細資訊，請參閱[使用安裝精靈升級 SQL Server](https://docs.microsoft.com/sql/database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup)。
 
-4. 您連接之後，您可能需要安裝其他的 R 工具或開發工具。
+5. 虛擬機器已建立並執行之後，按**連接**按鈕來開啟連接並登入新的機器。
+
+5. 您連接之後，您可以安裝其他的 R 封裝或您慣用的開發工具。
 
 ### <a name="install-additional-r-tools"></a>安裝其他的 R 工具
 
-根據預設，Microsoft R Server 包含所有已安裝的 R 工具，以及 R 的基本安裝，包括 RTerm 和 RGui。 如果您想要立即開始使用 R，在桌面上已經新增 RGui 的捷徑。
+根據預設，Microsoft R Server 包含所有已安裝的 R 工具，以及 R 的基本安裝，包括 RTerm 和 RGui。 也已加入 RGui 捷徑至桌面。
 
-不過，您可能想要安裝其他的 R 工具，例如 RStudio、 Visual Studio (RTVS) 或 Microsoft R 用戶端的 R 工具。 請參閱下列連結，以取得下載位置和指示︰
+不過，您可能想要安裝其他的 R 工具，例如 RStudio、 R Tools for Visual Studio (RTVS) 或 Microsoft R 用戶端。 請參閱下列連結，以取得下載位置和指示︰
+
 + [適用於 Visual Studio 的 R 工具](https://docs.microsoft.com/visualstudio/rtvs/installation)
 + [Microsoft R Client](https://msdn.microsoft.com/microsoft-r/install-r-client-windows)
 + [RStudio for Windows](https://www.rstudio.com/products/rstudio/download/)
 
 安裝完成之後，請務必變更預設的 R 執行階段位置，好讓所有的 R 開發工具都能使用 Microsoft R Server 程式庫。
 
-### <a name="configure-server-for-web-services"></a>設定 web 服務的伺服器
+### <a name="configure-r-server-to-support-web-services"></a>設定為支援 web 服務的 R 伺服器
 
-如果虛擬機器包含 R Server，則需要其他的設定來使用 Web 服務部署、遠端執行或利用 R Server 做為組織中的部署伺服器。 如需指示，請參閱[設定 R Server 以進行運作化 (英文)](https://msdn.microsoft.com/microsoft-r/operationalize/configuration-initial)。
+若要使用 web 服務部署，遠端執行，或為您組織中部署伺服器利用 R 伺服器需要額外的設定。 如需指示，請參閱[設定 R 伺服器來實施分析](https://docs.microsoft.com/machine-learning-server/install/operationalize-r-server-one-box-config)。
 
 > [!NOTE]
 > 如果您只想要使用 RevoScaleR 或 MicrosoftML 等套件不需要進行其他設定。
 
-## <a name="r-server-images"></a>R 伺服器映像
+## <a name="other-virtual-machines"></a>其他虛擬機器
 
-### <a name="microsoft-data-science-virtual-machine"></a>Microsoft Data Science 虛擬機器
+下列映像可從 Azure Marketplace，包括完整設定機器學習工具，但不是一定包含 SQL Server。
 
-來自設定與 Microsoft R Server，以及 Python （Anaconda 發佈）、 Jupyter 筆記本伺服器、 Visual Studio Community 版本、 Power BI Desktop、 Azure SDK 和 SQL Server Express edition。
+### <a name="data-science-virtual-machine"></a>Data Science 虛擬機器
 
-在 Windows Server 2012 上執行的 Windows 版本，並包含許多特別工具可用來模型化和分析，包括 CNTK 和 mxnet、 受歡迎的 R 封裝，例如 xgboost，與 Vowpal Wabbit。
+此映像已預先設定與 Microsoft R Server，以及 Python （Anaconda 發佈）、 Jupyter 筆記本伺服器、 Visual Studio Community 版本、 Power BI Desktop、 Azure SDK 和 SQL Server Express edition。
 
-### <a name="linux-data-science-virtual-machine"></a>Linux Data Science 虛擬機器
+在 Windows Server 2012 上執行的 Windows 版本，而且包含許多特別工具可用來模型化和分析，包括[CNTK](https://www.microsoft.com/cognitive-toolkit/)， [mxNet](https://mxnet.incubator.apache.org/)，並將受歡迎的 R 封裝這類**xgboost**.
 
-也包含用於資料科學和開發活動，包括 Microsoft R Open、 Microsoft R Server Developer Edition、 Anaconda Python 和 Jupyter 筆記本 Python、 R 和 Julia 的常用工具。
+Linux 版本可供 Ubuntu、 Centos 和 Centos CSP，而且包含許多常用的工具，用於資料科學和開發活動。
 
-這個 VM 映像最近已更新以包含 JupyterHub，可讓多個使用者，使用不同的驗證方法，包括本機作業系統帳戶驗證與 Github 帳戶驗證透過開放原始碼軟體。 如果您想要執行訓練類別，並想要所有學生共用相同的伺服器，但使用不同的筆記及目錄，JupyterHub 是特別有用的選項。
+如需詳細資訊，請參閱[簡介至 Azure Data Science 虛擬機器的 Linux 和 Windows](https://docs.microsoft.com/azure/machine-learning/data-science-virtual-machine/provision-vm)。
 
-Ubuntu、 Centos 和 Centos CSP 提供映像。
+此映像最近已更新成包含： 
 
-### <a name="r-server-only-sql-server-2016-enterprise"></a>R 伺服器只有 SQL Server 2016 Enterprise
++ Julia，未來的可擴充、 功能強大的資料科學語言的支援 
++ JupyterHub，這是很有用的選項，當您想要執行訓練類別，並想要所有學生共用相同的伺服器，但使用不同的筆記本和目錄。
 
-此虛擬機器包含的獨立安裝程式[R 伺服器 9.1。](https://msdn.microsoft.com/microsoft-r/rserver-whats-new) 支援新的現代化軟體生命週期授權模型。
+如需有關支援的工具和機器學習架構的詳細資訊，請參閱[了解您的 Data Science 虛擬機器](https://docs.microsoft.com/azure/machine-learning/data-science-virtual-machine/dsvm-tools-overview)
 
- R 伺服器也會提供 Linux CentOS 版本 7.2、 Linux RedHat 版本 7.2，和 Ubuntu 版本 16.04 映像。
+### <a name="r-server-virtual-machines"></a>R Server 虛擬機器
+
+除了**R 伺服器只有 SQL Server 2016 Enterprise**映像，您可以取得包含 R Server 的獨立虛擬機器。 Linux CentOS 版本 7.2、 Linux RedHat 版本 7.2，和 Ubuntu 版本 16.04 使用映像。
+
+如需詳細資訊，請參閱[雲端中的機器學習伺服器](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-in-the-cloud)
 
  > [!NOTE]
  > 這些虛擬機器會取代 Azure Marketplace 中先前提供的 **RRE for Windows 虛擬機器**。
 
-## <a name="sql-server-images"></a>SQL Server 映像
+### <a name="sql-server-virtual-machines"></a>SQL Server 虛擬機器
 
-若要使用 R 服務 （資料庫） 或機器學習服務，您就必須安裝其中一個 SQL Server Enterprise 或 Developer edition 虛擬機器，並新增機器學習服務，如這裡所述：[上安裝 SQL Server R ServicesAzure 虛擬機器](../../advanced-analytics/r-services/installing-sql-server-r-services-on-an-azure-virtual-machine.md)。
+有兩個使用 SQL Server 機器學習在 Azure 中的選項：
+
++ 取得其中一個包含預先安裝的 SQL Server R 服務的虛擬機器映像。
++ 建立 Azure 虛擬機器並安裝 SQL Server Enterprise 或 Developer edition 使用您自己的授權金鑰。 
+  
+    然後，執行安裝程式以新增並啟用機器學習服務，如這裡所述： [Azure 的虛擬機器上安裝 SQL Server R Services](../r/installing-sql-server-r-services-on-an-azure-virtual-machine.md)。
++ 建立 Azure SQL Database 使用服務層可以支援機器學習並使用新的 R 服務功能目前在預覽中。 如需詳細資訊，請參閱[Azure SQL DB](../r/using-r-in-azure-sql-database.md)。
 
 > [!NOTE]
-> 目前，機器學習服務不支援的 Linux 虛擬機器上的 SQL Server 2017，或在 Azure SQL Database。 您必須使用 SQL Server 2016 SP1 或 SQL Server 2017 for Windows。
+> 目前，SQL Server 機器學習服務不支援的 Linux 虛擬機器上的 SQL Server 2017。 不過，您可以執行計分上定型的模型使用 T-SQL 的預測函數。 如需詳細資訊，請參閱[SQl Server 中的原生計分](../sql-native-scoring.md)。 
 
-Data Science 虛擬機器也會包含已啟用 R 服務功能的 SQL Server 2016。
+### <a name="virtual-machines-for-deep-learning"></a>深入了解虛擬機器 
 
+之前，Microsoft 提供深入學習工具組的 Data Science 虛擬機器，您無法加入至現有 Data Science 虛擬機器。 深入了解虛擬機器，其中包含常用的深入學習工具現在已取代這個工具組：
 
-## <a name="other-vms"></a>其他 Vm
++ GPU 深入學習架構版本像 Microsoft 認知工具組、 TensorFlow、 Keras 和 Caffe
++ 內建的 GPU 驅動程式
++ 讓影像和文字處理工具的集合
++ Enterprise 開發工具，例如 Microsoft R Server Developer Edition，Anaconda Python Jupyter 筆記本的 Python 和 R
++ Python、 R、 SQL Server，以及執行更多的開發人員工具
++ 讓影像和文字了解的端對端範例
 
-### <a name="deep-learning-toolkit-for-the-data-science-virtual-machine"></a>深層的 Data Science 虛擬機器學習工具組
-
-此虛擬機器包含相同的機器學習工具用於資料科學虛擬機器，但使用 mxnet、 CNTK、 TensorFlow 和 Keras GPU 版本。 此映像只用於 Azure 的 GPU N 數列執行個體。 
-
-深入學習工具組也提供一組深入了解使用 GPU，包括 CIFAR 10 資料庫上的影像辨識和 MNIST 資料庫上的字元辨識範例解決方案的範例。 美國中南部、 美國東部、 西歐、 和東南亞中目前使用 GPU 的執行個體。
+使用 Windows 2016 或 Ubuntu Linux 平台上深入學習虛擬機器。 如需詳細資訊，請參閱[深入學習和 AI 架構](https://docs.microsoft.com/azure/machine-learning/data-science-virtual-machine/dsvm-deep-learning-ai-frameworks)。
 
 > [!IMPORTANT]
-> GPU 執行個體目前僅適用於美國中南部。
-
+> 
+> 部署此虛擬機器需要有限的 Azure 區域中可用的 Azure GPU NC 系列虛擬機器映像。 如需可用性資訊，請參閱[依地區可用的產品](https://azure.microsoft.com/en-us/regions/services/)。 當您佈建虛擬機器時，請務必使用**HDD**為磁碟類型，不**SSD**。
 
 ## <a name="frequently-asked-questions"></a>常見問題集
 
+本節中的機器學習來自 Microsoft 的虛擬機器的一些常見問題。
+
 ### <a name="can-i-install-a-virtual-machine-with-sql-server-2017"></a>可以安裝在虛擬機器與 SQL Server 2017 嗎？
 
-映像可包含的 SQL Server 2017 CTP 2.0 Linux 環境中，但這些環境目前不支援機器學習服務。 
+Windows 型虛擬機器的 SQL Server 2017 Enterprise Edition，其中包含機器學習服務即將推出。 尋找這些部落格網站上的公告：
 
-Windows 型虛擬機器的 SQL Server 2017 Enterprise Edition，其中包含機器學習服務後，即可使用的公開版本。 
-
-或者，您可以使用 SQL Server 2016 映像，並升級您的 R 執行個體，如下所述：[升級執行個體使用 SqlBindR](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)。 
-
-或者，建立虛擬機器並下載 CTP 2.0 preview 的[SQL Server 2017](https://www.microsoft.com/sql-server/sql-server-2017)。
++ [Cortana 智慧和機器學習](https://blogs.technet.microsoft.com/machinelearning/)
++ [資料平台內幕](https://blogs.technet.microsoft.com/dataplatforminsider/)
 
 ### <a name="how-do-i-access-data-in-an-azure-storage-account"></a>如何存取 Azure 儲存體帳戶中的資料？
 
@@ -140,10 +164,7 @@ Windows 型虛擬機器的 SQL Server 2017 Enterprise Edition，其中包含機�
 
 ### <a name="how-do-i-use-data-from-azure-data-lake-storage-adls"></a>如何使用來自 Azure Data Lake 儲存體 (ADLS) 的資料？
 
-如果您參考相同的方式就像 HDFS 檔案系統中，使用 [webHDFS 的儲存體帳戶，您可以從使用 RevoScaleR，ADLS 儲存體讀取資料。  如需詳細資訊，請參閱這篇文章：[使用 R 來執行 Azure Data Lake Store 上的檔案系統作業](https://blogs.msdn.microsoft.com/microsoftrservertigerteam/2017/03/14/using-r-to-perform-filesystem-operations-on-azure-data-lake-store/)。
+如果您參考相同的方式就像 HDFS 檔案系統中，使用 webHDFS 的儲存體帳戶，您可以從使用 RevoScaleR，ADLS 儲存體讀取資料。  如需詳細資訊，請參閱這篇文章：[使用 R 來執行 Azure Data Lake Store 上的檔案系統作業](https://blogs.msdn.microsoft.com/microsoftrservertigerteam/2017/03/14/using-r-to-perform-filesystem-operations-on-azure-data-lake-store/)。
 
-## <a name="see-also"></a>另請參閱
-
-[SQL Server R 服務](https://msdn.microsoft.com/library/mt604845.aspx)
 
 

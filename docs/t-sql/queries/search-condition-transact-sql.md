@@ -40,11 +40,12 @@ caps.latest.revision: 43
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: fa99ed46f0d5248f2cb0552a62ec1547d5b4f296
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: ad0a32f2f11c7b0ca781c7e01635204da38fcbdd
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="search-condition-transact-sql"></a>搜尋條件 (Transact-SQL)
@@ -187,7 +188,7 @@ ms.lasthandoff: 09/01/2017
 ## <a name="examples"></a>範例  
   
 ### <a name="a-using-where-with-like-and-escape-syntax"></a>A. 搭配 LIKE 和 ESCAPE 語法使用 WHERE  
- 下列範例會搜尋 `LargePhotoFileName` 資料行有 `green_` 字元的資料列，且會使用 `ESCAPE` 選項，因為 `_` 是一個萬用字元。 當沒有指定 `ESCAPE` 選項時，查詢會搜尋任何包含 `green` 一字，後面再接著 `_` 字元以外之任何單一字元描述的值。  
+ 下列範例會搜尋中的資料列`LargePhotoFileName`資料行具有字元`green_`，並使用`ESCAPE`選項，因為 _ 是萬用字元。 未指定`ESCAPE`選項時，查詢會搜尋任何包含單字的描述值`green`後面接著 _ 字元以外的任何單一字元。  
   
 ```  
 USE AdventureWorks2012 ;  

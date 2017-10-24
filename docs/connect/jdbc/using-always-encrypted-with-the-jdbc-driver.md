@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 84cf217faf0980d3ef1daf9a86a4aa362931d199
+ms.sourcegitcommit: fffb61c4c3dfa58edaf684f103046d1029895e7c
+ms.openlocfilehash: cee7f5dbcf66a5357ae68192703d841ae1601a35
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/19/2017
 
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>搭配使用一律加密與 JDBC 驅動程式
@@ -268,34 +268,12 @@ Microsoft JDBC Driver for SQL Server 隨附於下列內建的資料行主要金�
 ### <a name="using-azure-key-vault-provider"></a>使用 Azure 金鑰保存庫提供者
 Azure 金鑰保存庫是存放和管理永遠加密資料行主要金鑰的方便選項 (尤其是當應用程式裝載在 Azure 時)。 Microsoft JDBC Driver for SQL Server 包含內建的提供者，SQLServerColumnEncryptionAzureKeyVaultProvider，具有索引鍵儲存在 Azure 金鑰保存庫中的應用程式。 此提供者的名稱是 AZURE_KEY_VAULT。 若要使用 Azure 金鑰保存庫的存放區提供者，應用程式開發人員需要在 Azure 中建立保存庫和金鑰設定應用程式存取金鑰。 如需有關如何設定金鑰保存庫及建立資料行主要金鑰是指[Azure 金鑰保存庫-Step by Step 如需有關設定金鑰保存庫](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/)和[Azure 金鑰保存庫中建立資料行主要金鑰](https://msdn.microsoft.com/library/mt723359.aspx#Anchor_2).  
   
-若要使用 Azure 金鑰保存庫，用戶端應用程式需要 SQLServerColumnEncryptionAzureKeyVaultProvider 具現化，並向驅動程式。 JDBC 驅動程式委派驗證至應用程式，透過介面呼叫 SQLServerKeyVaultAuthenticationCallback 具有從金鑰保存庫擷取存取權杖的方法。 Azure 金鑰保存庫的存放區提供者具現化，應用程式開發人員必須提供唯一呼叫的方法實作**getAccessToken**會擷取儲存在 Azure 金鑰保存庫中金鑰的存取權杖。  
-  
-初始化 SQLServerKeyVaultAuthenticationCallback 和 SQLServerColumnEncryptionAzureKeyVaultProvider 的範例如下：  
+若要使用 Azure 金鑰保存庫，用戶端應用程式需要 SQLServerColumnEncryptionAzureKeyVaultProvider 具現化，並向驅動程式。
+
+初始化 SQLServerColumnEncryptionAzureKeyVaultProvider 的範例如下：  
   
 ```  
-// String variables clientID and clientSecret hold the client id and client secret values respectively.  
-  
-ExecutorService service = Executors.newFixedThreadPool(10);  
-SQLServerKeyVaultAuthenticationCallback authenticationCallback = new SQLServerKeyVaultAuthenticationCallback() {  
-       @Override  
-    public String getAccessToken(String authority, String resource, String scope) {  
-        AuthenticationResult result = null;  
-        try{  
-                AuthenticationContext context = new AuthenticationContext(authority, false, service);  
-            ClientCredential cred = new ClientCredential(clientID, clientSecret);  
-  
-            Future<AuthenticationResult> future = context.acquireToken(resource, cred, null);  
-            result = future.get();  
-        }  
-        catch(Exception e){  
-            e.printStackTrace();  
-        }  
-        return result.getAccessToken();  
-    }  
-};  
-  
-SQLServerColumnEncryptionAzureKeyVaultProvider akvProvider = new SQLServerColumnEncryptionAzureKeyVaultProvider(authenticationCallback, service);  
-  
+SQLServerColumnEncryptionAzureKeyVaultProvider akvProvider = new SQLServerColumnEncryptionAzureKeyVaultProvider(clientID, clientKey); 
 ```
 
 應用程式建立 SQLServerColumnEncryptionAzureKeyVaultProvider 的執行個體之後，應用程式必須登錄 Microsoft JDBC Driver for SQL Server 使用的執行個體Sqlserverconnection.registercolumnencryptionkeystoreproviders （） 方法。 強烈建議，使用預設查詢名稱 AZURE_KEY_VAULT，可以藉由呼叫 SQLServerColumnEncryptionAzureKeyVaultProvider.getName() API 取得註冊執行個體。 使用預設名稱，可讓您使用工具，例如 SQL Server Management Studio 或 PowerShell，來佈建和管理永遠加密金鑰 （工具來產生資料行主要金鑰的中繼資料物件使用的預設名稱）。 下列範例會顯示註冊 Azure 金鑰保存庫提供者。 如需有關 sqlserverconnection.registercolumnencryptionkeystoreproviders （） 方法的詳細資訊，請參閱[一律加密 API 參考 JDBC 驅動程式](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md)。 
@@ -653,3 +631,4 @@ connection.close();
  [一律加密 (Database Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)  
   
   
+

@@ -1,7 +1,7 @@
 ---
 title: "匯入和匯出資料的 SQL Server 匯入和匯出精靈 |Microsoft 文件"
 ms.custom: 
-ms.date: 03/16/2017
+ms.date: 10/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -28,10 +28,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 59c7e1cc3c31f77652acb21d375e1294bdc93397
-ms.openlocfilehash: 22419ce21476588f4ff2859185c8b833306fa896
+ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
+ms.openlocfilehash: 6cd388215de02072522011b149a9cecc3239b64c
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/18/2017
 
 ---
 # <a name="import-and-export-data-with-the-sql-server-import-and-export-wizard"></a>使用 SQL Server 匯入和匯出精靈來匯入或匯出資料
@@ -45,24 +45,24 @@ ms.lasthandoff: 09/27/2017
 
 ## <a name="what-happens-when-i-run-the-wizard"></a>在執行精靈時，會發生什麼事？
 -    **請參閱步驟清單。** 如需精靈中的步驟的說明，請參閱[的 SQL Server 匯入和匯出精靈 」 中的步驟](../../integration-services/import-export-data/steps-in-the-sql-server-import-and-export-wizard.md)。 也是在精靈的每一頁的文件的個別頁面。  
-    \-或\-
--   **簡單的範例，請參閱。** 快速瀏覽數個您在一般的工作階段中看到的畫面，看看這個簡單的端對端範例在單一頁面-[開始匯入和匯出精靈 」 的這個簡單的範例使用](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)。  
+    \- 或 [選擇目的地] \-
+-   **請參閱範例。** 快速瀏覽數個您在一般的工作階段中看到的畫面，看看這則簡易範例在單一頁面-[開始匯入和匯出精靈 」 的這個簡單的範例使用](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)。  
 
 ##  <a name="wizardSources"></a>哪些來源和目的地可以使用？  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]匯入和匯出精靈可以將資料複製與下表所列的資料來源。 若要連接的部分這些資料來源，您可能要下載並安裝其他檔案。
  
 | 資料來源 | 必須下載其他檔案嗎？ |
 |-------------|-----------------------------------------|
-|**企業資料庫**<br/>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、 Oracle、 DB2 和其他項目。|SQL Server 或 SQL Server Data Tools (SSDT) 中安裝檔案，您需要連接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 但是，SSDT 不會安裝您要連接到其他企業資料庫，如 Oracle 或 IBM DB2 的所有檔案。<br/><br/>若要連接到企業的資料庫，您通常必須擁有兩件事：<br/><br/>1.**用戶端軟體**。 企業資料庫系統如已安裝用戶端軟體，即已具備建立連接所需項目。 如未安裝用戶端軟體，請詢問資料庫管理員如何安裝已授權的複本。<br/><br/>2.**驅動程式或提供者**。 Microsoft 會安裝驅動程式和服務提供者連接到 Oracle。 若要連接至 IBM DB2，取得 Microsoft® OLEDB Provider for DB2 v5.0 Microsoft SQL Server 從[Microsoft SQL Server 2016 Feature Pack](https://www.microsoft.com/download/details.aspx?id=52676)。|
-|**文字檔**（一般檔案）|不需要額外的檔案。|
+|**企業資料庫**<br/>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、 Oracle、 DB2 和其他項目。|SQL Server 或 SQL Server Data Tools (SSDT) 中安裝檔案，您需要連接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 但是，SSDT 不會安裝您要連接到其他企業資料庫，如 Oracle 或 IBM DB2 的所有檔案。<br/><br/>若要連接到企業的資料庫，您通常必須擁有兩件事：<br/><br/>1.**用戶端軟體**。 企業資料庫系統如已安裝用戶端軟體，即已具備建立連接所需項目。 如未安裝用戶端軟體，請詢問資料庫管理員如何安裝已授權的複本。<br/><br/>2.**驅動程式或提供者**。 Microsoft 會安裝驅動程式和服務提供者連接到 Oracle。 若要連接至 IBM DB2，取得 Microsoft® OLEDB Provider for DB2 v5.0 Microsoft SQL Server 從[Microsoft SQL Server 2016 Feature Pack](https://www.microsoft.com/download/details.aspx?id=52676)。<br/><br/>如需詳細資訊，請參閱[連接到 SQL Server 資料來源](connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard.md)或[連接到 Oracle 資料來源](connect-to-an-oracle-data-source-sql-server-import-and-export-wizard.md)。|
+|**文字檔**（一般檔案）|不需要額外的檔案。<br/><br/>如需詳細資訊，請參閱[連接到一般檔案資料來源](connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard.md)。|
 |**Microsoft Excel 和 Microsoft Access 檔案**|Microsoft Office 不會安裝連接至 Excel 和 Access 檔案以作為資料來源所需的全部檔案。 取得下列下載- [Microsoft Access 資料庫引擎 2016年可轉散發套件](https://www.microsoft.com/download/details.aspx?id=54920)。<br/><br/>如需詳細資訊，請參閱[連接到 Excel 資料來源](../../integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md)或[Access 資料來源的連接](../../integration-services/import-export-data/connect-to-an-access-data-source-sql-server-import-and-export-wizard.md)。|
 |**Azure 資料來源**<br/>目前僅 Azure Blob 儲存體。|SQL Server Data Tools，請勿安裝您要連接到 Azure Blob 儲存體做為資料來源的檔案。 取得以下下載： [Azure 的 Microsoft SQL Server 2016 Integration Services 功能套件](https://www.microsoft.com/download/details.aspx?id=49492)。<br/><br/>如需詳細資訊，請參閱[連接到 Azure Blob 儲存體](../../integration-services/import-export-data/connect-to-azure-blob-storage-sql-server-import-and-export-wizard.md)。|
-|**開放原始碼資料庫**<br/>PostgreSQL、 MySql 和其他項目。|您必須下載其他檔案才能連接至這些資料來源。<br/><br/>-若為**PostgreSQL**，請參閱[PostgreSQL 資料來源的連接](../../integration-services/import-export-data/connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard.md)。<br/>-若為**MySql**，請參閱[連接到 MySQL 資料來源](../../integration-services/import-export-data/connect-to-a-mysql-data-source-sql-server-import-and-export-wizard.md)。|
+|**開放原始碼資料庫**<br/>PostgreSQL、 MySql 和其他項目。|若要連接到這些資料來源，您必須下載其他檔案。<br/><br/>-若為**PostgreSQL**，請參閱[PostgreSQL 資料來源的連接](../../integration-services/import-export-data/connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard.md)。<br/>-若為**MySql**，請參閱[連接到 MySQL 資料來源](../../integration-services/import-export-data/connect-to-a-mysql-data-source-sql-server-import-and-export-wizard.md)。|
 |**任何其他資料來源驅動程式或提供者可供使用**|您通常必須下載其他檔案才能連接至下列類型的資料來源。<br/><br/>- 有可用 **ODBC 驅動程式** 的任何來源。 如需詳細資訊，請參閱[連接到 ODBC 資料來源](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md)。<br/>- 有可用 **.Net Framework 資料提供者** 的任何來源。<br/>- 有可用 **OLE DB 提供者** 的任何來源。<br/><br/>提供其他資料來源的來源和目的地功能的協力廠商元件是有時候行銷附加產品為 SQL Server Integration Services (SSIS)。|
 
 ## <a name="how-do-i-connect-to-my-data"></a>如何連接到我的資料？
-如需如何連接至常用的資料來源資訊，請參閱下列頁面。
--   [連接到 SQL Server](../../integration-services/import-export-data/connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard.md)
+如需如何連接至常用的資料來源資訊，請參閱下列頁面：
+-   [連線到 SQL Server](../../integration-services/import-export-data/connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard.md)
 -   [連接到 Oracle](../../integration-services/import-export-data/connect-to-an-oracle-data-source-sql-server-import-and-export-wizard.md)
 -   [連接到一般檔案 （文字檔）](../../integration-services/import-export-data/connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard.md)
 -   [連接到 Excel](../../integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md)

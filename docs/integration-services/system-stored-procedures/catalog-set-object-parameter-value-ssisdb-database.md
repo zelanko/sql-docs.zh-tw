@@ -15,50 +15,50 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 9c27cff7ad828ab5c19183febd2ad562d5c9b925
+ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
+ms.openlocfilehash: 3a5dc70b1e955b3c702dc9e9dbe4776cc4ebd5ac
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/26/2017
+ms.lasthandoff: 10/20/2017
 
 ---
 # <a name="catalogsetobjectparametervalue-ssisdb-database"></a>catalog.set_object_parameter_value (SSISDB 資料庫)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  設定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄中的參數值。 將值與環境變數建立關聯，或指派常值，在沒有指派其他值的情況下依預設使用。  
+  設定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄中的參數值。 建立關聯的環境變數的值，或指派任何其他值會指派預設使用常值。  
   
 ## <a name="syntax"></a>語法  
   
-```tsql  
-set_object_parameter_value [ @object_type = ] object_type   
-    , [ @folder_name = ] folder_name   
-    , [ @project_name = ] project_name   
-    , [ @parameter_name = ] parameter _name   
-    , [ @parameter_value = ] parameter_value   
- [  , [ @object_name = ] object_name ]  
- [  , [ @value_type = ] value_type ]  
+```sql  
+catalog.set_object_parameter_value [@object_type =] object_type   
+    , [@folder_name =] folder_name   
+    , [@project_name =] project_name   
+    , [@parameter_name =] parameter _name   
+    , [@parameter_value =] parameter_value   
+ [  , [@object_name =] object_name ]  
+ [  , [@value_type =] value_type ]  
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @object_type =] *object_type*  
+ [@object_type =] *object_type*  
  參數類型。 使用 `20` 值表示專案參數，或使用 `30` 值表示封裝參數。 *Object_type*是**smallInt**。  
   
- [ @folder_name =] *folder_name*  
+ [@folder_name =] *folder_name*  
  包含參數之資料夾的名稱。 *Folder_name*是**nvarchar （128)**。  
   
- [ @project_name =] *project_name*  
+ [@project_name =] *project_name*  
  包含參數之專案的名稱。 *Project_name*是**nvarchar （128)**。  
   
- [ @parameter_name =] *parameter_name*  
+ [@parameter_name =] *parameter_name*  
  參數的名稱。 *Parameter_name*是**nvarchar （128)**。  
   
- [ @parameter_value =] *parameter_value*  
+ [@parameter_value =] *parameter_value*  
  參數的值。 *Parameter_value*是**sql_variant**。  
   
- [ @object_name =] *object_name*  
+ [@object_name =] *object_name*  
  封裝名稱。 參數為封裝參數時，就需要這個引數。 *Object_name*是**nvarchar （260)**。  
   
- [ @value_type =] *value_type*  
- 參數值的類型。 使用字元`V`表示*parameter_value*是在執行之前指派的任何其他值的預設將使用的常值。 使用字元`R`表示*parameter_value*這個參考值，而且已設定為環境變數的名稱。 這是選擇性引數，根據預設，會使用字元 `V`。 *Value_type*是**char （1)**。  
+ [@value_type =] *value_type*  
+ 參數值的類型。 使用字元`V`表示*parameter_value*是在執行前會不指派任何其他值時，依預設會使用常值。 使用字元`R`表示*parameter_value*這個參考值，而且已設定為環境變數的名稱。 這是選擇性引數，根據預設，會使用字元 `V`。 *Value_type*是**char （1)**。  
   
 ## <a name="return-code-value"></a>傳回碼值  
  0 (成功)  

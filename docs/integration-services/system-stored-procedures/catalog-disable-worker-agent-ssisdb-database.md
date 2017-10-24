@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: cd1366409f9fb0af271b26fad3b8b911f99acc06
-ms.openlocfilehash: aab83dd2f179c8e6b90ad9ff7a212597a51038de
+ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
+ms.openlocfilehash: 8f4a8cd24278742ffb13d16791ce5f1f3a95f301
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 10/20/2017
 
 ---
 # <a name="catalogdisableworkeragent-ssisdb-database"></a>catalog.disable_worker_agent （SSISDB 資料庫）
@@ -28,15 +28,16 @@ ms.lasthandoff: 09/08/2017
 
 ## <a name="syntax"></a>語法
 
-```tsql
-disable_worker_agent [@WorkerAgentId = ] WorkerAgentId
+```sql
+catalog.disable_worker_agent [@WorkerAgentId =] WorkerAgentId
 ```
 ## <a name="arguments"></a>引數
-[ @WorkerAgentId =] *WorkerAgentId*標尺出背景工作的背景工作代理程式識別碼。 *WorkerAgentId*是**uniqueidentifier**。
+[@WorkerAgentId =] *WorkerAgentId*背景工作代理程式識別碼的標尺出背景工作。 *WorkerAgentId*是**uniqueidentifier**。
 
 ## <a name="example"></a>範例
 這個範例會停用上 MachineA 出工作者小數位數。
-```tsql
+
+```sql
 SELECT WorkerAgentId, MachineName FROM [catalog].[worker_agents]
 GO
 -- Result: --
@@ -61,5 +62,5 @@ GO
 -   成員資格**sysadmin**伺服器角色 
 
 ## <a name="errors-and-warnings"></a>錯誤和警告
-如果不是有效的背景工作代理程式識別碼，預存程序會傳回錯誤。
+如果背景工作代理程式識別碼不是有效的則預存程序會傳回錯誤。
 
