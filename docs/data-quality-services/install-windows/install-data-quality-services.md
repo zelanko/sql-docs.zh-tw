@@ -105,7 +105,7 @@ ms.lasthandoff: 09/12/2017
   
     -   **dqs_kb_operator**  
   
-     根據預設，如果您的使用者帳戶是系統管理員 (sysadmin) 固定伺服器角色的成員，即使沒有將任何 DQS 角色授與您的使用者帳戶，還是可以使用 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 登入 [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] 。 如需有關三個 DQS 角色的詳細資訊，請參閱＜ [DQS Security](../../data-quality-services/dqs-security.md)＞。  
+     根據預設，如果您的使用者帳戶是系統管理員 (sysadmin) 固定伺服器角色的成員，即使沒有將任何 DQS 角色授與您的使用者帳戶，還是可以使用 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 登入 [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] 。 如需有關三個 DQS 角色的詳細資訊，請參閱＜ [DQS 安全](../../data-quality-services/dqs-security.md)＞。  
   
      如需詳細資訊，請參閱 [對使用者授與 DQS 角色](../../data-quality-services/install-windows/grant-dqs-roles-to-users.md)。  
   
