@@ -19,6 +19,7 @@ caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 4a1b4ad6c837bb442af7f5bd5a98ab09527ef707
@@ -88,3 +89,4 @@ WHERE(
  如上面所述，在 WHERE 子句中使用集合將隱含地彙總集合中所有成員的值。 在這種情況下，查詢會在每一個資料格中顯示美國和英國的彙總值。  
   
   
+

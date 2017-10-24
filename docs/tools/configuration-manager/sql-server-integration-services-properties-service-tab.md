@@ -14,6 +14,7 @@ caps.latest.revision: 16
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 53b926557561d244dbef987aaabe3fdcfeabbf70
@@ -59,3 +60,4 @@ ms.lasthandoff: 08/02/2017
  表示這項服務為執行中、已停止或已停用。 "" 表示狀態變更已暫止。  
   
   
+

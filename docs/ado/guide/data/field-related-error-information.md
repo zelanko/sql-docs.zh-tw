@@ -17,6 +17,7 @@ caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3a7609b4c4a0d67f1bade86c2e6ec3bb66b07553
@@ -36,3 +37,4 @@ ms.lasthandoff: 09/09/2017
 |**adFieldIntegrityViolation**|10|表示無法修改的欄位，因為它是導出或衍生的實體。|  
 |**adFieldIsNull**|3|指出提供者傳回了 null 值。|  
 |**adFieldOutOfSpace**|22|表示提供者無法取得足夠的儲存空間可完成移動或複製作業。|
+

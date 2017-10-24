@@ -18,6 +18,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 36bfdcdf3e5300bfd3686b73d6439e11e8d7cf86
@@ -108,3 +109,4 @@ End Sub
 ## <a name="see-also"></a>另請參閱  
  [GetString 方法 (ADO)](../../../ado/reference/ado-api/getstring-method-ado.md)   
  [資料錄集物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+

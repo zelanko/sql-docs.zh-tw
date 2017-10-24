@@ -16,6 +16,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ec860c8e4d3766b983e38589418637c1d4eb3cc9
@@ -44,3 +45,4 @@ ADO 是由下列九個物件和四個集合所組成。
   
 ## <a name="see-also"></a>另請參閱  
  [ADO 物件模型](../../../ado/reference/ado-api/ado-object-model.md)
+

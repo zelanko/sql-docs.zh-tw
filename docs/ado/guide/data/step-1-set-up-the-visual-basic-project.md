@@ -14,6 +14,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a7b27969d78328118f98911c68eb555357bc3118
@@ -43,3 +44,4 @@ ms.lasthandoff: 09/09/2017
 ## <a name="see-also"></a>另請參閱  
  [網際網路發佈案例](../../../ado/guide/data/internet-publishing-scenario.md)   
  [步驟 2： 初始化主清單方塊](../../../ado/guide/data/step-2-initialize-the-main-list-box.md)
+

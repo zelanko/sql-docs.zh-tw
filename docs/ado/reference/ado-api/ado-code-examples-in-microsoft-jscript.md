@@ -18,6 +18,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8b935c1d355817af0401c1088d366db4af29561f
@@ -64,3 +65,4 @@ ms.lasthandoff: 09/09/2017
  [ADO 程式碼範例的 VBScript](../../../ado/reference/ado-api/ado-code-examples-vbscript.md)   
  [Visual c + + 中的 ADO 程式碼範例](../../../ado/reference/ado-api/ado-code-examples-in-visual-c.md)   
  [附錄 d: ADO 範例](../../../ado/guide/appendixes/appendix-d-ado-samples.md)
+

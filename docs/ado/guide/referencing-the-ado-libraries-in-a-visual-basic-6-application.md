@@ -19,6 +19,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a14a03b6b0a0e2e879d745fd8d2f341c1bbf6c54
@@ -57,3 +58,4 @@ ADO 程式庫匯入的 Microsoft Visual Basic 6 應用程式，您必須在 Visu
 -   *msado20.tlb*，ADO 2.0 類型程式庫  
   
  如果您的應用程式必須使用任何這些 ADO 文件庫基於回溯相容性，您需要匯入類型程式庫的適當版本。 若要這樣做，請依照上一節中的程序取代*msado15.dll*由*msadoXX.tlb*，其中*XX*表示您需要匯入的版本號碼。
+

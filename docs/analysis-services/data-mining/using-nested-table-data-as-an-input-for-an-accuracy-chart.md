@@ -20,6 +20,7 @@ caps.latest.revision: 24
 author: Minewiskan
 ms.author: owend
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 6ebe50e260a7de9520c75e534548d342fa3b2b68
@@ -63,3 +64,4 @@ ms.lasthandoff: 09/01/2017
  [將篩選套用至模型測試資料](../../analysis-services/data-mining/apply-filters-to-model-testing-data.md)  
   
   
+

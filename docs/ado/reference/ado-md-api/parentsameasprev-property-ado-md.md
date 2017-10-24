@@ -20,6 +20,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: cecbb86b26acea2e6674d10a2f8d0af1325d9e77
@@ -41,3 +42,4 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="see-also"></a>另請參閱  
  [DrilledDown 屬性 (ADO MD)](../../../ado/reference/ado-md-api/drilleddown-property-ado-md.md)
+

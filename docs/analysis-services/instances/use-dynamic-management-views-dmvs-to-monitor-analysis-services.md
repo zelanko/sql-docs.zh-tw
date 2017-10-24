@@ -16,6 +16,7 @@ caps.latest.revision: 16
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0c9faafd33f7abaee582821336dcd471d637a1c1
@@ -174,3 +175,4 @@ ORDER BY TABLE_NAME ASC
  [限制資料列集和 Dmv 的新 SYSTEMRESTRICTEDSCHEMA 函數](http://go.microsoft.com/fwlink/?LinkId=231885)  
   
   
+

@@ -17,6 +17,7 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 245f842883ec0be1ac92ad58ea75b4cdef7d9cb3
@@ -60,3 +61,4 @@ ms.lasthandoff: 09/09/2017
 -   [彙總函式、 CALC 函式和 NEW 關鍵字](../../../ado/guide/data/aggregate-functions-the-calc-function-and-the-new-keyword.md)  
   
 -   [發出命令至基礎資料提供者](../../../ado/guide/data/issuing-commands-to-the-underlying-data-provider.md)
+

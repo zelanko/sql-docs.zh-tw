@@ -19,6 +19,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: be2ba43e34c56e19dcb6eee03368ab1b3bc442a1
@@ -104,3 +105,4 @@ cnn. "parameter"
  [屬性集合 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
  [資料錄集物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [附錄 a： 提供者](../../../ado/guide/appendixes/appendix-a-providers.md)
+

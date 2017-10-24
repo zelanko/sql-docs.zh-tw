@@ -14,6 +14,7 @@ caps.latest.revision: 13
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
 ms.openlocfilehash: dbd29457adf7a3dd05211c2dc0688d45a54e405e
@@ -242,3 +243,4 @@ SQL server 的優點之一是它能夠處理大量的資料列，以平行方式
 [效能調整的 R-R 程式碼和資料最佳化](../r/r-and-data-optimization-r-services.md)
 
 [效能微調-案例研究結果](../r/performance-case-study-r-services.md)
+

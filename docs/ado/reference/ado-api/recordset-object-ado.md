@@ -19,6 +19,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 7ad07b3aeaa8428bc5c2dee78a061c511893daef
@@ -85,3 +86,4 @@ Debug.Print objRs(0)              '  the Value of Item(0).
  [欄位集合 (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [屬性集合 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
  [附錄 a： 提供者](../../../ado/guide/appendixes/appendix-a-providers.md)
+

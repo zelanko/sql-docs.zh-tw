@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 271e5d4e246a59d7adb97b6e4dc5db4c08875e1c
@@ -28,3 +29,4 @@ ms.lasthandoff: 09/09/2017
 任何作業，涉及 ADO 物件可能會產生一或多個提供者錯誤。 當每個錯誤發生時，一或多個**錯誤**物件置於**錯誤**集合**連接**物件。 如需處理警告和 ADO 應用程式中的錯誤的詳細資訊，請參閱[錯誤處理](../../../ado/guide/data/error-handling.md)。  
   
  應用程式錯誤就會引發另有機制。 例如，在 Visual Basic， **Err**物件會包含應用程式層級錯誤。
+

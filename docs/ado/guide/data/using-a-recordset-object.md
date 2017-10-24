@@ -16,6 +16,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5c9c3d117c6c5ed3bf6c9e5e3f5c6822915681fc
@@ -52,3 +53,4 @@ Set oRs = Nothing
 ```  
   
  請注意， **oRs.Open**接受連接字串 (*sConn*)，取代**連接**物件 (*oConn*)，做為其值**ActiveConnection**參數。 也藉由設定強制執行用戶端資料指標類型**CursorLocation**屬性**資料錄集**物件。 同樣地，這與**HelloData**範例。
+

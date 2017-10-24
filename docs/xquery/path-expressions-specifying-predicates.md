@@ -23,6 +23,7 @@ caps.latest.revision: 31
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: a5b417b2bfe5d995657ad86cf44b650b751f6a30
@@ -229,3 +230,4 @@ WHERE CatalogDescription.exist('
  述詞也可能會影響運算式的靜態推斷類型。 整數常值和**last （)**函數最多一個已篩選之步驟運算式的基數減少。  
   
   
+

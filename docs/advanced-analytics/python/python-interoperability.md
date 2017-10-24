@@ -12,6 +12,7 @@ ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 32762183ff5273998848978238788cc830319b91
@@ -76,3 +77,4 @@ Python 的輸入的資料必須是表格式。 必須的形式傳回所有 Pytho
 ## <a name="see-also"></a>另請參閱
 
 [Python 程式庫和資料類型](python-libraries-and-data-types.md)
+

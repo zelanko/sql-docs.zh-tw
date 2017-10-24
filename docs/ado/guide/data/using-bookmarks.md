@@ -17,6 +17,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0fe945bfb5a0b2460090ccc8376543364693a1de
@@ -53,3 +54,4 @@ End If
  [支援](../../../ado/reference/ado-api/supports-method.md)稍後涵蓋詳細方法。  
   
  除了 [大小寫的複製**資料錄集**，書籤特有**資料錄集**中建立這些，即使使用相同的命令。 這表示您無法使用**書籤**取自一個**資料錄集**移至相同的記錄，第二個**資料錄集**開啟與相同的命令。
+

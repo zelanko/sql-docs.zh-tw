@@ -16,6 +16,7 @@ caps.latest.revision: 3
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e0913d7a00407381c895c00a0d9076249773429a
@@ -28,3 +29,4 @@ ADO 可讓您以緊密控制特定的基底資料表上使用唯一資料表的�
   
 ## <a name="see-also"></a>另請參閱  
  [批次模式](../../../ado/guide/data/batch-mode.md)
+

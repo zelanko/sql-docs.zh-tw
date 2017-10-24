@@ -24,6 +24,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5bc33e6d2e82fc2b74fba7e250cc0b0fd3307ea2
@@ -48,3 +49,4 @@ ms.lasthandoff: 09/09/2017
 |-|-|-|  
 |[CubeDef 物件 (ADO MD)](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)|[維度物件 (ADO MD)](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)|[Hierarchy 物件 (ADO MD)](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)|  
 |[層級物件 (ADO MD)](../../../ado/reference/ado-md-api/level-object-ado-md.md)|[成員物件 (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)||
+

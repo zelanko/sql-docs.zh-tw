@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8d4c04ac80d1d353b07fb78305294803ad69dffe
@@ -84,3 +85,4 @@ oConn.Close
  在此交易處理用來確保兩筆記錄會更新為一個單位的作業，而兩個產品名稱都是交換或沒有變更。  
   
  如交易處理的詳細的討論，請參閱[正在更新及保存資料](../../../ado/guide/data/updating-and-persisting-data.md)。
+

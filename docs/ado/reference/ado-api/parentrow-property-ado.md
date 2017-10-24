@@ -21,6 +21,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 52b23aa90e3a2e0998547849d71c3c10a3e0552d
@@ -48,3 +49,4 @@ HRESULT put_ParentRow([in] IUnknown* pParent);
   
 ## <a name="applies-to"></a>適用於  
  [ADORecordConstruction 介面](../../../ado/reference/ado-api/adorecordconstruction-interface.md)
+

@@ -15,6 +15,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3f24131913e671adb505f51ad467db0cdb1b7caf
@@ -28,3 +29,4 @@ ms.lasthandoff: 09/09/2017
  由於使用 ADO 來從各種來源存取資料，您也必須了解的關聯式資料庫管理系統和線上分析處理 (OLAP)，以及基本的認識網際網路及網際網路通訊協定。  
   
  ADO 和相關的 OLE DB 技術以 Microsoft 元件物件模型 (COM) 上，因為 COM 的知識可協助您深入了解在 ADO 中的進階的概念。
+

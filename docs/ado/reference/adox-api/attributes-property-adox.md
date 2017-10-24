@@ -23,6 +23,7 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4386e0943a9703373e4bec6bb7c6a99c8981e687
@@ -42,3 +43,4 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="see-also"></a>另請參閱  
  [屬性的屬性範例 (VB)](../../../ado/reference/adox-api/attributes-property-example-vb.md)
+

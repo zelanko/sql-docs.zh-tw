@@ -19,6 +19,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f876e76b29dbc2436d6d1dba317c5035ebbc9ca1
@@ -60,3 +61,4 @@ ms.lasthandoff: 09/09/2017
  [欄位集合 (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [屬性集合 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
  [資料錄集物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+

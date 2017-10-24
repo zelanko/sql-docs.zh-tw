@@ -17,6 +17,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2e15f52d48f5870cfe4df8cd6149d56012b42abf
@@ -38,3 +39,4 @@ boolean = recordset.Supports(CursorOptions )
  使用**支援**方法，您可以檢查的能力**資料錄集**新增新記錄、 使用書籤，請使用物件**尋找**方法，請使用向下捲動，使用**索引**屬性，以及執行批次更新。 常數，其意義的完整清單，請參閱[CursorOptionEnum](../../../ado/reference/ado-api/cursoroptionenum.md)。  
   
  雖然**支援**方法可能會傳回**True**給定的功能，它並不保證，提供者可以讓此功能可以在所有情況下。 **支援**方法只會傳回是否提供者可支援指定的功能，假設某些條件成立。 比方說，**支援**方法可能表示**資料錄集**物件支援更新，即使資料指標為基礎的多個資料表聯結，其中的某些資料行不是可更新。
+

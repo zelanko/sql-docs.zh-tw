@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 36a2663b3c30b87f799df4cda678a531b68c916e
@@ -85,3 +86,4 @@ End Sub
  [Command 屬性 (ADOX)](../../../ado/reference/adox-api/command-property-adox.md)   
  [程序物件 (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)   
  [程序集合 (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)
+

@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9091e9a65b178806c8695faffa50f11946c6b2ca
@@ -60,3 +61,4 @@ ms.lasthandoff: 09/09/2017
  [搜尋方法和索引屬性範例 (VB)](../../../ado/reference/ado-api/seek-method-and-index-property-example-vb.md)   
  [索引物件 (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
  [搜尋方法](../../../ado/reference/ado-api/seek-method.md)
+

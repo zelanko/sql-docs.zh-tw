@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b941dc8eb4fb1f0fc14d2565c8f1f65dd3ba4d15
@@ -80,3 +81,4 @@ ms.lasthandoff: 09/01/2017
 8.  如果您想要讓資料來源成為使用中，請選取 [啟用此資料來源]。 如果資料來源已設定，但是非使用中，當使用者嘗試建立報表時，就會收到錯誤訊息。  
   
   
+

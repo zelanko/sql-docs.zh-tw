@@ -16,6 +16,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 61d296aaafd3e610a244aa4e0831b9bed5ff5855
@@ -47,3 +48,4 @@ ms.lasthandoff: 09/09/2017
 -   傳遞**命令**物件**來源**屬性**資料錄集**為了取得資料。  
   
 -   傳遞**資料流**包含命令 （例如，XML 命令） 來支援它的提供者的物件。
+

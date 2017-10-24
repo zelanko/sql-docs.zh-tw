@@ -18,6 +18,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c7b2716ffe745fcbb9359c34c33317e61ac82602
@@ -107,3 +108,4 @@ End Function
 5.  複製上述的程式碼，並將它貼入**程式碼**取代任何現有的程式碼的頁面。  
   
 6.  選取**啟動**從**執行**執行應用程式的功能表。
+

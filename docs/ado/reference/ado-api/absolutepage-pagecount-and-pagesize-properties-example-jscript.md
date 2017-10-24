@@ -20,6 +20,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a17b453028c97f8155a7ddf9897cc668d8571ece
@@ -166,3 +167,4 @@ BODY {
  [PageCount 屬性 (ADO)](../../../ado/reference/ado-api/pagecount-property-ado.md)   
  [PageSize 屬性 (ADO)](../../../ado/reference/ado-api/pagesize-property-ado.md)   
  [資料錄集物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+

@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 72aeaf6c2b31f6f7933bd64065ab57e23ef7e92b
@@ -32,3 +33,4 @@ ms.lasthandoff: 09/09/2017
  請記住，這些是 ADO 錯誤： 它們會從 ADO 作業失敗。 基礎提供者所傳回的錯誤會顯示為**錯誤**中的物件**連接**物件的**錯誤**集合。  
   
  #Import 指示詞只會建立錯誤處理常式方法和 ADO.dll 中宣告的屬性。 不過，您可以利用此相同的錯誤處理機制撰寫您自己的錯誤檢查巨集或內嵌函式。 請參閱範例主題 C++® 擴充功能。
+

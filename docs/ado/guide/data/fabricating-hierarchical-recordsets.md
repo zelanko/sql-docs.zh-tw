@@ -19,6 +19,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f8b01b8cd08c46f641fbd713f4acbdeca53db5c6
@@ -64,3 +65,4 @@ rsCustomers.Open strShape, cn, adOpenStatic, adLockOptimistic, -1
  [提供者所需的資料成形](../../../ado/guide/data/required-providers-for-data-shaping.md)   
  [圖形 APPEND 子句](../../../ado/guide/data/shape-append-clause.md)   
  [在一般的圖形命令](../../../ado/guide/data/shape-commands-in-general.md)
+

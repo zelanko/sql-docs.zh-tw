@@ -14,6 +14,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6abb3fe852de5158f68df086768f776da3efd5c1
@@ -67,3 +68,4 @@ ADO 提供開發人員一種功能強大的邏輯物件模型以程式設計方�
 -   [OLE DB 提供者](../../../ado/guide/data/ole-db-providers-ado.md)  
   
 -   [錯誤](../../../ado/guide/data/errors-ado.md)
+

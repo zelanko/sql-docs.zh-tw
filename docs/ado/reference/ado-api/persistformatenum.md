@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9c981037637b85e23e6b871116291aa8eb607c99
@@ -46,3 +47,4 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="applies-to"></a>適用於  
  [Save 方法](../../../ado/reference/ado-api/save-method.md)
+

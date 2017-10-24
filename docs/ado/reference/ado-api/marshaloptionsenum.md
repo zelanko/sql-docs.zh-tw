@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0a0a36e0451f8a0f64ccf1e7e7cf98478c33400f
@@ -44,3 +45,4 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="applies-to"></a>適用於  
  [MarshalOptions 屬性 (ADO)](../../../ado/reference/ado-api/marshaloptions-property-ado.md)
+

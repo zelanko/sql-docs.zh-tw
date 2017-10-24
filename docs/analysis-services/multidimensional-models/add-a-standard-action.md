@@ -16,6 +16,7 @@ caps.latest.revision: 7
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8f084616a0dd548fe9ee939f5e770b1f69f125f1
@@ -87,3 +88,4 @@ ms.lasthandoff: 09/01/2017
     -   從 [標題是 MDX] 下拉式清單中，指定標題是否為 MDX。 此欄位會向伺服器指出是否要將 **[標題]** 的內容評估為 MDX 運算式。  
   
   
+

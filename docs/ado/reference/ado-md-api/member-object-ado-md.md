@@ -19,6 +19,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ca510493f83f7cfcc97b37586c1e26aee7c3ab24
@@ -101,3 +102,4 @@ ms.lasthandoff: 09/09/2017
  [目錄 (VB) 範例](../../../ado/reference/ado-md-api/catalog-example-vb.md)   
  [成員集合 (ADO MD)](../../../ado/reference/ado-md-api/members-collection-ado-md.md)   
  [屬性集合 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
+

@@ -20,6 +20,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c19f0a93a5f7f685d7cd8dcdf6d916ae3955cff8
@@ -59,3 +60,4 @@ ADO[記錄](../../../ado/reference/ado-api/record-object-ado.md)和[資料流](.
 >  如果做為值的提供者，不論是透過明確指定 Msdaipp.dso*提供者*連接字串關鍵字或**提供者**屬性，您無法使用 」 URL ="連接字串中。 如果您這樣做，就會發生錯誤。 相反地，只要指定的 URL 前面所示。  
   
  更具體的網際網路發行的提供者相關的詳細資訊，請參閱[Microsoft OLE DB Provider for Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)，或提供者文件的來源應用程式提供 OLE DB 提供者已安裝 Internet Publishing: Windows 2000、 Office 2000 或 Internet Explorer 5.0。
+

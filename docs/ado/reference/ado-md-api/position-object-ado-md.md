@@ -19,6 +19,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5c4b64e066a83673df845a3a43dff80fb2acc0e4
@@ -46,3 +47,4 @@ ms.lasthandoff: 09/09/2017
  [資料格物件 (ADO MD)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)   
  [成員集合 (ADO MD)](../../../ado/reference/ado-md-api/members-collection-ado-md.md)   
  [位置集合 (ADO MD)](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)
+

@@ -18,6 +18,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2298a403bcee09e5ea8854cdc1527c1e3c804ad3
@@ -45,3 +46,4 @@ ms.lasthandoff: 09/09/2017
  [使用 ADO 搭配 Microsoft Visual Basic](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-basic.md)   
  [使用 ADO 搭配指令碼語言](../../../ado/guide/appendixes/using-ado-with-scripting-languages.md)   
  [ADO 的 visual c + + 擴充功能](../../../ado/guide/appendixes/visual-c-extensions-for-ado.md)
+

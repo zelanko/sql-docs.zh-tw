@@ -20,6 +20,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6ca8ee6c01299c3db45977a8e64c4f2afd46c7d3
@@ -47,3 +48,4 @@ ms.lasthandoff: 09/09/2017
  [子系屬性 (ADO MD)](../../../ado/reference/ado-md-api/children-property-ado-md.md)   
  [Count 屬性 (ADO)](../../../ado/reference/ado-api/count-property-ado.md)   
  [成員集合 (ADO MD)](../../../ado/reference/ado-md-api/members-collection-ado-md.md)
+

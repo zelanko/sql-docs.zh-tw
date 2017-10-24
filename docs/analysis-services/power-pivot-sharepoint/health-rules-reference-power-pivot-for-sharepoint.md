@@ -16,6 +16,7 @@ caps.latest.revision: 19
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 09a30dc2e51e07a9720e0796666c3a89534acdbe
@@ -61,3 +62,4 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
 |[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]：ADOMD.NET 不是安裝在為管理中心所設定的獨立 WFE 上。|否|否|SharePoint 2013<br /><br /> SharePoint 2010|ADOMD.NET 是支援連接至 Analysis Services 資料庫的 Analysis Services 用戶端程式庫。 在 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] for SharePoint 部署中，ADOMD.NET 可從管理中心的 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 管理儀表板存取內建報表。 內建報表實際上是包含內嵌 Analysis Services 資料的 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 活頁簿。 管理儀表板使用 ADOMD.NET 將連接要求傳送至伺服器，以載入活頁簿中包含的資料。<br /><br /> 在其管理中心於獨立 Web 前端伺服器上執行的拓撲中，若要在管理儀表板中檢視這些報表，您必須手動安裝 ADOMD.NET。 如需詳細資訊，請參閱 [在執行管理中心的 Web 前端伺服器上安裝 ADOMD.NET](http://msdn.microsoft.com/en-us/c2372180-e847-4cdb-b267-4befac3faf7e)。|  
   
   
+

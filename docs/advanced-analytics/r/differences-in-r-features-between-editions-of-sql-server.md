@@ -14,6 +14,7 @@ caps.latest.revision: 12
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: b9b520b7fc7e97498f4b46a43ad991558025123a
@@ -114,3 +115,4 @@ Web edition 不支援執行 R 或 Python 指令碼。 不過，您可以使用�
 + [SQL Server 2016 的版本及支援功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md) 
 
 如需 Microsoft R 功能及如何最佳化您的方案大型資料集的詳細資訊，請參閱[Microsoft R Server](https://docs.microsoft.com/r-server/r/tutorial-large-data-tips)文件。
+

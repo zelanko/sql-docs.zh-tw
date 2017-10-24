@@ -17,6 +17,7 @@ caps.latest.revision: 9
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 2310fea62e066c6ad2611a21a8afad3cd48203d4
@@ -67,3 +68,4 @@ ms.lasthandoff: 09/01/2017
 |相異計數量值|Source|BigInt、貨幣、Double、整數、Single、SmallInt、TinyInt、UnsignedBigInt、UnsignedInt、UnsignedSmallInt、UnsignedTinyInt|  
   
   
+

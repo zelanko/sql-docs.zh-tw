@@ -22,6 +22,7 @@ caps.latest.revision: 19
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 3c4c398dbda7bc898d62ea16122ccfba02ea7d5b
@@ -152,3 +153,4 @@ public static MiningModel CreateSalesForecastingMiningModel(MiningStructure ms)
  [資料庫物件 &#40;Analysis Services-多維度資料 &#41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   
   
+

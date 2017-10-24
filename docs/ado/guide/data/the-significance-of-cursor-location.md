@@ -19,6 +19,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4dbeab2366d53499eaab2f21198ab4b7ebe6f570
@@ -42,3 +43,4 @@ ms.lasthandoff: 09/09/2017
  不過，請務必指出伺服器端資料指標是 — 至少暫時如此 — 針對每個作用中的用戶端耗用寶貴的伺服器資源。 您必須據此規劃以確保您的伺服器硬體能夠管理所有作用中用戶端所要求的伺服器端資料指標。 此外，因為它提供只有單一資料列存取伺服器端資料指標可能會很慢，沒有可用的批次資料指標。  
   
  伺服器端資料指標是當插入、 更新或刪除資料錄時很有用。 與伺服器端資料指標，在相同的連接上可以有多個作用中陳述式。
+

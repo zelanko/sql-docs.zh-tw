@@ -20,6 +20,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 52ea3d1aa490325f3abe4f5fdca80dea6edb5174
@@ -58,3 +59,4 @@ ms.lasthandoff: 09/09/2017
  [程序集合屬性、 方法和事件](../../../ado/reference/adox-api/procedures-collection-properties-methods-and-events.md)   
  [目錄物件 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [程序物件 (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)
+

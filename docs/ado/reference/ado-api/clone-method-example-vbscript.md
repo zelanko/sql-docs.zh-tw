@@ -18,6 +18,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 311d18547421d327a8d1af3f85d9995ddfa8f5c6
@@ -124,3 +125,4 @@ ms.lasthandoff: 09/09/2017
 ## <a name="see-also"></a>另請參閱  
  [Clone 方法 (ADO)](../../../ado/reference/ado-api/clone-method-ado.md)   
  [資料錄集物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+

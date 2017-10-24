@@ -12,6 +12,7 @@ ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 1328a346dd9852cba349e38204b49faf32573611
@@ -55,3 +56,4 @@ SQL Server 機器學習服務 （資料庫） 安裝的 Python Anaconda 發佈�
 ## <a name="next-steps"></a>後續的步驟
 
 [執行 Python 使用 T-SQL](../tutorials/run-python-using-t-sql.md)
+

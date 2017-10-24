@@ -17,6 +17,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ce4deae8dc07c546fc777a6fa86d159b404c60f9
@@ -33,3 +34,4 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="see-also"></a>另請參閱  
  [OLE DB （ADO 服務元件） 的 Microsoft 資料指標服務](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md)
+

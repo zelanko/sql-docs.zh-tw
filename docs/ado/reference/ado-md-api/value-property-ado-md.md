@@ -20,6 +20,7 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 67ff4dd7aa7d8698aa6d99cf82b61f5f0afe54bf
@@ -38,3 +39,4 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="see-also"></a>另請參閱  
  [FormattedValue 屬性 (ADO MD)](../../../ado/reference/ado-md-api/formattedvalue-property-ado-md.md)
+

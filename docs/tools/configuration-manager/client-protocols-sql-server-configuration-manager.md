@@ -14,6 +14,7 @@ caps.latest.revision: 11
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: baa2fd086747707b67458914513d482f794cfdc6
@@ -27,3 +28,4 @@ ms.lasthandoff: 08/02/2017
  若要設定此電腦上 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用戶端所使用之用戶端通訊協定的內容，請以滑鼠右鍵按一下主控台窗格的 [用戶端通訊協定]，在詳細資料窗格中以滑鼠右鍵按一下想要的通訊協定，然後按一下 [屬性]。  
   
   
+

@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1a8533cd43964bf7bd2a456ff2cadce1be00b223
@@ -36,3 +37,4 @@ ms.lasthandoff: 09/09/2017
 |--------------|-----------|-----------------|  
 |**adDefaultStream**|-1|參考這個欄位包含預設[資料流](../../../ado/reference/ado-api/stream-object-ado.md)物件相關聯**記錄**。|  
 |**adRecordURL**|-2|參考包含在目前的絕對 URL 字串欄位**記錄**。|
+

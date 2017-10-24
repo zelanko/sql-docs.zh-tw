@@ -15,6 +15,7 @@ caps.latest.revision: 38
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 140885b86f0f6fa1a56119246c859f143f596726
@@ -46,3 +47,4 @@ Python 是機器的一種語言，提供了相當大的彈性而且各種不同�
 [設定 Python 機器學習服務資料庫](setup-python-machine-learning-services.md)
 
 [Python 教學課程](../tutorials/sql-server-python-tutorials.md)
+

@@ -17,6 +17,7 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: edc5419a18d658d9a0e10dc40b69ceb41c730bd4
@@ -46,3 +47,4 @@ WHERE CategoryID = 7
  如果您有興趣自行取得這些結果，請嘗試下列 JScript 範例：  
   
 -   [傳回一個資料錄集的 JScript 範例](../../../ado/guide/data/jscript-code-example-to-return-a-recordset.md)
+

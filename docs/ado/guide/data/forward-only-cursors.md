@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 121e8eec0b95f66b6e034f1f77d78c7d88fd5184
@@ -37,3 +38,4 @@ ms.lasthandoff: 09/09/2017
  [靜態資料指標](../../../ado/guide/data/static-cursors.md)   
  [索引鍵集資料指標](../../../ado/guide/data/keyset-cursors.md)   
  [動態資料指標](../../../ado/guide/data/dynamic-cursors.md)
+

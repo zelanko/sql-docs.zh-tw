@@ -12,6 +12,7 @@ ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: c4d15a7f605f130ff4f93c7da66ca9a103195c17
@@ -121,3 +122,4 @@ SQL Server 上，您必須啟用即時事先計分功能。 這是因為此功�
 ## <a name="next-steps"></a>後續的步驟
 
 [如何執行即時計分](r/how-to-do-realtime-scoring.md)
+

@@ -39,6 +39,7 @@ caps.latest.revision: 40
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0a182451583f04bd52a4f720c4cc057226261e21
@@ -194,3 +195,4 @@ ms.lasthandoff: 09/01/2017
  未直接存在於 DDL 中之 **Binding** 內允許的一個其他元素是 **ParentColumnID**，它會用於資料採礦的巢狀資料表。 在此情況下，在巢狀資料表中識別有提供繫結的父資料行是必要的。  
   
   
+

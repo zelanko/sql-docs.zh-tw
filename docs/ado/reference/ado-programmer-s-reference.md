@@ -15,6 +15,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5b7ee95538ebc16084f6d3209469f0fa33b50fda
@@ -32,3 +33,4 @@ ms.lasthandoff: 09/09/2017
 -   [ADO MD 應用程式開發介面參考](../../ado/reference/ado-md-api/ado-md-api-reference.md)  
   
 -   [ADOX API 參考](../../ado/reference/adox-api/adox-api-reference.md)
+

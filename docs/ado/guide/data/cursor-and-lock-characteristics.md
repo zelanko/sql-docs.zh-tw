@@ -18,6 +18,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 7a1313c42582efee8330abb89a03645dc1491217
@@ -38,3 +39,4 @@ ms.lasthandoff: 09/09/2017
 |**Adlockpessimistic**|批次更新<br />-可讓連接中斷的情況<br />-其他使用者能夠存取資料|-可以變更資料由多個使用者一次|  
 |**Locktype**|其他使用者鎖定時無法變更資料|-可以防止其他使用者存取資料時鎖定|  
 |**Adlockreadonly**|-其他使用者能夠存取資料|-可以變更資料由多個使用者一次|
+

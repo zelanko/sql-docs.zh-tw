@@ -17,6 +17,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 69e8cfd6cd3c0bf867b5ae276de964f26653c8d0
@@ -48,3 +49,4 @@ ms.lasthandoff: 09/09/2017
  [ADOX 集合](../../../ado/reference/adox-api/adox-collections.md)   
  [ADOX 物件模型](../../../ado/reference/adox-api/adox-object-model.md)   
  [資料定義語言和安全性的 ADO 延伸模組 (ADOX)](../../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)
+

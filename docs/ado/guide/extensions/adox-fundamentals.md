@@ -16,6 +16,7 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: dbc8d415e4dfcaeb4bf7e6a489bd407e87335874
@@ -57,3 +58,4 @@ Microsoft® ActiveX® 資料物件的擴充功能資料定義語言和安全性 
  [ADOX 屬性](../../../ado/reference/adox-api/adox-properties.md)   
  [ADO （多維度） (ADO MD)](../../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)   
  [ADO 程式設計人員指南](../../../ado/guide/ado-programmer-s-guide.md)
+

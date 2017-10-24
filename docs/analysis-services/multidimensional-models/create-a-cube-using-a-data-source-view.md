@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d83ded9c35448040c60bb28bd314f39b02c08b05
@@ -102,3 +103,4 @@ ms.lasthandoff: 09/01/2017
  在精靈的 [正在完成精靈] 頁面上，您可以檢視新 Cube 中的量值群組、量值及維度。 在 [Cube 名稱] 方塊中，輸入 Cube 的名稱。 然後在您滿意 Cube 時，按一下 [完成]。 按一下 [上一步] 返回精靈的任何頁面並進行變更。  
   
   
+

@@ -18,6 +18,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5aa6b5f0621d1a932197e65b0daecf56e08fd02c
@@ -106,3 +107,4 @@ End Sub
 ## <a name="see-also"></a>另請參閱  
  [Find 方法 (ADO)](../../../ado/reference/ado-api/find-method-ado.md)   
  [資料錄集物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+

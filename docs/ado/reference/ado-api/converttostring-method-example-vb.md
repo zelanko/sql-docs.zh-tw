@@ -18,6 +18,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 94c84810ba74671d27c4ffd98556b6aa2878e660
@@ -105,3 +106,4 @@ End Sub
 ## <a name="see-also"></a>另請參閱  
  [ConvertToString 方法 (RDS)](../../../ado/reference/rds-api/converttostring-method-rds.md)   
  [資料錄集物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+

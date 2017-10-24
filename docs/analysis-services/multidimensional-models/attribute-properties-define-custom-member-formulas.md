@@ -21,6 +21,7 @@ caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: bfc7acae6efb9227cc2afa844faab5b718a02251
@@ -82,3 +83,4 @@ Time.[Quarter 3] * 1.5
  [在維度中設定屬性的自訂成員公式](../../analysis-services/multidimensional-models/bi-wizard-custom-member-formulas-for-attributes-in-a-dimension.md)  
   
   
+

@@ -16,6 +16,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b15df02c70e2dcdc2efb2ba468b76219a233d65a
@@ -65,3 +66,4 @@ ADOX 的特定功能，不支援的視您的 OLE DB 資料提供者而定。 完
 |**索引鍵**集合|**附加**和**刪除**不支援的方法。|  
 |**使用者**集合|**使用者**不支援。|  
 |**群組**集合|**群組**不支援。|
+

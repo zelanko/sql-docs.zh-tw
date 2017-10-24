@@ -18,6 +18,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 072e6f71aca74f4690f26b90887d475a955e3041
@@ -39,3 +40,4 @@ ms.lasthandoff: 09/09/2017
  如果您要加入新的資料列，當您呼叫**CancelUpdate**方法中，目前的資料列變成資料列之前的目前**AddNew**呼叫。  
   
  如果您有不變更目前的資料列，或加入新的資料列，則呼叫**CancelUpdate**方法會產生錯誤。
+

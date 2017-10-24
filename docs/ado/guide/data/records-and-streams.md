@@ -18,6 +18,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d11617fc364b3ce9f2c4f5b37623f4c74f968517
@@ -73,3 +74,4 @@ ms.lasthandoff: 09/09/2017
 -   [擷取結果集資料流](../../../ado/guide/data/retrieving-resultsets-into-streams.md)  
   
 -   [使用 ADO 的網際網路發行](../../../ado/guide/data/using-ado-for-internet-publishing.md)
+

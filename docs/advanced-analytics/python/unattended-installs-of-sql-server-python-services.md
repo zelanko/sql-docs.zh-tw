@@ -14,6 +14,7 @@ caps.latest.revision: 1
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 9b9156a3dc9dec21187eec8dc0b5a44059fb5e31
@@ -73,3 +74,4 @@ ms.lasthandoff: 09/01/2017
 3.  重新啟動 SQL Server 服務重新設定的執行個體。 這樣會自動重新啟動相關[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]以及服務。
 
 3. 如果您有自訂安全性設定，或您將使用 SQL Server 支援遠端計算內容，則可能需要額外的步驟。 如需詳細資訊，請參閱[疑難排解機器學習安裝](../machine-learning-troubleshooting-faq.md)。
+

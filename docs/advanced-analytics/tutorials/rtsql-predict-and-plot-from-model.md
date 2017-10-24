@@ -17,6 +17,7 @@ caps.latest.revision: 15
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: a84e702b364da8614dd21b8f6adb57e4f2bac487
@@ -183,3 +184,4 @@ R 與 SQL Server 的整合，讓您能夠更輕鬆地大規模部署 R 方案，
 + [開始使用 MicrosoftML](https://docs.microsoft.com/r-server/r/concept-what-is-the-microsoftml-package)
 
     深入了解快速且可擴充的機器學習來自 Microsoft 研究的演算法。
+

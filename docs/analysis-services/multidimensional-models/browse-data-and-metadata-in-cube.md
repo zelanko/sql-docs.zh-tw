@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 564e6236a13c7def4201058c443dbb802e685715
@@ -112,3 +113,4 @@ ms.lasthandoff: 09/01/2017
  您可以在 [資料] 窗格中的任何位置按一下滑鼠右鍵，然後按一下 [顯示空的資料格]，以隱藏資料格中的空資料格。  
   
   
+

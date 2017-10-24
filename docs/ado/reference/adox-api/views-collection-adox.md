@@ -20,6 +20,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d8c15a8add685bf62faa307fc420f51a8c547776
@@ -57,3 +58,4 @@ ms.lasthandoff: 09/09/2017
  [檢視重新整理方法範例 (VB)](../../../ado/reference/adox-api/views-refresh-method-example-vb.md)   
  [目錄物件 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [檢視物件 (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)
+

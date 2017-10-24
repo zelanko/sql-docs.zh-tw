@@ -15,6 +15,7 @@ caps.latest.revision: 36
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
 ms.openlocfilehash: 37f3b12dc792060b45e67264e49a4a6180167676
@@ -140,3 +141,4 @@ MicrosoftML 套件會隨附 R 和 Python 介面，而且 Microsoft 機器學習 
 + [設定 SQL Server 機器學習服務中的 R](r/set-up-sql-server-r-services-in-database.md)
 
 + [機器學習教學課程和範例](tutorials/machine-learning-services-tutorials.md)
+

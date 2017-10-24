@@ -18,6 +18,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 29b1a91501507ed6f755c71bf567cdff7d021ed1
@@ -144,3 +145,4 @@ End Sub
  [項目屬性 (ADO)](../../../ado/reference/ado-api/item-property-ado.md)   
  [參數集合 (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
  [資料錄集物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+

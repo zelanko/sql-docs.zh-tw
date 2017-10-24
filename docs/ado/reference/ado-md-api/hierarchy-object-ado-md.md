@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 46bb03c91b2305f0453676891d87676e784b03fa
@@ -68,3 +69,4 @@ ms.lasthandoff: 09/09/2017
  [Hierarchies 集合 (ADO MD)](../../../ado/reference/ado-md-api/hierarchies-collection-ado-md.md)   
  [層級集合 (ADO MD)](../../../ado/reference/ado-md-api/levels-collection-ado-md.md)   
  [屬性集合 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
+

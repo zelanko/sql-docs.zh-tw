@@ -27,6 +27,7 @@ caps.latest.revision: 27
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: c698473d796548f3ed9d7d17dfb19206804f634f
@@ -109,3 +110,4 @@ ms.lasthandoff: 09/01/2017
 -   如果查詢效能不佳，但您無法在本機伺服器上增加處理器和記憶體資源，請考慮將 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案部署到兩個以上的實際伺服器。 然後，您就可以使用 Network Load Balancing (NLB) 將伺服器結合到單一叢集中。 在 NLB 叢集中，查詢會自動分散到 NLB 叢集的所有伺服器上。  
   
   
+

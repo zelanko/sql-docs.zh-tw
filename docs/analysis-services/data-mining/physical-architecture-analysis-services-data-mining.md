@@ -18,6 +18,7 @@ caps.latest.revision: 22
 author: Minewiskan
 ms.author: owend
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 2b1e79889b8023a94d6f7bbc8d3e9f4ca75c5273
@@ -59,3 +60,4 @@ ms.lasthandoff: 09/01/2017
  [邏輯架構 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/logical-architecture-analysis-services-data-mining.md)  
   
   
+

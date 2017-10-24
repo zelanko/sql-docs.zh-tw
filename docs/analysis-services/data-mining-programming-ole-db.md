@@ -21,6 +21,7 @@ caps.latest.revision: 30
 author: jeannt
 ms.author: jeannt
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 390e6beb9b1fb258e0b06ed3498dd2e69fa562af
@@ -40,3 +41,4 @@ ms.lasthandoff: 09/01/2017
  [資料採礦延伸模組 &#40; DMX &#41;參考](../dmx/data-mining-extensions-dmx-reference.md)  
   
   
+

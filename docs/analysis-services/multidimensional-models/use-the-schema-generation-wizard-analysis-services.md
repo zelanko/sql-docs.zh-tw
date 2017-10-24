@@ -19,6 +19,7 @@ caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3ebce1becae5b9133d577a81234ee5d2f8fa37a8
@@ -66,3 +67,4 @@ ms.lasthandoff: 09/01/2017
  您可以在精靈的 [指定命名慣例] 頁面上，定義 [結構描述產生精靈] 在主題領域資料庫中產生某些物件時，所使用的命名慣例。 如需 [指定命名慣例] 頁面上可用選項的詳細資訊，請參閱[指定命名慣例 &#40;結構描述產生精靈&#41; &#40;Analysis Services - 多維度資料&#41;](http://msdn.microsoft.com/library/02d830ea-5b1f-4485-9f94-d64b8bea592b)。  
   
   
+

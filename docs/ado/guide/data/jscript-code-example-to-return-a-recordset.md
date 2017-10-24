@@ -18,6 +18,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: edecd6bcaf8cb7547cf026f68edaf72767c57659
@@ -90,3 +91,4 @@ function alert(str)
 2.  開啟 命令提示字元中 cd JScript 檔案 (rs.js) 的儲存位置的目錄。  
   
 3.  型別`CScript rs.js`從命令提示字元。
+

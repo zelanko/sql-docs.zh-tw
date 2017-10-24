@@ -18,6 +18,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a451023d3e3501ac60cd2724349337f30c46b689
@@ -55,3 +56,4 @@ ADO 事件模型支援發出特定同步和非同步 ADO 作業*事件*，或在
  [ADO 事件](../../../ado/reference/ado-api/ado-events.md)   
  [事件參數](../../../ado/guide/data/event-parameters.md)   
  [事件類型](../../../ado/guide/data/types-of-events.md)
+

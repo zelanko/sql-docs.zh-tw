@@ -21,6 +21,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2b16d683d9e5460e5aba904a8bc4ccc7362b2287
@@ -45,3 +46,4 @@ ms.lasthandoff: 09/09/2017
 ## <a name="see-also"></a>另請參閱  
  [RecordType 屬性 (ADO)](../../../ado/reference/ado-api/recordtype-property-ado.md)   
  [型別屬性 (ADO)](../../../ado/reference/ado-api/type-property-ado.md)
+

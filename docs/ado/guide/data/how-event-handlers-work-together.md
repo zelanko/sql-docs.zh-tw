@@ -21,6 +21,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a2e603819e2d4c44bf612d62f86f448c560e0828
@@ -62,3 +63,4 @@ ms.lasthandoff: 09/09/2017
  [ADO 事件具現化語言](../../../ado/guide/data/ado-event-instantiation-by-language.md)   
  [事件參數](../../../ado/guide/data/event-parameters.md)   
  [事件類型](../../../ado/guide/data/types-of-events.md)
+

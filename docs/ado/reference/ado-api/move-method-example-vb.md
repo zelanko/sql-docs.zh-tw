@@ -18,6 +18,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a3d55fe048d1eaac40befacbc4fe71734b7e1860
@@ -133,3 +134,4 @@ End Sub
 ## <a name="see-also"></a>另請參閱  
  [Move 方法 (ADO)](../../../ado/reference/ado-api/move-method-ado.md)   
  [資料錄集物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+

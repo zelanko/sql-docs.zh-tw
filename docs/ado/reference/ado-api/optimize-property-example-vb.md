@@ -18,6 +18,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6137ef4be778a659107458ba9fe6f1a7f3000cfa
@@ -93,3 +94,4 @@ End Sub
 ## <a name="see-also"></a>另請參閱  
  [Field 物件](../../../ado/reference/ado-api/field-object.md)   
  [最佳化屬性動態 (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)
+

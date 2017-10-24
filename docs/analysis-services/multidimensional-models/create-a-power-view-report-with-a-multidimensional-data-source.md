@@ -16,6 +16,7 @@ caps.latest.revision: 9
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b60f1804e6d465a397704b284c30611b42524420
@@ -35,3 +36,4 @@ ms.lasthandoff: 09/01/2017
 -   在 SharePoint 文件庫中，按一下 .rsds 共用報表資料來源連接 (連接到多維度模型的 .rsds) 旁邊的箭頭，然後按一下 [建立 Power View 報表]。  
   
   
+

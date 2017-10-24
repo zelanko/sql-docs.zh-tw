@@ -14,6 +14,7 @@ caps.latest.revision: 20
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 161f42e2559725b41df605c1e1c2ca12acae9c97
@@ -103,3 +104,4 @@ SQL server，以支援執行 R 指令碼的 SQL Server 2016 中引進 R 服務�
 + [SQL Server-方法和結果中的 R 的效能微調](..\r\performance-case-study-r-services.md)
 
     摘要說明哪些資料是使用兩個案例研究、 如何已測試的效能，以及如何最佳化會影響結果。
+

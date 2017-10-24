@@ -16,6 +16,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 56510bc99d0a6a7c20d18b93b22a60decdfcc2e2
@@ -70,3 +71,4 @@ End Sub
 ```  
   
  **連接**物件在宣告**表單**層級使用**WithEvents**關鍵字來啟用事件處理。 Form_Load 事件處理常式會建立物件藉由指派新**連接**物件*connEvent* ，然後開啟連接。 當然，實際的應用程式一樣 Form_Load 的事件處理常式比此處顯示更多的處理。
+

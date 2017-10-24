@@ -18,6 +18,7 @@ caps.latest.revision: 35
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 459bae71d8b93278b71d29a601c01b0ed4954e97
@@ -33,3 +34,4 @@ ms.lasthandoff: 09/01/2017
 -   開啟您要加入商業智慧的維度，然後在工具列上，按一下 **[加入商業智慧]** 按鈕。 另外，您可以在物件總管或方案總管中以滑鼠右鍵按一下維度，然後按一下 [加入商業智慧]。  
   
   
+

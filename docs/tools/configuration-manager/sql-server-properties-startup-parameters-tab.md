@@ -14,6 +14,7 @@ caps.latest.revision: 10
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 14d9259d613ac1c147dbd054e0cacb2f350cb007
@@ -84,3 +85,4 @@ ms.lasthandoff: 08/02/2017
  如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 啟動參數的其他資訊，請參閱《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的＜如何：設定伺服器啟動選項 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員)＞。  
   
   
+

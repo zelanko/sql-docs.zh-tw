@@ -17,6 +17,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5768404342f76eb8c5999678e6c1a4aa4a3bcd42
@@ -44,3 +45,4 @@ ms.lasthandoff: 09/09/2017
  若要接收多個結果集表示您會需要進行數往返透過網路，其中每個資料集封裝在**資料錄集**物件。 慢或壅塞網路減少往返次數可能有助於改善應用程式的效能。 因此，有些提供者會提供支援，以接收多個**資料錄集**s 至單一反覆存取。 這是將討論下列主題：  
   
 -   [接收多個資料錄集](../../../ado/guide/data/receiving-multiple-recordsets.md)
+

@@ -18,6 +18,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 66dec387cc91a2d0bd4d3aded73a6b4301aff593
@@ -74,3 +75,4 @@ else
  這種配置適用於所有類型的資料指標和獨立於基礎提供者。 如果您嘗試判斷的序列**資料錄集**物件，方法是檢查其**RecordCount**屬性值是否為零 (0)，您必須採取預防措施，以使用適當的資料指標和提供者，支援傳回的結果中的記錄數目。  
   
  如果您刪除中的最後一個剩餘記錄**資料錄集**物件時，游標會處於不定狀態。 **BOF**和**EOF**屬性可能會維持**False**直到您嘗試重新調整位置目前的記錄，根據提供者。 如需詳細資訊，請參閱[使用 Delete 方法刪除記錄](../../../ado/guide/data/deleting-records-using-the-delete-method.md)。
+

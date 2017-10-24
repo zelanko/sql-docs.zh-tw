@@ -14,6 +14,7 @@ caps.latest.revision: 8
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8b426a9ed4fdfcbf49da990e8d0443b11c9e8dc7
@@ -27,3 +28,4 @@ ms.lasthandoff: 08/02/2017
  根據預設，沒有任何屬性會出現在 **[進階]** 索引標籤上。 如果定義了自訂屬性，這些屬性與其值也會在這個索引標籤上顯示。  
   
   
+

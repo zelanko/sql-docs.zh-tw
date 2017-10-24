@@ -16,6 +16,7 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 368e3b3a793bce6b6182ba262493d9a8ed1ac1bd
@@ -170,3 +171,4 @@ Loop
  關閉原始**資料錄集**不會關閉它的複本，也不會關閉複本關閉原始或任何其他複本。  
   
  您可以複製**資料錄集**物件它是否支援書籤。 書籤值是可互換。也就是從某個書籤參考**資料錄集**物件參照到任何其複製品中的相同記錄。
+

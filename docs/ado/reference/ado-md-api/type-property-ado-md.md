@@ -20,6 +20,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: cd44c6a776efdc0f4ac0e5559b8b1b0b926e09aa
@@ -38,3 +39,4 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="applies-to"></a>適用於  
  [成員物件 (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)
+

@@ -21,6 +21,7 @@ caps.latest.revision: 36
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 642c8ceb45d5a756f8fad396d0fb1bf48138afb0
@@ -53,3 +54,4 @@ ms.lasthandoff: 09/01/2017
  [設定屬性階層的 &#40;全部&#41; 層級](../../analysis-services/multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
   
   
+

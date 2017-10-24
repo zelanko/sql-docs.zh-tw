@@ -17,6 +17,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 19a4275d339132db8efd4b09a313b482fc8cb666
@@ -45,3 +46,4 @@ oRs.Move NumRecords, Start
  如果您要傳入中的書籤*啟動*相對於與此書籤，記錄的引數，移動的假設**資料錄集**物件支援書籤。 書籤透過使用[書籤](../../../ado/reference/ado-api/bookmark-property-ado.md)屬性。 如果未指定，移動的過程相對於目前的記錄。  
   
  如果您使用**CacheSize**屬性，以在本機快取提供者，從記錄傳遞*NumRecords*移動目前的記錄位置快取記錄的目前群組外的引數強制 ADO 来擷取的記錄，從目的記錄開始新的群組。 **CacheSize**屬性會決定新擷取群組的大小和目的記錄是第一個擷取的記錄。
+

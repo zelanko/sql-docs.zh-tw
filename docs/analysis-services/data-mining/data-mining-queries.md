@@ -21,6 +21,7 @@ caps.latest.revision: 44
 author: Minewiskan
 ms.author: owend
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 1994ebc359ca23eee9ae76112d9ceebd1970debb
@@ -176,3 +177,4 @@ ms.lasthandoff: 09/01/2017
  [採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)  
   
   
+

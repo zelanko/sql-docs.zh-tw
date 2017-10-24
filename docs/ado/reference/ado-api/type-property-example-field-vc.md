@@ -18,6 +18,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 109fda6751505bbdaf059e97a1bbf645962b9ec1
@@ -177,3 +178,4 @@ void PrintComError(_com_error &e) {
 ## <a name="see-also"></a>另請參閱  
  [Field 物件](../../../ado/reference/ado-api/field-object.md)   
  [型別屬性 (ADO)](../../../ado/reference/ado-api/type-property-ado.md)
+

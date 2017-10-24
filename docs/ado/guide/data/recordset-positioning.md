@@ -19,6 +19,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: aee0d64d0fe1e310f42d79de36f5cf36c3813bf3
@@ -35,3 +36,4 @@ ms.lasthandoff: 09/09/2017
   
 > [!NOTE]
 >  您不應該使用**AbsolutePosition**屬性設為代理的記錄數目。 刪除先前的記錄時，就會變更特定記錄的位置。 也沒有任何指定的資料錄將會具有相同的保證**AbsolutePosition**如果**資料錄集**物件是重新查詢，或重新開啟。 書籤的建議方式是的保留，並傳回指定的位置和是唯一的方法，在所有類型的定位**資料錄集**物件。
+

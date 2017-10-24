@@ -18,6 +18,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5a5264398741c58ac6f9aae504237ec1139ecb2c
@@ -31,3 +32,4 @@ ms.lasthandoff: 09/09/2017
  ADO 是功能強大且靈活，因為它可以連接到數個不同的資料提供者，仍會公開相同的程式設計模型，不論任何給定的提供者的特定功能。 不過，每個資料提供者是唯一的因為您的應用程式搭配 ADO 互動的方式會因資料提供者。  
   
  比方說，用來存取 Microsoft SQL Server 資料庫，SQL Server 的 OLE DB 提供者的功能是大幅不同的 Microsoft OLE DB Provider for Internet Publishing，用來存取檔案在 Web 伺服器上的存放區。
+

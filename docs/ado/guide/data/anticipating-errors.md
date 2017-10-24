@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 359dc6c1bd396a0909aea36c5039a4ba5195f326
@@ -37,3 +38,4 @@ ms.lasthandoff: 09/09/2017
  請確定**資料錄集**物件不超過界限**資料錄集**嘗試移動的記錄指標。 如果您嘗試**MoveNext**時**EOF**為 True 或**MovePrev**時**BOF**為 True 時，會發生錯誤。 如果您執行的任何**移動**方法時同時**EOF**和**BOF**為 True，會產生錯誤。  
   
  也會發生錯誤如果您嘗試執行作業，例如**搜尋**和**尋找**上空**資料錄集**。
+

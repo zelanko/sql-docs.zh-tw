@@ -22,6 +22,7 @@ caps.latest.revision: 28
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 548b9695bba6377fcea91b1a1c78578a141e1ba0
@@ -49,3 +50,4 @@ ms.lasthandoff: 09/01/2017
  在 **[來源資料行]**中，您可以選取包含一元運算子的字串資料行。 (此選取項目設定父屬性上的 **UnaryOperatorColumn** 屬性)。維度資料表也應該有指定一元積存運算子的字串資料行。 此資料行的字串值應包含有效彙總運算子。 如果資料列空白，會正常計算相對應的成員。 如果資料行中的公式無效，當擷取使用該成員的資料格值時，會發生執行階段錯誤。 如需詳細資訊，請參閱 [父子式維度中的一元運算子](../../analysis-services/multidimensional-models/parent-child-dimension-attributes-unary-operators.md)。  
   
   
+

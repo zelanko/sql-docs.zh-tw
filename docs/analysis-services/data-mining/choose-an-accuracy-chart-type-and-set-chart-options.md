@@ -20,6 +20,7 @@ caps.latest.revision: 24
 author: Minewiskan
 ms.author: owend
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 40b6e4e67306c225af2ba3d2cd418ceaed2d2541
@@ -65,3 +66,4 @@ ms.lasthandoff: 09/01/2017
  所有模型類型的交叉驗證報表格式都相同，且無法設定。 但是，報表的內容會因您分析的模型類型以及可預測屬性的資料類型而異。 您也可以將報表的結果複製到剪貼簿，然後在 Excel 中處理資料。  
   
   
+

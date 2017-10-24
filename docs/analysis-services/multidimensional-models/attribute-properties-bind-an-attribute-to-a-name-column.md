@@ -20,6 +20,7 @@ caps.latest.revision: 29
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 16b5b9f2bcb04c11adae59f9b50f4611c157d604
@@ -43,3 +44,4 @@ ms.lasthandoff: 09/01/2017
 5.  在 **[來源資料行]** 清單中，選取屬性要繫結的資料行，然後按一下 **[確定]**。  
   
   
+

@@ -19,6 +19,7 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 462f8ea10fc0d4c489de40ddcf0174cb2a82435b
@@ -42,3 +43,4 @@ ms.lasthandoff: 09/09/2017
 -   [檢查資料的範例資料錄集](../../../ado/guide/data/sample-recordset-for-examining-data.md)  
   
 -   [資料錄集的界限](../../../ado/guide/data/boundaries-of-a-recordset.md)
+

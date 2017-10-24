@@ -14,6 +14,7 @@ caps.latest.revision: 12
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 636e40d4e0ba45929b91c6bcb2a25a7f65220159
@@ -27,3 +28,4 @@ ms.lasthandoff: 08/02/2017
  如需有關 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的資訊，請參閱《線上叢書》。  
   
   
+

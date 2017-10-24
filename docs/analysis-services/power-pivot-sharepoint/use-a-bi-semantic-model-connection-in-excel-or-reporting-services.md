@@ -16,6 +16,7 @@ caps.latest.revision: 9
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 1d99b45a632ed04e68b75f456178844ad59e500d
@@ -65,3 +66,4 @@ ms.lasthandoff: 09/01/2017
  針對 SharePoint 中的隨選報表設計，建立報表的使用者必須擁有 BI 語意模型連接 (.bism) 檔案和商業智慧語意模型資料庫的 SharePoint 權限。 連接的安全性內容是正在建立報表的互動式使用者。  
   
   
+

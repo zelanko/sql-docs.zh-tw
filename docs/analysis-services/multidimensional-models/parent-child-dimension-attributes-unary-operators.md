@@ -20,6 +20,7 @@ caps.latest.revision: 29
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 69317cd95bee97df95a5504dcbef2113e0453d1c
@@ -56,3 +57,4 @@ ms.lasthandoff: 09/01/2017
  [在 維度設計師啟動商業智慧精靈](../../analysis-services/multidimensional-models/database-dimensions-bi-wizard-in-dimension-designer.md)  
   
   
+

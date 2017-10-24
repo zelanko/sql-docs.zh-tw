@@ -26,6 +26,7 @@ caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: b53eed2fa7d7061958db31576e387e3a4af5b14c
@@ -123,3 +124,4 @@ ms.lasthandoff: 09/01/2017
  AMO 無法用於查詢資料。 若要查詢 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 資料，包括 Cube 和採礦模型，請從使用者應用程式使用 ADOMD.NET。 如需詳細資訊，請參閱[使用 ADOMD.NET 來開發](../../../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md)。  
   
   
+

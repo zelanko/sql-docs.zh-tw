@@ -22,6 +22,7 @@ caps.latest.revision: 23
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: dedfe7e17d6f8fd0be0bb769b9891880a83b2eba
@@ -498,3 +499,4 @@ static public void CreateTranslations(Database db)
  [安裝 Analysis services 多維度模型化教學課程的範例資料和專案](../../../analysis-services/install-sample-data-and-projects.md)  
   
   
+

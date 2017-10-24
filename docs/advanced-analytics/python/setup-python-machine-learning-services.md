@@ -12,6 +12,7 @@ ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
 ms.openlocfilehash: c7437cff5e2828db7c841e289e329526390e5b69
@@ -290,3 +291,4 @@ EXEC sp_addrolemember 'db_datareader', 'MySQLLogin'
 [在 T-SQL 中使用 Python](../tutorials/run-python-using-t-sql.md)
 
 [建立使用 revoscalepy Python 模型](../tutorials/use-python-revoscalepy-to-create-model.md)
+

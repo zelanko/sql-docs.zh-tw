@@ -23,6 +23,7 @@ caps.latest.revision: 43
 author: Minewiskan
 ms.author: owend
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 51a8ea188eb54adf0ac208225dd7c5fda417178c
@@ -94,3 +95,4 @@ ms.lasthandoff: 09/01/2017
  [資料採礦延伸模組 &#40;DMX&#41; 參考](../../dmx/data-mining-extensions-dmx-reference.md)  
   
   
+

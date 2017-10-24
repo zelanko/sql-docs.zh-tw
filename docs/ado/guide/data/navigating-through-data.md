@@ -19,6 +19,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ed33cb6d3690e5dc7bf7f9f9867576f91cd1909a
@@ -40,3 +41,4 @@ ms.lasthandoff: 09/09/2017
 -   [使用頁面](../../../ado/guide/data/using-pages.md)  
   
 -   [定位資料錄集](../../../ado/guide/data/recordset-positioning.md)
+

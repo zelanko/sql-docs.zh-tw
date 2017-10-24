@@ -16,6 +16,7 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8eb9a6385a47030f5d9c9a283b56228ca68f596b
@@ -123,3 +124,4 @@ End Function
 ```  
   
  並非所有的提供者支援準備的命令。 如果提供者不支援命令準備，它就可能會傳回錯誤，因為這個屬性設定為**True**。 如果它不會傳回錯誤，它會略過準備的命令並將設定要求**已準備**屬性**false**。
+

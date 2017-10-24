@@ -18,6 +18,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: dd9ee66d7ccfae9a0eed5cbb66da2033fd5bd3ff
@@ -88,3 +89,4 @@ End Sub
  [Append 方法 （ADOX 索引）](../../../ado/reference/adox-api/append-method-adox-indexes.md)   
  [索引物件 (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
  [索引集合 (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)
+

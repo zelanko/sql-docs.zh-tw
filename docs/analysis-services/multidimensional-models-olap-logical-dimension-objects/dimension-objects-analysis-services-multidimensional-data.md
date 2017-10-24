@@ -19,6 +19,7 @@ caps.latest.revision: 14
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 68fa5e37c0cc3620417f916ff35dcd6e3402d615
@@ -39,3 +40,4 @@ ms.lasthandoff: 09/01/2017
 |[中，使用 [維度設計師] 的](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)|在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，維度內的屬性會一律直接或間接與相關的索引鍵屬性。 當您根據所有維度屬性都是衍生自相同關聯式資料表的星狀結構描述來定義維度時，便會在索引鍵屬性和維度的每個非索引鍵屬性之間，自動定義屬性關聯性。 而根據維度屬性是衍生自多個相關資料表的雪花式結構描述來定義維度時，便會自動定義下列的屬性關聯性：<br /><br /> 索引鍵屬性和繫結到主維度資料表之資料行的每個非索引鍵屬性之間。<br /><br /> 索引鍵屬性和繫結到連結基礎維度資料表之次要資料表的外部索引鍵屬性之間。<br /><br /> 在繫結到次要資料表之外部索引鍵的屬性和繫結到次要資料表中之資料行的非索引鍵屬性之間。|  
   
   
+

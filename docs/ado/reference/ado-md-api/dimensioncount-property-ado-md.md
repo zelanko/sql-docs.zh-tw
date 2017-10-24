@@ -20,6 +20,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 994982c9c5f2703636cc1d8e4eb5e218a13a65ac
@@ -39,3 +40,4 @@ ms.lasthandoff: 09/09/2017
 ## <a name="see-also"></a>另請參閱  
  [軸範例 (VBScript)](../../../ado/reference/ado-md-api/axis-example-vbscript.md)   
  [維度物件 (ADO MD)](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)
+

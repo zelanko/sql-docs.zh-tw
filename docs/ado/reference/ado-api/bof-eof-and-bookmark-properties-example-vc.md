@@ -20,6 +20,7 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 16971f63d266e9a40a888387049bd3b941a3c4d9
@@ -213,3 +214,4 @@ Authors with 25 percent royalty
  [BOF，EOF 屬性 (ADO)](../../../ado/reference/ado-api/bof-eof-properties-ado.md)   
  [書籤 屬性 (ADO)](../../../ado/reference/ado-api/bookmark-property-ado.md)   
  [資料錄集物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+

@@ -14,6 +14,7 @@ caps.latest.revision: 19
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 4023e504dfee0b0655a78e773771d3ae16b4a2fb
@@ -74,3 +75,4 @@ ms.lasthandoff: 08/02/2017
  當**安裝在叢集伺服器時的** 虛擬伺服器名稱 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
   
+

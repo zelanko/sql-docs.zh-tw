@@ -14,6 +14,7 @@ caps.latest.revision: 9
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 569f03f0a1444d610462317a5ee19dc60f314d31
@@ -74,3 +75,4 @@ C:\PS>Get-PowerPivotSystemServiceInstance -Identity 1234567-890a-bcde-fghijklm |
  這個範例會傳回指定之執行個體的其他屬性，包括伺服器名稱、版本和升級狀態。  
   
   
+

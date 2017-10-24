@@ -20,6 +20,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5be08b4202cc5f9ba4974b794e29b96f536d934e
@@ -42,3 +43,4 @@ ms.lasthandoff: 09/09/2017
 ## <a name="see-also"></a>另請參閱  
  [Close 方法 (ADO MD)](../../../ado/reference/ado-md-api/close-method-ado-md.md)   
  [Open 方法 (ADO MD)](../../../ado/reference/ado-md-api/open-method-ado-md.md)
+

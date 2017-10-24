@@ -19,6 +19,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 62317dc1c72da63769b85be83a97663858e57e73
@@ -104,3 +105,4 @@ End Sub
  [SetPermissions 方法 (ADOX)](../../../ado/reference/adox-api/setpermissions-method-adox.md)   
  [使用者物件 (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)   
  [使用者集合 (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)
+

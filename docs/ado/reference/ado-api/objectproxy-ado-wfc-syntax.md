@@ -17,6 +17,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0bd3aa2bd2cf7b49432e6b29c312e65819d50f4a
@@ -54,3 +55,4 @@ public Object ObjectProxy.( String method, Object[] args)
   
  *引數*  
  選擇性。 陣列的伺服器上之方法的引數的物件。 Java 資料類型會自動轉換成適用於伺服器上使用的資料類型。
+

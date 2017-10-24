@@ -21,6 +21,7 @@ caps.latest.revision: 41
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 20035f6d8fff0c5d45b4c807cf6202531156741d
@@ -114,3 +115,4 @@ ms.lasthandoff: 09/01/2017
  [產生時間資料表來建立時間維度](../../analysis-services/multidimensional-models/create-a-time-dimension-by-generating-a-time-table.md)  
   
   
+

@@ -14,6 +14,7 @@ caps.latest.revision: 10
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 8cde819f27942e78bf67c85356602ad1954420c0
@@ -104,3 +105,4 @@ C:\PS>New-PowerPivotSystemServiceInstance -SystemServiceInstanceName "MyPSSInsta
  這個範例會為 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系統服務執行個體命名，但不會佈建它。 如果未提供名稱，則會改用預設名稱「SQL Server Analysis Services 系統服務執行個體」。 建立自訂服務名稱是選擇性的。 若要支援測試案例，或者如果有自訂工具或指令碼可在稍後步驟中佈建執行個體，您可以為服務命名。  
   
   
+

@@ -16,6 +16,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 47aa7f058db324c7388801ae6a391b6c0c24ae1d
@@ -41,3 +42,4 @@ ADO**連接**物件都代表唯一的工作階段與資料來源，包括 DBMS�
 -   [指定連接屬性](../../../ado/guide/data/specifying-connection-properties.md)  
   
 -   [控制交易](../../../ado/guide/data/controlling-transactions-ado.md)
+

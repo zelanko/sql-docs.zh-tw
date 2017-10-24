@@ -27,6 +27,7 @@ caps.latest.revision: 26
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 725f0ac6753947e587b6746528b6efc6d409f269
@@ -67,3 +68,4 @@ ms.lasthandoff: 09/01/2017
  若要刪除現有的計算，請在 [計算] 索引標籤上，於 [指令碼組合管理] 窗格中，選取要刪除的計算，然後在 [編輯] 功能表上按一下 [刪除]，或在工具列上按一下**刪除**圖示。 您也可以在 [指令碼組合管理] 窗格中以滑鼠右鍵按一下計算，然後從快速鍵功能表中選取 [刪除]。  
   
   
+

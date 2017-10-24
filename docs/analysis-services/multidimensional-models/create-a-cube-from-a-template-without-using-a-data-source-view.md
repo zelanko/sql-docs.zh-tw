@@ -16,6 +16,7 @@ caps.latest.revision: 7
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 80680ae03ee8ac059cfe3c9b47c3abe6b67db511
@@ -103,3 +104,4 @@ ms.lasthandoff: 09/01/2017
  在 [正在完成精靈] 頁面上，檢閱新 Cube 的結構，然後在 [Cube 名稱] 方塊中輸入名稱。 或者，選取 [立即產生結構描述] 核取方塊以啟動 [結構描述產生精靈]。 在大多數情況下，如果您計畫建立其他物件，則不應選取此核取方塊。 您也可以使用 Cube 設計師稍後再產生結構描述。  
   
   
+

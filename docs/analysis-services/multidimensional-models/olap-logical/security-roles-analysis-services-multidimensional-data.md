@@ -27,6 +27,7 @@ caps.latest.revision: 35
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: ee88f607ae1370746db12ea4b9f9f6acc98c4c09
@@ -95,3 +96,4 @@ ms.lasthandoff: 09/01/2017
  [授權的存取權的物件和作業 &#40;Analysis Services &#41;](../../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
   
   
+

@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b56f092cfe368fbbc8b5e325f1ac4ddd7b3b2978
@@ -42,3 +43,4 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="applies-to"></a>適用於  
  [GetRows 方法 (ADO)](../../../ado/reference/ado-api/getrows-method-ado.md)
+

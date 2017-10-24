@@ -18,6 +18,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a7499b482e01272d0307de4d5daf6f785946b525
@@ -112,3 +113,4 @@ Attribute VB_Name = "TypeField"
 ## <a name="see-also"></a>另請參閱  
  [Field 物件](../../../ado/reference/ado-api/field-object.md)   
  [型別屬性 (ADO)](../../../ado/reference/ado-api/type-property-ado.md)
+

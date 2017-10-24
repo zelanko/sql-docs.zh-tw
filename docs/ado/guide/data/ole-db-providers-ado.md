@@ -17,6 +17,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8ef1c85f55928c266fb88f1639d5ccd53450fe59
@@ -48,3 +49,4 @@ OLE DB 定義一組 COM 介面，可提供應用程式統一存取各種資訊�
 -   [資料提供者](../../../ado/guide/data/data-providers.md)  
   
 -   [服務提供者和元件](../../../ado/guide/data/service-providers-and-components.md)
+

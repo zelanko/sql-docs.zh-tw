@@ -27,6 +27,7 @@ caps.latest.revision: 44
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 3799bc24ab3cfa9f0d65c961f69b72210c6cccef
@@ -152,3 +153,4 @@ ALTER DATABASE AccountsDb1 SET HADR AVAILABILITY GROUP = AccountsAG;
  [AlwaysOn 可用性群組 & #40; 的概觀SQL Server & #41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) [疑難排解 AlwaysOn 可用性群組組態 & #40;SQL Server & #41;](../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md) 
   
   
+

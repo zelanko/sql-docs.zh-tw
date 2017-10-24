@@ -23,6 +23,7 @@ caps.latest.revision: 31
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 879c7266c06551aa040a075e4af4ed537e58cab9
@@ -46,3 +47,4 @@ ms.lasthandoff: 09/01/2017
  在 [準則] 資料行中，您可選取要依 [索引鍵] 或 [名稱] 來排序屬性的成員。  
   
   
+

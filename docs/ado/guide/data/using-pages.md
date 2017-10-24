@@ -20,6 +20,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 34361d01b914d68cba1ff1e0e0f9378baf035be5
@@ -37,3 +38,4 @@ ms.lasthandoff: 09/09/2017
  使用**AbsolutePage**屬性來識別目前的記錄所在的頁碼。 同樣地，提供者必須支援這個屬性才能使用適當的功能。  
   
  **AbsolutePage**是以 1 為基礎，並且等於 1，目前的記錄時的第一個記錄**資料錄集**。 設定這個屬性，以移至特定頁面的第一個記錄。 取得從總頁數**PageCount**屬性。
+

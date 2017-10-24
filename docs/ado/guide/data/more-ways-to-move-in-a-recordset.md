@@ -20,6 +20,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c3e3f666fd96a1b00d78ba364a8df062fa3f6397
@@ -59,3 +60,4 @@ If oRs.BOF Then oRs.MoveFirst
  另舉一例，如果您所在位置中的特定資料列**資料錄集**而且您呼叫**刪除**，然後呼叫**MoveNext**，現在您已經準備記錄之後立即刪除的記錄。 但呼叫**MovePrevious**讓記錄之前刪除目前的記錄，因為已刪除的記錄，就不會再計算的作用中的成員資格**資料錄集**。  
   
  特別難以定義一致的移動語意，跨所有方法，會移動相對於目前的記錄提供者 — **MovePrevious**， **MoveNext**，和**移動** — 遇到時變更目前的記錄中的資料。 例如，如果您正在使用已排序，篩選**資料錄集**，並且您變更目前的記錄中的資料，使它會在所有其他的記錄之前，但您已變更的資料也不再符合篩選條件，並不清楚的位置**MoveNext**作業花費時間。 最安全的結論是該相對內移動**資料錄集**較高的風險比絕對移動 (例如使用**MoveFirst**或**MoveLast**) 資料時變更記錄會進行編輯，加入或刪除。 排序和篩選應能以於主索引鍵或識別碼，因為這種類型的值不應該變更。
+

@@ -20,6 +20,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d401bca51d735b2d0d633716cee732ad2ab9a086
@@ -61,3 +62,4 @@ recordset.Seek KeyValues, SeekOption
  [搜尋方法和索引屬性的範例 （VC + +）](../../../ado/reference/ado-api/seek-method-and-index-property-example-vc.md)   
  [Find 方法 (ADO)](../../../ado/reference/ado-api/find-method-ado.md)   
  [Index 屬性](../../../ado/reference/ado-api/index-property.md)
+

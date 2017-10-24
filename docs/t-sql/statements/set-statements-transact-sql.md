@@ -28,6 +28,7 @@ caps.latest.revision: 38
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: f0426730b33f0b70fda11a8cb07242a365d10fae
@@ -90,3 +91,4 @@ ms.lasthandoff: 09/01/2017
      如果任何這些選項未設成所需要的值，在索引檢視或含計算資料行索引的資料表上執行 INSERT、UPDATE、DELETE、DBCC CHECKDB 和 DBCC CHECKTABLE 動作都會失敗。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會產生一個錯誤，列出所有設定不正確的選項。 另外，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 也會依照計算資料行或檢視的索引並不存在的方式，來處理這些資料表或索引檢視的 SELECT 陳述式。  
   
   
+

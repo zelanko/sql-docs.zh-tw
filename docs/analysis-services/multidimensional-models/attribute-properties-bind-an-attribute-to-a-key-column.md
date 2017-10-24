@@ -20,6 +20,7 @@ caps.latest.revision: 27
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 341d41fd9930562173fe56c343d3edeb7041b89a
@@ -44,3 +45,4 @@ ms.lasthandoff: 09/01/2017
     >  您也可以在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的 [屬性] 視窗中，設定選定屬性 (attribute) 的 **Name** 屬性 (property)。  
   
   
+

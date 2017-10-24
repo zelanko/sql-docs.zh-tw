@@ -14,6 +14,7 @@ caps.latest.revision: 14
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 82a3fb7af6cd7dbf4412e0c5612592b7142fa48f
@@ -27,3 +28,4 @@ ms.lasthandoff: 08/02/2017
  如需有關 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的資訊，請參閱《線上叢書》。  
   
   
+

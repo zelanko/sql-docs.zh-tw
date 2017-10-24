@@ -16,6 +16,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 03b7d4fe16a379e04fe25fe8fef95802aedabe1d
@@ -76,3 +77,4 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="scrollability"></a>可捲動性  
  您的應用程式所採用的資料指標的類型也會影響的功能向前及向後移動的資料列結果集;這有時候稱為可捲動性。 向前移動的能力*和*回溯透過結果集增加的資料指標，複雜性，因此實作成本更高。 基於這個理由，您應該使用這項功能只在必要時要求資料指標。
+

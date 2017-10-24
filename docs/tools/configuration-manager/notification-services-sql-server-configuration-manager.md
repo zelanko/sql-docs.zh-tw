@@ -14,6 +14,7 @@ caps.latest.revision: 11
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 47ff4c15bd67f0430b97efec493ba53d97bc72ed
@@ -27,3 +28,4 @@ ms.lasthandoff: 08/02/2017
  如需有關 [!INCLUDE[ssNS](../../includes/ssns-md.md)]的資訊，請參閱《線上叢書》。  
   
   
+

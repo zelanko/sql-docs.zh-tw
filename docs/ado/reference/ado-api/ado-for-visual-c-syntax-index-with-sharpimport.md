@@ -21,6 +21,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 911abc9ecb9cd17f4f69479a2de9fa7f498303e5
@@ -63,3 +64,4 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="see-also"></a>另請參閱  
  [Visual c + + 語法索引 com ADO](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-for-com.md)
+

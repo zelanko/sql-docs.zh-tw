@@ -16,6 +16,7 @@ caps.latest.revision: 132
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 38af2297d176205b06bd104228d44e50b4c94861
@@ -124,3 +125,4 @@ from revoscalepy.etl.RxImport import rx_import_datasource
 + [什麼是 revoscalepy](python/what-is-revoscalepy.md)
 
 + [revoscalepy 函式程式庫](https://docs.microsoft.com/en-us/r-server/python-reference/revoscalepy/revoscalepy-package) 
+

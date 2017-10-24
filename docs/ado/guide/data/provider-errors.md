@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c6e4934d8dc43c29629687a19a5d76ae46dab515
@@ -83,3 +84,4 @@ End Function
  **錯誤**事件相關的錯誤發生時，也會使用物件。 您可以判斷是否藉由檢查引發 ADO 事件的處理序中發生錯誤**錯誤**做為事件參數傳遞的物件。  
   
  如果會造成事件的作業成功，卻*adStatus*事件處理常式的參數會設定為*adStatusOK*。 另一方面，如果引發事件的作業不成功， *adStatus*參數設定為*adStatusErrorsOccurred*。 在此情況下， *pError*參數會包含**錯誤**描述錯誤的物件。
+

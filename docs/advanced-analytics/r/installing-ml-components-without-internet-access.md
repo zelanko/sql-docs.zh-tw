@@ -14,6 +14,7 @@ caps.latest.revision: 30
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
 ms.openlocfilehash: f2b67ff49d5773890ff94f44eddeb01f2d5aaddf
@@ -254,3 +255,4 @@ Microsoft R Server    |不是變更，使用上一個 |
 [安裝 Microsoft R Server](https://docs.microsoft.com/r-server/install/r-server-install-windows)
 
 R 服務支援小組的這篇文章會示範如何在 SQL Server 2016 執行自動的安裝或升級 R 服務：[沒有網際網路存取的電腦上部署 R Services](https://blogs.msdn.microsoft.com/sqlcat/2016/10/20/do-it-right-deploying-sql-server-r-services-on-computers-without-internet-access/)。
+

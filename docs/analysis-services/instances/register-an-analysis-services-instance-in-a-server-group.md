@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7096b27b40d42ce11035feee9871a151c1460c76
@@ -43,3 +44,4 @@ ms.lasthandoff: 09/01/2017
 3.  以滑鼠右鍵按一下伺服器群組，然後選取 [新增伺服器註冊]。 如果伺服器安裝為具名執行個體，請輸入本機或遠端伺服器的網路名稱，包括執行個體名稱。 或者，您也可以提供出現在 [已註冊的伺服器] 中的已註冊伺服器名稱。 此名稱只在 [已註冊的伺服器] 中使用。 您不能使用它來重新命名伺服器，也不能在連接字串中使用它。 已註冊的伺服器名稱可以比實際伺服器名稱更具描述性，或包含有助於區別伺服器的識別特性。  
   
   
+

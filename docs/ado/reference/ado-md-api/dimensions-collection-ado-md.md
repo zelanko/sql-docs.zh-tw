@@ -20,6 +20,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8e8ed53180b29f3983db76b529d999fc865626cd
@@ -47,3 +48,4 @@ ms.lasthandoff: 09/09/2017
  [目錄 (VB) 範例](../../../ado/reference/ado-md-api/catalog-example-vb.md)   
  [CubeDef 物件 (ADO MD)](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)   
  [維度物件 (ADO MD)](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)
+

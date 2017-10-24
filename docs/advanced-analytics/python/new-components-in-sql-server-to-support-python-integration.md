@@ -12,6 +12,7 @@ ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 07f8e18b4481b2773f3ac16cdea08c27feff1ba3
@@ -149,3 +150,4 @@ SQL 附屬項目使用自訂的資料格式之間的快速資料傳輸的最佳�
 ## <a name="next-steps"></a>後續的步驟
 
 [SQL Server 中的 python 架構概觀](architecture-overview-sql-server-python.md)
+

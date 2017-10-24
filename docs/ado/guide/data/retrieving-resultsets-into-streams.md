@@ -18,6 +18,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9aadb2a81cc93effa0c280f5f74e6403c7403756
@@ -184,3 +185,4 @@ Response.write "</XML>"
   
 ### <a name="remarks"></a>備註  
  此時，已經傳送串流到用戶端瀏覽器的 XML，而且準備好可以顯示。 這是經由使用用戶端 VBScript 繫結至 DOM 和迴圈每個子節點，以建立 HTML 中的產品清單的執行個體的 XML 文件。
+

@@ -19,6 +19,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3565b06fa33ddf0990b89724639d9538da37e9b6
@@ -54,3 +55,4 @@ ms.lasthandoff: 09/09/2017
  [GetPermissions 和 SetPermissions 方法範例 (VB)](../../../ado/reference/adox-api/getpermissions-and-setpermissions-methods-example-vb.md)   
  [群組集合 (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)   
  [使用者集合 (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)
+

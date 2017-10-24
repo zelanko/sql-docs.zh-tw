@@ -15,6 +15,7 @@ caps.latest.revision: 11
 author: Minewiskan
 ms.author: owend
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: d637a50ca56acfcc80da1a09542e88e476351634
@@ -83,3 +84,4 @@ ms.lasthandoff: 09/01/2017
  如需安裝的其他說明，請參閱下載中心的這個頁面： [http://www.microsoft.com/download/details.aspx?id=29061](http://www.microsoft.com/download/details.aspx?id=29061)  
   
   
+

@@ -14,6 +14,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6ef92cbf72ad8a8aa3a8076be7ccaf3761f51ab0
@@ -64,3 +65,4 @@ End Sub
  [網際網路發佈案例](../../../ado/guide/data/internet-publishing-scenario.md)   
  [步驟 2： 初始化主清單方塊](../../../ado/guide/data/step-2-initialize-the-main-list-box.md)   
  [步驟 4： 填入 [詳細資料] 文字方塊中](../../../ado/guide/data/step-4-populate-the-details-text-box.md)
+

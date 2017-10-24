@@ -16,6 +16,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 47b51707aac7eab9e24610f7ae72b073432ee120
@@ -54,3 +55,4 @@ ADO 文件的這一節包含每個 ADO 物件、 集合、 屬性、 動態屬�
  [附錄 c： 使用 ADO 進行程式設計](../../../ado/guide/appendixes/appendix-c-programming-with-ado.md)   
  [附錄 a： 提供者](../../../ado/guide/appendixes/appendix-a-providers.md)   
  [ADO 記錄](../../../ado/guide/ado-history.md)
+

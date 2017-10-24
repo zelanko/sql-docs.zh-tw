@@ -16,6 +16,7 @@ caps.latest.revision: 15
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 560965a241b24a09f50a23faf63ce74d0049d5a7
 ms.openlocfilehash: 9b2d59d860d72207b196ac60a1db66f09baa1228
@@ -218,3 +219,4 @@ Microsoft 機器學習 Server for Windows 包含一個工具，您可以使用�
 + [從舊版的 R 伺服器的功能通知](https://docs.microsoft.com/r-server/whats-new-in-r-server)
 
 + [已過時、 已停止或已變更的功能](https://docs.microsoft.com/machine-learning-server/resources-deprecated-features)
+

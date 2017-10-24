@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6975a45ddf15f1a42709fe7c4ab069ba0aa37bea
@@ -73,3 +74,4 @@ ms.lasthandoff: 09/09/2017
     End With  
 'EndDeleteGroup  
 ```
+

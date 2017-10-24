@@ -20,6 +20,7 @@ caps.latest.revision: 43
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 125422ba5479f56a2659f1fc609359741d63b7e3
@@ -134,3 +135,4 @@ ms.lasthandoff: 09/01/2017
  [多維度模型資料庫 &#40;Ssas&#41;](../../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)  
   
   
+

@@ -19,6 +19,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 683a74aa2fadb070309a40f86a448128df56906e
@@ -123,3 +124,4 @@ End Sub
  [Index 屬性](../../../ado/reference/ado-api/index-property.md)   
  [資料錄集物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [搜尋方法](../../../ado/reference/ado-api/seek-method.md)
+

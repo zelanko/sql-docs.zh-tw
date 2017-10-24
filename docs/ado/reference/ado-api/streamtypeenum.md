@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8ac3e7193183ecfbc4d814d11e36c9ab7c6ba8bc
@@ -39,3 +40,4 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="applies-to"></a>適用於  
  [型別屬性 （ADO 資料流）](../../../ado/reference/ado-api/type-property-ado-stream.md)
+

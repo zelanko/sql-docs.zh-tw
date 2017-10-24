@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 73c7dfd6fe5aec706d5e27ce6d55f489285748c4
@@ -42,3 +43,4 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="see-also"></a>另請參閱  
  [Execute 方法 （ADO 命令中）](../../../ado/reference/ado-api/execute-method-ado-command.md)
+

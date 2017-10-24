@@ -16,6 +16,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1f3d141fc218101902ae094ff2a4db385d204fa3
@@ -122,3 +123,4 @@ ms.lasthandoff: 09/09/2017
  如果當您使用會有無目前記錄**GetChunk**或**AppendChunk**方法**欄位**物件，就會發生錯誤 3021 （無目前記錄）。  
   
  如需使用這些方法來操作二進位資料的範例，請參閱[AppendChunk 方法](../../../ado/reference/ado-api/appendchunk-method-ado.md)和[GetChunk 方法](../../../ado/reference/ado-api/getchunk-method-ado.md)中的範例*ADO 程式設計人員參考*。
+

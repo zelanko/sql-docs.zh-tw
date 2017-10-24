@@ -17,6 +17,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 74ec85c5907485edc5ad8dbcb6c24826fc21ccf3
@@ -39,3 +40,4 @@ ms.lasthandoff: 09/09/2017
  從快取擷取的記錄不會反映其他使用者對來源資料的同時變更。 若要強制更新的所有快取的資料，使用[重新同步處理](../../../ado/reference/ado-api/resync-method.md)方法。  
   
  如果**CacheSize**設定的值大於 1，巡覽方法 ([移動](../../../ado/reference/ado-api/move-method-ado.md)， [MoveFirst、 MoveLast、 MoveNext 和 MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)) 可能會導致瀏覽至已刪除如果記錄已擷取之後，就會刪除記錄。 之後的初始項提取，後續的刪除動作將不會反映在您的資料快取直到您嘗試存取的資料值從已刪除的資料列。 不過，設定**CacheSize**設為 1 會排除這個問題因為無法擷取已刪除的資料列。
+

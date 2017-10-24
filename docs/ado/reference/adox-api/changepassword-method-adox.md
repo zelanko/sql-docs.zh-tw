@@ -20,6 +20,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 18dd53bc701cf6a4b77c8e77f5b1851aff57f2ba
@@ -54,3 +55,4 @@ User.ChangePassword OldPassword, NewPassword
   
 ## <a name="see-also"></a>另請參閱  
  [群組和使用者附加、 ChangePassword 方法範例 (VB)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vb.md)
+

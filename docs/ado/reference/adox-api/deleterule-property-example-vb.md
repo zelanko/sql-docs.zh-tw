@@ -18,6 +18,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 7080e1d2bb3fe208fa9f3f7311438c94c41429e4
@@ -91,3 +92,4 @@ End Sub
 ## <a name="see-also"></a>另請參閱  
  [DeleteRule 屬性 (ADOX)](../../../ado/reference/adox-api/deleterule-property-adox.md)   
  [索引鍵的物件 (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)
+

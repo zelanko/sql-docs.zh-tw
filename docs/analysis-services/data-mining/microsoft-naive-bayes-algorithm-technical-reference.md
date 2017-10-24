@@ -23,6 +23,7 @@ caps.latest.revision: 16
 author: Minewiskan
 ms.author: owend
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 91e15d1d56b8d548651c316d3169fc36b4a7fd04
@@ -109,3 +110,4 @@ ms.lasthandoff: 09/01/2017
  [貝氏機率分類模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)  
   
   
+
