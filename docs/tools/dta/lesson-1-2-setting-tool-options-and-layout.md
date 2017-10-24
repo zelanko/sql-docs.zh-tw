@@ -18,11 +18,12 @@ caps.latest.revision: 24
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: f62f296fd14cefdeeb0f13b99d03852eaf44850a
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 2a741d086567c6255c5259f5d69aac5323cbffb0
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="lesson-1-2---setting-tool-options-and-layout"></a>課程 1-2-設定工具選項和配置
@@ -30,7 +31,7 @@ ms.lasthandoff: 08/02/2017
   
 ### <a name="set-the-tool-options"></a>設定工具選項  
   
-1.  啟動 Database Engine Tuning Advisor。 在 Windows [開始] 功能表上，依序指向 [所有程式]、[[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]、[效能工具]，然後按一下 [Database Engine Tuning Advisor]。  
+1.  啟動 Database Engine Tuning Advisor。 在 Windows [開始] 功能表上，依序指向 [所有程式]、[[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]、[效能工具]，然後按一下 「Database Engine Tuning Advisor」。  
   
 2.  在 **[工具]** 功能表上，按一下 **[選項]**。  
   
@@ -38,7 +39,7 @@ ms.lasthandoff: 08/02/2017
   
     -   展開 [啟動時] 清單來檢視 Database Engine Tuning Advisor 啟動時所能顯示的項目。 依預設，會選取 [顯示新的工作階段]。  
   
-    -   按一下 [變更字型]，了解您在 [一般] 索引標籤上可以為資料庫和資料表清單選擇哪些字型。 執行微調之後，Database Engine Tuning Advisor 的建議方格和報表也會使用這個選項所選擇的字型。 依預設，Database Engine Tuning Advisor 會使用系統字型。  
+    -   按一下 [變更字型]，了解您在 [一般] 索引標籤上可以為資料庫和資料表清單選擇哪些字型。執行微調之後，Database Engine Tuning Advisor 的建議方格和報表也會使用這個選項所選擇的字型。 依預設，Database Engine Tuning Advisor 會使用系統字型。  
   
     -   [最近使用清單中的項目數目] 的設定範圍在 **1** 和 **10** 之間。 請在 [檔案] 功能表上，按一下 [最近使用的工作階段] 或 [最近使用的檔案] 來設定所顯示清單中的最大項目數。 依預設，這個選項會設為 **4**。  
   
@@ -49,7 +50,7 @@ ms.lasthandoff: 08/02/2017
     -   依預設，會核取 [停止工作階段分析之前先詢問]，以避免在 Database Engine Tuning Advisor 分析工作負載完成之前不慎停止微調工作階段。  
   
 ## <a name="next-lesson"></a>下一課  
-[第 2 課： 使用 Database Engine Tuning Advisor](../../tools/dta/lesson-2-using-database-engine-tuning-advisor.md)  
+[第 2 課：使用 Database Engine Tuning Advisor](../../tools/dta/lesson-2-using-database-engine-tuning-advisor.md)  
   
   
   
