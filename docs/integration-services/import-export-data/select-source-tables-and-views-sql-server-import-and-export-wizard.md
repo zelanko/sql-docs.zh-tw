@@ -66,7 +66,7 @@ ms.lasthandoff: 09/26/2017
 **預覽**  
 （選擇性） 按一下**預覽**預覽最多 200 個範例中的資料列**預覽資料** 對話方塊。 這會確認精靈即將複製您想要複製的資料。 如需詳細資訊，請參閱 [預覽資料](../../integration-services/import-export-data/preview-data-dialog-box-sql-server-import-and-export-wizard.md)。  
   
-在您預覽資料之後，可能會想要變更已在精靈的先前頁面上選取的選項。 若要執行這些變更，請返回 [選取來源資料表和檢視表]  頁面，然後按一下 [上一步]  回到可以變更選取項目的頁面。  
+在您預覽資料之後，可能會想要變更已在精靈的先前頁面上選取的選項。 若要執行這些變更，請返回 選取來源資料表和檢視表  頁面，然後按一下上一步  回到可以變更選取項目的頁面。  
 
 ## <a name="select-source-and-destination-tables-for-excel"></a>選取 Excel 的來源和目的地資料表
 

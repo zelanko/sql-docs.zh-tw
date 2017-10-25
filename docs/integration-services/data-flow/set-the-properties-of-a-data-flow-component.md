@@ -54,7 +54,7 @@ ms.lasthandoff: 09/26/2017
   
 3.  按一下 [控制流程] 索引標籤，然後按兩下包含您要檢視及修改其屬性之元件的「資料流程」工作。  
   
-4.  以滑鼠右鍵按一下資料流程元件，然後按一下 [屬性]。  
+4.  以滑鼠右鍵按一下資料流程元件，然後按一下屬性。  
   
 5.  檢視或修改屬性值，然後關閉 [屬性] 視窗。  
   
@@ -71,7 +71,7 @@ ms.lasthandoff: 09/26/2017
   
 3.  按一下 [控制流程] 索引標籤，然後按兩下包含您要檢視或修改之元件的「資料流程」工作。  
   
-4.  在資料流程設計師中，以滑鼠右鍵按一下資料流程元件，然後按一下 [顯示進階編輯器]。  
+4.  在資料流程設計師中，以滑鼠右鍵按一下資料流程元件，然後按一下顯示進階編輯器。  
   
     > [!NOTE]  
     >  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，支援多個輸入的資料流程元件無法使用 [進階編輯器]。  
@@ -202,7 +202,7 @@ ms.lasthandoff: 09/26/2017
 |ID|Integer|可唯一識別輸出的值。|  
 |IdentificationString|字串|識別輸出的字串。|  
 |IsErrorOut|布林|指示輸出是否為錯誤輸出。|  
-|IsSorted|布林|指示是否要排序輸出。 預設值為 **[False]**。<br /><br /> **\*\*重要\* \* **設定的值**IsSorted**屬性**True**不會排序資料。 此屬性僅針對資料先前已經過排序的下游元件提供提示。 如需詳細資訊，請參閱 [排序合併和合併聯結轉換的資料](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)。|  
+|IsSorted|布林|指示是否要排序輸出。 預設值為 **[False]**。<br /><br /> **\*\*重要\* \*** 設定的值**IsSorted**屬性**True**不會排序資料。 此屬性僅針對資料先前已經過排序的下游元件提供提示。 如需詳細資訊，請參閱 [排序合併和合併聯結轉換的資料](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)。|  
 |名稱|字串|輸出的名稱。|  
 |SynchronousInputID|Integer|與輸出同步之輸入的識別碼。|  
 |TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|決定元件如何處理當處理資料列時發生之截斷的值。 這些值包括 [失敗元件]、[忽略失敗] 和 [重新導向資料列]。|  

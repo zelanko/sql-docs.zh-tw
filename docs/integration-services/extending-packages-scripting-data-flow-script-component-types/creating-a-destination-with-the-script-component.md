@@ -107,7 +107,7 @@ ms.lasthandoff: 09/26/2017
  請依照下列的範例將示範所需的程式碼**ScriptMain**類別以建立目的地元件。  
   
 > [!NOTE]  
->  這些範例使用**Person.Address**資料表中**AdventureWorks**範例資料庫，並傳遞其第一個和第四個資料行， * *int*AddressID** * 和**nvarchar (30) 縣 （市)** ，經過資料流資料行。 在本章節中的來源、轉換和目的地範例使用相同的資料。 每個範例都會記載其他必要條件與假設。  
+>  這些範例使用**Person.Address**資料表中**AdventureWorks**範例資料庫，並傳遞其第一個和第四個資料行，  **int*AddressID** * 和**nvarchar (30) 縣 （市)** ，經過資料流資料行。 在本章節中的來源、轉換和目的地範例使用相同的資料。 每個範例都會記載其他必要條件與假設。  
   
 ### <a name="adonet-destination-example"></a>ADO.NET 目的地範例  
  這個範例示範一個目的地元件，它使用現有[!INCLUDE[vstecado](../../includes/vstecado-md.md)]連接管理員，以將資料從資料流程中儲存[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料表。  

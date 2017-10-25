@@ -26,8 +26,8 @@ ms.lasthandoff: 09/26/2017
   
 ##  <a name="wizardMapping"></a> 精靈如何對應來源和目的地之間的資料類型？
 精靈會使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 安裝的對應檔，比對某個資料庫系統或版本與其他系統或版本的資料類型。 例如，它會比對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型與 Oracle 資料類型。 XML 格式的對應檔案預設安裝在下列資料夾中。
--   **C:\Program Files\Microsoft SQL Server\130\DTSMappingFiles\* * （適用於 64 位元）
--   **C:\Program 檔案 (x86) \Microsoft SQL Server\130\DTSMappingFiles\* * （適用於 32 位元）。  
+-   **C:\Program Files\Microsoft SQL Server\130\DTSMappingFiles\**  （適用於 64 位元）
+-   **C:\Program 檔案 (x86) \Microsoft SQL Server\130\DTSMappingFiles\**  （適用於 32 位元）。  
   
  如果您編輯現有的對應檔案，或將新的對應檔案加入資料夾，就必須關閉再重新開啟 [ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈] 或 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ，才能載入新的或變更後的對應檔案。  
  

@@ -43,7 +43,7 @@ ms.lasthandoff: 09/26/2017
   
 -   **OdbcCommand**需要位置參數。 參數的位置由命令文字中的問號 (?) 指出  (相較之下， **SqlCommand**需要具名的參數。)  
   
- 這個範例會使用**Person.Address**資料表中**AdventureWorks**範例資料庫。 範例會將第一個和第四個資料行， * *int*AddressID** * 和**nvarchar (30) 縣 （市)**資料行，並透過資料流程此資料表。 用於這個相同的資料來源、 轉換和目的地範例 > 主題中的[開發特定類型的指令碼元件](../../integration-services/extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md)。  
+ 這個範例會使用**Person.Address**資料表中**AdventureWorks**範例資料庫。 範例會將第一個和第四個資料行，  **int*AddressID** * 和**nvarchar (30) 縣 （市)**資料行，並透過資料流程此資料表。 用於這個相同的資料來源、 轉換和目的地範例 > 主題中的[開發特定類型的指令碼元件](../../integration-services/extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md)。  
   
 #### <a name="to-configure-this-script-component-example"></a>設定此指令碼元件範例  
   

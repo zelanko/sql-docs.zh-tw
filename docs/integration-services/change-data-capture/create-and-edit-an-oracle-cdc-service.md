@@ -60,7 +60,7 @@ ms.lasthandoff: 09/26/2017
   
      您可以針對此服務帳戶使用本機或網域 Windows 帳戶。 在此情況下，您必須針對該帳戶輸入 **[密碼]** 。 此帳戶可適用於本機主機或網域帳戶。 在 Windows [控制台] 中使用本機服務變更密碼時，請務必更新密碼。  
   
- **伺服器名稱**： 選取目標[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]要連接至執行個體 (例如， ** \\ \\< 電腦名稱 >\\< instance_name >**)。 預設會顯示上次連接的伺服器執行個體。  
+ **伺服器名稱**： 選取目標[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]要連接至執行個體 (例如，  **\\ \\< 電腦名稱 >\\< instance_name >**)。 預設會顯示上次連接的伺服器執行個體。  
   
  **驗證**  
  選取下列其中一項：  
