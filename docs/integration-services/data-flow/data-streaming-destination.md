@@ -65,7 +65,7 @@ SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Fold
 -   [逐步解說︰發行 SSIS 套件作為 SQL 檢視](../../integration-services/data-flow/walkthrough-publish-an-ssis-package-as-a-sql-view.md)  
   
 ## <a name="configure-data-streaming-destination"></a>設定資料流目的地
-  您可以使用 [Advanced Editor for Data Streaming Destination (資料流目的地進階編輯器)] 對話方塊來設定資料流目的地。 若要開啟此對話方塊，請按兩下元件，或在資料流程設計師中，以滑鼠右鍵按一下元件，然後按一下 [編輯]。  
+  您可以使用 [Advanced Editor for Data Streaming Destination (資料流目的地進階編輯器)] 對話方塊來設定資料流目的地。 若要開啟此對話方塊，請按兩下元件，或在資料流程設計師中，以滑鼠右鍵按一下元件，然後按一下編輯。  
   
  此對話方塊有三個索引標籤︰[元件屬性]、[輸入資料行] 和 [輸入與輸出屬性]。  
   
