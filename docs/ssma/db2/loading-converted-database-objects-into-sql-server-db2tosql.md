@@ -48,7 +48,7 @@ DB2 結構描述，以轉換之後[!INCLUDE[ssNoVersion](../../includes/ssnovers
   
     -   若要同步處理，或省略個別物件或類別目錄的物件，選取或清除的物件或資料夾旁邊的核取方塊。  
   
-3.  選取要處理中的物件之後[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]中繼資料總管]，以滑鼠右鍵按一下**資料庫**，然後按一下 [**同步處理資料庫**。  
+3.  選取要處理中的物件之後[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]中繼資料總管，以滑鼠右鍵按一下**資料庫**，然後按一下**同步處理資料庫**。  
   
     您也可同步個別物件或類別目錄的物件，該物件或其父資料夾上按一下滑鼠右鍵，然後按一下**同步處理資料庫**。  
   
@@ -69,7 +69,7 @@ DB2 結構描述，以轉換之後[!INCLUDE[ssNoVersion](../../includes/ssnovers
   
 **若要儲存物件做為指令碼**  
   
-1.  選取要儲存到指令碼的物件之後，以滑鼠右鍵按一下**資料庫**，然後按一下 **將儲存為指令碼**。  
+1.  選取要儲存到指令碼的物件之後，以滑鼠右鍵按一下**資料庫**，然後按一下**將儲存為指令碼**。  
   
     您也可以編寫個別物件或類別目錄的物件，該物件或其父資料夾上按一下滑鼠右鍵，然後按一下**將儲存為指令碼**。  
   
@@ -82,7 +82,7 @@ DB2 結構描述，以轉換之後[!INCLUDE[ssNoVersion](../../includes/ssnovers
   
 1.  在[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]**檔案**功能表上，指向**開啟**，然後按一下**檔案**。  
   
-2.  在**開啟**對話方塊，並選取您的指令碼檔案，然後按一下 [確定]。
+2.  在**開啟**對話方塊，並選取您的指令碼檔案，然後按一下確定。
   
 3.  使用查詢編輯器，編輯指令碼檔案。  
   
@@ -95,7 +95,7 @@ DB2 結構描述，以轉換之後[!INCLUDE[ssNoVersion](../../includes/ssnovers
   
 **執行指令碼**  
   
-1.  在[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]**檔案**功能表上，指向**開啟**，然後按一下 [**檔案**。  
+1.  在[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]**檔案**功能表上，指向**開啟**，然後按一下**檔案**。  
   
 2.  在**開啟**對話方塊方塊中，選取您的指令碼檔案，然後按一下[!INCLUDE[clickOK](../../includes/clickok_md.md)]  
   
