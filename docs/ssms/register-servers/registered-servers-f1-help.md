@@ -36,7 +36,7 @@ ms.lasthandoff: 09/01/2017
  ## <a name="reporting-services-new-or-edit-server-registration-general-tab"></a>Reporting Services 新增或編輯伺服器註冊 (一般索引標籤) 
   當您註冊 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的執行個體時，請使用此索引標籤來指定選項。  
   
- 若要存取此頁面，請在 [已註冊的伺服器] 工具列按一下 [Reporting Services]，以滑鼠右鍵按一下任何已註冊的伺服器群組 (例如 [Reporting Services])，指向 [新增]，然後按一下 [伺服器註冊]。  
+ 若要存取此頁面，請在 已註冊的伺服器 工具列按一下 Reporting Services，以滑鼠右鍵按一下任何已註冊的伺服器群組 (例如 Reporting Services)，指向 新增，然後按一下伺服器註冊。  
   
 ### <a name="options"></a>選項。  
  **伺服器類型**  
@@ -66,7 +66,7 @@ ms.lasthandoff: 09/01/2017
  **記住密碼**  
  請儲存您輸入的密碼。 唯有已按一下 **[基本驗證]** 或 **[表單驗證]**時，才能使用此選項。  
   
-> **注意：**如果您已儲存密碼而要停止儲存密碼，請清除此核取方塊，然後按一下 [儲存]。  
+> **注意：**如果您已儲存密碼而要停止儲存密碼，請清除此核取方塊，然後按一下儲存。  
   
  **已註冊的伺服器名稱**  
  您要在 [已註冊的伺服器] 上顯示的名稱。 此名稱不需與 **[伺服器名稱]** 方塊中的名稱相符。  
@@ -82,7 +82,7 @@ ms.lasthandoff: 09/01/2017
  
   當您註冊 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的執行個體時，請使用此索引標籤來指定選項。  
   
- 若要存取這個頁面，請在 [已註冊的伺服器] 中按一下 [已註冊的伺服器] 工具列上的 [Analysis Services]，以滑鼠右鍵按一下任何已註冊的伺服器群組，例如 [Analysis Services]，並指向 [新增]，然後按一下 [伺服器註冊]。  
+ 若要存取這個頁面，請在 已註冊的伺服器 中按一下 已註冊的伺服器 工具列上的 Analysis Services，以滑鼠右鍵按一下任何已註冊的伺服器群組，例如 Analysis Services，並指向 新增，然後按一下伺服器註冊。  
   
 ### <a name="options"></a>選項。  
  **伺服器類型**  
@@ -116,7 +116,7 @@ ms.lasthandoff: 09/01/2017
  
  註冊 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 時，使用這個索引標籤指定選項。  
   
- 若要存取此頁面，請在 [已註冊的伺服器] 上按一下 [已註冊的伺服器] 工具列上的 [Integration Services]，並以滑鼠右鍵按一下任何已註冊的伺服器群組，再指向 [新增]，然後按一下 [伺服器註冊]。  
+ 若要存取此頁面，請在 已註冊的伺服器 上按一下 已註冊的伺服器 工具列上的 Integration Services，並以滑鼠右鍵按一下任何已註冊的伺服器群組，再指向 新增，然後按一下伺服器註冊。  
   
 ### <a name="options"></a>選項。  
  **伺服器類型**  
