@@ -66,7 +66,7 @@ SQLRETURN SQLNativeSql(
  如果*OutStatementText*是 NULL， *TextLength2Ptr*仍會傳回的總字元數 （不含字元資料 null 結束字元） 可用來傳回緩衝區中所指*OutStatementText*。  
   
  *Columnsize*  
- [輸入]中的字元數\* *OutStatementText*緩衝區。 如果中傳回的值* \*InStatementText*是 Unicode 字串 (當呼叫**SQLNativeSqlW**)、 *Columnsize*引數必須是偶數。  
+ [輸入]中的字元數\* *OutStatementText*緩衝區。 如果中傳回的值 *\*InStatementText*是 Unicode 字串 (當呼叫**SQLNativeSqlW**)、 *Columnsize*引數必須是偶數。  
   
  *TextLength2Ptr*  
  [輸出]這是要傳回的總字元數 （不含 null 終止） 來傳回中可用的緩衝區指標\* *OutStatementText*。 可傳回的字元數目是否大於或等於*Columnsize*、 轉譯中的 SQL 字串\* *OutStatementText*會被截斷成*Columnsize*減去 null 結束字元的長度。  
@@ -85,7 +85,7 @@ SQLRETURN SQLNativeSql(
 |08S01|通訊連結失敗|功能已完成處理之前，驅動程式和驅動程式已連線到資料來源之間的通訊連結失敗。|  
 |22007|無效的 datetime 格式|**InStatementText*包含逸出子句，無效的日期、 時間戳記值。|  
 |24000|指標狀態無效|陳述式中參考的指標置於結果集或結果集的結尾之後開始之前。 由具有原生的 DBMS 資料指標實作的驅動程式不會傳回此錯誤。|  
-|HY000|一般錯誤|發生錯誤，其中沒有任何特定的 SQLSTATE 和定義沒有實作特定的 SQLSTATE。 所傳回的錯誤訊息**SQLGetDiagRec**中* \*MessageText*緩衝區描述錯誤和其原因。|  
+|HY000|一般錯誤|發生錯誤，其中沒有任何特定的 SQLSTATE 和定義沒有實作特定的 SQLSTATE。 所傳回的錯誤訊息**SQLGetDiagRec**中 *\*MessageText*緩衝區描述錯誤和其原因。|  
 |HY001|記憶體配置錯誤|驅動程式無法配置記憶體，才能支援執行或完成的函式。|  
 |HY009|無效的 null 指標使用|(DM) **InStatementText*為 null 指標。|  
 |HY010|函數順序錯誤|以非同步方式執行的函式的呼叫 (DM) *ConnectionHandle*和還在執行時呼叫此函式。|  

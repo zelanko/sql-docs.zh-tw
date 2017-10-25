@@ -76,7 +76,7 @@ SQLRETURN SQLDrivers(
  如果*DriverAttributes*是 NULL， *AttributesLengthPtr*仍會傳回的總位元組數 （不含字元資料 null 結束字元） 可用來傳回緩衝區中所指*DriverAttributes*。  
   
  *BufferLength2*  
- [輸入]長度\* *DriverAttributes*緩衝區，以字元為單位。 如果* \*DriverDescription*值為 Unicode 字串 (當呼叫**SQLDriversW**)、 *Columnsize*引數必須是偶數。  
+ [輸入]長度\* *DriverAttributes*緩衝區，以字元為單位。 如果 *\*DriverDescription*值為 Unicode 字串 (當呼叫**SQLDriversW**)、 *Columnsize*引數必須是偶數。  
   
  *AttributesLengthPtr*  
  [輸出]這是要傳回的總位元組數 （不含 null 結束位元組） 的緩衝區指標可用來傳回中\* *DriverAttributes*。 如果傳回可用的位元組數目大於或等於*BufferLength2*，清單中的屬性值組的\* *DriverAttributes*會被截斷成*BufferLength2*減去 null 結束字元的長度。  
@@ -91,7 +91,7 @@ SQLRETURN SQLDrivers(
 |--------------|-----------|-----------------|  
 |01000|一般警告|(DM) 驅動程式管理員特有的資訊訊息。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
 |01004|字串資料，右邊遭截斷|(DM) 緩衝區\* *DriverDescription*仍不夠大，無法傳回完整的驅動程式描述。 因此，描述已截斷。 在傳回完成的驅動程式描述的長度\* *DescriptionLengthPtr*。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。<br /><br /> (DM) 緩衝區\* *DriverAttributes*仍不夠大，無法傳回屬性值組的完整清單。 因此，已截斷參數清單。 中會傳回屬性值組的未截斷的清單長度 **AttributesLengthPtr*。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
-|HY000|一般錯誤|發生錯誤，其中沒有任何特定的 SQLSTATE 和定義沒有實作特定的 SQLSTATE。 所傳回的錯誤訊息**SQLGetDiagRec**中* \*MessageText*緩衝區描述錯誤和其原因。|  
+|HY000|一般錯誤|發生錯誤，其中沒有任何特定的 SQLSTATE 和定義沒有實作特定的 SQLSTATE。 所傳回的錯誤訊息**SQLGetDiagRec**中 *\*MessageText*緩衝區描述錯誤和其原因。|  
 |HY001|記憶體配置錯誤|(DM) 驅動程式管理員無法配置記憶體，才能支援執行或完成的函式。|  
 |HY010|函數順序錯誤|(DM) **SQLExecute**， **SQLExecDirect**，或**SQLMoreResults**針對呼叫*StatementHandle*並傳回 SQL_PARAM_DATA_可以使用。 此函式呼叫之前的所有資料流處理的參數擷取資料。|  
 |HY013|記憶體管理錯誤|無法處理函式呼叫，因為基礎記憶體的物件無法存取，可能是因為記憶體不足。|  

@@ -81,7 +81,7 @@ BOOL SQLGetTranslator(
  如果它是成功，則為 FALSE 如果失敗，或使用者取消對話方塊中，則函數會傳回 TRUE。  
   
 ## <a name="diagnostics"></a>診斷  
- 當**SQLGetTranslator**傳回 FALSE，相關聯* \*pfErrorCode*可以取得值，藉由呼叫**SQLInstallerError**。 下表列出* \*pfErrorCode*可以傳回的值**SQLInstallerError** ，並說明每個內容中的這個函式。  
+ 當**SQLGetTranslator**傳回 FALSE，相關聯 *\*pfErrorCode*可以取得值，藉由呼叫**SQLInstallerError**。 下表列出 *\*pfErrorCode*可以傳回的值**SQLInstallerError** ，並說明每個內容中的這個函式。  
   
 |*\*pfErrorCode*|錯誤|Description|  
 |---------------------|-----------|-----------------|  
