@@ -127,9 +127,9 @@ fg
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [CAST 和 CONVERT & #40;TRANSACT-SQL & #41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
+ [CAST 和 CONVERT &#40;TRANSACT-SQL &#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
  [資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [字串函數 & #40;TRANSACT-SQL & #41;](../../t-sql/functions/string-functions-transact-sql.md)  
+ [字串函數 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
   
   
 
