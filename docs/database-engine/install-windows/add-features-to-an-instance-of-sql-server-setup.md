@@ -47,7 +47,7 @@ ms.lasthandoff: 09/12/2017
   
 1.  插入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝媒體。 在根資料夾中，按兩下 setup.exe。 若要從網路共用進行安裝，請導覽至共用上的根資料夾，然後按兩下 setup.exe。 如果出現 [[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安裝程式] 對話方塊，請[!INCLUDE[clickOK](../../includes/clickok-md.md)] 安裝必要條件，然後按一下 [取消] 以結束 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安裝。  
   
-2.  安裝精靈將會啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝中心。 若要將功能加入現有的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 執行個體，請在左側導覽區域中，按一下 [安裝]，然後按一下 [新增 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 獨立安裝或將功能加入至現有安裝]。  
+2.  安裝精靈將會啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝中心。 若要將功能加入現有的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 執行個體，請在左側導覽區域中，按一下 **「安裝」**，然後按一下 **新增 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]「 獨立安裝或將功能加入至現有安裝」**。  
   
 3.  系統組態檢查將會在電腦上執行探索作業。 若要檢視驗證詳細資料，請按一下 [檢視詳細資料]。 若要繼續，請[!INCLUDE[clickOK](../../includes/clickok-md.md)]。  
   
