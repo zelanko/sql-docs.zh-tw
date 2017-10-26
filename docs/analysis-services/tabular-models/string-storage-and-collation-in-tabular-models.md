@@ -16,6 +16,7 @@ caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 9009024f08b7c4a4bce3d6b57bd3231025b38a59
@@ -91,3 +92,4 @@ ms.lasthandoff: 09/01/2017
  請務必注意，來源資料庫中的語言識別碼和定序順序通常對表格式模型資料行中儲存值的方式影響很小，甚至沒有影響。 例外是當來源資料庫轉換或篩選要求的值時。  
   
   
+

@@ -16,6 +16,7 @@ caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e941e6c084842238d429c7a653efbad24fb56520
@@ -78,3 +79,4 @@ ms.lasthandoff: 09/01/2017
 |[篩選與排序資料 &#40;SSAS 表格式&#41;](http://msdn.microsoft.com/library/55ebd7a6-2458-4398-911f-fcfeb2413f1b)|本節中的主題描述如何使用模型設計師中的控制項篩選或排序資料。|  
   
   
+

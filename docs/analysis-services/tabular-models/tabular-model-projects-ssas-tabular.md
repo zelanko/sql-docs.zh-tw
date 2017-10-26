@@ -16,6 +16,7 @@ caps.latest.revision: 10
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c351e2be7d1faf77542b68079b4f413e554e54f1
@@ -35,3 +36,4 @@ ms.lasthandoff: 09/01/2017
 |[從 Power Pivot 匯入 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/import-from-power-pivot-ssas-tabular.md)|此主題描述如何擷取 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel 檔案 (.xlsx) 中的中繼資料與資料，以建立新的表格式模型專案。|  
   
   
+

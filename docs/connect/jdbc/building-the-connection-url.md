@@ -14,6 +14,7 @@ caps.latest.revision: 53
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b5707221b51bff301aa5e9214497ba9090750aae
@@ -130,3 +131,4 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
  [連接到 SQL Server JDBC 驅動程式](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  
   
   
+

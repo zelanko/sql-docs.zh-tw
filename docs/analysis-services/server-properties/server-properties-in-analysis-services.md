@@ -22,6 +22,7 @@ caps.latest.revision: 21
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 4157f63f72acd5da6dd369034d1633e7461c9b87
@@ -95,3 +96,4 @@ SQL Server Management Studio 的 [屬性] 頁會顯示最有可能修改的屬�
  [指定方案部署的組態設定](../../analysis-services/multidimensional-models/deployment-script-files-solution-deployment-config-settings.md)  
   
   
+

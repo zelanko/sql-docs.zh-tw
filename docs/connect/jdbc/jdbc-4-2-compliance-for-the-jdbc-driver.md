@@ -14,6 +14,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3dbb9bbf584caeca1f6d8db034323e6695512f6a
@@ -76,3 +77,4 @@ ms.lasthandoff: 09/09/2017
 |**在 Java 8 中的新 Java 類別：**<br /><br /> LocalDate/LocalTime/LocalDateTime<br /><br /> OffsetTime/OffsetDateTime<br /><br /> **新的 JDBC 型別：**<br /><br /> TIME_WITH_TIMEZONE<br /><br /> TIMESTAMP_WITH_TIMEZONE<br /><br /> REF_CURSOR|在 SQL Server 中不支援 REF_CURSOR。 如果使用了此類型，則驅動程式會擲回 SQLFeatureNotSupportedException 例外狀況。 該驅動程式支援所有其他新的 Java 和 JDBC 類型對應，如 JDBC 4.2 規格中所指定。|  
   
   
+

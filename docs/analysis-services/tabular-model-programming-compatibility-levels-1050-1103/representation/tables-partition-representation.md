@@ -17,6 +17,7 @@ caps.latest.revision: 8
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 8a0509c571af328e4f5a459dbcbc68e1672d00f4
@@ -102,3 +103,4 @@ private void AddPartition(
  不過，若要了解如何使用 AMO 建立及操作資料分割表示法，請參閱「AMO 對表格式」範例的原始程式碼。 您可以在 Codeplex 上取得範例。 有關此程式碼的重要注意事項：此程式碼的提供目的只是為了支援這裡所說明的邏輯概念，不應該用於實際執行環境，也不應該用於教學以外的其他用途。  
   
   
+

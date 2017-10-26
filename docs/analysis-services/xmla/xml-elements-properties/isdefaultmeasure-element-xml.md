@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: jeannt
 ms.author: jeannt
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: b7ec461cb8fea748a6bd6ad9521082e8c3c66547
@@ -57,3 +58,4 @@ ms.lasthandoff: 09/01/2017
  如**RelationshipEndVisualizationProperties**項目， **IsDefaultMeasure**項目指示可以瀏覽至另一端，以取得此實體的預設量值此關聯性。 預設值**false**表示沒有要取得的預設量值。  
   
   
+

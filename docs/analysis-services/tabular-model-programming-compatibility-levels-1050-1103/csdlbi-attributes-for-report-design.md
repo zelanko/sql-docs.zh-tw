@@ -17,6 +17,7 @@ caps.latest.revision: 9
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: d0adb4ce534d0e70a309bf99b6e6a16479c931f3
@@ -79,3 +80,4 @@ ms.lasthandoff: 09/01/2017
 |**Kpi**<br /><br /> **KpiGoal**<br /><br /> **KpiStatus**|Subelement|表示量值元素要做為 KPI。 KPI 子元素使用 KpiGoal 和 KpiStauts 元素以定義相關的顯示影像和目標範圍。|  
   
   
+

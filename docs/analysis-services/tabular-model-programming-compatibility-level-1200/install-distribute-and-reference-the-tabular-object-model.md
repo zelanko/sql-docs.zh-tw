@@ -15,6 +15,7 @@ caps.latest.revision: 22
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 9688a692d25d484b05bca88e0779d2812944f3af
@@ -123,3 +124,4 @@ Json<br/>Microsoft.AnalysisServices.Tabular.Json.dll | 協助程式 DLL 包裝 N
 轉散發的 AMO 和 TOM 是透過**sql_as_amo.msi**安裝套件。 如果您要建立安裝程式在用戶端應用程式呼叫到 AMO 或 TOM，新增**sql_as_amo.msi**您可執行檔。 這是轉散發的 AMO 和 TOM 用戶端程式庫的唯一支援的機制。  
   
 套件是獨立的並提供所有組件所需的程式碼中呼叫 AMO 和 TOM。 其他封裝，例如 SQL_AS_OLEDB.msi 或 SQL_AS_ADOMD.msi，並不特別需要 TOM 程式設計案例。
+

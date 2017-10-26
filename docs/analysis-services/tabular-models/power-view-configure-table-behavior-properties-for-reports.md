@@ -18,6 +18,7 @@ caps.latest.revision: 8
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 95a50d5ed10e8714b50e33ac4e182ff208c4c840
@@ -143,3 +144,4 @@ ms.lasthandoff: 09/01/2017
  在評估模型中的資料表，並對包含永遠應該顯示為個別項目之詳細資料列的資料表設定資料表行為屬性之後，您可以進一步透過其他屬性或設定來最佳化模型。  
   
   
+

@@ -15,6 +15,7 @@ caps.latest.revision: 9
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: d10567517408ad6789b5b4aad9dbb7dcd3f92d2b
@@ -87,3 +88,4 @@ ms.lasthandoff: 09/01/2017
  [Analysis Services 的高可用性與延展性](../../analysis-services/instances/high-availability-and-scalability-in-analysis-services.md)  
   
   
+

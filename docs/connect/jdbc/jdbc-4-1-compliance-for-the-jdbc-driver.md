@@ -14,6 +14,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
 ms.openlocfilehash: d5b8e44c007766354e5c03058d16a41cbb72ad0e
@@ -65,3 +66,4 @@ ms.lasthandoff: 09/27/2017
 |PreparedStatement.setObject() 和 PreparedStatement.setNull() 方法現在支援新的資料類型對應。|1.新的 Java JDBC 類型對應<br /><br /> (a) 從 java.math.BigInteger 到 JDBC BIGINT<br /><br /> (b) 從 java.util.Date 和 java.util.Calendar 到 JDBC TIMESTAMP<br /><br /> 2.新的資料類型轉換：<br /><br /> (a) 從 java.math.BigInteger 到 CHAR、VARCHAR、LONGVARCHAR 和 BIGINT<br /><br /> (b) 從 java.util.Date 和 java.util.Calendar 到 CHAR、VARCHAR、LONGVARCHAR、DATE、TIME 和 TIMESTAMP<br /><br /> 如需詳細資訊，請參閱 JDBC 4.1 規格。|  
   
   
+

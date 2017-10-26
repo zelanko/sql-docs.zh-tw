@@ -16,6 +16,7 @@ caps.latest.revision: 24
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f57ef9048cc2028ed8e4b056c8120b96ddb29c95
@@ -36,3 +37,4 @@ ms.lasthandoff: 09/01/2017
 |[設定 Power View 報表的資料表行為屬性 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/power-view-configure-table-behavior-properties-for-reports.md)|描述如何設定資料表行為屬性，以更精細的層級來公開詳細資料列。 設定資料表行為屬性會變更詳細資料列的群組行為，並讓識別資訊在圖格、卡片和圖表版面配置中有更好的預設位置。|  
   
   
+

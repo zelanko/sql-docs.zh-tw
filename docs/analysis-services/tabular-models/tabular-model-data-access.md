@@ -16,6 +16,7 @@ caps.latest.revision: 23
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 4763973d0ea4bf905b1c38ace337667c92186e3a
@@ -136,3 +137,4 @@ ms.lasthandoff: 09/01/2017
  [連接到 Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)  
   
   
+

@@ -16,6 +16,7 @@ caps.latest.revision: 16
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b51561b367c10248daca388c58646e68ecc1534e
@@ -38,3 +39,4 @@ ms.lasthandoff: 09/01/2017
 |[設定預設的資料模型和部署屬性 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)|提供預設模型和部署屬性的說明及組態步驟。 預設屬性會套用至新的表格式模型專案。 建立專案之後，這些屬性可依據您的需求針對特定模型專案進行變更。|  
   
   
+

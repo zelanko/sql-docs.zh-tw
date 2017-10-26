@@ -17,6 +17,7 @@ caps.latest.revision: 9
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 0fae25125663ceca4a0cc2c7ddf94f72841ace2a
@@ -345,3 +346,4 @@ HRESULT Save (
  因為儲存裝置上沒有剩餘空間，無法儲存資料庫。  
   
   
+

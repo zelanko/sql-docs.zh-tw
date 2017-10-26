@@ -54,20 +54,20 @@ ms.lasthandoff: 08/02/2017
 ## <a name="step-by-step-instructions"></a>逐步指示  
  下列指示描述連接到在 Windows 8 或更新版上執行之 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的程序。 針對舊版 SQL Server 或 Windows 提供了些微調整。 您必須在登入 Windows 成為本機 Administrators 群組的成員時執行這些指示，而且這些指示會假設電腦已安裝了 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 。  
   
-1.  在起始頁上，啟動 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 在 [檢視] 功能表上，選取 [已註冊的伺服器] (如果您的伺服器尚未註冊，請以滑鼠右鍵按一下 [本機伺服器群組]，指向 [工作]，然後按一下 [註冊本機伺服器])。  
+1.  在起始頁上，啟動 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 在 [檢視] 功能表上，選取 [已註冊的伺服器] (如果您的伺服器尚未註冊，請以滑鼠右鍵按一下 本機伺服器群組，指向 工作，然後按一下註冊本機伺服器)。  
   
-2.  在 [已註冊的伺服器] 區域中，以滑鼠右鍵按一下您的伺服器，然後按一下 [SQL Server 組態管理員]。 這樣應該會要求以系統管理員身分執行的權限，然後開啟組態管理員程式。  
+2.  在 已註冊的伺服器 區域中，以滑鼠右鍵按一下您的伺服器，然後按一下SQL Server 組態管理員。 這樣應該會要求以系統管理員身分執行的權限，然後開啟組態管理員程式。  
   
 3.  關閉 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。  
   
-4.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員的左窗格中，選取 [SQL Server 服務]。 在右窗格中，尋找您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體  ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的預設執行個體會在電腦名稱後面加上 **(MSSQLSERVER)**。 具名執行個體會以 [已註冊的伺服器] 中顯示的相同大寫名稱出現)。以滑鼠右鍵按一下 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體，然後按一下 [屬性]。  
+4.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員的左窗格中，選取 [SQL Server 服務]。 在右窗格中，尋找您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體  ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的預設執行個體會在電腦名稱後面加上 **(MSSQLSERVER)**。 具名執行個體會以 [已註冊的伺服器] 中顯示的相同大寫名稱出現)。以滑鼠右鍵按一下 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體，然後按一下屬性。  
   
-5.  在 [啟動參數] 索引標籤的 [指定啟動參數] 方塊中，輸入 `-m`，然後按一下 [加入] (這是虛線，然後接著小寫字母 m)。  
+5.  在 啟動參數 索引標籤的 指定啟動參數 方塊中，輸入 `-m`，然後按一下加入 (這是虛線，然後接著小寫字母 m)。  
   
     > [!NOTE]  
-    >  如果是某些舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，則沒有 [啟動參數] 索引標籤。 在該情況下，請在 [進階] 索引標籤上，按兩下 [啟動參數]。 這些參數就會在非常小的視窗中開啟。 請小心不要變更任何現有參數。 在結尾處，加上新的參數 `;-m`，然後按一下 [確定] (這是分號，然後接著虛線和小寫字母 m)。  
+    >  如果是某些舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，則沒有 [啟動參數] 索引標籤。 在該情況下，請在 [進階] 索引標籤上，按兩下 [啟動參數]。 這些參數就會在非常小的視窗中開啟。 請小心不要變更任何現有參數。 在結尾處，加上新的參數 `;-m`，然後按一下確定 (這是分號，然後接著虛線和小寫字母 m)。  
   
-6.  按一下 [確定]，在重新啟動的訊息後面，以滑鼠右鍵按一下您的伺服器名稱，然後按一下 [重新啟動]。  
+6.  按一下 確定，在重新啟動的訊息後面，以滑鼠右鍵按一下您的伺服器名稱，然後按一下重新啟動。  
   
 7.  重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之後，您的伺服器即會處於單一使用者模式。 確定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 並未執行。 如果已啟動，它將會佔用您的唯一連接。  
   
@@ -78,7 +78,7 @@ ms.lasthandoff: 08/02/2017
   
      在某些組態中，SSMS 會嘗試建立許多連接。 多重連接將會失敗，因為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處於單一使用者模式。 您可以選取下列其中一項動作來執行。 執行下列其中一項動作。  
   
-    1.  使用 Windows 驗證 (包含您的系統管理員認證) 透過 [物件總管] 連接。 依序展開 [安全性] 和 [登入]，然後按兩下您自己的登入。 在 [伺服器角色] 頁面上，選取 [系統管理員]，然後按一下 [確定]。  
+    1.  使用 Windows 驗證 (包含您的系統管理員認證) 透過 [物件總管] 連接。 依序展開 [安全性] 和 [登入]，然後按兩下您自己的登入。 在 伺服器角色 頁面上，選取 系統管理員，然後按一下確定。  
   
     2.  不透過 [物件總管] 連接，而是使用 Windows 驗證 (包含您的系統管理員認證) 透過查詢視窗連接  (如果您沒有透過 [物件總管] 連接，就只能以這種方式連接)。執行程式碼 (例如下列程式碼) 來加入屬於**系統管理員**固定伺服器角色成員的新 Windows 驗證登入。 下列範例會加入名為 `CONTOSO\PatK` 的網域使用者。  
   
@@ -108,14 +108,14 @@ ms.lasthandoff: 08/02/2017
   
 9. 下列步驟現在會將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 變更回多使用者模式。 關閉 SSMS。  
   
-10. 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員的左窗格中，選取 [SQL Server 服務]。 在右窗格中，以滑鼠右鍵按一下 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體，然後按一下 [屬性]。  
+10. 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員的左窗格中，選取 [SQL Server 服務]。 在右窗格中，以滑鼠右鍵按一下 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體，然後按一下屬性。  
   
-11. 在 [啟動參數] 索引標籤的 [現有參數] 方塊中，選取 `-m`，然後按一下 [移除]。  
+11. 在 啟動參數 索引標籤的 現有參數 方塊中，選取 `-m`，然後按一下移除。  
   
     > [!NOTE]  
-    >  如果是某些舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，則沒有 [啟動參數] 索引標籤。 在該情況下，請在 [進階] 索引標籤上，按兩下 [啟動參數]。 這些參數就會在非常小的視窗中開啟。 移除您先前加入的 `;-m`，然後按一下 [確定]。  
+    >  如果是某些舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，則沒有 [啟動參數] 索引標籤。 在該情況下，請在 [進階] 索引標籤上，按兩下 [啟動參數]。 這些參數就會在非常小的視窗中開啟。 移除您先前加入的 `;-m`，然後按一下確定。  
   
-12. 以滑鼠右鍵按一下您的伺服器名稱，然後按一下 [重新啟動]。  
+12. 以滑鼠右鍵按一下您的伺服器名稱，然後按一下重新啟動。  
   
  現在，您應該能夠使用其中一個目前屬於**系統管理員**固定伺服器角色成員的帳戶進行正常連接。  
   

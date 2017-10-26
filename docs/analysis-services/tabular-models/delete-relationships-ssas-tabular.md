@@ -15,6 +15,7 @@ caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b71d8acb6016e425d62c49caa536fafaed8404c9
@@ -61,3 +62,4 @@ ms.lasthandoff: 09/01/2017
  [建立兩個資料表之間的關聯性 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/create-a-relationship-between-two-tables-ssas-tabular.md)  
   
   
+
