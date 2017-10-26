@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6a975ff73eb4b2ef48af05ccfdf595ae9c3233f0
@@ -61,3 +62,4 @@ ms.lasthandoff: 09/09/2017
  您不應該直接; 存取這項資訊新增、 修改或刪除資料來源時，任何系統管理登錄處理由 ODBC 系統管理員。  
   
  您可以使用這些關鍵字與值的某些中當做參數[SQLDriverConnect](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md) ODBC API 函式。
+

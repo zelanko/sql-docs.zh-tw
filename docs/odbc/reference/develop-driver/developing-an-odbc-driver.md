@@ -14,6 +14,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9439904b0f715c1c35b54106113021753abd669b
@@ -33,3 +34,4 @@ ms.lasthandoff: 09/09/2017
 -   [開發中的 ODBC 驅動程式的連接集區感知](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)  
   
 -   [非同步函式完成的通知](../../../odbc/reference/develop-driver/notification-of-asynchronous-function-completion.md)
+

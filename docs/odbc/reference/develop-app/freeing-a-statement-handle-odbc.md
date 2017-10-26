@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b33d262c846d9ef8a41bf9440802664ac7d4b75f
@@ -33,3 +34,4 @@ ms.lasthandoff: 09/09/2017
  當**SQLFreeHandle**呼叫時，結構用來儲存資訊有關陳述式的驅動程式版本。  
   
  **SQLDisconnect**自動釋放連接上的所有陳述式。
+

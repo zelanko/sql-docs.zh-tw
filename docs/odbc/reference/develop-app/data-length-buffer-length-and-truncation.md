@@ -20,6 +20,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 616dc403fdd23f3233bde4a5db19dd58b6d94cf1
@@ -37,3 +38,4 @@ ms.lasthandoff: 09/09/2017
  例如，假設應用程式配置 50 個位元組的二進位資料緩衝區。 如果驅動程式有 10 個位元組的二進位資料傳回時，它會傳回緩衝區中的 10 個位元組。 資料的位元組長度為 10，和緩衝區的位元組長度為 50。 如果驅動程式有 60 個位元組，要傳回的二進位資料，它會截斷為 50 個位元組的資料、 在緩衝區傳回那些位元組和傳回 SQL_SUCCESS_WITH_INFO。 資料的位元組長度是 60 （之前截斷長度），而且緩衝區的位元組長度仍然是 50。  
   
  診斷記錄會建立每個資料行，會被截斷。 若要建立這些記錄驅動程式和應用程式處理，花時間，因為截斷可能會降低效能。 通常，應用程式可以避免這個問題配置夠大的緩衝區，雖然這可能無法使用 long 資料時。 資料截斷發生時，應用程式的有時配置較大的緩衝區和提取資料。這不是在所有情況下，則為 true。 截斷發生時取得的資料呼叫**SQLGetData**，應用程式不需要呼叫**SQLGetData**已傳回的資料; 如需詳細資訊，請參閱[使用者入門Long 資料](../../../odbc/reference/develop-app/getting-long-data.md)。
+

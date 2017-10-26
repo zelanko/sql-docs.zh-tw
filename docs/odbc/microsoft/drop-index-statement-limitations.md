@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1244eb2107060dbaf4083d231b5e0fc2dce2c30e
@@ -26,3 +27,4 @@ ms.lasthandoff: 09/09/2017
 ---
 # <a name="drop-index-statement-limitations"></a>卸除索引陳述式的限制
 DROP INDEX 陳述式不支援 Microsoft Excel 或文字驅動程式。
+

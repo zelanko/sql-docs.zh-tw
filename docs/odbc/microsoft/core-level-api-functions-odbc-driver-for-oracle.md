@@ -19,6 +19,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d3bc36063659da3cf0cd6b2b837be0c4fce46c6f
@@ -57,3 +58,4 @@ ms.lasthandoff: 09/09/2017
 |**SQLSetCursorName**|資料指標名稱關聯的使用中陳述式控制代碼， *hstmt*。|  
 |**SQLSetParam**|SQLBindParameter ODBC 2 中被取代。*x*。|  
 |**SQLTransact**|要求認可或回復作業上的所有陳述式控制代碼 (hstmts) 與連接相關聯的所有作用中作業或環境控制代碼相關聯的所有連線*henv*。 如果認可失敗，在手動模式中，交易會維持使用中。您可以選擇要回復交易，或重試認可操作。 如果在自動交易模式中，認可作業失敗，異動會自動回復;無法非使用中交易。|
+

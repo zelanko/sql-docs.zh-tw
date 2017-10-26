@@ -18,6 +18,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8e73ba4a1fe0bd8a7fb65b8986745f9d2edee550
@@ -42,3 +43,4 @@ ms.lasthandoff: 09/09/2017
 |SQL_ROW_NUMBER|傳回 32 位元整數，指定目前的資料列結果集內的位置。 取得; 僅限無法設定。|  
 |SQL_ROWSET_SIZE|不能超過 4,294,967,296 資料列。不過，您必須具有虛擬記憶體不足，無法在您的電腦，以處理您的要求。|  
 |SQL_USE_BOOKMARKS|支援 SQL_USE_BOOKMARKS 設 SQL_UB_ON，並公開固定長度的書籤。|
+

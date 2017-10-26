@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5559250002983b942601311b04e1f4ae2eac49a2
@@ -37,3 +38,4 @@ ms.lasthandoff: 09/09/2017
  **SQLSetDescRec**和**SQLGetDescRec**精簡函式，一次呼叫，以設定或取得多個會影響的資料類型和資料行或參數資料的儲存體的描述項欄位。 **SQLSetDescRec**是要變更的資料行或參數的資料，在一個步驟中的繫結的有效方式。  
   
  **SQLSetStmtAttr**和**SQLGetStmtAttr**做為精簡函式，在某些情況下。 (請參閱[描述項欄位](../../../odbc/reference/develop-app/descriptor-fields.md)。)
+

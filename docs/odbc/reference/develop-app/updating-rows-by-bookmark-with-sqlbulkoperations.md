@@ -21,6 +21,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4426465ea41b257a4805399b703f28ccc22d704b
@@ -46,3 +47,4 @@ ms.lasthandoff: 09/09/2017
 6.  呼叫**SQLBulkOperations**與*作業*引數設定為 SQL_UPDATE_BY_BOOKMARK。  
   
  傳送至資料來源，以更新每個資料列，應用程式緩衝區應該有有效的資料列資料。 如果應用程式緩衝區已填滿所擷取，如果資料列狀態陣列已受到維護，而且資料列狀態值是 SQL_ROW_DELETED、 SQL_ROW_ERROR 或 SQL_ROW_NOROW，無效的資料可能不小心傳送至資料來源。
+

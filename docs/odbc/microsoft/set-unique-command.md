@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: bed7fb14102c754d16409259fe7e1f5177652d05
@@ -42,3 +43,4 @@ SET UNIQUE ON | OFF
   
 ## <a name="remarks"></a>備註  
  當您發出重新索引時，索引檔案都會保留其設定唯一的設定。 如需詳細資訊，請參閱[索引](../../odbc/microsoft/index-command.md)。
+

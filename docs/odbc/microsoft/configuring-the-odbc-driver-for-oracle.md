@@ -17,6 +17,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 64e6dfe9f31eb983170f08e9fcd3e0705ba9ae62
@@ -45,3 +46,4 @@ ms.lasthandoff: 09/09/2017
 -   **有關 索引標籤**列出已安裝的 ODBC 元件檔案。  
   
  加入資料來源之後，您可以使用**ODBC 資料來源管理員**對話方塊來設定您的資料來源的存取。 選取資料來源，然後按一下其中一個索引標籤，以編輯或檢視的資訊。
+

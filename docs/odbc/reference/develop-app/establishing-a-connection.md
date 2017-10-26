@@ -24,6 +24,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 43e7ab9f883df271f47b0ad55a931ce1a2d2c220
@@ -48,3 +49,4 @@ ms.lasthandoff: 09/09/2017
 -   [使用 SQLDriverConnect 的連接](../../../odbc/reference/develop-app/connecting-with-sqldriverconnect.md)  
   
 -   [使用 SQLBrowseConnect 連接](../../../odbc/reference/develop-app/connecting-with-sqlbrowseconnect.md)
+

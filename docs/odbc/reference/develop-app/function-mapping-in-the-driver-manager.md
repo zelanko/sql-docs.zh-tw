@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4ea01836108b8cf2524aa52001927bef852ce2a1
@@ -53,3 +54,4 @@ ms.lasthandoff: 09/09/2017
  驅動程式管理員已啟用 Unicode 內部。 如此一來，最佳的效能，來取得在 Unicode 應用程式使用 Unicode 的驅動程式，因為驅動程式管理員只會將 Unicode 函式透過傳遞至驅動程式。 當 ANSI 驅動程式會使用 ANSI 應用程式時，驅動程式管理員必須將字串轉換從 ANSI 為 Unicode 時處理某些函式，例如**SQLDriverConnect**。 之後處理函式，驅動程式管理員必須再將轉換的 Unicode 字串回 ANSI ANSI 驅動程式傳送函式之前。  
   
  應用程式不應該修改或驅動程式傳回 SQL_STILL_EXECUTING 或 SQL_NEED_DATA 時讀取其繫結的參數緩衝區。 驅動程式管理員會保留緩衝區繫結為 ANSI，直到驅動程式傳回 SQL_SUCCESS、 SQL_SUCCESS_WITH_INFO 或 SQL_ERROR。 多執行緒應用程式不應該存取另一個執行緒上執行 SQL 陳述式的任何繫結的參數值。 驅動程式管理員將資料從 Unicode 轉換成 ANSI"就地，」，另一個執行緒可能會看到這些緩衝區中的 ANSI 資料時，驅動程式仍在處理 SQL 陳述式。 Unicode 資料繫結至 ANSI 驅動程式的應用程式必須兩個不同的資料行繫結至相同的位址。
+

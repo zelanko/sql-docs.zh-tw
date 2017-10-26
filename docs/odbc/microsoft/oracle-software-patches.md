@@ -17,6 +17,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: bab4a7bed2fdc63224fd7a2f86757d11375f2cd2
@@ -47,3 +48,4 @@ ms.lasthandoff: 09/09/2017
   
 > [!NOTE]  
 >  因為 Oracle 在目前版本中修正的 bug，然後將它們 retrofits 至較早的版本使用軟體修補程式，建議您下載最新的修補程式。 這特別適用於 Oracle 伺服器的用戶端元件。 如果您有安裝這些修補程式的相關問題，請連絡 Oracle 支援。
+

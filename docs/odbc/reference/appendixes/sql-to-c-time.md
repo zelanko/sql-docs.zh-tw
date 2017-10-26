@@ -18,6 +18,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b424acc8e42f94c23e793a8b811b0c2347a313a1
@@ -49,3 +50,4 @@ ODBC SQL 資料類型是次識別碼：
  [d] 這是對應的 C 資料類型的大小。  
   
  當時間 SQL 資料轉換成 C 字元資料時，產生的字串就會處於 「*hh*:*公釐*:*ss*」 格式。 此格式不受 Windows® 國家/地區設定。
+

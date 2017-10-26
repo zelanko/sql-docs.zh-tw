@@ -18,6 +18,7 @@ caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 65a5bd882462dbd72c39c751dcfed52c61ab194c
@@ -56,3 +57,4 @@ ODBC 定義應用程式變數和其相對應的類型識別項所使用的 C 資
   
 ## <a name="see-also"></a>另請參閱  
  [C 資料類型](../../../odbc/reference/appendixes/c-data-types.md)
+

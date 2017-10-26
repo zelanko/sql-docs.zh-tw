@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4e3228a1a56de7a8220fc634ab46707d20253e37
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  判斷是否暫止多個結果陳述式控制代碼上*hstmt*包含 SELECT、 UPDATE、 INSERT 或 DELETE 陳述式，如果是的話，會初始化這些結果的處理。  
   
  如需詳細資訊，請參閱[SQLMoreResults](../../odbc/reference/syntax/sqlmoreresults-function.md)中*ODBC 程式設計人員參考*。
+

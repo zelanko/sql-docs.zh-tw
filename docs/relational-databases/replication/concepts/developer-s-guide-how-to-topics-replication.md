@@ -16,6 +16,7 @@ caps.latest.revision: 12
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 288ed137e701d6cfb416d12b6ff2176c59ec0278
@@ -193,3 +194,4 @@ ms.lasthandoff: 06/22/2017
 -   [針對異動複寫測量延遲及驗證連線](../../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
   
   
+

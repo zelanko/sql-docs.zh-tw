@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e0481be69797c1050b901c54b3ffde023bfdfb1a
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  連接到資料來源，可以是[資料庫](../../odbc/microsoft/visual-foxpro-terminology.md)或目錄的[資料表](../../odbc/microsoft/visual-foxpro-terminology.md)。 Visual FoxPro ODBC 驅動程式會忽略*szUID*， *cbUID*， *szAuthStr*，和*cbAuthStr*引數。  
   
  如需詳細資訊，請參閱[SQLConnect](../../odbc/reference/syntax/sqlconnect-function.md)中*ODBC 程式設計人員參考*。
+

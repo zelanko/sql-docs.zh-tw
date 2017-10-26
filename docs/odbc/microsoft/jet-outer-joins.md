@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: cb380d18747842fca36b7982d6d9bbcf87bfc3f0
@@ -26,3 +27,4 @@ ms.lasthandoff: 09/09/2017
 ---
 # <a name="jet-outer-joins"></a>Jet： 外部聯結
 SELECT 陳述式可以包含外部聯結子句的清單。 支援巢狀外部聯結。 如需有關外部聯結的詳細資訊，請參閱*Microsoft Jet 資料庫引擎程式設計人員指南*。
+

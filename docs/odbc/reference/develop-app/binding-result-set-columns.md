@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a893c212f54717425f5414045a2076c35e3d8b3c
@@ -46,3 +47,4 @@ SELECT * FROM Lines
 ```  
   
  在相同的陳述式控制代碼，第一個結果集的資料行繫結是仍在作用中因為這些是儲存在陳述式結構中的繫結。 在大部分情況下，這是不佳的程式設計作法，而且應該避免。 相反地，應用程式應該呼叫**SQLFreeStmt**解除繫結所有舊的資料行，並接著將新的繫結的 SQL_UNBIND 選項。
+

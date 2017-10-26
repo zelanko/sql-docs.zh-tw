@@ -20,6 +20,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1b830be937d31e763fbbf517ef07a3c2b8c729d3
@@ -172,3 +173,4 @@ ms.lasthandoff: 09/09/2017
 |SQL_TXN_ISOLATION_OPTION|SQL_TXN_READ_COMMITTED|  
 |SQL_UNION|多個值|  
 |SQL_USER_NAME|"ADMIN"|
+

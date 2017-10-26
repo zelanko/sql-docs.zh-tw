@@ -21,6 +21,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 34b9221b117819988e44196cee0f04578e85d436
@@ -38,3 +39,4 @@ Unicode 是軟體的字元編碼的方法會將所有的字元視為具有兩個
  當 ANSI 應用程式使用 ODBC 桌面資料庫驅動程式 4.0，並存取 Microsoft 存取 4.0 或更新版本中，驅動程式公開的資料類型為 SQL_CHAR、 SQL_VARCHAR 或 SQL_LONGVARCHAR 即使 Jet 4.0 支援廣泛的版本。 SQL_WCHAR、 SQL_WVARCHAR 和 SQL_WLONGVARCHAR 不支援較舊的 Jet 版本。 這項限制也適用於舊的格式會使用與 Jet 4.0 資料庫引擎的情況下。  
   
  關於 ODBC Unicode 問題的詳細資訊，請參閱[Unicode](../../odbc/reference/develop-app/unicode.md)程式設計考量中。
+

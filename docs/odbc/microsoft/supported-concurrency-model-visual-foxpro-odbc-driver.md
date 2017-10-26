@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9f3348850a76bb831c236fd1c1ee49fb89b97504
@@ -35,3 +36,4 @@ Visual FoxPro ODBC 驅動程式支援*唯讀並行*。 您的應用程式可以�
   
 ## <a name="row-versioning"></a>資料列版本設定  
  基本上是時間戳記支援，在哪一個資料列版本會在更新時間比較。
+

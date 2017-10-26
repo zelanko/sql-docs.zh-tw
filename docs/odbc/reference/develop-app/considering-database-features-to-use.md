@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d17758711dd0e4e1590a3b4176829d9709a5dfd0
@@ -51,3 +52,4 @@ ms.lasthandoff: 09/09/2017
 -   **只有當驅動程式會支援多個查詢。** 連接到驅動程式之後，應用程式檢查作用中陳述式數目。 應用程式可讓使用者啟動新的陳述式時其中一個已在使用中，只有當驅動程式支援多個作用中陳述式。 應用程式有較高的功能和互通性，但較難實作。  
   
 -   **一律支援多個查詢，並模擬它們在必要時。** 連接到驅動程式之後，應用程式檢查作用中陳述式數目。 應用程式永遠可讓使用者啟動新的陳述式時其中一個已在使用中。 如果驅動程式支援只有一個使用中陳述式，應用程式就會開啟該驅動程式的其他連接，並在該連接上執行新的陳述式。 應用程式有完整的功能和高互通性，但較難實作。
+

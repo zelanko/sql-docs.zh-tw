@@ -21,6 +21,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1ce549be1e3222f41615e5935418cf3e02e767a4
@@ -46,3 +47,4 @@ ms.lasthandoff: 09/09/2017
  如果應用程式呼叫**SQLGetData**傳回日期時間或間隔 C 類型資料，預設間隔開頭有效位數和間隔秒數有效位數使用。 如果其中一個預設值不是可接受的應用程式必須呼叫**SQLSetDescField**設定其中一個描述元欄位，或**SQLSetDescRec**設定 SQL_DESC_PRECISION。 呼叫**SQLGetData**應有*TargetType*的 SQL_ARD_TYPE 至使用中的描述項欄位的值。  
   
  當**SQLPutData**呼叫時，間隔開頭有效位數和間隔秒數有效位數會讀取描述項記錄的欄位對應的資料在執行中參數或資料行，也就是呼叫 APD 欄位若要**SQLExecute**或**SQLExecDirect**，或呼叫的 ARD 欄位**SQLBulkOperations**或**SQLSetPos**。
+

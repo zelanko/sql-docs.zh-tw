@@ -21,6 +21,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8a1eb337e91595b5be013067847f73c3de117e97
@@ -38,3 +39,4 @@ ODBC 從基礎 SQL 資料類型對應，以 ODBC 類型識別項是近似值，�
 -   ODBC 不會定義資料型別名稱，以用於**CREATE TABLE**和**ALTER TABLE**陳述式。 應用程式應該改用所傳回的結果集之 TYPE_NAME 資料行中傳回的名稱**SQLGetTypeInfo**。 這麼做的原因是，雖然大部分的 SQL 不不同大部分 Dbms 之間，資料型別名稱不同極大的差異。 而不是強迫驅動程式來剖析 SQL 陳述式和標準的資料型別名稱取代 DBMS 專屬資料型別名稱，ODBC 會需要應用程式在第一次使用特定 DBMS 的名稱。  
   
  請注意， **SQLGetTypeInfo**不一定會描述所有的應用程式可能會遇到的資料類型。 特別是，結果集可能包含不直接支援的資料來源的資料類型。 比方說，目錄函數所傳回的結果集裡的資料行的資料類型會由 ODBC，這些資料類型可能不支援資料來源。 若要判斷結果集中的資料類型的特性，應用程式呼叫**SQLColAttribute**。
+

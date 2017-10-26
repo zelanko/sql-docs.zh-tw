@@ -20,6 +20,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 26835fa277391f359d628ec25c03d38364e398e7
@@ -84,3 +85,4 @@ ODBC 應用程式分類如下：
     -   只有在條件式程式碼內 ODBC 較新版本中使用的任何新功能。  
   
     -   已經將本身是較早版本的 ODBC 應用程式註冊或已限制條件的程式碼來處理的行為變更。
+

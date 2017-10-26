@@ -14,6 +14,7 @@ caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 82610a48532970f14800574155db89929e371baf
@@ -33,3 +34,4 @@ ms.lasthandoff: 09/09/2017
 |[SQLRateConnection](../../../odbc/reference/syntax/sqldatasourcetodriver-function.md)|判斷驅動程式可以重複使用現有的連接，連接集區中。|  
 |[SQLPoolConnect](../../../odbc/reference/syntax/sqldatasourcetodriver-function.md)|如果沒有連接集區中的可以重複使用，請建立新的連接。|  
 |[SQLCleanupConnectionPoolID](../../../odbc/reference/syntax/sqldatasourcetodriver-function.md)|告知記憶體集區識別碼逾時的驅動程式。|
+

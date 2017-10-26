@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b6f35eb779b80b62e6352cef7de901f3b43bdbfc
@@ -36,3 +37,4 @@ ODBC 驅動程式管理員有追蹤功能，可讓 ODBC 應用程式記錄或 tr
 -   [啟用追蹤](../../../odbc/reference/develop-app/enabling-tracing.md)  
   
 -   [動態追蹤](../../../odbc/reference/develop-app/dynamic-tracing.md)
+

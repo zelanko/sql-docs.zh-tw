@@ -18,6 +18,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 7805c7099900adcdd3bd660b4e18bbe573eec20d
@@ -39,3 +40,4 @@ ms.lasthandoff: 09/09/2017
 -   移除所有先前安裝的元件。  
   
  在系統上安裝驅動程式之後，安裝程式會辨識已安裝的驅動程式元件，並會顯示其他對話方塊可讓您變更您的驅動程式的組態。
+

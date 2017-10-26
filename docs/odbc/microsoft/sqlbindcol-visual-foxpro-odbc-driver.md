@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8f08ffe2a80f89040dc148543c2b3a3985b76eca
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  指派結果資料行的儲存空間，並指定結果的類型。 當[SQLFetch](../../odbc/microsoft/sqlfetch-visual-foxpro-odbc-driver.md)或[SQLExtendedFetch](../../odbc/microsoft/sqlextendedfetch-visual-foxpro-odbc-driver.md)是呼叫，驅動程式在此放置資料的所有繫結的資料行中指定的位置。 請參閱[SQLGetTypeInfo](../../odbc/microsoft/sqlgettypeinfo-visual-foxpro-odbc-driver.md) ODBC 和 Visual FoxPro 資料類型之間的對應。  
   
  如需詳細資訊，請參閱[SQLBindCol](../../odbc/reference/syntax/sqlbindcol-function.md)中*ODBC 程式設計人員參考*。
+

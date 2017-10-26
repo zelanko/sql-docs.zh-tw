@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4aaf4c9d8e44108888c2c440fba506cf9b2874c8
@@ -63,3 +64,4 @@ SET Column_Name1 = eExpression1
 ## <a name="see-also"></a>另請參閱  
  [刪除 SQL 命令](../../odbc/microsoft/delete-sql-command.md)   
  [插入的 SQL 命令](../../odbc/microsoft/insert-sql-command.md)
+

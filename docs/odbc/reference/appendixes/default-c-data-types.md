@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 83040ffdab8b9715fc8caeb024bec6a9fc05d4d4
@@ -38,3 +39,4 @@ ms.lasthandoff: 09/09/2017
      因為方便程式設計只提供 SQL_C_DEFAULT，應用程式不會遺失任何功能時，它會指定實際的 C 資料類型。  
   
  顯示每個 SQL 資料類型的預設 C 資料類型的資料表包含在[轉換資料從 SQL 到 C 資料類型](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)稍後在本附錄中。
+

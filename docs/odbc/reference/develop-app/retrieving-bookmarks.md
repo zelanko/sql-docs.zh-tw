@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 7233ad9ab2915c174d545cb08d4abcdeedb99d7b
@@ -35,3 +36,4 @@ ms.lasthandoff: 09/09/2017
 -   呼叫**SQLSetPos**來定位到資料列集中的資料列，接著呼叫**SQLGetData**資料行 0。 如果驅動程式支援書籤，它必須一律支援能夠呼叫**SQLGetData**資料行 0，即使不允許應用程式呼叫**SQLGetData**上次繫結之前，其他資料行資料行。  
   
 -   呼叫**SQLBulkOperations**與*作業*設 SQL_ADD，引數和繫結資料行 0。 資料指標插入資料列，並傳回資料列的書籤中的繫結的緩衝區。
+

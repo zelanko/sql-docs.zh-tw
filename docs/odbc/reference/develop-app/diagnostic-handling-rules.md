@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 7cfd05e9c41fee1e0a753e2c4e4fa4f86db641b3
@@ -62,3 +63,4 @@ ms.lasthandoff: 09/09/2017
  一個 ODBC 元件以外，驅動程式管理員：  
   
 -   必須設定根據原生錯誤的 SQLSTATE。 以檔案為基礎的驅動程式和 DBMS 架構驅動程式不使用閘道，驅動程式必須設定 SQLSTATE。 DBMS 架構驅動程式所使用的閘道，驅動程式或支援 ODBC 的閘道可能設定 SQLSTATE。
+

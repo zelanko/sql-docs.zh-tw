@@ -21,6 +21,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ef01b8c5a21d65fb99f5f190fd159d90f3ac78b2
@@ -48,3 +49,4 @@ ms.lasthandoff: 09/09/2017
  您現在可以使用 Microsoft Access 查詢及更新連結 Visual FoxPro 資料表中的資料。 您對連結的資料變更會傳送回 Visual FoxPro 資料來源。  
   
  如果您不想變更您在進行會影響 Visual FoxPro 資料來源上的資料，請參閱 Microsoft Access[到 Microsoft Access 匯入 Visual FoxPro 資料](../../odbc/microsoft/importing-visual-foxpro-data-into-microsoft-access.md)。
+

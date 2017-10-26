@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 97cdd3b4d205548dd0b35d0aae44e418b7ca9638
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  執行已備妥的 SQL 陳述式 (已備妥的陳述式[SQLPrepare](../../odbc/microsoft/sqlprepare-visual-foxpro-odbc-driver.md))。 如果陳述式中存在的任何參數，驅動程式會使用目前的參數標記變數值。  
   
  如需詳細資訊，請參閱[SQLExecute](../../odbc/reference/syntax/sqlexecute-function.md)中*ODBC 程式設計人員參考*。
+

@@ -16,6 +16,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: dde6591396630690960d517be646039f893d821e
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  SQL 陳述式中傳回參數的數目。 參數的數目應該等於傳遞至 SQL 陳述式中的問號數目[SQLPrepare](../../odbc/microsoft/sqlprepare-visual-foxpro-odbc-driver.md)。  
   
  如需有關 SQL 文法的詳細資訊，請參閱[支援 ODBC SQL 文法](../../odbc/microsoft/supported-odbc-sql-grammar-visual-foxpro-odbc-driver.md)。 如需此函式的詳細資訊，請參閱[SQLNumParams](../../odbc/reference/syntax/sqlnumparams-function.md)中*ODBC 程式設計人員參考*。
+

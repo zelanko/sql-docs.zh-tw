@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a7bae5e984d66d8b71a9e4b84708f3ea126c1e0b
@@ -50,3 +51,4 @@ ms.lasthandoff: 09/09/2017
  第二個缺點是，有許多 Dbms 不支援程序。 同樣地，這是最可能是設計成以數字的 Dbms 執行垂直應用程式的問題。 若要判斷是否支援程序，應用程式呼叫**SQLGetInfo** SQL_PROCEDURES 選項。  
   
  第三個缺點則是特別適用於應用程式開發環境，是 ODBC 不會定義標準文法建立程序。 也就是說，雖然應用程式可以 interoperably 呼叫程序，他們無法建立它們 interoperably。
+

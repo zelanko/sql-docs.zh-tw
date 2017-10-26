@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9aaaa374817d84eaa01dc96fa3783623e7b4b905
@@ -37,3 +38,4 @@ ms.lasthandoff: 09/09/2017
 |**SQLPrimaryKeys**|*TableName*|  
 |**SQLSpecialColumns**|*TableName*|  
 |**SQLStatistics**|*TableName*|
+

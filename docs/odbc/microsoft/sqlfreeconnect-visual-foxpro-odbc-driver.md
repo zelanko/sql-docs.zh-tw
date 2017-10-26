@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 09ec943add25acfd029fd6651f3ff5f31aa1a419
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  釋放連接控制代碼，並釋放所有記憶體配置控制代碼。  
   
  如需詳細資訊，請參閱[SQLFreeConnect](../../odbc/reference/syntax/sqlfreeconnect-function.md)中*ODBC 程式設計人員參考*。
+

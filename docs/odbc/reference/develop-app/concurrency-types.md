@@ -20,6 +20,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 737fadc881109457051cf30bfce9b493bd164f1c
@@ -37,3 +38,4 @@ ms.lasthandoff: 09/09/2017
 -   **使用資料列版本的開放式並行存取和使用值的開放式並行存取**資料指標使用開放式並行存取： 它會更新或刪除資料列，只有當它們以來未變更上次讀取。 若要偵測的變更，它會比較資料列版本或值。 並不保證資料指標將無法更新或刪除資料列，但並行比當使用鎖定高出許多。 如需詳細資訊，請參閱下一節，[開放式並行存取](../../../odbc/reference/develop-app/optimistic-concurrency.md)。  
   
  應用程式指定它想要的資料指標陳述式屬性 sql_attr_concurrency 設定為使用哪種類型的並行存取。 若要判斷支援哪些類型，它會呼叫**SQLGetInfo** SQL_SCROLL_CONCURRENCY 選項。
+

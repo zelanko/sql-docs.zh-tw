@@ -18,6 +18,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e8d6ab676fc351afd7819c1fe60d59a58bfe7207
@@ -68,3 +69,4 @@ ODBC C 資料類型之字元的識別項是：
   
 > [!NOTE]  
 >  應用程式開發人員都建議您不要從字元 C 資料繫結至二進位的 SQL 資料類型。 此轉換通常是緩慢又沒有效率。
+

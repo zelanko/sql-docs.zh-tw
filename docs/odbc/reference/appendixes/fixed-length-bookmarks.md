@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 279b6a3c1f8eb2f1eea5bba35ee10f0a6643fb49
@@ -32,3 +33,4 @@ ms.lasthandoff: 09/09/2017
 -   SQL_UB_ON SQL_USE_BOOKMARKS 陳述式選項的值。 (在 ODBC 3 已被取代 SQL_UB_ON*.x*。)  
   
 -   SQL_GET_BOOKMARK 陳述式選項。
+

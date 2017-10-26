@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c1f9e266e4379b2d1cfc9ee771ac49694cd3c58b
@@ -39,3 +40,4 @@ ms.lasthandoff: 09/09/2017
 |107|執行某些資料庫作業，而不是 SQL 陳述式使用 ODBC 函數： **SQLSetPos** SQL_POSITION 與 SQL_REFRESH。|  
 |108|取得存取權的批次和預存程序，藉由呼叫產生多個結果集內容**SQLMoreResults**。|  
 |109|分隔跨越數個 ODBC 函數，則為 true 的不可部份完成性與能夠指定 SQL_ROLLBACK 中的交易**SQLEndTran**。|
+

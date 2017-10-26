@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0a5a57d03f7f1da36115bd0e69c11c33289547f9
@@ -39,3 +40,4 @@ ms.lasthandoff: 09/09/2017
 -   資料行和參數的數字必須大於 0 或大於或等於 0，視函數而定。 驅動程式必須檢查這些根據目前結果集或 SQL 陳述式的引數值的數目上限。  
   
 -   長度/指標引數和資料緩衝區的長度引數必須包含適當的值。 例如，指定中的資料表名稱的長度的引數**SQLColumns** (*NameLength3*) 必須是 SQL_NTS 或是值大於 0;*Columnsize*中**SQLDescribeCol**必須大於或等於 0。 驅動程式可能也需要檢查這些引數。 例如，它可能會檢查*NameLength3*小於或等於資料來源中的資料表名稱的最大長度。
+

@@ -17,6 +17,7 @@ caps.latest.revision: 24
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: fdd1352c4f7f6c62c8adfc5fcf9b2932568c12d1
@@ -91,3 +92,4 @@ ms.lasthandoff: 06/22/2017
  [使用複寫代理程式事件的警示](../../../relational-databases/replication/agents/use-alerts-for-replication-agent-events.md)  
   
   
+

@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 20767544a83219c6583eaf03a78e240e15e19be2
@@ -36,3 +37,4 @@ ms.lasthandoff: 09/09/2017
 -   [什麼是 ODBC？](../../odbc/reference/what-is-odbc.md)  
   
 -   [ODBC 和標準 CLI](../../odbc/reference/odbc-and-the-standard-cli.md)
+

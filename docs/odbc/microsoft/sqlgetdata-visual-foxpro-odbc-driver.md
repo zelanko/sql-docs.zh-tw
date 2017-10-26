@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6bebbe74b8ee9a7cf3ac09335af0d63c8f7186d9
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  擷取給定的結果集的目前記錄中的單一欄位的值。  
   
  如需詳細資訊，請參閱[SQLGetData](../../odbc/reference/syntax/sqlgetdata-function.md)中*ODBC 程式設計人員參考*。
+

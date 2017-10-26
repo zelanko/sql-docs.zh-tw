@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4723b48732065ccc2f307d9eeef46f8b35574c2d
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  泛型應用程式，特別是那些支援臨機操作查詢，幾乎不會知道他們建立的結果集的中繼資料。 因此，它們必須探索中繼資料，在執行階段函式的使用**SQLNumResultCols**， **SQLDescribeCol**，和**SQLColAttribute**，即中描述下一節[SQLDescribeCol 和 SQLColAttribute](../../../odbc/reference/develop-app/sqldescribecol-and-sqlcolattribute.md)。  
   
  所有的應用程式，不論其類型可以目錄函數所傳回的結果集的硬式編碼中繼資料。 本手冊的參考章節中定義這些結果集。
+

@@ -17,6 +17,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: cd8c39160ee6cafbbc9f041565a57ea29680bef7
@@ -66,3 +67,4 @@ SQLExecDirect(hstmt1,"SELECT * FROM Orders WHERE SalesPerson=? AND CustID=?",SQL
   
 > [!NOTE]  
 >  在 ODBC 1.0 參數已繫結與**SQLSetParam**。 對應呼叫之間的驅動程式管理員**SQLSetParam**和**SQLBindParameter**，取決於應用程式和驅動程式所使用的 ODBC 版本。
+

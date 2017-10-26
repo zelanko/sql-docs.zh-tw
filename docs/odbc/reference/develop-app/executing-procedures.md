@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: fa215150c483776f9188ed16044b59500cb257e7
@@ -40,3 +41,4 @@ ODBC 定義的標準逸出序列執行程序。 如需此順序和使用它的�
     -   呼叫資料來源中的程序，並將它傳送的已轉換的參數值。 驅動程式呼叫程序的方式是驅動程式專屬功能。 例如，它可能會修改 SQL 陳述式來使用資料來源的 SQL 文法和提交此陳述式執行，或它可能會呼叫程序中直接使用 DBMS 的資料流通訊協定中定義的遠端程序呼叫 (RPC) 機制。  
   
     -   傳回任何輸出或輸出參數的值或程序的傳回值，假設此程序成功。 處理所有其他結果 （資料列計數和結果集） 產生程序之後，可能無法後才可以使用這些值。 如果程序失敗，驅動程式會傳回任何錯誤。
+

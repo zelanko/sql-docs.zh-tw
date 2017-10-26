@@ -24,6 +24,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8fae054b572cb0d61299781d67adc0038afa9a97
@@ -77,3 +78,4 @@ ms.lasthandoff: 09/09/2017
 -   [SQL 到 c： 日期時間間隔](../../../odbc/reference/appendixes/sql-to-c-day-time-intervals.md)  
   
 -   [SQL 到 C 資料轉換範例](../../../odbc/reference/appendixes/sql-to-c-data-conversion-examples.md)
+

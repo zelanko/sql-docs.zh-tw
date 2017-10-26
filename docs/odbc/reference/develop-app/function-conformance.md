@@ -19,6 +19,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 48ed4bc9b52b6a905972e566870e7e2f86fc4734
@@ -95,3 +96,4 @@ ms.lasthandoff: 09/09/2017
  [1] 一些重要的功能，此函式可用只能在較高的一致性層級。  
   
  [2] 將某些屬性設定為非預設值取決於一致性層級。 如需詳細資訊，請參閱下節中，[屬性一致性](../../../odbc/reference/develop-app/attribute-conformance.md)。
+

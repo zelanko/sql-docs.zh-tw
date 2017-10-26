@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e561aab3359acb1f236aea38e76da33289e630ef
@@ -58,3 +59,4 @@ ms.lasthandoff: 09/09/2017
  例如，如果 Visual FoxPro ODBC 驅動程式找不到檔案 employee.dbf，它可能會傳回下列錯誤訊息：  
   
  "[*Microsoft*] [*ODBC Visual FoxPro 驅動程式*] 'employee.dbf' 不存在 」
+

@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1537c769de2c0f421ed533ea73d75a1578a10559
@@ -38,3 +39,4 @@ ms.lasthandoff: 09/09/2017
 |**資料庫 （)** (ODBC 1.0)|傳回對應至連接控制代碼的資料庫名稱。 (資料庫的名稱，也可以透過呼叫**SQLGetConnectOption**使用 SQL_CURRENT_QUALIFIER 連接選項。)|  
 |**IFNULL (** *exp*，*值***)** (ODBC 1.0)|如果*exp*為 null，*值*傳回。 如果*exp*不是 null， *exp*傳回。 可能資料類型或類型*值*必須是相容的資料型別*exp*。|  
 |**使用者 > （)** (ODBC 1.0)|DBMS 中傳回的使用者名稱。 (使用者名稱也會藉由提供**SQLGetInfo**藉由指定的資訊類型： SQL_USER_NAME。)這可以是不同的登入名稱。|
+

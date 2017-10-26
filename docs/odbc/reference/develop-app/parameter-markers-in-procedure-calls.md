@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 206f9072242ba103bb39b01ead1393cc469a4700
@@ -27,3 +28,4 @@ ms.lasthandoff: 09/09/2017
 ---
 # <a name="parameter-markers-in-procedure-calls"></a>程序呼叫中的參數標記
 在呼叫接受參數的程序時，可互通的應用程式應該使用參數標記，而不是常值的參數值。 某些資料來源不支援常值的參數值的使用程序呼叫中。 如需參數的詳細資訊，請參閱[陳述式參數](../../../odbc/reference/develop-app/statement-parameters.md)。 如需有關呼叫程序的詳細資訊，請參閱[程序呼叫](../../../odbc/reference/develop-app/procedure-calls.md)稍後這一節。
+

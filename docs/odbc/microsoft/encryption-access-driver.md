@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 991f555cb1cc1428b182b306e60c82703a33745d
@@ -28,3 +29,4 @@ ms.lasthandoff: 09/09/2017
 (此控制項是時才可使用第 4 版。*x*選取格式。)  
   
  4.0 版的 Microsoft Jet 資料庫引擎的版本中，資料庫加密時，允許建立 Access 資料庫。 請參閱*Jet Database Engine 程式設計人員參考*如需詳細資訊。
+

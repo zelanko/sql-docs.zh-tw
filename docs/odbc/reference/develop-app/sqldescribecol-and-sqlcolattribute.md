@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9a80ccf6ed695433a109770a567f50d100fd3a33
@@ -35,3 +36,4 @@ ms.lasthandoff: 09/09/2017
  應用程式可以在任何時間之後，尚未準備或執行陳述式集就會關閉資料指標結果上方，則之前擷取結果集中繼資料。 極少數的應用程式需要在準備陳述式之後，會在執行之前，結果集中繼資料。 可能的話，應該等候應用程式擷取中繼資料之前，執行陳述式，因為某些資料來源無法傳回已備妥的陳述式的中繼資料，並模擬驅動程式中的這項功能通常是緩慢的程序之後。 例如，驅動程式可能會產生零資料列結果集所取代**其中**子句**選取**with 子句的陳述式**WHERE 1 = 2**和執行產生的陳述式。  
   
  中繼資料通常是高度耗費資源，來擷取資料來源。 因為這個緣故，驅動程式應該快取它們從伺服器擷取和保存的只要設定結果上方，則資料指標是開啟的任何中繼資料。 此外，應用程式應該要求一定需要的中繼資料。
+

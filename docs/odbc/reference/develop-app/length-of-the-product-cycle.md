@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 7c363ecd47545868e2d40afabdce9bbef6f78031
@@ -30,3 +31,4 @@ ms.lasthandoff: 09/09/2017
  除了開發階段，您必須考量產品存留期。 如果應用程式設計成使用一次，例如不同的 dbms 部署移轉到另一個時，將資料傳輸的應用程式沒有任何點進行互通。 應用程式會使用一次，並捨棄。  
   
  如果應用程式將會很長的時間，可能更輕鬆地維護做為互通的應用程式。 這是具有單一的 DBMS 做為目標的自訂應用程式也適用。 原因是互通的程式碼會使用有限的資料庫功能子集。 驅動程式，才能保持可用，而且即使基礎 DBMS 的變更發生這些功能。 因此，具互通性程式碼可以的負擔轉移美術變更至 DBMS 從驅動程式開發人員應用程式開發人員。
+

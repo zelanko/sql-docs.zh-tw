@@ -18,6 +18,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 09265543685ea8fd573ee20bea90093f920b6e49
@@ -35,3 +36,4 @@ DBMS 架構驅動程式會搭配如 Oracle 或 SQL Server 提供驅動程式使�
  下圖顯示三個不同的組態，DBMS 架構驅動程式。 在第一個組態，驅動程式和資料來源位於同一部電腦上。 在第二個，驅動程式和資料來源位於不同的電腦上。 在第三個，驅動程式和資料來源位於不同機器上，閘道位於其間，位於另一個的電腦上。  
   
  ![三種 DBMS 的設定 &#45; 根據的 drivers](../../odbc/reference/media/pr07.gif "pr07")
+

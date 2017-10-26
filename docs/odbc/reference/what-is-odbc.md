@@ -16,6 +16,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5aaa2a57f9439eb1588a30c362118af9b5355a8d
@@ -37,3 +38,4 @@ ms.lasthandoff: 09/09/2017
  請務必了解 ODBC 設計來公開資料庫功能，不補充它們。 因此，應用程式寫入器不應預期，使用 ODBC 會將突然轉換為簡單資料庫的完整功能的關聯式資料庫引擎。 也不驅動程式寫入器應該實作基礎資料庫中找不到的功能。 這個例外狀況是開發人員撰寫直接存取檔案資料 （例如 Xbase 檔案中的資料） 的驅動程式所需撰寫支援至少要有最小 SQL 功能的資料庫引擎。 另一個例外狀況是 Windows SDK，先前包含在 Microsoft Data Access Components (MDAC) SDK 的 ODBC 元件，可提供模擬的驅動程式實作特定層級的功能，可捲動資料指標的資料指標程式庫。  
   
  使用 ODBC 的應用程式必須負責任何跨資料庫的功能。 例如，ODBC 不是異質性聯結引擎，也不是分散式的交易處理器。 不過，因為它是 DBMS 無關，它可以用來建置這類的跨資料庫工具。
+

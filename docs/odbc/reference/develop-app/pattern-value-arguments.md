@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6935d0e94b931451aba5940db60877c8443df7c4
@@ -51,3 +52,4 @@ ms.lasthandoff: 09/09/2017
 >  ODBC 2。*x*驅動程式不會支援中的搜尋模式*CatalogName*引數中的**SQLTables**。 ODBC 3*.x*如果 SQL_ATTR_ ODBC_VERSION 環境屬性設定為 sql_ov_odbc3 時，驅動程式會接受此引數中的搜尋模式; 它們不接受此引數中的搜尋模式如果設定為 SQL_OV_ODBC2。  
   
  傳遞的 null 指標來搜尋 pattern 引數不會限制該引數; 搜尋也就是 null 指標，搜尋模式 %（任何字元） 是相等的。 不過，長度為零的搜尋模式-也就是字串的長度為零的有效指標，會比對空的字串 ("")。
+

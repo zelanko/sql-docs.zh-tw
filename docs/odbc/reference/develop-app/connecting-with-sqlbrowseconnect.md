@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f2f1f3b183810e52f59945b7bc1888421cf48fc6
@@ -41,3 +42,4 @@ ms.lasthandoff: 09/09/2017
  本章節包含下列主題。  
   
 -   [SQL Server 瀏覽範例](../../../odbc/reference/develop-app/sql-server-browsing-example.md)
+

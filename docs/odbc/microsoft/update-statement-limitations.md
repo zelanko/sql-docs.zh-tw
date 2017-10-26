@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 828fc042a4184bfedccf7c26210f899c1d73f2a4
@@ -30,3 +31,4 @@ Paradox 驅動程式來更新資料表時，該資料表必須有唯一的索引
  不支援文字驅動程式。  
   
  使用 Microsoft Excel 驅動程式時，便可更新的值，但無法從 Microsoft Excel 試算表為基礎的資料表中刪除資料列。 如此一來，UPDATE 陳述式不是正式支援 Microsoft Excel 驅動程式。 INSERT 陳述式會視為受支援。
+

@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e326abbc0a10899028bf93d27f219fadd8d7dd29
@@ -35,3 +36,4 @@ ms.lasthandoff: 09/09/2017
 -   [對應已被取代的函式](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)— 重複功能是在 ODBC 3 以不同的方式實作的功能。*x*和 ODBC 2。*x*。 ODBC 3。*x*驅動程式不需要擔心重複的功能與回溯相容性，因為驅動程式管理員一律對應的 ODBC 2。*x* ODBC 3 的功能。*x*功能呼叫 ODBC 3 時。*x*驅動程式。 因此，ODBC 3。*x*驅動程式會看到只 ODBC 3。*x*功能。 如需有關這些對應，請參閱稍後本附錄中。  
   
 -   [行為變更和 ODBC 3.x 驅動程式](../../../odbc/reference/appendixes/behavioral-changes-and-odbc-3-x-drivers.md)： 行為變更的功能，在 ODBC 3 以不同方式處理。*x*和 ODBC 2。*x*。 ODBC 3。*x*驅動程式也不必擔心行為變更，並採取動作以回應由應用程式設定為 SQL_ATTR_ODBC_VERSION 環境屬性。
+

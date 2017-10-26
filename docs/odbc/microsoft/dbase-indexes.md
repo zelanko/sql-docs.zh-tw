@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9f2725f312691d3cb644f9a096b5f469f1356c55
@@ -44,3 +45,4 @@ ODBC dBASE 驅動程式會自動開啟，並更新 dBASE IV 索引檔案。 您�
 -   索引名稱必須符合 dBASE 索引命名慣例。 dBASE III 要求每個索引必須在個別的檔案中，每個皆.ndx 擴充功能。 DBASE IV，在建立索引做為儲存在單一.mdx 檔案的標記名稱。 .mdx 檔具有相同的基底名稱和資料庫檔案 （例如，Emp.mdx 是 Emp.dbf 資料庫索引檔）。  
   
 -   dBASE 定義唯一索引為只有一筆記錄，從相同的金鑰值組加入至索引的位置。
+

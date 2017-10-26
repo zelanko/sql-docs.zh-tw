@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d8ffdb2fa548b03ee38c0f817675cb88ab4acf67
@@ -30,3 +31,4 @@ DELETE 陳述式不支援 Microsoft Excel 或文字驅動程式。 請注意，�
  DBASE 驅動程式不支援壓縮資料表來移除 「 刪除 」 的值。  
   
  Paradox 驅動程式從資料表刪除資料列時，該資料表必須有唯一的索引 （Paradox 主索引鍵）。
+

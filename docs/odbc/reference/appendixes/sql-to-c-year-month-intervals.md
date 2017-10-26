@@ -19,6 +19,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 991dd021935617a9c0bfbe87ecf7be35d35938c9
@@ -50,3 +51,4 @@ _C_BINARY|資料的位元組長度 < = *Columnsize*<br /><br /> 資料的位元�
  [b] 如果間隔有效位數是單一欄位 （其中一個年份或月份），SQL 類型的間隔可以轉換成任何 （SQL_C_STINYINT、 SQL_C_UTINYINT、 SQL_C_USHORT、 SQL_C_SHORT、 SQL_C_SLONG、 SQL_C_ULONG、 或 SQL_C_NUMERIC） 的精確數值。  
   
  SQL 類型的間隔預設值轉換為對應 C 間隔資料型別。 應用程式再將繫結資料行或參數 （或設定 SQL_DESC_DATA_PTR 欄位 ARD 適當記錄中） 以指向初始化 SQL_INTERVAL_STRUCT 結構 (或將指標傳遞至SQL_INTERVAL_STRUCT結構*TargetValuePtr*呼叫中的引數**SQLGetData**)。
+

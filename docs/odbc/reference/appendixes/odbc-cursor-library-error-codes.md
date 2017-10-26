@@ -18,6 +18,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 308ad8ed54aacb9ab7bc169efd9dad020e2f2b66
@@ -58,3 +59,4 @@ ms.lasthandoff: 09/09/2017
 |SL012|資料指標開啟時，可能不會變更陳述式繫結。|**SQLBindCol**<br /><br /> **SQLFreeHandle**<br /><br /> **SQLFreeStmt**<br /><br /> **SQLSetStmtAttr**|  
 |SL014|發出定位的要求，並非所有的資料行計數欄位已緩衝處理。|**SQLExecDirect**<br /><br /> **SQLExecute**<br /><br /> **SQLPrepare**|  
 |SL015|**SQLFetch**和**SQLFetchScroll**不能混合。|**SQLExtendedFetch**<br /><br /> **SQLFetch**<br /><br /> **SQLFetchScroll**|
+

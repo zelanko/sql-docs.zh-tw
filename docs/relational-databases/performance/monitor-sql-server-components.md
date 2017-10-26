@@ -14,6 +14,7 @@ caps.latest.revision: 8
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c3d789288a8963a1f80bc560ab9e80fe5339d29b
@@ -141,3 +142,4 @@ ms.lasthandoff: 08/03/2017
      事件重新執行可讓您仿造原先擷取資料的資料庫環境來建立測試副本，然後模擬原本發生在實際系統的狀況來重複執行擷取的事件。 只有 Distributed Replay Utility 或 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]提供這項功能。 您可以使用原本的發生速度、盡量加快 (用以驅策系統) 或甚至一次一個步驟來重新執行這些事件，以便在發生每個事件之後分析系統。 藉由在測試環境下分析確實的事件，可以避免損害實際系統。 如需詳細資訊，請參閱 [重新執行追蹤](../../tools/sql-server-profiler/replay-traces.md)。  
   
   
+

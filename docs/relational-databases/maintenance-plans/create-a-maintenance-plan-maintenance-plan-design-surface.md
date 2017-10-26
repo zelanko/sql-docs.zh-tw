@@ -16,6 +16,7 @@ caps.latest.revision: 10
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 616b2d7d823d8a273b3ac260339bb76fba65dd00
@@ -279,3 +280,4 @@ ms.lasthandoff: 06/22/2017
      發生事件之執行個體的名稱。 顯示為 *&lt;電腦名稱*\\*執行個體名稱&gt;*。  
   
   
+

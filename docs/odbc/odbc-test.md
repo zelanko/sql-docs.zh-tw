@@ -22,6 +22,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 7c5396150d9b3ae7e3c79fa3568c1468f775cb8e
@@ -41,3 +42,4 @@ Microsoft® ODBC 測試是 ODBC 的應用程式可讓您測試 ODBC 驅動程式
  先前包含在這個區段中的文件的說明主題現在包含在 ODBC 測試程式。 開啟 Odbcte32.exe 或 Odbct32w.exe，開啟**協助**功能表，然後再按一下**說明主題**。  
   
  請注意，這些應用程式，適用於 64 位元 Microsoft Windows 作業系統的 64 位元版本相同的名稱與 32 位元版本，即使它們是不同的檔案。 也就是 64 位元版本的 ODBC 測試的 Unicode 版本的名稱是 odbct32w.exe。
+

@@ -20,6 +20,7 @@ caps.latest.revision: 25
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 29667a31a69460d6408a84d21035a1a16cf4dc31
@@ -87,3 +88,4 @@ ms.lasthandoff: 06/22/2017
 |[MSSQL_REPL027183](../../relational-databases/replication/mssql-repl027183.md)|合併處理無法以參數化資料列篩選器來列舉發行項的變更。 如果這個失敗繼續發生，請增加這個處理的查詢逾時、縮短發行集的保留期限，以及改善發行資料表的索引。|  
   
   
+

@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9b12fa480f4aef8b669bdd57c4322f8d9f736be6
@@ -36,3 +37,4 @@ ms.lasthandoff: 09/09/2017
  如果認可失敗，在手動模式中，交易會維持使用中。您可以選擇要回復交易，或重試認可操作。 如果在自動交易模式中，認可作業失敗，異動會自動回復;無法非使用中交易。  
   
  如需詳細資訊，請參閱[SQLTransact](../../odbc/reference/syntax/sqltransact-function.md)中*ODBC 程式設計人員參考*。
+

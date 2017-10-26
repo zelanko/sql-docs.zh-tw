@@ -22,6 +22,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8ba4e9a05f3dba74a973bf2b8b8a83a52ef78811
@@ -59,3 +60,4 @@ ms.lasthandoff: 09/09/2017
 -   中斷連接資料來源。  
   
  因為大部分的資料存取工作是使用 SQL，應用程式使用 ODBC 的主要工作是提交 SQL 陳述式並擷取這些陳述式所產生的結果 （如果有的話）。 其他應用程式使用 ODBC 的工作包括判斷和調整驅動程式功能，並瀏覽資料庫目錄。
+

@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e22537b5ce7b2b1ecfdf579e78859812895671c2
@@ -43,3 +44,4 @@ ms.lasthandoff: 09/09/2017
 3.  如果陳述式的 SELECT 陳述式，則應用程式會呼叫 CLI 函式傳回結果的應用程式緩衝區中。 一般而言，此函式會傳回一個資料列或一個資料行一次。  
   
 4.  應用程式呼叫中斷 DBMS CLI 函式。
+

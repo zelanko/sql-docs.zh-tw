@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5c269705f5e4c0c855b5b7f929b1a76ee9523bd7
@@ -43,3 +44,4 @@ Driver : REG_SZ : SQL Server
   
 > [!NOTE]  
 >  預設子機碼中包含的預設驅動程式可以參考的預設使用者 DSN 或預設的系統 DSN。 如果預設使用者 DSN 與預設系統 DSN 尚未建立，預設的驅動程式取決於 DSN 建立最後，因此它可能不會先建立資料來源名稱的有效項目。
+

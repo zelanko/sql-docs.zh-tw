@@ -18,6 +18,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 409f171f2e747123ee1f47e3e32b6e13346110b6
@@ -40,3 +41,4 @@ ms.lasthandoff: 09/09/2017
 4.  按一下 [移除]。  
   
 5.  按一下 [確定] 以儲存變更並關閉 [ODBC 資料來源管理員] 對話方塊。
+

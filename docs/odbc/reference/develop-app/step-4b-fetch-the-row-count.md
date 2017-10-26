@@ -18,6 +18,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9b3526d1aad0475cb487f9c1fba6822604286834
@@ -33,3 +34,4 @@ ms.lasthandoff: 09/09/2017
  如果在步驟 3 中執行的陳述式**更新**，**刪除**，或**插入**陳述式中，應用程式擷取受影響的資料列計數**SQLRowCount**。 如需詳細資訊，請參閱[判斷受影響的資料列數目](../../../odbc/reference/develop-app/determining-the-number-of-affected-rows.md)。  
   
  應用程式現在會傳回步驟 3 相同交易中執行另一個陳述式，或繼續進行步驟 5 以認可或回復交易。
+

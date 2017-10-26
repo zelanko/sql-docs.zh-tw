@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 17a82974d8531d0524f4bac89701d6c97a05198d
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  允許應用程式指定多個值所指派的參數集[SQLBindParameter](../../odbc/microsoft/sqlbindparameter-visual-foxpro-odbc-driver.md)。 指定一組參數的多個值的能力可用於大量插入以及其他需要處理相同的 SQL 陳述式多次使用不同的參數值的資料來源的工作項目。 例如，應用程式可以指定三組值的相關聯的參數集**插入**陳述式，然後執行**插入**insert 陳述式，一次執行的三個作業。  
   
  如需詳細資訊，請參閱[SQLParamOptions](../../odbc/reference/syntax/sqlparamoptions-function.md)中*ODBC 程式設計人員參考*。
+

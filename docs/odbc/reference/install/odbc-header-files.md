@@ -18,6 +18,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8a58d17e4095afc92976094926be77ecdab1ad65
@@ -46,3 +47,4 @@ ms.lasthandoff: 09/09/2017
  Msdadc.h  
   
  Sqlspi.h (用於驅動程式開發，請參閱[ODBC 服務提供者介面 (SPI) 參考](../../../odbc/reference/syntax/odbc-service-provider-interface-spi-reference.md)如需詳細資訊) 從開始使用 Windows 8 SDK。
+

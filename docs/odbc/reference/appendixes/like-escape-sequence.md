@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 678f2f8f720823ef5658ba7ee1e1391bbebc1c50
@@ -46,3 +47,4 @@ ODBC 會逸出序列使用 LIKE 子句。 此逸出序列語法如下所示：
  *ODBC esc 結束字元*:: =}  
   
  若要判斷驅動程式是否支援 LIKE 逸出序列，應用程式可以呼叫**SQLGetInfo** SQL_LIKE_ESCAPE_CLAUSE 資訊類型。
+

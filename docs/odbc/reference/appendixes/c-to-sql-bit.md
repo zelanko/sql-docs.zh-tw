@@ -18,6 +18,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8e7232773b97a66fc0b1b047e3fb8cc4212754f0
@@ -39,3 +40,4 @@ ms.lasthandoff: 09/09/2017
 |SQL_BIT|無|n/a|  
   
  驅動程式會忽略長度/指標值的位元 C 資料類型轉換資料，並假設資料緩衝區的大小是位元 C 資料類型的大小。 長度/指標值傳遞*StrLen_or_Ind*引數中的**SQLPutData**並使用指定的緩衝區中*StrLen_or_IndPtr*引數中**SQLBindParameter**。 使用指定的資料緩衝區*DataPtr*引數中的**SQLPutData**和*ParameterValuePtr*引數中的**SQLBindParameter**.
+

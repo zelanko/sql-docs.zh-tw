@@ -22,6 +22,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 93432e89688b9028686350f87182ef1b674c8383
@@ -59,3 +60,4 @@ ms.lasthandoff: 09/09/2017
  Visual FoxPro ODBC 驅動程式支援雙位元組字元集 (DBCS)。 如需詳細資訊，請參閱[多語系支援](../../odbc/microsoft/international-support-visual-foxpro-odbc-driver.md)。  
   
  驅動程式不支援 16 位元 Microsoft Windows 3.1 應用程式。
+

@@ -21,6 +21,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: fb9b6d354657578f7188481a2e7ff7566f725c80
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  如果基礎 DBMS 不支援自動認可模式的交易，驅動程式可以模擬它們執行時以手動方式認可每個 SQL 陳述式。  
   
  如果在自動認可模式下執行的 SQL 陳述式批次，則它是資料來源專用，認可批次中的陳述式時也一樣。 它們可以認可執行，或整個批次執行完成之後。 某些資料來源支援以上兩種行為，而且可能提供的其中一個或其他的方式。 特別是，如果批次的中間，發生錯誤，則資料來源專用是否已執行的陳述式來認可或回復。 因此，互通的應用程式，使用批次，並要求他們認可或回復整個應該只能在手動認可模式中執行批次。
+

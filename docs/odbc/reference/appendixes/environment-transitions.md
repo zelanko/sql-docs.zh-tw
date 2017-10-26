@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a044161df57f81fee3639fd26c94b5860d5c1913
@@ -135,3 +136,4 @@ ODBC 環境有下列三種狀態。
 |E0<br /><br /> 未配置|E1<br /><br /> 配置|E2<br /><br /> 連接|  
 |------------------------|----------------------|-----------------------|  
 |(KARTRIS)|(KARTRIS)|--|
+

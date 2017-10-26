@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f37ab932ef230d29a5db23aec920230de0443e37
@@ -33,3 +34,4 @@ ms.lasthandoff: 09/09/2017
  模組可以視為物件程式庫連結至應用程式程式碼。 不過，完全如何與應用程式的其餘部分的程序連結是視實作而定。 例如，無法編譯成目的碼與直接連結到應用程式程式碼的程序、 無法編譯並存放在 DBMS 和存取計劃識別碼放入應用程式程式碼的呼叫或它們無法在執行階段解譯。  
   
  模組的主要優點是它們完全分隔的程式設計語言的 SQL 陳述式。 理論上來說，它應該即可變更而不變更另一個只是將它們重新連結。
+

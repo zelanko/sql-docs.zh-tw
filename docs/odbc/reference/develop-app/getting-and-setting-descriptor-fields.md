@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f44d3016f3460d5ae9db3734c06117bdb1693259
@@ -37,3 +38,4 @@ ms.lasthandoff: 09/09/2017
 -   [複製的描述元](../../../odbc/reference/develop-app/copying-descriptors.md)  
   
 -   [使用精簡函式](../../../odbc/reference/develop-app/using-concise-functions.md)
+

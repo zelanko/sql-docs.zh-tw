@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 503af3ea0dbac61cee506b932f79eccab5dedcf8
@@ -58,3 +59,4 @@ SQLGetStmtOption(hstmt, fOption, pvParam)
  SQL_GET_BOOKMARK 陳述式選項已被取代，在 ODBC 3*.x*。 ODBC 3*.x*驅動程式，才能使用 ODBC 2。*x*使用 SQL_GET_BOOKMARK，應用程式，就必須支援 SQL_GET_BOOKMARK。 ODBC 3*.x*驅動程式，才能使用 ODBC 2。*x*應用程式，就必須支援 SQL_USE_BOOKMARKS 設 SQL_UB_ON 和應該公開 （expose） 的固定長度的書籤。 如果 ODBC 3*.x*驅動程式支援只可變長度的書籤，不會在固定長度的書籤，它必須傳回 SQLSTATE HYC00 （未實作的選擇性功能） 如果 ODBC 2。*x* SQL_USE_BOOKMARKS 設 SQL_UB_ON 嘗試應用程式。  
   
  ODBC 3*.x*驅動程式，驅動程式管理員不會再檢查以查看是否*選項*之間 SQL_STMT_OPT_MIN 和 SQL_STMT_OPT_MAX，或大於 SQL_CONNECT_OPT_DRVR_START。 驅動程式必須檢查。
+

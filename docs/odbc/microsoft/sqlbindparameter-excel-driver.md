@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 013f19579815dfcac2fcfe78cbbe41919bff9c15
@@ -29,3 +30,4 @@ ms.lasthandoff: 09/09/2017
 >  本主題提供 Excel 驅動程式特有的資訊。 如需此函式的一般資訊，請參閱底下的適當主題[ODBC 應用程式開發介面參考](../../odbc/reference/syntax/odbc-api-reference.md)。  
   
  使用 Microsoft Excel 驅動程式時，執行 SQL_CHAR 資料行中插入 null 值會使用參數的 INSERT 陳述式將會傳回 SQL_SUCCESS_WITH_INFO sqlstate 01004，「 資料 Truncated。 」
+

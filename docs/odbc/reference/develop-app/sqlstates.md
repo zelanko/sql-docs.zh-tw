@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0c99959fac35ac1cd312ab3d434f607c3f256dd8
@@ -52,3 +53,4 @@ Sqlstate 會提供警告或錯誤的原因的詳細的資訊。 雖然使用 IM 
  SQLSTATE HYC00 （未實作的選擇性功能） 是特別重要，因為它是在其中應用程式可以判斷驅動程式是否支援特定的陳述式或連接屬性的唯一方式。  
   
  Sqlstate 和哪些函式會傳回它們的完整清單，請參閱[附錄 a: ODBC 錯誤碼](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)。 在每個函式可能會傳回特定的 SQLSTATE 的條件的詳細說明，請參閱該函式。
+

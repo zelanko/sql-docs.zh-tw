@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 308e1ad6f2d99a0a6b7e73d8a82ac62362fea9a2
@@ -50,3 +51,4 @@ ms.lasthandoff: 09/09/2017
 6.  呼叫**SQLParamData**再次以表示它已傳送所有資料行的資料。 如果有任何資料在執行中資料行的資料尚未傳送，驅動程式會傳回 SQL_NEED_DATA 和下一步 的資料在執行資料行; 的唯一值應用程式會傳回至步驟 5。 如果資料已傳送的所有資料在執行資料行，資料列的資料會傳送至資料來源。 **SQLParamData**傳回 SQL_SUCCESS 或 SQL_SUCCESS_WITH_INFO，而且可以傳回任何 SQLSTATE，則**SQLBulkOperations**或**SQLSetPos**可以傳回。  
   
  之後**SQLBulkOperations**或**SQLSetPos**傳回 SQL_NEED_DATA 和最後一個資料執行資料行已完全傳送資料之前，陳述式是在需要的資料狀態。 在這個狀態下，應用程式只可以呼叫**SQLPutData**， **SQLParamData**， **SQLCancel**， **SQLGetDiagField**，或**SQLGetDiagRec**; 所有其他函式會傳回 SQLSTATE HY010 （函數順序錯誤）。 呼叫**SQLCancel**取消執行陳述式並傳回其先前的狀態。 如需詳細資訊，請參閱[附錄 b: ODBC 狀態轉換表](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)。
+

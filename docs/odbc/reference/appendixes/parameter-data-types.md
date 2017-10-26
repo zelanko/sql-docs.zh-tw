@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5dcd41f599a6e57a55d05a8a869363ec70c5f756
@@ -40,3 +41,4 @@ ms.lasthandoff: 09/09/2017
 |搭配使用的值**IN**|運算式或運算式中的參數標記時的第一個值相同|  
 |模式值搭配使用**像**|VARCHAR|  
 |搭配使用的更新值**更新**|更新資料行相同|
+

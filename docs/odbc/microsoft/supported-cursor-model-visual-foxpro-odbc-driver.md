@@ -21,6 +21,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b80cb7cbbea13dbc6d491d757f28d44d5fda1ea6
@@ -46,3 +47,4 @@ Visual FoxPro ODBC 驅動程式同時支援*區塊*(*資料列集*) 和*靜態*�
   
 ## <a name="rowset"></a>資料列集  
  資料指標，代表從資料來源擷取資料列中儲存的資料區塊。
+

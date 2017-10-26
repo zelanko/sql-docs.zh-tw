@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 560d6b98c27cefe438e99e2948decaded827e618
@@ -58,3 +59,4 @@ SET REPROCESS TO nAttempts [SECONDS] | TO AUTOMATIC
   
 ## <a name="remarks"></a>備註  
  第一次嘗試鎖定記錄或檔案不一定會成功。 經常的記錄或檔案已在網路上的另一位使用者被鎖定。 設定重新處理決定 Visual FoxPro 是否會鎖定記錄或檔案的初始嘗試失敗時的其他嘗試。 您可以指定其他嘗試進行，或進行多久嘗試多少次。 ON 錯誤常式會影響如何成功處理嘗試的鎖定。
+

@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c17230d49773262d2373017a24ab522f9eebb166
@@ -29,3 +30,4 @@ ms.lasthandoff: 09/09/2017
   
 > [!NOTE]  
 >  當您使用 Paradox 驅動程式而不需要實作 Borland Database Engine 時，不支援 ALTER TABLE 陳述式。僅讀取和附加允許陳述式。
+

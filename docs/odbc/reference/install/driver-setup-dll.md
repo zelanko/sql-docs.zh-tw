@@ -18,6 +18,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d75a8985feff2ddfe26d3e19e8bafd91f228d30e
@@ -44,3 +45,4 @@ ms.lasthandoff: 09/09/2017
 -   **SQLGetTranslator**。 提示使用者輸入的轉譯程式名稱和選項。 此函數會呼叫**ConfigTranslator**轉譯程式中安裝的 DLL。  
   
  驅動程式安裝程式的 DLL 是由驅動程式開發人員撰寫。 它可以是一部分的驅動程式 DLL 或個別的 DLL。
+

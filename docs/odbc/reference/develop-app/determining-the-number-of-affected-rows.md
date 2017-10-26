@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b2f030be011864be17c8539d8ab94f6980f0f791
@@ -31,3 +32,4 @@ ms.lasthandoff: 09/09/2017
  如果執行 SQL 陳述式的批次時，受影響的資料列計數可能總數的批次中的所有陳述式或批次中的每個陳述式的個別計數。 如需詳細資訊，請參閱[批次的 SQL 陳述式](../../../odbc/reference/develop-app/batches-of-sql-statements.md)和[多個結果](../../../odbc/reference/develop-app/multiple-results.md)。  
   
  SQL_DIAG_ROW_COUNT 診斷標頭欄位中的診斷與陳述式控制代碼相關聯的區域，也會傳回受影響的資料列數目。 不過，此欄位中的資料會重設之後相同的陳述式控制代碼上的每個函式呼叫所傳回的值而**SQLRowCount**維持不變，直到呼叫**SQLBulkOperations**， **SQLExecute**， **SQLExecDirect**， **SQLPrepare**，或**SQLSetPos**。
+

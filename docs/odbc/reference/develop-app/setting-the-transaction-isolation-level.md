@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d91c7789fbcd0c4dc197f2da13b23c1da34666bb
@@ -37,3 +38,4 @@ ms.lasthandoff: 09/09/2017
 -   如果速度是更為重要精確度及任何錯誤，可能會變小。 例如，假設公司可讓許多小型銷售和大型的業績很少。 估計的所有開啟的銷售量的總計值的交易可能會安全地使用 Read Uncommitted 隔離等級。 雖然交易會包含訂單，開啟或關閉而且後續會回復，這些會通常相互抵銷，而且交易會更快，因為每次它發現這類訂單，並不會封鎖它。  
   
  如需詳細資訊，請參閱[開放式並行存取](../../../odbc/reference/develop-app/optimistic-concurrency.md)。
+

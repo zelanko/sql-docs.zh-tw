@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b0e11fdd0d5d560cfcacd034745f7ed32cf8fca8
@@ -35,3 +36,4 @@ ms.lasthandoff: 09/09/2017
 -   **警告**描述警告 （類別 01） 的狀態記錄具有最低順位。 如果兩個或多個記錄描述警告 Sqlstate 開啟群組 CLI 規格所定義的相同警告條件 outrank ODBC 定義及驅動程式定義的 Sqlstate。  
   
  如果沒有具有最高等級的兩個或多個記錄，它是未定義的記錄是第一筆記錄。 未定義的所有其他的記錄順序。 特別是之前的錯誤,，可能會出現警告，因為應用程式時應檢查所有的狀態記錄函式會傳回 SQL_SUCCESS 以外的值。
+

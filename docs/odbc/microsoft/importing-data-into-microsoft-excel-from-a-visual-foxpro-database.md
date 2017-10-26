@@ -20,6 +20,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3cd82106bf81b5885f74adf6c1759883110ea913
@@ -46,3 +47,4 @@ ms.lasthandoff: 09/09/2017
 5.  選取查詢的欄位拖曳到資料表中較低的設計工具 的下半部。  
   
 6.  關閉 Microsoft 查詢。 您選取的資料匯入 Microsoft Excel 試算表。
+

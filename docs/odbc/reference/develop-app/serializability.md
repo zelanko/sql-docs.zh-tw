@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 81d23b5bc94f2982becca5e76ab28269d6c233c1
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  為何，所以可序列化能力需要這樣做？ 換句話說，它為何如此重要，它會顯示該一筆交易完成之前啟動下一個交易嗎？ 請考慮下列問題。 拜訪客戶順序在同一時間 clerk 送出帳單輸入訂單。 假設拜訪客戶順序輸入訂單從公司 X，但不是會認可它。業務員仍向該代表從公司 X。Clerk 要求的所有開啟的訂單清單和探索 X 公司的順序，並將它們傳送帳單。 現在該代表從 X 公司決定他們想要變更其順序，因此拜訪客戶順序則會認可交易之前變更它。 X 公司取得不正確的帳單。  
   
  如果序列化拜訪客戶順序的和 clerk 的交易，永遠不可能發生這個問題。 Clerk 的交易開始，在此情況下您會有 clerk 送出正確的帳單之前, 會完成拜訪客戶順序的交易或交易的 clerk 會完成在此情況下拜訪客戶順序的交易開始之前clerk 就不具有傳送帳單到 X 公司完全。
+

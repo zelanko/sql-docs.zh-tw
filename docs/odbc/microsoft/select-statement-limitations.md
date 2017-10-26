@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 53b3e18a07e14e6059a9d193d8659a09b87e6c65
@@ -38,3 +39,4 @@ ms.lasthandoff: 09/09/2017
  如果輸入了不正確的資料行名稱是 SELECT 陳述式，將 SQLSTATE 07001，「 錯誤數目的參數，"會傳回錯誤而 SQLSTATE S0022 錯誤，「 資料行找不到。 」  
   
  使用 Microsoft Excel 驅動程式時，如果空字串插入資料行，則為空字串會轉換成 null 值;搜尋 SELECT 陳述式執行時以空字串的 WHERE 子句中該資料行上，將會失敗。
+

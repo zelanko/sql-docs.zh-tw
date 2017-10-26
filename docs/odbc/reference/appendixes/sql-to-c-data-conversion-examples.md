@@ -17,6 +17,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c7dd7b514ce4788a035e6f230f3d0a87a94440f2
@@ -50,3 +51,4 @@ SQL_TYPE_TIMESTAMP|1992-12-31 23:45:55.12|SQL_C_CHAR|22|1992-12-31 23:45:55.1\0 
  [a]"\0"代表 null 結束位元組。 驅動程式一律 null 終止 SQL_C_CHAR 資料。  
   
  [這份清單中的 b] 的數字為 TIMESTAMP_STRUCT 結構的欄位中儲存的數字。
+

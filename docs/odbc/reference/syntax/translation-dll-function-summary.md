@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b5035faace47e33eae7f0c3d425d1dbd40267974
@@ -31,3 +32,4 @@ ms.lasthandoff: 09/09/2017
 |----------|-------------------|-------------|  
 |轉譯資料|[SQLDataSourceToDriver](../../../odbc/reference/syntax/sqldatasourcetodriver-function.md)|將資料從資料來源傳輸至驅動程式的轉譯。|  
 ||[SQLDriverToDataSource](../../../odbc/reference/syntax/sqldrivertodatasource-function.md)|會轉譯從驅動程式傳送至資料來源的所有資料。|
+

@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5709d3ef8d186d0dcc0fb56f27829298f74e2b0c
@@ -51,3 +52,4 @@ ms.lasthandoff: 09/09/2017
 -   [SQLSTATE 對應](../../../odbc/reference/develop-app/sqlstate-mappings.md)  
   
 -   [Datetime 資料類型變更](../../../odbc/reference/develop-app/datetime-data-type-changes.md)
+

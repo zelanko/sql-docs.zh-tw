@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: eb3e6adb6f563e49429c2e04239ce3170d96b9a4
@@ -29,3 +30,4 @@ ms.lasthandoff: 09/09/2017
  更新版本中，應用程式呼叫驅動程式管理員，並將其傳遞機器資料來源的名稱或包含檔案資料來源的檔案路徑。 當傳遞機器資料來源名稱，驅動程式管理員會搜尋系統以尋找資料來源所使用的驅動程式。 然後會載入驅動程式，並將資料來源的名稱傳遞給它。 驅動程式會使用資料來源的名稱尋找需要連接到資料來源的資訊。 最後，它會連接到資料來源，通常為通常不會儲存其使用者識別碼和密碼，提示使用者。  
   
  當傳遞檔案資料來源時，驅動程式管理員開啟檔案，並載入指定的驅動程式。 如果檔案也包含連接字串，它將傳遞此驅動程式。 連接字串中使用的資訊，此驅動程式會連接到資料來源。 如果不傳遞任何連接字串，則驅動程式通常會提示使用者輸入所需的資訊。
+

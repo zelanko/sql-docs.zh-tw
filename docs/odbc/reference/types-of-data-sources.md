@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 77d2aff43a35245724fdc5f165b8e9f3361ee3a0
@@ -31,3 +32,4 @@ ms.lasthandoff: 09/09/2017
 -   [機器資料來源](../../odbc/reference/machine-data-sources.md)  
   
 -   [檔案資料來源](../../odbc/reference/file-data-sources.md)
+

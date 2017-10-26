@@ -18,6 +18,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2cbdbbd3da828d5a995dbd9bff9c6b95aed1420a
@@ -72,3 +73,4 @@ ms.lasthandoff: 09/09/2017
  [b] 的 「 無 」 案例中，驅動程式可以選擇性地傳回 SQL_SUCCESS_WITH_INFO 而且 01S07 小數位數截斷時。  
   
  驅動程式將資料轉換的數字的 C 資料類型時，會忽略長度/指標值，並假設資料緩衝區的大小是數字的 C 資料類型的大小。 長度/指標值傳遞*StrLen_or_Ind*引數中的**SQLPutData**並使用指定的緩衝區中*StrLen_or_IndPtr*引數中**SQLBindParameter**。 使用指定的資料緩衝區*DataPtr*引數中的**SQLPutData**和*ParameterValuePtr*引數中的**SQLBindParameter**.
+

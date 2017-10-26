@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: fb9afa5b40ffa7628e04ee85e5ddc4f752e98935
@@ -43,3 +44,4 @@ ms.lasthandoff: 09/09/2017
  ODBC 3*.x*應用程式使用 ODBC 3*.x*驅動程式不應該呼叫**SQLGetInfo**與*資訊類型*引數中所述前一個資料表，但應使用 ODBC 3*.x* *資訊類型*下列段落中所列的引數。 不是之間的一對一對應*資訊類型*ODBC 2 中使用的引數。*x*以及使用在 ODBC 3*.x*。 ODBC 3*.x*應用程式使用 ODBC 2。*x*驅動程式，相反地，應該使用*資訊類型*先前所述的引數。  
   
  上表中的資訊類型的某些已取代為資料指標屬性的資訊類型。 這些被取代的類型為 SQL_FETCH_DIRECTION、 SQL_LOCK_TYPES、 SQL_POS_OPERATIONS、 SQL_POSITIONED_STATEMENTS、 SQL_SCROLL_CONCURRENCY，以及 SQL_STATIC_SENSITIVITY 的資訊。 新的資料指標屬性類型是 SQL_XXX_CURSOR_ATTRIBUTES1and SQL_XXX_CURSOR_ATTRIBUTES2，其中 XXX 等於動態、 FORWARD_ONLY、 KEYSET_DRIVEN 或靜態。 每個新的型別表示的單一資料指標類型的驅動程式功能。 如需有關這些選項的詳細資訊，請參閱[SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)函式描述。
+

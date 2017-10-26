@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a96949b4ca739e382a547769f496576bf13db8b7
@@ -52,3 +53,4 @@ ms.lasthandoff: 09/09/2017
 -   [撰寫可互通的應用程式](../../../odbc/reference/develop-app/writing-an-interoperable-application.md)  
   
 -   [測試可互通的應用程式](../../../odbc/reference/develop-app/testing-interoperable-applications.md)
+

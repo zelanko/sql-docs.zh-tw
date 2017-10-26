@@ -23,6 +23,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: bb17b0ab5da8770c4622c7359c16de6876688c17
@@ -84,3 +85,4 @@ RETCODE SQLInstallerError(
  若要擷取的函式呼叫的多個錯誤，應用程式呼叫**SQLInstallerError**多次。  
   
  當沒有其他資訊， **SQLInstallerError**傳回 sql_no_data 為止， *pfErrorCode*引數是未定義， *pcbErrorMsg*引數等於 0，並*lpszErrorMsg*引數包含 null 結束的單一字元 (除非*cbErrorMsgMax*引數等於 0)。
+

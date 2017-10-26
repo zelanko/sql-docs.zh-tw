@@ -18,6 +18,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e64c33ea666d3df06b220a8c31f67e3606df7ffa
@@ -60,3 +61,4 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="see-also"></a>另請參閱  
  [ODBC Programmer's Reference (ODBC 程式設計人員參考)](../../../odbc/reference/odbc-programmer-s-reference.md)
+

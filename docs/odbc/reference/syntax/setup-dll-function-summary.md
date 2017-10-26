@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c5845411fd329869cc49a5f4caaa5be987135841
@@ -29,3 +30,4 @@ ms.lasthandoff: 09/09/2017
 |工作|函數名稱|目的|  
 |----------|-------------------|-------------|  
 |設定資料來源和轉換程式|[ConfigDriver](../../../odbc/reference/syntax/configdriver-function.md)<br /><br /> [ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md)<br /><br /> [ConfigTranslator](../../../odbc/reference/syntax/configtranslator-function.md)|安裝或解除安裝驅動程式。<br /><br /> 新增、 修改或刪除資料來源。<br /><br /> 傳回預設轉譯選項。|
+

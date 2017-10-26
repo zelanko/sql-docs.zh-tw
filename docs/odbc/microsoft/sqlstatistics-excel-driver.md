@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3e0ca371de4c7d81847be076761e8ce4d0beafd2
@@ -42,3 +43,4 @@ ms.lasthandoff: 09/09/2017
 |PAGES|一律傳回 NULL。|  
   
  篩選根據唯一性 ( *fUnique*引數)。 *FAccuracy*參數已忽略。
+

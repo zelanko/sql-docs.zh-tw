@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a80ef1756ca2d106b7a786609fb3bbce9b9539e4
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  將記憶體配置陳述式控制代碼，並將陳述式控制代碼與所指定的連接相關聯*hdbc*。 驅動程式管理員會傳遞這個驅動程式時，所配置的記憶體的呼叫*hstmt*結構。  
   
  如需詳細資訊，請參閱[SQLAllocStmt](../../odbc/reference/syntax/sqlallocstmt-function.md)中*ODBC 程式設計人員參考*。
+

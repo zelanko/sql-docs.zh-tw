@@ -14,6 +14,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: bf03977c62729c273b66d2ab4af8cae9e239dfd9
@@ -35,3 +36,4 @@ ms.lasthandoff: 09/09/2017
 -   [環境、 連接和陳述式屬性](../../../odbc/reference/develop-app/environment-connection-and-statement-attributes.md)  
   
 -   [資料表和檢視表](../../../odbc/reference/develop-app/tables-and-views.md)
+

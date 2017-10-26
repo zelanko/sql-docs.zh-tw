@@ -19,6 +19,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9f7263f7814e4ab286d1fd678604b3f84a45108f
@@ -46,3 +47,4 @@ ms.lasthandoff: 09/09/2017
 -   **存取特定 DBMS 一次。** 例如，可能包含擷取資料，藉由呼叫 ODBC 函數的試算表**驅動程式**關鍵字來識別特定的驅動程式。 驅動程式名稱會有該驅動程式之任何使用者有意義，因為這些使用者之間傳遞試算表。 如果試算表包含資料來源名稱，每位使用者必須建立使用試算表相同的資料來源。  
   
 -   **瀏覽到特定的驅動程式可存取的所有資料庫的系統。** 如需詳細資訊，請參閱[連接 SQLBrowseConnect](../../../odbc/reference/develop-app/connecting-with-sqlbrowseconnect.md)稍後在本章節中。
+

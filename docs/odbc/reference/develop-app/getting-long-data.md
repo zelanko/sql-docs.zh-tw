@@ -20,6 +20,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0ea30c211e3cfd66acf1588ef9ca2a45fd1037d1
@@ -89,3 +90,4 @@ SQLCloseCursor(hstmt);
  有些驅動程式不會強制這些限制。 互通的應用程式應該是假設存在，或判斷哪一個限制不會強制執行藉由呼叫**SQLGetInfo** SQL_GETDATA_EXTENSIONS 選項。  
   
  如果應用程式不需要在字元或二進位資料行中的所有資料，它可以減少網路流量以 DBMS 架構驅動程式執行陳述式前，先設定 SQL_ATTR_MAX_LENGTH 陳述式屬性。 這會限制的任何字元或二進位資料行就會傳回的資料位元組數。 例如，假設資料行包含長文字文件。 瀏覽包含此資料行資料表的應用程式可能需要顯示每份文件的第一頁。 雖然這個陳述式屬性可以在模擬驅動程式中，沒有理由要執行這項操作。 特別是，如果應用程式想要截斷字元或二進位資料，它應該繫結小型緩衝區的資料行**SQLBindCol** ，讓驅動程式會截斷資料。
+

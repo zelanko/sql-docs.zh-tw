@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a76f55d8e6e7191a47070d79856a0302a8318f11
@@ -33,3 +34,4 @@ ms.lasthandoff: 09/09/2017
 -   [垂直應用程式](../../../odbc/reference/develop-app/vertical-applications.md)  
   
 -   [泛型應用程式](../../../odbc/reference/develop-app/generic-applications.md)
+

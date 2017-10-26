@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 146e16608f0f2f790bf49a84de2ef4610df33d0f
@@ -74,3 +75,4 @@ typedef struct tagSQL_DAY_SECOND
 ```  
   
  *Interval_type* SQL_INTERVAL_STRUCT 欄位指出應用程式等位中保留哪些結構和結構的成員也會相關。 *Interval_sign*欄位值 SQL_FALSE 如果間隔的開頭欄位是不帶正負號; 如果這是 SQL_TRUE，[前置] 欄位是負數。 前置欄位本身中的值一律是不帶正負號的值為何*interval_sign*。 *Interval_sign*欄位做為正負號位元。
+

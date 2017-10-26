@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2ada446a96ecb6fd81d05380c8a29707eb41f8ee
@@ -29,3 +30,4 @@ ms.lasthandoff: 09/09/2017
  自訂應用程式是以原生資料庫 Api 的主要候選。 主要原因是自訂應用程式通常使用單一的 DBMS，而且不需要互通。 原生資料庫 Api 可能會比 ODBC 公開的特定 DBMS 功能的更好，並可能會公開不 ODBC 所公開的功能。 此外，自訂應用程式的開發人員熟悉通常其 DBMS 的原生資料庫應用程式開發介面，因為沒有什麼道理，若要了解 ODBC。 不過，值得請注意，對於某些 Dbms，ODBC API 的原生資料庫。  
   
  因此哪些應用程式是 ODBC 的候選項目？ 最佳的候選方式為使用一個以上的 DBMS 應用程式。 這包括幾乎所有的一般和垂直應用程式。 它也包含一些自訂的應用程式。 例如，使用數個不同的 Dbms 自訂應用程式會更為輕鬆而且清潔撰寫使用多個原生應用程式開發介面比 ODBC。 並使用 ODBC 撰寫的自訂應用程式都能更輕鬆地從一個 DBMS 移到另一個公司，或將相同的應用程式，針對不同的 Dbms 部署移轉。
+

@@ -20,6 +20,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3ee36dbd04cd60d8b5906abc0248d07f28ff5677
@@ -37,3 +38,4 @@ ms.lasthandoff: 09/09/2017
   
 > [!NOTE]  
 >  如果資料指標程式庫不會更新其快取資料行 **StrLen_or_IndPtr*對應的資料列集的緩衝區是 SQL_DATA_AT_EXEC 或 SQL_LEN_DATA_AT_EXEC 巨集的結果。
+

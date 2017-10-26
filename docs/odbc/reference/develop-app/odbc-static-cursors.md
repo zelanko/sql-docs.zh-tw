@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: aaddef08bfea9e1a1820727743e5212557d823d4
@@ -32,3 +33,4 @@ ms.lasthandoff: 09/09/2017
  將 sql_attr_row_status_ptr 設定陳述式屬性所指定之資料列狀態陣列可以包含 SQL_ROW_SUCCESS、 SQL_ROW_SUCCESS_WITH_INFO 或 SQL_ROW_ERROR 的任何資料列。 它會傳回 SQL_ROW_UPDATED、 SQL_ROW_DELETED 或 SQL_ROW_ADDED 更新、 刪除或插入游標處，假設資料指標可以偵測到這類變更的資料列。  
   
  通常實作以鎖定的結果集的資料列，或藉由複製，或快照集，結果集的靜態資料指標。 雖然鎖定資料列是相當容易，但是它有大幅降低並行的缺點。 建立複本允許更大的並行存取可讓資料指標來追蹤它自己的更新、 刪除和插入所修改該複本。 不過，複本是成本更高時進行，並依照該資料會變更其他人可以分離的基礎資料中。
+

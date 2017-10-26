@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 234da7bb8519149c78779f7920333338737b394b
@@ -50,3 +51,4 @@ ms.lasthandoff: 09/09/2017
 -   [索引鍵集驅動資料指標](../../../odbc/reference/develop-app/keyset-driven-cursors.md)  
   
 -   [混合的資料指標](../../../odbc/reference/develop-app/mixed-cursors.md)
+

@@ -17,6 +17,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 736cfc952412780a4720fd92239e36106affeba7
@@ -38,3 +39,4 @@ ms.lasthandoff: 09/09/2017
  擷取結果的完整說明，請參閱[擷取結果 （基本）](../../../odbc/reference/develop-app/retrieving-results-basic.md)和[擷取結果 （進階）](../../../odbc/reference/develop-app/retrieving-results-advanced.md)。  
   
  應用程式現在會傳回 「 步驟 3:: 建置和執行 SQL 陳述式 」 執行另一個陳述式中相同的交易。或繼續進行 「 步驟 5:: Commit Transaction"認可或回復交易。
+

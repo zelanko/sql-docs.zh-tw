@@ -22,6 +22,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 322246bbb6634386955c8655c2e20e3cfe5b6fed
@@ -45,3 +46,4 @@ Microsoft Visual FoxPro ODBC 驅動程式支援：
   
 ## <a name="sort-order"></a>排序次序 (sort order)  
  排序順序納入不同的排序規則*地區設定*s，讓您可以正確排序這些語言中的資料。 Visual FoxPro，在目前的排序次序會判斷字元運算式的比較和記錄出現在中編製索引或資料表的排序的順序的結果。
+

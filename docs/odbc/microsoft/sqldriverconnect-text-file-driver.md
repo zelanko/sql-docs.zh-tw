@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 117b619b351e5a8c1e2c0865fe0ed6add5589ecb
@@ -40,3 +41,4 @@ ms.lasthandoff: 09/09/2017
 |驅動程式|所需的關鍵字|範例|  
 |------------|-----------------------|--------------|  
 |Text|驅動程式|Driver = {Microsoft 文字驅動程式 (*.txt;\*。csv)};DefaultDir = c:\temp|
+

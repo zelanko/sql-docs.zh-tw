@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 03bf019ac788e5879667db83855c91ad0a3aa0ad
@@ -33,3 +34,4 @@ Microsoft Jet 資料庫引擎，可安裝 ISAM 檔案和 Microsoft ODBC 檔案�
 |每個桌面資料庫驅動程式所使用的檔案|ODBC 驅動程式檔案|  
 |每個桌面資料庫驅動程式所使用的 Microsoft Jet 檔案|Microsoft Jet 檔案|  
 |IISAM 驅動程式檔案，以便提供 Microsoft Jet 和其他 DBMS 之間的資料存取|可安裝的 ISAM 驅動程式檔案|
+

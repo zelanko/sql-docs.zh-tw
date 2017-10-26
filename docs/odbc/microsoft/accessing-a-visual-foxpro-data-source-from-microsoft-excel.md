@@ -19,6 +19,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 085ab9bd928d7a25bd5d9e1d75f3355bdad0fd8e
@@ -52,3 +53,4 @@ ms.lasthandoff: 09/09/2017
 8.  按一下 使用。  
   
  現在您可以將資料表加入開啟的查詢。 如需有關建立查詢的詳細資訊，請參閱[匯入資料至 Microsoft Excel 從 Visual FoxPro 資料庫](../../odbc/microsoft/importing-data-into-microsoft-excel-from-a-visual-foxpro-database.md)。
+

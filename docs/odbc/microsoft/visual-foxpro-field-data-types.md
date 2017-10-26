@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 7c1ae849d91962cb7d11ca8bac755665217fe1a2
@@ -40,3 +41,4 @@ ms.lasthandoff: 09/09/2017
 |N|N|d|數值欄位的寬度* n *與*d*小數位數|  
 |T|-|-|DateTime|  
 |Y|-|-|貨幣|
+

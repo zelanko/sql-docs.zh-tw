@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4c38b613ed4c2e6efb5737118030905ab9de60b1
@@ -31,3 +32,4 @@ ms.lasthandoff: 09/09/2017
  應用程式可以呼叫**SQLNumResultCols**在任何時間之後的陳述式會準備並執行。 不過，因為某些資料來源無法輕易地說明所建立的已備妥的陳述式的結果集，會降低效能如果**SQLNumResultCols**陳述式已備妥，但會在執行之前呼叫。  
   
  某些資料來源也支援決定 SQL 陳述式傳回結果集內的資料列數目。 若要這樣做，應用程式會呼叫**SQLRowCount**。 確實的資料列計數所代表的內容會以選項的設定 SQL_DYNAMIC_CURSOR_ATTRIBUTES2、 SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES2、 SQL_KEYSET_CURSOR_ATTRIBUTES2 或 SQL_STATIC_CURSOR_ATTRIBUTES2 （取決於資料指標的類型）呼叫所傳回的**SQLGetInfo**。 此位元遮罩表示每個資料指標類型，傳回的資料列計數是否正確、 近似值，或根本不是可用。 是否為靜態的資料列計數，或透過所做的變更會影響索引鍵集驅動資料指標**SQLBulkOperations**或**SQLSetPos**，或者藉由定位的 update 或 delete 陳述式，會取決於其他位元傳回先前所列的相同選項引數。 如需詳細資訊，請參閱[SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)函式描述。
+

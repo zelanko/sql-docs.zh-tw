@@ -17,6 +17,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: fbafffd1922dabbb49bec1cae59d6bce099bd5d7
@@ -44,3 +45,4 @@ ms.lasthandoff: 09/09/2017
 -   [步驟 5： 認可交易](../../../odbc/reference/develop-app/step-5-commit-the-transaction.md)  
   
 -   [步驟 6： 中斷與資料來源](../../../odbc/reference/develop-app/step-6-disconnect-from-the-data-source.md)
+

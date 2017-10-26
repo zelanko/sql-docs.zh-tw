@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3169ef45acb26b6db6bbb46680163575d5a588f4
@@ -28,3 +29,4 @@ ms.lasthandoff: 09/09/2017
 子句 WHERE 子句中的最大數目為 40。  
   
  LONGVARBINARY 和 LONGVARCHAR 資料行可以與常值的長度，最多 255 個字元，但不能使用參數進行比較。
+

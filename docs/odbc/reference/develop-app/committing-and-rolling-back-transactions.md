@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4090e609063b74fdcbef694c400272ee6af090c5
@@ -35,3 +36,4 @@ ms.lasthandoff: 09/09/2017
  如果應用程式通過的環境控制代碼**SQLEndTran**但是不會通過連接控制代碼，驅動程式管理員在概念上呼叫**SQLEndTran**與每個驅動程式的環境控制代碼，在環境中有一或多個作用中連線。 驅動程式，然後認可在環境中的每個連接上的交易。 不過，請務必要了解，驅動程式或驅動程式管理員都不會執行兩階段認可在環境中，連接上這是只是方便程式設計同時呼叫**SQLEndTran**環境中的所有連線。  
   
  (A*兩階段認可*通常用來認可分散到多個資料來源的交易。 在其第一個階段中，資料來源會輪詢對於是否能認可交易的一部分。 在第二個階段中，實際上是在所有資料來源認可交易。 如果任何資料來源中的第一個階段回覆它們無法認可交易，方法是，第二個階段不會發生。）
+

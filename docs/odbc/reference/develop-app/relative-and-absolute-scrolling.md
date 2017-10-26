@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: cf5155a44827adb972881da17ac2bc05d92a0cd4
@@ -48,3 +49,4 @@ ms.lasthandoff: 09/09/2017
  資料指標，也就是結果的大小中的資料列數目設定，可做為診斷的標頭的 SQL_DIAG_CURSOR_ROW_COUNT 欄位。 在此欄位中的值之後才定義**SQLExecute**， **SQLExecDirect**，或**SQLMoreResult**已呼叫。 這個計數可以是近似的計數或確切的數目，視驅動程式的功能而定。 您可以藉由呼叫判斷驅動程式支援**SQLGetInfo**與資料指標屬性的資訊類型，並檢查是否 SQL_CA2_CRC_APPROXIMATE 或 SQL_CA2_CRC_EXACT 元傳回類型的資料指標。  
   
  動態資料指標並不支援的實際資料列計數。 對於其他類型的資料指標中，驅動程式可以支援精確或大約的資料列計數，但非兩者。 如果此驅動程式支援的精確或大約都不特定的資料指標類型的資料列計數，SQL_DIAG_CURSOR_ROW_COUNT 欄位包含目前為止已擷取的資料列數目。 不論驅動程式支援， **SQLFetchScroll**與*作業*的 SQL_FETCH_LAST 將會導致 SQL_DIAG_CURSOR_ROW_COUNT 欄位包含正確的資料列計數。
+

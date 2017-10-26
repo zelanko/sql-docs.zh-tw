@@ -18,6 +18,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2ab8cb4066a8c5c7ab2e31401dd1e80d003d5b38
@@ -33,3 +34,4 @@ ms.lasthandoff: 09/09/2017
  下圖顯示兩個不同的組態，以檔案為基礎的驅動程式，一個資料位於本機，因為其所在的其他網路檔案伺服器上。  
   
  ![檔案的兩個組態 &#45; 根據的 drivers](../../odbc/reference/media/pr06.gif "pr06")
+

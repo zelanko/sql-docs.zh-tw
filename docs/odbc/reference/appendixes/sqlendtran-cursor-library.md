@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 50b6c5ffec8dd088bdc730699cfa88abea860768
@@ -36,3 +37,4 @@ ms.lasthandoff: 09/09/2017
 -   關閉資料指標在交易界限的資料來源，資料指標程式庫會關閉資料指標，並刪除快取的連接上的所有陳述式。  
   
 -   刪除已備妥的陳述式在交易界限的資料來源，應用程式必須 reprepare 上的連接，再重新加以所有備妥的陳述式。
+

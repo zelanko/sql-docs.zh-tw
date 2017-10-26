@@ -19,6 +19,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: dab3cacffff383170a6403065c555f5ef105f672
@@ -49,3 +50,4 @@ Microsoft Visual FoxPro 是功能強大物件導向環境，來建構和應用�
 |請參閱支援的硬體和軟體的清單|[系統需求](../../odbc/microsoft/system-requirements-visual-foxpro-odbc-driver.md)|  
   
  下載並安裝 Visual FoxPro ODBC 驅動程式的相關資訊，請參閱[Visual FoxPro ODBC 驅動程式](http://go.microsoft.com/fwlink/?LinkId=121318)上 MSDN 下載。
+

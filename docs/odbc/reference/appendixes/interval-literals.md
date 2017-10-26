@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: efe7ea13150afe1eb9df7586df1a1a83e8f3f92f
@@ -98,3 +99,4 @@ INTERVAL[<sign>] 'value' <interval qualifier>
 |{間隔 '223.16' 第二個}<br /><br /> {間隔 '223' YEAR}|因為未指定的開頭有效位數，則預設為 2，這是保留指定的常值太小。|  
 |{間隔 '22.1234567' 第二個}|秒數有效位數是未指定，因此它會預設為 6。 常值的小數點後具有 7 個位數。|  
 |{間隔 ' 163-13' 月份的 YEAR(3)}<br /><br /> {INTERVAL ' 163} 65' DAY(3) 小時的時間<br /><br /> {間隔為分鐘 '163 62:39' DAY(3)}<br /><br /> {間隔至 SECOND(3) '163 12:125:59.163' DAY(3)}<br /><br /> {間隔 '163:144' 分鐘 HOUR(3)}<br /><br /> {間隔 '163:567:234.163' SECOND(4) 的 HOUR(3)}<br /><br /> {間隔 '163:591.163' SECOND(5) 的 MINUTE(3)}|尾端欄位並未遵循西曆的規則。|
+

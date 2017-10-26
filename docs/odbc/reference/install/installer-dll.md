@@ -17,6 +17,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1ae0994102599bf2b1a36e6f2945537cea59c47d
@@ -33,3 +34,4 @@ ms.lasthandoff: 09/09/2017
 ## <a name="see-also"></a>另請參閱  
  [ODBC 元件的登錄項目](../../../odbc/reference/install/registry-entries-for-odbc-components.md)   
  [資料來源的登錄項目](../../../odbc/reference/install/registry-entries-for-data-sources.md)
+

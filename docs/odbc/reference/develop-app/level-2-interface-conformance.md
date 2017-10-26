@@ -18,6 +18,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c272637e15d95a09862170ec871274adb624c271
@@ -41,3 +42,4 @@ ms.lasthandoff: 09/09/2017
 |209|設定陳述式屬性 sql_attr_concurrency 設定為 SQL_CONCUR_READ_ONLY 以外的至少一個值。|  
 |210|逾時時間登入要求和 （SQL_ATTR_LOGIN_TIMEOUT 和 sql_attr_query_timeout 時） 的 SQL 查詢的能力。|  
 |211|可以變更預設的隔離等級。執行的能力擁有 「 序列化 」 的隔離等級的交易。|
+

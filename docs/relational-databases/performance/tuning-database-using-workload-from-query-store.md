@@ -16,6 +16,7 @@ caps.latest.revision: 9
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 7f89ed5e87b8fd51e8618a8559679225d91b32de
@@ -57,3 +58,4 @@ SQL Server 中的[查詢存放區](../../relational-databases/performance/how-qu
 [教學課程：Database Engine Tuning Advisor](Tutorial:%20Database%20Engine%20Tuning%20Advisor.md)     
 [查詢存放區如何收集資料](../../relational-databases/performance/how-query-store-collects-data.md)     
 [查詢存放區的最佳做法](../../relational-databases/performance/best-practice-with-the-query-store.md)
+

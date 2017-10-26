@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4ddd3e0db3987ed14984a978c88befbd076562b5
@@ -32,3 +33,4 @@ ms.lasthandoff: 09/09/2017
  也可以是非共用.dsn 檔案。 自.dsn 檔案位於單一電腦上，並指向 機器資料來源。 自檔案資料來源存在目的主要是為了允許輕鬆轉換機器資料來源為檔案資料來源，讓應用程式可以設計為只使用檔案資料來源。 當驅動程式管理員會將資訊傳送自檔案資料來源中時，連接視.dsn 檔案會指向機器資料來源。  
   
  如需檔案資料來源的詳細資訊，請參閱[連接使用的檔案資料來源](../../odbc/reference/develop-app/connecting-using-file-data-sources.md)，或[SQLDriverConnect](../../odbc/reference/syntax/sqldriverconnect-function.md)函式描述。
+

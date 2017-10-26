@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 37834afc7cc69e0276645d68752e66f68449fbb3
@@ -70,3 +71,4 @@ ms.lasthandoff: 09/09/2017
     ```  
   
 8.  執行表單，並使用資料控制項可以跳過客戶識別碼欄位，從 Visual FoxPro TasTrade 範例資料庫。
+

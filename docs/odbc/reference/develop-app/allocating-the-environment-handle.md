@@ -22,6 +22,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 322978a4006460fc61a438c6aff5ed8eca0c6c93
@@ -51,3 +52,4 @@ ms.lasthandoff: 09/09/2017
  當**SQLFreeHandle**呼叫時，結構用來儲存環境的相關資訊的驅動程式版本。 請注意， **SQLFreeHandle**後該環境控制代碼上的所有連接控制代碼已釋放都後，無法呼叫直到環境控制代碼。  
   
  如需環境控制代碼的詳細資訊，請參閱[環境處理](../../../odbc/reference/develop-app/environment-handles.md)。
+

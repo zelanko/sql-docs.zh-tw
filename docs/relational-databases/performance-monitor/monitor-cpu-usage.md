@@ -26,6 +26,7 @@ caps.latest.revision: 20
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 53ee7928baad42733f9b9cfaaf699153b993a287
@@ -60,3 +61,4 @@ ms.lasthandoff: 06/22/2017
  正在處理許多用戶端要求而使用率約達 100% 時，可能代表佇列中已有處理序在等候處理器時間，而造成瓶頸。 增加更快的處理器可解決這個問題。  
   
   
+

@@ -16,6 +16,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d3a826dbe1bb1d2900f787f72a725aa984b844a2
@@ -28,3 +29,4 @@ ms.lasthandoff: 09/09/2017
 >  將移除這項功能，在未來的版本的 Windows。 避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 Microsoft 建議使用驅動程式的資料指標功能。  
   
  資料指標程式庫不支援呼叫**SQLBulkOperations**。 如需一般資訊**SQLBulkOperations**，請參閱[SQLBulkOperations 函式](../../../odbc/reference/syntax/sqlbulkoperations-function.md)。
+

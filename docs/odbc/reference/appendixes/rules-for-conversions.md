@@ -19,6 +19,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 06baaaff03f75cbf04da86527a25ea60755a473e
@@ -106,3 +107,4 @@ ms.lasthandoff: 09/09/2017
          （2） 驅動程式將四捨五入 Y 中的字串，以適當的規模 （這也可以是零），並將結果寫入至 CT.  
   
          （3） 驅動程式都不會截斷也不會四捨五入，但只會將 Y 的第一個 LT 字元複製到 CT.
+

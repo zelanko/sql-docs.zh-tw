@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1b149b1e9df8338b5502d57e6e7eb355b66bcc3f
@@ -38,3 +39,4 @@ ms.lasthandoff: 09/09/2017
 -   Interval 資料類型的尾端秒欄位，如秒欄位的值必須是介於 0 到 59.9 (*n*) (含） 之間，其中* n *是數字的數目小數秒數有效位數。  
   
 -   尾端的秒欄位的日期時間資料型別，秒欄位的值必須介於 0 至 61.9 (*n*) (含） 之間，其中* n *指定"9"的數目數字和值* n *小數秒數有效位數。 （秒的範圍可以讓維護恒星時間同步處理兩個閏秒）。
+

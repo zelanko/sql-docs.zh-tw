@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d178842945e642e05580d57523e21dec2ac461f0
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  列出描述驅動程式和驅動程式屬性的關鍵字。  
   
  如需詳細資訊，請參閱[SQLDrivers](../../odbc/reference/syntax/sqldrivers-function.md)中*ODBC 程式設計人員參考*。
+

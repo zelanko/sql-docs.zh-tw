@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8ccd79048c250c73867752ebaf0b2b7060a6c19b
@@ -77,3 +78,4 @@ int main() {
  在執行階段建構 SQL 陳述式的應用程式可以向使用者提供極大的彈性。 可以從上述的範例中，即使不支援這類常見的作業為看出**其中**子句， **ORDER BY**子句，或是聯結，在執行階段建構 SQL 陳述式是相當複雜比硬式編碼的陳述式。 此外，測試這類應用程式會有問題因為它們可以建立任意數目的 SQL 陳述式。  
   
  在執行階段建構 SQL 陳述式的潛在缺點是，花費更多的時間比使用硬式編碼的陳述式建構的陳述式。 幸運的是，這是很少的問題。 這類應用程式通常是大量的使用者介面資源，以及應用程式花的時間建構 SQL 陳述式是通常只有少量相較於使用者耗費輸入準則的時間。
+

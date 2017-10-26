@@ -15,6 +15,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: abb5aebcd58c79c6351d7c47a7b98be5a040ef46
@@ -209,3 +210,4 @@ ms.lasthandoff: 09/09/2017
 -   [SQLTables 函式](../../../odbc/reference/syntax/sqltables-function.md)  
   
 -   [SQLTransact 函式](../../../odbc/reference/syntax/sqltransact-function.md)
+

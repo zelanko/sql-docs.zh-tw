@@ -17,6 +17,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 48425941c9fbd592d3174ab5b8a05f4763af6056
@@ -26,3 +27,4 @@ ms.lasthandoff: 09/09/2017
 ---
 # <a name="order-by-clause-limitations"></a>ORDER BY 子句的限制
 如果 SELECT 陳述式包含 GROUP BY 子句和 ORDER BY 子句，ORDER BY 子句可以包含在結果集中資料行或 GROUP BY 子句中的運算式。
+

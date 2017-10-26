@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 38c936b90703212973e1011ff69f1edba55cd8a3
@@ -42,3 +43,4 @@ ms.lasthandoff: 09/09/2017
 -   [資料指標的特性以及資料指標類型](../../../odbc/reference/develop-app/cursor-characteristics-and-cursor-type.md)  
   
 -   [捲動和提取資料列](../../../odbc/reference/develop-app/scrolling-and-fetching-rows-odbc.md)
+

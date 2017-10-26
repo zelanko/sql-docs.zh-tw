@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0f7cec23f3ec8103b2805e0ee3c0f04d20011cb6
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  無法建立 MicrosoftExcel 5.0 版，7.0 或 97 資料來源時，工作表上使用 Microsoft Excel 驅動程式時，具有相同名稱做為先前卸除工作表。 存取版本 5.0、 7.0、 或 97 工作表使用 Microsoft Excel 驅動程式時，DROP TABLE 陳述式清除工作表中，但不會刪除工作表的名稱。  
   
  使用 Paradox 驅動程式時，索引的資料表上已定義後即無法加入資料行。 如果 CREATE TABLE 陳述式的引數清單的第一個資料行建立索引，第二個資料行不會包含引數清單中。
+

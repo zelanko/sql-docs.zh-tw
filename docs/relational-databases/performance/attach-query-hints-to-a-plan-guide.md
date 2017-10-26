@@ -14,6 +14,7 @@ caps.latest.revision: 6
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e6d6f9200e590a2f9a9fdaf63536d884aa186175
@@ -33,3 +34,4 @@ ms.lasthandoff: 06/22/2017
  此外，您可以指定 INDEX、FORCESCAN 和 FORCESEEK 資料表提示做為查詢提示。 將這些提示指定為查詢提示時，其行為模式就與內嵌資料表或檢視提示相同。 INDEX 提示會強制查詢最佳化工具只使用指定的索引來存取參考之資料表或檢視內的資料。 FORCESEEK 提示會強制最佳化工具只使用索引搜尋作業，以存取參考之資料表或檢視內的資料。 這些提示提供額外的計畫指南功能，並讓您對於使用此計畫指南的查詢最佳化有更大的影響。  
   
   
+

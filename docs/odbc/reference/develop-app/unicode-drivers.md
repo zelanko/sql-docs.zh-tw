@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 52afd6864229173b699df74410349b0cac482c98
@@ -36,3 +37,4 @@ ms.lasthandoff: 09/09/2017
   
 > [!NOTE]  
 >  驅動程式管理員在決定驅動程式類型時，會呼叫**SQLSetConnectAttr** ，並在連接時將 SQL_ATTR_ANSI_APP 屬性。 如果應用程式會使用 ANSI 應用程式開發介面，SQL_ATTR_ANSI_APP 將會設定為 SQL_AA_TRUE，而且如果它使用 Unicode，會設定為 SQL_AA_FALSE 的值。 這個屬性使用，讓驅動程式可以展現不同的應用程式類型為基礎的行為。 直接由應用程式不可設定的屬性，它不受支援**SQLGetConnectAttr**。 如果驅動程式表現 ANSI 和 Unicode 應用程式相同的行為，則會傳回 SQL_ERROR，這個屬性。 如果驅動程式傳回 SQL_SUCCESS，驅動程式管理員會分隔 ANSI 和 Unicode 連接所使用的連接共用時。
+

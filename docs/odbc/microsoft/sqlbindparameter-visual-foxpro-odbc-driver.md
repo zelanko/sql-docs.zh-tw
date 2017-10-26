@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e449fd186255d508724754b2038b8f2233d6300e
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  緩衝區關聯的 SQL 陳述式中的參數標記。 Visual FoxPro ODBC 驅動程式支援的輸入的參數所指定*fParamType*引數。  
   
  如需詳細資訊，請參閱[SQLBindParameter](../../odbc/reference/syntax/sqlbindparameter-function.md)中*ODBC 程式設計人員參考*。
+

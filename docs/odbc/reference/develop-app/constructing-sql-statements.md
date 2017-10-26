@@ -14,6 +14,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 55171e2c543aaf6759c1360d2fd3bf79ebb5d988
@@ -31,3 +32,4 @@ SQL 陳述式可用於建構中有三種： 硬式編碼在開發期間，在執
 -   [在執行階段建構 SQL 陳述式](../../../odbc/reference/develop-app/sql-statements-constructed-at-run-time.md)  
   
 -   [使用者所輸入的 SQL 陳述式](../../../odbc/reference/develop-app/sql-statements-entered-by-the-user.md)
+

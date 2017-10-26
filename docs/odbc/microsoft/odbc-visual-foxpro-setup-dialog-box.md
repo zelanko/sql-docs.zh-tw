@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 22208bd706e7b8966f54a501e9580b35d99a0555
@@ -81,3 +82,4 @@ DELETED=YES"
   
  **在背景中擷取資料**  
  判斷記錄將會提取在背景 （漸進式擷取） 或您的應用程式會等候，直到提取結果集內的所有記錄。
+

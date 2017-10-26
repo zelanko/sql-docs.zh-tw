@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 07e868f5798e759a9b84e9c28d2c1fa82bb34c4f
@@ -46,3 +47,4 @@ ms.lasthandoff: 09/09/2017
 -   [相對與絕對捲動](../../../odbc/reference/develop-app/relative-and-absolute-scrolling.md)  
   
 -   [書籤](../../../odbc/reference/develop-app/bookmarks-odbc.md)
+

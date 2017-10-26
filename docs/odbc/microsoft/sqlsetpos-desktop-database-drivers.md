@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2b630be96f099e1f2553c8d03b9896f32ea3e670
@@ -29,3 +30,4 @@ ms.lasthandoff: 09/09/2017
  支援 SQL_LOCK_NO_CHANGE *fLock*。 不支援 SQL_LOCK_EXCLUSIVE 和 SQL_LOCK_UNLOCK。  
   
  **SQLSetPos**支援可更新的聯結。 (如需詳細資訊，請參閱*Microsoft Jet 資料庫引擎程式設計人員指南*。)
+

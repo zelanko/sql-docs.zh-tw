@@ -19,6 +19,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c66acd08644176170c56700720a438aa8ffcdb1b
@@ -40,3 +41,4 @@ ms.lasthandoff: 09/09/2017
  最終的主要角色的驅動程式管理員會載入及卸載驅動程式。 應用程式載入及卸載驅動程式管理員。 當它想要使用的特定驅動程式時，它會呼叫連線函式 (**SQLConnect**， **SQLDriverConnect**，或**SQLBrowseConnect**) 驅動程式管理員，並指定特定資料來源或驅動程式，例如 「 會計 」 或 「 SQL Server"的名稱 使用此名稱，則驅動程式管理員會搜尋驅動程式的檔案名稱，例如 Sqlsrvr.dll 的資料來源資訊。 接著會載入驅動程式 （假設未載入），將每個函式的位址儲存在驅動程式，並呼叫驅動程式，然後將其本身初始化並連接到資料來源中的連線函式。  
   
  完成應用程式時使用驅動程式，它會呼叫**SQLDisconnect**驅動程式管理員。 驅動程式管理員會呼叫此函式中的驅動程式中斷資料來源的連接。 不過，驅動程式管理員會保留驅動程式在記憶體中以防應用程式重新連線到它。 只有當應用程式釋放驅動程式所使用的連接或連接用於不同的驅動程式，而且沒有其他連接使用的驅動程式時，它會卸載驅動程式。 如需中載入及卸載驅動程式的驅動程式管理員角色的完整說明，請參閱[連線程序中的驅動程式管理員角色](../../odbc/reference/develop-app/driver-manager-s-role-in-the-connection-process.md)。
+

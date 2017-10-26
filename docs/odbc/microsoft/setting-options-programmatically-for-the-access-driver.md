@@ -19,6 +19,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1bc2426cdceebcd3537815e9bb1238eba160729f
@@ -40,3 +41,4 @@ ms.lasthandoff: 09/09/2017
 |系統資料庫|Microsoft Access 系統資料庫，以用於您想要存取 Microsoft Access 資料庫的完整路徑。<br /><br /> 按一下**系統資料庫**按鈕來選取要使用的系統資料庫。 ODBC Microsoft Access 驅動程式會提示使用者輸入的名稱和密碼。 預設名稱是系統管理員和系統管理員使用者的 Microsoft Access 中的預設密碼為空字串。<br /><br /> 若要增加您的 Microsoft Access 資料庫的安全性，請建立新的使用者，以取代系統管理使用者，並刪除系統管理員的使用者，或變更系統管理使用者可存取的物件。|若要以動態方式設定這個選項，使用**SYSTEMDB**的呼叫中的關鍵字[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md)。|  
 |Threads|引擎使用的背景執行緒數目。 Microsoft Access 驅動程式，這個值會預設為 3，但可以變更。 使用者可能想要增加的執行緒數目，如果有大量的資料庫中的活動。<br /><br /> 此選項會包含在**設定進階選項**Microsoft Access 驅動程式 對話方塊。|若要以動態方式設定這個選項，使用**執行緒**的呼叫中的關鍵字[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md)。|  
 |UserCommitSync|決定是否 Microsoft Access 驅動程式將執行明確的使用者定義交易以非同步的方式。 這個值最初是設定為"Yes"，這表示 Microsoft Access 驅動程式會等候之使用者定義的交易完成認可。<br /><br /> 將此選項設定為 False，可以在多使用者環境中有無法預期的結果。|若要以動態方式設定這個選項，使用**USERCOMMITSYNC**的呼叫中的關鍵字[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md)。|
+

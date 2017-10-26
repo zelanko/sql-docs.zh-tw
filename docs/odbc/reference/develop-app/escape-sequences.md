@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1c648549b41ff607ad34175475c6a2b75603625f
@@ -31,3 +32,4 @@ ODBC 定義逸出序列，其中包含日期、 時間、 時間戳記和日期�
  若要判斷驅動程式是否支援日期、 時間、 時間戳記，或日期時間間隔的常值的逸出序列，應用程式呼叫**SQLGetTypeInfo**。 如果資料來源支援日期、 時間、 時間戳記或日期時間間隔資料類型，它也必須支援對應的逸出序列。 若要判斷是否支援的逸出序列，應用程式呼叫**SQLGetInfo**。  
   
  如需詳細資訊，請參閱[ODBC 中的逸出序列](../../../odbc/reference/develop-app/escape-sequences-in-odbc.md)稍後這一節。
+

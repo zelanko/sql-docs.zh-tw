@@ -16,6 +16,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 85647e81245e8e5e76e79cd285bc73b8ff6fb364
@@ -87,3 +88,4 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="interaction-with-other-functions"></a>與其他函式之間的互動  
  應用程式必須呼叫**SQLFetch**或**SQLFetchScroll**它準備或執行之前放置任何 update 或 delete 陳述式。
+

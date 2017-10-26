@@ -19,6 +19,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c99c74a1a294d7d43774fe9d53d169eece98d3ad
@@ -44,3 +45,4 @@ ms.lasthandoff: 09/09/2017
  函式可以呼叫其中一種方式： 做為僅限 Unicode 的函式呼叫 (與*W*尾碼)，為 ANSI 專用函式呼叫 (與*A*尾碼)，或沒有後置詞的 ODBC 函數呼叫。 函式的三種形式的引數都相同。 這些函數與 SQLCHAR\*引數或指向字串的 SQLPOINTER 引數需要 Unicode 和 ANSI 表單。 對於函式的引數可以宣告為字元類型，例如**SQLBindCol**或**SQLGetData** （這不需要 Unicode 和 ANSI 表單），引數可以宣告為 Unicode 類型，ANSI 類型，或在 C 的情況下型別引數，SQL_C_TCHAR 巨集。 如需詳細資訊，請參閱[Unicode 資料](../../../odbc/reference/develop-app/unicode-data.md)。  
   
  應用程式可以撰寫成在 Unicode 應用程式，即使沒有 Unicode 驅動程式可供它使用。 驅動程式管理員會為 ANSI 對應 Unicode 函式和資料類型。 有一些限制可以執行的 ANSI 對應至 unicode。 Unicode 應用程式來使用的 Unicode 驅動程式存在會導致更好的效能，所以會移除固有的 ANSI 對應至 Unicode 的限制。
+

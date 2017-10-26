@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 407a67c6c4d641366b1ffabef10b22a6931a2212
@@ -52,3 +53,4 @@ SQLBindParameter(StatementHandle, 1, SQL_PARAM_INPUT, SQL_C_TCHAR, SQL_WCHAR, Na
  Unicode 驅動程式必須仍然支援 ANSI 資料類型，包括 SQL_CHAR。 如果使用 Unicode 驅動程式的應用程式繫結至 SQL_CHAR，驅動程式管理員將不會對應至 SQL_WCHAR SQL_CHAR 資料。 Unicode 驅動程式必須接受 SQL_CHAR 資料。  
   
  驅動程式管理員以 Unicode 來儲存驅動程式和資料來源名稱的名稱，並視需要將它們對應為 ANSI。 Unicode 字元無法對應至一個 ANSI 字元 （如如果驅動程式和 DSN 名稱中使用的字元不是電腦的原生程式碼頁的字碼頁，可能會發生），如果無法轉換的字元會以預設字元 supplied 系統。
+

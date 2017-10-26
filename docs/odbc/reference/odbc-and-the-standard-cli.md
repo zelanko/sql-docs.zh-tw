@@ -20,6 +20,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 068750e91f59a20976113277ad8871723d045acd
@@ -83,3 +84,4 @@ ODBC 對齊下列規格和處理的呼叫層級介面 (CLI) 標準。 （ODBC �
 -   預存程序支援，包括逸出序列，輸出參數繫結機制，以及目錄函數  
   
 -   連接增強功能包括支援的連接屬性和瀏覽屬性
+

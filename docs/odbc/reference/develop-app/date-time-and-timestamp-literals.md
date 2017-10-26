@@ -16,6 +16,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2af859a38f288507ad87564cfbbfffa2b8f6ecf8
@@ -93,3 +94,4 @@ SQLExecDirect(hstmt, "UPDATE Employee SET OpenDate=? WHERE OrderID = 1023", SQL_
  若要判斷驅動程式是否支援 ODBC 逸出序列間隔常值，應用程式呼叫**SQLGetTypeInfo**。 如果資料來源支援的日期時間間隔資料類型，它也必須支援對應的逸出序列。  
   
  資料來源也支援日期時間常值定義在 ANSI sql-92 規格中，也就是不同的日期時間間隔的常值的 ODBC 逸出序列。 若要判斷資料來源是否支援 ANSI 常值，應用程式呼叫**SQLGetInfo** SQL_ANSI_SQL_DATETIME_LITERALS 選項。
+

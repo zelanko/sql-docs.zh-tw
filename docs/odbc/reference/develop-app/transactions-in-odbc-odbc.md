@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 7b3bc3d656d9083d4bcfc47365f294233bedc581
@@ -35,3 +36,4 @@ ODBC 中的交易完成在連接層級;也就是說，當應用程式完成交�
 -   [認可及回復的交易](../../../odbc/reference/develop-app/committing-and-rolling-back-transactions.md)  
   
 -   [對資料指標和已備妥的陳述式的交易影響](../../../odbc/reference/develop-app/effect-of-transactions-on-cursors-and-prepared-statements.md)
+

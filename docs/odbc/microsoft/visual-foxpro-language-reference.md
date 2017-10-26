@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a833509f772205258e10ec4b589da10ab2a1cbbe
@@ -66,3 +67,4 @@ ms.lasthandoff: 09/09/2017
 -   [更新-SQL 命令](../../odbc/microsoft/update-sql-command.md)  
   
 -   [Visual FoxPro 欄位資料類型](../../odbc/microsoft/visual-foxpro-field-data-types.md)
+

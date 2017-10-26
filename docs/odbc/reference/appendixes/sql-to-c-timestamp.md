@@ -18,6 +18,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a551d51a434d17162a5f5bcf0091e593d25f283a
@@ -54,3 +55,4 @@ _C_TYPE_TIMESTAMP|不會截斷小數秒數部分的時間戳記，[a]<br /><br /
  [f] 這是對應的 C 資料類型的大小。  
   
  當時間戳記 SQL 資料轉換成 C 字元資料時，產生的字串就會處於 「*yyyy*-*公釐*-*dd* *hh*:*公釐*:*ss*[。*f...*]"格式，其中使用高達九位數，小數秒數。 此格式不受 Windows® 國家/地區設定。 （除了小數點和小數秒數，整個格式必須使用，不論時間戳記 SQL 資料類型的有效位數。）
+

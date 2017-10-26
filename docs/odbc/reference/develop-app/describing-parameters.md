@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d78b3b7ac10fae37bb35f88cefaf5983e0df09a4
@@ -35,3 +36,4 @@ WHERE OrderID = ?
  它可以呼叫**SQLColumns** OrderID 資料行。  
   
  在其中應用程式無法輕易地判斷參數中繼資料的唯一情況是當使用者輸入的參數化陳述式。 在此情況下，應用程式呼叫**SQLPrepare**準備陳述式時， **SQLNumParams**來判斷參數的數目和**SQLDescribeParam**來描述每個參數。 不過，如同先前所說明，大部分的資料來源未提供的方式來探索參數中繼資料，因此驅動程式**SQLDescribeParam**尚未廣泛支援。
+

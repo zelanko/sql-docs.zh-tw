@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4593b1faacfc235ce0ee5c54bc9ca70416444f5e
@@ -56,3 +57,4 @@ ms.lasthandoff: 09/09/2017
 |所有的日期時間類型|PRECISION|  
 |所有的間隔類型，以秒數元件|PRECISION|  
 |所有的間隔類型，具有沒有秒數元件|n/a|
+

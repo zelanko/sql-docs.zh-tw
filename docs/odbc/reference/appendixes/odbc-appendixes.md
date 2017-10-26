@@ -14,6 +14,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3dc97412cf62b1f60b633f301b8adedaefb24ad4
@@ -37,3 +38,4 @@ ms.lasthandoff: 09/09/2017
 -   [附錄 f: ODBC 資料指標程式庫](../../../odbc/reference/appendixes/appendix-f-odbc-cursor-library.md)  
   
 -   [附錄 g： 驅動程式的指導方針回溯相容性](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md)
+

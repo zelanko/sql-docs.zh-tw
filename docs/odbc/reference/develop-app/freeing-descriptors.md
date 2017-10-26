@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d1c70c82196907fc0bd9747a8ece089d4e4ab514
@@ -32,3 +33,4 @@ ms.lasthandoff: 09/09/2017
  隱含地配置描述元可以釋放只是藉由呼叫**SQLDisconnect**，會卸除任何陳述式，或描述開啟連接上，或藉由呼叫**SQLFreeHandle**與*HandleType*來釋放陳述式控制代碼和陳述式相關聯的所有隱含地配置描述元利用 SQL_HANDLE_STMT。 藉由呼叫，將無法釋放隱含地配置描述項**SQLFreeHandle**與*HandleType* SQL_HANDLE_DESC。  
   
  即使釋出，隱含地配置描述項會維持有效，以及**SQLGetDescField**可針對其欄位。
+

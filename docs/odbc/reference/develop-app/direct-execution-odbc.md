@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: bdc332f2541fd8537fbd924e1da9ea631d8d3189
@@ -57,3 +58,4 @@ SQLExecDirect(hstmt, SQLStatement, SQL_NTS);
     -   將和已轉換的參數值的陳述式傳送至資料來源，以便執行中。  
   
     -   傳回的任何錯誤。 其中包括排序或狀態診斷，例如 SQLSTATE 24000 （無效的資料指標狀態）、 語法錯誤，例如 SQLSTATE 42000 （語法錯誤或存取違規），以及語意錯誤，例如 SQLSTATE 42S02 （基底資料表或檢視表，找不到）。
+

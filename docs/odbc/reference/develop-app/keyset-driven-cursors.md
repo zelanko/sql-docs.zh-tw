@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 7cbd7ca159b09ee1482139ef76bfff48115a62bd
@@ -38,3 +39,4 @@ ms.lasthandoff: 09/09/2017
  索引鍵集驅動資料指標通常會實作所建立的暫存資料表，其中包含在結果集中的每個資料列的索引鍵。 資料指標也必須決定是否已更新資料列，因為此資料表也通常會包含具有資料列版本設定資訊的資料行。  
   
  若要捲動原始結果集，索引鍵集驅動資料指標會開啟靜態資料指標放在暫存表格。 若要擷取的原始結果集中的資料列，資料指標從暫存資料表會先擷取適當的索引鍵，並接著會擷取資料列的目前值。 如果使用區塊資料指標時，游標必須擷取多個索引鍵和資料列。
+

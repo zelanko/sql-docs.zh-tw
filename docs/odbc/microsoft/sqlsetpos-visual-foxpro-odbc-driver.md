@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d255f3c1eac9b46548f10c5c4ef3bf2bc31cafbe
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  設定資料列集中的資料指標位置。 您可以使用**SQLSetPos**與[SQLGetData](../../odbc/microsoft/sqlgetdata-visual-foxpro-odbc-driver.md)後資料列集定位資料指標到特定的資料列，從解除繫結的資料行中擷取資料列。  
   
  如需詳細資訊，請參閱[SQLSetPos](../../odbc/reference/syntax/sqlsetpos-function.md)中*ODBC 程式設計人員參考*。
+

@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e8daaa0e1c26f00acbff2e6f7788eab8ee5ac8ce
@@ -34,3 +35,4 @@ expression1 BETWEEN expression2 AND expression3
  傳回，則為 true 才*expression1*大於或等於*expression2*和*expression1*小於或等於*expression3*.  
   
  此語法的語意為桌面資料庫驅動程式和 Microsoft Jet 引擎不同。 在 Microsoft Jet SQL 中， *expression2*可能會大於*expression3*使陳述式會傳回 TRUE，只有當*expression1*大於或等於*expression3*，和*expression1*小於或等於*expression2*。
+

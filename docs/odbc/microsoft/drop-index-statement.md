@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ff70e2bf919735de40acec8b7386efd6d66b3ffe
@@ -30,3 +31,4 @@ ms.lasthandoff: 09/09/2017
  使用 Paradox 驅動程式時，DROP INDEX 陳述式會刪除 Paradox 次要索引檔案。  
   
  DROP INDEX 陳述式不支援 Microsoft Excel 或文字的驅動程式。
+

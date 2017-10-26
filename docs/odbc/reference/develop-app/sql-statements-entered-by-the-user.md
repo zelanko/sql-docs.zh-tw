@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b234123c01d4bdf4590c000b996a4febe4ad485e
@@ -53,3 +54,4 @@ if ((rc1 == SQL_ERROR) || rc1 == SQL_SUCCESS_WITH_INFO) {
 ```  
   
  這種方法可簡化撰寫程式碼應用程式。應用程式必須在使用者建立 SQL 陳述式和資料來源，檢查陳述式的有效性。 因為很難撰寫圖形化使用者介面，可以充分地公開複雜的 SQL，只需要求使用者輸入 SQL 陳述式文字可能更理想的替代方式。 不過，這需要使用者知道，而不是只是 SQL 查詢的資料來源的結構描述。 某些應用程式提供圖形化使用者介面的使用者可以建立基本的 SQL 陳述式，並也提供的使用者可以修改它的文字介面。
+

@@ -19,6 +19,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 464ba066af26c84c35f178b1a008d2e10a852119
@@ -66,3 +67,4 @@ ODBC 驅動程式可分類如下：
   
 > [!NOTE]  
 >  16 位元 ODBC 驅動程式直接與 ODBC 3，將無法運作。*x*驅動程式管理員。 不過，它可能會使用 2.0 的 ODBC 驅動程式管理員，其隨後 thunk 最多 3 個 16 位元驅動程式。*x*驅動程式管理員。
+

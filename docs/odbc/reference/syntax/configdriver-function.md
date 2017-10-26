@@ -23,6 +23,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 037d4ffcbe7d81c6e4a9c1a524f5f4977621f277
@@ -102,3 +103,4 @@ BOOL ConfigDriver(
   
 ### <a name="messages"></a>訊息  
  驅動程式安裝常式可以將文字訊息傳送至應用程式中的 null 終止字串*lpszMsg*緩衝區。 訊息會被截斷為*cbMsgMax*減的 null 終止字元**ConfigDriver**函式是否大於或等於*cbMsgMax*字元。
+

@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: aaa110a6a62ca91535e790a267ef714675719bf4
@@ -50,3 +51,4 @@ ODBC 會指定下列類型的純量函數，與每個對應的章節，此附錄
  ODBC 和 SQL 92 以不同方式分類其純量函數。 ODBC 純量函數的引數類型，將分類如下：SQL 92 分類它們所傳回的值。 例如，EXTRACT 函式都歸類為 timedate 函式由 ODBC，因為擷取欄位引數是 datetime 關鍵字，而且擷取來源引數的日期時間或間隔的運算式。 Sql-92，相反地，會將擷取分類為數值的純量函數，因為傳回值是數字。  
   
  應用程式就可以判斷哪一個驅動程式支援藉由呼叫的純量函數**SQLGetInfo**。 還是包含適用於 ODBC 和 SQL 92 分類純量函數的資訊類型。 這些分類則不同，因為某些純量函數的支援可能會以未對應到 ODBC 和 sql-92 的資訊類型。 擷取 ODBC 中的支援，例如以 SQL_TIMEDATE_FUNCTIONS 資訊類型。相反地，支援以 sql-92，擷取會指示 SQL_SQL92_NUMERIC_VALUE_FUNCTIONS 資訊類型。
+

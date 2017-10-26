@@ -21,6 +21,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9099d9a84fb79132249c74d1d24cc240bcf8aae0
@@ -65,3 +66,4 @@ ODBC Paradox 驅動程式會將 Paradox 資料類型對應至 ODBC SQL 資料類
 |timestamp|當值插入 TIMESTAMP 資料行中的 Paradox 驅動程式，則接著就會擷取從資料行時，擷取的值可能不同於插入的值最多可達 1 的第二個因為捨入。|  
   
  資料類型的多個限制可以在[資料型別限制](../../odbc/microsoft/data-type-limitations.md)。
+

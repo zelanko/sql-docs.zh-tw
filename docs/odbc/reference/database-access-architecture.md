@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6ef94712b2ee34979937968c0f5ef1008af2ebcc
@@ -37,3 +38,4 @@ ms.lasthandoff: 09/09/2017
 -   [標準資料庫存取架構](../../odbc/reference/standard-database-access-architectures.md)  
   
 -   [ODBC 方案](../../odbc/reference/the-odbc-solution.md)
+

@@ -17,6 +17,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6875fa4ac03511b57239deadac748da1c37a0114
@@ -31,3 +32,4 @@ ms.lasthandoff: 09/09/2017
  當疑難排解 Oracle ODBC 存取 7.x 及 Oracle8 RDBMS 伺服器，可能需要確認基礎 SQL * Net 與 Oracle 通訊協定介面卡已正確安裝。 若要這樣做，請使用 Oracle 提供公用程式 Nettest.exe Orawin\Bin 目錄中。  
   
  Nettest 是簡單的公用程式，嘗試登入到選取的伺服器使用已安裝的 SQL * Net 屬於的 Oracle 用戶端的軟體。 公用程式會要求登入名稱、 密碼和 TNS 連接字串。 如果已正確安裝 Oracle 用戶端，此公用程式只會顯示 「 Ping 成功。 」 如果登入不成功，您必須洽詢資料庫管理員。
+

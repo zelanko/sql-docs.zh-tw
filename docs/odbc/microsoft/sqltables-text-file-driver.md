@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 56fa0c8ea21d4cfb620acfb633b3a4297ccd27fd
@@ -33,3 +34,4 @@ ms.lasthandoff: 09/09/2017
 |*szTableOwner*|唯一有效的引數，如*szTableOwner*是 NULL，因為沒有驅動程式支援擁有者名稱。 與*szTableOwner*設為 NULL，會傳回所有資料表。 TABLE_OWNER 資料行就會傳回 NULL。|  
 |*szTableQualifier*|TABLE_QUALIFIER 資料行中**SQLTables**會傳回路徑的目錄。|  
 |*SzTableType*|「 資料表 」 是唯一支援的資料表類型。<br /><br /> 使用文字驅動程式時，所傳回的檔案清單**SQLTables**取決於檔案的副檔名中**擴充功能清單**方塊中**ODBC 文字設定** 對話方塊。|
+

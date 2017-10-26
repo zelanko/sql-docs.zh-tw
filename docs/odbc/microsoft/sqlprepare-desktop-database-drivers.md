@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0a5ef0029dd3c59d16bbba7d12ef334c8f2701d7
@@ -25,3 +26,4 @@ ms.lasthandoff: 09/09/2017
 ---
 # <a name="sqlprepare-desktop-database-drivers"></a>SQLPrepare （桌面資料庫驅動程式）
 使用資料行數目不正確準備的陳述式會傳回錯誤，在執行時，不會在陳述式準備。
+

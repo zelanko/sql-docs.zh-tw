@@ -19,6 +19,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a925896250a307c7d256232377ec6d9325c8db77
@@ -49,3 +50,4 @@ ODBC 桌面資料庫驅動程式和基礎 Microsoft Jet 引擎不是以 sql-92 �
   
 > [!NOTE]  
 >  桌面資料庫驅動程式支援標準的 ANSI 語法 （百分比） %和 _ （底線），不 * （星號） 和嗎？ （問號）。
+

@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d4b7b0b2282d287f012272e9d34a4fbf3e23f7e0
@@ -31,3 +32,4 @@ ms.lasthandoff: 09/09/2017
  如果驅動程式不支援交易，但應用程式有鎖定和解除鎖定資料 （使用 ODBC 以外的應用程式開發介面） 的功能，應用程式可以達到鎖定和解除鎖定資料錄的資料表所需的交易支援。 若要實作帳戶傳輸範例中，應用程式會鎖定這兩個帳戶的記錄、 複製目前的值、 借方的第一個帳戶，第二個帳戶的信用額度和解除鎖定記錄。 如果任何步驟失敗，應用程式會重設的帳戶使用的複本。  
   
  支援交易，甚至是資料來源可能無法支援一次在特定環境的多個交易。 應用程式呼叫**SQLGetInfo** SQL_MULTIPLE_ACTIVE_TXN 選項，以判斷資料來源是否可以支援同時使用中交易的相同環境中的多個連接上使用。 因為每個連線的一筆交易，這是只有興趣有多個連線到相同的資料來源的應用程式。
+

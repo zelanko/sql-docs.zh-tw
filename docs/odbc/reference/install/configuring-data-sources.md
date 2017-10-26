@@ -16,6 +16,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4609b8ec49a84b4eb5fb44c1be8c8a6a85ccc5f1
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  本節包含下列主題：  
   
 -   [組態元件](../../../odbc/reference/install/configuration-components.md)
+

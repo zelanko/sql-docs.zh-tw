@@ -22,6 +22,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 55a10004936cc2333eca14fd66123b929e8b9e5c
@@ -42,3 +43,4 @@ ms.lasthandoff: 09/09/2017
   
 > [!IMPORTANT]  
 >  認可或回復交易，藉由明確地呼叫**SQLEndTran**或根據在自動認可模式下操作，會導致某些資料來源，以關閉的連接上的所有陳述式的所有資料指標。 如需詳細資訊，請參閱中的 SQL_CURSOR_COMMIT_BEHAVIOR 和 SQL_CURSOR_ROLLBACK_BEHAVIOR 屬性[SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)函式描述。
+

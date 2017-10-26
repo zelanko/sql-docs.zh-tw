@@ -17,6 +17,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3673b168743e169ba7dd4a711ae5aa7224224201
@@ -42,3 +43,4 @@ Microsoft® ODBC 資料來源管理員會管理資料庫驅動程式和資料來
 -   [設定 ODBC 連接共用選項](../../odbc/admin/setting-odbc-connection-pooling-options.md)  
   
 -   [檢視驅動程式](../../odbc/admin/viewing-drivers.md)
+

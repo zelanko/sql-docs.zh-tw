@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 05cf8dde95111a9f5b530b37fd9a60356f4b77bf
@@ -37,3 +38,4 @@ SQLCloseCursor(hstmt);
 >  若要關閉資料指標，應用程式應該呼叫**SQLCloseCursor**，而非**SQLCancel**。  
   
  資料指標維持開啟直到明確關閉它們，除了時認可或回復交易，在此情況下某些資料來源關閉資料指標。 特別是，達到結果結束設定，當**SQLFetch**傳回 sql_no_data 之後，不會關閉資料指標。 甚至是空的結果集 （陳述式執行成功，但是會不傳回任何資料列時，建立結果集） 資料指標必須明確地關閉。
+

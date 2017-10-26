@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0ba89ae47d223ea17f02cb07976510d78ff3660e
@@ -73,3 +74,4 @@ ODBC 使用逸出序列的程序呼叫。 此逸出序列語法如下所示：
  （如果程序參數為空字串，程序會使用預設值為該參數。）  
   
  若要判斷資料來源支援程序及驅動程式支援 ODBC 的程序引動過程語法，應用程式可以呼叫**SQLGetInfo** SQL_PROCEDURES 資訊類型。
+

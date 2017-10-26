@@ -14,6 +14,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ce7fa26983200ba8857c44e6d085410e337e8df8
@@ -43,3 +44,4 @@ ms.lasthandoff: 09/09/2017
 -   [回溯相容性和標準相容性](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md)  
   
 -   [在 Windows 中的 ODBC](../../../odbc/reference/develop-app/odbc-in-windows.md)
+

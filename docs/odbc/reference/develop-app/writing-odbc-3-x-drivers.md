@@ -19,6 +19,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 41ca6ddf1535899ed8e5e0f065cf2f5f0ca19dca
@@ -120,3 +121,4 @@ ms.lasthandoff: 09/09/2017
  [5] 在某些情況下，驅動程式可能需要支援此函式。 如需詳細資訊，請參閱函式的參考頁面。  
   
  [6] 的驅動程式可以選擇支援**SQLGetFunctions**如果驅動程式所支援的函式的組合不盡相同連接的連接。
+

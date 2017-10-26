@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 62a4b7edd47ca6c9a6b1c7469e18269af3ab907d
@@ -57,3 +58,4 @@ UPDATE Parts SET Price = 0.9 * Price WHERE Price > 100.00
  它是特定驅動程式是否整個批次陳述式才可供任何結果。 在某些實作中，是這種情況。在其他呼叫**SQLMoreResults**觸發批次中的下一個陳述式執行。  
   
  如果其中一個批次中陳述式失敗， **SQLMoreResults**會傳回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO。 如果陳述式失敗，或失敗的陳述式是批次中的最後一個陳述式時，批次已中止**SQLMoreResults**將會傳回 SQL_ERROR。 如果陳述式失敗後失敗的陳述式不是批次中的最後一個陳述式批次未中止**SQLMoreResults**將會傳回 SQL_SUCCESS_WITH_INFO。 SQL_SUCCESS_WITH_INFO，表示已產生至少一個結果集或計數，而且未中止批次。
+

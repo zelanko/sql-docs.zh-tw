@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ddec8b5d5f658e4f6119c1962d785232bf44d985
@@ -55,3 +56,4 @@ ms.lasthandoff: 09/09/2017
  [1] 在此情況下，驅動程式做為驅動程式和資料來源。  
   
  方括號 (**[]**) 必須包含在訊息並不表示選擇性的項目。
+

@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8af5cd175cdd9ab7d96cdb141bcd0a6b6100ea80
@@ -304,3 +305,4 @@ ODBC 連接擁有以下狀態。
 |C0<br /><br /> 沒有信封中。|C1<br /><br /> 未配置|C2<br /><br /> 配置|C3<br /><br /> 需要的資料|C4<br /><br /> 已連接|C5<br /><br /> 引數|C6<br /><br /> Transaction|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
 |(KARTRIS)|(KARTRIS)|(KARTRIS)|(KARTRIS)|(KARTRIS)|--|--|
+

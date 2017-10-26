@@ -21,6 +21,7 @@ caps.latest.revision: 10
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8176e89f8acfd39b8075dde8d470189d14dfe843
@@ -65,3 +66,4 @@ ms.lasthandoff: 06/22/2017
 |UtilityExplorer F1 說明主題的連結。|[公用程式總管 F1 說明](../../relational-databases/manage/utility-explorer-f1-help.md)|  
   
   
+

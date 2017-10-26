@@ -19,6 +19,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ccb6114eab57030d6555931f0bfcdbe469326442
@@ -49,3 +50,4 @@ ms.lasthandoff: 09/09/2017
   
 > [!NOTE]  
 >  應用程式開發人員都建議您不要從二進位 SQL 資料繫結至字元 C 資料類型。 此轉換通常是緩慢又沒有效率。
+

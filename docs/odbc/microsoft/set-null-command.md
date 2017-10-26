@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 14cade223de7014dd4a0c27295d3ff742d18af17
@@ -51,3 +52,4 @@ SET NULL ON | OFF
  [ALTER TABLE 的 SQL 命令](../../odbc/microsoft/alter-table-sql-command.md)   
  [建立資料表的 SQL 命令](../../odbc/microsoft/create-table-sql-command.md)   
  [插入的 SQL 命令](../../odbc/microsoft/insert-sql-command.md)
+

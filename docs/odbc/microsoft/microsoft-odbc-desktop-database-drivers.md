@@ -21,6 +21,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 939847cee3b9fb9f8051d98e5def53abf787f148
@@ -75,3 +76,4 @@ ODBC 是應用程式開發介面使用結構化查詢語言 (SQL) 資料庫存�
 -   [ODBC 錯誤](../../odbc/microsoft/odbc-errors.md)  
   
 -   [支援的 ODBC API 函式](../../odbc/microsoft/supported-odbc-api-functions.md)
+

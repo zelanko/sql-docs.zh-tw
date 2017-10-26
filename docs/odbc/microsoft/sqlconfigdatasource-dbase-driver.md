@@ -17,6 +17,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f4db30f9e0c291151409d5af6a63226c0c2292bd
@@ -43,3 +44,4 @@ ms.lasthandoff: 09/09/2017
 |READONLY|True 表示要使檔案成為唯讀的。若要讓檔案不是唯讀，則為 FALSE。<br /><br /> 這會設定為相同的選項**Read Only**安裝程式 對話方塊中。|  
 |STATISTICS|DBASE 驅動程式時，會判斷是否會計算資料表大小的統計資料值。 請注意，此選項適用於使用 ODBC 驅動程式的所有資料來源。<br /><br /> 這會設定為相同的選項**近似資料列計數**安裝程式 對話方塊中。|  
 |執行緒|引擎使用的背景執行緒數目。 此值為 3，而且無法變更。<br /><br /> 這會設定為相同的選項**執行緒**安裝程式 對話方塊中。|
+

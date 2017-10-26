@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a60688231bc01f55cf5b49fae3bb8d6da4a54950
@@ -47,3 +48,4 @@ SELECT * FROM Customers WHERE (Name > ?) AND (CustID > ?)
  此陳述式會建立第二個結果集，其中第一個資料列集是原始結果集中的下一個資料列集 — 在此情況下，「 客戶 」 資料表中的資料列集。 資料指標會傳回至應用程式的這個資料列集。  
   
  值得注意這種方式實作的動態資料指標確實會建立多個結果集，可讓它偵測到原始的結果集的變更。 應用程式不會學習的這些輔助結果集存在它只會顯示如資料指標可以偵測到原始的結果集的變更。
+

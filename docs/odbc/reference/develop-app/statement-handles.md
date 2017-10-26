@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 64c949c8b3b3c794d6089ff159e597aeec02cfed
@@ -42,3 +43,4 @@ A*陳述式*最容易想像成 SQL 陳述式，例如**選取\*從員工**。 �
  陳述式控制代碼會用於大部分的 ODBC 函數。 值得注意的是，它們用在函式來繫結參數和結果集資料行 (**SQLBindParameter**和**SQLBindCol**)、 準備和執行陳述式 (**SQLPrepare****SQLExecute**，和**SQLExecDirect**)，擷取中繼資料 (**SQLColAttribute**和**SQLDescribeCol**)，提取結果 (**SQLFetch**)，並擷取診斷 (**SQLGetDiagField**和**SQLGetDiagRec**)。 它們也可以用在目錄函數 (**SQLColumns**， **SQLTables**等等) 和一些其他功能。  
   
  陳述式控制代碼會配置與**SQLAllocHandle**且已釋放與**SQLFreeHandle**。
+

@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 46696509f9276ac4974604c931c4d77acbaae15b
@@ -43,3 +44,4 @@ ms.lasthandoff: 09/09/2017
 |*pcbErrorMsg*|訊息文字加上一個識別項長度的長度。|  
   
  如需有關驅動程式的錯誤訊息的詳細資訊，請參閱[錯誤訊息概觀](../../odbc/microsoft/error-messages-visual-foxpro-odbc-driver.md)。 如需此函式的詳細資訊，請參閱[SQLError](../../odbc/reference/syntax/sqlerror-function.md)中*ODBC 程式設計人員參考*。
+

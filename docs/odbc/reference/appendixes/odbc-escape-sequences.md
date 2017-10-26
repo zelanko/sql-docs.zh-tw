@@ -14,6 +14,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 525475b3e9d7cdeae9755208da1cb19e9c077fe8
@@ -39,3 +40,4 @@ ODBC 中，會使用下列的逸出序列。 本章節內容文法將使用中�
 -   [程序呼叫逸出序列](../../../odbc/reference/appendixes/procedure-call-escape-sequence.md)  
   
 -   [純量函數逸出序列](../../../odbc/reference/appendixes/scalar-function-escape-sequence.md)
+

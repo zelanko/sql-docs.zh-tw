@@ -17,6 +17,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: db98c1cee3b31615ee515fd197427724a39c9433
@@ -47,3 +48,4 @@ ms.lasthandoff: 09/09/2017
  從繫結資料行，應用程式會呼叫擷取資料**SQLSetPos**以將游標放在所需的資料列。 然後它會呼叫**SQLGetData**來擷取資料。  
   
  若要判斷資料來源中擷取的資料列數目，應用程式呼叫**SQLRowCount**。
+

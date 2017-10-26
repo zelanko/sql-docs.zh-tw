@@ -21,6 +21,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: cdd0b22d4e75e6e665dc07fd8e2be5bb2e178548
@@ -46,3 +47,4 @@ ms.lasthandoff: 09/09/2017
 5.  DBMS 執行存取計畫來執行陳述式。  
   
  用來處理 SQL 陳述式的步驟會有所不同數量它們需要資料庫存取權，則會接受的時間量。 剖析 SQL 陳述式時，不需要資料庫的存取權，而且可以非常快速地完成。 最佳化，相反地，是非常耗用 CPU 處理和需要系統目錄的存取。 為複雜、 多重資料表的查詢，最佳化工具可能會探索數千個不同的方式執行相同的查詢。 不過，通常是過高的最佳化所花費的時間超過重新取得增加的查詢的執行速度無效率地執行查詢的成本。 這是若可以重複使用相同的最佳的存取計畫，來執行重複查詢更重要。
+

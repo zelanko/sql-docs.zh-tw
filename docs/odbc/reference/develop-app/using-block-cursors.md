@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 51f02b5b243286a650897fecdcac5d8778bd3f40
@@ -37,3 +38,4 @@ ODBC 3 是內建支援區塊資料指標。*x*。 **SQLFetch**僅用於多資料
 -   [提取的資料列的數目和狀態](../../../odbc/reference/develop-app/number-of-rows-fetched-and-status.md)  
   
 -   [SQLGetData 和區塊資料指標。區塊 curso](../../../odbc/reference/develop-app/sqlgetdata-and-block-cursors.md)
+

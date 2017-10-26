@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 331e3aee3a4a60cbfa1a1308b71da80bf9772f23
@@ -38,3 +39,4 @@ ms.lasthandoff: 09/09/2017
 -   將資料傳送到和擷取資料來源的資料，包括將應用程式所指定的資料類型轉換。  
   
 -   對應至 ODBC Sqlstate DBMS 特定錯誤。
+

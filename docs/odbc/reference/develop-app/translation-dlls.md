@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 06e496e3999904a019f481374598a9a774729ab3
@@ -31,3 +32,4 @@ ms.lasthandoff: 09/09/2017
  轉譯選項是可以解譯只能由特定的轉譯 DLL 的值。 比方說，如果轉譯 DLL 將不同的字碼頁之間轉譯，選項可能會產生應用程式和資料來源所使用的字碼頁的數字。 沒有要使用的轉譯選項翻譯 DLL 的需求。  
   
  之後在指定 DLL 的翻譯，驅動程式會載入它，並呼叫它來轉譯資料的應用程式和資料來源之間傳輸。 這包含所有 SQL 陳述式以及字元參數傳送到資料來源，並從資料來源擷取的所有字元，例如資料行名稱和錯誤訊息的字元中繼資料。 連線資料不會進行轉譯，因為應用程式已連接到資料來源之後，直到沒有載入轉譯 DLL。
+

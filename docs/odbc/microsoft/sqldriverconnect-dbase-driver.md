@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e8548e95e4b7c0e34ba71f73698174d5c25b1c4b
@@ -42,3 +43,4 @@ ms.lasthandoff: 09/09/2017
 |驅動程式|所需的關鍵字|範例|  
 |------------|-----------------------|--------------|  
 |dBASE|驅動程式 DriverID|Driver = {Microsoft dBASE 驅動程式 (*.dbf)};DBQ = c:\temp;DriverID = 277|
+

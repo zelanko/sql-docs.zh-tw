@@ -18,6 +18,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9bb45857d47ef145c5693f6718696cbf75ccd666
@@ -42,3 +43,4 @@ ms.lasthandoff: 09/09/2017
 |SQL_TXN_ISOLATION|驅動程式可讓您僅 SQL_TXN_READ_COMMITTED。<br /><br /> 不支援下列 vParams:<br /><br /> SQL_TXN_READ_UNCOMMITTED<br /><br /> SQL_TXN_REAPEATABLE_READ<br /><br /> SQL_TXN_SERIALIZABLE 的情況下|  
 |SQL_ATTR_ENLIST_IN_DTC|此 ODBC 3.0 連接屬性可讓您使用 oracle 的 ODBC 驅動程式由 Microsoft 元件服務 （或 MTS，如果您使用 Windows NT） 協調的分散式交易中。 它提供的介面指標*pITransaction*做為交易*vParam*引數。|  
 |SQL_ATTR_CONNECTION_DEAD|此唯讀 ODBC 3.5 連接屬性可讓您判斷是否有失敗 Oracle 伺服器的連線。 取得; 僅限無法設定。|
+

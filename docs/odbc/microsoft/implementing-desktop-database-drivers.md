@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b3bd82e42daf591e1572536ed0541961f0c41842
@@ -53,3 +54,4 @@ ODBC 資料來源管理員線上說明中可以找到指示和有關如何實作
 -   [桌面資料庫驅動程式相容性](../../odbc/microsoft/desktop-database-driver-compatibility.md)  
   
 -   [桌面資料庫驅動程式的效能問題](../../odbc/microsoft/desktop-database-driver-performance-issues.md)
+

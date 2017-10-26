@@ -21,6 +21,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 34fe599aee975dc0c01fc1fbc36f1bed6cab6b6b
@@ -40,3 +41,4 @@ ms.lasthandoff: 09/09/2017
 |SQL_ROW_DELETED|資料列已經刪除，因為上一次提取。|  
 |SQL_ROW_ADDED|資料列插入**SQLBulkOperations**。 如果再次擷取或重新整理的資料列**SQLSetPos**，其狀態是 SQL_ROW_SUCCESS。<br /><br /> 此值不由設定**SQLFetch**或**SQLFetchScroll**。|  
 |SQL_ROW_NOROW|重疊的資料列集結果集的結尾，並傳回沒有資料列，對應到資料列狀態陣列的這個項目。|
+

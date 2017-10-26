@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e531888390bbe4f625d308ad983059634e84ba2b
@@ -63,3 +64,4 @@ SQLSetConnectOption(hdbc, fOption, vParam)
  在 ODBC 2。*x*，應用程式可以呼叫**SQLSetConnectOption**設定陳述式選項。 完成時，驅動程式會建立做為預設值的陳述式選項的更新版本已配置該連接的任何陳述式。 它是驅動程式定義驅動程式是否設定與指定的連接相關聯的任何現有陳述式的陳述式選項。  
   
  這項功能已被取代，在 ODBC 3*.x*。 ODBC 3*.x*驅動程式只需要支援設定 ODBC 2。*x*陳述式屬性，在連接層級，如果他們想要使用的 ODBC 2。*x*執行這項操作的應用程式。 ODBC 3*.x*應用程式應該永遠不會設定在連接層級的陳述式屬性。 ODBC 3*.x*陳述式屬性不能在連接層級，除了 SQL_ATTR_METADATA_ID 和 SQL_ATTR_ASYNC_ENABLE 」 屬性，這些連接屬性和陳述式屬性，同時也可以設定在連接層級或陳述式層級設定。
+

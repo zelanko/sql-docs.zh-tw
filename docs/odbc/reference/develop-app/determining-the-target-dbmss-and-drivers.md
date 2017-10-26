@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6be642b6c64da8193ba97de9df8b21ecb9e5a27c
@@ -36,3 +37,4 @@ ms.lasthandoff: 09/09/2017
  伺服器的資料庫，例如 Oracle、 DB2 和 SQL Server 提供完整的交易支援，支援許多並行使用者，而且包含豐富的 SQL。 它們更為昂貴，而且有較小的大小已安裝基底。 相反地，軟體價格通常會比較高，有些位移較小的潛在市場。  
   
  因此，您可以目標有時 Dbms 選為根據的應用程式和應用程式的目標市場所需的功能。 例如，訂單輸入系統的大型企業可能不目標桌面資料庫因為這些缺少足夠的交易支援。 適用於小型企業所設計的類似系統可能會排除大部分的伺服器資料庫，以成本為基礎。 與泛型應用程式的開發人員可能會同時為目標，但請避免使用伺服器資料庫中的進階的功能。
+

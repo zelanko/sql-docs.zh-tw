@@ -14,6 +14,7 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d19dea3d8af985f6f937711cbdc2b474b94d6ce7
@@ -53,3 +54,4 @@ Microsoft 開放式資料庫連接 (ODBC) 介面是一個 C 程式設計語言�
   
 ## <a name="support"></a>支援  
  支援選項的相關資訊可以找到上[Microsoft 說明及支援](http://go.microsoft.com/fwlink?linkid=5521)網站。
+

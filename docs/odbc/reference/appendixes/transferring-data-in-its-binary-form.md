@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8c54b61ec668e9282d723e48f1c50d1005740ac1
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
 >  以這種方式傳送任何資料 （二進位資料除外） 的應用程式不在 Dbms 之間的互通。  
   
  **SQLCopyDesc**可用來複製來源 DBMS 中的資料列繫結目標 DBMS 中的參數繫結。
+

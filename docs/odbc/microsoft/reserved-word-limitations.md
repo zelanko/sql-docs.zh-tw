@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b155e40a073b12da94cbb0fc0bd2929440a1020d
@@ -26,3 +27,4 @@ ms.lasthandoff: 09/09/2017
 ---
 # <a name="reserved-word-limitations"></a>保留的字的限制
 請勿的使用 SQL 文法中的 < 附錄 C 中所列的保留的字*ODBC 程式設計人員參考*（或這些保留字的簡短形式） 作為識別項 （也就是資料表或資料行名稱），除非您圍繞 word 在上一步引號 （'）。
+

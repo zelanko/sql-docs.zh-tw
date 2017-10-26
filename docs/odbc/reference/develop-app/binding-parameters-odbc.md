@@ -16,6 +16,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 20879f658c1fdc2ca8a4527f76a540ab2700b98f
@@ -53,3 +54,4 @@ SELECT * FROM Orders WHERE OrderID = ?, OpenDate = ?, Status = ?
 -   [參數繫結位移](../../../odbc/reference/develop-app/parameter-binding-offsets.md)  
   
 -   [描述參數](../../../odbc/reference/develop-app/describing-parameters.md)
+

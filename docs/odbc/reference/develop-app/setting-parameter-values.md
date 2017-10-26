@@ -16,6 +16,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 587acf7ca97d0bce03609b42f6188aa97bd595b3
@@ -56,3 +57,4 @@ ms.lasthandoff: 09/09/2017
  [d] 的驅動程式必須一律會檢查此值，以查看其是否為特殊值，例如 SQL_NULL_DATA。  
   
  驅動程式未使用的參數值在執行階段會驅動程式而異。 必要時，驅動程式將值從繫結變數的 C 資料類型與位元組長度 SQL 資料類型、 有效位數和小數位數參數。 在大部分情況下，驅動程式再將值傳送至資料來源。 在某些情況下，它會格式化為文字值，並將它插入之前的陳述式傳送到資料來源的 SQL 陳述式。
+

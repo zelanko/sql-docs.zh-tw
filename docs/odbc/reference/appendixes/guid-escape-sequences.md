@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d4ed6e517d9a8fa6f4c28c7b05541d36262df2a8
@@ -59,3 +60,4 @@ ODBC 使用 GUID 常值的逸出序列。 此逸出序列語法如下所示：
  *hex_digit* :: = 0 &#124; 1 &#124; 2 &#124; 3 &#124; 4 &#124; 5 &#124; 6 &#124; 7 &#124; 8 &#124; 9 &#124;A &#124;B &#124;&#124;&#124;&#124;F  
   
  GUID 資料類型支援資料來源所支援的 GUID 常值的逸出序列。 應用程式應該呼叫**SQLGetTypeInfo**來判斷是否支援此資料類型。
+

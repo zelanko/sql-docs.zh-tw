@@ -20,6 +20,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 425821e0de310c28f18796cb74308600cd91476f
@@ -43,3 +44,4 @@ ms.lasthandoff: 09/09/2017
  如需如何連接到資料來源的詳細資訊，請參閱[加入 Visual FoxPro 資料來源](../../odbc/microsoft/adding-a-visual-foxpro-data-source.md)。  
   
  若要下載此驅動程式，請參閱[Visual FoxPro ODBC 驅動程式下載網站](http://go.microsoft.com/fwlink/?LinkId=121318)。
+

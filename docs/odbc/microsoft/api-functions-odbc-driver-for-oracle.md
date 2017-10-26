@@ -18,6 +18,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3671b82eaa3281ff682314943209eb50273eb9dd
@@ -36,3 +37,4 @@ ms.lasthandoff: 09/09/2017
 -   [層級 1](../../odbc/microsoft/level-1-api-functions-odbc-driver-for-oracle.md)一致性提供核心層級介面的功能，以及其他功能，例如交易。  
   
 -   [層級 2](../../odbc/microsoft/level-2-api-functions-odbc-driver-for-oracle.md)一致性提供層級 1 功能以及其他功能，例如書籤、 動態參數，以及 ODBC 函數的非同步執行。
+

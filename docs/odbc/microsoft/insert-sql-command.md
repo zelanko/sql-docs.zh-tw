@@ -16,6 +16,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6862ff2ec4d95ce6a2149bbcd7647cdf8ea6819f
@@ -59,3 +60,4 @@ INSERT INTO dbf_name [(fname1 [, fname2, ...])]
 ## <a name="see-also"></a>另請參閱  
  [建立資料表的 SQL 命令](../../odbc/microsoft/create-table-sql-command.md)   
  [選取的 SQL 命令](../../odbc/microsoft/select-sql-command.md)
+

@@ -27,6 +27,7 @@ caps.latest.revision: 23
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5ff4acc6d6465b09c721d376b14ba6574938ef38
@@ -46,3 +47,4 @@ ms.lasthandoff: 06/22/2017
  如需詳細資訊，請參閱 [監視磁碟使用量](http://social.technet.microsoft.com/wiki/contents/articles/monitoring-disk-usage.aspx)  
   
   
+

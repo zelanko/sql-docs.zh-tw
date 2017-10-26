@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e76999667868420442740a5b3d0c23eac3371a6f
@@ -25,3 +26,4 @@ ms.lasthandoff: 09/09/2017
 ---
 # <a name="odbc-sql-grammar"></a>ODBC SQL 文法
 互通的應用程式一定要在 SQL 陳述式中使用 ODBC SQL 文法。 不過，相當大的變化中，有可能甚至此文法。 如需詳細資訊，請參閱[互通性的 SQL 陳述式](../../../odbc/reference/develop-app/interoperability-of-sql-statements.md)。
+

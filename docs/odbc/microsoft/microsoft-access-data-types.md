@@ -21,6 +21,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d158cd0646f276d278b66427e3f44b661493e695
@@ -74,3 +75,4 @@ ARBINARY|VARBINARY|SQL_VARBINARY|
 |NUMERIC|限制為 Microsoft Access 4.0 資料類型。|  
   
  資料類型的多個限制可以在[資料型別限制](../../odbc/microsoft/data-type-limitations.md)。
+

@@ -18,6 +18,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0b85711437c50ccc246ad1af1432d9475d1cfc3d
@@ -54,3 +55,4 @@ ms.lasthandoff: 09/09/2017
  Odbcjt32.dll 實作 Microsoft Jet API 之上的 ODBC 函數。 但是 ODBC 和 Microsoft Jet 函式之間沒有直接對應。 許多因素，例如資料指標模型和 SQL 對應，避免直接的相互關聯的函式。  
   
  ODBC 驅動程式位於 Microsoft Jet 引擎和 ODBC 驅動程式管理員之間。 在應用程式呼叫某些 ODBC 函數處理由驅動程式管理員和未傳遞至驅動程式。 這些函式中，Microsoft Jet 永遠看不到函式呼叫，因為它並沒有直接連線到驅動程式管理員。
+

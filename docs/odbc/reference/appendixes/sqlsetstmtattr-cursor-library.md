@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d03483adc4a566d4691bb7687f231b41ca0b41bd
@@ -52,3 +53,4 @@ ms.lasthandoff: 09/09/2017
  資料指標程式庫支援的設定，以啟用繫結位移 SQL_ATTR_PARAM_BIND_OFFSET_PTR 或 SQL_ATTR_ROW_BIND_OFFSET_PTR 陳述式屬性。 繫結位移不能用於呼叫**SQLFetch**當資料指標程式庫搭配 ODBC 2。*x*驅動程式。  
   
  資料指標程式庫支援將 SQL_ATTR_USE_BOOKMARKS 陳述式屬性設定為 SQL_UB_VARIABLE。
+

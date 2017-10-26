@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 38967637f505191a5ff353c13b4ebfbbe08e615a
@@ -46,3 +47,4 @@ ms.lasthandoff: 09/09/2017
 -   如果 APD SQL_DESC_OCTET_LENGTH_PTR 欄位具有 null 值，而且參數為字元字串，驅動程式會假設字串是以 null 結束。 輸出的動態參數，此欄位中的 null 值會防止驅動程式傳回長度資訊。 （如果 SQL_DESC_TYPE 欄位並不表示字元字串參數，SQL_DESC_OCTET_LENGTH_PTR 欄位會忽略。）  
   
  應用程式不能解除配置或捨棄它關聯欄位的時間與驅動程式讀取或寫入它們的時間之間的延遲欄位使用的變數。
+

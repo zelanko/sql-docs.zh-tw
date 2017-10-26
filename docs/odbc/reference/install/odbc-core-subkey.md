@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ad7a45f0f3272e1e2d7ae799ab1ca86bfb90b9be
@@ -37,3 +38,4 @@ ODBC Core 子機碼下的值提供的核心元件 （驅動程式管理員、 �
 ```  
 UsageCount : REG_DWORD : 0x5  
 ```
+

@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 345bd008268be6781a5f778a603d60e0a584fcd6
@@ -35,3 +36,4 @@ ms.lasthandoff: 09/09/2017
 -   [閘道診斷範例](../../../odbc/reference/develop-app/gateways-diagnostic-example.md)  
   
 -   [驅動程式管理員診斷範例](../../../odbc/reference/develop-app/driver-manager-diagnostic-example.md)
+

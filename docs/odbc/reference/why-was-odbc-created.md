@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2ab537128c572ef36bf4e0175f3bde1c8bedefc1
@@ -33,3 +34,4 @@ ms.lasthandoff: 09/09/2017
  類似的問題會面臨獨立軟體廠商 (Isv)。 寫入結果和大型主機資料庫軟體的供應商通常已強制為每個 DBMS 撰寫一個版本的應用程式，或為他們想要存取每個 DBMS 撰寫 DBMS 專屬的程式碼。 供應商撰寫的個人電腦的軟體必須為每個與他們想要使用的不同 DBMS 撰寫資料存取常式。 這通常意味著大量的資源已花費撰寫及維護資料存取常式，而不是應用程式，並不是在品質上，但無法存取指定的 DBMS 中的資料通常銷售應用程式。  
   
  兩邊的開發人員所需的不同 Dbms 中存取資料的方法。 大型主機及迷你電腦群組所需的方式合併在單一的應用程式中的不同 Dbms 的資料，而這項功能，以及撰寫獨立於任何一個 DBMS 的單一應用程式的方式，所需的個人電腦群組。 簡單地說，這兩個群組都需要可互通的方式存取資料;它們需要開放式資料庫連接。
+

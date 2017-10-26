@@ -17,6 +17,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 22bbb28f42f7bd3c1ec32e01c3451944315861a0
@@ -32,3 +33,4 @@ ms.lasthandoff: 09/09/2017
  當應用程式呼叫的函式時，驅動程式管理員會追蹤驅動程式中呼叫函式，或處理呼叫本身之前的 DLL 中呼叫追蹤函式。 每個 ODBC 函式具有對應的追蹤函式 (前面加上*追蹤*) 與 ODBC 函數，除了名稱之外完全相同。 追蹤函式呼叫時，追蹤 DLL 擷取輸入引數，並傳回傳回碼。 由於追蹤 DLL 之前驅動程式管理員會驗證引數呼叫，會追蹤無效的函式呼叫，以便記錄狀態轉換錯誤和無效的引數。  
   
  在呼叫之後追蹤函式中追蹤 DLL，驅動程式管理員會呼叫驅動程式中的 ODBC 函數。 然後它會呼叫**TraceReturn**追蹤 DLL 中。 此函數會採用兩個引數： 追蹤函式的追蹤 DLL 所傳回的值和驅動程式傳回給驅動程式管理員的 ODBC 函數的傳回碼 （或在處理函式傳回的驅動程式管理員本身的值）。 此函數會使用追蹤函式的傳回值，管理擷取輸入引數的值。 它會寫入至記錄檔的 ODBC 函數傳回的程式碼 （或如果已啟用它，以動態方式顯示）。 它對輸出引數指標取值，並記錄的輸出引數值。
+

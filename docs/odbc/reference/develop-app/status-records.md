@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ab82d285a57c147a27cb248e1e28b1bd9c6d0241
@@ -35,3 +36,4 @@ ms.lasthandoff: 09/09/2017
 -   [Sqlstate](../../../odbc/reference/develop-app/sqlstates.md)  
   
 -   [診斷訊息](../../../odbc/reference/develop-app/diagnostic-messages.md)
+

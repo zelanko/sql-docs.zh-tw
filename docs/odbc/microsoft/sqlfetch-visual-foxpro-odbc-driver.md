@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 69912ee54db3be2ef7fb068bfe26e76cbf05cdc0
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  從結果集置入先前呼叫所指定的位置擷取一個資料列[SQLBindCol](../../odbc/microsoft/sqlbindcol-visual-foxpro-odbc-driver.md)。 驅動程式會準備呼叫[SQLGetData](../../odbc/microsoft/sqlgetdata-visual-foxpro-odbc-driver.md)未繫結的資料行。  
   
  如需詳細資訊，請參閱[SQLFetch](../../odbc/reference/syntax/sqlfetch-function.md)中*ODBC 程式設計人員參考*。
+

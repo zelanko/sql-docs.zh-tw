@@ -18,6 +18,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 645ff6dc68fec7cf332face2fe53a43555887a48
@@ -33,3 +34,4 @@ ms.lasthandoff: 09/09/2017
   
 > [!NOTE]  
 >  如果資料指標程式庫在 Microsoft® WindowsNT®/為 Windows2000 嘗試在目前的目錄上的暫存檔的快取資料的唯讀共用或光碟 （例如 Mfc 程式庫範例），從執行應用程式 SQLSTATEHY000 （一般錯誤-無法建立檔案緩衝區） 會傳回。
+

@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 763f6fdd2790de695e1e2307cbcac4e0ed3018ae
@@ -50,3 +51,4 @@ ms.lasthandoff: 09/09/2017
 |SQL_GUID|16 （使用 GUID 結構的大小）。|  
   
  [a] 如果驅動程式無法判斷變數類型的資料行或參數的長度，則會傳回 SQL_NO_TOTAL。
+

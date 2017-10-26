@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5528f451adf12d12fe5cdb1c51f5c5d0053c9145
@@ -32,3 +33,4 @@ ms.lasthandoff: 09/09/2017
  應用程式就可以判斷是否支援陳述式或連接屬性呼叫**SQLSetStmtAttr**或**SQLSetConnectAttr**具有該屬性。 如果函數傳回 SQL_SUCCESS 或 SQL_SUCCESS_WITH_INFO，被支援的屬性。如果它會傳回 SQL_ERROR 並 SQLSTATE HYC00 （選擇性功能未實作），不支援的屬性。  
   
  應用程式也可以決定將有限的數量的資訊，才能連接到驅動程式，藉由呼叫**SQLDrivers**。
+

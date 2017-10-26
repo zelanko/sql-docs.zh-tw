@@ -29,6 +29,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f1e19ac3f7c14326524ab7cbaa60f499c5d81e91
@@ -72,3 +73,4 @@ ms.lasthandoff: 09/09/2017
 -   [間隔常值](../../../odbc/reference/appendixes/interval-literals.md)  
   
 -   [覆寫間隔資料類型的預設前置和秒數有效位數](../../../odbc/reference/appendixes/overriding-default-leading-and-seconds-precision-for-interval-data-types.md)
+

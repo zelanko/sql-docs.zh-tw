@@ -19,6 +19,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: bef87be8dc1d81e3aaf6387a39f9cc183b99e029
@@ -28,3 +29,4 @@ ms.lasthandoff: 09/09/2017
 ---
 # <a name="order-by-with-group-by"></a>ORDER BY 使用 GROUP BY
 ORDER BY 可對任何運算式中 GROUP BY*運算式清單*或任何資料行在結果集。
+

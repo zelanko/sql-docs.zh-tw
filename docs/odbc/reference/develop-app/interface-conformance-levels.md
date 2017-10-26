@@ -19,6 +19,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6f31ab70d00820fc1e0b279754c998c777dc6688
@@ -55,3 +56,4 @@ ms.lasthandoff: 09/09/2017
 -   [屬性的一致性](../../../odbc/reference/develop-app/attribute-conformance.md)  
   
 -   [描述項欄位一致性](../../../odbc/reference/develop-app/descriptor-field-conformance.md)
+

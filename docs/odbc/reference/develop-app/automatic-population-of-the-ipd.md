@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d637ddfebc0563ed2591740498d519f91e34321e
@@ -35,3 +36,4 @@ ms.lasthandoff: 09/09/2017
  已備妥 SQL 陳述式包含參數標記呼叫之後，驅動程式時自動母體擴展是支援，而且已啟用，擴展 IPD 欄位**SQLPrepare**。 應用程式可以擷取這項資訊藉由呼叫**SQLGetDescField**或**SQLGetDescRec**，或**SQLDescribeParam**。 參數的最適當的應用程式緩衝區繫結，或為其指定的資料轉換，應用程式可以使用資訊。  
   
  IPD 中的自動母體擴展可能會產生對效能帶來負面影響。 應用程式可以將它關閉正在 SQL_ATTR_ENABLE_AUTO_IPD 陳述式屬性重設為 SQL_FALSE （預設值）。
+

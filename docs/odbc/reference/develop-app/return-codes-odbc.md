@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b997bfd1cc338f9c7a9dbb4b1b5b1ce851e71072
@@ -57,3 +58,4 @@ while ((rc=SQLFetch(hstmt)) != SQL_NO_DATA) {
 |SQL_NO_DATA|無更多可用的資料。 應用程式會呼叫**SQLGetDiagRec**或**SQLGetDiagField**來擷取其他資訊。 可能會傳回類別 02xxx 中的一個或多個驅動程式定義的狀態記錄。 **注意：** ODBC 2 中。*x*，這會傳回 SQL_NO_DATA_FOUND 名為程式碼。|  
 |SQL_NEED_DATA|需要更多資料，例如在執行階段則傳送參數資料，或需要其他連接資訊。 應用程式會呼叫**SQLGetDiagRec**或**SQLGetDiagField**擷取其他資訊，如果有的話。|  
 |SQL_STILL_EXECUTING|以非同步方式啟動的函式仍在執行中。 應用程式會呼叫**SQLGetDiagRec**或**SQLGetDiagField**擷取其他資訊，如果有的話。|
+

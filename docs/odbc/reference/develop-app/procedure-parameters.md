@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4cf4aa29c376ac600842804eb4b7e3b935fb049b
@@ -57,3 +58,4 @@ ms.lasthandoff: 09/09/2017
  在執行陳述式之後，驅動程式中繫結至這些參數的變數會儲存傳回的值的輸入/輸出和輸出參數。 這些傳回之後已經提取的程序傳回的所有結果，直到設定，則不保證值和**SQLMoreResults**傳回 sql_no_data 為止。 如果執行陳述式會導致錯誤，則緩衝區輸入/輸出參數或輸出參數緩衝區的內容會是未定義。  
   
  應用程式呼叫**SQLProcedure**判斷程序是否有傳回值。 它會呼叫**SQLProcedureColumns**來判斷每個程序參數的型別 （傳回值、 輸入、 輸入/輸出或輸出）。
+

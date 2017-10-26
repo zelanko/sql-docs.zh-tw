@@ -17,6 +17,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 39d795314d2333c5d33cb55057b68e652082ae89
@@ -42,3 +43,4 @@ SELECT "Customer Name" FROM "Accounts Payable"
  目錄函數會根據類似 SQL 的授權模型中建立連線時根據使用者名稱和密碼，並傳回使用者有權限的資料。 個別檔案的密碼保護它不符合此模型，為驅動程式定義。  
   
  目錄函數所傳回的結果集可以幾乎永遠不會更新，以及應用程式不應預期要能夠藉由變更這些結果集內的資料變更資料庫的結構。
+

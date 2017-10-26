@@ -19,6 +19,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8f164b8269e1150cdf7a85e486bcc3fd93a9411f
@@ -39,3 +40,4 @@ ms.lasthandoff: 09/09/2017
 -   當它已成功擷取的資料列與資料來源的 SQL_ROW_SUCCESS **SQLFetch**。  
   
 -   在資料列上執行的定位的 update 陳述式時 SQL_ROW_UPDATED。
+

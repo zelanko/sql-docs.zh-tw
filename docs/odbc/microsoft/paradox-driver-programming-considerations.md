@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0cca9bd8c08815c98a3aba6e9c92c3bfc9674e7e
@@ -39,3 +40,4 @@ ms.lasthandoff: 09/09/2017
   
 > [!NOTE]  
 >  透過 ODBC 桌面資料庫驅動程式存取 Paradox ISAM 檔案需要 Borland 資料庫引擎安裝。
+

@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a27cb6dbeb36bf16e69ee21a41910652b8af31d6
@@ -45,3 +46,4 @@ ms.lasthandoff: 09/09/2017
 -   [撰寫 ODBC 3.x 應用程式](../../../odbc/reference/develop-app/writing-odbc-3-x-applications.md)  
   
 -   [寫入 ODBC 3.x 驅動程式](../../../odbc/reference/develop-app/writing-odbc-3-x-drivers.md)
+

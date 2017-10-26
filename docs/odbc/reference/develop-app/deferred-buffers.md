@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 94d240284ce0273e0700bfbabfb38fd0a41884cf
@@ -35,3 +36,4 @@ A*延後的緩衝區*是在稍後使用其值的其中一個*之後*函式呼叫
 |若要更新或插入資料列中，將結果傳送資料集|延後的輸入|**SQLBindCol**|**SQLSetPos**|  
 |輸出和輸入/輸出參數傳回資料|延後的輸出|**SQLBindParameter**|**SQLExecute**<br /> **SQLExecDirect**|  
 |傳回結果集資料|延後的輸出|**SQLBindCol**|**SQLFetch**<br /> **SQLFetchScroll SQLSetPos**|
+

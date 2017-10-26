@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8cec0dc5105addb28606a12c99dd2d77b0a48a64
@@ -53,3 +54,4 @@ ms.lasthandoff: 09/09/2017
 |SQL_OJ_CAPABILITIES|SQL_OUTER_JOIN_CAPABILITIES|  
 |SQL_TXN_CAPABLE|SQL_TRANSACTION_CAPABLE|  
 |SQL_TXN_ISOLATION_OPTION|SQL_TRANSACTION_ISOLATION_OPTION|
+

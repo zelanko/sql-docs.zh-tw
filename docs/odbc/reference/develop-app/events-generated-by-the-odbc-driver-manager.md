@@ -17,6 +17,7 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e110747e53b5c64702b6103e47942c85858901aa
@@ -46,3 +47,4 @@ ms.lasthandoff: 09/09/2017
 |**TransactionRollback**|當應用程式呼叫時，產生**SQLEndTran**復原本機交易。|  
 |**JoinDTC**|當應用程式加入分散式交易協調器 (DTC) 產生。|  
 |**LeaveDTC**|產生應用程式離開 Distributed Transaction Coordinator (DTC) 時。|
+

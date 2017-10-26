@@ -17,6 +17,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 310395e70e4a18aa1c39a9b615a8edbc3031bb5d
@@ -38,3 +39,4 @@ ms.lasthandoff: 09/09/2017
 -   [轉譯 DLL 函式參考](../../../odbc/reference/syntax/translation-dll-api-reference.md)  
   
 -   [ODBC 服務提供者介面 (SPI) 參考](../../../odbc/reference/syntax/odbc-service-provider-interface-spi-reference.md)
+

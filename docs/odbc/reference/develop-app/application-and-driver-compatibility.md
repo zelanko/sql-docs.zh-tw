@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: fd02d1193e7a74612ae25d3cee47b104877bee51
@@ -36,3 +37,4 @@ ODBC 應用程式和驅動程式可分為除了自己版本的類別目錄數目
 -   [類型的驅動程式](../../../odbc/reference/develop-app/types-of-drivers.md)  
   
 -   [相容性比較表](../../../odbc/reference/develop-app/compatibility-matrix.md)
+

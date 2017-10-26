@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: df3509e6b13d68858909d0739df1048b79fa8e45
@@ -40,3 +41,4 @@ SQLTables(hstmt2, NULL, 0, NULL, 0, "\"Accounts Payable\"", SQL_NTS, NULL, 0);
  引號的識別碼用來區別相同的名稱，例如 ROWID 在 Oracle 中的虛擬資料行，則為 true 的資料行名稱。 如果 「 ROWID"傳入目錄函數的引數，函式將使用 ROWID 虛擬資料行若有的話。 虛擬資料行不存在，如果函式會使用"ROWID 」 資料行。 如果 ROWID 傳入目錄函數的引數，函式會使用 ROWID 資料行。  
   
  如需引號識別項的詳細資訊，請參閱[引號識別項](../../../odbc/reference/develop-app/quoted-identifiers.md)。
+

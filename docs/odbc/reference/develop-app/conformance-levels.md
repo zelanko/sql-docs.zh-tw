@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d13cad1b6946e1c446faa77a1a193752c05da702
@@ -34,3 +35,4 @@ ODBC 驅動程式可讓應用程式存取不同資料來源。 每個驅動程�
 -   [介面的一致性層級](../../../odbc/reference/develop-app/interface-conformance-levels.md)  
   
 -   [SQL 一致性層級](../../../odbc/reference/develop-app/sql-conformance-levels.md)
+

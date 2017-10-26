@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 434031a496faae19ee37b8273341cc0ede6d0313
@@ -46,3 +47,4 @@ SQLSetPos(hstmt, iRow, fOption, fLock);
 3.  當應用程式呼叫**SQLSetStmtAttr**將 sql_attr_row_status_ptr 設定，來設定驅動程式管理員*fSetPosError* toTRUE 相等。  
   
 4.  當應用程式呼叫**SQLSetPos**，與*fSetPosError*等於 TRUE，則驅動程式管理員會產生 sql_error，其中包含 SQLSTATE HY011 （屬性現在無法設定），表示應用程式嘗試呼叫**SQLSetPos**之後變更資料列狀態指標，但在呼叫前**SQLFetchScroll**。
+

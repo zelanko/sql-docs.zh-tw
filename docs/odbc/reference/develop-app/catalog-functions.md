@@ -19,6 +19,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 497676e6b87b6603d4bc6cb1615bb1b133c7acd4
@@ -40,3 +41,4 @@ ms.lasthandoff: 09/09/2017
 -   [目錄資料的使用](../../../odbc/reference/develop-app/uses-of-catalog-data.md)  
   
 -   [在 ODBC 目錄函數](../../../odbc/reference/develop-app/catalog-functions-in-odbc.md)
+

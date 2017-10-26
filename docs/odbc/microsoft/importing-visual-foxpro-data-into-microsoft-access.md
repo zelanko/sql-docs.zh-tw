@@ -20,6 +20,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6bdf35fb9c9b7b4688aa7f5bf4173b2a6a9eefb5
@@ -45,3 +46,4 @@ ms.lasthandoff: 09/09/2017
  您現在可以使用 Microsoft Access 操作已匯入 Visual FoxPro 資料表中的資料。 您匯入的資料是儲存在 Visual FoxPro; 中之資料的快照集您要匯入資料所做的變更不會傳送回 Visual FoxPro 資料來源。  
   
  如果您想要變更您在變更 Visual FoxPro 資料來源上的資料，請參閱 Microsoft Access[查詢與更新 Visual FoxPro 資料，從 Microsoft Access](../../odbc/microsoft/querying-and-updating-visual-foxpro-data-from-microsoft-access.md)。
+

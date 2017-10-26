@@ -14,6 +14,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 89e9fe2cdaf8511023120e984eb6366491c0288a
@@ -29,3 +30,4 @@ ms.lasthandoff: 09/09/2017
 -   [數值常值](../../../odbc/reference/appendixes/numeric-literals.md)  
   
 -   [覆寫預設有效位數和小數位數值資料類型](../../../odbc/reference/appendixes/overriding-default-precision-and-scale-for-numeric-data-types.md)
+

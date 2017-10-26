@@ -21,6 +21,7 @@ caps.latest.revision: 40
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: b44693e1193670ee6b8f50f6fd7bd8a94181e2be
@@ -68,3 +69,4 @@ ms.lasthandoff: 06/22/2017
  提供與複寫相關的如何主題清單。  
   
   
+

@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 35a22420b5ecaf21539fd16aecb3870e3f3049dc
@@ -174,3 +175,4 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
  [支援的資料類型 （Visual FoxPro ODBC 驅動程式）](../../odbc/microsoft/supported-data-types-visual-foxpro-odbc-driver.md)   
  [插入的 SQL 命令](../../odbc/microsoft/insert-sql-command.md)   
  [選取的 SQL 命令](../../odbc/microsoft/select-sql-command.md)
+

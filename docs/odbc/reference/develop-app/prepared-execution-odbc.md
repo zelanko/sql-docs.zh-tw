@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d6b2437d1958e2583dabb75c0a4c26a2ed472975
@@ -96,3 +97,4 @@ while (GetPrice(&PartID, &Price)) {
  如果驅動程式無法模擬準備陳述式，則會儲存在陳述式時**SQLPrepare**呼叫，並將它提交執行時**SQLExecute**呼叫。  
   
  因為模擬的陳述式準備並不完美， **SQLExecute**可以傳回任何錯誤，通常由**SQLPrepare**。
+

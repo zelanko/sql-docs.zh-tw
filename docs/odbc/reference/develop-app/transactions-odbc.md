@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d11b681fa324c2c0b514bfb43aa67d51ce19a1ba
@@ -42,3 +43,4 @@ A*交易*是工作的單位以單一、 不可部分完成的作業完成; 也�
 -   [交易隔離](../../../odbc/reference/develop-app/transaction-isolation.md)  
   
 -   [並行控制](../../../odbc/reference/develop-app/concurrency-control.md)
+

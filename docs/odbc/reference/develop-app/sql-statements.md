@@ -14,6 +14,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4ff92186a7523904cf9db8f1b5a8ac1814384354
@@ -31,3 +32,4 @@ ODBC 應用程式來執行幾乎所有資料庫存取執行 SQL 陳述式。 這
 -   [SQL 陳述式的互通性](../../../odbc/reference/develop-app/interoperability-of-sql-statements.md)  
   
 -   [在 ODBC 中的逸出序列](../../../odbc/reference/develop-app/escape-sequences-in-odbc.md)
+

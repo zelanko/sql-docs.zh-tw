@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 24154cb8cf4f07699385f773608b929a9a4ed4a3
@@ -54,3 +55,4 @@ ms.lasthandoff: 09/09/2017
 |執行緒|引擎使用的背景執行緒數目。 此值預設為 3，但可以變更。<br /><br /> 這會設定為相同的選項**執行緒**安裝程式 對話方塊中。|  
 |UID|Microsoft Access 驅動程式的使用者識別碼名稱會用來登入。|  
 |USERCOMMITSYNC|決定是否 Microsoft Access 驅動程式會執行使用者定義交易以非同步的方式。 這個值最初是設定為"Yes"，這表示 Microsoft Access 驅動程式會等候之使用者定義的交易完成認可。<br /><br /> 這個選項的值不應該變更沒有結果，請仔細考慮。 如需選項的詳細資訊，請參閱*Microsoft Jet 資料庫引擎程式設計人員指南*。<br /><br /> 這會設定為相同的選項**UserCommitSync**安裝程式 對話方塊中。|
+

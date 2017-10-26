@@ -16,6 +16,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3c5440b6cfc25665156986a0aed99a1fa05e16be
@@ -126,3 +127,4 @@ ms.lasthandoff: 09/09/2017
 -   是，Keith:*使用 ODBC 2* （佇列，1994年）。  
   
 -   Whiting 帳單：*教導您自己 ODBC 21 天內*(Howard 工時 Sam & 公司，1994年)。
+

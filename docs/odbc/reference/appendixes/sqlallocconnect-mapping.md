@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0188c47d6abfd294dc1a9c20c04ea7d271443a18
@@ -36,3 +37,4 @@ ms.lasthandoff: 09/09/2017
     ```  
   
      在驅動程式搭配*InputHandle*設*henv*，和*OutputHandlePtr*設*phdbc*。
+

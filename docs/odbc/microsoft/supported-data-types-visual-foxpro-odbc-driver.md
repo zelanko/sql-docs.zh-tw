@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: caf58413946e51ae8575b8d068e4a516316eb090
@@ -33,3 +34,4 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="data-types-in-applications-using-microsoft-query"></a>使用 Microsoft 查詢的應用程式中的資料類型  
  如果您的應用程式使用 Microsoft Query Visual FoxPro 資料來源上建立新的資料表，就會顯示 Microsoft Query**新的資料表定義** 對話方塊。 在下**欄位描述**、**類型**方塊清單[Visual FoxPro 欄位資料型別](../../odbc/microsoft/visual-foxpro-field-data-types.md)，由單一字元。
+

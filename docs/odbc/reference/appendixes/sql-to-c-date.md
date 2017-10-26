@@ -18,6 +18,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 667ed133862e0ea67f4f995520ead7b372fae74e
@@ -47,3 +48,4 @@ ms.lasthandoff: 09/09/2017
  [c] 這是對應的 C 資料類型的大小。  
   
  當日期 SQL 資料轉換成 C 字元資料時，產生的字串就會處於 「*yyyy*-*公釐*-*dd*」 格式。 此格式不受 Windows® 國家/地區設定。
+

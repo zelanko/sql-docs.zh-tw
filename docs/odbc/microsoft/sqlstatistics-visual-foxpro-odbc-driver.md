@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 899a799e2c52a7dbb21ed10ed08512e3aad28fab
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  擷取單一的資料表和索引或與資料表相關聯的標記名稱相關的統計資料的清單。 驅動程式會傳回結果集的資訊。  
   
  如需詳細資訊，請參閱[SQLStatistics](../../odbc/reference/syntax/sqlstatistics-function.md)中*ODBC 程式設計人員參考*。
+

@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9d615371a5bcf305158cb5f29c22a087110f95ac
@@ -106,3 +107,4 @@ ms.lasthandoff: 09/09/2017
  [2] 層級 2 介面一致性，驅動程式必須支援 SQL_CONCUR_READ_ONLY 和至少一個其他值。  
   
  [3] 的層級 1 介面一致性，驅動程式必須支援 SQL_CURSOR_FORWARD_ONLY 和至少一個其他值。 層級 2 介面一致性，驅動程式必須支援此文件中定義的所有值。
+

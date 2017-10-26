@@ -22,6 +22,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ada17f95371246e3b43e1e9482ab9595f85a8db1
@@ -36,3 +37,4 @@ ms.lasthandoff: 09/09/2017
  最大的互通性，應用程式應該產生一個定位的 update 陳述式會藉由執行更新的結果集**選取更新**陳述式。 雖然資料指標程式庫不需要這個，它需要大部分支援定位的 update 陳述式的資料來源。  
   
  資料指標程式庫會忽略中的資料行**FOR UPDATE**子句**SELECT FOR UPDATE**陳述式; 它會移除這個子句，再將該陳述式傳遞至驅動程式。 在資料指標程式庫，SQL_ATTR_CONCURRENCY 陳述式屬性，以及上一節所述的限制控制項在結果中的資料行設定是否可以更新。
+

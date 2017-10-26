@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: bd83d7ce68d0a7bc1045aee76c28b9b5c39c9faf
@@ -31,3 +32,4 @@ SQL_CONCUR_READ_ONLY 支援正向和靜態資料指標。
  *FConcurrency* SQL_CONCUR_ROWVER 引數不支援。  
   
  不支援動態資料指標和混合的資料指標。
+

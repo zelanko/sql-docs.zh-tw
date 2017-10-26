@@ -21,6 +21,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 32bfeff983ef5dff4ebfe3e575bcf36e855184d0
@@ -52,3 +53,4 @@ ms.lasthandoff: 09/09/2017
   
 > [!IMPORTANT]  
 >  依照 ODBC 3 的應用程式。*x*規格必須使用條件式程式碼來避免使用 ODBC 3 的新功能。*x*時使用的 ODBC 2。*x*驅動程式。 ODBC 2。*x*驅動程式不支援 ODBC 3 的新功能。*x*只是因為應用程式宣告，它會遵循 ODBC 3。*x*規格。 此外，ODBC 3。*x*驅動程式支援 ODBC 3 的新功能不能停止。*x*只是因為應用程式宣告，它會遵循 ODBC 2。*x*規格。
+

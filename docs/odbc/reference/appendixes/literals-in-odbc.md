@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d4b929d1fda75161e6a260e8c425c37cd9476bf7
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
 -   [間隔常值的語法](../../../odbc/reference/appendixes/interval-literal-syntax.md)  
   
 -   [數值常值的語法](../../../odbc/reference/appendixes/numeric-literal-syntax.md)
+

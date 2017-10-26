@@ -17,6 +17,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 476c4710a4265214235bdd7b80a330fad5b37f34
@@ -41,3 +42,4 @@ ms.lasthandoff: 09/09/2017
 -   **新增、 修改或刪除資料來源以無訊息模式。** 系統管理程式呼叫**SQLConfigDataSource**中的安裝程式 DLL 和傳遞它 null 視窗處理，來新增、 修改或刪除資料來源的名稱和登錄值的清單。 安裝程式的 DLL 呼叫**ConfigDSN**中的驅動程式安裝 DLL 實際加入、 修改或刪除資料來源。  
   
 -   **新增、 修改或刪除預設資料來源。** 預設的資料來源不同之處在於其名稱是預設值是與其他資料來源相同。 已加入、 修改或刪除以相同的方式與任何其他資料來源。
+

@@ -18,6 +18,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9594ce3aa76af66cccc69936677cf2d9aa682a6f
@@ -100,3 +101,4 @@ _INTERVAL_MINUTE_TO_SECOND [7]|INTERVAL MINUTE (*p*) 第二個 (*q*)|分鐘/之�
  本節提供下列的範例。  
   
 -   [範例 SQLGetTypeInfo 結果集](../../../odbc/reference/appendixes/example-sqlgettypeinfo-result-set.md)
+

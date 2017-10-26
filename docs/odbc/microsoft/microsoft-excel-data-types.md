@@ -21,6 +21,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: eeb2bc72ce34141eb3dbdca3f952dca0c476c2dd
@@ -53,3 +54,4 @@ ms.lasthandoff: 09/09/2017
 |TEXT|當資料行的資料列包含一個以上的 Microsoft Excel 資料類型時，ODBC Microsoft Excel 驅動程式會指派給資料行的 SQL_VARCHAR 資料類型。 沒有一個例外狀況： 如果資料行包含只有兩個或三個日期時間資料型別 （日期、 時間和日期時間），ODBC Microsoft Excel 驅動程式會將 SQL_TIMESTAMP 資料類型指派給資料行。<br /><br /> 建立文字資料行的零或未指定的長度實際上會傳回 255 個位元組的資料行。<br /><br /> 字元字串常值可以包含任何的 ANSI 字元 （1-255 個十進位）。 您可以使用兩個連續單引號 （'） 來表示一個單引號 （'）。<br /><br /> SQL_VARCHAR 資料類型，將插入的資料行的 null 值會變更為 SQL_VARCHAR 資料行的資料類型。|  
   
  資料類型的多個限制可以在[資料型別限制](../../odbc/microsoft/data-type-limitations.md)。
+

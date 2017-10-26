@@ -21,6 +21,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5953f3409a3886abbf76963d0207a89be1e83aec
@@ -61,3 +62,4 @@ ms.lasthandoff: 09/09/2017
 -   [配置及釋放緩衝區](../../../odbc/reference/develop-app/allocating-and-freeing-buffers.md)  
   
 -   [使用資料緩衝區](../../../odbc/reference/develop-app/using-data-buffers.md)
+

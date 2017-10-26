@@ -16,6 +16,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3fb62d7c916584da7411f398f66a2acf134bfa24
@@ -56,3 +57,4 @@ INSERT INTO Orders (OrderID, CustID, OpenDate, SalesPerson, Status)
 ```  
   
  若要判斷資料來源所支援的純量函數，應用程式呼叫**SQLGetInfo** SQL_CONVERT_FUNCTIONS、 與 SQL_NUMERIC_FUNCTIONS、 SQL_STRING_FUNCTIONS、 SQL_SYSTEM_FUNCTIONS，SQL_TIMEDATE_函式的選項。 若要判斷哪些轉換作業都受到**轉換**函式，應用程式呼叫**SQLGetInfo**與任何一開頭 SQL_CONVERT 的選項。
+

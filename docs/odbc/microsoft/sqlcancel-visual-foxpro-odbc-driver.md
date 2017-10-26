@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: afe48d1db2b6875db25145d2545cf875915622f1
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  取消陳述式控制代碼上的處理*hstmt*。  
   
  如需詳細資訊，請參閱[SQLCancel](../../odbc/reference/syntax/sqlcancel-function.md)中*ODBC 程式設計人員參考*。
+

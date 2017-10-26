@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ff05f946dee8f6034d04c5d719ada475255ba643
@@ -36,3 +37,4 @@ SELECT CharCol, BinaryCol, IntegerCol FROM MyTable
  某些資料類型的常值需要特殊的前置詞和後置字元。 在上述範例中，字元常值 (ABC) 需要單引號 （'） 做為前置詞和後置詞，而二進位常值 (FFFF) 需要的字元 0x 前置詞，以及整數常值 (10) 不需要前置詞或後置詞。  
   
  日期、 時間和時間戳記以外的所有資料型別，可互通的應用程式應該都使用 LITERAL_PREFIX 和 LITERAL_SUFFIX 資料行中所建立的結果集中傳回的值**SQLGetTypeInfo**。 針對日期、 時間、 時間戳記和日期時間間隔的常值，可互通的應用程式應該使用上一節中討論的逸出序列。
+

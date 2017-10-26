@@ -18,6 +18,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e9f19c26cf77e0f5cfbff8a8ebad193ba9e9cdf2
@@ -77,3 +78,4 @@ bad_number:
 -   **錯誤處理**DBMS 報告應用程式，透過 SQL 通訊區域中或 SQLCA 的執行階段錯誤。 在上述程式碼範例中，第一個內嵌的 SQL 陳述式會是包含 SQLCA。 這會告訴程式中包含 SQLCA 結構先行編譯器。 這是必要的每當程式會處理由 DBMS 傳回的錯誤。 WHENEVER...GOTO 陳述式會告知先行編譯器產生分支到特定的標記錯誤時，就會發生的錯誤處理程式碼。  
   
 -   **單一選取**用來傳回資料的陳述式是單一 SELECT 陳述式; 也就是說，它會傳回單一資料列的資料。 因此，程式碼範例不宣告或使用資料指標。
+

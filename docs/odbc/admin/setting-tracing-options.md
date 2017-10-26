@@ -18,6 +18,7 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b11d6337c2e0ca2853838d964842be536454c5f4
@@ -68,3 +69,4 @@ ms.lasthandoff: 09/09/2017
 >  Visual Studio Analyzer 的支援已移除開頭 （Visual Studio Analyzer 只包含在舊版的 Visual Studio）。 Windows 8 中。 如需疑難排解機制的替代方法，使用 BID 追蹤。  
   
  Visual Studio® 分析器追蹤會提供效能和 ODBC 層的偵錯資訊。 所有傳出事件將引發在最上層的介面，以呈現為精確圖片儘可能花費在 ODBC 元件有關的時間。 Visual Studio Analyzer 追蹤需要註冊設定來源時的任何事件來源。 如需有關這種追蹤的詳細資訊，請參閱 Visual Studio 文件。
+

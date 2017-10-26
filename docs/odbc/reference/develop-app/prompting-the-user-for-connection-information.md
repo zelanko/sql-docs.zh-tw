@@ -24,6 +24,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3b1ee296ea292be7287c2cd4a8e93c9e33cb04bb
@@ -53,3 +54,4 @@ DSN=XYZ Corp;
  在使用者選取的資料來源之後，驅動程式管理員建構連接字串，指定該資料來源，並將它傳遞至驅動程式。 驅動程式可以接著會提示使用者輸入任何必要的額外資訊。  
   
  在驅動程式會提示使用者的條件，皆受*DriverCompletion*旗標，也會有一律提示、 出現提示，如果有必要，或永遠不會提示選項。 這個旗標的完整說明，請參閱[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)函式描述。
+

@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: dbe4a62045da6fd493c24fec81b863f504b73750
@@ -28,3 +29,4 @@ ms.lasthandoff: 09/09/2017
 類型轉換失敗，導致受影響的資料行設為 NULL。  
   
  收錄日期或時間戳記資料類型可以轉換到另一個資料類型 （或本身），由轉換函式。
+

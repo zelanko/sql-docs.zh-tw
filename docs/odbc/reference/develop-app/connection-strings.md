@@ -24,6 +24,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8eefb9897492d0b6550b2f3ee80b07119e184b43
@@ -39,3 +40,4 @@ ms.lasthandoff: 09/09/2017
 -   **SQLBrowseConnect**，其完成反覆與資料來源的連接字串。  
   
  **SQLConnect**不會使用連接字串，使用**SQLConnect**類似連接使用連接字串具有三個關鍵字/值組 (資料來源名稱並選擇性地使用者 ID 和密碼).
+

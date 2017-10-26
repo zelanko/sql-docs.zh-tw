@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 7204f0e0185373d88606fb01a5d3382a23dd91a1
@@ -43,3 +44,4 @@ ms.lasthandoff: 09/09/2017
  在 Visual FoxPro，記錄會儲存在資料表中。 資料表的每個資料列都代表記錄，以及資料表的資料行代表資料錄的欄位。 每個 Visual FoxPro 資料表儲存在它自己.dbf 副檔名的檔案。 Visual FoxPro 資料表可以是與資料庫相關聯。  
   
  FoxPro 第 2 版。*x*資料表不會與資料庫產生關聯。
+

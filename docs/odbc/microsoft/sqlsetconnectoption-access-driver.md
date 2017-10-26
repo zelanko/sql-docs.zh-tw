@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b8f7497cb6b36602908443ab4fd9bdeb592ce8af
@@ -43,3 +44,4 @@ ms.lasthandoff: 09/09/2017
 |SQL_TXN_ISOLATION|SQL_TXN_ISOLATION 永遠是 SQL_TXN_READ_COMMITTED。|  
   
  [1] 不可部分完成交易不會受到 Microsoft Access 驅動程式。 認可交易，使用 Microsoft Access 驅動程式，有限的延遲會存在就會認可交易的時間之間的時間，此值會寫入至磁碟。 此延遲取決於 Microsoft Jet 引擎中固有的延遲。 頁面逾時不會小於最小值，即使 PageTimeout 選項設定低於的值。 如此一來，沒有認可的資料不保證很穩定，因為可能會變更延遲期間。
+

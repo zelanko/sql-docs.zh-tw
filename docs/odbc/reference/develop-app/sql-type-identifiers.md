@@ -20,6 +20,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2ec2f197029fab2467c7dced5f1cb720cf88f598
@@ -35,3 +36,4 @@ ms.lasthandoff: 09/09/2017
  ODBC 定義各種不同的 SQL 類型識別項。 不過，驅動程式不需要使用所有這些識別項。 相反地，它使用基礎資料來源必須支援的 SQL 資料類型會公開這些識別項。 如果基礎資料來源支援的 SQL 資料類型轉換成對應的任何型別識別碼，驅動程式可以定義其他的型別識別項。 如需詳細資訊，請參閱[驅動程式特定資料類型，描述元類型、 資訊類型、 診斷的型別，以及屬性](../../../odbc/reference/develop-app/driver-specific-data-types-descriptor-information-diagnostic.md)。  
   
  SQL 類型識別碼的完整說明，請參閱[C 資料類型](../../../odbc/reference/appendixes/c-data-types.md)附錄 d： 資料型別中。
+

@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0f6e7525059640e7ffdadd79ec26a62229eabae9
@@ -36,3 +37,4 @@ CREATE INDEX 陳述式的語法為：
  使用 Paradox 驅動程式時，CREATE INDEX 陳述式會建立 Paradox 主要金鑰檔案，然後次要檔案。  
   
  這個陳述式不支援的 Microsoft Excel 或文字的驅動程式。
+

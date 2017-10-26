@@ -19,6 +19,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 78bdb77c8aa4d9351e040b97d9690bb09374856d
@@ -68,3 +69,4 @@ ms.lasthandoff: 09/09/2017
 |定位的 delete|SQL_ROW_DELETED|舊的值|舊的值|  
   
  [1] 的應用程式必須執行定位的 update 陳述式; 之前更新的資料列集的緩衝區中的值在執行之後定位的 update 陳述式，資料指標程式庫會複製值到快取資料列集緩衝區中。
+

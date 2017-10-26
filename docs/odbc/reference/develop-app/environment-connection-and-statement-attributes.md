@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: dfe477bf0ca518d4f4e83d141a24bcb4c2640ed2
@@ -37,3 +38,4 @@ ODBC 定義環境、 連線或陳述式相關聯的屬性的數目。
  除了 ODBC 所定義的屬性，驅動程式可以定義自己的連接和陳述式屬性。 驅動程式定義的屬性必須向開啟群組，以確保兩個驅動程式廠商沒有指派相同的整數值不同，專屬的屬性。 如需詳細資訊，請參閱[驅動程式特定資料類型，描述元類型、 資訊類型、 診斷的型別，以及屬性](../../../odbc/reference/develop-app/driver-specific-data-types-descriptor-information-diagnostic.md)。  
   
  如需完整的屬性清單，請參閱[SQLSetEnvAttr](../../../odbc/reference/syntax/sqlsetenvattr-function.md)， [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)，和[SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)。 ODBC 函數，它們會影響的描述中也說明了大部分的屬性。
+

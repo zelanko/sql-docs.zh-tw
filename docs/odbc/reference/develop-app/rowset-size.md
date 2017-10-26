@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b7d3abee6c42fe95205bbb74edc671d8dc02bf87
@@ -39,3 +40,4 @@ ms.lasthandoff: 09/09/2017
 -   **SQLSetPos**使用為準，呼叫就是作用中的資料列集大小**SQLFetch**或**SQLFetchScroll**，因為**SQLSetPos**上運作如果資料列集已經設定。 **SQLSetPos**也將會挑選新的資料列集大小如果**SQLBulkOperations**已呼叫之後的資料列集大小已變更。  
   
 -   **SQLBulkOperations**會使用資料列集大小作用中時呼叫，因為它會執行獨立於任何已擷取的資料列集資料表上的作業。
+

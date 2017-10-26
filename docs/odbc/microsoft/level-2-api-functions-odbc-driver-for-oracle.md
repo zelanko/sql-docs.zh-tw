@@ -21,6 +21,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: eb35e0e2dde90261e913ffd9ba3dc28e5859e012
@@ -51,3 +52,4 @@ ms.lasthandoff: 09/09/2017
 |**SQLProcedures**|傳回資料來源中的程序的清單。 封裝的程序，該程序名稱資料行是*packagename.procedurename*格式。<br /><br /> 因為 Oracle 不提供封裝函式從區別封裝的程序的方法，驅動程式會傳回 SQL_PT_UNKNOWN PROCEDURE_TYPE 資料行。|  
 |**SQLSetPos**|設定資料列集中的資料指標位置。 您可以使用**SQLSetPos**與**SQLGetData**後資料列集定位資料指標到特定的資料列，從解除繫結的資料行中擷取資料列。 資料列加入到結果集使用*fOption* SQL_ADD 會在結果集中的最後一個資料列之後加入。|  
 |**SQLSetScrollOptions**|設定控制陳述式控制代碼，hstmt 相關聯的資料指標行為的選項。 如需詳細資訊，請參閱[資料指標類型和並行組合](../../odbc/microsoft/cursor-type-and-concurrency-combinations.md)。|
+

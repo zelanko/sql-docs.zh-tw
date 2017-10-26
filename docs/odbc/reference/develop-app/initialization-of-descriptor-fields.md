@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0a42ff3940f5d1620c7ee310df24016dfa39a4cd
@@ -33,3 +34,4 @@ ms.lasthandoff: 09/09/2017
  預設值的概念的 IRD 欄位無效。 應用程式可以存取的 IRD 欄位時，才與它相關聯的已備妥或已執行的陳述式。  
   
  在 IPD 自動填入驅動程式之後，才定義 IPD 的某些欄位。 如果不是，它們是未定義。 這些欄位是 SQL_DESC_CASE_SENSITIVE、 SQL_DESC_FIXED_PREC_SCALE、 SQL_DESC_TYPE_NAME、 SQL_DESC_UNSIGNED 和 SQL_DESC_LOCAL_TYPE_NAME。
+

@@ -25,6 +25,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 19f505751d63f07dbd5eb2d1d53b9c191307e9b2
@@ -57,3 +58,4 @@ ms.lasthandoff: 09/09/2017
 -   [十進位數字](../../../odbc/reference/appendixes/decimal-digits.md)  
 -   [傳輸八位元長度](../../../odbc/reference/appendixes/transfer-octet-length.md)  
 -   [顯示大小](../../../odbc/reference/appendixes/display-size.md)
+

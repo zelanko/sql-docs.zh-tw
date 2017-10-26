@@ -16,6 +16,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5e56b61d47581f98f37560875de920c45029c2e9
@@ -57,3 +58,4 @@ INSERT INTO Parts (PartID, Description, Price) VALUES (?, ?, ?)
 -   [程序參數](../../../odbc/reference/develop-app/procedure-parameters.md)  
   
 -   [參數值的陣列](../../../odbc/reference/develop-app/arrays-of-parameter-values.md)
+

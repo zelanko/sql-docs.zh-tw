@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9faec06a2337e7b3a2e93769486f40e006d9d7c8
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
 |------------|--------------|  
 |COLUMN_TYPE|SQL_PARAM_INPUT 或 SQL_RESULT_COL|  
 |序數|這是傳回的結果集結尾的驅動程式專用資料行。 資料行的 SQL 類型是整數。|
+

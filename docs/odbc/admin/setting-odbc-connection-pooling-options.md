@@ -18,6 +18,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6e22b3c2c09f4bc356b54ed2ecb73988f0de2764
@@ -47,3 +48,4 @@ ms.lasthandoff: 09/09/2017
 |建立集區|作用中，包括使用中和已移除集區的集區數目。 此計數器是在 Windows 8 中，管理連接集區中的連線的驅動程式新增至。 如需詳細資訊，請參閱[感知驅動程式的連接共用](../../odbc/reference/develop-app/driver-aware-connection-pooling.md)。|  
   
  您必須指定監視的參數。 效能監視的範例已包含在此版本的 ODBC。
+

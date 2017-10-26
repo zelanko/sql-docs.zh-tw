@@ -17,6 +17,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b9acd359d2d99531e3fe4092b3bd20f00e94622a
@@ -48,3 +49,4 @@ ms.lasthandoff: 09/09/2017
 |PWD|密碼。<br /><br /> 這是一個選擇性的關鍵字，而且永遠不會將寫入至檔案的驅動程式。 用於呼叫**SQLDriverConnect**針對受密碼保護 Paradox 檔案。 每當開啟資料表時，才有效用的密碼。 如果連接字串中傳遞沒有密碼，則該資料表建立沒有密碼。 如果資料表具有不同的密碼，在相同的工作階段中，無法開啟多個也聯結的資料表。|  
 |READONLY|True 表示要使檔案成為唯讀的。若要讓檔案不是唯讀，則為 FALSE。<br /><br /> 這會設定為相同的選項**Read Only**安裝程式 對話方塊中。|  
 |執行緒|引擎使用的背景執行緒數目。 此值為 3，並無法變更。<br /><br /> 這會設定為相同的選項**執行緒**安裝程式 對話方塊中。|
+

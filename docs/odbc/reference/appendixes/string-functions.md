@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1a9afffd67b839b36e663404048ac741e068b015
@@ -63,3 +64,4 @@ ms.lasthandoff: 09/09/2017
 |**空間 (** *計數* **)** (ODBC 2.0)|傳回字元字串，其中包含*計數*空格。|  
 |**子字串 (** *string_exp*，*啟動*，長度**)** (ODBC 1.0)|傳回字元字串，衍生自*string_exp*所指定的字元位置開始*啟動*如*長度*字元。|  
 |**UCASE (** *string_exp* **)** (ODBC 1.0)|傳回字串中的相等*string_exp*，所有小寫字元轉換成大寫。|
+

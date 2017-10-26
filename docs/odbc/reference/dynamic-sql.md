@@ -21,6 +21,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4c24d1dbab68a1e47b5dfe7b48dc3df86fb9f692
@@ -44,3 +45,4 @@ ms.lasthandoff: 09/09/2017
 3.  程式可以在 EXECUTE 陳述式重複使用，每次執行時動態的陳述式提供不同的參數值。  
   
  備妥的執行仍未與靜態 SQL 相同。 在靜態 SQL 中，處理 SQL 陳述式的前四個步驟發生在編譯時間。 在已備妥的執行中，這些步驟仍然會在執行階段，但一次; 執行執行計畫在呼叫 EXECUTE 時，才會發生。 這有助於減少動態 SQL 的架構中原本的效能缺點。 下圖顯示靜態 SQL、 立即執行，與動態 SQL 和動態 SQL 搭配備妥的執行之間的差異。
+

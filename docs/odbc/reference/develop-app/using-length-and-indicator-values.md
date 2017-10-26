@@ -19,6 +19,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f615aa92da79c391e84539fdf5cf402d523ab690
@@ -75,3 +76,4 @@ SQLGetData(hstmt, 1, SQL_C_CHAR, ValuePtr, sizeof(ValuePtr), &ValueLenOrInd);
 -   SQL_DEFAULT_PARAM。 程序是使用輸入參數的預設值，而不是對應的資料緩衝區中值的程序中。  
   
 -   SQL_COLUMN_IGNORE。 **SQLBulkOperations**或**SQLSetPos**是要略過的資料緩衝區中的值。 呼叫更新資料列時**SQLBulkOperations**或**SQLSetPos**不會變更資料行值。 插入新的資料列呼叫時**SQLBulkOperations**，資料行值設定為其預設值或資料行沒有預設值為 NULL。
+

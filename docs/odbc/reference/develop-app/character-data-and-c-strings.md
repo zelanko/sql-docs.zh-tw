@@ -24,6 +24,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c786c1ce1ea3457da20d4f50c54ea7b797c70c1b
@@ -45,3 +46,4 @@ ms.lasthandoff: 09/09/2017
  雖然應用程式和驅動程式通常使用 C 字串 （以 null 結束的字元陣列） 來保存字元資料，但沒有要執行這項操作的需求。 在 C 中，字元資料可以也被視為 （不含 null 終止） 的字元陣列和其個別傳入之長度/指標緩衝區的位元組長度。  
   
  由於非 – null 終端陣列中可以保存字元資料，而且其位元組長度分別傳遞，便可在字元資料中內嵌的 null 字元。 不過，在此情況下 ODBC 函數的行為是未定義，而且很是否驅動程式會處理這正確特定驅動程式。 因此，可互通的應用程式應該永遠會處理可包含內嵌的 null 字元做為二進位資料的字元資料。
+

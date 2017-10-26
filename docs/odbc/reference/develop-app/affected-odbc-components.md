@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a316cf7760534530b5663782532ada9fd6990662
@@ -40,3 +41,4 @@ ms.lasthandoff: 09/09/2017
   
 > [!NOTE]  
 >  符合標準的應用程式 — 例如，已寫入根據 Open Group 或 ISO CLI 標準的應用程式 — 保證可以運作 ODBC 3*.x*驅動程式透過 ODBC 3*.x*驅動程式管理員。 它會假設應用程式使用的功能是可用的驅動程式中。 同時也假設符合標準的應用程式，已編譯 ODBC 3*.x*標頭檔。
+

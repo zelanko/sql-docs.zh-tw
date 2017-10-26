@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 81ecac0249bc5e981c95b319f64768d45b792b96
@@ -30,3 +31,4 @@ ms.lasthandoff: 09/09/2017
  通常未設定 SQL_DESC_DATA_PTR 欄位的 IPD;不過，應用程式可以進行強制 IPD 欄位的一致性檢查。 IPD 的 SQL_DESC_DATA_PTR 欄位設定為值實際上不會儲存且無法擷取由呼叫**SQLGetDescField**或**SQLGetDescRec**; 只以強制進行設定一致性檢查。 無法在 IRD 上執行一致性檢查。  
   
  如需有關一致性檢查的詳細資訊，請參閱[SQLSetDescRec](../../../odbc/reference/syntax/sqlsetdescrec-function.md)。
+

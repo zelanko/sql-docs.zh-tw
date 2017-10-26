@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: db7e04c5bf76855afdb24676c905c5cccbc60cbc
@@ -35,3 +36,4 @@ ms.lasthandoff: 09/09/2017
 2.  將 SQL_ATTR_ROW_ARRAY_SIZE 陳述式屬性設定為書籤的數目，並繫結包含書籤值或資料行 0 的書籤，陣列的緩衝區。  
   
 3.  呼叫**SQLBulkOperations**與*作業*設 SQL_DELETE_BY_BOOKMARK。
+

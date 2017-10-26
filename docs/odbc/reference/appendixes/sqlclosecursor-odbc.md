@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: fcc680ec815afa700c00c9d8a69c5826944153a4
@@ -30,3 +31,4 @@ ms.lasthandoff: 09/09/2017
  本主題討論使用**SQLCloseCursor**資料指標程式庫中的函式。 如需一般資訊**SQLCloseCursor**，請參閱[SQLCloseCursor 函數](../../../odbc/reference/syntax/sqlclosecursor-function.md)。  
   
  資料指標程式庫不支援呼叫**SQLCloseCursor**沒有開啟的資料指標。 嘗試進行這會傳回 SQLSTATE 24000 （無效的資料指標狀態）。 呼叫**SQLFreeStmt**與*選項*SQL_CLOSE 的任何資料指標開啟時支援資料指標程式庫。
+

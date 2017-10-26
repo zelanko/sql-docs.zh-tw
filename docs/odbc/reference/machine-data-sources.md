@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 7c6382804fbf57edba130adcb7e298d0f300a69a
@@ -26,3 +27,4 @@ ms.lasthandoff: 09/09/2017
 ---
 # <a name="machine-data-sources"></a>機器資料來源
 *電腦的資料來源*儲存在使用者定義的名稱與系統上。 資料來源名稱與相關聯，則所有的資訊連接到資料來源驅動程式管理員和驅動程式的需要。 Xbase 資料來源，這可能是目錄的 Xbase 驅動程式，包含 Xbase 檔案，並告知驅動程式如何使用這些檔案，例如單一使用者模式或唯讀狀態的一些選項的完整路徑名稱。 對於 Oracle 資料來源，這可能是 Oracle 驅動程式的名稱，Oracle DBMS 所在的位置，伺服器的 SQL * Net 可識別 SQL 連接字串\*網路驅動程式使用，並在伺服器上資料庫的系統識別碼。
+

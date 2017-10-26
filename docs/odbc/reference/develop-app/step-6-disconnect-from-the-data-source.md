@@ -18,6 +18,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ce3ea03a637e8edce89c83f196e4fcafd97dfdc8
@@ -33,3 +34,4 @@ ms.lasthandoff: 09/09/2017
  接下來，應用程式中斷連接資料來源與**SQLDisconnect**並釋放連接控制代碼與**SQLFreeHandle**。 如需詳細資訊，請參閱[中斷資料來源或驅動程式](../../../odbc/reference/develop-app/disconnecting-from-a-data-source-or-driver.md)。  
   
  最後，應用程式會釋放環境控制代碼與**SQLFreeHandle**載入和卸載驅動程式管理員。 如需詳細資訊，請參閱[配置環境處理](../../../odbc/reference/develop-app/allocating-the-environment-handle.md)。
+

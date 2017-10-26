@@ -20,6 +20,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b12ba1b5b8c70e6ab0f7efe6f0811984411a6022
@@ -56,3 +57,4 @@ ms.lasthandoff: 09/09/2017
   
 > [!NOTE]  
 >  此函式**SQLBindParam**是特殊案例。 **SQLBindParam**是重複的功能。 這不是 ODBC 2*.x*函式，但存在於 Open Group 和 ISO 標準中的函式。 此函式所提供的功能完全由來建立小計的**SQLBindParameter**。 如此一來，驅動程式管理員會將對應的呼叫**SQLBindParam**至**SQLBindParameter**基礎驅動程式時 ODBC 3。*x*驅動程式。 不過，當基礎驅動程式是 ODBC 2*.x*驅動程式，驅動程式管理員不會執行這項對應。
+

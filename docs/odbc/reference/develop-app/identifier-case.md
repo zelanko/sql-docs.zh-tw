@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c55118fa47337425e715a8b3d6409525668e383f
@@ -29,3 +30,4 @@ ms.lasthandoff: 09/09/2017
 在 SQL 陳述式和類別目錄函式引數，識別項和引號的識別碼可以是區分大小寫或不是，選取應用程式可以呼叫來判斷**SQLGetInfo** SQL_QUOTED_ SQL_IDENTIFIER_CASE 與IDENTIFIER_CASE 選項。  
   
  每個選項有四個可能的傳回值： 一個表示識別項或引號識別項的情況下機密和三個表示它不敏感。 三個值不區分大小寫的進一步說明識別碼儲存在系統目錄中的案例。 系統目錄中儲存識別碼則是只適用於顯示用途，例如當應用程式會顯示的結果目錄函數。它不會變更區分大小寫的識別項。
+

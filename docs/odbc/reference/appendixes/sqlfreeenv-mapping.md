@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a5c1dae2fb67d530e9e8bfefd041eb978eb5bf15
@@ -38,3 +39,4 @@ SQLFreeHandle(SQL_HANDLE_ENV,Handle)
 ```  
   
  與*處理*引數設定中的值為*henv*。
+

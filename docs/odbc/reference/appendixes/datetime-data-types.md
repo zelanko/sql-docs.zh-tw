@@ -25,6 +25,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 92ab5f52282fddf89c48bef73fa7817684ae3496
@@ -44,3 +45,4 @@ ms.lasthandoff: 09/09/2017
  所有資料類型的呼叫中的都要求時**SQLGetTypeInfo**，函式所傳回的結果集將包含 SQL_TYPE_DATE、 SQL_TYPE_TIME 和 SQL_TYPE_TIMESTAMP，定義在 ODBC 3*.x*，SQL_DATE、 SQL_TIME 和 SQL_TIMESTAMP ODBC 2 中所定義。*x*。  
   
  因為如何 ODBC 3*.x*驅動程式管理員會執行對應的日期、 時間和時間戳記資料類型，ODBC 3*.x*驅動程式只需要辨識**#defines** 91 的 92，，和中輸入的日期、 時間和時間戳記 C 資料類型的 93 *TargetType*引數的**SQLBindCol**和**SQLGetData**或*ValueType*引數的**SQLBindParameter**，而且只需要辨識**#defines**的 91，92 和 93 日期、 時間、 與中輸入的時間戳記SQL資料類型*ParameterType*引數的**SQLBindParameter**或*DataType*引數的**SQLGetTypeInfo**。 如需詳細資訊，請參閱[Datetime 資料類型變更](../../../odbc/reference/develop-app/datetime-data-type-changes.md)。
+

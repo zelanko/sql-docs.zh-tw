@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9460f4f4bbc522fc421b7e40b261fe17a8410a09
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  當應用程式呼叫**SQLRowCount**定位的 update 或 delete 陳述式相關聯的陳述式，資料指標程式庫傳回的陳述式所影響的資料列數目。  
   
  當應用程式呼叫**SQLRowCount**之後**選取**陳述式，資料指標程式庫會傳回-1。
+

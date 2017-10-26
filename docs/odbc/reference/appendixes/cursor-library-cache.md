@@ -18,6 +18,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 06b893a857f87c2d6c3911e3d81fd0cd02d89668
@@ -40,3 +41,4 @@ ms.lasthandoff: 09/09/2017
 -   [資料列狀態](../../../odbc/reference/appendixes/row-status.md)  
   
 -   [快取的位置](../../../odbc/reference/appendixes/location-of-cache.md)
+

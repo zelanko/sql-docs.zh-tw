@@ -23,6 +23,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c859eba5dc2b064c595ce57dffa2bde6aeda364e
@@ -89,3 +90,4 @@ BOOL SQLRemoveTranslator(
 |如需詳細資訊|請參閱|  
 |---------------------------|---------|  
 |安裝的轉譯器|[SQLInstallTranslatorEx](../../../odbc/reference/syntax/sqlinstalltranslatorex-function.md)|
+

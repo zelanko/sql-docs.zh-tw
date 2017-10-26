@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 412c04f8181997738bac1fc7b457c9ec0c3efcde
@@ -51,3 +52,4 @@ ODBC 應用程式中的對齊問題通常與並無不同它們位於其他任何
  ![繫結的最大的對齊界限](../../../odbc/reference/develop-app/media/pr26.gif "pr26")  
   
  雖然這個解決方案可讓更大的漏洞，來實作它的程式碼是相對較簡單且快速。 在大部分情況下，此位移付費未使用記憶體中的負面影響。 如需使用這個方法的範例，請參閱[使用 SQLBindCol](../../../odbc/reference/develop-app/using-sqlbindcol.md)。
+

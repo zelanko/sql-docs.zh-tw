@@ -14,6 +14,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f0e802f24066a85b0acde624ed1baa202d2be266
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
 -   [處理 SQL 陳述式](../../../odbc/reference/appendixes/processing-sql-statements.md)  
   
 -   [ODBC 函數和資料指標程式庫](../../../odbc/reference/appendixes/odbc-functions-and-the-cursor-library.md)
+

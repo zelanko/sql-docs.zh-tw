@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 75251b5caa42050028e3fc3057ce4778543b8e1b
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  關閉連接。  
   
  如需詳細資訊，請參閱[SQLDisconnect](../../odbc/reference/syntax/sqldisconnect-function.md)中*ODBC 程式設計人員參考*。
+

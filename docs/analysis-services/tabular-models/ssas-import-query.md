@@ -1,7 +1,7 @@
 ---
 title: "匯入資料使用原生查詢 (Analysis Services) |Microsoft 文件"
 ms.custom: 
-ms.date: 10/02/2017
+ms.date: 10/26/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -22,6 +22,8 @@ ms.lasthandoff: 10/11/2017
 
 ---
 # <a name="import-data-by-using-a-native-query"></a>使用原生查詢匯入資料
+
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
 對於表格式 1400年模型中，Visual Studio Analysis Services 專案中新的 [取得資料] 功能提供極大的彈性如何混用您的資料匯入期間。 本文說明建立資料來源的連接，然後再建立原生 SQL 查詢來指定資料匯入。
 

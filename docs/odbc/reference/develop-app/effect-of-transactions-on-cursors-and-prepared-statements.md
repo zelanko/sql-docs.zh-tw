@@ -21,6 +21,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2533778f9b0e837ce59850d4f70a3c4545f8be60
@@ -62,3 +63,4 @@ ms.lasthandoff: 09/09/2017
  應用程式，尤其是螢幕型應用程式在使用者捲動的結果集和更新或刪除資料列，必須非常小心略過這個問題的程式碼。  
   
  若要判斷認可或回復交易時，資料來源的行為方式，應用程式呼叫**SQLGetInfo**與 SQL_CURSOR_COMMIT_BEHAVIOR 和 SQL_CURSOR_ROLLBACK_BEHAVIOR 選項。
+

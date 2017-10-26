@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9ef6287177be3b52b80e0a2439d7d0686da180da
@@ -40,3 +41,4 @@ SELECT * FROM `My Table`.`My Field`
 ```  
   
  如需詳細資訊，請參閱[SQLPrepare](../../odbc/reference/syntax/sqlprepare-function.md)中*ODBC 程式設計人員參考*。
+

@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 82062fe767847023cd1aa6614173b292b0bff378
@@ -30,3 +31,4 @@ ms.lasthandoff: 09/09/2017
  追蹤檔案提供的資料類型的每個 ODBC 函數呼叫的記錄檔和所有引數的值。 它會記錄所有輸入函式，並使用傳回碼和錯誤狀態來記錄所有傳回的函式。  
   
  在 ODBC 3*.x*，來追蹤 DLL 未提供連線函式的參數。
+

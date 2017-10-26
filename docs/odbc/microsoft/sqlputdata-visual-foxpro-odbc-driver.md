@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b2e32b20ebf9ac5f4fdcded41df6e7d14f3bf3f9
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  允許應用程式將參數或資料行的資料傳送到在陳述式執行階段的驅動程式。  
   
  如需詳細資訊，請參閱[SQLPutData](../../odbc/reference/syntax/sqlputdata-function.md)中*ODBC 程式設計人員參考*。
+

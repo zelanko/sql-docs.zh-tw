@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6d8ca656e63183df424de2ec45c823ac275ef69f
@@ -30,3 +31,4 @@ ms.lasthandoff: 09/09/2017
  本主題討論使用**SQLGetFunctions**資料指標程式庫中的函式。 如需一般資訊**SQLGetFunctions**，請參閱[SQLGetFunctions 函數](../../../odbc/reference/syntax/sqlgetfunctions-function.md)。  
   
  當您呼叫**SQLGetFunctions**，資料指標程式庫會傳回它支援**SQLExtendedFetch**， **SQLFetchScroll**， **SQLSetPos**，和**SQLSetScrollOptions**，除了驅動程式支援的函式。
+

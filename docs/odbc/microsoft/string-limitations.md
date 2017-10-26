@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e6f9d8add08f80b59adaa42f02bc1da006356081
@@ -32,3 +33,4 @@ SQL 陳述式字串的長度上限為 65000 個字元。
  縱線字元 (&#124;) 不能在字串中，是否或不以回復括住的字元。  
   
  最大的互通性，應用程式應該傳遞字串參數，而不是傳遞加上引號的字串。
+

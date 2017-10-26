@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d94cdc4b73bd176ae7af002ab290b795ad87d39e
@@ -44,3 +45,4 @@ SQLBindParameter(   StatementHandle,    ParameterNumber,    SQL_PARAM_INPUT,    
   
 ## <a name="see-also"></a>另請參閱  
  [對應已被取代的函式](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)
+

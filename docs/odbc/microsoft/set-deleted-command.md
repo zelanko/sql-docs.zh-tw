@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f3bf1ec522bee6fda19349a71c894ebd98bd75b9
@@ -48,3 +49,4 @@ SET DELETED ON | OFF
   
 ## <a name="see-also"></a>另請參閱  
  [刪除 SQL 命令](../../odbc/microsoft/delete-sql-command.md)
+

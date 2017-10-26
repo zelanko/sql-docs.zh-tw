@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ce87b9dbed8cfa6ca621cb72c36220c13ecb0929
@@ -32,3 +33,4 @@ ms.lasthandoff: 09/09/2017
 -   驅動程式管理員會檢查驅動程式是否會實作**SQLGetFunctions**。 如果驅動程式不會實作**SQLGetFunctions**，驅動程式管理員實作，並檢查所有錯誤和警告中的。  
   
 -   部分驅動程式管理員會實作**SQLAllocHandle**， **SQLConnect**， **SQLDriverConnect**， **SQLBrowseConnect**， **SQLFreeHandle**， **SQLGetDiagRec**，和**SQLGetDiagField**並檢查是否有這些函式中的部分錯誤。 它可能會傳回相同的錯誤，為驅動程式的其中一些函式，因為同時執行類似作業。 例如，驅動程式管理員或驅動程式可能會傳回 SQLSTATE IM008 （失敗對話方塊） 如果有無法顯示登入 對話方塊的**SQLDriverConnect**。
+

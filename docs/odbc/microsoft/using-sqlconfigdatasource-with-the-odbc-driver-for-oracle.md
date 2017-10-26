@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: aa32db53ef43da7f01200dcf057f9855a4f5707e
@@ -57,3 +58,4 @@ ms.lasthandoff: 09/09/2017
 |TranslationOption|33|""|A/N|轉譯選項。|  
 |TxnCap|2|""|A/N|交易支援。 如果為 0，此驅動程式會報告不支援交易。 如果是 1，驅動程式會報告它能夠執行的交易。|  
 |UID|30|""|A/N|使用者名稱。|
+

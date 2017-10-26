@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2aa64242f7ae74d7bf815d197e67b91c460e4a54
@@ -459,3 +460,4 @@ ms.lasthandoff: 09/09/2017
  SQL_UNION 傳回 SQL_U_UNION 或 SQL_U_UNION_ALL。  
   
  傳回 SQL_USER_NAME\<空白 >。
+

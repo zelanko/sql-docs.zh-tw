@@ -18,6 +18,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6f1a59c15d2ebf1866d4543fa89662888154d4da
@@ -46,3 +47,4 @@ ms.lasthandoff: 09/09/2017
  當時間 C 資料會轉換成字元的 SQL 資料時，產生的字元資料就會處於 「*hh*:*公釐*:*ss*」 格式。  
   
  驅動程式會忽略轉換資料的 C 資料類型，並假設資料緩衝區的大小是時間 C 資料類型大小的時間長度/指標值。 長度/指標值傳遞*StrLen_or_Ind*引數中的**SQLPutData**並使用指定的緩衝區中*StrLen_or_IndPtr*引數中**SQLBindParameter**。 使用指定的資料緩衝區*DataPtr*引數中的**SQLPutData**和*ParameterValuePtr*引數中的**SQLBindParameter**.
+

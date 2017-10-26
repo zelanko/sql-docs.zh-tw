@@ -14,6 +14,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b49962bfce3474269b4d9a91dee74212b0d02234
@@ -46,3 +47,4 @@ Save-SqlMigrationReport [ -MigrationType OLTP ] [ -Server server -Database datab
  -FolderPath 參數中指定的資料夾，其中會有「資料表」和「預存程序」這兩個資料夾名稱。 如果目標的物件是資料表，它的報表就會在「資料表」資料夾內。 否則，就會在「預存程序」資料夾內。  
   
   
+

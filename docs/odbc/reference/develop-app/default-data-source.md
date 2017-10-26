@@ -25,6 +25,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 08c8aab7a9cfcecf18181dacbab6f18aaa59ff64
@@ -40,3 +41,4 @@ ms.lasthandoff: 09/09/2017
 -   在呼叫**SQLDriverConnect**其中*InConnectionString*是指定**DSN**= 預設值或指定**DSN**關鍵字並未包含在系統資訊的資料來源。  
   
  它為驅動程式定義的預設資料來源指定的方式。 這可能牽涉到系統管理動作，可能會取決於使用者。
+

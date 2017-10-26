@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ac33a8370cbd76a3dde43df68c12c9417fc78e07
@@ -33,3 +34,4 @@ ms.lasthandoff: 09/09/2017
  刪除資料列集的所有資料列時 (*RowNumber*等於 0)，應用程式可以避免驅動程式刪除某些資料列所使用的資料列作業陣列中的更新作業一樣**SQLSetPos**. (請參閱[SQLSetPos 以更新資料列集中的資料列](../../../odbc/reference/develop-app/updating-rows-in-the-rowset-with-sqlsetpos.md)。)  
   
  刪除的每一個資料列都應該是存在於結果集內的資料列。 如果應用程式緩衝區填滿所擷取，而且已受到維護資料列狀態陣列，其在每個資料列位置的值不應該為 SQL_ROW_DELETED、 SQL_ROW_ERROR 或 SQL_ROW_NOROW。
+

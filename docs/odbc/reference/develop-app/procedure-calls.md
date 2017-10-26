@@ -17,6 +17,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f907cf8700a683988277e84b93f9fc3bdae11317
@@ -67,3 +68,4 @@ SQLExecDirect(hstmt, "{call PARTS_IN_ORDERS(?)}", SQL_NTS);
  若要判斷資料來源是否支援程序，應用程式呼叫**SQLGetInfo** SQL_PROCEDURES 選項。  
   
  如需程序的詳細資訊，請參閱[程序](../../../odbc/reference/develop-app/procedures-odbc.md)。
+

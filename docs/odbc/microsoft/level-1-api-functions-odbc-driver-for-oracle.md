@@ -20,6 +20,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3cd7f827ecfc367536654b9ad825302f4dba9fcf
@@ -50,3 +51,4 @@ ms.lasthandoff: 09/09/2017
 |**SQLSpecialColumns**|擷取最佳的資料行集可唯一識別資料表中的資料列。|  
 |**SQLStatistics**|擷取單一的資料表和索引或與資料表相關聯的標記名稱相關的統計資料的清單。 驅動程式會傳回結果集的資訊。|  
 |**SQLTables**|傳回清單中的參數所指定的資料表名稱**SQLTables**陳述式。 如果未不指定任何參數，會傳回儲存在目前的資料來源中的資料表名稱。 驅動程式會傳回結果集的資訊。<br /><br /> 列舉型別呼叫不會接收結果集項目，檢視遠端或本機參數化的檢視。 不過，呼叫**SQLTables**與唯一資料表名稱規範會找到相符的這類檢視中，如果有的話，具有該名稱，這可讓 API 來檢查是否有之前建立新資料表的名稱衝突。<br /><br /> 公用的同義字會傳回 TABLE_OWNER 值是""。<br /><br /> SYS 或系統所擁有的檢視表會識別為系統檢視表。|
+

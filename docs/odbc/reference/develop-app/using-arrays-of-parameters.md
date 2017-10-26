@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a7c6a6ee4f066925d2a7ec46a2186134d75cb7e4
@@ -57,3 +58,4 @@ ms.lasthandoff: 09/09/2017
 -   驅動程式不會解譯中的值因為*ParameterValuePtr*引數的**SQLBindParameter**資料在執行中參數，如果應用程式提供的指標陣列，如**SQLParamData**不擷取，這個陣列的項目並返回應用程式。 相反地，它會傳回純量值的應用程式有提供。 這表示所傳回的值**SQLParamData**足夠的參數指定的應用程式需要將資料傳送; 應用程式也需要考慮目前的資料列數目。  
   
      當只有一些參數陣列的項目資料在執行中參數，應用程式必須傳遞陣列中的位址*ParameterValuePtr* ，其中包含所有參數的項目。 這個陣列會被解譯通常不是資料在執行中參數的參數。 資料在執行參數值的**SQLParamData**提供給應用程式，通常無法用來識別驅動程式會要求在這個下的資料，一律為陣列的位址。
+

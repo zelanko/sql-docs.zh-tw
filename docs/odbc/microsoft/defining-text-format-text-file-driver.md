@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ed4eb087a11db45f2e3841b6e65824f1076d3693
@@ -48,3 +49,4 @@ ms.lasthandoff: 09/09/2017
 |**要掃描的資料列**|安裝程式或驅動程式會掃描設定資料行與現有的資料為基礎的資料行資料類型的資料列數目。<br /><br /> 您可以輸入的數字 1 到 32767 之間之掃描的資料列數目。 預設值為 25 如果在選取之項目的格式**資料表**清單尚未先前定義的這個對話方塊。 （限制以外的數字會傳回錯誤）。|  
 |**資料表**|包含清單中選取的目錄中的所有檔案的**文字安裝**符合指定的擴充功能清單中的對話方塊。<br /><br /> 當\<預設 > 已選取下列其中一項是 true 時，資料表中的屬性值和**資料表**Schema.ini (touched Schema.ini 中的沒有其他項目) 寫入群組：<br /><br /> -沒有 Schema.ini 中指定的目錄。<br />-Schema.ini 檔案存在，但是 Schema.ini 的其中一個目錄中 （具有指定之副檔名） 文字檔案中沒有區段。<br />-[文字檔] 區段存在於 Schema.ini，但是主體是空的。<br /><br /> 當\<預設 > 已選取**資料行**群組為停用。|  
 |**寬度**|CHAR 或 LONGCHAR 資料行可以變更資料行的寬度。 寬度的預設值為 1，否則在選取之項目的格式**資料表**清單尚未先前定義的這個對話方塊。<br /><br /> 對於其他資料類型，寬度控制項已停用，並會顯示任何值。|
+

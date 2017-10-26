@@ -22,6 +22,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9e1624febc9b53c654c1b01f5aafb601b97b3cbf
@@ -46,3 +47,4 @@ DSN={MyDataSourceName};UID={MyUserID};PWD={MyServerPassword};UIDDBMS={MyDBMSUser
  中的關鍵字-值配對**SQLDriverConnect**必須遵循特定的語法規則。 這些關鍵字，而且其值不應該包含**[] {} （)，;？\*= ！ @**字元。 值**DSN**關鍵字不能只包含空格，且不能包含前置的空白。 因為登錄文法中，關鍵字和資料來源名稱不能包含反斜線 (\\) 字元。 關鍵字-值配對中的等號前後不能有空格。  
   
  **FILEDSN**關鍵字可用於呼叫**SQLDriverConnect**來指定包含資料來源資訊的檔案名稱 (請參閱[連接使用的檔案資料來源](../../../odbc/reference/develop-app/connecting-using-file-data-sources.md)，本主題稍後)。 **SAVEFILE**關鍵字可用來指定的連線成功的關鍵字-值配對所做的.dsn 檔案名稱中的呼叫所**SQLDriverConnect**將會儲存。 如需檔案資料來源的詳細資訊，請參閱[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)函式描述。
+

@@ -21,6 +21,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f0e3f46b5dd742ff1e77c87a8486038c41839764
@@ -42,3 +43,4 @@ ms.lasthandoff: 09/09/2017
 4.  呼叫**SQLBulkOperations**與*作業*引數設定為 SQL_FETCH_BY_BOOKMARK。  
   
  沒有要使用的資料列作業陣列，以避免作業的應用程式需要在特定資料行上執行。 應用程式選取要繫結的書籤陣列中複製這些資料列的書籤提取資料的列。
+

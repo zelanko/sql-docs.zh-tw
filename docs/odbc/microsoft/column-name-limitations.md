@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a5e2fb7cf9f54177ce357058e51e541b6a442379
@@ -36,3 +37,4 @@ ms.lasthandoff: 09/09/2017
  縱線字元 (&#124;) 不能在資料行名稱是否或不以回復括住名稱。  
   
  使用文字驅動程式時，驅動程式會提供預設名稱，如果未指定資料行名稱。 例如，驅動程式會呼叫第一個資料行 F1、 F2，第二個資料行等等。
+

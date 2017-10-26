@@ -22,6 +22,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a1513b2c9576d994ea7eb505c4928fd609e9498c
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
 >  將移除這項功能，在未來的版本的 Windows。 避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 Microsoft 建議使用驅動程式的資料指標功能。  
   
  資料指標程式庫不支援 SQL 陳述式，包括 SQL_ATTR_PARAMSET_SIZE 陳述式屬性是大於 1 的 SQL 陳述式的批的次。 如果應用程式提交的資料指標程式庫的 SQL 陳述式的批次，則結果會是未定義。
+

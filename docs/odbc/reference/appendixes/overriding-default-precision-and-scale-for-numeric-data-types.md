@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 613ec65d838a525251b6682cca477c5c8d24a162
@@ -35,3 +36,4 @@ ms.lasthandoff: 09/09/2017
  如果應用程式呼叫**SQLGetData** SQL_C_NUMERIC 結構傳回資料，使用預設 SQL_DESC_SCALE 和 SQL_DESC_PRECISION 欄位。 預設值不是可接受的如果應用程式必須呼叫**SQLSetDescRec**或**SQLSetDescField** ，設定欄位，然後再呼叫**SQLGetData**與*TargetType*的 SQL_ARD_TYPE 至使用中的描述項欄位的值。  
   
  當**SQLPutData**是呼叫，呼叫使用 SQL_DESC_SCALE 和 SQL_DESC_PRECISION 的欄位對應至資料在執行中參數或資料行，描述項記錄所呼叫的 APD 欄位**SQLExecute**或**SQLExecDirect**，或呼叫的 ARD 欄位**SQLBulkOperations**或**SQLSetPos**。
+

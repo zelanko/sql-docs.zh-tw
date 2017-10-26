@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 79d5ff9920c0340d421d56693470ba4293199fd1
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  搭配[SQLPutData](../../odbc/microsoft/sqlputdata-visual-foxpro-odbc-driver.md)來指定參數資料在陳述式執行階段。  
   
  如需詳細資訊，請參閱[SQLParamData](../../odbc/reference/syntax/sqlparamdata-function.md)中*ODBC 程式設計人員參考*。
+

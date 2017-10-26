@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a55f12a84c6fb354b4aefa4da40c53473cd4b215
@@ -33,3 +34,4 @@ ms.lasthandoff: 09/09/2017
 |TABLE_QUALIFIER|會傳回目錄的路徑。|  
 |TABLE_OWNER|因為擁有者名稱不支援此資料行就會傳回 NULL。|  
 |NULLABLE|SQL_NO_NULLS 參與的資料行就會傳回主索引鍵或唯一索引。|
+

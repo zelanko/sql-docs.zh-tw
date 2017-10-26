@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c1a98ca0b68198dada19e4ac81f8637798a99b95
@@ -35,3 +36,4 @@ ms.lasthandoff: 09/09/2017
 -   時間常值，{t '*值*'}，其中*宣告*e 是格式為"hh: mm:"  
   
  時間戳記常值 {ts'*值*'}，其中*宣告*e 的格式為"yyyy-mm-dd hh: mm: [.f...]"。
+

@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: bd79255e4cda68d1fd4d425544702e589f44336b
@@ -39,3 +40,4 @@ ms.lasthandoff: 09/09/2017
 3.  呼叫**SQLBulkOperations**與*作業*引數設定為 SQL_ADD。  
   
  之後**SQLBulkOperations**傳回目前的資料列不會變更。 如果書籤資料行 （資料行 0） 會繫結， **SQLBulkOperations**傳回資料列集的緩衝區中插入的資料列的書籤繫結至該資料行。
+

@@ -18,6 +18,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3ba39caca1a4ad37437f35918545ed54a5dd2266
@@ -70,3 +71,4 @@ _C_TYPE_TIMESTAMP|資料值是一個有效*時間戳記值或有效的時間值*
  [時間戳記結構的 g] 的日期欄位設定為目前的日期。  
   
  當字元 SQL 資料會轉換為數值時，會忽略日期、 時間、 時間戳記或間隔 C 資料，開頭和尾端空白。
+

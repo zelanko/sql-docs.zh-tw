@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1e5cabca53c503e2cd0c12147248b11da84ed157
@@ -36,3 +37,4 @@ ms.lasthandoff: 09/09/2017
  如果資料指標程式庫會使用 ODBC 2。*x*沒有驅動程式，位移 （以 SQL_ATTR_ROW_BIND_OFFSET_PTR 陳述式屬性來定義） 的繫結時使用**SQLFetch**呼叫。  
   
  應用程式載入資料指標程式庫時，無法呼叫**SQLFetch**擷取書籤資料行。 資料指標程式庫會傳遞至呼叫**SQLFetch**透過驅動程式，但函式呼叫啟用書籤和書籤資料行繫結會攔截資料指標程式庫。
+

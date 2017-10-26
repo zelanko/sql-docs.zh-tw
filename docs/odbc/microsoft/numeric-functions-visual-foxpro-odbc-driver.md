@@ -19,6 +19,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: af884148535018c19a2a7375f3bfc90d73aa5f78
@@ -59,3 +60,4 @@ ms.lasthandoff: 09/09/2017
  電源*（則 numeric_exp 就，integer_exp 個）*  
   
  截斷*（則 numeric_exp 就，integer_exp 個）*
+

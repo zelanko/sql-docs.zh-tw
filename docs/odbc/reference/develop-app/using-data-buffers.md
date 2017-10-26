@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 62d94e1afab75c39a16aa0f9e3b4ca0e70527dfb
@@ -35,3 +36,4 @@ ms.lasthandoff: 09/09/2017
 -   [資料緩衝區的位址](../../../odbc/reference/develop-app/data-buffer-address.md)  
   
 -   [資料緩衝區長度](../../../odbc/reference/develop-app/data-buffer-length.md)
+

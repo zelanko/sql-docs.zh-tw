@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 558789a4f435e9fc54176b1423d71369f6b4cc22
@@ -39,3 +40,4 @@ Microsoft ODBC 桌面資料庫驅動程式以強制資料類型的下列限制�
 |timestamp|TIMESTAMP 資料類型無法轉換成本身的轉換函式。|  
 |TINYINT|TINYINT 值一定是不帶正負號。|  
 |零長度字串|使用 dBASE、 Microsoft Excel、 Paradox 或 Textdriver 時，將插入的資料行的零長度字串實際插入 null 值改為。|
+

@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 034a4065615c3b0c298de110cd2501bd392a9704
@@ -49,3 +50,4 @@ ms.lasthandoff: 09/09/2017
 |||[其中子句](../../odbc/microsoft/where-clause-limitations.md)|  
 |||[其中目前的子句](../../odbc/microsoft/where-current-of-clause-limitations.md)|  
 |||[字串](../../odbc/microsoft/string-limitations.md)|
+

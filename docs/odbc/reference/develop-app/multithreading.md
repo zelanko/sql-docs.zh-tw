@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9c49f5cf9e9a5082ff8fbdfcefc5b71656c61962
@@ -31,3 +32,4 @@ ms.lasthandoff: 09/09/2017
  應用程式通常使用多個執行緒，而不是非同步處理。 應用程式建立個別的執行緒、 呼叫 ODBC 函數，並再繼續處理，在主執行緒上。 而不必持續輪詢非同步函式，在此情況下使用 SQL_ATTR_ASYNC_ENABLE 陳述式屬性時，應用程式可以直接讓新建立的執行緒完成。  
   
  接受陳述式控制代碼，以及一個執行緒上執行的函式可以藉由呼叫取消**SQLCancel**相同陳述式，從另一個執行緒處理。 雖然驅動程式不應該序列化使用**SQLCancel**這種方式，並不保證呼叫**SQLCancel**實際上將會取消另一個執行緒上執行的函式。
+

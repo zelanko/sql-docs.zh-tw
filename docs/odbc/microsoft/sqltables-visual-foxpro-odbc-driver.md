@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: fd3e59437eae02a94353a6205e567fde208f4b97
@@ -39,3 +40,4 @@ ms.lasthandoff: 09/09/2017
 >  Visual FoxPro ODBC 驅動程式區別[資料庫資料表](../../odbc/microsoft/visual-foxpro-terminology.md)和[釋放資料表](../../odbc/microsoft/visual-foxpro-terminology.md)，即使這兩類資料表會儲存在您的系統上相同的目錄。 如果您的資料來源是可用的資料表的目錄，Visual FoxPro ODBC 驅動程式不目錄或傳回與資料庫相關聯的任何資料表的名稱。  
   
  如需詳細資訊，請參閱[SQLTables](../../odbc/reference/syntax/sqltables-function.md)中*ODBC 程式設計人員參考*。
+

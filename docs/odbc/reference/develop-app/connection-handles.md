@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ba20d3fcb6d943f4669774013dcb62c8ad896d8d
@@ -40,3 +41,4 @@ A*連接*驅動程式和資料來源所組成。 連接控制代碼識別每個�
  連接到資料來源時，主要是用連接控制代碼 (**SQLConnect**， **SQLDriverConnect**，或**SQLBrowseConnect**)，正在中斷連線的資料來源 (**SQLDisconnect**)，取得的驅動程式和資料來源的相關資訊 (**SQLGetInfo**)，擷取診斷 (**SQLGetDiagField**和**SQLGetDiagRec**)，以及執行交易 (**SQLEndTran**)。 也會使用設定和取得連接屬性時 (**SQLSetConnectAttr**和**SQLGetConnectAttr**)，取得原生格式的 SQL 陳述式時 (**SQLNativeSql**).  
   
  被配置連接控制代碼**SQLAllocHandle**且已釋放與**SQLFreeHandle**。
+
