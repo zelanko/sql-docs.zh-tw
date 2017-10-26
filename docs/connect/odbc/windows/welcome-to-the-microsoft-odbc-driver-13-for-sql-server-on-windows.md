@@ -14,6 +14,7 @@ caps.latest.revision: 3
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a7da07e66203c9bcfb4a690ccb747ff9180df8db
@@ -25,3 +26,4 @@ ms.lasthandoff: 09/09/2017
 Microsoft 已將此產品的文件集移到線上，以便提供最新的資訊給我們的客戶。 請參閱[SQL Server 驅動程式在 Microsoft Developer Network (MSDN)](https://msdn.microsoft.com/library/mt654049.aspx)如需詳細資訊。  
   
 © 2016 Microsoft. 著作權所有，並保留一切權利。 
+

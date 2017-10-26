@@ -18,6 +18,7 @@ caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
 ms.openlocfilehash: bed1fa78db9ee0beca66efe57f088d1d74d377f2
@@ -87,3 +88,4 @@ ms.lasthandoff: 08/03/2017
  [資料分析工作編輯器 &#40;設定檔要求頁面 &#41;](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md)  
   
   
+

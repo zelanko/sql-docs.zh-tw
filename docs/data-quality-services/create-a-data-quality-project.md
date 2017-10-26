@@ -19,6 +19,7 @@ caps.latest.revision: 10
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 14dd208db2469021918b696d9a66121a708d3a9c
@@ -65,3 +66,4 @@ ms.lasthandoff: 09/09/2017
  建立資料品質專案之後，系統會顯示可用來執行選取活動的精靈：清理或比對。 如需清理和比對活動的詳細資訊，請參閱[資料清理](../data-quality-services/data-cleansing.md)和[資料比對](../data-quality-services/data-matching.md)。  
   
   
+

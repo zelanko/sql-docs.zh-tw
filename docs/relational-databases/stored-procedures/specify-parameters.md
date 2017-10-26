@@ -20,10 +20,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1df54edd5857ac2816fa4b164d268835d9713638
-ms.openlocfilehash: aab54d4c1005a11e9c947a02199eec63fb289b22
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: e1b3e7db23ce9435b5d57156f2dcfd920d4d3e11
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/12/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="specify-parameters"></a>指定參數
@@ -137,7 +137,7 @@ GO
   
  若要指定輸出參數，必須在 CREATE PROCEDURE 陳述式的參數定義中指定 OUTPUT 關鍵字。 程序結束時，會將輸出參數目前的值傳回給呼叫端程式。 呼叫端程式在執行程序時，也必須使用 OUTPUT 關鍵字，才能將參數值儲存在變數中，供呼叫端程式使用。  
   
- 下列範例建立 `Production.usp`_`GetList` 程序，傳回價格不超過指定金額的產品清單。 此範例顯示使用多個 SELECT 陳述式和多個 OUTPUT 參數。 OUTPUT 參數可以讓外部程序、批次或一個以上的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式在程序執行過程中存取某一值集。  
+ 下列範例會建立 `Production.usp_GetList` 程序，以傳回價格不超過指定金額的產品清單。 此範例顯示使用多個 SELECT 陳述式和多個 OUTPUT 參數。 OUTPUT 參數可以讓外部程序、批次或一個以上的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式在程序執行過程中存取某一值集。  
   
 ```  
 USE AdventureWorks2012;  

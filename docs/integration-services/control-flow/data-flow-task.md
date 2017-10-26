@@ -22,6 +22,7 @@ caps.latest.revision: 75
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
 ms.openlocfilehash: 8823647eeb74020da575143375d416a03e62d424
@@ -121,3 +122,4 @@ ms.lasthandoff: 08/03/2017
  technet.microsoft.com 上的影片： [Balanced Data Distributer](http://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409)(平衡型資料散發者)。  
   
   
+

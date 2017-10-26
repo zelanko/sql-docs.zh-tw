@@ -14,6 +14,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8d4ab9e275b1596ce57bb39150e91f0e13f3a20c
@@ -27,3 +28,4 @@ ms.lasthandoff: 09/09/2017
   如需有關成員的詳細[SQLServerDriver](../../../connect/jdbc/reference/sqlserverdriver-class.md)，請參閱[SQLServerDriver 成員](../../../connect/jdbc/reference/sqlserverdriver-members.md)。  
   
   
+

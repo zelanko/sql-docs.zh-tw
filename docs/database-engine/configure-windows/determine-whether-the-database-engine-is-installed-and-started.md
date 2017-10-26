@@ -19,6 +19,7 @@ caps.latest.revision: 17
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 93b3736aa15a7e4fc7e7a1df829b96a0efa5ba19
@@ -45,3 +46,4 @@ ms.lasthandoff: 08/02/2017
 >  在安裝過程中，使用者可以選取要用來安裝程式檔案和資料庫檔案的位置。 如果使用者接受預設位置，這些檔案就會安裝至 [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)] 和 C:\Program Files\Microsoft SQL Server\MSSQL.*x*，其中 *x* 是數字。  
   
   
+

@@ -14,6 +14,7 @@ caps.latest.revision: 22
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 201f30b4b5fd5ff6de06274a83fa62967498db2e
@@ -78,3 +79,4 @@ ms.lasthandoff: 09/09/2017
 |描述如何使用參考資料服務清理資料。|[使用參考資料 &#40;外部&#41; 知識清理資料](../data-quality-services/cleanse-data-using-reference-data-external-knowledge.md)|  
   
   
+

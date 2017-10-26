@@ -21,6 +21,7 @@ caps.latest.revision: 48
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0e5ab99da4957f614aff20aa7672f444abfadbee
@@ -65,3 +66,4 @@ ms.lasthandoff: 09/28/2017
  [Integration Services 容器](../../integration-services/control-flow/integration-services-containers.md)  
   
   
+

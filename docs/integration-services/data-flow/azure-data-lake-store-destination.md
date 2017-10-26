@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 5f8cfa5230a36a27a7e98fa6f336bcee56fa062e
@@ -48,3 +49,4 @@ ms.lasthandoff: 09/26/2017
 3.  指定連接資訊後，請切換至 [資料行]  頁面，將來源資料行對應至 SSIS 資料流程的目的地資料行。  
   
   
+

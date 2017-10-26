@@ -16,6 +16,7 @@ caps.latest.revision: 20
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 14b11ae1442a695e683aafc60da424cc6c9f9497
@@ -103,3 +104,4 @@ ms.lasthandoff: 09/09/2017
 -   當您在任何 [定義域管理] 索引標籤中按兩下連結的定義域時，將會開啟此定義域進行編輯，而且在名稱字串中會指示它是連結的定義域。  
   
   
+

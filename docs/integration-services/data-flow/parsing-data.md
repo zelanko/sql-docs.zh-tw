@@ -17,6 +17,7 @@ caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 967a838712819e5bdcefe5f88907fe9047da0fa1
@@ -206,3 +207,4 @@ ms.lasthandoff: 09/26/2017
   
  標準剖析提供對國際性資料之資料類型轉換的支援，它應在「快速剖析」不支援資料格式時使用。 如需 Automation 資料類型轉換 API 的詳細資訊，請參閱 [MSDN Library](http://go.microsoft.com/fwlink/?LinkId=79427)中的＜資料類型轉換 API＞。 
  
+

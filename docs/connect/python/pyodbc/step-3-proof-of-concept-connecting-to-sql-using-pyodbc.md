@@ -14,6 +14,7 @@ caps.latest.revision: 2
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
 ms.openlocfilehash: ae1fc34c07fe85e8ecea70f9cc582d2d7908676e
@@ -80,3 +81,4 @@ while row:
   ## <a name="next-steps"></a>後續的步驟  
   
 如需詳細資訊，請參閱[Python 開發人員中心](https://azure.microsoft.com/en-us/develop/python/)。
+

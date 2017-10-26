@@ -69,7 +69,7 @@ ms.lasthandoff: 09/27/2017
   
 2.  在 [新增項目]  視窗中，按一下 [報表]  ![ssrs_ssdt_report](../reporting-services/media/ssrs-ssdt-report.png)。  
   
-3.  在 [名稱] 中，輸入 **Sales Orders.rdl** ，然後按一下 [新增] 。  
+3.  在 名稱 中，輸入 **Sales Orders.rdl** ，然後按一下新增 。  
   
     報表設計師會在 [設計] 檢視中開啟並顯示新的 .rdl 檔案。  
     

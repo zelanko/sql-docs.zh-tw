@@ -16,6 +16,7 @@ caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f2900e6903553f9eb74cd18aad0c13691073d425
@@ -109,3 +110,4 @@ ms.lasthandoff: 08/03/2017
  當您呼叫 **cdc.fn_cdc_get_net_changes_<capture_instance>** 函數時，您可以在擷取變更資料的 Transact-SQL 陳述式中，指定 *all with merge* 作為 *row_filter_option* 參數的值。 當這個異動資料擷取函數不必執行區別插入與更新所需的額外處理時，其運作會更有效率。 當您指定 *all with merge* 參數值時，變更資料的 **__$operation** 值為 1 (針對刪除) 或 5 (針對插入或更新所造成的變更)。 如需用於擷取變更資料之 Transact-SQL 函數的詳細資訊，請參閱 [擷取與了解變更資料](../../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md)。利用 *all with merge* 參數值擷取變更後，您可以套用刪除，並將剩餘的資料列輸出到暫存資料表或臨時資料表。 接著，在下游的「執行 SQL」工作中，您可以使用單一 MERGE 陳述式，將所有插入或更新從臨時資料表套用到目的地。  
   
   
+

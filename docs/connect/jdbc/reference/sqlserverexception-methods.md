@@ -14,6 +14,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e255a63d0b7df63a19c9d54d4d78ab43340c9304
@@ -27,3 +28,4 @@ ms.lasthandoff: 09/09/2017
   如需有關成員的資訊[SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)，請參閱[SQLServerException 成員](../../../connect/jdbc/reference/sqlserverexception-members.md)。  
   
   
+

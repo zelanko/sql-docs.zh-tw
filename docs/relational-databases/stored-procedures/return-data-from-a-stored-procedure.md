@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: d4dc2ff665ff191fb75dd99103a222542262d4c4
-ms.openlocfilehash: 7eb8ea4b29caaf7f1600bbd31db4f669b86476c1
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 715ce3fff853f4eab433d095ffd952033defad69
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="return-data-from-a-stored-procedure"></a>從預存程序傳回資料
@@ -111,7 +111,7 @@ GO
     >  關閉的狀態只在傳回時有影響。 舉例來說，在程序執行到一半時關閉資料指標，之後又開啟，然後將該資料指標的結果集傳回至呼叫的批次、程序或觸發程序，這些都是有效的。  
   
 ### <a name="examples-of-cursor-output-parameters"></a>Cursor 輸出參數的範例  
- 在下列範例中會建立一個程序，它使用 `@currency`cursor`cursor` 資料類型指定輸出參數 **_** 。 然後在批次中呼叫程序。  
+ 在下列範例中，會建立一個程序，其使用 **cursor** 資料類型指定輸出參數 `@currency_cursor`。 然後在批次中呼叫程序。  
   
  首先，建立在 Currency 資料表上宣告並隨後開啟資料指標的程序。  
   
@@ -159,7 +159,7 @@ DECLARE @result int;
 EXECUTE @result = my_proc;  
 ```  
   
- 傳回碼常用於程序的流程控制區塊中，以設定每個可能錯誤狀況的傳回碼值。 您可以在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式之後使用 @@ERROR ，來偵測陳述式執行過程中是否曾發生錯誤。  
+ 傳回碼常用於程序的流程控制區塊中，以設定每個可能錯誤狀況的傳回碼值。 您可以在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式之後使用 @@ERROR，來偵測陳述式執行過程中是否曾發生錯誤。  
   
 ### <a name="examples-of-return-codes"></a>傳回碼的範例  
  下列範例顯示具有可為各種錯誤設定特別傳回碼值之錯誤處理的 `usp_GetSalesYTD` 程序。 下表顯示由程序指派給每個可能錯誤的整數值，以及每個值對應的意義。  

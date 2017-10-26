@@ -21,6 +21,7 @@ caps.latest.revision: 42
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
 ms.openlocfilehash: b9dd44fec24717695813010067b25d14c4a8036d
@@ -45,3 +46,4 @@ ms.lasthandoff: 08/03/2017
  將封裝部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄之後，您可以在執行期間分析封裝中的資料流程，以檢查效能或尋找其他問題。 可使用標準報表查看封裝狀態及記錄，並可以查詢資料庫檢視以取得執行封裝的詳細資訊。 您還可以在執行期間動態地加入及刪除資料點選，以鎖定您封裝的某個特定元件。 如需詳細資訊，請參閱 [偵錯資料流程](../../integration-services/troubleshooting/debugging-data-flow.md)。  
   
   
+

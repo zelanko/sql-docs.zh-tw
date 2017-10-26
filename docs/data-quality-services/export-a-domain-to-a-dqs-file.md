@@ -14,6 +14,7 @@ caps.latest.revision: 18
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 197f51ab86d1ac46ab77d34dd64d98c1034317d6
@@ -59,3 +60,4 @@ ms.lasthandoff: 09/09/2017
  在您將定義域匯出到 .dqs 檔案之後，您可以將此定義域匯入另一個知識庫中。  
   
   
+

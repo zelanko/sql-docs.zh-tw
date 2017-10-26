@@ -16,6 +16,7 @@ caps.latest.revision: 16
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8b53bbf65d82e7c3b0b8f4c6e033afaaa513cdd3
@@ -39,3 +40,4 @@ ms.lasthandoff: 09/28/2017
  [傳送錯誤訊息工作編輯器 &#40;訊息頁面&#41;](../../integration-services/control-flow/transfer-error-messages-task-editor-messages-page.md)  
   
   
+

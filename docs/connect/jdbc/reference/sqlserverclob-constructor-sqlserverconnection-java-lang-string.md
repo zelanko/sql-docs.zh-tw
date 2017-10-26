@@ -19,6 +19,7 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 028d7d4803ff53f518067d869fa192512209d723
@@ -58,3 +59,4 @@ public SQLServerClob(SQLServerConnection connection,
  [SQLServerClob 類別](../../../connect/jdbc/reference/sqlserverclob-class.md)  
   
   
+

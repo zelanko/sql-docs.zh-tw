@@ -14,6 +14,7 @@ caps.latest.revision: 14
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 6e3c99d8f8ee8621925f49e301a4ea95c8b00383
@@ -71,3 +72,4 @@ ms.lasthandoff: 09/09/2017
  如需清理活動期間的資料分析詳細資訊，請參閱[使用 DQS &#40;內部&#41; 知識清理資料](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)中的[分析工具統計資料](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md#Profiler)。  
   
   
+

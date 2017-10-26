@@ -17,6 +17,7 @@ caps.latest.revision: 21
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 14599472b440d54b9ce247c8c52f9cfad5815a7d
@@ -106,3 +107,4 @@ ms.lasthandoff: 09/09/2017
  當您使用以知識為基礎的剖析，而且來源資料中的值少於複合定義域中的定義域時，DQS 會在遺漏的定義域中放置 null。 當來源資料中的值多於複合定義域中的定義域時，DQS 會將額外的資料加入至其中一個資料行。 如果有兩個或多個定義域包含相同的值，則資料來源將會剖析為第一個相符的定義域。  
   
   
+

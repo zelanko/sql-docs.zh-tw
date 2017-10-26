@@ -14,6 +14,7 @@ caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 80fc7320cb47a9fc46b331b119ff91ec0a1cdc19
@@ -47,3 +48,4 @@ ms.lasthandoff: 08/03/2017
  其他 CDC 服務工作會使用 CDC 服務組態主控台來執行。 如需有關您可以在服務組態主控台中執行之工作的詳細資訊，請參閱服務組態主控台所隨附的線上說明。  
   
   
+

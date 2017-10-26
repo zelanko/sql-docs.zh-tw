@@ -14,6 +14,7 @@ caps.latest.revision: 9
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e725235e961b2f40765525d4812ddb7160657361
@@ -86,3 +87,4 @@ ms.lasthandoff: 09/09/2017
 -   如果您刪除了知識庫，就必須選取另一個要處理的知識庫，或是建立新的知識庫。  
   
   
+

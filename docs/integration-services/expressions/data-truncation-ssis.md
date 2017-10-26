@@ -19,6 +19,7 @@ caps.latest.revision: 37
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5bed8ab4de8d1fe868cf12ca9e90e1040857d858
@@ -48,3 +49,4 @@ ms.lasthandoff: 08/03/2017
  如需處理資料截斷的詳細資訊，請參閱 [Error Handling in Data](../../integration-services/data-flow/error-handling-in-data.md)(處理資料時發生錯誤)。  
   
   
+

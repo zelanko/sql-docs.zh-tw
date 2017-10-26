@@ -20,6 +20,7 @@ caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
 ms.openlocfilehash: 05d4d7b905c0539a67120983a562ee6936791c97
@@ -539,3 +540,4 @@ ms.lasthandoff: 09/28/2017
 -   www.codeplex.com 上的 CodePlex 範例： [處理 XML 資料封裝範例](http://msftisprodsamples.codeplex.com/wikipage?title=SS2008!Process%20XML%20Data%20Package%20Sample&version=10&ProjectName=msftisprodsamples)   
   
   
+

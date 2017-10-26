@@ -101,7 +101,7 @@ ms.lasthandoff: 09/27/2017
   
 1.  在 **[開始]** 功能表上，依序指向 **[所有程式]**、 **[Microsoft SQL Server]**和 **[組態工具]**，然後按一下 **[SQL Server 組態管理員]**。  
   
-2.  在 [SQL Server 組態管理員] 嵌入式管理單元中，尋找服務清單中的 [SQL Server Integration Services]，以滑鼠右鍵按一下 [SQL Server Integration Services]，然後按一下 [屬性]。  
+2.  在 SQL Server 組態管理員 嵌入式管理單元中，尋找服務清單中的 SQL Server Integration Services，以滑鼠右鍵按一下 SQL Server Integration Services，然後按一下屬性。  
   
 3.  在 **[SQL Server Integration Services 屬性]** 對話方塊中，可以執行下列操作：  
   
@@ -122,7 +122,7 @@ ms.lasthandoff: 09/27/2017
   
 2.  按一下 **[服務]**。  
   
-3.  在 [服務] 嵌入式管理單元中，尋找服務清單中的 [SQL Server Integration Services]，以滑鼠右鍵按一下 [SQL Server Integration Services]，然後按一下 [屬性]。  
+3.  在 服務 嵌入式管理單元中，尋找服務清單中的 SQL Server Integration Services，以滑鼠右鍵按一下 SQL Server Integration Services，然後按一下屬性。  
   
 4.  在 **[SQL Server Integration Services 屬性]** 對話方塊中，您可以執行下列動作：  
   
@@ -151,11 +151,11 @@ ms.lasthandoff: 09/27/2017
   
 2.  在 [元件服務] 對話方塊中，展開 [元件服務] > [電腦] > [我的電腦] > [DCOM 組態] 節點。  
   
-3.  以滑鼠右鍵按一下 **Microsoft SQL Server Integration Services 13.0**，然後按一下 [屬性]。  
+3.  以滑鼠右鍵按一下 **Microsoft SQL Server Integration Services 13.0**，然後按一下屬性。  
   
 4.  在 **[安全性]** 索引標籤上，按一下 **[啟動和啟用權限]** 區域中的 **[編輯]** 。  
   
-5.  加入使用者並指派適當的權限，然後按一下 [確定]。  
+5.  加入使用者並指派適當的權限，然後按一下確定。  
   
 6.  重複步驟 4 - 5，以設定存取權限。  
   
@@ -311,7 +311,7 @@ ms.lasthandoff: 09/27/2017
   
 2.  開啟 [控制台]，依序按兩下 [系統管理工具]、[元件服務] 啟動 [元件服務] MMC 嵌入式管理單元。  
   
-3.  展開控制台左邊窗格中的 [元件服務] 節點。 依序展開 [電腦] 節點和 [我的電腦]，然後按一下 [DCOM 設定] 節點。  
+3.  展開控制台左邊窗格中的 [元件服務] 節點。 依序展開 電腦 節點和 我的電腦，然後按一下DCOM 設定 節點。  
   
 4.  選取 [DCOM 設定] 節點，然後選取可以設定之應用程式清單中的 SQL Server Integration Services 11.0。  
   
@@ -335,7 +335,7 @@ ms.lasthandoff: 09/27/2017
   
 1.  在命令提示字元執行 **dcomcnfg.exe**。  
   
-2.  在 [分散式 COM 組態內容] 對話方塊的 [應用程式] 頁面上，選取 SQL Server Integration Services 11.0，然後按一下 [內容]。  
+2.  在 分散式 COM 組態內容 對話方塊的 應用程式 頁面上，選取 SQL Server Integration Services 11.0，然後按一下內容。  
   
 3.  選取 [安全性] 頁面。  
   
@@ -413,7 +413,7 @@ ms.lasthandoff: 09/27/2017
   
 6.  在 **[新增連接埠]** 對話方塊中，可以選擇性地按一下 **[變更範圍]** 以修改預設範圍。  
   
-7.  在 [變更範圍] 對話方塊中，選取 [只有我的網路 (子網路)] 或輸入自訂清單，然後按一下 [確定]。  
+7.  在 變更範圍 對話方塊中，選取 只有我的網路 (子網路) 或輸入自訂清單，然後按一下確定。  
   
 8.  若要關閉 **[新增連接埠]** 對話方塊，請按一下 **[確定]**。  
   

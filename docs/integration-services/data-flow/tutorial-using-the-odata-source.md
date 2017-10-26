@@ -14,6 +14,7 @@ caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: ee79d0f1b31963b7d13aa07bf4603246139c3a7c
 ms.openlocfilehash: cbdc4a2e0719e65e378d232c5abcb5404e8342f1
@@ -94,3 +95,4 @@ ms.lasthandoff: 08/23/2017
 執行 SSIS 封裝。 確認第一個名稱識別碼來建立輸出檔案，以及姓氏為五個員工從 OData 摘要。
   
   
+

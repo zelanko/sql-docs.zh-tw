@@ -14,6 +14,7 @@ caps.latest.revision: 10
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a0963e7fc98cc0489d6f93c2381b701bd26ef569
@@ -49,3 +50,4 @@ ms.lasthandoff: 09/09/2017
 |建立複合定義域，並將知識加入至定義域。|[管理複合網域](../data-quality-services/managing-a-composite-domain.md)|  
   
   
+

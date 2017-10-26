@@ -14,6 +14,7 @@ caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 4c23f7aa902cedb22cc5df69c8169fea336513e5
@@ -47,3 +48,4 @@ ms.lasthandoff: 08/03/2017
      此索引標籤會顯示您在屬性編輯器中所定義的進階屬性清單。 如需有關此索引標籤顯示之內容的詳細資訊，請參閱＜ [Edit the Advanced Properties](../../integration-services/change-data-capture/edit-the-advanced-properties.md)＞。  
   
   
+

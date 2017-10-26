@@ -20,6 +20,7 @@ caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d147ad369495c4046e4387dca7abcec5e533c2af
@@ -104,3 +105,4 @@ ms.lasthandoff: 09/28/2017
  [Integration Services &#40;SSIS &#41;運算式](../../integration-services/expressions/integration-services-ssis-expressions.md)  
   
   
+

@@ -20,6 +20,7 @@ caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
 ms.openlocfilehash: 4f1a65ed00262cfc0af0d4c4f117ef022846e26c
@@ -81,3 +82,4 @@ ms.lasthandoff: 09/28/2017
  [資料流程](../../../integration-services/data-flow/data-flow.md)  
   
   
+

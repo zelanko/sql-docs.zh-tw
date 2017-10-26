@@ -16,6 +16,7 @@ caps.latest.revision: 28
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: b82e8ee22179c71ef30475ff3ac9d0fd3fdcbe38
@@ -98,3 +99,4 @@ ms.lasthandoff: 08/02/2017
  [啟動設定資料庫鏡像安全性精靈 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  
   
   
+

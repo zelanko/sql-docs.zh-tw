@@ -16,6 +16,7 @@ caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 962b3a3690bd8a0bf62de762509c4398773578ca
@@ -58,3 +59,4 @@ ms.lasthandoff: 09/28/2017
  [選取 Oracle 資料表和資料行](../../integration-services/change-data-capture/select-oracle-tables-and-columns.md)  
   
   
+

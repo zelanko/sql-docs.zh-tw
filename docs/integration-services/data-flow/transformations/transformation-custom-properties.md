@@ -45,6 +45,7 @@ caps.latest.revision: 72
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 62ff6e04e7f26e6ca1af9760ebb17c5f41d37f0d
@@ -637,3 +638,4 @@ ms.lasthandoff: 09/28/2017
  [可以利用運算式來設定資料流程屬性](http://msdn.microsoft.com/library/cd0e171a-08be-45d6-81dc-ed94f37698b8)  
   
   
+

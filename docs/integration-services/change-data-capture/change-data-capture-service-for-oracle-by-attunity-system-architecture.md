@@ -14,6 +14,7 @@ caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 69f36b9b3e01be90cc1f5a4cd19fb80543186620
@@ -56,3 +57,4 @@ ms.lasthandoff: 08/03/2017
  Oracle CDC 服務和其子項 Oracle CDC 執行個體只能與來源 Oracle 資料庫及當做用戶端的目標 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體通訊。 它們不會主動接聽任何網路或其他通訊協定。 Oracle CDC 服務會監控 CDC 資料庫中的組態變更，並根據更新的組態更新其作業。  
   
   
+

@@ -18,6 +18,7 @@ caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0b4b4a69b1712a5b84b49c63aee4242cb6355bc5
@@ -103,3 +104,4 @@ ms.lasthandoff: 09/28/2017
  [以指令碼工作處理 Excel 檔案](../../integration-services/extending-packages-scripting-task-examples/working-with-excel-files-with-the-script-task.md)  
   
   
+

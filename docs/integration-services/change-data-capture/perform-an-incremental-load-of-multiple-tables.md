@@ -16,6 +16,7 @@ caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
 ms.openlocfilehash: 293e4a68eba8fa8cbc5a01773c948d5b56de1a91
@@ -107,3 +108,4 @@ ms.lasthandoff: 08/03/2017
          如需如何使用此轉換來套用更新與刪除的範例，請參閱 [將變更套用到目的地](../../integration-services/change-data-capture/apply-the-changes-to-the-destination.md)。  
   
   
+

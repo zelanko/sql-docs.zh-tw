@@ -17,6 +17,7 @@ caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a72a54b02f136f2d9acc130051e79852d72a2f1f
@@ -79,3 +80,4 @@ YEAR(GETDATE())
  [函數 &#40;SSIS 運算式&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   
+

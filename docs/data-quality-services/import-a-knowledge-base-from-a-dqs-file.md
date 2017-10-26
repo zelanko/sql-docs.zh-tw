@@ -14,6 +14,7 @@ caps.latest.revision: 17
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 9914672b055d007c76e55f70a87c7af71225de0a
@@ -72,3 +73,4 @@ ms.lasthandoff: 09/09/2017
  當您從 .dqs 檔案匯入知識庫之後，您可以將知識加入至知識庫，或是在清理或比對專案中使用此知識庫 (根據知識庫的內容而定)。 如需詳細資訊，請參閱[執行知識探索](../data-quality-services/perform-knowledge-discovery.md)、[管理定義域](../data-quality-services/managing-a-domain.md)、[管理複合定義域](../data-quality-services/managing-a-composite-domain.md)、[建立比對原則](../data-quality-services/create-a-matching-policy.md)、[資料清理](../data-quality-services/data-cleansing.md)或[資料比對](../data-quality-services/data-matching.md)。  
   
   
+

@@ -14,6 +14,7 @@ caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 09474650ff16a5b6a11ad9d02154d9f2a4261ea7
@@ -55,3 +56,4 @@ ms.lasthandoff: 09/28/2017
          如需有關您可以在此索引標籤上執行之作業的詳細資訊，請參閱＜ [Edit the Advanced Properties](../../integration-services/change-data-capture/edit-the-advanced-properties.md)＞。  
   
   
+

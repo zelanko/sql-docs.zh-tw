@@ -17,6 +17,7 @@ caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
 ms.openlocfilehash: 8e540a232445e0df9f6eb313b5fadfa839a73fea
@@ -275,3 +276,4 @@ SELECT * FROM OPENQUERY(<LinkedServer Name>, N’Folder=<Folder Name from SSIS C
  [設定資料流目的地](../../integration-services/data-flow/configure-data-streaming-destination.md)  
   
   
+

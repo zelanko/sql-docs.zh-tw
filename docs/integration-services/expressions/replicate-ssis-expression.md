@@ -16,6 +16,7 @@ caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c94e5f4221251b3b931ebabc5076620ba6ab0e7e
@@ -80,3 +81,4 @@ REPLICATE(@Name, (DT_I4(Times))
  [函數 &#40;SSIS 運算式&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   
+

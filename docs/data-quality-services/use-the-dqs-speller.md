@@ -14,6 +14,7 @@ caps.latest.revision: 15
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a14a9adc633e997fa9f8095d3d98a11bc9d386aa
@@ -77,3 +78,4 @@ ms.lasthandoff: 09/09/2017
  DQS 將會在 **[值]** 資料表的 **[值]** 資料行和 **[更正為]** 資料行中提供值的建議。 當您在 **[值]** 資料行中選取建議時，值類型會設定為 **[錯誤]**，而且當您手動插入建議時，建議會複製到 **[更正為]** 資料行中。 如果有現有的更正，該更正會變成建議。 在 **[清理]** 活動的 **[管理和檢視結果]** 頁面中，當您選取 **[更正為]** 資料行中的建議時，DQS 將會以選取項目取代目前選取的值，而且目前選取的值將會變成建議。 在 **[清理]** 活動的 **[管理和檢視結果]** 頁面中，記錄層級 (下方方格) 不會產生任何建議。  
   
   
+

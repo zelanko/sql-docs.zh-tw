@@ -27,6 +27,7 @@ caps.latest.revision: 69
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c812dc44b0348d6f77e7f7e8efe23acab85a0d48
@@ -209,3 +210,4 @@ ms.lasthandoff: 09/28/2017
  [套件執行的疑難排解工具](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
   
   
+

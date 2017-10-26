@@ -16,6 +16,7 @@ caps.latest.revision: 51
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: aabc21d3007d55d293fdafe5cc0469f7b815e118
@@ -90,3 +91,4 @@ ms.lasthandoff: 09/09/2017
  Data Quality Services 功能已被整合到 Master Data Services (MDS)，因此您可以在 Microsoft Excel 的 Microsoft SQL Server 2014 Master Data Services 增益集中，針對來源資料和主要資料執行刪除重複作業。 若要執行比對，請將 MDS 管理的資料載入 Excel 工作表中、將該資料與非 MDS 管理的資料結合，然後在 Excel 內執行比對。 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 元件必須使用 MDS 安裝。 如需詳細資訊，請參閱  [Data Quality Matching in the MDS Add-in for Excel](../master-data-services/microsoft-excel-add-in/data-quality-matching-in-the-mds-add-in-for-excel.md)。  
   
   
+

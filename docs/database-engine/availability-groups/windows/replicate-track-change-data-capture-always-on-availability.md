@@ -19,6 +19,7 @@ caps.latest.revision: 37
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: HT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: a3949e1463888eee5040f88ac52c6903f44eea3a
@@ -269,3 +270,4 @@ ms.lasthandoff: 08/02/2017
  [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)  
   
   
+

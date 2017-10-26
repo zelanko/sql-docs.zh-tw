@@ -14,6 +14,7 @@ caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8e5c3b945652c04cbbe75563d853703b5676b43f
@@ -103,3 +104,4 @@ public static void executeStoredProcedure(Connection con) {
  [使用預存程序的陳述式](../../connect/jdbc/using-statements-with-stored-procedures.md)  
   
   
+

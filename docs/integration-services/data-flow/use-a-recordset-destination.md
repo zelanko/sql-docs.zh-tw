@@ -16,6 +16,7 @@ caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0e2423a1d19122a3eb13bd69c4bce495c96d81ff
@@ -178,3 +179,4 @@ ms.lasthandoff: 08/03/2017
      如果您指定了有效的 SMTP 伺服器且提供您自己的電子郵件地址，針對由傳送郵件工作傳送到 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]虛構銷售人員的郵件，您將會收到無法傳遞的收件者訊息。  
   
   
+

@@ -14,6 +14,7 @@ caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3c302cecea6c443e97badeca3737211cdadec239
@@ -177,3 +178,4 @@ ms.lasthandoff: 08/03/2017
  絕對不會儲存這個使用者的認證。 每當需要這些認證時，CDC 設計工具主控台便會要求這些認證，而且在其餘 UI 工作階段會保存這些認證。  
   
   
+

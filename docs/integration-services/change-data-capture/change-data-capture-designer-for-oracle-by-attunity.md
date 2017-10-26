@@ -16,6 +16,7 @@ caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: dd65ef848696254aa8badb47e41196106401e100
@@ -63,3 +64,4 @@ ms.lasthandoff: 08/03/2017
 -   [CDC 設計工具 SQL Server 連接所需權限](../../integration-services/change-data-capture/sql-server-connection-required-permissions-for-the-cdc-designer.md)  
   
   
+

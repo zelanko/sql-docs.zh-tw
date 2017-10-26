@@ -16,6 +16,7 @@ caps.latest.revision: 22
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e097256faccb24e82194edc7247ae7010a601430
@@ -93,3 +94,4 @@ ms.lasthandoff: 09/09/2017
  如果資料類型是 **[字串]**，選取此選項可指定定義域中的 DQS 在清理期間將不會識別語法錯誤。 當識別該定義域的語法錯誤無關緊要時，請選取這個核取方塊。 例如，對序號識別語法錯誤可能無關緊要。 此控制項只適用於字串資料類型。 DQS 將不會檢查非字串資料類型的語法錯誤。  
   
   
+

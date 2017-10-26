@@ -19,6 +19,7 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 76b8fe0d719a2eb5f53fe20502d0cd3fe35ca6eb
@@ -58,3 +59,4 @@ public SQLServerBlob(SQLServerConnection connection,
  [SQLServerBlob 類別](../../../connect/jdbc/reference/sqlserverblob-class.md)  
   
   
+

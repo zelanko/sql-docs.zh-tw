@@ -141,7 +141,7 @@ ms.lasthandoff: 09/27/2017
   
      -或-  
   
-     在[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，依序展開[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]  >  **SSISDB**節點在物件總管並找出您想要部署專案的專案資料夾。 以滑鼠右鍵按一下 [專案] 資料夾，然後按一下 [部署專案]。  
+     在[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，依序展開[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]  >  **SSISDB**節點在物件總管並找出您想要部署專案的專案資料夾。 以滑鼠右鍵按一下 專案 資料夾，然後按一下部署專案。  
   
      -或-  
   
@@ -170,7 +170,7 @@ ms.lasthandoff: 09/27/2017
   
 1.  在 SQL Server Management Studio 中，依序展開物件總管中的 [Integration Services 目錄] > [SISDB] 節點。  
   
-2.  以滑鼠右鍵按一下 [專案] 資料夾，然後按一下 [部署專案]。  
+2.  以滑鼠右鍵按一下 專案 資料夾，然後按一下部署專案。  
   
 3.  如果您看到 [簡介] 頁面，按一下 [下一步] 以繼續。  
   
@@ -345,11 +345,11 @@ static void Main()
   
 1.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 的物件總管中，展開 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄> **SSISDB** 節點，然後針對您要建立其環境的專案，尋找 [環境] 資料夾。  
   
-2.  在以滑鼠右鍵按一下 [環境] 資料夾，然後按一下 [建立環境]。  
+2.  在以滑鼠右鍵按一下 環境 資料夾，然後按一下建立環境。  
   
-3.  輸入環境的名稱，並選擇性地輸入描述，然後按一下 [確定]。  
+3.  輸入環境的名稱，並選擇性地輸入描述，然後按一下確定。  
   
-4.  以滑鼠右鍵按一下新環境，然後按一下 [屬性]。  
+4.  以滑鼠右鍵按一下新環境，然後按一下屬性。  
   
 5.  在 [變數] 頁面上執行下列動作，以加入變數。  
   
@@ -382,11 +382,11 @@ static void Main()
   
 8.  按一下 [確定]，將變更儲存至環境屬性。  
   
-9. 在物件總管中的 [SSISDB] 節點下，展開 [專案] 資料夾，以滑鼠右鍵按一下專案，然後按一下 [設定]。  
+9. 在物件總管中的 SSISDB 節點下，展開 專案 資料夾，以滑鼠右鍵按一下專案，然後按一下設定。  
   
-10. 在 [參考] 頁面上，按一下 [加入] 加入環境，然後按一下 [確定] 將參考儲存至環境。  
+10. 在 參考 頁面上，按一下 加入 加入環境，然後按一下確定 將參考儲存至環境。  
   
-11. 再次以滑鼠右鍵按一下專案，然後按一下 [設定]。  
+11. 再次以滑鼠右鍵按一下專案，然後按一下設定。  
   
 12. 若要將環境變數對應至您在設計階段加入封裝中的參數，或對應至您將 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案轉換為專案部署模型時所產生的參數，請執行下列操作。  
   
@@ -411,7 +411,7 @@ static void Main()
 >  您可以執行以下動作，輕鬆地針對底下程序中所列的預存程序產生 Transact-SQL 陳述式 (除了 catalog.deploy_project 以外)：  
 >   
 >  1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，展開 [物件總管] 中的 **Integration Services 目錄** 節點，並導覽到您要執行的封裝。  
-> 2.  以滑鼠右鍵按一下封裝，然後按一下 [執行]。  
+> 2.  以滑鼠右鍵按一下封裝，然後按一下執行。  
 > 3.  請視需要在 **[進階]** 索引標籤中設定參數值、連接管理員屬性和選項，例如記錄層次。  
 >   
 >      如需有關記錄層級的詳細資訊，請參閱＜ [Enable Logging for Package Execution on the SSIS Server](../../integration-services/performance/integration-services-ssis-logging.md#server_logging)＞。  
@@ -484,7 +484,7 @@ static void Main()
   
      在 **[連結的伺服器屬性]** 對話方塊的 **[伺服器選項]** 頁面上，將 **[RPC]** 和 **[RPC 輸出]** 設定為 **[True]**。 此外，也將 **[啟用 RPC 的分散式交易促銷]** 設定為 **[False]**。  
   
--   若要針對您為連結的伺服器選取的提供者啟用動態參數，請在物件總管中展開 [連結的伺服器] 下方的 [提供者] 節點，以滑鼠右鍵按一下此提供者，然後按一下 [屬性]。 選取 **[動態參數]** 旁邊的 **[啟用]**。  
+-   若要針對您為連結的伺服器選取的提供者啟用動態參數，請在物件總管中展開 連結的伺服器 下方的 提供者 節點，以滑鼠右鍵按一下此提供者，然後按一下屬性。 選取 **[動態參數]** 旁邊的 **[啟用]**。  
   
 -   確認兩部伺服器上都已啟動分散式交易協調器 (DTC)。  
   

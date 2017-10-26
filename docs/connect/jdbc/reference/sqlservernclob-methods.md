@@ -14,6 +14,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3d68dd0cd7c82754179643c38b55cec454f270f7
@@ -27,3 +28,4 @@ ms.lasthandoff: 09/09/2017
   如需有關成員的詳細[SQLServerNClob](../../../connect/jdbc/reference/sqlservernclob-class.md)，請參閱[SQLServerNClob 成員](../../../connect/jdbc/reference/sqlservernclob-members.md)。  
   
   
+

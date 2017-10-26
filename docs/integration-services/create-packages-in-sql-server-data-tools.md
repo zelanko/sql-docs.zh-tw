@@ -19,6 +19,7 @@ caps.latest.revision: 51
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
 ms.openlocfilehash: 0d949644408de74f118d352a89047137cdcd0350
@@ -78,3 +79,4 @@ ms.lasthandoff: 09/27/2017
  您可以建立、維護和執行目標為 SQL Server 2016、SQL Server 2014 或 SQL Server 2012 的封裝。  
   
   
+

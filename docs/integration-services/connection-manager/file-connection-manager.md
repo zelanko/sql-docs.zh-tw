@@ -23,6 +23,7 @@ caps.latest.revision: 50
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
 ms.openlocfilehash: 25e93783e4d7d7b6cdaeab98937dee1da2ebef0b
@@ -95,3 +96,4 @@ ms.lasthandoff: 08/09/2017
  使用 [選取檔案] 或 [瀏覽資料夾] 對話方塊，來選取檔案或資料夾。  
   
   
+

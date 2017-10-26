@@ -16,6 +16,7 @@ caps.latest.revision: 20
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 495047016c4ffe394214115f77ec13846b57d9db
@@ -98,3 +99,4 @@ ms.lasthandoff: 09/09/2017
 -   **比對原則 – 比對結果**：已在 **[比對原則 – 比對結果]** 頁面上關閉知識庫。 知識庫已鎖定，無法使用 [知識探索] 和 [定義域管理] 活動。  
   
   
+

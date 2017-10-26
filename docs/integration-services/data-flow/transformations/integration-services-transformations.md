@@ -25,6 +25,7 @@ caps.latest.revision: 56
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 85673091c2531821e62bf7cbeab2bbda6139b384
@@ -100,3 +101,4 @@ ms.lasthandoff: 08/03/2017
  您也可以撰寫自訂轉換。 如需詳細資訊，請參閱 [開發具有同步輸出的自訂轉換元件](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md) 和 [開發具有非同步輸出的自訂轉換元件](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-asynchronous-outputs.md)。  
   
   
+

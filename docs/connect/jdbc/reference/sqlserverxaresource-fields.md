@@ -18,6 +18,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ebfadcaf18d1e7db291ae8c23116615af2410447
@@ -31,3 +32,4 @@ ms.lasthandoff: 09/09/2017
   如需有關成員的資訊[SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md)，請參閱[SQLServerXAResource 成員](../../../connect/jdbc/reference/sqlserverxaresource-members.md)。  
   
   
+

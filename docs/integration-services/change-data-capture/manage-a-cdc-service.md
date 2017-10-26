@@ -16,6 +16,7 @@ caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b212ccfd61c11a8c06a840260918cc581564a6fc
@@ -52,3 +53,4 @@ ms.lasthandoff: 09/28/2017
  [使用新的執行個體精靈](../../integration-services/change-data-capture/use-the-new-instance-wizard.md)  
   
   
+

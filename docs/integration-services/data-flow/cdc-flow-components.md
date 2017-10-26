@@ -14,6 +14,7 @@ caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 6e754198cf82a7ba0752fe8f20c3780a8ac551d7
 ms.openlocfilehash: 7fea154af206b964206f7e04eddde0cea6cf08f9
@@ -222,3 +223,4 @@ ms.lasthandoff: 09/28/2017
  [CDC 控制工作](../../integration-services/control-flow/cdc-control-task.md)  
   
   
+

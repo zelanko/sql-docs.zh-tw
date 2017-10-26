@@ -16,6 +16,7 @@ caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: cc3effea9b3d20e556707d31852d3003b7b27a65
@@ -73,3 +74,4 @@ ms.lasthandoff: 08/03/2017
  Inventory 資料庫具有一份 ProductsInventory 資料表，其中包含 ProductID 和 StockOnHand 資料行。 含有 ProductID、CustomerID 和 Quantity 資料行的 Shipments 資料表會追蹤客戶的產品出貨。 ProductInventory 資料表必須根據 Shipments 資料表中的資訊每日更新。 單一 MERGE 陳述式可以根據出貨減少 ProductInventory 資料表中的存貨。 如果某項產品的存貨已經減少至 0，該 MERGE 陳述式也可以從 ProductInventory 資料表中刪除該項產品的資料列。  
   
   
+

@@ -21,6 +21,7 @@ caps.latest.revision: 61
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 199dca85523f6ba2f4d53ef89e1b9a73667a6472
@@ -154,3 +155,4 @@ ms.lasthandoff: 09/28/2017
  [Integration Services Data Types in Expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md)  
   
   
+

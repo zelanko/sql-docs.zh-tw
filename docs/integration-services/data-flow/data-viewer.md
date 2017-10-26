@@ -18,6 +18,7 @@ caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a04115502f54ce1731c0d8aa14b2f264bc66709f
@@ -49,3 +50,4 @@ ms.lasthandoff: 09/28/2017
  [偵錯資料流程](../../integration-services/troubleshooting/debugging-data-flow.md)  
   
   
+

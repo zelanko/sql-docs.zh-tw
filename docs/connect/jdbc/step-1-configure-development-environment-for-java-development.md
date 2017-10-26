@@ -14,6 +14,7 @@ caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6811fe90d64374769e858787a879231140a4e925
@@ -28,3 +29,4 @@ ms.lasthandoff: 09/09/2017
 * 識別哪個版本的 JDBC 驅動程式要使用，根據您的環境，如這裡所述： [JDBC 驅動程式的系統需求](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)  
 * 下載並安裝適用於 JDBC 驅動程式這裡：[下載 Microsoft JDBC Driver for SQL Server](../../connect/jdbc/download-microsoft-jdbc-driver-for-sql-server.md)  
 * 設定類別路徑根據驅動程式版本，如這裡所述：[使用 JDBC 驅動程式](../../connect/jdbc/using-the-jdbc-driver.md)
+

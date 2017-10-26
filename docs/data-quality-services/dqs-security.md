@@ -14,6 +14,7 @@ caps.latest.revision: 11
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ec0b75c2d32bb45c74082a0235ce51decaf09c02
@@ -45,3 +46,4 @@ ms.lasthandoff: 09/09/2017
 |描述如何使用 SQL Server Management Studio 建立使用者及授與 DQS 角色。|[在 SSMS 中管理 DQS 使用者](http://msdn.microsoft.com/library/955af01d-00da-4c51-9311-f3848749df54)|  
   
   
+

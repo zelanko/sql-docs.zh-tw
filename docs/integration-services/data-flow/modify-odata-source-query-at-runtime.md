@@ -14,6 +14,7 @@ caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: ee79d0f1b31963b7d13aa07bf4603246139c3a7c
 ms.openlocfilehash: 9da1f1be0a790d01f9403d6fc05a5c1498c0ee8b
@@ -70,3 +71,4 @@ ms.lasthandoff: 08/23/2017
 > 當您使用這個方法時，您必須確定您所設定的值是正確編碼的 URL。 當從使用者輸入接受值時 (例如，從參數設定個別查詢選項值)，您必須確定這些值已經過驗證，以免可能發生 SQL 資料隱碼類型的攻擊。  
   
   
+

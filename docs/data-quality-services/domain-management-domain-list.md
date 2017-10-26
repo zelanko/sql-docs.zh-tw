@@ -16,6 +16,7 @@ caps.latest.revision: 13
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 83b1db3be39a5472fd422f23955eff9bafb5265f
@@ -59,3 +60,4 @@ ms.lasthandoff: 09/09/2017
  將定義域匯出成 .dqs 檔案。 此命令會顯示 **[匯出到資料檔]** 對話方塊。 若要使用此命令，請按一下頁面上方功能表列中的 **[匯出]** 功能表，或是以滑鼠右鍵按一下定義域清單窗格。 如需相關資訊，請參閱 [將定義域匯出成 .dqs 檔案](../data-quality-services/export-a-domain-to-a-dqs-file.md)。  
   
   
+

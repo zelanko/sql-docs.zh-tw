@@ -24,6 +24,7 @@ caps.latest.revision: 45
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: cc690b6318c3e9fea27fbbba74b1f1b7289a3d32
@@ -128,3 +129,4 @@ ms.lasthandoff: 08/03/2017
  pragmaticworks.com 上的技術文件： [SSIS 運算式小抄](http://go.microsoft.com/fwlink/?LinkId=746575)  
   
   
+

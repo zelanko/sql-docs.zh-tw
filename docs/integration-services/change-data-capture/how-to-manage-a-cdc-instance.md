@@ -14,6 +14,7 @@ caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d368fcacfb8e548647785c8b5f6ef5b73b4ef10b
@@ -57,3 +58,4 @@ ms.lasthandoff: 09/28/2017
  您也可以選取 **[屬性]** 來編輯 CDC 執行個體組態屬性。 如需有關編輯 CDC 執行個體屬性的詳細資訊，請參閱＜ [Edit Instance Properties](../../integration-services/change-data-capture/edit-instance-properties.md)＞。  
   
   
+

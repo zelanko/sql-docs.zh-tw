@@ -16,6 +16,7 @@ caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c310a25fe5098cd5edc845c3a29d024182f6361c
@@ -52,3 +53,4 @@ ms.lasthandoff: 09/28/2017
  [連接到 Oracle](../../integration-services/change-data-capture/connect-to-oracle.md)  
   
   
+

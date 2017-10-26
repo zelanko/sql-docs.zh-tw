@@ -16,6 +16,7 @@ caps.latest.revision: 31
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3181deac2265f069531a37aebad7804a649310d9
@@ -139,3 +140,4 @@ ms.lasthandoff: 09/09/2017
  **[定義域值]** 索引標籤中的每一個值資料表都包含 DQS_NULL 值。 資料來源中的 null 將會以 SQL_NULL 形式出現在值資料表中。 您可以將一個或多個 null 對應項目設定為 DQS_NULL 的同義字。 當您這樣做時，所有 null 和 null 對應項目都將會處理為 DQS_NULL。  
   
   
+

@@ -17,6 +17,7 @@ caps.latest.revision: 7
 author: Lingxi-Li
 ms.author: lingxl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 29b296b2ae7e04871e81a9c236cb990bdd19562b
 ms.openlocfilehash: 0a84b10114d785c9216a0902b2eefbcb0bd3f4c8
@@ -65,3 +66,4 @@ Azure Data Lake Store 連接管理員是元件[Azure 的 SQL Server Integration 
 您可以在 [屬性]  視窗中看到您建立的連線管理員屬性。  
   
   
+

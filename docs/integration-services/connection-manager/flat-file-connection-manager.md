@@ -26,6 +26,7 @@ caps.latest.revision: 49
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
 ms.openlocfilehash: 2b3f4c303b1d60cbbe23c639c36a6336ca07447f
@@ -297,3 +298,4 @@ ms.lasthandoff: 08/09/2017
  **預覽資料列**  
  檢視一般檔案中的範例資料，根據您選取的選項將資料分為資料行和資料列。  
  
+

@@ -17,6 +17,7 @@ caps.latest.revision: 28
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: dc02a0d982ceb08f631fbdf628dff293f1f8e5c7
@@ -136,3 +137,4 @@ ms.lasthandoff: 09/09/2017
 |值不符合規則運算式|只有不符合運算元中之規則運算式的值才會被視為有效。|範例運算元：[1-5]+ (字串不得只包含介於 1 到 5 之間的數字)<br /><br /> 有效值：456、ABC<br /><br /> 無效值：123、123456、14352|  
   
   
+

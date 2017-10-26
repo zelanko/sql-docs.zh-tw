@@ -17,6 +17,7 @@ caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 6ad14b1426435034ef5f4371cc8bb6904b536798
@@ -72,3 +73,4 @@ EXP(0)
  [函數 &#40;SSIS 運算式&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   
+

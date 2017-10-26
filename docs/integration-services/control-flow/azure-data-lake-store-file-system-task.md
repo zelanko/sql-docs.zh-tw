@@ -15,6 +15,7 @@ f1_keywords:
 author: Lingxi-Li
 ms.author: lingxl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 29b296b2ae7e04871e81a9c236cb990bdd19562b
 ms.openlocfilehash: cbc72958f992e0b5cae12cdfc8c0996378f9708c
@@ -53,3 +54,4 @@ Azure 資料湖存放區檔案系統工作是一種元件的[Azure 的 SQL Serve
 - **AzureDataLakeDirectory:**指定包含要下載之檔案的 ADLS 來源目錄。
 - **SearchRecursively:**指定是否要下載的檔案的來源目錄中以遞迴方式搜尋。
 - **LocalDirectory:**指定要儲存下載的檔案的目的地目錄。
+

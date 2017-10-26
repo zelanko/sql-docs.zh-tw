@@ -1,7 +1,7 @@
 ---
 title: "使用記憶體最佳化加快暫存資料表與資料表變數的速度 | Microsoft Docs"
 ms.custom: 
-ms.date: 06/12/2017
+ms.date: 10/18/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 4e2fb53cbb1d9a8999a9260b6907f5319c0fe203
+ms.sourcegitcommit: fffb61c4c3dfa58edaf684f103046d1029895e7c
+ms.openlocfilehash: 2c44f6288c4e58caa45748e6e832465f43145b83
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 10/19/2017
 
 ---
 # <a name="faster-temp-table-and-table-variable-by-using-memory-optimization"></a>使用記憶體最佳化加快暫存資料表與資料表變數的速度
@@ -65,6 +65,8 @@ ms.lasthandoff: 07/31/2017
   
 ## <a name="b-scenario-replace-global-tempdb-x23x23table"></a>B. 案例︰取代全域 tempdb &#x23;&#x23;table  
   
+使用經記憶體最佳化的 SCHEMA_ONLY 資料表取代全域暫存資料表相當簡單。 最大的變更是在部署階段 (而非執行階段) 建立資料表。 因為編譯時間最佳化，所以建立經記憶體最佳化的資料表會花費比建立傳統資料表更長的時間。 在線上工作負載過程中建立和卸除經記憶體最佳化的資料表會影響工作負載的效能，也會影響 AlwaysOn 次要資料庫上的重做和資料庫復原的效能。
+
 假設您有下列全域暫存資料表。  
   
   
@@ -102,13 +104,15 @@ ms.lasthandoff: 07/31/2017
   
   
 1. 建立 **dbo.soGlobalB** 資料表一次，就像是任何傳統磁碟資料表一樣。  
-2. 從 Transact-SQL 中移除建立的 **&#x23;&#x23;tempGlobalB** 資料表。  
+2. 從 Transact-SQL 中移除建立的 **&#x23;&#x23;tempGlobalB** 資料表。  請務必在部署階段 (而非執行階段) 建立經記憶體最佳化的資料表，以避免因建立資料表而產生的編譯額外負荷。
 3. 在 T-SQL 中，以 **dbo.soGlobalB** 取代所有提及的 **&#x23;&#x23;tempGlobalB**。  
   
   
 ## <a name="c-scenario-replace-session-tempdb-x23table"></a>C. 案例︰取代工作階段 tempdb &#x23;table  
   
 取代工作階段暫存資料表的準備工作，需要比先前的全域暫存資料表案例更多的 T-SQL。 幸好額外的 T-SQL 並不表示需要任何更多的工作才能完成轉換。  
+
+如同全域暫存資料表案例，最大的變更是在部署階段 (而非執行階段) 建立資料表，以避免編譯額外負荷。
   
 假設您有下列工作階段暫存資料表。  
   
@@ -184,7 +188,7 @@ ms.lasthandoff: 07/31/2017
 1. 將 Transact-SQL 陳述式中之暫存資料表的所有參考都變更為新的記憶體最佳化資料表︰
     - _舊名稱︰_&#x23;tempSessionC  
     - _新名稱︰_ dbo.soSessionC  
-2. 將程式碼中的 `CREATE TABLE #tempSessionC` 陳述式取代為 `DELETE FROM dbo.soSessionC`，確保不會將工作階段公開至具有相同 session_id 之前一個工作階段所插入的資料表內容
+2. 將程式碼中的 `CREATE TABLE #tempSessionC` 陳述式取代為 `DELETE FROM dbo.soSessionC`，以確保工作階段不會向前一個具有相同 session_id 的工作階段所插入的資料表內容公開。 請務必在部署階段 (而非執行階段) 建立經記憶體最佳化的資料表，以避免因建立資料表而產生的編譯額外負荷。
 3. 從您的程式碼移除 `DROP TABLE #tempSessionC` 陳述式；如果記憶體大小是潛在問題，則也可以選擇性地插入 `DELETE FROM dbo.soSessionC` 陳述式
   
   
