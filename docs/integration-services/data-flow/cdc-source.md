@@ -70,7 +70,7 @@ ms.lasthandoff: 08/17/2017
 ### <a name="use-this-script-to-isolate-problems-and-reproduce-them-in-sql-server-management-studio"></a>使用此指令碼來隔離問題，並在 SQL Server Management Studio 中重現問題。  
  CDC 來源作業是由叫用 CDC 來源之前執行的 CDC 控制工作作業所控制。 CDC 控制工作會準備 CDC 狀態封裝變數的值，以包含開始和結束 LSN。 它所執行的功能相當於下列指令碼：  
   
-```  
+```sql
 use <cdc-enabled-database-name>  
                declare @start_lsn binary(10), @end_lsn binary(10)  
                set @start_lsn = sys.fn_cdc_increment_lsn(  

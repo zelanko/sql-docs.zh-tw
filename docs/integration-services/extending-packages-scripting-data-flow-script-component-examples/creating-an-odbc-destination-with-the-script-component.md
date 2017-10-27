@@ -51,7 +51,7 @@ ms.lasthandoff: 09/26/2017
   
 2.  建立目的地資料表中執行下列 TRANSACT-SQL 命令**AdventureWorks**資料庫：  
   
-    ```  
+    ```sql
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,  
         [City] [nvarchar](30) NOT NULL)  
     ```  

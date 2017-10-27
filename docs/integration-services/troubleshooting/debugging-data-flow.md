@@ -80,13 +80,12 @@ ms.lasthandoff: 09/28/2017
   
  下列範例顯示在封裝元件之間傳送的資料列數。  
   
-```  
+```sql
 use SSISDB  
 select package_name, task_name, source_component_name, destination_component_name, rows_sent  
 from catalog.execution_data_statistics  
 where execution_id = 132  
-order by source_component_name, destination_component_name  
-  
+order by source_component_name, destination_component_name   
 ```  
   
  下列範例計算針對特定執行，每個元件每毫秒所傳送的資料列數目。 計算值包括：  
@@ -110,7 +109,6 @@ where execution_id = 132
 group by source_component_name, destination_component_name  
 having (datediff(ms,min(created_time),max(created_time))) > 0  
 order by source_component_name desc  
-  
 ```  
 
 ## <a name="configure-an-error-output-in-a-data-flow-component"></a>在資料流程元件中設定錯誤輸出
@@ -230,13 +228,11 @@ order by source_component_name desc
   
  以下是執行上述狀況各個步驟的範例 SQL 指令碼：  
   
-```  
-  
+```sql
 Declare @execid bigint  
 EXEC [SSISDB].[catalog].[create_execution] @folder_name=N'ETL Folder', @project_name=N'ETL Project', @package_name=N'Package.dtsx', @execution_id=@execid OUTPUT  
 EXEC [SSISDB].[catalog].add_data_tap @execution_id = @execid, @task_package_path = '\Package\Data Flow Task', @dataflow_path_id_string = 'Paths[Flat File Source.Flat File Source Output]', @data_filename = 'output.txt'  
 EXEC [SSISDB].[catalog].[start_execution] @execid  
-  
 ```  
   
  create_execution 預存程序的資料夾名稱、專案名稱和封裝名稱參數對應到 Integration Services 目錄中的資料夾、專案和封裝名稱。 您可以從 SQL Server Management Studio 取得 create_execution 呼叫所要使用的資料夾、專案和封裝名稱，如下圖所示。 如果您的 SSIS 專案沒有出現在此，表示您可能尚未將該專案部署至 SSIS 伺服器。 請在 Visual Studio 中以滑鼠右鍵按一下 SSIS 專案，然後按一下 [部署] 將專案部署至所需的 SSIS 伺服器。  
@@ -260,18 +256,16 @@ EXEC [SSISDB].[catalog].[start_execution] @execid
 ### <a name="removing-a-data-tap"></a>移除資料點選  
  您可以使用 [catalog.remove_data_tap](../../integration-services/system-stored-procedures/catalog-remove-data-tap.md) 預存程序，在啟動執行之前移除資料點選。 此預存程序接受資料點選的識別碼當做參數，而識別碼可透過 add_data_tap 預存程序的輸出取得。  
   
-```  
-  
+```sql
 DECLARE @tap_id bigint  
 EXEC [SSISDB].[catalog].add_data_tap @execution_id = @execid, @task_package_path = '\Package\Data Flow Task', @dataflow_path_id_string = 'Paths[Flat File Source.Flat File Source Output]', @data_filename = 'output.txt' @data_tap_id=@tap_id OUTPUT  
 EXEC [SSISDB].[catalog].remove_data_tap @tap_id  
-  
 ```  
   
 ### <a name="listing-all-data-taps"></a>列出所有資料點選  
  您也可以使用 catalog.execution_data_taps 檢視表，列出所有資料點選。 下列範例會擷取規格執行之執行個體 (識別碼：54) 的資料點選。  
   
-```  
+```sql 
 select * from [SSISDB].[catalog].execution_data_taps where execution_id=@execid  
 ```  
   

@@ -67,7 +67,7 @@ ms.lasthandoff: 08/11/2017
   
 -   如果您使用 Microsoft Visual Basic 撰寫應用程式，請設定 **My.Application.CommandLineArgs** 屬性。 下列範例設定 **My.Application.CommandLineArgs** 屬性來擷取兩個引數：  
   
-    ```  
+    ```vb  
     Dim variable1 As String = My.Application.CommandLineArgs.Item(0)  
     Dim variable2 As String = My.Application.CommandLineArgs.Item(1)   
     ```  

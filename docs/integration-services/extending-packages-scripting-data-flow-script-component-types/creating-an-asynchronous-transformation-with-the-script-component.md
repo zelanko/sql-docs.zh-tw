@@ -132,7 +132,7 @@ ms.lasthandoff: 09/26/2017
   
 7.  建立及設定預期的第一個輸出的目的地元件**AddressID**和**縣 （市)**資料行，例如[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]目的地、 或的範例目的地元件中所示範[與指令碼元件建立目的地](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)。 然後將轉換的第一個輸出連接**MyAddressOutput**，到目的地元件。 您可以執行下列命令，以建立目的地資料表[!INCLUDE[tsql](../../includes/tsql-md.md)]命令**AdventureWorks**資料庫：  
   
-    ```  
+    ```sql
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,  
         [City] [nvarchar](30) NOT NULL)  
     ```  

@@ -294,7 +294,7 @@ Server Core 安裝選項提供執行特定伺服器角色的基本環境。 可�
   
 2.  在 [應用程式] 索引標籤上，按一下 [新工作]。  
   
-3.  在 [建立新工作] 對話方塊的 [開啟] 欄位中輸入 **sqlps.exe**，然後按一下 [確定]。 隨即開啟 [[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell] 視窗。  
+3.  在 建立新工作 對話方塊的 開啟 欄位中輸入 **sqlps.exe**，然後按一下確定。 隨即開啟 [[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell] 視窗。  
   
 4.  在 [**Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell**] 視窗中，執行下列指令碼以啟用 TCP/IP 通訊協定：  
   

@@ -161,7 +161,7 @@ else
   
 6.  建立及設定一個目的地元件，必須要有**AddressID**和**縣 （市)**資料行，例如[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]目的地、 或的範例目的地元件中所示範[與指令碼元件建立目的地](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)。 然後將轉換的輸出連接到目的地元件。 您可以執行下列命令，以建立目的地資料表[!INCLUDE[tsql](../../includes/tsql-md.md)]命令**AdventureWorks**資料庫：  
   
-    ```  
+    ```sql
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,  
         [City] [nvarchar](30) NOT NULL)  
     ```  
@@ -215,7 +215,7 @@ public class ScriptMain:
   
 7.  建立及設定預期的兩個目的地元件**AddressID**和**縣 （市)**資料行，例如[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]目的地、 一般檔案目的地，或是的範例目的地元件中所示範[與指令碼元件建立目的地](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)。 然後將每個轉換輸出連接到其中一個目的地元件。 您可以執行，以建立目的地資料表[!INCLUDE[tsql](../../includes/tsql-md.md)]命令類似於 （使用唯一資料表名稱） 中的下列**AdventureWorks**資料庫：  
   
-    ```  
+    ```sql
     CREATE TABLE [Person].[Address2](  
         [AddressID] [int] NOT NULL,  
         [City] [nvarchar](30) NOT NULL  

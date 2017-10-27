@@ -37,7 +37,7 @@ ms.lasthandoff: 09/28/2017
   
  當使用 Oracle CDC 設計工具主控台時，將會自動偵測變更。 當直接使用 SQL 更新 Oracle CDC 組態時，應該針對 Oracle CDC 服務呼叫以下程序來通知組態變更：  
   
-```  
+```sql
 DECLARE @dbname nvarchar(128) = 'HRcdc'  
 EXECUTE [MSXDBCDC].[dbo].[xdbcdc_update_config_version] @dbname  
 GO  
@@ -66,7 +66,7 @@ GO
   
  記錄採礦密碼會透過具有固定名稱 `xdbcdc_asym_key` 的非對稱金鑰來以加密格式儲存，該金鑰會利用下列命令自動建立：  
   
-```  
+```sql
 USE [<cdc-database-name>]  
 CREATE ASYMMETRIC KEY xdbcdc_asym_key  
     WITH ALGORITHM = RSA_1024  

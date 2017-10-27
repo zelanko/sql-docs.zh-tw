@@ -196,7 +196,7 @@ ms.lasthandoff: 09/28/2017
 ### <a name="create-a-linked-server-using-the-ole-db-provider-for-ssis"></a>使用適用於 SSIS 的 OLE DB 提供者建立連結的伺服器  
  在 SQL Server Management Studio 中執行下列查詢，使用適用於 SSIS 的 OLE DB 提供者 (SSISOLEDB) 建立連結的伺服器。  
   
-```  
+```sql 
   
 USE [master]  
 GO  
@@ -217,7 +217,7 @@ GO
   
 1.  建立檢視之前，在新的查詢視窗中輸入並執行下列查詢。 OPENQUERY 是 SQL Server 所支援的資料列集函式。 它會使用與連結的伺服器相關聯的 OLE DB 提供者，在指定的連結伺服器上執行指定的傳遞查詢。 您可以依照資料表名稱的相同方式，在查詢的 FROM 子句中參考 OPENQUERY。 如需詳細資訊，請參閱 [MSDN Library 上的 OPENQUERY 文件](http://msdn.microsoft.com/library/ms188427.aspx) 。  
   
-    ```  
+    ```sql
     SELECT * FROM OPENQUERY(SSISFeedServer,N'Folder=Eldorado;Project=SSISPackagePublishing;Package=Package.dtsx')   
     GO  
     ```  
@@ -227,7 +227,7 @@ GO
   
 2.  執行下列查詢，在資料庫 **TestDB** 中建立檢視以供本逐步解說使用。  
   
-    ```  
+    ```sql
   
     USE [TestDB]   
     GO   
@@ -240,14 +240,14 @@ GO
   
 3.  執行下列查詢來測試檢視。  
   
-    ```  
+    ```sql
     SELECT * FROM SSISPackageView  
     ```  
   
 ### <a name="openquery-function"></a>OPENQUERY 函式  
  OPENQUERY 函式的語法是︰  
   
-```  
+```sql 
 SELECT * FROM OPENQUERY(<LinkedServer Name>, N’Folder=<Folder Name from SSIS Catalog>; Project=<SSIS Project Name>; Package=<SSIS Package Name>; Use32BitRuntime=[True | False];Parameters=”<parameter_name_1>=<value1>; parameter_name_2=<value2>”;Timeout=<Number of Seconds>;’)  
 ```  
   

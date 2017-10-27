@@ -65,7 +65,7 @@ ms.lasthandoff: 08/03/2017
   
      例如，用於 Customer 資料表的 UPDATE 陳述式語法可能如下：  
   
-    ```  
+    ```sql
     update CDCSample.Customer  
     set TerritoryID  = ?,  
         CustomerType  = ?,  
@@ -97,7 +97,7 @@ ms.lasthandoff: 08/03/2017
   
      例如，用於 Customer 資料表的 DELETE 陳述式語法可能如下：  
   
-    ```  
+    ```sql
     delete from Customer where CustomerID = ?  
   
     ```  
