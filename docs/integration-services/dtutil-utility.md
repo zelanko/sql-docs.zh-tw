@@ -263,7 +263,7 @@ dtutil /FILE c:\srcPackage.dtsx /MOVE FILE;c:\destPackage.dtsx
 dtutil /FILE srcPackage.dtsx /SIGN FILE;destpkg.dtsx;1767832648918a9d989fdac9819873a91f919  
 ```  
   
- 若要尋找憑證相關資訊，請使用 **CertMgr**。 可在 **CertMgr** 公用程式中檢視雜湊碼，方法是選取憑證，然後按一下 [檢視]  來檢視屬性。 **[詳細資料]** 索引標籤提供有關認證的詳細資訊。 **Thumbprint** 屬性是做為雜湊值使用，其空格已移除。  
+ 若要尋找憑證相關資訊，請使用 **CertMgr**。 可在 **CertMgr** 公用程式中檢視雜湊碼，方法是選取憑證，然後按一下檢視  來檢視屬性。 **[詳細資料]** 索引標籤提供有關認證的詳細資訊。 **Thumbprint** 屬性是做為雜湊值使用，其空格已移除。  
   
 > [!NOTE]  
 >  此範例使用的雜湊不是真正的雜湊。  
