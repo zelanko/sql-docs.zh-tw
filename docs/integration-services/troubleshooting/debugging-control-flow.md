@@ -108,7 +108,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="debug-windows"></a>偵錯視窗  
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 包含許多視窗，您可將其用於處理中斷點及偵錯包含中斷點的封裝。 若要了解每個視窗的詳細資訊，請開啟該視窗並按 F1，以顯示視窗的 [說明]。  
   
- 若要在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中開啟這些視窗，請按一下 [偵錯] 功能表，指向 [視窗]，然後按一下 [中斷點]、[輸出] 或 [立即]。  
+ 若要在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中開啟這些視窗，請按一下 「偵錯」 功能表，指向 「視窗」，然後按一下 「中斷點」、「輸出」 或 「立即」。  
   
  下表描述這些視窗。  
   
