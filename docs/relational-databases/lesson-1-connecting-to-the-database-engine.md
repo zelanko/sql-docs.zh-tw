@@ -51,13 +51,13 @@ ms.lasthandoff: 09/27/2017
  -  
  -##### 啟動 SQL Server Management Studio  
  -  
- -- 在目前的 Windows 版本上，於 開始 頁面上鍵入 SSMS，然後按一下Microsoft SQL Server Management Studio。  
- --   使用舊版 Windows 時，請在 [開始] 功能表上依序指向 [所有程式] 及 [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]，然後按一下SQL Server Management Studio]。  
+ -- 在目前的 Windows 版本上，於 [開始] 頁面上鍵入 SSMS，然後按一下 [Microsoft SQL Server Management Studio]。  
+ --   使用舊版 Windows 時，請在 **「開始」** 功能表上依序指向 **「所有程式」** 及 [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]，然後按一下 **「SQL Server Management Studio」**。  
  -  
  -##### 啟動 SQL Server 組態管理員  
  -  
- -- 在目前的 Windows 版本上，於 開始 頁面上鍵入**組態管理員**，然後按一下SQL Server *版本*組態管理員。   
- --   使用舊版 Windows 時，請在 [開始] 功能表上依序指向 [所有程式]、[!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] 及 [組態工具]，然後按一下SQL Server 組態管理員]。  
+ -- 在目前的 Windows 版本上，於 [開始] 頁面上鍵入**組態管理員**，然後按一下 [SQL Server *版本*組態管理員]。   
+ --   使用舊版 Windows 時，請在 **「開始」** 功能表上依序指向 **「所有程式」**、[!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] 及 **「組態工具」**，然後按一下 **「SQL Server 組態管理員」**。  
  -  
  -## <a name="connect"></a>與 Management Studio 連線  
  -若您知道執行個體的名稱，而且是以電腦上本機系 Administrator 群組的成員身分連線，要從相同電腦上執行的工具連線到 [!INCLUDE[ssDE](../includes/ssde-md.md)] 會很容易。 下列程序必須執行在主控 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的相同電腦上。  
@@ -73,13 +73,13 @@ ms.lasthandoff: 09/27/2017
  -  
  -3.  如果未顯示 [已註冊的伺服器]，請在 [檢視] 功能表上按一下 [已註冊的伺服器]。  
  -  
- -4.  在 已註冊的伺服器 工具列上選取 Database Engine 之後，展開 Database Engine、以滑鼠右鍵按一下 本機伺服器群組、指向 工作，然後按一下註冊本機伺服器。 此時會顯示電腦上已安裝的所有 [!INCLUDE[ssDE](../includes/ssde-md.md)] 執行個體。 預設的執行個體未命名，而是以電腦名稱顯示。 具名執行個體是顯示為電腦名稱，後面接著反斜線 (\\) 和執行個體名稱。 若為 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]，除非在安裝期間變更名稱，否則執行個體是命名為 *<computer_name>*\sqlexpress。  
+ -4.  在 [已註冊的伺服器] 工具列上選取 [Database Engine] 之後，展開 [Database Engine]、以滑鼠右鍵按一下 [本機伺服器群組]、指向 [工作]，然後按一下 [註冊本機伺服器]。 此時會顯示電腦上已安裝的所有 [!INCLUDE[ssDE](../includes/ssde-md.md)] 執行個體。 預設的執行個體未命名，而是以電腦名稱顯示。 具名執行個體是顯示為電腦名稱，後面接著反斜線 (\\) 和執行個體名稱。 若為 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]，除非在安裝期間變更名稱，否則執行個體是命名為 *<computer_name>*\sqlexpress。  
  -  
  -##### 驗證資料庫引擎有在執行  
  -  
  -1.  在 [已註冊的伺服器] 中，如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體的名稱旁邊有一個綠點和白色箭頭，表示 [!INCLUDE[ssDE](../includes/ssde-md.md)] 在執行中，不需要進一步動作。  
  -  
- -2.  如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的執行個體的名稱旁邊有一個紅點和白色方塊，表示 [!INCLUDE[ssDE](../includes/ssde-md.md)] 已停止。 以滑鼠右鍵按一下 [!INCLUDE[ssDE](../includes/ssde-md.md)] 的名稱，並按一下 [服務控制]，然後按一下啟動]。 在確認對話方塊之後，[!INCLUDE[ssDE](../includes/ssde-md.md)] 應該已經啟動，而且圓圈會變成帶有白色箭頭的綠色圖示。  
+ -2.  如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的執行個體的名稱旁邊有一個紅點和白色方塊，表示 [!INCLUDE[ssDE](../includes/ssde-md.md)] 已停止。 以滑鼠右鍵按一下 [!INCLUDE[ssDE](../includes/ssde-md.md)] 的名稱，並按一下 **「服務控制」**，然後按一下 **「啟動」**。 在確認對話方塊之後，[!INCLUDE[ssDE](../includes/ssde-md.md)] 應該已經啟動，而且圓圈會變成帶有白色箭頭的綠色圖示。  
  -  
  -##### 連線至資料庫引擎  
  -
@@ -110,7 +110,7 @@ ms.lasthandoff: 09/27/2017
  -  
  -##### 建立 Windows 驗證登入  
  -  
- -1.  在上一項工作中，您使用 [!INCLUDE[ssDE](../includes/ssde-md.md)] 連接到 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]。 在物件總管中，展開伺服器執行個體，展開 安全性，以滑鼠右鍵按一下 登入，然後按一下新增登入。  
+ -1.  在上一項工作中，您使用 [!INCLUDE[ssDE](../includes/ssde-md.md)] 連接到 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]。 在物件總管中，展開伺服器執行個體，展開 [安全性]，以滑鼠右鍵按一下 [登入]，然後按一下 [新增登入]。  
  -  
  -    [登入 - 新增] 對話方塊隨即出現。  
  -  
