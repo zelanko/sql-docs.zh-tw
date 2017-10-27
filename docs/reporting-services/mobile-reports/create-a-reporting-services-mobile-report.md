@@ -14,7 +14,8 @@ caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 7fce4526bb296113aedb62e5dcf94b50e198210f
 ms.contentlocale: zh-tw
@@ -38,9 +39,9 @@ ms.lasthandoff: 08/09/2017
   
    這是 **主要** 設計格線，您可以在此建立報表中要出現的元素。 稍後，您可以 [為平板電腦或手機進行配置](../../reporting-services/mobile-reports/lay-out-a-reporting-services-mobile-report-for-phone-or-tablet.md)。     
      
-   在設計格線下方的 **視覺屬性** 中，請注意您可以設定的各種屬性。  
+   在設計格線下方的**視覺屬性**中，請注意您可以設定的各種屬性。  
      
-4. 選取**資料** 索引標籤中的左上角，而且您會看到圖表已經有模擬與它相關聯的資料。   
+4. 選取左上角的 [資料] 索引標籤，即可看到其中已經有相關模擬資料的圖表。   
   
    ![SSMRP_SimTable](../../reporting-services/mobile-reports/media/ssmrp-simtable.png)  
   
@@ -76,3 +77,4 @@ ms.lasthandoff: 08/09/2017
 -   [為手機或平板電腦配置 Reporting Services 行動報表](../../reporting-services/mobile-reports/lay-out-a-reporting-services-mobile-report-for-phone-or-tablet.md)  
   
    
+

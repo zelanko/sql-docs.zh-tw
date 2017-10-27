@@ -16,7 +16,8 @@ caps.latest.revision: 8
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 8ce79884745b9e2fc9fbddfd7d312e982b2dd61c
 ms.contentlocale: zh-tw
@@ -35,9 +36,9 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="tasks"></a>工作  
 [第 1 課：建立新的網站](../reporting-services/lesson-1-create-a-new-web-site.md)  
-[第 2 課：定義父報表的資料連線和資料表](../reporting-services/lesson-2-define-a-data-connection-and-data-table-for-parent-report.md)  
+[第 2 課：定義父報表的資料連接和資料表](../reporting-services/lesson-2-define-a-data-connection-and-data-table-for-parent-report.md)  
 [第 3 課：使用報表精靈設計父報表](../reporting-services/lesson-3-design-the-parent-report-using-the-report-wizard.md)  
-[第 4 課：定義子報表的資料連線和資料表](../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md)  
+[第 4 課：定義子報表的資料連接和資料表](../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md)  
 [第 5 課：使用報表精靈設計子報表](../reporting-services/lesson-5-design-the-child-report-using-the-report-wizard.md)  
 [第 6 課：將 ReportViewer 控制項加入到應用程式](../reporting-services/lesson-6-add-a-reportviewer-control-to-the-application.md)  
 [第 7 課：在父報表上加入鑽研動作](../reporting-services/lesson-7-add-drillthrough-action-on-parent-report.md)  

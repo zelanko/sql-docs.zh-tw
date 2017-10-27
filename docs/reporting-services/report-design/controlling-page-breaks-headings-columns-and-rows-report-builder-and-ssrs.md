@@ -15,7 +15,8 @@ caps.latest.revision: 5
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 67507b8373f0d7c08bdf9303593d30ef0cb7c027
 ms.contentlocale: zh-tw
@@ -41,3 +42,4 @@ ms.lasthandoff: 08/09/2017
  [顯示頁首和頁尾與群組 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)  
   
   
+

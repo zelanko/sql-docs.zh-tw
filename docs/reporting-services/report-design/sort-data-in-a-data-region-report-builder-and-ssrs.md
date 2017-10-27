@@ -15,7 +15,8 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 01fdabcd4005e5b3b15e6c2656daed1cff499211
 ms.contentlocale: zh-tw
@@ -137,3 +138,4 @@ ms.lasthandoff: 08/09/2017
  [跨多個形狀圖 &#40; 指定一致的色彩報表產生器及 SSRS &#41;](../../reporting-services/report-design/specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs.md)  
   
   
+

@@ -15,7 +15,8 @@ caps.latest.revision: 7
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d8ec3b39a36a6020a6655e7c7e7c2a589266f3fc
 ms.contentlocale: zh-tw
@@ -60,11 +61,11 @@ ms.lasthandoff: 08/09/2017
 ## <a name="rendering-extensions"></a>轉譯延伸模組  
  轉譯延伸模組會將報表處理器的資料與配置資訊轉換成裝置特定格式。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 包含七個轉譯延伸模組：HTML、Excel、CSV、XML、Image、PDF 和 [!INCLUDE[msCoName](../includes/msconame-md.md)] Word。  
   
--   **HTML 轉譯延伸模組** ：當您透過網頁瀏覽器向報表伺服器要求報表時，報表伺服器就會使用 HTML 轉譯延伸模組來轉譯報表。 HTML 轉譯延伸模組會使用 UTF-8 編碼來產生所有 HTML。 如需詳細資訊，請參閱[轉譯為 HTML &#40;報表產生器及 SSRS &#41;](../reporting-services/report-builder/rendering-to-html-report-builder-and-ssrs.md)和[Reporting Services 和 Power View 的瀏覽器支援](../reporting-services/browser-support-for-reporting-services-and-power-view.md)。  
+-   **HTML 轉譯延伸模組** ：當您透過網頁瀏覽器向報表伺服器要求報表時，報表伺服器就會使用 HTML 轉譯延伸模組來轉譯報表。 HTML 轉譯延伸模組會使用 UTF-8 編碼來產生所有 HTML。 如需詳細資訊，請參閱[轉譯為 HTML &#40;報表產生器及 SSRS&#41;](../reporting-services/report-builder/rendering-to-html-report-builder-and-ssrs.md) 和 [Reporting Services 和 Power View 的瀏覽器支援](../reporting-services/browser-support-for-reporting-services-and-power-view.md)。  
   
 -   **Excel 轉譯延伸模組** ：Excel 轉譯延伸模組會轉譯可在 [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] 97 或更新版本中檢視和修改的報表。 這個轉譯延伸模組會以二進位交換檔案格式 (BIFF) 建立檔案。 BIFF 是 Excel 資料的原生檔案格式。 在 [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] 中轉譯的報表支援任何試算表的所有可用功能。 如需詳細資訊，請參閱[匯出至 Microsoft Excel &#40;報表產生器及 SSRS&#41;](../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)。  
   
--   **CSV 轉譯延伸模組** ：逗號分隔值 (CSV) 轉譯延伸模組會將報表轉譯成逗號分隔的純文字檔案，沒有任何格式。 使用者可以使用 [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)]之類的試算表應用程式或是任何可讀取文字檔的其他程式來開啟這些檔案。 如需詳細資訊，請參閱[匯出至 CSV 檔案 &#40;報表產生器及 SSRS&#41;](../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md)。  
+-   **CSV 轉譯延伸模組**：逗號分隔值 (CSV) 轉譯延伸模組會將報表轉譯成逗號分隔的純文字檔案，沒有任何格式。 使用者可以使用 [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)]之類的試算表應用程式或是任何可讀取文字檔的其他程式來開啟這些檔案。 如需詳細資訊，請參閱[匯出至 CSV 檔案 &#40;報表產生器及 SSRS&#41;](../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md)。  
   
 -   **XML 轉譯延伸模組** ：XML 轉譯延伸模組將報表轉譯成 XML 檔案。 然後，這些 XML 檔案就可以供其他程式儲存或讀取。 您也可以使用 XSLT 轉換，將報表變成可供其他應用程式使用的另一種 XML 結構描述。 由 XML 轉譯延伸模組所產生的 XML 是以 UTF-8 編碼。 如需詳細資訊，請參閱[匯出至 XML &#40;報表產生器及 SSRS&#41;](../reporting-services/report-builder/exporting-to-xml-report-builder-and-ssrs.md)。  
   
@@ -81,3 +82,4 @@ ms.lasthandoff: 08/09/2017
  背景處理應用程式會使用傳遞延伸模組，將報表傳遞至各個位置。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 包括電子郵件傳遞延伸模組以及檔案共用傳遞延伸模組。 電子郵件傳遞延伸模組會透過 Simple Mail Transport Protocol (SMTP)，傳送包含報表本身或連至報表之 URL 連結的電子郵件訊息。 也可以將沒有 URL 連結或報表的短訊傳送到呼叫器、電話或其他裝置。 檔案共用傳遞延伸模組會將報表儲存到您網路上的共用資料夾。 您可以為所建立的檔案指定位置、轉譯格式、檔案名稱和覆寫選項。 您可以使用檔案共用傳遞封存轉譯的報表，並當成處理非常大型報表之策略的一部分。 傳遞延伸模組配合訂閱使用。 使用者建立訂閱時，選擇可用的傳遞延伸模組之一，以決定如何傳遞報表。  
   
   
+

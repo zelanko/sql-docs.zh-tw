@@ -16,6 +16,7 @@ caps.latest.revision: 27
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 478dc0e10767f9e4e10c5c3ede74aec5ddaddef4
@@ -113,3 +114,4 @@ ms.lasthandoff: 06/22/2017
  指出資料行是否可以複寫。 可能的值為 **True** 和 **False**。  
   
   
+

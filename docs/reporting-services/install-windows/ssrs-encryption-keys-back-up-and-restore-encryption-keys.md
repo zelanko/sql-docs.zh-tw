@@ -19,7 +19,8 @@ caps.latest.revision: 14
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 670c061b0c624eb321fd00c0f4e2f372b6ba9e71
 ms.contentlocale: zh-tw
@@ -31,7 +32,7 @@ ms.lasthandoff: 08/09/2017
 
   在報表伺服器組態中，建立用於加密機密資訊的對稱金鑰備份副本是很重要的一部分。 許多例行作業都需要金鑰的備份副本，這備份副本可以讓您在新安裝中重複使用現有的報表伺服器資料庫。  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式 | [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native Mode | [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode  
   
  發生下列任何事件時，就必須還原加密金鑰的備份副本。  
   
@@ -61,11 +62,11 @@ ms.lasthandoff: 08/09/2017
   
 1.  啟動 Reporting Services 組態管理員，然後連接到您要設定的報表伺服器執行個體。  
   
-2.  按一下**加密金鑰**，然後選取**Back Up**。  
+2.  按一下 [加密金鑰]，然後選取 [備份]。  
   
 3.  輸入增強式密碼。  
   
-4.  指定要包含儲存之金鑰的檔案。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]將.snk 副檔名附加至檔案。 可以考慮將檔案儲存到磁碟上，使其與報表伺服器分開。  
+4.  指定要包含儲存之金鑰的檔案。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會將 .snk 副檔名附加到這個檔案。 可以考慮將檔案儲存到磁碟上，使其與報表伺服器分開。  
   
 5.  選取 [確定]。  
   
@@ -94,7 +95,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  啟動 Reporting Services 組態管理員，然後連接到您要設定的報表伺服器執行個體。  
   
-2.  在 加密金鑰 頁面上，選取 **還原**。  
+2.  在 [加密金鑰] 頁面上，選取 [還原]。  
   
 3.  選取包含備份副本的 .snk 檔案。  
   
@@ -111,7 +112,7 @@ ms.lasthandoff: 08/09/2017
     ```  
   
 ## <a name="see-also"></a>另請參閱  
- [設定和管理加密金鑰 &#40;SSRS 組態管理員 &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
+ [設定和管理加密金鑰 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   
   
 

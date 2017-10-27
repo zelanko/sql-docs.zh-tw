@@ -32,6 +32,7 @@ caps.latest.revision: 15
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 8c45b97760006a9939f44b41c018d04321060df9
@@ -260,3 +261,4 @@ ms.lasthandoff: 08/09/2017
  [報表疑難排解： 地圖報表 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   
+

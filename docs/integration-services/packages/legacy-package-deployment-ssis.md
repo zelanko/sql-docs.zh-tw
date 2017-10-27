@@ -156,7 +156,7 @@ ms.lasthandoff: 09/27/2017
   
  下列 SQL 陳述式顯示 [封裝組態精靈] 提供的預設 CREATE TABLE 陳述式。  
   
-```  
+```sql
 CREATE TABLE [dbo].[SSIS Configurations]  
 (  
 ConfigurationFilter NVARCHAR(255) NOT NULL,  

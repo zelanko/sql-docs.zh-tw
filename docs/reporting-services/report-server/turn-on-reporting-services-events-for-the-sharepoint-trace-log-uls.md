@@ -15,6 +15,7 @@ caps.latest.revision: 19
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 45d2f680e35666c9958665ac6c687725c6db0eb4
@@ -162,3 +163,4 @@ Get-content -path "C:\Program Files\Common Files\Microsoft Shared\Web Server Ext
  如需詳細資訊以及在 SharePoint 2010 管理中心內設定 SharePoint 伺服器之診斷記錄的步驟，請參閱 [設定診斷記錄設定 (Windows SharePoint Services)](http://go.microsoft.com/fwlink/?LinkID=114423)。  
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+

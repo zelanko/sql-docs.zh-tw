@@ -17,7 +17,8 @@ caps.latest.revision: 15
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 38dd786c1f1caabb5e949784bb4c9dd98eab7281
 ms.contentlocale: zh-tw
@@ -27,7 +28,7 @@ ms.lasthandoff: 08/09/2017
 # <a name="set-default-options-for-report-builder"></a>設定報表產生器的預設選項
   在報表產生器中，您可以設定許多實用的預設值，來更輕鬆快速地撰寫報表。  例如，如果您設定或變更預設報表伺服器，除非您另外指定，否則報表產生器會自動將您的報表儲存到相同的報表伺服器。  
   
--   在 報表產生器中，按一下 **檔案** > **選項**。  
+-   在報表產生器中，按一下 [檔案] > [選項]。  
   
 ## <a name="uielement-list"></a>UIElement 清單  
  **預設使用此報表伺服器或 SharePoint 網站**  
@@ -56,3 +57,4 @@ ms.lasthandoff: 08/09/2017
  [啟動報表產生器](../../reporting-services/report-builder/start-report-builder.md)  
   
   
+

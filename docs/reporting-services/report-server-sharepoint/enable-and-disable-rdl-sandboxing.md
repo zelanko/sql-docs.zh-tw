@@ -13,6 +13,7 @@ ms.topic: article
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
 ms.openlocfilehash: 62c6df096133ec0d41996a4df99173cb8727e408
@@ -186,3 +187,4 @@ RDL （報表定義語言） 沙箱功能可讓您偵測及限制特定類型的
  [報表伺服器服務追蹤記錄](../../reporting-services/report-server/report-server-service-trace-log.md)  
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+

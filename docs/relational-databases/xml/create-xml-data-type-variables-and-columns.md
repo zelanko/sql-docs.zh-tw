@@ -17,6 +17,7 @@ caps.latest.revision: 13
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 751fccc2a458239715c187a1925046cdf74de98a
@@ -146,3 +147,4 @@ INSERT INTO T values(1,'<Product />')
 -   您不想因為資料表中有 XML 資料行存在，而讓資料表掃描的速度慢下來。 無論是以同資料列或資料列外的方式儲存，都會用到空間。  
   
   
+

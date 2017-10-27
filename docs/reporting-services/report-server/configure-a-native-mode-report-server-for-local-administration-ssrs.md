@@ -22,7 +22,8 @@ caps.latest.revision: 20
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 9939a592288fb5bc031dc53b94ac21c3809d0314
 ms.contentlocale: zh-tw
@@ -30,7 +31,7 @@ ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="configure-a-native-mode-report-server-for-local-administration-ssrs"></a>設定原生模式報表伺服器進行本機管理 (SSRS)
-  如果您想要在本機管理報表伺服器執行個體，則在下列其中一個作業系統上部署 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器需要其他組態步驟。 本主題說明如何設定報表伺服器以進行本機管理。 如果您有尚未安裝，或將報表伺服器設定，請參閱[從安裝精靈 &#40; 安裝 SQL Server 2016安裝程式 &#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)和[管理 Reporting Services 原生模式報表伺服器](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)。  
+  如果您想要在本機管理報表伺服器執行個體，則在下列其中一個作業系統上部署 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器需要其他組態步驟。 本主題說明如何設定報表伺服器以進行本機管理。 如果您尚未安裝或設定報表伺服器，請參閱[從安裝精靈安裝 SQL Server 2016 &#40;安裝程式&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) 和[管理 Reporting Services 原生模式報表伺服器](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)。  
   
 ||  
 |-|  
@@ -82,7 +83,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  按一下 **[允許]** 繼續進行。  
   
-3.  在 URL 網址中，輸入報表管理員 URL。 如需指示，請參閱[報表管理員 &#40;SSRS 原生模式 &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]線上叢書 》。  
+3.  在 URL 網址中，輸入報表管理員 URL。 如需指示，請參閱《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的[報表管理員 &#40;SSRS 原生模式&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)。  
   
 4.  按一下 **[工具]**。  
   
@@ -123,7 +124,7 @@ ms.lasthandoff: 08/09/2017
 2.  按一下首頁上方角落的 **[站台設定]** 。  
   
     > [!TIP]  
-    >  **注意：**如果看不到**站台設定**選項，請關閉並重新開啟瀏覽器並瀏覽至報表管理員，以系統管理權限。  
+    >  **注意：**如果您沒看到 [站台設定] 選項，請使用系統管理權限關閉並重新開啟瀏覽器，然後瀏覽至報表管理員。  
   
 3.  按一下 **[安全性]**。  
   
@@ -144,7 +145,7 @@ ms.lasthandoff: 08/09/2017
   
  **若要設定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]** 角色屬性和角色指派，好讓您不必每次都使用更高權限啟動 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ：  
   
--   從**啟動**功能表上，按一下 **所有程式**，按一下  **SQL Server 2014**，以滑鼠右鍵按一下 **[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]** ，然後按一下 **系統管理員身分執行**。  
+-   在 [開始] 功能表中，依序按一下 [所有程式] 與 [SQL Server 2014]、以滑鼠右鍵按一下 [[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]]，然後按一下 [以系統管理員身分執行]。  
   
 -   連接到本機 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 伺服器。  
   
@@ -190,3 +191,4 @@ ms.lasthandoff: 08/09/2017
  [管理 Reporting Services 原生模式報表伺服器](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
   
   
+

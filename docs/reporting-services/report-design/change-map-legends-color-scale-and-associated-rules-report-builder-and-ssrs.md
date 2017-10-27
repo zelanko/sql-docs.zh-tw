@@ -38,6 +38,7 @@ caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: aee605482e4de390b545f63ac96bfc123cee568a
@@ -297,3 +298,4 @@ ms.lasthandoff: 08/09/2017
  [地圖精靈和地圖圖層精靈 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  
   
   
+

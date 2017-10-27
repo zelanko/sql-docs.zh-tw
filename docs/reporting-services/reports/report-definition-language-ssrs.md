@@ -24,7 +24,8 @@ caps.latest.revision: 52
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 003d81f131eeeadbf672e63f0c949e4a1a6df2ad
 ms.contentlocale: zh-tw
@@ -97,3 +98,4 @@ ms.lasthandoff: 08/09/2017
  [自訂報表項目](../../reporting-services/custom-report-items/custom-report-items.md)  
   
   
+

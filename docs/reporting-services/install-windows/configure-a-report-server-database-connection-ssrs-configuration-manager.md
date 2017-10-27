@@ -12,6 +12,7 @@ ms.topic: article
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: f684f0168e57c5cd727af6488b2460eeaead100c
 ms.openlocfilehash: 7faf4e41db0b37dddbdc28b33b3abf621ecad24b
@@ -129,3 +130,4 @@ ms.lasthandoff: 09/21/2017
 [設定報表伺服器服務帳戶](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+

@@ -18,7 +18,8 @@ caps.latest.revision: 12
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 20adc5eb8b830b960fe07d39f3717279abca3f23
 ms.contentlocale: zh-tw
@@ -69,11 +70,11 @@ ms.lasthandoff: 08/09/2017
   
 ##  <a name="bkmk_mgtStudio"></a> 透過 SQL Server Management Studio 啟用遠端錯誤 (原生模式)  
   
-1.  啟動 Management Studio，然後連接到報表伺服器執行個體。 如需詳細資訊，請參閱《 [線上叢書》中的](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md) 連接至 Management Studio 中的報表伺服器 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+1.  啟動 Management Studio，然後連接到報表伺服器執行個體。 如需詳細資訊，請參閱《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的[連接至 Management Studio 中的報表伺服器](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)。  
   
 2.  以滑鼠右鍵按一下報表伺服器節點，然後選取 [屬性]。  
   
-3.  按一下 **[進階]** ，即可開啟屬性頁面。 如需詳細資訊，請參閱[伺服器屬性 &#40;進階的頁面 &#41;Reporting Services](../../reporting-services/tools/server-properties-advanced-page-reporting-services.md)中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]線上叢書 》。  
+3.  按一下 **[進階]** ，即可開啟屬性頁面。 如需詳細資訊，請參閱《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的[伺服器屬性 &#40;進階頁面&#41; - Reporting Services](../../reporting-services/tools/server-properties-advanced-page-reporting-services.md)。  
   
 4.  在 **EnableRemoteErrors**中，選取 **True**。  
   
@@ -119,3 +120,4 @@ ms.lasthandoff: 08/09/2017
     >  您可以編輯報表伺服器資料庫中的 **ConfigurationInfo** 資料表，將 **EnableRemoteErrors** 設為 **True**，但是如果目前正在使用報表伺服器，則應該使用 SQL Server Management Studio 或指令碼來修改設定。 如果您修改資料庫中的設定，則須先重新啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務，變更才會生效。  
   
   
+

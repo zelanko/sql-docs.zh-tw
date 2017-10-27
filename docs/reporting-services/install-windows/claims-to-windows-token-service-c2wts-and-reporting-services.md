@@ -12,6 +12,7 @@ ms.topic: article
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: a9397f427cac18d0c8bfc663f6bd477b0440b8a3
 ms.openlocfilehash: 8a478bba3cde66967594d5ef02f867de5b33edd7
@@ -104,3 +105,4 @@ C2WTS 所建立的 Token 只可與限制委派 (僅限特定服務使用) 及組
 4. 啟動對 Windows Token Service，透過 SharePoint 管理中心內的宣告上**管理伺服器上的服務**頁面。 您應在要執行動作的伺服器上啟動該服務。 例如，如果您有的伺服器，也就是一部 WFE 另一部伺服器及應用程式伺服器具有 SQL Server Reporting Services 共用的服務執行，您只需要啟動 C2WTS 的應用程式伺服器上。 如果您正在執行的報表檢視器 web 組件，C2WTS 時才會需要在 WFE 伺服器上。
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+

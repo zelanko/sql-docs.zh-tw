@@ -20,7 +20,8 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 711b648b41294d6c32530407b31aec8401db389c
 ms.contentlocale: zh-tw
@@ -52,7 +53,7 @@ ms.lasthandoff: 08/09/2017
   
  當您想要根據運算式有條件地設定序列的色彩時，這個方法最適用。  如需詳細資訊，請參閱 [格式化圖表上的資料點 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)。  
   
-## <a name="in-this-section"></a>섹션 내용  
+## <a name="in-this-section"></a>本節內容  
  [跨多個形狀圖 &#40; 指定一致的色彩報表產生器及 SSRS &#41;](../../reporting-services/report-design/specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs.md)  
   
  [使用調色盤定義圖表的色彩 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)  
@@ -66,3 +67,4 @@ ms.lasthandoff: 08/09/2017
  [在圖表上格式化圖例 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/chart-legend-formatting-report-builder.md)  
   
   
+

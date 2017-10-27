@@ -15,7 +15,8 @@ caps.latest.revision: 13
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3674bb697d86ac79906aa4ee5172ad24030a22fc
 ms.contentlocale: zh-tw
@@ -49,3 +50,4 @@ ms.lasthandoff: 08/09/2017
  [列印報表 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-builder/print-a-report-report-builder-and-ssrs.md)  
   
   
+

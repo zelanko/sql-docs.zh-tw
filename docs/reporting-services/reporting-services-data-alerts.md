@@ -15,7 +15,8 @@ caps.latest.revision: 33
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: 27956feca3ad15233943a447422e2260bd61c913
 ms.contentlocale: zh-tw
@@ -328,3 +329,4 @@ SQL Server Reporting Services 資料警示是資料驅動警示解決方案，�
 [資料警示管理員讓 SharePoint 使用者](../reporting-services/data-alert-manager-for-sharepoint-users.md)  
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+

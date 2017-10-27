@@ -22,7 +22,8 @@ caps.latest.revision: 30
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 64fd4ab25d7328a649e6629d16c88538c6bee6e6
 ms.contentlocale: zh-tw
@@ -80,7 +81,7 @@ ms.lasthandoff: 08/09/2017
 -   **地圖庫報表：** 空間資料會內嵌在位於地圖庫中的報表內。 根據預設，地圖庫安裝於*\<磁碟機 >*: \Program Files\Microsoft SQL Server\Report Builder \MapGallery。  
   
     > [!NOTE]  
-    >  這個 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 地圖功能會使用美國人口普查局人口普查局 ([http://www.census.gov/](http://www.census.gov/))。 TIGER/Line 形狀檔是 Census MAF/TIGER 資料庫中選定地理和製圖資訊的擷取內容。 TIGER/Line 形狀檔是由美國人口普查局所免費提供。 若要取得有關 TIGER/Line 形狀檔的詳細資訊，請前往 [http://www.census.gov/geo/www/tiger](http://www.census.gov/geo/www/tiger)。 TIGER/Line 形狀檔中的界限資訊只能當做統計資料收集和表格製作的用途，其統計用途的描述和指定並不構成司法權或擁有權利的判定，也不屬於法律上的土地描述。 Census TIGER 和 TIGER/Line 是美國人口普查局的註冊商標。  
+    >  這個 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 地圖功能會使用美國人口普查局([http://www.census.gov/](http://www.census.gov/)) 所提供之 TIGER/Line 形狀檔中的資料。 TIGER/Line 形狀檔是 Census MAF/TIGER 資料庫中選定地理和製圖資訊的擷取內容。 TIGER/Line 形狀檔是由美國人口普查局所免費提供。 若要取得有關 TIGER/Line 形狀檔的詳細資訊，請前往 [http://www.census.gov/geo/www/tiger](http://www.census.gov/geo/www/tiger)。 TIGER/Line 形狀檔中的界限資訊只能當做統計資料收集和表格製作的用途，其統計用途的描述和指定並不構成司法權或擁有權利的判定，也不屬於法律上的土地描述。 Census TIGER 和 TIGER/Line 是美國人口普查局的註冊商標。  
   
 -   **ESRI 形狀檔：** ESRI 形狀檔包含與環境系統研究協會 (Environmental Systems Research Institute, Inc.，ESRI)形狀檔空間資料格式相容的資料。 ESRI 形狀檔指的是一組檔案。 .shp 檔案中的資料會指定地理或幾何圖案。 .dbf 檔案中的資料會提供這些圖案的屬性。 若要在設計檢視中檢視地圖或是從報表伺服器執行地圖，這兩種檔案必須位於相同的資料夾。 當您從本機檔案系統的 .shp 檔案加入空間資料時，空間資料會內嵌在您的報表中。 若要在執行階段動態擷取空間資料，請將形狀檔上傳至報表伺服器，然後將其指定為空間資料的來源。 如需詳細資訊，請參閱 [尋找地圖的 ESRI 形狀檔](http://go.microsoft.com/fwlink/?linkid=178814)。  
   
@@ -260,3 +261,4 @@ ms.lasthandoff: 08/09/2017
  [報表疑難排解：地圖報表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   
+

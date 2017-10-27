@@ -18,6 +18,7 @@ caps.latest.revision: 41
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: af44fc3250f620dcaad219e67b0e414cd76974a7
@@ -133,3 +134,4 @@ FOR XML AUTO, TYPE;
  示範如何使用巢狀 FOR XML 查詢，以控制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]建立之 XML 文件的結構。  
   
   
+

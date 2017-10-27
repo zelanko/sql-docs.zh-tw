@@ -12,6 +12,7 @@ ms.topic: article
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: 52c2f8fae79884b025e067b7d628cd3154ba93f4
 ms.openlocfilehash: 5ce83ff18d6908441a3eaaf05599068ec5876308
@@ -138,3 +139,4 @@ URL 保留項目是由前置詞、主機名稱、通訊埠和虛擬目錄所組�
 使用 SQL Server Data Tools，來建立報表[下載 SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714)。
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+

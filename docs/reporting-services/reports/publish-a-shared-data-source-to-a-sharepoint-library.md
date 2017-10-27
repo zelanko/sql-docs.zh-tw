@@ -19,7 +19,8 @@ caps.latest.revision: 14
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 6fc6dc084a6434a8c0524136ca589a40c4adba41
 ms.contentlocale: zh-tw
@@ -65,3 +66,4 @@ ms.lasthandoff: 08/09/2017
  [搭配報表使用 Office 資料連接 &#40;.odc&#41; &#40;SharePoint 整合模式的 Reporting Services&#41;](../../reporting-services/report-data/use-an-office-data-connection-odc-with-reports.md)  
   
   
+

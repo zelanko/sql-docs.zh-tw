@@ -18,6 +18,7 @@ caps.latest.revision: 13
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
 ms.openlocfilehash: 84bd8143bbc487ad38416f7b4c7fed48ab0f0369
@@ -83,3 +84,4 @@ SharePoint 使用者可以檢視自己所建立資料警示的清單，以及警
 [Reporting Services Data Alerts](../reporting-services/reporting-services-data-alerts.md)  
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+

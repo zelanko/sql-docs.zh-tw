@@ -13,6 +13,7 @@ ms.topic: article
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
 ms.openlocfilehash: a8cd1bd00ec92535fff73c5eaa4ff9bbe9274ef2
@@ -147,3 +148,4 @@ ms.lasthandoff: 10/06/2017
 [測驗： 為 SharePoint 整合設定 SSRS 2012](http://go.microsoft.com/fwlink/?LinkId=306443)  
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+

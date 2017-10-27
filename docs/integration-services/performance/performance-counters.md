@@ -58,13 +58,13 @@ ms.lasthandoff: 09/27/2017
   
  在下列範例中，函數會傳回識別碼為 34 之執行中執行作業的統計資料。  
   
-```  
+```sql
 select * from [catalog].[dm_execution_performance_counters] (34)  
 ```  
   
  在下列範例中，函數會傳回 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器上執行之所有執行作業的統計資料。  
   
-```  
+```sql
 select * from [catalog].[dm_execution_performance_counters] (NULL)  
   
 ```  

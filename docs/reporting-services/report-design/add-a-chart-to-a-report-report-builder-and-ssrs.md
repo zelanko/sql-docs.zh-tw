@@ -15,7 +15,8 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a2d2ad7ae37e0f787709fb79afbf80ef3e584b5e
 ms.contentlocale: zh-tw
@@ -81,3 +82,4 @@ ms.lasthandoff: 08/09/2017
  [教學課程： 將圓形圖加入至報表 （報表設計工具）](http://go.microsoft.com/fwlink/?LinkId=198041)  
   
   
+

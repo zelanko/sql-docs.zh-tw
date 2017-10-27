@@ -20,6 +20,7 @@ caps.latest.revision: 92
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 59c7e1cc3c31f77652acb21d375e1294bdc93397
 ms.openlocfilehash: b5706abc4f362ee3bd4f042c1e081951dcd9ad1d
@@ -253,3 +254,4 @@ ms.lasthandoff: 10/25/2017
 [使用安裝精靈升級為 SQL Server 2016 &#40;安裝程式&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+

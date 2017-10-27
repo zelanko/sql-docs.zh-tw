@@ -15,6 +15,7 @@ caps.latest.revision: 13
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
 ms.openlocfilehash: 54f1cd4f907de0cd3511f1aa25ed8d6e49e2b54b
@@ -133,3 +134,4 @@ ms.lasthandoff: 08/17/2017
 [Reporting Services Data Alerts](../reporting-services/reporting-services-data-alerts.md)  
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+

@@ -15,6 +15,7 @@ caps.latest.revision: 23
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
 ms.openlocfilehash: 75bce56e88ef80a33d13e188ad0ecbf3e8b453ec
@@ -138,3 +139,4 @@ ms.lasthandoff: 08/17/2017
 [移轉 Reporting Services 安裝](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)  
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+

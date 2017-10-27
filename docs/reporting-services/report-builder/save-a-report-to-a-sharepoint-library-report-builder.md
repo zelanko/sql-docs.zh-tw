@@ -15,7 +15,8 @@ caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e6e87cb6c8daa8744b676d5ed78ed8339705f28e
 ms.contentlocale: zh-tw
@@ -42,6 +43,7 @@ ms.lasthandoff: 08/09/2017
     >  如果您保留已變更的報表超過 10 小時而未加以儲存，此報表就會與伺服器中斷連接，但不會儲存。 如果發生這種情況，請按一下右下狀態列中的 [中斷連接]，然後按一下 [連接]。 最新的伺服器將位於可用的伺服器清單中。 選取該伺服器，然後報表將會重新連接。  
   
 ## <a name="see-also"></a>請參閱＜  
- [尋找、 檢視和管理報表 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
+ [尋找、檢視和管理報表 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   
+

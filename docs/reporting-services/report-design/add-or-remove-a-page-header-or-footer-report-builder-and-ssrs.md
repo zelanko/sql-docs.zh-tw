@@ -15,7 +15,8 @@ caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 88e933ca66ab9f8f6e90237ef045b12927fab40c
 ms.contentlocale: zh-tw
@@ -68,6 +69,7 @@ ms.lasthandoff: 08/09/2017
 >  您移除頁首或頁尾時，會將其從報表刪除。 如果您後來又重新加入頁首或頁尾，則先前您加入頁首或頁尾的項目並不會重新出現。  
   
 ## <a name="see-also"></a>請參閱＜  
- [頁首和頁尾 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)  
+ [頁首和頁尾 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)  
   
   
+

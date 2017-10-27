@@ -38,7 +38,7 @@ ms.lasthandoff: 09/28/2017
   
  比對序數值及其對應作業的方式不像使用作業的助憶鍵那麼容易。 例如，'D' 可以輕易地表示刪除作業，而 'I' 則表示插入作業。 在＜ [建立函數以擷取變更資料](../../integration-services/change-data-capture/create-the-function-to-retrieve-the-change-data.md)＞主題中建立的範例查詢可以進行從序數值轉換為在新資料行中傳回之易記字串值的這個轉換。 下列程式碼區段會示範這項轉換：  
   
-```  
+```sql
 select   
     ...  
     case __$operation  

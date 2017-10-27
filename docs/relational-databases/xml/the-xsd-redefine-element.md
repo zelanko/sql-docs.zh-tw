@@ -17,6 +17,7 @@ caps.latest.revision: 14
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 74822cb1a24319e1926866da283b1ada379709e8
@@ -39,3 +40,4 @@ ms.lasthandoff: 06/22/2017
  [伺服器上 XML 結構描述集合的需求與限制](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
   
   
+

@@ -16,7 +16,8 @@ caps.latest.revision: 35
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 4fe797ac21e1f659b1a2a196be3f860a65b36896
 ms.contentlocale: zh-tw
@@ -27,7 +28,7 @@ ms.lasthandoff: 08/09/2017
 深入了解有各種資料視覺效果的 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 行動報表，針對行動裝置最佳化並可連接到內部部署資料。 
 
 >[!NOTE]
->  您需要將儀表板和 KPI 等 Datazen 伺服器內容移轉至 SQL Server 2016 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 伺服器嗎？ 請嘗試 [適用於 Datazen 的 SQL Server 移轉小幫手](https://www.microsoft.com/en-us/download/details.aspx?id=53128)。 
+>  您需要移轉至 SQL Server 2016 Datazen 伺服器內容，例如儀表板和 Kpi[!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]伺服器嗎？ 請嘗試 [適用於 Datazen 的 SQL Server 移轉小幫手](https://www.microsoft.com/en-us/download/details.aspx?id=53128)。 
  
 ![SS_MRP_LayoutTabSm](../../reporting-services/media/ss-mrp-layouttabsm.png)  
 

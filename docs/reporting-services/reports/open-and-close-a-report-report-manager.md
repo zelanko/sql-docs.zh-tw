@@ -19,7 +19,8 @@ caps.latest.revision: 51
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 440fe0b9ff8468546cf7e8cfadf2533a3bdf82d7
 ms.contentlocale: zh-tw
@@ -52,3 +53,4 @@ ms.lasthandoff: 08/09/2017
  [報表伺服器內容管理 &#40;SSRS 原生模式 &#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)  
   
   
+

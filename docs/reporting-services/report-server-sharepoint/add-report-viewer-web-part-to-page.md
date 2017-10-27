@@ -13,6 +13,7 @@ ms.topic: article
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
 ms.openlocfilehash: fbc68b6ff9f1edf5cf6ee13f6e93a3d2d1a8f834
@@ -82,3 +83,4 @@ ms.lasthandoff: 10/06/2017
 * 如果您沒有看到報表檢視器 web 組件，加入您的網頁，請確定您有[部署報表檢視器 web 組件](deploy-report-viewer-web-part.md)。
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+

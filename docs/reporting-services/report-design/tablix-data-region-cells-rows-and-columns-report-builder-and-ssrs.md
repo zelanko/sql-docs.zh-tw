@@ -20,7 +20,8 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 79c838b6bc98b64ac57b83e193b25d861e905e38
 ms.contentlocale: zh-tw
@@ -28,7 +29,7 @@ ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs"></a>Tablix 資料區資料格、資料列及資料行 (報表產生器及 SSRS)
-  若要控制 Tablix 資料區的資料列和資料行如何在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表中顯示資料，您必須了解如何指定詳細資料、群組資料以及標籤和總計的資料列與資料行。 在許多情況下，您可以使用資料表、矩陣或清單的預設結構來顯示您的資料。 如需詳細資訊，請參閱[資料表 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)，[矩陣](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)，或[列出](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)。  
+  若要控制 Tablix 資料區的資料列和資料行如何在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表中顯示資料，您必須了解如何指定詳細資料、群組資料以及標籤和總計的資料列與資料行。 在許多情況下，您可以使用資料表、矩陣或清單的預設結構來顯示您的資料。 如需詳細資訊，請參閱[資料表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)、[矩陣](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)或[清單](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)。  
   
  Tablix 資料區域會顯示詳細資料列和詳細資料行的詳細資料，以及群組資料列和群組資料行的群組資料。 當您將資料列群組和資料行群組加入到 Tablix 資料區域時，便會自動加入顯示資料的資料列和資料行。 您可以手動加入及移除資料列和資料行來自訂 Tablix 資料區域，並控制您的資料顯示在報表中的方式。  
   
@@ -85,7 +86,7 @@ ms.lasthandoff: 08/09/2017
   
  當您擁有詳細資料群組時，每個詳細資料列都位於詳細資料群組內部。 資料列會針對資料集查詢結果集中的每個值重複。  
   
- 如需有關群組階層的詳細資訊，請參閱[了解群組 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md).  
+ 如需群組階層的詳細資訊，請參閱[了解群組 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md)。  
   
  下圖顯示 Tablix 資料區域與巢狀資料列群組，以及詳細資料群組。  
   
@@ -99,10 +100,10 @@ ms.lasthandoff: 08/09/2017
   
  若要移除與某個群組相關聯的資料列和資料行，您可以刪除該群組。 當您刪除群組時，可以選擇僅刪除群組定義，或刪除群組及其所有關聯的資料列和資料行。 如果只刪除群組，您就可以保留資料區域上的資料列和資料行配置。 當您刪除群組及其相關的資料列和資料行時，您會刪除與該群組相關聯的所有靜態資料列和資料行 (群組首或群組尾) 以及動態資料列和資料行 (包括群組執行個體)。  
   
- 如需有關加入或刪除資料列和資料行的逐步指示，請參閱[插入或刪除資料列 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/insert-or-delete-a-row-report-builder-and-ssrs.md)和[插入或刪除資料行 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/insert-or-delete-a-column-report-builder-and-ssrs.md).  
+ 如需加入或刪除資料列和資料行的逐步指示，請參閱[插入或刪除資料列 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/insert-or-delete-a-row-report-builder-and-ssrs.md) 和[插入或刪除資料行 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/insert-or-delete-a-column-report-builder-and-ssrs.md)。  
   
 ## <a name="understanding-tablix-cells"></a>了解 Tablix 資料格  
- Tablix 資料格屬於下列其中一個 Tablix 區域：Tablix 主體、Tablix 資料列或 Tablix 資料行群組區域，或 Tablix 邊角。 雖然每個資料格都可能在資料集中顯示任何值，但是每個資料格的預設功能取決於其位置。 如需有關 tablix 區域的詳細資訊，請參閱[Tablix Data Region Areas &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md).  
+ Tablix 資料格屬於下列其中一個 Tablix 區域：Tablix 主體、Tablix 資料列或 Tablix 資料行群組區域，或 Tablix 邊角。 雖然每個資料格都可能在資料集中顯示任何值，但是每個資料格的預設功能取決於其位置。 如需 Tablix 區域的詳細資訊，請參閱 [Tablix 資料區的區域 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md)。  
   
  根據預設，Tablix 資料列和資料行群組區域中的資料格代表群組成員。 群組成員在報表定義中會組織成多個樹狀結構。 資料列群組階層會以水平方式展開。 資料行群組階層則會以垂直方式展開。 這些資料格會在您建立群組，並在執行階段顯示群組的唯一值時自動加入。  
   
@@ -111,7 +112,7 @@ ms.lasthandoff: 08/09/2017
  當資料格位於詳細資料列或資料行時，Tablix 主體區域中的資料格可以顯示詳細資料，而當資料格位於群組資料列或資料行時，則會顯示彙總群組資料。 資料格中的資料範圍是資料格所屬之最內部資料列群組及最內部資料行群組的交集。  
   
 > [!NOTE]  
->  針對每個資料格顯示的實際資料是針對資料格所包含之報表項目 (這通常是文字方塊) 評估過的運算式。 在屬於詳細資料列或資料行的資料格中，此運算式預設為詳細資料 (例如， **[LineTotal]**)。 在不屬於詳細資料列或資料行的資料格中，此運算式預設為彙總函式 (例如， **Sum[LineTotal]**)。 如果即使在資料格屬於群組資料列或資料行時，運算式也沒有指定彙總函式，則會顯示群組中的第一個值。 如需彙總的詳細資訊，請參閱[總計、 彙總與內建集合 &#40; 的運算式範圍報表產生器及 SSRS &#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
+>  針對每個資料格顯示的實際資料是針對資料格所包含之報表項目 (這通常是文字方塊) 評估過的運算式。 在屬於詳細資料列或資料行的資料格中，此運算式預設為詳細資料 (例如， **[LineTotal]**)。 在不屬於詳細資料列或資料行的資料格中，此運算式預設為彙總函式 (例如， **Sum[LineTotal]**)。 如果即使在資料格屬於群組資料列或資料行時，運算式也沒有指定彙總函式，則會顯示群組中的第一個值。 如需彙總的詳細資訊，請參閱[總計、彙總與內建集合的運算式範圍 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)。  
   
 ### <a name="merging-and-splitting-cells"></a>合併與分割資料格  
  在 Tablix 區域內部，您可以將多個相鄰的資料格合併在一起。 例如，您可以針對跨越多個資料行或資料列的標籤建立資料格。  
@@ -128,3 +129,4 @@ ms.lasthandoff: 08/09/2017
  [Tablix 資料區 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)  
   
   
+

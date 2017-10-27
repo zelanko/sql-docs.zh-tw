@@ -18,7 +18,8 @@ caps.latest.revision: 17
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: da2a367b582d39ea8cc8dc7ffc281a3515bb2d8b
 ms.contentlocale: zh-tw
@@ -71,3 +72,4 @@ ms.lasthandoff: 08/09/2017
  [Reporting Services 組態管理員 &#40;原生模式 &#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
   
   
+

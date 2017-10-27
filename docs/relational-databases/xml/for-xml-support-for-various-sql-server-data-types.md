@@ -17,6 +17,7 @@ caps.latest.revision: 26
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ef7a1e703ffb9d874f81c5540e1da7810ea5e2e6
@@ -37,3 +38,4 @@ ms.lasthandoff: 06/22/2017
 |[Timestamp 資料類型的 FOR XML 支援](../../relational-databases/xml/for-xml-support-for-the-timestamp-data-type.md)|描述 FOR XML 如何與 **timestamp** 資料類型一起運作。|  
   
   
+

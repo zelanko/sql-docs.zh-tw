@@ -25,11 +25,12 @@ caps.latest.revision: 47
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 727d9ccd8cd1e40d89cfe74291edae92988b407c
-ms.openlocfilehash: 10769f49396bcf32d437e4bee9b04cbc2a3c8d9c
+ms.workload: On Demand
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 5fd4d415e452549e80aa12b9eb1397bf83ce6557
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 06/13/2017
 
 ---
 # <a name="report-server-web-service"></a>報表伺服器 Web 服務
@@ -44,7 +45,7 @@ ms.lasthandoff: 08/09/2017
 -   使用任何啟用 SOAP 的開發工具集來開發應用程式。 如需詳細資訊，請參閱[The Role of SOAP in Reporting Services](../../reporting-services/report-server-web-service/the-role-of-soap-in-reporting-services.md)。  
   
 ## <a name="programming-diagram"></a>程式設計圖表  
- ![報表伺服器 Web 服務開發選項](../../reporting-services/report-server-web-service/media/reportserviceswebserviceprog-01.gif "報表伺服器 Web 服務開發選項")  
+ ![報表伺服器 Web 服務開發選項](../../reporting-services/report-server-web-service/media/reportserviceswebserviceprog-01.gif "Report Server Web service development options")  
 Reporting Services 可用的 Web 服務開發選項  
   
 ## <a name="in-this-section"></a>本節內容  
@@ -63,7 +64,7 @@ Reporting Services 可用的 Web 服務開發選項
  [利用 rs.exe 公用程式和 Web 服務編寫指令碼](../../reporting-services/tools/script-with-the-rs-exe-utility-and-the-web-service.md)  
  提供 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 指令碼環境的概觀。  
   
- [技術參考 &#40;SSRS &#41;](../../reporting-services/technical-reference-ssrs.md)  
+ [技術參考 &#40;SSRS&#41;](../../reporting-services/technical-reference-ssrs.md)  
  包含報表伺服器 Web 服務方法及對應之複雜類型的特有參考資料。  
   
 ## <a name="user-requirements-for-web-service-development"></a>Web 服務開發的使用者需求  
@@ -83,3 +84,4 @@ Reporting Services 可用的 Web 服務開發選項
  [報表伺服器 Web 服務](../../reporting-services/report-server-web-service/report-server-web-service.md)  
   
   
+

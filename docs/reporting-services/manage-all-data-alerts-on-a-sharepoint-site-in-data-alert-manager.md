@@ -18,6 +18,7 @@ caps.latest.revision: 13
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
 ms.openlocfilehash: c0451f12b68cd45a387bfca4d94c8cf4f71919ea
@@ -65,3 +66,4 @@ SharePoint 警示系統管理員可以檢視任何網站使用者建立之資料
 [Reporting Services Data Alerts](../reporting-services/reporting-services-data-alerts.md)  
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+

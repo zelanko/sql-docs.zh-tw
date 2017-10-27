@@ -24,7 +24,8 @@ caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 186bb0bab4abac91ea95d397f379986cac9d2f0f
 ms.contentlocale: zh-tw
@@ -69,3 +70,4 @@ ms.lasthandoff: 08/09/2017
  [格式化量測計 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)  
   
   
+

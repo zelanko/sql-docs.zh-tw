@@ -14,7 +14,8 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d9ca14104f9dd60fda20d723290789733f0a9f4a
 ms.contentlocale: zh-tw
@@ -24,7 +25,7 @@ ms.lasthandoff: 08/09/2017
 # <a name="customize-the-parameters-pane-in-a-report-report-builder"></a>Customize the Parameters Pane in a Report (Report Builder)
   在報表產生器中使用參數來建立分頁報表時，您可以自訂 [參數] 窗格。 在報表設計檢視中，您可以將參數拖曳到 [參數] 窗格中的特定資料行和資料列。 您可以新增及移除資料行以變更窗格配置。  
   
- 當您將參數拖曳至新的資料行和資料列在窗格中的時，參數順序會變更在**報表資料**窗格。 當您變更中參數的順序**報表資料** 窗格中，參數在窗格中的位置已變更。 如需有關為什麼參數的順序很重要，請參閱[變更報表參數 &#40; 順序報表產生器及 SSRS &#41;](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md).  
+ 當您在窗格中將參數拖曳至新的資料行和資料列時，參數順序會在 [報表資料] 窗格中變更。 當您在 [報表資料] 窗格中變更參數的順序時，參數在窗格中的位置會變更。 如需參數順序為何重要的詳細資訊，請參閱[變更報表參數的順序 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)。  
   
 ## <a name="to-customize-the-parameters-pane"></a>自訂參數窗格  
   
@@ -44,7 +45,7 @@ ms.lasthandoff: 08/09/2017
   
 3.  若要將參數移到參數窗格中的新位置，請將參數拖曳到窗格中的不同資料格。  
   
-     當您在窗格中變更參數的位置時，[報表資料]  窗格中，參數在 [參數]  清單中的順序會自動變更。 參數順序影響的相關資訊，請參閱[變更報表參數 &#40; 順序報表產生器及 SSRS &#41;](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)  
+     當您在窗格中變更參數的位置時，[報表資料]  窗格中，參數在 [參數]  清單中的順序會自動變更。 如需參數順序影響的詳細資訊，請參閱[變更報表參數的順序 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)  
   
 4.  若要存取參數的屬性，請執行下列其中一項動作。  
   
@@ -73,3 +74,4 @@ ms.lasthandoff: 08/09/2017
  [報表參數 &#40;報表產生器和報表設計師&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
   
   
+

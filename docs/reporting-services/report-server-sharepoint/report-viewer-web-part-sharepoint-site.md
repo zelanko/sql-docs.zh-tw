@@ -13,6 +13,7 @@ ms.topic: article
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
 ms.openlocfilehash: a37ed5efe7c365c601deb95d9fe761d227e7021e
@@ -56,3 +57,4 @@ Microsoft Download Center 上可用的報表檢視器 web 組件。
 ## <a name="next-steps"></a>後續的步驟
 
 若要開始使用更新的報表檢視器 web 組件，請參閱[部署 SharePoint 網站上的報表檢視器 web 組件](deploy-report-viewer-web-part.md)。
+

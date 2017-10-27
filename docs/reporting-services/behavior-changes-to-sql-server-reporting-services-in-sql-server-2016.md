@@ -27,7 +27,8 @@ caps.latest.revision: 69
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: b97215eceda641e7478edb659e61298e43b00859
 ms.contentlocale: zh-tw
@@ -53,3 +54,4 @@ ms.lasthandoff: 08/09/2017
 [SQL Server Reporting Services SQL Server 2016 中的重大變更](../reporting-services/breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md)
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+

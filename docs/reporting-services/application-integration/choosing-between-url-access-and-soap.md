@@ -13,6 +13,7 @@ ms.topic: reference
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
 ms.openlocfilehash: 1d9b4df388cd1d6bb96d88b64bf319f5fd9866e9
@@ -53,3 +54,4 @@ ms.lasthandoff: 10/20/2017
  如需結合 URL 存取與 Web 服務，以提供整合的報表的範例，請參閱[SQL Server Reporting Services 產品範例](http://go.microsoft.com/fwlink/?LinkId=177889)。
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+

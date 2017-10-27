@@ -96,7 +96,7 @@ ms.lasthandoff: 08/03/2017
   
     4.  針對 **[SQLStatement]**，輸入下列 SQL 陳述式：  
   
-        ```  
+        ```sql
         SELECT DATEADD(dd,0, DATEDIFF(dd,0,GETDATE()-1)) AS ExtractStartTime,  
           DATEADD(dd,0, DATEDIFF(dd,0,GETDATE())) AS ExtractEndTime  
   

@@ -15,7 +15,8 @@ caps.latest.revision: 7
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 2a73370c0ae9f3d405a185d53754aa0620d593e3
 ms.contentlocale: zh-tw
@@ -159,3 +160,4 @@ CELL PROPERTIES
  [資料集欄位集合 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
   
   
+

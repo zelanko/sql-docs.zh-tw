@@ -15,7 +15,8 @@ caps.latest.revision: 3
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: MT
 ms.sourcegitcommit: 47182ebd082dfae0963d761e54c4045be927d627
 ms.openlocfilehash: 58cfeef7d74e0641b965c307551f0fba4a7ff09c
 ms.contentlocale: zh-tw
@@ -131,3 +132,4 @@ public void GetUserInfo(IRSRequestContext requestContext, out IIdentity userIden
 [設定報表管理員傳遞自訂驗證 Cookie](https://msdn.microsoft.com/library/ms345241(v=sql.120).aspx)
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+

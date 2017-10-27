@@ -15,7 +15,8 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: e3bbe7d68c378bd74e70ceb0c6d219da427db099
 ms.contentlocale: zh-tw
@@ -201,3 +202,4 @@ ms.lasthandoff: 08/09/2017
  [資料表、 矩陣和清單 &#40;報表產生器和 SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
+

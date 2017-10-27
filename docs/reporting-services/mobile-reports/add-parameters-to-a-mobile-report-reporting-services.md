@@ -14,7 +14,8 @@ caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 6fad62a6549f4b9752bde07e39f53175768a68cb
 ms.contentlocale: zh-tw
@@ -26,17 +27,17 @@ ms.lasthandoff: 08/09/2017
 
 若要使用參數建立行動報表，請從至少包含一個參數的共用資料集開始。 請參閱 [在共用資料集中建立參數](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)。  
 
-將參數加入行動報表之後，您可以建立 URL 以 [使用查詢字串參數開啟報表](../../reporting-services/mobile-reports/open-a-mobile-report-with-specific-query-string-parameters-reporting-services.md)。
+將參數加入行動報表之後，您可以建立 URL 以[使用查詢字串參數開啟報表](../../reporting-services/mobile-reports/open-a-mobile-report-with-specific-query-string-parameters-reporting-services.md)。
 
 1. 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion.md)] Web 入口網站的頂端列中，選取 [新增] > [行動報表]。  
   
    ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png)  
      
-2. 選取**資料** 索引標籤中的左上角[!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]。   
+2. 選取 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)] 左上角的 [資料] 索引標籤。   
   
-3. 選取右上角，**加入資料**。  
+3. 選取右上角的 [加入資料]。  
   
-4. 選取**報表伺服器**，然後選取伺服器。  
+4. 選取 [報表伺服器]，然後選取伺服器。  
   
 5. 瀏覽至伺服器上的共用資料集，然後選取具有參數的伺服器。  
   
@@ -52,7 +53,7 @@ ms.lasthandoff: 08/09/2017
   
    ![SSMRP_SetParam](../../reporting-services/mobile-reports/media/ssmrp-setparam.png)  
      
-8. 選取**預覽**來查看報表的外觀。 在此報表中，選擇清單使用類別目錄參數。
+8. 選取 [預覽] 查看報表的外觀。 在此報表中，選擇清單使用類別目錄參數。
 
    ![sql-server-mobile-report-publisher-Selection-List-View-No-Selection](../../reporting-services/mobile-reports/media/sql-server-mobile-report-publisher-selection-list-view-no-selection.png) 
    

@@ -21,7 +21,8 @@ caps.latest.revision: 38
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7f8838c9793cfc4a8e38bea3f0f27e702dd27e4d
 ms.contentlocale: zh-tw
@@ -130,3 +131,4 @@ ms.lasthandoff: 08/09/2017
  [MDX &#40; analysis Services 連接類型SSRS &#41;](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md)  
   
   
+

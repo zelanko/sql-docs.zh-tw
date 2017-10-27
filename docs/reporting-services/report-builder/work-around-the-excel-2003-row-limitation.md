@@ -15,7 +15,8 @@ caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 8533cd39c8a3d5efde78fee3e045eb744d562a97
 ms.contentlocale: zh-tw
@@ -65,3 +66,4 @@ ms.lasthandoff: 08/09/2017
 8.  儲存報表。 當您將它匯出至 Excel 時，它會匯出到多個工作表，而且每個工作表最多包含 65000 個資料列。  
   
   
+

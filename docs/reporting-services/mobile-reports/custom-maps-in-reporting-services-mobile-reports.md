@@ -14,7 +14,8 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 410863a8fc12424addbc8edba0196066fd1daf79
 ms.contentlocale: zh-tw
@@ -38,7 +39,7 @@ SQL Server 行動報表發行工具中的地理對應定義格式，稱為*ESRI 
 ## <a name="technical-information"></a>技術資訊  
   
 - 官方規格︰ [http://www.esri.com/library/whitepapers/pdfs/shapefile.pdf](http://www.esri.com/library/whitepapers/pdfs/shapefile.pdf)  
-- Wikipedia 形狀檔： [http://en.wikipedia.org/wiki/Shapefile](http://en.wikipedia.org/wiki/Shapefile)  
+- Wikipedia 形狀檔：[http://en.wikipedia.org/wiki/Shapefile](http://en.wikipedia.org/wiki/Shapefile)  
   
 ## <a name="creating--editing-map-geometry"></a>建立及編輯對應幾何  
   

@@ -15,7 +15,8 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: d4ca3cc183fb405fc9379f29012a92e39b7ad95b
 ms.contentlocale: zh-tw
@@ -31,7 +32,7 @@ ms.lasthandoff: 08/09/2017
   
  如果比較的數列超過兩個，請考慮不同的方法來在圖表中比較及顯示多個數列。 如需詳細資訊，請參閱[圖表上的多個數列](../../reporting-services/report-design/multiple-series-on-a-chart-report-builder-and-ssrs.md)。  
   
- 此圖表的範例可從範例報表取得。 如需有關下載這個範例報表及其他項目的詳細資訊，請參閱 [報表產生器與報表設計師範例報表](http://go.microsoft.com/fwlink/?LinkId=198283)。  
+ 此圖表的範例可從範例報表取得。 如需有關下載這個範例報表及其他的詳細資訊，請參閱[報表產生器和報表設計師範例報表](http://go.microsoft.com/fwlink/?LinkId=198283)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -48,3 +49,4 @@ ms.lasthandoff: 08/09/2017
 [指定軸間隔](../../reporting-services/report-design/specify-an-axis-interval-report-builder-and-ssrs.md)  
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+

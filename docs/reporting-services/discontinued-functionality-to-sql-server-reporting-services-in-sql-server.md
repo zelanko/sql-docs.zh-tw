@@ -19,7 +19,8 @@ caps.latest.revision: 54
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: 937a22d56d2c290fb87d963ef3fd54d53c34f5fb
 ms.contentlocale: zh-tw
@@ -49,3 +50,4 @@ ms.lasthandoff: 08/09/2017
 [SQL Server 2016 中 SQL Server Reporting Services 已被取代的功能](../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)  
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+

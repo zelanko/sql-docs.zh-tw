@@ -22,7 +22,8 @@ caps.latest.revision: 22
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: 10ec05b662839e5cf2aac0d756d7ae581bdf8de9
 ms.contentlocale: zh-tw
@@ -223,3 +224,4 @@ ms.lasthandoff: 08/09/2017
 [警示系統管理員的資料警示管理員](../reporting-services/data-alert-manager-for-alerting-administrators.md)  
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+

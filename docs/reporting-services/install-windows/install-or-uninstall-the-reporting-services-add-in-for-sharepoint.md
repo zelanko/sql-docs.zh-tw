@@ -14,6 +14,7 @@ caps.latest.revision: 15
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
 ms.openlocfilehash: e10b1aadc6a89e0d18b55d577f075fcb04353fcb
@@ -280,3 +281,4 @@ Rssharepoint.msi /?
 [Reporting Services 報表伺服器 &#40;SharePoint 模式&#41;](../../reporting-services/report-server-sharepoint/reporting-services-report-server-sharepoint-mode.md)  
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+

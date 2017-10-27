@@ -13,6 +13,7 @@ ms.topic: article
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
 ms.openlocfilehash: b521a0a2198d74c8766f18fb8d7a199b25005efe
@@ -68,3 +69,4 @@ SQL Server Reporting Services 是一種伺服器報表平台，提供齊全的�
  一般 Reporting Services 的詳細資訊，請參閱[Reporting Services](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]線上叢書 》。 如需有關其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件、工具和資源的詳細資訊，請參閱《 [SQL Server 線上叢書](../../sql-server/sql-server-technical-documentation.md)》。  
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+

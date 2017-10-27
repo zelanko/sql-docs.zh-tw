@@ -17,6 +17,7 @@ caps.latest.revision: 28
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: fcade160089ec8e066f830804dab88715ceffcaf
@@ -59,3 +60,4 @@ ms.lasthandoff: 06/22/2017
  [Common Language Runtime &#40;CLR&#41; 整合程式設計概念](../../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
   
   
+

@@ -18,7 +18,8 @@ caps.latest.revision: 22
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: 4690c2cc9c6f9cbf9d9591993e1c2483489e6114
 ms.contentlocale: zh-tw
@@ -86,3 +87,4 @@ SQL Server Reporting Services 提供 Data Alert Manager for SharePoint 警示系
 [Reporting Services Data Alerts](../reporting-services/reporting-services-data-alerts.md)  
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+

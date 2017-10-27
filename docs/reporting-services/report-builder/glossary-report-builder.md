@@ -15,7 +15,8 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 69a348a8f2f2d44dbe17f5500557db03b95e5b04
 ms.contentlocale: zh-tw
@@ -375,6 +376,7 @@ ms.lasthandoff: 08/09/2017
 |Y 軸 (y-axis)|請參閱其他詞彙：值 (y) 軸|  
   
 ## <a name="see-also"></a>請參閱＜  
- [報表撰寫概念 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
+ [報表撰寫概念 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
   
   
+

@@ -17,6 +17,7 @@ helpviewer_keywords:
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: f684f0168e57c5cd727af6488b2460eeaead100c
 ms.openlocfilehash: c9aa72267460ed2d52ae3e2d42a73071b4d7a0f3
@@ -102,3 +103,4 @@ ms.lasthandoff: 09/21/2017
 [設定及管理報表伺服器](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)  
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+

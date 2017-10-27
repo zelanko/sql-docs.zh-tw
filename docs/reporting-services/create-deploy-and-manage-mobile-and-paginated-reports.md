@@ -22,7 +22,8 @@ caps.latest.revision: 70
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Active
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: 49f990d30564a2c4fc38a527e7da1e97f9a21ca1
 ms.contentlocale: zh-tw
@@ -122,3 +123,4 @@ Web 入口網站上的內容依類型來組織： Reporting Services 行動和�
 * [在 Reporting Services 中的 power BI 報表](../reporting-services/power-bi-reports-in-reporting-services.md)
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+

@@ -17,7 +17,8 @@ caps.latest.revision: 14
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 9a23cb8cb401de31b69049a065b5bd34cc29e9b1
 ms.contentlocale: zh-tw
@@ -70,6 +71,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="next-steps"></a>後續的步驟
 
 [安裝或解除安裝 SharePoint 的 Reporting Services 增益集](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
-[解除安裝 Reporting Services 增益集之後，就無法瀏覽 SharePoint 頁面的非預設區域](http://support.microsoft.com/kb/2009212)  
+[您不能解除安裝 Reporting Services 增益集之後瀏覽 SharePoint 頁面的非預設區域](http://support.microsoft.com/kb/2009212)  
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+

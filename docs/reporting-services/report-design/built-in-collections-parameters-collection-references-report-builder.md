@@ -15,7 +15,8 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 17698a3c268e824d2f638042b71b3ec21f994e86
 ms.contentlocale: zh-tw
@@ -69,3 +70,4 @@ ms.lasthandoff: 08/09/2017
  [運算式 &#40; 中的內建集合報表產生器及 SSRS &#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)  
   
   
+

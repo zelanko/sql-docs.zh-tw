@@ -142,7 +142,7 @@ ms.lasthandoff: 09/26/2017
   
 6.  建立和設定目的地元件，例如[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]目的地、 或中所示範的範例目的地元件[與指令碼元件建立目的地](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)，它需要**AddressID**和**縣 （市)**資料行。 然後將來源元件連接到目的地  (不需要任何轉換，就可以直接將來源連接到目的地)。您可以執行下列命令，以建立目的地資料表[!INCLUDE[tsql](../../includes/tsql-md.md)]命令**AdventureWorks**資料庫：  
   
-    ```  
+    ```sql
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,  
         [City] [nvarchar](30) NOT NULL)  
     ```  
@@ -275,7 +275,7 @@ ms.lasthandoff: 09/26/2017
   
 7.  建立和設定目的地元件，例如[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]目的地、 或中所示範的範例目的地元件[與指令碼元件建立目的地](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)。 然後將來源元件連接到目的地  (不需要任何轉換，就可以直接將來源連接到目的地)。您可以執行下列命令，以建立目的地資料表[!INCLUDE[tsql](../../includes/tsql-md.md)]命令**AdventureWorks**資料庫：  
   
-    ```  
+    ```sql
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,  
         [City] [nvarchar](30) NOT NULL)  
     ```  

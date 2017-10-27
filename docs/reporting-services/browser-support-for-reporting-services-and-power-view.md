@@ -25,7 +25,8 @@ caps.latest.revision: 121
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: fb5790cb0eaf8b160de98b2fa7ff3c327f654336
 ms.contentlocale: zh-tw
@@ -36,7 +37,7 @@ ms.lasthandoff: 08/09/2017
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
-了解哪些瀏覽器相關管理和檢視 SQL Server Reporting Services、 ReportViewer 控制項和 Power View 支援版本。
+了解哪些瀏覽器相關管理和檢視 [SQL Server Reporting Services、 ReportViewer 控制項和 Power View 支援版本。
 
 > [!NOTE]
 > SQL Server 2016 之後已無法再使用 reporting Services 與 SharePoint 整合。

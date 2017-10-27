@@ -21,6 +21,7 @@ caps.latest.revision: 37
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: f989ec80fe80d85381673cb12a90b8e3cea82da4
@@ -91,3 +92,4 @@ ms.lasthandoff: 08/09/2017
  [Analysis Services MDX 查詢設計工具使用者介面](../../reporting-services/report-data/analysis-services-mdx-query-designer-user-interface.md)  
   
   
+

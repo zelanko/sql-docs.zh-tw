@@ -16,7 +16,8 @@ caps.latest.revision: 9
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c3e9d3ca3b3b708105bf428508ff52c021bd5dd0
 ms.contentlocale: zh-tw
@@ -36,9 +37,9 @@ ms.lasthandoff: 08/09/2017
   
 2.  將滑鼠停留在 **[名稱]** 資料行底下的任何資料列上方。 滑鼠游標會顯示手掌符號。  
   
-3.  中選取一個值**名稱**資料行。 子報表隨即顯示，並且包含對應的篩選資料。  
+3.  按一下 [名稱] 資料行中的值。 子報表隨即顯示，並且包含對應的篩選資料。  
   
-4.  選取的圖示，**返回父報表**，請在**ReportViewer**向後巡覽至工具列**父**報表。  
+4.  選取 [ReportViewer] 工具列中的 [返回父報表] 圖示，導覽回**父**報表。  
   
 5.  關閉瀏覽器即可結束。  
   

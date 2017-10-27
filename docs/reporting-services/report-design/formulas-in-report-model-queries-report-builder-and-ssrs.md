@@ -17,7 +17,8 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f74c464aad45ffad0c1dfc2a40d62944446e63d7
 ms.contentlocale: zh-tw
@@ -25,7 +26,7 @@ ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="formulas-in-report-model-queries-report-builder-and-ssrs"></a>報表模型查詢中的公式 (報表產生器及 SSRS)
-  公式是針對使用報表模型做為資料來源之報表中的值來執行的計算。 定義公式**定義公式對話方塊**報表模型查詢設計工具中定義報表模型資料來源的查詢時。 公式可以包含函數、運算子、常數和對欄位或實體的參考。 公式可讓您結合、彙總、篩選以及評估數值和文字資料。 您可以建立公式，並將它們另存為新的欄位，或者，您可以修改現有欄位的公式。  
+  公式是針對使用報表模型做為資料來源之報表中的值來執行的計算。 當您定義報表模型資料來源的查詢時，可以在報表模型查詢設計工具的 [定義公式] 對話方塊中定義公式。 公式可以包含函數、運算子、常數和對欄位或實體的參考。 公式可讓您結合、彙總、篩選以及評估數值和文字資料。 您可以建立公式，並將它們另存為新的欄位，或者，您可以修改現有欄位的公式。  
   
  公式不是 RDL 運算式，開頭不得為等號 (=)。 如需 RDL 運算式的詳細資訊，請參閱[運算式 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)。  
   
@@ -81,3 +82,4 @@ ms.lasthandoff: 08/09/2017
 |文字函數|**CONCAT**, **FIND**, **LEFT**, **LENGTH**, **LOWER**, **LTRIM**, **REPLACE**, **RIGHT**, **RTRIM**, **SUBSTRING**, **UPPER**|  
   
   
+

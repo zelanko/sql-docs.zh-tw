@@ -17,7 +17,8 @@ caps.latest.revision: 11
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 551b909cce14da7e6aeb277234a430cace112ed7
 ms.contentlocale: zh-tw
@@ -38,6 +39,7 @@ ms.lasthandoff: 08/09/2017
  輸入密碼以登入 Web 服務。  
   
 ## <a name="see-also"></a>請參閱＜  
- [對話方塊、 窗格和精靈的報表產生器說明](http://msdn.microsoft.com/en-us/2da24891-0b6d-4d3c-8b18-81b98752642f)  
+ [對話方塊、窗格和精靈的報表產生器說明](http://msdn.microsoft.com/en-us/2da24891-0b6d-4d3c-8b18-81b98752642f)  
   
   
+

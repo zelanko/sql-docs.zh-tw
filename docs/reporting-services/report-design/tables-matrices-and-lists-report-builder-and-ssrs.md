@@ -40,6 +40,7 @@ caps.latest.revision: 11
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: aa7d5ba489e0f23c6802a1d6596a22f2263decd8
@@ -176,3 +177,4 @@ ms.lasthandoff: 08/09/2017
  [量測計 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  
   
   
+

@@ -15,6 +15,7 @@ caps.latest.revision: 8
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
 ms.openlocfilehash: 1a58f3884e041b06f741a40ada0bbff6ce7e3181
@@ -60,3 +61,4 @@ ms.lasthandoff: 08/17/2017
 |快照集|||
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+

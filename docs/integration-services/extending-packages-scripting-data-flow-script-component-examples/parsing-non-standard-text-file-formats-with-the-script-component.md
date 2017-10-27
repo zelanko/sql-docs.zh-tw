@@ -72,7 +72,7 @@ ms.lasthandoff: 09/26/2017
   
 3.  選取目的地資料庫，並且開啟新的查詢視窗。 在查詢視窗中，執行下列指令碼來建立目的地資料表：  
   
-    ```  
+    ```sql
     create table RowDelimitedData  
     (  
     FirstName varchar(32),  
@@ -226,7 +226,7 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
   
 3.  選取目的地資料庫，並且開啟新的查詢視窗。 在查詢視窗中，執行下列指令碼來建立目的地資料表：  
   
-    ```  
+    ```sql
     CREATE TABLE [dbo].[Parents]([ParentID] [int] NOT NULL,  
     [ParentRecord] [varchar](32) NOT NULL,  
      CONSTRAINT [PK_Parents] PRIMARY KEY CLUSTERED   

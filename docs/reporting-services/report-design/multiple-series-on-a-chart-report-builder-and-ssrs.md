@@ -15,7 +15,8 @@ caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e3e3fa82b79529b1e128260f020b8e98225e26fe
 ms.contentlocale: zh-tw
@@ -64,3 +65,4 @@ ms.lasthandoff: 08/09/2017
  [圖表類型 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)  
   
   
+

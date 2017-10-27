@@ -15,7 +15,8 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c4b3521ce8485561df5fec6a9cd468732cfbc52b
 ms.contentlocale: zh-tw
@@ -76,3 +77,4 @@ ms.lasthandoff: 08/09/2017
  [教學課程： 將橫條圖加入至報表](http://go.microsoft.com/fwlink/?LinkId=198042)  
   
   
+

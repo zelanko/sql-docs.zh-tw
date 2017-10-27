@@ -16,7 +16,8 @@ caps.latest.revision: 40
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: f7e12ebcec8e06828430e10c377205e2421f50f4
 ms.contentlocale: zh-tw
@@ -91,3 +92,4 @@ ms.lasthandoff: 08/09/2017
 [安裝 Reporting Services 原生模式報表伺服器](../../reporting-services/install-windows/install-reporting-services-native-mode-report-server.md)  
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+

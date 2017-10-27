@@ -14,7 +14,8 @@ caps.latest.revision: 8
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: fcca4ace177a9d606a49db485fe6c61c4ef24355
 ms.contentlocale: zh-tw
@@ -249,3 +250,4 @@ LESS 樣式表所包含的區塊會參考某些預先定義的 LESS 變數，如
     }  
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+

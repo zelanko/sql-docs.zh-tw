@@ -15,7 +15,8 @@ caps.latest.revision: 10
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 6b968bb97c484834915f2fdfb9b0ac294243810a
 ms.contentlocale: zh-tw
@@ -35,7 +36,7 @@ ms.lasthandoff: 08/09/2017
   
  如需詳細資訊，請參閱 [SQL Server 2008 R2 平行資料倉儲](http://go.microsoft.com/fwlink/?LinkId=150895)網站。  
   
- 您可以使用本主題中的資訊來建置資料來源。 如需逐步指示，請參閱 [加入及驗證資料連接 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)。  
+ 您可以使用本主題中的資訊來建置資料來源。 如需逐步指示，請參閱 [加入及驗證資料連接 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)類型之報表資料來源為基礎的資料集。  
   
 ##  <a name="Connection"></a> 連接字串  
  當您連接到 [!INCLUDE[ssDW](../../includes/ssdw-md.md)]時，是連接到 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] 應用裝置內的資料庫物件。 您會指定在查詢設計工具中使用的資料庫物件。 如果您未在連接字串中指定資料庫，則會連接到管理員指派給您的預設資料庫。 請洽詢資料庫管理員，以取得用來連接資料來源的連接資訊和認證。 下列連接字串範例會指定 **應用裝置中的範例資料庫**CustomerSales [!INCLUDE[ssDW](../../includes/ssdw-md.md)] ：  
@@ -77,7 +78,7 @@ HOST=<IP address>; database= CustomerSales; port=<port>
   
  以文字為基礎的查詢設計工具支援 [文字](#QueryText) 模式，在此模式下，您可以輸入從資料來源選取資料的 [!INCLUDE[DWsql](../../includes/dwsql-md.md)] 命令。  
   
--   [文字](#QueryText)  
+-   [Text](#QueryText)  
   
  您使用[!INCLUDE[DWsql](../../includes/dwsql-md.md)]與[!INCLUDE[ssDW](../../includes/ssdw-md.md)]和[!INCLUDE[tsql](../../includes/tsql-md.md)]與 SQL Server。 這兩種 SQL 語言方言非常類似。 針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料來源連接類型撰寫的查詢，通常可用於 [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] 資料來源連接類型。  
   
@@ -141,7 +142,7 @@ WHERE EmployeeID = (@EmpID)
   
  [建立共用資料集或內嵌資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
   
- [將篩選加入資料集 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
+ [將篩選加入資料集中 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
   
 ##  <a name="Related"></a> 相關章節  
@@ -150,13 +151,13 @@ WHERE EmployeeID = (@EmpID)
  [報表資料集 &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
  提供存取報表資料的概觀。  
   
- [資料連接、 資料來源和報表產生器中的連接字串](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
+ [報表產生器中的資料連接、資料來源及連接字串](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
  提供資料連接與資料來源的相關資訊。  
   
- [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+ [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
  提供內嵌與共用資料集的相關資訊。  
   
- [資料集欄位集合 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
+ [資料集欄位集合 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
  提供查詢所產生之資料集欄位集合的相關資訊。  
   
  《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [線上叢書》](http://go.microsoft.com/fwlink/?linkid=121312)中 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文件的 [Reporting Services 支援的資料來源 &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。  
@@ -165,7 +166,8 @@ WHERE EmployeeID = (@EmpID)
 ## <a name="next-steps"></a>後續的步驟
 
 [報表參數](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
-[篩選、分組和排序資料](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+[篩選、 分組和排序資料](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
 [運算式](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+

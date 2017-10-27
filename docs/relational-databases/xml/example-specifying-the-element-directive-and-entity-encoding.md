@@ -17,6 +17,7 @@ caps.latest.revision: 12
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d2ddb67aee711a217bd9f75b62ef14067e4aac55
@@ -100,3 +101,4 @@ FOR XML EXPLICIT
  [搭配 FOR XML 使用 EXPLICIT 模式](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)  
   
   
+

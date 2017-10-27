@@ -21,7 +21,8 @@ caps.latest.revision: 14
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: ee650a09b57ae92abda378fea6fc780b550fbac4
 ms.contentlocale: zh-tw
@@ -67,11 +68,11 @@ ms.lasthandoff: 08/09/2017
   
     2.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中，連接到報表伺服器執行個體。  
   
-    3.  報表伺服器節點，以滑鼠右鍵按一下，然後按一下 **屬性**。 如果 **[屬性]** 選項已停用，請確認您已使用系統管理權限來啟動 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 。  
+    3.  以滑鼠右鍵按一下報表伺服器節點，然後按一下 [屬性]。 如果 **[屬性]** 選項已停用，請確認您已使用系統管理權限來啟動 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 。  
   
     4.  按一下 **[進階]**。  
   
-    5.  選取 **EnableClientPrinting**中報表伺服器的用戶端列印功能已停用。  
+    5.  選取 [EnableClientPrinting] 。  
   
     6.  設為 True 或 False 然後按一下 [確定] 。  
   

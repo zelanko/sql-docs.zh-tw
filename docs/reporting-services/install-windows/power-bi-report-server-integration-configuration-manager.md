@@ -17,6 +17,7 @@ f1_keywords:
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
 ms.openlocfilehash: c6f8c9440a6229726c655dae42ea7ab955e35f54
@@ -162,3 +163,4 @@ ms.lasthandoff: 10/06/2017
 [Power BI 的儀表板](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)  
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+

@@ -18,7 +18,8 @@ caps.latest.revision: 121
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: 6348d05b8dbe6c8ab1a682388b4e69ce438e6a12
 ms.contentlocale: zh-tw
@@ -50,3 +51,4 @@ ms.lasthandoff: 08/09/2017
 [SQL Server 2016 中 SQL Server Reporting Services 已停止的功能](../reporting-services/discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md)  
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+

@@ -13,6 +13,7 @@ ms.topic: article
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
 ms.openlocfilehash: a75ad193204e17e1d053aa4e00adba5f551d684b
@@ -154,3 +155,4 @@ Web 組件支援下列語言：
 之後的報表檢視器 web 組件已部署和 activiated，您可以加入至 SharePoint 網頁的 web 組件。 如需詳細資訊，請參閱[加入報表檢視器 web 組件至 SharePoint 網頁](add-report-viewer-web-part-to-page.md)。
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+

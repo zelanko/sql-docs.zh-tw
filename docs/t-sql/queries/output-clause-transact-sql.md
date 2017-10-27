@@ -101,7 +101,7 @@ ms.lasthandoff: 09/01/2017
   
 -   有 CHECK 條件約束或啟用的規則。  
   
- *column_list*  
+*column_list*  
  這是一份 INTO 子句目標資料表的資料行名稱選用清單。 它相當於資料行清單中允許[插入](../../t-sql/statements/insert-transact-sql.md)陳述式。  
   
  *scalar_expression*  

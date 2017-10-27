@@ -16,7 +16,8 @@ caps.latest.revision: 45
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 4d862dc34dcbb81ce8d50cfac53d81a80f47d29c
 ms.contentlocale: zh-tw
@@ -32,14 +33,14 @@ ms.lasthandoff: 08/09/2017
   
 ### <a name="to-create-a-sample-subscriber-database"></a>若要建立範例訂閱者資料庫  
   
-1.  啟動 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]，然後開啟 [!INCLUDE[ssDEnoversion_md](../includes/ssdenoversion-md.md)]執行個體的連接。  
+1.  啟動 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]，然後開啟 [!INCLUDE[ssDEnoversion_md](../includes/ssdenoversion-md.md)] 執行個體的連接。  
   
-2.  以滑鼠右鍵按一下資料庫，然後選取**新資料庫...**.  
+2.  以滑鼠右鍵按一下 [資料庫]，然後選取 [新增資料庫...]。  
   
-3.  在 [新的資料庫] 對話方塊中**資料庫名稱**，型別*「 訂閱者 」*。 
+3.  在 [新增資料庫] 對話方塊的 [資料庫名稱] 中，輸入*訂閱者*。 
 4. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-5.  按一下**新查詢**工具列上的按鈕。  
+5.  按一下工具列上的 [新增查詢] 按鈕。  
   
 6.  將下列 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式複製到空的查詢中：  
   
@@ -80,3 +81,4 @@ ms.lasthandoff: 08/09/2017
 [建立基本資料表報表](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)  
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+

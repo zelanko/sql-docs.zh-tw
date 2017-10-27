@@ -15,7 +15,8 @@ caps.latest.revision: 8
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a94db96fd785ebaa1ed511f5bf9c6e262d180104
 ms.contentlocale: zh-tw
@@ -29,7 +30,7 @@ ms.lasthandoff: 08/09/2017
   
  如果您不知道報表的 Web 位址，您可以開啟報表伺服器的 Web 位址，然後瀏覽報表伺服器的資料夾階層，以選取您要檢視的報表。 下圖說明瀏覽器視窗中所顯示的資料夾階層。  
   
- ![在瀏覽器中的資料夾](../../reporting-services/report-builder/media/rs-browserfolder.GIF "瀏覽器中的資料夾")  
+ ![瀏覽器中的資料夾](../../reporting-services/report-builder/media/rs-browserfolder.GIF "Folders in a browser")  
 瀏覽器中的資料夾  
   
 > [!NOTE]  
@@ -63,3 +64,4 @@ ms.lasthandoff: 08/09/2017
  如需如何透過 URL 存取報表的詳細資訊，包括如何建構 URL 的資訊，請參閱《SQL Server 線上叢書》中 [Reporting Services 文件集](http://go.microsoft.com/fwlink/?linkid=121312) 的＜URL 存取＞。  
   
   
+

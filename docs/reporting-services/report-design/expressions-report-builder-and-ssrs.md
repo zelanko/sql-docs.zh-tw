@@ -15,7 +15,8 @@ caps.latest.revision: 13
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 05e319f4bf6beac579eb768accbc447645277a65
 ms.contentlocale: zh-tw
@@ -47,11 +48,11 @@ ms.lasthandoff: 08/09/2017
   
  您可以使用運算式來指定許多報表項目屬性的值。 最常見的屬性為文字方塊與預留位置文字的值。 如果文字方塊只包含一個運算式，該運算式通常就是文字方塊屬性的值。 如果文字方塊包含多個運算式，每個運算式都是文字方塊中的預留位置文字值。  
   
- 根據預設，運算式會出現在報表設計介面上做為*簡單*或*複雜運算式*。  
+ 依預設，運算式在報表設計介面上會顯示成「簡單運算式」或「複雜運算式」。  
   
--   **簡單** ：簡單運算式包含內建集合中單一項目的參考，例如資料集欄位、參數或內建欄位。 在設計介面上，簡單運算式會以方括號的形式出現。 例如， `[FieldName]` 相當於基礎運算式 `=Fields!FieldName.Value`。 當您建立報表配置，並將項目從 [報表資料] 窗格拖曳到設計介面時，系統會為您自動建立簡單運算式。 如需代表不同內建集合之符號的詳細資訊，請參閱 [了解簡單運算式中的字首符號](#DisplayText)。  
+-   **簡單**：簡單運算式包含內建集合中單一項目的參考，例如資料集欄位、參數或內建欄位。 在設計介面上，簡單運算式會以方括號的形式出現。 例如， `[FieldName]` 相當於基礎運算式 `=Fields!FieldName.Value`。 當您建立報表配置，並將項目從 [報表資料] 窗格拖曳到設計介面時，系統會為您自動建立簡單運算式。 如需代表不同內建集合之符號的詳細資訊，請參閱 [了解簡單運算式中的字首符號](#DisplayText)。  
   
--   **複雜** ：複雜運算式包含多個內建參考、運算子和函數呼叫的參考。 複雜運算式會顯示為 <\<Expr >> 當運算式值包含多個簡單參考。 若要檢視運算式，請將滑鼠指標停留在該運算式上，然後使用工具提示。 若要編輯運算式，在中開啟它**運算式** 對話方塊。  
+-   **複雜** ：複雜運算式包含多個內建參考、運算子和函數呼叫的參考。 複雜運算式會顯示為 <\<Expr >> 當運算式值包含多個簡單參考。 若要檢視運算式，請將滑鼠指標停留在該運算式上，然後使用工具提示。 若要編輯運算式，在 [運算式] 對話方塊中開啟該運算式。  
   
  下圖同時針對文字方塊和預留位置文字顯示一般的簡單運算式和複雜運算式。  
   
@@ -64,7 +65,7 @@ ms.lasthandoff: 08/09/2017
  如需詳細資訊，請參閱 [格式化文字和預留位置 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)(建立發票和表單的清單)。  
   
 ### <a name="report-model-formulas"></a>報表模型公式  
- 當您在設計使用報表模型當做資料來源的資料集的查詢時，您可以建立*公式*。 公式是針對報表中的值所執行的計算，這些值是以報表模型中的資料為根據。  
+ 當您針對使用報表模型當作資料來源的資料集設計查詢時，您可以建立「公式」。 公式是針對報表中的值所執行的計算，這些值是以報表模型中的資料為根據。  
   
  如需詳細資訊，請參閱[報表模型查詢中的公式 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formulas-in-report-model-queries-report-builder-and-ssrs.md)。  
    
@@ -92,7 +93,7 @@ ms.lasthandoff: 08/09/2017
 |[運算子](../../reporting-services/report-design/operators-in-expressions-report-builder-and-ssrs.md)|描述您可以用來結合運算式中參考的運算子。 例如， **&** 運算子用於串連字串。|`="The report ran at: " & Globals!ExecutionTime & "."`|  
 |[內建集合](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)|描述可以包含在運算式中的內建集合，例如， `Fields`、 `Parameters`和 `Variables`。|`=Fields!Sales.Value`<br /><br /> `=Parameters!Store.Value`<br /><br /> `=Variables!MyCalculation.Value`|  
 |[內建報表和彙總函式](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)|描述可以從運算式存取的內建函數，例如， `Sum` 或 `Previous`。|`=Previous(Sum(Fields!Sales.Value))`|  
-|[報表設計師中運算式的自訂程式碼及組件參考 &#40;SSRS&#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)|描述如何存取內建的 CLR 類別 <xref:System.Math> 和 <xref:System.Convert>、其他的 CLR 類別、 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 執行階段程式庫函數，或來自外部組件的方法。<br /><br /> 描述如何存取內嵌於報表，或在編譯後安裝在報表用戶端和報表伺服器上做為自訂組件的自訂程式碼。|`=Sum(Fields!Sales.Value)`<br /><br /> `=CDate(Fields!SalesDate.Value)`<br /><br /> `=DateAdd("d",3,Fields!BirthDate.Value)`<br /><br /> `=Code.ToUSD(Fields!StandardCost.Value)`|  
+|[報表設計師中運算式的自訂程式碼及組件參考 &#40;SSRS&#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)|描述如何存取內建的 CLR 類別 <xref:System.Math> 和 <xref:System.Convert>、其他的 CLR 類別、[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 執行階段程式庫函數，或來自外部組件的方法。<br /><br /> 描述如何存取內嵌於報表，或在編譯後安裝在報表用戶端和報表伺服器上做為自訂組件的自訂程式碼。|`=Sum(Fields!Sales.Value)`<br /><br /> `=CDate(Fields!SalesDate.Value)`<br /><br /> `=DateAdd("d",3,Fields!BirthDate.Value)`<br /><br /> `=Code.ToUSD(Fields!StandardCost.Value)`|  
    
 ##  <a name="Valid"></a> 驗證運算式  
  為特定的報表項目屬性建立運算式時，包含在運算式中的參考取決於報表項目屬性可以接受的值，以及評估屬性的範圍。 例如：  

@@ -47,7 +47,7 @@ ms.lasthandoff: 08/03/2017
 > [!WARNING]  
 >  catalog.execution_component_phases 檢視會在封裝執行作業的記錄層次設定為 [效能] 或 [詳細資訊] 時，提供這項資訊。 如需詳細資訊，請參閱 [在 SSIS 伺服器上啟用封裝執行的記錄功能](../../integration-services/performance/integration-services-ssis-logging.md#server_logging)。  
   
-```  
+```sql
 use SSISDB  
 select package_name, task_name, subcomponent_name, execution_path,  
     SUM(DATEDIFF(ms,start_time,end_time)) as active_time,  

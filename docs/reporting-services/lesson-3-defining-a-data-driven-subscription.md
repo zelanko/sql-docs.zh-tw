@@ -16,7 +16,8 @@ caps.latest.revision: 50
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 1ae87a509d3d5d1eb55645408b63f8267498efbd
 ms.contentlocale: zh-tw
@@ -34,36 +35,36 @@ ms.lasthandoff: 08/09/2017
   
 1.  在 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 入口網站中，按一下 [首頁]，然後巡覽至包含 **Sales Orders** 報表的資料夾。  
   
-2.  在內容功能表中![ssrs_tutorial_datadriven_reportmenu](../reporting-services/media/ssrs-tutorial-datadriven-reportmenu.png)的報表中，按一下 **管理**，然後按一下**訂閱**的左窗格中。  
+2.  在報表的 ![ssrs_tutorial_datadriven_reportmenu](../reporting-services/media/ssrs-tutorial-datadriven-reportmenu.png) 內容功能表中，按一下 [管理]，然後按一下左窗格中的 [訂閱]。  
   
-3.  按一下**+ 新訂用帳戶**。 如果您沒有看見這個按鈕，表示您沒有「內容管理員」權限。 
+3.  按一下 [+ 新增訂閱]。 如果您沒有看見這個按鈕，表示您沒有「內容管理員」權限。 
   
 ## <a name="define-a-description"></a>定義描述  
 1.  在 [描述] 中，輸入 **銷售訂單傳遞** 。
 ## <a name="type"></a>型別
-1.  按一下**資料驅動訂閱**...  
+1.  按一下 [資料驅動訂閱]。  
 ## <a name="schedule"></a>排程
-1. 在 [排程] 區段中按一下**報表特定排程**。
-2. 按一下**編輯排程**。
+1. 在 [排程] 區段中按一下 [報表特定排程]。
+2. 按一下 [編輯排程]。
 3.  在 **[排程詳細資料]**中，按一下 **[一次]**。  
 4.  請指定現在以後的幾分鐘做為開始時間。  
 5.  按一下 **[套用]**。
 ## <a name="destination"></a>目的地  
-1.  在 目的地 區段中，選取  **Windows 檔案共用**傳遞方法。  
+1.  在 [目的地] 區段中，選取 [Windows 檔案共用] 傳遞方法。  
 
 ## <a name="dataset"></a>資料集
-1. 按一下**編輯資料集**。
+1. 按一下 [編輯資料集]。
 2. 選取 **[自訂資料來源]**。
-3. 選取**Microsoft SQL Server**做為資料來源**連接**型別。
-4. 在 [連接字串] 中，輸入下列連接字串。 *訂閱者*是您在第 1 課建立的資料庫。 
+3. 選取 [Microsoft SQL Server] 作為資料來源 [連接] 類型。
+4. 在 [連接字串] 中，輸入下列連接字串。 訂閱者是您在第 1 課所建立的資料庫。 
   
     ```  
     data source=localhost; initial catalog=Subscribers
     ```
     
  ## <a name="credentials"></a>認證
- 1. 選取**使用下列認證**。
- 2. 選取**Windows 使用者名稱和密碼**。
+ 1. 選取 [使用以下認證]。
+ 2. 選取 [Windows 使用者名稱與密碼]。
  3.  在 **[使用者名稱]** 和 **[密碼]**中，輸入網域使用者名稱和密碼。 指定 **[使用者名稱]**時，請同時包括網域和使用者帳戶。
      > [!NOTE]  
     > 用於連接至訂閱者資料來源的認證不會傳回給 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]。 如果您稍後修改了訂閱，就必須重新輸入用於連接到資料來源的密碼。
@@ -76,7 +77,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  將逾時指定為 30 秒。  
   
-3.  按一下**驗證查詢**，然後按一下 **套用**。
+3.  按一下 [驗證查詢]，然後按一下 [下一步]。
 ## <a name="delivery-options"></a>傳遞選項
 填入下列值：
 
@@ -91,8 +92,8 @@ ms.lasthandoff: 08/09/2017
 **[密碼]** | 輸入值 | 輸入密碼
 
 ## <a name="report-parameters"></a>報表參數
- 1. 在**OrderNumber**欄位中，選取**取得值，從資料集**。 在 [值] 中，選取 **[Order]**。 
- 2. 按一下**建立訂用帳戶**。
+ 1. 在 [OrderNumber] 欄位中，選取 [從資料集取得值]。 在 [值] 中，選取 **[Order]**。 
+ 2. 按一下 [建立訂閱]。
    
 ## <a name="next-steps"></a>後續步驟  
 當訂閱執行時，會將四個報表檔傳遞至您指定的檔案共用，「訂閱者」  資料來源中的每筆訂單各一個。 在資料 (資料應該隨著訂單而不同)、轉譯格式及檔案格式等方面，每項傳遞都應該是唯一的。 您可以開啟共用資料夾中的每一份報表，確認每個版本都是根據您定義的訂閱選項來自訂的。  
