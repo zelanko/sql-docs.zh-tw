@@ -135,7 +135,7 @@ GETUTCDATE()             01:25:01.6930000
   
 ## <a name="see-also"></a>另請參閱  
  [CAST 和 CONVERT &#40;TRANSACT-SQL &#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
- [TIME ZONE &AMP; #40;TRANSACT-SQL &#41;](../../t-sql/queries/at-time-zone-transact-sql.md)  
+ [TIME ZONE &AMP;#40;TRANSACT-SQL &#41;](../../t-sql/queries/at-time-zone-transact-sql.md)  
   
   
 
