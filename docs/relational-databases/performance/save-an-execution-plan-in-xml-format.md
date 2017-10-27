@@ -89,7 +89,7 @@ ms.lasthandoff: 08/22/2017
   
 ### <a name="to-open-a-saved-xml-query-plan-in-sql-server-management-studio"></a>若要在 SQL Server Management Studio 中開啟已儲存的 XML 查詢計畫  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的 [檔案] 功能表上，選擇 [開啟]，然後按一下 [檔案]。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的 **「檔案」** 功能表上，選擇 **「開啟」**，然後按一下 **「檔案」**。  
   
 2.  在 [開啟檔案] 對話方塊中，將 [檔案類型] 設為 [執行計畫檔案 (\*.sqlplan)]，以產生已儲存之 XML 查詢計劃檔案的篩選清單。  
   

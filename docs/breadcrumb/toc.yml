@@ -45,6 +45,9 @@
                 - name: ADO RDS API (即將淘汰)
                   href: /sql/ado/reference/rds-api/
                   homepage: /sql/ado/reference/rds-api/rds-api-reference
+        - name: 分析平台系統
+          href: /sql/analytics-platform-system/
+          homepage: /sql/analytics-platform-system/index
         - name: 將您的用戶端連線到 SQL
           href: /sql/connect/
           homepage: /sql/connect/sql-server-drivers
