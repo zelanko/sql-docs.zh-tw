@@ -1,5 +1,5 @@
 ---
-title: "教學課程：將文字格式化 (報表產生器) | Microsoft Docs"
+title: "教學課程： 格式化文字 （報表產生器） |Microsoft 文件"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -16,7 +16,8 @@ caps.latest.revision: 16
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: cfbe1001a049466af839363db29156df6b972556
 ms.contentlocale: zh-tw
@@ -47,7 +48,7 @@ ms.lasthandoff: 08/09/2017
   
     [新報表或資料集] 對話方塊隨即開啟。  
   
-    如果您看不到 [新增報表或資料集] 對話方塊，請按一下 [檔案] 功能表 > [新增]。  
+    如果您看不到 [新報表或資料集] 對話方塊，請按一下 [檔案] 功能表 > [新增]。  
  
 2.  在 **[使用者入門]** 對話方塊的左窗格中，確認已選取 **[新增報表]** 。  
   
@@ -57,16 +58,16 @@ ms.lasthandoff: 08/09/2017
   
 1.  在 [報表資料] 窗格中，按一下 [新增] > [資料來源]。  
 
-    如果看不到 [報表資料] 窗格，請檢查 [檢視] 索引標籤上的 [報表資料]。
+    如果您看不到 [報表資料] 窗格，請核取 [檢視] 索引標籤上的 [報表資料]。
   
-2.  在 [名稱] 方塊中，鍵入：**TextDataSource**  
+2.  在 [名稱] 方塊中，輸入：**TextDataSource**  
   
 3.  按一下 **[使用內嵌於報表中的連接]**。  
   
-4.  驗證連線類型為 Microsoft SQL Server，然後在 [連接字串] 方塊中鍵入：`Data Source = <servername>`  
+4.  確認連接類型為 Microsoft SQL Server，然後在**連接字串**方塊中，輸入：`Data Source = <servername>`  
   
     > [!NOTE]  
-    > `<servername>`運算式 (例如 Report001) 會指定已安裝 SQL Server Database Engine 執行個體的電腦名稱。 本教學課程無須任何特定資料，只需要 SQL Server 資料庫的連線。 如果您已有資料來源連接列於 [資料來源連接] 底下，就可以選取該連接並移至下一個程序「建立資料集」。 如需詳細資訊，請參閱[取得資料連線的替代方式 &#40;報表產生器&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)。  
+    > `<servername>`運算式 (例如 Report001) 會指定已安裝 SQL Server Database Engine 執行個體的電腦名稱。 本教學課程無須任何特定資料。您只需要 SQL Server 資料庫的連接。 如果您已有資料來源連接列於 [資料來源連接] 底下，就可以選取該連接並移至下一個程序「建立資料集」。 如需詳細資訊，請參閱[取得資料連接的替代方式 &#40;報表產生器&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)。  
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -76,7 +77,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  確認資料來源為 **TextDataSource**。  
   
-3.  在 [名稱] 方塊中，鍵入：**TextDataset**。  
+3.  在 [名稱] 方塊中，輸入：**TextDataset**。  
   
 4.  確認已選取 **[文字]** 查詢類型，然後按一下 **[查詢設計工具]**。  
   
@@ -120,7 +121,7 @@ ms.lasthandoff: 08/09/2017
     UNION SELECT CAST('2015-01-06' AS date) as SalesDate, 'Fernando Ross' as FullName,'South' as Territory, 'Digital' as Subcategory, 'Slim Digital' as Product, CAST(6648.25 AS money) AS Sales, 35 as Quantity, 'What is New in Reporting Services (SSRS)' as Link, 'http://go.microsoft.com/fwlink/?LinkId=165064' AS URL  
     ```  
   
-7.  按一下 [執行]\(**!**) 來執行查詢。  
+7.  按一下 [執行] (**!**) 來執行查詢。  
   
     查詢結果會成為可供報表顯示的資料。  
   
@@ -133,9 +134,9 @@ ms.lasthandoff: 08/09/2017
   
 ### <a name="to-add-a-field-to-the-report-and-get-the-wrong-result"></a>將欄位加入至報表 (會得到錯誤的結果)  
   
-1.  將 [FullName] 欄位從 [報表資料] 窗格拖曳到設計介面。  
+1.  從 [報表資料] 窗格，將 [FullName] 欄位拖曳到設計介面。  
   
-    報表產生器會建立一個內有運算式 (以 `<Expr>`表示) 的文字方塊。  
+    報表產生器會建立一個內有運算式 (以 `<Expr>` 表示) 的文字方塊。  
   
 2.  按一下 **[執行]**。  
   
@@ -143,9 +144,9 @@ ms.lasthandoff: 08/09/2017
   
 3.  按一下 **[設計]** 返回 [設計] 檢視。  
   
-4.  選取文字方塊中的運算式 `<Expr>` 。  
+4.  選取文字方塊中的運算式 `<Expr>`。  
   
-5.  在 [屬性] 窗格中，您會看到 [值] 屬性如下 (若未看見 [屬性] 窗格，請檢查 [檢視] 索引標籤上的 [屬性])：  
+5.  在 [屬性] 窗格中，您會看到 [Value] 屬性如下 (若未看見 [屬性] 窗格，請核取 [檢視] 索引標籤上的 [屬性])：  
   
     ```  
     =First(Fields!FullName.Value, "TextDataSet")  
@@ -159,9 +160,9 @@ ms.lasthandoff: 08/09/2017
   
 ### <a name="to-add-a-field-to-the-report-and-get-the-right-result"></a>將欄位加入至報表 (會得到正確的結果)  
   
-1.  在功能區的 [插入] 索引標籤上，按一下 [資料區] 區域內的 [清單]。 按一下設計介面，然後進行拖曳以建立寬約 2 英吋且高約 1 英吋的方塊。  
+1.  在功能區的 [插入] 索引標籤上，按一下 [資料區域] 區域內的 [清單]。 按一下設計介面，然後進行拖曳以建立寬約 2 英吋且高約 1 英吋的方塊。  
   
-2.  將 [FullName] 欄位從 [報表資料] 窗格拖曳到清單方塊中。  
+2.  從 [報表資料] 窗格，將 [FullName] 欄位拖曳到清單方塊中。  
   
     這回報表產生器會建立一個內有運算式 `[FullName]` 的文字方塊。  
   
@@ -173,7 +174,7 @@ ms.lasthandoff: 08/09/2017
   
 5.  選取文字方塊中的運算式。  
   
-6.  在 [屬性] 窗格中，您會看到 [值] 屬性如下：  
+6.  在 [屬性] 窗格中，您會看到 [Value] 屬性如下：  
   
     ```  
     =Fields!FullName.Value  
@@ -194,13 +195,13 @@ ms.lasthandoff: 08/09/2017
 
     ![report-builder-text-arrange-fields](../reporting-services/media/report-builder-text-arrange-fields.png)
   
-4.  在 [選擇配置] 頁面上，清除 [展開/摺疊群組] 核取方塊以便看見整個資料表，然後按一下 [下一步]。 
+4.  在 [選擇配置] 頁面上，取消選取 [展開或摺疊群組] 核取方塊以便可看見整個資料表，然後按一下 [下一步]。 
   
 5.  按一下 **[完成]**。  
   
 6.  按一下 **[執行]**。  
   
-    資料表看起來似乎沒問題，不過卻有兩個總計資料列。 [LinkText] 資料行不需要 [Total] 資料列。  
+    資料表看起來似乎沒問題，不過卻有兩個總計資料列。 [LinkText] 資料行不需要 [總計] 資料列。  
     
     ![report-builder-format-2-totals](../reporting-services/media/report-builder-format-2-totals.png)
   
@@ -231,7 +232,7 @@ ms.lasthandoff: 08/09/2017
   
 6.  請注意，文字看起來並無任何改變。 您需要進行調整使其彷彿連結文字。  
   
-7.  選取 [ `[LinkText]`]。  
+7.  選取 [`[LinkText]`]。  
   
 8.  在 [主資料夾] 索引標籤 > [字型] 上，選取 [底線]，並將 [色彩] 變更為 [藍色]。  
   
@@ -254,16 +255,16 @@ ms.lasthandoff: 08/09/2017
   
 4.  如果 [屬性] 窗格並未開啟，請選取 [檢視] 索引標籤上的 [屬性] 核取方塊。  
   
-5.  在 [屬性] 窗格中，尋找 WritingMode 屬性，並將其從 **Default** 變更為 **Rotate270**。  
+5.  在 [屬性] 窗格中，找出 WritingMode 屬性，並將它從 [預設] 變更為 [Rotate270]。  
  
     > [!NOTE]  
-    > 當 [屬性] 窗格中的屬性組織成類別目錄時，WritingMode 會位於 [當地語系化] 類別目錄中。 請確定您已選取資料格，而不是文字。 WritingMode 是文字方塊的屬性，並非文字的屬性。  
+    > 當 [屬性] 窗格中的屬性組織成一些類別目錄時，WritingMode 位於 [當地語系化] 類別目錄中。 請確定您已選取資料格，而不是文字。 WritingMode 是文字方塊的屬性，並非文字的屬性。  
 
     ![report-builder-select-territory-cell](../reporting-services/media/report-builder-select-territory-cell.png)
    
-6.  在 [主資料夾] 索引標籤 > [段落] 區段上，選取 [中間] 和 [置中]，將文字定位在儲存格的垂直及水平中心。  
+6.  在 [主資料夾] 索引標籤 > [段落] 區段上，選取 [中間] 和 [中心]，將文字水平且垂直地定位於資料格中央。  
   
-8.  按一下 [執行]\(**!**)。  
+8.  按一下 [執行] (**!**)。  
   
 如今 `[Territory]` 資料格中的文字已呈垂直方向，從資料格底部往上書寫。  
 
@@ -273,17 +274,17 @@ ms.lasthandoff: 08/09/2017
   
 1.  按一下 **[設計]** ，切換到 [設計] 檢視。  
   
-2.  按一下含有 `[Sum(Sales)]`的最上方資料表資料格，然後按住 SHIFT 鍵，再按一下含有 `[Sum(Sales)]`的底部資料表資料格。  
+2.  按一下含有 `[Sum(Sales)]` 的最上方資料表資料格，然後按住 SHIFT 鍵，再按一下含有 `[Sum(Sales)]` 的底部資料表資料格。  
   
-3.  在 [主資料夾] 索引標籤 > [數字] 群組 > [貨幣] 按鈕。  
+3.  在 [主資料夾] 索引標籤 > [數值] 群組 > [貨幣] 按鈕。  
   
-4.  (選擇性)     如果您的地區設定為 [英文 (美國)]，則預設範例文字會是 [**$12,345.00**]。 如果您看不到範例貨幣值，請按一下 [數字] 群組中的 [預留位置樣式] > [範例值]。  
+4.  (選擇性)     如果您的地區設定為 [英文 (美國)]，則預設範例文字會是 [**$12,345.00**]。 如果您看不到範例貨幣值，請按一下 [數值] 群組中的 [預留位置樣式] > [範例值]。  
 
     ![report-builder-placeholder-value-button](../reporting-services/media/report-builder-placeholder-value-button.png)
   
-5.  (選擇性) 在 [主資料夾] 索引標籤的 [數字] 群組中，按一下[減少小數位數] 按鈕兩次，顯示沒有分的貨幣數字。  
+5.  (選擇性) 在 [主資料夾] 索引標籤的 [數字] 群組中，按兩次 [減少小數位數] 按鈕以顯示沒有分的貨幣數字。  
   
-6.  按一下 [執行]\(**!**) 預覽報表。  
+6.  按一下 [執行] (**!**) 預覽報表。  
   
 報表如今已顯示格式化的資料，更容易閱讀。  
 
@@ -293,7 +294,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  按一下 **[設計]** ，切換到 [設計] 檢視。  
   
-2.  在 [插入] 索引標籤上，按一下 [文字方塊]，然後在設計介面上按一下並拖曳，以在資料表底下建立大約 4 英吋寬、3 英吋高的文字方塊。  
+2.  在 [插入] 索引標籤上，按一下 [文字方塊]，然後按一下設計介面並進行拖曳，以在資料表底下建立大約寬 4 英吋且高 3 英吋的文字方塊。  
   
 3.  複製以下文字並將其貼入文字方塊中：  
   
@@ -325,7 +326,7 @@ ms.lasthandoff: 08/09/2017
   
 7.  按一下 **[確定]**。  
   
-8.  按一下 [執行]\(**!**) 預覽報表。  
+8.  按一下 [執行] (**!**) 預覽報表。  
   
 文字方塊中的文字會顯示成標頭、段落和項目符號清單。  
   
@@ -364,10 +365,11 @@ ms.lasthandoff: 08/09/2017
 
 ## <a name="next-steps"></a>後續步驟
 
-在報表產生器中，格式化文字的方法有好幾種。 [教學課程：建立自由格式報表](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md)包含更多範例。  
+在報表產生器中，格式化文字的方法有好幾種。 [教學課程： 建立自由格式報表](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md)包含更多的範例。  
 
-[報表產生器教學課程](../reporting-services/report-builder-tutorials.md) 
-[將報表項目格式化](../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  
+[報表產生器教學課程](../reporting-services/report-builder-tutorials.md)  
+[格式化報表項目](../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  
 [SQL Server 2016 的報表產生器](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+

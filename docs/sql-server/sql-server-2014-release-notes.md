@@ -13,6 +13,7 @@ caps.latest.revision: 100
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: cd1366409f9fb0af271b26fad3b8b911f99acc06
 ms.openlocfilehash: d6d229c14056f9157bd219ba6cbb7590eb14a7b7
@@ -429,3 +430,4 @@ Culture=neutral, PublicKeyToken=89845dcd8080cc91
 ![搭配 [回到頁首] 連結使用的箭號圖示](../sql-server/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示")[頂端](#top)  
   
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
+

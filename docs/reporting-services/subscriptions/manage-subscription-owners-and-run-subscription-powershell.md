@@ -15,7 +15,8 @@ caps.latest.revision: 21
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 103cb28ac4917370c8f116b8de46a27f159261cc
 ms.contentlocale: zh-tw
@@ -82,7 +83,7 @@ ms.lasthandoff: 08/09/2017
   
 -   觸發事件：ManageWeb  
   
- 如需詳細資訊，請參閱 [將 Reporting Services 中的角色和工作與 SharePoint 群組和權限做比較](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)。  
+ 如需詳細資訊，請參閱 [Compare Roles and Tasks in Reporting Services to SharePoint Groups and Permissions](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)。  
   
 ### <a name="script-usage"></a>指令碼使用方式  
  **建立指令碼檔案 (.ps1)**  
@@ -397,3 +398,4 @@ $subscriptions | select Status, Path, report, Description, Owner, SubscriptionID
 [ReportingService2010.FireEvent](http://msdn.microsoft.com/library/reportservice2010.reportingservice2010.fireevent.aspx)
   
   
+

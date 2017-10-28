@@ -17,6 +17,7 @@ caps.latest.revision: 21
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: e3c781449a8f7a1b236508cd21b8c00ff175774f
 ms.openlocfilehash: 30529df439a1910573b2e4b8f9e1a5f21075c4d7
@@ -182,3 +183,4 @@ SSMA for MySQL 的 2016 年版本包含下列變更:。
 -   已新增的支援同時移轉內部部署 SQL Server 和 Azure SQL。  
   
 -   **功能的快照集：**結構描述和資料移轉的 MySQL 資料表/索引/條件約束。
+

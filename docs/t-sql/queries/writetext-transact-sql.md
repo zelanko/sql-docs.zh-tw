@@ -1,7 +1,7 @@
 ---
 title: "WRITETEXT (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
-ms.date: 03/16/2017
+ms.date: 10/23/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -36,7 +36,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="writetext-transact-sql"></a>WRITETEXT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   允許進行最低限度記錄的互動式更新現有**文字**， **ntext**，或**映像**資料行。 WRITETEXT 會覆寫它所影響之資料行中的任何現有資料。 上不能使用 WRITETEXT**文字**， **ntext**，和**映像**檢視中的資料行。  
   

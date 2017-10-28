@@ -17,6 +17,7 @@ caps.latest.revision: 18
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
 ms.openlocfilehash: 0626dc829e6ae2cd4212dc05deb406740592dc40
@@ -149,3 +150,4 @@ PowerBI ReportServer 應該啟用匯出從 power Bi 視覺效果的資料。 有
 [啟用與停用我的報表](../../reporting-services/report-server/enable-and-disable-my-reports.md)  
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+

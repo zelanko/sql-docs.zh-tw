@@ -19,7 +19,8 @@ caps.latest.revision: 35
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 659be9982440426eee0d8b5a2df8d54b4d32bbc4
 ms.contentlocale: zh-tw
@@ -56,13 +57,13 @@ ms.lasthandoff: 08/09/2017
  輸入回報為錯誤之建立問題的嚴重性。 嚴重性層級小於或等於 **ErrorLevel** 值的問題會回報為錯誤；否則，會將這些問題回報為警告。 任何錯誤都會導致建立工作失敗。 有效的嚴重性層級為 0 到 4 (包含)。 預設值為 2。  
   
  **StartItem**  
- 選取當專案發行到報表伺服器之後，要顯示在網頁瀏覽器中的報表；或當專案在本機執行時，要顯示在預覽視窗中的報表。 啟動項目是必要的組態建置，但是不會部署專案，以及使用**偵錯**命令 (**F5**)。 部署專案的組態需要它。  
+ 選取當專案發行到報表伺服器之後，要顯示在網頁瀏覽器中的報表；或當專案在本機執行時，要顯示在預覽視窗中的報表。 建置但不部署專案的組態及 [偵錯] 命令 (**F5**) 的使用都需要開始項目。 部署專案的組態需要它。  
   
  **OverwriteDataSources**  
  選取 **True** ，即可在發行報表時，以專案中的資料來源覆寫伺服器上的資料來源。 選取 **False** ，即可保留伺服器上現有的資料來源。  
   
  **TargetServerVersion**  
- 選取 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，或選取 [偵測版本] 自動判斷安裝在 **TargetServer URL** 屬性所識別之伺服器上的版本。 預設值是 **SQL Server 2016**。  
+ 選取 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，或選取 [偵測版本] 自動判斷安裝在 **TargetServer URL** 屬性所識別之伺服器上的版本。 預設值是**SQL Server 2016**。  
   
  **TargetDataSourceFolder**  
  用來儲存已發行共用資料來源的資料夾名稱。 如果您未指定資料夾，資料來源就會發行到與報表相同的資料夾。 如果報表伺服器上沒有此資料夾，報表設計師會在發行報表時建立資料夾。  
@@ -92,7 +93,8 @@ ms.lasthandoff: 08/09/2017
 
 [發行報表](http://msdn.microsoft.com/library/ef5a514e-e818-4041-a8b0-15835f9a046b)   
 [將報表發行到 SharePoint 文件庫](../../reporting-services/reports/publish-a-report-to-a-sharepoint-library.md)   
-[設定部署屬性 &#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md)   
+[將設定部署屬性 &#40;Reporting Services &#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md)   
 [報表設計師 F1 說明](../../reporting-services/tools/report-designer-f1-help.md)  
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+

@@ -17,6 +17,7 @@ caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 759a7084024e1c608431683de6dae5a6fb40304e
 ms.openlocfilehash: aafb1156f2036e09fa4f610380a5a1d24a5dbdad
@@ -119,3 +120,4 @@ SSMA 會包含下列功能表：
 ## <a name="see-also"></a>另請參閱  
 [SAP ASE 將資料庫移轉至 SQL Server-Azure SQL Database &#40;SybaseToSQL &#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
 [使用者介面參考 &#40;SybaseToSQL &#41;](../../ssma/sybase/user-interface-reference-sybasetosql.md)  
+

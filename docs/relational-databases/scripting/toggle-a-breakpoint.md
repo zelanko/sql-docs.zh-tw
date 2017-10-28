@@ -14,6 +14,7 @@ caps.latest.revision: 5
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 71cb1e98dc668e9d9b47eb2edc71045666b18c7f
@@ -43,3 +44,4 @@ ms.lasthandoff: 06/22/2017
     -   在 [偵錯] 功能表上，按一下 [切換中斷點]。  
   
   
+

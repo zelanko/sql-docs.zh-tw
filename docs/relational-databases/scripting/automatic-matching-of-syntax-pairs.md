@@ -17,6 +17,7 @@ caps.latest.revision: 14
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a86f4ede8645a7346234ab1bbfd3a45e3d01393a
@@ -76,3 +77,4 @@ ms.lasthandoff: 06/22/2017
  多維度運算式 (MDX) 和資料採礦運算式 (DMX) 編輯器會自動比對函數中的括號組。  
   
   
+

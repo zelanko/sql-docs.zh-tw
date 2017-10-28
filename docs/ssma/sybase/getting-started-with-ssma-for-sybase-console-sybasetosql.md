@@ -21,6 +21,7 @@ caps.latest.revision: 22
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 759a7084024e1c608431683de6dae5a6fb40304e
 ms.openlocfilehash: bf54eb7974cfdf42314959a4f8907750863af079
@@ -75,3 +76,4 @@ Windows 系統上已成功啟動主控台之後，您可以在 bob_ws 上工作�
   
 ## <a name="see-also"></a>另請參閱  
 [針對 SAP ASE &#40; 安裝 SSMASybaseToSQL &#41;](../../ssma/sybase/installing-ssma-for-sybase-sybasetosql.md)  
+

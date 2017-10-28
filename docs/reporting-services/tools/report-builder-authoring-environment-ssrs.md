@@ -15,7 +15,8 @@ caps.latest.revision: 13
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 03a8fc7800821a235076b5652506c2247db1226f
 ms.contentlocale: zh-tw
@@ -57,3 +58,4 @@ ms.lasthandoff: 08/09/2017
  [設計使用報表設計師報表 &#40;SSRS &#41;](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md)  
   
   
+

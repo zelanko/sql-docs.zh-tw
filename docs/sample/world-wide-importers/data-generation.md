@@ -15,6 +15,7 @@ author: BarbKess
 ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: c17ad40220d46ab6e19054818ce2abfdce7251f4
@@ -84,3 +85,4 @@ WideWorldImportersDW 能夠以任意增加資料大小，為了測試，例如�
 大約所需的資料列數目會插入到`Fact.Sale`2012 年中的資料表。 程序以人為方式限制為 50000 每天的資料列數目。 這可能會變更，但要避免 accidential overinflations 的資料表已存在。
 
 此外，此程序適用於叢集資料行存放區索引，如果它已不套用。
+

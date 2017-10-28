@@ -17,6 +17,7 @@ caps.latest.revision: 37
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: e3c781449a8f7a1b236508cd21b8c00ff175774f
 ms.openlocfilehash: 7595c51bf8cc0ec07a464a65c992c2f3a56b15c2
@@ -177,3 +178,4 @@ SSMA for Access 的 2006 年 11 月版本包含下列變更：
   
 ## <a name="july-2006"></a>2006 年 7 月  
 2006 年 7 月版的 SSMA for Access 是最早的版本。
+

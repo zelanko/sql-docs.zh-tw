@@ -9,6 +9,7 @@ ms.topic: article
 ms.prod: sql-server-2016
 ms.technology: database-engine
 ms.assetid: 
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: dd279b20fdf0f42d4b44843244aeaf6f19f04718
 ms.openlocfilehash: de638f50e6c11633859e7cdc3c6ddb208fe64f00
@@ -165,3 +166,4 @@ SSMS 不會收集自己的損毀傾印。 與 SSMS 相關的任何損毀傾印�
 您可以將服務設定為不傳送使用量資料，如＜在伺服器上設定登錄子機碼＞一節中所述。 不過，這麼做並不會移除該服務帳戶。 
  
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
+

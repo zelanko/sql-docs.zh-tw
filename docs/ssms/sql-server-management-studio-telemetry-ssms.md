@@ -14,6 +14,7 @@ caps.latest.revision: 72
 author: stevestein
 ms.author: sstein
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 49a53643e94d64fc47932bc2ee8dc3200967ae23
@@ -41,3 +42,4 @@ SQL Server Management Studio (SSMS) 包含使用已連線到網際網路的功�
 ## <a name="see-also"></a>另請參閱
 
 [SQL Server 使用意見收集的本機稽核](http://msdn.microsoft.com/library/mt743085.aspx)
+

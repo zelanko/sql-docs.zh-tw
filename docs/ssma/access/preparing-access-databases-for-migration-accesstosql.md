@@ -28,6 +28,7 @@ caps.latest.revision: 20
 author: Shamikg
 ms.author: Shamikg
 manager: murato
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: e4a6157cb56c6db911406585f841046a431eef99
 ms.openlocfilehash: 0d94578759156dcde898a23267fb91922fc98b03
@@ -85,3 +86,4 @@ Access 資料庫中，備份上**工具**功能表上，指向**資料庫公用�
 ## <a name="see-also"></a>另請參閱  
 [將 Access 資料庫移轉至 SQL Server](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
 [連結到 SQL Server 存取應用程式](http://msdn.microsoft.com/82374ad2-7737-4164-a489-13261ba393d4)
+

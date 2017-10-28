@@ -15,7 +15,8 @@ caps.latest.revision: 5
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7646ed9709e6d293b3e72a0255efc2f3bc17eebf
 ms.contentlocale: zh-tw
@@ -45,7 +46,7 @@ PageNumber 和 TotalPages 只在頁首和頁尾有效。
   
 內建欄位 [&PageNumber] 和 [&TotalPages] 只在頁首和頁尾有效。   
   
-若要將 [&PageNumber] 或 [&TotalPages] 加入至報表，您必須先新增頁首或頁尾。 如需相關資訊，請參閱 [新增或移除頁面標頭](../../reporting-services/report-design/add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md)。  
+若要將 [&PageNumber] 或 [&TotalPages] 加入至報表，您必須先新增頁首或頁尾。 如需相關資訊，請參閱[新增或移除頁面標頭](../../reporting-services/report-design/add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md)。  
   
 > [!NOTE]  
 > 在頁首或頁尾中包含 [&TotalPages]，會對報表處理產生一些影響。 如需詳細資訊，請參閱「報表疑難排解：將報表匯出為特定檔案格式」。  

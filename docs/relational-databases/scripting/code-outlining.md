@@ -17,6 +17,7 @@ caps.latest.revision: 14
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 65a303f3cc995daacc29260c6a7ab176414f773f
@@ -88,3 +89,4 @@ GO
  您可以按一下 `SELECT *` 行的減號，以便單獨摺疊該 `SELECT` 陳述式。 若要摺疊整個 `BEGIN - END` 區塊，請按一下 `BEGIN` 行的減號。 若要摺疊整個批次至 `GO` 命令，請按一下 `CREATE PROCEDURE` 行的減號。 您無法個別摺疊 `SELECT GETDATE()` 或 `SELECT @@VERSION` 行，因為它們是單行陳述式而且沒有取得大綱區域。  
   
   
+

@@ -14,6 +14,7 @@ caps.latest.revision: 6
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 2df9024353df34fc5b7860bae2eaa5b633c06b9f
@@ -47,3 +48,4 @@ ms.lasthandoff: 06/22/2017
 |編輯器選項對話方塊的 F1 說明頁面之位置。|[查詢選項頁面 F1 說明](http://msdn.microsoft.com/library/fad98caa-8a29-4b88-8464-f60a5c4fc00e)|  
   
   
+

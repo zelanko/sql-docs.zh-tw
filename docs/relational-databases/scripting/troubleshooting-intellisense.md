@@ -19,6 +19,7 @@ caps.latest.revision: 41
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: d5926bbe8569ed88f2697d17cd754cf0fd081f05
@@ -74,3 +75,4 @@ ms.lasthandoff: 06/22/2017
 -   如果您喪失與 [!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體的連接，完成清單可能會停止運作。 請重新連接到該執行個體。  
   
   
+

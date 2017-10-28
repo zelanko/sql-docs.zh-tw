@@ -19,6 +19,7 @@ caps.latest.revision: 33
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: bffe545296432d465fd744092519c9882ccc04c1
@@ -73,3 +74,4 @@ ms.lasthandoff: 06/22/2017
 -   選取 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資源，開啟 **[屬性]** 對話方塊，並使用 **[相依性]** 索引標籤，將磁碟加入至 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的相依性集合。  
   
   
+

@@ -14,6 +14,7 @@ caps.latest.revision: 9
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e3f94b815f18075eb769d4537e8af354aa11a297
@@ -86,3 +87,4 @@ ms.lasthandoff: 06/22/2017
 -   按兩下範本，即可開啟含有範本文字的 [Database Engine 查詢] 視窗。 例如，若要開啟 CREATE DATABASE 範本，請開啟 [SQL Server 範本] 資料夾、開啟 [資料庫] 資料夾，然後按兩下 [建立資料庫]。  
   
   
+
