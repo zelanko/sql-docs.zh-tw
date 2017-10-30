@@ -111,7 +111,7 @@ ms.lasthandoff: 10/06/2017
  
  ### <a name="install-reporting-services"></a>安裝 Reporting Services
   
-1.  執行 [SQL Server 安裝精靈] (Setup.exe)。  
+1.  執行 [SQL Server 安裝精靈] \(Setup.exe)。  
   
 2.  選取**安裝**的精靈，然後選取左半部**新的 SQL Server 獨立安裝或將功能加入現有安裝**。  
 
