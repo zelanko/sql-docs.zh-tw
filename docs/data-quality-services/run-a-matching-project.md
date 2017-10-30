@@ -65,7 +65,7 @@ ms.lasthandoff: 09/09/2017
 3.  在 **[對應]**底下，針對 **[來源資料行]**選取資料來源中的欄位，然後選取對應的定義域。 針對您在比對程序中使用的所有定義域重複以上步驟。 比對原則中定義的每一個定義域都必須對應到適當的來源資料行。 [對應] 頁面會顯示您已經在比對原則中定義的定義域以及右方窗格中比對原則內的規則。  
   
     > [!NOTE]  
-    >  只有當 DQS 支援來源資料類型，而且該類型符合 DQS 定義域資料類型時，您才能將來源資料對應至 DQS 定義域。 如需有關 DQS 支援之資料類型的詳細資訊，請參閱＜ [Supported SQL Server and SSIS Data Types for DQS Domains](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md)＞。  
+    >  只有當 DQS 支援來源資料類型，而且該類型符合 DQS 定義域資料類型時，您才能將來源資料對應至 DQS 定義域。 如需有關 DQS 支援之資料類型的詳細資訊，請參閱＜ [DQS 定義域支援的 SQL Server 和 SSIS 資料類型](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md)＞。  
   
 4.  按一下 **[加號 (+)]** 控制項，將資料列加入至對應資料表，或按一下 **[減號 (–)]** 控制項，移除資料列。  
   
