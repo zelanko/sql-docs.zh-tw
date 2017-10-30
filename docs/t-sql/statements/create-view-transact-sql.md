@@ -94,7 +94,7 @@ AS <select_statement>
   
 ## <a name="arguments"></a>引數
 或 ALTER  
- **適用於**:[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](開頭為[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP1)。   
+ **適用於**:[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開頭為[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP1)。   
   
  只有當它已經存在，有條件地更改檢視。 
  

@@ -482,7 +482,7 @@ CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
   
 -   如果基礎資料表包含 LOB 資料類型的叢集的索引：**映像**， **ntext**，**文字**，以及空間類型。  
   
--   **varchar （max)**和**varbinary （max)**資料行不能是索引的一部分。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](開頭為[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) 然後在[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]，當資料表包含**varchar （max)**或**varbinary （max)**可以有資料行，包含其他資料行的叢集索引建立或重新使用**線上**選項。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]不允許**線上**選項時，基底資料表包含**varchar （max)**或**varbinary （max)**資料行。  
+-   **varchar （max)**和**varbinary （max)**資料行不能是索引的一部分。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開頭為[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ) 然後在[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]，當資料表包含**varchar （max)**或**varbinary （max)**可以有資料行，包含其他資料行的叢集索引建立或重新使用**線上**選項。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]不允許**線上**選項時，基底資料表包含**varchar （max)**或**varbinary （max)**資料行。  
   
  如需詳細資訊，請參閱 [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md)。  
   
