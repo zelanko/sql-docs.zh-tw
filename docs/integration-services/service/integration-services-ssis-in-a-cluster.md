@@ -14,6 +14,7 @@ caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: e05af2e5e01c9a0d7970a03af1c5fc0e121ded0f
@@ -135,3 +136,4 @@ ms.lasthandoff: 09/26/2017
 -   請在 [叢集管理員] 中，選取 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務並按一下滑鼠右鍵，然後從快顯功能表中選取 [上線]。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務現在已連線成叢集資源。  
   
   
+

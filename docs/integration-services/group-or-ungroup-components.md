@@ -19,6 +19,7 @@ caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 1162e9b3617c16dc057e899515b9125da35e070b
@@ -68,3 +69,4 @@ ms.lasthandoff: 09/28/2017
  [使用預設的優先順序條件約束連接工作和容器](http://msdn.microsoft.com/library/8f31f15f-98ff-4c35-b41f-8b8cfd148d75)  
   
   
+

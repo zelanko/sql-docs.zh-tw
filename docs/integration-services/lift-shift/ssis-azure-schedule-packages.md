@@ -8,6 +8,7 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
 ms.openlocfilehash: 2130e68d5e29671a2881d8762666cf852ff51259
@@ -227,3 +228,4 @@ GO
 如需 SQL Server Agent 的詳細資訊，請參閱[封裝的 SQL Server Agent 作業](../packages/sql-server-agent-jobs-for-packages.md)。
 
 如需在 SQL Database 彈性作業的詳細資訊，請參閱[管理向外延展雲端資料庫](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-overview)。
+

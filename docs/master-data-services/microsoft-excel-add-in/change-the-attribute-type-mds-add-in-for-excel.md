@@ -14,6 +14,7 @@ caps.latest.revision: 8
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
 ms.openlocfilehash: aafb37debc437fa6f2aee678eba571d8bd23ec5e
@@ -64,3 +65,4 @@ ms.lasthandoff: 09/07/2017
  [建立模型 &#40;適用於 Excel 的 MDS 增益集&#41;](../../master-data-services/microsoft-excel-add-in/building-a-model-mds-add-in-for-excel.md)  
   
   
+

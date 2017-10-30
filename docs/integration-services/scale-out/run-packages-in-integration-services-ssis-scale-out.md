@@ -15,6 +15,7 @@ ms.author: haoqian
 manager: jhubbard
 f1_keywords:
 - sql13.ssis.ssms.ispackageexecuteinscaleout.f1
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 2c158ae6a711ecb5f5065561c0c8c303e9a09980
@@ -117,3 +118,4 @@ GO
 
 ## <a name="run-package-in-sql-agent-job"></a>SQL agent 作業中執行封裝
 在 Sql 代理程式工作中，您可以選擇執行 SSIS 封裝當做工作的一個步驟。 若要在向外執行封裝，您可以利用上述預設執行模式。 之後設定以 「 小數位數出 」 的預設執行模式下，Sql agent 作業中的封裝會在向外執行。
+

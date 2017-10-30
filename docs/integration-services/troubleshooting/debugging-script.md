@@ -18,6 +18,7 @@ caps.latest.revision: 57
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 338484d5f437833ecdcaffb39ce3b5bc5ec8ea8f
@@ -44,3 +45,4 @@ ms.lasthandoff: 09/28/2017
  [疑難排解封裝開發的工具](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)  
   
   
+

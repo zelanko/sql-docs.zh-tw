@@ -25,6 +25,7 @@ caps.latest.revision: 52
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: fb4fb7cc58ace602daa44d07dbaf59f76d9b7755
@@ -136,3 +137,4 @@ ms.lasthandoff: 09/26/2017
  如需如何將事件處理常式加入封裝的相關資訊，請參閱 [將事件處理常式加入封裝中](http://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78)。  
   
   
+

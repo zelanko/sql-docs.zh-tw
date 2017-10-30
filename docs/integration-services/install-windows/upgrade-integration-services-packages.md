@@ -17,6 +17,7 @@ caps.latest.revision: 54
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: a2e3655bedbb24f2174a62c8792cd168e7642592
 ms.openlocfilehash: b04ba24fd90ec81e735933a45fed18294d77ceab
@@ -81,3 +82,4 @@ ms.lasthandoff: 08/03/2017
  明確參考 ADODB.dll 的指令碼工作和指令碼元件指令碼可能無法升級，或是在未安裝 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的電腦上執行。 為了升級這些指令碼工作或指令碼元件指令碼，建議您移除 ADODB.dll 的相依性。  建議以 Ado.Net 來替代 Managed 程式碼 (例如 VB 和 C# 指令碼)。  
   
   
+

@@ -14,6 +14,7 @@ caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: e83d9979ee4736528efb4851848ea3eac717fab8
@@ -75,3 +76,4 @@ catalog.set_environment_reference_location [ @reference_id = reference_id
 >  如果指定了相對參照， *n*參數值不在使用中，而且環境資料夾名稱會自動設為**NULL**。 如果指定了絕對參考，則必須提供環境資料夾名稱中*n*參數。  
   
   
+

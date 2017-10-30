@@ -14,6 +14,7 @@ caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 8320f1a4d4fb08e206e2dcde2e5158b5dd0729aa
@@ -60,3 +61,4 @@ catalog.rename_folder [ @old_name = ] old_name , [ @new_name = ] new_name
 -   新的名稱已經使用於現有資料夾  
   
   
+

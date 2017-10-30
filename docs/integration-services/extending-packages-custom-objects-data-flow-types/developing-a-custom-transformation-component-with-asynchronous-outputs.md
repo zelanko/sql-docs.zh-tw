@@ -29,6 +29,7 @@ caps.latest.revision: 57
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
 ms.openlocfilehash: de3e9e37d125e8c098fc4fd3fe8036b3c634f228
@@ -330,3 +331,4 @@ End Namespace
  [使用指令碼元件建立非同步轉換](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)  
   
   
+

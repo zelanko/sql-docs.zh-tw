@@ -13,6 +13,7 @@ caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 685286966599c4dcd3dc2f7029413c77f3ff2689
 ms.openlocfilehash: c386b01043764405872365af379cfdedb036b65f
@@ -156,3 +157,4 @@ GO
 ```
 ## <a name="next-steps"></a>後續的步驟
 已完成相應放大功能設定。 您現在可以在向外執行封裝。如需詳細資訊，請參閱[在 Integration Services (SSIS) 相應放大中執行套件](run-packages-in-integration-services-ssis-scale-out.md)。
+

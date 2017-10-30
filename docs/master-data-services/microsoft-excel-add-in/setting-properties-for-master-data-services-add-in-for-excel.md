@@ -15,6 +15,7 @@ caps.latest.revision: 8
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
 ms.openlocfilehash: c5055942c39ff3805fcdbdbd47f0b3d8e9e2489d
@@ -47,3 +48,4 @@ ms.lasthandoff: 09/07/2017
 |資料：資料格格式|顯示格式|選取顯示網域屬性值的慣用格式。 選項為 [代碼 {Name}]、[代碼] 和 [名稱 {Code}]。|  
   
   
+

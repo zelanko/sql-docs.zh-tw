@@ -14,6 +14,7 @@ caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
 ms.openlocfilehash: 5682cd23cb65e097bccb8cc69d5f2ec88ece7709
@@ -80,3 +81,4 @@ catalog.deploy_project [@folder_name =] folder_name
  在專案部署或更新期間，預存程序並不會檢查專案中的個別封裝的保護等級。  
   
   
+

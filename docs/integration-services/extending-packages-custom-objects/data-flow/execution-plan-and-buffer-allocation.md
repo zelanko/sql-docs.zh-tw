@@ -26,6 +26,7 @@ caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 931196de739980cb889f120b977b82bfb313ddd9
@@ -90,3 +91,4 @@ End WorkThread1
   
  因為提供給元件的緩衝區可能包含的資料行多於元件具有在其輸入或輸出資料行集合中，元件開發人員可以呼叫<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSBufferManager100.FindColumnByLineageID%2A>方法，以在緩衝區中找出資料行，藉由指定其**LineageID**。  
   
+

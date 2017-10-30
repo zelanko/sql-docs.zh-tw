@@ -17,6 +17,7 @@ caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 106987c75957ab90773e49e22b65fd89d3e417e4
@@ -94,3 +95,4 @@ ms.lasthandoff: 08/03/2017
  選取 [拒絕] 時，會針對使用者會或角色拒絕權限。  
   
   
+

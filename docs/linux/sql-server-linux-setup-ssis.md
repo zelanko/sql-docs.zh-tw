@@ -9,6 +9,7 @@ ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
 ms.openlocfilehash: cd81ffd71eb78a553703fc31650a0e60a8c513aa
@@ -130,3 +131,4 @@ dtexec /F <package name> /DE <protection password>
 ## <a name="next-steps"></a>後續的步驟
 
 如需如何在 Linux 上使用 SSIS 來擷取、 轉換和載入資料的詳細資訊，請參閱[擷取、 轉換和載入資料的 SQL Server on Linux 與 SSIS](sql-server-linux-migrate-ssis.md)。
+

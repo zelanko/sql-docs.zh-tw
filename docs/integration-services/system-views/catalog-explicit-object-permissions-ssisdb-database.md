@@ -14,6 +14,7 @@ caps.latest.revision: 16
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: ce92a61241cb70f5e1c6d1bab8db8264d6228bd2
@@ -54,3 +55,4 @@ ms.lasthandoff: 09/26/2017
  這個檢視並不會為目前主體的權限提供完整的檢視。 使用者也必須檢查主體是否為已指派權限之角色和群組的成員。  
   
   
+

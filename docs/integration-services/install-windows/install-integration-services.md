@@ -22,6 +22,7 @@ caps.latest.revision: 106
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 3e91abac8902868dc9edefc1466fb2d25a602462
@@ -96,3 +97,4 @@ ms.lasthandoff: 09/26/2017
 >  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] (也就是 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝的 32 位元開發環境) 在 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] 64 位元作業系統上不受支援，且不會安裝在 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] 伺服器上。    
     
   
+

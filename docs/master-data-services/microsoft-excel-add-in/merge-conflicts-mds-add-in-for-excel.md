@@ -15,6 +15,7 @@ caps.latest.revision: 6
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
 ms.openlocfilehash: 9814c347b8a0f63fd63625149b55098b1df3896c
@@ -56,3 +57,4 @@ ms.lasthandoff: 09/07/2017
  [概觀：從 Excel 匯入資料 &#40;適用於 Excel 的 MDS 增益集&#41;](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  
   
   
+

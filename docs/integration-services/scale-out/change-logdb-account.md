@@ -13,6 +13,7 @@ caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: ec785459e5f9585776d83cde3f460c1e79367e46
@@ -45,3 +46,4 @@ GO
 
 > [!NOTE]
 > 如果您使用 Windows 使用者帳戶的記錄時，它必須是相同的帳戶執行標尺出 Worker 服務。 否則，請登入 SQL Server 將會失敗。
+

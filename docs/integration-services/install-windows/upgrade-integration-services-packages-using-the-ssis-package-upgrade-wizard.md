@@ -17,6 +17,7 @@ caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: a2e3655bedbb24f2174a62c8792cd168e7642592
 ms.openlocfilehash: fdb35bac3e7f302e74d2bb33aca870041c36bb31
@@ -95,3 +96,4 @@ ms.lasthandoff: 09/26/2017
 3.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，執行 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝升級精靈。  
   
   
+

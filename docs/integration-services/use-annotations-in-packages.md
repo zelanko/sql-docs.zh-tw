@@ -18,6 +18,7 @@ caps.latest.revision: 42
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: dabeecf1a4e2715bf4ccd214ac21ff3311f27411
@@ -56,3 +57,4 @@ ms.lasthandoff: 09/26/2017
 7.  若要將註解加入群組，請在註解上按一下滑鼠右鍵，然後按一下 [群組]。  
   
 8.  若要儲存更新的封裝，請按一下 **[檔案]** 功能表上的 **[全部儲存]**。  
+

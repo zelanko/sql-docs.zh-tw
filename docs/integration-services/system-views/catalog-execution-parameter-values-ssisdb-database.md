@@ -14,6 +14,7 @@ caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 60907a82f3d0bb9f273355fd6bfbd7378ce72c9f
@@ -55,3 +56,4 @@ ms.lasthandoff: 09/26/2017
 >  當您擁有在伺服器上執行操作的權限時，也會具有檢視作業資訊的權限。 強制使用資料列層級安全性，只會顯示您具有檢視權限的資料列。  
   
   
+

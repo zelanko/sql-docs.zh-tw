@@ -27,6 +27,7 @@ caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
 ms.openlocfilehash: 51150293cd37e0d9f641bd7ee2ee30f8cce8ed95
@@ -163,3 +164,4 @@ ms.lasthandoff: 08/03/2017
  [安全性概觀 &#40; Integration Services &#41;](../../integration-services/security/security-overview-integration-services.md)  
  [dtutil 公用程式](../../integration-services/dtutil-utility.md)  
   
+

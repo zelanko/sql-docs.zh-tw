@@ -14,6 +14,7 @@ caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 83439015694f4235af4a67e994e916651ec63cc1
@@ -98,3 +99,4 @@ catalog.validate_project [ @folder_name = ] folder_name
  完整驗證會確認所有參考的環境變數皆可在驗證所包含的參考環境中找到。 完整驗證結果會列出無效的環境參考，以及在驗證所包含的任何參考環境中皆無法找到的參考環境變數。  
   
   
+

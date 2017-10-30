@@ -13,6 +13,7 @@ caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 77cf90268938bada458aa159a5f18f885491b407
@@ -60,3 +61,4 @@ AgentId|相應放大背景工作的背景工作代理程式識別碼|自動產�
 各個工作的記錄檔位置由 TasksRootFolder 設定在 WorkerSettings.config 檔案中。 如果未指定，記錄檔為\<驅動程式\>: \Users\\*[帳戶]*\AppData\Local\SSIS\ScaleOut\Tasks 資料夾路徑。 
 
 *[帳戶]*是執行標尺出 Worker 服務的帳戶。 預設的帳戶是 SSISScaleOutWorker140。
+

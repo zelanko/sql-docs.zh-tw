@@ -20,6 +20,7 @@ caps.latest.revision: 65
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
 ms.openlocfilehash: c4c51f83c7e691f9c77c4d035e7dd80ead4f4a94
@@ -97,3 +98,4 @@ ms.lasthandoff: 09/28/2017
  [資料流程效能功能](../../integration-services/data-flow/data-flow-performance-features.md)  
   
   
+

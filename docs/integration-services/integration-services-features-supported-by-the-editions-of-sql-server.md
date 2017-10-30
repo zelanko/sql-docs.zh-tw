@@ -14,6 +14,7 @@ caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 8cc1fcfdeae8742a93916dfb08c9db1215f88721
 ms.openlocfilehash: e9d1b8851f113fa44264230a79d0e496007ed96b
@@ -87,3 +88,4 @@ SQL Server Evaluation Edition 提供了 180 天的試用期。
 |詞彙擷取 」 和 「 詞彙查閱轉換|是|||||  
 
 <sup>1</sup> by Attunity 異動資料擷取的元件需要 Enterprise edition。 Change Data Capture Service 和 Change Data Capture Designer，不過，不需要企業版。 您可以使用設計工具和服務的電腦上未安裝 SSIS。
+

@@ -14,6 +14,7 @@ caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
 ms.openlocfilehash: 3a5dc70b1e955b3c702dc9e9dbe4776cc4ebd5ac
@@ -99,3 +100,4 @@ catalog.set_object_parameter_value [@object_type =] object_type
 -   值`30`可用於*object_type*代表封裝參數。 在此案例中的值*object_name*用來表示對應的封裝。 如果*object_name*未指定，則預存程序會傳回錯誤並結束。  
   
   
+

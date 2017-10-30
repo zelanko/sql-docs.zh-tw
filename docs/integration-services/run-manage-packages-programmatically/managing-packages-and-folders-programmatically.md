@@ -20,6 +20,7 @@ caps.latest.revision: 33
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: a40acf3a586c74119d948291fd179f78833cb37a
@@ -95,3 +96,4 @@ ms.lasthandoff: 09/26/2017
  [以程式設計方式列舉可用的套件](../../integration-services/run-manage-packages-programmatically/enumerating-available-packages-programmatically.md)    
     
   
+

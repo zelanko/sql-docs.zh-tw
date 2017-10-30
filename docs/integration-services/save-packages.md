@@ -22,6 +22,7 @@ caps.latest.revision: 48
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 997f393918f0800cad1858df142e909d3a59348d
@@ -115,3 +116,4 @@ ms.lasthandoff: 09/26/2017
      範本清單中包含名稱為 [新增 SSIS 封裝] 的預設封裝範本。 封裝圖示識別可當作封裝範本使用的範本。  
   
 4.  按一下 **[加入]**。  
+
