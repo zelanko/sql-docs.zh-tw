@@ -71,12 +71,12 @@ ms.lasthandoff: 09/09/2017
   
 4.  在 **[對應]** 資料表中，將您想要執行知識探索的每一個來源資料行對應到知識庫中的定義域，如下所示：  
   
-    1.  若要建立對應，請先從空資料列的 **[來源資料行]** 資料行的下拉式清單中選取來源資料行，然後從相同資料列的 **[定義域]** 資料行的下拉式清單中選取定義域 (如果定義域存在的話)。 如果定義域不存在，請按一下 **[建立定義域]** 或 **[建立複合定義域]** 來建立定義域。 如需相關資訊，請參閱 [Create a Domain Rule](../data-quality-services/create-a-domain-rule.md) 或 [Create a Composite Domain](../data-quality-services/create-a-composite-domain.md)。  
+    1.  若要建立對應，請先從空資料列的 **[來源資料行]** 資料行的下拉式清單中選取來源資料行，然後從相同資料列的 **[定義域]** 資料行的下拉式清單中選取定義域 (如果定義域存在的話)。 如果定義域不存在，請按一下 **[建立定義域]** 或 **[建立複合定義域]** 來建立定義域。 如需相關資訊，請參閱 [建立定義域規則](../data-quality-services/create-a-domain-rule.md) 或 [建立複合定義域](../data-quality-services/create-a-composite-domain.md)。  
   
     2.  針對每一個對應重複以上步驟。 若要變更資料表中的資料列數，請按一下 **[加入資料行對應]**，或是選取資料列並按一下 **[移除選取的資料行對應]**。 如果您在選取擴展的資料列時按一下 **[移除選取的資料行對應]** ，即使有未擴展的資料列，也會刪除選取的資料列。  
   
         > [!NOTE]  
-        >  只有當 DQS 支援來源資料類型，而且該類型符合 DQS 定義域資料類型時，您才能將來源資料對應至 DQS 定義域，以便執行知識探索。 如需有關支援之資料類型的資訊，請參閱＜ [Supported SQL Server and SSIS Data Types for DQS Domains](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md)＞。  
+        >  只有當 DQS 支援來源資料類型，而且該類型符合 DQS 定義域資料類型時，您才能將來源資料對應至 DQS 定義域，以便執行知識探索。 如需有關支援之資料類型的資訊，請參閱＜ [DQS 定義域支援的 SQL Server 和 SSIS 資料類型](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md)＞。  
   
     3.  按一下 **[檢視/選取複合定義域]** ，顯示已經定義的複合定義域。 如果沒有已經定義的複合定義域，將無法使用此控制項。  
   

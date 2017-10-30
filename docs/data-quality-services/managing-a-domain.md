@@ -30,9 +30,9 @@ ms.lasthandoff: 09/09/2017
  您也可以建立由兩個或多個個別定義域所組成的複合定義域，其中每一個定義域都包含有關一般資料的知識。 如需詳細資訊，請參閱[管理複合定義域](../data-quality-services/managing-a-composite-domain.md)。  
   
 ## <a name="domain-properties"></a>定義域屬性  
- 當您建立定義域時，您可以選擇以下方式從來源資料擴展定義域以及輸出定義域值。 如需相關資訊，請參閱 [Set Domain Properties](../data-quality-services/set-domain-properties.md)。  
+ 當您建立定義域時，您可以選擇以下方式從來源資料擴展定義域以及輸出定義域值。 如需相關資訊，請參閱 [設置域屬性](../data-quality-services/set-domain-properties.md)。  
   
--   選取您要用來擴展定義域的資料類型。 如需有關每種定義域資料類型所支援之資料類型的詳細資訊，請參閱＜ [Supported SQL Server and SSIS Data Types for DQS Domains](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md)＞。  
+-   選取您要用來擴展定義域的資料類型。 如需有關每種定義域資料類型所支援之資料類型的詳細資訊，請參閱＜ [DQS 定義域支援的 SQL Server 和 SSIS 資料類型](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md)＞。  
   
 -   指定只有前置值 (而非其同義字) 將會是定義域中的輸出。  
   
