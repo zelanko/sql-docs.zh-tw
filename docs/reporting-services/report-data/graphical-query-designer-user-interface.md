@@ -24,8 +24,7 @@ caps.latest.revision: 54
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.workload: On Demand
-ms.translationtype: MT
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3c3bc432fc4dd02527f617b920cdf045103247a9
 ms.contentlocale: zh-tw
@@ -160,4 +159,3 @@ EXEC uspGetEmployeeManagers '1';
  [設計查詢和檢視使用說明主題 (Visual Database Tools)](http://msdn.microsoft.com/library/200903f4-1208-4563-9dca-26aabaacfa20)  
   
   
-
