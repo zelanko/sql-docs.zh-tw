@@ -8,6 +8,7 @@ ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
 ms.openlocfilehash: 9ab85f20c1bc8660c54d8d1a2ec946a2121f59f9
@@ -223,3 +224,4 @@ export SQL_INSTALL_AGENT='y'
 ```
 
 如需有關 SQL Server on Linux，請參閱[SQL Server on Linux 概觀](sql-server-linux-overview.md)。
+
