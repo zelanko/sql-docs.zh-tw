@@ -40,13 +40,13 @@ ms.lasthandoff: 08/02/2017
 ## <a name="procedure-for-using-the-ssma-console"></a>針對使用 SSMA 主控台的程序  
 Windows 系統上已成功啟動主控台之後，您可以在 bob_ws 上工作使用下列步驟：  
   
-1.  透過指令碼檔案中設定 SSMA 主控台。 如需有關本章節的詳細資訊，請參閱[建立指令碼檔案 & #40; OracleToSQL & #41;](../../ssma/oracle/creating-script-files-oracletosql.md) 。  
+1.  透過指令碼檔案中設定 SSMA 主控台。 如需有關本章節的詳細資訊，請參閱[建立指令碼檔案 &#40; OracleToSQL &#41;](../../ssma/oracle/creating-script-files-oracletosql.md) 。  
   
-2.  [建立變數值的檔案 & #40; OracleToSQL & #41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md)  
+2.  [建立變數值的檔案 &#40; OracleToSQL &#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md)  
   
-3.  [建立伺服器連接檔案 & #40; OracleToSQL & #41;](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md)  
+3.  [建立伺服器連接檔案 &#40; OracleToSQL &#41;](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md)  
   
-4.  [執行 SSMA 主控台 & #40; OracleToSQL & #41;](../../ssma/oracle/executing-the-ssma-console-oracletosql.md)根據您的專案需求  
+4.  [執行 SSMA 主控台 &#40; OracleToSQL &#41;](../../ssma/oracle/executing-the-ssma-console-oracletosql.md)根據您的專案需求  
   
 其他功能：  
   

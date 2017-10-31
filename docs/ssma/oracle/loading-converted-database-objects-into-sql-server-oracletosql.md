@@ -96,7 +96,7 @@ Oracle 結構描述轉換至 SQL Server 之後，您可以載入 SQL Server 來�
   
 **執行指令碼**  
   
-1.  在[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]**檔案**功能表上，指向**開啟**，然後按一下 [**檔案**。  
+1.  在[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]**檔案**功能表上，指向**開啟**，然後按一下**檔案**。  
   
 2.  在**開啟**對話方塊，並選取您的指令碼檔案，然後按一下 [確定]  
   

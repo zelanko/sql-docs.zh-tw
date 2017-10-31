@@ -53,7 +53,7 @@ ms.lasthandoff: 08/02/2017
 SSMA 會將匯出有關存取資料庫、 資料表、 資料行、 索引、 外部索引鍵、 查詢、 報告、 表單、 巨集和模組的中繼資料。 每個項目分類的相關中繼資料匯出至不同的資料表。 這些資料表的結構描述，請參閱[存取清查結構描述](http://msdn.microsoft.com/en-us/fdd3cff2-4d62-4395-8acf-71ea8f17f524)。  
   
 ## <a name="exporting-inventory-data"></a>匯出清查資料  
-若要匯出的存取詳細目錄，您必須第一次開啟或建立 SSMA 專案，然後再新增 [您想要分析的 Access 資料庫。 SSMA 專案中加入資料庫之後，您匯出這些資料庫的相關中繼資料指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料庫和結構描述。 如有必要，SSMA 會建立資料表來儲存的中繼資料。 SSMA，然後將 Access 資料庫的相關中繼資料[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料庫。  
+若要匯出的存取詳細目錄，您必須第一次開啟或建立 SSMA 專案，然後再新增 您想要分析的 Access 資料庫。 SSMA 專案中加入資料庫之後，您匯出這些資料庫的相關中繼資料指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料庫和結構描述。 如有必要，SSMA 會建立資料表來儲存的中繼資料。 SSMA，然後將 Access 資料庫的相關中繼資料[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料庫。  
   
 > [!NOTE]  
 > Access 資料庫可以分成多個檔案： 包含資料表和包含查詢、 表單、 報表、 巨集、 模組和快速鍵的前端資料庫後端資料庫。 如果您想要分割資料庫移轉至[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，加入 SSMA 的前端資料庫。  
@@ -78,7 +78,7 @@ SSMA 會將匯出有關存取資料庫、 資料表、 資料行、 索引、 �
   
 **若要找出並新增資料庫**  
   
-1.  在**檔案**功能表上，按一下 [**尋找資料庫**。  
+1.  在**檔案**功能表上，按一下 **尋找資料庫**。  
   
 2.  在 [尋找資料庫精靈] 中，輸入磁碟機、 檔案路徑或您想要搜尋的 UNC 路徑。 或者，按一下**瀏覽**以選取的磁碟機或網路資料夾。  
   
@@ -101,7 +101,7 @@ SSMA 會將匯出有關存取資料庫、 資料表、 資料行、 索引、 �
   
 7.  按一下 **[下一步]**。  
   
-8.  在確認頁面上，按一下 [**完成**。  
+8.  在確認頁面上，按一下 **完成**。  
   
 如需有關如何將資料庫加入至專案的詳細資訊，請參閱[加入和移除的 Access 資料庫檔案](http://msdn.microsoft.com/en-us/e944c740-4c8a-4bc1-b0ed-be57bc06dced)。  
   
@@ -123,13 +123,13 @@ SSMA 會將匯出有關存取資料庫、 資料表、 資料行、 索引、 �
   
 5.  在**驗證**下拉式功能表，選取要用於連線的驗證類型。 若要使用目前的 Windows 帳戶，請選取**Windows 驗證**。 若要使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]登入，選取**SQL Server 驗證**，然後提供使用者名稱和密碼。  
   
-如需有關連接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，請參閱[連接到 SQL Server & #40;AccessToSQL & #41;](../../ssma/access/connecting-to-sql-server-accesstosql.md).  
+如需有關連接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，請參閱[連接到 SQL Server &#40;AccessToSQL &#41;](../../ssma/access/connecting-to-sql-server-accesstosql.md).  
   
 **若要匯出清查資訊**  
   
-1.  在存取中繼資料總管]，依序展開**存取 metabase**。  
+1.  在存取中繼資料總管，依序展開**存取 metabase**。  
   
-2.  選取此核取方塊旁的 [**資料庫**。  
+2.  選取此核取方塊旁的 **資料庫**。  
   
     若要省略個別的資料庫或資料庫物件，請展開**資料庫**資料夾，然後再清除資料庫或資料庫物件旁邊的核取方塊。  
   
@@ -140,11 +140,11 @@ SSMA 會將匯出有關存取資料庫、 資料表、 資料行、 索引、 �
 匯出中繼資料，每次 SSMA 會將資料附加到清查。 無法更新或刪除在清查中現有的資料。  
   
 ## <a name="querying-the-exported-metadata"></a>查詢所匯出中繼資料  
-匯出有關存取資料庫的中繼資料之後，您可以查詢中繼資料。 若要使用查詢編輯器] 視窗中的下列指示描述[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]來執行查詢。  
+匯出有關存取資料庫的中繼資料之後，您可以查詢中繼資料。 若要使用查詢編輯器 視窗中的下列指示描述[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]來執行查詢。  
   
 **若要查詢的中繼資料**  
   
-1.  從**啟動**功能表上，指向**所有程式**，指向 [ **Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005年**或**Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008年**或**Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012年**，然後按一下 [ **SQL Server Management Studio**。  
+1.  從**啟動**功能表上，指向**所有程式**，指向  **Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005年**或**Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008年**或**Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012年**，然後按一下  **SQL Server Management Studio**。  
   
 2.  在**連接到伺服器**對話方塊中，確認設定，然後按一下**連接**。  
   
@@ -164,7 +164,7 @@ GO
 下列範例都會使用**dbo**結構描述。 如果您另一個結構描述匯出中繼資料，請務必變更結構描述，當您執行這些查詢。  
   
 ### <a name="what-tables-and-columns-are-in-these-databases"></a>有哪些資料表和資料行？ 這些資料庫中  
-下列查詢聯結包含資料行、 資料表和資料庫中繼資料的資料表，然後傳回 [所有資料庫、 資料表和資料行，排序資料行名稱的名稱：  
+下列查詢聯結包含資料行、 資料表和資料庫中繼資料的資料表，然後傳回 所有資料庫、 資料表和資料行，排序資料行名稱的名稱：  
   
 ```  
 SELECT DatabaseName, TableName, ColumnName   

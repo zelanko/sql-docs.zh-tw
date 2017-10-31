@@ -65,7 +65,7 @@ ms.lasthandoff: 08/02/2017
   
 |關聯性|元素|  
 |------------------|--------------|  
-|**父元素**|[DiagnosticInformation 元素 & #40; ssbdiagnose& #41;](../../tools/ssbdiagnose/diagnosticinformation-element-ssbdiagnose.md)|  
+|**父元素**|[DiagnosticInformation 元素 &#40; ssbdiagnose&#41;](../../tools/ssbdiagnose/diagnosticinformation-element-ssbdiagnose.md)|  
 |**子元素**|無|  
   
 ## <a name="example"></a>範例  
@@ -76,7 +76,7 @@ ms.lasthandoff: 08/02/2017
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [ssbdiagnose 公用程式 & #40;Service Broker & #41;](../../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md)  
+ [ssbdiagnose 公用程式 &#40;Service Broker &#41;](../../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md)  
   
   
 

@@ -71,7 +71,7 @@ ms.lasthandoff: 08/02/2017
   
     </output-providers>  
     ```  
-     *或*   
+    *或*   
   
     ```xml  
     <…All commands…>  
@@ -108,7 +108,7 @@ ms.lasthandoff: 08/02/2017
   
     </output-providers>  
     ```  
-     *或*   
+    *或*   
   
     ```xml  
     <migrate-data>  
@@ -141,7 +141,7 @@ ms.lasthandoff: 08/02/2017
   
     </output-providers>  
     ```  
-     *或*   
+    *或*   
   
     ```xml  
     <!-- Connect to target database -->  
@@ -174,7 +174,7 @@ ms.lasthandoff: 08/02/2017
   
     </output-providers>  
     ```  
-     *或*   
+    *或*   
   
     ```xml  
     <!--synchronization-->  
@@ -185,7 +185,7 @@ ms.lasthandoff: 08/02/2017
   
     </synchronize-target>  
     ```  
-     *或*   
+    *或*   
   
     ```xml  
     <!--data migration-->  
@@ -220,7 +220,7 @@ ms.lasthandoff: 08/02/2017
   
     </output-providers>  
     ```  
-     *或*   
+    *或*   
   
     ```xml  
     <convert-schema object-name="<object-name>">  
@@ -273,7 +273,7 @@ ms.lasthandoff: 08/02/2017
   
     </output-providers>  
     ```  
-     *或*   
+    *或*   
   
     ```xml  
     <…All commands…>  
@@ -315,7 +315,7 @@ ms.lasthandoff: 08/02/2017
   
     </output-providers>  
     ```  
-     *或*   
+    *或*   
   
     ```xml  
     <…All commands…>  

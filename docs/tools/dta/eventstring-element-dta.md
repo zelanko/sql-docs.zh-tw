@@ -58,7 +58,7 @@ ms.lasthandoff: 08/02/2017
   
 |關聯性|元素|  
 |------------------|--------------|  
-|**父元素**|[Workload 元素 & #40; Dta& & #41;](../../tools/dta/workload-element-dta.md)|  
+|**父元素**|[Workload 元素 &#40; Dta& &#41;](../../tools/dta/workload-element-dta.md)|  
 |**子元素**|無。|  
   
 ## <a name="example"></a>範例  

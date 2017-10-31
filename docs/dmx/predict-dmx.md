@@ -65,7 +65,7 @@ Predict(<table column reference>, [option1], [option2], [option n], [INCLUDE_NOD
   
  INCLUDE_NODE_ID 參數會在結果中傳回 $NODEID 資料行。 NODE_ID 是針對特定案例執行預測的內容節點。 資料表資料行上使用預測時，這個參數是選擇性的。  
   
-  *n* 參數適用於資料表資料行。 它會根據預測類型設定傳回的資料列數。 如果基礎資料行順序，它會呼叫**PredictSequence**函式。 如果基礎資料行是時間序列，它會呼叫**PredictTimeSeries**函式。 對於關聯類型的預測，它會呼叫**PredictAssociation**函式。  
+ *n* 參數適用於資料表資料行。 它會根據預測類型設定傳回的資料列數。 如果基礎資料行順序，它會呼叫**PredictSequence**函式。 如果基礎資料行是時間序列，它會呼叫**PredictTimeSeries**函式。 對於關聯類型的預測，它會呼叫**PredictAssociation**函式。  
   
  **預測**函數支援多型。  
   
