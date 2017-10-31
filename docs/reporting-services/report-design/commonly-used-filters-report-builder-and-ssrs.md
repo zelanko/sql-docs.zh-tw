@@ -20,8 +20,7 @@ caps.latest.revision: 36
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.workload: On Demand
-ms.translationtype: MT
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 6d41e46b2fb9f9dc9016d04254ef289fe4a44372
 ms.contentlocale: zh-tw
@@ -65,4 +64,3 @@ ms.lasthandoff: 08/09/2017
  [運算式 &#40; 中的資料類型報表產生器及 SSRS &#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)  
   
   
-

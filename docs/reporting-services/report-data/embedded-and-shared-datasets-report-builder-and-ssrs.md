@@ -15,8 +15,7 @@ caps.latest.revision: 7
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.workload: On Demand
-ms.translationtype: MT
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: fb2ff6fdeb8f4d05866c09e87cd899a5dd2bb7ad
 ms.contentlocale: zh-tw
@@ -73,4 +72,3 @@ ms.lasthandoff: 08/09/2017
  [資料連接、資料來源及連接字串 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
   
   
-

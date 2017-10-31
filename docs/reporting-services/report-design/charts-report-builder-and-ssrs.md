@@ -25,8 +25,7 @@ caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.workload: On Demand
-ms.translationtype: MT
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: d7c46a132a6d559e6299910d6b2e4e117e650f45
 ms.contentlocale: zh-tw
@@ -152,4 +151,3 @@ ms.lasthandoff: 08/09/2017
  [教學課程： 將橫條圖加入至您的報表 &#40;報表產生器 &#41;](../../reporting-services/tutorial-add-a-bar-chart-to-your-report-report-builder.md)  
   
   
-

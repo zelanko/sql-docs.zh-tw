@@ -15,8 +15,7 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.workload: Inactive
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f60696e601bc48d20384d9037f4e5f7a1b35d749
 ms.contentlocale: zh-tw
@@ -43,20 +42,19 @@ ms.lasthandoff: 08/09/2017
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="in-this-section"></a>本節內容  
- [互動式排序 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/interactive-sort-report-builder-and-ssrs.md)  
+ [互動式排序 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/interactive-sort-report-builder-and-ssrs.md)  
  說明如何將互動式排序按鈕加入到資料行標頭。  
   
- [建立文件引導模式 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/create-a-document-map-report-builder-and-ssrs.md)  
+ [建立文件引導模式 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/create-a-document-map-report-builder-and-ssrs.md)  
  說明如何加入目錄，以支援大型報表中的導覽。  
   
- [將書籤加入至報表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-a-bookmark-to-a-report-report-builder-and-ssrs.md)  
+ [將書籤加入至報表 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/add-a-bookmark-to-a-report-report-builder-and-ssrs.md)  
  說明如何加入書籤，以便在報表內建立連結。  
   
- [將超連結加入到 URL &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-a-hyperlink-to-a-url-report-builder-and-ssrs.md)  
+ [將超連結加入至 URL &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/add-a-hyperlink-to-a-url-report-builder-and-ssrs.md)  
  說明如何加入從報表至 URL 的連結  
   
 ## <a name="see-also"></a>請參閱＜  
- [鑽研、向下鑽研、子報表和巢狀資料區 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)  
+ [鑽研、 向下鑽研、 子報表和巢狀的資料區 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)  
   
   
-

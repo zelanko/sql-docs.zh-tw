@@ -16,8 +16,7 @@ caps.latest.revision: 43
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.workload: On Demand
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: be153d2ba1469034cad5e31e5e823d6ac5be4b4e
 ms.contentlocale: zh-tw
@@ -25,7 +24,7 @@ ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="lesson-2-modifying-the-report-data-source-properties"></a>Lesson 2: Modifying the Report Data Source Properties
-在此 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 教學課程中，您將使用入口網站來選取傳遞給收件者的報表。 您將定義的資料驅動訂閱將散發 **建立基本資料表報表 &#40;SSRS 教學課程&#41;** 教學課程中建立的 [建立基本資料表報表 &#40;SSRS 教學課程&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)報表。  在下面的步驟中，您將修改報表用來取得資料的資料來源連接資訊。 只有使用 **預存認證** 來存取報表資料來源的報表可以透過資料驅動訂閱散發。 自動報表處理需要預存認證。  
+在此 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 教學課程中，您將使用入口網站來選取傳遞給收件者的報表。 您將定義的資料驅動訂閱將散發 **建立基本資料表報表 &amp;#40;SSRS 教學課程&amp;#41;** 教學課程中建立的 [建立基本資料表報表 &#40;SSRS 教學課程&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)報表。  在下面的步驟中，您將修改報表用來取得資料的資料來源連接資訊。 只有使用 **預存認證** 來存取報表資料來源的報表可以透過資料驅動訂閱散發。 自動報表處理需要預存認證。  
   
 您也會將資料集和報表修改成使用參數來依據 `[Order]` 篩選報表，讓訂閱能夠針對特定訂單和轉譯格式輸出不同的報表執行個體。  
   
@@ -41,9 +40,9 @@ ms.lasthandoff: 08/09/2017
  
  ![ssrs_tutorial_datadriven_manage_report](../reporting-services/media/ssrs-tutorial-datadriven-manage-report.png)
   
-3.  按一下左窗格中的 [資料來源]。  
+3.  按一下**資料來源**的左窗格中。  
   
-4.  確認 [連接類型] 是 **Microsoft SQL Server**。  
+4.  確認**連線類型**是**Microsoft SQL Server**。  
   
 5.  確認連接字串如下所示，並假設範例資料庫位於本機資料庫伺服器上：  
   
@@ -51,15 +50,15 @@ ms.lasthandoff: 08/09/2017
     Data source=localhost; initial catalog=AdventureWorks2014  
     ```  
   
-6.  按一下 [使用以下認證]。  
+6.  按一下**使用以下認證**。  
   
-7. 在 [認證類型] 中，選取 [Windows 使用者名稱與密碼]
-8. 輸入您的使用者名稱 (使用 *domain\user* 格式) 和密碼。 如果您沒有存取 AdventureWorks2014 資料庫的權限，請指定有這項權限的登入。  
+7. 在**的認證類型**，選取**Windows 使用者名稱和密碼**
+8. 輸入您的使用者名稱 (使用 *domain\user*格式) 和密碼。 如果您沒有存取 AdventureWorks2014 資料庫的權限，請指定有這項權限的登入。  
     
-9. 按一下 [測試連接]，確認您能夠連接到資料來源。  
+9. 按一下**測試連接**以確認您可以連接到資料來源。  
   
 10. 按一下 **[儲存]**。
-11. 按一下 [取消]  
+11. 按一下**取消**  
   
 11. 檢視報表以確認報表是以您指定的認證來執行。 報表。  
   
@@ -96,15 +95,15 @@ ms.lasthandoff: 08/09/2017
  ![ssrs_tutorial_datadriven_parameter](../reporting-services/media/ssrs-tutorial-datadriven-parameter.png) 
 2.  確認 [名稱] 是 `OrderNumber`。  
   
-3.  確認 [提示] 是 `OrderNumber`。  
+3.  確認**提示**是`OrderNumber`。  
   
-4.  選取 [允許空白值 ("")]。  
+4.  選取**允許空白值 ("")**。  
   
-5.  選取 [允許 Null 值]。  
+5.  選取**允許 null 值**。  
   
 6.  按一下 **[確定]**。  
   
-7.  按一下 [預覽] 索引標籤來執行報表。 請注意，參數輸入方塊會出現在報表頂端。 您可以：  
+7.  按一下**預覽**來執行報表 索引標籤。 請注意，參數輸入方塊會出現在報表頂端。 您可以：  
   
     -   按一下 [檢視報表] 查看完整報表，而不使用參數。  
   
@@ -114,7 +113,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="bkmk_redeploy"></a>重新部署報表  
   
-1.  請重新部署報表，讓下一課的訂閱組態能夠運用您在這一課所做的變更。 如需用於資料表教學課程之專案屬性的詳細資訊，請參閱[第 6 課：加入群組和總計 &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md) 的＜將報表發行至報表伺服器 (選擇性)＞一節。  
+1.  請重新部署報表，讓下一課的訂閱組態能夠運用您在這一課所做的變更。 如需有關用於資料表教學課程專案屬性的詳細資訊，請參閱 ' 將報表發行至報表伺服器 （選擇性）' 區段的[第 6 課： 加入群組和總計 &#40;Reporting Services &#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md).  
   
 2.  在工具列上，按一下 **[建置]** ，然後按一下 **[部署教學課程]**。  
   

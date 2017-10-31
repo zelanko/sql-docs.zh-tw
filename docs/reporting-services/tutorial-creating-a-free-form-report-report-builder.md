@@ -16,8 +16,7 @@ caps.latest.revision: 17
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.workload: On Demand
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 356d795aec5249ecf4f990d549c8eacb70e25f03
 ms.contentlocale: zh-tw
@@ -61,9 +60,9 @@ ms.lasthandoff: 08/09/2017
   
 3.  按一下 **[使用內嵌於報表中的連接]**。  
   
-4.  確認連接類型為 Microsoft SQL Server，接著在 [連接字串] 方塊中輸入 **Data Source = \<伺服器名稱>**  
+4.  確認連接類型為 Microsoft SQL Server，然後在**連接字串**方塊中，輸入：**資料來源 =\<伺服器名稱 >**  
   
-    \<伺服器名稱> (例如 Report001) 指定已安裝 SQL Server Database Engine 執行個體的電腦名稱。 由於此報表的資料不是擷取自 SQL Server 資料庫，您不必加上資料庫的名稱。 指定之伺服器上的預設資料庫只用來剖析查詢。  
+    **\<伺服器名稱 >**、 範例 Report001，參數會指定 SQL Server Database Engine 的執行個體安裝所在的電腦。 由於此報表的資料不是擷取自 SQL Server 資料庫，您不必加上資料庫的名稱。 指定之伺服器上的預設資料庫只用來剖析查詢。  
   
 5.  按一下 [認證] ，並輸入連接到 SQL Server Database Engine 執行個體所需的認證。  
   
@@ -73,7 +72,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  在 [報表資料] 窗格中，按一下 [新增] > [資料集]。  
   
-2.  在 [名稱] 方塊中，輸入 **ListDataset**。  
+2.  在**名稱**方塊中，輸入： **[listdataset]**。  
   
 3.  按一下 [使用內嵌在我的報表中的資料集] ，並確認資料來源是 **ListDataSource**。  
   
@@ -116,7 +115,7 @@ ms.lasthandoff: 08/09/2017
     UNION SELECT CAST('2009-01-06' AS date) as SalesDate, 'Fernando Ross' as FullName,'South' as Territory, 'Digital' as Subcategory, 'Slim Digital' as Product, CAST(6648.25 AS money) AS Sales, 35 as Quantity  
     ```  
   
-7.  按一下 [執行] 圖示 (!) 即可執行查詢。  
+7.  按一下**執行**圖示 （！） 來執行查詢。  
   
     查詢結果會成為可供報表顯示的資料。  
   
@@ -131,30 +130,30 @@ ms.lasthandoff: 08/09/2017
   
 ### <a name="to-add-a-list"></a>加入清單  
   
-1.  在 [插入] 索引標籤 > [資料區域] > [清單]。 
+1.  在**插入** 索引標籤 >**資料區域** > **清單**。 
 
-2. 按一下報表主體 (標題和頁尾區域之間)，並拖曳以形成清單方塊。 將清單方塊調整成高 7 英吋且寬 6.25 英吋。 若要取得確切的大小，請在 [屬性] 窗格的 [位置] 下，輸入 **Width** 和 **Height** 屬性的值。
+2. 按一下報表主體 (標題和頁尾區域之間)，並拖曳以形成清單方塊。 將清單方塊調整成高 7 英吋且寬 6.25 英吋。 若要取得確切的大小，在**屬性**窗格下的**位置**，輸入值**寬度**和**高度**屬性。
   
     > [!NOTE]  
     > 此報表會使用 Letter (8.5 X11) 紙張大小和 1 英吋的邊界。 若清單方塊高度超過 9 英吋或寬度超過 6.5 英吋，則可能產生空白頁面。  
   
-2.  按一下清單方塊內部、在清單頂端的列按一下滑鼠右鍵，然後按一下 [Tablix 屬性]。  
+2.  按一下清單方塊中，以滑鼠右鍵按一下清單頂端列並按一下**Tablix 屬性**。  
   
     ![report-builder-free-form-tablix-properties](../reporting-services/media/report-builder-free-form-tablix-properties.png) 
   
-3.  從 [資料集名稱] 下拉式清單中，選取 [ListDataset]。  
+3.  從 **[資料集名稱]** 下拉式清單中，選取 **[ListDataset]**。  
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-5.  在清單內部按一下滑鼠右鍵，然後按一下 [矩形屬性]。  
+5.  在清單內部按一下滑鼠右鍵，然後按一下 [矩形屬性] 。  
   
-6.  在 [一般] 索引標籤上，選取 [在後方新增分頁符號] 核取方塊。  
+6.  在**一般**索引標籤上，選取**加入分頁符號之後**核取方塊。  
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ### <a name="to-add-a-new-row-group-and-to-delete-the-details-group"></a>加入新的資料列群組並刪除 [詳細資料] 群組  
   
-1.  在 [資料列群組] 窗格中，以滑鼠右鍵按一下 [詳細資料] 群組，然後指向 [新增群組]，再按一下 [父群組]。  
+1.  在 [資料列群組] 窗格中，以滑鼠右鍵按一下 [詳細資料] 群組，然後指向 **[加入群組]**，再按一下 **[父群組]**。  
   
     ![report-builder-free-form-add-parent-group](../reporting-services/media/report-builder-free-form-add-parent-group.png)  
   
@@ -164,13 +163,13 @@ ms.lasthandoff: 08/09/2017
   
     包含 `[Territory]` 資料格的資料行會新增至清單。
   
-4.  以滑鼠右鍵按一下清單中的 [Territory] 資料行，然後按一下 [刪除資料行]。  
+4.  以滑鼠右鍵按一下清單中的 [Territory] 資料行，再按一下 **[刪除資料行]**。  
   
     ![report-builder-free-form-delete-columns](../reporting-services/media/report-builder-free-form-delete-columns.png)
   
-5.  選取 [只刪除資料行]。  
+5.  選取**只刪除資料行**。  
   
-6.  在 [資料列群組] 窗格中，在 [詳細資料] 群組上按一下滑鼠右鍵，然後按一下 [刪除群組]。  
+6.  在 [資料列群組] 窗格中，以滑鼠右鍵按一下**詳細資料**群組 >**刪除群組**。  
    
 7.  選取 [只刪除群組]。  
   
@@ -181,15 +180,15 @@ ms.lasthandoff: 08/09/2017
   
 ### <a name="to-add-graphic-elements-to-the-report"></a>加入圖形元素至報表中  
   
-1.  在 [插入] 索引標籤上，選取 [矩形]。 
+1.  在**插入**索引標籤上，選取**矩形**。 
 
-2. 按一下清單左上角並拖曳，形成高 7 英吋且寬 3.5 英吋的矩形。 同樣地，若要取得確切的大小，請在 [屬性] 窗格的 [位置] 下，輸入 **Width** 和 **Height** 的值。
+2. 按一下清單左上角並拖曳，形成高 7 英吋且寬 3.5 英吋的矩形。 同樣地，若要取得確切的大小，在**屬性**窗格下的**位置**，輸入值**寬度**和**高度**。
   
-2.  以滑鼠右鍵按一下矩形 > [矩形屬性]。  
+2.  以滑鼠右鍵按一下矩形 >**矩形屬性**。  
   
 3.  按一下 **[填滿]** 索引標籤。  
   
-4.  在 [填滿色彩] 中，選取 [淺灰]。  
+4.  在**填滿色彩**，選取**淺灰**。  
    
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -206,7 +205,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  按一下 **[設計]** 返回 [設計] 檢視。  
   
-2.  在 [插入] 索引標籤 > [文字方塊] 上。 按一下清單的左上角，在您先前新增的矩形內，並拖曳形成大約寬 3.45 英吋且高約 5 英吋的文字方塊。  
+2.  在**插入** 索引標籤 >**文字方塊**。 按一下清單的左上角，在您先前新增的矩形內，並拖曳形成大約寬 3.45 英吋且高約 5 英吋的文字方塊。  
   
 3.  將滑鼠游標置於文字方塊內，然後輸入： **Newsletter for** 。 在單字 "for" 後面加上一個空格來分隔的文字和您將在下一個步驟新增的欄位。   
   
@@ -218,23 +217,23 @@ ms.lasthandoff: 08/09/2017
   
 5.  選取文字和 `[Territory]` 欄位。  
   
-6.  在 [首頁] 索引標籤 > [字型]，選取︰ 
+6.  在**首頁** 索引標籤 >**字型**，選取： 
   
-    *  [Segoe Semibold]。
-    *  [20 pt]。
-    *  [蕃茄紅]。  
+    *  **Segoe，半粗體**。
+    *  **20 pt**。
+    *  **Tomato**。  
   
-9. 將滑鼠游標置於您在步驟 3 輸入的文字下方，然後輸入：**Hello**，並在這個字後加上一個空格以分隔文字和您將在下一個步驟中新增的欄位。  
+9. 將滑鼠游標置於您在步驟 3 輸入的文字下方，然後輸入： **Hello** ，並在這個字後加上一個空格以分隔文字和您將在下一個步驟中新增的欄位。  
  
 10. 將 `[FullName]` 欄位從 [報表資料] 窗格中的 ListDataSet 拖曳到文字方塊，放在 "Hello " 之後，然後輸入一個逗號 (,)。  
    
 11. 選取您在之前的步驟新增的文字。
   
-12. 在 [首頁] 索引標籤 > [字型]，選取︰ 
+12. 在**首頁** 索引標籤 >**字型**，選取： 
   
-    *  [Segoe Semibold]。
-    *  [16 pt]。
-    *  [黑色]。  
+    *  **Segoe，半粗體**。
+    *  **16 pt**。
+    *  **黑色**。  
    
 15. 將滑鼠游標置於您在步驟 9 至步驟 13 加入的文字下方，然後複製並貼入下列無意義的文字：  
   
@@ -247,11 +246,11 @@ ms.lasthandoff: 08/09/2017
   
 16. 選取您剛才新增的文字。  
   
-17.  在 [首頁] 索引標籤 > [字型]，選取︰ 
+17.  在**首頁** 索引標籤 >**字型**，選取： 
   
-      *  [Segoe UI]。
-      *  [10 pt]。
-      *  [黑色]。  
+      *  **Segoe UI**。
+      *  **10pt**。
+      *  **黑色**。  
  
 20. 將滑鼠游標置於文字方塊內，在無意義文字底下輸入︰ **Congratulations on your total sales of**，並在文字之後以一個空格分隔文字和您將在下一個步驟新增的欄位。 
   
@@ -259,15 +258,15 @@ ms.lasthandoff: 08/09/2017
 
 25. 選取文字和您剛才新增的欄位。  
   
-17.  在 [首頁] 索引標籤 > [字型]，選取︰ 
+17.  在**首頁** 索引標籤 >**字型**，選取： 
   
-      *  [Segoe Semibold]。
-      *  [16 pt]。
-      *  [黑色]。  
+      *  **Segoe，半粗體**。
+      *  **16 pt**。
+      *  **黑色**。  
   
-22. 只選取 `[Sales]` 欄位，以滑鼠右鍵按一下欄位 > [運算式]。  
+22. 選取剛才`[Sales]`欄位中，以滑鼠右鍵按一下欄位 >**運算式**。  
   
-23. 在 [運算式] 方塊中，將運算式改為包含 Sum 函數，如下所示：  
+23. 在**運算式**方塊中，將運算式變更為包含 Sum 函數，如下所示：  
   
     ```  
     =Sum(Fields!Sales.value)  
@@ -277,9 +276,9 @@ ms.lasthandoff: 08/09/2017
   
     ![report-builder-free-form-text-box](../reporting-services/media/report-builder-free-form-text-box.png)
  
-29. 於仍然選取 `[Sum(Sales)]` 的情況下，在 [首頁] 索引標籤 > [數值] 群組 > [貨幣] 上。  
+29. 與`[Sum(Sales)]`仍然在選取**首頁** 索引標籤 >**數目**群組 >**貨幣**。  
   
-30. 以滑鼠右鍵按一下包含「按一下以加入標題」字樣的文字方塊，然後按一下 [刪除]。  
+30. 以滑鼠右鍵按一下包含「按一下以加入標題」字樣的文字方塊，然後按一下 **[刪除]**。  
   
 31. 選取清單方塊。 選取兩個雙箭號，然後將它移至頁面頂端。  
 
@@ -296,11 +295,11 @@ ms.lasthandoff: 08/09/2017
   
 ### <a name="to-add-a-table"></a>加入資料表  
   
-1.  在 [插入] 索引標籤 > [資料區域] 區域 > [資料表] > [資料表精靈] 上。  
+1.  在**插入** 索引標籤 >**資料區域**區域 >**資料表** > **資料表精靈**。  
   
 2.  在**選擇資料集**頁面上，按一下**[listdataset]** > **下一步**。  
   
-4.  在 [排列欄位] 頁面上，將 [Product] 欄位從 [可用的欄位] 拖曳至 [值]。  
+4.  在**排列欄位**頁面上，將 Product 欄位從**可用的欄位**至**值。**  
   
 5.  針對 SalesDate、Quantity 和 Sales 重複步驟 3。 將 SalesDate 放到 Product 底下、Quantity 放到 SalesDate 底下、Sales 放到 Quantity 底下。  
   
@@ -319,7 +318,7 @@ ms.lasthandoff: 08/09/2017
     > [!NOTE]  
     > 請確定資料表在清單方塊內，而且在灰色矩形內。  
   
-12. 在選取資料表的情況下，在 [資料列群組] 窗格中以滑鼠右鍵按一下 [詳細資料] > [新增總計] > [之後]。  
+12. 在選取資料表的**資料列群組**窗格以滑鼠右鍵按一下**詳細資料** > **加入總計** > **之後**。  
   
     ![report-builder-free-form-table-totals](../reporting-services/media/report-builder-free-form-table-totals.png)
   
@@ -327,9 +326,9 @@ ms.lasthandoff: 08/09/2017
 
     ![report-builder-free-form-type-total](../reporting-services/media/report-builder-free-form-type-total.png)
 
-12. 選取 [SalesDate] 欄位。 在 [首頁] 索引標籤 > [數值]，將 [預設] 變更為 [日期]。
+12. 選取 [SalesDate] 欄位。 在**首頁** 索引標籤 >**數目**，變更**預設**至**日期**。
 
-13. 選取 [Sum(Sales)] 欄位。 在 [首頁] 索引標籤 > [數值]，將 [預設] 變更為 [貨幣]。
+13. 選取 [Sum(Sales)] 欄位。 在**首頁** 索引標籤 >**數目**，變更**預設**至**貨幣**。
 
 按一下 **[執行]** 預覽報表。  
   
@@ -379,7 +378,7 @@ ms.lasthandoff: 08/09/2017
   
 3.  在您於第 4 課新增的文字方塊下方繪製線條。  
   
-4.  按一下線條，然後在 [首頁] 索引標籤 > [框線]，選取︰
+4.  按一下線條，然後在**首頁** 索引標籤 >**框線**，選取：
      * **寬度** 選取 **3** pt。
      * **色彩** 選取 [蕃茄紅]。  
   
@@ -398,15 +397,15 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="to-add-a-pie-chart"></a>加入圓形圖  
   
-1.  在 [插入] 索引標籤 > [資料視覺效果] > [圖表] > [圖表精靈]。  
+1.  在**插入** 索引標籤 >**資料視覺效果** > **圖表** > **圖表精靈**。  
   
 2.  在**選擇資料集**頁面上，按一下**[listdataset]** > **下一步**。  
   
-3.  按一下 [圓形圖] > [下一步]。  
+3.  按一下**圓形圖** > **下一步**。  
   
-4.  在 [排列圖表欄位] 頁面上，將 [Product] 拖曳至 [類別目錄]。  
+4.  在 [排列圖表欄位] 頁面上，拖曳至產品**類別**。  
   
-5.  將 [Quantity] 拖曳至 [值]，然後按一下 [下一步]。  
+5.  拖曳 Quantity to**值**，然後按一下 **下一步**。  
   
 6.  按一下 **[完成]**。  
   
@@ -414,16 +413,16 @@ ms.lasthandoff: 08/09/2017
   
 9. 將圖表拖曳到矩形內。  
    
-10. 選取圖表標題，然後輸入︰**Product Quantities Sold**。  
+10. 選取圖表標題，然後輸入︰ **Product Quantities Sold**。  
   
-12. 在 [首頁] 索引標籤 > [字型] 上，讓標題成為︰
+12. 在**首頁** 索引標籤 >**字型**，讓標題：
     * **字型** **Segoe UI SemiBold**。
-    * **Size** **12 pt**.
+    * **大小** **12 pt**。
     * **色彩** **黑色**。  
 
-13. 以滑鼠右鍵按一下圖例 > [圖例屬性]。
+13. 以滑鼠右鍵按一下圖例 >**圖例屬性**。
 
-14. 在 [一般] 索引標籤的 [圖例位置] 下，選取底部的中心點。 
+14. 在**一般**索引標籤，下方**圖例 position**，選取底部的中心點。 
   
 15. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
 
@@ -433,15 +432,15 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="to-add-a-column-chart"></a>加入直條圖  
   
-1.  在 [插入] 索引標籤 > [資料視覺效果] > [圖表] > [圖表精靈] 上。  
+1.  在**插入** 索引標籤 >**資料視覺效果** > **圖表** > **圖表精靈**。  
   
-2.  在 [選擇資料集]  頁面上，按一下 [ListDataset] ，然後按 [下一步] 。  
+2.  在**選擇資料集**頁面上，按一下**listdataset**，然後按一下 **下一步**。  
   
-3.  按一下 [直條圖]，然後按一下 [下一步]。  
+3.  按一下**資料行**，然後按一下 **下一步**。  
   
-4.  在 [排列圖表欄位] 頁面上，將 [Product] 欄位拖曳至 [類別目錄]。  
+4.  在**排列圖表欄位**頁面上，拖曳至 [產品] 欄位**類別**。  
   
-5.  將 [Sales] 拖曳至 [值]，然後按一下 [下一步]。  
+5.  將銷售拖曳到**值**，然後按一下 **下一步**。  
   
     值會顯示在垂直軸上。  
   
@@ -453,12 +452,12 @@ ms.lasthandoff: 08/09/2017
   
 9. 將圖表拖曳到矩形內。  
    
-10. 選取圖表標題，然後輸入︰**Product Sales**。  
+10. 選取圖表標題，然後輸入︰ **Product Sales**。  
   
-12. 在 [首頁] 索引標籤 > [字型] 上，讓標題成為︰
+12. 在**首頁** 索引標籤 >**字型**，讓標題：
     * **字型** **Segoe UI SemiBold**。
-    * **Size** **12 pt**.
-    * **Color** **Black**.  
+    * **大小** **12 pt**。
+    * **色彩** **黑色**。  
   
 15. 以滑鼠右鍵按一下圖例，然後按一下 **[刪除圖例]**。  
   
@@ -495,7 +494,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  選取圓形圖、按下 Ctrl 鍵，然後選取直條圖。  
   
-2.  在選取兩個圖表的情況下，以滑鼠右鍵按一下 > [配置] > [設定成相同寬度]。  
+2.  選取兩個圖表，以滑鼠右鍵按一下 >**配置** > **成相同寬度**。  
   
     > [!NOTE]  
     > 先按的項目會決定所有已選取項目的寬度。  
@@ -514,7 +513,7 @@ ms.lasthandoff: 08/09/2017
 * [使用清單建立發票和表單](../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)
 * [Tablix 資料區資料格、資料列及資料行 &#40;報表產生器及 SSRS&#41;](../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)。  
   
-如需查詢設計工具的詳細資訊，請參閱[查詢設計工具 &#40;報表產生器&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9) 和[以文字為基礎的查詢設計工具使用者介面 &#40;報表產生器&#41;](../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md)。  
+如需有關查詢設計工具的詳細資訊，請參閱[查詢設計工具 &#40;報表產生器 &#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)和[文字為基礎的查詢設計工具使用者介面 &#40;報表產生器 &#41;](../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
   
 ## <a name="see-also"></a>另請參閱  
 [報表產生器教學課程](../reporting-services/report-builder-tutorials.md) 
