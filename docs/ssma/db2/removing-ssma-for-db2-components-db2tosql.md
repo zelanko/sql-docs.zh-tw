@@ -35,7 +35,7 @@ ms.lasthandoff: 08/02/2017
   
 1.  在控制台中開啟**新增或移除程式**。  
   
-2.  選取 **[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]移轉小幫手 for DB2**，然後按一下 [**移除**。  
+2.  選取 **[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]移轉小幫手 for DB2**，然後按一下**移除**。  
   
 3.  若要確認您想要解除安裝 SSMA，請按一下**是**。  
   

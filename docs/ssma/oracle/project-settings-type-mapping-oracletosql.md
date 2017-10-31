@@ -266,7 +266,7 @@ SSMA for Oracle，在您可以設定引數、 資料行、 區域變數和傳回
 |urowid [*..\*]|uniqueidentifier|  
 |varchar [*..8000]|varchar [*]|  
 |varchar [8001..*]|varchar(max)|  
-|varchar2 [*]8000]|varchar [*]|  
+|varchar2 [*..8000]|varchar [*]|  
 |varchar2 [8001..*]|varcha(max)|  
 |Xmltype|xml|  
   
