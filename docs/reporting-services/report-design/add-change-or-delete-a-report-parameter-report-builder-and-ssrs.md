@@ -15,7 +15,8 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: bd82e177a0399fcf846e0b17e852434f2971a7ef
 ms.contentlocale: zh-tw
@@ -76,3 +77,4 @@ ms.lasthandoff: 08/09/2017
  [將多值參數加入至報表](../../reporting-services/report-design/add-a-multi-value-parameter-to-a-report.md)  
   
   
+
