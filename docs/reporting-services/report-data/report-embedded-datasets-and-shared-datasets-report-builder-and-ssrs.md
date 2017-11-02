@@ -17,8 +17,7 @@ caps.latest.revision: 16
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.workload: On Demand
-ms.translationtype: MT
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 2217e42cf49783db62169ee6d2634d929561ec4c
 ms.contentlocale: zh-tw
@@ -231,4 +230,3 @@ ms.lasthandoff: 08/09/2017
  [報表資料集 &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
   
   
-
