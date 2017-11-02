@@ -42,7 +42,7 @@ ms.lasthandoff: 09/28/2017
   
 2.  建立新的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案。  
   
-    1.  在功能表列上按一下 檔案  、指向 新增 ，然後按一下專案 。  
+    1.  在功能表列上按一下 [檔案]  、指向 [新增] ，然後按一下 [專案] 。  
   
     2.  在左窗格中展開 [商業智慧]  ，然後按一下樹狀檢視中的 [Integration Services]  。  
   
@@ -177,7 +177,7 @@ ms.lasthandoff: 09/28/2017
   
 1.  在 SQL Server Management Studio 中，依序展開 [Integration Services 目錄] 、[SSISDB] 、您 SSIS 專案所在的 **資料夾** 、[專案] 、您的專案節點，以及 [封裝] 。  
   
-2.  在 SSIS 封裝上按一下滑鼠右鍵，接著按一下以依序指向 報表 和 標準報表，然後按一下所有執行。  
+2.  在 SSIS 封裝上按一下滑鼠右鍵，接著按一下以依序指向 [報表] 和 [標準報表]，然後按一下 [所有執行]。  
   
 3.  您應該會在報表中看到 SSIS 封裝執行。  
   
