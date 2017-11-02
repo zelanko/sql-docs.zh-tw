@@ -61,7 +61,7 @@ ms.lasthandoff: 09/19/2017
   
  雖然 @@SERVERNAME函式和 SERVERPROPERTY 函數的 SERVERNAME 屬性可能會傳回有類似格式的字串，資訊可能會不同。 SERVERNAME 屬性會自動報告電腦網路名稱的變更。  
   
- 相反地，@@SERVERNAME不會報告這類變更。 @@SERVERNAME報告本機伺服器名稱使用所做的變更**sp_addserver**或**sp_dropserver**預存程序。  
+ 相反地，@@SERVERNAME不會報告這類變更。 @@SERVERNAME報告本機伺服器名稱使用所做的變更 **sp_addserver** 或 **sp_dropserver** 預存程序。  
   
 ## <a name="examples"></a>範例  
  下列範例會顯示如何使用 `@@SERVERNAME`。  

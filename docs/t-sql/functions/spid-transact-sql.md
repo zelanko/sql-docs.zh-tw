@@ -52,7 +52,7 @@ ms.lasthandoff: 09/19/2017
  **smallint**  
   
 ## <a name="remarks"></a>備註  
- @@SPID可以用來識別目前的使用者處理序的輸出中**sp_who**。  
+ @@SPID可以用來識別目前的使用者處理序的輸出中 **sp_who** 。  
   
 ## <a name="examples"></a>範例  
  這個範例會傳回目前使用者處理序的工作階段識別碼、登入名稱和使用者名稱。  
