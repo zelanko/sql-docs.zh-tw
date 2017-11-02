@@ -189,7 +189,7 @@ ms.lasthandoff: 09/27/2017
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，於物件總管中展開 [Integration Services 目錄] 節點。  
   
-2.  以滑鼠右鍵按一下 SSISDB，按一下 報表，然後按一下標準報表。  
+2.  以滑鼠右鍵按一下 [SSISDB]，按一下 [報表]，然後按一下 [標準報表]。  
   
 3.  按一下下列其中一項或多項，以檢視報表。  
   

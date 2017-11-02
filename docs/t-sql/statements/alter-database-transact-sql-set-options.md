@@ -988,7 +988,7 @@ FEDERATED_SERVICE_ACCOUNT = ON |關閉
 > [!IMPORTANT]  
 >  在未來的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中，ANSI_PADDING 一律為 ON，而且明確將此選項設定為 OFF 的應用程式將會產生錯誤。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 我們建議您一律將 ANSI_PADDING 設為 ON。 當您建立或操作計算資料行索引或索引檢視表時，ANSI_PADDING 也必須是 ON。  
   
- **char (*n*) * * 和**二進位 (*n*) * *，允許當 ANSI_PADDING 設定，將會填補到資料行長度的 null 資料行設為 ON，但當 ANSI_PADDING 是 OFF 時修剪尾端的空格和零。 **char (*n*) * * 和**二進位 (*n*) * * 不允許 null 值的資料行一律會填補到資料行的長度。  
+ **char(*n*)** 和**二進位(*n*)**，允許當 ANSI_PADDING 設定，將會填補到資料行長度的 null 資料行設為 ON，但當 ANSI_PADDING 是 OFF 時修剪尾端的空格和零。 **char(*n*)** 和**二進位(*n*)** 不允許 null 值的資料行一律會填補到資料行的長度。  
   
  利用 SET 陳述式來設定的連接層級設定會覆寫 ANSI_PADDING 的預設資料庫層級設定。 根據預設，當連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體時，ODBC 和 OLE DB 用戶端會發出連接層級的 SET 陳述式，將工作階段的 ANSI_PADDING 設為 ON。 如需詳細資訊，請參閱 [SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md)。  
   
