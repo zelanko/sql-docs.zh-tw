@@ -102,7 +102,7 @@ SQL Server 2017 Analysis Services 會看到一些最重要的增強功能自 SQL
 ## <a name="detail-rows"></a>詳細資料列
 您現在可以定義參與量值的自訂資料列集。 詳細資料列類似多維度模型中的預設鑽研動作。 這可讓使用者檢視比彙總層級更詳細的資訊。 
 
-下列的樞紐分析表會依年份顯示 Adventure Works 範例表格式模型的 Internet Total Sales (網際網路總銷售額)。 您可以滑鼠右鍵按一下量值中有彙總值的儲存格，然後按一下顯示詳細資料  檢視詳細資料列。
+下列的樞紐分析表會依年份顯示 Adventure Works 範例表格式模型的 Internet Total Sales (網際網路總銷售額)。 您可以滑鼠右鍵按一下量值中有彙總值的儲存格，然後按一下 [顯示詳細資料]  檢視詳細資料列。
 
 ![AS_Show_Details](../analysis-services/media/as-show-details.png)
 
