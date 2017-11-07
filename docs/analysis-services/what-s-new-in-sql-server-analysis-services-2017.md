@@ -32,7 +32,7 @@ SQL Server 2017 Analysis Services 會看到一些最重要的增強功能自 SQL
 
 在此版本中，讓我們看看一些重要的新功能。
 
-## <a name="1400-compatibility-level-for-tabular-models"></a>表格式模型的&1400; 相容性層級
+## <a name="1400-compatibility-level-for-tabular-models"></a>表格式模型的 1400 相容性層級
   若要使用的許多新功能與功能所述的以下，必須設定或升級 1400年相容性層級為新的或現有的表格式模型。 使用 1400 相容性層級的模型無法部署到 SQL Server 2016 SP1 或更早版本，或降級為較低的相容性層級。 若要進一步了解，請參閱[Analysis Services 表格式模型的相容性層級](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)。
   
 在 SSDT 中，您可以在建立新的表格式模型專案時，選取新的 1400 相容性層級。 
