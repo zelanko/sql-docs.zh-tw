@@ -72,7 +72,7 @@ ms.lasthandoff: 10/04/2017
 |BULK INSERT|DATAFILETYPE **='char'**|於大量匯入資料時使用字元格式。|  
 |OPENROWSET|N/A|必須使用格式檔案|
   
- \**若要將字元 (**-c**) 資料載入與舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用戶端相容的格式，請使用 **-V** 切換。 如需詳細資訊，請參閱 [從舊版 SQL Server 匯入原生與字元格式資料](../../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)。  
+ \*若要將字元 (**-c**) 資料載入與舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用戶端相容的格式，請使用 **-V** 切換。 如需詳細資訊，請參閱 [從舊版 SQL Server 匯入原生與字元格式資料](../../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)。  
    
 > [!NOTE]
 >  或者，您可以在格式檔案中按照每個欄位指定格式。 如需詳細資訊，請參閱 [匯入或匯出資料的格式檔案 &#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)＞。
