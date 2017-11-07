@@ -4,7 +4,7 @@ description: "顯示更新的內容，如需 Microsoft SQL server Analysis Servi
 services: na
 documentationcenter: 
 author: MightyPen
-manager: jhubbard
+manager: kfile
 editor: 
 ms.service: na
 ms.topic: updart-autogen
