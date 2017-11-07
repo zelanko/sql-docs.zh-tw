@@ -16,10 +16,10 @@ ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
 ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 5aee9077dcf9c0c31746c3e8d3b056376a8e61dc
+ms.sourcegitcommit: 50f9efe65f14dbd73ccbc3c6e81307c3893c469f
+ms.openlocfilehash: c2a77869c6735d5ff67e552abd6c2fc44209166f
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 11/07/2017
 
 ---
 # <a name="generating-dump-files-for-package-execution"></a>產生封裝執行的傾印檔案

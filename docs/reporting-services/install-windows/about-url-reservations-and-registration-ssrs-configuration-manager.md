@@ -20,10 +20,10 @@ ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: eb1f09f1a23a6e24077357c36a0dbc136a86473f
+ms.sourcegitcommit: 5e15fa8674a09821becd437e78cfb0bb472e3bc8
+ms.openlocfilehash: 63fd65591432fecc75ec5af5dd7cde2954ef4930
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 11/07/2017
 
 ---
 # <a name="about-url-reservations-and-registration--ssrs-configuration-manager"></a>關於 URL 保留項目和註冊 (SSRS 組態管理員)
@@ -98,7 +98,7 @@ ms.lasthandoff: 08/09/2017
 |SQL Server Express|入口網站|`http://<servername>/reports_SQLExpress`|`http://<servername>:80/reports_SQLExpress`|  
   
 ##  <a name="URLPermissionsAccounts"></a> Reporting Services URL 的驗證和服務識別  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]URL 保留項目會指定報表伺服器服務的服務帳戶。 執行此服務所用的帳戶會用於針對相同執行個體內執行之 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 應用程式所建立的所有 URL。 報表伺服器執行個體的服務識別會儲存在 RSReportServer.config 檔案中。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL 保留項目會指定報表伺服器服務的服務帳戶。 執行此服務所用的帳戶會用於針對相同執行個體內執行之 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 應用程式所建立的所有 URL。 報表伺服器執行個體的服務識別會儲存在 RSReportServer.config 檔案中。  
   
  此服務帳戶沒有預設值。 但是，安裝期間需要指定服務帳戶，而且即使您在僅限檔案模式下安裝伺服器，仍然會在 RSReportServer.config 的 **URLReservation** 中指定服務帳戶。 此服務帳戶的有效值包括網域使用者帳戶、 **LocalSystem**或 **NetworkService**。  
   
@@ -109,11 +109,11 @@ ms.lasthandoff: 08/09/2017
   
  `http://localhost` URL 會解譯為`http://127.0.0.1`。 如果您將 URL 保留項目限制為電腦名稱或單一 IP 位址，則除非您針對本機電腦上的 127.0.0.1 建立其他保留項目，否則將無法使用 localhost。 同樣地，如果電腦上已停用 localhost 或 127.0.0.1，您將無法使用該 URL。  
   
- [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)]、 [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] 和更新版本包含新的安全性功能，可讓意外使用更高權限執行程式的風險降到最低。 您需要其他步驟，才能在這些作業系統上啟用管理。 如需詳細資訊，請參閱 [Configure a Native Mode Report Server for Local Administration &#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)。  
+ [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)]、 [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] 和更新版本包含新的安全性功能，可讓意外使用更高權限執行程式的風險降到最低。 您需要其他步驟，才能在這些作業系統上啟用管理。 如需詳細資訊，請參閱 [設定原生模式報表伺服器進行本機管理 &#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [設定 URL &#40;SSRS 組態管理員 &#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
- [URL 保留項目語法 &#40;SSRS 組態管理員 &#41;](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md)  
+ [設定 URL &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
+ [URL 保留項目語法 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md)  
   
   
 

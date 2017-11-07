@@ -25,10 +25,10 @@ ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
 ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 779105655150aae2f1397865c67f8e835fd99646
+ms.sourcegitcommit: dfd05ee367b083d2e7a159cbd659a94edd743886
+ms.openlocfilehash: b1ac3cd31061a749a035c9f4feb6ceef8bdebcd3
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 11/07/2017
 
 ---
 # <a name="reporting-services-roles-tasks-vs-sharepoint-groups-permissions"></a>Reporting Services 角色工作 vs。SharePoint 群組權限
@@ -68,7 +68,7 @@ ms.lasthandoff: 08/09/2017
   
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 角色|SharePoint 群組|  
 |--------------------------------------|-----------------------|  
-|**瀏覽器**<br /><br /> 檢視| 使用 [訪客] 群組可授與檢視報表的權限。 [訪客]  群組具有「讀取」層級權限，讓群組成員能夠檢視網頁、清單項目和文件。|  
+|**瀏覽器**<br /><br /> 檢視| 使用 [訪客] 群組可授與檢視報表的權限。  [訪客] 群組具有「讀取」層級權限，讓群組成員能夠檢視網頁、清單項目和文件。|  
 |**內容管理員**<br /><br /> 對所有項目和項目層級的作業具有完整權限，其中包括設定安全性的權限。|使用「 **擁有者** 」群組可授與完整控制權，來管理 SharePoint 網站上的報表伺服器項目。 「 **擁有者** 」群組具有「完整控制權」權限，讓群組成員能夠變更網站內容、網頁或功能。 完整控制存取權應該僅限於網站管理員。|  
 |**我的報表**|沒有對等的群組。  以 SharePoint 模式執行的報表伺服器不支援 [我的報表]。 如果您想要使用對等的功能，可以使用 [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 中的「我的網站」功能。|  
 |**發行者**<br /><br /> 加入、更新、檢視和刪除報表、報表模型、共用資料來源和資源。|使用「 **成員** 」群組可授與權限，在 SharePoint 網站上加入項目、編輯項目和更新相依項目的參考。 「 **成員** 」群組具有「參與」等級權限，讓群組成員能夠檢視網頁、加入和更新項目以及提交變更核准。|  
@@ -108,10 +108,10 @@ ms.lasthandoff: 08/09/2017
 |檢視報表伺服器屬性|系統|無 (不適用)。 報表伺服器不控制使用者在管理中心是否有權限檢視整合設定。|  
 |檢視共用排程|系統|開啟項目。|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [設定 SharePoint 網站上報表伺服器項目的權限 &#40;SharePoint 整合模式的 Reporting Services&#41;](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
  [在 SharePoint Web 應用程式中設定報表伺服器作業的權限](../../reporting-services/security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)   
- [授與權限在 SharePoint 網站上的報表伺服器項目](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
+ [授與 SharePoint 網站上報表伺服器項目的權限](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [角色定義](../../reporting-services/security/role-definitions.md)   
  [預先定義的角色](../../reporting-services/security/role-definitions-predefined-roles.md)  
   

@@ -17,10 +17,10 @@ ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4e010bccf1cee56d0f572c899f81e54f122f050e
+ms.sourcegitcommit: 5e15fa8674a09821becd437e78cfb0bb472e3bc8
+ms.openlocfilehash: 50ec28d3a5080187c0bd844dcba364295bcdef35
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 11/07/2017
 
 ---
 # <a name="create-and-modify-embedded-data-sources"></a>建立和修改內嵌資料來源
@@ -63,7 +63,7 @@ ms.lasthandoff: 08/09/2017
   
 3.  確認已選取 **[使用內嵌於我的報表的連接]** 。  
   
-    1.  從 [選取連接類型] 下拉式清單中，選取資料來源類型，例如 [Microsoft SQL Server] 或 [OLE DB]。  
+    1.  從**選取連接類型**下拉式清單中，選取資料來源類型，例如**Microsoft SQL Server**或**OLE DB**。  
   
     2.  使用以下其中一個替代方式來指定連接字串：  
   
@@ -83,7 +83,7 @@ ms.lasthandoff: 08/09/2017
   
      資料來源會出現在 [報表資料] 窗格中。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [報表內嵌資料集和共用資料集 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [在報表產生器中指定認證](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)  
   
