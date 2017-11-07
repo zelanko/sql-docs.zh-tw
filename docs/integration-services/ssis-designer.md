@@ -53,7 +53,7 @@ ms.lasthandoff: 10/11/2017
   
  下圖顯示 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師與 [工具箱] 視窗。  
   
- ![設計師與工具箱的螢幕擷取畫面]\(../integration-services/media/denali-designerandtoolbox.gif "設計師與工具箱的螢幕擷取畫面")  
+ ![設計師與工具箱的螢幕擷取畫面](../integration-services/media/denali-designerandtoolbox.gif "設計師與工具箱的螢幕擷取畫面")  
   
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包含用來在封裝中加入功能的其他對話方塊和視窗， [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 則提供用於設定開發環境及使用封裝的視窗和對話方塊。 如需詳細資訊，請參閱 [Integration Services User Interface](../integration-services/integration-services-user-interface.md)(Integration Services 使用者介面)。  
   
@@ -136,7 +136,7 @@ ms.lasthandoff: 10/11/2017
   
  將代表來源、轉換以及目的地的圖形物件，從 **[工具箱]** 拖曳至 **[資料流程]** 索引標籤的設計介面，然後連接物件來建立決定轉換執行順序的路徑，以建立資料流程。  
   
- 以滑鼠右鍵按一下路徑，然後按一下資料檢視器，即可加入資料檢視器，以檢視在每個資料流程物件之前與之後的資料。  
+ 以滑鼠右鍵按一下路徑，然後按一下 [資料檢視器]，即可加入資料檢視器，以檢視在每個資料流程物件之前與之後的資料。  
   
  您也可以使用 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師，來加入 **[資料流程]** 索引標籤中的下列功能：  
   
@@ -169,7 +169,7 @@ ms.lasthandoff: 10/11/2017
 ## <a name="package-explorer-tab"></a>封裝總管索引標籤
 使用 [[!INCLUDE[ssIS](../includes/ssis-md.md)] 設計工具] 的封裝總管索引標籤，即可查看封裝中所有元素的階層式檢視：組態、連接、事件處理常式、可執行的物件 (例如：工作和容器)、記錄提供者、優先順序條件約束，以及變數。 如果封裝包含資料流程工作，封裝總管索引標籤就會包括其中含有資料流程元件之階層式檢視的節點。  
   
- 以滑鼠右鍵按一下封裝元素，然後按一下屬性，即可在 屬性 視窗中顯示元素的屬性，或是按一下 刪除 來刪除元素。 
+ 以滑鼠右鍵按一下封裝元素，然後按一下 [屬性]，即可在 [屬性] 視窗中顯示元素的屬性，或是按一下 [刪除] 來刪除元素。 
  
 ## <a name="progress-tab"></a>進度索引標籤
 當您在 **中執行封裝時，使用** 設計師的 [!INCLUDE[ssIS](../includes/ssis-md.md)] [進度] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 索引標籤，即可檢視執行 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]封裝的進度。 **[進度]** 索引標籤會列出開始時間、完成時間，以及驗證和執行封裝及其可執行檔的經過時間；封裝的任何資訊或警告；進度通知；封裝是成功還是失敗；以及在封裝執行期間所產生的任何錯誤訊息。  
