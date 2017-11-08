@@ -1,6 +1,6 @@
 ---
 title: "什麼是 SQL Server 2017 Analysis Services 的新功能 |Microsoft 文件"
-ms.date: 10/03/2017
+ms.date: 10/27/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -10,13 +10,13 @@ ms.topic: article
 ms.assetid: 1eb6afc9-76ed-45a2-a188-374a4fc23224
 author: Minewiskan
 ms.author: owend
-manager: erikre
+manager: kfile
 ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: 12b379c1d02dc07a5581a5a3f3585f05f763dad7
-ms.openlocfilehash: 59f753e85f2d10d70d7784335205e0d231c5ae00
+ms.sourcegitcommit: 14ce5d9110f49ce155e89a96e1f72618f2879661
+ms.openlocfilehash: 68410430d97a0e3033e17deb7d03a0ba8fecd436
 ms.contentlocale: zh-tw
-ms.lasthandoff: 10/04/2017
+ms.lasthandoff: 11/08/2017
 
 ---
 # <a name="whats-new-in-sql-server-2017-analysis-services"></a>SQL Server 2017 Analysis Services 中最新消息
@@ -47,9 +47,9 @@ SQL Server 2017 Analysis Services 會看到一些最重要的增強功能自 SQL
 請務必記住，一旦您 1400年来升級現有的模型，您無法降級。 請務必保留 1200年模型資料庫的備份。
 
 ## <a name="modern-get-data-experience"></a>新式取得資料經驗
-從資料來源擷取資料到您的表格式模型時，SQL Server Data Tools (SSDT) 導入了現代**取得資料**遇到 1400年相容性層級的模型。 這項新功能是以 Power BI Desktop 和 Microsoft Excel 2016 中類似的功能為基礎。 現代的 取得資料 功能提供廣大資料轉換和資料 mashup 功能，透過 取得資料的查詢產生器 」 和 「 M 運算式。
+從資料來源匯入資料到您的表格式模型時，SQL Server Data Tools (SSDT) 導入了現代**取得資料**遇到 1400年相容性層級的模型。 這項新功能是以 Power BI Desktop 和 Microsoft Excel 2016 中類似的功能為基礎。 現代的 取得資料 功能提供廣大資料轉換和資料 mashup 功能，透過 取得資料的查詢產生器 」 和 「 M 運算式。
 
-現代的 取得資料會遇到的各種不同的其他資料來源提供的支援。 未來的更新將會支援其他資料來源。
+現代的 [取得資料] 功能提供支援各種不同的資料來源。 接下來，更新會包含更多的支援。
 
 ![AS_Get_Data_in_SSDT](../analysis-services/media/as-get-data-in-ssdt.png)
 

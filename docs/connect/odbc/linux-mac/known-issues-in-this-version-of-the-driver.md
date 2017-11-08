@@ -17,14 +17,17 @@ ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f4202004a556479779d4884fc42d04ae540ed56d
+ms.sourcegitcommit: 50f9efe65f14dbd73ccbc3c6e81307c3893c469f
+ms.openlocfilehash: 62fd9dd8bf2e11fe39ffaa2e893ded55b214b09c
 ms.contentlocale: zh-tw
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 11/08/2017
 
 ---
 # <a name="known-issues-in-this-version-of-the-driver"></a>此驅動程式版本的已知問題
-[!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)] 本主題包含一份已知問題的 Microsoft ODBC Driver 13 for SQL Server on Linux 及 macOS。
+
+[!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
+
+本主題包含一份已知問題的 Microsoft ODBC Driver 13 for SQL Server on Linux 及 macOS。
 
 其他問題會公佈於 [Microsoft ODBC 驅動程式團隊部落格](http://blogs.msdn.com/b/sqlnativeclient/)上。  
 

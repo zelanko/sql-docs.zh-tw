@@ -14,14 +14,17 @@ ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2e3aac41bd87f52998edf366d7c3da2326de3f26
+ms.sourcegitcommit: 50f9efe65f14dbd73ccbc3c6e81307c3893c469f
+ms.openlocfilehash: 85ba8b35fa698769bd390837855729f3edbc7291
 ms.contentlocale: zh-tw
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 11/08/2017
 
 ---
 # <a name="programming-guidelines"></a>程式設計指導方針
-[!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]程式設計功能[!INCLUDE[msCoName](../../../includes/msconame_md.md)]ODBC Driver 13 和 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] macOS 和 Linux 為基礎中的 ODBC[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]原生用戶端 ([SQL Server Native Client (ODBC)](http://go.microsoft.com/fwlink/?LinkID=134151))。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]原生用戶端以 Windows Data Access Components 中的 ODBC 為基礎 ([ODBC 程式設計人員參考](http://go.microsoft.com/fwlink/?LinkID=45250))。  
+
+[!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
+
+程式設計功能[!INCLUDE[msCoName](../../../includes/msconame_md.md)]ODBC Driver 13 和 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] macOS 和 Linux 為基礎中的 ODBC[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]原生用戶端 ([SQL Server Native Client (ODBC)](http://go.microsoft.com/fwlink/?LinkID=134151))。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]原生用戶端以 Windows Data Access Components 中的 ODBC 為基礎 ([ODBC 程式設計人員參考](http://go.microsoft.com/fwlink/?LinkID=45250))。  
 
 ODBC 應用程式可以使用 Multiple Active Result Sets (MARS) 和其他[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]所包括的特定功能`/usr/local/include/msodbcsql.h`之後 unixODBC 標頭 (`sql.h`， `sqlext.h`， `sqltypes.h`，和`sqlucode.h`)。 然後使用相同的符號名稱[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]-您可以在 Windows ODBC 應用程式中的特定項目。  
 
