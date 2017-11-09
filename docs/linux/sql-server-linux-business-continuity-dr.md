@@ -1,8 +1,9 @@
 ---
 title: "SQL Server on Linux 的災害復原 |Microsoft 文件"
 description: 
-author: mihaelab
+author: allanhirt
 ms.author: mihaelab
+ms.reviewer: mikeray
 manager: jhubbard
 ms.date: 10/02/2017
 ms.topic: article
