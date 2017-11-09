@@ -18,10 +18,10 @@ ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3cda571a6e30387ccf1764e94fe6e6a3f1625262
+ms.sourcegitcommit: b4b9a8774565dd0e31caf940cf3e8254b0987205
+ms.openlocfilehash: 3a2651e6e67cceb648049f99ab9588a44b7f3fb0
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 11/08/2017
 
 ---
 # <a name="columns-with-a-name"></a>有名稱的資料行
@@ -38,7 +38,7 @@ ms.lasthandoff: 08/03/2017
 -   一個資料行具有不同的名稱。  
   
 ## <a name="column-name-starts-with-an-at-sign-"></a>資料行名稱以 @ 符號開頭  
- 如果資料行名稱是以 @ 符號開頭且不包含斜線 (/)，就會建立具有對應資料行值的 <`row`> 元素之屬性。 例如，下列查詢會傳回兩個資料行 (@PmId、Name) 的資料列集。 在產生的 XML 中，**PmId** 屬性會加入對應的 <`row`> 元素中，並會將 ProductModelID 值指派給該元素。  
+ 如果資料行名稱開頭 at 符號 (@)，而且不包含斜線 （/）、 屬性`row`建立具有對應的資料行值的項目。 例如，下列查詢會傳回兩個資料行 (@PmId、Name) 的資料列集。 在產生的 XML， **PmId**屬性新增至對應`row`項目並將 ProductModelID 值指派給它。  
   
 ```  
   
@@ -71,9 +71,9 @@ go
 ```  
   
 ## <a name="column-name-does-not-start-with-an-at-sign-"></a>資料行名稱不是以 @ 符號開頭  
- 如果資料行名稱不是以 At 符號 (@) 開頭、不是其中一個 XPath 節點測試，而且不包含斜線 (/)，預設會建立資料列元素 <`row`> 的子元素之 XML 元素。  
+ 如果資料行名稱開頭不 at 符號 (@)、 不是其中一個 XPath 節點測試中，而且不包含斜線 （/），資料列元素的子元素的 XML 項目`row`預設情況下，會建立。  
   
- 下列查詢指定資料行名稱，也就是結果。 因此，<`result`> 子元素會加入 <`row`> 元素。  
+ 下列查詢指定資料行名稱，也就是結果。 因此，`result`項目子系加入至`row`項目。  
   
 ```  
 SELECT 2+2 as result  
@@ -88,7 +88,7 @@ for xml PATH
 </row>  
 ```  
   
- 下列查詢會針對 **xml** 類型的 Instructions 資料行指定之 XQuery 所傳回的 XML，指定資料行名稱 ManuWorkCenterInformation。 因此，將以 <`row`> 元素的子元素加入 <`ManuWorkCenterInformation`> 元素。  
+ 下列查詢會針對 **xml** 類型的 Instructions 資料行指定之 XQuery 所傳回的 XML，指定資料行名稱 ManuWorkCenterInformation。 因此，`ManuWorkCenterInformation`項目新增為子系`row`項目。  
   
 ```  
 SELECT   
@@ -118,7 +118,7 @@ go
 ```  
   
 ## <a name="column-name-does-not-start-with-an-at-sign--and-contains-a-slash-mark-"></a>資料行名稱不是以 @ 符號開頭且包含斜線 (/)  
- 如果資料行名稱不是以 @ 符號開頭，但包含斜線 (/)，則資料行名稱會指出 XML 階層。 例如，如果資料行名稱是 "Name1/Name2/Name3.../Name ***n*** "，則每個 Name ***i*** 代表一個元素名稱，該元素以巢狀化方式出現在目前資料列元素 (for i=1) 中，或是在具有 Name ***i-1*** 名稱之元素的底下。 如果 Name ***n*** 以 '@' 開頭，它會對應至 Name ***n-1*** 元素的屬性。  
+ 如果資料行名稱不是以 @ 符號開頭，但包含斜線 (/)，則資料行名稱會指出 XML 階層。 例如，如果資料行名稱是 "Name1/Name2/Name3.../Name***n*** "，則每個 Name***i*** 代表一個元素名稱，該元素以巢狀化方式出現在目前資料列元素 (for i=1) 中，或是在具有 Name***i-1***名稱之元素的底下。 如果 Name***n*** 以 '@' 開頭，它會對應至 Name***n-1*** 元素的屬性。  
   
  例如，下列查詢將會傳回員工識別碼與姓名，它們是以複雜的元素 EmpName 所代表，該元素包含姓名的 First、Middle 及 Last。  
   
@@ -133,7 +133,7 @@ AND    E.EmployeeID=1
 FOR XML PATH  
 ```  
   
- 該資料行名稱是在 PATH 模式中建構 XML 時當做路徑使用。 包含員工識別碼值的資料行名稱是以 '@' 開頭，因此會將 **EmpID** 屬性加入 <`row`> 元素。 在指出階層的資料行名稱中，所有其他的資料行都包含斜線 ('/')。 產生的 XML 在 <`row`> 元素底下將有 <`EmpName`> 子元素，而且 <`EmpName`> 子元素將有 <`First`>、<`Middle`> 及 <`Last`> 子元素。  
+ 該資料行名稱是在 PATH 模式中建構 XML 時當做路徑使用。 包含員工識別碼值的資料行名稱的開頭 '\@'。因此，屬性**EmpID**，加入至`row`項目。 在指出階層的資料行名稱中，所有其他的資料行都包含斜線 ('/')。 產生的 XML 將會有`EmpName`歲孩童`row`項目，而`EmpName`會有子`First`，`Middle`和`Last`元素子系。  
   
 ```  
 <row EmpID="1">  
@@ -172,7 +172,7 @@ FOR XML PATH, ELEMENTS XSINIL
   
  根據預設，PATH 模式會產生元素中心的 XML。 因此，在 PATH 模式查詢中指定 ELEMENTS 指示詞將不會有任何作用。 然而，如上述範例所示，ELEMENTS 指示詞加上 XSINIL 就可以為 Null 值產生元素。  
   
- 除了識別碼與名稱之外，下列查詢還會擷取員工地址。 根據地址資料行之資料行名稱中的路徑，會將 <`Address`> 子元素加入 <`row`> 元素，而地址詳細資料則會以 <`Address`> 元素的子元素加入。  
+ 除了識別碼與名稱之外，下列查詢還會擷取員工地址。 根據地址資料行，資料行名稱中的路徑`Address`項目子系加入至`row`項目和地址詳細資料會加入做為項目子系的`Address`項目。  
   
 ```  
 SELECT EmployeeID   "@EmpID",   
@@ -205,7 +205,7 @@ FOR XML PATH
 ```  
   
 ## <a name="several-columns-share-the-same-path-prefix"></a>數個資料行共用相同的路徑前置詞  
- 如果數個後續的資料行共用相同的路徑前置詞，則會在相同的名稱下將它們群組在一起。 即使不同的命名空間前置詞是與相同的命名空間繫結，但仍使用了它們，就會將路徑視為不同。 在上述查詢中，FirstName、MiddleName 及 LastName 資料行是共用相同的 EmpName 前置詞。因此，會將它們以 <`EmpName`> 子元素加入。 當您在上述範例中建立 <`Address`> 元素時也是如此。  
+ 如果數個後續的資料行共用相同的路徑前置詞，則會在相同的名稱下將它們群組在一起。 即使不同的命名空間前置詞是與相同的命名空間繫結，但仍使用了它們，就會將路徑視為不同。 在上述查詢中，FirstName、 MiddleName 及 LastName 資料行共用相同的 EmpName 前置詞。因此，它們會加入做為子系的`EmpName`項目。 這也是您所建立時的情況下`Address`前一個範例中的項目。  
   
 ## <a name="one-column-has-a-different-name"></a>一個資料行具有不同的名稱  
  如果具有不同名稱的資料行出現在其間，它將會拆散群組，如下列修改的查詢所示。 查詢會在 FirstName 與 MiddleName 資料行之間加入地址資料行，以拆散上述查詢所指定的 FirstName、MiddleName 及 LastName 的群組。  
@@ -225,7 +225,7 @@ AND    E.EmployeeID=1
 FOR XML PATH  
 ```  
   
- 因此，此查詢會建立兩個 <`EmpName`> 元素。 第一個 <`EmpName`> 元素具有 <`FirstName`> 子元素，而第二個 <`EmpName`> 元素則具有 <`MiddleName`> 及 <`LastName`> 子元素。  
+ 如此一來，查詢會建立兩個`EmpName`項目。 第一個`EmpName`項目具有`FirstName`，第二個項目子系`EmpName`項目具有`MiddleName`和`LastName`元素子系。  
   
  以下是結果：  
   
