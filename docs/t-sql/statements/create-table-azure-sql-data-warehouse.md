@@ -2,7 +2,7 @@
 title: "建立資料表 （Azure SQL 資料倉儲） |Microsoft 文件"
 ms.custom: 
 ms.date: 07/14/2017
-ms.prod: sql-non-specified
+ms.prod: 
 ms.reviewer: 
 ms.service: sql-data-warehouse
 ms.suite: 
