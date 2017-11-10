@@ -93,7 +93,7 @@ ms.lasthandoff: 09/01/2017
   
      如果是部署在負載平衡叢集中的伺服器，請使用指派給叢集的虛擬伺服器名稱。  
   
-2.  當您在 Excel 中設定連接時，您可以在資料連線精靈的最後一頁上指定 Excel Services 的驗證設定。 這些設定是用來設定活頁簿上的屬性，前提是您將活頁簿上傳到擁有 Excel Services 的 SharePoint 伺服器。 這些設定會用於資料重新整理作業。 選項包括 [Windows 驗證]、[Secure Store Service] (SSS) 和 [無]。  
+2.  當您在 Excel 中設定連接時，您可以在資料連線精靈的最後一頁上指定 Excel Services 的驗證設定。 這些設定是用來設定活頁簿上的屬性，前提是您將活頁簿上傳到擁有 Excel Services 的 SharePoint 伺服器。 這些設定會用於資料重新整理作業。 選項包括 [Windows 驗證]、[Secure Store Service] \(SSS) 和 [無]。  
   
      請避免使用 [無]。 Analysis Services 無法讓您指定連接字串上的使用者名稱和密碼，除非您連接到已經有設定 HTTP 存取的伺服器。 同樣地，除非您已經知道 SSS 目標應用程式識別碼會對應到擁有 Analysis Services 資料庫之使用者存取權的一組 Windows 使用者認證，否則請勿使用 SSS。 在大部分情況下，使用 Windows 驗證的預設選項是來自 Excel 之 Analysis Services 連接的最佳選擇。  
   

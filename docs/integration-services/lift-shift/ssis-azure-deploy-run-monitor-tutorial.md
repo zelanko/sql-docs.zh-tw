@@ -112,7 +112,7 @@ Get-AzureRmDataFactoryV2IntegrationRuntime -DataFactoryName $DataFactoryName -Na
 ### <a name="get-the-status-of-the-azure-ssis-integration-runtime"></a>取得 Azure SSIS 整合執行階段的狀態
 
 ```powershell
-Get-AzureRmDataFactoryV2IntegrationRuntimeStatus -DataFactoryName $DataFactoryName -Name $AzureSsisIRName -ResourceGroupName $ResourceGroupName
+Get-AzureRmDataFactoryV2IntegrationRuntime -Status -DataFactoryName $DataFactoryName -Name $AzureSsisIRName -ResourceGroupName $ResourceGroupName
 ```
 
 ## <a name="next-steps"></a>後續的步驟

@@ -1,7 +1,7 @@
 ---
 title: "建立使用者定義函式 (Database Engine) | Microsoft Docs"
 ms.custom: 
-ms.date: 10/24/2016
+ms.date: 11/09/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -75,7 +75,7 @@ ms.lasthandoff: 09/27/2017
 ##  <a name="Scalar"></a> 純量函數  
  下列範例會在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中建立多重陳述式純量函數。 這個函數使用了一個輸入值 `ProductID`，並傳回單一資料值，也就是指定產品的彙總存貨量。  
   
-```  
+```t-sql  
 IF OBJECT_ID (N'dbo.ufnGetInventoryStock', N'FN') IS NOT NULL  
     DROP FUNCTION ufnGetInventoryStock;  
 GO  
@@ -92,24 +92,21 @@ BEGIN
      IF (@ret IS NULL)   
         SET @ret = 0;  
     RETURN @ret;  
-END;  
-GO  
-  
+END; 
 ```  
   
  以下範例會使用 `ufnGetInventoryStock` 函數來傳回 `ProductModelID` 介於 75 和 80 之間的產品目前的存貨量。  
   
-```  
+```t-sql  
 SELECT ProductModelID, Name, dbo.ufnGetInventoryStock(ProductID)AS CurrentSupply  
 FROM Production.Product  
 WHERE ProductModelID BETWEEN 75 and 80;  
-  
 ```  
   
 ##  <a name="TVF"></a> 資料表值函式  
  下列範例會在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中建立內嵌資料表值函式。 這個函數使用了一個輸入參數，也就是客戶 (商店) 識別碼，並傳回 `ProductID`和 `Name`資料行，以及從年初至今將每項產品銷售給商店的彙總銷售額 `YTD Total` 。  
   
-```  
+```t-sql  
 IF OBJECT_ID (N'Sales.ufn_SalesByStore', N'IF') IS NOT NULL  
     DROP FUNCTION Sales.ufn_SalesByStore;  
 GO  
@@ -126,19 +123,17 @@ RETURN
     WHERE C.StoreID = @storeid  
     GROUP BY P.ProductID, P.Name  
 );  
-  
 ```  
   
  下例會叫用這個函數並指定客戶識別碼 602。  
   
-```  
+```t-sql  
 SELECT * FROM Sales.ufn_SalesByStore (602);  
-  
 ```  
   
  下列範例會在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中建立資料表值函式。 這個函數使用單一輸入參數 `EmployeeID` ，並傳回一份清單，列出這位指定員工的所有直接或間接下屬。 然後叫用此函數並指定員工識別碼 109。  
   
-```  
+```t-sql  
 IF OBJECT_ID (N'dbo.ufn_FindReports', N'TF') IS NOT NULL  
     DROP FUNCTION dbo.ufn_FindReports;  
 GO  
@@ -180,13 +175,12 @@ GO
 -- Example invocation  
 SELECT EmployeeID, FirstName, LastName, JobTitle, RecursionLevel  
 FROM dbo.ufn_FindReports(1);  
-  
 ```  
   
 ## <a name="more-examples"></a>更多範例  
  - [使用者定義的函式](../../relational-databases/user-defined-functions/user-defined-functions.md)   
  - [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md) 
-  - [Alter Function (Transact SQL)](../../tools/sql-server-profiler/start-sql-server-profiler.md) 
+ - [Alter Function (Transact SQL)](../../tools/sql-server-profiler/start-sql-server-profiler.md) 
  - [Drop Function (Transact SQL)](../../tools/sql-server-profiler/start-sql-server-profiler.md)
  - [Drop Partition Function (Transact SQL)](https://msdn.microsoft.com/library/ms187759(SQL.130).aspx)
  - [社群](https://www.bing.com/search?q=user%20defined%20function%20%22sql%20server%202016%22%20examples&qs=n&form=QBRE&pq=user%20defined%20function%20%22sql%20server%202016%22%20examples&sc=0-48&sp=-1&sk=&cvid=C3AD337125A840AD9EEFA3AAC36A3712)中有更多範例
