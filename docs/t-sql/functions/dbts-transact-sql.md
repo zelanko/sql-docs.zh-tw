@@ -30,7 +30,7 @@ ms.contentlocale: zh-tw
 ms.lasthandoff: 09/19/2017
 
 ---
-# <a name="x40x40dbts-transact-sql"></a>&#x40;&#x40; DBTS (TRANSACT-SQL)
+# <a name="x40x40dbts-transact-sql"></a>&#x40;&#x40;DBTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 傳回目前資料庫的目前 **timestamp** 資料類型值。 這個時間戳記在資料庫中必須是唯一的。
