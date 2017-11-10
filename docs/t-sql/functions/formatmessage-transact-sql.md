@@ -66,7 +66,7 @@ FORMATMESSAGE ( { msg_number  | ' msg_string ' } , [ param_value [ ,...n ] ] )
   
  FORMATMESSAGE 會用使用者目前的語言來查閱訊息。 如果沒有當地語系化版本的訊息，就會使用 U.S. English 版本。  
   
- 如果是當地語系化的訊息，提供的參數值必須對應於 U.S. English 版本中的參數預留位置。。 也就是說，當地語系化版本中的參數 1 必須對應於 U.S. English 版本中的參數 1，參數 2 必須對應於參數 2，依此類推。  
+ 如果是當地語系化的訊息，提供的參數值必須對應於 U.S. English 版本中的參數預留位置。 也就是說，當地語系化版本中的參數 1 必須對應於 U.S. English 版本中的參數 1，參數 2 必須對應於參數 2，依此類推。  
   
 ## <a name="examples"></a>範例  
   

@@ -31,7 +31,7 @@ ms.contentlocale: zh-tw
 ms.lasthandoff: 09/01/2017
 
 ---
-# <a name="x40x40identity-transact-sql"></a>（& s) #x 40; & #x 40，則身分識別 (TRANSACT-SQL)
+# <a name="x40x40identity-transact-sql"></a>&#x40;&#x40; 則身分識別 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   這是傳回最後插入的識別值之系統函數。  
@@ -89,7 +89,7 @@ GO
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [IDENT_CURRENT &#40;Transact-SQL&#41;](../../t-sql/functions/ident-current-transact-sql.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
- [SCOPE_IDENTITY &#40;TRANSACT-SQL &#41;](../../t-sql/functions/scope-identity-transact-sql.md)   
+ [SCOPE_IDENTITY &#40;Transact-SQL&#41;](../../t-sql/functions/scope-identity-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  
   
   
