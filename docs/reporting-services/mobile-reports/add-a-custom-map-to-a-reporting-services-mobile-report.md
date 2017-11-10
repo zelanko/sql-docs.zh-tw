@@ -1,5 +1,5 @@
 ---
-title: "Reporting Services 行動報表中加入自訂地圖 |Microsoft 文件"
+title: "將自訂地圖新增至 Reporting Services 行動報表 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -14,8 +14,7 @@ caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.workload: Inactive
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e38a8b7a03c79a596d2c795b3ee992e974f604cb
 ms.contentlocale: zh-tw
@@ -37,7 +36,7 @@ ms.lasthandoff: 08/09/2017
   
    ![SSMRP_MapsGallery](../../reporting-services/mobile-reports/media/ssmrp-mapsgallery.png)  
   
-2. 在 [配置] 檢視 > [視覺屬性] 面板 > [地圖] 中，選取 [Custom Map From File] (檔案的自訂地圖)。   
+2. 在 [配置] 檢視 > [視覺屬性] 面板 > [地圖] 中，選取 [Custom Map From File]\(檔案的自訂地圖)。   
   
    ![SSMRP_SelectCustomMap](../../reporting-services/mobile-reports/media/ssmrp-selectcustommap.png)  
   
