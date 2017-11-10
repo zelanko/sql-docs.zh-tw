@@ -1,5 +1,5 @@
 ---
-title: "什麼 &#39; s New in Analysis Services |Microsoft 文件"
+title: "Analysis Services 的新功能 |Microsoft 文件"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/24/2017
@@ -23,7 +23,7 @@ ms.contentlocale: zh-tw
 ms.lasthandoff: 09/01/2017
 
 ---
-# <a name="what39s-new-in-analysis-services"></a>什麼 &#39; s New in Analysis Services
+# <a name="what39s-new-in-analysis-services"></a>Analysis Services 的新功能
 SQL Server 2016 Analysis Services 包含許多新的增強功能提供更佳的效能、 更容易撰寫的方案、 自動化的資料庫管理，增強的關聯性具有雙向交叉篩選，平行資料分割處理和執行更多。 此版本中的大多數增強功能的核心是針對表格式模型資料庫新增的相容性層級 1200。     
 
 ## <a name="azure-analysis-services"></a>Azure Analysis Services
@@ -144,7 +144,7 @@ refresh|處理物件。 ASSL 對等項目為 PROCESS。
 ### <a name="dax-variables"></a>DAX 變數    
 此版本現在會在 DAX 中包含變數的支援。 變數現在可以將運算式的結果儲存為具名變數，然後做為引數傳遞至其他量值運算式。 一旦計算變數運算式的結果值，這些值就不會變更，即使另一個運算式中參考的此變數。 如需詳細資訊，請參閱 [VAR 函數](http://msdn.microsoft.com/library/mt243785.aspx)。    
 ### <a name="new-dax-functions"></a>新的 DAX 函數
-在此版本中，DAX 引進了超過&50; 個新函數，以在 Power BI 中支援更快速的計算和增強的視覺效果。 如需詳細資訊，請參閱 [New DAX Functions](http://msdn.microsoft.com/library/mt704075.aspx)(新的 DAX 函數)。
+在此版本中，DAX 引進了超過 50 個新函數，以在 Power BI 中支援更快速的計算和增強的視覺效果。 如需詳細資訊，請參閱 [New DAX Functions](http://msdn.microsoft.com/library/mt704075.aspx)(新的 DAX 函數)。
 ### <a name="save-incomplete-measures"></a>儲存不完整的量值
 您現在可以直接在表格式 1200 模型專案中儲存不完整的 DAX 量值，然後在您準備好繼續進行時再次取用。
 ### <a name="additional-dax-enhancements"></a>其他 DAX 增強功能
