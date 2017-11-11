@@ -1,7 +1,7 @@
 ---
 title: "改變外部資料來源 (TRANSACT-SQL) |Microsoft 文件"
 ms.custom: 
-ms.date: 12/16/2016
+ms.date: 11/10/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -31,7 +31,7 @@ ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="alter-external-data-source-transact-sql"></a>改變外部資料來源 (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   修改用來建立外部資料表的外部資料來源。 外部資料來源可以是 Hadoop 或 Azure blob 儲存體 (WASB)。  
   

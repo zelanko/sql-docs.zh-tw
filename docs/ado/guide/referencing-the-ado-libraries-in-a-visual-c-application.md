@@ -3,8 +3,11 @@ title: "參照 ADO 程式庫中的 Visual c + + 應用程式 |Microsoft 文件"
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: guide
 ms.technology: "“drivers”"
 ms.tgt_pltfrm: 
 ms.topic: article
