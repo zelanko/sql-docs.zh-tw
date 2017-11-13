@@ -62,7 +62,7 @@ ALTER DATABASE database_name
  SET HADR  
  在指定的資料庫上執行所指定的 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 命令。  
   
- {可用性群組** = ** *group_name* |OFF}  
+ {可用性群組 **=**  *group_name* |OFF}  
  從指定的可用性群組中加入或移除可用性資料庫，方法如下：  
   
  *群組名稱*  
@@ -89,7 +89,7 @@ ALTER DATABASE database_name
  若次要資料庫已落後主要資料庫過多，而您不想等候它趕上時，移除次要資料庫將有所助益。 移除次要資料庫之後, 您可以加以更新藉由還原一系列的備份結尾新的記錄備份 （使用 RESTORE... 使用 WITH NORECOVERY)。  
   
 > [!IMPORTANT]  
->  若要完全移除可用性資料庫從可用性群組，請連接到裝載主要複本的伺服器執行個體，並使用[ALTER AVAILABILITY GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md)*group_name*移除資料庫*availability_database_name*陳述式。 如需詳細資訊，請參閱[移除主要資料庫從可用性群組 & #40;SQL Server & #41;](../../database-engine/availability-groups/windows/remove-a-primary-database-from-an-availability-group-sql-server.md).  
+>  若要完全移除可用性資料庫從可用性群組，請連接到裝載主要複本的伺服器執行個體，並使用[ALTER AVAILABILITY GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md)*group_name*移除資料庫*availability_database_name*陳述式。 如需詳細資訊，請參閱[移除主要資料庫從可用性群組 &#40;SQL Server &#41;](../../database-engine/availability-groups/windows/remove-a-primary-database-from-an-availability-group-sql-server.md).  
   
  SUSPEND  
  暫停次要資料庫上的資料活動。 一旦裝載目標資料庫的複本接受 SUSPEND 命令之後，就會將其傳回，但暫停資料庫實際上是以非同步方式進行。  
@@ -110,7 +110,7 @@ ALTER DATABASE database_name
 > [!NOTE]  
 >  暫停和繼續 Alwayson 次要資料庫不會直接影響可用性的主要資料庫，不過暫停次要資料庫可能影響主要資料庫的備援和容錯移轉功能直到暫停次要資料庫會繼續執行。 相反的，在資料庫鏡像中，鏡像狀態會在鏡像資料庫和主體資料庫上暫停，直到鏡像繼續為止。 暫停 AlwaysOn 主要資料庫會暫停所有對應次要資料庫上的資料移動，而且該資料庫的備援和容錯移轉功能也會停止，直到主要資料庫繼續為止。  
   
- 如需詳細資訊，請參閱[暫止可用性資料庫 & #40;SQL Server & #41;](../../database-engine/availability-groups/windows/suspend-an-availability-database-sql-server.md).  
+ 如需詳細資訊，請參閱[暫止可用性資料庫 &#40;SQL Server &#41;](../../database-engine/availability-groups/windows/suspend-an-availability-database-sql-server.md).  
   
  RESUME  
  繼續指定之次要資料庫上暫停的資料活動。 一旦裝載目標資料庫的複本接受 RESUME 命令之後，就會將其傳回，但繼續資料庫實際上是以非同步方式進行。  
@@ -150,7 +150,7 @@ ALTER DATABASE AccountsDb1 SET HADR AVAILABILITY GROUP = AccountsAG;
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md)   
  [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
- [AlwaysOn 可用性群組 & #40; 的概觀SQL Server & #41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) [疑難排解 AlwaysOn 可用性群組組態 & #40;SQL Server & #41;](../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md) 
+ [AlwaysOn 可用性群組 &#40; 的概觀SQL Server &#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) [疑難排解 AlwaysOn 可用性群組組態 &#40;SQL Server &#41;](../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md) 
   
   
 

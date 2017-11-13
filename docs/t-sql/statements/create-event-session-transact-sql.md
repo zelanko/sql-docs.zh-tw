@@ -183,7 +183,7 @@ ON SERVER
 > [!IMPORTANT]  
 >  如果是使用信號緩衝區目標，建議您將 max_memory 目標參數設為 2048 KB，以避免 XML 輸出可能發生資料截斷。 如需何時使用不同的目標類型的詳細資訊，請參閱[SQL Server Extended Events Targets](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)。  
   
- 使用 ( \<event_session_options > [，...* n *]) 指定要搭配事件工作階段選項。  
+ 使用 ( \<event_session_options > [，... *n* ]) 指定要搭配事件工作階段選項。  
   
  MAX_MEMORY =*大小*[KB |**MB** ]  
  指定為了事件緩衝處理而配置給工作階段的最大記憶體數量。 預設為 4 MB。 *大小*是整數，而且可以是 kb 或 mb 值。  
@@ -268,8 +268,8 @@ GO
 ## <a name="see-also"></a>另請參閱  
  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-event-session-transact-sql.md)   
  [DROP EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-event-session-transact-sql.md)   
- [sys.server_event_sessions & #40;TRANSACT-SQL & #41;](../../relational-databases/system-catalog-views/sys-server-event-sessions-transact-sql.md)   
- [sys.dm_xe_objects & #40;TRANSACT-SQL & #41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql.md)   
+ [sys.server_event_sessions &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-server-event-sessions-transact-sql.md)   
+ [sys.dm_xe_objects &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql.md)   
  [sys.dm_xe_object_columns &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-object-columns-transact-sql.md)  
   
   
