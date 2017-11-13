@@ -1,5 +1,5 @@
 ---
-title: "商務規則條件 (Master Data Services) | Microsoft Docs"
+title: "商務規則條件 (Master Data Services) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,19 +11,18 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: d2e0a8c3-4c2e-407c-856e-68d95ebda9ed
 caps.latest.revision: 10
-author: smartysanthosh
-ms.author: nagavo
-manager: craigg
-ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 2690cc49bb989c02cd361010d3c3317534349cd2
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b47b8ae7924ae590156479209b2ae0ba639d07ec
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/07/2017
+ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="business-rule-conditions-master-data-services"></a>商務規則條件 (Master Data Services)
-  在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，商務規則條件會確定條件必須為 true，才可以採取一個或多個動作。  
+  在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中，商務規則條件會確定條件必須為 true，才可以採取一個或多個動作。  
   
 > [!NOTE]  
 >  條件是選擇性的。 如果您未指定條件，則會在根據商務規則驗證資料時採取動作。  
@@ -57,9 +56,8 @@ ms.lasthandoff: 09/07/2017
 >  當某個商務規則包含比較兩個值的條件，而且該規則套用到兩個值都是 NULL 的成員時，該成員將無法通過驗證。  
   
 ## <a name="see-also"></a>另請參閱  
- [商務規則動作 &#40;Master Data Services&#41;](../master-data-services/business-rule-actions-master-data-services.md)   
- [商務規則 &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)   
- [建立及發行商務規則 &#40;Master Data Services&#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)  
+ [商務規則動作 &#40;Master Data services&#41;](../master-data-services/business-rule-actions-master-data-services.md)   
+ [商務規則 &#40;Master Data services&#41;](../master-data-services/business-rules-master-data-services.md)   
+ [建立及發行商務規則 &#40;Master Data services&#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)  
   
   
-

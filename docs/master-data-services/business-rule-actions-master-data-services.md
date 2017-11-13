@@ -1,5 +1,5 @@
 ---
-title: "商務規則動作 (Master Data Services) | Microsoft Docs"
+title: "商務規則動作 (Master Data Services) |Microsoft 文件"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,15 +11,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: cdc4daca-3dff-46d8-b7f0-57f7826dd61a
 caps.latest.revision: 10
-author: smartysanthosh
-ms.author: nagavo
-manager: craigg
-ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: e95b13ecedad9aaaacb948bc907a9c8950e136de
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8a4d478795952951063dab5ef6979f517997ff3f
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/07/2017
+ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="business-rule-actions-master-data-services"></a>商務規則動作 (Master Data Services)
@@ -74,9 +73,8 @@ ms.lasthandoff: 09/07/2017
 |**啟動工作流程**|起始外部工作流程。 造成此動作發生的資料會傳遞給工作流程。 如需詳細資訊，請參閱 [Master Data Services 的 SharePoint 工作流程整合](http://msdn.microsoft.com/library/gg690195.aspx)。<br /><br /> 此動作僅適用於文字、數字、日期及連結值。|  
   
 ## <a name="see-also"></a>另請參閱  
- [商務規則條件 &#40;Master Data Services&#41;](../master-data-services/business-rule-conditions-master-data-services.md)   
- [商務規則 &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)   
- [建立及發行商務規則 &#40;Master Data Services&#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)  
+ [商務規則條件 &#40;Master Data services&#41;](../master-data-services/business-rule-conditions-master-data-services.md)   
+ [商務規則 &#40;Master Data services&#41;](../master-data-services/business-rules-master-data-services.md)   
+ [建立及發行商務規則 &#40;Master Data services&#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)  
   
   
-

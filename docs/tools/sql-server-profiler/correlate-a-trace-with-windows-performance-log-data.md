@@ -37,7 +37,7 @@ ms.lasthandoff: 08/02/2017
   
 1.  在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]中，開啟儲存的追蹤檔案或追蹤資料表。 您無法與仍在收集事件資料的執行中追蹤產生相互關聯。 為了與系統監視器資料保持正確的相互關聯，追蹤必須同時包含 [StartTime] 與 [EndTime] 資料行。  
   
-2.  在[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]**檔案**功能表上，按一下 [**匯入效能資料**。  
+2.  在[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]**檔案**功能表上，按一下**匯入效能資料**。  
   
 3.  在 [開啟] 對話方塊中，選取含有效能記錄的檔案。 擷取效能記錄資料的期間必須與擷取追蹤資料的期間相同。  
   

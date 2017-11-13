@@ -1,5 +1,5 @@
 ---
-title: "學習 SQL Server Master Data Services | Microsoft Docs"
+title: "了解 SQL Server Master Data Services |Microsoft 文件"
 ms.custom: 
 ms.date: 02/14/2017
 ms.prod: sql-server-2016
@@ -13,15 +13,14 @@ keywords:
 - "學習 SQL"
 ms.assetid: 87516551-a3b6-4b29-928b-ddd25672a98c
 caps.latest.revision: 19
-author: smartysanthosh
-ms.author: nagavo
-manager: craigg
-ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 9139c9faeb4d38fe43300d6b97c019ae845567ec
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 0a3198e7cc00f01d31b7951e0d1298bee9b8dec2
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/07/2017
+ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="learn-sql-server-master-data-services"></a>學習 SQL Server Master Data Services
@@ -37,7 +36,7 @@ ms.lasthandoff: 09/07/2017
 ## <a name="samples"></a>範例  
 * 若要深入了解如何使用模型、實體和階層來建構 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 中的資料，請試用在安裝 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]時所包含的範例模型。 如需部署範例的指示，請參閱 [部署範例模型和資料](../master-data-services/master-data-services-installation-and-configuration.md#deploySample)。   
   
-    如需範例模型 [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] 更新的資訊，請參閱 [SQL Server 範例︰模型部署套件](../master-data-services/sql-server-samples-model-deployment-packages-mds.md)。  
+    如需有關資訊[!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)]更新範例模型中，請參閱[SQL Server 範例： 模型部署封裝](../master-data-services/sql-server-samples-model-deployment-packages-mds.md)。  
   
 * 如需如何自訂您和使用者與 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]之互動方式的示範，請試用 SQL Server 範例所隨附的MDS C# 主控台應用程式範例。 您可以從這個 [GitHub 儲存機制](https://github.com/Microsoft/sql-server-samples)，將 SQL Server 範例下載為 .zip 檔案。  
   
