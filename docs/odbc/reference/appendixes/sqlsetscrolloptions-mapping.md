@@ -69,7 +69,7 @@ SQLSetScrollOptions(StatementHandle, Concurrency, KeysetSize, RowsetSize)
     SQLSetStmtAttr(StatementHandle, SQL_ATTR_CURSOR_TYPE, ValuePtr, 0)  
     ```  
   
-     與* \*ValuePtr*設定為下表，根據的值中值的其中一個*KeysetSize*引數中的**SQLSetScrollOptions**。  
+     與 *\*ValuePtr*設定為下表，根據的值中值的其中一個*KeysetSize*引數中的**SQLSetScrollOptions**。  
   
     |*KeysetSize*引數|*\*ValuePtr*|  
     |---------------------------|------------------|  
@@ -85,7 +85,7 @@ SQLSetScrollOptions(StatementHandle, Concurrency, KeysetSize, RowsetSize)
     SQLSetStmtAttr(StatementHandle, SQL_ATTR_CONCURRENCY, ValuePtr, 0)  
     ```  
   
-     與* \*ValuePtr*設*並行*引數中的**SQLSetScrollOptions**。  
+     與 *\*ValuePtr*設*並行*引數中的**SQLSetScrollOptions**。  
   
 -   如果*KeysetSize*引數在呼叫**SQLSetScrollOptions**是正數，呼叫  
   
@@ -93,7 +93,7 @@ SQLSetScrollOptions(StatementHandle, Concurrency, KeysetSize, RowsetSize)
     SQLSetStmtAttr(StatementHandle, SQL_ATTR_KEYSET_SIZE, ValuePtr, 0)  
     ```  
   
-     與* \*ValuePtr*設*KeysetSize*引數中的**SQLSetScrollOptions**。  
+     與 *\*ValuePtr*設*KeysetSize*引數中的**SQLSetScrollOptions**。  
   
 -   呼叫  
   
@@ -101,7 +101,7 @@ SQLSetScrollOptions(StatementHandle, Concurrency, KeysetSize, RowsetSize)
     SQLSetStmtAttr(StatementHandle, SQL_ROWSET_SIZE, ValuePtr, 0)  
     ```  
   
-     與* \*ValuePtr*設*RowsetSize*引數中的**SQLSetScrollOptions**。  
+     與 *\*ValuePtr*設*RowsetSize*引數中的**SQLSetScrollOptions**。  
   
     > [!NOTE]  
     >  當驅動程式管理員會將對應**SQLSetScrollOptions**應用程式使用 ODBC 3*.x*不支援的驅動程式**SQLSetScrollOptions**，驅動程式管理員設定 SQL_ROWSET_SIZE 陳述式選項，而不將 SQL_ATTR_ROW_ARRAY_SIZE 陳述式屬性， *RowsetSize*引數中的**SQLSetScrollOption**。 如此一來， **SQLSetScrollOptions**不可由應用程式在呼叫提取多個資料列時， **SQLFetch**或**SQLFetchScroll**。 它可以用於擷取多個資料列呼叫時，只有**SQLExtendedFetch**。

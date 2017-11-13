@@ -65,7 +65,7 @@ SQLRETURN SQLGetInfo(
  如果*InfoValuePtr*是 NULL， *StringLengthPtr*仍會傳回的總位元組數 （不含字元資料 null 結束字元） 可用來傳回中所指向的緩衝區*InfoValuePtr*。  
   
  *Columnsize*  
- [輸入]長度\* *InfoValuePtr*緩衝區。 如果中的值* \*InfoValuePtr*不是字元字串或*InfoValuePtr*為 null 指標， *Columnsize*會忽略引數。 驅動程式假設大小* \*InfoValuePtr* SQLUSMALLINT 或 SQLUINTEGER，根據*資訊類型*。 如果* \*InfoValuePtr*是 Unicode 字串 (呼叫時**SQLGetInfoW**)、 *Columnsize* ，SQLSTATE hy090 以及 （如果引數必須是偶數。會傳回字串或緩衝區長度無效）。  
+ [輸入]長度\* *InfoValuePtr*緩衝區。 如果中的值 *\*InfoValuePtr*不是字元字串或*InfoValuePtr*為 null 指標， *Columnsize*會忽略引數。 驅動程式假設大小 *\*InfoValuePtr* SQLUSMALLINT 或 SQLUINTEGER，根據*資訊類型*。 如果 *\*InfoValuePtr*是 Unicode 字串 (呼叫時**SQLGetInfoW**)、 *Columnsize* ，SQLSTATE hy090 以及 （如果引數必須是偶數。會傳回字串或緩衝區長度無效）。  
   
  *StringLengthPtr*  
  [輸出]這是要傳回的總位元組數 （不含字元資料的 null 終止字元） 的緩衝區指標可用來傳回中 **InfoValuePtr*。  
@@ -86,12 +86,12 @@ SQLRETURN SQLGetInfo(
 |01004|字串資料，右邊遭截斷|緩衝區\* *InfoValuePtr*仍不夠大，無法傳回要求的資訊。 因此，資訊會被截斷。 中會傳回所要求的資訊未截斷格式長度 **StringLengthPtr*。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
 |08003|未開啟連線。|(DM) 中的資訊類型要求*資訊類型*需要開啟的連接。 ODBC 所保留的資訊類型，可傳回僅 SQL_ODBC_VER 沒有開啟的連線。|  
 |08S01|通訊連結失敗|功能已完成處理之前，驅動程式和驅動程式已連線到資料來源之間的通訊連結失敗。|  
-|HY000|一般錯誤|發生錯誤，其中沒有任何特定的 SQLSTATE 和定義沒有實作特定的 SQLSTATE。 所傳回的錯誤訊息**SQLGetDiagRec**中* \*MessageText*緩衝區描述錯誤和其原因。|  
+|HY000|一般錯誤|發生錯誤，其中沒有任何特定的 SQLSTATE 和定義沒有實作特定的 SQLSTATE。 所傳回的錯誤訊息**SQLGetDiagRec**中 *\*MessageText*緩衝區描述錯誤和其原因。|  
 |HY001|記憶體配置錯誤|驅動程式無法配置記憶體，才能支援執行或完成的函式。|  
 |HY010|函數順序錯誤|(DM) **SQLExecute**， **SQLExecDirect**，或**SQLMoreResults**針對呼叫*StatementHandle*並傳回 SQL_PARAM_DATA_可以使用。 此函式呼叫之前的所有資料流處理的參數擷取資料。|  
 |HY013|記憶體管理錯誤|無法處理函式呼叫，因為基礎記憶體的物件無法存取，可能是因為記憶體不足。|  
 |HY024|屬性值無效|(DM)*資訊類型*引數以前是 SQL_DRIVER_HSTMT，以及值所指向*InfoValuePtr*不是有效的陳述式控制代碼。<br /><br /> (DM)*資訊類型*引數以前是 SQL_DRIVER_HDESC，以及值所指向*InfoValuePtr*不是有效的描述項控制代碼。|  
-|HY090|字串或緩衝區長度無效|(DM) 引數指定的值*Columnsize*小於 0。<br /><br /> (DM) 指定的值*Columnsize*為奇數，和* \*InfoValuePtr*是 Unicode 資料類型。|  
+|HY090|字串或緩衝區長度無效|(DM) 引數指定的值*Columnsize*小於 0。<br /><br /> (DM) 指定的值*Columnsize*為奇數，和 *\*InfoValuePtr*是 Unicode 資料類型。|  
 |HY096|資訊類型超出範圍|指定的引數的值*資訊類型*對 ODBC 驅動程式支援的版本無效。|  
 |HY117|連接已暫止原因未知的交易狀態。 只有中斷連線，並允許唯讀函式。|(DM) 如需暫停狀態的詳細資訊，請參閱[SQLEndTran 函數](../../../odbc/reference/syntax/sqlendtran-function.md)。|  
 |HYC00|未實作的選擇性欄位|指定的引數的值*資訊類型*是驅動程式不支援的驅動程式專屬值。|  

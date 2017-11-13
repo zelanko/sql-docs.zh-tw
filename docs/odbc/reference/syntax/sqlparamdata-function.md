@@ -68,7 +68,7 @@ SQLRETURN SQLParamData(
 |22026|字串資料，長度不符|SQL_NEED_LONG_DATA_LEN 類型資訊，請在**SQLGetInfo** "Y"，且於指定較少的資料傳送長參數 （資料類型為 SQL_LONGVARCHAR、 SQL_LONGVARBINARY、 或 long 資料來源特定的資料類型）與*StrLen_or_IndPtr*引數中的**SQLBindParameter**。<br /><br /> SQL_NEED_LONG_DATA_LEN 類型資訊，請在**SQLGetInfo** "Y"，且比中已指定較少的資料傳送長資料行 （資料類型為 SQL_LONGVARCHAR、 SQL_LONGVARBINARY、 或 long 資料來源特定的資料類型）對應至已加入或更新的資料列中的資料行長度的緩衝區**SQLBulkOperations**或更新與**SQLSetPos**。|  
 |40001|序列化失敗|交易已回復，因為與另一個交易資源鎖死。|  
 |40003|未知的陳述式完成|相關聯的連接失敗，此函式，在執行期間，無法決定交易的狀態。|  
-|HY000|一般錯誤|發生錯誤，其中沒有任何特定的 SQLSTATE 和定義沒有實作特定的 SQLSTATE。 所傳回的錯誤訊息**SQLGetDiagRec**中* \*MessageText*緩衝區描述錯誤和其原因。|  
+|HY000|一般錯誤|發生錯誤，其中沒有任何特定的 SQLSTATE 和定義沒有實作特定的 SQLSTATE。 所傳回的錯誤訊息**SQLGetDiagRec**中 *\*MessageText*緩衝區描述錯誤和其原因。|  
 |HY001|記憶體配置錯誤|驅動程式無法配置記憶體，才能支援執行或完成的函式。|  
 |HY008|已取消操作|非同步處理已啟用*StatementHandle*。 呼叫此函式，和之前已完成執行， **SQLCancel**或**SQLCancelHandle**上呼叫*StatementHandle*; 上再呼叫此函式一次*StatementHandle*。<br /><br /> 呼叫此函式，和之前已完成執行， **SQLCancel**或**SQLCancelHandle**上呼叫*StatementHandle*從不同的執行緒中多執行緒應用程式。|  
 |HY010|函數順序錯誤|(DM) 先前的函式呼叫不是呼叫**SQLExecDirect**， **SQLExecute**， **SQLBulkOperations**，或**SQLSetPos**位置傳回碼為 SQL_NEED_DATA，或先前的函式呼叫已呼叫**SQLPutData**。<br /><br /> 先前的函式呼叫已呼叫**SQLParamData**。<br /><br /> (DM) 非同步執行的函式呼叫相關聯的連接控制代碼的*StatementHandle*。 此非同步函式還在執行時**SQLParamData**呼叫函式。<br /><br /> 以非同步方式執行的函式 （不是這一個） 已呼叫 (DM) *StatementHandle*和還在執行時呼叫此函式。<br /><br /> **SQLExecute**， **SQLExecDirect**， **SQLBulkOperations**，或**SQLSetPos**針對呼叫*StatementHandle*並傳回的 SQL_NEED_DATA。 **SQLCancel**呼叫之前已傳送的所有資料在執行中參數或資料行的資料。|  
@@ -84,7 +84,7 @@ SQLRETURN SQLParamData(
 ## <a name="comments"></a>註解  
  **SQLParamData**提供兩種用途的資料在執行資料，可以呼叫： 將呼叫中使用的參數資料**SQLExecute**或**SQLExecDirect**，或將使用的資料行資料當更新或呼叫所加入的資料列**SQLBulkOperations**所呼叫或更新**SQLSetPos**。 在執行階段**SQLParamData**傳回的資料指標的驅動程式需要應用程式。  
   
- 當應用程式呼叫**SQLExecute**， **SQLExecDirect**， **SQLBulkOperations**，或**SQLSetPos**，驅動程式會傳回 SQL_NEED_如果在需要資料在執行資料的資料。 然後應用程式呼叫**SQLParamData**來決定要傳送的資料。 如果驅動程式需要參數的資料，驅動程式會傳回在* \*ValuePtrPtr*輸出緩衝處理的應用程式放在資料列集緩衝區中的值。 應用程式可以使用此值來判斷哪一個驅動程式要求的參數資料。 如果驅動程式需要資料行的資料，驅動程式會傳回在* \*ValuePtrPtr*緩衝區資料行原本繫結，如下所示的位址：  
+ 當應用程式呼叫**SQLExecute**， **SQLExecDirect**， **SQLBulkOperations**，或**SQLSetPos**，驅動程式會傳回 SQL_NEED_如果在需要資料在執行資料的資料。 然後應用程式呼叫**SQLParamData**來決定要傳送的資料。 如果驅動程式需要參數的資料，驅動程式會傳回在 *\*ValuePtrPtr*輸出緩衝處理的應用程式放在資料列集緩衝區中的值。 應用程式可以使用此值來判斷哪一個驅動程式要求的參數資料。 如果驅動程式需要資料行的資料，驅動程式會傳回在 *\*ValuePtrPtr*緩衝區資料行原本繫結，如下所示的位址：  
   
  *繫結位址* + *繫結位移*+ ((*資料列號碼*– 1) x*項目大小*)  
   
@@ -99,7 +99,7 @@ SQLRETURN SQLParamData(
   
  它也會傳回 SQL_NEED_DATA，這是應用程式，則它應該呼叫的指標**SQLPutData**傳送資料。  
   
- 應用程式會呼叫**SQLPutData**視資料行或參數的資料在執行資料傳送的次數。 資料行或參數傳送的所有資料之後，應用程式呼叫**SQLParamData**一次。 如果**SQLParamData**再次傳回 SQL_NEED_DATA，必須將資料傳送另一個參數或資料行。 因此，在應用程式會呼叫**SQLPutData**。 如果所有資料在執行傳送資料的所有參數或資料行，然後**SQLParamData**傳回 SQL_SUCCESS 或 SQL_SUCCESS_WITH_INFO 中的值* \*ValuePtrPtr*未定義，而且可以執行的 SQL 陳述式或**SQLBulkOperations**或**SQLSetPos**可以處理呼叫。  
+ 應用程式會呼叫**SQLPutData**視資料行或參數的資料在執行資料傳送的次數。 資料行或參數傳送的所有資料之後，應用程式呼叫**SQLParamData**一次。 如果**SQLParamData**再次傳回 SQL_NEED_DATA，必須將資料傳送另一個參數或資料行。 因此，在應用程式會呼叫**SQLPutData**。 如果所有資料在執行傳送資料的所有參數或資料行，然後**SQLParamData**傳回 SQL_SUCCESS 或 SQL_SUCCESS_WITH_INFO 中的值 *\*ValuePtrPtr*未定義，而且可以執行的 SQL 陳述式或**SQLBulkOperations**或**SQLSetPos**可以處理呼叫。  
   
  如果**SQLParamData**搜尋的提供參數資料的 update 或 delete 陳述式，不會影響任何資料來源，呼叫端的資料列**SQLParamData**傳回 sql_no_data 為止。  
   

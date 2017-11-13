@@ -181,7 +181,7 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
 >  在建立典型的記錄備份之後，除非您指定 WITH NO_TRUNCATE 或 COPY_ONLY，否則有些交易記錄檔記錄會變成非使用中狀態。 當一個或多個虛擬記錄檔案中的所有記錄變成非使用中狀態之後，記錄會發生截斷。 如果記錄在例行的記錄備份之後並未截斷，可能會發生延遲記錄截斷。 如需詳細資訊，請參閱。  
   
  { *database_name* | **@**database_name_var *}   
- 這是要備份交易記錄、部分資料庫或完整資料庫的來源資料庫。 如果提供的變數 (**@***database_name_var*)，可以將這個名稱指定為字串常數 (** @ ** *database_name_var***=***資料庫名稱*) 或指定為字元字串資料型別變數除了**ntext**或**文字**資料型別。  
+ 這是要備份交易記錄、部分資料庫或完整資料庫的來源資料庫。 如果提供的變數 (**@***database_name_var*)，可以將這個名稱指定為字串常數 ( **@**  *database_name_var***=***資料庫名稱*) 或指定為字元字串資料型別變數除了**ntext**或**文字**資料型別。  
   
 > [!NOTE]  
 >  資料庫鏡像合作關係中的鏡像資料庫無法備份。  
@@ -189,10 +189,10 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
 \<file_or_filegroup > [ **，**...*n* ]  
  只能搭配 BACKUP DATABASE 使用，可用來指定要包含在檔案備份中的資料庫檔案或檔案群組，或是指定要包含在部分備份中的唯讀檔案或檔案群組。  
   
- 檔案** = ** {*邏輯檔案名稱*| **@***logical_file_name_var* }  
+ 檔案 **=**  {*邏輯檔案名稱*| **@***logical_file_name_var* }  
  這是指要包含在備份中的檔案邏輯名稱，或是其值等於該檔案邏輯名稱的變數。  
   
- 檔案群組** = ** { *logical_filegroup_name*| **@***logical_filegroup_name_var* }  
+ 檔案群組 **=**  { *logical_filegroup_name*| **@***logical_filegroup_name_var* }  
  這是指要包含在備份中的檔案群組邏輯名稱，或是其值等於該檔案群組邏輯名稱的變數。 在簡單復原模式之下，只允許唯讀檔案群組使用檔案群組備份。  
   
 > [!NOTE]  
@@ -220,14 +220,14 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
   
  如需部分備份的詳細資訊，請參閱[部分備份 &#40;SQL Server &#41;](../../relational-databases/backup-restore/partial-backups-sql-server.md).  
   
-若要\<備份裝置 > [ **，**...* n * ] 指出隨附的一組[備份裝置](../../relational-databases/backup-restore/backup-devices-sql-server.md)並無鏡像的媒體集或鏡像，鏡像媒體集 （適用於哪一個或多個 MIRROR TO 內的第一個子句會宣告）。  
+若要\<備份裝置 > [ **，**... *n*  ] 指出隨附的一組[備份裝置](../../relational-databases/backup-restore/backup-devices-sql-server.md)並無鏡像的媒體集或鏡像，鏡像媒體集 （適用於哪一個或多個 MIRROR TO 內的第一個子句會宣告）。  
   
 \<備份裝置 > 指定要用於備份作業的邏輯或實體備份裝置。  
   
  { *logical_device_name* | **@***logical_device_name_var* }  
- 這是用來備份資料庫之備份裝置的邏輯名稱。 邏輯名稱必須遵照識別碼的規則。 如果提供的變數 (@*logical_device_name_var*)，可用的備份裝置名稱指定為字串常數 (@*logical_device_name_var* ** = **邏輯備份裝置名稱) 或指定為以外的任何字元字串資料類型的變數**ntext**或**文字**資料型別。  
+ 這是用來備份資料庫之備份裝置的邏輯名稱。 邏輯名稱必須遵照識別碼的規則。 如果提供的變數 (@*logical_device_name_var*)，可用的備份裝置名稱指定為字串常數 (@*logical_device_name_var*  **=** 邏輯備份裝置名稱) 或指定為以外的任何字元字串資料類型的變數**ntext**或**文字**資料型別。  
   
- {磁碟 |磁帶 |URL} ** = ** { **'***physical_device_name***'**  |  ** @ ***physical_device_name_var* }  
+ {磁碟 |磁帶 |URL}  **=**  { **'***physical_device_name***'**  |   **@** *physical_device_name_var* }  
  指定磁碟檔案或磁帶裝置，或是 Windows Azure Blob 儲存體服務。 URL 格式用來建立備份至 Windows Azure 儲存體服務。 如需詳細資訊和範例，請參閱[SQL Server 備份及還原與 Microsoft Azure Blob 儲存體服務](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。 如需教學課程，請參閱[教學課程： SQL Server 備份及還原至 Windows Azure Blob 儲存體服務](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)。  
   
 > [!IMPORTANT]  
@@ -245,7 +245,7 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
  *n*  
  這是一個預留位置，表示可以在逗號分隔清單中指定最多達 64 個備份裝置。  
   
-MIRROR TO\<備份裝置 > [ **，**...* n * ] 指定多達三個次要備份裝置，備份裝置指定 TO 子句中的鏡像的每個的集合。 MIRROR TO 子句必須與 TO 子句來指定相同的類型和數目的備份裝置。 最大 MIRROR TO 子句數目是 3。  
+MIRROR TO\<備份裝置 > [ **，**... *n*  ] 指定多達三個次要備份裝置，備份裝置指定 TO 子句中的鏡像的每個的集合。 MIRROR TO 子句必須與 TO 子句來指定相同的類型和數目的備份裝置。 最大 MIRROR TO 子句數目是 3。  
   
  只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 Enterprise 版本才提供這個選項。  
   
@@ -310,7 +310,7 @@ MIRROR TO\<備份裝置 > [ **，**...* n * ] 指定多達三個次要備份裝�
 這些選項會處理這個備份作業所建立的備份組。  
   
 > [!NOTE]  
->  若要指定備份組還原作業，請使用檔案** = ** * \<backup_set_file_number >*選項。 如需如何指定備份組的詳細資訊，請參閱 < 指定備份組 」，在[RESTORE 引數 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).
+>  若要指定備份組還原作業，請使用檔案 **=**   *\<backup_set_file_number >*選項。 如需如何指定備份組的詳細資訊，請參閱 < 指定備份組 」，在[RESTORE 引數 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).
   
  COPY_ONLY  
  指定備份為*僅限複製備份*，這不會影響正常的備份順序。 僅複製備份的建立與定期排程的傳統備份無關。 僅複製備份並不會影響資料庫的整體備份和還原程序。  
@@ -340,10 +340,10 @@ NO_COMPRESSION
 DESCRIPTION **=** { **'***text***'** | **@***text_variable* }  
 指定描述備份組的自由形式文字。 這個字串最多可有 255 個字元。  
   
-名稱** = ** { *backup_set_name*| **@***backup_set_var* }  
+名稱 **=**  { *backup_set_name*| **@***backup_set_var* }  
 指定備份組的名稱。 名稱最多可有 128 個字元。 如果未指定 NAME，它就是空白。  
   
-{EXPIREDATE **='***日期***'**|RETAINDAYS ** = ** *天*}  
+{EXPIREDATE **='***日期***'**|RETAINDAYS  **=**  *天*}  
 指定何時可以覆寫這個備份的備份組。 如果同時使用這兩個選項，RETAINDAYS 會優先於 EXPIREDATE。  
   
 如果指定兩個選項，則有到期日由**mediaretention**組態設定。 如需詳細資訊，請參閱 [伺服器組態選項 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)伺服器組態選項。  
@@ -351,10 +351,10 @@ DESCRIPTION **=** { **'***text***'** | **@***text_variable* }
 > [!IMPORTANT]  
 >  這些選項只會防止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 覆寫檔案。 您可以利用其他方法來清除磁帶，並利用作業系統來刪除磁碟檔案。 如需有關期限驗證的詳細資訊，請參閱這個主題中的 SKIP 和 FORMAT。  
   
-EXPIREDATE ** = ** { **'***日期***'** |  ** @ ***date_var* }  
+EXPIREDATE  **=**  { **'***日期***'** |   **@** *date_var* }  
  指定備份組到期且可加以覆寫的時間。 如果提供的變數 (@*date_var*)，這個日期必須遵照設定的系統**datetime**格式，並指定為下列其中之一：  
   
--   字串常數 (@*date_var* ** = **日期)  
+-   字串常數 (@*date_var*  **=** 日期)  
 -   字元字串資料類型的變數 (除了**ntext**或**文字**資料類型)  
 -   A **smalldatetime**  
 -   A **datetime**變數  
@@ -369,7 +369,7 @@ EXPIREDATE ** = ** { **'***日期***'** |  ** @ ***date_var* }
 > [!NOTE]  
 >  若要忽略到期日，請使用 SKIP 選項。  
   
-RETAINDAYS ** = ** {*天*| **@***days_var* }  
+RETAINDAYS  **=**  {*天*| **@***days_var* }  
  指定必須經過多少天之後，才能覆寫這個備份媒體集。 如果提供的變數 (**@***days_var*)，必須指定為整數。  
   
 **媒體集選項**  
@@ -424,13 +424,13 @@ FORMAT
   
 指定 FORMAT 隱含 SKIP；您不需要明確指示 SKIP。  
   
-MEDIADESCRIPTION ** = ** {*文字* | **@***text_variable* }  
+MEDIADESCRIPTION  **=**  {*文字* | **@***text_variable* }  
 指定媒體集自由形式的文字描述，最多 255 個字元。  
   
-MEDIANAME ** = ** { *media_name* | **@***media_name_variable* }  
+MEDIANAME  **=**  { *media_name* | **@***media_name_variable* }  
 指定整個備份媒體集的媒體名稱。 媒體名稱不能超出 128 個字元，如果指定 MEDIANAME，它必須符合已在備份磁碟區中，先前所指定的媒體名稱。 如果未指定或指定了 SKIP 選項，就不會進行媒體名稱的驗證檢查。  
   
-區塊大小** = ** { *blocksize* | **@***blocksize_variable* }  
+區塊大小 **=**  { *blocksize* | **@***blocksize_variable* }  
 指定實體區塊大小 (以位元組為單位)。 支援的大小為 512、1024、2048、4096、8192、16384、32768 和 65536 (64 KB) 位元組。 磁帶裝置的預設值為 65536，其他裝置則為 512。 一般而言這個選項是不必要的，因為 BACKUP 會自動選取裝置適用的區塊大小。 明確指出區塊大小會覆寫自動選取的區塊大小。  
   
 如果採用的備份是要複製到 CD-ROM 然後再從中還原，請指定 BLOCKSIZE=2048。  
@@ -440,7 +440,7 @@ MEDIANAME ** = ** { *media_name* | **@***media_name_variable* }
   
 **資料傳輸選項**  
   
-BUFFERCOUNT ** = ** { *buffercount* | **@***buffercount_variable* }  
+BUFFERCOUNT  **=**  { *buffercount* | **@***buffercount_variable* }  
 指定要用於備份作業的 I/O 緩衝區總數。 您可以指定任何正整數，不過，緩衝區的數目很大時，可能會因為 Sqlservr.exe 處理序中的虛擬位址空間不足而造成「記憶體不足」錯誤。  
   
 緩衝區所使用的總空間由： *buffercount***\****maxtransfersize*。  
@@ -448,7 +448,7 @@ BUFFERCOUNT ** = ** { *buffercount* | **@***buffercount_variable* }
 > [!NOTE]  
 >  如需使用 BUFFERCOUNT 選項的重要資訊，請參閱[不正確的 BufferCount 資料傳輸選項可能導致 OOM 狀況](http://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx)部落格。  
   
-MAXTRANSFERSIZE ** = ** { *maxtransfersize* | **@***maxtransfersize_variable* }  
+MAXTRANSFERSIZE  **=**  { *maxtransfersize* | **@***maxtransfersize_variable* }  
  以位元組為單位，指定要用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和備份媒體之間的最大傳送單位。 可能的值是 65536 位元組 (64 KB) 的倍數，最大可達 4194304 位元組 (4 MB)。  
 > [!NOTE]  
 >  使用 SQL 寫入器服務，如果資料庫已設定 FILESTREAM 時，或包含於記憶體中 OLTP 檔案群組，建立備份時則`MAXTRANSFERSIZE`在還原的時間應該大於或等於`MAXTRANSFERSIZE`時使用的時機建立備份。 
@@ -490,7 +490,7 @@ RESTART
   
 **監視選項**  
   
-統計資料 [ ** = ***百分比*]  
+統計資料 [  **=** *百分比*]  
  會顯示訊息，每次另一個*百分比*完成，且用於測量進度。 如果*百分比*省略，則[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]每 10%完成之後，會顯示訊息。  
   
 STATS 選項報告到達下一個間隔之報告臨界值的完成百分比。 大約會以指定的百分比為間隔；例如，當 STATS=10，如果完成的量是 40%，這個選項可能顯示 43%。 對大型備份組而言，這不成問題，因為在已完成的 I/O 呼叫之間，百分比完成的移動非常緩慢。  
@@ -531,13 +531,13 @@ NOUNLOAD
 > [!NOTE]  
 >  如果您不想要取得記錄備份，請使用簡單復原模式。 如需詳細資訊，請參閱[復原模式 &#40;SQL Server &#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)。  
   
-{NORECOVERY |待命** = ** *undo_file_name* }  
+{NORECOVERY |待命 **=**  *undo_file_name* }  
   NORECOVERY  
   它會備份記錄的結尾，並將資料庫保留在 RESTORING 狀態。 當進行容錯移轉，將工作交給次要資料庫時，或在 RESTORE 作業之前儲存記錄結尾時，NORECOVERY 非常有用。  
   
   若要執行略過記錄截斷的最大速率記錄備份，再使資料庫自動進入 RESTORING 狀態，請同時使用 NO_TRUNCATE 和 NORECOVERY 選項。  
   
-  待命** = ***方法*  
+  待命 **=** *方法*  
   備份記錄的結尾，並將資料庫保留在唯讀和 STANDBY 狀態。 STANDBY 子句會寫入待命資料 (執行回復，但使用進一步還原的選項)。 使用 STANDBY 選項相當於使用 BACKUP LOG WITH NORECOVERY，後面接著 RESTORE WITH STANDBY。  
   
   使用待命模式需要以指定的待命檔案*standby_file_name*，其位置會儲存在資料庫的記錄。 如果指定的檔案已存在，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會覆寫它；如果檔案不存在，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會建立它。 待命檔案會成為資料庫的一部分。  

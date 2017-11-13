@@ -61,9 +61,9 @@ SQLRETURN SQLDescribeParam(
  *DataTypePtr*  
  [輸出]這是要傳回參數的 SQL 資料類型的緩衝區指標。 這個值是讀取自 IPD SQL_DESC_CONCISE_TYPE 記錄欄位。 這會是中值的其中一個[SQL 資料型別](../../../odbc/reference/appendixes/sql-data-types.md)附錄 d： 資料類型或驅動程式專屬 SQL 資料類型的區段。  
   
- 在 ODBC 3。*x*中,，則會傳回 SQL_TYPE_DATE、 SQL_TYPE_TIME 或 SQL_TYPE_TIMESTAMP * \*DataTypePtr*的日期、 時間或時間戳記資料分別; 在 ODBC 2。*x*，將傳回 SQL_DATE、 SQL_TIME、 或 SQL_TIMESTAMP。 驅動程式管理員會執行必要的對應時 ODBC 2。*x*應用程式使用 ODBC 3。*x*驅動程式或 ODBC 3。*x*應用程式使用 ODBC 2。*x*驅動程式。  
+ 在 ODBC 3。*x*中,，則會傳回 SQL_TYPE_DATE、 SQL_TYPE_TIME 或 SQL_TYPE_TIMESTAMP  *\*DataTypePtr*的日期、 時間或時間戳記資料分別; 在 ODBC 2。*x*，將傳回 SQL_DATE、 SQL_TIME、 或 SQL_TIMESTAMP。 驅動程式管理員會執行必要的對應時 ODBC 2。*x*應用程式使用 ODBC 3。*x*驅動程式或 ODBC 3。*x*應用程式使用 ODBC 2。*x*驅動程式。  
   
- 當*ColumnNumber*等於中為 0 （適用於的書籤資料行），傳回 SQL_BINARY * \*DataTypePtr*可變長度的書籤。 （如果書籤由 ODBC 3，會傳回 SQL_INTEGER。*x*應用程式使用 ODBC 2。*x*驅動程式或 ODBC 2。*x*應用程式使用 ODBC 3。*x*驅動程式。)  
+ 當*ColumnNumber*等於中為 0 （適用於的書籤資料行），傳回 SQL_BINARY  *\*DataTypePtr*可變長度的書籤。 （如果書籤由 ODBC 3，會傳回 SQL_INTEGER。*x*應用程式使用 ODBC 2。*x*驅動程式或 ODBC 2。*x*應用程式使用 ODBC 3。*x*驅動程式。)  
   
  如需詳細資訊，請參閱[SQL 資料型別](../../../odbc/reference/appendixes/sql-data-types.md)附錄 d： 資料型別中。 如需驅動程式特有的 SQL 資料類型資訊，請參閱驅動程式的文件。  
   
@@ -94,7 +94,7 @@ SQLRETURN SQLDescribeParam(
 |07009|無效的描述元索引|(DM) 指定的引數的值*Sqlbindparameter*小於 1。<br /><br /> 指定的引數的值*Sqlbindparameter*大於中相關聯的 SQL 陳述式的參數數目。<br /><br /> 參數標記為非 DML 陳述式的一部分。<br /><br /> 參數標記是一部分**選取**清單。|  
 |08S01|通訊連結失敗|功能已完成處理之前，驅動程式和驅動程式已連線到資料來源之間的通訊連結失敗。|  
 |21S01|插入值清單與資料行清單不符|中的參數數目**插入**陳述式不符合陳述式中名為資料表中的資料行數目。|  
-|HY000|一般錯誤|發生錯誤，其中沒有任何特定的 SQLSTATE 和定義沒有實作特定的 SQLSTATE。 所傳回的錯誤訊息**SQLGetDiagRec**中* \*MessageText*緩衝區描述錯誤和其原因。|  
+|HY000|一般錯誤|發生錯誤，其中沒有任何特定的 SQLSTATE 和定義沒有實作特定的 SQLSTATE。 所傳回的錯誤訊息**SQLGetDiagRec**中 *\*MessageText*緩衝區描述錯誤和其原因。|  
 |HY001|記憶體配置錯誤|驅動程式無法配置記憶體，才能支援執行或完成的函式。|  
 |HY008|已取消操作|非同步處理已啟用*StatementHandle*。 呼叫此函式，和之前已完成執行， **SQLCancel**或**SQLCancelHandle**上呼叫*StatementHandle*。 上一次呼叫函式則*StatementHandle*。<br /><br /> 呼叫此函式，和之前已完成執行， **SQLCancel**或**SQLCancelHandle**上呼叫*StatementHandle*從不同的執行緒中多執行緒應用程式。|  
 |HY010|函數順序錯誤|(DM) 呼叫函式呼叫之前**SQLPrepare**或**SQLExecDirect**如*StatementHandle*。<br /><br /> (DM) 非同步執行的函式呼叫相關聯的連接控制代碼的*StatementHandle*。 此非同步函式還在執行時**SQLDescribeParam**呼叫函式。<br /><br /> 以非同步方式執行的函式 （不是這一個） 已呼叫 (DM) *StatementHandle*和還在執行時呼叫此函式。<br /><br /> (DM) **SQLExecute**， **SQLExecDirect**， **SQLBulkOperations**，或**SQLSetPos**針對呼叫*StatementHandle*並傳回 SQL_NEED_DATA。 此函式呼叫之前已傳送的所有資料在執行中參數或資料行的資料。|  

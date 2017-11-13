@@ -74,7 +74,7 @@ int SQLGetPrivateProfileString(
  **SQLGetPrivateProfileString**傳回整數值，指出讀取的字元數。  
   
 ## <a name="diagnostics"></a>診斷  
- 當呼叫**SQLGetPrivateProfileString**失敗時，相關聯* \*pfErrorCode*可以取得值，藉由呼叫**SQLInstallerError**。 下表列出* \*pfErrorCode*可以傳回的值**SQLInstallerError** ，並說明每個內容中的這個函式。  
+ 當呼叫**SQLGetPrivateProfileString**失敗時，相關聯 *\*pfErrorCode*可以取得值，藉由呼叫**SQLInstallerError**。 下表列出 *\*pfErrorCode*可以傳回的值**SQLInstallerError** ，並說明每個內容中的這個函式。  
   
 |*\*pfErrorCode*|錯誤|Description|  
 |---------------------|-----------|-----------------|  

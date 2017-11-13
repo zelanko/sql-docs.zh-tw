@@ -88,7 +88,7 @@ SQLRETURN SQLExecute(
 |40003|未知的陳述式完成|相關聯的連接失敗，此函式，在執行期間，無法決定交易的狀態。|  
 |42000|語法錯誤或存取違規|使用者沒有執行備妥的陳述式相關聯的權限*StatementHandle*。|  
 |44000|WITH CHECK OPTION 違規|已備妥的陳述式相關聯*StatementHandle*包含**插入**檢視的資料表上執行的陳述式或衍生自檢視資料表所建立的指定資料表**WITH CHECK OPTION**，好讓一或多個資料列受到**插入**陳述式將不再會出現在檢視的資料表。<br /><br /> 已備妥的陳述式相關聯*StatementHandle*包含**更新**檢視的資料表上執行的陳述式或衍生自檢視資料表所建立的指定資料表**WITH CHECK OPTION**，好讓一或多個資料列受到**更新**陳述式將不再會出現在檢視的資料表。|  
-|HY000|一般錯誤|發生錯誤，其中沒有任何特定的 SQLSTATE 和定義沒有實作特定的 SQLSTATE。 所傳回的錯誤訊息**SQLGetDiagRec**中* \*MessageText*緩衝區描述錯誤和其原因。|  
+|HY000|一般錯誤|發生錯誤，其中沒有任何特定的 SQLSTATE 和定義沒有實作特定的 SQLSTATE。 所傳回的錯誤訊息**SQLGetDiagRec**中 *\*MessageText*緩衝區描述錯誤和其原因。|  
 |HY001|記憶體配置錯誤|驅動程式無法配置記憶體，才能支援執行或完成的函式。|  
 |HY008|已取消操作|非同步處理已啟用*StatementHandle*。 呼叫此函式，和之前已完成執行， **SQLCancel**或**SQLCancelHandle**上呼叫*StatementHandle*。 上一次呼叫函式則*StatementHandle*。<br /><br /> 呼叫此函式，和之前已完成執行， **SQLCancel**或**SQLCancelHandle**上呼叫*StatementHandle*從不同的執行緒中多執行緒應用程式。|  
 |HY010|函數順序錯誤|(DM) 非同步執行的函式呼叫相關聯的連接控制代碼的*StatementHandle*。 此非同步函式還在執行時**SQLExecute**呼叫函式。<br /><br /> (DM) **SQLExecute**， **SQLExecDirect**，或**SQLMoreResults**針對呼叫*StatementHandle*並傳回 SQL_PARAM_DATA_可以使用。 此函式呼叫之前的所有資料流處理的參數擷取資料。<br /><br /> 以非同步方式執行的函式 （不是這一個） 已呼叫 (DM) *StatementHandle*和還在執行時呼叫此函式。<br /><br /> (DM) **SQLExecute**， **SQLExecDirect**， **SQLBulkOperations**，或**SQLSetPos**針對呼叫*StatementHandle*並傳回 SQL_NEED_DATA。 此函式呼叫之前已傳送的所有資料在執行中參數或資料行的資料。<br /><br /> (DM) *StatementHandle*尚未準備好。|  
@@ -119,7 +119,7 @@ SQLRETURN SQLExecute(
   
  如果**SQLExecute**執行搜尋的 update、 insert 或 delete 陳述式，不會影響任何資料來源，呼叫端的資料列**SQLExecute**傳回 sql_no_data 為止。  
   
- 如果 SQL_ATTR_PARAMSET_SIZE 陳述式屬性的值大於 1，SQL 陳述式中包含至少一個參數標記， **SQLExecute**陣列中執行的 SQL 陳述式，針對每一組參數值執行一次所指* \*ParameterValuePtr*的呼叫中引數**SQLBindParameter**。 如需詳細資訊，請參閱[參數值陣列](../../../odbc/reference/develop-app/arrays-of-parameter-values.md)。  
+ 如果 SQL_ATTR_PARAMSET_SIZE 陳述式屬性的值大於 1，SQL 陳述式中包含至少一個參數標記， **SQLExecute**陣列中執行的 SQL 陳述式，針對每一組參數值執行一次所指 *\*ParameterValuePtr*的呼叫中引數**SQLBindParameter**。 如需詳細資訊，請參閱[參數值陣列](../../../odbc/reference/develop-app/arrays-of-parameter-values.md)。  
   
  如果啟用書籤，而執行的查詢可能不支援書籤、 驅動程式應該嘗試強制轉型為書籤支援藉由變更屬性值，並傳回 SQLSTATE 01S02 環境 （選項值已變更）。 如果無法變更屬性，驅動程式應該會傳回 SQLSTATE HY024 （無效的屬性值）。  
   

@@ -57,7 +57,7 @@ SQLGetData(hstmt, 1, SQL_C_CHAR, ValuePtr, sizeof(ValuePtr), &ValueLenOrInd);
   
  下列的長度是有效的長度/指標值：  
   
--   *n*其中* n * > 0。  
+-   *n*其中 *n*  > 0。  
   
 -   0.  
   
@@ -65,7 +65,7 @@ SQLGetData(hstmt, 1, SQL_C_CHAR, ValuePtr, sizeof(ValuePtr), &ValueLenOrInd);
   
  下列是有效值為長度/指標值。 SQL_NULL_DATA 會儲存在 SQL_DESC_INDICATOR_PTR 描述項欄位。所有其他值會儲存在 SQL_DESC_OCTET_LENGTH_PTR 描述項欄位。  
   
--   SQL_NULL_DATA。 資料是 NULL 資料值，並會忽略在對應的資料緩衝區中的值。 此值為合法只能針對 SQL 資料傳送至資料庫或從 [驅動程式擷取。  
+-   SQL_NULL_DATA。 資料是 NULL 資料值，並會忽略在對應的資料緩衝區中的值。 此值為合法只能針對 SQL 資料傳送至資料庫或從 驅動程式擷取。  
   
 -   SQL_DATA_AT_EXEC。 資料緩衝區不會包含任何資料。 相反地，您會將資料傳送與**SQLPutData**陳述式或當**SQLBulkOperations**或**SQLSetPos**呼叫。 此值為合法只能針對 SQL 資料傳送至驅動程式。 如需詳細資訊，請參閱[SQLBindParameter](../../../odbc/reference/syntax/sqlbindparameter-function.md)， [SQLBulkOperations](../../../odbc/reference/syntax/sqlbulkoperations-function.md)，和[SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md)。  
   

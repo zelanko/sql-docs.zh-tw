@@ -63,10 +63,10 @@ SQLRETURN SQLGetEnvAttr(
  如果*ValuePtr*是 NULL， *StringLengthPtr*仍會傳回的總位元組數 （不含字元資料 null 結束字元） 可用來傳回所指向之緩衝區中*ValuePtr*。  
   
  *Columnsize*  
- [輸入]如果*ValuePtr*指向字元字串，這個引數應該是長度\* *ValuePtr*。 如果\* *ValuePtr*是整數， *Columnsize*會被忽略。 如果* \*ValuePtr*是 Unicode 字串 (當呼叫**SQLGetEnvAttrW**)、 *Columnsize*引數必須是偶數。 如果屬性值不是字元字串， *Columnsize*未使用。  
+ [輸入]如果*ValuePtr*指向字元字串，這個引數應該是長度\* *ValuePtr*。 如果\* *ValuePtr*是整數， *Columnsize*會被忽略。 如果 *\*ValuePtr*是 Unicode 字串 (當呼叫**SQLGetEnvAttrW**)、 *Columnsize*引數必須是偶數。 如果屬性值不是字元字串， *Columnsize*未使用。  
   
  *StringLengthPtr*  
- [輸出]這是要傳回的總位元組數 （不包括 null 結束字元） 的緩衝區的指標可用來傳回中* \*ValuePtr*。 如果*ValuePtr*為 null 指標，則會傳回任何長度。 如果屬性值是字元字串，可用來傳回的位元組數目大於或等於*Columnsize*中的資料\* *ValuePtr*會被截斷成*Columnsize* null 結束字元的長度減而且是以 null 結束的驅動程式。  
+ [輸出]這是要傳回的總位元組數 （不包括 null 結束字元） 的緩衝區的指標可用來傳回中 *\*ValuePtr*。 如果*ValuePtr*為 null 指標，則會傳回任何長度。 如果屬性值是字元字串，可用來傳回的位元組數目大於或等於*Columnsize*中的資料\* *ValuePtr*會被截斷成*Columnsize* null 結束字元的長度減而且是以 null 結束的驅動程式。  
   
 ## <a name="returns"></a>傳回值  
  SQL_SUCCESS、 SQL_SUCCESS_WITH_INFO、 SQL_NO_DATA、 SQL_ERROR 或 SQL_INVALID_HANDLE。  
@@ -78,7 +78,7 @@ SQLRETURN SQLGetEnvAttr(
 |--------------|-----------|-----------------|  
 |01000|一般警告|特定驅動程式告知性訊息。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
 |01004|字串資料，右邊遭截斷|中傳回的資料\* *ValuePtr*已截斷為*Columnsize*減去 null 結束字元。 中會傳回未截斷的字串值的長度 **StringLengthPtr*。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
-|HY000|一般錯誤|發生錯誤，其中沒有任何特定的 SQLSTATE 和定義沒有實作特定的 SQLSTATE。 所傳回的錯誤訊息**SQLGetDiagRec**中* \*MessageText*緩衝區描述錯誤和其原因。|  
+|HY000|一般錯誤|發生錯誤，其中沒有任何特定的 SQLSTATE 和定義沒有實作特定的 SQLSTATE。 所傳回的錯誤訊息**SQLGetDiagRec**中 *\*MessageText*緩衝區描述錯誤和其原因。|  
 |HY001|記憶體配置錯誤|驅動程式無法配置記憶體，才能支援執行或完成的函式。|  
 |HY010|函數順序錯誤|(DM) **SQL_ATTR_ODBC_VERSION**尚未設定透過**SQLSetEnvAttr**。 您不需要設定**SQL_ATTR_ODBC_VERSION**明確如果您使用**SQLAllocHandleStd**。|  
 |HY013|記憶體管理錯誤|無法處理函式呼叫，因為基礎記憶體的物件無法存取，可能是因為記憶體不足。|  

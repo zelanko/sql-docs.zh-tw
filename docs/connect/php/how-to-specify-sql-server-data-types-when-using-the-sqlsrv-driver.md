@@ -43,7 +43,7 @@ ms.lasthandoff: 09/09/2017
   
 3.  建構在準備或執行查詢時要使用的 *$params* 陣列。 請注意， *$params* 陣列的每個元素，在您指定 SQL Server 資料類型時也必須是陣列。  
   
-4.  指定所需的 SQL Server 資料類型，使用適當的**SQLSRV_SQLTYPE_\* **常數中的每個子陣列的第四個參數為*$params*陣列。 如需完整的清單**SQLSRV_SQLTYPE_\* **常數，請參閱 Sqltype 」 一節的[常數 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md). 例如，在下方的程式碼中， *$changeDate*、 *$rate*和 *$payFrequency* 分別指定為 **$params**陣列中的 SQL Server 類型 **datetime**、 **money** 和 *tinyint* 。 由於未指定 *$employeeId* 的 SQL Server 類型，而且它初始化為整數，因此會使用預設的 SQL Server 類型 **integer** 。  
+4.  指定所需的 SQL Server 資料類型，使用適當的**SQLSRV_SQLTYPE_\*** 常數中的每個子陣列的第四個參數為*$params*陣列。 如需完整的清單**SQLSRV_SQLTYPE_\*** 常數，請參閱 Sqltype 」 一節的[常數 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md). 例如，在下方的程式碼中， *$changeDate*、 *$rate*和 *$payFrequency* 分別指定為 **$params**陣列中的 SQL Server 類型 **datetime**、 **money** 和 *tinyint* 。 由於未指定 *$employeeId* 的 SQL Server 類型，而且它初始化為整數，因此會使用預設的 SQL Server 類型 **integer** 。  
   
     ```  
     $employeeId = 5;  

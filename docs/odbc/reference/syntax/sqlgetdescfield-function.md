@@ -69,17 +69,17 @@ SQLRETURN SQLGetDescField(
  如果*ValuePtr*是 NULL， *StringLengthPtr*仍會傳回的總位元組數 （不含字元資料 null 結束字元） 可用來傳回所指向之緩衝區中*ValuePtr*。  
   
  *Columnsize*  
- [輸入]如果*FieldIdentifier*是 ODBC 定義的欄位和*ValuePtr*指向字元字串或二進位的緩衝區，這個引數應該是長度\* *ValuePtr*. 如果*FieldIdentifier*是 ODBC 定義的欄位和\* *ValuePtr*是整數， *Columnsize*會被忽略。 如果中的值* \*ValuePtr*是 Unicode 資料類型 (呼叫時**SQLGetDescFieldW**)、 *Columnsize*引數必須是偶數。  
+ [輸入]如果*FieldIdentifier*是 ODBC 定義的欄位和*ValuePtr*指向字元字串或二進位的緩衝區，這個引數應該是長度\* *ValuePtr*. 如果*FieldIdentifier*是 ODBC 定義的欄位和\* *ValuePtr*是整數， *Columnsize*會被忽略。 如果中的值 *\*ValuePtr*是 Unicode 資料類型 (呼叫時**SQLGetDescFieldW**)、 *Columnsize*引數必須是偶數。  
   
  如果*FieldIdentifier*是驅動程式定義的欄位，應用程式設定指出欄位驅動程式管理員性質*Columnsize*引數。 *Columnsize*可以是下列值：  
   
--   如果* \*ValuePtr*是字元字串的指標，則*Columnsize*是 SQL_NTS 之字串的長度。  
+-   如果 *\*ValuePtr*是字元字串的指標，則*Columnsize*是 SQL_NTS 之字串的長度。  
   
--   如果* \*ValuePtr*是二進位緩衝區的指標，則應用程式會將 SQL_LEN_BINARY_ATTR 結果 (*長度*) 中的巨集*Columnsize*。 這樣做會放在負值*Columnsize*。  
+-   如果 *\*ValuePtr*是二進位緩衝區的指標，則應用程式會將 SQL_LEN_BINARY_ATTR 結果 (*長度*) 中的巨集*Columnsize*。 這樣做會放在負值*Columnsize*。  
   
--   如果* \*ValuePtr*是字元字串或二進位字串以外的值的指標，則*Columnsize*應該有 SQL_IS_POINTER 的值。  
+-   如果 *\*ValuePtr*是字元字串或二進位字串以外的值的指標，則*Columnsize*應該有 SQL_IS_POINTER 的值。  
   
--   如果* \*ValuePtr*是包含固定長度資料類型，則*Columnsize*是 SQL_IS_INTEGER、 SQL_IS_UINTEGER、 SQL_IS_SMALLINT 或 SQL_IS_USMALLINT，視需要。  
+-   如果 *\*ValuePtr*是包含固定長度資料類型，則*Columnsize*是 SQL_IS_INTEGER、 SQL_IS_UINTEGER、 SQL_IS_SMALLINT 或 SQL_IS_USMALLINT，視需要。  
   
  *StringLengthPtr*  
  [輸出]要傳回的總位元組數 （不包括 null 結束字元所需的位元組數） 緩衝區指標可用來傳回中 **ValuePtr*。  
@@ -100,13 +100,13 @@ SQLRETURN SQLGetDescField(
 |01004|字串資料，右邊遭截斷|緩衝區\* *ValuePtr*仍不夠大，無法傳回整個描述項欄位，所以已截斷欄位。 中會傳回未截斷的描述項欄位的長度 **StringLengthPtr*。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
 |07009|無效的描述元索引|(DM) *RecNumber*引數的等於 0、 SQL_ATTR_USE_BOOKMARK 陳述式屬性 SQL_UB_OFF，而*DescriptorHandle*引數以前是 IRD 控制代碼。 （可以會傳回此錯誤的明確配置描述項只有描述元是陳述式控制代碼相關聯。）<br /><br /> *FieldIdentifier*引數就是記錄 欄位中， *RecNumber*引數為 0，而*DescriptorHandle*引數以前是 IPD 控制代碼。<br /><br /> *RecNumber*引數為小於 0。|  
 |08S01|通訊連結失敗|功能已完成處理之前，驅動程式和驅動程式已連線到資料來源之間的通訊連結失敗。|  
-|HY000|一般錯誤|發生錯誤，其中沒有任何特定的 SQLSTATE 和定義沒有實作特定的 SQLSTATE。 所傳回的錯誤訊息**SQLGetDiagRec**中* \*MessageText*緩衝區描述錯誤和其原因。|  
+|HY000|一般錯誤|發生錯誤，其中沒有任何特定的 SQLSTATE 和定義沒有實作特定的 SQLSTATE。 所傳回的錯誤訊息**SQLGetDiagRec**中 *\*MessageText*緩衝區描述錯誤和其原因。|  
 |HY001|記憶體配置錯誤|驅動程式無法配置記憶體，才能支援執行或完成的函式。|  
 |HY007|相關的陳述式未準備好|*DescriptorHandle*與*StatementHandle* IRD，以及相關聯的陳述式控制代碼必須尚未準備或執行。|  
 |HY010|函數順序錯誤|(DM) *DescriptorHandle*與*StatementHandle*以非同步方式執行的函式 （不這一個） 的呼叫和還在執行時呼叫此函式。<br /><br /> (DM) *DescriptorHandle*與*StatementHandle*其**SQLExecute**， **SQLExecDirect**， **SQLBulkOperations**，或**SQLSetPos**已呼叫而傳回 SQL_NEED_DATA。 此函式呼叫之前已傳送的所有資料在執行中參數或資料行的資料。<br /><br /> (DM) 非同步執行的函式呼叫相關聯的連接控制代碼的*DescriptorHandle*。 此非同步函式還在執行時**SQLGetDescField**呼叫函式。|  
 |HY013|記憶體管理錯誤|無法處理函式呼叫，因為基礎記憶體的物件無法存取，可能是因為記憶體不足。|  
 |HY021|不一致的描述項資訊|SQL_DESC_TYPE 和 SQL_DESC_DATETIME_INTERVAL_CODE 欄位並非來自有效的 ODBC SQL 類型、 有效的特定驅動程式 SQL 類型 （適用於 Ipd) 或有效的 ODBC C 類型 （適用於 Apd 或 ARDs）。|  
-|HY090|字串或緩衝區長度無效|(DM) * \*ValuePtr*是字元字串，並*Columnsize*小於零。|  
+|HY090|字串或緩衝區長度無效|(DM)  *\*ValuePtr*是字元字串，並*Columnsize*小於零。|  
 |HY091|無效的描述項欄位識別碼|*FieldIdentifier*不是 ODBC 定義的欄位，且不實作定義的值。<br /><br /> *FieldIdentifier*未定義的*DescriptorHandle*。|  
 |HY117|連接已暫止原因未知的交易狀態。 只有中斷連線，並允許唯讀函式。|(DM) 如需暫停狀態的詳細資訊，請參閱[SQLEndTran 函數](../../../odbc/reference/syntax/sqlendtran-function.md)。|  
 |HYT01|連接逾時過期|連接逾時期限過期之前對要求回應資料來源。 連接逾時期限透過設定**SQLSetConnectAttr**，SQL_ATTR_CONNECTION_TIMEOUT。|  

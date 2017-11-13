@@ -96,7 +96,7 @@ SQLRETURN SQLDataSources(
 |--------------|-----------|-----------------|  
 |01000|一般警告|(DM) 驅動程式管理員特有的資訊訊息。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
 |01004|字串資料，右邊遭截斷|(DM) 緩衝區\* *ServerName*仍不夠大，無法傳回完整的資料來源名稱。 因此，名稱被截斷。 中會傳回整個資料來源名稱的長度\* *NameLength1Ptr*。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。<br /><br /> (DM) 緩衝區\**描述*仍不夠大，無法傳回完整的驅動程式描述。 因此，描述已截斷。 中會傳回未截斷的資料來源描述的長度 **NameLength2Ptr*。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
-|HY000|一般錯誤|(DM) 發生錯誤，其中沒有任何特定的 SQLSTATE 和不定義的任何實作特定的 SQLSTATE。 所傳回的錯誤訊息**SQLGetDiagRec**中* \*MessageText*緩衝區描述錯誤和其原因。|  
+|HY000|一般錯誤|(DM) 發生錯誤，其中沒有任何特定的 SQLSTATE 和不定義的任何實作特定的 SQLSTATE。 所傳回的錯誤訊息**SQLGetDiagRec**中 *\*MessageText*緩衝區描述錯誤和其原因。|  
 |HY001|記憶體配置錯誤|(DM) 驅動程式管理員無法配置記憶體，才能支援執行或完成的函式。|  
 |HY010|函數順序錯誤|(DM) **SQLExecute**， **SQLExecDirect**，或**SQLMoreResults**針對呼叫*StatementHandle*並傳回 SQL_PARAM_DATA_可以使用。 此函式呼叫之前的所有資料流處理的參數擷取資料。|  
 |HY013|記憶體管理錯誤|無法處理函式呼叫，因為基礎記憶體的物件無法存取，可能是因為記憶體不足。|  

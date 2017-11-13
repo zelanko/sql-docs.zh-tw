@@ -38,13 +38,13 @@ ms.lasthandoff: 09/09/2017
  *硬碟機存取不允許外部受信任的區域。*
 在跨網域指令碼包含信任的網站，會停用下列作業： **Stream.SaveToFile**， **Stream.LoadFromFile**， **Recordset.Save**，和**Recordset.Open**，用來搭配**adCmdFile**旗標或與 Microsoft OLE DB 持續性提供者 (MSPersist)。
 
- **Recordset.Open** *，***Recordset.Save** *，***Stream.SaveToFile** *，和* **Stream.LoadFromFile***在僅限實體檔案上作業。        *
+ **Recordset.Open** *，***Recordset.Save** *，***Stream.SaveToFile** *，和* **Stream.LoadFromFile***在僅限實體檔案上作業。* 
 這些方法現在會確認檔案控制代碼指向實際的檔案。
 
- **Recordset.ActiveCommand***會傳回錯誤時叫用從 HTML/ASP 網頁。  *
+ **Recordset.ActiveCommand***會傳回錯誤時叫用從 HTML/ASP 網頁。* 
 這可防止**命令**誤用物件。
 
- *數目***資料錄集***傳回巢狀***圖形***命令有上限。        *
+ *數目***資料錄集***傳回巢狀***圖形***命令有上限。* 
 巢狀的 shape 命令現在會傳回最多 512 個**資料錄集**。 這表示**圖形**命令不再任意深度巢狀。 相反地，層級的深度上限為 512，每個命令會產生單一 （子系） 如果**資料錄集**。 如果在任何層級，**圖形**命令會傳回多個**資料錄集**，最大的層級的深度會小於 512。
 
 ## <a name="ado-27"></a>ADO 2.7

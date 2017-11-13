@@ -58,7 +58,7 @@ BOOL ConfigTranslator(
  如果成功，FALSE 如果失敗，則函數會傳回 TRUE。  
   
 ## <a name="diagnostics"></a>診斷  
- 當**ConfigTranslator**傳回 FALSE，相關聯* \*pfErrorCode*值由呼叫張貼至安裝程式錯誤緩衝區**SQLPostInstallerError**而且可以藉由呼叫取得**SQLInstallerError**。 下表列出* \*pfErrorCode*可以傳回的值**SQLInstallerError** ，並說明每個內容中的這個函式。  
+ 當**ConfigTranslator**傳回 FALSE，相關聯 *\*pfErrorCode*值由呼叫張貼至安裝程式錯誤緩衝區**SQLPostInstallerError**而且可以藉由呼叫取得**SQLInstallerError**。 下表列出 *\*pfErrorCode*可以傳回的值**SQLInstallerError** ，並說明每個內容中的這個函式。  
   
 |*\*pfErrorCode*|錯誤|Description|  
 |---------------------|-----------|-----------------|  

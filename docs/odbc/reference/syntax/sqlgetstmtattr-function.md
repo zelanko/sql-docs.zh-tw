@@ -66,20 +66,20 @@ SQLRETURN SQLGetStmtAttr(
  如果*ValuePtr*是 NULL， *StringLengthPtr*仍會傳回的總位元組數 （不含字元資料 null 結束字元） 可用來傳回所指向之緩衝區中*ValuePtr*。  
   
  *Columnsize*  
- [輸入]如果*屬性*是 ODBC 定義的屬性和*ValuePtr*指向字元字串或二進位的緩衝區，這個引數應該是長度\* *ValuePtr*. 如果*屬性*是 ODBC 定義的屬性和\* *ValuePtr*是整數， *Columnsize*會被忽略。 如果中傳回的值* \*ValuePtr*是 Unicode 字串 (當呼叫**SQLGetStmtAttrW**)、 *Columnsize*引數必須是偶數。  
+ [輸入]如果*屬性*是 ODBC 定義的屬性和*ValuePtr*指向字元字串或二進位的緩衝區，這個引數應該是長度\* *ValuePtr*. 如果*屬性*是 ODBC 定義的屬性和\* *ValuePtr*是整數， *Columnsize*會被忽略。 如果中傳回的值 *\*ValuePtr*是 Unicode 字串 (當呼叫**SQLGetStmtAttrW**)、 *Columnsize*引數必須是偶數。  
   
  如果*屬性*是驅動程式定義的屬性，應用程式設定指出屬性給驅動程式管理員性質*Columnsize*引數。 *Columnsize*可以是下列值：  
   
--   如果* \*ValuePtr*是字元字串的指標，則*Columnsize*是 SQL_NTS 之字串的長度。  
+-   如果 *\*ValuePtr*是字元字串的指標，則*Columnsize*是 SQL_NTS 之字串的長度。  
   
--   如果* \*ValuePtr*是二進位緩衝區的指標，則應用程式會將 SQL_LEN_BINARY_ATTR 結果 (*長度*) 中的巨集*Columnsize*。 這樣做會放在負值*Columnsize*。  
+-   如果 *\*ValuePtr*是二進位緩衝區的指標，則應用程式會將 SQL_LEN_BINARY_ATTR 結果 (*長度*) 中的巨集*Columnsize*。 這樣做會放在負值*Columnsize*。  
   
--   如果* \*ValuePtr*是字元字串或二進位字串以外的值的指標，則*Columnsize*應該有 SQL_IS_POINTER 的值。  
+-   如果 *\*ValuePtr*是字元字串或二進位字串以外的值的指標，則*Columnsize*應該有 SQL_IS_POINTER 的值。  
   
--   如果* \*ValuePtr*是包含固定長度資料類型，則*Columnsize*是 SQL_IS_INTEGER 或 SQL_IS_UINTEGER，視需要。  
+-   如果 *\*ValuePtr*是包含固定長度資料類型，則*Columnsize*是 SQL_IS_INTEGER 或 SQL_IS_UINTEGER，視需要。  
   
  *StringLengthPtr*  
- [輸出]這是要傳回的總位元組數 （不包括 null 結束字元） 的緩衝區的指標可用來傳回中* \*ValuePtr*。 如果*ValuePtr*為 null 指標，則會傳回任何長度。 如果屬性值是字元字串，而且可用來傳回的位元組數目大於或等於*Columnsize*中的資料* \*ValuePtr*會被截斷成*Columnsize* null 結束字元的長度減而且是以 null 結束的驅動程式。  
+ [輸出]這是要傳回的總位元組數 （不包括 null 結束字元） 的緩衝區的指標可用來傳回中 *\*ValuePtr*。 如果*ValuePtr*為 null 指標，則會傳回任何長度。 如果屬性值是字元字串，而且可用來傳回的位元組數目大於或等於*Columnsize*中的資料 *\*ValuePtr*會被截斷成*Columnsize* null 結束字元的長度減而且是以 null 結束的驅動程式。  
   
 ## <a name="returns"></a>傳回值  
  SQL_SUCCESS、 SQL_SUCCESS_WITH_INFO、 SQL_ERROR 或 SQL_INVALID_HANDLE。  
@@ -90,7 +90,7 @@ SQLRETURN SQLGetStmtAttr(
 |SQLSTATE|錯誤|Description|  
 |--------------|-----------|-----------------|  
 |01000|一般警告|特定驅動程式告知性訊息。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
-|01004|字串資料，右邊遭截斷|中傳回的資料* \*ValuePtr*已截斷為*Columnsize*減去 null 結束字元的長度。 中會傳回未截斷的字串值的長度 **StringLengthPtr*。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
+|01004|字串資料，右邊遭截斷|中傳回的資料 *\*ValuePtr*已截斷為*Columnsize*減去 null 結束字元的長度。 中會傳回未截斷的字串值的長度 **StringLengthPtr*。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
 |24000|指標狀態無效|引數*屬性*SQL_ATTR_ROW_NUMBER 和資料指標未開啟，或指標置於結果集或結果集的結尾之後開始之前。|  
 |HY000|一般錯誤|發生錯誤，其中沒有任何特定的 SQLSTATE 和定義沒有實作特定的 SQLSTATE。 所傳回的錯誤訊息**SQLGetDiagRec**引數中*MessageText*描述錯誤和其原因。|  
 |HY001|記憶體配置錯誤|驅動程式無法配置記憶體，才能支援執行或完成的函式。|  
@@ -107,7 +107,7 @@ SQLRETURN SQLGetStmtAttr(
 ## <a name="comments"></a>註解  
  一般陳述式屬性的詳細資訊，請參閱[陳述式屬性](../../../odbc/reference/develop-app/statement-attributes.md)。  
   
- 呼叫**SQLGetStmtAttr**中傳回* \*ValuePtr*陳述式中指定的屬性值*屬性*。 該值可以是 SQLULEN 值或 null 結尾字元字串。 如果值是 SQLULEN 值時，有些驅動程式可能只會寫入較低的 32 位元或 16 位元的緩衝區並保留不變的更高序位位元。 因此，應用程式應該使用 SQLULEN 的緩衝區，並初始化為 0 的值之前呼叫這個函式。 此外， *Columnsize*和*StringLengthPtr*不使用引數。 應用程式如果值是以 null 結束的字串，指定在該字串的最大長度*Columnsize*引數，以及驅動程式會傳回在該字串的長度* \*StringLengthPtr*緩衝區。  
+ 呼叫**SQLGetStmtAttr**中傳回 *\*ValuePtr*陳述式中指定的屬性值*屬性*。 該值可以是 SQLULEN 值或 null 結尾字元字串。 如果值是 SQLULEN 值時，有些驅動程式可能只會寫入較低的 32 位元或 16 位元的緩衝區並保留不變的更高序位位元。 因此，應用程式應該使用 SQLULEN 的緩衝區，並初始化為 0 的值之前呼叫這個函式。 此外， *Columnsize*和*StringLengthPtr*不使用引數。 應用程式如果值是以 null 結束的字串，指定在該字串的最大長度*Columnsize*引數，以及驅動程式會傳回在該字串的長度 *\*StringLengthPtr*緩衝區。  
   
  若要允許應用程式呼叫**SQLGetStmtAttr**才能使用 ODBC 2。*x*驅動程式、 呼叫**SQLGetStmtAttr**會對應到在驅動程式管理員**SQLGetStmtOption**。  
   

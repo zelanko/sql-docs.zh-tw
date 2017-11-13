@@ -62,7 +62,7 @@ SQLRETURN SQLDisconnect(
 |01002|中斷連線錯誤|中斷連接時發生錯誤。 不過，已成功中斷連接。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
 |08003|未開啟連線。|(DM) 引數中指定的連接*ConnectionHandle*未開啟。|  
 |25000|交易狀態無效|發生在引數所指定的連接上的處理序中的交易*ConnectionHandle*。 交易會維持使用中。|  
-|HY000|一般錯誤|發生錯誤，其中沒有任何特定的 SQLSTATE 和定義沒有實作特定的 SQLSTATE。 所傳回的錯誤訊息**SQLGetDiagRec**中* \*MessageText*緩衝區描述錯誤和其原因。|  
+|HY000|一般錯誤|發生錯誤，其中沒有任何特定的 SQLSTATE 和定義沒有實作特定的 SQLSTATE。 所傳回的錯誤訊息**SQLGetDiagRec**中 *\*MessageText*緩衝區描述錯誤和其原因。|  
 |HY001|記憶體配置錯誤|驅動程式無法配置記憶體，才能支援執行或完成的函式。|  
 |HY008|已取消操作|非同步處理已啟用*ConnectionHandle*。 呼叫此函式，以及它之前已經執行[SQLCancelHandle 函式](../../../odbc/reference/syntax/sqlcancelhandle-function.md)上呼叫*ConnectionHandle*。 上一次呼叫函式則*ConnectionHandle*。<br /><br /> 呼叫此函式，以及前完成執行**SQLCancelHandle**上呼叫*ConnectionHandle*從不同的執行緒在多執行緒應用程式。|  
 |HY010|函數順序錯誤|以非同步方式執行的函式的呼叫 (DM) *StatementHandle*與相關聯*ConnectionHandle*還在執行時和**SQLDisconnect**已呼叫。<br /><br /> 以非同步方式執行的函式 （不是這一個） 已呼叫 (DM) *ConnectionHandle*和還在執行時呼叫此函式。<br /><br /> (DM) **SQLExecute**， **SQLExecDirect**， **SQLBulkOperations**，或**SQLSetPos**針對呼叫*StatementHandle*聯*ConnectionHandle*並傳回 SQL_NEED_DATA。 此函式呼叫之前已傳送的所有資料在執行中參數或資料行的資料。|  

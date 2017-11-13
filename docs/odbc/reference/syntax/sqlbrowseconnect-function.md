@@ -89,7 +89,7 @@ SQLRETURN SQLBrowseConnect(
 |08004|伺服器拒絕連線|資料來源的拒絕連線的建立實作定義理由。|  
 |08S01|通訊連結失敗|功能已完成處理之前，驅動程式的驅動程式在嘗試連接資料來源之間的通訊連結失敗。|  
 |28000|無效的授權規格|使用者識別碼或授權字串，或兩者都指定在瀏覽要求的連接字串 (*InConnectionString*)，違反了資料來源所定義的限制。|  
-|HY000|一般錯誤|發生錯誤，其中沒有任何特定的 SQLSTATE 和定義沒有實作特定的 SQLSTATE。 所傳回的錯誤訊息**SQLGetDiagRec**中* \*MessageText*緩衝區描述錯誤和其原因。|  
+|HY000|一般錯誤|發生錯誤，其中沒有任何特定的 SQLSTATE 和定義沒有實作特定的 SQLSTATE。 所傳回的錯誤訊息**SQLGetDiagRec**中 *\*MessageText*緩衝區描述錯誤和其原因。|  
 |HY001|記憶體配置錯誤|(DM) 驅動程式管理員無法配置記憶體，才能支援執行或完成的函式。<br /><br /> 驅動程式無法配置記憶體，才能支援執行或完成的函式。|  
 |HY008|已取消操作|已取消非同步作業，藉由呼叫[SQLCancelHandle 函式](../../../odbc/reference/syntax/sqlcancelhandle-function.md)。 然後，原始函式一次上呼叫*ConnectionHandle*。<br /><br /> 已取消作業，藉由呼叫**SQLCancelHandle**上*ConnectionHandle*從不同的執行緒在多執行緒應用程式。|  
 |HY010|函數順序錯誤|以非同步方式執行的函式 （不是這一個） 已呼叫 (DM) *ConnectionHandle*和還在執行時呼叫此函式。|  

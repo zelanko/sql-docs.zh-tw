@@ -54,7 +54,7 @@ BOOL SQLValidDSN(
  如果資料來源名稱無效，函式會傳回 TRUE。 如果資料來源名稱無效，或函式呼叫失敗，則會傳回 FALSE。  
   
 ## <a name="diagnostics"></a>診斷  
- 當**SQLValidDSN**傳回 FALSE，相關聯* \*pfErrorCode*可以取得值，藉由呼叫**SQLInstallerError**。 A * \*pfErrorCode*會傳回只函式呼叫失敗時，不傳回 FALSE，因為資料來源名稱無效。 下表列出* \*pfErrorCode*可以傳回的值**SQLInstallerError** ，並說明每個內容中的這個函式。  
+ 當**SQLValidDSN**傳回 FALSE，相關聯 *\*pfErrorCode*可以取得值，藉由呼叫**SQLInstallerError**。 A  *\*pfErrorCode*會傳回只函式呼叫失敗時，不傳回 FALSE，因為資料來源名稱無效。 下表列出 *\*pfErrorCode*可以傳回的值**SQLInstallerError** ，並說明每個內容中的這個函式。  
   
 |*\*pfErrorCode*|錯誤|Description|  
 |---------------------|-----------|-----------------|  

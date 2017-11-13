@@ -33,7 +33,7 @@ ms.lasthandoff: 09/09/2017
   
  此案例假設您知道如何使用 ActiveX 控制項的基本 HTML 配置標記、 使用 DHTML 資料繫結技術和程式。  
   
- 如果您已經安裝 SDK，可以在 samples\dataaccess\rds\AddressBook\AddressBook.asp SDK 目錄中找到通訊錄範例應用程式的完整原始程式碼。 若要檢視的通訊錄案例，請在 Internet Explorer 4.0 或更新版本中，輸入* *http://*webserver*/RDS/AddressBook/AddressBook.asp** 其中*webserver*名稱提供給 Windows NT 4.0 或 Windows 2000 Web 伺服器電腦正在執行 Internet Information Services (IIS) 和 ASP。  
+ 如果您已經安裝 SDK，可以在 samples\dataaccess\rds\AddressBook\AddressBook.asp SDK 目錄中找到通訊錄範例應用程式的完整原始程式碼。 若要檢視的通訊錄案例，請在 Internet Explorer 4.0 或更新版本中，輸入 **http://*webserver*/RDS/AddressBook/AddressBook.asp** 其中*webserver*名稱提供給 Windows NT 4.0 或 Windows 2000 Web 伺服器電腦正在執行 Internet Information Services (IIS) 和 ASP。  
   
 ## <a name="introduction-to-address-book"></a>Introduction to 通訊錄  
  通訊錄範例應用程式提供一個簡單線上通訊錄，您可以使用內部網路上發佈可搜尋的目錄。 通訊錄的設計，讓使用者能夠輸入搜尋字串中，要求有關員工資訊的一或多個欄位。 若要顯示的遠端資料服務的基本功能，範例應用程式是刻意保持在最少，使用物件和搜尋欄位的最小數目。  

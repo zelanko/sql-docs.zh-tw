@@ -105,7 +105,7 @@ SQLRETURN SQLSetStmtAttr(
 |01S02 的警告|選項值已變更|驅動程式不支援指定的值*ValuePtr*，或是在指定的值*ValuePtr*不實作的工作狀況，造成無效，因此驅動程式取代相似的值。 (**SQLGetStmtAttr**可以呼叫以判斷暫時替代的值。)取代值無效， *StatementHandle*直到資料指標已關閉，此時陳述式屬性會還原為先前的值。 陳述式屬性可以變更為：<br /><br /> SQL_ ATTR_CONCURRENCY SQL_ ATTR_CURSOR_TYPE SQL_ ATTR_KEYSET_SIZE SQL_ ATTR_MAX_LENGTH SQL_ ATTR_MAX_ROWS SQL_ ATTR_QUERY_TIMEOUT SQL_ATTR_ROW_ARRAY_SIZE SQL_ ATTR_SIMULATE_CURSOR<br /><br /> （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
 |08S01|通訊連結失敗|功能已完成處理之前，驅動程式和驅動程式已連線到資料來源之間的通訊連結失敗。|  
 |24000|指標狀態無效|*屬性*SQL_ATTR_CONCURRENCY、 SQL_ATTR_CURSOR_TYPE、 SQL_ATTR_SIMULATE_CURSOR 或 SQL_ATTR_USE_BOOKMARKS，且資料指標為開啟。|  
-|HY000|一般錯誤|發生錯誤，其中沒有任何特定的 SQLSTATE 和定義沒有實作特定的 SQLSTATE。 所傳回的錯誤訊息**SQLGetDiagRec**中* \*MessageText*緩衝區描述錯誤和其原因。|  
+|HY000|一般錯誤|發生錯誤，其中沒有任何特定的 SQLSTATE 和定義沒有實作特定的 SQLSTATE。 所傳回的錯誤訊息**SQLGetDiagRec**中 *\*MessageText*緩衝區描述錯誤和其原因。|  
 |HY001|記憶體配置錯誤|驅動程式無法配置記憶體，才能支援執行或完成的函式。|  
 |HY009|無效的 null 指標使用|*屬性*引數識別必要的字串屬性，為陳述式屬性和*ValuePtr*引數為 null 指標。|  
 |HY010|函數順序錯誤|(DM) 非同步執行的函式呼叫相關聯的連接控制代碼的*StatementHandle*。 此非同步函式還在執行時**SQLSetStmtAttr**呼叫函式。<br /><br /> (DM) **SQLExecute**， **SQLExecDirect**，或**SQLMoreResults**針對呼叫*StatementHandle*並傳回 SQL_PARAM_DATA_可以使用。 此函式呼叫之前的所有資料流處理的參數擷取資料。<br /><br /> 以非同步方式執行的函式的呼叫 (DM) *StatementHandle*和還在執行時呼叫此函式。<br /><br /> (DM) **SQLExecute**， **SQLExecDirect**， **SQLBulkOperations**，或**SQLSetPos**針對呼叫*StatementHandle*並傳回 SQL_NEED_DATA。 此函式呼叫之前已傳送的所有資料在執行中參數或資料行的資料。|  
@@ -113,7 +113,7 @@ SQLRETURN SQLSetStmtAttr(
 |HY013|記憶體管理錯誤|無法處理函式呼叫，因為基礎記憶體的物件無法存取，可能是因為記憶體不足。|  
 |HY017|使用自動配置描述項控制代碼無效|(DM)*屬性*引數是 SQL_ATTR_IMP_ROW_DESC 或 SQL_ATTR_IMP_PARAM_DESC。<br /><br /> (DM)*屬性*引數以前是 SQL_ATTR_APP_ROW_DESC 或 SQL_ATTR_APP_PARAM_DESC，並在值*ValuePtr*原本以外的控制代碼執行隱含配置描述項控制代碼配置給 ARD 或 APD。|  
 |HY024|屬性值無效|提供給指定*屬性*值，指定了無效的值中*ValuePtr*。 （驅動程式管理員會傳回這個僅適用於連接和陳述式屬性接受一組離散值，例如 SQL_ATTR_ACCESS_MODE 或 SQL_ ATTR_ASYNC_ENABLE 的 SQLSTATE。 對於所有其他連接和陳述式屬性，驅動程式必須確認中指定的值*ValuePtr*。)<br /><br /> *屬性*引數是 SQL_ATTR_APP_ROW_DESC 或 SQL_ATTR_APP_PARAM_DESC，和*ValuePtr*已明確配置描述項控制代碼會做為相同的連接*StatementHandle*引數。|  
-|HY090|字串或緩衝區長度無效|(DM) * \*ValuePtr*是字元字串，而*StringLength*引數為小於 0，但不是 SQL_NTS。|  
+|HY090|字串或緩衝區長度無效|(DM)  *\*ValuePtr*是字元字串，而*StringLength*引數為小於 0，但不是 SQL_NTS。|  
 |HY092|屬性/選項識別碼無效|(DM) 指定的引數的值*屬性*對 ODBC 驅動程式支援的版本無效。<br /><br /> (DM) 指定的引數的值*屬性*唯讀屬性。|  
 |HY117|連接已暫止原因未知的交易狀態。 只有中斷連線，並允許唯讀函式。|(DM) 如需暫停狀態的詳細資訊，請參閱[SQLEndTran 函數](../../../odbc/reference/syntax/sqlendtran-function.md)。|  
 |HYC00|未實作選擇性功能|指定的引數的值*屬性*驅動程式支援 ODBC 的版本，但不支援此驅動程式是有效的 ODBC 陳述式屬性。<br /><br /> *屬性*引數以前是 SQL_ATTR_ASYNC_ENABLE，而呼叫**SQLGetInfo**與*資訊類型*SQL_ASYNC_MODE 傳回 SQL_AM_CONNECTION。<br /><br /> *屬性*引數是 SQL_ATTR_ENABLE_AUTO_IPD，而 SQL_ATTR_AUTO_IPD 連接屬性的值是 SQL_FALSE。|  

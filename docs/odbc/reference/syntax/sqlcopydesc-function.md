@@ -68,14 +68,14 @@ SQLRETURN SQLCopyDesc(
 |--------------|-----------|-----------------|  
 |01000|一般警告|特定驅動程式告知性訊息。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
 |08S01|通訊連結失敗|功能已完成處理之前，驅動程式和驅動程式已連線到資料來源之間的通訊連結失敗。|  
-|HY000|一般錯誤|發生錯誤，其中沒有任何特定的 SQLSTATE 和定義沒有實作特定的 SQLSTATE。 所傳回的錯誤訊息**SQLGetDiagRec**中* \*MessageText*緩衝區描述錯誤和其原因。|  
+|HY000|一般錯誤|發生錯誤，其中沒有任何特定的 SQLSTATE 和定義沒有實作特定的 SQLSTATE。 所傳回的錯誤訊息**SQLGetDiagRec**中 *\*MessageText*緩衝區描述錯誤和其原因。|  
 |HY001|記憶體配置錯誤|驅動程式無法配置記憶體，才能支援執行或完成的函式。|  
 |HY007|相關的陳述式未準備好|*SourceDescHandle*聯 IRD 和相關聯的陳述式控制代碼不是處於已備妥或已執行狀態。|  
 |HY010|函數順序錯誤|(DM) 中的描述項處理*SourceDescHandle*或*TargetDescHandle*與*StatementHandle* ，以非同步方式執行的函式 (not這一個） 已呼叫，而且還在執行時呼叫此函式。<br /><br /> 在中 (DM) 描述項處理*SourceDescHandle*或*TargetDescHandle*與*StatementHandle*其**SQLExecute**， **SQLExecDirect**， **SQLBulkOperations**，或**SQLSetPos**已呼叫而傳回 SQL_NEED_DATA。 此函式呼叫之前已傳送的所有資料在執行中參數或資料行的資料。<br /><br /> (DM) 非同步執行的函式呼叫相關聯的連接控制代碼的*SourceDescHandle*或*TargetDescHandle*。 此非同步函式還在執行時**SQLCopyDesc**呼叫函式。<br /><br /> (DM) **SQLExecute**， **SQLExecDirect**，或**SQLMoreResults**呼叫其中一個相關聯的陳述式控制代碼*SourceDescHandle*或*TargetDescHandle*並傳回 SQL_PARAM_DATA_AVAILABLE。 此函式呼叫之前的所有資料流處理的參數擷取資料。|  
 |HY013|記憶體管理錯誤|無法處理函式呼叫，因為基礎記憶體的物件無法存取，可能是因為記憶體不足。|  
 |HY016|無法修改實作資料列描述項|*TargetDescHandle* IRD 與相關聯。|  
 |HY021|不一致的描述項資訊|檢查一致性檢查期間的描述項資訊不一致。 如需詳細資訊，請參閱 < 一致性檢查 」，在**SQLSetDescField**。|  
-|HY092|屬性/選項識別碼無效|呼叫**SQLCopyDesc**提示呼叫**SQLSetDescField**，但* \*ValuePtr*對無效*FieldIdentifier*引數上的*TargetDescHandle*。|  
+|HY092|屬性/選項識別碼無效|呼叫**SQLCopyDesc**提示呼叫**SQLSetDescField**，但 *\*ValuePtr*對無效*FieldIdentifier*引數上的*TargetDescHandle*。|  
 |HY117|連接已暫止原因未知的交易狀態。 只有中斷連線，並允許唯讀函式。|(DM) 如需暫停狀態的詳細資訊，請參閱[SQLEndTran 函數](../../../odbc/reference/syntax/sqlendtran-function.md)。|  
 |HYT01|連接逾時過期|連接逾時期限過期之前對要求回應資料來源。 連接逾時期限透過設定**SQLSetConnectAttr**，SQL_ATTR_CONNECTION_TIMEOUT。|  
 |IM001|驅動程式不支援此函式|(DM) 驅動程式相關聯*SourceDescHandle*或*TargetDescHandle*不支援此函式。|  

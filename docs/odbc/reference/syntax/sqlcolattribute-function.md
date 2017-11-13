@@ -73,7 +73,7 @@ SQLRETURN SQLColAttribute (
  如果*CharacterAttributePtr*是 NULL， *StringLengthPtr*仍會傳回的總位元組數 （不含字元資料 null 結束字元） 可用來傳回緩衝區中所指*CharacterAttributePtr*。  
   
  *Columnsize*  
- [輸入]如果*FieldIdentifier*是 ODBC 定義的欄位和*CharacterAttributePtr*指向的字元字串或二進位的緩衝區，這個引數應該是長度\* *CharacterAttributePtr*。 如果*FieldIdentifier*是 ODBC 定義的欄位和\* *CharacterAttribute*Ptr 是一個整數，這個欄位會被忽略。 如果* \*CharacterAttributePtr*是 Unicode 字串 (當呼叫**SQLColAttributeW**)、 *Columnsize*引數必須是偶數。 如果*FieldIdentifier*是驅動程式定義的欄位，應用程式設定指出欄位驅動程式管理員性質*Columnsize*引數。 *Columnsize*可以是下列值：  
+ [輸入]如果*FieldIdentifier*是 ODBC 定義的欄位和*CharacterAttributePtr*指向的字元字串或二進位的緩衝區，這個引數應該是長度\* *CharacterAttributePtr*。 如果*FieldIdentifier*是 ODBC 定義的欄位和\* *CharacterAttribute*Ptr 是一個整數，這個欄位會被忽略。 如果 *\*CharacterAttributePtr*是 Unicode 字串 (當呼叫**SQLColAttributeW**)、 *Columnsize*引數必須是偶數。 如果*FieldIdentifier*是驅動程式定義的欄位，應用程式設定指出欄位驅動程式管理員性質*Columnsize*引數。 *Columnsize*可以是下列值：  
   
 -   如果*CharacterAttributePtr*是指標的指標， *Columnsize*應該有 SQL_IS_POINTER 的值。  
   
@@ -110,7 +110,7 @@ SQLRETURN SQLColAttribute (
 |HY008|已取消操作|非同步處理已啟用*StatementHandle*。 呼叫此函式，和之前已完成執行， **SQLCancel**或**SQLCancelHandle**上呼叫*StatementHandle*。 上一次呼叫函式則*StatementHandle*。<br /><br /> 呼叫此函式，和之前已完成執行， **SQLCancel**或**SQLCancelHandle**上呼叫*StatementHandle*從不同的執行緒中多執行緒應用程式。|  
 |HY010|函數順序錯誤|(DM) 非同步執行的函式呼叫相關聯的連接控制代碼的*StatementHandle*。 仍在 SQLColAttribute 呼叫時執行此 aynchronous 函式。<br /><br /> (DM) **SQLExecute**， **SQLExecDirect**，或**SQLMoreResults**針對呼叫*StatementHandle*並傳回 SQL_PARAM_DATA_可以使用。 此函式呼叫之前的所有資料流處理的參數擷取資料。<br /><br /> (DM) 函式呼叫之前呼叫**SQLPrepare**， **SQLExecDirect**，或為目錄函數*StatementHandle*。<br /><br /> 以非同步方式執行的函式 （不是這一個） 已呼叫 (DM) *StatementHandle*和還在執行時呼叫此函式。<br /><br /> (DM) **SQLExecute**， **SQLExecDirect**， **SQLBulkOperations**，或**SQLSetPos**針對呼叫*StatementHandle*並傳回 SQL_NEED_DATA。 此函式呼叫之前已傳送的所有資料在執行中參數或資料行的資料。|  
 |HY013|記憶體管理錯誤|無法處理函式呼叫，因為基礎記憶體的物件無法存取，可能是因為記憶體不足。|  
-|HY090|字串或緩衝區長度無效|(DM) * \*CharacterAttributePtr*是字元字串，並*Columnsize*小於 0，但不是等於 SQL_NTS。|  
+|HY090|字串或緩衝區長度無效|(DM)  *\*CharacterAttributePtr*是字元字串，並*Columnsize*小於 0，但不是等於 SQL_NTS。|  
 |HY091|無效的描述項欄位識別碼|指定的引數的值*FieldIdentifier*未定義值的其中一個，且不實作定義的值。|  
 |HY117|連接已暫止原因未知的交易狀態。 只有中斷連線，並允許唯讀函式。|(DM) 如需暫停狀態的詳細資訊，請參閱[SQLEndTran 函數](../../../odbc/reference/syntax/sqlendtran-function.md)。|  
 |HYC00|不支援的驅動程式|指定的引數的值*FieldIdentifier*驅動程式不支援。|  
@@ -148,7 +148,7 @@ SQLRETURN SQLColAttribute (
   
 -   如果*FieldIdentifier*是在 ODBC 3 的新值。*x*，如這沒有對應的值在 ODBC 2。*x*，它將不會對應時 ODBC 3。*x*應用程式所使用的是它的呼叫中**SQLColAttribute** ODBC 2。*x*驅動程式，並呼叫會傳回 SQLSTATE HY091 （無效的描述項欄位識別碼）。  
   
- 下表列出所傳回的描述元類型**SQLColAttribute**。 型別*NumericAttributePtr*值是**SQLLEN \* **。  
+ 下表列出所傳回的描述元類型**SQLColAttribute**。 型別*NumericAttributePtr*值是**SQLLEN \*** 。  
   
 |*FieldIdentifier*|資訊<br /><br /> 傳回|Description|  
 |-----------------------|---------------------------------|-----------------|  

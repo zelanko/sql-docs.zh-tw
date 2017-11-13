@@ -71,7 +71,7 @@ SQLRETURN SQLSetCursorName(
 |24000|指標狀態無效|對應至的陳述式*StatementHandle*中已存在於未執行或資料指標定位的狀態。|  
 |34000|指標名稱無效|中指定的資料指標名稱 **Current*無效，因為它超過最大長度，驅動程式時，所定義，或者啟動 「 SQLCUR"或"SQL_CUR。 」|  
 |3C000|重複的資料指標名稱|中指定的資料指標名稱 **Current*已經存在。|  
-|HY000|一般錯誤|發生錯誤，其中沒有任何特定的 SQLSTATE 和定義沒有實作特定的 SQLSTATE。 所傳回的錯誤訊息**SQLGetDiagRec**中* \*MessageText*緩衝區描述錯誤和其原因。|  
+|HY000|一般錯誤|發生錯誤，其中沒有任何特定的 SQLSTATE 和定義沒有實作特定的 SQLSTATE。 所傳回的錯誤訊息**SQLGetDiagRec**中 *\*MessageText*緩衝區描述錯誤和其原因。|  
 |HY001|記憶體配置錯誤|驅動程式無法配置記憶體，才能支援執行或完成的函式。|  
 |HY009|無效的 null 指標使用|(DM) 引數*Current*為 null 指標。|  
 |HY010|函數順序錯誤|(DM) 非同步執行的函式呼叫相關聯的連接控制代碼的*StatementHandle*。 此 aynchronous 函式還在執行時**SQLSetCursorName**呼叫函式。<br /><br /> 以非同步方式執行的函式的呼叫 (DM) *StatementHandle*和還在執行時呼叫此函式。<br /><br /> (DM) **SQLExecute**， **SQLExecDirect**， **SQLBulkOperations**，或**SQLSetPos**針對呼叫*StatementHandle*並傳回 SQL_NEED_DATA。 此函式呼叫之前已傳送的所有資料在執行中參數或資料行的資料。|  

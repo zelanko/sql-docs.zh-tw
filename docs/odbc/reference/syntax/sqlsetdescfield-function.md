@@ -87,19 +87,19 @@ SQLRETURN SQLSetDescField(
 |SQLSTATE|錯誤|Description|  
 |--------------|-----------|-----------------|  
 |01000|一般警告|特定驅動程式告知性訊息。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
-|01S02 的警告|選項值已變更|驅動程式不支援指定的值* \*ValuePtr* (如果*ValuePtr*是指標) 中的值或*ValuePtr* (如果*ValuePtr*是整數值)，或* \*ValuePtr*不實作的工作狀況，造成無效，因此驅動程式取代相似的值。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
-|07009|無效的描述元索引|*FieldIdentifier*引數就是記錄 欄位中， *RecNumber*引數為 0，而*DescriptorHandle* IPD 控制代碼的參考引數。<br /><br /> *RecNumber*引數為 0，小於和*DescriptorHandle* ARD 或 APD 參考引數。<br /><br /> *RecNumber*引數為大於最大數目的資料行或參數，可支援資料來源，而*DescriptorHandle* APD 或 ARD 參考引數。<br /><br /> (DM) *FieldIdentifier*引數以前是 SQL_DESC_COUNT，和* \*ValuePtr*引數為小於 0。<br /><br /> *RecNumber*引數以前是等於 0，而*DescriptorHandle*隱含配置的 APD 參考引數。 （這個錯誤就不需要明確配置的應用程式描述元，因為不知道應用程式明確配置描述元是 APD 或 ARD 直到執行時間。）|  
+|01S02 的警告|選項值已變更|驅動程式不支援指定的值 *\*ValuePtr* (如果*ValuePtr*是指標) 中的值或*ValuePtr* (如果*ValuePtr*是整數值)，或 *\*ValuePtr*不實作的工作狀況，造成無效，因此驅動程式取代相似的值。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
+|07009|無效的描述元索引|*FieldIdentifier*引數就是記錄 欄位中， *RecNumber*引數為 0，而*DescriptorHandle* IPD 控制代碼的參考引數。<br /><br /> *RecNumber*引數為 0，小於和*DescriptorHandle* ARD 或 APD 參考引數。<br /><br /> *RecNumber*引數為大於最大數目的資料行或參數，可支援資料來源，而*DescriptorHandle* APD 或 ARD 參考引數。<br /><br /> (DM) *FieldIdentifier*引數以前是 SQL_DESC_COUNT，和 *\*ValuePtr*引數為小於 0。<br /><br /> *RecNumber*引數以前是等於 0，而*DescriptorHandle*隱含配置的 APD 參考引數。 （這個錯誤就不需要明確配置的應用程式描述元，因為不知道應用程式明確配置描述元是 APD 或 ARD 直到執行時間。）|  
 |08S01|通訊連結失敗|功能已完成處理之前，驅動程式和驅動程式已連線到資料來源之間的通訊連結失敗。|  
 |22001|字串資料，右邊遭截斷|*FieldIdentifier*引數以前是 SQL_DESC_NAME，而*Columnsize*引數為大於 SQL_MAX_IDENTIFIER_LEN 的值。|  
-|HY000|一般錯誤|發生錯誤，其中沒有任何特定的 SQLSTATE 和定義沒有實作特定的 SQLSTATE。 所傳回的錯誤訊息**SQLGetDiagRec**中* \*MessageText*緩衝區描述錯誤和其原因。|  
+|HY000|一般錯誤|發生錯誤，其中沒有任何特定的 SQLSTATE 和定義沒有實作特定的 SQLSTATE。 所傳回的錯誤訊息**SQLGetDiagRec**中 *\*MessageText*緩衝區描述錯誤和其原因。|  
 |HY001|記憶體配置錯誤|驅動程式無法配置記憶體，才能支援執行或完成的函式。|  
 |HY010|函數順序錯誤|(DM) *DescriptorHandle*與*StatementHandle*以非同步方式執行的函式 （不這一個） 的呼叫和還在執行時呼叫此函式。<br /><br /> (DM) **SQLExecute**， **SQLExecDirect**， **SQLBulkOperations**，或**SQLSetPos**針對呼叫*StatementHandle*與其*DescriptorHandle*已相關聯，並傳回 SQL_NEED_DATA。 此函式呼叫之前已傳送的所有資料在執行中參數或資料行的資料。<br /><br /> (DM) 非同步執行的函式呼叫相關聯的連接控制代碼的*DescriptorHandle*。 此非同步函式還在執行時**SQLSetDescField**呼叫函式。<br /><br /> (DM) **SQLExecute**， **SQLExecDirect**，或**SQLMoreResults**呼叫其中一個相關聯的陳述式控制代碼*DescriptorHandle*並傳回 SQL_PARAM_DATA_AVAILABLE。 此函式呼叫之前的所有資料流處理的參數擷取資料。|  
 |HY013|記憶體管理錯誤|無法處理函式呼叫，因為基礎記憶體的物件無法存取，可能是因為記憶體不足。|  
 |HY016|無法修改實作資料列描述項|*DescriptorHandle*引數以前是相關聯的 IRD 和*FieldIdentifier*引數不是 SQL_DESC_ARRAY_STATUS_PTR 或 SQL_DESC_ROWS_PROCESSED_PTR。|  
 |HY021|不一致的描述項資訊|SQL_DESC_TYPE 和 SQL_DESC_DATETIME_INTERVAL_CODE 欄位並非來自有效的 ODBC SQL 類型的有效驅動程式專屬 SQL 型別 （Ipd) 或有效的 ODBC C 類型 （適用於 Apd 或 ARDs）。<br /><br /> 檢查一致性檢查期間的描述項資訊不一致。 (請參閱中的 「 一致性檢查 」 **SQLSetDescRec**。)|  
-|HY090|字串或緩衝區長度無效|(DM) * \*ValuePtr*是字元字串，並*Columnsize*小於零，但不是等於 SQL_NTS。<br /><br /> (DM) 驅動程式為 ODBC 2*.x*驅動程式，描述元是 ARD， *ColumnNumber*引數設定為 0，而且指定的引數的值*Columnsize*已不等於 4。|  
+|HY090|字串或緩衝區長度無效|(DM)  *\*ValuePtr*是字元字串，並*Columnsize*小於零，但不是等於 SQL_NTS。<br /><br /> (DM) 驅動程式為 ODBC 2*.x*驅動程式，描述元是 ARD， *ColumnNumber*引數設定為 0，而且指定的引數的值*Columnsize*已不等於 4。|  
 |HY091|無效的描述項欄位識別碼|指定的值*FieldIdentifier*引數不是 ODBC 定義的欄位，且不實作定義的值。<br /><br /> *FieldIdentifier*引數無效*DescriptorHandle*引數。<br /><br /> *FieldIdentifier*引數以前是唯讀、 ODBC 定義的欄位。|  
-|HY092|屬性/選項識別碼無效|中的值* \*ValuePtr*對無效*FieldIdentifier*引數。<br /><br /> *FieldIdentifier*引數以前是 SQL_DESC_UNNAMED，和*ValuePtr*已 SQL_NAMED。|  
+|HY092|屬性/選項識別碼無效|中的值 *\*ValuePtr*對無效*FieldIdentifier*引數。<br /><br /> *FieldIdentifier*引數以前是 SQL_DESC_UNNAMED，和*ValuePtr*已 SQL_NAMED。|  
 |HY105|無效的參數類型|(DM) 指定 SQL_DESC_PARAMETER_TYPE 欄位的值無效。 (如需詳細資訊，請參閱 「*了*引數 」 一節中**SQLBindParameter**。)|  
 |HY117|連接已暫止原因未知的交易狀態。 只有中斷連線，並允許唯讀函式。|(DM) 如需暫停狀態的詳細資訊，請參閱[What's New in ODBC 3.8](../../../odbc/reference/what-s-new-in-odbc-3-8.md)。|  
 |HYT01|連接逾時過期|連接逾時期限過期之前對要求回應資料來源。 連接逾時期限透過設定**SQLSetConnectAttr**，SQL_ATTR_CONNECTION_TIMEOUT。|  

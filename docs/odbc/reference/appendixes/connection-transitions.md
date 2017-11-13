@@ -58,7 +58,7 @@ ODBC 連接擁有以下狀態。
   
  [4] 這個資料列會顯示轉換時*HandleType*已 SQL_HANDLE_DESC。  
   
- [5] 呼叫**SQLAllocHandle**與*OutputHandlePtr*指向有效的控制代碼會覆寫先前內容 ofthat 控制代碼，則不管該控制代碼，可能會造成問題，ODBC 驅動程式。 它是不正確的 ODBC 應用程式開發，呼叫**SQLAllocHandle**兩次以相同的應用程式變數定義* \*OutputHandlePtr*而不需呼叫**SQLFreeHandle**之前它重新配置釋放控制代碼。 覆寫 ODBC 以此方式的控制代碼可能會導致不一致的行為或內容上的 ODBC 驅動程式的錯誤。  
+ [5] 呼叫**SQLAllocHandle**與*OutputHandlePtr*指向有效的控制代碼會覆寫先前內容 ofthat 控制代碼，則不管該控制代碼，可能會造成問題，ODBC 驅動程式。 它是不正確的 ODBC 應用程式開發，呼叫**SQLAllocHandle**兩次以相同的應用程式變數定義 *\*OutputHandlePtr*而不需呼叫**SQLFreeHandle**之前它重新配置釋放控制代碼。 覆寫 ODBC 以此方式的控制代碼可能會導致不一致的行為或內容上的 ODBC 驅動程式的錯誤。  
   
 ## <a name="sqlbrowseconnect"></a>SQLBrowseConnect  
   

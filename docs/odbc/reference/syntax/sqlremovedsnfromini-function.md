@@ -54,7 +54,7 @@ BOOL SQLRemoveDSNFromIni(
  如果它會移除資料來源或資料來源中的 Odbc.ini 檔案，則函數會傳回 TRUE。 若要移除資料來源時，它會傳回 FALSE。  
   
 ## <a name="diagnostics"></a>診斷  
- 當**SQLRemoveDSNFromIni**傳回 FALSE，相關聯* \*pfErrorCode*可以取得值，藉由呼叫**SQLInstallerError**。 下表列出* \*pfErrorCode*可以傳回的值**SQLInstallerError** ，並說明每個內容中的這個函式。  
+ 當**SQLRemoveDSNFromIni**傳回 FALSE，相關聯 *\*pfErrorCode*可以取得值，藉由呼叫**SQLInstallerError**。 下表列出 *\*pfErrorCode*可以傳回的值**SQLInstallerError** ，並說明每個內容中的這個函式。  
   
 |*\*pfErrorCode*|錯誤|Description|  
 |---------------------|-----------|-----------------|  

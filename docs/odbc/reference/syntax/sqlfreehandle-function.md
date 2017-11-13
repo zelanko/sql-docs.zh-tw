@@ -81,7 +81,7 @@ SQLRETURN SQLFreeHandle(
   
 |SQLSTATE|錯誤|Description|  
 |--------------|-----------|-----------------|  
-|HY000|一般錯誤|發生錯誤，其中沒有任何特定的 SQLSTATE 和定義沒有實作特定的 SQLSTATE。 所傳回的錯誤訊息**SQLGetDiagRec**中* \*MessageText*緩衝區描述錯誤和其原因。|  
+|HY000|一般錯誤|發生錯誤，其中沒有任何特定的 SQLSTATE 和定義沒有實作特定的 SQLSTATE。 所傳回的錯誤訊息**SQLGetDiagRec**中 *\*MessageText*緩衝區描述錯誤和其原因。|  
 |HY001|記憶體配置錯誤|驅動程式無法配置記憶體，才能支援執行或完成的函式。|  
 |HY010|函數順序錯誤|(DM) *HandleType*引數為 SQL_HANDLE_ENV，和至少一個連接是在配置或已連線的狀態。 **SQLDisconnect**和**SQLFreeHandle**與*HandleType*利用 SQL_HANDLE_DBC 的必須呼叫每個連線然後再呼叫**SQLFreeHandle**與*HandleType*利用 SQL_HANDLE_ENV。<br /><br /> (DM) *HandleType*引數以前是利用 SQL_HANDLE_DBC，並會在呼叫之前已呼叫此函式**SQLDisconnect**連接。<br /><br /> (DM) *HandleType*引數以前是利用 SQL_HANDLE_DBC。 以非同步方式執行的函式呼叫與*處理*和函式還在執行時呼叫此函式。<br /><br /> (DM) *HandleType*引數為 SQL_HANDLE_STMT。 **SQLExecute**， **SQLExecDirect**， **SQLBulkOperations**，或**SQLSetPos**已使用陳述式控制代碼呼叫，並且傳回 SQL_NEED_DATA。 此函式呼叫之前已傳送的所有資料在執行中參數或資料行的資料。<br /><br /> (DM) *HandleType*引數為 SQL_HANDLE_STMT。 陳述式控制代碼或相關聯的連接控制代碼上呼叫非同步執行的函式和函式還在執行時呼叫此函式。<br /><br /> (DM) *HandleType*引數以前是 SQL_HANDLE_DESC。 以非同步方式執行的函式呼叫相關聯的連接控制代碼。和函式還在執行時呼叫此函式。<br /><br /> (DM) 所有附屬的控制代碼和其他資源並未釋放之前**SQLFreeHandle**呼叫。<br /><br /> (DM) **SQLExecute**， **SQLExecDirect**，或**SQLMoreResults**呼叫其中一個相關聯的陳述式控制代碼*處理*和*HandleType*已設定為 SQL_HANDLE_STMT 或 SQL_HANDLE_DESC 傳回 SQL_PARAM_DATA_AVAILABLE。 此函式呼叫之前的所有資料流處理的參數擷取資料。|  
 |HY013|記憶體管理錯誤|*HandleType*引數是 SQL_HANDLE_STMT 或 SQL_HANDLE_DESC，和因為基礎記憶體的物件無法存取，可能是因為記憶體不足，無法處理函式呼叫。|  

@@ -48,7 +48,7 @@ BOOL SQLGetConfigMode(
   
 ## <a name="arguments"></a>引數  
  *pwConfigMode*  
- [輸出]包含組態模式的緩衝區指標。 （請參閱 「 註解。"）中的值* \*pwConfigMode*可以是：  
+ [輸出]包含組態模式的緩衝區指標。 （請參閱 「 註解。"）中的值 *\*pwConfigMode*可以是：  
   
  ODBC_USER_DSN  
   
@@ -60,14 +60,14 @@ BOOL SQLGetConfigMode(
  如果成功，FALSE 如果失敗，則函數會傳回 TRUE。  
   
 ## <a name="diagnostics"></a>診斷  
- 當**SQLGetConfigMode**傳回 FALSE，相關聯* \*pfErrorCode*可以取得值，藉由呼叫**SQLInstallerError**。 下表列出* \*pfErrorCode*可以傳回的值**SQLInstallerError** ，並說明每個內容中的這個函式。  
+ 當**SQLGetConfigMode**傳回 FALSE，相關聯 *\*pfErrorCode*可以取得值，藉由呼叫**SQLInstallerError**。 下表列出 *\*pfErrorCode*可以傳回的值**SQLInstallerError** ，並說明每個內容中的這個函式。  
   
 |*\*pfErrorCode*|錯誤|Description|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_OUT_OF_MEM|記憶體不足|安裝程式無法執行函式，因為記憶體不足。|  
   
 ## <a name="comments"></a>註解  
- 此函式用來判斷列出 DSN 值的 Odbc.ini 項目中的系統資訊。 如果* \*pwConfigMode* ODBC_USER_DSN，DSN 為使用者 DSN 而且函式會讀取在 HKEY_CURRENT_USER 中的 Odbc.ini 項目。 如果是 ODBC_SYSTEM_DSN，DSN 為系統 DSN，並從 Odbc.ini 中的項目 HKEY_LOCAL_MACHINE 的函式讀取。 如果是 ODBC_BOTH_DSN，HKEY_CURRENT_USER 時嘗試，而且如果失敗，就會使用 HKEY_LOCAL_MACHINE。  
+ 此函式用來判斷列出 DSN 值的 Odbc.ini 項目中的系統資訊。 如果 *\*pwConfigMode* ODBC_USER_DSN，DSN 為使用者 DSN 而且函式會讀取在 HKEY_CURRENT_USER 中的 Odbc.ini 項目。 如果是 ODBC_SYSTEM_DSN，DSN 為系統 DSN，並從 Odbc.ini 中的項目 HKEY_LOCAL_MACHINE 的函式讀取。 如果是 ODBC_BOTH_DSN，HKEY_CURRENT_USER 時嘗試，而且如果失敗，就會使用 HKEY_LOCAL_MACHINE。  
   
  根據預設， **SQLGetConfigMode**傳回 ODBC_BOTH_DSN。 使用者 DSN] 或 [系統 DSN 的呼叫所建立時**SQLConfigDataSource**，函式會將組態模式 ODBC_USER_DSN 或 ODBC_SYSTEM_DSN 區別時修改資料來源名稱的使用者和系統 Dsn。 在傳回時之前, **SQLConfigDataSource** ODBC_BOTH_DSN 重設為將設定模式。  
   

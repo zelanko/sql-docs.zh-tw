@@ -95,7 +95,7 @@ SQLRETURN SQLSetConnectAttr(
 |24000|指標狀態無效|*屬性*引數是 SQL_ATTR_CURRENT_CATALOG，且暫止的結果集。|  
 |25000|本機交易中有不合法的作業|連接已在本機時嘗試藉由設定連接屬性 SQL_ATTR_ENLIST_IN_DTC 編列在分散式的交易連接 (DTC) 交易。<br /><br /> 連接已經登記在 DTC。<br /><br /> 已經登記在分散式的交易連接的連接，並由 SQL_ATTR_AUTOCOMMIT 設定為 sql_autocommit_off 時啟動本機交易。|  
 |3D000|無效的目錄名稱|*屬性*引數是 SQL_CURRENT_CATALOG，且指定的目錄名稱無效。|  
-|HY000|一般錯誤|發生錯誤，其中沒有任何特定的 SQLSTATE 和定義沒有實作特定的 SQLSTATE。 所傳回的錯誤訊息**SQLGetDiagRec**中* \*MessageText*緩衝區描述錯誤和其原因。|  
+|HY000|一般錯誤|發生錯誤，其中沒有任何特定的 SQLSTATE 和定義沒有實作特定的 SQLSTATE。 所傳回的錯誤訊息**SQLGetDiagRec**中 *\*MessageText*緩衝區描述錯誤和其原因。|  
 |HY001|記憶體配置錯誤|驅動程式無法配置記憶體，才能支援執行或完成的函式。|  
 |HY008|已取消操作|非同步處理已啟用*ConnectionHandle*。 **SQLSetConnectAttr**呼叫函式，和之前已完成執行， [SQLCancelHandle 函式](../../../odbc/reference/syntax/sqlcancelhandle-function.md)上呼叫*ConnectionHandle*，然後按一下**SQLSetConnectAttr**上一次呼叫函式*ConnectionHandle*。<br /><br /> 或者， **SQLSetConnectAttr**呼叫函式，和之前已完成執行， **SQLCancelHandle**上呼叫*ConnectionHandle*從不同的執行緒中多執行緒的應用程式。|  
 |HY009|無效的 null 指標使用|*屬性*引數所識別的字串值，所需的連接屬性和*ValuePtr*引數為 null 指標。|  

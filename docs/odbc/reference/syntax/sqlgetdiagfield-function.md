@@ -83,7 +83,7 @@ SQLRETURN SQLGetDiagField(
  如果*DiagInfoPtr*是 NULL， *StringLengthPtr*仍會傳回的總位元組數 （不含字元資料 null 結束字元） 可用來傳回所指向之緩衝區中*DiagInfoPtr*。  
   
  *Columnsize*  
- [輸入]如果*Sqlgetdiagfield*是 ODBC 定義的診斷和*DiagInfoPtr*指向字元字串或二進位的緩衝區，這個引數應該是長度\* *DiagInfoPtr*. 如果*Sqlgetdiagfield*是 ODBC 定義的欄位和\* *DiagInfoPtr*是整數， *Columnsize*會被忽略。 如果中的值* \*DiagInfoPtr*是 Unicode 字串 (當呼叫**SQLGetDiagFieldW**)、 *Columnsize*引數必須是偶數。  
+ [輸入]如果*Sqlgetdiagfield*是 ODBC 定義的診斷和*DiagInfoPtr*指向字元字串或二進位的緩衝區，這個引數應該是長度\* *DiagInfoPtr*. 如果*Sqlgetdiagfield*是 ODBC 定義的欄位和\* *DiagInfoPtr*是整數， *Columnsize*會被忽略。 如果中的值 *\*DiagInfoPtr*是 Unicode 字串 (當呼叫**SQLGetDiagFieldW**)、 *Columnsize*引數必須是偶數。  
   
  如果*Sqlgetdiagfield*是驅動程式定義的欄位，應用程式設定指出欄位驅動程式管理員性質*Columnsize*引數。 *Columnsize*可以是下列值：  
   
@@ -93,7 +93,7 @@ SQLRETURN SQLGetDiagField(
   
 -   如果*DiagInfoPtr*是字元字串或二進位字串以外的值的指標*Columnsize*應該有 SQL_IS_POINTER 的值。  
   
--   如果* \*DiagInfoPtr*包含固定長度資料類型， *Columnsize*是 SQL_IS_INTEGER、 SQL_IS_UINTEGER、 SQL_IS_SMALLINT 或 SQL_IS_USMALLINT，視需要。  
+-   如果 *\*DiagInfoPtr*包含固定長度資料類型， *Columnsize*是 SQL_IS_INTEGER、 SQL_IS_UINTEGER、 SQL_IS_SMALLINT 或 SQL_IS_USMALLINT，視需要。  
   
  *StringLengthPtr*  
  [輸出]這是要傳回的總位元組數 （不包括 null 結束字元所需的位元組數） 的緩衝區指標可用來傳回中\* *DiagInfoPtr*，字元資料。 如果傳回可用的位元組數目大於或等於*Columnsize*中的文字\* *DiagInfoPtr*會被截斷成*Columnsize*減號null 結束字元的長度。  

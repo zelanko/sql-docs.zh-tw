@@ -54,7 +54,7 @@ BOOL SQLManageDataSources(
  **SQLManageDataSources**則傳回 FALSE *hwnd*不是有效的視窗控制代碼。 否則，它會傳回 TRUE。  
   
 ## <a name="diagnostics"></a>診斷  
- 當**SQLManageDataSources**傳回 FALSE，相關聯* \*pfErrorCode*可以取得值，藉由呼叫**SQLInstallerError**。 下表列出* \*pfErrorCode*可以傳回的值**SQLInstallerError** ，並說明每個內容中的這個函式。  
+ 當**SQLManageDataSources**傳回 FALSE，相關聯 *\*pfErrorCode*可以取得值，藉由呼叫**SQLInstallerError**。 下表列出 *\*pfErrorCode*可以傳回的值**SQLInstallerError** ，並說明每個內容中的這個函式。  
   
 |*\*pfErrorCode*|錯誤|Description|  
 |---------------------|-----------|-----------------|  

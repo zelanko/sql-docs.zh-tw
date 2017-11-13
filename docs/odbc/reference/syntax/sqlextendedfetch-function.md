@@ -96,7 +96,7 @@ SQLRETURN SQLExtendedFetch(
 |22015|間隔欄位溢位|C 間隔類型指派從精確數值或 SQL 類型的間隔 [前置] 欄位中造成有效位數的遺失。<br /><br /> 當資料擷取至 C 間隔類型，時發生沒有 C 間隔類型中的 SQL 型別值的表示。<br /><br /> （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
 |22018|轉換規格的字元值無效|C 類型為精確或大約的數字、 日期時間或間隔資料類型。資料行的 SQL 類型是字元資料類型。和資料行中的值不是有效的常值的繫結 C 類型。<br /><br /> （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
 |24000|指標狀態無效|*StatementHandle*目前處於執行狀態，但任何結果集與*StatementHandle*。|  
-|HY000|一般錯誤|發生錯誤，其中沒有任何特定的 SQLSTATE 和定義沒有實作特定的 SQLSTATE。 所傳回的錯誤訊息**SQLError**中* \*MessageText*緩衝區描述錯誤和其原因。|  
+|HY000|一般錯誤|發生錯誤，其中沒有任何特定的 SQLSTATE 和定義沒有實作特定的 SQLSTATE。 所傳回的錯誤訊息**SQLError**中 *\*MessageText*緩衝區描述錯誤和其原因。|  
 |HY001|記憶體配置錯誤|驅動程式無法配置記憶體，才能支援執行或完成的函式。|  
 |HY008|已取消操作|非同步處理已啟用*StatementHandle*。 呼叫此函式，和之前已完成執行， **SQLCancel**或**SQLCancelHandle**上呼叫*StatementHandle*，然後被呼叫函式上一次*StatementHandle*。<br /><br /> 呼叫此函式，和之前已完成執行， **SQLCancel**或**SQLCancelHandle**上呼叫*StatementHandle*從不同的執行緒中多執行緒應用程式。|  
 |HY010|函數順序錯誤|(DM) 非同步執行的函式呼叫相關聯的連接控制代碼的*StatementHandle*。 此非同步函式還在執行時**SQLExtendedFetch**呼叫函式。<br /><br /> (DM) **SQLExecute**， **SQLExecDirect**，或**SQLMoreResults**針對呼叫*StatementHandle*並傳回 SQL_PARAM_DATA_可以使用。 此函式呼叫之前的所有資料流處理的參數擷取資料。<br /><br /> (DM) 指定*StatementHandle*不處於執行狀態。 呼叫此函式時未先呼叫**SQLExecDirect**， **SQLExecute**，或類別目錄函式。<br /><br /> 以非同步方式執行的函式 （不是這一個） 已呼叫 (DM) *StatementHandle*和還在執行時呼叫此函式。<br /><br /> (DM) **SQLExecute**， **SQLExecDirect**， **SQLBulkOperations**，或**SQLSetPos**針對呼叫*StatementHandle*並傳回 SQL_NEED_DATA。 此函式呼叫之前已傳送的所有資料在執行中參數或資料行的資料。<br /><br /> (DM) **SQLExtendedFetch**針對呼叫*StatementHandle*之後**SQLFetch**或**SQLFetchScroll**呼叫之前**SQLFreeStmt** SQL_CLOSE 選項呼叫。<br /><br /> (DM) **SQLBulkOperations**陳述式之前呼叫**SQLFetch**， **SQLFetchScroll**，或**SQLExtendedFetch**呼叫，並然後**SQLExtendedFetch**之前已呼叫**SQLFreeStmt** SQL_CLOSE 選項呼叫。|  
@@ -113,7 +113,7 @@ SQLRETURN SQLExtendedFetch(
 ## <a name="comments"></a>註解  
  行為**SQLExtendedFetch**等同於**SQLFetchScroll**，但有下列例外狀況：  
   
--   **SQLExtendedFetch**和**SQLFetchScroll**使用不同方法來傳回提取的資料列數目。 **SQLExtendedFetch**傳回中提取的資料列數目* \*RowCountPtr*;**SQLFetchScroll**傳回直接至 SQL_ATTR_ROWS_FETCHED_PTR 所指向的緩衝區中提取的資料列數目。 如需詳細資訊，請參閱*RowCountPtr*引數。  
+-   **SQLExtendedFetch**和**SQLFetchScroll**使用不同方法來傳回提取的資料列數目。 **SQLExtendedFetch**傳回中提取的資料列數目 *\*RowCountPtr*;**SQLFetchScroll**傳回直接至 SQL_ATTR_ROWS_FETCHED_PTR 所指向的緩衝區中提取的資料列數目。 如需詳細資訊，請參閱*RowCountPtr*引數。  
   
 -   **SQLExtendedFetch**和**SQLFetchScroll**不同陣列中傳回的每個資料列狀態。 如需詳細資訊，請參閱*RowStatusArray*引數。  
   

@@ -53,30 +53,30 @@ BOOL SQLReadFileDSN(
   
 ## <a name="arguments"></a>引數  
  *lpszFileName*  
- [輸入]包含.dsn 檔案名稱的資料緩衝區的指標。 .Dsn 擴充功能被附加到還沒有.dsn 延伸模組的所有檔案名稱。 中的值* \*lpszFileName*必須是以 null 結束的字串。  
+ [輸入]包含.dsn 檔案名稱的資料緩衝區的指標。 .Dsn 擴充功能被附加到還沒有.dsn 延伸模組的所有檔案名稱。 中的值 *\*lpszFileName*必須是以 null 結束的字串。  
   
  *lpszAppName*  
- [輸入]包含的應用程式名稱的資料緩衝區的指標。 這是 ODBC 區段是"ODBC"。 中的值* \*lpszAppName*必須是以 null 結束的字串。  
+ [輸入]包含的應用程式名稱的資料緩衝區的指標。 這是 ODBC 區段是"ODBC"。 中的值 *\*lpszAppName*必須是以 null 結束的字串。  
   
  *lpszKeyName*  
- [輸入]包含要讀取之索引鍵名稱的資料緩衝區的指標。 保留關鍵字，請參閱 「 註解 」。 中的值* \*lpszAppName*必須是以 null 結束的字串。  
+ [輸入]包含要讀取之索引鍵名稱的資料緩衝區的指標。 保留關鍵字，請參閱 「 註解 」。 中的值 *\*lpszAppName*必須是以 null 結束的字串。  
   
  *lpszString*  
  [輸出]資料緩衝區，其中包含要讀取的索引鍵相關聯的字串指標。  
   
- 如果* \*lpszFileName*是有效的.dsn 檔案名稱但*lpszAppName*引數為 null 指標和*lpszKeyName*引數是 null 指標，則* \*lpszString*包含有效的應用程式的清單。 如果* \*lpszFileName*是有效的.dsn 檔案名稱和* \*lpszAppName*是有效的應用程式的名稱，但*lpszKeyName*引數是 null指標，然後* \*lpszString*包含有效的 DSN 檔案，請以分號分隔的適當章節中的保留關鍵字的清單。 如果* \*lpszFileName*是有效的.dsn 檔案名稱，但* \*lpszAppName*為 null 指標和*lpszKeyName*引數是 null 指標，然後* \*lpszString*包含一份在 DSN 檔案中，以分號分隔的區段。  
+ 如果 *\*lpszFileName*是有效的.dsn 檔案名稱但*lpszAppName*引數為 null 指標和*lpszKeyName*引數是 null 指標，則 *\*lpszString*包含有效的應用程式的清單。 如果 *\*lpszFileName*是有效的.dsn 檔案名稱和 *\*lpszAppName*是有效的應用程式的名稱，但*lpszKeyName*引數是 null指標，然後 *\*lpszString*包含有效的 DSN 檔案，請以分號分隔的適當章節中的保留關鍵字的清單。 如果 *\*lpszFileName*是有效的.dsn 檔案名稱，但 *\*lpszAppName*為 null 指標和*lpszKeyName*引數是 null 指標，然後 *\*lpszString*包含一份在 DSN 檔案中，以分號分隔的區段。  
   
  *cbString*  
- [輸入]長度* \*lpszString*緩衝區。  
+ [輸入]長度 *\*lpszString*緩衝區。  
   
  *pcbString*  
- [輸出]可用來傳回中的位元組總數* \*lpszString*。 如果傳回可用的位元組數目大於或等於*cbString*，輸出字串中的* \*lpszString*會被截斷成*cbString*減號null 結束的字元。 *PcbString*引數可以是 null 指標。  
+ [輸出]可用來傳回中的位元組總數 *\*lpszString*。 如果傳回可用的位元組數目大於或等於*cbString*，輸出字串中的 *\*lpszString*會被截斷成*cbString*減號null 結束的字元。 *PcbString*引數可以是 null 指標。  
   
 ## <a name="returns"></a>傳回值  
  如果成功，FALSE 如果失敗，則函數會傳回 TRUE。  
   
 ## <a name="diagnostics"></a>診斷  
- 當**SQLReadFileDSN**傳回 FALSE，相關聯* \*pfErrorCode*可以取得值，藉由呼叫**SQLInstallerError**。 下表列出* \*pfErrorCode*可以傳回的值**SQLInstallerError** ，並說明每個內容中的這個函式。  
+ 當**SQLReadFileDSN**傳回 FALSE，相關聯 *\*pfErrorCode*可以取得值，藉由呼叫**SQLInstallerError**。 下表列出 *\*pfErrorCode*可以傳回的值**SQLInstallerError** ，並說明每個內容中的這個函式。  
   
 |*\*pfErrorCode*|錯誤|Description|  
 |---------------------|-----------|-----------------|  
@@ -85,7 +85,7 @@ BOOL SQLReadFileDSN(
 |ODBC_ERROR_INVALID_PATH|無效的安裝路徑|檔案名稱中指定的路徑*lpszFileName*引數無效。|  
 |ODBC_ERROR_INVALID_REQUEST_TYPE|要求的類型無效|*LpszAppName*引數為 NULL，而*lpszKeyName*是有效的引數。|  
 |ODBC_ERROR_OUT_OF_MEM|記憶體不足|安裝程式無法執行函式，因為記憶體不足。|  
-|ODBC_ERROR_OUTPUT_STRING_TRUNCATED|輸出字串截斷|在傳回的字串* \*lpszString*被截斷，因為中的值*cbString*小於或等於中的值* \*pcbString*.|  
+|ODBC_ERROR_OUTPUT_STRING_TRUNCATED|輸出字串截斷|在傳回的字串 *\*lpszString*被截斷，因為中的值*cbString*小於或等於中的值 *\*pcbString*.|  
 |ODBC_ERROR_REQUEST_FAILED|要求失敗|關鍵字不存在於檔案 DSN。|  
   
 ## <a name="comments"></a>註解  

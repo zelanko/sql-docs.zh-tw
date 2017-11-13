@@ -98,10 +98,10 @@ CREATE SYMMETRIC KEY key_name
 > [!NOTE]  
 >  自主資料庫無法使用這個選項。  
   
- CREATION_DISPOSITION ** = ** CREATE_NEW  
+ CREATION_DISPOSITION  **=**  CREATE_NEW  
  在可延伸金鑰管理裝置上建立新的金鑰。  如果金鑰已存在於裝置上，陳述式會失敗，並傳回錯誤。  
   
- CREATION_DISPOSITION ** = ** OPEN_EXISTING  
+ CREATION_DISPOSITION  **=**  OPEN_EXISTING  
  將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 對稱金鑰對應到現有的「可延伸金鑰管理」金鑰。 如果未提供 CREATION_DISPOSITION = OPEN_EXISTING，就會預設為 CREATE_NEW。  
   
  *certificate_name*  

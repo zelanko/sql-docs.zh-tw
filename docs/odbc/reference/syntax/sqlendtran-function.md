@@ -79,7 +79,7 @@ SQLRETURN SQLEndTran(
 |25S03|交易回復|驅動程式無法保證以不可分割方式，完成所有工作中的全域交易，且所有工作中的使用中交易*處理*已回復。|  
 |40001|序列化失敗|交易已回復由於與另一個交易資源鎖死。|  
 |40002|完整性條件約束違規|*CompletionType* SQL_COMMIT，且驗證，對承諾做出的變更會造成完整性條件約束違規。 如此一來，交易已回復。|  
-|HY000|一般錯誤|發生錯誤，其中沒有任何特定的 SQLSTATE 和定義沒有實作特定的 SQLSTATE。 所傳回的錯誤訊息**SQLGetDiagRec**中* \*szMessageText*緩衝區描述錯誤和其原因。|  
+|HY000|一般錯誤|發生錯誤，其中沒有任何特定的 SQLSTATE 和定義沒有實作特定的 SQLSTATE。 所傳回的錯誤訊息**SQLGetDiagRec**中 *\*szMessageText*緩衝區描述錯誤和其原因。|  
 |HY001|記憶體配置錯誤|驅動程式無法配置記憶體，才能支援執行或完成的函式。|  
 |HY008|已取消操作|非同步處理已啟用*ConnectionHandle*。 呼叫此函式，以及前完成執行[SQLCancelHandle 函式](../../../odbc/reference/syntax/sqlcancelhandle-function.md)上呼叫*ConnectionHandle*。 上一次呼叫函式則*ConnectionHandle*。<br /><br /> 呼叫此函式，以及前完成執行**SQLCancelHandle**上呼叫*ConnectionHandle*從不同的執行緒在多執行緒應用程式。|  
 |HY010|函數順序錯誤|(DM) 非同步執行的函式呼叫相關聯的陳述式控制代碼*ConnectionHandle*還在執行時和**SQLEndTran**呼叫。<br /><br /> 以非同步方式執行的函式 （不是這一個） 已呼叫 (DM) *ConnectionHandle*和還在執行時呼叫此函式。<br /><br /> (DM) **SQLExecute**， **SQLExecDirect**， **SQLBulkOperations**，或**SQLSetPos**與陳述式控制代碼相關聯的呼叫*ConnectionHandle*並傳回 SQL_NEED_DATA。 此函式呼叫之前已傳送的所有資料在執行中參數或資料行的資料。<br /><br /> 以非同步方式執行的函式 （不是這一個） 已呼叫 (DM)*處理*與*HandleType*設定為 SQL_HANDLE_DBC 和還在執行時呼叫此函式。<br /><br /> (DM) **SQLExecute**， **SQLExecDirect**，或**SQLMoreResults**呼叫其中一個相關聯的陳述式控制代碼*處理*和傳回的 SQL_PARAM_DATA_AVAILABLE。 此函式呼叫之前的所有資料流處理的參數擷取資料。|  

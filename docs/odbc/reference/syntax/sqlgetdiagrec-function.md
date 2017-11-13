@@ -90,7 +90,7 @@ SQLRETURN SQLGetDiagRec(
  [輸入]長度 **MessageText*以字元為單位的緩衝區。 沒有診斷訊息文字的最大長度。  
   
  *TextLengthPtr*  
- [輸出]這是要傳回的總字元數 （不包括所需的 null 結束字元的字元數） 的緩衝區指標可用來傳回中* \*MessageText*。 如果要傳回的字元數目大於*Columnsize*中的診斷訊息文字* \*MessageText*會被截斷成*Columnsize*減去 null 結束字元的長度。  
+ [輸出]這是要傳回的總字元數 （不包括所需的 null 結束字元的字元數） 的緩衝區指標可用來傳回中 *\*MessageText*。 如果要傳回的字元數目大於*Columnsize*中的診斷訊息文字 *\*MessageText*會被截斷成*Columnsize*減去 null 結束字元的長度。  
   
 ## <a name="returns"></a>傳回值  
  SQL_SUCCESS、 SQL_SUCCESS_WITH_INFO、 SQL_ERROR 或 SQL_INVALID_HANDLE。  

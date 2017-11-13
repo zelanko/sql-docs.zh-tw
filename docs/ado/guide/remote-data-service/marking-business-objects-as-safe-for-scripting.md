@@ -48,7 +48,7 @@ Categories\{7DD95802-9882-11CF-9FA9-00AA006C42C4}]
   
  在最後一個步驟中，應用程式安裝精靈會建立為 htm.cab 檔。 您可以將這兩個檔案複製到目標電腦，並按兩下.htm 檔，以載入該頁面，並正確登錄伺服器。  
   
- 因為商務物件將會安裝 Windows\System32\Occache 目錄中，依預設，將它移至 Windows\System32 目錄，並變更**HKEY_CLASSES_ROOT\CLSID\\ ** \< *MyActiveXGUID*>\\**InprocServer32**登錄機碼，以符合正確的路徑。
+ 因為商務物件將會安裝 Windows\System32\Occache 目錄中，依預設，將它移至 Windows\System32 目錄，並變更**HKEY_CLASSES_ROOT\CLSID\\**  \< *MyActiveXGUID*>\\**InprocServer32**登錄機碼，以符合正確的路徑。
 
 
 

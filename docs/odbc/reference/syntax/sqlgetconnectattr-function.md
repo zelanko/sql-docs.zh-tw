@@ -66,20 +66,20 @@ SQLRETURN SQLGetConnectAttr(
  如果*ValuePtr*是 NULL， *StringLengthPtr*仍會傳回的總位元組數 （不含字元資料 null 結束字元） 可用來傳回所指向之緩衝區中*ValuePtr*。  
   
  *Columnsize*  
- [輸入]如果*屬性*是 ODBC 定義的屬性和*ValuePtr*指向字元字串或二進位的緩衝區，這個引數應該是長度\* *ValuePtr*. 如果*屬性*是 ODBC 定義的屬性和\* *ValuePtr*是整數， *Columnsize*會被忽略。 如果中的值* \*ValuePtr*是 Unicode 字串 (當呼叫**SQLGetConnectAttrW**)、 *Columnsize*引數必須是偶數。  
+ [輸入]如果*屬性*是 ODBC 定義的屬性和*ValuePtr*指向字元字串或二進位的緩衝區，這個引數應該是長度\* *ValuePtr*. 如果*屬性*是 ODBC 定義的屬性和\* *ValuePtr*是整數， *Columnsize*會被忽略。 如果中的值 *\*ValuePtr*是 Unicode 字串 (當呼叫**SQLGetConnectAttrW**)、 *Columnsize*引數必須是偶數。  
   
  如果*屬性*是驅動程式定義的屬性，應用程式設定指出屬性給驅動程式管理員性質*Columnsize*引數。 *Columnsize*可以是下列值：  
   
--   如果* \*ValuePtr*是字元字串的指標*Columnsize*是字串的長度。  
+-   如果 *\*ValuePtr*是字元字串的指標*Columnsize*是字串的長度。  
   
--   如果* \*ValuePtr* SQL_LEN_BINARY_ATTR 的結果是二進位的緩衝區，應用程式位置的指標 (*長度*) 中的巨集*Columnsize*。 這樣做會放在負值*Columnsize*。  
+-   如果 *\*ValuePtr* SQL_LEN_BINARY_ATTR 的結果是二進位的緩衝區，應用程式位置的指標 (*長度*) 中的巨集*Columnsize*。 這樣做會放在負值*Columnsize*。  
   
--   如果* \*ValuePtr*是字元字串或二進位字串以外的值的指標*Columnsize*應該有 SQL_IS_POINTER 的值。  
+-   如果 *\*ValuePtr*是字元字串或二進位字串以外的值的指標*Columnsize*應該有 SQL_IS_POINTER 的值。  
   
--   如果* \*ValuePtr*包含固定長度資料類型， *Columnsize*是 SQL_IS_INTEGER 或 SQL_IS_UINTEGER，視需要。  
+-   如果 *\*ValuePtr*包含固定長度資料類型， *Columnsize*是 SQL_IS_INTEGER 或 SQL_IS_UINTEGER，視需要。  
   
  *StringLengthPtr*  
- [輸出]這是要傳回的總位元組數 （不包括 null 結束字元） 的緩衝區的指標可用來傳回中\* *ValuePtr*。 如果\* *ValuePtr*為 null 指標，則會傳回任何長度。 如果屬性值是字元字串，而且可用來傳回的位元組數目大於*Columnsize*的 null 結束的字元中的資料長度減去* \*ValuePtr*會被截斷成*Columnsize* null 結束字元的長度減而且是以 null 結束的驅動程式。  
+ [輸出]這是要傳回的總位元組數 （不包括 null 結束字元） 的緩衝區的指標可用來傳回中\* *ValuePtr*。 如果\* *ValuePtr*為 null 指標，則會傳回任何長度。 如果屬性值是字元字串，而且可用來傳回的位元組數目大於*Columnsize*的 null 結束的字元中的資料長度減去 *\*ValuePtr*會被截斷成*Columnsize* null 結束字元的長度減而且是以 null 結束的驅動程式。  
   
 ## <a name="returns"></a>傳回值  
  SQL_SUCCESS、 SQL_SUCCESS_WITH_INFO、 SQL_NO_DATA、 SQL_ERROR 或 SQL_INVALID_HANDLE。  
@@ -97,7 +97,7 @@ SQLRETURN SQLGetConnectAttr(
 |HY001|記憶體配置錯誤|驅動程式無法配置記憶體，才能支援執行或完成的函式。|  
 |HY010|函數順序錯誤|(DM) **SQLBrowseConnect**針對呼叫*ConnectionHandle*並傳回 SQL_NEED_DATA。 此函式呼叫之前**SQLBrowseConnect**傳回 SQL_SUCCESS_WITH_INFO 或 SQL_SUCCESS。<br /><br /> (DM) **SQLExecute**， **SQLExecDirect**，或**SQLMoreResults**針對呼叫*ConnectionHandle*並傳回 SQL_PARAM_DATA_可以使用。 此函式呼叫之前的所有資料流處理的參數擷取資料。|  
 |HY013|記憶體管理錯誤|無法處理函式呼叫，因為基礎記憶體的物件無法存取，可能是因為記憶體不足。|  
-|HY090|字串或緩衝區長度無效|(DM) * \*ValuePtr*是字元字串，但 Columnsize 小於零，但不是等於 SQL_NTS。|  
+|HY090|字串或緩衝區長度無效|(DM)  *\*ValuePtr*是字元字串，但 Columnsize 小於零，但不是等於 SQL_NTS。|  
 |HY092|屬性/選項識別碼無效|指定的引數的值*屬性*對 ODBC 驅動程式支援的版本無效。|  
 |HY114|驅動程式不支援連接層級的非同步函式執行|(DM) 應用程式嘗試啟用 SQL_ATTR_ASYNC_DBC_FUNCTIONS_ENABLE 與驅動程式不支援非同步連線作業的非同步函式執行。|  
 |HY117|連接已暫止原因未知的交易狀態。 只有中斷連線，並允許唯讀函式。|(DM) 如需暫停狀態的詳細資訊，請參閱[SQLEndTran 函數](../../../odbc/reference/syntax/sqlendtran-function.md)。|  

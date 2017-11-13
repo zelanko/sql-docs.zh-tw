@@ -101,7 +101,7 @@ ms.lasthandoff: 09/09/2017
 |SQL_DRIVER_HSTMT|處理由驅動程式管理員。|  
 |SQL_DRIVER_NAME|「 OdbcJt32.dll"|  
 |SQL_DRIVER_ODBC_VER|"3.51.0000"|  
-|SQL_DRIVER_VER|「 4.00。*nnnn*」 (* nnnn *指定建置日期)|  
+|SQL_DRIVER_VER|「 4.00。*nnnn*」 ( *nnnn* 指定建置日期)|  
 |SQL_DROP_ASSERTION|0|  
 |SQL_DROP_CHARACTER_SET|0|  
 |SQL_DROP_COLLATION|0|  

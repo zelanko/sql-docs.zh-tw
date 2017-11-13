@@ -66,7 +66,7 @@ SQLRETURN SQLCancelHandle(
 |SQLSTATE|錯誤|Description|  
 |--------------|-----------|-----------------|  
 |01000|一般警告|特定驅動程式告知性訊息。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
-|HY000|一般錯誤|發生錯誤，其中沒有任何特定的 SQLSTATE 和定義沒有實作特定的 SQLSTATE。 所傳回的錯誤訊息[SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md)引數中* \*MessageText*緩衝區描述錯誤和其原因。|  
+|HY000|一般錯誤|發生錯誤，其中沒有任何特定的 SQLSTATE 和定義沒有實作特定的 SQLSTATE。 所傳回的錯誤訊息[SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md)引數中 *\*MessageText*緩衝區描述錯誤和其原因。|  
 |HY001|記憶體配置錯誤|驅動程式無法配置記憶體，才能支援執行或完成的函式。|  
 |HY010|函數順序錯誤|以非同步方式執行的陳述式相關的函式呼叫其中一個相關聯的陳述式控制代碼*處理*，和*HandleType*已設定為 SQL_HANDLE_DBC。 非同步函式仍執行時**SQLCancelHandle**呼叫。<br /><br /> (DM) *HandleType*引數為 SQL_HANDLE_STMT; 相關聯的連接控制代碼; 上呼叫非同步執行的函式和函式還在執行時呼叫此函式。<br /><br /> (DM) **SQLExecute**， **SQLExecDirect**，或**SQLMoreResults**呼叫其中一個相關聯的陳述式控制代碼*處理*和*HandleType*已設定為 SQL_HANDLE_DBC，並傳回 SQL_PARAM_DATA_AVAILABLE。 此函式呼叫之前的所有資料流處理的參數擷取資料。<br /><br /> **SQLBrowseConnect**針對呼叫*ConnectionHandle*，並傳回 SQL_NEED_DATA。 瀏覽的程序完成之前呼叫此函式。|  
 |HY013|記憶體管理錯誤|無法處理函式呼叫，因為基礎記憶體的物件無法存取，可能是因為記憶體不足。|  

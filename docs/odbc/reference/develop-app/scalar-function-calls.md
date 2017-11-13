@@ -27,7 +27,7 @@ ms.lasthandoff: 09/09/2017
 # <a name="scalar-function-calls"></a>純量函式呼叫
 純量函數會傳回每個資料列的值。 比方說，絕對值純量函數會採用數字的資料行做為引數和傳回的資料行中的每個值的絕對值。 是逸出序列呼叫純量函式  
   
- **{fn***純量函數* **}  **  
+ **{fn***純量函數* **}**   
   
  其中*純量函數*是所列出的函數的其中一個[附錄 e： 純量函數](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md)。 如需純量函數逸出序列的詳細資訊，請參閱[純量函數逸出序列](../../../odbc/reference/appendixes/scalar-function-escape-sequence.md)附錄 c: SQL 文法中。  
   

@@ -71,7 +71,7 @@ SQLRETURN SQLGetTypeInfo(
 |24000|指標狀態無效|在開啟游標的*StatementHandle，*和**SQLFetch**或**SQLFetchScroll**如同呼叫。 傳回這個錯誤是由驅動程式管理員如果**SQLFetch**或**SQLFetchScroll**尚未傳回 sql_no_data 之後，以及如果驅動程式會傳回**SQLFetch**或**SQLFetchScroll**傳回 sql_no_data 為止。<br /><br /> 結果集是在開啟*StatementHandle*，但**SQLFetch**或**SQLFetchScroll**尚未呼叫。|  
 |40001|序列化失敗|交易已回復由於與另一個交易資源鎖死。|  
 |40003|未知的陳述式完成|此函式執行期間失敗的相關聯的連接，並無法決定交易的狀態。|  
-|HY000|一般錯誤|發生錯誤，其中沒有任何特定的 SQLSTATE 和定義沒有實作特定的 SQLSTATE。 所傳回的錯誤訊息**SQLGetDiagRec**中* \*MessageText*緩衝區描述錯誤和其原因。|  
+|HY000|一般錯誤|發生錯誤，其中沒有任何特定的 SQLSTATE 和定義沒有實作特定的 SQLSTATE。 所傳回的錯誤訊息**SQLGetDiagRec**中 *\*MessageText*緩衝區描述錯誤和其原因。|  
 |HY001|記憶體配置錯誤|驅動程式無法配置記憶體，才能支援執行或完成的函式。|  
 |HY004|無效的 SQL 資料類型|指定的引數的值*DataType*是驅動程式支援驅動程式特定資料類型識別項都是有效的 ODBC SQL 資料類型識別碼。|  
 |HY008|已取消操作|非同步處理已啟用*StatementHandle*，然後呼叫函式並，之前已完成執行， **SQLCancel**或**SQLCancelHandle**已在呼叫*StatementHandle*。 上一次呼叫函式則*StatementHandle*。<br /><br /> 呼叫函式和之前已完成執行， **SQLCancel**或**SQLCancelHandle**上呼叫*StatementHandle*從不同的執行緒中多執行緒應用程式。|  

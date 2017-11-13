@@ -89,7 +89,7 @@ SQLRETURN SQLConnect(
 |08004|伺服器拒絕連線|資料來源的拒絕連線的建立實作定義理由。|  
 |08S01|通訊連結失敗|功能已完成處理之前，驅動程式和資料來源的驅動程式在嘗試連線之間的通訊連結失敗。|  
 |28000|無效的授權規格|指定的引數的值*UserName*或是指定的引數的值*驗證*違反了資料來源所定義的限制。|  
-|HY000|一般錯誤|發生錯誤，其中沒有任何特定的 SQLSTATE 和定義沒有實作特定的 SQLSTATE。 所傳回的錯誤訊息**SQLGetDiagRec**中* \*MessageText*緩衝區描述錯誤和其原因。|  
+|HY000|一般錯誤|發生錯誤，其中沒有任何特定的 SQLSTATE 和定義沒有實作特定的 SQLSTATE。 所傳回的錯誤訊息**SQLGetDiagRec**中 *\*MessageText*緩衝區描述錯誤和其原因。|  
 |HY001|記憶體配置錯誤|(DM) 驅動程式管理員無法配置記憶體，才能支援執行或完成的函式。|  
 |HY008|已取消操作|非同步處理已啟用*ConnectionHandle*。 **SQLConnect**呼叫函式，和之前已完成執行， [SQLCancelHandle 函式](../../../odbc/reference/syntax/sqlcancelhandle-function.md)上呼叫*ConnectionHandle*，並接著**SQLConnect**上一次呼叫函式*ConnectionHandle*。<br /><br /> 或者， **SQLConnect**呼叫函式，和之前已完成執行， **SQLCancelHandle**上呼叫*ConnectionHandle*從不同的執行緒中多執行緒應用程式。|  
 |HY010|函數順序錯誤|以非同步方式執行的函式 （不是這一個） 已呼叫 (DM) *ConnectionHandle*和還在執行時呼叫此函式。|  
@@ -105,7 +105,7 @@ SQLRETURN SQLConnect(
 |IM005|利用 SQL_HANDLE_DBC 上的驅動程式的 SQLAllocHandle 失敗|(DM) 期間**SQLConnect**，稱為 「 驅動程式的驅動程式管理員**SQLAllocHandle**函式與*HandleType*利用 SQL_HANDLE_DBC 的驅動程式傳回錯誤。|  
 |IM006|驅動程式的 SQLSetConnectAttr 無法|期間**SQLConnect**，稱為 「 驅動程式的驅動程式管理員**SQLSetConnectAttr**函式和驅動程式傳回錯誤。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
 |IM009|無法連線至轉譯 DLL|驅動程式無法連接到轉譯的資料來源所指定的 DLL。|  
-|IM010|資料來源名稱太長|(DM) * \*ServerName*超過 SQL_MAX_DSN_LENGTH 字元。|  
+|IM010|資料來源名稱太長|(DM)  *\*ServerName*超過 SQL_MAX_DSN_LENGTH 字元。|  
 |IM014|指定的資料來源名稱包含驅動程式和應用程式之間的架構不相符|(DM) 32 位元應用程式使用的 DSN 連接至 64 位元驅動程式。反之亦然。|  
 |IM015|驅動程式的 SQLConnect SQL_HANDLE_DBC_INFO_HANDLE 上失敗|如果驅動程式會傳回 SQL_ERROR，驅動程式管理員將會傳回 SQL_ERROR，應用程式，則連接會失敗。<br /><br /> 如需 SQL_HANDLE_DBC_INFO_TOKEN 的詳細資訊，請參閱[開發 ODBC 驅動程式中的連接集區感知](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)。|  
 |IM017|中的非同步通知模式已停用輪詢|每當通知模型使用時，會停用輪詢。|  

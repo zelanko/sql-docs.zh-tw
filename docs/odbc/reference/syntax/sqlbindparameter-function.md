@@ -210,7 +210,7 @@ L_PARAM_INPUT_OUTPUT_STREAM|SQL_LEN_DATA_AT_EXEC (*len*) 或 SQL_DATA_AT_EXEC|�
  如果*ParameterType* SQL_TYPE_TIME、 SQL_TYPE_TIMESTAMP、 SQL_INTERVAL_SECOND、 SQL_INTERVAL_DAY_TO_SECOND、 SQL_INTERVAL_HOUR_TO_SECOND，或 SQL_INTERVAL_MINUTE_TO_SECOND，IPD SQL_DESC_PRECISION 欄位會設定若要*d*。 如果*ParameterType* SQL_NUMERIC 或 SQL_DECIMAL，IPD 的 SQL_DESC_SCALE 欄位設定為*d*。 對於所有其他資料類型， *d*會忽略引數。  
   
 ## <a name="parametervalueptr-argument"></a>ParameterValuePtr 引數  
- *ParameterValuePtr*引數指向的緩衝區，，當**SQLExecute**或**SQLExecDirect**呼叫時，包含參數的實際資料。 資料必須在指定的格式*ValueType*引數。 這個引數設定 APD SQL_DESC_DATA_PTR 欄位。 應用程式可以設定*ParameterValuePtr*引數為 null 指標，只要* \*StrLen_or_IndPtr* SQL_NULL_DATA 或 SQL_DATA_AT_EXEC。 （這適用於僅為輸入或輸入/輸出參數。）  
+ *ParameterValuePtr*引數指向的緩衝區，，當**SQLExecute**或**SQLExecDirect**呼叫時，包含參數的實際資料。 資料必須在指定的格式*ValueType*引數。 這個引數設定 APD SQL_DESC_DATA_PTR 欄位。 應用程式可以設定*ParameterValuePtr*引數為 null 指標，只要 *\*StrLen_or_IndPtr* SQL_NULL_DATA 或 SQL_DATA_AT_EXEC。 （這適用於僅為輸入或輸入/輸出參數。）  
   
  如果\* *StrLen_or_IndPtr*結果的 SQL_LEN_DATA_AT_EXEC (*長度*) 巨集或 SQL_DATA_AT_EXEC，然後*ParameterValuePtr*是與參數相關聯的應用程式定義指標值。 它會傳回到應用程式透過**SQLParamData**。 例如， *ParameterValuePtr*可能的非零語彙基元，例如參數數目、 資料、 指標或應用程式用來將輸入的參數繫結結構的指標。 不過，請注意，如果參數是輸入/輸出參數， *ParameterValuePtr*必須是輸出值儲存在緩衝區的指標。 將 SQL_ATTR_PARAMSET_SIZE 陳述式屬性中的值大於 1，如果應用程式可以使用 SQL_ATTR_PARAMS_PROCESSED_PTR 陳述式屬性，並搭配所指向的值*ParameterValuePtr*引數。 例如， *ParameterValuePtr*可能指向的值陣列，而應用程式可能會使用 SQL_ATTR_PARAMS_PROCESSED_PTR 所指向的值從陣列中擷取正確的值。 如需詳細資訊，請參閱本節稍後的 「 傳遞參數值 」。  
   

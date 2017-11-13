@@ -106,7 +106,7 @@ SQLRETURN SQLSetPos(
 |40003|未知的陳述式完成|相關聯的連接失敗，此函式，在執行期間，無法決定交易的狀態。|  
 |42000|語法錯誤或存取違規|驅動程式無法執行要求的引數中的作業所需的鎖定資料列*作業*。<br /><br /> 驅動程式無法要求引數中會鎖定資料列*LockType*。|  
 |44000|WITH CHECK OPTION 違規|*作業*引數以前是 SQL_UPDATE，及檢視的資料表上執行更新或衍生自檢視的資料表指定所建立的資料表**WITH CHECK OPTION**，好讓一或多個資料列受更新將不再會出現在檢視的資料表。|  
-|HY000|一般錯誤|發生錯誤，其中沒有任何特定的 SQLSTATE 和定義沒有實作特定的 SQLSTATE。 所傳回的錯誤訊息**SQLGetDiagRec**中* \*MessageText*緩衝區描述錯誤和其原因。|  
+|HY000|一般錯誤|發生錯誤，其中沒有任何特定的 SQLSTATE 和定義沒有實作特定的 SQLSTATE。 所傳回的錯誤訊息**SQLGetDiagRec**中 *\*MessageText*緩衝區描述錯誤和其原因。|  
 |HY001|記憶體配置錯誤|驅動程式無法配置記憶體，才能支援執行或完成的函式。|  
 |HY008|已取消操作|非同步處理已啟用*StatementHandle*。 呼叫此函式，和之前已完成執行， **SQLCancel**或**SQLCancelHandle**上呼叫*StatementHandle*，然後被呼叫函式上一次*StatementHandle*。<br /><br /> 呼叫此函式，和之前已完成執行， **SQLCancel**或**SQLCancelHandle**上呼叫*StatementHandle*從不同的執行緒中多執行緒應用程式。|  
 |HY010|函數順序錯誤|(DM) 非同步執行的函式呼叫相關聯的連接控制代碼的*StatementHandle*。 此非同步函式還在執行時呼叫 SQLSetPos 函式。<br /><br /> (DM) 指定*StatementHandle*不處於執行狀態。 呼叫此函式時未先呼叫**SQLExecDirect**， **SQLExecute**，或類別目錄函式。<br /><br /> 以非同步方式執行的函式 （不是這一個） 已呼叫 (DM) *StatementHandle*和還在執行時呼叫此函式。<br /><br /> (DM) **SQLExecute**， **SQLExecDirect**， **SQLBulkOperations**，或**SQLSetPos**針對呼叫*StatementHandle*並傳回 SQL_NEED_DATA。 此函式呼叫之前已傳送的所有資料在執行中參數或資料行的資料。<br /><br /> (DM) 驅動程式為 ODBC 2。*x*驅動程式，以及**SQLSetPos**針對呼叫*StatementHandle*之後**SQLFetch**呼叫。|  
@@ -226,9 +226,9 @@ SQLRETURN SQLSetPos(
   
 1.  與繫結的資料和長度/指標緩衝區中的位置值**SQLBindCol**:  
   
-    -   對於一般資料行，應用程式會放在新的資料行值* \*TargetValuePtr*緩衝區並在該值的長度* \*StrLen_or_IndPtr*緩衝區。 如果不應更新之資料列，應用程式會將該資料列的資料列作業陣列的項目 SQL_ROW_IGNORE。  
+    -   對於一般資料行，應用程式會放在新的資料行值 *\*TargetValuePtr*緩衝區並在該值的長度 *\*StrLen_or_IndPtr*緩衝區。 如果不應更新之資料列，應用程式會將該資料列的資料列作業陣列的項目 SQL_ROW_IGNORE。  
   
-    -   對於資料在執行中資料行，應用程式會為應用程式定義的值，例如資料行數目，放在* \*TargetValuePtr*緩衝區。 值可以用來識別資料行的更新版本。  
+    -   對於資料在執行中資料行，應用程式會為應用程式定義的值，例如資料行數目，放在 *\*TargetValuePtr*緩衝區。 值可以用來識別資料行的更新版本。  
   
          應用程式會將結果的 SQL_LEN_DATA_AT_EXEC (*長度*) 中的巨集 **StrLen_or_IndPtr*緩衝區。 如果資料行的 SQL 資料類型是 SQL_LONGVARBINARY、 SQL_LONGVARCHAR 或 long 資料來源特定的資料類型，而且驅動程式會傳回"Y"SQL_NEED_LONG_DATA_LEN 資訊類型中的**SQLGetInfo**，*長度*是數個位元組的資料傳送給參數; 否則它必須為非負數值，則會忽略。  
   
@@ -238,7 +238,7 @@ SQLRETURN SQLSetPos(
   
     -   如果有任何資料執行資料行，函數會傳回 SQL_NEED_DATA，並繼續進行步驟 3。  
   
-3.  呼叫**SQLParamData**擷取的位址* \*TargetValuePtr*第一個要處理的資料在執行資料行的緩衝區。 **SQLParamData**傳回 SQL_NEED_DATA。 應用程式擷取的應用程式定義的值從* \*TargetValuePtr*緩衝區。  
+3.  呼叫**SQLParamData**擷取的位址 *\*TargetValuePtr*第一個要處理的資料在執行資料行的緩衝區。 **SQLParamData**傳回 SQL_NEED_DATA。 應用程式擷取的應用程式定義的值從 *\*TargetValuePtr*緩衝區。  
   
     > [!NOTE]  
     >  雖然資料在執行中參數類似於資料在執行中資料行，但所傳回的值**SQLParamData**每個不同。  
@@ -249,7 +249,7 @@ SQLRETURN SQLSetPos(
     > [!NOTE]  
     >  資料在執行中資料行是在資料行的資料列集資料會傳送具有**SQLPutData**與更新資料列時**SQLSetPos**。 以繫結它們**SQLBindCol**。 所傳回的值**SQLParamData**是中的資料列的位址 **TargetValuePtr*正在處理的緩衝區。  
   
-4.  呼叫**SQLPutData**一或多次來傳送資料行的資料。 如果無法以傳回所有資料值，則需要一個以上的呼叫* \*TargetValuePtr*中指定的緩衝區**SQLPutData**; 多個呼叫**SQLPutData**只有當傳送字元 C 資料行的字元、 二進位、 或資料來源特定的資料型別或是傳送二進位 C 資料行的字元、 二進位，允許相同的資料行或資料來源專用的資料類型。  
+4.  呼叫**SQLPutData**一或多次來傳送資料行的資料。 如果無法以傳回所有資料值，則需要一個以上的呼叫 *\*TargetValuePtr*中指定的緩衝區**SQLPutData**; 多個呼叫**SQLPutData**只有當傳送字元 C 資料行的字元、 二進位、 或資料來源特定的資料型別或是傳送二進位 C 資料行的字元、 二進位，允許相同的資料行或資料來源專用的資料類型。  
   
 5.  呼叫**SQLParamData**再次來表示資料行，已傳送所有資料。  
   

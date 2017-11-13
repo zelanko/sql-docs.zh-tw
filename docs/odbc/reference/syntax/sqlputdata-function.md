@@ -86,7 +86,7 @@ SQLRETURN SQLPutData(
 |22012|除數為零|輸出參數的除法中產生除以零或算術運算式計算的輸入/輸出。|  
 |22015|間隔欄位溢位|將資料傳送的精確數值或時間間隔資料行或參數間隔 SQL 資料類型造成的有效位數遺失。<br /><br /> 資料傳送時，為間隔的資料行或參數與一個以上的欄位、 已轉換成數值資料類型，及沒有表示在數值資料類型。<br /><br /> 將資料傳送的資料行或參數資料已指派的間隔 SQL 類型，而且時發生 SQL 類型的間隔內沒有表示的 C 類型的值。<br /><br /> 傳送的精確數值或間隔 C 資料行或參數間隔 C 類型的資料造成有效位數的遺失。<br /><br /> 將資料傳送的資料行或參數資料已指派給間隔 C 結構，而且時發生間隔資料結構中的資料沒有表示法。|  
 |22018|轉換規格的字元值無效|C 類型為精確或大約的數字、 日期時間或間隔資料類型。資料行的 SQL 類型是字元資料類型。和資料行或參數中的值不是有效的常值的繫結 C 類型。<br /><br /> SQL 類型為精確或大約的數字、 日期時間或間隔資料類型。C 類型已 SQL_C_CHAR;和資料行或參數中的值不是有效的常值的繫結的 SQL 型別。|  
-|HY000|一般錯誤|發生錯誤，其中沒有任何特定的 SQLSTATE 和定義沒有實作特定的 SQLSTATE。 所傳回的錯誤訊息**SQLGetDiagRec**中* \*MessageText*緩衝區描述錯誤和其原因。|  
+|HY000|一般錯誤|發生錯誤，其中沒有任何特定的 SQLSTATE 和定義沒有實作特定的 SQLSTATE。 所傳回的錯誤訊息**SQLGetDiagRec**中 *\*MessageText*緩衝區描述錯誤和其原因。|  
 |HY001|記憶體配置錯誤|驅動程式無法配置記憶體，才能支援執行或完成的函式。|  
 |HY008|已取消操作|非同步處理已啟用*StatementHandle*。 呼叫此函式，和之前已完成執行， **SQLCancel**或**SQLCancelHandle**上呼叫*StatementHandle*。 上一次呼叫函式則*StatementHandle*。<br /><br /> 呼叫此函式，和之前已完成執行， **SQLCancel**或**SQLCancelHandle**上呼叫*StatementHandle*從不同的執行緒中多執行緒應用程式。|  
 |HY009|無效的 null 指標使用|(DM) 引數*DataPtr* null 指標，以及引數*StrLen_or_Ind*不是 0，SQL_DEFAULT_PARAM 或 SQL_NULL_DATA。|  
@@ -108,7 +108,7 @@ SQLRETURN SQLPutData(
   
  當應用程式呼叫**SQLParamData**來判斷哪些資料傳送，驅動程式會傳回應用程式可以用來決定要傳送的參數資料，或可以找到資料行的資料指標。 它也會傳回 SQL_NEED_DATA，這是應用程式，則它應該呼叫的指標**SQLPutData**傳送資料。 在*DataPtr*引數**SQLPutData**，應用程式會在包含參數或資料行的實際資料的緩衝區中傳遞的指標。  
   
- 當驅動程式傳回 SQL_SUCCESS，如**SQLPutData**，應用程式會呼叫**SQLParamData**一次。 **SQLParamData**傳回 SQL_NEED_DATA 更多資料需要傳送，如果在此情況下執行的應用程式呼叫**SQLPutData**一次。 如果已傳送所有資料在執行資料，則會傳回 SQL_SUCCESS。 接著，應用程式呼叫**SQLParamData**一次。 如果驅動程式會傳回 SQL_NEED_DATA 和中的另一個指標* \*ValuePtrPtr*，它需要另一個參數或資料行的資料和**SQLPutData**會再次呼叫。 如果驅動程式傳回 SQL_SUCCESS，然後所有資料在執行資料傳送，而且可以執行的 SQL 陳述式或**SQLBulkOperations**或**SQLSetPos**可以處理呼叫。  
+ 當驅動程式傳回 SQL_SUCCESS，如**SQLPutData**，應用程式會呼叫**SQLParamData**一次。 **SQLParamData**傳回 SQL_NEED_DATA 更多資料需要傳送，如果在此情況下執行的應用程式呼叫**SQLPutData**一次。 如果已傳送所有資料在執行資料，則會傳回 SQL_SUCCESS。 接著，應用程式呼叫**SQLParamData**一次。 如果驅動程式會傳回 SQL_NEED_DATA 和中的另一個指標 *\*ValuePtrPtr*，它需要另一個參數或資料行的資料和**SQLPutData**會再次呼叫。 如果驅動程式傳回 SQL_SUCCESS，然後所有資料在執行資料傳送，而且可以執行的 SQL 陳述式或**SQLBulkOperations**或**SQLSetPos**可以處理呼叫。  
   
  在陳述式執行階段傳遞如何資料在執行參數資料的詳細資訊，請參閱 < 傳遞參數值 > 中[SQLBindParameter](../../../odbc/reference/syntax/sqlbindparameter-function.md)和[傳送長資料](../../../odbc/reference/develop-app/sending-long-data.md)。 更新或加入如何資料在執行資料行資料的詳細資訊，請參閱 「 使用 SQLSetPos 」 一節中[SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md)，「 執行大量更新使用中的書籤" [SQLBulkOperations](../../../odbc/reference/syntax/sqlbulkoperations-function.md)，和[Long 資料和 SQLSetPos SQLBulkOperations](../../../odbc/reference/develop-app/long-data-and-sqlsetpos-and-sqlbulkoperations.md)。  
   

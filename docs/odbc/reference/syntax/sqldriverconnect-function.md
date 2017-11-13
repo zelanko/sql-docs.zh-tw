@@ -108,14 +108,14 @@ SQLRETURN SQLDriverConnect(
 |01004|字串資料，右邊遭截斷|緩衝區\* *OutConnectionString*仍不夠大，無法傳回整個連接字串中，因此連接字串已遭截斷。 中會傳回未截斷的連接字串的長度 **StringLength2Ptr*。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
 |01S00|無效的連接字串屬性|連接字串中指定無效的屬性關鍵字 (*InConnectionString*)，但仍然連接到資料來源驅動程式。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
 |01S02 的警告|選項值已變更|驅動程式不支援指定的值所指向*ValuePtr*引數中的**SQLSetConnectAttr**置換相似的值。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
-|01S08|儲存檔案 DSN 時發生錯誤|中的字串* \*InConnectionString*包含**FILEDSN**關鍵字，但.dsn 檔案未儲存。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
-|01S09|無效的關鍵字|(DM) 中的字串* \*InConnectionString*包含**SAVEFILE**關鍵字，但不是**驅動程式**或**FILEDSN**關鍵字。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
+|01S08|儲存檔案 DSN 時發生錯誤|中的字串 *\*InConnectionString*包含**FILEDSN**關鍵字，但.dsn 檔案未儲存。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
+|01S09|無效的關鍵字|(DM) 中的字串 *\*InConnectionString*包含**SAVEFILE**關鍵字，但不是**驅動程式**或**FILEDSN**關鍵字。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
 |08001|無法建立連線的用戶端|驅動程式無法建立與資料來源的連接。|  
 |08002|使用中的連接名稱|(DM) 指定*ConnectionHandle*必須已經用來與資料來源，建立連線，而仍開啟的連接。|  
 |08004|伺服器拒絕連線|資料來源的拒絕連線的建立實作定義理由。|  
 |08S01|通訊連結失敗|驅動程式的驅動程式在嘗試連接資料來源之間的通訊連結失敗之前**SQLDriverConnect**函式已完成的處理。|  
 |28000|無效的授權規格|使用者識別碼或授權字串，或兩者的連接字串中所指定 (*InConnectionString*)，違反了資料來源所定義的限制。|  
-|HY000|一般錯誤|發生錯誤，其中沒有任何特定的 SQLSTATE 和定義沒有實作特定的 SQLSTATE。 所傳回的錯誤訊息**SQLGetDiagRec**中* \*szMessageText*緩衝區描述錯誤和其原因。|  
+|HY000|一般錯誤|發生錯誤，其中沒有任何特定的 SQLSTATE 和定義沒有實作特定的 SQLSTATE。 所傳回的錯誤訊息**SQLGetDiagRec**中 *\*szMessageText*緩衝區描述錯誤和其原因。|  
 |HY000|一般的錯誤： 無效的檔案 dsn|(DM) 中的字串 **InConnectionString*包含 FILEDSN 關鍵字，但找不到.dsn 檔案的名稱。|  
 |HY000|一般的錯誤： 無法建立緩衝區|(DM) 中的字串 **InConnectionString*包含 FILEDSN 關鍵字，但無法讀取.dsn 檔案。|  
 |HY001|記憶體配置錯誤|驅動程式管理員無法配置記憶體，才能支援執行或完成**SQLDriverConnect**函式。<br /><br /> 驅動程式無法配置記憶體，才能支援執行或完成的函式。|  
@@ -139,7 +139,7 @@ SQLRETURN SQLDriverConnect(
 |IM009|無法載入轉譯 DLL|驅動程式無法載入轉譯 DLL 所指定資料來源或連接。|  
 |IM010|資料來源名稱太長|(DM) DSN 關鍵字的屬性值已超過 SQL_MAX_DSN_LENGTH 個字元。|  
 |IM011|驅動程式名稱太長|(DM) 屬性值**驅動程式**關鍵字已超過 255 個字元。|  
-|IM012|驅動程式關鍵字的語法錯誤|(DM) 關鍵字-值配對的**驅動程式**關鍵字包含語法錯誤。<br /><br /> (DM) 中的字串* \*InConnectionString*包含**FILEDSN**關鍵字，但.dsn 檔案未包含**驅動程式**關鍵字或**DSN**關鍵字。|  
+|IM012|驅動程式關鍵字的語法錯誤|(DM) 關鍵字-值配對的**驅動程式**關鍵字包含語法錯誤。<br /><br /> (DM) 中的字串 *\*InConnectionString*包含**FILEDSN**關鍵字，但.dsn 檔案未包含**驅動程式**關鍵字或**DSN**關鍵字。|  
 |IM014|指定的資料來源名稱包含驅動程式和應用程式之間的架構不相符|(DM) 32 位元應用程式使用的 DSN 連接至 64 位元驅動程式。反之亦然。|  
 |IM015|驅動程式的 SQLDriverConnect SQL_HANDLE_DBC_INFO_HANDLE 上失敗|如果驅動程式會傳回 SQL_ERROR，驅動程式管理員將會傳回 SQL_ERROR，應用程式，則連接會失敗。<br /><br /> 如需 SQL_HANDLE_DBC_INFO_TOKEN 的詳細資訊，請參閱[開發 ODBC 驅動程式中的連接集區感知](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)。|  
 |IM017|中的非同步通知模式已停用輪詢|每當通知模型使用時，會停用輪詢。|  

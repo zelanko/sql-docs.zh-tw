@@ -59,7 +59,7 @@ SQLRETURN SQLGetCursorName(
  如果*Current*是 NULL， *NameLengthPtr*仍會傳回的總字元數 （不含字元資料 null 結束字元） 可用來傳回中所指向的緩衝區*Current*。  
   
  *Columnsize*  
- [輸入]長度\* *Current*，以字元為單位。 如果中的值* \*Current*是 Unicode 字串 (當呼叫**SQLGetCursorNameW**)、 *Columnsize*引數必須是偶數。  
+ [輸入]長度\* *Current*，以字元為單位。 如果中的值 *\*Current*是 Unicode 字串 (當呼叫**SQLGetCursorNameW**)、 *Columnsize*引數必須是偶數。  
   
  *NameLengthPtr*  
  [輸出]這是要傳回的總字元數 （不包括 null 結束字元） 中的記憶體指標可用來傳回中\* *Current*。 可傳回的字元數目是否大於或等於*Columnsize*中的資料指標名稱\* *Current*會被截斷成*Columnsize*減去 null 結束字元的長度。  
@@ -74,7 +74,7 @@ SQLRETURN SQLGetCursorName(
 |--------------|-----------|-----------------|  
 |01000|一般警告|特定驅動程式告知性訊息。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
 |01004|字串資料，右邊遭截斷|緩衝區\* *Current*仍不夠大，無法傳回整個資料指標名稱，所以已截斷的資料指標名稱。 中會傳回未截斷的資料指標名稱的長度 **NameLengthPtr*。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
-|HY000|一般錯誤|發生錯誤，其中沒有任何特定的 SQLSTATE 和定義沒有實作特定的 SQLSTATE。 所傳回的錯誤訊息**SQLGetDiagRec**中* \*MessageText*緩衝區描述錯誤和其原因。|  
+|HY000|一般錯誤|發生錯誤，其中沒有任何特定的 SQLSTATE 和定義沒有實作特定的 SQLSTATE。 所傳回的錯誤訊息**SQLGetDiagRec**中 *\*MessageText*緩衝區描述錯誤和其原因。|  
 |HY001|記憶體配置錯誤|驅動程式無法配置記憶體，才能支援執行或完成的函式。|  
 |HY010|函數順序錯誤|(DM) 非同步執行的函式呼叫相關聯的連接控制代碼的*StatementHandle*。 此非同步函式還在執行時**SQLGetCursorName**呼叫函式。<br /><br /> (DM) **SQLExecute**， **SQLExecDirect**，或**SQLMoreResults**針對呼叫*StatementHandle*並傳回 SQL_PARAM_DATA_可以使用。 此函式呼叫之前的所有資料流處理的參數擷取資料。<br /><br /> 以非同步方式執行的函式的呼叫 (DM) *StatementHandle*和還在執行時呼叫此函式。<br /><br /> (DM) **SQLExecute**， **SQLExecDirect**， **SQLBulkOperations**，或**SQLSetPos**針對呼叫*StatementHandle*並傳回 SQL_NEED_DATA。 此函式呼叫之前已傳送的所有資料在執行中參數或資料行的資料。|  
 |HY013|記憶體管理錯誤|無法處理函式呼叫，因為基礎記憶體的物件無法存取，可能是因為記憶體不足。|  

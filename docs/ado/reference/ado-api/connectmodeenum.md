@@ -34,7 +34,7 @@ ms.lasthandoff: 09/09/2017
 |--------------|-----------|-----------------|  
 |**adModeRead**|1|表示唯讀權限。|  
 |**adModeReadWrite**|3|表示讀取/寫入權限。|  
-|**adModeRecursive**|0x400000|用於搭配其他* \*ShareDeny\* *值 (**adModeShareDenyNone**， **adModeShareDenyWrite**，或**adModeShareDenyRead**) 傳播至所有子記錄的目前的共用限制**記錄**。 如果有任何影響**記錄**並沒有任何子系。 如果搭配使用，就會產生執行階段錯誤**adModeShareDenyNone**只。 不過，它可以搭配**adModeShareDenyNone**與其他值結合時。 例如，您可以使用 「**adModeRead**或者**adModeShareDenyNone**或者**adModeRecursive**"。|  
+|**adModeRecursive**|0x400000|用於搭配其他 *\*ShareDeny\** 值 (**adModeShareDenyNone**， **adModeShareDenyWrite**，或**adModeShareDenyRead**) 傳播至所有子記錄的目前的共用限制**記錄**。 如果有任何影響**記錄**並沒有任何子系。 如果搭配使用，就會產生執行階段錯誤**adModeShareDenyNone**只。 不過，它可以搭配**adModeShareDenyNone**與其他值結合時。 例如，您可以使用 「**adModeRead**或者**adModeShareDenyNone**或者**adModeRecursive**"。|  
 |**adModeShareDenyNone**|16|可讓其他人開啟與任何權限的連線。 無法拒絕他人的讀取或寫入權限。|  
 |**adModeShareDenyRead**|4|防止他人的讀取權限開啟連接。|  
 |**adModeShareDenyWrite**|8|防止其他人具有寫入權限開啟連接。|  

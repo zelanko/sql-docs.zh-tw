@@ -106,7 +106,7 @@ SQLRETURN SQLExecDirect(
 |42S21|資料行已經存在|\**StatementText*包含**ALTER TABLE**陳述式，並在指定的資料行**新增**子句不是唯一的或識別基底資料表中現有的資料行。|  
 |42S22|找不到資料行|\**StatementText*包含**CREATE INDEX**陳述式，和一或多個資料行不存在的資料行清單中指定的名稱。<br /><br /> \**StatementText*包含**GRANT**或**撤銷**陳述式，並指定資料行名稱不存在。<br /><br /> \**StatementText*包含**選取**，**刪除**，**插入**，或**更新**陳述式，並指定資料行名稱不存在。<br /><br /> \**StatementText*包含**CREATE TABLE**陳述式，並指定條件約束 （參考資料表以外建立的一個） 中的資料行不存在。<br /><br /> \**StatementText*包含**CREATE SCHEMA**陳述式，並指定資料行名稱不存在。|  
 |44000|WITH CHECK OPTION 違規|引數*StatementText*包含**插入**檢視的資料表上執行的陳述式或衍生自檢視資料表所建立的指定資料表**WITH CHECK OPTION**，好讓一或多個資料列受到**插入**陳述式將不再會出現在檢視的資料表。<br /><br /> 引數*StatementText*包含**更新**檢視的資料表上執行的陳述式或衍生自檢視資料表所建立的指定資料表**WITH CHECK OPTION**，好讓一或多個資料列受到**更新**陳述式將不再會出現在檢視的資料表。|  
-|HY000|一般錯誤|發生錯誤，其中沒有任何特定的 SQLSTATE 和定義沒有實作特定的 SQLSTATE。 所傳回的錯誤訊息**SQLGetDiagRec**中* \*MessageText*緩衝區描述錯誤和其原因。|  
+|HY000|一般錯誤|發生錯誤，其中沒有任何特定的 SQLSTATE 和定義沒有實作特定的 SQLSTATE。 所傳回的錯誤訊息**SQLGetDiagRec**中 *\*MessageText*緩衝區描述錯誤和其原因。|  
 |HY001|記憶體配置錯誤|驅動程式無法配置記憶體，才能支援執行或完成的函式。|  
 |HY008|已取消操作|非同步處理已啟用*StatementHandle*。 呼叫此函式，和之前已完成執行， **SQLCancel**或**SQLCancelHandle**上呼叫*StatementHandle*。 上一次呼叫函式則*StatementHandle*。<br /><br /> 呼叫此函式，和之前已完成執行， **SQLCancel**或**SQLCancelHandle**上呼叫*StatementHandle*從不同的執行緒中多執行緒應用程式。|  
 |HY009|無效的 null 指標使用|(DM) **StatementText*為 null 指標。|  
