@@ -88,7 +88,7 @@ DayOfWeek 導出資料行提供可排序的週間日名稱。
 #### <a name="create-a-productsubcategoryname-calculated-column-in-the-dimproduct-table"></a>在 DimProduct 資料表中建立 ProductSubcategoryName 導出資料行  
   
   
-1.  在**DimProduct**資料表中，捲動到右邊的資料表。 您會發現，最右側的資料行命名為 [加入資料行] (斜體)，請按一下該欄位標題。  
+1.  在**DimProduct**資料表中，捲動到右邊的資料表。 您會發現，最右側的資料行命名為 [加入資料行] \(斜體)，請按一下該欄位標題。  
   
 2.  在公式列中，輸入下列公式。  
     

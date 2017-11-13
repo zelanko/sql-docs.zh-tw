@@ -192,7 +192,7 @@ ms.lasthandoff: 09/01/2017
   
 5.  按一下 **[確定]**。  
   
-6.  若要設定 [縣 (市)] 屬性 (attribute) 的 [NameColumn] 屬性 (property)，請按一下 [屬性] (property) 視窗中的 [NameColumn] 欄位，然後按一下瀏覽 (**...**) 按鈕。  
+6.  若要設定 [縣 (市)] 屬性 (attribute) 的 [NameColumn] 屬性 (property)，請按一下 [屬性] \(property) 視窗中的 [NameColumn] 欄位，然後按一下瀏覽 (**...**) 按鈕。  
   
 7.  在 [名稱資料行] 對話方塊的 [來源資料行] 清單中，選取 [City]，然後按一下 [確定]。  
   
@@ -212,7 +212,7 @@ ms.lasthandoff: 09/01/2017
   
 5.  按一下 **[確定]**。  
   
-6.  若要設定 [省份] 屬性 (attribute) 的 [NameColumn] 屬性 (property)，請按一下 [屬性] (property) 視窗中的 [NameColumn] 欄位，然後按一下瀏覽 (**...**) 按鈕。  
+6.  若要設定 [省份] 屬性 (attribute) 的 [NameColumn] 屬性 (property)，請按一下 [屬性] \(property) 視窗中的 [NameColumn] 欄位，然後按一下瀏覽 (**...**) 按鈕。  
   
 7.  在 [名稱資料行] 對話方塊的 [來源資料行] 清單中，選取 [StateProvinceName]，然後按一下 [確定]。  
   

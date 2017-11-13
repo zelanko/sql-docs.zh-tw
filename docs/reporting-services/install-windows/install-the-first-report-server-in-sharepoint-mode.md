@@ -238,7 +238,7 @@ ms.lasthandoff: 10/06/2017
   
 2.  在 SharePoint 功能區中，選取**新增** 按鈕。  
   
-3.  在新的功能表中選取**SQL Server Reporting Services 服務應用程式。**。  
+3.  在新的功能表中選取**SQL Server Reporting Services 服務應用程式。**  
   
     > [!IMPORTANT]  
     >  如果 Reporting Services 選項沒有出現在清單中，它是**未安裝 Reporting Services 共用服務的指示**。 檢閱上的一節有關如何使用 PowerShell cmdlt 來安裝 Reporting Services 服務。  
