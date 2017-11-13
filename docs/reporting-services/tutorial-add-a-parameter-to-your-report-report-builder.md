@@ -16,8 +16,7 @@ caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.workload: Active
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: a3e5da225eb8008f74d6fc5aade3e55543d93d91
 ms.contentlocale: zh-tw
@@ -89,7 +88,7 @@ ms.lasthandoff: 08/09/2017
   
     此查詢會將數個 [!INCLUDE[tsql_md](../includes/tsql-md.md)] SELECT 陳述式的結果結合在一個通用資料表運算式內，來指定以 Contoso 範例資料庫中簡化數位相機銷售資料為基礎的值。 子類別目錄是數位相機、數位單眼反光式 (SLR) 相機、攝影機和相關配件。  
   
-11. 在查詢設計工具工具列上，按一下 [執行] (**!**) 查看資料。   
+11. 在查詢設計工具工具列上，按一下 [執行]\(**!**) 查看資料。   
   
     結果集包含 11 個資料列，這些資料列會顯示四間商店中每個子類別目錄所銷售的項目數量，並包含下列資料行：StoreID、Subcategory、Quantity。商店名稱並不屬於結果集的內容。 稍後在本教學課程中，您會利用個別資料集查詢對應於商店識別碼的商店名稱。  
   
@@ -153,7 +152,7 @@ ms.lasthandoff: 08/09/2017
   
     **其中**子句限制擷取的資料，查詢參數所指定的商店識別碼 *@StoreID* 。  
   
-4.  在查詢設計工具工具列上，按一下 **[執行]** (**!**)。 **定義查詢參數** 對話方塊隨即開啟，並且提示您輸入查詢參數的值 *@StoreID* 。  
+4.  在查詢設計工具工具列上，按一下 **[執行]**\(**!**)。 **定義查詢參數** 對話方塊隨即開啟，並且提示您輸入查詢參數的值 *@StoreID* 。  
   
 5.  在 **[參數值]**中，輸入 **200**。  
   
@@ -357,7 +356,7 @@ ms.lasthandoff: 08/09/2017
   
 4.  在 [運算式] 的下拉式清單中，選取 StoreID 資料集欄位。 資料類型會顯示 **[整數]**。 當運算式值為資料集欄位時，會自動設定資料類型。  
   
-5.  在 [運算子] 中，確認已選取 [等號] (=)。  
+5.  在 [運算子] 中，確認已選取 [等號]\(=)。  
   
 6.  在 **[值]**中，輸入 `[@StoreID]`。 
 

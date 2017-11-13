@@ -1,5 +1,5 @@
 ---
-title: "教學課程： 地圖報表 （報表產生器） |Microsoft 文件"
+title: "教學課程：地圖報表 (報表產生器) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/31/2016
 ms.prod: sql-server-2016
@@ -16,8 +16,7 @@ caps.latest.revision: 18
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.workload: On Demand
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: efe91a2e1e8ca7b0744639ed718d63b70e3adc5c
 ms.contentlocale: zh-tw
@@ -41,7 +40,7 @@ ms.lasthandoff: 08/09/2017
 完成本教學課程的估計時間：30 分鐘。  
   
 ## <a name="requirements"></a>需求  
-針對本教學課程，報表伺服器必須設定為支援 Bing Maps 作為背景。 如需詳細資訊，請參閱[對應報表支援規劃](http://msdn.microsoft.com/en-us/5ddc97a7-7ee5-475d-bc49-3b814dce7e19)。 
+針對本教學課程，報表伺服器必須設定為支援 Bing Maps 作為背景。 如需詳細資訊，請參閱 [對應報表支援規劃](http://msdn.microsoft.com/en-us/5ddc97a7-7ee5-475d-bc49-3b814dce7e19)。 
 
 如需其他需求的資訊，請參閱[教學課程的必要條件 &#40;報表產生器&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md)。  
   
@@ -50,19 +49,19 @@ ms.lasthandoff: 08/09/2017
   
 ### <a name="to-add-a-map-with-the-map-wizard-in-a-new-report"></a>使用新報表中的地圖精靈加入地圖  
   
-1.  從您的電腦、[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 入口網站或 SharePoint 整合模式[啟動報表產生器](../reporting-services/report-builder/start-report-builder.md)。  
+1.  從您的電腦、[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] Web 入口網站或 SharePoint 整合模式[啟動報表產生器](../reporting-services/report-builder/start-report-builder.md)。  
   
     [新報表或資料集] 對話方塊隨即開啟。  
   
-    如果未顯示 [新報表或資料集] 對話方塊，請按一下 [檔案] 功能表 > [新增]。  
+    如果您看不到 [新增報表或資料集] 對話方塊，請按一下 [檔案] 功能表 > [新增]。  
   
 2.  在左窗格中，確認已選取 **[新增報表]** 。  
   
 3.  在右窗格中，按一下 **[地圖精靈]**。  
   
-4.  在 [選擇空間資料的來源] 頁面上，確認已選取 [地圖庫]。  
+4.  在 [選擇空間資料的來源] 頁面上，驗證已選取 [地圖庫]。  
   
-6.  在 [地圖庫] 方塊中，展開 [USA] 下的 [依郡的州]，然後按一下 [紐約]。  
+6.  在 [地圖庫] 方塊中，展開 [美國] 下的 [States by County] (依郡顯示的州)，然後按一下 [紐約]。  
   
     [地圖預覽] 窗格會顯示紐約郡的地圖。  
     
@@ -98,18 +97,18 @@ ms.lasthandoff: 08/09/2017
   
     地圖就會加入至設計介面。  
   
-13. 選取 [地圖標題] 文字，然後輸入 [依商店的銷售額)] > ENTER。  
+13. 選取 [地圖標題] 文字，然後鍵入 [Sales by Store] (依門市顯示的銷售額) > ENTER。  
 
 15. 按兩下地圖來顯示 [地圖圖層] 窗格。 [地圖圖層] 窗格會顯示一個 [內嵌] 圖層類型的多邊形圖層 PolygonLayer1。 每個郡在此圖層上都是一個內嵌的地圖元素。  
   
     > [!NOTE]  
-    > 如果看不到 [地圖圖層] 窗格，表示它可能在目前檢視之外顯示。 請使用 [設計檢視] 視窗底部的捲軸來切換檢視。 或者，在 [檢視] 索引標籤中，清除 [報表資料] 選項，即可提供更多設計介面區域。   
+    > 如果看不到 [地圖圖層] 窗格，其可能顯示在目前檢視之外。 請使用 [設計檢視] 視窗底部的捲軸來切換檢視。 或者，在 [檢視] 索引標籤中，清除 [報表資料] 選項，即可提供更多設計介面區。   
 
 15. 選取 PolygonLayer1 旁的箭號 > [多邊形屬性]。
 
 16. 在 [字型] 索引標籤上，將色彩變更為 [暗灰]。
 
-17. 在 [首頁] 索引標籤上 > [執行] 預覽報表。  
+17. 在 [主資料夾] 索引標籤上 > [執行] 來預覽報表。  
   
     ![report-builder-map-first-preview](../reporting-services/media/report-builder-map-first-preview.png)
   
@@ -127,7 +126,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  在 [執行] 索引標籤 > [設計]，切換回 [設計] 檢視。  
   
-2.  按兩下地圖來顯示 [地圖圖層] 窗格。 在工具列上，按一下 **新增圖層精靈**按鈕![rs_IconMapLayerWizard](../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")。 
+2.  按兩下地圖來顯示 [地圖圖層] 窗格。 在工具列上，按一下 [新增圖層精靈] 按鈕 ![rs_IconMapLayerWizard](../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")。 
 
     ![report-builder-map-new-layer-wizard-icon](../reporting-services/media/report-builder-map-new-layer-wizard-icon.png) 
   
@@ -138,7 +137,7 @@ ms.lasthandoff: 08/09/2017
 5.  在 **[選擇到 SQL Server 空間資料來源的連接]** 頁面上，選取現有的資料來源，或瀏覽至報表伺服器並選取資料來源。  
 
     > [!NOTE]  
-    > 只要您有適當的權限，選擇哪一種資料來源都無關緊要。 因為您不會從資料來源取得資料。 如需詳細資訊，請參閱[取得資料連接的替代方式 &#40;報表產生器&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)。  
+    > 只要您有適當的權限，選擇哪一種資料來源都無關緊要。 因為您不會從資料來源取得資料。 如需詳細資訊，請參閱[取得資料連線的替代方式 &#40;報表產生器&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)。  
   
 6.  按一下 **[下一步]**。  
   
@@ -175,7 +174,7 @@ ms.lasthandoff: 08/09/2017
     CAST(1500000 as money) as Sales, CAST('POINT(-73.5626737425063 42.6940551238618)' as geography) AS SpatialLocation  
     ```  
   
-9. 在查詢設計工具工具列上，按一下 [執行] (**!**)。  
+9. 在查詢設計工具工具列上，按一下 **[執行]** (**!**)。  
   
     結果集包含七個資料行，代表一組販賣消費品的紐約州商店。 以下是清單，以及對於較不明顯者的說明︰ 
     *   **StoreKey**︰商店識別碼。  
@@ -198,13 +197,13 @@ ms.lasthandoff: 08/09/2017
   
 12. 按一下 **[下一步]**。  
   
-13. 在 [選擇地圖視覺效果] 頁面上，針對地圖類型按一下 [泡泡地圖]，它會根據資料顯示大小不同的標記。 按一下 **[下一步]**。  
+13. 在 [選擇地圖視覺效果] 頁面上，針對地圖類型按一下 [泡泡地圖]，就會根據資料顯示大小不同的標記。 按一下 **[下一步]**。  
   
-14. 在 [選擇分析資料集] 頁面上，按一下 DataSet1，然後按一下 [下一步]。 此資料集同時包含將在新的點圖層上顯示的分析資料和空間資料。   
+14. 在 [選擇分析資料集] 頁面上，按一下 [DataSet1]，然後按一下 [下一步]。 此資料集同時包含將在新的點圖層上顯示的分析資料和空間資料。   
   
 16. 在 [選擇色彩主題和資料視覺效果] 頁面上，選取 [使用泡泡大小將資料視覺化]。  
   
-17. 在 [資料欄位]中選取 `[Sum(SellingArea)]`，讓泡泡大小依據保留用於顯示產品的區域大小變化。  
+17. 在 [資料欄位] 中選取 `[Sum(SellingArea)]`，讓泡泡大小依據門市保留來展示產品的區域大小而變化。  
   
 18. 選取 [顯示標籤]，並在 [資料欄位] 中選取 `[City]`。
 
@@ -212,11 +211,11 @@ ms.lasthandoff: 08/09/2017
   
     地圖圖層會加入至報表。 圖例會根據 SellingArea 值顯示泡泡大小。  
   
- 19. 按兩下地圖來顯示 [地圖圖層] 窗格。 **[地圖圖層]** 窗格會顯示一個新圖層 PointLayer1，其空間資料來源類型為 **DataRegion**。  
+ 19. 按兩下地圖來顯示 **[地圖圖層]** 窗格。 **[地圖圖層]** 窗格會顯示一個新圖層 PointLayer1，其空間資料來源類型為 **DataRegion**。  
   
-19. 加入圖例標題。 在圖例中，選取文字 [標題]、輸入 [顯示區域 (平方英尺)]，然後按 ENTER。  
+19. 加入圖例標題。 在圖例中，選取文字 [標題]、鍵入**展示區域 (平方英呎)**，然後按 ENTER。  
   
-21. 在 [地圖圖層] 窗格中，按一下 PointLayer1 旁的箭號，然後按一下 [點內容]。  
+21. 在 [地圖圖層] 窗格中，按一下 PointLayer1 旁的箭號，然後按一下 [點屬性]。  
 
     ![report-builder-map-point-properties](../reporting-services/media/report-builder-map-point-properties.png)
   
@@ -224,7 +223,7 @@ ms.lasthandoff: 08/09/2017
 
     ![report-builder-map-point-properties-font](../reporting-services/media/report-builder-map-point-properties-font.png)
   
-23. 在 [一般] 索引標籤上，針對 [放置] 選取 [下]。
+23. 在 [一般] 索引標籤上，針對 [位置] 選取 [下方]。
 
 24. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -243,13 +242,13 @@ ms.lasthandoff: 08/09/2017
   
 1.  切換至 [設計] 檢視。  
   
-2.  按兩下地圖來顯示 **[地圖圖層]** 窗格。 在工具列上，按一下 **新增圖層精靈**按鈕![rs_IconMapLayerWizard](../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")。  
+2.  按兩下地圖來顯示 **[地圖圖層]** 窗格。 在工具列上，按一下 [新增圖層精靈] 按鈕 ![rs_IconMapLayerWizard](../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")。  
   
 3.  在 **[選擇空間資料的來源]** 頁面上，選取 **[SQL Server 空間查詢]** ，然後按 **[下一步]**。  
   
 4.  在 **[選擇含有 SQL Server 空間資料的資料集]** 頁面上，按一下 **[新增含有 SQL Server 空間資料的資料集]** ，然後按 **[下一步]**。  
   
-5.  在 [選擇到 SQL Server 空間資料來源的連接] 上，選取您在第一個程序中使用的資料來源。  
+5.  在 [選擇與 SQL Server 空間資料來源的連線] 上，選取您在第一個程序中使用的資料來源。  
   
 6.  按一下 **[下一步]**。  
   
@@ -287,7 +286,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="adjust-the-zoom"></a>調整顯示比例
 1. 如果您無法看到整個紐約州，可以調整顯示比例。 在選取地圖的情況下，在 [屬性] 窗格中您會看到 **MapViewport** 屬性。 
 
-15. 展開 [檢視] 區段，然後展開 [檢視] 以便您可以看到 **Zoom** 屬性。 將它設為 [125]。 
+15. 展開 [檢視] 區段，然後展開 [檢視] 便可以看到 [縮放] 屬性。 將其設為 **125**。 
 
     ![report-builder-map-zoom](../reporting-services/media/report-builder-map-zoom.png)
 
@@ -298,7 +297,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  切換至 [設計] 檢視。  
   
-2.  按兩下地圖來顯示 **[地圖圖層]** 窗格。 在工具列上，按一下 **加入圖層** ![rs_IconMapAddLayer](../reporting-services/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer")。  
+2.  按兩下地圖來顯示 **[地圖圖層]** 窗格。 在工具列上，按一下 [新增圖層] ![rs_IconMapAddLayer](../reporting-services/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer")。  
   
 3.  從下拉式清單中，按一下 **[圖格圖層]**。  
   
@@ -318,11 +317,11 @@ ms.lasthandoff: 08/09/2017
 ## <a name="Transparent"></a>5.使圖層變透明  
 在本節中，若要讓某一個圖層上的項目透過另一個圖層顯示，您可以調整圖層的順序以及透明度，以獲得需要的效果。 請從您建立的第一個圖層 PolygonLayer1 開始。 
   
-1.  按兩下地圖來顯示 [地圖圖層] 窗格。  
+1.  按兩下地圖來顯示 **[地圖圖層]** 窗格。  
   
 3.  按一下 PolygonLayer1 旁的箭號 > [圖層資料]。 **[地圖多邊形圖層屬性]** 對話方塊隨即開啟。  
   
-4.  在 [可見性] 索引標籤的 [透明度 (百分比)] 下，輸入 **30**。  
+4.  在 [可見度] 索引標籤的 [透明度 (百分比)] 下，鍵入 **30**。  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -344,13 +343,13 @@ ms.lasthandoff: 08/09/2017
   
 3.  按一下 PolygonLayer1 旁的箭號，然後按一下 [圖層資料]。 **[地圖多邊形圖層屬性]** 對話方塊隨即開啟。  
   
-4.  在 [分析資料] 索引標籤的 [分析資料集] 下，選取 DataSet1。 當您為各郡建立空間資料查詢時，精靈就會建立此資料集。  
+4.  在 [分析資料] 索引標籤的 [分析資料集] 下，選取 [DataSet1]。 當您為各郡建立空間資料查詢時，精靈就會建立此資料集。  
   
 6.  在 [要比對的欄位] 下，按一下 [新增]。 新的資料列隨即加入。  
   
 7.  在 [從空間資料集] 下，按一下 [COUNTYNAME]。  
   
-8.  在 [從分析資料集] 下，按一下 [County]。  
+8.  在 [從分析資料集] 下，按一下 [郡]。  
 
     ![report-builder-map-county-colors](../reporting-services/media/report-builder-map-county-colors.png)
   
@@ -412,9 +411,9 @@ ms.lasthandoff: 08/09/2017
   
 1. 切換至 [設計] 檢視。  
 
-2. 選取色階。 在 [首頁] 索引標籤 > [數值] 區段中，按一下 [貨幣]。  
+2. 選取色階。 在 [主資料夾] 索引標籤 > [數字] 區段中，按一下 [貨幣]。  
   
-4.  仍在 [數值] 區段中，按兩次 [減少小數位數] 按鈕。  
+4.  仍在 [數字] 區段中，按兩次 [減少小數位數] 按鈕。  
   
     色階會以每個範圍的貨幣格式顯示年度銷售額。  
   
@@ -424,7 +423,7 @@ ms.lasthandoff: 08/09/2017
   
 2. 展開 [標題] 區段中，並在 Caption 屬性中，輸入 **Sales (Thousands)**。
 
-3. 將 TextColor 屬性變更為 [白色]。  
+3. 將 [TextColor] 屬性變更為 [白色]。  
 
     ![report-builder-map-color-scale-title](../reporting-services/media/report-builder-map-color-scale-title.png)
   
@@ -447,7 +446,7 @@ ms.lasthandoff: 08/09/2017
 
      **[地圖多邊形屬性]** 對話方塊隨即開啟。 此對話方塊中設定的顯示選項會先套用至圖層上的所有多邊形，然後才會套用規則為主的顯示選項。  
   
-4.  在 [填滿] 索引標籤上，確認填滿樣式是 [實心]。 漸層和模式會套用至所有色彩。  
+4.  在 [填滿] 索引標籤上，驗證填滿樣式是 [實心]。 漸層和模式會套用至所有色彩。  
   
 6.  在 [色彩] 中，選取 [淺鋼青]。  
   
@@ -458,11 +457,11 @@ ms.lasthandoff: 08/09/2017
 沒有相關資料的郡會顯示為灰藍色。 只有包含相關分析資料的郡會具有您所指定色彩規則中的 [紅色] 到 [綠色] 等色彩。  
   
 ## <a name="CustomPoint"></a>7.加入自訂點  
-若要表示尚未建立的新商店，在本節中，您會指定一個點並使用 [星形] 標記類型。  
+若要代表尚未建造的新門市，就在此區段中使用 [星形] 標記類型指定一個點。  
   
 1.  切換至 [設計] 檢視。  
   
-2.  按兩下地圖來顯示 **[地圖圖層]** 窗格。 在工具列上，按一下 **加入圖層**![rs_IconMapAddLayer](../reporting-services/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer")，然後按一下 **點圖層**。    
+2.  按兩下地圖來顯示 **[地圖圖層]** 窗格。 在工具列上，按一下 [新增圖層]  ![rs_IconMapAddLayer](../reporting-services/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer")，然後按一下 [點圖層]。  
   
     新的點圖層便會加入至地圖中。 根據預設，點圖層的空間資料類型為 **[內嵌]**。  
   
@@ -474,7 +473,7 @@ ms.lasthandoff: 08/09/2017
 
     ![report-builder-map-custom-point](../reporting-services/media/report-builder-map-custom-point.png)
   
-6.  以滑鼠右鍵按一下您新增的點，然後按一下 [內嵌點屬性]。  
+6.  以滑鼠右鍵按一下您加入的點，然後按一下 **[內嵌點屬性]**。  
   
 7.  選取 [覆寫此圖層的點選項]。 對話方塊中會出現一個額外的頁面。 您在此處設定的值，其優先順序高於圖層或色彩規則的顯示選項。  
 
@@ -482,13 +481,13 @@ ms.lasthandoff: 08/09/2017
   
 8.  在 [標記] 索引標籤上，選取 [星形] 作為 [標記類型]。  
 
-10. 將 [標記大小] 變更為 [18pt]。
+10. 將 [標記大小] 變更為 **18pt**。
   
-3.  在 [標籤] 索引標籤的 [標籤文字] 中，輸入 **New Store**。  
+3.  在 [標籤] 索引標籤的 [標籤文字] 中，鍵入**新門市**。  
   
 5.  在 **[位置]**中，按一下 **[上方]**。  
 
-13. 在 [字型] 索引標籤上，使字型大小成為 [10pt] 和 [粗體]。
+13. 在 [字型] 索引標籤上，將字型大小設為 **10pt** 和**粗體**。
 
     ![report-builder-map-custom-point-font](../reporting-services/media/report-builder-map-custom-point-font.png)
   
@@ -507,9 +506,9 @@ ms.lasthandoff: 08/09/2017
 
 1.  選取地圖，然後以滑鼠右鍵按一下並按一下 [檢視區屬性]。  
   
-2.  在 [置中與縮放] 索引標籤，確定已選取 [設定檢視置中與縮放層級]。  
+2.  在 [置中與縮放] 索引標籤中，確定已選取 [設定檢視置中與縮放比例]。  
 
-4. 將 [縮放層級 (百分比)] 設為 [125]。
+4. 將 [比例層級 (百分比)] 設為 **125**。
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -533,7 +532,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="Save"></a>10.儲存報表  
   
-1.  在設計檢視或預覽中，在 [檔案] 功能表 > [另存新檔]。
+1.  在 [設計] 檢視或 [預覽] 中，在 [檔案] 功能表 > [另存新檔]。
  
 3.  在 **[名稱]**中輸入 **紐約的商店銷售額**。  
 
