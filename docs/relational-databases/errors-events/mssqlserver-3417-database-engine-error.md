@@ -35,7 +35,7 @@ ms.lasthandoff: 06/22/2017
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
 |符號名稱|REC_BADMASTER|  
-|訊息文字|無法復原 master 資料庫。 SQL Server 無法執行。 Restore master from a full backup, repair it, or rebuild it. 如需有關如何重建 master 資料庫的詳細資訊，請參閱《SQL Server 線上叢書》。|  
+|訊息文字|無法復原 master 資料庫。 SQL Server 無法執行。 從完全備份恢復主服務器，修復或重建它。 如需有關如何重建 master 資料庫的詳細資訊，請參閱《SQL Server 線上叢書》。|  
   
 ## <a name="explanation"></a>說明  
 SQL Server 無法啟動 **master** 資料庫。 如果無法讓 **master** 或 **tempdb** 上線，SQL Server 就無法執行。 這項錯誤通常在其他錯誤之前發生。 請查閱錯誤記錄檔，找出根本的原因。  
