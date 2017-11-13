@@ -25,7 +25,7 @@ ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="types-of-replication"></a>複寫類型
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides the following types of replication for use in distributed applications:  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了下列可用於分散式應用程式的複寫類型：  
   
 -   異動複寫。 如需詳細資訊，請參閱[異動複寫](../../relational-databases/replication/transactional/transactional-replication.md)。  
   

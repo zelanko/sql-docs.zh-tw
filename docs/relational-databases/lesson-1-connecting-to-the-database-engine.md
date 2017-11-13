@@ -132,7 +132,7 @@ ms.lasthandoff: 09/27/2017
  -> 這是讓您快速入門的基本資訊。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供多樣化的安全性環境，安全性顯然是資料庫作業的重要一環。  
  -  
  -## 下一課  
- -第 2 課：從另一部電腦連線[](../relational-databases/lesson-2-connecting-from-another-computer.md)    
+ -[第 2 課：從另一部電腦連線](../relational-databases/lesson-2-connecting-from-another-computer.md)    
   
   
 

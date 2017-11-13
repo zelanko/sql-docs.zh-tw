@@ -1,5 +1,5 @@
 ---
-title: "階層成員權限 (Master Data Services) |Microsoft 文件"
+title: "階層成員權限 (Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -14,20 +14,21 @@ helpviewer_keywords:
 - permissions [Master Data Services], members
 ms.assetid: b3880eed-1bf6-4f65-ab23-b08c194cc858
 caps.latest.revision: 11
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5df8a0f0c01842c00c3698146e84ed78e6320683
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.workload: Inactive
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 831587a0a6a3c86491ea0b2e7fba1595664e8897
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="hierarchy-member-permissions-master-data-services"></a>階層成員權限 (Master Data Services)
   階層成員權限為選擇性，而且只有當您希望使用者擁有特定成員的受限存取權時，才應該使用。 如果您未在 [階層成員] 索引標籤上指派權限，則使用者的權限完全是根據 [模型] 索引標籤上指派的權限。  
   
- 階層成員權限會在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 使用者介面 (UI) 中，[使用者及群組的權限] 功能區域的 [階層成員] 索引標籤上指派。 這些權限會決定使用者可以在此 UI 的總管功能區域中存取哪些成員。  
+ 階層成員權限會在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 使用者介面 (UI) 中，[使用者及群組的權限] 功能區域的 [階層成員] 索引標籤上指派。這些權限會決定使用者可以在此 UI 的總管功能區域中存取哪些成員。  
   
  在 [階層成員] 索引標籤上，每一個階層會表示為一個樹狀結構。 當您將權限指派給樹狀結構中的節點時，所有子項都會繼承該權限，除非在較低層級明確指派權限。  
   
@@ -69,8 +70,9 @@ ms.lasthandoff: 09/01/2017
 ## <a name="see-also"></a>另請參閱  
  [指派階層成員權限 &#40;Master Data Services&#41;](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   
  [如何決定權限 &#40;Master Data Services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)   
- [成員 &#40;Master Data services&#41;](../master-data-services/members-master-data-services.md)   
- [階層 &#40;Master Data services&#41;](../master-data-services/hierarchies-master-data-services.md)   
- [立即套用成員權限 &#40;Master Data services&#41;](../master-data-services/immediately-apply-member-permissions-master-data-services.md)  
+ [成員 &#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)   
+ [階層 &#40;Master Data Services&#41;](../master-data-services/hierarchies-master-data-services.md)   
+ [立即套用成員權限 &#40;Master Data Services&#41;](../master-data-services/immediately-apply-member-permissions-master-data-services.md)  
   
   
+
