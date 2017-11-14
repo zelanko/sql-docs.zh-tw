@@ -1,9 +1,13 @@
 ---
 title: "表格式模型方案 (SSAS 表格式) |Microsoft 文件"
 ms.date: 05/22/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: tabular-models
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.custom: 
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular

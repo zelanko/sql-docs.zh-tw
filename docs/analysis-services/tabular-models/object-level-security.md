@@ -2,9 +2,12 @@
 title: "表格式模型物件層級安全性 |Microsoft 文件"
 ms.custom: 
 ms.date: 06/20/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: tabular-models
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular

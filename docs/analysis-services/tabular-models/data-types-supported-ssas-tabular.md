@@ -2,9 +2,12 @@
 title: "支援的 Analysis Services 表格式模型的資料類型 |Microsoft 文件"
 ms.custom: 
 ms.date: 10/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: tabular-models
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular

@@ -2,9 +2,12 @@
 title: "連接到現有的 Analysis Services 表格式伺服器和資料庫 |Microsoft 文件"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: tabular-models
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - analysis-services
 - docset-sql-devref

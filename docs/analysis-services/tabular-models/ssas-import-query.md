@@ -2,9 +2,12 @@
 title: "匯入資料使用原生查詢 (Analysis Services) |Microsoft 文件"
 ms.custom: 
 ms.date: 10/26/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: tabular-models
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: 

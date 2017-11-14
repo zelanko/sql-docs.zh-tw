@@ -1,11 +1,13 @@
 ---
 title: "在 DirectQuery 模式 （SSAS 表格式） 中定義資料分割 |Microsoft 文件"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 07/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: tabular-models
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: 

@@ -2,9 +2,12 @@
 title: "相容性層級 1200年的表格式模型程式設計 |Microsoft 文件"
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: tabular-models
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - analysis-services
 - docset-sql-devref
