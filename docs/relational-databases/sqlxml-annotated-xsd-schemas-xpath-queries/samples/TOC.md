@@ -1,0 +1,11 @@
+# [範例 XPath 查詢 (SQLXML 4.0)](sample-xpath-queries-sqlxml-4-0.md)
+
+# [XPath 範例 (SQLXML 4.0) 的範例註解的 XSD 結構描述](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)
+# [在 XPath 查詢 (SQLXML 4.0) 中指定算術運算子](specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)
+# [在 XPath 查詢 (SQLXML 4.0) 中指定軸](specifying-axes-in-xpath-queries-sqlxml-4-0.md)
+# [XPath 查詢 (SQLXML 4.0) 中指定布林函數](specifying-boolean-functions-in-xpath-queries-sqlxml-4-0.md)
+# [在 XPath 查詢 (SQLXML 4.0) 中指定布林運算子](specifying-boolean-operators-in-xpath-queries-sqlxml-4-0.md)
+# [XPath 查詢 (SQLXML 4.0) 中指定布林值述詞](specifying-boolean-valued-predicates-in-xpath-queries-sqlxml-4-0.md)
+# [XPath 查詢 (SQLXML 4.0) 中指定明確的轉換函式](specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-4-0.md)
+# [XPath 查詢 (SQLXML 4.0) 中指定關係運算子](specifying-relational-operators-in-xpath-queries-sqlxml-4-0.md)
+# [XPath 查詢 (SQLXML 4.0) 中指定 XPath 變數](specifying-xpath-variables-in-xpath-queries-sqlxml-4-0.md)

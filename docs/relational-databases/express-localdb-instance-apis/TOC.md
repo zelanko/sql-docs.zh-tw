@@ -1,0 +1,18 @@
+# [SQL Server Express LocalDB 參考-執行個體應用程式開發介面](sql-server-express-localdb-reference-instance-apis.md)
+# [命令列管理工具： SqlLocalDB.exe](command-line-management-tool-sqllocaldb-exe.md)
+# [SQL Server Express LocalDB 標頭和版本資訊](sql-server-express-localdb-header-and-version-information.md)
+
+# LocalDB 函式
+## [LocalDBCreateInstance 函數](localdbcreateinstance-function.md)
+## [LocalDBDeleteInstance 函數](localdbdeleteinstance-function.md)
+## [LocalDBFormatMessage 函數](localdbformatmessage-function.md)
+## [LocalDBGetInstanceInfo 函數](localdbgetinstanceinfo-function.md)
+## [LocalDBGetInstances 函數](localdbgetinstances-function.md)
+## [LocalDBGetVersionInfo 函數](localdbgetversioninfo-function.md)
+## [LocalDBGetVersions 函數](localdbgetversions-function.md)
+## [LocalDBShareInstance 函數](localdbshareinstance-function.md)
+## [LocalDBStartInstance 函數](localdbstartinstance-function.md)
+## [LocalDBStartTracing 函數](localdbstarttracing-function.md)
+## [LocalDBStopInstance 函數](localdbstopinstance-function.md)
+## [LocalDBStopTracing 函數](localdbstoptracing-function.md)
+## [LocalDBUnshareInstance 函數](localdbunshareinstance-function.md)

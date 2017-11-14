@@ -1,0 +1,5 @@
+# [資料流及 OLE DB](filestream-and-ole-db.md)
+# [FILESTREAM 資料行讀到檔案使用 IBCPSession (OLE DB)](read-a-filestream-column-to-file-using-ibcpsession-ole-db.md)
+# [從使用 ISequentialStream (OLE DB) 的 FILESTREAM 資料行擷取資料](retrieve-data-from-a-filestream-column-using-isequentialstream-ole-db.md)
+# [將資料傳送到 FILESTREAM 資料行使用 IRowsetFastUpload (OLE DB)](send-data-to-a-filestream-column-using-irowsetfastupload-ole-db.md)
+# [將資料傳送到 FILESTREAM-ISequentialStream Bound to ICommandText](send-data-to-filestream-isequentialstream-bound-to-icommandtext.md)

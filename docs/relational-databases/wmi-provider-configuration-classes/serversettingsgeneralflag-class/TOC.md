@@ -1,0 +1,5 @@
+# [FlagName 屬性 （ServerSettingsGeneralFlag 類別）](flagname-property-serversettingsgeneralflag-class.md)
+# [FlagValue 屬性 （ServerSettingsGeneralFlag 類別）](flagvalue-property-serversettingsgeneralflag-class.md)
+# [InstanceName 屬性 （ServerSettingsGeneralFlag 類別）](instancename-property-serversettingsgeneralflag-class.md)
+# [ServerSettingsGeneralFlag 類別](serversettingsgeneralflag-class.md)
+# [SetValue 方法 （ServerSettingsGeneralFlag 類別）](setvalue-method-serversettingsgeneralflag-class.md)
