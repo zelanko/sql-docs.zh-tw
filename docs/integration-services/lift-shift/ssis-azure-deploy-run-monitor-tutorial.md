@@ -36,7 +36,7 @@ ms.lasthandoff: 10/13/2017
 
 2. **連接到伺服器**。 在**連接到伺服器**對話方塊方塊中，輸入下列資訊：
 
-   | 設定       | 建議的值 | Description | 
+   | 設定       | 建議的值 | Description | 
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **伺服器類型** | Database Engine | 這是必要的值。 |
    | **伺服器名稱** | 完整的伺服器名稱 | 名稱應該採用下列格式： **mysqldbserver.database.windows.net**。 如果您需要的伺服器名稱，請參閱[連接到 Azure 上的 SSISDB 目錄資料庫](ssis-azure-connect-to-catalog-database.md)。 |

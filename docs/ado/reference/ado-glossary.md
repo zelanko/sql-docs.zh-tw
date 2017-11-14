@@ -3,9 +3,12 @@ title: "ADO 詞彙 |Microsoft 文件"
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.technology: "“drivers”"
 ms.topic: article
 helpviewer_keywords:
@@ -296,3 +299,4 @@ ms.lasthandoff: 09/09/2017
   
  網頁伺服器  
  提供 Web 服務和內部網路和網際網路使用者頁面的電腦。
+

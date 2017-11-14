@@ -28,7 +28,7 @@ ms.lasthandoff: 10/02/2017
 在下列範例中`sqlcmd`會連接到本機 SQL Server 執行個體並呼叫使用者資料庫的備份完整`demodb`。
 
 ```bash
-sqlcmd -H localhost -U SA -Q "BACKUP DATABASE [demodb] TO DISK = N'var/opt/mssql/data/demodb.bak' WITH NOFORMAT, NOINIT, NAME = 'demodb-full', SKIP, NOREWIND, NOUNLOAD, STATS = 10"
+sqlcmd -S localhost -U SA -Q "BACKUP DATABASE [demodb] TO DISK = N'/var/opt/mssql/data/demodb.bak' WITH NOFORMAT, NOINIT, NAME = 'demodb-full', SKIP, NOREWIND, NOUNLOAD, STATS = 10"
 ```
 
 當您執行命令時，SQL Server 將會提示輸入密碼。 您輸入密碼之後，殼層將會傳回備份進度的結果。 例如：
@@ -55,16 +55,15 @@ BACKUP DATABASE successfully processed 298 pages in 0.064 seconds (36.376 MB/sec
 在下列範例中，`sqlcmd`會連接到本機 SQL Server 執行個體，並採用結尾記錄備份。 結尾記錄備份完成之後，資料庫會處於還原狀態。 
 
 ```bash
-sqlcmd -H localhost -U SA -Q "BACKUP LOG [demodb] TO  DISK = N'var/opt/mssql/data/demodb_LogBackup_2016-11-14_18-09-53.bak' WITH NOFORMAT, NOINIT,  NAME = N'demodb_LogBackup_2016-11-14_18-09-53', NOSKIP, NOREWIND, NOUNLOAD,  NORECOVERY ,  STATS = 5"
+sqlcmd -S localhost -U SA -Q "BACKUP LOG [demodb] TO  DISK = N'/var/opt/mssql/data/demodb_LogBackup_2016-11-14_18-09-53.bak' WITH NOFORMAT, NOINIT,  NAME = N'demodb_LogBackup_2016-11-14_18-09-53', NOSKIP, NOREWIND, NOUNLOAD,  NORECOVERY ,  STATS = 5"
 ```
-
 
 ## <a name="restore-with-sqlcmd"></a>還原使用 sqlcmd
 
 在下列範例中`sqlcmd`會連接到 SQL Server 的本機執行個體，並會將資料庫還原。
 
 ```bash
-sqlcmd -H localhost -U SA -Q "RESTORE DATABASE [demodb] FROM  DISK = N'var/opt/mssql/data/demodb.bak' WITH  FILE = 1,  NOUNLOAD,  REPLACE,  STATS = 5"
+sqlcmd -S localhost -U SA -Q "RESTORE DATABASE [demodb] FROM  DISK = N'/var/opt/mssql/data/demodb.bak' WITH  FILE = 1,  NOUNLOAD,  REPLACE,  STATS = 5"
 ```
 
 ## <a name="backup-and-restore-with-sql-server-management-studio-ssms"></a>備份及還原與 SQL Server Management Studio (SSMS)
