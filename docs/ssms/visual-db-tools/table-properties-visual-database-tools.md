@@ -5,25 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - vdt.tabledesigner
 - vdt.designers.properties.Table
 ms.assetid: cc392987-1aab-45f5-b5af-a26be53409bf
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 3773ad2f9b1ba26af775d70146e17740eed828ad
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: dfe6d57c1858204f82beae1a807100b7c8386de3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="table-properties-visual-database-tools"></a>資料表屬性 (Visual Database Tools)
 當您在 [資料表設計師] 中按一下滑鼠右鍵並選取 [屬性] 時，這些屬性便會出現在 [屬性] 視窗中。 已選取資料表時，您可以在 [屬性] 視窗中編輯這些屬性 (除非另有附註)。  
@@ -37,7 +35,7 @@ ms.lasthandoff: 06/22/2017
 > 此主題中的屬性，是依類別目錄的順序排列，而非依字母排列。  
   
 **識別類別目錄**  
-展開以顯示 **名稱**、 **說明**、 and **結構描述**的屬性。  
+展開以顯示 **名稱**、 **說明**及 **結構描述**的屬性。  
   
 **名稱**  
 顯示資料表的名稱。 若要編輯名稱，請在文字方塊中輸入。  
@@ -90,4 +88,3 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>另請參閱  
 [設計資料表 (Visual Database Tools)](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)  
   
-

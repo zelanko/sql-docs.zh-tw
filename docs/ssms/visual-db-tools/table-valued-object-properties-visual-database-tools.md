@@ -5,24 +5,21 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vdt.designers.properties.TVO
+f1_keywords: vdt.designers.properties.TVO
 ms.assetid: eaf06cbf-8242-4483-894f-80ae02a4840e
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e1a3aab7fc71e38e5383b8adad799ba3c2a01e4f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: b780f2dea124c603e24015149ab2d98b93f711f2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="table-valued-object-properties-visual-database-tools"></a>資料表值物件屬性 (Visual Database Tools)
 您在查詢和檢視表設計工具中選取資料表值物件時，這些屬性就會出現在 [屬性] 視窗中。 資料表值物件可以是檢視、同義字、衍生資料表，或是資料表值函數。 除非另有說明，這些屬性在 [屬性] 視窗中都是唯讀的。  
@@ -57,4 +54,3 @@ ms.lasthandoff: 06/22/2017
 **參數清單**  
 顯示針對選取之資料表值函數所定義的參數。 若要定義參數的值，請按一下 [參數清單]，然後按一下屬性右邊的省略符號 (...)。 在 [函數參數] 對話方塊中，請鍵入值。 唯有選取資料表值函數時，才能使用此屬性。  
   
-

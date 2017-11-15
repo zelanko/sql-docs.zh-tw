@@ -5,8 +5,7 @@ ms.date: 05/04/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - Windows domain accounts [SQL Server]
 - security [SQL Server], SQL Server Agent
 ms.assetid: fe658e32-9e6b-4147-a189-7adc3bd28fe7
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: HT
-ms.sourcegitcommit: 43841807dce9cb747c2c5b182174f83f0540b030
-ms.openlocfilehash: 3050dc3fc207f2154a70c68770ca266d2d47ce92
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: c4caa940800f07f91adbb6472b1221c6aa35234e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="select-an-account-for-the-sql-server-agent-service"></a>選取 SQL Server Agent 服務的帳戶
 服務啟動帳戶會定義 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Agent 用來執行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Windows 帳戶及其網路權限。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 會以指定的使用者帳戶執行。 您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 組態管理員選擇下列選項，藉此選取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 服務的帳戶：  
@@ -127,4 +125,3 @@ ms.lasthandoff: 07/31/2017
 [使用 SQL 電腦管理員管理服務](http://msdn.microsoft.com/en-us/78dee169-df0c-4c95-9af7-bf033bc9fdc6)  
 [實作 SQL Server Agent 安全性](../../ssms/agent/implement-sql-server-agent-security.md)  
   
-

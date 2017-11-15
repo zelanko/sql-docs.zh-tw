@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - Visual Database Tools [SQL Server], queries
 - parameters [SQL Server], queries
 ms.assetid: 2e4fdeb6-c596-43cb-ac2e-9a18ea2bac0d
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: dc12e48c23b2e362b972f6d6e6d04f953a8f09c3
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/18/2017
-
+ms.openlocfilehash: 3deb83bf9fdaafd3598080e5889999b2630aaf22
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="query-with-parameters-visual-database-tools"></a>使用參數查詢 (Visual Database Tools)
 在許多情況下，建立可以在應用程式中重複使用多次，而每次輸入都不相同的查詢，是有幫助的。 在此章節中，您能夠獲得關於如何針對這些一般用途建立參數查詢的詳細資訊。  
@@ -43,4 +41,3 @@ ms.lasthandoff: 08/18/2017
 [指定搜尋準則 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
 提供包含不同搜尋方式，以及如何搜尋所要內容之主題的連結。  
   
-

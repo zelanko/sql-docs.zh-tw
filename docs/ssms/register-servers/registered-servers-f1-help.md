@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - Registered Servers [SQL Server], help
 - SQL Server Management Studio Help [SQL Server], registered servers
 ms.assetid: 59f76b28-ba78-4a1a-b5d5-8b581f30114d
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
-ms.openlocfilehash: df1eb91bc84f39d0e2277731d5329d79b8c43e78
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: e6862293a076e345534c77995352e5f63daee20b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="registered-servers-f1-help"></a>已註冊的伺服器 F1 說明
   本節包含 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中 [已註冊的伺服器] 元件的 F1 說明。 它描述各種選項。
@@ -37,7 +35,7 @@ ms.lasthandoff: 09/01/2017
  ## <a name="reporting-services-new-or-edit-server-registration-general-tab"></a>Reporting Services 新增或編輯伺服器註冊 (一般索引標籤) 
   當您註冊 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的執行個體時，請使用此索引標籤來指定選項。  
   
- 若要存取此頁面，請在 已註冊的伺服器 工具列按一下 Reporting Services，以滑鼠右鍵按一下任何已註冊的伺服器群組 (例如 Reporting Services)，指向 新增，然後按一下伺服器註冊。  
+ 若要存取此頁面，請在 [已註冊的伺服器] 工具列按一下 [Reporting Services]，以滑鼠右鍵按一下任何已註冊的伺服器群組 (例如 [Reporting Services])，指向 [新增]，然後按一下 [伺服器註冊]。  
   
 ### <a name="options"></a>選項。  
  **伺服器類型**  
@@ -67,7 +65,7 @@ ms.lasthandoff: 09/01/2017
  **記住密碼**  
  請儲存您輸入的密碼。 唯有已按一下 **[基本驗證]** 或 **[表單驗證]**時，才能使用此選項。  
   
-> **注意：**如果您已儲存密碼而要停止儲存密碼，請清除此核取方塊，然後按一下儲存。  
+> **注意：**如果您已儲存密碼而要停止儲存密碼，請清除此核取方塊，然後按一下 [儲存]。  
   
  **已註冊的伺服器名稱**  
  您要在 [已註冊的伺服器] 上顯示的名稱。 此名稱不需與 **[伺服器名稱]** 方塊中的名稱相符。  
@@ -83,7 +81,7 @@ ms.lasthandoff: 09/01/2017
  
   當您註冊 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的執行個體時，請使用此索引標籤來指定選項。  
   
- 若要存取這個頁面，請在 已註冊的伺服器 中按一下 已註冊的伺服器 工具列上的 Analysis Services，以滑鼠右鍵按一下任何已註冊的伺服器群組，例如 Analysis Services，並指向 新增，然後按一下伺服器註冊。  
+ 若要存取這個頁面，請在 [已註冊的伺服器] 中按一下 [已註冊的伺服器] 工具列上的 [Analysis Services]，以滑鼠右鍵按一下任何已註冊的伺服器群組，例如 [Analysis Services]，並指向 [新增]，然後按一下 [伺服器註冊]。  
   
 ### <a name="options"></a>選項。  
  **伺服器類型**  
@@ -117,7 +115,7 @@ ms.lasthandoff: 09/01/2017
  
  註冊 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 時，使用這個索引標籤指定選項。  
   
- 若要存取此頁面，請在 已註冊的伺服器 上按一下 已註冊的伺服器 工具列上的 Integration Services，並以滑鼠右鍵按一下任何已註冊的伺服器群組，再指向 新增，然後按一下伺服器註冊。  
+ 若要存取此頁面，請在 [已註冊的伺服器] 上按一下 [已註冊的伺服器] 工具列上的 [Integration Services]，並以滑鼠右鍵按一下任何已註冊的伺服器群組，再指向 [新增]，然後按一下 [伺服器註冊]。  
   
 ### <a name="options"></a>選項。  
  **伺服器類型**  
@@ -151,4 +149,3 @@ ms.lasthandoff: 09/01/2017
  
  
   
-

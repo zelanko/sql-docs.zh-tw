@@ -5,24 +5,21 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- saving tables
+helpviewer_keywords: saving tables
 ms.assetid: 86943b49-48f3-432c-8021-928c13edfbcf
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 88c9d4b8fc33bcbd7666c09505be752f4c762718
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: a6ac219c016292fc134aa1a1053812365d2f754d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="save-selected-tables-on-a-diagram-visual-database-tools"></a>儲存圖表上所選的資料表 (Visual Database Tools)
 如果不要儲存對資料庫圖表所做的所有變更，可以儲存特定的資料表或一組資料表。  
@@ -45,4 +42,3 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>另請參閱  
 [使用資料庫圖表 (Visual Database Tools)](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
   
-

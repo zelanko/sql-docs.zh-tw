@@ -5,28 +5,26 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Help [SQL Server Management Studio]
 - SQL Server Management Studio [SQL Server], user assistance
 ms.assetid: 3c33a474-e507-4712-86fe-ae40e8370319
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: d57d3d1dcd90bfe3af4ef8b630d3f0c0a2e0ff3c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: c30d3be19643c13ba0621a948f3cca3b467cb039
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="user-assistance-in-sql-server-management-studio"></a>SQL Server Management Studio 中的使用者協助
-您可以利用 [說明] 功能表和《[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] 線上叢書》，在 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] 中取得使用者輔助程式。 [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] 中的 [說明] 功能表提供了幾個不同的路徑，供您取得 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)]的相關資訊。 您也可以利用它來存取 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] 社群和 MSDN Online 資源，先前的 [說明] 環境並未提供這項功能。 另外，您現在也可以將 [說明] 環境設定成在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] 環境內啟動，或在它自己的相關外部視窗中啟動。  
+您可以利用 [說明] 功能表和《 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] 線上叢書》，在 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] 中取得使用者輔助程式。 [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] 中的 [說明] 功能表提供了幾個不同的路徑，供您取得 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)]的相關資訊。 您也可以利用它來存取 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] 社群和 MSDN Online 資源，先前的 [說明] 環境並未提供這項功能。 另外，您現在也可以將 [說明] 環境設定成在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] 環境內啟動，或在它自己的相關外部視窗中啟動。  
   
 ## <a name="the-help-interface"></a>說明介面  
 [內容] 和 [索引] 提供類似於 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] 使用者的功能和介面。 其他選項包括：  
@@ -103,4 +101,3 @@ ms.lasthandoff: 06/22/2017
   
 2.  在 [顯示說明使用的工具] 方塊中，按一下 [整合式說明檢視器]。  
   
-

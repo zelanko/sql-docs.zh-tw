@@ -5,8 +5,7 @@ ms.date: 10/09/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 keywords:
@@ -23,17 +22,16 @@ keywords:
 - sql server ssms
 - ssms express
 ms.assetid: adafeeef-4255-4924-8042-02f503d599ca
-caps.latest.revision: 145
+caps.latest.revision: "145"
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.translationtype: HT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: be3d22491e1cf5e6446f9ac597d613e1d203a28e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/10/2017
-
+ms.openlocfilehash: 0c9f20a8c5f251728ce8050e9c6fc2cab4b55a55
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>下載 SQL Server Management Studio (SSMS)
 
@@ -169,4 +167,3 @@ SQL Server Management Studio 17.3 升級套件 (從 17.x 升級至 17.3)：<br>
 - [SQL Server Management Studio 文件](sql-server-management-studio-ssms.md)
 - [其他的更新與 Service Pack](https://technet.microsoft.com/sqlserver/ff803383.aspx)
 - [下載 SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
-

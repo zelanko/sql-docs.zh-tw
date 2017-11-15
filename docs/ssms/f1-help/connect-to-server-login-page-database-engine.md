@@ -1,28 +1,25 @@
 ---
 title: "連接到伺服器 (登入頁面) 資料庫引擎 | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 08/14/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.connecttosqlserver.login.f1
+f1_keywords: sql13.swb.connecttosqlserver.login.f1
 ms.assetid: e08cfbc3-bed5-4401-a13b-1c66d902fe32
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: HT
-ms.sourcegitcommit: 04245fd42b770129ce4074f8a4ae8377b10cf384
-ms.openlocfilehash: 9c2ff0db7548aac98efa15c701bd283368512ea4
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/15/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: a5d251082f7a98a075593274d34d600556dca1f3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="connect-to-server-login-page-database-engine"></a>連接到伺服器 (登入頁面) Database Engine
 使用此索引標籤來檢視或指定連接到 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]時的選項。 在大多數的情況下，您可以在 [伺服器名稱] 方塊中輸入資料庫伺服器的電腦名稱，然後按一下 [連接] 來進行連接。 如果您要連線至具名執行個體，請使用電腦名稱，後面依序加上反斜線及執行個體名稱。 例如， `mycomputer\myinstance`。 如果要連接到 [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)]，請使用電腦名稱並於後面加上 **\sqlexpress**。  
@@ -39,7 +36,7 @@ ms.lasthandoff: 08/15/2017
 **伺服器類型**  
 從 [物件總管] 註冊伺服器時，選取要連接的伺服器類型： [!INCLUDE[ssDE](../../includes/ssde_md.md)]、Analysis Services、Reporting Services 或 Integration Services。 對話方塊的其他部分僅會顯示適用於所選取伺服器類型的選項。 從 [已註冊的伺服器] 註冊伺服器時，[伺服器類型] 方塊是唯讀的，且會與 [已註冊的伺服器] 元件中所顯示的伺服器類型相符。 若要註冊不同類型的伺服器，請先從 [已註冊的伺服器] 工具列中選取 [[!INCLUDE[ssDE](../../includes/ssde_md.md)]]、[Analysis Services]、[Reporting Services] 或 [Integration Services]，再開始註冊新的伺服器。  
   
-當您透過 [!INCLUDE[ssSDSfull](../../includes/sssdsfull_md.md)] 連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Database Engine 執行個體時，您必須使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 驗證，並在 [連接到伺服器] 對話方塊的 [連接屬性] 索引標籤上指定資料庫。 請務必選取 [加密連接] 核取方塊。  
+當您透過 [!INCLUDE[ssSDSfull](../../includes/sssdsfull_md.md)] 連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Database Engine 執行個體時，您必須使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 驗證，並在 [連接到伺服器] 對話方塊的 [連接屬性] 索引標籤上指定資料庫。請務必選取 [加密連接] 核取方塊。  
   
 根據預設， [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 會連接到 **master**。 如果您指定使用者資料庫，就只會看到該資料庫及其在物件總管中的物件。 如果您連線到 **master**，您將能夠看到所有資料庫。 如需詳細資訊，請參閱 [Windows Azure SQL Database 概觀](http://go.microsoft.com/fwlink/?LinkId=163948)。  
   
@@ -49,7 +46,7 @@ ms.lasthandoff: 08/15/2017
 **驗證**  
 SSMS 目前的版本提供五種驗證模式，可在連線至 [!INCLUDE[ssDE](../../includes/ssde_md.md)] 的執行個體時使用。 如果您的 [驗證] 對話方塊與下列清單不相符，請至[下載 SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md) 下載最新版本的 SSMS。     
   
-當您透過 [!INCLUDE[ssSDS](../../includes/sssds_md.md)] 連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Database Engine 執行個體時，您必須使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 驗證，並在 [連接到伺服器] 對話方塊的 [連接屬性] 索引標籤上指定資料庫。 請務必選取 [加密連接] 核取方塊。  
+當您透過 [!INCLUDE[ssSDS](../../includes/sssds_md.md)] 連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Database Engine 執行個體時，您必須使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 驗證，並在 [連接到伺服器] 對話方塊的 [連接屬性] 索引標籤上指定資料庫。請務必選取 [加密連接] 核取方塊。  
   
 根據預設， [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 會連接到 **master**。 如果您在連線至 [!INCLUDE[ssSDS](../../includes/sssds_md.md)] 時指定使用者資料庫，就只會看到該資料庫及其在物件總管中的物件。 如果您連線到 **master**，您將能夠看到所有資料庫。 如需詳細資訊，請參閱 [Windows Azure SQL Database 概觀](http://go.microsoft.com/fwlink/?LinkId=163948)。  
   
@@ -87,4 +84,3 @@ Azure Active Directory 驗證機制使用 Azure Active Directory (Azure AD) 中�
 按一下以顯示 [連線內容] 與 [其他連線參數] 索引標籤。  
    
   
-

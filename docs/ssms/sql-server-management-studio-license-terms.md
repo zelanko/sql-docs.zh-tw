@@ -5,22 +5,20 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8f3d273c-c663-4341-aa2f-5ed8ebcba5b0
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 3f12671ace99d5fefc199c7b1c2db31e5b3cfade
-ms.openlocfilehash: 0569452520fad4183c4de2f15c59c7ca3a37586b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/08/2017
-
+ms.openlocfilehash: c35f596a096c84d8d55ca4d0db08c4c1ca8ef34a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-management-studio---license-terms"></a>SQL Server Management Studio - 授權條款
 ### <a name="available-languages"></a>可用語言：  
@@ -124,4 +122,3 @@ ms.lasthandoff: 08/08/2017
   
 即使 Microsoft 已知或可得而知該損害有發生的可能性，這項限制仍然適用。 此外，　貴用戶所在國家/地區可能不允許附隨性損害、衍生性損害或其他損害之排除或限制，這種情況也可能造成上述限制或排除規定並不適用於　貴用戶。  
   
-
