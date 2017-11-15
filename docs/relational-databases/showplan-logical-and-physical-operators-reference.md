@@ -5,8 +5,7 @@ ms.date: 10/12/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -135,17 +134,16 @@ helpviewer_keywords:
 - ActualRebinds attribute
 - execution plans [SQL Server], reading output
 ms.assetid: e43fd0fe-5ea7-4ffe-8d52-759ef6a7c361
-caps.latest.revision: 51
+caps.latest.revision: "51"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 246ea9f306c7d99b835c933c9feec695850a861b
-ms.openlocfilehash: 12177becd4b5d228cd65562b4da36708c61e70da
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/13/2017
-
+ms.openlocfilehash: 80ad5d780193ef6a540dccb2f78fd2e5002a3eb7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="showplan-logical-and-physical-operators-reference"></a>執行程序邏輯和實體運算子參考
   運算子說明 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 如何執行查詢或資料操作語言 (DML) 陳述式。 查詢最佳化工具會使用運算子來建立查詢計畫，以便建立查詢所指定的結果，或執行 DML 陳述式所指定的作業。 查詢計畫是由實體運算子所組成的樹狀目錄。 您可使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中的圖形執行計畫選項 SET SHOWPLAN 陳述式，以及 SQL Server Profiler Showplan 事件類別，檢視查詢計畫。  
@@ -288,7 +286,7 @@ ms.lasthandoff: 10/13/2017
 |![資料表多工緩衝處理運算子圖示](../relational-databases/media/table-spool-32x.gif "資料表多工緩衝處理運算子圖示")|**資料表多工緩衝處理**|「資料表多工緩衝處理」運算子會掃描輸入，並將每個資料列的複本放入隱藏的多工緩衝資料表 (儲存在 [tempdb](../relational-databases/databases/tempdb-database.md) 資料庫，直到查詢結束就不再存在)。 如果倒轉運算子 (例如，利用「巢狀迴圈」運算子)，但是不需要重新繫結，會使用多工緩衝處理資料，而非重新掃描輸入。 「資料表多工緩衝處理」是實體運算子。|  
 |![資料表更新運算子圖示](../relational-databases/media/table-update-32x.gif "資料表更新運算子圖示")|**資料表更新**|「資料表更新」實體運算子會更新查詢執行計畫之 **Argument** 資料行所指定資料表中的輸入資料列。 SET:() 述詞決定每個更新資料行的值。 在 SET 子句中或這個運算子中，以及這個查詢中的其他位置，皆可參考這些數值。|  
 |![資料表值函式運算子圖示](../relational-databases/media/table-valued-function-32x.gif "資料表值函式運算子圖示")|**資料表值函式**|「資料表值函式」運算子會評估資料表值函數 ([!INCLUDE[tsql](../includes/tsql-md.md)] 或 CLR)，並將產生的資料列儲存至 [tempdb](../relational-databases/databases/tempdb-database.md) 資料庫。 如果父系 Iterator 要求資料列，「資料表值函式」便會從 **tempdb** 傳回資料列。<br /><br /> 含有呼叫資料表值函數的查詢會產生內含「資料表值函式」Iterator 的查詢計畫。 「資料表值函式」可以使用不同的參數值進行評估：<br /><br /> -<br />                    「資料表值函式 XML 讀取器」可輸入 XML BLOB 作為參數，並以 XML 文件的順序，產生代表 XML 節點的資料列集。 其他的輸入參數可能會限制傳回給 XML 文件子集的 XML 節點。<br /><br /> -「含 XPath 篩選的資料表值函式 XML 讀取器」是一種特別的 **XML 讀取器資料表值函式**，可將輸出限制為滿足 XPath 運算式的 XML 節點。<br /><br /> 「資料表值函式」是邏輯與實體運算子。|  
-|![頂端運算子圖示](../relational-databases/media/top-32x.gif "頂端運算子圖示")|**頂端**|「頂端」運算子會掃描輸入，可能會根據排序的先後順序，只傳回指定數目或百分比的資料列。 **Argument** 資料行可以包含要檢查繫結的資料行清單。 在更新計畫中，可使用「頂端」運算子強行限制資料列數。 「頂端」是邏輯與實體運算子。 「頂端」是邏輯與實體運算子。|  
+|![頂端運算子圖示](../relational-databases/media/top-32x.gif "頂端運算子圖示")|**頂端**|「頂端」運算子會掃描輸入，可能會根據排序的先後順序，只傳回指定數目或百分比的資料列。 **Argument** 資料行可以包含要檢查繫結的資料行清單。 在更新計畫中，可使用「頂端」運算子強行限制資料列數。 「頂端」是邏輯與實體運算子。|  
 |無|**前 N 個排序**|「前 N 個排序」與「排序」Iterator 類似，只不過它只需要前 *N* 個資料列，而不是整個結果集。 若 *N* 值較小，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢執行引擎會嘗試在記憶體中執行整個排序作業。 若 *N*的值較大，則查詢執行引擎會訴諸比較一般性的排序方法，而不採用 *N* 作為參數。|  
 |![擴充運算子 (UDX) 圖示](../relational-databases/media/udx-32x.gif "擴充運算子 (UDX) 圖示")|**UDX**|擴充運算子 (UDX) 會在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中實作許多 XQuery 和 XPath 作業的其中一項。 所有 UDX 運算子都是邏輯和實體運算子。<br /><br /> 擴充運算子 (UDX) **FOR XML** 用於序列化關聯式資料列集，它會在單一輸出資料列的單一 BLOB 資料行中，以 XML 表示法輸入這個資料列集。 這是一個會區分順序的 XML 彙總運算子。<br /><br /> 擴充運算子 (UDX) **XML SERIALIZER** 是區分順序的 XML 彙總運算子， 會以 XML 文件順序來輸入用於表示 XML 節點或 XQuery 純量的資料列，並在單一輸出資料列的單一 XML 資料行中產生序列化的 XML BLOB。<br /><br /> 擴充運算子 (UDX) **XML FRAGMENT SERIALIZER** 是特殊類型的 **XML SERIALIZER** ，可用於處理輸入資料列，而此輸入資料列用於表示要插入至 XQuery 插入資料修改延伸模組的 XML 片段。<br /><br /> 擴充運算子 (UDX) **XQUERY STRING** 會評估用於表示 XML 節點之輸入資料列的 XQuery 字串值。 這是一個區分順序的字串彙總運算子。 它會輸出一個資料列以及多個資料行，每個資料行都代表含有輸入字串值的 XQuery 純量。<br /><br /> 擴充運算子 (UDX) **XQUERY LIST DECOMPOSER** 是 XQuery 清單分解運算子。 針對代表 XML 節點的每一個輸入資料列，會產生代表 XQuery 純量的一或多個資料列，而如果輸入是 XSD 清單類型，則包含清單元素值。<br /><br /> 擴充運算子 (UDX) **XQUERY DATA** 會評估表示 XML 節點之輸入的 XQuery fn:data() 函數。 這是一個區分順序的字串彙總運算子。 它會輸出一個資料列以及多個資料行，每個資料行都代表含有 **fn:data()**結果的 XQuery 純量。<br /><br /> 擴充運算子 (UDX) **XQUERY CONTAINS** 會評估表示 XML 節點之輸入的 XQuery fn:data() 函數。 這是一個區分順序的字串彙總運算子。 它會輸出一個資料列以及多個資料行，每個資料行都代表含有 **fn:contains()**結果的 XQuery 純量。<br /><br /> 擴充運算子 **UPDATE XML NODE** 會更新 XML 類型之 **modify()** 方法中，XQuery 取代資料修改延伸模組內的 XML 節點。|  
 |無|**Union**|**Union** 運算子會掃描多個輸入，輸出掃描的每一資料列，並移除重複項。 **Union** 是邏輯運算子。|  
@@ -297,4 +295,3 @@ ms.lasthandoff: 10/13/2017
 |![資料表多工緩衝處理運算子圖示](../relational-databases/media/table-spool-32x.gif "資料表多工緩衝處理運算子圖示")|**視窗多工緩衝處理**|「視窗多工緩衝處理」運算子會將每一列展開成一組資料列，分別代表與其關聯的視窗。 查詢中的 OVER 子句會定義查詢結果集中的視窗，以及一個計算視窗中各資料列值的視窗函數。 「視窗多工緩衝處理」是邏輯與實體運算子。|  
   
   
-

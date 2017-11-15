@@ -5,24 +5,21 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 1dfc6b5c-0a93-450f-b5b3-34ae0ca79717
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
-ms.openlocfilehash: 35291a9fad33aaf7a12431242ebd38e5acad8ca9
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: 4ccdd4b9f6b850d4cb88232e52fe00a84241c2db
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-1-6---select-the-keyboard-shortcut-scheme"></a>課程 1-6 - 選取鍵盤快速鍵配置
 除了標準 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 鍵盤配置，您可以設定 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 使用與 [!INCLUDE[vs_dev10_long](../../includes/vs-dev10-long-md.md)]相容的鍵盤配置。  
@@ -48,4 +45,3 @@ ms.lasthandoff: 07/31/2017
   
   
   
-

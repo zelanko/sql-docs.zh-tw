@@ -1,29 +1,25 @@
 ---
 title: "查詢存放區使用案例 | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 04/12/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-query-tuning
+ms.technology: dbe-query-tuning
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Query Store, usage scenarios
+helpviewer_keywords: Query Store, usage scenarios
 ms.assetid: f5309285-ce93-472c-944b-9014dc8f001d
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 231a1a6204c9010ec5c4895b7cb7506d3b4159ff
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: b348f8b2eb093607753446095b804b71085ba4f9
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="query-store-usage-scenarios"></a>查詢存放區使用案例
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -101,7 +97,7 @@ ms.lasthandoff: 09/27/2017
   
     1.  開啟 [整體資料庫耗用量] 來判斷對整個資料庫的影響。  
   
-    2.  開啟 [資源耗用量排名在前的查詢]\(或使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 執行您自己的分析)，以分析變更最重要的查詢的影響。  
+    2.  開啟 [資源耗用量排名在前的查詢] (或使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 執行您自己的分析)，以分析變更最重要的查詢的影響。  
   
 5.  萬一無法接受新的效能，請決定要保留變更，或是執行復原。  
   
@@ -227,4 +223,3 @@ ALTER DATABASE  [QueryStoreTest] SET QUERY_STORE = ON
  [使用查詢存放區的最佳作法](../../relational-databases/performance/best-practice-with-the-query-store.md)  
   
   
-

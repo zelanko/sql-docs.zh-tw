@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: d6b3911f-68b4-4483-831b-df89d6400add
-caps.latest.revision: 50
+caps.latest.revision: "50"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
-ms.openlocfilehash: f5dc51dc1a49d66d6ea5194cb3357ecea6fb876f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: 0077010615a2859b1b76f79fd1302d0f0ec8e7df
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-1-2---connect-with-registered-servers-and-object-explorer"></a>課程 1-2 - 連接已註冊的伺服器和物件總管
 本教學課程示範已註冊的伺服器和物件總管的用法。  
@@ -78,4 +75,3 @@ ms.lasthandoff: 07/31/2017
   
   
   
-

@@ -8,20 +8,18 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Release Notes, SQL Server
+helpviewer_keywords: Release Notes, SQL Server
 ms.assetid: 9ccb390a-67a9-4593-85ea-2b4c41c4620f
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
-ms.openlocfilehash: 855dc52c2d4ac7a4d28864328536de62e23ced3d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/08/2017
-
+ms.openlocfilehash: 2aa2d466fce0c67b1bf51493d986cbb43af1b166
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-2012-release-notes"></a>SQL Server 2012 版本資訊
 這份版本資訊文件將描述有關您安裝或疑難排解 Microsoft SQL Server 2012 ([請按一下這裡下載](http://go.microsoft.com/fwlink/?LinkId=238647)) 之前應該閱讀的已知問題。 這份版本資訊文件僅於線上提供，安裝媒體中並不提供，而且會定期更新。  
@@ -343,7 +341,7 @@ Analysis Services (AS) 的 SQL Server Integration Services (SSIS) 元件未以�
 **因應措施** ：若要避免這種狀況，請發行您需要保存在知識探索中的工作，再啟動新的活動。  
   
 ### <a name="45-controls-do-not-scale-properly-on-large-font-sizes"></a>4.5 控制項無法針對大字型適當縮放  
-**問題** ：如果您將文字大小變更為 [大 - 150%]\(在 Windows Server 2008 或 Windows 7 中)，或將 [自訂 DPI 設定] 變更為 200% (在 Windows 7 中)，便無法存取 [新增知識庫]  頁面上的 [取消]  和 [建立]  按鈕。  
+**問題** ：如果您將文字大小變更為 [大 - 150%] (在 Windows Server 2008 或 Windows 7 中)，或將 [自訂 DPI 設定] 變更為 200% (在 Windows 7 中)，便無法存取 [新增知識庫]  頁面上的 [取消]  和 [建立]  按鈕。  
   
 **因應措施**：若要解決這個問題，請將字型設定為較小的大小。  
   
@@ -637,4 +635,3 @@ SQL Server 2012 包括 StreamInsight 2.0。 StreamInsight 2.0 需要 Microsoft S
   
 ![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
   
-

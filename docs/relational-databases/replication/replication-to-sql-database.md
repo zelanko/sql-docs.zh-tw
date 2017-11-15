@@ -1,30 +1,27 @@
 ---
 title: "複寫至 SQL 資料庫 | Microsoft 文件"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 06/29/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQL Database replication
 - replication, SQL Database
 ms.assetid: e8484da7-495f-4dac-b38e-bcdc4691f9fa
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 72ae10ca4b2977d50a883507e2658abcf50e6579
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: eb7e58b30b22282b5478c85f725b90ce729e65bb
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="replication-to-sql-database"></a>複寫至 SQL 資料庫
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -160,4 +157,3 @@ ms.lasthandoff: 09/27/2017
  - [複寫類型](../../relational-databases/replication/types-of-replication.md)   
  - [監視 &#40;複寫&#41;](../../relational-databases/replication/monitor/monitoring-replication.md)   
  - [初始化訂閱](../../relational-databases/replication/initialize-a-subscription.md)  
-

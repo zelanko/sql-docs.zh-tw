@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - Cmdlets [SQL Server], Invoke-PolicyEvaluation
 - PowerShell [SQL Server], Invoke-PolicyEvaluation
 ms.assetid: 3e6d4f5a-59b7-4203-b95a-f7e692c0f131
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f5adc3571b07e3613514525f286241add73af1a8
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 296534b89550efde62d0c2e1dea02c06d4896f8c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="invoke-policyevaluation-cmdlet"></a>Invoke-PolicyEvaluation 指令程式
   **Invoke-PolicyEvaluation** 是一項 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Cmdlet，它會報告 SQL Server 物件的目標集是否符合在一或多個原則式管理原則中所指定的條件。  
@@ -89,9 +87,9 @@ gci "Database Status.xml", "Trustworthy Database.xml" | Invoke-PolicyEvaluation 
 ## <a name="specifying-the-target-set"></a>指定目標集  
  您可以使用三種參數來指定目標物件集：  
   
--   **-TargetServerName** 會指定包含目標物件的 SQL Server 執行個體。 您可以在使用針對 <xref:System.Data.SqlClient.SqlConnection> 類別之 ConnectionString 屬性所定義格式的字串中指定此資訊。 您可以使用 <xref:System.Data.SqlClient.SqlConnectionStringBuilder> 類別來建立格式正確的連接字串。 您也可以建立 <xref:Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection> 物件，並將它傳遞給 **-TargetServer**。 如果您提供只有伺服器名稱的字串， **Invoke-PolicyEvaluation** 就會使用 Windows 驗證來連接至伺服器。  
+-   **-TargetServerName** 會指定包含目標物件的 SQL Server 執行個體。 您可以在使用針對 <xref:System.Data.SqlClient.SqlConnection> 類別之 ConnectionString 屬性所定義格式的字串中指定這項資訊。 您可以使用 <xref:System.Data.SqlClient.SqlConnectionStringBuilder> 類別來建立格式正確的連接字串。 您也可以建立 <xref:Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection> 物件，並將它傳遞給 **-TargetServer**傳送輸出的物件。 如果您提供只有伺服器名稱的字串， **Invoke-PolicyEvaluation** 就會使用 Windows 驗證來連接至伺服器。  
   
--   **-TargetObjects** 會使用在目標集中代表 SQL Server 物件的物件或物件陣列。 例如，您可以建立 <xref:Microsoft.SqlServer.Management.Smo.Database> 類別物件的陣列，以傳遞到 **-TargetObjects**。  
+-   **-TargetObjects** 會使用在目標集中代表 SQL Server 物件的物件或物件陣列。 例如，您可以建立要傳入 <xref:Microsoft.SqlServer.Management.Smo.Database> 的 **-TargetObjects**傳送輸出的物件。  
   
 -   **-TargetExpressions** 會使用字串，其中包含在目標集中指定物件的查詢運算式。 查詢運算式的格式為以 '/' 字元分隔的節點。 每個節點的格式為 ObjectType[Filter]。 物件類型是 SQL Server 管理物件 (SMO) 物件階層中的其中一個物件。 篩選是篩選位於該節點之物件的運算式。 如需詳細資訊，請參閱 [Query Expressions and Uniform Resource Names](../powershell/query-expressions-and-uniform-resource-names.md)。  
   
@@ -145,4 +143,3 @@ Invoke-PolicyEvaluation -Policy "Datbase Status" -TargetServer "MYCOMPUTER" -Out
  [使用 Database Engine Cmdlet](../relational-databases/scripting/use-the-database-engine-cmdlets.md)   
   
   
-

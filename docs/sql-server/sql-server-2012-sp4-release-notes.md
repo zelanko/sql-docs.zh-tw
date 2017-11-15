@@ -9,17 +9,16 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 67cb8b3e-3d82-47f4-840d-0f12a3bff565
-caps.latest.revision: 0
+caps.latest.revision: "0"
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
-ms.openlocfilehash: 1d637aa3e820f1acd6dc283030d2cdfa1e6ca074
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/06/2017
-
+ms.openlocfilehash: b09784b129109f907c19a56a2a6fadcba119e73d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-2012-sp4-release-notes"></a>SQL Server 2012 SP4 版本資訊
 本主題摘要說明 SQL Server 2012 SP4 中所包含的改善。 本主題也說明安裝 SP4 或針對 SP4 安裝進行疑難排解之前所要檢閱的問題。 版本資訊僅於線上提供，安裝媒體中並不提供。 我們會在發現問題時定期更新本主題。 如需 SP4 中修正的詳細清單，請參閱 [SQL Server 2012 SP4 發行資訊](https://go.microsoft.com/fwlink/?linkid=846937)。  
@@ -60,4 +59,3 @@ ms.lasthandoff: 10/06/2017
 - [如何識別 SQL Server 版本與版本類型](https://support.microsoft.com/en-us/help/321185)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
-

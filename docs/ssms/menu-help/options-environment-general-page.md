@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -14,17 +13,16 @@ f1_keywords:
 - VS.ToolsOptionsPages.Environment.SQLEnvironmentOptions
 - DevLang-TSQL
 ms.assetid: c32ccdb8-2cf8-4c78-b474-a3abd3dbbd13
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 18ee84388c584423bc7f5b416d1540d1a287a0ba
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 7a3862d6f6b622ddd0496b23234287443e179810
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="options-environment---general-page"></a>選項 (環境 - 一般頁面)
 使用 [選項] 對話方塊，來設定 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 的啟動動作、一般視窗管理選項，以及其他一般設定。 在 [工具] 功能表上按一下 [選項]、展開 [環境] 資料夾，然後按一下 [一般]。  
@@ -64,4 +62,3 @@ ms.lasthandoff: 06/22/2017
 **顯示最近使用清單中的 n 個檔案**  
 自訂 [檔案] 功能表上所顯示之最近使用的專案與最近使用之檔案的數目。 輸入介於 1 到 24 之間的數字。 預設值是 4。 這是方便用來擷取最近使用過的指令碼專案和檔案，以及編寫專案的方式。  
   
-

@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +15,16 @@ helpviewer_keywords:
 - heterogeneous Subscribers, Oracle
 - mapping data types [SQL Server replication]
 ms.assetid: 591c0313-82ce-4689-9fc1-73752ff122cf
-caps.latest.revision: 55
+caps.latest.revision: "55"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 473ac265f469403a52c96349a484b9fc85a572c4
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: a7f47f316449b6048dc826dcfbf265c1bc85877e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="oracle-subscribers"></a>Oracle 訂閱者
   從 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]開始， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 就會透過由 Oracle 提供的 Oracle OLE DB 提供者支援 Oracle 的發送訂閱。  
@@ -52,7 +51,7 @@ ms.lasthandoff: 06/22/2017
     |選取網路通訊協定|選取您要支援的適當通訊協定。 大多數應用程式使用 TCP。|  
     |指定識別資料庫接聽程式的主機資訊|主機是 Oracle 接聽程式所執行之電腦 (通常與資料庫所在的電腦相同) 的名稱或 DNS 別名。 針對某些通訊協定，您必須提供其他的資訊。 例如，您若是選取 TCP，就必須提供接聽程式接聽對目標資料庫之連接要求的通訊埠。 預設 TCP 組態使用通訊埠 1521。|  
   
-3.  建立快照集或交易式發行集，並為非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 訂閱者啟用，然後再為訂閱者建立發送訂閱。 如需詳細資訊，請參閱 [Create a Subscription for a Non-SQL Server Subscriber](../../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)。  
+3.  建立快照集或交易式發行集，並為非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 訂閱者啟用，然後再為訂閱者建立發送訂閱。 如需相關資訊，請參閱 [為非 SQL Server 訂閱者建立訂閱](../../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)。  
   
 ### <a name="setting-directory-permissions"></a>設定目錄權限  
  必須授與「散發者」端執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務所用之帳戶，對安裝 Oracle 用戶端網路軟體之目錄 (以及所有子目錄) 的讀取和執行權限。  

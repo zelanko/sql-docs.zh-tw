@@ -5,26 +5,22 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-helpviewer_keywords:
-- optimizing tables
+applies_to: SQL Server 2016
+helpviewer_keywords: optimizing tables
 ms.assetid: 89ff6d37-94c0-4773-8be9-dde943fff023
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 6ac25b85afabdeb906005346c349941a49ca8de4
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 7765d8f8a4953f428cae4843d0f89aaa92678a8a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-1-3---optimizing-the-neworg-table"></a>第 1-3 課：最佳化 NewOrg 資料表
 您在 **使用現有的階層式資料填入資料表** 工作中建立的 [NewOrd](../../relational-databases/tables/lesson-1-2-populating-a-table-with-existing-hierarchical-data.md) 資料表包含所有員工資訊，並使用 **hierarchyid** 資料類型代表階層式結構。 此工作會新增索引以支援在 **hierarchyid** 資料行上進行搜尋。  
@@ -170,4 +166,3 @@ ms.lasthandoff: 06/22/2017
   
   
   
-

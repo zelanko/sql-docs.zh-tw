@@ -10,14 +10,12 @@ ms.prod: sql-server-2016
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: dd279b20fdf0f42d4b44843244aeaf6f19f04718
-ms.openlocfilehash: de638f50e6c11633859e7cdc3c6ddb208fe64f00
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: 0b7f3946674d16066526f52684c2e98de8a5c8c1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="configure-sql-server-to-send-feedback-to-microsoft"></a>設定 SQL Server 以將意見反應傳送給 Microsoft
 
 ## <a name="summary"></a>摘要
@@ -166,4 +164,3 @@ SSMS 不會收集自己的損毀傾印。 與 SSMS 相關的任何損毀傾印�
 您可以將服務設定為不傳送使用量資料，如＜在伺服器上設定登錄子機碼＞一節中所述。 不過，這麼做並不會移除該服務帳戶。 
  
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
-

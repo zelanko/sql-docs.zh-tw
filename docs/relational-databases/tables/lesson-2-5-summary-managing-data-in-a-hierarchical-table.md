@@ -5,26 +5,22 @@ ms.date: 03/03/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-helpviewer_keywords:
-- managing data in a table
+applies_to: SQL Server 2016
+helpviewer_keywords: managing data in a table
 ms.assetid: a0fd21fc-87fa-42c3-a3ae-1fed24cdd692
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 28643373cf787ce1cc3473572249c680151877e9
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: a5c0f68a48e557da916d9d4de741ff44128fd6e1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-2-5---summary---managing-data-in-a-hierarchical-table"></a>第 2-5 課：摘要 - 在階層式資料表中管理資料
 **hierarchyid** 資料類型可讓您輕鬆建立反映階層式資料的資料表，然後建立深度優先和廣度優先的索引，即可有效率地存取資料表。 使用階層式方法來查詢與操作資料。  
@@ -38,4 +34,3 @@ ms.lasthandoff: 06/22/2017
   
   
   
-

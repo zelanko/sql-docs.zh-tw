@@ -5,21 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- setup-install
+ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c0e75a7c-85c5-423c-a218-77247bf071aa
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: c1203723b10d31e7f34aa163fdc3f478070405f0
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Active
+ms.openlocfilehash: ec10103d7282d00ba0b6631eb12d552d639a4916
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-failover-cluster-installation"></a>SQL Server 容錯移轉叢集安裝
   若要安裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集，您必須執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式來建立及設定容錯移轉叢集執行個體。  
@@ -35,7 +34,7 @@ ms.lasthandoff: 06/22/2017
   
         -   [SQL Server 安裝的安全性考量](../../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
   
-    -   您必須先完成組態設定步驟，才能執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式；請使用 [Windows 叢集系統管理員] 執行這些步驟。 針對您所要設定的每個容錯移轉叢集執行個體，都必須要有一個 WSFC 群組。  
+    -   您必須先完成組態設定步驟，才能執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式；請使用 [Windows 叢集系統管理員] 執行這些步驟。針對您所要設定的每個容錯移轉叢集執行個體，都必須要有一個 WSFC 群組。  
   
     -   您必須確定系統符合最低需求。 如需 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集之特定需求的詳細資訊，請參閱 [安裝容錯移轉叢集之前](../../../sql-server/failover-clusters/install/before-installing-failover-clustering.md)。  
   

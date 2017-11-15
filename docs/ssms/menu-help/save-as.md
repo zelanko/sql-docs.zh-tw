@@ -5,26 +5,22 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vs.saveas
-helpviewer_keywords:
-- Save As dialog box
+f1_keywords: vs.saveas
+helpviewer_keywords: Save As dialog box
 ms.assetid: 61347757-f5a3-481d-8b05-1fed086629b6
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: acbf3b32cdcbe92838532d7711fb2edf0a6238b5
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 9feab44925e6c973b712e0d85e07912c00f91cd3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="save-as"></a>另存新檔
 此對話方塊可用於將目前項目的執行個體，以指定的檔案格式儲存在指定位置。 按一下 [檔案]**檔案** 功能表上的 [另存新檔] *<file>*  上 功能表 (其中 *<file>* 是目前項目的名稱)，或在程式碼輯器中按 ALT + F、A 鍵。  
@@ -59,4 +55,3 @@ ms.lasthandoff: 06/22/2017
 [進階儲存選項](../../ssms/menu-help/advanced-save-options.md)  
 [利用編碼管理檔案](../../ssms/solution/manage-files-with-encoding.md)  
   
-

@@ -5,21 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 83c6d1d9-19ce-43fe-be9a-45aaa31f20cb
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 037db169bd49c589ca039546dcf13d322e1f1a41
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 66334fc6134a84c8d9a8e707f48e14f32a0034d0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-trace"></a>SQL 追蹤
   在 SQL 追蹤中，如果事件是列在追蹤定義中之事件類別的執行個體，這些事件就會被蒐集起來。 您可將這些事件篩選掉，也可以放入分配目的地的佇列中。 目的地可以是檔案或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理物件 (SMO)，後者會在用於管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的應用程式中使用這些追蹤資訊。  
@@ -91,7 +90,7 @@ ms.lasthandoff: 06/22/2017
 |**錯誤**|31|給定事件的錯誤代碼。 通常這是儲存在 **sysmessages**中的錯誤代碼。|  
 |**EventClass***|27|所擷取的事件類別的類型。|  
 |**EventSequence**|51|此事件的序號。|  
-|**EventSubClass***|21|事件子類別的類型，可為每個事件類別提供更詳細的資訊。 例如， **Execution Warning** 事件類別的事件子類別值代表執行警告的類型：<br /><br /> **1** = 查詢等候。 查詢必須等候資源 (例如記憶體) 才得以執行。<br /><br /> **2** = 查詢逾時。 等候執行所需的資源時查詢逾時。 所有事件類別的這個資料行都不會擴展。|  
+|**EventSubClass***|21|事件子類別的類型，可為每個事件類別提供更詳細的資訊。 例如， **Execution Warning** 事件類別的事件子類別值代表執行警告的類型：<br /><br /> **1** = 查詢等候。 查詢必須等候資源 (例如記憶體) 才得以執行。<br /><br /> **2** = 查詢逾時。等候執行所需的資源時查詢逾時。 所有事件類別的這個資料行都不會擴展。|  
 |**GUID**|54|GUID 值，依據在追蹤內指定的事件類別而定。|  
 |**FileName**|36|所修改之檔案的邏輯名稱。|  
 |**Handle**|33|ODBC、OLE DB 或 DB-Library 用來協調伺服器執行的整數。|  

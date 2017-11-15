@@ -5,25 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - VS.TOOLSOPTIONSPAGES.ENVIRONMENT.KEYBOARD.GENERAL
 - VS.ToolsOptionsPages.Environment.SQLEnvironmentKeyboard
 ms.assetid: 0ad77fd5-95bf-4da3-9797-c1e1b9a1102e
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b19b72a2359af1a08ddaa3d2d01715483fd29533
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: b6f0a390c8492d331de1524ed371dddcdf28ebc8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="options-environment---keyboard-page"></a>選項 (環境 - 鍵盤頁面)
 [選項] 對話方塊可以讓您自訂 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 的鍵盤配置。 使用此選項以選擇鍵盤配置。 若要存取此頁面，請按一下 [工具] 功能表上的 [選項]，選取 [環境] 資料夾，然後按一下 [鍵盤]。  
@@ -43,4 +41,3 @@ ms.lasthandoff: 06/22/2017
   
 如需每種配置裡的鍵盤快速鍵清單，請參閱 [SQL Server Management Studio 鍵盤快速鍵](http://msdn.microsoft.com/en-us/98baaac4-0727-4ce4-8bfe-c63793ae69b8)。  
   
-

@@ -15,12 +15,11 @@ ms.workload: sql-server
 ms.custom: partners
 ms.date: 09/17/2017
 ms.author: mikeray
-ms.translationtype: HT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
 ms.openlocfilehash: 67af6dfa3063bea37d0ee73678ae5c1b34c7faf7
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/02/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-high-availability-and-disaster-recovery-partners"></a>SQL Server 高可用性和災害復原夥伴
 若要為您的 SQL Server 服務提供高可用性和災害復原，您可以從各種領先業界的工具中選擇。  本文章特別介紹提供 Microsoft SQL Server 高可用性和災害復原解決方案支援的 Microsoft 夥伴公司。

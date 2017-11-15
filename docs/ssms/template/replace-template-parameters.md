@@ -5,29 +5,26 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.templates.replaceparameters.f1
+f1_keywords: sql13.swb.templates.replaceparameters.f1
 helpviewer_keywords:
 - template parameters [Template Explorer]
 - templates [Transact-SQL], replacing parameters
 - Replace (Query) Template Parameters dialog box
 - replacing template parameters
 ms.assetid: 1234aa14-3464-4a3e-922a-5cfb8fb23627
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 46e39ef54d2caf54cf68fa3ff3823d9111c05e0d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 9c8b245e57af135e6e11e98cc468ad4b0dab7237
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="replace-template-parameters"></a>取代範本參數
 範本包含每次使用範本時可由實作特定值替換的參數。 在程式碼編輯器中開啟範本之後，可以使用與您的實作相關的值替換這些參數。  
@@ -50,4 +47,3 @@ ms.lasthandoff: 06/22/2017
 [範本總管](../../ssms/template/template-explorer.md)  
 [開啟範本](../../ssms/template/open-a-template.md)  
   
-

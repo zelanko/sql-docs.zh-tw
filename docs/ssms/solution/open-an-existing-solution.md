@@ -5,25 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - opening solutions
 - solutions [SQL Server Management Studio], opening
 ms.assetid: 6cffd5ec-239a-4b21-a14c-15899ada3d27
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 1a8340db616d7d6b40e311eeab8460e2d0af654f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: a63eca54b74b39f29911109f5a80d86f70f07737
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="open-an-existing-solution"></a>開啟現有的方案
 在 [方案總管] 中，每次只能開啟一個方案。  
@@ -38,4 +36,3 @@ ms.lasthandoff: 06/22/2017
 [方案總管](../../ssms/solution/solution-explorer.md)  
 [建立新方案](../../ssms/solution/create-a-new-solution.md)  
   
-

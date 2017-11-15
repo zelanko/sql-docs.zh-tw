@@ -5,25 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Options [SQL Server Management Studio], dialog boxes
 - Options [SQL Server Management Studio]
 ms.assetid: b98d2631-530a-43b4-8491-f724f8e4a23a
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 8af8c347e4225f1beb4cef6f4b515568115146f1
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/18/2017
-
+ms.openlocfilehash: 8f3de179a12e96a00f701b6aaa423902c7403886
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="options-dialog-boxes-f1-help"></a>選項對話方塊 F1 說明
 此章節包含在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 中按一下 [工具] 功能表上的 [選項] 時，可用之對話方塊的 F1 說明。  
@@ -80,4 +78,3 @@ ms.lasthandoff: 08/18/2017
   
 [選項 (文字編輯器 - XML - 定位點頁面)](http://msdn.microsoft.com/en-us/13bf5f8c-aba3-4c05-b8bb-eb475797c9bd)  
   
-

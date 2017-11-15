@@ -1,33 +1,31 @@
 ---
 title: "查詢系統建立版本時態表中的資料 | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 03/28/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-tables
+ms.technology: dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2d358c2e-ebd8-4eb3-9bff-cfa598a39125
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9cc4156eccf9dd642e53ec2aeea967d9dcf016af
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 9b9e126587a2c3a6beb34b74f234375de5a4469b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="querying-data-in-a-system-versioned-temporal-table"></a>查詢系統建立版本時態表中的資料
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   當您想要取得時態表中資料的最新 (實際) 狀態，您能夠以您查詢非時態表完全一樣的方式查詢。 如果 PERIOD 資料行未隱藏，其值會出現在 SELECT \* 查詢中。 如果您將 **PERIOD** 資料行指定為隱藏，其值不會出現在 SELECT \* 查詢中。 當 **PERIOD** 資料行隱藏時，請特別參考 SELECT 子句中的 **PERIOD** 資料行，以傳回這些資料行的值。  
   
- 若要執行任何以時間為基礎之類型的分析，請搭配四個特定時態次子句使用新的  **FOR SYSTEM_TIME** 子句來查詢在目前和歷程記錄資料表之間的資料。 如需這些子句的詳細資訊，請參閱[時態表](../../relational-databases/tables/temporal-tables.md)和 [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)  
+ 若要執行任何以時間為基礎之類型的分析，請搭配四個特定時態次子句使用新的  **FOR SYSTEM_TIME** 子句來查詢在目前和歷程記錄資料表之間的資料。 如需這些子句的詳細資訊，請參閱 [時態表](../../relational-databases/tables/temporal-tables.md) 和 [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)  
   
 -   AS OF <date_time>  
   
@@ -149,4 +147,3 @@ ORDER BY [DeptID], [SysStartTime] Desc
  [停止系統版本設定時態表上的系統版本設定功能](../../relational-databases/tables/stopping-system-versioning-on-a-system-versioned-temporal-table.md)  
   
   
-

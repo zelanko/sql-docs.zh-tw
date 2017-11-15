@@ -5,24 +5,23 @@ ms.date: 08/14/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.swb.connecttoce.connectionproperties.f1
 - sql13.swb.connecttosqlserver.connectionproperties.f1
 ms.assetid: edc1143c-6a47-4b02-92ab-441bdea8ea8a
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: HT
-ms.sourcegitcommit: 5316f9d560f7e15bb0699780f67aff641067b203
-ms.openlocfilehash: 67f517ace6307fc4ad5afaf068c04ba6039d1c98
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/15/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 92c974ad90689a01d4155610b71babc7df7765d3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="connect-to-server-connection-properties-page-database-engine"></a>連接到伺服器 (連接屬性頁面) Database Engine
 連接到 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] 執行個體或在 [已註冊的伺服器] 中註冊 [!INCLUDE[ssDE](../../includes/ssde_md.md)] 時，請使用這個索引標籤來檢視或指定選項。 連接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)] 執行個體時，[連接] 和 [選項] 才會出現在這個對話方塊中。 註冊 [!INCLUDE[ssDE](../../includes/ssde_md.md)] 時，[測試] 和 [儲存] 才會出現在這個對話方塊中。  
@@ -30,7 +29,7 @@ ms.lasthandoff: 08/15/2017
 **連接到資料庫**  
 從清單中選取要連接的資料庫。 如果您選取 **<default>**，就會連線到伺服器的預設資料庫。 如果您選取 **<Browse server>**，您就可以瀏覽伺服器來尋找您要連接的資料庫。  
   
-當您透過 [!INCLUDE[ssSDSfull](../../includes/sssdsfull_md.md)] 連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Database Engine 執行個體時，您必須使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 驗證，並在 [連接到伺服器] 對話方塊的 [連接屬性] 索引標籤上指定資料庫。 請務必選取 [加密連接] 核取方塊。  
+當您透過 [!INCLUDE[ssSDSfull](../../includes/sssdsfull_md.md)] 連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Database Engine 執行個體時，您必須使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 驗證，並在 [連接到伺服器] 對話方塊的 [連接屬性] 索引標籤上指定資料庫。請務必選取 [加密連接] 核取方塊。  
   
 根據預設， [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 會連接到 **master**。 連線到 [!INCLUDE[ssSDS](../../includes/sssds_md.md)] 時，如果您指定使用者資料庫，就只會看到該資料庫及其在物件總管中的物件。 如果您連線到 **master**，您將能夠看到所有資料庫。 如需詳細資訊，請參閱 [Windows Azure SQL Database 概觀](http://go.microsoft.com/fwlink/?LinkId=163948)。  
   
@@ -41,7 +40,7 @@ ms.lasthandoff: 08/15/2017
 輸入要傳送之網路封包的大小。 預設值是 4096 個位元組。  
   
 **連接逾時**  
-輸入在逾時之前所要等候建立連接的秒數。 預設值為 15 秒。  
+輸入在逾時之前所要等候建立連接的秒數。預設值為 15 秒。  
   
 **執行逾時**  
 輸入在伺服器上執行的工作完成之前，所要等候的時間 (以秒為單位)。 預設值為零秒，此值會指出沒有逾時。  
@@ -79,4 +78,3 @@ ms.lasthandoff: 08/15/2017
 ## <a name="see-also"></a>另請參閱  
 [連接屬性對話方塊](../../ssms/f1-help/connection-properties-dialog-box.md)  
   
-

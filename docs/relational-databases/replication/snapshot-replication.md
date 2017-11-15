@@ -5,25 +5,23 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - snapshot replication [SQL Server], about snapshot replication
 - snapshot replication [SQL Server]
 ms.assetid: 5d745f22-9c6b-4e11-8c62-bc50e9a8bf38
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6c99d91ab0209eb08c04488ce27043b2ad714781
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 927b6cb09af9a41a8326033cc36f949b3e29bb68
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="snapshot-replication"></a>快照式複寫
   快照式複寫可以精確地將資料以其特定時點的樣子散發出去，且不監視此資料的更新。 在進行同步處理的時候，會產生整個快照集並傳送至「訂閱者」。  
@@ -109,4 +107,3 @@ ms.lasthandoff: 06/22/2017
 3.  如果存在新快照集，「合併代理程式」會從 **sysmergeschemachange**中指定的位置將快照集檔案套用至訂閱資料庫。  
   
   
-

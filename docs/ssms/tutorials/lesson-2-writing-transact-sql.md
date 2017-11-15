@@ -5,22 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 439cfab5-c049-43a8-8617-59eaa8d24873
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
-ms.openlocfilehash: e1c61226d6dc163440bafb2d92fdbf6e04daf23f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: fdc78cbd3ca921ba16f4c68ab550f51342a87053
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-2-writing-transact-sql"></a>第 2 課：撰寫 Transact-SQL
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 是用來撰寫 [!INCLUDE[tsql](../../includes/tsql-md.md)]、MDX、DMX 和 XML 查詢及 SQLCMD 命令的整合式開發環境。 此教學課程說明如何使用 Database Engine 查詢編輯器撰寫 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼。  
@@ -47,4 +45,3 @@ ms.lasthandoff: 07/31/2017
   
   
   
-

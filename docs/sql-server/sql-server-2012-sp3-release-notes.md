@@ -9,16 +9,16 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 67cb8b3e-3d82-47f4-840d-0f12a3bff565
-caps.latest.revision: 0
+caps.latest.revision: "0"
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
-ms.translationtype: HT
-ms.sourcegitcommit: c4cd6d86cdcfe778d6b8ba2501ad4a654470bae7
-ms.openlocfilehash: dfe0d48b613c7c4d589fb8bc5f9a5a45be6ba019
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/31/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: a8562a0c6e653822263df58844b3b5093acf8d46
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-2012-sp3-release-notes"></a>SQL Server 2012 SP3 版本資訊
 這些版本資訊描述您在安裝或疑難排解 SQL Server 2012 Service Pack 3 之前需要了解的問題。 版本資訊僅於線上提供，安裝媒體中並不提供。 我們會在發現問題時定期更新它們。 如需增強功能和修正程式的清單，請參閱 [SQL Server 2012 Service Pack 3 版本資訊](http://support.microsoft.com/help/3072779/sql-server-2012-service-pack-3-release-information)以取得詳細資訊。  

@@ -5,22 +5,20 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- powershell
+ms.technology: powershell
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8c9bce29-1971-47c9-bdaa-375088301313
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 0916924eeb783ae65dd254b4d105a01067a08bd5
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 8b97a7e33924f1ee7b6d6e19c08b020ec0b5c779
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-powershell-license-terms"></a>SQL Server PowerShell 授權條款
 **Microsoft 軟體授權條款**
@@ -60,7 +58,7 @@ ms.lasthandoff: 06/22/2017
          - 在程式中顯示有效的著作權標示；以及 
          - 若因散布或使用 貴用戶之程式而使 Microsoft 遭他人提出索賠時， 貴用戶應賠償 Microsoft 之損失 (包括律師費)，使之免遭損害，並出面代為辯護。
 
-      3. **散發限制。　貴用戶不得**
+      3. **散發限制。貴用戶不得**
          - 變更可散布程式碼中之任何著作權、商標或專利聲明；
          - 於　貴用戶的程式名稱使用 Microsoft 的商標，或暗示程式來自 Microsoft 或經由 Microsoft 背書；
          - 散布「可散布程式碼」並於非 Windows 的平台上執行；
@@ -97,7 +95,7 @@ ms.lasthandoff: 06/22/2017
 
 11. **法律效力。** 本合約敘述了特定的法律權利。 貴用戶所在國家/地區的法律可能會提供　貴用戶其他權利。 此外，　貴用戶取得軟體的單位可能也會提供相關的權利。 如　貴用戶所在國家/地區法律不允許，則本合約無法改變　貴用戶所在國家/地區法律提供給　貴用戶的權利。
 
-12. **不為瑕疵擔保之聲明。本軟體僅以「現況」授權。　貴用戶應自行承擔使用本軟體的風險。MICROSOFT 不提供明示擔保、保證或條件。　貴用戶所在地區的法律可能會提供額外的消費者權利或法定保證，而這些額外的消費者權利是本合約無法改變的。在　貴用戶所在地區的法律所允許的範圍之內，Microsoft 可排除適售性、符合特定目的或未侵權之默示擔保責任。**
+12. **不為瑕疵擔保之聲明。本軟體僅以「現況」授權。　貴用戶應自行承擔使用本軟體的風險。MICROSOFT 不提供明示擔保、保證或條件。　貴用戶所在地區的法律可能會提供額外的消費者權利或法定保證，而這些額外的消費者權利是本合約無法改變的。在　貴用戶所屬之當地法律許可下，Microsoft 可排除適售性、適合某特定用途或未侵權之默示擔保責任。**
 
     **適用於澳大利亞 –　貴用戶依據澳大利亞消費者法律 (Australian Consumer Law) 享有法定保證，本合約條款並不意圖影響該些權利。**
 
@@ -108,4 +106,3 @@ ms.lasthandoff: 06/22/2017
     - 在相關法律許可的範圍之內，因為違反合約、保證、擔保或條件、無過失責任、過失或其他侵權行為所主張之訴訟案件。
 
     即使 Microsoft 已知或可得而知該損害有發生的可能性，這項限制仍然適用。 此外，　貴用戶所在國家/地區可能不允許附隨性損害、衍生性損害或其他損害之排除或限制，這種情況也可能造成上述限制或排除規定並不適用於　貴用戶。
-

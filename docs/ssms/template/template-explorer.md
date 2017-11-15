@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - templates [Transact-SQL]
 - templates [SQL Server], Template Explorer
 ms.assetid: b9ee55c5-bb44-4f76-90ac-792d8d83b4c8
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e0d0525a7da87f0c2f2363d641fcb07bcd5262ad
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: bfeeaf35898135099c1fb92553bf20f83fd587f6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="template-explorer"></a>範本總管
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 提供各種範本。 範本為包含 SQL 指令碼的模板檔案，可協助您在資料庫中建立物件。 第一次開啟範本總管時，範本的複本是放置在 C:\Users 使用者資料夾的 AppData\Roaming\Microsoft\SQL Server Management Studio\130\Templates 底下。  
@@ -53,4 +51,3 @@ ms.lasthandoff: 06/22/2017
 |描述如何將範本中的程式碼併入至程式碼編輯器視窗。|[開啟範本](../../ssms/template/open-a-template.md)|  
 |描述在程式碼編輯器中開啟範本後如何取代範本參數值。|[取代範本參數](../../ssms/template/replace-template-parameters.md)|  
   
-

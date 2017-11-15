@@ -5,24 +5,21 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 47dc2b5b-7803-4202-ad53-a431a821ad69
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
-ms.openlocfilehash: c1d447993d3d72272b1e8e6f84c367db4a03f5be
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: 2591464744621eaf94e9367ab88152019aaf534c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-1-7---set-the-startup-options"></a>課程 1-7 - 設定啟動選項
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 可設定成在啟動 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 時，開啟您偏好之組態的設計介面。 設定 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 來開啟慣用的組態，可以節省您的時間。  
@@ -54,4 +51,3 @@ ms.lasthandoff: 07/31/2017
   
   
   
-

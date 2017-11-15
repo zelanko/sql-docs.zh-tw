@@ -5,22 +5,20 @@ ms.date: 02/20/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c28ffa44-7b8b-4efa-b755-c7a3b1c11ce4
-caps.latest.revision: 72
+caps.latest.revision: "72"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 49a53643e94d64fc47932bc2ee8dc3200967ae23
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: dd49e14d6a19d1ac81a5cb17494988ce05c40e80
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="local-audit-for-ssms-usage-feedback-collection"></a>SSMS 使用意見收集的本機稽核
 
@@ -42,4 +40,3 @@ SQL Server Management Studio (SSMS) 包含使用已連線到網際網路的功�
 ## <a name="see-also"></a>另請參閱
 
 [SQL Server 使用意見收集的本機稽核](http://msdn.microsoft.com/library/mt743085.aspx)
-

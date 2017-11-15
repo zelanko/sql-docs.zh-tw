@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,28 +14,27 @@ helpviewer_keywords:
 - components [SQL Server], connections
 - SQL Server Management Studio [SQL Server], connections
 ms.assetid: 5eeb41bd-b25b-4d3b-a005-a7d9e4b5978e
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 567cb988769e738f414f1c2a37971a792f8a41ec
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 7d870ebdb27bcb83de08db14653b022aaba002de
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="connect-to-any-sql-server-component-from-sql-server-management-studio"></a>從 SQL Server Management Studio 連接到任何 SQL Server 元件
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 提供管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]之各項元件所需的功能。 請利用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] 來連接到：  
   
 -   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]的執行個體。  
   
--   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)].  
+-   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)]之各項元件所需的功能。  
   
--   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion_md.md)].  
+-   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion_md.md)]之各項元件所需的功能。  
   
--   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion_md.md)].  
+-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion_md.md)]之各項元件所需的功能。  
   
 雖然 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] 可讓您在沒有先建立資料來源連接的情況下，直接使用查詢，但大部分其他工作都需要連接。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] 提供 [連接到伺服器] 對話方塊，可讓您設定對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 元件的連線屬性。 當 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] 啟動時，便會開啟 [連接到伺服器] 對話方塊，提示您連線到伺服器。 [連接到伺服器] 對話方塊會保留上次使用的連線設定。  
   
@@ -56,4 +54,3 @@ ms.lasthandoff: 06/22/2017
 [使用 SQL Server Management Studio](../../ssms/use-sql-server-management-studio.md)  
 [物件總管](../../ssms/object/object-explorer.md)  
   
-

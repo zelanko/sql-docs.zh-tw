@@ -5,28 +5,25 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.SWB.SQLSERVEROBJECTEXPLORER.DHELP
+f1_keywords: sql13.SWB.SQLSERVEROBJECTEXPLORER.DHELP
 helpviewer_keywords:
 - Object Explorer F1 Help
 - OE F1 Help
 - OE Help
 ms.assetid: e60367a7-3fdd-40b8-82bb-9e819d78de5a
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 9ef28c37c3232ad747129925c6259975b4005a40
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 1deb4bbc2566d2c59bf24caddde565265594f2a9
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="manage-objects-by-using-object-explorer"></a>使用物件總管管理物件
 您可以使用物件總管管理像是資料庫、資料表和預存程序等物件。  
@@ -65,4 +62,3 @@ ms.lasthandoff: 06/22/2017
 [物件總管詳細資料窗格](../../ssms/object/object-explorer-details-pane.md)  
 [Management Studio 中的自訂報表](../../ssms/object/custom-reports-in-management-studio.md)  
   
-
