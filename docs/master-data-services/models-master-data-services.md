@@ -5,25 +5,23 @@ ms.date: 03/15/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - models [Master Data Services], about models
 - models [Master Data Services]
 ms.assetid: 9f862a3d-25ab-41e9-b833-1db99959e825
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 2f0b8df54fd7cce2cb994108cd71103c258fdc42
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 0dd8ddbd08e97d1761881d0c955f02d491fce7af
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="models-master-data-services"></a>模型 (Master Data Services)
   模型是 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中最高層級的資料組織。 模型定義主要資料管理方案中的資料結構。 模型包含下列物件：  
@@ -92,4 +90,3 @@ ms.lasthandoff: 09/07/2017
 -   [模型物件權限 &#40;Master Data Services&#41;](../master-data-services/model-object-permissions-master-data-services.md)  
   
   
-

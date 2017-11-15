@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-backup-restore
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -19,16 +18,16 @@ helpviewer_keywords:
 - restoring transaction logs [SQL Server], restoring backups
 - transaction log restores [SQL Server], SQL Server Management Studio
 ms.assetid: 1de2b888-78a6-4fb2-a647-ba4bf097caf3
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 58f0b1ab65e812e778d630a2a95db8539e1b47eb
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 93c6c392eeabbfaddf29be7f97b1e1e3b67e7fe7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="restore-a-transaction-log-backup-sql-server"></a>還原交易記錄備份 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -138,10 +137,10 @@ ms.lasthandoff: 06/22/2017
         |------------|-----------|  
         |\<空白>|顯示選取標示的核取方塊。|  
         |**交易標示**|在認可交易時，由使用者所指定之標示交易的名稱。|  
-        |**日期**|認可交易的日期和時間。 交易日期和時間是依照 **msdbgmarkhistory** 資料表中的記錄所顯示，而非依照用戶端電腦的日期和時間。|  
+        |**日期**|認可交易的日期和時間。 交易日期和時間是依照 **msdbgmarkhistory** 資料表中記錄的顯示，而非依照用戶端電腦的日期和時間。|  
         |**描述**|在認可交易時，由使用者所指定之標示交易的描述 (如果有的話)。|  
         |**LSN**|標示之交易的記錄序號。|  
-        |**資料庫**|認可標示的交易之資料庫的名稱。|  
+        |**[資料庫備份]**|認可標示的交易之資料庫的名稱。|  
         |**使用者名稱**|認可標示的交易之資料庫使用者的名稱。|  
   
 8.  若要檢視或選取進階選項，請按一下 **[選取頁面]** 窗格中的 **[選項]** 。  

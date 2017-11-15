@@ -5,8 +5,7 @@ ms.date: 05/17/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -14,16 +13,16 @@ f1_keywords:
 - sql13.swb.addreplicawizard.specifyreplicas.f1
 - sql13.swb.newagwizard.specifyreplicas.f1
 ms.assetid: 2d90fc12-a67b-4bd0-b0ab-899b73017196
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
+ms.workload: Inactive
+ms.openlocfilehash: daabab1d4122ce132579f399a4ea6c923477da35
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 18521a8d3f0deb2c7ada0a3633c3d9e606eff9b5
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>指定複本頁面 (新增可用性群組精靈：加入複本精靈)
   此主題描述 **[指定複本]** 頁面的選項。 此頁面適用於 **[!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]** 和 **[!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]**。 使用 **[指定複本]** 頁面指定與設定要加入可用性群組的一個或多個可用性複本。 此頁面包含四個索引標籤，其說明如下表所示。 按一下表格中的索引標籤名稱即可前往對應的章節，如本主題稍後所示。  
@@ -102,7 +101,7 @@ ms.lasthandoff: 08/02/2017
   
 -   如果每個伺服器執行個體都在網域服務帳戶之下執行，也就是說，如果 **[SQL Server 服務帳戶]** 欄會顯示每一個伺服器執行個體的網域服務帳戶，請按 **[下一步]**。  
   
--   如果有任何伺服器執行個體在非網域服務帳戶之下執行，您需要對伺服器執行個體進行手動變更，然後才可以在精靈中繼續執行。 在此情況下，按 **[下一步]** 將會出現警告對話方塊；您應該按一下 **[否]**，這會讓您回到**[端點]** 索引標籤。 當您在 **[指定複本]** 頁面上離開精靈時，請針對 **[SQL Server 服務帳戶]** 欄顯示非網域服務帳戶的每一個伺服器執行個體進行下列其中一項變更：  
+-   如果有任何伺服器執行個體在非網域服務帳戶之下執行，您需要對伺服器執行個體進行手動變更，然後才可以在精靈中繼續執行。 在此情況下，按 **[下一步]** 將會出現警告對話方塊；您應該按一下 **[否]**，這會讓您回到**[端點]** 索引標籤。當您在 **[指定複本]** 頁面上離開精靈時，請針對 **[SQL Server 服務帳戶]** 欄顯示非網域服務帳戶的每一個伺服器執行個體進行下列其中一項變更：  
   
     -   使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 組態管理員將 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務帳戶變更為網域帳戶。 如需詳細資訊，請參閱[變更 SQL Server 的服務啟動帳戶 &#40;SQL Server 組態管理員&#41;](../../../database-engine/configure-windows/scm-services-change-the-service-startup-account.md)。  
   
@@ -218,4 +217,3 @@ ms.lasthandoff: 08/02/2017
  [Always On 可用性群組的必要條件、限制和建議 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)  
   
   
-

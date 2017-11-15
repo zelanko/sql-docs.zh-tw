@@ -5,8 +5,7 @@ ms.date: 06/04/2013
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,17 +14,16 @@ f1_keywords:
 - sql13.dqs.kb.kbanalyze.f1
 - sql13.dqs.kb.kbmap.f1
 ms.assetid: 34a0ea16-02e6-46ed-90bc-dede68687f63
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e69395604574832a56c1b1e778b756b9dca0f200
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4b98bfc1ffb87a23817ce01380de2f62113e4748
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="perform-knowledge-discovery"></a>執行知識探索
   此主題描述如何透過知識探索來建立知識庫。 在探索程序中， [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 會透過電腦輔助的程序來分析範例資料來源中的資料，並將它所獲得的知識加入至知識庫。 您可以在知識探索活動或定義域管理活動的 **[管理定義域值]** 步驟中修改及增強這項知識。  
@@ -71,7 +69,7 @@ ms.lasthandoff: 09/09/2017
   
 4.  在 **[對應]** 資料表中，將您想要執行知識探索的每一個來源資料行對應到知識庫中的定義域，如下所示：  
   
-    1.  若要建立對應，請先從空資料列的 **[來源資料行]** 資料行的下拉式清單中選取來源資料行，然後從相同資料列的 **[定義域]** 資料行的下拉式清單中選取定義域 (如果定義域存在的話)。 如果定義域不存在，請按一下 **[建立定義域]** 或 **[建立複合定義域]** 來建立定義域。 如需相關資訊，請參閱 [建立定義域規則](../data-quality-services/create-a-domain-rule.md) 或 [建立複合定義域](../data-quality-services/create-a-composite-domain.md)。  
+    1.  若要建立對應，請先從空資料列的 **[來源資料行]** 資料行的下拉式清單中選取來源資料行，然後從相同資料列的 **[定義域]** 資料行的下拉式清單中選取定義域 (如果定義域存在的話)。 如果定義域不存在，請按一下 **[建立定義域]** 或 **[建立複合定義域]** 來建立定義域。 如需相關資訊，請參閱 [Create a Domain Rule](../data-quality-services/create-a-domain-rule.md) 或 [Create a Composite Domain](../data-quality-services/create-a-composite-domain.md)。  
   
     2.  針對每一個對應重複以上步驟。 若要變更資料表中的資料列數，請按一下 **[加入資料行對應]**，或是選取資料列並按一下 **[移除選取的資料行對應]**。 如果您在選取擴展的資料列時按一下 **[移除選取的資料行對應]** ，即使有未擴展的資料列，也會刪除選取的資料列。  
   
@@ -291,7 +289,6 @@ ms.lasthandoff: 09/09/2017
   
 -   欄位中有效值的數目不多；您應該驗證對應以及定義域規則與欄位內容的相關性。  
   
- 如需有關分析的詳細資訊，請參閱＜ [Data Profiling and Notifications in DQS](../data-quality-services/data-profiling-and-notifications-in-dqs.md)＞。  
+ 如需有關分析的詳細資訊，請參閱＜ [DQS 中的資料分析與通知](../data-quality-services/data-profiling-and-notifications-in-dqs.md)＞。  
   
   
-

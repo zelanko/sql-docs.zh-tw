@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,16 +14,16 @@ helpviewer_keywords:
 - classifier function [SQL Server]
 - classifier function [SQL Server], overview
 ms.assetid: 64c25012-7068-476f-afa2-0b4f3adde9a4
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 284ee7a05af7ab73e78dd827269db49c7d3f1e00
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 01c1a57ade59d9bf46c4c1f2f71a5b8c61fd61b5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="resource-governor-classifier-function"></a>資源管理員分類函數
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資源管理員分類程序會根據內送工作階段的特性，將工作階段指派給工作負載群組。 您可以透過撰寫使用者定義函數 (稱為分類函數) 來自訂分類邏輯。  
@@ -44,7 +43,7 @@ ms.lasthandoff: 06/22/2017
  在您建立此函數並套用組態變更之後，資源管理員分類就會使用此函數傳回的工作負載群組名稱，將新的要求傳送至適當的工作負載群組。  
   
 > [!IMPORTANT]  
->  如果分類函數沒有在指定的登入逾時設定內完成，用戶端工作階段可能會逾時。 但是，登入逾時是用戶端屬性，因此伺服器不知道發生逾時。 長時間執行的分類函數可能會長期給伺服器留下遭遺棄的連接。 因此，請務必建立在連接逾時之前執行完成的分類函數。  
+>  如果分類函數沒有在指定的登入逾時設定內完成，用戶端工作階段可能會逾時。 但是，登入逾時是用戶端屬性，因此伺服器不知道發生逾時。長時間執行的分類函數可能會長期給伺服器留下遭遺棄的連接。 因此，請務必建立在連接逾時之前執行完成的分類函數。  
   
  使用者定義的函數具有下列特性和行為：  
   

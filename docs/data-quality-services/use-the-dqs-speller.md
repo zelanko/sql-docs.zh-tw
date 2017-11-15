@@ -5,22 +5,20 @@ ms.date: 11/08/2011
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 65e4e53e-2699-4cae-a9e0-fe78547755b5
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a01e31bf6965cb1d7ac6bbcf183e1ce0c98fc38e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a14a9adc633e997fa9f8095d3d98a11bc9d386aa
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="use-the-dqs-speller"></a>使用 DQS 拼字檢查
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 拼字檢查會檢查定義域中字串值的語法、拼字和句子結構。 拼字檢查是一種獨立的用戶端功能，它並未與伺服器端引擎整合，也不涉及目前的流程或狀態。 拼字檢查會識別它視為潛在錯誤的字串值，然後在您對定義域值進行其他手動變更的相同位置中，以紅色底線標示這些值。 這些位置包括：  
@@ -78,4 +76,3 @@ ms.lasthandoff: 09/09/2017
  DQS 將會在 **[值]** 資料表的 **[值]** 資料行和 **[更正為]** 資料行中提供值的建議。 當您在 **[值]** 資料行中選取建議時，值類型會設定為 **[錯誤]**，而且當您手動插入建議時，建議會複製到 **[更正為]** 資料行中。 如果有現有的更正，該更正會變成建議。 在 **[清理]** 活動的 **[管理和檢視結果]** 頁面中，當您選取 **[更正為]** 資料行中的建議時，DQS 將會以選取項目取代目前選取的值，而且目前選取的值將會變成建議。 在 **[清理]** 活動的 **[管理和檢視結果]** 頁面中，記錄層級 (下方方格) 不會產生任何建議。  
   
   
-

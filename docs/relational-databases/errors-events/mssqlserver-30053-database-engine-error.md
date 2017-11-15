@@ -5,22 +5,20 @@ ms.date: 04/04/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 8ad23889-e243-4bd7-bc3e-150403399d89
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 8ffa689b1ce0df5a941e1de246d803196eb93375
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 98bffdd6a59364024de8076cdf4b8f0fb1a54ced
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mssqlserver30053"></a>MSSQLSERVER_30053
   
@@ -68,4 +66,3 @@ ms.lasthandoff: 06/22/2017
 [設定及管理搜尋的斷詞工具與字幹分析器](~/relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)  
 [設定及管理搜尋的篩選](~/relational-databases/search/configure-and-manage-filters-for-search.md)  
   
-

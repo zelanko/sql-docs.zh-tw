@@ -1,29 +1,25 @@
 ---
 title: "伺服器組態 (MDS 組態管理員) | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 01/26/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.mds.configmanager.srvinfopg.f1
+f1_keywords: sql13.mds.configmanager.srvinfopg.f1
 ms.assetid: c5a6c797-4ac9-4ab0-89c0-25ded2e3db4a
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 63b1a5a8b0121ecd0ca0a2da55b21119283af205
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: a6203f550646e1fc6b0998ccccad89ea113befb4
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="server-configuration-mds-configuration-manager"></a>伺服器組態 (MDS 組態管理員)
   使用 [伺服器組態] 頁面可檢視本機伺服器電腦的組態資訊。  
@@ -36,4 +32,3 @@ ms.lasthandoff: 09/07/2017
 |**MDS 產品版本**|顯示 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]的產品版本。|  
   
   
-

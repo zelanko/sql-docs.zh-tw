@@ -15,12 +15,11 @@ ms.devlang: na
 ms.date: 09/27/2017
 ms.author: genemi
 ms.workload: master-data-services-mds
-ms.translationtype: HT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
 ms.openlocfilehash: fd51e78e4643a99df4ef88659f08ca5267ac2b11
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/02/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="new-and-recently-updated-master-data-services-for-sql-server"></a>新增和最近更新：Master Data Services for SQL Server
 
@@ -123,6 +122,5 @@ Microsoft 幾乎每天都會在其 [Docs.Microsoft.com](http://docs.microsoft.co
 - [新文章 + 更新文章 (0+0)：**SQL Server 移轉小幫手 (SSMA)** 文件](../ssma/new-updated-ssma.md)
 - [新文章 + 更新文章 (0+0)：**SQL 的工具** 文件](../tools/new-updated-tools.md)
 - [新文章 + 更新文章 (0+0)：**XQuery for SQL** 文件](../xquery/new-updated-xquery.md)
-
 
 

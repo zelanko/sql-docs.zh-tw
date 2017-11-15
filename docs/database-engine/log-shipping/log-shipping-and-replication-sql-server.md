@@ -5,25 +5,23 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - replication [SQL Server], log shipping and
 - log shipping [SQL Server], replication and
 ms.assetid: 132bebfd-0206-4d23-829a-b38e5ed17bc9
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: fc7c67f47d535a639f1862cc1bc8be92855f6567
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: ed95df5cd7c02d5c8c6789dbbcf416a40c279460
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="log-shipping-and-replication-sql-server"></a>記錄傳送和複寫 (SQL Server)
   記錄傳送牽涉的對象，通常和不同電腦上各自儲存的單一資料庫複本有關。 在任何時間內，目前的用戶端都只能使用其中一份資料庫副本， 此份資料庫稱為主要資料庫。 用戶端對主要資料庫所做的更新，會透過記錄傳送方式傳播到其他資料庫複本 (亦稱為次要資料庫)。 記錄傳送會將交易記錄中對主要資料庫所做的每一項插入、更新或刪除，套用到次要資料庫上。  
@@ -53,7 +51,7 @@ ms.lasthandoff: 08/02/2017
 ### <a name="log-shipping-with-transactional-replication"></a>記錄傳送與異動複寫  
  對於異動複寫，記錄傳送的行為取決於 **sync with backup** 選項。 此選項可以在發行集資料庫和散發資料庫上設定；不過在「發行者」的記錄傳送中，只與發行集資料庫上的設定相關。  
   
- 在發行集資料庫上設定此選項，可確保交易在發行集資料庫中備份之前，不會傳遞到散發資料庫。 如此一來，最近一次的發行集資料庫備份便可以在次要伺服器端還原，而不會發生散發資料庫中，存有發行集資料庫中所沒有的交易這種情況。 這個選項可保證當「發行者」容錯移轉至次要伺服器時，仍可維持「發行者」、「散發者」和「訂閱者」之間的一致性。 延遲和輸送量會受到影響，因為交易在發行者端備份之前，不能傳遞到散發資料庫。如果您的應用程式允許此延遲，則建議您在發行集資料庫上設定此選項。 如果沒有設定 **sync with backup** 選項，則「訂閱者」可能會收到不再包含於次要伺服器端已復原資料庫中的變更。 如需詳細資訊，請參閱 [備份與還原快照式和異動複寫的策略](../../relational-databases/replication/administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md)。  
+ 在發行集資料庫上設定此選項，可確保交易在發行集資料庫中備份之前，不會傳遞到散發資料庫。 如此一來，最近一次的發行集資料庫備份便可以在次要伺服器端還原，而不會發生散發資料庫中，存有發行集資料庫中所沒有的交易這種情況。 這個選項可保證當「發行者」容錯移轉至次要伺服器時，仍可維持「發行者」、「散發者」和「訂閱者」之間的一致性。 延遲和輸送量會受到影響，因為交易在發行者端備份之前，不能傳遞到散發資料庫。如果您的應用程式允許此延遲，則建議您在發行集資料庫上設定此選項。 如果沒有設定 **sync with backup** 選項，則「訂閱者」可能會收到不再包含於次要伺服器端已復原資料庫中的變更。 如需詳細資訊，請參閱 [Strategies for Backing Up and Restoring Snapshot and Transactional Replication](../../relational-databases/replication/administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md)。  
   
  **若要設定使用 sync with backup 選項的異動複寫和記錄傳送**  
   
@@ -124,4 +122,3 @@ ms.lasthandoff: 08/02/2017
  [資料庫鏡像和複寫 &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)  
   
   
-

@@ -16,20 +16,19 @@ helpviewer_keywords:
 - security [Reporting Services], securable items listed
 - role-based security [Reporting Services], securable items
 ms.assetid: 27f58d4c-5c7b-4947-af5b-0f1fa60faf5f
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b1c11b204b5a48e4324f49e05467cc3ac96e7fa4
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 7cd3e8b8d3e1a623a7bcc10022da6081dca330cd
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="securable-items"></a>安全性實體項目
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]使用以角色為基礎的安全性來控制存取報表伺服器儲存的項目。 當您授與使用者對報表伺服器的存取權時，您通常會建立一對角色指派來進行此動作：  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會使用以角色為基礎的安全性，控制儲存在報表伺服器上之項目的存取權。 當您授與使用者對報表伺服器的存取權時，您通常會建立一對角色指派來進行此動作：  
   
 -   在網站層級上。  
   
@@ -65,11 +64,10 @@ ms.lasthandoff: 08/09/2017
 |共用資料來源|共用資料來源可以進行保護，以限制對項目及其屬性頁面的存取。 如需詳細資訊，請參閱 [保護共用資料來源項目的安全](../../reporting-services/security/secure-shared-data-source-items.md)。|  
 |共用資料集|共用資料集可以進行保護，以控制使用者能夠執行的動作範圍，例如，檢視或變更定義，或變更指定共用資料集的屬性。<br /><br /> 如需詳細資訊，請參閱 [保護共用資料集項目的安全](../../reporting-services/security/secure-shared-dataset-items.md)。|  
   
-## <a name="see-also"></a>請參閱＜  
- [授與原生模式報表伺服器上的權限](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
- [建立、 刪除或修改角色 &#40;Management Studio &#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
- [授與使用者存取報表伺服器 &#40;報表管理員 &#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
- [修改或刪除角色指派 &#40;報表管理員 &#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)  
+## <a name="see-also"></a>另請參閱  
+ [在原生模式報表伺服器上授與權限](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
+ [建立、刪除或修改角色 &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
+ [將報表伺服器的存取權授與使用者 &#40;報表管理員&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
+ [修改或刪除角色指派 &#40;報表管理員&#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)  
   
   
-

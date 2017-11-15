@@ -5,22 +5,20 @@ ms.date: 08/30/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0e332aa4-2c48-4bc4-a404-b65735a02cea
-caps.latest.revision: 2
+caps.latest.revision: "2"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d1964cd48c4ab789bb95564a1595e1c6b09aeccb
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 8bcb2add3c031a774ad768ee9540cc940d82e5be
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-clustered-dtc-for-an-always-on-availability-group"></a>建立 AlwaysOn 可用性群組的叢集 DTC
 本主題將逐步引導您完成 SQL Server AlwaysOn 可用性群組之叢集 DTC 資源的組態。 完整組態最多可能需要一小時才能完成。 
@@ -589,4 +587,3 @@ GO
 
 > [!IMPORTANT]
 > 您必須執行 `USE AG1` 陳述式，確保資料庫內容已設定為 `AG1`。  否則，您會收到下列錯誤訊息：「交易內容正由另一個工作階段所使用」。
-

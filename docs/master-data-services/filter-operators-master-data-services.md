@@ -5,22 +5,20 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 27914c8b-8951-4b7d-914d-1cbf528dd248
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: b634ce55f0ba70614432e6d2b38fe1a08ab66d11
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 0d83ee33afcd50635a163a56f977e77fc6e6c68a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="filter-operators-master-data-services"></a>篩選運算子 (Master Data Services)
   篩選成員清單時，可以使用下列運算子。  
@@ -48,4 +46,3 @@ ms.lasthandoff: 09/07/2017
 |**不是 NULL**|傳回不是 Null 的屬性值。 當您選取 [不是 NULL] 運算子時，會停用 [準則] 欄位。|  
   
   
-

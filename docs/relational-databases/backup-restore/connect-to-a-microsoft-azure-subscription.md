@@ -5,22 +5,20 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-backup-restore
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cca5a270-643f-4677-8802-98464f19f82a
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: dagiro
 ms.author: v-dagir
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6db65c242dc6dd9fd1c6c910d583d026f45422c1
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: d975f8d04025f3bcfc07b72a1437d6337f2a0bb6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="connect-to-a-microsoft-azure-subscription"></a>連接至 Microsoft Azure 訂用帳戶
 使用 [連接至 Microsoft 訂用帳戶] 向 SQL Server 執行個體註冊現有的 Azure blob 容器。  對話方塊會在 Azure blob 容器上建立共用的存取簽章和預存的存取原則，再建立 SQL Server 認證。  從 SQL Server Management Studio 使用 [備份或還原] 工作，且作業牽涉到 URL 裝置時，就會出現此對話方塊。
@@ -49,4 +47,3 @@ RTF 方塊會顯示已產生的共用存取簽章。
 
 **建立認證**   
 按鈕會產生預存的存取原則和共用的存取簽章，然後建立 SQL Server 認證。
-

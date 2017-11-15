@@ -5,22 +5,20 @@ ms.date: 03/15/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e2763613-79ef-414a-8dbf-837a0331ebf8
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 5dcf142c74ec58205b9475821d968c49225daed1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 37b446cbd33f9a916f26217fbb31c7bcb9d8b536
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="explorer-functional-area-master-data-manager"></a>總管功能區域 (主資料管理員)
   在 [總管] 功能區域中，您可以更新資料，並使用階層和集合。  
@@ -67,4 +65,3 @@ ms.lasthandoff: 09/07/2017
  [主資料管理員 Web 應用程式](../master-data-services/master-data-manager-web-application.md)  
   
   
-

@@ -5,33 +5,31 @@ ms.date: 07/11/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - protocols [SQL Server], default settings
 - default protocols, after install
 ms.assetid: 635ea361-a797-4971-bd05-e3415862bc5c
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a988fcab5de7d5d21246ce82684213afed0c7fbd
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 95adc8c5246284a8f82131f853e6a28b91b8dc5f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
-# 預設 SQL Server 網路通訊協定組態
+# <a name="default-sql-server-network-protocol-configuration"></a>預設 SQL Server 網路通訊協定組態
 為了加強安全性， [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 會為新安裝停用網路連接性。 如果您正在使用 Enterprise、Standard、Evaluation 或 Workgroup Edition 或是 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 的舊版安裝仍然存在，就不會停用使用 TCP/IP 的網路連接。 所有的安裝都會啟用共用記憶體通訊協定，以允許本機連接到伺服器。 視安裝條件和安裝選項而定， [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Browser 服務有可能會停止。
 
 使用 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 組態管理員的 [ [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 網路組態] 節點，在安裝後設定網路通訊協定。 使用 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 組態管理員的 [ [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 服務] 節點，設定 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Browser 服務自動啟動。 如需詳細資訊，請參閱 [啟用或停用伺服器網路通訊協定](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)。
 
 
-## 預設組態
+## <a name="default-configuration"></a>預設組態
 
 下表描述安裝後的組態。
 
@@ -53,7 +51,7 @@ SQL Server Express  | 新安裝  | 已啟用   | 已停用  | 針對網路連接
 >[!NOTE]
 > 在使用命令提示字元引數安裝 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 時，您可以使用 `TCPENABLED` 和 `NPENABLED` 參數來指定要啟用的通訊協定。 如需詳細資訊，請參閱 [從命令提示字元安裝 SQL Server](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)。
 
-## 建立連接字串
+## <a name="creating-a-connection-string"></a>建立連接字串
 
 如需連接字串範例，請參閱下列主題︰
 * [使用共用記憶體通訊協定建立有效的連接字串](../../tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md)
@@ -61,7 +59,7 @@ SQL Server Express  | 新安裝  | 已啟用   | 已停用  | 針對網路連接
 
 
 
-## [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 瀏覽器設定
+## <a name="includessnoversionmdincludesssnoversion-mdmd-browser-settings"></a>[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 瀏覽器設定
 
 安裝過程中，可以將 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Browser 服務設定為自動啟動。 預設值為在下列狀況成立時，此服務才會自動啟動：
 
@@ -71,12 +69,11 @@ SQL Server Express  | 新安裝  | 已啟用   | 已停用  | 針對網路連接
 * 安裝 Database Engine 的具名執行個體並包括所有 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Express 執行個體時。
 * 安裝 Analysis Services 的具名執行個體時。
 
-## 另請參閱
+## <a name="see-also"></a>另請參閱
 
 [安裝 SQL Server 2016 的硬體與軟體需求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)
 
 [介面區組態](../../relational-databases/security/surface-area-configuration.md)  
-
 
 
 

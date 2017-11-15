@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- OLEDB DataRead event class
+helpviewer_keywords: OLEDB DataRead event class
 ms.assetid: fb6869ba-3199-4e32-a650-60a5dda2571e
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c36eeb6ff13c3bcaa5364375e3a19f90921e8ab3
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 475009bfb14dfdca4cd7ab9eed1decfa8b747e3c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="oledb-dataread-event-class"></a>OLEDB DataRead 事件類別
   當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 呼叫 OLE DB 提供者以執行分散式查詢和遠端預存程序時，會發生 OLEDB DataRead 事件類別。 請在監看 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 何時對 OLE DB 提供者發出資料要求呼叫的追蹤中，包含此事件類別。  

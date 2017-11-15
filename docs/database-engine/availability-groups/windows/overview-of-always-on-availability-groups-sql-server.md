@@ -5,8 +5,7 @@ ms.date: 05/17/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +15,16 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], data movement
 - Availability Groups [SQL Server]
 ms.assetid: 04fd9d95-4624-420f-a3be-1794309b3a47
-caps.latest.revision: 121
+caps.latest.revision: "121"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
+ms.workload: Active
+ms.openlocfilehash: bb78ad6f8de0b4f0fa37199a9d70bf31ef67fba7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 162c688c587e0d9277f713e3fe7f9ee35e88bfcc
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="overview-of-always-on-availability-groups-sql-server"></a>AlwaysOn 可用性群組概觀 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -141,7 +140,7 @@ ms.lasthandoff: 08/02/2017
 ##  <a name="SessionTimeoutPerios"></a> 工作階段逾時期限  
  工作階段逾時期限是可用性複本屬性，它決定在連接關閉之前，與另一個可用性複本的連接保持非使用中的時間。 主要與次要複本會彼此 Ping，表示它們仍在使用中。 在逾時期限內從另一個複本接收到 Ping，表示連接仍為開啟狀態，且伺服器執行個體正在進行通訊。 接收到 Ping 時，可用性複本會重設它在該連接上的工作階段逾時計數器。  
   
- 工作階段逾時期限防止複本無限期地等候從另一個複本接收 Ping。 如果在工作階段逾時期限內未收到另一個複本的 Ping，則複本會逾時。 它的連接會關閉，而逾時的複本則進入 DISCONNECTED 狀態。 即使中斷連接的複本設定成同步認可模式，交易仍不會等候該複本重新連接及重新同步處理。  
+ 工作階段逾時期限防止複本無限期地等候從另一個複本接收 Ping。 如果在工作階段逾時期限內未收到另一個複本的 Ping，則複本會逾時。它的連接會關閉，而逾時的複本則進入 DISCONNECTED 狀態。 即使中斷連接的複本設定成同步認可模式，交易仍不會等候該複本重新連接及重新同步處理。  
   
  每個可用性複本的預設工作階段逾時期限為 10 秒。 此值是使用者可設定的，最小值為 5 秒。 通常我們建議您讓逾時期限保持在 10 秒或更久。 將這個值設定為小於 10 秒，可能會使負荷重的系統宣告假性失敗。  
   
@@ -194,4 +193,3 @@ ms.lasthandoff: 08/02/2017
  [可用性群組接聽程式、用戶端連接及應用程式容錯移轉 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
   
    
-

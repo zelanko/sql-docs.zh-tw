@@ -5,8 +5,7 @@ ms.date: 02/01/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - database mirroring [SQL Server], upgrading system
 - rolling upgrades [SQL Server]
 ms.assetid: 0e73bd23-497d-42f1-9e81-8d5314bcd597
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 27c4e397e7cf5dbf6b8a930badf965b293898537
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: eb81c72c3640df10334bcdb108150e755e49695f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="upgrading-mirrored-instances"></a>升級鏡像執行個體
   將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 鏡像執行個體升級至新的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本、新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Service Pack 或累積更新或新的 Windows Service Pack 或累積更新時，您可執行輪流升級以將每個鏡像資料庫的停機時間減少至僅單一手動容錯移轉 (回復為原始主要複本時則為兩次手動容錯移轉)。 輪流升級是一種多階段程序，其最簡單的形式包括升級目前在鏡像工作階段中當作鏡像伺服器的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 執行個體，然後手動容錯移轉鏡像資料庫、升級之前的主體 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 執行個體，以及繼續進行鏡像。 實際上，確切的程序會取決於作業模式以及在您要升級之 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 執行個體上執行的鏡像工作階段數目和配置而定。  
@@ -170,4 +168,3 @@ ms.lasthandoff: 08/02/2017
  [資料庫鏡像作業模式](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)  
   
   
-

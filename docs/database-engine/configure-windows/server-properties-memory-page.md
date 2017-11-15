@@ -5,24 +5,21 @@ ms.date: 03/08/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.serverproperties.memory.f1
+f1_keywords: sql13.swb.serverproperties.memory.f1
 ms.assetid: 46a77d4e-ab92-49d3-a14b-423462e50715
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6e8f2099ebff05085188514503c11abef5f8159c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 81b299739f8986e819062756d9fbd8fffcbaca41
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="server-properties---memory-page"></a>伺服器屬性 - 記憶體頁面
   使用此頁面來檢視或修改伺服器記憶體選項。 **[最小伺服器記憶體]** 設定為 0 且 **[最大伺服器記憶體]** 設為 2147483647 MB 時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就可在任何特定時間利用最佳的記憶體數量，但受作業系統和其他應用程式目前所使用的記憶體數量所限制。 隨著電腦與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的負載有所變更，記憶體的配置也會變更。 您可以進一步將這個動態記憶體配置限制為下列所指定的最小值和最大值。  
@@ -54,4 +51,3 @@ ms.lasthandoff: 08/02/2017
  [伺服器記憶體伺服器組態選項](../../database-engine/configure-windows/server-memory-server-configuration-options.md)  
   
   
-
